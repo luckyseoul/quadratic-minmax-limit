@@ -1,6 +1,6 @@
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-07-26  
+**Status date:** 2026-07-26 (n=10 structure campaign)  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
 **Problem source:** [MathOverflow 413935](https://mathoverflow.net/questions/413935) / [X prize post](https://x.com/PI010101/status/2081070728422752329)
 
@@ -12,6 +12,7 @@
 Proved sandwich: \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\).  
 Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptotic optimality of \(m_n\) vs Paley \(\Phi\) is not.
 
+**New (n=10 structure):** exact optima first appear at Hamming distance **5** from Paley \(C_{10}\), and the only 5-edge undercutters are **144 perfect matchings** (of 945). Absolute gap \(\Phi-m_{10}=2\) is consistent with E(1). See `evidence/N10_STRUCTURE.md`.
 ---
 
 ## 1. Exact quantity (do not restate incorrectly)
@@ -138,7 +139,9 @@ Soft multipartite / Hadamard / annealed / rank-one blow-up **cannot** force \(\l
 | Interval \(\rho_{\mathrm{int}}\ge0.99\) at large \(n\) | Constructive lower bound on \(\rho\) for specific sign patterns / intervals | Supports limsup \(\rho\) near 1; not full E(2); not exact \(\Phi\) |
 | Local-search \(\rho\) “dips” | Uncertified | Not non-existence |
 | Prior SA at \(n=26\): no certified beater of Paley \(\Phi=65\) | Suggestive local min | Hamming distance of true optimizers may be large (at \(n=10\), 1–2 edge flips from Paley do **not** reach \(m_{10}=13\)) |
-
+| **n=10 structure (certified)** | Hamming-5 threshold; 144 perfect-matching optima; 1-edge local opt | `evidence/N10_STRUCTURE.md`, `n10_structure.json`, `n10_matching_optima.json`; tests `test_n10_*` |
+| n=26 matching probe | 86 random perfect-matching flips of Paley: \(\Phi\ge73>65\) | Matchings do **not** undercut at \(n=26\) (`n26_matching_probe.json`) |
+| n=26 SA + exact rescore | 86×5k SA finalists, exact \(\Phi\): none \(<65\); certified \(m_{26}\le65\) | `n26_sa_exact_rescore.json` — `phi_local` alone is **not** a UB |
 ### 4.4 Independent external artifacts (context only)
 
 - Sol / Codex writeup: sandwich \(1/\pi\)…\(1/2\) + cut-code ([Robby955/mo-413935-ai-attempt](https://github.com/Robby955/mo-413935-ai-attempt)) — aligns with our Prop 5.2.
@@ -151,11 +154,10 @@ Soft multipartite / Hadamard / annealed / rank-one blow-up **cannot** force \(\l
 
 ### 5.1 Next attacks (ranked)
 
-1. **E(1) on \(\rho=1\) family** — Prove \(m_n=\frac12 n\sqrt{n-1}-o(n^{3/2})\) for \(n=p^2+1\), or exhibit a permanent relative gap. Certified exact \(\Phi\) only (\(n\le\sim26\)–28 with Gray/numba; larger needs branch-and-bound / SDP).  
-2. **Structural gap from \(n=10\)** — Optimal matrices at \(m_{10}=13\) are **not** 1–2 edge flips from Paley. Understand distance / switching class; try lifts that preserve a constant relative gap (hard: soft multipartite kills leading constant).  
+1. **E(1) on \(\rho=1\) family** — Prove \(m_n=\frac12 n\sqrt{n-1}-o(n^{3/2})\) for \(n=p^2+1\), or exhibit a permanent relative gap. At \(n=10\) the absolute gap is only \(2\) (rel. \(\approx0.063\)); at \(n=26\) SA+exact-rescore found **no** undercutter of \(\Phi=65\) (certified \(m_{26}\le65\)). Need a general argument, not local edge-flip (optima sit at Hamming \(\ge5\)).  
+2. **Structural gap from \(n=10\)** — **Partially closed.** See Theorem N10-S in `evidence/N10_STRUCTURE.md`: min Hamming 5; only undercutters at \(k=5\) are 144 perfect matchings; \(r=13/15\) on optima; SA also finds Hamming-11–16 optima in the switching metric. Open: algebraic classification of the 144 matchings; whether a matching-type construction lifts (random matchings at \(n=26\) **raise** \(\Phi\) to \(\ge73\)).  
 3. **E(2) analytic** — Prove \(\rho(C_n)=1-O(n^{-1/2})\) (or \(\to1\)) for all large Paley, not only \(p^2+1\). Interval constructions are evidence, not a proof.  
 4. **Non-existence** — Only if two dense subsequences with **proved** unequal \(\alpha\) limits appear; denseness (Prop 6.2) is mandatory.
-
 ### 5.2 Traps to avoid
 
 | Trap | Why |
@@ -198,7 +200,10 @@ Soft multipartite / Hadamard / annealed / rank-one blow-up **cannot** force \(\l
 | `tests/test_minmax.py` | Load-bearing tests |
 | `evidence/` | Durable numerics + \(\rho=1\) proof note |
 | `evidence/PROOF_rho_eq_1.md` | Full \(\rho=1\) proof |
-
+| `evidence/N10_STRUCTURE.md` | Theorem N10-S: matching undercutters of Paley-\(10\) |
+| `src/n10_structure.py` | Maximizer balance + \(k\)-flip + SA structure campaign |
+| `src/n10_matching_optima.py` | Perfect-matching census (144/945) |
+| `src/n26_matching_probe.py` / `n26_sa_exact_rescore.py` | \(\rho=1\) family probes at \(n=26\) |
 ---
 
 ## 6. Conditional landscape (if E(1)+E(2) close)

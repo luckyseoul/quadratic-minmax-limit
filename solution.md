@@ -851,6 +851,14 @@ Step 1 is standard for Wigner-type matrices with delocalized eigenvectors but is
 
 *Local-min evidence for E(1).* Edge-flip local search for minimisers of \(\Phi\) (86 workers, SA+greedy descent, `attack_local_min_phi`): at \(n=6\) every one of 50 local minima is conference (\(\Phi=5\)); at Paley orders \(n=14,18\) no run undercuts \(\Phi(C)\) (best local mins at \(25,41>21,33\)); at \(n=8,10,12\) the unique/near-unique local \(\Phi\) values match prior global SA bests. This is consistent with conference being the global min whenever it exists, but does not prove absence of a rare undercutting basin.
 
+**Theorem N10-S (certified structure of the \(n=10\) gap; 2026-07-26).** Let \(C\) be Paley of order \(10\) (\(\Phi(C)=15\), \(\rho=1\)). Exact enumeration yields:
+1. Every edge of \(C\) is maximizer-balanced (Prop 15.21); every single edge flip has \(\Phi\ge17\).
+2. \(\min\{\Phi(A):d_H(A,C)=k\}\) for \(k=0,\ldots,5\) equals \(15,17,15,17,15,13\). Thus no matrix within Hamming distance \(4\) of \(C\) undercuts Paley, and the first undercutting to \(m_{10}=13\) is at distance **5**.
+3. Of the \(\binom{45}{5}\) five-edge sets, exactly **144** achieve \(\Phi=13\), and **all 144 are perfect matchings** of \(K_{10}\). Among all \(945\) perfect matchings, the flip-\(\Phi\) histogram is \(\{13{:}144,\,17{:}405,\,21{:}360,\,25{:}36\}\).
+4. Absolute gap \(\Phi(C)-m_{10}=2\) gives relative gap \(2/n^{3/2}\approx0.063\to0\) if such \(O(1)\) gaps persist — consistent with E(1), not a counterexample.
+5. Random perfect-matching flips of Paley \(C_{26}\) (\(\Phi=65\)) produced \(\Phi\ge73\) on 86 samples; SA+exact-\(\Phi\) rescore (86 workers) found **no** matrix with exact \(\Phi<65\). The matching undercut does **not** lift naively to the next \(\rho=1\) order.
+
+Full writeup and JSON: `evidence/N10_STRUCTURE.md`. Tests: `test_n10_*` in `tests/test_minmax.py`.
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

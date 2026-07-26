@@ -558,3 +558,150 @@ def test_rho_min_controls_alpha_and_exhaustive_n6_to_8():
     C = paley_conference_matrix(5)
     r_p = 2 * phi(C) / (6 * np.sqrt(5))
     assert abs(r_p - REC[6]["min_r"]) < 1e-9
+
+
+# ---------------------------------------------------------------------------
+# n=10 structural gap (evidence/N10_STRUCTURE.md) — load-bearing, exact Φ
+# ---------------------------------------------------------------------------
+
+
+def _flip(A, i, j):
+    A[i, j] *= -1.0
+    A[j, i] *= -1.0
+
+
+def test_n10_paley_maximizer_balance_all_edges():
+    """Theorem N10-S.1: every edge of Paley C_10 is maximizer-balanced; 1-flip → Φ≥17."""
+    C = paley_conference_prime_power(3)
+    assert is_conference_matrix(C)
+    M = phi(C)
+    assert abs(M - 15.0) < 1e-9
+    n = 10
+    npat = 1 << (n - 1)
+    maxs = []
+    for xb in range(npat):
+        x = np.ones(n)
+        for i in range(n - 1):
+            x[i + 1] = 1.0 if (xb >> i) & 1 else -1.0
+        qv = form_Q(C, x)
+        if abs(abs(qv) - M) < 1e-9:
+            maxs.append((x, qv))
+    assert len(maxs) == 12
+    for p in range(n):
+        for r in range(p + 1, n):
+            c = C[p, r]
+            can = False
+            for x, qv in maxs:
+                prod = c * x[p] * x[r]
+                if abs(qv - M) < 1e-9 and prod < 0:
+                    can = True
+                if abs(qv + M) < 1e-9 and prod > 0:
+                    can = True
+            assert can, (p, r)
+    # every single flip raises Φ by ≥2
+    for p, r in [(0, 1), (1, 2), (2, 5), (0, 9), (4, 7)]:
+        A = C.copy()
+        _flip(A, p, r)
+        assert phi(A) >= M + 2 - 1e-12
+
+
+def test_n10_matching_flip_census_144_optima():
+    """
+    Theorem N10-S.3–4: among 945 perfect matchings of K_10, exactly 144 flips
+    of Paley C_10 yield Φ=13=m_10; Φ histogram {13:144, 17:405, 21:360, 25:36}.
+    """
+    # Inline perfect-matching enumerator (same as src/n10_matching_optima.py)
+    def perfect_matchings(n=10):
+        verts = list(range(n))
+        out = []
+
+        def rec(remaining, partial):
+            if not remaining:
+                out.append(list(partial))
+                return
+            a = remaining[0]
+            for i in range(1, len(remaining)):
+                b = remaining[i]
+                edge = (a, b) if a < b else (b, a)
+                nxt = remaining[1:i] + remaining[i + 1 :]
+                partial.append(edge)
+                rec(nxt, partial)
+                partial.pop()
+
+        rec(verts, [])
+        return out
+
+    C = paley_conference_prime_power(3)
+    pms = perfect_matchings(10)
+    assert len(pms) == 945
+    hist = {13: 0, 17: 0, 21: 0, 25: 0}
+    for m in pms:
+        A = C.copy()
+        for i, j in m:
+            _flip(A, i, j)
+        ph = int(round(phi(A)))
+        assert ph in hist, ph
+        hist[ph] += 1
+    assert hist == {13: 144, 17: 405, 21: 360, 25: 36}
+    # relative gap vanishes as O(n^{-3/2}) if absolute gap stays O(1)
+    assert (15 - 13) / (10 ** 1.5) < 0.07
+    # r at a matching-optimum = 13/15
+    A = C.copy()
+    for i, j in pms[0]:
+        _flip(A, i, j)
+    # find one with phi 13
+    found = False
+    for m in pms:
+        A = C.copy()
+        for i, j in m:
+            _flip(A, i, j)
+        if abs(phi(A) - 13) < 1e-9:
+            r = 2 * 13 / (10 * np.sqrt(9))
+            assert abs(r - 13 / 15) < 1e-12
+            found = True
+            break
+    assert found
+
+
+def test_n10_k_flip_threshold_no_undercut_before_5():
+    """
+    Theorem N10-S.2 (sampled + recorded): k≤4 cannot reach m_10 from this C;
+    one certified 5-matching reaches 13. Full binom(45,5) lives in evidence JSON.
+    """
+    import json
+
+    C = paley_conference_prime_power(3)
+    # k=1 exhaustive (45 edges)
+    edges = [(i, j) for i in range(10) for j in range(i + 1, 10)]
+    vals = []
+    for i, j in edges:
+        A = C.copy()
+        _flip(A, i, j)
+        vals.append(phi(A))
+    assert min(vals) >= 17.0 - 1e-12
+
+    # certified witness from evidence
+    path = ROOT / "evidence" / "n10_structure.json"
+    assert path.exists(), "run src/n10_structure.py to ship n10_structure.json"
+    data = json.loads(path.read_text())
+    for row in data["k_flip_table"]:
+        if row["k"] <= 4:
+            assert row["min_phi"] >= 15.0 - 1e-12
+            assert not row.get("reaches_m10")
+        if row["k"] == 5:
+            assert abs(row["min_phi"] - 13.0) < 1e-12
+            assert row.get("reaches_m10")
+            # re-verify the recorded best_edges witness
+            A = C.copy()
+            for i, j in row["best_edges"]:
+                _flip(A, i, j)
+            assert abs(phi(A) - 13.0) < 1e-9
+            # perfect matching: 10 distinct endpoints
+            verts = [v for e in row["best_edges"] for v in e]
+            assert len(verts) == 10 and len(set(verts)) == 10
+
+    mpath = ROOT / "evidence" / "n10_matching_optima.json"
+    assert mpath.exists()
+    md = json.loads(mpath.read_text())
+    assert md["matching_flip"]["n_phi13"] == 144
+    assert md["five_edge_undercutters"]["all_are_perfect_matchings"]

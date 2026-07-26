@@ -1,0 +1,397 @@
+{
+  "n": 10,
+  "m_10": 13,
+  "Phi_Paley": 15,
+  "workers": 86,
+  "timestamp": "2026-07-26T21:55:31Z",
+  "paley_is_conference": true,
+  "paley_rho": 1.0,
+  "paley_phi_exact": 15.0,
+  "maximizer_balance": {
+    "phi": 15.0,
+    "n_maximizers_halfcube": 12,
+    "n_edges": 45,
+    "n_balanced": 45,
+    "n_unbalanced": 0,
+    "unbalanced_edges": [],
+    "single_flip_local_opt": true
+  },
+  "k_flip_table": [
+    {
+      "k": 0,
+      "n_combos": 1,
+      "min_phi": 15.0,
+      "best_edges": []
+    },
+    {
+      "k": 1,
+      "n_combos": 45,
+      "min_phi": 17.0,
+      "best_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "time_s": 0.27105045318603516,
+      "undercuts_paley": false,
+      "reaches_m10": false
+    },
+    {
+      "k": 2,
+      "n_combos": 990,
+      "min_phi": 15.0,
+      "best_edges": [
+        [
+          2,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "time_s": 0.23978161811828613,
+      "undercuts_paley": false,
+      "reaches_m10": false
+    },
+    {
+      "k": 3,
+      "n_combos": 14190,
+      "min_phi": 17.0,
+      "best_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "time_s": 1.288926362991333,
+      "undercuts_paley": false,
+      "reaches_m10": false
+    },
+    {
+      "k": 4,
+      "n_combos": 148995,
+      "min_phi": 15.0,
+      "best_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          9
+        ]
+      ],
+      "time_s": 11.93304443359375,
+      "undercuts_paley": false,
+      "reaches_m10": false
+    },
+    {
+      "k": 5,
+      "n_combos": 1221759,
+      "min_phi": 13.0,
+      "best_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "time_s": 101.70973920822144,
+      "undercuts_paley": true,
+      "reaches_m10": true
+    }
+  ],
+  "switch_class_size": 512,
+  "sa": {
+    "workers": 86,
+    "iters": 12000,
+    "time_s": 107.33382964134216,
+    "best_phi_found": 13.0,
+    "n_hits_m13": 86,
+    "n_undercut_paley": 86,
+    "phi_histogram": {
+      "13.0": 86
+    },
+    "min_hamming_among_m13_hits": 11,
+    "max_hamming_among_m13_hits": 16,
+    "mean_hamming_among_m13_hits": 13.1,
+    "top_fingerprints": [
+      {
+        "phi": 13.0,
+        "op": 3.9334636079414285,
+        "op_over_sqrt_n1": 1.3111545359804762,
+        "delta": 320.0,
+        "rho": 0.66099505655798,
+        "r": 0.8666666666666668,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 13,
+        "seed": 10064
+      },
+      {
+        "phi": 13.0,
+        "op": 3.9334636079414276,
+        "op_over_sqrt_n1": 1.311154535980476,
+        "delta": 320.0,
+        "rho": 0.6609950565579801,
+        "r": 0.8666666666666667,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 14,
+        "seed": 10070
+      },
+      {
+        "phi": 13.0,
+        "op": 3.9334636079414294,
+        "op_over_sqrt_n1": 1.3111545359804764,
+        "delta": 320.0,
+        "rho": 0.6609950565579796,
+        "r": 0.8666666666666666,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 16,
+        "seed": 10040
+      },
+      {
+        "phi": 13.0,
+        "op": 4.12310562561766,
+        "op_over_sqrt_n1": 1.3743685418725533,
+        "delta": 320.0,
+        "rho": 0.6305926250944658,
+        "r": 0.8666666666666666,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 12,
+        "seed": 10044
+      },
+      {
+        "phi": 13.0,
+        "op": 4.12310562561766,
+        "op_over_sqrt_n1": 1.3743685418725533,
+        "delta": 320.0,
+        "rho": 0.6305926250944658,
+        "r": 0.8666666666666666,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 13,
+        "seed": 10007
+      },
+      {
+        "phi": 13.0,
+        "op": 3.933463607941426,
+        "op_over_sqrt_n1": 1.3111545359804753,
+        "delta": 320.0,
+        "rho": 0.6609950565579803,
+        "r": 0.8666666666666667,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 11,
+        "seed": 10012
+      },
+      {
+        "phi": 13.0,
+        "op": 3.9334636079414267,
+        "op_over_sqrt_n1": 1.3111545359804755,
+        "delta": 320.0,
+        "rho": 0.6609950565579802,
+        "r": 0.8666666666666667,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 14,
+        "seed": 10022
+      },
+      {
+        "phi": 13.0,
+        "op": 3.9334636079414254,
+        "op_over_sqrt_n1": 1.311154535980475,
+        "delta": 320.0,
+        "rho": 0.6609950565579804,
+        "r": 0.8666666666666667,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 12,
+        "seed": 10065
+      },
+      {
+        "phi": 13.0,
+        "op": 3.9334636079414262,
+        "op_over_sqrt_n1": 1.3111545359804755,
+        "delta": 320.0,
+        "rho": 0.6609950565579803,
+        "r": 0.8666666666666667,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 14,
+        "seed": 10013
+      },
+      {
+        "phi": 13.0,
+        "op": 3.9334636079414294,
+        "op_over_sqrt_n1": 1.3111545359804764,
+        "delta": 320.0,
+        "rho": 0.6609950565579796,
+        "r": 0.8666666666666666,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 12,
+        "seed": 10000
+      },
+      {
+        "phi": 13.0,
+        "op": 3.9334636079414254,
+        "op_over_sqrt_n1": 1.311154535980475,
+        "delta": 320.0,
+        "rho": 0.6609950565579804,
+        "r": 0.8666666666666667,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 12,
+        "seed": 10019
+      },
+      {
+        "phi": 13.0,
+        "op": 3.9334636079414267,
+        "op_over_sqrt_n1": 1.3111545359804755,
+        "delta": 320.0,
+        "rho": 0.6609950565579802,
+        "r": 0.8666666666666667,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 14,
+        "seed": 10056
+      },
+      {
+        "phi": 13.0,
+        "op": 3.933463607941429,
+        "op_over_sqrt_n1": 1.3111545359804764,
+        "delta": 320.0,
+        "rho": 0.6609950565579797,
+        "r": 0.8666666666666666,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 11,
+        "seed": 10078
+      },
+      {
+        "phi": 13.0,
+        "op": 4.1231056256176615,
+        "op_over_sqrt_n1": 1.3743685418725538,
+        "delta": 320.0,
+        "rho": 0.6305926250944656,
+        "r": 0.8666666666666667,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 13,
+        "seed": 10059
+      },
+      {
+        "phi": 13.0,
+        "op": 3.9334636079414262,
+        "op_over_sqrt_n1": 1.3111545359804755,
+        "delta": 320.0,
+        "rho": 0.6609950565579803,
+        "r": 0.8666666666666667,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 11,
+        "seed": 10046
+      },
+      {
+        "phi": 13.0,
+        "op": 3.933463607941427,
+        "op_over_sqrt_n1": 1.3111545359804757,
+        "delta": 320.0,
+        "rho": 0.6609950565579801,
+        "r": 0.8666666666666667,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 14,
+        "seed": 10042
+      },
+      {
+        "phi": 13.0,
+        "op": 4.123105625617661,
+        "op_over_sqrt_n1": 1.3743685418725535,
+        "delta": 320.0,
+        "rho": 0.6305926250944657,
+        "r": 0.8666666666666666,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 16,
+        "seed": 10030
+      },
+      {
+        "phi": 13.0,
+        "op": 4.1231056256176615,
+        "op_over_sqrt_n1": 1.3743685418725538,
+        "delta": 320.0,
+        "rho": 0.6305926250944656,
+        "r": 0.8666666666666667,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 14,
+        "seed": 10026
+      },
+      {
+        "phi": 13.0,
+        "op": 4.123105625617663,
+        "op_over_sqrt_n1": 1.3743685418725544,
+        "delta": 320.0,
+        "rho": 0.6305926250944653,
+        "r": 0.8666666666666667,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 13,
+        "seed": 10002
+      },
+      {
+        "phi": 13.0,
+        "op": 3.933463607941427,
+        "op_over_sqrt_n1": 1.3111545359804757,
+        "delta": 320.0,
+        "rho": 0.6609950565579801,
+        "r": 0.8666666666666667,
+        "is_conference": false,
+        "hamming_to_paley_switch_class": 13,
+        "seed": 10052
+      }
+    ]
+  },
+  "greedy_descent": {
+    "restarts": 172,
+    "best_phi": 13.0,
+    "n_at_best": 21,
+    "min_hamming_at_best": 5,
+    "max_hamming_at_best": 16,
+    "fingerprint_best": {
+      "phi": 13.0,
+      "op": 3.933463607941427,
+      "op_over_sqrt_n1": 1.3111545359804757,
+      "delta": 320.0,
+      "rho": 0.6609950565579801,
+      "r": 0.8666666666666667,
+      "is_conference": false
+    }
+  },
+  "total_time_s": 224.48788952827454,
+  "verdict": {
+    "single_edge_local_opt_paley": true,
+    "min_k_exact_flip_reaches_m13": 5,
+    "sa_min_hamming_to_switch_class_for_m13": 11,
+    "note": "If min_k is large and SA Hamming is large, optima sit far from the Paley switching class \u2014 E(1) cannot be proved by local edge-flip alone."
+  }
+}

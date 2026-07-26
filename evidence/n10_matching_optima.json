@@ -1,0 +1,207 @@
+{
+  "n": 10,
+  "workers": 86,
+  "n_perfect_matchings": 945,
+  "matching_flip": {
+    "phi_histogram": {
+      "13.0": 144,
+      "17.0": 405,
+      "21.0": 360,
+      "25.0": 36
+    },
+    "n_phi13": 144,
+    "n_phi15": 0,
+    "n_other": 801,
+    "all_matchings_give_m_or_paley": false,
+    "fraction_optimal": 0.1523809523809524
+  },
+  "matching_optima_fingerprints": [
+    {
+      "phi": 13.0,
+      "op": 3.9334636079414267,
+      "op_over_sqrt_n1": 1.3111545359804755,
+      "delta": 320.0,
+      "rho": 0.6609950565579802,
+      "r": 0.8666666666666667,
+      "is_conference": false,
+      "matching": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "hamming_to_switch_class": 5
+    },
+    {
+      "phi": 13.0,
+      "op": 3.9334636079414254,
+      "op_over_sqrt_n1": 1.311154535980475,
+      "delta": 320.0,
+      "rho": 0.6609950565579804,
+      "r": 0.8666666666666667,
+      "is_conference": false,
+      "matching": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          7,
+          9
+        ]
+      ],
+      "hamming_to_switch_class": 5
+    },
+    {
+      "phi": 13.0,
+      "op": 3.933463607941428,
+      "op_over_sqrt_n1": 1.311154535980476,
+      "delta": 320.0,
+      "rho": 0.66099505655798,
+      "r": 0.8666666666666667,
+      "is_conference": false,
+      "matching": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      "hamming_to_switch_class": 5
+    },
+    {
+      "phi": 13.0,
+      "op": 3.9334636079414254,
+      "op_over_sqrt_n1": 1.311154535980475,
+      "delta": 320.0,
+      "rho": 0.6609950565579804,
+      "r": 0.8666666666666667,
+      "is_conference": false,
+      "matching": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "hamming_to_switch_class": 5
+    },
+    {
+      "phi": 13.0,
+      "op": 3.9334636079414276,
+      "op_over_sqrt_n1": 1.311154535980476,
+      "delta": 320.0,
+      "rho": 0.6609950565579801,
+      "r": 0.8666666666666667,
+      "is_conference": false,
+      "matching": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "hamming_to_switch_class": 5
+    }
+  ],
+  "five_edge_undercutters": {
+    "n_combos": 1221759,
+    "n_phi13": 144,
+    "n_perfect_matching": 144,
+    "n_non_matching": 0,
+    "all_are_perfect_matchings": true,
+    "degree_multiset_histogram": {
+      "(1, 1, 1, 1, 1, 1, 1, 1, 1, 1)": 144
+    },
+    "time_s": 102.9935245513916
+  },
+  "consistency": {
+    "matching_enum_n13": 144,
+    "five_flip_matching_hits": 144,
+    "agree": true
+  },
+  "total_time_s": 103.59108185768127,
+  "verdict": {
+    "min_hamming_paley_to_m10": 5,
+    "first_undercutters_are_perfect_matchings": true,
+    "n_optimal_matching_flips": 144,
+    "n_perfect_matchings_total": 945,
+    "relative_gap": 0.06324555320336758,
+    "absolute_gap": 2,
+    "r_at_optima": 0.8666666666666667,
+    "note": "Exact optima at Hamming-5 from Paley C_10 are precisely the perfect-matching flips with \u03a6=13 (subset of all 945 perfect matchings). SA finds more distant optima (Hamming 11\u201316 to switch class) with the same r=13/15 and often \u03b4=320."
+  }
+}
