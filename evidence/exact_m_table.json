@@ -1,0 +1,71 @@
+{
+  "2": {
+    "m": 1,
+    "alpha": 0.35355339059327373,
+    "time_s": 0.0006847381591796875,
+    "dual_gauss_lb": 0.6366197723675814,
+    "source": "live_exact_m"
+  },
+  "3": {
+    "m": 3,
+    "alpha": 0.5773502691896257,
+    "time_s": 0.00023412704467773438,
+    "dual_gauss_lb": 1.3504744742356594,
+    "source": "live_exact_m"
+  },
+  "4": {
+    "m": 4,
+    "alpha": 0.5,
+    "time_s": 0.0002620220184326172,
+    "dual_gauss_lb": 2.2053155816871683,
+    "source": "live_exact_m"
+  },
+  "5": {
+    "m": 4,
+    "alpha": 0.35777087639996635,
+    "time_s": 0.0011296272277832031,
+    "dual_gauss_lb": 3.183098861837907,
+    "source": "live_exact_m"
+  },
+  "6": {
+    "m": 5,
+    "alpha": 0.34020690871988585,
+    "time_s": 0.009862661361694336,
+    "dual_gauss_lb": 4.270575260503063,
+    "source": "live_exact_m"
+  },
+  "7": {
+    "m": 9,
+    "alpha": 0.48595432244043496,
+    "time_s": 0.20718097686767578,
+    "dual_gauss_lb": 5.457877608635732,
+    "source": "live_exact_m"
+  },
+  "8": {
+    "m": 10,
+    "alpha": 0.44194173824159216,
+    "time_s": 12.736212968826294,
+    "dual_gauss_lb": 6.7373503895646785,
+    "source": "live_exact_m"
+  },
+  "9": {
+    "m": 12,
+    "alpha": 0.4444444444444444,
+    "source": "recorded_prior_exact_m_parallel",
+    "note": "Gray exhaustive multi-worker; constants ship in tests"
+  },
+  "10": {
+    "m": 13,
+    "alpha": 0.41109609582188933,
+    "source": "recorded_prior_exact_m_parallel",
+    "Phi_Paley_10": 15,
+    "note": "m_10=13 < Phi_Paley=15: conference not exact-optimal"
+  },
+  "_meta": {
+    "workers": 7,
+    "total_time_s": 12.894673109054565,
+    "host_ncpu": 88,
+    "live_exact": "2..8",
+    "recorded": "9,10"
+  }
+}

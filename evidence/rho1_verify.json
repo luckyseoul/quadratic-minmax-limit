@@ -1,0 +1,38 @@
+{
+  "checks": [
+    {
+      "p": 3,
+      "n": 10,
+      "is_conference": true,
+      "evec_err": 0.0,
+      "phi_halfspace": 15.0,
+      "phi_spectral_ceiling": 15.0,
+      "rho": 1.0,
+      "op": 3.0000000000000013,
+      "rho_eq_1": true
+    },
+    {
+      "p": 5,
+      "n": 26,
+      "is_conference": true,
+      "evec_err": 0.0,
+      "phi_halfspace": 65.0,
+      "phi_spectral_ceiling": 65.0,
+      "rho": 1.0,
+      "op": 5.000000000000008,
+      "rho_eq_1": true
+    },
+    {
+      "p": 7,
+      "n": 50,
+      "is_conference": true,
+      "evec_err": 0.0,
+      "phi_halfspace": 175.0,
+      "phi_spectral_ceiling": 175.0,
+      "rho": 1.0,
+      "op": 7.0000000000000115,
+      "rho_eq_1": true
+    }
+  ],
+  "theorem": "rho=1 for Paley n=p^2+1 via halfspace boolean evec"
+}
