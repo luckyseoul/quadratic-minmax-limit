@@ -1059,3 +1059,89 @@ def test_recursive_star_formula_m_n():
     for n in range(3, 8):
         m = exact_m(n)
         assert abs(m - psi(n - 1)) < 1e-9, (n, m, psi(n - 1))
+
+
+def _boolean_plus_evecs(C: np.ndarray, p: float) -> np.ndarray:
+    """All y in {±1}^n with C y = p y (free-variable enum of ker(C-pI))."""
+    n = C.shape[0]
+    M = C - p * np.eye(n)
+    _, s, vt = np.linalg.svd(M)
+    rank = int((s > 1e-8).sum())
+    nb = vt[rank:].T
+    nul = n - rank
+    rng = np.random.default_rng(0)
+    coords = None
+    for _ in range(4000):
+        idx = rng.choice(n, size=nul, replace=False)
+        if np.linalg.matrix_rank(nb[idx], tol=1e-8) == nul:
+            coords = idx
+            break
+    assert coords is not None
+    Binv = np.linalg.inv(nb[coords])
+    found = []
+    for bits in range(1 << nul):
+        free = np.array([1.0 if (bits >> i) & 1 else -1.0 for i in range(nul)])
+        x = nb @ (Binv @ free)
+        if np.max(np.abs(np.abs(x) - 1.0)) < 1e-6:
+            found.append(np.sign(x))
+    return np.unique(np.round(found).astype(int), axis=0).astype(float)
+
+
+def test_prop_15_27_max_frame_and_max_lipschitz():
+    """
+    Prop 15.27: for Paley rho=1, Max+ satisfies E[yy^T]=I+C/p=2P_+,
+    and Max-Lipschitz Phi(A) >= Phi(C) - 2k/p after best switch.
+    Drives paley_conference_prime_power, form_Q, phi, edge_hamming.
+    """
+    for p in (3, 5):
+        C = paley_conference_prime_power(p)
+        n = C.shape[0]
+        Max = _boolean_plus_evecs(C, float(p))
+        assert len(Max) > 0
+        G = Max.T @ Max / len(Max)
+        pred = np.eye(n) + C / p
+        assert np.allclose(G, pred, atol=1e-8), p
+        # Frame => average Q on Max equals Phi(C)=n p/2 for A=C
+        Phi_c = 0.5 * n * p
+        avg_Q = np.mean([form_Q(C, y) for y in Max])
+        assert abs(avg_Q - Phi_c) < 1e-8
+        # Matching undercutter at n=10: Max-lip gives stronger LB than edge lip
+        if p == 3:
+            A = C.copy()
+            for i, j in [(0, 1), (2, 4), (3, 5), (6, 7), (8, 9)]:
+                A[i, j] *= -1
+                A[j, i] *= -1
+            # best-switch distance (fix first coord)
+            best_k = edge_hamming(A, C)
+            for bits in range(1 << (n - 1)):
+                s = np.ones(n)
+                for i in range(n - 1):
+                    if (bits >> i) & 1:
+                        s[i + 1] = -1
+                As = A * np.outer(s, s)
+                np.fill_diagonal(As, 0)
+                best_k = min(best_k, edge_hamming(As, C))
+            assert best_k == 5
+            max_lip_lb = Phi_c - 2 * best_k / p
+            edge_lb = phi_edge_lipschitz_lower(Phi_c, best_k)
+            assert max_lip_lb > edge_lb  # 15 - 10/3 > 15 - 10
+            assert phi(A) + 1e-9 >= max_lip_lb
+            # average Q on Max after matching flip
+            avg = np.mean([form_Q(A, y) for y in Max])
+            assert abs(avg - (Phi_c - 2 * best_k / p)) < 1e-8
+
+
+def test_prop_15_27_fractional_cover_value_p():
+    """Primal uniform edge weights achieve Max-cover LP value p."""
+    for p in (3, 5):
+        C = paley_conference_prime_power(p)
+        n = C.shape[0]
+        Max = _boolean_plus_evecs(C, float(p))
+        # uniform x_e = 2/(n p): for each y, sum_e x_e chi_e(y) = 2/(n p) * Q_C(y) = 1
+        for y in Max[:5]:
+            Q = form_Q(C, y)
+            assert abs(Q - 0.5 * n * p) < 1e-8
+            cover = 2.0 / (n * p) * Q
+            assert abs(cover - 1.0) < 1e-8
+        # objective sum_e x_e = 2/(n p) * binom(n,2) = (n-1)/p = p
+        assert abs((n - 1) / p - p) < 1e-12

@@ -978,6 +978,57 @@ and \(y_i(Ay)_i=p-2C_{i,\pi(i)}y_iy_{\pi(i)}\). The character \(C_{i\pi}y_iy_\pi
 
 *Remark (route to the matching dichotomy).* Prop 15.26 keeps boolean evecs first-order critical after matching flips, which organises the \(n=10\) undercut analysis (N10-S/C). The global Max-determination identity is special to \(n=10\), not a general shortcut. Matching dichotomy \(m_n=\min(\Phi(C),\min_M\Phi(C\oplus M))\) remains open; at \(n=26\) random matchings only raise \(\Phi\). **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.27 (Max\(_{+}\) tight frame and Max-Lipschitz; 2026-07-27).** Let \(C\) be a conference matrix of order \(n\) with \(\rho(C)=1\), \(p=\sqrt{n-1}\), and write \(\mathrm{Max}_{+}=\{y\in\{\pm1\}^n:Cy=py\}\). Assume the frame identity
+\begin{equation}
+\label{eq:max-frame}
+\frac1{|\mathrm{Max}_{+}|}\sum_{y\in\mathrm{Max}_{+}}yy^\top
+=
+I+\frac Cp
+=
+2P_+,
+\end{equation}
+which is certified for Paley \(n=p^2+1\) at \(p=3,5\) (and holds at \(p=7\) by the same free-variable enumeration). Then:
+
+1. **Fractional Max-cover number equals \(p\).** The LP
+   \[
+   \min\bigl\{\textstyle\sum_{e}x_e:x\ge0,\;
+   \textstyle\sum_{e}x_e\,C_e y_iy_j\ge1\ \forall y\in\mathrm{Max}_{+}\bigr\}
+   \]
+   has value exactly \(p\). *Primal:* \(x_e=2/(np)\) for every edge gives objective \((n-1)/p=p\) and constraint value \(2/(np)\cdot Q_C(y)=1\). *Dual:* \(\lambda_y=p/|\mathrm{Max}_{+}|\) is feasible with every edge tight, because
+   \[
+   \frac p{|\mathrm{Max}_{+}|}\sum_y C_{ij}y_iy_j
+   =
+   p\cdot C_{ij}\cdot\frac{C_{ij}}p
+   =
+   1.
+   \]
+
+2. **Max-Lipschitz (factor \(1/p\) improvement of Prop 15.20b).** For every Seidel matrix \(A\), after a best switching toward \(C\) with disagreement cardinality \(k=d_H^{\mathrm{best}}(A,C)\),
+   \[
+   \Phi(A)
+   \;\ge\;
+   \max_{y\in\mathrm{Max}_{+}}\lvert Q_A(y)\rvert
+   \;\ge\;
+   \Phi(C)-\frac{2k}p.
+   \]
+   *Proof.* Write \(G=I+C/p\). Then
+   \[
+   \frac1{|\mathrm{Max}_{+}|}\sum_{y}y^\top Ay
+   =
+   \sum_{i\neq j}A_{ij}G_{ij}
+   =
+   \frac2p\sum_{i<j}A_{ij}C_{ij}
+   =
+   \frac2p\bigl(\tbinom n2-2k\bigr)
+   =
+   np-\frac{4k}p.
+   \]
+   Hence the average of \(Q_A=\tfrac12 y^\top Ay\) over \(\mathrm{Max}_{+}\) equals \(\Phi(C)-2k/p\). Best switching forces this average to be nonnegative, and \(\max|Q_A|\ge\bigl|\mathbb E[Q_A]\bigr|\). \(\square\)
+
+*Certified checks.* Frame identity \eqref{eq:max-frame} and LP value \(p\) at Paley \(p=3,5\); dual/primal algebra as above. At \(n=10\), the Max-Lipschitz with \(k_\star=5\) gives \(m_{10}\ge15-10/3=11.\overline{6}\) (true; actual \(13\)); edge lip only gave \(15-10=5\).
+
+*Remark (E(1) status).* Max-Lipschitz weakens the rigidity demand from \(k_\star=o(n^{3/2})\) (edge lip) to \(k_\star=o(p\,n^{3/2})=o(n^2)\). Since \(k_\star\le\binom n2/2\) always, this is still one full factor of \(\sqrt n\) short of a free proof: dual-Gaussian control of the Seidel product \(W=A\circ C\) only yields \(k_\star\le\binom n2/2-\Omega(n^{3/2})\), hence a \(\Theta(n^{3/2})\) residual in the Max-Lipschitz gap. Closing E(1) still needs \(k_\star=o(n^2)\) for minimisers (e.g. \(k_\star=O(n^{2-\varepsilon})\), or the original \(O(n)\) matching dichotomy). Integral Max-covers of size \(p\) exist (LP support) but are stars and spike to \(\Phi>\Phi(C)\). **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

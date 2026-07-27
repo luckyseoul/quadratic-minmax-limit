@@ -80,11 +80,13 @@ so \(\alpha_n\ge\tfrac12\sqrt{1-1/n}-2n^{-1/2}\to\tfrac12\). Combined with \(\li
 
 Maximizers of any \(\rho=1\) conference are exactly the boolean \(\pm p\)-eigenvectors. Certified \(+p\)-evec counts for Paley \(p=3,5,7\): \(12,260,11452\). The ratio \(\#/n^{3/2}\) **increases** (0.38, 1.96, 32.4), so the crude bound \(k_\star\le|\mathrm{Max}|\) is **not** \(o(n^{3/2})\) and cannot alone prove E(1). A tighter structural bound (e.g. card-min \(F\) is a matching / has \(|F|\le n\)) is still required.
 
-## New positive structure (Prop 15.26)
+## New positive structure (Props 15.26–15.27)
 
 Matching flips of \(\rho=1\) conferences keep boolean \(+p\)-evecs as **coordinate-local maximisers** of \(x^\top Ax\) (\(y_i(Ay)_i\ge p-2\)). At \(n=10\) this upgrades to a global identity \(\Phi(C\oplus M)=\max_{\mathrm{Max}}|Q|\) for every perfect matching. Star-reduction does **not** preserve sparsity (\(d_H(B,C')=12\) for all matching undercutters). See `E1_STAR_REDUCTION_PROBE.md`.
 
-**Still missing for E(1):** (i) global Max-determination for matchings at general \(p\); (ii) matching dichotomy \(m_n=\min(\Phi(C),\min_M\Phi(C\oplus M))\).
+**Prop 15.27:** \(\mathbb E_{\mathrm{Max}_{+}}[yy^\top]=I+C/p\). Fractional Max-cover number \(=p\); Max-Lipschitz \(\Phi\ge\Phi(C)-2k/p\). E(1) \(\Leftrightarrow k_\star=o(n^2)\) (was \(o(n^{3/2})\) under edge lip) — still open.
+
+**Still missing for E(1):** (i) \(k_\star=o(n^2)\) for minimisers (or matching dichotomy); (ii) direct gap \(\Phi-m_n=o(n^{3/2})\).
 
 ## Blocked approaches (do not reopen without new ideas)
 
