@@ -1,0 +1,250 @@
+{
+  "n_unique_maxcovers": 11,
+  "all_two_sided": true,
+  "all_minimal": true,
+  "all_maximal": true,
+  "all_criterion": true,
+  "all_clique_flip": true,
+  "all_phi_eq_Phi": true,
+  "all_op_sqrt41": true,
+  "all_no_undercut": true,
+  "covers": [
+    {
+      "minSp": 1.0,
+      "maxSp": 9.0,
+      "minSm": -9.0,
+      "maxSm": -1.0,
+      "two_sided": true,
+      "maxR": 60,
+      "phi": 65.0,
+      "op": 6.403124237432849,
+      "op_is_sqrt41": true,
+      "clique_flip": true,
+      "criterion": true,
+      "undercut": false,
+      "minimal": true,
+      "maximal": true,
+      "S_plus_dist": [
+        1,
+        5,
+        9
+      ],
+      "id": 0
+    },
+    {
+      "minSp": 1.0,
+      "maxSp": 5.0,
+      "minSm": -5.0,
+      "maxSm": -1.0,
+      "two_sided": true,
+      "maxR": 60,
+      "phi": 65.0,
+      "op": 6.403124237432849,
+      "op_is_sqrt41": true,
+      "clique_flip": true,
+      "criterion": true,
+      "undercut": false,
+      "minimal": true,
+      "maximal": true,
+      "S_plus_dist": [
+        1,
+        5
+      ],
+      "id": 1
+    },
+    {
+      "minSp": 1.0,
+      "maxSp": 5.0,
+      "minSm": -5.0,
+      "maxSm": -1.0,
+      "two_sided": true,
+      "maxR": 60,
+      "phi": 65.0,
+      "op": 6.40312423743285,
+      "op_is_sqrt41": true,
+      "clique_flip": true,
+      "criterion": true,
+      "undercut": false,
+      "minimal": true,
+      "maximal": true,
+      "S_plus_dist": [
+        1,
+        5
+      ],
+      "id": 2
+    },
+    {
+      "minSp": 1.0,
+      "maxSp": 5.0,
+      "minSm": -5.0,
+      "maxSm": -1.0,
+      "two_sided": true,
+      "maxR": 60,
+      "phi": 65.0,
+      "op": 6.403124237432849,
+      "op_is_sqrt41": true,
+      "clique_flip": true,
+      "criterion": true,
+      "undercut": false,
+      "minimal": true,
+      "maximal": true,
+      "S_plus_dist": [
+        1,
+        5
+      ],
+      "id": 3
+    },
+    {
+      "minSp": 1.0,
+      "maxSp": 9.0,
+      "minSm": -9.0,
+      "maxSm": -1.0,
+      "two_sided": true,
+      "maxR": 60,
+      "phi": 65.0,
+      "op": 6.403124237432849,
+      "op_is_sqrt41": true,
+      "clique_flip": true,
+      "criterion": true,
+      "undercut": false,
+      "minimal": true,
+      "maximal": true,
+      "S_plus_dist": [
+        1,
+        5,
+        9
+      ],
+      "id": 4
+    },
+    {
+      "minSp": 1.0,
+      "maxSp": 9.0,
+      "minSm": -9.0,
+      "maxSm": -1.0,
+      "two_sided": true,
+      "maxR": 60,
+      "phi": 65.0,
+      "op": 6.4031242374328485,
+      "op_is_sqrt41": true,
+      "clique_flip": true,
+      "criterion": true,
+      "undercut": false,
+      "minimal": true,
+      "maximal": true,
+      "S_plus_dist": [
+        1,
+        5,
+        9
+      ],
+      "id": 5
+    },
+    {
+      "minSp": 1.0,
+      "maxSp": 5.0,
+      "minSm": -5.0,
+      "maxSm": -1.0,
+      "two_sided": true,
+      "maxR": 60,
+      "phi": 65.0,
+      "op": 6.403124237432849,
+      "op_is_sqrt41": true,
+      "clique_flip": true,
+      "criterion": true,
+      "undercut": false,
+      "minimal": true,
+      "maximal": true,
+      "S_plus_dist": [
+        1,
+        5
+      ],
+      "id": 6
+    },
+    {
+      "minSp": 1.0,
+      "maxSp": 5.0,
+      "minSm": -5.0,
+      "maxSm": -1.0,
+      "two_sided": true,
+      "maxR": 60,
+      "phi": 65.0,
+      "op": 6.403124237432848,
+      "op_is_sqrt41": true,
+      "clique_flip": true,
+      "criterion": true,
+      "undercut": false,
+      "minimal": true,
+      "maximal": true,
+      "S_plus_dist": [
+        1,
+        5
+      ],
+      "id": 7
+    },
+    {
+      "minSp": 1.0,
+      "maxSp": 9.0,
+      "minSm": -9.0,
+      "maxSm": -1.0,
+      "two_sided": true,
+      "maxR": 60,
+      "phi": 65.0,
+      "op": 6.4031242374328485,
+      "op_is_sqrt41": true,
+      "clique_flip": true,
+      "criterion": true,
+      "undercut": false,
+      "minimal": true,
+      "maximal": true,
+      "S_plus_dist": [
+        1,
+        5,
+        9
+      ],
+      "id": 8
+    },
+    {
+      "minSp": 1.0,
+      "maxSp": 9.0,
+      "minSm": -9.0,
+      "maxSm": -1.0,
+      "two_sided": true,
+      "maxR": 60,
+      "phi": 65.0,
+      "op": 6.40312423743285,
+      "op_is_sqrt41": true,
+      "clique_flip": true,
+      "criterion": true,
+      "undercut": false,
+      "minimal": true,
+      "maximal": true,
+      "S_plus_dist": [
+        1,
+        5,
+        9
+      ],
+      "id": 9
+    },
+    {
+      "minSp": 1.0,
+      "maxSp": 5.0,
+      "minSm": -5.0,
+      "maxSm": -1.0,
+      "two_sided": true,
+      "maxR": 60,
+      "phi": 65.0,
+      "op": 6.403124237432851,
+      "op_is_sqrt41": true,
+      "clique_flip": true,
+      "criterion": true,
+      "undercut": false,
+      "minimal": true,
+      "maximal": true,
+      "S_plus_dist": [
+        1,
+        5
+      ],
+      "id": 10
+    }
+  ],
+  "status": "OPEN \u2014 verified on all SA-discovered Max-covers at p=5; not a mathematical forall proof"
+}

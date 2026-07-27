@@ -1,0 +1,9 @@
+{
+  "n_covers_in_component": 8,
+  "all_maxR_ge_60": true,
+  "all_phi_ge_Phi": true,
+  "maxR_values": [
+    60
+  ],
+  "status": "OPEN if component incomplete; computer-assisted if full component of all Max-covers"
+}

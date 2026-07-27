@@ -1856,3 +1856,45 @@ def test_prop_15_34_matching_D_squared_identity():
 
     assert "15.34" in (Path(__file__).resolve().parents[1] / "solution.md").read_text()
     assert "OPEN" in (Path(__file__).resolve().parents[1] / "HANDOFF.md").read_text()
+
+
+def test_prop_15_35_maxcover_structure_p5():
+    """Prop 15.35: forced S=1; census Max-covers all non-undercut with clique-flip."""
+    import json
+    from minmax_quadratic import maxR_matching_level, phi_mitm
+
+    p = 5
+    C = paley_conference_prime_power(p)
+    n = C.shape[0]
+    Phi = 0.5 * n * p
+    # Forced: E[S]=2.6 < 3
+    assert (n / 2) / p < 3
+
+    census = Path(__file__).resolve().parents[1] / "evidence" / "e1_maxcover_full_census.json"
+    data = json.loads(census.read_text())
+    assert data["n_unique_maxcovers"] >= 11
+    assert data["all_no_undercut"]
+    assert data["all_clique_flip"]
+    assert data["all_criterion"]
+    assert data["all_op_sqrt41"]
+    assert data["all_two_sided"]
+    assert data["all_minimal"] and data["all_maximal"]
+    assert "OPEN" in data["status"]
+
+    # Re-verify one cover live via shipped functions
+    # Load a matching from e1_new_maxcovers
+    new = json.loads(
+        (Path(__file__).resolve().parents[1] / "evidence" / "e1_new_maxcovers.json").read_text()
+    )
+    M = [tuple(e) for e in new["covers"][0]["matching"]]
+    mr = maxR_matching_level(C, M, p)
+    assert mr >= 60
+    A = C.copy()
+    for i, j in M:
+        A[i, j] *= -1
+        A[j, i] *= -1
+    assert abs(float(phi_mitm(A)) - Phi) < 1e-9
+    assert abs(np.linalg.norm(A, ord=2) - np.sqrt(41)) < 1e-8
+
+    assert "15.35" in (Path(__file__).resolve().parents[1] / "solution.md").read_text()
+    assert "OPEN" in (Path(__file__).resolve().parents[1] / "HANDOFF.md").read_text()

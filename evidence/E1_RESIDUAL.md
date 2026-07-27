@@ -34,7 +34,8 @@ together with \(p=3\) gap \(O(1)\) and denseness.
 | Object | Result |
 |--------|--------|
 | Random PM Max-covers in 20k samples | **0** (extremely rare) |
-| SA Max-covers checked | 8, all \(\Phi=\Phi(C)\), all clique-flip, all \(\|A\|_{\mathrm{op}}=\sqrt{41}\) |
+| SA Max-covers checked (unique) | **11**, all two-sided, min+max, \(\Phi=\Phi(C)\), clique-flip, \(\mathrm{op}=\sqrt{41}\) |
 | Criterion-fail non-cover | exists; does **not** undercut |
+| Full census JSON | `e1_maxcover_full_census.json` |
 
 **Do not mark Main Theorem settled.**

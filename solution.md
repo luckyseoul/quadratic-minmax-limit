@@ -1175,6 +1175,23 @@ so \(\Phi(C\oplus M)\ge\Phi(C)\).
 
 *Open.* Prove \(\|C\oplus M\|_{\mathrm{op}}=\sqrt{p^2+16}\) (or a bound forcing \(\Phi(A)\ge\Phi(C)\)) for every Max-covering matching when \(p\ge5\); or complete clique-flip existence. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.35 (Max-cover matching structure at \(p=5\); 2026-07-27).** Let \(C\) be Paley of order \(n=26\) (\(p=5\)), \(\Phi=65\), and \(M\) a perfect matching Max-cover (\(\min_{\mathrm{Max}_{+}}S_M\ge1\)).
+
+1. **Forced \(S_M=1\) and residue (proved).** \(\mathbb E[S_M]=13/5=2.6<3\) and \(S_M\) odd on \(\mathrm{Max}_{+}\), so \(S_M\) attains \(1\). The residue of \(S_M\) on \(\mathrm{Max}_{+}\) cannot be \(3\bmod4\) (that would force \(\min S_M\ge3>2.6\)). Hence \(S_M\equiv1\pmod4\), \(s_0=1\) is admissible for clique-flip (Prop 15.31), and \(\Sigma_{\mathrm{need}}=3\).
+
+2. **Certified census of 11 Max-covers (not a forall proof).** Independent SA campaigns produced **11** distinct Max-covering perfect matchings. Every one is:
+   - two-sided (\(\min_{\mathrm{Max}_{+}}S=1\), \(\max_{\mathrm{Max}_{-}}S=-1\));
+   - inclusion-minimal and inclusion-maximal as Max-covers;
+   - \(\|C\oplus M\|_{\mathrm{op}}=\sqrt{41}\) exactly;
+   - spike-criterion tight (\(\max R=60\));
+   - clique-flip capable;
+   - exact MITM \(\Phi(C\oplus M)=\Phi(C)\).
+   Only two \(S_{+}\) distributions appear: \((1^{156},5^{104})\) and \((1^{168},5^{80},9^{12})\). Evidence: `evidence/e1_maxcover_full_census.json`.
+
+3. **Uniform sampling.** Among \(2\cdot10^4\) random perfect matchings, **0** Max-covers (Max-covers are extreme tail events).
+
+*Open.* Prove clique-flip / \(\Phi\ge\Phi(C)\) for every Max-covering perfect matching when \(p\ge5\); then non-matching undercutters / \(k_\star\). **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
