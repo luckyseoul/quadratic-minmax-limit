@@ -29,6 +29,8 @@ Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptot
 **Settlement path (shortest):** E(1) alone on the dense \(\rho=1\) family \(n=p^2+1\) \(\Rightarrow L=\tfrac12\) by Prop 6.2
 (E(2) not needed for that subfamily). **E(1) is the blocking open problem.**
 
+**MO thread re-audit (2026-07-27):** full re-read of [MO 413935](https://mathoverflow.net/questions/413935) + comments via SE API — **0 answers; no hidden proof**. Author already knew liminf \(\ge2^{-5/2}\) and that such bounds do **not** settle existence; not interested in numerics. Starr’s Bowlin/multipartite pointer is already dead for existence (§9–§10). **Time savings:** stop BH re-derivation, stop multipartite reopen, stop pure-SA as deliverable; only load-bearing E(1) (or permanent relative gap / non-existence) counts. Details: `evidence/MO_THREAD_REAUDIT.md`.
+
 **Existence of \(L\) remains OPEN** — sandwich only; E(1) not proved.
 ---
 
@@ -172,7 +174,7 @@ Soft multipartite / Hadamard / annealed / rank-one blow-up **cannot** force \(\l
 
 ### 5.1 Next attacks (ranked)
 
-1. **E(1) on \(\rho=1\) family** — Prove \(m_n=\frac12 n\sqrt{n-1}-o(n^{3/2})\) for \(n=p^2+1\), or exhibit a permanent relative gap. At \(n=10\) the absolute gap is only \(2\) (rel. \(\approx0.063\)); at \(n=26\) SA+exact-rescore found **no** undercutter of \(\Phi=65\) (certified \(m_{26}\le65\)). Need a general argument, not local edge-flip (optima sit at Hamming \(\ge5\)).  
+1. **E(1) on \(\rho=1\) family** — Prove \(m_n=\frac12 n\sqrt{n-1}-o(n^{3/2})\) for \(n=p^2+1\), or exhibit a permanent relative gap. At \(n=10\) the absolute gap is only \(2\) (rel. \(\approx0.063\)); at \(n=26\) SA+exact-rescore found **no** undercutter of \(\Phi=65\) (certified \(m_{26}\le65\)). Need a general argument, not local edge-flip (optima sit at Hamming \(\ge5\)). **MO re-audit:** author already discarded one-sided bounds as settlement; pure numerics are out of scope for the prize.  
 2. **Structural gap from \(n=10\)** — **Mostly closed (N10-S + N10-C).** Hamming-5 threshold; only undercutters at \(k=5\) are 144 perfect matchings; those 144 form one \(\mathrm{P}\Gamma\mathrm{L}(2,9)\)-orbit and equal the maximizer-drop set (`evidence/N10_STRUCTURE.md`, `evidence/N10_MATCHING_CLASSIFY.md`). SA also finds Hamming-11–16 optima in the switching metric (same \(r=13/15\)). Remaining: whether a matching-type construction lifts (random matchings at \(n=26\) **raise** \(\Phi\) to \(\ge73\)); classify non-matching distant optima.  
 3. **E(2) analytic** — Prove \(\rho(C_n)\to1\) for all large Paley. **Partial:** exact \(\,x^\top Cx=2-8\Sigma_q\); asymptotic \(\rho_{\mathrm{int}}=(8/\pi^2)L_{\mathrm{odd}}+o(1)\) with \(\limsup\rho_{\mathrm{int}}=1\) (`E2_RHO_INT_ASYMPTOTICS.md`). Full pointwise \(\rho\to1\) still open; \(\rho=1\) on \(n=p^2+1\) already gives limsup.  
 4. **Non-existence** — Only if two dense subsequences with **proved** unequal \(\alpha\) limits appear; denseness (Prop 6.2) is mandatory.
