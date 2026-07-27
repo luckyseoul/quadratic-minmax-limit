@@ -51,20 +51,28 @@ Any undercutter (\(\Phi(A)<\Phi(C)\)) must satisfy \(S_F(y)\ge1\) for every posi
 
 ## Sufficient claim (still open)
 
-**Claim (matching / bounded-degree dichotomy).** On \(n=p^2+1\), there exists a \(\Phi\)-minimiser whose disagreement graph with Paley \(C\) (after switching) is a matching — equivalently \(k_\star\le n/2\).
+**Claim (path-cycle / \(k_\star\le n\) dichotomy).** On \(n=p^2+1\), there exists a \(\Phi\)-minimiser whose disagreement graph with Paley \(C\) (after switching) is a disjoint union of paths and cycles — equivalently \(k_\star\le n\) (since such graphs have \(|E|\le n\)).
 
-**If the claim holds**, then by Prop 15.20b
+**Weaker form (matching only):** \(k_\star\le n/2\) via a perfect-matching minimiser.
+
+**If either form holds**, then by Prop 15.20b
 \[
-m_n\ge\Phi(C)-2k_\star\ge\tfrac12 np-n,
+m_n\ge\Phi(C)-2k_\star\ge\tfrac12 np-2n,
 \]
-so \(\alpha_n\ge\tfrac12\sqrt{1-1/n}-n^{-1/2}\to\tfrac12\). Combined with \(\limsup\alpha_n\le\tfrac12\) and denseness Prop 6.1–6.2 along \(n_k=p_k^2+1\),
+so \(\alpha_n\ge\tfrac12\sqrt{1-1/n}-2n^{-1/2}\to\tfrac12\). Combined with \(\limsup\alpha_n\le\tfrac12\) and denseness Prop 6.1–6.2 along \(n_k=p_k^2+1\),
 \[
 \lim_{n\to\infty}\alpha_n=\tfrac12.
 \]
 
-**Evidence for the claim:** at \(n=10\), \(k_\star=5=n/2\) via perfect-matching undercutters (N10-S). At \(n=26\), exact-Φ SA finds no undercut of \(\Phi=65\), consistent with \(k_\star=0\) (Paley itself is a minimiser). Far \(m_{10}\)-optima with best-\(k\ge15\) do **not** affect \(k_\star=\min\).
+**Evidence for the claim (n=10, certified):**
+- \(k_\star=5\le n\) via 144 perfect-matching undercutters (N10-S / N10-C).
+- All **360** Hamming-6 undercutters are single **6-cycles** with \(\Phi=13=m_{10}\) (Theorem N10-C6; `evidence/N10_CYCLE_UNDERCUTTERS.md`).
+- So both minimal and next-to-minimal undercutters are path/cycle graphs (\(\Delta\le2\), \(k\le n\)).
+- Stars never undercut (deg \(3..8\): 0 hits). High-\(\Delta\) undercutters appear only at larger \(k\) (e.g. \(k=7\), \(\Delta=3\)) and are not cardinality-minimal.
+- Far \(m_{10}\)-optima with best-\(k\in[8,16]\) exist; many do **not** contain a \(k\le6\) undercutter as a subgraph, and single-edge deletion need not reduce them to one. This does **not** affect \(k_\star=\min\). Extraction of a sparse undercutter from *every* minimiser fails; only *existence* of a sparse minimiser is required for E(1).
+- At \(n=26\), exact-Φ SA finds no undercut of \(\Phi=65\), consistent with \(k_\star=0\).
 
-**Obstacle:** \(\Phi\) is only 2-Lipschitz, so \(\Phi\) near \(\Phi(C)\) does **not** force small Hamming distance (far optima exist). Need a structural reason that a *closest* undercutter is a matching / has \(k\le n/2\).
+**Obstacle:** \(\Phi\) is only 2-Lipschitz, so near-optimal \(\Phi\) does **not** force small Hamming distance (far optima exist). Need a structural reason that a *closest* \(\Phi\)-minimiser has \(k\le n\) (path-cycle / matching). General \(p\) open.
 
 ## Not established
 

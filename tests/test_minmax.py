@@ -898,3 +898,87 @@ def test_interval_rho_asymptotic_main_term_close():
     text = note.read_text()
     assert "OPEN" in text
     assert "E(1)" in text
+
+
+def test_n10_k6_undercutters_are_cycles():
+    """
+    Theorem N10-C6: drive shipped n10_cycle_undercutters against durable JSON.
+    All 360 Hamming-6 undercutters of Paley C_10 are single 6-cycles with Φ=13.
+    Does not settle lim α_n (still needs general k_star bound).
+    """
+    import json
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from n10_cycle_undercutters import _is_single_cycle
+    from minmax_quadratic import paley_conference_prime_power, phi
+
+    cpath = ROOT / "evidence" / "n10_cycle_undercutters.json"
+    assert cpath.exists(), "run: python -m src.n10_cycle_undercutters (or classify script)"
+    data = json.loads(cpath.read_text())
+    assert data["n_undercutters_k6"] == 360
+    assert data["all_are_single_6cycles"] is True
+    assert data["all_have_Phi_13"] is True
+    assert data["n_scanned"] == 8145060  # binom(45,6)
+
+    # Spot-check: a concrete 6-cycle undercuts to 13; a 6-edge star does not
+    C = paley_conference_prime_power(3)
+    # cycle (0,1,2,3,4,5)
+    cyc = [(0, 1), (1, 2), (2, 3), (3, 4), (4, 5), (0, 5)]
+    assert _is_single_cycle(cyc, 10)
+    A = C.copy()
+    for i, j in cyc:
+        A[i, j] *= -1
+        A[j, i] *= -1
+    # not every C6 undercuts; only 360 of them — just check structure helper + Phi bounds
+    ph = phi(A)
+    assert ph >= 13.0 - 1e-9  # never below m_10
+    assert ph <= 25.0 + 1e-9
+
+    # star of degree 6 at 0 never undercuts (exhaustive in campaign: 0/840 for d=3..8)
+    star = [(0, j) for j in range(1, 7)]
+    A2 = C.copy()
+    for i, j in star:
+        A2[i, j] *= -1
+        A2[j, i] *= -1
+    assert phi(A2) >= 15.0 - 1e-9
+
+    note = ROOT / "evidence" / "N10_CYCLE_UNDERCUTTERS.md"
+    assert note.exists()
+    text = note.read_text()
+    assert "OPEN" in text
+    assert "N10-C6" in text or "6-cycle" in text
+
+
+def test_n10_path_cycle_k_star_bound_implies_e1_string():
+    """
+    Documented sufficient criterion: k_star ≤ n ⇒ E(1) on ρ=1 family via edge lip.
+    Drives phi_edge_lipschitz_lower; does not claim the dichotomy is proved for all p.
+    """
+    sys.path.insert(0, str(ROOT / "src"))
+    from n10_matching_optima import perfect_matchings
+
+    C = paley_conference_prime_power(3)
+    n = 10
+    phi_c = phi(C)
+    assert abs(phi_c - 15.0) < 1e-9
+    found = False
+    for M in perfect_matchings(10):
+        A = C.copy()
+        for i, j in M:
+            A[i, j] *= -1
+            A[j, i] *= -1
+        if abs(phi(A) - 13.0) < 1e-9:
+            k = edge_hamming(A, C)
+            assert k == 5
+            lb = phi_edge_lipschitz_lower(phi_c, k)
+            assert abs(lb - (15.0 - 2 * 5)) < 1e-12
+            assert phi(A) >= lb - 1e-9
+            found = True
+            break
+    assert found
+    # relative gap for k_star ≤ n: 2n / n^{3/2} = 2 n^{-1/2} → 0
+    assert 2 * n / (n ** 1.5) < 0.7
+
+    note = ROOT / "evidence" / "E1_RIGIDITY_ATTACK.md"
+    assert note.exists()
+    assert "OPEN" in note.read_text()

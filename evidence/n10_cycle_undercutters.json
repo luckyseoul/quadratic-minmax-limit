@@ -1,0 +1,11 @@
+{
+  "n": 10,
+  "Phi_C": 15.0,
+  "n_scanned": 8145060,
+  "n_undercutters_k6": 360,
+  "all_are_single_6cycles": true,
+  "all_have_Phi_13": true,
+  "maxdeg_all_2": true,
+  "expected_n_undercutters": 360,
+  "k5_undercutters": 144
+}

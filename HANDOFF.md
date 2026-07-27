@@ -31,9 +31,11 @@ Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptot
 
 **E(1) reduction (2026-07-27):** Prop 15.20b edge-counting Lipschitz \(\Phi(A)\ge\Phi(C)-2k\) sharpens the sparse regime (vs Frobenius \(n\sqrt k\)). **E(1) \(\Leftrightarrow\) \(k_\star=o(n^{3/2})\)** for \(\Phi\)-minimisers after switching to Paley on \(n=p^2+1\). At \(n=10\), \(k_\star=5\) (matchings), though some other \(m_{10}\)-matrices have best-\(k\ge15\) (campaign). Rigidity \(k_\star=o(n^{3/2})\) still unproved in general. See `evidence/E1_EDGE_LIPSCHITZ.md`, `evidence/E1_RIGIDITY_ATTACK.md`.
 
+**N10-C6 (2026-07-27):** exhaustive scan of \(\binom{45}{6}\) — all **360** Hamming-6 undercutters of Paley \(C_{10}\) are single **6-cycles** with \(\Phi=13=m_{10}\). Together with N10-S (144 matching undercutters at \(k=5\)), every undercutter at the two smallest cardinalities is a path/cycle graph (\(\Delta\le2\), \(k\le n\)). Sufficient for E(1) if generalised: **path-cycle dichotomy** \(k_\star\le n\) \(\Rightarrow L=\tfrac12\). Far optima need not *contain* a sparse undercutter as a subgraph; only existence of a sparse minimiser matters for \(k_\star\). See `evidence/N10_CYCLE_UNDERCUTTERS.md`, `src/n10_cycle_undercutters.py`.
+
 **MO thread re-audit (2026-07-27):** full re-read of [MO 413935](https://mathoverflow.net/questions/413935) + comments via SE API — **0 answers; no hidden proof**. Author already knew liminf \(\ge2^{-5/2}\) and that such bounds do **not** settle existence; not interested in numerics. Starr’s Bowlin/multipartite pointer is already dead for existence (§9–§10). **Time savings:** stop BH re-derivation, stop multipartite reopen, stop pure-SA as deliverable; only load-bearing E(1) (or permanent relative gap / non-existence) counts. Details: `evidence/MO_THREAD_REAUDIT.md`.
 
-**Existence of \(L\) remains OPEN** — sandwich only; E(1) not proved (reduced, not closed).
+**Existence of \(L\) remains OPEN** — sandwich only; E(1) not proved (reduced to path-cycle/\(k_\star=o(n^{3/2})\) dichotomy, not closed).
 ---
 
 ## 1. Exact quantity (do not restate incorrectly)
