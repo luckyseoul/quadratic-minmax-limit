@@ -814,3 +814,25 @@ def test_interval_rho_formula_matches_paley_matrix():
     note = ROOT / "evidence" / "E2_INTERVAL_FORMULA.md"
     assert note.exists()
     assert "OPEN" in note.read_text()
+
+
+def test_interval_rho_asymptotic_main_term_close():
+    """
+    E2 asymptotic: ρ_int ≈ (8/π²) sum_{odd m} χ(m)/m² for large prime q≡1 mod 4.
+    Drives shipped interval_rho_asymptotics; does not claim lim α_n.
+    """
+    sys.path.insert(0, str(ROOT / "src"))
+    from interval_rho_asymptotics import rho_int_error_estimate
+
+    # moderate primes: relative error should be small
+    for q in (101, 421, 709, 1009):
+        rho, main, err = rho_int_error_estimate(q)
+        assert rho > 0.5
+        assert main > 0.5
+        assert err / rho < 0.02, (q, rho, main, err)
+
+    note = ROOT / "evidence" / "E2_RHO_INT_ASYMPTOTICS.md"
+    assert note.exists()
+    text = note.read_text()
+    assert "OPEN" in text
+    assert "E(1)" in text
