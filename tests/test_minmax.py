@@ -705,3 +705,78 @@ def test_n10_k_flip_threshold_no_undercut_before_5():
     md = json.loads(mpath.read_text())
     assert md["matching_flip"]["n_phi13"] == 144
     assert md["five_edge_undercutters"]["all_are_perfect_matchings"]
+
+
+def test_n10_matching_classify_maximizer_criterion_and_orbit():
+    """
+    Theorem N10-C: drive shipped n10_matching_classify — maximizer-drop
+    criterion equals Φ=13 matchings; positive maximizers suffice; one seed's
+    PΓL orbit has size 144 and sits inside the Φ=13 set.
+    """
+    sys.path.insert(0, str(ROOT / "src"))
+    from n10_matching_classify import (
+        flip_matching,
+        matching_to_frozenset,
+        maximizer_drop_criterion,
+        paley_maximizers,
+        pgl29_representatives,
+        pgl_orbit,
+        positive_maximizers,
+    )
+    from n10_matching_optima import perfect_matchings
+
+    C = paley_conference_prime_power(3)
+    assert abs(phi(C) - 15.0) < 1e-9
+    maximizers = paley_maximizers(C)
+    assert len(maximizers) == 12
+    pos = positive_maximizers(maximizers)
+    assert len(pos) == 6
+
+    pms = perfect_matchings(10)
+    assert len(pms) == 945
+    opt_phi = []
+    opt_crit = []
+    opt_pos = []
+    for m in pms:
+        ph = phi(flip_matching(C, m))
+        if abs(ph - 13.0) < 1e-9:
+            opt_phi.append(m)
+        if maximizer_drop_criterion(C, m, maximizers):
+            opt_crit.append(m)
+        if maximizer_drop_criterion(C, m, pos):
+            opt_pos.append(m)
+    assert len(opt_phi) == 144
+    assert len(opt_crit) == 144
+    assert len(opt_pos) == 144
+    set_phi = {matching_to_frozenset(m) for m in opt_phi}
+    set_crit = {matching_to_frozenset(m) for m in opt_crit}
+    set_pos = {matching_to_frozenset(m) for m in opt_pos}
+    assert set_phi == set_crit == set_pos
+
+    # Non-optimal matching fails criterion
+    non = next(m for m in pms if matching_to_frozenset(m) not in set_phi)
+    assert not maximizer_drop_criterion(C, non, maximizers)
+    assert abs(phi(flip_matching(C, non)) - 13.0) > 1e-9
+
+    # PΓL orbit of one optimum
+    reps = pgl29_representatives()
+    assert len(reps) == 720
+    orbit = pgl_orbit(opt_phi[0], reps)
+    assert len(orbit) == 144
+    assert orbit == set_phi
+
+    # Evidence JSON agrees (durable campaign artifact)
+    import json
+
+    cpath = ROOT / "evidence" / "n10_matching_classify.json"
+    assert cpath.exists(), "run src/n10_matching_classify.py"
+    data = json.loads(cpath.read_text())
+    assert data["n_phi13"] == 144
+    assert data["sets_agree"] is True
+    assert data["orbit_equals_optima"] is True
+    assert data["criterion_positive_equals_phi13"] is True
+    note = ROOT / "evidence" / "N10_MATCHING_CLASSIFY.md"
+    assert note.exists()
+    text = note.read_text()
+    assert "OPEN" in text
+    assert "N10-C" in text

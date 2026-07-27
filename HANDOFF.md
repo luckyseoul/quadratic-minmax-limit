@@ -13,6 +13,8 @@ Proved sandwich: \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\).
 Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptotic optimality of \(m_n\) vs Paley \(\Phi\) is not.
 
 **New (n=10 structure):** exact optima first appear at Hamming distance **5** from Paley \(C_{10}\), and the only 5-edge undercutters are **144 perfect matchings** (of 945). Absolute gap \(\Phi-m_{10}=2\) is consistent with E(1). See `evidence/N10_STRUCTURE.md`.
+
+**New (n=10 classification, N10-C):** those 144 matchings are exactly one \(\mathrm{P}\Gamma\mathrm{L}(2,9)\)-orbit, equivalently the matchings that drop every Paley maximizer to \(|Q|\le13\) (six \(+\) maximizers certify). See `evidence/N10_MATCHING_CLASSIFY.md`. Existence of \(L\) remains **OPEN**.
 ---
 
 ## 1. Exact quantity (do not restate incorrectly)
@@ -140,6 +142,7 @@ Soft multipartite / Hadamard / annealed / rank-one blow-up **cannot** force \(\l
 | Local-search \(\rho\) “dips” | Uncertified | Not non-existence |
 | Prior SA at \(n=26\): no certified beater of Paley \(\Phi=65\) | Suggestive local min | Hamming distance of true optimizers may be large (at \(n=10\), 1–2 edge flips from Paley do **not** reach \(m_{10}=13\)) |
 | **n=10 structure (certified)** | Hamming-5 threshold; 144 perfect-matching optima; 1-edge local opt | `evidence/N10_STRUCTURE.md`, `n10_structure.json`, `n10_matching_optima.json`; tests `test_n10_*` |
+| **n=10 classification N10-C** | Maximizer-drop \(\Leftrightarrow\) \(\Phi=13\); single \(\mathrm{P}\Gamma\mathrm{L}(2,9)\) orbit of size 144 | `evidence/N10_MATCHING_CLASSIFY.md`, `n10_matching_classify.json`; `src/n10_matching_classify.py`; `test_n10_matching_classify_*` |
 | n=26 matching probe | 86 random perfect-matching flips of Paley: \(\Phi\ge73>65\) | Matchings do **not** undercut at \(n=26\) (`n26_matching_probe.json`) |
 | n=26 SA + exact rescore | 86×5k SA finalists, exact \(\Phi\): none \(<65\); certified \(m_{26}\le65\) | `n26_sa_exact_rescore.json` — `phi_local` alone is **not** a UB |
 ### 4.4 Independent external artifacts (context only)
@@ -155,7 +158,7 @@ Soft multipartite / Hadamard / annealed / rank-one blow-up **cannot** force \(\l
 ### 5.1 Next attacks (ranked)
 
 1. **E(1) on \(\rho=1\) family** — Prove \(m_n=\frac12 n\sqrt{n-1}-o(n^{3/2})\) for \(n=p^2+1\), or exhibit a permanent relative gap. At \(n=10\) the absolute gap is only \(2\) (rel. \(\approx0.063\)); at \(n=26\) SA+exact-rescore found **no** undercutter of \(\Phi=65\) (certified \(m_{26}\le65\)). Need a general argument, not local edge-flip (optima sit at Hamming \(\ge5\)).  
-2. **Structural gap from \(n=10\)** — **Partially closed.** See Theorem N10-S in `evidence/N10_STRUCTURE.md`: min Hamming 5; only undercutters at \(k=5\) are 144 perfect matchings; \(r=13/15\) on optima; SA also finds Hamming-11–16 optima in the switching metric. Open: algebraic classification of the 144 matchings; whether a matching-type construction lifts (random matchings at \(n=26\) **raise** \(\Phi\) to \(\ge73\)).  
+2. **Structural gap from \(n=10\)** — **Mostly closed (N10-S + N10-C).** Hamming-5 threshold; only undercutters at \(k=5\) are 144 perfect matchings; those 144 form one \(\mathrm{P}\Gamma\mathrm{L}(2,9)\)-orbit and equal the maximizer-drop set (`evidence/N10_STRUCTURE.md`, `evidence/N10_MATCHING_CLASSIFY.md`). SA also finds Hamming-11–16 optima in the switching metric (same \(r=13/15\)). Remaining: whether a matching-type construction lifts (random matchings at \(n=26\) **raise** \(\Phi\) to \(\ge73\)); classify non-matching distant optima.  
 3. **E(2) analytic** — Prove \(\rho(C_n)=1-O(n^{-1/2})\) (or \(\to1\)) for all large Paley, not only \(p^2+1\). Interval constructions are evidence, not a proof.  
 4. **Non-existence** — Only if two dense subsequences with **proved** unequal \(\alpha\) limits appear; denseness (Prop 6.2) is mandatory.
 ### 5.2 Traps to avoid
@@ -201,8 +204,10 @@ Soft multipartite / Hadamard / annealed / rank-one blow-up **cannot** force \(\l
 | `evidence/` | Durable numerics + \(\rho=1\) proof note |
 | `evidence/PROOF_rho_eq_1.md` | Full \(\rho=1\) proof |
 | `evidence/N10_STRUCTURE.md` | Theorem N10-S: matching undercutters of Paley-\(10\) |
+| `evidence/N10_MATCHING_CLASSIFY.md` | Theorem N10-C: maximizer criterion + \(\mathrm{P}\Gamma\mathrm{L}\) orbit |
 | `src/n10_structure.py` | Maximizer balance + \(k\)-flip + SA structure campaign |
 | `src/n10_matching_optima.py` | Perfect-matching census (144/945) |
+| `src/n10_matching_classify.py` | Classification: criterion + \(\mathrm{P}\Gamma\mathrm{L}(2,9)\) orbit |
 | `src/n26_matching_probe.py` / `n26_sa_exact_rescore.py` | \(\rho=1\) family probes at \(n=26\) |
 ---
 

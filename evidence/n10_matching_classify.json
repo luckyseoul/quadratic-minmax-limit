@@ -1,0 +1,57 @@
+{
+  "n": 10,
+  "theorem": "N10-C",
+  "timestamp": "2026-07-27T03:51:07Z",
+  "f9_irreducible": {
+    "ia": 0,
+    "ib": 2
+  },
+  "n_maximizers": 12,
+  "n_positive_maximizers": 6,
+  "n_negative_maximizers": 6,
+  "n_phi13": 144,
+  "n_criterion_full": 144,
+  "n_criterion_positive_only": 144,
+  "criterion_full_equals_phi13": true,
+  "criterion_positive_equals_phi13": true,
+  "sets_agree": true,
+  "all_opt_have_sign_prod_minus": true,
+  "n_matchings_sign_prod_minus": 504,
+  "sign_prod_necessary_not_sufficient": true,
+  "n_pgl29": 720,
+  "orbit_size": 144,
+  "orbit_equals_optima": true,
+  "orbit_subset_optima": true,
+  "seed_matching": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      8,
+      9
+    ]
+  ],
+  "seed_phi": 13.0,
+  "seed_r": 0.8666666666666667,
+  "verdict": {
+    "n_optimal_matchings": 144,
+    "characterised_by_maximizer_drop": true,
+    "positive_maximizers_suffice": true,
+    "single_PGammaL_orbit": true,
+    "note": "The 144 Hamming-5 optima of Paley C_10 are exactly one P\u0393L(2,9)-orbit of perfect matchings, equivalently those matchings that drop every Paley maximizer to |Q|<=13 (six + maximizers already certify)."
+  },
+  "total_time_s": 2.571870803833008
+}
