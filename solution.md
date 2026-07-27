@@ -925,7 +925,36 @@ Full writeup and JSON: `evidence/N10_STRUCTURE.md`. Tests: `test_n10_*` in `test
 \]
 Thus \(\mathrm{Max}(C)=\{x\in\{\pm1\}^n:Cx=\pm px\}\). *Proof.* \(C=pP_+-pP_-\) yields \(x^\top Cx=p(2\|P_+x\|^2-n)\); equality \(\lvert x^\top Cx\rvert=np\) forces \(x\) into one eigenspace. \(\square\)
 
-Certified boolean \(+p\)-evec counts for Paley \(n=p^2+1\): \(12,260,11452\) at \(p=3,5,7\) (`evidence/BOOLEAN_EVECS_MAX.md`). The ratio \(\#/n^{3/2}\) increases through \(p=7\), so the crude covering bound \(k_\star\le|\mathrm{Max}|\) is **not** \(o(n^{3/2})\) and does not prove E(1).
+Certified boolean \(+p\)-evec counts for Paley \(n=p^2+1\): \(12,260,11452\) at \(p=3,5,7\) (`evidence/BOOLEAN_EVECS_MAX.md`). For the halfspace construction one has \(\sum_i x_i=p+1\) constantly. The ratio \(\#/n^{3/2}\) increases through \(p=7\), so the crude covering bound \(k_\star\le|\mathrm{Max}|\) is **not** \(o(n^{3/2})\) and does not prove E(1).
+
+**Proposition 15.25 (star-reduction recursive formula for \(m_n\); 2026-07-27).** For every \(n\ge2\),
+\begin{equation}
+\label{eq:recursive-m}
+m_n
+=
+\min_{B\in\mathcal S_{n-1}}
+\max_{x\in\{\pm1\}^{n-1}}
+\Bigl(
+\bigl|Q_B(x)\bigr|
++
+\bigl|\textstyle\sum_{i=1}^{n-1}x_i\bigr|
+\Bigr),
+\end{equation}
+where \(Q_B(x)=\sum_{1\le i<j\le n-1}B_{ij}x_ix_j\).
+
+*Proof.* Every Seidel matrix of order \(n\) is switching-equivalent to one with first row \((0,+1,\ldots,+1)\) (switch vertex \(j\) by \(\varepsilon_j=A_{0j}\)). Switching preserves \(\Phi\), so the minimum of \(\Phi\) may be taken over this slice. For such an \(A\), write \(x=(x_0,x')\) and \(B=A[1\!:\!,1\!:]\). Then
+\[
+Q_A(x)
+=
+x_0\sum_{j=1}^{n-1}x'_j
++
+Q_B(x'),
+\]
+and \(\max_{x_0=\pm1}\lvert Q_B(x')+x_0\,s(x')\rvert=\lvert Q_B(x')\rvert+\lvert s(x')\rvert\) with \(s=\sum x'_i\). Therefore \(\Phi(A)=\max_{x'}(\lvert Q_B\rvert+\lvert s\rvert)\), and minimising over \(A\) is minimising over \(B\in\mathcal S_{n-1}\). \(\square\)
+
+*Certified checks.* Identity \eqref{eq:recursive-m} holds exactly for all \(3\le n\le8\) (exhaustive on both sides) and matches recorded \(m_9,m_{10},m_{11}\) under SA for the right-hand side.
+
+*Remark (E(1) via recursion).* Writing \(f(B)=\max(\lvert Q_B\rvert+\lvert s\rvert)\), if \(B^*\) realises the min then \(m_n=f(B^*)\ge\Phi(B^*)+\max_{L^*}\lvert s\rvert\) where \(L^*\) is the level set of \(B^*\) at height \(\Phi(B^*)\). Numerically the boost \(\max_{L^*}\lvert s\rvert\) is often \(0\) or \(1\) (not \(\Omega(\sqrt n)\)), so the recursion alone does not force the \(n^{3/2}\) growth rate. Combined with Prop 15.20d, E(1) still reduces to \(k_\star=O(n)\) on the \(\rho=1\) family. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
 **n=26 exact MITM census (2026-07-27).** Shipped `phi_mitm` (meet-in-the-middle exact \(\Phi\), even \(n\le28\)). Random matchings/cycles/stars/\(k\le20\) flips and 86-seed SA+MITM rescore: **no undercut of \(\Phi(C_{26})=65\)** (best SA exact \(67\)). Evidence: `evidence/E1_N26_SPARSE_EXACT.md`, `e1_n26_mitm_sa.json`. Consistent with \(k_\star=0\) at \(n=26\); not a general E(1) proof.
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write

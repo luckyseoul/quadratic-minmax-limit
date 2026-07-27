@@ -1033,3 +1033,29 @@ def test_n10_path_cycle_k_star_bound_implies_e1_string():
     note = ROOT / "evidence" / "E1_RIGIDITY_ATTACK.md"
     assert note.exists()
     assert "OPEN" in note.read_text()
+
+
+def test_recursive_star_formula_m_n():
+    """
+    Prop 15.25: m_n = min_B max_x (|Q_B(x)| + |sum x_i|) over Seidel B of order n-1.
+    Exhaustive for n<=7; drives form_Q and exact_m.
+    """
+    from itertools import product
+
+    def psi(N: int) -> float:
+        free = [(i, j) for i in range(N) for j in range(i + 1, N)]
+        X = np.array(list(product([-1.0, 1.0], repeat=N)), dtype=np.float64)
+        S = np.abs(X.sum(axis=1))
+        best = 1e9
+        for mask in range(1 << len(free)):
+            B = np.zeros((N, N))
+            for b, (i, j) in enumerate(free):
+                v = 1.0 if (mask >> b) & 1 else -1.0
+                B[i, j] = B[j, i] = v
+            Q = 0.5 * np.einsum("ra,ab,rb->r", X, B, X)
+            best = min(best, float(np.max(np.abs(Q) + S)))
+        return best
+
+    for n in range(3, 8):
+        m = exact_m(n)
+        assert abs(m - psi(n - 1)) < 1e-9, (n, m, psi(n - 1))

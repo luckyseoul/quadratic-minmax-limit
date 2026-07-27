@@ -35,6 +35,8 @@ Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptot
 
 **Prop 15.24 (2026-07-27):** maximizers of any ρ=1 conference are exactly the boolean ±p-eigenvectors. Paley counts of +p boolean evecs: 12, 260, 11452 at p=3,5,7 (`evidence/BOOLEAN_EVECS_MAX.md`). Ratio #/n^{3/2} increases, so k_⋆≤|Max| is not o(n^{3/2}).
 
+**Prop 15.25 (2026-07-27):** recursive formula \(m_n=\min_B\max_x(|Q_B(x)|+|\sum x_i|)\) over Seidel \(B\) of order \(n-1\) (star-reduction). Certified for \(n\le11\). Does not by itself close E(1) (boost \(\max_L|s|\) often \(O(1)\)).
+
 **n=26 exact sparse MITM (2026-07-27):** shipped `phi_mitm` (exact \(\Phi\) for even \(n\le28\)). Random matchings, cycles \(C_4\)–\(C_{26}\), stars, and random \(k\le20\) flips of Paley \(C_{26}\): **0 undercuts of \(\Phi=65\)** (min observed 67 on single edges). Matching undercut of \(n=10\) does not lift. Consistent with \(k_\star=0\) at \(n=26\), not a proof. See `evidence/E1_N26_SPARSE_EXACT.md`.
 
 **MO thread re-audit (2026-07-27):** full re-read of [MO 413935](https://mathoverflow.net/questions/413935) + comments via SE API — **0 answers; no hidden proof**. Author already knew liminf \(\ge2^{-5/2}\) and that such bounds do **not** settle existence; not interested in numerics. Starr’s Bowlin/multipartite pointer is already dead for existence (§9–§10). **Time savings:** stop BH re-derivation, stop multipartite reopen, stop pure-SA as deliverable; only load-bearing E(1) (or permanent relative gap / non-existence) counts. Details: `evidence/MO_THREAD_REAUDIT.md`.
