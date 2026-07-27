@@ -18,8 +18,9 @@
 Prove: every Max-covering perfect matching \(M\) satisfies \(\Phi(C\oplus M)\ge\Phi(C)\).
 
 Routes:
-- **Clique-flip** (Prop 15.31): existence of \((y,F)\) for every Max-cover — certified on all 8 SA covers at \(p=5\), not proved.
+- **Clique-flip** (Prop 15.31): existence of \((y,F)\) for every Max-cover — certified on all **11** SA covers at \(p=5\) (Prop 15.35), not proved for all.
 - **Spectral**: Max-covers at \(p=5\) have \(\|A\|_{\mathrm{op}}=\sqrt{41}\); upgrade to \(\Phi(A)\ge\Phi(C)\).
+- **Structural**: all 11 covers are two-sided, inclusion min+max; Type A/B only; forced \(S=1\) (proved).
 
 ## What would finish \(L=\tfrac12\)
 
