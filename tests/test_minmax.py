@@ -1145,3 +1145,102 @@ def test_prop_15_27_fractional_cover_value_p():
             assert abs(cover - 1.0) < 1e-8
         # objective sum_e x_e = 2/(n p) * binom(n,2) = (n-1)/p = p
         assert abs((n - 1) / p - p) < 1e-12
+
+
+def test_prop_15_28_size_p_maxcover_tight_and_spike():
+    """
+    Prop 15.28: size-p Max-covers have S≡1 on Max+; covering p-stars spike
+    via Max- with S=p; at n=10 every size-p Max-cover has Phi >= Phi(C)+2.
+    """
+    from itertools import combinations
+
+    def _S_F(C, F, Y):
+        s = np.zeros(len(Y))
+        for i, j in F:
+            s += C[i, j] * Y[:, i] * Y[:, j]
+        return s
+
+    # --- p=3: full size-p census (binom(45,3)=14190, fast) ---
+    p = 3
+    C = paley_conference_prime_power(p)
+    n = C.shape[0]
+    Phi = 0.5 * n * p
+    Maxp = _boolean_plus_evecs(C, float(p))
+    # Max- via Cy = -p y (reuse free-var enum with -p)
+    Maxm = _boolean_plus_evecs(-C, float(p))  # -C has +p evecs = Max- of C
+    assert len(Maxp) > 0 and len(Maxm) > 0
+    # Max- frame
+    Gm = Maxm.T @ Maxm / len(Maxm)
+    assert np.allclose(Gm, np.eye(n) - C / p, atol=1e-8)
+
+    edges = [(i, j) for i in range(n) for j in range(i + 1, n)]
+    n_covers = 0
+    n_stars = 0
+    min_phi = 1e9
+    for F in combinations(edges, p):
+        sp = _S_F(C, F, Maxp)
+        if sp.min() < 1 - 1e-9:
+            continue
+        n_covers += 1
+        # Lemma A: S ≡ 1 on Max+
+        assert np.allclose(sp, 1.0), (F, set(sp))
+        sm = _S_F(C, F, Maxm)
+        assert sm.max() >= 1 - 1e-9  # Lemma B hypothesis
+        deg = {}
+        for i, j in F:
+            deg[i] = deg.get(i, 0) + 1
+            deg[j] = deg.get(j, 0) + 1
+        if max(deg.values()) == p:
+            n_stars += 1
+        A = C.copy()
+        for i, j in F:
+            A[i, j] *= -1
+            A[j, i] *= -1
+        ph = phi(A)
+        min_phi = min(min_phi, ph)
+        assert ph + 1e-9 >= Phi + 2
+    assert n_covers == 405
+    assert n_stars == 60
+    assert min_phi >= Phi + 2 - 1e-9
+
+    # --- p=5: covering p-stars spike (sample all stars, phi on a few) ---
+    p = 5
+    C = paley_conference_prime_power(p)
+    n = C.shape[0]
+    Phi = 0.5 * n * p
+    Maxp = _boolean_plus_evecs(C, float(p))
+    Maxm = _boolean_plus_evecs(-C, float(p))
+    assert len(Maxp) == 260  # full both signs from free-var method
+    # covering p-stars
+    n_star_covers = 0
+    for c in range(n):
+        nbrs = [j for j in range(n) if j != c]
+        for L in combinations(nbrs, p):
+            F = tuple(sorted((min(c, j), max(c, j)) for j in L))
+            sp = _S_F(C, F, Maxp)
+            if sp.min() < 1 - 1e-9:
+                continue
+            n_star_covers += 1
+            assert np.allclose(sp, 1.0)
+            sm = _S_F(C, F, Maxm)
+            assert sm.max() >= p - 0.5
+    assert n_star_covers == 390
+    # one MITM phi check
+    c0, L0 = 0, None
+    for L in combinations([j for j in range(1, n)], p):
+        F = tuple((0, j) for j in L)
+        if _S_F(C, F, Maxp).min() >= 1 - 1e-9:
+            L0 = L
+            break
+    assert L0 is not None
+    A = C.copy()
+    for j in L0:
+        A[0, j] *= -1
+        A[j, 0] *= -1
+    assert abs(phi_mitm(A) - (Phi + 2 * p)) < 1e-9
+
+    # evidence note keeps existence OPEN
+    note = Path(__file__).resolve().parents[1] / "evidence" / "E1_SIZE_P_MAXCOVER.md"
+    assert note.is_file()
+    assert "OPEN" in note.read_text()
+    assert "OPEN" in (Path(__file__).resolve().parents[1] / "solution.md").read_text()

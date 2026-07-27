@@ -1038,6 +1038,21 @@ m_n\ge\Phi(C)-\frac{2k_\star}p,
 \]
 Hence **\(k_\star=O(n^{3/2})\) already forces \(\alpha_n\to\tfrac12\)** along the \(\rho=1\) family (gap \(O(n)=o(n^{3/2})\)), and \(k_\star=o(n^2)\) is the absolute threshold for a vanishing relative gap. This improves Prop 15.20d (which needed \(k_\star=O(n)\) via edge lipschitz). The remaining gap to a free proof is a factor \(\sqrt n\): dual-Gaussian on \(W=A\circ C\) only gives \(k_\star\le\binom n2/2-\Omega(n^{3/2})=\Theta(n^2)\) for arbitrary \(A\). Closing E(1) needs \(k_\star=O(n^{3/2})\) (or better) for \(\Phi\)-minimisers — e.g. via \(\Delta(F)=O(\sqrt n)\) after best switch, the matching dichotomy, or spectral rigidity. Integral Max-covers of size \(p\) exist (LP support) but are stars and spike to \(\Phi>\Phi(C)\). **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.28 (size-\(p\) Max-covers: tight cover and spike; 2026-07-27).** Let \(C\) be a \(\rho=1\) conference of order \(n=p^2+1\) with the Max\(\pm\) frame identities of Prop~15.27 (so \(\mathbb E_{\pm}[C_{ij}y_iy_j]=\pm1/p\)). Write \(S_F(x)=\sum_{\{i,j\}\in F}C_{ij}x_ix_j\).
+
+1. **Tight cover.** If \(F\) is a Max-cover (\(S_F\ge1\) on \(\mathrm{Max}_{+}\)) with \(|F|=p\), then \(S_F\equiv1\) on \(\mathrm{Max}_{+}\).
+   *Proof.* \(\mathbb E_{+}[S_F]=|F|/p=1\) and \(S_F\ge1\) force equality. \(\square\)
+
+2. **Spike from Max\(_{-}\).** If some \(z\in\mathrm{Max}_{-}\) has \(S_F(z)\ge1\), then \(\Phi(C\oplus F)\ge\Phi(C)+2\), since \(Q_{C\oplus F}(z)=-\Phi-2S_F(z)\). If \(S_F(z)=p\) then \(\Phi(C\oplus F)\ge\Phi+2p\).
+
+3. **Covering \(p\)-stars (certified \(p=3,5\)).** Every covering \(p\)-star has \(S_F\equiv1\) on \(\mathrm{Max}_{+}\) and \(\max_{\mathrm{Max}_{-}}S_F=p\), hence \(\Phi(C\oplus F)=\Phi+2p\). At the infinity vertex of Paley, covering leaf sets are exactly half the affine lines of \(\mathrm{AG}(2,p)\) (6 of 12 at \(p=3\); 15 of 30 at \(p=5\)); spike witnesses in \(\mathrm{Max}_{-}\) are constant on line\(\cup\{\infty\}\). Counts: 60 covering \(p\)-stars at \(n=10\) (all \(\Phi=21\)); 390 at \(n=26\) (MITM sample all \(\Phi=75\)).
+
+4. **All size-\(p\) Max-covers at \(n=10\).** Exhaustive: 405 size-\(p\) Max-covers (60 stars + 345 non-stars); every one has \(\max_{\mathrm{Max}_{-}}S_F\in\{1,3\}\) and \(\Phi\in\{17,21\}\); **zero undercuts** of \(\Phi=15\). Card-min Max-covers never undercut at \(n=10\); undercutters begin at \(k=5\) (N10-S matchings).
+
+*Evidence:* `evidence/E1_SIZE_P_MAXCOVER.md`, `e1_size_p_maxcover.json`. Max\(_{-}\) frame \(I-C/p\) certified at \(p=3,5\).
+
+*Remark (E(1) status).* Prop 15.28 shows that the LP-tight Max-covers spike rather than undercut on the certified range, so the \(n=10\) undercut is a *strictly larger* cover (\(k=5>p\)). Closing E(1) still needs either (i) \(k_\star=O(n^{3/2})\) for minimisers, (ii) a general spike theorem for all Max-covers of size \(o(n^{3/2})\), or (iii) exact Paley optimality for all \(p\ge5\) with the known \(O(1)\) gap at \(p=3\). **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

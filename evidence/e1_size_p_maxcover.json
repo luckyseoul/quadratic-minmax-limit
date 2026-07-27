@@ -1,0 +1,53 @@
+{
+  "p3": {
+    "n": 10,
+    "Phi": 15.0,
+    "n_size_p_covers": 405,
+    "n_stars": 60,
+    "n_nonstars": 345,
+    "S_minus_max_hist": {
+      "3.0": 75,
+      "1.0": 330
+    },
+    "phi_hist": {
+      "21.0": 75,
+      "17.0": 330
+    },
+    "all_S_minus_max_ge_1": true,
+    "undercuts": 0
+  },
+  "p5": {
+    "n": 26,
+    "Phi": 65.0,
+    "n_covering_stars": 390,
+    "S_plus_min_hist": {
+      "1.0": 390
+    },
+    "S_minus_max_hist": {
+      "5.0": 390
+    },
+    "phi_sample": [
+      75.0,
+      75.0,
+      75.0,
+      75.0,
+      75.0,
+      75.0,
+      75.0,
+      75.0,
+      75.0,
+      75.0
+    ],
+    "phi_theory_spike": 75.0,
+    "all_spike_S_minus_eq_p": true,
+    "max_minus_frame": true
+  },
+  "p3_affine": {
+    "covering_lines_at_inf": 6,
+    "total_lines": 12
+  },
+  "p5_affine": {
+    "covering_lines_at_inf": 15,
+    "total_lines": 30
+  }
+}
