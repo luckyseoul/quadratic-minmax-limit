@@ -1084,6 +1084,21 @@ Hence **\(k_\star=O(n^{3/2})\) already forces \(\alpha_n\to\tfrac12\)** along th
 
 *Remark.* Matching dichotomy for E(1) must account for covers that fail only by spike control. Prop 15.26 (local maximality) holds at both \(p=3,5\); global Max-determination of \(\Phi(C\oplus M)\) is special to \(n=10\) among tested orders. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.30 (matching spike criterion; 2026-07-27).** Let \(C\) be Paley of order \(n=p^2+1\), \(\Phi=\tfrac12 np\), and \(M\) a perfect matching of \(K_n\). Write \(A=C\oplus M\) and \(S_M(x)=\sum_{\{i,j\}\in M}C_{ij}x_ix_j\).
+
+1. **Criterion (proved).** If there exists \(x\in\{\pm1\}^n\) with \(S_M(x)=-p\) and \(Q_C(x)\ge\Phi-2p\) (or \(S_M(x)=p\) and \(Q_C(x)\le-(\Phi-2p)\)), then \(\Phi(A)\ge\Phi(C)\).  
+   *Proof.* \(Q_A=Q_C-2S_M\), so the first alternative yields \(Q_A(x)\ge\Phi-2p+2p=\Phi\). \(\square\)
+
+2. **Single-bit drop.** For \(y\in\mathrm{Max}_{+}\) and any coordinate \(i\), \(Q_C(y^{\oplus i})=\Phi-2p\). Hence non-max boolean vectors attain at least the level \(\Phi-2p\). At \(p=3\) this is exact as the global second max of \(|Q_C|\) on non-max vectors (full half-cube). At \(p=5\) sampling finds second max \(55=\Phi-2p\).
+
+3. **Multi-bit formula.** \(Q_C(y^{\oplus F})=\Phi-2p|F|+4\sum_{i<j\in F}C_{ij}y_iy_j\). On a \(y\)-switched clique of size \(r\), this equals \(\Phi-2r(p-r+1)\); at \(r=p\) one recovers \(\Phi-2p\). Square-direction affine lines of \(\mathrm{AG}(2,p)\) are \(p\)-cliques of Paley (Prop 15.28 geometry).
+
+4. **Certified dichotomy at \(n=10\).** Over all 945 perfect matchings, the criterion holds on exactly the \(801\) non-undercutting matchings and fails on exactly the \(144\) undercutters (where \(\max Q_C\) on \(\{S_M=-3\}\) is \(7<9=\Phi-2p\)).
+
+5. **Certified at \(n=26\).** Every tested perfect matching (15 random + 3 SA Max-covers) satisfies the criterion; all three Max-covers have exact MITM \(\Phi=\Phi(C)\). On the level \(S_M=-p\) one has the identity \(\mathbb E[Q_C]=-p\).
+
+*Open for matching non-undercut when \(p\ge5\).* Prove the criterion for every perfect matching (tail \(\max_{S_M=-p}Q_C\ge\Phi-2p\)). That would give \(\Phi(C\oplus M)\ge\Phi(C)\) for all \(M\), hence E(1) under the matching dichotomy. Full E(1) still requires control of non-matching undercutters. Evidence: `evidence/E1_MATCHING_SPIKE_CRITERION.md`. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
