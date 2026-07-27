@@ -950,6 +950,43 @@ def test_n10_k6_undercutters_are_cycles():
     assert "N10-C6" in text or "6-cycle" in text
 
 
+def test_rho1_maximizers_are_boolean_eigenvectors():
+    """
+    Prop 15.24: for rho=1 Paley, Max = {x: C x = ±p x}.
+    Drives paley_conference_prime_power + halfspace_boolean_vector.
+    """
+    for p in (3, 5):
+        C = paley_conference_prime_power(p)
+        n = C.shape[0]
+        h = halfspace_boolean_vector(p)
+        # halfspace is a +p evec
+        assert np.allclose(C @ h, p * h)
+        Phi = abs(form_Q(C, h))
+        assert abs(Phi - 0.5 * n * p) < 1e-8
+        # every boolean +p evec is a maximizer
+        # (check halfspace and its global sign)
+        assert abs(form_Q(C, h) - Phi) < 1e-8
+        assert abs(form_Q(C, -h) - Phi) < 1e-8
+        # at n=10, enumerate: all Max are evecs
+        if n == 10:
+            from itertools import product
+
+            max_count = 0
+            evec_count = 0
+            for bits in product([-1.0, 1.0], repeat=n - 1):
+                x = np.ones(n)
+                x[1:] = bits
+                q = abs(form_Q(C, x))
+                if abs(q - Phi) < 1e-8:
+                    max_count += 1
+                    if np.allclose(C @ x, p * x) or np.allclose(C @ x, -p * x):
+                        evec_count += 1
+            assert max_count == evec_count == 12
+    note = ROOT / "evidence" / "BOOLEAN_EVECS_MAX.md"
+    assert note.exists()
+    assert "OPEN" in note.read_text()
+
+
 def test_phi_mitm_matches_brute_force_n10():
     """Exact meet-in-the-middle Phi matches brute phi at n=10 (Paley + matching)."""
     C = paley_conference_prime_power(3)

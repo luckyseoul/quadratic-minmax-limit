@@ -919,6 +919,14 @@ Full writeup and JSON: `evidence/N10_STRUCTURE.md`. Tests: `test_n10_*` in `test
 
 **Theorem N10-C6 (Hamming-6 undercutters are 6-cycles; 2026-07-27).** Exhaustive scan of all \(\binom{45}{6}=8{,}145{,}060\) six-edge sets: exactly **360** satisfy \(\Phi(C\oplus F)<15\), each is a single **6-cycle**, and each has \(\Phi=13=m_{10}\). Combined with N10-S, every undercutter of cardinality \(5\) or \(6\) is a path/cycle graph (\(\Delta\le2\), \(k\le n\)). Evidence: `evidence/N10_CYCLE_UNDERCUTTERS.md`, `src/n10_cycle_undercutters.py`. **Does not settle \(\lim\alpha_n\)** (needs \(k_\star=O(n)\) for general \(p\)).
 
+**Proposition 15.24 (maximizers of \(\rho=1\) conference are boolean eigenvectors; 2026-07-27).** Let \(C\) be conference of order \(n\) with \(\rho(C)=1\) and \(p=\sqrt{n-1}\). For \(x\in\{\pm1\}^n\),
+\[
+\lvert x^\top Cx\rvert=np\quad\Longleftrightarrow\quad Cx=\pm px.
+\]
+Thus \(\mathrm{Max}(C)=\{x\in\{\pm1\}^n:Cx=\pm px\}\). *Proof.* \(C=pP_+-pP_-\) yields \(x^\top Cx=p(2\|P_+x\|^2-n)\); equality \(\lvert x^\top Cx\rvert=np\) forces \(x\) into one eigenspace. \(\square\)
+
+Certified boolean \(+p\)-evec counts for Paley \(n=p^2+1\): \(12,260,11452\) at \(p=3,5,7\) (`evidence/BOOLEAN_EVECS_MAX.md`). The ratio \(\#/n^{3/2}\) increases through \(p=7\), so the crude covering bound \(k_\star\le|\mathrm{Max}|\) is **not** \(o(n^{3/2})\) and does not prove E(1).
+
 **n=26 exact MITM census (2026-07-27).** Shipped `phi_mitm` (meet-in-the-middle exact \(\Phi\), even \(n\le28\)). Random matchings/cycles/stars/\(k\le20\) flips and 86-seed SA+MITM rescore: **no undercut of \(\Phi(C_{26})=65\)** (best SA exact \(67\)). Evidence: `evidence/E1_N26_SPARSE_EXACT.md`, `e1_n26_mitm_sa.json`. Consistent with \(k_\star=0\) at \(n=26\); not a general E(1) proof.
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[

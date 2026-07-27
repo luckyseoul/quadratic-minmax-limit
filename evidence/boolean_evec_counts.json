@@ -1,0 +1,23 @@
+{
+  "3": {
+    "n": 10,
+    "Phi": 15.0,
+    "boolean_plus_evecs": 12,
+    "count_over_n": 1.2,
+    "count_over_n15": 0.37947331922020555
+  },
+  "5": {
+    "n": 26,
+    "Phi": 65.0,
+    "boolean_plus_evecs": 260,
+    "count_over_n": 10.0,
+    "count_over_n15": 1.9611613513818404
+  },
+  "7": {
+    "n": 50,
+    "Phi": 175.0,
+    "boolean_plus_evecs": 11452,
+    "count_over_n": 229.04,
+    "count_over_n15": 32.39114743259337
+  }
+}
