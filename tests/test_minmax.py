@@ -24,6 +24,7 @@ from minmax_quadratic import (
     form_Q,
     phi,
     phi_local,
+    phi_mitm,
     greedy_Q,
     paley_conference_matrix,
     paley_conference_prime_power,
@@ -947,6 +948,19 @@ def test_n10_k6_undercutters_are_cycles():
     text = note.read_text()
     assert "OPEN" in text
     assert "N10-C6" in text or "6-cycle" in text
+
+
+def test_phi_mitm_matches_brute_force_n10():
+    """Exact meet-in-the-middle Phi matches brute phi at n=10 (Paley + matching)."""
+    C = paley_conference_prime_power(3)
+    assert abs(phi_mitm(C) - phi(C)) < 1e-9
+    assert abs(phi_mitm(C) - 15.0) < 1e-9
+    # one perfect matching flip
+    A = C.copy()
+    for i, j in [(0, 1), (2, 3), (4, 5), (6, 7), (8, 9)]:
+        A[i, j] *= -1
+        A[j, i] *= -1
+    assert abs(phi_mitm(A) - phi(A)) < 1e-9
 
 
 def test_n10_path_cycle_k_star_bound_implies_e1_string():

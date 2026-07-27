@@ -36,6 +36,38 @@ def phi(A: np.ndarray, x_batch: Optional[np.ndarray] = None) -> float:
     return best
 
 
+def phi_mitm(A: np.ndarray) -> float:
+    """
+    Exact Phi(A)=max|Q| via meet-in-the-middle for even n.
+
+    Fix x[0]=+1; split the remaining n-1 coordinates into two halves of size
+    floor((n-1)/2) and ceil((n-1)/2). Enumerate both halves (2^{ceil((n-1)/2)}
+    states) and combine. Feasible through n=26 (2^13 states per half); memory
+    O(2^{n/2}).
+    """
+    n = A.shape[0]
+    if n % 2 != 0:
+        raise ValueError("phi_mitm requires even n")
+    if n > 28:
+        raise ValueError("phi_mitm only supported for n<=28")
+    free = list(range(1, n))
+    L = free[: len(free) // 2]
+    R = free[len(free) // 2 :]
+    L0 = [0] + L
+    nL, nR = len(L), len(R)
+    mR = 1 << nR
+    bitsR = ((np.arange(mR)[:, None] >> np.arange(nR)[None, :]) & 1) * 2.0 - 1.0
+    cR = 0.5 * np.einsum("ia,ab,ib->i", bitsR, A[np.ix_(R, R)], bitsR)
+    mL = 1 << nL
+    bitsL = ((np.arange(mL)[:, None] >> np.arange(nL)[None, :]) & 1) * 2.0 - 1.0
+    xL0 = np.ones((mL, 1 + nL), dtype=np.float64)
+    xL0[:, 1:] = bitsL
+    cL = 0.5 * np.einsum("ia,ab,ib->i", xL0, A[np.ix_(L0, L0)], xL0)
+    V = xL0 @ A[np.ix_(L0, R)]
+    q = cL[:, None] + cR[None, :] + V @ bitsR.T
+    return float(np.max(np.abs(q)))
+
+
 def phi_local(A: np.ndarray, restarts: int = 40, rng: Optional[np.random.Generator] = None) -> float:
     """Local search lower bound on phi(A) = max |Q|."""
     if rng is None:
