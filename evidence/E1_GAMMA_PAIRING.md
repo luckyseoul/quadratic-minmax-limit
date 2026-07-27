@@ -123,9 +123,19 @@ are class \(r=1\) with \(\min S=1\) (1-bit blocked; clique-flip required).
 
 Scripts: `src/e1_gamma_criterion_census.py`, `src/e1_gamma_cover_batch.py`, `maxR_matching_level` in `minmax_quadratic.py`.
 
+## Correction (Prop 15.33): criterion is not forall-\(M\)
+
+A certified perfect matching at \(p=5\) has \(\max R=54<60\) (criterion **fails**) but is a
+**non-cover** (\(\min_{\mathrm{Max}_{+}}S=-1\)) with MITM \(\Phi=75>\Phi(C)\). See
+`e1_criterion_fail_no_undercut.json`.
+
+By Prop 15.33, **every non-cover raises \(\Phi\) by \(\ge2\)**. Only Max-covering matchings can
+undercut. The spike criterion remains a useful sufficient test on covers; it is not necessary
+for non-undercut, and it is not true for every matching.
+
 ## What this does **not** prove
 
-- \(\max R\ge p(m-1)\) for every perfect matching when \(p\ge5\) (attainment lemmas open)
+- Every Max-covering perfect matching has \(\Phi(C\oplus M)\ge\Phi(C)\) when \(p\ge5\)
 - Clique-flip for every Max-cover
 - Matching dichotomy / control of non-matching undercutters
 - \(k_\star=O(n^{3/2})\)

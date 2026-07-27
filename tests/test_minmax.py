@@ -1752,3 +1752,65 @@ def test_prop_15_32_gamma_pairing_and_mod4():
     assert note.is_file() and "OPEN" in note.read_text()
     assert "15.32" in (Path(__file__).resolve().parents[1] / "solution.md").read_text()
     assert "OPEN" in (Path(__file__).resolve().parents[1] / "HANDOFF.md").read_text()
+
+
+def test_prop_15_33_noncovers_cannot_undercut():
+    """Prop 15.33: non-cover matchings raise Phi; criterion-fail example does not undercut."""
+    import json
+    from minmax_quadratic import maxR_matching_level, phi_mitm
+
+    p = 5
+    C = paley_conference_prime_power(p)
+    n = C.shape[0]
+    Phi = 0.5 * n * p
+    Maxp = _boolean_plus_evecs(C, float(p))
+
+    # Random non-cover: minS <= -1 => QA on that Max+ vector >= Phi+2
+    rng = np.random.default_rng(0)
+    found_noncover = False
+    for _ in range(30):
+        perm = rng.permutation(n)
+        M = [
+            (int(perm[2 * i]), int(perm[2 * i + 1]))
+            for i in range(n // 2)
+        ]
+        Sp = np.zeros(len(Maxp))
+        for i, j in M:
+            Sp += C[i, j] * Maxp[:, i] * Maxp[:, j]
+        if Sp.min() > -0.5:
+            continue
+        found_noncover = True
+        y = Maxp[int(np.argmin(Sp))]
+        s = float(Sp.min())
+        assert s <= -1 + 1e-9
+        QA = Phi - 2 * s
+        assert QA >= Phi + 2 - 1e-9
+        # form_Q check
+        assert abs(form_Q(C, y) - Phi) < 1e-6
+        A = C.copy()
+        for i, j in M:
+            A[i, j] *= -1
+            A[j, i] *= -1
+        assert abs(form_Q(A, y) - QA) < 1e-6
+        break
+    assert found_noncover
+
+    # Certified criterion-fail non-undercut example
+    path = Path(__file__).resolve().parents[1] / "evidence" / "e1_criterion_fail_no_undercut.json"
+    data = json.loads(path.read_text())
+    M = [tuple(e) for e in data["matching"]]
+    mr = maxR_matching_level(C, M, p)
+    assert mr == data["maxR"]
+    assert mr < Phi - p  # criterion fails
+    assert data["minS_Max"] <= -1  # non-cover
+    A = C.copy()
+    for i, j in M:
+        A[i, j] *= -1
+        A[j, i] *= -1
+    ph = float(phi_mitm(A))
+    assert ph >= Phi - 1e-9  # does not undercut
+    assert abs(ph - data["phi"]) < 1e-9
+
+    note = Path(__file__).resolve().parents[1] / "solution.md"
+    assert "15.33" in note.read_text()
+    assert "OPEN" in (Path(__file__).resolve().parents[1] / "HANDOFF.md").read_text()

@@ -1,0 +1,70 @@
+{
+  "matching": [
+    [
+      5,
+      3
+    ],
+    [
+      2,
+      14
+    ],
+    [
+      22,
+      18
+    ],
+    [
+      23,
+      7
+    ],
+    [
+      12,
+      16
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      1,
+      19
+    ],
+    [
+      17,
+      25
+    ],
+    [
+      9,
+      0
+    ],
+    [
+      21,
+      10
+    ],
+    [
+      11,
+      24
+    ],
+    [
+      13,
+      20
+    ],
+    [
+      4,
+      15
+    ]
+  ],
+  "maxR": 54,
+  "need_R": 60,
+  "criterion_holds": false,
+  "phi": 75.0,
+  "Phi_C": 65.0,
+  "undercut": false,
+  "minS_Max": -1.0,
+  "S_on_Max": [
+    -1,
+    3,
+    7,
+    11
+  ],
+  "note": "Spike criterion FAILS (maxR=54<60) but matching is a non-cover (minS=-1) so for y in Max+ with S=-1, QA=Phi-2S=67>Phi; MITM Phi=75. Criterion is sufficient not necessary. Only Max-covers can undercut."
+}

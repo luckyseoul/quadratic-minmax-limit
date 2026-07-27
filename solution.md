@@ -1141,6 +1141,28 @@ so \(\Phi(C\oplus M)\ge\Phi(C)\).
 
 *Open.* Prove the attainment lemmas (\(-p\) or \(-p+2\) in the image of \(S_M|_{\mathrm{Max}_{+}}\) whenever the residue allows) for all \(p\ge5\), and clique-flip existence on every Max-cover; then matching non-undercut for \(p\ge5\). Matching dichotomy / non-matching undercutters / \(k_\star\) still separate. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.33 (non-covers cannot undercut; criterion is not necessary; 2026-07-27).** Let \(C\) be a \(\rho=1\) conference of order \(n\), \(\Phi=\Phi(C)\), and \(F\) any flip set. Write \(A=C\oplus F\) and \(S_F(y)=\sum_{e\in F}C_e y_iy_j\).
+
+1. **Non-cover \(\Rightarrow\) strict raise (proved).** If there exists \(y\in\mathrm{Max}_{+}\) with \(S_F(y)\le0\), then
+   \[
+   Q_A(y)=\Phi-2S_F(y)\ge\Phi,
+   \]
+   and if \(S_F(y)\le-1\) (always, when scores are odd — e.g. perfect matchings with \(n/2\) odd) then \(Q_A(y)\ge\Phi+2\). Hence \(\Phi(A)\ge\Phi+2>\Phi(C)\): **non-covers cannot undercut.**
+   *Proof.* Immediate from \(Q_A=Q_C-2S_F\) on \(\mathrm{Max}_{+}\). \(\square\)
+   Equivalently: every strict undercutter is a Max\(_{+}\) cover (cf. Lemma U1 / Prop 15.29).
+
+2. **Perfect matchings (proved reduction).** For a perfect matching \(M\), either \(M\) is a Max-cover and may or may not undercut, or \(M\) is a non-cover and \(\Phi(C\oplus M)\ge\Phi+2\). Thus **matching non-undercut reduces entirely to Max-covering matchings.**
+
+3. **Spike criterion is not necessary (certified counterexample).** At \(p=5\), the perfect matching
+   \[
+   M_0=\{\{5,3\},\{2,14\},\{22,18\},\{23,7\},\{12,16\},\{6,8\},\{1,19\},\{17,25\},\{9,0\},\{21,10\},\{11,24\},\{13,20\},\{4,15\}\}
+   \]
+   has \(\max R_{M_0}=54<60=\Phi-p\) (criterion fails) but \(\min_{\mathrm{Max}_{+}}S_{M_0}=-1\) (non-cover) and exact MITM \(\Phi(C\oplus M_0)=75>\Phi\). Evidence: `evidence/e1_criterion_fail_no_undercut.json`. The criterion remains a useful *sufficient* test for covers; it is not a characterisation of non-undercut.
+
+4. **Max-cover census at \(p=5\) (not a proof).** All SA-found Max-covering matchings (8 total: 2 in `e1_gamma_forall_census.json` + 6 in `e1_gamma_cover_batch.json`) satisfy the spike criterion with equality \(\max R=60\), admit clique-flips, and have MITM \(\Phi=\Phi(C)\).
+
+*Open for matching non-undercut when \(p\ge5\).* Prove every Max-covering perfect matching has \(\Phi(C\oplus M)\ge\Phi(C)\) (e.g. via clique-flip Prop 15.31 for all covers). Then, with \(p=3\) gap \(O(1)\), matching dichotomy would give E(1) along matchings. Full E(1) still needs non-matching undercutters. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
