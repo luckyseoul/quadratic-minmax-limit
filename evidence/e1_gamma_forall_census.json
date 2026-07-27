@@ -1,0 +1,147 @@
+{
+  "p": 5,
+  "n": 26,
+  "need_R": 60.0,
+  "n_covers": 2,
+  "covers": [
+    {
+      "idx": 0,
+      "maxR": 60,
+      "need_R": 60.0,
+      "criterion": true,
+      "phi": 65.0,
+      "Phi_C": 65.0,
+      "undercut": false,
+      "minS": 1.0,
+      "matching": [
+        [
+          4,
+          12
+        ],
+        [
+          5,
+          14
+        ],
+        [
+          17,
+          24
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          9,
+          18
+        ],
+        [
+          19,
+          25
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          0,
+          21
+        ],
+        [
+          20,
+          22
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          13,
+          23
+        ]
+      ]
+    },
+    {
+      "idx": 1,
+      "maxR": 60,
+      "need_R": 60.0,
+      "criterion": true,
+      "phi": 65.0,
+      "Phi_C": 65.0,
+      "undercut": false,
+      "minS": 1.0,
+      "matching": [
+        [
+          20,
+          19
+        ],
+        [
+          9,
+          21
+        ],
+        [
+          3,
+          18
+        ],
+        [
+          12,
+          24
+        ],
+        [
+          8,
+          17
+        ],
+        [
+          16,
+          2
+        ],
+        [
+          22,
+          1
+        ],
+        [
+          15,
+          6
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          23,
+          5
+        ]
+      ]
+    }
+  ],
+  "all_covers_criterion": true,
+  "all_covers_no_undercut": true,
+  "n_random": 80,
+  "random_maxR_min": 60,
+  "random_maxR_values": [
+    60,
+    70
+  ],
+  "sa_min_maxR": 60,
+  "no_counterexample_found": true,
+  "status": "OPEN \u2014 census supports criterion for all tested M at p=5; not a forall-M proof; matching dichotomy / k_star still open"
+}

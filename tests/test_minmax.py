@@ -1668,3 +1668,87 @@ def test_prop_15_31_clique_flip_arithmetic_and_design():
     note = Path(__file__).resolve().parents[1] / "evidence" / "E1_CLIQUE_FLIP.md"
     assert note.is_file() and "OPEN" in note.read_text()
     assert "OPEN" in (Path(__file__).resolve().parents[1] / "solution.md").read_text()
+
+
+def test_prop_15_32_gamma_pairing_and_mod4():
+    """Prop 15.32: maxR_matching_level, pi constant, S mod 4 constant, census covers."""
+    import json
+    from minmax_quadratic import (
+        maxR_matching_level,
+        matching_score_mod4_constant,
+        halfspace_boolean_vector,
+    )
+
+    # p=3: undercutters have maxR=10 < 12; non-undercutters >=12
+    p = 3
+    C = paley_conference_prime_power(p)
+    n = C.shape[0]
+    Phi = 0.5 * n * p
+    need = Phi - p
+    assert need == 12
+
+    # halfspace product formula
+    y0 = halfspace_boolean_vector(p)
+    pi = int(np.prod(np.sign(y0)))
+    assert pi == (-1) ** (p * (p - 1) // 2)
+
+    # one undercut matching from n=10 classification: use known undercutter check
+    # full scan too slow if we maxR every PM; sample known structure via phi
+    from itertools import combinations as comb
+
+    def all_pms_small():
+        out = []
+
+        def rec(rest, cur):
+            if not rest:
+                out.append(list(cur))
+                return
+            a = rest[0]
+            for i in range(1, len(rest)):
+                b = rest[i]
+                rec(rest[1:i] + rest[i + 1 :], cur + [(min(a, b), max(a, b))])
+
+        rec(list(range(n)), [])
+        return out
+
+    # maxR dichotomy on all 945 PMs at p=3 (m=5, enum is cheap)
+    n_uc = 0
+    for M in all_pms_small():
+        mr = maxR_matching_level(C, M, p)
+        A = C.copy()
+        for i, j in M:
+            A[i, j] *= -1
+            A[j, i] *= -1
+        ph = phi(A)
+        if ph < Phi - 0.5:
+            n_uc += 1
+            assert mr < need, (mr, need, ph)
+        else:
+            assert mr >= need, (mr, need, ph)
+    assert n_uc == 144
+
+    # p=5: census covers
+    p = 5
+    C = paley_conference_prime_power(p)
+    n = C.shape[0]
+    Phi = 0.5 * n * p
+    need = Phi - p
+    assert need == 60
+    y0 = halfspace_boolean_vector(p)
+    assert int(np.prod(np.sign(y0))) == 1  # p=5 ≡1 mod 4
+
+    census = Path(__file__).resolve().parents[1] / "evidence" / "e1_gamma_forall_census.json"
+    data = json.loads(census.read_text())
+    assert data["no_counterexample_found"]
+    assert data["all_covers_criterion"]
+    for cov in data["covers"]:
+        M = [tuple(e) for e in cov["matching"]]
+        mr = maxR_matching_level(C, M, p)
+        assert mr == cov["maxR"]
+        assert mr >= need
+        assert not cov["undercut"]
+
+    note = Path(__file__).resolve().parents[1] / "evidence" / "E1_GAMMA_PAIRING.md"
+    assert note.is_file() and "OPEN" in note.read_text()
+    assert "15.32" in (Path(__file__).resolve().parents[1] / "solution.md").read_text()
+    assert "OPEN" in (Path(__file__).resolve().parents[1] / "HANDOFF.md").read_text()

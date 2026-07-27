@@ -403,3 +403,68 @@ def random_method_upper_bound(n: int) -> float:
     (and we only use it as an O(n^{3/2}) envelope in tests).
     """
     return np.sqrt(np.log(2.0)) * (n ** 1.5)
+
+
+def maxR_matching_level(C: np.ndarray, pairs, p: Optional[int] = None) -> int:
+    """
+    Exact max of R_M = Q_C - S_M on the level S_M = -p (Prop 15.32 / Γ-pairing).
+
+    Pairing coordinates: free signs u_a = x_{i_a}, relative z_a = x_{i_a} x_{j_a}.
+    Then S_M = sum_a C_{e_a} z_a and R_M = sum_{a<b} γ_ab(z) u_a u_b with
+    γ ∈ {-4,-2,0,2,4}. Enumerates all z on the level and all free u (2^{n/2} each).
+    Feasible for n=26 (m=13); spike criterion is maxR >= Phi - p = p(m-1).
+    """
+    C = np.asarray(C)
+    n = int(C.shape[0])
+    if n % 2 != 0:
+        raise ValueError("n even required for perfect matching")
+    m = n // 2
+    if p is None:
+        p = int(round(np.sqrt(n - 1)))
+    pairs = [(int(a), int(b)) for a, b in pairs]
+    if len(pairs) != m:
+        raise ValueError(f"expected {m} pairs, got {len(pairs)}")
+    c = np.array([int(C[i, j]) for i, j in pairs], dtype=np.int8)
+    U = np.ones((1 << m, m), dtype=np.float64)
+    for a in range(m):
+        U[:, a] = np.where((np.arange(1 << m) >> a) & 1, -1.0, 1.0)
+    best = -10**9
+    C8 = np.asarray(C, dtype=np.int8)
+    for mask in range(1 << m):
+        z = U[mask]
+        if int(c @ z) != -p:
+            continue
+        G = np.zeros((m, m), dtype=np.float64)
+        for a in range(m):
+            i, j = pairs[a]
+            za = int(z[a])
+            for b in range(a + 1, m):
+                k, l = pairs[b]
+                zb = int(z[b])
+                g = (
+                    int(C8[i, k])
+                    + int(C8[i, l]) * zb
+                    + int(C8[j, k]) * za
+                    + int(C8[j, l]) * za * zb
+                )
+                G[a, b] = G[b, a] = g
+        R = 0.5 * np.sum(U * (U @ G), axis=1)
+        best = max(best, int(R.max()))
+    return int(best)
+
+
+def matching_score_mod4_constant(
+    C: np.ndarray, Max_plus: np.ndarray, pairs
+) -> int:
+    """
+    Return the unique S_M mod 4 on Max+ (Prop 15.32b). Raises if not constant.
+    """
+    mods = set()
+    for y in Max_plus:
+        s = 0
+        for i, j in pairs:
+            s += int(C[i, j]) * int(y[i]) * int(y[j])
+        mods.add(s % 4)
+    if len(mods) != 1:
+        raise ValueError(f"S_M not constant mod 4: {mods}")
+    return int(next(iter(mods)))

@@ -1111,6 +1111,36 @@ so \(\Phi(C\oplus M)\ge\Phi(C)\).
 
 *Open.* Existence of \((y,F)\) for every Max-covering matching when \(p\ge5\). **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.32 (Γ-pairing reformulation and mod-4 dichotomy; 2026-07-27).** Let \(C\) be Paley of order \(n=p^2+1\), \(\Phi=\tfrac12 np\), \(m=n/2\), and \(M=\{e_a=(i_a,j_a)\}_{a=1}^{m}\) a perfect matching. Write \(S_M=\sum_a C_{e_a}x_{i_a}x_{j_a}\) and \(R_M=Q_C-S_M\).
+
+1. **Γ-pairing (proved).** With free signs \(u_a=x_{i_a}\) and relative signs \(z_a=x_{i_a}x_{j_a}\),
+   \[
+   R_M=\sum_{a<b}\gamma_{ab}(z_a,z_b)\,u_a u_b,\qquad
+   \gamma_{ab}\in\{-4,-2,0,2,4\}.
+   \]
+   The spike criterion \(\max_{S_M=-p}Q_C\ge\Phi-2p\) is equivalent to
+   \[
+   \max_{\langle c,z\rangle=-p}\max_{u\in\{\pm1\}^m}\tfrac12 u^\top\Gamma(z)u
+   \;\ge\;p(m-1).
+   \]
+   Shipped: `maxR_matching_level` in `src/minmax_quadratic.py`.
+
+2. **Coordinate product on Max\(_{+}\) (proved).** Every \(y\in\mathrm{Max}_{+}\) has
+   \(\pi(y):=\prod_{v=1}^n y_v=(-1)^{p(p-1)/2}\), constant on \(\mathrm{Max}_{+}\).
+   (Halfspace construction gives the value; \(\mathrm{P}\Gamma\mathrm{L}\) acts by coordinate permutation and preserves the product; the boolean \(+p\)-orbit is the Aut-orbit of the halfspace.)
+   Thus \(\pi=+1\) when \(p\equiv1\pmod4\) and \(\pi=-1\) when \(p\equiv3\pmod4\).
+
+3. **Mod-4 constancy (proved).** For any perfect matching \(M\), \(S_M(y)\bmod 4\) is **constant** for \(y\in\mathrm{Max}_{+}\). Indeed with \(\chi_a=C_{e_a}y_{i_a}y_{j_a}\) one has \(\prod_a\chi_a=(\prod_e C_e)\,\pi\), and \(S_M=\sum\chi_a\equiv m-2k\pmod4\) where \(k=\#\{\chi_a=-1\}\), so the residue is determined by \(\prod\chi_a\) alone.
+
+4. **Case split for the spike (structure).** Write \(r\) for the constant residue of \(S_M\) on \(\mathrm{Max}_{+}\).
+   - If \(-p\equiv r\pmod4\) and \(-p\in S_M(\mathrm{Max}_{+})\), the criterion holds with \(Q=\Phi\) (maximiser on the level).
+   - If \(-p+2\equiv r\pmod4\) and \(-p+2\in S_M(\mathrm{Max}_{+})\), a **1-bit flip** of a maximiser lands on \(Q=\Phi-2p\) and \(S_M=-p\) (formula \(S(y^{\oplus i})=S(y)-2\chi_i\)), so the criterion holds.
+   - If \(M\) is a Max-cover (\(S_M\ge1\) on \(\mathrm{Max}_{+}\)), then \(r\equiv1\pmod4\) at \(p=5\) and the 1-bit route is blocked; the clique-flip of Prop 15.31 is the remaining constructive path.
+
+5. **Certified census at \(p=5\) (not a proof).** Over 80 random perfect matchings + SA min-\(\max R\) + 2 Max-covers: \(\max R\in\{60,70\}\) always, \(\min=60=p(m-1)\) (tight on covers), 0 counterexamples to the criterion; MITM \(\Phi(C\oplus M)=\Phi(C)\) on covers. Over 500 random matchings: every mod-\(3\) matching attains \(S_M=-5\); every mod-\(1\) matching attains \(S_M=-3\). Evidence: `evidence/E1_GAMMA_PAIRING.md`, `e1_gamma_forall_census.json`.
+
+*Open.* Prove the attainment lemmas (\(-p\) or \(-p+2\) in the image of \(S_M|_{\mathrm{Max}_{+}}\) whenever the residue allows) for all \(p\ge5\), and clique-flip existence on every Max-cover; then matching non-undercut for \(p\ge5\). Matching dichotomy / non-matching undercutters / \(k_\star\) still separate. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
