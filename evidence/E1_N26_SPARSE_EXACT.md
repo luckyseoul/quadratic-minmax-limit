@@ -28,9 +28,20 @@ Single-edge flips: \(\Phi=67=\Phi(C)+2\) on all samples (consistent with maximiz
 - Consistent with \(k_\star=0\) (Paley optimal) at \(n=26\), but **not a proof** of E(1).
 - Combined with N10-C6: at the only known undercutting \(\rho=1\) order (\(n=10\)), closest undercutters have \(k_\star=5=O(n)\).
 
+## SA + exact MITM rescore (86 seeds)
+
+Script `src/e1_n26_mitm_sa.py` (ProcessPool, `phi_local` guide, `phi_mitm` rescore):
+
+| seeds | min exact \(\Phi\) | undercuts of 65 |
+|------:|-------------------:|----------------:|
+| 86 | **67** | **0** |
+
+Best matrices found sit at \(\Phi=67\) (single-edge-flip height), never below Paley. JSON: `evidence/e1_n26_mitm_sa.json`.
+
 ## Code
 
 - `phi_mitm` in `src/minmax_quadratic.py`
+- `src/e1_n26_mitm_sa.py`
 - Prior intensive SA: `evidence/e1_n26_intensive.json` (no undercut; used exact rescore)
 
 **Do not mark Main Theorem settled.**

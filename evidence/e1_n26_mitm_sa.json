@@ -1,0 +1,440 @@
+{
+  "n": 26,
+  "Phi_C": 65.0,
+  "nseeds": 86,
+  "min_exact": 67.0,
+  "max_exact": 107.0,
+  "n_undercut": 0,
+  "results": [
+    {
+      "seed": 18,
+      "phi_local": 61.0,
+      "phi_exact": 79.0
+    },
+    {
+      "seed": 16,
+      "phi_local": 57.0,
+      "phi_exact": 103.0
+    },
+    {
+      "seed": 39,
+      "phi_local": 63.0,
+      "phi_exact": 97.0
+    },
+    {
+      "seed": 10,
+      "phi_local": 63.0,
+      "phi_exact": 89.0
+    },
+    {
+      "seed": 6,
+      "phi_local": 59.0,
+      "phi_exact": 97.0
+    },
+    {
+      "seed": 1,
+      "phi_local": 61.0,
+      "phi_exact": 89.0
+    },
+    {
+      "seed": 9,
+      "phi_local": 61.0,
+      "phi_exact": 85.0
+    },
+    {
+      "seed": 3,
+      "phi_local": 63.0,
+      "phi_exact": 85.0
+    },
+    {
+      "seed": 12,
+      "phi_local": 63.0,
+      "phi_exact": 91.0
+    },
+    {
+      "seed": 4,
+      "phi_local": 55.0,
+      "phi_exact": 87.0
+    },
+    {
+      "seed": 0,
+      "phi_local": 61.0,
+      "phi_exact": 91.0
+    },
+    {
+      "seed": 30,
+      "phi_local": 61.0,
+      "phi_exact": 75.0
+    },
+    {
+      "seed": 11,
+      "phi_local": 57.0,
+      "phi_exact": 91.0
+    },
+    {
+      "seed": 17,
+      "phi_local": 65.0,
+      "phi_exact": 91.0
+    },
+    {
+      "seed": 32,
+      "phi_local": 61.0,
+      "phi_exact": 87.0
+    },
+    {
+      "seed": 36,
+      "phi_local": 59.0,
+      "phi_exact": 93.0
+    },
+    {
+      "seed": 28,
+      "phi_local": 59.0,
+      "phi_exact": 95.0
+    },
+    {
+      "seed": 14,
+      "phi_local": 59.0,
+      "phi_exact": 99.0
+    },
+    {
+      "seed": 24,
+      "phi_local": 61.0,
+      "phi_exact": 101.0
+    },
+    {
+      "seed": 44,
+      "phi_local": 63.0,
+      "phi_exact": 99.0
+    },
+    {
+      "seed": 23,
+      "phi_local": 59.0,
+      "phi_exact": 73.0
+    },
+    {
+      "seed": 34,
+      "phi_local": 57.0,
+      "phi_exact": 75.0
+    },
+    {
+      "seed": 7,
+      "phi_local": 63.0,
+      "phi_exact": 89.0
+    },
+    {
+      "seed": 46,
+      "phi_local": 59.0,
+      "phi_exact": 87.0
+    },
+    {
+      "seed": 5,
+      "phi_local": 63.0,
+      "phi_exact": 89.0
+    },
+    {
+      "seed": 54,
+      "phi_local": 61.0,
+      "phi_exact": 81.0
+    },
+    {
+      "seed": 8,
+      "phi_local": 63.0,
+      "phi_exact": 87.0
+    },
+    {
+      "seed": 40,
+      "phi_local": 63.0,
+      "phi_exact": 107.0
+    },
+    {
+      "seed": 65,
+      "phi_local": 57.0,
+      "phi_exact": 85.0
+    },
+    {
+      "seed": 51,
+      "phi_local": 63.0,
+      "phi_exact": 83.0
+    },
+    {
+      "seed": 41,
+      "phi_local": 59.0,
+      "phi_exact": 87.0
+    },
+    {
+      "seed": 62,
+      "phi_local": 63.0,
+      "phi_exact": 89.0
+    },
+    {
+      "seed": 68,
+      "phi_local": 57.0,
+      "phi_exact": 87.0
+    },
+    {
+      "seed": 83,
+      "phi_local": 63.0,
+      "phi_exact": 91.0
+    },
+    {
+      "seed": 52,
+      "phi_local": 59.0,
+      "phi_exact": 95.0
+    },
+    {
+      "seed": 72,
+      "phi_local": 63.0,
+      "phi_exact": 95.0
+    },
+    {
+      "seed": 70,
+      "phi_local": 59.0,
+      "phi_exact": 89.0
+    },
+    {
+      "seed": 60,
+      "phi_local": 61.0,
+      "phi_exact": 79.0
+    },
+    {
+      "seed": 64,
+      "phi_local": 61.0,
+      "phi_exact": 81.0
+    },
+    {
+      "seed": 84,
+      "phi_local": 59.0,
+      "phi_exact": 93.0
+    },
+    {
+      "seed": 58,
+      "phi_local": 61.0,
+      "phi_exact": 89.0
+    },
+    {
+      "seed": 74,
+      "phi_local": 59.0,
+      "phi_exact": 93.0
+    },
+    {
+      "seed": 50,
+      "phi_local": 59.0,
+      "phi_exact": 95.0
+    },
+    {
+      "seed": 80,
+      "phi_local": 65.0,
+      "phi_exact": 89.0
+    },
+    {
+      "seed": 45,
+      "phi_local": 59.0,
+      "phi_exact": 95.0
+    },
+    {
+      "seed": 82,
+      "phi_local": 63.0,
+      "phi_exact": 87.0
+    },
+    {
+      "seed": 66,
+      "phi_local": 63.0,
+      "phi_exact": 97.0
+    },
+    {
+      "seed": 85,
+      "phi_local": 59.0,
+      "phi_exact": 87.0
+    },
+    {
+      "seed": 2,
+      "phi_local": 57.0,
+      "phi_exact": 97.0
+    },
+    {
+      "seed": 73,
+      "phi_local": 57.0,
+      "phi_exact": 95.0
+    },
+    {
+      "seed": 19,
+      "phi_local": 61.0,
+      "phi_exact": 85.0
+    },
+    {
+      "seed": 55,
+      "phi_local": 57.0,
+      "phi_exact": 95.0
+    },
+    {
+      "seed": 25,
+      "phi_local": 59.0,
+      "phi_exact": 87.0
+    },
+    {
+      "seed": 15,
+      "phi_local": 59.0,
+      "phi_exact": 93.0
+    },
+    {
+      "seed": 26,
+      "phi_local": 59.0,
+      "phi_exact": 93.0
+    },
+    {
+      "seed": 20,
+      "phi_local": 61.0,
+      "phi_exact": 89.0
+    },
+    {
+      "seed": 22,
+      "phi_local": 61.0,
+      "phi_exact": 85.0
+    },
+    {
+      "seed": 13,
+      "phi_local": 61.0,
+      "phi_exact": 89.0
+    },
+    {
+      "seed": 29,
+      "phi_local": 63.0,
+      "phi_exact": 95.0
+    },
+    {
+      "seed": 27,
+      "phi_local": 57.0,
+      "phi_exact": 67.0
+    },
+    {
+      "seed": 33,
+      "phi_local": 65.0,
+      "phi_exact": 95.0
+    },
+    {
+      "seed": 43,
+      "phi_local": 57.0,
+      "phi_exact": 85.0
+    },
+    {
+      "seed": 53,
+      "phi_local": 63.0,
+      "phi_exact": 89.0
+    },
+    {
+      "seed": 69,
+      "phi_local": 57.0,
+      "phi_exact": 89.0
+    },
+    {
+      "seed": 42,
+      "phi_local": 55.0,
+      "phi_exact": 79.0
+    },
+    {
+      "seed": 75,
+      "phi_local": 65.0,
+      "phi_exact": 97.0
+    },
+    {
+      "seed": 77,
+      "phi_local": 61.0,
+      "phi_exact": 77.0
+    },
+    {
+      "seed": 21,
+      "phi_local": 61.0,
+      "phi_exact": 81.0
+    },
+    {
+      "seed": 37,
+      "phi_local": 51.0,
+      "phi_exact": 85.0
+    },
+    {
+      "seed": 49,
+      "phi_local": 55.0,
+      "phi_exact": 75.0
+    },
+    {
+      "seed": 38,
+      "phi_local": 61.0,
+      "phi_exact": 79.0
+    },
+    {
+      "seed": 56,
+      "phi_local": 61.0,
+      "phi_exact": 87.0
+    },
+    {
+      "seed": 81,
+      "phi_local": 57.0,
+      "phi_exact": 81.0
+    },
+    {
+      "seed": 59,
+      "phi_local": 65.0,
+      "phi_exact": 95.0
+    },
+    {
+      "seed": 31,
+      "phi_local": 61.0,
+      "phi_exact": 87.0
+    },
+    {
+      "seed": 57,
+      "phi_local": 61.0,
+      "phi_exact": 75.0
+    },
+    {
+      "seed": 76,
+      "phi_local": 61.0,
+      "phi_exact": 97.0
+    },
+    {
+      "seed": 35,
+      "phi_local": 57.0,
+      "phi_exact": 81.0
+    },
+    {
+      "seed": 78,
+      "phi_local": 63.0,
+      "phi_exact": 91.0
+    },
+    {
+      "seed": 71,
+      "phi_local": 59.0,
+      "phi_exact": 89.0
+    },
+    {
+      "seed": 79,
+      "phi_local": 57.0,
+      "phi_exact": 77.0
+    },
+    {
+      "seed": 61,
+      "phi_local": 63.0,
+      "phi_exact": 91.0
+    },
+    {
+      "seed": 47,
+      "phi_local": 57.0,
+      "phi_exact": 77.0
+    },
+    {
+      "seed": 63,
+      "phi_local": 61.0,
+      "phi_exact": 95.0
+    },
+    {
+      "seed": 48,
+      "phi_local": 55.0,
+      "phi_exact": 91.0
+    },
+    {
+      "seed": 67,
+      "phi_local": 57.0,
+      "phi_exact": 97.0
+    }
+  ]
+}

@@ -904,6 +904,10 @@ Step 1 is standard for Wigner-type matrices with delocalized eigenvectors but is
 Full writeup and JSON: `evidence/N10_STRUCTURE.md`. Tests: `test_n10_*` in `tests/test_minmax.py`.
 
 **Theorem N10-C (classification of the 144 matchings; 2026-07-27).** Let \(M\) be a perfect matching of \(K_{10}\) and \(S_M(x)=\sum_{\{i,j\}\in M}C_{ij}x_ix_j\). Then flipping \(M\) on Paley \(C_{10}\) yields \(\Phi=13\) if and only if \(\mathrm{sign}(Q_C(x))\,S_M(x)\ge1\) for every maximizer \(x\) of \(C\) (equivalently: for the six maximizers with \(Q_C=+15\)). The resulting 144 matchings form a single orbit under \(\mathrm{P}\Gamma\mathrm{L}(2,9)\) acting on \(\mathrm{PG}(1,9)\). Sign product \(\prod C_{ij}=-1\) is necessary but not sufficient (504 matchings satisfy it). Evidence: `evidence/N10_MATCHING_CLASSIFY.md`. **Existence of \(\lim\alpha_n\) remains open.**
+
+**Theorem N10-C6 (Hamming-6 undercutters are 6-cycles; 2026-07-27).** Exhaustive scan of all \(\binom{45}{6}=8{,}145{,}060\) six-edge sets: exactly **360** satisfy \(\Phi(C\oplus F)<15\), each is a single **6-cycle**, and each has \(\Phi=13=m_{10}\). Combined with N10-S, every undercutter of cardinality \(5\) or \(6\) is a path/cycle graph (\(\Delta\le2\), \(k\le n\)). Evidence: `evidence/N10_CYCLE_UNDERCUTTERS.md`, `src/n10_cycle_undercutters.py`. **Does not settle \(\lim\alpha_n\)** (needs \(k_\star=O(n)\) for general \(p\)).
+
+**n=26 exact MITM census (2026-07-27).** Shipped `phi_mitm` (meet-in-the-middle exact \(\Phi\), even \(n\le28\)). Random matchings/cycles/stars/\(k\le20\) flips and 86-seed SA+MITM rescore: **no undercut of \(\Phi(C_{26})=65\)** (best SA exact \(67\)). Evidence: `evidence/E1_N26_SPARSE_EXACT.md`, `e1_n26_mitm_sa.json`. Consistent with \(k_\star=0\) at \(n=26\); not a general E(1) proof.
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
