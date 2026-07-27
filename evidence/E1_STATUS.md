@@ -9,6 +9,8 @@ m_n=\Phi+o(n^{3/2})=\tfrac12 n\sqrt{n-1}-o(n^{3/2}).
 
 **Status: NOT PROVED.** Existence of \(\lim\alpha_n\) remains **OPEN**.
 
+**2026-07-27 addenda:** N10-C6 (360 six-cycles); `phi_mitm`; n=26 MITM-SA 86 seeds min exact 67, 0 undercuts.
+
 ---
 
 ## Evidence (certified upper bounds on \(m_n\), exact \(\Phi\))
