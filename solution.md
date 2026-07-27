@@ -1163,6 +1163,18 @@ so \(\Phi(C\oplus M)\ge\Phi(C)\).
 
 *Open for matching non-undercut when \(p\ge5\).* Prove every Max-covering perfect matching has \(\Phi(C\oplus M)\ge\Phi(C)\) (e.g. via clique-flip Prop 15.31 for all covers). Then, with \(p=3\) gap \(O(1)\), matching dichotomy would give E(1) along matchings. Full E(1) still needs non-matching undercutters. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.34 (matching flip algebra; 2026-07-27).** Let \(C\) be Paley of order \(n=p^2+1\) and \(M\) a perfect matching. Write \(D\) for the matrix with \(D_{ij}=C_{ij}\) on edges of \(M\) and \(0\) elsewhere, and set \(A=C-2D=C\oplus M\).
+
+1. **Involution identity (proved).** \(D^2=I\). Consequently
+   \[
+   A^2=(n+3)I-2(CD+DC).
+   \]
+   *Proof.* Each vertex lies in exactly one matching edge, so \((D^2)_{ii}=C_{i\pi(i)}^2=1\) and \((D^2)_{ij}=0\) for \(i\neq j\). Expand \(A^2=(C-2D)^2=C^2-2(CD+DC)+4D^2=(n-1)I-2(CD+DC)+4I\). \(\square\)
+
+2. **Certified spectrum at \(p=5\).** For every SA Max-covering matching tested, \(\|A\|_{\mathrm{op}}=\sqrt{41}\) exactly (to numerical precision \(10^{-12}\)); random matchings have \(\|A\|_{\mathrm{op}}\in[6.79,7.00]\). Two Aut-invariants (K\(_{2,2}\) type counts) show \(\ge8\) distinct Max-cover classes, all sharing this op-norm. When \(\Phi(A)=\Phi(C)=65\), one has \(\rho(A)=p/\|A\|_{\mathrm{op}}=5/\sqrt{41}\).
+
+*Open.* Prove \(\|C\oplus M\|_{\mathrm{op}}=\sqrt{p^2+16}\) (or a bound forcing \(\Phi(A)\ge\Phi(C)\)) for every Max-covering matching when \(p\ge5\); or complete clique-flip existence. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

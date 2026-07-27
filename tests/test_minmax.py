@@ -1814,3 +1814,45 @@ def test_prop_15_33_noncovers_cannot_undercut():
     note = Path(__file__).resolve().parents[1] / "solution.md"
     assert "15.33" in note.read_text()
     assert "OPEN" in (Path(__file__).resolve().parents[1] / "HANDOFF.md").read_text()
+
+
+def test_prop_15_34_matching_D_squared_identity():
+    """Prop 15.34: D^2=I for signed matching; Max-cover op-norm sqrt(41) at p=5."""
+    import json
+
+    p = 5
+    C = paley_conference_prime_power(p)
+    n = C.shape[0]
+    m = n // 2
+    rng = np.random.default_rng(0)
+
+    # D^2 = I for any perfect matching
+    for _ in range(5):
+        perm = rng.permutation(n)
+        M = [(int(perm[2 * i]), int(perm[2 * i + 1])) for i in range(m)]
+        D = np.zeros((n, n))
+        for i, j in M:
+            D[i, j] = C[i, j]
+            D[j, i] = C[i, j]
+        assert np.allclose(D @ D, np.eye(n)), np.max(np.abs(D @ D - np.eye(n)))
+
+    # All known Max-covers have op-norm sqrt(41)
+    sqrt41 = float(np.sqrt(41))
+    for src in [
+        "evidence/e1_gamma_forall_census.json",
+        "evidence/e1_gamma_cover_batch.json",
+    ]:
+        path = Path(__file__).resolve().parents[1] / src
+        data = json.loads(path.read_text())
+        for c in data["covers"]:
+            if "matching" not in c:
+                continue
+            A = C.copy()
+            for i, j in c["matching"]:
+                A[i, j] *= -1
+                A[j, i] *= -1
+            op = float(np.linalg.norm(A, ord=2))
+            assert abs(op - sqrt41) < 1e-8, (op, sqrt41)
+
+    assert "15.34" in (Path(__file__).resolve().parents[1] / "solution.md").read_text()
+    assert "OPEN" in (Path(__file__).resolve().parents[1] / "HANDOFF.md").read_text()
