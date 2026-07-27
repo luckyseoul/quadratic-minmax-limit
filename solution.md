@@ -957,6 +957,27 @@ and \(\max_{x_0=\pm1}\lvert Q_B(x')+x_0\,s(x')\rvert=\lvert Q_B(x')\rvert+\lvert
 *Remark (E(1) via recursion).* Writing \(f(B)=\max(\lvert Q_B\rvert+\lvert s\rvert)\), if \(B^*\) realises the min then \(m_n=f(B^*)\ge\Phi(B^*)+\max_{L^*}\lvert s\rvert\) where \(L^*\) is the level set of \(B^*\) at height \(\Phi(B^*)\). Numerically the boost \(\max_{L^*}\lvert s\rvert\) is often \(0\) or \(1\) (not \(\Omega(\sqrt n)\)), so the recursion alone does not force the \(n^{3/2}\) growth rate. Combined with Prop 15.20d, E(1) still reduces to \(k_\star=O(n)\) on the \(\rho=1\) family. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
 **n=26 exact MITM census (2026-07-27).** Shipped `phi_mitm` (meet-in-the-middle exact \(\Phi\), even \(n\le28\)). Random matchings/cycles/stars/\(k\le20\) flips and 86-seed SA+MITM rescore: **no undercut of \(\Phi(C_{26})=65\)** (best SA exact \(67\)). Evidence: `evidence/E1_N26_SPARSE_EXACT.md`, `e1_n26_mitm_sa.json`. Consistent with \(k_\star=0\) at \(n=26\); not a general E(1) proof.
+
+**Proposition 15.26 (matching flips preserve local maximality of boolean evecs; 2026-07-27).** Let \(C\) be a conference matrix of order \(n\) with \(\rho(C)=1\) and \(p=\sqrt{n-1}\ge3\), and let \(M\) be a matching of \(K_n\). Write \(A\) for the Seidel matrix obtained by flipping the edges of \(M\) on \(C\). Then every boolean eigenvector \(y\in\{\pm1\}^n\) with \(Cy=py\) is a **coordinate-local maximiser** of the map \(x\mapsto x^\top Ax\) on the cube: for all coordinates \(i\),
+\[
+y_i\,(Ay)_i\ge p-2\ge1>0.
+\]
+(The same holds for \(Cy=-py\) and local maximisers of \(x\mapsto -x^\top Ax\).)
+
+*Proof.* If \(i\) is unmatched by \(M\), then \((Ay)_i=(Cy)_i=py_i\), so \(y_i(Ay)_i=p>0\). If \(i\) is matched to \(\pi(i)\), flipping the edge changes the \(\pi(i)\)-term in row \(i\) from \(C_{i\pi}y_\pi\) to \(-C_{i\pi}y_\pi\), hence
+\[
+(Ay)_i=(Cy)_i-2C_{i,\pi(i)}y_{\pi(i)}=py_i-2C_{i,\pi(i)}y_{\pi(i)},
+\]
+and \(y_i(Ay)_i=p-2C_{i,\pi(i)}y_iy_{\pi(i)}\). The character \(C_{i\pi}y_iy_\pi\in\{\pm1\}\), so the display is at least \(p-2\). \(\square\)
+
+*Certified global coincidence at \(n=10\) only.* For every one of the \(945\) perfect matchings \(M\) of \(K_{10}\), one has the stronger identity
+\[
+\Phi(C\oplus M)=\max_{y\in\mathrm{Max}(C)}\lvert Q_{C\oplus M}(y)\rvert
+\]
+(histograms agree: \(\{13{:}144,\,17{:}405,\,21{:}360,\,25{:}36\}\)). **This does not lift to \(n=26\):** among 30 random perfect matchings of Paley \(C_{26}\), only 19 satisfy the identity; the other 11 have \(\Phi>\max_{\mathrm{Max}}|Q|\) (non-maximiser spikes), with exact MITM \(\Phi\in\{75,\ldots,87\}\) all strictly above \(\Phi(C)=65\). Star flips of degree \(\ge3\) destroy even local maximality (scores \(p-2d\) become negative). Evidence: `evidence/E1_STAR_REDUCTION_PROBE.md`.
+
+*Remark (route to the matching dichotomy).* Prop 15.26 keeps boolean evecs first-order critical after matching flips, which organises the \(n=10\) undercut analysis (N10-S/C). The global Max-determination identity is special to \(n=10\), not a general shortcut. Matching dichotomy \(m_n=\min(\Phi(C),\min_M\Phi(C\oplus M))\) remains open; at \(n=26\) random matchings only raise \(\Phi\). **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

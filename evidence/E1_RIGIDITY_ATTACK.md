@@ -80,16 +80,23 @@ so \(\alpha_n\ge\tfrac12\sqrt{1-1/n}-2n^{-1/2}\to\tfrac12\). Combined with \(\li
 
 Maximizers of any \(\rho=1\) conference are exactly the boolean \(\pm p\)-eigenvectors. Certified \(+p\)-evec counts for Paley \(p=3,5,7\): \(12,260,11452\). The ratio \(\#/n^{3/2}\) **increases** (0.38, 1.96, 32.4), so the crude bound \(k_\star\le|\mathrm{Max}|\) is **not** \(o(n^{3/2})\) and cannot alone prove E(1). A tighter structural bound (e.g. card-min \(F\) is a matching / has \(|F|\le n\)) is still required.
 
+## New positive structure (Prop 15.26)
+
+Matching flips of \(\rho=1\) conferences keep boolean \(+p\)-evecs as **coordinate-local maximisers** of \(x^\top Ax\) (\(y_i(Ay)_i\ge p-2\)). At \(n=10\) this upgrades to a global identity \(\Phi(C\oplus M)=\max_{\mathrm{Max}}|Q|\) for every perfect matching. Star-reduction does **not** preserve sparsity (\(d_H(B,C')=12\) for all matching undercutters). See `E1_STAR_REDUCTION_PROBE.md`.
+
+**Still missing for E(1):** (i) global Max-determination for matchings at general \(p\); (ii) matching dichotomy \(m_n=\min(\Phi(C),\min_M\Phi(C\oplus M))\).
+
 ## Blocked approaches (do not reopen without new ideas)
 
 | Approach | Why blocked |
 |----------|-------------|
 | \(L^4\) shell (Prop 15.14–19) | Shell vacuous for \(n\gtrsim38\) |
 | \(\|Max\|\) covering | \(\|Max\|/n^{3/2}\not\to0\) |
-| Max-only minimax | SA drives \(\max_{Max}\|Q\|\) to 0 |
+| Max-only minimax (arbitrary \(F\)) | SA drives \(\max_{Max}\|Q\|\) to 0; greedy Max-cover of size 3 has \(\Phi=21\) |
 | Matching extraction from far \(F\) | Far optima need not contain good matchings |
 | Star-exchange deg reduction | Inclusion-min \(\Delta=3\) sets resist it |
 | Multipartite soft bounds (§9–10) | Compatible with \(\lambda<\Lambda\) |
+| Star-reduction \(k_\star\) recursion | Matching undercutters scramble to \(d_H(B,C')=12\) |
 
 ## Not established
 
