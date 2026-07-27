@@ -1,0 +1,81 @@
+{
+  "n": 26,
+  "Phi_Paley": 65.0,
+  "workers": 86,
+  "sa_iters": 10000,
+  "n_sa": 172,
+  "certified_UB_m26": 65.0,
+  "gap": 0.0,
+  "rel_gap": 0.0,
+  "n_undercuts": 0,
+  "undercuts": [],
+  "kflip_summary": {
+    "1": {
+      "min": 67.0,
+      "mean": 67.0,
+      "n": 21
+    },
+    "2": {
+      "min": 69.0,
+      "mean": 69.0,
+      "n": 21
+    },
+    "3": {
+      "min": 71.0,
+      "mean": 71.0,
+      "n": 21
+    },
+    "5": {
+      "min": 71.0,
+      "mean": 74.61904761904762,
+      "n": 21
+    },
+    "8": {
+      "min": 73.0,
+      "mean": 77.57142857142857,
+      "n": 21
+    },
+    "10": {
+      "min": 77.0,
+      "mean": 78.52380952380952,
+      "n": 21
+    },
+    "13": {
+      "min": 75.0,
+      "mean": 80.04761904761905,
+      "n": 21
+    },
+    "15": {
+      "min": 75.0,
+      "mean": 79.85714285714286,
+      "n": 21
+    },
+    "20": {
+      "min": 77.0,
+      "mean": 82.23809523809524,
+      "n": 21
+    },
+    "26": {
+      "min": 77.0,
+      "mean": 83.76190476190476,
+      "n": 21
+    },
+    "30": {
+      "min": 81.0,
+      "mean": 84.80952380952381,
+      "n": 21
+    },
+    "40": {
+      "min": 81.0,
+      "mean": 87.57142857142857,
+      "n": 21
+    }
+  },
+  "best_of_kflip": 67.0,
+  "e1_status": {
+    "undercut_found": false,
+    "note": "If certified_UB=65 and no undercut, consistent with E(1) at n=26. Does not prove m_26=65. Limit existence still requires general E(1)."
+  },
+  "limit_still_open": true,
+  "total_time_s": 38.94296097755432
+}
