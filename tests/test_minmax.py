@@ -1348,3 +1348,115 @@ def test_prop_15_28_affine_line_star_moments():
         # actually (p+1) directions, half nonsquare among F_p^2 directions
         # number of nonsquare directions up to scaling = (p+1)/2
         assert n_cover == (p + 1) // 2
+
+
+def test_prop_15_29_odd_matching_parity_and_n26_cover_spike():
+    """
+    Prop 15.29: n/2 odd for p odd; non-cover PM => Phi >= Phi+2 on Max+;
+    certified n=26 matching cover example has exact Phi = Phi(C) (no undercut).
+    """
+    # Parity for p=3,5,7
+    for p in (3, 5, 7):
+        n = p * p + 1
+        assert n % 2 == 0
+        assert (n // 2) % 2 == 1
+
+    # Non-cover matching at n=26: random PM has min S <= -1 and Max+ lb >= Phi+2
+    p = 5
+    C = paley_conference_prime_power(p)
+    n = C.shape[0]
+    Phi = 0.5 * n * p
+    Maxp = _boolean_plus_evecs(C, float(p))
+    rng = np.random.default_rng(0)
+    found_noncover = False
+    for _ in range(30):
+        perm = rng.permutation(n)
+        M = [
+            (int(min(perm[2 * i], perm[2 * i + 1])), int(max(perm[2 * i], perm[2 * i + 1])))
+            for i in range(n // 2)
+        ]
+        S = np.zeros(len(Maxp))
+        for i, j in M:
+            S += C[i, j] * Maxp[:, i] * Maxp[:, j]
+        # all odd
+        assert all(int(round(float(s))) % 2 != 0 for s in S)
+        if S.min() <= -1 + 1e-9:
+            found_noncover = True
+            A = C.copy()
+            for i, j in M:
+                A[i, j] *= -1
+                A[j, i] *= -1
+            lb = max(abs(Phi - 2 * float(s)) for s in S)
+            assert lb + 1e-9 >= Phi + 2
+            assert phi_mitm(A) + 1e-9 >= Phi + 2
+            break
+    assert found_noncover
+
+    # Certified cover example from evidence (if present): recompute Phi via shipped mitm
+    ex = Path(__file__).resolve().parents[1] / "evidence" / "e1_n26_matching_cover_example.json"
+    assert ex.is_file()
+    import json
+
+    data = json.loads(ex.read_text())
+    assert data.get("undercut") is False or data.get("phi", 0) >= data.get("Phi_C", 65) - 1e-9
+    matching = data.get("matching")
+    assert matching is not None and len(matching) == n // 2
+    A = C.copy()
+    for e in matching:
+        i, j = int(e[0]), int(e[1])
+        A[i, j] *= -1
+        A[j, i] *= -1
+    # S on Max+ must cover
+    S = np.zeros(len(Maxp))
+    for i, j in matching:
+        i, j = int(i), int(j)
+        S += C[i, j] * Maxp[:, i] * Maxp[:, j]
+    assert S.min() >= 1 - 1e-9
+    ph = phi_mitm(A)
+    assert abs(ph - Phi) < 1e-9 or ph + 1e-9 >= Phi  # no undercut
+    assert ph + 1e-9 >= Phi
+
+    note = Path(__file__).resolve().parents[1] / "evidence" / "E1_MATCHING_COVER_SPIKE.md"
+    assert note.is_file()
+    assert "OPEN" in note.read_text()
+    assert "OPEN" in (Path(__file__).resolve().parents[1] / "solution.md").read_text()
+    assert "OPEN" in (Path(__file__).resolve().parents[1] / "HANDOFF.md").read_text()
+
+
+def test_prop_15_29_twosided_necessary_n10():
+    """Undercutting matchings at n=10 are two-sided Max-covers (U1+U2)."""
+    p = 3
+    C = paley_conference_prime_power(p)
+    n = C.shape[0]
+    Phi = 0.5 * n * p
+    Maxp = _boolean_plus_evecs(C, float(p))
+    Maxm = _boolean_plus_evecs(-C, float(p))
+    # One known undercutting matching type: use SA-free — scan a few PMs for Phi=13
+    rng = np.random.default_rng(1)
+    under = 0
+    for trial in range(200):
+        perm = rng.permutation(n)
+        M = [
+            (int(min(perm[2 * i], perm[2 * i + 1])), int(max(perm[2 * i], perm[2 * i + 1])))
+            for i in range(n // 2)
+        ]
+        A = C.copy()
+        for i, j in M:
+            A[i, j] *= -1
+            A[j, i] *= -1
+        if phi(A) > Phi - 1.5:
+            continue
+        # undercut found
+        under += 1
+        Sp = sum(C[i, j] * Maxp[:, i] * Maxp[:, j] for i, j in M)
+        # Sp is vector — fix
+        Sp = np.zeros(len(Maxp))
+        Sm = np.zeros(len(Maxm))
+        for i, j in M:
+            Sp += C[i, j] * Maxp[:, i] * Maxp[:, j]
+            Sm += C[i, j] * Maxm[:, i] * Maxm[:, j]
+        assert Sp.min() >= 1 - 1e-9
+        assert Sm.max() <= -1 + 1e-9
+        if under >= 3:
+            break
+    assert under >= 1

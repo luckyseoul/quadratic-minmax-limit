@@ -1,0 +1,40 @@
+{
+  "p3": {
+    "p": 3,
+    "n": 10,
+    "n_Max": 12,
+    "matching_size": 5,
+    "matching_size_odd": true,
+    "n_seeds": 24,
+    "iters": 10000,
+    "global_best_min_S": 1.0,
+    "global_worst_seed_min_S": 1.0,
+    "mean_of_seed_bests": 1.0,
+    "all_min_S_le_neg1": false,
+    "any_cover": true,
+    "best_minS_counter": {
+      "1.0": 24
+    },
+    "seconds": 1.6660115718841553
+  },
+  "p5": {
+    "p": 5,
+    "n": 26,
+    "n_Max": 260,
+    "matching_size": 13,
+    "matching_size_odd": true,
+    "n_seeds": 48,
+    "iters": 25000,
+    "global_best_min_S": 1.0,
+    "global_worst_seed_min_S": -1.0,
+    "mean_of_seed_bests": -0.9166666666666666,
+    "all_min_S_le_neg1": false,
+    "any_cover": true,
+    "best_minS_counter": {
+      "-1.0": 46,
+      "1.0": 2
+    },
+    "seconds": 8.071524620056152
+  },
+  "note": "OPEN: SA evidence, not a general proof of no matching Max-cover"
+}

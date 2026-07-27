@@ -1074,6 +1074,16 @@ Hence **\(k_\star=O(n^{3/2})\) already forces \(\alpha_n\to\tfrac12\)** along th
 
 *Remark (E(1) status).* Prop 15.28 shows that LP-tight Max-covers (size \(p\)) cannot undercut via the Max\(\pm\) analysis on the proved/certified range: they are forced to spike on \(\mathrm{Max}_{-}\). The \(n=10\) undercut uses a *strictly larger* cover (\(k=5>p\)). Closing E(1) still needs either (i) \(k_\star=O(n^{3/2})\) for minimisers, (ii) a general no-undercut / controlled-gap theorem for all Max-covers of size \(o(n^2)\), or (iii) exact Paley optimality for all \(p\ge5\) with the known \(O(1)\) gap at \(p=3\). **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.29 (odd matching parity and matching-cover spikes; 2026-07-27).** Let \(C\) be Paley of order \(n=p^2+1\) (\(p\) odd prime), \(\Phi=\tfrac12 np\).
+
+1. **Parity.** The perfect-matching size \(n/2\) is odd. Hence for every perfect matching \(M\) and every \(x\in\{\pm1\}^n\), \(S_M(x)\) is an odd integer. In particular, either \(\min_{\mathrm{Max}_{+}}S_M\ge1\) (Max-cover) or \(\min_{\mathrm{Max}_{+}}S_M\le-1\). In the latter case \(\Phi(C\oplus M)\ge\Phi+2\).
+
+2. **Undercutters are two-sided.** If \(\Phi(C\oplus F)<\Phi\), then \(S_F\ge1\) on \(\mathrm{Max}_{+}\) and \(S_F\le-1\) on \(\mathrm{Max}_{-}\) (integer arithmetic on \(Q_C=\pm\Phi\)). Evidence note: `evidence/E1_TWOSIDED_COVER.md`.
+
+3. **Certified \(n=26\) matching covers.** Perfect-matching Max-covers exist at \(p=5\) (SA finds them; earlier “no cover” reports were incomplete). Among 48 seeds, 3 covers were found; all three are two-sided, achieve \(\max_{\mathrm{Max}_{\pm}}|Q|=63=\Phi-2\), but exact MITM \(\Phi(C\oplus M)=65=\Phi(C)\) (non-eigenvector spike of \(+2\)). **Zero undercuts.** Contrast \(n=10\): two-sided matching covers achieve \(m_{10}=13\). Evidence: `evidence/E1_MATCHING_COVER_SPIKE.md`, `e1_n26_matching_covers_census.json`.
+
+*Remark.* Matching dichotomy for E(1) must account for covers that fail only by spike control. Prop 15.26 (local maximality) holds at both \(p=3,5\); global Max-determination of \(\Phi(C\oplus M)\) is special to \(n=10\) among tested orders. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

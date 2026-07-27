@@ -14,7 +14,7 @@ Any strict undercutter of a \(\rho=1\) conference must satisfy \(S_F(y)\ge1\) fo
 | 3 | 10 | \(+1\) (and 144 exact undercutters) | (exact: 144 of 945) | **144** with \(\Phi=13\) |
 | 5 | 26 | \(-3\) (5000 samples) | **all \(\le -1\)** (20×15k-iter SA) | **none found** |
 
-At \(n=26\), random sample of 5000 perfect matchings and 20 independent SA runs (15k 2-swap iterations each) maximising \(\min_y S_M(y)\) **never exceed \(-1\)**. (Note \(n/2=13\) is odd, so \(S_M(y)\) is always odd and cannot be 0.) Strong evidence that **no perfect matching is a Max-cover for \(p=5\)**, so the \(n=10\) matching undercut does not lift.
+At \(n=26\), an earlier weaker SA never exceeded \(\min S=-1\). A stronger 2-swap SA **does** find Max-covers (\(\min S=1\)); those covers are two-sided but exact MITM \(\Phi=65=\Phi(C)\) (non-max spike). See **`E1_MATCHING_COVER_SPIKE.md`** (supersedes the “no matching Max-cover” claim). Note \(n/2=13\) is odd, so \(S_M(y)\) is always odd.
 
 Fractional matching-polytope LP still has value \(p=5\) (Prop 15.27), so the obstruction is integrality of the matching cover.
 
