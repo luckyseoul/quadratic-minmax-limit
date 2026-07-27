@@ -869,17 +869,20 @@ and \(\lvert Q_A(x)-Q_C(x)\rvert\le 2\lvert F\rvert=2k\). Hence \(\lvert Q_A(x)\
 
 *Remark (N10 matches the edge form).* At \(n=10\), undercutting optima are perfect-matching flips of Paley (\(k_\star=5\), \(D=1\)): edge lip gives \(m_{10}\ge15-10=5\) (true; actual \(m_{10}=13\)), degree lip gives the same \(15-10=5\). Relative gap \(2/n^{3/2}\approx0.063\to0\) along any sequence with \(k_\star=O(n)\). **E(1) is reduced to proving \(k_\star=o(n^{3/2})\) for \(\Phi\)-minimisers on \(n=p^2+1\)** (still open as a general statement; verified structurally at \(n=10\), consistent with exact MITM SA at \(n=26\) where no undercut of \(\Phi=65\) is known).
 
-**Proposition 15.20d (conditional settlement: \(k_\star=O(n)\) \(\Rightarrow L=\tfrac12\)).** Let \(n_k=p_k^2+1\) run over the \(\rho=1\) Paley family, and write \(k_\star(n)\) for the minimal best-switch Hamming distance from a \(\Phi\)-minimiser to the Paley conference matrix of order \(n\). If \(k_\star(n_k)=O(n_k)\), then
+**Proposition 15.20d (conditional settlement: \(k_\star=O(n^{3/2})\) \(\Rightarrow L=\tfrac12\)).** Let \(n_k=p_k^2+1\) run over the \(\rho=1\) Paley family, and write \(k_\star(n)\) for the minimal best-switch Hamming distance from a \(\Phi\)-minimiser to the Paley conference matrix of order \(n\). If \(k_\star(n_k)=O(n_k^{3/2})\), then
 \[
 \lim_{n\to\infty}\alpha_n=\tfrac12.
 \]
-*Proof.* Prop 15.20b gives \(m_{n_k}\ge\Phi(C_{n_k})-2k_\star(n_k)=\tfrac12 n_k\sqrt{n_k-1}-O(n_k)\), so
+*Proof.* By the Max-Lipschitz Prop 15.27 (using the \(\mathrm{Max}_{+}\) frame identity certified for Paley), \(m_{n_k}\ge\Phi(C_{n_k})-2k_\star(n_k)/p_k\). Under \(k_\star=O(n^{3/2})\) and \(p=\sqrt{n-1}\),
 \[
+\frac{2k_\star}p=O(n),\qquad
 \alpha_{n_k}\ge\tfrac12\sqrt{1-1/n_k}-O(n_k^{-1/2})\to\tfrac12.
 \]
-Combined with the universal limsup \(\limsup\alpha_n\le\tfrac12\) (Prop 4.1 / conference construction) one has \(\alpha_{n_k}\to\tfrac12\). The family \(n_k\) is dense in the sense \(n_{k+1}/n_k\to1\) (prime number theorem in the progression of odd primes), so Prop 6.1–6.2 force \(\lim_n\alpha_n=\tfrac12\). \(\square\)
+Combined with the universal limsup \(\limsup\alpha_n\le\tfrac12\) (Prop 4.1) and denseness Prop 6.1–6.2 along \(n_k\), one has \(\lim\alpha_n=\tfrac12\). \(\square\)
 
-*Status of the hypothesis.* At \(n=10\), \(k_\star=5=O(n)\) (N10-S: matching undercutters; N10-C6: all 360 Hamming-6 undercutters are 6-cycles, also \(O(n)\)). At \(n=26\), exact MITM sparse/SA census found no undercut of \(\Phi=65\) (consistent with \(k_\star=0\)). **The general bound \(k_\star=O(n)\) (or even \(o(n^{3/2})\)) on all \(n=p^2+1\) is not proved.** Existence of \(\lim\alpha_n\) remains **OPEN**.
+*(Weaker edge-only form.)* Prop 15.20b alone needs the stronger hypothesis \(k_\star=O(n)\) for the same conclusion (gap \(2k_\star=O(n)\)). Max-Lipschitz saves a factor \(p=\sqrt{n-1}\).
+
+*Status of the hypothesis.* At \(n=10\), \(k_\star=5=O(n)\subset O(n^{3/2})\) (N10-S/C6). At \(n=26\), exact MITM sparse/SA census found no undercut of \(\Phi=65\) (consistent with \(k_\star=0\)). **The general bound \(k_\star=O(n^{3/2})\) on all \(n=p^2+1\) is not proved.** Existence of \(\lim\alpha_n\) remains **OPEN**.
 
 **Proposition 15.21 (single-edge local optimality under maximizer balance).** Let \(C\in\mathcal S_n\) be a conference matrix, \(M=\Phi(C)\), and \((p,r)\) an unordered edge. Write \(\varepsilon(x):=C_{pr}x_px_r\in\{\pm1\}\). Suppose there exists \(x^*\in\{\pm1\}^n\) with \(|Q_C(x^*)|=M\) and
 \[
@@ -1027,7 +1030,13 @@ which is certified for Paley \(n=p^2+1\) at \(p=3,5\) (and holds at \(p=7\) by t
 
 *Certified checks.* Frame identity \eqref{eq:max-frame} and LP value \(p\) at Paley \(p=3,5\); dual/primal algebra as above. At \(n=10\), the Max-Lipschitz with \(k_\star=5\) gives \(m_{10}\ge15-10/3=11.\overline{6}\) (true; actual \(13\)); edge lip only gave \(15-10=5\).
 
-*Remark (E(1) status).* Max-Lipschitz weakens the rigidity demand from \(k_\star=o(n^{3/2})\) (edge lip) to \(k_\star=o(p\,n^{3/2})=o(n^2)\). Since \(k_\star\le\binom n2/2\) always, this is still one full factor of \(\sqrt n\) short of a free proof: dual-Gaussian control of the Seidel product \(W=A\circ C\) only yields \(k_\star\le\binom n2/2-\Omega(n^{3/2})\), hence a \(\Theta(n^{3/2})\) residual in the Max-Lipschitz gap. Closing E(1) still needs \(k_\star=o(n^2)\) for minimisers (e.g. \(k_\star=O(n^{2-\varepsilon})\), or the original \(O(n)\) matching dichotomy). Integral Max-covers of size \(p\) exist (LP support) but are stars and spike to \(\Phi>\Phi(C)\). **Existence of \(\lim\alpha_n\) remains OPEN.**
+*Remark (E(1) status — sharpened criterion).* Max-Lipschitz yields
+\[
+m_n\ge\Phi(C)-\frac{2k_\star}p,
+\qquad
+\alpha_n\ge\tfrac12\sqrt{1-1/n}-\frac{2k_\star}{p\,n^{3/2}}.
+\]
+Hence **\(k_\star=O(n^{3/2})\) already forces \(\alpha_n\to\tfrac12\)** along the \(\rho=1\) family (gap \(O(n)=o(n^{3/2})\)), and \(k_\star=o(n^2)\) is the absolute threshold for a vanishing relative gap. This improves Prop 15.20d (which needed \(k_\star=O(n)\) via edge lipschitz). The remaining gap to a free proof is a factor \(\sqrt n\): dual-Gaussian on \(W=A\circ C\) only gives \(k_\star\le\binom n2/2-\Omega(n^{3/2})=\Theta(n^2)\) for arbitrary \(A\). Closing E(1) needs \(k_\star=O(n^{3/2})\) (or better) for \(\Phi\)-minimisers — e.g. via \(\Delta(F)=O(\sqrt n)\) after best switch, the matching dichotomy, or spectral rigidity. Integral Max-covers of size \(p\) exist (LP support) but are stars and spike to \(\Phi>\Phi(C)\). **Existence of \(\lim\alpha_n\) remains OPEN.**
 
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
