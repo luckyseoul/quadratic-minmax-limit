@@ -21,9 +21,13 @@ Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptot
 \(\rho_{\mathrm{int}}\) up to \(\approx0.978\) at \(n=1622\). **Not** a full proof of \(\rho\to1\).
 
 **New (E(1) numerics):** exact-Φ SA at Paley \(n=14,18\): no undercut of \(\Phi(C)\) found
-(`evidence/e1_paley_gap.json`); \(n=10\) recovers gap \(2\). **Not** a proof of E(1).
+(`evidence/e1_paley_gap.json`); \(n=10\) recovers gap \(2\); \(n=14\) exact \(k\le4\) flips stay at \(\Phi=21\).
+Maximizers of \(\rho=1\) Paley satisfy \(\mathbb E[yy^\top]=I\) (2-design; \(p=3,5\)). **Not** a proof of E(1).
 
-**Existence of \(L\) remains OPEN** — sandwich only; E(1)+E(2) still required for Theorem E.
+**Settlement path (shortest):** E(1) alone on the dense \(\rho=1\) family \(n=p^2+1\) \(\Rightarrow L=\tfrac12\) by Prop 6.2
+(E(2) not needed for that subfamily). **E(1) is the blocking open problem.**
+
+**Existence of \(L\) remains OPEN** — sandwich only; E(1) not proved.
 ---
 
 ## 1. Exact quantity (do not restate incorrectly)
