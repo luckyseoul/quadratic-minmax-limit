@@ -76,6 +76,21 @@ so \(\alpha_n\ge\tfrac12\sqrt{1-1/n}-2n^{-1/2}\to\tfrac12\). Combined with \(\li
 
 **Inclusion-minimal ≠ cardinality-minimal (n=10):** there exist 7-edge sets that are inclusion-minimal for \(\Phi\le13\) with \(\Delta=3\) (not path-cycle). Those are **not** cardinality-minimal (\(k_\star=5\)). Any general argument must use global min-cardinality, not mere inclusion-minimality of edge sets.
 
+## Boolean-evec covering (Prop 15.24)
+
+Maximizers of any \(\rho=1\) conference are exactly the boolean \(\pm p\)-eigenvectors. Certified \(+p\)-evec counts for Paley \(p=3,5,7\): \(12,260,11452\). The ratio \(\#/n^{3/2}\) **increases** (0.38, 1.96, 32.4), so the crude bound \(k_\star\le|\mathrm{Max}|\) is **not** \(o(n^{3/2})\) and cannot alone prove E(1). A tighter structural bound (e.g. card-min \(F\) is a matching / has \(|F|\le n\)) is still required.
+
+## Blocked approaches (do not reopen without new ideas)
+
+| Approach | Why blocked |
+|----------|-------------|
+| \(L^4\) shell (Prop 15.14–19) | Shell vacuous for \(n\gtrsim38\) |
+| \(\|Max\|\) covering | \(\|Max\|/n^{3/2}\not\to0\) |
+| Max-only minimax | SA drives \(\max_{Max}\|Q\|\) to 0 |
+| Matching extraction from far \(F\) | Far optima need not contain good matchings |
+| Star-exchange deg reduction | Inclusion-min \(\Delta=3\) sets resist it |
+| Multipartite soft bounds (§9–10) | Compatible with \(\lambda<\Lambda\) |
+
 ## Not established
 
 - \(k_\star=o(n^{3/2})\) in general  
