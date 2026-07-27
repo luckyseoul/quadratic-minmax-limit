@@ -49,6 +49,23 @@ Any undercutter (\(\Phi(A)<\Phi(C)\)) must satisfy \(S_F(y)\ge1\) for every posi
 2. Or prove the matching dichotomy: \(m_n=\min\bigl(\Phi(C),\min_M\Phi(C\oplus M)\bigr)\) over perfect matchings \(M\) — then degree lip gives gap \(\le n\).  
 3. Or permanent relative gap / non-existence pair.
 
+## Sufficient claim (still open)
+
+**Claim (matching / bounded-degree dichotomy).** On \(n=p^2+1\), there exists a \(\Phi\)-minimiser whose disagreement graph with Paley \(C\) (after switching) is a matching — equivalently \(k_\star\le n/2\).
+
+**If the claim holds**, then by Prop 15.20b
+\[
+m_n\ge\Phi(C)-2k_\star\ge\tfrac12 np-n,
+\]
+so \(\alpha_n\ge\tfrac12\sqrt{1-1/n}-n^{-1/2}\to\tfrac12\). Combined with \(\limsup\alpha_n\le\tfrac12\) and denseness Prop 6.1–6.2 along \(n_k=p_k^2+1\),
+\[
+\lim_{n\to\infty}\alpha_n=\tfrac12.
+\]
+
+**Evidence for the claim:** at \(n=10\), \(k_\star=5=n/2\) via perfect-matching undercutters (N10-S). At \(n=26\), exact-Φ SA finds no undercut of \(\Phi=65\), consistent with \(k_\star=0\) (Paley itself is a minimiser). Far \(m_{10}\)-optima with best-\(k\ge15\) do **not** affect \(k_\star=\min\).
+
+**Obstacle:** \(\Phi\) is only 2-Lipschitz, so \(\Phi\) near \(\Phi(C)\) does **not** force small Hamming distance (far optima exist). Need a structural reason that a *closest* undercutter is a matching / has \(k\le n/2\).
+
 ## Not established
 
 - \(k_\star=o(n^{3/2})\) in general  
