@@ -867,7 +867,19 @@ and \(\lvert Q_A(x)-Q_C(x)\rvert\le 2\lvert F\rvert=2k\). Hence \(\lvert Q_A(x)\
 
 *Proof.* \(E=A-C\) has off-diagonal entries in \(\{0,\pm2\}\) and row \(\ell^1\)-norm at most \(2D\), so \(\|E\|_{\mathrm{op}}\le 2D\). Thus \(\lvert x^\top Ex\rvert\le 2Dn\) and \(\lvert Q_A-Q_C\rvert\le Dn\). \(\square\)
 
-*Remark (N10 matches the edge form).* At \(n=10\), undercutting optima are perfect-matching flips of Paley (\(k_\star=5\), \(D=1\)): edge lip gives \(m_{10}\ge15-10=5\) (true; actual \(m_{10}=13\)), degree lip gives the same \(15-10=5\). Relative gap \(2/n^{3/2}\approx0.063\to0\) along any sequence with \(k_\star=O(n)\). **E(1) is reduced to proving \(k_\star=o(n^{3/2})\) for \(\Phi\)-minimisers on \(n=p^2+1\)** (still open as a general statement; verified structurally at \(n=10\), consistent with SA at \(n=26\) where no undercut of \(\Phi=65\) is known).
+*Remark (N10 matches the edge form).* At \(n=10\), undercutting optima are perfect-matching flips of Paley (\(k_\star=5\), \(D=1\)): edge lip gives \(m_{10}\ge15-10=5\) (true; actual \(m_{10}=13\)), degree lip gives the same \(15-10=5\). Relative gap \(2/n^{3/2}\approx0.063\to0\) along any sequence with \(k_\star=O(n)\). **E(1) is reduced to proving \(k_\star=o(n^{3/2})\) for \(\Phi\)-minimisers on \(n=p^2+1\)** (still open as a general statement; verified structurally at \(n=10\), consistent with exact MITM SA at \(n=26\) where no undercut of \(\Phi=65\) is known).
+
+**Proposition 15.20d (conditional settlement: \(k_\star=O(n)\) \(\Rightarrow L=\tfrac12\)).** Let \(n_k=p_k^2+1\) run over the \(\rho=1\) Paley family, and write \(k_\star(n)\) for the minimal best-switch Hamming distance from a \(\Phi\)-minimiser to the Paley conference matrix of order \(n\). If \(k_\star(n_k)=O(n_k)\), then
+\[
+\lim_{n\to\infty}\alpha_n=\tfrac12.
+\]
+*Proof.* Prop 15.20b gives \(m_{n_k}\ge\Phi(C_{n_k})-2k_\star(n_k)=\tfrac12 n_k\sqrt{n_k-1}-O(n_k)\), so
+\[
+\alpha_{n_k}\ge\tfrac12\sqrt{1-1/n_k}-O(n_k^{-1/2})\to\tfrac12.
+\]
+Combined with the universal limsup \(\limsup\alpha_n\le\tfrac12\) (Prop 4.1 / conference construction) one has \(\alpha_{n_k}\to\tfrac12\). The family \(n_k\) is dense in the sense \(n_{k+1}/n_k\to1\) (prime number theorem in the progression of odd primes), so Prop 6.1–6.2 force \(\lim_n\alpha_n=\tfrac12\). \(\square\)
+
+*Status of the hypothesis.* At \(n=10\), \(k_\star=5=O(n)\) (N10-S: matching undercutters; N10-C6: all 360 Hamming-6 undercutters are 6-cycles, also \(O(n)\)). At \(n=26\), exact MITM sparse/SA census found no undercut of \(\Phi=65\) (consistent with \(k_\star=0\)). **The general bound \(k_\star=O(n)\) (or even \(o(n^{3/2})\)) on all \(n=p^2+1\) is not proved.** Existence of \(\lim\alpha_n\) remains **OPEN**.
 
 **Proposition 15.21 (single-edge local optimality under maximizer balance).** Let \(C\in\mathcal S_n\) be a conference matrix, \(M=\Phi(C)\), and \((p,r)\) an unordered edge. Write \(\varepsilon(x):=C_{pr}x_px_r\in\{\pm1\}\). Suppose there exists \(x^*\in\{\pm1\}^n\) with \(|Q_C(x^*)|=M\) and
 \[
