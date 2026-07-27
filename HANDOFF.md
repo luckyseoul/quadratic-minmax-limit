@@ -29,7 +29,7 @@ Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptot
 **Settlement path (shortest):** E(1) alone on the dense \(\rho=1\) family \(n=p^2+1\) \(\Rightarrow L=\tfrac12\) by Prop 6.2
 (E(2) not needed for that subfamily). **E(1) is the blocking open problem.**
 
-**E(1) reduction (2026-07-27):** Prop 15.20b edge-counting Lipschitz \(\Phi(A)\ge\Phi(C)-2k\) sharpens the sparse regime (vs Frobenius \(n\sqrt k\)). **E(1) \(\Leftrightarrow\) \(k_\star=o(n^{3/2})\)** for \(\Phi\)-minimisers after switching to Paley on \(n=p^2+1\). At \(n=10\), \(k_\star=5\) (matchings). Rigidity \(k_\star=o(n^{3/2})\) still unproved in general. See `evidence/E1_EDGE_LIPSCHITZ.md`.
+**E(1) reduction (2026-07-27):** Prop 15.20b edge-counting Lipschitz \(\Phi(A)\ge\Phi(C)-2k\) sharpens the sparse regime (vs Frobenius \(n\sqrt k\)). **E(1) \(\Leftrightarrow\) \(k_\star=o(n^{3/2})\)** for \(\Phi\)-minimisers after switching to Paley on \(n=p^2+1\). At \(n=10\), \(k_\star=5\) (matchings), though some other \(m_{10}\)-matrices have best-\(k\ge15\) (campaign). Rigidity \(k_\star=o(n^{3/2})\) still unproved in general. See `evidence/E1_EDGE_LIPSCHITZ.md`, `evidence/E1_RIGIDITY_ATTACK.md`.
 
 **MO thread re-audit (2026-07-27):** full re-read of [MO 413935](https://mathoverflow.net/questions/413935) + comments via SE API — **0 answers; no hidden proof**. Author already knew liminf \(\ge2^{-5/2}\) and that such bounds do **not** settle existence; not interested in numerics. Starr’s Bowlin/multipartite pointer is already dead for existence (§9–§10). **Time savings:** stop BH re-derivation, stop multipartite reopen, stop pure-SA as deliverable; only load-bearing E(1) (or permanent relative gap / non-existence) counts. Details: `evidence/MO_THREAD_REAUDIT.md`.
 
