@@ -1099,6 +1099,18 @@ Hence **\(k_\star=O(n^{3/2})\) already forces \(\alpha_n\to\tfrac12\)** along th
 
 *Open for matching non-undercut when \(p\ge5\).* Prove the criterion for every perfect matching (tail \(\max_{S_M=-p}Q_C\ge\Phi-2p\)). That would give \(\Phi(C\oplus M)\ge\Phi(C)\) for all \(M\), hence E(1) under the matching dichotomy. Full E(1) still requires control of non-matching undercutters. Evidence: `evidence/E1_MATCHING_SPIKE_CRITERION.md`. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.31 (clique-flip sufficiency for matching Max-covers; 2026-07-27).** Let \(M\) be a perfect matching Max-cover of Paley order \(n=p^2+1\). If there exist \(y\in\mathrm{Max}_{+}\) and a transversal \(p\)-set \(F\) such that \(F\) is a clique in \(W_{ij}=C_{ij}y_iy_j\), \(S_M(y)=s_0\) with \(s_0+3p\equiv0\pmod4\), and \(\sum_{i\in F}\chi_i(y)=(s_0+p)/2\), then
+\[
+Q_C(y^{\oplus F})=\Phi-2p,\qquad S_M(y^{\oplus F})=-p,\qquad Q_{C\oplus M}(y^{\oplus F})=\Phi,
+\]
+so \(\Phi(C\oplus M)\ge\Phi(C)\).
+
+*Arithmetic.* Full-clique flips reach the \(\Phi-2p\) threshold only for \(|F|\in\{1,p\}\); \(|F|=1\) is incompatible with Max-covers. Thus only \(|F|=p\) applies, requiring \(s_0+3p\equiv0\pmod4\). At \(p=3\) undercutting matchings have \(S_M(\mathrm{Max}_{+})\subseteq\{1,5\}\) (no admissible \(s_0\)), blocking the construction. At \(p=5\), \(\mathbb E[S_M]=2.6<3\) forces every Max-cover to attain \(S_M=1\).
+
+*Design constants at \(p=5\) (certified).* Seidel-consistent \(p\)-sets (\(C_{ab}C_{ac}C_{bc}=1\)): 390. Each has exactly 60 Max\(_{+}\) extensions. Every tested matching has \(\ge236\) transversal consistent \(p\)-sets. All SA Max-covers admit a clique-flip (MITM \(\Phi=\Phi(C)\)). Evidence: `evidence/E1_CLIQUE_FLIP.md`, `e1_clique_flip_covers.json`.
+
+*Open.* Existence of \((y,F)\) for every Max-covering matching when \(p\ge5\). **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

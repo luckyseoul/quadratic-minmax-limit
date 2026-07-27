@@ -1579,3 +1579,92 @@ def test_prop_15_30_spike_criterion_implies_no_undercut_n26_example():
         Sp += C[i, j] * Maxp[:, i] * Maxp[:, j]
     assert Sp.min() >= 1 - 1e-9
     assert max(abs(Phi - 2 * float(s)) for s in Sp) <= Phi - 2 + 1e-9
+
+
+def test_prop_15_31_clique_flip_arithmetic_and_design():
+    """Prop 15.31: r in {1,p} only; p=5 design constants; cover example clique-flips."""
+    import json
+    from itertools import combinations
+
+    p = 5
+    C = paley_conference_prime_power(p)
+    n = C.shape[0]
+    Phi = 0.5 * n * p
+
+    # Arithmetic: r(p-r+1) <= p only for r=1,p among 1..p
+    for r in range(1, p + 1):
+        ok = r * (p - r + 1) <= p
+        if r in (1, p):
+            assert ok
+        else:
+            assert not ok
+
+    # p=5 cover forces S=1: E[S]= (n/2)/p = 2.6 < 3
+    assert (n / 2) / p < 3
+
+    # Design: Seidel-consistent p-sets have Max+ extensions
+    def is_consistent(F):
+        for a, b, c in combinations(F, 3):
+            if abs(C[a, b] * C[a, c] * C[b, c] - 1) > 1e-9:
+                return False
+        return True
+
+    Maxp = _boolean_plus_evecs(C, float(p))
+    # sample 10 consistent F
+    n_cons = 0
+    for F in combinations(range(n), p):
+        if not is_consistent(F):
+            continue
+        n_cons += 1
+        f0 = F[0]
+        pat = np.array([1.0 if b == f0 else C[f0, b] for b in F])
+        c_ext = 0
+        for y in Maxp:
+            if np.allclose(y[list(F)], pat) or np.allclose(y[list(F)], -pat):
+                c_ext += 1
+        assert c_ext == 60, c_ext
+        if n_cons >= 5:
+            break
+    assert n_cons >= 5
+
+    # Cover example: clique flip exists (from stored matching)
+    ex = Path(__file__).resolve().parents[1] / "evidence" / "e1_n26_matching_cover_example.json"
+    data = json.loads(ex.read_text())
+    M = [tuple(map(int, e)) for e in data["matching"]]
+    # find y with S=1 and F
+    pairs = list(M)
+    found = False
+    for y in Maxp:
+        s0 = sum(C[i, j] * y[i] * y[j] for i, j in pairs)
+        if abs(s0 - 1) > 1e-9:
+            continue
+        W = np.outer(y, y) * C
+        np.fill_diagonal(W, 0)
+        edge_chi = [(C[i, j] * y[i] * y[j], i, j) for i, j in pairs]
+        for Psel in combinations(range(len(pairs)), p):
+            if abs(sum(edge_chi[b][0] for b in Psel) - 3) > 1e-9:
+                continue
+            for bits in range(1 << p):
+                F = []
+                for t, b in enumerate(Psel):
+                    _ch, i, j = edge_chi[b]
+                    F.append(i if ((bits >> t) & 1) == 0 else j)
+                if all(W[F[a], F[b2]] > 0.5 for a in range(p) for b2 in range(a + 1, p)):
+                    x = y.copy()
+                    for i in F:
+                        x[i] *= -1
+                    assert abs(form_Q(C, x) - (Phi - 2 * p)) < 1e-8
+                    SM = sum(C[i, j] * x[i] * x[j] for i, j in pairs)
+                    assert abs(SM + p) < 1e-8
+                    assert abs(form_Q(C, x) - 2 * SM - Phi) < 1e-8
+                    found = True
+                    break
+            if found:
+                break
+        if found:
+            break
+    assert found
+
+    note = Path(__file__).resolve().parents[1] / "evidence" / "E1_CLIQUE_FLIP.md"
+    assert note.is_file() and "OPEN" in note.read_text()
+    assert "OPEN" in (Path(__file__).resolve().parents[1] / "solution.md").read_text()

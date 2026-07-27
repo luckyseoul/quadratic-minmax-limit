@@ -1,0 +1,25 @@
+{
+  "n_seeds": 100,
+  "n_covers": 1,
+  "n_clique_flip_ok": 1,
+  "n_undercut": 0,
+  "all_covers_clique_flip": true,
+  "all_covers_phi_ge_PhiC": true,
+  "covers": [
+    {
+      "seed": 3006,
+      "cover": true,
+      "min_S": 1.0,
+      "clique_flip": true,
+      "flip_info": {
+        "QC": 55.0,
+        "SM": -5.0,
+        "QA": 65.0
+      },
+      "phi": 65.0,
+      "Phi_C": 65.0,
+      "undercut": false
+    }
+  ],
+  "status": "OPEN \u2014 census of clique-flip on SA covers; not a forall-M proof"
+}
