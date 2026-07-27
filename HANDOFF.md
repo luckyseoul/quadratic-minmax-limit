@@ -14,7 +14,16 @@ Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptot
 
 **New (n=10 structure):** exact optima first appear at Hamming distance **5** from Paley \(C_{10}\), and the only 5-edge undercutters are **144 perfect matchings** (of 945). Absolute gap \(\Phi-m_{10}=2\) is consistent with E(1). See `evidence/N10_STRUCTURE.md`.
 
-**New (n=10 classification, N10-C):** those 144 matchings are exactly one \(\mathrm{P}\Gamma\mathrm{L}(2,9)\)-orbit, equivalently the matchings that drop every Paley maximizer to \(|Q|\le13\) (six \(+\) maximizers certify). See `evidence/N10_MATCHING_CLASSIFY.md`. Existence of \(L\) remains **OPEN**.
+**New (n=10 classification, N10-C):** those 144 matchings are exactly one \(\mathrm{P}\Gamma\mathrm{L}(2,9)\)-orbit, equivalently the matchings that drop every Paley maximizer to \(|Q|\le13\) (six \(+\) maximizers certify). See `evidence/N10_MATCHING_CLASSIFY.md`.
+
+**New (E(2) interval formula):** for Paley \(q\equiv1\bmod4\), interval signing has exact
+\(x^\top Cx=2-8\sum_{d\le(q-1)/2}d\chi(d)\) (`evidence/E2_INTERVAL_FORMULA.md`). Constructive
+\(\rho_{\mathrm{int}}\) up to \(\approx0.978\) at \(n=1622\). **Not** a full proof of \(\rho\to1\).
+
+**New (E(1) numerics):** exact-Φ SA at Paley \(n=14,18\): no undercut of \(\Phi(C)\) found
+(`evidence/e1_paley_gap.json`); \(n=10\) recovers gap \(2\). **Not** a proof of E(1).
+
+**Existence of \(L\) remains OPEN** — sandwich only; E(1)+E(2) still required for Theorem E.
 ---
 
 ## 1. Exact quantity (do not restate incorrectly)
@@ -159,7 +168,7 @@ Soft multipartite / Hadamard / annealed / rank-one blow-up **cannot** force \(\l
 
 1. **E(1) on \(\rho=1\) family** — Prove \(m_n=\frac12 n\sqrt{n-1}-o(n^{3/2})\) for \(n=p^2+1\), or exhibit a permanent relative gap. At \(n=10\) the absolute gap is only \(2\) (rel. \(\approx0.063\)); at \(n=26\) SA+exact-rescore found **no** undercutter of \(\Phi=65\) (certified \(m_{26}\le65\)). Need a general argument, not local edge-flip (optima sit at Hamming \(\ge5\)).  
 2. **Structural gap from \(n=10\)** — **Mostly closed (N10-S + N10-C).** Hamming-5 threshold; only undercutters at \(k=5\) are 144 perfect matchings; those 144 form one \(\mathrm{P}\Gamma\mathrm{L}(2,9)\)-orbit and equal the maximizer-drop set (`evidence/N10_STRUCTURE.md`, `evidence/N10_MATCHING_CLASSIFY.md`). SA also finds Hamming-11–16 optima in the switching metric (same \(r=13/15\)). Remaining: whether a matching-type construction lifts (random matchings at \(n=26\) **raise** \(\Phi\) to \(\ge73\)); classify non-matching distant optima.  
-3. **E(2) analytic** — Prove \(\rho(C_n)=1-O(n^{-1/2})\) (or \(\to1\)) for all large Paley, not only \(p^2+1\). Interval constructions are evidence, not a proof.  
+3. **E(2) analytic** — Prove \(\rho(C_n)=1-O(n^{-1/2})\) (or \(\to1\)) for all large Paley, not only \(p^2+1\). **Partial:** exact interval formula \(x^\top Cx=2-8\Sigma_q\) reduces this to asymptotics of \(\Sigma_q/q^{3/2}\) (`E2_INTERVAL_FORMULA.md`); census \(\rho_{\mathrm{int}}\le0.978\). Still need analytic \(\Sigma_q\).  
 4. **Non-existence** — Only if two dense subsequences with **proved** unequal \(\alpha\) limits appear; denseness (Prop 6.2) is mandatory.
 ### 5.2 Traps to avoid
 

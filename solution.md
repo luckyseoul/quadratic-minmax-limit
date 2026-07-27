@@ -36,6 +36,13 @@ By Proposition 6.2, existence is equivalent to convergence of \(\alpha_n\) along
 Soft multipartite/Hadamard inequalities cannot force \(\lambda=\Lambda\) (§9–§10).
 Resume checklist and evidence map: **`HANDOFF.md`**.
 
+**E(2) progress (interval formula, not settlement).** For Paley \(q\equiv1\bmod4\) and the interval
+boolean vector, \(x^\top Cx=2-8\sum_{d\le(q-1)/2}d\chi(d)\) exactly
+(`evidence/E2_INTERVAL_FORMULA.md`, `src/interval_rho_formula.py`). This makes the standard
+constructive lower bound on \(\rho(C)\) elementary; proving \(\rho\to1\) still needs asymptotics of
+that character sum. E(1) remains open (\(n=6\) exact opt; \(n=10\) gap \(2\); SA+exact at \(n=14,18\)
+found no Paley undercut). **Do not read this paragraph as \(\lim\alpha_n\) existing.**
+
 **Corollary (\(\rho=1\) along a dense Paley family).** For every odd prime \(p\), the Paley conference
 matrix of order \(n=p^2+1\) (over \(\mathbb F_{p^2}\)) admits a halfspace boolean eigenvector
 \(Cx=px\), hence \(\rho(C)=1\) and \(\Phi(C)=\tfrac12 n\sqrt{n-1}\). Along \(n_k=p_k^2+1\) one has

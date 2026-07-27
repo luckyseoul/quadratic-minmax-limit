@@ -1,0 +1,81 @@
+{
+  "campaign": "E1_paley_gap_fast",
+  "workers": 86,
+  "timestamp": "2026-07-27T04:50:48Z",
+  "settlement_claim": false,
+  "limit_still_open": true,
+  "orders": {
+    "6": {
+      "n": 6,
+      "Phi_Paley_exact": 5.0,
+      "n_maximizers_halfcube": 12,
+      "rho_Paley": 0.7453559924999299,
+      "dual_gauss_LB": 4.270575260503063,
+      "certified_UB_m": 5.0,
+      "gap_Phi_minus_UB": 0.0,
+      "rel_gap_over_n32": 0.0,
+      "m_over_Phi_UB": 1.0,
+      "alpha_UB": 0.34020690871988585,
+      "n_exact_undercut_paley": 0,
+      "sa_iters": 1500,
+      "time_s": 0.9458041191101074,
+      "method": "phi_local_SA_plus_exact_rescore"
+    },
+    "10": {
+      "n": 10,
+      "Phi_Paley_exact": 15.0,
+      "n_maximizers_halfcube": 12,
+      "rho_Paley": 1.0,
+      "dual_gauss_LB": 9.549296585513721,
+      "certified_UB_m": 13.0,
+      "gap_Phi_minus_UB": 2.0,
+      "rel_gap_over_n32": 0.06324555320336758,
+      "m_over_Phi_UB": 0.8666666666666667,
+      "alpha_UB": 0.41109609582188933,
+      "n_exact_undercut_paley": 3,
+      "sa_iters": 3000,
+      "time_s": 1.6585042476654053,
+      "method": "phi_local_SA_plus_exact_rescore"
+    },
+    "14": {
+      "n": 14,
+      "Phi_Paley_exact": 21.0,
+      "n_maximizers_halfcube": 156,
+      "rho_Paley": 0.8320502943378437,
+      "dual_gauss_LB": 16.067556625718694,
+      "certified_UB_m": 21.0,
+      "gap_Phi_minus_UB": 0.0,
+      "rel_gap_over_n32": 0.0,
+      "m_over_Phi_UB": 1.0,
+      "alpha_UB": 0.4008918628686366,
+      "n_exact_undercut_paley": 0,
+      "sa_iters": 4000,
+      "time_s": 2.746595621109009,
+      "method": "phi_local_SA_plus_exact_rescore"
+    },
+    "18": {
+      "n": 18,
+      "Phi_Paley_exact": 33.0,
+      "n_maximizers_halfcube": 204,
+      "rho_Paley": 0.8892972917998876,
+      "dual_gauss_LB": 23.623655083453883,
+      "certified_UB_m": 33.0,
+      "gap_Phi_minus_UB": 0.0,
+      "rel_gap_over_n32": 0.0,
+      "m_over_Phi_UB": 1.0,
+      "alpha_UB": 0.4321208107251123,
+      "n_exact_undercut_paley": 0,
+      "sa_iters": 5000,
+      "time_s": 4.9749815464019775,
+      "method": "phi_local_SA_plus_exact_rescore"
+    }
+  },
+  "exact_anchors": {
+    "m_6": 5,
+    "m_10": 13
+  },
+  "e1_status": {
+    "proved": false,
+    "note": "n=6 exact opt (gap 0); n=10 exact gap 2; n=14,18 SA+exact found no undercut of Paley in this run (UB=\u03a6). Supports E(1) locally, not a proof. lim \u03b1_n remains OPEN."
+  }
+}

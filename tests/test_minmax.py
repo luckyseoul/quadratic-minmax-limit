@@ -780,3 +780,37 @@ def test_n10_matching_classify_maximizer_criterion_and_orbit():
     text = note.read_text()
     assert "OPEN" in text
     assert "N10-C" in text
+
+
+def test_interval_rho_formula_matches_paley_matrix():
+    """
+    E2 interval formula: drive shipped interval_rho_formula against real Paley C.
+    Proves the identity x^T C x = 2-8Σ_q; does not claim lim α exists.
+    """
+    sys.path.insert(0, str(ROOT / "src"))
+    from interval_rho_formula import (
+        Sigma_q,
+        interval_xCx_formula,
+        rho_int_formula,
+        verify_formula_against_matrix,
+    )
+
+    for q in (5, 13, 17, 29, 37, 41, 53, 61, 73, 89, 97, 101):
+        C = paley_conference_matrix(q)
+        assert is_conference_matrix(C)
+        ok, rf, rm = verify_formula_against_matrix(q, C)
+        assert ok, (q, rf, rm)
+        assert abs(rf - rm) < 1e-9
+        # formula path alone
+        assert abs(rho_int_formula(q) - rf) < 1e-12
+        # Σ_q is integer; S = 2-8Σ
+        assert interval_xCx_formula(q) == 2 - 8 * Sigma_q(q)
+        # ρ_int ≤ 1 (cube/sphere)
+        assert rf <= 1.0 + 1e-12
+        # Nesterov floor: ρ ≥ (2/π)√(n-1) arcsin(1/√(n-1)) roughly → 2/π
+        assert rf > 0.5  # weak sanity; all tested q clear this
+
+    # evidence note keeps existence OPEN
+    note = ROOT / "evidence" / "E2_INTERVAL_FORMULA.md"
+    assert note.exists()
+    assert "OPEN" in note.read_text()
