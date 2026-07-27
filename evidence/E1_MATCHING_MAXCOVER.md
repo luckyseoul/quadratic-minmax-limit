@@ -12,9 +12,9 @@ Any strict undercutter of a \(\rho=1\) conference must satisfy \(S_F(y)\ge1\) fo
 | \(p\) | \(n\) | Random PM best \(\min_y S_M(y)\) | SA max \(\min_y S\) (12 seeds) | Undercutting PMs |
 |------:|------:|--------------------------------:|--------------------------------:|:-----------------|
 | 3 | 10 | \(+1\) (and 144 exact undercutters) | (exact: 144 of 945) | **144** with \(\Phi=13\) |
-| 5 | 26 | \(-3\) (2000 samples) | **all \(\le -1\)** | **none found** |
+| 5 | 26 | \(-3\) (5000 samples) | **all \(\le -1\)** (20×15k-iter SA) | **none found** |
 
-At \(n=26\), SA (3000 iters, 2-swaps) maximising \(\min_y S_M(y)\) over perfect matchings never exceeds \(-1\). Consistent with: **no perfect matching is a Max-cover for \(p=5\)**, hence the \(n=10\) matching undercut does not lift.
+At \(n=26\), random sample of 5000 perfect matchings and 20 independent SA runs (15k 2-swap iterations each) maximising \(\min_y S_M(y)\) **never exceed \(-1\)**. (Note \(n/2=13\) is odd, so \(S_M(y)\) is always odd and cannot be 0.) Strong evidence that **no perfect matching is a Max-cover for \(p=5\)**, so the \(n=10\) matching undercut does not lift.
 
 Fractional matching-polytope LP still has value \(p=5\) (Prop 15.27), so the obstruction is integrality of the matching cover.
 
