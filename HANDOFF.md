@@ -183,7 +183,7 @@ Soft multipartite / Hadamard / annealed / rank-one blow-up **cannot** force \(\l
 | Treating `phi_local` min as \(m_n\) UB | Local max underestimates \(\Phi\) |
 | Uncertified \(\rho\) dips as non-existence | Need certified \(\Phi\), not SA LB |
 | Exact conference optimality for all \(n\) | **False** at \(n=10\) |
-| Claiming \(L=1/2\) from \(\rho=1\) alone | Needs E(1) **and** liminf \(\to1/2\) (dual-Gauss only gives \(1/\pi\)) |
+| Claiming \(L=1/2\) from \(\rho=1\) alone | Needs **E(1)** on that family (Prop 6.1–6.2 then force full limit); dual-Gauss alone only gives liminf \(\ge1/\pi\) |
 | ProcessPool via stdin / single-core pegging | Use script files; `W=ncpu-2`, `OMP_NUM_THREADS=1` per worker |
 | Parisi / graphon / Wick “existence proofs” from X | Hallucinations |
 
@@ -227,9 +227,8 @@ Soft multipartite / Hadamard / annealed / rank-one blow-up **cannot** force \(\l
 ## 6. Conditional landscape (if E(1)+E(2) close)
 
 - Along \(\rho=1\) family: \(\Phi(C_n)/n^{3/2}\to1/2\).  
-- If E(1): \(\alpha_{n_k}\to1/2\) along that dense family \(\Rightarrow\limsup\alpha_n=1/2\).  
-- Full \(L=1/2\) still needs \(\liminf\ge1/2\) (stronger than dual-Gauss \(1/\pi\)).  
-- If E(2) gives \(\rho_*<1\) and E(1), conditional Thm E says \(L=\rho_*/2\).
+- If E(1): \(\alpha_{n_k}\to\tfrac12\) along that dense family \(\Rightarrow\lim\alpha_n=\tfrac12\) by Prop 6.1–6.2 (both liminf and limsup).  
+- If E(2) gives \(\rho_*<1\) and E(1) on general Paley, conditional Thm E says \(L=\rho_*/2\).
 
 None of this is established. **Leave Main Theorem as sandwich + OPEN.**
 
