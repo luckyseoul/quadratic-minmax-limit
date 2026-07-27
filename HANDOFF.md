@@ -106,7 +106,7 @@ Soft multipartite / Hadamard / annealed / rank-one blow-up **cannot** force \(\l
 | **E(1)** | Asymptotic optimality: \(m_{n_k}=\Phi(C_k)+o(n_k^{3/2})\) along Paley (or \(\min r=\rho(C)+o(1)\)) | **Exact** optimality fails at \(n=10\): \(m_{10}=13<\Phi_{\mathrm{Paley}}=15\). Must be asymptotic. Local edge-opt of Paley at small orders is not a proof. |
 | **E(2)** | \(\rho(C_k)\to\rho_*\) for all Paley (or full conference) orders | On \(n=p^2+1\), \(\rho\equiv1\) already. For general Paley, \(\rho\) is increasing on small exact orders; interval constructions give constructive \(\rho_{\mathrm{int}}\gtrsim0.99\) at large \(n\) (heuristic/constructive, not full \(\rho\to1\)). |
 | **Non-existence path** | Two subsequences with unequal \(\lim\alpha\) | Denseness forces any oscillation to appear along Paley orders too. No certified construction. |
-| **Thm E (conditional)** | E(1)+E(2) \(\Rightarrow\lim\alpha_n=\rho_*/2\) | Hypotheses open. Along \(\rho=1\) family, E(1) alone would give \(\limsup\alpha=1/2\); still need matching liminf for \(L=1/2\). |
+| **Thm E (conditional)** | E(1)+E(2) along general Paley \(\Rightarrow L=\rho_*/2\) | Open. **Shortcut:** E(1) on the dense \(\rho=1\) family alone \(\Rightarrow L=\tfrac12\) (Prop 6.1–6.2: \(\alpha_{n_k}\to\tfrac12\Rightarrow\lim\alpha_n=\tfrac12\)). |
 | **Thm F (Stolz)** | If \(\delta_n/\sqrt n\to\ell\) then \(\alpha_n\to\tfrac23\ell\) | Extension-cost regularity open. |
 
 **Do not claim existence from sandwich + denseness alone.**
