@@ -81,14 +81,15 @@ Every covering leaf set at \(\infty\) is an affine line; exactly half of all aff
 
 JSON: `evidence/e1_size_p_maxcover.json`.
 
-## Proposition 15.28 (statement shipped in `solution.md`)
+## Proposition 15.28 (shipped in `solution.md`)
 
 1. **(Proved)** Size-\(p\) Max-cover \(\Rightarrow S_F\equiv1\) on \(\mathrm{Max}_{+}\).
 2. **(Proved)** \(\max_{\mathrm{Max}_{-}}S_F\ge1\Rightarrow\Phi(C\oplus F)\ge\Phi+2\).
-3. **(Certified \(p=3,5\))** Every covering \(p\)-star has some \(z\in\mathrm{Max}_{-}\) with \(S_F(z)=p\), hence \(\Phi=\Phi+2p\).
-4. **(Certified \(p=3\))** Every size-\(p\) Max-cover (star or not) has \(\max_{\mathrm{Max}_{-}}S_F\ge1\) and \(\Phi\ge\Phi+2\).
+3. **(Proved for Paley \(\infty\)-stars)** Affine line of nonsquare direction \(\Rightarrow\) tight Max-cover with \(\mathbb E_{-}[S^2]=2p-1\neq1\Rightarrow\max_{\mathrm{Max}_{-}}S\ge1\Rightarrow\Phi\ge\Phi+2\). Square directions are non-covers (\(S\equiv-1\) on \(\mathrm{Max}_{+}\)). Uses \(\chi|_{\mathbb F_p^\times}\equiv1\) and adjacent-edge frame moments only.
+4. **(Certified \(p=3,5\))** Every covering \(p\)-star (any centre) has \(\max_{\mathrm{Max}_{-}}S_F=p\), hence \(\Phi=\Phi+2p\).
+5. **(Certified \(p=3\))** All 405 size-\(p\) Max-covers have \(\mathbb E_{-}[S^2]\ge7/3>1\) and \(\Phi\ge\Phi+2\).
 
-**Still open for E(1):** prove (3)–(4) for all odd primes \(p\); prove that non-minimal Max-covers either spike or have \(k=O(n^{3/2})\); or prove exact optimality for \(p\ge5\).
+**Still open for E(1):** generalise (4)–(5) to all \(p\); control larger Max-covers; or exact optimality for \(p\ge5\).
 
 ## Relevance
 

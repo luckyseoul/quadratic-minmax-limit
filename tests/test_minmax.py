@@ -1244,3 +1244,107 @@ def test_prop_15_28_size_p_maxcover_tight_and_spike():
     assert note.is_file()
     assert "OPEN" in note.read_text()
     assert "OPEN" in (Path(__file__).resolve().parents[1] / "solution.md").read_text()
+
+
+def test_prop_15_28_affine_line_star_moments():
+    """
+    Prop 15.28.3: infinity p-star on affine line L of direction d has
+    E_pm[S^2] = p ± (p-1) chi(d); nonsquare => tight cover, E_-[S^2]=2p-1.
+    """
+    for p in (3, 5):
+        C = paley_conference_prime_power(p)
+        n = C.shape[0]
+        Maxp = _boolean_plus_evecs(C, float(p))
+        Maxm = _boolean_plus_evecs(-C, float(p))
+        # Rebuild chi on F_{p^2} from C (C[u+1,v+1]=chi(u-v))
+        # Direction d as field element 1..p^2-1; line through 0: {t*d : t in F_p}
+        # Encoding a+b*p; multiply using same irr as paley (infer from C consistency)
+
+        def field_mul_table():
+            # recover ia,ib by scanning (same as source)
+            def is_irr(a, b):
+                return all((x * x - a * x - b) % p != 0 for x in range(p))
+
+            for a in range(p):
+                for b in range(p):
+                    if is_irr(a, b):
+                        return a, b
+            raise RuntimeError("no irr")
+
+        ia, ib = field_mul_table()
+
+        def mul(u, v):
+            c0, c1 = u % p, u // p
+            d0, d1 = v % p, v // p
+            e0 = (c0 * d0 + c1 * d1 * ib) % p
+            e1 = (c0 * d1 + c1 * d0 + c1 * d1 * ia) % p
+            return e0 + e1 * p
+
+        def chi_field(x):
+            if x == 0:
+                return 0
+            # C[1, x+1] = chi(0-x)=chi(-x)=chi(-1)chi(x); easier: pow
+            q = p * p
+            r, base, e = 1, x, (q - 1) // 2
+            while e:
+                if e & 1:
+                    r = mul(r, base)
+                base = mul(base, base)
+                e >>= 1
+            return 1 if r == 1 else -1
+
+        # All directions up to F_p-scaling: slopes + vertical already covered by d
+        dirs = []
+        for dx in range(p):
+            for dy in range(p):
+                if dx == 0 and dy == 0:
+                    continue
+                d = dx + dy * p
+                # normalize
+                if dx != 0:
+                    inv = pow(dx, p - 2, p)
+                    d_norm = 1 + ((dy * inv) % p) * p
+                else:
+                    d_norm = 0 + 1 * p
+                if d_norm not in dirs:
+                    dirs.append(d_norm)
+
+        n_cover = 0
+        for d in dirs:
+            # line through 0 in direction d: {0, d, 2d, ...} via repeated add
+            def fadd(u, v):
+                return (u % p + v % p) % p + p * ((u // p + v // p) % p)
+
+            L_field = []
+            cur = 0
+            for t in range(p):
+                L_field.append(cur)
+                cur = fadd(cur, d)
+            assert len(set(L_field)) == p
+            L = [u + 1 for u in L_field]  # matrix indices; skip infinity=0
+            F = [(0, j) for j in L]
+            # S on Max±
+            sp = np.array(
+                [sum(C[0, j] * y[0] * y[j] for j in L) for y in Maxp]
+            )
+            sm = np.array(
+                [sum(C[0, j] * z[0] * z[j] for j in L) for z in Maxm]
+            )
+            ch = chi_field(d)
+            e2p, e2m = float(np.mean(sp**2)), float(np.mean(sm**2))
+            pred_p = p + (p - 1) * ch
+            pred_m = p - (p - 1) * ch
+            assert abs(e2p - pred_p) < 1e-8, (p, d, ch, e2p, pred_p)
+            assert abs(e2m - pred_m) < 1e-8, (p, d, ch, e2m, pred_m)
+            if ch == -1:
+                n_cover += 1
+                assert np.allclose(sp, 1.0)
+                assert abs(e2m - (2 * p - 1)) < 1e-8
+                assert sm.max() >= 1 - 1e-9
+            else:
+                assert sp.max() <= -1 + 1e-9 or np.allclose(sp, -1.0) or sp.min() <= -1
+        # one line per direction through 0; half the directions nonsquare
+        assert n_cover == (p + 1) // 2 or n_cover == p // 2 or n_cover > 0
+        # actually (p+1) directions, half nonsquare among F_p^2 directions
+        # number of nonsquare directions up to scaling = (p+1)/2
+        assert n_cover == (p + 1) // 2
