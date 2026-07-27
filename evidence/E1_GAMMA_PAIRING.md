@@ -116,11 +116,12 @@ are class \(r=1\) with \(\min S=1\) (1-bit blocked; clique-flip required).
 |--------|--------|
 | need \(\max R\) | 60 |
 | 2 Max-covers (known + SA) | \(\max R=60\) tight; MITM \(\Phi=\Phi(C)\) |
+| 6 further SA Max-covers (400 seeds) | all \(\max R=60\), MITM \(\Phi=\Phi(C)\) (`e1_gamma_cover_batch.json`) |
 | 80 random PMs | \(\max R\in\{60,70\}\), min 60 |
 | SA minimise \(\max R\) (12 seeds) | lowest 60 |
 | Counterexample to criterion | **none found** |
 
-Scripts: `src/e1_gamma_criterion_census.py`, `maxR_matching_level` in `minmax_quadratic.py`.
+Scripts: `src/e1_gamma_criterion_census.py`, `src/e1_gamma_cover_batch.py`, `maxR_matching_level` in `minmax_quadratic.py`.
 
 ## What this does **not** prove
 
