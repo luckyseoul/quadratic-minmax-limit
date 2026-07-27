@@ -1,6 +1,6 @@
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-07-27 (Prop 15.32 Γ-pairing; L still OPEN)  
+**Status date:** 2026-07-27 (Prop 15.33 non-cover lemma; L still OPEN)  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
 **Problem source:** [MathOverflow 413935](https://mathoverflow.net/questions/413935) / [X prize post](https://x.com/PI010101/status/2081070728422752329)
 
