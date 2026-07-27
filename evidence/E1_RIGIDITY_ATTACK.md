@@ -74,6 +74,8 @@ so \(\alpha_n\ge\tfrac12\sqrt{1-1/n}-2n^{-1/2}\to\tfrac12\). Combined with \(\li
 
 **Obstacle:** \(\Phi\) is only 2-Lipschitz, so near-optimal \(\Phi\) does **not** force small Hamming distance (far optima exist). Need a structural reason that a *closest* \(\Phi\)-minimiser has \(k\le n\) (path-cycle / matching). General \(p\) open.
 
+**Inclusion-minimal ≠ cardinality-minimal (n=10):** there exist 7-edge sets that are inclusion-minimal for \(\Phi\le13\) with \(\Delta=3\) (not path-cycle). Those are **not** cardinality-minimal (\(k_\star=5\)). Any general argument must use global min-cardinality, not mere inclusion-minimality of edge sets.
+
 ## Not established
 
 - \(k_\star=o(n^{3/2})\) in general  
