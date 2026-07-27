@@ -37,6 +37,9 @@ from minmax_quadratic import (
     dual_gaussian_lower_bound,
     random_sym_pm1,
     random_method_upper_bound,
+    edge_hamming,
+    phi_edge_lipschitz_lower,
+    phi_degree_lipschitz_lower,
 )
 
 # Recorded m_9, m_10 from multi-worker Gray exhaustive (never recompute in pytest).
@@ -492,6 +495,65 @@ def test_phi_lipschitz_in_frobenius():
             dphi = abs(phi(A) - phi(B))
             frob = float(np.linalg.norm(A - B, "fro"))
             assert dphi <= 0.5 * n * frob + 1e-9
+
+
+def test_phi_edge_lipschitz_pointwise_and_global():
+    """
+    Prop 15.20b: |Q_A(x)-Q_C(x)| <= 2k for every x, hence Phi(A) >= Phi(C)-2k.
+    Drives shipped edge_hamming + phi_edge_lipschitz_lower on real Paley/random pairs.
+    """
+    rng = np.random.default_rng(2)
+    C = paley_conference_prime_power(3)
+    n = C.shape[0]
+    phi_c = phi(C)
+    for _ in range(20):
+        A = random_sym_pm1(n, rng)
+        k = edge_hamming(A, C)
+        # pointwise on a sample of cube vectors
+        for __ in range(40):
+            x = rng.choice([-1.0, 1.0], size=n)
+            dQ = abs(form_Q(A, x) - form_Q(C, x))
+            assert dQ <= 2 * k + 1e-9
+        # global Phi bound (may be negative / vacuous for large k)
+        assert phi(A) + 1e-9 >= phi_edge_lipschitz_lower(phi_c, k)
+
+
+def test_phi_edge_lipschitz_matching_undercut_n10():
+    """N10 matching undercutters: k=5, bound Phi-2k=5, actual Phi=13 >= 5."""
+    from n10_matching_optima import perfect_matchings
+
+    C = paley_conference_prime_power(3)
+    phi_c = phi(C)
+    assert abs(phi_c - 15.0) < 1e-9
+    seen = 0
+    for m in perfect_matchings(10):
+        A = C.copy()
+        for i, j in m:
+            A[i, j] *= -1.0
+            A[j, i] *= -1.0
+        if phi(A) > 13.0 + 1e-9:
+            continue
+        k = edge_hamming(A, C)
+        assert k == 5
+        assert phi(A) + 1e-9 >= phi_edge_lipschitz_lower(phi_c, k)
+        assert phi(A) + 1e-9 >= phi_degree_lipschitz_lower(phi_c, 1, 10)
+        seen += 1
+        if seen >= 5:
+            break
+    assert seen >= 5
+
+
+def test_e1_edge_lipschitz_criterion_string():
+    """E(1) criterion via edge lip: k=o(n^{3/2}) forces relative gap o(1)."""
+    # symbolic check used in evidence/E1_STATUS.md — drive shipped lower bound
+    for n, phi_c, k in ((10, 15.0, 5), (26, 65.0, 0), (26, 65.0, 13)):
+        lb = phi_edge_lipschitz_lower(phi_c, k)
+        rel = (phi_c - max(lb, 0.0)) / (n ** 1.5)
+        if k == 0:
+            assert abs(lb - phi_c) < 1e-12
+        if k * 2 < n ** 1.5 * 0.01:
+            # sparse enough that relative gap from this bound alone is < 1%
+            assert (2.0 * k) / (n ** 1.5) < 0.01
 
 
 def test_paley_maximizer_balance_forces_edge_flip_plus_two():

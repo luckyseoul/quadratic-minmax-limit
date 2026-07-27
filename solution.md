@@ -814,7 +814,7 @@ so the set \(\{\delta\le\Delta_*/3\}\) is **all of** \(\mathcal S_n\). In partic
 
 *Numerical threshold.* With exact \(\Phi_*\) one has \(\Delta_*/3<\max\delta\) at \(n\le30\) and \(\Delta_*/3>\max\delta\) already at \(n=38\) (\(\Phi_*=109\) exact). Thus Props 15.14–15.17 are useful only in a finite window of small conference orders; asymptotic optimality requires a genuinely different \(L^\infty\) comparison.
 
-**Proposition 15.20 (Lipschitz continuity of \(\Phi\)).** For all \(A,B\in\mathcal S_n\) and all \(x\in\{\pm1\}^n\),
+**Proposition 15.20 (Lipschitz continuity of \(\Phi\); Frobenius form).** For all \(A,B\in\mathcal S_n\) and all \(x\in\{\pm1\}^n\),
 \[
 \bigl|x^\top(A-B)x\bigr|\le n\,\|A-B\|_F,
 \]
@@ -832,6 +832,42 @@ In particular, if \(A\) differs from a conference matrix \(C\) in exactly \(k\) 
 Relative to the \(n^{3/2}\) scale this is an \(O(\sqrt{k/n})\) relative error: any \(A\) within \(k=o(n)\) edge flips of a conference matrix satisfies \(\Phi(A)\ge\Phi(C)-o(n^{3/2})\).
 
 *Proof.* Cauchy–Schwarz: \(|x^\top Mx|\le\|M\|_F\|x\|_2^2=n\|M\|_F\) for \(M=A-B\) and \(\|x\|_2=\sqrt n\). Taking \(\Phi=\max|Q|=\tfrac12\max|x^\top(\,\cdot\,)x|\) yields \eqref{eq:phi-lip}. Each flipped edge changes two off-diagonal entries by \(2\) in absolute value, contributing \(4\) to \(\|A-C\|_F^2\) per edge. \(\square\)
+
+**Proposition 15.20b (edge-counting Lipschitz — sharp sparse form).** Let \(A,C\in\mathcal S_n\) differ in exactly \(k\) undirected edges. Then for every \(x\in\{\pm1\}^n\),
+\[
+\bigl|Q_A(x)-Q_C(x)\bigr|\;\le\;2k,
+\]
+and therefore
+\begin{equation}
+\label{eq:phi-edge-lip}
+\Phi(A)\;\ge\;\Phi(C)-2k.
+\end{equation}
+In particular, on any order where a conference matrix \(C\) with \(\rho(C)=1\) exists (so \(\Phi(C)=\tfrac12 n\sqrt{n-1}\)),
+\[
+m_n\;\ge\;\tfrac12 n\sqrt{n-1}-2k_\star
+\quad\text{where}\quad
+k_\star:=\min\bigl\{d_H(A',C):A'\sim A\text{ by Seidel switching},\;\Phi(A)=m_n\bigr\}
+\]
+(minimum over switchings of a minimiser \(A\)). Consequently:
+\begin{itemize}
+\item if \(k_\star=o(n^{3/2})\) then \(m_n=\Phi(C)-o(n^{3/2})\) (E(1) on that order);
+\item the Frobenius form (Prop 15.20) needed the stronger \(k_\star=o(n)\) for the same conclusion — edge counting weakens the rigidity demand from \(o(n)\) to \(o(n^{3/2})\).
+\end{itemize}
+Shipped: `edge_hamming`, `phi_edge_lipschitz_lower` in `src/minmax_quadratic.py`.
+
+*Proof.* On a disagreeing edge one has \(A_{ij}-C_{ij}=-2C_{ij}\), so
+\[
+Q_A(x)-Q_C(x)
+=\sum_{\{i,j\}\in F}(A_{ij}-C_{ij})x_ix_j
+=\sum_{\{i,j\}\in F}(-2C_{ij})x_ix_j
+\]
+and \(\lvert Q_A(x)-Q_C(x)\rvert\le 2\lvert F\rvert=2k\). Hence \(\lvert Q_A(x)\rvert\ge\lvert Q_C(x)\rvert-2k\) for every \(x\), and taking \(\max_x\) yields \eqref{eq:phi-edge-lip}. The E(1) criterion is the specialisation \(\Phi(C)=\tfrac12 n\sqrt{n-1}\) together with \(2k_\star=o(n^{3/2})\). \(\square\)
+
+**Proposition 15.20c (degree Lipschitz).** If the disagreement graph of \(A\) vs \(C\) has maximum degree \(D\), then \(\Phi(A)\ge\Phi(C)-Dn\).
+
+*Proof.* \(E=A-C\) has off-diagonal entries in \(\{0,\pm2\}\) and row \(\ell^1\)-norm at most \(2D\), so \(\|E\|_{\mathrm{op}}\le 2D\). Thus \(\lvert x^\top Ex\rvert\le 2Dn\) and \(\lvert Q_A-Q_C\rvert\le Dn\). \(\square\)
+
+*Remark (N10 matches the edge form).* At \(n=10\), undercutting optima are perfect-matching flips of Paley (\(k_\star=5\), \(D=1\)): edge lip gives \(m_{10}\ge15-10=5\) (true; actual \(m_{10}=13\)), degree lip gives the same \(15-10=5\). Relative gap \(2/n^{3/2}\approx0.063\to0\) along any sequence with \(k_\star=O(n)\). **E(1) is reduced to proving \(k_\star=o(n^{3/2})\) for \(\Phi\)-minimisers on \(n=p^2+1\)** (still open as a general statement; verified structurally at \(n=10\), consistent with SA at \(n=26\) where no undercut of \(\Phi=65\) is known).
 
 **Proposition 15.21 (single-edge local optimality under maximizer balance).** Let \(C\in\mathcal S_n\) be a conference matrix, \(M=\Phi(C)\), and \((p,r)\) an unordered edge. Write \(\varepsilon(x):=C_{pr}x_px_r\in\{\pm1\}\). Suppose there exists \(x^*\in\{\pm1\}^n\) with \(|Q_C(x^*)|=M\) and
 \[

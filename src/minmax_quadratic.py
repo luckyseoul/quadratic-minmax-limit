@@ -323,6 +323,43 @@ def dual_gaussian_lower_bound(n: int) -> float:
     return n * float(np.sqrt(n - 1)) / float(np.pi)
 
 
+def edge_hamming(A: np.ndarray, B: np.ndarray) -> int:
+    """Number of undirected disagreeing edges between two Seidel matrices."""
+    if A.shape != B.shape:
+        raise ValueError("shape mismatch")
+    # each undirected edge counted twice in the symmetric difference
+    return int(np.sum(A != B) // 2)
+
+
+def phi_edge_lipschitz_lower(phi_ref: float, k: int) -> float:
+    """
+    Prop 15.20b (edge-counting Lipschitz): if A and C differ in k edges then
+    Phi(A) >= Phi(C) - 2k.
+
+    Sharper than Frobenius Lipschitz (Prop 15.20: gap <= n sqrt(k)) whenever
+    2k < n sqrt(k), i.e. k < n^2/4 (the sparse-disagreement regime).
+    Consequence for E(1): if a Phi-minimiser is within k = o(n^{3/2}) edges of a
+    rho=1 conference matrix (after switching), then m_n = Phi(C) - o(n^{3/2}).
+    """
+    if k < 0:
+        raise ValueError("k>=0")
+    return float(phi_ref) - 2.0 * float(k)
+
+
+def phi_degree_lipschitz_lower(phi_ref: float, max_degree: int, n: int) -> float:
+    """
+    Prop 15.20c (degree Lipschitz): if the disagreement graph has max degree D
+    then Phi(A) >= Phi(C) - D*n.
+
+    Proof: E=A-C has row l1-norm <= 2D, hence ||E||_op <= 2D, so
+    |x^T E x| <= 2 D n and |Q_A - Q_C| <= D n.
+    For matchings D=1 this recovers gap <= n (same order as edge lip with k=n/2).
+    """
+    if max_degree < 0 or n < 2:
+        raise ValueError("bad args")
+    return float(phi_ref) - float(max_degree) * float(n)
+
+
 def random_method_upper_bound(n: int) -> float:
     """
     Crude union-bound upper bound: for random A, with positive probability
