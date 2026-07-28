@@ -186,3 +186,42 @@ def test_prop_15_51_in_solution():
     chunk = sol[idx : idx + 3500]
     assert "OPEN" in chunk
     assert "2p-1" in chunk or "2p-1" in chunk.replace(" ", "")
+
+
+def test_prop_15_52_coordinate_sum_maxplus():
+    """|1^T y| = p+1 for every Max+ vector (Prop 15.52); drive halfspace + cache."""
+    import sys
+
+    import numpy as np
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from minmax_quadratic import halfspace_boolean_vector, paley_conference_prime_power
+
+    for p in (3, 5, 7):
+        h = halfspace_boolean_vector(p)
+        assert abs(abs(h.sum()) - (p + 1)) < 1e-9
+        # algebraic check from Cy=py on halfspace
+        C = paley_conference_prime_power(p)
+        assert np.allclose(C @ h, p * h, atol=1e-6)
+        # C1 structure: (C1)[0]=p^2, (C1)[1:]=1
+        C1 = C @ np.ones(C.shape[0])
+        assert abs(C1[0] - p * p) < 1e-6
+        assert np.allclose(C1[1:], 1.0, atol=1e-6)
+        # identity: s = (p+1) y_inf
+        s = float(h.sum())
+        assert abs(s - (p + 1) * h[0]) < 1e-9
+
+    cache = Path("/tmp/maxplus_p5.npy")
+    if cache.is_file():
+        Mp = np.load(cache).astype(float)
+        assert np.allclose(np.abs(Mp.sum(axis=1)), 6.0, atol=1e-6)
+
+
+def test_prop_15_52_in_solution_and_moduli_doc():
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.52" in sol
+    assert "OPEN" in sol[sol.index("15.52") : sol.index("15.52") + 2500]
+    assert (ROOT / "evidence" / "E1_GMIN_MODULI.md").is_file()
+    text = (ROOT / "evidence" / "E1_GMIN_MODULI.md").read_text()
+    assert "nullity" in text.lower() or "Nullity" in text
+    assert "OPEN" in text

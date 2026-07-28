@@ -1569,7 +1569,17 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 5. **Max+ types (certified).** At \(p=5\), \(\mathrm{Max}_{+}\) is distance-homogeneous (constant Hamming distance distribution from every vector). At \(p=7\), at least two distance types occur (so \(\mathrm{Max}_{+}\) is not a single \(\mathrm{Aut}\)-orbit). Affine+\(\mathrm{PGL}\) orbit of the halfspace vector has size \(60\) of \(260\) at \(p=5\) — character sums on that orbit alone do **not** compute full-Max+ \(m_4\).
 
-6. **Residual (OPEN).** Prove \(\min a(e')\ge1/(2p-1)\) (equivalently \(g_{\min}\ge T(p)\), or the stronger \(g_{\min}\ge L(p)\)) for all primes \(p\ge5\). Preferred routes: character-sum / BM algebra on the min CR class; residual \(z=y-\mu\) with the pointwise identity \(z_r^2+2\mu_rz_r=1-\mu_r^2\) beyond Fréchet; Loewner calculus with a sharp entrywise bound. **Do not** reopen F15 (plain Fréchet) or incomplete Aut-orbits as full Max+. Deep non-tight residual independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+6. **Residual (OPEN).** Prove \(\min a(e')\ge1/(2p-1)\) (equivalently \(g_{\min}\ge T(p)\), or the stronger \(g_{\min}\ge L(p)\)) for all primes \(p\ge5\). Preferred routes: character-sum / BM algebra on the min CR class; residual \(z=y-\mu\) with the pointwise identity \(z_r^2+2\mu_rz_r=1-\mu_r^2\) beyond Fréchet; Loewner calculus with a sharp entrywise bound; **m4 moduli** (evec system on refined \(C\)-classes has nullity 1; pin by \(\mathrm{Tr}(G^2)\), recovers \(g_{\min}\) at \(p=5\) — `E1_GMIN_MODULI.md`). **Do not** reopen F15 (plain Fréchet) or incomplete Aut-orbits as full Max+. Deep non-tight residual independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+**Proposition 15.52 (coordinate sum of Max+; m4 moduli sketch; 2026-07-29).** Let \(C\) be the Paley conference matrix of order \(n=p^2+1\) with vertices \(\{\infty\}\cup\mathbb F_{p^2}\), and \(y\in\mathrm{Max}_{+}\).
+
+1. **Coordinate sum (proved).** \(\mathbf1^\top y=(p+1)y_\infty\). In particular \(|\mathbf1^\top y|=p+1\).
+   *Proof.* Row sums of \(C\): \((C\mathbf1)_\infty=p^2\) and \((C\mathbf1)_v=1\) for \(v\in\mathbb F_{p^2}\) (complete character sum \(\sum_{d\neq0}\chi(d)=0\)). Thus \(C\mathbf1=(p^2-1)e_\infty+\mathbf1\). From \(Cy=py\), take \(\mathbf1^\top\): \(y^\top C\mathbf1=p\,s\) with \(s=\mathbf1^\top y\), so \((p^2-1)y_\infty+s=ps\), hence \(s=(p+1)y_\infty\). \(\square\)
+   Certified \(p=5,7\): every Max+ vector has sum \(\pm(p+1)\).
+
+2. **m4 linear system (certified \(p=5,7\)).** Stratify 4-sets by \((\mathrm{CR},\kappa,\triangle\text{-type})\) (all \(C\)-invariants; \(\triangle\)-type splits formerly non-constant classes). Averaged evec identities give \((pI-M)\mathbf m=\mathbf b\) with \(M,b\) combinatorial. The system has **nullity 1**. The true Max+ moment vector lies on this line. The constraint \(\mathrm{Tr}(G^2)=E+2n_{\mathrm{wedge}}/p^2+6\sum n_A m_A^2\) is quadratic in the free parameter and **selects the true \(m_4\) at \(p=5\)** (hence \(g_{\min}=-3/65\)). Evidence: `E1_GMIN_MODULI.md`.
+
+3. **Residual (OPEN).** Prove nullity 1 and a Max+-free evaluation of \(\mathrm{Tr}(G^2)\) (or of the \(G\)-spectrum) for all primes \(p\ge5\); solve for \(g_{\min}\) and show \(g_{\min}\ge L(p)\) or \(>T(p)\). Deep non-tight residual independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
