@@ -1,12 +1,12 @@
 # Session handoff — 2026-07-29 (resume after shutdown / 1% quota cut)
 
 **Repo:** `/home/nick/quadratic-minmax-limit`  
-**HEAD at cut:** `5ace906` (Handoff after Prop 15.49; branch `main` ahead of `origin/main` by ~70)  
-**Working tree:** clean  
+**HEAD:** `6add963` (Prop 15.50 conditional means; branch `main` ahead of origin ~72)  
 **L = lim α_n:** still **OPEN** — do **not** soft-close Main Theorem  
 
-Previous evening package: Prop 15.49 + session handoff `SESSION_HANDOFF_2026-07-28.md`.  
-Unexpected shutdown mid residual attack; no new proof edge committed after `5ace906`.
+**New (Prop 15.50, proved):** Max+ conditional means given two coordinates equal the Gaussian
+frame interpolant; \(\mathbb E[y_ky_l\mid y_i,y_j]=\alpha+\delta y_iy_j\); disj avg \(G=1/(p^2-2)\).
+Fréchet on cond cov **too weak** for \(L(p)\) (**F15**). Evidence: `e1_gmin_cond_mean.json`.
 
 ---
 
