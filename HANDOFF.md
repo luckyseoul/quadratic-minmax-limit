@@ -1,7 +1,8 @@
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-07-28 (Props 15.45–15.49; L still OPEN; uniform LB candidate)  
+**Status date:** 2026-07-29 resume handoff (Props 15.45–15.49; L still OPEN; uniform LB candidate)  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
+**Resume file:** `evidence/SESSION_HANDOFF_2026-07-29.md`  
 **Problem source:** [MathOverflow 413935](https://mathoverflow.net/questions/413935) / [X prize post](https://x.com/PI010101/status/2081070728422752329)
 
 ---
@@ -12,6 +13,8 @@
 Proved sandwich: \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\).  
 Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptotic optimality of \(m_n\) vs Paley \(\Phi\) is not.
 
+**Tomorrow start (P0):** prove \(g_{\min}\ge L(p)=-(p-2)/(2p^2)\) for all primes \(p\ge5\) via character sum on min \(\|\kappa\|=1\) CR class; then deep non-tight; only then Main Theorem. See `evidence/SESSION_HANDOFF_2026-07-29.md`.
+
 **Props 15.45–15.49 (load-bearing, do not re-derive):**
 - Stars never bi-tight (wedge \(G^++G^-=0\)).
 - Bi-tight level-2 empty if \(g_{\min}>-(p-2)/(p(2p-1))\) (Prop 15.47). **Certified \(p=5,7\)**.
@@ -19,7 +22,7 @@ Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptot
 - **Prop 15.48–15.49:** edge algebra; full CR classification of \(g_{\min}\) (cert p=3,5,7 in `e1_gmin_cr_classify.json`); **uniform LB candidate** \(g_{\min}\ge-(p-2)/(2p^2)\) algebraically beats the bi-tight threshold for all odd \(p>2\) and holds at certified \(p=5,7\) (`e1_gmin_uniform_lb.json`).
 - **Residual to \(m_n\ge\Phi-2\Rightarrow L=\tfrac12\):** (1) prove \(g_{\min}\ge-(p-2)/(2p^2)\) (or any LB above the bi-tight threshold) for **all** primes \(p\ge5\); (2) deep non-tight gap-2 ND / non-undercut. **F13** intact.
 
-**g_min attack status (Prop 15.49):** \(g_{\min}=-\alpha_\star\) on constant-\(m_4\) \(|\kappa|=1\) CR classes. Values \(-\tfrac13,-\tfrac3{65},-\tfrac{109}{2863}\). Matching form \(\mathbf1_M^\top G\mathbf1_M\ge9.96>4\) at \(p=5\) (no tight matching). **Dead:** \(-3/\Phi\) general LB; 4-point LP; Chebyshev; Wick-as-LB; bare \(C\)-types; affine halfspace orbit; pure deg pigeon; min-norm \(V_+\) interpolation alone. **Need:** prove uniform LB for all \(p\ge5\) + deep residual.
+**g_min attack status (Prop 15.49):** \(g_{\min}=-\alpha_\star\) on constant-\(m_4\) \(|\kappa|=1\) CR classes. Values \(-\tfrac13,-\tfrac3{65},-\tfrac{109}{2863}\). Matching form \(\mathbf1_M^\top G\mathbf1_M\ge9.96>4\) at \(p=5\) (no tight matching). **Dead:** \(-3/\Phi\) general LB; 4-point LP; Chebyshev; Wick-as-LB; bare \(C\)-types; affine halfspace orbit; pure deg pigeon; min-norm \(V_+\) interpolation alone; Bose–Mesner alone (span too large); plain CLT residual (overestimates m4). **Need:** prove uniform LB for all \(p\ge5\) + deep residual.
 
 **New (n=10 structure):** exact optima first appear at Hamming distance **5** from Paley \(C_{10}\), and the only 5-edge undercutters are **144 perfect matchings** (of 945). Absolute gap \(\Phi-m_{10}=2\) is consistent with E(1). See `evidence/N10_STRUCTURE.md`.
 

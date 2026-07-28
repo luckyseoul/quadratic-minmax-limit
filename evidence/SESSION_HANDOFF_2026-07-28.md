@@ -1,7 +1,9 @@
 # Session handoff — 2026-07-28 (evening)
 
+> **Superseded for resume:** use `evidence/SESSION_HANDOFF_2026-07-29.md` (post-shutdown handoff).
+
 **Repo:** `/home/nick/quadratic-minmax-limit`  
-**HEAD:** `8f4de72` (Prop 15.49)  
+**HEAD:** `8f4de72` (Prop 15.49); later `5ace906` handoff commit  
 **L = lim α_n:** still **OPEN**
 
 ## Settlement chain
