@@ -1,6 +1,6 @@
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-07-28 (Props 15.45–15.47; L still OPEN; session handoff)  
+**Status date:** 2026-07-28 (Props 15.45–15.48; L still OPEN; CR attack on g_min)  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
 **Problem source:** [MathOverflow 413935](https://mathoverflow.net/questions/413935) / [X prize post](https://x.com/PI010101/status/2081070728422752329)
 
@@ -12,13 +12,14 @@
 Proved sandwich: \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\).  
 Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptotic optimality of \(m_n\) vs Paley \(\Phi\) is not.
 
-**Props 15.45–15.47 (load-bearing, do not re-derive):**
+**Props 15.45–15.48 (load-bearing, do not re-derive):**
 - Stars never bi-tight (wedge \(G^++G^-=0\)).
 - Bi-tight level-2 empty if \(g_{\min}>-(p-2)/(p(2p-1))\) (Prop 15.47 Gsum floor; \(h\ge2g_{\min}\)). **Certified \(p=5,7\)** (`e1_bitight_gsum_obstruction.json`, `e1_gmin_p7.json`). At those \(p\), Type I freeness-failure + deep-tight are dead.
 - 1-bit spike formulas (15.46). Deep two-sided at \(p=5\): small-\(k\) infeasible; large-\(k\) **spike** \(\Phi>\Phi(C)\) (not undercutters).
+- **Prop 15.48:** edge-correlation algebra (row sum, wedge, \(\kappa m_4\)) + cross-ratio structure of \(g_{\min}\) (cert p=3,5). Closed form for all \(p\ge5\) still open.
 - **Residual to \(m_n\ge\Phi-2\Rightarrow L=\tfrac12\):** (1) closed-form \(g_{\min}>-(p-2)/(p(2p-1))\) for **all** \(p\ge5\); (2) deep non-tight gap-2 undercutters (ND or always \(\Phi\ge\Phi-2\)). **F13:** never claim \(m_n\ge\Phi-2\) from 15.40 alone.
 
-**g_min attack status (do not repeat dead loops):** actual disjoint \(g_{\min}\): \(p=3\) \(-1/3\); \(p=5\) \(-3/65\); \(p=7\) \(-436/11452\approx-0.038\). Pure 4-point boolean LP too loose (\(\sim-0.6\)). Mean/variance Chebyshev 1-outlier useless. Wick \(-1/p^2\) is **not** a lower bound (actual more negative). Bare \(C\)-isomorphism 4-set types do **not** make \(G\) constant (p=5: 1/64 edgepair types constant — `e1_gmin_linear_system.json`). Affine/Frob halfspace orbit undersamples Max+ (`e1_gmin_formula.json`). Pure degree pigeon insufficient for deep 1-bit at \(k=2p\). **Need:** association scheme with **finer** edge relations (or full Max+ character sum); check hypothesis \(g_{\min}\ge-3/\Phi\). Deep non-tight still needs τ-forcing beyond pigeon. Full residual: `evidence/SESSION_HANDOFF_2026-07-28.md`, `E1_RESIDUAL.md`.
+**g_min attack status (Prop 15.48):** actual disjoint \(g_{\min}\): \(p=3\) \(-1/3\); \(p=5\) \(-3/65\); \(p=7\) \(-109/2863\approx-0.038\). **Proved:** row sum \(n/2\); wedge \(G=\pm1/p\) with per-edge wedge sum \(0\); four-point identity \(\sum_{\mathrm{3\ pairings}}G=\kappa m_4\). **Certified:** PGL cross-ratio controls \(m_4/G\) at \(p=3,5\); \(g_{\min}\) lives on CR classes with pattern \((-|m|,|m|,|m|)\). **Dead:** \(-3/\Phi\) as general LB (false at \(p=7\)); 4-point LP; Chebyshev; Wick-as-LB; bare \(C\)-types; affine halfspace orbit alone; pure deg pigeon. **Need:** character sum for \(m_4\) on the minimizing CR class for all \(p\ge5\), then Prop 15.47 applies universally; plus deep non-tight ND/spike. Evidence: `e1_gmin_closed_form_attack.json`, `SESSION_HANDOFF_2026-07-28.md`.
 
 **New (n=10 structure):** exact optima first appear at Hamming distance **5** from Paley \(C_{10}\), and the only 5-edge undercutters are **144 perfect matchings** (of 945). Absolute gap \(\Phi-m_{10}=2\) is consistent with E(1). See `evidence/N10_STRUCTURE.md`.
 

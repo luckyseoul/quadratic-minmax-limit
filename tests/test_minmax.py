@@ -2662,3 +2662,92 @@ def test_prop_15_47_bitight_gsum_obstruction():
         assert row["bitight_blocked_by_h"] is True
         # h_min >= 2 g_min (theory); equality observed at p=5,7
         assert row["h_min"] + 1e-9 >= row["two_g_min"]
+
+
+def test_prop_15_48_edge_correlation_algebra():
+    """Prop 15.48: row sum, wedge G, kappa*m4 identity; g_min certs; L still OPEN."""
+    import json
+    from pathlib import Path as P
+
+    import numpy as np
+
+    from minmax_quadratic import paley_conference_prime_power
+
+    root = P(__file__).resolve().parents[1]
+    sol = (root / "solution.md").read_text()
+    assert "15.48" in sol
+    assert "OPEN" in (root / "HANDOFF.md").read_text()
+    chunk = sol[sol.index("15.48") : sol.index("15.48") + 3500]
+    assert "OPEN" in chunk
+
+    # Live algebra at p=5 when Max+ cache present
+    cache = P("/tmp/maxplus_p5.npy")
+    if not cache.is_file():
+        # Fall back to durable evidence written by the closed-form attack
+        att = root / "evidence" / "e1_gmin_closed_form_attack.json"
+        assert att.is_file()
+        data = json.loads(att.read_text())
+        assert data["p5"]["g_min_gt_threshold"] is True
+        assert data["p7"]["g_min_gt_threshold"] is True
+        assert data["settlement"].startswith("L remains OPEN")
+        return
+
+    p = 5
+    C = paley_conference_prime_power(p)
+    n = C.shape[0]
+    Y = np.load(cache).astype(float)
+    M = len(Y)
+    edges = [(i, j) for i in range(n) for j in range(i + 1, n)]
+    F = np.stack([C[i, j] * Y[:, i] * Y[:, j] for i, j in edges], axis=1)
+    G = F.T @ F / M
+
+    # Row sum = n/2
+    assert np.allclose(G.sum(1), n / 2)
+
+    # Wedge G = ±1/p; sum of wedges per edge = 0
+    i0, j0 = edges[0]
+    wedge_sum = 0.0
+    wedge_vals = []
+    for b, (k, l) in enumerate(edges):
+        if b == 0:
+            continue
+        if len({i0, j0, k, l}) == 3:
+            wedge_sum += G[0, b]
+            wedge_vals.append(round(float(G[0, b]), 10))
+    assert abs(wedge_sum) < 1e-9
+    assert set(wedge_vals) == {round(1 / p, 10), round(-1 / p, 10)}
+
+    # Four-point identity on a few random 4-sets
+    rng = np.random.default_rng(0)
+    edge_ix = {e: a for a, e in enumerate(edges)}
+    for _ in range(40):
+        pts = rng.choice(n, size=4, replace=False)
+        i, j, k, l = map(int, pts)
+        pairings = [((i, j), (k, l)), ((i, k), (j, l)), ((i, l), (j, k))]
+        kappa = sum(C[a, b] * C[c, d] for (a, b), (c, d) in pairings)
+        m4 = float(np.mean(Y[:, i] * Y[:, j] * Y[:, k] * Y[:, l]))
+        sumG = 0.0
+        for e1, e2 in pairings:
+            e1s = tuple(sorted(e1))
+            e2s = tuple(sorted(e2))
+            sumG += G[edge_ix[e1s], edge_ix[e2s]]
+        assert abs(sumG - kappa * m4) < 1e-9
+
+    # g_min > bi-tight threshold at p=5
+    gmin = min(
+        G[a, b]
+        for a, (i, j) in enumerate(edges)
+        for b in range(a + 1, len(edges))
+        if len({i, j, *edges[b]}) == 4
+    )
+    thresh = -(p - 2) / (p * (2 * p - 1))
+    assert gmin > thresh
+    assert abs(gmin + 3 / 65) < 1e-12
+
+    att = root / "evidence" / "e1_gmin_closed_form_attack.json"
+    assert att.is_file()
+    data = json.loads(att.read_text())
+    assert data["p5"]["g_min_gt_threshold"] is True
+    assert data["p7"]["g_min_gt_threshold"] is True
+    assert data["hypotheses"]["g_min_ge_minus_3_over_Phi"]["p7"] is False
+    assert "OPEN" in data["settlement"]

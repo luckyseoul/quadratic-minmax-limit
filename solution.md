@@ -1458,6 +1458,28 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 6. **Consequence for Type I (proved at \(p=5,7\); conditional for general \(p\ge5\)).** By Prop 15.44, Type I freeness-failure reduces to bi-tight or \(\Phi\ge\Phi\). With bi-tight empty under the \(g_{\min}\) threshold of part 4, Type I no-descent is unconditional. Deep tight undercutters (bi-tight) are empty. Residual: prove \(g_{\min}>-(p-2)/(p(2p-1))\) for all \(p\ge5\); deep non-tight gap-\(2\) undercutters (ND or \(\Phi\ge\Phi-2\)). **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.48 (edge-correlation algebra and cross-ratio structure of \(g_{\min}\); 2026-07-28).** Let \(C\) be \(\rho=1\) Paley of order \(n=p^2+1\), \(\Phi=\tfrac12 np\), edges \(e=\{i,j\}\) with \(f_e(y)=C_{ij}y_iy_j\), and \(G_{ee'}=\mathbb E_{+}[f_ef_{e'}]\).
+
+1. **Row sum (proved).** \(\sum_{e'}G_{ee'}=n/2\) for every \(e\). *Proof.* \(\sum_{e'}f_{e'}=\tfrac12 y^\top Cy=\Phi\) on Max\(_{+}\), and \(\mathbb E[f_e]=\tfrac1p\), so the row sum is \(\Phi/p=n/2\). \(\square\)
+
+2. **Wedge exact values (proved).** If \(e,e'\) share a vertex then \(G_{ee'}=\pm1/p\), and for each fixed \(e\) the sum of \(G_{ee'}\) over the \(2(n-2)\) wedge partners is \(0\). *Proof.* Star identity \(\sum_{j\neq i}f_{ij}=p\) at each vertex yields \(\sum_{\mathrm{wedge\ of\ }e}f=2p-2f_e\); take \(\mathbb E[f_e\cdot(\cdot)]\). Exact values \(\pm1/p\) follow from the 2-design computation of \(E[y_ay_by_ay_c]=E[y_by_c]=C_{bc}/p\) on wedges (Prop 15.45.1 refinement). \(\square\)
+
+3. **Disjoint mean (proved).** For each \(e\), \(\sum_{e'\,:\,e\cap e'=\emptyset}G_{ee'}=n/2-1\), hence the average disjoint correlation is \((n/2-1)/(E-1-2(n-2))\) with \(E=\binom{n}{2}\). \(\square\)
+
+4. **Four-point pairing identity (proved).** For distinct vertices \(i,j,k,l\), writing \(\kappa=C_{ij}C_{kl}+C_{ik}C_{jl}+C_{il}C_{jk}\) and \(m_4=\mathbb E_{+}[y_iy_jy_ky_l]\),
+   \[
+   G_{\{ij\},\{kl\}}+G_{\{ik\},\{jl\}}+G_{\{il\},\{jk\}}
+   \;=\;
+   \kappa\,m_4.
+   \]
+   *Proof.* Each pairing contributes \(C_eC_{e'}m_4\), and the three \(C\)-products sum to \(\kappa\). \(\square\)
+
+5. **Cross-ratio structure (certified \(p=3,5\)).** Identifying vertices with \(\mathrm{PG}(1,\mathbb F_{p^2})\), the PGL-invariant of a 4-set is its cross-ratio class. At \(p=5\): on classes with constant \(m_4\) given \(\kappa\), the three pairing correlations form the multiset \(\{-3,3,3\}/65\) or \(\{\pm1\}/65\), and \(g_{\min}=-3/65\) is achieved precisely on the \(\{-3,3,3\}/65\) classes. At \(p=3\), the analogous pattern is \(\{-1,1,1\}/3\) with \(g_{\min}=-1/3\). Two residual cross-ratio classes at \(p=5\) have non-constant \(m_4\) (binary extra invariant). Evidence: `evidence/e1_gmin_closed_form_attack.json`. \(\square\)
+
+6. **Dead lower-bound attempts (do not reopen).** The bound \(g_{\min}\ge-3/\Phi\) holds with equality at \(p=5\) but **fails** at \(p=7\) (\(g_{\min}=-109/2863<-3/175\)). Pure 4-point boolean LP, Chebyshev on disjoint partners, Wick/Gaussian as a lower bound, bare \(C\)-isomorphism types, and affine halfspace orbits alone are all too weak or incomplete (cf. `E1_FAILURE_GRAPH.md` residual notes). \(\square\)
+
+7. **Residual for Prop 15.47 (OPEN).** Prove \(g_{\min}>-(p-2)/(p(2p-1))\) for all primes \(p\ge5\) by a character-sum evaluation of \(m_4\) on the cross-ratio class that realises the minimum (or another scheme formula). Certified only at \(p=5,7\). Deep non-tight gap-\(2\) control remains independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

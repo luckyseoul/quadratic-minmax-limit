@@ -69,9 +69,11 @@ From F-graph + this session + prior residual attack:
 
 ### A. Closed-form \(g_{\min}\) (preferred — closes Type I + deep-tight for all p≥5)
 
-1. **Association scheme on edge-pairs** with relations finer than \(C\)-sign 6-tuples: Johnson geometry on 2-subsets + Paley/2-graph relations (or strongly regular parameters of the conference graph, lifted to edges). At p=5 Gram spectrum of \(G\) was partially seen: eigenvalues \(n/2, 88/13, 72/13, 40/13, 0\) — extract **min disjoint class** from eigenmatrix / intersection numbers.
-2. Hypothesis to check: \(g_{\min}\ge -3/\Phi = -3/(p n/2)\)? At p=5 equality \(-3/65\); at p=7 check against \(-436/11452\). If true and \(-3/\Phi > -(p-2)/(p(2p-1))\) for all \(p\ge5\), Prop 15.47 applies universally.
-3. Full character sum over **all** Max+ (not halfspace orbit): use known 2-design \(\mathbb E[yy^\top]=I+C/p\) + higher design if any; or enumerative formula from AG(2,p) boolean evecs structure (counts: 12, 260, 11452 at p=3,5,7).
+**New (Prop 15.48):** row sum / wedge / \(\sum_{\mathrm{pairings}}G=\kappa m_4\) proved; PGL **cross-ratio** controls \(G\) at p=3,5; \(g_{\min}\) sits on CR classes with multiset \((-|m|,|m|,|m|)\). Spectrum of \(G\) at p=5: \(n/2,88/13,72/13,40/13,0\). **\(-3/\Phi\) is NOT a general LB** (fails p=7).
+
+1. **Character sum for \(m_4\) on the minimizing cross-ratio class** (kappa=±1) under full Max+ / PGL(2,p²) — this is the primary remaining formula edge.
+2. Association scheme eigenmatrix extraction of the min disjoint class (secondary).
+3. Do **not** retry: \(-3/\Phi\), 4-point LP, Chebyshev, Wick-as-LB, affine halfspace alone.
 
 ### B. Deep non-tight gap-2 (needed even after g_min)
 

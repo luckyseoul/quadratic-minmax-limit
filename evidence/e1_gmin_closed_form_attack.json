@@ -1,0 +1,69 @@
+{
+  "p5": {
+    "g_min": -0.046153846153846156,
+    "g_min_frac": "-3/65",
+    "threshold": -0.06666666666666667,
+    "g_min_gt_threshold": true,
+    "row_sum": 13.0,
+    "wedge_G": [
+      0.2,
+      -0.2
+    ],
+    "Phi": 65.0,
+    "disj_G_values": [
+      "-1/65",
+      "-3/65",
+      "1/5",
+      "1/65",
+      "21/65",
+      "3/65",
+      "9/65"
+    ],
+    "n_disj_pairs_oriented": 89700,
+    "sumG_eq_kappa_m4_max_err": 0.0,
+    "G_spectrum_multiplicities": {
+      "0": 259,
+      "40/13": 26,
+      "72/13": 26,
+      "88/13": 13,
+      "13": 1
+    }
+  },
+  "hypotheses": {
+    "g_min_ge_minus_3_over_Phi": {
+      "p5": true,
+      "p7": false,
+      "note": "equality only at p=5; not a general LB"
+    },
+    "g_min_gt_bitight_threshold_certified": {
+      "p5": true,
+      "p7": true
+    }
+  },
+  "p3": {
+    "g_min": -0.3333333333333333,
+    "g_min_frac": "-1/3",
+    "threshold": -0.06666666666666667,
+    "g_min_gt_threshold": false
+  },
+  "p7": {
+    "g_min": -0.03807195249738037,
+    "threshold": -0.054945054945054944,
+    "g_min_gt_threshold": true,
+    "g_min_frac": "-109/2863"
+  },
+  "cross_ratio_p5": {
+    "note": "For CR in {5,6}: m4 constant given kappa; G multiset always (-3,3,3)/65 so g_min=-3/65. CR=8: (\u00b11)/65. CR=2,13: m4 not constant (binary extra invariant).",
+    "g_min_achieved_on_CR": [
+      5,
+      6
+    ],
+    "pattern_at_gmin": [
+      "-3/65",
+      "3/65",
+      "3/65"
+    ]
+  },
+  "status": "Identities proved/certified. g_min > bi-tight thresh at p=5,7. Closed form for general p still OPEN; -3/Phi fails at p=7. Promising: PGL(2) cross-ratio classes control m4/G; character sum on CR class with kappa=\u00b11.",
+  "settlement": "L remains OPEN; do not soft-close Main Theorem"
+}
