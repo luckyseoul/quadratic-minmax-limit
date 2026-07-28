@@ -34,11 +34,20 @@ The sum-of-disj-\(G\) constraint is already in the system (\(s_{\mathrm{null}}=0
 
 **\(p=7\):** needs full (not sampled) transitions for a stable quadratic; not yet closed-form.
 
+## Spectral check of \(\mathrm{Tr}(G^2)\) at \(p=5\)
+
+Nonzero spectrum of \(G\): \(n/2\) (×1), \(88/13\) (×\(d\)), \(72/13\) (×\(2d\)), \(40/13\) (×\(2d\)) with \(d=13\).
+\[
+\mathrm{Tr}(G^2)=\Bigl(\tfrac{n}2\Bigr)^2+\sum_j m_j\lambda_j^2=1808.3846\ldots
+\]
+matches direct Gram computation. A general-\(p\) eigenvalue formula would close the pin.
+
 ## What remains for \(g_{\min}\ge L(p)\)
 
 1. Prove nullity 1 for all primes \(p\ge5\) on this refined class set.
 2. Closed form for \(\mathrm{Tr}(G^2)\) (or full \(G\)-spectrum) as a function of \(p\), **or** another \(c\)-pin independent of Max+.
-3. Solve and prove \(g_{\min}(p)\ge L(p)\) (or \(>T(p)\)).
+3. Select the correct quadratic root (PSD / max \(g_{\min}\)).
+4. Prove \(g_{\min}(p)\ge L(p)\) (or \(>T(p)\)).
 
 ## Related
 
