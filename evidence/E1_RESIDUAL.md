@@ -25,6 +25,17 @@ Routes:
 - **Spectral** (Prop 15.36): prove Max-covers have \(\lambda_{\min}(B)=-6\) and that this forces \(\Phi(A)\ge\Phi(C)\) for \(p\ge5\).
 - **Structural**: all tested covers are two-sided, inclusion min+max; forced \(S=1\) (proved).
 
+## Shortest remaining proof edges (2026-07-28)
+
+1. **Upgrade Prop 15.40 → \(m_n\ge\Phi(C)-2\)** for all Seidel \(A\) on \(\rho=1\) orders  
+   (edge-minimal undercutters already have gap \(\le2\); need no deeper far undercut).  
+   Then gap \(O(1)=o(n^{3/2})\) \(\Rightarrow\) E(1) \(\Rightarrow L=\tfrac12\) by denseness. **Do not claim without this step (F13).**
+
+2. **Or** \(N_{\mathrm{flip}}\ge1\) for every Max-cover PM at all \(p\ge5\) (Prop 15.39 pattern)  
+   + path-cycle / \(k_\star=O(n^{3/2})\).
+
+3. **Or** \(k_\star=O(n^{3/2})\) directly.
+
 ## What would finish \(L=\tfrac12\)
 
 Matching non-undercut for \(p\ge5\) **plus** one of:
@@ -32,6 +43,8 @@ Matching non-undercut for \(p\ge5\) **plus** one of:
 - \(k_\star=O(n^{3/2})\) (Prop 15.20d / Max-Lipschitz),
 
 together with \(p=3\) gap \(O(1)\) and denseness.
+
+**New levers:** Prop 15.38 (only \(\Delta=1\) undercuts at n=10 k=5); Prop 15.40 (edge-minimal gap \(\le2\)).
 
 ## Census at \(p=5\) (not a proof)
 
