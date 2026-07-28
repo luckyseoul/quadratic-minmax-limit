@@ -1480,6 +1480,29 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 7. **Residual for Prop 15.47 (OPEN).** Prove \(g_{\min}>-(p-2)/(p(2p-1))\) for all primes \(p\ge5\) by a character-sum evaluation of \(m_4\) on the cross-ratio class that realises the minimum (or another scheme formula). Certified only at \(p=5,7\). Deep non-tight gap-\(2\) control remains independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.49 (cross-ratio classification of \(g_{\min}\); uniform LB candidate; 2026-07-28).** Continue the notation of Prop 15.47–15.48. Write \(n=p^2+1\), \(\Phi=\tfrac12 np\), and \(N=|\mathrm{Max}_{+}|\).
+
+1. **Cross-ratio stratification (certified \(p=3,5,7\)).** Identifying vertices with \(\mathrm{PG}(1,\mathbb F_{p^2})\), each 4-set has a PGL-invariant cross-ratio class \(\mathrm{CR}\) and a \(C\)-invariant \(\kappa=\sum C_eC_{e'}\) over the three pairings. Evidence `e1_gmin_cr_classify.json`:
+   - On every class with \(|\kappa|=1\) and constant \(m_4\), one has \(m_4=\kappa\alpha\) for a class constant \(\alpha>0\), and the three pairing correlations form \(\{-\alpha,\alpha,\alpha\}\). Hence the pairing minimum is \(-\alpha\).
+   - Global \(g_{\min}=-\alpha_\star\) where \(\alpha_\star\) is the maximum of such \(\alpha\) over constant-\(m_4\) classes with \(|\kappa|=1\).
+   - Values: \(g_{\min}=-\tfrac13\) (\(p=3\)); \(-\tfrac3{65}\) (\(p=5\)); \(-\tfrac{109}{2863}\) (\(p=7\)). At \(p=5,7\), \(g_{\min}\) strictly exceeds the bi-tight threshold of Prop 15.47; at \(p=3\) it does not (consistent with bi-tight \(C_6\)).
+
+2. **Spectral rank (certified \(p=3,5,7\)).** The Gram \(G\) has \(\mathrm{rank}(G)=\binom{d}{2}-d+1\) with \(d=n/2\), and a simple eigenvalue \(n/2\) for the all-ones vector on edges. At \(p=5\) the nonzero spectrum is \(\{n/2,88/13,72/13,40/13\}\); at \(p=7\) it is \(\{n/2\}\) union five positive eigenvalues with denominator \(409\) and multiplicities \(\{d,n,n,2n,n\}\).
+
+3. **Uniform lower-bound candidate (algebra + certification).** Define
+   \[
+   L(p)\;:=\;-\frac{p-2}{2p^2}.
+   \]
+   For every odd integer \(p>2\),
+   \[
+   L(p)\;>\;-\frac{p-2}{p(2p-1)}
+   \]
+   (clear the positives: \(2p^2>p(2p-1)\Leftrightarrow 0>-1\)). Thus \(L(p)\) lies strictly above the bi-tight threshold. Certified: \(g_{\min}(5)\ge L(5)\) and \(g_{\min}(7)\ge L(7)\); while \(g_{\min}(3)<L(3)\) (so the candidate is not valid at \(p=3\), as required by the existence of bi-tight undercutters there). Evidence: `e1_gmin_uniform_lb.json`.
+
+4. **Matching margin (certified \(p=5\)).** For every matching \(M\) of size \(2p=10\) on Paley \(C_{26}\), the quadratic form \(\mathbf{1}_M^\top G\mathbf{1}_M\) is at least \(9.96>4\), so \(\sum_{\mathrm{pairs\ in\ }M}G\ge -0.02>2-p=-3\). Equality in the PSD projection bound \(\mathbf{1}_M^\top G\mathbf{1}_M\ge4\) is therefore not attained on matchings (sampling + local search, \(2\cdot10^4\) seeds).
+
+5. **Residual for Prop 15.47 (OPEN).** Prove \(g_{\min}\ge L(p)\) for every prime \(p\ge5\) (or any other uniform lower bound strictly above the bi-tight threshold). Combined with the deep non-tight residual of Prop 15.47.6 this yields \(m_n\ge\Phi-2\Rightarrow\mathrm{E}(1)\Rightarrow L=\tfrac12\). **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

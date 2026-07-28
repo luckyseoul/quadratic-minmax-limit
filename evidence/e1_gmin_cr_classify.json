@@ -1,0 +1,482 @@
+{
+  "results": [
+    {
+      "p": 3,
+      "n": 10,
+      "N_Max": 12,
+      "Phi": 15.0,
+      "g_min": -0.3333333333333333,
+      "g_min_frac": "-1/3",
+      "threshold": -0.06666666666666667,
+      "g_min_gt_threshold": false,
+      "classes": [
+        {
+          "cr": "2",
+          "kappa": -3,
+          "n_4sets": 6,
+          "m4_constant": true,
+          "m4_values": [
+            "-1"
+          ],
+          "gmin_values": [
+            "1"
+          ],
+          "gmin": 1.0
+        },
+        {
+          "cr": "2",
+          "kappa": 3,
+          "n_4sets": 24,
+          "m4_constant": false,
+          "m4_values": [
+            "-1/3",
+            "1"
+          ],
+          "gmin_values": [
+            "-1/3",
+            "1"
+          ],
+          "gmin": -0.3333333333333333
+        },
+        {
+          "cr": "3",
+          "kappa": -1,
+          "n_4sets": 108,
+          "m4_constant": true,
+          "m4_values": [
+            "-1/3"
+          ],
+          "gmin_values": [
+            "-1/3"
+          ],
+          "gmin": -0.3333333333333333
+        },
+        {
+          "cr": "3",
+          "kappa": 1,
+          "n_4sets": 72,
+          "m4_constant": true,
+          "m4_values": [
+            "1/3"
+          ],
+          "gmin_values": [
+            "-1/3"
+          ],
+          "gmin": -0.3333333333333333
+        }
+      ],
+      "note": "g_min achieved on |kappa|=1 classes with constant m4; g_min = -|m4| on those classes (pairing C-product opposes m4)."
+    },
+    {
+      "p": 5,
+      "n": 26,
+      "N_Max": 260,
+      "Phi": 65.0,
+      "g_min": -0.046153846153846156,
+      "g_min_frac": "-3/65",
+      "threshold": -0.06666666666666667,
+      "g_min_gt_threshold": true,
+      "classes": [
+        {
+          "cr": "13",
+          "kappa": -3,
+          "n_4sets": 900,
+          "m4_constant": false,
+          "m4_values": [
+            "-21/65",
+            "-1/65"
+          ],
+          "gmin_values": [
+            "1/65",
+            "21/65"
+          ],
+          "gmin": 0.015384615384615385
+        },
+        {
+          "cr": "13",
+          "kappa": 3,
+          "n_4sets": 400,
+          "m4_constant": false,
+          "m4_values": [
+            "1/65",
+            "21/65"
+          ],
+          "gmin_values": [
+            "1/65",
+            "21/65"
+          ],
+          "gmin": 0.015384615384615385
+        },
+        {
+          "cr": "2",
+          "kappa": -3,
+          "n_4sets": 750,
+          "m4_constant": false,
+          "m4_values": [
+            "-1/5",
+            "-9/65"
+          ],
+          "gmin_values": [
+            "9/65",
+            "1/5"
+          ],
+          "gmin": 0.13846153846153847
+        },
+        {
+          "cr": "2",
+          "kappa": 3,
+          "n_4sets": 1200,
+          "m4_constant": false,
+          "m4_values": [
+            "9/65",
+            "1/5"
+          ],
+          "gmin_values": [
+            "9/65",
+            "1/5"
+          ],
+          "gmin": 0.13846153846153847
+        },
+        {
+          "cr": "5",
+          "kappa": -1,
+          "n_4sets": 2100,
+          "m4_constant": true,
+          "m4_values": [
+            "-3/65"
+          ],
+          "gmin_values": [
+            "-3/65"
+          ],
+          "gmin": -0.046153846153846156
+        },
+        {
+          "cr": "5",
+          "kappa": 1,
+          "n_4sets": 1800,
+          "m4_constant": true,
+          "m4_values": [
+            "3/65"
+          ],
+          "gmin_values": [
+            "-3/65"
+          ],
+          "gmin": -0.046153846153846156
+        },
+        {
+          "cr": "6",
+          "kappa": -1,
+          "n_4sets": 2100,
+          "m4_constant": true,
+          "m4_values": [
+            "-3/65"
+          ],
+          "gmin_values": [
+            "-3/65"
+          ],
+          "gmin": -0.046153846153846156
+        },
+        {
+          "cr": "6",
+          "kappa": 1,
+          "n_4sets": 1800,
+          "m4_constant": true,
+          "m4_values": [
+            "3/65"
+          ],
+          "gmin_values": [
+            "-3/65"
+          ],
+          "gmin": -0.046153846153846156
+        },
+        {
+          "cr": "8",
+          "kappa": -1,
+          "n_4sets": 1500,
+          "m4_constant": true,
+          "m4_values": [
+            "1/65"
+          ],
+          "gmin_values": [
+            "-1/65"
+          ],
+          "gmin": -0.015384615384615385
+        },
+        {
+          "cr": "8",
+          "kappa": 1,
+          "n_4sets": 2400,
+          "m4_constant": true,
+          "m4_values": [
+            "-1/65"
+          ],
+          "gmin_values": [
+            "-1/65"
+          ],
+          "gmin": -0.015384615384615385
+        }
+      ],
+      "note": "g_min achieved on |kappa|=1 classes with constant m4; g_min = -|m4| on those classes (pairing C-product opposes m4)."
+    },
+    {
+      "p": 7,
+      "n": 50,
+      "N_Max": 11452,
+      "Phi": 175.0,
+      "g_min": -0.03807195249738037,
+      "g_min_frac": "-109/2863",
+      "threshold": -0.054945054945054944,
+      "g_min_gt_threshold": true,
+      "classes": [
+        {
+          "cr": "10",
+          "kappa": -1,
+          "n_4sets": 17640,
+          "m4_constant": true,
+          "m4_values": [
+            "-61/2863"
+          ],
+          "gmin_values": [
+            "-61/2863"
+          ],
+          "gmin": -0.021306322039818373
+        },
+        {
+          "cr": "10",
+          "kappa": 1,
+          "n_4sets": 11760,
+          "m4_constant": true,
+          "m4_values": [
+            "61/2863"
+          ],
+          "gmin_values": [
+            "-61/2863"
+          ],
+          "gmin": -0.021306322039818373
+        },
+        {
+          "cr": "16",
+          "kappa": -1,
+          "n_4sets": 12936,
+          "m4_constant": true,
+          "m4_values": [
+            "-45/2863"
+          ],
+          "gmin_values": [
+            "-45/2863"
+          ],
+          "gmin": -0.015717778553964373
+        },
+        {
+          "cr": "16",
+          "kappa": 1,
+          "n_4sets": 16464,
+          "m4_constant": true,
+          "m4_values": [
+            "45/2863"
+          ],
+          "gmin_values": [
+            "-45/2863"
+          ],
+          "gmin": -0.015717778553964373
+        },
+        {
+          "cr": "17",
+          "kappa": -1,
+          "n_4sets": 12936,
+          "m4_constant": true,
+          "m4_values": [
+            "-45/2863"
+          ],
+          "gmin_values": [
+            "-45/2863"
+          ],
+          "gmin": -0.015717778553964373
+        },
+        {
+          "cr": "17",
+          "kappa": 1,
+          "n_4sets": 16464,
+          "m4_constant": true,
+          "m4_values": [
+            "45/2863"
+          ],
+          "gmin_values": [
+            "-45/2863"
+          ],
+          "gmin": -0.015717778553964373
+        },
+        {
+          "cr": "18",
+          "kappa": -3,
+          "n_4sets": 15288,
+          "m4_constant": false,
+          "m4_values": [
+            "-279/2863",
+            "-139/2863"
+          ],
+          "gmin_values": [
+            "139/2863",
+            "279/2863"
+          ],
+          "gmin": 0.04855047153335662
+        },
+        {
+          "cr": "18",
+          "kappa": 3,
+          "n_4sets": 14112,
+          "m4_constant": false,
+          "m4_values": [
+            "139/2863",
+            "279/2863"
+          ],
+          "gmin_values": [
+            "139/2863",
+            "279/2863"
+          ],
+          "gmin": 0.04855047153335662
+        },
+        {
+          "cr": "2",
+          "kappa": -3,
+          "n_4sets": 5292,
+          "m4_constant": false,
+          "m4_values": [
+            "-191/2863",
+            "-99/2863"
+          ],
+          "gmin_values": [
+            "99/2863",
+            "191/2863"
+          ],
+          "gmin": 0.03457911281872162
+        },
+        {
+          "cr": "2",
+          "kappa": 3,
+          "n_4sets": 9408,
+          "m4_constant": false,
+          "m4_values": [
+            "99/2863",
+            "191/2863"
+          ],
+          "gmin_values": [
+            "99/2863",
+            "191/2863"
+          ],
+          "gmin": 0.03457911281872162
+        },
+        {
+          "cr": "3",
+          "kappa": -3,
+          "n_4sets": 5096,
+          "m4_constant": false,
+          "m4_values": [
+            "-327/2863",
+            "-67/2863"
+          ],
+          "gmin_values": [
+            "67/2863",
+            "327/2863"
+          ],
+          "gmin": 0.023402025847013622
+        },
+        {
+          "cr": "3",
+          "kappa": 3,
+          "n_4sets": 4704,
+          "m4_constant": false,
+          "m4_values": [
+            "67/2863",
+            "327/2863"
+          ],
+          "gmin_values": [
+            "67/2863",
+            "327/2863"
+          ],
+          "gmin": 0.023402025847013622
+        },
+        {
+          "cr": "7",
+          "kappa": -1,
+          "n_4sets": 15288,
+          "m4_constant": true,
+          "m4_values": [
+            "-65/2863"
+          ],
+          "gmin_values": [
+            "-65/2863"
+          ],
+          "gmin": -0.022703457911281873
+        },
+        {
+          "cr": "7",
+          "kappa": 1,
+          "n_4sets": 14112,
+          "m4_constant": true,
+          "m4_values": [
+            "65/2863"
+          ],
+          "gmin_values": [
+            "-65/2863"
+          ],
+          "gmin": -0.022703457911281873
+        },
+        {
+          "cr": "8",
+          "kappa": -1,
+          "n_4sets": 15288,
+          "m4_constant": true,
+          "m4_values": [
+            "-65/2863"
+          ],
+          "gmin_values": [
+            "-65/2863"
+          ],
+          "gmin": -0.022703457911281873
+        },
+        {
+          "cr": "8",
+          "kappa": 1,
+          "n_4sets": 14112,
+          "m4_constant": true,
+          "m4_values": [
+            "65/2863"
+          ],
+          "gmin_values": [
+            "-65/2863"
+          ],
+          "gmin": -0.022703457911281873
+        },
+        {
+          "cr": "9",
+          "kappa": -1,
+          "n_4sets": 17640,
+          "m4_constant": true,
+          "m4_values": [
+            "-109/2863"
+          ],
+          "gmin_values": [
+            "-109/2863"
+          ],
+          "gmin": -0.03807195249738037
+        },
+        {
+          "cr": "9",
+          "kappa": 1,
+          "n_4sets": 11760,
+          "m4_constant": true,
+          "m4_values": [
+            "109/2863"
+          ],
+          "gmin_values": [
+            "-109/2863"
+          ],
+          "gmin": -0.03807195249738037
+        }
+      ],
+      "note": "g_min achieved on |kappa|=1 classes with constant m4; g_min = -|m4| on those classes (pairing C-product opposes m4)."
+    }
+  ],
+  "status": "CR classification complete for p=3,5,7. g_min = -alpha on constant-m4 |kappa|=1 class; p=5,7 beat bi-tight threshold; closed form of alpha for all p>=5 still open."
+}

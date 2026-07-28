@@ -1,0 +1,97 @@
+{
+  "candidate": "g_min >= -(p-2)/(2 p^2)",
+  "algebra_lb_beats_threshold_all_odd_p_ge_3": true,
+  "rows": [
+    {
+      "p": 3,
+      "threshold": -0.06666666666666667,
+      "candidate_lb": -0.05555555555555555,
+      "lb_gt_threshold": true,
+      "known_gmin": -0.3333333333333333,
+      "known_ge_lb": false,
+      "known_gt_threshold": false
+    },
+    {
+      "p": 5,
+      "threshold": -0.06666666666666667,
+      "candidate_lb": -0.06,
+      "lb_gt_threshold": true,
+      "known_gmin": -0.046153846153846156,
+      "known_ge_lb": true,
+      "known_gt_threshold": true
+    },
+    {
+      "p": 7,
+      "threshold": -0.054945054945054944,
+      "candidate_lb": -0.05102040816326531,
+      "lb_gt_threshold": true,
+      "known_gmin": -0.03807195249738037,
+      "known_ge_lb": true,
+      "known_gt_threshold": true
+    },
+    {
+      "p": 11,
+      "threshold": -0.03896103896103896,
+      "candidate_lb": -0.0371900826446281,
+      "lb_gt_threshold": true,
+      "known_gmin": null,
+      "known_ge_lb": null,
+      "known_gt_threshold": null
+    },
+    {
+      "p": 13,
+      "threshold": -0.033846153846153845,
+      "candidate_lb": -0.03254437869822485,
+      "lb_gt_threshold": true,
+      "known_gmin": null,
+      "known_ge_lb": null,
+      "known_gt_threshold": null
+    },
+    {
+      "p": 17,
+      "threshold": -0.026737967914438502,
+      "candidate_lb": -0.025951557093425604,
+      "lb_gt_threshold": true,
+      "known_gmin": null,
+      "known_ge_lb": null,
+      "known_gt_threshold": null
+    },
+    {
+      "p": 19,
+      "threshold": -0.02418207681365576,
+      "candidate_lb": -0.023545706371191136,
+      "lb_gt_threshold": true,
+      "known_gmin": null,
+      "known_ge_lb": null,
+      "known_gt_threshold": null
+    },
+    {
+      "p": 23,
+      "threshold": -0.020289855072463767,
+      "candidate_lb": -0.01984877126654064,
+      "lb_gt_threshold": true,
+      "known_gmin": null,
+      "known_ge_lb": null,
+      "known_gt_threshold": null
+    },
+    {
+      "p": 29,
+      "threshold": -0.016333938294010888,
+      "candidate_lb": -0.01605231866825208,
+      "lb_gt_threshold": true,
+      "known_gmin": null,
+      "known_ge_lb": null,
+      "known_gt_threshold": null
+    },
+    {
+      "p": 31,
+      "threshold": -0.015335801163405606,
+      "candidate_lb": -0.015088449531737774,
+      "lb_gt_threshold": true,
+      "known_gmin": null,
+      "known_ge_lb": null,
+      "known_gt_threshold": null
+    }
+  ],
+  "status": "Candidate LB beats bi-tight threshold for all odd p>2 by algebra. Holds for certified g_min at p=5,7; FAILS to be a valid LB at p=3 (as required: bi-tight exists at p=3). OPEN: prove g_min >= -(p-2)/(2p^2) for all primes p>=5."
+}
