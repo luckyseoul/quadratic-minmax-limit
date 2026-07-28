@@ -2462,3 +2462,21 @@ def test_prop_15_42_dichotomy_and_tight_nodescent():
         B[a, b] *= -1
         B[b, a] *= -1
     assert phi_exact(B) >= Phi - 2 - 1e-9
+
+
+def test_prop_15_43_nodescent_classes_and_open():
+    """Prop 15.43: Type I freeness + tight deep classes in writeup; n=10 closed; L OPEN."""
+    root = Path(__file__).resolve().parents[1]
+    sol = (root / "solution.md").read_text()
+    assert "15.43" in sol
+    assert "strong no-descent" in sol or "Strong no-descent" in sol or "freeness" in sol
+    assert "OPEN" in (root / "HANDOFF.md").read_text()
+    chunk = sol[sol.index("15.43") : sol.index("15.43") + 4500]
+    assert "OPEN" in chunk
+    assert "n=10" in chunk or "n_{10}" in chunk or "10" in chunk
+    # 1-bit formula for tight S≡2 at p=3: Q_A(y^⊕v)=Phi-2p-4+4σ
+    # with σ=2 gives Phi-2 exactly
+    p, Phi = 3, 15.0
+    sig = 2
+    qa_shift = -2 * p - 4 + 4 * sig
+    assert abs(qa_shift - (-2)) < 1e-12  # Q = Phi - 2

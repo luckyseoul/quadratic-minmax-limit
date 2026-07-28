@@ -1313,6 +1313,28 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 *Open for \(L=\tfrac12\).* Prove no-descent for the remaining gap-\(2\) undercutters (Type I with \(k\ge 2p-1\) and small \(N_1\); deep non-tight with \(k>2p\)), or prove no such undercutters exist on the \(\rho=1\) family. Then \(m_n\ge\Phi-2\Rightarrow\mathrm{E}(1)\Rightarrow L=\tfrac12\). **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.43 (no-descent for Type I freeness class and tight deep; residual isolation; 2026-07-28).** Continue the notation of Prop 15.42. Let \(B=C\oplus G\) be a gap-\(2\) undercutter (\(\Phi(B)=\Phi-2\)) and \(e\notin G\).
+
+1. **Type I with freeness \(\Rightarrow\) strong no-descent (proved).** If \(s_+(G)=1\) and \(N_1>N(p+1)/(2p)\), then some \(y\in\mathrm{Max}_{+1}\subseteq\mathrm{Max}(B)\) has \(f_e(y)=-1\), so \(Q_{B\oplus e}(y)=\Phi\) and \(\Phi(B\oplus e)\ge\Phi\). \(\square\)
+
+2. **Tight deep \(\Rightarrow\) weak no-descent (proved).** If \(S_G\equiv2\) on \(\mathrm{Max}_{+}\), then some \(y\in\mathrm{Max}_{+}\) has \(f_e(y)=-1\), so \(S_{G\cup\{e\}}(y)=1\), \(Q_{B\oplus e}(y)=\Phi-2\), and \(\Phi(B\oplus e)\ge\Phi-2\). \(\square\)
+
+3. **Equality-case isolation for Type I freeness failure (proved structure).** Suppose \(s_+=1\) and \(f_e\equiv+1\) on \(\mathrm{Max}_{+1}\) (freeness fails). Counting forces \(N_1\le N(p+1)/(2p)\). Combining the Max\(_{+}\) bounds \(Q\le\Phi-2\) on \(\mathrm{Max}_{+}\) and \(Q\le\Phi-6\) on \(\{S\ge3\}\) with \(\mathbb E[Q]=\Phi-2k/p\) forces, at counting equality \(N_1=N(p+1)/(2p)\), that \(S\in\{1,3\}\) on \(\mathrm{Max}_{+}\) and \(k=2p-1\), with \(f_e=2-S\) on \(\mathrm{Max}_{+}\). Then \(H:=G\cup\{e\}\) is a tight \(S\equiv2\) cover of size \(2p\). (A parallel boundary with \(S\in\{1,5\}\) and \(k=3p-2\) forces the affine relation \(S+2f_e=3\).) In the \(k=2p-1\) equality case, no-descent for this \(e\) reduces to \(\Phi(C\oplus H)\ge\Phi-2\) for the tight cover \(H\). \(\square\)
+
+4. **1-bit spike for tight \(S\equiv2\) when all degrees are even and \(p=3\) (proved).** Let \(H\) be tight \(S\equiv2\), \(A=C\oplus H\). For \(y\in\mathrm{Max}_{+}\) and vertex \(v\),
+   \[
+   Q_A(y^{\oplus v})=\Phi-2p-4+4\sigma_v(y),\qquad \sigma_v=\sum_{vw\in H}f_{vw}(y).
+   \]
+   Always \(\sum_v\sigma_v(y)=4\). If every degree in \(H\) is even then each \(\sigma_v\) is even; \(\sigma_v\le0\) for all \(v\) would give \(\sum\sigma\le0<4\), so some \(\sigma_v\ge2\). For \(p=3\) this yields \(Q_A(y^{\oplus v})\ge\Phi-2\). In particular every 2-regular tight cover on a support of size \(2p\) (e.g.\ undercutting \(C_6\) at \(n=10\)) has \(\Phi\ge\Phi-2\), and the Type I equality reduction of part 3 has no-descent at \(p=3\). \(\square\)
+
+5. **n=10 closure (proved).** Every edge-minimal undercutter is a matching (Type I, \(N_1=10>8\)) or a 6-cycle (tight \(S\equiv2\)). Parts 1–2 give no-descent; combined with Props 15.40–15.42 and the minimal-counterexample reduction of Prop 15.42(7), \(m_{10}=\Phi-2=13\). \(\square\)
+
+6. **Global residual (OPEN).** To get \(m_n\ge\Phi-2\) for all \(\rho=1\) orders it remains to prove no-descent for:
+   - Type I gap-2 undercutters at counting equality for general \(p\) (parts 3–4 handle \(p=3\); need \(\Phi\ge\Phi-2\) for all tight \(S\equiv2\) covers, or freeness of the \(k=3p-2\) boundary);
+   - deep non-tight gap-2 undercutters with \(s_+\ge2\), \(k>2p\).
+
+   If those hold, then \(m_n\ge\Phi-2=o(n^{3/2})\) on the dense \(\rho=1\) family, E(1) follows, and \(L=\tfrac12\) by Prop 6.2. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
