@@ -33,9 +33,14 @@ Routes:
    - **p=5 nearly closed:** bi-tight levels 2–4 infeasible; non-star size-\(p\) tight infeasible;  
      deep two-sided \(k=10,12\) infeasible; every size-\(2p\) Max+ cover has \(\max S_{-}\ge2\);  
      Type I freeness-failure + deep-tight **impossible at \(p=5\)**.  
+   - **Deep-cover census at \(p=5\):** deep two-sided (\(s_{+}\ge2,s_{-}\le-2\)) integrally
+     infeasible at \(k=10..13,15\); **feasible** at \(k=32,36,38,39,40\), but exact MITM
+     \(\Phi\in\{75,77,79,83\}>\Phi(C)=65\) (**spike, no undercut**). So Max± deep
+     conditions are not sufficient for undercut — residual is **spike-controlled**
+     deep gap-2 undercutters (if any) and their no-descent.
    - **Still open for full \(m_n\ge\Phi-2\):**  
      (i) \(g_{\min}>-1/p\) and bi-tight infeas for **all** \(p\ge5\);  
-     (ii) deep non-tight gap-2 with \(k>2p\) (at \(p=5\): \(k>12\) still open);  
+     (ii) prove every deep two-sided cover has \(\Phi\ge\Phi-2\) (spike lemma), or ND;  
      (iii) \(p=3\) already closed (\(m_{10}=\Phi-2\)).  
    Then \(m_n\ge\Phi-2\Rightarrow\mathrm{E}(1)\Rightarrow L=\tfrac12\). **F13 intact.**
 
