@@ -71,9 +71,12 @@ From F-graph + this session + prior residual attack:
 
 **New (Prop 15.48):** row sum / wedge / \(\sum_{\mathrm{pairings}}G=\kappa m_4\) proved; PGL **cross-ratio** controls \(G\) at p=3,5; \(g_{\min}\) sits on CR classes with multiset \((-|m|,|m|,|m|)\). Spectrum of \(G\) at p=5: \(n/2,88/13,72/13,40/13,0\). **\(-3/\Phi\) is NOT a general LB** (fails p=7).
 
-1. **Character sum for \(m_4\) on the minimizing cross-ratio class** (kappa=±1) under full Max+ / PGL(2,p²) — this is the primary remaining formula edge.
+1. **Character sum for \(m_4\) on the minimizing cross-ratio class** (kappa=±1) under full Max+ / PGL(2,p²) — primary remaining formula edge.
 2. Association scheme eigenmatrix extraction of the min disjoint class (secondary).
-3. Do **not** retry: \(-3/\Phi\), 4-point LP, Chebyshev, Wick-as-LB, affine halfspace alone.
+3. Deep non-tight: prove s+≥2 ⇒ Φ≥Φ for p≥5 (1-bit needs σ≥S/2+p/2; at S=2 need σ=4).
+4. Do **not** retry: \(-3/\Phi\), 4-point LP, Chebyshev, Wick-as-LB, affine/PGL halfspace orbit alone (undersamples), maxent Ising on K4, min-norm V+ interpolation alone (underestimates |m4|), star-product expansion (tautological for G_ep), CS on disj row (too weak ~−1.4).
+
+**Rank formula (certified p=3,5):** \(\mathrm{rank}(G)=\binom{d}{2}-d+1\) with \(d=n/2\) (zero-diagonal zero-row-sum sym matrices on V+). Spectrum at p=5: \(n/2, 88/13, 72/13, 40/13, 0\).
 
 ### B. Deep non-tight gap-2 (needed even after g_min)
 
