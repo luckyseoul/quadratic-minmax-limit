@@ -9,9 +9,10 @@
 
 ## 0. One-line resume (read this first)
 
-**P0 in flight:** prove \(g_{\min}\ge L(p)\) (or \(>T(p)\)) for **all primes \(p\ge5\)**.  
-**Done:** Props 15.53–15.54 — pairing; moduli nullity-1 + Tr pin at p=5; wedge formula; a-slice certs; deep cover spike certs p=5; F16/F17.  
-**Still needed:** Max+-free \(\mathrm{Tr}(G^2)\)/spectrum for general \(p\); \(g_{\min}>T\) ∀p≥5; uniform deep ND. **L OPEN.**
+**P0 in flight (best path):** prove \(\lambda_{\max}(G)=n/2\) simple for all primes \(p\ge5\) (Prop 15.55 ⇒ bi-tight / Type I residual **closes**).  
+**Alt P0:** \(g_{\min}>T(p)\) via moduli+Tr pin for all \(p\ge5\).  
+**Done:** Props 15.53–15.55; F16–F18; deep spike certs p=5.  
+**Still needed:** spectral hyp ∀p≥5 **or** gmin LB; then deep ND. **L OPEN.**
 
 ---
 

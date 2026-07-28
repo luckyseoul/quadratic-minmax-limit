@@ -42,13 +42,20 @@ Substituting \(\mathbf m(c)\) into edge-\(\mathrm{Tr}(G^2)\) → quadratic in \(
 **Certified \(p=5\):** selected root (larger \(g_{\min}\)) recovers \(g_{\min}=-3/65\).  
 **F16:** do not pin by max \(g_{\min}\) under PSD over the whole line (continuum of rank-66 PSD points; max PSD \(g_{\min}\approx-0.040\neq-3/65\)).
 
-## Spectral check at \(p=5\)
+## Spectral check / tight obstruction (Prop 15.55)
 
-Nonzero spectrum of \(G\): \(n/2\) (×1), \(88/13\) (×\(d\)), \(72/13\) (×\(2d\)), \(40/13\) (×\(2d\)), \(d=13\).
+Nonzero spectrum of \(G\):
+- \(p=3\): \(8\) (×5), \(n/2=5\) (×1) — **λ_max > n/2**
+- \(p=5\): \(n/2=13\) (×1), \(88/13\) (×d), \(72/13\) (×2d), \(40/13\) (×2d), \(d=13\)
+- \(p=7\): \(n/2=25\) (×1), then \(2160/409,2016/409,\ldots\) (mult d,2d,…)
+
+**Prop 15.55:** if λ_max(G)=n/2 is simple, no Max+-tight size-2p cover exists (bi-tight empty).  
+Certified p=5,7; open to prove for all primes p≥5. Code: `e1_gmin_tight_obstruction.py`.
+
 \[
-\mathrm{Tr}(G^2)=23509/13=1808.3846\ldots
+\mathrm{Tr}(G^2)=23509/13\ (p=5).
 \]
-A general-\(p\) eigenvalue formula would close the pin.
+A general-\(p\) eigenvalue formula would also close the Tr(G²) pin.
 
 ## What remains for \(g_{\min}\ge L(p)\)
 
