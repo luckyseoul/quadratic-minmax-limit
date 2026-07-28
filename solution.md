@@ -1388,7 +1388,9 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
    - \(\min\{\max_{\mathrm{Max}_{-}}S:S_{\mathrm{Max}_{+}}\ge2,\,|H|=10\}=2\ge0\) (epigraph MILP), so every size-\(2p\) Max\(_{+}\) cover has \(\max S_{-}\ge2\) and \(\Phi\ge\Phi(C)\).
    Evidence: `src/e1_star_bitight_obstruction.py`, `e1_deep_cover_hunt.py`, `e1_deep_k_long.py`; JSON under `evidence/e1_star_bitight_obstruction.json`, `e1_deep_cover_hunt.json`, `e1_deep_k_long.json`.
 
-7. **Consequence at \(p=5\) (proved from certs).** Type I freeness-failure and deep-tight undercutters are impossible (master lemma + bi-tight / size-\(2p\) max-\(S_{-}\) control). Residual for full \(m_{26}\ge\Phi-2\): deep non-tight gap-\(2\) with large \(k\) if any exist (even \(k\in\{14,16,18,20\}\) unresolved by MILP). For general \(p\ge7\): lift \(g_{\min}>-1/p\), bi-tight infeasibility, and deep-cover control. **Existence of \(\lim\alpha_n\) remains OPEN.**
+7. **Certified at \(p=7\).** Full Max\(_{+}\) enumeration (\(|\mathrm{Max}_{+}|=11452\), 80-worker \(2^{25}\) free-coordinate scan): \(g_{\min}\approx-0.03807>-1/7\) and \(>-1/15\), so star-force and matching level-\(2\) block hold at \(p=7\). Evidence: `src/e1_gmin_p7.py`, `evidence/e1_gmin_p7.json`.
+
+8. **Consequence (proved from certs + lemmas).** Stars never bi-tight (all \(p\)). At \(p=5\): Type I freeness-failure and deep-tight undercutters impossible. At \(p=5,7\): level-\(1\) Max\(_{+}\) tight covers are stars (via \(g_{\min}>-1/p\)). Residual for full \(m_n\ge\Phi-2\): bi-tight infeas for general \(p\); deep non-tight large-\(k\) control; closed-form \(g_{\min}>-1/p\) for all \(p\ge5\). **Existence of \(\lim\alpha_n\) remains OPEN.**
 
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[

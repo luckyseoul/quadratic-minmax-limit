@@ -12,7 +12,7 @@
 Proved sandwich: \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\).  
 Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptotic optimality of \(m_n\) vs Paley \(\Phi\) is not.
 
-**New (Prop 15.45):** stars never bi-tight (all \(p>2\)); if \(g_{\min}>-1/p\) then tight size-\(p\) Max+ covers are stars; at \(p=5\), \(g_{\min}=-3/65>-1/5\), non-star size-\(p\) tight MILP-infeasible, deep two-sided \(k=10,12\) infeasible, every size-\(2p\) Max+ cover has \(\max S_{-}\ge2\). Type I / deep-tight residual **closed at \(p=5\)**. Still need general-\(p\) lift and deep non-tight \(k>12\).
+**New (Prop 15.45):** stars never bi-tight (all \(p>2\)); if \(g_{\min}>-1/p\) then tight size-\(p\) Max+ covers are stars. Certified \(g_{\min}>-1/p\) at \(p=5\) (\(-3/65\)) and \(p=7\) (\(\approx-0.038\)). At \(p=5\): non-star size-\(p\) tight MILP-infeasible, deep two-sided \(k=10,12,15\) infeasible, every size-\(2p\) Max+ cover has \(\max S_{-}\ge2\). Type I / deep-tight residual **closed at \(p=5\)**. Still need closed-form \(g_{\min}\), bi-tight for all \(p\), deep non-tight large \(k\).
 
 **New (n=10 structure):** exact optima first appear at Hamming distance **5** from Paley \(C_{10}\), and the only 5-edge undercutters are **144 perfect matchings** (of 945). Absolute gap \(\Phi-m_{10}=2\) is consistent with E(1). See `evidence/N10_STRUCTURE.md`.
 

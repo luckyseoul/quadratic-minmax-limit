@@ -2555,3 +2555,12 @@ def test_prop_15_45_star_bitight_obstruction():
         for r in deep.get("min_max_S_minus", []):
             if r["k"] == 10 and r.get("success"):
                 assert r["min_max_S_minus"] >= 0.0
+
+    # p=7 g_min cert (full Max+ enum)
+    p7 = root / "evidence" / "e1_gmin_p7.json"
+    assert p7.is_file(), "run src/e1_gmin_p7.py"
+    g7 = json.loads(p7.read_text())
+    assert g7["n_Max_plus"] == 11452
+    assert g7["star_force_level1"] is True
+    assert g7["matching_blocked_level2"] is True
+    assert g7["gmin_disjoint"] > -1 / 7
