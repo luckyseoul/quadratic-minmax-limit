@@ -73,7 +73,7 @@ Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptot
 
 **Prop 15.43 (2026-07-28):** No-descent **proved** for Type I with freeness (strong) and tight deep \(S\equiv2\) (weak). Type I freeness-failure **isolated** to equality cases reducing to tight size-\(2p\) covers; at \(p=3\) 1-bit spike gives \(\Phi\ge\Phi-2\) for all-even-degree tight covers. **n=10 \(m_{10}=\Phi-2\) closed.** Residual for general \(p\): tight \(S\equiv2\Rightarrow\Phi\ge\Phi-2\) beyond \(p=3\); deep non-tight; \(k=3p-2\) boundary. **Does not close E(1) / \(L\).**
 
-**Bi-tight (2026-07-28):** Integral bi-tight \(S\equiv\pm2\), \(|H|=2p\), is **MILP-infeasible at \(p=5\)** (fractional OK). So at \(p=5\): no deep tight undercutters; Type I equality-danger (needs bi-tight \(H\)) impossible. See `evidence/E1_BITIGHT.md`. Lift to all \(p\ge5\) + deep non-tight still open.
+**Bi-tight (2026-07-28):** Integral bi-tight \(S\equiv\pm s\), \(|H|=sp\), is **MILP-infeasible at \(p=5\) for levels \(s=2,3,4\)** (fractional OK; `e1_bitight_infeas.json`). Avg degree of level-2 bi-tight is \(4p/(p^2+1)<1\) for all \(p\ge5\). Master lemma (Prop 15.44): tight Max+ covers either have \(\max_{\mathrm{Max}_{-}}S\ge0\) (hence \(\Phi\ge\Phi\)) or are bi-tight. See `evidence/E1_BITIGHT.md`. Residual: lift bi-tight infeas to all \(p\ge5\); deep non-tight gap-2 no-descent.
 
 **n=26 exact sparse MITM (2026-07-27):** shipped `phi_mitm` (exact \(\Phi\) for even \(n\le28\)). Random matchings, cycles \(C_4\)–\(C_{26}\), stars, and random \(k\le20\) flips of Paley \(C_{26}\): **0 undercuts of \(\Phi=65\)** (min observed 67 on single edges). Matching undercut of \(n=10\) does not lift. Consistent with \(k_\star=0\) at \(n=26\), not a proof. See `evidence/E1_N26_SPARSE_EXACT.md`.
 

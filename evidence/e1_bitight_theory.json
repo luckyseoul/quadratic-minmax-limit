@@ -1,0 +1,57 @@
+{
+  "avg_degree_table": [
+    {
+      "p": 3,
+      "n": 10,
+      "k_level2": 6,
+      "avg_degree": 1.2,
+      "avg_deg_lt_1": false
+    },
+    {
+      "p": 5,
+      "n": 26,
+      "k_level2": 10,
+      "avg_degree": 0.7692307692307693,
+      "avg_deg_lt_1": true
+    },
+    {
+      "p": 7,
+      "n": 50,
+      "k_level2": 14,
+      "avg_degree": 0.56,
+      "avg_deg_lt_1": true
+    },
+    {
+      "p": 11,
+      "n": 122,
+      "k_level2": 22,
+      "avg_degree": 0.36065573770491804,
+      "avg_deg_lt_1": true
+    },
+    {
+      "p": 13,
+      "n": 170,
+      "k_level2": 26,
+      "avg_degree": 0.3058823529411765,
+      "avg_deg_lt_1": true
+    },
+    {
+      "p": 17,
+      "n": 290,
+      "k_level2": 34,
+      "avg_degree": 0.23448275862068965,
+      "avg_deg_lt_1": true
+    },
+    {
+      "p": 19,
+      "n": 362,
+      "k_level2": 38,
+      "avg_degree": 0.20994475138121546,
+      "avg_deg_lt_1": true
+    }
+  ],
+  "p5_milp_cert_loaded": true,
+  "p5_integral_infeasible": true,
+  "lemma": "For p>=5, level-2 bi-tight has avg degree <1. At p=5, integral bi-tight is MILP-infeasible for levels 2,3,4. At p=3, avg degree 1.2 and C6 bi-tight exists.",
+  "status": "OPEN residual: uniform bi-tight infeas for all p>=5; deep non-tight ND"
+}

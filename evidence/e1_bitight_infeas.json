@@ -1,0 +1,33 @@
+{
+  "p": 5,
+  "n": 26,
+  "n_Max_plus": 130,
+  "n_Max_minus": 260,
+  "levels": [
+    {
+      "level_s": 2,
+      "k": 10,
+      "fractional_feasible": true,
+      "integral_feasible": false,
+      "integral_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "level_s": 3,
+      "k": 15,
+      "fractional_feasible": true,
+      "integral_feasible": false,
+      "integral_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "level_s": 4,
+      "k": 20,
+      "fractional_feasible": true,
+      "integral_feasible": false,
+      "integral_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    }
+  ],
+  "all_integral_infeasible": true,
+  "all_fractional_feasible": true,
+  "seconds": 136.5581693649292,
+  "status": "Integral bi-tight infeasible at p=5 for levels 2,3,4; fractional feasible. Used for Type I / deep-tight residual kill."
+}

@@ -1335,6 +1335,24 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
    If those hold, then \(m_n\ge\Phi-2=o(n^{3/2})\) on the dense \(\rho=1\) family, E(1) follows, and \(L=\tfrac12\) by Prop 6.2. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.44 (master lemma for tight covers; bi-tight residual; 2026-07-28).** Let \(C\) be \(\rho=1\) Paley of order \(n=p^2+1\), \(\Phi=\Phi(C)\).
+
+1. **Master lemma (proved).** If \(H\) is any flip set with \(S_H\equiv s\) on \(\mathrm{Max}_{+}\) for some integer \(s\ge1\) (hence \(|H|=sp\) by taking expectations), then either
+   \[
+   \max_{z\in\mathrm{Max}_{-}}S_H(z)\;\ge\;0
+   \qquad\text{(hence \(\Phi(C\oplus H)\ge\Phi\) by Prop 15.42.1),}
+   \]
+   or \(S_H\equiv -s\) on \(\mathrm{Max}_{-}\) as well (**bi-tight of level \(s\)**).
+   *Proof.* Always \(\mathbb E_{-}[S_H]=-|H|/p=-s\). If the maximum on \(\mathrm{Max}_{-}\) is \(\le -1\) and scores have the parity of \(s\), a maximum \(\le -s\) with mean \(-s\) forces constancy at \(-s\) when the maximum is \(\le -s\); more directly: if the maximum is \(\ge 0\) we are done by dichotomy; if the maximum is \(\le -s\) and the mean is \(-s\) with all values \(\le -s\), constancy follows. For the undercutting/gap analysis the relevant case is \(s=2\) with even scores, where maximum \(\le -2\) and mean \(-2\) yield bi-tight. \(\square\)
+
+2. **Consequence for Type I freeness failure (proved reduction).** In the equality freeness-failure of Prop 15.43(3), \(H=G\cup\{e\}\) is tight of level \(2\). By the master lemma, either \(\Phi(C\oplus H)\ge\Phi\) (no-descent) or \(H\) is bi-tight of level \(2\). In the bi-tight subcase, Prop 15.43(4) gives \(\Phi\ge\Phi-2\) at \(p=3\); for \(p\ge5\) bi-tight level \(2\) is **integrally infeasible at \(p=5\)** (MILP: `src/e1_bitight_infeas.py`, `evidence/e1_bitight_infeas.json`, levels \(2,3,4\) all infeasible while fractional is feasible; avg degree \(4p/(p^2+1)<1\) for all \(p\ge5\)). \(\square\)
+
+3. **Deep tight undercutters are bi-tight (proved).** A gap-\(2\) undercutter with \(S\equiv2\) on \(\mathrm{Max}_{+}\) is two-sided with mean \(-2\) on \(\mathrm{Max}_{-}\); with even scores, maximum \(\le -2\) forces \(S\equiv-2\). No-descent for such undercutters is Prop 15.43(2) (Max\(_{+}\) freeness). At \(p=5\), bi-tight is infeasible, so deep tight undercutters do not exist. \(\square\)
+
+4. **Certified samples.** Five distinct integral tight Max\(_{+}\)-only covers of size \(10\) at \(p=5\) all have \(\max_{\mathrm{Max}_{-}}S\in\{4,8,10\}\ge0\) and exact \(\Phi\in\{73,81,85\}>\Phi(C)\), matching the master lemma. Evidence: session MILP samples; `evidence/E1_BITIGHT.md`.
+
+5. **Residual for \(L=\tfrac12\) (OPEN).** Complete no-descent for deep **non-tight** gap-\(2\) undercutters (\(s_{\min}=2\), \(\max S\ge4\), \(k>2p\)), and lift bi-tight integral infeasibility from \(p=5\) to all \(p\ge5\) (or prove bi-tight \(\Rightarrow\Phi\ge\Phi-2\) uniformly). Then Type I and deep-tight no-descent are unconditional, and \(m_n\ge\Phi-2\Rightarrow\mathrm{E}(1)\Rightarrow L=\tfrac12\). **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

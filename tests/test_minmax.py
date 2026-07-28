@@ -2480,3 +2480,37 @@ def test_prop_15_43_nodescent_classes_and_open():
     sig = 2
     qa_shift = -2 * p - 4 + 4 * sig
     assert abs(qa_shift - (-2)) < 1e-12  # Q = Phi - 2
+
+
+def test_prop_15_44_master_lemma_and_bitight_cert():
+    """Prop 15.44: master lemma in writeup; bi-tight infeas cert at p=5; L OPEN."""
+    import json
+    from pathlib import Path as P
+
+    root = P(__file__).resolve().parents[1]
+    sol = (root / "solution.md").read_text()
+    assert "15.44" in sol
+    assert "Master lemma" in sol or "master lemma" in sol
+    assert "OPEN" in (root / "HANDOFF.md").read_text()
+    chunk = sol[sol.index("15.44") : sol.index("15.44") + 3500]
+    assert "OPEN" in chunk
+
+    # avg degree < 1 for p>=5 level-2 bi-tight
+    for p in (5, 7, 11, 13):
+        n = p * p + 1
+        avg = 4 * p / n
+        assert avg < 1.0, (p, avg)
+    # p=3 has avg > 1
+    assert 4 * 3 / 10 > 1.0
+
+    cert_path = root / "evidence" / "e1_bitight_infeas.json"
+    assert cert_path.is_file(), "run src/e1_bitight_infeas.py"
+    cert = json.loads(cert_path.read_text())
+    assert cert["p"] == 5
+    assert cert["all_integral_infeasible"] is True
+    assert cert["all_fractional_feasible"] is True
+    for lev in cert["levels"]:
+        assert lev["fractional_feasible"] is True
+        assert lev["integral_feasible"] is False
+
+    assert (root / "evidence" / "E1_BITIGHT.md").is_file()
