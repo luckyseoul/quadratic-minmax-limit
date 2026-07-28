@@ -135,3 +135,54 @@ def test_prop_15_50_in_solution_and_evidence():
     assert path.is_file()
     data = json.loads(path.read_text())
     assert all(c["ok"] for c in data["certs"])
+
+
+def test_prop_15_51_equiv_form_algebra():
+    """a=(1+G*p)/(p+1) converts T-threshold to 1/(2p-1) for all odd p>2."""
+    from fractions import Fraction
+
+    for p in range(3, 60):
+        if p % 2 == 0:
+            continue
+        T = Fraction(-(p - 2), p * (2 * p - 1))
+        # a at G=T
+        a_at_T = (1 + T * p) / (p + 1)
+        assert a_at_T == Fraction(1, 2 * p - 1), (p, a_at_T)
+        # a at G=L
+        L = Fraction(-(p - 2), 2 * p * p)
+        a_at_L = (1 + L * p) / (p + 1)
+        assert a_at_L == Fraction(p + 2, 2 * p * (p + 1)), (p, a_at_L)
+
+
+def test_prop_15_51_structure_evidence_and_shipped():
+    """Drive e1_gmin_structure.equiv_form_check when Max+ cache present."""
+    import sys
+
+    sys.path.insert(0, str(ROOT / "src"))
+    path = ROOT / "evidence" / "e1_gmin_structure.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    assert "OPEN" in data["status"] or "open" in data["status"].lower()
+    for row in data["results"]:
+        assert row["equiv"]["a_ge_a_T"] is True
+        assert row["loewner"]["loewner_R_ge_lmin_PW"] is True
+    # Live check p=5 if cache exists
+    cache = Path("/tmp/maxplus_p5.npy")
+    if cache.is_file():
+        import numpy as np
+
+        from e1_gmin_structure import equiv_form_check
+
+        Mp = np.load(cache).astype(float)
+        r = equiv_form_check(5, Mp)
+        assert r["a_ge_a_T"] is True
+        assert r["G_from_a_gt_T"] is True
+
+
+def test_prop_15_51_in_solution():
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.51" in sol
+    idx = sol.index("15.51")
+    chunk = sol[idx : idx + 3500]
+    assert "OPEN" in chunk
+    assert "2p-1" in chunk or "2p-1" in chunk.replace(" ", "")

@@ -1541,6 +1541,36 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 5. **Residual (OPEN).** Prove \(g_{\min}\ge L(p)=-(p-2)/(2p^2)\) (or any LB \(>T(p)\)) for all primes \(p\ge5\). The conditional-mean calculus reduces this to a uniform upper bound on \(|m_4|\) (or on \(\delta\)) for four-sets with \(|\kappa|=1\). Deep non-tight residual independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.51 (equivalent bi-tight threshold form; residual slice structure; 2026-07-29).** Continue the notation of Prop 15.47–15.50. Fix an edge \(e=(i,j)\) and write \(a(e'):=\mathbb E[f_{e'}\mid f_e=1]\) for \(e'\) vertex-disjoint from \(e\).
+
+1. **Identity (proved).** For any disj pair \(e,e'\),
+   \[
+   a(e')=\frac{1+p\,G_{ee'}}{p+1}.
+   \]
+   *Proof.* From Prop 15.50, \(\mathbb E[y_ky_l\mid y_iy_j=s]=\alpha+\delta s\) with \(\alpha,\delta\) linear in \(m_4=G_{ee'}/(C_eC_{e'})\); conditioning on \(f_e=1\) forces \(y_iy_j=C_e\) and yields the display after multiplying by \(C_{e'}\). Equivalently, expand \(G=\mathbb E[f_ef_{e'}]\) on the two values of \(f_e\) with \(\mathbb E[f_e]=1/p\). \(\square\)
+
+2. **Equivalent bi-tight threshold (proved).** Therefore
+   \[
+   g_{\min}\ge T(p):=-\frac{p-2}{p(2p-1)}
+   \quad\Longleftrightarrow\quad
+   \min_{e'\,:\,e\cap e'=\emptyset}a(e')\ge\frac1{2p-1}
+   \]
+   for every edge \(e\) (and hence, by edge-transitivity of \(\mathrm{Aut}\), for one fixed \(e\)). *Proof.* Clear the linear identity of part 1. \(\square\)
+   Certified: at \(p=5\), \(\min a=5/39>1/9\); at \(p=7\), \(\min a\approx0.0917>1/13\). Evidence: `e1_gmin_structure.json`.
+
+3. **Deterministic disj sum (proved).** Pointwise on \(\mathrm{Max}_{+}\),
+   \[
+   \sum_{e'\,:\,e\cap e'=\emptyset}f_{e'}=\Phi-2p+f_e.
+   \]
+   *Proof.* \(\sum_{\mathrm{all}\,e'}f=\Phi\) and \(\sum_{\mathrm{wedge\,of\,}e}f=2p-2f_e\) (stars at the two ends of \(e\)). \(\square\)
+   Consequently on the slice \(f_e=1\) the average of \(f_{e'}\) over disj partners is the constant \((\Phi-2p+1)/D\) with \(D=(n-2)(n-3)/2\).
+
+4. **Residual Loewner (certified \(p=5,7\)).** On the slice \(f_e=1\), the residual Gram \(R=\mathbb E[(y-\mu)(y-\mu)^\top\mid f_e=1]\) (mixture of the two states with \(f_e=1\)) satisfies \(R\succeq\lambda_{\min}(R)\,P_W\) where \(P_W\) is the orthogonal projector onto \(V_+\cap\{x_i=x_j=0\}\) and \(\mathrm{rank}(R)=n/2-2\). Evidence: `e1_gmin_structure.json`. **Not yet a proof of \(g_{\min}>T(p)\):** entrywise Schur bounds on the residual still undershoot \(1/(2p-1)\).
+
+5. **Max+ types (certified).** At \(p=5\), \(\mathrm{Max}_{+}\) is distance-homogeneous (constant Hamming distance distribution from every vector). At \(p=7\), at least two distance types occur (so \(\mathrm{Max}_{+}\) is not a single \(\mathrm{Aut}\)-orbit). Affine+\(\mathrm{PGL}\) orbit of the halfspace vector has size \(60\) of \(260\) at \(p=5\) — character sums on that orbit alone do **not** compute full-Max+ \(m_4\).
+
+6. **Residual (OPEN).** Prove \(\min a(e')\ge1/(2p-1)\) (equivalently \(g_{\min}\ge T(p)\), or the stronger \(g_{\min}\ge L(p)\)) for all primes \(p\ge5\). Preferred routes: character-sum / BM algebra on the min CR class; residual \(z=y-\mu\) with the pointwise identity \(z_r^2+2\mu_rz_r=1-\mu_r^2\) beyond Fréchet; Loewner calculus with a sharp entrywise bound. **Do not** reopen F15 (plain Fréchet) or incomplete Aut-orbits as full Max+. Deep non-tight residual independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

@@ -1,0 +1,77 @@
+{
+  "results": [
+    {
+      "equiv": {
+        "p": 5,
+        "min_E_f_given_f_eq_1": 0.1282051282051282,
+        "a_threshold_for_T": 0.1111111111111111,
+        "a_ge_a_T": true,
+        "G_from_a": -0.04615384615384617,
+        "T": -0.06666666666666667,
+        "L": -0.06,
+        "G_from_a_gt_T": true,
+        "identity": "a=(1+G*p)/(p+1); a>=1/(2p-1) <=> G>=T(p)"
+      },
+      "disj_sum": {
+        "p": 5,
+        "n_disj": 276,
+        "sum_disj_f": "Phi - 2p + f_e",
+        "avg_f_on_f_eq_1_slice": 0.2028985507246377
+      },
+      "loewner": {
+        "p": 5,
+        "lambda_min_R": 1.5384615384615379,
+        "rank_R": 11,
+        "d_minus_2": 11,
+        "loewner_R_ge_lmin_PW": true,
+        "loewner_min_eig": -2.2658843070485926e-15,
+        "trace_R": 22.66666666666666
+      },
+      "distance": {
+        "p": 5,
+        "n_Max": 260,
+        "sample_size": 20,
+        "n_distinct_distance_distributions": 1,
+        "distance_homogeneous_on_sample": true,
+        "note": "p=5: homogeneous; p=7: multiple Max+ types (not a single Aut-orbit)"
+      }
+    },
+    {
+      "equiv": {
+        "p": 7,
+        "min_E_f_given_f_eq_1": 0.09168704156479218,
+        "a_threshold_for_T": 0.07692307692307693,
+        "a_ge_a_T": true,
+        "G_from_a": -0.038071952497380365,
+        "T": -0.054945054945054944,
+        "L": -0.05102040816326531,
+        "G_from_a_gt_T": true,
+        "identity": "a=(1+G*p)/(p+1); a>=1/(2p-1) <=> G>=T(p)"
+      },
+      "disj_sum": {
+        "p": 7,
+        "n_disj": 1128,
+        "sum_disj_f": "Phi - 2p + f_e",
+        "avg_f_on_f_eq_1_slice": 0.14361702127659576
+      },
+      "loewner": {
+        "p": 7,
+        "lambda_min_R": 1.8422982885085561,
+        "rank_R": 23,
+        "d_minus_2": 23,
+        "loewner_R_ge_lmin_PW": true,
+        "loewner_min_eig": -1.080564798295754e-15,
+        "trace_R": 46.5
+      },
+      "distance": {
+        "p": 7,
+        "n_Max": 11452,
+        "sample_size": 20,
+        "n_distinct_distance_distributions": 2,
+        "distance_homogeneous_on_sample": false,
+        "note": "p=5: homogeneous; p=7: multiple Max+ types (not a single Aut-orbit)"
+      }
+    }
+  ],
+  "status": "Structure certs OK at p=5,7: equiv form a<=>T holds; residual Loewner. Max+ distance-homogeneous only at p=5 (multiple types at p=7). OPEN: prove a>=1/(2p-1) (or g_min>=L(p)) for all p>=5."
+}
