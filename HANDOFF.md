@@ -1,6 +1,6 @@
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-07-28 (Prop 15.45 star/bi-tight obstruction; L still OPEN)  
+**Status date:** 2026-07-28 (Props 15.45–15.47; L still OPEN; session handoff)  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
 **Problem source:** [MathOverflow 413935](https://mathoverflow.net/questions/413935) / [X prize post](https://x.com/PI010101/status/2081070728422752329)
 
@@ -12,7 +12,13 @@
 Proved sandwich: \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\).  
 Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptotic optimality of \(m_n\) vs Paley \(\Phi\) is not.
 
-**New (Prop 15.45–15.47):** stars never bi-tight; \(g_{\min}>-1/15\Rightarrow\) bi-tight level-2 **impossible** for all \(p\ge5\) (Gsum floor; cert \(p=5,7\) with \(h_{\min}=2g_{\min}\)). Type I freeness-failure and deep-tight **closed at \(p=5,7\)** and for any \(p\) with \(g_{\min}>-1/15\). 1-bit spike formulas (15.46). Deep two-sided at \(p=5\) spike above \(\Phi(C)\). Residual: closed-form \(g_{\min}>-1/15\) for all \(p\ge5\); deep non-tight gap-2 undercutter control.
+**Props 15.45–15.47 (load-bearing, do not re-derive):**
+- Stars never bi-tight (wedge \(G^++G^-=0\)).
+- Bi-tight level-2 empty if \(g_{\min}>-(p-2)/(p(2p-1))\) (Prop 15.47 Gsum floor; \(h\ge2g_{\min}\)). **Certified \(p=5,7\)** (`e1_bitight_gsum_obstruction.json`, `e1_gmin_p7.json`). At those \(p\), Type I freeness-failure + deep-tight are dead.
+- 1-bit spike formulas (15.46). Deep two-sided at \(p=5\): small-\(k\) infeasible; large-\(k\) **spike** \(\Phi>\Phi(C)\) (not undercutters).
+- **Residual to \(m_n\ge\Phi-2\Rightarrow L=\tfrac12\):** (1) closed-form \(g_{\min}>-(p-2)/(p(2p-1))\) for **all** \(p\ge5\); (2) deep non-tight gap-2 undercutters (ND or always \(\Phi\ge\Phi-2\)). **F13:** never claim \(m_n\ge\Phi-2\) from 15.40 alone.
+
+**g_min attack status (do not repeat dead loops):** actual disjoint \(g_{\min}\): \(p=3\) \(-1/3\); \(p=5\) \(-3/65\); \(p=7\) \(-436/11452\approx-0.038\). Pure 4-point boolean LP too loose (\(\sim-0.6\)). Mean/variance Chebyshev 1-outlier useless. Wick \(-1/p^2\) is **not** a lower bound (actual more negative). Need association-scheme / character-sum formula for disjoint-pair \(G\), or a different deep-ND proof.
 
 **New (n=10 structure):** exact optima first appear at Hamming distance **5** from Paley \(C_{10}\), and the only 5-edge undercutters are **144 perfect matchings** (of 945). Absolute gap \(\Phi-m_{10}=2\) is consistent with E(1). See `evidence/N10_STRUCTURE.md`.
 

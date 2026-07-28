@@ -46,7 +46,8 @@ Routes:
      \(p\ge5\) (Gsum floor \(h\ge 2g_{\min}\)). Certified at \(p=5,7\). Type I freeness-failure
      and deep-tight vanish under this hypothesis.
    - **Still open for full \(m_n\ge\Phi-2\):**  
-     (i) closed-form \(g_{\min}>-1/15\) (or \(>-1/p\)) for **all** \(p\ge5\);  
+     (i) closed-form \(g_{\min}>-(p-2)/(p(2p-1))\) for **all** \(p\ge5\) (cert only \(p=5,7\);  
+         4-point LP / Chebyshev / Wick-as-LB are **dead** — see `SESSION_HANDOFF_2026-07-28.md`);  
      (ii) deep non-tight gap-2 undercutters: ND or \(\Phi\ge\Phi-2\) always (spike);  
      (iii) \(p=3\) already closed.  
    Then \(m_n\ge\Phi-2\Rightarrow\mathrm{E}(1)\Rightarrow L=\tfrac12\). **F13 intact.**
