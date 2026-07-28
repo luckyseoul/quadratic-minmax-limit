@@ -36,10 +36,28 @@ So \(m_n<\Phi-2\) can only come from deep two-sided matrices.
 - 360 C6 undercutters: tight \(S\equiv2\), add-1 \(\Phi\ge15\)
 - \(m_{10}=13=\Phi-2\)
 
+## Size-minimal reduction (strategy)
+
+Order edges so a size-minimal undercutter \(F_{\min}\) is a prefix of any target \(F\).
+First-hit is then \(F_{\min}\). If every size-minimal undercutter has no-descent
+(Type I freeness or tight \(S\equiv2\)), extensions cannot reach \(\Phi\le\Phi-4\).
+
+At \(n=10\): \(k_{\min}=5=2p-1\) (matchings only; C6 has \(k=6\)); freeness holds
+(\(N_1=10>8\)).
+
+## Equality-case structure (partial)
+
+Type I with \(k=2p-1\) and counting equality forces \(F\cup\{e^*\}=H\) with
+\(S_H\equiv2\) on Max+ (tight size-\(2p\) cover) and \(S_F\in\{1,3\}\).
+At \(n=10\), undercutting \(H=C_6\) are edge-minimal so \(H\setminus\{e\}\) does **not**
+undercut — equality freeze cannot produce a Type I undercutter that way from an
+undercutting \(H\). Full exclusion of equality freeze for all gap-2 Type I still open.
+
 ## Still open
 
-- Type I gap-2 with \(k\ge 2p-1\) and \(N_1\) at the counting threshold
+- Type I gap-2 with \(k\ge 2p-1\) and \(N_1\) at the counting threshold (equality freeze)
 - Deep non-tight gap-2 with \(k>2p\)
+- Whether \(k_{\min}\le 2p\) always / size-minimal always freeness-eligible
 - General \(p\ge5\) Max-cover matching non-undercut
 - \(k_\star\) / path-cycle / E(1) / existence of \(L\)
 
