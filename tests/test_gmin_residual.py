@@ -400,3 +400,48 @@ def test_prop_15_54_deep_spike_refresh():
         found = [c for c in data["p5_covers"] if c.get("found")]
         if found:
             assert data.get("all_found_covers_meet_spike_and_Phi_ge_Phi_m2") is True
+
+
+def test_prop_15_55_tight_obstruction_algebra():
+    """All-ones mass identity: (n/2)/E*(2p)^2 = 4 for n=p^2+1."""
+    for p in (3, 5, 7, 11, 13):
+        n = p * p + 1
+        E = n * (n - 1) // 2
+        val = (n / 2) * (2 * p) ** 2 / E
+        assert abs(val - 4.0) < 1e-12, (p, val)
+
+
+def test_prop_15_55_lambda_max_certified():
+    """Drive shipped tight-obstruction analyzer: λ_max=n/2 simple iff p≥5 in {3,5,7}."""
+    import sys
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_tight_obstruction import analyze
+
+    r3 = analyze(3)
+    assert r3["row_sum_is_n_over_2"]
+    assert r3["allones_quad_is_4"]
+    assert not r3["n_over_2_is_simple_max"]
+    assert r3["lambda_max"] > r3["n_over_2"]
+
+    for p in (5, 7):
+        r = analyze(p)
+        assert r["row_sum_is_n_over_2"]
+        assert r["allones_quad_is_4"]
+        assert r["n_over_2_is_simple_max"]
+        assert r["tight_size_2p_impossible_if_simple_max"]
+        assert abs(r["lambda_max"] - r["n_over_2"]) < 1e-8
+
+
+def test_prop_15_55_in_solution_and_evidence():
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.55" in sol
+    chunk = sol[sol.index("15.55") : sol.index("15.55") + 3500]
+    assert "OPEN" in chunk
+    assert "lambda" in chunk.lower() or "λ" in chunk or "n/2" in chunk
+    path = ROOT / "evidence" / "e1_gmin_tight_obstruction.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    assert "OPEN" in data["status"]
+    assert data["results"][1]["p"] == 5
+    assert data["results"][1]["n_over_2_is_simple_max"] is True

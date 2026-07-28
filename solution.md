@@ -1635,6 +1635,24 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 6. **Residual (OPEN).** Same as Prop 15.53.7: Max+-free \(\mathrm{Tr}(G^2)\) / spectrum for general \(p\), hence \(g_{\min}>T(p)\) for all primes \(p\ge5\); deep non-tight ND. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.55 (tight size-\(2p\) obstruction from \(\lambda_{\max}(G)=n/2\); 2026-07-30).** Let \(G=\mathbb E_{+}[ff^\top]\) on the edge space of Paley \(C\) of order \(n=p^2+1\).
+
+1. **Row sum (proved).** \(G\mathbf1=(n/2)\mathbf1\). *Proof.* \(\sum_e f_e=\Phi=pn/2\) and \(\mathbb E[f_e]=1/p\), so each row sums to \(\Phi/p=n/2\). \(\square\)
+
+2. **All-ones mass of a size-\(2p\) indicator (proved).** For any \(0\)-\(1\) vector \(v\) with \(\sum v_e=2p\),
+   \[
+   v^\top\Bigl(\tfrac n2\cdot\frac{\mathbf1\mathbf1^\top}{E}\Bigr)v=4,
+   \]
+   where \(E=\binom{n}{2}\). *Proof.* Direct: \(\tfrac n2\cdot(2p)^2/E=4p^2/(n-1)=4p^2/p^2=4\). \(\square\)
+
+3. **Tight cover forces \(G_\perp\)-isotropy (proved).** If \(H\) is Max\(_{+}\)-tight of level \(2\) (\(|H|=2p\), \(S_H\equiv2\) on \(\mathrm{Max}_{+}\)), then \(v:=\mathbf1_H\) satisfies \(v^\top Gv=\mathbb E[S_H^2]=4\). Writing \(G=\tfrac n2 P_{\mathbf1}+G_\perp\) with \(P_{\mathbf1}=\mathbf1\mathbf1^\top/E\), part 2 yields \(v^\top G_\perp v=0\).
+
+4. **Obstruction when \(\lambda_{\max}(G)=n/2\) is simple (proved).** Assume \(G\succeq0\) (true: \(G=\mathbb E[ff^\top]\)) and \(\lambda_{\max}(G)=n/2\) with multiplicity one. Then \(G_\perp\succeq0\) and \(\ker G_\perp=\mathrm{span}\{\mathbf1\}\). From part 3, \(v^\top G_\perp v=0\Rightarrow G_\perp v=0\Rightarrow v\parallel\mathbf1\), impossible for \(|H|=2p<E\). **Therefore no Max\(_{+}\)-tight level-\(2\) cover of size \(2p\) exists** — in particular bi-tight level \(2\) is empty, and Type I freeness-failure (Prop 15.44) cannot produce a bi-tight cover.
+
+5. **Certified spectrum.** At \(p=5,7\): \(\lambda_{\max}(G)=n/2\) is simple (next eigenvalues \(\approx6.77,5.28\ll n/2\)). At \(p=3\): \(\lambda_{\max}(G)=8>n/2=5\) (multiplicity \(5\)), so the obstruction does **not** apply — consistent with bi-tight \(C_6\). Evidence: `e1_gmin_tight_obstruction.json`.
+
+6. **Residual (OPEN).** Prove \(\lambda_{\max}(G)=n/2\) (simple) for **all primes \(p\ge5\)**. Then bi-tight / Type I residual of Path C closes without a uniform \(g_{\min}\) bound. Deep non-tight gap-\(2\) residual remains. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
