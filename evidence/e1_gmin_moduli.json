@@ -1,0 +1,106 @@
+{
+  "results": {
+    "5": {
+      "p": 5,
+      "constancy": {
+        "n_classes": 37,
+        "n_constant_m4": 37,
+        "all_constant": true,
+        "max_std": 0.0
+      },
+      "nullity": {
+        "n_var": 37,
+        "n_eq": 37,
+        "rank": 36,
+        "nullity": 1,
+        "singular_values_min3": [
+          0.8343180913330653,
+          0.21899137425646426,
+          3.835149545469237e-15
+        ],
+        "residual_part": 5.114186056134096e-15,
+        "null_residual": 3.1325107788542856e-15,
+        "c_true_fit": -0.42401592563591517,
+        "fit_err": 2.463952275398871e-15
+      },
+      "pairing_identity": {
+        "n_kappa_abs_1": 11700,
+        "max_abs_m4": 0.046153846153846156,
+        "g_min": -0.046153846153846156,
+        "identity_gmin_eq_minus_abs_m4": true,
+        "max_identity_err": 0.0,
+        "g_min_frac": "-3/65"
+      },
+      "dot_moments": {
+        "Tr_G2": 1808.3846153846155,
+        "Tr_G2_frac": "23509/13",
+        "E_dot2": 52.0,
+        "E_dot2_2design": 52.0,
+        "E_dot2_matches_2design": true,
+        "E_dot4": 9261.538461538461,
+        "identity_TrG2": " (1/4)*(E[dot^4]-2n E[dot^2]+n^2) ",
+        "TrG2_from_moments": 1808.3846153846152
+      },
+      "two_design_dot2": {
+        "p": 5,
+        "n": 26,
+        "E_dot2": 52.0,
+        "proof": "||I+C/p||_F^2 from 2-design frame; Max+ free beyond E[yy^T]"
+      },
+      "wick_comparison": {
+        "p": 5,
+        "E_dot2": 52.000000000000014,
+        "E_dot4_wick": 9360.000000000004,
+        "Tr_G2_wick": 1833.0000000000007,
+        "formula": "3||\u03a3||_F^4 + 6 Tr(\u03a3^4); \u03a3=I+C/p",
+        "note": "Certified disc E[dot^4] < Wick at p=5,7. Wick pin alone gives gmin>=T not strict >T at p=5 endpoint.",
+        "E_dot4_discrete": 9261.538461538461,
+        "discrete_E_dot4_lt_wick": true,
+        "Tr_G2_discrete": 1808.3846153846155
+      },
+      "trG2_pin": {
+        "quadratic_coeffs_a2_a1_a0": [
+          1321.1382113821155,
+          254.764433903596,
+          1678.8820073295628
+        ],
+        "trG2_target": 1808.3846153846155,
+        "discriminant": 749268.2926829053,
+        "roots": [
+          {
+            "c": 0.2311788464350353,
+            "g_min": -0.06584615384615426,
+            "g_min_frac": "-59/896",
+            "beats_T": true,
+            "ge_L": false
+          },
+          {
+            "c": -0.42401592563591084,
+            "g_min": -0.046153846153846795,
+            "g_min_frac": "-3/65",
+            "beats_T": true,
+            "ge_L": true
+          }
+        ],
+        "selected_root": {
+          "c": -0.42401592563591084,
+          "g_min": -0.046153846153846795,
+          "g_min_frac": "-3/65",
+          "beats_T": true,
+          "ge_L": true
+        },
+        "true_G_trG2": 1808.3846153846155,
+        "note": "Among the two Tr(G^2) roots, select the one with larger g_min (matches Max+ at p=5). Do not use PSD-max over the whole line (F16)."
+      },
+      "g_min": -0.046153846153846156,
+      "g_min_frac": "-3/65",
+      "L": -0.06,
+      "T": -0.06666666666666667,
+      "g_min_gt_T": true,
+      "g_min_ge_L": true,
+      "recovered_minus_3_over_65": true
+    }
+  },
+  "status": "p=5 moduli OK: constant-m4 classes, nullity 1, pairing identity g_min=-|m4| on |kappa|=1, Tr(G^2) pin recovers -3/65. E[dot^2] from 2-design proved; discrete E[dot^4]<Wick certified. Wick-only pin gives gmin>=T (endpoint equality), not strict >T. OPEN: prove E[dot^4]<Wick (or closed spectrum) for all p>=5; prove g_min>=L(p) or >T(p). Deep ND independent. L OPEN.",
+  "open": "Nullity-1 for all p>=5; Max+-free strict E[dot^4]<Wick or G-spectrum; select root; prove g_min>=L(p) or >T(p). Deep non-tight independent. L OPEN."
+}

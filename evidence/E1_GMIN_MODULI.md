@@ -1,65 +1,64 @@
-# g_min residual: m4 moduli + Tr(G²) pin (2026-07-29)
+# g_min residual: m4 moduli + Tr(G²) pin (updated 2026-07-30)
 
-**Status:** Structural path to closed form; **L still OPEN**.
+**Status:** Prop 15.53 shipped; structural path to closed form; **L still OPEN**.  
+**Code:** `src/e1_gmin_moduli.py` → `evidence/e1_gmin_moduli.json`.
 
-## Setup
+## Pairing identity (Prop 15.53.1, proved)
 
-Refine 4-sets by pure \(C\)-invariants: \((\mathrm{CR},\kappa,\mathrm{triangle\text{-}type})\).
-At \(p=5\) this yields **14** classes; at \(p=7\), **24**. On each class \(m_4\) is constant (certified vs Max+).
-
-## Evec identities
-
-Averaging \(p\,m_4=\sum_r C_{ir}m(\cdots)\) over each class produces a linear system
+On every 4-set with \(|\kappa|=1\), the three pairing \(C\)-products are a perm of \((1,1,-1)\) or \((-1,-1,1)\), so
 \[
-(pI-M)\mathbf m=\mathbf b
+g_{\min}=-\max\bigl\{|m_4(S)|:|S|=4,\,|\kappa(S)|=1\bigr\}.
 \]
-with \(M,b\) **combinatorial** (from \(C\) only). The system is consistent with true Max+ moments.
+Certified \(p=5,7\).
 
-## Nullity 1
+## Setup (refined classes)
 
-At \(p=5,7\): \(\mathrm{rank}(pI-M)=n_{\mathrm{var}}-1\). Solution space is
+Stratify 4-sets by pure \(C\)-invariants \((\mathrm{type}_6,\mathrm{ext}\text{-sum hist})\):
+- \(\mathrm{type}_6\): \(S_4\)-canonical 6-tuple of edge signs;
+- ext-sum hist: histogram of \(\sum_{v\in S}C_{rv}\) for \(r\notin S\).
+
+At \(p=5\): **37** classes, all with **constant** \(m_4\) (vs Max+).  
+Bare \(C\)-types alone are **not** constant — need the external refinement.
+
+## Evec system + nullity 1 (cert \(p=5\))
+
+Averaging \(p\,m_4=\sum_r C_{ir}m(\cdots)\) over each class → combinatorial \(A\mathbf m=\mathbf b\)
+(RHS uses only 2-design \(m_2=C/p\)). At \(p=5\): \(\mathrm{rank}=36\), **nullity 1**:
 \[
-\mathbf m=\mathbf m_{\mathrm{part}}+c\,\mathbf n,\qquad (pI-M)\mathbf n=0.
+\mathbf m=\mathbf m_{\mathrm{part}}+c\,\mathbf n.
 \]
-The sum-of-disj-\(G\) constraint is already in the system (\(s_{\mathrm{null}}=0\)).
 
 ## Pin via \(\mathrm{Tr}(G^2)\)
 
+Dot form (Max+ pairwise): \(K_{ab}=((y_a\cdot y_b)^2-n)/2\), \(\mathrm{Tr}(G^2)=\|K\|_F^2/N^2\).
 \[
-\mathrm{Tr}(G^2)=E+\frac{2n_{\mathrm{wedge}}}{p^2}+6\sum_{\mathrm{classes}}n_A m_A^2
+\mathrm{Tr}(G^2)=\tfrac14\bigl(\mathbb E[\mathrm{dot}^4]-2n\,\mathbb E[\mathrm{dot}^2]+n^2\bigr).
 \]
-(\(G_{ee'}^2=m_4^2\) on each disj pairing). Substituting \(\mathbf m(c)\) gives a **quadratic** in \(c\).
+**Proved Max+-free:** \(\mathbb E[\mathrm{dot}^2]=n+n(n-1)/p^2\) from \(\mathbb E[yy^\top]=I+C/p\).
 
-**Certified \(p=5\):** one root recovers exact \(m_4\) and \(g_{\min}=-3/65\); the other is spurious (worse \(g_{\min}\)). Correct pin at \(p=5\): \(\mathrm{Tr}(G^2)\) quadratic (or match full \(G\)-spectrum). **Do not** use “max \(g_{\min}\) under PSD” alone — see below.
+**Still Max+-dependent:** \(\mathbb E[\mathrm{dot}^4]\) (or closed \(G\)-spectrum).
 
-**\(p=7\):** needs full (not sampled) transitions for a stable quadratic; not yet closed-form. Distance-homogeneous Max+ only at \(p=5\); \(p=7\) has ≥2 Max+ types.
+Substituting \(\mathbf m(c)\) into edge-\(\mathrm{Tr}(G^2)\) → quadratic in \(c\).  
+**Certified \(p=5\):** selected root (larger \(g_{\min}\)) recovers \(g_{\min}=-3/65\).  
+**F16:** do not pin by max \(g_{\min}\) under PSD over the whole line (continuum of rank-66 PSD points; max PSD \(g_{\min}\approx-0.040\neq-3/65\)).
 
-## Spectral check of \(\mathrm{Tr}(G^2)\) at \(p=5\)
+## Spectral check at \(p=5\)
 
-Nonzero spectrum of \(G\): \(n/2\) (×1), \(88/13\) (×\(d\)), \(72/13\) (×\(2d\)), \(40/13\) (×\(2d\)) with \(d=13\).
+Nonzero spectrum of \(G\): \(n/2\) (×1), \(88/13\) (×\(d\)), \(72/13\) (×\(2d\)), \(40/13\) (×\(2d\)), \(d=13\).
 \[
-\mathrm{Tr}(G^2)=\Bigl(\tfrac{n}2\Bigr)^2+\sum_j m_j\lambda_j^2=1808.3846\ldots
+\mathrm{Tr}(G^2)=23509/13=1808.3846\ldots
 \]
-matches direct Gram computation. A general-\(p\) eigenvalue formula would close the pin.
-
-## PSD / rank scan (anti-thrash; 2026-07-29 late)
-
-On the nullity-1 line \(G(c)\) at \(p=5\):
-- \(\mathrm{rank}(G)=\binom{d}{2}-d+1=66\) holds on a **continuum** of \(c\) (with \(\lambda_{\min}\approx0\)); rank alone does **not** pin \(c\).
-- Maximizing matrix \(g_{\min}\) subject to PSD gives \(\approx-0.040\) near \(c\approx-0.42\), **strictly better** than the true Max+ value \(-3/65\approx-0.04615\) at true \(c\approx-0.291\).
-- **Conclusion:** “max \(g_{\min}\) among PSD \(G(c)\)” is **not** the true selection rule. True selection needs \(\mathrm{Tr}(G^2)\) / full spectrum (or another Max+-free identity). Do not reopen PSD-max as a pin.
-
-Also: \(\mathrm{Tr}(G^2)\) formula must count **\(2\times\)** off-diagonal contributions; missing the factor produced wrong pins until fixed.
+A general-\(p\) eigenvalue formula would close the pin.
 
 ## What remains for \(g_{\min}\ge L(p)\)
 
-1. Prove nullity 1 for all primes \(p\ge5\) on this refined class set.
-2. Closed form for \(\mathrm{Tr}(G^2)\) (or full \(G\)-spectrum) as a function of \(p\), **or** another \(c\)-pin independent of Max+.
-3. Select the correct quadratic root via spectrum / \(\mathrm{Tr}(G^2)\) (**not** PSD-max \(g_{\min}\)).
-4. Prove \(g_{\min}(p)\ge L(p)\) (or \(>T(p)\)).
+1. Prove refined classes + nullity 1 for all primes \(p\ge5\).
+2. Max+-free \(\mathbb E[\mathrm{dot}^4]\) or \(G\)-spectrum as a function of \(p\).
+3. Select correct quadratic root (larger \(g_{\min}\) among Tr(G²) roots — not PSD-max).
+4. Prove \(g_{\min}(p)\ge L(p)\) or \(>T(p)\).
 
 ## Related
 
-- Prop 15.51: \(g_{\min}\ge T\Leftrightarrow\min a\ge1/(2p-1)\).
-- F15: plain Fréchet on conditional cov is too weak.
+- Prop 15.51–15.53 in `solution.md`.
+- F15: plain Fréchet too weak; F16: PSD-max pin banned.
 - Incomplete Aut-orbits of halfspace ≠ full Max+ (60/260 at \(p=5\)).

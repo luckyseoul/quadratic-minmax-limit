@@ -1,9 +1,8 @@
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-07-30 handoff after shutdown (Props 15.45–15.52; L still OPEN; moduli attack mid-flight)  
+**Status date:** 2026-07-30 (Prop 15.53 moduli shipped; L still OPEN)  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
-**Resume file:** `evidence/SESSION_HANDOFF_2026-07-30.md` (primary); prior: `SESSION_HANDOFF_2026-07-29.md`  
-**HEAD at handoff:** `265fccc` (main ahead of origin by 78; do not push unless asked)  
+**Resume file:** `evidence/SESSION_HANDOFF_2026-07-30.md`  
 **Problem source:** [MathOverflow 413935](https://mathoverflow.net/questions/413935) / [X prize post](https://x.com/PI010101/status/2081070728422752329)
 
 ---
@@ -23,8 +22,9 @@ Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptot
 - **Prop 15.48–15.49:** edge algebra; full CR classification of \(g_{\min}\) (cert p=3,5,7 in `e1_gmin_cr_classify.json`); **uniform LB candidate** \(g_{\min}\ge-(p-2)/(2p^2)\) algebraically beats the bi-tight threshold for all odd \(p>2\) and holds at certified \(p=5,7\) (`e1_gmin_uniform_lb.json`).
 - **Prop 15.50 (proved):** Max+ conditional means given two coordinates equal the Gaussian frame interpolant \(\Sigma_{*S}\Sigma_{SS}^{-1}y_S\); conditional \(\mathbb E[y_ky_l\mid y_i,y_j]=\alpha+\delta y_iy_j\); disj average \(G=1/(p^2-2)\). Fréchet on cond cov **too weak** for \(L(p)\) (do not reopen). Evidence: `e1_gmin_cond_mean.json`.
 - **Prop 15.51 (proved equiv form):** \(a=(1+pG)/(p+1)\); \(g_{\min}\ge T(p)\Leftrightarrow\min a(e')\ge1/(2p-1)\); disj sum deterministic on slice; residual Loewner cert p=5,7. Evidence: `e1_gmin_structure.json`.
-- **Prop 15.52 (proved sum + moduli sketch):** \(\mathbf1^\top y=(p+1)y_\infty\) on Max+; m4 evec system on refined \(C\)-classes has nullity 1; \(\mathrm{Tr}(G^2)\) pin recovers \(g_{\min}\) at \(p=5\). Evidence: `E1_GMIN_MODULI.md`.
-- **Residual to \(m_n\ge\Phi-2\Rightarrow L=\tfrac12\):** (1) close moduli for all \(p\ge5\) (nullity 1 + \(\mathrm{Tr}(G^2)\)/spectrum formula) to get \(g_{\min}\ge L(p)\) or \(>T(p)\); (2) deep non-tight ND. **F13** intact.
+- **Prop 15.52 (proved sum + moduli sketch):** \(\mathbf1^\top y=(p+1)y_\infty\) on Max+; m4 evec system sketch.
+- **Prop 15.53 (proved pairing + cert moduli pin):** \(g_{\min}=-\max|m_4|\) on \(|\kappa|=1\); refined \((\mathrm{type}_6,\mathrm{ext})\) classes (37 at \(p=5\), constant \(m_4\)); nullity-1 evec system; \(\mathrm{Tr}(G^2)\) pin recovers \(-3/65\); \(\mathbb E[\mathrm{dot}^2]\) from 2-design **proved**. Code: `src/e1_gmin_moduli.py`, `e1_gmin_moduli.json`. **Still OPEN:** Max+-free \(\mathbb E[\mathrm{dot}^4]\) / \(G\)-spectrum for general \(p\); \(g_{\min}\ge L(p)\) for all \(p\ge5\).
+- **Residual to \(m_n\ge\Phi-2\Rightarrow L=\tfrac12\):** (1) close moduli for all \(p\ge5\) (nullity 1 + Max+-free \(\mathrm{Tr}(G^2)\)) to get \(g_{\min}\ge L(p)\) or \(>T(p)\); (2) deep non-tight ND. **F13/F16** intact.
 
 **g_min attack status (Prop 15.49–15.50):** \(g_{\min}=-\alpha_\star\) on constant-\(m_4\) \(|\kappa|=1\) CR classes. Values \(-\tfrac13,-\tfrac3{65},-\tfrac{109}{2863}\). Matching form \(\mathbf1_M^\top G\mathbf1_M\ge9.96>4\) at \(p=5\) (no tight matching). **Dead:** \(-3/\Phi\) general LB; 4-point LP; Chebyshev; Wick-as-LB; bare \(C\)-types; affine halfspace orbit; pure deg pigeon; min-norm \(V_+\) interpolation alone; Bose–Mesner alone (span too large); plain CLT residual (overestimates m4); **plain Fréchet on conditional cov** (Prop 15.50.4). **Need:** prove uniform LB for all \(p\ge5\) (character sum / bound \(\delta\) or \(m_4\) on min CR class) + deep residual.
 

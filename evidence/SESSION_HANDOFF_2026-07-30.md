@@ -1,18 +1,17 @@
 # Session handoff — 2026-07-30 (after unexpected shutdown / 1% quota)
 
 **Repo:** `/home/nick/quadratic-minmax-limit`  
-**HEAD:** `265fccc` — Prop 15.52 (Max+ coord sum + m4 moduli sketch)  
-**Branch:** `main` ahead of `origin/main` by **78** commits (do **not** push unless asked)  
-**Working tree:** clean at handoff write  
+**HEAD:** see `git log -1` (Prop 15.53 moduli shipped on top of 15.52)  
+**Branch:** `main` ahead of `origin/main` (do **not** push unless asked)  
 **L = lim α_n:** still **OPEN** — do **not** soft-close Main Theorem  
 
 ---
 
 ## 0. One-line resume (read this first)
 
-**P0 in flight:** prove \(g_{\min}\ge L(p)=-(p-2)/(2p^2)\) (or any LB \(>T(p)\)) for **all primes \(p\ge5\)** via refined-\(C\) m4 moduli + Max+-free pin (\(\mathrm{Tr}(G^2)\) / \(G\)-spectrum). Then P1 deep non-tight; **only if both close**, Main Theorem \(L=\tfrac12\).
-
-**Last interrupted job (not finished):** generalize nullity-1 + \(\mathrm{Tr}(G^2)\) pin beyond \(p=5\); durable proof + tests. Mid-session finding committed below: **PSD-max does not pin true \(c\)** (F16).
+**P0 in flight:** prove \(g_{\min}\ge L(p)\) (or \(>T(p)\)) for **all primes \(p\ge5\)**.  
+**Done this session:** Prop 15.53 — pairing identity (proved); durable `src/e1_gmin_moduli.py` (37 classes, nullity 1, Tr(G²) pin → \(-3/65\) at \(p=5\)); \(\mathbb E[\mathrm{dot}^2]\) from 2-design proved; F16 intact.  
+**Still needed:** Max+-free \(\mathbb E[\mathrm{dot}^4]\) or \(G\)-spectrum for general \(p\); nullity-1 for all \(p\ge5\); then \(g_{\min}\ge L(p)\).
 
 ---
 

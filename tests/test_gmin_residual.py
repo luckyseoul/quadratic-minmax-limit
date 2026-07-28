@@ -225,3 +225,119 @@ def test_prop_15_52_in_solution_and_moduli_doc():
     text = (ROOT / "evidence" / "E1_GMIN_MODULI.md").read_text()
     assert "nullity" in text.lower() or "Nullity" in text
     assert "OPEN" in text
+
+
+def test_prop_15_53_pairing_identity_and_two_design_dot2():
+    """Drive shipped moduli helpers: pairing g_min=-|m4| and E[dot^2] 2-design."""
+    import sys
+
+    import numpy as np
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_moduli import (
+        L_p,
+        T_p,
+        kappa,
+        pairing_gmin_identity,
+        two_design_dot2_identity,
+    )
+    from minmax_quadratic import paley_conference_prime_power
+
+    # Algebraic pairing pattern for |kappa|=1 on random 4-sets (C only)
+    C = paley_conference_prime_power(5)
+    n = C.shape[0]
+    seen = 0
+    for a in range(n):
+        for b in range(a + 1, n):
+            for c in range(b + 1, n):
+                for d in range(c + 1, min(c + 8, n)):
+                    pts = (a, b, c, d)
+                    kap = kappa(C, pts)
+                    if abs(kap) != 1:
+                        continue
+                    prods = [
+                        int(C[a, b] * C[c, d]),
+                        int(C[a, c] * C[b, d]),
+                        int(C[a, d] * C[b, c]),
+                    ]
+                    assert sorted(prods) in ([-1, 1, 1], [-1, -1, 1])
+                    seen += 1
+                    if seen >= 30:
+                        break
+                if seen >= 30:
+                    break
+            if seen >= 30:
+                break
+        if seen >= 30:
+            break
+    assert seen >= 10
+
+    design = two_design_dot2_identity(5)
+    assert abs(design["E_dot2"] - (26 + 26 * 25 / 25)) < 1e-12  # n + n(n-1)/p^2
+    assert L_p(5) > T_p(5)
+    assert L_p(7) > T_p(7)
+
+    cache = Path("/tmp/maxplus_p5.npy")
+    if not cache.is_file():
+        return
+    # Full identity on Max+ (shipped path)
+    from e1_gmin_moduli import load_maxplus
+
+    Mp = load_maxplus(5)
+    row = pairing_gmin_identity(C, Mp)
+    assert row["identity_gmin_eq_minus_abs_m4"]
+    assert abs(row["g_min"] + 3 / 65) < 1e-12
+    assert row["g_min"] > T_p(5)
+
+
+def test_prop_15_53_moduli_script_evidence():
+    """Evidence JSON from e1_gmin_moduli must record nullity-1 pin and OPEN residual."""
+    path = ROOT / "evidence" / "e1_gmin_moduli.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    r5 = data["results"]["5"]
+    assert r5["constancy"]["all_constant"]
+    assert r5["nullity"]["nullity"] == 1
+    assert r5["recovered_minus_3_over_65"]
+    assert r5["dot_moments"]["E_dot2_matches_2design"]
+    assert r5["trG2_pin"]["selected_root"] is not None
+    assert abs(r5["trG2_pin"]["selected_root"]["g_min"] + 3 / 65) < 1e-9
+    assert "OPEN" in data["status"]
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.53" in sol
+    assert "OPEN" in sol[sol.index("15.53") : sol.index("15.53") + 4000]
+
+
+def test_prop_15_53_moduli_pipeline_live():
+    """Live: build classes + evec system + nullity 1 at p=5 (no hardcoded m4 table)."""
+    import sys
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_moduli import (
+        build_classes,
+        build_evec_system,
+        empirical_m4,
+        m4_constancy,
+        nullity_analysis,
+    )
+    from minmax_quadratic import paley_conference_prime_power
+
+    cache = Path("/tmp/maxplus_p5.npy")
+    if not cache.is_file():
+        return
+    import numpy as np
+
+    p = 5
+    C = paley_conference_prime_power(p)
+    Mp = np.load(cache).astype(float)
+    classes, q2k = build_classes(C)
+    keys = list(classes.keys())
+    const = m4_constancy(Mp, classes)
+    assert const["all_constant"]
+    assert const["n_classes"] == 37
+    A, b = build_evec_system(C, p, classes, q2k, keys, max_quads=40)
+    m_true = empirical_m4(Mp, classes, keys)
+    null = nullity_analysis(A, b, m_true)
+    assert null["nullity"] == 1
+    assert null["fit_err"] < 1e-10
+    assert abs(null["c_true_fit"] + 0.4240159256359155) < 1e-6

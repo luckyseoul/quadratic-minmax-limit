@@ -1581,6 +1581,41 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 3. **Residual (OPEN).** Prove nullity 1 and a Max+-free evaluation of \(\mathrm{Tr}(G^2)\) (or of the \(G\)-spectrum) for all primes \(p\ge5\); solve for \(g_{\min}\) and show \(g_{\min}\ge L(p)\) or \(>T(p)\). Deep non-tight residual independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.53 (pairing reduction of \(g_{\min}\); moduli pin at \(p=5\); 2-design \(\mathrm{Tr}(G^2)\) skeleton; 2026-07-30).** Continue Prop 15.52.
+
+1. **Pairing identity (proved).** For any 4-set with \(\kappa:=\sum_{\text{three pairings}}C_eC_{e'}\) satisfying \(|\kappa|=1\), the three pairing products are a permutation of \((1,1,-1)\) or \((-1,-1,1)\). Hence the three edge-pair correlations equal \(m_4\cdot(\pm1)\) in that pattern, and
+   \[
+   \min_{\text{three pairings}}G_{ee'}=-\lvert m_4\rvert.
+   \]
+   Therefore
+   \[
+   g_{\min}=-\max\bigl\{\lvert m_4(S)\rvert:S\subset V,\,|S|=4,\,|\kappa(S)|=1\bigr\}.
+   \]
+   *Proof.* Each pairing product is \(\pm1\); their sum is \(\kappa=\pm1\) forces the stated multiset. Then \(G=C_eC_{e'}m_4\) on each pairing, so the minimum is \(-\lvert m_4\rvert\). Every disjoint edge pair sits in a unique 4-set, so the global \(g_{\min}\) is the min over such 4-sets. \(\square\)
+   Certified \(p=5,7\): identity error \(<10^{-12}\); \(g_{\min}=-3/65\), \(-109/2863\). Evidence: `e1_gmin_moduli.json`.
+
+2. **Refined \(C\)-classes (certified \(p=5\)).** Stratify 4-sets by the pure \(C\)-invariant
+   \((\mathrm{type}_6,\mathrm{ext}\text{-sum histogram})\), where \(\mathrm{type}_6\) is the \(S_4\)-canonical 6-tuple of edge signs and the external histogram records \(\sum_{v\in S}C_{rv}\) for \(r\notin S\). At \(p=5\) this yields **37** classes, each with **constant** \(m_4\) on Max+. (Bare \(C\)-types alone do **not** make \(m_4\) constant — F-graph / prior notes.)
+
+3. **Nullity-1 evec system (certified \(p=5\)).** Averaging \(p\,m_4=\sum_r C_{ir}m(\cdots)\) over each class produces a combinatorial linear system \(A\mathbf m=\mathbf b\) (RHS uses only the 2-design \(m_2=C/p\)). At \(p=5\): \(\mathrm{rank}(A)=36=n_{\mathrm{var}}-1\). The true Max+ moment vector lies on the affine line \(\mathbf m=\mathbf m_{\mathrm{part}}+c\,\mathbf n\).
+
+4. **\(\mathrm{Tr}(G^2)\) pin (certified \(p=5\)).** Write \(K_{ab}=\bigl((y_a\cdot y_b)^2-n\bigr)/2\). Then the nonzero spectrum of \(G\) matches that of \(K/N\), and
+   \[
+   \mathrm{Tr}(G^2)=\frac1{N^2}\sum_{a,b}K_{ab}^2=\tfrac14\Bigl(\mathbb E[\mathrm{dot}^4]-2n\,\mathbb E[\mathrm{dot}^2]+n^2\Bigr).
+   \]
+   Substituting \(\mathbf m(c)\) into the edge form of \(\mathrm{Tr}(G^2)\) yields a quadratic in \(c\). One root recovers \(g_{\min}=-3/65\); select the root of larger \(g_{\min}\) among the two (do **not** use PSD-max over the whole line — F16). Evidence: `e1_gmin_moduli.json`, `E1_GMIN_MODULI.md`.
+
+5. **2-design evaluation of \(\mathbb E[\mathrm{dot}^2]\) (proved, Max+-free beyond the frame).** From \(\mathbb E[yy^\top]=I+C/p\),
+   \[
+   \mathbb E_{a,b}[(y_a\cdot y_b)^2]=\|I+C/p\|_F^2=n+\frac{n(n-1)}{p^2}.
+   \]
+   *Proof.* \(\sum_{a,b}(y_a\cdot y_b)^2=\sum_{i,j}(\sum_a y_{a,i}y_{a,j})^2=N^2\|I+C/p\|_F^2\). \(\square\)
+   Certified \(p=5,7\). **Still Max+-dependent:** \(\mathbb E[\mathrm{dot}^4]\) (equivalently a closed \(G\)-spectrum), which is needed to evaluate \(\mathrm{Tr}(G^2)\) without Max+ samples.
+
+6. **Wick comparison (certified \(p=5,7\); not yet a proof).** For \(\Sigma=I+C/p\), the Gaussian fourth moment is \(\mathbb E_{\mathrm{Wick}}[\mathrm{dot}^4]=3\|\Sigma\|_F^4+6\mathrm{Tr}(\Sigma^4)\). Discrete Max+ satisfies \(\mathbb E[\mathrm{dot}^4]<\mathbb E_{\mathrm{Wick}}[\mathrm{dot}^4]\) at \(p=5,7\) (boolean coordinates have smaller kurtosis than Gaussians with the same covariance). On the combinatorial moduli line at \(p=5\), the weaker constraint \(\mathrm{Tr}(G^2)\le\mathrm{Tr}_{\mathrm{Wick}}\) forces \(g_{\min}\ge T(p)\) with **endpoint equality** (float margin \(\sim10^{-15}\)) — not the strict \(g_{\min}>T(p)\) needed for Prop 15.47. A proved strict inequality \(\mathbb E[\mathrm{dot}^4]\le\mathbb E_{\mathrm{Wick}}-\delta\) (or the exact spectrum) would upgrade this to \(g_{\min}>T\). Evidence: `e1_gmin_moduli.json`.
+
+7. **Residual (OPEN).** Prove for all primes \(p\ge5\): (i) refined classes have constant \(m_4\) and the evec system has nullity 1; (ii) Max+-free strict bound \(\mathbb E[\mathrm{dot}^4]<\mathbb E_{\mathrm{Wick}}\) or a closed \(G\)-spectrum; (iii) the selected root satisfies \(g_{\min}\ge L(p)=-(p-2)/(2p^2)\) or at least \(g_{\min}>T(p)\). Deep non-tight residual independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
