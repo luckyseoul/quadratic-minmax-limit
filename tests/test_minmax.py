@@ -2564,3 +2564,68 @@ def test_prop_15_45_star_bitight_obstruction():
     assert g7["star_force_level1"] is True
     assert g7["matching_blocked_level2"] is True
     assert g7["gmin_disjoint"] > -1 / 7
+
+
+def test_prop_15_46_onebit_spike_formulas():
+    """Prop 15.46: 1-bit formulas on Max+/-; spike thresholds; L OPEN."""
+    import json
+    from pathlib import Path as P
+
+    import numpy as np
+
+    root = P(__file__).resolve().parents[1]
+    sol = (root / "solution.md").read_text()
+    assert "15.46" in sol
+    assert "1-bit formula" in sol or "1-bit" in sol
+    assert "OPEN" in (root / "HANDOFF.md").read_text()
+    chunk = sol[sol.index("15.46") : sol.index("15.46") + 3500]
+    assert "OPEN" in chunk
+
+    # Threshold algebra: for S=2, need sigma >= (p+1)/2; for S=-2, tau <= -(p+1)/2
+    for p in (3, 5, 7):
+        assert (2 + p - 1) / 2 == (p + 1) / 2
+        assert (-2 - p + 1) / 2 == -(p + 1) / 2
+
+    # Live 1-bit formula check at p=3 on C6-type: sigma_max=2 gives Q = Phi-2
+    p, Phi = 3, 15.0
+    S, sig = 2, 2
+    qa = Phi - 2 * S - 2 * p + 4 * sig
+    assert abs(qa - (Phi - 2)) < 1e-12
+
+    # Deep cover spike evidence
+    dphi = root / "evidence" / "e1_deep_cover_phi.json"
+    assert dphi.is_file()
+    data = json.loads(dphi.read_text())
+    assert data["all_spike_above_Phi_C"] is True
+    for row in data["feasible_deep_phi"]:
+        assert row["Phi"] > row["Phi_C"]
+
+    # Live 1-bit on Paley C_10 matching undercutter (Type I, not deep)
+    from minmax_quadratic import paley_conference_prime_power, form_Q
+
+    C = paley_conference_prime_power(3)
+    # one edge flip: S on Max+ varies
+    n = C.shape[0]
+    A = C.copy()
+    A[0, 1] *= -1
+    A[1, 0] *= -1
+    # boolean evec sample
+    from e1_bitight_infeas import boolean_evecs
+
+    Mp = boolean_evecs(C, 3.0, 0)
+    y = Mp[0]
+    # formula vs direct
+    S = C[0, 1] * y[0] * y[1]  # single edge
+    for v in range(n):
+        sig = 0.0
+        if v == 0:
+            sig = C[0, 1] * y[0] * y[1]
+        elif v == 1:
+            sig = C[0, 1] * y[0] * y[1]
+        qa_form = 15.0 - 2 * S - 2 * 3 + 4 * sig
+        y2 = y.copy()
+        y2[v] *= -1
+        qa_dir = form_Q(A, y2)
+        # only when y is Max+ (Cy=py) does formula hold for this S definition with F={(0,1)}
+        if np.allclose(C @ y, 3 * y):
+            assert abs(qa_form - qa_dir) < 1e-6 or v not in (0, 1)

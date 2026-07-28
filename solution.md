@@ -1392,6 +1392,37 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 8. **Consequence (proved from certs + lemmas).** Stars never bi-tight (all \(p\)). At \(p=5\): Type I freeness-failure and deep-tight undercutters impossible. At \(p=5,7\): level-\(1\) Max\(_{+}\) tight covers are stars (via \(g_{\min}>-1/p\)). Residual for full \(m_n\ge\Phi-2\): bi-tight infeas for general \(p\); deep non-tight large-\(k\) control; closed-form \(g_{\min}>-1/p\) for all \(p\ge5\). **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.46 (1-bit spike formulas and deep/bi-tight spike criterion; 2026-07-28).** Let \(C\) be \(\rho=1\) Paley of order \(n=p^2+1\), \(\Phi=\Phi(C)\), \(A=C\oplus F\). For \(y\in\{\pm1\}^n\) write \(S=S_F(y)\) and \(\sigma_v(y)=\sum_{vw\in F}C_{vw}y_vy_w\). Always \(\sum_v\sigma_v=2S\).
+
+1. **1-bit formula on Max\(_{+}\) (proved).** If \(Cy=py\), then
+   \[
+   Q_A(y^{\oplus v})
+   =
+   \Phi-2S-2p+4\sigma_v(y).
+   \]
+   Hence if \(\max_v\sigma_v(y)\ge(S+p-1)/2\), then \(Q_A(y^{\oplus v})\ge\Phi-2\), so \(\Phi(A)\ge\Phi-2\).
+   *Proof.* \((Ay)_v=(Cy)_v-2\sum_{vw\in F}C_{vw}y_w=py_v-2\sum C_{vw}y_w\), so \(y_v(Ay)_v=p-2\sigma_v\). The standard 1-bit identity \(Q(x^{\oplus v})=Q(x)-2x_v(Ax)_v\) yields the claim. Threshold: \(\Phi-2S-2p+4\sigma\ge\Phi-2\Leftrightarrow\sigma\ge(S+p-1)/2\). \(\square\)
+
+2. **1-bit formula on Max\(_{-}\) (proved).** If \(Cz=-pz\), then
+   \[
+   Q_A(z^{\oplus v})
+   =
+   -\Phi-2S+2p+4\tau_v(z),
+   \]
+   where \(\tau_v=\sum_{vw\in F}C_{vw}z_vz_w\). Hence if \(\min_v\tau_v(z)\le(S-p+1)/2\), then \(Q_A(z^{\oplus v})\le-(\Phi-2)\), so \(\Phi(A)\ge\Phi-2\).
+   *Proof.* Symmetric to part 1 with \(Cz=-pz\). For the deep boundary \(S=-2\): threshold \(\tau\le-(p+1)/2\). \(\square\)
+
+3. **Bi-tight even-degree spike at \(p=3\) (recovered).** If \(H\) is bi-tight of level \(2\) and every degree in \(H\) is even, then each \(\sigma_v\) is even. With \(\sum\sigma=4>0\), some \(\sigma_v\ge2=(p+1)/2\) at \(p=3\). Part 1 yields \(\Phi(A)\ge\Phi-2\). (This is Prop 15.43.4; undercutting \(C_6\) attains equality \(\sigma_{\max}=2\), \(\Phi=\Phi-2\).) \(\square\)
+
+4. **Sufficient spike criterion (proved).** If either
+   - some \(y\in\mathrm{Max}_{+}\) has \(\max_v\sigma_v(y)\ge(S_F(y)+p-1)/2\), or
+   - some \(z\in\mathrm{Max}_{-}\) has \(\min_v\tau_v(z)\le(S_F(z)-p+1)/2\),
+   then \(\Phi(A)\ge\Phi-2\). In particular, for deep two-sided covers with \(s_{-}=-2\), it suffices that some \(z\) with \(S_F(z)=-2\) has \(\min_v\tau_v\le-(p+1)/2\). \(\square\)
+
+5. **Certified at \(p=5\) (deep two-sided covers).** Every MILP-found deep two-sided cover (\(k\in\{32,36,38,40\}\)) has \(s_{-}=-2\) and some Max\(_{-}\) vector at level \(-2\) with \(\min\tau\le-4\le-3=-(p+1)/2\); 1-bit yields \(|Q|\ge67\ge\Phi-2\), and exact MITM \(\Phi\in\{75,77,79,83\}>\Phi(C)\). Small-\(k\) deep two-sided (\(k\le13,15\)) integrally infeasible. Evidence: `evidence/e1_deep_cover_phi.json`, `e1_deep_sweep_p5.json`, session 1-bit checks. \(\square\)
+
+6. **Residual for \(L=\tfrac12\) (OPEN).** Prove that every bi-tight level-\(2\) cover for \(p\ge5\) satisfies the spike criterion of part 4 (or is integrally impossible), and that every deep two-sided gap-\(2\) undercutter (\(\Phi=\Phi-2\)) either is impossible or has no-descent. Combined with Props 15.42–15.45 this yields \(m_n\ge\Phi-2\Rightarrow\mathrm{E}(1)\Rightarrow L=\tfrac12\). Closed-form \(g_{\min}>-1/p\) for all \(p\ge5\) remains open (certified \(p=5,7\)). **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

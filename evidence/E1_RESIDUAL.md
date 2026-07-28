@@ -38,10 +38,15 @@ Routes:
      \(\Phi\in\{75,77,79,83\}>\Phi(C)=65\) (**spike, no undercut**). So Max± deep
      conditions are not sufficient for undercut — residual is **spike-controlled**
      deep gap-2 undercutters (if any) and their no-descent.
+   - **Prop 15.46:** 1-bit spike formulas proved; sufficient criterion
+     \(\max\sigma\ge(S+p-1)/2\) or \(\min\tau\le(S-p+1)/2\). All \(p=5\) deep covers
+     meet the Max− criterion and spike above \(\Phi(C)\). Bi-tight even-degree at \(p=3\)
+     recovers Prop 15.43.4.
    - **Still open for full \(m_n\ge\Phi-2\):**  
-     (i) \(g_{\min}>-1/p\) and bi-tight infeas for **all** \(p\ge5\);  
-     (ii) prove every deep two-sided cover has \(\Phi\ge\Phi-2\) (spike lemma), or ND;  
-     (iii) \(p=3\) already closed (\(m_{10}=\Phi-2\)).  
+     (i) bi-tight \(\Rightarrow\Phi\ge\Phi-2\) (or infeas) for **all** \(p\ge5\);  
+     (ii) every deep gap-2 *undercutter* has ND (covers that spike are harmless);  
+     (iii) closed-form \(g_{\min}>-1/p\) for all \(p\ge5\);  
+     (iv) \(p=3\) already closed.  
    Then \(m_n\ge\Phi-2\Rightarrow\mathrm{E}(1)\Rightarrow L=\tfrac12\). **F13 intact.**
 
 2. **Or** \(N_{\mathrm{flip}}\ge1\) for every Max-cover PM at all \(p\ge5\) (Prop 15.39 pattern)  
