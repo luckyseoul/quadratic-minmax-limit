@@ -341,3 +341,62 @@ def test_prop_15_53_moduli_pipeline_live():
     assert null["nullity"] == 1
     assert null["fit_err"] < 1e-10
     assert abs(null["c_true_fit"] + 0.4240159256359155) < 1e-6
+
+
+def test_prop_15_54_wedge_G_formula():
+    """Shipped wedge identity G_ee' = C_ij C_ik C_jk / p for shared-vertex edges."""
+    import sys
+
+    import numpy as np
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from minmax_quadratic import paley_conference_prime_power
+
+    cache = Path("/tmp/maxplus_p5.npy")
+    if not cache.is_file():
+        return
+    p = 5
+    C = paley_conference_prime_power(p)
+    Mp = np.load(cache).astype(float)
+    # edges (0,1) and (0,2) share vertex 0
+    i, j, k = 0, 1, 2
+    pred = float(C[i, j] * C[i, k] * C[j, k] / p)
+    g = float(
+        np.mean(
+            (C[i, j] * Mp[:, i] * Mp[:, j]) * (C[i, k] * Mp[:, i] * Mp[:, k])
+        )
+    )
+    assert abs(g - pred) < 1e-9
+    assert abs(abs(pred) - 1 / p) < 1e-12
+
+
+def test_prop_15_54_cbound_and_abound_evidence():
+    """Evidence from shipped cbound/abound scripts; solution Prop 15.54 OPEN residual."""
+    for name in ("e1_gmin_cbound.json", "e1_gmin_abound.json"):
+        path = ROOT / "evidence" / name
+        assert path.is_file(), name
+        data = json.loads(path.read_text())
+        assert "OPEN" in data.get("status", "") or "open" in data.get("status", "").lower() or "OPEN" in str(data)
+    cb = json.loads((ROOT / "evidence" / "e1_gmin_cbound.json").read_text())
+    r5 = cb["results"]["5"]
+    assert r5["recovered"]
+    assert r5["true_root_beats_T"]
+    assert abs(r5["g_min_at_c_true"] + 3 / 65) < 1e-9
+    ab = json.loads((ROOT / "evidence" / "e1_gmin_abound.json").read_text())
+    assert all(r["true_ge_aT"] for r in ab["results"])
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.54" in sol
+    assert "OPEN" in sol[sol.index("15.54") : sol.index("15.54") + 3500]
+
+
+def test_prop_15_54_deep_spike_refresh():
+    """Deep spike evidence exists and records OPEN uniform ND."""
+    path = ROOT / "evidence" / "e1_deep_spike_theory.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    assert "status" in data
+    # If covers were found this session, they should spike; else status notes missing cache
+    if data.get("p5_covers"):
+        found = [c for c in data["p5_covers"] if c.get("found")]
+        if found:
+            assert data.get("all_found_covers_meet_spike_and_Phi_ge_Phi_m2") is True

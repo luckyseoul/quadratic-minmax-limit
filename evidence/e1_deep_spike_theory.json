@@ -50,6 +50,80 @@
       "note": "Pure degree pigeon at k=2p insufficient (avg deg <1 for p>=5)"
     }
   ],
-  "p5_covers": [],
-  "status": "missing Max+/- cache; run e1_bitight / deep hunt first"
+  "p5_covers": [
+    {
+      "k": 32,
+      "s_plus": 2.0,
+      "s_minus": -2.0,
+      "Delta": 7,
+      "avg_deg": 2.4615384615384617,
+      "n_Maxm_at_sminus": 60,
+      "tau_thresh": -3.0,
+      "best_min_tau": -5.0,
+      "n_z_with_good_tau": 52,
+      "spike_criterion_met": true,
+      "best_1bit_Q": -71.0,
+      "Phi_exact": 77.0,
+      "Phi_C": 65.0,
+      "spikes_above_Phi_C": true,
+      "Phi_ge_Phi_minus_2": true,
+      "found": true
+    },
+    {
+      "k": 36,
+      "s_plus": 2.0,
+      "s_minus": -2.0,
+      "Delta": 5,
+      "avg_deg": 2.769230769230769,
+      "n_Maxm_at_sminus": 26,
+      "tau_thresh": -3.0,
+      "best_min_tau": -5.0,
+      "n_z_with_good_tau": 20,
+      "spike_criterion_met": true,
+      "best_1bit_Q": -71.0,
+      "Phi_exact": 75.0,
+      "Phi_C": 65.0,
+      "spikes_above_Phi_C": true,
+      "Phi_ge_Phi_minus_2": true,
+      "found": true
+    },
+    {
+      "k": 38,
+      "s_plus": 2.0,
+      "s_minus": -2.0,
+      "Delta": 9,
+      "avg_deg": 2.923076923076923,
+      "n_Maxm_at_sminus": 28,
+      "tau_thresh": -3.0,
+      "best_min_tau": -6.0,
+      "n_z_with_good_tau": 26,
+      "spike_criterion_met": true,
+      "best_1bit_Q": -75.0,
+      "Phi_exact": 83.0,
+      "Phi_C": 65.0,
+      "spikes_above_Phi_C": true,
+      "Phi_ge_Phi_minus_2": true,
+      "found": true
+    },
+    {
+      "k": 40,
+      "s_plus": 2.0,
+      "s_minus": -2.0,
+      "Delta": 6,
+      "avg_deg": 3.076923076923077,
+      "n_Maxm_at_sminus": 36,
+      "tau_thresh": -3.0,
+      "best_min_tau": -4.0,
+      "n_z_with_good_tau": 26,
+      "spike_criterion_met": true,
+      "best_1bit_Q": -67.0,
+      "Phi_exact": 79.0,
+      "Phi_C": 65.0,
+      "spikes_above_Phi_C": true,
+      "Phi_ge_Phi_minus_2": true,
+      "found": true
+    }
+  ],
+  "status": "p=5 deep covers: spike criterion (15.46) met; Phi > Phi(C). Uniform proof that every deep two-sided F meets 15.46 still open; need forced extreme tau on S=s_minus level or other spike.",
+  "all_found_covers_meet_spike_and_Phi_ge_Phi_m2": true
 }

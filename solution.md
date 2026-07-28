@@ -1616,6 +1616,25 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 7. **Residual (OPEN).** Prove for all primes \(p\ge5\): (i) refined classes have constant \(m_4\) and the evec system has nullity 1; (ii) Max+-free strict bound \(\mathbb E[\mathrm{dot}^4]<\mathbb E_{\mathrm{Wick}}\) or a closed \(G\)-spectrum; (iii) the selected root satisfies \(g_{\min}\ge L(p)=-(p-2)/(2p^2)\) or at least \(g_{\min}>T(p)\). Deep non-tight residual independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.54 (moduli \(c\)-pin calculus; wedge closed form; a-slice certs; 2026-07-30).** Continue Prop 15.53.
+
+1. **Wedge \(G\) (proved, combinatorial).** If edges \(e=(i,j)\) and \(e'=(i,k)\) share a vertex, then
+   \[
+   G_{ee'}=\frac{C_{ij}C_{ik}C_{jk}}{p}=\pm\frac1p.
+   \]
+   *Proof.* \(f_ef_{e'}=C_{ij}C_{ik}y_jy_k\) and \(\mathbb E[y_jy_k]=C_{jk}/p\). \(\square\)
+
+2. **Moduli line and \(g_{\min}(c)\) (certified \(p=5\)).** On the nullity-1 line \(\mathbf m=\mathbf m_{\mathrm{part}}+c\,\mathbf n\) of Prop 15.53, for every \(|\kappa|=1\) class
+   \(g_{\min}(c)=-\max_A|m_A(c)|\). The edge Gram is \(G(c)=G_{\mathrm{wedge}}+G_{\mathrm{disj}}(\mathbf m(c))\) with wedges from part 1. Then \(\mathrm{Tr}(G(c)^2)=a_0+a_1c+a_2c^2\) with combinatorial \(a_i\). Evidence: `e1_gmin_cbound.json`.
+
+3. **True \(\mathrm{Tr}(G^2)\) pin (certified \(p=5\)).** Setting \(\mathrm{Tr}(G(c)^2)=\mathrm{Tr}(G_{\mathrm{Max+}}^2)\) yields two roots; the root of larger \(g_{\min}\) recovers \(g_{\min}=-3/65>T(5),L(5)\). The Wick fourth-moment vector \(m_4=\kappa/p^2\) is **not** exactly on the evec line (residual \(\sim10^{-2}\)–\(10^{-1}\) relative). Evidence: `e1_gmin_cbound.json`.
+
+4. **Slice \(a_{\min}\) (certified \(p=5,7\)).** \(\min a=5/39>1/9\) at \(p=5\) and \(75/818>1/13\) at \(p=7\). Wick-\(a\) overestimates \(\min a\); mean-only \(C_{kl}\mu_k\mu_l\) undershoots (residual \(R\) helps). Evidence: `e1_gmin_abound.json`. **Not a uniform proof.**
+
+5. **Deep covers at \(p=5\) (certified refresh).** MILP deep two-sided covers at \(k\in\{32,36,38,40\}\) all meet the Prop 15.46 spike criterion and have \(\Phi\ge\Phi(C)\). Evidence: `e1_deep_spike_theory.json`. Uniform deep ND for all \(p\ge5\) still open.
+
+6. **Residual (OPEN).** Same as Prop 15.53.7: Max+-free \(\mathrm{Tr}(G^2)\) / spectrum for general \(p\), hence \(g_{\min}>T(p)\) for all primes \(p\ge5\); deep non-tight ND. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

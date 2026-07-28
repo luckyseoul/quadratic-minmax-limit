@@ -10,8 +10,8 @@
 ## 0. One-line resume (read this first)
 
 **P0 in flight:** prove \(g_{\min}\ge L(p)\) (or \(>T(p)\)) for **all primes \(p\ge5\)**.  
-**Done this session:** Prop 15.53 — pairing identity (proved); durable `src/e1_gmin_moduli.py` (37 classes, nullity 1, Tr(G²) pin → \(-3/65\) at \(p=5\)); \(\mathbb E[\mathrm{dot}^2]\) from 2-design proved; F16 intact.  
-**Still needed:** Max+-free \(\mathbb E[\mathrm{dot}^4]\) or \(G\)-spectrum for general \(p\); nullity-1 for all \(p\ge5\); then \(g_{\min}\ge L(p)\).
+**Done:** Props 15.53–15.54 — pairing; moduli nullity-1 + Tr pin at p=5; wedge formula; a-slice certs; deep cover spike certs p=5; F16/F17.  
+**Still needed:** Max+-free \(\mathrm{Tr}(G^2)\)/spectrum for general \(p\); \(g_{\min}>T\) ∀p≥5; uniform deep ND. **L OPEN.**
 
 ---
 

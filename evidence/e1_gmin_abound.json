@@ -1,0 +1,49 @@
+{
+  "results": [
+    {
+      "p": 5,
+      "n": 26,
+      "n_disj": 276,
+      "a_T": 0.1111111111111111,
+      "min_a_true": 0.1282051282051282,
+      "min_a_wick": 0.13333333333333333,
+      "min_a_mean_only": -0.11111111111111113,
+      "true_ge_aT": true,
+      "wick_ge_aT": true,
+      "mean_ge_aT": false,
+      "G_true_from_a": -0.04615384615384617,
+      "T": -0.06666666666666667,
+      "L": -0.06,
+      "G_gt_T": true,
+      "G_ge_L": true,
+      "state_weights": [
+        0.5,
+        0.5
+      ],
+      "note": "Wick a_min uses Gaussian 4th moments on the frame (often > true). mean-only ignores residual R; Fr\u00e9chet on R is F15 (too weak)."
+    },
+    {
+      "p": 7,
+      "n": 50,
+      "n_disj": 1128,
+      "a_T": 0.07692307692307693,
+      "min_a_true": 0.09168704156479218,
+      "min_a_wick": 0.10714285714285715,
+      "min_a_mean_only": -0.062499999999999986,
+      "true_ge_aT": true,
+      "wick_ge_aT": true,
+      "mean_ge_aT": false,
+      "G_true_from_a": -0.038071952497380365,
+      "T": -0.054945054945054944,
+      "L": -0.05102040816326531,
+      "G_gt_T": true,
+      "G_ge_L": true,
+      "state_weights": [
+        0.5,
+        0.5
+      ],
+      "note": "Wick a_min uses Gaussian 4th moments on the frame (often > true). mean-only ignores residual R; Fr\u00e9chet on R is F15 (too weak)."
+    }
+  ],
+  "status": "a_min certs OK at p=5,7 (true > a_T). Wick/mean-only do not furnish a uniform LB for all p (mean-only undershoots residual). OPEN: prove a_min>=1/(2p-1) for all primes p>=5."
+}

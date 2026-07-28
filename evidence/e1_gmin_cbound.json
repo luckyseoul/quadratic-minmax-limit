@@ -1,0 +1,53 @@
+{
+  "results": {
+    "5": {
+      "p": 5,
+      "constancy": {
+        "n_classes": 37,
+        "n_constant_m4": 37,
+        "all_constant": true,
+        "max_std": 0.0
+      },
+      "nullity": 1,
+      "c_true": -0.4240159256359152,
+      "g_min_at_c_true": -0.04615384615384634,
+      "g_min_frac_target": -0.046153846153846156,
+      "recovered": true,
+      "Tr_G2_true": 1808.3846153846155,
+      "Tr_G2_wick": 1833.0000000000007,
+      "tr_quadratic": {
+        "a0": 1678.8820073295458,
+        "a1": 254.76443390359248,
+        "a2": 1321.1382113821132
+      },
+      "roots_true_Tr": [
+        -0.4240159256359292,
+        0.23117884643505604
+      ],
+      "g_min_at_true_roots": [
+        -0.04615384615384592,
+        -0.06584615384615443
+      ],
+      "selected_g_min_true_Tr": -0.04615384615384592,
+      "roots_wick_Tr": [
+        -0.4513157078055519,
+        0.2584786286046788
+      ],
+      "g_min_at_wick_roots": [
+        -0.045333333333333115,
+        -0.06666666666666912
+      ],
+      "selected_g_min_wick_Tr": -0.045333333333333115,
+      "wick_root_beats_T": true,
+      "true_root_beats_T": true,
+      "true_root_ge_L": true,
+      "T": -0.06666666666666667,
+      "L": -0.06,
+      "m_wick_line_err": 0.39078084109039923,
+      "c_wick_fit": -0.0853580587485169,
+      "n_kappa_abs_1_classes": 19,
+      "note": "Wick m4=kappa/p^2 is near but not on the evec moduli line (err=3.908e-01). True Tr pin recovers -3/65. Wick Tr pin selected root may hit ~T (not strict)."
+    }
+  },
+  "status": "p=5: moduli c pin by Tr(G^2) recovers g_min=-3/65 > T,L. Wick fourth-moment vector not exactly on evec line. OPEN: Max+-free evaluation of Tr(G^2) (or E[dot^4]) for all p>=5; nullity-1 + pin for general p; then g_min>=L(p)."
+}
