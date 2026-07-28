@@ -1245,6 +1245,31 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 *Remark (does **not** yet give \(m_n\ge\Phi-2\)).* The lemma bounds edge-minimal undercutters only. A global lower bound \(m_n\ge\Phi(C)-2\) would require showing no deeper undercut exists at larger Hamming distance (or that a closest undercutter realises \(m_n\)). That step is **open**. If proved, E(1) follows (gap \(O(1)=o(n^{3/2})\)) and \(L=\tfrac12\) by denseness on the \(\rho=1\) family. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.41 (first-hit + no-descent framework toward \(m_n\ge\Phi-2\); 2026-07-28).** Let \(C\) be a Seidel matrix of order \(n\) with \(\Phi(C)\in\mathbb Z\). Write \(A_F:=C\oplus F\).
+
+1. **First-hit lemma (proved).** Along any edge-adding chain \(\emptyset=F_0\subset F_1\subset\cdots\subset F_k\) with \(|F_i|=i\), if \(i^\star\) is minimal such that \(\Phi(A_{F_{i^\star}})<\Phi(C)\), then
+   \[
+   \Phi(A_{F_{i^\star}})\;\ge\;\Phi(C)-2.
+   \]
+   *Proof.* \(F_{i^\star}=F_{i^\star-1}\cup\{e\}\) and \(\Phi(A_{F_{i^\star-1}})\ge\Phi(C)\), so Prop 15.20b with one edge yields the claim. \(\square\)
+
+2. **Dangerous-edge criterion (proved).** Suppose \(\Phi(A_F)=\Phi(C)-2\). For \(e=(u,v)\notin F\) set \(B=A_F\oplus e\) and \(\sigma_x:=(A_F)_{uv}\,x_u x_v\in\{\pm1\}\). Then \(Q_B(x)=Q_{A_F}(x)-2\sigma_x\). Consequently:
+   - if some maximiser \(x\) with \(Q_{A_F}(x)=\Phi(C)-2\) has \(\sigma_x=-1\), then \(Q_B(x)=\Phi(C)\) and \(\Phi(B)\ge\Phi(C)\);
+   - if some maximiser with \(Q_{A_F}(x)=-(\Phi(C)-2)\) has \(\sigma_x=+1\), same.
+   Hence \(\Phi(B)\le\Phi(C)-4\) is possible only if \(\sigma\equiv+1\) on all \(+\) maximisers and \(\sigma\equiv-1\) on all \(-\) maximisers (**dangerous edge**). \(\square\)
+
+3. **No-descent lemma (OPEN in general).** If \(\Phi(A_F)=\Phi(C)-2\), then for every \(e\notin F\), \(\Phi(A_F\oplus e)\ge\Phi(C)-2\).
+
+4. **Conditional settlement.** If the no-descent lemma holds for all flip sets on the \(\rho=1\) Paley family \(n=p^2+1\), then by induction on Hamming distance every Seidel matrix \(A\) of those orders satisfies \(\Phi(A)\ge\Phi(C)-2\). Thus \(m_n\ge\Phi(C)-2\), the gap is \(O(1)=o(n^{3/2})\), E(1) holds, and \(L=\tfrac12\) by denseness (Prop 6.2). **F13:** this must not be claimed from Prop 15.40 alone; no-descent is an independent lemma about \(\Phi\), not abstract 2-Lipschitz calculus.
+
+5. **Certified at \(n=10\) (matching undercutters; not a general proof).** For all **144** perfect-matching undercutters of Paley \(C_{10}\) (\(\Phi=13=\Phi-2\)):
+   - number of dangerous external edges: **0**;
+   - every single-edge extension has \(\Phi\ge15=\Phi(C)\) (min observed \(15\));
+   - multi-edge random extensions (depth \(2\)–\(12\)) stay at \(\Phi\ge13\) (0 deepenings).
+   Parallel cert: `src/e1_n10_nodescent.py` (\(W=86\)), `evidence/e1_n10_nodescent.json`, `evidence/E1_NODESCENT.md`.
+
+*Open.* Prove no-descent (or: no dangerous edges, or non-maximiser spike under alignment) for all undercutters on the \(\rho=1\) family; alternatively complete Max-cover clique-flip for \(p\ge5\). Matching dichotomy / \(k_\star\) remain separate. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

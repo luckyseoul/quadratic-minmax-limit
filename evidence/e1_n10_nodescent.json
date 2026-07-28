@@ -1,0 +1,13 @@
+{
+  "n": 10,
+  "Phi_C": 15.0,
+  "n_undercut_pm": 144,
+  "all_phi_eq_13": true,
+  "add1_total_violations": 0,
+  "add1_min_of_min": 15.0,
+  "deep_total_violations": 0,
+  "deep_min_of_min": 13.0,
+  "workers": 86,
+  "lemma_candidate": "no-descent: if Phi(C\u2295F)=Phi-2 then Phi(C\u2295(F\u222a{e}))>=Phi-2 for all e",
+  "status": "CERT n=10 PM undercutters: no-descent holds (0 viol); general proof OPEN (F13); L OPEN"
+}

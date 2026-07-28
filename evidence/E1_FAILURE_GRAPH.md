@@ -67,6 +67,7 @@ L = lim α_n
 | op=√41 for all covers | **false** as universal claim (F5) |
 | Matching dichotomy / k_⋆ | **open** |
 | Prop 15.38 n=10 two-sided k=5 | **proved** (only Δ=1 undercuts) |
+| Prop 15.41 first-hit + dangerous-edge | **proved**; no-descent **open** (n=10 PM cert) |
 | E(1) / lim α_n | **OPEN** |
 
 ---
@@ -82,8 +83,9 @@ L = lim α_n
 
 ## Next allowed moves (only)
 
-1. **Proof draft** of Max-cover ⇒ clique-flip (or other spike) using design/AG(2,p) — no new SA.
-2. **Proof draft** of k_⋆ / path-cycle for E(1) — no soft close.
-3. **If** numeric cert: rewrite as `W`-worker batch, verify offline, one evidence file; mark incomplete enum as incomplete.
+1. **Prove Prop 15.41 no-descent** (or no dangerous edges) for ρ=1 undercutters — closes m_n≥Φ−2 path. Partial: first-hit + dangerous criterion proved; n=10 PM cert done.
+2. **Proof draft** of Max-cover ⇒ clique-flip (or other spike) using design/AG(2,p) — no new SA.
+3. **Proof draft** of k_⋆ / path-cycle for E(1) — no soft close.
+4. **If** numeric cert: rewrite as `W`-worker batch, verify offline, one evidence file; mark incomplete enum as incomplete.
 
-**Do not:** restart sequential MILP enum; re-run 20k random PM searches; re-derive sandwich.
+**Do not:** restart sequential MILP enum; re-run 20k random PM searches; re-derive sandwich; claim m_n≥Φ−2 from 15.40 alone (F13).

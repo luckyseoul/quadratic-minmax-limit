@@ -2246,3 +2246,81 @@ def test_prop_15_40_edge_minimal_undercutter_gap():
     assert n_checked >= 20
     assert "15.40" in (Path(__file__).resolve().parents[1] / "solution.md").read_text()
     assert "OPEN" in (Path(__file__).resolve().parents[1] / "HANDOFF.md").read_text()
+
+
+def test_prop_15_41_nodescent_framework_and_n10_cert():
+    """Prop 15.41: first-hit+dangerous-edge in solution; n=10 cert JSON; L still OPEN."""
+    import json
+    from itertools import product
+
+    root = Path(__file__).resolve().parents[1]
+    sol = (root / "solution.md").read_text()
+    assert "15.41" in sol
+    assert "First-hit" in sol or "first-hit" in sol
+    assert "dangerous" in sol.lower()
+    assert "OPEN" in (root / "HANDOFF.md").read_text()
+    assert "F13" in (root / "evidence" / "E1_FAILURE_GRAPH.md").read_text()
+    # Must not soft-close
+    chunk = sol[sol.index("15.41") : sol.index("15.41") + 4000]
+    assert "OPEN" in chunk
+    assert "no-descent" in chunk.lower() or "No-descent" in chunk
+
+    cert_path = root / "evidence" / "e1_n10_nodescent.json"
+    assert cert_path.is_file(), "run src/e1_n10_nodescent.py to refresh cert"
+    cert = json.loads(cert_path.read_text())
+    assert cert["n_undercut_pm"] == 144
+    assert cert["all_phi_eq_13"] is True
+    assert cert["add1_total_violations"] == 0
+    assert cert["add1_min_of_min"] >= 15.0 - 1e-9
+    assert cert["deep_total_violations"] == 0
+    assert (root / "evidence" / "E1_NODESCENT.md").is_file()
+
+    # Live spot-check on shipped form_Q path: find one PM undercutter, test add-1 no-descent
+    C = paley_conference_prime_power(3)
+    n = 10
+    PhiC = 15.0
+    bits = list(product([-1.0, 1.0], repeat=n - 1))
+    X = np.ones((len(bits), n), dtype=np.float64)
+    for r, b in enumerate(bits):
+        X[r, 1:] = b
+
+    def phi_exact(A):
+        vals = np.einsum("bi,ij,bj->b", X, A, X) * 0.5
+        return float(np.max(np.abs(vals)))
+
+    def all_pm(nn):
+        def rec(rem):
+            rem = list(rem)
+            if not rem:
+                yield []
+                return
+            a = rem[0]
+            for bi, b in enumerate(rem[1:], 1):
+                rest = rem[1:bi] + rem[bi + 1 :]
+                for M in rec(rest):
+                    yield [(a, b)] + M
+
+        yield from rec(list(range(nn)))
+
+    found = None
+    for M in all_pm(n):
+        A = C.copy()
+        for i, j in M:
+            A[i, j] *= -1
+            A[j, i] *= -1
+        if phi_exact(A) < PhiC - 1e-9:
+            found = (M, A, phi_exact(A))
+            break
+    assert found is not None
+    M, A, ph = found
+    assert ph >= PhiC - 2 - 1e-9  # first-hit / 15.40 on this undercutter
+    Fs = set((min(i, j), max(i, j)) for i, j in M)
+    edges = [(i, j) for i in range(n) for j in range(i + 1, n)]
+    for e in edges:
+        if e in Fs:
+            continue
+        B = A.copy()
+        u, v = e
+        B[u, v] *= -1
+        B[v, u] *= -1
+        assert phi_exact(B) >= PhiC - 2 - 1e-9
