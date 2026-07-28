@@ -1270,6 +1270,49 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 *Open.* Prove no-descent (or: no dangerous edges, or non-maximiser spike under alignment) for all undercutters on the \(\rho=1\) family; alternatively complete Max-cover clique-flip for \(p\ge5\). Matching dichotomy / \(k_\star\) remain separate. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.42 (Max\(\pm\) dichotomy, counting freeness, tight no-descent; 2026-07-28).** Let \(C\) be a \(\rho=1\) conference of order \(n\) with the Max\(_{+}\) frame identity of Prop 15.27, \(\Phi=\Phi(C)\), \(p=\sqrt{n-1}\), and \(A=C\oplus F\). Write \(S_F(y)=\sum_{e\in F}C_e y_iy_j\), \(s_{+}=\min_{\mathrm{Max}_{+}}S_F\), \(s_{-}=\max_{\mathrm{Max}_{-}}S_F\), and \(f_e(y)=C_e y_iy_j\).
+
+1. **Max\(\pm\) evaluation dichotomy (proved).**
+   \[
+   \Phi(A)\;\ge\;\max\Bigl(
+   \max_{y\in\mathrm{Max}_{+}}\lvert\Phi-2S_F(y)\rvert,\;
+   \max_{y\in\mathrm{Max}_{-}}\lvert-\Phi-2S_F(y)\rvert
+   \Bigr).
+   \]
+   Consequently:
+   - if \(s_{+}\le -1\), then \(\Phi(A)\ge\Phi+2\) (Prop 15.33);
+   - if \(s_{+}=0\), then \(\Phi(A)\ge\Phi\);
+   - if \(s_{+}=1\), then \(\Phi(A)\ge\Phi-2\);
+   - if \(s_{-}\ge 0\), then \(\Phi(A)\ge\Phi\);
+   - if \(s_{-}=-1\), then \(\Phi(A)\ge\Phi-2\).
+
+   Therefore \(\Phi(A)<\Phi-2\) is possible only if \(A\) is **deep two-sided**: \(s_{+}\ge 2\) and \(s_{-}\le -2\).
+   *In particular every matrix with \(s_{+}\le 1\) or \(s_{-}\ge -1\) already satisfies \(\Phi(A)\ge\Phi-2\).* \(\square\)
+
+2. **Counting freeness (proved).** For every edge \(e\), \(\sum_{y\in\mathrm{Max}_{+}}f_e(y)=|\mathrm{Max}_{+}|/p\) (frame). Hence if \(f_e\equiv +1\) on a subset \(U\subseteq\mathrm{Max}_{+}\), then
+   \[
+   |U|\;\le\;|\mathrm{Max}_{+}|\,\frac{p+1}{2p},
+   \]
+   with equality only if \(f_e\equiv -1\) on \(\mathrm{Max}_{+}\setminus U\). \(\square\)
+
+3. **Tight \(S\equiv 1\) no-descent (proved).** If \(S_F\equiv 1\) on \(\mathrm{Max}_{+}\) (equivalently \(k=|F|=p\) and \(s_{+}=1\)), then \(U=\mathrm{Max}_{+}\) violates the counting bound for \(f_e\equiv 1\) (since \((p+1)/(2p)<1\)). So every \(e\notin F\) has some \(y\in\mathrm{Max}_{+}\) with \(f_e(y)=-1\), whence \(S_{F\cup\{e\}}(y)=0\) and \(Q_{A\oplus e}(y)=\Phi\). Thus \(\Phi(A\oplus e)\ge\Phi\). \(\square\)
+
+4. **Tight \(S\equiv 2\) no-descent (proved).** If \(S_F\equiv 2\) on \(\mathrm{Max}_{+}\) (which holds automatically for any Max\(_{+}\) cover with \(|F|=2p\), since \(\mathbb E[S]=2\) and \(S\ge 2\) force \(S\equiv 2\)), then similarly \(f_e\not\equiv 1\) on \(\mathrm{Max}_{+}\). Any \(y\) with \(f_e(y)=-1\) has \(S_{F\cup\{e\}}(y)=1\) and \(Q_{A\oplus e}(y)=\Phi-2\). Thus \(\Phi(A\oplus e)\ge\Phi-2\). \(\square\)
+
+5. **Type I freeness when \(N_1\) is large (proved).** Write \(N=|\mathrm{Max}_{+}|\) and \(N_1=\#\{y\in\mathrm{Max}_{+}:S_F(y)=1\}\). If \(s_{+}=1\) and \(N_1>N(p+1)/(2p)\), then no edge freezes to \(+1\) on \(\mathrm{Max}_{+1}\). When moreover \(\Phi(A)=\Phi-2\), one has \(\mathrm{Max}_{+1}\subseteq\mathrm{Max}(A)\) (positive maximisers), so every \(e\notin F\) has a maximiser with \(\sigma_e=-1\), hence \(\Phi(A\oplus e)\ge\Phi\) (no-descent, strong form). \(\square\)
+
+6. **Type I size bound for strict freeness (proved).** If \(s_{+}=1\), scores are odd, and \(|F|=k\le 2p-2\), then \(N_1/N\ge(3-k/p)/2>(p+1)/(2p)\), so part 5 applies. \(\square\)
+
+7. **Reduction of \(m_n\ge\Phi-2\) (proved equivalence).** Assume \(\Phi\) is integer-valued with fixed parity under edge flips (true for all Seidel matrices of a fixed order: each flip changes every \(Q_x\) by \(\pm 2\)). Then:
+   - by part 1, \(\Phi(A)\le\Phi-4\) forces deep two-sided;
+   - by Prop 15.40, no edge-minimal undercutter has \(\Phi\le\Phi-4\);
+   - a minimal-Hamming counterexample \(A\) with \(\Phi(A)=\Phi-4\) must therefore admit some \(e\) with \(\Phi(A\oplus e^{-1})=\Phi-2\) (single-edge descent from a gap-\(2\) undercutter).
+   Hence **\(m_n\ge\Phi-2\) on the \(\rho=1\) family if and only if no-descent holds for every gap-\(2\) undercutter** (Prop 15.41(3)). Parts 3–6 prove no-descent for all tight \(S\equiv1\), tight \(S\equiv2\), and Type I covers with \(k\le 2p-2\) or \(N_1\) large. \(\square\)
+
+8. **Certified at \(n=10\).** All 144 matching undercutters are Type I with \(N_1=10>8=N(p+1)/(2p)\) (strict freeness; 0 dangerous edges; add-1 gives \(\Phi\ge15\)). All 360 undercutting 6-cycles are tight \(S\equiv 2\) on \(\mathrm{Max}_{+}\) (part 4; add-1 gives \(\Phi\ge15\)). Combined with \(m_{10}=13\), no-descent and \(m_{10}=\Phi-2\) hold at \(n=10\). Evidence: `evidence/E1_NODESCENT.md`, `e1_n10_nodescent.json`; session C6 checks.
+
+*Open for \(L=\tfrac12\).* Prove no-descent for the remaining gap-\(2\) undercutters (Type I with \(k\ge 2p-1\) and small \(N_1\); deep non-tight with \(k>2p\)), or prove no such undercutters exist on the \(\rho=1\) family. Then \(m_n\ge\Phi-2\Rightarrow\mathrm{E}(1)\Rightarrow L=\tfrac12\). **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

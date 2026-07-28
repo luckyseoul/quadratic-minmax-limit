@@ -68,6 +68,7 @@ L = lim α_n
 | Matching dichotomy / k_⋆ | **open** |
 | Prop 15.38 n=10 two-sided k=5 | **proved** (only Δ=1 undercuts) |
 | Prop 15.41 first-hit + dangerous-edge | **proved**; no-descent **open** (n=10 PM cert) |
+| Prop 15.42 Max± dichotomy + tight no-descent | **partial**: dichotomy+tight+Type I large \(N_1\) proved; residual open |
 | E(1) / lim α_n | **OPEN** |
 
 ---
@@ -83,7 +84,7 @@ L = lim α_n
 
 ## Next allowed moves (only)
 
-1. **Prove Prop 15.41 no-descent** (or no dangerous edges) for ρ=1 undercutters — closes m_n≥Φ−2 path. Partial: first-hit + dangerous criterion proved; n=10 PM cert done.
+1. **Prove residual Prop 15.42 no-descent** (Type I large-k / deep non-tight k>2p) — closes m_n≥Φ−2. Done: dichotomy, tight S≡1/2, Type I large N_1.
 2. **Proof draft** of Max-cover ⇒ clique-flip (or other spike) using design/AG(2,p) — no new SA.
 3. **Proof draft** of k_⋆ / path-cycle for E(1) — no soft close.
 4. **If** numeric cert: rewrite as `W`-worker batch, verify offline, one evidence file; mark incomplete enum as incomplete.

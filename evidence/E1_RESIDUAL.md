@@ -27,10 +27,9 @@ Routes:
 
 ## Shortest remaining proof edges (2026-07-28)
 
-1. **Close Prop 15.41 no-descent** on the \(\rho=1\) family (or prove no dangerous edges
-   for gap-\(2\) undercutters). First-hit + dangerous-edge criterion already proved;
-   n=10 PM cert: 0 dangerous edges, add-1 always \(\Phi\ge\Phi(C)\).  
-   Then \(m_n\ge\Phi(C)-2\Rightarrow\mathrm{E}(1)\Rightarrow L=\tfrac12\). **Do not claim without no-descent (F13).**
+1. **Close Prop 15.42 residual no-descent** — proved for tight \(S\equiv1,2\) and Type I with
+   large \(N_1\) / \(k\le2p-2\); open for Type I large-\(k\) small-\(N_1\) and deep non-tight \(k>2p\).
+   Equivalence: \(m_n\ge\Phi-2\) iff full no-descent on gap-2 undercutters. **F13 intact.**
 
 2. **Or** \(N_{\mathrm{flip}}\ge1\) for every Max-cover PM at all \(p\ge5\) (Prop 15.39 pattern)  
    + path-cycle / \(k_\star=O(n^{3/2})\).

@@ -2324,3 +2324,141 @@ def test_prop_15_41_nodescent_framework_and_n10_cert():
         B[u, v] *= -1
         B[v, u] *= -1
         assert phi_exact(B) >= PhiC - 2 - 1e-9
+
+
+def test_prop_15_42_dichotomy_and_tight_nodescent():
+    """Prop 15.42: dichotomy in writeup; tight S=2 C6 + Type I freeness live; L OPEN."""
+    from itertools import combinations, permutations, product
+
+    root = Path(__file__).resolve().parents[1]
+    sol = (root / "solution.md").read_text()
+    assert "15.42" in sol
+    assert "dichotomy" in sol.lower() or "Dichotomy" in sol
+    assert "Tight" in sol or "tight" in sol
+    assert "OPEN" in (root / "HANDOFF.md").read_text()
+    assert (root / "evidence" / "E1_DICHOTOMY.md").is_file()
+    # must not soft-close
+    chunk = sol[sol.index("15.42") : sol.index("15.42") + 5000]
+    assert "OPEN" in chunk
+
+    C = paley_conference_prime_power(3)
+    n, p = 10, 3.0
+    Phi = 15.0
+    bits = list(product([-1.0, 1.0], repeat=n - 1))
+    X = np.ones((len(bits), n), dtype=np.float64)
+    for r, b in enumerate(bits):
+        X[r, 1:] = b
+
+    def phi_exact(A):
+        return float(np.max(np.abs(np.einsum("bi,ij,bj->b", X, A, X) * 0.5)))
+
+    # Max+
+    Mmat = C - p * np.eye(n)
+    _, s, vt = np.linalg.svd(Mmat)
+    rank = int((s > 1e-8).sum())
+    nb = vt[rank:].T
+    nul = n - rank
+    rng = np.random.default_rng(0)
+    coords = None
+    for _ in range(5000):
+        idx = rng.choice(n, size=nul, replace=False)
+        if np.linalg.matrix_rank(nb[idx], tol=1e-8) == nul:
+            coords = idx
+            break
+    Binv = np.linalg.inv(nb[coords])
+    found = []
+    for b in range(1 << nul):
+        free = np.array([1.0 if (b >> i) & 1 else -1.0 for i in range(nul)])
+        x = nb @ (Binv @ free)
+        if np.max(np.abs(np.abs(x) - 1.0)) < 1e-6:
+            found.append(np.sign(x))
+    Maxp = np.unique(np.round(found).astype(int), axis=0).astype(float)
+    N = len(Maxp)
+    thr = N * (p + 1) / (2 * p)
+    assert N == 12 and abs(thr - 8.0) < 1e-9
+
+    # Frame mean: every edge averages to 1/p on Max+
+    i, j = 0, 1
+    mean_f = float(np.mean([C[i, j] * y[i] * y[j] for y in Maxp]))
+    assert abs(mean_f - 1.0 / p) < 1e-9
+
+    # Type I freeness on one PM undercutter: N_1 > thr
+    def all_pm(nn):
+        def rec(rem):
+            rem = list(rem)
+            if not rem:
+                yield []
+                return
+            a = rem[0]
+            for bi, b in enumerate(rem[1:], 1):
+                rest = rem[1:bi] + rem[bi + 1 :]
+                for M in rec(rest):
+                    yield [(a, b)] + M
+
+        yield from rec(list(range(nn)))
+
+    und_M = None
+    for M in all_pm(n):
+        A = C.copy()
+        for a, b in M:
+            A[a, b] *= -1
+            A[b, a] *= -1
+        if phi_exact(A) < Phi - 1e-9:
+            und_M = M
+            break
+    assert und_M is not None
+    S = np.array([sum(C[a, b] * y[a] * y[b] for a, b in und_M) for y in Maxp])
+    n1 = int(np.sum(np.abs(S - 1.0) < 1e-9))
+    assert n1 > thr  # strict freeness ⇒ no freeze on Max+_1
+    # live: no external edge freezes +1 on Max+_1
+    Max1 = Maxp[np.abs(S - 1.0) < 1e-9]
+    Fs = set((min(a, b), max(a, b)) for a, b in und_M)
+    for u in range(n):
+        for v in range(u + 1, n):
+            if (u, v) in Fs:
+                continue
+            prods = {int(round(C[u, v] * y[u] * y[v])) for y in Max1}
+            assert prods != {1}
+
+    # Tight S≡2 on one C6 undercutter + add-edge hits S'=1
+    edges = [(i, j) for i in range(n) for j in range(i + 1, n)]
+    c6 = None
+    seen = set()
+    for verts in combinations(range(n), 6):
+        vv = list(verts)
+        for perm in permutations(vv[1:]):
+            cyc = [vv[0]] + list(perm)
+            F = tuple(
+                sorted(
+                    (min(cyc[i], cyc[(i + 1) % 6]), max(cyc[i], cyc[(i + 1) % 6]))
+                    for i in range(6)
+                )
+            )
+            if F in seen:
+                continue
+            seen.add(F)
+            A = C.copy()
+            for a, b in F:
+                A[a, b] *= -1
+                A[b, a] *= -1
+            if phi_exact(A) < Phi - 1e-9:
+                c6 = list(F)
+                break
+        if c6 is not None:
+            break
+    assert c6 is not None
+    S6 = np.array([sum(C[a, b] * y[a] * y[b] for a, b in c6) for y in Maxp])
+    assert np.allclose(S6, 2.0)  # tight S≡2
+    Fs6 = set(c6)
+    e_out = next(e for e in edges if e not in Fs6)
+    u, v = e_out
+    fs = np.array([C[u, v] * y[u] * y[v] for y in Maxp])
+    assert np.any(fs < 0)  # frame mean forbids freeze on all Max+
+    y = Maxp[np.where(fs < 0)[0][0]]
+    s_new = sum(C[a, b] * y[a] * y[b] for a, b in c6) + C[u, v] * y[u] * y[v]
+    assert abs(s_new - 1.0) < 1e-9  # Q' = Phi - 2 = 13 lower bound
+    B = C.copy()
+    for a, b in c6 + [e_out]:
+        B[a, b] *= -1
+        B[b, a] *= -1
+    assert phi_exact(B) >= Phi - 2 - 1e-9
