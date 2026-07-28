@@ -22,6 +22,7 @@
 | **F10** | Single-thread maxR without numba/process fan-out | 2^13×2^13 per matching on one core | Slow verify |
 | **F11** | Poll/sleep on background jobs | Use completion notifications | Wasted turns |
 | **F12** | Kill commands with `pgrep -f` matching the wrapper | Self-kill / no-op | Ops failure |
+| **F13** | Claim \(m_n\ge\Phi-2\) from edge-minimal gap alone | Abstract 2-Lipschitz local min on hypercube can drop by \(2d\) at distance \(d\); Prop 15.40 only bounds edge-minimal undercutters | False E(1) |
 
 ---
 
