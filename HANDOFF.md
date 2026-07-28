@@ -1,8 +1,9 @@
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-07-29 resume handoff (Props 15.45–15.49; L still OPEN; uniform LB candidate)  
+**Status date:** 2026-07-30 handoff after shutdown (Props 15.45–15.52; L still OPEN; moduli attack mid-flight)  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
-**Resume file:** `evidence/SESSION_HANDOFF_2026-07-29.md`  
+**Resume file:** `evidence/SESSION_HANDOFF_2026-07-30.md` (primary); prior: `SESSION_HANDOFF_2026-07-29.md`  
+**HEAD at handoff:** `265fccc` (main ahead of origin by 78; do not push unless asked)  
 **Problem source:** [MathOverflow 413935](https://mathoverflow.net/questions/413935) / [X prize post](https://x.com/PI010101/status/2081070728422752329)
 
 ---
@@ -13,7 +14,7 @@
 Proved sandwich: \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\).  
 Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptotic optimality of \(m_n\) vs Paley \(\Phi\) is not.
 
-**P0 start:** prove \(g_{\min}\ge L(p)=-(p-2)/(2p^2)\) (equiv. \(\min a(e')\ge1/(2p-1)\) on \(f_e=1\) slice, Prop 15.51) for all primes \(p\ge5\); then deep non-tight; only then Main Theorem. Resume: `evidence/SESSION_HANDOFF_2026-07-29.md`.
+**P0 start:** prove \(g_{\min}\ge L(p)=-(p-2)/(2p^2)\) (equiv. \(\min a(e')\ge1/(2p-1)\) on \(f_e=1\) slice, Prop 15.51) for all primes \(p\ge5\); then deep non-tight; only then Main Theorem. Resume: `evidence/SESSION_HANDOFF_2026-07-30.md`. **F16:** do not pin modulus \(c\) by max PSD \(g_{\min}\) (wrong at \(p=5\); use \(\mathrm{Tr}(G^2)\)/spectrum).
 
 **Props 15.45–15.51 (load-bearing, do not re-derive):**
 - Stars never bi-tight (wedge \(G^++G^-=0\)).

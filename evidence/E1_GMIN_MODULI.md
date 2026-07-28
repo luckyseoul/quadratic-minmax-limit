@@ -30,9 +30,9 @@ The sum-of-disj-\(G\) constraint is already in the system (\(s_{\mathrm{null}}=0
 \]
 (\(G_{ee'}^2=m_4^2\) on each disj pairing). Substituting \(\mathbf m(c)\) gives a **quadratic** in \(c\).
 
-**Certified \(p=5\):** one root recovers exact \(m_4\) and \(g_{\min}=-3/65\); the other is spurious (worse \(g_{\min}\)). Selection: e.g. maximize \(g_{\min}\) among PSD \(G\), or match \(\lambda_{\max}(G)=n/2\).
+**Certified \(p=5\):** one root recovers exact \(m_4\) and \(g_{\min}=-3/65\); the other is spurious (worse \(g_{\min}\)). Correct pin at \(p=5\): \(\mathrm{Tr}(G^2)\) quadratic (or match full \(G\)-spectrum). **Do not** use “max \(g_{\min}\) under PSD” alone — see below.
 
-**\(p=7\):** needs full (not sampled) transitions for a stable quadratic; not yet closed-form.
+**\(p=7\):** needs full (not sampled) transitions for a stable quadratic; not yet closed-form. Distance-homogeneous Max+ only at \(p=5\); \(p=7\) has ≥2 Max+ types.
 
 ## Spectral check of \(\mathrm{Tr}(G^2)\) at \(p=5\)
 
@@ -42,11 +42,20 @@ Nonzero spectrum of \(G\): \(n/2\) (×1), \(88/13\) (×\(d\)), \(72/13\) (×\(2d
 \]
 matches direct Gram computation. A general-\(p\) eigenvalue formula would close the pin.
 
+## PSD / rank scan (anti-thrash; 2026-07-29 late)
+
+On the nullity-1 line \(G(c)\) at \(p=5\):
+- \(\mathrm{rank}(G)=\binom{d}{2}-d+1=66\) holds on a **continuum** of \(c\) (with \(\lambda_{\min}\approx0\)); rank alone does **not** pin \(c\).
+- Maximizing matrix \(g_{\min}\) subject to PSD gives \(\approx-0.040\) near \(c\approx-0.42\), **strictly better** than the true Max+ value \(-3/65\approx-0.04615\) at true \(c\approx-0.291\).
+- **Conclusion:** “max \(g_{\min}\) among PSD \(G(c)\)” is **not** the true selection rule. True selection needs \(\mathrm{Tr}(G^2)\) / full spectrum (or another Max+-free identity). Do not reopen PSD-max as a pin.
+
+Also: \(\mathrm{Tr}(G^2)\) formula must count **\(2\times\)** off-diagonal contributions; missing the factor produced wrong pins until fixed.
+
 ## What remains for \(g_{\min}\ge L(p)\)
 
 1. Prove nullity 1 for all primes \(p\ge5\) on this refined class set.
 2. Closed form for \(\mathrm{Tr}(G^2)\) (or full \(G\)-spectrum) as a function of \(p\), **or** another \(c\)-pin independent of Max+.
-3. Select the correct quadratic root (PSD / max \(g_{\min}\)).
+3. Select the correct quadratic root via spectrum / \(\mathrm{Tr}(G^2)\) (**not** PSD-max \(g_{\min}\)).
 4. Prove \(g_{\min}(p)\ge L(p)\) (or \(>T(p)\)).
 
 ## Related
