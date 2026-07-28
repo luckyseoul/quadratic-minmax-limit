@@ -1,0 +1,14 @@
+{
+  "p": 7,
+  "n": 50,
+  "n_Max_plus": 11452,
+  "n_Max_minus": 11452,
+  "level_s": 2,
+  "k": 14,
+  "fractional_feasible": true,
+  "integral_feasible": false,
+  "integral_infeasible": false,
+  "integral_timeout": true,
+  "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+  "seconds": 1047.9156775474548
+}
