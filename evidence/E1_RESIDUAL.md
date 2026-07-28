@@ -27,9 +27,13 @@ Routes:
 
 ## Shortest remaining proof edges (2026-07-28)
 
-1. **Close Prop 15.42 residual no-descent** — proved for tight \(S\equiv1,2\) and Type I with
-   large \(N_1\) / \(k\le2p-2\); open for Type I large-\(k\) small-\(N_1\) and deep non-tight \(k>2p\).
-   Equivalence: \(m_n\ge\Phi-2\) iff full no-descent on gap-2 undercutters. **F13 intact.**
+1. **Close Prop 15.42–15.43 residual no-descent**  
+   - Proved: dichotomy; Type I freeness class; tight \(S\equiv2\) weak ND; \(p=3\) 1-bit; n=10 full.  
+   - **Bi-tight** \(S\equiv\pm2\) size \(2p\): integral **infeasible at \(p=5\)** (`E1_BITIGHT.md`);  
+     this kills Type I equality-danger and deep tight undercutters at \(p=5\).  
+   - **Still open:** (i) bi-tight infeasible for all \(p\ge5\); (ii) deep **non-tight** gap-2 ND;  
+     (iii) \(k=3p-2\) Type I boundary for general \(p\).  
+   Then \(m_n\ge\Phi-2\Rightarrow\mathrm{E}(1)\Rightarrow L=\tfrac12\). **F13 intact.**
 
 2. **Or** \(N_{\mathrm{flip}}\ge1\) for every Max-cover PM at all \(p\ge5\) (Prop 15.39 pattern)  
    + path-cycle / \(k_\star=O(n^{3/2})\).
