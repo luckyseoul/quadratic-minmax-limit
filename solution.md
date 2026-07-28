@@ -1503,6 +1503,44 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 5. **Residual for Prop 15.47 (OPEN).** Prove \(g_{\min}\ge L(p)\) for every prime \(p\ge5\) (or any other uniform lower bound strictly above the bi-tight threshold). Combined with the deep non-tight residual of Prop 15.47.6 this yields \(m_n\ge\Phi-2\Rightarrow\mathrm{E}(1)\Rightarrow L=\tfrac12\). **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.50 (conditional means of Max+; disjoint correlation mean; 2026-07-29).** Let \(C\) be \(\rho=1\) Paley of order \(n=p^2+1\), \(\Sigma=I+C/p=2P_+\), and let \(y\) be uniform in \(\mathrm{Max}_{+}\). Write \(f_e=C_e y_iy_j\) and \(G_{ee'}=\mathbb E[f_ef_{e'}]\).
+
+1. **Conditional mean lemma (proved).** For distinct indices \(i,j\) and \(a,b\in\{\pm1\}\),
+   \[
+   \mathbb E\bigl[y\bigm|\,y_i=a,\,y_j=b\bigr]
+   \;=\;
+   \Sigma_{*,S}\,\Sigma_{S,S}^{-1}\begin{pmatrix}a\\b\end{pmatrix},
+   \qquad S=\{i,j\}.
+   \]
+   *Proof.* The right-hand side \(\mu_*\) is the unique minimum-norm vector in \(V_+=\mathrm{range}(P_+)\) with those two coordinates (Gaussian interpolant for covariance \(\Sigma\)). The left-hand side \(\mu\) is an average of Max\(+\) vectors, hence lies in \(V_+\) with the same coordinates. The difference \(v=\mu-\mu_*\) satisfies \(v\in V_+\) and \(v_i=v_j=0\). For every \(w\in V_+\) with \(w_i=w_j=0\), the scalar \(y\cdot w\) is orthogonal (under \(\mathbb E\)) to \(\{1,y_i,y_j,y_iy_j\}\): the first three pairings use \(\mathbb E[y]=0\) and \(\mathbb E[yy^\top]=\Sigma\); the fourth is an odd third moment and vanishes by central symmetry \(\mathrm{Max}_+=-\mathrm{Max}_+\). Those four monomials span all functions of \((y_i,y_j)\), so \(\mathbb E[y\cdot w\mid y_i,y_j]=0\). Hence \(\mu\cdot w=0\) for all such \(w\). In particular \(\mu_*\) lies in \(\mathrm{span}\{P_+e_i,P_+e_j\}\) and \(v\perp\) that span, so \(\mu_*\cdot v=0\) and \(\mu\cdot v=\|v\|^2=0\), whence \(v=0\). \(\square\)
+   Certified at \(p=5,7\) (max abs error \(<10^{-15}\)): `evidence/e1_gmin_cond_mean.json`, `src/e1_gmin_cond_mean.py`.
+
+2. **Conditional second-moment shape (proved).** For fixed distinct \(i,j,k,l\),
+   \[
+   \mathbb E[y_ky_l\mid y_i,y_j]
+   \;=\;
+   \alpha+\delta\,y_iy_j
+   \]
+   for scalars \(\alpha,\delta\) determined by \(\Sigma_{kl}\) and \(m_4=\mathbb E[y_iy_jy_ky_l]\):
+   \[
+   \alpha=\frac{\Sigma_{kl}-c\,m_4}{1-c^2},\qquad
+   \delta=\frac{m_4-c\,\Sigma_{kl}}{1-c^2},\qquad
+   c=\Sigma_{ij}=C_{ij}/p.
+   \]
+   *Proof.* The conditional expectation is a function of \((y_i,y_j)\), hence of the form \(\alpha+\beta y_i+\gamma y_j+\delta y_iy_j\). Matching moments against \(1,y_i,y_j,y_iy_j\) and using vanishing odd moments forces \(\beta=\gamma=0\) and the displayed formulae. \(\square\)
+
+3. **Disjoint-pair mean (proved).** For every edge \(e\), \(\sum_{e'\,:\,e\cap e'=\emptyset}G_{ee'}=n/2-1\), so the average disjoint correlation is
+   \[
+   \frac1{p^2-2}.
+   \]
+   *Proof.* Row sum of \(G\) is \(n/2\) (Prop 15.48.1); sum of \(G\) over the \(2(n-2)\) wedge partners of \(e\) is \(0\) (Prop 15.48.2); the remainder is the disj sum. Count of disj partners \((n-2)(n-3)/2\) and \(n=p^2+1\) give the average. \(\square\)
+
+4. **Frechet obstruction is too weak (certified).** Combining part 1 with the Fréchet–Hoeffding bound
+   \(\mathbb E[y_ky_l\mid\mathrm{state}]\ge\mu_k\mu_l-\sqrt{(1-\mu_k^2)(1-\mu_l^2)}\)
+   yields only \(g_{\min}\ge-O(1)\) (empirically \(\ge-0.4\) at \(p=5\)), which does **not** beat the bi-tight threshold \(T(p)=-(p-2)/(p(2p-1))\). Evidence in session residual notes. **Do not reopen plain Fréchet as a path to \(L(p)\).**
+
+5. **Residual (OPEN).** Prove \(g_{\min}\ge L(p)=-(p-2)/(2p^2)\) (or any LB \(>T(p)\)) for all primes \(p\ge5\). The conditional-mean calculus reduces this to a uniform upper bound on \(|m_4|\) (or on \(\delta\)) for four-sets with \(|\kappa|=1\). Deep non-tight residual independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

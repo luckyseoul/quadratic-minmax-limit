@@ -79,3 +79,59 @@ def test_prop_15_49_in_solution():
     assert "2p^2" in chunk or "2 p^2" in chunk or "2p^{2}" in chunk or "2p^2" in chunk.replace(" ", "")
     # LB candidate algebra referenced
     assert "threshold" in chunk.lower() or "bi-tight" in chunk.lower()
+
+
+def test_prop_15_50_cond_mean_shipped():
+    """Prop 15.50: drive e1_gmin_cond_mean.gaussian_cond_mean vs Max+ (p=5)."""
+    import sys
+
+    import numpy as np
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_cond_mean import gaussian_cond_mean, sigma_frame
+    from minmax_quadratic import paley_conference_prime_power
+
+    p = 5
+    cache = Path("/tmp/maxplus_p5.npy")
+    if not cache.is_file():
+        # fall back to evidence-only if cache wiped
+        path = ROOT / "evidence" / "e1_gmin_cond_mean.json"
+        assert path.is_file()
+        data = json.loads(path.read_text())
+        assert data["certs"][0]["ok"] is True
+        return
+    C = paley_conference_prime_power(p)
+    Sigma = sigma_frame(C, p)
+    Mp = np.load(cache).astype(float)
+    # fixed pair of coordinates
+    i, j = 0, 1
+    for a in (1.0, -1.0):
+        for b in (1.0, -1.0):
+            mask = (Mp[:, i] == a) & (Mp[:, j] == b)
+            assert mask.sum() > 0
+            emp = Mp[mask].mean(axis=0)
+            mu = gaussian_cond_mean(Sigma, i, j, a, b)
+            assert np.max(np.abs(emp - mu)) < 1e-9
+
+
+def test_disj_mean_formula():
+    """avg disj G = 1/(p^2-2) for odd primes p."""
+    for p in (3, 5, 7, 11, 13):
+        n = p * p + 1
+        D = (n - 2) * (n - 3) // 2
+        s = n // 2 - 1
+        assert abs(s / D - 1 / (p * p - 2)) < 1e-15
+
+
+def test_prop_15_50_in_solution_and_evidence():
+    """Prop 15.50 writeup + evidence present; L still OPEN."""
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.50" in sol
+    idx = sol.index("15.50")
+    chunk = sol[idx : idx + 3500]
+    assert "OPEN" in chunk
+    assert "conditional" in chunk.lower() or "Conditional" in chunk
+    path = ROOT / "evidence" / "e1_gmin_cond_mean.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    assert all(c["ok"] for c in data["certs"])

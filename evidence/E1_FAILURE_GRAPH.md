@@ -24,6 +24,7 @@
 | **F12** | Kill commands with `pgrep -f` matching the wrapper | Self-kill / no-op | Ops failure |
 | **F13** | Claim \(m_n\ge\Phi-2\) from edge-minimal gap alone | Abstract 2-Lipschitz local min on hypercube can drop by \(2d\) at distance \(d\); Prop 15.40 only bounds edge-minimal undercutters | False E(1) |
 | **F14** | Ignore this graph and re-run dead loops | Session thrash: serial MILP/SA, false m_n shortcut, soft-close, single-core re-census | User has to intervene; no new proof edge |
+| **F15** | Plain Fréchet on Max+ conditional cov for \(g_{\min}\) | Cond means match Gaussian (Prop 15.50) but Fréchet only gives \(g_{\min}\gtrsim-0.4\) at \(p=5\), below bi-tight thresh | False hope of \(L(p)\) from 2-point Frechet |
 
 ---
 

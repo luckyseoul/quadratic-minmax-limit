@@ -1,0 +1,38 @@
+{
+  "lemma": "Conditional means of Max+ given two coordinates equal the Gaussian interpolant from \u03a3=I+C/p (Prop 15.50). Proved analytically; certified p=5,7.",
+  "certs": [
+    {
+      "p": 5,
+      "n_Max": 260,
+      "n_checked_slices": 160,
+      "max_abs_err": 1.1102230246251565e-16,
+      "ok": true
+    },
+    {
+      "p": 7,
+      "n_Max": 11452,
+      "n_checked_slices": 160,
+      "max_abs_err": 1.1102230246251565e-16,
+      "ok": true
+    }
+  ],
+  "disj_means": [
+    {
+      "p": 5,
+      "n_disj_per_edge": 276,
+      "sum_disj_G": 12,
+      "avg_disj_G": 0.043478260869565216,
+      "formula_1_over_p2_minus_2": 0.043478260869565216,
+      "match": true
+    },
+    {
+      "p": 7,
+      "n_disj_per_edge": 1128,
+      "sum_disj_G": 24,
+      "avg_disj_G": 0.02127659574468085,
+      "formula_1_over_p2_minus_2": 0.02127659574468085,
+      "match": true
+    }
+  ],
+  "status": "Prop 15.50 conditional-mean lemma certified at p=5,7; disj mean identity 1/(p^2-2) algebra OK. Residual: g_min >= L(p) still OPEN (Frechet on cond cov too weak)."
+}
