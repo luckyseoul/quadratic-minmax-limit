@@ -23,6 +23,7 @@
 | **F11** | Poll/sleep on background jobs | Use completion notifications | Wasted turns |
 | **F12** | Kill commands with `pgrep -f` matching the wrapper | Self-kill / no-op | Ops failure |
 | **F13** | Claim \(m_n\ge\Phi-2\) from edge-minimal gap alone | Abstract 2-Lipschitz local min on hypercube can drop by \(2d\) at distance \(d\); Prop 15.40 only bounds edge-minimal undercutters | False E(1) |
+| **F14** | Ignore this graph and re-run dead loops | Session thrash: serial MILP/SA, false m_n shortcut, soft-close, single-core re-census | User has to intervene; no new proof edge |
 
 ---
 
@@ -41,7 +42,7 @@ L = lim α_n
          └─ path C: permanent relative gap → limsup < 1/2 along family  [no construction]
 ```
 
-**Do not spend turns on F1–F12.** Next work must be a **proof edge** on path A or B (or a true parallel cert with W≥40 that writes durable JSON once), not another serial census.
+**Do not spend turns on F1–F14.** Next work must be a **proof edge** on path A or B (or a true parallel cert with W≥40 that writes durable JSON once), not another serial census.
 
 ---
 
