@@ -65,6 +65,8 @@ Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptot
 
 **Prop 15.39 (2026-07-28):** On all 11 stored Max-cover PMs at \(p=5\), clique-flip pair count \(N_{\mathrm{flip}}\in\{24,120\}\) (always \(\ge24\)). Open: prove \(N_{\mathrm{flip}}\ge1\) forall Max-cover PMs. See `evidence/E1_CLIQUE_FLIP_COUNT.md`. **Does not close E(1).**
 
+**Prop 15.40 (2026-07-28):** **Proved:** edge-minimal undercutters satisfy \(\Phi(C\oplus F)\ge\Phi(C)-2\) (edge lip + minimality). Open step to E(1): upgrade to \(m_n\ge\Phi(C)-2\) for all Seidel \(A\) (no deeper far undercut). If that holds, gap \(O(1)\) \(\Rightarrow\) E(1) \(\Rightarrow L=\tfrac12\). **Does not close E(1) yet.**
+
 **n=26 exact sparse MITM (2026-07-27):** shipped `phi_mitm` (exact \(\Phi\) for even \(n\le28\)). Random matchings, cycles \(C_4\)–\(C_{26}\), stars, and random \(k\le20\) flips of Paley \(C_{26}\): **0 undercuts of \(\Phi=65\)** (min observed 67 on single edges). Matching undercut of \(n=10\) does not lift. Consistent with \(k_\star=0\) at \(n=26\), not a proof. See `evidence/E1_N26_SPARSE_EXACT.md`.
 
 **MO thread re-audit (2026-07-27):** full re-read of [MO 413935](https://mathoverflow.net/questions/413935) + comments via SE API — **0 answers; no hidden proof**. Author already knew liminf \(\ge2^{-5/2}\) and that such bounds do **not** settle existence; not interested in numerics. Starr’s Bowlin/multipartite pointer is already dead for existence (§9–§10). **Time savings:** stop BH re-derivation, stop multipartite reopen, stop pure-SA as deliverable; only load-bearing E(1) (or permanent relative gap / non-existence) counts. Details: `evidence/MO_THREAD_REAUDIT.md`.

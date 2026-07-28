@@ -2165,3 +2165,84 @@ def test_prop_15_39_clique_flip_count_on_stored_maxcovers():
     assert note.is_file()
     assert "15.39" in (Path(__file__).resolve().parents[1] / "solution.md").read_text()
     assert "OPEN" in (Path(__file__).resolve().parents[1] / "HANDOFF.md").read_text()
+
+
+def test_prop_15_40_edge_minimal_undercutter_gap():
+    """Prop 15.40: edge-minimal undercutters of C_10 matchings have gap exactly 2."""
+    from itertools import product
+
+    C = paley_conference_prime_power(3)
+    n = 10
+    PhiC = 15.0
+
+    def phi_exact(A):
+        best = 0.0
+        for bits in product([-1.0, 1.0], repeat=n - 1):
+            x = np.array([1.0] + list(bits))
+            best = max(best, abs(form_Q(A, x)))
+        return best
+
+    # Boolean Max+
+    Mmat = C - 3 * np.eye(n)
+    _, s, vt = np.linalg.svd(Mmat)
+    rank = int((s > 1e-8).sum())
+    nb = vt[rank:].T
+    nul = n - rank
+    rng = np.random.default_rng(0)
+    coords = None
+    for _ in range(3000):
+        idx = rng.choice(n, size=nul, replace=False)
+        if np.linalg.matrix_rank(nb[idx], tol=1e-8) == nul:
+            coords = idx
+            break
+    Binv = np.linalg.inv(nb[coords])
+    found = []
+    for bits in range(1 << nul):
+        free = np.array([1.0 if (bits >> i) & 1 else -1.0 for i in range(nul)])
+        x = nb @ (Binv @ free)
+        if np.max(np.abs(np.abs(x) - 1.0)) < 1e-6:
+            found.append(np.sign(x))
+    Maxp = np.unique(np.round(found).astype(int), axis=0).astype(float)
+
+    def all_pm(nn):
+        def rec(rem):
+            rem = list(rem)
+            if not rem:
+                yield []
+                return
+            a = rem[0]
+            for bi, b in enumerate(rem[1:], 1):
+                rest = rem[1:bi] + rem[bi + 1 :]
+                for M in rec(rest):
+                    yield [(a, b)] + M
+
+        yield from rec(list(range(nn)))
+
+    n_checked = 0
+    for M in all_pm(n):
+        smin = min(sum(C[i, j] * y[i] * y[j] for i, j in M) for y in Maxp)
+        if smin < 1:
+            continue
+        A = C.copy()
+        for i, j in M:
+            A[i, j] *= -1
+            A[j, i] *= -1
+        ph = phi_exact(A)
+        assert ph < PhiC  # undercutter
+        # edge-minimal: every single-edge deletion is not undercut
+        for e in M:
+            A2 = C.copy()
+            for i, j in M:
+                if (i, j) == e:
+                    continue
+                A2[i, j] *= -1
+                A2[j, i] *= -1
+            assert phi_exact(A2) >= PhiC - 1e-9
+        # gap lemma
+        assert ph >= PhiC - 2 - 1e-9
+        n_checked += 1
+        if n_checked >= 20:
+            break
+    assert n_checked >= 20
+    assert "15.40" in (Path(__file__).resolve().parents[1] / "solution.md").read_text()
+    assert "OPEN" in (Path(__file__).resolve().parents[1] / "HANDOFF.md").read_text()

@@ -1227,6 +1227,24 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 *Open.* Prove \(N_{\mathrm{flip}}\ge1\) for every Max-cover matching when \(p=5\) (then matching non-undercut at \(p=5\)); lift to \(p\ge7\) and \(k_\star\). **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.40 (edge-minimal undercutters have gap at most 2; 2026-07-28).** Let \(C\) be any Seidel matrix of order \(n\) with \(\Phi(C)\in\mathbb Z\), and let \(F\) be a nonempty edge set such that \(\Phi(C\oplus F)<\Phi(C)\) while \(\Phi(C\oplus(F\setminus\{e\}))\ge\Phi(C)\) for every \(e\in F\) (edge-minimal undercutter). Then
+\[
+\Phi(C\oplus F)\;\ge\;\Phi(C)-2.
+\]
+*Proof.* For any \(e\in F\), Prop 15.20b with \(k=1\) gives \(|\Phi(C\oplus F)-\Phi(C\oplus(F\setminus\{e\}))|\le2\). Combined with \(\Phi(C\oplus F)<\Phi(C)\le\Phi(C\oplus(F\setminus\{e\}))\),
+\[
+\Phi(C\oplus F)
+\;\ge\;
+\Phi(C\oplus(F\setminus\{e\}))-2
+\;\ge\;
+\Phi(C)-2.
+\]
+(The same holds with \(\Phi\) replaced by any real threshold \(t\) for which \(F\) is edge-minimal among sets with \(\Phi(C\oplus\cdot)<t\).) \(\square\)
+
+*Certified.* On Paley \(C_{10}\), all 144 matching undercutters and sampled undercutting 6-cycles are edge-minimal and have gap exactly 2. Evidence: session checks; N10-S/C6.
+
+*Remark (does **not** yet give \(m_n\ge\Phi-2\)).* The lemma bounds edge-minimal undercutters only. A global lower bound \(m_n\ge\Phi(C)-2\) would require showing no deeper undercut exists at larger Hamming distance (or that a closest undercutter realises \(m_n\)). That step is **open**. If proved, E(1) follows (gap \(O(1)=o(n^{3/2})\)) and \(L=\tfrac12\) by denseness on the \(\rho=1\) family. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
