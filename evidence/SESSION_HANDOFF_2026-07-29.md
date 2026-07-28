@@ -1,12 +1,18 @@
 # Session handoff — 2026-07-29 (resume after shutdown / 1% quota cut)
 
 **Repo:** `/home/nick/quadratic-minmax-limit`  
-**HEAD:** `6add963` (Prop 15.50 conditional means; branch `main` ahead of origin ~72)  
+**HEAD:** `b7e932c` (Prop 15.51 equiv form; branch `main` ahead of origin ~74)  
 **L = lim α_n:** still **OPEN** — do **not** soft-close Main Theorem  
 
-**New (Prop 15.50, proved):** Max+ conditional means given two coordinates equal the Gaussian
-frame interpolant; \(\mathbb E[y_ky_l\mid y_i,y_j]=\alpha+\delta y_iy_j\); disj avg \(G=1/(p^2-2)\).
-Fréchet on cond cov **too weak** for \(L(p)\) (**F15**). Evidence: `e1_gmin_cond_mean.json`.
+**Prop 15.50 (proved):** Max+ conditional means = Gaussian interpolant; disj avg \(G=1/(p^2-2)\).
+Fréchet too weak (**F15**). `e1_gmin_cond_mean.json`.
+
+**Prop 15.51 (proved):** \(a=(1+pG)/(p+1)\); \(g_{\min}\ge T\Leftrightarrow\min a\ge1/(2p-1)\);
+disj sum deterministic on \(f_e=1\) slice; residual Loewner \(R\succeq\lambda_{\min}P_W\) (cert p=5,7).
+Cert: \(a_{\min}=5/39>1/9\) (p=5), \(a_{\min}=75/818>1/13\) (p=7). `e1_gmin_structure.json`.
+
+**P0 next:** prove \(a_{\min}\ge1/(2p-1)\) (or \(g_{\min}\ge L(p)\)) for all primes \(p\ge5\).
+Do **not** use incomplete PGL/affine orbits as full Max+ (only 60/260 at p=5).
 
 ---
 
