@@ -2629,3 +2629,36 @@ def test_prop_15_46_onebit_spike_formulas():
         # only when y is Max+ (Cy=py) does formula hold for this S definition with F={(0,1)}
         if np.allclose(C @ y, 3 * y):
             assert abs(qa_form - qa_dir) < 1e-6 or v not in (0, 1)
+
+
+def test_prop_15_47_bitight_gsum_obstruction():
+    """Prop 15.47: bi-tight blocked when g_min > -1/15; cert p=5,7."""
+    import json
+    from pathlib import Path as P
+
+    root = P(__file__).resolve().parents[1]
+    sol = (root / "solution.md").read_text()
+    assert "15.47" in sol
+    assert "Gsum" in sol or "gsum" in sol.lower() or "bi-tight" in sol
+    assert "OPEN" in (root / "HANDOFF.md").read_text()
+    chunk = sol[sol.index("15.47") : sol.index("15.47") + 3000]
+    assert "OPEN" in chunk
+
+    # Algebra: g_min > -(p-2)/(p(2p-1)) => 2 g_min * binom(2p,2) > 2(2-p)
+    for p in (5, 7, 11, 13, 17, 19):
+        B = p * (2 * p - 1)
+        thresh = -(p - 2) / (p * (2 * p - 1))
+        g = thresh + 1e-9
+        assert 2 * g * B > 2 * (2 - p)
+        # p=5: thresh equals -1/15
+        if p == 5:
+            assert abs(thresh + 1 / 15) < 1e-12
+
+    cert = root / "evidence" / "e1_bitight_gsum_obstruction.json"
+    assert cert.is_file()
+    data = json.loads(cert.read_text())
+    for row in data["rows"]:
+        assert row["bitight_blocked_by_2g"] is True
+        assert row["bitight_blocked_by_h"] is True
+        # h_min >= 2 g_min (theory); equality observed at p=5,7
+        assert row["h_min"] + 1e-9 >= row["two_g_min"]

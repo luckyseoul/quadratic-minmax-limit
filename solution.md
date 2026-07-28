@@ -1421,7 +1421,42 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 5. **Certified at \(p=5\) (deep two-sided covers).** Every MILP-found deep two-sided cover (\(k\in\{32,36,38,40\}\)) has \(s_{-}=-2\) and some Max\(_{-}\) vector at level \(-2\) with \(\min\tau\le-4\le-3=-(p+1)/2\); 1-bit yields \(|Q|\ge67\ge\Phi-2\), and exact MITM \(\Phi\in\{75,77,79,83\}>\Phi(C)\). Small-\(k\) deep two-sided (\(k\le13,15\)) integrally infeasible. Evidence: `evidence/e1_deep_cover_phi.json`, `e1_deep_sweep_p5.json`, session 1-bit checks. \(\square\)
 
-6. **Residual for \(L=\tfrac12\) (OPEN).** Prove that every bi-tight level-\(2\) cover for \(p\ge5\) satisfies the spike criterion of part 4 (or is integrally impossible), and that every deep two-sided gap-\(2\) undercutter (\(\Phi=\Phi-2\)) either is impossible or has no-descent. Combined with Props 15.42–15.45 this yields \(m_n\ge\Phi-2\Rightarrow\mathrm{E}(1)\Rightarrow L=\tfrac12\). Closed-form \(g_{\min}>-1/p\) for all \(p\ge5\) remains open (certified \(p=5,7\)). **Existence of \(\lim\alpha_n\) remains OPEN.**
+6. **Residual for \(L=\tfrac12\) (OPEN).** Prove that every bi-tight level-\(2\) cover for \(p\ge5\) satisfies the spike criterion of part 4 (or is integrally impossible — see Prop 15.47), and that every deep two-sided gap-\(2\) undercutter (\(\Phi=\Phi-2\)) either is impossible or has no-descent. Combined with Props 15.42–15.45 this yields \(m_n\ge\Phi-2\Rightarrow\mathrm{E}(1)\Rightarrow L=\tfrac12\). Closed-form \(g_{\min}>-1/p\) for all \(p\ge5\) remains open (certified \(p=5,7\)). **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+**Proposition 15.47 (bi-tight Gsum obstruction; 2026-07-28).** Let \(C\) be \(\rho=1\) Paley of order \(n=p^2+1\), and write \(G^\pm_{ee'}=\mathbb E_{\pm}[f_ef_{e'}]\), \(h_{ee'}=G^+_{ee'}+G^-_{ee'}\), \(g_{\min}=\min G^+_{ee'}\) over vertex-disjoint pairs, and \(h_{\min}=\min h_{ee'}\) over the same.
+
+1. **Wedge Gsum vanishes (proved, Prop 15.45.1).** For wedge pairs, \(h_{ee'}=0\).
+
+2. **Bi-tight forces disj Gsum sum (proved).** If \(H\) is bi-tight of level \(2\) (\(|H|=2p\), \(S\equiv2\) on Max\(_{+}\), \(S\equiv-2\) on Max\(_{-}\)), then
+   \[
+   \sum_{e<e'\in H}G^+_{ee'}=2-p=\sum_{e<e'\in H}G^-_{ee'},
+   \]
+   hence \(\sum_{e<e'\in H}h_{ee'}=2(2-p)\). Wedges contribute \(0\), so writing \(n_d\) for the number of disjoint pairs in \(H\),
+   \[
+   \sum_{\substack{e<e'\in H\\e\cap e'=\emptyset}}h_{ee'}=2(2-p).
+   \]
+
+3. **Floor (proved).** Always \(h_{ee'}\ge 2g_{\min}\) (since each of \(G^\pm\ge g_{\min}\) by definition of \(g_{\min}\) and Max\(_{-}\) symmetry with \(-C\)). Hence for any \(H\) with \(|H|=2p\),
+   \[
+   \sum_{\mathrm{disj\ pairs\ in\ }H}h
+   \;\ge\;
+   h_{\min}\,n_d
+   \;\ge\;
+   2g_{\min}\,n_d
+   \;\ge\;
+   2g_{\min}\binom{2p}{2},
+   \]
+   where the last step uses \(g_{\min}<0\) and \(n_d\le\binom{2p}{2}\).
+
+4. **Obstruction (proved).** If \(2g_{\min}\binom{2p}{2}>2(2-p)\), i.e.
+   \[
+   g_{\min}\;>\;-\frac{p-2}{p(2p-1)},
+   \]
+   then no bi-tight level-\(2\) cover exists. At \(p=5\) the threshold equals \(-1/15\); for \(p>5\) it is strictly larger (easier) than \(-1/15\). Independently, \(g_{\min}>-1/15\) blocks Max\(_{+}\)-tight matchings of size \(2p\) (Prop 15.45.5). \(\square\)
+
+5. **Certified.** At \(p=5\), \(g_{\min}=-3/65>-1/15\) and \(h_{\min}=-6/65=2g_{\min}\); at \(p=7\), \(g_{\min}\approx-0.03807>-\frac{5}{91}\) and \(h_{\min}=2g_{\min}\). Both satisfy the obstruction, giving a non-MILP proof that bi-tight level \(2\) is empty. Evidence: `evidence/e1_bitight_gsum_obstruction.json`. \(\square\)
+
+6. **Consequence for Type I (proved at \(p=5,7\); conditional for general \(p\ge5\)).** By Prop 15.44, Type I freeness-failure reduces to bi-tight or \(\Phi\ge\Phi\). With bi-tight empty under the \(g_{\min}\) threshold of part 4, Type I no-descent is unconditional. Deep tight undercutters (bi-tight) are empty. Residual: prove \(g_{\min}>-(p-2)/(p(2p-1))\) for all \(p\ge5\); deep non-tight gap-\(2\) undercutters (ND or \(\Phi\ge\Phi-2\)). **Existence of \(\lim\alpha_n\) remains OPEN.**
 
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[

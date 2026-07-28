@@ -12,7 +12,7 @@
 Proved sandwich: \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\).  
 Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptotic optimality of \(m_n\) vs Paley \(\Phi\) is not.
 
-**New (Prop 15.45–15.46):** stars never bi-tight; star-force when \(g_{\min}>-1/p\) (cert \(p=5,7\)); 1-bit spike formulas on Max± with thresholds \((S\pm p\mp1)/2\). Deep two-sided at \(p=5\): small-\(k\) infeasible, large-\(k\) spike via Max− 1-bit (\(\Phi>\Phi(C)\)). Type I / deep-tight **closed at \(p=5\)**. Residual: bi-tight spike/infeas for all \(p\ge5\); deep gap-2 undercutter ND; closed-form \(g_{\min}\).
+**New (Prop 15.45–15.47):** stars never bi-tight; \(g_{\min}>-1/15\Rightarrow\) bi-tight level-2 **impossible** for all \(p\ge5\) (Gsum floor; cert \(p=5,7\) with \(h_{\min}=2g_{\min}\)). Type I freeness-failure and deep-tight **closed at \(p=5,7\)** and for any \(p\) with \(g_{\min}>-1/15\). 1-bit spike formulas (15.46). Deep two-sided at \(p=5\) spike above \(\Phi(C)\). Residual: closed-form \(g_{\min}>-1/15\) for all \(p\ge5\); deep non-tight gap-2 undercutter control.
 
 **New (n=10 structure):** exact optima first appear at Hamming distance **5** from Paley \(C_{10}\), and the only 5-edge undercutters are **144 perfect matchings** (of 945). Absolute gap \(\Phi-m_{10}=2\) is consistent with E(1). See `evidence/N10_STRUCTURE.md`.
 

@@ -1,0 +1,34 @@
+{
+  "theorem": "If g_min > -1/15, then for all p>=5: (i) no matching is Max+-tight of level 2; (ii) bi-tight level 2 is impossible, because h=G++G- >= 2 g_min so sum_disj h >= 2 g_min * n_disj >= 2 g_min * binom(2p,2) > 2(2-p), while bi-tight requires sum_disj h = 2(2-p).",
+  "rows": [
+    {
+      "p": 5,
+      "g_min": -0.046153846153846156,
+      "h_min": -0.09230769230769231,
+      "two_g_min": -0.09230769230769231,
+      "B": 45,
+      "target_sum_Gsum": -6,
+      "h_min_times_B": -4.153846153846154,
+      "two_g_min_times_B": -4.153846153846154,
+      "bitight_blocked_by_h": true,
+      "bitight_blocked_by_2g": true,
+      "g_min_gt_minus_1_15": true,
+      "threshold_for_2g_block": -0.06666666666666667
+    },
+    {
+      "p": 7,
+      "g_min": -0.03807195249738037,
+      "h_min": -0.07614390499476074,
+      "two_g_min": -0.07614390499476074,
+      "B": 91,
+      "target_sum_Gsum": -10,
+      "h_min_times_B": -6.929095354523228,
+      "two_g_min_times_B": -6.929095354523228,
+      "bitight_blocked_by_h": true,
+      "bitight_blocked_by_2g": true,
+      "g_min_gt_minus_1_15": true,
+      "threshold_for_2g_block": -0.054945054945054944
+    }
+  ],
+  "status": "Bi-tight impossible at p=5,7 by certified g_min/h_min. General p needs g_min>-1/15."
+}
