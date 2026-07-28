@@ -1,0 +1,10 @@
+{
+  "p": 5,
+  "n_Max": 260,
+  "pgl_frob_sign_orbit": 60,
+  "orbit_subset_Max": true,
+  "covers_Max": false,
+  "missing": 200,
+  "extra_non_max": 0,
+  "status": "orbit 60 of 260 Max+; character sums on incomplete orbit invalid for gmin"
+}

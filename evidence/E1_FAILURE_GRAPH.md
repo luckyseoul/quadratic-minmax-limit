@@ -27,6 +27,7 @@
 | **F15** | Plain Fréchet on Max+ conditional cov for \(g_{\min}\) | Cond means match Gaussian (Prop 15.50) but Fréchet only gives \(g_{\min}\gtrsim-0.4\) at \(p=5\), below bi-tight thresh | False hope of \(L(p)\) from 2-point Frechet |
 | **F16** | Pin free modulus \(c\) by max \(g_{\min}\) under PSD of \(G(c)\) | At \(p=5\), PSD+rank hold on a continuum; max PSD \(g_{\min}\approx-0.040\) at wrong \(c\); true \(g_{\min}=-3/65\) needs \(\mathrm{Tr}(G^2)\)/spectrum | Spurious “better” gmin; wrong pin |
 | **F17** | Full pytest / long suite on **1 core** (no `-n W`) | 88 cores idle; ~90–120s wall for a suite that is embarrassingly parallel; agent has broken this promise repeatedly | `pytest …` without `-n`; one python at ~100% CPU |
+| **F18** | Character sums / moments on affine or PGL orbit of halfspace as full Max+ | Orbit size 60 of 260 at \(p=5\) (PGL+Frob+sign); affine gmin ≈ −0.6 ≠ −3/65 | Incomplete orbit; wrong \(g_{\min}\) |
 
 ---
 

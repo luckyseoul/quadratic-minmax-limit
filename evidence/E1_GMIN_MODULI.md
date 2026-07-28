@@ -59,6 +59,6 @@ A general-\(p\) eigenvalue formula would close the pin.
 
 ## Related
 
-- Prop 15.51–15.53 in `solution.md`.
-- F15: plain Fréchet too weak; F16: PSD-max pin banned.
-- Incomplete Aut-orbits of halfspace ≠ full Max+ (60/260 at \(p=5\)).
+- Prop 15.51–15.54 in `solution.md`.
+- F15: plain Fréchet too weak; F16: PSD-max pin banned; **F18:** PGL+Frob+sign orbit of halfspace = 60/260 (not full Max+).
+- `e1_gmin_pgl_orbit.json`, `e1_gmin_cbound.json`, `e1_gmin_abound.json`.
