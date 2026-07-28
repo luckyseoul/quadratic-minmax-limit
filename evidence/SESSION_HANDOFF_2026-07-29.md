@@ -12,6 +12,9 @@ disj sum deterministic on \(f_e=1\) slice; residual Loewner \(R\succeq\lambda_{\
 Cert: \(a_{\min}=5/39>1/9\) (p=5), \(a_{\min}=75/818>1/13\) (p=7). `e1_gmin_structure.json`.
 
 **P0 next:** prove \(a_{\min}\ge1/(2p-1)\) (or \(g_{\min}\ge L(p)\)) for all primes \(p\ge5\).
+
+**Best attack (2026-07-29 evening):** refined \(C\)-classes \((\mathrm{CR},\kappa,\triangle)\) → evec linear system with **nullity 1**; pin free parameter by \(\mathrm{Tr}(G^2)\) (quadratic in the modulus). Recovers exact \(g_{\min}=-3/65\) at \(p=5\). See `evidence/E1_GMIN_MODULI.md`. Need: nullity-1 for general \(p\) + closed-form \(\mathrm{Tr}(G^2)\) (or \(G\)-spectrum).
+
 Do **not** use incomplete PGL/affine orbits as full Max+ (only 60/260 at p=5).
 
 ---
