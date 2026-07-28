@@ -1,0 +1,290 @@
+{
+  "p": 5,
+  "results": [
+    {
+      "k": 10,
+      "ok": false,
+      "infeas": true,
+      "timeout": false,
+      "sec": 54.41625380516052,
+      "msg": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "k": 11,
+      "ok": false,
+      "infeas": true,
+      "timeout": false,
+      "sec": 0.6169214248657227,
+      "msg": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "k": 12,
+      "ok": false,
+      "infeas": true,
+      "timeout": false,
+      "sec": 14.772523164749146,
+      "msg": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "k": 13,
+      "ok": false,
+      "infeas": true,
+      "timeout": false,
+      "sec": 0.5919842720031738,
+      "msg": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "k": 14,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.05578875541687,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 15,
+      "ok": false,
+      "infeas": true,
+      "timeout": false,
+      "sec": 39.47712421417236,
+      "msg": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "k": 16,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.14913892745972,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 17,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.05486011505127,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 18,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.1057620048523,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 19,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.06533241271973,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 20,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.07215929031372,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 21,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.08527541160583,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 22,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.08894991874695,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 23,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.09420537948608,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 24,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.07381629943848,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 25,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.07190227508545,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 26,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.11659741401672,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 27,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.10924577713013,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 28,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.09903025627136,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 29,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.07628154754639,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 30,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.0983338356018,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 31,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.11294293403625,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 32,
+      "ok": true,
+      "infeas": false,
+      "timeout": false,
+      "sec": 20.03525161743164,
+      "msg": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "k": 33,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.08839535713196,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 34,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.08286619186401,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 35,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.10601472854614,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 36,
+      "ok": true,
+      "infeas": false,
+      "timeout": false,
+      "sec": 1.3075544834136963,
+      "msg": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "k": 37,
+      "ok": false,
+      "infeas": false,
+      "timeout": true,
+      "sec": 90.08337926864624,
+      "msg": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)"
+    },
+    {
+      "k": 38,
+      "ok": true,
+      "infeas": false,
+      "timeout": false,
+      "sec": 0.4897885322570801,
+      "msg": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "k": 39,
+      "ok": true,
+      "infeas": false,
+      "timeout": false,
+      "sec": 17.86294937133789,
+      "msg": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "k": 40,
+      "ok": true,
+      "infeas": false,
+      "timeout": false,
+      "sec": 0.4446709156036377,
+      "msg": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    }
+  ],
+  "infeasible_ks": [
+    10,
+    11,
+    12,
+    13,
+    15
+  ],
+  "feasible_ks": [
+    32,
+    36,
+    38,
+    39,
+    40
+  ],
+  "timeout_ks": [
+    14,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    33,
+    34,
+    35,
+    37
+  ]
+}

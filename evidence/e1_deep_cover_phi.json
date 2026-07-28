@@ -1,0 +1,50 @@
+{
+  "p": 5,
+  "note": "Deep two-sided covers exist at large k but SPIKE (Phi > Phi(C)), do not undercut",
+  "feasible_deep_phi": [
+    {
+      "k": 32,
+      "minS+": 2,
+      "maxS+": 18,
+      "minS-": -16,
+      "maxS-": -2,
+      "Phi": 77,
+      "Phi_C": 65
+    },
+    {
+      "k": 36,
+      "minS+": 2,
+      "maxS+": 22,
+      "minS-": -20,
+      "maxS-": -2,
+      "Phi": 75,
+      "Phi_C": 65
+    },
+    {
+      "k": 38,
+      "minS+": 2,
+      "maxS+": 16,
+      "minS-": -18,
+      "maxS-": -2,
+      "Phi": 83,
+      "Phi_C": 65
+    },
+    {
+      "k": 40,
+      "minS+": 2,
+      "maxS+": 22,
+      "minS-": -22,
+      "maxS-": -2,
+      "Phi": 79,
+      "Phi_C": 65
+    }
+  ],
+  "all_spike_above_Phi_C": true,
+  "infeasible_small_k": [
+    10,
+    11,
+    12,
+    13,
+    15
+  ]
+}
