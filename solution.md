@@ -1653,6 +1653,46 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 6. **Residual (OPEN).** Prove \(\lambda_{\max}(G)=n/2\) (simple) for **all primes \(p\ge5\)**. Then bi-tight / Type I residual of Path C closes without a uniform \(g_{\min}\) bound. Deep non-tight gap-\(2\) residual remains. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.56 (star/cycle decomposition and Schur-square reduction; 2026-07-30).** Continue Prop 15.55. Write \(E=\binom{n}{2}\), \(d=n/2\), \(N=|\mathrm{Max}_{+}|\), and let \(Y\) be the \(N\times n\) matrix of Max+ vectors.
+
+1. **Star action (proved).** Let \(u^{(i)}\in\mathbb R^E\) be the indicator of edges incident to vertex \(i\). Then \(u^{(i)\top}f=p\) for every Max+ feature vector \(f\) (star sum), hence
+   \[
+   Gu^{(i)}=\mathbf1\qquad\text{for all }i.
+   \]
+   Consequently \(G(u^{(i)}-u^{(j)})=0\), so \(\ker G\) contains the \((n-2)\)-dimensional space of star differences orthogonal to the all-ones edge vector. *Proof.* \(f\cdot u^{(i)}=p\) constantly, so \(G u^{(i)}=\mathbb E[f\,p]=p\cdot\mathbb E[f]=\mathbf1\). \(\square\)
+
+2. **Cycle reduction (proved).** Let \(\mathrm{Cyc}=\{v\in\mathbb R^E:\sum_{j\neq i}v_{ij}=0\ \forall i\}\) (cycle space, dim \(E-n+1\)). Then
+   \[
+   \lambda_{\max}(G)=\max\bigl(n/2,\ \lambda_{\max}(G|_{\mathrm{Cyc}})\bigr).
+   \]
+   *Proof.* The star space has dimension \(n-1\), carries the eigenvalue \(n/2\) along \(\mathbf1\), and contributes \(n-2\) kernel directions by part 1; all remaining positive spectrum lies in \(\mathrm{Cyc}\). \(\square\)
+
+3. **Schur-square dual (proved).** Let \(D=YY^\top\) and \(P=D/(2N)\). Then \(P\) is the orthogonal projector of rank \(d\) with constant diagonal \(P_{aa}=d/N\), and the nonzero eigenvalues of \(G\) other than \(n/2\) equal \(2N\) times the eigenvalues of \(P\odot P\) on \(\mathbf1^\perp\subset\mathbb R^N\). In particular
+   \[
+   \lambda_{\max}(G|_{\mathrm{Cyc}})=2N\cdot\lambda_2(P\odot P),
+   \]
+   so
+   \[
+   \lambda_{\max}(G)=\tfrac n2
+   \quad\Longleftrightarrow\quad
+   \lambda_2(P\odot P)\le \frac d{2N}.
+   \]
+   *Proof.* \(D\) has spectrum \(2N\) (\(d\) times) and \(0\); \(P=QQ^\top\) for \(Q^\top Q=I_d\). Feature Gram identity \(K_{ab}=((y_a\cdot y_b)^2-n)/2\) gives \(K=2N^2(P\odot P)-\frac n2 J\), and nonzero eigenvalues of \(G\) match those of \(K/N\). On \(\mathbf1^\perp\), \(J=0\), yielding the factor \(2N\). \(\square\)
+
+4. **Average cycle eigenvalue (proved for \(p\ge5\)).** Writing \(k=\binom{d-1}{2}-1\) for the cycle rank,
+   \[
+   \frac1k\sum_{\mathrm{cycle}}\lambda_j
+   =\frac{n(n-2)/2}{k}
+   <\frac n2
+   \quad\text{for all primes }p\ge5.
+   \]
+   *Proof.* Algebra: \(n-1\le(d-1)(d-2)/2\) rearranges to the claim; holds for \(n=p^2+1\ge26\). \(\square\)
+   (Average \(<n/2\) is necessary but not sufficient for \(\lambda_{\max}(\mathrm{cycle})\le n/2\).)
+
+5. **Certified spectral gap.** At \(p=5,7\): \(\lambda_2(P\odot P)\le d/(2N)\) (hence \(\lambda_{\max}(G)=n/2\) simple). At \(p=3\): \(\lambda_2=1/3>5/24=d/(2N)\) (hence \(\lambda_{\max}=8>5\)). Evidence: `e1_gmin_spectral.json`.
+
+6. **Residual (OPEN).** Prove \(\lambda_2(P\odot P)\le d/(2N)\) for every prime \(p\ge5\) (equivalently \(\lambda_{\max}(G|_{\mathrm{Cyc}})\le n/2\)). Then Prop 15.55 closes bi-tight / Type I for all such \(p\). Deep non-tight residual independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

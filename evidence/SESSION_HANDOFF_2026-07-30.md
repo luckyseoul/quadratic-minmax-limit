@@ -9,10 +9,11 @@
 
 ## 0. One-line resume (read this first)
 
-**P0 in flight (best path):** prove \(\lambda_{\max}(G)=n/2\) simple for all primes \(p\ge5\) (Prop 15.55 ⇒ bi-tight / Type I residual **closes**).  
-**Alt P0:** \(g_{\min}>T(p)\) via moduli+Tr pin for all \(p\ge5\).  
-**Done:** Props 15.53–15.55; F16–F18; deep spike certs p=5.  
-**Still needed:** spectral hyp ∀p≥5 **or** gmin LB; then deep ND. **L OPEN.**
+**P0 in flight (best path):** prove \(\lambda_2(P\odot P)\le d/(2N)\) for all primes \(p\ge5\)  
+(Prop 15.56 ⇔ \(\lambda_{\max}(G)=n/2\) ⇔ Prop 15.55 kills bi-tight/Type I).  
+**Done:** Props 15.53–15.56 full star/cycle/Schur structure; gap cert p=5,7; F16–F18.  
+**Still needed:** spectral gap proof ∀p≥5; then deep ND. **L OPEN.**  
+**Key files:** `src/e1_gmin_spectral.py`, `evidence/e1_gmin_spectral.json`, Prop 15.56 in `solution.md`.
 
 ---
 

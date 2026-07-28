@@ -445,3 +445,53 @@ def test_prop_15_55_in_solution_and_evidence():
     assert "OPEN" in data["status"]
     assert data["results"][1]["p"] == 5
     assert data["results"][1]["n_over_2_is_simple_max"] is True
+
+
+def test_prop_15_56_star_maps_to_one():
+    """Shipped identity: G u^{(i)} = 1 for star indicators (drive real G)."""
+    import sys
+
+    import numpy as np
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_spectral import analyze
+
+    for p in (3, 5, 7):
+        r = analyze(p)
+        assert r["stars_map_to_one"]
+        assert r["row_sum_ok"]
+        assert r["lambda_max_is_max_of_nhalf_and_cycle"]
+        assert r["star_differences_in_ker"]
+
+
+def test_prop_15_56_avg_cycle_algebra_and_gap():
+    """Average cycle eig < n/2 for p>=5; spectral gap cert p=5,7 fail p=3."""
+    import sys
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_spectral import analyze
+
+    r3 = analyze(3)
+    assert not r3["spectral_gap_ok"]
+    assert r3["lambda_max_G"] > r3["n_over_2"]
+
+    for p in (5, 7):
+        r = analyze(p)
+        assert r["avg_cycle_lt_n_over_2"]
+        assert r["avg_cycle_formula_lt_nhalf_algebra"]
+        assert r["spectral_gap_ok"]
+        assert r["simple_lambda_max_eq_n_over_2"]
+        # reduction identity
+        assert abs(r["two_N_times_lambda2_PP"] - r["lambda_max_cycle"]) < 1e-6
+
+
+def test_prop_15_56_in_solution_and_evidence():
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.56" in sol
+    assert "OPEN" in sol[sol.index("15.56") : sol.index("15.56") + 4000]
+    path = ROOT / "evidence" / "e1_gmin_spectral.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    assert "OPEN" in data["status"]
+    assert data["results"][1]["spectral_gap_ok"] is True
+    assert data["results"][2]["spectral_gap_ok"] is True
