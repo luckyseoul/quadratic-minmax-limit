@@ -47,8 +47,10 @@ Routes:
      and deep-tight vanish under this hypothesis.
    - **Still open for full \(m_n\ge\Phi-2\):**  
      (i) closed-form \(g_{\min}>-(p-2)/(p(2p-1))\) for **all** \(p\ge5\) (cert only \(p=5,7\);  
-         4-point LP / Chebyshev / Wick-as-LB are **dead** — see `SESSION_HANDOFF_2026-07-28.md`);  
-     (ii) deep non-tight gap-2 undercutters: ND or \(\Phi\ge\Phi-2\) always (spike);  
+         **dead:** 4-point LP, Chebyshev, Wick-as-LB, bare \(C\)-type constancy of \(G\),  
+         affine halfspace orbit alone, pure deg pigeon — see `SESSION_HANDOFF_2026-07-28.md`,  
+         `e1_gmin_formula.json`, `e1_gmin_linear_system.json`);  
+     (ii) deep non-tight gap-2 undercutters: ND or \(\Phi\ge\Phi-2\) always (spike / τ-force);  
      (iii) \(p=3\) already closed.  
    Then \(m_n\ge\Phi-2\Rightarrow\mathrm{E}(1)\Rightarrow L=\tfrac12\). **F13 intact.**
 

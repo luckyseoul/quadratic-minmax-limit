@@ -1,0 +1,92 @@
+{
+  "results": {
+    "5": {
+      "n_4set_types": 11,
+      "n_edgepair_types": 64,
+      "n_edgepair_types_constant_G": 1,
+      "n_4set_types_constant_m4": 1,
+      "g_min": -0.046153846153846156,
+      "bitight_threshold": -0.06666666666666667,
+      "g_min_gt_threshold": true,
+      "all_edgepair_G_constant": false,
+      "all_m4_constant": false,
+      "type_m4_sample": {
+        "(1, 1, 1, 1, 1, 1)": {
+          "m4_mean": 0.08307692307692308,
+          "m4_std": 0.06122999612963814,
+          "n_quads": 325,
+          "constant": false
+        },
+        "(-1, 1, 1, 1, 1, 1)": {
+          "m4_mean": 0.027692307692307693,
+          "m4_std": 0.02820046581511286,
+          "n_quads": 1950,
+          "constant": false
+        },
+        "(-1, -1, 1, 1, 1, 1)": {
+          "m4_mean": -0.024615384615384615,
+          "m4_std": 0.029351975428213713,
+          "n_quads": 3300,
+          "constant": false
+        },
+        "(-1, -1, 1, -1, 1, 1)": {
+          "m4_mean": -0.24923076923076923,
+          "m4_std": 0.06029513213004747,
+          "n_quads": 950,
+          "constant": false
+        },
+        "(-1, -1, -1, 1, 1, 1)": {
+          "m4_mean": -0.058461538461538454,
+          "m4_std": 0.05870395085642743,
+          "n_quads": 700,
+          "constant": false
+        },
+        "(-1, 1, 1, 1, 1, -1)": {
+          "m4_mean": 0.22461538461538466,
+          "m4_std": 0.04923076923076924,
+          "n_quads": 600,
+          "constant": false
+        },
+        "(-1, -1, 1, 1, -1, 1)": {
+          "m4_mean": 0.018461538461538463,
+          "m4_std": 0.03061499806481907,
+          "n_quads": 3000,
+          "constant": false
+        },
+        "(-1, -1, -1, -1, 1, 1)": {
+          "m4_mean": -0.027692307692307693,
+          "m4_std": 0.028200465815112864,
+          "n_quads": 2400,
+          "constant": false
+        }
+      },
+      "g_type_mins": [
+        [
+          -0.046153846153846156,
+          "(-1, -1, -1, -1, 1, 1)"
+        ],
+        [
+          -0.046153846153846156,
+          "(-1, -1, -1, 1, -1, 1)"
+        ],
+        [
+          -0.046153846153846156,
+          "(-1, -1, 1, -1, 1, -1)"
+        ],
+        [
+          -0.046153846153846156,
+          "(-1, -1, 1, 1, -1, -1)"
+        ],
+        [
+          -0.046153846153846156,
+          "(-1, 1, -1, -1, -1, -1)"
+        ]
+      ]
+    },
+    "7": {
+      "error": "no Max+ cache"
+    }
+  },
+  "lemma_draft": "If the edge-pair correlation G is constant on each C-isomorphism class of disjoint pairs (verified numerically when all_edgepair_G_constant), then g_min is an algebraic function of p via the Bose-Mesner algebra of the Paley conference 2-graph. Empirical: at p=5,7 G is constant on each type (std=0). Closed form extraction: solve linear system from Cy=py on type representatives.",
+  "status": "p=5 constant G types: False; p=7: None. If true, g_min is scheme eigenvalue; extract closed form next."
+}

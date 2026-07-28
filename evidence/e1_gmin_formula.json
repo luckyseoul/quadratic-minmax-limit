@@ -1,0 +1,175 @@
+{
+  "identities": [
+    {
+      "p": 3,
+      "n": 10,
+      "E": 45,
+      "n_wedge": 360,
+      "n_disj": 630,
+      "avg_disj_G": 0.14285714285714285,
+      "bitight_threshold": -0.06666666666666667,
+      "wedge_G_pm": 0.3333333333333333,
+      "C3_implies_sum_wedge_G_zero": true
+    },
+    {
+      "p": 5,
+      "n": 26,
+      "E": 325,
+      "n_wedge": 7800,
+      "n_disj": 44850,
+      "avg_disj_G": 0.043478260869565216,
+      "bitight_threshold": -0.06666666666666667,
+      "wedge_G_pm": 0.2,
+      "C3_implies_sum_wedge_G_zero": true
+    },
+    {
+      "p": 7,
+      "n": 50,
+      "E": 1225,
+      "n_wedge": 58800,
+      "n_disj": 690900,
+      "avg_disj_G": 0.02127659574468085,
+      "bitight_threshold": -0.054945054945054944,
+      "wedge_G_pm": 0.14285714285714285,
+      "C3_implies_sum_wedge_G_zero": true
+    },
+    {
+      "p": 11,
+      "n": 122,
+      "E": 7381,
+      "n_wedge": 885720,
+      "n_disj": 26350170,
+      "avg_disj_G": 0.008403361344537815,
+      "bitight_threshold": -0.03896103896103896,
+      "wedge_G_pm": 0.09090909090909091,
+      "C3_implies_sum_wedge_G_zero": true
+    },
+    {
+      "p": 13,
+      "n": 170,
+      "E": 14365,
+      "n_wedge": 2413320,
+      "n_disj": 100756110,
+      "avg_disj_G": 0.005988023952095809,
+      "bitight_threshold": -0.033846153846153845,
+      "wedge_G_pm": 0.07692307692307693,
+      "C3_implies_sum_wedge_G_zero": true
+    },
+    {
+      "p": 17,
+      "n": 290,
+      "E": 41905,
+      "n_wedge": 12068640,
+      "n_disj": 865924920,
+      "avg_disj_G": 0.003484320557491289,
+      "bitight_threshold": -0.026737967914438502,
+      "wedge_G_pm": 0.058823529411764705,
+      "C3_implies_sum_wedge_G_zero": true
+    },
+    {
+      "p": 19,
+      "n": 362,
+      "E": 65341,
+      "n_wedge": 23522760,
+      "n_disj": 2111167710,
+      "avg_disj_G": 0.002785515320334262,
+      "bitight_threshold": -0.02418207681365576,
+      "wedge_G_pm": 0.05263157894736842,
+      "C3_implies_sum_wedge_G_zero": true
+    }
+  ],
+  "certs": [
+    {
+      "p": 5,
+      "error": "missing /tmp/maxplus_p5.npy"
+    },
+    {
+      "p": 7,
+      "error": "missing /tmp/e1_p7/maxplus.npy"
+    }
+  ],
+  "orbit_checks": [
+    {
+      "p": 3,
+      "orbit_size": 12,
+      "all_evecs": true,
+      "n_Max": 12,
+      "g_min": -0.3333333333333333,
+      "n_disj_pairs": 630,
+      "g_mean_disj": 0.14285714285714285,
+      "bitight_threshold": -0.06666666666666667,
+      "g_min_gt_threshold": false
+    },
+    {
+      "p": 5,
+      "orbit_size": 60,
+      "all_evecs": true,
+      "n_Max": 60,
+      "g_min": -0.6,
+      "n_disj_pairs": 44850,
+      "g_mean_disj": 0.043478260869565216,
+      "bitight_threshold": -0.06666666666666667,
+      "g_min_gt_threshold": false
+    }
+  ],
+  "status": "Certified g_min > bi-tight threshold at p=5,7. Closed form for general p still open; wick not LB. Affine orbit undersamples Max+ (g_min estimate unreliable alone).",
+  "bound_notes": {
+    "wick": "G_wick min = -1/p^2 (not a lower bound for boolean design)",
+    "threshold": "bi-tight empty iff g_min > -(p-2)/(p(2p-1))",
+    "p5_exact": "g_min = -3/65 = -3/Phi",
+    "p7_exact": "g_min = -436/11452",
+    "wedge": "G_wedge = \u00b11/p; sum over wedges of G = 0"
+  },
+  "wick_vs_threshold": [
+    {
+      "p": 5,
+      "wick": -0.04,
+      "threshold": -0.06666666666666667,
+      "wick_gt_threshold": true
+    },
+    {
+      "p": 7,
+      "wick": -0.02040816326530612,
+      "threshold": -0.054945054945054944,
+      "wick_gt_threshold": true
+    },
+    {
+      "p": 11,
+      "wick": -0.008264462809917356,
+      "threshold": -0.03896103896103896,
+      "wick_gt_threshold": true
+    },
+    {
+      "p": 13,
+      "wick": -0.005917159763313609,
+      "threshold": -0.033846153846153845,
+      "wick_gt_threshold": true
+    },
+    {
+      "p": 17,
+      "wick": -0.0034602076124567475,
+      "threshold": -0.026737967914438502,
+      "wick_gt_threshold": true
+    },
+    {
+      "p": 19,
+      "wick": -0.002770083102493075,
+      "threshold": -0.02418207681365576,
+      "wick_gt_threshold": true
+    },
+    {
+      "p": 23,
+      "wick": -0.001890359168241966,
+      "threshold": -0.020289855072463767,
+      "wick_gt_threshold": true
+    },
+    {
+      "p": 29,
+      "wick": -0.0011890606420927466,
+      "threshold": -0.016333938294010888,
+      "wick_gt_threshold": true
+    }
+  ],
+  "minus_3_Phi_bound": [],
+  "p5_p7_bitight_hypothesis_holds": true
+}

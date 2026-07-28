@@ -1,0 +1,55 @@
+{
+  "thresholds": [
+    {
+      "p": 3,
+      "sigma_thresh_S2": 2.0,
+      "tau_thresh_Sm2": -2.0
+    },
+    {
+      "p": 5,
+      "sigma_thresh_S2": 3.0,
+      "tau_thresh_Sm2": -3.0
+    },
+    {
+      "p": 7,
+      "sigma_thresh_S2": 4.0,
+      "tau_thresh_Sm2": -4.0
+    },
+    {
+      "p": 11,
+      "sigma_thresh_S2": 6.0,
+      "tau_thresh_Sm2": -6.0
+    }
+  ],
+  "theory": [
+    {
+      "p": 5,
+      "n": 26,
+      "k_min_deep": 10,
+      "avg_deg_at_kmin": 0.7692307692307693,
+      "Delta_lower_at_kmin": 1,
+      "tau_thresh_boundary": -3.0,
+      "note": "Pure degree pigeon at k=2p insufficient (avg deg <1 for p>=5)"
+    },
+    {
+      "p": 7,
+      "n": 50,
+      "k_min_deep": 14,
+      "avg_deg_at_kmin": 0.56,
+      "Delta_lower_at_kmin": 1,
+      "tau_thresh_boundary": -4.0,
+      "note": "Pure degree pigeon at k=2p insufficient (avg deg <1 for p>=5)"
+    },
+    {
+      "p": 11,
+      "n": 122,
+      "k_min_deep": 22,
+      "avg_deg_at_kmin": 0.36065573770491804,
+      "Delta_lower_at_kmin": 1,
+      "tau_thresh_boundary": -6.0,
+      "note": "Pure degree pigeon at k=2p insufficient (avg deg <1 for p>=5)"
+    }
+  ],
+  "p5_covers": [],
+  "status": "missing Max+/- cache; run e1_bitight / deep hunt first"
+}
