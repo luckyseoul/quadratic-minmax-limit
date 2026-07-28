@@ -1,0 +1,74 @@
+{
+  "p": 5,
+  "deep": [
+    {
+      "k": 14,
+      "ok": false,
+      "infeasible": false,
+      "timeout": true,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "seconds": 240.04559874534607
+    },
+    {
+      "k": 15,
+      "ok": false,
+      "infeasible": true,
+      "timeout": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "seconds": 33.026161909103394
+    },
+    {
+      "k": 16,
+      "ok": false,
+      "infeasible": false,
+      "timeout": true,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "seconds": 240.05154538154602
+    },
+    {
+      "k": 18,
+      "ok": false,
+      "infeasible": false,
+      "timeout": true,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "seconds": 240.0475778579712
+    },
+    {
+      "k": 20,
+      "ok": false,
+      "infeasible": false,
+      "timeout": true,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "seconds": 240.06667184829712
+    }
+  ],
+  "min_max_S_minus": [
+    {
+      "k": 12,
+      "success": false,
+      "min_max_S_minus": null,
+      "timeout": true,
+      "message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+      "seconds": 240.0480399131775
+    },
+    {
+      "k": 14,
+      "success": false,
+      "min_max_S_minus": null,
+      "timeout": true,
+      "message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+      "seconds": 240.045179605484
+    },
+    {
+      "k": 15,
+      "success": false,
+      "min_max_S_minus": null,
+      "timeout": true,
+      "message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+      "seconds": 240.0496051311493
+    }
+  ],
+  "any_deep_found": false,
+  "workers": 12,
+  "seconds": 480.6011612415314
+}

@@ -84,7 +84,7 @@ L = lim α_n
 
 ## Next allowed moves (only)
 
-1. **Prove residual Prop 15.42 no-descent** (Type I large-k / deep non-tight k>2p) — closes m_n≥Φ−2. Done: dichotomy, tight S≡1/2, Type I large N_1.
+1. **Lift Prop 15.45:** prove \(g_{\min}>-1/p\) for all \(p\ge5\) (closes star force); prove bi-tight integral infeas for all \(p\ge5\); kill deep non-tight \(k>2p\).
 2. **Proof draft** of Max-cover ⇒ clique-flip (or other spike) using design/AG(2,p) — no new SA.
 3. **Proof draft** of k_⋆ / path-cycle for E(1) — no soft close.
 4. **If** numeric cert: rewrite as `W`-worker batch, verify offline, one evidence file; mark incomplete enum as incomplete.

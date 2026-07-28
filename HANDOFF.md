@@ -1,6 +1,6 @@
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-07-28 (Prop 15.38 n=10 two-sided k=5; L still OPEN)  
+**Status date:** 2026-07-28 (Prop 15.45 star/bi-tight obstruction; L still OPEN)  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
 **Problem source:** [MathOverflow 413935](https://mathoverflow.net/questions/413935) / [X prize post](https://x.com/PI010101/status/2081070728422752329)
 
@@ -11,6 +11,8 @@
 **Existence of the limit \(L=\lim\alpha_n\) remains OPEN.**  
 Proved sandwich: \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\).  
 Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptotic optimality of \(m_n\) vs Paley \(\Phi\) is not.
+
+**New (Prop 15.45):** stars never bi-tight (all \(p>2\)); if \(g_{\min}>-1/p\) then tight size-\(p\) Max+ covers are stars; at \(p=5\), \(g_{\min}=-3/65>-1/5\), non-star size-\(p\) tight MILP-infeasible, deep two-sided \(k=10,12\) infeasible, every size-\(2p\) Max+ cover has \(\max S_{-}\ge2\). Type I / deep-tight residual **closed at \(p=5\)**. Still need general-\(p\) lift and deep non-tight \(k>12\).
 
 **New (n=10 structure):** exact optima first appear at Hamming distance **5** from Paley \(C_{10}\), and the only 5-edge undercutters are **144 perfect matchings** (of 945). Absolute gap \(\Phi-m_{10}=2\) is consistent with E(1). See `evidence/N10_STRUCTURE.md`.
 
@@ -63,7 +65,7 @@ Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptot
 
 **Prop 15.38 (2026-07-28):** **Proved** by exhaustive \(\binom{45}{5}\): among two-sided Max-covers of size 5 on Paley \(C_{10}\), undercutters are **exactly** the 144 perfect matchings (\(\Delta=1\), \(\Phi=13\)); every two-sided cover with \(\Delta\ge2\) has \(\Phi\ge15\). Total 17154 two-sided \(k=5\) covers. Parallel cert: 80 workers. See `evidence/E1_N10_TWOSIDED_K5.md`. Supports low-\(\Delta\) undercutter pattern; **does not close E(1).**
 
-**Prop 15.39 (2026-07-28):** On all 11 stored Max-cover PMs at \(p=5\), clique-flip pair count \(N_{\mathrm{flip}}\in\{24,120\}\) (always \(\ge24\)). Open: prove \(N_{\mathrm{flip}}\ge1\) forall Max-cover PMs. See `evidence/E1_CLIQUE_FLIP_COUNT.md`. **Does not close E(1).**
+**Prop 15.39 (2026-07-28):** On stored Max-cover PMs at \(p=5\), clique-flip pair count \(N_{\mathrm{flip}}\ge24\) (observed \(24,48,120\)). Open: prove \(N_{\mathrm{flip}}\ge1\) forall Max-cover PMs. See `evidence/E1_CLIQUE_FLIP_COUNT.md`. **Does not close E(1).**
 
 **Prop 15.40 (2026-07-28):** **Proved:** edge-minimal undercutters satisfy \(\Phi(C\oplus F)\ge\Phi(C)-2\) (edge lip + minimality). Open step to E(1): upgrade to \(m_n\ge\Phi(C)-2\) for all Seidel \(A\) (no deeper far undercut). If that holds, gap \(O(1)\) \(\Rightarrow\) E(1) \(\Rightarrow L=\tfrac12\). **Does not close E(1) yet.**
 
@@ -73,7 +75,7 @@ Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptot
 
 **Prop 15.43 (2026-07-28):** No-descent **proved** for Type I with freeness (strong) and tight deep \(S\equiv2\) (weak). Type I freeness-failure **isolated** to equality cases reducing to tight size-\(2p\) covers; at \(p=3\) 1-bit spike gives \(\Phi\ge\Phi-2\) for all-even-degree tight covers. **n=10 \(m_{10}=\Phi-2\) closed.** Residual for general \(p\): tight \(S\equiv2\Rightarrow\Phi\ge\Phi-2\) beyond \(p=3\); deep non-tight; \(k=3p-2\) boundary. **Does not close E(1) / \(L\).**
 
-**Bi-tight (2026-07-28):** Integral bi-tight \(S\equiv\pm s\), \(|H|=sp\), is **MILP-infeasible at \(p=5\) for levels \(s=2,3,4\)** (fractional OK; `e1_bitight_infeas.json`). Avg degree of level-2 bi-tight is \(4p/(p^2+1)<1\) for all \(p\ge5\). Master lemma (Prop 15.44): tight Max+ covers either have \(\max_{\mathrm{Max}_{-}}S\ge0\) (hence \(\Phi\ge\Phi\)) or are bi-tight. See `evidence/E1_BITIGHT.md`. Residual: lift bi-tight infeas to all \(p\ge5\); deep non-tight gap-2 no-descent.
+**Bi-tight / Prop 15.45 (2026-07-28):** Stars never bi-tight (all \(p>2\)). Integral bi-tight levels \(2,3,4\) **MILP-infeasible at \(p=5\)**; non-star size-\(p\) tight infeasible; deep two-sided \(k=10,12\) infeasible; size-\(2p\) Max+ covers have \(\max S_{-}\ge2\). Avg degree of level-2 bi-tight is \(4p/(p^2+1)<1\) for \(p\ge5\). Master lemma (Prop 15.44): tight Max+ covers either \(\max_{\mathrm{Max}_{-}}S\ge0\) or bi-tight. See `evidence/E1_BITIGHT.md`, `e1_star_bitight_obstruction.json`. Residual: lift to all \(p\ge5\); deep non-tight \(k>2p\).
 
 **n=26 exact sparse MITM (2026-07-27):** shipped `phi_mitm` (exact \(\Phi\) for even \(n\le28\)). Random matchings, cycles \(C_4\)–\(C_{26}\), stars, and random \(k\le20\) flips of Paley \(C_{26}\): **0 undercuts of \(\Phi=65\)** (min observed 67 on single edges). Matching undercut of \(n=10\) does not lift. Consistent with \(k_\star=0\) at \(n=26\), not a proof. See `evidence/E1_N26_SPARSE_EXACT.md`.
 

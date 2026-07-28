@@ -1,0 +1,107 @@
+{
+  "seconds": 6.300081014633179,
+  "status": "Prop 15.45 certs: star classification force at p=5; stars never bi-tight; matching level-2 blocked at p=5; L still OPEN",
+  "p3_floors": {
+    "p": 3,
+    "n": 10,
+    "n_Max": 12,
+    "gmin_disjoint": -0.3333333333333333,
+    "n_disjoint_pairs": 630,
+    "wedge_correlations": [
+      -0.3333333333,
+      0.3333333333
+    ],
+    "required_avg_level1_tight": -0.3333333333333333,
+    "required_avg_level2_tight": -0.06666666666666667,
+    "star_force_level1": false,
+    "matching_blocked_level2": false,
+    "minus_1_over_p": -0.3333333333333333
+  },
+  "p5_floors": {
+    "p": 5,
+    "n": 26,
+    "n_Max": 260,
+    "gmin_disjoint": -0.046153846153846156,
+    "n_disjoint_pairs": 44850,
+    "wedge_correlations": [
+      -0.2,
+      0.2
+    ],
+    "required_avg_level1_tight": -0.2,
+    "required_avg_level2_tight": -0.06666666666666667,
+    "star_force_level1": true,
+    "matching_blocked_level2": true,
+    "minus_1_over_p": -0.2
+  },
+  "p5_nonstar": {
+    "p": 5,
+    "nonstar_size_p_tight_feasible": false,
+    "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+    "seconds": 6.211947441101074,
+    "infeasible_certified": true
+  },
+  "star_bitight_block": {
+    "p3": {
+      "p": 3,
+      "bi_tight_requires_sum_Gplus_Gminus_over_pairs": -2,
+      "star_has_only_wedges": true,
+      "wedge_Gsum": 0.0,
+      "star_sum_Gsum": 0.0,
+      "star_cannot_be_bitight": true
+    },
+    "p5": {
+      "p": 5,
+      "bi_tight_requires_sum_Gplus_Gminus_over_pairs": -6,
+      "star_has_only_wedges": true,
+      "wedge_Gsum": 0.0,
+      "star_sum_Gsum": 0.0,
+      "star_cannot_be_bitight": true
+    },
+    "p7": {
+      "p": 7,
+      "bi_tight_requires_sum_Gplus_Gminus_over_pairs": -10,
+      "star_has_only_wedges": true,
+      "wedge_Gsum": 0.0,
+      "star_sum_Gsum": 0.0,
+      "star_cannot_be_bitight": true
+    }
+  },
+  "bitight_milp": {
+    "p": 5,
+    "n": 26,
+    "n_Max_plus": 130,
+    "n_Max_minus": 260,
+    "levels": [
+      {
+        "level_s": 2,
+        "k": 10,
+        "fractional_feasible": true,
+        "integral_feasible": false,
+        "integral_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+      },
+      {
+        "level_s": 3,
+        "k": 15,
+        "fractional_feasible": true,
+        "integral_feasible": false,
+        "integral_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+      },
+      {
+        "level_s": 4,
+        "k": 20,
+        "fractional_feasible": true,
+        "integral_feasible": false,
+        "integral_message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+      }
+    ],
+    "all_integral_infeasible": true,
+    "all_fractional_feasible": true,
+    "seconds": 136.5581693649292,
+    "status": "Integral bi-tight infeasible at p=5 for levels 2,3,4; fractional feasible. Used for Type I / deep-tight residual kill."
+  },
+  "deep_cover_summary": {
+    "k10_infeasible": true,
+    "k12_infeasible": true,
+    "min_max_S_minus_k10": 1.999999999976346
+  }
+}

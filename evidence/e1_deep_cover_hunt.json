@@ -1,0 +1,166 @@
+{
+  "p": 5,
+  "n": 26,
+  "n_Max": 260,
+  "fractional_deep": [
+    {
+      "k": 10,
+      "fractional_deep": true
+    },
+    {
+      "k": 15,
+      "fractional_deep": true
+    },
+    {
+      "k": 20,
+      "fractional_deep": true
+    },
+    {
+      "k": 25,
+      "fractional_deep": true
+    },
+    {
+      "k": 30,
+      "fractional_deep": true
+    },
+    {
+      "k": 35,
+      "fractional_deep": true
+    },
+    {
+      "k": 40,
+      "fractional_deep": true
+    }
+  ],
+  "integral_deep_feas": [
+    {
+      "k": 10,
+      "integral_deep_feasible": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "seconds": 52.909074544906616
+    },
+    {
+      "k": 12,
+      "integral_deep_feasible": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "seconds": 14.32542896270752
+    },
+    {
+      "k": 14,
+      "integral_deep_feasible": false,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "seconds": 75.08770513534546
+    },
+    {
+      "k": 16,
+      "integral_deep_feasible": false,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "seconds": 75.07538557052612
+    },
+    {
+      "k": 18,
+      "integral_deep_feasible": false,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "seconds": 75.0558078289032
+    },
+    {
+      "k": 20,
+      "integral_deep_feasible": false,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "seconds": 75.04851865768433
+    },
+    {
+      "k": 22,
+      "integral_deep_feasible": false,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "seconds": 75.0665500164032
+    },
+    {
+      "k": 24,
+      "integral_deep_feasible": false,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "seconds": 75.07040095329285
+    },
+    {
+      "k": 26,
+      "integral_deep_feasible": false,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "seconds": 75.06840896606445
+    },
+    {
+      "k": 28,
+      "integral_deep_feasible": false,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "seconds": 75.07159876823425
+    },
+    {
+      "k": 30,
+      "integral_deep_feasible": false,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "seconds": 75.05650973320007
+    }
+  ],
+  "any_integral_deep_found": false,
+  "min_max_S_minus": [
+    {
+      "k": 10,
+      "success": true,
+      "min_max_S_minus": 1.999999999976346,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "seconds": 32.9837646484375
+    },
+    {
+      "k": 12,
+      "success": false,
+      "min_max_S_minus": null,
+      "message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+      "seconds": 75.07696914672852
+    },
+    {
+      "k": 14,
+      "success": false,
+      "min_max_S_minus": null,
+      "message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+      "seconds": 75.05433011054993
+    },
+    {
+      "k": 15,
+      "success": false,
+      "min_max_S_minus": null,
+      "message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+      "seconds": 75.05699968338013
+    },
+    {
+      "k": 16,
+      "success": false,
+      "min_max_S_minus": null,
+      "message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+      "seconds": 75.05895328521729
+    },
+    {
+      "k": 20,
+      "success": false,
+      "min_max_S_minus": null,
+      "message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+      "seconds": 75.05716609954834
+    },
+    {
+      "k": 25,
+      "success": false,
+      "min_max_S_minus": null,
+      "message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+      "seconds": 75.11351203918457
+    },
+    {
+      "k": 30,
+      "success": false,
+      "min_max_S_minus": null,
+      "message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+      "seconds": 75.06527161598206
+    }
+  ],
+  "all_min_max_S_minus_ge_0": true,
+  "workers": 20,
+  "seconds": 152.0431890487671,
+  "status": "Integral deep two-sided cover search at p=5; if none and min max S- >= 0 for s+>=2 covers, deep undercutters impossible at p=5."
+}

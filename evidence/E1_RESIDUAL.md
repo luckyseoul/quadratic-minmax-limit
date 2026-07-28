@@ -25,17 +25,17 @@ Routes:
 - **Spectral** (Prop 15.36): prove Max-covers have \(\lambda_{\min}(B)=-6\) and that this forces \(\Phi(A)\ge\Phi(C)\) for \(p\ge5\).
 - **Structural**: all tested covers are two-sided, inclusion min+max; forced \(S=1\) (proved).
 
-## Shortest remaining proof edges (2026-07-28)
+## Shortest remaining proof edges (2026-07-28, Prop 15.45 update)
 
-1. **Close no-descent for all gap-2 undercutters** (Props 15.42–15.44)  
-   - **Proved:** dichotomy; master lemma (tight Max+ ⇒ Φ≥Φ or bi-tight); Type I freeness ND;  
-     deep tight ND (Max+ freeness); deep non-tight \(s_{\min}=2\) freeness ND;  
-     freeness-failure for \(s_{\min}=2\) reduces to bi-tight level 3 (or Φ≥Φ).  
-   - **p=5 cert:** bi-tight levels 2,3,4 integrally infeasible ⇒ Type I ND complete;  
-     deep tight impossible; deep \(s_{\min}=2\) freeness-failure ND complete.  
+1. **Close no-descent for all gap-2 undercutters** (Props 15.42–15.45)  
+   - **Proved:** dichotomy; master lemma; Type I freeness ND; tight \(S\equiv1/2\) ND;  
+     stars never bi-tight (all \(p\)); star-force for level-1 when \(g_{\min}>-1/p\).  
+   - **p=5 nearly closed:** bi-tight levels 2–4 infeasible; non-star size-\(p\) tight infeasible;  
+     deep two-sided \(k=10,12\) infeasible; every size-\(2p\) Max+ cover has \(\max S_{-}\ge2\);  
+     Type I freeness-failure + deep-tight **impossible at \(p=5\)**.  
    - **Still open for full \(m_n\ge\Phi-2\):**  
-     (i) bi-tight integral infeasibility for **all** \(p\ge5\) (not only \(p=5\));  
-     (ii) gap-2 undercutters with \(s_{\min}\ge3\) (ND / nonexistence);  
+     (i) \(g_{\min}>-1/p\) and bi-tight infeas for **all** \(p\ge5\);  
+     (ii) deep non-tight gap-2 with \(k>2p\) (at \(p=5\): \(k>12\) still open);  
      (iii) \(p=3\) already closed (\(m_{10}=\Phi-2\)).  
    Then \(m_n\ge\Phi-2\Rightarrow\mathrm{E}(1)\Rightarrow L=\tfrac12\). **F13 intact.**
 

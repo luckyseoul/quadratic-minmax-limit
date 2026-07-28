@@ -1223,7 +1223,7 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 *Remark.* Strengthens N10-S: at matching cardinality, two-sided Max-covers with \(\Delta\ge2\) cannot undercut. Supports a low-\(\Delta\) undercutter pattern for E(1), but does **not** prove \(k_\star=O(n^{3/2})\) or matching non-undercut for \(p\ge5\). **Existence of \(\lim\alpha_n\) remains OPEN.**
 
-**Proposition 15.39 (clique-flip count invariant on Max-cover matchings, \(p=5\); 2026-07-28).** On every stored Max-covering perfect matching of Paley \(C_{26}\), the number \(N_{\mathrm{flip}}\) of pairs \((y,F)\) as in Prop 15.31 (with \(s_0=1\), \(\Sigma=3\)) lies in \(\{24,120\}\). In particular \(N_{\mathrm{flip}}\ge24>0\), so clique-flip applies and \(\Phi(C\oplus M)=\Phi(C)\). Two types: 5 covers with \(N=24\) and 6 with \(N=120\). Evidence: `evidence/E1_CLIQUE_FLIP_COUNT.md`.
+**Proposition 15.39 (clique-flip count on Max-cover matchings, \(p=5\); 2026-07-28).** On every stored Max-covering perfect matching of Paley \(C_{26}\), the number \(N_{\mathrm{flip}}\) of pairs \((y,F)\) as in Prop 15.31 (with \(s_0=1\), \(\Sigma=3\)) satisfies \(N_{\mathrm{flip}}\ge24>0\), so clique-flip applies and \(\Phi(C\oplus M)=\Phi(C)\). Observed counts include \(24,48,120\). Evidence: `evidence/E1_CLIQUE_FLIP_COUNT.md`.
 
 *Open.* Prove \(N_{\mathrm{flip}}\ge1\) for every Max-cover matching when \(p=5\) (then matching non-undercut at \(p=5\)); lift to \(p\ge7\) and \(k_\star\). **Existence of \(\lim\alpha_n\) remains OPEN.**
 
@@ -1352,6 +1352,43 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 4. **Certified samples.** Five distinct integral tight Max\(_{+}\)-only covers of size \(10\) at \(p=5\) all have \(\max_{\mathrm{Max}_{-}}S\in\{4,8,10\}\ge0\) and exact \(\Phi\in\{73,81,85\}>\Phi(C)\), matching the master lemma. Evidence: session MILP samples; `evidence/E1_BITIGHT.md`.
 
 5. **Residual for \(L=\tfrac12\) (OPEN).** Complete no-descent for deep **non-tight** gap-\(2\) undercutters (\(s_{\min}=2\), \(\max S\ge4\), \(k>2p\)), and lift bi-tight integral infeasibility from \(p=5\) to all \(p\ge5\) (or prove bi-tight \(\Rightarrow\Phi\ge\Phi-2\) uniformly). Then Type I and deep-tight no-descent are unconditional, and \(m_n\ge\Phi-2\Rightarrow\mathrm{E}(1)\Rightarrow L=\tfrac12\). **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+**Proposition 15.45 (star classification force, bi-tight wedge block, p=5 residual kill; 2026-07-28).** Let \(C\) be \(\rho=1\) Paley of order \(n=p^2+1\), and write \(f_e(y)=C_e y_iy_j\), \(G_{ee'}=\mathbb E_{+}[f_ef_{e'}]\), and \(g_{\min}\) for the minimum of \(G_{ee'}\) over vertex-disjoint edge pairs.
+
+1. **Wedge correlations (proved).** If edges \(va,vb\) share a vertex, then
+   \[
+   G_{va,vb}=\frac{C_{va}C_{vb}C_{ab}}{p}=\pm\frac1p,
+   \]
+   by the Max\(_{+}\) frame identity \(\mathbb E[y_ay_b]=C_{ab}/p\). On Max\(_{-}\) the same wedge has the opposite sign, so
+   \[
+   G^{+}_{va,vb}+G^{-}_{va,vb}=0.
+   \]
+
+2. **Star never bi-tight (proved, all \(p>2\)).** A star has only wedge pairs. For bi-tight of level \(2\) one needs both \(\sum_{e<e'}G^{+}_{ee'}=2-p\) and \(\sum G^{-}=2-p\), hence \(\sum(G^{+}+G^{-})=2(2-p)\). Wedges contribute \(0\) to \(G^{+}+G^{-}\), so a star yields sum \(0\neq 2(2-p)\). \(\square\)
+
+3. **Correlation identity for tight covers (proved).** If \(S_H\equiv s\) on Max\(_{+}\) with \(|H|=sp\), then \(\mathbb E[S^2]=s^2\) and
+   \[
+   \sum_{e<e'\in H}G_{ee'}=\frac{s^2-sp}{2}.
+   \]
+   For \(s=1\): sum \(=(1-p)/2\), average \(=-1/p\). For \(s=2\): sum \(=2-p\), average \(=-1/15\).
+
+4. **Star force for level-\(1\) when \(g_{\min}>-1/p\) (proved).** Write \(n_w\) for the number of wedge pairs in \(H\) and \(n_d=\binom{p}{2}-n_w\) for disjoint pairs when \(|H|=p\). Then
+   \[
+   \sum G\ge -\frac{n_w}p+g_{\min}n_d=g_{\min}\binom{p}{2}-n_w\Bigl(g_{\min}+\frac1p\Bigr).
+   \]
+   If \(g_{\min}>-1/p\), the coefficient of \(n_w\) is negative, so the lower bound is maximised at maximal \(n_w=\binom{p}{2}\) (every pair of edges shares a vertex). For \(p>3\) that forces \(H\) to be a **star**. Equality with the tight identity \(\sum G=(1-p)/2=-\binom{p}{2}/p\) holds only in that star case (up to wedge-sign pattern). At \(p=3\), \(g_{\min}=-1/p\), so the force fails and non-stars remain possible. \(\square\)
+
+5. **Matching blocked for level-\(2\) when \(g_{\min}>-1/15\) (proved).** For \(|H|=2p\) a matching has \(n_w=0\), hence \(\sum G\ge g_{\min}\binom{2p}{2}\). If this exceeds \(2-p\), no matching is Max\(_{+}\)-tight of level \(2\). \(\square\)
+
+6. **Certified at \(p=5\) (load-bearing numerics).** Exact Max\(\pm\) enumeration (\(|\mathrm{Max}_{\pm}|=260\)):
+   - \(g_{\min}=-3/65\approx-0.04615>-1/5\) and \(>-1/15\), so level-\(1\) covers are stars and level-\(2\) matchings are non-tight;
+   - integral non-star size-\(p\) Max\(_{+}\) tight covers are **MILP-infeasible**;
+   - bi-tight levels \(2,3,4\) integrally infeasible (Prop 15.44);
+   - deep two-sided covers (\(s_{+}\ge2\), \(s_{-}\le-2\)) integrally infeasible at \(k=10,12,15\) (timeout without feasibility at \(k=14,16,18,20\));
+   - \(\min\{\max_{\mathrm{Max}_{-}}S:S_{\mathrm{Max}_{+}}\ge2,\,|H|=10\}=2\ge0\) (epigraph MILP), so every size-\(2p\) Max\(_{+}\) cover has \(\max S_{-}\ge2\) and \(\Phi\ge\Phi(C)\).
+   Evidence: `src/e1_star_bitight_obstruction.py`, `e1_deep_cover_hunt.py`, `e1_deep_k_long.py`; JSON under `evidence/e1_star_bitight_obstruction.json`, `e1_deep_cover_hunt.json`, `e1_deep_k_long.json`.
+
+7. **Consequence at \(p=5\) (proved from certs).** Type I freeness-failure and deep-tight undercutters are impossible (master lemma + bi-tight / size-\(2p\) max-\(S_{-}\) control). Residual for full \(m_{26}\ge\Phi-2\): deep non-tight gap-\(2\) with large \(k\) if any exist (even \(k\in\{14,16,18,20\}\) unresolved by MILP). For general \(p\ge7\): lift \(g_{\min}>-1/p\), bi-tight infeasibility, and deep-cover control. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
