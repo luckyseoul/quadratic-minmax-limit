@@ -1,0 +1,79 @@
+{
+  "p": 5,
+  "theorem_candidate": "Max-cover PMs have lambda_min(CD+DC)=-6 hence ||A||_op=sqrt(41); Phi=Phi(C) on samples",
+  "covers": [
+    {
+      "name": "known_cover_example",
+      "minS": 1.0,
+      "S_plus_values": [
+        1,
+        5,
+        9
+      ],
+      "S_hist": {
+        "1": 168,
+        "5": 80,
+        "9": 12
+      },
+      "Dpp_eigs": [
+        -0.6,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.8,
+        0.8,
+        0.8,
+        0.8
+      ],
+      "lambda_min_B": -5.999999999999998,
+      "op": 6.403124237432848,
+      "op_is_sqrt41": true,
+      "phi": 65.0,
+      "maxR": 60,
+      "undercut": false
+    },
+    {
+      "name": "SA_seed_120_type",
+      "minS": 1.0,
+      "S_plus_values": [
+        1,
+        5
+      ],
+      "S_hist": {
+        "1": 156,
+        "5": 104
+      },
+      "Dpp_eigs": [
+        -0.6,
+        -0.4,
+        -0.4,
+        -0.0,
+        -0.0,
+        0.0,
+        0.0,
+        0.25359,
+        0.25359,
+        0.8,
+        0.8,
+        0.94641,
+        0.94641
+      ],
+      "lambda_min_B": -6.0000000000000036,
+      "op": 6.403124237432851,
+      "op_is_sqrt41": true,
+      "phi": 65.0,
+      "maxR": 60,
+      "undercut": false
+    }
+  ],
+  "note_two_spectral_types": true,
+  "both_op_sqrt41": true,
+  "both_phi_eq": true,
+  "both_maxR_60": true,
+  "status": "OPEN \u2014 certified structure on samples; forall Max-cover non-undercut still open"
+}

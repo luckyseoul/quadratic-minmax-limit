@@ -1,0 +1,17 @@
+{
+  "n_two_sided_k5": 17154,
+  "n_undercut": 144,
+  "n_undercut_Delta1_phi13": 144,
+  "by_Delta_undercut_phi": {
+    "(1, True, 13)": 144,
+    "(2, False, 15)": 2880,
+    "(2, False, 17)": 3330,
+    "(2, False, 19)": 2520,
+    "(3, False, 17)": 1440,
+    "(3, False, 19)": 6480,
+    "(4, False, 19)": 360
+  },
+  "theorem": "Among two-sided Max-covers F with |F|=5 on Paley C_10, Phi(C\u2295F)<15 iff Delta(F)=1 (perfect matchings); all such have Phi=13. Every two-sided cover with Delta>=2 has Phi>=15.",
+  "workers": 80,
+  "status": "PROVED by exhaustive enumeration (Prop 15.38)"
+}

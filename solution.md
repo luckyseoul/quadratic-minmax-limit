@@ -1192,6 +1192,41 @@ so \(\Phi(C\oplus M)\ge\Phi(C)\).
 
 *Open.* Prove clique-flip / \(\Phi\ge\Phi(C)\) for every Max-covering perfect matching when \(p\ge5\); then non-matching undercutters / \(k_\star\). **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.36 (matching flip block algebra and Max-cover spectrum; 2026-07-27).** Let \(C\) be Paley of order \(n=p^2+1\), \(M\) a perfect matching, \(D\) the signed matching matrix, \(A=C-2D\), and \(V_\pm=\ker(C\mp pI)\).
+
+1. **Block formulae (proved for every matching).** \(B:=CD+DC\) always commutes with \(C\) and \(D\). On \(V_+\oplus V_-\),
+   \[
+   B\big|_{V_+}=2p\,D_{++},\qquad B\big|_{V_-}=-2p\,D_{--},
+   \]
+   and \(\mathrm{tr}(D_{++})=n/(2p)\). For \(y\in\mathrm{Max}_+\subset V_+\) one has \(S_M(y)=\tfrac12 y^\top D_{++}y\). Also
+   \(\|A\|_{\mathrm{op}}^2=(n+3)-2\lambda_{\min}(B)\).
+
+2. **Certified at \(p=5\) for Max-covers (not forall).** Every SA Max-covering matching has \(\lambda_{\min}(B)=-6\) and \(\|A\|_{\mathrm{op}}=\sqrt{41}=\sqrt{p^2+16}\). At least two \(D_{++}\) spectral types occur (simple \(\{-3/5,0^{(8)},(4/5)^{(4)}\}\) and a mixed type with the same \(\lambda_{\min}(D_{++})=-3/5\)); both have tight spike \(\max R=60\), clique-flip, and MITM \(\Phi=\Phi(C)\). Random non-covers have \(\lambda_{\min}(B)\in[-10,-8]\) and larger op-norm. At \(p=3\), the 144 undercutting Max-covers share a single smaller op-norm \(\approx3.933\) (golden-ratio \(B\)-spectrum). Evidence: `evidence/E1_MAXCOVER_SPECTRUM.md`, `e1_maxcover_spectrum.json`.
+
+*Open.* Prove \(\lambda_{\min}(B)=-6\) (or \(\|A\|_{\mathrm{op}}=\sqrt{p^2+16}\)) for every Max-cover when \(p\ge5\), and upgrade to \(\Phi(A)\ge\Phi(C)\); or complete clique-flip existence. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+**Proposition 15.37 (continuous Γ-bound pattern on Max-covers; 2026-07-27).** Let \(C\) be Paley of order \(n=26\) and \(M\) a Max-covering perfect matching. On the Γ-pairing level \(S_M=-p\), every tested \(M\) satisfies
+\[
+\min_z\lambda_{\max}(\Gamma(z))\;\ge\;9.38758\;>\;\frac{2p(m-1)}{m},
+\]
+so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** \(z\) on the level (two numerical classes). Discrete \(\max R=60\) and clique-flip hold on all 11 stored covers. GW theory does not close the discrete gap (SDP\(\approx63.8\), \(\alpha\cdot\mathrm{SDP}<60\)). Residue-\(1\) random matchings also admitted clique-flips in sampling. Evidence: `evidence/E1_MAXCOVER_CONTINUOUS_BOUND.md`.
+
+*Open.* Prove the continuous bound and/or clique-flip for every Max-cover when \(p\ge5\); then matching dichotomy / \(k_\star\). **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+**Proposition 15.38 (two-sided size-5 Max-covers on \(C_{10}\); 2026-07-28).** Let \(C\) be Paley of order \(n=10\), \(\Phi=15\). Among all edge sets \(F\) with \(|F|=5\) that are two-sided Max-covers (\(\min_{\mathrm{Max}_{+}}S_F\ge1\) and \(\max_{\mathrm{Max}_{-}}S_F\le-1\)):
+
+1. **Undercutters are exactly the matchings.** Exactly **144** such \(F\) undercut, each is a perfect matching (\(\Delta=1\)), and each has \(\Phi(C\oplus F)=13=m_{10}\).
+2. **Higher \(\Delta\) never undercuts at this cardinality.** Counts: \(\Delta=2\): 8730 covers with \(\Phi\in\{15,17,19\}\); \(\Delta=3\): 7920 with \(\Phi\in\{17,19\}\); \(\Delta=4\): 360 with \(\Phi=19\). All have \(\Phi\ge15\).
+3. **Total.** 17154 two-sided \(k=5\) Max-covers; only the 144 matchings undercut.
+
+*Proof.* Exhaustive scan of \(\binom{45}{5}=1{,}221{,}759\) five-edge sets; Max\(\pm\) boolean \(\pm3\)-eigenvectors; exact \(\Phi\) by cube enumeration via `form_Q`. Parallel re-run: `src/n10_twosided_k5_classify.py` (80 workers). Evidence: `evidence/E1_N10_TWOSIDED_K5.md`, `e1_n10_twosided_k5_classify.json`. \(\square\)
+
+*Remark.* Strengthens N10-S: at matching cardinality, two-sided Max-covers with \(\Delta\ge2\) cannot undercut. Supports a low-\(\Delta\) undercutter pattern for E(1), but does **not** prove \(k_\star=O(n^{3/2})\) or matching non-undercut for \(p\ge5\). **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+**Proposition 15.39 (clique-flip count invariant on Max-cover matchings, \(p=5\); 2026-07-28).** On every stored Max-covering perfect matching of Paley \(C_{26}\), the number \(N_{\mathrm{flip}}\) of pairs \((y,F)\) as in Prop 15.31 (with \(s_0=1\), \(\Sigma=3\)) lies in \(\{24,120\}\). In particular \(N_{\mathrm{flip}}\ge24>0\), so clique-flip applies and \(\Phi(C\oplus M)=\Phi(C)\). Two types: 5 covers with \(N=24\) and 6 with \(N=120\). Evidence: `evidence/E1_CLIQUE_FLIP_COUNT.md`.
+
+*Open.* Prove \(N_{\mathrm{flip}}\ge1\) for every Max-cover matching when \(p=5\) (then matching non-undercut at \(p=5\)); lift to \(p\ge7\) and \(k_\star\). **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

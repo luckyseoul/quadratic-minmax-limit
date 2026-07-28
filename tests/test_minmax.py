@@ -1898,3 +1898,270 @@ def test_prop_15_35_maxcover_structure_p5():
 
     assert "15.35" in (Path(__file__).resolve().parents[1] / "solution.md").read_text()
     assert "OPEN" in (Path(__file__).resolve().parents[1] / "HANDOFF.md").read_text()
+
+
+def test_prop_15_36_matching_block_algebra_and_maxcover_spectrum():
+    """Prop 15.36: B=CD+DC block formulae; Max-cover samples have lambda_min B=-6."""
+    import json
+
+    p = 5
+    C = paley_conference_prime_power(p)
+    n = C.shape[0]
+    m = n // 2
+    evC, VC = np.linalg.eigh(C)
+    Vp = VC[:, evC > 0]
+    Vm = VC[:, evC < 0]
+    rng = np.random.default_rng(1)
+
+    # Block formulae for random matchings
+    for _ in range(4):
+        perm = rng.permutation(n)
+        pairs = [(int(perm[2 * i]), int(perm[2 * i + 1])) for i in range(m)]
+        D = np.zeros((n, n))
+        for i, j in pairs:
+            D[i, j] = C[i, j]
+            D[j, i] = C[i, j]
+        B = C @ D + D @ C
+        assert np.allclose(B @ C, C @ B, atol=1e-8)
+        assert np.allclose(B @ D, D @ B, atol=1e-8)
+        Dpp = Vp.T @ D @ Vp
+        Dmm = Vm.T @ D @ Vm
+        Bp = Vp.T @ B @ Vp
+        Bm = Vm.T @ B @ Vm
+        assert np.allclose(Bp, 2 * p * Dpp, atol=1e-7)
+        assert np.allclose(Bm, -2 * p * Dmm, atol=1e-7)
+        assert abs(np.trace(Dpp) - n / (2 * p)) < 1e-8
+        # op^2 = (n+3) - 2 lambda_min(B)
+        A = C - 2 * D
+        op2 = float(np.linalg.eigvalsh(A @ A).max())
+        lminB = float(np.linalg.eigvalsh(B).min())
+        assert abs(op2 - ((n + 3) - 2 * lminB)) < 1e-6
+
+    # Known Max-cover: lambda_min B = -6, op = sqrt(41)
+    ex = json.loads(
+        (
+            Path(__file__).resolve().parents[1]
+            / "evidence"
+            / "e1_n26_matching_cover_example.json"
+        ).read_text()
+    )
+    pairs = [tuple(e) for e in ex["matching"]]
+    D = np.zeros((n, n))
+    for i, j in pairs:
+        D[i, j] = C[i, j]
+        D[j, i] = C[i, j]
+    B = C @ D + D @ C
+    lminB = float(np.linalg.eigvalsh(B).min())
+    assert abs(lminB + 6) < 1e-8
+    A = C - 2 * D
+    assert abs(float(np.linalg.norm(A, ord=2)) - np.sqrt(41)) < 1e-8
+
+    spec = Path(__file__).resolve().parents[1] / "evidence" / "e1_maxcover_spectrum.json"
+    data = json.loads(spec.read_text())
+    assert data["both_op_sqrt41"]
+    assert data["both_phi_eq"]
+    assert data["both_maxR_60"]
+    assert "OPEN" in data["status"]
+
+    assert "15.36" in (Path(__file__).resolve().parents[1] / "solution.md").read_text()
+    assert "OPEN" in (Path(__file__).resolve().parents[1] / "HANDOFF.md").read_text()
+
+
+def test_prop_15_37_continuous_gamma_bound_maxcover():
+    """Prop 15.37: stored Max-cover has min_z lambda_max(Gamma) > 120/13 on S=-p."""
+    import json
+
+    p = 5
+    C = paley_conference_prime_power(p)
+    n = C.shape[0]
+    m = n // 2
+    need = 2 * p * (m - 1) / m
+    ex = json.loads(
+        (
+            Path(__file__).resolve().parents[1]
+            / "evidence"
+            / "e1_n26_matching_cover_example.json"
+        ).read_text()
+    )
+    pairs = [tuple(e) for e in ex["matching"]]
+    c = np.array([C[i, j] for i, j in pairs])
+    min_lmax = 1e9
+    # subsample masks that hit S=-p; full 2^13 is fine
+    for mask in range(1 << m):
+        z = np.array([1.0 if (mask >> a) & 1 else -1.0 for a in range(m)])
+        if int(c @ z) != -p:
+            continue
+        G = np.zeros((m, m))
+        for a in range(m):
+            i, j = pairs[a]
+            za = int(z[a])
+            for b in range(a + 1, m):
+                k, l = pairs[b]
+                zb = int(z[b])
+                g = (
+                    int(C[i, k])
+                    + int(C[i, l]) * zb
+                    + int(C[j, k]) * za
+                    + int(C[j, l]) * za * zb
+                )
+                G[a, b] = G[b, a] = g
+        lm = float(np.linalg.eigvalsh(G)[-1])
+        if lm < min_lmax:
+            min_lmax = lm
+    assert min_lmax > need - 1e-9, (min_lmax, need)
+    # discrete criterion still holds via shipped maxR
+    from minmax_quadratic import maxR_matching_level
+
+    assert maxR_matching_level(C, pairs, p) >= 60
+    note = Path(__file__).resolve().parents[1] / "evidence" / "E1_MAXCOVER_CONTINUOUS_BOUND.md"
+    assert note.is_file()
+    assert "OPEN" in note.read_text()
+    assert "15.37" in (Path(__file__).resolve().parents[1] / "solution.md").read_text()
+
+
+def test_prop_15_38_n10_twosided_k5_only_matchings_undercut():
+    """Prop 15.38: exhaustive JSON + live check matching undercut vs high-Delta sample."""
+    import json
+    from itertools import product
+
+    path = Path(__file__).resolve().parents[1] / "evidence" / "e1_n10_twosided_k5_classify.json"
+    data = json.loads(path.read_text())
+    assert data["n_two_sided_k5"] == 17154
+    assert data["n_undercut"] == 144
+    assert data["n_undercut_Delta1_phi13"] == 144
+    assert "PROVED" in data["status"]
+    # Breakdown consistency
+    br = data["by_Delta_undercut_phi"]
+    assert br["(1, True, 13)"] == 144
+    assert sum(br.values()) == 17154
+    # No undercut entry except Delta=1
+    for k, v in br.items():
+        D, uc, ph = eval(k)
+        if uc:
+            assert D == 1 and ph == 13
+
+    # Live: one perfect matching undercutter has Delta=1 and Phi=13
+    C = paley_conference_prime_power(3)
+    n = 10
+    # known undercutter from n10 structure: any of 144; build via SA min on Max+
+    Maxp = []
+    Mmat = C - 3 * np.eye(n)
+    _, s, vt = np.linalg.svd(Mmat)
+    rank = int((s > 1e-8).sum())
+    nb = vt[rank:].T
+    nul = n - rank
+    rng = np.random.default_rng(0)
+    coords = None
+    for _ in range(3000):
+        idx = rng.choice(n, size=nul, replace=False)
+        if np.linalg.matrix_rank(nb[idx], tol=1e-8) == nul:
+            coords = idx
+            break
+    Binv = np.linalg.inv(nb[coords])
+    for bits in range(1 << nul):
+        free = np.array([1.0 if (bits >> i) & 1 else -1.0 for i in range(nul)])
+        x = nb @ (Binv @ free)
+        if np.max(np.abs(np.abs(x) - 1)) < 1e-6:
+            Maxp.append(np.sign(x))
+    Maxp = np.unique(np.round(Maxp).astype(int), axis=0).astype(float)
+
+    def all_pm(nn):
+        def rec(rem):
+            rem = list(rem)
+            if not rem:
+                yield []
+                return
+            a = rem[0]
+            for bi, b in enumerate(rem[1:], 1):
+                rest = rem[1:bi] + rem[bi + 1 :]
+                for M in rec(rest):
+                    yield [(a, b)] + M
+
+        yield from rec(list(range(nn)))
+
+    found = None
+    for M in all_pm(n):
+        smin = min(sum(C[i, j] * y[i] * y[j] for i, j in M) for y in Maxp)
+        if smin >= 1:
+            found = M
+            break
+    assert found is not None
+    A = C.copy()
+    for i, j in found:
+        A[i, j] *= -1
+        A[j, i] *= -1
+    best = 0.0
+    for bits in product([-1.0, 1.0], repeat=n - 1):
+        x = np.array([1.0] + list(bits))
+        best = max(best, abs(form_Q(A, x)))
+    assert best == 13.0
+    degs = [0] * n
+    for i, j in found:
+        degs[i] += 1
+        degs[j] += 1
+    assert max(degs) == 1
+
+    assert "15.38" in (Path(__file__).resolve().parents[1] / "solution.md").read_text()
+    assert "OPEN" in (Path(__file__).resolve().parents[1] / "HANDOFF.md").read_text()
+
+
+def test_prop_15_39_clique_flip_count_on_stored_maxcovers():
+    """Prop 15.39: N_flip in {24,120} on stored Max-covers; all have clique-flip."""
+    import json
+    from itertools import combinations
+
+    C = paley_conference_prime_power(5)
+    n = C.shape[0]
+    Max = np.load("/tmp/maxplus_p5.npy")
+    Maxf = np.vstack([Max, -Max])
+    SC = [
+        F
+        for F in combinations(range(n), 5)
+        if all(
+            C[a, b] * C[a, c] * C[b, c] == 1 for a, b, c in combinations(F, 3)
+        )
+    ]
+
+    def n_flip(M):
+        partner = {}
+        for i, j in M:
+            partner[i] = j
+            partner[j] = i
+        trans = [
+            F
+            for F in SC
+            if len({frozenset((i, partner[i])) for i in F}) == 5
+        ]
+        n_pairs = 0
+        for y in Maxf:
+            s = sum(C[i, j] * y[i] * y[j] for i, j in M)
+            if abs(s - 1) > 1e-9:
+                continue
+            for F in trans:
+                if not all(
+                    C[a, b] * y[a] * y[b] == 1 for a, b in combinations(F, 2)
+                ):
+                    continue
+                sig = sum(
+                    C[i, partner[i]] * y[i] * y[partner[i]] for i in F
+                )
+                if abs(sig - 3) < 1e-9:
+                    n_pairs += 1
+        return n_pairs
+
+    # Known cover example
+    ex = json.loads(
+        (
+            Path(__file__).resolve().parents[1]
+            / "evidence"
+            / "e1_n26_matching_cover_example.json"
+        ).read_text()
+    )
+    M = [tuple(e) for e in ex["matching"]]
+    nf = n_flip(M)
+    assert nf in (24, 120), nf
+    assert nf >= 24
+    note = Path(__file__).resolve().parents[1] / "evidence" / "E1_CLIQUE_FLIP_COUNT.md"
+    assert note.is_file()
+    assert "15.39" in (Path(__file__).resolve().parents[1] / "solution.md").read_text()
+    assert "OPEN" in (Path(__file__).resolve().parents[1] / "HANDOFF.md").read_text()

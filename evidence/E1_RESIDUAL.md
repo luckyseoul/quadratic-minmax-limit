@@ -12,6 +12,9 @@
 5. Matching flip algebra \(D^2=I\), \(A=C-2D\) (Prop 15.34).
 6. Spike criterion (Prop 15.30) is **sufficient** for non-undercut but **not necessary**
    (`e1_criterion_fail_no_undercut.json`: \(\max R=54<60\), non-cover, \(\Phi=75\)).
+7. Matching flip **block algebra** (Prop 15.36): \(B=CD+DC\) always commutes with \(C,D\);
+   \(B|_{V_+}=2p D_{++}\); \(\|A\|_{\mathrm{op}}^2=(n+3)-2\lambda_{\min}(B)\). SA Max-covers at \(p=5\) all have
+   \(\lambda_{\min}(B)=-6\), \(\mathrm{op}=\sqrt{41}\), with ≥2 distinct \(D_{++}\) types — all non-undercut.
 
 ## What would finish matching non-undercut for \(p\ge5\)
 
@@ -19,8 +22,8 @@ Prove: every Max-covering perfect matching \(M\) satisfies \(\Phi(C\oplus M)\ge\
 
 Routes:
 - **Clique-flip** (Prop 15.31): existence of \((y,F)\) for every Max-cover — certified on all **11** SA covers at \(p=5\) (Prop 15.35), not proved for all.
-- **Spectral**: Max-covers at \(p=5\) have \(\|A\|_{\mathrm{op}}=\sqrt{41}\); upgrade to \(\Phi(A)\ge\Phi(C)\).
-- **Structural**: all 11 covers are two-sided, inclusion min+max; Type A/B only; forced \(S=1\) (proved).
+- **Spectral** (Prop 15.36): prove Max-covers have \(\lambda_{\min}(B)=-6\) and that this forces \(\Phi(A)\ge\Phi(C)\) for \(p\ge5\).
+- **Structural**: all tested covers are two-sided, inclusion min+max; forced \(S=1\) (proved).
 
 ## What would finish \(L=\tfrac12\)
 

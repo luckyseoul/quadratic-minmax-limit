@@ -1,0 +1,10 @@
+{
+  "n_jobs": 80,
+  "workers": 80,
+  "total_samples_est": 2400,
+  "best_phi_seen": 71.0,
+  "Phi_C": 65.0,
+  "n_undercuts": 0,
+  "undercuts": [],
+  "status": "OPEN \u2014 parallel random F hunt; 0 undercuts is evidence not a proof. Existence of lim alpha_n remains OPEN."
+}

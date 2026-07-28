@@ -1,6 +1,6 @@
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-07-27 (Prop 15.33 non-cover lemma; L still OPEN)  
+**Status date:** 2026-07-28 (Prop 15.38 n=10 two-sided k=5; L still OPEN)  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
 **Problem source:** [MathOverflow 413935](https://mathoverflow.net/questions/413935) / [X prize post](https://x.com/PI010101/status/2081070728422752329)
 
@@ -56,6 +56,14 @@ Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptot
 **Prop 15.34 (2026-07-27):** Matching flip algebra \(D^2=I\), \(A=C-2D\), \(A^2=(n+3)I-2(CD+DC)\) **proved**. At \(p=5\), every tested Max-cover has \(\|A\|_{\mathrm{op}}=\sqrt{41}\) exactly; random matchings larger. Open: use spectral control of Max-cover flips to force \(\Phi(A)\ge\Phi(C)\). **Does not close E(1).**
 
 **Prop 15.35 (2026-07-27):** At \(p=5\), every Max-cover PM **must** attain \(S_M=1\) with residue \(1\bmod4\) (proved by expectation). Census of **11** SA Max-covers: all two-sided, min+max as covers, \(\mathrm{op}=\sqrt{41}\), clique-flip, \(\Phi=\Phi(C)\). 0/20k random PMs are covers. Open: forall Max-cover \(M\) when \(p\ge5\). See `evidence/e1_maxcover_full_census.json`. **Does not close E(1).**
+
+**Prop 15.36 (2026-07-27):** Matching flip **block algebra** proved: \(B=CD+DC\) always commutes with \(C,D\); \(B|_{V_+}=2p D_{++}\), \(B|_{V_-}=-2p D_{--}\); \(\|A\|_{\mathrm{op}}^2=(n+3)-2\lambda_{\min}(B)\). At \(p=5\), every SA Max-cover has \(\lambda_{\min}(B)=-6\) and \(\mathrm{op}=\sqrt{41}\), with **≥2** distinct \(D_{++}\) spectral types (both non-undercut, clique-flip, \(\max R=60\)). Random non-covers have more negative \(\lambda_{\min}(B)\). Open: prove \(\lambda_{\min}(B)=-6\Rightarrow\Phi\ge\Phi(C)\) for all Max-covers \(p\ge5\). See `evidence/E1_MAXCOVER_SPECTRUM.md`. **Does not close E(1).**
+
+**Prop 15.37 (2026-07-27):** Continuous Γ-bound pattern: all 11 Max-covers have \(\min_{S=-p}\lambda_{\max}(\Gamma)\ge9.38758>120/13\), so cont bound holds on the **entire** spike level; discrete \(\max R=60\), clique-flip, \(\Phi=\Phi(C)\). GW insufficient for discrete (SDP\(\cdot\alpha<60\)). Residue-1 random PMs also clique-flip in samples. Open: prove cont bound / clique-flip forall Max-covers. See `evidence/E1_MAXCOVER_CONTINUOUS_BOUND.md`. **Does not close E(1).**
+
+**Prop 15.38 (2026-07-28):** **Proved** by exhaustive \(\binom{45}{5}\): among two-sided Max-covers of size 5 on Paley \(C_{10}\), undercutters are **exactly** the 144 perfect matchings (\(\Delta=1\), \(\Phi=13\)); every two-sided cover with \(\Delta\ge2\) has \(\Phi\ge15\). Total 17154 two-sided \(k=5\) covers. Parallel cert: 80 workers. See `evidence/E1_N10_TWOSIDED_K5.md`. Supports low-\(\Delta\) undercutter pattern; **does not close E(1).**
+
+**Prop 15.39 (2026-07-28):** On all 11 stored Max-cover PMs at \(p=5\), clique-flip pair count \(N_{\mathrm{flip}}\in\{24,120\}\) (always \(\ge24\)). Open: prove \(N_{\mathrm{flip}}\ge1\) forall Max-cover PMs. See `evidence/E1_CLIQUE_FLIP_COUNT.md`. **Does not close E(1).**
 
 **n=26 exact sparse MITM (2026-07-27):** shipped `phi_mitm` (exact \(\Phi\) for even \(n\le28\)). Random matchings, cycles \(C_4\)–\(C_{26}\), stars, and random \(k\le20\) flips of Paley \(C_{26}\): **0 undercuts of \(\Phi=65\)** (min observed 67 on single edges). Matching undercut of \(n=10\) does not lift. Consistent with \(k_\star=0\) at \(n=26\), not a proof. See `evidence/E1_N26_SPARSE_EXACT.md`.
 
