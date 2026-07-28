@@ -306,10 +306,11 @@ None of this is established. **Leave Main Theorem as sandwich + OPEN.**
 
 ```bash
 cd /home/nick/quadratic-minmax-limit
-python3 -m pytest tests/test_minmax.py -v
+# FULL SUITE — never single-core (F17). Default: pytest.ini -n 86 / scripts/pytest_full.sh
+./scripts/pytest_full.sh
+# targeted single test OK without -n; full suite must use W=nproc-2
 python3 -c "from src.minmax_quadratic import dual_gaussian_lower_bound; print(dual_gaussian_lower_bound(10))"
 # expect ~ 9.5493 = 10*3/pi
-python3 /tmp/grok-goal-*/implementer/verify_rho1.py  # or: pytest -k rho_eq_1
 ```
 
 Expected: all tests pass; existence not claimed settled in `HANDOFF.md` or `solution.md` Main Theorem.

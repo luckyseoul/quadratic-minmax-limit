@@ -26,6 +26,7 @@
 | **F14** | Ignore this graph and re-run dead loops | Session thrash: serial MILP/SA, false m_n shortcut, soft-close, single-core re-census | User has to intervene; no new proof edge |
 | **F15** | Plain Fréchet on Max+ conditional cov for \(g_{\min}\) | Cond means match Gaussian (Prop 15.50) but Fréchet only gives \(g_{\min}\gtrsim-0.4\) at \(p=5\), below bi-tight thresh | False hope of \(L(p)\) from 2-point Frechet |
 | **F16** | Pin free modulus \(c\) by max \(g_{\min}\) under PSD of \(G(c)\) | At \(p=5\), PSD+rank hold on a continuum; max PSD \(g_{\min}\approx-0.040\) at wrong \(c\); true \(g_{\min}=-3/65\) needs \(\mathrm{Tr}(G^2)\)/spectrum | Spurious “better” gmin; wrong pin |
+| **F17** | Full pytest / long suite on **1 core** (no `-n W`) | 88 cores idle; ~90–120s wall for a suite that is embarrassingly parallel; agent has broken this promise repeatedly | `pytest …` without `-n`; one python at ~100% CPU |
 
 ---
 
@@ -44,7 +45,20 @@ L = lim α_n
          └─ path C: permanent relative gap → limsup < 1/2 along family  [no construction]
 ```
 
-**Do not spend turns on F1–F16.** Next work must be a **proof edge** on path C residual (\(g_{\min}\) moduli + deep ND) or path A/B with new invariants — not serial census or F15/F16 reopens.
+**Do not spend turns on F1–F17.** Next work must be a **proof edge** on path C residual (\(g_{\min}\) moduli + deep ND) or path A/B with new invariants — not serial census, F15/F16 reopens, or single-core full pytest.
+
+### Full-suite compute (mandatory)
+
+```bash
+# ALWAYS (repo default pytest.ini uses -n 86; script recomputes W):
+./scripts/pytest_full.sh
+# or:
+W=$(($(nproc)-2))
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python3 -m pytest tests/test_minmax.py tests/test_gmin_residual.py -n "$W" -q
+```
+
+`OMP_NUM_THREADS=1` is **per worker** (correct with xdist). The ban is **no xdist / no ProcessPool** on multi-minute jobs.
 
 ---
 
