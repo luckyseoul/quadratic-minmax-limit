@@ -951,3 +951,55 @@ def test_prop_15_64_dual_Phi_and_residual_budget():
     assert "15.64" in sol
     assert "residual" in sol.lower()
     assert "OPEN" in data["status"]
+
+
+def test_prop_15_65_clean_form_and_kappa_spectrum():
+    """16N ⇔ λ2(P⊙P)≤4/N; κ|Z spectrum certs; general projectors can violate."""
+    import os
+    import sys
+
+    import numpy as np
+
+    for k in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
+        os.environ[k] = "1"
+    sys.path.insert(0, str(ROOT / "src"))
+    from minmax_quadratic import paley_conference_prime_power
+
+    # Clean equivalence algebra: α=d/N, λ2(P⊙P)=α² λ2(W)
+    # 16N ⇔ λ2(P⊙P)≤4/N ⇔ λ2(W)≤4N/d²
+    for p, d, N in [(3, 5, 12), (5, 13, 260)]:
+        alpha = d / N
+        thr_PP = 4.0 / N
+        thr_W = 4.0 * N / (d**2)
+        assert abs(thr_PP - alpha**2 * thr_W) < 1e-12
+
+    # Live: Max+ at p=5 satisfies λ2(P⊙P)≤4/N with room
+    Y = np.load("/tmp/maxplus_p5.npy").astype(float)
+    N, n = Y.shape
+    d = n // 2
+    P = (Y @ Y.T) / (2.0 * N)
+    assert np.allclose(P @ P, P, atol=1e-8)
+    assert abs(P[0, 0] - d / N) < 1e-10
+    # P1=0
+    assert np.linalg.norm(P @ np.ones(N)) < 1e-8
+    evals = np.linalg.eigvalsh(P * P)
+    evals = np.sort(evals)[::-1]
+    lam1, lam2 = float(evals[0]), float(evals[1])
+    assert abs(lam1 - d / N) < 1e-8
+    assert lam2 <= 4.0 / N + 1e-8
+    # exact λ2 = (88/13)/(2N)
+    assert abs(lam2 - (88 / 13) / (2 * N)) < 1e-6
+
+    # κ spectrum evidence
+    path = ROOT / "evidence" / "e1_gmin_cumulant.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    by_p = {r["p"]: r for r in data["kappa_spectrum"]}
+    assert abs(by_p[5]["lam_max_residual"] - 72 / 13) < 1e-6
+    assert by_p[5]["bound_ok"] and by_p[3]["bound_ok"] and by_p[7]["bound_ok"]
+    # general projectors counterexample recorded
+    assert "general_projector_counterexample" in data
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.65" in sol
+    assert "4/N" in sol or "4/N" in sol.replace(" ", "")
+    assert "OPEN" in data["status"]

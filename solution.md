@@ -1943,7 +1943,33 @@ H(p)\,:=\,\frac{(p+2)^2}{d},\qquad d=\frac{p^2+1}{2}.
 
 5. **Residual (OPEN).** Prove \(\lambda_{\max}(\Phi|_{\mathcal Z})\le6+2H(p)\) for all primes \(p\ge5\) (equivalently residual \(\le(p+1)(p+7)/d\), or \(\mathrm{ray}\le H(p)\), or \(\lambda_{\mathrm{cycle}}\le3+H(p)\)). Then 16N and bi-tight close. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
-   *Remark (dead ends for H).* Gershgorin on \(K\); unrestricted \(\|G_{\mathrm{disj}}\|_{\mathrm{op}}\); mult\(\ge d\) of \(\lambda_2(W)\) with only \(\mathrm{Tr}(W^2)\) (too weak for 16N at \(p=5\)); pointwise \(\cos^2\); 2×sphere (fails at \(p=3\), holds numerically \(p\ge5\)); distance-homogeneous scheme formulae (Max+ not distance-homogeneous at \(p=7\)).
+   *Remark (dead ends for H).* Gershgorin on \(K\); unrestricted \(\|G_{\mathrm{disj}}\|_{\mathrm{op}}\); mult\(\ge d\) of \(\lambda_2(W)\) with only \(\mathrm{Tr}(W^2)\) (too weak for 16N at \(p=5\)); pointwise \(\cos^2\); 2×sphere (fails at \(p=3\), holds numerically \(p\ge5\)); distance-homogeneous scheme formulae (Max+ not distance-homogeneous at \(p=7\)); two-moment feasibility of \(\lambda_2(P\odot P)\) (always allows values \(>4/N\)).
+
+**Proposition 15.65 (κ spectrum on \(\mathcal Z\); clean form \(\lambda_2(P\odot P)\le4/N\); boolean essential; 2026-07-30).** Continue Prop 15.64. Write \(P=YY^\top/(2N)\) (equal-diagonal orthoprojector of rank \(d\), diagonal \(\alpha=d/N\), and \(P\mathbf1=0\)).
+
+1. **Clean equivalences (proved).** 
+   \[
+   P\odot P=\alpha^2 W,\qquad W_{ab}=(u_a\cdot u_b)^2,\quad u_a=y_a/\sqrt n.
+   \]
+   Hence \(\lambda_2(P\odot P)=\alpha^2\lambda_2(W)\). Combined with Prop 15.56–15.61:
+   \[
+   \begin{aligned}
+   16N&\Longleftrightarrow\lambda_2(P\odot P)\le4/N\Longleftrightarrow\lambda_2(W)\le4N/d^2,\\
+   H&\Longleftrightarrow\lambda_2(P\odot P)\le\frac{3+H(p)}{2N},\\
+   \mathrm{gap}&\Longleftrightarrow\lambda_2(P\odot P)\le\alpha/2=d/(2N).
+   \end{aligned}
+   \]
+   Moreover \(\lambda_{\max}(P\odot P)=\alpha\) for every equal-diagonal orthoprojector (Prop 15.58.2). \(\square\)
+
+2. **Cumulant spectrum on \(\mathcal Z\) (certified).** The residual form \(\mathrm{residual}(A)=\langle\kappa,A\otimes A\rangle\) on \(\mathcal Z\) has eigenvalues
+   - \(p=3\): \(\{8\}\) (mult \(\dim\mathcal Z=5\));
+   - \(p=5\): \(\{-\tfrac{24}{13},\tfrac{40}{13},\tfrac{72}{13}\}\) with multiplicities matching \(\{26,26,13\}\) (top \(=\mathrm{budget}=(p+1)(p+7)/d\));
+   - \(p=7\): top \(=\tfrac{1048}{409}<\tfrac{112}{25}=\mathrm{budget}\).
+   Evidence: `e1_gmin_cumulant.json`.
+
+3. **Boolean/conference structure is essential (certified counterexample).** Random equal-diagonal rank-\(d\) orthoprojectors need **not** satisfy \(\lambda_2(P\odot P)\le4/N\): at \((N,d)=(50,10)\), \(20/20\) Haar-row-equalized samples violated the bound. Thus no proof of 16N can use only the equal-diagonal projector axioms; the Max+/boolean/conference structure is load-bearing. Evidence: `e1_gmin_cumulant.json`.
+
+4. **Residual (OPEN).** Prove \(\lambda_2(P\odot P)\le4/N\) (or the sharper H form) for the Max+ projector of every prime \(p\ge5\). Equivalent targets: \(\lambda_{\max}(\kappa|_{\mathcal Z})\le(p+1)(p+7)/d\), or \(\mathrm{ray}\le H(p)\). Then bi-tight closes. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[

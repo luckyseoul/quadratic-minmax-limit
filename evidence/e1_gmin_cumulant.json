@@ -1,0 +1,43 @@
+{
+  "kappa_spectrum": [
+    {
+      "p": 3,
+      "lam_max_residual": 8.0,
+      "budget": 8.0,
+      "bound_ok": true,
+      "ratio": 1.0,
+      "spectrum_res_unique_r6": [
+        8.0
+      ]
+    },
+    {
+      "p": 5,
+      "lam_max_residual": 5.538461538461538,
+      "budget": 5.538461538461538,
+      "bound_ok": true,
+      "ratio": 1.0,
+      "spectrum_res_unique_r6": [
+        -1.846154,
+        3.076923,
+        5.538462
+      ]
+    },
+    {
+      "p": 7,
+      "lam_max_residual": 2.56234718826407,
+      "budget": 4.48,
+      "bound_ok": true,
+      "ratio": 0.571952,
+      "spectrum_res_unique_r6": null,
+      "note": "from gen.eig \u03a6|Z = 4320/409"
+    }
+  ],
+  "status": "\u03ba|Z spectrum: p=3 single eig 8; p=5 eigs {-24,40,72}/13; p=7 max 1048/409. All \u2264 budget (p+1)(p+7)/d. Uniform proof OPEN. General equal-diag projectors can violate 4/N (random N=50,d=10), so boolean/conference essential.",
+  "general_projector_counterexample": {
+    "N": 50,
+    "d": 10,
+    "thr_4_over_N": 0.08,
+    "note": "20/20 random equal-diag projectors had \u03bb2(P\u2299P)>4/N; Max+ structure required for 16N"
+  },
+  "clean_form": "16N \u21d4 \u03bb2(P\u2299P) \u2264 4/N for P=YY^T/(2N); H \u21d4 \u03bb2(P\u2299P) \u2264 (3+H(p))/(2N)"
+}
