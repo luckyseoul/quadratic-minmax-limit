@@ -1,6 +1,6 @@
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-07-29 (Prop 15.72 resolvent-gain calculus + reverse degrees; g_min≥L still open for general p≥5; L still OPEN)  
+**Status date:** 2026-07-29 (Prop 15.73 e4 identity + multi-prime type6; g_min≥L still open for general p≥5; L still OPEN)  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
 **Resume file:** `evidence/SESSION_HANDOFF_2026-07-30.md`  
 **Problem source:** [MathOverflow 413935](https://mathoverflow.net/questions/413935) / [X prize post](https://x.com/PI010101/status/2081070728422752329)
@@ -42,6 +42,7 @@ Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptot
 - **Prop 15.68 (Tκ calculus; residual source on |κ|=3; resolvent reduction; 2026-07-30):** **Proved (conference C² + K4 exhaustion):** Tκ=0 on every |κ|=1 4-set; Tκ∈{±24} on |κ|=3; residual RHS Tκ/p² supported only on |κ|=3. **Proved algebra:** |m4|≤L ⇔ |ρ|≤(p-4)/(2p²) (same-sign) ⇔ resolvent gain |κ|=3→|κ|=1 ≤(p-4)/48; candidate |m4|≤(p-2)/(p(2p+3))≤L (sharp p=5). **Certified:** Paley degrees d3=p²-5, d1=3p²-7 at p=3,5,7. Evidence: `e1_gmin_m4_tkappa.json`. **OPEN:** resolvent gain / candidate for all primes p≥5.
 - **Prop 15.71 (κ-stratum counts for any conference matrix; 2026-07-29):** **Proved:** ∑_S κ(S)² = n(n-1)(n-2)(n-5)/8 via C² wedge sum Σ=-n(n-1)(n-2) + K4 ratio-8 exhaustion ⇒ n1=n(n-1)(n-2)²/32, n3=n(n-1)(n-2)(n-6)/96 (Max+-free). **Certified W=86:** full κ census p=3,5,7,11 matches; d1,d3 constancy samples p=3,5,7,11. Evidence: `e1_gmin_m4_stratum.json`, `src/e1_gmin_m4_stratum.py`. Pins resolvent source size (# of |κ|=3 coords). **OPEN residual:** still |m4|≤M_mid/L_abs for all p≥5; lim α_n OPEN.
 - **Prop 15.72 (resolvent-gain calculus; reverse degrees; type6 pin; 2026-07-29):** **Proved:** gain≤(p-4)/48 ⇔ same-sign |ρ|≤(p-4)/(2p²) ⇔ |m4|≤L on |κ|=1; Tκ/κ∈{±8} on |κ|=3; reverse degrees d1^(3)=3(p²-1), d3^(3)=p²-9 from n1,n3,d3 handshaking. **Certified W=86:** separate κ-weighted vanishing sk1=sk3=0 on all |κ|=1 at p=3,5,7; reverse deg constancy; type6 Max+-free resolvent |m|≤L and gain≪budget at p=5,7; true Max+ gains 0.0064, 0.036 < budget. Evidence: `e1_gmin_m4_resolvent_gain.json`. **OPEN:** prove gain≤(p-4)/48 for all primes p≥5; lim α_n OPEN.
+- **Prop 15.73 (Max+ e4 identity; Paley ∑κ; multi-prime type6; 2026-07-29):** **Proved:** e4=-p(p-1)(p+1)(p+4)/12 from Prop 15.52 + boolean expansion ⇒ ∑_S m4(S)=e4. **Certified:** ∑κ=p²(p²-1)/4 at p=3,5,7,11,13; type6 Max+-free resolvent le_L and le_mid at p=5,7,11,13 with gain≪budget (type6 not exact upper bound — p=7 true m4>type6). Evidence: `e1_gmin_m4_e4_gain.json`. **OPEN residual:** true Max+ |m4|≤M_mid/L for all p≥5; lim α_n OPEN.
 
 - **Residual to \(m_n\ge\Phi-2\Rightarrow L=\tfrac12\):** (1) prove \(g_{\min}\ge L(p)\) or \(\lambda_2(P\odot P)\le4/N\) for all \(p\ge5\); (2) deep non-tight ND. **F13/F16–F18** intact.
 

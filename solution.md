@@ -2276,6 +2276,56 @@ Let \(n_1=\#\{S:|\kappa(S)|=1\}\) and \(n_3=\#\{S:|\kappa(S)|=3\}\).
 
 8. **Residual (OPEN).** Prove for every prime \(p\ge5\) that the resolvent gain is \(\le(p-4)/48\), or directly \(\max_{|\kappa|=1}|m_4|\le M_{\mathrm{mid}}\) (or \(L_{\mathrm{abs}}\)), using the stratum data of Props 15.71–15.72 (source size \(n_3\), degrees \(d_1,d_3,d_1^{(3)},d_3^{(3)}\), separate vanishing) plus Max+/boolean structure — without a per-prime Max+ census as the proof. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.73 (Max+ \(e_4\) identity; Paley \(\sum\kappa\); multi-prime type6 gain; 2026-07-29).** Continue Prop 15.52 and 15.71–15.72.
+
+1. **Boolean \(e_4\) from the Max+ sum constraint (proved).** By Prop 15.52, every \(y\in\mathrm{Max}_{+}\) satisfies \(\mathbf1^\top y=(p+1)y_\infty\), hence
+   \[
+   s^2:=(\textstyle\sum_i y_i)^2=(p+1)^2
+   \]
+   constantly. For any boolean vector \(y\in\{\pm1\}^n\) one has the power-sum identity
+   \[
+   e_4(y):=\sum_{a<b<c<d}y_ay_by_cy_d
+   =\frac{s^4-6ns^2+3n^2+8s^2-6n}{24}.
+   \]
+   Substituting \(s^2=(p+1)^2\) and \(n=p^2+1\) yields the closed form
+   \[
+   e_4=-\frac{p(p-1)(p+1)(p+4)}{12}.
+   \]
+   Since \(e_4(y)\) is constant on \(\mathrm{Max}_{+}\),
+   \[
+   \sum_{S}m_4(S)=\mathbb E[e_4]=e_4.
+   \]
+   Certified on full Max+ at \(p=5,7\) (mmap). Evidence: `e1_gmin_m4_e4_gain.json`. \(\square\)
+
+2. **Paley sum of \(\kappa\) (formula; certified \(p=3,5,7,11,13\)).** For the Paley conference of order \(n=p^2+1\),
+   \[
+   \sum_S\kappa(S)=\frac{p^2(p^2-1)}{4}.
+   \]
+   Full multi-worker \(\kappa\)-sum census matches at all five primes (including \(p=13\), \(\binom{170}{4}\approx3.4\cdot10^7\)). Combined with part 1,
+   \[
+   \sum_S\rho(S)=e_4-\frac1{p^2}\sum_S\kappa(S)
+   \]
+   is an exact Max+/Paley scalar. \(\square\)
+
+3. **Type6 Max+-free resolvent across primes (certified \(p=5,7,11,13\); \(W=86\)).** All \(11\) abstract \(S_4\)-type6 edge-orbits appear for \(p\ge5\). Solving \((4pI-T)\rho=T\kappa/p^2\) in the type6-constant subspace:
+   | \(p\) | \(\max_{|\kappa|=1}|m_{\mathrm{type6}}|\) | \(M_{\mathrm{mid}}\) | \(L_{\mathrm{abs}}\) | gain | budget |
+   |------|--------------------------------------|----------------------|--------------------|------|--------|
+   | 5 | \(0.04764\) | \(0.0500\) | \(0.0600\) | \(0.00796\) | \(0.0208\) |
+   | 7 | \(0.02337\) | \(0.0446\) | \(0.0510\) | \(0.00604\) | \(0.0625\) |
+   | 11 | \(0.00876\) | \(0.0341\) | \(0.0372\) | \(0.00249\) | \(0.1458\) |
+   | 13 | \(0.00605\) | \(0.0302\) | \(0.0325\) | \(0.00092\) | \(0.1875\) |
+
+   In particular type6 predicts \(|m|\le M_{\mathrm{mid}}\le L_{\mathrm{abs}}\) and gain \(\ll(p-4)/48\) at every tested prime, with \(\max|m_{\mathrm{type6}}|\cdot p^2\to1\) (Wick scale). \(\square\)
+
+4. **Caveat (proved by comparison).** Type6 is **not** always exact for true Max+ \(m_4\): at \(p=7\), \(\max|m_4|\approx0.03807> m_{\mathrm{type6}}\approx0.023\). Thus type6 is a Max+-free **probe** (and a feasible particular solution of the master linear equation in a \(T\)-invariant subspace), not by itself an upper bound on true \(m_4\). \(\square\)
+
+5. **Residual (OPEN).** Prove for every prime \(p\ge5\) that true Max+ satisfies \(\max_{|\kappa|=1}|m_4|\le M_{\mathrm{mid}}\) (or \(L_{\mathrm{abs}}\)), e.g. by:
+   - closing the type6 error \(m_4-m_{\mathrm{type6}}\in E_{4p}\) with a kernel bound, or
+   - proving resolvent gain \(\le(p-4)/48\) from reverse degrees + separate vanishing (Prop 15.72), or
+   - a character-sum formula for Paley \(m_4\).
+
+   Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

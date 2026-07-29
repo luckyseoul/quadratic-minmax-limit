@@ -1246,6 +1246,55 @@ def test_prop_15_68_tkappa_vanishing_and_resolvent_reduction():
     assert "OPEN" in data["status"]
 
 
+def test_prop_15_73_e4_identity_and_type6_multi_prime():
+    """Drive shipped e4/type6 helpers: e4 formula, sumκ, multi-prime type6 evidence."""
+    import sys
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_m4_e4_gain import (
+        algebra_e4,
+        e4_formula,
+        e4_from_s2,
+        sum_kappa_formula,
+        L_abs,
+        M_mid,
+    )
+
+    # Proved e4 algebra
+    alg = algebra_e4()
+    assert alg["proved_e4_algebra"] is True
+    for p in (3, 5, 7, 11, 13, 17, 19):
+        n = p * p + 1
+        s2 = (p + 1) ** 2
+        assert abs(e4_from_s2(n, s2) - e4_formula(p)) < 1e-12
+        assert abs(e4_formula(p) + p * (p - 1) * (p + 1) * (p + 4) / 12.0) < 1e-12
+        assert abs(sum_kappa_formula(p) - p * p * (p * p - 1) / 4.0) < 1e-12
+
+    path = ROOT / "evidence" / "e1_gmin_m4_e4_gain.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    assert data["workers"] >= 4
+    assert data["e4_maxplus_ok"] is True
+    assert data["sum_kappa_match_all"] is True
+    assert data["type6_le_L_all_primes"] is True
+    assert data["type6_le_mid_all_primes"] is True
+    assert data["type6_gain_le_budget_all"] is True
+    for p in (5, 7, 11, 13):
+        r = data["type6_resolvent"][str(p)]
+        assert r["type6_le_L"] is True
+        assert r["type6_le_mid"] is True
+        assert r["max_abs_m4_type6_kappa1"] <= L_abs(p) + 1e-8
+        assert r["max_abs_m4_type6_kappa1"] <= M_mid(p) + 1e-8
+        assert r["gain_le_budget"] is True
+        assert data["sum_kappa_certs"][str(p)]["match"] is True
+    # p=3,5,7,11,13 sumκ
+    for p in (3, 5, 7, 11, 13):
+        assert data["sum_kappa_certs"][str(p)]["match"] is True
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.73" in sol
+    assert "OPEN" in data["status"]
+
+
 def test_prop_15_72_resolvent_gain_algebra_and_evidence():
     """Drive shipped resolvent-gain helpers: reverse degrees, gain⇔L, evidence."""
     import sys
