@@ -1,11 +1,13 @@
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-07-29 (Prop 15.82 type6+CR: m4 constant p=5,7; p=5 moduli GD ok; p=7 nullity=2 true GD/cand; general M_cand still open; L still OPEN)  
+**Status date:** 2026-07-29 (engineering graph live; F19/F20 filed; Prop 15.82 closed constancy p=5,7; general M_cand/GD still open; L still OPEN)  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
 **Resume file:** `evidence/SESSION_HANDOFF_2026-07-30.md`  
+**P0 graph (mandatory):** `evidence/P0_ENGINEERING_GRAPH.md` — update every turn; do not free-text thrash.  
+**Failure graph:** `evidence/E1_FAILURE_GRAPH.md` (F1–**F20**).  
 **Problem source:** [MathOverflow 413935](https://mathoverflow.net/questions/413935) / [X prize post](https://x.com/PI010101/status/2081070728422752329)
 
-**Compute (F17, non-negotiable):** 88 cores. Full pytest only via `./scripts/pytest_full.sh` (`W=nproc-2`, default 86). Research scripts: `src/workers.py` `require_workers()` + file-based `ProcessPoolExecutor`, `OMP_NUM_THREADS=1` per worker. **Prefer GPU (CuPy/V100)** for dense m4/Gram batches (`e1_gmin_m4_gpu.py`: one CUDA context, device argmax). **Atomic I/O when the job allows** (`src/io_atomic.py`, Wieferich-style): mmap Max+; evidence via tmp+fsync+`os.replace`; record `gpu.used` + `io` in evidence. Never full-suite / multi-minute residual work on 1 core. Never `python -c` / stdin ProcessPool.
+**Compute (F17/F19/F20, non-negotiable):** 88 cores + V100. Full pytest only via `./scripts/pytest_full.sh` (`W=nproc-2`). Research: `require_workers()` + **file** ProcessPool; `OMP_NUM_THREADS=1`/worker. **GPU (CuPy) for dense batches only** — bulk of wall must be GPU or label the step “CPU multi-W, GPU unused” (F20). **No moduli class-key thrash** once constancy is closed (F19). Atomic I/O (`io_atomic.py`). Never stdin ProcessPool. Never soft-close L (F3).
 
 ---
 

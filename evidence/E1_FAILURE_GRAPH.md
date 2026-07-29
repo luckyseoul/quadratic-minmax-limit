@@ -28,6 +28,10 @@
 | **F16** | Pin free modulus \(c\) by max \(g_{\min}\) under PSD of \(G(c)\) | At \(p=5\), PSD+rank hold on a continuum; max PSD \(g_{\min}\approx-0.040\) at wrong \(c\); true \(g_{\min}=-3/65\) needs \(\mathrm{Tr}(G^2)\)/spectrum | Spurious “better” gmin; wrong pin |
 | **F17** | **Any** multi-minute CPU job on **1 core** (pytest without `-n W`, or research script with ProcessPool theater then serial main, or pure-Python `for quad in binom(n,4)` while 87 cores idle) | 88 cores idle; user has rebuked this **repeatedly** (including this session: m4_pseudo ~97% NLWP=1 after “F17 fixed”); destroys trust; wastes wall time | `ps`: one python `pcpu≈100` `nlwp=1`; load≪nproc; parent does heavy work after `as_completed` |
 | **F18** | Character sums / moments on affine or PGL orbit of halfspace as full Max+ | Orbit size 60 of 260 at \(p=5\) (PGL+Frob+sign); affine gmin ≈ −0.6 ≠ −3/65 | Incomplete orbit; wrong \(g_{\min}\) |
+| **F19** | **Moduli class-invariant thrash** after constancy already achieved | type6+CR already m4-constant at p=5 (26) and p=7 (48); coarse+CR / +κ / e4 / denser evec **do not** drop p=7 nullity below 2; local multi-param grid exceeds M_cand | New scripts `refine*`, `pin_extra`, more keys; no proof edge; user rebukes loops |
+| **F20** | **GPU theater** — claim GPU while wall is CPU | CuPy m4 for 0.1–0.4s then hours of ProcessPool class-build/evec with `nvidia-smi` util 0%; evidence still says `use_gpu=True` | User: “haven’t seen you use the GPU a single time” |
+
+**Live graph (update every turn):** `evidence/P0_ENGINEERING_GRAPH.md` — nodes, critical path, compute routing, change log.
 
 ---
 
