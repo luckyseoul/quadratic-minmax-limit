@@ -2364,6 +2364,41 @@ Let \(n_1=\#\{S:|\kappa(S)|=1\}\) and \(n_3=\#\{S:|\kappa(S)|=3\}\).
    \]
    (or the weaker \(M_{\mathrm{mid}}\) / gain \(\le(p-4)/48\)), using \(E_{4p}\) control of \(h_\star\), the signed operator \(r\mapsto\kappa(T\rho)\), reverse degrees, and/or Paley character sums — **without** replacing true Max+ by type6. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.75 (one-center \(\sigma_a=2\cdot\mathrm{star}_a\); K4 Gram spectrum; GPU cand cert; 2026-07-29).** Continue Prop 15.67–15.74.
+
+1. **One-center \(\kappa\)-sum (proved, any conference matrix).** For every 4-set \(S\) with \(|\kappa(S)|=1\) and every \(a\in S\),
+   \[
+   \sigma_a:=\sum_{r\notin S}C_{ar}\,\kappa(S_{a\to r})
+   \;=\;2\cdot\mathrm{star}_a,
+   \qquad
+   \mathrm{star}_a:=\prod_{u\in S\setminus\{a\}}C_{au}\in\{\pm1\}.
+   \]
+   *Proof.* \(C^2=(n-1)I\) gives \(\sum_{r\notin\{a,b\}}C_{ar}C_{br}=-\sum_{u\in S\setminus\{a,b\}}C_{au}C_{ub}\) for \(b\in S\setminus\{a\}\). Expanding \(\sigma_a\) in the three pairing products of \(\kappa(S_{a\to r})\) yields \(\sigma_a=-2\sum_{v\in S\setminus\{a\}}\mathrm{star}_v\). On \(|\kappa|=1\), \(T\kappa=0\) forces \(\sum_{v\in S}\mathrm{star}_v=0\), hence \(\sum_{v\neq a}\mathrm{star}_v=-\mathrm{star}_a\) and \(\sigma_a=2\,\mathrm{star}_a\). \(\square\)
+
+2. **One-center residual form (proved).** With \(\rho=m_4-\kappa/p^2\), the evec identity at centre \(a\) becomes
+   \[
+   p\,m_4-\frac{\kappa}{p}
+   \;=\;\frac{2\,\mathrm{star}_a}{p^2}
+   +\sum_{r\notin S}C_{ar}\,\rho(S_{a\to r}).
+   \]
+   (Certified float residual \(<10^{-15}\) on Max+ samples at \(p=5,7\).) Averaging over \(a\in S\) recovers \(\mathrm{Ext}=4p\rho\). \(\square\)
+
+3. **Local K4 edge-Gram spectrum (proved algebra).** On the six edges of a \(|\kappa|=1\) 4-set, the principal submatrix of \(G=\mathbb E[ff^\top]\) has opposite-edge entries \(\pi_i m_4\) and wedge entries \(\pm1/p\). Its eigenvalues lie in the pool
+   \[
+   \{1\pm m_4\}\ \cup\ \{1\pm m_4\pm 2/p\}\ \cup\ \{1\pm m_4\pm 2\sqrt2/p\}.
+   \]
+   PSD of this block forces the weak general bound \(|m_4|\le1-2/p=(p-2)/p\) whenever \(1-|m_4|-2/p\) is an eigenvalue — far weaker than \(M_{\mathrm{cand}}\), but Max+-free and load-bearing for local structure. \(\square\)
+
+4. **GPU true Max+ cand census (certified \(p=5,7\); CuPy/V100; mmap+atomic).** Full \(|\kappa|=1\) m4 on Max+ with one CUDA context, device argmax, mmap Max+ load, atomic evidence write:
+   | \(p\) | \(\max|m_4|\) | \(M_{\mathrm{cand}}\) | same-sign \(r\) | gain | wall |
+   |------|---------------|----------------------|----------------|------|------|
+   | 5 | \(3/65\) (sharp) | \(3/65\) | \(2/325\) | \(1/156\) | \(\sim0.36\)s |
+   | 7 | \(109/2863\) | \(5/119\) | \(\approx0.01766\) | \(\approx0.0361\) | \(\sim0.30\)s |
+
+   Evidence: `e1_gmin_m4_gpu.json` (`gpu.used=true`, `io.mmap+atomic`). Multi-worker \(\sigma\) census \(p=3,5,7,11\): `e1_gmin_m4_onecenter.json`. \(\square\)
+
+5. **Residual (OPEN).** Bound \(\sum_r C_{ar}\rho(S_{a\to r})\) (or the signed global operator of Prop 15.74) tightly enough that part 2 forces \(m_4\le M_{\mathrm{cand}}\) for every prime \(p\ge5\). Absolute degree bounds do not contract. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

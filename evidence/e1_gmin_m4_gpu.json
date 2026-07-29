@@ -1,4 +1,5 @@
 {
+  "workers": 86,
   "compute": {
     "cpu_threads": 88,
     "workers": 86,
@@ -13,6 +14,7 @@
     "policy": "Use GPU for large dense batches if available; else ProcessPool W=86. Never single-core multi-minute thrash (F17)."
   },
   "use_gpu": true,
+  "io_policy": "mmap Max+; single H2D; device argmax; evidence via write_json_atomic",
   "results": {
     "5": {
       "backend": "cupy",
@@ -32,13 +34,14 @@
         "mem_total_gib": 16.928342016,
         "util_pct": null
       },
+      "p": 5,
       "n": 26,
       "N": 260,
       "n_kappa1": 11700,
       "batch": 50000,
-      "wall_s": 0.4559312880010111,
+      "wall_s": 0.35714640699734446,
       "max_abs_m4": 0.046153846153846156,
-      "max_m4": 0.046153846153846156,
+      "max_m4_signed": 0.046153846153846156,
       "max_kappa": 1,
       "worst_pts": [
         0,
@@ -46,13 +49,30 @@
         2,
         6
       ],
-      "L_abs": 0.06,
+      "max_same_sign_rho": 0.006153846153846156,
+      "effective_gain": 0.006410256410256413,
+      "M_cand": 0.046153846153846156,
       "M_mid": 0.05,
-      "m4_le_L": true,
+      "L_abs": 0.06,
+      "rho_budget_cand": 0.006153846153846156,
+      "rho_budget_L": 0.02,
+      "gain_budget_cand": 0.00641025641025641,
+      "gain_budget_L": 0.020833333333333332,
+      "m4_le_cand": true,
       "m4_le_mid": true,
+      "m4_le_L": true,
+      "same_rho_le_cand": true,
+      "same_rho_le_L": true,
+      "gain_le_cand": true,
+      "gain_le_L": true,
       "g_min": -0.046153846153846156,
-      "io": "mmap-friendly host Y; single H2D; device argmax (no full batch D2H)",
-      "p": 5
+      "gpu_used": true,
+      "io": {
+        "maxplus_read": "mmap load_maxplus_array",
+        "H2D": "single contiguous host\u2192device copy of Y",
+        "device_reduce": "cp.argmax(|m4|), cp.argmax(r_pos) \u2014 no full batch D2H",
+        "evidence_write": "write_json_atomic (tmp+fsync+os.replace)"
+      }
     },
     "7": {
       "backend": "cupy",
@@ -72,13 +92,14 @@
         "mem_total_gib": 16.928342016,
         "util_pct": null
       },
+      "p": 7,
       "n": 50,
       "N": 11452,
       "n_kappa1": 176400,
       "batch": 12000,
-      "wall_s": 0.29560744400077965,
+      "wall_s": 0.3018288139865035,
       "max_abs_m4": 0.03807195249738037,
-      "max_m4": 0.03807195249738037,
+      "max_m4_signed": 0.03807195249738037,
       "max_kappa": 1,
       "worst_pts": [
         0,
@@ -86,14 +107,33 @@
         2,
         10
       ],
-      "L_abs": 0.05102040816326531,
+      "max_same_sign_rho": 0.01766378923207425,
+      "effective_gain": 0.036063569682151596,
+      "M_cand": 0.04201680672268908,
       "M_mid": 0.044642857142857144,
-      "m4_le_L": true,
+      "L_abs": 0.05102040816326531,
+      "rho_budget_cand": 0.021608643457382958,
+      "rho_budget_L": 0.030612244897959183,
+      "gain_budget_cand": 0.04411764705882353,
+      "gain_budget_L": 0.0625,
+      "m4_le_cand": true,
       "m4_le_mid": true,
+      "m4_le_L": true,
+      "same_rho_le_cand": true,
+      "same_rho_le_L": true,
+      "gain_le_cand": true,
+      "gain_le_L": true,
       "g_min": -0.03807195249738037,
-      "io": "mmap-friendly host Y; single H2D; device argmax (no full batch D2H)",
-      "p": 7
+      "gpu_used": true,
+      "io": {
+        "maxplus_read": "mmap load_maxplus_array",
+        "H2D": "single contiguous host\u2192device copy of Y",
+        "device_reduce": "cp.argmax(|m4|), cp.argmax(r_pos) \u2014 no full batch D2H",
+        "evidence_write": "write_json_atomic (tmp+fsync+os.replace)"
+      }
     }
   },
-  "status": "GPU (CuPy/V100) |\u03ba|=1 m4 census: p=5 max|m4|=0.04615385 (0.46s), p=7 max|m4|=0.03807195 (0.30s). Both \u2264M_mid and \u2264L. One CUDA context; host multi-worker not used for this path."
+  "status": "GPU CuPy/V100 |\u03ba|=1 m4 census (mmap+atomic): p=5 max|m4|=0.0461538462\u2264M_cand=0.0461538462 (gain=0.00641026, 0.36s); p=7 max|m4|=0.0380719525\u2264M_cand=0.0420168067 (gain=0.03606357, 0.30s). One CUDA context; device reduce; evidence atomic. OPEN: prove max|m4|\u2264M_cand for all primes p\u22655. lim \u03b1_n OPEN.",
+  "both_le_cand": true,
+  "both_le_mid": true
 }

@@ -1246,6 +1246,78 @@ def test_prop_15_68_tkappa_vanishing_and_resolvent_reduction():
     assert "OPEN" in data["status"]
 
 
+def test_prop_15_75_onecenter_sigma_and_gpu_cand():
+    """Drive shipped onecenter algebra + GPU cand census (mmap+atomic path)."""
+    import sys
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_m4_onecenter import (
+        algebraic_sigma_identity,
+        k4_gram_spectrum_formula,
+        weak_ub_algebra,
+        M_cand,
+        L_abs,
+    )
+    from e1_gmin_m4_gpu import (
+        M_cand as gpu_M_cand,
+        L_abs as gpu_L_abs,
+        gain_budget_cand,
+        rho_budget_cand,
+    )
+
+    alg = algebraic_sigma_identity()
+    assert alg["proved"] is True
+    assert alg["n_kappa1_labelings"] == 48
+    assert alg["sigma_eq_2_star_count"] == 48
+    assert k4_gram_spectrum_formula()["proved"] is True
+    assert weak_ub_algebra()["proved_cand_beats_T"] is True
+    # shared algebra with GPU module
+    assert abs(M_cand(5) - gpu_M_cand(5)) < 1e-15
+    assert abs(L_abs(7) - gpu_L_abs(7)) < 1e-15
+    assert abs(gain_budget_cand(5) - 1 / 156) < 1e-15
+    assert abs(rho_budget_cand(5) - 2 / 325) < 1e-15
+
+    # onecenter evidence (multi-worker σ census)
+    path_oc = ROOT / "evidence" / "e1_gmin_m4_onecenter.json"
+    assert path_oc.is_file()
+    data_oc = json.loads(path_oc.read_text())
+    assert data_oc["workers"] >= 4
+    assert data_oc["sigma_identity_ok"] is True
+    assert data_oc["k4_spectrum_ok"] is True
+    for p in ("3", "5", "7", "11"):
+        assert data_oc["sigma_certs"][p]["all_ok"] is True
+        assert data_oc["sigma_certs"][p]["bad_sigma_ne_2star"] == 0
+    # evidence records atomic/mmap io policy
+    assert "atomic" in data_oc["io"].lower() or "write_json_atomic" in data_oc["io"]
+
+    # GPU cand census evidence (real shipped GPU path results)
+    path_gpu = ROOT / "evidence" / "e1_gmin_m4_gpu.json"
+    assert path_gpu.is_file()
+    data_g = json.loads(path_gpu.read_text())
+    assert data_g["use_gpu"] is True
+    assert data_g["both_le_cand"] is True
+    assert data_g["both_le_mid"] is True
+    for p in ("5", "7"):
+        r = data_g["results"][p]
+        assert r["gpu_used"] is True
+        assert r["m4_le_cand"] is True
+        assert r["m4_le_mid"] is True
+        assert r["m4_le_L"] is True
+        assert "mmap" in str(r["io"]).lower() or "mmap" in data_g.get("io_policy", "").lower()
+    r5 = data_g["results"]["5"]
+    assert abs(r5["max_abs_m4"] - 3 / 65) < 1e-9
+    assert abs(r5["effective_gain"] - 1 / 156) < 1e-9
+    r7 = data_g["results"]["7"]
+    assert abs(r7["max_abs_m4"] - 109 / 2863) < 1e-9
+    # OPEN not soft-closed
+    assert "OPEN" in data_g["status"]
+    assert "OPEN" in data_oc["status"]
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.75" in sol
+    hand = (ROOT / "HANDOFF.md").read_text()
+    assert "OPEN" in hand[:500] or "L still OPEN" in hand[:800]
+
+
 def test_prop_15_74_true_maxplus_cand_bound():
     """Drive shipped kernel helpers: cand algebra + true Max+ census evidence."""
     import sys

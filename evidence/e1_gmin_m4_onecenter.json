@@ -1,0 +1,334 @@
+{
+  "workers": 86,
+  "prop": "15.75",
+  "algebraic_sigma": {
+    "proved": true,
+    "n_kappa1_labelings": 48,
+    "sigma_eq_2_star_count": 48,
+    "star_sum_zero_count": 48,
+    "identity": "\u03c3_a = 2\u00b7star_a on |\u03ba|=1",
+    "method": "C\u00b2\u21d2sum_{r\u2209S} C_ar C_br = -sum_{u\u2208S\\{a,b}} C_au C_ub; expand \u03c3_a; get -2\u2211_{v\u2260a} star_v; T\u03ba=0\u21d2\u2211_v star_v=0\u21d2\u03c3_a=2 star_a.",
+    "pairs_sample": {
+      "(1, -2, -1)": 12,
+      "(-1, -2, -1)": 12,
+      "(1, 2, 1)": 12,
+      "(-1, 2, 1)": 12
+    }
+  },
+  "k4_gram_spectrum": {
+    "proved": true,
+    "eigenvalue_pool": [
+      "1 + m4",
+      "1 - m4",
+      "1 \u00b1 m4 \u00b1 2/p",
+      "1 \u00b1 m4 \u00b1 2\u221a2/p"
+    ],
+    "PSD_implies_weak": "Whenever 1-|m4|-2/p is an eigenvalue, PSD \u21d2 |m4| \u2264 1-2/p = (p-2)/p. Also 1+|m4|-2\u221a2/p \u2265 0 is automatic for small |m4|.",
+    "weak_UB": "(p-2)/p",
+    "note": "Local principal submatrix of edge Gram G (opposite: \u03c0_i m4, wedge: \u00b11/p). Necessary for G\u227d0 but far weaker than M_cand.",
+    "method": "charpoly of 6\u00d76 symbolic G for \u03ba=1 edge-sign patterns; factor."
+  },
+  "weak_ub_algebra": {
+    "weak_from_K4_PSD": "(p-2)/p",
+    "by_p": {
+      "5": {
+        "weak_UB": 0.6,
+        "M_cand": 0.046153846153846156,
+        "M_mid": 0.05,
+        "L_abs": 0.06,
+        "T_abs": 0.06666666666666667,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "7": {
+        "weak_UB": 0.7142857142857143,
+        "M_cand": 0.04201680672268908,
+        "M_mid": 0.044642857142857144,
+        "L_abs": 0.05102040816326531,
+        "T_abs": 0.054945054945054944,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "11": {
+        "weak_UB": 0.8181818181818182,
+        "M_cand": 0.03272727272727273,
+        "M_mid": 0.03409090909090909,
+        "L_abs": 0.0371900826446281,
+        "T_abs": 0.03896103896103896,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "13": {
+        "weak_UB": 0.8461538461538461,
+        "M_cand": 0.029177718832891247,
+        "M_mid": 0.03021978021978022,
+        "L_abs": 0.03254437869822485,
+        "T_abs": 0.033846153846153845,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "17": {
+        "weak_UB": 0.8823529411764706,
+        "M_cand": 0.02384737678855326,
+        "M_mid": 0.024509803921568627,
+        "L_abs": 0.025951557093425604,
+        "T_abs": 0.026737967914438502,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "19": {
+        "weak_UB": 0.8947368421052632,
+        "M_cand": 0.021822849807445442,
+        "M_mid": 0.02236842105263158,
+        "L_abs": 0.023545706371191136,
+        "T_abs": 0.02418207681365576,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "23": {
+        "weak_UB": 0.9130434782608695,
+        "M_cand": 0.018633540372670808,
+        "M_mid": 0.019021739130434784,
+        "L_abs": 0.01984877126654064,
+        "T_abs": 0.020289855072463767,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "29": {
+        "weak_UB": 0.9310344827586207,
+        "M_cand": 0.015262860373092142,
+        "M_mid": 0.015517241379310345,
+        "L_abs": 0.01605231866825208,
+        "T_abs": 0.016333938294010888,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "31": {
+        "weak_UB": 0.9354838709677419,
+        "M_cand": 0.014392059553349877,
+        "M_mid": 0.014616935483870967,
+        "L_abs": 0.015088449531737774,
+        "T_abs": 0.015335801163405606,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "37": {
+        "weak_UB": 0.9459459459459459,
+        "M_cand": 0.012285012285012284,
+        "M_mid": 0.012446657183499289,
+        "L_abs": 0.012783053323593864,
+        "T_abs": 0.01295816364309515,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "41": {
+        "weak_UB": 0.9512195121951219,
+        "M_cand": 0.011190817790530846,
+        "M_mid": 0.01132404181184669,
+        "L_abs": 0.011600237953599048,
+        "T_abs": 0.011743450767841012,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "43": {
+        "weak_UB": 0.9534883720930233,
+        "M_cand": 0.010713352495427228,
+        "M_mid": 0.010835095137420718,
+        "L_abs": 0.011087074094104922,
+        "T_abs": 0.01121751025991792,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "47": {
+        "weak_UB": 0.9574468085106383,
+        "M_cand": 0.009870585654748848,
+        "M_mid": 0.00997340425531915,
+        "L_abs": 0.010185604345857854,
+        "T_abs": 0.01029512697323267,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "53": {
+        "weak_UB": 0.9622641509433962,
+        "M_cand": 0.00882811147654492,
+        "M_mid": 0.00890985324947589,
+        "L_abs": 0.009077963688145247,
+        "T_abs": 0.009164420485175202,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "59": {
+        "weak_UB": 0.9661016949152542,
+        "M_cand": 0.007984311528225242,
+        "M_mid": 0.008050847457627118,
+        "L_abs": 0.008187302499281816,
+        "T_abs": 0.008257279443720122,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "61": {
+        "weak_UB": 0.9672131147540983,
+        "M_cand": 0.007737704918032787,
+        "M_mid": 0.007800105764145955,
+        "L_abs": 0.00792797635044343,
+        "T_abs": 0.007993496816149573,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "67": {
+        "weak_UB": 0.9701492537313433,
+        "M_cand": 0.0070813814140973964,
+        "M_mid": 0.0071334503950834065,
+        "L_abs": 0.007239919803965249,
+        "T_abs": 0.007294355291213107,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "71": {
+        "weak_UB": 0.971830985915493,
+        "M_cand": 0.006702282661486159,
+        "M_mid": 0.0067488262910798125,
+        "L_abs": 0.006843880182503472,
+        "T_abs": 0.0068924183398261915,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "73": {
+        "weak_UB": 0.9726027397260274,
+        "M_cand": 0.006527535165946493,
+        "M_mid": 0.006571640133283969,
+        "L_abs": 0.006661662600863202,
+        "T_abs": 0.006707605101558809,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      },
+      "79": {
+        "weak_UB": 0.9746835443037974,
+        "M_cand": 0.006053935057787562,
+        "M_mid": 0.0060917721518987345,
+        "L_abs": 0.006168883191796187,
+        "T_abs": 0.006208175441425462,
+        "weak_gt_T": true,
+        "cand_lt_T": true
+      }
+    },
+    "proved_weak": true,
+    "proved_cand_beats_T": true,
+    "note": "Weak UB insufficient for bi-tight; cand/mid still the targets."
+  },
+  "sigma_certs": {
+    "3": {
+      "p": 3,
+      "n_kappa1": 180,
+      "n_checks": 720,
+      "bad_sigma_ne_2star": 0,
+      "all_ok": true,
+      "sigma_value_counts": {
+        "-2": 360,
+        "2": 360
+      },
+      "wall_s": 0.16203209100058302
+    },
+    "5": {
+      "p": 5,
+      "n_kappa1": 11700,
+      "n_checks": 46800,
+      "bad_sigma_ne_2star": 0,
+      "all_ok": true,
+      "sigma_value_counts": {
+        "-2": 23400,
+        "2": 23400
+      },
+      "wall_s": 0.14778382499935105
+    },
+    "7": {
+      "p": 7,
+      "n_kappa1": 176400,
+      "n_checks": 705600,
+      "bad_sigma_ne_2star": 0,
+      "all_ok": true,
+      "sigma_value_counts": {
+        "-2": 352800,
+        "2": 352800
+      },
+      "wall_s": 1.684827025004779
+    },
+    "11": {
+      "p": 11,
+      "n_kappa1": 6642900,
+      "n_checks": 26571600,
+      "bad_sigma_ne_2star": 0,
+      "all_ok": true,
+      "sigma_value_counts": {
+        "-2": 13285800,
+        "2": 13285800
+      },
+      "wall_s": 151.2782361980062
+    }
+  },
+  "k4_numeric": {
+    "p5_S(0, 1, 2, 6)": {
+      "m4": 0.046153846153846156,
+      "m4_expected": 0.046153846153846156,
+      "evals": [
+        0.48046842120460836,
+        0.5538461538461539,
+        0.953846153846154,
+        1.0461538461538462,
+        1.3538461538461541,
+        1.6118392711030844
+      ],
+      "match_exact_pattern": true,
+      "each_eval_in_formal_set": true,
+      "match": true,
+      "psd_and_weak_ub": true
+    },
+    "p5_S(0, 1, 2, 9)": {
+      "m4": 0.015384615384615385,
+      "m4_expected": 0.015384615384615385,
+      "evals": [
+        0.4189299596661466,
+        0.6153846153846154,
+        0.9846153846153847,
+        1.0153846153846156,
+        1.4153846153846155,
+        1.5503008095646225
+      ],
+      "match_exact_pattern": true,
+      "each_eval_in_formal_set": true,
+      "match": true,
+      "psd_and_weak_ub": true
+    }
+  },
+  "onecenter_formula_certs": {
+    "5": {
+      "p": 5,
+      "n_checked": 200,
+      "max_err": 1.6653345369377348e-16,
+      "identity_ok": true
+    },
+    "7": {
+      "p": 7,
+      "n_checked": 200,
+      "max_err": 1.3877787807814457e-16,
+      "identity_ok": true
+    }
+  },
+  "true_cand_reload": {
+    "5": {
+      "le_cand": true,
+      "max_abs_m4": 0.046153846153846156,
+      "M_cand": 0.046153846153846156
+    },
+    "7": {
+      "le_cand": true,
+      "max_abs_m4": 0.03807195249738037,
+      "M_cand": 0.04201680672268908
+    }
+  },
+  "sigma_identity_ok": true,
+  "k4_spectrum_ok": true,
+  "onecenter_ok": true,
+  "io": "write_json_atomic; ProcessPool \u03c3 census; mmap for formula checks",
+  "status": "Prop 15.75 PROVED: on |\u03ba|=1, \u03c3_a=\u2211_r C_ar \u03ba(S_a\u2192r)=2\u00b7star_a (C\u00b2+T\u03ba=0); one-center: p m4-\u03ba/p=2 star_a/p\u00b2+\u2211 C_ar \u03c1; K4 Gram evals {1\u00b1m4, 1-m4\u00b12/p, 1+m4\u00b12\u221a2/p} \u21d2 weak |m4|\u2264(p-2)/p. Certs \u03c3 p=3,5,7,11 (True); K4 num (True); one-center formula p=5,7 (True). OPEN: bound \u2211 C_ar \u03c1 to get |m4|\u2264M_cand for all p\u22655. lim \u03b1_n OPEN."
+}
