@@ -2477,6 +2477,44 @@ Let \(n_1=\#\{S:|\kappa(S)|=1\}\) and \(n_3=\#\{S:|\kappa(S)|=3\}\).
 
 5. **Residual (OPEN).** Prove \(\mathrm{star}_a\cdot S_1(a)\le0\) for every prime \(p\ge5\) on Paley Max+ (e.g. via boolean \(+p\)-evec character sums), and prove the joint criterion of part 2 (or a matching \(S_3\) bound on maximisers) so that \(\max|m_4|\le M_{\mathrm{cand}}\) for all such \(p\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.78 (moment form / Gaussian domination; 4-set constancy; exact \(p=5\) spectrum; 2026-07-29).** Continue Prop 15.77. Write \(R_1(a)=\{r\notin S:|\kappa(S_{a\to r})|=1\}\), \(U_1=\sum_{r\in R_1}C_{ar}y_r\), \(\tau_1(a)=\sum_{r\in R_1}C_{ar}\kappa(S_{a\to r})\), and \(f_0=\prod_{u\in S\setminus\{a\}}y_u\).
+
+1. **Moment form (proved, Max+ with \(Cy=py\)).** On every \(|\kappa|=1\) centre,
+   \[
+   \mathrm{star}_a\cdot S_1(a)
+   \;=\;
+   \mathbb E\bigl[\varphi\bigr]-\mathbb E_{\mathrm{Wick}}\bigl[\varphi\bigr],
+   \qquad
+   \varphi(y)\,:=\,\mathrm{star}_a\,f_0\,U_1,
+   \]
+   where Wick uses the Gaussian \(N(0,\Sigma)\) with \(\Sigma=I+C/p\) (so \(\mathbb E_{\mathrm{Wick}}[\varphi]=\mathrm{star}_a\tau_1/p^2\)). Consequently
+   \[
+   \mathrm{star}_a\cdot S_1(a)\le0
+   \quad\Longleftrightarrow\quad
+   \mathbb E_{\mathrm{Max}+}[\varphi]\le\mathbb E_{\mathrm{Wick}}[\varphi]
+   \]
+   (Gaussian domination for this specific degree-4 form). \(\square\)
+
+2. **Joint rewrite (proved).** For \(\kappa=1\) and \(\mathrm{star}_a=+1\),
+   \[
+   S_1+S_3 \;=\; p\,m_4-\frac1p-\frac2{p^2}.
+   \]
+   (So the joint \(S_1+S_3\) is a function of \(m_4\) alone on this locus; the cand criterion is equivalent to \(\max m_4\le M_{\mathrm{cand}}\) on same-sign sets — the leverage of \(S_1\le0\) is to replace the joint by an \(S_3\)-only upper bound.) \(\square\)
+
+3. **Combinatorial constancy of \(\mathrm{star}\cdot\tau_1\) (certified Paley \(p=3,5,7,11\); \(W=86\)).** On every \(|\kappa|=1\) 4-set, the four values \(\mathrm{star}_a\cdot\tau_1(a)\) (\(a\in S\)) are equal. Observed value sets: \(\{-1\}\) at \(p=3\); \(\{-1,5\}\) at \(p=5\); \(\{-7,-1,5\}\) at \(p=7\); \(\{-13,-7,-1,5,11\}\) at \(p=11\). Evidence: `e1_gmin_m4_S1_const.json`. \(\square\)
+
+4. **Max+ constancy of \(\mathrm{star}\cdot S_1\) (certified GPU \(p=5,7\); mmap+atomic).** On every \(|\kappa|=1\) 4-set, the four values \(\mathrm{star}_a\cdot S_1(a)\) are equal (one rational per set). In particular the 4-set carries a single sign for the GD inequality. Full census: \(\mathrm{star}\cdot S_1\le0\) with Gaussian domination on every centre; \(\max\mathrm{star}\cdot S_1=-2/65\) (\(p=5\)), \(-0.006686\) (\(p=7\)). \(\square\)
+
+5. **Exact spectrum at \(p=5\) (certified full Max+).** \(\mathrm{star}\cdot S_1\in\{-2/65,-42/325\}\), both \(<0\). Matches the closed moment rule
+   \[
+   \mathrm{star}\cdot\mathbb E[f_0U_1]
+   \;=\;
+   \frac{11}{65}\,\mathrm{sgn}(\mathrm{star}\cdot\tau_1)
+   \]
+   with \(\mathrm{star}\cdot\tau_1\in\{-1,5\}\) (so \(\mathrm{star}\cdot S_1=\frac{11}{65}\mathrm{sgn}(t)-\,t/25\)). Hence \(\mathrm{star}\cdot S_1\le0\) is **proved at \(p=5\)** by exhaustive Max+ evaluation. \(\square\)
+
+6. **Residual (OPEN).** Prove for every prime \(p\ge5\): (i) \(\mathrm{star}\cdot\tau_1\) and \(\mathrm{star}\cdot S_1\) constant on each \(|\kappa|=1\) set; (ii) Gaussian domination \(\mathbb E[\varphi]\le\mathbb E_{\mathrm{Wick}}[\varphi]\) (equivalently \(\mathrm{star}\cdot S_1\le0\)); (iii) joint/S3 bound \(\Rightarrow\max|m_4|\le M_{\mathrm{cand}}\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

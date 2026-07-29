@@ -1,0 +1,233 @@
+{
+  "prop": "15.78",
+  "workers": 86,
+  "compute": {
+    "cpu_threads": 88,
+    "workers": 86,
+    "gpu": {
+      "available": true,
+      "backend": "cupy",
+      "name": "Tesla V100-SXM2-16GB",
+      "mem_free_gib": 16.456024064,
+      "mem_total_gib": 16.928342016,
+      "util_pct": null
+    },
+    "policy": "Use GPU for large dense batches if available; else ProcessPool W=86. Never single-core multi-minute thrash (F17)."
+  },
+  "use_gpu": true,
+  "io_policy": "mmap Max+; GPU all-m4; ProcessPool constancy/GD walk; pure-C \u03c41 constancy; write_json_atomic",
+  "algebra": {
+    "proved": true,
+    "moment_form": "star_a S1(a) = E[star_a (\u220f_{u\u2260a} y_u) U1] - star_a \u03c41/p\u00b2 with U1=\u2211_{R1} C_ar y_r, R1={r\u2209S: |\u03ba(S_a\u2192r)|=1}",
+    "Wick_value": "E_Wick[\u03c6] = star_a \u03c41 / p\u00b2  (pairwise \u03a3=I+C/p)",
+    "gaussian_domination_iff": "star_a S1(a)\u22640 \u21d4 E_Max+[\u03c6] \u2264 E_{N(0,\u03a3)}[\u03c6]",
+    "joint_kappa1_star_plus": "S1+S3 = p m4 - 1/p - 2/p\u00b2  (\u03ba=1, star=+1)",
+    "cand_via_joint": "max same-sign \u03c1 \u2264 \u03c1_cand \u21d4 max_{\u03ba=1,m4>1/p\u00b2} m4 \u2264 M_cand (tautological rewrite; power is S1\u22640 \u21d2 replace joint by S3)",
+    "p5_S3_budget_negative": true,
+    "note": "At p=5, p \u03c1_cand - 2/p\u00b2 = -16/325 < 0, so S1\u22640 alone with absolute |S3| is insufficient \u2014 need strongly negative S1 on maximisers."
+  },
+  "p5_spectrum_algebra": {
+    "star_S1_values": [
+      -0.03076923076923077,
+      -0.12923076923076923
+    ],
+    "both_negative": true,
+    "st_E_fU1": "\u00b111/65 = \u00b1(2p+1)/(n p / 2) at p=5",
+    "st_tau1_values": [
+      -1,
+      5
+    ],
+    "formula_check": {
+      "stt1=5": true,
+      "stt1=-1": true
+    },
+    "proved_if_census": "Full Max+ census p=5 yields only these two rationals; both <0 \u21d2 star\u00b7S1\u22640 at p=5.",
+    "algebra_ok": true
+  },
+  "tau1_constancy": {
+    "3": {
+      "p": 3,
+      "n_kappa1": 180,
+      "n_star_tau1_constant": 180,
+      "all_constant": true,
+      "star_tau1_unique_values": [
+        -1
+      ],
+      "n_patterns": 1,
+      "wall_s": 0.1510814700013725,
+      "io": "ProcessPool pure-C (no Max+)"
+    },
+    "5": {
+      "p": 5,
+      "n_kappa1": 11700,
+      "n_star_tau1_constant": 11700,
+      "all_constant": true,
+      "star_tau1_unique_values": [
+        -1,
+        5
+      ],
+      "n_patterns": 2,
+      "wall_s": 0.15859639400150627,
+      "io": "ProcessPool pure-C (no Max+)"
+    },
+    "7": {
+      "p": 7,
+      "n_kappa1": 176400,
+      "n_star_tau1_constant": 176400,
+      "all_constant": true,
+      "star_tau1_unique_values": [
+        -7,
+        -1,
+        5
+      ],
+      "n_patterns": 3,
+      "wall_s": 1.790401855003438,
+      "io": "ProcessPool pure-C (no Max+)"
+    },
+    "11": {
+      "p": 11,
+      "n_kappa1": 6642900,
+      "n_star_tau1_constant": 6642900,
+      "all_constant": true,
+      "star_tau1_unique_values": [
+        -13,
+        -7,
+        -1,
+        5,
+        11
+      ],
+      "n_patterns": 5,
+      "wall_s": 139.57408612100699,
+      "io": "ProcessPool pure-C (no Max+)"
+    }
+  },
+  "results": {
+    "5": {
+      "p": 5,
+      "n": 26,
+      "N": 260,
+      "Cy_eq_py_err": 0.0,
+      "Cy_eq_py": true,
+      "n_kappa1": 11700,
+      "star_S1_constant_on_every_set": true,
+      "n_constant": 11700,
+      "max_star_S1": -0.030769230769230736,
+      "min_star_S1": -0.1292307692307693,
+      "star_S1_always_le_0": true,
+      "gaussian_domination": true,
+      "n_gd_violations": 0,
+      "star_S1_unique_values": [
+        -0.129230769231,
+        -0.030769230769
+      ],
+      "n_patterns": 2,
+      "p5_exact": {
+        "matches_closed_form": true,
+        "values": [
+          -0.129230769231,
+          -0.030769230769
+        ],
+        "expected": [
+          -0.12923076923076923,
+          -0.03076923076923077
+        ]
+      },
+      "rho_budget_cand": 0.006153846153846156,
+      "M_cand": 0.046153846153846156,
+      "wall_m4_s": 0.12277251499472186,
+      "wall_walk_s": 0.3026297530013835,
+      "gpu_used": true,
+      "gpu_m4": {
+        "backend": "cupy",
+        "gpu": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 16.456024064,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "gpu_after": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 16.35745792,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "wall_s": 0.12277251499472186,
+        "n_quads": 14950,
+        "batch": 50000,
+        "io": {
+          "maxplus_read": "mmap",
+          "H2D": "single Y",
+          "D2H": "m4 vector only"
+        }
+      },
+      "workers_walk": 58,
+      "io": "mmap Max+; GPU m4; ProcessPool constancy walk; write_json_atomic"
+    },
+    "7": {
+      "p": 7,
+      "n": 50,
+      "N": 11452,
+      "Cy_eq_py_err": 0.0,
+      "Cy_eq_py": true,
+      "n_kappa1": 176400,
+      "star_S1_constant_on_every_set": true,
+      "n_constant": 176400,
+      "max_star_S1": -0.006686293099146704,
+      "min_star_S1": -0.09011526370939583,
+      "star_S1_always_le_0": true,
+      "gaussian_domination": true,
+      "n_gd_violations": 0,
+      "star_S1_unique_values": [
+        -0.090115263709,
+        -0.030238012075,
+        -0.017464198393,
+        -0.006686293099
+      ],
+      "n_patterns": 4,
+      "p5_exact": null,
+      "rho_budget_cand": 0.021608643457382958,
+      "M_cand": 0.04201680672268908,
+      "wall_m4_s": 0.3847863390110433,
+      "wall_walk_s": 5.527596350002568,
+      "gpu_used": true,
+      "gpu_m4": {
+        "backend": "cupy",
+        "gpu": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 16.35745792,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "gpu_after": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 13.05444352,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "wall_s": 0.3847863390110433,
+        "n_quads": 230300,
+        "batch": 12000,
+        "io": {
+          "maxplus_read": "mmap",
+          "H2D": "single Y",
+          "D2H": "m4 vector only"
+        }
+      },
+      "workers_walk": 86,
+      "io": "mmap Max+; GPU m4; ProcessPool constancy walk; write_json_atomic"
+    }
+  },
+  "status": "Prop 15.78: star\u00b7\u03c41 constant on every |\u03ba|=1 set p=3,5,7,11 => True; star\u00b7S1 constant on every |\u03ba|=1 Max+ set p=5,7 => True; Gaussian domination E[\u03c6]\u2264E_Wick[\u03c6] => True; star\u00b7S1\u22640 => True (p5 exact {-2/65,-42/325}). GPU mmap+atomic. OPEN: prove constancy+S1\u22640 for all p\u22655; joint/S3. lim \u03b1_n OPEN.",
+  "tau1_constancy_all": true,
+  "star_S1_constancy_both": true,
+  "gaussian_domination_both": true,
+  "star_S1_le0_both": true
+}

@@ -1328,6 +1328,62 @@ def test_S1_sign_gpu_mmap_atomic():
     assert abs(rho_budget_cand(5) - 2 / 325) < 1e-15
 
 
+def test_prop_15_78_star_S1_constancy_gd():
+    """Prop 15.78: moment form, τ1/S1 constancy, GD, p=5 exact spectrum."""
+    import sys
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_m4_S1_const import (
+        algebraic_moment_form,
+        p5_exact_spectrum_algebra,
+        M_cand,
+        rho_budget_cand,
+    )
+
+    alg = algebraic_moment_form()
+    assert alg["proved"] is True
+    assert "gaussian_domination_iff" in alg
+    p5a = p5_exact_spectrum_algebra()
+    assert p5a["algebra_ok"] is True
+    assert p5a["both_negative"] is True
+    assert abs(p5a["star_S1_values"][0] + 2 / 65) < 1e-15
+    assert abs(p5a["star_S1_values"][1] + 42 / 325) < 1e-15
+
+    path = ROOT / "evidence" / "e1_gmin_m4_S1_const.json"
+    assert path.is_file(), "run src/e1_gmin_m4_S1_const.py (GPU+mmap+atomic)"
+    data = json.loads(path.read_text())
+    assert data["prop"] == "15.78"
+    assert data["workers"] >= 4
+    assert data["use_gpu"] is True
+    assert "mmap" in data["io_policy"].lower()
+    assert "atomic" in data["io_policy"].lower()
+    assert data["tau1_constancy_all"] is True
+    for p in ("3", "5", "7", "11"):
+        assert data["tau1_constancy"][p]["all_constant"] is True
+    assert data["star_S1_constancy_both"] is True
+    assert data["gaussian_domination_both"] is True
+    assert data["star_S1_le0_both"] is True
+    for p in ("5", "7"):
+        r = data["results"][p]
+        assert r["Cy_eq_py"] is True
+        assert r["star_S1_constant_on_every_set"] is True
+        assert r["gaussian_domination"] is True
+        assert r["star_S1_always_le_0"] is True
+        assert r["gpu_used"] is True
+        assert r["max_star_S1"] < 0
+        assert "mmap" in r["io"].lower()
+    # p=5 exact spectrum
+    assert data["results"]["5"]["p5_exact"]["matches_closed_form"] is True
+    assert abs(data["results"]["5"]["max_star_S1"] + 2 / 65) < 1e-12
+    assert abs(data["results"]["5"]["min_star_S1"] + 42 / 325) < 1e-12
+    assert abs(M_cand(5) - 3 / 65) < 1e-15
+    assert abs(rho_budget_cand(5) - 2 / 325) < 1e-15
+    assert "OPEN" in data["status"]
+    assert "15.78" in (ROOT / "solution.md").read_text()
+    assert "15.78" in (ROOT / "HANDOFF.md").read_text()
+    assert "OPEN" in (ROOT / "HANDOFF.md").read_text()[:900]
+
+
 def test_prop_15_77_star_S1_structure():
     """Prop 15.77: star·S1 algebra + GPU full-centre cert (mmap+atomic)."""
     import sys
