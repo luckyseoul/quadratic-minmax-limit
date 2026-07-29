@@ -1138,3 +1138,109 @@ def test_prop_15_67_master_identity_and_m4_census():
     sol = (ROOT / "solution.md").read_text()
     assert "15.67" in sol
     assert "OPEN" in data["status"]
+
+
+def test_prop_15_68_tkappa_vanishing_and_resolvent_reduction():
+    """Tκ=0 on |κ|=1 (C²+K4); residual source on |κ|=3; degree/resolvent algebra."""
+    from itertools import combinations, product
+    import sys
+
+    import numpy as np
+
+    # --- Algebraic: C² reduction formula + 64 K4 labelings ---
+    # Tκ = -6 * sum_v prod_{u≠v} e_vu
+    def T_red(bits):
+        # bits: e01,e02,e03,e12,e13,e23
+        e01, e02, e03, e12, e13, e23 = bits
+        stars = (
+            e01 * e02 * e03
+            + e01 * e12 * e13
+            + e02 * e12 * e23
+            + e03 * e13 * e23
+        )
+        return -6 * stars
+
+    def kap(bits):
+        e01, e02, e03, e12, e13, e23 = bits
+        return e01 * e23 + e02 * e13 + e03 * e12
+
+    for bits in product([-1, 1], repeat=6):
+        k = kap(bits)
+        t = T_red(bits)
+        if abs(k) == 1:
+            assert t == 0
+        if abs(k) == 3:
+            assert t in (-24, 24)
+
+    # --- Resolvent algebra: candidate ≤ L, gain budget ---
+    for p in range(5, 40, 2):
+        L_abs = (p - 2) / (2.0 * p * p)
+        cand = (p - 2) / (p * (2.0 * p + 3))
+        assert cand <= L_abs + 1e-15
+        gain_budget = (p - 4) / 48.0
+        assert gain_budget > 0
+        # same-sign: |ρ| budget
+        assert abs(1.0 / (p * p) + (p - 4) / (2.0 * p * p) - L_abs) < 1e-12
+
+    # --- Evidence from multi-worker combinatorial campaign ---
+    path = ROOT / "evidence" / "e1_gmin_m4_tkappa.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    assert data["algebraic_reduction"]["proved_Tkappa_zero_on_abs_kappa1"] is True
+    assert data["proved"] is True
+    for p in (3, 5, 7):
+        c = data["paley_certs"][str(p)]
+        assert c["Tkappa_all_zero_on_kappa1"] is True
+        assert c["d3_constant_match"] is True
+        assert c["d1_constant_match"] is True
+        assert c["d3_expected_p2_minus_5"] == p * p - 5
+        assert c["d1_expected_3p2_minus_7"] == 3 * p * p - 7
+
+    # Live Paley check at p=5: Tκ=0 and degrees (shipped path)
+    sys.path.insert(0, str(ROOT / "src"))
+    from minmax_quadratic import paley_conference_prime_power
+
+    C = paley_conference_prime_power(5).astype(float)
+    n = C.shape[0]
+
+    def kappa(S):
+        a, b, c, d = S
+        return int(C[a, b] * C[c, d] + C[a, c] * C[b, d] + C[a, d] * C[b, c])
+
+    def star(S):
+        s = 0
+        for v in S:
+            prod = 1
+            for u in S:
+                if u != v:
+                    prod *= int(C[v, u])
+            s += prod
+        return s
+
+    n_checked = 0
+    for S in combinations(range(n), 4):
+        if abs(kappa(S)) != 1:
+            continue
+        assert -6 * star(S) == 0
+        # degrees
+        Sset = set(S)
+        d3 = d1 = 0
+        for v in S:
+            others = tuple(sorted(x for x in S if x != v))
+            for r in range(n):
+                if r in Sset:
+                    continue
+                Sp = tuple(sorted(others + (r,)))
+                ak = abs(kappa(Sp))
+                if ak == 3:
+                    d3 += 1
+                elif ak == 1:
+                    d1 += 1
+        assert d3 == 5 * 5 - 5
+        assert d1 == 3 * 25 - 7
+        n_checked += 1
+    assert n_checked == 11700
+
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.68" in sol
+    assert "OPEN" in data["status"]

@@ -1,0 +1,261 @@
+{
+  "workers": 86,
+  "algebraic_reduction": {
+    "reduced_formula": "-6*e01*e02*e03 - 6*e01*e12*e13 - 6*e02*e12*e23 - 6*e03*e13*e23",
+    "factored": "-6*(e01*e02*e03 + e01*e12*e13 + e02*e12*e23 + e03*e13*e23)",
+    "kappa": "e01*e23 + e02*e13 + e03*e12",
+    "labeling_counts": {
+      "k=-3,T=-24": 4,
+      "k=-3,T=24": 4,
+      "k=-1,T=0": 24,
+      "k=1,T=0": 24,
+      "k=3,T=-24": 4,
+      "k=3,T=24": 4
+    },
+    "Tkappa_on_abs_kappa1": [
+      0
+    ],
+    "Tkappa_on_abs_kappa3": [
+      -24,
+      24
+    ],
+    "proved_Tkappa_zero_on_abs_kappa1": true,
+    "n_labelings": 64,
+    "method": "sum_r C_vr C_xr for r\u2209S reduced via (C^2)_{vx}=0 (v\u2260x) to minus sum of C-products on S; no dependence on n or p remains. Then exhaust 2^6 K4 edge labelings."
+  },
+  "paley_certs": {
+    "3": {
+      "p": 3,
+      "n": 10,
+      "n_kappa1": 180,
+      "n_kappa3": 30,
+      "Tkappa_all_zero_on_kappa1": true,
+      "Tkappa_values_on_kappa3": [
+        -24,
+        24
+      ],
+      "d3_expected_p2_minus_5": 4,
+      "d1_expected_3p2_minus_7": 20,
+      "total_expected_4_n_minus_4": 24,
+      "d3_unique": [
+        4
+      ],
+      "d1_unique": [
+        20
+      ],
+      "d3_constant_match": true,
+      "d1_constant_match": true,
+      "star_formula_on_kappa3_sample": [
+        [
+          3,
+          -24,
+          4
+        ],
+        [
+          3,
+          -24,
+          4
+        ],
+        [
+          -3,
+          -24,
+          4
+        ],
+        [
+          -3,
+          -24,
+          4
+        ],
+        [
+          -3,
+          -24,
+          4
+        ]
+      ]
+    },
+    "5": {
+      "p": 5,
+      "n": 26,
+      "n_kappa1": 11700,
+      "n_kappa3": 3250,
+      "Tkappa_all_zero_on_kappa1": true,
+      "Tkappa_values_on_kappa3": [
+        -24,
+        24
+      ],
+      "d3_expected_p2_minus_5": 20,
+      "d1_expected_3p2_minus_7": 68,
+      "total_expected_4_n_minus_4": 88,
+      "d3_unique": [
+        20
+      ],
+      "d1_unique": [
+        68
+      ],
+      "d3_constant_match": true,
+      "d1_constant_match": true,
+      "star_formula_on_kappa3_sample": [
+        [
+          3,
+          -24,
+          4
+        ],
+        [
+          3,
+          -24,
+          4
+        ],
+        [
+          3,
+          -24,
+          4
+        ],
+        [
+          3,
+          -24,
+          4
+        ],
+        [
+          3,
+          -24,
+          4
+        ]
+      ]
+    },
+    "7": {
+      "p": 7,
+      "n": 50,
+      "n_kappa1": 176400,
+      "n_kappa3": 53900,
+      "Tkappa_all_zero_on_kappa1": true,
+      "Tkappa_values_on_kappa3": [
+        -24,
+        24
+      ],
+      "d3_expected_p2_minus_5": 44,
+      "d1_expected_3p2_minus_7": 140,
+      "total_expected_4_n_minus_4": 184,
+      "d3_unique": [
+        44
+      ],
+      "d1_unique": [
+        140
+      ],
+      "d3_constant_match": true,
+      "d1_constant_match": true,
+      "star_formula_on_kappa3_sample": [
+        [
+          3,
+          -24,
+          4
+        ],
+        [
+          3,
+          -24,
+          4
+        ],
+        [
+          3,
+          -24,
+          4
+        ],
+        [
+          3,
+          -24,
+          4
+        ],
+        [
+          3,
+          -24,
+          4
+        ]
+      ]
+    }
+  },
+  "residual_reduction": {
+    "residual_equation": "(4p I - T)\u03c1 = T\u03ba/p\u00b2, \u03c1=m4-\u03ba/p\u00b2",
+    "source_support": "T\u03ba=0 on |\u03ba|=1, T\u03ba\u2208{\u00b124} on |\u03ba|=3 \u21d2 RHS supported on |\u03ba|=3 only",
+    "same_sign_criterion": "On |\u03ba|=1, if sign(\u03c1)=sign(\u03ba) then |m4|=1/p\u00b2+|\u03c1|; need |\u03c1|\u2264(p-4)/(2p\u00b2) for |m4|\u2264L_abs",
+    "by_p": {
+      "5": {
+        "L_abs": 0.06,
+        "wick_abs": 0.04,
+        "same_sign_rho_budget": 0.02,
+        "source_Tkappa_over_p2_inf": 0.96,
+        "resolvent_gain_budget_(p-4)/48": 0.020833333333333332,
+        "candidate_UB_(p-2)/(p(2p+3))": 0.046153846153846156,
+        "candidate_le_L": true,
+        "d3": 20,
+        "d1": 68
+      },
+      "7": {
+        "L_abs": 0.05102040816326531,
+        "wick_abs": 0.02040816326530612,
+        "same_sign_rho_budget": 0.030612244897959183,
+        "source_Tkappa_over_p2_inf": 0.4897959183673469,
+        "resolvent_gain_budget_(p-4)/48": 0.0625,
+        "candidate_UB_(p-2)/(p(2p+3))": 0.04201680672268908,
+        "candidate_le_L": true,
+        "d3": 44,
+        "d1": 140
+      },
+      "11": {
+        "L_abs": 0.0371900826446281,
+        "wick_abs": 0.008264462809917356,
+        "same_sign_rho_budget": 0.028925619834710745,
+        "source_Tkappa_over_p2_inf": 0.19834710743801653,
+        "resolvent_gain_budget_(p-4)/48": 0.14583333333333334,
+        "candidate_UB_(p-2)/(p(2p+3))": 0.03272727272727273,
+        "candidate_le_L": true,
+        "d3": 116,
+        "d1": 356
+      },
+      "13": {
+        "L_abs": 0.03254437869822485,
+        "wick_abs": 0.005917159763313609,
+        "same_sign_rho_budget": 0.026627218934911243,
+        "source_Tkappa_over_p2_inf": 0.14201183431952663,
+        "resolvent_gain_budget_(p-4)/48": 0.1875,
+        "candidate_UB_(p-2)/(p(2p+3))": 0.029177718832891247,
+        "candidate_le_L": true,
+        "d3": 164,
+        "d1": 500
+      },
+      "17": {
+        "L_abs": 0.025951557093425604,
+        "wick_abs": 0.0034602076124567475,
+        "same_sign_rho_budget": 0.02249134948096886,
+        "source_Tkappa_over_p2_inf": 0.08304498269896193,
+        "resolvent_gain_budget_(p-4)/48": 0.2708333333333333,
+        "candidate_UB_(p-2)/(p(2p+3))": 0.02384737678855326,
+        "candidate_le_L": true,
+        "d3": 284,
+        "d1": 860
+      },
+      "19": {
+        "L_abs": 0.023545706371191136,
+        "wick_abs": 0.002770083102493075,
+        "same_sign_rho_budget": 0.02077562326869806,
+        "source_Tkappa_over_p2_inf": 0.0664819944598338,
+        "resolvent_gain_budget_(p-4)/48": 0.3125,
+        "candidate_UB_(p-2)/(p(2p+3))": 0.021822849807445442,
+        "candidate_le_L": true,
+        "d3": 356,
+        "d1": 1076
+      },
+      "23": {
+        "L_abs": 0.01984877126654064,
+        "wick_abs": 0.001890359168241966,
+        "same_sign_rho_budget": 0.017958412098298678,
+        "source_Tkappa_over_p2_inf": 0.045368620037807186,
+        "resolvent_gain_budget_(p-4)/48": 0.3958333333333333,
+        "candidate_UB_(p-2)/(p(2p+3))": 0.018633540372670808,
+        "candidate_le_L": true,
+        "d3": 524,
+        "d1": 1580
+      }
+    }
+  },
+  "proved": true,
+  "status": "PROVED (conference C\u00b2 + K4 exhaustion): T\u03ba=0 on every |\u03ba|=1 4-set; T\u03ba\u2208{\u00b124} on |\u03ba|=3. Residual source T\u03ba/p\u00b2 supported only on |\u03ba|=3. Paley certs p=3,5,7: extension degrees d3=p\u00b2-5, d1=3p\u00b2-7 constant. OPEN: bound resolvent gain from |\u03ba|=3 source into |\u03ba|=1 by (p-4)/48 (or prove |m4|\u2264(p-2)/(p(2p+3)) \u2264 L_abs directly) for all primes p\u22655."
+}

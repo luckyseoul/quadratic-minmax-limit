@@ -1,0 +1,357 @@
+{
+  "workers": 86,
+  "parts": {
+    "Tkappa_p5": {
+      "p": 5,
+      "n_kappa1": 11700,
+      "max_abs_Tkappa": 0,
+      "unique_Tkappa_counts": {
+        "0": 11700
+      },
+      "n_unique_Tkappa": 1,
+      "max_abs_Wick_Ext_Tkappa_over_p2": 0.0,
+      "thr_Ext_same_sign": 0.4,
+      "Wick_Ext_alone_le_thr": true,
+      "note": "T\u03ba is Max+-free (depends only on C). Residual \u03c1 couples via T."
+    },
+    "Tkappa_p7": {
+      "p": 7,
+      "n_kappa1": 176400,
+      "max_abs_Tkappa": 0,
+      "unique_Tkappa_counts": {
+        "0": 176400
+      },
+      "n_unique_Tkappa": 1,
+      "max_abs_Wick_Ext_Tkappa_over_p2": 0.0,
+      "thr_Ext_same_sign": 0.8571428571428571,
+      "Wick_Ext_alone_le_thr": true,
+      "note": "T\u03ba is Max+-free (depends only on C). Residual \u03c1 couples via T."
+    },
+    "z5": {
+      "p": 5,
+      "n_kappa1_from_edge_01": 216,
+      "expansion_max_err": 5.551115123125783e-17,
+      "max_abs_m4": 0.046153846153846156,
+      "L_abs": 0.06,
+      "max_abs_tzz": 0.11538461538461539,
+      "max_abs_tzz_same_sign_m4": 0.05384615384615385,
+      "max_abs_mumu": 0.10000000000000003,
+      "mean_abs_tzz": 0.043162393162393176,
+      "note": "m4 = E[y_i y_j \u03bc_k \u03bc_l] + cross + E[y_i y_j z_k z_l]. \u03bc is Max+-free (depends on C,y_i,y_j only). Closing L requires |t_mumu + t_zz + cross| \u2264 L_abs."
+    },
+    "bool5": {
+      "p": 5,
+      "N": 260,
+      "n": 26,
+      "sum_coords_pm_p1": true,
+      "YC_eq_pY": true,
+      "uniq_pairwise_dots_sample": [
+        -26,
+        -14,
+        -10,
+        -6,
+        -2,
+        2,
+        6,
+        10,
+        14
+      ],
+      "n_uniq_dots_sample": 9,
+      "w_num_minus": 10,
+      "e4_constant_on_Max": -90,
+      "mean_m4_all_quads": -0.006020066889632107,
+      "max_abs_m4_kappa1_emp": 0.046153846153846156,
+      "L_abs": 0.06,
+      "candidates": {
+        "L_abs": {
+          "value": 0.06,
+          "frac": "3/50",
+          "ge_L": true,
+          "le_L": true
+        },
+        "(p-2)/(p(2p+3))": {
+          "value": 0.046153846153846156,
+          "frac": "3/65",
+          "ge_L": false,
+          "le_L": true
+        },
+        "1/(2p)": {
+          "value": 0.1,
+          "frac": "1/10",
+          "ge_L": true,
+          "le_L": false
+        },
+        "1/(p+1)": {
+          "value": 0.16666666666666666,
+          "frac": "1/6",
+          "ge_L": true,
+          "le_L": false
+        },
+        "3/(p(2p+3))": {
+          "value": 0.046153846153846156,
+          "frac": "3/65",
+          "ge_L": false,
+          "le_L": true
+        },
+        "(p-2)/(2p(p+1))": {
+          "value": 0.05,
+          "frac": "1/20",
+          "ge_L": false,
+          "le_L": true
+        },
+        "2/(p(p+1))": {
+          "value": 0.06666666666666667,
+          "frac": "1/15",
+          "ge_L": true,
+          "le_L": false
+        },
+        "(p+1)/(p(2p+1))": {
+          "value": 0.10909090909090909,
+          "frac": "6/55",
+          "ge_L": true,
+          "le_L": false
+        }
+      },
+      "valid_upper_bounds_ge_maxm4": [
+        "L_abs",
+        "(p-2)/(p(2p+3))",
+        "1/(2p)",
+        "1/(p+1)",
+        "3/(p(2p+3))",
+        "(p-2)/(2p(p+1))",
+        "2/(p(p+1))",
+        "(p+1)/(p(2p+1))"
+      ],
+      "closing_candidates_le_L_and_ge_maxm4": [
+        "L_abs",
+        "(p-2)/(p(2p+3))",
+        "3/(p(2p+3))",
+        "(p-2)/(2p(p+1))"
+      ],
+      "pointwise_e4_identity": "Every Max+ vector has exactly w=p(p-1)/2 coordinates equal to -1 (when oriented with sum=+(p+1)), hence the elementary symmetric e4 is CONSTANT on Max+. This fixes the average of m4 over ALL 4-sets, not the max on |\u03ba|=1."
+    },
+    "kw5": {
+      "p": 5,
+      "kappa_counts": {
+        "-3": 1650,
+        "-1": 5700,
+        "1": 6000,
+        "3": 1600
+      },
+      "e4": -90,
+      "sum_m4_empirical": -90.00000000000267,
+      "sum_m4_vs_e4_err": 2.6716406864579767e-12,
+      "m4_stats_by_kappa": {
+        "3": {
+          "count": 1600,
+          "mean_m4": 0.15673076923076923,
+          "max_abs": 0.3230769230769231,
+          "min": 0.015384615384615385,
+          "max": 0.3230769230769231
+        },
+        "1": {
+          "count": 6000,
+          "mean_m4": 0.021538461538461538,
+          "max_abs": 0.046153846153846156,
+          "min": -0.015384615384615385,
+          "max": 0.046153846153846156
+        },
+        "-1": {
+          "count": 5700,
+          "mean_m4": -0.029959514170040488,
+          "max_abs": 0.046153846153846156,
+          "min": -0.046153846153846156,
+          "max": 0.015384615384615385
+        },
+        "-3": {
+          "count": 1650,
+          "mean_m4": -0.18135198135198138,
+          "max_abs": 0.3230769230769231,
+          "min": -0.3230769230769231,
+          "max": -0.015384615384615385
+        }
+      },
+      "n_kappa_abs1": 11700,
+      "n_kappa_abs3": 3250,
+      "symmetry_note": "If m4 is odd in \u03ba (m4(-S_signs) = -m4) and \u03ba-counts are symmetric, the e4 identity constrains |\u03ba|=3 more than |\u03ba|=1 max."
+    },
+    "z7": {
+      "p": 7,
+      "n_kappa1_from_edge_01": 864,
+      "expansion_max_err": 4.5102810375396984e-17,
+      "max_abs_m4": 0.03807195249738037,
+      "L_abs": 0.05102040816326531,
+      "max_abs_tzz": 0.03807195249738037,
+      "max_abs_tzz_same_sign_m4": 0.03807195249738037,
+      "max_abs_mumu": 0.0476190476190476,
+      "mean_abs_tzz": 0.021587689680599213,
+      "note": "m4 = E[y_i y_j \u03bc_k \u03bc_l] + cross + E[y_i y_j z_k z_l]. \u03bc is Max+-free (depends on C,y_i,y_j only). Closing L requires |t_mumu + t_zz + cross| \u2264 L_abs."
+    },
+    "bool7": {
+      "p": 7,
+      "N": 11452,
+      "n": 50,
+      "sum_coords_pm_p1": true,
+      "YC_eq_pY": true,
+      "uniq_pairwise_dots_sample": [
+        -50,
+        -34,
+        -26,
+        -22,
+        -18,
+        -14,
+        -10,
+        -6,
+        -2,
+        2,
+        6,
+        10,
+        14,
+        18,
+        22,
+        26,
+        34
+      ],
+      "n_uniq_dots_sample": 17,
+      "w_num_minus": 21,
+      "e4_constant_on_Max": -308,
+      "mean_m4_all_quads": -0.001337386018237082,
+      "max_abs_m4_kappa1_emp": 0.03807195249738037,
+      "L_abs": 0.05102040816326531,
+      "candidates": {
+        "L_abs": {
+          "value": 0.05102040816326531,
+          "frac": "5/98",
+          "ge_L": true,
+          "le_L": true
+        },
+        "(p-2)/(p(2p+3))": {
+          "value": 0.04201680672268908,
+          "frac": "5/119",
+          "ge_L": false,
+          "le_L": true
+        },
+        "1/(2p)": {
+          "value": 0.07142857142857142,
+          "frac": "1/14",
+          "ge_L": true,
+          "le_L": false
+        },
+        "1/(p+1)": {
+          "value": 0.125,
+          "frac": "1/8",
+          "ge_L": true,
+          "le_L": false
+        },
+        "3/(p(2p+3))": {
+          "value": 0.025210084033613446,
+          "frac": "3/119",
+          "ge_L": false,
+          "le_L": true
+        },
+        "(p-2)/(2p(p+1))": {
+          "value": 0.044642857142857144,
+          "frac": "5/112",
+          "ge_L": false,
+          "le_L": true
+        },
+        "2/(p(p+1))": {
+          "value": 0.03571428571428571,
+          "frac": "1/28",
+          "ge_L": false,
+          "le_L": true
+        },
+        "(p+1)/(p(2p+1))": {
+          "value": 0.0761904761904762,
+          "frac": "8/105",
+          "ge_L": true,
+          "le_L": false
+        }
+      },
+      "valid_upper_bounds_ge_maxm4": [
+        "L_abs",
+        "(p-2)/(p(2p+3))",
+        "1/(2p)",
+        "1/(p+1)",
+        "(p-2)/(2p(p+1))",
+        "(p+1)/(p(2p+1))"
+      ],
+      "closing_candidates_le_L_and_ge_maxm4": [
+        "L_abs",
+        "(p-2)/(p(2p+3))",
+        "(p-2)/(2p(p+1))"
+      ],
+      "pointwise_e4_identity": "Every Max+ vector has exactly w=p(p-1)/2 coordinates equal to -1 (when oriented with sum=+(p+1)), hence the elementary symmetric e4 is CONSTANT on Max+. This fixes the average of m4 over ALL 4-sets, not the max on |\u03ba|=1."
+    },
+    "kw7": {
+      "p": 7,
+      "kappa_counts": {
+        "-3": 25676,
+        "-1": 91728,
+        "1": 84672,
+        "3": 28224
+      },
+      "e4": -308,
+      "sum_m4_empirical": -307.99999999996095,
+      "sum_m4_vs_e4_err": 3.9051428757375106e-11,
+      "m4_stats_by_kappa": {
+        "3": {
+          "count": 28224,
+          "mean_m4": 0.06286626304963715,
+          "max_abs": 0.11421585749214111,
+          "min": 0.023402025847013622,
+          "max": 0.11421585749214111
+        },
+        "1": {
+          "count": 84672,
+          "mean_m4": 0.02192727131602437,
+          "max_abs": 0.03807195249738037,
+          "min": 0.015717778553964373,
+          "max": 0.03807195249738037
+        },
+        "-1": {
+          "count": 91728,
+          "mean_m4": -0.023419937845365717,
+          "max_abs": 0.03807195249738037,
+          "min": -0.03807195249738037,
+          "max": -0.015717778553964373
+        },
+        "-3": {
+          "count": 25676,
+          "mean_m4": -0.0697421431104404,
+          "max_abs": 0.11421585749214111,
+          "min": -0.11421585749214111,
+          "max": -0.023402025847013622
+        }
+      },
+      "n_kappa_abs1": 176400,
+      "n_kappa_abs3": 53900,
+      "symmetry_note": "If m4 is odd in \u03ba (m4(-S_signs) = -m4) and \u03ba-counts are symmetric, the e4 identity constrains |\u03ba|=3 more than |\u03ba|=1 max."
+    }
+  },
+  "algebra_synthesis": {
+    "master": "m4=\u03ba/p\u00b2+Ext/(4p), Ext=Tm4, \u03c3_sum=4\u03ba",
+    "e4_constant": "Every Max+ y has exactly w=p(p-1)/2 minus signs (oriented sum=p+1), so e4=\u2211_{a<b<c<d} y_a y_b y_c y_d is CONSTANT on Max+. Hence \u2211_S m4(S) = e4 (exact, Max+ structure).",
+    "Tkappa_role": "If \u03c1=m4-\u03ba/p\u00b2, then (4pI-T)\u03c1 = T\u03ba/p\u00b2. T\u03ba is pure conference combinatorics. Bound follows if \u2016(4pI-T)^{-1}\u2016 is controlled on the |\u03ba|=1 subspace and T\u03ba is known.",
+    "L_abs_p5": "3/50",
+    "closing_status": "OPEN"
+  },
+  "closing_candidates_found": [
+    "L_abs",
+    "(p-2)/(p(2p+3))",
+    "3/(p(2p+3))",
+    "(p-2)/(2p(p+1))",
+    "L_abs",
+    "(p-2)/(p(2p+3))",
+    "(p-2)/(2p(p+1))"
+  ],
+  "proved_this_run": [
+    "p=5: sum=\u00b1(p+1) and YC=pY on all Max+",
+    "p=5: e4=-90 constant (formula w=p(p-1)/2)",
+    "p=7: sum=\u00b1(p+1) and YC=pY on all Max+",
+    "p=7: e4=-308 constant (formula w=p(p-1)/2)",
+    "p=5: \u2211_S m4(S)=e4 certified err=2.67e-12",
+    "p=7: \u2211_S m4(S)=e4 certified err=3.91e-11"
+  ],
+  "status": "Structural lemmas: e4 constant on Max+ (boolean weight w=p(p-1)/2); \u2211 m4 = e4; T\u03ba combinatorial spectrum computed; residual z expansion identity. OPEN: convert these into |m4|\u2264L_abs on |\u03ba|=1 for all primes p\u22655 (no per-p Max+ census as proof)."
+}

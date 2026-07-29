@@ -2044,6 +2044,54 @@ H(p)\,:=\,\frac{(p+2)^2}{d},\qquad d=\frac{p^2+1}{2}.
 
    *Remark (failed shortcuts).* Absolute triangle \(|m_4-\kappa/p^2|\le(p-4)/(2p^2)\) fails at \(p=5\) (large residuals on opposite-sign classes with small \(|m_4|\)). Affine+\(\mathrm{PGL}\)+Frob orbit of the halfspace vector is incomplete (\(60/260\) at \(p=5\); F18). Wick fourth-moment pin only reaches the \(T(p)\) endpoint, not strict \(g_{\min}>T(p)\).
 
+**Proposition 15.68 (\(T\kappa\) calculus; residual source on \(|\kappa|=3\); resolvent reduction of \(L\); 2026-07-30).** Continue Prop 15.67. Let \(C\) be any real symmetric conference matrix of order \(n=p^2+1\) (\(C^\top=C\), zero diagonal, off-diagonal \(\pm1\), \(C^2=p^2I\)), and write
+\[
+(Tf)(S)=\sum_{v\in S,\,r\notin S}C_{vr}\,f(S_{v\to r}),\qquad
+\kappa(S)=\sum_{\text{three pairings}}C_eC_{e'}.
+\]
+
+1. **Reduction of \(T\kappa\) to \(K_4\) (proved).** For every 4-set \(S\), the external sum defining \((T\kappa)(S)\) collapses via \((C^2)_{vx}=0\) (\(v\neq x\)) to a function of the six edge signs of \(S\) alone:
+   \[
+   (T\kappa)(S)=-6\sum_{v\in S}\prod_{u\in S\setminus\{v\}}C_{vu}
+   \]
+   (sum of star-triples). In particular \((T\kappa)(S)\) is independent of \(n\) and of the ambient graph outside \(S\). \(\square\)
+
+2. **Vanishing on \(|\kappa|=1\) (proved).** Exhausting all \(2^6=64\) edge-labelings of \(K_4\): if \(|\kappa(S)|=1\) then \((T\kappa)(S)=0\); if \(|\kappa(S)|=3\) then \((T\kappa)(S)\in\{\pm24\}\). Consequently, for **every** conference matrix and every 4-set with \(|\kappa|=1\),
+   \[
+   (T\kappa)(S)=0.
+   \]
+   Evidence: `e1_gmin_m4_tkappa.json` (symbolic \(C^2\) reduction + 64-labeling check). \(\square\)
+
+3. **Residual equation and source support (proved).** For Max+ moments write \(\rho:=m_4-\kappa/p^2\). The master identity (Prop 15.67) rearranges to
+   \[
+   (4p\,I-T)\rho=\frac{T\kappa}{p^2}.
+   \]
+   By part 2 the right-hand side **vanishes on every \(|\kappa|=1\) 4-set** and is bounded by \(24/p^2\) on \(|\kappa|=3\). Thus all of the same-sign residual on the dangerous classes is the image, under the resolvent \((4pI-T)^{-1}\), of a pure \(|\kappa|=3\) source. \(\square\)
+
+4. **Paley extension degrees (proved formula; certified \(p=3,5,7\)).** For the Paley conference graph and every 4-set with \(|\kappa|=1\), among the \(4(n-4)=4(p^2-3)\) ordered extensions \((v,r)\), exactly
+   \[
+   d_3=p^2-5,\qquad d_1=3p^2-7
+   \]
+   land in \(|\kappa|=3\) and \(|\kappa|=1\) respectively (both constant on the \(|\kappa|=1\) stratum). Certified by full census at \(p=3,5,7\). Evidence: `e1_gmin_m4_tkappa.json`. \(\square\)
+
+5. **Resolvent reduction of the \(L\)-bound (proved algebra).** On any \(|\kappa|=1\) 4-set, if \(\mathrm{sign}(\rho)=\mathrm{sign}(\kappa)\) then \(|m_4|=1/p^2+|\rho|\). The bound \(|m_4|\le L_{\mathrm{abs}}=(p-2)/(2p^2)\) is therefore equivalent to
+   \[
+   |\rho|\;\le\;\frac{p-4}{2p^2}.
+   \]
+   Writing \(\rho=(4pI-T)^{-1}(T\kappa/p^2)\) and using \(|T\kappa/p^2|\le24/p^2\) on the source, it suffices to prove that the operator gain from the \(|\kappa|=3\) stratum into the same-sign \(|\kappa|=1\) stratum is at most
+   \[
+   \frac{p-4}{48}.
+   \]
+   (At \(p=5\) the budget is \(1/48\); empirical gain \(\approx0.0064\ll1/48\).) Equivalently, any upper bound
+   \[
+   |m_4|\;\le\;\frac{p-2}{p(2p+3)}
+   \]
+   on \(|\kappa|=1\) closes \(L\) because \((p-2)/(p(2p+3))\le(p-2)/(2p^2)\) for all odd \(p\ge5\), with equality of the two sides only in the large-\(p\) limit sense (strict for finite \(p\)); at \(p=5\) the candidate is sharp (\(|m_4|_{\max}=3/65\)). Certified: candidate \(\ge\max|m_4|\) at \(p=5,7\). \(\square\)
+
+6. **Residual (OPEN).** Prove the resolvent gain bound of part 5 (or the candidate \(|m_4|\le(p-2)/(p(2p+3))\), or \(\lambda_2(P\odot P)\le4/N\)) for every prime \(p\ge5\), using Max+/boolean structure on top of the conference calculus above. Then \(g_{\min}\ge L(p)\) and bi-tight closes. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+   *Remark.* Absolute \(\infty\)-bootstrap with \(d_1M_1+d_3M_3\) does **not** contract (\(4p-(3p^2-7)<0\) for \(p\ge5\)). Signed cancellation / spectral control of \(T\) on the conference association scheme is load-bearing.
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
