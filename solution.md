@@ -2229,6 +2229,53 @@ Let \(n_1=\#\{S:|\kappa(S)|=1\}\) and \(n_3=\#\{S:|\kappa(S)|=3\}\).
 
 8. **Residual (OPEN).** Parts 1–4 are Max+-free conference combinatorics and pin the source size of the resolvent equation \((4pI-T)\rho=T\kappa/p^2\) (Prop 15.68): exactly \(n_3\) nonzero source coordinates of amplitude \(24/p^2\). They do **not** alone bound \(|m_4|\) on \(|\kappa|=1\). Still open for every prime \(p\ge5\): \(\max_{|\kappa|=1}|m_4|\le M_{\mathrm{mid}}\) (or \(L_{\mathrm{abs}}\) / \(M_{\mathrm{cand}}\)), e.g. via resolvent gain \(\le(p-4)/48\), \(h_\star\in E_{4p}\) control, or type6 association closed form. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.72 (resolvent-gain calculus from \(n_1,n_3,d_1,d_3\); reverse degrees; type6 pin; 2026-07-29).** Continue Prop 15.68–15.71. Write \(\rho:=m_4-\kappa/p^2\), so \((4pI-T)\rho=T\kappa/p^2\), and on every \(|\kappa|=1\) 4-set with \(\mathrm{sign}(\rho)=\mathrm{sign}(\kappa)\),
+\[
+|m_4|=\frac1{p^2}+|\rho|.
+\]
+
+1. **Gain \(\Leftrightarrow L\) algebra (proved).** For primes \(p\ge5\),
+   \[
+   |\rho|\;\le\;\frac{p-4}{2p^2}
+   \quad\Longleftrightarrow\quad
+   |m_4|\;\le\;L_{\mathrm{abs}}(p)=\frac{p-2}{2p^2}
+   \]
+   on same-sign \(|\kappa|=1\) classes. Since the inhomogeneous source has amplitude \(24/p^2\) on \(|\kappa|=3\), it is sufficient that the resolvent gain from that source into same-sign \(|\kappa|=1\) satisfy
+   \[
+   \mathrm{gain}\;\le\;\frac{p-4}{48},
+   \]
+   because \(\frac{p-4}{48}\cdot\frac{24}{p^2}=\frac{p-4}{2p^2}\). \(\square\)
+
+2. **Source sign structure (proved).** On every \(|\kappa|=3\) labelling of \(K_4\), \(T\kappa/\kappa\in\{\pm8\}\) (64-labeling; \(T\kappa=-6\cdot\mathrm{star}\)). Thus \(|T\kappa|=24\) with sign free relative to \(\kappa\). \(\square\)
+
+3. **Reverse extension degrees (proved under Prop 15.68 constancy).** Assume \(d_3=p^2-5\) is constant on every Paley \(|\kappa|=1\) 4-set. Handshaking on the bipartite extension graph between \(|\kappa|=1\) and \(|\kappa|=3\) strata, together with the counts \(n_1,n_3\) of Prop 15.71, forces the degrees from every \(|\kappa|=3\) 4-set:
+   \[
+   d_1^{(3)}=\frac{n_1\,d_3}{n_3}=3(p^2-1),\qquad
+   d_3^{(3)}=4(n-4)-d_1^{(3)}=p^2-9.
+   \]
+   (Both nonnegative for primes \(p\ge3\), with \(d_3^{(3)}=0\) at \(p=3\).) \(\square\)
+
+4. **Separate \(\kappa\)-weighted vanishing (certified \(p=3,5,7\); open as general theorem).** On every Paley \(|\kappa|=1\) 4-set the one-step sums split by target stratum vanish separately:
+   \[
+   \sum_{\mathrm{ext}\to|\kappa|=1}C_{vr}\,\kappa(S')=0,\qquad
+   \sum_{\mathrm{ext}\to|\kappa|=3}C_{vr}\,\kappa(S')=0.
+   \]
+   (Each is stronger than \(T\kappa=0\), which is only their sum.) Full multi-worker census at \(p=3,5,7\). Evidence: `e1_gmin_m4_resolvent_gain.json`. \(\square\)
+
+5. **Reverse-degree census (certified \(p=3,5,7\)).** Every \(|\kappa|=3\) 4-set has \((d_1^{(3)},d_3^{(3)})=(3(p^2-1),p^2-9)\) constantly, and \(T\kappa/\kappa\in\{\pm8\}\). \(\square\)
+
+6. **Type6 Max+-free resolvent (certified \(p=3,5,7\); \(W=86\)).** Restricting to \(S_4\)-type6 class-constant functions and solving \((4pI-T)\rho=T\kappa/p^2\) in the least-squares sense:
+   | \(p\) | \(\max_{|\kappa|=1}|m_{\mathrm{type6}}|\) | \(L_{\mathrm{abs}}\) | same-sign \(|\rho|\) | gain | budget \(\frac{p-4}{48}\) |
+   |------|--------------------------------------|--------------------|----------------------|------|-------------------------------|
+   | 5 | \(\approx0.04764\) | \(0.06\) | \(\approx0.00764\) | \(\approx0.00796\) | \(0.02083\) |
+   | 7 | \(\approx0.02407\) | \(0.0510\) | \(\approx0.00367\) | \(\approx0.00749\) | \(0.0625\) |
+
+   In particular type6 predicts \(|m|\le L_{\mathrm{abs}}\) and gain below budget at \(p=5,7\). (At \(p=7\) true Max+ \(\max|m_4|\approx0.038> m_{\mathrm{type6}}\), so type6 is not exact — classes need refinement — but remains a Max+-free upper probe.) Evidence: `e1_gmin_m4_resolvent_gain.json`. \(\square\)
+
+7. **Empirical Max+ gain (certified \(p=5,7\); mmap).** True same-sign residual gains \(0.00641\) and \(0.03606\) both lie strictly below \(\frac{p-4}{48}\); \(\max|m_4|\le M_{\mathrm{mid}}\le L_{\mathrm{abs}}\). \(\square\)
+
+8. **Residual (OPEN).** Prove for every prime \(p\ge5\) that the resolvent gain is \(\le(p-4)/48\), or directly \(\max_{|\kappa|=1}|m_4|\le M_{\mathrm{mid}}\) (or \(L_{\mathrm{abs}}\)), using the stratum data of Props 15.71–15.72 (source size \(n_3\), degrees \(d_1,d_3,d_1^{(3)},d_3^{(3)}\), separate vanishing) plus Max+/boolean structure — without a per-prime Max+ census as the proof. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

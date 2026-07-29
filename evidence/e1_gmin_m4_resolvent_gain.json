@@ -1,0 +1,606 @@
+{
+  "workers": 86,
+  "prop": "15.72",
+  "tkappa_over_kappa": {
+    "proved": true,
+    "Tkappa_over_kappa_on_abs3": [
+      -8,
+      8
+    ],
+    "method": "64 K4 edge labelings; T\u03ba=-6*star (Prop 15.68)"
+  },
+  "reverse_degrees_algebra": {
+    "identity_d1_from_kappa3": "n1*d3/n3 = 3(p^2-1)",
+    "identity_d3_from_kappa3": "4(n-4)-3(p^2-1) = p^2-9",
+    "hypothesis": "d3=p^2-5 constant on every |\u03ba|=1 4-set (Prop 15.68 / 15.71)",
+    "by_p": {
+      "3": {
+        "n1": 180,
+        "n3": 30,
+        "d3_from_kappa1": 4,
+        "d1_from_kappa3": 24,
+        "d3_from_kappa3": 0,
+        "pred_d1_3": 24,
+        "pred_d3_3": 0,
+        "match": true,
+        "ok": true
+      },
+      "5": {
+        "n1": 11700,
+        "n3": 3250,
+        "d3_from_kappa1": 20,
+        "d1_from_kappa3": 72,
+        "d3_from_kappa3": 16,
+        "pred_d1_3": 72,
+        "pred_d3_3": 16,
+        "match": true,
+        "ok": true
+      },
+      "7": {
+        "n1": 176400,
+        "n3": 53900,
+        "d3_from_kappa1": 44,
+        "d1_from_kappa3": 144,
+        "d3_from_kappa3": 40,
+        "pred_d1_3": 144,
+        "pred_d3_3": 40,
+        "match": true,
+        "ok": true
+      },
+      "11": {
+        "n1": 6642900,
+        "n3": 2140490,
+        "d3_from_kappa1": 116,
+        "d1_from_kappa3": 360,
+        "d3_from_kappa3": 112,
+        "pred_d1_3": 360,
+        "pred_d3_3": 112,
+        "match": true,
+        "ok": true
+      },
+      "13": {
+        "n1": 25339860,
+        "n3": 8245510,
+        "d3_from_kappa1": 164,
+        "d1_from_kappa3": 504,
+        "d3_from_kappa3": 160,
+        "pred_d1_3": 504,
+        "pred_d3_3": 160,
+        "match": true,
+        "ok": true
+      },
+      "17": {
+        "n1": 217235520,
+        "n3": 71406120,
+        "d3_from_kappa1": 284,
+        "d1_from_kappa3": 864,
+        "d3_from_kappa3": 280,
+        "pred_d1_3": 864,
+        "pred_d3_3": 280,
+        "match": true,
+        "ok": true
+      },
+      "19": {
+        "n1": 529262100,
+        "n3": 174460470,
+        "d3_from_kappa1": 356,
+        "d1_from_kappa3": 1080,
+        "d3_from_kappa3": 352,
+        "pred_d1_3": 1080,
+        "pred_d3_3": 352,
+        "match": true,
+        "ok": true
+      },
+      "23": {
+        "n1": 2442583440,
+        "n3": 808026340,
+        "d3_from_kappa1": 524,
+        "d1_from_kappa3": 1584,
+        "d3_from_kappa3": 520,
+        "pred_d1_3": 1584,
+        "pred_d3_3": 520,
+        "match": true,
+        "ok": true
+      },
+      "29": {
+        "n1": 15614090100,
+        "n3": 5179912430,
+        "d3_from_kappa1": 836,
+        "d1_from_kappa3": 2520,
+        "d3_from_kappa3": 832,
+        "pred_d1_3": 2520,
+        "pred_d3_3": 832,
+        "match": true,
+        "ok": true
+      },
+      "31": {
+        "n1": 26625081600,
+        "n3": 8838047920,
+        "d3_from_kappa1": 956,
+        "d1_from_kappa3": 2880,
+        "d3_from_kappa3": 952,
+        "pred_d1_3": 2880,
+        "pred_d3_3": 952,
+        "match": true,
+        "ok": true
+      },
+      "37": {
+        "n1": 109684745460,
+        "n3": 36454676610,
+        "d3_from_kappa1": 1364,
+        "d1_from_kappa3": 4104,
+        "d3_from_kappa3": 1360,
+        "pred_d1_3": 4104,
+        "pred_d3_3": 1360,
+        "match": true,
+        "ok": true
+      },
+      "41": {
+        "n1": 249380384400,
+        "n3": 82928873860,
+        "d3_from_kappa1": 1676,
+        "d1_from_kappa3": 5040,
+        "d3_from_kappa3": 1672,
+        "pred_d1_3": 5040,
+        "pred_d3_3": 1672,
+        "match": true,
+        "ok": true
+      },
+      "43": {
+        "n1": 365058609300,
+        "n3": 121422813050,
+        "d3_from_kappa1": 1844,
+        "d1_from_kappa3": 5544,
+        "d3_from_kappa3": 1840,
+        "pred_d1_3": 5544,
+        "pred_d3_3": 1840,
+        "match": true,
+        "ok": true
+      },
+      "47": {
+        "n1": 743765705280,
+        "n3": 247472767880,
+        "d3_from_kappa1": 2204,
+        "d1_from_kappa3": 6624,
+        "d3_from_kappa3": 2200,
+        "pred_d1_3": 6624,
+        "pred_d3_3": 2200,
+        "match": true,
+        "ok": true
+      },
+      "53": {
+        "n1": 1944922442580,
+        "n3": 647383965930,
+        "d3_from_kappa1": 2804,
+        "d1_from_kappa3": 8424,
+        "d3_from_kappa3": 2800,
+        "pred_d1_3": 8424,
+        "pred_d3_3": 2800,
+        "match": true,
+        "ok": true
+      },
+      "59": {
+        "n1": 4587132654900,
+        "n3": 1527286696210,
+        "d3_from_kappa1": 3476,
+        "d1_from_kappa3": 10440,
+        "d3_from_kappa3": 3472,
+        "pred_d1_3": 10440,
+        "pred_d3_3": 3472,
+        "match": true,
+        "ok": true
+      }
+    },
+    "proved_under_hypothesis": true,
+    "note": "Handshaking e13=n1*d3=n3*d1^(3) is unconditional once d3 is constant on |\u03ba|=1. Constancy certified for Paley p=3,5,7,11."
+  },
+  "gain_targets": {
+    "sufficient_condition": "same-sign |\u03c1|\u2264(p-4)/(2p\u00b2) on |\u03ba|=1 \u21d2 |m4|\u2264L_abs; equivalently resolvent gain from |\u03ba|=3 source amp 24/p\u00b2 into same-sign |\u03ba|=1 is \u2264(p-4)/48",
+    "by_p": {
+      "5": {
+        "rho_budget": 0.02,
+        "gain_budget": 0.020833333333333332,
+        "source_amp_24_over_p2": 0.96,
+        "gain_times_source_eq_rho_budget": true,
+        "L_abs": 0.06,
+        "M_mid": 0.05,
+        "M_cand": 0.046153846153846156,
+        "wick": 0.04,
+        "wick_plus_rho_budget": 0.06,
+        "equals_L": true
+      },
+      "7": {
+        "rho_budget": 0.030612244897959183,
+        "gain_budget": 0.0625,
+        "source_amp_24_over_p2": 0.4897959183673469,
+        "gain_times_source_eq_rho_budget": true,
+        "L_abs": 0.05102040816326531,
+        "M_mid": 0.044642857142857144,
+        "M_cand": 0.04201680672268908,
+        "wick": 0.02040816326530612,
+        "wick_plus_rho_budget": 0.05102040816326531,
+        "equals_L": true
+      },
+      "11": {
+        "rho_budget": 0.028925619834710745,
+        "gain_budget": 0.14583333333333334,
+        "source_amp_24_over_p2": 0.19834710743801653,
+        "gain_times_source_eq_rho_budget": true,
+        "L_abs": 0.0371900826446281,
+        "M_mid": 0.03409090909090909,
+        "M_cand": 0.03272727272727273,
+        "wick": 0.008264462809917356,
+        "wick_plus_rho_budget": 0.0371900826446281,
+        "equals_L": true
+      },
+      "13": {
+        "rho_budget": 0.026627218934911243,
+        "gain_budget": 0.1875,
+        "source_amp_24_over_p2": 0.14201183431952663,
+        "gain_times_source_eq_rho_budget": true,
+        "L_abs": 0.03254437869822485,
+        "M_mid": 0.03021978021978022,
+        "M_cand": 0.029177718832891247,
+        "wick": 0.005917159763313609,
+        "wick_plus_rho_budget": 0.03254437869822485,
+        "equals_L": true
+      },
+      "17": {
+        "rho_budget": 0.02249134948096886,
+        "gain_budget": 0.2708333333333333,
+        "source_amp_24_over_p2": 0.08304498269896193,
+        "gain_times_source_eq_rho_budget": true,
+        "L_abs": 0.025951557093425604,
+        "M_mid": 0.024509803921568627,
+        "M_cand": 0.02384737678855326,
+        "wick": 0.0034602076124567475,
+        "wick_plus_rho_budget": 0.025951557093425608,
+        "equals_L": true
+      },
+      "19": {
+        "rho_budget": 0.02077562326869806,
+        "gain_budget": 0.3125,
+        "source_amp_24_over_p2": 0.0664819944598338,
+        "gain_times_source_eq_rho_budget": true,
+        "L_abs": 0.023545706371191136,
+        "M_mid": 0.02236842105263158,
+        "M_cand": 0.021822849807445442,
+        "wick": 0.002770083102493075,
+        "wick_plus_rho_budget": 0.023545706371191136,
+        "equals_L": true
+      },
+      "23": {
+        "rho_budget": 0.017958412098298678,
+        "gain_budget": 0.3958333333333333,
+        "source_amp_24_over_p2": 0.045368620037807186,
+        "gain_times_source_eq_rho_budget": true,
+        "L_abs": 0.01984877126654064,
+        "M_mid": 0.019021739130434784,
+        "M_cand": 0.018633540372670808,
+        "wick": 0.001890359168241966,
+        "wick_plus_rho_budget": 0.019848771266540645,
+        "equals_L": true
+      },
+      "29": {
+        "rho_budget": 0.014863258026159334,
+        "gain_budget": 0.5208333333333334,
+        "source_amp_24_over_p2": 0.028537455410225922,
+        "gain_times_source_eq_rho_budget": true,
+        "L_abs": 0.01605231866825208,
+        "M_mid": 0.015517241379310345,
+        "M_cand": 0.015262860373092142,
+        "wick": 0.0011890606420927466,
+        "wick_plus_rho_budget": 0.01605231866825208,
+        "equals_L": true
+      },
+      "31": {
+        "rho_budget": 0.01404786680541103,
+        "gain_budget": 0.5625,
+        "source_amp_24_over_p2": 0.02497398543184183,
+        "gain_times_source_eq_rho_budget": true,
+        "L_abs": 0.015088449531737774,
+        "M_mid": 0.014616935483870967,
+        "M_cand": 0.014392059553349877,
+        "wick": 0.001040582726326743,
+        "wick_plus_rho_budget": 0.015088449531737774,
+        "equals_L": true
+      },
+      "37": {
+        "rho_budget": 0.012052593133674214,
+        "gain_budget": 0.6875,
+        "source_amp_24_over_p2": 0.017531044558071585,
+        "gain_times_source_eq_rho_budget": true,
+        "L_abs": 0.012783053323593864,
+        "M_mid": 0.012446657183499289,
+        "M_cand": 0.012285012285012284,
+        "wick": 0.0007304601899196494,
+        "wick_plus_rho_budget": 0.012783053323593864,
+        "equals_L": true
+      },
+      "41": {
+        "rho_budget": 0.011005353955978583,
+        "gain_budget": 0.7708333333333334,
+        "source_amp_24_over_p2": 0.014277215942891136,
+        "gain_times_source_eq_rho_budget": true,
+        "L_abs": 0.011600237953599048,
+        "M_mid": 0.01132404181184669,
+        "M_cand": 0.011190817790530846,
+        "wick": 0.000594883997620464,
+        "wick_plus_rho_budget": 0.011600237953599048,
+        "equals_L": true
+      },
+      "43": {
+        "rho_budget": 0.010546241211465657,
+        "gain_budget": 0.8125,
+        "source_amp_24_over_p2": 0.012979989183342347,
+        "gain_times_source_eq_rho_budget": true,
+        "L_abs": 0.011087074094104922,
+        "M_mid": 0.010835095137420718,
+        "M_cand": 0.010713352495427228,
+        "wick": 0.0005408328826392645,
+        "wick_plus_rho_budget": 0.011087074094104922,
+        "equals_L": true
+      },
+      "47": {
+        "rho_budget": 0.009732910819375284,
+        "gain_budget": 0.8958333333333334,
+        "source_amp_24_over_p2": 0.010864644635581712,
+        "gain_times_source_eq_rho_budget": true,
+        "L_abs": 0.010185604345857854,
+        "M_mid": 0.00997340425531915,
+        "M_cand": 0.009870585654748848,
+        "wick": 0.0004526935264825713,
+        "wick_plus_rho_budget": 0.010185604345857855,
+        "equals_L": true
+      },
+      "53": {
+        "rho_budget": 0.008721965112139551,
+        "gain_budget": 1.0208333333333333,
+        "source_amp_24_over_p2": 0.008543965824136704,
+        "gain_times_source_eq_rho_budget": true,
+        "L_abs": 0.009077963688145247,
+        "M_mid": 0.00890985324947589,
+        "M_cand": 0.00882811147654492,
+        "wick": 0.000355998576005696,
+        "wick_plus_rho_budget": 0.009077963688145247,
+        "equals_L": true
+      },
+      "59": {
+        "rho_budget": 0.00790002872737719,
+        "gain_budget": 1.1458333333333333,
+        "source_amp_24_over_p2": 0.0068945705257110025,
+        "gain_times_source_eq_rho_budget": true,
+        "L_abs": 0.008187302499281816,
+        "M_mid": 0.008050847457627118,
+        "M_cand": 0.007984311528225242,
+        "wick": 0.0002872737719046251,
+        "wick_plus_rho_budget": 0.008187302499281814,
+        "equals_L": true
+      }
+    },
+    "proved_algebra": true
+  },
+  "certs_vanish_degrees": {
+    "3": {
+      "p": 3,
+      "n": 10,
+      "wall_s": 0.1748220520094037,
+      "n1_census": 180,
+      "n1_formula": 180,
+      "n3_census": 30,
+      "n3_formula": 30,
+      "separate_vanishing_sk1": true,
+      "separate_vanishing_sk3": true,
+      "sk1_nonzero_count": 0,
+      "sk3_nonzero_count": 0,
+      "d1_kappa1_unique": [
+        20
+      ],
+      "d3_kappa1_unique": [
+        4
+      ],
+      "d1_kappa1_match": true,
+      "d3_kappa1_match": true,
+      "d1_kappa3_unique": [
+        24
+      ],
+      "d3_kappa3_unique": [
+        0
+      ],
+      "d1_kappa3_match": true,
+      "d3_kappa3_match": true,
+      "Tkappa_over_kappa_unique": [
+        -8,
+        8
+      ],
+      "Tkappa_over_kappa_match_pm8": true
+    },
+    "5": {
+      "p": 5,
+      "n": 26,
+      "wall_s": 0.23135916600585915,
+      "n1_census": 11700,
+      "n1_formula": 11700,
+      "n3_census": 3250,
+      "n3_formula": 3250,
+      "separate_vanishing_sk1": true,
+      "separate_vanishing_sk3": true,
+      "sk1_nonzero_count": 0,
+      "sk3_nonzero_count": 0,
+      "d1_kappa1_unique": [
+        68
+      ],
+      "d3_kappa1_unique": [
+        20
+      ],
+      "d1_kappa1_match": true,
+      "d3_kappa1_match": true,
+      "d1_kappa3_unique": [
+        72
+      ],
+      "d3_kappa3_unique": [
+        16
+      ],
+      "d1_kappa3_match": true,
+      "d3_kappa3_match": true,
+      "Tkappa_over_kappa_unique": [
+        -8,
+        8
+      ],
+      "Tkappa_over_kappa_match_pm8": true
+    },
+    "7": {
+      "p": 7,
+      "n": 50,
+      "wall_s": 2.3719139189925045,
+      "n1_census": 176400,
+      "n1_formula": 176400,
+      "n3_census": 53900,
+      "n3_formula": 53900,
+      "separate_vanishing_sk1": true,
+      "separate_vanishing_sk3": true,
+      "sk1_nonzero_count": 0,
+      "sk3_nonzero_count": 0,
+      "d1_kappa1_unique": [
+        140
+      ],
+      "d3_kappa1_unique": [
+        44
+      ],
+      "d1_kappa1_match": true,
+      "d3_kappa1_match": true,
+      "d1_kappa3_unique": [
+        144
+      ],
+      "d3_kappa3_unique": [
+        40
+      ],
+      "d1_kappa3_match": true,
+      "d3_kappa3_match": true,
+      "Tkappa_over_kappa_unique": [
+        -8,
+        8
+      ],
+      "Tkappa_over_kappa_match_pm8": true
+    }
+  },
+  "type6_resolvent": {
+    "3": {
+      "p": 3,
+      "n_type6": 8,
+      "wall_s": 0.16254643199499696,
+      "lam_max_T_type6": 9.79795897113274,
+      "lam_min_T_type6": -9.797958971132722,
+      "gap_4p": 2.20204102886726,
+      "lstsq_resid": 4.884981308350689e-15,
+      "max_abs_m4_type6_kappa1": 0.33333333333333387,
+      "max_abs_rho_kappa1": 0.22222222222222276,
+      "max_abs_rho_same_sign": 0.22222222222222276,
+      "effective_gain": 0.08333333333333354,
+      "gain_budget": null,
+      "rho_budget": null,
+      "source_amp": 2.6666666666666665,
+      "L_abs": 0.05555555555555555,
+      "M_mid": 0.041666666666666664,
+      "M_cand": 0.037037037037037035,
+      "type6_m4_le_L": false,
+      "type6_m4_le_mid": false,
+      "type6_m4_le_cand": false,
+      "same_rho_le_budget": true,
+      "gain_le_budget": true,
+      "io": "Max+-free type6; ProcessPool T rows"
+    },
+    "5": {
+      "p": 5,
+      "n_type6": 11,
+      "wall_s": 16.3048212910071,
+      "lam_max_T_type6": 9.708720374306003,
+      "lam_min_T_type6": -7.836637349315043,
+      "gap_4p": 10.291279625693997,
+      "lstsq_resid": 9.992007221626409e-16,
+      "max_abs_m4_type6_kappa1": 0.0476392388667157,
+      "max_abs_rho_kappa1": 0.0076392388667157,
+      "max_abs_rho_same_sign": 0.0076392388667157,
+      "effective_gain": 0.007957540486162188,
+      "gain_budget": 0.020833333333333332,
+      "rho_budget": 0.02,
+      "source_amp": 0.96,
+      "L_abs": 0.06,
+      "M_mid": 0.05,
+      "M_cand": 0.046153846153846156,
+      "type6_m4_le_L": true,
+      "type6_m4_le_mid": true,
+      "type6_m4_le_cand": false,
+      "same_rho_le_budget": true,
+      "gain_le_budget": true,
+      "io": "Max+-free type6; ProcessPool T rows"
+    },
+    "7": {
+      "p": 7,
+      "n_type6": 11,
+      "wall_s": 2.5085125250043347,
+      "lam_max_T_type6": 10.41038671466326,
+      "lam_min_T_type6": -8.198396717361314,
+      "gap_4p": 17.58961328533674,
+      "lstsq_resid": 7.771561172376096e-16,
+      "max_abs_m4_type6_kappa1": 0.024074917870613187,
+      "max_abs_rho_kappa1": 0.003666754605307068,
+      "max_abs_rho_same_sign": 0.003666754605307068,
+      "effective_gain": 0.007486290652501931,
+      "gain_budget": 0.0625,
+      "rho_budget": 0.030612244897959183,
+      "source_amp": 0.4897959183673469,
+      "L_abs": 0.05102040816326531,
+      "M_mid": 0.044642857142857144,
+      "M_cand": 0.04201680672268908,
+      "type6_m4_le_L": true,
+      "type6_m4_le_mid": true,
+      "type6_m4_le_cand": true,
+      "same_rho_le_budget": true,
+      "gain_le_budget": true,
+      "io": "Max+-free type6; ProcessPool T rows"
+    }
+  },
+  "empirical_maxplus_gain": {
+    "5": {
+      "p": 5,
+      "n_kappa1_sampled": 11700,
+      "stride": 1,
+      "max_abs_m4": 0.046153846153846156,
+      "max_abs_rho": 0.055384615384615386,
+      "max_abs_rho_same_sign": 0.006153846153846156,
+      "effective_gain": 0.006410256410256413,
+      "gain_budget": 0.020833333333333332,
+      "rho_budget": 0.02,
+      "L_abs": 0.06,
+      "M_mid": 0.05,
+      "m4_le_L": true,
+      "m4_le_mid": true,
+      "same_le_budget": true,
+      "gain_le_budget": true,
+      "io": "mmap Max+"
+    },
+    "7": {
+      "p": 7,
+      "n_kappa1_sampled": 11749,
+      "stride": 15,
+      "max_abs_m4": 0.03807195249738037,
+      "max_abs_rho": 0.01766378923207425,
+      "max_abs_rho_same_sign": 0.01766378923207425,
+      "effective_gain": 0.036063569682151596,
+      "gain_budget": 0.0625,
+      "rho_budget": 0.030612244897959183,
+      "L_abs": 0.05102040816326531,
+      "M_mid": 0.044642857142857144,
+      "m4_le_L": true,
+      "m4_le_mid": true,
+      "same_le_budget": true,
+      "gain_le_budget": true,
+      "io": "mmap Max+"
+    }
+  },
+  "certs_ok": true,
+  "type6_le_L_for_p_ge_5": true,
+  "io": "write_json_atomic; mmap Max+ for empirical; ProcessPool type6/vanish",
+  "status": "Prop 15.72: reverse degrees d1^(3)=3(p^2-1), d3^(3)=p^2-9 proved from n1,n3,d3 handshaking; T\u03ba/\u03ba\u2208{\u00b18} on |\u03ba|=3 proved; gain\u21d4L algebra proved; separate \u03ba-weighted vanishing + reverse deg certs p=3,5,7 (True); type6 Max+-free resolvent le_L p\u22655 (True). OPEN: prove resolvent gain \u2264(p-4)/48 (or |m4|\u2264M_mid/L) for all primes p\u22655 without per-p Max+/type6 census. lim \u03b1_n remains OPEN."
+}

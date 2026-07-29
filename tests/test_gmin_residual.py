@@ -1246,6 +1246,57 @@ def test_prop_15_68_tkappa_vanishing_and_resolvent_reduction():
     assert "OPEN" in data["status"]
 
 
+def test_prop_15_72_resolvent_gain_algebra_and_evidence():
+    """Drive shipped resolvent-gain helpers: reverse degrees, gain⇔L, evidence."""
+    import sys
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_m4_resolvent_gain import (
+        algebra_gain_targets,
+        algebra_reverse_degrees,
+        gain_budget,
+        rho_budget,
+        source_amp,
+        tkappa_over_kappa_identity,
+        L_abs,
+    )
+    from e1_gmin_m4_stratum import n1_formula, n3_formula, d3_formula
+
+    tk = tkappa_over_kappa_identity()
+    assert tk["proved"] is True
+    assert set(tk["Tkappa_over_kappa_on_abs3"]) == {8, -8}
+
+    rev = algebra_reverse_degrees()
+    assert rev["proved_under_hypothesis"] is True
+    for p in (3, 5, 7, 11, 13):
+        n1, n3, d3 = n1_formula(p), n3_formula(p), d3_formula(p)
+        assert abs(n1 * d3 / n3 - 3 * (p * p - 1)) < 1e-9
+        assert 3 * (p * p - 1) + (p * p - 9) == 4 * (p * p + 1 - 4)
+
+    tgt = algebra_gain_targets()
+    assert tgt["proved_algebra"] is True
+    for p in (5, 7, 11):
+        assert abs(gain_budget(p) * source_amp(p) - rho_budget(p)) < 1e-15
+        assert abs(1.0 / (p * p) + rho_budget(p) - L_abs(p)) < 1e-15
+
+    path = ROOT / "evidence" / "e1_gmin_m4_resolvent_gain.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    assert data["workers"] >= 4
+    assert data["certs_ok"] is True
+    assert data["type6_le_L_for_p_ge_5"] is True
+    for p in (5, 7):
+        t6 = data["type6_resolvent"][str(p)]
+        assert t6["type6_m4_le_L"] is True
+        assert t6["gain_le_budget"] is True
+        emp = data["empirical_maxplus_gain"][str(p)]
+        assert emp["gain_le_budget"] is True
+        assert emp["m4_le_L"] is True
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.72" in sol
+    assert "OPEN" in data["status"]
+
+
 def test_prop_15_71_stratum_counts_conference_proof():
     """Drive shipped stratum helpers: S2 proof, n1/n3 formulas, evidence."""
     import sys
