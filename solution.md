@@ -2513,7 +2513,42 @@ Let \(n_1=\#\{S:|\kappa(S)|=1\}\) and \(n_3=\#\{S:|\kappa(S)|=3\}\).
    \]
    with \(\mathrm{star}\cdot\tau_1\in\{-1,5\}\) (so \(\mathrm{star}\cdot S_1=\frac{11}{65}\mathrm{sgn}(t)-\,t/25\)). Hence \(\mathrm{star}\cdot S_1\le0\) is **proved at \(p=5\)** by exhaustive Max+ evaluation. \(\square\)
 
-6. **Residual (OPEN).** Prove for every prime \(p\ge5\): (i) \(\mathrm{star}\cdot\tau_1\) and \(\mathrm{star}\cdot S_1\) constant on each \(|\kappa|=1\) set; (ii) Gaussian domination \(\mathbb E[\varphi]\le\mathbb E_{\mathrm{Wick}}[\varphi]\) (equivalently \(\mathrm{star}\cdot S_1\le0\)); (iii) joint/S3 bound \(\Rightarrow\max|m_4|\le M_{\mathrm{cand}}\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+6. **Residual (OPEN).** Constancy of \(\mathrm{star}\cdot\tau_1\) and \(\mathrm{star}\cdot S_1\) is proved in Prop 15.79. Remains: Gaussian domination \(\mathbb E[\varphi]\le\mathbb E_{\mathrm{Wick}}[\varphi]\) (equivalently \(\mathrm{star}\cdot S_1\le0\)) for all primes \(p\ge5\), and joint/\(S_3\) bound \(\Rightarrow\max|m_4|\le M_{\mathrm{cand}}\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+**Proposition 15.79 (Aut-constancy of \(\mathrm{star}\cdot\tau_1\) and \(\mathrm{star}\cdot S_1\); modular \(\tau_1\); 2026-07-29).** Continue Prop 15.77–15.78. Let \(C\) be the Paley conference matrix of order \(n=p^2+1\), identified with the point set \(\mathrm{PG}(1,\mathbb F_{p^2})\), and let \(\mathrm{Aut}(C)\ge\mathrm{PGL}(2,p^2)\).
+
+1. **Setwise stabilizer is transitive (proved).** For every 4-set \(S\subset\mathrm{PG}(1,p^2)\), the setwise stabilizer of \(S\) in \(\mathrm{PGL}(2,p^2)\) contains a Klein four-group \(V_4\) of double-transposition involutions (e.g. \(z\mapsto\lambda/z\) on \(S=\{\infty,0,1,\lambda\}\)). This \(V_4\) acts regularly on \(S\), hence transitively. \(\square\)
+
+2. **Constancy of \(\mathrm{star}\cdot\tau_1\) (proved, Max+-free).** The scalar \(\mathrm{star}_a\cdot\tau_1(a)\) is built from \(C\)-labels of \(S\) and of the one-vertex extensions \(S_{a\to r}\). It is therefore \(\mathrm{Aut}(C)\)-equivariant: for every \(g\in\mathrm{Aut}(C)\),
+   \[
+   \mathrm{star}_{ga}\cdot\tau_1(ga;gS)
+   \;=\;
+   \mathrm{star}_a\cdot\tau_1(a;S).
+   \]
+   Restricting to the setwise stabilizer of \(S\) and using part 1, \(\mathrm{star}_a\cdot\tau_1(a)\) is independent of \(a\in S\). \(\square\)
+
+3. **Constancy of \(\mathrm{star}\cdot S_1\) (proved, Max+ Aut-invariant).** The set \(\mathrm{Max}_{+}=\{y\in\{\pm1\}^n:Cy=py\}\) is \(\mathrm{Aut}(C)\)-invariant, so \(m_4(S)=\mathbb E[\prod_{i\in S}y_i]\) is an Aut-invariant of the 4-set. Consequently \(\mathrm{star}_a\cdot S_1(a)\) (depending on \(C\) and on \(m_4\) of extensions of \(S\)) is Aut-equivariant, and part 1 forces constancy on \(a\in S\). \(\square\)
+
+4. **Counting form of \(\tau_1\) (proved).** Write \(d_1^{(1)}=(3p^2-7)/4\) and
+   \[
+   A\;=\;\#\{r\in R_1(a):C_{ar}\kappa(S_{a\to r})=+1\}.
+   \]
+   Then \(A+B=d_1^{(1)}\) with \(B=\#\{C_{ar}\kappa'=-1\}\), and \(\tau_1=A-B=2A-d_1^{(1)}\). In particular \(\mathrm{star}\cdot\tau_1=\mathrm{star}\cdot(2A-d_1^{(1)})\). For odd \(p\), \(d_1^{(1)}\) is odd, so \(\mathrm{star}\cdot\tau_1\) is always odd. \(\square\)
+
+5. **Modular census (certified Paley \(p=3,5,7,11\); \(W=86\)).** On every \(|\kappa|=1\) set: constancy holds (matches part 2); \(t_1=2A-d_1^{(1)}\) exactly; every \(\mathrm{star}\cdot\tau_1\equiv5\pmod6\); the number of distinct values is \((p-1)/2\), with observed sets
+   \[
+   \begin{align*}
+   p=3&:\ \{-1\},\\
+   p=5&:\ \{-1,5\},\\
+   p=7&:\ \{-7,-1,5\},\\
+   p=11&:\ \{-13,-7,-1,5,11\}
+   \end{align*}
+   \]
+   (arithmetic progressions of difference \(6\)). Evidence: `e1_gmin_m4_S1_aut.json`. \(\square\)
+
+6. **Consequence for the sign attack.** By part 3 it suffices to prove \(\mathrm{star}\cdot S_1(S)\le0\) as a property of the 4-set (one check per set, not per centre). Combined with Prop 15.77–15.78 (joint criterion; Gaussian domination form; exact \(p=5\) spectrum \(\{-2/65,-42/325\}\)), the residual is: prove \(\mathrm{star}\cdot S_1\le0\) for all primes \(p\ge5\), then control \(S_3\) on maximisers. \(\square\)
+
+7. **Residual (OPEN).** Prove \(\mathrm{star}\cdot S_1\le0\) (e.g. Gaussian domination \(\mathbb E[\varphi]\le\mathbb E_{\mathrm{Wick}}[\varphi]\)) for every prime \(p\ge5\), and close the joint/\(S_3\) bound so \(\max|m_4|\le M_{\mathrm{cand}}\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[

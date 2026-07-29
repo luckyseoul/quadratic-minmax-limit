@@ -1328,6 +1328,60 @@ def test_S1_sign_gpu_mmap_atomic():
     assert abs(rho_budget_cand(5) - 2 / 325) < 1e-15
 
 
+def test_prop_15_79_aut_constancy():
+    """Prop 15.79: Aut-constancy proof + modular τ1 census."""
+    import sys
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_m4_S1_aut import (
+        aut_constancy_proof,
+        modular_star_tau1_algebra,
+        d1_one,
+        M_cand,
+    )
+
+    aut = aut_constancy_proof()
+    assert aut["proved"] is True
+    assert "stabilizer_fact" in aut
+    assert "equivariance_tau1" in aut
+    assert "equivariance_S1" in aut
+    mod = modular_star_tau1_algebra()
+    assert mod["proved_elementary"] is True
+    assert mod["elementary"]["d1_always_odd_for_odd_p"] is True
+    for p in (3, 5, 7, 11, 13, 17, 19):
+        assert d1_one(p) % 2 == 1
+        assert (3 * p * p - 7) % 4 == 0
+
+    path = ROOT / "evidence" / "e1_gmin_m4_S1_aut.json"
+    assert path.is_file(), "run src/e1_gmin_m4_S1_aut.py"
+    data = json.loads(path.read_text())
+    assert data["prop"] == "15.79"
+    assert data["workers"] >= 4
+    assert data["aut_constancy"]["proved"] is True
+    assert data["all_constancy_certified"] is True
+    assert data["all_mod6"] is True
+    assert data["all_t1_formula"] is True
+    assert data["all_n_values_match"] is True
+    expected_vals = {
+        "3": [-1],
+        "5": [-1, 5],
+        "7": [-7, -1, 5],
+        "11": [-13, -7, -1, 5, 11],
+    }
+    for p, exp in expected_vals.items():
+        r = data["tau1_certs"][p]
+        assert r["star_tau1_constant_all_sets"] is True
+        assert r["star_tau1_values"] == exp
+        assert r["n_distinct_values"] == (int(p) - 1) // 2
+        assert r["all_equiv_5_mod_6"] is True
+        assert r["t1_eq_2A_minus_d1"] is True
+    assert "OPEN" in data["status"]
+    assert "15.79" in (ROOT / "solution.md").read_text()
+    assert "15.79" in (ROOT / "HANDOFF.md").read_text()
+    assert "OPEN" in (ROOT / "HANDOFF.md").read_text()[:900]
+    assert abs(M_cand(5) - 3 / 65) < 1e-15
+
+
 def test_prop_15_78_star_S1_constancy_gd():
     """Prop 15.78: moment form, τ1/S1 constancy, GD, p=5 exact spectrum."""
     import sys
