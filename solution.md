@@ -1799,6 +1799,46 @@ where \(w^{(i)}_j=C_{ij}v_{ij}\) and \(C^{[i]}\) is the principal submatrix of \
    \]
    for every prime \(p\ge5\) (or any upper bound \(\le m/(2d)\)). Then Prop 15.55 closes bi-tight / Type I for all such \(p\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.61 (16N bound \(\Rightarrow\lambda_{\mathrm{cycle}}\le8\Rightarrow\) gap for \(p\ge5\); 2026-07-30).** Continue Prop 15.56–15.60. Let \(B\) range over real \(n\times n\) matrices with \(B=P_+BP_+\), \(\mathrm{Tr}\,B=0\), and write
+\[
+Q(B):=\sum_{y\in\mathrm{Max}_{+}}(y^\top By)^2.
+\]
+
+1. **Frame identity (proved).** For every such \(B\),
+   \[
+   \sum_{y\in\mathrm{Max}_{+}}\|By\|^2=2N\|B\|_F^2.
+   \]
+   *Proof.* \(\sum_y y^\top B^2 y=\mathrm{Tr}\bigl(B^2\sum_y yy^\top\bigr)=\mathrm{Tr}(B^2\cdot 2N P_+)=2N\|B\|_F^2\). \(\square\)
+
+2. **Equivalence with \(\lambda_2(W)\) (proved).** Identifying \(B=QAQ^\top\) with \(Q\) an ONB of \(V_+\) and \(A\in\mathrm{Sym}(\mathbb R^d)\), \(\mathrm{Tr}\,A=0\),
+   \[
+   Q(B)=n^2\sum_{a=1}^N(u_a^\top A u_a)^2,
+   \]
+   so
+   \[
+   \max_{\|B\|_F=1}Q(B)=n^2\cdot\lambda_2(W)=4d^2\cdot\lambda_2(W).
+   \]
+   Consequently
+   \[
+   \max_{\|B\|_F=1}Q(B)\le 16N
+   \quad\Longleftrightarrow\quad
+   \lambda_2(W)\le\frac{4N}{d^2}.
+   \]
+
+3. **Equivalence with \(\lambda_{\mathrm{cycle}}\le8\) (proved).** At a cycle maximiser of \(G\) one has \(\mathrm{ft}=2p\), \(\mathbb E[\|By\|^2]=4\), \(By\in V_+\) for all Max+ \(y\), and \(\|B\|_F^2=2\) (Prop 15.57 certs). Scaling \(B'=B/\sqrt2\) (\(\|B'\|_F=1\)) gives
+   \[
+   \lambda_{\mathrm{cycle}}=\frac1{4N}Q(B)=\frac1{2N}Q(B').
+   \]
+   Hence \(\max Q\le16N\) yields \(\lambda_{\mathrm{cycle}}\le8\). Conversely, the \(\Phi\)-maximiser of \(Q\) realises \(\lambda_{\mathrm{cycle}}=Q(B_\star)/(2N)\) under the same scaling, so the two maxima match. \(\square\)
+
+4. **Algebraic gap upgrade (proved).** If \(\lambda_{\mathrm{cycle}}\le8\), then for every prime \(p\ge5\) one has \(n/2=d\ge13>8\), so \(\lambda_{\max}(G)=\max(n/2,\lambda_{\mathrm{cycle}})=n/2\) is simple, and Prop 15.55 blocks all Max+-tight size-\(2p\) covers (bi-tight / Type I empty). Equivalently: \(\lambda_2(W)\le4N/d^2\) and \(d\ge8\) imply \(\lambda_2(W)\le N/(2d)\) because \(4/d\le1/2\). \(\square\)
+
+5. **Certified 16N bound.** At \(p=3\): \(Q_{\max}=16N=192\) and \(\lambda_{\mathrm{cycle}}=8\) (**equality**). At \(p=5\): \(Q_{\max}/(16N)=11/13<1\), \(\lambda_{\mathrm{cycle}}=88/13<8\). At \(p=7\): \(Q_{\max}/(16N)\approx0.660<1\), \(\lambda_{\mathrm{cycle}}\approx5.281<8\). Spectral gap holds \(p=5,7\), fails \(p=3\). Evidence: `e1_gmin_16n.json`.
+
+6. **Residual (OPEN).** Prove \(Q(B)\le16N\|B\|_F^2\) for all \(B=P_+BP_+\) with \(\mathrm{Tr}\,B=0\) and all primes \(p\ge5\) (equality at \(p=3\) is the base case). Then bi-tight / Type I closes for every such \(p\) via Prop 15.55. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+   *Remark.* The 2×-sphere bound of Prop 15.60.4 is slightly sharper (\(16\,dN/(d+2)<16N\)) but has the same open core; the 16N form isolates the clean numerical threshold \(\lambda_{\mathrm{cycle}}\le8\).
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

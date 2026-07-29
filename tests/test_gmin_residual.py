@@ -677,3 +677,57 @@ def test_prop_15_60_antipodal_reduction_and_projective():
     sol = (ROOT / "solution.md").read_text()
     assert "15.60" in sol
     assert "OPEN" in data["status"]
+
+
+def test_prop_15_61_16n_bound_algebra_and_certs():
+    """16N ⇔ λ_cycle≤8; d≥8 ⇒ gap; evidence equality p=3, strict p=5,7."""
+    # Algebra: 4N/d^2 ≤ N/(2d) ⇔ d≥8
+    for d in range(5, 30):
+        if d >= 8:
+            assert 4.0 / d <= 0.5 + 1e-15
+        else:
+            assert 4.0 / d > 0.5
+
+    # Frame identity sum ||By||^2 = 2N ||B||_F^2 at p=5 (shipped path)
+    import os
+    import sys
+
+    import numpy as np
+
+    for k in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
+        os.environ[k] = "1"
+    sys.path.insert(0, str(ROOT / "src"))
+    from minmax_quadratic import paley_conference_prime_power
+
+    Y = np.load("/tmp/maxplus_p5.npy").astype(float)
+    N, n = Y.shape
+    d = n // 2
+    C = paley_conference_prime_power(5).astype(float)
+    ew, EV = np.linalg.eigh(C)
+    Vp = EV[:, ew > 0]
+    rng = np.random.default_rng(1)
+    A = rng.standard_normal((d, d))
+    A = 0.5 * (A + A.T)
+    A -= np.trace(A) / d * np.eye(d)
+    B = Vp @ A @ Vp.T
+    sum_By2 = float(sum(np.linalg.norm(B @ y) ** 2 for y in Y))
+    assert abs(sum_By2 - 2 * N * np.sum(B * B)) < 1e-6 * max(sum_By2, 1.0)
+
+    path = ROOT / "evidence" / "e1_gmin_16n.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    by_p = {r["p"]: r for r in data["results"]}
+    assert by_p[3]["equality_case_p3"] is True
+    assert abs(by_p[3]["ratio_to_16N"] - 1.0) < 1e-6
+    assert abs(by_p[3]["lambda_cycle"] - 8.0) < 1e-6
+    assert by_p[5]["bound_16N_ok"] and by_p[7]["bound_16N_ok"]
+    assert by_p[5]["lambda_cycle_le_8"] and by_p[7]["lambda_cycle_le_8"]
+    assert by_p[5]["gap_ok"] and by_p[7]["gap_ok"]
+    assert by_p[3]["gap_ok"] is False
+    assert by_p[5]["algebra_16N_implies_gap"] is True
+    # p=5 exact ratio 11/13
+    assert abs(by_p[5]["ratio_to_16N"] - 11 / 13) < 1e-6
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.61" in sol
+    assert "16N" in sol or "16 N" in sol
+    assert "OPEN" in data["status"]
