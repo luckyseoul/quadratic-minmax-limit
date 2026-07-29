@@ -1810,6 +1810,13 @@ Q(B):=\sum_{y\in\mathrm{Max}_{+}}(y^\top By)^2.
    \]
    *Proof.* \(\sum_y y^\top B^2 y=\mathrm{Tr}\bigl(B^2\sum_y yy^\top\bigr)=\mathrm{Tr}(B^2\cdot 2N P_+)=2N\|B\|_F^2\). \(\square\)
 
+1b. **Triangle form on \(V_+\) (proved).** For every \(B=P_+BP_+\),
+   \[
+   \mathrm{Tr}(CB^2)=p\|B\|_F^2.
+   \]
+   *Proof.* \(C=p(P_+-P_-)\) and \(B^2=P_+B^2P_+\), so \(\mathrm{Tr}(CB^2)=p\mathrm{Tr}(B^2)\). \(\square\)
+   Consequently every zero-diagonal \(B\) on \(V_+\) with \(\|B\|_F^2=2\) (i.e. unit edge-weight \(v\)) saturates the triangle bound \(\mathrm{ft}=2p\) and has \(\mathbb E[\|By\|^2]=4\). The spectral gap residual is therefore purely the alignment \(\mathbb E[(y^\top By)^2]\) among these maximisers of \(\mathrm{ft}\).
+
 2. **Equivalence with \(\lambda_2(W)\) (proved).** Identifying \(B=QAQ^\top\) with \(Q\) an ONB of \(V_+\) and \(A\in\mathrm{Sym}(\mathbb R^d)\), \(\mathrm{Tr}\,A=0\),
    \[
    Q(B)=n^2\sum_{a=1}^N(u_a^\top A u_a)^2,
