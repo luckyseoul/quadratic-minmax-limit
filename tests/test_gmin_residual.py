@@ -1279,3 +1279,29 @@ def test_prop_15_70_mid_ub_algebra_and_census():
     sol = (ROOT / "solution.md").read_text()
     assert "15.70" in sol
     assert "OPEN" in data["status"]
+
+
+def test_gpu_budget_and_m4_gpu_evidence():
+    """GPU path: gpu_budget reports CuPy when present; GPU census evidence if written."""
+    import sys
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from gpu_budget import compute_snapshot, prefer_gpu_for, gpu_info
+
+    snap = compute_snapshot()
+    assert "workers" in snap and snap["workers"] >= 2
+    assert "gpu" in snap
+    g = gpu_info()
+    # Machine policy: this host should see a V100; if not, still exercise API
+    if g.get("available"):
+        assert prefer_gpu_for("m4_batch") is True
+        path = ROOT / "evidence" / "e1_gmin_m4_gpu.json"
+        assert path.is_file(), "run src/e1_gmin_m4_gpu.py to produce GPU census evidence"
+        data = json.loads(path.read_text())
+        assert data["use_gpu"] is True
+        for p in (5, 7):
+            r = data["results"][str(p)]
+            assert r["m4_le_mid"] is True
+            assert r["m4_le_L"] is True
+            assert r["wall_s"] < 30.0  # GPU path must be fast
+        assert abs(data["results"]["5"]["max_abs_m4"] - 3 / 65) < 1e-9

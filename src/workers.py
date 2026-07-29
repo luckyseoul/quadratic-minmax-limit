@@ -1,13 +1,18 @@
-"""F17 multi-worker policy: never thrash a single core on multi-minute jobs.
+"""F17 multi-worker + GPU policy: use the whole machine.
 
 Hard rules (project + user-enforced):
-  1. Call require_workers() at the start of every heavy script main.
-  2. Fan out the *expensive* units (quads, primes, seeds) — not just toy tasks.
-  3. NEVER do serial leftover heavy work on the parent after a ProcessPool wave
+  1. Call require_workers() / compute_snapshot() at the start of every heavy main.
+  2. Fan out expensive *independent* units (quads, primes, seeds) with ProcessPool
+     W≈nproc-2 and OMP=1 per worker — not toy tasks only.
+  3. Prefer GPU (CuPy/V100) for large dense batches (m4 column products, Φ sampling,
+     dense matmul). One CUDA context — do not spawn 88 GPU processes.
+  4. NEVER serial leftover heavy work on the parent after a ProcessPool wave
      (classic bug: pool for p=3,5 then p=7 on main → 97% NLWP=1).
-  4. After launch, self-check with assert_not_single_core_thrash() or ps.
+  5. After launch, self-check with assert_not_single_core_thrash() or ps;
+     nvidia-smi if the path claimed GPU.
 
-See evidence/E1_FAILURE_GRAPH.md F17 and evidence/AGENT_BUG_F17_RECURRENCE.md.
+See evidence/E1_FAILURE_GRAPH.md F17, evidence/AGENT_BUG_F17_RECURRENCE.md,
+and src/gpu_budget.py.
 """
 from __future__ import annotations
 

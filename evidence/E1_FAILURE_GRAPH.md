@@ -113,10 +113,12 @@ Use `src/workers.py`: `require_workers()`, `pool()`, `assert_not_single_core_thr
 
 ## Compute policy (mandatory)
 
-1. Run `compute-budget.sh` before any >10s job; record `W`.
-2. Independent units = seeds, matchings, residue classes, p-values — fan out with `ProcessPoolExecutor(W)`.
-3. Serial only if algorithm is inherently serial; **state that in the log**.
-4. Verification: one parallel wave, one JSON, one pytest — not live-serial-per-cover.
+1. Run `compute-budget.sh` **and** check GPU (`nvidia-smi` / `src/gpu_budget.py`) before any >10s job; record `W` and whether GPU is free.
+2. Independent irregular units = seeds, matchings, residue classes, p-values — fan out with `ProcessPoolExecutor(W)`, `OMP=1` per worker.
+3. **Prefer GPU (CuPy / V100)** for large dense batches: m4 column products (`e1_gmin_m4_gpu.py`), Φ sampling, dense Rayleigh/power. One process owns CUDA — do not open 88 GPU contexts.
+4. Serial only if algorithm is inherently serial; **state that in the log**, and still run other vectors in parallel or use GPU if it fits.
+5. Verification: one parallel/GPU wave, one JSON, one pytest — not live-serial-per-cover.
+6. Report in evidence: `workers`, `gpu.used`, wall time.
 
 ---
 

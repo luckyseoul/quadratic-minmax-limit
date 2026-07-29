@@ -1,0 +1,97 @@
+{
+  "compute": {
+    "cpu_threads": 88,
+    "workers": 86,
+    "gpu": {
+      "available": true,
+      "backend": "cupy",
+      "name": "Tesla V100-SXM2-16GB",
+      "mem_free_gib": 16.456024064,
+      "mem_total_gib": 16.928342016,
+      "util_pct": null
+    },
+    "policy": "Use GPU for large dense batches if available; else ProcessPool W=86. Never single-core multi-minute thrash (F17)."
+  },
+  "use_gpu": true,
+  "results": {
+    "5": {
+      "backend": "cupy",
+      "gpu": {
+        "available": true,
+        "backend": "cupy",
+        "name": "Tesla V100-SXM2-16GB",
+        "mem_free_gib": 16.456024064,
+        "mem_total_gib": 16.928342016,
+        "util_pct": null
+      },
+      "gpu_after": {
+        "available": true,
+        "backend": "cupy",
+        "name": "Tesla V100-SXM2-16GB",
+        "mem_free_gib": 16.376332288,
+        "mem_total_gib": 16.928342016,
+        "util_pct": null
+      },
+      "n": 26,
+      "N": 260,
+      "n_kappa1": 11700,
+      "batch": 50000,
+      "wall_s": 0.12089881800056901,
+      "max_abs_m4": 0.046153846153846156,
+      "max_m4": 0.046153846153846156,
+      "max_kappa": 1,
+      "worst_pts": [
+        0,
+        1,
+        2,
+        6
+      ],
+      "L_abs": 0.06,
+      "M_mid": 0.05,
+      "m4_le_L": true,
+      "m4_le_mid": true,
+      "g_min": -0.046153846153846156,
+      "p": 5
+    },
+    "7": {
+      "backend": "cupy",
+      "gpu": {
+        "available": true,
+        "backend": "cupy",
+        "name": "Tesla V100-SXM2-16GB",
+        "mem_free_gib": 16.376332288,
+        "mem_total_gib": 16.928342016,
+        "util_pct": null
+      },
+      "gpu_after": {
+        "available": true,
+        "backend": "cupy",
+        "name": "Tesla V100-SXM2-16GB",
+        "mem_free_gib": 13.073317888,
+        "mem_total_gib": 16.928342016,
+        "util_pct": null
+      },
+      "n": 50,
+      "N": 11452,
+      "n_kappa1": 176400,
+      "batch": 12000,
+      "wall_s": 0.29480959799548145,
+      "max_abs_m4": 0.03807195249738037,
+      "max_m4": 0.03807195249738037,
+      "max_kappa": 1,
+      "worst_pts": [
+        0,
+        1,
+        2,
+        10
+      ],
+      "L_abs": 0.05102040816326531,
+      "M_mid": 0.044642857142857144,
+      "m4_le_L": true,
+      "m4_le_mid": true,
+      "g_min": -0.03807195249738037,
+      "p": 7
+    }
+  },
+  "status": "GPU (CuPy/V100) |\u03ba|=1 m4 census: p=5 max|m4|=0.04615385 (0.12s), p=7 max|m4|=0.03807195 (0.29s). Both \u2264M_mid and \u2264L. One CUDA context; host multi-worker not used for this path."
+}
