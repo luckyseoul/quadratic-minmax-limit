@@ -1,0 +1,318 @@
+{
+  "hypothesis_H": "ray \u2264 (p+2)^2/d for unit zero-diag B on V_+",
+  "algebra_H_le_5": "proved in Prop 15.63.1",
+  "scheme": [
+    {
+      "p": 3,
+      "N": 12,
+      "n": 10,
+      "d": 5,
+      "dots": [
+        -10.0,
+        -2.0,
+        2.0,
+        10.0
+      ],
+      "degrees": {
+        "-10.0": 1,
+        "-2.0": 5,
+        "2.0": 5,
+        "10.0": 1
+      },
+      "distance_homogeneous_sample": true,
+      "K_eigs": [
+        {
+          "value": 8.0,
+          "frac": "8/1",
+          "frac_err": 0.0,
+          "mult": 5
+        },
+        {
+          "value": 5.0,
+          "frac": "5/1",
+          "frac_err": 0.0,
+          "mult": 1
+        }
+      ],
+      "n_half": 5.0,
+      "lam_cycle": 8.0,
+      "ray": 5.0,
+      "H": 5.0,
+      "H_plus_3": 8.0,
+      "H_holds": true,
+      "cycle_le_8": true,
+      "gap_ok": false
+    },
+    {
+      "p": 5,
+      "N": 260,
+      "n": 26,
+      "d": 13,
+      "dots": [
+        -26.0,
+        -14.0,
+        -10.0,
+        -6.0,
+        -2.0,
+        2.0,
+        6.0,
+        10.0,
+        14.0,
+        26.0
+      ],
+      "degrees": {
+        "-26.0": 1,
+        "-14.0": 13,
+        "-10.0": 20,
+        "-6.0": 36,
+        "-2.0": 60,
+        "2.0": 60,
+        "6.0": 36,
+        "10.0": 20,
+        "14.0": 13,
+        "26.0": 1
+      },
+      "distance_homogeneous_sample": true,
+      "K_eigs": [
+        {
+          "value": 13.0,
+          "frac": "13/1",
+          "frac_err": 0.0,
+          "mult": 1
+        },
+        {
+          "value": 6.7692307692,
+          "frac": "88/13",
+          "frac_err": 3.076916499367144e-11,
+          "mult": 13
+        },
+        {
+          "value": 5.5384615385,
+          "frac": "72/13",
+          "frac_err": 3.846167828669422e-11,
+          "mult": 26
+        },
+        {
+          "value": 3.0769230769,
+          "frac": "40/13",
+          "frac_err": 2.3077095789858504e-11,
+          "mult": 26
+        }
+      ],
+      "n_half": 13.0,
+      "lam_cycle": 6.7692307692,
+      "ray": 3.7692307692,
+      "H": 3.769230769230769,
+      "H_plus_3": 6.769230769230769,
+      "H_holds": true,
+      "cycle_le_8": true,
+      "gap_ok": true
+    },
+    {
+      "p": 7,
+      "N": 11452,
+      "n": 50,
+      "d": 25,
+      "n_half": 25.0,
+      "n_half_emp": 25.0,
+      "lam_cycle": 5.281173091188659,
+      "lam_cycle_frac": "2160/409",
+      "lam_cycle_frac_err": 5.029433705061592e-07,
+      "lam2_cycle_space": 5.281164678570766,
+      "ray": 2.281173091188659,
+      "H": 3.24,
+      "H_plus_3": 6.24,
+      "H_holds": true,
+      "cycle_le_8": true,
+      "gap_ok": true,
+      "method": "power_K_matvec"
+    }
+  ],
+  "bounds": [
+    {
+      "p": 3,
+      "N": 12,
+      "d": 5,
+      "K_diag": 3.75,
+      "gershgorin_row_abs_sum": 10.0,
+      "gersh_le_8": false,
+      "gersh_le_H3": false,
+      "E_sAs2_max": 15.999999999999998,
+      "H_qn": 16.0,
+      "wick_8": 8.0,
+      "residual_vs_wick": 7.999999999999998,
+      "H_holds_qn": true
+    },
+    {
+      "p": 5,
+      "N": 260,
+      "d": 13,
+      "K_diag": 1.25,
+      "gershgorin_row_abs_sum": 23.153846153846153,
+      "gersh_le_8": false,
+      "gersh_le_H3": false,
+      "E_sAs2_max": 13.53846153845925,
+      "H_qn": 13.538461538461538,
+      "wick_8": 8.0,
+      "residual_vs_wick": 5.53846153845925,
+      "H_holds_qn": true
+    },
+    {
+      "p": 7,
+      "N": 11452,
+      "d": 25,
+      "K_diag": 0.1069682151589242,
+      "gershgorin_row_abs_sum": 43.40586797066015,
+      "gersh_le_8": false,
+      "gersh_le_H3": false,
+      "E_sAs2_max": 10.562211787475864,
+      "H_qn": 12.48,
+      "wick_8": 8.0,
+      "residual_vs_wick": 2.5622117874758636,
+      "H_holds_qn": true
+    }
+  ],
+  "direct_exact": [
+    {
+      "p": 3,
+      "dimS": 15,
+      "nullity": 5,
+      "expected_binom": 6,
+      "lam_max_E_sAs2": 16.000000000000025,
+      "ray": 5.000000000000012,
+      "H": 5.0,
+      "H_qn": 16.0,
+      "H_holds": true,
+      "qn_le_16": true,
+      "G\u03c6_max_unconstrained": 11.353073138938822,
+      "note": "exact max E[(sAs)^2] on zero-diag\u2229Tr0 via gen.eig"
+    },
+    {
+      "p": 5,
+      "dimS": 91,
+      "nullity": 65,
+      "expected_binom": 66,
+      "lam_max_E_sAs2": 13.538461538461545,
+      "ray": 3.7692307692307727,
+      "H": 3.769230769230769,
+      "H_qn": 13.538461538461538,
+      "H_holds": true,
+      "qn_le_16": true,
+      "G\u03c6_max_unconstrained": 10.68927130572683,
+      "note": "exact max E[(sAs)^2] on zero-diag\u2229Tr0 via gen.eig"
+    },
+    {
+      "p": 7,
+      "dimS": 325,
+      "nullity": 275,
+      "expected_binom": 276,
+      "lam_max_E_sAs2": 10.56234718826407,
+      "ray": 2.281173594132035,
+      "H": 3.24,
+      "H_qn": 12.48,
+      "H_holds": true,
+      "qn_le_16": true,
+      "G\u03c6_max_unconstrained": 8.932998884065242,
+      "note": "exact max E[(sAs)^2] on zero-diag\u2229Tr0 via gen.eig"
+    }
+  ],
+  "fits": [
+    {
+      "p": 3,
+      "lam_cycle": 8.0,
+      "ray": 5.0,
+      "H_plus_3": 8.0,
+      "frac_lam": "8/1",
+      "frac_lam_err": 0.0,
+      "frac_ray": "5/1",
+      "frac_ray_err": 0.0,
+      "best_candidate": {
+        "name": "3+(p+2)^2/d",
+        "err": 0.0
+      },
+      "all_errs": {
+        "3+(p+2)^2/d": 0.0,
+        "3+(p+2)^2/(d+1)": 0.833333333333333,
+        "n/2": 3.0,
+        "8": 0.0,
+        "4+4/p": 2.666666666666667,
+        "2+2*p/d": 4.8,
+        "4*d/(d-1)": 3.0,
+        "2*(d+1)/(d-1)": 5.0,
+        "(p^2+7)/4": 4.0,
+        "2*p": 2.0,
+        "p+1": 4.0,
+        "4*(p+1)/p": 2.666666666666667,
+        "N/d": 5.6,
+        "2N/d^2 * (p+2)^2": 16.0
+      },
+      "equals_H_plus_3": true
+    },
+    {
+      "p": 5,
+      "lam_cycle": 6.7692307692,
+      "ray": 3.7692307692,
+      "H_plus_3": 6.769230769230769,
+      "frac_lam": "88/13",
+      "frac_lam_err": 3.076916499367144e-11,
+      "frac_ray": "49/13",
+      "frac_ray_err": 3.076916499367144e-11,
+      "best_candidate": {
+        "name": "3+(p+2)^2/d",
+        "err": 3.076916499367144e-11
+      },
+      "all_errs": {
+        "3+(p+2)^2/d": 3.076916499367144e-11,
+        "3+(p+2)^2/(d+1)": 0.2692307692,
+        "n/2": 6.2307692308,
+        "8": 1.2307692308,
+        "4+4/p": 1.9692307692000002,
+        "2+2*p/d": 3.999999999969231,
+        "4*d/(d-1)": 2.435897435866667,
+        "2*(d+1)/(d-1)": 4.435897435866666,
+        "(p^2+7)/4": 1.2307692308,
+        "2*p": 3.2307692308,
+        "p+1": 0.7692307692,
+        "4*(p+1)/p": 1.9692307692000002,
+        "N/d": 13.2307692308,
+        "2N/d^2 * (p+2)^2": 144.00000000003078,
+        "88/13_only_p5": 3.076916499367144e-11
+      },
+      "equals_H_plus_3": true
+    },
+    {
+      "p": 7,
+      "lam_cycle": 5.281173091188659,
+      "ray": 2.281173091188659,
+      "H_plus_3": 6.24,
+      "frac_lam": "2160/409",
+      "frac_lam_err": 5.029433705061592e-07,
+      "frac_ray": "933/409",
+      "frac_ray_err": 5.0294337006207e-07,
+      "best_candidate": {
+        "name": "4+4/p",
+        "err": 0.709744519760088
+      },
+      "all_errs": {
+        "3+(p+2)^2/d": 0.958826908811341,
+        "3+(p+2)^2/(d+1)": 0.8342115241959558,
+        "n/2": 19.71882690881134,
+        "8": 2.718826908811341,
+        "4+4/p": 0.709744519760088,
+        "2+2*p/d": 2.721173091188659,
+        "4*d/(d-1)": 1.1145064245219922,
+        "2*(d+1)/(d-1)": 3.1145064245219927,
+        "(p^2+7)/4": 8.71882690881134,
+        "2*p": 8.71882690881134,
+        "p+1": 2.718826908811341,
+        "4*(p+1)/p": 0.709744519760088,
+        "N/d": 452.79882690881135,
+        "2N/d^2 * (p+2)^2": 2963.0772269088116
+      },
+      "equals_H_plus_3": false
+    }
+  ],
+  "H_certified": true,
+  "status": "H CERTIFIED p=3,5,7 via exact gen.eig + scheme; uniform proof OPEN unless closed form locks. L OPEN.",
+  "workers": 86
+}

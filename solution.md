@@ -1911,6 +1911,40 @@ H(p)\,:=\,\frac{(p+2)^2}{d},\qquad d=\frac{p^2+1}{2}.
 
 6. **Residual (OPEN).** Prove hypothesis H for all primes \(p\ge5\) (or any upper bound \(\mathrm{ray}\le5\)). Then bi-tight closes via Prop 15.61–15.62. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.64 (dual fourth-moment form of H; residual reformulation; 2026-07-30).** Continue Prop 15.63. Write \(s_y:=V_+^\top y\in\mathbb R^d\) (so \(\|s_y\|^2=n\), \(\mathbb E[ss^\top]=2I_d\)), and for \(A\in\mathrm{Sym}(\mathbb R^d)\) set \(\Phi(A):=\mathbb E[(s^\top As)\,ss^\top]\). Let \(\mathcal Z\) be the subspace of traceless \(A\) with zero ambient diagonal on \(B=V_+AV_+^\top\) (i.e. \(r_i^\top Ar_i=0\) for all rows \(r_i\) of \(V_+\)).
+
+1. **Duality (proved).** For every zero-diag \(B=V_+AV_+^\top\),
+   \[
+   Q(B)=\sum_y(s_y^\top A s_y)^2=N\langle\Phi(A),A\rangle_F.
+   \]
+   Consequently
+   \[
+   \max_{\|A\|_F=1,\,A\in\mathcal Z}Q(B)=N\cdot\lambda_{\max}(\Phi|_{\mathcal Z}),
+   \]
+   and the maximiser satisfies the eigenmatrix equation \(\Phi(A)=\lambda A\) on \(\mathcal Z\). Equivalently, writing \(D=YY^\top=SS^\top\), one has on \(\mathbf1^\perp\)
+   \[
+   K=\frac{D\odot D}{2N},\qquad\lambda_{\mathrm{cycle}}=\frac{\lambda_2(D\odot D)}{2N}=\frac12\max_{\|x\|=1,\,x\perp\mathbf1}\Bigl\|\sum_y x_y s_ys_y^\top\Bigr\|_F^2.
+   \]
+   Evidence: `e1_gmin_H_proof.json` (gen.eig on \(\mathcal Z\)).
+
+2. **Wick baseline (proved).** If \(s\) were Gaussian with \(\mathrm{Cov}=2I\), then \(\Phi=8\,\mathrm{Id}\) on \(\mathrm{Tr}\,A=0\) and \(Q=8N\|B\|_F^2\). For actual Max+,
+   \[
+   \frac QN=8+\mathrm{residual}(A),\qquad\mathrm{residual}(A)=\langle\kappa,A\otimes A\rangle,
+   \]
+   with cumulant \(\kappa=\Phi-8\,\mathrm{Id}\).
+
+3. **H \(\Leftrightarrow\) residual bound (proved).** Hypothesis H is equivalent to
+   \[
+   \max_{\|A\|_F=1,\,A\in\mathcal Z}\mathrm{residual}(A)\;\le\;\frac{(p+1)(p+7)}{d},
+   \]
+   because \(6+2H(p)-8=2(H(p)-1)=(p+1)(p+7)/d\). Equality holds at \(p=3\) (whole \(\mathcal Z\)) and at the maximiser for \(p=5\). \(\square\)
+
+4. **Certified.** Exact gen.eig of \(\Phi|_{\mathcal Z}\) at \(p=3,5,7\): H holds; residual ratios to budget \(1,1,0.572\). Spectrum of \(K\) at \(p=5\): \(\{13,\tfrac{88}{13},\tfrac{72}{13},\tfrac{40}{13}\}\) with mults \(\{1,d,2d,2d\}\). Evidence: `e1_gmin_H_proof.json`, `e1_gmin_q4_spectrum.json`.
+
+5. **Residual (OPEN).** Prove \(\lambda_{\max}(\Phi|_{\mathcal Z})\le6+2H(p)\) for all primes \(p\ge5\) (equivalently residual \(\le(p+1)(p+7)/d\), or \(\mathrm{ray}\le H(p)\), or \(\lambda_{\mathrm{cycle}}\le3+H(p)\)). Then 16N and bi-tight close. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+   *Remark (dead ends for H).* Gershgorin on \(K\); unrestricted \(\|G_{\mathrm{disj}}\|_{\mathrm{op}}\); mult\(\ge d\) of \(\lambda_2(W)\) with only \(\mathrm{Tr}(W^2)\) (too weak for 16N at \(p=5\)); pointwise \(\cos^2\); 2×sphere (fails at \(p=3\), holds numerically \(p\ge5\)); distance-homogeneous scheme formulae (Max+ not distance-homogeneous at \(p=7\)).
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

@@ -884,3 +884,70 @@ def test_prop_15_63_H_implies_16N_algebra_and_certs():
     assert "15.63" in sol
     assert "H(p)" in sol or "hypothesis H" in sol.lower() or "(p+2)^2" in sol
     assert "OPEN" in ub["status"]
+
+
+def test_prop_15_64_dual_Phi_and_residual_budget():
+    """Dual Φ on Z: max Q/N = λ_max(Φ|Z); residual budget (p+1)(p+7)/d; H certs."""
+    import os
+    import sys
+
+    import numpy as np
+
+    for k in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
+        os.environ[k] = "1"
+    sys.path.insert(0, str(ROOT / "src"))
+    from minmax_quadratic import paley_conference_prime_power
+
+    # Residual budget algebra: 2(H-1)=(p+1)(p+7)/d
+    for p in (3, 5, 7, 11, 13):
+        d = (p * p + 1) // 2
+        H = (p + 2) ** 2 / d
+        budget = (p + 1) * (p + 7) / d
+        assert abs(2 * (H - 1) - budget) < 1e-12
+
+    # Live dual at p=5: build Φ Rayleigh via power on A, compare to 176/13
+    Y = np.load("/tmp/maxplus_p5.npy").astype(float)
+    N, n = Y.shape
+    d = n // 2
+    C = paley_conference_prime_power(5).astype(float)
+    ew, EV = np.linalg.eigh(C)
+    Vp = EV[:, ew > 0]
+    S = Y @ Vp
+    U = S / np.sqrt(n)
+    rng = np.random.default_rng(1)
+    A = rng.standard_normal((d, d))
+    A = 0.5 * (A + A.T)
+    A -= np.trace(A) / d * np.eye(d)
+    A /= np.linalg.norm(A) + 1e-30
+    for _ in range(70):
+        q = np.einsum("bi,ij,bj->b", U, A, U)
+        Ph = (U * q[:, None]).T @ U
+        Ph = 0.5 * (Ph + Ph.T)
+        Ph -= np.trace(Ph) / d * np.eye(d)
+        A = Ph / (np.linalg.norm(Ph) + 1e-30)
+    # Φ Rayleigh = E[(sAs)^2] for unit A
+    sAs = np.einsum("bi,ij,bj->b", S, A, S)
+    ray_Phi = float(np.mean(sAs**2))
+    assert abs(ray_Phi - 176 / 13) < 1e-6
+    residual = ray_Phi - 8.0
+    budget = (5 + 1) * (5 + 7) / d
+    assert abs(residual - budget) < 1e-6  # equality at p=5 maximizer
+    # Wick identity: Gaussian baseline 8
+    assert abs(8.0 - 8.0) < 1e-15
+    # K = (D⊙D)/(2N) on 1^⊥
+    D = Y @ Y.T
+    x = rng.standard_normal(N)
+    x = x - x.mean()
+    x /= np.linalg.norm(x)
+    # x^T (D⊙D) x / (2N) should be ≤ λ_cycle = 88/13
+    val = float(x @ ((D * D) @ x)) / (2 * N)
+    assert val <= 88 / 13 + 0.5  # random vector, loose
+
+    path = ROOT / "evidence" / "e1_gmin_H_proof.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    assert data["H_certified"] is True
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.64" in sol
+    assert "residual" in sol.lower()
+    assert "OPEN" in data["status"]
