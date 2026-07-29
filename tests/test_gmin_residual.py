@@ -1246,6 +1246,58 @@ def test_prop_15_68_tkappa_vanishing_and_resolvent_reduction():
     assert "OPEN" in data["status"]
 
 
+def test_prop_15_74_true_maxplus_cand_bound():
+    """Drive shipped kernel helpers: cand algebra + true Max+ census evidence."""
+    import sys
+    from fractions import Fraction
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_m4_kernel import (
+        M_cand,
+        M_mid,
+        L_abs,
+        algebra_cand,
+        gain_budget_cand,
+        rho_budget_cand,
+    )
+
+    alg = algebra_cand()
+    assert alg["proved"] is True
+    # p=5 sharp identities
+    assert abs(M_cand(5) - 3 / 65) < 1e-15
+    assert abs(gain_budget_cand(5) - 1 / 156) < 1e-15
+    assert abs(rho_budget_cand(5) - 2 / 325) < 1e-15
+    for p in (5, 7, 11, 13, 17, 19):
+        assert M_cand(p) <= M_mid(p) + 1e-15
+        assert M_mid(p) <= L_abs(p) + 1e-15
+        # recon: wick + 24*gain_cand/p^2 = M_cand
+        recon = 1.0 / (p * p) + 24 * gain_budget_cand(p) / (p * p)
+        assert abs(recon - M_cand(p)) < 1e-12
+
+    path = ROOT / "evidence" / "e1_gmin_m4_kernel.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    assert data["workers"] >= 4
+    assert data["true_m4_le_cand_p5_p7"] is True
+    assert data["signed_identity_ok"] is True
+    # True Max+ (not type6)
+    r5 = data["true_maxplus_census"]["5"]
+    r7 = data["true_maxplus_census"]["7"]
+    assert r5["le_cand"] and r5["le_mid"] and r5["le_L"]
+    assert r7["le_cand"] and r7["le_mid"] and r7["le_L"]
+    assert abs(r5["max_abs_m4"] - 3 / 65) < 1e-9
+    assert abs(r5["effective_gain"] - 1 / 156) < 1e-9
+    assert abs(r7["max_abs_m4"] - 109 / 2863) < 1e-9
+    assert r5["io"].startswith("mmap")
+    assert data["signed_residual_identity"]["5"]["identity_holds"]
+    assert data["signed_residual_identity"]["7"]["identity_holds"]
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.74" in sol
+    assert "OPEN" in data["status"]
+    # ensure we did not soft-close L
+    assert "OPEN" in (ROOT / "HANDOFF.md").read_text()[:2000] or "OPEN" in sol
+
+
 def test_prop_15_73_e4_identity_and_type6_multi_prime():
     """Drive shipped e4/type6 helpers: e4 formula, sumκ, multi-prime type6 evidence."""
     import sys

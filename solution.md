@@ -2326,6 +2326,44 @@ Let \(n_1=\#\{S:|\kappa(S)|=1\}\) and \(n_3=\#\{S:|\kappa(S)|=3\}\).
 
    Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.74 (candidate bound algebra; true Max+ census; signed residual identity; 2026-07-29).** Continue Prop 15.68–15.73. Write \(M_{\mathrm{cand}}(p)=(p-2)/(p(2p+3))\) and \(\rho=m_4-\kappa/p^2\).
+
+1. **Candidate algebra (proved).** For every odd prime \(p\ge5\),
+   \[
+   M_{\mathrm{cand}}(p)\;\le\;M_{\mathrm{mid}}(p)\;\le\;L_{\mathrm{abs}}(p)\;<\;T_{\mathrm{abs}}(p),
+   \]
+   with \(M_{\mathrm{cand}}/L_{\mathrm{abs}}=2p/(2p+3)\). Same-sign residual budgets:
+   \[
+   |m_4|\le M_{\mathrm{cand}}
+   \;\Longleftrightarrow\;
+   |\rho|\le M_{\mathrm{cand}}-\frac1{p^2}
+   \;\Longleftrightarrow\;
+   \mathrm{gain}\le\frac{p^2-4p-3}{24(2p+3)},
+   \]
+   where gain is relative to source amplitude \(24/p^2\). At \(p=5\) the candidate gain is \(1/156\) and \(M_{\mathrm{cand}}=3/65\). \(\square\)
+
+2. **Signed residual identity (proved).** On every \(|\kappa|=1\) 4-set the residual equation \(4p\rho=T\rho\) (Prop 15.68, using \(T\kappa=0\)) multiplies by \(\kappa\) to give
+   \[
+   4p\,r=\kappa\,(T\rho),\qquad r:=\rho\cdot\kappa.
+   \]
+   Same-sign danger for \(|m_4|\) is exactly \(r>0\), with \(|m_4|=1/p^2+r\). Certified float residual \(<10^{-15}\) on multi-worker Max+ samples at \(p=5,7\). \(\square\)
+
+3. **True Max+ census (certified \(p=5,7\); \(W=86\); mmap — not type6).** Full enumeration of all \(|\kappa|=1\) 4-sets against Max+:
+   | \(p\) | \(\max|m_4|\) | \(M_{\mathrm{cand}}\) | \(M_{\mathrm{mid}}\) | same-sign \(\max r\) | gain | \(\mathrm{gain}_{\mathrm{cand}}\) |
+   |------|---------------|----------------------|---------------------|----------------------|------|-------------------------------|
+   | 5 | \(3/65\approx0.046154\) | \(3/65\) **(sharp)** | \(0.05\) | \(2/325\) | \(1/156\) | \(1/156\) |
+   | 7 | \(109/2863\approx0.038072\) | \(5/119\approx0.04202\) | \(0.04464\) | \(\approx0.01766\) | \(\approx0.03606\) | \(\approx0.01330\) |
+
+   In particular **true** Max+ (not type6) satisfies \(\max|m_4|\le M_{\mathrm{cand}}\le M_{\mathrm{mid}}\le L_{\mathrm{abs}}\) at \(p=5,7\), with equality in the candidate at \(p=5\). Evidence: `e1_gmin_m4_kernel.json`. \(\square\)
+
+4. **Kernel form (recalled).** Every solution of the master linear equation is \(m_4=m_\star+h\) with \(h\in E_{4p}=\ker(4pI-T)\) and \(m_\star\) the min-norm particular solution (Prop 15.69). True Max+ selects a unique \(h_\star\). At \(p=5\) the candidate is already sharp on true \(m_4\), so \(h_\star\) cannot increase the max beyond \(m_\star\)'s ceiling in the dangerous direction; at \(p=7\), \(h_\star\) raises \(\max|m_4|\) above type6 but still stays \(\le M_{\mathrm{cand}}\). \(\square\)
+
+5. **Residual (OPEN).** Prove for every prime \(p\ge5\) that true Max+ obeys
+   \[
+   \max_{|\kappa|=1}|m_4|\;\le\;M_{\mathrm{cand}}(p)
+   \]
+   (or the weaker \(M_{\mathrm{mid}}\) / gain \(\le(p-4)/48\)), using \(E_{4p}\) control of \(h_\star\), the signed operator \(r\mapsto\kappa(T\rho)\), reverse degrees, and/or Paley character sums — **without** replacing true Max+ by type6. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
