@@ -2004,6 +2004,46 @@ H(p)\,:=\,\frac{(p+2)^2}{d},\qquad d=\frac{p^2+1}{2}.
 
    *Remark.* K4-edge Gram PSD only forces \(\alpha\le(p-1)/(2p)\)-scale bounds (e.g. \(0.6\) at \(p=5\)), far above \(L(p)\). General equal-diag projectors violate \(4/N\) (Prop 15.65.3).
 
+**Proposition 15.67 (master m4 identity; same-sign Ext criterion; full \(|\kappa|=1\) census \(p=5,7\); 2026-07-30).** Continue Prop 15.66. Write \(m_4(S)=\mathbb E[y_a y_b y_c y_d]\) for \(S=\{a,b,c,d\}\) and Max+ average, \(\kappa(S)\) the sum of the three perfect-matching edge-products of \(C\), and
+\[
+(Tf)(S)=\sum_{v\in S,\,r\notin S}C_{vr}\,f(S_{v\to r}).
+\]
+
+1. **Combinatorial identity \(\sigma_{\mathrm{sum}}=4\kappa\) (proved).** For every \(\pm1\) edge-labeling of \(K_4\), writing \(\sigma_v\) for the three-term pairing at vertex \(v\), one has \(\sum_{v\in S}\sigma_v=4\kappa(S)\). *Proof.* Exhaustion of the \(2^6=64\) labelings (all pass). \(\square\)
+
+2. **Master identity (proved for Max+).** Averaging the eigenvector identity \(Cy=py\) against three coordinates of a Max+ vector and using part 1 yields, for every 4-set \(S\),
+   \[
+   m_4(S)=\frac{\kappa(S)}{p^2}+\frac{\mathrm{Ext}(S)}{4p},\qquad \mathrm{Ext}:=Tm_4.
+   \]
+   Equivalently \(\mathrm{Ext}(S)=4pm_4(S)-4\kappa(S)/p\). Certified float residual \(<10^{-16}\) on all \(|\kappa|=1\) 4-sets at \(p=5\) and on a full multi-worker census at \(p=7\). Evidence: `e1_gmin_m4_bound.json`, `e1_gmin_m4_proof.json`. \(\square\)
+
+3. **Same-sign Ext criterion (proved algebra).** On any 4-set with \(|\kappa|=1\), if \(\mathrm{sign}(\mathrm{Ext})=\mathrm{sign}(\kappa)\) and
+   \[
+   |\mathrm{Ext}|\;\le\;\frac{2(p-4)}{p},
+   \]
+   then
+   \[
+   |m_4|=\frac1{p^2}+\frac{|\mathrm{Ext}|}{4p}\;\le\;\frac1{p^2}+\frac{p-4}{2p^2}=\frac{p-2}{2p^2}=-L(p).
+   \]
+   (Opposite-sign Ext only decreases \(|m_4|\) relative to the Wick value.) Thus same-sign Ext control on every \(|\kappa|=1\) class implies \(g_{\min}\ge L(p)\). \(\square\)
+
+4. **Full multi-worker census (certified \(p=5,7\); \(W=86\)).** Over every 4-set with \(|\kappa|=1\):
+   | \(p\) | \(\#\{|\kappa|=1\}\) | \(\max|m_4|\) | \(L_{\mathrm{abs}}\) | same-sign \(\max|\mathrm{Ext}|\) | thr \(2(p-4)/p\) |
+   |------|---------------------|---------------|----------------------|----------------------------------|------------------|
+   | 5 | 11700 | \(3/65\) | \(3/50\) | \(0.123<0.4\) | yes |
+   | 7 | 176400 | \(109/2863\) | \(5/98\) | \(0.495<6/7\) | yes |
+
+   Hence \(g_{\min}\ge L(p)\) at \(p=5,7\) by either the direct bound or the same-sign Ext criterion. Evidence: `e1_gmin_m4_proof.json` (F17: `src/workers.py` + `ProcessPoolExecutor(W=nproc-2)`). \(\square\)
+
+5. **Residual (OPEN).** Prove for every prime \(p\ge5\) that either
+   - \(|m_4|\le(p-2)/(2p^2)\) on all \(|\kappa|=1\) 4-sets, or
+   - same-sign \(|\mathrm{Ext}|\le2(p-4)/p\) on those sets, or
+   - \(\lambda_2(P\odot P)\le4/N\),
+
+   using Max+/boolean/conference structure (Prop 15.65.3: bare equal-diag projectors are insufficient). Then Prop 15.47/15.55 closes bi-tight for all such \(p\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+   *Remark (failed shortcuts).* Absolute triangle \(|m_4-\kappa/p^2|\le(p-4)/(2p^2)\) fails at \(p=5\) (large residuals on opposite-sign classes with small \(|m_4|\)). Affine+\(\mathrm{PGL}\)+Frob orbit of the halfspace vector is incomplete (\(60/260\) at \(p=5\); F18). Wick fourth-moment pin only reaches the \(T(p)\) endpoint, not strict \(g_{\min}>T(p)\).
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

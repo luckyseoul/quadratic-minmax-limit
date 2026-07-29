@@ -1,0 +1,145 @@
+{
+  "sigma_identity": {
+    "n_labelings": 64,
+    "n_ok": 64,
+    "proved_by_exhaustion": true
+  },
+  "ext_p5": {
+    "p": 5,
+    "N": 260,
+    "n": 26,
+    "n_kappa1": 11700,
+    "n_checked": 11700,
+    "identity_max_err": 4.85722573273506e-17,
+    "sigma_sum_eq_4kappa_all": true,
+    "max_abs_m4": 0.046153846153846156,
+    "L_abs": 0.06,
+    "m4_le_L": true,
+    "max_abs_Ext": 1.1076923076923086,
+    "max_abs_Ext_same_sign": 0.12307692307692358,
+    "thr_Ext_for_triangle_L": 0.4,
+    "Ext_same_le_thr": true,
+    "n_same_sign": 7800,
+    "n_opp_sign": 3900,
+    "max_abs_m4_same_sign": 0.046153846153846156,
+    "max_abs_m4_opp_sign": 0.015384615384615385,
+    "mean_Ext_same": 0.12307692307692308,
+    "mean_Ext_opp": 1.1076923076923075,
+    "formula": "m4 = \u03ba/p\u00b2 + Ext/(4p), Ext = (T m4)(S)"
+  },
+  "ext_p7": {
+    "p": 7,
+    "N": 11452,
+    "n": 50,
+    "n_kappa1": 176400,
+    "n_checked": 2000,
+    "identity_max_err": 2.0816681711721685e-17,
+    "sigma_sum_eq_4kappa_all": true,
+    "max_abs_m4": 0.03807195249738037,
+    "L_abs": 0.05102040816326531,
+    "m4_le_L": true,
+    "max_abs_Ext": 0.49458609849807944,
+    "max_abs_Ext_same_sign": 0.49458609849807944,
+    "thr_Ext_for_triangle_L": 0.8571428571428571,
+    "Ext_same_le_thr": true,
+    "n_same_sign": 1313,
+    "n_opp_sign": 687,
+    "max_abs_m4_same_sign": 0.03807195249738037,
+    "max_abs_m4_opp_sign": 0.015717778553964373,
+    "mean_Ext_same": 0.16649220202925208,
+    "mean_Ext_opp": 0.13133077191756898,
+    "formula": "m4 = \u03ba/p\u00b2 + Ext/(4p), Ext = (T m4)(S)"
+  },
+  "T_p5": {
+    "p": 5,
+    "n_kappa1_classes": 19,
+    "T_m4_vs_identity_max_err": 1.1076923076923078,
+    "lam_max_T": 12.216462997232226,
+    "lam_min_T": -11.764902967946394,
+    "gap_4p_minus_lammax": 7.783537002767774,
+    "top5_eigs_T": [
+      12.216462997232226,
+      10.02317309063117,
+      8.975589215048378,
+      6.7537519794663705,
+      5.28514775630291
+    ],
+    "m4_values": [
+      -0.015384615384615385,
+      0.046153846153846156,
+      -0.046153846153846156,
+      0.015384615384615385,
+      -0.046153846153846156,
+      -0.015384615384615385,
+      0.046153846153846156,
+      -0.015384615384615385,
+      0.046153846153846156,
+      0.046153846153846156,
+      -0.046153846153846156,
+      -0.046153846153846156,
+      -0.046153846153846156,
+      0.015384615384615385,
+      0.015384615384615385,
+      0.046153846153846156,
+      -0.015384615384615385,
+      -0.015384615384615385,
+      0.046153846153846156
+    ],
+    "kappa_values": [
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "algebra_Ext_criterion": {
+    "5": {
+      "L_abs": 0.06,
+      "wick": 0.04,
+      "thr_Ext_same_sign": 0.4,
+      "note": "if Ext has sign(\u03ba) and |Ext|\u2264thr then |m4|\u2264L_abs"
+    },
+    "7": {
+      "L_abs": 0.05102040816326531,
+      "wick": 0.02040816326530612,
+      "thr_Ext_same_sign": 0.8571428571428571,
+      "note": "if Ext has sign(\u03ba) and |Ext|\u2264thr then |m4|\u2264L_abs"
+    },
+    "11": {
+      "L_abs": 0.0371900826446281,
+      "wick": 0.008264462809917356,
+      "thr_Ext_same_sign": 1.2727272727272727,
+      "note": "if Ext has sign(\u03ba) and |Ext|\u2264thr then |m4|\u2264L_abs"
+    },
+    "13": {
+      "L_abs": 0.03254437869822485,
+      "wick": 0.005917159763313609,
+      "thr_Ext_same_sign": 1.3846153846153846,
+      "note": "if Ext has sign(\u03ba) and |Ext|\u2264thr then |m4|\u2264L_abs"
+    },
+    "17": {
+      "L_abs": 0.025951557093425604,
+      "wick": 0.0034602076124567475,
+      "thr_Ext_same_sign": 1.5294117647058822,
+      "note": "if Ext has sign(\u03ba) and |Ext|\u2264thr then |m4|\u2264L_abs"
+    }
+  },
+  "master_identity": "For every 4-set S on a conference graph: m4(S)=\u03ba(S)/p\u00b2 + Ext(S)/(4p), where Ext(S)=sum_{v\u2208S,r\u2209S} C_vr m4(S_{v\u2192r}), and combinatorially sum_v \u03c3_v = 4\u03ba for all \u00b11 K4 labelings.",
+  "status": "Master identity proved (\u03c3_sum=4\u03ba by K4 exhaustion + evec expansion). OPEN: bound |Ext| on same-sign |\u03ba|=1 sets by 2(p-4)/p, or bound |m4| directly.",
+  "workers": 86
+}

@@ -1,0 +1,155 @@
+{
+  "workers": 86,
+  "cpu_count": 88,
+  "sigma_identity": {
+    "n_labelings": 64,
+    "n_ok": 64,
+    "proved": true
+  },
+  "algebra": {
+    "master_identity": "m4=\u03ba/p\u00b2+Ext/(4p), Ext=(T m4), \u03c3_sum=4\u03ba (K4 exhaustion)",
+    "criterion_same_sign_Ext": "|Ext|\u22642(p-4)/p on same-sign |\u03ba|=1 \u21d2 |m4|\u2264L_abs",
+    "criterion_direct": "|m4|\u2264(p-2)/(2p\u00b2) on all |\u03ba|=1 \u21d2 g_min\u2265L(p)>T(p) \u21d2 bi-tight empty (p\u22655)",
+    "by_p": {
+      "5": {
+        "L_abs": "3/50",
+        "wick_abs": "1/25",
+        "resid_budget_(p-4)/(2p^2)": "1/50",
+        "Ext_same_sign_thr_2(p-4)/p": "2/5",
+        "note": "On |\u03ba|=1: if sign(Ext)=sign(\u03ba) and |Ext|\u22642(p-4)/p then |m4|\u2264L_abs; or prove |m4|\u2264L_abs directly. Triangle |m4-\u03ba/p\u00b2|\u2264(p-4)/(2p\u00b2) fails at p=5.",
+        "L_gt_T_signed": true
+      },
+      "7": {
+        "L_abs": "5/98",
+        "wick_abs": "1/49",
+        "resid_budget_(p-4)/(2p^2)": "3/98",
+        "Ext_same_sign_thr_2(p-4)/p": "6/7",
+        "note": "On |\u03ba|=1: if sign(Ext)=sign(\u03ba) and |Ext|\u22642(p-4)/p then |m4|\u2264L_abs; or prove |m4|\u2264L_abs directly. Triangle |m4-\u03ba/p\u00b2|\u2264(p-4)/(2p\u00b2) fails at p=5.",
+        "L_gt_T_signed": true
+      },
+      "11": {
+        "L_abs": "9/242",
+        "wick_abs": "1/121",
+        "resid_budget_(p-4)/(2p^2)": "7/242",
+        "Ext_same_sign_thr_2(p-4)/p": "14/11",
+        "note": "On |\u03ba|=1: if sign(Ext)=sign(\u03ba) and |Ext|\u22642(p-4)/p then |m4|\u2264L_abs; or prove |m4|\u2264L_abs directly. Triangle |m4-\u03ba/p\u00b2|\u2264(p-4)/(2p\u00b2) fails at p=5.",
+        "L_gt_T_signed": true
+      },
+      "13": {
+        "L_abs": "11/338",
+        "wick_abs": "1/169",
+        "resid_budget_(p-4)/(2p^2)": "9/338",
+        "Ext_same_sign_thr_2(p-4)/p": "18/13",
+        "note": "On |\u03ba|=1: if sign(Ext)=sign(\u03ba) and |Ext|\u22642(p-4)/p then |m4|\u2264L_abs; or prove |m4|\u2264L_abs directly. Triangle |m4-\u03ba/p\u00b2|\u2264(p-4)/(2p\u00b2) fails at p=5.",
+        "L_gt_T_signed": true
+      },
+      "17": {
+        "L_abs": "15/578",
+        "wick_abs": "1/289",
+        "resid_budget_(p-4)/(2p^2)": "13/578",
+        "Ext_same_sign_thr_2(p-4)/p": "26/17",
+        "note": "On |\u03ba|=1: if sign(Ext)=sign(\u03ba) and |Ext|\u22642(p-4)/p then |m4|\u2264L_abs; or prove |m4|\u2264L_abs directly. Triangle |m4-\u03ba/p\u00b2|\u2264(p-4)/(2p\u00b2) fails at p=5.",
+        "L_gt_T_signed": true
+      },
+      "19": {
+        "L_abs": "17/722",
+        "wick_abs": "1/361",
+        "resid_budget_(p-4)/(2p^2)": "15/722",
+        "Ext_same_sign_thr_2(p-4)/p": "30/19",
+        "note": "On |\u03ba|=1: if sign(Ext)=sign(\u03ba) and |Ext|\u22642(p-4)/p then |m4|\u2264L_abs; or prove |m4|\u2264L_abs directly. Triangle |m4-\u03ba/p\u00b2|\u2264(p-4)/(2p\u00b2) fails at p=5.",
+        "L_gt_T_signed": true
+      },
+      "23": {
+        "L_abs": "21/1058",
+        "wick_abs": "1/529",
+        "resid_budget_(p-4)/(2p^2)": "19/1058",
+        "Ext_same_sign_thr_2(p-4)/p": "38/23",
+        "note": "On |\u03ba|=1: if sign(Ext)=sign(\u03ba) and |Ext|\u22642(p-4)/p then |m4|\u2264L_abs; or prove |m4|\u2264L_abs directly. Triangle |m4-\u03ba/p\u00b2|\u2264(p-4)/(2p\u00b2) fails at p=5.",
+        "L_gt_T_signed": true
+      }
+    }
+  },
+  "certs": {
+    "5": {
+      "p": 5,
+      "n_kappa1": 11700,
+      "n_le_L": 11700,
+      "all_m4_le_L": true,
+      "max_abs_m4": 0.046153846153846156,
+      "max_abs_m4_frac": "3/65",
+      "L_abs": 0.06,
+      "L_abs_frac": "3/50",
+      "T_abs": 0.06666666666666667,
+      "gap_L_minus_maxm4": 0.013846153846153841,
+      "max_abs_Ext_same_sign": 0.12307692307692308,
+      "max_abs_Ext_all": 1.1076923076923078,
+      "thr_Ext_same_sign": 0.4,
+      "Ext_same_le_thr": true,
+      "n_same_sign": 7800,
+      "n_opp_sign": 3900,
+      "worst": {
+        "S": [
+          6,
+          16,
+          18,
+          20
+        ],
+        "m4": -0.046153846153846156,
+        "kappa": -1
+      },
+      "unique_m4_fracs": {
+        "-1/65": 2400,
+        "-3/65": 4200,
+        "1/65": 1500,
+        "3/65": 3600
+      },
+      "n_unique_m4": 4,
+      "candidate_ub_(p-2)/(p(2p+3))": 0.046153846153846156,
+      "max_m4_le_candidate": true,
+      "L_gt_T_signed": true
+    },
+    "7": {
+      "p": 7,
+      "n_kappa1": 176400,
+      "n_le_L": 176400,
+      "all_m4_le_L": true,
+      "max_abs_m4": 0.03807195249738037,
+      "max_abs_m4_frac": "109/2863",
+      "L_abs": 0.05102040816326531,
+      "L_abs_frac": "5/98",
+      "T_abs": 0.054945054945054944,
+      "gap_L_minus_maxm4": 0.012948455665884935,
+      "max_abs_Ext_same_sign": 0.494586098498079,
+      "max_abs_Ext_all": 0.494586098498079,
+      "thr_Ext_same_sign": 0.8571428571428571,
+      "Ext_same_le_thr": true,
+      "n_same_sign": 117600,
+      "n_opp_sign": 58800,
+      "worst": {
+        "S": [
+          0,
+          6,
+          11,
+          32
+        ],
+        "m4": 0.03807195249738037,
+        "kappa": 1
+      },
+      "unique_m4_fracs": {
+        "65/2863": 28224,
+        "61/2863": 11760,
+        "-65/2863": 30576,
+        "109/2863": 11760,
+        "-45/2863": 25872,
+        "45/2863": 32928,
+        "-109/2863": 17640,
+        "-61/2863": 17640
+      },
+      "n_unique_m4": 8,
+      "candidate_ub_(p-2)/(p(2p+3))": 0.04201680672268908,
+      "max_m4_le_candidate": true,
+      "L_gt_T_signed": true
+    }
+  },
+  "status": "CERTIFIED p=5,7: |m4|\u2264L_abs and same-sign Ext\u2264thr on all |\u03ba|=1; \u03c3_sum=4\u03ba proved by exhaustion; master identity algebra ready. OPEN for general primes p\u22655: prove |m4|\u2264L_abs (or Ext criterion) from Max+/boolean/C structure without per-p Max+ census."
+}

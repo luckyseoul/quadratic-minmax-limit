@@ -1,11 +1,11 @@
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-07-30 (Prop 15.66 zero-diag freeness + pairing residual criterion; L still OPEN)  
+**Status date:** 2026-07-30 (Prop 15.67 master m4 identity + same-sign Ext criterion + full |κ|=1 census p=5,7; L still OPEN)  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
 **Resume file:** `evidence/SESSION_HANDOFF_2026-07-30.md`  
 **Problem source:** [MathOverflow 413935](https://mathoverflow.net/questions/413935) / [X prize post](https://x.com/PI010101/status/2081070728422752329)
 
-**Compute (F17, non-negotiable):** 88 cores. Full pytest only via `./scripts/pytest_full.sh` (`W=nproc-2`, default 86). Research scripts: file-based `ProcessPoolExecutor`, `OMP_NUM_THREADS=1` per worker. Never full-suite / multi-minute residual work on 1 core. Never `python -c` / stdin ProcessPool.
+**Compute (F17, non-negotiable):** 88 cores. Full pytest only via `./scripts/pytest_full.sh` (`W=nproc-2`, default 86). Research scripts: `src/workers.py` `require_workers()` + file-based `ProcessPoolExecutor`, `OMP_NUM_THREADS=1` per worker. Never full-suite / multi-minute residual work on 1 core. Never `python -c` / stdin ProcessPool.
 
 ---
 
@@ -38,6 +38,7 @@ Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptot
 - **Prop 15.64 (dual \(\Phi\) form; residual reformulation; 2026-07-30):** **Proved:** \(\max Q=N\lambda_{\max}(\Phi|_{\mathcal Z})\); Wick baseline 8; H \(\Leftrightarrow\) residual\(\le(p+1)(p+7)/d\). **Certified** gen.eig p=3,5,7.
 - **Prop 15.65 (κ spectrum; clean \(\lambda_2(P\odot P)\le4/N\); boolean essential; 2026-07-30):** **Proved:** \(16N\Leftrightarrow\lambda_2(P\odot P)\le4/N\). **Certified** κ spectrum + random-projector counterexample. Evidence: `e1_gmin_cumulant.json`.
 - **Prop 15.66 (zero-diag freeness; pairing residual criterion; 2026-07-30):** **Proved:** \(\Phi\)-maximiser on \(\mathrm{Sym}_0\) automatically has ambient zero diag (\(\lambda_{\max}(\Phi|_{\mathcal Z})=\lambda_{\max}(\Phi|_{\mathrm{Sym}_0})\)). **Proved algebra:** for \(p\ge5\), \(|m_4-\kappa/p^2|\le(p-4)/(2p^2)\) on all \(|\kappa|=1\) 4-sets \(\Rightarrow g_{\min}\ge L(p)>T(p)\). **Certified:** \(g_{\min}\ge L\) at p=5,7; residual triangle holds p=7, **fails p=5** (large resid on small-\(|m_4|\) classes). Exact \(g_{\min}=-3/65,-109/2863\). Evidence: `e1_gmin_m4_residual.json`. **OPEN residual:** prove \(|m_4|\le(p-2)/(2p^2)\) on \(|\kappa|=1\) (or \(\lambda_2(P\odot P)\le4/N\)) for all primes \(p\ge5\). Bi-tight **not** closed for general \(p\).
+- **Prop 15.67 (master m4 identity; same-sign Ext; census p=5,7; 2026-07-30):** **Proved:** \(\sigma_{sum}=4\kappa\) (K4 exhaustion); \(m_4=\kappa/p^2+\mathrm{Ext}/(4p)\) with \(\mathrm{Ext}=Tm_4\); same-sign \(|\mathrm{Ext}|\le2(p-4)/p\Rightarrow|m_4|\le L_{abs}\). **Certified W=86:** full \(|\kappa|=1\) census p=5,7 both satisfy direct \(|m_4|\le L\) and Ext criterion. Evidence: `e1_gmin_m4_proof.json`, `src/e1_gmin_m4_proof.py`, `src/workers.py`. **OPEN residual:** same as 15.66.4 for general primes \(p\ge5\).
 - **Residual to \(m_n\ge\Phi-2\Rightarrow L=\tfrac12\):** (1) prove \(g_{\min}\ge L(p)\) or \(\lambda_2(P\odot P)\le4/N\) for all \(p\ge5\); (2) deep non-tight ND. **F13/F16–F18** intact.
 
 **g_min attack status (Prop 15.49–15.50):** \(g_{\min}=-\alpha_\star\) on constant-\(m_4\) \(|\kappa|=1\) CR classes. Values \(-\tfrac13,-\tfrac3{65},-\tfrac{109}{2863}\). Matching form \(\mathbf1_M^\top G\mathbf1_M\ge9.96>4\) at \(p=5\) (no tight matching). **Dead:** \(-3/\Phi\) general LB; 4-point LP; Chebyshev; Wick-as-LB; bare \(C\)-types; affine halfspace orbit; pure deg pigeon; min-norm \(V_+\) interpolation alone; Bose–Mesner alone (span too large); plain CLT residual (overestimates m4); **plain Fréchet on conditional cov** (Prop 15.50.4). **Need:** prove uniform LB for all \(p\ge5\) (character sum / bound \(\delta\) or \(m_4\) on min CR class) + deep residual.

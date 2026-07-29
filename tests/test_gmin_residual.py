@@ -1079,3 +1079,62 @@ def test_prop_15_66_zero_diag_free_and_pairing_criterion():
     sol = (ROOT / "solution.md").read_text()
     assert "15.66" in sol
     assert "OPEN" in data["status"]
+
+
+def test_prop_15_67_master_identity_and_m4_census():
+    """σ_sum=4κ; same-sign Ext algebra; full |κ|=1 census p=5,7; F17 workers."""
+    from itertools import product
+
+    # Combinatorial: σ_sum = 4κ for all ±1 K4 labelings
+    def sigma_eq(bits):
+        edges = [(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)]
+        Cv = {edges[i]: bits[i] for i in range(6)}
+
+        def C(i, j):
+            if i == j:
+                return 0
+            return Cv[tuple(sorted((i, j)))]
+
+        def sigma(v):
+            o = [x for x in range(4) if x != v]
+            a, b, c = o
+            return C(v, a) * C(b, c) + C(v, b) * C(a, c) + C(v, c) * C(a, b)
+
+        kap = C(0, 1) * C(2, 3) + C(0, 2) * C(1, 3) + C(0, 3) * C(1, 2)
+        return sum(sigma(v) for v in range(4)) == 4 * kap
+
+    assert all(sigma_eq(bits) for bits in product([-1, 1], repeat=6))
+
+    # Algebra: same-sign Ext thr ⇒ |m4| ≤ L_abs
+    for p in range(5, 40, 2):
+        thr_ext = 2.0 * (p - 4) / p
+        L_abs = (p - 2) / (2.0 * p * p)
+        ub = 1.0 / (p * p) + thr_ext / (4.0 * p)
+        assert abs(ub - L_abs) < 1e-12
+
+    # Evidence census (produced at W=86)
+    path = ROOT / "evidence" / "e1_gmin_m4_proof.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    assert data["sigma_identity"]["proved"] is True
+    assert data["workers"] >= 4  # F17: never single-core census
+    for p in (5, 7):
+        c = data["certs"][str(p)]
+        assert c["all_m4_le_L"] is True
+        assert c["Ext_same_le_thr"] is True
+        assert c["n_kappa1"] > 0
+        assert c["n_le_L"] == c["n_kappa1"]
+    assert abs(data["certs"]["5"]["max_abs_m4"] - 3 / 65) < 1e-9
+    assert abs(data["certs"]["7"]["max_abs_m4"] - 109 / 2863) < 1e-9
+
+    import sys
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from workers import cpu_count_reliable, default_workers
+
+    assert cpu_count_reliable() >= 4
+    assert default_workers() >= 2
+
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.67" in sol
+    assert "OPEN" in data["status"]
