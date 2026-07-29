@@ -1,0 +1,134 @@
+{
+  "workers": 86,
+  "compute": {
+    "cpu_threads": 88,
+    "workers": 86,
+    "gpu": {
+      "available": true,
+      "backend": "cupy",
+      "name": "Tesla V100-SXM2-16GB",
+      "mem_free_gib": 16.456024064,
+      "mem_total_gib": 16.928342016,
+      "util_pct": null
+    },
+    "policy": "Use GPU for large dense batches if available; else ProcessPool W=86. Never single-core multi-minute thrash (F17)."
+  },
+  "use_gpu": true,
+  "io_policy": "mmap Max+; GPU all-m4 (one CUDA context, H2D once, D2H m4 vector); ProcessPool S1/S3 walk on precomputed lookup; evidence via write_json_atomic (tmp+fsync+os.replace)",
+  "results": {
+    "5": {
+      "p": 5,
+      "n": 26,
+      "N": 260,
+      "n_quads": 14950,
+      "n_kappa1": 11700,
+      "n_pos_r_sets": 7800,
+      "n_star_plus_checks": 15600,
+      "n_S1_positive": 0,
+      "S1_always_nonpositive": true,
+      "max_S1_star_plus": -0.12923076923076918,
+      "max_S3_star_plus": 0.08000000000000002,
+      "max_same_sign_r": 0.006153846153846156,
+      "max_abs_rho_on_pos": 0.006153846153846156,
+      "rho_budget_cand": 0.006153846153846156,
+      "M_cand": 0.046153846153846156,
+      "L_abs": 0.06,
+      "s3_implied_rho_ub": 0.032,
+      "s3_implied_le_cand": false,
+      "wall_m4_s": 0.11887785300496034,
+      "wall_walk_s": 0.3526591429981636,
+      "wall_s": 0.47153699600312393,
+      "gpu_used": true,
+      "gpu_m4": {
+        "backend": "cupy",
+        "gpu": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 16.456024064,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "gpu_after": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 16.35745792,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "n_quads": 14950,
+        "batch": 50000,
+        "wall_s": 0.11705758899915963,
+        "N": 260,
+        "n": 26,
+        "io": {
+          "maxplus_read": "mmap load_maxplus_array",
+          "H2D": "single contiguous host\u2192device copy of Y",
+          "D2H": "m4 vector only (n_quads floats) \u2014 no full Y transfer back",
+          "device_ops": "batched column products + mean; one CUDA context"
+        }
+      },
+      "workers_walk": 58,
+      "io": "mmap Max+; GPU all-m4 (single H2D, D2H m4 only); ProcessPool structure walk on precomputed lookup; write_json_atomic"
+    },
+    "7": {
+      "p": 7,
+      "n": 50,
+      "N": 11452,
+      "n_quads": 230300,
+      "n_kappa1": 176400,
+      "n_pos_r_sets": 117600,
+      "n_star_plus_checks": 235200,
+      "n_S1_positive": 0,
+      "S1_always_nonpositive": true,
+      "max_S1_star_plus": -0.01746419839329371,
+      "max_S3_star_plus": 0.17294546180330328,
+      "max_same_sign_r": 0.01766378923207425,
+      "max_abs_rho_on_pos": 0.01766378923207425,
+      "rho_budget_cand": 0.021608643457382958,
+      "M_cand": 0.04201680672268908,
+      "L_abs": 0.05102040816326531,
+      "s3_implied_rho_ub": 0.030537398333416503,
+      "s3_implied_le_cand": false,
+      "wall_m4_s": 0.3921002980059711,
+      "wall_walk_s": 4.633734305010876,
+      "wall_s": 5.025834603016847,
+      "gpu_used": true,
+      "gpu_m4": {
+        "backend": "cupy",
+        "gpu": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 16.35745792,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "gpu_after": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 13.05444352,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "n_quads": 230300,
+        "batch": 12000,
+        "wall_s": 0.3863051209918922,
+        "N": 11452,
+        "n": 50,
+        "io": {
+          "maxplus_read": "mmap load_maxplus_array",
+          "H2D": "single contiguous host\u2192device copy of Y",
+          "D2H": "m4 vector only (n_quads floats) \u2014 no full Y transfer back",
+          "device_ops": "batched column products + mean; one CUDA context"
+        }
+      },
+      "workers_walk": 86,
+      "io": "mmap Max+; GPU all-m4 (single H2D, D2H m4 only); ProcessPool structure walk on precomputed lookup; write_json_atomic"
+    }
+  },
+  "status": "S1\u22640 at star_a=+1 on same-sign r>0 |\u03ba|=1: p=5,7 => True. GPU m4 p5=0.12s p7=0.39s; walk p5=0.35s p7=4.63s; mmap+atomic. If proved: p\u03c1 \u2264 2/p\u00b2 + S3 (star=+1). OPEN: prove S1\u22640 general + bound S3. lim \u03b1_n OPEN.",
+  "S1_nonpos_both": true
+}

@@ -1,0 +1,332 @@
+{
+  "prop": "15.77",
+  "workers": 86,
+  "compute": {
+    "cpu_threads": 88,
+    "workers": 86,
+    "gpu": {
+      "available": true,
+      "backend": "cupy",
+      "name": "Tesla V100-SXM2-16GB",
+      "mem_free_gib": 16.456024064,
+      "mem_total_gib": 16.928342016,
+      "util_pct": null
+    },
+    "policy": "Use GPU for large dense batches if available; else ProcessPool W=86. Never single-core multi-minute thrash (F17)."
+  },
+  "use_gpu": true,
+  "io_policy": "mmap Max+; GPU all-m4; ProcessPool star\u00b7S1 walk; write_json_atomic (tmp+fsync+os.replace)",
+  "algebra": {
+    "proved": true,
+    "identities": {
+      "one_center_split": "p\u03c1 - 2 star_a/p\u00b2 = S1 + S3",
+      "star_times_joint": "star_a\u00b7(S1+S3) = p \u03c1 star_a - 2/p\u00b2",
+      "S1_le0_consequence": "star_a=+1 and S1\u22640 \u21d2 p\u03c1 \u2264 2/p\u00b2 + S3",
+      "same_sign_rho_formula": "\u03ba=1, \u03c1>0, star_a=+1 \u21d2 \u03c1 = (2/p\u00b2 + S1 + S3)/p",
+      "joint_criterion": "max same-sign \u03c1 \u2264 \u03c1_cand \u21d4 max_{star=+1,r>0}(S1+S3) \u2264 p\u00b7\u03c1_cand - 2/p\u00b2"
+    },
+    "by_p": {
+      "5": {
+        "rho_budget_cand": 0.006153846153846156,
+        "rho_budget_L": 0.02,
+        "S3_budget_at_cand_if_S1_le0": -0.049230769230769224,
+        "S3_budget_at_L_if_S1_le0": 0.020000000000000004,
+        "closed_S3_budget_cand": -0.04923076923076923,
+        "match": true,
+        "M_cand_lt_L": true,
+        "L_lt_T": true,
+        "S3_budget_cand_negative": true
+      },
+      "7": {
+        "rho_budget_cand": 0.021608643457382958,
+        "rho_budget_L": 0.030612244897959183,
+        "S3_budget_at_cand_if_S1_le0": 0.11044417767106848,
+        "S3_budget_at_L_if_S1_le0": 0.17346938775510204,
+        "closed_S3_budget_cand": 0.11044417767106846,
+        "match": true,
+        "M_cand_lt_L": true,
+        "L_lt_T": true,
+        "S3_budget_cand_negative": false
+      },
+      "11": {
+        "rho_budget_cand": 0.024462809917355374,
+        "rho_budget_L": 0.028925619834710745,
+        "S3_budget_at_cand_if_S1_le0": 0.2525619834710744,
+        "S3_budget_at_L_if_S1_le0": 0.30165289256198347,
+        "closed_S3_budget_cand": 0.25256198347107445,
+        "match": true,
+        "M_cand_lt_L": true,
+        "L_lt_T": true,
+        "S3_budget_cand_negative": false
+      },
+      "13": {
+        "rho_budget_cand": 0.02326055906957764,
+        "rho_budget_L": 0.026627218934911243,
+        "S3_budget_at_cand_if_S1_le0": 0.2905529483778821,
+        "S3_budget_at_L_if_S1_le0": 0.3343195266272189,
+        "closed_S3_budget_cand": 0.29055294837788204,
+        "match": true,
+        "M_cand_lt_L": true,
+        "L_lt_T": true,
+        "S3_budget_cand_negative": false
+      },
+      "17": {
+        "rho_budget_cand": 0.020387169176096512,
+        "rho_budget_L": 0.02249134948096886,
+        "S3_budget_at_cand_if_S1_le0": 0.3396614607687272,
+        "S3_budget_at_L_if_S1_le0": 0.37543252595155713,
+        "closed_S3_budget_cand": 0.3396614607687272,
+        "match": true,
+        "M_cand_lt_L": true,
+        "L_lt_T": true,
+        "S3_budget_cand_negative": false
+      },
+      "19": {
+        "rho_budget_cand": 0.019052766704952366,
+        "rho_budget_L": 0.02077562326869806,
+        "S3_budget_at_cand_if_S1_le0": 0.3564624011891088,
+        "S3_budget_at_L_if_S1_le0": 0.389196675900277,
+        "closed_S3_budget_cand": 0.3564624011891088,
+        "match": true,
+        "M_cand_lt_L": true,
+        "L_lt_T": true,
+        "S3_budget_cand_negative": false
+      },
+      "23": {
+        "rho_budget_cand": 0.01674318120442884,
+        "rho_budget_L": 0.017958412098298678,
+        "S3_budget_at_cand_if_S1_le0": 0.38131244936537945,
+        "S3_budget_at_L_if_S1_le0": 0.4092627599243857,
+        "closed_S3_budget_cand": 0.3813124493653795,
+        "match": true,
+        "M_cand_lt_L": true,
+        "L_lt_T": true,
+        "S3_budget_cand_negative": false
+      },
+      "29": {
+        "rho_budget_cand": 0.014073799730999394,
+        "rho_budget_L": 0.014863258026159334,
+        "S3_budget_at_cand_if_S1_le0": 0.40576207091479694,
+        "S3_budget_at_L_if_S1_le0": 0.42865636147443514,
+        "closed_S3_budget_cand": 0.40576207091479694,
+        "match": true,
+        "M_cand_lt_L": true,
+        "L_lt_T": true,
+        "S3_budget_cand_negative": false
+      },
+      "31": {
+        "rho_budget_cand": 0.013351476827023133,
+        "rho_budget_L": 0.01404786680541103,
+        "S3_budget_at_cand_if_S1_le0": 0.41181461618506365,
+        "S3_budget_at_L_if_S1_le0": 0.43340270551508847,
+        "closed_S3_budget_cand": 0.41181461618506365,
+        "match": true,
+        "M_cand_lt_L": true,
+        "L_lt_T": true,
+        "S3_budget_cand_negative": false
+      },
+      "37": {
+        "rho_budget_cand": 0.011554552095092634,
+        "rho_budget_L": 0.012052593133674214,
+        "S3_budget_at_cand_if_S1_le0": 0.42605750713858814,
+        "S3_budget_at_L_if_S1_le0": 0.44448502556610664,
+        "closed_S3_budget_cand": 0.4260575071385882,
+        "match": true,
+        "M_cand_lt_L": true,
+        "L_lt_T": true,
+        "S3_budget_cand_negative": false
+      },
+      "41": {
+        "rho_budget_cand": 0.010595933792910382,
+        "rho_budget_L": 0.011005353955978583,
+        "S3_budget_at_cand_if_S1_le0": 0.4332435175140847,
+        "S3_budget_at_L_if_S1_le0": 0.45002974419988095,
+        "closed_S3_budget_cand": 0.4332435175140847,
+        "match": true,
+        "M_cand_lt_L": true,
+        "L_lt_T": true,
+        "S3_budget_cand_negative": false
+      },
+      "43": {
+        "rho_budget_cand": 0.010172519612787962,
+        "rho_budget_L": 0.010546241211465657,
+        "S3_budget_at_cand_if_S1_le0": 0.43633667758460387,
+        "S3_budget_at_L_if_S1_le0": 0.4524067063277447,
+        "closed_S3_budget_cand": 0.4363366775846039,
+        "match": true,
+        "M_cand_lt_L": true,
+        "L_lt_T": true,
+        "S3_budget_cand_negative": false
+      },
+      "47": {
+        "rho_budget_cand": 0.009417892128266277,
+        "rho_budget_L": 0.009732910819375284,
+        "S3_budget_at_cand_if_S1_le0": 0.44173554297554984,
+        "S3_budget_at_L_if_S1_le0": 0.4565414214576732,
+        "closed_S3_budget_cand": 0.4417355429755499,
+        "match": true,
+        "M_cand_lt_L": true,
+        "L_lt_T": true,
+        "S3_budget_cand_negative": false
+      },
+      "53": {
+        "rho_budget_cand": 0.008472112900539223,
+        "rho_budget_L": 0.008721965112139551,
+        "S3_budget_at_cand_if_S1_le0": 0.44830998657656745,
+        "S3_budget_at_L_if_S1_le0": 0.4615521537913848,
+        "closed_S3_budget_cand": 0.44830998657656745,
+        "match": true,
+        "M_cand_lt_L": true,
+        "L_lt_T": true,
+        "S3_budget_cand_negative": false
+      },
+      "59": {
+        "rho_budget_cand": 0.007697037756320617,
+        "rho_budget_L": 0.00790002872737719,
+        "S3_budget_at_cand_if_S1_le0": 0.45355068007910715,
+        "S3_budget_at_L_if_S1_le0": 0.46552714737144496,
+        "closed_S3_budget_cand": 0.45355068007910715,
+        "match": true,
+        "M_cand_lt_L": true,
+        "L_lt_T": true,
+        "S3_budget_cand_negative": false
+      }
+    },
+    "note": "At p=5, S3_budget_cand = \u22120.04923 < 0, so S1\u22640 alone with |S3| bounds is insufficient \u2014 need joint S1+S3 \u2264 S3_budget_cand (i.e. strongly negative S1 on maximisers). Certified sharp at p=5."
+  },
+  "results": {
+    "5": {
+      "p": 5,
+      "n": 26,
+      "N": 260,
+      "n_kappa1": 11700,
+      "n_star_plus": 23400,
+      "n_star_minus": 23400,
+      "n_plus_S1_positive": 0,
+      "n_minus_S1_negative": 0,
+      "star_S1_always_le_0": true,
+      "max_star_S1": -0.030769230769230736,
+      "max_S1_star_plus": -0.030769230769230736,
+      "min_S1_star_plus": -0.1292307692307693,
+      "max_S1_star_minus": 0.1292307692307693,
+      "min_S1_star_minus": 0.030769230769230736,
+      "antisym_max_plus_eq_minus_min": true,
+      "n_rpos_star_plus": 15600,
+      "max_same_sign_r": 0.006153846153846156,
+      "max_joint_S1S3_rpos_starplus": -0.04923076923076916,
+      "max_S3_rpos_starplus": 0.08000000000000002,
+      "max_S1_rpos_starplus": -0.12923076923076918,
+      "rho_ub_from_joint": 0.006153846153846168,
+      "rho_budget_cand": 0.006153846153846156,
+      "rho_budget_L": 0.02,
+      "S3_budget_cand_if_S1_le0": -0.049230769230769224,
+      "joint_implies_le_cand": true,
+      "joint_implies_le_L": true,
+      "m4_le_cand": true,
+      "identity_err_max": 8.326672684688674e-17,
+      "synthetic_bump_max_star_S1": 0.05000000000000001,
+      "synthetic_violates_star_S1": true,
+      "wall_m4_s": 0.2339715720008826,
+      "wall_walk_s": 1.2182910929986974,
+      "gpu_used": true,
+      "gpu_m4": {
+        "backend": "cupy",
+        "gpu": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 16.456024064,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "gpu_after": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 16.35745792,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "n_quads": 14950,
+        "batch": 50000,
+        "wall_s": 0.2309564190072706,
+        "N": 260,
+        "io": {
+          "maxplus_read": "mmap load_maxplus_array",
+          "H2D": "single contiguous Y",
+          "D2H": "m4 vector only"
+        }
+      },
+      "workers_walk": 58,
+      "io": "mmap Max+; GPU all-m4 (H2D once, D2H m4 only); ProcessPool star\u00b7S1 walk; write_json_atomic"
+    },
+    "7": {
+      "p": 7,
+      "n": 50,
+      "N": 11452,
+      "n_kappa1": 176400,
+      "n_star_plus": 352800,
+      "n_star_minus": 352800,
+      "n_plus_S1_positive": 0,
+      "n_minus_S1_negative": 0,
+      "star_S1_always_le_0": true,
+      "max_star_S1": -0.006686293099146704,
+      "max_S1_star_plus": -0.006686293099146704,
+      "min_S1_star_plus": -0.09011526370939583,
+      "max_S1_star_minus": 0.09011526370939583,
+      "min_S1_star_minus": 0.006686293099146704,
+      "antisym_max_plus_eq_minus_min": true,
+      "n_rpos_star_plus": 235200,
+      "max_same_sign_r": 0.01766378923207425,
+      "max_joint_S1S3_rpos_starplus": 0.0828301980939076,
+      "max_S3_rpos_starplus": 0.17294546180330328,
+      "max_S1_rpos_starplus": -0.01746419839329371,
+      "rho_ub_from_joint": 0.017663789232074262,
+      "rho_budget_cand": 0.021608643457382958,
+      "rho_budget_L": 0.030612244897959183,
+      "S3_budget_cand_if_S1_le0": 0.11044417767106848,
+      "joint_implies_le_cand": true,
+      "joint_implies_le_L": true,
+      "m4_le_cand": true,
+      "identity_err_max": 1.3877787807814457e-16,
+      "synthetic_bump_max_star_S1": 0.04999999999999999,
+      "synthetic_violates_star_S1": true,
+      "wall_m4_s": 0.3941504060057923,
+      "wall_walk_s": 12.471521435989416,
+      "gpu_used": true,
+      "gpu_m4": {
+        "backend": "cupy",
+        "gpu": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 16.35745792,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "gpu_after": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 13.05444352,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "n_quads": 230300,
+        "batch": 12000,
+        "wall_s": 0.38458008199813776,
+        "N": 11452,
+        "io": {
+          "maxplus_read": "mmap load_maxplus_array",
+          "H2D": "single contiguous Y",
+          "D2H": "m4 vector only"
+        }
+      },
+      "workers_walk": 86,
+      "io": "mmap Max+; GPU all-m4 (H2D once, D2H m4 only); ProcessPool star\u00b7S1 walk; write_json_atomic"
+    }
+  },
+  "status": "Prop 15.77: star_a\u00b7S1(a)\u22640 on all |\u03ba|=1 Max+ centres p=5,7 => True (strict max_star_S1=-0.030769,-0.006686). Joint S1+S3 on r>0@star+ implies \u03c1\u2264\u03c1_cand => True (sharp p=5). Synthetic non-Max+ bump violates star\u00b7S1. GPU mmap+atomic. OPEN: prove star\u00b7S1\u22640 all p\u22655 + S3/joint bound. lim \u03b1_n OPEN.",
+  "star_S1_le0_both": true,
+  "joint_le_cand_both": true
+}

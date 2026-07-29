@@ -1296,6 +1296,101 @@ def test_prop_15_76_one_center_degrees():
     assert "OPEN" in (ROOT / "HANDOFF.md").read_text()[:900]
 
 
+def test_S1_sign_gpu_mmap_atomic():
+    """S1≤0@star=+1 cert must use GPU m4 + mmap + atomic evidence (F17)."""
+    path = ROOT / "evidence" / "e1_gmin_m4_S1_sign.json"
+    assert path.is_file(), "run src/e1_gmin_m4_S1_sign.py (GPU+mmap+atomic)"
+    data = json.loads(path.read_text())
+    assert data["workers"] >= 4
+    assert data.get("use_gpu") is True
+    assert "mmap" in data.get("io_policy", "").lower()
+    assert "atomic" in data.get("io_policy", "").lower()
+    assert data["S1_nonpos_both"] is True
+    for p in ("5", "7"):
+        r = data["results"][p]
+        assert r["S1_always_nonpositive"] is True
+        assert r["n_S1_positive"] == 0
+        assert r["gpu_used"] is True
+        assert r["max_S1_star_plus"] < 0
+        assert "mmap" in r["io"].lower()
+        assert "atomic" in r["io"].lower() or "write_json_atomic" in r["io"]
+    # numerical anchors (GPU precompute path must match prior census)
+    assert abs(data["results"]["5"]["max_S1_star_plus"] + 0.12923076923076918) < 1e-12
+    assert abs(data["results"]["7"]["max_S1_star_plus"] + 0.01746419839329371) < 1e-10
+    assert "OPEN" in data["status"]
+    # helpers importable
+    import sys
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_m4_S1_sign import M_cand, rho_budget_cand
+
+    assert abs(M_cand(5) - 3 / 65) < 1e-15
+    assert abs(rho_budget_cand(5) - 2 / 325) < 1e-15
+
+
+def test_prop_15_77_star_S1_structure():
+    """Prop 15.77: star·S1 algebra + GPU full-centre cert (mmap+atomic)."""
+    import sys
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_m4_S1_star import (
+        algebraic_star_S1_consequences,
+        star_S1_implies_cand_algebra,
+        M_cand,
+        rho_budget_cand,
+        L_abs,
+        T_abs,
+    )
+
+    alg = algebraic_star_S1_consequences()
+    assert alg["proved"] is True
+    assert "one_center_split" in alg["identities"]
+    # p=5: S3 budget for cand under S1≤0 is strictly negative (need strong S1)
+    s5 = alg["by_p"]["5"]
+    assert s5["S3_budget_cand_negative"] is True
+    assert abs(s5["S3_budget_at_cand_if_S1_le0"] + 16 / 325) < 1e-12
+    # cand < L < T for p≥5
+    for p in (5, 7, 11, 13, 17, 19):
+        assert M_cand(p) < L_abs(p) + 1e-15
+        assert L_abs(p) < T_abs(p) - 1e-15
+        assert abs(rho_budget_cand(p) - (M_cand(p) - 1 / (p * p))) < 1e-15
+
+    chk = star_S1_implies_cand_algebra()
+    assert chk["proved_algebra"] is True
+    assert abs(chk["sample_p5"]["rho_budget_cand"] - 2 / 325) < 1e-15
+
+    path = ROOT / "evidence" / "e1_gmin_m4_S1_star.json"
+    assert path.is_file(), "run src/e1_gmin_m4_S1_star.py (GPU+mmap+atomic)"
+    data = json.loads(path.read_text())
+    assert data["prop"] == "15.77"
+    assert data["workers"] >= 4
+    assert data["use_gpu"] is True
+    assert "mmap" in data["io_policy"].lower()
+    assert "atomic" in data["io_policy"].lower()
+    assert data["star_S1_le0_both"] is True
+    assert data["joint_le_cand_both"] is True
+    for p in ("5", "7"):
+        r = data["results"][p]
+        assert r["star_S1_always_le_0"] is True
+        assert r["n_plus_S1_positive"] == 0
+        assert r["n_minus_S1_negative"] == 0
+        assert r["max_star_S1"] < 0
+        assert r["gpu_used"] is True
+        assert r["joint_implies_le_cand"] is True
+        assert r["synthetic_violates_star_S1"] is True
+        assert r["identity_err_max"] < 1e-12
+        assert r["antisym_max_plus_eq_minus_min"] is True
+        assert "mmap" in r["io"].lower()
+    # anchors: p=5 sharp joint = −16/325, max_star_S1 = −2/65
+    assert abs(data["results"]["5"]["max_joint_S1S3_rpos_starplus"] + 16 / 325) < 1e-12
+    assert abs(data["results"]["5"]["max_star_S1"] + 2 / 65) < 1e-12
+    assert abs(data["results"]["5"]["rho_ub_from_joint"] - 2 / 325) < 1e-12
+    assert "OPEN" in data["status"]
+    assert "15.77" in (ROOT / "solution.md").read_text()
+    assert "15.77" in (ROOT / "HANDOFF.md").read_text()
+    assert "OPEN" in (ROOT / "HANDOFF.md").read_text()[:900]
+
+
 def test_prop_15_75_onecenter_sigma_and_gpu_cand():
     """Drive shipped onecenter algebra + GPU cand census (mmap+atomic path)."""
     import sys

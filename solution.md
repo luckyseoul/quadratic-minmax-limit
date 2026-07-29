@@ -2428,6 +2428,55 @@ Let \(n_1=\#\{S:|\kappa(S)|=1\}\) and \(n_3=\#\{S:|\kappa(S)|=3\}\).
 
 6. **Residual (OPEN).** Prove a signed bound on \(S_1+S_3\) (e.g. \(S_1\le0\) at \(\mathrm{star}_a=+1\) on maximisers, or a Paley character-sum formula for \(\rho\)) strong enough that part 3 forces \(\rho\le(p^2-4p-3)/(p^2(2p+3))\) on same-sign \(|\kappa|=1\), i.e. \(m_4\le M_{\mathrm{cand}}\), for every prime \(p\ge5\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.77 (\(\mathrm{star}_a\cdot S_1\le0\) structure; joint cand criterion; 2026-07-29).** Continue Prop 15.75–15.76. Write \(S_1(a),S_3(a)\) for the one-center residual split on a \(|\kappa|=1\) 4-set and centre \(a\), and \(\mathrm{star}_a=\prod_{u\in S\setminus\{a\}}C_{au}\).
+
+1. **Star–joint identity (proved, Max+-free).** From the one-center residual form,
+   \[
+   p\rho-\frac{2\,\mathrm{star}_a}{p^2}=S_1(a)+S_3(a)
+   \qquad\Longrightarrow\qquad
+   \mathrm{star}_a\cdot\bigl(S_1+S_3\bigr)
+   \;=\;
+   p\,\rho\,\mathrm{star}_a-\frac{2}{p^2}.
+   \]
+   In particular, if \(\mathrm{star}_a=+1\) and \(S_1(a)\le0\), then
+   \[
+   p\rho\;\le\;\frac{2}{p^2}+S_3(a).
+   \]
+   \(\square\)
+
+2. **Same-sign reconstruction (proved).** On every \(|\kappa|=1\) set with \(\kappa=1\) and \(\rho>0\), at every centre with \(\mathrm{star}_a=+1\),
+   \[
+   \rho
+   \;=\;
+   \frac{1}{p}\Bigl(\frac{2}{p^2}+S_1(a)+S_3(a)\Bigr).
+   \]
+   Hence
+   \[
+   \max_{\text{same-sign }r>0}\rho
+   \;=\;
+   \max_{\substack{\mathrm{star}_a=+1\\ r>0}}
+   \frac{1}{p}\Bigl(\frac{2}{p^2}+S_1+S_3\Bigr),
+   \]
+   and the candidate bound \(\rho\le\rho_{\mathrm{cand}}:=M_{\mathrm{cand}}-1/p^2\) is equivalent to
+   \[
+   \max_{\substack{\mathrm{star}_a=+1\\ r>0}}\bigl(S_1+S_3\bigr)
+   \;\le\;
+   p\,\rho_{\mathrm{cand}}-\frac{2}{p^2}.
+   \]
+   At \(p=5\) the right-hand side equals \(-16/325\approx-0.04923<0\), so \(S_1\le0\) alone with absolute \(|S_3|\) bounds is **not** enough — maximisers must have strongly negative \(S_1\). \(\square\)
+
+3. **GPU census of \(\mathrm{star}_a\cdot S_1\) (certified \(p=5,7\); CuPy/V100; mmap+atomic).** Full Max+ m4 (one CUDA context, single H2D, D2H m4 vector only) + ProcessPool walk of every \(|\kappa|=1\) centre:
+   | \(p\) | \(\#\) star\(+\) checks | \(\max(\mathrm{star}\cdot S_1)\) | \(\max S_1\) at star\(+\) | joint \(S_1{+}S_3\) on \(r>0\) | \(\Rightarrow\rho\le\rho_{\mathrm{cand}}\) |
+   |------|--------------------------|----------------------------------|---------------------------|----------------------------------|----------------------------------|
+   | 5 | \(23400\) | \(-0.03077\) (strict \(<0\)) | \(-0.03077\) | \(-0.04923\) | **yes (sharp)** |
+   | 7 | \(352800\) | \(-0.00669\) (strict \(<0\)) | \(-0.00669\) | \(0.08283\) | **yes** |
+
+   In particular **\(\mathrm{star}_a\cdot S_1(a)\le0\) on every \(|\kappa|=1\) centre** (not only on same-sign maximisers), with perfect sign-antisymmetry \(\max S_1|_{\mathrm{star}+}=-\min S_1|_{\mathrm{star}-}\). Identity residual \(<10^{-15}\). Evidence: `e1_gmin_m4_S1_star.json`. \(\square\)
+
+4. **Max+ is essential (certified).** A synthetic residual that puts a uniform same-sign bump on all \(|\kappa|=1\) coordinates (and zero on \(|\kappa|=3\)) **violates** \(\mathrm{star}\cdot S_1\le0\) (\(\max\mathrm{star}\cdot S_1=+0.05\) at \(p=5,7\)). So the inequality is a property of true Max+ fourth moments, not of the \(\kappa\)-adjacency graph alone. Combinatorial \(\tau_1:=\sum_{\kappa1}C_{ar}\kappa'\) has \(\mathrm{star}\cdot\tau_1\) non-constant for \(p\ge5\) (values in \(\{-1,5\}\) at \(p=5\); multi-worker pure-\(C\) census). \(\square\)
+
+5. **Residual (OPEN).** Prove \(\mathrm{star}_a\cdot S_1(a)\le0\) for every prime \(p\ge5\) on Paley Max+ (e.g. via boolean \(+p\)-evec character sums), and prove the joint criterion of part 2 (or a matching \(S_3\) bound on maximisers) so that \(\max|m_4|\le M_{\mathrm{cand}}\) for all such \(p\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
