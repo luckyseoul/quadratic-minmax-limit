@@ -2599,6 +2599,40 @@ Let \(n_1=\#\{S:|\kappa(S)|=1\}\) and \(n_3=\#\{S:|\kappa(S)|=3\}\).
 
 6. **Residual (OPEN).** Prove \(\mathbb E[ZU_1]\le\mathbb E_{\mathrm{Wick}}[ZU_1]\) for every prime \(p\ge5\) (the U1-specific Gaussian domination), using the linear Wick identity, Aut-constancy, and the residual source on \(|\kappa|=3\); then close joint/\(S_3\) for \(M_{\mathrm{cand}}\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.81 (moduli-line GD criterion; complete at \(p=5\); 2026-07-29).** Continue Prop 15.53 and 15.77–15.80. Assume a stratification of 4-sets into pure-\(C\) classes with constant \(m_4\), and let \(Am=b\) be the averaged evec system from \(Cy=py\) and \(m_2=C/p\).
+
+1. **Pointwise evec identity (certified Max+ \(p=5,7\)).** For every 4-set \(S\) and centre \(a\in S\),
+   \[
+   p\,m_4(S)=\sum_{r\neq a}C_{ar}\,m(r,S\setminus\{a\})
+   \]
+   (with the usual reduction of repeated indices via \(y_i^2=1\)). Float residual \(<10^{-15}\). This is the moment form of the one-center identity (Prop 15.75). \(\square\)
+
+2. **Affine criterion (proved form).** If \(Am=b\) has nullity 1, write \(m=m_\star+c\,n\). Each class-level \(\mathrm{star}\cdot S_1\) is linear in \(m\), hence affine in \(c\). On any interval where a single type realises the maximum,
+   \[
+   \max_{|\kappa|=1}\mathrm{star}\cdot S_1
+   \;=\;
+   \alpha+\beta c.
+   \]
+   If \(\beta>0\), then \(\mathrm{star}\cdot S_1\le0\) for all centres iff \(c\le c_{\mathrm{GD}}:=-\alpha/\beta\). \(\square\)
+
+3. **Complete at \(p=5\) (certified; drives `e1_gmin_moduli`).** The \((\mathrm{type6},\mathrm{ext\text{-}hist})\) stratification has 37 classes, all with constant \(m_4\); the evec system has nullity 1. On the line,
+   \[
+   \max\mathrm{star}\cdot S_1=\alpha+\beta c
+   \]
+   is exact (\(\beta>0\), float fit error \(<10^{-15}\)), with
+   \[
+   c_{\mathrm{GD}}\approx-0.29605.
+   \]
+   The physical root selected by \(\mathrm{Tr}(G^2)=\mathrm{Tr}_{\mathrm{Max+}}\) is
+   \[
+   c^\star\approx-0.42402\;<\;c_{\mathrm{GD}},
+   \]
+   and at \(c^\star\) one has \(\max|m_4|=M_{\mathrm{cand}}=3/65\) (sharp) and \(\max\mathrm{star}\cdot S_1=-2/65\le0\). Thus both the candidate bound and Gaussian domination hold at \(p=5\) by moduli calculus. Evidence: `e1_gmin_m4_S1_moduli.json`. \(\square\)
+
+4. **Status at \(p=7\) (certified structure).** Coarse classes: \(69/82\) have constant \(m_4\) (max std \(\approx0.012\)); the averaged system is not yet a faithful nullity-1 line. Pointwise evec identities still hold. Full Max+ GD and \(\max|m_4|\le M_{\mathrm{cand}}\) remain certified by Prop 15.80 / 15.74 censuses. Finer \(C\)-invariants are needed for a moduli-line proof at \(p=7\). \(\square\)
+
+5. **Residual (OPEN).** For every prime \(p\ge5\): refine classes to constant \(m_4\) and nullity 1; prove \(\beta>0\) and \(c^\star\le c_{\mathrm{GD}}\) (or unique solution with GD); conclude \(\max|m_4|\le M_{\mathrm{cand}}\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

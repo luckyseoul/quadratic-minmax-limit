@@ -1328,6 +1328,55 @@ def test_S1_sign_gpu_mmap_atomic():
     assert abs(rho_budget_cand(5) - 2 / 325) < 1e-15
 
 
+def test_prop_15_81_moduli_line_gd():
+    """Prop 15.81: moduli-line GD criterion; p=5 complete cand+GD."""
+    import sys
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_m4_S1_moduli import (
+        moduli_gd_algebra,
+        M_cand,
+        L_abs,
+    )
+
+    alg = moduli_gd_algebra()
+    assert alg["proved"] is True
+    assert "GD_criterion" in alg
+    assert abs(M_cand(5) - 3 / 65) < 1e-15
+    assert L_abs(5) > M_cand(5)
+
+    path = ROOT / "evidence" / "e1_gmin_m4_S1_moduli.json"
+    assert path.is_file(), "run src/e1_gmin_m4_S1_moduli.py"
+    data = json.loads(path.read_text())
+    assert data["prop"] == "15.81"
+    assert data["workers"] >= 4
+    assert data["algebra"]["proved"] is True
+
+    r5 = data["p5"]
+    assert r5["m4_all_constant"] is True
+    assert r5["nullity"] == 1
+    assert r5["affine"]["exactly_affine"] is True
+    assert r5["affine"]["beta_positive"] is True
+    assert r5["c_true_lt_c_GD"] is True
+    assert r5["at_c_true"]["GD"] is True
+    assert r5["at_c_true"]["max_abs_m4_eq_M_cand"] is True
+    assert r5["at_c_true"]["max_star_S1_eq_minus_2_over_65"] is True
+    assert abs(r5["at_c_true"]["max_abs_m4"] - 3 / 65) < 1e-12
+    assert abs(r5["at_c_true"]["max_star_S1"] + 2 / 65) < 1e-12
+    # c* safely below c_GD
+    assert r5["c_true"] < r5["c_GD"] < 0
+
+    r7 = data["p7"]
+    assert r7["pointwise_evec_holds"] is True
+    assert r7["m4_all_constant"] is False  # coarse classes incomplete
+    assert r7["n_constant_m4"] < r7["n_classes"]
+
+    assert "OPEN" in data["status"]
+    assert "15.81" in (ROOT / "solution.md").read_text()
+    assert "15.81" in (ROOT / "HANDOFF.md").read_text()
+    assert "OPEN" in (ROOT / "HANDOFF.md").read_text()[:900]
+
+
 def test_prop_15_80_gd_linear_wick():
     """Prop 15.80: linear Wick identity, GD form, U1-special, GPU census."""
     import sys
