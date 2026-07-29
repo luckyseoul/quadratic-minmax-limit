@@ -817,3 +817,70 @@ def test_prop_15_62_typeA_wedge_identity():
     assert "15.62" in sol
     assert "typeA" in sol or "Type A" in sol
     assert "OPEN" in data["status"]
+
+
+def test_prop_15_63_H_implies_16N_algebra_and_certs():
+    """H(p)=(p+2)^2/d ≤5 (eq p=3); H⇒16N; spectrum certs p=3,5,7."""
+    # Algebra: H(p)≤5 iff 3p^2-8p-3≥0, equality at p=3
+    for p in range(3, 40, 2):
+        d = (p * p + 1) // 2
+        H = (p + 2) ** 2 / d
+        if p == 3:
+            assert abs(H - 5.0) < 1e-15
+        else:
+            assert H < 5.0 - 1e-12
+        # explicit inequality 2(p+2)^2 ≤ 5(p^2+1)
+        assert 2 * (p + 2) ** 2 <= 5 * (p * p + 1)
+
+    # Live: H holds at p=5 maximizer (ray = 49/13)
+    import os
+    import sys
+
+    import numpy as np
+
+    for k in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
+        os.environ[k] = "1"
+    sys.path.insert(0, str(ROOT / "src"))
+    from minmax_quadratic import paley_conference_prime_power
+
+    Y = np.load("/tmp/maxplus_p5.npy").astype(float)
+    N, n = Y.shape
+    d = n // 2
+    C = paley_conference_prime_power(5).astype(float)
+    ew, EV = np.linalg.eigh(C)
+    Vp = EV[:, ew > 0]
+    U = (Y @ Vp) / np.sqrt(n)
+    rng = np.random.default_rng(0)
+    A = rng.standard_normal((d, d))
+    A = 0.5 * (A + A.T)
+    A -= np.trace(A) / d * np.eye(d)
+    A /= np.linalg.norm(A) + 1e-30
+    for _ in range(60):
+        q = np.einsum("bi,ij,bj->b", U, A, U)
+        Ph = (U * q[:, None]).T @ U
+        Ph = 0.5 * (Ph + Ph.T)
+        Ph -= np.trace(Ph) / d * np.eye(d)
+        A = Ph / (np.linalg.norm(Ph) + 1e-30)
+    B = Vp @ A @ Vp.T
+    B /= np.linalg.norm(B) + 1e-30
+    ytBy = np.einsum("ai,ij,aj->a", Y, B, Y)
+    Q = float(np.sum(ytBy**2))
+    Q4 = Q - 6.0 * N
+    ray = Q4 / (2.0 * N)
+    H = (5 + 2) ** 2 / d  # 49/13
+    assert abs(H - 49 / 13) < 1e-12
+    assert ray <= H + 1e-8
+    assert abs(ray - 49 / 13) < 1e-6  # equality at p=5 maximizer
+    assert Q4 <= 10 * N + 1e-6
+    assert Q <= 16 * N + 1e-6
+
+    # Evidence from multi-worker campaigns
+    for name in ("e1_gmin_q4_ub.json", "e1_gmin_q4_spectrum.json", "e1_gmin_q4_bound.json"):
+        path = ROOT / "evidence" / name
+        assert path.is_file(), name
+    ub = json.loads((ROOT / "evidence" / "e1_gmin_q4_ub.json").read_text())
+    assert ub["H_certified_p357"] is True
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.63" in sol
+    assert "H(p)" in sol or "hypothesis H" in sol.lower() or "(p+2)^2" in sol
+    assert "OPEN" in ub["status"]

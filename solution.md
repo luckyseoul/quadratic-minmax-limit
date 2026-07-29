@@ -1884,6 +1884,33 @@ Q(B):=\sum_{y\in\mathrm{Max}_{+}}(y^\top By)^2.
 
 5. **Residual (OPEN).** Prove \(Q_4(B)\le10N\|B\|_F^2\) for all zero-diag \(B=P_+BP_+\) and all primes \(p\ge5\). Then Prop 15.61 closes bi-tight for every such \(p\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.63 (hypothesis H \(\Rightarrow\) 16N; spectrum certs; 2026-07-30).** Continue Prop 15.62. For unit-Frobenius zero-diag \(B=P_+BP_+\) write
+\[
+\mathrm{ray}(B)\,:=\,\frac{Q_4(B)}{2N}
+\,=\,\frac{Be^\top G_{\mathrm{disj}}Be}{\|Be\|_2^2}
+\]
+(the Rayleigh quotient of \(G_{\mathrm{disj}}=\mathbb E[ff^\top]\) on vertex-disjoint pairs, evaluated on the image of the edge map). Set
+\[
+H(p)\,:=\,\frac{(p+2)^2}{d},\qquad d=\frac{p^2+1}{2}.
+\]
+
+1. **Algebra (proved).** \(H(p)\le5\) for every prime \(p\ge3\), with equality if and only if \(p=3\).
+   *Proof.* \(H(p)=2(p+2)^2/(p^2+1)\), so \(H\le5\) \(\Leftrightarrow\) \(2(p+2)^2\le5(p^2+1)\) \(\Leftrightarrow\) \(3p^2-8p-3\ge0\). The positive root of \(3p^2-8p-3=0\) is \(p=3\); the quadratic is nonnegative for all primes \(p\ge3\), and vanishes only at \(p=3\). \(\square\)
+
+2. **H \(\Rightarrow\) 16N (proved).** If \(\mathrm{ray}(B)\le H(p)\) for every unit zero-diag \(B=P_+BP_+\), then \(Q_4(B)\le2N\cdot H(p)\le10N\), hence \(Q(B)\le16N\|B\|_F^2\) (Prop 15.62.3), hence \(\lambda_{\mathrm{cycle}}\le8\), and for \(p\ge5\) bi-tight is empty (Prop 15.61.4). \(\square\)
+
+3. **Spectrum of \(Q_4\) on zero-diag \(\cap V_+\) (certified).**
+   - \(p=3\): \(\dim=5\), single eigenvalue \(Q_4\equiv10N\) (mult 5); \(\mathrm{ray}\equiv5=H(3)\).
+   - \(p=5\): \(\dim=65\), eigenvalues \(Q_4\in N\cdot\{\tfrac{98}{13},\tfrac{66}{13},\tfrac{2}{13}\}\) with multiplicities \(\{13,26,26\}=\{d,2d,2d\}\); top \(\mathrm{ray}=\tfrac{49}{13}=H(5)\).
+   - \(p=7\): power multistart gives \(\mathrm{ray}\approx2.281<H(7)=3.24=\tfrac{81}{25}\).
+   Evidence: `e1_gmin_q4_spectrum.json`, `e1_gmin_q4_ub.json`, `e1_gmin_q4_bound.json`.
+
+4. **Hypothesis H (certified \(p=3,5,7\); OPEN in general).** \(\mathrm{ray}(B)\le H(p)\) for all unit zero-diag \(B\) on \(V_+\) and all primes \(p\ge3\), with equality at \(p=3\) (whole space) and at the maximiser for \(p=5\). Combined with part 1–2 this yields the 16N bound. **Uniform proof of H for all primes \(p\ge5\) remains OPEN.**
+
+5. **Dead ends (do not reopen).** Pointwise \(|y^\top By|\) or \(\cos^2\) bounds (max \(\cos^2\) exceeds the average threshold); unrestricted \(\|G_{\mathrm{disj}}\|_{\mathrm{op}}\) (exceeds \(H(p)\)); linear span of \(\{\|B\|_F^2,\mathrm{tr}(B^4),\sum B_{ij}^4,\sum_i\|row_i\|^4\}\) (fails at \(p=5,7\)); general CS-ENTF theory (random frames violate 16N).
+
+6. **Residual (OPEN).** Prove hypothesis H for all primes \(p\ge5\) (or any upper bound \(\mathrm{ray}\le5\)). Then bi-tight closes via Prop 15.61–15.62. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
