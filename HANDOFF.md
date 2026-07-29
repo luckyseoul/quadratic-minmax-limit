@@ -1,6 +1,6 @@
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-07-30 (Prop 15.68 Tκ=0 on |κ|=1 + residual source on |κ|=3 + resolvent reduction; L still OPEN)  
+**Status date:** 2026-07-30 (Prop 15.70 mid_ub algebra + multi-worker census g_min≥L at p=5,7; L still OPEN)  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
 **Resume file:** `evidence/SESSION_HANDOFF_2026-07-30.md`  
 **Problem source:** [MathOverflow 413935](https://mathoverflow.net/questions/413935) / [X prize post](https://x.com/PI010101/status/2081070728422752329)

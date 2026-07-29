@@ -1244,3 +1244,38 @@ def test_prop_15_68_tkappa_vanishing_and_resolvent_reduction():
     sol = (ROOT / "solution.md").read_text()
     assert "15.68" in sol
     assert "OPEN" in data["status"]
+
+
+def test_prop_15_70_mid_ub_algebra_and_census():
+    """mid_ub <= L_abs; census g_min>=L at p=5,7; bi-tight threshold algebra."""
+    # Algebra: mid = (p-2)/(2p(p+1)), L = (p-2)/(2p^2), mid/L = p/(p+1)
+    for p in range(5, 50, 2):
+        if p > 2 and any(p % d == 0 for d in range(2, int(p**0.5) + 1)):
+            continue
+        L_abs = (p - 2) / (2.0 * p * p)
+        mid = (p - 2) / (2.0 * p * (p + 1))
+        cand = (p - 2) / (p * (2.0 * p + 3))
+        T_abs = (p - 2) / (p * (2.0 * p - 1))
+        assert mid <= L_abs + 1e-15
+        assert cand <= mid + 1e-15
+        assert abs(mid / L_abs - p / (p + 1)) < 1e-12
+        assert L_abs < T_abs  # so L > T as signed floors
+        # signed: L_p = -L_abs > T_p = -T_abs
+        assert -L_abs > -T_abs
+
+    path = ROOT / "evidence" / "e1_gmin_m4_close.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    assert data["workers"] >= 4
+    for p in (5, 7):
+        c = data["parts"][f"census_p{p}"]
+        assert c["g_min_ge_L"] is True
+        assert c["g_min_gt_T"] is True
+        assert c["m4_le_mid"] is True
+        assert c["workers"] >= 4
+    assert abs(data["parts"]["census_p5"]["max_abs_m4"] - 3 / 65) < 1e-9
+    assert abs(data["parts"]["census_p7"]["max_abs_m4"] - 109 / 2863) < 1e-9
+
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.70" in sol
+    assert "OPEN" in data["status"]

@@ -1,0 +1,82 @@
+{
+  "workers": 86,
+  "parts": {
+    "census_p5": {
+      "p": 5,
+      "workers": 86,
+      "n_kappa1": 11700,
+      "max_abs_m4": 0.046153846153846156,
+      "L_abs": 0.06,
+      "T_abs": 0.06666666666666667,
+      "cand": 0.046153846153846156,
+      "m4_le_L": true,
+      "m4_le_cand": true,
+      "m4_lt_T": true,
+      "g_min": -0.046153846153846156,
+      "L_p": -0.06,
+      "T_p": -0.06666666666666667,
+      "g_min_ge_L": true,
+      "g_min_gt_T": true,
+      "worst": [
+        [
+          2,
+          4,
+          13,
+          25
+        ],
+        0.046153846153846156,
+        1
+      ]
+    },
+    "census_p7": {
+      "p": 7,
+      "workers": 86,
+      "n_kappa1": 176400,
+      "max_abs_m4": 0.03807195249738037,
+      "L_abs": 0.05102040816326531,
+      "T_abs": 0.054945054945054944,
+      "cand": 0.04201680672268908,
+      "m4_le_L": true,
+      "m4_le_cand": true,
+      "m4_lt_T": true,
+      "g_min": -0.03807195249738037,
+      "L_p": -0.05102040816326531,
+      "T_p": -0.054945054945054944,
+      "g_min_ge_L": true,
+      "g_min_gt_T": true,
+      "worst": [
+        [
+          0,
+          1,
+          2,
+          10
+        ],
+        0.03807195249738037,
+        1
+      ]
+    },
+    "power_p5": {
+      "p": 5,
+      "nQ": 14950,
+      "workers": 32,
+      "n_iter": 15,
+      "lam_max_est": -1.073023165425053,
+      "lam_max_eq_4p": false,
+      "rayleigh_trace": [
+        -0.8426994641601514,
+        -0.8849510452259588,
+        -0.9294424402324184,
+        -0.9759308657909302,
+        -1.0239706615162127
+      ],
+      "gap_4p_minus_est": 21.073023165425052,
+      "method": "sharded multi-worker power iteration (F17)"
+    },
+    "algebra": {
+      "master": "(4pI-T)m4=4\u03ba/p; \u03bb_max(T)=4p \u21d2 singular; m4=m*+h, h\u2208E_4p",
+      "bi_tight_threshold": "Prop 15.47: g_min > T(p)=-(p-2)/(p(2p-1)) \u21d2 bi-tight empty. L(p)=-(p-2)/(2p\u00b2) is stronger; either closes bi-tight for p\u22655.",
+      "cand": "|m4|\u2264(p-2)/(p(2p+3)) \u2264 L_abs (ratio 2p/(2p+3))"
+    }
+  },
+  "status": "Multi-worker census: p=5 g_min=-0.04615385 \u2265 L=-0.06000000 and > T=-0.06666667; p=7 g_min=-0.03807195 \u2265 L and > T. Power \u03bb_max(T)\u2248-1.0730 (4p=20). OPEN: general p\u22655 proof of |m4|\u2264L_abs (or g_min>T) without per-p Max+ census."
+}

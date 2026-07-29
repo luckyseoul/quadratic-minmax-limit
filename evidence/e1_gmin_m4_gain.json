@@ -1,0 +1,735 @@
+{
+  "workers": 86,
+  "analytic": {
+    "identity_cand_over_L": "2p/(2p+3) < 1 for p>0",
+    "by_p": {
+      "5": {
+        "cand": 0.046153846153846156,
+        "L_abs": 0.06,
+        "cand_le_L": true,
+        "ratio_cand_over_L": 0.7692307692307693,
+        "gain_budget": 0.020833333333333332,
+        "wick": 0.04,
+        "room_cand_minus_wick": 0.006153846153846156
+      },
+      "7": {
+        "cand": 0.04201680672268908,
+        "L_abs": 0.05102040816326531,
+        "cand_le_L": true,
+        "ratio_cand_over_L": 0.823529411764706,
+        "gain_budget": 0.0625,
+        "wick": 0.02040816326530612,
+        "room_cand_minus_wick": 0.021608643457382958
+      },
+      "11": {
+        "cand": 0.03272727272727273,
+        "L_abs": 0.0371900826446281,
+        "cand_le_L": true,
+        "ratio_cand_over_L": 0.88,
+        "gain_budget": 0.14583333333333334,
+        "wick": 0.008264462809917356,
+        "room_cand_minus_wick": 0.024462809917355374
+      },
+      "13": {
+        "cand": 0.029177718832891247,
+        "L_abs": 0.03254437869822485,
+        "cand_le_L": true,
+        "ratio_cand_over_L": 0.896551724137931,
+        "gain_budget": 0.1875,
+        "wick": 0.005917159763313609,
+        "room_cand_minus_wick": 0.02326055906957764
+      },
+      "17": {
+        "cand": 0.02384737678855326,
+        "L_abs": 0.025951557093425604,
+        "cand_le_L": true,
+        "ratio_cand_over_L": 0.9189189189189191,
+        "gain_budget": 0.2708333333333333,
+        "wick": 0.0034602076124567475,
+        "room_cand_minus_wick": 0.020387169176096512
+      },
+      "19": {
+        "cand": 0.021822849807445442,
+        "L_abs": 0.023545706371191136,
+        "cand_le_L": true,
+        "ratio_cand_over_L": 0.9268292682926829,
+        "gain_budget": 0.3125,
+        "wick": 0.002770083102493075,
+        "room_cand_minus_wick": 0.019052766704952366
+      },
+      "23": {
+        "cand": 0.018633540372670808,
+        "L_abs": 0.01984877126654064,
+        "cand_le_L": true,
+        "ratio_cand_over_L": 0.9387755102040817,
+        "gain_budget": 0.3958333333333333,
+        "wick": 0.001890359168241966,
+        "room_cand_minus_wick": 0.01674318120442884
+      },
+      "29": {
+        "cand": 0.015262860373092142,
+        "L_abs": 0.01605231866825208,
+        "cand_le_L": true,
+        "ratio_cand_over_L": 0.9508196721311475,
+        "gain_budget": 0.5208333333333334,
+        "wick": 0.0011890606420927466,
+        "room_cand_minus_wick": 0.014073799730999394
+      },
+      "31": {
+        "cand": 0.014392059553349877,
+        "L_abs": 0.015088449531737774,
+        "cand_le_L": true,
+        "ratio_cand_over_L": 0.9538461538461539,
+        "gain_budget": 0.5625,
+        "wick": 0.001040582726326743,
+        "room_cand_minus_wick": 0.013351476827023133
+      },
+      "37": {
+        "cand": 0.012285012285012284,
+        "L_abs": 0.012783053323593864,
+        "cand_le_L": true,
+        "ratio_cand_over_L": 0.9610389610389609,
+        "gain_budget": 0.6875,
+        "wick": 0.0007304601899196494,
+        "room_cand_minus_wick": 0.011554552095092634
+      },
+      "41": {
+        "cand": 0.011190817790530846,
+        "L_abs": 0.011600237953599048,
+        "cand_le_L": true,
+        "ratio_cand_over_L": 0.9647058823529412,
+        "gain_budget": 0.7708333333333334,
+        "wick": 0.000594883997620464,
+        "room_cand_minus_wick": 0.010595933792910382
+      },
+      "43": {
+        "cand": 0.010713352495427228,
+        "L_abs": 0.011087074094104922,
+        "cand_le_L": true,
+        "ratio_cand_over_L": 0.9662921348314606,
+        "gain_budget": 0.8125,
+        "wick": 0.0005408328826392645,
+        "room_cand_minus_wick": 0.010172519612787962
+      },
+      "47": {
+        "cand": 0.009870585654748848,
+        "L_abs": 0.010185604345857854,
+        "cand_le_L": true,
+        "ratio_cand_over_L": 0.9690721649484536,
+        "gain_budget": 0.8958333333333334,
+        "wick": 0.0004526935264825713,
+        "room_cand_minus_wick": 0.009417892128266277
+      }
+    },
+    "sharp_at_p5": true
+  },
+  "parts": {
+    "k4_p3": {
+      "p": 3,
+      "counts_by_kappa": {
+        "-3": 6,
+        "-1": 108,
+        "1": 72,
+        "3": 24
+      },
+      "T4": [
+        [
+          0.0,
+          18.0,
+          -6.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.6666666666666667,
+          1.6666666666666667,
+          1.0
+        ],
+        [
+          -0.5,
+          2.5,
+          2.5,
+          -0.5
+        ],
+        [
+          0.0,
+          4.5,
+          -1.5,
+          0.0
+        ]
+      ],
+      "Tkappa_level_avg": [
+        -24.0,
+        0.0,
+        0.0,
+        -6.0
+      ],
+      "evals_T4": [
+        -5.022929885719435,
+        2.1850072495283772e-16,
+        3.4977695444717205,
+        5.691827007914394
+      ],
+      "lam_max_T4": 5.691827007914394,
+      "gap_4p": 6.308172992085606,
+      "rho_level": [
+        -0.2745527564804673,
+        -0.03164171838870634,
+        0.009735913350371182,
+        -0.06863818912011682
+      ],
+      "m4_level_pred": [
+        -0.6078860898138005,
+        -0.14275282949981744,
+        0.1208470244614823,
+        0.2646951442132165
+      ],
+      "max_abs_m4_on_pm1": 0.14275282949981744,
+      "L_abs": 0.05555555555555555,
+      "cand": 0.037037037037037035,
+      "note": "4-level (\u03ba-only) model is too coarse for sharp m4 but T-invariant."
+    },
+    "des_p5": {
+      "p": 5,
+      "N": 260,
+      "n": 26,
+      "w": 10,
+      "weight_ok": true,
+      "n_oriented_unique_blocks": 130,
+      "lambda_stats": {
+        "1": {
+          "unique": [
+            104
+          ],
+          "constant": true,
+          "value": 104,
+          "mean": 104.0
+        },
+        "2": {
+          "unique": [
+            26,
+            52
+          ],
+          "constant": false,
+          "value": null,
+          "mean": 42.46666666666667
+        },
+        "3": {
+          "unique": [
+            0,
+            4,
+            6,
+            8,
+            18,
+            20,
+            28,
+            32
+          ],
+          "constant": false,
+          "value": null,
+          "mean": 12.066666666666666
+        },
+        "4": {
+          "unique": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            16
+          ],
+          "constant": false,
+          "value": null,
+          "mean": 3.1333333333333333
+        }
+      },
+      "is_1design_finite": true,
+      "is_2design_finite": false,
+      "is_3design_finite": false,
+      "is_4design_finite": false,
+      "lam1_finite_mean": 104.0,
+      "lam1_finite_expected": 52.0,
+      "cand_ub": 0.046153846153846156,
+      "L_abs": 0.06,
+      "note": "If 2-design or 3-design, intersection numbers constrain m4; 4-design would force constant m4 (false)."
+    },
+    "des_p3": {
+      "p": 3,
+      "N": 12,
+      "n": 10,
+      "w": 3,
+      "weight_ok": true,
+      "n_oriented_unique_blocks": 6,
+      "lambda_stats": {
+        "1": {
+          "unique": [
+            4
+          ],
+          "constant": true,
+          "value": 4,
+          "mean": 4.0
+        },
+        "2": {
+          "unique": [
+            0,
+            2
+          ],
+          "constant": false,
+          "value": null,
+          "mean": 0.8
+        },
+        "3": {
+          "unique": [
+            0,
+            2
+          ],
+          "constant": false,
+          "value": null,
+          "mean": 0.13333333333333333
+        },
+        "4": {
+          "unique": [
+            0
+          ],
+          "constant": true,
+          "value": 0,
+          "mean": 0.0
+        }
+      },
+      "is_1design_finite": true,
+      "is_2design_finite": false,
+      "is_3design_finite": false,
+      "is_4design_finite": true,
+      "lam1_finite_mean": 4.0,
+      "lam1_finite_expected": 2.0,
+      "cand_ub": 0.037037037037037035,
+      "L_abs": 0.05555555555555555,
+      "note": "If 2-design or 3-design, intersection numbers constrain m4; 4-design would force constant m4 (false)."
+    },
+    "L2_p3": {
+      "p": 3,
+      "n": 10,
+      "nQ": 210,
+      "n_kappa1": 180,
+      "n_kappa3": 30,
+      "source_inf": 2.6666666666666665,
+      "b_l2": 14.605934866804429,
+      "b_l1": 80.0,
+      "T_F_ub": 70.9929573971954,
+      "row_l1_absT": 24,
+      "gap_4p_minus_T_F": -58.9929573971954,
+      "tkappa_value_counts": {
+        "-24": 21,
+        "0": 180,
+        "24": 9
+      },
+      "op_norm_T_power_est": 9.479645798742405,
+      "lam_T_power_est": -2.059039840711337,
+      "rho_budget": null,
+      "gain_budget": null,
+      "F_bound_useful": false,
+      "note": "F-bound on \u2016T\u2016 useless (\u226b4p). Need association-scheme eigenvalues."
+    },
+    "des_p7": {
+      "p": 7,
+      "N": 11452,
+      "n": 50,
+      "w": 21,
+      "weight_ok": true,
+      "n_oriented_unique_blocks": 5726,
+      "lambda_stats": {
+        "1": {
+          "unique": [
+            4908
+          ],
+          "constant": true,
+          "value": 4908,
+          "mean": 4908.0
+        },
+        "2": {
+          "unique": [
+            1636,
+            2454
+          ],
+          "constant": false,
+          "value": null,
+          "mean": 2099.5333333333333
+        },
+        "3": {
+          "unique": [
+            344,
+            368,
+            636,
+            644,
+            646,
+            668,
+            968,
+            990,
+            1000,
+            1362
+          ],
+          "constant": false,
+          "value": null,
+          "mean": 800.4666666666667
+        },
+        "4": {
+          "unique": [
+            70,
+            76,
+            92,
+            160,
+            168,
+            176,
+            196,
+            268,
+            302,
+            306,
+            318,
+            334,
+            422,
+            440,
+            454,
+            462,
+            464,
+            504,
+            506,
+            516,
+            522,
+            630,
+            644,
+            654,
+            806
+          ],
+          "constant": false,
+          "value": null,
+          "mean": 376.8
+        }
+      },
+      "is_1design_finite": true,
+      "is_2design_finite": false,
+      "is_3design_finite": false,
+      "is_4design_finite": false,
+      "lam1_finite_mean": 4908.0,
+      "lam1_finite_expected": 2454.0,
+      "cand_ub": 0.04201680672268908,
+      "L_abs": 0.05102040816326531,
+      "note": "If 2-design or 3-design, intersection numbers constrain m4; 4-design would force constant m4 (false)."
+    },
+    "t6_p3": {
+      "p": 3,
+      "n_type6_classes": 8,
+      "class_sizes": {
+        "(-1, -1, -1, -1, 1, 1)": 36,
+        "(-1, -1, 1, -1, 1, 1)": 6,
+        "(-1, -1, 1, 1, -1, -1)": 9,
+        "(-1, -1, 1, 1, -1, 1)": 36,
+        "(-1, -1, 1, 1, 1, 1)": 72,
+        "(-1, 1, 1, 1, 1, -1)": 9,
+        "(-1, 1, 1, 1, 1, 1)": 36,
+        "(1, 1, 1, 1, 1, 1)": 6
+      },
+      "lam_max_T": 9.79795897113274,
+      "lam_min_T": -9.797958971132722,
+      "gap_4p": 2.20204102886726,
+      "max_abs_m4_pred_kappa1": 0.33333333333333337,
+      "max_abs_rho_kappa1": 0.2222222222222223,
+      "max_abs_rho_same_sign": 0.2222222222222223,
+      "rho_budget": null,
+      "same_le_budget": null,
+      "L_abs": 0.05555555555555555,
+      "cand": 0.037037037037037035,
+      "pred_le_L": false,
+      "pred_le_cand": false,
+      "solve_resid": 8.881784197001252e-16
+    },
+    "L2_p7": {
+      "p": 7,
+      "n": 50,
+      "nQ": 230300,
+      "n_kappa1": 176400,
+      "n_kappa3": 53900,
+      "source_inf": 0.4897959183673469,
+      "b_l2": 113.71284995504227,
+      "b_l1": 26400.0,
+      "T_F_ub": 6509.623645035095,
+      "row_l1_absT": 184,
+      "gap_4p_minus_T_F": -6481.623645035095,
+      "tkappa_value_counts": {
+        "-24": 29106,
+        "0": 176400,
+        "24": 24794
+      },
+      "op_norm_T_power_est": null,
+      "lam_T_power_est": null,
+      "rho_budget": 0.030612244897959183,
+      "gain_budget": 0.0625,
+      "F_bound_useful": false,
+      "note": "F-bound on \u2016T\u2016 useless (\u226b4p). Need association-scheme eigenvalues."
+    },
+    "k4_p5": {
+      "p": 5,
+      "counts_by_kappa": {
+        "-3": 1650,
+        "-1": 5700,
+        "1": 6000,
+        "3": 1600
+      },
+      "T4": [
+        [
+          1.5757575757575757,
+          3.090909090909091,
+          2.3636363636363638,
+          0.6060606060606061
+        ],
+        [
+          0.8947368421052632,
+          2.6842105263157894,
+          2.6842105263157894,
+          0.8947368421052632
+        ],
+        [
+          0.65,
+          2.55,
+          2.55,
+          0.65
+        ],
+        [
+          0.625,
+          3.1875,
+          2.4375,
+          -0.375
+        ]
+      ],
+      "Tkappa_level_avg": [
+        -3.6363636363636362,
+        0.0,
+        0.0,
+        -3.75
+      ],
+      "evals_T4": [
+        -1.1351247035071137,
+        -4.503808455651088e-16,
+        0.7590724262429673,
+        6.811020379337505
+      ],
+      "lam_max_T4": 6.811020379337505,
+      "gap_4p": 13.188979620662495,
+      "rho_level": [
+        -0.008409327138027434,
+        -0.0009561933291000145,
+        -0.000745703226939126,
+        -0.007858716432561353
+      ],
+      "m4_level_pred": [
+        -0.12840932713802744,
+        -0.04095619332910001,
+        0.03925429677306087,
+        0.11214128356743865
+      ],
+      "max_abs_m4_on_pm1": 0.04095619332910001,
+      "L_abs": 0.06,
+      "cand": 0.046153846153846156,
+      "note": "4-level (\u03ba-only) model is too coarse for sharp m4 but T-invariant."
+    },
+    "L2_p5": {
+      "p": 5,
+      "n": 26,
+      "nQ": 14950,
+      "n_kappa1": 11700,
+      "n_kappa3": 3250,
+      "source_inf": 0.96,
+      "b_l2": 54.72842040475862,
+      "b_l1": 3120.0,
+      "T_F_ub": 1146.9960767151733,
+      "row_l1_absT": 88,
+      "gap_4p_minus_T_F": -1126.9960767151733,
+      "tkappa_value_counts": {
+        "-24": 1875,
+        "0": 11700,
+        "24": 1375
+      },
+      "op_norm_T_power_est": 19.3110242269446,
+      "lam_T_power_est": -0.9294424402324184,
+      "rho_budget": 0.02,
+      "gain_budget": 0.020833333333333332,
+      "F_bound_useful": false,
+      "note": "F-bound on \u2016T\u2016 useless (\u226b4p). Need association-scheme eigenvalues."
+    },
+    "t6_p7": {
+      "p": 7,
+      "n_type6_classes": 11,
+      "class_sizes": {
+        "(-1, -1, -1, -1, -1, -1)": 2450,
+        "(-1, -1, -1, -1, -1, 1)": 17640,
+        "(-1, -1, -1, -1, 1, 1)": 42336,
+        "(-1, -1, -1, 1, 1, 1)": 11760,
+        "(-1, -1, 1, -1, 1, 1)": 13916,
+        "(-1, -1, 1, 1, -1, -1)": 10584,
+        "(-1, -1, 1, 1, -1, 1)": 42336,
+        "(-1, -1, 1, 1, 1, 1)": 49392,
+        "(-1, 1, 1, 1, 1, -1)": 10584,
+        "(-1, 1, 1, 1, 1, 1)": 24696,
+        "(1, 1, 1, 1, 1, 1)": 4606
+      },
+      "lam_max_T": 9.344690582330035,
+      "lam_min_T": -8.610639156535235,
+      "gap_4p": 18.655309417669965,
+      "max_abs_m4_pred_kappa1": 0.024472628170728695,
+      "max_abs_rho_kappa1": 0.004064464905422575,
+      "max_abs_rho_same_sign": 0.004064464905422575,
+      "rho_budget": 0.030612244897959183,
+      "same_le_budget": true,
+      "L_abs": 0.05102040816326531,
+      "cand": 0.04201680672268908,
+      "pred_le_L": true,
+      "pred_le_cand": true,
+      "solve_resid": 1.6653345369377348e-16
+    },
+    "k4_p7": {
+      "p": 7,
+      "counts_by_kappa": {
+        "-3": 25676,
+        "-1": 91728,
+        "1": 84672,
+        "3": 28224
+      },
+      "T4": [
+        [
+          1.1450381679389312,
+          3.572519083969466,
+          2.4732824427480917,
+          0.8396946564885496
+        ],
+        [
+          1.0,
+          2.6923076923076925,
+          2.6923076923076925,
+          1.0
+        ],
+        [
+          0.75,
+          2.9166666666666665,
+          2.9166666666666665,
+          0.75
+        ],
+        [
+          0.7638888888888888,
+          3.25,
+          2.25,
+          0.4861111111111111
+        ]
+      ],
+      "Tkappa_level_avg": [
+        -2.015267175572519,
+        0.0,
+        0.0,
+        -1.8333333333333333
+      ],
+      "evals_T4": [
+        -0.6361173157749941,
+        1.2900233970087938e-16,
+        0.5031090194373444,
+        7.373131934362053
+      ],
+      "lam_max_T4": 7.373131934362053,
+      "gap_4p": 20.626868065637947,
+      "rho_level": [
+        -0.0016033369460195896,
+        -0.00013106481466560518,
+        -0.00010589342641856844,
+        -0.0014285133693907345
+      ],
+      "m4_level_pred": [
+        -0.06282782674193796,
+        -0.020539228079971727,
+        0.02030226983888755,
+        0.05979597642652763
+      ],
+      "max_abs_m4_on_pm1": 0.020539228079971727,
+      "L_abs": 0.05102040816326531,
+      "cand": 0.04201680672268908,
+      "note": "4-level (\u03ba-only) model is too coarse for sharp m4 but T-invariant."
+    },
+    "t6_p5": {
+      "p": 5,
+      "n_type6_classes": 11,
+      "class_sizes": {
+        "(-1, -1, -1, -1, -1, -1)": 75,
+        "(-1, -1, -1, -1, -1, 1)": 1050,
+        "(-1, -1, -1, -1, 1, 1)": 2400,
+        "(-1, -1, -1, 1, 1, 1)": 700,
+        "(-1, -1, 1, -1, 1, 1)": 950,
+        "(-1, -1, 1, 1, -1, -1)": 600,
+        "(-1, -1, 1, 1, -1, 1)": 3000,
+        "(-1, -1, 1, 1, 1, 1)": 3300,
+        "(-1, 1, 1, 1, 1, -1)": 600,
+        "(-1, 1, 1, 1, 1, 1)": 1950,
+        "(1, 1, 1, 1, 1, 1)": 325
+      },
+      "lam_max_T": 9.708720374306003,
+      "lam_min_T": -7.836637349315043,
+      "gap_4p": 10.291279625693997,
+      "max_abs_m4_pred_kappa1": 0.04763923886671573,
+      "max_abs_rho_kappa1": 0.007639238866715726,
+      "max_abs_rho_same_sign": 0.007639238866715726,
+      "rho_budget": 0.02,
+      "same_le_budget": true,
+      "L_abs": 0.06,
+      "cand": 0.046153846153846156,
+      "pred_le_L": true,
+      "pred_le_cand": false,
+      "solve_resid": 4.440892098500626e-16
+    }
+  },
+  "synthesis": {
+    "cand_le_L_algebra": "cand/L = 2p/(2p+3) < 1",
+    "cand_sharp_p5": true,
+    "design_strength": {
+      "3": {
+        "2design": false,
+        "3design": false,
+        "4design": true,
+        "blocks": 6
+      },
+      "5": {
+        "2design": false,
+        "3design": false,
+        "4design": false,
+        "blocks": 130
+      },
+      "7": {
+        "2design": false,
+        "3design": false,
+        "4design": false,
+        "blocks": 5726
+      }
+    },
+    "type6_pred": {
+      "3": {
+        "max_m4_pred": 0.33333333333333337,
+        "same_le_budget": null,
+        "pred_le_cand": false,
+        "lam_max_T": 9.79795897113274,
+        "gap_4p": 2.20204102886726
+      },
+      "5": {
+        "max_m4_pred": 0.04763923886671573,
+        "same_le_budget": true,
+        "pred_le_cand": false,
+        "lam_max_T": 9.708720374306003,
+        "gap_4p": 10.291279625693997
+      },
+      "7": {
+        "max_m4_pred": 0.024472628170728695,
+        "same_le_budget": true,
+        "pred_le_cand": true,
+        "lam_max_T": 9.344690582330035,
+        "gap_4p": 18.655309417669965
+      }
+    },
+    "open": "Prove |m4|\u2264(p-2)/(p(2p+3)) on |\u03ba|=1 for all primes p\u22655, or resolvent gain \u2264(p-4)/48 via association-scheme eigenvalues of T."
+  },
+  "status": "Candidate UB (p-2)/(p(2p+3)) \u2264 L algebraically (ratio 2p/(2p+3)); sharp at p=5. Design/T-spectrum probes recorded. Prove |m4|\u2264(p-2)/(p(2p+3)) on |\u03ba|=1 for all primes p\u22655, or resolvent gain \u2264(p-4)/48 via association-scheme eigenvalues of T."
+}

@@ -2092,6 +2092,82 @@ H(p)\,:=\,\frac{(p+2)^2}{d},\qquad d=\frac{p^2+1}{2}.
 
    *Remark.* Absolute \(\infty\)-bootstrap with \(d_1M_1+d_3M_3\) does **not** contract (\(4p-(3p^2-7)<0\) for \(p\ge5\)). Signed cancellation / spectral control of \(T\) on the conference association scheme is load-bearing.
 
+**Proposition 15.69 (spectrum of \(T\): \(\lambda_{\max}=4p\); singular resolvent; min-norm particular solution; 2026-07-30).** Continue Prop 15.67–15.68. View \(T\) as a self-adjoint operator on \(\ell^2\) of unordered 4-sets (signed Johnson adjacency with weights \(C_{vr}\)).
+
+1. **Self-adjointness (proved).** If \(S'=S_{v\to r}\) then \(S=S'_{r\to v}\) and \(C_{rv}=C_{vr}\), so \(T\) is symmetric on \(\mathbb R^{\binom{n}{4}}\). Hence \(\|T\|_2=\rho(T)\). \(\square\)
+
+2. **Spectral edges (certified \(p=5,7\); \(p=3\) strict).** Sparse exact eigensolve (ARPACK/`eigsh` on the CSR of \(T\)):
+   | \(p\) | \(\lambda_{\max}(T)\) | \(4p\) | \(\lambda_{\min}(T)\) | mult of \(4p\) (top block) |
+   |------|----------------------|-------|----------------------|---------------------------|
+   | 3 | \(\approx9.798<12\) | 12 | \(\approx-9.798\) | 0 |
+   | 5 | \(20\) | 20 | \(-20\) | \(\ge38\) |
+   | 7 | \(28\) | 28 | \(-28\) | \(\ge1\) (full mult open) |
+
+   In particular for primes \(p\ge5\) on Paley, the numerical evidence is
+   \[
+   \lambda_{\max}(T)=4p=-\lambda_{\min}(T),
+   \]
+   so \(4pI-T\) is **singular**. Evidence: `e1_gmin_m4_Tspec.json`, `e1_gmin_m4_pseudo.json`. \(\square\)
+
+3. **Compatibility (certified \(p=5,7\)).** The master identity \((4pI-T)m_4=4\kappa/p\) is solvable: writing \(E_{4p}=\ker(4pI-T)\), one has \(4\kappa/p\perp E_{4p}\) to float precision \(<10^{-13}\). (Equivalently \(T\kappa/p^2\perp E_{4p}\) for the residual form.) \(\square\)
+
+4. **General solution and min-norm particular solution (proved algebra + cert).** Every solution of the master linear equation is
+   \[
+   m=m_\star+h,\qquad h\in E_{4p},
+   \]
+   where \(m_\star=(4pI-T)^{+}(4\kappa/p)\) is the Moore–Penrose / min-norm solution. The Max+ moment vector is one particular solution: \(m_4=m_\star+h_\star\) for a unique \(h_\star\in E_{4p}\) fixed by the Max+ design (boolean antipodality, \(\mathrm{Tr}(G^2)\), etc.). Certified: \(\|(T-4p)(m_4-m_\star)\|<10^{-11}\) at \(p=5,7\). \(\square\)
+
+5. **Min-norm bound on \(|\kappa|=1\) (certified \(p=5,7\)).**
+   | \(p\) | \(\max_{|\kappa|=1}|m_\star|\) | \(L_{\mathrm{abs}}\) | \(\max|m_4|\) (Max+) |
+   |------|-------------------------------|----------------------|----------------------|
+   | 5 | \(0.056=7/125\) | \(0.06=3/50\) | \(3/65\approx0.04615\) |
+   | 7 | \(\approx0.03154\) | \(5/98\approx0.05102\) | \(109/2863\approx0.03807\) |
+
+   So \(m_\star\) itself already obeys \(|m_\star|\le L_{\mathrm{abs}}\) on \(|\kappa|=1\) at \(p=5,7\). The Max+ correction \(h_\star\) **decreases** the max at \(p=5\) and **increases** it at \(p=7\), still staying below \(L_{\mathrm{abs}}\). Best \(L^2\) fit \(m_\star\approx\kappa/(p^2-4)\) (exact coefficient \(1/(p^2-4)\)), but \(m_\star\) is **not** constant on \(\kappa\)-classes for \(p\ge5\). Evidence: `e1_gmin_m4_pseudo.json`. \(\square\)
+
+6. **Residual (OPEN).** Prove for every prime \(p\ge5\):
+   - (i) \(\lambda_{\max}(T)=4p\) (and ideally \(\lambda_{\min}=-4p\)) on the Paley / conference Johnson signing;
+   - (ii) \(4\kappa/p\perp E_{4p}\);
+   - (iii) the Max+ particular solution satisfies \(|m_4|\le L_{\mathrm{abs}}\) on \(|\kappa|=1\)
+     (e.g. by controlling \(h_\star\), or by proving \(|m_\star|\le L_{\mathrm{abs}}\) and \(|h_\star|\) cannot push past \(L\), or the candidate \(|m_4|\le(p-2)/(p(2p+3))\), or \(\lambda_2(P\odot P)\le4/N\)).
+
+   Then \(g_{\min}\ge L(p)\) and bi-tight closes. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+   *Remark.* The naive resolvent gain bound of Prop 15.68.5 assumed \(4p>\lambda_{\max}(T)\). At \(p\ge5\) one has equality, so the resolvent is a **pseudoinverse** on \(E_{4p}^\perp\) plus an undetermined kernel component — the kernel is load-bearing, not an error.
+
+**Proposition 15.70 (mid upper bound algebra; bi-tight threshold comparison; multi-worker census; 2026-07-30).** Continue Prop 15.66–15.69. Write
+\[
+L_{\mathrm{abs}}(p)=\frac{p-2}{2p^2},\qquad
+T_{\mathrm{abs}}(p)=\frac{p-2}{p(2p-1)},\qquad
+M_{\mathrm{mid}}(p)=\frac{p-2}{2p(p+1)},\qquad
+M_{\mathrm{cand}}(p)=\frac{p-2}{p(2p+3)}.
+\]
+
+1. **Algebra of targets (proved).** For every odd prime \(p\ge5\):
+   \[
+   M_{\mathrm{cand}}(p)\;\le\;M_{\mathrm{mid}}(p)\;\le\;L_{\mathrm{abs}}(p)\;<\;T_{\mathrm{abs}}(p),
+   \]
+   with ratios
+   \[
+   \frac{M_{\mathrm{mid}}}{L_{\mathrm{abs}}}=\frac{p}{p+1}<1,\qquad
+   \frac{M_{\mathrm{cand}}}{L_{\mathrm{abs}}}=\frac{2p}{2p+3}<1.
+   \]
+   Hence any proof of \(\max_{|\kappa|=1}|m_4|\le M_{\mathrm{mid}}(p)\) (or the sharper \(M_{\mathrm{cand}}\)) yields \(g_{\min}\ge L(p)>T(p)\) and closes bi-tight via Prop 15.47. \(\square\)
+
+2. **Bi-tight threshold (recalled).** Prop 15.47: if \(g_{\min}>T(p)=-(p-2)/(p(2p-1))\), i.e. \(\max|m_4|<T_{\mathrm{abs}}\), then no Max+-tight size-\(2p\) bi-tight cover exists. The stronger \(g_{\min}\ge L(p)\) is preferred but not necessary for bi-tight. \(\square\)
+
+3. **Multi-worker census (certified \(p=5,7\); \(W=86\)).** Full enumeration of all \(|\kappa|=1\) 4-sets:
+   | \(p\) | \(\max|m_4|\) | \(M_{\mathrm{cand}}\) | \(M_{\mathrm{mid}}\) | \(L_{\mathrm{abs}}\) | \(T_{\mathrm{abs}}\) |
+   |------|---------------|----------------------|---------------------|--------------------|--------------------|
+   | 5 | \(3/65\approx0.04615\) | \(3/65\) (sharp) | \(1/20=0.05\) | \(3/50=0.06\) | \(1/15\approx0.0667\) |
+   | 7 | \(109/2863\approx0.03807\) | \(5/119\approx0.0420\) | \(5/112\approx0.0446\) | \(5/98\approx0.0510\) | \(\approx0.0544\) |
+
+   In particular \(g_{\min}\ge L(p)>T(p)\) at \(p=5,7\) (bi-tight empty for these \(p\)), and \(\max|m_4|\le M_{\mathrm{mid}}\) holds at both. Evidence: `e1_gmin_m4_close.json`, `e1_gmin_m4_evec4p.json` (F17 multi-worker). \(\square\)
+
+4. **Type6 Max+-free particular solution (certified \(p=5\)).** Solving \((4pI-T)m=4\kappa/p\) on \(S_4\)-type6 class-constant functions (pure \(C\) combinatorics) yields \(\max_{|\kappa|=1}|m|\approx0.0468\le L_{\mathrm{abs}}\) at \(p=5\), close to the true Max+ value \(3/65\). At \(p=3\) type6 recovers the exact \(|m_4|=1/3\). Evidence: `e1_gmin_m4_close.json`. \(\square\)
+
+5. **Residual (OPEN).** Prove for every prime \(p\ge5\) that \(\max_{|\kappa|=1}|m_4|\le M_{\mathrm{mid}}(p)\) (or \(\le L_{\mathrm{abs}}\), or \(\le M_{\mathrm{cand}}\)), using Max+/boolean/conference structure — e.g. via control of \(h_\star\in E_{4p}\) in Prop 15.69, or a closed \(G\)-spectrum / \(\mathrm{Tr}(G^2)\) pin on the moduli line (Prop 15.53). Then bi-tight closes for all such \(p\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

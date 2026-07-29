@@ -1,0 +1,268 @@
+{
+  "workers": 86,
+  "parts": {
+    "algebra": {
+      "identities": {
+        "cand_over_L": "2p/(2p+3)",
+        "mid_over_L": "p/(p+1)",
+        "L_vs_T_signed": "L(p)>T(p) iff (p-2)/(2p^2) < (p-2)/(p(2p-1))"
+      },
+      "by_p": {
+        "5": {
+          "L_abs": 0.06,
+          "T_abs": 0.06666666666666667,
+          "cand": 0.046153846153846156,
+          "mid": 0.05,
+          "cand_le_L": true,
+          "mid_le_L": true,
+          "cand_le_mid": true,
+          "L_lt_T_abs": true,
+          "ratio_cand_L": 0.7692307692307693,
+          "ratio_mid_L": 0.8333333333333334
+        },
+        "7": {
+          "L_abs": 0.05102040816326531,
+          "T_abs": 0.054945054945054944,
+          "cand": 0.04201680672268908,
+          "mid": 0.044642857142857144,
+          "cand_le_L": true,
+          "mid_le_L": true,
+          "cand_le_mid": true,
+          "L_lt_T_abs": true,
+          "ratio_cand_L": 0.823529411764706,
+          "ratio_mid_L": 0.875
+        },
+        "11": {
+          "L_abs": 0.0371900826446281,
+          "T_abs": 0.03896103896103896,
+          "cand": 0.03272727272727273,
+          "mid": 0.03409090909090909,
+          "cand_le_L": true,
+          "mid_le_L": true,
+          "cand_le_mid": true,
+          "L_lt_T_abs": true,
+          "ratio_cand_L": 0.88,
+          "ratio_mid_L": 0.9166666666666665
+        },
+        "13": {
+          "L_abs": 0.03254437869822485,
+          "T_abs": 0.033846153846153845,
+          "cand": 0.029177718832891247,
+          "mid": 0.03021978021978022,
+          "cand_le_L": true,
+          "mid_le_L": true,
+          "cand_le_mid": true,
+          "L_lt_T_abs": true,
+          "ratio_cand_L": 0.896551724137931,
+          "ratio_mid_L": 0.9285714285714286
+        },
+        "17": {
+          "L_abs": 0.025951557093425604,
+          "T_abs": 0.026737967914438502,
+          "cand": 0.02384737678855326,
+          "mid": 0.024509803921568627,
+          "cand_le_L": true,
+          "mid_le_L": true,
+          "cand_le_mid": true,
+          "L_lt_T_abs": true,
+          "ratio_cand_L": 0.9189189189189191,
+          "ratio_mid_L": 0.9444444444444445
+        },
+        "19": {
+          "L_abs": 0.023545706371191136,
+          "T_abs": 0.02418207681365576,
+          "cand": 0.021822849807445442,
+          "mid": 0.02236842105263158,
+          "cand_le_L": true,
+          "mid_le_L": true,
+          "cand_le_mid": true,
+          "L_lt_T_abs": true,
+          "ratio_cand_L": 0.9268292682926829,
+          "ratio_mid_L": 0.95
+        },
+        "23": {
+          "L_abs": 0.01984877126654064,
+          "T_abs": 0.020289855072463767,
+          "cand": 0.018633540372670808,
+          "mid": 0.019021739130434784,
+          "cand_le_L": true,
+          "mid_le_L": true,
+          "cand_le_mid": true,
+          "L_lt_T_abs": true,
+          "ratio_cand_L": 0.9387755102040817,
+          "ratio_mid_L": 0.9583333333333335
+        },
+        "29": {
+          "L_abs": 0.01605231866825208,
+          "T_abs": 0.016333938294010888,
+          "cand": 0.015262860373092142,
+          "mid": 0.015517241379310345,
+          "cand_le_L": true,
+          "mid_le_L": true,
+          "cand_le_mid": true,
+          "L_lt_T_abs": true,
+          "ratio_cand_L": 0.9508196721311475,
+          "ratio_mid_L": 0.9666666666666666
+        },
+        "31": {
+          "L_abs": 0.015088449531737774,
+          "T_abs": 0.015335801163405606,
+          "cand": 0.014392059553349877,
+          "mid": 0.014616935483870967,
+          "cand_le_L": true,
+          "mid_le_L": true,
+          "cand_le_mid": true,
+          "L_lt_T_abs": true,
+          "ratio_cand_L": 0.9538461538461539,
+          "ratio_mid_L": 0.9687499999999999
+        },
+        "37": {
+          "L_abs": 0.012783053323593864,
+          "T_abs": 0.01295816364309515,
+          "cand": 0.012285012285012284,
+          "mid": 0.012446657183499289,
+          "cand_le_L": true,
+          "mid_le_L": true,
+          "cand_le_mid": true,
+          "L_lt_T_abs": true,
+          "ratio_cand_L": 0.9610389610389609,
+          "ratio_mid_L": 0.9736842105263157
+        },
+        "41": {
+          "L_abs": 0.011600237953599048,
+          "T_abs": 0.011743450767841012,
+          "cand": 0.011190817790530846,
+          "mid": 0.01132404181184669,
+          "cand_le_L": true,
+          "mid_le_L": true,
+          "cand_le_mid": true,
+          "L_lt_T_abs": true,
+          "ratio_cand_L": 0.9647058823529412,
+          "ratio_mid_L": 0.9761904761904763
+        },
+        "43": {
+          "L_abs": 0.011087074094104922,
+          "T_abs": 0.01121751025991792,
+          "cand": 0.010713352495427228,
+          "mid": 0.010835095137420718,
+          "cand_le_L": true,
+          "mid_le_L": true,
+          "cand_le_mid": true,
+          "L_lt_T_abs": true,
+          "ratio_cand_L": 0.9662921348314606,
+          "ratio_mid_L": 0.9772727272727272
+        },
+        "47": {
+          "L_abs": 0.010185604345857854,
+          "T_abs": 0.01029512697323267,
+          "cand": 0.009870585654748848,
+          "mid": 0.00997340425531915,
+          "cand_le_L": true,
+          "mid_le_L": true,
+          "cand_le_mid": true,
+          "L_lt_T_abs": true,
+          "ratio_cand_L": 0.9690721649484536,
+          "ratio_mid_L": 0.9791666666666667
+        },
+        "53": {
+          "L_abs": 0.009077963688145247,
+          "T_abs": 0.009164420485175202,
+          "cand": 0.00882811147654492,
+          "mid": 0.00890985324947589,
+          "cand_le_L": true,
+          "mid_le_L": true,
+          "cand_le_mid": true,
+          "L_lt_T_abs": true,
+          "ratio_cand_L": 0.9724770642201835,
+          "ratio_mid_L": 0.9814814814814814
+        },
+        "59": {
+          "L_abs": 0.008187302499281816,
+          "T_abs": 0.008257279443720122,
+          "cand": 0.007984311528225242,
+          "mid": 0.008050847457627118,
+          "cand_le_L": true,
+          "mid_le_L": true,
+          "cand_le_mid": true,
+          "L_lt_T_abs": true,
+          "ratio_cand_L": 0.9752066115702479,
+          "ratio_mid_L": 0.9833333333333333
+        }
+      },
+      "bi_tight": "Prop 15.47: g_min > T(p) (signed) blocks bi-tight level-2. Equivalent: max|m4| on |\u03ba|=1 < T_abs. Stronger target max|m4| \u2264 L_abs = -L(p)."
+    },
+    "type6_p3": {
+      "p": 3,
+      "n_type6": 8,
+      "lam_max_T_type6": 9.79795897113274,
+      "gap_4p": 2.20204102886726,
+      "lstsq_resid": 7.549516567451064e-15,
+      "max_abs_m_type6_kappa1": 0.33333333333333404,
+      "true_max_abs_m4_kappa1": 0.3333333333333333,
+      "L_abs": 0.05555555555555555,
+      "cand": 0.037037037037037035,
+      "mid": 0.041666666666666664,
+      "type6_le_L": false,
+      "type6_le_cand": false,
+      "type6_le_mid": false,
+      "top5_evals": [
+        9.79795897113274,
+        5.999999999999997,
+        4.000000000000001,
+        -4.251829007440926e-16,
+        -4.440892098500626e-16
+      ]
+    },
+    "type6_p5": {
+      "p": 5,
+      "n_type6": 11,
+      "lam_max_T_type6": 9.640286528180873,
+      "gap_4p": 10.359713471819127,
+      "lstsq_resid": 4.884981308350689e-15,
+      "max_abs_m_type6_kappa1": 0.046828114287821306,
+      "true_max_abs_m4_kappa1": 0.046153846153846156,
+      "L_abs": 0.06,
+      "cand": 0.046153846153846156,
+      "mid": 0.05,
+      "type6_le_L": true,
+      "type6_le_cand": false,
+      "type6_le_mid": true,
+      "top5_evals": [
+        9.640286528180873,
+        6.958892429075136,
+        5.561895254045556,
+        4.770182532491047,
+        2.209067679471042
+      ]
+    },
+    "census_p5": {
+      "p": 5,
+      "workers": 86,
+      "n_kappa1": 11700,
+      "max_abs_m4": 0.046153846153846156,
+      "g_min": -0.046153846153846156,
+      "L_p": -0.06,
+      "T_p": -0.06666666666666667,
+      "g_min_ge_L": true,
+      "g_min_gt_T": true,
+      "m4_le_cand": true,
+      "m4_le_mid": true,
+      "m4_le_L": true
+    },
+    "census_p7": {
+      "p": 7,
+      "workers": 86,
+      "n_kappa1": 176400,
+      "max_abs_m4": 0.03807195249738037,
+      "g_min": -0.03807195249738037,
+      "L_p": -0.05102040816326531,
+      "T_p": -0.054945054945054944,
+      "g_min_ge_L": true,
+      "g_min_gt_T": true,
+      "m4_le_cand": true,
+      "m4_le_mid": true,
+      "m4_le_L": true
+    }
+  },
+  "status": "Census multi-worker: p=5,7 both g_min\u2265L and g_min>T (bi-tight blocked numerically). mid_ub=(p-2)/(2p(p+1)): p5 le=True p7 le=True. cand sharp only p=5. Type6 Max+-free solves recorded. OPEN: prove max|m4|\u2264L_abs (or mid_ub or cand) for all primes p\u22655."
+}
