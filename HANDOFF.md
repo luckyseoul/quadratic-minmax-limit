@@ -1,3 +1,5 @@
+> **SESSION FAILURE HANDOFF (2026-07-29):** see `evidence/SESSION_HANDOFF_2026-07-29_FAILURE.md`. Local git ~121 commits **ahead of GitHub**; do not trust chat transcript. GPU may be DOWN. L OPEN.
+
 # Research handoff: min-max ±1 quadratic form limit
 
 **Status date:** 2026-07-29 (engineering graph live; F19/F20 filed; Prop 15.82 closed constancy p=5,7; general M_cand/GD still open; L still OPEN)  
