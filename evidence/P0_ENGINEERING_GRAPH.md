@@ -130,6 +130,7 @@ L = lim α_n                                    [OPEN]
 | 2026-07-29 | F20 | Confirmed: V100 idle during multi/pin_extra; only refine m4 used CuPy briefly. |
 | 2026-07-29 | F20+ | Bad recovery attempt: `gd_gpu_moments` added **busywork 4096 GEMMs** to inflate util; CUDA unknown error at p=7. Script **deleted**. Real GPU = necessary dense kernels only, with util logged — not synthetic load. |
 | 2026-07-29 | process | Graph + F19/F20 filed in E1_FAILURE_GRAPH + HANDOFF. Active node remains **N_GD_ALL** (algebra), not census/refine. |
+| 2026-07-29 | **C_GPU** | **DOWN** after F20+ crash: `nvidia-smi` → “No devices were found” / handle Unknown Error on 0000:03:00.0. Needs host GPU reset (sudo nvidia reload or reboot). Do **not** schedule GPU jobs until C_GPU = yes. |
 
 ---
 
