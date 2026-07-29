@@ -495,3 +495,124 @@ def test_prop_15_56_in_solution_and_evidence():
     assert "OPEN" in data["status"]
     assert data["results"][1]["spectral_gap_ok"] is True
     assert data["results"][2]["spectral_gap_ok"] is True
+
+
+def test_prop_15_58_maxplus_in_vplus_and_perron():
+    """Max+ ⊂ V_+ (Cy=py) and (P⊙P)1 = α1 with λ_max = α (p=3,5)."""
+    import os
+    import sys
+
+    import numpy as np
+
+    for k in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
+        os.environ[k] = "1"
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_cr_classify import load_maxplus
+    from minmax_quadratic import paley_conference_prime_power
+
+    for p, loader in (
+        (3, lambda: load_maxplus(3).astype(float)),
+        (5, lambda: np.load("/tmp/maxplus_p5.npy").astype(float)),
+    ):
+        C = paley_conference_prime_power(p).astype(float)
+        Y = loader()
+        N, n = Y.shape
+        d = n // 2
+        assert all(np.allclose(C @ y, p * y, atol=1e-8) for y in Y[: min(40, N)])
+        P = (Y @ Y.T) / (2.0 * N)
+        M = P * P
+        alpha = d / float(N)
+        ones = np.ones(N)
+        assert np.allclose(M @ ones, alpha * ones, atol=1e-8)
+        ev = np.linalg.eigvalsh(M)
+        assert abs(ev[-1] - alpha) < 1e-8
+
+
+def test_prop_15_58_veronese_equivalence_and_probe():
+    """Gap ⇔ ||T(x)||_F^2 ≤ n N ||x||^2 on 1^⊥; probe evidence present."""
+    import os
+    import sys
+
+    import numpy as np
+
+    for k in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
+        os.environ[k] = "1"
+    sys.path.insert(0, str(ROOT / "src"))
+
+    Y = np.load("/tmp/maxplus_p5.npy").astype(float)
+    N, n = Y.shape
+    d = n // 2
+    P = (Y @ Y.T) / (2.0 * N)
+    M = P * P
+    # λ2 via deflated matrix
+    Q1 = np.ones((N, N)) / N
+    Mp = (np.eye(N) - Q1) @ M @ (np.eye(N) - Q1)
+    lam2 = float(np.linalg.eigvalsh(Mp)[-1])
+    thr = d / (2.0 * N)
+    assert lam2 <= thr + 1e-10
+    # random x ⟂ 1: Veronese bound (uses real Max+ / shipped path)
+    rng = np.random.default_rng(0)
+    for _ in range(8):
+        x = rng.standard_normal(N)
+        x -= x.mean()
+        T = Y.T @ (x[:, None] * Y)
+        lhs = float(np.sum(T * T))
+        rhs = n * N * float(x @ x)
+        assert lhs <= rhs + 1e-6 * max(rhs, 1.0), (lhs, rhs)
+
+    path = ROOT / "evidence" / "e1_gmin_gap_probe.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    by_p = {r["p"]: r for r in data["results"]}
+    assert by_p[3]["gap_ok"] is False
+    assert by_p[5]["gap_ok"] is True
+    assert by_p[7]["gap_ok"] is True
+    assert by_p[5]["cycle_le_8n"] is True
+    assert by_p[3]["cycle_le_8n"] is False
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.58" in sol
+    assert "Veronese" in sol or "T(x)" in sol
+    assert "OPEN" in data["status"]
+
+
+def test_prop_15_59_centered_P1_zero_and_rank():
+    """Central symmetry ⇒ ∑y=0 ⇒ P1=0; rank(P⊙P)=binom(d-1,2) at p=3,5."""
+    import os
+    import sys
+
+    import numpy as np
+
+    for k in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
+        os.environ[k] = "1"
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_cr_classify import load_maxplus
+    from minmax_quadratic import paley_conference_prime_power
+
+    for p, loader in (
+        (3, lambda: load_maxplus(3).astype(float)),
+        (5, lambda: np.load("/tmp/maxplus_p5.npy").astype(float)),
+    ):
+        Y = loader()
+        N, n = Y.shape
+        d = n // 2
+        C = paley_conference_prime_power(p).astype(float)
+        # -y is Max+ (sample)
+        assert all(np.allclose(C @ (-y), p * (-y)) for y in Y[: min(20, N)])
+        assert np.allclose(Y.sum(axis=0), 0, atol=1e-8)
+        P = (Y @ Y.T) / (2.0 * N)
+        assert np.allclose(P @ np.ones(N), 0, atol=1e-8)
+        M = P * P
+        rank_M = int(np.sum(np.linalg.eigvalsh(M) > 1e-8))
+        assert rank_M == (d - 1) * (d - 2) // 2
+
+    path = ROOT / "evidence" / "e1_gmin_veronese.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    by_p = {r["p"]: r for r in data["results"]}
+    assert by_p[3]["centered_sum_y"] and by_p[3]["P1_zero"]
+    assert by_p[5]["gap_ok"] and not by_p[3]["gap_ok"]
+    assert by_p[7]["two_moment_forces_gap"] is True
+    assert by_p[5]["two_moment_forces_gap"] is False
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.59" in sol
+    assert "OPEN" in data["status"]

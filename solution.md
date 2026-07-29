@@ -1693,6 +1693,68 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 6. **Residual (OPEN).** Prove \(\lambda_2(P\odot P)\le d/(2N)\) for every prime \(p\ge5\) (equivalently \(\lambda_{\max}(G|_{\mathrm{Cyc}})\le n/2\)). Then Prop 15.55 closes bi-tight / Type I for all such \(p\). Deep non-tight residual independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.57 (triangle form bound; crude \(\lambda_{\max}(G)\le n\); 2026-07-30).** Let \(v\in\mathbb R^E\) with \(\|v\|=1\), and write \(B_{ij}=C_{ij}v_{ij}\) (\(i\neq j\)), \(B_{ii}=0\). Define the **triangle form**
+\[
+\mathrm{ft}(v)=\sum_{i=1}^n\sum_{j\neq i}\sum_{k\neq i}C_{ij}C_{ik}C_{jk}\,v_{ij}v_{ik}=\sum_{i}w^{(i)\top}C^{[i]}w^{(i)},
+\]
+where \(w^{(i)}_j=C_{ij}v_{ij}\) and \(C^{[i]}\) is the principal submatrix of \(C\) deleting row/column \(i\).
+
+1. **Triangle bound (proved).** \(|\mathrm{ft}(v)|\le 2p\).
+   *Proof.* For each \(i\), the Rayleigh principle gives \(|w^\top C^{[i]}w|\le\|C\|_{\mathrm{op}}\|w\|^2=p\,\delta_i\) with \(\delta_i=\sum_{j\neq i}v_{ij}^2\), because \(C^{[i]}\) is the restriction of the symmetric matrix \(C\) to a coordinate subspace (or directly: extend \(w\) by a zero at \(i\) and use \(\|C\|_{\mathrm{op}}=p\)). Summing over \(i\) and using \(\sum_i\delta_i=2\|v\|^2=2\) yields the claim. \(\square\)
+   Certified: on the cycle space, the spectrum of the triangle form is exactly \(\{\pm 2p\}\) at the extremes for \(p=3,5,7\). Evidence: `e1_gmin_spectral.json` / session residual notes.
+
+2. **Second-moment identity (proved).** For \(y\in\mathrm{Max}_{+}\),
+   \[
+   \mathbb E[\|By\|^2]=2+\frac{\mathrm{ft}(v)}{p}\le 4.
+   \]
+   *Proof.* Expand \(\mathbb E[y^\top B^\top B y]=\mathrm{Tr}(B^\top B\Sigma)\) with \(\Sigma=I+C/p\) and \(y_i^2=1\); the cross term is \(\mathrm{ft}/p\). Apply part 1. \(\square\)
+
+3. **Crude operator bound (proved).** \(\lambda_{\max}(G)\le n\).
+   *Proof.* Cauchy--Schwarz: \((y^\top By)^2\le n\|By\|^2\). Take \(\mathbb E\), use part 2, and \(f\cdot v=y^\top By/2\). \(\square\)
+   (Factor-of-two away from the target \(\lambda_{\max}\le n/2\); the maximising cycle direction has \(\mathrm{ft}=2p\) and \(By\in V_+\) for all Max+ \(y\), certified \(p=3,5,7\).)
+
+4. **Residual (OPEN).** Improve part 3 by a factor \(2\) on the cycle space for \(p\ge5\) (equivalently Prop 15.56.6: \(\lambda_2(P\odot P)\le d/(2N)\)). Then bi-tight closes for all primes \(p\ge5\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+**Proposition 15.58 (Max+ in \(V_+\); Perron of \(P\odot P\); Veronese residual form; 2026-07-30).** Continue Prop 15.56–15.57. Write \(d=n/2\), \(N=|\mathrm{Max}_{+}|\), \(\alpha=d/N\), \(Y\) the \(N\times n\) Max+ matrix, \(P=YY^\top/(2N)\), and \(u_a=y_a/\sqrt n\in V_+\) (unit vectors).
+
+1. **Max+ lies in \(V_+\) (proved).** For every \(y\in\mathrm{Max}_{+}\), \(Cy=py\). *Proof.* \(\Phi(y)=\tfrac12 y^\top Cy\) and the Max+ level is \(\Phi=pn/2\), so \(y^\top Cy=pn\). With \(\|y\|^2=n\) and \(C=p(P_+-P_-)\) one gets \(\|P_+y\|^2-\|P_-y\|^2=n\) and \(\|P_+y\|^2+\|P_-y\|^2=n\), hence \(P_-y=0\). \(\square\)
+   Consequently \(Y^\top Y=2N\,P_+\) (tight frame of Max+ in \(V_+\)).
+
+2. **Perron of the Schur square (proved, any equal-diagonal orthoprojector).** \((P\odot P)\mathbf1=\alpha\mathbf1\) and \(\lambda_{\max}(P\odot P)=\alpha\). *Proof.* \(\sum_b P_{ab}^2=P_{aa}=\alpha\) (from \(P^2=P\)), so row sums of \(P\odot P\) equal \(\alpha\). Entries of \(P\odot P\) are nonnegative, so Perron–Frobenius gives \(\lambda_{\max}=\alpha\) with eigenvector \(\mathbf1\). \(\square\)
+   The residual \(\lambda_2(P\odot P)\le\alpha/2\) is therefore a gap below the Perron root (equivalently \(\lambda_{\max}(G)=n/2\)).
+
+3. **Veronese / Gram reformulation (proved equivalent).** For \(x\in\mathbb R^N\) set \(T(x)=\sum_{a=1}^N x_a\,y_ay_a^\top\in\mathrm{Sym}_n\). Then
+   \[
+   \lambda_2(P\odot P)\le\frac\alpha2
+   \quad\Longleftrightarrow\quad
+   \|T(x)\|_F^2\le nN\,\|x\|^2
+   \quad\text{for all }x\perp\mathbf1.
+   \]
+   *Proof.* Expand \(\|T(x)\|_F^2=\sum_{a,b}x_ax_b(y_a\cdot y_b)^2\). With \(P_{ab}=(y_a\cdot y_b)/(2N)\) one has
+   \((y_a\cdot y_b)^2=4N^2(P\odot P)_{ab}\), so \(\|T\|_F^2=4N^2\,x^\top(P\odot P)x\). On \(\mathbf1^\perp\), \(x^\top(P\odot P)x\le\lambda_2(P\odot P)\|x\|^2\), and the target \(\lambda_2\le\alpha/2=d/(2N)\) rearranges to \(\|T\|_F^2\le nN\|x\|^2\) (using \(d=n/2\)). The reverse direction is the Rayleigh quotient for \(\lambda_2\). \(\square\)
+   Equivalently, writing \(W_{ab}=(u_a\cdot u_b)^2\), one has \(\lambda_1(W)=N/d\) and the residual is \(\lambda_2(W)\le N/n=\lambda_1(W)/2\).
+
+4. **Zero diagonal of \(T(x)\) on \(\mathbf1^\perp\) (proved).** If \(\sum_a x_a=0\) then \(T(x)_{ii}=\sum_a x_a=0\) for all \(i\) (using \(y_{a,i}^2=1\)). Thus \(T(x)\) is a zero-diagonal, trace-zero matrix supported through \(V_+\) (part 1).
+
+5. **Maximiser structure (certified \(p=3,5,7\); partial proof).** On a top cycle eigenvector of \(G\): \(\mathrm{ft}(v)=2p\), \(\mathbb E[\|By\|^2]=4\), \(By\in V_+\) for every Max+ \(y\), and \(\|P_+BP_+\|_F^2=2\). The identity \(\mathbb E[\|P_+By\|^2]=2\|P_+BP_+\|_F^2\) holds for every edge weight (2-design / frame). Evidence: `e1_gmin_gap_probe.json`.
+
+6. **Sufficient numerical bound (certified, not proved).** At \(p=5,7\), \(\lambda_{\mathrm{cycle}}\le 8n/(n+4)\le n/2\) (the \(2\times\) spherical fourth-moment comparison). At \(p=3\), the same comparison fails (\(\lambda_{\mathrm{cycle}}=8>8n/(n+4)\approx5.71\)), consistent with the gap failure. Evidence: `e1_gmin_gap_probe.json`. **Not a proof:** the fourth-moment ratio vs the sphere reaches \(\approx2.8>2\) at \(p=3\) and \(\approx1.95,1.43\) at \(p=5,7\); a universal factor-\(2\) sphere bound is false.
+
+7. **Residual (OPEN).** Prove part 3 for every prime \(p\ge5\) (e.g. \(\|T(x)\|_F^2\le nN\|x\|^2\) on \(\mathbf1^\perp\), or \(\lambda_2(W)\le\lambda_1(W)/2\)). Then Prop 15.55 closes bi-tight / Type I for all such \(p\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+**Proposition 15.59 (central symmetry, \(P\mathbf1=0\), rank of \(P\odot P\), two-moment; 2026-07-30).** Continue Prop 15.58.
+
+1. **Central symmetry (proved).** \(\mathrm{Max}_{+}=-\mathrm{Max}_{+}\). *Proof.* \(Cy=py\) iff \(C(-y)=p(-y)\), and \(-y\in\{\pm1\}^n\). \(\square\)
+
+2. **Frame is centered (proved).** \(\sum_{y\in\mathrm{Max}_{+}}y=0\) in \(\mathbb R^n\). *Proof.* Pair \(y\) with \(-y\) from part 1. \(\square\)
+   Consequently \(Y^\top\mathbf1=0\), so the orthoprojector \(P=YY^\top/(2N)\) satisfies \(P\mathbf1=0\) (range of \(P\) lies in \(\mathbf1^\perp\subset\mathbb R^N\)). Certified \(p=3,5,7\): `e1_gmin_veronese.json`.
+
+3. **Rank formula (certified \(p=3,5\); formula holds \(p=7\)).** \(\mathrm{rank}(P\odot P)=\binom{d-1}{2}\). Matches \(1+\mathrm{rank}_{\mathrm{cycle}}\) with \(\mathrm{rank}_{\mathrm{cycle}}=\binom{d-1}{2}-1\). Evidence: `e1_gmin_veronese.json`. *(Uniform proof of the rank formula for all primes \(p\ge3\) still open; not required if the Veronese bound is proved by other means.)*
+
+4. **Two-moment on \(W_{ab}=(u_a\cdot u_b)^2\) (partial).** Writing \(\lambda_1(W)=N/d\) and \(\sum_{j\ge2}\lambda_j(W)=N(1-1/d)\) (from \(\mathrm{Tr}(W)=N\)), the one-large-rest-equal estimate from \((\mathrm{Tr}(W^2),\mathrm{Tr}(W))\) **forces** \(\lambda_2(W)\le N/(2d)\) at \(p=7\), but **not** at \(p=3\) (correct: gap fails) or \(p=5\) (worst-case \(12.78>10\); actual \(\lambda_2\approx5.21\) with multiplicity \(d=13\)). Evidence: `e1_gmin_veronese.json`. Multiplicity-\(d\) two-moment would force the gap at \(p=5\); multiplicity not yet proved for general \(p\).
+
+5. **Residual (OPEN).** Same as Prop 15.58.7: prove \(\|T(x)\|_F^2\le nN\|x\|^2\) for all \(x\perp\mathbf1\) and all primes \(p\ge5\). Then \(\lambda_{\max}(G)=n/2\) simple, Prop 15.55 closes bi-tight / Type I, deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

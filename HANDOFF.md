@@ -1,9 +1,11 @@
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-07-30 (Prop 15.53 moduli shipped; L still OPEN)  
+**Status date:** 2026-07-30 (Prop 15.58 Veronese residual form; L still OPEN)  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
 **Resume file:** `evidence/SESSION_HANDOFF_2026-07-30.md`  
 **Problem source:** [MathOverflow 413935](https://mathoverflow.net/questions/413935) / [X prize post](https://x.com/PI010101/status/2081070728422752329)
+
+**Compute (F17, non-negotiable):** 88 cores. Full pytest only via `./scripts/pytest_full.sh` (`W=nproc-2`, default 86). Research scripts: file-based `ProcessPoolExecutor`, `OMP_NUM_THREADS=1` per worker. Never full-suite / multi-minute residual work on 1 core.
 
 ---
 
@@ -13,7 +15,7 @@
 Proved sandwich: \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\).  
 Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptotic optimality of \(m_n\) vs Paley \(\Phi\) is not.
 
-**P0 start:** prove \(g_{\min}\ge L(p)=-(p-2)/(2p^2)\) (equiv. \(\min a(e')\ge1/(2p-1)\) on \(f_e=1\) slice, Prop 15.51) for all primes \(p\ge5\); then deep non-tight; only then Main Theorem. Resume: `evidence/SESSION_HANDOFF_2026-07-30.md`. **F16:** do not pin modulus \(c\) by max PSD \(g_{\min}\) (wrong at \(p=5\); use \(\mathrm{Tr}(G^2)\)/spectrum).
+**P0 start:** prove \(\lambda_2(P\odot P)\le d/(2N)\) for all primes \(p\ge5\) (Prop 15.56.6 / 15.58.3 Veronese form \(\|T(x)\|_F^2\le nN\|x\|^2\) on \(\mathbf1^\perp\)); then deep non-tight ND; only then Main Theorem. Resume: `evidence/SESSION_HANDOFF_2026-07-30.md`. **F16:** do not pin modulus \(c\) by max PSD \(g_{\min}\).
 
 **Props 15.45–15.51 (load-bearing, do not re-derive):**
 - Stars never bi-tight (wedge \(G^++G^-=0\)).
@@ -25,8 +27,11 @@ Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptot
 - **Prop 15.52 (proved sum + moduli sketch):** \(\mathbf1^\top y=(p+1)y_\infty\) on Max+; m4 evec system sketch.
 - **Prop 15.53 (proved pairing + cert moduli pin):** \(g_{\min}=-\max|m_4|\) on \(|\kappa|=1\); refined classes (37 at \(p=5\)); nullity-1; \(\mathrm{Tr}(G^2)\) pin recovers \(-3/65\); \(\mathbb E[\mathrm{dot}^2]\) from 2-design **proved**. `src/e1_gmin_moduli.py`.
 - **Prop 15.54 (moduli \(c\)-calculus + wedge + a-slice + deep refresh):** wedge \(G=\pm1/p\); \(g_{\min}(c)\) pin; a_min p=5,7; deep covers spike at p=5.
-- **Prop 15.55–15.56 (tight obstruction + star/cycle/Schur reduction):** If \(\lambda_{\max}(G)=n/2\) simple ⇒ no Max+-tight size-\(2p\) cover. **Proved:** stars map to \(\mathbf1\); \(\lambda_{\max}=\max(n/2,\lambda_{\mathrm{cycle}})\); \(\lambda_{\mathrm{cycle}}=2N\lambda_2(P\odot P)\); avg cycle eig \(<n/2\) for \(p\ge5\). **Certified gap** \(\lambda_2(P\odot P)\le d/(2N)\) at \(p=5,7\) (fails \(p=3\)). Evidence: `e1_gmin_spectral.json`. **OPEN residual:** prove \(\lambda_2(P\odot P)\le d/(2N)\) for all primes \(p\ge5\).
-- **Residual to \(m_n\ge\Phi-2\Rightarrow L=\tfrac12\):** (1) spectral gap \(\lambda_2(P\odot P)\le d/(2N)\) ∀p≥5 (closes bi-tight); (2) deep non-tight ND. **F13/F16–F18** intact.
+- **Prop 15.55–15.56 (tight obstruction + star/cycle/Schur reduction):** If \(\lambda_{\max}(G)=n/2\) simple ⇒ no Max+-tight size-\(2p\) cover. **Proved:** stars map to \(\mathbf1\); \(\lambda_{\max}=\max(n/2,\lambda_{\mathrm{cycle}})\); \(\lambda_{\mathrm{cycle}}=2N\lambda_2(P\odot P)\); avg cycle eig \(<n/2\) for \(p\ge5\). **Certified gap** \(\lambda_2(P\odot P)\le d/(2N)\) at \(p=5,7\) (fails \(p=3\)). Evidence: `e1_gmin_spectral.json`.
+- **Prop 15.57 (triangle bound):** \(|\mathrm{ft}|\le2p\), \(\mathbb E[\|By\|^2]\le4\), crude \(\lambda_{\max}(G)\le n\) (factor-2 short of \(n/2\)).
+- **Prop 15.58 (Veronese residual form; 2026-07-30):** **Proved:** Max+\(\subset V_+\) (\(Cy=py\)); \((P\odot P)\mathbf1=\alpha\mathbf1\), \(\lambda_{\max}(P\odot P)=\alpha\) (Perron); gap \(\Leftrightarrow\|T(x)\|_F^2\le nN\|x\|^2\) for \(x\perp\mathbf1\) with \(T=\sum x_a y_ay_a^\top\); equiv. \(\lambda_2(W)\le\lambda_1(W)/2\) for \(W_{ab}=(u_a\cdot u_b)^2\). **Certified maximiser:** \(\mathrm{ft}=2p\), \(By\in V_+\), \(\|B_+\|_F^2=2\). Evidence: `e1_gmin_gap_probe.json`.
+- **Prop 15.59 (center / rank / two-moment; 2026-07-30):** **Proved:** Max+ centrally symmetric \(\Rightarrow\sum y_a=0\Rightarrow P\mathbf1=0\). **Certified:** \(\mathrm{rank}(P\odot P)=\binom{d-1}{2}\) at \(p=3,5\); two-moment on \(W\) forces gap at \(p=7\) only. Evidence: `e1_gmin_veronese.json`. **OPEN residual:** prove Veronese \(\|T(x)\|_F^2\le nN\|x\|^2\) for all primes \(p\ge5\) (mult-\(d\) two-moment would close \(p=5\) if mult proved). Bi-tight **not** yet closed for general \(p\).
+- **Residual to \(m_n\ge\Phi-2\Rightarrow L=\tfrac12\):** (1) Veronese/gap ∀p≥5 (closes bi-tight via Prop 15.55); (2) deep non-tight ND. **F13/F16–F18** intact.
 
 **g_min attack status (Prop 15.49–15.50):** \(g_{\min}=-\alpha_\star\) on constant-\(m_4\) \(|\kappa|=1\) CR classes. Values \(-\tfrac13,-\tfrac3{65},-\tfrac{109}{2863}\). Matching form \(\mathbf1_M^\top G\mathbf1_M\ge9.96>4\) at \(p=5\) (no tight matching). **Dead:** \(-3/\Phi\) general LB; 4-point LP; Chebyshev; Wick-as-LB; bare \(C\)-types; affine halfspace orbit; pure deg pigeon; min-norm \(V_+\) interpolation alone; Bose–Mesner alone (span too large); plain CLT residual (overestimates m4); **plain Fréchet on conditional cov** (Prop 15.50.4). **Need:** prove uniform LB for all \(p\ge5\) (character sum / bound \(\delta\) or \(m_4\) on min CR class) + deep residual.
 
