@@ -1,0 +1,157 @@
+{
+  "prop": "15.82",
+  "workers": 86,
+  "compute": {
+    "cpu_threads": 88,
+    "workers": 86,
+    "gpu": {
+      "available": true,
+      "backend": "cupy",
+      "name": "Tesla V100-SXM2-16GB",
+      "mem_free_gib": 16.456024064,
+      "mem_total_gib": 16.928342016,
+      "util_pct": null
+    },
+    "policy": "Use GPU for large dense batches if available; else ProcessPool W=86. Never single-core multi-minute thrash (F17)."
+  },
+  "stratification": "type6+CR (PGL-complete CR + S4 edge type)",
+  "io_policy": "mmap Max+; ProcessPool type6+CR class build; evec moduli; write_json_atomic",
+  "results": {
+    "5": {
+      "p": 5,
+      "stratification": "type6+CR",
+      "n_classes": 26,
+      "m4_all_constant": true,
+      "constancy": {
+        "n_classes": 26,
+        "n_constant_m4": 26,
+        "all_constant": true,
+        "max_std": 5.551115123125783e-17
+      },
+      "wall_class_s": 0.25450566499785054,
+      "nullity": 1,
+      "rank": 25,
+      "n_var": 26,
+      "residual_part": 2.6246268734973103e-15,
+      "M_cand": 0.046153846153846156,
+      "wall_s": 0.7140273459954187,
+      "io": "mmap Max+; ProcessPool type6+CR build; write_json_atomic",
+      "workers": 86,
+      "at_true_Max+": {
+        "max_star_S1": -0.03076923076923075,
+        "min_star_S1": -0.12923076923076926,
+        "max_abs_m4_kappa1": 0.046153846153846156,
+        "GD": true,
+        "n_positive": 0,
+        "n_checks": 90,
+        "m4_le_cand": true
+      },
+      "c_true": 0.28101779609233385,
+      "fit_err": 1.2802118217503043e-15,
+      "affine": {
+        "alpha": 0.05390070921985924,
+        "beta": -0.3012974308618835,
+        "fit_maxerr": 8.326672684688674e-17,
+        "exactly_affine": true,
+        "beta_positive": false,
+        "pred_max_star_S1_at_c_true": -0.030769230769229584,
+        "pred_matches_true_max": true
+      },
+      "c_GD": 0.17889534957424724,
+      "c_true_on_safe_side_of_c_GD": true,
+      "line_sample": [
+        {
+          "c": -0.11898220390766617,
+          "max_star_S1": 0.08974974157552384,
+          "max_abs_m4": 0.06121871769694058,
+          "GD": false
+        },
+        {
+          "c": -0.018982203907666167,
+          "max_star_S1": 0.05961999848933548,
+          "max_abs_m4": 0.057452499811167033,
+          "GD": false
+        },
+        {
+          "c": 0.08101779609233384,
+          "max_star_S1": 0.029490255403147154,
+          "max_abs_m4": 0.053686281925393486,
+          "GD": false
+        },
+        {
+          "c": 0.18101779609233387,
+          "max_star_S1": -0.000639487683041215,
+          "max_abs_m4": 0.04992006403961993,
+          "GD": true
+        },
+        {
+          "c": 0.28101779609233385,
+          "max_star_S1": -0.03076923076922955,
+          "max_abs_m4": 0.046153846153846385,
+          "GD": true
+        },
+        {
+          "c": 0.3810177960923338,
+          "max_star_S1": -0.06089897385541789,
+          "max_abs_m4": 0.04238762826807284,
+          "GD": true
+        },
+        {
+          "c": 0.4810177960923339,
+          "max_star_S1": -0.0910287169416063,
+          "max_abs_m4": 0.045514358470803866,
+          "GD": true
+        },
+        {
+          "c": 0.581017796092334,
+          "max_star_S1": -0.1211584600277946,
+          "max_abs_m4": 0.06057923001389807,
+          "GD": true
+        },
+        {
+          "c": 0.6810177960923338,
+          "max_star_S1": -0.151288203113983,
+          "max_abs_m4": 0.07564410155699222,
+          "GD": true
+        }
+      ],
+      "moduli_GD_ok": true,
+      "Tr_G2": 1808.3846153846155
+    },
+    "7": {
+      "p": 7,
+      "stratification": "type6+CR",
+      "n_classes": 48,
+      "m4_all_constant": true,
+      "constancy": {
+        "n_classes": 48,
+        "n_constant_m4": 48,
+        "all_constant": true,
+        "max_std": 1.3877787807814457e-17
+      },
+      "wall_class_s": 0.8601992809999501,
+      "nullity": 2,
+      "rank": 46,
+      "n_var": 48,
+      "residual_part": 2.926732994425127e-15,
+      "M_cand": 0.04201680672268908,
+      "wall_s": 2.6148355530021945,
+      "io": "mmap Max+; ProcessPool type6+CR build; write_json_atomic",
+      "workers": 86,
+      "at_true_Max+": {
+        "max_star_S1": -0.006686293099146732,
+        "min_star_S1": -0.09011526370939581,
+        "max_abs_m4_kappa1": 0.03807195249738037,
+        "GD": true,
+        "n_positive": 0,
+        "n_checks": 180,
+        "m4_le_cand": true
+      },
+      "moduli_GD_ok": true,
+      "note": "nullity=2: multi-parameter moduli; true Max+ GD/cand recorded; full c-vector pin OPEN"
+    }
+  },
+  "status": "Prop 15.82: type6+CR stratification \u2014 m4 constant p=5 (26 cls) and p=7 (48 cls) => True. Moduli GD+cand: p5=True (nullity=1), p7=True (nullity=2). OPEN: prove for all primes p\u22655 (or closed c*\u2264c_GD); lim \u03b1_n OPEN.",
+  "both_m4_constant": true,
+  "both_moduli_GD_ok": true
+}

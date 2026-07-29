@@ -2633,6 +2633,27 @@ Let \(n_1=\#\{S:|\kappa(S)|=1\}\) and \(n_3=\#\{S:|\kappa(S)|=3\}\).
 
 5. **Residual (OPEN).** For every prime \(p\ge5\): refine classes to constant \(m_4\) and nullity 1; prove \(\beta>0\) and \(c^\star\le c_{\mathrm{GD}}\) (or unique solution with GD); conclude \(\max|m_4|\le M_{\mathrm{cand}}\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.82 (type6+CR refinement; m4 constant at \(p=5,7\); moduli GD pin; 2026-07-29).** Continue Prop 15.81. Refine pure-\(C\) stratifications of 4-sets by adjoining the PGL-complete cross-ratio invariant of Prop 15.48–15.49 to the type6 (or type6+ext-hist) labels.
+
+1. **Constancy discovery (certified GPU+ProcessPool \(W=86\); mmap Max+).** Full Max+ \(m_4\) on all \(\binom{n}{4}\) quads (CuPy/V100, one H2D) and class-key shards:
+   | strat | \(p=5\) | \(p=7\) |
+   |-------|---------|---------|
+   | coarse \((\mathrm{type6},\mathrm{ext\text{-}hist})\) | 37/37 const | 69/82 const |
+   | type6+CR | **26/26 const** | **48/48 const** |
+   | coarse+CR | 48/48 const | 130/130 const |
+   In particular **type6+CR** (and coarse+CR) make \(m_4\) constant on every class at both \(p=5\) and \(p=7\). True Max+ still obeys \(\max_{|\kappa|=1}|m_4|\le M_{\mathrm{cand}}\) (sharp \(3/65\) at \(p=5\); \(\approx0.038<5/119\) at \(p=7\)). Evidence: `e1_gmin_m4_refine.json`. \(\square\)
+
+2. **Moduli on type6+CR (certified \(W=86\)).** Averaged evec system \(Am=b\):
+   - **\(p=5\):** 26 classes, **nullity 1**. Affine law \(\max\mathrm{star}\cdot S_1=\alpha+\beta c\) exact (\(\beta<0\)); physical \(c^\star\) lies on the safe side of \(c_{\mathrm{GD}}\) (i.e. \(\max\mathrm{star}\cdot S_1(c^\star)\le0\)); \(\max|m_4|=M_{\mathrm{cand}}\); GD holds. Thus **cand+GD at \(p=5\)** also under the type6+CR line (cf. Prop 15.81 coarse line).
+   - **\(p=7\):** 48 classes, **nullity 2**. True Max+ still has GD and \(\max|m_4|\le M_{\mathrm{cand}}\); full multi-parameter pin OPEN.
+   Evidence: `e1_gmin_m4_refine_moduli.json`. \(\square\)
+
+3. **Safe-side orientation (proved form).** On a nullity-1 line, \(\max\mathrm{star}\cdot S_1=\alpha+\beta c\). If \(\beta>0\) then GD \(\Leftrightarrow c\le c_{\mathrm{GD}}:=-\alpha/\beta\); if \(\beta<0\) then GD \(\Leftrightarrow c\ge c_{\mathrm{GD}}\). The sign of \(\beta\) depends on null-vector orientation; the physical check is always \(\mathrm{sign}(\beta)\cdot(c^\star-c_{\mathrm{GD}})\le0\). \(\square\)
+
+4. **Extra linear pins (certified \(W=86\)).** On type6+CR, \(\sum_S m_4(S)=e_4\) (Prop 15.73) holds exactly at \(p=5,7\) but is already in the row-span of the averaged evec system (rank unchanged). Denser evec sampling likewise does not drop the \(p=7\) nullity below 2. Coarse+CR (130 classes) also has nullity 2. Evidence: `e1_gmin_m4_pin_extra.json`, `e1_gmin_m4_refine_moduli_multi.json`. \(\square\)
+
+5. **Residual (OPEN).** For every prime \(p\ge5\): either obtain a constant-\(m_4\) stratification with nullity \(\le1\) and prove \(c^\star\) safe-side of \(c_{\mathrm{GD}}\), or close a multi-parameter pin (Tr\((G^2)\) surface + second moment / character-sum GD) so \(\max|m_4|\le M_{\mathrm{cand}}\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

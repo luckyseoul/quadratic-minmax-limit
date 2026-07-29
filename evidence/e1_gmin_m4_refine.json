@@ -1,0 +1,618 @@
+{
+  "prop": "15.82",
+  "workers": 86,
+  "compute": {
+    "cpu_threads": 88,
+    "workers": 86,
+    "gpu": {
+      "available": true,
+      "backend": "cupy",
+      "name": "Tesla V100-SXM2-16GB",
+      "mem_free_gib": 16.456024064,
+      "mem_total_gib": 16.928342016,
+      "util_pct": null
+    },
+    "policy": "Use GPU for large dense batches if available; else ProcessPool W=86. Never single-core multi-minute thrash (F17)."
+  },
+  "use_gpu": true,
+  "io_policy": "mmap Max+; GPU all-m4 (one CUDA context); ProcessPool class-key shards; write_json_atomic",
+  "results": {
+    "5": {
+      "p": 5,
+      "n": 26,
+      "N": 260,
+      "n_quads": 14950,
+      "gpu_m4": {
+        "backend": "cupy",
+        "gpu": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 16.456024064,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "gpu_after": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 16.35745792,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "wall_s": 0.13052842700562906,
+        "n_quads": 14950,
+        "batch": 50000,
+        "io": "mmap Max+; single H2D; D2H m4 only"
+      },
+      "gpu_used": true,
+      "max_abs_m4_kappa1": 0.046153846153846156,
+      "M_cand": 0.046153846153846156,
+      "m4_le_cand": true,
+      "strategies": {
+        "coarse": {
+          "n_classes": 37,
+          "n_constant": 37,
+          "n_nonconstant": 0,
+          "all_constant": true,
+          "max_std": 5.551115123125783e-17,
+          "max_distinct_m4_in_class": 1,
+          "nonconst_examples": [],
+          "wall_key_s": 0.2839504739968106,
+          "mode": "coarse"
+        },
+        "coarse+kappa": {
+          "n_classes": 37,
+          "n_constant": 37,
+          "n_nonconstant": 0,
+          "all_constant": true,
+          "max_std": 5.551115123125783e-17,
+          "max_distinct_m4_in_class": 1,
+          "nonconst_examples": [],
+          "wall_key_s": 0.2011265709879808,
+          "mode": "coarse+kappa"
+        },
+        "cr": {
+          "n_classes": 5,
+          "n_constant": 0,
+          "n_nonconstant": 5,
+          "all_constant": false,
+          "max_std": 0.21078381551523914,
+          "max_distinct_m4_in_class": 4,
+          "nonconst_examples": [
+            {
+              "n": 1950,
+              "std": 0.16854663719176266,
+              "n_distinct_m4": 4,
+              "m4_counts": {
+                "0.1384615385": 675,
+                "0.2": 525,
+                "-0.2": 450,
+                "-0.1384615385": 300
+              }
+            },
+            {
+              "n": 3900,
+              "std": 0.04601709371650552,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.0461538462": 2100,
+                "0.0461538462": 1800
+              }
+            },
+            {
+              "n": 3900,
+              "std": 0.04601709371650552,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.0461538462": 2100,
+                "0.0461538462": 1800
+              }
+            },
+            {
+              "n": 3900,
+              "std": 0.014969361704939073,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.0153846154": 2400,
+                "0.0153846154": 1500
+              }
+            },
+            {
+              "n": 1300,
+              "std": 0.21078381551523914,
+              "n_distinct_m4": 4,
+              "m4_counts": {
+                "-0.3230769231": 500,
+                "-0.0153846154": 400,
+                "0.0153846154": 250,
+                "0.3230769231": 150
+              }
+            }
+          ],
+          "wall_key_s": 0.18511221400694922,
+          "mode": "cr"
+        },
+        "cr+kappa": {
+          "n_classes": 10,
+          "n_constant": 6,
+          "n_nonconstant": 4,
+          "all_constant": false,
+          "max_std": 0.15289353692306254,
+          "max_distinct_m4_in_class": 2,
+          "nonconst_examples": [
+            {
+              "n": 1200,
+              "std": 0.03052789974305297,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "0.1384615385": 675,
+                "0.2": 525
+              }
+            },
+            {
+              "n": 400,
+              "std": 0.14896089793105452,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "0.0153846154": 250,
+                "0.3230769231": 150
+              }
+            },
+            {
+              "n": 750,
+              "std": 0.030147566065023734,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.2": 450,
+                "-0.1384615385": 300
+              }
+            },
+            {
+              "n": 900,
+              "std": 0.15289353692306254,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.3230769231": 500,
+                "-0.0153846154": 400
+              }
+            }
+          ],
+          "wall_key_s": 0.1633545570075512,
+          "mode": "cr+kappa"
+        },
+        "type6+cr": {
+          "n_classes": 26,
+          "n_constant": 26,
+          "n_nonconstant": 0,
+          "all_constant": true,
+          "max_std": 5.551115123125783e-17,
+          "max_distinct_m4_in_class": 1,
+          "nonconst_examples": [],
+          "wall_key_s": 0.17600562199368142,
+          "mode": "type6+cr"
+        },
+        "type6+cr+kappa": {
+          "n_classes": 26,
+          "n_constant": 26,
+          "n_nonconstant": 0,
+          "all_constant": true,
+          "max_std": 5.551115123125783e-17,
+          "max_distinct_m4_in_class": 1,
+          "nonconst_examples": [],
+          "wall_key_s": 0.18623333200230263,
+          "mode": "type6+cr+kappa"
+        },
+        "coarse+cr": {
+          "n_classes": 48,
+          "n_constant": 48,
+          "n_nonconstant": 0,
+          "all_constant": true,
+          "max_std": 5.551115123125783e-17,
+          "max_distinct_m4_in_class": 1,
+          "nonconst_examples": [],
+          "wall_key_s": 0.18445810700359289,
+          "mode": "coarse+cr"
+        },
+        "coarse+cr+kappa": {
+          "n_classes": 48,
+          "n_constant": 48,
+          "n_nonconstant": 0,
+          "all_constant": true,
+          "max_std": 5.551115123125783e-17,
+          "max_distinct_m4_in_class": 1,
+          "nonconst_examples": [],
+          "wall_key_s": 0.17885432299226522,
+          "mode": "coarse+cr+kappa"
+        }
+      },
+      "best_constant_strategy": {
+        "mode": "type6+cr",
+        "n_classes": 26,
+        "n_constant": 26,
+        "n_nonconstant": 0,
+        "all_constant": true,
+        "max_std": 5.551115123125783e-17,
+        "max_distinct_m4_in_class": 1,
+        "nonconst_examples": [],
+        "wall_key_s": 0.17600562199368142
+      },
+      "workers": 86,
+      "io": "mmap Max+; GPU all-m4; ProcessPool class keys; write_json_atomic"
+    },
+    "7": {
+      "p": 7,
+      "n": 50,
+      "N": 11452,
+      "n_quads": 230300,
+      "gpu_m4": {
+        "backend": "cupy",
+        "gpu": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 16.35745792,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "gpu_after": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 13.05444352,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "wall_s": 0.3832257260073675,
+        "n_quads": 230300,
+        "batch": 12000,
+        "io": "mmap Max+; single H2D; D2H m4 only"
+      },
+      "gpu_used": true,
+      "max_abs_m4_kappa1": 0.03807195249738037,
+      "M_cand": 0.04201680672268908,
+      "m4_le_cand": true,
+      "strategies": {
+        "coarse": {
+          "n_classes": 82,
+          "n_constant": 69,
+          "n_nonconstant": 13,
+          "all_constant": false,
+          "max_std": 0.0125742228431715,
+          "max_distinct_m4_in_class": 2,
+          "nonconst_examples": [
+            {
+              "n": 1568,
+              "std": 0.01088959641503311,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "0.0485504715": 1176,
+                "0.0234020258": 392
+              }
+            },
+            {
+              "n": 2352,
+              "std": 0.008382815228781,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "0.0380719525": 1176,
+                "0.021306322": 1176
+              }
+            },
+            {
+              "n": 2352,
+              "std": 0.008382815228781,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.021306322": 1176,
+                "-0.0380719525": 1176
+              }
+            },
+            {
+              "n": 1568,
+              "std": 0.007259730943355403,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.097450227": 1176,
+                "-0.1142158575": 392
+              }
+            },
+            {
+              "n": 4704,
+              "std": 0.008382815228781,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.021306322": 2352,
+                "-0.0380719525": 2352
+              }
+            },
+            {
+              "n": 4704,
+              "std": 0.0125742228431715,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.0485504715": 2352,
+                "-0.0234020258": 2352
+              }
+            }
+          ],
+          "wall_key_s": 1.2377081010054098,
+          "mode": "coarse"
+        },
+        "coarse+kappa": {
+          "n_classes": 82,
+          "n_constant": 69,
+          "n_nonconstant": 13,
+          "all_constant": false,
+          "max_std": 0.0125742228431715,
+          "max_distinct_m4_in_class": 2,
+          "nonconst_examples": [
+            {
+              "n": 1568,
+              "std": 0.01088959641503311,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "0.0485504715": 1176,
+                "0.0234020258": 392
+              }
+            },
+            {
+              "n": 2352,
+              "std": 0.008382815228781,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "0.0380719525": 1176,
+                "0.021306322": 1176
+              }
+            },
+            {
+              "n": 2352,
+              "std": 0.008382815228781,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.021306322": 1176,
+                "-0.0380719525": 1176
+              }
+            },
+            {
+              "n": 1568,
+              "std": 0.007259730943355403,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.097450227": 1176,
+                "-0.1142158575": 392
+              }
+            },
+            {
+              "n": 4704,
+              "std": 0.008382815228781,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.021306322": 2352,
+                "-0.0380719525": 2352
+              }
+            },
+            {
+              "n": 4704,
+              "std": 0.0125742228431715,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.0485504715": 2352,
+                "-0.0234020258": 2352
+              }
+            }
+          ],
+          "wall_key_s": 1.3611367240082473,
+          "mode": "coarse+kappa"
+        },
+        "cr": {
+          "n_classes": 9,
+          "n_constant": 0,
+          "n_nonconstant": 9,
+          "all_constant": false,
+          "max_std": 0.08219301290613217,
+          "max_distinct_m4_in_class": 4,
+          "nonconst_examples": [
+            {
+              "n": 14700,
+              "std": 0.05154502887198698,
+              "n_distinct_m4": 4,
+              "m4_counts": {
+                "0.0345791128": 4998,
+                "0.0667132379": 4410,
+                "-0.0667132379": 2940,
+                "-0.0345791128": 2352
+              }
+            },
+            {
+              "n": 9800,
+              "std": 0.08219301290613217,
+              "n_distinct_m4": 4,
+              "m4_counts": {
+                "-0.1142158575": 2744,
+                "0.0234020258": 2548,
+                "-0.0234020258": 2352,
+                "0.1142158575": 2156
+              }
+            },
+            {
+              "n": 29400,
+              "std": 0.02268528787402841,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.0227034579": 15288,
+                "0.0227034579": 14112
+              }
+            },
+            {
+              "n": 29400,
+              "std": 0.02268528787402841,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.0227034579": 15288,
+                "0.0227034579": 14112
+              }
+            },
+            {
+              "n": 29400,
+              "std": 0.03730274285202465,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.0380719525": 17640,
+                "0.0380719525": 11760
+              }
+            },
+            {
+              "n": 29400,
+              "std": 0.020875846917188107,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.021306322": 17640,
+                "0.021306322": 11760
+              }
+            }
+          ],
+          "wall_key_s": 1.1540020699903835,
+          "mode": "cr"
+        },
+        "cr+kappa": {
+          "n_classes": 18,
+          "n_constant": 12,
+          "n_nonconstant": 6,
+          "all_constant": false,
+          "max_std": 0.045272376516995186,
+          "max_distinct_m4_in_class": 2,
+          "nonconst_examples": [
+            {
+              "n": 9408,
+              "std": 0.01603565083485156,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "0.0345791128": 4998,
+                "0.0667132379": 4410
+              }
+            },
+            {
+              "n": 4704,
+              "std": 0.04524897824552281,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "0.0234020258": 2548,
+                "0.1142158575": 2156
+              }
+            },
+            {
+              "n": 14112,
+              "std": 0.024364834439896902,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "0.0485504715": 7644,
+                "0.097450227": 6468
+              }
+            },
+            {
+              "n": 5292,
+              "std": 0.01596757511002295,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.0667132379": 2940,
+                "-0.0345791128": 2352
+              }
+            },
+            {
+              "n": 15288,
+              "std": 0.024377433509151253,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.097450227": 8232,
+                "-0.0485504715": 7056
+              }
+            },
+            {
+              "n": 5096,
+              "std": 0.045272376516995186,
+              "n_distinct_m4": 2,
+              "m4_counts": {
+                "-0.1142158575": 2744,
+                "-0.0234020258": 2352
+              }
+            }
+          ],
+          "wall_key_s": 1.187539974009269,
+          "mode": "cr+kappa"
+        },
+        "type6+cr": {
+          "n_classes": 48,
+          "n_constant": 48,
+          "n_nonconstant": 0,
+          "all_constant": true,
+          "max_std": 2.7755575615628914e-17,
+          "max_distinct_m4_in_class": 1,
+          "nonconst_examples": [],
+          "wall_key_s": 1.1786870020005153,
+          "mode": "type6+cr"
+        },
+        "type6+cr+kappa": {
+          "n_classes": 48,
+          "n_constant": 48,
+          "n_nonconstant": 0,
+          "all_constant": true,
+          "max_std": 2.7755575615628914e-17,
+          "max_distinct_m4_in_class": 1,
+          "nonconst_examples": [],
+          "wall_key_s": 1.1995632340112934,
+          "mode": "type6+cr+kappa"
+        },
+        "coarse+cr": {
+          "n_classes": 130,
+          "n_constant": 130,
+          "n_nonconstant": 0,
+          "all_constant": true,
+          "max_std": 2.7755575615628914e-17,
+          "max_distinct_m4_in_class": 1,
+          "nonconst_examples": [],
+          "wall_key_s": 1.4612733800022397,
+          "mode": "coarse+cr"
+        },
+        "coarse+cr+kappa": {
+          "n_classes": 130,
+          "n_constant": 130,
+          "n_nonconstant": 0,
+          "all_constant": true,
+          "max_std": 2.7755575615628914e-17,
+          "max_distinct_m4_in_class": 1,
+          "nonconst_examples": [],
+          "wall_key_s": 1.4837605429929681,
+          "mode": "coarse+cr+kappa"
+        }
+      },
+      "best_constant_strategy": {
+        "mode": "type6+cr",
+        "n_classes": 48,
+        "n_constant": 48,
+        "n_nonconstant": 0,
+        "all_constant": true,
+        "max_std": 2.7755575615628914e-17,
+        "max_distinct_m4_in_class": 1,
+        "nonconst_examples": [],
+        "wall_key_s": 1.1786870020005153
+      },
+      "workers": 86,
+      "io": "mmap Max+; GPU all-m4; ProcessPool class keys; write_json_atomic"
+    }
+  },
+  "status": "Prop 15.82: GPU+multi-worker class refinement. p=5 coarse constant=True (37 classes). p=7 some strategy all-constant=True best=type6+cr n_classes=48. m4_le_cand p5=True p7=True. OPEN: if p7 constant, run moduli c*\u2264c_GD; else find finer C/Aut invariant. lim \u03b1_n OPEN.",
+  "p5_coarse_constant": true,
+  "p7_some_strategy_constant": true,
+  "p7_best": {
+    "mode": "type6+cr",
+    "n_classes": 48,
+    "n_constant": 48,
+    "n_nonconstant": 0,
+    "all_constant": true,
+    "max_std": 2.7755575615628914e-17,
+    "max_distinct_m4_in_class": 1,
+    "nonconst_examples": [],
+    "wall_key_s": 1.1786870020005153
+  }
+}

@@ -1377,6 +1377,61 @@ def test_prop_15_81_moduli_line_gd():
     assert "OPEN" in (ROOT / "HANDOFF.md").read_text()[:900]
 
 
+def test_prop_15_82_type6_cr_refine_and_moduli():
+    """Prop 15.82: type6+CR m4-constant p=5,7; p=5 moduli GD; p=7 true cand+GD."""
+    path_r = ROOT / "evidence" / "e1_gmin_m4_refine.json"
+    path_m = ROOT / "evidence" / "e1_gmin_m4_refine_moduli.json"
+    assert path_r.is_file(), "run src/e1_gmin_m4_refine.py (GPU+W=86)"
+    assert path_m.is_file(), "run src/e1_gmin_m4_refine_moduli.py (W=86)"
+
+    ref = json.loads(path_r.read_text())
+    assert ref["prop"] == "15.82"
+    assert ref["workers"] >= 4
+    assert ref["use_gpu"] is True
+    assert ref["p7_some_strategy_constant"] is True
+    for p in ("5", "7"):
+        r = ref["results"][p]
+        assert r["gpu_used"] is True
+        assert r["m4_le_cand"] is True
+        t6 = r["strategies"]["type6+cr"]
+        assert t6["all_constant"] is True
+        assert t6["n_nonconstant"] == 0
+        assert t6["max_std"] < 1e-9
+    assert ref["results"]["5"]["strategies"]["type6+cr"]["n_classes"] == 26
+    assert ref["results"]["7"]["strategies"]["type6+cr"]["n_classes"] == 48
+    assert abs(ref["results"]["5"]["max_abs_m4_kappa1"] - 3 / 65) < 1e-9
+    assert "OPEN" in ref["status"]
+
+    mod = json.loads(path_m.read_text())
+    assert mod["prop"] == "15.82"
+    assert mod["workers"] >= 4
+    assert mod["both_m4_constant"] is True
+    r5 = mod["results"]["5"]
+    assert r5["m4_all_constant"] is True
+    assert r5["nullity"] == 1
+    assert r5["affine"]["exactly_affine"] is True
+    assert r5["c_true_on_safe_side_of_c_GD"] is True
+    assert r5["moduli_GD_ok"] is True
+    assert r5["at_true_Max+"]["GD"] is True
+    assert r5["at_true_Max+"]["m4_le_cand"] is True
+    assert abs(r5["at_true_Max+"]["max_abs_m4_kappa1"] - 3 / 65) < 1e-9
+    r7 = mod["results"]["7"]
+    assert r7["m4_all_constant"] is True
+    assert r7["n_classes"] == 48
+    assert r7["nullity"] == 2  # multi-param pin still OPEN
+    assert r7["at_true_Max+"]["GD"] is True
+    assert r7["at_true_Max+"]["m4_le_cand"] is True
+    assert r7["at_true_Max+"]["max_abs_m4_kappa1"] < r7["M_cand"] + 1e-12
+    assert "OPEN" in mod["status"]
+
+    sol = (ROOT / "solution.md").read_text()
+    hand = (ROOT / "HANDOFF.md").read_text()
+    assert "15.82" in sol
+    assert "15.82" in hand
+    assert "OPEN" in hand[:1200]
+    assert "type6+CR" in sol or "type6+cr" in sol.lower()
+
+
 def test_prop_15_80_gd_linear_wick():
     """Prop 15.80: linear Wick identity, GD form, U1-special, GPU census."""
     import sys
