@@ -2399,6 +2399,35 @@ Let \(n_1=\#\{S:|\kappa(S)|=1\}\) and \(n_3=\#\{S:|\kappa(S)|=3\}\).
 
 5. **Residual (OPEN).** Bound \(\sum_r C_{ar}\rho(S_{a\to r})\) (or the signed global operator of Prop 15.74) tightly enough that part 2 forces \(m_4\le M_{\mathrm{cand}}\) for every prime \(p\ge5\). Absolute degree bounds do not contract. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.76 (one-center extension degrees; residual split; 2026-07-29).** Continue Prop 15.75. Write \(d_1=3p^2-7\), \(d_3=p^2-5\) for the full ordered-extension degrees on \(|\kappa|=1\) (Prop 15.68/15.72).
+
+1. **Divisibility (proved).** For every odd integer \(p\ge3\), \(4\mid(3p^2-7)\) and \(4\mid(p^2-5)\). Hence
+   \[
+   d_1^{(1)}:=\frac{3p^2-7}{4},\qquad d_3^{(1)}:=\frac{p^2-5}{4}
+   \]
+   are integers, and \(d_1^{(1)}+d_3^{(1)}=p^2-3=n-4\), \(4d_1^{(1)}=d_1\), \(4d_3^{(1)}=d_3\). \(\square\)
+
+2. **One-center degree constancy (certified Paley \(p=3,5,7,11\); \(W=86\)).** On every \(|\kappa|=1\) 4-set \(S\) and every centre \(a\in S\), among the \(n-4\) one-vertex extensions \(S_{a\to r}\), exactly \(d_1^{(1)}\) land in \(|\kappa|=1\) and \(d_3^{(1)}\) land in \(|\kappa|=3\). (So the full \(4(n-4)\) count splits evenly across the four centres.) Evidence: `e1_gmin_m4_onecenter_deg.json`. \(\square\)
+
+3. **Residual split (proved form).** With \(\rho=m_4-\kappa/p^2\) and \(\sigma_a=2\cdot\mathrm{star}_a\) (Prop 15.75), for each centre \(a\) on a \(|\kappa|=1\) set with \(\kappa=1\),
+   \[
+   p\rho-\frac{2\,\mathrm{star}_a}{p^2}
+   \;=\;S_1(a)+S_3(a),
+   \]
+   where \(S_j(a)=\sum C_{ar}\rho(S_{a\to r})\) runs over extensions to \(|\kappa|=j\). In particular \(|S_3(a)|\le d_3^{(1)}R_3\) and \(|S_1(a)|\le d_1^{(1)}R_1\) with \(R_j=\max|\rho|\) on the \(|\kappa|=j\) stratum. \(\square\)
+
+4. **Absolute bootstrap fails (proved).** The four-centre form \(4p R_1\le d_1 R_1+d_3 R_3\) rearranges to \(R_1(4p-d_1)\le d_3 R_3\). For primes \(p\ge5\), \(4p-d_1=4p-(3p^2-7)<0\), so this yields only a lower bound on \(R_1\), not an upper bound. Signed cancellation on \(S_1\) (or a design bound coupling \(R_1,R_3\)) is load-bearing. \(\square\)
+
+5. **GPU residual moments (certified \(p=5,7\); CuPy/V100; mmap+atomic).** Full-quad m4 on Max+:
+   | \(p\) | \(\max|m_4|_{\kappa=1}\) | \(\max|m_4|_{\kappa=3}\) | \(R_1\) | \(R_3\) | \(\le M_{\mathrm{cand}}\) |
+   |------|--------------------------|--------------------------|--------|--------|------------------------|
+   | 5 | \(3/65\) | \(21/65\) | \(0.0554\) | \(0.2031\) | yes |
+   | 7 | \(109/2863\) | \(\approx0.1142\) | \(0.0177\) | \(0.0530\) | yes |
+
+   Note \(R_1>\max r\) (same-sign residual) because opposite-sign \(\rho\) on \(|\kappa|=1\) is larger; only same-sign \(r\) raises \(|m_4|\) above Wick. Evidence: `e1_gmin_m4_onecenter_deg.json`. \(\square\)
+
+6. **Residual (OPEN).** Prove a signed bound on \(S_1+S_3\) (e.g. \(S_1\le0\) at \(\mathrm{star}_a=+1\) on maximisers, or a Paley character-sum formula for \(\rho\)) strong enough that part 3 forces \(\rho\le(p^2-4p-3)/(p^2(2p+3))\) on same-sign \(|\kappa|=1\), i.e. \(m_4\le M_{\mathrm{cand}}\), for every prime \(p\ge5\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

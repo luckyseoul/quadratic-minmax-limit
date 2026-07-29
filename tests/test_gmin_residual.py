@@ -1246,6 +1246,56 @@ def test_prop_15_68_tkappa_vanishing_and_resolvent_reduction():
     assert "OPEN" in data["status"]
 
 
+def test_prop_15_76_one_center_degrees():
+    """Drive shipped one-center degree algebra + census evidence."""
+    import sys
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_m4_onecenter_deg import (
+        algebra_degrees,
+        d1_one,
+        d3_one,
+        d1_full,
+        d3_full,
+        M_cand,
+        L_abs,
+    )
+
+    alg = algebra_degrees()
+    assert alg["proved_divisibility_algebra"] is True
+    for p in (3, 5, 7, 11, 13, 17, 19):
+        assert 4 * d1_one(p) == d1_full(p)
+        assert 4 * d3_one(p) == d3_full(p)
+        assert d1_one(p) + d3_one(p) == p * p - 3
+        assert (3 * p * p - 7) % 4 == 0
+        assert (p * p - 5) % 4 == 0
+        if p >= 5:
+            assert M_cand(p) < (p - 2) / (p * (2 * p - 1))  # cand < T_abs
+            assert M_cand(p) <= L_abs(p) + 1e-15
+
+    path = ROOT / "evidence" / "e1_gmin_m4_onecenter_deg.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    assert data["workers"] >= 4
+    assert data["one_center_degrees_constant"] is True
+    for p in ("3", "5", "7", "11"):
+        r = data["degree_certs"][p]
+        assert r["d1_constant_match"] and r["d3_constant_match"]
+        assert r["d1_one_unique"] == [d1_one(int(p))]
+        assert r["d3_one_unique"] == [d3_one(int(p))]
+    # GPU residual probe when present
+    if data.get("gpu_residual_probe"):
+        for p in ("5", "7"):
+            if p in data["gpu_residual_probe"] and data["gpu_residual_probe"][p]:
+                g = data["gpu_residual_probe"][p]
+                assert g["gpu_used"] is True
+                assert g["m4_le_cand"] is True
+                assert "mmap" in g["io"].lower()
+    assert "OPEN" in data["status"]
+    assert "15.76" in (ROOT / "solution.md").read_text()
+    assert "OPEN" in (ROOT / "HANDOFF.md").read_text()[:900]
+
+
 def test_prop_15_75_onecenter_sigma_and_gpu_cand():
     """Drive shipped onecenter algebra + GPU cand census (mmap+atomic path)."""
     import sys

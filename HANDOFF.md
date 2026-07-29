@@ -1,6 +1,6 @@
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-07-29 (Prop 15.75 σ_a=2·star + GPU/mmap/atomic cand cert; general p≥5 still open; L still OPEN)  
+**Status date:** 2026-07-29 (Prop 15.76 one-center degrees; general M_cand still open; L still OPEN)  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
 **Resume file:** `evidence/SESSION_HANDOFF_2026-07-30.md`  
 **Problem source:** [MathOverflow 413935](https://mathoverflow.net/questions/413935) / [X prize post](https://x.com/PI010101/status/2081070728422752329)
@@ -45,6 +45,7 @@ Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptot
 - **Prop 15.73 (Max+ e4 identity; Paley ∑κ; multi-prime type6; 2026-07-29):** **Proved:** e4=-p(p-1)(p+1)(p+4)/12 from Prop 15.52 + boolean expansion ⇒ ∑_S m4(S)=e4. **Certified:** ∑κ=p²(p²-1)/4 at p=3,5,7,11,13; type6 Max+-free resolvent le_L and le_mid at p=5,7,11,13 with gain≪budget (type6 not exact upper bound — p=7 true m4>type6). Evidence: `e1_gmin_m4_e4_gain.json`. **OPEN residual:** true Max+ |m4|≤M_mid/L for all p≥5; lim α_n OPEN.
 - **Prop 15.74 (candidate bound; true Max+ census; signed residual; 2026-07-29):** **Proved:** M_cand algebra; gain_cand=(p²-4p-3)/(24(2p+3)); 4p r=κ(Tρ) on |κ|=1. **Certified W=86 true Max+ (mmap, not type6):** max|m4|≤M_cand at p=5 (sharp 3/65) and p=7 (109/2863<5/119); same-sign gains 1/156 and ≈0.036. Evidence: `e1_gmin_m4_kernel.json`. **OPEN:** prove max|m4|≤M_cand for all primes p≥5; lim α_n OPEN.
 - **Prop 15.75 (one-center σ_a=2·star_a; K4 Gram spectrum; GPU cand; 2026-07-29):** **Proved (any conference):** σ_a=∑_r C_ar κ(S_{a→r})=2·star_a on |κ|=1 via C²+Tκ=0; one-center residual form; K4 local G eigenvalues in {1±m4}∪{1±m4±2/p}∪{1±m4±2√2/p} ⇒ weak |m4|≤(p-2)/p. **Certified:** σ census p=3,5,7,11; GPU CuPy/V100 full |κ|=1 m4+cand (mmap Max+, device reduce, atomic JSON) p=5,7 le_cand in ~0.3s. Evidence: `e1_gmin_m4_onecenter.json`, `e1_gmin_m4_gpu.json`. **OPEN residual:** bound ∑C_ar ρ ⇒ |m4|≤M_cand all p≥5; lim α_n OPEN.
+- **Prop 15.76 (one-center degrees d1^(1),d3^(1); residual split; 2026-07-29):** **Proved:** (3p²-7)/4 and (p²-5)/4 integral for odd p; 4 d1^(1)=d1. **Certified W=86:** one-center degrees constant on every |κ|=1 set/centre at p=3,5,7,11. **Proved:** abs bootstrap 4pρ≤d1 ρ+d3 R3 fails (4p−d1<0). **GPU residual:** R1,R3 on κ1/κ3 strata p=5,7; still le_cand. Evidence: `e1_gmin_m4_onecenter_deg.json`. **OPEN:** signed S1+S3 bound for M_cand all p≥5; lim α_n OPEN.
 
 - **Residual to \(m_n\ge\Phi-2\Rightarrow L=\tfrac12\):** (1) prove \(g_{\min}\ge L(p)\) or \(\lambda_2(P\odot P)\le4/N\) for all \(p\ge5\); (2) deep non-tight ND. **F13/F16–F18** intact.
 
