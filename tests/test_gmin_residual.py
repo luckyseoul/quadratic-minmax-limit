@@ -616,3 +616,64 @@ def test_prop_15_59_centered_P1_zero_and_rank():
     sol = (ROOT / "solution.md").read_text()
     assert "15.59" in sol
     assert "OPEN" in data["status"]
+
+
+def test_prop_15_60_antipodal_reduction_and_projective():
+    """T depends only on antipode-symmetric part; projective ENTF gap form."""
+    import os
+    import sys
+
+    import numpy as np
+
+    for k in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
+        os.environ[k] = "1"
+    sys.path.insert(0, str(ROOT / "src"))
+    from minmax_quadratic import paley_conference_prime_power
+
+    Y = np.load("/tmp/maxplus_p5.npy").astype(float)
+    N, n = Y.shape
+    d = n // 2
+    m = N // 2
+    # Antipodal pairing
+    Ys = np.round(Y, 10)
+    lookup = {tuple(Ys[a]): a for a in range(N)}
+    anti = np.array([lookup[tuple(np.round(-Y[a], 10))] for a in range(N)])
+    assert (anti[anti] == np.arange(N)).all()
+    # T reduction
+    rng = np.random.default_rng(0)
+    x = rng.standard_normal(N)
+    s = 0.5 * (x + x[anti])
+    T_x = Y.T @ (x[:, None] * Y)
+    T_s = Y.T @ (s[:, None] * Y)
+    assert np.allclose(T_x, T_s, atol=1e-8)
+    # Projective ENTF
+    C = paley_conference_prime_power(5).astype(float)
+    ew, EV = np.linalg.eigh(C)
+    Vp = EV[:, ew > 0]
+    U = (Y @ Vp) / np.sqrt(n)
+    fund = np.array([a for a in range(N) if a < anti[a]])
+    assert len(fund) == m
+    Up = U[fund]
+    assert np.allclose(Up.T @ Up, (m / d) * np.eye(d), atol=1e-8)
+    W_proj = (Up @ Up.T) ** 2
+    Q1 = np.ones((m, m)) / m
+    Wpp = (np.eye(m) - Q1) @ W_proj @ (np.eye(m) - Q1)
+    lam2_p = float(np.linalg.eigvalsh(Wpp)[-1])
+    assert lam2_p <= m / (2.0 * d) + 1e-8
+    # Algebra: 2×sphere ≤ thr for d≥6
+    sphere = 2.0 * m / (d * (d + 2))
+    assert 2.0 * sphere <= m / (2.0 * d) + 1e-12
+
+    path = ROOT / "evidence" / "e1_gmin_projective.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    by_p = {r["p"]: r for r in data["results"]}
+    assert by_p[3]["gap_proj_ok"] is False
+    assert by_p[5]["gap_proj_ok"] is True
+    assert by_p[7]["gap_proj_ok"] is True
+    assert by_p[5]["two_sphere_bound_holds"] is True
+    assert by_p[3]["two_sphere_bound_holds"] is False
+    assert by_p[5]["reduction_identity_ok"] is True
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.60" in sol
+    assert "OPEN" in data["status"]

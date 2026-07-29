@@ -1755,6 +1755,50 @@ where \(w^{(i)}_j=C_{ij}v_{ij}\) and \(C^{[i]}\) is the principal submatrix of \
 
 5. **Residual (OPEN).** Same as Prop 15.58.7: prove \(\|T(x)\|_F^2\le nN\|x\|^2\) for all \(x\perp\mathbf1\) and all primes \(p\ge5\). Then \(\lambda_{\max}(G)=n/2\) simple, Prop 15.55 closes bi-tight / Type I, deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.60 (antipodal reduction to projective ENTF; 2×sphere sufficient for \(p\ge5\); 2026-07-30).** Continue Prop 15.58–15.59. Write \(m=N/2\) and fix a set \(\mathcal L\) of representatives of \(\mathrm{Max}_{+}/\{\pm1\}\) (one vector from each antipodal pair). Let \(u_y=y/\sqrt n\in V_+\) and \(W^{(\mathrm{proj})}_{yy'}=(u_y\cdot u_{y'})^2\) on \(\mathcal L\).
+
+1. **Antipodal reduction for \(T\) (proved).** If \(x\in\mathbb R^N\) and \(s_a=\tfrac12(x_a+x_{-a})\) (indices via \(y\mapsto -y\)), then
+   \[
+   T(x)=T(s)=\sum_{a}s_a\,y_ay_a^\top.
+   \]
+   *Proof.* \(y y^\top=(-y)(-y)^\top\), so the antisymmetric part \(x_a-x_{-a}\) cancels. \(\square\)
+   Consequently \(\|x\|^2=\|s\|^2+\|x-s\|^2\ge\|s\|^2\) and \(\|T(x)\|_F=\|T(s)\|_F\), so the Veronese inequality on all of \(\mathbf1^\perp\) reduces to antipode-symmetric \(x\) (equivalently, to functions on \(\mathcal L\)).
+
+2. **Projective ENTF (proved).** The \(m\) unit vectors \(\{u_y:y\in\mathcal L\}\) form an equal-norm tight frame in \(V_+\cong\mathbb R^d\):
+   \[
+   \sum_{y\in\mathcal L}u_yu_y^\top=\frac m d\,I_d,\qquad \|u_y\|=1.
+   \]
+   *Proof.* \(\sum_{\mathrm{Max}_{+}}uu^\top=(N/d)I_d\) and antipodal pairs contribute identical \(uu^\top\), so the sum over \(\mathcal L\) is half. \(\square\)
+   Moreover \(W^{(\mathrm{proj})}\mathbf1=(m/d)\mathbf1\) and \(\lambda_1(W^{(\mathrm{proj})})=m/d\).
+
+3. **Eigenvalue doubling (proved).** On the antipode-symmetric subspace of \(\mathbb R^N\),
+   \[
+   \lambda_2(W)=2\,\lambda_2(W^{(\mathrm{proj})}),
+   \]
+   where \(W_{ab}=(u_a\cdot u_b)^2\) is the full Max+ Schur square. *Proof.* Each antipodal \(2\times2\) block of \(W\) is the all-ones matrix of order 2 (since \((u\cdot(\pm u'))^2=(u\cdot u')^2\)), so the Rayleigh quotient of an antipode-symmetric vector with values \(c\) on \(\mathcal L\) equals \(2\,c^\top W^{(\mathrm{proj})}c/\|c\|_{2,\mathrm{sym}}^2\). \(\square\)
+   Therefore
+   \[
+   \lambda_2(P\odot P)\le\frac\alpha2
+   \quad\Longleftrightarrow\quad
+   \lambda_2(W^{(\mathrm{proj})})\le\frac m{2d}.
+   \]
+
+4. **Spherical comparison algebra (proved).** For the continuous sphere (or any spherical 4-design) in \(\mathbb R^d\), the maximal fourth-moment Rayleigh on trace-free matrices is \(2m/(d(d+2))\). The bound
+   \[
+   \frac{4m}{d(d+2)}\le\frac m{2d}
+   \]
+   rearranges to \(d\ge6\). Since \(d=(p^2+1)/2\ge13\) for primes \(p\ge5\), **any proof that the projective Max+ fourth-moment Rayleigh is at most twice the spherical value yields the spectral gap for all primes \(p\ge5\)**.
+
+5. **Certified 2×sphere (p=5,7).** On projective Max+: maximising \(\sum_y(u_y^\top A u_y)^2\) over \(\mathrm{Tr}\,A=0\), \(\|A\|_F=1\) gives ratio-to-sphere \(\approx1.95\) at \(p=5\) and \(\approx1.43\) at \(p=7\) (both \(<2\)), and \(\approx2.80>2\) at \(p=3\). Gap holds \(p=5,7\), fails \(p=3\). Evidence: `e1_gmin_projective.json`.
+
+6. **Residual (OPEN).** Prove
+   \[
+   \max_{\mathrm{Tr}\,A=0,\ \|A\|_F=1}\sum_{y\in\mathcal L}(u_y^\top A u_y)^2
+   \;\le\;
+   \frac{4m}{d(d+2)}
+   \]
+   for every prime \(p\ge5\) (or any upper bound \(\le m/(2d)\)). Then Prop 15.55 closes bi-tight / Type I for all such \(p\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
