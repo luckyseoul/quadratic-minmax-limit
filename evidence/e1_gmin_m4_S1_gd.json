@@ -1,0 +1,248 @@
+{
+  "prop": "15.80",
+  "workers": 86,
+  "compute": {
+    "cpu_threads": 88,
+    "workers": 86,
+    "gpu": {
+      "available": true,
+      "backend": "cupy",
+      "name": "Tesla V100-SXM2-16GB",
+      "mem_free_gib": 16.456024064,
+      "mem_total_gib": 16.928342016,
+      "util_pct": null
+    },
+    "policy": "Use GPU for large dense batches if available; else ProcessPool W=86. Never single-core multi-minute thrash (F17)."
+  },
+  "use_gpu": true,
+  "io_policy": "mmap Max+; GPU all-m4; ProcessPool GD census; write_json_atomic",
+  "linear_form_wick": {
+    "proved": true,
+    "statement": "Let y be uniform on Max+={y\u2208{\u00b11}^n: C y = p y} for a conference matrix C of order n=p\u00b2+1. Then E[y_i y_j]=\u03b4_ij + C_ij/p =: \u03a3_ij (tight frame / Prop Max+ E[yy^T]=I+C/p). For any \u03b1\u2208R^n, L=\u2211 \u03b1_i y_i satisfies E[L\u00b2]=\u2211_{i,j} \u03b1_i \u03b1_j \u03a3_ij = E_{G~N(0,\u03a3)}[L(G)\u00b2].",
+    "corollary_U1": "U1=\u2211_{r\u2208R1} C_ar y_r is linear, so E[U1\u00b2]=E_Wick[U1\u00b2] exactly.",
+    "method": "Expand E[L\u00b2] using only pairwise moments; no fourth moments used."
+  },
+  "gd_formulation": {
+    "proved": true,
+    "Z": "Z = star_a \u00b7 \u220f_{u\u2208S\\{a}} y_u  (degree-3, E[Z]=0 by central symmetry)",
+    "U1": "U1 = \u2211_{r: |\u03ba(S_a\u2192r)|=1} C_ar y_r  (degree-1 linear form)",
+    "identity": "star_a \u00b7 S1(a) = E[Z U1] \u2212 E_Wick[Z U1] = Cov(Z,U1) \u2212 Cov_Wick(Z,U1)",
+    "GD_iff": "star\u00b7S1 \u2264 0  \u21d4  E[Z U1] \u2264 E_Wick[Z U1]",
+    "Wick_value": "E_Wick[Z U1] = star_a \u00b7 \u03c41(a) / p\u00b2",
+    "specialization": "GD fails for generic linear forms L (\u224850% violation rate at p=5) and is therefore special to the \u03ba1-support of U1, not a general cubic\u00d7linear comparison.",
+    "U_ext_note": "For U_ext=\u2211_{r\u2209S} C_ar y_r one has E[Z U_ext]=star\u00b7p\u00b7\u03c1, E_Wick=2/p\u00b2; GD for U_ext \u21d4 star\u00b7p\u00b7\u03c1 \u2264 2/p\u00b2 \u21d4 joint S1+S3 \u2264 0, which fails at some p=7 maximisers (joint>0). U1 is strictly harder."
+  },
+  "sum_star_tau1": {
+    "proved_partial": true,
+    "identity_t1": "\u03c41=2A\u2212d1^(1), A=#{r\u2208R1: C_ar \u03ba'=+1}",
+    "certified_sum": {
+      "3": {
+        "sum": -180,
+        "n1": 180,
+        "mean": -1,
+        "epsilon": -1
+      },
+      "5": {
+        "sum": 11700,
+        "n1": 11700,
+        "mean": 1,
+        "epsilon": 1
+      },
+      "7": {
+        "sum": -176400,
+        "n1": 176400,
+        "mean": -1,
+        "epsilon": -1
+      }
+    },
+    "formula": "sum_{|\u03ba|=1} star\u00b7\u03c41 = \u03b5(p) \u00b7 n1 with n1=n(n-1)(n-2)\u00b2/32, \u03b5\u2208{\u00b11}",
+    "epsilon_open": "\u03b5(p)=+1 at p=5, \u03b5(p)=\u22121 at p=3,7 (and mean \u22121 at p=11). Closed form for \u03b5(p) open; not needed for pointwise GD.",
+    "p7_equipartition": "At p=7 the three values \u22127,\u22121,5 each occur on exactly n1/3 sets."
+  },
+  "cand_path": {
+    "path": "GD (star\u00b7S1\u22640) + star=+1 \u21d2 p\u03c1 \u2264 2/p\u00b2 + S3. Still need S3 bound (or joint) for \u03c1\u2264\u03c1_cand when S3_budget<0.",
+    "by_p": {
+      "5": {
+        "rho_cand": 0.006153846153846156,
+        "S3_budget_if_S1_le0": -0.049230769230769224,
+        "S3_budget_negative": true,
+        "note": "Negative S3_budget (p=5) requires strongly negative S1 on maximisers, not just S1\u22640 + |S3| bounds."
+      },
+      "7": {
+        "rho_cand": 0.021608643457382958,
+        "S3_budget_if_S1_le0": 0.11044417767106848,
+        "S3_budget_negative": false,
+        "note": "Negative S3_budget (p=5) requires strongly negative S1 on maximisers, not just S1\u22640 + |S3| bounds."
+      },
+      "11": {
+        "rho_cand": 0.024462809917355374,
+        "S3_budget_if_S1_le0": 0.2525619834710744,
+        "S3_budget_negative": false,
+        "note": "Negative S3_budget (p=5) requires strongly negative S1 on maximisers, not just S1\u22640 + |S3| bounds."
+      },
+      "13": {
+        "rho_cand": 0.02326055906957764,
+        "S3_budget_if_S1_le0": 0.2905529483778821,
+        "S3_budget_negative": false,
+        "note": "Negative S3_budget (p=5) requires strongly negative S1 on maximisers, not just S1\u22640 + |S3| bounds."
+      },
+      "17": {
+        "rho_cand": 0.020387169176096512,
+        "S3_budget_if_S1_le0": 0.3396614607687272,
+        "S3_budget_negative": false,
+        "note": "Negative S3_budget (p=5) requires strongly negative S1 on maximisers, not just S1\u22640 + |S3| bounds."
+      },
+      "19": {
+        "rho_cand": 0.019052766704952366,
+        "S3_budget_if_S1_le0": 0.3564624011891088,
+        "S3_budget_negative": false,
+        "note": "Negative S3_budget (p=5) requires strongly negative S1 on maximisers, not just S1\u22640 + |S3| bounds."
+      },
+      "23": {
+        "rho_cand": 0.01674318120442884,
+        "S3_budget_if_S1_le0": 0.38131244936537945,
+        "S3_budget_negative": false,
+        "note": "Negative S3_budget (p=5) requires strongly negative S1 on maximisers, not just S1\u22640 + |S3| bounds."
+      },
+      "29": {
+        "rho_cand": 0.014073799730999394,
+        "S3_budget_if_S1_le0": 0.40576207091479694,
+        "S3_budget_negative": false,
+        "note": "Negative S3_budget (p=5) requires strongly negative S1 on maximisers, not just S1\u22640 + |S3| bounds."
+      },
+      "31": {
+        "rho_cand": 0.013351476827023133,
+        "S3_budget_if_S1_le0": 0.41181461618506365,
+        "S3_budget_negative": false,
+        "note": "Negative S3_budget (p=5) requires strongly negative S1 on maximisers, not just S1\u22640 + |S3| bounds."
+      },
+      "37": {
+        "rho_cand": 0.011554552095092634,
+        "S3_budget_if_S1_le0": 0.42605750713858814,
+        "S3_budget_negative": false,
+        "note": "Negative S3_budget (p=5) requires strongly negative S1 on maximisers, not just S1\u22640 + |S3| bounds."
+      }
+    },
+    "p5_sharp": "At p=5, joint S1+S3 = \u221216/325 on maximisers, giving \u03c1=\u03c1_cand sharp."
+  },
+  "results": {
+    "5": {
+      "p": 5,
+      "n": 26,
+      "N": 260,
+      "Cy_eq_py": true,
+      "n_kappa1": 11700,
+      "sum_star_S1": -1128.0000000000011,
+      "sum_star_S1_frac": "-1128",
+      "mean_star_S1": -0.09641025641025651,
+      "sum_star_tau1": 11700,
+      "mean_star_tau1": 1.0,
+      "epsilon_sum_t_over_n1": 1,
+      "max_star_S1": -0.030769230769230736,
+      "min_star_S1": -0.1292307692307693,
+      "GD_holds": true,
+      "n_gd_violations": 0,
+      "E_U1_sq_over_Wick_mean": 1.0,
+      "E_U1_sq_over_Wick_max_dev": 0.0,
+      "linear_form_wick_match": true,
+      "generic_L_GD_violation_rate": 0.55,
+      "generic_L_shows_U1_special": true,
+      "n_structure_pairs_t_m4kappa": 2,
+      "M_cand": 0.046153846153846156,
+      "max_abs_m4_kappa1": 0.046153846153846156,
+      "m4_le_cand": true,
+      "wall_m4_s": 0.1199857549945591,
+      "wall_walk_s": 0.3781909270037431,
+      "gpu_used": true,
+      "gpu_m4": {
+        "backend": "cupy",
+        "gpu": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 16.456024064,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "gpu_after": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 16.35745792,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "wall_s": 0.1199857549945591,
+        "n_quads": 14950,
+        "io": {
+          "maxplus": "mmap",
+          "H2D": "single Y",
+          "D2H": "m4 only"
+        }
+      },
+      "workers": 58,
+      "io": "mmap Max+; GPU m4; ProcessPool GD walk; write_json_atomic"
+    },
+    "7": {
+      "p": 7,
+      "n": 50,
+      "N": 11452,
+      "Cy_eq_py": true,
+      "n_kappa1": 176400,
+      "sum_star_S1": -5333.985330073158,
+      "sum_star_S1_frac": "-2181600/409",
+      "mean_star_S1": -0.030238012075244663,
+      "sum_star_tau1": -176400,
+      "mean_star_tau1": -1.0,
+      "epsilon_sum_t_over_n1": -1,
+      "max_star_S1": -0.006686293099146704,
+      "min_star_S1": -0.09011526370939582,
+      "GD_holds": true,
+      "n_gd_violations": 0,
+      "E_U1_sq_over_Wick_mean": 1.0,
+      "E_U1_sq_over_Wick_max_dev": 0.0,
+      "linear_form_wick_match": true,
+      "generic_L_GD_violation_rate": 0.44,
+      "generic_L_shows_U1_special": true,
+      "n_structure_pairs_t_m4kappa": 4,
+      "M_cand": 0.04201680672268908,
+      "max_abs_m4_kappa1": 0.03807195249738037,
+      "m4_le_cand": true,
+      "wall_m4_s": 0.3846425759984413,
+      "wall_walk_s": 4.49794336699415,
+      "gpu_used": true,
+      "gpu_m4": {
+        "backend": "cupy",
+        "gpu": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 16.35745792,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "gpu_after": {
+          "available": true,
+          "backend": "cupy",
+          "name": "Tesla V100-SXM2-16GB",
+          "mem_free_gib": 13.05444352,
+          "mem_total_gib": 16.928342016,
+          "util_pct": null
+        },
+        "wall_s": 0.3846425759984413,
+        "n_quads": 230300,
+        "io": {
+          "maxplus": "mmap",
+          "H2D": "single Y",
+          "D2H": "m4 only"
+        }
+      },
+      "workers": 86,
+      "io": "mmap Max+; GPU m4; ProcessPool GD walk; write_json_atomic"
+    }
+  },
+  "status": "Prop 15.80: E[L\u00b2]=E_Wick[L\u00b2] for linear L on Max+ PROVED; GD \u21d4 E[Z U1]\u2264E_Wick[Z U1] with Z=star f0; U1-special (generic L violates GD). Certified GPU: GD holds p=5,7; U1/Wick ratio\u22611; sum star\u00b7S1 p5=\u22121128 p7=\u221215271200/2863; sum star\u00b7\u03c41=\u03b5 n1 (\u03b5=+1 at p=5, \u22121 at p=7). OPEN: prove GD for all p\u22655; joint/S3\u21d2M_cand. lim \u03b1_n OPEN.",
+  "GD_both": true,
+  "linear_wick_both": true,
+  "U1_special_both": true
+}

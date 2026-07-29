@@ -1,6 +1,6 @@
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-07-29 (Prop 15.79 Aut-constancy of star·τ1/S1 proved; general M_cand still open; L still OPEN)  
+**Status date:** 2026-07-29 (Prop 15.80 GD linear-Wick + U1-special; general M_cand still open; L still OPEN)  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
 **Resume file:** `evidence/SESSION_HANDOFF_2026-07-30.md`  
 **Problem source:** [MathOverflow 413935](https://mathoverflow.net/questions/413935) / [X prize post](https://x.com/PI010101/status/2081070728422752329)
@@ -49,6 +49,7 @@ Dense Paley subsequence with \(\rho=1\) (orders \(n=p^2+1\)) is proved; asymptot
 - **Prop 15.77 (star·S1≤0 structure; joint cand criterion; 2026-07-29):** **Proved:** star·(S1+S3)=pρ star−2/p²; star=+1 & S1≤0 ⇒ pρ≤2/p²+S3; same-sign ρ=(2/p²+S1+S3)/p at star=+1; cand ⇔ max joint ≤ p ρ_cand−2/p² (negative at p=5 ⇒ need strongly negative S1). **Certified GPU mmap+atomic:** star·S1≤0 on **all** |κ|=1 centres p=5,7 (strict); joint ⇒ ρ≤ρ_cand (sharp p=5); synthetic non-Max+ bump violates star·S1. Evidence: `e1_gmin_m4_S1_star.json`, `src/e1_gmin_m4_S1_star.py`. **OPEN:** prove star·S1≤0 + joint/S3 bound for all primes p≥5; lim α_n OPEN.
 - **Prop 15.78 (moment form/GD; 4-set constancy; p=5 exact spectrum; 2026-07-29):** **Proved:** star·S1=E[φ]−E_Wick[φ] (φ=star f0 U1); GD ⇔ star·S1≤0; joint rewrite S1+S3=p m4−1/p−2/p² at κ=1,star=+1. **Certified W=86 pure-C:** star·τ1 constant on every |κ|=1 set p=3,5,7,11. **Certified GPU mmap+atomic:** star·S1 constant on every |κ|=1 Max+ set p=5,7; GD holds; star·S1≤0; **p=5 exact** star·S1∈{−2/65,−42/325} both <0 (⇒ star·S1≤0 **proved at p=5** by full census). Evidence: `e1_gmin_m4_S1_const.json`, `src/e1_gmin_m4_S1_const.py`. **OPEN:** prove GD for all p≥5; joint/S3 ⇒ M_cand; lim α_n OPEN.
 - **Prop 15.79 (Aut-constancy of star·τ1 and star·S1; modular τ1; 2026-07-29):** **Proved:** PGL(2,p²) setwise stabilizer of any 4-set contains V4 acting regularly ⇒ transitive on the 4 points; star·τ1 Aut-equivariant ⇒ **constant on centres** (Max+-free); star·S1 Aut-equivariant (Max+ Aut-invariant) ⇒ **constant on centres**; τ1=2A−d1^(1) with d1 odd ⇒ star·τ1 odd. **Certified W=86:** constancy + t1=2A−d1 + star·τ1≡5 (mod 6) + #(values)=(p−1)/2 at p=3,5,7,11. Evidence: `e1_gmin_m4_S1_aut.json`, `src/e1_gmin_m4_S1_aut.py`. **OPEN:** prove star·S1≤0 (GD) all p≥5; joint/S3⇒M_cand; lim α_n OPEN.
+- **Prop 15.80 (linear-form Wick; GD ⇔ E[ZU1]≤E_Wick[ZU1]; U1-special; 2026-07-29):** **Proved:** E[L²]=E_Wick[L²] for every linear L on Max+ (pairwise Σ only); GD ⇔ Cov(Z,U1)≤Cov_Wick with Z=star f0; GD fails for generic L (U1 κ1-support essential). **Certified GPU mmap+atomic p=5,7:** GD holds all |κ|=1 sets; U1/Wick ratio≡1; sum star·S1=−1128 (p5), −15271200/2863 (p7); sum star·τ1=ε n1 (ε=±1); generic L violation rate ~45–55%. Evidence: `e1_gmin_m4_S1_gd.json`, `src/e1_gmin_m4_S1_gd.py`. **OPEN:** prove E[ZU1]≤E_Wick all p≥5; joint/S3⇒M_cand; lim α_n OPEN.
 
 - **Residual to \(m_n\ge\Phi-2\Rightarrow L=\tfrac12\):** (1) prove \(g_{\min}\ge L(p)\) or \(\lambda_2(P\odot P)\le4/N\) for all \(p\ge5\); (2) deep non-tight ND. **F13/F16–F18** intact.
 

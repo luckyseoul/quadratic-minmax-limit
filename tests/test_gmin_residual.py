@@ -1328,6 +1328,70 @@ def test_S1_sign_gpu_mmap_atomic():
     assert abs(rho_budget_cand(5) - 2 / 325) < 1e-15
 
 
+def test_prop_15_80_gd_linear_wick():
+    """Prop 15.80: linear Wick identity, GD form, U1-special, GPU census."""
+    import sys
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_m4_S1_gd import (
+        linear_form_wick_identity,
+        gd_formulation,
+        sum_star_tau1_algebra,
+        cand_via_gd_algebra,
+        M_cand,
+        d1_one,
+    )
+
+    lin = linear_form_wick_identity()
+    assert lin["proved"] is True
+    assert "corollary_U1" in lin
+    gd = gd_formulation()
+    assert gd["proved"] is True
+    assert "GD_iff" in gd
+    assert "specialization" in gd
+    st = sum_star_tau1_algebra()
+    assert st["certified_sum"]["5"]["epsilon"] == 1
+    assert st["certified_sum"]["7"]["epsilon"] == -1
+    assert st["certified_sum"]["5"]["sum"] == 11700
+    assert st["certified_sum"]["7"]["sum"] == -176400
+    cand = cand_via_gd_algebra()
+    assert cand["by_p"]["5"]["S3_budget_negative"] is True
+    assert d1_one(5) == 17
+    assert abs(M_cand(5) - 3 / 65) < 1e-15
+
+    path = ROOT / "evidence" / "e1_gmin_m4_S1_gd.json"
+    assert path.is_file(), "run src/e1_gmin_m4_S1_gd.py (GPU+mmap+atomic)"
+    data = json.loads(path.read_text())
+    assert data["prop"] == "15.80"
+    assert data["workers"] >= 4
+    assert data["use_gpu"] is True
+    assert data["linear_form_wick"]["proved"] is True
+    assert data["gd_formulation"]["proved"] is True
+    assert data["GD_both"] is True
+    assert data["linear_wick_both"] is True
+    assert data["U1_special_both"] is True
+    for p in ("5", "7"):
+        r = data["results"][p]
+        assert r["GD_holds"] is True
+        assert r["max_star_S1"] < 0
+        assert r["gpu_used"] is True
+        assert r["linear_form_wick_match"] is True
+        assert r["E_U1_sq_over_Wick_max_dev"] is not None
+        assert r["E_U1_sq_over_Wick_max_dev"] < 1e-9
+        assert r["generic_L_shows_U1_special"] is True
+        assert r["m4_le_cand"] is True
+        assert "mmap" in r["io"].lower()
+    # exact sum anchors
+    assert abs(data["results"]["5"]["sum_star_S1"] + 1128) < 1e-6
+    assert data["results"]["5"]["epsilon_sum_t_over_n1"] == 1
+    assert data["results"]["7"]["epsilon_sum_t_over_n1"] == -1
+    assert abs(data["results"]["5"]["max_star_S1"] + 2 / 65) < 1e-12
+    assert "OPEN" in data["status"]
+    assert "15.80" in (ROOT / "solution.md").read_text()
+    assert "15.80" in (ROOT / "HANDOFF.md").read_text()
+    assert "OPEN" in (ROOT / "HANDOFF.md").read_text()[:900]
+
+
 def test_prop_15_79_aut_constancy():
     """Prop 15.79: Aut-constancy proof + modular τ1 census."""
     import sys

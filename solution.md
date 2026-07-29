@@ -2550,6 +2550,55 @@ Let \(n_1=\#\{S:|\kappa(S)|=1\}\) and \(n_3=\#\{S:|\kappa(S)|=3\}\).
 
 7. **Residual (OPEN).** Prove \(\mathrm{star}\cdot S_1\le0\) (e.g. Gaussian domination \(\mathbb E[\varphi]\le\mathbb E_{\mathrm{Wick}}[\varphi]\)) for every prime \(p\ge5\), and close the joint/\(S_3\) bound so \(\max|m_4|\le M_{\mathrm{cand}}\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.80 (linear-form Wick identity; GD formulation; U1-specialization; 2026-07-29).** Continue Prop 15.77–15.79. Write \(Z=\mathrm{star}_a\prod_{u\in S\setminus\{a\}}y_u\) and \(U_1=\sum_{r\in R_1(a)}C_{ar}y_r\).
+
+1. **Linear-form Wick identity (proved).** On Max+ one has \(\mathbb E[y_iy_j]=\Sigma_{ij}\) with \(\Sigma=I+C/p\). Consequently for every \(\alpha\in\mathbb R^n\) and \(L=\sum\alpha_i y_i\),
+   \[
+   \mathbb E[L^2]
+   \;=\;
+   \sum_{i,j}\alpha_i\alpha_j\Sigma_{ij}
+   \;=\;
+   \mathbb E_{G\sim N(0,\Sigma)}[L(G)^2].
+   \]
+   In particular \(\mathbb E[U_1^2]=\mathbb E_{\mathrm{Wick}}[U_1^2]\). (Only pairwise moments; no fourth-moment input.) \(\square\)
+
+2. **GD formulation (proved).** Central symmetry gives \(\mathbb E[Z]=0\), and
+   \[
+   \mathrm{star}_a\cdot S_1(a)
+   \;=\;
+   \mathbb E[ZU_1]-\mathbb E_{\mathrm{Wick}}[ZU_1]
+   \;=\;
+   \mathrm{Cov}(Z,U_1)-\mathrm{Cov}_{\mathrm{Wick}}(Z,U_1),
+   \]
+   with \(\mathbb E_{\mathrm{Wick}}[ZU_1]=\mathrm{star}_a\cdot\tau_1(a)/p^2\). Hence
+   \[
+   \mathrm{star}\cdot S_1\le0
+   \quad\Longleftrightarrow\quad
+   \mathbb E[ZU_1]\le\mathbb E_{\mathrm{Wick}}[ZU_1].
+   \]
+   \(\square\)
+
+3. **U1-specialization (proved necessity of \(\kappa=1\)-support; certified generically).** The comparison \(\mathbb E[ZL]\le\mathbb E_{\mathrm{Wick}}[ZL]\) **fails** for generic linear \(L\) supported off \(S\) (violation rate \(\approx 45\)–\(55\%\) at \(p=5,7\)). It can also fail for the full external form \(U_{\mathrm{ext}}=\sum_{r\notin S}C_{ar}y_r\) (equivalent to \(\mathrm{star}\cdot p\cdot\rho\le 2/p^2\), false on some \(p=7\) maximisers with positive joint \(S_1+S_3\)). Thus GD is a property of the \(\kappa=1\)-restricted form \(U_1\), not a general cubic\(\times\)linear inequality. \(\square\)
+
+4. **Sum of \(\mathrm{star}\cdot\tau_1\) (certified \(p=3,5,7\)).** Writing \(n_1=n(n-1)(n-2)^2/32\),
+   \[
+   \sum_{|\kappa|=1}\mathrm{star}\cdot\tau_1
+   \;=\;
+   \varepsilon(p)\,n_1,
+   \qquad \varepsilon(p)\in\{\pm1\}
+   \]
+   (\(\varepsilon(5)=+1\), \(\varepsilon(3)=\varepsilon(7)=-1\); at \(p=7\) the three values \(\{-7,-1,5\}\) each occupy exactly \(n_1/3\) sets). \(\square\)
+
+5. **GPU GD census (certified \(p=5,7\); CuPy/V100; mmap+atomic).** Full Max+ m4 + ProcessPool walk:
+   - \(\mathrm{star}\cdot S_1\le0\) on every \(|\kappa|=1\) set (GD holds);
+   - \(\mathbb E[U_1^2]/\mathbb E_{\mathrm{Wick}}[U_1^2]\equiv1\) (part 1);
+   - \(\sum\mathrm{star}\cdot S_1=-1128\) at \(p=5\) and \(-15271200/2863\) at \(p=7\);
+   - \(\max|m_4|\le M_{\mathrm{cand}}\) (sharp at \(p=5\)).
+
+   Evidence: `e1_gmin_m4_S1_gd.json`. \(\square\)
+
+6. **Residual (OPEN).** Prove \(\mathbb E[ZU_1]\le\mathbb E_{\mathrm{Wick}}[ZU_1]\) for every prime \(p\ge5\) (the U1-specific Gaussian domination), using the linear Wick identity, Aut-constancy, and the residual source on \(|\kappa|=3\); then close joint/\(S_3\) for \(M_{\mathrm{cand}}\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
