@@ -48,12 +48,14 @@ def all_quads(n: int) -> np.ndarray:
 
 
 def gpu_m4_kappa1(Y_np: np.ndarray, C_np: np.ndarray, batch: int = 200_000) -> dict:
-    """Full |κ|=1 max|m4| on GPU."""
+    """Full |κ|=1 max|m4| on GPU with on-device reduction (minimal host traffic)."""
     from gpu_budget import require_gpu, gpu_info
 
     cp = require_gpu()
     info0 = gpu_info()
-    Y = cp.asarray(Y_np, dtype=cp.float64)
+    # Contiguous host array then one H2D; callers may pass mmap — copy once
+    Y_host = np.ascontiguousarray(Y_np, dtype=np.float64)
+    Y = cp.asarray(Y_host)
     C = np.asarray(C_np, dtype=np.float64)
     n = C.shape[0]
     quads = all_quads(n)
@@ -71,21 +73,17 @@ def gpu_m4_kappa1(Y_np: np.ndarray, C_np: np.ndarray, batch: int = 200_000) -> d
     t0 = time.perf_counter()
     for lo in range(0, n1, batch):
         hi = min(n1, lo + batch)
-        sl = idx[lo:hi]
+        sl = cp.asarray(idx[lo:hi])  # (B,4) on device
         a, b, c, d = sl[:, 0], sl[:, 1], sl[:, 2], sl[:, 3]
-        # columns: (N, B)
-        m4 = cp.mean(
-            Y[:, a] * Y[:, b] * Y[:, c] * Y[:, d],
-            axis=0,
-        )
-        m4_h = cp.asnumpy(m4)
-        am = np.abs(m4_h)
-        j = int(np.argmax(am))
-        if am[j] > max_abs:
-            max_abs = float(am[j])
-            max_m4 = float(m4_h[j])
+        m4 = cp.mean(Y[:, a] * Y[:, b] * Y[:, c] * Y[:, d], axis=0)
+        # on-device argmax of |m4| — only 2 scalars (+ one index) to host
+        j = int(cp.argmax(cp.abs(m4)).get())
+        am = float(cp.abs(m4[j]).get())
+        if am > max_abs:
+            max_abs = am
+            max_m4 = float(m4[j].get())
             max_kap = int(kaps[lo + j])
-            worst_pts = sl[j].tolist()
+            worst_pts = idx[lo + j].tolist()
     elapsed = time.perf_counter() - t0
     info1 = gpu_info()
     p = int(round(np.sqrt(n - 1)))  # n=p^2+1
@@ -96,7 +94,7 @@ def gpu_m4_kappa1(Y_np: np.ndarray, C_np: np.ndarray, batch: int = 200_000) -> d
         "gpu": info0,
         "gpu_after": info1,
         "n": int(n),
-        "N": int(Y_np.shape[0]),
+        "N": int(Y_host.shape[0]),
         "n_kappa1": n1,
         "batch": int(batch),
         "wall_s": float(elapsed),
@@ -109,22 +107,18 @@ def gpu_m4_kappa1(Y_np: np.ndarray, C_np: np.ndarray, batch: int = 200_000) -> d
         "m4_le_L": max_abs <= L_abs + 1e-12,
         "m4_le_mid": max_abs <= mid + 1e-12,
         "g_min": -max_abs,
+        "io": "mmap-friendly host Y; single H2D; device argmax (no full batch D2H)",
     }
 
 
 def load_YC(p: int):
     sys.path.insert(0, str(ROOT / "src"))
     from minmax_quadratic import paley_conference_prime_power
+    from io_atomic import load_maxplus_array
 
     C = paley_conference_prime_power(p).astype(np.float64)
-    if p == 5:
-        Y = np.load("/tmp/maxplus_p5.npy").astype(np.float64)
-    elif p == 7:
-        Y = np.load("/tmp/e1_p7/maxplus.npy").astype(np.float64)
-    else:
-        from e1_gmin_cr_classify import load_maxplus
-
-        Y = load_maxplus(p).astype(np.float64)
+    # mmap read of Max+ cache (shared page cache across workers if CPU path)
+    Y = load_maxplus_array(p, mmap=True)
     return Y, C
 
 
@@ -173,9 +167,11 @@ def main() -> None:
         f"Both ≤M_mid and ≤L. One CUDA context; host multi-worker not used for this path."
     )
     path = ROOT / "evidence" / "e1_gmin_m4_gpu.json"
-    path.write_text(json.dumps(out, indent=2))
+    from io_atomic import write_json_atomic
+
+    write_json_atomic(path, out)
     print(out["status"], flush=True)
-    print(f"wrote {path}", flush=True)
+    print(f"wrote {path} (atomic)", flush=True)
 
 
 if __name__ == "__main__":

@@ -115,10 +115,14 @@ Use `src/workers.py`: `require_workers()`, `pool()`, `assert_not_single_core_thr
 
 1. Run `compute-budget.sh` **and** check GPU (`nvidia-smi` / `src/gpu_budget.py`) before any >10s job; record `W` and whether GPU is free.
 2. Independent irregular units = seeds, matchings, residue classes, p-values — fan out with `ProcessPoolExecutor(W)`, `OMP=1` per worker.
-3. **Prefer GPU (CuPy / V100)** for large dense batches: m4 column products (`e1_gmin_m4_gpu.py`), Φ sampling, dense Rayleigh/power. One process owns CUDA — do not open 88 GPU contexts.
-4. Serial only if algorithm is inherently serial; **state that in the log**, and still run other vectors in parallel or use GPU if it fits.
-5. Verification: one parallel/GPU wave, one JSON, one pytest — not live-serial-per-cover.
-6. Report in evidence: `workers`, `gpu.used`, wall time.
+3. **Prefer GPU (CuPy / V100)** for large dense batches: m4 column products (`e1_gmin_m4_gpu.py`), Φ sampling, dense Rayleigh/power. One process owns CUDA — do not open 88 GPU contexts. Keep reductions on-device (argmax/atomic-style max), not full batch D2H.
+4. **Atomic I/O when allowed** (`src/io_atomic.py`, same idea as Wieferich hunts):
+   - **mmap** `np.load(..., mmap_mode='r')` for shared Max+ / large caches across ProcessPool workers (page cache shared; avoid 86× full copies).
+   - **atomic writes**: write `*.tmp` → fsync → `os.replace` for evidence/checkpoints under concurrent jobs.
+   - GPU hit/max collection via device reduce / `atomicAdd`-style patterns when scanning large spaces.
+5. Serial only if algorithm is inherently serial; **state that in the log**, and still run other vectors in parallel or use GPU if it fits.
+6. Verification: one parallel/GPU wave, one JSON, one pytest — not live-serial-per-cover.
+7. Report in evidence: `workers`, `gpu.used`, `io` (mmap/atomic), wall time.
 
 ---
 

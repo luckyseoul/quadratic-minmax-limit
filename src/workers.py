@@ -6,6 +6,9 @@ Hard rules (project + user-enforced):
      W≈nproc-2 and OMP=1 per worker — not toy tasks only.
   3. Prefer GPU (CuPy/V100) for large dense batches (m4 column products, Φ sampling,
      dense matmul). One CUDA context — do not spawn 88 GPU processes.
+     Use on-device reductions (argmax/max) instead of full D2H of batches.
+  3b. Atomic I/O when the job allows (Wieferich-style): mmap read shared Max+
+     caches across workers; write evidence via tmp+os.replace (io_atomic.py).
   4. NEVER serial leftover heavy work on the parent after a ProcessPool wave
      (classic bug: pool for p=3,5 then p=7 on main → 97% NLWP=1).
   5. After launch, self-check with assert_not_single_core_thrash() or ps;

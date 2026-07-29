@@ -1305,3 +1305,31 @@ def test_gpu_budget_and_m4_gpu_evidence():
             assert r["m4_le_L"] is True
             assert r["wall_s"] < 30.0  # GPU path must be fast
         assert abs(data["results"]["5"]["max_abs_m4"] - 3 / 65) < 1e-9
+
+
+def test_io_atomic_mmap_and_write():
+    """Atomic write + mmap load (Wieferich-style I/O helpers)."""
+    import sys
+    import tempfile
+    from pathlib import Path
+
+    import numpy as np
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from io_atomic import write_json_atomic, write_npy_atomic, load_npy
+
+    with tempfile.TemporaryDirectory() as td:
+        td = Path(td)
+        jp = td / "e.json"
+        write_json_atomic(jp, {"p": 5, "ok": True})
+        assert jp.is_file()
+        data = json.loads(jp.read_text())
+        assert data["ok"] is True and data["p"] == 5
+
+        ap = td / "a.npy"
+        arr = np.arange(20, dtype=np.float64).reshape(4, 5)
+        write_npy_atomic(ap, arr)
+        mm = load_npy(ap, mmap_mode="r")
+        assert isinstance(mm, np.memmap) or hasattr(mm, "shape")
+        assert mm.shape == (4, 5)
+        assert float(mm[2, 1]) == float(arr[2, 1])

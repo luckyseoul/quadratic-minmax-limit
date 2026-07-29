@@ -36,7 +36,7 @@
       "N": 260,
       "n_kappa1": 11700,
       "batch": 50000,
-      "wall_s": 0.12089881800056901,
+      "wall_s": 0.4559312880010111,
       "max_abs_m4": 0.046153846153846156,
       "max_m4": 0.046153846153846156,
       "max_kappa": 1,
@@ -51,6 +51,7 @@
       "m4_le_L": true,
       "m4_le_mid": true,
       "g_min": -0.046153846153846156,
+      "io": "mmap-friendly host Y; single H2D; device argmax (no full batch D2H)",
       "p": 5
     },
     "7": {
@@ -75,7 +76,7 @@
       "N": 11452,
       "n_kappa1": 176400,
       "batch": 12000,
-      "wall_s": 0.29480959799548145,
+      "wall_s": 0.29560744400077965,
       "max_abs_m4": 0.03807195249738037,
       "max_m4": 0.03807195249738037,
       "max_kappa": 1,
@@ -90,8 +91,9 @@
       "m4_le_L": true,
       "m4_le_mid": true,
       "g_min": -0.03807195249738037,
+      "io": "mmap-friendly host Y; single H2D; device argmax (no full batch D2H)",
       "p": 7
     }
   },
-  "status": "GPU (CuPy/V100) |\u03ba|=1 m4 census: p=5 max|m4|=0.04615385 (0.12s), p=7 max|m4|=0.03807195 (0.29s). Both \u2264M_mid and \u2264L. One CUDA context; host multi-worker not used for this path."
+  "status": "GPU (CuPy/V100) |\u03ba|=1 m4 census: p=5 max|m4|=0.04615385 (0.46s), p=7 max|m4|=0.03807195 (0.30s). Both \u2264M_mid and \u2264L. One CUDA context; host multi-worker not used for this path."
 }
