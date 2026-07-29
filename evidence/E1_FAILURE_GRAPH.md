@@ -26,7 +26,7 @@
 | **F14** | Ignore this graph and re-run dead loops | Session thrash: serial MILP/SA, false m_n shortcut, soft-close, single-core re-census | User has to intervene; no new proof edge |
 | **F15** | Plain Fréchet on Max+ conditional cov for \(g_{\min}\) | Cond means match Gaussian (Prop 15.50) but Fréchet only gives \(g_{\min}\gtrsim-0.4\) at \(p=5\), below bi-tight thresh | False hope of \(L(p)\) from 2-point Frechet |
 | **F16** | Pin free modulus \(c\) by max \(g_{\min}\) under PSD of \(G(c)\) | At \(p=5\), PSD+rank hold on a continuum; max PSD \(g_{\min}\approx-0.040\) at wrong \(c\); true \(g_{\min}=-3/65\) needs \(\mathrm{Tr}(G^2)\)/spectrum | Spurious “better” gmin; wrong pin |
-| **F17** | Full pytest / long suite on **1 core** (no `-n W`) | 88 cores idle; ~90–120s wall for a suite that is embarrassingly parallel; agent has broken this promise repeatedly | `pytest …` without `-n`; one python at ~100% CPU |
+| **F17** | **Any** multi-minute CPU job on **1 core** (pytest without `-n W`, or research script with ProcessPool theater then serial main, or pure-Python `for quad in binom(n,4)` while 87 cores idle) | 88 cores idle; user has rebuked this **repeatedly** (including this session: m4_pseudo ~97% NLWP=1 after “F17 fixed”); destroys trust; wastes wall time | `ps`: one python `pcpu≈100` `nlwp=1`; load≪nproc; parent does heavy work after `as_completed` |
 | **F18** | Character sums / moments on affine or PGL orbit of halfspace as full Max+ | Orbit size 60 of 260 at \(p=5\) (PGL+Frob+sign); affine gmin ≈ −0.6 ≠ −3/65 | Incomplete orbit; wrong \(g_{\min}\) |
 
 ---
@@ -59,7 +59,28 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   python3 -m pytest tests/test_minmax.py tests/test_gmin_residual.py -n "$W" -q
 ```
 
-`OMP_NUM_THREADS=1` is **per worker** (correct with xdist). The ban is **no xdist / no ProcessPool** on multi-minute jobs.
+`OMP_NUM_THREADS=1` is **per worker** (correct with xdist). The ban is **no real fan-out** on multi-minute jobs.
+
+### F17 recurrence (2026-07-30) — treat as hard bug
+
+**Filed:** `evidence/AGENT_BUG_F17_RECURRENCE.md` + session `feedback.jsonl`.
+
+Anti-patterns that still count as F17 even if `require_workers()` was called:
+
+1. **Pool theater:** `ProcessPool` for easy primes, then **serial** `p=7` (or any heavy leftover) on the parent.
+2. **Unsharded loops:** one process walks `combinations(range(n),4)` / full Max+ census while W was only used for tiny tasks.
+3. **Nested serial rebuild:** workers re-load and re-scan the full matrix alone with no shard.
+
+**Mandatory self-check** after launching any >10s job:
+
+```bash
+ps -eo pid,pcpu,nlwp,cmd --sort=-pcpu | head -15
+# FAIL if top job is python, pcpu>80, nlwp=1, and nproc>=8
+```
+
+On FAIL: kill, rewrite to shard, re-run. Do **not** wait for the user to notice.
+
+Use `src/workers.py`: `require_workers()`, `pool()`, `assert_not_single_core_thrash()` (optional live check).
 
 ---
 
