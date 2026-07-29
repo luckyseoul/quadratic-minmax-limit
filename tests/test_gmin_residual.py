@@ -1003,3 +1003,79 @@ def test_prop_15_65_clean_form_and_kappa_spectrum():
     assert "15.65" in sol
     assert "4/N" in sol or "4/N" in sol.replace(" ", "")
     assert "OPEN" in data["status"]
+
+
+def test_prop_15_66_zero_diag_free_and_pairing_criterion():
+    """Zero-diag freeness; algebra wick+eps=L; g_min≥L certs p=5,7."""
+    # Algebra: 1/p^2 + (p-4)/(2p^2) = (p-2)/(2p^2) for p≥5
+    for p in range(5, 40, 2):
+        wick = 1.0 / (p * p)
+        eps = (p - 4) / (2.0 * p * p)
+        L_abs = (p - 2) / (2.0 * p * p)
+        assert abs(wick + eps - L_abs) < 1e-15
+        # L > T
+        L = -(p - 2) / (2.0 * p * p)
+        T = -(p - 2) / (p * (2.0 * p - 1))
+        assert L > T
+
+    import os
+    import sys
+
+    import numpy as np
+
+    for k in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
+        os.environ[k] = "1"
+    sys.path.insert(0, str(ROOT / "src"))
+    from minmax_quadratic import paley_conference_prime_power
+
+    # Live zero-diag freeness at p=5
+    Y = np.load("/tmp/maxplus_p5.npy").astype(float)
+    N, n = Y.shape
+    d = n // 2
+    C = paley_conference_prime_power(5).astype(float)
+    ew, EV = np.linalg.eigh(C)
+    Vp = EV[:, ew > 0]
+    U = (Y @ Vp) / np.sqrt(n)
+    rng = np.random.default_rng(2)
+    A = rng.standard_normal((d, d))
+    A = 0.5 * (A + A.T)
+    A -= np.trace(A) / d * np.eye(d)
+    A /= np.linalg.norm(A) + 1e-30
+    for _ in range(60):
+        q = np.einsum("bi,ij,bj->b", U, A, U)
+        Ph = (U * q[:, None]).T @ U
+        Ph = 0.5 * (Ph + Ph.T)
+        Ph -= np.trace(Ph) / d * np.eye(d)
+        A = Ph / (np.linalg.norm(Ph) + 1e-30)
+    B = Vp @ A @ Vp.T
+    assert np.max(np.abs(np.diag(B))) < 1e-12
+
+    # Live g_min at p=5 via pairing: sample |κ|=1 4-sets
+    from itertools import combinations
+
+    max_abs_m4 = 0.0
+    for pts in combinations(range(n), 4):
+        i, j, k, l = pts
+        kap = int(C[i, j] * C[k, l] + C[i, k] * C[j, l] + C[i, l] * C[j, k])
+        if abs(kap) != 1:
+            continue
+        m4 = float(np.dot(Y[:, i] * Y[:, j], Y[:, k] * Y[:, l]) / N)
+        max_abs_m4 = max(max_abs_m4, abs(m4))
+    g_min = -max_abs_m4
+    L5 = -3 / 50
+    assert abs(max_abs_m4 - 3 / 65) < 1e-9
+    assert g_min >= L5 - 1e-12
+
+    path = ROOT / "evidence" / "e1_gmin_m4_residual.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    assert data["gmin_ge_L_certified_p57"] is True
+    assert data["zero_diag_automatic"] is True
+    assert data["algebra_ok"] is True
+    # residual triangle criterion fails at p=5 (documented)
+    by_p = {r["p"]: r for r in data["m4_residuals"]}
+    assert by_p[5]["resid_le_eps_budget"] is False
+    assert by_p[7]["resid_le_eps_budget"] is True
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.66" in sol
+    assert "OPEN" in data["status"]

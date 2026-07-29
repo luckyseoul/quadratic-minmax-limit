@@ -1,0 +1,240 @@
+{
+  "m4_residuals": [
+    {
+      "p": 3,
+      "N": 12,
+      "n": 10,
+      "n_kappa1_sets": 180,
+      "g_min": -0.3333333333333333,
+      "L_p": -0.05555555555555555,
+      "T_p": -0.06666666666666667,
+      "g_min_ge_L": false,
+      "g_min_gt_T": false,
+      "max_abs_m4": 0.3333333333333333,
+      "max_abs_resid": 0.2222222222222222,
+      "mean_abs_resid": 0.22222222222222227,
+      "eps_budget_(p-4)/(2p^2)": Infinity,
+      "resid_le_eps_budget": null,
+      "m4_ub_from_resid": 0.3333333333333333,
+      "ub_implies_L": false,
+      "worst_resid": {
+        "pts": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "kappa": 1,
+        "m4": 0.3333333333333333,
+        "wick": 0.1111111111111111,
+        "resid": 0.2222222222222222
+      },
+      "m4_unique_rounded": [
+        -0.333333333333,
+        0.333333333333
+      ],
+      "n_unique_m4": 2,
+      "resid_unique_rounded": [
+        -0.222222222222,
+        0.222222222222
+      ],
+      "n_unique_resid": 2,
+      "target_L_abs": 0.05555555555555555,
+      "wick_abs": 0.1111111111111111
+    },
+    {
+      "p": 5,
+      "N": 260,
+      "n": 26,
+      "n_kappa1_sets": 11700,
+      "g_min": -0.046153846153846156,
+      "L_p": -0.06,
+      "T_p": -0.06666666666666667,
+      "g_min_ge_L": true,
+      "g_min_gt_T": true,
+      "max_abs_m4": 0.046153846153846156,
+      "max_abs_resid": 0.055384615384615386,
+      "mean_abs_resid": 0.022564102564102566,
+      "eps_budget_(p-4)/(2p^2)": 0.02,
+      "resid_le_eps_budget": false,
+      "m4_ub_from_resid": 0.09538461538461539,
+      "ub_implies_L": false,
+      "worst_resid": {
+        "pts": [
+          0,
+          1,
+          2,
+          9
+        ],
+        "kappa": -1,
+        "m4": 0.015384615384615385,
+        "wick": -0.04,
+        "resid": 0.055384615384615386
+      },
+      "m4_unique_rounded": [
+        -0.046153846154,
+        -0.015384615385,
+        0.015384615385,
+        0.046153846154
+      ],
+      "n_unique_m4": 4,
+      "resid_unique_rounded": [
+        -0.055384615385,
+        -0.006153846154,
+        0.006153846154,
+        0.055384615385
+      ],
+      "n_unique_resid": 4,
+      "target_L_abs": 0.06,
+      "wick_abs": 0.04
+    },
+    {
+      "p": 7,
+      "N": 11452,
+      "n": 50,
+      "n_kappa1_sets": 176400,
+      "g_min": -0.03807195249738037,
+      "L_p": -0.05102040816326531,
+      "T_p": -0.054945054945054944,
+      "g_min_ge_L": true,
+      "g_min_gt_T": true,
+      "max_abs_m4": 0.03807195249738037,
+      "max_abs_resid": 0.01766378923207425,
+      "mean_abs_resid": 0.005422217786870251,
+      "eps_budget_(p-4)/(2p^2)": 0.030612244897959183,
+      "resid_le_eps_budget": true,
+      "m4_ub_from_resid": 0.03807195249738037,
+      "ub_implies_L": true,
+      "worst_resid": {
+        "pts": [
+          0,
+          1,
+          2,
+          10
+        ],
+        "kappa": 1,
+        "m4": 0.03807195249738037,
+        "wick": 0.02040816326530612,
+        "resid": 0.01766378923207425
+      },
+      "m4_unique_rounded": [
+        -0.038071952497,
+        -0.022703457911,
+        -0.02130632204,
+        -0.015717778554,
+        0.015717778554,
+        0.02130632204,
+        0.022703457911,
+        0.038071952497
+      ],
+      "n_unique_m4": 8,
+      "resid_unique_rounded": [
+        -0.017663789232,
+        -0.004690384711,
+        -0.002295294646,
+        -0.000898158775,
+        0.000898158775,
+        0.002295294646,
+        0.004690384711,
+        0.017663789232
+      ],
+      "n_unique_resid": 8,
+      "target_L_abs": 0.05102040816326531,
+      "wick_abs": 0.02040816326530612
+    }
+  ],
+  "zero_diag_free": [
+    {
+      "p": 3,
+      "E_max_Sym0": 15.999999999999995,
+      "ambient_diag_maxabs": 1.500388881546144e-16,
+      "zero_diag_automatic": true,
+      "qn": 15.999999999999995,
+      "thr_16": 16.0,
+      "le_16": true
+    },
+    {
+      "p": 5,
+      "E_max_Sym0": 13.538461538461535,
+      "ambient_diag_maxabs": 1.4143915820577106e-16,
+      "zero_diag_automatic": true,
+      "qn": 13.538461538461535,
+      "thr_16": 16.0,
+      "le_16": true
+    },
+    {
+      "p": 7,
+      "E_max_Sym0": 10.56234574876824,
+      "ambient_diag_maxabs": 9.083509950307513e-17,
+      "zero_diag_automatic": true,
+      "qn": 10.56234574876824,
+      "thr_16": 16.0,
+      "le_16": true
+    }
+  ],
+  "algebra": [
+    {
+      "p": 3,
+      "wick": 0.1111111111111111,
+      "eps_budget": null,
+      "L_abs": 0.05555555555555555,
+      "wick_plus_eps_eq_L_abs": null,
+      "L_gt_T": true
+    },
+    {
+      "p": 5,
+      "wick": 0.04,
+      "eps_budget": 0.02,
+      "L_abs": 0.06,
+      "wick_plus_eps_eq_L_abs": true,
+      "L_gt_T": true
+    },
+    {
+      "p": 7,
+      "wick": 0.02040816326530612,
+      "eps_budget": 0.030612244897959183,
+      "L_abs": 0.05102040816326531,
+      "wick_plus_eps_eq_L_abs": true,
+      "L_gt_T": true
+    },
+    {
+      "p": 11,
+      "wick": 0.008264462809917356,
+      "eps_budget": 0.028925619834710745,
+      "L_abs": 0.0371900826446281,
+      "wick_plus_eps_eq_L_abs": true,
+      "L_gt_T": true
+    },
+    {
+      "p": 13,
+      "wick": 0.005917159763313609,
+      "eps_budget": 0.026627218934911243,
+      "L_abs": 0.03254437869822485,
+      "wick_plus_eps_eq_L_abs": true,
+      "L_gt_T": true
+    },
+    {
+      "p": 17,
+      "wick": 0.0034602076124567475,
+      "eps_budget": 0.02249134948096886,
+      "L_abs": 0.025951557093425604,
+      "wick_plus_eps_eq_L_abs": true,
+      "L_gt_T": true
+    },
+    {
+      "p": 19,
+      "wick": 0.002770083102493075,
+      "eps_budget": 0.02077562326869806,
+      "L_abs": 0.023545706371191136,
+      "wick_plus_eps_eq_L_abs": true,
+      "L_gt_T": true
+    }
+  ],
+  "sufficient_criterion": "For p\u22655: if |m4 - \u03ba/p\u00b2| \u2264 (p-4)/(2p\u00b2) on all |\u03ba|=1 4-sets, then |m4| \u2264 (p-2)/(2p\u00b2) = -L(p), hence g_min \u2265 L(p) > T(p).",
+  "status": "Pairing residual criterion: algebra_ok=True, resid\u2264eps cert p=5,7=False, g_min\u2265L cert=True, zero_diag free=True. OPEN: prove |m4-\u03ba/p\u00b2|\u2264(p-4)/(2p\u00b2) for all primes p\u22655 (or direct |m4|\u2264-L(p)).",
+  "workers": 86,
+  "gmin_ge_L_certified_p57": true,
+  "resid_criterion_holds_p57": false,
+  "algebra_ok": true,
+  "zero_diag_automatic": true
+}

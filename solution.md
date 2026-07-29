@@ -1971,6 +1971,39 @@ H(p)\,:=\,\frac{(p+2)^2}{d},\qquad d=\frac{p^2+1}{2}.
 
 4. **Residual (OPEN).** Prove \(\lambda_2(P\odot P)\le4/N\) (or the sharper H form) for the Max+ projector of every prime \(p\ge5\). Equivalent targets: \(\lambda_{\max}(\kappa|_{\mathcal Z})\le(p+1)(p+7)/d\), or \(\mathrm{ray}\le H(p)\). Then bi-tight closes. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.66 (zero-diag freeness of \(\Phi\)-maximiser; pairing residual criterion for \(g_{\min}\ge L(p)\); 2026-07-30).** Continue Prop 15.53–15.54 and 15.64–15.65.
+
+1. **Zero-diag freeness (proved).** Let \(A\in\mathrm{Sym}_0(\mathbb R^d)\) maximise \(\langle\Phi A,A\rangle\) over \(\|A\|_F=1\). Then the ambient matrix \(B=V_+AV_+^\top\) has zero diagonal, so the maximiser already lies in \(\mathcal Z\). Consequently
+   \[
+   \lambda_{\max}(\Phi|_{\mathcal Z})=\lambda_{\max}(\Phi|_{\mathrm{Sym}_0}).
+   \]
+   *Proof.* The Lagrangian for the constraints \(r_i^\top Ar_i=0\) and \(\mathrm{Tr}\,A=0\) yields
+   \(\Phi(A)=\lambda A+\sum_i\mu_i r_ir_i^\top+\nu I\).
+   Taking the Frobenius product with \(r_kr_k^\top\) and using \(r_k^\top s_y=y_k\) (hence \(r_k^\top\Phi(A)r_k=\mathbb E[s^\top As]=0\)) forces \(\mu_k/4+\nu/2=0\) for every \(k\), so all \(\mu_k\) are equal. Then \(\sum_i\mu_i r_ir_i^\top=-2\nu I\), and \(\Phi(A)=\lambda A-\nu I\). Taking traces and using \(\mathrm{Tr}\,\Phi(A)=n\mathbb E[s^\top As]=0\) gives \(\nu=0\), hence \(\mu_k=0\) and \(\Phi(A)=\lambda A\). The unconstrained critical point on \(\mathrm{Sym}_0\) is therefore admissible for \(\mathcal Z\). Certified: ambient \(\mathrm{diag}(B)\) of the power-iteration maximiser is \(O(10^{-16})\) at \(p=3,5,7\). Evidence: `e1_gmin_m4_residual.json`. \(\square\)
+
+2. **Pairing residual criterion (proved algebra).** Write \(L(p)=-(p-2)/(2p^2)\) and \(T(p)=-(p-2)/(p(2p-1))\). For every prime \(p\ge5\) one has \(L(p)>T(p)\). On any 4-set with \(|\kappa|=1\), the Wick value is \(m_4^{\mathrm{Wick}}=\kappa/p^2\). If
+   \[
+   \bigl|m_4-\kappa/p^2\bigr|\;\le\;\frac{p-4}{2p^2}
+   \]
+   for every such 4-set, then
+   \[
+   |m_4|\;\le\;\frac1{p^2}+\frac{p-4}{2p^2}=\frac{p-2}{2p^2}=-L(p),
+   \]
+   hence \(g_{\min}\ge L(p)>T(p)\), and Prop 15.47 closes bi-tight. \(\square\)
+
+3. **Certified m4 tables on \(|\kappa|=1\).**  
+   | \(p\) | \(g_{\min}\) | \(L(p)\) | \(\max|m_4|\) | \(\max|m_4-\kappa/p^2|\) | resid crit. |
+   |------|------------|---------|--------------|--------------------------|-------------|
+   | 3 | \(-1/3\) | \(-1/18\) | \(1/3\) | \(2/9\) | n/a (\(p<5\)) |
+   | 5 | \(-3/65\) | \(-3/50\) | \(3/65\) | \(0.0554>(p-4)/(2p^2)=1/50\) | **fails** (too crude) |
+   | 7 | \(-109/2863\) | \(-5/98\) | \(109/2863\) | \(0.0177\le3/98\) | **holds** |
+
+   In particular \(g_{\min}\ge L(p)\) holds at \(p=5,7\), but the triangle residual criterion fails at \(p=5\) (large residuals occur on classes with small \(|m_4|\)). Evidence: `e1_gmin_m4_residual.json`.
+
+4. **Residual (OPEN).** Prove \(g_{\min}\ge L(p)\) for all primes \(p\ge5\), e.g. by proving \(|m_4|\le(p-2)/(2p^2)\) on every \(|\kappa|=1\) class (directly, not via the failed \(p=5\) triangle), **or** prove \(\lambda_2(P\odot P)\le4/N\). Either closes bi-tight. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+   *Remark.* K4-edge Gram PSD only forces \(\alpha\le(p-1)/(2p)\)-scale bounds (e.g. \(0.6\) at \(p=5\)), far above \(L(p)\). General equal-diag projectors violate \(4/N\) (Prop 15.65.3).
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
