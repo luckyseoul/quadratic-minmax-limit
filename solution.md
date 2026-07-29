@@ -2168,6 +2168,67 @@ M_{\mathrm{cand}}(p)=\frac{p-2}{p(2p+3)}.
 
 5. **Residual (OPEN).** Prove for every prime \(p\ge5\) that \(\max_{|\kappa|=1}|m_4|\le M_{\mathrm{mid}}(p)\) (or \(\le L_{\mathrm{abs}}\), or \(\le M_{\mathrm{cand}}\)), using Max+/boolean/conference structure — e.g. via control of \(h_\star\in E_{4p}\) in Prop 15.69, or a closed \(G\)-spectrum / \(\mathrm{Tr}(G^2)\) pin on the moduli line (Prop 15.53). Then bi-tight closes for all such \(p\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.71 (\(\kappa\)-stratum counts for conference matrices; extension-degree feed; 2026-07-29).** Let \(C\) be any real symmetric **conference matrix** of order \(n\) (\(C^\top=C\), zero diagonal, off-diagonal \(\pm1\), \(C^2=(n-1)I\)), and for a 4-set \(S\) write
+\[
+\kappa(S)=\sum_{\text{three pairings}}C_eC_{e'}\in\{\pm1,\pm3\}.
+\]
+Let \(n_1=\#\{S:|\kappa(S)|=1\}\) and \(n_3=\#\{S:|\kappa(S)|=3\}\).
+
+1. **Wedge sum from \(C^2\) (proved).** For \(b\neq c\) one has \(\sum_d C_{bd}C_{cd}=0\). Hence for \(a\notin\{b,c\}\),
+   \[
+   \sum_{d\notin\{a,b,c\}}C_{db}C_{dc}=-C_{ab}C_{ac}.
+   \]
+   Summing the wedge \(C_{ab}C_{ac}C_{db}C_{dc}\) over distinct \(a,b,c\) and \(d\notin\{a,b,c\}\) therefore yields
+   \[
+   \Sigma:=-n(n-1)(n-2).
+   \]
+   \(\square\)
+
+2. **K4 ratio (proved by exhaustion).** On every \(\pm1\)-edge labelling of \(K_4\), writing \(\pi_1,\pi_2,\pi_3\) for the three pairing-products and \(\mathrm{cross}=\pi_1\pi_2+\pi_1\pi_3+\pi_2\pi_3\),
+   \[
+   \sum_{\sigma\in S_4}C_{\sigma(a)\sigma(b)}C_{\sigma(a)\sigma(c)}C_{\sigma(d)\sigma(b)}C_{\sigma(d)\sigma(c)}
+   \;=\;8\cdot\mathrm{cross}.
+   \]
+   (64 edge labelings; always \(\mathrm{cross}\in\{-1,3\}\).) Consequently \(\sum_{\text{4-sets}}\mathrm{cross}=\Sigma/8=-n(n-1)(n-2)/8\). \(\square\)
+
+3. **Fourth-moment sum of \(\kappa\) (proved).** Since \(\kappa^2=3+2\,\mathrm{cross}\),
+   \[
+   \sum_S\kappa(S)^2
+   =3\binom{n}{4}+2\cdot\frac{\Sigma}{8}
+   =\frac{n(n-1)(n-2)(n-5)}{8}.
+   \]
+   \(\square\)
+
+4. **Stratum counts (proved).** Using \(\kappa^2\in\{1,9\}\) and \(\binom{n}{4}=n_1+n_3\),
+   \[
+   n_3=\frac{1}{8}\Bigl(\sum\kappa^2-\binom{n}{4}\Bigr)
+   =\frac{n(n-1)(n-2)(n-6)}{96},\qquad
+   n_1=\binom{n}{4}-n_3
+   =\frac{n(n-1)(n-2)^2}{32}.
+   \]
+   For Paley conferences \(n=p^2+1\) this is
+   \[
+   n_1=\frac{(p^2+1)\,p^2\,(p^2-1)^2}{32},\qquad
+   n_3=\frac{(p^2+1)\,p^2\,(p^2-1)\,(p^2-5)}{96}.
+   \]
+   \(\square\)
+
+5. **Extension degrees (certified; unique if constant).** For Paley of order \(n=p^2+1\), every \(|\kappa|=1\) 4-set has exactly
+   \[
+   d_3=p^2-5,\qquad d_1=3p^2-7
+   \]
+   ordered one-vertex extensions landing in \(|\kappa|=3\) and \(|\kappa|=1\) respectively (so \(d_1+d_3=4(n-4)\)). Constancy certified by full census at \(p=3,5\) and multi-worker samples at \(p=7,11\). Combined with part 4, the constant-degree hypothesis is the unique solution of the handshaking identities. Evidence: `e1_gmin_m4_stratum.json`, `e1_gmin_m4_tkappa.json`. \(\square\)
+
+6. **Target algebra (proved; recalled).** For odd primes \(p\ge5\),
+   \[
+   M_{\mathrm{cand}}(p)\le M_{\mathrm{mid}}(p)\le L_{\mathrm{abs}}(p)<T_{\mathrm{abs}}(p)
+   \]
+   with \(M_{\mathrm{mid}}/L_{\mathrm{abs}}=p/(p+1)\) (Prop 15.70.1). \(\square\)
+
+7. **Multi-worker census (certified \(p=3,5,7,11\); \(W=86\)).** Full \(\kappa\)-stratum counts match part 4 at all four primes (including \(p=11\), \(\binom{122}{4}\approx8.7\cdot10^6\)). Evidence: `e1_gmin_m4_stratum.json` (F17 ProcessPool; atomic JSON). \(\square\)
+
+8. **Residual (OPEN).** Parts 1–4 are Max+-free conference combinatorics and pin the source size of the resolvent equation \((4pI-T)\rho=T\kappa/p^2\) (Prop 15.68): exactly \(n_3\) nonzero source coordinates of amplitude \(24/p^2\). They do **not** alone bound \(|m_4|\) on \(|\kappa|=1\). Still open for every prime \(p\ge5\): \(\max_{|\kappa|=1}|m_4|\le M_{\mathrm{mid}}\) (or \(L_{\mathrm{abs}}\) / \(M_{\mathrm{cand}}\)), e.g. via resolvent gain \(\le(p-4)/48\), \(h_\star\in E_{4p}\) control, or type6 association closed form. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

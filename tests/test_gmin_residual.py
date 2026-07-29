@@ -1246,6 +1246,59 @@ def test_prop_15_68_tkappa_vanishing_and_resolvent_reduction():
     assert "OPEN" in data["status"]
 
 
+def test_prop_15_71_stratum_counts_conference_proof():
+    """Drive shipped stratum helpers: S2 proof, n1/n3 formulas, evidence."""
+    import sys
+    from math import comb
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_m4_stratum import (
+        L_abs,
+        M_mid,
+        algebra_identities,
+        conference_S2_proof,
+        d1_formula,
+        d3_formula,
+        n1_formula,
+        n3_formula,
+        n_of_p,
+    )
+
+    proof = conference_S2_proof()
+    assert proof["proved"] is True
+    assert proof["identity_ratio_8"] is True
+    assert proof["K4_wsum_eq_8_cross_count"] == 64
+
+    for p in (3, 5, 7, 11, 13, 17, 19):
+        n = n_of_p(p)
+        n1, n3 = n1_formula(p), n3_formula(p)
+        assert n1 + n3 == comb(n, 4)
+        S2 = n * (n - 1) * (n - 2) * (n - 5) // 8
+        assert n3 == (S2 - comb(n, 4)) // 8
+        assert n1 == n * (n - 1) * (n - 2) * (n - 2) // 32
+        assert d1_formula(p) + d3_formula(p) == 4 * (n - 4)
+        if p >= 5:
+            assert M_mid(p) <= L_abs(p) + 1e-15
+
+    alg = algebra_identities([3, 5, 7, 11])
+    assert alg["proved_algebra"] is True
+
+    path = ROOT / "evidence" / "e1_gmin_m4_stratum.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    assert data["workers"] >= 4
+    assert data["conference_S2_proof"]["proved"] is True
+    assert data["counts_match_all_certified_p"] is True
+    for p in (3, 5, 7, 11):
+        r = data["count_certs"][str(p)]
+        assert r["match_n1"] and r["match_n3"]
+        assert r["n1_census"] == n1_formula(p)
+        assert r["n3_census"] == n3_formula(p)
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.71" in sol
+    assert "OPEN" in data["status"]
+
+
 def test_prop_15_70_mid_ub_algebra_and_census():
     """mid_ub <= L_abs; census g_min>=L at p=5,7; bi-tight threshold algebra."""
     # Algebra: mid = (p-2)/(2p(p+1)), L = (p-2)/(2p^2), mid/L = p/(p+1)

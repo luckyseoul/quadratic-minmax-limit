@@ -49,8 +49,25 @@ def write_text_atomic(path: str | Path, text: str, *, encoding: str = "utf-8") -
     write_bytes_atomic(path, text.encode(encoding))
 
 
+def _json_default(obj: Any) -> Any:
+    """Numpy / Path → JSON-safe scalars."""
+    if isinstance(obj, (np.bool_,)):
+        return bool(obj)
+    if isinstance(obj, (np.integer,)):
+        return int(obj)
+    if isinstance(obj, (np.floating,)):
+        return float(obj)
+    if isinstance(obj, np.ndarray):
+        return obj.tolist()
+    if isinstance(obj, Path):
+        return str(obj)
+    raise TypeError(f"Object of type {type(obj).__name__} is not JSON serializable")
+
+
 def write_json_atomic(path: str | Path, obj: Any, *, indent: int = 2) -> None:
-    write_text_atomic(path, json.dumps(obj, indent=indent) + "\n")
+    write_text_atomic(
+        path, json.dumps(obj, indent=indent, default=_json_default) + "\n"
+    )
 
 
 def write_npy_atomic(path: str | Path, arr: np.ndarray) -> None:

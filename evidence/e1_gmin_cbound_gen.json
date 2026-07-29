@@ -1,0 +1,122 @@
+{
+  "workers": 86,
+  "compute": {
+    "cpu_threads": 88,
+    "workers": 86,
+    "gpu": {
+      "available": true,
+      "backend": "cupy",
+      "name": "Tesla V100-SXM2-16GB",
+      "mem_free_gib": 16.456024064,
+      "mem_total_gib": 16.928342016,
+      "util_pct": null
+    },
+    "policy": "Use GPU for large dense batches if available; else ProcessPool W=86. Never single-core multi-minute thrash (F17)."
+  },
+  "io_policy": "mmap Max+ shared across workers; pickle class caches via write_bytes_atomic; evidence via write_json_atomic (tmp+fsync+replace)",
+  "results": {
+    "5": {
+      "p": 5,
+      "n": 26,
+      "N": 260,
+      "n_classes": 37,
+      "io": {
+        "maxplus": "mmap load_maxplus_array",
+        "class_cache": "/tmp/e1_cbound_p5_classes.pkl",
+        "class_via": "cache:/tmp/e1_cbound_p5_classes.pkl",
+        "evec_via": "cache:/tmp/e1_cbound_p5_evec.npz",
+        "evidence": "write_json_atomic"
+      },
+      "wall_class_s": 0.018062578004901297,
+      "wall_evec_s": 0.0008270440011983737,
+      "wall_tr_s": 0.2607200240017846,
+      "wall_total_s": 0.3955600509943906,
+      "constancy_all": true,
+      "constancy_max_std": 0.0,
+      "nullity": 1,
+      "Tr_G2": 1808.3846153846155,
+      "Tr_G2_from_moments": 1808.3846153846152,
+      "Tr_identity_match": true,
+      "E_dot2": 52.0,
+      "E_dot4": 9261.538461538461,
+      "Tr_G2_wick": 1833.0000000000007,
+      "tr_via": "gpu_allpairs",
+      "M_mid": 0.05,
+      "L": -0.06,
+      "T": -0.06666666666666667,
+      "emp_max_abs_m4_kappa1": 0.046153846153846156,
+      "selected_g_min_true_Tr": -0.04615384615384714,
+      "selected_ge_neg_mid": true,
+      "selected_ge_L": true,
+      "selected_gt_T": true,
+      "recovered_p5_target": true,
+      "pin_status": "ok",
+      "emp_g_min": -0.046153846153846156,
+      "emp_ge_neg_mid": true,
+      "emp_ge_L": true,
+      "c_true_fit": -0.4240159256359154,
+      "g_min_at_c_true": -0.04615384615384755,
+      "tr_quadratic": {
+        "a0": 1678.8820073295458,
+        "a1": 254.76443390359236,
+        "a2": 1321.1382113821137
+      },
+      "roots_true_Tr": [
+        -0.42401592563592916,
+        0.2311788464350561
+      ],
+      "g_min_at_true_roots": [
+        -0.04615384615384714,
+        -0.065846153846156
+      ],
+      "selected_g_min_wick_Tr": -0.04533333333333432,
+      "c_where_gmin_crosses_neg_mid": [
+        -0.7125,
+        -0.2975
+      ],
+      "max_gmin_on_scan": -0.04011313825698625,
+      "min_gmin_on_scan": -0.2760369251615416
+    },
+    "7": {
+      "p": 7,
+      "n": 50,
+      "N": 11452,
+      "n_classes": 82,
+      "io": {
+        "maxplus": "mmap load_maxplus_array",
+        "class_cache": "/tmp/e1_cbound_p7_classes.pkl",
+        "class_via": "cache:/tmp/e1_cbound_p7_classes.pkl",
+        "evec_via": "cache:/tmp/e1_cbound_p7_evec.npz",
+        "evidence": "write_json_atomic"
+      },
+      "wall_class_s": 0.31256735099304933,
+      "wall_evec_s": 0.0006982089980738238,
+      "wall_tr_s": 0.031153203002759255,
+      "wall_total_s": 0.7077068649959983,
+      "constancy_all": false,
+      "constancy_max_std": 0.01232017195112741,
+      "nullity": 0,
+      "Tr_G2": 5923.906630161226,
+      "Tr_G2_from_moments": 5923.906630161226,
+      "Tr_identity_match": true,
+      "E_dot2": 100.0,
+      "E_dot4": 31195.626520644902,
+      "Tr_G2_wick": 6225.000000000002,
+      "tr_via": "gpu_allpairs",
+      "M_mid": 0.044642857142857144,
+      "L": -0.05102040816326531,
+      "T": -0.054945054945054944,
+      "emp_max_abs_m4_kappa1": 0.03807195249738037,
+      "selected_g_min_true_Tr": null,
+      "selected_ge_neg_mid": false,
+      "selected_ge_L": false,
+      "selected_gt_T": false,
+      "recovered_p5_target": false,
+      "pin_status": "skip_pin: nullity=0 constancy=False (need nullity\u22651 and m_part/nvec; p=7 coarse classes not m4-constant)",
+      "emp_g_min": -0.03807195249738037,
+      "emp_ge_neg_mid": true,
+      "emp_ge_L": true
+    }
+  },
+  "status": "Moduli pin p=5: g_min=-0.04615384615384714 ge_mid=True recovered_3/65=True; p=7: pin_status=skip_pin: nullity=0 constancy=False (need nullity\u22651 and m_part/nvec; p=7 coarse classes not m4-constant) emp_g=-0.03807195249738037 emp_ge_mid=True nullity=0 constancy=False. OPEN: Max+-free Tr(G\u00b2)/E[dot^4] + constant-m4 classes for general p\u22655."
+}

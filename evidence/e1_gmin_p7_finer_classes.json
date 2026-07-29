@@ -1,0 +1,27 @@
+{
+  "p": 7,
+  "workers": 86,
+  "n_classes_finer": 82,
+  "n_constant": 69,
+  "all_constant": false,
+  "max_std": 0.0125742228431715,
+  "wall_class_s": 3.929438138002297,
+  "n_kappa1_quads": 176400,
+  "max_abs_m4_kappa1": 0.03807195249738037,
+  "M_mid": 0.044642857142857144,
+  "L_abs": 0.05102040816326531,
+  "T_abs": 0.054945054945054944,
+  "max_abs_le_M_mid": true,
+  "max_abs_le_L": true,
+  "g_min_empirical": -0.03807195249738037,
+  "Tr": {
+    "Tr_G2": 5923.906630161226,
+    "E_dot2": 100.0,
+    "E_dot4": 31195.626520644902,
+    "TrG2_from_moments": 5923.906630161226,
+    "identity_match": true,
+    "tr_via": "gpu_allpairs"
+  },
+  "io": "mmap Max+ in workers; write_json_atomic",
+  "note": "Finer key still may not be fully constant; empirical max|m4| on |kappa|=1 is the durable census for bi-tight at p=7."
+}
