@@ -731,3 +731,89 @@ def test_prop_15_61_16n_bound_algebra_and_certs():
     assert "15.61" in sol
     assert "16N" in sol or "16 N" in sol
     assert "OPEN" in data["status"]
+
+
+def test_prop_15_62_typeA_wedge_identity():
+    """typeA+wedge=6N for zero-diag B on V_+; Q=6N+Q_4; evidence multi-seed."""
+    import os
+    import sys
+
+    import numpy as np
+
+    for k in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
+        os.environ[k] = "1"
+    sys.path.insert(0, str(ROOT / "src"))
+    from minmax_quadratic import paley_conference_prime_power
+
+    # Live check at p=5 on a zero-diag∩V_+ random matrix
+    Y = np.load("/tmp/maxplus_p5.npy").astype(float)
+    N, n = Y.shape
+    d = n // 2
+    C = paley_conference_prime_power(5).astype(float)
+    ew, EV = np.linalg.eigh(C)
+    Vp = EV[:, ew > 0]
+    # Build one nullspace vector (ambient zero diag)
+    dimS = d * (d + 1) // 2
+
+    def A_from_vec(v):
+        A = np.zeros((d, d))
+        k = 0
+        for i in range(d):
+            for j in range(i, d):
+                A[i, j] = A[j, i] = v[k]
+                k += 1
+        return A
+
+    M = np.zeros((n, dimS))
+    for k in range(dimS):
+        e = np.zeros(dimS)
+        e[k] = 1.0
+        M[:, k] = np.diag(Vp @ A_from_vec(e) @ Vp.T)
+    _u, s, vh = np.linalg.svd(M, full_matrices=True)
+    rank = int(np.sum(s > 1e-10))
+    null = vh[rank:].T
+    rng = np.random.default_rng(42)
+    v = null @ rng.standard_normal(null.shape[1])
+    B = Vp @ A_from_vec(v) @ Vp.T
+    B = B / (np.linalg.norm(B) + 1e-30)
+    assert np.max(np.abs(np.diag(B))) < 1e-10
+    ytBy = np.einsum("ai,ij,aj->a", Y, B, Y)
+    Q = float(np.sum(ytBy**2))
+    sixN = 6.0 * N * float(np.sum(B * B))
+    # Edge split
+    edges = [(i, j) for i in range(n) for j in range(i + 1, n)]
+    Be = np.array([2.0 * B[i, j] for i, j in edges])
+    F = np.stack([Y[:, i] * Y[:, j] for i, j in edges], axis=1)
+    Gu = F.T @ F
+    E = len(edges)
+    share = np.zeros((E, E), dtype=bool)
+    for a, (i, j) in enumerate(edges):
+        for b in range(a + 1, E):
+            kk, ll = edges[b]
+            if len({i, j, kk, ll}) == 3:
+                share[a, b] = share[b, a] = True
+    disj = ~share
+    np.fill_diagonal(disj, False)
+    same = np.eye(E, dtype=bool)
+    typeA = float(Be @ (Gu * same) @ Be)
+    wedge = float(Be @ (Gu * share) @ Be)
+    q4 = float(Be @ (Gu * disj) @ Be)
+    assert abs(typeA - 2 * N) < 1e-6 * N
+    assert abs(wedge - 4 * N) < 1e-4 * N
+    assert abs(typeA + wedge - sixN) < 1e-4 * max(sixN, 1.0)
+    assert abs(Q - (sixN + q4)) < 1e-4 * max(Q, 1.0)
+    assert q4 <= 10 * N + 1e-3 * N
+
+    path = ROOT / "evidence" / "e1_gmin_typeA_wedge.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    assert data["identity_ok"] is True
+    for p in ("3", "5", "7"):
+        assert data["summary"][p]["typeA_wedge_identity_all_ok"] is True
+        assert data["summary"][p]["all_disj_le_10N"] is True
+    # p=3 saturates 16N
+    assert abs(data["summary"]["3"]["max_ratio_to_16N"] - 1.0) < 1e-9
+    sol = (ROOT / "solution.md").read_text()
+    assert "15.62" in sol
+    assert "typeA" in sol or "Type A" in sol
+    assert "OPEN" in data["status"]

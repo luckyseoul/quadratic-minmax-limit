@@ -1,0 +1,83 @@
+{
+  "summary": {
+    "3": {
+      "n_trials": 41,
+      "nullity": 5,
+      "typeA_wedge_identity_all_ok": true,
+      "max_diag": 2.890147194009717e-16,
+      "max_ratio_to_16N": 1.0000000000000007,
+      "max_Q4_over_N": 10.000000000000005,
+      "all_disj_le_10N": true,
+      "max_mode_ratio": 1.0000000000000002,
+      "max_mode_Q4_over_N": 9.999999999999998,
+      "max_mode_lam_cycle_proxy": 8.000000000000002
+    },
+    "5": {
+      "n_trials": 41,
+      "nullity": 65,
+      "typeA_wedge_identity_all_ok": true,
+      "max_diag": 1.4402407156826056e-16,
+      "max_ratio_to_16N": 0.8461538461295652,
+      "max_Q4_over_N": 7.538461538073042,
+      "all_disj_le_10N": true,
+      "max_mode_ratio": 0.8461538461295652,
+      "max_mode_Q4_over_N": 7.538461538073042,
+      "max_mode_lam_cycle_proxy": 6.769230769036522
+    },
+    "7": {
+      "n_trials": 41,
+      "nullity": 275,
+      "typeA_wedge_identity_all_ok": true,
+      "max_diag": 7.10504469155844e-17,
+      "max_ratio_to_16N": 0.660109675430644,
+      "max_Q4_over_N": 4.561754806890304,
+      "all_disj_le_10N": true,
+      "max_mode_ratio": 0.660109675430644,
+      "max_mode_Q4_over_N": 4.561754806890304,
+      "max_mode_lam_cycle_proxy": 5.280877403445152
+    }
+  },
+  "spectrum": [
+    {
+      "p": 3,
+      "skipped": false,
+      "E": 45,
+      "N": 12,
+      "nullity": 5,
+      "lam_max_Gu_disj": 60.00000000000006,
+      "lam_min_Gu_disj": -29.888543819998336,
+      "op_norm": 60.00000000000006,
+      "ray_image_max": 60.00000000000004,
+      "ray_image_mean": 60.0,
+      "ray_image_p99": 60.00000000000003,
+      "ray_maximizer": 59.999999999999986,
+      "thr_16N_ray": 60.0,
+      "image_max_below_thr": true,
+      "maximizer_below_thr": true,
+      "unrestricted_exceeds_thr": true
+    },
+    {
+      "p": 5,
+      "skipped": false,
+      "E": 325,
+      "N": 260,
+      "nullity": 65,
+      "lam_max_Gu_disj": 3119.999999999999,
+      "lam_min_Gu_disj": -634.9773326482563,
+      "op_norm": 3119.999999999999,
+      "ray_image_max": 645.3277255753221,
+      "ray_image_mean": 465.11608886486266,
+      "ray_image_p99": 618.99595194994,
+      "ray_maximizer": 979.9999999773054,
+      "thr_16N_ray": 1300.0,
+      "image_max_below_thr": true,
+      "maximizer_below_thr": true,
+      "unrestricted_exceeds_thr": true
+    }
+  ],
+  "identity_claim": "Zero-diag B=P_+ B P_+: typeA=2N\u2016B\u2016_F\u00b2 (same-edge), wedge=4N\u2016B\u2016_F\u00b2 (share-one-vertex via \u03a3=2P_+ on V_+), Q=6N\u2016B\u2016_F\u00b2+Q_4 with Q_4=Be\u1d40Gu_disj Be only.",
+  "residual": "Prove Q_4\u226410N\u2016B\u2016_F\u00b2 for all primes p\u22655 (Gu_disj Rayleigh on image of zero-diag\u2229V_+ only; unrestricted op-norm fails).",
+  "status": "Prop 15.62 typeA+wedge=6N: CERTIFIED multi-seed p=3,5,7; 16N / Gu_disj image bound OPEN.",
+  "workers": 86,
+  "identity_ok": true
+}

@@ -1846,6 +1846,44 @@ Q(B):=\sum_{y\in\mathrm{Max}_{+}}(y^\top By)^2.
 
    *Remark.* The 2×-sphere bound of Prop 15.60.4 is slightly sharper (\(16\,dN/(d+2)<16N\)) but has the same open core; the 16N form isolates the clean numerical threshold \(\lambda_{\mathrm{cycle}}\le8\).
 
+**Proposition 15.62 (typeA+wedge identity; \(Q=6N\|B\|_F^2+Q_4\); 2026-07-30).** Continue Prop 15.61. Let \(B\) be real symmetric \(n\times n\) with \(B=P_+BP_+\) and zero ambient diagonal (hence \(\mathrm{Tr}\,B=0\) automatically). Write \(Q(B)=\sum_{y\in\mathrm{Max}_{+}}(y^\top By)^2\). Index unordered edges \(e=\{i,j\}\) by \(Be_e:=2B_{ij}\) and \(f_e(y):=y_iy_j\), so \(y^\top By=\sum_e Be_e f_e(y)\). Let \(\mathrm{Gu}=F^\top F\) with \(F\) the \(N\times E\) matrix of features \(f_e\) on Max+, and split pairs of distinct edges into **wedge** (share a vertex) and **disjoint**.
+
+1. **Type A (same-edge; proved).** 
+   \[
+   \sum_e Be_e^2\sum_y f_e(y)^2=N\|Be\|_2^2=2N\|B\|_F^2,
+   \]
+   since \(f_e^2\equiv1\) and \(\|Be\|_2^2=4\sum_{i<j}B_{ij}^2=2\|B\|_F^2\). \(\square\)
+
+2. **Wedge (share-one-vertex; proved).** For edges \(e=\{r,j\}\), \(e'=\{r,l\}\) sharing \(r\),
+   \[
+   \sum_y f_e f_{e'}=\sum_y y_jy_l=N\Sigma_{jl},\qquad \Sigma:=\mathbb E[yy^\top]=2P_+.
+   \]
+   Summing over all ordered wedge pairs and using \(Be_e=2B_{rj}\),
+   \[
+   Be^\top(\mathrm{Gu}\odot\mathbf1_{\mathrm{wedge}})Be
+   =\sum_r\sum_{j\neq l,\,j,l\neq r}(2B_{rj})(2B_{rl})\cdot N\Sigma_{jl}
+   =4N\sum_r\Bigl((Be_r)^\top\Sigma(Be_r)-\sum_j B_{rj}^2\Sigma_{jj}\Bigr).
+   \]
+   On \(V_+\): \(\Sigma v=2v\) for \(v=Be_r=B e_r\in V_+\), and \(\Sigma_{jj}=1\), so the parenthesis equals \(\|Be_r\|_2^2\). Hence the wedge contribution is
+   \[
+   4N\sum_r\|Be_r\|_2^2=4N\|B\|_F^2.
+   \]
+   \(\square\)
+
+3. **Identity (proved).** 
+   \[
+   Q(B)=6N\|B\|_F^2+Q_4(B),\qquad Q_4(B):=Be^\top(\mathrm{Gu}\odot\mathbf1_{\mathrm{disj}})Be.
+   \]
+   Consequently \(Q(B)\le16N\|B\|_F^2\) if and only if \(Q_4(B)\le10N\|B\|_F^2\). For the cycle-normalisation \(\|B\|_F^2=2\),
+   \[
+   \lambda_{\mathrm{cycle}}=\frac{Q(B)}{4N}=3+\frac{Q_4(B)}{4N},
+   \]
+   so \(\lambda_{\mathrm{cycle}}\le8\) \(\Leftrightarrow\) \(Q_4\le20N\) at that scale (equivalently \(Q_4\le10N\|B\|_F^2\)). \(\square\)
+
+4. **Certified.** Multi-seed sampling of the full zero-diag \(\cap V_+\) space (nullspace of ambient diagonal on \(\mathrm{Sym}(V_+)\)) at \(p=3,5,7\): typeA+wedge identity holds to machine precision in every trial; at \(p=3\) one has \(Q\equiv16N\) on the whole space (equality case); at \(p=5,7\) the maximiser and all random trials satisfy \(Q_4\le10N\|B\|_F^2\). Unrestricted \(\|\mathrm{Gu}_{\mathrm{disj}}\|_{\mathrm{op}}\) exceeds the \(5N\) Rayleigh threshold for unit edge vectors, so a crude operator-norm bound fails — the residual is Rayleigh of \(\mathrm{Gu}_{\mathrm{disj}}\) on the **image** of zero-diag \(\cap V_+\to\mathbb R^E\) only. Evidence: `e1_gmin_typeA_wedge.json`.
+
+5. **Residual (OPEN).** Prove \(Q_4(B)\le10N\|B\|_F^2\) for all zero-diag \(B=P_+BP_+\) and all primes \(p\ge5\). Then Prop 15.61 closes bi-tight for every such \(p\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
