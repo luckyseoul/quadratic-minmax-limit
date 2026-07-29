@@ -20,3 +20,12 @@ Impact: user trust destroyed; wasted wall time and compute; blocks progress on M
 Workspace: /home/nick/quadratic-minmax-limit
 Session: 019f9af7-3128-71c1-984e-2a7102bec72d
 Related: use-available-compute skill, F17, scripts/pytest_full.sh, src/workers.py
+
+## Recurrence 2026-07-29 ~03:44 UTC
+
+**Job:** `src/e1_gmin_m4_midproof.py` → `_job_hstar_budget(p=7)`  
+**Symptom:** PID at **99.9% CPU, nlwp=1**; load ~1.3 on 88 cores.  
+**Cause:** "multi-worker" only ran **2** top-level jobs (p=5 and p=7), each building sparse `T` with a **serial pure-Python loop over all 4-sets** + serial `eigsh`/`lsqr`. When p=5 finished, one orphan process pegged one core.  
+**Not fixed by** calling `require_workers()` at main — W was unused for the heavy path.  
+**Fix required:** shard COO build of T across W workers; never leave a multi-minute pure-Python `for S in combinations` on one process without concurrent independent jobs filling the machine.
+
