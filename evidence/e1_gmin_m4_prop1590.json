@@ -1,0 +1,216 @@
+{
+  "prop": "15.90",
+  "backend": "CPU Fraction algebra + Max+ p=3,5 checks; GPU unused (F20)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "residual_bound_proved_for_all_p": false,
+  "equivalence": {
+    "proved": true,
+    "theorem": "For every prime p with n=p\u00b2+1 and every Max+ on the Paley/conference of order n: the residual bound \u2211\u03c1 \u03ba_B \u2264 (H-1-2/p\u00b2)/4 for all unit zero-diag B on V\u208a is necessary and sufficient for Hypothesis H (ray\u2264H). They are the same inequality.",
+    "by_p": {
+      "3": {
+        "H": "5",
+        "wick_sum": "11/36",
+        "budget": "17/18",
+        "H_over_4_minus_wick": "17/18",
+        "match": true,
+        "n_identity": true,
+        "statement": "max\u2211\u03c1 \u03ba_B = (ray_max-1-2/p\u00b2)/4 \u2264 budget=(H-1-2/p\u00b2)/4 \u21d4 ray_max \u2264 H"
+      },
+      "5": {
+        "H": "49/13",
+        "wick_sum": "27/100",
+        "budget": "437/650",
+        "H_over_4_minus_wick": "437/650",
+        "match": true,
+        "n_identity": true,
+        "statement": "max\u2211\u03c1 \u03ba_B = (ray_max-1-2/p\u00b2)/4 \u2264 budget=(H-1-2/p\u00b2)/4 \u21d4 ray_max \u2264 H"
+      },
+      "7": {
+        "H": "81/25",
+        "wick_sum": "51/196",
+        "budget": "1347/2450",
+        "H_over_4_minus_wick": "1347/2450",
+        "match": true,
+        "n_identity": true,
+        "statement": "max\u2211\u03c1 \u03ba_B = (ray_max-1-2/p\u00b2)/4 \u2264 budget=(H-1-2/p\u00b2)/4 \u21d4 ray_max \u2264 H"
+      },
+      "11": {
+        "H": "169/61",
+        "wick_sum": "123/484",
+        "budget": "6473/14762",
+        "H_over_4_minus_wick": "6473/14762",
+        "match": true,
+        "n_identity": true,
+        "statement": "max\u2211\u03c1 \u03ba_B = (ray_max-1-2/p\u00b2)/4 \u2264 budget=(H-1-2/p\u00b2)/4 \u21d4 ray_max \u2264 H"
+      },
+      "13": {
+        "H": "45/17",
+        "wick_sum": "171/676",
+        "budget": "2349/5746",
+        "H_over_4_minus_wick": "2349/5746",
+        "match": true,
+        "n_identity": true,
+        "statement": "max\u2211\u03c1 \u03ba_B = (ray_max-1-2/p\u00b2)/4 \u2264 budget=(H-1-2/p\u00b2)/4 \u21d4 ray_max \u2264 H"
+      },
+      "17": {
+        "H": "361/145",
+        "wick_sum": "291/1156",
+        "budget": "31067/83810",
+        "H_over_4_minus_wick": "31067/83810",
+        "match": true,
+        "n_identity": true,
+        "statement": "max\u2211\u03c1 \u03ba_B = (ray_max-1-2/p\u00b2)/4 \u2264 budget=(H-1-2/p\u00b2)/4 \u21d4 ray_max \u2264 H"
+      },
+      "19": {
+        "H": "441/181",
+        "wick_sum": "363/1444",
+        "budget": "46749/130682",
+        "H_over_4_minus_wick": "46749/130682",
+        "match": true,
+        "n_identity": true,
+        "statement": "max\u2211\u03c1 \u03ba_B = (ray_max-1-2/p\u00b2)/4 \u2264 budget=(H-1-2/p\u00b2)/4 \u21d4 ray_max \u2264 H"
+      },
+      "23": {
+        "H": "125/53",
+        "wick_sum": "531/2116",
+        "budget": "18991/56074",
+        "H_over_4_minus_wick": "18991/56074",
+        "match": true,
+        "n_identity": true,
+        "statement": "max\u2211\u03c1 \u03ba_B = (ray_max-1-2/p\u00b2)/4 \u2264 budget=(H-1-2/p\u00b2)/4 \u21d4 ray_max \u2264 H"
+      },
+      "29": {
+        "H": "961/421",
+        "wick_sum": "843/3364",
+        "budget": "226649/708122",
+        "H_over_4_minus_wick": "226649/708122",
+        "match": true,
+        "n_identity": true,
+        "statement": "max\u2211\u03c1 \u03ba_B = (ray_max-1-2/p\u00b2)/4 \u2264 budget=(H-1-2/p\u00b2)/4 \u21d4 ray_max \u2264 H"
+      },
+      "31": {
+        "H": "1089/481",
+        "wick_sum": "963/3844",
+        "budget": "291663/924482",
+        "H_over_4_minus_wick": "291663/924482",
+        "match": true,
+        "n_identity": true,
+        "statement": "max\u2211\u03c1 \u03ba_B = (ray_max-1-2/p\u00b2)/4 \u2264 budget=(H-1-2/p\u00b2)/4 \u21d4 ray_max \u2264 H"
+      },
+      "37": {
+        "H": "1521/685",
+        "wick_sum": "1371/5476",
+        "budget": "571557/1875530",
+        "H_over_4_minus_wick": "571557/1875530",
+        "match": true,
+        "n_identity": true,
+        "statement": "max\u2211\u03c1 \u03ba_B = (ray_max-1-2/p\u00b2)/4 \u2264 budget=(H-1-2/p\u00b2)/4 \u21d4 ray_max \u2264 H"
+      }
+    }
+  },
+  "pointwise_identity": {
+    "proved": true,
+    "identity": "For every real symmetric zero-diagonal B and every y\u2208{\u00b11}^n:\n  \u2211_{|S|=4} \u03ba_B(S) \u220f_{v\u2208S} y_v\n    = (y\u1d40 B y)\u00b2 / 8  \u2212  (y\u1d40 B\u00b2 y) / 2  +  \u2016B\u2016_F\u00b2 / 4.",
+    "proof_sketch": "Expand f=y\u1d40By=\u2211_{i\u2260j} B_ij y_i y_j. Then f\u00b2 enumerates same-edge, wedge, and disjoint edge-pair contributions. Same-edge \u2192 2\u2016B\u2016_F\u00b2 (boolean y_i\u00b2=1). Wedge \u2192 \u2016By\u2016\u00b2\u2212\u2016B\u2016_F\u00b2 after summing signed rows. Disjoint pairs: each unordered pair of vertex-disjoint edges is exactly one pairing of its 4-set, so \u2211_S \u03ba_B \u220fy equals the disj sum. Solving for that sum yields the identity. Homogeneous of degree 2 in B; constant term is \u2016B\u2016_F\u00b2/4.",
+    "consequence": "E[\u2211 \u03ba_B \u220fy]=\u2211 m4 \u03ba_B = E[f\u00b2]/8 \u2212 E[\u03b3]/2 + \u2016B\u2016_F\u00b2/4 with E[\u03b3]=2\u2016B\u2016_F\u00b2 \u21d2 Q4/N=E[f\u00b2]\u22126\u2016B\u2016_F\u00b2 (typeA+wedge)."
+  },
+  "pointwise_cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "n_samples": 12,
+      "max_abs_err": 1.9984014443252818e-15,
+      "ok": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "n_samples": 40,
+      "max_abs_err": 1.8207657603852567e-14,
+      "ok": true
+    }
+  },
+  "bound_certification": {
+    "certified_primes": [
+      3,
+      5,
+      7
+    ],
+    "all_hold": true,
+    "by_p": {
+      "3": {
+        "ray": "5",
+        "H": "5",
+        "max_sum_rho_kappa": "17/18",
+        "budget": "17/18",
+        "holds": true,
+        "equality_with_H": true,
+        "slack": 0.0
+      },
+      "5": {
+        "ray": "49/13",
+        "H": "49/13",
+        "max_sum_rho_kappa": "437/650",
+        "budget": "437/650",
+        "holds": true,
+        "equality_with_H": true,
+        "slack": 0.0
+      },
+      "7": {
+        "ray": "221527/97111",
+        "H": "81/25",
+        "max_sum_rho_kappa": "421583/1359554",
+        "budget": "1347/2450",
+        "holds": true,
+        "equality_with_H": false,
+        "slack": 0.23970672735323495
+      }
+    },
+    "note": "p=3,5: equality (ray=H). p=7: strict (ray<H). No counterexample among certified primes."
+  },
+  "orth_reformulation": {
+    "proved_equivalent": true,
+    "identity": "For unit B: E[f\u00b2] = 2n - n E[||By-(f/n)y||\u00b2] (Pythagoras + E[||By||\u00b2]=2). Hence E[f\u00b2]\u22646+2H \u21d4 E[||orth||\u00b2] \u2265 2-(6+2H)/n.",
+    "by_p": {
+      "3": {
+        "orth_lower_bound": "2/5",
+        "orth_lower_float": 0.4,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H (unit B)"
+      },
+      "5": {
+        "orth_lower_bound": "250/169",
+        "orth_lower_float": 1.4792899408284024,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H (unit B)"
+      },
+      "7": {
+        "orth_lower_bound": "1094/625",
+        "orth_lower_float": 1.7504,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H (unit B)"
+      },
+      "11": {
+        "orth_lower_bound": "7090/3721",
+        "orth_lower_float": 1.9054017737167428,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H (unit B)"
+      },
+      "13": {
+        "orth_lower_bound": "2794/1445",
+        "orth_lower_float": 1.9335640138408305,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H (unit B)"
+      },
+      "17": {
+        "orth_lower_bound": "41254/21025",
+        "orth_lower_float": 1.962140309155767,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H (unit B)"
+      },
+      "19": {
+        "orth_lower_bound": "64538/32761",
+        "orth_lower_float": 1.969964286804432,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H (unit B)"
+      }
+    }
+  },
+  "verdict": "The residual bound \u2211\u03c1 \u03ba_B \u2264 (H\u22121\u22122/p\u00b2)/4 is equivalent to Hypothesis H (ray\u2264H). It HOLDS at all certified primes p=3,5,7 (equality at 3,5; strict at 7). No counterexample found. A general proof for all p\u22655 remains OPEN \u2014 same difficulty as H. Bi-tight still open; lim \u03b1_n OPEN.",
+  "settlement_note": "Cannot close Path C via residual bound without an independent proof of H (or of the orth-energy lower bound / 4th-moment operator bound). Next: prove E[\u2016By\u2212(f/n)y\u2016\u00b2] \u2265 2\u2212(6+2H)/n for unit B, or bound the 4th cumulant operator of Max+ by (p+1)(p+7)/d.",
+  "proved": true
+}

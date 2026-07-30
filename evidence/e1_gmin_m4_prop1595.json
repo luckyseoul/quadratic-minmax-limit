@@ -1,0 +1,328 @@
+{
+  "prop": "15.95",
+  "backend": "CPU Fraction + Max+ p=3,5,7; GPU unused (F20)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "gap_proved_for_all_p": false,
+  "wick_le_thr": {
+    "proved": true,
+    "theorem": "thr_gap = 4d\u00b2(d+4) with d=n/2 equals n\u00b2(n+8)/2. Wick_hi = 12n\u00b2+48n = 12n(n+4). thr\u2212Wick = n(n\u00b2\u221216n\u221296)/2. Quadratic n\u00b2\u221216n\u221296 has positive root 8+\u221a160 \u2248 20.65, so for n=p\u00b2+1\u226526 (every prime p\u22655) the disc is \u226541>0 and Wick_hi\u2264thr_gap. At p=3, n=10, disc=\u2212156<0 (Wick exceeds thr, correctly).",
+    "by_p": {
+      "3": {
+        "n": 10,
+        "d": 5,
+        "Wick_hi": 1680,
+        "thr_gap": 900,
+        "thr_minus_Wick": "-780",
+        "disc_n2_16n_96": -156,
+        "Wick_le_thr": false,
+        "expected": false,
+        "match_expected": true
+      },
+      "5": {
+        "n": 26,
+        "d": 13,
+        "Wick_hi": 9360,
+        "thr_gap": 11492,
+        "thr_minus_Wick": "2132",
+        "disc_n2_16n_96": 164,
+        "Wick_le_thr": true,
+        "expected": true,
+        "match_expected": true
+      },
+      "7": {
+        "n": 50,
+        "d": 25,
+        "Wick_hi": 32400,
+        "thr_gap": 72500,
+        "thr_minus_Wick": "40100",
+        "disc_n2_16n_96": 1604,
+        "Wick_le_thr": true,
+        "expected": true,
+        "match_expected": true
+      },
+      "11": {
+        "n": 122,
+        "d": 61,
+        "Wick_hi": 184464,
+        "thr_gap": 967460,
+        "thr_minus_Wick": "782996",
+        "disc_n2_16n_96": 12836,
+        "Wick_le_thr": true,
+        "expected": true,
+        "match_expected": true
+      },
+      "13": {
+        "n": 170,
+        "d": 85,
+        "Wick_hi": 354960,
+        "thr_gap": 2572100,
+        "thr_minus_Wick": "2217140",
+        "disc_n2_16n_96": 26084,
+        "Wick_le_thr": true,
+        "expected": true,
+        "match_expected": true
+      },
+      "17": {
+        "n": 290,
+        "d": 145,
+        "Wick_hi": 1023120,
+        "thr_gap": 12530900,
+        "thr_minus_Wick": "11507780",
+        "disc_n2_16n_96": 79364,
+        "Wick_le_thr": true,
+        "expected": true,
+        "match_expected": true
+      },
+      "19": {
+        "n": 362,
+        "d": 181,
+        "Wick_hi": 1589904,
+        "thr_gap": 24243140,
+        "thr_minus_Wick": "22653236",
+        "disc_n2_16n_96": 125156,
+        "Wick_le_thr": true,
+        "expected": true,
+        "match_expected": true
+      },
+      "23": {
+        "n": 530,
+        "d": 265,
+        "Wick_hi": 3396240,
+        "thr_gap": 75562100,
+        "thr_minus_Wick": "72165860",
+        "disc_n2_16n_96": 272324,
+        "Wick_le_thr": true,
+        "expected": true,
+        "match_expected": true
+      },
+      "29": {
+        "n": 842,
+        "d": 421,
+        "Wick_hi": 8547984,
+        "thr_gap": 301309700,
+        "thr_minus_Wick": "292761716",
+        "disc_n2_16n_96": 695396,
+        "Wick_le_thr": true,
+        "expected": true,
+        "match_expected": true
+      },
+      "31": {
+        "n": 962,
+        "d": 481,
+        "Wick_hi": 11151504,
+        "thr_gap": 448840340,
+        "thr_minus_Wick": "437688836",
+        "disc_n2_16n_96": 909956,
+        "Wick_le_thr": true,
+        "expected": true,
+        "match_expected": true
+      },
+      "37": {
+        "n": 1370,
+        "d": 685,
+        "Wick_hi": 22588560,
+        "thr_gap": 1293184100,
+        "thr_minus_Wick": "1270595540",
+        "disc_n2_16n_96": 1854884,
+        "Wick_le_thr": true,
+        "expected": true,
+        "match_expected": true
+      }
+    }
+  },
+  "strengthened_criterion": {
+    "proved": true,
+    "theorem": "If mult(\u03bb\u2082(P\u2299P))\u2265d and \u2211_{ijkl}M_ijkl\u00b2 \u2264 Wick_hi = 12n\u00b2+48n, then for every prime p\u22655 one has \u2211M\u00b2\u2264thr_gap=4d\u00b2(d+4) (Prop 15.95.1), hence by Prop 15.94 gap criterion \u03bb\u2082\u2264\u221a(Q/d)\u2264d/(2N), hence bi-tight covers are empty (Prop 15.55\u201315.56). Q=Tr((P\u2299P)\u00b2)\u2212\u03b1\u00b2=\u2211M\u00b2/(16N\u00b2)\u2212d\u00b2/N\u00b2, \u03b1=d/N.",
+    "open_inputs": "Need mult(\u03bb\u2082)\u2265d and \u2211M\u00b2\u2264Wick_hi for all primes p\u22655. Both certified at p=5,7; mult=d also at p=3 (gap fails via thr)."
+  },
+  "C_diag": {
+    "proved_formula": true,
+    "theorem": "The repeated-index (diagonal) contribution to the cumulant Frobenius mass \u2211\u03ba\u00b2 equals C_diag=4n(11n\u221214)/p\u00b2. Derived from \u03a3=I+C/p (\u03a3\u00b2=2\u03a3) by expanding \u2211_ijkl (M_ijkl\u2212Wick_ijkl)\u00b2 on partitions with at least one repeated index, using E[y_i^4]=1 and E[y_i\u00b2 y_j\u00b2]=1, E[y_i\u00b3 y_j]=0, and the 2-design second moments. Off-diagonal |\u03ba|=1 residual mass is 24\u2211\u03c1\u00b2. Full identity: \u2211M\u00b2 = wick_lo + C_diag + 24\u2211\u03c1\u00b2 with wick_lo=12n\u00b2\u221248n.",
+    "by_p": {
+      "3": {
+        "n": 10,
+        "C_diag": "1280/3",
+        "C_diag_float": 426.6666666666667,
+        "formula": "4n(11n-14)/p^2",
+        "identity": "sum_M2 = 12n^2 - 48n + C_diag + 24 sum_rho2"
+      },
+      "5": {
+        "n": 26,
+        "C_diag": "28288/25",
+        "C_diag_float": 1131.52,
+        "formula": "4n(11n-14)/p^2",
+        "identity": "sum_M2 = 12n^2 - 48n + C_diag + 24 sum_rho2"
+      },
+      "7": {
+        "n": 50,
+        "C_diag": "107200/49",
+        "C_diag_float": 2187.7551020408164,
+        "formula": "4n(11n-14)/p^2",
+        "identity": "sum_M2 = 12n^2 - 48n + C_diag + 24 sum_rho2"
+      },
+      "11": {
+        "n": 122,
+        "C_diag": "648064/121",
+        "C_diag_float": 5355.900826446281,
+        "formula": "4n(11n-14)/p^2",
+        "identity": "sum_M2 = 12n^2 - 48n + C_diag + 24 sum_rho2"
+      },
+      "13": {
+        "n": 170,
+        "C_diag": "1262080/169",
+        "C_diag_float": 7467.92899408284,
+        "formula": "4n(11n-14)/p^2",
+        "identity": "sum_M2 = 12n^2 - 48n + C_diag + 24 sum_rho2"
+      },
+      "17": {
+        "n": 290,
+        "C_diag": "3684160/289",
+        "C_diag_float": 12747.958477508651,
+        "formula": "4n(11n-14)/p^2",
+        "identity": "sum_M2 = 12n^2 - 48n + C_diag + 24 sum_rho2"
+      },
+      "19": {
+        "n": 362,
+        "C_diag": "5745664/361",
+        "C_diag_float": 15915.96675900277,
+        "formula": "4n(11n-14)/p^2",
+        "identity": "sum_M2 = 12n^2 - 48n + C_diag + 24 sum_rho2"
+      },
+      "23": {
+        "n": 530,
+        "C_diag": "12329920/529",
+        "C_diag_float": 23307.977315689983,
+        "formula": "4n(11n-14)/p^2",
+        "identity": "sum_M2 = 12n^2 - 48n + C_diag + 24 sum_rho2"
+      },
+      "29": {
+        "n": 842,
+        "C_diag": "31147264/841",
+        "C_diag_float": 37035.985731272296,
+        "formula": "4n(11n-14)/p^2",
+        "identity": "sum_M2 = 12n^2 - 48n + C_diag + 24 sum_rho2"
+      },
+      "31": {
+        "n": 962,
+        "C_diag": "40665664/961",
+        "C_diag_float": 42315.98751300728,
+        "formula": "4n(11n-14)/p^2",
+        "identity": "sum_M2 = 12n^2 - 48n + C_diag + 24 sum_rho2"
+      },
+      "37": {
+        "n": 1370,
+        "C_diag": "82506880/1369",
+        "C_diag_float": 60267.99123447772,
+        "formula": "4n(11n-14)/p^2",
+        "identity": "sum_M2 = 12n^2 - 48n + C_diag + 24 sum_rho2"
+      }
+    }
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "d": 5,
+      "sum_M2": 1680.0,
+      "Wick_hi": 1680,
+      "Wick_lo": 720,
+      "thr_gap": 900,
+      "sum_M2_le_Wick_hi": true,
+      "sum_M2_le_thr": false,
+      "Wick_hi_le_thr": false,
+      "C_diag": 426.6666666666667,
+      "sum_kappa2_est": 960.0,
+      "sum_rho2_est": 22.222222222222218,
+      "sum_rho2_nonneg": true,
+      "lam1": 0.4166666667,
+      "alpha": 0.4166666666666667,
+      "lam2": 0.3333333333,
+      "lam2_mult": 5,
+      "mult_ge_d": true,
+      "mult_eq_d": true,
+      "Q": 0.5555555555555556,
+      "sqrt_Q_over_d": 0.33333333333333337,
+      "gap_thr": 0.20833333333333334,
+      "thr16": 0.3333333333333333,
+      "thrH": 0.3333333333333333,
+      "gap_by_mult_d": false,
+      "actual_gap_holds": false,
+      "actual_16N_holds": true,
+      "rank_PopP": 6,
+      "rank_formula": 6,
+      "ok": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "d": 13,
+      "sum_M2": 9261.538461538461,
+      "Wick_hi": 9360,
+      "Wick_lo": 6864,
+      "thr_gap": 11492,
+      "sum_M2_le_Wick_hi": true,
+      "sum_M2_le_thr": true,
+      "Wick_hi_le_thr": true,
+      "C_diag": 1131.52,
+      "sum_kappa2_est": 2397.538461538461,
+      "sum_rho2_est": 52.75076923076921,
+      "sum_rho2_nonneg": true,
+      "lam1": 0.05,
+      "alpha": 0.05,
+      "lam2": 0.0130177515,
+      "lam2_mult": 13,
+      "mult_ge_d": true,
+      "mult_eq_d": true,
+      "Q": 0.006062812926718253,
+      "sqrt_Q_over_d": 0.021595606616443386,
+      "gap_thr": 0.025,
+      "thr16": 0.015384615384615385,
+      "thrH": 0.01301775147928994,
+      "gap_by_mult_d": true,
+      "actual_gap_holds": true,
+      "actual_16N_holds": true,
+      "rank_PopP": 66,
+      "rank_formula": 66,
+      "ok": true
+    },
+    "7": {
+      "p": 7,
+      "N": 11452,
+      "d": 25,
+      "sum_M2": 31195.626520644902,
+      "Wick_hi": 32400,
+      "Wick_lo": 27600,
+      "thr_gap": 72500,
+      "sum_M2_le_Wick_hi": true,
+      "sum_M2_le_thr": true,
+      "Wick_hi_le_thr": true,
+      "C_diag": 2187.7551020408164,
+      "sum_kappa2_est": 3595.6265206449025,
+      "sum_rho2_est": 58.66130910850359,
+      "sum_rho2_nonneg": true,
+      "lam1": 0.00023057865810072932,
+      "alpha": 0.0021830247991617186,
+      "lam2": 0.00021520673821895584,
+      "lam2_mult": 25,
+      "mult_ge_d": true,
+      "mult_eq_d": true,
+      "Q": 1.0100981996231582e-05,
+      "sqrt_Q_over_d": 0.0006356408418669015,
+      "gap_thr": 0.0010915123995808593,
+      "thr16": 0.00034928396786587494,
+      "thrH": 0.00027244149493538245,
+      "gap_by_mult_d": true,
+      "actual_gap_holds": true,
+      "actual_16N_holds": true,
+      "rank_PopP": -1,
+      "rank_formula": 276,
+      "ok": true
+    }
+  },
+  "attack_surface": "To close bi-tight for all p\u22655 via gap path, prove BOTH:\n  (A) mult(\u03bb\u2082(P\u2299P))\u2265d  [rep theory / explicit d-dim \u03bb\u2082-space];\n  (B) \u2211M\u00b2\u2264Wick_hi=12n\u00b2+48n  [boolean \u2264 Gaussian 4th moment].\nThen Prop 15.95.1\u20132 \u21d2 gap \u21d2 bi-tight empty.\nAlternates: \u03bb_max(FFT|1\u22a5)\u22648N (16N) or \u2264N(3+H) (H).\nDo not re-attack \u2211\u03c1 \u03ba_B (dead after 15.90).",
+  "verdict": "Prop 15.95 proves Wick_hi\u2264thr_gap for all primes p\u22655 (Fraction), the strengthened criterion mult\u2265d+\u2211M\u00b2\u2264Wick\u21d2gap\u2200p\u22655, and records C_diag=4n(11n\u221214)/p\u00b2. Certified mult(\u03bb\u2082)=d and \u2211M\u00b2\u2264thr at p=5,7 (gap_by_mult holds); p=3 correctly fails gap. General mult\u2265d and \u2211M\u00b2\u2264Wick still OPEN. 16N/H OPEN. lim \u03b1_n OPEN.",
+  "settlement_note": "Next: prove mult(\u03bb\u2082)\u2265d for all p\u22655 (Aut/PSL(2,p\u00b2) irrep of degree d inside the even Veronese, or explicit test space with Rayleigh\u2261\u03bb\u2082), and/or \u2211M\u00b2\u2264Wick_hi. Or prove \u03bb_max(FFT|1\u22a5)\u22648N. Deep ND remains.",
+  "proved": true
+}

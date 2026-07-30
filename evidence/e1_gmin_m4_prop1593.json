@@ -1,0 +1,265 @@
+{
+  "prop": "15.93",
+  "backend": "CPU Fraction + Max+ p=3,5 eig; GPU unused (F20)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "FFT_allones": {
+    "proved": true,
+    "theorem": "For every Max+ design matrix Y of a conference order n=p\u00b2+1 with D=YY\u1d40=2NP (P the equal-diag rank-d projector): if M_ab=(y_a\u00b7y_b)\u00b2 and FFT=(M\u2212n J)/2, then FFT 1 = (N d) 1. Hence N d is an eigenvalue of FFT and of Gu=F\u1d40F. Proof: D\u00b2=2ND \u21d2 (D\u00b2)_{aa}=2N n; (M1)_a=\u2211_b D_ab\u00b2=(D\u00b2)_{aa}=2Nn; FFT1=(2Nn1\u2212nN1)/2=Nd 1.",
+    "by_p": {
+      "3": {
+        "FFT_1_eigenvalue": "1",
+        "formula": "N*d",
+        "identity_check": true
+      },
+      "5": {
+        "FFT_1_eigenvalue": "1",
+        "formula": "N*d",
+        "identity_check": true
+      },
+      "7": {
+        "FFT_1_eigenvalue": "1",
+        "formula": "N*d",
+        "identity_check": true
+      },
+      "11": {
+        "FFT_1_eigenvalue": "1",
+        "formula": "N*d",
+        "identity_check": true
+      },
+      "13": {
+        "FFT_1_eigenvalue": "1",
+        "formula": "N*d",
+        "identity_check": true
+      },
+      "17": {
+        "FFT_1_eigenvalue": "1",
+        "formula": "N*d",
+        "identity_check": true
+      },
+      "19": {
+        "FFT_1_eigenvalue": "1",
+        "formula": "N*d",
+        "identity_check": true
+      },
+      "23": {
+        "FFT_1_eigenvalue": "1",
+        "formula": "N*d",
+        "identity_check": true
+      },
+      "29": {
+        "FFT_1_eigenvalue": "1",
+        "formula": "N*d",
+        "identity_check": true
+      },
+      "31": {
+        "FFT_1_eigenvalue": "1",
+        "formula": "N*d",
+        "identity_check": true
+      },
+      "37": {
+        "FFT_1_eigenvalue": "1",
+        "formula": "N*d",
+        "identity_check": true
+      }
+    }
+  },
+  "equivalences": {
+    "proved": true,
+    "theorem": "Let Im = F\u1d40(1^\u22a5) \u2282 R^E. Then for all primes p\u22653:\n  16N \u21d4 \u03bb_max(FFT|_{1^\u22a5})\u22648N \u21d4 \u03bb_max(Gu|_Im)\u22648N\n      \u21d4 Be\u1d40Gu Be\u22648N\u2016Be\u2016\u00b2 \u2200Be\u2208Im (Be from unit zero-diag B on V\u208a)\n      \u21d4 Q\u226416N\u2016B\u2016_F\u00b2.\n  H \u21d4 \u03bb_max(FFT|_{1^\u22a5})\u2264N(3+H).\nType A+wedge: Be\u1d40Gu Be=3N\u2016Be\u2016\u00b2+Be\u1d40Gu_disj Be on Im, so\n  16N \u21d4 Be\u1d40Gu_disj Be\u22645N\u2016Be\u2016\u00b2 on Im.\nFor p\u22655, d\u226513>8 so 16N\u21d2\u03bb_cycle\u22648\u21d2bi-tight empty (Prop 15.61).",
+    "by_p": {
+      "3": {
+        "H": "5",
+        "thr_16N_on_FFT_1perp": "8N",
+        "thr_H_on_FFT_1perp": "N*(3+H)=N*8",
+        "thr_16N_on_Gu_Im": "8N",
+        "thr_disj": "5N",
+        "d_ge_8_for_gap_from_16N": false,
+        "H_le_5": true
+      },
+      "5": {
+        "H": "49/13",
+        "thr_16N_on_FFT_1perp": "8N",
+        "thr_H_on_FFT_1perp": "N*(3+H)=N*88/13",
+        "thr_16N_on_Gu_Im": "8N",
+        "thr_disj": "5N",
+        "d_ge_8_for_gap_from_16N": true,
+        "H_le_5": true
+      },
+      "7": {
+        "H": "81/25",
+        "thr_16N_on_FFT_1perp": "8N",
+        "thr_H_on_FFT_1perp": "N*(3+H)=N*156/25",
+        "thr_16N_on_Gu_Im": "8N",
+        "thr_disj": "5N",
+        "d_ge_8_for_gap_from_16N": true,
+        "H_le_5": true
+      },
+      "11": {
+        "H": "169/61",
+        "thr_16N_on_FFT_1perp": "8N",
+        "thr_H_on_FFT_1perp": "N*(3+H)=N*352/61",
+        "thr_16N_on_Gu_Im": "8N",
+        "thr_disj": "5N",
+        "d_ge_8_for_gap_from_16N": true,
+        "H_le_5": true
+      },
+      "13": {
+        "H": "45/17",
+        "thr_16N_on_FFT_1perp": "8N",
+        "thr_H_on_FFT_1perp": "N*(3+H)=N*96/17",
+        "thr_16N_on_Gu_Im": "8N",
+        "thr_disj": "5N",
+        "d_ge_8_for_gap_from_16N": true,
+        "H_le_5": true
+      },
+      "17": {
+        "H": "361/145",
+        "thr_16N_on_FFT_1perp": "8N",
+        "thr_H_on_FFT_1perp": "N*(3+H)=N*796/145",
+        "thr_16N_on_Gu_Im": "8N",
+        "thr_disj": "5N",
+        "d_ge_8_for_gap_from_16N": true,
+        "H_le_5": true
+      },
+      "19": {
+        "H": "441/181",
+        "thr_16N_on_FFT_1perp": "8N",
+        "thr_H_on_FFT_1perp": "N*(3+H)=N*984/181",
+        "thr_16N_on_Gu_Im": "8N",
+        "thr_disj": "5N",
+        "d_ge_8_for_gap_from_16N": true,
+        "H_le_5": true
+      },
+      "23": {
+        "H": "125/53",
+        "thr_16N_on_FFT_1perp": "8N",
+        "thr_H_on_FFT_1perp": "N*(3+H)=N*284/53",
+        "thr_16N_on_Gu_Im": "8N",
+        "thr_disj": "5N",
+        "d_ge_8_for_gap_from_16N": true,
+        "H_le_5": true
+      },
+      "29": {
+        "H": "961/421",
+        "thr_16N_on_FFT_1perp": "8N",
+        "thr_H_on_FFT_1perp": "N*(3+H)=N*2224/421",
+        "thr_16N_on_Gu_Im": "8N",
+        "thr_disj": "5N",
+        "d_ge_8_for_gap_from_16N": true,
+        "H_le_5": true
+      },
+      "31": {
+        "H": "1089/481",
+        "thr_16N_on_FFT_1perp": "8N",
+        "thr_H_on_FFT_1perp": "N*(3+H)=N*2532/481",
+        "thr_16N_on_Gu_Im": "8N",
+        "thr_disj": "5N",
+        "d_ge_8_for_gap_from_16N": true,
+        "H_le_5": true
+      },
+      "37": {
+        "H": "1521/685",
+        "thr_16N_on_FFT_1perp": "8N",
+        "thr_H_on_FFT_1perp": "N*(3+H)=N*3576/685",
+        "thr_16N_on_Gu_Im": "8N",
+        "thr_disj": "5N",
+        "d_ge_8_for_gap_from_16N": true,
+        "H_le_5": true
+      }
+    }
+  },
+  "C_direction": {
+    "proved": true,
+    "theorem": "Let v\u2208R^E have v_e=C_ij for e={i,j}. Then Gu v = (N d) v. Proof: for Max+ y, \u2211_{i<j} y_i y_j C_ij = (1/2) y\u1d40 C y = n p / 2. Hence (Gu v)_e = \u2211_a y_a_i y_a_j \u00b7 (np/2) = (np/2)\u00b7N\u00b7(C_ij/p) = (n N / 2) C_ij = N d v_e."
+  },
+  "Gu_cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "d": 5,
+      "rank_Gu": 6,
+      "rank_formula": 6,
+      "eigs": [
+        {
+          "value": 96.0,
+          "over_N": "8/1",
+          "over_N_float": 8.0,
+          "mult": 5
+        },
+        {
+          "value": 60.0,
+          "over_N": "5/1",
+          "over_N_float": 5.0,
+          "mult": 1
+        },
+        {
+          "value": 0.0,
+          "over_N": "0",
+          "mult": 39
+        }
+      ],
+      "FFT_1_equals_dN_1": true,
+      "lam_max_FFT_1perp": 96.0,
+      "thr_8N": 96,
+      "thr_N_3H": 96.0,
+      "holds_16N": true,
+      "holds_H": true,
+      "equality_16N": true,
+      "equality_H": true,
+      "ok": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "d": 13,
+      "rank_Gu": 66,
+      "rank_formula": 66,
+      "eigs": [
+        {
+          "value": 3380.0,
+          "over_N": "13/1",
+          "over_N_float": 13.0,
+          "mult": 1
+        },
+        {
+          "value": 1760.0,
+          "over_N": "88/13",
+          "over_N_float": 6.769230769230769,
+          "mult": 13
+        },
+        {
+          "value": 1440.0,
+          "over_N": "72/13",
+          "over_N_float": 5.538461538461538,
+          "mult": 26
+        },
+        {
+          "value": 800.0,
+          "over_N": "40/13",
+          "over_N_float": 3.076923076923077,
+          "mult": 26
+        },
+        {
+          "value": 0.0,
+          "over_N": "0",
+          "mult": 259
+        }
+      ],
+      "FFT_1_equals_dN_1": true,
+      "lam_max_FFT_1perp": 1760.0,
+      "thr_8N": 2080,
+      "thr_N_3H": 1760.0,
+      "holds_16N": true,
+      "holds_H": true,
+      "equality_16N": false,
+      "equality_H": true,
+      "ok": true
+    }
+  },
+  "attack_surface": "Prove \u03bb_max(FFT|_{1^\u22a5}) \u2264 8N for all primes p\u22655 (closes 16N + bi-tight), or \u2264 N(3+H) (full H). Equivalent: second-largest Gu-eig on the \u03a6-image \u2264 8N. Known: d N is always a Gu/FFT eig (all-ones / C-edge direction); remaining positive eigs match (N/2)\u00b7spec(\u03a6|Z).",
+  "verdict": "Prop 15.93 proves FFT1=Nd1 and the full chain of equivalences reducing 16N to \u03bb_max(FFT|_{1^\u22a5})\u22648N (and H to \u2264N(3+H)). Gu spectrum certified at p=3 (16N equality) and p=5 (H equality, 16N strict). General upper bound for all p\u22655 remains OPEN. lim \u03b1_n OPEN.",
+  "settlement_note": "Next: prove \u03bb_max(FF\u1d40 on 1^\u22a5)\u22648N \u2200p\u22655. Then bi-tight empty for p\u22655 via Prop 15.61. Deep ND still required for lim \u03b1_n.",
+  "proved": true
+}

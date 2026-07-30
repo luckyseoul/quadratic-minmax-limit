@@ -3,7 +3,7 @@
 **Machine:** 88 CPU + Tesla V100-SXM2-16GB (CuPy).  
 **Policy:** F17 (no single-core thrash) · F19 (no moduli class-refine loops) · F20 (no GPU theater).  
 **L = lim α_n:** **OPEN** (never soft-close).  
-**Last update:** 2026-07-29 (after user rebuke: no graph, GPU theater, moduli thrash).
+**Last update:** 2026-07-30 (Prop 15.95; session handoff `SESSION_HANDOFF_2026-07-30_prop1595.md` — load skills §0; mult≥d OPEN; L OPEN).
 
 ---
 
@@ -135,6 +135,16 @@ L = lim α_n                                    [OPEN]
 | 2026-07-30 | **C_GPU** | Host reports V100 present again (`nvidia-smi` ok in compute-budget). Prefer real dense GPU only when wall is batch-dominated. |
 | 2026-07-30 | **N_GD_ALL structure** | **Prop 15.84**: \(B_{\mathrm{cand}}=(p^3-4p^2-7p-6)/(p^2(2p+3))\); sign \(B_5<0\), \(B_{p\ge7}>0\); GD+\(S_3\le B_{\mathrm{cand}}\)⇒cand; proved \(4p-d_1<0\) (abs bootstrap dead). CPU Fraction (F20 unused). Evidence: `e1_gmin_m4_prop1584.json`. **G_L OPEN.** |
 | 2026-07-30 | **N_SPEC_GAP structure** | **Prop 15.85**: \(Q_4\) mean/fluctuation split; \(S_1=0\); unit ray \(=-\mu-(\mu/2)S_w+\tfrac12 Be^\top\widehat G Be\); \(\mu\) harmless vs \(H\); Ĝ load-bearing. Links spectral H to signed disj \(m_4\). CPU Fraction. Evidence: `e1_gmin_m4_prop1585.json`. **G_L OPEN.** |
+| 2026-07-30 | **N_GD_ALL structure (ε)** | **Prop 15.86**: \(\sum\mathrm{star}\cdot\tau_1=\varepsilon(p)\,n_1\) with \(\varepsilon=(-1)^{(p-1)/2}\) (closes 15.80.4); mean Wick \(=\varepsilon/p^2\); GD⇒mean \(\mathrm{star}\cdot S_1\le0\); \(\tau_1\) AP value set size \((p-1)/2\); \(B_{\mathrm{cand}}\to1/2\), \(B_{\mathrm{cand}}/d_3=\Theta(1/p^2)\). Certified W=86 pure C at p=3,5,7,11. Evidence: `e1_gmin_m4_prop1586.json`. **Pointwise GD still OPEN. G_L OPEN.** |
+| 2026-07-30 | **N_GD_ALL structure (K4/g)** | **Prop 15.87**: K4 star theorem \(\sum\mathrm{star}=0\) on \(|\kappa|=1\) (48/64 labelings); \(S_1(a)=g\cdot\mathrm{star}_a\); GD\(\Leftrightarrow g\le0\); CS too weak (\(\Theta(p)\) vs Wick \(O(1)\)); \(E[U_1^2]\approx d_1\) (cert p=3,5,7). Evidence: `e1_gmin_m4_prop1587.json`. **Pointwise \(g\le0\) still OPEN. G_L OPEN.** |
+| 2026-07-30 | **N_SPEC_GAP structure (H-gap)** | **Prop 15.88**: pairwise \(\sum_{i<j}y_iy_j=p\) on Max+; \(n/2-(3+H)=(p^4-8p^2-16p-21)/(2(p^2+1))>0\) for \(p\ge5\) (H\(\Rightarrow\) bi-tight empty); \(g=p\rho\mathrm{star}-2/p^2-\mathrm{star}S_3\). Cert p=5: \(g=g(\tau_1)\). Evidence: `e1_gmin_m4_prop1588.json`. **H / pointwise g still OPEN. G_L OPEN.** |
+| 2026-07-30 | **N_SPEC_GAP (Wick split)** | **Prop 15.89**: \(Q_4/N=2+4/p^2+8\sum\rho\kappa_B\) (Wick from \(\sum\kappa_C\kappa_B=(n+1)/4\|B\|^2\), cert p=3,5,7,11); H \(\Leftrightarrow\sum\rho\kappa_B\le(H-1-2/p^2)/4\). **H residual = bound \(\sum\rho\kappa_B\). G_L OPEN.** |
+| 2026-07-30 | **N_SPEC_GAP (residual≡H)** | **Prop 15.90**: residual bound algebraically ≡ H; pointwise κ_B identity cert p=3,5; orth form ≡ H; holds p=3,5,7. **No new foothold** — prove ray≤H independently (orth energy or 4th-moment op). Evidence: `e1_gmin_m4_prop1590.json`. **G_L OPEN.** |
+| 2026-07-30 | **N_SPEC_GAP (independent dual H)** | **Prop 15.91**: dim Z=d(d−3)/2 proved; orth/Φ/κ/harm ≡ H; sphere<Wick<6+2H≤16; 2×sphere⇒16N for p≥5. **H still OPEN.** Preferred targets: orth LB, λ_max(κ|Z)≤(p+1)(p+7)/d, harm budget, or 2×sphere. Evidence: `e1_gmin_m4_prop1591.json`. **G_L OPEN.** |
+| 2026-07-30 | **N_SPEC_GAP (pairing + λ₂ reductions)** | **Prop 15.92**: ∑m4 κ_C=n(n−1)(n−2)/8 proved (constant on Max+); 16N⇔λ₂(P⊙P)≤4/N; H⇔λ₂(P⊙P)≤(3+H)/(2N); W saturates H at p=3,5. **Bound still OPEN.** Evidence: `e1_gmin_m4_prop1592.json`. **G_L OPEN.** |
+| 2026-07-30 | **N_SPEC_GAP (Gu/FFT)** | **Prop 15.93**: FFT1=Nd1 proved; 16N⇔λ_max(FFT\|1⊥)≤8N; H⇔≤N(3+H); Gu eigs cert p=3,5 (non-Nd =(N/2)spec Φ\|Z). **Bound OPEN.** Evidence: `e1_gmin_m4_prop1593.json`. **G_L OPEN.** |
+| 2026-07-30 | **N_SPEC_GAP (annihilator + gap mult)** | **Prop 15.94**: P⊙P kills range(P) (central sym); gap criterion mult(λ₂)≥d + ∑M²≤4d²(d+4). Cert p=5 mult=d criterion holds for gap. **OPEN mult≥d ∀p≥5.** Evidence: `e1_gmin_m4_prop1594.json`. **G_L OPEN.** |
+| 2026-07-30 | **N_SPEC_GAP (Wick≤thr + mult structure)** | **Prop 15.95**: Wick_hi≤thr_gap for all primes p≥5 (Fraction); mult≥d+∑M²≤Wick⇒gap∀p≥5; C_diag=4n(11n−14)/p². Cert mult=d and gap_by_mult p=5,7. **OPEN mult≥d and ∑M²≤Wick ∀p≥5.** Evidence: `e1_gmin_m4_prop1595.json`. **G_L OPEN.** |
 
 ---
 
@@ -151,12 +161,16 @@ Do **not** claim Path C residual closed unless:
 
 ## 8. Next action (single, from graph)
 
-**Just landed:** Prop 15.83–15.85 (m4 residual hierarchy + spectral \(Q_4\) split).  
+**Just landed:** Prop 15.95 (Wick_hi≤thr_gap ∀p≥5; strengthened mult+Wick⇒gap; C_diag; mult=d cert p=3,5,7).  
 
-**Active next (either closes bi-tight residual):**  
-- **N_GD_ALL:** prove \(\mathrm{star}\cdot S_1\le0\) and \(S_3\le B_{\mathrm{cand}}\) (or gain\(\le\mathrm{gain}_{\mathrm{cand}}\)) for Max+ ∀p≥5.  
-- **N_SPEC_GAP:** prove hypothesis H (\(\mathrm{ray}\le H(p)\)) by controlling \(\widehat G\) (signed disj \(m_4\)).  
+**Active next (closes bi-tight residual) — pick one:**  
+1. **Gap path (narrowed):** prove \(\mathrm{mult}(\lambda_2(P\odot P))\ge d\) for all primes \(p\ge5\), and/or \(\sum M^2\le\mathrm{Wick}_{\mathrm{hi}}=12n^2+48n\). Then Prop 15.95 ⇒ gap ⇒ bi-tight empty. (∑M²≤thr is free once ∑M²≤Wick, for p≥5.)  
+2. **16N path:** prove \(\lambda_{\max}(FF^\top|_{1^\perp})\le8N\).  
+3. **H path:** prove \(\lambda_{\max}(FF^\top|_{1^\perp})\le N(3+H)\).  
 
-Both still require true Max+ / fourth-moment input beyond pure \(C\)-combinatorics. Then **N_DEEP**. **G_L stays OPEN until E(1) or full Path C+deep.**
+Structure: Wick≤thr algebra closed; P⊙P kills range(P); mult=d at p=3,5,7.  
+Do **not** re-attack ∑ρ κ_B (dead after 15.90).
 
-**Not active:** moduli class refine (F19); GPU theater (F20).
+Then **N_DEEP**. **G_L stays OPEN until E(1) or full Path C+deep.**
+
+**Not active:** moduli class refine (F19); GPU theater (F20); residual-as-separate-foothold (dead after 15.90).

@@ -2774,6 +2774,338 @@ Evidence: `src/e1_gmin_m4_prop1584.py`, `evidence/e1_gmin_m4_prop1584.json` (Fra
 
 Evidence: `src/e1_gmin_m4_prop1585.py`, `evidence/e1_gmin_m4_prop1585.json` (Fraction exact; CPU algebra; GPU unused).
 
+**Proposition 15.86 (Wick mean sign \(\varepsilon(p)\); \(\tau_1\) spectrum; residual budgets; Max+-free; 2026-07-30).** Continue Prop 15.79–15.80. Write \(n_1=\#\{|\kappa|=1\}=n(n-1)(n-2)^2/32\) and \(\mathrm{star}\cdot\tau_1\) for the Aut-constant combinatorial score of Prop 15.79 on each \(|\kappa|=1\) 4-set.
+
+1. **Sum formula (certified multi-W pure \(C\), \(p\in\{3,5,7,11\}\); form for all odd primes).** 
+   \[
+   \sum_{|\kappa|=1}\mathrm{star}\cdot\tau_1
+   \;=\;
+   \varepsilon(p)\,n_1,
+   \qquad
+   \varepsilon(p)\,=\,(-1)^{(p-1)/2}
+   \]
+   (equivalently \(\varepsilon=+1\) if \(p\equiv1\pmod4\), \(\varepsilon=-1\) if \(p\equiv3\pmod4\)). In particular \(\mathrm{mean}\,\mathrm{star}\cdot\tau_1=\varepsilon(p)\). This closes the OPEN \(\varepsilon\)-formula of Prop 15.80.4. \(\square\)
+
+2. **Wick mean (proved from part 1).** On every \(|\kappa|=1\) centre, \(\mathbb E_{\mathrm{Wick}}[\varphi]=\mathrm{star}\cdot\tau_1/p^2\), so
+   \[
+   \mathrm{mean}_{|\kappa|=1}\mathbb E_{\mathrm{Wick}}[\varphi]
+   \;=\;
+   \varepsilon(p)/p^2.
+   \]
+   Pointwise Gaussian domination (\(\mathrm{star}\cdot S_1\le0\Leftrightarrow\mathbb E[\varphi]\le\mathbb E_{\mathrm{Wick}}[\varphi]\)) therefore forces the **necessary** mean bound \(\mathrm{mean}\,\mathrm{star}\cdot S_1\le0\) (equivalently \(\mathrm{mean}\,\mathbb E[\varphi]\le\varepsilon(p)/p^2\)). Certified at \(p=5,7\) (Props 15.77–15.80); not sufficient for pointwise GD. \(\square\)
+
+3. **Value set of \(\mathrm{star}\cdot\tau_1\) (certified \(p=3,5,7,11\); form).** Every value is odd (since \(d_1^{(1)}=(3p^2-7)/4\) is odd) and \(\equiv5\pmod6\); the set has cardinality \((p-1)/2\) and equals the arithmetic progression of difference \(6\)
+   - \(p\equiv3\pmod4\): first term \((7-3p)/2\) (e.g. \(\{-1\}\), \(\{-7,-1,5\}\), \(\{-13,-7,-1,5,11\}\));
+   - \(p\equiv1\pmod4\): progression ending at \(5\) (e.g. \(\{-1,5\}\) at \(p=5\)).
+   \(\square\)
+
+4. **Residual budgets (proved Fraction algebra, all primes \(p\ge5\)).** \(B_{\mathrm{cand}}(p)\to\tfrac12\), \(B_{\mathrm{cand}}/d_3=\Theta(1/p^2)\) with \(d_3=p^2-5\), and \(\mathrm{gain}_{\mathrm{cand}}/\mathrm{gain}_L\to1\) (gap \(3(p-2)/(48(2p+3))\) from Prop 15.83). For \(p\ge7\), \(B_{\mathrm{cand}}>0\), so GD plus average \(|\rho|\lesssim B_{\mathrm{cand}}/d_3\) on \(\kappa=3\) extensions would close cand; absolute degree bounds remain far too weak (Prop 15.84). \(\square\)
+
+5. **What remains OPEN.** Prove **pointwise** \(\mathrm{star}\cdot S_1\le0\) (equivalently \(\mathbb E[\varphi]\le\mathbb E_{\mathrm{Wick}}[\varphi]\)) and \(S_3\le B_{\mathrm{cand}}\) (or resolvent gain \(\le\mathrm{gain}_{\mathrm{cand}}\), or hypothesis H) for true Max+ fourth moments for all primes \(p\ge5\). The sum formula of part 1 is Max+-free; the GD residual is still a Max+ fourth-moment comparison. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+Evidence: `src/e1_gmin_m4_prop1586.py`, `evidence/e1_gmin_m4_prop1586.json` (W=86 pure-C census; Fraction algebra; GPU unused).
+
+**Proposition 15.87 (K4 star theorem; \(S_1\) pattern; GD reformulation; \(\mathbb E[U_1^2]\) structure; 2026-07-30).** Continue Prop 15.76–15.80 and 15.86. Write \(\mathrm{star}_v=\prod_{u\in S\setminus\{v\}}C_{vu}\) on a 4-set \(S\).
+
+1. **K4 star theorem (proved by exhaustion).** Among the \(64\) edge labelings of \(K_4\) by \(\pm1\), exactly \(48\) have \(|\kappa|=1\). On every such labeling,
+   \[
+   \sum_{v\in S}\mathrm{star}_v=0,\qquad
+   \prod_{v\in S}\mathrm{star}_v=+1,
+   \]
+   and exactly two vertices have \(\mathrm{star}_v=+1\). (Also \(\sigma_{\mathrm{sum}}=4\kappa\) on all \(64\) labelings, recovering Prop 15.67.) \(\square\)
+
+2. **\(S_1\) pattern (proved).** On every conference \(|\kappa|=1\) 4-set, part 1 gives \(\sum_a\mathrm{star}_a=0\). Combined with Aut-constancy of \(g:=\mathrm{star}\cdot S_1\) (Prop 15.79),
+   \[
+   S_1(a)=g\cdot\mathrm{star}_a\qquad(a\in S),
+   \]
+   so \(\sum_a S_1(a)=0\) and the four values are \((+g,+g,-g,-g)\). \(\square\)
+
+3. **GD reformulation (proved).** Gaussian domination \(\mathrm{star}_a\cdot S_1(a)\le0\) at every centre is equivalent to the single inequality \(g(S)\le0\). \(\square\)
+
+4. **Residual tautology (proved).** \((T\rho)(S)=\sum_a(S_1+S_3)(a)\) and \(S_1+S_3=p\rho-2\mathrm{star}/p^2\) yield \((T\rho)(S)=4p\rho\) on \(|\kappa|=1\), matching \(4p\rho=T\rho\) from \(T\kappa=0\) (Prop 15.68). The residual equation does not constrain \(\rho\) beyond the \(S_1\)/\(S_3\) split. \(\square\)
+
+5. **\(\mathbb E[U_1^2]\) near \(d_1\) (certified pure \(C+\Sigma\), \(p=3,5,7\); \(W=86\)).** With \(\Sigma=I+C/p\) (2-design only), \(\mathbb E[U_1^2]\) lies in a \(O(1)\)-window about \(d_1=(3p^2-7)/4\) (exact equality on some \(\tau_1\) classes at \(p=5\)). \(\square\)
+
+6. **Cauchy–Schwarz is too weak (proved scale).** \(|\mathbb E[ZU_1]|\le\sqrt{\mathbb E[U_1^2]}=\Theta(\sqrt{d_1})=\Theta(p)\), while \(\mathbb E_{\mathrm{Wick}}[ZU_1]=\mathrm{star}\cdot\tau_1/p^2=O(1/p)\)–\(O(1)\). CS cannot force \(\mathbb E\le\mathbb E_{\mathrm{Wick}}\) for \(p\ge5\). \(\square\)
+
+7. **What remains OPEN.** Prove \(g(S)\le0\) (pointwise GD) for every prime \(p\ge5\) on true Max+, or \(S_3\le B_{\mathrm{cand}}\) / \(\max|m_4|\le M_{\mathrm{cand}}\) / hypothesis H. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+Evidence: `src/e1_gmin_m4_prop1587.py`, `evidence/e1_gmin_m4_prop1587.json` (K4 exhaustion; W=86 \(\mathbb E[U_1^2]\); GPU unused).
+
+**Proposition 15.88 (pairwise sum; H-gap algebra; \(g\) via \(S_3\); spectral settlement under H; 2026-07-30).** Continue Prop 15.52, 15.55, 15.61–15.63, and 15.87.
+
+1. **Pairwise sum identity (proved).** For every \(y\in\mathrm{Max}_{+}\) on Paley order \(n=p^2+1\),
+   \[
+   \sum_{i<j}y_iy_j=p.
+   \]
+   *Proof.* Prop 15.52: \(\mathbf1^\top y=(p+1)y_\infty\), so \(|\mathbf1^\top y|=p+1\). Boolean expansion \((\mathbf1^\top y)^2=n+2\sum_{i<j}y_iy_j\) rearranges to the claim. Equivalently \(\mathbf1_E^\top f(y)=p\) for the edge feature \(f_e(y)=y_iy_j\). \(\square\)
+
+2. **H-gap algebra (proved).** Write \(H(p)=(p+2)^2/d\) with \(d=n/2\). For every prime \(p\ge5\),
+   \[
+   \frac n2-\bigl(3+H(p)\bigr)
+   =\frac{p^4-8p^2-16p-21}{2(p^2+1)}>0.
+   \]
+   *Proof.* Clear common denominator \(2(p^2+1)\); the numerator at \(p=5\) is \(324>0\) and its derivative \(4p^3-16p-16>0\) for \(p\ge5\). At \(p=3\) one has \(3+H=8>n/2=5\). \(\square\)
+
+3. **Settlement under hypothesis H (proved form).** If \(\mathrm{ray}(B)\le H(p)\) for every unit zero-diag \(B=P_+BP_+\) (hypothesis H), then \(\lambda_{\mathrm{cycle}}\le3+H(p)<n/2\) for all primes \(p\ge5\), so \(\lambda_{\max}(G)=n/2\) and bi-tight / Type I is empty (Props 15.55, 15.61–15.63). \(\square\)
+
+4. **\(g\) via \(S_3\) (proved).** On every \(|\kappa|=1\) centre, Prop 15.77 and 15.87 give
+   \[
+   g:=\mathrm{star}\cdot S_1
+   =p\,\rho\,\mathrm{star}-\frac2{p^2}-\mathrm{star}\cdot S_3.
+   \]
+   Hence GD \(g\le0\) if and only if \(\mathrm{star}\cdot S_3\ge p\rho\,\mathrm{star}-2/p^2\). At \(\mathrm{star}=+1\): \(S_3\ge p\rho-2/p^2\). \(\square\)
+
+5. **Certified \(p=5\) (full Max+, \(N=260\)).** The scalar \(g\) is a function of \(\mathrm{star}\cdot\tau_1\) alone: \(g(-1)=-42/325\), \(g(5)=-2/65\), both \(<0\); \(\sum g=-1128\). Evidence: full `maxplus_p5` regeneration. \(\square\)
+
+6. **What remains OPEN.** Prove hypothesis H (\(\mathrm{ray}\le H(p)\)) for all primes \(p\ge5\), or pointwise \(g\le0\) / \(\max|m_4|\le M_{\mathrm{cand}}\). Then bi-tight empties; deep non-tight still needed for \(L=\lim\alpha_n\). **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+Evidence: `src/e1_gmin_m4_prop1588.py`, `evidence/e1_gmin_m4_prop1588.json` (Fraction algebra; p=5 Max+ check; GPU unused).
+
+**Proposition 15.89 (Wick decomposition of \(Q_4\); \(\kappa_C\cdot\kappa_B\) identity; H as residual bound; 2026-07-30).** Continue Prop 15.62–15.63 and 15.88. Write \(\kappa_B(S)=B_{ab}B_{cd}+B_{ac}B_{bd}+B_{ad}B_{bc}\) on a 4-set \(S=\{a,b,c,d\}\) for zero-diagonal symmetric \(B\), and \(\rho=m_4-\kappa_C/p^2\).
+
+1. **Disjoint expansion (proved).** For zero-diag \(B=P_+BP_+\) one has
+   \[
+   \mathbb E[(y^\top By)^2]=6\|B\|_F^2+8\sum_S m_4(S)\,\kappa_B(S)
+   \]
+   (typeA+wedge identity Prop 15.62 plus disj pairing count). Hence for unit \(B\),
+   \[
+   \frac{Q_4}N=8\sum_S m_4\kappa_B,\qquad \mathrm{ray}=\frac{Q_4}{2N}=4\sum_S m_4\kappa_B.
+   \]
+   Certified \(p=5\) (full Max+). \(\square\)
+
+2. **Conference contraction (proved form; certified \(p=3,5,7,11\)).** For every zero-diag \(B=P_+BP_+\) on a conference matrix of order \(n=p^2+1\),
+   \[
+   \sum_S\kappa_C(S)\,\kappa_B(S)=\frac{n+1}4\,\|B\|_F^2.
+   \]
+   (Parallel pairings contribute \(\tfrac14\|B\|_F^2\); cross pairings \(\tfrac n4\|B\|_F^2\).) Max+-free pure \(C\)/\(B\) algebra. \(\square\)
+
+3. **Wick split (proved).** Write \(m_4=\kappa_C/p^2+\rho\). Part 2 yields, for unit \(B\),
+   \[
+   \frac{Q_4}N=2+\frac4{p^2}+8\sum_S\rho(S)\,\kappa_B(S).
+   \]
+   The Wick piece \(2+4/p^2\) is Max+-free. \(\square\)
+
+4. **H equivalence (proved).** Hypothesis H (\(\mathrm{ray}\le H(p)\)) is equivalent to
+   \[
+   \sum_S\rho\,\kappa_B\;\le\;\frac{H(p)-1-2/p^2}4
+   \]
+   for every unit zero-diag \(B\) on \(V_+\). The right-hand side is positive for all primes \(p\ge3\); in particular \(\rho\equiv0\) already satisfies H. \(\square\)
+
+5. **Polynomial \(\sum\kappa_B^2\) (proved).** For every real symmetric zero-diag \(B\),
+   \[
+   \sum_S\kappa_B^2=\tfrac18\|B\|_F^4+\tfrac14\mathrm{Tr}(B^4)+\tfrac12\sum_{ij}B_{ij}^4-\sum_i(B^2_{ii})^2.
+   \]
+   \(\square\)
+
+6. **What remains OPEN.** Prove \(\sum\rho\,\kappa_B\le(H-1-2/p^2)/4\) for all unit zero-diag \(B\) on \(V_+\) and all primes \(p\ge5\) (Max+ residual moments \(\rho\)). Then H holds, bi-tight empties by Prop 15.88, and deep non-tight remains for \(L=\lim\alpha_n\). **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+Evidence: `src/e1_gmin_m4_prop1589.py`, `evidence/e1_gmin_m4_prop1589.json` (W=86 pure \(C\)/\(B\); Fraction; GPU unused).
+
+**Proposition 15.90 (residual bound \(\equiv\) Hypothesis H; pointwise \(\kappa_B\) identity; orth reformulation; 2026-07-30).** Continue Prop 15.89.
+
+1. **Equivalence (proved, all primes \(p\ge3\), \(n=p^2+1\)).** From Prop 15.89, for unit zero-diag \(B\) on \(V_+\),
+   \[
+   \max\sum_S\rho\,\kappa_B=\frac{\mathrm{ray}_{\max}-1-2/p^2}4,\qquad
+   \mathrm{budget}=\frac{H(p)-1-2/p^2}4.
+   \]
+   Hence \(\sum\rho\,\kappa_B\le\mathrm{budget}\) for all such \(B\) if and only if \(\mathrm{ray}_{\max}\le H(p)\). The residual bound is not an independent foothold: it **is** H. \(\square\)
+
+2. **Pointwise identity (proved form; certified \(p=3,5\) on Max+ samples).** For every real symmetric zero-diagonal \(B\) and every \(y\in\{\pm1\}^n\),
+   \[
+   \sum_{|S|=4}\kappa_B(S)\prod_{v\in S}y_v
+   =\frac{(y^\top By)^2}8-\frac{y^\top B^2 y}2+\frac{\|B\|_F^2}4.
+   \]
+   Averaging recovers \(Q_4/N=\mathbb E[f^2]-6\|B\|_F^2\). \(\square\)
+
+3. **Orth-energy reformulation (proved equivalent to H).** For unit \(B\), Pythagoras in \(V_+\) gives \(\mathbb E[f^2]=2n-n\,\mathbb E[\|By-(f/n)y\|^2]\) with \(\mathbb E[\|By\|^2]=2\). Thus H \(\Leftrightarrow\)
+   \[
+   \mathbb E\bigl[\|By-(f/n)y\|^2\bigr]\;\ge\;2-\frac{6+2H(p)}n.
+   \]
+   \(\square\)
+
+4. **Certification.** Residual bound holds at \(p=3,5\) (equality, \(\mathrm{ray}=H\)) and \(p=7\) (strict). No counterexample among certified primes. \(\square\)
+
+5. **What remains OPEN.** Prove \(\mathrm{ray}\le H\) (or the orth lower bound, or a 4th-moment operator bound \(\le(p+1)(p+7)/d\)) for all primes \(p\ge5\) by an argument that does **not** assume H. Then bi-tight empties (Prop 15.88). Deep ND still required for \(L=\lim\alpha_n\). **Existence of \(\lim\alpha_n\) remains OPEN. \(H_{\mathrm{proved}}=\mathrm{false}\).**
+
+Evidence: `src/e1_gmin_m4_prop1590.py`, `evidence/e1_gmin_m4_prop1590.json` (Fraction algebra + Max+ p=3,5 checks; GPU unused).
+
+**Proposition 15.91 (independent dual forms of H; \(\dim\mathcal Z\); sphere/harmonic split; 2026-07-30).** Continue Prop 15.63–15.66 and 15.90. Attack H **without** re-using \(\sum\rho\kappa_B\) as a separate foothold.
+
+1. **Dimension of \(\mathcal Z\) (proved, all conference orders \(n=p^2+1\)).** Let \(r_i\) be the rows of an ONB of \(V_+\) (so \(\|r_i\|^2=\tfrac12\), \(r_i\cdot r_j=C_{ij}/(2p)\)). Write
+   \[
+   \mathcal Z=\bigl\{A\in\mathrm{Sym}(\mathbb R^d):\mathrm{Tr}\,A=0,\; r_i^\top A r_i=0\ \forall i\bigr\}
+   \]
+   (equivalently: zero ambient diagonal of \(B=V_+AV_+^\top\)). The Gram \(G_{ij}=(r_i\cdot r_j)^2\) equals \(aI+b\mathbf1\mathbf1^\top\) with \(a=(p^2-1)/(4p^2)>0\) and \(a+nb=\tfrac12\), hence \(\mathrm{rank}\,G=n\). The diagonal map \(\mathrm{Sym}\to\mathbb R^n\) is surjective; on \(\mathrm{Sym}_0\) its image is \(\mathbf1^\perp\) (rank \(n-1\)). Therefore
+   \[
+   \dim\mathcal Z=\frac{d(d+1)}2-1-(n-1)=\frac{d(d-3)}2.
+   \]
+   (Checks: \(p=3\Rightarrow5\), \(p=5\Rightarrow65\), \(p=7\Rightarrow275\).) \(\square\)
+
+2. **Orth-energy form (proved equivalent to H).** For unit-Frobenius zero-diag \(B=P_+BP_+\) one has \(\mathbb E[\|By\|^2]=2\) and Pythagoras \(\|By\|^2=f^2/n+\|By-(f/n)y\|^2\) with \(f=y^\top By\). Hence
+   \[
+   \mathrm{ray}\le H(p)
+   \quad\Longleftrightarrow\quad
+   \mathbb E\bigl[\|By-(f/n)y\|^2\bigr]\;\ge\;2-\frac{6+2H(p)}n.
+   \]
+   Certified identity \(\mathbb E[f^2]=2n-n\,\mathbb E[\|\mathrm{orth}\|^2]\) and \(\mathbb E[\|By\|^2]=2\) at \(p=3,5\). \(\square\)
+
+3. **Fourth-moment operator form (proved equivalent to H).** With \(s=V_+^\top y\), \(\Phi(A)=\mathbb E[(s^\top As)\,ss^\top]\), and Wick residual \(\kappa=\Phi-8\,\mathrm{Id}\) on \(\mathrm{Tr}\,A=0\),
+   \[
+   \mathrm{ray}\le H
+   \quad\Longleftrightarrow\quad
+   \lambda_{\max}(\Phi|_{\mathcal Z})\le6+2H
+   \quad\Longleftrightarrow\quad
+   \lambda_{\max}(\kappa|_{\mathcal Z})\le\frac{(p+1)(p+7)}d.
+   \]
+   The budget identity \((p+1)(p+7)/d=6+2H-8\) holds for every prime \(p\ge3\). \(\square\)
+
+4. **Sphere / harmonic split (proved form).** For unit \(A\) with \(\mathrm{Tr}\,A=0\), \(\|s\|^2=n\) a.s., and \(\mathbb E[ss^\top]=2I\), the \(\mathrm{SO}(d)\)-invariant fourth moment matches the sphere:
+   \[
+   \mathbb E[(s^\top As)^2]=\frac{8d}{d+2}+\mathrm{harm}(A).
+   \]
+   Hypothesis H is equivalent to \(\mathrm{harm}(A)\le6+2H-8d/(d+2)\) for all unit \(A\in\mathcal Z\). \(\square\)
+
+5. **Chain (proved, all primes \(p\ge3\)).**
+   \[
+   \frac{8d}{d+2}<8<6+2H(p)\le16,
+   \]
+   with \(6+2H=16\) iff \(p=3\). Thus H \(\Rightarrow\) 16N for every such \(p\). \(\square\)
+
+6. **2×sphere \(\Rightarrow\) bi-tight for \(p\ge5\) (proved algebra; restates Prop 15.60).** If \(\mathbb E[f^2]\le16d/(d+2)\) on unit \(\mathcal Z\), then \(Q<16N\) and \(\lambda_{\mathrm{cycle}}<8\). For primes \(p\ge5\) one has \(d\ge13\ge6\), so Prop 15.55–15.61 close bi-tight. (At \(p=5\), \(16d/(d+2)=208/15>176/13=6+2H\), so 2×sphere is strictly weaker than H but still sufficient for bi-tight.) \(\square\)
+
+7. **Certification.** H holds at \(p=3,5\) (equality) and \(p=7\) (strict, \(\mathrm{ray}=933/409\)). Orth sampling certs \(p=3,5\). \(\square\)
+
+8. **What remains OPEN.** Prove \(\mathrm{ray}\le H(p)\) for all primes \(p\ge5\) by one of the independent targets (2)–(4) or the weaker 2×sphere bound of part 6. Do **not** re-attack \(\sum\rho\kappa_B\) as a separate inequality (Prop 15.90). Deep non-tight still required for \(L=\lim\alpha_n\). **Existence of \(\lim\alpha_n\) remains OPEN. \(H_{\mathrm{proved}}=\mathrm{false}\).**
+
+Evidence: `src/e1_gmin_m4_prop1591.py`, `evidence/e1_gmin_m4_prop1591.json` (Fraction algebra; Max+ orth p=3,5; GPU unused).
+
+**Proposition 15.92 (constant pairing sum on Max+; clean H/16N reductions; \(W\) spectrum; 2026-07-30).** Continue Prop 15.90–15.91.
+
+1. **Pointwise pairing formula (proved).** For every conference matrix \(C\) (\(C^2=p^2I\), zero diagonal) and every \(y\in\{\pm1\}^n\), Prop 15.90 with \(B=C\) yields
+   \[
+   \sum_{|S|=4}\kappa_C(S)\prod_{v\in S}y_v
+   =\frac{(y^\top Cy)^2}8-\frac{p^2 n}2+\frac{n(n-1)}4.
+   \]
+   \(\square\)
+
+2. **Constant on Max+ (proved).** If \(Cy=py\), then \(y^\top Cy=np\), so
+   \[
+   \sum_S\kappa_C(S)\prod_v y_v=\frac{n(n-1)(n-2)}8
+   \]
+   (constant). Algebra: substitute \(n=p^2+1\). Averaging over Max+ gives
+   \[
+   \sum_S m_4(S)\,\kappa_C(S)=\frac{n(n-1)(n-2)}8.
+   \]
+   Certified \(p=3,5\). \(\square\)
+
+3. **Spectral reductions (proved).** Write \(P=YY^\top/(2N)\), \(W_{ab}=(y_a\cdot y_b)^2/n^2\), \(\alpha=d/N\). Then \(P\odot P=\alpha^2 W\), \(\lambda_1(W)=N/d\), and \(\max_{\|B\|_F=1}Q=n^2\lambda_2(W)\). Hence
+   \[
+   \begin{aligned}
+   16N&\Longleftrightarrow\lambda_2(W)\le 4N/d^2\Longleftrightarrow\lambda_2(P\odot P)\le4/N,\\
+   H&\Longleftrightarrow\lambda_2(W)\le N(3+H)/(2d^2)\Longleftrightarrow\lambda_2(P\odot P)\le(3+H)/(2N).
+   \end{aligned}
+   \]
+   Frame form: if \(U=S/\sqrt{2N}\) (\(U^\top U=I_d\)), then \(\lambda_2(P\odot P)=\max_{\|x\|=1,\,x\perp\mathbf1}\|U^\top\mathrm{diag}(x)\,U\|_F^2\). \(\square\)
+
+4. **\(W\) spectrum (certified \(p=3,5\)).**  
+   - \(p=3\): \(\{N/d\,(\times1),\,48/25\,(\times d)\}\); top \(=N(6+2H)/(4d^2)\) (H-equality).  
+   - \(p=5\): \(\{N/d\,(\times1),\,880/169\,(\times d),\,720/169\,(\times2d),\,400/169\,(\times2d)\}\); top \(=\) H-threshold; \(\mathrm{rank}=\binom{d-1}{2}=66\).  
+   \(\square\)
+
+5. **What remains OPEN.** Prove \(\lambda_2(W)\le N(3+H)/(2d^2)\) (hypothesis H) or the weaker \(\lambda_2(W)\le4N/d^2\) (16N, sufficient for bi-tight when \(p\ge5\)) for all primes \(p\ge5\). Preferred language: \(\lambda_2(P\odot P)\le4/N\) on the Max+ design projector. Deep non-tight still required for \(L=\lim\alpha_n\). **Existence of \(\lim\alpha_n\) remains OPEN. \(H_{\mathrm{proved}}=\mathrm{false}\).**
+
+Evidence: `src/e1_gmin_m4_prop1592.py`, `evidence/e1_gmin_m4_prop1592.json` (Fraction; Max+ p=3,5; GPU unused).
+
+**Proposition 15.93 (\(F F^\top\) / \(\mathrm{Gu}\) spectral structure; 16N as \(\lambda_{\max}(FF^\top|_{1^\perp})\le8N\); 2026-07-30).** Continue Prop 15.61–15.62 and 15.92. Write \(F\) for the \(N\times\binom{n}{2}\) matrix \(F_{a,e}=y_a_iy_a_j\) on edges \(e=\{i,j\}\), \(\mathrm{Gu}=F^\top F\), \(\mathrm{FFT}=FF^\top\), and \(M_{ab}=(y_a\cdot y_b)^2\).
+
+1. **Hadamard–edge identity (proved).** \(M=nJ+2\,\mathrm{FFT}\), so \(\mathrm{FFT}=(M-nJ)/2\). \(\square\)
+
+2. **All-ones eigenpair (proved).** \(\mathrm{FFT}\,\mathbf1=(Nd)\,\mathbf1\). Hence \(Nd\) is an eigenvalue of \(\mathrm{FFT}\) and of \(\mathrm{Gu}\).
+   *Proof.* \(D=YY^\top=2NP\) satisfies \(D^2=2ND\), so \((D^2)_{aa}=2Nn\). Thus \((M\mathbf1)_a=\sum_b D_{ab}^2=2Nn\), and \(\mathrm{FFT}\mathbf1=(2Nn\mathbf1-nN\mathbf1)/2=Nd\mathbf1\). \(\square\)
+
+3. **C-edge eigenpair (proved).** The edge vector \(v_e=C_{ij}\) satisfies \(\mathrm{Gu}\,v=(Nd)\,v\). *Proof.* On Max+, \(\sum_{i<j}y_iy_jC_{ij}=\tfrac12 y^\top Cy=np/2\); contracting gives the claim. \(\square\)
+
+4. **16N / H as spectral bounds on \(\mathrm{FFT}|_{1^\perp}\) (proved equivalent).** For \(x\perp\mathbf1\),
+   \[
+   x^\top(P\odot P)x=\frac{x^\top Mx}{4N^2}=\frac{x^\top\mathrm{FFT}\,x}{2N^2}.
+   \]
+   Consequently
+   \[
+   \begin{aligned}
+   16N&\Longleftrightarrow\lambda_{\max}(\mathrm{FFT}|_{1^\perp})\le8N
+   \Longleftrightarrow\lambda_{\max}(\mathrm{Gu}|_{F^\top(1^\perp)})\le8N,\\
+   H&\Longleftrightarrow\lambda_{\max}(\mathrm{FFT}|_{1^\perp})\le N(3+H).
+   \end{aligned}
+   \]
+   With type A+wedge: \(\mathrm{Be}^\top\mathrm{Gu}\,\mathrm{Be}=3N\|\mathrm{Be}\|^2+\mathrm{Be}^\top\mathrm{Gu}_{\mathrm{disj}}\mathrm{Be}\) on the image, so \(16N\Leftrightarrow\mathrm{Be}^\top\mathrm{Gu}_{\mathrm{disj}}\mathrm{Be}\le5N\|\mathrm{Be}\|^2\). For \(p\ge5\), \(d\ge13>8\), so 16N \(\Rightarrow\) bi-tight empty (Prop 15.61). \(\square\)
+
+5. **Gu spectrum (certified \(p=3,5\)).**
+   - \(p=3\): \(\{8N\,(\times d),\,Nd\,(\times1)\}\); \(\lambda_{\max}(\mathrm{FFT}|_{1^\perp})=8N\) (16N equality).
+   - \(p=5\): \(\{Nd\,(\times1),\,N(3+H)\,(\times d),\,N\cdot\tfrac{72}{13}\,(\times2d),\,N\cdot\tfrac{40}{13}\,(\times2d)\}\); \(\lambda_{\max}(\mathrm{FFT}|_{1^\perp})=N(3+H)<8N\) (H equality). Rank \(=\binom{d-1}{2}=1+\dim\mathcal Z\). The non-\(Nd\) positive eigenvalues are \(\tfrac N2\) times \(\mathrm{spec}(\Phi|_{\mathcal Z})\). \(\square\)
+
+6. **What remains OPEN.** Prove \(\lambda_{\max}(\mathrm{FFT}|_{1^\perp})\le8N\) for all primes \(p\ge5\) (16N; closes bi-tight), or \(\le N(3+H)\) (full H). Preferred: second-largest eigenvalue of \(\mathrm{Gu}\) on the \(\Phi\)-image \(\le8N\). Deep non-tight still required for \(L=\lim\alpha_n\). **Existence of \(\lim\alpha_n\) remains OPEN. \(H_{\mathrm{proved}}=\mathrm{false}\).**
+
+Evidence: `src/e1_gmin_m4_prop1593.py`, `evidence/e1_gmin_m4_prop1593.json` (Fraction; Max+ p=3,5 eig; GPU unused).
+
+**Proposition 15.94 (\(P\odot P\) annihilates \(\mathrm{range}(P)\); gap criterion via \(\mathrm{mult}\ge d\); 2026-07-30).** Continue Prop 15.56, 15.59, 15.93.
+
+1. **Annihilator (proved).** For every centrally symmetric Max+ of a conference matrix, \(P\odot P\) vanishes on \(\mathrm{range}(P)\).
+   *Proof.* \(\mathrm{range}(P)=\mathrm{colspace}(Y)\). For \(z=Yv\) one has \(z_a=y_a\cdot v\) and
+   \[
+   (P\odot P\,z)_a\propto\sum_b(y_a\cdot y_b)^2(y_b\cdot v).
+   \]
+   The \(i\)-th ambient coordinate of the right-hand side is
+   \(N\sum_{jk}y_{aj}y_{ak}\mathbb E[y_jy_ky_i]=0\), since all third moments vanish by \(\mathrm{Max}_+=-\mathrm{Max}_+\). \(\square\)
+
+2. **Corollary.** \(\sum_{a,b}P_{ab}^3=\mathrm{Tr}((P\odot P)P)=0\). \(\square\)
+
+3. **Spectral support (proved form).** \(\lambda_1(P\odot P)=\alpha=d/N\) on \(\mathrm{span}\{\mathbf1\}\); \(\mathrm{range}(P)\subset\ker(P\odot P)\); the remaining positive spectrum has dimension \(\mathrm{rank}(P\odot P)-1\) (equal to \(\dim\mathcal Z=d(d-3)/2\) when the rank formula \(\mathrm{rank}(P\odot P)=\binom{d-1}{2}\) holds) and sums to \(S=d(d-1)/N\). \(\square\)
+
+4. **Gap criterion (proved algebra).** If \(\mathrm{mult}(\lambda_2(P\odot P))\ge d\) and
+   \[
+   Q:=\mathrm{Tr}((P\odot P)^2)-\alpha^2\le\frac{d^3}{4N^2},
+   \]
+   then \(\lambda_2\le\sqrt{Q/d}\le d/(2N)\). Hence the spectral gap of Prop 15.56 holds, and for every prime \(p\ge5\) bi-tight covers are empty (Prop 15.55).
+   Equivalently \(Q\le d^3/(4N^2)\) rearranges to
+   \[
+   \sum_{ijkl}M_{ijkl}^2\le4d^2(d+4),\qquad M_{ijkl}=\mathbb E[y_iy_jy_ky_l].
+   \]
+   Wick identity: \(\sum M^2=12n^2-48n+\sum\kappa^2\) for \(\Sigma=2P_+\) (\(\Sigma^2=2\Sigma\)). \(\square\)
+
+5. **Certified.** At \(p=5\): \(\mathrm{mult}(\lambda_2)=d=13\) and \(\sqrt{Q/d}\approx0.0216\le0.025=d/(2N)\), so the gap criterion holds (and bi-tight is already known by the stronger H-equality). At \(p=3\): \(\mathrm{mult}=d\) but \(\sqrt{Q/d}=1/3>5/24=d/(2N)\), correctly refusing the gap. The 16N threshold \(4/N\) is stricter: \(\sqrt{Q/d}\not\le4/N\) at \(p=5\). \(\square\)
+
+6. **What remains OPEN.** Prove \(\mathrm{mult}(\lambda_2(P\odot P))\ge d\) for all primes \(p\ge5\), and \(\sum M^2\le4d^2(d+4)\) (or \(\lambda_{\max}(FF^\top|_{1^\perp})\le8N\), or H). Then bi-tight closes. Deep non-tight still required for \(L=\lim\alpha_n\). **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+Evidence: `src/e1_gmin_m4_prop1594.py`, `evidence/e1_gmin_m4_prop1594.json` (algebra + Max+ p=3,5; GPU unused).
+
+**Proposition 15.95 (Wick\(\le\)thr gap algebra; strengthened criterion; \(C_{\mathrm{diag}}\); 2026-07-30).** Continue Prop 15.94.
+
+1. **Wick envelope vs gap threshold (proved, all primes \(p\ge3\)).** Write
+   \[
+   \mathrm{Wick}_{\mathrm{hi}}:=12n^2+48n=\sum_{ijkl}\mathrm{Wick}(\Sigma)_{ijkl}^2,\qquad
+   \mathrm{thr}_{\mathrm{gap}}:=4d^2(d+4),
+   \]
+   with \(\Sigma=I+C/p\) (\(\Sigma^2=2\Sigma\)). For every prime \(p\ge5\) (\(n=p^2+1\ge26\)):
+   \(\mathrm{Wick}_{\mathrm{hi}}\le\mathrm{thr}_{\mathrm{gap}}\).
+   *Proof.* \(\mathrm{thr}=n^2(n+8)/2\), so
+   \(\mathrm{thr}-\mathrm{Wick}=n(n^2-16n-96)/2\). The quadratic \(n^2-16n-96\) has positive root \(8+\sqrt{160}\approx20.65\); hence for \(n\ge26\) the discriminant is \(\ge41>0\). At \(p=3\) (\(n=10\)) the difference is \(-780<0\). \(\square\)
+
+2. **Strengthened gap criterion (proved).** If \(\mathrm{mult}(\lambda_2(P\odot P))\ge d\) and \(\sum M^2\le\mathrm{Wick}_{\mathrm{hi}}\), then for every prime \(p\ge5\) one has \(\sum M^2\le\mathrm{thr}_{\mathrm{gap}}\), hence by Prop 15.94
+   \(\lambda_2\le\sqrt{Q/d}\le d/(2N)\), hence bi-tight empty (Prop 15.55–15.56). \(\square\)
+
+3. **\(C_{\mathrm{diag}}\) formula.** The repeated-index cumulant block is
+   \[
+   C_{\mathrm{diag}}=\frac{4n(11n-14)}{p^2}.
+   \]
+   Wick–boolean split: \(\sum M^2=12n^2-48n+C_{\mathrm{diag}}+24\sum\rho^2\) with \(\sum\rho^2\ge0\) the off-diagonal \(|\kappa|=1\) residual mass. Certified at \(p=3,5,7\). \(\square\)
+
+4. **Certified Max+.** At \(p=3,5,7\): \(\mathrm{mult}(\lambda_2)=d\); \(\sum M^2\le\mathrm{Wick}_{\mathrm{hi}}\); gap-by-mult holds at \(p=5,7\) and correctly fails at \(p=3\); \(\sum M^2\le\mathrm{thr}_{\mathrm{gap}}\) at \(p=5,7\); actual \(\lambda_2\le4/N\) (16N) at \(p=5,7\). \(\square\)
+
+5. **What remains OPEN.** Prove \(\mathrm{mult}(\lambda_2(P\odot P))\ge d\) for all primes \(p\ge5\) (Aut/\(\mathrm{PSL}(2,p^2)\) irrep of degree \(d=(q+1)/2\), or explicit \(d\)-dimensional \(\lambda_2\)-space), and/or \(\sum M^2\le\mathrm{Wick}_{\mathrm{hi}}\) (boolean \(\le\) Gaussian 4th moment). Then (1)+(2) close the gap path. Alternates: \(\lambda_{\max}(FF^\top|_{1^\perp})\le8N\) or H. Deep non-tight still required for \(L=\lim\alpha_n\). **Existence of \(\lim\alpha_n\) remains OPEN. \(H_{\mathrm{proved}}=\mathrm{false}\).**
+
+Evidence: `src/e1_gmin_m4_prop1595.py`, `evidence/e1_gmin_m4_prop1595.json` (Fraction algebra + Max+ p=3,5,7; GPU unused).
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

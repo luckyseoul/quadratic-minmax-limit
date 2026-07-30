@@ -1,0 +1,842 @@
+{
+  "prop": "15.91",
+  "backend": "CPU Fraction algebra + Max+ orth checks p=3,5; GPU unused (F20)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "H_proved_for_all_p_ge_5": false,
+  "dim_Z": {
+    "proved": true,
+    "theorem": "For every conference matrix of order n=p\u00b2+1 (p odd prime): rows r_i of an ONB of V\u208a satisfy \u2016r_i\u2016\u00b2=1/2, r_i\u00b7r_j=C_ij/(2p); G_ij=(r_i\u00b7r_j)\u00b2 = a I + b 11^T with a=(p\u00b2\u22121)/(4p\u00b2)>0, a+nb=1/2, so rank G=n. Hence {r_i r_i^T} are lin. independent, the diagonal map Sym\u2192R^n is surjective, and on Sym_0 its image is 1^\u22a5 (rank n\u22121). Therefore dim Z = d(d+1)/2 \u2212 1 \u2212 (n\u22121) = d(d\u22123)/2.",
+    "by_p": {
+      "3": {
+        "a": "2/9",
+        "b": "1/36",
+        "lam_allones_G": "1/2",
+        "identity_lam1_half": true,
+        "a_positive": true,
+        "G_full_rank": true,
+        "dim_Sym0": 14,
+        "dim_Z": 5,
+        "formula_d_dminus3_over_2": 5,
+        "match": true
+      },
+      "5": {
+        "a": "6/25",
+        "b": "1/100",
+        "lam_allones_G": "1/2",
+        "identity_lam1_half": true,
+        "a_positive": true,
+        "G_full_rank": true,
+        "dim_Sym0": 90,
+        "dim_Z": 65,
+        "formula_d_dminus3_over_2": 65,
+        "match": true
+      },
+      "7": {
+        "a": "12/49",
+        "b": "1/196",
+        "lam_allones_G": "1/2",
+        "identity_lam1_half": true,
+        "a_positive": true,
+        "G_full_rank": true,
+        "dim_Sym0": 324,
+        "dim_Z": 275,
+        "formula_d_dminus3_over_2": 275,
+        "match": true
+      },
+      "11": {
+        "a": "30/121",
+        "b": "1/484",
+        "lam_allones_G": "1/2",
+        "identity_lam1_half": true,
+        "a_positive": true,
+        "G_full_rank": true,
+        "dim_Sym0": 1890,
+        "dim_Z": 1769,
+        "formula_d_dminus3_over_2": 1769,
+        "match": true
+      },
+      "13": {
+        "a": "42/169",
+        "b": "1/676",
+        "lam_allones_G": "1/2",
+        "identity_lam1_half": true,
+        "a_positive": true,
+        "G_full_rank": true,
+        "dim_Sym0": 3654,
+        "dim_Z": 3485,
+        "formula_d_dminus3_over_2": 3485,
+        "match": true
+      },
+      "17": {
+        "a": "72/289",
+        "b": "1/1156",
+        "lam_allones_G": "1/2",
+        "identity_lam1_half": true,
+        "a_positive": true,
+        "G_full_rank": true,
+        "dim_Sym0": 10584,
+        "dim_Z": 10295,
+        "formula_d_dminus3_over_2": 10295,
+        "match": true
+      },
+      "19": {
+        "a": "90/361",
+        "b": "1/1444",
+        "lam_allones_G": "1/2",
+        "identity_lam1_half": true,
+        "a_positive": true,
+        "G_full_rank": true,
+        "dim_Sym0": 16470,
+        "dim_Z": 16109,
+        "formula_d_dminus3_over_2": 16109,
+        "match": true
+      },
+      "23": {
+        "a": "132/529",
+        "b": "1/2116",
+        "lam_allones_G": "1/2",
+        "identity_lam1_half": true,
+        "a_positive": true,
+        "G_full_rank": true,
+        "dim_Sym0": 35244,
+        "dim_Z": 34715,
+        "formula_d_dminus3_over_2": 34715,
+        "match": true
+      },
+      "29": {
+        "a": "210/841",
+        "b": "1/3364",
+        "lam_allones_G": "1/2",
+        "identity_lam1_half": true,
+        "a_positive": true,
+        "G_full_rank": true,
+        "dim_Sym0": 88830,
+        "dim_Z": 87989,
+        "formula_d_dminus3_over_2": 87989,
+        "match": true
+      },
+      "31": {
+        "a": "240/961",
+        "b": "1/3844",
+        "lam_allones_G": "1/2",
+        "identity_lam1_half": true,
+        "a_positive": true,
+        "G_full_rank": true,
+        "dim_Sym0": 115920,
+        "dim_Z": 114959,
+        "formula_d_dminus3_over_2": 114959,
+        "match": true
+      },
+      "37": {
+        "a": "342/1369",
+        "b": "1/5476",
+        "lam_allones_G": "1/2",
+        "identity_lam1_half": true,
+        "a_positive": true,
+        "G_full_rank": true,
+        "dim_Sym0": 234954,
+        "dim_Z": 233585,
+        "formula_d_dminus3_over_2": 233585,
+        "match": true
+      },
+      "41": {
+        "a": "420/1681",
+        "b": "1/6724",
+        "lam_allones_G": "1/2",
+        "identity_lam1_half": true,
+        "a_positive": true,
+        "G_full_rank": true,
+        "dim_Sym0": 354060,
+        "dim_Z": 352379,
+        "formula_d_dminus3_over_2": 352379,
+        "match": true
+      },
+      "43": {
+        "a": "462/1849",
+        "b": "1/7396",
+        "lam_allones_G": "1/2",
+        "identity_lam1_half": true,
+        "a_positive": true,
+        "G_full_rank": true,
+        "dim_Sym0": 428274,
+        "dim_Z": 426425,
+        "formula_d_dminus3_over_2": 426425,
+        "match": true
+      },
+      "47": {
+        "a": "552/2209",
+        "b": "1/8836",
+        "lam_allones_G": "1/2",
+        "identity_lam1_half": true,
+        "a_positive": true,
+        "G_full_rank": true,
+        "dim_Sym0": 611064,
+        "dim_Z": 608855,
+        "formula_d_dminus3_over_2": 608855,
+        "match": true
+      },
+      "53": {
+        "a": "702/2809",
+        "b": "1/11236",
+        "lam_allones_G": "1/2",
+        "identity_lam1_half": true,
+        "a_positive": true,
+        "G_full_rank": true,
+        "dim_Sym0": 987714,
+        "dim_Z": 984905,
+        "formula_d_dminus3_over_2": 984905,
+        "match": true
+      },
+      "59": {
+        "a": "870/3481",
+        "b": "1/13924",
+        "lam_allones_G": "1/2",
+        "identity_lam1_half": true,
+        "a_positive": true,
+        "G_full_rank": true,
+        "dim_Sym0": 1516410,
+        "dim_Z": 1512929,
+        "formula_d_dminus3_over_2": 1512929,
+        "match": true
+      }
+    }
+  },
+  "budget_identities": {
+    "proved": true,
+    "theorem": "For all primes p\u22653, n=p\u00b2+1: residual budget (p+1)(p+7)/d = 6+2H\u22128; harm budget = 6+2H \u2212 8d/(d+2); sphere < Wick=8 < 6+2H \u2264 16, with equality 6+2H=16 iff p=3 (H=5). Thus H\u21d216N for all p\u22653.",
+    "by_p": {
+      "3": {
+        "H": "5",
+        "qn_budget": "16",
+        "residual_budget": "8",
+        "res_eq_qn_minus_8": true,
+        "sphere": "40/7",
+        "harm_budget": "72/7",
+        "harm_eq_qn_minus_sphere": true,
+        "H_le_5": true,
+        "qn_le_16": true,
+        "chain_sphere_wick_qn": true,
+        "two_sphere": "80/7",
+        "two_sphere_le_16": true,
+        "dim_Z": 5
+      },
+      "5": {
+        "H": "49/13",
+        "qn_budget": "176/13",
+        "residual_budget": "72/13",
+        "res_eq_qn_minus_8": true,
+        "sphere": "104/15",
+        "harm_budget": "1288/195",
+        "harm_eq_qn_minus_sphere": true,
+        "H_le_5": true,
+        "qn_le_16": true,
+        "chain_sphere_wick_qn": true,
+        "two_sphere": "208/15",
+        "two_sphere_le_16": true,
+        "dim_Z": 65
+      },
+      "7": {
+        "H": "81/25",
+        "qn_budget": "312/25",
+        "residual_budget": "112/25",
+        "res_eq_qn_minus_8": true,
+        "sphere": "200/27",
+        "harm_budget": "3424/675",
+        "harm_eq_qn_minus_sphere": true,
+        "H_le_5": true,
+        "qn_le_16": true,
+        "chain_sphere_wick_qn": true,
+        "two_sphere": "400/27",
+        "two_sphere_le_16": true,
+        "dim_Z": 275
+      },
+      "11": {
+        "H": "169/61",
+        "qn_budget": "704/61",
+        "residual_budget": "216/61",
+        "res_eq_qn_minus_8": true,
+        "sphere": "488/63",
+        "harm_budget": "14584/3843",
+        "harm_eq_qn_minus_sphere": true,
+        "H_le_5": true,
+        "qn_le_16": true,
+        "chain_sphere_wick_qn": true,
+        "two_sphere": "976/63",
+        "two_sphere_le_16": true,
+        "dim_Z": 1769
+      },
+      "13": {
+        "H": "45/17",
+        "qn_budget": "192/17",
+        "residual_budget": "56/17",
+        "res_eq_qn_minus_8": true,
+        "sphere": "680/87",
+        "harm_budget": "5144/1479",
+        "harm_eq_qn_minus_sphere": true,
+        "H_le_5": true,
+        "qn_le_16": true,
+        "chain_sphere_wick_qn": true,
+        "two_sphere": "1360/87",
+        "two_sphere_le_16": true,
+        "dim_Z": 3485
+      },
+      "17": {
+        "H": "361/145",
+        "qn_budget": "1592/145",
+        "residual_budget": "432/145",
+        "res_eq_qn_minus_8": true,
+        "sphere": "1160/147",
+        "harm_budget": "65824/21315",
+        "harm_eq_qn_minus_sphere": true,
+        "H_le_5": true,
+        "qn_le_16": true,
+        "chain_sphere_wick_qn": true,
+        "two_sphere": "2320/147",
+        "two_sphere_le_16": true,
+        "dim_Z": 10295
+      },
+      "19": {
+        "H": "441/181",
+        "qn_budget": "1968/181",
+        "residual_budget": "520/181",
+        "res_eq_qn_minus_8": true,
+        "sphere": "1448/183",
+        "harm_budget": "98056/33123",
+        "harm_eq_qn_minus_sphere": true,
+        "H_le_5": true,
+        "qn_le_16": true,
+        "chain_sphere_wick_qn": true,
+        "two_sphere": "2896/183",
+        "two_sphere_le_16": true,
+        "dim_Z": 16109
+      },
+      "23": {
+        "H": "125/53",
+        "qn_budget": "568/53",
+        "residual_budget": "144/53",
+        "res_eq_qn_minus_8": true,
+        "sphere": "2120/267",
+        "harm_budget": "39296/14151",
+        "harm_eq_qn_minus_sphere": true,
+        "H_le_5": true,
+        "qn_le_16": true,
+        "chain_sphere_wick_qn": true,
+        "two_sphere": "4240/267",
+        "two_sphere_le_16": true,
+        "dim_Z": 34715
+      },
+      "29": {
+        "H": "961/421",
+        "qn_budget": "4448/421",
+        "residual_budget": "1080/421",
+        "res_eq_qn_minus_8": true,
+        "sphere": "3368/423",
+        "harm_budget": "463576/178083",
+        "harm_eq_qn_minus_sphere": true,
+        "H_le_5": true,
+        "qn_le_16": true,
+        "chain_sphere_wick_qn": true,
+        "two_sphere": "6736/423",
+        "two_sphere_le_16": true,
+        "dim_Z": 87989
+      },
+      "31": {
+        "H": "1089/481",
+        "qn_budget": "5064/481",
+        "residual_budget": "1216/481",
+        "res_eq_qn_minus_8": true,
+        "sphere": "3848/483",
+        "harm_budget": "595024/232323",
+        "harm_eq_qn_minus_sphere": true,
+        "H_le_5": true,
+        "qn_le_16": true,
+        "chain_sphere_wick_qn": true,
+        "two_sphere": "7696/483",
+        "two_sphere_le_16": true,
+        "dim_Z": 114959
+      },
+      "37": {
+        "H": "1521/685",
+        "qn_budget": "7152/685",
+        "residual_budget": "1672/685",
+        "res_eq_qn_minus_8": true,
+        "sphere": "5480/687",
+        "harm_budget": "1159624/470595",
+        "harm_eq_qn_minus_sphere": true,
+        "H_le_5": true,
+        "qn_le_16": true,
+        "chain_sphere_wick_qn": true,
+        "two_sphere": "10960/687",
+        "two_sphere_le_16": true,
+        "dim_Z": 233585
+      },
+      "41": {
+        "H": "1849/841",
+        "qn_budget": "8744/841",
+        "residual_budget": "2016/841",
+        "res_eq_qn_minus_8": true,
+        "sphere": "6728/843",
+        "harm_budget": "1712944/708963",
+        "harm_eq_qn_minus_sphere": true,
+        "H_le_5": true,
+        "qn_le_16": true,
+        "chain_sphere_wick_qn": true,
+        "two_sphere": "13456/843",
+        "two_sphere_le_16": true,
+        "dim_Z": 352379
+      },
+      "43": {
+        "H": "81/37",
+        "qn_budget": "384/37",
+        "residual_budget": "88/37",
+        "res_eq_qn_minus_8": true,
+        "sphere": "7400/927",
+        "harm_budget": "82168/34299",
+        "harm_eq_qn_minus_sphere": true,
+        "H_le_5": true,
+        "qn_le_16": true,
+        "chain_sphere_wick_qn": true,
+        "two_sphere": "14800/927",
+        "two_sphere_le_16": true,
+        "dim_Z": 426425
+      },
+      "47": {
+        "H": "2401/1105",
+        "qn_budget": "11432/1105",
+        "residual_budget": "2592/1105",
+        "res_eq_qn_minus_8": true,
+        "sphere": "8840/1107",
+        "harm_budget": "2887024/1223235",
+        "harm_eq_qn_minus_sphere": true,
+        "H_le_5": true,
+        "qn_le_16": true,
+        "chain_sphere_wick_qn": true,
+        "two_sphere": "17680/1107",
+        "two_sphere_le_16": true,
+        "dim_Z": 608855
+      },
+      "53": {
+        "H": "605/281",
+        "qn_budget": "2896/281",
+        "residual_budget": "648/281",
+        "res_eq_qn_minus_8": true,
+        "sphere": "11240/1407",
+        "harm_budget": "916232/395367",
+        "harm_eq_qn_minus_sphere": true,
+        "H_le_5": true,
+        "qn_le_16": true,
+        "chain_sphere_wick_qn": true,
+        "two_sphere": "22480/1407",
+        "two_sphere_le_16": true,
+        "dim_Z": 984905
+      },
+      "59": {
+        "H": "3721/1741",
+        "qn_budget": "17888/1741",
+        "residual_budget": "3960/1741",
+        "res_eq_qn_minus_8": true,
+        "sphere": "13928/1743",
+        "harm_budget": "6930136/3034563",
+        "harm_eq_qn_minus_sphere": true,
+        "H_le_5": true,
+        "qn_le_16": true,
+        "chain_sphere_wick_qn": true,
+        "two_sphere": "27856/1743",
+        "two_sphere_le_16": true,
+        "dim_Z": 1512929
+      }
+    }
+  },
+  "orth_equivalence": {
+    "proved_equivalent": true,
+    "identity": "Unit B on V\u208a: E[\u2016By\u2016\u00b2]=2 (frame). Pythagoras: \u2016By\u2016\u00b2 = f\u00b2/n + \u2016By\u2212(f/n)y\u2016\u00b2. Average: E[f\u00b2] = 2n \u2212 n E[\u2016orth\u2016\u00b2]. Hence E[f\u00b2]\u22646+2H \u21d4 E[\u2016orth\u2016\u00b2] \u2265 2\u2212(6+2H)/n. Independent of \u2211\u03c1 \u03ba_B.",
+    "by_p": {
+      "3": {
+        "orth_lower_bound": "2/5",
+        "orth_float": 0.4,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H for unit zero-diag B on V\u208a",
+        "positive": true
+      },
+      "5": {
+        "orth_lower_bound": "250/169",
+        "orth_float": 1.4792899408284024,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H for unit zero-diag B on V\u208a",
+        "positive": true
+      },
+      "7": {
+        "orth_lower_bound": "1094/625",
+        "orth_float": 1.7504,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H for unit zero-diag B on V\u208a",
+        "positive": true
+      },
+      "11": {
+        "orth_lower_bound": "7090/3721",
+        "orth_float": 1.9054017737167428,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H for unit zero-diag B on V\u208a",
+        "positive": true
+      },
+      "13": {
+        "orth_lower_bound": "2794/1445",
+        "orth_float": 1.9335640138408305,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H for unit zero-diag B on V\u208a",
+        "positive": true
+      },
+      "17": {
+        "orth_lower_bound": "41254/21025",
+        "orth_float": 1.962140309155767,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H for unit zero-diag B on V\u208a",
+        "positive": true
+      },
+      "19": {
+        "orth_lower_bound": "64538/32761",
+        "orth_float": 1.969964286804432,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H for unit zero-diag B on V\u208a",
+        "positive": true
+      },
+      "23": {
+        "orth_lower_bound": "27806/14045",
+        "orth_float": 1.9797792808828765,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H for unit zero-diag B on V\u208a",
+        "positive": true
+      },
+      "29": {
+        "orth_lower_bound": "352258/177241",
+        "orth_float": 1.9874521132243668,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H for unit zero-diag B on V\u208a",
+        "positive": true
+      },
+      "31": {
+        "orth_lower_bound": "460190/231361",
+        "orth_float": 1.9890560639001387,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H for unit zero-diag B on V\u208a",
+        "positive": true
+      },
+      "37": {
+        "orth_lower_bound": "934874/469225",
+        "orth_float": 1.9923789226916724,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H for unit zero-diag B on V\u208a",
+        "positive": true
+      },
+      "41": {
+        "orth_lower_bound": "1410190/707281",
+        "orth_float": 1.9938185812993705,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H for unit zero-diag B on V\u208a",
+        "positive": true
+      },
+      "43": {
+        "orth_lower_bound": "68258/34225",
+        "orth_float": 1.994390065741417,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H for unit zero-diag B on V\u208a",
+        "positive": true
+      },
+      "47": {
+        "orth_lower_bound": "2436334/1221025",
+        "orth_float": 1.9953186871685673,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H for unit zero-diag B on V\u208a",
+        "positive": true
+      },
+      "53": {
+        "orth_lower_bound": "788162/394805",
+        "orth_float": 1.996332366611365,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H for unit zero-diag B on V\u208a",
+        "positive": true
+      },
+      "59": {
+        "orth_lower_bound": "6053218/3031081",
+        "orth_float": 1.997049237549244,
+        "equivalent_to": "E[f\u00b2] \u2264 6+2H for unit zero-diag B on V\u208a",
+        "positive": true
+      }
+    }
+  },
+  "phi_kappa_equivalence": {
+    "proved_equivalent": true,
+    "theorem": "For unit A\u2208Z: Q/N = \u27e8\u03a6 A, A\u27e9. Hypothesis H \u21d4 \u03bb_max(\u03a6|Z)\u22646+2H \u21d4 \u03bb_max(\u03ba|Z)\u2264(p+1)(p+7)/d with \u03ba=\u03a6\u22128 Id (Wick baseline on Tr0). Preferred independent residual: bound the 4th-moment operator of Max+ on Z, not \u2211\u03c1 \u03ba_B.",
+    "by_p": {
+      "3": {
+        "lam_Phi_budget": "16",
+        "lam_kappa_budget": "8",
+        "match": true
+      },
+      "5": {
+        "lam_Phi_budget": "176/13",
+        "lam_kappa_budget": "72/13",
+        "match": true
+      },
+      "7": {
+        "lam_Phi_budget": "312/25",
+        "lam_kappa_budget": "112/25",
+        "match": true
+      },
+      "11": {
+        "lam_Phi_budget": "704/61",
+        "lam_kappa_budget": "216/61",
+        "match": true
+      },
+      "13": {
+        "lam_Phi_budget": "192/17",
+        "lam_kappa_budget": "56/17",
+        "match": true
+      },
+      "17": {
+        "lam_Phi_budget": "1592/145",
+        "lam_kappa_budget": "432/145",
+        "match": true
+      },
+      "19": {
+        "lam_Phi_budget": "1968/181",
+        "lam_kappa_budget": "520/181",
+        "match": true
+      },
+      "23": {
+        "lam_Phi_budget": "568/53",
+        "lam_kappa_budget": "144/53",
+        "match": true
+      },
+      "29": {
+        "lam_Phi_budget": "4448/421",
+        "lam_kappa_budget": "1080/421",
+        "match": true
+      },
+      "31": {
+        "lam_Phi_budget": "5064/481",
+        "lam_kappa_budget": "1216/481",
+        "match": true
+      },
+      "37": {
+        "lam_Phi_budget": "7152/685",
+        "lam_kappa_budget": "1672/685",
+        "match": true
+      },
+      "41": {
+        "lam_Phi_budget": "8744/841",
+        "lam_kappa_budget": "2016/841",
+        "match": true
+      },
+      "43": {
+        "lam_Phi_budget": "384/37",
+        "lam_kappa_budget": "88/37",
+        "match": true
+      },
+      "47": {
+        "lam_Phi_budget": "11432/1105",
+        "lam_kappa_budget": "2592/1105",
+        "match": true
+      },
+      "53": {
+        "lam_Phi_budget": "2896/281",
+        "lam_kappa_budget": "648/281",
+        "match": true
+      },
+      "59": {
+        "lam_Phi_budget": "17888/1741",
+        "lam_kappa_budget": "3960/1741",
+        "match": true
+      }
+    }
+  },
+  "two_sphere_implies_16N": {
+    "proved": true,
+    "theorem": "If E[(s^T A s)\u00b2] \u2264 16d/(d+2) for all unit A\u2208Z (2\u00d7sphere bound), then Q \u2264 16 N d/(d+2) < 16N, hence 16N and \u03bb_cycle<8. For primes p\u22655 one has d\u226513\u22656, so Prop 15.60/15.61 close bi-tight. Note: 2\u00d7sphere is strictly weaker than H at p=5 (16d/(d+2)=208/15 > 176/13=6+2H) but still sufficient for bi-tight.",
+    "by_p": {
+      "3": {
+        "two_sphere_qn": "80/7",
+        "implies_qn_lt_16": true,
+        "ray_ub_under_2sphere": "19/7",
+        "H": "5",
+        "2sphere_implies_H": true,
+        "d_ge_6": false,
+        "gap_algebra_d_ge_6": false
+      },
+      "5": {
+        "two_sphere_qn": "208/15",
+        "implies_qn_lt_16": true,
+        "ray_ub_under_2sphere": "59/15",
+        "H": "49/13",
+        "2sphere_implies_H": false,
+        "d_ge_6": true,
+        "gap_algebra_d_ge_6": true
+      },
+      "7": {
+        "two_sphere_qn": "400/27",
+        "implies_qn_lt_16": true,
+        "ray_ub_under_2sphere": "119/27",
+        "H": "81/25",
+        "2sphere_implies_H": false,
+        "d_ge_6": true,
+        "gap_algebra_d_ge_6": true
+      },
+      "11": {
+        "two_sphere_qn": "976/63",
+        "implies_qn_lt_16": true,
+        "ray_ub_under_2sphere": "299/63",
+        "H": "169/61",
+        "2sphere_implies_H": false,
+        "d_ge_6": true,
+        "gap_algebra_d_ge_6": true
+      },
+      "13": {
+        "two_sphere_qn": "1360/87",
+        "implies_qn_lt_16": true,
+        "ray_ub_under_2sphere": "419/87",
+        "H": "45/17",
+        "2sphere_implies_H": false,
+        "d_ge_6": true,
+        "gap_algebra_d_ge_6": true
+      },
+      "17": {
+        "two_sphere_qn": "2320/147",
+        "implies_qn_lt_16": true,
+        "ray_ub_under_2sphere": "719/147",
+        "H": "361/145",
+        "2sphere_implies_H": false,
+        "d_ge_6": true,
+        "gap_algebra_d_ge_6": true
+      },
+      "19": {
+        "two_sphere_qn": "2896/183",
+        "implies_qn_lt_16": true,
+        "ray_ub_under_2sphere": "899/183",
+        "H": "441/181",
+        "2sphere_implies_H": false,
+        "d_ge_6": true,
+        "gap_algebra_d_ge_6": true
+      },
+      "23": {
+        "two_sphere_qn": "4240/267",
+        "implies_qn_lt_16": true,
+        "ray_ub_under_2sphere": "1319/267",
+        "H": "125/53",
+        "2sphere_implies_H": false,
+        "d_ge_6": true,
+        "gap_algebra_d_ge_6": true
+      },
+      "29": {
+        "two_sphere_qn": "6736/423",
+        "implies_qn_lt_16": true,
+        "ray_ub_under_2sphere": "2099/423",
+        "H": "961/421",
+        "2sphere_implies_H": false,
+        "d_ge_6": true,
+        "gap_algebra_d_ge_6": true
+      },
+      "31": {
+        "two_sphere_qn": "7696/483",
+        "implies_qn_lt_16": true,
+        "ray_ub_under_2sphere": "2399/483",
+        "H": "1089/481",
+        "2sphere_implies_H": false,
+        "d_ge_6": true,
+        "gap_algebra_d_ge_6": true
+      },
+      "37": {
+        "two_sphere_qn": "10960/687",
+        "implies_qn_lt_16": true,
+        "ray_ub_under_2sphere": "3419/687",
+        "H": "1521/685",
+        "2sphere_implies_H": false,
+        "d_ge_6": true,
+        "gap_algebra_d_ge_6": true
+      },
+      "41": {
+        "two_sphere_qn": "13456/843",
+        "implies_qn_lt_16": true,
+        "ray_ub_under_2sphere": "4199/843",
+        "H": "1849/841",
+        "2sphere_implies_H": false,
+        "d_ge_6": true,
+        "gap_algebra_d_ge_6": true
+      },
+      "43": {
+        "two_sphere_qn": "14800/927",
+        "implies_qn_lt_16": true,
+        "ray_ub_under_2sphere": "4619/927",
+        "H": "81/37",
+        "2sphere_implies_H": false,
+        "d_ge_6": true,
+        "gap_algebra_d_ge_6": true
+      },
+      "47": {
+        "two_sphere_qn": "17680/1107",
+        "implies_qn_lt_16": true,
+        "ray_ub_under_2sphere": "5519/1107",
+        "H": "2401/1105",
+        "2sphere_implies_H": false,
+        "d_ge_6": true,
+        "gap_algebra_d_ge_6": true
+      },
+      "53": {
+        "two_sphere_qn": "22480/1407",
+        "implies_qn_lt_16": true,
+        "ray_ub_under_2sphere": "7019/1407",
+        "H": "605/281",
+        "2sphere_implies_H": false,
+        "d_ge_6": true,
+        "gap_algebra_d_ge_6": true
+      },
+      "59": {
+        "two_sphere_qn": "27856/1743",
+        "implies_qn_lt_16": true,
+        "ray_ub_under_2sphere": "8699/1743",
+        "H": "3721/1741",
+        "2sphere_implies_H": false,
+        "d_ge_6": true,
+        "gap_algebra_d_ge_6": true
+      }
+    }
+  },
+  "orth_cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "mean_f2": 15.999999965199168,
+      "mean_by2": 1.9999999993785569,
+      "mean_orth": 0.40000000285863985,
+      "identity_ok": true,
+      "frame_E_by2_eq_2": true,
+      "qn_budget": 16.0,
+      "orth_lb_H": 0.4,
+      "sample_mean_f2": 15.999999965199178,
+      "ok": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "mean_f2": 10.421689197952201,
+      "mean_by2": 1.9999999999861389,
+      "mean_orth": 1.5991658000649007,
+      "identity_ok": true,
+      "frame_E_by2_eq_2": true,
+      "qn_budget": 13.538461538461538,
+      "orth_lb_H": 1.4792899408284024,
+      "sample_mean_f2": 8.709857036257793,
+      "ok": true
+    }
+  },
+  "known_ray_certs": {
+    "3": {
+      "ray": "5",
+      "H": "5",
+      "holds": true,
+      "equality": true
+    },
+    "5": {
+      "ray": "49/13",
+      "H": "49/13",
+      "holds": true,
+      "equality": true
+    },
+    "7": {
+      "ray": "933/409",
+      "H": "81/25",
+      "holds": true,
+      "equality": false,
+      "slack": 0.9588264058679706
+    }
+  },
+  "attack_surface": "Independent targets for H (do NOT re-attack \u2211\u03c1 \u03ba_B): (i) orth-energy E[\u2016By\u2212(f/n)y\u2016\u00b2] \u2265 2\u2212(6+2H)/n; (ii) \u03bb_max(\u03ba|Z) \u2264 (p+1)(p+7)/d; (iii) harm(A) \u2264 6+2H \u2212 8d/(d+2) on unit Z; (iv) weaker: 2\u00d7sphere E[f\u00b2]\u226416d/(d+2) \u21d2 bi-tight via 16N for p\u22655.",
+  "verdict": "Prop 15.91 proves the independent dual reformulations of H and the dimension formula dim Z=d(d\u22123)/2 for every conference order n=p\u00b2+1. Budget chain sphere < Wick < 6+2H \u2264 16 holds for all primes p\u22653. Hypothesis H itself (ray\u2264H for all unit B on V\u208a, all primes p\u22655) remains OPEN. Bi-tight still open; lim \u03b1_n OPEN.",
+  "settlement_note": "Next: prove one of the independent targets (orth / \u03ba|Z / harm / 2\u00d7sphere) for all p\u22655. Then bi-tight empties (Prop 15.61/15.88). Deep ND still required for lim \u03b1_n.",
+  "proved": true
+}

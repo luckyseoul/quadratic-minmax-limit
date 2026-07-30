@@ -1,0 +1,315 @@
+{
+  "prop": "15.92",
+  "backend": "CPU Fraction + Max+ p=3,5; GPU unused (F20)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "pairing_sum": {
+    "proved": true,
+    "theorem": "For every conference C of order n=p\u00b2+1 and every y\u2208Max+: \u2211_{|S|=4} \u03ba_C(S)\u220f_{v\u2208S} y_v = n(n\u22121)(n\u22122)/8 (constant). Proof: Prop 15.90 with B=C gives the pointwise formula for all boolean y; C\u00b2=p\u00b2I \u21d2 y\u1d40C\u00b2y=p\u00b2n; on Max+ y\u1d40Cy=np; substitute n=p\u00b2+1. Averaging yields \u2211_S m4(S) \u03ba_C(S) = n(n\u22121)(n\u22122)/8.",
+    "by_p": {
+      "3": {
+        "pred_on_Max+": "90",
+        "target_n_n1_n2_over_8": "90",
+        "match": true,
+        "identity": "\u2211 \u03ba\u220fy = (y\u1d40Cy)\u00b2/8 \u2212 p\u00b2n/2 + n(n\u22121)/4  (all boolean y); on Max+ = n(n\u22121)(n\u22122)/8"
+      },
+      "5": {
+        "pred_on_Max+": "1950",
+        "target_n_n1_n2_over_8": "1950",
+        "match": true,
+        "identity": "\u2211 \u03ba\u220fy = (y\u1d40Cy)\u00b2/8 \u2212 p\u00b2n/2 + n(n\u22121)/4  (all boolean y); on Max+ = n(n\u22121)(n\u22122)/8"
+      },
+      "7": {
+        "pred_on_Max+": "14700",
+        "target_n_n1_n2_over_8": "14700",
+        "match": true,
+        "identity": "\u2211 \u03ba\u220fy = (y\u1d40Cy)\u00b2/8 \u2212 p\u00b2n/2 + n(n\u22121)/4  (all boolean y); on Max+ = n(n\u22121)(n\u22122)/8"
+      },
+      "11": {
+        "pred_on_Max+": "221430",
+        "target_n_n1_n2_over_8": "221430",
+        "match": true,
+        "identity": "\u2211 \u03ba\u220fy = (y\u1d40Cy)\u00b2/8 \u2212 p\u00b2n/2 + n(n\u22121)/4  (all boolean y); on Max+ = n(n\u22121)(n\u22122)/8"
+      },
+      "13": {
+        "pred_on_Max+": "603330",
+        "target_n_n1_n2_over_8": "603330",
+        "match": true,
+        "identity": "\u2211 \u03ba\u220fy = (y\u1d40Cy)\u00b2/8 \u2212 p\u00b2n/2 + n(n\u22121)/4  (all boolean y); on Max+ = n(n\u22121)(n\u22122)/8"
+      },
+      "17": {
+        "pred_on_Max+": "3017160",
+        "target_n_n1_n2_over_8": "3017160",
+        "match": true,
+        "identity": "\u2211 \u03ba\u220fy = (y\u1d40Cy)\u00b2/8 \u2212 p\u00b2n/2 + n(n\u22121)/4  (all boolean y); on Max+ = n(n\u22121)(n\u22122)/8"
+      },
+      "19": {
+        "pred_on_Max+": "5880690",
+        "target_n_n1_n2_over_8": "5880690",
+        "match": true,
+        "identity": "\u2211 \u03ba\u220fy = (y\u1d40Cy)\u00b2/8 \u2212 p\u00b2n/2 + n(n\u22121)/4  (all boolean y); on Max+ = n(n\u22121)(n\u22122)/8"
+      },
+      "23": {
+        "pred_on_Max+": "18504420",
+        "target_n_n1_n2_over_8": "18504420",
+        "match": true,
+        "identity": "\u2211 \u03ba\u220fy = (y\u1d40Cy)\u00b2/8 \u2212 p\u00b2n/2 + n(n\u22121)/4  (all boolean y); on Max+ = n(n\u22121)(n\u22122)/8"
+      },
+      "29": {
+        "pred_on_Max+": "74352810",
+        "target_n_n1_n2_over_8": "74352810",
+        "match": true,
+        "identity": "\u2211 \u03ba\u220fy = (y\u1d40Cy)\u00b2/8 \u2212 p\u00b2n/2 + n(n\u22121)/4  (all boolean y); on Max+ = n(n\u22121)(n\u22122)/8"
+      },
+      "31": {
+        "pred_on_Max+": "110937840",
+        "target_n_n1_n2_over_8": "110937840",
+        "match": true,
+        "identity": "\u2211 \u03ba\u220fy = (y\u1d40Cy)\u00b2/8 \u2212 p\u00b2n/2 + n(n\u22121)/4  (all boolean y); on Max+ = n(n\u22121)(n\u22122)/8"
+      },
+      "37": {
+        "pred_on_Max+": "320715630",
+        "target_n_n1_n2_over_8": "320715630",
+        "match": true,
+        "identity": "\u2211 \u03ba\u220fy = (y\u1d40Cy)\u00b2/8 \u2212 p\u00b2n/2 + n(n\u22121)/4  (all boolean y); on Max+ = n(n\u22121)(n\u22122)/8"
+      },
+      "41": {
+        "pred_on_Max+": "593762820",
+        "target_n_n1_n2_over_8": "593762820",
+        "match": true,
+        "identity": "\u2211 \u03ba\u220fy = (y\u1d40Cy)\u00b2/8 \u2212 p\u00b2n/2 + n(n\u22121)/4  (all boolean y); on Max+ = n(n\u22121)(n\u22122)/8"
+      },
+      "43": {
+        "pred_on_Max+": "790170150",
+        "target_n_n1_n2_over_8": "790170150",
+        "match": true,
+        "identity": "\u2211 \u03ba\u220fy = (y\u1d40Cy)\u00b2/8 \u2212 p\u00b2n/2 + n(n\u22121)/4  (all boolean y); on Max+ = n(n\u22121)(n\u22122)/8"
+      },
+      "47": {
+        "pred_on_Max+": "1347401640",
+        "target_n_n1_n2_over_8": "1347401640",
+        "match": true,
+        "identity": "\u2211 \u03ba\u220fy = (y\u1d40Cy)\u00b2/8 \u2212 p\u00b2n/2 + n(n\u22121)/4  (all boolean y); on Max+ = n(n\u22121)(n\u22122)/8"
+      }
+    }
+  },
+  "spectral_reductions": {
+    "proved": true,
+    "theorem": "Let P=YY\u1d40/(2N) (equal-diag orthoprojector rank d), W_ab=(y_a\u00b7y_b)\u00b2/n\u00b2, U=S/\u221a(2N). Then P\u2299P=\u03b1\u00b2 W with \u03b1=d/N, \u03bb\u2081(W)=N/d, and for unit zero-diag B on V\u208a: max Q = n\u00b2 \u03bb\u2082(W) = 4d\u00b2 \u03bb\u2082(W). Hence 16N\u21d4\u03bb\u2082(W)\u22644N/d\u00b2\u21d4\u03bb\u2082(P\u2299P)\u22644/N; H\u21d4\u03bb\u2082(W)\u2264N(3+H)/(2d\u00b2)\u21d4\u03bb\u2082(P\u2299P)\u2264(3+H)/(2N). Frame: \u03bb\u2082(P\u2299P)=max_{\u2016x\u2016=1,x\u22a51}\u2016U\u1d40diag(x)U\u2016_F\u00b2.",
+    "by_p": {
+      "3": {
+        "H": "5",
+        "thr16_over_N": "4/25",
+        "thrH_over_N": "4/25",
+        "H_implies_16N": true,
+        "frame_form_16N": "max_{\u2016x\u2016=1,x\u22a51} \u2016U\u1d40diag(x)U\u2016_F\u00b2 \u2264 4/N",
+        "frame_form_H": "\u03bb\u2082(P\u2299P) \u2264 (3+H)/(2N) on 1^\u22a5"
+      },
+      "5": {
+        "H": "49/13",
+        "thr16_over_N": "4/169",
+        "thrH_over_N": "44/2197",
+        "H_implies_16N": true,
+        "frame_form_16N": "max_{\u2016x\u2016=1,x\u22a51} \u2016U\u1d40diag(x)U\u2016_F\u00b2 \u2264 4/N",
+        "frame_form_H": "\u03bb\u2082(P\u2299P) \u2264 (3+H)/(2N) on 1^\u22a5"
+      },
+      "7": {
+        "H": "81/25",
+        "thr16_over_N": "4/625",
+        "thrH_over_N": "78/15625",
+        "H_implies_16N": true,
+        "frame_form_16N": "max_{\u2016x\u2016=1,x\u22a51} \u2016U\u1d40diag(x)U\u2016_F\u00b2 \u2264 4/N",
+        "frame_form_H": "\u03bb\u2082(P\u2299P) \u2264 (3+H)/(2N) on 1^\u22a5"
+      },
+      "11": {
+        "H": "169/61",
+        "thr16_over_N": "4/3721",
+        "thrH_over_N": "176/226981",
+        "H_implies_16N": true,
+        "frame_form_16N": "max_{\u2016x\u2016=1,x\u22a51} \u2016U\u1d40diag(x)U\u2016_F\u00b2 \u2264 4/N",
+        "frame_form_H": "\u03bb\u2082(P\u2299P) \u2264 (3+H)/(2N) on 1^\u22a5"
+      },
+      "13": {
+        "H": "45/17",
+        "thr16_over_N": "4/7225",
+        "thrH_over_N": "48/122825",
+        "H_implies_16N": true,
+        "frame_form_16N": "max_{\u2016x\u2016=1,x\u22a51} \u2016U\u1d40diag(x)U\u2016_F\u00b2 \u2264 4/N",
+        "frame_form_H": "\u03bb\u2082(P\u2299P) \u2264 (3+H)/(2N) on 1^\u22a5"
+      },
+      "17": {
+        "H": "361/145",
+        "thr16_over_N": "4/21025",
+        "thrH_over_N": "398/3048625",
+        "H_implies_16N": true,
+        "frame_form_16N": "max_{\u2016x\u2016=1,x\u22a51} \u2016U\u1d40diag(x)U\u2016_F\u00b2 \u2264 4/N",
+        "frame_form_H": "\u03bb\u2082(P\u2299P) \u2264 (3+H)/(2N) on 1^\u22a5"
+      },
+      "19": {
+        "H": "441/181",
+        "thr16_over_N": "4/32761",
+        "thrH_over_N": "492/5929741",
+        "H_implies_16N": true,
+        "frame_form_16N": "max_{\u2016x\u2016=1,x\u22a51} \u2016U\u1d40diag(x)U\u2016_F\u00b2 \u2264 4/N",
+        "frame_form_H": "\u03bb\u2082(P\u2299P) \u2264 (3+H)/(2N) on 1^\u22a5"
+      },
+      "23": {
+        "H": "125/53",
+        "thr16_over_N": "4/70225",
+        "thrH_over_N": "142/3721925",
+        "H_implies_16N": true,
+        "frame_form_16N": "max_{\u2016x\u2016=1,x\u22a51} \u2016U\u1d40diag(x)U\u2016_F\u00b2 \u2264 4/N",
+        "frame_form_H": "\u03bb\u2082(P\u2299P) \u2264 (3+H)/(2N) on 1^\u22a5"
+      },
+      "29": {
+        "H": "961/421",
+        "thr16_over_N": "4/177241",
+        "thrH_over_N": "1112/74618461",
+        "H_implies_16N": true,
+        "frame_form_16N": "max_{\u2016x\u2016=1,x\u22a51} \u2016U\u1d40diag(x)U\u2016_F\u00b2 \u2264 4/N",
+        "frame_form_H": "\u03bb\u2082(P\u2299P) \u2264 (3+H)/(2N) on 1^\u22a5"
+      },
+      "31": {
+        "H": "1089/481",
+        "thr16_over_N": "4/231361",
+        "thrH_over_N": "1266/111284641",
+        "H_implies_16N": true,
+        "frame_form_16N": "max_{\u2016x\u2016=1,x\u22a51} \u2016U\u1d40diag(x)U\u2016_F\u00b2 \u2264 4/N",
+        "frame_form_H": "\u03bb\u2082(P\u2299P) \u2264 (3+H)/(2N) on 1^\u22a5"
+      },
+      "37": {
+        "H": "1521/685",
+        "thr16_over_N": "4/469225",
+        "thrH_over_N": "1788/321419125",
+        "H_implies_16N": true,
+        "frame_form_16N": "max_{\u2016x\u2016=1,x\u22a51} \u2016U\u1d40diag(x)U\u2016_F\u00b2 \u2264 4/N",
+        "frame_form_H": "\u03bb\u2082(P\u2299P) \u2264 (3+H)/(2N) on 1^\u22a5"
+      },
+      "41": {
+        "H": "1849/841",
+        "thr16_over_N": "4/707281",
+        "thrH_over_N": "2186/594823321",
+        "H_implies_16N": true,
+        "frame_form_16N": "max_{\u2016x\u2016=1,x\u22a51} \u2016U\u1d40diag(x)U\u2016_F\u00b2 \u2264 4/N",
+        "frame_form_H": "\u03bb\u2082(P\u2299P) \u2264 (3+H)/(2N) on 1^\u22a5"
+      },
+      "43": {
+        "H": "81/37",
+        "thr16_over_N": "4/855625",
+        "thrH_over_N": "96/31658125",
+        "H_implies_16N": true,
+        "frame_form_16N": "max_{\u2016x\u2016=1,x\u22a51} \u2016U\u1d40diag(x)U\u2016_F\u00b2 \u2264 4/N",
+        "frame_form_H": "\u03bb\u2082(P\u2299P) \u2264 (3+H)/(2N) on 1^\u22a5"
+      },
+      "47": {
+        "H": "2401/1105",
+        "thr16_over_N": "4/1221025",
+        "thrH_over_N": "2858/1349232625",
+        "H_implies_16N": true,
+        "frame_form_16N": "max_{\u2016x\u2016=1,x\u22a51} \u2016U\u1d40diag(x)U\u2016_F\u00b2 \u2264 4/N",
+        "frame_form_H": "\u03bb\u2082(P\u2299P) \u2264 (3+H)/(2N) on 1^\u22a5"
+      }
+    }
+  },
+  "pairing_cert": {
+    "3": {
+      "p": 3,
+      "target": 90.0,
+      "max_abs_err_on_samples": 0.0,
+      "ok": true,
+      "sum_m4_kappa": 90.0
+    },
+    "5": {
+      "p": 5,
+      "target": 1950.0,
+      "max_abs_err_on_samples": 0.0,
+      "ok": true,
+      "sum_m4_kappa": 1950.0
+    }
+  },
+  "W_spectrum_cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "d": 5,
+      "rank_nonzero": 6,
+      "rank_formula_binom_d1_2": 6,
+      "eigs": [
+        {
+          "value": 2.4,
+          "frac": "12/5",
+          "frac_err": 0.0,
+          "mult": 1
+        },
+        {
+          "value": 1.92,
+          "frac": "48/25",
+          "frac_err": 0.0,
+          "mult": 5
+        },
+        {
+          "value": 0.0,
+          "frac": "0",
+          "mult": 6
+        }
+      ],
+      "lam1": 2.4,
+      "lam2": 1.92,
+      "thr_H": 1.92,
+      "thr_16": 1.92,
+      "H_equality": true,
+      "below_16": true,
+      "ok": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "d": 13,
+      "rank_nonzero": 66,
+      "rank_formula_binom_d1_2": 66,
+      "eigs": [
+        {
+          "value": 20.0,
+          "frac": "20/1",
+          "frac_err": 0.0,
+          "mult": 1
+        },
+        {
+          "value": 5.2071005917,
+          "frac": "880/169",
+          "frac_err": 1.5976553413565853e-11,
+          "mult": 13
+        },
+        {
+          "value": 4.2603550296,
+          "frac": "720/169",
+          "frac_err": 1.4201084752585302e-11,
+          "mult": 26
+        },
+        {
+          "value": 2.3668639053,
+          "frac": "400/169",
+          "frac_err": 2.5444091278359338e-11,
+          "mult": 26
+        },
+        {
+          "value": 0.0,
+          "frac": "0",
+          "mult": 194
+        }
+      ],
+      "lam1": 20.0,
+      "lam2": 5.2071005917,
+      "thr_H": 5.207100591715976,
+      "thr_16": 6.153846153846154,
+      "H_equality": true,
+      "below_16": true,
+      "ok": true
+    }
+  },
+  "attack_surface": "Prove \u03bb\u2082(W)\u2264N(3+H)/(2d\u00b2) (H) or \u03bb\u2082(W)\u22644N/d\u00b2 (16N) for all primes p\u22655. Equiv: \u03bb\u2082(P\u2299P)\u2264(3+H)/(2N) or \u22644/N. Frame: max_{x\u22a51,\u2016x\u2016=1} \u2016U\u1d40diag(x)U\u2016_F\u00b2 \u2264 4/N. Do not re-attack \u2211\u03c1 \u03ba_B (Prop 15.90).",
+  "verdict": "Prop 15.92 proves \u2211 m4 \u03ba_C = n(n\u22121)(n\u22122)/8 for every conference Max+ (pointwise constant pairing sum), and records the clean spectral reductions of H and 16N to \u03bb\u2082(W)/\u03bb\u2082(P\u2299P). W spectrum saturates H at p=3,5. General upper bound ray\u2264H or ray\u22645 still OPEN. L OPEN.",
+  "settlement_note": "Next: prove \u03bb\u2082(P\u2299P)\u22644/N for the Max+ design projector for all p\u22655 (closes bi-tight via 16N), or the sharper H form. Deep ND still needed for lim \u03b1_n.",
+  "proved": true
+}

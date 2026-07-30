@@ -1,0 +1,203 @@
+{
+  "prop": "15.87",
+  "backend": "CPU combinatorics + multi-W=86 pure C+\u03a3; GPU unused (F20)",
+  "L_status": "OPEN",
+  "k4_star": {
+    "proved": true,
+    "n_labelings": 64,
+    "n_sigma_sum_eq_4kappa": 64,
+    "n_kappa_abs_1": 48,
+    "n_sum_star_0": 48,
+    "n_prod_star_1": 48,
+    "n_exactly_two_star_plus": 48,
+    "statement": "On every \u00b11 K4 labeling with |\u03ba|=1: \u2211 star_v=0, \u220f star_v=+1, exactly two vertices with star=+1. (48 of 64 labelings.) Also \u03c3_sum=4\u03ba on all 64 labelings."
+  },
+  "S1_pattern_GD": {
+    "proved": true,
+    "S1_pattern": "Aut-constancy (Prop 15.79): g:=star_a\u00b7S1(a) independent of a\u2208S. K4 star theorem: \u2211 star_a=0 and star_a=\u00b11. Hence S1(a)=g\u00b7star_a, \u2211_a S1(a)=0, values (+g,+g,\u2212g,\u2212g).",
+    "GD_iff": "star\u00b7S1\u22640 at every centre \u21d4 g\u22640 (single scalar per |\u03ba|=1 4-set).",
+    "T_rho_tautology": "(T\u03c1)(S)=\u2211_a(S1+S3)(a)=\u2211_a(p\u03c1\u22122 star_a/p\u00b2)=4p\u03c1\u2212(2/p\u00b2)\u2211star=4p\u03c1 on |\u03ba|=1, matching the residual identity 4p\u03c1=(T\u03c1) from T\u03ba=0. No new constraint on \u03c1 beyond the split into S1 vs S3."
+  },
+  "CS_weakness": {
+    "proved_CS_too_weak_for_p_ge_5": true,
+    "statement": "Cauchy\u2013Schwarz |E[ZU1]|\u2264\u221aE[U1\u00b2]=\u0398(\u221ad1)=\u0398(p) cannot force E[ZU1]\u2264E_Wick[ZU1]=O(1/p)\u2013O(1): CS envelope is asymptotically larger than the Wick scale. GD needs signed cancellation / design structure beyond CS.",
+    "by_p": {
+      "5": {
+        "d1": 17,
+        "CS_lower_approx": 3.605551275463989,
+        "Wick_upper_d1_over_p2": 0.68,
+        "CS_beats_Wick_scale": true
+      },
+      "7": {
+        "d1": 35,
+        "CS_lower_approx": 5.5677643628300215,
+        "Wick_upper_d1_over_p2": 0.7142857142857143,
+        "CS_beats_Wick_scale": true
+      },
+      "11": {
+        "d1": 89,
+        "CS_lower_approx": 9.219544457292887,
+        "Wick_upper_d1_over_p2": 0.7355371900826446,
+        "CS_beats_Wick_scale": true
+      },
+      "13": {
+        "d1": 125,
+        "CS_lower_approx": 11.0,
+        "Wick_upper_d1_over_p2": 0.7396449704142012,
+        "CS_beats_Wick_scale": true
+      },
+      "17": {
+        "d1": 215,
+        "CS_lower_approx": 14.52583904633395,
+        "Wick_upper_d1_over_p2": 0.7439446366782007,
+        "CS_beats_Wick_scale": true
+      },
+      "19": {
+        "d1": 269,
+        "CS_lower_approx": 16.278820596099706,
+        "Wick_upper_d1_over_p2": 0.7451523545706371,
+        "CS_beats_Wick_scale": true
+      },
+      "23": {
+        "d1": 395,
+        "CS_lower_approx": 19.77371993328519,
+        "Wick_upper_d1_over_p2": 0.7466918714555766,
+        "CS_beats_Wick_scale": true
+      },
+      "29": {
+        "d1": 629,
+        "CS_lower_approx": 25.0,
+        "Wick_upper_d1_over_p2": 0.7479191438763377,
+        "CS_beats_Wick_scale": true
+      },
+      "31": {
+        "d1": 719,
+        "CS_lower_approx": 26.739483914241877,
+        "Wick_upper_d1_over_p2": 0.7481789802289281,
+        "CS_beats_Wick_scale": true
+      },
+      "37": {
+        "d1": 1025,
+        "CS_lower_approx": 31.953090617340916,
+        "Wick_upper_d1_over_p2": 0.7487216946676406,
+        "CS_beats_Wick_scale": true
+      },
+      "41": {
+        "d1": 1259,
+        "CS_lower_approx": 35.4259791678367,
+        "Wick_upper_d1_over_p2": 0.7489589530041642,
+        "CS_beats_Wick_scale": true
+      },
+      "43": {
+        "d1": 1385,
+        "CS_lower_approx": 37.16180835212409,
+        "Wick_upper_d1_over_p2": 0.7490535424553812,
+        "CS_beats_Wick_scale": true
+      },
+      "47": {
+        "d1": 1655,
+        "CS_lower_approx": 40.63249930782009,
+        "Wick_upper_d1_over_p2": 0.7492077863286555,
+        "CS_beats_Wick_scale": true
+      }
+    }
+  },
+  "EU2_census": {
+    "workers": 86,
+    "by_p": {
+      "3": {
+        "p": 3,
+        "d1": 5,
+        "by_tau1": {
+          "-1": {
+            "star_tau1": -1,
+            "n_sets": 180,
+            "EU2_mean": 5.044444444444444,
+            "EU2_min": 3.6666666666666665,
+            "EU2_max": 6.333333333333333,
+            "d1": 5,
+            "mean_minus_d1": 0.04444444444444429
+          }
+        },
+        "EU2_global_min": 3.6666666666666665,
+        "EU2_global_max": 6.333333333333333,
+        "EU2_near_d1": true,
+        "CS_scale_sqrt_d1": 2.23606797749979,
+        "Wick_scale_max_abs_t_over_p2": 0.1111111111111111,
+        "CS_too_weak": true
+      },
+      "5": {
+        "p": 5,
+        "d1": 17,
+        "by_tau1": {
+          "-1": {
+            "star_tau1": -1,
+            "n_sets": 7800,
+            "EU2_mean": 17.00615384615385,
+            "EU2_min": 16.199999999999996,
+            "EU2_max": 17.80000000000001,
+            "d1": 17,
+            "mean_minus_d1": 0.006153846153850395
+          },
+          "5": {
+            "star_tau1": 5,
+            "n_sets": 3900,
+            "EU2_mean": 17.0,
+            "EU2_min": 16.999999999999993,
+            "EU2_max": 17.000000000000007,
+            "d1": 17,
+            "mean_minus_d1": 0.0
+          }
+        },
+        "EU2_global_min": 16.199999999999996,
+        "EU2_global_max": 17.80000000000001,
+        "EU2_near_d1": true,
+        "CS_scale_sqrt_d1": 4.123105625617661,
+        "Wick_scale_max_abs_t_over_p2": 0.2,
+        "CS_too_weak": true
+      },
+      "7": {
+        "p": 7,
+        "d1": 35,
+        "by_tau1": {
+          "-7": {
+            "star_tau1": -7,
+            "n_sets": 58800,
+            "EU2_mean": 35.000816326530604,
+            "EU2_min": 34.714285714285666,
+            "EU2_max": 35.28571428571433,
+            "d1": 35,
+            "mean_minus_d1": 0.000816326530603817
+          },
+          "-1": {
+            "star_tau1": -1,
+            "n_sets": 58800,
+            "EU2_mean": 35.00244897959185,
+            "EU2_min": 34.14285714285709,
+            "EU2_max": 35.8571428571429,
+            "d1": 35,
+            "mean_minus_d1": 0.002448979591846978
+          },
+          "5": {
+            "star_tau1": 5,
+            "n_sets": 58800,
+            "EU2_mean": 35.01102040816326,
+            "EU2_min": 32.42857142857139,
+            "EU2_max": 37.571428571428605,
+            "d1": 35,
+            "mean_minus_d1": 0.011020408163261664
+          }
+        },
+        "EU2_global_min": 32.42857142857139,
+        "EU2_global_max": 37.571428571428605,
+        "EU2_near_d1": true,
+        "CS_scale_sqrt_d1": 5.916079783099616,
+        "Wick_scale_max_abs_t_over_p2": 0.14285714285714285,
+        "CS_too_weak": true
+      }
+    },
+    "near_d1_all": true
+  },
+  "settlement_note": "GD reduces to g:=star\u00b7S1\u22640 per |\u03ba|=1 set (K4 star + Aut). CS on (Z,U1) is too weak. Pointwise g\u22640 for \u2200p\u22655 still OPEN (needs Max+ fourth-moment / character sum).",
+  "proved": true
+}

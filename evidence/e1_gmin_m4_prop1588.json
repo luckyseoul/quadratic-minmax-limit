@@ -1,0 +1,277 @@
+{
+  "prop": "15.88",
+  "backend": "CPU algebra (Fraction) + optional Max+ p=5 check; GPU unused (F20)",
+  "L_status": "OPEN",
+  "pairwise_sum": {
+    "proved": true,
+    "statement": "\u2200y\u2208Max\u208a: \u2211_{i<j} y_i y_j = p",
+    "proof_sketch": "Prop 15.52: 1\u1d40y=(p+1)y_\u221e \u21d2 |1\u1d40y|=p+1. Boolean: (1\u1d40y)\u00b2 = n + 2\u2211_{i<j} y_i y_j. Hence \u2211_{i<j} y_i y_j = ((p+1)\u00b2 - n)/2 = (p\u00b2+2p+1-p\u00b2-1)/2 = p.",
+    "edge_feature_form": "1_E\u1d40 f(y)=p with f_e(y)=y_i y_j for all y\u2208Max\u208a",
+    "depends_on": "Prop 15.52 (Paley row-sum / y_\u221e identity)"
+  },
+  "H_gap_algebra": {
+    "proved": true,
+    "closed_form_diff": "(p^4 - 8p^2 - 16p - 21) / (2(p^2+1))",
+    "proof_num_positive": "At p=5: num=324>0. Derivative 4p\u00b3-16p-16=4(p\u00b3-4p-4)>0 for p\u22655 (p\u00b3-4p-4\u2265125-20-4=101>0). Hence num increasing and positive on primes p\u22655.",
+    "by_p": {
+      "3": {
+        "H": "5",
+        "three_plus_H": "8",
+        "n_half": "5",
+        "diff": "-3",
+        "diff_closed": "-3",
+        "match": true,
+        "diff_positive": false,
+        "gap_ok_under_H": false,
+        "expect_gap_fail": true
+      },
+      "5": {
+        "H": "49/13",
+        "three_plus_H": "88/13",
+        "n_half": "13",
+        "diff": "81/13",
+        "diff_closed": "81/13",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "7": {
+        "H": "81/25",
+        "three_plus_H": "156/25",
+        "n_half": "25",
+        "diff": "469/25",
+        "diff_closed": "469/25",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "11": {
+        "H": "169/61",
+        "three_plus_H": "352/61",
+        "n_half": "61",
+        "diff": "3369/61",
+        "diff_closed": "3369/61",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "13": {
+        "H": "45/17",
+        "three_plus_H": "96/17",
+        "n_half": "85",
+        "diff": "1349/17",
+        "diff_closed": "1349/17",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "17": {
+        "H": "361/145",
+        "three_plus_H": "796/145",
+        "n_half": "145",
+        "diff": "20229/145",
+        "diff_closed": "20229/145",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "19": {
+        "H": "441/181",
+        "three_plus_H": "984/181",
+        "n_half": "181",
+        "diff": "31777/181",
+        "diff_closed": "31777/181",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "23": {
+        "H": "125/53",
+        "three_plus_H": "284/53",
+        "n_half": "265",
+        "diff": "13761/53",
+        "diff_closed": "13761/53",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "29": {
+        "H": "961/421",
+        "three_plus_H": "2224/421",
+        "n_half": "421",
+        "diff": "175017/421",
+        "diff_closed": "175017/421",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "31": {
+        "H": "1089/481",
+        "three_plus_H": "2532/481",
+        "n_half": "481",
+        "diff": "228829/481",
+        "diff_closed": "228829/481",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "37": {
+        "H": "1521/685",
+        "three_plus_H": "3576/685",
+        "n_half": "685",
+        "diff": "465649/685",
+        "diff_closed": "465649/685",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "41": {
+        "H": "1849/841",
+        "three_plus_H": "4372/841",
+        "n_half": "841",
+        "diff": "702909/841",
+        "diff_closed": "702909/841",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "43": {
+        "H": "81/37",
+        "three_plus_H": "192/37",
+        "n_half": "925",
+        "diff": "34033/37",
+        "diff_closed": "34033/37",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "47": {
+        "H": "2401/1105",
+        "three_plus_H": "5716/1105",
+        "n_half": "1105",
+        "diff": "1215309/1105",
+        "diff_closed": "1215309/1105",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "53": {
+        "H": "605/281",
+        "three_plus_H": "1448/281",
+        "n_half": "1405",
+        "diff": "393357/281",
+        "diff_closed": "393357/281",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "59": {
+        "H": "3721/1741",
+        "three_plus_H": "8944/1741",
+        "n_half": "1741",
+        "diff": "3022137/1741",
+        "diff_closed": "3022137/1741",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "61": {
+        "H": "3969/1861",
+        "three_plus_H": "9552/1861",
+        "n_half": "1861",
+        "diff": "3453769/1861",
+        "diff_closed": "3453769/1861",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "67": {
+        "H": "4761/2245",
+        "three_plus_H": "11496/2245",
+        "n_half": "2245",
+        "diff": "5028529/2245",
+        "diff_closed": "5028529/2245",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "71": {
+        "H": "5329/2521",
+        "three_plus_H": "12892/2521",
+        "n_half": "2521",
+        "diff": "6342549/2521",
+        "diff_closed": "6342549/2521",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "73": {
+        "H": "1125/533",
+        "three_plus_H": "2724/533",
+        "n_half": "2665",
+        "diff": "1417721/533",
+        "diff_closed": "1417721/533",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      },
+      "79": {
+        "H": "6561/3121",
+        "three_plus_H": "15924/3121",
+        "n_half": "3121",
+        "diff": "9724717/3121",
+        "diff_closed": "9724717/3121",
+        "match": true,
+        "diff_positive": true,
+        "gap_ok_under_H": true
+      }
+    },
+    "p3_note": "At p=3, 3+H=8>n/2=5 (bi-tight possible; gap fails)."
+  },
+  "settlement_under_H": {
+    "proved_form": true,
+    "chain": "ray\u2264H(p) (hyp. H) \u21d2 Q4\u22642N\u00b7H \u21d2 \u03bb_cycle\u22643+H (Props 15.62\u201315.63) \u21d2 \u03bb_cycle<n/2 for p\u22655 (part 2) \u21d2 \u03bb_max(G)=n/2 simple \u21d2 bi-tight/Type I empty (Prop 15.55/15.61).",
+    "residual": "Hypothesis H (ray\u2264H for all unit zero-diag B on V\u208a) remains OPEN for general primes p\u22655; certified p=3,5,7."
+  },
+  "g_via_S3": {
+    "proved": true,
+    "identity": "g := star\u00b7S1 = p\u00b7\u03c1\u00b7star \u2212 2/p\u00b2 \u2212 star\u00b7S3",
+    "GD_iff": "g\u22640 \u21d4 star\u00b7S3 \u2265 p\u00b7\u03c1\u00b7star \u2212 2/p\u00b2",
+    "star_plus": "At star=+1: GD \u21d4 S3 \u2265 p\u03c1 \u2212 2/p\u00b2",
+    "S1_pattern": "S1(a)=g\u00b7star_a (Prop 15.87); values (+g,+g,\u2212g,\u2212g)",
+    "note": "Reduces pointwise GD to a lower bound on star\u00b7S3 relative to \u03c1. Absolute |S3|\u2264d3\u00b7max|\u03c1_\u03ba3| is too weak (Prop 15.84)."
+  },
+  "p5_g_tau": {
+    "N": 260,
+    "by_tau1": {
+      "-1": {
+        "n": 7800,
+        "unique_g": [
+          -0.129230769231
+        ],
+        "n_unique": 1,
+        "max_g": -0.12923076923076918,
+        "min_g": -0.1292307692307693
+      },
+      "5": {
+        "n": 3900,
+        "unique_g": [
+          -0.030769230769
+        ],
+        "n_unique": 1,
+        "max_g": -0.030769230769230736,
+        "min_g": -0.03076923076923082
+      }
+    },
+    "all_g_le_0": true,
+    "g_function_of_tau1_only": true,
+    "matches_exact_fractions": true,
+    "exact": {
+      "-1": "-42/325",
+      "5": "-2/65"
+    },
+    "sum_g": -1127.99999999989
+  },
+  "settlement_note": "If hypothesis H holds for all p\u22655 then bi-tight is empty (spectral Path C). H-gap algebra shows 3+H<n/2 strictly for p\u22655. Pointwise g\u22640 \u21d4 star\u00b7S3 lower bound; still OPEN for general p. L=lim \u03b1_n OPEN (need H or GD/cand + deep ND).",
+  "proved": true
+}

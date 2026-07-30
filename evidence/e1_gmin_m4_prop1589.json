@@ -1,0 +1,259 @@
+{
+  "prop": "15.89",
+  "backend": "CPU Fraction + multi-W=86 pure C/B; GPU unused (F20)",
+  "L_status": "OPEN",
+  "wick_split": {
+    "proved": true,
+    "formulas": {
+      "sum_kappaC_kappaB": "(n+1)/4 \u2016B\u2016_F\u00b2",
+      "Q4_over_N_unit": "2 + 4/p\u00b2 + 8 \u2211_S \u03c1(S) \u03ba_B(S)",
+      "H_iff": "\u2211 \u03c1 \u03ba_B \u2264 (H \u2212 1 \u2212 2/p\u00b2)/4"
+    },
+    "by_p": {
+      "3": {
+        "wick_Q4_over_N": "22/9",
+        "wick_from_identity": "22/9",
+        "match": true,
+        "two_H": "10",
+        "room_for_8_sum_rho_kappa": "68/9",
+        "sum_rho_kappa_budget": "17/18",
+        "budget_positive": true,
+        "H_eq": "ray\u2264H \u21d4 \u2211\u03c1 \u03ba_B \u2264 17/18"
+      },
+      "5": {
+        "wick_Q4_over_N": "54/25",
+        "wick_from_identity": "54/25",
+        "match": true,
+        "two_H": "98/13",
+        "room_for_8_sum_rho_kappa": "1748/325",
+        "sum_rho_kappa_budget": "437/650",
+        "budget_positive": true,
+        "H_eq": "ray\u2264H \u21d4 \u2211\u03c1 \u03ba_B \u2264 437/650"
+      },
+      "7": {
+        "wick_Q4_over_N": "102/49",
+        "wick_from_identity": "102/49",
+        "match": true,
+        "two_H": "162/25",
+        "room_for_8_sum_rho_kappa": "5388/1225",
+        "sum_rho_kappa_budget": "1347/2450",
+        "budget_positive": true,
+        "H_eq": "ray\u2264H \u21d4 \u2211\u03c1 \u03ba_B \u2264 1347/2450"
+      },
+      "11": {
+        "wick_Q4_over_N": "246/121",
+        "wick_from_identity": "246/121",
+        "match": true,
+        "two_H": "338/61",
+        "room_for_8_sum_rho_kappa": "25892/7381",
+        "sum_rho_kappa_budget": "6473/14762",
+        "budget_positive": true,
+        "H_eq": "ray\u2264H \u21d4 \u2211\u03c1 \u03ba_B \u2264 6473/14762"
+      },
+      "13": {
+        "wick_Q4_over_N": "342/169",
+        "wick_from_identity": "342/169",
+        "match": true,
+        "two_H": "90/17",
+        "room_for_8_sum_rho_kappa": "9396/2873",
+        "sum_rho_kappa_budget": "2349/5746",
+        "budget_positive": true,
+        "H_eq": "ray\u2264H \u21d4 \u2211\u03c1 \u03ba_B \u2264 2349/5746"
+      },
+      "17": {
+        "wick_Q4_over_N": "582/289",
+        "wick_from_identity": "582/289",
+        "match": true,
+        "two_H": "722/145",
+        "room_for_8_sum_rho_kappa": "124268/41905",
+        "sum_rho_kappa_budget": "31067/83810",
+        "budget_positive": true,
+        "H_eq": "ray\u2264H \u21d4 \u2211\u03c1 \u03ba_B \u2264 31067/83810"
+      },
+      "19": {
+        "wick_Q4_over_N": "726/361",
+        "wick_from_identity": "726/361",
+        "match": true,
+        "two_H": "882/181",
+        "room_for_8_sum_rho_kappa": "186996/65341",
+        "sum_rho_kappa_budget": "46749/130682",
+        "budget_positive": true,
+        "H_eq": "ray\u2264H \u21d4 \u2211\u03c1 \u03ba_B \u2264 46749/130682"
+      },
+      "23": {
+        "wick_Q4_over_N": "1062/529",
+        "wick_from_identity": "1062/529",
+        "match": true,
+        "two_H": "250/53",
+        "room_for_8_sum_rho_kappa": "75964/28037",
+        "sum_rho_kappa_budget": "18991/56074",
+        "budget_positive": true,
+        "H_eq": "ray\u2264H \u21d4 \u2211\u03c1 \u03ba_B \u2264 18991/56074"
+      },
+      "29": {
+        "wick_Q4_over_N": "1686/841",
+        "wick_from_identity": "1686/841",
+        "match": true,
+        "two_H": "1922/421",
+        "room_for_8_sum_rho_kappa": "906596/354061",
+        "sum_rho_kappa_budget": "226649/708122",
+        "budget_positive": true,
+        "H_eq": "ray\u2264H \u21d4 \u2211\u03c1 \u03ba_B \u2264 226649/708122"
+      },
+      "31": {
+        "wick_Q4_over_N": "1926/961",
+        "wick_from_identity": "1926/961",
+        "match": true,
+        "two_H": "2178/481",
+        "room_for_8_sum_rho_kappa": "1166652/462241",
+        "sum_rho_kappa_budget": "291663/924482",
+        "budget_positive": true,
+        "H_eq": "ray\u2264H \u21d4 \u2211\u03c1 \u03ba_B \u2264 291663/924482"
+      },
+      "37": {
+        "wick_Q4_over_N": "2742/1369",
+        "wick_from_identity": "2742/1369",
+        "match": true,
+        "two_H": "3042/685",
+        "room_for_8_sum_rho_kappa": "2286228/937765",
+        "sum_rho_kappa_budget": "571557/1875530",
+        "budget_positive": true,
+        "H_eq": "ray\u2264H \u21d4 \u2211\u03c1 \u03ba_B \u2264 571557/1875530"
+      },
+      "41": {
+        "wick_Q4_over_N": "3366/1681",
+        "wick_from_identity": "3366/1681",
+        "match": true,
+        "two_H": "3698/841",
+        "room_for_8_sum_rho_kappa": "3385532/1413721",
+        "sum_rho_kappa_budget": "846383/2827442",
+        "budget_positive": true,
+        "H_eq": "ray\u2264H \u21d4 \u2211\u03c1 \u03ba_B \u2264 846383/2827442"
+      },
+      "43": {
+        "wick_Q4_over_N": "3702/1849",
+        "wick_from_identity": "3702/1849",
+        "match": true,
+        "two_H": "162/37",
+        "room_for_8_sum_rho_kappa": "162564/68413",
+        "sum_rho_kappa_budget": "40641/136826",
+        "budget_positive": true,
+        "H_eq": "ray\u2264H \u21d4 \u2211\u03c1 \u03ba_B \u2264 40641/136826"
+      },
+      "47": {
+        "wick_Q4_over_N": "4422/2209",
+        "wick_from_identity": "4422/2209",
+        "match": true,
+        "two_H": "4802/1105",
+        "room_for_8_sum_rho_kappa": "5721308/2440945",
+        "sum_rho_kappa_budget": "1430327/4881890",
+        "budget_positive": true,
+        "H_eq": "ray\u2264H \u21d4 \u2211\u03c1 \u03ba_B \u2264 1430327/4881890"
+      },
+      "53": {
+        "wick_Q4_over_N": "5622/2809",
+        "wick_from_identity": "5622/2809",
+        "match": true,
+        "two_H": "1210/281",
+        "room_for_8_sum_rho_kappa": "1819108/789329",
+        "sum_rho_kappa_budget": "454777/1578658",
+        "budget_positive": true,
+        "H_eq": "ray\u2264H \u21d4 \u2211\u03c1 \u03ba_B \u2264 454777/1578658"
+      },
+      "59": {
+        "wick_Q4_over_N": "6966/3481",
+        "wick_from_identity": "6966/3481",
+        "match": true,
+        "two_H": "7442/1741",
+        "room_for_8_sum_rho_kappa": "13777796/6060421",
+        "sum_rho_kappa_budget": "3444449/12120842",
+        "budget_positive": true,
+        "H_eq": "ray\u2264H \u21d4 \u2211\u03c1 \u03ba_B \u2264 3444449/12120842"
+      }
+    },
+    "note": "\u03c1\u22610 (Wick m4) already gives Q4/N=2+4/p\u00b2 < 2H for primes p\u22653, so H reduces entirely to controlling the residual form \u2211 \u03c1 \u03ba_B."
+  },
+  "kappaC_kappaB_census": {
+    "workers": 86,
+    "by_p": {
+      "3": {
+        "p": 3,
+        "n": 10,
+        "c": 2.749999999999235,
+        "expect_n_plus_1_over_4": 2.75,
+        "err": 7.651657085716579e-13,
+        "ok": true,
+        "parallel_over_t2": 0.24999999999970085,
+        "cross_over_t2": 2.4999999999995364,
+        "parallel_expect_1_4": true,
+        "cross_expect_n_over_4": true
+      },
+      "5": {
+        "p": 5,
+        "n": 26,
+        "c": 6.749999999999985,
+        "expect_n_plus_1_over_4": 6.75,
+        "err": 1.509903313490213e-14,
+        "ok": true,
+        "parallel_over_t2": 0.2499999999999932,
+        "cross_over_t2": 6.500000000000046,
+        "parallel_expect_1_4": true,
+        "cross_expect_n_over_4": true
+      },
+      "7": {
+        "p": 7,
+        "n": 50,
+        "c": 12.749999999999998,
+        "expect_n_plus_1_over_4": 12.75,
+        "err": 1.7763568394002505e-15,
+        "ok": true,
+        "parallel_over_t2": 0.2499999999999997,
+        "cross_over_t2": 12.499999999999892,
+        "parallel_expect_1_4": true,
+        "cross_expect_n_over_4": true
+      },
+      "11": {
+        "p": 11,
+        "n": 122,
+        "c": 30.75000000000001,
+        "expect_n_plus_1_over_4": 30.75,
+        "err": 1.0658141036401503e-14,
+        "ok": true,
+        "parallel_over_t2": null,
+        "cross_over_t2": null,
+        "parallel_expect_1_4": null,
+        "cross_expect_n_over_4": null
+      }
+    },
+    "all_ok": true
+  },
+  "kappaB2_polynomial": {
+    "max_abs_err": 1.0231815394945443e-12,
+    "ok": true,
+    "identity": "\u2211_S \u03ba_B\u00b2 = (1/8)\u2016B\u2016_F\u2074 + (1/4)Tr(B\u2074) + (1/2)\u2211 B_ij\u2074 \u2212 \u2211_i (B\u00b2_ii)\u00b2 for every real symmetric zero-diagonal B"
+  },
+  "Q4_identity_p5": {
+    "N": 260,
+    "Q4_over_N": 4.156553427125973,
+    "eight_sum_m4_kappaB": 4.156553427125982,
+    "match": true,
+    "ray": 2.0782767135629867,
+    "H": 3.769230769230769,
+    "ray_le_H": true
+  },
+  "settlement": {
+    "proved_form": true,
+    "H_implies_bitight": "H \u21d2 \u03bb_cycle\u22643+H < n/2 for p\u22655 (Prop 15.88) \u21d2 \u03bb_max(G)=n/2 \u21d2 bi-tight empty (Props 15.55, 15.61\u201315.63).",
+    "open": "Prove \u2211_S \u03c1 \u03ba_B \u2264 (H\u22121\u22122/p\u00b2)/4 for all unit zero-diag B on V\u208a, all primes p\u22655 (Max+ residual moments)."
+  },
+  "hypothesis_H": {
+    "statement": "ray(B)\u2264H(p)=(p+2)\u00b2/d for all unit zero-diag B=P\u208aBP\u208a, primes p\u22655",
+    "equivalent": "\u2211_S \u03c1(S) \u03ba_B(S) \u2264 (H\u22121\u22122/p\u00b2)/4",
+    "wick_part_closed": "2+4/p\u00b2 from \u2211 \u03ba_C \u03ba_B=(n+1)/4 \u2016B\u2016\u00b2",
+    "status": "OPEN \u2014 residual form \u2211 \u03c1 \u03ba_B unproved for general p",
+    "suffices_for_bitight": true
+  },
+  "settlement_note": "Wick part of Q4 is Max+-free and closed. H reduces to a bound on \u2211 \u03c1 \u03ba_B (Max+ residual moments). If that bound holds for all p\u22655, bi-tight is empty (Props 15.88\u201315.89). Deep ND still needed for lim \u03b1_n. L OPEN.",
+  "proved": true,
+  "H_proved": false
+}
