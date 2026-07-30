@@ -2710,6 +2710,39 @@ from the \(|\kappa|=3\) source into same-sign \(|\kappa|=1\) automatically yield
 
 Evidence: `src/e1_gmin_m4_prop1583.py`, `evidence/e1_gmin_m4_prop1583.json` (Fraction exact; CPU algebra; GPU unused).
 
+**Proposition 15.84 (GD \(\Rightarrow\) cand via \(S_3\) budget; diagonal dominance fails; Max+-free; 2026-07-30).** Continue Prop 15.77 and 15.83. On a \(|\kappa|=1\) centre with \(\mathrm{star}_a=+1\), Prop 15.77 gives
+\[
+\mathrm{star}_a\cdot(S_1+S_3)=p\rho-\frac2{p^2}.
+\]
+Under GD (\(\mathrm{star}_a\cdot S_1\le0\)) one has \(p\rho\le 2/p^2+S_3\), i.e.
+\[
+\rho\;\le\;\frac2{p^3}+\frac{S_3}{p}.
+\]
+Write the cand residual \(\rho_{\mathrm{cand}}=M_{\mathrm{cand}}-1/p^2\) and the \(S_3\)-budget
+\[
+B_{\mathrm{cand}}(p)
+\;:=\;
+p\rho_{\mathrm{cand}}-\frac2{p^2}
+\;=\;
+\frac{p^3-4p^2-7p-6}{p^2(2p+3)}.
+\]
+
+1. **Closed form (proved algebra).** The displayed formula for \(B_{\mathrm{cand}}\) holds for every prime \(p\ge5\). \(\square\)
+
+2. **Sign pattern (proved algebra).** \(B_{\mathrm{cand}}(5)=-16/325<0\). The cubic numerator \(p^3-4p^2-7p-6\) is increasing on \([5,\infty)\) (derivative \(3p^2-8p-7>0\) for \(p\ge5\)) and positive at \(p=7\), hence \(B_{\mathrm{cand}}(p)>0\) for every prime \(p\ge7\). \(\square\)
+
+3. **Settlement lemma (proved form).** If GD holds and \(S_3\le B_{\mathrm{cand}}\) at every same-sign \(|\kappa|=1\) centre, then \(\rho\le\rho_{\mathrm{cand}}\), so \(\max|m_4|\le M_{\mathrm{cand}}\) and bi-tight is empty for all primes \(p\ge5\) (Props 15.47, 15.74). \(\square\)
+
+4. **Why absolute bootstrap fails (proved algebra).** The one-step degree of a \(|\kappa|=1\) 4-set into other \(|\kappa|=1\) 4-sets is \(d_1=3p^2-7\) (Prop 15.72/76). Then
+\[
+4p-d_1=-3p^2+4p+7<0
+\]
+for every prime \(p\ge5\), so \(4pI-T\) is **not** diagonally dominant on the \(|\kappa|=1\) stratum. Absolute row-sum inversion cannot prove a residual bound; signed cancellation (\(S_1\le0\), controlled \(S_3\)) is load-bearing. \(\square\)
+
+5. **What remains OPEN.** Prove GD and \(S_3\le B_{\mathrm{cand}}\) (or the resolvent-gain bound of Prop 15.83) for true Max+ fourth moments for all primes \(p\ge5\). At \(p=5\), part 2 forces \(S_3\) strictly negative under GD to reach cand. Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+Evidence: `src/e1_gmin_m4_prop1584.py`, `evidence/e1_gmin_m4_prop1584.json` (Fraction exact; CPU algebra; GPU unused).
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).

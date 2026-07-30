@@ -1,0 +1,408 @@
+{
+  "prop": "15.84",
+  "backend": "CPU algebra (Fraction); GPU unused (F20)",
+  "L_status": "OPEN",
+  "B_cand_formula": {
+    "proved_closed_form": true,
+    "formula": "(p^3 - 4p^2 - 7p - 6) / (p^2 (2p+3))",
+    "by_p": {
+      "5": {
+        "B_cand": "-16/325",
+        "match": true,
+        "B_cand_float": -0.04923076923076923,
+        "rho_cand": "2/325",
+        "M_cand": "3/65"
+      },
+      "7": {
+        "B_cand": "92/833",
+        "match": true,
+        "B_cand_float": 0.11044417767106843,
+        "rho_cand": "18/833",
+        "M_cand": "5/119"
+      },
+      "11": {
+        "B_cand": "764/3025",
+        "match": true,
+        "B_cand_float": 0.2525619834710744,
+        "rho_cand": "74/3025",
+        "M_cand": "9/275"
+      },
+      "13": {
+        "B_cand": "1424/4901",
+        "match": true,
+        "B_cand_float": 0.2905529483778821,
+        "rho_cand": "114/4901",
+        "M_cand": "11/377"
+      },
+      "17": {
+        "B_cand": "3632/10693",
+        "match": true,
+        "B_cand_float": 0.3396614607687272,
+        "rho_cand": "218/10693",
+        "M_cand": "15/629"
+      },
+      "19": {
+        "B_cand": "5276/14801",
+        "match": true,
+        "B_cand_float": 0.3564624011891088,
+        "rho_cand": "282/14801",
+        "M_cand": "17/779"
+      },
+      "23": {
+        "B_cand": "1412/3703",
+        "match": true,
+        "B_cand_float": 0.38131244936537945,
+        "rho_cand": "62/3703",
+        "M_cand": "3/161"
+      },
+      "29": {
+        "B_cand": "20816/51301",
+        "match": true,
+        "B_cand_float": 0.405762070914797,
+        "rho_cand": "722/51301",
+        "M_cand": "27/1769"
+      },
+      "31": {
+        "B_cand": "25724/62465",
+        "match": true,
+        "B_cand_float": 0.41181461618506365,
+        "rho_cand": "834/62465",
+        "M_cand": "29/2015"
+      },
+      "37": {
+        "B_cand": "6416/15059",
+        "match": true,
+        "B_cand_float": 0.4260575071385882,
+        "rho_cand": "174/15059",
+        "M_cand": "5/407"
+      },
+      "41": {
+        "B_cand": "61904/142885",
+        "match": true,
+        "B_cand_float": 0.43324351751408474,
+        "rho_cand": "1514/142885",
+        "M_cand": "39/3485"
+      },
+      "43": {
+        "B_cand": "71804/164561",
+        "match": true,
+        "B_cand_float": 0.43633667758460387,
+        "rho_cand": "1674/164561",
+        "M_cand": "41/3827"
+      },
+      "47": {
+        "B_cand": "94652/214273",
+        "match": true,
+        "B_cand_float": 0.4417355429755499,
+        "rho_cand": "2018/214273",
+        "M_cand": "45/4559"
+      },
+      "53": {
+        "B_cand": "137264/306181",
+        "match": true,
+        "B_cand_float": 0.44830998657656745,
+        "rho_cand": "2594/306181",
+        "M_cand": "51/5777"
+      },
+      "59": {
+        "B_cand": "191036/421201",
+        "match": true,
+        "B_cand_float": 0.45355068007910715,
+        "rho_cand": "3242/421201",
+        "M_cand": "57/7139"
+      },
+      "61": {
+        "B_cand": "211664/465125",
+        "match": true,
+        "B_cand_float": 0.4550690674549852,
+        "rho_cand": "3474/465125",
+        "M_cand": "59/7625"
+      },
+      "67": {
+        "B_cand": "282332/614993",
+        "match": true,
+        "B_cand_float": 0.4590816480837993,
+        "rho_cand": "4218/614993",
+        "M_cand": "65/9179"
+      },
+      "71": {
+        "B_cand": "337244/730945",
+        "match": true,
+        "B_cand_float": 0.46138081524601715,
+        "rho_cand": "4754/730945",
+        "M_cand": "69/10295"
+      },
+      "73": {
+        "B_cand": "367184/794021",
+        "match": true,
+        "B_cand_float": 0.46243613204184775,
+        "rho_cand": "5034/794021",
+        "M_cand": "71/10877"
+      },
+      "79": {
+        "B_cand": "66788/143543",
+        "match": true,
+        "B_cand_float": 0.46528218025260726,
+        "rho_cand": "846/143543",
+        "M_cand": "11/1817"
+      }
+    }
+  },
+  "B_cand_sign": {
+    "proved_sign_pattern": true,
+    "statement": "B_cand(5)=-16/325<0; B_cand(p)>0 for all primes p\u22657 (cubic increasing on [5,\u221e) and positive at p=7)",
+    "by_p": {
+      "5": {
+        "cubic_num": -16,
+        "B_cand_sign": -1,
+        "B_cand": "-16/325",
+        "expect_negative": true,
+        "B_cand_eq_neg_16_325": true
+      },
+      "7": {
+        "cubic_num": 92,
+        "B_cand_sign": 1,
+        "B_cand": "92/833",
+        "expect_positive": true
+      },
+      "11": {
+        "cubic_num": 764,
+        "B_cand_sign": 1,
+        "B_cand": "764/3025",
+        "expect_positive": true
+      },
+      "13": {
+        "cubic_num": 1424,
+        "B_cand_sign": 1,
+        "B_cand": "1424/4901",
+        "expect_positive": true
+      },
+      "17": {
+        "cubic_num": 3632,
+        "B_cand_sign": 1,
+        "B_cand": "3632/10693",
+        "expect_positive": true
+      },
+      "19": {
+        "cubic_num": 5276,
+        "B_cand_sign": 1,
+        "B_cand": "5276/14801",
+        "expect_positive": true
+      },
+      "23": {
+        "cubic_num": 9884,
+        "B_cand_sign": 1,
+        "B_cand": "1412/3703",
+        "expect_positive": true
+      },
+      "29": {
+        "cubic_num": 20816,
+        "B_cand_sign": 1,
+        "B_cand": "20816/51301",
+        "expect_positive": true
+      },
+      "31": {
+        "cubic_num": 25724,
+        "B_cand_sign": 1,
+        "B_cand": "25724/62465",
+        "expect_positive": true
+      },
+      "37": {
+        "cubic_num": 44912,
+        "B_cand_sign": 1,
+        "B_cand": "6416/15059",
+        "expect_positive": true
+      },
+      "41": {
+        "cubic_num": 61904,
+        "B_cand_sign": 1,
+        "B_cand": "61904/142885",
+        "expect_positive": true
+      },
+      "43": {
+        "cubic_num": 71804,
+        "B_cand_sign": 1,
+        "B_cand": "71804/164561",
+        "expect_positive": true
+      },
+      "47": {
+        "cubic_num": 94652,
+        "B_cand_sign": 1,
+        "B_cand": "94652/214273",
+        "expect_positive": true
+      },
+      "53": {
+        "cubic_num": 137264,
+        "B_cand_sign": 1,
+        "B_cand": "137264/306181",
+        "expect_positive": true
+      },
+      "59": {
+        "cubic_num": 191036,
+        "B_cand_sign": 1,
+        "B_cand": "191036/421201",
+        "expect_positive": true
+      },
+      "61": {
+        "cubic_num": 211664,
+        "B_cand_sign": 1,
+        "B_cand": "211664/465125",
+        "expect_positive": true
+      },
+      "67": {
+        "cubic_num": 282332,
+        "B_cand_sign": 1,
+        "B_cand": "282332/614993",
+        "expect_positive": true
+      },
+      "71": {
+        "cubic_num": 337244,
+        "B_cand_sign": 1,
+        "B_cand": "337244/730945",
+        "expect_positive": true
+      },
+      "73": {
+        "cubic_num": 367184,
+        "B_cand_sign": 1,
+        "B_cand": "367184/794021",
+        "expect_positive": true
+      },
+      "79": {
+        "cubic_num": 467516,
+        "B_cand_sign": 1,
+        "B_cand": "66788/143543",
+        "expect_positive": true
+      }
+    },
+    "consequence": "At p=5, GD alone forces S3 \u2264 negative budget to reach cand (need strong cancellation). For p\u22657, GD + S3\u2264B_cand (positive) suffices for cand if S3 is controlled."
+  },
+  "diag_dom": {
+    "proved_fails_for_p_ge_5": true,
+    "algebra": "4p-d1 = -3p\u00b2+4p+7 < 0 for all p\u22653",
+    "by_p": {
+      "5": {
+        "d1": 68,
+        "d3": 20,
+        "4p_minus_d1": -48,
+        "diagonal_dominance_fails": true
+      },
+      "7": {
+        "d1": 140,
+        "d3": 44,
+        "4p_minus_d1": -112,
+        "diagonal_dominance_fails": true
+      },
+      "11": {
+        "d1": 356,
+        "d3": 116,
+        "4p_minus_d1": -312,
+        "diagonal_dominance_fails": true
+      },
+      "13": {
+        "d1": 500,
+        "d3": 164,
+        "4p_minus_d1": -448,
+        "diagonal_dominance_fails": true
+      },
+      "17": {
+        "d1": 860,
+        "d3": 284,
+        "4p_minus_d1": -792,
+        "diagonal_dominance_fails": true
+      },
+      "19": {
+        "d1": 1076,
+        "d3": 356,
+        "4p_minus_d1": -1000,
+        "diagonal_dominance_fails": true
+      },
+      "23": {
+        "d1": 1580,
+        "d3": 524,
+        "4p_minus_d1": -1488,
+        "diagonal_dominance_fails": true
+      },
+      "29": {
+        "d1": 2516,
+        "d3": 836,
+        "4p_minus_d1": -2400,
+        "diagonal_dominance_fails": true
+      },
+      "31": {
+        "d1": 2876,
+        "d3": 956,
+        "4p_minus_d1": -2752,
+        "diagonal_dominance_fails": true
+      },
+      "37": {
+        "d1": 4100,
+        "d3": 1364,
+        "4p_minus_d1": -3952,
+        "diagonal_dominance_fails": true
+      },
+      "41": {
+        "d1": 5036,
+        "d3": 1676,
+        "4p_minus_d1": -4872,
+        "diagonal_dominance_fails": true
+      },
+      "43": {
+        "d1": 5540,
+        "d3": 1844,
+        "4p_minus_d1": -5368,
+        "diagonal_dominance_fails": true
+      },
+      "47": {
+        "d1": 6620,
+        "d3": 2204,
+        "4p_minus_d1": -6432,
+        "diagonal_dominance_fails": true
+      },
+      "53": {
+        "d1": 8420,
+        "d3": 2804,
+        "4p_minus_d1": -8208,
+        "diagonal_dominance_fails": true
+      },
+      "59": {
+        "d1": 10436,
+        "d3": 3476,
+        "4p_minus_d1": -10200,
+        "diagonal_dominance_fails": true
+      },
+      "61": {
+        "d1": 11156,
+        "d3": 3716,
+        "4p_minus_d1": -10912,
+        "diagonal_dominance_fails": true
+      },
+      "67": {
+        "d1": 13460,
+        "d3": 4484,
+        "4p_minus_d1": -13192,
+        "diagonal_dominance_fails": true
+      },
+      "71": {
+        "d1": 15116,
+        "d3": 5036,
+        "4p_minus_d1": -14832,
+        "diagonal_dominance_fails": true
+      },
+      "73": {
+        "d1": 15980,
+        "d3": 5324,
+        "4p_minus_d1": -15688,
+        "diagonal_dominance_fails": true
+      },
+      "79": {
+        "d1": 18716,
+        "d3": 6236,
+        "4p_minus_d1": -18400,
+        "diagonal_dominance_fails": true
+      }
+    },
+    "note": "Absolute |T| row-sum bootstrap cannot invert 4pI-T on \u03ba1"
+  },
+  "settlement_lemma": "If GD (star\u00b7S1\u22640) and S3\u2264B_cand on every same-sign |\u03ba|=1 centre, then \u03c1\u2264\u03c1_cand \u21d2 max|m4|\u2264M_cand \u21d2 bi-tight empty for p\u22655. GD and S3 bound remain OPEN for general primes.",
+  "proved": true
+}

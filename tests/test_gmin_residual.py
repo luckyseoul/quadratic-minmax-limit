@@ -2086,3 +2086,49 @@ def test_prop_15_83_resolvent_budget_hierarchy():
     # L not soft-closed in handoff one-liner region
     hand = (ROOT / "HANDOFF.md").read_text()[:1200]
     assert "OPEN" in hand
+
+
+def test_prop_15_84_gd_cand_S3_budget():
+    """Prop 15.84: B_cand closed form, sign pattern, diag-dom fails."""
+    import sys
+    from fractions import Fraction
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_m4_prop1584 import (
+        B_cand,
+        rho_cand,
+        M_cand,
+        d1_kappa1,
+        prove_B_cand_formula,
+        prove_B_cand_sign,
+        prove_diagonal_dominance_fails,
+        is_prime,
+        main as run_1584,
+    )
+
+    primes = [p for p in range(5, 50) if is_prime(p)]
+    assert prove_B_cand_formula(primes)["proved_closed_form"] is True
+    assert prove_B_cand_sign(primes)["proved_sign_pattern"] is True
+    assert prove_diagonal_dominance_fails(primes)["proved_fails_for_p_ge_5"] is True
+
+    assert B_cand(5) == Fraction(-16, 325)
+    assert B_cand(5) < 0
+    for p in primes:
+        if p >= 7:
+            assert B_cand(p) > 0
+        # formula identity
+        assert B_cand(p) == p * rho_cand(p) - Fraction(2, p * p)
+        assert d1_kappa1(p) == 3 * p * p - 7
+        assert 4 * p - d1_kappa1(p) < 0
+        assert M_cand(p) == Fraction(p - 2, p * (2 * p + 3))
+
+    run_1584()
+    path = ROOT / "evidence" / "e1_gmin_m4_prop1584.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    assert data["prop"] == "15.84"
+    assert data["proved"] is True
+    assert data["L_status"] == "OPEN"
+    assert "GPU unused" in data["backend"]
+    assert "15.84" in (ROOT / "solution.md").read_text()
+    assert "OPEN" in (ROOT / "HANDOFF.md").read_text()[:900]
