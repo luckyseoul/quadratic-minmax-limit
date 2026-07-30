@@ -2033,3 +2033,56 @@ def test_io_atomic_mmap_and_write():
         assert isinstance(mm, np.memmap) or hasattr(mm, "shape")
         assert mm.shape == (4, 5)
         assert float(mm[2, 1]) == float(arr[2, 1])
+
+
+def test_prop_15_83_resolvent_budget_hierarchy():
+    """Prop 15.83: Max+-free algebra ranking M_cand residual vs L residual."""
+    import sys
+    from fractions import Fraction
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_m4_prop1583 import (
+        M_cand,
+        M_mid,
+        L_abs,
+        T_abs,
+        rho_L,
+        rho_cand,
+        gain_L,
+        gain_cand,
+        prove_cascade,
+        prove_gain_hierarchy,
+        is_prime,
+        main as run_prop1583,
+    )
+
+    primes = [p for p in range(5, 60) if is_prime(p)]
+    cas = prove_cascade(primes)
+    assert cas["proved_for_listed_primes"] is True
+    gh = prove_gain_hierarchy(primes)
+    assert gh["proved_algebra"] is True
+    assert gh["certified_primes"] is True
+
+    # Closed form gain_L - gain_cand = 3(p-2)/(48(2p+3))
+    for p in primes:
+        diff = gain_L(p) - gain_cand(p)
+        assert diff == Fraction(3 * (p - 2), 48 * (2 * p + 3))
+        assert M_cand(p) < M_mid(p) <= L_abs(p) < T_abs(p)
+        assert 0 < rho_cand(p) < rho_L(p)
+        # p=5 sharpness of M_cand
+        if p == 5:
+            assert M_cand(5) == Fraction(3, 65)
+
+    # Drive real entry point (writes evidence JSON)
+    run_prop1583()
+    path = ROOT / "evidence" / "e1_gmin_m4_prop1583.json"
+    assert path.is_file()
+    data = json.loads(path.read_text())
+    assert data["prop"] == "15.83"
+    assert data["proved"] is True
+    assert data["L_status"] == "OPEN"
+    assert "GPU unused" in data["backend"]
+    assert "15.83" in (ROOT / "solution.md").read_text()
+    # L not soft-closed in handoff one-liner region
+    hand = (ROOT / "HANDOFF.md").read_text()[:1200]
+    assert "OPEN" in hand

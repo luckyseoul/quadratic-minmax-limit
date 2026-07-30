@@ -131,6 +131,8 @@ L = lim α_n                                    [OPEN]
 | 2026-07-29 | F20+ | Bad recovery attempt: `gd_gpu_moments` added **busywork 4096 GEMMs** to inflate util; CUDA unknown error at p=7. Script **deleted**. Real GPU = necessary dense kernels only, with util logged — not synthetic load. |
 | 2026-07-29 | process | Graph + F19/F20 filed in E1_FAILURE_GRAPH + HANDOFF. Active node remains **N_GD_ALL** (algebra), not census/refine. |
 | 2026-07-29 | **C_GPU** | **DOWN** after F20+ crash: `nvidia-smi` → “No devices were found” / handle Unknown Error on 0000:03:00.0. Needs host GPU reset (sudo nvidia reload or reboot). Do **not** schedule GPU jobs until C_GPU = yes. |
+| 2026-07-30 | **N_MCAND_ALL / N_GD_ALL structure** | **Prop 15.83** (Max+-free algebra): proved \(\mathrm{gain}_L-\mathrm{gain}_{\mathrm{cand}}=3(p-2)/(48(2p+3))>0\) and cascade \(M_{\mathrm{cand}}<M_{\mathrm{mid}}\le L<T\) for all primes \(p\ge5\). Ranks residual targets; does **not** prove gain bound or close N_MCAND_ALL. CPU Fraction only (F20 GPU unused). Evidence: `e1_gmin_m4_prop1583.json`, `src/e1_gmin_m4_prop1583.py`, solution Prop 15.83. **G_L still OPEN.** |
+| 2026-07-30 | **C_GPU** | Host reports V100 present again (`nvidia-smi` ok in compute-budget). Prefer real dense GPU only when wall is batch-dominated. |
 
 ---
 

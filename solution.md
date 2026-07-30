@@ -2654,6 +2654,62 @@ Let \(n_1=\#\{S:|\kappa(S)|=1\}\) and \(n_3=\#\{S:|\kappa(S)|=3\}\).
 
 5. **Residual (OPEN).** For every prime \(p\ge5\): either obtain a constant-\(m_4\) stratification with nullity \(\le1\) and prove \(c^\star\) safe-side of \(c_{\mathrm{GD}}\), or close a multi-parameter pin (Tr\((G^2)\) surface + second moment / character-sum GD) so \(\max|m_4|\le M_{\mathrm{cand}}\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
+**Proposition 15.83 (resolvent-budget hierarchy for \(M_{\mathrm{cand}}\) vs \(L\); Max+-free; 2026-07-30).** Continue Prop 15.66–15.74. Write
+\[
+M_{\mathrm{cand}}(p)=\frac{p-2}{p(2p+3)},\quad
+M_{\mathrm{mid}}(p)=\frac{p-2}{2p(p+1)},\quad
+L_{\mathrm{abs}}(p)=\frac{p-2}{2p^2},\quad
+T_{\mathrm{abs}}(p)=\frac{p-2}{p(2p-1)},
+\]
+and the same-sign residual targets on \(|\kappa|=1\)
+\[
+\rho_L=\frac{p-4}{2p^2},\qquad
+\rho_{\mathrm{cand}}=\frac{p^2-4p-3}{p^2(2p+3)}=M_{\mathrm{cand}}-\frac1{p^2},
+\]
+together with the resolvent-gain budgets (source amplitude \(24/p^2\) on \(|\kappa|=3\), Prop 15.68–15.72)
+\[
+\mathrm{gain}_L=\frac{p-4}{48},\qquad
+\mathrm{gain}_{\mathrm{cand}}=\frac{p^2-4p-3}{24(2p+3)}.
+\]
+
+1. **Cascade (proved algebra, Max+-free).** For every real \(p>2\),
+\[
+M_{\mathrm{cand}}<M_{\mathrm{mid}}\le L_{\mathrm{abs}}<T_{\mathrm{abs}},
+\]
+with positive gaps
+\[
+M_{\mathrm{mid}}-M_{\mathrm{cand}}=\frac{p-2}{2p(p+1)(2p+3)},\quad
+L_{\mathrm{abs}}-M_{\mathrm{mid}}=\frac{p-2}{2p^2(p+1)},\quad
+T_{\mathrm{abs}}-L_{\mathrm{abs}}=\frac{p-2}{2p^2(2p-1)}.
+\]
+In particular the cascade holds for every prime \(p\ge5\). \(\square\)
+
+2. **Residual ranking (proved algebra).** For every prime \(p\ge5\),
+\[
+0<\rho_{\mathrm{cand}}<\rho_L,\qquad
+\rho_L-\rho_{\mathrm{cand}}=\frac{3(p-2)}{2p^2(2p+3)}.
+\]
+Thus the \(M_{\mathrm{cand}}\) residual target is **strictly tighter** than the \(L_{\mathrm{abs}}\) residual. \(\square\)
+
+3. **Resolvent-budget ranking (proved algebra).** For every real \(p>2\),
+\[
+\mathrm{gain}_L-\mathrm{gain}_{\mathrm{cand}}
+=
+\frac{3(p-2)}{48(2p+3)}
+=
+\frac{p-2}{16(2p+3)}
+\;>\;0,
+\]
+so \(\mathrm{gain}_{\mathrm{cand}}<\mathrm{gain}_L\). As \(p\to\infty\), \(\mathrm{gain}_{\mathrm{cand}}/\mathrm{gain}_L\to1\). Consequently any operator-gain bound
+\[
+\mathrm{gain}\;\le\;\mathrm{gain}_{\mathrm{cand}}
+\]
+from the \(|\kappa|=3\) source into same-sign \(|\kappa|=1\) automatically yields \(\max|m_4|\le M_{\mathrm{cand}}\le L_{\mathrm{abs}}\) and (with Prop 15.47) bi-tight empty for every prime \(p\ge5\). \(\square\)
+
+4. **What remains OPEN.** The inequality \(\mathrm{gain}\le\mathrm{gain}_{\mathrm{cand}}\) (or the weaker \(\mathrm{gain}\le\mathrm{gain}_L\)) for true Max+ fourth moments is **not** proved for general primes \(p\ge5\); it is only certified at \(p=5,7\) by census (Props 15.72–15.74). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+Evidence: `src/e1_gmin_m4_prop1583.py`, `evidence/e1_gmin_m4_prop1583.json` (Fraction exact; CPU algebra; GPU unused).
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
