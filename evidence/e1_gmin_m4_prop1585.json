@@ -1,0 +1,232 @@
+{
+  "prop": "15.85",
+  "backend": "CPU algebra (Fraction); GPU unused (F20)",
+  "L_status": "OPEN",
+  "mu": {
+    "proved": true,
+    "formula": "mu = e4 / C(n,4) = -p(p-1)(p+1)(p+4) / (2 n(n-1)(n-2)(n-3))",
+    "by_p": {
+      "3": {
+        "mu": "-1/15",
+        "mu_alt": "-1/15",
+        "match": true,
+        "e4": -14,
+        "C_n_4": 210,
+        "abs_mu": 0.06666666666666667,
+        "H": "5",
+        "abs_mu_over_H": 0.013333333333333334
+      },
+      "5": {
+        "mu": "-9/1495",
+        "mu_alt": "-9/1495",
+        "match": true,
+        "e4": -90,
+        "C_n_4": 14950,
+        "abs_mu": 0.006020066889632107,
+        "H": "49/13",
+        "abs_mu_over_H": 0.0015971606033717836
+      },
+      "7": {
+        "mu": "-11/8225",
+        "mu_alt": "-11/8225",
+        "match": true,
+        "e4": -308,
+        "C_n_4": 230300,
+        "abs_mu": 0.001337386018237082,
+        "H": "81/25",
+        "abs_mu_over_H": 0.00041277346241885246
+      },
+      "11": {
+        "mu": "-15/79849",
+        "mu_alt": "-15/79849",
+        "match": true,
+        "e4": -1650,
+        "C_n_4": 8783390,
+        "abs_mu": 0.00018785457551127754,
+        "H": "169/61",
+        "abs_mu_over_H": 6.780549766975106e-05
+      },
+      "13": {
+        "mu": "-1/10855",
+        "mu_alt": "-1/10855",
+        "match": true,
+        "e4": -3094,
+        "C_n_4": 33585370,
+        "abs_mu": 9.212344541685859e-05,
+        "H": "45/17",
+        "abs_mu_over_H": 3.4802190490813244e-05
+      },
+      "17": {
+        "mu": "-3/101065",
+        "mu_alt": "-3/101065",
+        "match": true,
+        "e4": -8568,
+        "C_n_4": 288641640,
+        "abs_mu": 2.968386681838421e-05,
+        "H": "361/145",
+        "abs_mu_over_H": 1.192288279408784e-05
+      },
+      "19": {
+        "mu": "-23/1234601",
+        "mu_alt": "-23/1234601",
+        "match": true,
+        "e4": -13110,
+        "C_n_4": 703722570,
+        "abs_mu": 1.862950054309044e-05,
+        "H": "441/181",
+        "abs_mu_over_H": 7.64612153809381e-06
+      },
+      "23": {
+        "mu": "-27/3212065",
+        "mu_alt": "-27/3212065",
+        "match": true,
+        "e4": -27324,
+        "C_n_4": 3250609780,
+        "abs_mu": 8.405807478989372e-06,
+        "H": "125/53",
+        "abs_mu_over_H": 3.5640623710914943e-06
+      },
+      "29": {
+        "mu": "-33/10243351",
+        "mu_alt": "-33/10243351",
+        "match": true,
+        "e4": -66990,
+        "C_n_4": 20794002530,
+        "abs_mu": 3.221601993332065e-06,
+        "H": "961/421",
+        "abs_mu_over_H": 1.411336565237044e-06
+      },
+      "31": {
+        "mu": "-5/2042807",
+        "mu_alt": "-5/2042807",
+        "match": true,
+        "e4": -86800,
+        "C_n_4": 35463129520,
+        "abs_mu": 2.4476125253144327e-06,
+        "H": "1089/481",
+        "abs_mu_over_H": 1.0810850547991204e-06
+      },
+      "37": {
+        "mu": "-41/34646615",
+        "mu_alt": "-41/34646615",
+        "match": true,
+        "e4": -172938,
+        "C_n_4": 146139422070,
+        "abs_mu": 1.183376788756997e-06,
+        "H": "1521/685",
+        "abs_mu_over_H": 5.329474689668263e-07
+      }
+    },
+    "note": "|mu| / H(p) \u2192 0; mean m4 is not the H obstruction"
+  },
+  "S1_zero": {
+    "proved": true,
+    "proof_sketch": "Paley/conference C satisfies C1=0. V\u208a = +p eigenspace is orthogonal to 1, so P\u208a1=0. B=P\u208aBP\u208a \u21d2 B1=0. Zero diagonal \u21d2 1\u1d40B1 = 2\u2211_{i<j} B_ij = S1 (with Be=2B_ij). Hence S1=0."
+  },
+  "Sd": {
+    "proved": true,
+    "identity": "Sd = S1^2 - S2 - Sw",
+    "with_S1_zero": "Sd = -S2 - Sw",
+    "unit_F": "S2 = 2 when ||B||_F=1 (zero diag, Be=2B_ij)",
+    "unit_Sd": "Sd = -2 - Sw  (unit F)"
+  },
+  "ray_split": {
+    "proved_formula": true,
+    "unit_F_ray": "ray = -\u03bc - (\u03bc/2) Sw + (1/2) Be\u1d40 \u011c Be",
+    "by_p": {
+      "5": {
+        "mu": "-9/1495",
+        "mean_piece_if_Sw_0": "9/1495",
+        "H": "49/13",
+        "abs_mean_piece_over_H": 0.0015971606033717836,
+        "Delta": 276,
+        "gershgorin_eps_for_H": "49/1794",
+        "M_cand": "3/65"
+      },
+      "7": {
+        "mu": "-11/8225",
+        "mean_piece_if_Sw_0": "11/8225",
+        "H": "81/25",
+        "abs_mean_piece_over_H": 0.00041277346241885246,
+        "Delta": 1128,
+        "gershgorin_eps_for_H": "27/4700",
+        "M_cand": "5/119"
+      },
+      "11": {
+        "mu": "-15/79849",
+        "mean_piece_if_Sw_0": "15/79849",
+        "H": "169/61",
+        "abs_mean_piece_over_H": 6.780549766975106e-05,
+        "Delta": 7140,
+        "gershgorin_eps_for_H": "169/217770",
+        "M_cand": "9/275"
+      },
+      "13": {
+        "mu": "-1/10855",
+        "mean_piece_if_Sw_0": "1/10855",
+        "H": "45/17",
+        "abs_mean_piece_over_H": 3.4802190490813244e-05,
+        "Delta": 14028,
+        "gershgorin_eps_for_H": "15/39746",
+        "M_cand": "11/377"
+      },
+      "17": {
+        "mu": "-3/101065",
+        "mean_piece_if_Sw_0": "3/101065",
+        "H": "361/145",
+        "abs_mean_piece_over_H": 1.192288279408784e-05,
+        "Delta": 41328,
+        "gershgorin_eps_for_H": "361/2996280",
+        "M_cand": "15/629"
+      },
+      "19": {
+        "mu": "-23/1234601",
+        "mean_piece_if_Sw_0": "23/1234601",
+        "H": "441/181",
+        "abs_mean_piece_over_H": 7.64612153809381e-06,
+        "Delta": 64620,
+        "gershgorin_eps_for_H": "49/649790",
+        "M_cand": "17/779"
+      },
+      "23": {
+        "mu": "-27/3212065",
+        "mean_piece_if_Sw_0": "27/3212065",
+        "H": "125/53",
+        "abs_mean_piece_over_H": 3.5640623710914943e-06,
+        "Delta": 139128,
+        "gershgorin_eps_for_H": "125/3686892",
+        "M_cand": "3/161"
+      },
+      "29": {
+        "mu": "-33/10243351",
+        "mean_piece_if_Sw_0": "33/10243351",
+        "H": "961/421",
+        "abs_mean_piece_over_H": 1.411336565237044e-06,
+        "Delta": 352380,
+        "gershgorin_eps_for_H": "961/74175990",
+        "M_cand": "27/1769"
+      },
+      "31": {
+        "mu": "-5/2042807",
+        "mean_piece_if_Sw_0": "5/2042807",
+        "H": "1089/481",
+        "abs_mean_piece_over_H": 1.0810850547991204e-06,
+        "Delta": 460320,
+        "gershgorin_eps_for_H": "363/36902320",
+        "M_cand": "29/2015"
+      },
+      "37": {
+        "mu": "-41/34646615",
+        "mean_piece_if_Sw_0": "41/34646615",
+        "H": "1521/685",
+        "abs_mean_piece_over_H": 5.329474689668263e-07,
+        "Delta": 935028,
+        "gershgorin_eps_for_H": "169/35583010",
+        "M_cand": "5/407"
+      }
+    },
+    "gershgorin_note": "|(1/2)Be\u1d40\u011cBe| \u2264 (\u03b5/2) \u0394 S2 = \u03b5 \u0394 for unit F (S2=2) if |\u011c|\u2264\u03b5 entrywise; need \u03b5 \u2264 H/\u0394 for fluct\u2264H \u2014 at p=5 H/\u0394 = (49/13)/276 \u2248 0.0136 < M_cand, so entrywise Gershgorin still too weak (need signed \u011c)."
+  },
+  "settlement_note": "If ray\u2264H for all unit zero-diag B on V\u208a (hypothesis H) then 16N and bi-tight empty for p\u22655 (Props 15.61\u201315.63). This prop isolates \u03bc (harmless) vs \u011c (load-bearing signed m4 on disj pairs).",
+  "proved": true
+}

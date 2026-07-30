@@ -2132,3 +2132,46 @@ def test_prop_15_84_gd_cand_S3_budget():
     assert "GPU unused" in data["backend"]
     assert "15.84" in (ROOT / "solution.md").read_text()
     assert "OPEN" in (ROOT / "HANDOFF.md").read_text()[:900]
+
+
+def test_prop_15_85_Q4_mean_split():
+    """Prop 15.85: mu closed form, S1=0 algebra, ray split."""
+    import sys
+    from fractions import Fraction
+    from math import comb
+
+    sys.path.insert(0, str(ROOT / "src"))
+    from e1_gmin_m4_prop1585 import (
+        mu_m4,
+        e4,
+        H,
+        n_of,
+        prove_mu_closed,
+        prove_S1_zero_algebra,
+        prove_Sd_identity,
+        prove_ray_split,
+        is_prime,
+        main as run_1585,
+    )
+
+    primes = [p for p in range(3, 40) if is_prime(p)]
+    assert prove_mu_closed(primes)["proved"] is True
+    assert prove_S1_zero_algebra()["proved"] is True
+    assert prove_Sd_identity()["proved"] is True
+    assert prove_ray_split([p for p in primes if p >= 5])["proved_formula"] is True
+
+    for p in (5, 7, 11):
+        n = n_of(p)
+        assert mu_m4(p) == Fraction(e4(p), comb(n, 4))
+        assert abs(mu_m4(p)) / H(p) < Fraction(1, 10)
+
+    assert mu_m4(5) == Fraction(-9, 1495)
+
+    run_1585()
+    path = ROOT / "evidence" / "e1_gmin_m4_prop1585.json"
+    data = json.loads(path.read_text())
+    assert data["prop"] == "15.85"
+    assert data["proved"] is True
+    assert data["L_status"] == "OPEN"
+    assert "15.85" in (ROOT / "solution.md").read_text()
+    assert "OPEN" in (ROOT / "HANDOFF.md").read_text()[:900]

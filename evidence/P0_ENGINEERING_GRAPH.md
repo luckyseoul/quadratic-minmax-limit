@@ -134,6 +134,7 @@ L = lim α_n                                    [OPEN]
 | 2026-07-30 | **N_MCAND_ALL / N_GD_ALL structure** | **Prop 15.83** (Max+-free algebra): proved \(\mathrm{gain}_L-\mathrm{gain}_{\mathrm{cand}}=3(p-2)/(48(2p+3))>0\) and cascade \(M_{\mathrm{cand}}<M_{\mathrm{mid}}\le L<T\) for all primes \(p\ge5\). Ranks residual targets; does **not** prove gain bound or close N_MCAND_ALL. CPU Fraction only (F20 GPU unused). Evidence: `e1_gmin_m4_prop1583.json`, `src/e1_gmin_m4_prop1583.py`, solution Prop 15.83. **G_L still OPEN.** |
 | 2026-07-30 | **C_GPU** | Host reports V100 present again (`nvidia-smi` ok in compute-budget). Prefer real dense GPU only when wall is batch-dominated. |
 | 2026-07-30 | **N_GD_ALL structure** | **Prop 15.84**: \(B_{\mathrm{cand}}=(p^3-4p^2-7p-6)/(p^2(2p+3))\); sign \(B_5<0\), \(B_{p\ge7}>0\); GD+\(S_3\le B_{\mathrm{cand}}\)⇒cand; proved \(4p-d_1<0\) (abs bootstrap dead). CPU Fraction (F20 unused). Evidence: `e1_gmin_m4_prop1584.json`. **G_L OPEN.** |
+| 2026-07-30 | **N_SPEC_GAP structure** | **Prop 15.85**: \(Q_4\) mean/fluctuation split; \(S_1=0\); unit ray \(=-\mu-(\mu/2)S_w+\tfrac12 Be^\top\widehat G Be\); \(\mu\) harmless vs \(H\); Ĝ load-bearing. Links spectral H to signed disj \(m_4\). CPU Fraction. Evidence: `e1_gmin_m4_prop1585.json`. **G_L OPEN.** |
 
 ---
 
@@ -150,8 +151,8 @@ Do **not** claim Path C residual closed unless:
 
 ## 8. Next action (single, from graph)
 
-**Just landed:** Prop 15.83 ranks \(\mathrm{gain}_{\mathrm{cand}}<\mathrm{gain}_L\) (algebra).  
+**Just landed:** Prop 15.83–15.84 (algebra hierarchy + GD⇒cand \(S_3\) budget).  
 
-**Active next:** P0-1 **N_MCAND_ALL** — prove resolvent gain \(\le\mathrm{gain}_{\mathrm{cand}}\) (or GD \(\mathrm{star}\cdot S_1\le0\)) for true Max+ for all primes \(p\ge5\), e.g. via Paley character sums / Aut, **not** class refine (F19).
+**Active next:** P0-1 **N_GD_ALL** — prove \(\mathrm{star}\cdot S_1\le0\) and \(S_3\le B_{\mathrm{cand}}\) (or resolvent gain \(\le\mathrm{gain}_{\mathrm{cand}}\)) for true Max+ for all primes \(p\ge5\) (character sums / Aut). At \(p=5\), \(B_{\mathrm{cand}}<0\) forces strong \(S_3\) cancellation.
 
-**Not active:** any new `e1_gmin_m4_refine*` strat; GPU theater (F20).
+**Not active:** moduli class refine (F19); GPU theater (F20).

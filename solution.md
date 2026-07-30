@@ -2743,6 +2743,37 @@ for every prime \(p\ge5\), so \(4pI-T\) is **not** diagonally dominant on the \(
 
 Evidence: `src/e1_gmin_m4_prop1584.py`, `evidence/e1_gmin_m4_prop1584.json` (Fraction exact; CPU algebra; GPU unused).
 
+**Proposition 15.85 (\(Q_4\) mean/fluctuation split; \(S_1=0\); Path C spectral; Max+-free; 2026-07-30).** Continue Prop 15.62–15.63 and 15.73. Let \(C\) be a conference matrix of order \(n=p^2+1\) with \(C\mathbf1=0\), \(V_+\) the \(+p\)-eigenspace, and \(B=P_+BP_+\) real symmetric with zero ambient diagonal. Write \(Be_e:=2B_{ij}\) on unordered edges, \(S_1=\sum_e Be\), \(S_2=\sum_e Be^2\), \(S_w=\sum_{\mathrm{wedge}}Be\,Be'\), \(S_d=\sum_{\mathrm{disj}}Be\,Be'\), and \(G_{ee'}=\mathbb E[y_iy_jy_ky_l]\) on Max+.
+
+1. **Mean \(m_4\) (proved).** \(\sum_S m_4(S)=e_4=-p(p-1)(p+1)(p+4)/12\) (Prop 15.73), so
+   \[
+   \mu\;:=\;\frac{e_4}{\binom{n}{4}}
+   \;=\;
+   -\frac{p(p-1)(p+1)(p+4)}{2\,n(n-1)(n-2)(n-3)}.
+   \]
+   Each 4-set contributes three disjoint-edge pairings, hence \(\mu\) is also the mean of \(G_{ee'}\) over unordered disjoint edge pairs. \(\square\)
+
+2. **\(S_1=0\) (proved).** \(C\mathbf1=0\Rightarrow P_+\mathbf1=0\Rightarrow B\mathbf1=0\). Zero diagonal gives \(\mathbf1^\top B\mathbf1=2\sum_{i<j}B_{ij}=S_1\). Thus \(S_1=0\). \(\square\)
+
+3. **Partition identity (proved).** \(S_1^2=S_2+S_w+S_d\), so \(S_d=-S_2-S_w\). For \(\|B\|_F=1\), \(S_2=2\) and \(S_d=-2-S_w\). \(\square\)
+
+4. **Rayleigh split (proved).** Write \(G_{\mathrm{disj}}=\mu\mathbf1_{\mathrm{disj}}+\widehat G\) with mean-zero \(\widehat G\), and \(\mathrm{Gu}=NG\). Then
+   \[
+   Q_4=N\bigl(\mu S_d+Be^\top\widehat G\,Be\bigr),\qquad
+   \mathrm{ray}=\frac{Q_4}{2N}
+   =
+   -\mu-\frac\mu2 S_w+\frac12 Be^\top\widehat G\,Be
+   \]
+   for unit Frobenius \(B\). \(\square\)
+
+5. **Scale of \(\mu\) (proved numerically on primes; formula exact).** \(|\mu|/H(p)\to0\) as \(p\to\infty\); at \(p=5\), \(|\mu|/H=9/(1495\cdot 49/13)=117/(1495\cdot49)\approx0.0016\). The constant-\(\mu\) piece is not the obstruction to hypothesis H. \(\square\)
+
+6. **Gershgorin on \(\widehat G\) is too weak (proved scale).** Entrywise \(|\widehat G|\le\varepsilon\) and unit \(B\) give fluct \(\le\varepsilon\Delta\) with \(\Delta=(n-2)(n-3)/2\). Forcing fluct\(\le H\) needs \(\varepsilon\le H/\Delta\), which at \(p=5\) is \(\approx0.0136<M_{\mathrm{cand}}\). Absolute entrywise control cannot close H; signed structure of \(m_4\) on disjoint pairs is load-bearing. \(\square\)
+
+7. **What remains OPEN.** Prove \(\mathrm{ray}\le H(p)\) for all unit zero-diag \(B\) on \(V_+\) and all primes \(p\ge5\) (hypothesis H), equivalently control \(\widehat G\) (signed \(m_4\)), or prove \(\max|m_4|\le M_{\mathrm{cand}}\) / GD (Props 15.74–15.84). Then bi-tight empties for \(p\ge5\). Deep non-tight independent. **Existence of \(\lim\alpha_n\) remains OPEN.**
+
+Evidence: `src/e1_gmin_m4_prop1585.py`, `evidence/e1_gmin_m4_prop1585.json` (Fraction exact; CPU algebra; GPU unused).
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
