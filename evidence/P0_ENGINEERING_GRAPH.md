@@ -151,8 +151,12 @@ Do **not** claim Path C residual closed unless:
 
 ## 8. Next action (single, from graph)
 
-**Just landed:** Prop 15.83–15.84 (algebra hierarchy + GD⇒cand \(S_3\) budget).  
+**Just landed:** Prop 15.83–15.85 (m4 residual hierarchy + spectral \(Q_4\) split).  
 
-**Active next:** P0-1 **N_GD_ALL** — prove \(\mathrm{star}\cdot S_1\le0\) and \(S_3\le B_{\mathrm{cand}}\) (or resolvent gain \(\le\mathrm{gain}_{\mathrm{cand}}\)) for true Max+ for all primes \(p\ge5\) (character sums / Aut). At \(p=5\), \(B_{\mathrm{cand}}<0\) forces strong \(S_3\) cancellation.
+**Active next (either closes bi-tight residual):**  
+- **N_GD_ALL:** prove \(\mathrm{star}\cdot S_1\le0\) and \(S_3\le B_{\mathrm{cand}}\) (or gain\(\le\mathrm{gain}_{\mathrm{cand}}\)) for Max+ ∀p≥5.  
+- **N_SPEC_GAP:** prove hypothesis H (\(\mathrm{ray}\le H(p)\)) by controlling \(\widehat G\) (signed disj \(m_4\)).  
+
+Both still require true Max+ / fourth-moment input beyond pure \(C\)-combinatorics. Then **N_DEEP**. **G_L stays OPEN until E(1) or full Path C+deep.**
 
 **Not active:** moduli class refine (F19); GPU theater (F20).
