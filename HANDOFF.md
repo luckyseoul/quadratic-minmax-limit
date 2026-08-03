@@ -6,7 +6,7 @@
 
 **External literature scan (2026-08-03):** `evidence/LITERATURE_SCAN_2026-08.md` — MO 413935 still 0 answers; author X prize (2026-07-25) wants existence not numerics (~5h unsolved); Ivanisvili 2025–26 arXiv is hypercube/isoperimetry/Grokability etc., **no paper closes lim α_n or Path C residual**. Near-neighbor Paley SOS / cut-cover SDP / conference spectral determination do **not** yield δ²≤room_hyp/24. **Do not resume prop thrash without a new external theorem.**  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
-**Resume (latest):** `evidence/SESSION_HANDOFF_2026-08-03.md` (L OPEN; residual general p OPEN; no prop thrash)  
+**Resume (latest):** `evidence/SESSION_HANDOFF_2026-08-03.md` + **strategy reframe** `evidence/STRATEGY_REFRAME_2026-08-03.md`  
 **Prior resumes:** `evidence/SESSION_HANDOFF_2026-07-31_prop15112.md`, `evidence/SESSION_HANDOFF_2026-07-30_prop1595.md`, `evidence/SESSION_HANDOFF_2026-07-30.md`  
 **P0 graph:** `evidence/P0_ENGINEERING_GRAPH.md`  
 **Failure graph:** `evidence/E1_FAILURE_GRAPH.md` (F1–**F20**)  
@@ -368,10 +368,13 @@ Soft multipartite / Hadamard / annealed / rank-one blow-up **cannot** force \(\l
 
 ### 5.1 Next attacks (ranked)
 
-1. **E(1) on \(\rho=1\) family** — Prove \(m_n=\frac12 n\sqrt{n-1}-o(n^{3/2})\) for \(n=p^2+1\), or exhibit a permanent relative gap. At \(n=10\) the absolute gap is only \(2\) (rel. \(\approx0.063\)); at \(n=26\) SA+exact-rescore found **no** undercutter of \(\Phi=65\) (certified \(m_{26}\le65\)). Need a general argument, not local edge-flip (optima sit at Hamming \(\ge5\)). **MO re-audit:** author already discarded one-sided bounds as settlement; pure numerics are out of scope for the prize.  
-2. **Structural gap from \(n=10\)** — **Mostly closed (N10-S + N10-C).** Hamming-5 threshold; only undercutters at \(k=5\) are 144 perfect matchings; those 144 form one \(\mathrm{P}\Gamma\mathrm{L}(2,9)\)-orbit and equal the maximizer-drop set (`evidence/N10_STRUCTURE.md`, `evidence/N10_MATCHING_CLASSIFY.md`). SA also finds Hamming-11–16 optima in the switching metric (same \(r=13/15\)). Remaining: whether a matching-type construction lifts (random matchings at \(n=26\) **raise** \(\Phi\) to \(\ge73\)); classify non-matching distant optima.  
-3. **E(2) analytic** — Prove \(\rho(C_n)\to1\) for all large Paley. **Partial:** exact \(\,x^\top Cx=2-8\Sigma_q\); asymptotic \(\rho_{\mathrm{int}}=(8/\pi^2)L_{\mathrm{odd}}+o(1)\) with \(\limsup\rho_{\mathrm{int}}=1\) (`E2_RHO_INT_ASYMPTOTICS.md`). Full pointwise \(\rho\to1\) still open; \(\rho=1\) on \(n=p^2+1\) already gives limsup.  
-4. **Non-existence** — Only if two dense subsequences with **proved** unequal \(\alpha\) limits appear; denseness (Prop 6.2) is mandatory.
+**Stance (2026-08-03):** residual is **localized**; do **not** prove δ²≤room by inventing Prop 15.159. Ask what **structure forces** residual (or kills free δ). Full map: `evidence/STRATEGY_REFRAME_2026-08-03.md`.
+
+1. **Structure ID (preferred over norm thrash)** — Identify residual operator with one of: Bose–Mesner / coherent config (not Max+ IP-scheme — **blocked 15.158**; try **G-orbits / edge BM**, 15.134), **SDP dual** for 16N/orth, **G-irrep / character** of E_{4p}^G, **Weil m₄ on G-orbits**, or (speculative) signed flag algebra. Equality at p=5 is a clue.  
+2. **E(1) on \(\rho=1\) family** — \(m_n=\Phi-o(n^{3/2})\) or permanent gap. First-hit + no-descent framework (15.40–15.43); bi-tight empty if \(g_{\min}>T(p)\) (15.47, cert p=5,7). Need general \(g_{\min}\) or deep non-tight ND / \(k_\star\).  
+3. **Limit objects of all Φ-minimisers** — Conference as *consequence*, not assumption. Graphon USC already **fails**; need non-hallucinated rigidity.  
+4. **E(2) analytic** — \(\rho\to1\) for large Paley (not required for lim=1/2 if E(1) on ρ=1 family).  
+5. **Non-existence** — Only via two dense subsequences with **proved** unequal α; denseness (Prop 6.2) mandatory.
 ### 5.2 Traps to avoid
 
 | Trap | Why |

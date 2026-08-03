@@ -67,11 +67,11 @@ Prefer **one** of:
 
 ## Next concrete steps
 
-1. Resume from **this file** + `HANDOFF.md` §0 — not from chat.  
-2. Pick **one** attack above with a named inequality; ship as pure math functions + pytest driving real entry points + evidence JSON.  
-3. If residual closes: wire chain functions residual→16N→bi-tight; then deep ND / E(1); update Main + HANDOFF (L closed only with chain).  
-4. Compute: `W=nproc-2`; Max+ caches `/tmp/maxplus_p5.npy`, `/tmp/maxplus_p7.npy` (or `/tmp/e1_p7/maxplus.npy`).  
-5. Git: large untracked prop stack 15.100–15.158 may need commit; check `git status` before push.
+1. Resume from **this file** + `HANDOFF.md` §0 + **`evidence/STRATEGY_REFRAME_2026-08-03.md`** — not from chat.  
+2. **Do not** start Prop 15.159 thrash. Prefer **structure identification** (what forces residual) over bounding δ.  
+3. Highest continuity opens: Weil/Gauss **m₄ on G-orbits** (15.134); SDP dual for 16N/orth; G-irrep spectrum of E_{4p}^G; edge BM (not Max+ IP-scheme).  
+4. Alternate: E(1) no-descent / k_⋆ / g_min>T(p) for all p≥5.  
+5. Compute: `W=nproc-2`; Max+ caches `/tmp/maxplus_p5.npy`, `/tmp/maxplus_p7.npy`.
 
 ---
 
