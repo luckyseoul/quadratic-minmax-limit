@@ -1,0 +1,212 @@
+{
+  "prop": "15.160",
+  "title": "Dual-gap vs H algebra; H\u21d2G\u227dI for p\u22655; residual OPEN",
+  "L_status": "OPEN",
+  "proved": {
+    "H_vs_thr_ray_algebra": true,
+    "H_implies_dual_gap": true,
+    "H_implies_16N": true,
+    "H_certified_p5_p7": true,
+    "dual_gap_certified_p5_p7": true,
+    "H_for_all_p": false,
+    "residual_for_all_p_ge_5": false
+  },
+  "algebra": {
+    "theorem_A": {
+      "proved": true,
+      "theorem": "thr_ray \u2212 H = (3p+7)(p\u22125)/(2d). Hence H\u2264thr_ray for all primes p\u22655, equality only at p=5.",
+      "by_p": {
+        "3": {
+          "H": "5",
+          "thr_ray": "9/5",
+          "H_minus_thr_ray": "16/5",
+          "H_le_thr_ray": false,
+          "formula_match": true
+        },
+        "5": {
+          "H": "49/13",
+          "thr_ray": "49/13",
+          "H_minus_thr_ray": "0",
+          "H_le_thr_ray": true,
+          "formula_match": true
+        },
+        "7": {
+          "H": "81/25",
+          "thr_ray": "109/25",
+          "H_minus_thr_ray": "-28/25",
+          "H_le_thr_ray": true,
+          "formula_match": true
+        },
+        "11": {
+          "H": "169/61",
+          "thr_ray": "289/61",
+          "H_minus_thr_ray": "-120/61",
+          "H_le_thr_ray": true,
+          "formula_match": true
+        },
+        "13": {
+          "H": "45/17",
+          "thr_ray": "409/85",
+          "H_minus_thr_ray": "-184/85",
+          "H_le_thr_ray": true,
+          "formula_match": true
+        },
+        "17": {
+          "H": "361/145",
+          "thr_ray": "709/145",
+          "H_minus_thr_ray": "-12/5",
+          "H_le_thr_ray": true,
+          "formula_match": true
+        },
+        "19": {
+          "H": "441/181",
+          "thr_ray": "889/181",
+          "H_minus_thr_ray": "-448/181",
+          "H_le_thr_ray": true,
+          "formula_match": true
+        },
+        "23": {
+          "H": "125/53",
+          "thr_ray": "1309/265",
+          "H_minus_thr_ray": "-684/265",
+          "H_le_thr_ray": true,
+          "formula_match": true
+        },
+        "29": {
+          "H": "961/421",
+          "thr_ray": "2089/421",
+          "H_minus_thr_ray": "-1128/421",
+          "H_le_thr_ray": true,
+          "formula_match": true
+        },
+        "31": {
+          "H": "1089/481",
+          "thr_ray": "2389/481",
+          "H_minus_thr_ray": "-100/37",
+          "H_le_thr_ray": true,
+          "formula_match": true
+        },
+        "37": {
+          "H": "1521/685",
+          "thr_ray": "3409/685",
+          "H_minus_thr_ray": "-1888/685",
+          "H_le_thr_ray": true,
+          "formula_match": true
+        },
+        "41": {
+          "H": "1849/841",
+          "thr_ray": "4189/841",
+          "H_minus_thr_ray": "-2340/841",
+          "H_le_thr_ray": true,
+          "formula_match": true
+        },
+        "43": {
+          "H": "81/37",
+          "thr_ray": "4609/925",
+          "H_minus_thr_ray": "-2584/925",
+          "H_le_thr_ray": true,
+          "formula_match": true
+        },
+        "47": {
+          "H": "2401/1105",
+          "thr_ray": "5509/1105",
+          "H_minus_thr_ray": "-3108/1105",
+          "H_le_thr_ray": true,
+          "formula_match": true
+        },
+        "53": {
+          "H": "605/281",
+          "thr_ray": "7009/1405",
+          "H_minus_thr_ray": "-3984/1405",
+          "H_le_thr_ray": true,
+          "formula_match": true
+        },
+        "59": {
+          "H": "3721/1741",
+          "thr_ray": "8689/1741",
+          "H_minus_thr_ray": "-4968/1741",
+          "H_le_thr_ray": true,
+          "formula_match": true
+        }
+      },
+      "algebra_identity": "thr_ray - H = (3p+7)(p-5)/(2d)",
+      "n_checked": 16
+    },
+    "theorem_B": {
+      "proved": true,
+      "theorem": "For prime p\u22655: ray_max\u2264H(p) \u21d2 ray_max\u2264thr_ray(p) (Thm A) \u21d2 G\u227dI \u21d2 \u03bb_max(\u03a6)\u226416(d\u22122)/d <16 \u21d2 16N."
+    },
+    "theorem_C": {
+      "proved": true,
+      "theorem": "H(p)\u22645 for primes p\u22653 (eq only p=3); hence ray\u2264H \u21d2 16N.",
+      "H_p3": "5"
+    },
+    "certified_spectra": {
+      "p5": {
+        "lambda_max": "176/13",
+        "ray": "49/13",
+        "H": "49/13",
+        "thr_ray": "49/13",
+        "ray_eq_H": true,
+        "ray_eq_thr_ray": true,
+        "H_eq_thr_ray": true
+      },
+      "p7": {
+        "lambda_max": "4320/409",
+        "ray": "933/409",
+        "H": "81/25",
+        "thr_ray": "109/25",
+        "ray_lt_H": true,
+        "H_lt_thr_ray": true,
+        "ray_lt_thr_ray": true
+      },
+      "certified": true
+    },
+    "dual_gap_G": {
+      "theorem": "G=(d/32)(16I\u2212\u03a6) \u227d I \u21d4 \u03bb_max\u226416(d\u22122)/d \u21d4 16N. Certified p=5 (eigs 1,2,4) and p=7 (min>4). OPEN general p.",
+      "p5": {
+        "G_eigs": {
+          "1": 13,
+          "2": 26,
+          "4": 26
+        },
+        "min_G": "1",
+        "G_ge_I": true,
+        "equals_1_2_4": true,
+        "sixteen_minus_lambda": " (32/d)\u00b7{1,2,4}"
+      },
+      "p7": {
+        "G_eigs": {
+          "3475/818": 25,
+          "3925/818": 50,
+          "4525/818": 50,
+          "4975/818": 100,
+          "5425/818": 50
+        },
+        "min_G": "3475/818",
+        "G_ge_I": true,
+        "strictly_above_4": true
+      },
+      "certified_p5_p7": true,
+      "proved_for_all_p": false,
+      "preferred_attack": "Identify G with BM / SDP dual / G-irrep scalar; prove G\u227dI for p\u22655. Do not thrash \u03b4\u00b2 bounds."
+    },
+    "open": {
+      "residual_closed_general": false,
+      "H_proved_for_all_p": false,
+      "dual_gap_for_all_p": false,
+      "sixteen_N_for_all_p": false,
+      "open": "Prove Hypothesis H: ray_max\u2264H(p)=(p+2)\u00b2/d for all primes p\u22655 (sufficient for G\u227dI and 16N by Thms A\u2013C). Equivalents: \u03b4\u00b2\u2264room_hyp/24, orth\u2264room_hyp, ED4\u2264wick_hi, \u03ba\u00b2\u2264\u03ba_hyp."
+    }
+  },
+  "status": {
+    "structure_id_H_vs_dual_gap": true,
+    "general_residual": false,
+    "sixteen_N_for_all_p": false
+  },
+  "open_attack": "Prove Hypothesis H: ray_max\u2264H(p)=(p+2)\u00b2/d for all primes p\u22655 (sufficient for G\u227dI and 16N by Thms A\u2013C). Equivalents: \u03b4\u00b2\u2264room_hyp/24, orth\u2264room_hyp, ED4\u2264wick_hi, \u03ba\u00b2\u2264\u03ba_hyp.",
+  "backend": "Fraction algebra; spectra from 15.159; GPU unused (F20)",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "strategy": "STRUCTURE: H is the named dual certificate threshold for G\u227dI"
+}
