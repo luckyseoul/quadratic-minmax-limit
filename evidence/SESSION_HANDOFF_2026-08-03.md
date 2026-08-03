@@ -69,7 +69,11 @@ Prefer **one** of:
 
 1. Resume from **this file** + `HANDOFF.md` §0 + **`evidence/STRATEGY_REFRAME_2026-08-03.md`** — not from chat.  
 2. **Do not** start Prop 15.159 thrash. Prefer **structure identification** (what forces residual) over bounding δ.  
-3. Highest continuity opens: Weil/Gauss **m₄ on G-orbits** (15.134); SDP dual for 16N/orth; G-irrep spectrum of E_{4p}^G; edge BM (not Max+ IP-scheme).  
+3. Highest continuity opens (updated after dual-gap ID):
+   - **Preferred:** prove dual gap \(G=(d/32)(16I-\Phi)\succeq I\) for all \(p\ge5\)
+     (Prop 15.159.G; certified p=5 with eigs {1,2,4}, p=7 strict). This is 16N.
+   - Alternates: Weil/Gauss **m₄ on G-orbits** (15.134); G-irrep of \(E_{4p}^G\);
+     edge BM (not Max+ IP-scheme — blocked 15.158).  
 4. Alternate: E(1) no-descent / k_⋆ / g_min>T(p) for all p≥5.  
 5. Compute: `W=nproc-2`; Max+ caches `/tmp/maxplus_p5.npy`, `/tmp/maxplus_p7.npy`.
 

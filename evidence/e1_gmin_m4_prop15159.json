@@ -1,0 +1,340 @@
+{
+  "prop": "15.159",
+  "title": "Prop 15.159: \u03a6|Z spectrum + dual gap G=(d/32)(16I\u2212\u03a6); G\u227dI \u21d4 16N; residual OPEN general p",
+  "L_status": "OPEN",
+  "proved": {
+    "spectrum_p5": true,
+    "spectrum_p7": true,
+    "threshold_algebra": true,
+    "dual_gap_G_p5_p7": true,
+    "dual_gap_G_for_all_p": false,
+    "sixteen_N_chain_predicate": true,
+    "mult_d_for_all_p": false,
+    "kappa_96n_for_all_p": false,
+    "residual_for_all_p_ge_5": false
+  },
+  "algebra": {
+    "theorem_C_threshold": {
+      "proved": true,
+      "theorem": "For d>2: 16(d\u22122)/d<16. For d\u226513 (p\u22655): \u03bc\u0304=8(d\u22121)/(d\u22123)\u226416(d\u22122)/d iff (d\u22123)(d\u22126)\u22650.",
+      "by_p": {
+        "5": {
+          "d": 13,
+          "threshold_16_dminus2_over_d": "176/13",
+          "mu_bar": "48/5",
+          "threshold_lt_16": true,
+          "threshold_ge_mu_bar": true,
+          "ok": true
+        },
+        "7": {
+          "d": 25,
+          "threshold_16_dminus2_over_d": "368/25",
+          "mu_bar": "96/11",
+          "threshold_lt_16": true,
+          "threshold_ge_mu_bar": true,
+          "ok": true
+        },
+        "11": {
+          "d": 61,
+          "threshold_16_dminus2_over_d": "944/61",
+          "mu_bar": "240/29",
+          "threshold_lt_16": true,
+          "threshold_ge_mu_bar": true,
+          "ok": true
+        },
+        "13": {
+          "d": 85,
+          "threshold_16_dminus2_over_d": "1328/85",
+          "mu_bar": "336/41",
+          "threshold_lt_16": true,
+          "threshold_ge_mu_bar": true,
+          "ok": true
+        },
+        "17": {
+          "d": 145,
+          "threshold_16_dminus2_over_d": "2288/145",
+          "mu_bar": "576/71",
+          "threshold_lt_16": true,
+          "threshold_ge_mu_bar": true,
+          "ok": true
+        },
+        "19": {
+          "d": 181,
+          "threshold_16_dminus2_over_d": "2864/181",
+          "mu_bar": "720/89",
+          "threshold_lt_16": true,
+          "threshold_ge_mu_bar": true,
+          "ok": true
+        },
+        "23": {
+          "d": 265,
+          "threshold_16_dminus2_over_d": "4208/265",
+          "mu_bar": "1056/131",
+          "threshold_lt_16": true,
+          "threshold_ge_mu_bar": true,
+          "ok": true
+        },
+        "29": {
+          "d": 421,
+          "threshold_16_dminus2_over_d": "6704/421",
+          "mu_bar": "1680/209",
+          "threshold_lt_16": true,
+          "threshold_ge_mu_bar": true,
+          "ok": true
+        },
+        "31": {
+          "d": 481,
+          "threshold_16_dminus2_over_d": "7664/481",
+          "mu_bar": "1920/239",
+          "threshold_lt_16": true,
+          "threshold_ge_mu_bar": true,
+          "ok": true
+        },
+        "37": {
+          "d": 685,
+          "threshold_16_dminus2_over_d": "10928/685",
+          "mu_bar": "2736/341",
+          "threshold_lt_16": true,
+          "threshold_ge_mu_bar": true,
+          "ok": true
+        },
+        "41": {
+          "d": 841,
+          "threshold_16_dminus2_over_d": "13424/841",
+          "mu_bar": "3360/419",
+          "threshold_lt_16": true,
+          "threshold_ge_mu_bar": true,
+          "ok": true
+        },
+        "43": {
+          "d": 925,
+          "threshold_16_dminus2_over_d": "14768/925",
+          "mu_bar": "3696/461",
+          "threshold_lt_16": true,
+          "threshold_ge_mu_bar": true,
+          "ok": true
+        },
+        "47": {
+          "d": 1105,
+          "threshold_16_dminus2_over_d": "17648/1105",
+          "mu_bar": "4416/551",
+          "threshold_lt_16": true,
+          "threshold_ge_mu_bar": true,
+          "ok": true
+        }
+      },
+      "n_checked": 13
+    },
+    "theorem_A_p5": {
+      "proved_census": true,
+      "theorem": "p=5: \u03a6|Z eigenvalues 176/13 (\u00d7d), 144/13 (\u00d72d), 80/13 (\u00d72d); \u03bb_max=16(d\u22122)/d; mult(\u03bb_max)=d.",
+      "levels": {
+        "176/13": 13,
+        "144/13": 26,
+        "80/13": 26
+      },
+      "total_mult": 65,
+      "dim_Z": 65,
+      "mult_sum_ok": true,
+      "lambda_max": "176/13",
+      "equals_16_dminus2_over_d": true,
+      "mult_top": 13,
+      "mult_top_eq_d": true,
+      "mean": "48/5",
+      "mean_eq_mu_bar": true
+    },
+    "theorem_B_p7": {
+      "proved_census": true,
+      "theorem": "p=7: \u03a6|Z eigenvalues {4320,4032,3648,3360,3072}/409 with mults (d,2d,2d,4d,2d); 409=N/(4p); \u03bb_max<16(d\u22122)/d; mult(\u03bb_max)=d.",
+      "N": 11452,
+      "den_N_over_4p": 409,
+      "levels": {
+        "4320/409": 25,
+        "4032/409": 50,
+        "3648/409": 50,
+        "3360/409": 100,
+        "3072/409": 50
+      },
+      "total_mult": 275,
+      "dim_Z": 275,
+      "mult_sum_ok": true,
+      "lambda_max": "4320/409",
+      "threshold": "368/25",
+      "lambda_max_lt_threshold": true,
+      "lambda_max_lt_16": true,
+      "mult_top": 25,
+      "mult_top_eq_d": true,
+      "mean": "96/11",
+      "mean_eq_mu_bar": true
+    },
+    "theorem_G_dual_gap": {
+      "theorem": "G=(d/32)(16I\u2212\u03a6) \u227d I \u21d4 \u03bb_max\u226416(d\u22122)/d \u21d4 16N. Certified p=5 (eigs 1,2,4) and p=7 (min>4). OPEN general p.",
+      "p5": {
+        "G_eigs": {
+          "1": 13,
+          "2": 26,
+          "4": 26
+        },
+        "min_G": "1",
+        "G_ge_I": true,
+        "equals_1_2_4": true,
+        "sixteen_minus_lambda": " (32/d)\u00b7{1,2,4}"
+      },
+      "p7": {
+        "G_eigs": {
+          "3475/818": 25,
+          "3925/818": 50,
+          "4525/818": 50,
+          "4975/818": 100,
+          "5425/818": 50
+        },
+        "min_G": "3475/818",
+        "G_ge_I": true,
+        "strictly_above_4": true
+      },
+      "certified_p5_p7": true,
+      "proved_for_all_p": false,
+      "preferred_attack": "Identify G with BM / SDP dual / G-irrep scalar; prove G\u227dI for p\u22655. Do not thrash \u03b4\u00b2 bounds."
+    },
+    "theorem_E_chain": {
+      "p5": {
+        "mult_top": 13,
+        "d": 13,
+        "mult_ge_d": true,
+        "kappa2_le_96n": true,
+        "p_ge_5_prime": true,
+        "sixteen_N": true,
+        "bi_tight_empty_via_15_61": true,
+        "theorem": "mult(\u03bb_max)\u2265d + \u2016\u03ba\u2016\u00b2\u226496n \u21d2 \u03bb_max(\u03a6|Z)\u226416 \u21d2 16N \u21d2 bi-tight empty (p\u22655)"
+      },
+      "p7": {
+        "mult_top": 25,
+        "d": 25,
+        "mult_ge_d": true,
+        "kappa2_le_96n": true,
+        "p_ge_5_prime": true,
+        "sixteen_N": true,
+        "bi_tight_empty_via_15_61": true,
+        "theorem": "mult(\u03bb_max)\u2265d + \u2016\u03ba\u2016\u00b2\u226496n \u21d2 \u03bb_max(\u03a6|Z)\u226416 \u21d2 16N \u21d2 bi-tight empty (p\u22655)"
+      }
+    },
+    "dual_gap_chain": {
+      "p5": {
+        "G_min": "1",
+        "G_ge_I": true,
+        "p_ge_5_prime": true,
+        "sixteen_N": true,
+        "theorem": "G\u227dI \u21d2 \u03bb_max(\u03a6|Z)\u226416(d\u22122)/d < 16 \u21d2 16N"
+      },
+      "p7": {
+        "G_min": "3475/818",
+        "G_ge_I": true,
+        "p_ge_5_prime": true,
+        "sixteen_N": true,
+        "theorem": "G\u227dI \u21d2 \u03bb_max(\u03a6|Z)\u226416(d\u22122)/d < 16 \u21d2 16N"
+      }
+    },
+    "open": {
+      "residual_closed_general": false,
+      "mult_d_for_all_p": false,
+      "kappa_le_96n_for_all_p": false,
+      "lambda_max_le_16_dminus2_over_d_for_all_p": false,
+      "dual_gap_G_ge_I_for_all_p": false,
+      "open": "PREFERRED: prove dual gap G=(d/32)(16I\u2212\u03a6) \u227d I for all primes p\u22655 (\u21d4 \u03bb_max\u226416(d\u22122)/d \u21d4 16N). Structure: BM / SDP dual / G-irrep ID of G. Alternates: (i) PSL d-irrep embedding + \u2016\u03ba\u2016\u00b2\u226496n; (ii) Weil m\u2084 on G-orbits \u21d2 \u03b4\u00b2\u2264room_hyp/24 (15.134).",
+      "structure_progress": "Exact \u03a6 spectra p=5,7; mult(\u03bb_max)=d; dual gap G with eigs {1,2,4} at p=5; G\u227dI certified p=5,7; 16(d\u22122)/d algebra; 16N under G\u227dI or mult\u2265d+\u03ba\u00b2\u226496n.",
+      "dead": [
+        "Max+ IP association scheme",
+        "class_key thrash F19",
+        "\u03b4 re-encoding without structure ID"
+      ]
+    }
+  },
+  "live_spectrum": {
+    "5": {
+      "p": 5,
+      "skipped": false,
+      "N": 260,
+      "d": 13,
+      "dim_Z": 65,
+      "n_levels": 3,
+      "levels_head": [
+        [
+          13.538461538461567,
+          13
+        ],
+        [
+          11.076923076923105,
+          26
+        ],
+        [
+          6.153846153846174,
+          26
+        ]
+      ],
+      "lambda_max": 13.538461538461567,
+      "mult_top": 13,
+      "mult_top_eq_d": true,
+      "lambda_max_lt_16": true,
+      "lambda_max_le_threshold": true,
+      "threshold": 13.538461538461538
+    },
+    "7": {
+      "p": 7,
+      "skipped": false,
+      "N": 11452,
+      "d": 25,
+      "dim_Z": 275,
+      "n_levels": 5,
+      "levels_head": [
+        [
+          10.562347188264088,
+          25
+        ],
+        [
+          9.85819070904649,
+          50
+        ],
+        [
+          8.919315403423006,
+          50
+        ],
+        [
+          8.215158924205422,
+          100
+        ],
+        [
+          7.511002444987794,
+          50
+        ]
+      ],
+      "lambda_max": 10.562347188264088,
+      "mult_top": 25,
+      "mult_top_eq_d": true,
+      "lambda_max_lt_16": true,
+      "lambda_max_le_threshold": true,
+      "threshold": 14.72
+    }
+  },
+  "closed_forms": {
+    "mu_bar": "8(n-2)/(n-6)",
+    "lambda_max_threshold": "16(d-2)/d",
+    "dual_gap_operator": "G=(d/32)(16I-Phi)",
+    "p5_G_eigs": "1,2,4",
+    "p5_lambda_max": "176/13",
+    "p7_lambda_max": "4320/409",
+    "p7_den": "N/(4p)=409"
+  },
+  "status": {
+    "structure_id_phi_spectrum": true,
+    "structure_id_dual_gap_G": true,
+    "mult_top_eq_d_p5_p7": true,
+    "general_residual": false,
+    "dual_gap_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  },
+  "open_attack": "PREFERRED: prove dual gap G=(d/32)(16I\u2212\u03a6) \u227d I for all primes p\u22655 (\u21d4 \u03bb_max\u226416(d\u22122)/d \u21d4 16N). Structure: BM / SDP dual / G-irrep ID of G. Alternates: (i) PSL d-irrep embedding + \u2016\u03ba\u2016\u00b2\u226496n; (ii) Weil m\u2084 on G-orbits \u21d2 \u03b4\u00b2\u2264room_hyp/24 (15.134).",
+  "backend": "CPU numpy \u03a6 eigensystem p=5,7; Fraction algebra; GPU unused (F20)",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "strategy": "STRUCTURE_REFRAME_2026-08-03: identify dual gap G / \u03a6 spectrum, not \u03b4 thrash. Preferred: prove G\u227dI for all p\u22655."
+}

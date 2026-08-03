@@ -109,13 +109,36 @@ Stuck **not** for lack of compute. Stuck because natural analytic attacks are al
 
 ---
 
+## P0 dual-gap identification (Prop 15.159.G, 2026-08-03)
+
+Preferred structural target (replaces “bound δ²” thrash):
+
+\[
+G := \frac{d}{32}\bigl(16I - \Phi|_Z\bigr)
+\qquad
+G\succeq I
+\;\Longleftrightarrow\;
+\lambda_{\max}(\Phi|_Z)\le 16(d-2)/d < 16
+\;\Longleftrightarrow\;
+16N.
+\]
+
+| Prime | G spectrum | Status |
+|-------|------------|--------|
+| p=5 | **{1, 2, 4}** (mult d, 2d, 2d) | G≽I, equality on top; 16−λ=(32/d)·{1,2,4} |
+| p=7 | >4 (exact Fraction table) | G≽I strict |
+| general p≥5 | **OPEN** | prove G≽I by BM / SDP dual / G-irrep ID of G |
+
+This is exactly “what structure forces the residual”: G should be a named PSD object, not a free scalar δ.
+
 ## P0 graph update (nodes)
 
 | Node | Status |
 |------|--------|
 | Residual inequality forms | **Localized** (many equivalent) |
 | Bound δ by analysis | **Diminishing returns / thrash risk** |
-| Structure identification | **Open — preferred** |
+| **Dual gap G ≽ I** | **Preferred open — certified p=5,7** |
+| Structure identification | **Partial (Φ spectrum + G form); general open** |
 | BM (Max+ IP) | **Dead** |
 | BM (G on 4-sets) | **Open carrier** |
 | SDP dual for 16N/orth | **Open** |
