@@ -1,0 +1,485 @@
+{
+  "prop": "15.102",
+  "backend": "CPU Fraction + Max+ p=3,5; sparse eigsh mult p=5; GPU unused (F20)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "gap_proved_for_all_p": false,
+  "kappa_bound_proved_for_all_p": false,
+  "general_orth_inequality_proved": false,
+  "source_mu2": {
+    "proved": true,
+    "theorem": "Source: \u2016b\u2016\u2082\u00b2=576 n\u2083/p\u2074 with n\u2083=n(n\u22121)(n\u22122)(n\u22126)/96 from |T\u03ba|=24 on |\u03ba|=3 (Prop 15.68/15.71).  \u03bc\u00b2=4(p\u00b2+15) gives 16p\u00b2\u2212\u03bc\u00b2=12(p\u00b2\u22125), 16p\u00b2+\u03bc\u00b2=20(p\u00b2+3).  T\u00b2b=\u03bc\u00b2b certified at p=3,5.",
+    "by_p": {
+      "3": {
+        "n3": "30",
+        "b2": "640/3",
+        "mu2": 96,
+        "16p2_minus_mu2": 48,
+        "eq_12_p2_minus_5": true,
+        "16p2_plus_mu2": 240,
+        "eq_20_p2_plus_3": true
+      },
+      "5": {
+        "n3": "3250",
+        "b2": "14976/5",
+        "mu2": 160,
+        "16p2_minus_mu2": 240,
+        "eq_12_p2_minus_5": true,
+        "16p2_plus_mu2": 560,
+        "eq_20_p2_plus_3": true
+      },
+      "7": {
+        "n3": "53900",
+        "b2": "633600/49",
+        "mu2": 256,
+        "16p2_minus_mu2": 528,
+        "eq_12_p2_minus_5": true,
+        "16p2_plus_mu2": 1040,
+        "eq_20_p2_plus_3": true
+      },
+      "11": {
+        "n3": "2140490",
+        "b2": "10189440/121",
+        "mu2": 544,
+        "16p2_minus_mu2": 1392,
+        "eq_12_p2_minus_5": true,
+        "16p2_plus_mu2": 2480,
+        "eq_20_p2_plus_3": true
+      },
+      "13": {
+        "n3": "8245510",
+        "b2": "28103040/169",
+        "mu2": 736,
+        "16p2_minus_mu2": 1968,
+        "eq_12_p2_minus_5": true,
+        "16p2_plus_mu2": 3440,
+        "eq_20_p2_plus_3": true
+      },
+      "17": {
+        "n3": "71406120",
+        "b2": "142318080/289",
+        "mu2": 1216,
+        "16p2_minus_mu2": 3408,
+        "eq_12_p2_minus_5": true,
+        "16p2_plus_mu2": 5840,
+        "eq_20_p2_plus_3": true
+      },
+      "19": {
+        "n3": "174460470",
+        "b2": "278363520/361",
+        "mu2": 1504,
+        "16p2_minus_mu2": 4272,
+        "eq_12_p2_minus_5": true,
+        "16p2_plus_mu2": 7280,
+        "eq_20_p2_plus_3": true
+      },
+      "23": {
+        "n3": "808026340",
+        "b2": "879816960/529",
+        "mu2": 2176,
+        "16p2_minus_mu2": 6288,
+        "eq_12_p2_minus_5": true,
+        "16p2_plus_mu2": 10640,
+        "eq_20_p2_plus_3": true
+      },
+      "29": {
+        "n3": "5179912430",
+        "b2": "3547716480/841",
+        "mu2": 3424,
+        "16p2_minus_mu2": 10032,
+        "eq_12_p2_minus_5": true,
+        "16p2_plus_mu2": 16880,
+        "eq_20_p2_plus_3": true
+      },
+      "31": {
+        "n3": "8838047920",
+        "b2": "5297310720/961",
+        "mu2": 3904,
+        "16p2_minus_mu2": 11472,
+        "eq_12_p2_minus_5": true,
+        "16p2_plus_mu2": 19280,
+        "eq_20_p2_plus_3": true
+      },
+      "37": {
+        "n3": "36454676610",
+        "b2": "15338125440/1369",
+        "mu2": 5536,
+        "16p2_minus_mu2": 16368,
+        "eq_12_p2_minus_5": true,
+        "16p2_plus_mu2": 27440,
+        "eq_20_p2_plus_3": true
+      }
+    },
+    "T2b_certified_p": [
+      3,
+      5
+    ]
+  },
+  "rho_min_closed_form": {
+    "proved": true,
+    "theorem": "With T\u00b2b=\u03bc\u00b2b, \u27e8b,Tb\u27e9=0: \u03c1_min=b\u208a/(4p\u2212\u03bc)+b\u208b/(4p+\u03bc) has \u2016\u03c1_min\u2016\u2082\u00b2=\u2016b\u2016\u2082\u00b2(16p\u00b2+\u03bc\u00b2)/(16p\u00b2\u2212\u03bc\u00b2)\u00b2=5n(p\u00b2\u22121)(p\u00b2+3)/(6p\u00b2(p\u00b2\u22125)).",
+    "by_p": {
+      "3": {
+        "rho_min2": "200/9",
+        "from_balanced": "200/9",
+        "from_n3": "200/9",
+        "match": true
+      },
+      "5": {
+        "rho_min2": "728/25",
+        "from_balanced": "728/25",
+        "from_n3": "728/25",
+        "match": true
+      },
+      "7": {
+        "rho_min2": "26000/539",
+        "from_balanced": "26000/539",
+        "from_n3": "26000/539",
+        "match": true
+      },
+      "11": {
+        "rho_min2": "378200/3509",
+        "from_balanced": "378200/3509",
+        "from_n3": "378200/3509",
+        "match": true
+      },
+      "13": {
+        "rho_min2": "1023400/6929",
+        "from_balanced": "1023400/6929",
+        "from_n3": "1023400/6929",
+        "match": true
+      },
+      "17": {
+        "rho_min2": "5080800/20519",
+        "from_balanced": "5080800/20519",
+        "from_n3": "5080800/20519",
+        "match": true
+      },
+      "19": {
+        "rho_min2": "9882600/32129",
+        "from_balanced": "9882600/32129",
+        "from_n3": "9882600/32129",
+        "match": true
+      },
+      "23": {
+        "rho_min2": "31015600/69299",
+        "from_balanced": "31015600/69299",
+        "from_n3": "31015600/69299",
+        "match": true
+      },
+      "29": {
+        "rho_min2": "124363400/175769",
+        "from_balanced": "124363400/175769",
+        "from_n3": "124363400/175769",
+        "match": true
+      },
+      "31": {
+        "rho_min2": "185473600/229679",
+        "from_balanced": "185473600/229679",
+        "from_n3": "185473600/229679",
+        "match": true
+      },
+      "37": {
+        "rho_min2": "535697400/466829",
+        "from_balanced": "535697400/466829",
+        "from_n3": "535697400/466829",
+        "match": true
+      }
+    }
+  },
+  "kappa_min_eq_proj": {
+    "proved": true,
+    "theorem": "C_diag+24\u2016\u03c1_min\u2016\u2082\u00b2 = 64n(p\u00b2\u22123)/(p\u00b2\u22125) = \u2016\u03ba_proj\u2016_F\u00b2 for every odd prime p\u22653 (Fraction identity).",
+    "by_p": {
+      "3": {
+        "C_diag": "1280/3",
+        "rho_min2": "200/9",
+        "kappa_min": "960",
+        "proj": "960",
+        "match": true
+      },
+      "5": {
+        "C_diag": "28288/25",
+        "rho_min2": "728/25",
+        "kappa_min": "9152/5",
+        "proj": "9152/5",
+        "match": true
+      },
+      "7": {
+        "C_diag": "107200/49",
+        "rho_min2": "26000/539",
+        "kappa_min": "36800/11",
+        "proj": "36800/11",
+        "match": true
+      },
+      "11": {
+        "C_diag": "648064/121",
+        "rho_min2": "378200/3509",
+        "kappa_min": "230336/29",
+        "proj": "230336/29",
+        "match": true
+      },
+      "13": {
+        "C_diag": "1262080/169",
+        "rho_min2": "1023400/6929",
+        "kappa_min": "451520/41",
+        "proj": "451520/41",
+        "match": true
+      },
+      "17": {
+        "C_diag": "3684160/289",
+        "rho_min2": "5080800/20519",
+        "kappa_min": "1327040/71",
+        "proj": "1327040/71",
+        "match": true
+      },
+      "19": {
+        "C_diag": "5745664/361",
+        "rho_min2": "9882600/32129",
+        "kappa_min": "2073536/89",
+        "proj": "2073536/89",
+        "match": true
+      },
+      "23": {
+        "C_diag": "12329920/529",
+        "rho_min2": "31015600/69299",
+        "kappa_min": "4460480/131",
+        "proj": "4460480/131",
+        "match": true
+      },
+      "29": {
+        "C_diag": "31147264/841",
+        "rho_min2": "124363400/175769",
+        "kappa_min": "11289536/209",
+        "proj": "11289536/209",
+        "match": true
+      },
+      "31": {
+        "C_diag": "40665664/961",
+        "rho_min2": "185473600/229679",
+        "kappa_min": "14745536/239",
+        "proj": "14745536/239",
+        "match": true
+      },
+      "37": {
+        "C_diag": "82506880/1369",
+        "rho_min2": "535697400/466829",
+        "kappa_min": "29942720/341",
+        "proj": "29942720/341",
+        "match": true
+      }
+    }
+  },
+  "orth_delta_identity": {
+    "proved": true,
+    "theorem": "\u2016\u03ba\u2016_F\u00b2 = \u2016\u03ba_proj\u2016_F\u00b2 + 24\u2016\u03b4\u2016\u2082\u00b2 with \u03b4\u2208ker(4pI\u2212T). \u2016\u03ba\u2016\u00b2\u226496n \u21d4 \u2016\u03b4\u2016\u2082\u00b2\u2264room/24=4n(p\u00b2\u22129)/(3(p\u00b2\u22125)); \u2016\u03ba\u2016\u00b2\u2264\u03ba_hyp \u21d4 \u2016\u03b4\u2016\u2082\u00b2\u2264room_hyp/24.",
+    "by_p": {
+      "3": {
+        "orth_eq_24_delta2": "\u2016\u03ba_orth\u2016\u00b2 = 24 \u2016\u03b4\u2016\u2082\u00b2",
+        "kappa2_eq_proj_plus_24_delta2": true,
+        "delta2_budget_96n": "0",
+        "delta2_budget_96n_closed": "0",
+        "budget_96n_match": true,
+        "delta2_budget_hyp": "0",
+        "room": "0",
+        "room_hyp": "0",
+        "kappa_hyp": "960",
+        "budget_96n": 960
+      },
+      "5": {
+        "orth_eq_24_delta2": "\u2016\u03ba_orth\u2016\u00b2 = 24 \u2016\u03b4\u2016\u2082\u00b2",
+        "kappa2_eq_proj_plus_24_delta2": true,
+        "delta2_budget_96n": "416/15",
+        "delta2_budget_96n_closed": "416/15",
+        "budget_96n_match": true,
+        "delta2_budget_hyp": "1536/65",
+        "room": "3328/5",
+        "room_hyp": "36864/65",
+        "kappa_hyp": "31168/13",
+        "budget_96n": 2496
+      },
+      "7": {
+        "orth_eq_24_delta2": "\u2016\u03ba_orth\u2016\u00b2 = 24 \u2016\u03b4\u2016\u2082\u00b2",
+        "kappa2_eq_proj_plus_24_delta2": true,
+        "delta2_budget_96n": "2000/33",
+        "delta2_budget_96n_closed": "2000/33",
+        "budget_96n_match": true,
+        "delta2_budget_hyp": "3072/55",
+        "room": "16000/11",
+        "room_hyp": "73728/55",
+        "kappa_hyp": "257728/55",
+        "budget_96n": 4800
+      },
+      "11": {
+        "orth_eq_24_delta2": "\u2016\u03ba_orth\u2016\u00b2 = 24 \u2016\u03b4\u2016\u2082\u00b2",
+        "kappa2_eq_proj_plus_24_delta2": true,
+        "delta2_budget_96n": "13664/87",
+        "delta2_budget_96n_closed": "13664/87",
+        "budget_96n_match": true,
+        "delta2_budget_hyp": "268800/1769",
+        "room": "109312/29",
+        "room_hyp": "6451200/1769",
+        "kappa_hyp": "20501696/1769",
+        "budget_96n": 11712
+      },
+      "13": {
+        "orth_eq_24_delta2": "\u2016\u03ba_orth\u2016\u00b2 = 24 \u2016\u03b4\u2016\u2082\u00b2",
+        "kappa2_eq_proj_plus_24_delta2": true,
+        "delta2_budget_96n": "27200/123",
+        "delta2_budget_96n_closed": "27200/123",
+        "budget_96n_match": true,
+        "delta2_budget_hyp": "150528/697",
+        "room": "217600/41",
+        "room_hyp": "3612672/697",
+        "kappa_hyp": "11288512/697",
+        "budget_96n": 16320
+      },
+      "17": {
+        "orth_eq_24_delta2": "\u2016\u03ba_orth\u2016\u00b2 = 24 \u2016\u03b4\u2016\u2082\u00b2",
+        "kappa2_eq_proj_plus_24_delta2": true,
+        "delta2_budget_96n": "81200/213",
+        "delta2_budget_96n_closed": "81200/213",
+        "budget_96n_match": true,
+        "delta2_budget_hyp": "774144/2059",
+        "room": "649600/71",
+        "room_hyp": "18579456/2059",
+        "kappa_hyp": "57063616/2059",
+        "budget_96n": 27840
+      },
+      "19": {
+        "orth_eq_24_delta2": "\u2016\u03ba_orth\u2016\u00b2 = 24 \u2016\u03b4\u2016\u2082\u00b2",
+        "kappa2_eq_proj_plus_24_delta2": true,
+        "delta2_budget_96n": "127424/267",
+        "delta2_budget_96n_closed": "127424/267",
+        "budget_96n_match": true,
+        "delta2_budget_hyp": "7603200/16109",
+        "room": "1019392/89",
+        "room_hyp": "182476800/16109",
+        "kappa_hyp": "557786816/16109",
+        "budget_96n": 34752
+      },
+      "23": {
+        "orth_eq_24_delta2": "\u2016\u03ba_orth\u2016\u00b2 = 24 \u2016\u03b4\u2016\u2082\u00b2",
+        "kappa2_eq_proj_plus_24_delta2": true,
+        "delta2_budget_96n": "275600/393",
+        "delta2_budget_96n_closed": "275600/393",
+        "budget_96n_match": true,
+        "delta2_budget_hyp": "4832256/6943",
+        "room": "2204800/131",
+        "room_hyp": "115974144/6943",
+        "kappa_hyp": "352379584/6943",
+        "budget_96n": 50880
+      },
+      "29": {
+        "orth_eq_24_delta2": "\u2016\u03ba_orth\u2016\u00b2 = 24 \u2016\u03b4\u2016\u2082\u00b2",
+        "kappa2_eq_proj_plus_24_delta2": true,
+        "delta2_budget_96n": "700544/627",
+        "delta2_budget_96n_closed": "700544/627",
+        "budget_96n_match": true,
+        "delta2_budget_hyp": "97843200/87989",
+        "room": "5604352/209",
+        "room_hyp": "2348236800/87989",
+        "kappa_hyp": "7101131456/87989",
+        "budget_96n": 80832
+      },
+      "31": {
+        "orth_eq_24_delta2": "\u2016\u03ba_orth\u2016\u00b2 = 24 \u2016\u03b4\u2016\u2082\u00b2",
+        "kappa2_eq_proj_plus_24_delta2": true,
+        "delta2_budget_96n": "915824/717",
+        "delta2_budget_96n_closed": "915824/717",
+        "budget_96n_match": true,
+        "delta2_budget_hyp": "146227200/114959",
+        "room": "7326592/239",
+        "room_hyp": "3509452800/114959",
+        "kappa_hyp": "10602055616/114959",
+        "budget_96n": 92352
+      },
+      "37": {
+        "orth_eq_24_delta2": "\u2016\u03ba_orth\u2016\u00b2 = 24 \u2016\u03b4\u2016\u2082\u00b2",
+        "kappa2_eq_proj_plus_24_delta2": true,
+        "delta2_budget_96n": "1863200/1023",
+        "delta2_budget_96n_closed": "1863200/1023",
+        "budget_96n_match": true,
+        "delta2_budget_hyp": "84837888/46717",
+        "room": "14905600/341",
+        "room_hyp": "2036109312/46717",
+        "kappa_hyp": "6138261952/46717",
+        "budget_96n": 131520
+      }
+    }
+  },
+  "invertible_case": {
+    "proved": true,
+    "theorem": "If \u03bb_max(T)<4p then ker A={0}, \u03b4=0, \u2016\u03ba\u2016\u00b2=\u2016\u03ba_proj\u2016\u00b2\u2264\u03ba_hyp\u226496n. Holds at p=3 (\u03bb_max(T)\u22489.798<12; exact spectrum in e1_gmin_m4_Tspec.json).",
+    "certified_p": [
+      3
+    ]
+  },
+  "reduction": {
+    "proved": true,
+    "general_orth_inequality_proved": false,
+    "kappa_bound_proved_for_all_p": false,
+    "theorem": "Prop 15.102 reduces \u2016\u03ba_orth\u2016\u00b2\u2264room\u00b7((d\u22121)/d)\u00b2 for all primes p\u22655 to the single inequality \u2016\u03b4\u2016\u2082\u00b2\u2264room_hyp/24 on the Max+ ker component \u03b4\u2208E_{4p}=ker(4pI\u2212T).  All other identities (source, \u03bc\u00b2-form, \u03c1_min, kappa_min=proj, orth=24\u2016\u03b4\u2016\u00b2) are proved.  Bi-tight for Paley p\u22655 follows from \u2016\u03ba\u2016\u00b2\u226496n (i.e. \u2016\u03b4\u2016\u2082\u00b2\u2264room/24) + Prop 15.98.",
+    "open": "Prove \u2016\u03b4\u2016\u2082\u00b2 \u2264 room/24 \u00b7 ((d\u22121)/d)\u00b2 for all primes p\u22655 on full Max+. At p=5: mult(E_4p)=d\u22121=12 and equality \u03b4\u00b2=room_hyp/24."
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "d": 5,
+      "ED4": 1680.0,
+      "kappa2": 960.0,
+      "proj": 960.0,
+      "rho_min2": 22.22222222222222,
+      "orth": 0.0,
+      "delta2": 0.0,
+      "delta2_budget_96n": 0.0,
+      "delta2_budget_hyp": 0.0,
+      "kappa_hyp": 960.0,
+      "budget_96n": 960.0,
+      "kappa2_le_96n": true,
+      "kappa2_le_hyp": true,
+      "kappa2_eq_hyp": true,
+      "delta2_le_96n_budget": true,
+      "delta2_le_hyp_budget": true,
+      "delta2_eq_hyp_budget": true,
+      "kappa_min_eq_proj": true,
+      "ok": true,
+      "delta2_eq_0": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "d": 13,
+      "ED4": 9261.538461538461,
+      "kappa2": 2397.538461538461,
+      "proj": 1830.4,
+      "rho_min2": 29.12,
+      "orth": 567.1384615384609,
+      "delta2": 23.630769230769204,
+      "delta2_budget_96n": 27.733333333333334,
+      "delta2_budget_hyp": 23.630769230769232,
+      "kappa_hyp": 2397.5384615384614,
+      "budget_96n": 2496.0,
+      "kappa2_le_96n": true,
+      "kappa2_le_hyp": true,
+      "kappa2_eq_hyp": true,
+      "delta2_le_96n_budget": true,
+      "delta2_le_hyp_budget": true,
+      "delta2_eq_hyp_budget": true,
+      "kappa_min_eq_proj": true,
+      "ok": true,
+      "mult_E4p": 12,
+      "mult_E4p_eq_d_minus_1": true
+    },
+    "7": {
+      "p": 7,
+      "skipped": true
+    }
+  },
+  "attack_surface": "OPEN single residual: \u2016\u03b4\u2016\u2082\u00b2 \u2264 room_hyp/24 for all primes p\u22655 (\u03b4\u2208E_{4p}=ker(4pI\u2212T) on full Max+).  At p=5: mult(E_4p)=d\u22121 and equality.  Then \u03ba\u00b2\u2264\u03ba_hyp\u226496n and 15.98\u21d2bi-tight.  Then N_DEEP.",
+  "verdict": "Prop 15.102 proves the full resolvent \u03b4-calculus: \u03c1_min closed form, kappa_min=proj, \u2016\u03ba_orth\u2016\u00b2=24\u2016\u03b4\u2016\u2082\u00b2, and target \u21d4 \u2016\u03b4\u2016\u2082\u00b2\u2264room_hyp/24. Certified p=3 (\u03b4=0) and p=5 (\u03b4\u00b2=room_hyp/24, mult=d\u22121). General \u03b4 bound OPEN. lim \u03b1_n OPEN.",
+  "settlement_note": "L stays OPEN. Primary residual is now purely \u2016\u03b4\u2016\u2082\u00b2 on E_4p. Do not soft-close.",
+  "proved": true
+}

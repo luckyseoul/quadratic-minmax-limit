@@ -1,0 +1,654 @@
+{
+  "prop": "15.125",
+  "title": "Prop 15.125: perfect 2-colorings; 4-design defect; closed R\u2084 budget; Delsarte+moments weak",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Residual identified as spherical 4-design defect of Max+ in V\u208a and as counting \u03c4-equitable bipartitions (W_k). R\u2084_bud closed. Hamming Delsarte+moments still too weak for p\u22655. Closed W_k still open. N_ED4_SUF OPEN. L OPEN.",
+  "proved": {
+    "perfect_2colorings": true,
+    "spherical_2design_4defect": true,
+    "R4_budget_closed": true,
+    "delsarte_moments_weak_p_ge_5": true,
+    "antipodal_dual": true,
+    "weight_enumerator_closed": false,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  },
+  "algebra": {
+    "perfect_2coloring": {
+      "proved": true,
+      "theorem": "W_k = # of \u03c4-equitable bipartitions (perfect 2-colorings) of the conference srg with |S|=k; \u03b1\u2212\u03b2=\u03c4; Hoffman k=p+1 has \u03b1=0.",
+      "by_p": {
+        "3": {
+          "tau": "-2",
+          "hoffman_k": 4,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 4,
+          "alpha_beta_tau_ok": true
+        },
+        "5": {
+          "tau": "-3",
+          "hoffman_k": 6,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 10,
+          "alpha_beta_tau_ok": true
+        },
+        "7": {
+          "tau": "-4",
+          "hoffman_k": 8,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 20,
+          "alpha_beta_tau_ok": true
+        },
+        "11": {
+          "tau": "-6",
+          "hoffman_k": 12,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 52,
+          "alpha_beta_tau_ok": true
+        },
+        "13": {
+          "tau": "-7",
+          "hoffman_k": 14,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 74,
+          "alpha_beta_tau_ok": true
+        },
+        "17": {
+          "tau": "-9",
+          "hoffman_k": 18,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 130,
+          "alpha_beta_tau_ok": true
+        },
+        "19": {
+          "tau": "-10",
+          "hoffman_k": 20,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 164,
+          "alpha_beta_tau_ok": true
+        },
+        "23": {
+          "tau": "-12",
+          "hoffman_k": 24,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 244,
+          "alpha_beta_tau_ok": true
+        },
+        "29": {
+          "tau": "-15",
+          "hoffman_k": 30,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 394,
+          "alpha_beta_tau_ok": true
+        },
+        "31": {
+          "tau": "-16",
+          "hoffman_k": 32,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 452,
+          "alpha_beta_tau_ok": true
+        },
+        "37": {
+          "tau": "-19",
+          "hoffman_k": 38,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 650,
+          "alpha_beta_tau_ok": true
+        },
+        "41": {
+          "tau": "-21",
+          "hoffman_k": 42,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 802,
+          "alpha_beta_tau_ok": true
+        },
+        "43": {
+          "tau": "-22",
+          "hoffman_k": 44,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 884,
+          "alpha_beta_tau_ok": true
+        },
+        "47": {
+          "tau": "-24",
+          "hoffman_k": 48,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 1060,
+          "alpha_beta_tau_ok": true
+        },
+        "53": {
+          "tau": "-27",
+          "hoffman_k": 54,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 1354,
+          "alpha_beta_tau_ok": true
+        },
+        "59": {
+          "tau": "-30",
+          "hoffman_k": 60,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 1684,
+          "alpha_beta_tau_ok": true
+        },
+        "61": {
+          "tau": "-31",
+          "hoffman_k": 62,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 1802,
+          "alpha_beta_tau_ok": true
+        },
+        "67": {
+          "tau": "-34",
+          "hoffman_k": 68,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 2180,
+          "alpha_beta_tau_ok": true
+        },
+        "71": {
+          "tau": "-36",
+          "hoffman_k": 72,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 2452,
+          "alpha_beta_tau_ok": true
+        },
+        "73": {
+          "tau": "-37",
+          "hoffman_k": 74,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 2594,
+          "alpha_beta_tau_ok": true
+        },
+        "79": {
+          "tau": "-40",
+          "hoffman_k": 80,
+          "hoffman_alpha0": true,
+          "allowed_k_count": 3044,
+          "alpha_beta_tau_ok": true
+        }
+      }
+    },
+    "design_defect": {
+      "proved": true,
+      "theorem": "Max+ is a spherical 2-design in V\u208a\u2245\u211d^d (tight frame); 4-design defect = ED4 \u2212 3n\u2074/(d(d+2)); residual \u21d4 ED4\u2264ED4_bud.",
+      "by_p": {
+        "3": {
+          "d": 5,
+          "n": 10,
+          "n_eq_2d": true,
+          "sphere_Es4": "6000/7",
+          "ED4_bud": "1680",
+          "defect_budget_ED4_minus_sphere": "5760/7",
+          "defect_budget_positive_p_ge_5": null,
+          "room_hyp_zero_at_p3": true
+        },
+        "5": {
+          "d": 13,
+          "n": 26,
+          "n_eq_2d": true,
+          "sphere_Es4": "35152/5",
+          "ED4_bud": "120400/13",
+          "defect_budget_ED4_minus_sphere": "145024/65",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "7": {
+          "d": 25,
+          "n": 50,
+          "n_eq_2d": true,
+          "sphere_Es4": "250000/9",
+          "ED4_bud": "1775728/55",
+          "defect_budget_ED4_minus_sphere": "2231552/495",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "11": {
+          "d": 61,
+          "n": 122,
+          "n_eq_2d": true,
+          "sphere_Es4": "3631696/21",
+          "ED4_bud": "326099984/1769",
+          "defect_budget_ED4_minus_sphere": "423629440/37149",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "13": {
+          "d": 85,
+          "n": 170,
+          "n_eq_2d": true,
+          "sphere_Es4": "9826000/29",
+          "ED4_bud": "247320592/697",
+          "defect_budget_ED4_minus_sphere": "323575168/20213",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "17": {
+          "d": 145,
+          "n": 290,
+          "n_eq_2d": true,
+          "sphere_Es4": "48778000/49",
+          "ED4_bud": "2106345136/2059",
+          "defect_budget_ED4_minus_sphere": "2777009664/100891",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "19": {
+          "d": 181,
+          "n": 362,
+          "n_eq_2d": true,
+          "sphere_Es4": "94875856/61",
+          "ED4_bud": "25609730384/16109",
+          "defect_budget_ED4_minus_sphere": "33838389120/982649",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "23": {
+          "d": 265,
+          "n": 530,
+          "n_eq_2d": true,
+          "sphere_Es4": "297754000/89",
+          "ED4_bud": "23579214064/6943",
+          "defect_budget_ED4_minus_sphere": "31244029696/617927",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "29": {
+          "d": 421,
+          "n": 842,
+          "n_eq_2d": true,
+          "sphere_Es4": "1193895376/141",
+          "ED4_bud": "752117368784/87989",
+          "defect_budget_ED4_minus_sphere": "998888759680/12406449",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "31": {
+          "d": 481,
+          "n": 962,
+          "n_eq_2d": true,
+          "sphere_Es4": "1780554256/161",
+          "ED4_bud": "1281951110384/114959",
+          "defect_budget_ED4_minus_sphere": "1703392056320/18508399",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "37": {
+          "d": 685,
+          "n": 1370,
+          "n_eq_2d": true,
+          "sphere_Es4": "5142706000/229",
+          "ED4_bud": "1055263799632/46717",
+          "defect_budget_ED4_minus_sphere": "1403613913728/10698193",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "41": {
+          "d": 841,
+          "n": 1682,
+          "n_eq_2d": true,
+          "sphere_Es4": "9517173136/281",
+          "ED4_bud": "11991491332784/352379",
+          "defect_budget_ED4_minus_sphere": "15957112021760/99018499",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "43": {
+          "d": 925,
+          "n": 1850,
+          "n_eq_2d": true,
+          "sphere_Es4": "12663250000/309",
+          "ED4_bud": "3510217371088/85285",
+          "defect_budget_ED4_minus_sphere": "4671891416192/26353065",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "47": {
+          "d": 1105,
+          "n": 2210,
+          "n_eq_2d": true,
+          "sphere_Es4": "21587722000/369",
+          "ED4_bud": "7149802809520/121771",
+          "defect_budget_ED4_minus_sphere": "9518741050880/44933499",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "53": {
+          "d": 1405,
+          "n": 2810,
+          "n_eq_2d": true,
+          "sphere_Es4": "44376082000/469",
+          "ED4_bud": "18691123717840/196981",
+          "defect_budget_ED4_minus_sphere": "24892015224960/92384089",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "59": {
+          "d": 1741,
+          "n": 3482,
+          "n_eq_2d": true,
+          "sphere_Es4": "84433792336/581",
+          "ED4_bud": "220371568144784/1512929",
+          "defect_budget_ED4_minus_sphere": "293548087007360/879011749",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "61": {
+          "d": 1861,
+          "n": 3722,
+          "n_eq_2d": true,
+          "sphere_Es4": "103123846096/621",
+          "ED4_bud": "287714810891984/1728869",
+          "defect_budget_ED4_minus_sphere": "383276887776640/1073627649",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "67": {
+          "d": 2245,
+          "n": 4490,
+          "n_eq_2d": true,
+          "sphere_Es4": "181037698000/749",
+          "ED4_bud": "121874368786576/503329",
+          "defect_budget_ED4_minus_sphere": "162378724503424/376993421",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "71": {
+          "d": 2521,
+          "n": 5042,
+          "n_eq_2d": true,
+          "sphere_Es4": "256353068176/841",
+          "ED4_bud": "969013276660784/3173939",
+          "defect_budget_ED4_minus_sphere": "1291164818254080/2669282699",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "73": {
+          "d": 2665,
+          "n": 5330,
+          "n_eq_2d": true,
+          "sphere_Es4": "302838874000/889",
+          "ED4_bud": "242028532835824/709423",
+          "defect_budget_ED4_minus_sphere": "322503181345536/630677047",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        },
+        "79": {
+          "d": 3121,
+          "n": 6242,
+          "n_eq_2d": true,
+          "sphere_Es4": "486408648976/1041",
+          "ED4_bud": "2276390452252784/4865639",
+          "defect_budget_ED4_minus_sphere": "3033568400212480/5065130199",
+          "defect_budget_positive_p_ge_5": true,
+          "room_hyp_zero_at_p3": true
+        }
+      },
+      "cert": {
+        "3": {
+          "ED4": "1680",
+          "sphere_Es4": "6000/7",
+          "ratio_ED4_over_sphere": "49/25",
+          "ED4_eq_bud": true,
+          "exceeds_4design": true
+        },
+        "5": {
+          "ED4": "120400/13",
+          "sphere_Es4": "35152/5",
+          "ratio_ED4_over_sphere": "37625/28561",
+          "ED4_eq_bud": true,
+          "exceeds_4design": true
+        }
+      }
+    },
+    "R4_budget": {
+      "proved": true,
+      "theorem": "ed4_from_exact3=\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13); R\u2084_bud=(ED4_bud\u2212ed4_from_exact3)/16 closed rational; residual \u21d4 R\u2084\u2264R\u2084_bud.",
+      "by_p": {
+        "3": {
+          "ed4_from_exact3": "-7600",
+          "factored_match": true,
+          "R4_bud": "580",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "5": {
+          "ed4_from_exact3": "-439088",
+          "factored_match": true,
+          "R4_bud": "364284/13",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "7": {
+          "ed4_from_exact3": "-6182000",
+          "factored_match": true,
+          "R4_bud": "21361608/55",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "11": {
+          "ed4_from_exact3": "-221121584",
+          "factored_match": true,
+          "R4_bud": "24468136380/1769",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "13": {
+          "ed4_from_exact3": "-834407600",
+          "factored_match": true,
+          "R4_bud": "36364338612/697",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "17": {
+          "ed4_from_exact3": "-7070466800",
+          "factored_match": true,
+          "R4_bud": "910012342896/2059",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "19": {
+          "ed4_from_exact3": "-17168875184",
+          "factored_match": true,
+          "R4_bud": "17287438754340/16109",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "23": {
+          "ed4_from_exact3": "-78896966000",
+          "factored_match": true,
+          "R4_bud": "34237825884504/6943",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "29": {
+          "ed4_from_exact3": "-502610135984",
+          "factored_match": true,
+          "R4_bud": "2764057210779060/87989",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "31": {
+          "ed4_from_exact3": "-856420723184",
+          "factored_match": true,
+          "R4_bud": "6153409491726240/114959",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "37": {
+          "ed4_from_exact3": "-3522701111600",
+          "factored_match": true,
+          "R4_bud": "10285692693401052/46717",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "41": {
+          "ed4_from_exact3": "-8003863459184",
+          "factored_match": true,
+          "R4_bud": "176275337085945720/352379",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "43": {
+          "ed4_from_exact3": "-11713410494000",
+          "factored_match": true,
+          "R4_bud": "62436357762385068/85285",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "47": {
+          "ed4_from_exact3": "-23854296143600",
+          "factored_match": true,
+          "R4_bud": "181548040344070320/121771",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "53": {
+          "ed4_from_exact3": "-62348174231600",
+          "factored_match": true,
+          "R4_bud": "767589024964907340/196981",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "59": {
+          "ed4_from_exact3": "-146998893115184",
+          "factored_match": true,
+          "R4_bud": "13899944295839397420/1512929",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "61": {
+          "ed4_from_exact3": "-191913089841584",
+          "factored_match": true,
+          "R4_bud": "20737054964758773780/1728869",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "67": {
+          "ed4_from_exact3": "-406429067706800",
+          "factored_match": true,
+          "R4_bud": "12785478630885295236/503329",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "71": {
+          "ed4_from_exact3": "-646265373263984",
+          "factored_match": true,
+          "R4_bud": "128200490097837048360/3173939",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "73": {
+          "ed4_from_exact3": "-807064803974000",
+          "factored_match": true,
+          "R4_bud": "35784411028636239864/709423",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        },
+        "79": {
+          "ed4_from_exact3": "-1518080302751984",
+          "factored_match": true,
+          "R4_bud": "461652062662019558160/4865639",
+          "budget_consistency": true,
+          "formula": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)"
+        }
+      }
+    },
+    "delsarte_moments_lp": {
+      "proved_weak_for_p_ge_5": true,
+      "p3_saturates": true,
+      "theorem": "Hamming Delsarte + E[k\u02b2] j\u22643 equalities: saturates at p=3; strictly exceeds m4f_bud at p=5,7 (still too weak).",
+      "by_p": {
+        "3": {
+          "p": 3,
+          "success": true,
+          "A4_max": 36.66666666666665,
+          "m4f_bud": 36.666666666666664,
+          "A4_max_le_bud": true,
+          "too_weak": false,
+          "R4_max": 579.9999999999998,
+          "R4_bud": 580.0,
+          "R4_max_le_bud": true
+        },
+        "5": {
+          "p": 5,
+          "success": true,
+          "A4_max": 1118.0000000000011,
+          "m4f_bud": 143.23076923076923,
+          "A4_max_le_bud": false,
+          "too_weak": true,
+          "R4_max": 29484.000000000022,
+          "R4_bud": 28021.846153846152,
+          "R4_max_le_bud": false
+        },
+        "7": {
+          "p": 7,
+          "success": true,
+          "A4_max": 9099.99999999998,
+          "m4f_bud": 428.58181818181816,
+          "A4_max_le_bud": false,
+          "too_weak": true,
+          "R4_max": 401399.99999999977,
+          "R4_bud": 388392.87272727274,
+          "R4_max_le_bud": false
+        }
+      }
+    },
+    "antipodal_dual": {
+      "proved": true,
+      "theorem": "Antipodal X \u21d2 W_k=W_{n\u2212k} \u21d2 A'_j=A'_{n\u2212j}.",
+      "by_p": {
+        "3": {
+          "W_symmetric": true,
+          "A_prime_symmetric": true,
+          "A_prime_2": "5",
+          "A_prime_4": "110/3",
+          "A4_eq_m4f_bud": true
+        },
+        "5": {
+          "W_symmetric": true,
+          "A_prime_symmetric": true,
+          "A_prime_2": "13",
+          "A_prime_4": "1862/13",
+          "A4_eq_m4f_bud": true
+        }
+      }
+    }
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "W_p_plus_1": 5,
+      "W_p_plus_1_eq_d": true,
+      "moments_match": true,
+      "R4_eq_bud": true,
+      "ED4_eq_bud": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "W_p_plus_1": 13,
+      "W_p_plus_1_eq_d": true,
+      "moments_match": true,
+      "R4_eq_bud": true,
+      "ED4_eq_bud": true
+    }
+  },
+  "status": {
+    "perfect_2colorings_proved": true,
+    "R4_budget_proved": true,
+    "weight_enumerator_closed_form": false,
+    "hyp_residual_for_all_p": false
+  },
+  "closed_forms": {
+    "ed4_from_exact3": "\u2212(p\u00b2+1)(p\u2076+3p\u2074\u221225p\u00b2+13)",
+    "sphere_Es4": "3 n\u2074/(d(d+2))",
+    "R4_bud": "(ED4_bud \u2212 ed4_from_exact3)/16",
+    "W_k": "# \u03c4-equitable bipartitions of conference srg with |S|=k"
+  },
+  "open_attack": "Closed count of \u03c4-equitable bipartitions W_k of the Paley conference srg, or character-sum / PBIBD bound on the spherical 4-design defect of Max+ in V\u208a, proving R\u2084\u2264R\u2084_bud for all primes p\u22655.",
+  "backend": "CPU Fraction algebra + scipy HiGHS LP; GPU unused (F20); F19 no class_key",
+  "F19": "no class_key",
+  "F20": "GPU unused",
+  "residual_closed": false
+}

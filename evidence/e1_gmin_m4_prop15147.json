@@ -1,0 +1,422 @@
+{
+  "prop": "15.147",
+  "title": "Prop 15.147: Inclusion-density residual channel; ULC bound U<d4_suf would close residual but ULC fails slightly",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Residual for p\u22657 rewritten as d\u2084\u2264d4_suf with Max+-free d\u2081,d\u2082,d\u2083 and R\u2084=E[k^{underline 4}].  The ULC value U=d\u2083\u00b2/d\u2082 lies strictly below d4_suf for all primes p\u22655, so ULC would finish residual \u2014 but ULC fails by ~2\u20134% at p=5,7 while residual still holds.  N_ED4_SUF OPEN. L OPEN.",
+  "proved": {
+    "R4_eq_falling4": true,
+    "inclusion_d1_d2_d3_maxplus_free": true,
+    "residual_iff_d4_le_d4_suf": true,
+    "ULC_U_strictly_below_d4_suf": true,
+    "ULC_fails_census_p5_p7": true,
+    "residual_for_all_p_ge_5": false,
+    "type_free_d4_le_d4_suf_all_p": false,
+    "ULC_holds_general": false,
+    "hyp_residual_for_all_p": false
+  },
+  "algebra": {
+    "falling": {
+      "proved": true,
+      "theorem": "R\u2084=E[k^{underline 4}]; exact_\u22643=6E[k\u00b3]\u221211E[k\u00b2]+6E[k] under design moments j\u22643.",
+      "by_p": {
+        "5": {
+          "exact_le3": "14300",
+          "power_conversion": "14300",
+          "match_algebra": true,
+          "R4_census": "364284/13",
+          "falling4_census": "364284/13",
+          "R4_eq_falling4": true
+        },
+        "7": {
+          "exact_le3": "98000",
+          "power_conversion": "98000",
+          "match_algebra": true,
+          "R4_census": "158829624/409",
+          "falling4_census": "158829624/409",
+          "R4_eq_falling4": true
+        },
+        "11": {
+          "exact_le3": "1387628",
+          "power_conversion": "1387628",
+          "match_algebra": true
+        },
+        "13": {
+          "exact_le3": "3734900",
+          "power_conversion": "3734900",
+          "match_algebra": true
+        },
+        "17": {
+          "exact_le3": "18438200",
+          "power_conversion": "18438200",
+          "match_algebra": true
+        },
+        "19": {
+          "exact_le3": "35806868",
+          "power_conversion": "35806868",
+          "match_algebra": true
+        }
+      },
+      "n_checked": 23
+    },
+    "inclusion_le3": {
+      "proved": true,
+      "theorem": "d\u2081=1/2, d\u2082=(p\u00b2+1)/(4p\u00b2), d\u2083=(p\u00b2+3)/(8p\u00b2) Max+-free (exchangeable design moments).",
+      "by_p": {
+        "5": {
+          "d1": "1/2",
+          "d2": "13/50",
+          "d3": "7/50",
+          "match": true
+        },
+        "7": {
+          "d1": "1/2",
+          "d2": "25/98",
+          "d3": "13/98",
+          "match": true
+        },
+        "11": {
+          "d1": "1/2",
+          "d2": "61/242",
+          "d3": "31/242",
+          "match": true
+        },
+        "13": {
+          "d1": "1/2",
+          "d2": "85/338",
+          "d3": "43/338",
+          "match": true
+        },
+        "17": {
+          "d1": "1/2",
+          "d2": "145/578",
+          "d3": "73/578",
+          "match": true
+        },
+        "19": {
+          "d1": "1/2",
+          "d2": "181/722",
+          "d3": "91/722",
+          "match": true
+        }
+      },
+      "n_checked": 23
+    },
+    "d4_residual": {
+      "proved": true,
+      "theorem": "d\u2084=R\u2084/(n)\u2084; for p\u22657, \u03b4\u00b2\u2264\u03c1_min\u00b2 \u21d4 d\u2084\u2264d4_suf. Cert d\u2084\u2264d4_suf at p=5,7.",
+      "by_p": {
+        "5": {
+          "d4_pair": "30357/388700",
+          "d4_suf": "1123/14375",
+          "d4_bud": "30357/388700",
+          "saturates_bud": true,
+          "match": true
+        },
+        "7": {
+          "d4_pair": "2303523/32787076",
+          "d4_suf": "87224/1241317",
+          "le_suf": true,
+          "match": true
+        },
+        "11": {
+          "d4_flat": "9963/151844",
+          "d4_suf": "3315227/50526091",
+          "d4_bud": "23988369/365595692",
+          "match": true
+        },
+        "13": {
+          "d4_flat": "299589/4628572",
+          "d4_suf": "12657689/195557167",
+          "d4_bud": "432908793/6688286540",
+          "match": true
+        },
+        "17": {
+          "d4_flat": "1502859/23555812",
+          "d4_suf": "108581654/1701907417",
+          "d4_bud": "6319530159/99052189460",
+          "match": true
+        },
+        "19": {
+          "d4_flat": "2931573/46137244",
+          "d4_suf": "264574577/4163886271",
+          "d4_bud": "96041326413/1511502250684",
+          "match": true
+        },
+        "23": {
+          "d4_flat": "9233799/146082292",
+          "d4_suf": "1221170084/19319383117",
+          "d4_bud": "7628749083/120689752420",
+          "match": true
+        },
+        "29": {
+          "d4_flat": "37130733/589880764",
+          "d4_suf": "7806736877/124022430631",
+          "d4_bud": "6581088597093/104551056492124",
+          "match": true
+        },
+        "31": {
+          "d4_flat": "55409523/881048644",
+          "d4_suf": "13312138202/211671936721",
+          "d4_bud": "12819603107763/203840295324484",
+          "match": true
+        },
+        "37": {
+          "d4_flat": "160238289/2552620972",
+          "d4_suf": "54841554839/873634527667",
+          "d4_bud": "15037562417253/239550715117340",
+          "match": true
+        },
+        "41": {
+          "d4_flat": "12900081/205666988",
+          "d4_suf": "1708067924/27231858757",
+          "d4_bud": "209851591768983/3345680117611444",
+          "match": true
+        },
+        "43": {
+          "d4_flat": "394868169/6297449932",
+          "d4_suf": "182527811699/2910996231067",
+          "d4_bud": "67571815760157/1077651119613500",
+          "match": true
+        },
+        "47": {
+          "d4_flat": "673391979/10745079652",
+          "d4_suf": "371880721094/5933970237817",
+          "d4_bud": "32889137743491/524800435283332",
+          "match": true
+        },
+        "53": {
+          "d4_flat": "1384774329/22109155852",
+          "d4_suf": "972457773419/15526154697067",
+          "d4_bud": "109343165949417/1745761055229772",
+          "match": true
+        },
+        "59": {
+          "d4_flat": "2635519713/42095746924",
+          "d4_suf": "2293561031327/36633823760611",
+          "d4_bud": "7988473733241033/127595618682144844",
+          "match": true
+        },
+        "61": {
+          "d4_flat": "3219151293/51423490684",
+          "d4_suf": "2994615491477/47836702208791",
+          "d4_bud": "11148954282128373/178096055179201564",
+          "match": true
+        },
+        "67": {
+          "d4_flat": "5652381309/90317369212",
+          "d4_suf": "6343384925429/101358667598167",
+          "d4_bud": "5697628623389169/91040359752542060",
+          "match": true
+        },
+        "71": {
+          "d4_flat": "8004670383/127922452564",
+          "d4_suf": "10087885851752/161214270843781",
+          "d4_bud": "50873210356284543/813003599845800724",
+          "match": true
+        },
+        "73": {
+          "d4_flat": "9456604599/151135491892",
+          "d4_suf": "12598561478684/201350259073117",
+          "d4_bud": "184008037293987/2940817175075780",
+          "match": true
+        },
+        "79": {
+          "d4_flat": "15190520283/242814867364",
+          "d4_suf": "23701009273502/378851896804681",
+          "d4_bud": "8703847335256779/139127791320902372",
+          "match": true
+        },
+        "83": {
+          "d4_flat": "20430794709/326608234012",
+          "d4_suf": "35186936189729/562501031027167",
+          "d4_bud": "48494636479994889/775238937292053260",
+          "match": true
+        },
+        "89": {
+          "d4_flat": "31057394943/496542174484",
+          "d4_suf": "61501406338352/983277641021941",
+          "d4_bud": "487275650194823823/7790508873952382164",
+          "match": true
+        },
+        "97": {
+          "d4_flat": "2263269573/36189234524",
+          "d4_suf": "122446844623994/1957900918908817",
+          "d4_bud": "46093890711469803/737032230237559012",
+          "match": true
+        }
+      }
+    },
+    "ulc_below_suf": {
+      "proved": true,
+      "theorem": "U=d\u2083\u00b2/d\u2082=(p\u00b2+3)\u00b2/(16p\u00b2(p\u00b2+1)) < d4_suf for all primes p\u22655 (P(p\u00b2)=(p\u00b2\u22121)(p\u2078\u2212\u2026)>0).  Hence d\u2084\u2264U \u21d2 residual.",
+      "P_poly": "x^5-8x^4+78x^3-4x^2-7x-60=(x-1)(x^4-7x^3+71x^2+67x+60)",
+      "quartic_min_on_0_200_ge_60": true,
+      "by_p": {
+        "5": {
+          "U": "49/650",
+          "d4_suf": "1123/14375",
+          "U_lt_d4_suf": true,
+          "P_p2": 7856640,
+          "match": true,
+          "ratio_suf_over_U": 1.0363087843833185
+        },
+        "7": {
+          "U": "169/2450",
+          "d4_suf": "87224/1241317",
+          "U_lt_d4_suf": true,
+          "P_p2": 245523456,
+          "match": true,
+          "ratio_suf_over_U": 1.0186680282541867
+        },
+        "11": {
+          "U": "961/14762",
+          "d4_suf": "3315227/50526091",
+          "U_lt_d4_suf": true,
+          "P_p2": 24360675840,
+          "match": true,
+          "ratio_suf_over_U": 1.0079044998487623
+        },
+        "13": {
+          "U": "1849/28730",
+          "d4_suf": "12657689/195557167",
+          "U_lt_d4_suf": true,
+          "P_p2": 131709021696,
+          "match": true,
+          "ratio_suf_over_U": 1.0057253537390127
+        },
+        "17": {
+          "U": "5329/83810",
+          "d4_suf": "108581654/1701907417",
+          "U_lt_d4_suf": true,
+          "P_p2": 1962070235136,
+          "match": true,
+          "ratio_suf_over_U": 1.0033920190240937
+        },
+        "19": {
+          "U": "8281/130682",
+          "d4_suf": "264574577/4163886271",
+          "U_lt_d4_suf": true,
+          "P_p2": 5998866808320,
+          "match": true,
+          "ratio_suf_over_U": 1.0027259149592593
+        },
+        "23": {
+          "U": "17689/280370",
+          "d4_suf": "1221170084/19319383117",
+          "U_lt_d4_suf": true,
+          "P_p2": 40811569007616,
+          "match": true,
+          "ratio_suf_over_U": 1.0018695131757027
+        },
+        "29": {
+          "U": "44521/708122",
+          "d4_suf": "7806736877/124022430631",
+          "U_lt_d4_suf": true,
+          "P_p2": 416751655380480,
+          "match": true,
+          "ratio_suf_over_U": 1.001180725438653
+        }
+      },
+      "n_checked": 23
+    },
+    "ulc_fails": {
+      "proved": true,
+      "theorem": "ULC d\u2084\u2264U fails at p=5,7 (d\u2084/U\u22481.036,1.019) while d\u2084\u2264d4_suf holds; d4_suf/U of same order.  As p\u2192\u221e, d4_suf/U\u21921\u207a and U,d4_suf\u21921/16.",
+      "by_p": {
+        "5": {
+          "d4_W": "30357/388700",
+          "U": "49/650",
+          "d4_over_U": 1.0360043683025049,
+          "ULC_fails": true,
+          "d4_le_suf": true,
+          "d4_suf_over_U": 1.0363087843833185
+        },
+        "7": {
+          "d4_W": "6617901/94192700",
+          "U": "169/2450",
+          "d4_over_U": 1.0185501096289054,
+          "ULC_fails": true,
+          "d4_le_suf": true,
+          "d4_suf_over_U": 1.0186680282541867
+        }
+      },
+      "independent_limit": "1/16"
+    },
+    "open": {
+      "residual_closed_general": false,
+      "type_free_d4_le_d4_suf_all_p": false,
+      "ulc_closes_if_true": true,
+      "ulc_holds": false,
+      "open": "Prove d\u2084\u2264d4_suf for primes p\u22657 (type-free). Near-miss: relax ULC by a factor \u2264 d4_suf/U, or closed W_k / Gauss-sum 4-wise counts.",
+      "dead": [
+        "plain_ULC_d4_le_d3sq_over_d2",
+        "jensen_spectral_mass_w_star",
+        "type_list_residual_p_ge_11"
+      ]
+    }
+  },
+  "closed_forms": {
+    "d1": "1/2",
+    "d2": "(p^2+1)/(4p^2)",
+    "d3": "(p^2+3)/(8p^2)",
+    "U_ulc": "(p^2+3)^2/(16 p^2 (p^2+1))",
+    "R4": "E[k(k-1)(k-2)(k-3)]",
+    "residual_p_ge_7": "d4 <= d4_suf",
+    "sample": {
+      "5": {
+        "d2": "13/50",
+        "d3": "7/50",
+        "U": "49/650",
+        "d4_flat": "39/500",
+        "d4_suf": "1123/14375",
+        "d4_bud": "30357/388700",
+        "suf_over_U": 1.0363087843833185
+      },
+      "7": {
+        "d2": "25/98",
+        "d3": "13/98",
+        "U": "169/2450",
+        "d4_flat": "1017/14476",
+        "d4_suf": "87224/1241317",
+        "d4_bud": "890067/12666500",
+        "suf_over_U": 1.0186680282541867
+      },
+      "11": {
+        "d2": "61/242",
+        "d3": "31/242",
+        "U": "961/14762",
+        "d4_flat": "9963/151844",
+        "d4_suf": "3315227/50526091",
+        "d4_bud": "23988369/365595692",
+        "suf_over_U": 1.0079044998487623
+      },
+      "13": {
+        "d2": "85/338",
+        "d3": "43/338",
+        "U": "1849/28730",
+        "d4_flat": "299589/4628572",
+        "d4_suf": "12657689/195557167",
+        "d4_bud": "432908793/6688286540",
+        "suf_over_U": 1.0057253537390127
+      }
+    }
+  },
+  "status": {
+    "p5_residual_maxplus_free": true,
+    "p7_residual_maxplus_free": true,
+    "type_free_residual_general": false,
+    "ULC_viable_as_proof": false,
+    "ULC_would_suffice_if_true": true,
+    "general_residual": false
+  },
+  "open_attack": "Prove d\u2084\u2264d4_suf for p\u22657: relaxed ULC factor, closed W_k, or Gauss-sum 4-wise regular-set densities (type-free).",
+  "backend": "CPU Fraction; GPU unused (F20)",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "residual_closed": false,
+  "compute": {
+    "workers": "Fraction algebra",
+    "gpu": "unused",
+    "primes_checked": "5..97"
+  }
+}

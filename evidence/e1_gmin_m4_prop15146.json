@@ -1,0 +1,323 @@
+{
+  "prop": "15.146",
+  "title": "Prop 15.146: Type-free R\u2084/\u03bc\u2084 residual channel; closed ED4_from_exact3; spectral mass w* too weak for Jensen",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Type-free residual rewritten as R\u2084\u2264R4_suf (\u21d4\u03bc\u2084\u2264\u03bc4_suf\u21d4\u0112[\u220f\u2084w] bound) with closed Max+-free budgets. Spectral mass bound on \u2016P f_y\u2016 is Max+-free but far too weak for Jensen residual. Residual closed only p=5,7. L OPEN.",
+  "proved": {
+    "ed4_from_exact3_closed": true,
+    "R4_residual_dictionary": true,
+    "central_moments_mu2_mu3": true,
+    "spectral_mass_w_star_too_weak": true,
+    "census_R4_p5_p7": true,
+    "residual_for_all_p_ge_5": false,
+    "type_free_R4_le_R4_suf_all_p": false,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false
+  },
+  "algebra": {
+    "ed4_exact3": {
+      "proved": true,
+      "theorem": "ED4_from_exact3 = \u2212n\u2074+28n\u00b2\u221240n (Max+-free).",
+      "by_p": {
+        "5": {
+          "ED4_from_exact3": "-439088",
+          "match": true
+        },
+        "7": {
+          "ED4_from_exact3": "-6182000",
+          "match": true
+        },
+        "11": {
+          "ED4_from_exact3": "-221121584",
+          "match": true
+        },
+        "13": {
+          "ED4_from_exact3": "-834407600",
+          "match": true
+        },
+        "17": {
+          "ED4_from_exact3": "-7070466800",
+          "match": true
+        },
+        "19": {
+          "ED4_from_exact3": "-17168875184",
+          "match": true
+        }
+      },
+      "n_checked": 23
+    },
+    "R4_dictionary": {
+      "proved": true,
+      "theorem": "\u03b4\u00b2=(2/3)(R\u2084\u2212R4_flat); \u03b4\u00b2\u2264\u03c1_min\u00b2\u21d4R\u2084\u2264R4_suf=R4_flat+(3/2)\u03c1_min\u00b2; R\u2084=n(n\u22121)(n\u22122)(n\u22123) \u0112[\u220f\u2084 w].",
+      "by_p": {
+        "5": {
+          "R4_flat": "139932/5",
+          "R4_suf": "700752/25",
+          "R4_bud": "364284/13",
+          "bar_w4_suf": "1123/14375",
+          "slack_suf_is_3_2_rho": true,
+          "slack_bud_is_3_2_room": true,
+          "match": true
+        },
+        "7": {
+          "R4_flat": "4271400/11",
+          "R4_suf": "209337600/539",
+          "R4_bud": "21361608/55",
+          "bar_w4_suf": "87224/1241317",
+          "slack_suf_is_3_2_rho": true,
+          "slack_bud_is_3_2_room": true,
+          "match": true
+        },
+        "11": {
+          "R4_flat": "401110380/29",
+          "R4_suf": "48534923280/3509",
+          "R4_bud": "24468136380/1769",
+          "bar_w4_suf": "3315227/50526091",
+          "slack_suf_is_3_2_rho": true,
+          "slack_bud_is_3_2_room": true,
+          "match": true
+        },
+        "13": {
+          "R4_flat": "2139065460/41",
+          "R4_suf": "361503597840/6929",
+          "R4_bud": "36364338612/697",
+          "bar_w4_suf": "12657689/195557167",
+          "slack_suf_is_3_2_rho": true,
+          "slack_bud_is_3_2_room": true,
+          "match": true
+        },
+        "17": {
+          "R4_flat": "31379695920/71",
+          "R4_suf": "9068739742080/20519",
+          "R4_bud": "910012342896/2059",
+          "bar_w4_suf": "108581654/1701907417",
+          "slack_suf_is_3_2_rho": true,
+          "slack_bud_is_3_2_room": true,
+          "match": true
+        },
+        "19": {
+          "R4_flat": "95510648340/89",
+          "R4_suf": "34479358874640/32129",
+          "R4_bud": "17287438754340/16109",
+          "bar_w4_suf": "264574577/4163886271",
+          "slack_suf_is_3_2_rho": true,
+          "slack_bud_is_3_2_room": true,
+          "match": true
+        }
+      },
+      "n_checked": 23
+    },
+    "central_moments": {
+      "proved": true,
+      "theorem": "\u03bc\u2082=n/2, \u03bc\u2083=0 Max+-free; \u03bc\u2084\u2212\u03bc4_flat=(3/2)\u03b4\u00b2; \u03b4\u00b2\u2264\u03c1_min\u00b2\u21d4\u03bc\u2084\u2264\u03bc4_suf.",
+      "by_p": {
+        "5": {
+          "mu2": "13",
+          "mu3": "0",
+          "mu4_flat": "2717/5",
+          "mu4_suf": "14677/25",
+          "match": true
+        },
+        "7": {
+          "mu2": "25",
+          "mu3": "0",
+          "mu4_flat": "21275/11",
+          "mu4_suf": "1081475/539",
+          "match": true
+        },
+        "11": {
+          "mu2": "61",
+          "mu3": "0",
+          "mu4_flat": "327509/29",
+          "mu4_suf": "40195889/3509",
+          "match": true
+        },
+        "13": {
+          "mu2": "85",
+          "mu3": "0",
+          "mu4_flat": "895985/41",
+          "mu4_suf": "152956565/6929",
+          "match": true
+        },
+        "17": {
+          "mu2": "145",
+          "mu3": "0",
+          "mu4_flat": "4499495/71",
+          "mu4_suf": "1307975255/20519",
+          "match": true
+        },
+        "19": {
+          "mu2": "181",
+          "mu3": "0",
+          "mu4_flat": "8780129/89",
+          "mu4_suf": "3184450469/32129",
+          "match": true
+        }
+      },
+      "n_checked": 23
+    },
+    "spectral_mass": {
+      "proved": true,
+      "theorem": "Under \u03bb_max(T)=4p: \u2016P f_y\u2016\u00b2\u2264(p\u00b2+1)(p\u00b2\u22122)(p\u00b2\u22123)(p\u00b2\u22124)/24; \u226a\u0338 residual budgets (Jensen path dead from spectral moments alone).",
+      "closed_w_star": "(p^2-3)(p^2-4)/(p^2(p^2-1))",
+      "by_p": {
+        "5": {
+          "w_star": "77/100",
+          "Pf_energy_ub": "23023/2",
+          "rho_min2": "728/25",
+          "room": "1536/65",
+          "ub_over_rho": 395.3125,
+          "too_weak_for_jensen_residual": true,
+          "match": true
+        },
+        "7": {
+          "w_star": "345/392",
+          "Pf_energy_ub": "405375/2",
+          "rho_min2": "26000/539",
+          "room": "3072/55",
+          "ub_over_rho": 4201.867788461538,
+          "too_weak_for_jensen_residual": true,
+          "match": true
+        },
+        "11": {
+          "w_star": "2301/2420",
+          "Pf_energy_ub": "16702959/2",
+          "rho_min2": "378200/3509",
+          "room": "268800/1769",
+          "ub_over_rho": 77486.36056451613,
+          "too_weak_for_jensen_residual": true,
+          "match": true
+        },
+        "13": {
+          "w_star": "4565/4732",
+          "Pf_energy_ub": "64800175/2",
+          "rho_min2": "1023400/6929",
+          "room": "150528/697",
+          "ub_over_rho": 219367.01806478406,
+          "too_weak_for_jensen_residual": true,
+          "match": true
+        },
+        "17": {
+          "w_star": "13585/13872",
+          "Pf_energy_ub": "565339775/2",
+          "rho_min2": "5080800/20519",
+          "room": "774144/2059",
+          "ub_over_rho": 1141572.8667950914,
+          "too_weak_for_jensen_residual": true,
+          "match": true
+        },
+        "19": {
+          "w_star": "21301/21660",
+          "Pf_energy_ub": "1384117679/2",
+          "rho_min2": "9882600/32129",
+          "room": "7603200/16109",
+          "ub_over_rho": 2249930.0239102566,
+          "too_weak_for_jensen_residual": true,
+          "match": true
+        }
+      },
+      "n_checked": 23,
+      "dead_for_residual": true
+    },
+    "census": {
+      "proved": true,
+      "theorem": "R\u2084\u2264R4_suf at p=5,7 (W-census and pair \u03b4\u00b2 channel).",
+      "by_p": {
+        "5": {
+          "R4_from_W": "364284/13",
+          "R4_W_le_suf": true,
+          "R4_W_le_bud": true,
+          "delta2_pair": "1536/65",
+          "R4_from_pair_delta2": "364284/13",
+          "pair_R4_le_suf": true
+        },
+        "7": {
+          "R4_from_W": "158829624/409",
+          "R4_W_le_suf": true,
+          "R4_W_le_bud": true,
+          "delta2_pair": "19180800/1840091",
+          "R4_from_pair_delta2": "64959348600/167281",
+          "pair_R4_le_suf": true
+        }
+      }
+    },
+    "open": {
+      "residual_closed_general": false,
+      "type_free_R4_le_R4_suf_all_p": false,
+      "open": "Prove R\u2084\u2264R4_suf (\u21d4 \u0112[\u220f\u2084 w]\u2264R4_suf/(n)\u2084 \u21d4 \u03bc\u2084\u2264\u03bc4_suf) for all primes p\u22657 by type-free 4-wise regular-set bounds.",
+      "dead": [
+        "jensen_plus_spectral_mass_w_star",
+        "type_list_residual_p_ge_11",
+        "crude_majorization_and_min_distance_envelopes"
+      ],
+      "preferred_attacks": [
+        "closed Max+ weight enumerator W_k",
+        "4-wise density bound for V+ \u2229 {0,1}^n regular sets",
+        "Gauss sums for m4 / character-sum c_j"
+      ]
+    }
+  },
+  "closed_forms": {
+    "ED4_from_exact3": "-n^4 + 28 n^2 - 40 n",
+    "R4_suf": "R4_flat + (3/2) rho_min2",
+    "R4_bud": "R4_flat + (3/2) room_hyp/24",
+    "delta2": "(2/3)(R4 - R4_flat)",
+    "w_star": "(p^2-3)(p^2-4)/(p^2(p^2-1))",
+    "Pf_energy_ub": "(p^2+1)(p^2-2)(p^2-3)(p^2-4)/24",
+    "sample": {
+      "5": {
+        "ED4_from_exact3": "-439088",
+        "R4_flat": "139932/5",
+        "R4_suf": "700752/25",
+        "R4_bud": "364284/13",
+        "mu4_suf": "14677/25",
+        "w_star": "77/100",
+        "Pf_ub": "23023/2"
+      },
+      "7": {
+        "ED4_from_exact3": "-6182000",
+        "R4_flat": "4271400/11",
+        "R4_suf": "209337600/539",
+        "R4_bud": "21361608/55",
+        "mu4_suf": "1081475/539",
+        "w_star": "345/392",
+        "Pf_ub": "405375/2"
+      },
+      "11": {
+        "ED4_from_exact3": "-221121584",
+        "R4_flat": "401110380/29",
+        "R4_suf": "48534923280/3509",
+        "R4_bud": "24468136380/1769",
+        "mu4_suf": "40195889/3509",
+        "w_star": "2301/2420",
+        "Pf_ub": "16702959/2"
+      },
+      "13": {
+        "ED4_from_exact3": "-834407600",
+        "R4_flat": "2139065460/41",
+        "R4_suf": "361503597840/6929",
+        "R4_bud": "36364338612/697",
+        "mu4_suf": "152956565/6929",
+        "w_star": "4565/4732",
+        "Pf_ub": "64800175/2"
+      }
+    }
+  },
+  "status": {
+    "p5_residual_maxplus_free": true,
+    "p7_residual_maxplus_free": true,
+    "type_free_residual_general": false,
+    "jensen_spectral_mass_viable": false,
+    "general_residual": false
+  },
+  "open_attack": "Prove R\u2084\u2264R4_suf for p\u22657 via 4-wise regular-set density / weight enumerator / Gauss sums (type-free).",
+  "backend": "CPU Fraction; GPU unused (F20)",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "residual_closed": false,
+  "compute": {
+    "workers": "Fraction algebra (no multi-minute CPU)",
+    "gpu": "unused",
+    "primes_checked": "5..97"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "prop": "15.137",
+  "title": "Prop 15.137: c_j over Max+ G-orbits; hemisphere formula; p=5 two-type (3/13,10/13); Q_j(hs) Max+-free; residual OPEN",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. c_j=\u2211_t w_t Q_j(y_t) on Max+ G-orbits in H_+. p=5: exact c_j=(3/13)Q_j(hs)+(10/13)Q_j(y_*). Q_j(hs) Max+-free; non-hs types need Max+-free reps/character sums for general p. N_ED4_SUF OPEN. L OPEN.",
+  "proved": {
+    "Qj_G_equivariant": true,
+    "hemisphere_decomposition": true,
+    "Max_G_orbit_census_p3_5_7": true,
+    "p5_two_type_formula": true,
+    "Qhs_maxplus_free": true,
+    "non_hs_types_maxplus_free_general": false,
+    "gauss_cj_for_all_p": false,
+    "delta_le_rho_min_for_all_p": false,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  },
+  "algebra": {
+    "equivariance": {
+      "proved": true,
+      "theorem": "Q_j(g\u00b7y)=Q_j(y) for g\u2208G, y\u2208Max+ (v_j G-invariant \u21d2 Q_j constant on Max+ G-orbits)."
+    },
+    "hemisphere": {
+      "proved": true,
+      "theorem": "G fixes \u221e \u21d2 preserves H_\u00b1={y_\u221e=\u00b11}; c_j = average of Q_j on H_+; c_j = \u2211_t w_t Q_j(y_t) over G-orbits in H_+.",
+      "formula": "c_j = sum_t w_t Q_j(y_t), w_t = |O_t| / (N/2)"
+    },
+    "census": {
+      "proved": true,
+      "theorem": "Max+ G-orbit census: p=3 r=1; p=5 r=2 (weights 3/13,10/13); p=7 r=5 types in H_+.",
+      "by_p": {
+        "3": {
+          "N": 12,
+          "n_orbits_total": 2,
+          "r_hemisphere": 1,
+          "hemisphere_sizes": [
+            6
+          ]
+        },
+        "5": {
+          "N": 260,
+          "n_orbits_total": 4,
+          "r_hemisphere": 2,
+          "hemisphere_sizes": [
+            30,
+            100
+          ]
+        },
+        "7": {
+          "N": 11452,
+          "n_orbits_total": 16,
+          "r_hemisphere": 5,
+          "hemisphere_sizes": [
+            56,
+            84,
+            294,
+            588,
+            1176
+          ],
+          "hemisphere_mass": 5726,
+          "mass_ok": true
+        }
+      }
+    },
+    "p5_formula": {
+      "proved": true,
+      "theorem": "At p=5: c_j = (3/13) Q_j(hs) + (10/13) Q_j(y_*), y_*\u2208H_+ \\ G\u00b7hs; \u2211c_j\u00b2 = room = 1536/65.",
+      "weights": {
+        "hs_type": "3/13",
+        "other_type": "10/13"
+      },
+      "room": "1536/65",
+      "room_value": "1536/65",
+      "match_room": true,
+      "Q_hs_maxplus_free": true,
+      "y_star_maxplus_free": false,
+      "note": "Q_j(hs) Max+-free; Q_j(y_*) needs Max+-free construction of y_*"
+    },
+    "Qhs": {
+      "proved": true,
+      "theorem": "Q_j(hs)=\u2211_S v_j(S) f_hs(S) is Max+-free: v_j from G-quotient of T at eigenvalue 4p (C only), f_hs from Paley F_p indicators (15.135).",
+      "applies_for_all_primes": true,
+      "sufficient_for_residual_alone": false,
+      "reason": "r>1 for p\u22655 (p=5 has other type weight 10/13)",
+      "dead_if_only_Qhs": "\u2211 Q_j(hs)\u00b2 \u226b room (p=5: ~443 vs 23.6) \u2014 same as G\u00b7hs proxy (15.135)"
+    },
+    "open": {
+      "residual_closed_general": false,
+      "open": "Max+-free classification of H_+ G-orbit types for general p, weights w_t, representatives y_t, and character sums Q_j(y_t); then \u2211_j (\u2211_t w_t Q_j(y_t))\u00b2 \u2264 room for all primes p\u22655.",
+      "available": [
+        "G-equivariance of Q_j",
+        "hemisphere formula c_j=\u2211 w_t Q_j(y_t)",
+        "Q_j(hs) Max+-free for hs type",
+        "flat_part Max+-free (15.136)",
+        "census r and w at p=3,5,7"
+      ],
+      "dead": [
+        "c_j = Q_j(hs) when r>1",
+        "G\u00b7hs-only average",
+        "class_key thrash (F19)",
+        "soft-close (F3)"
+      ],
+      "census_ok": {
+        "p3": "nu=0, residual OK",
+        "p5": "two-type formula, delta2=room=1536/65",
+        "p7": "r=5 types, delta2=19180800/1840091"
+      }
+    }
+  },
+  "closed_forms": {
+    "c_j": "sum_t w_t Q_j(y_t)",
+    "p5": "c_j = (3/13) Q_j(hs) + (10/13) Q_j(y_*)",
+    "Q_j": "sum_S v_j(S) prod_{i in S} y_i",
+    "residual_iff": "sum_j c_j^2 <= room_hyp/24",
+    "nu_G": {
+      "3": 0,
+      "5": 2,
+      "7": 7
+    },
+    "p5_weights": [
+      "3/13",
+      "10/13"
+    ],
+    "p7_hemisphere_sizes": [
+      56,
+      84,
+      294,
+      588,
+      1176
+    ]
+  },
+  "status": {
+    "hs_part_maxplus_free": true,
+    "full_cj_general_p": false,
+    "general_residual": false
+  },
+  "open_attack": "Max+-free representatives y_t of all H_+ G-orbit types for general p, and character sums for Q_j(y_t); close \u2211c_j\u00b2\u2264room.",
+  "backend": "CPU Max+ G-orbit census + Fraction algebra; GPU unused (F20); F19 no class_key",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "residual_closed": false
+}

@@ -1,0 +1,224 @@
+{
+  "prop": "15.153",
+  "title": "Prop 15.153: switched \u03bc\u2084 residual dictionary; closed \u03bc4_flat/\u03bc4_suf; m_e p=7; L OPEN",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Switched Max+: e1=e3=0, e2=1/(n\u22121). d4=(1+6/(n\u22121)+\u03bc4)/16. Residual \u21d4 \u03bc4\u2264\u03bc4_suf with \u03bc4_flat=(3p\u00b2+17)/(p\u00b2(p\u00b2\u22122)(p\u00b2\u22125)), \u03bc4_suf=(3p\u2074+37p\u00b2+60)/(p\u2074(p\u00b2\u22122)(p\u00b2\u22125)). Cert \u03bc4\u2264\u03bc4_suf and m_e at p=5,7. Need Paley/Weil bound on \u03bc4. N_ED4_SUF OPEN. L OPEN.",
+  "proved": {
+    "switched_low_moments": true,
+    "mu4_dictionary_closed": true,
+    "census_mu4_and_m_e": true,
+    "residual_for_all_p_ge_5": false,
+    "mu4_bound_for_all_p": false,
+    "hyp_residual_for_all_p": false
+  },
+  "algebra": {
+    "low_moments": {
+      "proved": true,
+      "theorem": "Switched: e1=0, e3=0, e2=1/(n\u22121) Max+-free from moments j\u22643.",
+      "by_p": {
+        "5": {
+          "E_s": "0",
+          "E_s2": "52",
+          "E_s3": "0",
+          "e2": "1/25",
+          "e3": "0",
+          "match": true
+        },
+        "7": {
+          "E_s": "0",
+          "E_s2": "100",
+          "E_s3": "0",
+          "e2": "1/49",
+          "e3": "0",
+          "match": true
+        },
+        "11": {
+          "E_s": "0",
+          "E_s2": "244",
+          "E_s3": "0",
+          "e2": "1/121",
+          "e3": "0",
+          "match": true
+        },
+        "13": {
+          "E_s": "0",
+          "E_s2": "340",
+          "E_s3": "0",
+          "e2": "1/169",
+          "e3": "0",
+          "match": true
+        },
+        "17": {
+          "E_s": "0",
+          "E_s2": "580",
+          "E_s3": "0",
+          "e2": "1/289",
+          "e3": "0",
+          "match": true
+        },
+        "19": {
+          "E_s": "0",
+          "E_s2": "724",
+          "E_s3": "0",
+          "e2": "1/361",
+          "e3": "0",
+          "match": true
+        },
+        "23": {
+          "E_s": "0",
+          "E_s2": "1060",
+          "E_s3": "0",
+          "e2": "1/529",
+          "e3": "0",
+          "match": true
+        },
+        "29": {
+          "E_s": "0",
+          "E_s2": "1684",
+          "E_s3": "0",
+          "e2": "1/841",
+          "e3": "0",
+          "match": true
+        }
+      },
+      "n_checked": 10
+    },
+    "mu4_dict": {
+      "proved": true,
+      "theorem": "d4=(1+6/(n\u22121)+\u03bc4)/16; \u03bc4_flat=(3p\u00b2+17)/(p\u00b2(p\u00b2\u22122)(p\u00b2\u22125)); \u03bc4_suf=(3p\u2074+37p\u00b2+60)/(p\u2074(p\u00b2\u22122)(p\u00b2\u22125)); residual\u21d4\u03bc4\u2264\u03bc4_suf.",
+      "by_p": {
+        "5": {
+          "mu4_flat": "1/125",
+          "mu4_suf": "143/14375",
+          "match": true
+        },
+        "7": {
+          "mu4_flat": "41/25333",
+          "mu4_suf": "2269/1241317",
+          "match": true
+        },
+        "11": {
+          "mu4_flat": "95/417571",
+          "mu4_suf": "12115/50526091",
+          "match": true
+        },
+        "13": {
+          "mu4_flat": "131/1157143",
+          "mu4_suf": "22999/195557167",
+          "match": true
+        },
+        "17": {
+          "mu4_flat": "13/346409",
+          "mu4_suf": "65329/1701907417",
+          "match": true
+        },
+        "19": {
+          "mu4_flat": "275/11534311",
+          "mu4_suf": "101095/4163886271",
+          "match": true
+        },
+        "23": {
+          "mu4_flat": "401/36520573",
+          "mu4_suf": "214789/19319383117",
+          "match": true
+        },
+        "29": {
+          "mu4_flat": "635/147470191",
+          "mu4_suf": "538255/124022430631",
+          "match": true
+        }
+      },
+      "n_checked": 10,
+      "closed_forms": {
+        "e2": "1/(n-1)",
+        "d4": "(1 + 6/(n-1) + mu4)/16",
+        "mu4_flat": "(3p^2+17)/(p^2 (p^2-2)(p^2-5))",
+        "mu4_suf": "(3p^4+37p^2+60)/(p^4 (p^2-2)(p^2-5))",
+        "baseline_B": "n(n-2)(n-3)(n+5)/16"
+      }
+    },
+    "census": {
+      "proved_census": true,
+      "theorem": "\u03bc4\u2264\u03bc4_suf and \u2211\u03c0 m_e = E_\u03bc[k]\u2264k_suf at p=5,7 (full W / Max+).",
+      "by_p": {
+        "5": {
+          "R4": "364284/13",
+          "mu4": "931/97175",
+          "mu4_suf": "143/14375",
+          "mu4_le_suf": true,
+          "E_mu": "37455/2366",
+          "k_suf": "2771/175",
+          "E_mu_le_k_suf": true,
+          "slack_mu4": "892/2429375"
+        },
+        "7": {
+          "R4": "158829624/409",
+          "mu4": "39979/23548175",
+          "mu4_suf": "2269/1241317",
+          "mu4_le_suf": true,
+          "E_mu": "7415451/265850",
+          "k_suf": "195469/7007",
+          "E_mu_le_k_suf": true,
+          "slack_mu4": "1651844/12692466325"
+        }
+      },
+      "m_e_p5": {
+        "0": "10241/676",
+        "1": "24038/1521",
+        "2": "2805/169",
+        "3": "3082/169"
+      },
+      "m_e_p7": {
+        "0": "1397486/51125",
+        "1": "568587/20450",
+        "2": "522226/18405",
+        "3": "298724/10225"
+      },
+      "sum_pi_m_p5": "37455/2366",
+      "sum_pi_m_p7": "7415451/265850",
+      "m_e_matches_E_mu": true,
+      "p7_note": "True census \u03b4\u00b2=82176/4499 exceeds pair-channel P7_DELTA2_PAIR; both still give residual."
+    },
+    "open": {
+      "residual_closed_general": false,
+      "mu4_le_mu4_suf_all_p": false,
+      "open": "Prove \u03bc\u2084 \u2264 \u03bc4_suf for all primes p\u22657 via Paley/Weil bounds on switched 4-point correlations m\u2084^{sw}, or character-sum m_e.",
+      "sufficient_targets": [
+        "mu4_le_mu4_suf_character_sum",
+        "uniform_m4_sw_bound",
+        "character_sum_m_e_fixed_triple",
+        "R4_le_R4_suf"
+      ],
+      "dead": [
+        "plain_ULC",
+        "pure_t_e_of_k_all_p",
+        "CS_Popoviciu_on_Cov",
+        "type_list_free_orbits_p_ge_11"
+      ],
+      "character_sum_surface": "\u03bc\u2084 = avg m\u2084^{sw}(S) on conference/Paley over F_{p\u00b2}; Weil bounds on character sums of products of quadratic characters."
+    }
+  },
+  "closed_forms": {
+    "e2": "1/(n-1)",
+    "d4": "(1 + 6/(n-1) + mu4)/16",
+    "mu4_flat": "(3p^2+17)/(p^2 (p^2-2)(p^2-5))",
+    "mu4_suf": "(3p^4+37p^2+60)/(p^4 (p^2-2)(p^2-5))",
+    "baseline_B": "n(n-2)(n-3)(n+5)/16"
+  },
+  "status": {
+    "p5_residual_maxplus_free": true,
+    "p7_residual_maxplus_free": true,
+    "type_free_residual_general": false,
+    "mu4_channel_ready": true,
+    "general_residual": false
+  },
+  "open_attack": "Paley/Weil character-sum bound \u03bc\u2084\u2264\u03bc4_suf (or m\u2084^{sw} on strata), or character-sum m_e on fixed type-e triples.",
+  "backend": "CPU Fraction + W-census p=5,7; GPU unused (F20)",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "residual_closed": false,
+  "compute": {
+    "workers": "Fraction algebra",
+    "gpu": "unused"
+  }
+}

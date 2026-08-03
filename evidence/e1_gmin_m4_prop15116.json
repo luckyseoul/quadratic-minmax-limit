@@ -1,0 +1,472 @@
+{
+  "prop": "15.116",
+  "backend": "CPU Fraction + Max+ cert; GPU unused (F20); no class_key (F19)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "ed4_le_suf_for_all_p": false,
+  "kappa_bound_proved_for_all_p": false,
+  "closed_forms": {
+    "e4_poly": "s^4/24 + ((4-3n)/12) s^2 + n(n-2)/8",
+    "sum_m4_sq": "ED4/24 + n(4-3n)/6 + n(n-2)/8",
+    "kappa_dot_rho_min": "n(n-1)(n-2)(n-6)/(2 p^2 (p^2-5))",
+    "Dmax": "p^2 - 2p - 1",
+    "spot_p5_k_rm": "312",
+    "spot_p7_k_rm": "1200"
+  },
+  "e4_poly": {
+    "proved": true,
+    "theorem": "Boolean e\u2084(s)=s\u2074/24+((4\u22123n)/12)s\u00b2+n(n\u22122)/8 via Newton\u2013Girard on power sums (s,n,s,n).",
+    "by_p": {
+      "3": {
+        "n": 10,
+        "formula": "s^4/24 + ((4-3n)/12) s^2 + n(n-2)/8",
+        "matches_newton": true,
+        "spot_s0": "10"
+      },
+      "5": {
+        "n": 26,
+        "formula": "s^4/24 + ((4-3n)/12) s^2 + n(n-2)/8",
+        "matches_newton": true,
+        "spot_s0": "78"
+      },
+      "7": {
+        "n": 50,
+        "formula": "s^4/24 + ((4-3n)/12) s^2 + n(n-2)/8",
+        "matches_newton": true,
+        "spot_s0": "300"
+      },
+      "11": {
+        "n": 122,
+        "formula": "s^4/24 + ((4-3n)/12) s^2 + n(n-2)/8",
+        "matches_newton": true,
+        "spot_s0": "1830"
+      },
+      "13": {
+        "n": 170,
+        "formula": "s^4/24 + ((4-3n)/12) s^2 + n(n-2)/8",
+        "matches_newton": true,
+        "spot_s0": "3570"
+      },
+      "17": {
+        "n": 290,
+        "formula": "s^4/24 + ((4-3n)/12) s^2 + n(n-2)/8",
+        "matches_newton": true,
+        "spot_s0": "10440"
+      },
+      "19": {
+        "n": 362,
+        "formula": "s^4/24 + ((4-3n)/12) s^2 + n(n-2)/8",
+        "matches_newton": true,
+        "spot_s0": "16290"
+      },
+      "23": {
+        "n": 530,
+        "formula": "s^4/24 + ((4-3n)/12) s^2 + n(n-2)/8",
+        "matches_newton": true,
+        "spot_s0": "34980"
+      },
+      "29": {
+        "n": 842,
+        "formula": "s^4/24 + ((4-3n)/12) s^2 + n(n-2)/8",
+        "matches_newton": true,
+        "spot_s0": "88410"
+      },
+      "31": {
+        "n": 962,
+        "formula": "s^4/24 + ((4-3n)/12) s^2 + n(n-2)/8",
+        "matches_newton": true,
+        "spot_s0": "115440"
+      },
+      "37": {
+        "n": 1370,
+        "formula": "s^4/24 + ((4-3n)/12) s^2 + n(n-2)/8",
+        "matches_newton": true,
+        "spot_s0": "234270"
+      },
+      "41": {
+        "n": 1682,
+        "formula": "s^4/24 + ((4-3n)/12) s^2 + n(n-2)/8",
+        "matches_newton": true,
+        "spot_s0": "353220"
+      },
+      "43": {
+        "n": 1850,
+        "formula": "s^4/24 + ((4-3n)/12) s^2 + n(n-2)/8",
+        "matches_newton": true,
+        "spot_s0": "427350"
+      },
+      "47": {
+        "n": 2210,
+        "formula": "s^4/24 + ((4-3n)/12) s^2 + n(n-2)/8",
+        "matches_newton": true,
+        "spot_s0": "609960"
+      },
+      "53": {
+        "n": 2810,
+        "formula": "s^4/24 + ((4-3n)/12) s^2 + n(n-2)/8",
+        "matches_newton": true,
+        "spot_s0": "986310"
+      },
+      "59": {
+        "n": 3482,
+        "formula": "s^4/24 + ((4-3n)/12) s^2 + n(n-2)/8",
+        "matches_newton": true,
+        "spot_s0": "1514670"
+      }
+    }
+  },
+  "sum_m4_from_ed4": {
+    "proved": true,
+    "theorem": "\u2211 m\u2084\u00b2 = ED4/24 + n(4\u22123n)/6 + n(n\u22122)/8, using e\u2084 poly and E[D]=E[D\u00b3]=0, E[D\u00b2]=2n on Max+ pairs."
+  },
+  "kappa_rho_min": {
+    "proved": true,
+    "theorem": "\u27e8\u03ba,\u03c1_min\u27e9=n(n\u22121)(n\u22122)(n\u22126)/(2p\u00b2(p\u00b2\u22125)) from \u27e8\u03ba,T\u03ba\u27e9=0, balanced b\u00b1 split, \u2016b\u2016\u2082\u00b2=576 n\u2083/p\u2074.",
+    "by_p": {
+      "3": {
+        "closed": "40",
+        "from_b2": "40",
+        "match": true,
+        "b2": "640/3",
+        "den_12_p2_minus_5": 48
+      },
+      "5": {
+        "closed": "312",
+        "from_b2": "312",
+        "match": true,
+        "b2": "14976/5",
+        "den_12_p2_minus_5": 240
+      },
+      "7": {
+        "closed": "1200",
+        "from_b2": "1200",
+        "match": true,
+        "b2": "633600/49",
+        "den_12_p2_minus_5": 528
+      },
+      "11": {
+        "closed": "7320",
+        "from_b2": "7320",
+        "match": true,
+        "b2": "10189440/121",
+        "den_12_p2_minus_5": 1392
+      },
+      "13": {
+        "closed": "14280",
+        "from_b2": "14280",
+        "match": true,
+        "b2": "28103040/169",
+        "den_12_p2_minus_5": 1968
+      },
+      "17": {
+        "closed": "41760",
+        "from_b2": "41760",
+        "match": true,
+        "b2": "142318080/289",
+        "den_12_p2_minus_5": 3408
+      },
+      "19": {
+        "closed": "65160",
+        "from_b2": "65160",
+        "match": true,
+        "b2": "278363520/361",
+        "den_12_p2_minus_5": 4272
+      },
+      "23": {
+        "closed": "139920",
+        "from_b2": "139920",
+        "match": true,
+        "b2": "879816960/529",
+        "den_12_p2_minus_5": 6288
+      },
+      "29": {
+        "closed": "353640",
+        "from_b2": "353640",
+        "match": true,
+        "b2": "3547716480/841",
+        "den_12_p2_minus_5": 10032
+      },
+      "31": {
+        "closed": "461760",
+        "from_b2": "461760",
+        "match": true,
+        "b2": "5297310720/961",
+        "den_12_p2_minus_5": 11472
+      },
+      "37": {
+        "closed": "937080",
+        "from_b2": "937080",
+        "match": true,
+        "b2": "15338125440/1369",
+        "den_12_p2_minus_5": 16368
+      },
+      "41": {
+        "closed": "1412880",
+        "from_b2": "1412880",
+        "match": true,
+        "b2": "28415842560/1681",
+        "den_12_p2_minus_5": 20112
+      },
+      "43": {
+        "closed": "1709400",
+        "from_b2": "1709400",
+        "match": true,
+        "b2": "37825603200/1849",
+        "den_12_p2_minus_5": 22128
+      },
+      "47": {
+        "closed": "2439840",
+        "from_b2": "2439840",
+        "match": true,
+        "b2": "64528888320/2209",
+        "den_12_p2_minus_5": 26448
+      },
+      "53": {
+        "closed": "3945240",
+        "from_b2": "3945240",
+        "match": true,
+        "b2": "132749435520/2809",
+        "den_12_p2_minus_5": 33648
+      },
+      "59": {
+        "closed": "6058680",
+        "from_b2": "6058680",
+        "match": true,
+        "b2": "252719660160/3481",
+        "den_12_p2_minus_5": 41712
+      }
+    }
+  },
+  "flat_identity": {
+    "proved": true,
+    "theorem": "ED4_flat/24 + n(4\u22123n)/6 + n(n\u22122)/8 = \u2016\u03ba\u2016\u2082\u00b2/p\u2074 + \u03c1_min\u00b2 + 2\u27e8\u03ba,\u03c1_min\u27e9/p\u00b2 for all primes p\u22653, p\u00b2\u22605.",
+    "by_p": {
+      "3": {
+        "lhs_flat_const": "110/3",
+        "rhs_pythag_flat": "110/3",
+        "match": true
+      },
+      "5": {
+        "lhs_flat_const": "598/5",
+        "rhs_pythag_flat": "598/5",
+        "match": true
+      },
+      "7": {
+        "lhs_flat_const": "4100/11",
+        "rhs_pythag_flat": "4100/11",
+        "match": true
+      },
+      "11": {
+        "lhs_flat_const": "57950/29",
+        "rhs_pythag_flat": "57950/29",
+        "match": true
+      },
+      "13": {
+        "lhs_flat_const": "155890/41",
+        "rhs_pythag_flat": "155890/41",
+        "match": true
+      },
+      "17": {
+        "lhs_flat_const": "769080/71",
+        "rhs_pythag_flat": "769080/71",
+        "match": true
+      },
+      "19": {
+        "lhs_flat_const": "1493250/89",
+        "rhs_pythag_flat": "1493250/89",
+        "match": true
+      },
+      "23": {
+        "lhs_flat_const": "4675660/131",
+        "rhs_pythag_flat": "4675660/131",
+        "match": true
+      },
+      "29": {
+        "lhs_flat_const": "18713450/209",
+        "rhs_pythag_flat": "18713450/209",
+        "match": true
+      },
+      "31": {
+        "lhs_flat_const": "27898000/239",
+        "rhs_pythag_flat": "27898000/239",
+        "match": true
+      },
+      "37": {
+        "lhs_flat_const": "80510790/341",
+        "rhs_pythag_flat": "80510790/341",
+        "match": true
+      },
+      "41": {
+        "lhs_flat_const": "148941100/419",
+        "rhs_pythag_flat": "148941100/419",
+        "match": true
+      },
+      "43": {
+        "lhs_flat_const": "198147950/461",
+        "rhs_pythag_flat": "198147950/461",
+        "match": true
+      },
+      "47": {
+        "lhs_flat_const": "337714520/551",
+        "rhs_pythag_flat": "337714520/551",
+        "match": true
+      },
+      "53": {
+        "lhs_flat_const": "694033470/701",
+        "rhs_pythag_flat": "694033470/701",
+        "match": true
+      },
+      "59": {
+        "lhs_flat_const": "1320287350/869",
+        "rhs_pythag_flat": "1320287350/869",
+        "match": true
+      }
+    }
+  },
+  "aut_line": {
+    "proved_structure": true,
+    "theorem": "If dim(E_{4p}^{Aut})\u22641 then \u03b4=c v_0 and residual \u21d4 c\u00b2\u2264\u03c1_min\u00b2; when Q_0 constant, c=Q_0(halfspace) is Max+-free. Certified p=3 (c=0), p=5 (c\u00b2=room_hyp/24). dim\u22641 for general p still OPEN (F19: class_key insufficient at p=7)."
+  },
+  "min_dist_envelope": {
+    "proved_form": true,
+    "theorem": "Min-distance |D|\u2264p\u00b2\u22122p\u22121 for y\u2260\u00b1z gives an ED4 envelope; with N\u2265n it fails ED4_suf for all primes p\u22655 (dead for closing).",
+    "by_p_N_eq_n": {
+      "3": {
+        "Dmax": 2,
+        "ED4_ub_N_eq_n": "2000",
+        "ED4_suf": "6640/3",
+        "ub_le_suf": true
+      },
+      "5": {
+        "Dmax": 14,
+        "ED4_ub_N_eq_n": "35152",
+        "ED4_suf": "234832/25",
+        "ub_le_suf": false
+      },
+      "7": {
+        "Dmax": 34,
+        "ED4_ub_N_eq_n": "250000",
+        "ED4_suf": "17303600/539",
+        "ub_le_suf": false
+      },
+      "11": {
+        "Dmax": 98,
+        "ED4_ub_N_eq_n": "3631696",
+        "ED4_suf": "643134224/3509",
+        "ub_le_suf": false
+      },
+      "13": {
+        "Dmax": 142,
+        "ED4_ub_N_eq_n": "9826000",
+        "ED4_suf": "2447305040/6929",
+        "ub_le_suf": false
+      },
+      "17": {
+        "Dmax": 254,
+        "ED4_ub_N_eq_n": "48778000",
+        "ED4_suf": "20927604080/20519",
+        "ub_le_suf": false
+      },
+      "19": {
+        "Dmax": 322,
+        "ED4_ub_N_eq_n": "94875856",
+        "ED4_suf": "50951207504/32129",
+        "ub_le_suf": false
+      },
+      "23": {
+        "Dmax": 482,
+        "ED4_ub_N_eq_n": "297754000",
+        "ED4_suf": "234934070960/69299",
+        "ub_le_suf": false
+      },
+      "29": {
+        "Dmax": 782,
+        "ED4_ub_N_eq_n": "1193895376",
+        "ED4_suf": "1500742061264/175769",
+        "ub_le_suf": false
+      },
+      "31": {
+        "Dmax": 898,
+        "ED4_ub_N_eq_n": "1780554256",
+        "ED4_suf": "2558676798704/229679",
+        "ub_le_suf": false
+      }
+    },
+    "by_p_known_N": {
+      "3": {
+        "N": 12,
+        "ED4_ub": "1680",
+        "ED4_suf": "6640/3",
+        "ub_le_suf": true
+      },
+      "5": {
+        "N": 260,
+        "ED4_ub": "12688",
+        "ED4_suf": "234832/25",
+        "ub_le_suf": false
+      },
+      "7": {
+        "N": 11452,
+        "ED4_ub": "47520400/409",
+        "ED4_suf": "17303600/539",
+        "ub_le_suf": false
+      }
+    },
+    "closes_residual": false
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "ED4": "1680",
+      "sum_m4_sq": "110/3",
+      "delta2_from_ED4": "0",
+      "delta2_from_pythag": "0",
+      "delta2_match": true,
+      "rho_min2": "200/9",
+      "delta2_le_rho_min2": true,
+      "ED4_le_suf": true,
+      "kappa_dot_rho_min": "40",
+      "coherent_mass_eq_delta2": true
+    },
+    "5": {
+      "p": 5,
+      "skipped": true
+    },
+    "7": {
+      "p": 7,
+      "skipped": true
+    }
+  },
+  "general_status": {
+    "e4_poly_proved": true,
+    "sum_m4_from_ED4_proved": true,
+    "kappa_rho_min_proved": true,
+    "flat_identity_proved": true,
+    "coherent_mass_eq_delta2_proved": true,
+    "aut_line_structure_proved": true,
+    "min_dist_envelope_too_weak": true,
+    "ed4_le_suf_for_all_p": false,
+    "delta_le_rho_min_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "open_residual": "Prove coherent mass \u03b4\u00b2=\u2016E_y P_{E_4p} f_y\u2016\u2082\u00b2 \u2264 \u03c1_min\u00b2 for all primes p\u22655. Prefer Aut-line (dim E_4p^{Aut}\u22641 + Q_0(halfspace)) or direct coherent bound. F19: no class_key thrash."
+  },
+  "attack_surface": "Prove coherent mass \u03b4\u00b2=\u2016E_y P_{E_4p} f_y\u2016\u2082\u00b2 \u2264 \u03c1_min\u00b2 for all primes p\u22655. Prefer Aut-line (dim E_4p^{Aut}\u22641 + Q_0(halfspace)) or direct coherent bound. F19: no class_key thrash.",
+  "verdict": "Proved: e\u2084 poly; \u2211m\u2084\u00b2=ED4/24+const(n); \u27e8\u03ba,\u03c1_min\u27e9 closed; flat Pythagoras identity; coherent mass=\u03b4\u00b2; Aut-line criterion when dim E_4p^{Aut}\u22641. Min-distance ED4 envelope too weak for p\u22655. Cert \u03b4\u00b2\u2264\u03c1_min\u00b2 at p=3,5,7. OPEN: coherent mass \u2264\u03c1_min\u00b2 general p. L OPEN.",
+  "settlement_note": "No soft-close. N_ED4_SUF still open. Attack: Aut-line Q_0(halfspace) or direct coherent mass bound (not full E_4p energy / not class_key).",
+  "proved": {
+    "e4_poly": true,
+    "sum_m4_from_ED4": true,
+    "kappa_rho_min": true,
+    "flat_identity": true,
+    "coherent_mass_eq_delta2": true,
+    "aut_line_structure": true,
+    "min_dist_envelope_form": true,
+    "min_dist_closes_residual": false,
+    "cert_p3_p5_p7": true,
+    "ed4_le_suf_for_all_p": false,
+    "delta_le_rho_min_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  }
+}

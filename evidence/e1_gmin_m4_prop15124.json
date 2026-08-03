@@ -1,0 +1,676 @@
+{
+  "prop": "15.124",
+  "title": "Prop 15.124: closed weight moments j\u22643; E[k\u2074] partition; residual as 4-wise; Delsarte weak p\u22655",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Structure only: moments through order 3 closed; residual isolated as R\u2084 / 4-wise / A'\u2084. Closed W_k still open. N_ED4_SUF OPEN. L OPEN.",
+  "proved": {
+    "moments_le3_maxplus_free": true,
+    "exact_partition_k4": true,
+    "residual_dictionary_R4": true,
+    "delsarte_weak_p_ge_5": true,
+    "weight_enumerator_closed": false,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  },
+  "algebra": {
+    "moments": {
+      "proved": true,
+      "theorem": "E[k]=n/2, E[k\u00b2]=n(n+2)/4, E[k\u00b3]=n\u00b2(n+6)/8 Max+-free (from E[s\u00b2]=2n, E[s]=0, E[s\u00b3]=0 after switch).",
+      "by_p": {
+        "3": {
+          "E_k": "5",
+          "E_k2": "30",
+          "E_k3": "200",
+          "E_s2": "20",
+          "match": true
+        },
+        "5": {
+          "E_k": "13",
+          "E_k2": "182",
+          "E_k3": "2704",
+          "E_s2": "52",
+          "match": true
+        },
+        "7": {
+          "E_k": "25",
+          "E_k2": "650",
+          "E_k3": "17500",
+          "E_s2": "100",
+          "match": true
+        },
+        "11": {
+          "E_k": "61",
+          "E_k2": "3782",
+          "E_k3": "238144",
+          "E_s2": "244",
+          "match": true
+        },
+        "13": {
+          "E_k": "85",
+          "E_k2": "7310",
+          "E_k3": "635800",
+          "E_s2": "340",
+          "match": true
+        },
+        "17": {
+          "E_k": "145",
+          "E_k2": "21170",
+          "E_k3": "3111700",
+          "E_s2": "580",
+          "match": true
+        },
+        "19": {
+          "E_k": "181",
+          "E_k2": "32942",
+          "E_k3": "6028024",
+          "E_s2": "724",
+          "match": true
+        },
+        "23": {
+          "E_k": "265",
+          "E_k2": "70490",
+          "E_k3": "18820300",
+          "E_s2": "1060",
+          "match": true
+        },
+        "29": {
+          "E_k": "421",
+          "E_k2": "177662",
+          "E_k3": "75150184",
+          "E_s2": "1684",
+          "match": true
+        },
+        "31": {
+          "E_k": "481",
+          "E_k2": "231842",
+          "E_k3": "111978724",
+          "E_s2": "1924",
+          "match": true
+        },
+        "37": {
+          "E_k": "685",
+          "E_k2": "469910",
+          "E_k3": "322826800",
+          "E_s2": "2740",
+          "match": true
+        },
+        "41": {
+          "E_k": "841",
+          "E_k2": "708122",
+          "E_k3": "596945164",
+          "E_s2": "3364",
+          "match": true
+        },
+        "43": {
+          "E_k": "925",
+          "E_k2": "856550",
+          "E_k3": "794020000",
+          "E_s2": "3700",
+          "match": true
+        },
+        "47": {
+          "E_k": "1105",
+          "E_k2": "1222130",
+          "E_k3": "1352895700",
+          "E_s2": "4420",
+          "match": true
+        },
+        "53": {
+          "E_k": "1405",
+          "E_k2": "1975430",
+          "E_k3": "2779427200",
+          "E_s2": "5620",
+          "match": true
+        },
+        "59": {
+          "E_k": "1741",
+          "E_k2": "3032822",
+          "E_k3": "5286205264",
+          "E_s2": "6964",
+          "match": true
+        },
+        "61": {
+          "E_k": "1861",
+          "E_k2": "3465182",
+          "E_k3": "6455630344",
+          "E_s2": "7444",
+          "match": true
+        },
+        "67": {
+          "E_k": "2245",
+          "E_k2": "5042270",
+          "E_k3": "11329976200",
+          "E_s2": "8980",
+          "match": true
+        },
+        "71": {
+          "E_k": "2521",
+          "E_k2": "6357962",
+          "E_k3": "16041133084",
+          "E_s2": "10084",
+          "match": true
+        },
+        "73": {
+          "E_k": "2665",
+          "E_k2": "7104890",
+          "E_k3": "18948736300",
+          "E_s2": "10660",
+          "match": true
+        },
+        "79": {
+          "E_k": "3121",
+          "E_k2": "9743762",
+          "E_k3": "30429762484",
+          "E_s2": "12484",
+          "match": true
+        }
+      }
+    },
+    "partition": {
+      "proved": true,
+      "theorem": "exact_\u22643 = n/2 + n\u00b2 + 3n\u00b2/4 + 3n(n\u22122)(n+2)/4; R\u2084 = E[k\u2074] \u2212 exact_\u22643 = n(n\u22121)(n\u22122)(n\u22123) E\u0304[\u220f\u2084 w].",
+      "by_p": {
+        "3": {
+          "exact_le3": "900",
+          "t4": "5",
+          "t31": "100",
+          "t22": "75",
+          "t211": "720",
+          "avg_pair": "5/18",
+          "avg_triple": "1/6",
+          "match": true
+        },
+        "5": {
+          "exact_le3": "14300",
+          "t4": "13",
+          "t31": "676",
+          "t22": "507",
+          "t211": "13104",
+          "avg_pair": "13/50",
+          "avg_triple": "7/50",
+          "match": true
+        },
+        "7": {
+          "exact_le3": "98000",
+          "t4": "25",
+          "t31": "2500",
+          "t22": "1875",
+          "t211": "93600",
+          "avg_pair": "25/98",
+          "avg_triple": "13/98",
+          "match": true
+        },
+        "11": {
+          "exact_le3": "1387628",
+          "t4": "61",
+          "t31": "14884",
+          "t22": "11163",
+          "t211": "1361520",
+          "avg_pair": "61/242",
+          "avg_triple": "31/242",
+          "match": true
+        },
+        "13": {
+          "exact_le3": "3734900",
+          "t4": "85",
+          "t31": "28900",
+          "t22": "21675",
+          "t211": "3684240",
+          "avg_pair": "85/338",
+          "avg_triple": "43/338",
+          "match": true
+        },
+        "17": {
+          "exact_le3": "18438200",
+          "t4": "145",
+          "t31": "84100",
+          "t22": "63075",
+          "t211": "18290880",
+          "avg_pair": "145/578",
+          "avg_triple": "73/578",
+          "match": true
+        },
+        "19": {
+          "exact_le3": "35806868",
+          "t4": "181",
+          "t31": "131044",
+          "t22": "98283",
+          "t211": "35577360",
+          "avg_pair": "181/722",
+          "avg_triple": "91/722",
+          "match": true
+        },
+        "23": {
+          "exact_le3": "112148000",
+          "t4": "265",
+          "t31": "280900",
+          "t22": "210675",
+          "t211": "111656160",
+          "avg_pair": "265/1058",
+          "avg_triple": "133/1058",
+          "match": true
+        },
+        "29": {
+          "exact_le3": "448949348",
+          "t4": "421",
+          "t31": "708964",
+          "t22": "531723",
+          "t211": "447708240",
+          "avg_pair": "421/1682",
+          "avg_triple": "211/1682",
+          "match": true
+        },
+        "31": {
+          "exact_le3": "669324968",
+          "t4": "481",
+          "t31": "925444",
+          "t22": "694083",
+          "t211": "667704960",
+          "avg_pair": "481/1922",
+          "avg_triple": "241/1922",
+          "match": true
+        },
+        "37": {
+          "exact_le3": "1931795900",
+          "t4": "685",
+          "t31": "1876900",
+          "t22": "1407675",
+          "t211": "1928510640",
+          "avg_pair": "685/2738",
+          "avg_triple": "343/2738",
+          "match": true
+        },
+        "41": {
+          "exact_le3": "3573886688",
+          "t4": "841",
+          "t31": "2829124",
+          "t22": "2121843",
+          "t211": "3568934880",
+          "avg_pair": "841/3362",
+          "avg_triple": "421/3362",
+          "match": true
+        },
+        "43": {
+          "exact_le3": "4754703500",
+          "t4": "925",
+          "t31": "3422500",
+          "t22": "2566875",
+          "t211": "4748713200",
+          "avg_pair": "925/3698",
+          "avg_triple": "463/3698",
+          "match": true
+        },
+        "47": {
+          "exact_le3": "8103937400",
+          "t4": "1105",
+          "t31": "4884100",
+          "t22": "3663075",
+          "t211": "8095389120",
+          "avg_pair": "1105/4418",
+          "avg_triple": "553/4418",
+          "match": true
+        },
+        "53": {
+          "exact_le3": "16654841900",
+          "t4": "1405",
+          "t31": "7896100",
+          "t22": "5922075",
+          "t211": "16641022320",
+          "avg_pair": "1405/5618",
+          "avg_triple": "703/5618",
+          "match": true
+        },
+        "59": {
+          "exact_le3": "31683880988",
+          "t4": "1741",
+          "t31": "12124324",
+          "t22": "9093243",
+          "t211": "31662661680",
+          "avg_pair": "1741/6962",
+          "avg_triple": "871/6962",
+          "match": true
+        },
+        "61": {
+          "exact_le3": "38695676228",
+          "t4": "1861",
+          "t31": "13853284",
+          "t22": "10389963",
+          "t211": "38671431120",
+          "avg_pair": "1861/7442",
+          "avg_triple": "931/7442",
+          "match": true
+        },
+        "67": {
+          "exact_le3": "67924405700",
+          "t4": "2245",
+          "t31": "20160100",
+          "t22": "15120075",
+          "t211": "67889123280",
+          "avg_pair": "2245/8978",
+          "avg_triple": "1123/8978",
+          "match": true
+        },
+        "71": {
+          "exact_le3": "96176876048",
+          "t4": "2521",
+          "t31": "25421764",
+          "t22": "19066323",
+          "t211": "96132385440",
+          "avg_pair": "2521/10082",
+          "avg_triple": "1261/10082",
+          "match": true
+        },
+        "73": {
+          "exact_le3": "113614280000",
+          "t4": "2665",
+          "t31": "28408900",
+          "t22": "21306675",
+          "t211": "113564561760",
+          "avg_pair": "2665/10658",
+          "avg_triple": "1333/10658",
+          "match": true
+        },
+        "79": {
+          "exact_le3": "182471412248",
+          "t4": "3121",
+          "t31": "38962564",
+          "t22": "29221923",
+          "t211": "182403224640",
+          "avg_pair": "3121/12482",
+          "avg_triple": "1561/12482",
+          "match": true
+        }
+      }
+    },
+    "residual_dict": {
+      "proved": true,
+      "theorem": "ED4 = ed4_from_exact3(p) + 16 R\u2084; residual \u21d4 R\u2084 \u2264 R\u2084_bud \u21d4 A'\u2084 \u2264 m4f_bud.",
+      "by_p": {
+        "3": {
+          "ed4_from_exact3": "-7600",
+          "ED4_bud": "1680",
+          "R4_bud": "580",
+          "budget_consistency": true,
+          "m4f_bud": "110/3",
+          "m4f_flat": "110/3"
+        },
+        "5": {
+          "ed4_from_exact3": "-439088",
+          "ED4_bud": "120400/13",
+          "R4_bud": "364284/13",
+          "budget_consistency": true,
+          "m4f_bud": "1862/13",
+          "m4f_flat": "598/5"
+        },
+        "7": {
+          "ed4_from_exact3": "-6182000",
+          "ED4_bud": "1775728/55",
+          "R4_bud": "21361608/55",
+          "budget_consistency": true,
+          "m4f_bud": "23572/55",
+          "m4f_flat": "4100/11"
+        },
+        "11": {
+          "ed4_from_exact3": "-221121584",
+          "ED4_bud": "326099984/1769",
+          "R4_bud": "24468136380/1769",
+          "budget_consistency": true,
+          "m4f_bud": "3803750/1769",
+          "m4f_flat": "57950/29"
+        },
+        "13": {
+          "ed4_from_exact3": "-834407600",
+          "ED4_bud": "247320592/697",
+          "R4_bud": "36364338612/697",
+          "budget_consistency": true,
+          "m4f_bud": "2800658/697",
+          "m4f_flat": "155890/41"
+        },
+        "17": {
+          "ed4_from_exact3": "-7070466800",
+          "ED4_bud": "2106345136/2059",
+          "R4_bud": "910012342896/2059",
+          "budget_consistency": true,
+          "m4f_bud": "23077464/2059",
+          "m4f_flat": "769080/71"
+        },
+        "19": {
+          "ed4_from_exact3": "-17168875184",
+          "ED4_bud": "25609730384/16109",
+          "R4_bud": "17287438754340/16109",
+          "budget_consistency": true,
+          "m4f_bud": "277881450/16109",
+          "m4f_flat": "1493250/89"
+        },
+        "23": {
+          "ed4_from_exact3": "-78896966000",
+          "ED4_bud": "23579214064/6943",
+          "R4_bud": "34237825884504/6943",
+          "budget_consistency": true,
+          "m4f_bud": "252642236/6943",
+          "m4f_flat": "4675660/131"
+        },
+        "29": {
+          "ed4_from_exact3": "-502610135984",
+          "ED4_bud": "752117368784/87989",
+          "R4_bud": "2764057210779060/87989",
+          "budget_consistency": true,
+          "m4f_bud": "7976205650/87989",
+          "m4f_flat": "18713450/209"
+        },
+        "31": {
+          "ed4_from_exact3": "-856420723184",
+          "ED4_bud": "1281951110384/114959",
+          "R4_bud": "6153409491726240/114959",
+          "budget_consistency": true,
+          "m4f_bud": "13565165200/114959",
+          "m4f_flat": "27898000/239"
+        },
+        "37": {
+          "ed4_from_exact3": "-3522701111600",
+          "ED4_bud": "1055263799632/46717",
+          "R4_bud": "10285692693401052/46717",
+          "budget_consistency": true,
+          "m4f_bud": "11114816118/46717",
+          "m4f_flat": "80510790/341"
+        },
+        "41": {
+          "ed4_from_exact3": "-8003863459184",
+          "ED4_bud": "11991491332784/352379",
+          "R4_bud": "176275337085945720/352379",
+          "budget_consistency": true,
+          "m4f_bud": "126045973900/352379",
+          "m4f_flat": "148941100/419"
+        },
+        "43": {
+          "ed4_from_exact3": "-11713410494000",
+          "ED4_bud": "3510217371088/85285",
+          "R4_bud": "62436357762385068/85285",
+          "budget_consistency": true,
+          "m4f_bud": "36866830462/85285",
+          "m4f_flat": "198147950/461"
+        },
+        "47": {
+          "ed4_from_exact3": "-23854296143600",
+          "ED4_bud": "7149802809520/121771",
+          "R4_bud": "181548040344070320/121771",
+          "budget_consistency": true,
+          "m4f_bud": "74992428280/121771",
+          "m4f_flat": "337714520/551"
+        },
+        "53": {
+          "ed4_from_exact3": "-62348174231600",
+          "ED4_bud": "18691123717840/196981",
+          "R4_bud": "767589024964907340/196981",
+          "budget_consistency": true,
+          "m4f_bud": "195759325710/196981",
+          "m4f_flat": "694033470/701"
+        },
+        "59": {
+          "ed4_from_exact3": "-146998893115184",
+          "ED4_bud": "220371568144784/1512929",
+          "R4_bud": "13899944295839397420/1512929",
+          "budget_consistency": true,
+          "m4f_bud": "2305628161150/1512929",
+          "m4f_flat": "1320287350/869"
+        },
+        "61": {
+          "ed4_from_exact3": "-191913089841584",
+          "ED4_bud": "287714810891984/1728869",
+          "R4_bud": "20737054964758773780/1728869",
+          "budget_consistency": true,
+          "m4f_bud": "3009355837250/1728869",
+          "m4f_flat": "1612463450/929"
+        },
+        "67": {
+          "ed4_from_exact3": "-406429067706800",
+          "ED4_bud": "121874368786576/503329",
+          "R4_bud": "12785478630885295236/503329",
+          "budget_consistency": true,
+          "m4f_bud": "1273854229274/503329",
+          "m4f_flat": "2830392730/1121"
+        },
+        "71": {
+          "ed4_from_exact3": "-646265373263984",
+          "ED4_bud": "969013276660784/3173939",
+          "R4_bud": "128200490097837048360/3173939",
+          "budget_consistency": true,
+          "m4f_bud": "10124548032900/3173939",
+          "m4f_flat": "4007633700/1259"
+        },
+        "73": {
+          "ed4_from_exact3": "-807064803974000",
+          "ED4_bud": "242028532835824/709423",
+          "R4_bud": "35784411028636239864/709423",
+          "budget_consistency": true,
+          "m4f_bud": "2528375062476/709423",
+          "m4f_flat": "4734223260/1331"
+        },
+        "79": {
+          "ed4_from_exact3": "-1518080302751984",
+          "ED4_bud": "2276390452252784/4865639",
+          "R4_bud": "461652062662019558160/4865639",
+          "budget_consistency": true,
+          "m4f_bud": "23770592791400/4865639",
+          "m4f_flat": "7603380200/1559"
+        }
+      }
+    },
+    "delsarte": {
+      "proved_weak_for_p_ge_5": true,
+      "p3_saturates_budget": true,
+      "theorem": "Hamming Delsarte max A'\u2084 equals m4f_bud at p=3; strictly exceeds m4f_bud at p=5,7 (too weak for residual).",
+      "by_p": {
+        "3": {
+          "p": 3,
+          "success": true,
+          "A4_max": 36.666666666666664,
+          "m4f_bud": 36.666666666666664,
+          "A4_max_le_bud": true,
+          "gap_bud_minus_max": 0.0,
+          "too_weak_for_residual": false
+        },
+        "5": {
+          "p": 5,
+          "success": true,
+          "A4_max": 1118.0000000000011,
+          "m4f_bud": 143.23076923076923,
+          "A4_max_le_bud": false,
+          "gap_bud_minus_max": -974.7692307692319,
+          "too_weak_for_residual": true
+        },
+        "7": {
+          "p": 7,
+          "success": true,
+          "A4_max": 9100.000000000005,
+          "m4f_bud": 428.58181818181816,
+          "A4_max_le_bud": false,
+          "gap_bud_minus_max": -8671.418181818188,
+          "too_weak_for_residual": true
+        }
+      }
+    }
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "E_k_match": true,
+      "E_k2_match": true,
+      "E_k3_match": true,
+      "E_k4": "1480",
+      "exact_le3": "900",
+      "R4": "580",
+      "R4_le_bud": true,
+      "R4_eq_bud": true,
+      "ED4": "1680",
+      "ED4_via_R4_match": true,
+      "ED4_le_bud": true,
+      "ED4_eq_bud": true,
+      "A4": "110/3",
+      "A4_eq_m4f_bud": true,
+      "W_p_plus_1": 5,
+      "W_p_plus_1_eq_d": true,
+      "weight_dist": {
+        "0": 1,
+        "4": 5,
+        "6": 5,
+        "10": 1
+      }
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "E_k_match": true,
+      "E_k2_match": true,
+      "E_k3_match": true,
+      "E_k4": "550184/13",
+      "exact_le3": "14300",
+      "R4": "364284/13",
+      "R4_le_bud": true,
+      "R4_eq_bud": true,
+      "ED4": "120400/13",
+      "ED4_via_R4_match": true,
+      "ED4_le_bud": true,
+      "ED4_eq_bud": true,
+      "A4": "1862/13",
+      "A4_eq_m4f_bud": true,
+      "W_p_plus_1": 13,
+      "W_p_plus_1_eq_d": true,
+      "weight_dist": {
+        "0": 1,
+        "6": 13,
+        "8": 20,
+        "10": 36,
+        "12": 60,
+        "14": 60,
+        "16": 36,
+        "18": 20,
+        "20": 13,
+        "26": 1
+      }
+    }
+  },
+  "status": {
+    "moments_le3_proved": true,
+    "partition_proved": true,
+    "residual_dict_proved": true,
+    "weight_enumerator_closed_form": false,
+    "hyp_residual_for_all_p": false
+  },
+  "closed_forms": {
+    "E_k": "n/2",
+    "E_k2": "n(n+2)/4",
+    "E_k3": "n\u00b2(n+6)/8",
+    "E_s2": "2n",
+    "exact_le3": "n/2 + n\u00b2 + 3n\u00b2/4 + 3n(n\u22122)(n+2)/4",
+    "ED4": "ed4_from_exact3 + 16 R\u2084",
+    "residual": "R\u2084 \u2264 R\u2084_bud \u21d4 A'\u2084 \u2264 m4f_bud"
+  },
+  "open_attack": "Closed W_k (two-valued count in V\u208a\u22291^\u22a5 / regular sets in conference srg) or tight association-scheme LP / character-sum bound on E\u0304[\u220f\u2084 w] proving A'\u2084 \u2264 m4f_bud for all primes p\u22655.",
+  "backend": "CPU Fraction algebra + scipy HiGHS Delsarte LP; GPU unused (F20); F19 no class_key",
+  "F19": "no class_key",
+  "F20": "GPU unused",
+  "residual_closed": false
+}

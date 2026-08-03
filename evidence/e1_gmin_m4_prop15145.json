@@ -1,0 +1,429 @@
+{
+  "prop": "15.145",
+  "title": "Prop 15.145: Type-free Max+-free residual package (\u03b4\u00b2\u2264\u03c1_min\u00b2 dictionary, m4f_suf/ED4_suf, asymptotic 5/8)",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Type-free residual dictionary and closed forms shipped; \u03b4\u00b2\u2264\u03c1_min\u00b2 certified only at p=5,7. Type-list residual DEAD p\u226511 (15.144). N_ED4_SUF OPEN generally. L OPEN.",
+  "proved": {
+    "typefree_dictionary": true,
+    "gap_asymptotic_5_8": true,
+    "typefree_program_structure": true,
+    "census_delta2_le_rho_min2_p5_p7": true,
+    "residual_for_all_p_ge_5": false,
+    "type_free_delta2_le_rho_min2_all_p": false,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  },
+  "algebra": {
+    "dictionary": {
+      "proved": true,
+      "theorem": "\u03b4\u00b2\u2264\u03c1_min\u00b2 \u21d4 \u2016\u03c1\u2016\u00b2\u22642\u03c1_min\u00b2 \u21d4 \u2016m\u2084\u2016\u00b2\u2264m4f_suf \u21d4 ED4\u2264ED4_suf; closed m4f_suf, ED4_suf; for p\u22657 this implies Path C residual.",
+      "closed_forms": {
+        "rho_min2": "5 n (p^2-1)(p^2+3)/(6 p^2 (p^2-5))",
+        "m4f_suf": "(p^2-1)(p^2+1)(3p^4+37p^2+60)/(24 p^2 (p^2-5))",
+        "ED4_suf": "4(p^2+1)(3p^6-3p^4+7p^2-15)/(p^2 (p^2-5))"
+      },
+      "by_p": {
+        "5": {
+          "rho_min2": "728/25",
+          "m4f_flat": "598/5",
+          "m4f_suf": "3718/25",
+          "ED4_flat": "43472/5",
+          "ED4_suf": "234832/25",
+          "room_hyp_over_24": "1536/65",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "7": {
+          "rho_min2": "26000/539",
+          "m4f_flat": "4100/11",
+          "m4f_suf": "226900/539",
+          "ED4_flat": "340400/11",
+          "ED4_suf": "17303600/539",
+          "room_hyp_over_24": "3072/55",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "11": {
+          "rho_min2": "378200/3509",
+          "m4f_flat": "57950/29",
+          "m4f_suf": "7390150/3509",
+          "ED4_flat": "5240144/29",
+          "ED4_suf": "643134224/3509",
+          "room_hyp_over_24": "268800/1769",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "13": {
+          "rho_min2": "1023400/6929",
+          "m4f_flat": "155890/41",
+          "m4f_suf": "27368810/6929",
+          "ED4_flat": "14335760/41",
+          "ED4_suf": "2447305040/6929",
+          "room_hyp_over_24": "150528/697",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "17": {
+          "rho_min2": "5080800/20519",
+          "m4f_flat": "769080/71",
+          "m4f_suf": "227344920/20519",
+          "ED4_flat": "71991920/71",
+          "ED4_suf": "20927604080/20519",
+          "room_hyp_over_24": "774144/2059",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "19": {
+          "rho_min2": "9882600/32129",
+          "m4f_flat": "1493250/89",
+          "m4f_suf": "548945850/32129",
+          "ED4_flat": "140482064/89",
+          "ED4_suf": "50951207504/32129",
+          "room_hyp_over_24": "7603200/16109",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "23": {
+          "rho_min2": "31015600/69299",
+          "m4f_flat": "4675660/131",
+          "m4f_suf": "2504439740/69299",
+          "ED4_flat": "442702640/131",
+          "ED4_suf": "234934070960/69299",
+          "room_hyp_over_24": "4832256/6943",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "29": {
+          "rho_min2": "124363400/175769",
+          "m4f_flat": "18713450/209",
+          "m4f_suf": "15862374850/175769",
+          "ED4_flat": "1780924304/209",
+          "ED4_suf": "1500742061264/175769",
+          "room_hyp_over_24": "97843200/87989",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "31": {
+          "rho_min2": "185473600/229679",
+          "m4f_flat": "27898000/239",
+          "m4f_suf": "26995451600/229679",
+          "ED4_flat": "2657882864/239",
+          "ED4_suf": "2558676798704/229679",
+          "room_hyp_over_24": "146227200/114959",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "37": {
+          "rho_min2": "535697400/466829",
+          "m4f_flat": "80510790/341",
+          "m4f_suf": "110754968910/466829",
+          "ED4_flat": "7687793360/341",
+          "ED4_suf": "10537445847440/466829",
+          "room_hyp_over_24": "84837888/46717",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "41": {
+          "rho_min2": "991370800/704339",
+          "m4f_flat": "148941100/419",
+          "m4f_suf": "251361359900/704339",
+          "ED4_flat": "14236165424/419",
+          "ED4_suf": "23954786976944/704339",
+          "room_hyp_over_24": "786508800/352379",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "43": {
+          "rho_min2": "1319087000/852389",
+          "m4f_flat": "198147950/461",
+          "m4f_suf": "367694646550/852389",
+          "ED4_flat": "18946974800/461",
+          "ED4_suf": "35064614493200/852389",
+          "room_hyp_over_24": "209459712/85285",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "47": {
+          "rho_min2": "2248719200/1217159",
+          "m4f_flat": "337714520/551",
+          "m4f_suf": "748260093880/1217159",
+          "ED4_flat": "32313223280/551",
+          "ED4_suf": "71433879486320/1217159",
+          "room_hyp_over_24": "357519360/121771",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "53": {
+          "rho_min2": "4622506200/1969109",
+          "m4f_flat": "694033470/701",
+          "m4f_suf": "1954162523430/1969109",
+          "ED4_flat": "66453600080/701",
+          "ED4_suf": "186779102773520/1969109",
+          "room_hyp_over_24": "735920640/196981",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "59": {
+          "rho_min2": "8795183800/3024989",
+          "m4f_flat": "1320287350/869",
+          "m4f_suf": "4604715449150/3024989",
+          "ED4_flat": "126480975824/869",
+          "ED4_suf": "440491361254544/3024989",
+          "room_hyp_over_24": "7007884800/1512929",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "61": {
+          "rho_min2": "10742064200/3456809",
+          "m4f_flat": "1612463450/929",
+          "m4f_suf": "6010718561650/3456809",
+          "ED4_flat": "154491852944/929",
+          "ED4_suf": "575121994345424/3456809",
+          "room_hyp_over_24": "8561356800/1728869",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "67": {
+          "rho_min2": "18858089800/5032169",
+          "m4f_flat": "2830392730/1121",
+          "m4f_suf": "12724491054770/5032169",
+          "ED4_flat": "271274341520/1121",
+          "ED4_suf": "1218203113238480/5032169",
+          "room_hyp_over_24": "3007893504/503329",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "71": {
+          "rho_min2": "26703440400/6346619",
+          "m4f_flat": "4007633700/1259",
+          "m4f_suf": "20229184922100/6346619",
+          "ED4_flat": "384173737904/1259",
+          "ED4_suf": "1937260695343664/6346619",
+          "room_hyp_over_24": "21303475200/3173939",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "73": {
+          "rho_min2": "31545711600/7092899",
+          "m4f_flat": "4734223260/1331",
+          "m4f_suf": "25260221464140/7092899",
+          "ED4_flat": "453860629040/1331",
+          "ED4_suf": "2419380389232560/7092899",
+          "room_hyp_over_24": "5034064896/709423",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "79": {
+          "rho_min2": "50667562400/9729719",
+          "m4f_flat": "7603380200/1559",
+          "m4f_suf": "47503363390600/9729719",
+          "ED4_flat": "729067547504/1559",
+          "ED4_suf": "4551326585470064/9729719",
+          "room_hyp_over_24": "40443187200/4865639",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "83": {
+          "rho_min2": "68142237800/11855969",
+          "m4f_flat": "10225290530/1721",
+          "m4f_suf": "70510168698970/11855969",
+          "ED4_flat": "980583752720/1721",
+          "ED4_suf": "6756876886195280/11855969",
+          "room_hyp_over_24": "10880615424/1185769",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "89": {
+          "rho_min2": "103576981200/15675659",
+          "m4f_flat": "15541775700/1979",
+          "m4f_suf": "123209982300900/15675659",
+          "ED4_flat": "1490630074544/1979",
+          "ED4_suf": "11809766668011824/15675659",
+          "room_hyp_over_24": "82715212800/7838819",
+          "rho_lt_room": true,
+          "match": true
+        },
+        "97": {
+          "rho_min2": "173591163200/22120559",
+          "m4f_flat": "26046051920/2351",
+          "m4f_suf": "245240893678480/22120559",
+          "ED4_flat": "2498473264880/2351",
+          "ED4_suf": "23512301137172720/22120559",
+          "room_hyp_over_24": "27733278720/2212291",
+          "rho_lt_room": true,
+          "match": true
+        }
+      }
+    },
+    "gap_asymptotic": {
+      "proved": true,
+      "theorem": "room\u2212\u03c1_min\u00b2 > 0 for primes p\u22657; \u03c1_min\u00b2/room \u2192 5/8 as p\u2192\u221e (certified monotone on primes 7..97).",
+      "asymptotic_ratio": "5/8",
+      "monotone_decreasing_to_5_8": true,
+      "final_ratio": 0.6259974323029662,
+      "by_p": {
+        "7": {
+          "gap": "20528/2695",
+          "gap_closed": "20528/2695",
+          "rho_over_room": 0.8636267006802721,
+          "match": true
+        },
+        "11": {
+          "gap": "9454600/214049",
+          "gap_closed": "9454600/214049",
+          "rho_over_room": 0.7093110487996852,
+          "match": true
+        },
+        "13": {
+          "gap": "8041432/117793",
+          "gap_closed": "8041432/117793",
+          "rho_over_room": 0.6838964320935474,
+          "match": true
+        },
+        "17": {
+          "gap": "76384416/595051",
+          "gap_closed": "76384416/595051",
+          "rho_over_room": 0.6585829797605317,
+          "match": true
+        },
+        "19": {
+          "gap": "956004600/5815349",
+          "gap_closed": "956004600/5815349",
+          "rho_over_room": 0.6516976814544335,
+          "match": true
+        },
+        "23": {
+          "gap": "912436624/3672847",
+          "gap_closed": "912436624/3672847",
+          "rho_over_room": 0.6430584518663441,
+          "match": true
+        },
+        "29": {
+          "gap": "29929139800/73998749",
+          "gap_closed": "29929139800/73998749",
+          "rho_over_room": 0.6362796577802895,
+          "match": true
+        },
+        "31": {
+          "gap": "51311537600/110475599",
+          "gap_closed": "51311537600/110475599",
+          "rho_over_room": 0.6348565814853517,
+          "match": true
+        }
+      },
+      "n_primes_checked": 22
+    },
+    "typefree_program": {
+      "proved_structure": true,
+      "theorem": "\u03b4=E[P f_y]; \u03b4\u00b2=\u2016E P f_y\u2016\u00b2\u2264E\u2016P f_y\u2016\u00b2; \u03b4\u00b2=E Q_\u03b4; type-free targets: E\u2016P f\u2016\u00b2\u2264\u03c1_min\u00b2, pointwise Q_\u03b4\u2264\u03c1_min\u00b2, \u2016m\u2084\u2016\u00b2\u2264m4f_suf, ED4\u2264ED4_suf (weight enumerator / Gauss sums).",
+      "targets": [
+        "E_norm_P_fy_le_rho_min2",
+        "pointwise_Q_delta_le_rho_min2",
+        "sum_m4_sq_le_m4f_suf",
+        "ED4_le_ED4_suf"
+      ],
+      "dead": [
+        "type_list_residual_p_ge_11",
+        "class_key_thrash_F19",
+        "soft_close_from_p5_p7_F3",
+        "crude_m4_sq_le_C_n_4",
+        "PSD_majorization_ED4_le_2n3",
+        "min_distance_ED4_envelope"
+      ],
+      "references": "Props 15.102, 15.112, 15.120, 15.130, 15.136, 15.144"
+    },
+    "census": {
+      "proved": true,
+      "theorem": "\u03b4\u00b2\u2264\u03c1_min\u00b2 at p=5,7 (census); residual Max+-free closed p=5,7; \u2016\u03c1\u2016\u00b2/\u03c1_min\u00b2 < 2 at both.",
+      "p5_saturates_room": true,
+      "by_p": {
+        "5": {
+          "delta2": "1536/65",
+          "rho_min2": "728/25",
+          "room": "1536/65",
+          "rho_norm2": "17144/325",
+          "delta2_le_rho_min2": true,
+          "delta2_le_room": true,
+          "rho_norm2_le_2_rho_min2": true,
+          "m4_sq_le_m4f_suf": true,
+          "ratio_delta2_over_rho": 0.8114961961115807,
+          "ratio_rho_norm2_over_rho_min2": 1.8114961961115807
+        },
+        "7": {
+          "delta2": "19180800/1840091",
+          "rho_min2": "26000/539",
+          "room": "3072/55",
+          "rho_norm2": "480833200/8196769",
+          "delta2_le_rho_min2": true,
+          "delta2_le_room": true,
+          "rho_norm2_le_2_rho_min2": true,
+          "m4_sq_le_m4f_suf": true,
+          "ratio_delta2_over_rho": 0.21609406190320937,
+          "ratio_rho_norm2_over_rho_min2": 1.2160940619032095
+        }
+      }
+    },
+    "open": {
+      "residual_closed_general": false,
+      "residual_closed_p5_maxplus_free": true,
+      "residual_closed_p7_maxplus_free": true,
+      "type_free_delta2_le_rho_min2_all_p": false,
+      "open": "Prove \u03b4\u00b2\u2264\u03c1_min\u00b2 (or ED4\u2264ED4_suf / \u2016m\u2084\u2016\u00b2\u2264m4f_suf) for all primes p\u22657 by type-free Max+-free methods (weight enumerator, Gauss sums, pointwise Q_\u03b4). p=5 residual already closed (construction 15.138).",
+      "next_attacks": [
+        "Max+ weight enumerator of dots \u2192 closed ED4",
+        "character-sum bound on \u2016m\u2084\u2016\u00b2 or c_j without free-orbit list",
+        "pointwise Q_\u03b4(y)\u2264\u03c1_min\u00b2 via Cy=py boolean analysis"
+      ]
+    }
+  },
+  "closed_forms": {
+    "m4f_suf": "(p^2-1)(p^2+1)(3p^4+37p^2+60)/(24 p^2 (p^2-5))",
+    "ED4_suf": "4(p^2+1)(3p^6-3p^4+7p^2-15)/(p^2 (p^2-5))",
+    "rho_min2": "5 n (p^2-1)(p^2+3)/(6 p^2 (p^2-5))",
+    "room_hyp_over_24": "4(p^2-9)(p^2-1)^2/(3(p^2-5)(p^2+1))",
+    "sample": {
+      "5": {
+        "m4f_suf": "3718/25",
+        "ED4_suf": "234832/25",
+        "rho_min2": "728/25",
+        "room": "1536/65"
+      },
+      "7": {
+        "m4f_suf": "226900/539",
+        "ED4_suf": "17303600/539",
+        "rho_min2": "26000/539",
+        "room": "3072/55"
+      },
+      "11": {
+        "m4f_suf": "7390150/3509",
+        "ED4_suf": "643134224/3509",
+        "rho_min2": "378200/3509",
+        "room": "268800/1769"
+      },
+      "13": {
+        "m4f_suf": "27368810/6929",
+        "ED4_suf": "2447305040/6929",
+        "rho_min2": "1023400/6929",
+        "room": "150528/697"
+      }
+    }
+  },
+  "status": {
+    "p5_residual_maxplus_free": true,
+    "p7_residual_maxplus_free": true,
+    "type_list_residual_viable_p_ge_11": false,
+    "type_free_residual_general": false,
+    "general_residual": false
+  },
+  "open_attack": "Close \u03b4\u00b2\u2264\u03c1_min\u00b2 for general p\u22657 via weight enumerator / Gauss sums / pointwise Q_\u03b4 (type-free Max+-free).",
+  "backend": "CPU Fraction; GPU unused (F20)",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "residual_closed": false,
+  "compute": {
+    "workers": "Fraction algebra (serial-ok; no multi-minute CPU)",
+    "gpu": "unused",
+    "primes_checked": "5..97"
+  }
+}

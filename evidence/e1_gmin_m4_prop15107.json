@@ -1,0 +1,405 @@
+{
+  "prop": "15.107",
+  "backend": "CPU Fraction algebra + Max+ cert p=3,5,7; GPU unused (F20)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "kappa_bound_proved_for_all_p": false,
+  "theorem_A": {
+    "proved": true,
+    "theorem": "For every prime p\u22653: mult(\u03bb_max)\u2265d\u22121 and orth\u2264room_hyp \u21d2 \u03bb_max(\u03a6|Z)\u226416 (majorization: (16\u2212\u03bc\u0304)\u00b2 \u2265 room_hyp\u00b7(m\u2212m\u2081)/(m m\u2081)), hence 16N and bi-tight empty for p\u22655.",
+    "by_p": {
+      "3": {
+        "d": 5,
+        "m1": 4,
+        "room_hyp": "0",
+        "L_bound": 16.0,
+        "L_le_16": true,
+        "frac_gap_sq_ge_need": true,
+        "avg": "16"
+      },
+      "5": {
+        "d": 13,
+        "m1": 12,
+        "room_hyp": "36864/65",
+        "L_bound": 15.807763797129104,
+        "L_le_16": true,
+        "frac_gap_sq_ge_need": true,
+        "avg": "48/5"
+      },
+      "7": {
+        "d": 25,
+        "m1": 24,
+        "room_hyp": "73728/55",
+        "L_bound": 15.867298423455392,
+        "L_le_16": true,
+        "frac_gap_sq_ge_need": true,
+        "avg": "96/11"
+      },
+      "11": {
+        "d": 61,
+        "m1": 60,
+        "room_hyp": "6451200/1769",
+        "L_bound": 15.938667992830899,
+        "L_le_16": true,
+        "frac_gap_sq_ge_need": true,
+        "avg": "240/29"
+      },
+      "13": {
+        "d": 85,
+        "m1": 84,
+        "room_hyp": "3612672/697",
+        "L_bound": 15.955094040662807,
+        "L_le_16": true,
+        "frac_gap_sq_ge_need": true,
+        "avg": "336/41"
+      },
+      "17": {
+        "d": 145,
+        "m1": 144,
+        "room_hyp": "18579456/2059",
+        "L_bound": 15.97314246278195,
+        "L_le_16": true,
+        "frac_gap_sq_ge_need": true,
+        "avg": "576/71"
+      },
+      "19": {
+        "d": 181,
+        "m1": 180,
+        "room_hyp": "182476800/16109",
+        "L_bound": 15.97836621371927,
+        "L_le_16": true,
+        "frac_gap_sq_ge_need": true,
+        "avg": "720/89"
+      },
+      "23": {
+        "d": 265,
+        "m1": 264,
+        "room_hyp": "115974144/6943",
+        "L_bound": 15.985121731899799,
+        "L_le_16": true,
+        "frac_gap_sq_ge_need": true,
+        "avg": "1056/131"
+      },
+      "29": {
+        "d": 421,
+        "m1": 420,
+        "room_hyp": "2348236800/87989",
+        "L_bound": 15.990584056936363,
+        "L_le_16": true,
+        "frac_gap_sq_ge_need": true,
+        "avg": "1680/209"
+      },
+      "31": {
+        "d": 481,
+        "m1": 480,
+        "room_hyp": "3509452800/114959",
+        "L_bound": 15.991749236802637,
+        "L_le_16": true,
+        "frac_gap_sq_ge_need": true,
+        "avg": "1920/239"
+      },
+      "37": {
+        "d": 685,
+        "m1": 684,
+        "room_hyp": "2036109312/46717",
+        "L_bound": 15.994192693717231,
+        "L_le_16": true,
+        "frac_gap_sq_ge_need": true,
+        "avg": "2736/341"
+      },
+      "41": {
+        "d": 841,
+        "m1": 840,
+        "room_hyp": "18876211200/352379",
+        "L_bound": 15.995265042171248,
+        "L_le_16": true,
+        "frac_gap_sq_ge_need": true,
+        "avg": "3360/419"
+      },
+      "43": {
+        "d": 925,
+        "m1": 924,
+        "room_hyp": "5027033088/85285",
+        "L_bound": 15.995693264392603,
+        "L_le_16": true,
+        "frac_gap_sq_ge_need": true,
+        "avg": "3696/461"
+      },
+      "47": {
+        "d": 1105,
+        "m1": 1104,
+        "room_hyp": "8580464640/121771",
+        "L_bound": 15.996392409071266,
+        "L_le_16": true,
+        "frac_gap_sq_ge_need": true,
+        "avg": "4416/551"
+      },
+      "53": {
+        "d": 1405,
+        "m1": 1404,
+        "room_hyp": "17662095360/196981",
+        "L_bound": 15.997160640038603,
+        "L_le_16": true,
+        "frac_gap_sq_ge_need": true,
+        "avg": "5616/701"
+      },
+      "59": {
+        "d": 1741,
+        "m1": 1740,
+        "room_hyp": "168189235200/1512929",
+        "L_bound": 15.997707427211145,
+        "L_le_16": true,
+        "frac_gap_sq_ge_need": true,
+        "avg": "6960/869"
+      }
+    }
+  },
+  "four_design_le_wick": {
+    "proved": true,
+    "theorem": "The 4-design value ED4=n\u2074\u00b73/(d(d+2))=48d\u00b3/(d+2) satisfies ED4\u2264wick_hi=12n\u00b2+48n for all primes p\u22653 (n=2d).",
+    "by_p": {
+      "3": {
+        "ED4_4design": "6000/7",
+        "wick_hi": 1680,
+        "le": true,
+        "slack": "5760/7"
+      },
+      "5": {
+        "ED4_4design": "35152/5",
+        "wick_hi": 9360,
+        "le": true,
+        "slack": "11648/5"
+      },
+      "7": {
+        "ED4_4design": "250000/9",
+        "wick_hi": 32400,
+        "le": true,
+        "slack": "41600/9"
+      },
+      "11": {
+        "ED4_4design": "3631696/21",
+        "wick_hi": 184464,
+        "le": true,
+        "slack": "242048/21"
+      },
+      "13": {
+        "ED4_4design": "9826000/29",
+        "wick_hi": 354960,
+        "le": true,
+        "slack": "467840/29"
+      },
+      "17": {
+        "ED4_4design": "48778000/49",
+        "wick_hi": 1023120,
+        "le": true,
+        "slack": "1354880/49"
+      },
+      "19": {
+        "ED4_4design": "94875856/61",
+        "wick_hi": 1589904,
+        "le": true,
+        "slack": "2108288/61"
+      },
+      "23": {
+        "ED4_4design": "297754000/89",
+        "wick_hi": 3396240,
+        "le": true,
+        "slack": "4511360/89"
+      },
+      "29": {
+        "ED4_4design": "1193895376/141",
+        "wick_hi": 8547984,
+        "le": true,
+        "slack": "11370368/141"
+      },
+      "31": {
+        "ED4_4design": "1780554256/161",
+        "wick_hi": 11151504,
+        "le": true,
+        "slack": "14837888/161"
+      },
+      "37": {
+        "ED4_4design": "5142706000/229",
+        "wick_hi": 22588560,
+        "le": true,
+        "slack": "30074240/229"
+      },
+      "41": {
+        "ED4_4design": "9517173136/281",
+        "wick_hi": 34030224,
+        "le": true,
+        "slack": "45319808/281"
+      },
+      "43": {
+        "ED4_4design": "12663250000/309",
+        "wick_hi": 41158800,
+        "le": true,
+        "slack": "54819200/309"
+      },
+      "47": {
+        "ED4_4design": "21587722000/369",
+        "wick_hi": 58715280,
+        "le": true,
+        "slack": "78216320/369"
+      },
+      "53": {
+        "ED4_4design": "44376082000/469",
+        "wick_hi": 94888080,
+        "le": true,
+        "slack": "126427520/469"
+      },
+      "59": {
+        "ED4_4design": "84433792336/581",
+        "wick_hi": 145659024,
+        "le": true,
+        "slack": "194100608/581"
+      }
+    }
+  },
+  "gegenbauer": {
+    "proved": true,
+    "theorem": "Q\u2084(t)=t\u2074+\u03b1 t\u00b2+\u03b2 with \u03b1=\u22126/(d+4), \u03b2=3/((d+2)(d+4)) is orthogonal to {1,t\u00b2} on the sphere S^{d\u22121}; E_sph[t\u2074]=3/(d(d+2)); Q\u2084(1)=(d\u00b2+2d\u22128)/((d+2)(d+4))? (exact: 1+\u03b1+\u03b2).",
+    "by_p": {
+      "3": {
+        "d": 5,
+        "alpha": "-2/3",
+        "beta": "1/21",
+        "Q4_1": "8/21",
+        "sph_t4": "3/35",
+        "sphere_identity": true
+      },
+      "5": {
+        "d": 13,
+        "alpha": "-6/17",
+        "beta": "1/85",
+        "Q4_1": "56/85",
+        "sph_t4": "1/65",
+        "sphere_identity": true
+      },
+      "7": {
+        "d": 25,
+        "alpha": "-6/29",
+        "beta": "1/261",
+        "Q4_1": "208/261",
+        "sph_t4": "1/225",
+        "sphere_identity": true
+      },
+      "11": {
+        "d": 61,
+        "alpha": "-6/65",
+        "beta": "1/1365",
+        "Q4_1": "248/273",
+        "sph_t4": "1/1281",
+        "sphere_identity": true
+      },
+      "13": {
+        "d": 85,
+        "alpha": "-6/89",
+        "beta": "1/2581",
+        "Q4_1": "2408/2581",
+        "sph_t4": "1/2465",
+        "sphere_identity": true
+      },
+      "17": {
+        "d": 145,
+        "alpha": "-6/149",
+        "beta": "1/7301",
+        "Q4_1": "7008/7301",
+        "sph_t4": "1/7105",
+        "sphere_identity": true
+      },
+      "19": {
+        "d": 181,
+        "alpha": "-6/185",
+        "beta": "1/11285",
+        "Q4_1": "2184/2257",
+        "sph_t4": "1/11041",
+        "sphere_identity": true
+      }
+    }
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "ED4": 1680.0,
+      "kappa2": 960.0,
+      "proj": 960.0,
+      "orth": 0.0,
+      "room": 0.0,
+      "room_hyp": 0.0,
+      "orth_le_room_hyp": true,
+      "orth_le_room": true,
+      "kappa2_le_hyp": true,
+      "kappa2_le_96n": true,
+      "lambda_max_Phi": 16.000000000000004,
+      "lambda_max_le_16": true,
+      "L_bound_thmA": 16.0,
+      "thmA_le_16": true,
+      "kurtosis": 4.2,
+      "kurtosis_thr": 4.2
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "ED4": 9261.538461538461,
+      "kappa2": 2397.538461538461,
+      "proj": 1830.4,
+      "orth": 567.1384615384609,
+      "room": 665.6,
+      "room_hyp": 567.1384615384616,
+      "orth_le_room_hyp": true,
+      "orth_le_room": true,
+      "kappa2_le_hyp": true,
+      "kappa2_le_96n": true,
+      "lambda_max_Phi": 13.538461538461545,
+      "lambda_max_le_16": true,
+      "L_bound_thmA": 15.807763797129104,
+      "thmA_le_16": true,
+      "kurtosis": 3.4251251706873007,
+      "kurtosis_thr": 3.4615384615384617
+    },
+    "7": {
+      "p": 7,
+      "N": 11452,
+      "ED4": 31195.626520644902,
+      "kappa2": 3595.6265206449025,
+      "proj": 3345.4545454545455,
+      "orth": 250.171975190357,
+      "room": 1454.5454545454545,
+      "room_hyp": 1340.509090909091,
+      "orth_le_room_hyp": true,
+      "orth_le_room": true,
+      "kappa2_le_hyp": true,
+      "kappa2_le_96n": true,
+      "lambda_max_Phi": 10.562347188264061,
+      "lambda_max_le_16": true,
+      "L_bound_thmA": 15.867298423455392,
+      "thmA_le_16": true,
+      "kurtosis": 3.11956265206449,
+      "kurtosis_thr": 3.24
+    }
+  },
+  "general_status": {
+    "theorem_A_proved": true,
+    "theorem_B_proved": true,
+    "four_design_le_wick_proved": true,
+    "gegenbauer_coeffs_proved": true,
+    "orth_le_room_hyp_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "kappa_bound_proved_for_all_p": false,
+    "open_residual": "Prove orth\u2264room_hyp for all primes p\u22655 (\u21d4 \u03b4\u00b2\u2264room_hyp/24 \u21d4 \u03ba\u2264\u03ba_hyp). Then Theorem A \u21d2 16N \u21d2 bi-tight empty (Prop 15.61). Alternate: orth\u2264room (\u21d4\u03ba\u226496n) + Prop 15.98 \u21d2 bi-tight.",
+    "attack": "Character-sum formula for E[Q\u2084] on Paley Max+; prove E[Q\u2084]\u22642 Q\u2084(1)/N (Conjecture C*, holds p=3,5,7 with ED4_ub\u2264wick_hi); or closed weight distribution of Max+ dots."
+  },
+  "attack_surface": "Prove orth\u2264room_hyp for all primes p\u22655 (\u21d4 \u03b4\u00b2\u2264room_hyp/24 \u21d4 \u03ba\u2264\u03ba_hyp). Then Theorem A \u21d2 16N \u21d2 bi-tight empty (Prop 15.61). Alternate: orth\u2264room (\u21d4\u03ba\u226496n) + Prop 15.98 \u21d2 bi-tight.",
+  "verdict": "Proved: mult\u2265d\u22121 + orth\u2264room_hyp \u21d2 \u03bb_max\u226416 for all primes p\u22653 (Theorem A). 4-design ED4\u2264wick_hi. Gegenbauer \u03b1=\u22126/(d+4), \u03b2=3/((d+2)(d+4)). Certified orth\u2264room_hyp and 16N at p=3,5,7. OPEN: orth\u2264room_hyp for general p\u22655. L OPEN.",
+  "settlement_note": "No soft-close. Path C residual = orth\u2264room_hyp (or room).",
+  "proved": {
+    "theorem_A_16N_from_hyp": true,
+    "four_design_le_wick": true,
+    "gegenbauer_coeffs": true,
+    "sixteen_N_for_all_p": false,
+    "kappa_bound_for_all_p": false
+  }
+}

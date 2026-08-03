@@ -1,0 +1,497 @@
+{
+  "prop": "15.126",
+  "title": "Prop 15.126: geometric Hoffman seed; 1-design parameters; simplex bound; residual open",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Hoffman layer structured (geometric seed, 1-design algebra, W_{p+1}=d cert p=3,5 with V\u208a basis). Full W_k and 4-design defect bound still open. N_ED4_SUF OPEN. L OPEN.",
+  "proved": {
+    "geometric_hoffman_seed": true,
+    "one_design_algebra": true,
+    "hoffman_eq_d_cert_p3": true,
+    "hoffman_eq_d_cert_p5": true,
+    "simplex_bound": true,
+    "hoffman_ed4_contrib": true,
+    "W_hoffman_eq_d_for_all_p": false,
+    "weight_enumerator_closed": false,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  },
+  "algebra": {
+    "geometric_seed": {
+      "proved": true,
+      "theorem": "Subfield line F_p\u222a{\u221e} is a Hoffman coclique (\u03c4-equitable, \u03b1=0) after standard halfspace switch. Cert p=3,5,7.",
+      "by_p": {
+        "3": {
+          "subline_size": 4,
+          "size_eq_p_plus_1": true,
+          "regular_after_hs_switch": true,
+          "alpha": "0",
+          "beta": "2",
+          "alpha_is_0": true,
+          "match": true
+        },
+        "5": {
+          "subline_size": 6,
+          "size_eq_p_plus_1": true,
+          "regular_after_hs_switch": true,
+          "alpha": "0",
+          "beta": "3",
+          "alpha_is_0": true,
+          "match": true
+        },
+        "7": {
+          "subline_size": 8,
+          "size_eq_p_plus_1": true,
+          "regular_after_hs_switch": true,
+          "alpha": "0",
+          "beta": "4",
+          "alpha_is_0": true,
+          "match": true
+        }
+      }
+    },
+    "one_design": {
+      "proved": true,
+      "theorem": "Aut vertex-transitive + H Aut-invariant \u21d2 constant r (1-design); b(p+1)=n r; r=(p+1)/2 \u21d4 b=d.",
+      "by_p": {
+        "3": {
+          "n": 10,
+          "d": 5,
+          "k_Hoffman": 4,
+          "r_target": "2",
+          "b_if_r_target": "5",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "5": {
+          "n": 26,
+          "d": 13,
+          "k_Hoffman": 6,
+          "r_target": "3",
+          "b_if_r_target": "13",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "7": {
+          "n": 50,
+          "d": 25,
+          "k_Hoffman": 8,
+          "r_target": "4",
+          "b_if_r_target": "25",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "11": {
+          "n": 122,
+          "d": 61,
+          "k_Hoffman": 12,
+          "r_target": "6",
+          "b_if_r_target": "61",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "13": {
+          "n": 170,
+          "d": 85,
+          "k_Hoffman": 14,
+          "r_target": "7",
+          "b_if_r_target": "85",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "17": {
+          "n": 290,
+          "d": 145,
+          "k_Hoffman": 18,
+          "r_target": "9",
+          "b_if_r_target": "145",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "19": {
+          "n": 362,
+          "d": 181,
+          "k_Hoffman": 20,
+          "r_target": "10",
+          "b_if_r_target": "181",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "23": {
+          "n": 530,
+          "d": 265,
+          "k_Hoffman": 24,
+          "r_target": "12",
+          "b_if_r_target": "265",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "29": {
+          "n": 842,
+          "d": 421,
+          "k_Hoffman": 30,
+          "r_target": "15",
+          "b_if_r_target": "421",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "31": {
+          "n": 962,
+          "d": 481,
+          "k_Hoffman": 32,
+          "r_target": "16",
+          "b_if_r_target": "481",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "37": {
+          "n": 1370,
+          "d": 685,
+          "k_Hoffman": 38,
+          "r_target": "19",
+          "b_if_r_target": "685",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "41": {
+          "n": 1682,
+          "d": 841,
+          "k_Hoffman": 42,
+          "r_target": "21",
+          "b_if_r_target": "841",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "43": {
+          "n": 1850,
+          "d": 925,
+          "k_Hoffman": 44,
+          "r_target": "22",
+          "b_if_r_target": "925",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "47": {
+          "n": 2210,
+          "d": 1105,
+          "k_Hoffman": 48,
+          "r_target": "24",
+          "b_if_r_target": "1105",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "53": {
+          "n": 2810,
+          "d": 1405,
+          "k_Hoffman": 54,
+          "r_target": "27",
+          "b_if_r_target": "1405",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "59": {
+          "n": 3482,
+          "d": 1741,
+          "k_Hoffman": 60,
+          "r_target": "30",
+          "b_if_r_target": "1741",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "61": {
+          "n": 3722,
+          "d": 1861,
+          "k_Hoffman": 62,
+          "r_target": "31",
+          "b_if_r_target": "1861",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "67": {
+          "n": 4490,
+          "d": 2245,
+          "k_Hoffman": 68,
+          "r_target": "34",
+          "b_if_r_target": "2245",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "71": {
+          "n": 5042,
+          "d": 2521,
+          "k_Hoffman": 72,
+          "r_target": "36",
+          "b_if_r_target": "2521",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "73": {
+          "n": 5330,
+          "d": 2665,
+          "k_Hoffman": 74,
+          "r_target": "37",
+          "b_if_r_target": "2665",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        },
+        "79": {
+          "n": 6242,
+          "d": 3121,
+          "k_Hoffman": 80,
+          "r_target": "40",
+          "b_if_r_target": "3121",
+          "b_eq_d": true,
+          "flag_identity": "b\u00b7(p+1)=n\u00b7r"
+        }
+      }
+    },
+    "simplex_bound": {
+      "proved": true,
+      "p3_equality_case": true,
+      "theorem": "Equal-intersection Hoffman family: Gram of demeaned \u03c7_S has rank b\u22121 \u21d2 b\u2264d. Equality at p=3 (\u03bb=1, b=d).",
+      "by_p": {
+        "3": {
+          "v_S_norm_sq": "12/5",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 5
+        },
+        "5": {
+          "v_S_norm_sq": "60/13",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 13
+        },
+        "7": {
+          "v_S_norm_sq": "168/25",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 25
+        },
+        "11": {
+          "v_S_norm_sq": "660/61",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 61
+        },
+        "13": {
+          "v_S_norm_sq": "1092/85",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 85
+        },
+        "17": {
+          "v_S_norm_sq": "2448/145",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 145
+        },
+        "19": {
+          "v_S_norm_sq": "3420/181",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 181
+        },
+        "23": {
+          "v_S_norm_sq": "6072/265",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 265
+        },
+        "29": {
+          "v_S_norm_sq": "12180/421",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 421
+        },
+        "31": {
+          "v_S_norm_sq": "14880/481",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 481
+        },
+        "37": {
+          "v_S_norm_sq": "25308/685",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 685
+        },
+        "41": {
+          "v_S_norm_sq": "34440/841",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 841
+        },
+        "43": {
+          "v_S_norm_sq": "39732/925",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 925
+        },
+        "47": {
+          "v_S_norm_sq": "51888/1105",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 1105
+        },
+        "53": {
+          "v_S_norm_sq": "74412/1405",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 1405
+        },
+        "59": {
+          "v_S_norm_sq": "102660/1741",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 1741
+        },
+        "61": {
+          "v_S_norm_sq": "113460/1861",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 1861
+        },
+        "67": {
+          "v_S_norm_sq": "150348/2245",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 2245
+        },
+        "71": {
+          "v_S_norm_sq": "178920/2521",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 2521
+        },
+        "73": {
+          "v_S_norm_sq": "194472/2665",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 2665
+        },
+        "79": {
+          "v_S_norm_sq": "246480/3121",
+          "bound": "b \u2264 d when pairwise |S\u2229T| constant (simplex Gram full rank b\u22121 \u2264 d\u22121)",
+          "d": 3121
+        }
+      },
+      "cert_p3": {
+        "p": 3,
+        "N": 12,
+        "W_hoffman": 5,
+        "d": 5,
+        "W_eq_d": true,
+        "rank_chi": 5,
+        "rank_eq_d": true,
+        "basis_of_Vplus": true,
+        "r_unique": [
+          2
+        ],
+        "r_constant": true,
+        "r": 2,
+        "r_eq_half_p_plus_1": true,
+        "flag_identity_ok": true,
+        "intersection_counts": {
+          "1": 10
+        },
+        "constant_intersection": true,
+        "weight_dist": {
+          "0": 1,
+          "4": 5,
+          "6": 5,
+          "10": 1
+        },
+        "match": true
+      }
+    },
+    "hoffman_ed4": {
+      "proved": true,
+      "theorem": "If W_{p+1}=W_{n\u2212p\u22121}=d, Hoffman layers contribute 2d(p\u00b2\u22122p\u22121)^4/N to ED4.",
+      "by_p": {
+        "3": {
+          "D_max": 2,
+          "contrib_if_W_eq_d": "40/3",
+          "formula": "2 d (p\u00b2\u22122p\u22121)^4 / N",
+          "emp_hoffman_part": "40/3",
+          "match_emp": true
+        },
+        "5": {
+          "D_max": 14,
+          "contrib_if_W_eq_d": "19208/5",
+          "formula": "2 d (p\u00b2\u22122p\u22121)^4 / N",
+          "emp_hoffman_part": "19208/5",
+          "match_emp": true
+        },
+        "7": {
+          "D_max": 34,
+          "contrib_if_W_eq_d": "16704200/2863",
+          "formula": "2 d (p\u00b2\u22122p\u22121)^4 / N"
+        }
+      }
+    }
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "W_hoffman": 5,
+      "d": 5,
+      "W_eq_d": true,
+      "rank_chi": 5,
+      "rank_eq_d": true,
+      "basis_of_Vplus": true,
+      "r_unique": [
+        2
+      ],
+      "r_constant": true,
+      "r": 2,
+      "r_eq_half_p_plus_1": true,
+      "flag_identity_ok": true,
+      "intersection_counts": {
+        "1": 10
+      },
+      "constant_intersection": true,
+      "weight_dist": {
+        "0": 1,
+        "4": 5,
+        "6": 5,
+        "10": 1
+      },
+      "match": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "W_hoffman": 13,
+      "d": 13,
+      "W_eq_d": true,
+      "rank_chi": 13,
+      "rank_eq_d": true,
+      "basis_of_Vplus": true,
+      "r_unique": [
+        3
+      ],
+      "r_constant": true,
+      "r": 3,
+      "r_eq_half_p_plus_1": true,
+      "flag_identity_ok": true,
+      "intersection_counts": {
+        "0": 30,
+        "1": 18,
+        "2": 30
+      },
+      "constant_intersection": false,
+      "weight_dist": {
+        "0": 1,
+        "6": 13,
+        "8": 20,
+        "10": 36,
+        "12": 60,
+        "14": 60,
+        "16": 36,
+        "18": 20,
+        "20": 13,
+        "26": 1
+      },
+      "match": true
+    }
+  },
+  "status": {
+    "geometric_seed_proved": true,
+    "W_p_plus_1_eq_d_general": false,
+    "weight_enumerator_closed_form": false,
+    "hyp_residual_for_all_p": false
+  },
+  "closed_forms": {
+    "subfield_seed": "F_p \u222a {\u221e} Hoffman after hs-switch",
+    "one_design": "b(p+1)=n r; r=(p+1)/2 \u21d4 b=d",
+    "hoffman_ED4_part": "2 d (p\u00b2\u22122p\u22121)^4 / N  when W_{p+1}=d",
+    "simplex_bound": "equal \u2229 \u21d2 W_{p+1} \u2264 d"
+  },
+  "open_attack": "Prove W_{p+1}=d (i.e. r=(p+1)/2) for all primes p\u22655; then closed full W_k or character-sum/PBIBD bound on 4-design defect \u21d2 R\u2084\u2264R\u2084_bud for all p\u22655.",
+  "backend": "CPU Fraction algebra + Max+ cert p=3,5 + seed p=7; GPU unused (F20); F19 no class_key",
+  "F19": "no class_key",
+  "F20": "GPU unused",
+  "residual_closed": false
+}

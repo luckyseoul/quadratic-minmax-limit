@@ -1,0 +1,327 @@
+{
+  "prop": "15.148",
+  "title": "Prop 15.148: Relaxed-ULC residual calculus (C_act=C_flat+\u03ba\u03b4\u00b2; C_max; uniform C\u2087 criterion for p\u22657)",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Residual for p\u22657 is equivalent to C_act\u2264C_max with closed forms. Uniform target d\u2084\u2264U(1+C\u2087/p\u00b2) with C\u2087=C_max(7)=79923/87373 would close residual for all p\u22657. Census defects ~0.90\u20130.91 leave a nonempty constant-C window. Independent proof of the relaxed ULC still OPEN. L OPEN.",
+  "proved": {
+    "linear_defect_identity": true,
+    "C_max_closed_residual_iff": true,
+    "uniform_C7_criterion_structure": true,
+    "census_defect_window": true,
+    "residual_for_all_p_ge_5": false,
+    "uniform_relaxed_ULC_for_all_p_ge_7": false,
+    "hyp_residual_for_all_p": false
+  },
+  "algebra": {
+    "linear_defect": {
+      "proved": true,
+      "theorem": "C_act=p\u00b2(d\u2084/U\u22121)=C_flat+\u03ba\u03b4\u00b2 with closed C_flat, \u03ba; C_max=C_flat+\u03ba \u03c1_min\u00b2.",
+      "closed_forms": {
+        "C_flat": "x P_flat(x)/((x-5)(x-1)(x-2)(x+3)^2), x=p^2",
+        "P_flat": "x^4-8x^3+58x^2-64x+13",
+        "kappa": "24 p^2/((n-2)(n-3)(n+2)^2)"
+      },
+      "by_p": {
+        "5": {
+          "C_flat": "85/98",
+          "kappa": "25/18032",
+          "C_max": "1023/1127",
+          "C_max_from_linear": "1023/1127",
+          "match": true,
+          "C_act_pair": "26375/29302",
+          "recon_ok": true
+        },
+        "7": {
+          "C_flat": "158221/174746",
+          "kappa": "49/254176",
+          "C_max": "79923/87373",
+          "C_max_from_linear": "79923/87373",
+          "match": true,
+          "C_act_pair": "51307753/56540978",
+          "recon_ok": true
+        },
+        "11": {
+          "C_flat": "6334471/6632822",
+          "kappa": "121/9148720",
+          "C_max": "3171963/3316411",
+          "C_max_from_linear": "3171963/3316411",
+          "match": true
+        },
+        "13": {
+          "C_flat": "24481171/25320206",
+          "kappa": "169/34583696",
+          "C_max": "12249723/12660103",
+          "C_max_from_linear": "12249723/12660103",
+          "match": true
+        },
+        "17": {
+          "C_flat": "212845321/217178066",
+          "kappa": "289/293649216",
+          "C_max": "106449123/108589033",
+          "C_max_from_linear": "106449123/108589033",
+          "match": true
+        },
+        "19": {
+          "C_flat": "520652611/529172462",
+          "kappa": "361/713490960",
+          "C_max": "260367483/264586231",
+          "C_max_from_linear": "260367483/264586231",
+          "match": true
+        },
+        "23": {
+          "C_flat": "2415281221/2442390986",
+          "kappa": "529/3281380256",
+          "C_max": "1207728723/1221195493",
+          "C_max_from_linear": "1207728723/1221195493",
+          "match": true
+        },
+        "29": {
+          "C_flat": "15503709691/15613603742",
+          "kappa": "841/20917746640",
+          "C_max": "7752076923/7806801871",
+          "C_max_from_linear": "7752076923/7806801871",
+          "match": true
+        }
+      },
+      "n_checked": 23
+    },
+    "C_max_residual": {
+      "proved": true,
+      "theorem": "C_max=Q(p\u00b2)/((p\u00b2\u22125)(p\u00b2\u22122)(p\u00b2+3)\u00b2); \u03b4\u00b2\u2264\u03c1_min\u00b2\u21d4C_act\u2264C_max; C_max<1\u21921\u207b.",
+      "Q_poly": "x^4-7x^3+71x^2+67x+60",
+      "by_p": {
+        "5": {
+          "C_max": "1023/1127",
+          "C_max_lt_1": true,
+          "U_times_1_plus_Cmax_over_p2": "1123/14375",
+          "equals_d4_suf": true,
+          "match": true,
+          "C_act_le_C_max": true
+        },
+        "7": {
+          "C_max": "79923/87373",
+          "C_max_lt_1": true,
+          "U_times_1_plus_Cmax_over_p2": "87224/1241317",
+          "equals_d4_suf": true,
+          "match": true,
+          "C_act_le_C_max": true
+        },
+        "11": {
+          "C_max": "3171963/3316411",
+          "C_max_lt_1": true,
+          "U_times_1_plus_Cmax_over_p2": "3315227/50526091",
+          "equals_d4_suf": true,
+          "match": true
+        },
+        "13": {
+          "C_max": "12249723/12660103",
+          "C_max_lt_1": true,
+          "U_times_1_plus_Cmax_over_p2": "12657689/195557167",
+          "equals_d4_suf": true,
+          "match": true
+        },
+        "17": {
+          "C_max": "106449123/108589033",
+          "C_max_lt_1": true,
+          "U_times_1_plus_Cmax_over_p2": "108581654/1701907417",
+          "equals_d4_suf": true,
+          "match": true
+        },
+        "19": {
+          "C_max": "260367483/264586231",
+          "C_max_lt_1": true,
+          "U_times_1_plus_Cmax_over_p2": "264574577/4163886271",
+          "equals_d4_suf": true,
+          "match": true
+        },
+        "23": {
+          "C_max": "1207728723/1221195493",
+          "C_max_lt_1": true,
+          "U_times_1_plus_Cmax_over_p2": "1221170084/19319383117",
+          "equals_d4_suf": true,
+          "match": true
+        },
+        "29": {
+          "C_max": "7752076923/7806801871",
+          "C_max_lt_1": true,
+          "U_times_1_plus_Cmax_over_p2": "7806736877/124022430631",
+          "equals_d4_suf": true,
+          "match": true
+        }
+      },
+      "n_checked": 23,
+      "C_max_minus_1_num": "-6x^3+94x^2+70x-30"
+    },
+    "uniform_criterion": {
+      "proved": true,
+      "theorem": "For primes p\u22657: C_max(p)\u2265C\u2087=79923/87373; d\u2084\u2264U(1+C\u2087/p\u00b2)\u21d2 residual for all such p.",
+      "C7": "79923/87373",
+      "N_positive_on_32_to_199": true,
+      "N_negative_at_31": true,
+      "bound_equals_d4_suf_at_p7": true,
+      "by_p": {
+        "7": {
+          "C_max": "79923/87373",
+          "C_max_ge_C7": true,
+          "relaxed_bound": "87224/1241317",
+          "bound_le_d4_suf": true,
+          "match": true
+        },
+        "11": {
+          "C_max": "3171963/3316411",
+          "C_max_ge_C7": true,
+          "relaxed_bound": "5118312908/78032913673",
+          "bound_le_d4_suf": true,
+          "match": true
+        },
+        "13": {
+          "C_max": "12249723/12660103",
+          "C_max_ge_C7": true,
+          "relaxed_bound": "2745018004/42422824301",
+          "bound_le_d4_suf": true,
+          "match": true
+        },
+        "17": {
+          "C_max": "106449123/108589033",
+          "C_max_ge_C7": true,
+          "relaxed_bound": "13498740688/211626929657",
+          "bound_le_d4_suf": true,
+          "match": true
+        },
+        "19": {
+          "C_max": "260367483/264586231",
+          "C_max_ge_C7": true,
+          "relaxed_bound": "774728612/12195048217",
+          "bound_le_d4_suf": true,
+          "match": true
+        },
+        "23": {
+          "C_max": "1207728723/1221195493",
+          "C_max_ge_C7": true,
+          "relaxed_bound": "81900494536/1295879027729",
+          "bound_le_d4_suf": true,
+          "match": true
+        },
+        "29": {
+          "C_max": "7752076923/7806801871",
+          "C_max_ge_C7": true,
+          "relaxed_bound": "1637496092468/26016647644273",
+          "bound_le_d4_suf": true,
+          "match": true
+        },
+        "31": {
+          "C_max": "13230377283/13312223281",
+          "C_max_ge_C7": true,
+          "relaxed_bound": "2440719741728/38812274960173",
+          "bound_le_d4_suf": true,
+          "match": true
+        }
+      },
+      "n_checked": 22
+    },
+    "census_window": {
+      "proved": true,
+      "theorem": "Census C_act\u2208(0.90,0.91) < C_max; fixed C=1 fails implication; C\u2208[C_act(7),C\u2087] is the constant-C window for p\u22657.",
+      "by_p": {
+        "5": {
+          "C_act_pair": "26375/29302",
+          "C_max": "1023/1127",
+          "C_act_lt_C_max": true,
+          "C_act_float": 0.9001092075626237,
+          "C_max_float": 0.9077196095829636,
+          "C_act_W": "26375/29302",
+          "C_act_W_lt_C_max": true
+        },
+        "7": {
+          "C_act_pair": "51307753/56540978",
+          "C_max": "79923/87373",
+          "C_act_lt_C_max": true,
+          "C_act_float": 0.9074436773980104,
+          "C_max_float": 0.9147333844551521,
+          "C_act_W": "5905823/6497374",
+          "C_act_W_lt_C_max": true
+        }
+      },
+      "C1_fails_implication": true,
+      "C_9_10_implies_residual_p_ge_7": true,
+      "C_9_10_covers_C_act_p7": false,
+      "window": {
+        "C_act_p7": "51307753/56540978",
+        "C7": "79923/87373",
+        "nonempty": true
+      }
+    },
+    "open": {
+      "residual_closed_general": false,
+      "uniform_relaxed_ULC_proved": false,
+      "open": "Prove d\u2084 \u2264 U(1+C\u2087/p\u00b2) for all primes p\u22657 (or C_act\u2264C_max by Gauss sums / closed W_k / 4-wise regular-set bounds).",
+      "sufficient_targets": [
+        "d4_le_U_times_1_plus_C7_over_p2",
+        "C_act_le_C7",
+        "C_act_le_C_max_via_character_sums"
+      ],
+      "dead": [
+        "plain_ULC_C_act_le_0",
+        "fixed_C_equals_1",
+        "type_list_residual_p_ge_11"
+      ]
+    }
+  },
+  "closed_forms": {
+    "C_flat": "x P_flat(x)/((x-5)(x-1)(x-2)(x+3)^2)",
+    "P_flat": "x^4-8x^3+58x^2-64x+13",
+    "C_max": "Q(x)/((x-5)(x-2)(x+3)^2)",
+    "Q": "x^4-7x^3+71x^2+67x+60",
+    "kappa": "24 p^2/((n-2)(n-3)(n+2)^2)",
+    "C7": "79923/87373",
+    "uniform_target_p_ge_7": "d4 <= U * (1 + C7/p^2)",
+    "sample": {
+      "5": {
+        "C_flat": "85/98",
+        "kappa": "25/18032",
+        "C_max": "1023/1127",
+        "C7_bound": "55474076/709905625",
+        "d4_suf": "1123/14375"
+      },
+      "7": {
+        "C_flat": "158221/174746",
+        "kappa": "49/254176",
+        "C_max": "79923/87373",
+        "C7_bound": "87224/1241317",
+        "d4_suf": "87224/1241317"
+      },
+      "11": {
+        "C_flat": "6334471/6632822",
+        "kappa": "121/9148720",
+        "C_max": "3171963/3316411",
+        "C7_bound": "5118312908/78032913673",
+        "d4_suf": "3315227/50526091"
+      },
+      "13": {
+        "C_flat": "24481171/25320206",
+        "kappa": "169/34583696",
+        "C_max": "12249723/12660103",
+        "C7_bound": "2745018004/42422824301",
+        "d4_suf": "12657689/195557167"
+      }
+    }
+  },
+  "status": {
+    "p5_residual_maxplus_free": true,
+    "p7_residual_maxplus_free": true,
+    "type_free_residual_general": false,
+    "relaxed_ULC_dictionary_closed": true,
+    "uniform_relaxed_ULC_proved": false,
+    "general_residual": false
+  },
+  "open_attack": "Prove d\u2084\u2264U(1+C\u2087/p\u00b2) for p\u22657 (uniform relaxed ULC), or bound C_act via Gauss sums / W_k / 4-wise regular-set counts.",
+  "backend": "CPU Fraction; GPU unused (F20)",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "residual_closed": false,
+  "compute": {
+    "workers": "Fraction algebra",
+    "gpu": "unused",
+    "primes_checked": "5..97"
+  }
+}

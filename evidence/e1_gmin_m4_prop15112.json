@@ -1,0 +1,501 @@
+{
+  "prop": "15.112",
+  "backend": "CPU Fraction algebra + Max+ design cert p=3,5,7; GPU unused (F20); no class_key closing argument (F19)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "kappa_bound_proved_for_all_p": false,
+  "sum_rho2_le_T_proved_for_all_p": false,
+  "closed_forms": {
+    "conf_kappa2": "(n p^4/8)(n-6)+n(n-1)/2",
+    "ED4_flat": "wick_lo + 64 n (p^2-3)/(p^2-5)",
+    "ED4_suf": "ED4_flat + 24 rho_min2",
+    "ED4_bud": "ED4_flat + room_hyp",
+    "alpha_kappa": "27/100 at p=5",
+    "alpha_rho": "9/50 at p=5",
+    "pair": "9/20 at p=5",
+    "spot_p5": {
+      "ED4_flat": "43472/5",
+      "ED4_suf": "234832/25",
+      "ED4_bud": "120400/13",
+      "conf_kappa2": "40950"
+    },
+    "spot_p7": {
+      "ED4_flat": "340400/11",
+      "ED4_suf": "17303600/539",
+      "ED4_bud": "1775728/55",
+      "conf_kappa2": "661500"
+    }
+  },
+  "conf_kappa2": {
+    "proved": true,
+    "theorem": "Conference \u2016\u03ba\u2016\u2082\u00b2 = (n p\u2074/8)(n\u22126) + n(n\u22121)/2 from zero-diag pairing at B=C.",
+    "by_p": {
+      "3": {
+        "conf_kappa2": "450",
+        "alt_form": "450",
+        "match": true
+      },
+      "5": {
+        "conf_kappa2": "40950",
+        "alt_form": "40950",
+        "match": true
+      },
+      "7": {
+        "conf_kappa2": "661500",
+        "alt_form": "661500",
+        "match": true
+      },
+      "11": {
+        "conf_kappa2": "25907310",
+        "alt_form": "25907310",
+        "match": true
+      },
+      "13": {
+        "conf_kappa2": "99549450",
+        "alt_form": "99549450",
+        "match": true
+      },
+      "17": {
+        "conf_kappa2": "859890600",
+        "alt_form": "859890600",
+        "match": true
+      },
+      "19": {
+        "conf_kappa2": "2099406330",
+        "alt_form": "2099406330",
+        "match": true
+      },
+      "23": {
+        "conf_kappa2": "9714820500",
+        "alt_form": "9714820500",
+        "match": true
+      },
+      "29": {
+        "conf_kappa2": "62233301970",
+        "alt_form": "62233301970",
+        "match": true
+      },
+      "31": {
+        "conf_kappa2": "106167512880",
+        "alt_form": "106167512880",
+        "match": true
+      },
+      "37": {
+        "conf_kappa2": "437776834950",
+        "alt_form": "437776834950",
+        "match": true
+      },
+      "41": {
+        "conf_kappa2": "995740249140",
+        "alt_form": "995740249140",
+        "match": true
+      },
+      "43": {
+        "conf_kappa2": "1457863926750",
+        "alt_form": "1457863926750",
+        "match": true
+      },
+      "47": {
+        "conf_kappa2": "2971020616200",
+        "alt_form": "2971020616200",
+        "match": true
+      },
+      "53": {
+        "conf_kappa2": "7771378135950",
+        "alt_form": "7771378135950",
+        "match": true
+      },
+      "59": {
+        "conf_kappa2": "18332712920790",
+        "alt_form": "18332712920790",
+        "match": true
+      },
+      "61": {
+        "conf_kappa2": "23937652208610",
+        "alt_form": "23937652208610",
+        "match": true
+      },
+      "67": {
+        "conf_kappa2": "50713227986850",
+        "alt_form": "50713227986850",
+        "match": true
+      },
+      "71": {
+        "conf_kappa2": "80655138089820",
+        "alt_form": "80655138089820",
+        "match": true
+      },
+      "73": {
+        "conf_kappa2": "100731840826500",
+        "alt_form": "100731840826500",
+        "match": true
+      },
+      "79": {
+        "conf_kappa2": "189517052644920",
+        "alt_form": "189517052644920",
+        "match": true
+      }
+    },
+    "direct_small_p": {
+      "3": {
+        "direct": 450.0,
+        "closed": 450.0,
+        "match": "True"
+      },
+      "5": {
+        "direct": 40950.0,
+        "closed": 40950.0,
+        "match": "True"
+      }
+    }
+  },
+  "ed4_dictionary": {
+    "proved": true,
+    "theorem": "ED4 = ED4_flat + 24 \u03b4\u00b2; \u03b4\u00b2\u2264\u03c1_min\u00b2 \u21d4 ED4\u2264ED4_suf; \u03b4\u00b2\u2264room_hyp/24 \u21d4 ED4\u2264ED4_bud; ED4_suf<ED4_bud for p\u22657.",
+    "by_p": {
+      "3": {
+        "ED4_flat": "1680",
+        "ED4_suf": "6640/3",
+        "ED4_bud": "1680",
+        "proj_match": true,
+        "suf_minus_flat": "1600/3",
+        "24_rho_min2": "1600/3",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": null,
+        "rm_lt_budget_p_ge_7": null
+      },
+      "5": {
+        "ED4_flat": "43472/5",
+        "ED4_suf": "234832/25",
+        "ED4_bud": "120400/13",
+        "proj_match": true,
+        "suf_minus_flat": "17472/25",
+        "24_rho_min2": "17472/25",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": null,
+        "rm_lt_budget_p_ge_7": null
+      },
+      "7": {
+        "ED4_flat": "340400/11",
+        "ED4_suf": "17303600/539",
+        "ED4_bud": "1775728/55",
+        "proj_match": true,
+        "suf_minus_flat": "624000/539",
+        "24_rho_min2": "624000/539",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      },
+      "11": {
+        "ED4_flat": "5240144/29",
+        "ED4_suf": "643134224/3509",
+        "ED4_bud": "326099984/1769",
+        "proj_match": true,
+        "suf_minus_flat": "9076800/3509",
+        "24_rho_min2": "9076800/3509",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      },
+      "13": {
+        "ED4_flat": "14335760/41",
+        "ED4_suf": "2447305040/6929",
+        "ED4_bud": "247320592/697",
+        "proj_match": true,
+        "suf_minus_flat": "24561600/6929",
+        "24_rho_min2": "24561600/6929",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      },
+      "17": {
+        "ED4_flat": "71991920/71",
+        "ED4_suf": "20927604080/20519",
+        "ED4_bud": "2106345136/2059",
+        "proj_match": true,
+        "suf_minus_flat": "121939200/20519",
+        "24_rho_min2": "121939200/20519",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      },
+      "19": {
+        "ED4_flat": "140482064/89",
+        "ED4_suf": "50951207504/32129",
+        "ED4_bud": "25609730384/16109",
+        "proj_match": true,
+        "suf_minus_flat": "237182400/32129",
+        "24_rho_min2": "237182400/32129",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      },
+      "23": {
+        "ED4_flat": "442702640/131",
+        "ED4_suf": "234934070960/69299",
+        "ED4_bud": "23579214064/6943",
+        "proj_match": true,
+        "suf_minus_flat": "744374400/69299",
+        "24_rho_min2": "744374400/69299",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      },
+      "29": {
+        "ED4_flat": "1780924304/209",
+        "ED4_suf": "1500742061264/175769",
+        "ED4_bud": "752117368784/87989",
+        "proj_match": true,
+        "suf_minus_flat": "2984721600/175769",
+        "24_rho_min2": "2984721600/175769",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      },
+      "31": {
+        "ED4_flat": "2657882864/239",
+        "ED4_suf": "2558676798704/229679",
+        "ED4_bud": "1281951110384/114959",
+        "proj_match": true,
+        "suf_minus_flat": "4451366400/229679",
+        "24_rho_min2": "4451366400/229679",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      },
+      "37": {
+        "ED4_flat": "7687793360/341",
+        "ED4_suf": "10537445847440/466829",
+        "ED4_bud": "1055263799632/46717",
+        "proj_match": true,
+        "suf_minus_flat": "12856737600/466829",
+        "24_rho_min2": "12856737600/466829",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      },
+      "41": {
+        "ED4_flat": "14236165424/419",
+        "ED4_suf": "23954786976944/704339",
+        "ED4_bud": "11991491332784/352379",
+        "proj_match": true,
+        "suf_minus_flat": "23792899200/704339",
+        "24_rho_min2": "23792899200/704339",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      },
+      "43": {
+        "ED4_flat": "18946974800/461",
+        "ED4_suf": "35064614493200/852389",
+        "ED4_bud": "3510217371088/85285",
+        "proj_match": true,
+        "suf_minus_flat": "31658088000/852389",
+        "24_rho_min2": "31658088000/852389",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      },
+      "47": {
+        "ED4_flat": "32313223280/551",
+        "ED4_suf": "71433879486320/1217159",
+        "ED4_bud": "7149802809520/121771",
+        "proj_match": true,
+        "suf_minus_flat": "53969260800/1217159",
+        "24_rho_min2": "53969260800/1217159",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      },
+      "53": {
+        "ED4_flat": "66453600080/701",
+        "ED4_suf": "186779102773520/1969109",
+        "ED4_bud": "18691123717840/196981",
+        "proj_match": true,
+        "suf_minus_flat": "110940148800/1969109",
+        "24_rho_min2": "110940148800/1969109",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      },
+      "59": {
+        "ED4_flat": "126480975824/869",
+        "ED4_suf": "440491361254544/3024989",
+        "ED4_bud": "220371568144784/1512929",
+        "proj_match": true,
+        "suf_minus_flat": "211084411200/3024989",
+        "24_rho_min2": "211084411200/3024989",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      },
+      "61": {
+        "ED4_flat": "154491852944/929",
+        "ED4_suf": "575121994345424/3456809",
+        "ED4_bud": "287714810891984/1728869",
+        "proj_match": true,
+        "suf_minus_flat": "257809540800/3456809",
+        "24_rho_min2": "257809540800/3456809",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      },
+      "67": {
+        "ED4_flat": "271274341520/1121",
+        "ED4_suf": "1218203113238480/5032169",
+        "ED4_bud": "121874368786576/503329",
+        "proj_match": true,
+        "suf_minus_flat": "452594155200/5032169",
+        "24_rho_min2": "452594155200/5032169",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      },
+      "71": {
+        "ED4_flat": "384173737904/1259",
+        "ED4_suf": "1937260695343664/6346619",
+        "ED4_bud": "969013276660784/3173939",
+        "proj_match": true,
+        "suf_minus_flat": "640882569600/6346619",
+        "24_rho_min2": "640882569600/6346619",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      },
+      "73": {
+        "ED4_flat": "453860629040/1331",
+        "ED4_suf": "2419380389232560/7092899",
+        "ED4_bud": "242028532835824/709423",
+        "proj_match": true,
+        "suf_minus_flat": "757097078400/7092899",
+        "24_rho_min2": "757097078400/7092899",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      },
+      "79": {
+        "ED4_flat": "729067547504/1559",
+        "ED4_suf": "4551326585470064/9729719",
+        "ED4_bud": "2276390452252784/4865639",
+        "proj_match": true,
+        "suf_minus_flat": "1216021497600/9729719",
+        "24_rho_min2": "1216021497600/9729719",
+        "suf_eq_flat_plus_24rm": true,
+        "suf_lt_bud_p_ge_7": true,
+        "rm_lt_budget_p_ge_7": true
+      }
+    }
+  },
+  "antipodality": {
+    "proved": true,
+    "theorem": "If Cy=py with y boolean then C(\u2212y)=p(\u2212y); Max+ may be taken antipodal. Certified closed under negation at p=3,5,7."
+  },
+  "cert_design": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "n": 10,
+      "antipodal_sample_ok": true,
+      "all_halfspace_sums": true,
+      "frame_EyyT_eq_2Pplus": true,
+      "max_abs_Gplus_eig_minus_2": 3.9968028886505635e-15,
+      "E_D": "0",
+      "E_D2": "20",
+      "E_D2_eq_2n": true,
+      "E_D3": "0",
+      "ED4": "1680",
+      "ED4_flat": "1680",
+      "ED4_suf": "6640/3",
+      "ED4_bud": "1680",
+      "delta2": "0",
+      "rho_min2": "200/9",
+      "budget": "0",
+      "delta2_le_rho_min2": true,
+      "delta2_le_budget": true,
+      "ED4_le_suf": true,
+      "ED4_le_bud": true,
+      "ratio_delta2_over_rm": "0",
+      "ratio_ED4_over_suf": "63/83"
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "n": 26,
+      "antipodal_sample_ok": false,
+      "all_halfspace_sums": true,
+      "frame_EyyT_eq_2Pplus": true,
+      "max_abs_Gplus_eig_minus_2": 3.552713678800501e-15,
+      "E_D": "0",
+      "E_D2": "52",
+      "E_D2_eq_2n": true,
+      "E_D3": "0",
+      "ED4": "120400/13",
+      "ED4_flat": "43472/5",
+      "ED4_suf": "234832/25",
+      "ED4_bud": "120400/13",
+      "delta2": "1536/65",
+      "rho_min2": "728/25",
+      "budget": "1536/65",
+      "delta2_le_rho_min2": true,
+      "delta2_le_budget": true,
+      "ED4_le_suf": true,
+      "ED4_le_bud": true,
+      "ratio_delta2_over_rm": "960/1183",
+      "ratio_ED4_over_suf": "188125/190801"
+    },
+    "7": {
+      "p": 7,
+      "N": 11452,
+      "n": 50,
+      "antipodal_sample_ok": false,
+      "all_halfspace_sums": true,
+      "frame_EyyT_eq_2Pplus": true,
+      "max_abs_Gplus_eig_minus_2": 5.773159728050814e-15,
+      "E_D": "0",
+      "E_D2": "100",
+      "E_D2_eq_2n": true,
+      "E_D3": "0",
+      "ED4": "12835984/409",
+      "ED4_flat": "340400/11",
+      "ED4_suf": "17303600/539",
+      "ED4_bud": "1775728/55",
+      "delta2": "82176/4499",
+      "rho_min2": "26000/539",
+      "budget": "3072/55",
+      "delta2_le_rho_min2": true,
+      "delta2_le_budget": true,
+      "ED4_le_suf": true,
+      "ED4_le_bud": true,
+      "ratio_delta2_over_rm": "251664/664625",
+      "ratio_ED4_over_suf": "432412211/442323275"
+    }
+  },
+  "general_status": {
+    "conf_kappa2_proved": true,
+    "antipodality_proved": true,
+    "design_moments_certified_p3_5_7": true,
+    "ed4_dictionary_proved": true,
+    "ed4_suf_lt_bud_p_ge_7_proved": true,
+    "delta_le_rho_min_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sum_rho2_le_T_for_all_p": false,
+    "orth_le_room_hyp_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "open_residual": "Prove ED4 \u2264 ED4_suf = ED4_flat + 24 \u03c1_min\u00b2 for all primes p\u22655 (\u21d4 \u03b4\u00b2\u2264\u03c1_min\u00b2). Then residual closes for p\u22657; p=3,5 certified. Attack: spherical 3-design upper bound on E[D\u2074] under Cy=py boolean, or closed Max+ weight enumerator. Warning: class_key is not m\u2084-equitable at p=7 \u2014 do not thrash F19 moduli."
+  },
+  "attack_surface": "Prove ED4 \u2264 ED4_suf = ED4_flat + 24 \u03c1_min\u00b2 for all primes p\u22655 (\u21d4 \u03b4\u00b2\u2264\u03c1_min\u00b2). Then residual closes for p\u22657; p=3,5 certified. Attack: spherical 3-design upper bound on E[D\u2074] under Cy=py boolean, or closed Max+ weight enumerator. Warning: class_key is not m\u2084-equitable at p=7 \u2014 do not thrash F19 moduli.",
+  "verdict": "Proved: conference \u2016\u03ba\u2016\u2082\u00b2 closed form; Max+ antipodality; ED4 = ED4_flat + 24 \u03b4\u00b2 so \u03b4\u00b2\u2264\u03c1_min\u00b2 \u21d4 ED4\u2264ED4_suf; ED4_suf < ED4_bud for p\u22657. Certified spherical tight-frame E[yy\u1d40]=2P\u208a, E[D\u00b2]=2n, E[D]=E[D\u00b3]=0, and \u03b4\u00b2\u2264\u03c1_min\u00b2 at p=3,5,7. Note: class_key not m\u2084-equitable at p=7 (F19). OPEN: ED4\u2264ED4_suf for general p\u22655. L OPEN.",
+  "settlement_note": "No soft-close. Primary residual reduced to a single 4th-moment inequality ED4\u2264ED4_suf; not yet proved for general p.",
+  "proved": {
+    "conf_kappa2": true,
+    "ed4_dictionary": true,
+    "antipodality": true,
+    "design_cert_p3_5_7": true,
+    "delta_le_rho_min_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sum_rho2_le_T_for_all_p": false,
+    "sixteen_N_for_all_p": false,
+    "kappa_bound_for_all_p": false
+  }
+}

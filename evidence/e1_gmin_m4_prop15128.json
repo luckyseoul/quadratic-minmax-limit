@@ -1,0 +1,203 @@
+{
+  "prop": "15.128",
+  "title": "Prop 15.128: full W_k census p=3,5,7; exact ED4 at p=7; structural zeros; residual open generally",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Full W_k known at p=3,5,7; residual holds by census at these primes (eq at 3,5; strict at 7). No closed general W_k / defect bound. N_ED4_SUF OPEN. L OPEN.",
+  "proved": {
+    "census_p3_p5_p7": true,
+    "ED4_p7_exact": true,
+    "ED4_sat_p3_p5": true,
+    "weight_enumerator_closed_general": false,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  },
+  "algebra": {
+    "census": {
+      "proved": true,
+      "theorem": "Full W_k census p=3,5,7: \u2211W=N, W_k=W_{n\u2212k}, W_{p+1} matches 15.127, E[k\u02b2] j\u22643 match 15.124; structural zeros exist (e.g. W_10=0 at p=7).",
+      "by_p": {
+        "3": {
+          "N": 12,
+          "N_expected": 12,
+          "N_ok": true,
+          "symmetric": true,
+          "W_hoffman": 5,
+          "W_hoffman_formula": 5,
+          "hoffman_match": true,
+          "E_k_match": true,
+          "E_k2_match": true,
+          "E_k3_match": true,
+          "cert_W_match": true,
+          "vanishing_allowed_k": [],
+          "W": {
+            "0": 1,
+            "4": 5,
+            "6": 5,
+            "10": 1
+          },
+          "match": true
+        },
+        "5": {
+          "N": 260,
+          "N_expected": 260,
+          "N_ok": true,
+          "symmetric": true,
+          "W_hoffman": 13,
+          "W_hoffman_formula": 13,
+          "hoffman_match": true,
+          "E_k_match": true,
+          "E_k2_match": true,
+          "E_k3_match": true,
+          "cert_W_match": true,
+          "vanishing_allowed_k": [],
+          "W": {
+            "0": 1,
+            "6": 13,
+            "8": 20,
+            "10": 36,
+            "12": 60,
+            "14": 60,
+            "16": 36,
+            "18": 20,
+            "20": 13,
+            "26": 1
+          },
+          "match": true
+        },
+        "7": {
+          "N": 11452,
+          "N_expected": 11452,
+          "N_ok": true,
+          "symmetric": true,
+          "W_hoffman": 11,
+          "W_hoffman_formula": 11,
+          "hoffman_match": true,
+          "E_k_match": true,
+          "E_k2_match": true,
+          "E_k3_match": true,
+          "cert_W_match": true,
+          "vanishing_allowed_k": [
+            10,
+            40
+          ],
+          "W": {
+            "0": 1,
+            "8": 11,
+            "12": 112,
+            "14": 159,
+            "16": 280,
+            "18": 728,
+            "20": 1099,
+            "22": 1502,
+            "24": 1834,
+            "26": 1834,
+            "28": 1502,
+            "30": 1099,
+            "32": 728,
+            "34": 280,
+            "36": 159,
+            "38": 112,
+            "42": 11,
+            "50": 1
+          },
+          "match": true
+        }
+      }
+    },
+    "ED4_p7": {
+      "proved": true,
+      "ED4": "12835984/409",
+      "ED4_bud": "1775728/55",
+      "ED4_flat": "340400/11",
+      "ED4_le_bud": true,
+      "ED4_eq_bud": false,
+      "delta2": "82176/4499",
+      "room_hyp_over_24": "3072/55",
+      "delta2_le_room": true,
+      "ratio_delta2_over_room": "535/1636",
+      "R4": "158829624/409",
+      "R4_bud": "21361608/55",
+      "R4_le_bud": true,
+      "theorem": "At p=7: ED4=12835984/409 < ED4_bud=1775728/55; \u03b4\u00b2=82176/4499 < room_hyp/24=3072/55 (hyp residual holds, strict)."
+    },
+    "ED4_sat": {
+      "proved": true,
+      "theorem": "At p=3,5: ED4 = ED4_bud (hyp residual saturates).",
+      "by_p": {
+        "3": {
+          "ED4": "1680",
+          "ED4_bud": "1680",
+          "eq_bud": true
+        },
+        "5": {
+          "ED4": "120400/13",
+          "ED4_bud": "120400/13",
+          "eq_bud": true
+        }
+      }
+    }
+  },
+  "live_verify": {
+    "path": "/tmp/e1_p7/maxplus.npy",
+    "N": 11452,
+    "W_match_census": true,
+    "ED4": "12835984/409",
+    "ED4_match": true
+  },
+  "census_W": {
+    "3": {
+      "0": 1,
+      "4": 5,
+      "6": 5,
+      "10": 1
+    },
+    "5": {
+      "0": 1,
+      "6": 13,
+      "8": 20,
+      "10": 36,
+      "12": 60,
+      "14": 60,
+      "16": 36,
+      "18": 20,
+      "20": 13,
+      "26": 1
+    },
+    "7": {
+      "0": 1,
+      "8": 11,
+      "12": 112,
+      "14": 159,
+      "16": 280,
+      "18": 728,
+      "20": 1099,
+      "22": 1502,
+      "24": 1834,
+      "26": 1834,
+      "28": 1502,
+      "30": 1099,
+      "32": 728,
+      "34": 280,
+      "36": 159,
+      "38": 112,
+      "42": 11,
+      "50": 1
+    }
+  },
+  "status": {
+    "full_W_p3_p5_p7": true,
+    "weight_enumerator_closed_form": false,
+    "hyp_residual_for_all_p": false
+  },
+  "closed_forms": {
+    "W_p_plus_1": "see Prop 15.127",
+    "ED4_p7": "12835984/409",
+    "delta2_p7": "82176/4499"
+  },
+  "open_attack": "Closed formula for W_k for general primes p\u22655 (must allow vanishing at some \u03b1\u22650 sizes), or character-sum/PBIBD bound on spherical 4-design defect proving ED4\u2264ED4_bud for all p\u22655.",
+  "backend": "CPU: p=7 Max+ via 2\u00b2\u2075 free-coord ProcessPool W=86 (~12s); p=3,5 from prior Max+/regular-set enum; GPU unused (F20); F19 no class_key",
+  "F19": "no class_key",
+  "F20": "GPU unused",
+  "residual_closed": false
+}

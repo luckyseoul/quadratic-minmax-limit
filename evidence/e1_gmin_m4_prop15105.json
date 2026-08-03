@@ -1,0 +1,403 @@
+{
+  "prop": "15.105",
+  "backend": "CPU Fraction algebra + Max+ cert p=3,5,7; GPU unused (F20)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "gap_proved_for_all_p": false,
+  "kappa_bound_proved_for_all_p": false,
+  "variance_identity": {
+    "proved": true,
+    "theorem_A": "\u2211_\u03b1 \u03bb_\u03b1(\u03a6|Z)\u00b2 = ED4 \u2212 4n\u00b2 (from \u27e8\u03c6_y,\u03c6_z\u27e9=(y\u00b7z)\u00b2\u22122n and E[D\u00b2]=2n).",
+    "theorem_B": "\u2211_\u03b1 (\u03bb_\u03b1 \u2212 \u03bc\u0304)\u00b2 = \u2016\u03ba_orth\u2016_F\u00b2 (variance identity / Fickus residual on \u03a6).",
+    "corollary_C": "orth=0 \u21d2 \u03a6|Z is scalar equal to \u03bc\u0304 = 8(n\u22122)/(n\u22126).",
+    "by_p": {
+      "3": {
+        "ED4_flat_minus_4n2": "1280",
+        "T2_over_m": "1280",
+        "closed_32d_dm1_sq_over_dm3": "1280",
+        "flat_equals_T2_over_m": true,
+        "avg": "16",
+        "avg_equals_8_dm1_over_dm3": true,
+        "variance_identity": "\u2211(\u03bb\u2212avg)\u00b2 = ED4 \u2212 ED4_flat = \u2016\u03ba_orth\u2016\u00b2 because ED4_flat \u2212 4n\u00b2 = T\u00b2/m"
+      },
+      "5": {
+        "ED4_flat_minus_4n2": "29952/5",
+        "T2_over_m": "29952/5",
+        "closed_32d_dm1_sq_over_dm3": "29952/5",
+        "flat_equals_T2_over_m": true,
+        "avg": "48/5",
+        "avg_equals_8_dm1_over_dm3": true,
+        "variance_identity": "\u2211(\u03bb\u2212avg)\u00b2 = ED4 \u2212 ED4_flat = \u2016\u03ba_orth\u2016\u00b2 because ED4_flat \u2212 4n\u00b2 = T\u00b2/m"
+      },
+      "7": {
+        "ED4_flat_minus_4n2": "230400/11",
+        "T2_over_m": "230400/11",
+        "closed_32d_dm1_sq_over_dm3": "230400/11",
+        "flat_equals_T2_over_m": true,
+        "avg": "96/11",
+        "avg_equals_8_dm1_over_dm3": true,
+        "variance_identity": "\u2211(\u03bb\u2212avg)\u00b2 = ED4 \u2212 ED4_flat = \u2016\u03ba_orth\u2016\u00b2 because ED4_flat \u2212 4n\u00b2 = T\u00b2/m"
+      },
+      "11": {
+        "ED4_flat_minus_4n2": "3513600/29",
+        "T2_over_m": "3513600/29",
+        "closed_32d_dm1_sq_over_dm3": "3513600/29",
+        "flat_equals_T2_over_m": true,
+        "avg": "240/29",
+        "avg_equals_8_dm1_over_dm3": true,
+        "variance_identity": "\u2211(\u03bb\u2212avg)\u00b2 = ED4 \u2212 ED4_flat = \u2016\u03ba_orth\u2016\u00b2 because ED4_flat \u2212 4n\u00b2 = T\u00b2/m"
+      },
+      "13": {
+        "ED4_flat_minus_4n2": "9596160/41",
+        "T2_over_m": "9596160/41",
+        "closed_32d_dm1_sq_over_dm3": "9596160/41",
+        "flat_equals_T2_over_m": true,
+        "avg": "336/41",
+        "avg_equals_8_dm1_over_dm3": true,
+        "variance_identity": "\u2211(\u03bb\u2212avg)\u00b2 = ED4 \u2212 ED4_flat = \u2016\u03ba_orth\u2016\u00b2 because ED4_flat \u2212 4n\u00b2 = T\u00b2/m"
+      },
+      "17": {
+        "ED4_flat_minus_4n2": "48107520/71",
+        "T2_over_m": "48107520/71",
+        "closed_32d_dm1_sq_over_dm3": "48107520/71",
+        "flat_equals_T2_over_m": true,
+        "avg": "576/71",
+        "avg_equals_8_dm1_over_dm3": true,
+        "variance_identity": "\u2211(\u03bb\u2212avg)\u00b2 = ED4 \u2212 ED4_flat = \u2016\u03ba_orth\u2016\u00b2 because ED4_flat \u2212 4n\u00b2 = T\u00b2/m"
+      },
+      "19": {
+        "ED4_flat_minus_4n2": "93830400/89",
+        "T2_over_m": "93830400/89",
+        "closed_32d_dm1_sq_over_dm3": "93830400/89",
+        "flat_equals_T2_over_m": true,
+        "avg": "720/89",
+        "avg_equals_8_dm1_over_dm3": true,
+        "variance_identity": "\u2211(\u03bb\u2212avg)\u00b2 = ED4 \u2212 ED4_flat = \u2016\u03ba_orth\u2016\u00b2 because ED4_flat \u2212 4n\u00b2 = T\u00b2/m"
+      },
+      "23": {
+        "ED4_flat_minus_4n2": "295511040/131",
+        "T2_over_m": "295511040/131",
+        "closed_32d_dm1_sq_over_dm3": "295511040/131",
+        "flat_equals_T2_over_m": true,
+        "avg": "1056/131",
+        "avg_equals_8_dm1_over_dm3": true,
+        "variance_identity": "\u2211(\u03bb\u2212avg)\u00b2 = ED4 \u2212 ED4_flat = \u2016\u03ba_orth\u2016\u00b2 because ED4_flat \u2212 4n\u00b2 = T\u00b2/m"
+      },
+      "29": {
+        "ED4_flat_minus_4n2": "1188230400/209",
+        "T2_over_m": "1188230400/209",
+        "closed_32d_dm1_sq_over_dm3": "1188230400/209",
+        "flat_equals_T2_over_m": true,
+        "avg": "1680/209",
+        "avg_equals_8_dm1_over_dm3": true,
+        "variance_identity": "\u2211(\u03bb\u2212avg)\u00b2 = ED4 \u2212 ED4_flat = \u2016\u03ba_orth\u2016\u00b2 because ED4_flat \u2212 4n\u00b2 = T\u00b2/m"
+      },
+      "31": {
+        "ED4_flat_minus_4n2": "1773158400/239",
+        "T2_over_m": "1773158400/239",
+        "closed_32d_dm1_sq_over_dm3": "1773158400/239",
+        "flat_equals_T2_over_m": true,
+        "avg": "1920/239",
+        "avg_equals_8_dm1_over_dm3": true,
+        "variance_identity": "\u2211(\u03bb\u2212avg)\u00b2 = ED4 \u2212 ED4_flat = \u2016\u03ba_orth\u2016\u00b2 because ED4_flat \u2212 4n\u00b2 = T\u00b2/m"
+      },
+      "37": {
+        "ED4_flat_minus_4n2": "5127701760/341",
+        "T2_over_m": "5127701760/341",
+        "closed_32d_dm1_sq_over_dm3": "5127701760/341",
+        "flat_equals_T2_over_m": true,
+        "avg": "2736/341",
+        "avg_equals_8_dm1_over_dm3": true,
+        "variance_identity": "\u2211(\u03bb\u2212avg)\u00b2 = ED4 \u2212 ED4_flat = \u2016\u03ba_orth\u2016\u00b2 because ED4_flat \u2212 4n\u00b2 = T\u00b2/m"
+      }
+    }
+  },
+  "exact_16_criterion": {
+    "proved": true,
+    "theorem_E": "If mult(\u03bb_max(\u03a6|Z)) \u2265 d and \u2016\u03ba_orth\u2016\u00b2 \u2264 room = 32n(p\u00b2\u22129)/(p\u00b2\u22125) (i.e. \u2016\u03ba\u2016\u00b2 \u2264 96n), then by mult-aware majorization L \u2264 \u03bc\u0304 + 8(p\u00b2\u22129)/(p\u00b2\u22125) = 16, hence 16N.",
+    "by_p": {
+      "3": {
+        "d": 5,
+        "m": 5,
+        "avg": "16",
+        "room": "0",
+        "dev_8_p2m9_over_p2m5": "0",
+        "L_bound": "16",
+        "L_bound_eq_16": true,
+        "factor_m_minus_d_over_md": "0"
+      },
+      "5": {
+        "d": 13,
+        "m": 65,
+        "avg": "48/5",
+        "room": "3328/5",
+        "dev_8_p2m9_over_p2m5": "32/5",
+        "L_bound": "16",
+        "L_bound_eq_16": true,
+        "factor_m_minus_d_over_md": "4/65"
+      },
+      "7": {
+        "d": 25,
+        "m": 275,
+        "avg": "96/11",
+        "room": "16000/11",
+        "dev_8_p2m9_over_p2m5": "80/11",
+        "L_bound": "16",
+        "L_bound_eq_16": true,
+        "factor_m_minus_d_over_md": "2/55"
+      },
+      "11": {
+        "d": 61,
+        "m": 1769,
+        "avg": "240/29",
+        "room": "109312/29",
+        "dev_8_p2m9_over_p2m5": "224/29",
+        "L_bound": "16",
+        "L_bound_eq_16": true,
+        "factor_m_minus_d_over_md": "28/1769"
+      },
+      "13": {
+        "d": 85,
+        "m": 3485,
+        "avg": "336/41",
+        "room": "217600/41",
+        "dev_8_p2m9_over_p2m5": "320/41",
+        "L_bound": "16",
+        "L_bound_eq_16": true,
+        "factor_m_minus_d_over_md": "8/697"
+      },
+      "17": {
+        "d": 145,
+        "m": 10295,
+        "avg": "576/71",
+        "room": "649600/71",
+        "dev_8_p2m9_over_p2m5": "560/71",
+        "L_bound": "16",
+        "L_bound_eq_16": true,
+        "factor_m_minus_d_over_md": "14/2059"
+      },
+      "19": {
+        "d": 181,
+        "m": 16109,
+        "avg": "720/89",
+        "room": "1019392/89",
+        "dev_8_p2m9_over_p2m5": "704/89",
+        "L_bound": "16",
+        "L_bound_eq_16": true,
+        "factor_m_minus_d_over_md": "88/16109"
+      },
+      "23": {
+        "d": 265,
+        "m": 34715,
+        "avg": "1056/131",
+        "room": "2204800/131",
+        "dev_8_p2m9_over_p2m5": "1040/131",
+        "L_bound": "16",
+        "L_bound_eq_16": true,
+        "factor_m_minus_d_over_md": "26/6943"
+      },
+      "29": {
+        "d": 421,
+        "m": 87989,
+        "avg": "1680/209",
+        "room": "5604352/209",
+        "dev_8_p2m9_over_p2m5": "1664/209",
+        "L_bound": "16",
+        "L_bound_eq_16": true,
+        "factor_m_minus_d_over_md": "208/87989"
+      },
+      "31": {
+        "d": 481,
+        "m": 114959,
+        "avg": "1920/239",
+        "room": "7326592/239",
+        "dev_8_p2m9_over_p2m5": "1904/239",
+        "L_bound": "16",
+        "L_bound_eq_16": true,
+        "factor_m_minus_d_over_md": "238/114959"
+      },
+      "37": {
+        "d": 685,
+        "m": 233585,
+        "avg": "2736/341",
+        "room": "14905600/341",
+        "dev_8_p2m9_over_p2m5": "2720/341",
+        "L_bound": "16",
+        "L_bound_eq_16": true,
+        "factor_m_minus_d_over_md": "68/46717"
+      }
+    }
+  },
+  "hyp_dminus1_bound": {
+    "proved": true,
+    "theorem": "With mult \u2265 d\u22121 and orth \u2264 room_hyp, the majorization bound satisfies L \u2264 16 for all tested primes p\u22653 (strict for p>3 at the hyp budget; eq only when room_hyp=0 i.e. p=3).",
+    "by_p": {
+      "3": {
+        "avg": "16",
+        "room_hyp": "0",
+        "dev2": "0",
+        "gap_16_minus_avg": "0",
+        "L_bound_le_16": true
+      },
+      "5": {
+        "avg": "48/5",
+        "room_hyp": "36864/65",
+        "dev2": "162816/4225",
+        "gap_16_minus_avg": "32/5",
+        "L_bound_le_16": true
+      },
+      "7": {
+        "avg": "96/11",
+        "room_hyp": "73728/55",
+        "dev2": "771072/15125",
+        "gap_16_minus_avg": "80/11",
+        "L_bound_le_16": true
+      },
+      "11": {
+        "avg": "240/29",
+        "room_hyp": "6451200/1769",
+        "dev2": "183751680/3129361",
+        "gap_16_minus_avg": "224/29",
+        "L_bound_le_16": true
+      },
+      "13": {
+        "avg": "336/41",
+        "room_hyp": "3612672/697",
+        "dev2": "146270208/2429045",
+        "gap_16_minus_avg": "320/41",
+        "L_bound_le_16": true
+      },
+      "17": {
+        "avg": "576/71",
+        "room_hyp": "18579456/2059",
+        "dev2": "1309722624/21197405",
+        "gap_16_minus_avg": "560/71",
+        "L_bound_le_16": true
+      },
+      "19": {
+        "avg": "720/89",
+        "room_hyp": "182476800/16109",
+        "dev2": "16148183040/259499881",
+        "gap_16_minus_avg": "704/89",
+        "L_bound_le_16": true
+      },
+      "23": {
+        "avg": "1056/131",
+        "room_hyp": "115974144/6943",
+        "dev2": "15134186496/241026245",
+        "gap_16_minus_avg": "1040/131",
+        "L_bound_le_16": true
+      },
+      "29": {
+        "avg": "1680/209",
+        "room_hyp": "2348236800/87989",
+        "dev2": "489601781760/7742064121",
+        "gap_16_minus_avg": "1664/209",
+        "L_bound_le_16": true
+      },
+      "31": {
+        "avg": "1920/239",
+        "room_hyp": "3509452800/114959",
+        "dev2": "836997181440/13215571681",
+        "gap_16_minus_avg": "1904/239",
+        "L_bound_le_16": true
+      },
+      "37": {
+        "avg": "2736/341",
+        "room_hyp": "2036109312/46717",
+        "dev2": "693292243968/10912390445",
+        "gap_16_minus_avg": "2720/341",
+        "L_bound_le_16": true
+      }
+    },
+    "note": "This does NOT close 16N alone: room_hyp bound is the same residual as \u03ba \u2264 \u03ba_hyp (Prop 15.100)."
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "d": 5,
+      "ED4": 1680.0,
+      "kappa2": 960.0,
+      "proj": 960.0,
+      "orth": 0.0,
+      "room": 0.0,
+      "room_hyp": 0.0,
+      "var_from_ED4": 0.0,
+      "orth_matches_var": true,
+      "lambda_max_Phi": 16.000000000000004,
+      "avg_Phi": 16.0,
+      "lambda_max_le_16": true,
+      "mult_top_observed": 5,
+      "mult_ge_d_minus_1": true,
+      "mult_ge_d": true,
+      "kappa2_le_96n": true,
+      "kappa2_le_hyp": true,
+      "sixteen_N": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "d": 13,
+      "ED4": 9261.538461538461,
+      "kappa2": 2397.538461538461,
+      "proj": 1830.4,
+      "orth": 567.1384615384609,
+      "room": 665.6,
+      "room_hyp": 567.1384615384616,
+      "var_from_ED4": 567.1384615384613,
+      "orth_matches_var": true,
+      "lambda_max_Phi": 13.538461538461545,
+      "avg_Phi": 9.6,
+      "lambda_max_le_16": true,
+      "mult_top_observed": 13,
+      "mult_ge_d_minus_1": true,
+      "mult_ge_d": true,
+      "kappa2_le_96n": true,
+      "kappa2_le_hyp": true,
+      "sixteen_N": true
+    },
+    "7": {
+      "p": 7,
+      "N": 11452,
+      "d": 25,
+      "ED4": 31195.626520644902,
+      "kappa2": 3595.6265206449025,
+      "proj": 3345.4545454545455,
+      "orth": 250.171975190357,
+      "room": 1454.5454545454545,
+      "room_hyp": 1340.509090909091,
+      "var_from_ED4": 250.17197519035835,
+      "orth_matches_var": true,
+      "lambda_max_Phi": 10.56234718826408,
+      "avg_Phi": 8.727272727272727,
+      "lambda_max_le_16": true,
+      "mult_top_observed": 25,
+      "mult_ge_d_minus_1": true,
+      "mult_ge_d": true,
+      "kappa2_le_96n": true,
+      "kappa2_le_hyp": true,
+      "sixteen_N": true
+    }
+  },
+  "general_status": {
+    "variance_identity_proved": true,
+    "exact_16_criterion_mult_d_proved": true,
+    "sixteen_N_proved_for_all_p": false,
+    "kappa_bound_proved_for_all_p": false,
+    "H_proved": false,
+    "gap_proved_for_all_p": false,
+    "open_residual": "Prove \u2016\u03ba_orth\u2016\u00b2 \u2264 room (\u21d4 \u2016\u03ba\u2016\u00b2\u226496n \u21d4 \u03b4\u00b2\u2264room/24) for all primes p\u22655 on full Max+, OR compute the Norton/association-scheme spectrum of \u03a6|Z in closed form and read off \u03bb_max\u226416. Theorem E then upgrades mult\u2265d + \u03ba\u226496n to 16N; Prop 15.98 already gives bi-tight from mult\u2265d\u22121 + \u03ba\u226496n.",
+    "attack_surface": "Norton product structure constants on the Paley/PSL association scheme of Max+; Fickus ker-pairing simultaneous diagonalization of residual Gram; closed bulk eigenvalues of PopP."
+  },
+  "attack_surface": "Prove \u2016\u03ba_orth\u2016\u00b2 \u2264 room (\u21d4 \u2016\u03ba\u2016\u00b2\u226496n \u21d4 \u03b4\u00b2\u2264room/24) for all primes p\u22655 on full Max+, OR compute the Norton/association-scheme spectrum of \u03a6|Z in closed form and read off \u03bb_max\u226416. Theorem E then upgrades mult\u2265d + \u03ba\u226496n to 16N; Prop 15.98 already gives bi-tight from mult\u2265d\u22121 + \u03ba\u226496n.",
+  "verdict": "Proved: \u03a6 variance = \u03ba_orth (Fickus residual); orth=0 \u21d2 \u03a6 scalar; mult\u2265d + \u03ba\u226496n \u21d2 \u03bb_max(\u03a6)\u226416 exactly. Certified 16N and variance at p=3,5,7. OPEN: \u03ba\u226496n (or direct \u03bb_max\u226416) for general p\u22655. L OPEN.",
+  "settlement_note": "No soft-close. Bi-tight still requires general \u03ba/\u03b4/16N residual.",
+  "proved": {
+    "variance_identity": true,
+    "exact_16_criterion_algebra": true,
+    "sixteen_N_for_all_p": false,
+    "kappa_bound_for_all_p": false
+  }
+}

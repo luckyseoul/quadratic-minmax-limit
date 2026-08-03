@@ -1,0 +1,495 @@
+{
+  "prop": "15.120",
+  "title": "Pointwise residual factorization of E[W\u00b2]; Pythagoras \u2211m\u2084\u00b2; majorization UB (too weak)",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close: \u03b4\u00b2\u2264room_hyp/24 not proved for general p\u22655. Independent UBs too weak; residual OPEN.",
+  "proved": {
+    "factorization": true,
+    "pythagoras": true,
+    "majorization_ub": true,
+    "majorization_closes_residual": false,
+    "dead_ubs": true,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  },
+  "algebra": {
+    "factorization": {
+      "proved": true,
+      "theorem": "For every y\u2208Max+: E_z[W_y\u00b2]=EW2_flat+6 Q_\u03b4(y). Wick wedges + \u03ba/p\u00b2+\u03c1_min on disj \u2192 EW2_flat; disj \u03b4 \u2192 6\u27e8\u03b4,f_y\u27e9.",
+      "corollary": "E[W\u00b2]=EW2_flat+6\u03b4\u00b2; residual \u21d4 E Q_\u03b4 \u2264 room_hyp/24; if Q_\u03b4 constant then \u21d4 E[W\u00b2]\u2264EW2_bud pointwise."
+    },
+    "pythagoras": {
+      "proved": true,
+      "theorem": "\u2211m\u2084\u00b2=F(p)+\u03b4\u00b2 with F=\u2016\u03ba/p\u00b2+\u03c1_min\u2016\u2082\u00b2=m4f_flat Max+-free; consistent with ED4 dictionary.",
+      "by_p": {
+        "3": {
+          "F": "110/3",
+          "sum_m4_sq_flat": "110/3",
+          "m4f_flat": "110/3",
+          "F_eq_flat_mass": true,
+          "F_plus_room_eq_bud_mass": true,
+          "match": true
+        },
+        "5": {
+          "F": "598/5",
+          "sum_m4_sq_flat": "598/5",
+          "m4f_flat": "598/5",
+          "F_eq_flat_mass": true,
+          "F_plus_room_eq_bud_mass": true,
+          "match": true
+        },
+        "7": {
+          "F": "4100/11",
+          "sum_m4_sq_flat": "4100/11",
+          "m4f_flat": "4100/11",
+          "F_eq_flat_mass": true,
+          "F_plus_room_eq_bud_mass": true,
+          "match": true
+        },
+        "11": {
+          "F": "57950/29",
+          "sum_m4_sq_flat": "57950/29",
+          "m4f_flat": "57950/29",
+          "F_eq_flat_mass": true,
+          "F_plus_room_eq_bud_mass": true,
+          "match": true
+        },
+        "13": {
+          "F": "155890/41",
+          "sum_m4_sq_flat": "155890/41",
+          "m4f_flat": "155890/41",
+          "F_eq_flat_mass": true,
+          "F_plus_room_eq_bud_mass": true,
+          "match": true
+        },
+        "17": {
+          "F": "769080/71",
+          "sum_m4_sq_flat": "769080/71",
+          "m4f_flat": "769080/71",
+          "F_eq_flat_mass": true,
+          "F_plus_room_eq_bud_mass": true,
+          "match": true
+        },
+        "19": {
+          "F": "1493250/89",
+          "sum_m4_sq_flat": "1493250/89",
+          "m4f_flat": "1493250/89",
+          "F_eq_flat_mass": true,
+          "F_plus_room_eq_bud_mass": true,
+          "match": true
+        },
+        "23": {
+          "F": "4675660/131",
+          "sum_m4_sq_flat": "4675660/131",
+          "m4f_flat": "4675660/131",
+          "F_eq_flat_mass": true,
+          "F_plus_room_eq_bud_mass": true,
+          "match": true
+        },
+        "29": {
+          "F": "18713450/209",
+          "sum_m4_sq_flat": "18713450/209",
+          "m4f_flat": "18713450/209",
+          "F_eq_flat_mass": true,
+          "F_plus_room_eq_bud_mass": true,
+          "match": true
+        },
+        "31": {
+          "F": "27898000/239",
+          "sum_m4_sq_flat": "27898000/239",
+          "m4f_flat": "27898000/239",
+          "F_eq_flat_mass": true,
+          "F_plus_room_eq_bud_mass": true,
+          "match": true
+        },
+        "37": {
+          "F": "80510790/341",
+          "sum_m4_sq_flat": "80510790/341",
+          "m4f_flat": "80510790/341",
+          "F_eq_flat_mass": true,
+          "F_plus_room_eq_bud_mass": true,
+          "match": true
+        },
+        "41": {
+          "F": "148941100/419",
+          "sum_m4_sq_flat": "148941100/419",
+          "m4f_flat": "148941100/419",
+          "F_eq_flat_mass": true,
+          "F_plus_room_eq_bud_mass": true,
+          "match": true
+        },
+        "43": {
+          "F": "198147950/461",
+          "sum_m4_sq_flat": "198147950/461",
+          "m4f_flat": "198147950/461",
+          "F_eq_flat_mass": true,
+          "F_plus_room_eq_bud_mass": true,
+          "match": true
+        },
+        "47": {
+          "F": "337714520/551",
+          "sum_m4_sq_flat": "337714520/551",
+          "m4f_flat": "337714520/551",
+          "F_eq_flat_mass": true,
+          "F_plus_room_eq_bud_mass": true,
+          "match": true
+        },
+        "53": {
+          "F": "694033470/701",
+          "sum_m4_sq_flat": "694033470/701",
+          "m4f_flat": "694033470/701",
+          "F_eq_flat_mass": true,
+          "F_plus_room_eq_bud_mass": true,
+          "match": true
+        },
+        "59": {
+          "F": "1320287350/869",
+          "sum_m4_sq_flat": "1320287350/869",
+          "m4f_flat": "1320287350/869",
+          "F_eq_flat_mass": true,
+          "F_plus_room_eq_bud_mass": true,
+          "match": true
+        }
+      }
+    },
+    "majorization": {
+      "proved": true,
+      "theorem": "H=G\u2299G \u227d 0, \u03bb_max=2Nn, Tr=Nn\u00b2, Tr/\u03bb_max=d \u21d2 ED4\u22642n\u00b3; 2n\u00b3>ED4_bud for all primes p\u22655 (too weak).",
+      "by_p": {
+        "3": {
+          "ED4_maj_ub_2n3": "2000",
+          "ED4_bud": "1680",
+          "Tr_over_lmax": "5",
+          "equals_d": true,
+          "too_weak_for_residual": null,
+          "gap_ub_minus_bud": "0"
+        },
+        "5": {
+          "ED4_maj_ub_2n3": "35152",
+          "ED4_bud": "120400/13",
+          "Tr_over_lmax": "13",
+          "equals_d": true,
+          "too_weak_for_residual": true,
+          "gap_ub_minus_bud": "336576/13"
+        },
+        "7": {
+          "ED4_maj_ub_2n3": "250000",
+          "ED4_bud": "1775728/55",
+          "Tr_over_lmax": "25",
+          "equals_d": true,
+          "too_weak_for_residual": true,
+          "gap_ub_minus_bud": "11974272/55"
+        },
+        "11": {
+          "ED4_maj_ub_2n3": "3631696",
+          "ED4_bud": "326099984/1769",
+          "Tr_over_lmax": "61",
+          "equals_d": true,
+          "too_weak_for_residual": true,
+          "gap_ub_minus_bud": "6098370240/1769"
+        },
+        "13": {
+          "ED4_maj_ub_2n3": "9826000",
+          "ED4_bud": "247320592/697",
+          "Tr_over_lmax": "85",
+          "equals_d": true,
+          "too_weak_for_residual": true,
+          "gap_ub_minus_bud": "6601401408/697"
+        },
+        "17": {
+          "ED4_maj_ub_2n3": "48778000",
+          "ED4_bud": "2106345136/2059",
+          "Tr_over_lmax": "145",
+          "equals_d": true,
+          "too_weak_for_residual": true,
+          "gap_ub_minus_bud": "98327556864/2059"
+        },
+        "19": {
+          "ED4_maj_ub_2n3": "94875856",
+          "ED4_bud": "25609730384/16109",
+          "Tr_over_lmax": "181",
+          "equals_d": true,
+          "too_weak_for_residual": true,
+          "gap_ub_minus_bud": "1502745433920/16109"
+        },
+        "23": {
+          "ED4_maj_ub_2n3": "297754000",
+          "ED4_bud": "23579214064/6943",
+          "Tr_over_lmax": "265",
+          "equals_d": true,
+          "too_weak_for_residual": true,
+          "gap_ub_minus_bud": "2043726807936/6943"
+        },
+        "29": {
+          "ED4_maj_ub_2n3": "1193895376",
+          "ED4_bud": "752117368784/87989",
+          "Tr_over_lmax": "421",
+          "equals_d": true,
+          "too_weak_for_residual": true,
+          "gap_ub_minus_bud": "104297542870080/87989"
+        },
+        "31": {
+          "ED4_maj_ub_2n3": "1780554256",
+          "ED4_bud": "1281951110384/114959",
+          "Tr_over_lmax": "481",
+          "equals_d": true,
+          "too_weak_for_residual": true,
+          "gap_ub_minus_bud": "203408785605120/114959"
+        },
+        "37": {
+          "ED4_maj_ub_2n3": "5142706000",
+          "ED4_bud": "1055263799632/46717",
+          "Tr_over_lmax": "685",
+          "equals_d": true,
+          "too_weak_for_residual": true,
+          "gap_ub_minus_bud": "239196532402368/46717"
+        },
+        "41": {
+          "ED4_maj_ub_2n3": "9517173136",
+          "ED4_bud": "11991491332784/352379",
+          "Tr_over_lmax": "841",
+          "equals_d": true,
+          "too_weak_for_residual": true,
+          "gap_ub_minus_bud": "3341660461157760/352379"
+        },
+        "43": {
+          "ED4_maj_ub_2n3": "12663250000",
+          "ED4_bud": "3510217371088/85285",
+          "Tr_over_lmax": "925",
+          "equals_d": true,
+          "too_weak_for_residual": true,
+          "gap_ub_minus_bud": "1076475058878912/85285"
+        },
+        "47": {
+          "ED4_maj_ub_2n3": "21587722000",
+          "ED4_bud": "7149802809520/121771",
+          "Tr_over_lmax": "1105",
+          "equals_d": true,
+          "too_weak_for_residual": true,
+          "gap_ub_minus_bud": "2621608692852480/121771"
+        },
+        "53": {
+          "ED4_maj_ub_2n3": "44376082000",
+          "ED4_bud": "18691123717840/196981",
+          "Tr_over_lmax": "1405",
+          "equals_d": true,
+          "too_weak_for_residual": true,
+          "gap_ub_minus_bud": "8722553884724160/196981"
+        },
+        "59": {
+          "ED4_maj_ub_2n3": "84433792336",
+          "ED4_bud": "220371568144784/1512929",
+          "Tr_over_lmax": "1741",
+          "equals_d": true,
+          "too_weak_for_residual": true,
+          "gap_ub_minus_bud": "127521961436967360/1512929"
+        }
+      }
+    },
+    "dead_ubs": {
+      "proved": true,
+      "theorem": "CS-\u03b3, discrete LP 2n D_max\u00b2, and majorization 2n\u00b3 all strictly exceed residual budgets for every prime p\u22655.",
+      "by_p": {
+        "5": {
+          "CS_gamma_delta2_ub": "50050",
+          "CS_over_hyp": 2118.0013020833335,
+          "CS_too_weak": true,
+          "LP_2n_Dmax2": "10192",
+          "LP_over_bud": 1.1004651162790697,
+          "LP_too_weak": true,
+          "maj_2n3_over_bud": 3.7954817275747508,
+          "maj_too_weak": true
+        },
+        "7": {
+          "CS_gamma_delta2_ub": "1690500",
+          "CS_over_hyp": 30266.11328125,
+          "CS_too_weak": true,
+          "LP_2n_Dmax2": "115600",
+          "LP_over_bud": 3.5805033203283387,
+          "LP_too_weak": true,
+          "maj_2n3_over_bud": 7.743303028391735,
+          "maj_too_weak": true
+        },
+        "11": {
+          "CS_gamma_delta2_ub": "169836810",
+          "CS_over_hyp": 1117713.2324776787,
+          "CS_too_weak": true,
+          "LP_2n_Dmax2": "2343376",
+          "LP_over_bud": 12.71215071264769,
+          "LP_too_weak": true,
+          "maj_2n3_over_bud": 19.700921616727218,
+          "maj_too_weak": true
+        },
+        "13": {
+          "CS_gamma_delta2_ub": "918067150",
+          "CS_over_hyp": 4250988.543991815,
+          "CS_too_weak": true,
+          "LP_2n_Dmax2": "6855760",
+          "LP_over_bud": 19.320933535530273,
+          "LP_too_weak": true,
+          "maj_2n3_over_bud": 27.69167720575406,
+          "maj_too_weak": true
+        },
+        "17": {
+          "CS_gamma_delta2_ub": "13662706200",
+          "CS_over_hyp": 36338862.10549975,
+          "CS_too_weak": true,
+          "LP_2n_Dmax2": "37419280",
+          "LP_over_bud": 36.57819234045982,
+          "LP_too_weak": true,
+          "maj_2n3_over_bud": 47.68159798860238,
+          "maj_too_weak": true
+        },
+        "19": {
+          "CS_gamma_delta2_ub": "41754859230",
+          "CS_over_hyp": 88466570.30409169,
+          "CS_too_weak": true,
+          "LP_2n_Dmax2": "75067216",
+          "LP_over_bud": 47.21868463322437,
+          "LP_too_weak": true,
+          "maj_2n3_over_bud": 59.67869014579158,
+          "maj_too_weak": true
+        },
+        "23": {
+          "CS_gamma_delta2_ub": "283888643500",
+          "CS_over_hyp": 407892059.48950136,
+          "CS_too_weak": true,
+          "LP_2n_Dmax2": "246263440",
+          "LP_over_bud": 72.51331869158776,
+          "LP_too_weak": true,
+          "maj_2n3_over_bud": 87.67493337092594,
+          "maj_too_weak": true
+        },
+        "29": {
+          "CS_gamma_delta2_ub": "2897305947270",
+          "CS_over_hyp": 2605506085.188751,
+          "CS_too_weak": true,
+          "LP_2n_Dmax2": "1029806416",
+          "LP_over_bud": 120.47539453040697,
+          "LP_too_weak": true,
+          "maj_2n3_over_bud": 139.6718977633837,
+          "maj_too_weak": true
+        },
+        "31": {
+          "CS_gamma_delta2_ub": "5650470963280",
+          "CS_over_hyp": 4442213838.928089,
+          "CS_too_weak": true,
+          "LP_2n_Dmax2": "1551521296",
+          "LP_over_bud": 139.13271358175044,
+          "LP_too_weak": true,
+          "maj_2n3_over_bud": 159.67125037567948,
+          "maj_too_weak": true
+        },
+        "37": {
+          "CS_gamma_delta2_ub": "33222397585650",
+          "CS_over_hyp": 18294311475.655914,
+          "CS_too_weak": true,
+          "LP_2n_Dmax2": "4587954640",
+          "LP_over_bud": 203.11080223885702,
+          "LP_too_weak": true,
+          "maj_2n3_over_bud": 227.669892860707,
+          "maj_too_weak": true
+        },
+        "41": {
+          "CS_gamma_delta2_ub": "92825118780940",
+          "CS_over_hyp": 41588374511.396255,
+          "CS_too_weak": true,
+          "LP_2n_Dmax2": "8590323856",
+          "LP_over_bud": 252.4331332982459,
+          "LP_too_weak": true,
+          "maj_2n3_over_bud": 279.66929712252437,
+          "maj_too_weak": true
+        },
+        "43": {
+          "CS_gamma_delta2_ub": "149512044932250",
+          "CS_over_hyp": 60876311870.64241,
+          "CS_too_weak": true,
+          "LP_2n_Dmax2": "11487182800",
+          "LP_over_bud": 279.0950763241037,
+          "LP_too_weak": true,
+          "maj_2n3_over_bud": 307.66905922844774,
+          "maj_too_weak": true
+        },
+        "47": {
+          "CS_gamma_delta2_ub": "364115082185400",
+          "CS_over_hyp": 124017501241.88615,
+          "CS_too_weak": true,
+          "LP_2n_Dmax2": "19752962320",
+          "LP_over_bud": 336.42018370996186,
+          "LP_too_weak": true,
+          "maj_2n3_over_bud": 367.66867082848694,
+          "maj_too_weak": true
+        },
+        "53": {
+          "CS_gamma_delta2_ub": "1211471502748650",
+          "CS_over_hyp": 324269839860.6293,
+          "CS_too_weak": true,
+          "LP_2n_Dmax2": "41030518480",
+          "LP_over_bud": 432.41020083745326,
+          "LP_too_weak": true,
+          "maj_2n3_over_bud": 467.6682440499176,
+          "maj_too_weak": true
+        },
+        "59": {
+          "CS_gamma_delta2_ub": "3542287529917090",
+          "CS_over_hyp": 764742812317.6244,
+          "CS_too_weak": true,
+          "LP_2n_Dmax2": "78714398416",
+          "LP_over_bud": 540.4022718705658,
+          "LP_too_weak": true,
+          "maj_2n3_over_bud": 579.6679402906708,
+          "maj_too_weak": true
+        }
+      }
+    },
+    "halfspace_criterion": {
+      "proved": true,
+      "theorem": "If Q_\u03b4 constant on Max+: residual \u21d4 \u27e8m\u2084,f_hs\u27e9\u2264m4f_bud \u21d4 E[W_hs\u00b2]\u2264EW2_bud.  Else use pair averages only.",
+      "cert_Q_const": "p=3,5 yes; p=7 no (3 ED4 types, Prop 15.114)"
+    }
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "EW2_min": 345.0,
+      "EW2_max": 345.0,
+      "EW2_mean": 345.0,
+      "EW2_flat": 345.0,
+      "delta2": "0",
+      "pred_mean_flat_plus_6d2": 345.0,
+      "mean_matches_factorization": true,
+      "EW2_constant_on_Max": true,
+      "pointwise_matches_if_const": true,
+      "residual_le_hyp": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "EW2_min": 1808.3846153846152,
+      "EW2_max": 1808.3846153846152,
+      "EW2_mean": 1808.3846153846155,
+      "EW2_flat": 1666.6,
+      "delta2": "1536/65",
+      "pred_mean_flat_plus_6d2": 1808.3846153846152,
+      "mean_matches_factorization": true,
+      "EW2_constant_on_Max": true,
+      "pointwise_matches_if_const": true,
+      "residual_le_hyp": true
+    }
+  },
+  "status": {
+    "factorization_proved": true,
+    "pythagoras_proved": true,
+    "majorization_ub_proved": true,
+    "majorization_closes_residual": false,
+    "dead_ubs_documented": true,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "open_residual": "Prove \u03b4\u00b2\u2264room_hyp/24 for all primes p\u22655. Have pointwise E[W\u00b2]_y=EW2_flat+6 Q_\u03b4(y) and \u2211m\u2084\u00b2=F+\u03b4\u00b2; independent UBs (CS-\u03b3, LP, majorization 2n\u00b3) all too weak. Need weight enumerator / Gauss sums / Aut-line character sum."
+  },
+  "backend": "CPU Fraction algebra + Max+ cert p=3,5; GPU unused (F20)",
+  "F19": "no class_key"
+}

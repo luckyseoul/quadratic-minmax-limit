@@ -35,9 +35,9 @@ Load these **before** free-text thrashing or large file dumps:
 ## 1. One-line resume
 
 **P0:** Close Path C bi-tight residual for **all primes \(p\ge5\)** (proof, not census), then deep ND, then Main Theorem.  
-**Just landed:** Prop **15.95** — Wick_hi ≤ thr_gap ∀p≥5; mult≥d + ∑M²≤Wick ⇒ gap; C_diag; mult=d cert p=3,5,7.  
+**Just landed:** Prop **15.96** — Wick–κ calculus: ∑M²=12n²−48n+‖κ‖²; ∑M²≤Wick ⇔ ‖κ‖²≤96n (plus 15.95 Wick≤thr).  
 **Active residual (pick one):**
-1. Prove \(\mathrm{mult}(\lambda_2(P\odot P))\ge d\) ∀p≥5, and/or \(\sum M^2\le\mathrm{Wick}_{\mathrm{hi}}=12n^2+48n\)  
+1. Prove \(\|\kappa\|_F^2\le96n\) and \(\mathrm{mult}(\lambda_2)\ge d\) ∀p≥5  
 2. Prove \(\lambda_{\max}(FF^\top|_{1^\perp})\le8N\) (16N)  
 3. Prove \(\lambda_{\max}(FF^\top|_{1^\perp})\le N(3+H)\) (H)  
 
@@ -68,6 +68,7 @@ Sandwich \(1/\pi\le\liminf\le\limsup\le1/2\) intact. Denseness alone ≠ closed 
 | 15.93 | FFT1=Nd1; 16N ⇔ λ_max(FFT\|1⊥)≤8N | `...prop1593.py` |
 | 15.94 | P⊙P annihilates range(P); gap criterion mult≥d + ∑M²≤4d²(d+4) | `...prop1594.py` |
 | **15.95** | **Wick≤thr ∀p≥5; mult+Wick⇒gap; C_diag; mult=d @ 3,5,7** | **`...prop1595.py`**, `evidence/e1_gmin_m4_prop1595.json`, `tests/test_prop1595.py` (6 green) |
+| **15.96** | **Wick–κ: ∑M²=12n²−48n+‖κ‖²; ≤Wick ⇔ ‖κ‖²≤96n** | **`...prop1596.py`**, `evidence/e1_gmin_m4_prop1596.json`, `tests/test_prop1596.py` (5 green) |
 
 **15.95 certs:**
 

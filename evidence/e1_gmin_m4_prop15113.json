@@ -1,0 +1,242 @@
+{
+  "prop": "15.113",
+  "backend": "CPU Fraction + Max+ cert; GPU unused (F20); no class_key (F19)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "ed4_le_suf_for_all_p": false,
+  "kappa_bound_proved_for_all_p": false,
+  "closed_forms": {
+    "fy_Tkappa": "2 p (p^4 - 1)",
+    "spot_p3": "480",
+    "spot_p5": "6240",
+    "spot_p7": "33600",
+    "ED4": "3 n^2 + 4 E[W^2]",
+    "E_W": "n/2"
+  },
+  "fy_Tkappa_algebra": {
+    "proved": true,
+    "theorem": "\u27e8m\u2084,T\u03ba\u27e9=2p(p\u2074\u22121) from \u27e8\u03ba,T\u03ba\u27e9=0, \u27e8\u03c1,b\u27e9=\u27e8\u03c1_min,b\u27e9, \u2016b\u2016\u2082\u00b2=576 n\u2083/p\u2074, den=12(p\u00b2\u22125).",
+    "by_p": {
+      "3": {
+        "from_rho_min_b": "480",
+        "closed_2p_p4_minus_1": "480",
+        "match": true,
+        "b2": "640/3",
+        "den": 48
+      },
+      "5": {
+        "from_rho_min_b": "6240",
+        "closed_2p_p4_minus_1": "6240",
+        "match": true,
+        "b2": "14976/5",
+        "den": 240
+      },
+      "7": {
+        "from_rho_min_b": "33600",
+        "closed_2p_p4_minus_1": "33600",
+        "match": true,
+        "b2": "633600/49",
+        "den": 528
+      },
+      "11": {
+        "from_rho_min_b": "322080",
+        "closed_2p_p4_minus_1": "322080",
+        "match": true,
+        "b2": "10189440/121",
+        "den": 1392
+      },
+      "13": {
+        "from_rho_min_b": "742560",
+        "closed_2p_p4_minus_1": "742560",
+        "match": true,
+        "b2": "28103040/169",
+        "den": 1968
+      },
+      "17": {
+        "from_rho_min_b": "2839680",
+        "closed_2p_p4_minus_1": "2839680",
+        "match": true,
+        "b2": "142318080/289",
+        "den": 3408
+      },
+      "19": {
+        "from_rho_min_b": "4952160",
+        "closed_2p_p4_minus_1": "4952160",
+        "match": true,
+        "b2": "278363520/361",
+        "den": 4272
+      },
+      "23": {
+        "from_rho_min_b": "12872640",
+        "closed_2p_p4_minus_1": "12872640",
+        "match": true,
+        "b2": "879816960/529",
+        "den": 6288
+      },
+      "29": {
+        "from_rho_min_b": "41022240",
+        "closed_2p_p4_minus_1": "41022240",
+        "match": true,
+        "b2": "3547716480/841",
+        "den": 10032
+      },
+      "31": {
+        "from_rho_min_b": "57258240",
+        "closed_2p_p4_minus_1": "57258240",
+        "match": true,
+        "b2": "5297310720/961",
+        "den": 11472
+      },
+      "37": {
+        "from_rho_min_b": "138687840",
+        "closed_2p_p4_minus_1": "138687840",
+        "match": true,
+        "b2": "15338125440/1369",
+        "den": 16368
+      },
+      "41": {
+        "from_rho_min_b": "231712320",
+        "closed_2p_p4_minus_1": "231712320",
+        "match": true,
+        "b2": "28415842560/1681",
+        "den": 20112
+      },
+      "43": {
+        "from_rho_min_b": "294016800",
+        "closed_2p_p4_minus_1": "294016800",
+        "match": true,
+        "b2": "37825603200/1849",
+        "den": 22128
+      },
+      "47": {
+        "from_rho_min_b": "458689920",
+        "closed_2p_p4_minus_1": "458689920",
+        "match": true,
+        "b2": "64528888320/2209",
+        "den": 26448
+      },
+      "53": {
+        "from_rho_min_b": "836390880",
+        "closed_2p_p4_minus_1": "836390880",
+        "match": true,
+        "b2": "132749435520/2809",
+        "den": 33648
+      },
+      "59": {
+        "from_rho_min_b": "1429848480",
+        "closed_2p_p4_minus_1": "1429848480",
+        "match": true,
+        "b2": "252719660160/3481",
+        "den": 41712
+      }
+    }
+  },
+  "EW_identity": {
+    "proved": true,
+    "theorem": "For y\u2208Max+: W=\u2211_{i<j} y_i y_j z_i z_j, D=y\u00b7z \u21d2 D\u00b2=n+2W, E[W]=n/2 (from y\u1d40Cy=pn), E[D\u2074]=3n\u00b2+4 E[W\u00b2]."
+  },
+  "Q_delta_criterion": {
+    "proved": true,
+    "theorem": "If Q_\u03b4(y):=\u2211_S \u03b4(S)\u220f_{i\u2208S} y_i \u2264 \u03c1_min\u00b2 for all y\u2208Max+, then \u03b4\u00b2=E Q_\u03b4 \u2264 \u03c1_min\u00b2 \u21d2 ED4\u2264ED4_suf."
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "n": 10,
+      "kappa_Tkappa": 0.0,
+      "kappa_Tkappa_zero": true,
+      "fy_Tkappa_mean": 480.0,
+      "fy_Tkappa_std": 0.0,
+      "fy_Tkappa_pred": 480.0,
+      "fy_Tkappa_constant": true,
+      "fy_Tkappa_matches": true,
+      "E_W": 5.0,
+      "E_W_pred_n_over_2": 5.0,
+      "E_W_ok": true,
+      "ED4": 1680.0,
+      "ED4_from_W": 1680.0,
+      "ED4_W_identity": true,
+      "ED4_flat": 1680.0,
+      "ED4_suf": 2213.3333333333335,
+      "delta2": "0",
+      "rho_min2": "200/9",
+      "delta2_le_rho_min2": true,
+      "ED4_le_suf": true,
+      "Q_delta_le_rm_if_constant": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "n": 26,
+      "kappa_Tkappa": 0.0,
+      "kappa_Tkappa_zero": true,
+      "fy_Tkappa_mean": 6240.0,
+      "fy_Tkappa_std": 0.0,
+      "fy_Tkappa_pred": 6240.0,
+      "fy_Tkappa_constant": true,
+      "fy_Tkappa_matches": true,
+      "E_W": 13.0,
+      "E_W_pred_n_over_2": 13.0,
+      "E_W_ok": true,
+      "ED4": 9261.538461538461,
+      "ED4_from_W": 9261.538461538461,
+      "ED4_W_identity": true,
+      "ED4_flat": 8694.4,
+      "ED4_suf": 9393.28,
+      "delta2": "1536/65",
+      "rho_min2": "728/25",
+      "delta2_le_rho_min2": true,
+      "ED4_le_suf": true,
+      "Q_delta_le_rm_if_constant": true
+    },
+    "7": {
+      "p": 7,
+      "N": 11452,
+      "n": 50,
+      "kappa_Tkappa": 0.0,
+      "kappa_Tkappa_zero": true,
+      "fy_Tkappa_mean": 33600.0,
+      "fy_Tkappa_std": 0.0,
+      "fy_Tkappa_pred": 33600.0,
+      "fy_Tkappa_constant": true,
+      "fy_Tkappa_matches": true,
+      "E_W": 25.0,
+      "E_W_pred_n_over_2": 25.0,
+      "E_W_ok": true,
+      "ED4": 31383.823960880196,
+      "ED4_from_W": 31383.823960880196,
+      "ED4_W_identity": true,
+      "ED4_flat": 30945.454545454544,
+      "ED4_suf": 32103.153988868275,
+      "delta2": "82176/4499",
+      "rho_min2": "26000/539",
+      "delta2_le_rho_min2": true,
+      "ED4_le_suf": true,
+      "Q_delta_le_rm_if_constant": true
+    }
+  },
+  "general_status": {
+    "fy_Tkappa_formula_proved": true,
+    "EW_ED4_identity_proved": true,
+    "Q_delta_criterion_proved": true,
+    "ed4_le_suf_for_all_p": false,
+    "delta_le_rho_min_for_all_p": false,
+    "Q_delta_le_rm_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "open_residual": "Prove Q_\u03b4(y)\u2264\u03c1_min\u00b2 on Max+ for all primes p\u22655 (\u21d2 \u03b4\u00b2\u2264\u03c1_min\u00b2 \u21d2 ED4\u2264ED4_suf), or bound E[D\u2074]\u2264ED4_suf directly. F19: no class_key thrash."
+  },
+  "attack_surface": "Prove Q_\u03b4(y)\u2264\u03c1_min\u00b2 on Max+ for all primes p\u22655 (\u21d2 \u03b4\u00b2\u2264\u03c1_min\u00b2 \u21d2 ED4\u2264ED4_suf), or bound E[D\u2074]\u2264ED4_suf directly. F19: no class_key thrash.",
+  "verdict": "Proved: \u27e8m\u2084,T\u03ba\u27e9=2p(p\u2074\u22121) from resolvent pairing; E[W]=n/2 and ED4=3n\u00b2+4 E[W\u00b2]; Q_\u03b4\u2264\u03c1_min\u00b2 \u21d2 residual. Certified constancy of \u27e8f_y,T\u03ba\u27e9 and ED4\u2264ED4_suf at p=3,5,7. OPEN: Q_\u03b4\u2264\u03c1_min\u00b2 (or ED4\u2264ED4_suf) for general p\u22655. L OPEN.",
+  "settlement_note": "No soft-close. N_ED4_SUF still open for general p; reduced to pointwise Q_\u03b4 bound on Max+.",
+  "proved": {
+    "fy_Tkappa_formula": true,
+    "EW_ED4_identity": true,
+    "Q_delta_criterion": true,
+    "cert_p3_p5": true,
+    "ed4_le_suf_for_all_p": false,
+    "delta_le_rho_min_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  }
+}

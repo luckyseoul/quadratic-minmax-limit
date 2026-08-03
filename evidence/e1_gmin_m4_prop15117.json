@@ -1,0 +1,578 @@
+{
+  "prop": "15.117",
+  "backend": "CPU Fraction + Max+ cert; GPU unused (F20); no class_key (F19)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "ed4_le_suf_for_all_p": false,
+  "hyp_residual_for_all_p": false,
+  "kappa_bound_proved_for_all_p": false,
+  "closed_forms": {
+    "room_hyp_24": "4(p^2-9)(p^2-1)^2 / (3(p^2-5)(p^2+1))",
+    "b_dot_f": "2(p^4-1)/p",
+    "rho_min_dot_f_if_bgf0": "4(p^4-1)/(3(p^2-5))",
+    "rho_min_dot_m4": "rho_min2 + kappa_dot_rho_min / p^2",
+    "spot_p5_hyp": "1536/65",
+    "spot_p7_hyp": "3072/55",
+    "spot_p5_rmf": "208/5"
+  },
+  "hyp_budget": {
+    "proved": true,
+    "theorem": "room_hyp/24=4(p\u00b2\u22129)(p\u00b2\u22121)\u00b2/(3(p\u00b2\u22125)(p\u00b2+1)); Path C residual \u21d4 \u03b4\u00b2\u2264room_hyp/24 \u21d4 orth\u2264room_hyp \u21d4 \u03ba\u00b2\u2264\u03ba_hyp \u21d4 ED4\u2264ED4_bud.",
+    "by_p": {
+      "3": {
+        "room_hyp_24": "0",
+        "from_delta2_budget_hyp": "0",
+        "match": true
+      },
+      "5": {
+        "closed": "1536/65",
+        "delta2_budget_hyp": "1536/65",
+        "from_room": "1536/65",
+        "match": true
+      },
+      "7": {
+        "closed": "3072/55",
+        "delta2_budget_hyp": "3072/55",
+        "from_room": "3072/55",
+        "match": true
+      },
+      "11": {
+        "closed": "268800/1769",
+        "delta2_budget_hyp": "268800/1769",
+        "from_room": "268800/1769",
+        "match": true
+      },
+      "13": {
+        "closed": "150528/697",
+        "delta2_budget_hyp": "150528/697",
+        "from_room": "150528/697",
+        "match": true
+      },
+      "17": {
+        "closed": "774144/2059",
+        "delta2_budget_hyp": "774144/2059",
+        "from_room": "774144/2059",
+        "match": true
+      },
+      "19": {
+        "closed": "7603200/16109",
+        "delta2_budget_hyp": "7603200/16109",
+        "from_room": "7603200/16109",
+        "match": true
+      },
+      "23": {
+        "closed": "4832256/6943",
+        "delta2_budget_hyp": "4832256/6943",
+        "from_room": "4832256/6943",
+        "match": true
+      },
+      "29": {
+        "closed": "97843200/87989",
+        "delta2_budget_hyp": "97843200/87989",
+        "from_room": "97843200/87989",
+        "match": true
+      },
+      "31": {
+        "closed": "146227200/114959",
+        "delta2_budget_hyp": "146227200/114959",
+        "from_room": "146227200/114959",
+        "match": true
+      },
+      "37": {
+        "closed": "84837888/46717",
+        "delta2_budget_hyp": "84837888/46717",
+        "from_room": "84837888/46717",
+        "match": true
+      },
+      "41": {
+        "closed": "786508800/352379",
+        "delta2_budget_hyp": "786508800/352379",
+        "from_room": "786508800/352379",
+        "match": true
+      },
+      "43": {
+        "closed": "209459712/85285",
+        "delta2_budget_hyp": "209459712/85285",
+        "from_room": "209459712/85285",
+        "match": true
+      },
+      "47": {
+        "closed": "357519360/121771",
+        "delta2_budget_hyp": "357519360/121771",
+        "from_room": "357519360/121771",
+        "match": true
+      },
+      "53": {
+        "closed": "735920640/196981",
+        "delta2_budget_hyp": "735920640/196981",
+        "from_room": "735920640/196981",
+        "match": true
+      },
+      "59": {
+        "closed": "7007884800/1512929",
+        "delta2_budget_hyp": "7007884800/1512929",
+        "from_room": "7007884800/1512929",
+        "match": true
+      }
+    }
+  },
+  "rho_vs_hyp": {
+    "proved": true,
+    "theorem": "\u03c1_min\u00b2>room_hyp/24 at p=5; \u03c1_min\u00b2<room_hyp/24 for all primes p\u22657. Hence \u03b4\u00b2\u2264\u03c1_min\u00b2 \u21d2 Path C residual for p\u22657; at p=5 need hyp form.",
+    "by_p": {
+      "5": {
+        "rho_min2": "728/25",
+        "room_hyp_24": "1536/65",
+        "rho_le_hyp": false,
+        "rho_lt_hyp_p_ge_7": null,
+        "rho_gt_hyp_at_p5": true
+      },
+      "7": {
+        "rho_min2": "26000/539",
+        "room_hyp_24": "3072/55",
+        "rho_le_hyp": true,
+        "rho_lt_hyp_p_ge_7": true,
+        "rho_gt_hyp_at_p5": null
+      },
+      "11": {
+        "rho_min2": "378200/3509",
+        "room_hyp_24": "268800/1769",
+        "rho_le_hyp": true,
+        "rho_lt_hyp_p_ge_7": true,
+        "rho_gt_hyp_at_p5": null
+      },
+      "13": {
+        "rho_min2": "1023400/6929",
+        "room_hyp_24": "150528/697",
+        "rho_le_hyp": true,
+        "rho_lt_hyp_p_ge_7": true,
+        "rho_gt_hyp_at_p5": null
+      },
+      "17": {
+        "rho_min2": "5080800/20519",
+        "room_hyp_24": "774144/2059",
+        "rho_le_hyp": true,
+        "rho_lt_hyp_p_ge_7": true,
+        "rho_gt_hyp_at_p5": null
+      },
+      "19": {
+        "rho_min2": "9882600/32129",
+        "room_hyp_24": "7603200/16109",
+        "rho_le_hyp": true,
+        "rho_lt_hyp_p_ge_7": true,
+        "rho_gt_hyp_at_p5": null
+      },
+      "23": {
+        "rho_min2": "31015600/69299",
+        "room_hyp_24": "4832256/6943",
+        "rho_le_hyp": true,
+        "rho_lt_hyp_p_ge_7": true,
+        "rho_gt_hyp_at_p5": null
+      },
+      "29": {
+        "rho_min2": "124363400/175769",
+        "room_hyp_24": "97843200/87989",
+        "rho_le_hyp": true,
+        "rho_lt_hyp_p_ge_7": true,
+        "rho_gt_hyp_at_p5": null
+      },
+      "31": {
+        "rho_min2": "185473600/229679",
+        "room_hyp_24": "146227200/114959",
+        "rho_le_hyp": true,
+        "rho_lt_hyp_p_ge_7": true,
+        "rho_gt_hyp_at_p5": null
+      },
+      "37": {
+        "rho_min2": "535697400/466829",
+        "room_hyp_24": "84837888/46717",
+        "rho_le_hyp": true,
+        "rho_lt_hyp_p_ge_7": true,
+        "rho_gt_hyp_at_p5": null
+      },
+      "41": {
+        "rho_min2": "991370800/704339",
+        "room_hyp_24": "786508800/352379",
+        "rho_le_hyp": true,
+        "rho_lt_hyp_p_ge_7": true,
+        "rho_gt_hyp_at_p5": null
+      },
+      "43": {
+        "rho_min2": "1319087000/852389",
+        "room_hyp_24": "209459712/85285",
+        "rho_le_hyp": true,
+        "rho_lt_hyp_p_ge_7": true,
+        "rho_gt_hyp_at_p5": null
+      },
+      "47": {
+        "rho_min2": "2248719200/1217159",
+        "room_hyp_24": "357519360/121771",
+        "rho_le_hyp": true,
+        "rho_lt_hyp_p_ge_7": true,
+        "rho_gt_hyp_at_p5": null
+      },
+      "53": {
+        "rho_min2": "4622506200/1969109",
+        "room_hyp_24": "735920640/196981",
+        "rho_le_hyp": true,
+        "rho_lt_hyp_p_ge_7": true,
+        "rho_gt_hyp_at_p5": null
+      },
+      "59": {
+        "rho_min2": "8795183800/3024989",
+        "room_hyp_24": "7007884800/1512929",
+        "rho_le_hyp": true,
+        "rho_lt_hyp_p_ge_7": true,
+        "rho_gt_hyp_at_p5": null
+      }
+    }
+  },
+  "slack": {
+    "proved": true,
+    "theorem": "\u03ba_hyp\u2212\u2016\u03ba\u2016\u00b2=room_hyp\u2212orth=24(room_hyp/24\u2212\u03b4\u00b2).",
+    "by_p": {
+      "3": {
+        "kappa_hyp_minus_proj": "0",
+        "room_hyp": "0",
+        "match": true
+      },
+      "5": {
+        "kappa_hyp_minus_proj": "36864/65",
+        "room_hyp": "36864/65",
+        "24_times_hyp24": "36864/65",
+        "match": true
+      },
+      "7": {
+        "kappa_hyp_minus_proj": "73728/55",
+        "room_hyp": "73728/55",
+        "24_times_hyp24": "73728/55",
+        "match": true
+      },
+      "11": {
+        "kappa_hyp_minus_proj": "6451200/1769",
+        "room_hyp": "6451200/1769",
+        "24_times_hyp24": "6451200/1769",
+        "match": true
+      },
+      "13": {
+        "kappa_hyp_minus_proj": "3612672/697",
+        "room_hyp": "3612672/697",
+        "24_times_hyp24": "3612672/697",
+        "match": true
+      },
+      "17": {
+        "kappa_hyp_minus_proj": "18579456/2059",
+        "room_hyp": "18579456/2059",
+        "24_times_hyp24": "18579456/2059",
+        "match": true
+      },
+      "19": {
+        "kappa_hyp_minus_proj": "182476800/16109",
+        "room_hyp": "182476800/16109",
+        "24_times_hyp24": "182476800/16109",
+        "match": true
+      },
+      "23": {
+        "kappa_hyp_minus_proj": "115974144/6943",
+        "room_hyp": "115974144/6943",
+        "24_times_hyp24": "115974144/6943",
+        "match": true
+      },
+      "29": {
+        "kappa_hyp_minus_proj": "2348236800/87989",
+        "room_hyp": "2348236800/87989",
+        "24_times_hyp24": "2348236800/87989",
+        "match": true
+      },
+      "31": {
+        "kappa_hyp_minus_proj": "3509452800/114959",
+        "room_hyp": "3509452800/114959",
+        "24_times_hyp24": "3509452800/114959",
+        "match": true
+      },
+      "37": {
+        "kappa_hyp_minus_proj": "2036109312/46717",
+        "room_hyp": "2036109312/46717",
+        "24_times_hyp24": "2036109312/46717",
+        "match": true
+      },
+      "41": {
+        "kappa_hyp_minus_proj": "18876211200/352379",
+        "room_hyp": "18876211200/352379",
+        "24_times_hyp24": "18876211200/352379",
+        "match": true
+      },
+      "43": {
+        "kappa_hyp_minus_proj": "5027033088/85285",
+        "room_hyp": "5027033088/85285",
+        "24_times_hyp24": "5027033088/85285",
+        "match": true
+      },
+      "47": {
+        "kappa_hyp_minus_proj": "8580464640/121771",
+        "room_hyp": "8580464640/121771",
+        "24_times_hyp24": "8580464640/121771",
+        "match": true
+      },
+      "53": {
+        "kappa_hyp_minus_proj": "17662095360/196981",
+        "room_hyp": "17662095360/196981",
+        "24_times_hyp24": "17662095360/196981",
+        "match": true
+      },
+      "59": {
+        "kappa_hyp_minus_proj": "168189235200/1512929",
+        "room_hyp": "168189235200/1512929",
+        "24_times_hyp24": "168189235200/1512929",
+        "match": true
+      }
+    }
+  },
+  "pairings": {
+    "proved": true,
+    "theorem": "\u27e8b,f_y\u27e9=2(p\u2074\u22121)/p=\u27e8\u03c1_min,b\u27e9; \u27e8\u03c1_min,m\u2084\u27e9=\u03c1_min\u00b2+\u27e8\u03ba,\u03c1_min\u27e9/p\u00b2 closed; if \u27e8b,\u03b3\u2299f\u27e9=0 then \u27e8\u03c1_min,f\u27e9=4(p\u2074\u22121)/(3(p\u00b2\u22125)).",
+    "by_p": {
+      "3": {
+        "b_dot_f": "160/3",
+        "rho_min_dot_b": "160/3",
+        "b_dot_f_eq_rho_min_dot_b": true,
+        "rho_min_dot_m4": "80/3",
+        "rho_min_dot_f_if_bgf0": "80/3",
+        "fy_Tkappa": "480",
+        "b_dot_f_from_Tkappa": "160/3"
+      },
+      "5": {
+        "b_dot_f": "1248/5",
+        "rho_min_dot_b": "1248/5",
+        "b_dot_f_eq_rho_min_dot_b": true,
+        "rho_min_dot_m4": "208/5",
+        "rho_min_dot_f_if_bgf0": "208/5",
+        "fy_Tkappa": "6240",
+        "b_dot_f_from_Tkappa": "1248/5"
+      },
+      "7": {
+        "b_dot_f": "4800/7",
+        "rho_min_dot_b": "4800/7",
+        "b_dot_f_eq_rho_min_dot_b": true,
+        "rho_min_dot_m4": "800/11",
+        "rho_min_dot_f_if_bgf0": "800/11",
+        "fy_Tkappa": "33600",
+        "b_dot_f_from_Tkappa": "4800/7"
+      },
+      "11": {
+        "b_dot_f": "29280/11",
+        "rho_min_dot_b": "29280/11",
+        "b_dot_f_eq_rho_min_dot_b": true,
+        "rho_min_dot_m4": "4880/29",
+        "rho_min_dot_f_if_bgf0": "4880/29",
+        "fy_Tkappa": "322080",
+        "b_dot_f_from_Tkappa": "29280/11"
+      },
+      "13": {
+        "b_dot_f": "57120/13",
+        "rho_min_dot_b": "57120/13",
+        "b_dot_f_eq_rho_min_dot_b": true,
+        "rho_min_dot_m4": "9520/41",
+        "rho_min_dot_f_if_bgf0": "9520/41",
+        "fy_Tkappa": "742560",
+        "b_dot_f_from_Tkappa": "57120/13"
+      },
+      "17": {
+        "b_dot_f": "167040/17",
+        "rho_min_dot_b": "167040/17",
+        "b_dot_f_eq_rho_min_dot_b": true,
+        "rho_min_dot_m4": "27840/71",
+        "rho_min_dot_f_if_bgf0": "27840/71",
+        "fy_Tkappa": "2839680",
+        "b_dot_f_from_Tkappa": "167040/17"
+      },
+      "19": {
+        "b_dot_f": "260640/19",
+        "rho_min_dot_b": "260640/19",
+        "b_dot_f_eq_rho_min_dot_b": true,
+        "rho_min_dot_m4": "43440/89",
+        "rho_min_dot_f_if_bgf0": "43440/89",
+        "fy_Tkappa": "4952160",
+        "b_dot_f_from_Tkappa": "260640/19"
+      },
+      "23": {
+        "b_dot_f": "559680/23",
+        "rho_min_dot_b": "559680/23",
+        "b_dot_f_eq_rho_min_dot_b": true,
+        "rho_min_dot_m4": "93280/131",
+        "rho_min_dot_f_if_bgf0": "93280/131",
+        "fy_Tkappa": "12872640",
+        "b_dot_f_from_Tkappa": "559680/23"
+      },
+      "29": {
+        "b_dot_f": "1414560/29",
+        "rho_min_dot_b": "1414560/29",
+        "b_dot_f_eq_rho_min_dot_b": true,
+        "rho_min_dot_m4": "235760/209",
+        "rho_min_dot_f_if_bgf0": "235760/209",
+        "fy_Tkappa": "41022240",
+        "b_dot_f_from_Tkappa": "1414560/29"
+      },
+      "31": {
+        "b_dot_f": "1847040/31",
+        "rho_min_dot_b": "1847040/31",
+        "b_dot_f_eq_rho_min_dot_b": true,
+        "rho_min_dot_m4": "307840/239",
+        "rho_min_dot_f_if_bgf0": "307840/239",
+        "fy_Tkappa": "57258240",
+        "b_dot_f_from_Tkappa": "1847040/31"
+      },
+      "37": {
+        "b_dot_f": "3748320/37",
+        "rho_min_dot_b": "3748320/37",
+        "b_dot_f_eq_rho_min_dot_b": true,
+        "rho_min_dot_m4": "624720/341",
+        "rho_min_dot_f_if_bgf0": "624720/341",
+        "fy_Tkappa": "138687840",
+        "b_dot_f_from_Tkappa": "3748320/37"
+      },
+      "41": {
+        "b_dot_f": "5651520/41",
+        "rho_min_dot_b": "5651520/41",
+        "b_dot_f_eq_rho_min_dot_b": true,
+        "rho_min_dot_m4": "941920/419",
+        "rho_min_dot_f_if_bgf0": "941920/419",
+        "fy_Tkappa": "231712320",
+        "b_dot_f_from_Tkappa": "5651520/41"
+      },
+      "43": {
+        "b_dot_f": "6837600/43",
+        "rho_min_dot_b": "6837600/43",
+        "b_dot_f_eq_rho_min_dot_b": true,
+        "rho_min_dot_m4": "1139600/461",
+        "rho_min_dot_f_if_bgf0": "1139600/461",
+        "fy_Tkappa": "294016800",
+        "b_dot_f_from_Tkappa": "6837600/43"
+      },
+      "47": {
+        "b_dot_f": "9759360/47",
+        "rho_min_dot_b": "9759360/47",
+        "b_dot_f_eq_rho_min_dot_b": true,
+        "rho_min_dot_m4": "1626560/551",
+        "rho_min_dot_f_if_bgf0": "1626560/551",
+        "fy_Tkappa": "458689920",
+        "b_dot_f_from_Tkappa": "9759360/47"
+      },
+      "53": {
+        "b_dot_f": "15780960/53",
+        "rho_min_dot_b": "15780960/53",
+        "b_dot_f_eq_rho_min_dot_b": true,
+        "rho_min_dot_m4": "2630160/701",
+        "rho_min_dot_f_if_bgf0": "2630160/701",
+        "fy_Tkappa": "836390880",
+        "b_dot_f_from_Tkappa": "15780960/53"
+      },
+      "59": {
+        "b_dot_f": "24234720/59",
+        "rho_min_dot_b": "24234720/59",
+        "b_dot_f_eq_rho_min_dot_b": true,
+        "rho_min_dot_m4": "4039120/869",
+        "rho_min_dot_f_if_bgf0": "4039120/869",
+        "fy_Tkappa": "1429848480",
+        "b_dot_f_from_Tkappa": "24234720/59"
+      }
+    }
+  },
+  "bgf_average": {
+    "proved": true,
+    "theorem": "E_y\u27e8b,\u03b3_y\u2299f_y\u27e9=\u27e8b,2\u03ba/p\u27e9=2\u27e8T\u03ba,\u03ba\u27e9/p\u00b3=0 (Prop 15.113 \u27e8\u03ba,T\u03ba\u27e9=0). Pointwise zero if constant on Max+; certified at p=3."
+  },
+  "cert_bgf_pairings": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "n_checked": 12,
+      "bgf_max_abs": 7.105427357601002e-15,
+      "bgf_pointwise_zero": true,
+      "bf_mean": 53.333333333333336,
+      "bf_std": 7.105427357601002e-15,
+      "bf_pred": 53.333333333333336,
+      "bf_constant_match": true,
+      "rmf_mean": 26.66666666666664,
+      "rmf_std": 6.153480596427404e-15,
+      "rmf_pred_if_bgf0": 26.666666666666668,
+      "rmf_match_closed": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "n_checked": 30,
+      "bgf_max_abs": 1.1546319456101628e-13,
+      "bgf_pointwise_zero": true,
+      "bf_mean": 249.60000000000005,
+      "bf_std": 6.584192288563998e-14,
+      "bf_pred": 249.6,
+      "bf_constant_match": true,
+      "rmf_mean": 41.59999999999995,
+      "rmf_std": 2.1900397950137233e-14,
+      "rmf_pred_if_bgf0": 41.6,
+      "rmf_match_closed": true
+    }
+  },
+  "cert_hyp_residual": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "ED4": "1680",
+      "delta2": "0",
+      "room_hyp_24": "0",
+      "rho_min2": "200/9",
+      "delta2_le_hyp": true,
+      "delta2_le_rho_min2": true,
+      "ED4_le_bud": true,
+      "ED4_le_suf": true,
+      "equality_hyp": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "ED4": "120400/13",
+      "delta2": "1536/65",
+      "room_hyp_24": "1536/65",
+      "rho_min2": "728/25",
+      "delta2_le_hyp": true,
+      "delta2_le_rho_min2": true,
+      "ED4_le_bud": true,
+      "ED4_le_suf": true,
+      "equality_hyp": true
+    },
+    "7": {
+      "p": 7,
+      "skipped": true
+    }
+  },
+  "general_status": {
+    "hyp_budget_form_proved": true,
+    "rho_vs_hyp_proved": true,
+    "slack_identity_proved": true,
+    "pairings_proved": true,
+    "bgf_average_zero_proved": true,
+    "bgf_pointwise_proved_for_all_p": false,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "delta_le_rho_min_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "open_residual": "Prove \u03b4\u00b2\u2264room_hyp/24 for all primes p\u22655 (Path C primary). Upgrade: pointwise \u27e8b,\u03b3\u2299f_y\u27e9=0 for all Max+ y \u21d2 \u27e8\u03c1_min,f_y\u27e9=4(p\u2074\u22121)/(3(p\u00b2\u22125)); then pin coherent mass. F19: no class_key."
+  },
+  "attack_surface": "Prove \u03b4\u00b2\u2264room_hyp/24 for all primes p\u22655 (Path C primary). Upgrade: pointwise \u27e8b,\u03b3\u2299f_y\u27e9=0 for all Max+ y \u21d2 \u27e8\u03c1_min,f_y\u27e9=4(p\u2074\u22121)/(3(p\u00b2\u22125)); then pin coherent mass. F19: no class_key.",
+  "verdict": "Proved: Path C primary residual \u03b4\u00b2\u2264room_hyp/24 with closed form; \u03c1_min\u00b2\u2277hyp by p; slack identity; \u27e8b,f\u27e9=\u27e8\u03c1_min,b\u27e9=2(p\u2074\u22121)/p; \u27e8\u03c1_min,m\u2084\u27e9 closed; E\u27e8b,\u03b3\u2299f\u27e9=0; if pointwise then \u27e8\u03c1_min,f\u27e9=4(p\u2074\u22121)/(3(p\u00b2\u22125)). Cert bgf=0 at p=3; hyp residual at p=3,5,7 (eq at 3,5). OPEN: hyp residual for general p\u22655. L OPEN.",
+  "settlement_note": "No soft-close. N_ED4_SUF still open. Primary target is \u03b4\u00b2\u2264room_hyp/24 (coherent mass), not full E_4p energy.",
+  "proved": {
+    "hyp_budget_form": true,
+    "rho_vs_hyp": true,
+    "slack_identity": true,
+    "pairings": true,
+    "bgf_average_zero": true,
+    "bgf_pointwise_all_p": false,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "delta_le_rho_min_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  }
+}

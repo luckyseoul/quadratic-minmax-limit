@@ -1,0 +1,333 @@
+{
+  "prop": "15.150",
+  "title": "Prop 15.150: srg triple types; \u03bb_e=N(p+3\u22122e)/(8p); Max+-free \u03c0_e; residual \u2211\u03c0_e m_e",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Covering numbers of Max+ through conference srg triples are \u03bb_e=N(p+3\u22122e)/(8p) under Aut+affine (cert p=5,7). Mixture weights \u03c0_e are Max+-free. Residual \u21d4 \u2211\u03c0_e m_e \u2264 k_suf with m_e the mean regular-set size through type-e triples \u2014 a finite-type character-sum target. N_ED4_SUF OPEN. L OPEN.",
+  "proved": {
+    "srg_triple_counts": true,
+    "lambda_e_affine_formula": true,
+    "pi_e_maxplus_free": true,
+    "residual_as_sum_pi_m": true,
+    "census_residual_p5_p7": true,
+    "residual_for_all_p_ge_5": false,
+    "m_e_bound_for_all_p": false,
+    "hyp_residual_for_all_p": false
+  },
+  "algebra": {
+    "triple_counts": {
+      "proved": true,
+      "theorem": "n_3=p(p\u00b2+1)(p\u00b2\u22121)(p\u22123)/48, n_2=p(p\u00b2+1)(p\u22121)\u00b2(p+1)/16, n_1=p(p\u00b2+1)(p\u00b2\u22121)(p+1)/16; n\u22122k+\u03bb=(p+1)\u00b2/4.",
+      "by_p": {
+        "3": {
+          "n_e": {
+            "0": 30,
+            "1": 60,
+            "2": 30,
+            "3": 0
+          },
+          "match": true,
+          "n_minus_2k_plus_lam": 4
+        },
+        "5": {
+          "n_e": {
+            "0": 520,
+            "1": 1170,
+            "2": 780,
+            "3": 130
+          },
+          "match": true,
+          "n_minus_2k_plus_lam": 9
+        },
+        "7": {
+          "n_e": {
+            "0": 3500,
+            "1": 8400,
+            "2": 6300,
+            "3": 1400
+          },
+          "match": true,
+          "n_minus_2k_plus_lam": 16
+        },
+        "11": {
+          "n_e": {
+            "0": 46970,
+            "1": 120780,
+            "2": 100650,
+            "3": 26840
+          },
+          "match": true,
+          "n_minus_2k_plus_lam": 36
+        },
+        "13": {
+          "n_e": {
+            "0": 123760,
+            "1": 324870,
+            "2": 278460,
+            "3": 77350
+          },
+          "match": true,
+          "n_minus_2k_plus_lam": 49
+        },
+        "17": {
+          "n_e": {
+            "0": 591600,
+            "1": 1597320,
+            "2": 1419840,
+            "3": 414120
+          },
+          "match": true,
+          "n_minus_2k_plus_lam": 81
+        }
+      },
+      "n_checked": 10
+    },
+    "lambda_e": {
+      "proved": true,
+      "theorem": "Under Aut-constancy on edge-types and affine \u03bb_e=A+Be, design moments j\u22643 force \u03bb_e=N(p+3\u22122e)/(8p). Cert p=5,7.",
+      "hypotheses": [
+        "Aut transitive on triples of each edge-type e",
+        "\u03bb_e affine in e"
+      ],
+      "by_p": {
+        "5": {
+          "A": "52",
+          "B": "-13",
+          "lambda_e": {
+            "0": "52",
+            "1": "39",
+            "2": "26",
+            "3": "13"
+          },
+          "match_affine_solution": true,
+          "match_census": true,
+          "match_S0_S1": true,
+          "match": true
+        },
+        "7": {
+          "A": "2045",
+          "B": "-409",
+          "lambda_e": {
+            "0": "2045",
+            "1": "1636",
+            "2": "1227",
+            "3": "818"
+          },
+          "match_affine_solution": true,
+          "match_census": true,
+          "match_S0_S1": true,
+          "match": true
+        }
+      },
+      "census_p5_p7": {
+        "5": {
+          "0": 52,
+          "1": 39,
+          "2": 26,
+          "3": 13
+        },
+        "7": {
+          "0": 2045,
+          "1": 1636,
+          "2": 1227,
+          "3": 818
+        }
+      }
+    },
+    "pi_e": {
+      "proved": true,
+      "theorem": "\u03c0_e=n_e(p+3\u22122e)/Tot Max+-free; E_\u03bc[k]=\u2211\u03c0_e m_e; Tot=(p+3)C(n,3)\u2212(n\u22122)nk.",
+      "by_p": {
+        "5": {
+          "pi_e": {
+            "0": "2/7",
+            "1": "27/56",
+            "2": "3/14",
+            "3": "1/56"
+          },
+          "Tot": 14560,
+          "match": true
+        },
+        "7": {
+          "pi_e": {
+            "0": "25/104",
+            "1": "6/13",
+            "2": "27/104",
+            "3": "1/26"
+          },
+          "Tot": 145600,
+          "match": true
+        },
+        "11": {
+          "pi_e": {
+            "0": "49/248",
+            "1": "27/62",
+            "2": "75/248",
+            "3": "2/31"
+          },
+          "Tot": 3328160,
+          "match": true
+        },
+        "13": {
+          "pi_e": {
+            "0": "8/43",
+            "1": "147/344",
+            "2": "27/86",
+            "3": "25/344"
+          },
+          "Tot": 10643360,
+          "match": true
+        },
+        "17": {
+          "pi_e": {
+            "0": "25/146",
+            "1": "243/584",
+            "2": "24/73",
+            "3": "49/584"
+          },
+          "Tot": 69098880,
+          "match": true
+        },
+        "19": {
+          "pi_e": {
+            "0": "121/728",
+            "1": "75/182",
+            "2": "243/728",
+            "3": "8/91"
+          },
+          "Tot": 150215520,
+          "match": true
+        }
+      },
+      "n_checked": 9
+    },
+    "residual_decomp": {
+      "proved_structure": true,
+      "census_ok": true,
+      "theorem": "Residual \u21d4 \u2211\u03c0_e m_e \u2264 k_suf; m_e = mean regular-set size through a type-e triple (finite-type on conference srg). Cert \u2211\u03c0_e m_e =E_\u03bc[k]\u2264k_suf at p=5,7.",
+      "by_p": {
+        "5": {
+          "E_mu_k": "37455/2366",
+          "k_suf": "2771/175",
+          "E_mu_le_k_suf": true,
+          "pi_e": {
+            "0": "2/7",
+            "1": "27/56",
+            "2": "3/14",
+            "3": "1/56"
+          },
+          "lambda_e": {
+            "0": "52",
+            "1": "39",
+            "2": "26",
+            "3": "13"
+          }
+        },
+        "7": {
+          "E_mu_k": "121313499/4349306",
+          "k_suf": "195469/7007",
+          "E_mu_le_k_suf": true,
+          "pi_e": {
+            "0": "25/104",
+            "1": "6/13",
+            "2": "27/104",
+            "3": "1/26"
+          },
+          "lambda_e": {
+            "0": "2045",
+            "1": "1636",
+            "2": "1227",
+            "3": "818"
+          }
+        }
+      },
+      "open": "UB m_e by character sums / regular-set constraints"
+    },
+    "open": {
+      "residual_closed_general": false,
+      "lambda_affine_proved_without_census": false,
+      "m_e_bound_proved": false,
+      "open": "Prove \u2211\u03c0_e m_e \u2264 k_suf for p\u22657: character-sum/Weil bounds on m_e, or closed W_k, or regular-set constraints; optionally prove affine \u03bb_e for all primes without Max+ census.",
+      "sufficient_targets": [
+        "sum_pi_e_m_e_le_k_suf",
+        "m_e_character_sum_UB",
+        "closed_W_k"
+      ],
+      "dead": [
+        "plain_ULC",
+        "type_list_free_Max_orbits_p_ge_11",
+        "jensen_spectral_mass"
+      ]
+    }
+  },
+  "closed_forms": {
+    "n_3": "p(p^2+1)(p^2-1)(p-3)/48",
+    "n_2": "p(p^2+1)(p-1)^2(p+1)/16",
+    "n_1": "p(p^2+1)(p^2-1)(p+1)/16",
+    "lambda_e": "N(p+3-2e)/(8p)",
+    "pi_e": "n_e(p+3-2e)/Tot",
+    "Tot": "(p+3)C(n,3)-(n-2)nk",
+    "sample_pi": {
+      "5": {
+        "0": "2/7",
+        "1": "27/56",
+        "2": "3/14",
+        "3": "1/56"
+      },
+      "7": {
+        "0": "25/104",
+        "1": "6/13",
+        "2": "27/104",
+        "3": "1/26"
+      },
+      "11": {
+        "0": "49/248",
+        "1": "27/62",
+        "2": "75/248",
+        "3": "2/31"
+      },
+      "13": {
+        "0": "8/43",
+        "1": "147/344",
+        "2": "27/86",
+        "3": "25/344"
+      }
+    },
+    "sample_lambda_over_N": {
+      "5": {
+        "0": "1/5",
+        "1": "3/20",
+        "2": "1/10",
+        "3": "1/20"
+      },
+      "7": {
+        "0": "5/28",
+        "1": "1/7",
+        "2": "3/28",
+        "3": "1/14"
+      },
+      "11": {
+        "0": "7/44",
+        "1": "3/22",
+        "2": "5/44",
+        "3": "1/11"
+      }
+    }
+  },
+  "status": {
+    "p5_residual_maxplus_free": true,
+    "p7_residual_maxplus_free": true,
+    "type_free_residual_general": false,
+    "srg_triple_lambda_structure": true,
+    "m_e_bound_open": true,
+    "general_residual": false
+  },
+  "open_attack": "Bound m_e (mean regular-set size through type-e triple) by Paley character sums / Weil estimates / regular-set constraints so that \u2211\u03c0_e m_e \u2264 k_suf for all primes p\u22657.",
+  "backend": "CPU Fraction + Max+ cert p=5,7; GPU unused (F20)",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "residual_closed": false,
+  "compute": {
+    "workers": "Fraction algebra; Max+ census reuse p=5,7",
+    "gpu": "unused"
+  }
+}

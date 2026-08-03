@@ -1,0 +1,203 @@
+{
+  "prop": "15.122",
+  "title": "Max+ disagreement identity (u\u2208V\u208a); residual Aut-line; \u03bb_max(T) threshold; closed FFT Frobenius budget",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close: \u03b4\u00b2\u2264room_hyp/24 not proved for general p\u22655. New: ternary V\u208a characterisation of Max+ dots; Aut-line form; attacks still short of residual.",
+  "proved": {
+    "disagreement_identity": true,
+    "lammax_threshold": true,
+    "aut_line_structure": true,
+    "fft_budget": true,
+    "lp_still_weak": true,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_for_all_p": false,
+    "tight_ub_for_all_p": false
+  },
+  "algebra": {
+    "disagreement": {
+      "proved": true,
+      "theorem": "For y,z\u2208Max+: u=(y\u2212z)/2 satisfies u\u1d40Cu=pk with k=(n\u2212D)/2 and u\u2208V\u208a; v=(y+z)/2 satisfies v\u1d40Cv=p(n\u2212k) and v\u2208V\u208a.",
+      "corollary": "Possible Hamming distances are weights of ternary vectors of V\u208a; dots D=n\u22122k with that constraint."
+    },
+    "lammax": {
+      "proved_structure": true,
+      "theorem": "\u03bb_max(T)<4p \u21d2 ker A=0 \u21d2 \u03b4=0 \u21d2 residual OK. Cert: p=3 strict inequality; p=5,7 equality \u03bb_max=4p (Tspec).",
+      "cert": {
+        "3": {
+          "lam_max": "2*sqrt(24)",
+          "4p": 12,
+          "singular": false
+        },
+        "5": {
+          "lam_max": 20,
+          "4p": 20,
+          "singular": true,
+          "mult_E4p": "d-1=12"
+        },
+        "7": {
+          "lam_max": 28,
+          "4p": 28,
+          "singular": true
+        }
+      },
+      "evidence": "evidence/e1_gmin_m4_Tspec.json"
+    },
+    "aut_line": {
+      "proved_structure": true,
+      "theorem": "\u03b4\u2208E_{4p}^{Aut}; if dim\u22641 then residual \u21d4 c\u00b2\u2264room_hyp/24 with c=Q_0(halfspace). Cert dim line + equality at p=5; p=7 Q_\u03b4 non-constant."
+    },
+    "fft_budget": {
+      "proved": true,
+      "theorem": "Residual \u21d4 N^{-2}\u2016FFT|_{1^\u22a5}\u2016_F\u00b2 \u2264 B(p)=EW2_bud\u2212d\u00b2 Max+-free.",
+      "by_p": {
+        "5": {
+          "B": "21312/13",
+          "match": true,
+          "positive": true
+        },
+        "7": {
+          "B": "306432/55",
+          "match": true,
+          "positive": true
+        },
+        "11": {
+          "B": "55195200/1769",
+          "match": true,
+          "positive": true
+        },
+        "13": {
+          "B": "41686848/697",
+          "match": true,
+          "positive": true
+        },
+        "17": {
+          "B": "353424384/2059",
+          "match": true,
+          "positive": true
+        },
+        "19": {
+          "B": "4291444800/16109",
+          "match": true,
+          "positive": true
+        },
+        "23": {
+          "B": "3944514816/6943",
+          "match": true,
+          "positive": true
+        },
+        "29": {
+          "B": "125648308800/87989",
+          "match": true,
+          "positive": true
+        },
+        "31": {
+          "B": "214099660800/114959",
+          "match": true,
+          "positive": true
+        },
+        "37": {
+          "B": "176132812608/46717",
+          "match": true,
+          "positive": true
+        },
+        "41": {
+          "B": "2000948947200/352379",
+          "match": true,
+          "positive": true
+        },
+        "43": {
+          "B": "585666430272/85285",
+          "match": true,
+          "positive": true
+        },
+        "47": {
+          "B": "1192708961280/121771",
+          "match": true,
+          "positive": true
+        },
+        "53": {
+          "B": "3117399255360/196981",
+          "match": true,
+          "positive": true
+        },
+        "59": {
+          "B": "36749650651200/1512929",
+          "match": true,
+          "positive": true
+        }
+      }
+    },
+    "lp_weak": {
+      "proved": true,
+      "theorem": "Discrete moment LP with exact N still gives ED4_UB>ED4_bud for p=5,7.",
+      "by_p": {
+        "5": {
+          "N": 260,
+          "LP_UB": 12097.23076923077,
+          "ED4_bud": 9261.538461538461,
+          "too_weak": true
+        },
+        "7": {
+          "N": 11452,
+          "LP_UB": 111961.85819070904,
+          "ED4_bud": 32285.963636363635,
+          "too_weak": true
+        }
+      }
+    }
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "identity_ok": 12,
+      "identity_fail": 0,
+      "all_ok": true,
+      "dot_spectrum": {
+        "-10": 1,
+        "-2": 5,
+        "2": 5,
+        "10": 1
+      },
+      "spectrum_expected_ok": true,
+      "D_max": 2,
+      "max_off_ok": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "identity_ok": 260,
+      "identity_fail": 0,
+      "all_ok": true,
+      "dot_spectrum": {
+        "-26": 1,
+        "-14": 13,
+        "-10": 20,
+        "-6": 36,
+        "-2": 60,
+        "2": 60,
+        "6": 36,
+        "10": 20,
+        "14": 13,
+        "26": 1
+      },
+      "spectrum_expected_ok": true,
+      "D_max": 14,
+      "max_off_ok": true
+    }
+  },
+  "status": {
+    "disagreement_identity_proved": true,
+    "lammax_threshold_proved": true,
+    "aut_line_structure_proved": true,
+    "fft_budget_proved": true,
+    "tight_ub_for_all_p": false,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "open_residual": "Prove \u03b4\u00b2\u2264room_hyp/24 for all primes p\u22655 via ternary V\u208a weight enumerator of Max+ dots, or dim E_4p^{Aut}\u22641 + Gauss-sum Q_0(hs), or independent \u2016FFT|_{1^\u22a5}\u2016_F bound. F19: no class_key."
+  },
+  "backend": "CPU Fraction algebra + Max+ cert p=3,5; GPU unused (F20)",
+  "F19": "no class_key"
+}

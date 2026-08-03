@@ -1,0 +1,698 @@
+{
+  "prop": "15.108",
+  "backend": "CPU Fraction algebra + Max+ cert p=3,5,7; GPU unused (F20)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "kappa_bound_proved_for_all_p": false,
+  "sum_rho2_le_T_proved_for_all_p": false,
+  "theorem_A_polynomial": {
+    "proved": true,
+    "theorem": "For every prime p\u22653: (16\u2212\u03bc\u0304)\u00b2 \u2212 room_hyp\u00b7(m\u2212m\u2081)/(m m\u2081) = 128(p\u22123)(p+3)(p\u2074\u221212p\u00b2\u22125)/[(p\u00b2\u22125)\u00b2(p\u00b2+1)\u00b2] \u2265 0, with equality at p=3.  Hence mult\u2265d\u22121 + orth\u2264room_hyp \u21d2 \u03bb_max(\u03a6)\u226416 for all primes p\u22653 (polynomial identity).",
+    "closed_form": "128(p-3)(p+3)(p^4-12*p^2-5)/((p^2-5)^2*(p^2+1)^2)",
+    "by_p": {
+      "3": {
+        "gap_closed": "0",
+        "gap_from_defs": "0",
+        "match": true,
+        "nonneg": true,
+        "poly_factor_sign_ok": true,
+        "L_bound": 16.0
+      },
+      "5": {
+        "gap_closed": "2048/845",
+        "gap_from_defs": "2048/845",
+        "match": true,
+        "nonneg": true,
+        "poly_factor_sign_ok": true,
+        "L_bound": 15.807763797129104
+      },
+      "7": {
+        "gap_closed": "28928/15125",
+        "gap_from_defs": "28928/15125",
+        "match": true,
+        "nonneg": true,
+        "poly_factor_sign_ok": true,
+        "L_bound": 15.867298423455392
+      },
+      "11": {
+        "gap_closed": "2953216/3129361",
+        "gap_from_defs": "2953216/3129361",
+        "match": true,
+        "nonneg": true,
+        "poly_factor_sign_ok": true,
+        "L_bound": 15.938667992830899
+      },
+      "13": {
+        "gap_closed": "1697792/2429045",
+        "gap_from_defs": "1697792/2429045",
+        "match": true,
+        "nonneg": true,
+        "poly_factor_sign_ok": true,
+        "L_bound": 15.955094040662807
+      },
+      "17": {
+        "gap_closed": "8965376/21197405",
+        "gap_from_defs": "8965376/21197405",
+        "match": true,
+        "nonneg": true,
+        "poly_factor_sign_ok": true,
+        "L_bound": 15.97314246278195
+      },
+      "19": {
+        "gap_closed": "88692736/259499881",
+        "gap_from_defs": "88692736/259499881",
+        "match": true,
+        "nonneg": true,
+        "poly_factor_sign_ok": true,
+        "L_bound": 15.97836621371927
+      },
+      "23": {
+        "gap_closed": "56885504/241026245",
+        "gap_from_defs": "56885504/241026245",
+        "match": true,
+        "nonneg": true,
+        "poly_factor_sign_ok": true,
+        "L_bound": 15.985121731899799
+      },
+      "29": {
+        "gap_closed": "1160114176/7742064121",
+        "gap_from_defs": "1160114176/7742064121",
+        "match": true,
+        "nonneg": true,
+        "poly_factor_sign_ok": true,
+        "L_bound": 15.990584056936363
+      },
+      "31": {
+        "gap_closed": "1736417536/13215571681",
+        "gap_from_defs": "1736417536/13215571681",
+        "match": true,
+        "nonneg": true,
+        "poly_factor_sign_ok": true,
+        "L_bound": 15.991749236802637
+      },
+      "37": {
+        "gap_closed": "1010604032/10912390445",
+        "gap_from_defs": "1010604032/10912390445",
+        "match": true,
+        "nonneg": true,
+        "poly_factor_sign_ok": true,
+        "L_bound": 15.994192693717231
+      },
+      "41": {
+        "gap_closed": "9381872896/124170959641",
+        "gap_from_defs": "9381872896/124170959641",
+        "match": true,
+        "nonneg": true,
+        "poly_factor_sign_ok": true,
+        "L_bound": 15.995265042171248
+      },
+      "43": {
+        "gap_closed": "2499903488/36367656125",
+        "gap_from_defs": "2499903488/36367656125",
+        "match": true,
+        "nonneg": true,
+        "poly_factor_sign_ok": true,
+        "L_bound": 15.995693264392603
+      },
+      "47": {
+        "gap_closed": "854157568/14828176441",
+        "gap_from_defs": "854157568/14828176441",
+        "match": true,
+        "nonneg": true,
+        "poly_factor_sign_ok": true,
+        "L_bound": 15.996392409071266
+      },
+      "53": {
+        "gap_closed": "1759916032/38801514361",
+        "gap_from_defs": "1759916032/38801514361",
+        "match": true,
+        "nonneg": true,
+        "poly_factor_sign_ok": true,
+        "L_bound": 15.997160640038603
+      },
+      "59": {
+        "gap_closed": "83852855296/2288954159041",
+        "gap_from_defs": "83852855296/2288954159041",
+        "match": true,
+        "nonneg": true,
+        "poly_factor_sign_ok": true,
+        "L_bound": 15.997707427211145
+      }
+    }
+  },
+  "parseval_target": {
+    "proved": true,
+    "theorem": "orth\u2264room_hyp \u21d4 \u2016\u03b4\u2016\u2082\u00b2\u2264room_hyp/24 \u21d4 \u2016\u03c1\u2016\u2082\u00b2\u2264T_\u03c1(p) with T_\u03c1=\u2016\u03c1_min\u2016\u2082\u00b2+room_hyp/24 Max+-free closed form (\u03c1_min\u00b2=5n(p\u00b2\u22121)(p\u00b2+3)/(6p\u00b2(p\u00b2\u22125)), room_hyp/24=4(p\u00b2\u22129)(p\u00b2\u22121)\u00b2/(3(p\u00b2\u22125)(p\u00b2+1))).",
+    "by_p": {
+      "3": {
+        "rho_min2": "200/9",
+        "delta2_budget_hyp": "0",
+        "T_rho": "200/9",
+        "d2_from_room_hyp": "0",
+        "d2_closed": "0",
+        "d2_match": true,
+        "T_eq_rm_plus_d2": true
+      },
+      "5": {
+        "rho_min2": "728/25",
+        "delta2_budget_hyp": "1536/65",
+        "T_rho": "17144/325",
+        "d2_from_room_hyp": "1536/65",
+        "d2_closed": "1536/65",
+        "d2_match": true,
+        "T_eq_rm_plus_d2": true
+      },
+      "7": {
+        "rho_min2": "26000/539",
+        "delta2_budget_hyp": "3072/55",
+        "T_rho": "280528/2695",
+        "d2_from_room_hyp": "3072/55",
+        "d2_closed": "3072/55",
+        "d2_match": true,
+        "T_eq_rm_plus_d2": true
+      },
+      "11": {
+        "rho_min2": "378200/3509",
+        "delta2_budget_hyp": "268800/1769",
+        "T_rho": "55595000/214049",
+        "d2_from_room_hyp": "268800/1769",
+        "d2_closed": "268800/1769",
+        "d2_match": true,
+        "T_eq_rm_plus_d2": true
+      },
+      "13": {
+        "rho_min2": "1023400/6929",
+        "delta2_budget_hyp": "150528/697",
+        "T_rho": "42837032/117793",
+        "d2_from_room_hyp": "150528/697",
+        "d2_closed": "150528/697",
+        "d2_match": true,
+        "T_eq_rm_plus_d2": true
+      },
+      "17": {
+        "rho_min2": "5080800/20519",
+        "delta2_budget_hyp": "774144/2059",
+        "T_rho": "371070816/595051",
+        "d2_from_room_hyp": "774144/2059",
+        "d2_closed": "774144/2059",
+        "d2_match": true,
+        "T_eq_rm_plus_d2": true
+      },
+      "19": {
+        "rho_min2": "9882600/32129",
+        "delta2_budget_hyp": "7603200/16109",
+        "T_rho": "4533505800/5815349",
+        "d2_from_room_hyp": "7603200/16109",
+        "d2_closed": "7603200/16109",
+        "d2_match": true,
+        "T_eq_rm_plus_d2": true
+      },
+      "23": {
+        "rho_min2": "31015600/69299",
+        "delta2_budget_hyp": "4832256/6943",
+        "T_rho": "4200090224/3672847",
+        "d2_from_room_hyp": "4832256/6943",
+        "d2_closed": "4832256/6943",
+        "d2_match": true,
+        "T_eq_rm_plus_d2": true
+      },
+      "29": {
+        "rho_min2": "124363400/175769",
+        "delta2_budget_hyp": "97843200/87989",
+        "T_rho": "134643122600/73998749",
+        "d2_from_room_hyp": "97843200/87989",
+        "d2_closed": "97843200/87989",
+        "d2_match": true,
+        "T_eq_rm_plus_d2": true
+      },
+      "31": {
+        "rho_min2": "185473600/229679",
+        "delta2_budget_hyp": "146227200/114959",
+        "T_rho": "229737140800/110475599",
+        "d2_from_room_hyp": "146227200/114959",
+        "d2_closed": "146227200/114959",
+        "d2_match": true,
+        "T_eq_rm_plus_d2": true
+      },
+      "37": {
+        "rho_min2": "535697400/466829",
+        "delta2_budget_hyp": "84837888/46717",
+        "T_rho": "189533612472/63955573",
+        "d2_from_room_hyp": "84837888/46717",
+        "d2_closed": "84837888/46717",
+        "d2_match": true,
+        "T_eq_rm_plus_d2": true
+      },
+      "41": {
+        "rho_min2": "991370800/704339",
+        "delta2_budget_hyp": "786508800/352379",
+        "T_rho": "2155864135600/592349099",
+        "d2_from_room_hyp": "786508800/352379",
+        "d2_closed": "786508800/352379",
+        "d2_match": true,
+        "T_eq_rm_plus_d2": true
+      },
+      "43": {
+        "rho_min2": "1319087000/852389",
+        "delta2_budget_hyp": "209459712/85285",
+        "T_rho": "631322102488/157691965",
+        "d2_from_room_hyp": "209459712/85285",
+        "d2_closed": "209459712/85285",
+        "d2_match": true,
+        "T_eq_rm_plus_d2": true
+      },
+      "47": {
+        "rho_min2": "2248719200/1217159",
+        "delta2_budget_hyp": "357519360/121771",
+        "T_rho": "1286727209440/268992139",
+        "d2_from_room_hyp": "357519360/121771",
+        "d2_closed": "357519360/121771",
+        "d2_match": true,
+        "T_eq_rm_plus_d2": true
+      },
+      "53": {
+        "rho_min2": "4622506200/1969109",
+        "delta2_budget_hyp": "735920640/196981",
+        "T_rho": "3366125319960/553319629",
+        "d2_from_room_hyp": "735920640/196981",
+        "d2_closed": "735920640/196981",
+        "d2_match": true,
+        "T_eq_rm_plus_d2": true
+      },
+      "59": {
+        "rho_min2": "8795183800/3024989",
+        "delta2_budget_hyp": "7007884800/1512929",
+        "T_rho": "39706861984600/5266505849",
+        "d2_from_room_hyp": "7007884800/1512929",
+        "d2_closed": "7007884800/1512929",
+        "d2_match": true,
+        "T_eq_rm_plus_d2": true
+      }
+    }
+  },
+  "residual_gram": {
+    "proved": true,
+    "theorem": "Residual-Gram: orth = \u2211\u03bb\u00b2 \u2212 m \u03bc\u0304\u00b2 = (ED4\u22124n\u00b2) \u2212 m \u03bc\u0304\u00b2 = (ED4 \u2212 ED4_flat) after the flat identity ED4_flat\u22124n\u00b2 = m \u03bc\u0304\u00b2. Schur dual: orth = 16 N\u00b2 \u2016PopP_bulk \u2212 \u03bb_flat \u03a0\u2016_F\u00b2. PopP\u2194\u03a6: \u03bb_max(\u03a6)=4 N \u03bb\u2082(PopP) (Props 15.61/15.91).",
+    "by_p": {
+      "3": {
+        "sum_l2_flat": "1280",
+        "m_mu2": "1280",
+        "ed4_flat_minus_4n2": "1280",
+        "flat_spectrum_identity": true,
+        "room_hyp": "0",
+        "avg": "16",
+        "dimZ": 5
+      },
+      "5": {
+        "sum_l2_flat": "29952/5",
+        "m_mu2": "29952/5",
+        "ed4_flat_minus_4n2": "29952/5",
+        "flat_spectrum_identity": true,
+        "room_hyp": "36864/65",
+        "avg": "48/5",
+        "dimZ": 65
+      },
+      "7": {
+        "sum_l2_flat": "230400/11",
+        "m_mu2": "230400/11",
+        "ed4_flat_minus_4n2": "230400/11",
+        "flat_spectrum_identity": true,
+        "room_hyp": "73728/55",
+        "avg": "96/11",
+        "dimZ": 275
+      },
+      "11": {
+        "sum_l2_flat": "3513600/29",
+        "m_mu2": "3513600/29",
+        "ed4_flat_minus_4n2": "3513600/29",
+        "flat_spectrum_identity": true,
+        "room_hyp": "6451200/1769",
+        "avg": "240/29",
+        "dimZ": 1769
+      },
+      "13": {
+        "sum_l2_flat": "9596160/41",
+        "m_mu2": "9596160/41",
+        "ed4_flat_minus_4n2": "9596160/41",
+        "flat_spectrum_identity": true,
+        "room_hyp": "3612672/697",
+        "avg": "336/41",
+        "dimZ": 3485
+      },
+      "17": {
+        "sum_l2_flat": "48107520/71",
+        "m_mu2": "48107520/71",
+        "ed4_flat_minus_4n2": "48107520/71",
+        "flat_spectrum_identity": true,
+        "room_hyp": "18579456/2059",
+        "avg": "576/71",
+        "dimZ": 10295
+      },
+      "19": {
+        "sum_l2_flat": "93830400/89",
+        "m_mu2": "93830400/89",
+        "ed4_flat_minus_4n2": "93830400/89",
+        "flat_spectrum_identity": true,
+        "room_hyp": "182476800/16109",
+        "avg": "720/89",
+        "dimZ": 16109
+      },
+      "23": {
+        "sum_l2_flat": "295511040/131",
+        "m_mu2": "295511040/131",
+        "ed4_flat_minus_4n2": "295511040/131",
+        "flat_spectrum_identity": true,
+        "room_hyp": "115974144/6943",
+        "avg": "1056/131",
+        "dimZ": 34715
+      },
+      "29": {
+        "sum_l2_flat": "1188230400/209",
+        "m_mu2": "1188230400/209",
+        "ed4_flat_minus_4n2": "1188230400/209",
+        "flat_spectrum_identity": true,
+        "room_hyp": "2348236800/87989",
+        "avg": "1680/209",
+        "dimZ": 87989
+      },
+      "31": {
+        "sum_l2_flat": "1773158400/239",
+        "m_mu2": "1773158400/239",
+        "ed4_flat_minus_4n2": "1773158400/239",
+        "flat_spectrum_identity": true,
+        "room_hyp": "3509452800/114959",
+        "avg": "1920/239",
+        "dimZ": 114959
+      },
+      "37": {
+        "sum_l2_flat": "5127701760/341",
+        "m_mu2": "5127701760/341",
+        "ed4_flat_minus_4n2": "5127701760/341",
+        "flat_spectrum_identity": true,
+        "room_hyp": "2036109312/46717",
+        "avg": "2736/341",
+        "dimZ": 233585
+      },
+      "41": {
+        "sum_l2_flat": "9494553600/419",
+        "m_mu2": "9494553600/419",
+        "ed4_flat_minus_4n2": "9494553600/419",
+        "flat_spectrum_identity": true,
+        "room_hyp": "18876211200/352379",
+        "avg": "3360/419",
+        "dimZ": 352379
+      },
+      "43": {
+        "sum_l2_flat": "12635884800/461",
+        "m_mu2": "12635884800/461",
+        "ed4_flat_minus_4n2": "12635884800/461",
+        "flat_spectrum_identity": true,
+        "room_hyp": "5027033088/85285",
+        "avg": "3696/461",
+        "dimZ": 426425
+      },
+      "47": {
+        "sum_l2_flat": "21548666880/551",
+        "m_mu2": "21548666880/551",
+        "ed4_flat_minus_4n2": "21548666880/551",
+        "flat_spectrum_identity": true,
+        "room_hyp": "8580464640/121771",
+        "avg": "4416/551",
+        "dimZ": 608855
+      },
+      "53": {
+        "sum_l2_flat": "44312935680/701",
+        "m_mu2": "44312935680/701",
+        "ed4_flat_minus_4n2": "44312935680/701",
+        "flat_spectrum_identity": true,
+        "room_hyp": "17662095360/196981",
+        "avg": "5616/701",
+        "dimZ": 984905
+      },
+      "59": {
+        "sum_l2_flat": "84336825600/869",
+        "m_mu2": "84336825600/869",
+        "ed4_flat_minus_4n2": "84336825600/869",
+        "flat_spectrum_identity": true,
+        "room_hyp": "168189235200/1512929",
+        "avg": "6960/869",
+        "dimZ": 1512929
+      }
+    }
+  },
+  "m4_parseval": {
+    "proved": true,
+    "theorem": "\u2211_S \u03ba(S)\u00b2 = n(n\u22121)(n\u22122)(n\u22125)/8 = n\u2081+9n\u2083 with n\u2081=n(n\u22121)(n\u22122)\u00b2/32, n\u2083=n(n\u22121)(n\u22122)(n\u22126)/96 (Prop 15.71). \u2211 m\u2084\u00b2 = \u2016\u03ba\u2016\u2082\u00b2/p\u2074 + (2/p\u00b2)\u27e8\u03ba,\u03c1\u27e9 + \u2016\u03c1\u2016\u2082\u00b2; residual is \u2016\u03c1\u2016\u2082\u00b2\u2264T_\u03c1(p).",
+    "by_p": {
+      "3": {
+        "kappa2_stratum": "450",
+        "n1": "180",
+        "n3": "30",
+        "n1_plus_9n3": "450",
+        "kappa2_match": true,
+        "T_rho": "200/9",
+        "m4_expansion": "sum m4^2 = kappa2/p^4 + (2/p^2)<kappa,rho> + sum rho^2"
+      },
+      "5": {
+        "kappa2_stratum": "40950",
+        "n1": "11700",
+        "n3": "3250",
+        "n1_plus_9n3": "40950",
+        "kappa2_match": true,
+        "T_rho": "17144/325",
+        "m4_expansion": "sum m4^2 = kappa2/p^4 + (2/p^2)<kappa,rho> + sum rho^2"
+      },
+      "7": {
+        "kappa2_stratum": "661500",
+        "n1": "176400",
+        "n3": "53900",
+        "n1_plus_9n3": "661500",
+        "kappa2_match": true,
+        "T_rho": "280528/2695",
+        "m4_expansion": "sum m4^2 = kappa2/p^4 + (2/p^2)<kappa,rho> + sum rho^2"
+      },
+      "11": {
+        "kappa2_stratum": "25907310",
+        "n1": "6642900",
+        "n3": "2140490",
+        "n1_plus_9n3": "25907310",
+        "kappa2_match": true,
+        "T_rho": "55595000/214049",
+        "m4_expansion": "sum m4^2 = kappa2/p^4 + (2/p^2)<kappa,rho> + sum rho^2"
+      },
+      "13": {
+        "kappa2_stratum": "99549450",
+        "n1": "25339860",
+        "n3": "8245510",
+        "n1_plus_9n3": "99549450",
+        "kappa2_match": true,
+        "T_rho": "42837032/117793",
+        "m4_expansion": "sum m4^2 = kappa2/p^4 + (2/p^2)<kappa,rho> + sum rho^2"
+      },
+      "17": {
+        "kappa2_stratum": "859890600",
+        "n1": "217235520",
+        "n3": "71406120",
+        "n1_plus_9n3": "859890600",
+        "kappa2_match": true,
+        "T_rho": "371070816/595051",
+        "m4_expansion": "sum m4^2 = kappa2/p^4 + (2/p^2)<kappa,rho> + sum rho^2"
+      },
+      "19": {
+        "kappa2_stratum": "2099406330",
+        "n1": "529262100",
+        "n3": "174460470",
+        "n1_plus_9n3": "2099406330",
+        "kappa2_match": true,
+        "T_rho": "4533505800/5815349",
+        "m4_expansion": "sum m4^2 = kappa2/p^4 + (2/p^2)<kappa,rho> + sum rho^2"
+      },
+      "23": {
+        "kappa2_stratum": "9714820500",
+        "n1": "2442583440",
+        "n3": "808026340",
+        "n1_plus_9n3": "9714820500",
+        "kappa2_match": true,
+        "T_rho": "4200090224/3672847",
+        "m4_expansion": "sum m4^2 = kappa2/p^4 + (2/p^2)<kappa,rho> + sum rho^2"
+      },
+      "29": {
+        "kappa2_stratum": "62233301970",
+        "n1": "15614090100",
+        "n3": "5179912430",
+        "n1_plus_9n3": "62233301970",
+        "kappa2_match": true,
+        "T_rho": "134643122600/73998749",
+        "m4_expansion": "sum m4^2 = kappa2/p^4 + (2/p^2)<kappa,rho> + sum rho^2"
+      },
+      "31": {
+        "kappa2_stratum": "106167512880",
+        "n1": "26625081600",
+        "n3": "8838047920",
+        "n1_plus_9n3": "106167512880",
+        "kappa2_match": true,
+        "T_rho": "229737140800/110475599",
+        "m4_expansion": "sum m4^2 = kappa2/p^4 + (2/p^2)<kappa,rho> + sum rho^2"
+      },
+      "37": {
+        "kappa2_stratum": "437776834950",
+        "n1": "109684745460",
+        "n3": "36454676610",
+        "n1_plus_9n3": "437776834950",
+        "kappa2_match": true,
+        "T_rho": "189533612472/63955573",
+        "m4_expansion": "sum m4^2 = kappa2/p^4 + (2/p^2)<kappa,rho> + sum rho^2"
+      },
+      "41": {
+        "kappa2_stratum": "995740249140",
+        "n1": "249380384400",
+        "n3": "82928873860",
+        "n1_plus_9n3": "995740249140",
+        "kappa2_match": true,
+        "T_rho": "2155864135600/592349099",
+        "m4_expansion": "sum m4^2 = kappa2/p^4 + (2/p^2)<kappa,rho> + sum rho^2"
+      },
+      "43": {
+        "kappa2_stratum": "1457863926750",
+        "n1": "365058609300",
+        "n3": "121422813050",
+        "n1_plus_9n3": "1457863926750",
+        "kappa2_match": true,
+        "T_rho": "631322102488/157691965",
+        "m4_expansion": "sum m4^2 = kappa2/p^4 + (2/p^2)<kappa,rho> + sum rho^2"
+      },
+      "47": {
+        "kappa2_stratum": "2971020616200",
+        "n1": "743765705280",
+        "n3": "247472767880",
+        "n1_plus_9n3": "2971020616200",
+        "kappa2_match": true,
+        "T_rho": "1286727209440/268992139",
+        "m4_expansion": "sum m4^2 = kappa2/p^4 + (2/p^2)<kappa,rho> + sum rho^2"
+      },
+      "53": {
+        "kappa2_stratum": "7771378135950",
+        "n1": "1944922442580",
+        "n3": "647383965930",
+        "n1_plus_9n3": "7771378135950",
+        "kappa2_match": true,
+        "T_rho": "3366125319960/553319629",
+        "m4_expansion": "sum m4^2 = kappa2/p^4 + (2/p^2)<kappa,rho> + sum rho^2"
+      },
+      "59": {
+        "kappa2_stratum": "18332712920790",
+        "n1": "4587132654900",
+        "n3": "1527286696210",
+        "n1_plus_9n3": "18332712920790",
+        "kappa2_match": true,
+        "T_rho": "39706861984600/5266505849",
+        "m4_expansion": "sum m4^2 = kappa2/p^4 + (2/p^2)<kappa,rho> + sum rho^2"
+      }
+    }
+  },
+  "cert_parseval": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "ED4": "1680",
+      "kappa2": "960",
+      "orth": "0",
+      "delta2": "0",
+      "rho2": "200/9",
+      "T_rho": "200/9",
+      "rho2_le_T": true,
+      "orth_le_room_hyp": true,
+      "ratio_rho2_over_T": "1",
+      "ratio_orth_over_room_hyp": "0",
+      "lambda_max_Phi_via_popp": null
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "ED4": "120400/13",
+      "kappa2": "31168/13",
+      "orth": "36864/65",
+      "delta2": "1536/65",
+      "rho2": "17144/325",
+      "T_rho": "17144/325",
+      "rho2_le_T": true,
+      "orth_le_room_hyp": true,
+      "ratio_rho2_over_T": "1",
+      "ratio_orth_over_room_hyp": "1",
+      "lambda_max_Phi_via_popp": null
+    },
+    "7": {
+      "p": 7,
+      "N": 11452,
+      "ED4": "12835984/409",
+      "kappa2": "1547584/409",
+      "orth": "1972224/4499",
+      "delta2": "82176/4499",
+      "rho2": "1332784/20041",
+      "T_rho": "280528/2695",
+      "rho2_le_T": true,
+      "orth_le_room_hyp": true,
+      "ratio_rho2_over_T": "4581445/7170997",
+      "ratio_orth_over_room_hyp": "535/1636",
+      "lambda_max_Phi_via_popp": null
+    }
+  },
+  "cert_popp_phi": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "lambda2_PopP": 0.33333333333333326,
+      "four_N_lambda2": 15.999999999999996,
+      "four_over_N": 0.3333333333333333,
+      "lambda2_le_4_over_N": true,
+      "L_phi_le_16": true,
+      "conversion": "lambda_max(Phi)=4*N*lambda2(PopP)"
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "lambda2_PopP": 0.01301775147895599,
+      "four_N_lambda2": 13.53846153811423,
+      "four_over_N": 0.015384615384615385,
+      "lambda2_le_4_over_N": true,
+      "L_phi_le_16": true,
+      "conversion": "lambda_max(Phi)=4*N*lambda2(PopP)"
+    },
+    "7": {
+      "p": 7,
+      "N": 11452,
+      "lambda2_PopP": 0.00023057161296942698,
+      "four_N_lambda2": 10.56202444690351,
+      "four_over_N": 0.00034928396786587494,
+      "lambda2_le_4_over_N": true,
+      "L_phi_le_16": true,
+      "conversion": "lambda_max(Phi)=4*N*lambda2(PopP)"
+    }
+  },
+  "general_status": {
+    "theorem_A_polynomial_proved": true,
+    "parseval_target_proved": true,
+    "residual_gram_proved": true,
+    "m4_parseval_form_proved": true,
+    "popp_phi_conversion_proved": true,
+    "orth_le_room_hyp_for_all_p": false,
+    "sum_rho2_le_T_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "kappa_bound_proved_for_all_p": false,
+    "open_residual": "Prove \u2211_S \u03c1(S)\u00b2 \u2264 T_\u03c1(p) for all primes p\u22655 (\u21d4 orth\u2264room_hyp \u21d4 \u03b4\u00b2\u2264room_hyp/24 \u21d4 \u03ba\u2264\u03ba_hyp). Then Theorem A* \u21d2 16N \u21d2 bi-tight empty (Prop 15.61).",
+    "attack": "Aut/double-coset diagonalization of \u03c1 (character sums over PSL(2,p\u00b2) / CGW centraliser algebras); closed Max+ weight distribution; residual-Gram rank-nullity on R=PopP_bulk\u2212\u03bb_flat \u03a0."
+  },
+  "attack_surface": "Prove \u2211_S \u03c1(S)\u00b2 \u2264 T_\u03c1(p) for all primes p\u22655 (\u21d4 orth\u2264room_hyp \u21d4 \u03b4\u00b2\u2264room_hyp/24 \u21d4 \u03ba\u2264\u03ba_hyp). Then Theorem A* \u21d2 16N \u21d2 bi-tight empty (Prop 15.61).",
+  "verdict": "Proved: algebraic Thm A* (polynomial gap \u22650 for all p\u22653); Parseval target T_\u03c1=\u03c1_min\u00b2+room_hyp/24 Max+-free; residual-Gram orth=16N\u00b2\u2016R\u2016_F\u00b2; PopP\u2194\u03a6 conversion \u03bb_max=4N \u03bb\u2082; m4 expansion via \u03ba stratum. Certified \u2211\u03c1\u00b2\u2264T_\u03c1 at p=3,5,7. OPEN: \u2211\u03c1\u00b2\u2264T_\u03c1 for general p\u22655. L OPEN.",
+  "settlement_note": "No soft-close. Primary residual reduced to single scalar \u2211\u03c1\u00b2\u2264T_\u03c1(p) with closed T_\u03c1; not yet proved for general p\u22655.",
+  "proved": {
+    "theorem_A_polynomial": true,
+    "parseval_target_formula": true,
+    "residual_gram_identities": true,
+    "m4_parseval_form": true,
+    "sum_rho2_le_T_for_all_p": false,
+    "sixteen_N_for_all_p": false,
+    "kappa_bound_for_all_p": false
+  }
+}

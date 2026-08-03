@@ -1,0 +1,344 @@
+{
+  "prop": "15.149",
+  "title": "Prop 15.149: Size-bias residual form; independence excesses; k_suf/k_flat; triple-covered \u03bc for Gauss-sum attack",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Residual for p\u22657 rewritten as E_\u03bc[k]\u2264k_suf for the k^{underline 3}-size-biased weight law \u03bc (triple-covered regular sets). Closed k_suf/k_flat and independence excesses shipped. Gauss-sum program: bound \u03bb_\u03c4-weighted regular-set sizes through conference srg triples. N_ED4_SUF OPEN. L OPEN.",
+  "proved": {
+    "size_bias_residual_form": true,
+    "k_flat_shift_closed": true,
+    "independence_excesses": true,
+    "k_C7_criterion_structure": true,
+    "triple_program_structure": true,
+    "census_size_bias_p5_p7": true,
+    "residual_for_all_p_ge_5": false,
+    "size_bias_bound_for_all_p_ge_7": false,
+    "hyp_residual_for_all_p": false
+  },
+  "algebra": {
+    "size_bias": {
+      "proved": true,
+      "theorem": "Residual \u21d4 E_\u03bc[k]\u2264k_suf with \u03bc\u221dk^{underline 3}dW; k_suf=3+8 R4_suf/(n(n\u22122)(n+2)); shift=12\u03b4\u00b2/(n(n\u22122)(n+2)).",
+      "by_p": {
+        "5": {
+          "k_suf": "2771/175",
+          "k_flat": "1107/70",
+          "allowance": "1/50",
+          "match": true,
+          "k_act": "37455/2366",
+          "k_act_le_k_suf": true,
+          "R4_form_match": true
+        },
+        "7": {
+          "k_suf": "195469/7007",
+          "k_flat": "7977/286",
+          "allowance": "5/1078",
+          "match": true,
+          "k_act": "121313499/4349306",
+          "k_act_le_k_suf": true,
+          "R4_form_match": true
+        },
+        "11": {
+          "k_suf": "6956791/108779",
+          "k_flat": "114987/1798",
+          "allowance": "5/7018",
+          "match": true
+        },
+        "13": {
+          "k_suf": "26209219/297947",
+          "k_flat": "310167/3526",
+          "allowance": "5/13858",
+          "match": true
+        },
+        "17": {
+          "k_suf": "221656969/1497887",
+          "k_flat": "1533957/10366",
+          "allowance": "5/41038",
+          "match": true
+        },
+        "19": {
+          "k_suf": "537920371/2923739",
+          "k_flat": "2980167/16198",
+          "allowance": "5/64258",
+          "match": true
+        },
+        "23": {
+          "k_suf": "2469990469/9216767",
+          "k_flat": "9338337/34846",
+          "allowance": "5/138598",
+          "match": true
+        },
+        "29": {
+          "k_suf": "15724735531/37087259",
+          "k_flat": "37395327/88198",
+          "allowance": "5/351538",
+          "match": true
+        }
+      },
+      "n_checked": 23
+    },
+    "k_flat_shift": {
+      "proved": true,
+      "theorem": "k_flat\u2212n/2=P_k(p\u00b2)/(2(p\u00b2\u22125)(p\u00b2+1)(p\u00b2\u22121)(p\u00b2+3))\u21923\u207b; P_k=6x\u2074\u221224x\u00b3\u22124x\u00b2+24x\u22122.",
+      "by_p": {
+        "5": {
+          "k_flat_minus_n_over_2": "197/70",
+          "closed": "197/70",
+          "in_(0,3)": true,
+          "match": true
+        },
+        "7": {
+          "k_flat_minus_n_over_2": "827/286",
+          "closed": "827/286",
+          "in_(0,3)": true,
+          "match": true
+        },
+        "11": {
+          "k_flat_minus_n_over_2": "5309/1798",
+          "closed": "5309/1798",
+          "in_(0,3)": true,
+          "match": true
+        },
+        "13": {
+          "k_flat_minus_n_over_2": "10457/3526",
+          "closed": "10457/3526",
+          "in_(0,3)": true,
+          "match": true
+        },
+        "17": {
+          "k_flat_minus_n_over_2": "30887/10366",
+          "closed": "30887/10366",
+          "in_(0,3)": true,
+          "match": true
+        },
+        "19": {
+          "k_flat_minus_n_over_2": "48329/16198",
+          "closed": "48329/16198",
+          "in_(0,3)": true,
+          "match": true
+        }
+      },
+      "n_checked": 23,
+      "large_p_shift_gt_2.9": true
+    },
+    "independence": {
+      "proved": true,
+      "theorem": "d\u2082\u22121/4=1/(4(n\u22121)), d\u2083\u22121/8=3/(8(n\u22121)); d4_flat\u22121/16=P_ind(p\u00b2)/(16(p\u00b2\u22125)n\u2084)>0 for p\u22655; k_flat>(n+3)/2 (binomial size-bias).",
+      "P_ind": "6x^4-39x^3+71x^2+39x-77",
+      "by_p": {
+        "5": {
+          "d2_minus_1_4": "1/100",
+          "d3_minus_1_8": "3/200",
+          "d4_flat_minus_1_16": "31/2000",
+          "P_ind": 1779648,
+          "match": true,
+          "k_flat_gt_binomial_sizebias": true
+        },
+        "7": {
+          "d2_minus_1_4": "1/196",
+          "d3_minus_1_8": "3/392",
+          "d4_flat_minus_1_16": "449/57904",
+          "P_ind": 30172800,
+          "match": true,
+          "k_flat_gt_binomial_sizebias": true
+        },
+        "11": {
+          "d2_minus_1_4": "1/484",
+          "d3_minus_1_8": "3/968",
+          "d4_flat_minus_1_16": "1891/607376",
+          "P_ind": 1218106560,
+          "match": true,
+          "k_flat_gt_binomial_sizebias": true
+        },
+        "13": {
+          "d2_minus_1_4": "1/676",
+          "d3_minus_1_8": "3/1352",
+          "d4_flat_minus_1_16": "41213/18514288",
+          "P_ind": 4708173120,
+          "match": true,
+          "k_flat_gt_binomial_sizebias": true
+        },
+        "17": {
+          "d2_minus_1_4": "1/1156",
+          "d3_minus_1_8": "3/2312",
+          "d4_flat_minus_1_16": "122483/94223248",
+          "P_ind": 40919120640,
+          "match": true,
+          "k_flat_gt_binomial_sizebias": true
+        },
+        "19": {
+          "d2_minus_1_4": "1/1444",
+          "d3_minus_1_8": "3/2888",
+          "d4_flat_minus_1_16": "191981/184548976",
+          "P_ind": 100075855680,
+          "match": true,
+          "k_flat_gt_binomial_sizebias": true
+        }
+      },
+      "n_checked": 23
+    },
+    "k_C7": {
+      "proved": true,
+      "theorem": "For p\u22657: E_\u03bc[k]\u2264k_{C7}\u21d2d\u2084\u2264U(1+C\u2087/p\u00b2)\u21d2residual; k_{C7}=k_suf at p=7; k_{C7}\u2264k_suf always.",
+      "C7": "79923/87373",
+      "equality_at_p7": true,
+      "by_p": {
+        "7": {
+          "k_C7": "195469/7007",
+          "k_suf": "195469/7007",
+          "k_C7_le_k_suf": true,
+          "match": true
+        },
+        "11": {
+          "k_C7": "41230134923/644900113",
+          "k_suf": "6956791/108779",
+          "k_C7_le_k_suf": true,
+          "match": true
+        },
+        "13": {
+          "k_C7": "22074835639/251022629",
+          "k_suf": "26209219/297947",
+          "k_C7_le_k_suf": true,
+          "match": true
+        },
+        "17": {
+          "k_C7": "108337602283/732273113",
+          "k_suf": "221656969/1497887",
+          "k_C7_le_k_suf": true,
+          "match": true
+        },
+        "19": {
+          "k_C7": "80782491071/439156861",
+          "k_suf": "537920371/2923739",
+          "k_C7_le_k_suf": true,
+          "match": true
+        },
+        "23": {
+          "k_C7": "656395054771/2449676801",
+          "k_suf": "2469990469/9216767",
+          "k_C7_le_k_suf": true,
+          "match": true
+        },
+        "29": {
+          "k_C7": "13115168405123/30935371753",
+          "k_suf": "15724735531/37087259",
+          "k_C7_le_k_suf": true,
+          "match": true
+        },
+        "31": {
+          "k_C7": "19545645404423/40387382893",
+          "k_suf": "26790334321/55352639",
+          "k_C7_le_k_suf": true,
+          "match": true
+        }
+      },
+      "n_checked": 22
+    },
+    "triple_program": {
+      "proved_structure": true,
+      "census_ok": true,
+      "theorem": "\u03bc = law of regular-set size through a random covered triple; \u03bb_\u03c4 Aut-constant on conference srg triple types \u2192 Gauss-sum program for E_\u03bc[k]. Census E_\u03bc[k]\u2264k_suf at p=5,7.",
+      "by_p": {
+        "5": {
+          "k_act": "37455/2366",
+          "k_flat": "1107/70",
+          "k_suf": "2771/175",
+          "k_act_le_k_suf": true,
+          "k_act_gt_k_flat": true,
+          "n_over_2": "13",
+          "k_act_W": "37455/2366",
+          "k_act_W_le_k_suf": true
+        },
+        "7": {
+          "k_act": "121313499/4349306",
+          "k_flat": "7977/286",
+          "k_suf": "195469/7007",
+          "k_act_le_k_suf": true,
+          "k_act_gt_k_flat": true,
+          "n_over_2": "25",
+          "k_act_W": "7415451/265850",
+          "k_act_W_le_k_suf": true
+        }
+      },
+      "attack": "bound weighted avg of regular-set sizes through srg triples"
+    },
+    "open": {
+      "residual_closed_general": false,
+      "size_bias_bound_proved": false,
+      "open": "Prove E_\u03bc[k]\u2264k_suf for primes p\u22657 (\u21d4d\u2084\u2264d4_suf), via triple-type \u03bb_\u03c4 character sums, k_{C7} bound, or closed W_k.",
+      "sufficient_targets": [
+        "E_mu_k_le_k_suf",
+        "E_mu_k_le_k_C7",
+        "d4_le_U_1_plus_C7_over_p2"
+      ],
+      "dead": [
+        "plain_ULC",
+        "fixed_C_equals_1",
+        "jensen_spectral_mass",
+        "type_list_residual_p_ge_11"
+      ]
+    }
+  },
+  "closed_forms": {
+    "k_suf": "3 + 8 R4_suf / (n(n-2)(n+2))",
+    "k_flat": "3 + 8 R4_flat / (n(n-2)(n+2))",
+    "k_flat_shift": "P_k(p^2)/(2(p^2-5)(p^2+1)(p^2-1)(p^2+3))",
+    "P_k": "6x^4-24x^3-4x^2+24x-2",
+    "d2_minus_1_4": "1/(4(n-1))",
+    "d3_minus_1_8": "3/(8(n-1))",
+    "d4_flat_minus_1_16": "P_ind(p^2)/(16(p^2-5)n_4)",
+    "P_ind": "6x^4-39x^3+71x^2+39x-77",
+    "allowance": "12 rho_min2 / (n(n-2)(n+2))",
+    "sample": {
+      "5": {
+        "k_flat": "1107/70",
+        "k_suf": "2771/175",
+        "k_C7": null,
+        "k_shift_flat": "197/70",
+        "e_flat": "31/2000",
+        "allowance": "1/50"
+      },
+      "7": {
+        "k_flat": "7977/286",
+        "k_suf": "195469/7007",
+        "k_C7": "195469/7007",
+        "k_shift_flat": "827/286",
+        "e_flat": "449/57904",
+        "allowance": "5/1078"
+      },
+      "11": {
+        "k_flat": "114987/1798",
+        "k_suf": "6956791/108779",
+        "k_C7": "41230134923/644900113",
+        "k_shift_flat": "5309/1798",
+        "e_flat": "1891/607376",
+        "allowance": "5/7018"
+      },
+      "13": {
+        "k_flat": "310167/3526",
+        "k_suf": "26209219/297947",
+        "k_C7": "22074835639/251022629",
+        "k_shift_flat": "10457/3526",
+        "e_flat": "41213/18514288",
+        "allowance": "5/13858"
+      }
+    }
+  },
+  "status": {
+    "p5_residual_maxplus_free": true,
+    "p7_residual_maxplus_free": true,
+    "type_free_residual_general": false,
+    "size_bias_dictionary_closed": true,
+    "gauss_sum_triple_program_ready": true,
+    "general_residual": false
+  },
+  "open_attack": "Prove E_\u03bc[k]\u2264k_suf for p\u22657 via \u03bb_\u03c4 character sums on conference srg triples, or E_\u03bc[k]\u2264k_{C7}, or closed W_k.",
+  "backend": "CPU Fraction; GPU unused (F20)",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "residual_closed": false,
+  "compute": {
+    "workers": "Fraction algebra",
+    "gpu": "unused",
+    "primes_checked": "5..97"
+  }
+}

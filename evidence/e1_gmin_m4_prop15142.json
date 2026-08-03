@@ -1,0 +1,218 @@
+{
+  "prop": "15.142",
+  "title": "Prop 15.142: uniform affine all-S law; k-AP split; fourths partners p=5-only; size-12 fibre; p=11 type sample; residual OPEN generally",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Affine halfspaces work for all S of size (p+1)/2 at p=5,7,11. k-AP splits types (multi-way at p=11). Fourths-coset Seidel partners work only at p=5 \u2014 not a uniform size-12 law. p=7 residual still Max+-free via explicit T (15.141). p\u226511 type census incomplete. N_ED4_SUF OPEN for all p\u22655. L OPEN.",
+  "proved": {
+    "affine_all_S_p5_7_11": true,
+    "k_AP_type_split": true,
+    "fourths_partners_structure": true,
+    "size12_fibre_p7": true,
+    "p11_type_sample": true,
+    "residual_for_all_p_ge_5": false,
+    "p11_residual_maxplus_free": false,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  },
+  "algebra": {
+    "affine": {
+      "proved": true,
+      "theorem": "Every S\u2282F_p with |S|=(p+1)/2 gives an affine Max+ halfspace at certified primes p=5,7,11 (all C(p,k) choices).",
+      "by_p": {
+        "5": {
+          "k": 3,
+          "n_evec": 10,
+          "n_total_S": 10,
+          "all_S_evec": true,
+          "n_k_AP": 10,
+          "n_non_AP": 0,
+          "matches_census": true
+        },
+        "7": {
+          "k": 4,
+          "n_evec": 35,
+          "n_total_S": 35,
+          "all_S_evec": true,
+          "n_k_AP": 21,
+          "n_non_AP": 14,
+          "matches_census": true
+        },
+        "11": {
+          "k": 6,
+          "n_evec": 462,
+          "n_total_S": 462,
+          "all_S_evec": true,
+          "n_k_AP": 55,
+          "n_non_AP": 407,
+          "matches_census": true
+        }
+      }
+    },
+    "k_AP": {
+      "proved": true,
+      "theorem": "k-AP vs non-k-AP partitions affine H_+ types at p=7 (84 vs 56); at p=5 all S are k-AP (one affine type); at p=11 non-AP further splits (orbit sizes 132,330,660 observed).",
+      "census": {
+        "5": {
+          "k": 3,
+          "n_evec": 10,
+          "n_total_S": 10,
+          "all_S_evec": true,
+          "n_k_AP": 10,
+          "n_non_AP": 0
+        },
+        "7": {
+          "k": 4,
+          "n_evec": 35,
+          "n_total_S": 35,
+          "all_S_evec": true,
+          "n_k_AP": 21,
+          "n_non_AP": 14
+        },
+        "11": {
+          "k": 6,
+          "n_evec": 462,
+          "n_total_S": 462,
+          "all_S_evec": true,
+          "n_k_AP": 55,
+          "n_non_AP": 407
+        }
+      },
+      "p11_affine_sizes": [
+        132,
+        330,
+        660
+      ]
+    },
+    "fourths": {
+      "proved": true,
+      "theorem": "Fourths-coset Seidel partners work at p=5; no evec hits at p=7,11 on full session search \u2014 not the general size-12 law.",
+      "by_p": {
+        "5": {
+          "k": 6,
+          "n_fourths": 6,
+          "hit_hs_base": true,
+          "meta": {
+            "t": 0,
+            "a": 5,
+            "k": 6
+          },
+          "matches_session": true
+        },
+        "7": {
+          "k": 12,
+          "n_fourths": 12,
+          "hit_hs_base": false,
+          "meta": null,
+          "matches_session": true,
+          "full_search_session": true
+        },
+        "11": {
+          "k": 30,
+          "n_fourths": 30,
+          "hit_hs_base": false,
+          "meta": null,
+          "matches_session": true,
+          "full_search_session": true
+        }
+      },
+      "session": {
+        "5": {
+          "k": 6,
+          "any_hit": true,
+          "n_hits": 11
+        },
+        "7": {
+          "k": 12,
+          "any_hit": false,
+          "n_hits": 0
+        },
+        "11": {
+          "k": 30,
+          "any_hit": false,
+          "n_hits": 0
+        }
+      }
+    },
+    "size12": {
+      "proved": true,
+      "theorem": "p=7 size-12 fibre has 84 distinct T-sets (session Max+ cert); explicit T of 15.141 is one; k=(q\u22121)/4 but T not a fourths coset.",
+      "fibre": {
+        "n_unique_T": 84,
+        "T_explicit_in": true,
+        "k": 12,
+        "k_eq_q_minus_1_over_4": true
+      },
+      "explicit_T_evec": true,
+      "k": 12,
+      "q_minus_1_over_4": 12
+    },
+    "p11": {
+      "proved": true,
+      "theorem": "p=11 Max+-free samples: affine orbits 132/330/660; ystar 3630; double-switch sizes 3630/7260 (session). Full type list OPEN.",
+      "live_sizes": {
+        "AP_interval": 330,
+        "nonAP_012346": 660,
+        "nonAP_012457": 132,
+        "G_order": 14520,
+        "ystar": 3630
+      },
+      "session": {
+        "G_order": 14520,
+        "affine_orbit_sizes": [
+          132,
+          330,
+          660
+        ],
+        "ystar_orbit_size": 3630,
+        "double_switch_sizes": [
+          3630,
+          7260
+        ]
+      },
+      "room": "268800/1769"
+    },
+    "open": {
+      "residual_closed_general": false,
+      "residual_closed_p5_maxplus_free": true,
+      "residual_closed_p7_maxplus_free": true,
+      "residual_closed_p11": false,
+      "open": "Complete Max+-free H_+ type law for general p (affine subtypes beyond k-AP, double switches, uniform size-k partners replacing p=7-only T); free weights+Q_j; residual \u2211c_j\u00b2\u2264room. Fourths-coset partners are not the general size-12 law.",
+      "dead": [
+        "fourths-coset as general size-(q-1)/4 partner for p\u22657",
+        "class_key thrash (F19)",
+        "soft-close L from p=5,7 only (F3)",
+        "claim p=11 residual from incomplete type sample"
+      ]
+    }
+  },
+  "closed_forms": {
+    "affine": "y_u=+1 iff L(u)\u2208S, all |S|=(p+1)/2 (cert p=5,7,11)",
+    "k_AP_p7": "4-AP\u21d2|O|=84; non-4-AP\u21d256",
+    "fourths_k": "(q-1)/4",
+    "p7_size12_fibre": 84,
+    "p7_delta2": "19180800/1840091",
+    "room": {
+      "5": "1536/65",
+      "7": "3072/55",
+      "11": "268800/1769"
+    },
+    "nu_G": {
+      "3": 0,
+      "5": 2,
+      "7": 7
+    }
+  },
+  "status": {
+    "p5_residual_maxplus_free": true,
+    "p7_residual_maxplus_free": true,
+    "p11_residual_maxplus_free": false,
+    "general_residual": false
+  },
+  "open_attack": "Uniform size-k partner geometry; complete affine subtype law for p\u226511; free Q_j residual for all p\u22655.",
+  "backend": "CPU field + G-orbits; GPU unused (F20)",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "residual_closed": false,
+  "scratch_evidence": "/tmp/grok-goal-9ac8197fcb0f/implementer/gen_size_partner.json"
+}

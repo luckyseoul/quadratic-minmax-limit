@@ -1,0 +1,273 @@
+{
+  "prop": "15.158",
+  "title": "Prop 15.158: closed Q\u2084; Max+ 1-homogeneous non-scheme; pole decomposition; conditional N-bound; L OPEN",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Q\u2084(t)=[(d+2)(d+4)t\u2074\u22126(d+2)t\u00b2+3]/(d\u00b2\u22121). Max+ is 1-homogeneous with Gram spectrum 2N (\u00d7d)+0 (\u00d7N\u2212d), but not an inner-product association scheme (p=5). \u03bc_G4\u22642/N+P(E)+Q\u2084(0)P(Eq); pure pole bound needs N\u2265N_* and nonpositive-Q\u2084 support \u2014 N_* holds at p=5,7 but support fails. Chebyshev split dead. Need Weil/Aut-coherent config/closed W_k. N_ED4_SUF OPEN. L OPEN.",
+  "proved": {
+    "Q4_closed_form": true,
+    "one_homogeneous_gram_spectrum": true,
+    "not_IP_association_scheme": true,
+    "pole_decomposition_conditional": true,
+    "chebyshev_split_dead": true,
+    "residual_for_all_p_ge_5": false,
+    "mu_G4_bound_for_all_p": false,
+    "hyp_residual_for_all_p": false
+  },
+  "algebra": {
+    "Q4": {
+      "proved": true,
+      "theorem": "Q\u2084(t)=[(d+2)(d+4)t\u2074\u22126(d+2)t\u00b2+3]/(d\u00b2\u22121); Q\u2084(0)=3/(d\u00b2\u22121).",
+      "by_d": {
+        "3": {
+          "Q4_0": "3/8",
+          "match_expansion": true
+        },
+        "4": {
+          "Q4_0": "1/5",
+          "match_expansion": true
+        },
+        "5": {
+          "Q4_0": "1/8",
+          "match_expansion": true
+        },
+        "6": {
+          "Q4_0": "3/35",
+          "match_expansion": true
+        },
+        "7": {
+          "Q4_0": "1/16",
+          "match_expansion": true
+        },
+        "8": {
+          "Q4_0": "1/21",
+          "match_expansion": true
+        },
+        "9": {
+          "Q4_0": "3/80",
+          "match_expansion": true
+        },
+        "10": {
+          "Q4_0": "1/33",
+          "match_expansion": true
+        }
+      },
+      "n_checked": 82,
+      "closed_forms": {
+        "Q4": "[(d+2)(d+4) t^4 - 6(d+2) t^2 + 3]/(d^2-1)",
+        "Q4_0": "3/(d^2-1)",
+        "Q2": "(d t^2 - 1)/(d-1)"
+      }
+    },
+    "homogeneous": {
+      "proved_census": true,
+      "theorem": "Max+ 1-homogeneous (identical absolute distributions); Gram spectrum 2N (\u00d7d) + 0 (\u00d7N\u2212d).",
+      "p5": {
+        "N": 260,
+        "d": 13,
+        "n_profiles": 1,
+        "one_homogeneous": true,
+        "lambda_2N_mult": 13,
+        "lambda_0_mult": 247,
+        "spectrum_ok": true,
+        "profile_head": [
+          [
+            -26,
+            1
+          ],
+          [
+            -14,
+            13
+          ],
+          [
+            -10,
+            20
+          ],
+          [
+            -6,
+            36
+          ],
+          [
+            -2,
+            60
+          ],
+          [
+            2,
+            60
+          ]
+        ]
+      }
+    },
+    "non_scheme": {
+      "proved_not_scheme": true,
+      "theorem": "Inner-product relations on Max+ are not an association scheme at p=5 (non-constant p_{2,2}^s for several s).",
+      "by_s": {
+        "14": {
+          "n_pairs": 30,
+          "p_2_2_min": 0,
+          "p_2_2_max": 10,
+          "constant": false
+        },
+        "-14": {
+          "n_pairs": 30,
+          "p_2_2_min": 20,
+          "p_2_2_max": 60,
+          "constant": false
+        },
+        "6": {
+          "n_pairs": 30,
+          "p_2_2_min": 20,
+          "p_2_2_max": 20,
+          "constant": true
+        },
+        "-6": {
+          "n_pairs": 30,
+          "p_2_2_min": 10,
+          "p_2_2_max": 10,
+          "constant": true
+        },
+        "2": {
+          "n_pairs": 30,
+          "p_2_2_min": 18,
+          "p_2_2_max": 18,
+          "constant": true
+        },
+        "-2": {
+          "n_pairs": 30,
+          "p_2_2_min": 8,
+          "p_2_2_max": 8,
+          "constant": true
+        }
+      }
+    },
+    "decomposition": {
+      "proved": true,
+      "theorem": "\u03bc_G4\u22642/N+P(E)+Q\u2084(0)P(Eq); if support has Q\u2084\u22640 except poles and N\u2265N_*=\u23082/\u03bc_G4_suf\u2309 then residual holds.",
+      "by_p": {
+        "5": {
+          "N": 260,
+          "N_star": 255,
+          "N_ge_N_star": true,
+          "pole_mass": "1/130",
+          "two_over_N": "1/130",
+          "mu_G4": "19261/2599051",
+          "mu_G4_suf": "1207/153790",
+          "pos_contrib": "53821/3712930",
+          "neg_contrib": "-184137/25990510",
+          "support_only_nonpos_Q4_except_poles": false,
+          "pole_bound_implies_residual": false,
+          "two_over_N_le_suf": true
+        },
+        "7": {
+          "N": 11452,
+          "N_star": 2304,
+          "N_ge_N_star": true,
+          "pole_mass": "1/5726",
+          "two_over_N": "1/5726",
+          "mu_G4": "1503679/2076953125",
+          "mu_G4_suf": "190153/218968750",
+          "pos_contrib": "11566759/4153906250",
+          "neg_contrib": "-8559401/4153906250",
+          "support_only_nonpos_Q4_except_poles": false,
+          "pole_bound_implies_residual": false,
+          "two_over_N_le_suf": true
+        }
+      },
+      "N_star_table": {
+        "5": 255,
+        "7": 2304,
+        "11": 38913,
+        "13": 108454,
+        "17": 555470,
+        "19": 1089988,
+        "23": 3459528,
+        "29": 13997037,
+        "31": 20914819
+      },
+      "note": "At p=5,7: N\u2265N_* holds but support hypothesis fails (equator and/or Hoffman exterior positive Q\u2084)."
+    },
+    "chebyshev": {
+      "proved_too_weak": true,
+      "theorem": "Chebyshev split \u03bc_G4\u2264Q\u2084(0)+(1\u2212Q\u2084(0))min(1,(2/n)/t\u2082\u00b2) exceeds \u03bc_G4_suf for all tested p (dead).",
+      "by_p": {
+        "5": {
+          "t2_approx": "281/500",
+          "chebyshev_ub": "14776493/57483608",
+          "mu_G4_suf": "1207/153790",
+          "exceeds_suf": true
+        },
+        "7": {
+          "t2_approx": "54/125",
+          "chebyshev_ub": "14699/67392",
+          "mu_G4_suf": "190153/218968750",
+          "exceeds_suf": true
+        },
+        "11": {
+          "t2_approx": "579/2000",
+          "chebyshev_ub": "1658816567/8452543080",
+          "mu_G4_suf": "2538055/49381532398",
+          "exceeds_suf": true
+        },
+        "13": {
+          "t2_approx": "99/400",
+          "chebyshev_ub": "11027231/57316248",
+          "mu_G4_suf": "6748603/365953402750",
+          "exceeds_suf": true
+        },
+        "17": {
+          "t2_approx": "383/2000",
+          "chebyshev_ub": "1869951327/9937299616",
+          "mu_G4_suf": "32883853/9132991510750",
+          "exceeds_suf": true
+        },
+        "19": {
+          "t2_approx": "43/250",
+          "chebyshev_ub": "227590723/1218195160",
+          "mu_G4_suf": "63622795/34674030043198",
+          "exceeds_suf": true
+        }
+      },
+      "n_checked": 9
+    },
+    "open": {
+      "residual_closed_general": false,
+      "mu_G4_le_mu_G4_suf_all_p": false,
+      "open": "Prove \u03bc_G4\u2264\u03bc_G4_suf for all primes p\u22655 via Weil/Paley sums on \u2211_y Q\u2084(\u27e8z,y\u27e9/n), Aut-coherent configuration of Max+, closed W_k, or exterior/equator mass bounds beyond moments j\u22643.",
+      "sufficient_targets": [
+        "Weil_sum_Q4_over_Maxplus",
+        "Aut_coherent_configuration_Maxplus",
+        "closed_N_and_W_k",
+        "exterior_equator_mass_bound"
+      ],
+      "dead": [
+        "IP_association_scheme_Maxplus",
+        "Chebyshev_Q4_split",
+        "mu_le_1",
+        "mu_le_1_over_h4",
+        "moment_LP_allowed_k",
+        "plain_ULC"
+      ],
+      "progress": "Max+ is 1-homogeneous tight frame (Gram 2N\u00d7d); not IP-scheme; Q\u2084 closed; residual is pole+exterior+equator mass control; N\u2265N_* at p=5,7 but positive-Q\u2084 support blocks pure pole bound."
+    }
+  },
+  "closed_forms": {
+    "Q4": "[(d+2)(d+4) t^4 - 6(d+2) t^2 + 3]/(d^2-1)",
+    "Q4_0": "3/(d^2-1)",
+    "Q2": "(d t^2 - 1)/(d-1)"
+  },
+  "status": {
+    "p5_residual_maxplus_free": true,
+    "p7_residual_maxplus_free": true,
+    "type_free_residual_general": false,
+    "IP_scheme_blocked": true,
+    "general_residual": false
+  },
+  "open_attack": "Weil/Paley \u2211_y Q\u2084(\u27e8z,y\u27e9/n), or Aut-coherent configuration of Max+, or closed W_k / exterior-equator mass bound.",
+  "backend": "CPU Fraction + numpy Gram p=5; GPU unused (F20)",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "residual_closed": false,
+  "compute": {
+    "workers": "Fraction + numpy",
+    "gpu": "unused"
+  }
+}

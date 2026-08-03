@@ -1,0 +1,433 @@
+{
+  "prop": "15.114",
+  "backend": "CPU Fraction + Max+ cert; GPU unused (F20); no class_key (F19)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "ed4_le_suf_for_all_p": false,
+  "kappa_bound_proved_for_all_p": false,
+  "closed_forms": {
+    "sum_gamma": "(6/p) * C(n,4)",
+    "sum_gamma2": "6*C(n,4) + n(n-1)(n-2)/4",
+    "Tf_energy": "(16p^2 - 72)*C(n,4) + n(n-1)(n-2)",
+    "mean_gamma": "6/p",
+    "spot_p5_sum_gamma2": "93600",
+    "spot_p7_sum_gamma2": "1411200",
+    "spot_p5_Tf_energy": "4919200"
+  },
+  "gamma_algebra": {
+    "proved": true,
+    "theorem": "\u2211\u03b3=(6/p)C(n,4); \u2211\u03b3\u00b2=6 C(n,4)+n(n\u22121)(n\u22122)/4 (adj=0 via Cy=py); \u2016Tf_y\u2016\u00b2=(16p\u00b2\u221272)C(n,4)+n(n\u22121)(n\u22122).",
+    "by_p": {
+      "3": {
+        "sum_gamma": "420",
+        "mean_gamma": "2",
+        "mean_gamma_eq_6_over_p": true,
+        "sum_gamma2": "1440",
+        "diag_plus_match": "1440",
+        "sum_gamma2_eq_diag_match": true,
+        "Tf_energy": "15840",
+        "Tf_energy_from_moments": "15840",
+        "energy_match": true
+      },
+      "5": {
+        "sum_gamma": "17940",
+        "mean_gamma": "6/5",
+        "mean_gamma_eq_6_over_p": true,
+        "sum_gamma2": "93600",
+        "diag_plus_match": "93600",
+        "sum_gamma2_eq_diag_match": true,
+        "Tf_energy": "4919200",
+        "Tf_energy_from_moments": "4919200",
+        "energy_match": true
+      },
+      "7": {
+        "sum_gamma": "197400",
+        "mean_gamma": "6/7",
+        "mean_gamma_eq_6_over_p": true,
+        "sum_gamma2": "1411200",
+        "diag_plus_match": "1411200",
+        "sum_gamma2_eq_diag_match": true,
+        "Tf_energy": "164091200",
+        "Tf_energy_from_moments": "164091200",
+        "energy_match": true
+      },
+      "11": {
+        "sum_gamma": "4790940",
+        "mean_gamma": "6/11",
+        "mean_gamma_eq_6_over_p": true,
+        "sum_gamma2": "53143200",
+        "diag_plus_match": "53143200",
+        "sum_gamma2_eq_diag_match": true,
+        "Tf_energy": "16374010400",
+        "Tf_energy_from_moments": "16374010400",
+        "energy_match": true
+      },
+      "13": {
+        "sum_gamma": "15500940",
+        "mean_gamma": "6/13",
+        "mean_gamma_eq_6_over_p": true,
+        "sum_gamma2": "202718880",
+        "diag_plus_match": "202718880",
+        "sum_gamma2_eq_diag_match": true,
+        "Tf_energy": "88401520480",
+        "Tf_energy_from_moments": "88401520480",
+        "energy_match": true
+      },
+      "17": {
+        "sum_gamma": "101873520",
+        "mean_gamma": "6/17",
+        "mean_gamma_eq_6_over_p": true,
+        "sum_gamma2": "1737884160",
+        "diag_plus_match": "1737884160",
+        "sum_gamma2_eq_diag_match": true,
+        "Tf_energy": "1313920882560",
+        "Tf_energy_from_moments": "1313920882560",
+        "energy_match": true
+      },
+      "19": {
+        "sum_gamma": "222228180",
+        "mean_gamma": "6/19",
+        "mean_gamma_eq_6_over_p": true,
+        "sum_gamma2": "4234096800",
+        "diag_plus_match": "4234096800",
+        "sum_gamma2_eq_diag_match": true,
+        "Tf_energy": "4014080584800",
+        "Tf_energy_from_moments": "4014080584800",
+        "energy_match": true
+      },
+      "23": {
+        "sum_gamma": "847985160",
+        "mean_gamma": "6/23",
+        "mean_gamma_eq_6_over_p": true,
+        "sum_gamma2": "19540667520",
+        "diag_plus_match": "19540667520",
+        "sum_gamma2_eq_diag_match": true,
+        "Tf_energy": "27279265309120",
+        "Tf_energy_from_moments": "27279265309120",
+        "energy_match": true
+      },
+      "29": {
+        "sum_gamma": "4302207420",
+        "mean_gamma": "6/29",
+        "mean_gamma_eq_6_over_p": true,
+        "sum_gamma2": "124912720800",
+        "diag_plus_match": "124912720800",
+        "sum_gamma2_eq_diag_match": true,
+        "Tf_energy": "278307524684000",
+        "Tf_energy_from_moments": "278307524684000",
+        "energy_match": true
+      },
+      "31": {
+        "sum_gamma": "6863831520",
+        "mean_gamma": "6/31",
+        "mean_gamma_eq_6_over_p": true,
+        "sum_gamma2": "213000652800",
+        "diag_plus_match": "213000652800",
+        "sum_gamma2_eq_diag_match": true,
+        "Tf_energy": "542728621676800",
+        "Tf_energy_from_moments": "542728621676800",
+        "energy_match": true
+      },
+      "37": {
+        "sum_gamma": "23698284660",
+        "mean_gamma": "6/37",
+        "mean_gamma_eq_6_over_p": true,
+        "sum_gamma2": "877477963680",
+        "diag_plus_match": "877477963680",
+        "sum_gamma2_eq_diag_match": true,
+        "Tf_energy": "3190518428357280",
+        "Tf_energy_from_moments": "3190518428357280",
+        "energy_match": true
+      },
+      "41": {
+        "sum_gamma": "48630623160",
+        "mean_gamma": "6/41",
+        "mean_gamma_eq_6_over_p": true,
+        "sum_gamma2": "1995043075200",
+        "diag_plus_match": "1995043075200",
+        "sum_gamma2_eq_diag_match": true,
+        "Tf_energy": "8913868293668800",
+        "Tf_energy_from_moments": "8913868293668800",
+        "energy_match": true
+      },
+      "43": {
+        "sum_gamma": "67881128700",
+        "mean_gamma": "6/43",
+        "mean_gamma_eq_6_over_p": true,
+        "sum_gamma2": "2920468874400",
+        "diag_plus_match": "2920468874400",
+        "sum_gamma2_eq_diag_match": true,
+        "Tf_energy": "14357046057754400",
+        "Tf_energy_from_moments": "14357046057754400",
+        "energy_match": true
+      },
+      "47": {
+        "sum_gamma": "126541081680",
+        "mean_gamma": "6/47",
+        "mean_gamma_eq_6_over_p": true,
+        "sum_gamma2": "5950125642240",
+        "diag_plus_match": "5950125642240",
+        "sum_gamma2_eq_diag_match": true,
+        "Tf_energy": "34962974204512640",
+        "Tf_energy_from_moments": "34962974204512640",
+        "energy_match": true
+      },
+      "53": {
+        "sum_gamma": "293468650020",
+        "mean_gamma": "6/53",
+        "mean_gamma_eq_6_over_p": true,
+        "sum_gamma2": "15559379540640",
+        "diag_plus_match": "15559379540640",
+        "sum_gamma2_eq_diag_match": true,
+        "Tf_energy": "116321995327019040",
+        "Tf_energy_from_moments": "116321995327019040",
+        "energy_match": true
+      },
+      "59": {
+        "sum_gamma": "621805357740",
+        "mean_gamma": "6/59",
+        "mean_gamma_eq_6_over_p": true,
+        "sum_gamma2": "36697061239200",
+        "diag_plus_match": "36697061239200",
+        "sum_gamma2_eq_diag_match": true,
+        "Tf_energy": "340108504166672800",
+        "Tf_energy_from_moments": "340108504166672800",
+        "energy_match": true
+      }
+    }
+  },
+  "multiplicative": {
+    "proved": true,
+    "theorem": "For boolean Cy=py: (T f_y)(S)=(4p\u22122\u03b3_y(S)) f_y(S); A f_y=2(\u03b3_y\u2299f_y); hence \u27e8\u03b4,\u03b3_y\u2299f_y\u27e9=0 for all \u03b4\u2208ker A."
+  },
+  "cert_gamma_Tf": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "n": 10,
+      "nQ": 210,
+      "n_checked": 3,
+      "all_ok": true,
+      "samples": [
+        {
+          "y_index": 0,
+          "Tf_multiplicative_ok": true,
+          "sum_gamma": 420.0,
+          "sum_gamma_pred": 420.0,
+          "sum_gamma_ok": true,
+          "sum_gamma2": 1440.0,
+          "sum_gamma2_pred": 1440.0,
+          "sum_gamma2_ok": true,
+          "Tf_energy": 15840.0,
+          "Tf_energy_pred": 15840.0,
+          "Tf_energy_ok": true
+        },
+        {
+          "y_index": 1,
+          "Tf_multiplicative_ok": true,
+          "sum_gamma": 420.0,
+          "sum_gamma_pred": 420.0,
+          "sum_gamma_ok": true,
+          "sum_gamma2": 1440.0,
+          "sum_gamma2_pred": 1440.0,
+          "sum_gamma2_ok": true,
+          "Tf_energy": 15840.0,
+          "Tf_energy_pred": 15840.0,
+          "Tf_energy_ok": true
+        },
+        {
+          "y_index": 2,
+          "Tf_multiplicative_ok": true,
+          "sum_gamma": 420.0,
+          "sum_gamma_pred": 420.0,
+          "sum_gamma_ok": true,
+          "sum_gamma2": 1440.0,
+          "sum_gamma2_pred": 1440.0,
+          "sum_gamma2_ok": true,
+          "Tf_energy": 15840.0,
+          "Tf_energy_pred": 15840.0,
+          "Tf_energy_ok": true
+        }
+      ],
+      "closed_forms": {
+        "sum_gamma": "420",
+        "sum_gamma2": "1440",
+        "Tf_energy": "15840",
+        "mean_gamma": "2"
+      }
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "n": 26,
+      "nQ": 14950,
+      "n_checked": 3,
+      "all_ok": true,
+      "samples": [
+        {
+          "y_index": 0,
+          "Tf_multiplicative_ok": true,
+          "sum_gamma": 17940.0,
+          "sum_gamma_pred": 17940.0,
+          "sum_gamma_ok": true,
+          "sum_gamma2": 93600.0,
+          "sum_gamma2_pred": 93600.0,
+          "sum_gamma2_ok": true,
+          "Tf_energy": 4919200.0,
+          "Tf_energy_pred": 4919200.0,
+          "Tf_energy_ok": true
+        },
+        {
+          "y_index": 1,
+          "Tf_multiplicative_ok": true,
+          "sum_gamma": 17940.0,
+          "sum_gamma_pred": 17940.0,
+          "sum_gamma_ok": true,
+          "sum_gamma2": 93600.0,
+          "sum_gamma2_pred": 93600.0,
+          "sum_gamma2_ok": true,
+          "Tf_energy": 4919200.0,
+          "Tf_energy_pred": 4919200.0,
+          "Tf_energy_ok": true
+        },
+        {
+          "y_index": 2,
+          "Tf_multiplicative_ok": true,
+          "sum_gamma": 17940.0,
+          "sum_gamma_pred": 17940.0,
+          "sum_gamma_ok": true,
+          "sum_gamma2": 93600.0,
+          "sum_gamma2_pred": 93600.0,
+          "sum_gamma2_ok": true,
+          "Tf_energy": 4919200.0,
+          "Tf_energy_pred": 4919200.0,
+          "Tf_energy_ok": true
+        }
+      ],
+      "closed_forms": {
+        "sum_gamma": "17940",
+        "sum_gamma2": "93600",
+        "Tf_energy": "4919200",
+        "mean_gamma": "6/5"
+      }
+    }
+  },
+  "cert_ed4_types": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "n_types": 1,
+      "types": [
+        {
+          "ED4": "1680",
+          "count": 12,
+          "float": 1680.0
+        }
+      ],
+      "ED4_global": "1680",
+      "ED4_global_float": 1680.0,
+      "ED4_min": "1680",
+      "ED4_max": "1680",
+      "ED4_flat": "1680",
+      "ED4_suf": "6640/3",
+      "delta2_global": "0",
+      "rho_min2": "200/9",
+      "budget_hyp": "0",
+      "global_le_suf": true,
+      "global_le_bud": true,
+      "max_y_le_suf": true,
+      "delta2_le_rho_min2": true,
+      "not_2point_homogeneous": false
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "n_types": 1,
+      "types": [
+        {
+          "ED4": "120400/13",
+          "count": 260,
+          "float": 9261.538461538461
+        }
+      ],
+      "ED4_global": "120400/13",
+      "ED4_global_float": 9261.538461538461,
+      "ED4_min": "120400/13",
+      "ED4_max": "120400/13",
+      "ED4_flat": "43472/5",
+      "ED4_suf": "234832/25",
+      "delta2_global": "1536/65",
+      "rho_min2": "728/25",
+      "budget_hyp": "1536/65",
+      "global_le_suf": true,
+      "global_le_bud": true,
+      "max_y_le_suf": true,
+      "delta2_le_rho_min2": true,
+      "not_2point_homogeneous": false
+    },
+    "7": {
+      "p": 7,
+      "N": 11452,
+      "n_types": 3,
+      "types": [
+        {
+          "ED4": "12384400/409",
+          "count": 2352,
+          "float": 30279.706601466994
+        },
+        {
+          "ED4": "12835984/409",
+          "count": 8400,
+          "float": 31383.823960880196
+        },
+        {
+          "ED4": "13094032/409",
+          "count": 700,
+          "float": 32014.748166259167
+        }
+      ],
+      "ED4_global": "5218435600/167281",
+      "ED4_global_float": 31195.626520644902,
+      "ED4_min": "12384400/409",
+      "ED4_max": "13094032/409",
+      "ED4_flat": "340400/11",
+      "ED4_suf": "17303600/539",
+      "delta2_global": "19180800/1840091",
+      "rho_min2": "26000/539",
+      "budget_hyp": "3072/55",
+      "global_le_suf": true,
+      "global_le_bud": true,
+      "max_y_le_suf": true,
+      "delta2_le_rho_min2": true,
+      "not_2point_homogeneous": true
+    }
+  },
+  "general_status": {
+    "Tf_multiplicative_proved": true,
+    "delta_annihilates_gamma_f_proved": true,
+    "sum_gamma_proved": true,
+    "sum_gamma2_proved": true,
+    "Tf_energy_proved": true,
+    "ed4_pair_average_structure_proved": true,
+    "ed4_le_suf_for_all_p": false,
+    "delta_le_rho_min_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "open_residual": "Prove pair-average ED4\u2264ED4_suf (\u21d4\u03b4\u00b2\u2264\u03c1_min\u00b2) for all primes p\u22655. New tools: \u03b3-calculus, Tf_y=(4p\u22122\u03b3)f_y, \u2211\u03b3\u00b2 closed, \u03b4\u22a5\u03b3\u2299f. F19: no class_key."
+  },
+  "attack_surface": "Prove pair-average ED4\u2264ED4_suf (\u21d4\u03b4\u00b2\u2264\u03c1_min\u00b2) for all primes p\u22655. New tools: \u03b3-calculus, Tf_y=(4p\u22122\u03b3)f_y, \u2211\u03b3\u00b2 closed, \u03b4\u22a5\u03b3\u2299f. F19: no class_key.",
+  "verdict": "Proved: Tf_y=(4p\u22122\u03b3_y)\u2299f_y; \u03b4\u22a5\u03b3\u2299f; \u2211\u03b3=(6/p)C(n,4); \u2211\u03b3\u00b2=6 C(n,4)+n(n\u22121)(n\u22122)/4 (adjacent edges cancel by Cy=py); \u2016Tf_y\u2016\u00b2 closed. Certified p=3,5. At p=7: three ED4(y) types, all \u2264ED4_suf; pair-average ED4\u2264ED4_suf. OPEN: ED4\u2264ED4_suf for general p\u22655. L OPEN.",
+  "settlement_note": "No soft-close. N_ED4_SUF still open for general p. New attack surface: \u03b3-weighted spectral mass of f_y on E_4p.",
+  "proved": {
+    "Tf_multiplicative": true,
+    "delta_annihilates_gamma_f": true,
+    "sum_gamma": true,
+    "sum_gamma2": true,
+    "Tf_energy": true,
+    "cert_p3_p5_gamma": true,
+    "cert_ed4_types_p3_5_7": true,
+    "ed4_le_suf_for_all_p": false,
+    "delta_le_rho_min_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  }
+}

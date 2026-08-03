@@ -1,0 +1,117 @@
+{
+  "3": {
+    "p": 3,
+    "n": 10,
+    "n_orbits": 9,
+    "C_n_4": 210,
+    "nullity_classkey_E4p": 0,
+    "dim_le_1": true,
+    "dim_eq_0": true,
+    "dim_eq_1": false,
+    "lambda_max": 9.797958971132712,
+    "lambda_min": -9.797958971132712,
+    "4p": 12,
+    "lam_max_eq_4p": false,
+    "top_eigs": [
+      -7.060691346828399,
+      -5.777317332491094,
+      -0.8770645041959441,
+      6.938893903907205e-17,
+      0.8770645041959428,
+      5.777317332491095,
+      7.060691346828406,
+      9.797958971132712
+    ],
+    "eigs_at_4p_indices": [],
+    "kappa_unique_values": [
+      -3,
+      -1,
+      1,
+      3
+    ],
+    "kappa_rayleigh_weighted": 0.0,
+    "backend": "serial",
+    "rho_min2": "200/9",
+    "room_hyp_24": "0"
+  },
+  "5": {
+    "p": 5,
+    "n": 26,
+    "n_orbits": 37,
+    "C_n_4": 14950,
+    "nullity_classkey_E4p": 1,
+    "dim_le_1": true,
+    "dim_eq_0": false,
+    "dim_eq_1": true,
+    "lambda_max": 20.0,
+    "lambda_min": -20.0,
+    "4p": 20,
+    "lam_max_eq_4p": true,
+    "top_eigs": [
+      10.389769428124426,
+      11.354035132620385,
+      11.987038524020535,
+      12.649110640673511,
+      15.114735750666116,
+      16.00405175263373,
+      18.745464040859993,
+      20.0
+    ],
+    "eigs_at_4p_indices": [
+      36
+    ],
+    "kappa_unique_values": [
+      -3,
+      -1,
+      1,
+      3
+    ],
+    "kappa_rayleigh_weighted": 0.0,
+    "backend": "serial",
+    "rho_min2": "728/25",
+    "room_hyp_24": "1536/65"
+  },
+  "7": {
+    "p": 7,
+    "n": 50,
+    "n_orbits": 82,
+    "C_n_4": 230300,
+    "nullity_classkey_E4p": 0,
+    "dim_le_1": true,
+    "dim_eq_0": true,
+    "dim_eq_1": false,
+    "lambda_max": 23.37509475111153,
+    "lambda_min": -23.375094751111522,
+    "4p": 28,
+    "lam_max_eq_4p": false,
+    "top_eigs": [
+      16.52142079126029,
+      18.033160276512458,
+      18.42900526798645,
+      20.48906693121923,
+      21.29047816166039,
+      22.084966650579652,
+      22.671769607088276,
+      23.37509475111153
+    ],
+    "eigs_at_4p_indices": [],
+    "kappa_unique_values": [
+      -3,
+      -1,
+      1,
+      3
+    ],
+    "kappa_rayleigh_weighted": -1.7598688106868453e-16,
+    "backend": "ProcessPool W=82",
+    "rho_min2": "26000/539",
+    "room_hyp_24": "3072/55"
+  },
+  "CR_cross_ratio_note": {
+    "status": "not_Aut_orbits_of_C",
+    "reason": "PGL cross-ratio orbits do not preserve C-edge labels: each CR orbit contains both \u03ba=+1 and \u03ba=\u22121 at p=5. Only a small subset of PGL matrices preserve C. Use class_key / true Aut(C) orbits, not raw CR.",
+    "p5_CR_orbits": 4,
+    "p5_class_key_orbits": 37,
+    "p5_CR_nullity": 0,
+    "p5_class_key_nullity": 1
+  }
+}

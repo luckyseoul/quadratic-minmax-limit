@@ -1,0 +1,166 @@
+{
+  "prop": "15.140",
+  "title": "Prop 15.140: Max+-free weights |G|/|Stab|; character-sum Q_j; p=7 residual \u2211c_j\u00b2=\u03b4\u00b2\u2264room; 7/8 types Max+-free",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. At p=7, orbit\u2013stabiliser weights + character-sum Q_j recover \u03b4\u00b2_pair\u2264room. Seven of eight H_+ types Max+-free; one size-1176 still needs a Max+-free rep for fully census-free c_j. N_ED4_SUF OPEN for general p. L OPEN.",
+  "proved": {
+    "weights_orbit_stabiliser_p7": true,
+    "character_sum_residual_p7": true,
+    "geo_seven_of_eight_p7": true,
+    "residual_for_all_p_ge_5": false,
+    "p7_all_eight_maxplus_free": false,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  },
+  "algebra": {
+    "weights": {
+      "proved": true,
+      "theorem": "|O_t|=|G|/|Stab^\u221e(y_t)|; |H_+|=\u2211|O_t|=5726; weights (28+42+147+294+4\u00d7588)/2863=1 at p=7.",
+      "G_order": 2352,
+      "H_plus": 5726,
+      "sizes": [
+        84,
+        56,
+        294,
+        588,
+        1176,
+        1176,
+        1176,
+        1176
+      ],
+      "stabs": [
+        28,
+        42,
+        8,
+        4,
+        2,
+        2,
+        2,
+        2
+      ],
+      "weight_sum": "1",
+      "stab_formula_ok": true
+    },
+    "residual": {
+      "proved": true,
+      "theorem": "c_j=\u2211_t w_t Q_j(y_t) with Q_j character sums on v_j\u2208E_{4p}^G; at p=7, \u2211c_j\u00b2=\u03b4\u00b2_pair=19180800/1840091\u2264room=3072/55 (certified vectorized Q on all 8 orbit reps).",
+      "delta2": "19180800/1840091",
+      "room": "3072/55",
+      "delta2_le_room": true,
+      "matches_pair_avg": true,
+      "nu": 7
+    },
+    "geo": {
+      "proved": true,
+      "theorem": "7 of 8 H_+ orbits have Max+-free geometric reps (affine + double Seidel\u2013norm-circle); one size-1176 OPEN.",
+      "found_sizes": {
+        "56": 56,
+        "84": 84,
+        "588": 588,
+        "1176": 1176,
+        "294": 294
+      },
+      "n_free": 7,
+      "n_orbits": 8,
+      "missing": "one size-1176 orbit Max+-free construction"
+    },
+    "open": {
+      "residual_closed_general": false,
+      "residual_form_p7_certified": true,
+      "p7_delta2_le_room": true,
+      "p7_all_types_maxplus_free": false,
+      "p7_n_free_types": 7,
+      "open": "Max+-free y for remaining size-1176 orbit at p=7; then full Max+-free c_j; general p\u22655 weights+Q_j. No soft-close L.",
+      "dead": [
+        "class_key thrash (F19)",
+        "soft-close L from p=7 form alone (F3)",
+        "claim all 8 types Max+-free without construction"
+      ]
+    }
+  },
+  "closed_forms": {
+    "weight": "w_t=|O_t|/|H_+|, |O_t|=|G|/|Stab|",
+    "H_plus": 5726,
+    "G_order": 2352,
+    "delta2": "19180800/1840091",
+    "room_p7": "3072/55",
+    "nu_G": {
+      "3": 0,
+      "5": 2,
+      "7": 7
+    },
+    "orbit_table": [
+      {
+        "size": 84,
+        "stab": 28,
+        "weight": "42/2863",
+        "geo": "affine_4AP / hs",
+        "maxplus_free": true
+      },
+      {
+        "size": 56,
+        "stab": 42,
+        "weight": "28/2863",
+        "geo": "affine_non4AP e.g. QR-half {0,1,2,4}",
+        "maxplus_free": true
+      },
+      {
+        "size": 294,
+        "stab": 8,
+        "weight": "147/2863",
+        "geo": "ync \u2299 nc(C_ync)",
+        "maxplus_free": true
+      },
+      {
+        "size": 588,
+        "stab": 4,
+        "weight": "294/2863",
+        "geo": "hs \u2299 nc(C_hs) (15.138)",
+        "maxplus_free": true
+      },
+      {
+        "size": 1176,
+        "stab": 2,
+        "weight": "588/2863",
+        "geo": "y56 \u2299 nc(C_y56)",
+        "maxplus_free": true,
+        "mult_note": "one of four size-1176 orbits"
+      },
+      {
+        "size": 1176,
+        "stab": 2,
+        "weight": "588/2863",
+        "geo": "ync \u2299 nc (t=7,c=2 class)",
+        "maxplus_free": true
+      },
+      {
+        "size": 1176,
+        "stab": 2,
+        "weight": "588/2863",
+        "geo": "ync \u2299 nc (t=7,c=4 class)",
+        "maxplus_free": true
+      },
+      {
+        "size": 1176,
+        "stab": 2,
+        "weight": "588/2863",
+        "geo": "OPEN Max+-free construction",
+        "maxplus_free": false
+      }
+    ]
+  },
+  "status": {
+    "p5_residual_maxplus_free": true,
+    "p7_residual_form_certified": true,
+    "p7_delta2_le_room": true,
+    "p7_all_types_maxplus_free": false,
+    "general_residual": false
+  },
+  "open_attack": "Max+-free construction for remaining size-1176 orbit; then Max+-free c_j at p=7; general p\u22655.",
+  "backend": "CPU vectorized Q_j + G-orbits; GPU unused (F20)",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "residual_closed": false,
+  "scratch_evidence": "/tmp/grok-goal-9ac8197fcb0f/implementer/p7_Qj_weights.json"
+}

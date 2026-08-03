@@ -1,0 +1,412 @@
+{
+  "prop": "15.121",
+  "title": "Spectral residual dictionary: ED4/E[W\u00b2]/FFT/\u03a6; Frobenius form of Path C residual",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close: \u03b4\u00b2\u2264room_hyp/24 not proved for general p\u22655. Residual is Frobenius budget on FFT|1\u22a5 / \u03a6 variance; independent tight UB still OPEN.",
+  "proved": {
+    "ew2_flat_phi": true,
+    "frobenius_residual": true,
+    "equivalence": true,
+    "maj_H_16N_too_weak": true,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  },
+  "algebra": {
+    "ew2_flat_phi": {
+      "proved": true,
+      "theorem": "EW2_flat=(n\u00b2+T\u00b2/m)/4 with T=n(n\u22122), m=dim Z; matches ED4_flat dictionary and Prop 15.119 closed form.",
+      "by_p": {
+        "3": {
+          "EW2_flat_from_phi": "345",
+          "EW2_flat_ref": "345",
+          "from_ED4_flat": "345",
+          "T2_over_m_eq_ED4flat_minus_4n2": true,
+          "match": true
+        },
+        "5": {
+          "EW2_flat_from_phi": "8333/5",
+          "EW2_flat_ref": "8333/5",
+          "from_ED4_flat": "8333/5",
+          "T2_over_m_eq_ED4flat_minus_4n2": true,
+          "match": true
+        },
+        "7": {
+          "EW2_flat_from_phi": "64475/11",
+          "EW2_flat_ref": "64475/11",
+          "from_ED4_flat": "64475/11",
+          "T2_over_m_eq_ED4flat_minus_4n2": true,
+          "match": true
+        },
+        "11": {
+          "EW2_flat_from_phi": "986309/29",
+          "EW2_flat_ref": "986309/29",
+          "from_ED4_flat": "986309/29",
+          "T2_over_m_eq_ED4flat_minus_4n2": true,
+          "match": true
+        },
+        "13": {
+          "EW2_flat_from_phi": "2695265/41",
+          "EW2_flat_ref": "2695265/41",
+          "from_ED4_flat": "2695265/41",
+          "T2_over_m_eq_ED4flat_minus_4n2": true,
+          "match": true
+        },
+        "17": {
+          "EW2_flat_from_phi": "13519655/71",
+          "EW2_flat_ref": "13519655/71",
+          "from_ED4_flat": "13519655/71",
+          "T2_over_m_eq_ED4flat_minus_4n2": true,
+          "match": true
+        },
+        "19": {
+          "EW2_flat_from_phi": "26373329/89",
+          "EW2_flat_ref": "26373329/89",
+          "from_ED4_flat": "26373329/89",
+          "T2_over_m_eq_ED4flat_minus_4n2": true,
+          "match": true
+        },
+        "23": {
+          "EW2_flat_from_phi": "83077235/131",
+          "EW2_flat_ref": "83077235/131",
+          "from_ED4_flat": "83077235/131",
+          "T2_over_m_eq_ED4flat_minus_4n2": true,
+          "match": true
+        },
+        "29": {
+          "EW2_flat_from_phi": "334100969/209",
+          "EW2_flat_ref": "334100969/209",
+          "from_ED4_flat": "334100969/209",
+          "T2_over_m_eq_ED4flat_minus_4n2": true,
+          "match": true
+        },
+        "31": {
+          "EW2_flat_from_phi": "498584879/239",
+          "EW2_flat_ref": "498584879/239",
+          "from_ED4_flat": "498584879/239",
+          "T2_over_m_eq_ED4flat_minus_4n2": true,
+          "match": true
+        },
+        "37": {
+          "EW2_flat_from_phi": "1441931165/341",
+          "EW2_flat_ref": "1441931165/341",
+          "from_ED4_flat": "1441931165/341",
+          "T2_over_m_eq_ED4flat_minus_4n2": true,
+          "match": true
+        },
+        "41": {
+          "EW2_flat_from_phi": "2669989139/419",
+          "EW2_flat_ref": "2669989139/419",
+          "from_ED4_flat": "2669989139/419",
+          "T2_over_m_eq_ED4flat_minus_4n2": true,
+          "match": true
+        },
+        "43": {
+          "EW2_flat_from_phi": "3553414325/461",
+          "EW2_flat_ref": "3553414325/461",
+          "from_ED4_flat": "3553414325/461",
+          "T2_over_m_eq_ED4flat_minus_4n2": true,
+          "match": true
+        },
+        "47": {
+          "EW2_flat_from_phi": "6059951495/551",
+          "EW2_flat_ref": "6059951495/551",
+          "from_ED4_flat": "6059951495/551",
+          "T2_over_m_eq_ED4flat_minus_4n2": true,
+          "match": true
+        },
+        "53": {
+          "EW2_flat_from_phi": "12462025445/701",
+          "EW2_flat_ref": "12462025445/701",
+          "from_ED4_flat": "12462025445/701",
+          "T2_over_m_eq_ED4flat_minus_4n2": true,
+          "match": true
+        },
+        "59": {
+          "EW2_flat_from_phi": "23718215789/869",
+          "EW2_flat_ref": "23718215789/869",
+          "from_ED4_flat": "23718215789/869",
+          "T2_over_m_eq_ED4flat_minus_4n2": true,
+          "match": true
+        }
+      }
+    },
+    "frobenius_residual": {
+      "proved": true,
+      "theorem": "Residual \u21d4 \u2016FFT|_{1^\u22a5}\u2016_F\u00b2 \u2264 N\u00b2(EW2_bud\u2212d\u00b2) with EW2_bud\u2212d\u00b2 = EW2_flat\u2212d\u00b2+room_hyp/4 Max+-free.",
+      "by_p": {
+        "3": {
+          "FFT_1perp_flat_over_N2": "320",
+          "FFT_1perp_bud_over_N2": "320",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "5": {
+          "FFT_1perp_flat_over_N2": "7488/5",
+          "FFT_1perp_bud_over_N2": "21312/13",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "7": {
+          "FFT_1perp_flat_over_N2": "57600/11",
+          "FFT_1perp_bud_over_N2": "306432/55",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "11": {
+          "FFT_1perp_flat_over_N2": "878400/29",
+          "FFT_1perp_bud_over_N2": "55195200/1769",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "13": {
+          "FFT_1perp_flat_over_N2": "2399040/41",
+          "FFT_1perp_bud_over_N2": "41686848/697",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "17": {
+          "FFT_1perp_flat_over_N2": "12026880/71",
+          "FFT_1perp_bud_over_N2": "353424384/2059",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "19": {
+          "FFT_1perp_flat_over_N2": "23457600/89",
+          "FFT_1perp_bud_over_N2": "4291444800/16109",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "23": {
+          "FFT_1perp_flat_over_N2": "73877760/131",
+          "FFT_1perp_bud_over_N2": "3944514816/6943",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "29": {
+          "FFT_1perp_flat_over_N2": "297057600/209",
+          "FFT_1perp_bud_over_N2": "125648308800/87989",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "31": {
+          "FFT_1perp_flat_over_N2": "443289600/239",
+          "FFT_1perp_bud_over_N2": "214099660800/114959",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "37": {
+          "FFT_1perp_flat_over_N2": "1281925440/341",
+          "FFT_1perp_bud_over_N2": "176132812608/46717",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "41": {
+          "FFT_1perp_flat_over_N2": "2373638400/419",
+          "FFT_1perp_bud_over_N2": "2000948947200/352379",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "43": {
+          "FFT_1perp_flat_over_N2": "3158971200/461",
+          "FFT_1perp_bud_over_N2": "585666430272/85285",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "47": {
+          "FFT_1perp_flat_over_N2": "5387166720/551",
+          "FFT_1perp_bud_over_N2": "1192708961280/121771",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "53": {
+          "FFT_1perp_flat_over_N2": "11078233920/701",
+          "FFT_1perp_bud_over_N2": "3117399255360/196981",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "59": {
+          "FFT_1perp_flat_over_N2": "21084206400/869",
+          "FFT_1perp_bud_over_N2": "36749650651200/1512929",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        }
+      }
+    },
+    "equivalence": {
+      "proved": true,
+      "theorem": "\u03b4\u00b2\u2264room_hyp/24 \u21d4 orth\u2264room_hyp \u21d4 \u2211(\u03bb_\u03b1\u2212\u03bc\u0304)\u00b2\u2264room_hyp \u21d4 \u2016FFT|_{1^\u22a5}\u2016_F\u00b2\u2264N\u00b2(EW2_bud\u2212d\u00b2) \u21d4 ED4\u2264ED4_bud \u21d4 E[W\u00b2]\u2264EW2_bud. 16N \u21d4 \u2016FFT|_{1^\u22a5}\u2016_op\u22648N (op-norm, not Frobenius)."
+    },
+    "maj_weak": {
+      "proved": true,
+      "theorem": "\u2016A\u2016_F\u00b2\u2264\u2016A\u2016_op Tr(A) under H or 16N op bounds yields ED4 UBs strictly larger than ED4_bud for all primes p\u22655.",
+      "by_p": {
+        "5": {
+          "ED4_ub_from_H_op": "11152",
+          "ED4_ub_from_16N_op": "12688",
+          "ED4_bud": "120400/13",
+          "H_op_too_weak": true,
+          "sixteen_N_op_too_weak": true
+        },
+        "7": {
+          "ED4_ub_from_H_op": "39952",
+          "ED4_ub_from_16N_op": "48400",
+          "ED4_bud": "1775728/55",
+          "H_op_too_weak": true,
+          "sixteen_N_op_too_weak": true
+        },
+        "11": {
+          "ED4_ub_from_H_op": "228496",
+          "ED4_ub_from_16N_op": "293776",
+          "ED4_bud": "326099984/1769",
+          "H_op_too_weak": true,
+          "sixteen_N_op_too_weak": true
+        },
+        "13": {
+          "ED4_ub_from_H_op": "438160",
+          "ED4_ub_from_16N_op": "572560",
+          "ED4_bud": "247320592/697",
+          "H_op_too_weak": true,
+          "sixteen_N_op_too_weak": true
+        },
+        "17": {
+          "ED4_ub_from_H_op": "1253392",
+          "ED4_ub_from_16N_op": "1672720",
+          "ED4_bud": "2106345136/2059",
+          "H_op_too_weak": true,
+          "sixteen_N_op_too_weak": true
+        },
+        "19": {
+          "ED4_ub_from_H_op": "1941136",
+          "ED4_ub_from_16N_op": "2609296",
+          "ED4_bud": "25609730384/16109",
+          "H_op_too_weak": true,
+          "sixteen_N_op_too_weak": true
+        },
+        "23": {
+          "ED4_ub_from_H_op": "4122640",
+          "ED4_ub_from_16N_op": "5601040",
+          "ED4_bud": "23579214064/6943",
+          "H_op_too_weak": true,
+          "sixteen_N_op_too_weak": true
+        },
+        "29": {
+          "ED4_ub_from_H_op": "10308496",
+          "ED4_ub_from_16N_op": "14152336",
+          "ED4_bud": "752117368784/87989",
+          "H_op_too_weak": true,
+          "sixteen_N_op_too_weak": true
+        },
+        "31": {
+          "ED4_ub_from_H_op": "13424656",
+          "ED4_ub_from_16N_op": "18478096",
+          "ED4_bud": "1281951110384/114959",
+          "H_op_too_weak": true,
+          "sixteen_N_op_too_weak": true
+        },
+        "37": {
+          "ED4_ub_from_H_op": "27075472",
+          "ED4_ub_from_16N_op": "37494160",
+          "ED4_bud": "1055263799632/46717",
+          "H_op_too_weak": true,
+          "sixteen_N_op_too_weak": true
+        },
+        "41": {
+          "ED4_ub_from_H_op": "40696336",
+          "ED4_ub_from_16N_op": "56528656",
+          "ED4_bud": "11991491332784/352379",
+          "H_op_too_weak": true,
+          "sixteen_N_op_too_weak": true
+        },
+        "43": {
+          "ED4_ub_from_H_op": "49171600",
+          "ED4_ub_from_16N_op": "68390800",
+          "ED4_bud": "3510217371088/85285",
+          "H_op_too_weak": true,
+          "sixteen_N_op_too_weak": true
+        },
+        "47": {
+          "ED4_ub_from_H_op": "70020112",
+          "ED4_ub_from_16N_op": "97611280",
+          "ED4_bud": "7149802809520/121771",
+          "H_op_too_weak": true,
+          "sixteen_N_op_too_weak": true
+        },
+        "53": {
+          "ED4_ub_from_H_op": "112904080",
+          "ED4_ub_from_16N_op": "157832080",
+          "ED4_bud": "18691123717840/196981",
+          "H_op_too_weak": true,
+          "sixteen_N_op_too_weak": true
+        },
+        "59": {
+          "ED4_ub_from_H_op": "172997776",
+          "ED4_ub_from_16N_op": "242375056",
+          "ED4_bud": "220371568144784/1512929",
+          "H_op_too_weak": true,
+          "sixteen_N_op_too_weak": true
+        }
+      }
+    }
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "ED4": 1680.0,
+      "ED4_from_M_Frob": 1680.0,
+      "ED4_match": true,
+      "EW2_from_FFT_Frob": 345.0,
+      "EW2_from_ED4": 345.0,
+      "EW2_match": true,
+      "FFT_rayleigh_ones": 60.0,
+      "FFT_rayleigh_eq_dN": true,
+      "FFT_1perp_F2": 46080.0,
+      "FFT_1perp_pred": 46080.0,
+      "FFT_1perp_match": true,
+      "delta2": "0",
+      "EW2_flat": 345.0,
+      "residual_le_hyp": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "ED4": 9261.538461538461,
+      "ED4_from_M_Frob": 9261.538461538461,
+      "ED4_match": true,
+      "EW2_from_FFT_Frob": 1808.3846153846155,
+      "EW2_from_ED4": 1808.3846153846152,
+      "EW2_match": true,
+      "FFT_rayleigh_ones": 3380.0,
+      "FFT_rayleigh_eq_dN": true,
+      "FFT_1perp_F2": 110822400.0,
+      "FFT_1perp_pred": 110822399.99999999,
+      "FFT_1perp_match": true,
+      "delta2": "389734583137831/16492674416640",
+      "EW2_flat": 1666.6,
+      "residual_le_hyp": true
+    }
+  },
+  "status": {
+    "spectral_ed4_proved": true,
+    "ew2_fft_proved": true,
+    "ew2_flat_phi_proved": true,
+    "frobenius_residual_proved": true,
+    "op_vs_frob_distinguished": true,
+    "H_16N_majorization_closes_ed4_bud": false,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "open_residual": "Prove \u03b4\u00b2\u2264room_hyp/24 \u21d4 \u2211(\u03bb_\u03b1\u2212\u03bc\u0304)\u00b2\u2264room_hyp \u21d4 \u2016FFT|_{1^\u22a5}\u2016_F\u00b2\u2264N\u00b2(EW2_bud\u2212d\u00b2) for all primes p\u22655. Have full spectral dictionary; need weight enumerator / Gauss sums / tighter \u03a6 eigenvalue control. F19: no class_key."
+  },
+  "closed_forms": {
+    "EW2_flat": "(n^2 + T^2/m)/4 with T=n(n-2), m=dim Z",
+    "ED4": "4n^2 + 4 N^{-2} ||FFT|_{1^perp}||_F^2",
+    "E[W^2]": "||FFT||_F^2 / N^2 = d^2 + N^{-2} ||FFT|_{1^perp}||_F^2",
+    "orth": "sum (lambda_alpha - mu_bar)^2 = 24 delta^2",
+    "residual_FFT": "||FFT|_{1^perp}||_F^2 <= N^2 (EW2_bud - d^2)",
+    "sixteen_N": "||FFT|_{1^perp}||_op <= 8N"
+  },
+  "backend": "CPU Fraction algebra + Max+ cert p=3,5; GPU unused (F20)",
+  "F19": "no class_key"
+}

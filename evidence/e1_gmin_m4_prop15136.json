@@ -1,0 +1,178 @@
+{
+  "prop": "15.136",
+  "title": "Prop 15.136: Max+-free flat on G-orbits; m4=flat+\u03b4; geom type insufficient; c_j character-sum form; residual OPEN",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Max+-free flat_part on G-orbits for general p (resolvent of T\u03ba). Residual reduced to free c_j on E_4p^G only. Geometric types do not determine m4. Full Max+ Gauss for c_j still OPEN. N_ED4_SUF OPEN. L OPEN.",
+  "proved": {
+    "flat_maxplus_free_on_G": true,
+    "m4_equals_flat_plus_delta": true,
+    "geom_type_insufficient_for_m4": true,
+    "char_sum_form_of_cj": true,
+    "partial_inf_m4_p5_census": true,
+    "gauss_cj_for_all_p": false,
+    "delta_le_rho_min_for_all_p": false,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  },
+  "algebra": {
+    "flat": {
+      "proved": true,
+      "theorem": "flat=\u03ba/p\u00b2+A\u207a(T\u03ba/p\u00b2) on G-orbits is Max+-free; \u2016\u03c1_min\u2016\u00b2=\u03c1_min\u00b2, \u2016flat\u2016\u00b2=m4f_flat for all primes p\u22653 (p\u00b2\u22605 for \u03c1_min den).",
+      "by_p": {
+        "3": {
+          "n_orbits": 9,
+          "nu": 0,
+          "rho_min2": "200/9",
+          "m4f_flat": "110/3",
+          "rho_min2_match": true,
+          "construction": "rho_min = A^+ (T kappa / p^2) on G-orbit space",
+          "maxplus_free": true
+        },
+        "5": {
+          "n_orbits": 42,
+          "nu": 2,
+          "rho_min2": "728/25",
+          "m4f_flat": "598/5",
+          "rho_min2_match": true,
+          "construction": "rho_min = A^+ (T kappa / p^2) on G-orbit space",
+          "maxplus_free": true
+        },
+        "7": {
+          "n_orbits": 128,
+          "nu": 7,
+          "rho_min2": "26000/539",
+          "m4f_flat": "4100/11",
+          "rho_min2_match": true,
+          "construction": "rho_min = A^+ (T kappa / p^2) on G-orbit space",
+          "maxplus_free": true
+        },
+        "11": {
+          "group_order": 14520,
+          "rho_min2": "378200/3509",
+          "m4f_flat": "57950/29",
+          "construction_available": true,
+          "note": "G-quotient resolvent Max+-free for any prime p\u22653"
+        },
+        "13": {
+          "group_order": 28392,
+          "rho_min2": "1023400/6929",
+          "m4f_flat": "155890/41",
+          "construction_available": true,
+          "note": "G-quotient resolvent Max+-free for any prime p\u22653"
+        },
+        "17": {
+          "group_order": 83232,
+          "rho_min2": "5080800/20519",
+          "m4f_flat": "769080/71",
+          "construction_available": true,
+          "note": "G-quotient resolvent Max+-free for any prime p\u22653"
+        },
+        "19": {
+          "group_order": 129960,
+          "rho_min2": "9882600/32129",
+          "m4f_flat": "1493250/89",
+          "construction_available": true,
+          "note": "G-quotient resolvent Max+-free for any prime p\u22653"
+        }
+      }
+    },
+    "decomposition": {
+      "proved": true,
+      "theorem": "m\u2084=flat+\u03b4 with \u03b4\u2208E_{4p}^{G}; \u03b4\u00b2=\u2211c_j\u00b2 residual channel; flat \u22a5 E_{4p}^{G} (cert leak~0 at p=5,7).",
+      "by_p": {
+        "3": {
+          "delta2": "0",
+          "nu": 0
+        },
+        "5": {
+          "delta2": "1536/65",
+          "equals_room": true,
+          "nu": 2
+        },
+        "7": {
+          "delta2": "19180800/1840091",
+          "equals_pair_avg_15_131": true,
+          "nu": 7,
+          "delta2_le_rho_min": true
+        }
+      }
+    },
+    "geom": {
+      "proved": true,
+      "theorem": "Label (1_\u221e, \u03ba, dim_{F_p} affspan) is G-invariant but does not determine m\u2084 (multiple m\u2084 values per type at p=5,7).",
+      "p5": {
+        "n_geom_types": 11,
+        "types_with_unique_m4": 4,
+        "example_split": "(has_inf=0,\u03ba=-3,fp_dim=2): 6 orbits, 4 m4 values"
+      },
+      "p7": {
+        "n_geom_types": 11,
+        "types_with_unique_m4": 2
+      }
+    },
+    "char_sum_cj": {
+      "proved_structure": true,
+      "theorem": "c_j=\u27e8m\u2084,v_j\u27e9=N\u207b\u00b9\u2211_y Q_j(y) with v_j Max+-free ONB of E_{4p}^{G}; residual \u21d4 \u2211c_j\u00b2\u2264room. Character sum over full Max+ required.",
+      "reduction": "Thm A supplies flat Max+-free for all p; only the \u03bd_G free coefficients c_j remain (\u03bd_G=0,2,7 at p=3,5,7).",
+      "open": "Closed Gauss/character-sum evaluation of each c_j for general p\u22655"
+    },
+    "partial_p5": {
+      "proved_census": true,
+      "proved_general": false,
+      "theorem": "At p=5, some \u221e-types have unique m\u2084: \u22121/5 and \u221221/65 (Fraction). No general closed form for all G-orbits proved.",
+      "values": {
+        "inf_k-3_fp1": "-1/5",
+        "inf_k-3_fp2": "-21/65"
+      },
+      "checks": {
+        "neg_1_5": true,
+        "neg_21_65": true,
+        "den_factors": "65=5*13, 13=p\u00b2-12? p=5 p\u00b2-5=20; den uses p and design dens"
+      }
+    },
+    "open": {
+      "residual_closed_general": false,
+      "open": "Character-sum evaluation of c_j=\u27e8m\u2084,v_j\u27e9 over full Max+ (or closed m\u2084 on every G-orbit) for all primes p\u22655, proving \u2211c_j\u00b2\u2264room_hyp/24.",
+      "available_maxplus_free": [
+        "G-orbit partition and T-quotient",
+        "flat=\u03ba/p\u00b2+\u03c1_min on orbits (Thm A)",
+        "ONB of E_4p^G and residual projector",
+        "halfspace f_hs (15.135)"
+      ],
+      "dead": [
+        "G\u00b7hs as m\u2084 proxy (15.135)",
+        "coarse geometric type \u2192 m\u2084 (Thm C)",
+        "order-3 moments pinning c_j (15.135.D)",
+        "class_key thrash (F19)",
+        "soft-close (F3)"
+      ]
+    }
+  },
+  "closed_forms": {
+    "flat": "kappa/p^2 + A^+(T kappa / p^2) on G-orbits",
+    "delta2": "sum_j c_j^2 = ||m4||^2 - m4f_flat",
+    "residual_iff": "sum c_j^2 <= room_hyp/24",
+    "rho_min2": "5 n (p^2-1)(p^2+3)/(6 p^2 (p^2-5))",
+    "m4f_flat": "closed rational (15.119)",
+    "p5_inf_m4_examples": {
+      "inf_k-3_fp1": "-1/5",
+      "inf_k-3_fp2": "-21/65"
+    },
+    "nu_G": {
+      "3": 0,
+      "5": 2,
+      "7": 7
+    }
+  },
+  "status": {
+    "flat_for_general_p": true,
+    "free_coefficients_remain": true,
+    "general_residual": false
+  },
+  "open_attack": "Gauss/character-sum for c_j=N^{-1} sum_y Q_j(y) over full Max+, with Q_j built from Max+-free v_j \u2208 E_4p^G.",
+  "backend": "CPU G-quotient resolvent (Max+-free flat); Max+ only to certify delta2 match; GPU unused (F20); F19 no class_key",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "residual_closed": false
+}

@@ -1,0 +1,204 @@
+{
+  "prop": "15.109",
+  "backend": "CPU Fraction + Max+ cert + class_key T; GPU unused (F20)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "kappa_bound_proved_for_all_p": false,
+  "sum_rho2_le_T_proved_for_all_p": false,
+  "kappa_B2_identity": {
+    "proved": true,
+    "theorem": "For zero-diag symmetric B: \u2211_S \u03ba_B(S)\u00b2 = Tr(B\u2074)/4 + (Tr B\u00b2)\u00b2/8 + (1/2)\u2211 B_ij\u2074 \u2212 \u2211_i (B\u00b2_ii)\u00b2.",
+    "max_abs_err": 9.094947017729282e-12,
+    "by_n": {
+      "8": {
+        "max_abs_err": 5.115907697472721e-13,
+        "mean_err": 6.033692064496184e-14
+      },
+      "10": {
+        "max_abs_err": 1.1368683772161603e-12,
+        "mean_err": 2.478609909909816e-13
+      },
+      "12": {
+        "max_abs_err": 6.366462912410498e-12,
+        "mean_err": 1.1905735656606946e-12
+      },
+      "14": {
+        "max_abs_err": 9.094947017729282e-12,
+        "mean_err": 1.8748854320923177e-12
+      }
+    }
+  },
+  "pf_rank_obstruction": {
+    "proved": true,
+    "theorem": "For primes p\u22655: PopP has rank binom(d\u22121,2)=1+m (full bulk), nonnegative entries (PF ceiling \u03bb\u2264d/N), bulk sum S=(d\u22121)\u00b7(d/N). mult\u2265d\u22121 at the PF ceiling would force m\u2212(d\u22121)>0 bulk zeros, contradicting full bulk rank. Hence \u03bb\u2082(PopP)<d/N strictly.",
+    "by_p": {
+      "3": {
+        "d": 5,
+        "m_bulk": 5,
+        "m1": 4,
+        "rank_PopP": 6,
+        "bulk_full_rank": true,
+        "remaining_after_m1_at_ceiling": 1,
+        "strict_lambda2_lt_d_over_N": true
+      },
+      "5": {
+        "d": 13,
+        "m_bulk": 65,
+        "m1": 12,
+        "rank_PopP": 66,
+        "bulk_full_rank": true,
+        "remaining_after_m1_at_ceiling": 53,
+        "strict_lambda2_lt_d_over_N": true
+      },
+      "7": {
+        "d": 25,
+        "m_bulk": 275,
+        "m1": 24,
+        "rank_PopP": 276,
+        "bulk_full_rank": true,
+        "remaining_after_m1_at_ceiling": 251,
+        "strict_lambda2_lt_d_over_N": true
+      },
+      "11": {
+        "d": 61,
+        "m_bulk": 1769,
+        "m1": 60,
+        "rank_PopP": 1770,
+        "bulk_full_rank": true,
+        "remaining_after_m1_at_ceiling": 1709,
+        "strict_lambda2_lt_d_over_N": true
+      },
+      "13": {
+        "d": 85,
+        "m_bulk": 3485,
+        "m1": 84,
+        "rank_PopP": 3486,
+        "bulk_full_rank": true,
+        "remaining_after_m1_at_ceiling": 3401,
+        "strict_lambda2_lt_d_over_N": true
+      },
+      "17": {
+        "d": 145,
+        "m_bulk": 10295,
+        "m1": 144,
+        "rank_PopP": 10296,
+        "bulk_full_rank": true,
+        "remaining_after_m1_at_ceiling": 10151,
+        "strict_lambda2_lt_d_over_N": true
+      },
+      "19": {
+        "d": 181,
+        "m_bulk": 16109,
+        "m1": 180,
+        "rank_PopP": 16110,
+        "bulk_full_rank": true,
+        "remaining_after_m1_at_ceiling": 15929,
+        "strict_lambda2_lt_d_over_N": true
+      },
+      "23": {
+        "d": 265,
+        "m_bulk": 34715,
+        "m1": 264,
+        "rank_PopP": 34716,
+        "bulk_full_rank": true,
+        "remaining_after_m1_at_ceiling": 34451,
+        "strict_lambda2_lt_d_over_N": true
+      },
+      "29": {
+        "d": 421,
+        "m_bulk": 87989,
+        "m1": 420,
+        "rank_PopP": 87990,
+        "bulk_full_rank": true,
+        "remaining_after_m1_at_ceiling": 87569,
+        "strict_lambda2_lt_d_over_N": true
+      },
+      "31": {
+        "d": 481,
+        "m_bulk": 114959,
+        "m1": 480,
+        "rank_PopP": 114960,
+        "bulk_full_rank": true,
+        "remaining_after_m1_at_ceiling": 114479,
+        "strict_lambda2_lt_d_over_N": true
+      },
+      "37": {
+        "d": 685,
+        "m_bulk": 233585,
+        "m1": 684,
+        "rank_PopP": 233586,
+        "bulk_full_rank": true,
+        "remaining_after_m1_at_ceiling": 232901,
+        "strict_lambda2_lt_d_over_N": true
+      }
+    }
+  },
+  "sixteen_N_from_m4": {
+    "proved": true,
+    "theorem": "From Theorem A: 16N \u21d4 \u03bb_max(\u03a6)\u226416 \u21d4 max_{\u2016B\u2016=1 in Z} \u27e8m\u2084,\u03ba_B\u27e9 \u2264 5/4. Path C residual orth\u2264room_hyp still required for Thm A* of 15.108 unless this max is bounded \u22645/4 directly."
+  },
+  "cert_phi_m4_identity": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "identity_max_err": 1.5987211554602254e-14,
+      "identity_holds": true,
+      "lambda_max_Phi": 15.999999999999996,
+      "le_16": true,
+      "max_m4_kB_implied": 1.2499999999999996,
+      "le_5_over_4": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "identity_max_err": 5.329070518200751e-15,
+      "identity_holds": true,
+      "lambda_max_Phi": 13.538460867237832,
+      "le_16": true,
+      "max_m4_kB_implied": 0.942307608404729,
+      "le_5_over_4": true
+    }
+  },
+  "cert_aut_delta_p5": {
+    "p": 5,
+    "n_orbits": 37,
+    "nullity_Aut_E4p": 1,
+    "rho_min2": 29.119999999999997,
+    "rho_min2_closed": 29.12,
+    "rho_min2_match": true,
+    "c": 4.861148962001596,
+    "delta2": 23.630769230769207,
+    "c_squared": 23.630769230769193,
+    "budget_room_hyp_24": 23.630769230769232,
+    "equality_delta2_budget": true,
+    "sum_rho2": 52.75076923076921,
+    "T_rho": 52.75076923076923,
+    "sum_rho2_eq_T": true
+  },
+  "general_status": {
+    "phi_m4_identity_proved": true,
+    "kappa_B2_identity_proved": true,
+    "aut_reduction_proved": true,
+    "pf_rank_obstruction_proved": true,
+    "aut_delta_equality_certified_p5": true,
+    "sum_rho2_le_T_for_all_p": false,
+    "orth_le_room_hyp_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "kappa_bound_proved_for_all_p": false,
+    "open_residual": "Prove c\u00b2\u2264room_hyp/24 for Max+ scalar c on E_{4p}^{Aut} (or dim E_{4p}^{Aut}=0) for all primes p\u22655. Equivalently \u2211\u03c1\u00b2\u2264T_\u03c1(p) \u21d4 orth\u2264room_hyp. Then Thm A* \u21d2 16N \u21d2 bi-tight.",
+    "attack": "Character-sum formula for the Aut-invariant kernel coefficient c; weight enumerator of Max+ dots; or pin c by a Max+-specific constraint on the affine line \u03c1_min+\u211d v_0."
+  },
+  "attack_surface": "Prove c\u00b2\u2264room_hyp/24 for Max+ scalar c on E_{4p}^{Aut} (or dim E_{4p}^{Aut}=0) for all primes p\u22655. Equivalently \u2211\u03c1\u00b2\u2264T_\u03c1(p) \u21d4 orth\u2264room_hyp. Then Thm A* \u21d2 16N \u21d2 bi-tight.",
+  "verdict": "Proved: \u03a6\u2013m4 identity on Z; \u2211\u03ba_B\u00b2 closed form; Aut-invariant reduction of \u03b4; PF+rank \u21d2 \u03bb\u2082(PopP)<d/N for p\u22655; residual is single scalar c\u00b2 when dim E_{4p}^{Aut}\u22641. Certified p=5 equality \u03b4=c v_0 with c\u00b2=room_hyp/24. OPEN: c\u00b2\u2264room_hyp/24 for all p\u22655. L OPEN.",
+  "settlement_note": "No soft-close. Primary residual still \u2211\u03c1\u00b2\u2264T_\u03c1 for general p\u22655; reduced to Aut-invariant kernel coefficient c.",
+  "proved": {
+    "phi_m4_identity": true,
+    "kappa_B2_identity": true,
+    "aut_reduction": true,
+    "pf_rank_obstruction": true,
+    "sum_rho2_le_T_for_all_p": false,
+    "sixteen_N_for_all_p": false,
+    "kappa_bound_for_all_p": false
+  }
+}

@@ -1,0 +1,489 @@
+{
+  "prop": "15.152",
+  "title": "Prop 15.152: free-param t-structure; p=5 closed t3(\u03b1); p=7 multi-orbit (corrects 15.151.B); residual\u2261R4; L OPEN",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Free param t\u2083 determines t-vector on regular sets. p=5: closed t\u2083(\u03b1)=3\u03b1\u00b2\u221221\u03b1+40 (\u03b1\u22654). p=7: multi-type mid-weights \u2014 pure t_e(k) dead. Residual \u2211\u03c0 m \u2261 Cov(k,C(k,3)) \u2261 R\u2084 channel. Per-type m_e need Cov(k,t\u2083) or character-sum on fixed triples. N_ED4_SUF OPEN. L OPEN.",
+  "proved": {
+    "free_param_t_reduction": true,
+    "t3_closed_p5": true,
+    "p7_multitype_nonconstancy": true,
+    "residual_sum_is_R4_channel": true,
+    "cov_te_reduces_to_cov_t3": true,
+    "E_t3_maxplus_free": true,
+    "residual_for_all_p_ge_5": false,
+    "t_e_of_k_all_p": false,
+    "hyp_residual_for_all_p": false
+  },
+  "algebra": {
+    "free_param": {
+      "proved": true,
+      "theorem": "t\u2082=R\u2083\u22123t\u2083, t\u2081=R\u2082\u22122R\u2083+3t\u2083, t\u2080=C(k,3)\u2212R\u2082+R\u2083\u2212t\u2083 (one free parameter t\u2083 on regular sets).",
+      "rows": {
+        "6": {
+          "t": [
+            20,
+            0,
+            0,
+            0
+          ],
+          "recon_ok": true,
+          "id_ok": true
+        },
+        "8": {
+          "t": [
+            32,
+            24,
+            0,
+            0
+          ],
+          "recon_ok": true,
+          "id_ok": true
+        },
+        "10": {
+          "t": [
+            50,
+            60,
+            10,
+            0
+          ],
+          "recon_ok": true,
+          "id_ok": true
+        },
+        "12": {
+          "t": [
+            76,
+            108,
+            36,
+            0
+          ],
+          "recon_ok": true,
+          "id_ok": true
+        },
+        "14": {
+          "t": [
+            108,
+            180,
+            72,
+            4
+          ],
+          "recon_ok": true,
+          "id_ok": true
+        },
+        "16": {
+          "t": [
+            150,
+            270,
+            130,
+            10
+          ],
+          "recon_ok": true,
+          "id_ok": true
+        },
+        "18": {
+          "t": [
+            200,
+            390,
+            204,
+            22
+          ],
+          "recon_ok": true,
+          "id_ok": true
+        },
+        "20": {
+          "t": [
+            260,
+            540,
+            300,
+            40
+          ],
+          "recon_ok": true,
+          "id_ok": true
+        },
+        "26": {
+          "t": [
+            520,
+            1170,
+            780,
+            130
+          ],
+          "recon_ok": true,
+          "id_ok": true
+        },
+        "p7_k16_t3=0": {
+          "t": [
+            208,
+            256,
+            96,
+            0
+          ],
+          "id_ok": true
+        },
+        "p7_k16_t3=4": {
+          "t": [
+            204,
+            268,
+            84,
+            4
+          ],
+          "id_ok": true
+        },
+        "p7_k16_t3=8": {
+          "t": [
+            200,
+            280,
+            72,
+            8
+          ],
+          "id_ok": true
+        },
+        "p7_k20_t3=12": {
+          "t": [
+            348,
+            516,
+            264,
+            12
+          ],
+          "id_ok": true
+        },
+        "p7_k20_t3=16": {
+          "t": [
+            344,
+            528,
+            252,
+            16
+          ],
+          "id_ok": true
+        },
+        "p7_k20_t3=20": {
+          "t": [
+            340,
+            540,
+            240,
+            20
+          ],
+          "id_ok": true
+        },
+        "p7_k20_t3=22": {
+          "t": [
+            338,
+            546,
+            234,
+            22
+          ],
+          "id_ok": true
+        },
+        "p7_k20_t3=24": {
+          "t": [
+            336,
+            552,
+            228,
+            24
+          ],
+          "id_ok": true
+        },
+        "p7_k24_t3=56": {
+          "t": [
+            528,
+            936,
+            504,
+            56
+          ],
+          "id_ok": true
+        },
+        "p7_k24_t3=58": {
+          "t": [
+            526,
+            942,
+            498,
+            58
+          ],
+          "id_ok": true
+        },
+        "p7_k24_t3=60": {
+          "t": [
+            524,
+            948,
+            492,
+            60
+          ],
+          "id_ok": true
+        },
+        "p7_k24_t3=62": {
+          "t": [
+            522,
+            954,
+            486,
+            62
+          ],
+          "id_ok": true
+        },
+        "p7_k24_t3=64": {
+          "t": [
+            520,
+            960,
+            480,
+            64
+          ],
+          "id_ok": true
+        }
+      }
+    },
+    "t3_p5": {
+      "proved_census": true,
+      "theorem": "p=5: t\u2083(\u03b1)=0 (\u03b1\u22643); t\u2083(\u03b1)=3\u03b1\u00b2\u221221\u03b1+40 (\u03b1\u22654); mono-type per weight on full Max+ (N=260).",
+      "by_k": {
+        "0": {
+          "alpha": -3,
+          "t3": 0,
+          "pred": 0,
+          "match": true
+        },
+        "6": {
+          "alpha": 0,
+          "t3": 0,
+          "pred": 0,
+          "match": true
+        },
+        "8": {
+          "alpha": 1,
+          "t3": 0,
+          "pred": 0,
+          "match": true
+        },
+        "10": {
+          "alpha": 2,
+          "t3": 0,
+          "pred": 0,
+          "match": true
+        },
+        "12": {
+          "alpha": 3,
+          "t3": 0,
+          "pred": 0,
+          "match": true
+        },
+        "14": {
+          "alpha": 4,
+          "t3": 4,
+          "pred": 4,
+          "match": true
+        },
+        "16": {
+          "alpha": 5,
+          "t3": 10,
+          "pred": 10,
+          "match": true
+        },
+        "18": {
+          "alpha": 6,
+          "t3": 22,
+          "pred": 22,
+          "match": true
+        },
+        "20": {
+          "alpha": 7,
+          "t3": 40,
+          "pred": 40,
+          "match": true
+        },
+        "26": {
+          "alpha": 10,
+          "t3": 130,
+          "pred": 130,
+          "match": true
+        }
+      },
+      "formula": "t3=0 if alpha<=3 else 3*alpha**2 - 21*alpha + 40"
+    },
+    "multitype_p7": {
+      "proved_census": true,
+      "theorem": "p=7: multi-type regular sets at k\u2208{16,18,\u2026,34} (3\u20138 t-vectors per k); pure t_e(k) fails. Corrects 15.151.B constancy claim.",
+      "multi_type_weights": {
+        "16": 3,
+        "18": 5,
+        "20": 5,
+        "22": 8,
+        "24": 5,
+        "26": 5,
+        "28": 8,
+        "30": 5,
+        "32": 5,
+        "34": 3
+      },
+      "n_multi_weights": 10,
+      "const_weights_p7": [
+        0,
+        8,
+        12,
+        14,
+        36,
+        38,
+        42,
+        50
+      ],
+      "t3_hist_sample": {
+        "16": {
+          "0": 21,
+          "4": 217,
+          "8": 42
+        },
+        "20": {
+          "12": 21,
+          "16": 35,
+          "20": 567,
+          "22": 238,
+          "24": 238
+        },
+        "24": {
+          "56": 154,
+          "58": 280,
+          "60": 756,
+          "62": 518,
+          "64": 126
+        }
+      },
+      "N_maxplus": 11452,
+      "backend": "ProcessPool W=86 full census",
+      "note_antipodal": "weight-k and weight-(n\u2212k) type-count histograms reverse (certified census).",
+      "samples_nonneg_t": true,
+      "corrects_15_151_B": true
+    },
+    "residual_R4": {
+      "proved": true,
+      "theorem": "R\u2084=E[k^{underline 4}]; Cov(k,C(k,3))=(R\u2084+(3\u2212n/2)E\u2083)/6; E_\u03bc[k]=n/2+(8p/Tot)Cov=3+8 R\u2084/(n(n\u22122)(n+2)); residual \u21d4 R\u2084. Multi-type t-structure does not open a new residual beyond R\u2084.",
+      "by_p": {
+        "5": {
+          "R4": "364284/13",
+          "E_falling3": "2184",
+          "Cov_k_Ck3": "13394/13",
+          "E_mu": "37455/2366",
+          "E_mu_R4_form": "37455/2366",
+          "k_act": "37455/2366",
+          "match_k_act": true,
+          "k_suf": "2771/175",
+          "Cov_le_budget": true,
+          "slack_k": "223/59150"
+        },
+        "7": {
+          "R4": "64959348600/167281",
+          "E_falling3": "15600",
+          "Cov_k_Ck3": "1258084900/167281",
+          "E_mu": "121313499/4349306",
+          "E_mu_R4_form": "121313499/4349306",
+          "k_act": "121313499/4349306",
+          "match_k_act": true,
+          "k_suf": "195469/7007",
+          "Cov_le_budget": true,
+          "slack_k": "8523617/2344275934"
+        }
+      }
+    },
+    "cov_reduction": {
+      "proved": true,
+      "theorem": "Cov(k,t_e)=Cov(det_e(k))+\u03b3_e Cov(k,t\u2083) with \u03b3=(\u22121,3,\u22123,1); individual m_e need only Cov(k,t\u2083) beyond known weight moments.",
+      "gamma": {
+        "0": -1,
+        "1": 3,
+        "2": -3,
+        "3": 1
+      },
+      "p5_Cov_te": {
+        "0": "2906/13",
+        "1": "12795/26",
+        "2": "3648/13",
+        "3": "885/26"
+      },
+      "p5_Cov_t3": "885/26",
+      "p5_A_det": {
+        "0": "6697/26",
+        "1": "390",
+        "2": "9951/26",
+        "3": "0"
+      },
+      "recon_ok": true
+    },
+    "E_t3": {
+      "proved": true,
+      "theorem": "E[t\u2083]=n\u2083(p\u22123)/(8p) Max+-free.",
+      "by_p": {
+        "5": {
+          "E_t3": "13/2",
+          "match_E_te3": true
+        },
+        "7": {
+          "E_t3": "100",
+          "match_E_te3": true
+        },
+        "11": {
+          "E_t3": "2440",
+          "match_E_te3": true
+        },
+        "13": {
+          "E_t3": "14875/2",
+          "match_E_te3": true
+        },
+        "17": {
+          "E_t3": "42630",
+          "match_E_te3": true
+        },
+        "19": {
+          "E_t3": "86880",
+          "match_E_te3": true
+        },
+        "23": {
+          "E_t3": "291500",
+          "match_E_te3": true
+        },
+        "29": {
+          "E_t3": "2490215/2",
+          "match_E_te3": true
+        }
+      },
+      "n_checked": 9
+    },
+    "open": {
+      "residual_closed_general": false,
+      "t_e_of_k_closed_form_all_p": false,
+      "reason_t_e_k_dead": "p=7 multi-orbit mid-weights: no single t_e(k) function",
+      "open": "Prove \u2211\u03c0_e m_e \u2264 k_suf for p\u22657 via R\u2084\u2264R4_suf, character-sum m_e on fixed triples, or Cov(k,t\u2083) bound under multi-orbit geometry.",
+      "sufficient_targets": [
+        "R4_le_R4_suf",
+        "character_sum_m_e_fixed_triple",
+        "Cov_k_t3_bound_multi_orbit"
+      ],
+      "dead": [
+        "pure_t_e_of_k_all_p",
+        "CS_Popoviciu_on_Cov",
+        "plain_ULC",
+        "type_list_free_orbits_p_ge_11"
+      ],
+      "p5_t3_closed": true,
+      "p7_multitype_blocks_pure_tk": true,
+      "residual_sum_equals_R4_channel": true
+    }
+  },
+  "closed_forms": {
+    "t_from_t3": "t2=R3-3t3; t1=R2-2R3+3t3; t0=C(k,3)-R2+R3-t3",
+    "t3_p5": "0 if alpha<=3 else 3*alpha**2-21*alpha+40",
+    "E_t3": "n3(p-3)/(8p)",
+    "gamma_cov": "(-1, 3, -3, 1)",
+    "residual_equiv": "sum pi m = n/2+(8p/Tot)Cov(k,C(k,3)) = 3+8 R4/(n(n-2)(n+2)); R4=E[k^underline4]; Cov=(R4+(3-n/2)E3)/6"
+  },
+  "status": {
+    "p5_residual_maxplus_free": true,
+    "p7_residual_maxplus_free": true,
+    "type_free_residual_general": false,
+    "pure_te_of_k_blocked_p7": true,
+    "general_residual": false
+  },
+  "open_attack": "R\u2084\u2264R4_suf (main), or Paley character-sum m_e on fixed type-e triples, or Cov(k,t\u2083) under multi-orbit regular-set geometry.",
+  "backend": "CPU Fraction + W=86 Max+ census p=5,7; GPU unused (F20)",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "residual_closed": false,
+  "compute": {
+    "workers": 86,
+    "gpu": "unused",
+    "census": "full Max+ t-vectors p=5,7"
+  }
+}

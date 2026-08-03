@@ -1,0 +1,256 @@
+{
+  "prop": "15.98",
+  "backend": "CPU Fraction + Max+ p=3,5; GPU unused (F20)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "gap_proved_for_all_p": false,
+  "mult_ge_d_minus_1_proved_for_paley": true,
+  "kappa_bound_proved_for_all_p": false,
+  "psl_min_irrep": {
+    "proved": true,
+    "theorem": "For every odd prime p, q=p\u00b2, every nontrivial complex irrep of PSL(2,q) has dimension \u2265 (q\u22121)/2 = d\u22121 with d=(p\u00b2+1)/2. Standard character table of PSL(2,q) (q odd).",
+    "by_p": {
+      "3": {
+        "q": 9,
+        "d": 5,
+        "min_nontrivial_irrep_dim": 4,
+        "equals_d_minus_1": true,
+        "psl_irrep_dims_note": "1, q, q\u00b11, (q\u00b11)/2 for PSL(2,q), q odd"
+      },
+      "5": {
+        "q": 25,
+        "d": 13,
+        "min_nontrivial_irrep_dim": 12,
+        "equals_d_minus_1": true,
+        "psl_irrep_dims_note": "1, q, q\u00b11, (q\u00b11)/2 for PSL(2,q), q odd"
+      },
+      "7": {
+        "q": 49,
+        "d": 25,
+        "min_nontrivial_irrep_dim": 24,
+        "equals_d_minus_1": true,
+        "psl_irrep_dims_note": "1, q, q\u00b11, (q\u00b11)/2 for PSL(2,q), q odd"
+      },
+      "11": {
+        "q": 121,
+        "d": 61,
+        "min_nontrivial_irrep_dim": 60,
+        "equals_d_minus_1": true,
+        "psl_irrep_dims_note": "1, q, q\u00b11, (q\u00b11)/2 for PSL(2,q), q odd"
+      },
+      "13": {
+        "q": 169,
+        "d": 85,
+        "min_nontrivial_irrep_dim": 84,
+        "equals_d_minus_1": true,
+        "psl_irrep_dims_note": "1, q, q\u00b11, (q\u00b11)/2 for PSL(2,q), q odd"
+      },
+      "17": {
+        "q": 289,
+        "d": 145,
+        "min_nontrivial_irrep_dim": 144,
+        "equals_d_minus_1": true,
+        "psl_irrep_dims_note": "1, q, q\u00b11, (q\u00b11)/2 for PSL(2,q), q odd"
+      },
+      "19": {
+        "q": 361,
+        "d": 181,
+        "min_nontrivial_irrep_dim": 180,
+        "equals_d_minus_1": true,
+        "psl_irrep_dims_note": "1, q, q\u00b11, (q\u00b11)/2 for PSL(2,q), q odd"
+      },
+      "23": {
+        "q": 529,
+        "d": 265,
+        "min_nontrivial_irrep_dim": 264,
+        "equals_d_minus_1": true,
+        "psl_irrep_dims_note": "1, q, q\u00b11, (q\u00b11)/2 for PSL(2,q), q odd"
+      },
+      "29": {
+        "q": 841,
+        "d": 421,
+        "min_nontrivial_irrep_dim": 420,
+        "equals_d_minus_1": true,
+        "psl_irrep_dims_note": "1, q, q\u00b11, (q\u00b11)/2 for PSL(2,q), q odd"
+      },
+      "31": {
+        "q": 961,
+        "d": 481,
+        "min_nontrivial_irrep_dim": 480,
+        "equals_d_minus_1": true,
+        "psl_irrep_dims_note": "1, q, q\u00b11, (q\u00b11)/2 for PSL(2,q), q odd"
+      },
+      "37": {
+        "q": 1369,
+        "d": 685,
+        "min_nontrivial_irrep_dim": 684,
+        "equals_d_minus_1": true,
+        "psl_irrep_dims_note": "1, q, q\u00b11, (q\u00b11)/2 for PSL(2,q), q odd"
+      }
+    }
+  },
+  "mult_ge_d_minus_1": {
+    "proved": true,
+    "theorem": "For the Paley conference Max+ of order n=p\u00b2+1 (p odd prime): mult(\u03bb\u2082(P\u2299P)) \u2265 d\u22121. Proof: P\u03a3L(2,p\u00b2) acts on coordinates preserving C and Max+, hence on L\u00b2(Max+); PopP is equivariant. The \u03bb\u2082-eigenspace V is orthogonal to constants (\u03bb\u2081 simple, eigenvector 1) and nonzero (positive spectrum of P\u2299P beyond Perron: Tr(P\u2299P)=d\u00b2/N > d/N =\u03b1 for d>1). Thus V is a nontrivial unitary representation of PSL(2,p\u00b2) (as a quotient of the acting group), so dim V \u2265 min nontrivial irrep dim = d\u22121.",
+    "scope": "Paley Max+ (Path C dense \u03c1=1 family n=p\u00b2+1)"
+  },
+  "gap_criterion_d_minus_1": {
+    "proved": true,
+    "theorem": "If mult(\u03bb\u2082)\u2265d\u22121 and \u2211M\u00b2\u2264Wick_hi=12n\u00b2+48n, then for every prime p\u22655 (d\u226513) one has \u03bb\u2082\u2264\u221a(Q/(d\u22121))\u2264d/(2N), hence bi-tight empty. Proof: Q\u2264Wick/(16N\u00b2)\u2212d\u00b2/N\u00b2; inequality Wick/16\u2212d\u00b2\u2264(d\u22121)d\u00b2/4 reduces to d(d\u00b2\u22129d\u221224)\u22650, true for d\u226513. At p=3 (d=5) the algebra correctly fails.",
+    "by_p": {
+      "3": {
+        "d": 5,
+        "Wick_hi": 1680,
+        "lhs_wick_over_16_minus_d2": "80",
+        "rhs_m_d2_over_4": "25",
+        "gap_algebra_holds": false,
+        "disc_d2_9d_24": -44,
+        "expected_for_path_C": false,
+        "match": true
+      },
+      "5": {
+        "d": 13,
+        "Wick_hi": 9360,
+        "lhs_wick_over_16_minus_d2": "416",
+        "rhs_m_d2_over_4": "507",
+        "gap_algebra_holds": true,
+        "disc_d2_9d_24": 28,
+        "expected_for_path_C": true,
+        "match": true
+      },
+      "7": {
+        "d": 25,
+        "Wick_hi": 32400,
+        "lhs_wick_over_16_minus_d2": "1400",
+        "rhs_m_d2_over_4": "3750",
+        "gap_algebra_holds": true,
+        "disc_d2_9d_24": 376,
+        "expected_for_path_C": true,
+        "match": true
+      },
+      "11": {
+        "d": 61,
+        "Wick_hi": 184464,
+        "lhs_wick_over_16_minus_d2": "7808",
+        "rhs_m_d2_over_4": "55815",
+        "gap_algebra_holds": true,
+        "disc_d2_9d_24": 3148,
+        "expected_for_path_C": true,
+        "match": true
+      },
+      "13": {
+        "d": 85,
+        "Wick_hi": 354960,
+        "lhs_wick_over_16_minus_d2": "14960",
+        "rhs_m_d2_over_4": "151725",
+        "gap_algebra_holds": true,
+        "disc_d2_9d_24": 6436,
+        "expected_for_path_C": true,
+        "match": true
+      },
+      "17": {
+        "d": 145,
+        "Wick_hi": 1023120,
+        "lhs_wick_over_16_minus_d2": "42920",
+        "rhs_m_d2_over_4": "756900",
+        "gap_algebra_holds": true,
+        "disc_d2_9d_24": 19696,
+        "expected_for_path_C": true,
+        "match": true
+      },
+      "19": {
+        "d": 181,
+        "Wick_hi": 1589904,
+        "lhs_wick_over_16_minus_d2": "66608",
+        "rhs_m_d2_over_4": "1474245",
+        "gap_algebra_holds": true,
+        "disc_d2_9d_24": 31108,
+        "expected_for_path_C": true,
+        "match": true
+      },
+      "23": {
+        "d": 265,
+        "Wick_hi": 3396240,
+        "lhs_wick_over_16_minus_d2": "142040",
+        "rhs_m_d2_over_4": "4634850",
+        "gap_algebra_holds": true,
+        "disc_d2_9d_24": 67816,
+        "expected_for_path_C": true,
+        "match": true
+      },
+      "29": {
+        "d": 421,
+        "Wick_hi": 8547984,
+        "lhs_wick_over_16_minus_d2": "357008",
+        "rhs_m_d2_over_4": "18610305",
+        "gap_algebra_holds": true,
+        "disc_d2_9d_24": 173428,
+        "expected_for_path_C": true,
+        "match": true
+      },
+      "31": {
+        "d": 481,
+        "Wick_hi": 11151504,
+        "lhs_wick_over_16_minus_d2": "465608",
+        "rhs_m_d2_over_4": "27763320",
+        "gap_algebra_holds": true,
+        "disc_d2_9d_24": 227008,
+        "expected_for_path_C": true,
+        "match": true
+      },
+      "37": {
+        "d": 685,
+        "Wick_hi": 22588560,
+        "lhs_wick_over_16_minus_d2": "942560",
+        "rhs_m_d2_over_4": "80237475",
+        "gap_algebra_holds": true,
+        "disc_d2_9d_24": 463036,
+        "expected_for_path_C": true,
+        "match": true
+      }
+    }
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "d": 5,
+      "lam2": 0.3333333333,
+      "mult": 5,
+      "mult_ge_d_minus_1": true,
+      "mult_eq_d": true,
+      "Q": 0.5555555555555556,
+      "sqrt_Q_over_d_minus_1": 0.37267799624996495,
+      "gap_thr": 0.20833333333333334,
+      "gap_by_mult_d_minus_1": false,
+      "sum_M2": 1680.0,
+      "kappa2": 960.0,
+      "kappa2_le_96n": true,
+      "sum_M2_le_Wick": true,
+      "ok": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "d": 13,
+      "lam2": 0.0130177515,
+      "mult": 13,
+      "mult_ge_d_minus_1": true,
+      "mult_eq_d": true,
+      "Q": 0.006062812926718253,
+      "sqrt_Q_over_d_minus_1": 0.022477420015648026,
+      "gap_thr": 0.025,
+      "gap_by_mult_d_minus_1": true,
+      "sum_M2": 9261.538461538461,
+      "kappa2": 2397.538461538461,
+      "kappa2_le_96n": true,
+      "sum_M2_le_Wick": true,
+      "ok": true
+    }
+  },
+  "attack_surface": "Bi-tight for Paley p\u22655 needs \u2016\u03ba\u2016_F\u00b2\u226496n (\u21d4 \u2211M\u00b2\u2264Wick) in addition to mult\u2265d\u22121 (now proved for Paley). Then 15.98.5 closes gap/bi-tight. Upgrade mult to d via Ky Fan maximizers (15.97) optional for 16N-scale bounds. Alternates: 16N/H. Deep ND still required for lim \u03b1_n.",
+  "verdict": "Prop 15.98 proves mult(\u03bb\u2082)\u2265d\u22121 for Paley Max+ (PSL(2,p\u00b2) min irrep dim) and the algebra mult\u2265d\u22121+\u2016\u03ba\u2016\u00b2\u226496n\u21d2gap for all primes p\u22655. Certified p=3,5. Remaining OPEN for bi-tight: \u2016\u03ba\u2016\u00b2\u226496n for general p\u22655. lim \u03b1_n OPEN (need \u03ba bound + deep ND).",
+  "settlement_note": "Next: prove \u2016\u03ba\u2016_F\u00b2\u226496n for all primes p\u22655 (boolean \u2264 Wick on Max+). Then bi-tight empty for Paley p\u22655 via 15.98. Then N_DEEP + Main Theorem. L stays OPEN until then.",
+  "proved": true
+}

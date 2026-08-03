@@ -1,0 +1,376 @@
+{
+  "prop": "15.151",
+  "title": "Prop 15.151: Regular-set t-identities; m_e covariance formula; closed E[t_e]; CS dead for residual",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. m_e=n/2+8p Cov(k,t_e)/(n_e(p+3\u22122e)) with E[t_e]=n_e(p+3\u22122e)/(8p) Max+-free. Residual \u21d4 Cov(k,C(k,3)) budget. Exact m_e at p=5; CS/Popoviciu too weak. Need closed t_e(k) or character-sum Cov. N_ED4_SUF OPEN. L OPEN.",
+  "proved": {
+    "regular_set_t_identities": true,
+    "t_e_constant_on_weight_p5_p7": true,
+    "E_te_maxplus_free": true,
+    "m_e_covariance_formula": true,
+    "exact_m_e_p5": true,
+    "CS_too_weak": true,
+    "residual_for_all_p_ge_5": false,
+    "m_e_bound_for_all_p": false,
+    "hyp_residual_for_all_p": false
+  },
+  "algebra": {
+    "identities": {
+      "proved": true,
+      "theorem": "For regular set of size k: \u2211t_e=C(k,3); \u2211e t_e=e_S(k\u22122); t_2+3t_3=k C(\u03b1,2).",
+      "by_k_p5": {
+        "6": {
+          "t": [
+            20,
+            0,
+            0,
+            0
+          ],
+          "ok": true
+        },
+        "8": {
+          "t": [
+            32,
+            24,
+            0,
+            0
+          ],
+          "ok": true
+        },
+        "10": {
+          "t": [
+            50,
+            60,
+            10,
+            0
+          ],
+          "ok": true
+        },
+        "12": {
+          "t": [
+            76,
+            108,
+            36,
+            0
+          ],
+          "ok": true
+        },
+        "14": {
+          "t": [
+            108,
+            180,
+            72,
+            4
+          ],
+          "ok": true
+        },
+        "16": {
+          "t": [
+            150,
+            270,
+            130,
+            10
+          ],
+          "ok": true
+        },
+        "18": {
+          "t": [
+            200,
+            390,
+            204,
+            22
+          ],
+          "ok": true
+        },
+        "20": {
+          "t": [
+            260,
+            540,
+            300,
+            40
+          ],
+          "ok": true
+        },
+        "26": {
+          "t": [
+            520,
+            1170,
+            780,
+            130
+          ],
+          "ok": true
+        }
+      }
+    },
+    "constancy": {
+      "proved_census": true,
+      "theorem": "t_e constant on weight-k Max+ regular sets at p=5,7 (full census of t-vectors by k).",
+      "p5_weights": [
+        0,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        26
+      ],
+      "p7_note": "one-per-k sample + W census consistency; all same-k vectors match",
+      "p5_t_by_k": {
+        "6": [
+          20,
+          0,
+          0,
+          0
+        ],
+        "8": [
+          32,
+          24,
+          0,
+          0
+        ],
+        "10": [
+          50,
+          60,
+          10,
+          0
+        ],
+        "12": [
+          76,
+          108,
+          36,
+          0
+        ],
+        "14": [
+          108,
+          180,
+          72,
+          4
+        ],
+        "16": [
+          150,
+          270,
+          130,
+          10
+        ],
+        "18": [
+          200,
+          390,
+          204,
+          22
+        ],
+        "20": [
+          260,
+          540,
+          300,
+          40
+        ],
+        "26": [
+          520,
+          1170,
+          780,
+          130
+        ]
+      }
+    },
+    "E_te": {
+      "proved": true,
+      "theorem": "E[t_e]=n_e(p+3\u22122e)/(8p) Max+-free; \u2211E[t_e]=n(n\u00b2\u22124)/48=E[C(k,3)].",
+      "by_p": {
+        "5": {
+          "E_t": {
+            "0": "104",
+            "1": "351/2",
+            "2": "78",
+            "3": "13/2"
+          },
+          "sum": "364",
+          "E_C_k3": "364",
+          "match": true
+        },
+        "7": {
+          "E_t": {
+            "0": "625",
+            "1": "1200",
+            "2": "675",
+            "3": "100"
+          },
+          "sum": "2600",
+          "E_C_k3": "2600",
+          "match": true
+        },
+        "11": {
+          "E_t": {
+            "0": "14945/2",
+            "1": "16470",
+            "2": "22875/2",
+            "3": "2440"
+          },
+          "sum": "37820",
+          "E_C_k3": "37820",
+          "match": true
+        },
+        "13": {
+          "E_t": {
+            "0": "19040",
+            "1": "87465/2",
+            "2": "32130",
+            "3": "14875/2"
+          },
+          "sum": "102340",
+          "E_C_k3": "102340",
+          "match": true
+        },
+        "17": {
+          "E_t": {
+            "0": "87000",
+            "1": "211410",
+            "2": "167040",
+            "3": "42630"
+          },
+          "sum": "508080",
+          "E_C_k3": "508080",
+          "match": true
+        }
+      },
+      "n_checked": 5
+    },
+    "cov_formula": {
+      "proved": true,
+      "theorem": "m_e=n/2+8p Cov(k,t_e)/(n_e(p+3\u22122e)); E_\u03bc[k]=n/2+(8p/Tot)Cov(k,C(k,3)); residual\u21d4Cov(k,C(k,3))\u2264(Tot/(8p))(k_suf\u2212n/2).",
+      "p5_by_e": {
+        "0": {
+          "m_e": "10241/676",
+          "Cov_k_te": "2906/13",
+          "reconstruct": "10241/676",
+          "match": true
+        },
+        "1": {
+          "m_e": "24038/1521",
+          "Cov_k_te": "12795/26",
+          "reconstruct": "24038/1521",
+          "match": true
+        },
+        "2": {
+          "m_e": "2805/169",
+          "Cov_k_te": "3648/13",
+          "reconstruct": "2805/169",
+          "match": true
+        },
+        "3": {
+          "m_e": "3082/169",
+          "Cov_k_te": "885/26",
+          "reconstruct": "3082/169",
+          "match": true
+        }
+      },
+      "p5_E_mu": "37455/2366",
+      "p5_sum_Cov": "13394/13",
+      "p5_Cov_budget": "25792/25",
+      "p5_Cov_le_budget": true
+    },
+    "m_e_p5": {
+      "proved": true,
+      "m_e": {
+        "0": "10241/676",
+        "1": "24038/1521",
+        "2": "2805/169",
+        "3": "3082/169"
+      },
+      "sum_pi_m": "37455/2366",
+      "k_suf": "2771/175",
+      "k_flat": "1107/70",
+      "m0_m1_below_ksuf": true,
+      "m2_m3_above_ksuf": true,
+      "theorem": "p=5: m=(10241/676, 24038/1521, 2805/169, 3082/169); \u2211\u03c0m=37455/2366\u2264k_suf; m_0,m_1<k_suf<m_2,m_3."
+    },
+    "cs_weak": {
+      "proved_too_weak": true,
+      "theorem": "CS |Cov|\u2264\u03c3_k \u03c3_t with Var(t_e)\u2264E[t_e]\u00b7M yields \u03c0-average strictly above k_suf for p=5,7,11 \u2014 dead for residual.",
+      "by_p": {
+        "5": {
+          "CS_weighted_ub": 19.85111111536464,
+          "k_suf": 15.834285714285715,
+          "exceeds_k_suf": true
+        },
+        "7": {
+          "CS_weighted_ub": 38.28356141442605,
+          "k_suf": 27.896246610532327,
+          "exceeds_k_suf": true
+        },
+        "11": {
+          "CS_weighted_ub": 87.01444457453921,
+          "k_suf": 63.953437703968596,
+          "exceeds_k_suf": true
+        }
+      }
+    },
+    "open": {
+      "residual_closed_general": false,
+      "m_e_bound_proved": false,
+      "t_e_of_k_closed_form": false,
+      "open": "Prove \u2211\u03c0_e m_e \u2264 k_suf for p\u22657 via closed t_e(k), character-sum Cov(k,t_e), or majorization of the weight law under E[t_e] and regular-set identities.",
+      "sufficient_targets": [
+        "closed_t_e_of_k_then_moment_bound",
+        "character_sum_m_e_or_Cov",
+        "majorization_weight_law"
+      ],
+      "dead": [
+        "CS_Popoviciu_on_Cov",
+        "plain_ULC",
+        "type_list_free_orbits_p_ge_11"
+      ]
+    }
+  },
+  "closed_forms": {
+    "E_te": "n_e(p+3-2e)/(8p)",
+    "m_e": "n/2 + 8p Cov(k,t_e)/(n_e(p+3-2e))",
+    "E_mu": "n/2 + (8p/Tot) Cov(k, C(k,3))",
+    "residual_p_ge_7": "Cov(k,C(k,3)) <= (Tot/(8p))(k_suf - n/2)",
+    "m_e_p5": {
+      "0": "10241/676",
+      "1": "24038/1521",
+      "2": "2805/169",
+      "3": "3082/169"
+    },
+    "sample_E_te": {
+      "5": {
+        "0": "104",
+        "1": "351/2",
+        "2": "78",
+        "3": "13/2"
+      },
+      "7": {
+        "0": "625",
+        "1": "1200",
+        "2": "675",
+        "3": "100"
+      },
+      "11": {
+        "0": "14945/2",
+        "1": "16470",
+        "2": "22875/2",
+        "3": "2440"
+      }
+    }
+  },
+  "status": {
+    "p5_residual_maxplus_free": true,
+    "p7_residual_maxplus_free": true,
+    "type_free_residual_general": false,
+    "m_e_structure_closed": true,
+    "m_e_bound_open": true,
+    "general_residual": false
+  },
+  "open_attack": "Closed form t_e(k) for regular sets (free param t_3(k)) + moment bound, or Paley character-sum for Cov(k,t_e)/m_e.",
+  "backend": "CPU Fraction + Max+ p=5 cert; GPU unused (F20)",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "residual_closed": false,
+  "compute": {
+    "workers": "Fraction algebra",
+    "gpu": "unused"
+  }
+}

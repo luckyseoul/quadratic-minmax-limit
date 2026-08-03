@@ -1,0 +1,824 @@
+{
+  "prop": "15.111",
+  "backend": "CPU Fraction algebra + zero-diag identity cert + Schur cert p=3,5,7; GPU unused (F20)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "kappa_bound_proved_for_all_p": false,
+  "sum_rho2_le_T_proved_for_all_p": false,
+  "closed_forms": {
+    "alpha_kappa": "(p^2+2)/(4 p^2)",
+    "alpha_rho": "(7 p^2+5)/(2 p^2 (p^2-5))",
+    "pair": "(p^2+11)/(4(p^2-5))",
+    "beta_b": "6/p",
+    "beta_Tb": "6(3 p^2+5)/p^2",
+    "sixteen_N_delta_budget": "(n-10)/(n-6)",
+    "spot_p5": {
+      "alpha_kappa": "27/100",
+      "alpha_rho": "9/50",
+      "pair": "9/20",
+      "mubar": "48/5",
+      "delta_budget_16N": "4/5",
+      "rho_min2": "728/25",
+      "room_hyp_24": "1536/65"
+    },
+    "spot_p7": {
+      "alpha_kappa": "51/196",
+      "alpha_rho": "87/1078",
+      "pair": "15/44",
+      "rho_min2": "26000/539",
+      "room_hyp_24": "3072/55"
+    }
+  },
+  "zero_diag_pairing": {
+    "proved": true,
+    "theorem": "For zero-diag symmetric C,B: \u2211_S \u03ba_C \u03ba_B = Tr(CBCB)/4 + (Tr CB)\u00b2/8 + (1/2)\u2211 C\u00b2B\u00b2 \u2212 (1/2)\u2211(CB)\u00b2_ii \u2212 (1/2)\u2211(BC)\u00b2_ii.",
+    "max_abs_err": 2.4868995751603507e-14,
+    "by_n": {
+      "6": {
+        "max_abs_err": 1.7763568394002505e-15,
+        "mean_err": 6.813993813636898e-16
+      },
+      "7": {
+        "max_abs_err": 6.217248937900877e-15,
+        "mean_err": 1.3433698597964394e-15
+      },
+      "8": {
+        "max_abs_err": 6.439293542825908e-15,
+        "mean_err": 2.500777362968165e-15
+      },
+      "9": {
+        "max_abs_err": 8.881784197001252e-15,
+        "mean_err": 3.658184866139891e-15
+      },
+      "10": {
+        "max_abs_err": 2.4868995751603507e-14,
+        "mean_err": 3.9968028886505635e-15
+      }
+    }
+  },
+  "alpha_kappa_algebra": {
+    "proved": true,
+    "theorem": "On Z: CB=pB=BC, diag B=0, Tr(CB)=0 \u21d2 \u2211\u03ba \u03ba_B = ((p\u00b2+2)/4)\u2016B\u2016\u00b2 \u21d2 \u03b1_\u03ba=(p\u00b2+2)/(4p\u00b2).",
+    "by_p": {
+      "3": {
+        "alpha_kappa": "11/36",
+        "from_collapse": "11/36",
+        "match": true
+      },
+      "5": {
+        "alpha_kappa": "27/100",
+        "from_collapse": "27/100",
+        "match": true
+      },
+      "7": {
+        "alpha_kappa": "51/196",
+        "from_collapse": "51/196",
+        "match": true
+      },
+      "11": {
+        "alpha_kappa": "123/484",
+        "from_collapse": "123/484",
+        "match": true
+      },
+      "13": {
+        "alpha_kappa": "171/676",
+        "from_collapse": "171/676",
+        "match": true
+      },
+      "17": {
+        "alpha_kappa": "291/1156",
+        "from_collapse": "291/1156",
+        "match": true
+      },
+      "19": {
+        "alpha_kappa": "363/1444",
+        "from_collapse": "363/1444",
+        "match": true
+      },
+      "23": {
+        "alpha_kappa": "531/2116",
+        "from_collapse": "531/2116",
+        "match": true
+      },
+      "29": {
+        "alpha_kappa": "843/3364",
+        "from_collapse": "843/3364",
+        "match": true
+      },
+      "31": {
+        "alpha_kappa": "963/3844",
+        "from_collapse": "963/3844",
+        "match": true
+      },
+      "37": {
+        "alpha_kappa": "1371/5476",
+        "from_collapse": "1371/5476",
+        "match": true
+      },
+      "41": {
+        "alpha_kappa": "1683/6724",
+        "from_collapse": "1683/6724",
+        "match": true
+      },
+      "43": {
+        "alpha_kappa": "1851/7396",
+        "from_collapse": "1851/7396",
+        "match": true
+      },
+      "47": {
+        "alpha_kappa": "2211/8836",
+        "from_collapse": "2211/8836",
+        "match": true
+      },
+      "53": {
+        "alpha_kappa": "2811/11236",
+        "from_collapse": "2811/11236",
+        "match": true
+      },
+      "59": {
+        "alpha_kappa": "3483/13924",
+        "from_collapse": "3483/13924",
+        "match": true
+      },
+      "61": {
+        "alpha_kappa": "3723/14884",
+        "from_collapse": "3723/14884",
+        "match": true
+      },
+      "67": {
+        "alpha_kappa": "4491/17956",
+        "from_collapse": "4491/17956",
+        "match": true
+      },
+      "71": {
+        "alpha_kappa": "5043/20164",
+        "from_collapse": "5043/20164",
+        "match": true
+      },
+      "73": {
+        "alpha_kappa": "5331/21316",
+        "from_collapse": "5331/21316",
+        "match": true
+      },
+      "79": {
+        "alpha_kappa": "6243/24964",
+        "from_collapse": "6243/24964",
+        "match": true
+      }
+    }
+  },
+  "pair_alpha_rho": {
+    "proved": true,
+    "theorem": "pair=(\u03bc\u0304\u22126)/8=(p\u00b2+11)/(4(p\u00b2\u22125)); \u03b1_\u03c1=pair\u2212\u03b1_\u03ba=(7p\u00b2+5)/(2p\u00b2(p\u00b2\u22125)); 16N-\u03b4 budget (16\u2212\u03bc\u0304)/8=(n\u221210)/(n\u22126).",
+    "by_p": {
+      "3": {
+        "mubar": "16",
+        "pair": "5/4",
+        "pair_from_mubar": "5/4",
+        "alpha_kappa": "11/36",
+        "alpha_rho": "17/18",
+        "ak_plus_ar": "5/4",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "0"
+      },
+      "5": {
+        "mubar": "48/5",
+        "pair": "9/20",
+        "pair_from_mubar": "9/20",
+        "alpha_kappa": "27/100",
+        "alpha_rho": "9/50",
+        "ak_plus_ar": "9/20",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "4/5"
+      },
+      "7": {
+        "mubar": "96/11",
+        "pair": "15/44",
+        "pair_from_mubar": "15/44",
+        "alpha_kappa": "51/196",
+        "alpha_rho": "87/1078",
+        "ak_plus_ar": "15/44",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "10/11"
+      },
+      "11": {
+        "mubar": "240/29",
+        "pair": "33/116",
+        "pair_from_mubar": "33/116",
+        "alpha_kappa": "123/484",
+        "alpha_rho": "213/7018",
+        "ak_plus_ar": "33/116",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "28/29"
+      },
+      "13": {
+        "mubar": "336/41",
+        "pair": "45/164",
+        "pair_from_mubar": "45/164",
+        "alpha_kappa": "171/676",
+        "alpha_rho": "297/13858",
+        "ak_plus_ar": "45/164",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "40/41"
+      },
+      "17": {
+        "mubar": "576/71",
+        "pair": "75/284",
+        "pair_from_mubar": "75/284",
+        "alpha_kappa": "291/1156",
+        "alpha_rho": "507/41038",
+        "ak_plus_ar": "75/284",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "70/71"
+      },
+      "19": {
+        "mubar": "720/89",
+        "pair": "93/356",
+        "pair_from_mubar": "93/356",
+        "alpha_kappa": "363/1444",
+        "alpha_rho": "633/64258",
+        "ak_plus_ar": "93/356",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "88/89"
+      },
+      "23": {
+        "mubar": "1056/131",
+        "pair": "135/524",
+        "pair_from_mubar": "135/524",
+        "alpha_kappa": "531/2116",
+        "alpha_rho": "927/138598",
+        "ak_plus_ar": "135/524",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "130/131"
+      },
+      "29": {
+        "mubar": "1680/209",
+        "pair": "213/836",
+        "pair_from_mubar": "213/836",
+        "alpha_kappa": "843/3364",
+        "alpha_rho": "1473/351538",
+        "ak_plus_ar": "213/836",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "208/209"
+      },
+      "31": {
+        "mubar": "1920/239",
+        "pair": "243/956",
+        "pair_from_mubar": "243/956",
+        "alpha_kappa": "963/3844",
+        "alpha_rho": "1683/459358",
+        "ak_plus_ar": "243/956",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "238/239"
+      },
+      "37": {
+        "mubar": "2736/341",
+        "pair": "345/1364",
+        "pair_from_mubar": "345/1364",
+        "alpha_kappa": "1371/5476",
+        "alpha_rho": "2397/933658",
+        "ak_plus_ar": "345/1364",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "340/341"
+      },
+      "41": {
+        "mubar": "3360/419",
+        "pair": "423/1676",
+        "pair_from_mubar": "423/1676",
+        "alpha_kappa": "1683/6724",
+        "alpha_rho": "2943/1408678",
+        "ak_plus_ar": "423/1676",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "418/419"
+      },
+      "43": {
+        "mubar": "3696/461",
+        "pair": "465/1844",
+        "pair_from_mubar": "465/1844",
+        "alpha_kappa": "1851/7396",
+        "alpha_rho": "3237/1704778",
+        "ak_plus_ar": "465/1844",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "460/461"
+      },
+      "47": {
+        "mubar": "4416/551",
+        "pair": "555/2204",
+        "pair_from_mubar": "555/2204",
+        "alpha_kappa": "2211/8836",
+        "alpha_rho": "3867/2434318",
+        "ak_plus_ar": "555/2204",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "550/551"
+      },
+      "53": {
+        "mubar": "5616/701",
+        "pair": "705/2804",
+        "pair_from_mubar": "705/2804",
+        "alpha_kappa": "2811/11236",
+        "alpha_rho": "4917/3938218",
+        "ak_plus_ar": "705/2804",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "700/701"
+      },
+      "59": {
+        "mubar": "6960/869",
+        "pair": "873/3476",
+        "pair_from_mubar": "873/3476",
+        "alpha_kappa": "3483/13924",
+        "alpha_rho": "6093/6049978",
+        "ak_plus_ar": "873/3476",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "868/869"
+      },
+      "61": {
+        "mubar": "7440/929",
+        "pair": "933/3716",
+        "pair_from_mubar": "933/3716",
+        "alpha_kappa": "3723/14884",
+        "alpha_rho": "6513/6913618",
+        "ak_plus_ar": "933/3716",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "928/929"
+      },
+      "67": {
+        "mubar": "8976/1121",
+        "pair": "1125/4484",
+        "pair_from_mubar": "1125/4484",
+        "alpha_kappa": "4491/17956",
+        "alpha_rho": "7857/10064338",
+        "ak_plus_ar": "1125/4484",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "1120/1121"
+      },
+      "71": {
+        "mubar": "10080/1259",
+        "pair": "1263/5036",
+        "pair_from_mubar": "1263/5036",
+        "alpha_kappa": "5043/20164",
+        "alpha_rho": "8823/12693238",
+        "ak_plus_ar": "1263/5036",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "1258/1259"
+      },
+      "73": {
+        "mubar": "10656/1331",
+        "pair": "1335/5324",
+        "pair_from_mubar": "1335/5324",
+        "alpha_kappa": "5331/21316",
+        "alpha_rho": "9327/14185798",
+        "ak_plus_ar": "1335/5324",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "1330/1331"
+      },
+      "79": {
+        "mubar": "12480/1559",
+        "pair": "1563/6236",
+        "pair_from_mubar": "1563/6236",
+        "alpha_kappa": "6243/24964",
+        "alpha_rho": "10923/19459438",
+        "ak_plus_ar": "1563/6236",
+        "pair_eq_mubar_form": true,
+        "pair_eq_ak_plus_ar": true,
+        "sixteen_N_delta_budget": "1558/1559"
+      }
+    }
+  },
+  "channel_alpha_rho": {
+    "proved": true,
+    "theorem": "\u03c1_min=(4p b + Tb)/den with den=12(p\u00b2\u22125); \u03b1_\u03c1=cb\u00b7(6/p)+cT\u00b76(3p\u00b2+5)/p\u00b2 matches closed form.",
+    "by_p": {
+      "3": {
+        "den_16p2_mu2": 48,
+        "cb": "1/4",
+        "cT": "1/48",
+        "beta_b": "2",
+        "beta_Tb": "64/3",
+        "alpha_rho_channel": "17/18",
+        "alpha_rho_closed": "17/18",
+        "match": true
+      },
+      "5": {
+        "den_16p2_mu2": 240,
+        "cb": "1/12",
+        "cT": "1/240",
+        "beta_b": "6/5",
+        "beta_Tb": "96/5",
+        "alpha_rho_channel": "9/50",
+        "alpha_rho_closed": "9/50",
+        "match": true
+      },
+      "7": {
+        "den_16p2_mu2": 528,
+        "cb": "7/132",
+        "cT": "1/528",
+        "beta_b": "6/7",
+        "beta_Tb": "912/49",
+        "alpha_rho_channel": "87/1078",
+        "alpha_rho_closed": "87/1078",
+        "match": true
+      },
+      "11": {
+        "den_16p2_mu2": 1392,
+        "cb": "11/348",
+        "cT": "1/1392",
+        "beta_b": "6/11",
+        "beta_Tb": "2208/121",
+        "alpha_rho_channel": "213/7018",
+        "alpha_rho_closed": "213/7018",
+        "match": true
+      },
+      "13": {
+        "den_16p2_mu2": 1968,
+        "cb": "13/492",
+        "cT": "1/1968",
+        "beta_b": "6/13",
+        "beta_Tb": "3072/169",
+        "alpha_rho_channel": "297/13858",
+        "alpha_rho_closed": "297/13858",
+        "match": true
+      },
+      "17": {
+        "den_16p2_mu2": 3408,
+        "cb": "17/852",
+        "cT": "1/3408",
+        "beta_b": "6/17",
+        "beta_Tb": "5232/289",
+        "alpha_rho_channel": "507/41038",
+        "alpha_rho_closed": "507/41038",
+        "match": true
+      },
+      "19": {
+        "den_16p2_mu2": 4272,
+        "cb": "19/1068",
+        "cT": "1/4272",
+        "beta_b": "6/19",
+        "beta_Tb": "6528/361",
+        "alpha_rho_channel": "633/64258",
+        "alpha_rho_closed": "633/64258",
+        "match": true
+      },
+      "23": {
+        "den_16p2_mu2": 6288,
+        "cb": "23/1572",
+        "cT": "1/6288",
+        "beta_b": "6/23",
+        "beta_Tb": "9552/529",
+        "alpha_rho_channel": "927/138598",
+        "alpha_rho_closed": "927/138598",
+        "match": true
+      },
+      "29": {
+        "den_16p2_mu2": 10032,
+        "cb": "29/2508",
+        "cT": "1/10032",
+        "beta_b": "6/29",
+        "beta_Tb": "15168/841",
+        "alpha_rho_channel": "1473/351538",
+        "alpha_rho_closed": "1473/351538",
+        "match": true
+      },
+      "31": {
+        "den_16p2_mu2": 11472,
+        "cb": "31/2868",
+        "cT": "1/11472",
+        "beta_b": "6/31",
+        "beta_Tb": "17328/961",
+        "alpha_rho_channel": "1683/459358",
+        "alpha_rho_closed": "1683/459358",
+        "match": true
+      },
+      "37": {
+        "den_16p2_mu2": 16368,
+        "cb": "37/4092",
+        "cT": "1/16368",
+        "beta_b": "6/37",
+        "beta_Tb": "24672/1369",
+        "alpha_rho_channel": "2397/933658",
+        "alpha_rho_closed": "2397/933658",
+        "match": true
+      },
+      "41": {
+        "den_16p2_mu2": 20112,
+        "cb": "41/5028",
+        "cT": "1/20112",
+        "beta_b": "6/41",
+        "beta_Tb": "30288/1681",
+        "alpha_rho_channel": "2943/1408678",
+        "alpha_rho_closed": "2943/1408678",
+        "match": true
+      },
+      "43": {
+        "den_16p2_mu2": 22128,
+        "cb": "43/5532",
+        "cT": "1/22128",
+        "beta_b": "6/43",
+        "beta_Tb": "33312/1849",
+        "alpha_rho_channel": "3237/1704778",
+        "alpha_rho_closed": "3237/1704778",
+        "match": true
+      },
+      "47": {
+        "den_16p2_mu2": 26448,
+        "cb": "47/6612",
+        "cT": "1/26448",
+        "beta_b": "6/47",
+        "beta_Tb": "39792/2209",
+        "alpha_rho_channel": "3867/2434318",
+        "alpha_rho_closed": "3867/2434318",
+        "match": true
+      },
+      "53": {
+        "den_16p2_mu2": 33648,
+        "cb": "53/8412",
+        "cT": "1/33648",
+        "beta_b": "6/53",
+        "beta_Tb": "50592/2809",
+        "alpha_rho_channel": "4917/3938218",
+        "alpha_rho_closed": "4917/3938218",
+        "match": true
+      },
+      "59": {
+        "den_16p2_mu2": 41712,
+        "cb": "59/10428",
+        "cT": "1/41712",
+        "beta_b": "6/59",
+        "beta_Tb": "62688/3481",
+        "alpha_rho_channel": "6093/6049978",
+        "alpha_rho_closed": "6093/6049978",
+        "match": true
+      },
+      "61": {
+        "den_16p2_mu2": 44592,
+        "cb": "61/11148",
+        "cT": "1/44592",
+        "beta_b": "6/61",
+        "beta_Tb": "67008/3721",
+        "alpha_rho_channel": "6513/6913618",
+        "alpha_rho_closed": "6513/6913618",
+        "match": true
+      },
+      "67": {
+        "den_16p2_mu2": 53808,
+        "cb": "67/13452",
+        "cT": "1/53808",
+        "beta_b": "6/67",
+        "beta_Tb": "80832/4489",
+        "alpha_rho_channel": "7857/10064338",
+        "alpha_rho_closed": "7857/10064338",
+        "match": true
+      },
+      "71": {
+        "den_16p2_mu2": 60432,
+        "cb": "71/15108",
+        "cT": "1/60432",
+        "beta_b": "6/71",
+        "beta_Tb": "90768/5041",
+        "alpha_rho_channel": "8823/12693238",
+        "alpha_rho_closed": "8823/12693238",
+        "match": true
+      },
+      "73": {
+        "den_16p2_mu2": 63888,
+        "cb": "73/15972",
+        "cT": "1/63888",
+        "beta_b": "6/73",
+        "beta_Tb": "95952/5329",
+        "alpha_rho_channel": "9327/14185798",
+        "alpha_rho_closed": "9327/14185798",
+        "match": true
+      },
+      "79": {
+        "den_16p2_mu2": 74832,
+        "cb": "79/18708",
+        "cT": "1/74832",
+        "beta_b": "6/79",
+        "beta_Tb": "112368/6241",
+        "alpha_rho_channel": "10923/19459438",
+        "alpha_rho_closed": "10923/19459438",
+        "match": true
+      }
+    }
+  },
+  "cert_schur_scalars": {
+    "3": {
+      "p": 3,
+      "dimZ": 5,
+      "ntrials": 6,
+      "stats": {
+        "alpha_kappa": {
+          "mean": 0.3055555555555556,
+          "std": 4.5324665183683945e-17,
+          "pred": 0.3055555555555556,
+          "max_abs_err": 5.551115123125783e-17,
+          "scalar": true,
+          "matches_closed": true
+        },
+        "alpha_rho": {
+          "mean": 0.9444444444444441,
+          "std": 1.013490324081353e-16,
+          "pred": 0.9444444444444444,
+          "max_abs_err": 5.551115123125783e-16,
+          "scalar": true,
+          "matches_closed": true
+        },
+        "beta_b": {
+          "mean": 2.0,
+          "std": 4.440892098500626e-16,
+          "pred": 2.0,
+          "max_abs_err": 8.881784197001252e-16,
+          "scalar": true,
+          "matches_closed": true
+        },
+        "beta_Tb": {
+          "mean": 21.33333333333333,
+          "std": 4.1023203976182695e-15,
+          "pred": 21.333333333333332,
+          "max_abs_err": 7.105427357601002e-15,
+          "scalar": true,
+          "matches_closed": true
+        },
+        "pair": {
+          "mean": 1.2499999999999998,
+          "std": 2.398355846665908e-16,
+          "pred": 1.25,
+          "max_abs_err": 6.661338147750939e-16,
+          "scalar": true,
+          "matches_closed": true
+        }
+      },
+      "kappa_pair_direct_vs_formula_err": 0.0,
+      "kappa_pair_vs_collapse_err": 8.881784197001252e-16,
+      "all_scalar": true,
+      "all_match_closed": true
+    },
+    "5": {
+      "p": 5,
+      "dimZ": 65,
+      "ntrials": 6,
+      "stats": {
+        "alpha_kappa": {
+          "mean": 0.27,
+          "std": 6.409875621278546e-17,
+          "pred": 0.27,
+          "max_abs_err": 1.1102230246251565e-16,
+          "scalar": true,
+          "matches_closed": true
+        },
+        "alpha_rho": {
+          "mean": 0.18000000000000005,
+          "std": 5.665583147960493e-17,
+          "pred": 0.18,
+          "max_abs_err": 1.3877787807814457e-16,
+          "scalar": true,
+          "matches_closed": true
+        },
+        "beta_b": {
+          "mean": 1.2,
+          "std": 2.026980648162706e-16,
+          "pred": 1.2,
+          "max_abs_err": 4.440892098500626e-16,
+          "scalar": true,
+          "matches_closed": true
+        },
+        "beta_Tb": {
+          "mean": 19.200000000000006,
+          "std": 6.486338074120659e-15,
+          "pred": 19.2,
+          "max_abs_err": 1.7763568394002505e-14,
+          "scalar": true,
+          "matches_closed": true
+        },
+        "pair": {
+          "mean": 0.45,
+          "std": 1.3784958753881249e-16,
+          "pred": 0.45,
+          "max_abs_err": 2.7755575615628914e-16,
+          "scalar": true,
+          "matches_closed": true
+        }
+      },
+      "kappa_pair_direct_vs_formula_err": 0.0,
+      "kappa_pair_vs_collapse_err": 0.0,
+      "all_scalar": true,
+      "all_match_closed": true
+    },
+    "7": {
+      "p": 7,
+      "dimZ": 275,
+      "ntrials": 6,
+      "stats": {
+        "alpha_kappa": {
+          "mean": 0.260204081632653,
+          "std": 8.171020218150495e-17,
+          "pred": 0.2602040816326531,
+          "max_abs_err": 1.1102230246251565e-16,
+          "scalar": true,
+          "matches_closed": true
+        },
+        "alpha_rho": {
+          "mean": 0.08070500927643785,
+          "std": 2.2662332591841973e-17,
+          "pred": 0.08070500927643785,
+          "max_abs_err": 4.163336342344337e-17,
+          "scalar": true,
+          "matches_closed": true
+        },
+        "beta_b": {
+          "mean": 0.8571428571428572,
+          "std": 2.7940000073818173e-16,
+          "pred": 0.8571428571428571,
+          "max_abs_err": 6.661338147750939e-16,
+          "scalar": true,
+          "matches_closed": true
+        },
+        "beta_Tb": {
+          "mean": 18.612244897959187,
+          "std": 2.5121479338940403e-15,
+          "pred": 18.612244897959183,
+          "max_abs_err": 7.105427357601002e-15,
+          "scalar": true,
+          "matches_closed": true
+        },
+        "pair": {
+          "mean": 0.3409090909090909,
+          "std": 8.171020218150495e-17,
+          "pred": 0.3409090909090909,
+          "max_abs_err": 1.6653345369377348e-16,
+          "scalar": true,
+          "matches_closed": true
+        }
+      },
+      "kappa_pair_direct_vs_formula_err": 1.7763568394002505e-15,
+      "kappa_pair_vs_collapse_err": 1.7763568394002505e-15,
+      "all_scalar": true,
+      "all_match_closed": true
+    }
+  },
+  "cert_alpha_kappa_Z": {
+    "3": {
+      "p": 3,
+      "max_direct_vs_formula": 1.7763568394002505e-15,
+      "max_direct_vs_collapse": 1.3322676295501878e-15,
+      "holds": true
+    },
+    "5": {
+      "p": 5,
+      "max_direct_vs_formula": 4.3520742565306136e-14,
+      "max_direct_vs_collapse": 4.3520742565306136e-14,
+      "holds": true
+    }
+  },
+  "general_status": {
+    "zero_diag_pairing_proved": true,
+    "alpha_kappa_on_Z_proved": true,
+    "pair_formula_proved": true,
+    "alpha_rho_closed_form_proved": true,
+    "channel_alpha_rho_proved": true,
+    "schur_scalars_certified_p3_5_7": true,
+    "phi_residual_delta_only_proved": true,
+    "phi_residual_delta_only_for_all_p": false,
+    "delta2_le_rho_min2_for_all_p": false,
+    "c2_le_budget_for_all_p": false,
+    "sum_rho2_le_T_for_all_p": false,
+    "orth_le_room_hyp_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "open_residual": "Prove \u03b4\u00b2\u2264\u03c1_min\u00b2 for all primes p\u22655 (sufficient for residual p\u22657 by 15.110 Thm D+E), OR bound max\u27e8\u03b4,\u03ba_B\u27e9\u2264(n\u221210)/(n\u22126) on unit Z, OR evaluate c=Q_0(halfspace)\u2264\u221a(room_hyp/24).  Pair Schur + closed \u03b1_\u03c1 reduce \u03a6 excess to the pure E_{4p} channel \u03b4."
+  },
+  "attack_surface": "Prove \u03b4\u00b2\u2264\u03c1_min\u00b2 for all primes p\u22655 (sufficient for residual p\u22657 by 15.110 Thm D+E), OR bound max\u27e8\u03b4,\u03ba_B\u27e9\u2264(n\u221210)/(n\u22126) on unit Z, OR evaluate c=Q_0(halfspace)\u2264\u221a(room_hyp/24).  Pair Schur + closed \u03b1_\u03c1 reduce \u03a6 excess to the pure E_{4p} channel \u03b4.",
+  "verdict": "Proved: zero-diag \u03ba-pairing identity; \u03b1_\u03ba=(p\u00b2+2)/(4p\u00b2) on Z; pair=(p\u00b2+11)/(4(p\u00b2\u22125)); \u03b1_\u03c1=(7p\u00b2+5)/(2p\u00b2(p\u00b2\u22125)); channel reconstruction of \u03b1_\u03c1 from \u03b2_b=6/p and \u03b2_T=6(3p\u00b2+5)/p\u00b2. Certified Schur scalarity of \u03ba/p\u00b2, b, Tb, \u03c1_min on Z at p=3,5,7 with matching closed forms.  Consequence: E[(y\u1d40By)\u00b2]=\u03bc\u0304\u2016B\u2016\u00b2+8\u27e8\u03b4,\u03ba_B\u27e9 so \u03a6 excess is pure \u03b4-channel; 16N \u21d4 max\u27e8\u03b4,\u03ba_B\u27e9\u2264(n\u221210)/(n\u22126).  OPEN: \u03b4\u00b2\u2264\u03c1_min\u00b2 (or equivalent) for general p\u22655.  L OPEN.",
+  "settlement_note": "No soft-close.  Primary residual still \u03b4\u00b2\u2264\u03c1_min\u00b2 / orth\u2264room_hyp for general p\u22655; reduced to pure E_{4p} channel with closed Schur constants \u03b1_\u03ba, \u03b1_\u03c1, pair.",
+  "proved": {
+    "zero_diag_pairing": true,
+    "alpha_kappa_on_Z": true,
+    "pair_and_alpha_rho_forms": true,
+    "channel_alpha_rho": true,
+    "schur_certified_p3_5_7": true,
+    "phi_residual_delta_only_structure": true,
+    "delta_le_rho_min_for_all_p": false,
+    "sum_rho2_le_T_for_all_p": false,
+    "sixteen_N_for_all_p": false,
+    "kappa_bound_for_all_p": false
+  }
+}

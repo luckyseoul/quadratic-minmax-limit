@@ -1,0 +1,525 @@
+{
+  "prop": "15.100",
+  "backend": "CPU Fraction + Max+ p=3,5; GPU unused (F20)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "gap_proved_for_all_p": false,
+  "kappa_bound_proved_for_all_p": false,
+  "dual_frame_projection": {
+    "proved": true,
+    "theorem": "For conference Max+ of order n=p\u00b2+1: dual frame S satisfies \u27e8S,\u03ba\u27e9=\u22122n and \u27e8Wick,\u03ba\u27e9=\u221248n; \u2016S\u2016_F\u00b2=n\u00b2/(16p\u00b2); \u2016\u03ba_proj\u2016_F\u00b2=64n(p\u00b2\u22123)/(p\u00b2\u22125); 96n\u2212\u2016\u03ba_proj\u2016_F\u00b2=32n(p\u00b2\u22129)/(p\u00b2\u22125).",
+    "by_p": {
+      "3": {
+        "SS": "25/36",
+        "SS_match_expanded": true,
+        "proj_from_Gram": "960",
+        "proj_closed": "960",
+        "proj_match": true,
+        "room_orth": "0",
+        "proj_plus_room": "960",
+        "eq_96n": true
+      },
+      "5": {
+        "SS": "169/100",
+        "SS_match_expanded": true,
+        "proj_from_Gram": "9152/5",
+        "proj_closed": "9152/5",
+        "proj_match": true,
+        "room_orth": "3328/5",
+        "proj_plus_room": "2496",
+        "eq_96n": true
+      },
+      "7": {
+        "SS": "625/196",
+        "SS_match_expanded": true,
+        "proj_from_Gram": "36800/11",
+        "proj_closed": "36800/11",
+        "proj_match": true,
+        "room_orth": "16000/11",
+        "proj_plus_room": "4800",
+        "eq_96n": true
+      },
+      "11": {
+        "SS": "3721/484",
+        "SS_match_expanded": true,
+        "proj_from_Gram": "230336/29",
+        "proj_closed": "230336/29",
+        "proj_match": true,
+        "room_orth": "109312/29",
+        "proj_plus_room": "11712",
+        "eq_96n": true
+      },
+      "13": {
+        "SS": "7225/676",
+        "SS_match_expanded": true,
+        "proj_from_Gram": "451520/41",
+        "proj_closed": "451520/41",
+        "proj_match": true,
+        "room_orth": "217600/41",
+        "proj_plus_room": "16320",
+        "eq_96n": true
+      },
+      "17": {
+        "SS": "21025/1156",
+        "SS_match_expanded": true,
+        "proj_from_Gram": "1327040/71",
+        "proj_closed": "1327040/71",
+        "proj_match": true,
+        "room_orth": "649600/71",
+        "proj_plus_room": "27840",
+        "eq_96n": true
+      },
+      "19": {
+        "SS": "32761/1444",
+        "SS_match_expanded": true,
+        "proj_from_Gram": "2073536/89",
+        "proj_closed": "2073536/89",
+        "proj_match": true,
+        "room_orth": "1019392/89",
+        "proj_plus_room": "34752",
+        "eq_96n": true
+      },
+      "23": {
+        "SS": "70225/2116",
+        "SS_match_expanded": true,
+        "proj_from_Gram": "4460480/131",
+        "proj_closed": "4460480/131",
+        "proj_match": true,
+        "room_orth": "2204800/131",
+        "proj_plus_room": "50880",
+        "eq_96n": true
+      },
+      "29": {
+        "SS": "177241/3364",
+        "SS_match_expanded": true,
+        "proj_from_Gram": "11289536/209",
+        "proj_closed": "11289536/209",
+        "proj_match": true,
+        "room_orth": "5604352/209",
+        "proj_plus_room": "80832",
+        "eq_96n": true
+      },
+      "31": {
+        "SS": "231361/3844",
+        "SS_match_expanded": true,
+        "proj_from_Gram": "14745536/239",
+        "proj_closed": "14745536/239",
+        "proj_match": true,
+        "room_orth": "7326592/239",
+        "proj_plus_room": "92352",
+        "eq_96n": true
+      },
+      "37": {
+        "SS": "469225/5476",
+        "SS_match_expanded": true,
+        "proj_from_Gram": "29942720/341",
+        "proj_closed": "29942720/341",
+        "proj_match": true,
+        "room_orth": "14905600/341",
+        "proj_plus_room": "131520",
+        "eq_96n": true
+      }
+    }
+  },
+  "flat_le_wick": {
+    "proved": true,
+    "theorem": "With rank(PopP)=binom(d\u22121,2) so m=d(d\u22123)/2 bulk eigs, CS gives E[D\u2074]\u2265ED4_flat=16d\u00b2+32d(d\u22121)\u00b2/(d\u22123). Wick_hi\u2212ED4_flat=64d(d\u22125)/(d\u22123)\u22650 for d\u22655 (p\u22653), eq only d=5 (p=3). kappa_flat:=ED4_flat\u2212(12n\u00b2\u221248n) equals the dual-frame projection.",
+    "by_p": {
+      "3": {
+        "d": 5,
+        "ED4_flat": "1680",
+        "Wick_hi": 1680,
+        "ED4_flat_le_Wick": true,
+        "room": "0",
+        "room_closed": "0",
+        "room_match": true,
+        "kappa_flat": "960",
+        "eq_proj": true,
+        "eq_only_p3": true
+      },
+      "5": {
+        "d": 13,
+        "ED4_flat": "43472/5",
+        "Wick_hi": 9360,
+        "ED4_flat_le_Wick": true,
+        "room": "3328/5",
+        "room_closed": "3328/5",
+        "room_match": true,
+        "kappa_flat": "9152/5",
+        "eq_proj": true,
+        "eq_only_p3": true
+      },
+      "7": {
+        "d": 25,
+        "ED4_flat": "340400/11",
+        "Wick_hi": 32400,
+        "ED4_flat_le_Wick": true,
+        "room": "16000/11",
+        "room_closed": "16000/11",
+        "room_match": true,
+        "kappa_flat": "36800/11",
+        "eq_proj": true,
+        "eq_only_p3": true
+      },
+      "11": {
+        "d": 61,
+        "ED4_flat": "5240144/29",
+        "Wick_hi": 184464,
+        "ED4_flat_le_Wick": true,
+        "room": "109312/29",
+        "room_closed": "109312/29",
+        "room_match": true,
+        "kappa_flat": "230336/29",
+        "eq_proj": true,
+        "eq_only_p3": true
+      },
+      "13": {
+        "d": 85,
+        "ED4_flat": "14335760/41",
+        "Wick_hi": 354960,
+        "ED4_flat_le_Wick": true,
+        "room": "217600/41",
+        "room_closed": "217600/41",
+        "room_match": true,
+        "kappa_flat": "451520/41",
+        "eq_proj": true,
+        "eq_only_p3": true
+      },
+      "17": {
+        "d": 145,
+        "ED4_flat": "71991920/71",
+        "Wick_hi": 1023120,
+        "ED4_flat_le_Wick": true,
+        "room": "649600/71",
+        "room_closed": "649600/71",
+        "room_match": true,
+        "kappa_flat": "1327040/71",
+        "eq_proj": true,
+        "eq_only_p3": true
+      },
+      "19": {
+        "d": 181,
+        "ED4_flat": "140482064/89",
+        "Wick_hi": 1589904,
+        "ED4_flat_le_Wick": true,
+        "room": "1019392/89",
+        "room_closed": "1019392/89",
+        "room_match": true,
+        "kappa_flat": "2073536/89",
+        "eq_proj": true,
+        "eq_only_p3": true
+      },
+      "23": {
+        "d": 265,
+        "ED4_flat": "442702640/131",
+        "Wick_hi": 3396240,
+        "ED4_flat_le_Wick": true,
+        "room": "2204800/131",
+        "room_closed": "2204800/131",
+        "room_match": true,
+        "kappa_flat": "4460480/131",
+        "eq_proj": true,
+        "eq_only_p3": true
+      },
+      "29": {
+        "d": 421,
+        "ED4_flat": "1780924304/209",
+        "Wick_hi": 8547984,
+        "ED4_flat_le_Wick": true,
+        "room": "5604352/209",
+        "room_closed": "5604352/209",
+        "room_match": true,
+        "kappa_flat": "11289536/209",
+        "eq_proj": true,
+        "eq_only_p3": true
+      },
+      "31": {
+        "d": 481,
+        "ED4_flat": "2657882864/239",
+        "Wick_hi": 11151504,
+        "ED4_flat_le_Wick": true,
+        "room": "7326592/239",
+        "room_closed": "7326592/239",
+        "room_match": true,
+        "kappa_flat": "14745536/239",
+        "eq_proj": true,
+        "eq_only_p3": true
+      },
+      "37": {
+        "d": 685,
+        "ED4_flat": "7687793360/341",
+        "Wick_hi": 22588560,
+        "ED4_flat_le_Wick": true,
+        "room": "14905600/341",
+        "room_closed": "14905600/341",
+        "room_match": true,
+        "kappa_flat": "29942720/341",
+        "eq_proj": true,
+        "eq_only_p3": true
+      }
+    }
+  },
+  "kappa_hyp_le_96n": {
+    "proved": true,
+    "theorem": "Define \u03ba_hyp=64n(p\u00b2\u22123)/(p\u00b2\u22125)+32n(p\u00b2\u22129)/(p\u00b2\u22125)\u00b7((n\u22122)/n)\u00b2. Then 96n\u2212\u03ba_hyp=128p\u00b2(p\u22123)(p+3)/((p\u00b2\u22125)(p\u00b2+1))\u22650 for every odd prime p\u22653, equality only at p=3.",
+    "by_p": {
+      "3": {
+        "kappa_hyp": "960",
+        "budget_96n": 960,
+        "kappa_hyp_le_96n": true,
+        "slack": "0",
+        "slack_closed": "0",
+        "slack_match": true,
+        "eq_only_p3": true
+      },
+      "5": {
+        "kappa_hyp": "31168/13",
+        "budget_96n": 2496,
+        "kappa_hyp_le_96n": true,
+        "slack": "1280/13",
+        "slack_closed": "1280/13",
+        "slack_match": true,
+        "eq_only_p3": true
+      },
+      "7": {
+        "kappa_hyp": "257728/55",
+        "budget_96n": 4800,
+        "kappa_hyp_le_96n": true,
+        "slack": "6272/55",
+        "slack_closed": "6272/55",
+        "slack_match": true,
+        "eq_only_p3": true
+      },
+      "11": {
+        "kappa_hyp": "20501696/1769",
+        "budget_96n": 11712,
+        "kappa_hyp_le_96n": true,
+        "slack": "216832/1769",
+        "slack_closed": "216832/1769",
+        "slack_match": true,
+        "eq_only_p3": true
+      },
+      "13": {
+        "kappa_hyp": "11288512/697",
+        "budget_96n": 16320,
+        "kappa_hyp_le_96n": true,
+        "slack": "86528/697",
+        "slack_closed": "86528/697",
+        "slack_match": true,
+        "eq_only_p3": true
+      },
+      "17": {
+        "kappa_hyp": "57063616/2059",
+        "budget_96n": 27840,
+        "kappa_hyp_le_96n": true,
+        "slack": "258944/2059",
+        "slack_closed": "258944/2059",
+        "slack_match": true,
+        "eq_only_p3": true
+      },
+      "19": {
+        "kappa_hyp": "557786816/16109",
+        "budget_96n": 34752,
+        "kappa_hyp_le_96n": true,
+        "slack": "2033152/16109",
+        "slack_closed": "2033152/16109",
+        "slack_match": true,
+        "eq_only_p3": true
+      },
+      "23": {
+        "kappa_hyp": "352379584/6943",
+        "budget_96n": 50880,
+        "kappa_hyp_le_96n": true,
+        "slack": "880256/6943",
+        "slack_closed": "880256/6943",
+        "slack_match": true,
+        "eq_only_p3": true
+      },
+      "29": {
+        "kappa_hyp": "7101131456/87989",
+        "budget_96n": 80832,
+        "kappa_hyp_le_96n": true,
+        "slack": "11195392/87989",
+        "slack_closed": "11195392/87989",
+        "slack_match": true,
+        "eq_only_p3": true
+      },
+      "31": {
+        "kappa_hyp": "10602055616/114959",
+        "budget_96n": 92352,
+        "kappa_hyp_le_96n": true,
+        "slack": "14637952/114959",
+        "slack_closed": "14637952/114959",
+        "slack_match": true,
+        "eq_only_p3": true
+      },
+      "37": {
+        "kappa_hyp": "6138261952/46717",
+        "budget_96n": 131520,
+        "kappa_hyp_le_96n": true,
+        "slack": "5957888/46717",
+        "slack_closed": "5957888/46717",
+        "slack_match": true,
+        "eq_only_p3": true
+      }
+    }
+  },
+  "orth_bound": {
+    "proved": true,
+    "general_orth_inequality_proved": false,
+    "theorem": "Candidate orth bound: \u2016\u03ba_orth\u2016_F\u00b2 \u2264 room\u00b7((d\u22121)/d)\u00b2 = room\u00b7((n\u22122)/n)\u00b2, using PSL min-irrep dim d\u22121 (Prop 15.98). Algebra of the form is proved; the inequality for general p is OPEN (certified as equality at p=3,5). If it holds, then \u2016\u03ba\u2016_F\u00b2 \u2264 \u03ba_hyp(p) \u2264 96n.",
+    "by_p": {
+      "3": {
+        "d": 5,
+        "min_irrep_over_d": "4/5",
+        "ratio_sq": "16/25",
+        "ratio_sq_via_n": "16/25",
+        "match": true,
+        "orth_ub": "0",
+        "kappa_hyp": "960"
+      },
+      "5": {
+        "d": 13,
+        "min_irrep_over_d": "12/13",
+        "ratio_sq": "144/169",
+        "ratio_sq_via_n": "144/169",
+        "match": true,
+        "orth_ub": "36864/65",
+        "kappa_hyp": "31168/13"
+      },
+      "7": {
+        "d": 25,
+        "min_irrep_over_d": "24/25",
+        "ratio_sq": "576/625",
+        "ratio_sq_via_n": "576/625",
+        "match": true,
+        "orth_ub": "73728/55",
+        "kappa_hyp": "257728/55"
+      },
+      "11": {
+        "d": 61,
+        "min_irrep_over_d": "60/61",
+        "ratio_sq": "3600/3721",
+        "ratio_sq_via_n": "3600/3721",
+        "match": true,
+        "orth_ub": "6451200/1769",
+        "kappa_hyp": "20501696/1769"
+      },
+      "13": {
+        "d": 85,
+        "min_irrep_over_d": "84/85",
+        "ratio_sq": "7056/7225",
+        "ratio_sq_via_n": "7056/7225",
+        "match": true,
+        "orth_ub": "3612672/697",
+        "kappa_hyp": "11288512/697"
+      },
+      "17": {
+        "d": 145,
+        "min_irrep_over_d": "144/145",
+        "ratio_sq": "20736/21025",
+        "ratio_sq_via_n": "20736/21025",
+        "match": true,
+        "orth_ub": "18579456/2059",
+        "kappa_hyp": "57063616/2059"
+      },
+      "19": {
+        "d": 181,
+        "min_irrep_over_d": "180/181",
+        "ratio_sq": "32400/32761",
+        "ratio_sq_via_n": "32400/32761",
+        "match": true,
+        "orth_ub": "182476800/16109",
+        "kappa_hyp": "557786816/16109"
+      },
+      "23": {
+        "d": 265,
+        "min_irrep_over_d": "264/265",
+        "ratio_sq": "69696/70225",
+        "ratio_sq_via_n": "69696/70225",
+        "match": true,
+        "orth_ub": "115974144/6943",
+        "kappa_hyp": "352379584/6943"
+      },
+      "29": {
+        "d": 421,
+        "min_irrep_over_d": "420/421",
+        "ratio_sq": "176400/177241",
+        "ratio_sq_via_n": "176400/177241",
+        "match": true,
+        "orth_ub": "2348236800/87989",
+        "kappa_hyp": "7101131456/87989"
+      },
+      "31": {
+        "d": 481,
+        "min_irrep_over_d": "480/481",
+        "ratio_sq": "230400/231361",
+        "ratio_sq_via_n": "230400/231361",
+        "match": true,
+        "orth_ub": "3509452800/114959",
+        "kappa_hyp": "10602055616/114959"
+      },
+      "37": {
+        "d": 685,
+        "min_irrep_over_d": "684/685",
+        "ratio_sq": "467856/469225",
+        "ratio_sq_via_n": "467856/469225",
+        "match": true,
+        "orth_ub": "2036109312/46717",
+        "kappa_hyp": "6138261952/46717"
+      }
+    }
+  },
+  "kappa_bound": {
+    "proved": false,
+    "theorem": "OPEN for general p\u22655: \u2016\u03ba\u2016_F\u00b2 \u2264 96n on Paley Max+. Reduced form: prove \u2016\u03ba_orth\u2016\u00b2 \u2264 room\u00b7((d\u22121)/d)\u00b2 (equivalently \u03ba\u00b2 \u2264 \u03ba_hyp), then Fraction algebra gives \u226496n. Certified \u03ba\u00b2 = \u03ba_hyp at p=3,5 (eq 96n only p=3). Supporting lemmas (dual-frame proj, ED4_flat\u2264Wick, \u03ba_hyp\u226496n) are proved.",
+    "reduced_to": "\u2016\u03ba_orth\u2016_F\u00b2 \u2264 32n(p\u00b2\u22129)/(p\u00b2\u22125) \u00b7 ((d\u22121)/d)\u00b2"
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "d": 5,
+      "ED4": 1680.0,
+      "ED4_flat": 1680.0,
+      "Wick_hi": 1680.0,
+      "kappa2": 960.0,
+      "proj": 960.0,
+      "kappa_hyp": 960.0,
+      "budget_96n": 960.0,
+      "kappa2_le_96n": true,
+      "kappa2_le_hyp": true,
+      "kappa2_eq_hyp": true,
+      "ED4_ge_flat": true,
+      "ED4_flat_le_Wick": true,
+      "ok": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "d": 13,
+      "ED4": 9261.538461538461,
+      "ED4_flat": 8694.4,
+      "Wick_hi": 9360.0,
+      "kappa2": 2397.538461538461,
+      "proj": 1830.4,
+      "kappa_hyp": 2397.5384615384614,
+      "budget_96n": 2496.0,
+      "kappa2_le_96n": true,
+      "kappa2_le_hyp": true,
+      "kappa2_eq_hyp": true,
+      "ED4_ge_flat": true,
+      "ED4_flat_le_Wick": true,
+      "ok": true
+    },
+    "7": {
+      "p": 7,
+      "skipped": true
+    }
+  },
+  "attack_surface": "OPEN: prove \u2016\u03ba_orth\u2016\u00b2 \u2264 room\u00b7((d\u22121)/d)\u00b2 for all primes p\u22655 (\u21d4 \u03ba\u00b2 \u2264 \u03ba_hyp \u21d4 \u2016\u03ba\u2016\u00b2 \u2264 96n). Dual-frame proj, ED4_flat\u2264Wick, and \u03ba_hyp\u226496n are proved. Certified \u03ba\u00b2=\u03ba_hyp at p=3,5. Halfspace sub-orbit alone can exceed Wick \u2014 full Max+ required. With orth bound + 15.98: bi-tight for Paley p\u22655. Then N_DEEP.",
+  "verdict": "Prop 15.100 proves dual-frame projection \u2016\u03ba_proj\u2016\u00b2=64n(p\u00b2\u22123)/(p\u00b2\u22125), flat Veronese bound ED4_flat\u2264Wick (eq only p=3), and \u03ba_hyp\u226496n algebra. Reduces \u2016\u03ba\u2016\u00b2\u226496n to \u2016\u03ba_orth\u2016\u00b2\u2264room\u00b7((d\u22121)/d)\u00b2. Certified equality \u03ba\u00b2=\u03ba_hyp at p=3,5. General orth bound OPEN. lim \u03b1_n OPEN.",
+  "settlement_note": "Next: prove orth bound (PSL isotypic / closed-form E[D\u2074] for full Max+), then bi-tight via 15.98+15.100; then N_DEEP + Main Theorem. L stays OPEN.",
+  "proved": true
+}

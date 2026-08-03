@@ -1,0 +1,303 @@
+{
+  "prop": "15.129",
+  "title": "Prop 15.129: Jensen coherent-mass inequality; Hoffman geometry; r\u0304 formula; residual OPEN generally",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Jensen reduces residual to E\u2016P f_y\u2016\u00b2 bound; Hoffman layer is not a 1-design at p=7 (r\u0304=44/25). Full general residual still open. N_ED4_SUF OPEN. L OPEN.",
+  "proved": {
+    "jensen_coherent_mass": true,
+    "residual_dictionary_census": true,
+    "hoffman_geometry_p5": true,
+    "average_replication": true,
+    "p7_hoffman_not_1_design": true,
+    "census_residual_p3_p5_p7": true,
+    "weight_enumerator_closed_general": false,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  },
+  "algebra": {
+    "jensen": {
+      "proved": true,
+      "theorem": "\u03b4 = E[P f_y] with P=P_{E_4p}; \u03b4\u00b2 \u2264 E\u2016P f_y\u2016\u2082\u00b2 by convexity of \u2016\u00b7\u2016\u00b2; equality iff P f_y a.s. constant on Max+.  Hence E\u2016P f_y\u2016\u2082\u00b2 \u2264 room_hyp/24 \u21d2 Path C residual.",
+      "equality_cases": {
+        "p=3": "\u03b4=0 (\u03bb_max(T)<4p); trivial equality",
+        "p=5": "ED4 saturates bud; single residual type; equality expected",
+        "p=7": "3 ED4 types (15.114); strict inequality in Jensen expected"
+      }
+    },
+    "dictionary": {
+      "proved": true,
+      "theorem": "ED4 \u2194 \u2211m\u2084\u00b2 \u2194 \u03b4\u00b2 linear dictionary; residual \u21d4 ED4\u2264bud \u21d4 \u03b4\u00b2\u2264room \u21d4 \u2211m\u2084\u00b2\u2264m4f_bud. Cert p=3,5,7.",
+      "by_p": {
+        "3": {
+          "ED4": "1680",
+          "sum_m4_sq": "110/3",
+          "delta2": "0",
+          "delta2_via_sm": "0",
+          "m4f_flat": "110/3",
+          "m4f_bud": "110/3",
+          "room": "0",
+          "ED4_le_bud": true,
+          "match": true,
+          "eq_bud": true
+        },
+        "5": {
+          "ED4": "120400/13",
+          "sum_m4_sq": "1862/13",
+          "delta2": "1536/65",
+          "delta2_via_sm": "1536/65",
+          "m4f_flat": "598/5",
+          "m4f_bud": "1862/13",
+          "room": "1536/65",
+          "ED4_le_bud": true,
+          "match": true,
+          "eq_bud": true
+        },
+        "7": {
+          "ED4": "12835984/409",
+          "sum_m4_sq": "159916/409",
+          "delta2": "82176/4499",
+          "delta2_via_sm": "82176/4499",
+          "m4f_flat": "4100/11",
+          "m4f_bud": "23572/55",
+          "room": "3072/55",
+          "ED4_le_bud": true,
+          "match": true,
+          "eq_bud": false
+        }
+      }
+    },
+    "replication": {
+      "proved": true,
+      "p7_hoffman_not_1_design": true,
+      "theorem": "Average Hoffman replication r\u0304=W_{p+1}(p+1)/n; integral (1-design possible) for p\u22611 mod 4 and p=3; at p=7 r\u0304=44/25\u2209\u2124 so Hoffman layer is not a 1-design.",
+      "by_p": {
+        "3": {
+          "W_hoffman": 5,
+          "r_bar": "2",
+          "integral": true,
+          "is_1_design_possible": true,
+          "expected": "2",
+          "match": true,
+          "chi4": -1,
+          "p_mod_4": 3
+        },
+        "5": {
+          "W_hoffman": 13,
+          "r_bar": "3",
+          "integral": true,
+          "is_1_design_possible": true,
+          "expected": "3",
+          "match": true,
+          "chi4": 1,
+          "p_mod_4": 1
+        },
+        "7": {
+          "W_hoffman": 11,
+          "r_bar": "44/25",
+          "integral": false,
+          "is_1_design_possible": false,
+          "expected": "44/25",
+          "match": true,
+          "chi4": -1,
+          "p_mod_4": 3
+        },
+        "11": {
+          "W_hoffman": 17,
+          "r_bar": "102/61",
+          "integral": false,
+          "is_1_design_possible": false,
+          "expected": "102/61",
+          "match": true,
+          "chi4": -1,
+          "p_mod_4": 3
+        },
+        "13": {
+          "W_hoffman": 85,
+          "r_bar": "7",
+          "integral": true,
+          "is_1_design_possible": true,
+          "expected": "7",
+          "match": true,
+          "chi4": 1,
+          "p_mod_4": 1
+        },
+        "17": {
+          "W_hoffman": 145,
+          "r_bar": "9",
+          "integral": true,
+          "is_1_design_possible": true,
+          "expected": "9",
+          "match": true,
+          "chi4": 1,
+          "p_mod_4": 1
+        },
+        "19": {
+          "W_hoffman": 29,
+          "r_bar": "290/181",
+          "integral": false,
+          "is_1_design_possible": false,
+          "expected": "290/181",
+          "match": true,
+          "chi4": -1,
+          "p_mod_4": 3
+        },
+        "23": {
+          "W_hoffman": 35,
+          "r_bar": "84/53",
+          "integral": false,
+          "is_1_design_possible": false,
+          "expected": "84/53",
+          "match": true,
+          "chi4": -1,
+          "p_mod_4": 3
+        },
+        "29": {
+          "W_hoffman": 421,
+          "r_bar": "15",
+          "integral": true,
+          "is_1_design_possible": true,
+          "expected": "15",
+          "match": true,
+          "chi4": 1,
+          "p_mod_4": 1
+        },
+        "31": {
+          "W_hoffman": 47,
+          "r_bar": "752/481",
+          "integral": false,
+          "is_1_design_possible": false,
+          "expected": "752/481",
+          "match": true,
+          "chi4": -1,
+          "p_mod_4": 3
+        },
+        "37": {
+          "W_hoffman": 685,
+          "r_bar": "19",
+          "integral": true,
+          "is_1_design_possible": true,
+          "expected": "19",
+          "match": true,
+          "chi4": 1,
+          "p_mod_4": 1
+        },
+        "41": {
+          "W_hoffman": 841,
+          "r_bar": "21",
+          "integral": true,
+          "is_1_design_possible": true,
+          "expected": "21",
+          "match": true,
+          "chi4": 1,
+          "p_mod_4": 1
+        },
+        "43": {
+          "W_hoffman": 65,
+          "r_bar": "286/185",
+          "integral": false,
+          "is_1_design_possible": false,
+          "expected": "286/185",
+          "match": true,
+          "chi4": -1,
+          "p_mod_4": 3
+        },
+        "47": {
+          "W_hoffman": 71,
+          "r_bar": "1704/1105",
+          "integral": false,
+          "is_1_design_possible": false,
+          "expected": "1704/1105",
+          "match": true,
+          "chi4": -1,
+          "p_mod_4": 3
+        },
+        "53": {
+          "W_hoffman": 1405,
+          "r_bar": "27",
+          "integral": true,
+          "is_1_design_possible": true,
+          "expected": "27",
+          "match": true,
+          "chi4": 1,
+          "p_mod_4": 1
+        },
+        "59": {
+          "W_hoffman": 89,
+          "r_bar": "2670/1741",
+          "integral": false,
+          "is_1_design_possible": false,
+          "expected": "2670/1741",
+          "match": true,
+          "chi4": -1,
+          "p_mod_4": 3
+        }
+      }
+    },
+    "census_residual": {
+      "proved_at_census_primes": true,
+      "proved_for_all_p": false,
+      "by_p": {
+        "3": {
+          "ED4_le_bud": true,
+          "ED4_eq_bud": true,
+          "ED4": "1680",
+          "bud": "1680"
+        },
+        "5": {
+          "ED4_le_bud": true,
+          "ED4_eq_bud": true,
+          "ED4": "120400/13",
+          "bud": "120400/13"
+        },
+        "7": {
+          "ED4_le_bud": true,
+          "ED4_eq_bud": false,
+          "ED4": "12835984/409",
+          "bud": "1775728/55"
+        }
+      },
+      "theorem": "Residual holds by census at p=3,5,7; not proved for general p\u22655."
+    }
+  },
+  "cert": {
+    "hoffman_geometry_p5": {
+      "p": 5,
+      "W_hoffman": 13,
+      "intersection_counts": {
+        "0": 30,
+        "1": 18,
+        "2": 30
+      },
+      "disjoint_pairs": 30,
+      "W_12": 60,
+      "W_12_hoffman_content": {
+        "0": 30,
+        "2": 30
+      },
+      "disjoint_pairs_eq_W12_half": true,
+      "W_16": 36,
+      "W_16_hoffman_content": {
+        "2": 36
+      },
+      "all_W16_have_exactly_2_hoffman": true,
+      "match": true
+    }
+  },
+  "status": {
+    "jensen_proved": true,
+    "p7_hoffman_1_design": false,
+    "weight_enumerator_closed_form": false,
+    "hyp_residual_for_all_p": false
+  },
+  "closed_forms": {
+    "r_bar": "W_{p+1}(p+1)/n with W_{p+1} from 15.127",
+    "jensen": "\u03b4\u00b2 \u2264 E\u2016P_{E_4p} f_y\u2016\u00b2",
+    "dictionary": "\u03b4\u00b2=(ED4\u2212ED4_flat)/24"
+  },
+  "open_attack": "Evaluate/bound E\u2016P_{E_4p} f_y\u2016\u00b2 \u2264 room_hyp/24 for all primes p\u22655 (coherent configuration / Gauss sums), or closed general W_k.",
+  "backend": "CPU Fraction algebra + Max+ cert p=3,5,7; GPU unused (F20); F19 no class_key",
+  "F19": "no class_key",
+  "F20": "GPU unused",
+  "residual_closed": false
+}

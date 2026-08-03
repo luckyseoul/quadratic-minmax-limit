@@ -1,0 +1,576 @@
+{
+  "prop": "15.110",
+  "backend": "CPU Fraction algebra + Max+ cert p=3,5,7; GPU unused (F20)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "kappa_bound_proved_for_all_p": false,
+  "sum_rho2_le_T_proved_for_all_p": false,
+  "sum_kappa_prod": {
+    "proved": true,
+    "theorem": "For boolean y with Cy=py on conference n=p\u00b2+1: (y\u1d40Cy)\u00b2=p\u00b2n\u00b2=2n(n\u22121)+8\u2211_S \u03ba(S)\u220fy_i, hence \u2211\u03ba\u220f=n(n\u22121)(n\u22122)/8. (Case |3|=0 via C\u00b2=p\u00b2I; |2|=2n(n\u22121); |4|=8\u2211\u03ba\u220f.)",
+    "by_p": {
+      "3": {
+        "lhs_p2n2": 900,
+        "rhs": 900,
+        "match": true,
+        "sum_kappa_prod": "90"
+      },
+      "5": {
+        "lhs_p2n2": 16900,
+        "rhs": 16900,
+        "match": true,
+        "sum_kappa_prod": "1950"
+      },
+      "7": {
+        "lhs_p2n2": 122500,
+        "rhs": 122500,
+        "match": true,
+        "sum_kappa_prod": "14700"
+      },
+      "11": {
+        "lhs_p2n2": 1800964,
+        "rhs": 1800964,
+        "match": true,
+        "sum_kappa_prod": "221430"
+      },
+      "13": {
+        "lhs_p2n2": 4884100,
+        "rhs": 4884100,
+        "match": true,
+        "sum_kappa_prod": "603330"
+      },
+      "17": {
+        "lhs_p2n2": 24304900,
+        "rhs": 24304900,
+        "match": true,
+        "sum_kappa_prod": "3017160"
+      },
+      "19": {
+        "lhs_p2n2": 47306884,
+        "rhs": 47306884,
+        "match": true,
+        "sum_kappa_prod": "5880690"
+      },
+      "23": {
+        "lhs_p2n2": 148596100,
+        "rhs": 148596100,
+        "match": true,
+        "sum_kappa_prod": "18504420"
+      },
+      "29": {
+        "lhs_p2n2": 596238724,
+        "rhs": 596238724,
+        "match": true,
+        "sum_kappa_prod": "74352810"
+      },
+      "31": {
+        "lhs_p2n2": 889351684,
+        "rhs": 889351684,
+        "match": true,
+        "sum_kappa_prod": "110937840"
+      },
+      "37": {
+        "lhs_p2n2": 2569476100,
+        "rhs": 2569476100,
+        "match": true,
+        "sum_kappa_prod": "320715630"
+      },
+      "41": {
+        "lhs_p2n2": 4755757444,
+        "rhs": 4755757444,
+        "match": true,
+        "sum_kappa_prod": "593762820"
+      },
+      "43": {
+        "lhs_p2n2": 6328202500,
+        "rhs": 6328202500,
+        "match": true,
+        "sum_kappa_prod": "790170150"
+      },
+      "47": {
+        "lhs_p2n2": 10788976900,
+        "rhs": 10788976900,
+        "match": true,
+        "sum_kappa_prod": "1347401640"
+      },
+      "53": {
+        "lhs_p2n2": 22180144900,
+        "rhs": 22180144900,
+        "match": true,
+        "sum_kappa_prod": "2770544790"
+      },
+      "59": {
+        "lhs_p2n2": 42204771844,
+        "rhs": 42204771844,
+        "match": true,
+        "sum_kappa_prod": "5272566270"
+      },
+      "61": {
+        "lhs_p2n2": 51548069764,
+        "rhs": 51548069764,
+        "match": true,
+        "sum_kappa_prod": "6440046330"
+      },
+      "67": {
+        "lhs_p2n2": 90498688900,
+        "rhs": 90498688900,
+        "match": true,
+        "sum_kappa_prod": "11307297210"
+      },
+      "71": {
+        "lhs_p2n2": 128151112324,
+        "rhs": 128151112324,
+        "match": true,
+        "sum_kappa_prod": "16012534860"
+      },
+      "73": {
+        "lhs_p2n2": 151391028100,
+        "rhs": 151391028100,
+        "match": true,
+        "sum_kappa_prod": "18916777620"
+      },
+      "79": {
+        "lhs_p2n2": 243165361924,
+        "rhs": 243165361924,
+        "match": true,
+        "sum_kappa_prod": "30385931160"
+      },
+      "83": {
+        "lhs_p2n2": 327035296900,
+        "rhs": 327035296900,
+        "match": true,
+        "sum_kappa_prod": "40867545810"
+      },
+      "89": {
+        "lhs_p2n2": 497106783364,
+        "rhs": 497106783364,
+        "match": true,
+        "sum_kappa_prod": "62122660380"
+      },
+      "97": {
+        "lhs_p2n2": 833149072900,
+        "rhs": 833149072900,
+        "match": true,
+        "sum_kappa_prod": "104121499440"
+      }
+    }
+  },
+  "e4_formula": {
+    "proved": true,
+    "theorem": "e\u2084 is even in the coordinate sum s for boolean vectors; on Max+ one has |s|=p+1, hence e\u2084=\u2212p(p\u22121)(p+1)(p+4)/12 constant.",
+    "by_p": {
+      "3": {
+        "e4_s_pos": "-14",
+        "e4_s_neg": "-14",
+        "e4_closed": "-14",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "5": {
+        "e4_s_pos": "-90",
+        "e4_s_neg": "-90",
+        "e4_closed": "-90",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "7": {
+        "e4_s_pos": "-308",
+        "e4_s_neg": "-308",
+        "e4_closed": "-308",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "11": {
+        "e4_s_pos": "-1650",
+        "e4_s_neg": "-1650",
+        "e4_closed": "-1650",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "13": {
+        "e4_s_pos": "-3094",
+        "e4_s_neg": "-3094",
+        "e4_closed": "-3094",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "17": {
+        "e4_s_pos": "-8568",
+        "e4_s_neg": "-8568",
+        "e4_closed": "-8568",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "19": {
+        "e4_s_pos": "-13110",
+        "e4_s_neg": "-13110",
+        "e4_closed": "-13110",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "23": {
+        "e4_s_pos": "-27324",
+        "e4_s_neg": "-27324",
+        "e4_closed": "-27324",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "29": {
+        "e4_s_pos": "-66990",
+        "e4_s_neg": "-66990",
+        "e4_closed": "-66990",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "31": {
+        "e4_s_pos": "-86800",
+        "e4_s_neg": "-86800",
+        "e4_closed": "-86800",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "37": {
+        "e4_s_pos": "-172938",
+        "e4_s_neg": "-172938",
+        "e4_closed": "-172938",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "41": {
+        "e4_s_pos": "-258300",
+        "e4_s_neg": "-258300",
+        "e4_closed": "-258300",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "43": {
+        "e4_s_pos": "-311234",
+        "e4_s_neg": "-311234",
+        "e4_closed": "-311234",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "47": {
+        "e4_s_pos": "-441048",
+        "e4_s_neg": "-441048",
+        "e4_closed": "-441048",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "53": {
+        "e4_s_pos": "-706914",
+        "e4_s_neg": "-706914",
+        "e4_closed": "-706914",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "59": {
+        "e4_s_pos": "-1077930",
+        "e4_s_neg": "-1077930",
+        "e4_closed": "-1077930",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "61": {
+        "e4_s_pos": "-1229150",
+        "e4_s_neg": "-1229150",
+        "e4_closed": "-1229150",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "67": {
+        "e4_s_pos": "-1779118",
+        "e4_s_neg": "-1779118",
+        "e4_closed": "-1779118",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "71": {
+        "e4_s_pos": "-2236500",
+        "e4_s_neg": "-2236500",
+        "e4_closed": "-2236500",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "73": {
+        "e4_s_pos": "-2495724",
+        "e4_s_neg": "-2495724",
+        "e4_closed": "-2495724",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "79": {
+        "e4_s_pos": "-3409640",
+        "e4_s_neg": "-3409640",
+        "e4_closed": "-3409640",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "83": {
+        "e4_s_pos": "-4144854",
+        "e4_s_neg": "-4144854",
+        "e4_closed": "-4144854",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "89": {
+        "e4_s_pos": "-5462820",
+        "e4_s_neg": "-5462820",
+        "e4_closed": "-5462820",
+        "match_pos": true,
+        "match_neg": true
+      },
+      "97": {
+        "e4_s_pos": "-7680848",
+        "e4_s_neg": "-7680848",
+        "e4_closed": "-7680848",
+        "match_pos": true,
+        "match_neg": true
+      }
+    }
+  },
+  "rho_min_lt_budget": {
+    "proved": true,
+    "theorem": "\u2016\u03c1_min\u2016\u2082\u00b2\u2212room_hyp/24=\u2212(p\u00b2\u22121)(3p\u2076\u2212105p\u2074+37p\u00b2\u221215)/(6p\u00b2(p\u00b2\u22125)(p\u00b2+1))<0 for all primes p\u22657.",
+    "by_p": {
+      "3": {
+        "skipped_small": true,
+        "diff": "200/9",
+        "rm": "200/9",
+        "budget": "0"
+      },
+      "5": {
+        "skipped_small": true,
+        "diff": "1784/325",
+        "rm": "728/25",
+        "budget": "1536/65"
+      },
+      "7": {
+        "diff": "-20528/2695",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 102640,
+        "cubic_positive": true
+      },
+      "11": {
+        "diff": "-9454600/214049",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 3781840,
+        "cubic_positive": true
+      },
+      "13": {
+        "diff": "-8041432/117793",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 11487760,
+        "cubic_positive": true
+      },
+      "17": {
+        "diff": "-76384416/595051",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 63653680,
+        "cubic_positive": true
+      },
+      "19": {
+        "diff": "-956004600/5815349",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 127467280,
+        "cubic_positive": true
+      },
+      "23": {
+        "diff": "-912436624/3672847",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 414743920,
+        "cubic_positive": true
+      },
+      "29": {
+        "diff": "-29929139800/73998749",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 1710236560,
+        "cubic_positive": true
+      },
+      "31": {
+        "diff": "-51311537600/110475599",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 2565576880,
+        "cubic_positive": true
+      },
+      "37": {
+        "diff": "-42752524872/63955573",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 7500442960,
+        "cubic_positive": true
+      },
+      "41": {
+        "diff": "-488378450000/592349099",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 13953670000,
+        "cubic_positive": true
+      },
+      "43": {
+        "diff": "-143259912488/157691965",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 18605183440,
+        "cubic_positive": true
+      },
+      "47": {
+        "diff": "-292793323040/268992139",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 31825361200,
+        "cubic_positive": true
+      },
+      "53": {
+        "diff": "-768276835560/553319629",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 65664686800,
+        "cubic_positive": true
+      },
+      "59": {
+        "diff": "-9082031993000/5266505849",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 125269406800,
+        "cubic_positive": true
+      },
+      "61": {
+        "diff": "-11865827176600/6433121549",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 153107447440,
+        "cubic_positive": true
+      },
+      "67": {
+        "diff": "-5035151619256/2259443881",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 269259444880,
+        "cubic_positive": true
+      },
+      "71": {
+        "diff": "-40071445234800/15999826499",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 381632811760,
+        "cubic_positive": true
+      },
+      "73": {
+        "diff": "-10012667547984/3780515167",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 451021060720,
+        "cubic_positive": true
+      },
+      "79": {
+        "diff": "-94272469064800/30366452999",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 725172838960,
+        "cubic_positive": true
+      },
+      "83": {
+        "diff": "-28006557811736/8168762641",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 975838251280,
+        "cubic_positive": true
+      },
+      "89": {
+        "diff": "-244918778055600/62091285299",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 1484356230640,
+        "cubic_positive": true
+      },
+      "97": {
+        "diff": "-97593134905280/20815446019",
+        "match_rm_minus_budget": true,
+        "diff_negative": true,
+        "cubic_3p6_...": 2489620788400,
+        "cubic_positive": true
+      }
+    }
+  },
+  "sufficient_criterion": {
+    "proved": true,
+    "theorem": "For primes p\u22657: \u03b4\u00b2\u2264\u03c1_min\u00b2 \u21d2 \u03b4\u00b2<room_hyp/24 \u21d2 orth\u2264room_hyp \u21d2 \u2211\u03c1\u00b2\u2264T_\u03c1 \u21d2 (Thm A*) 16N. At p=5 equality \u03b4\u00b2=room_hyp/24 is certified separately; at p=3, \u03b4=0."
+  },
+  "cert_delta_rho_min": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "ED4": "1680",
+      "orth": "0",
+      "delta2": "0",
+      "rho_min2": "200/9",
+      "budget": "0",
+      "delta2_le_rho_min2": true,
+      "delta2_le_budget": true,
+      "ratio_delta2_over_budget": "0",
+      "ratio_delta2_over_rm": "0"
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "ED4": "120400/13",
+      "orth": "36864/65",
+      "delta2": "1536/65",
+      "rho_min2": "728/25",
+      "budget": "1536/65",
+      "delta2_le_rho_min2": true,
+      "delta2_le_budget": true,
+      "ratio_delta2_over_budget": "1",
+      "ratio_delta2_over_rm": "960/1183"
+    },
+    "7": {
+      "p": 7,
+      "N": 11452,
+      "ED4": "12835984/409",
+      "orth": "1972224/4499",
+      "delta2": "82176/4499",
+      "rho_min2": "26000/539",
+      "budget": "3072/55",
+      "delta2_le_rho_min2": true,
+      "delta2_le_budget": true,
+      "ratio_delta2_over_budget": "535/1636",
+      "ratio_delta2_over_rm": "251664/664625"
+    }
+  },
+  "general_status": {
+    "sum_kappa_prod_proved": true,
+    "e4_constant_proved": true,
+    "rho_min_lt_budget_p_ge_7_proved": true,
+    "sufficient_criterion_proved": true,
+    "halfspace_c_form_proved": true,
+    "delta_le_rho_min_for_all_p": false,
+    "c2_le_budget_for_all_p": false,
+    "sum_rho2_le_T_for_all_p": false,
+    "orth_le_room_hyp_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "open_residual": "Prove \u03b4\u00b2\u2264\u03c1_min\u00b2 for all primes p\u22655 (then residual closes for p\u22657 by Thm D+E; p=3,5 already certified), OR evaluate c=Q_0(halfspace) in closed Gauss-sum form and show c\u00b2\u2264room_hyp/24."
+  },
+  "attack_surface": "Prove \u03b4\u00b2\u2264\u03c1_min\u00b2 for all primes p\u22655 (then residual closes for p\u22657 by Thm D+E; p=3,5 already certified), OR evaluate c=Q_0(halfspace) in closed Gauss-sum form and show c\u00b2\u2264room_hyp/24.",
+  "verdict": "Proved: \u2211\u03ba\u220f=n(n\u22121)(n\u22122)/8 and e\u2084=\u2212p(p\u22121)(p+1)(p+4)/12 constant on Max+; \u27e8m\u2084,\u03ba\u27e9 closed; \u03c1_min\u00b2<room_hyp/24 for all primes p\u22657; residual for p\u22657 follows from \u03b4\u00b2\u2264\u03c1_min\u00b2; c=Q_0(halfspace). Certified \u03b4\u00b2\u2264\u03c1_min\u00b2 at p=3,5,7. OPEN: \u03b4\u00b2\u2264\u03c1_min\u00b2 for general p\u22655. L OPEN.",
+  "settlement_note": "No soft-close. Primary residual reduced to \u03b4\u00b2\u2264\u03c1_min\u00b2 (sufficient for all p\u22657) or direct c\u00b2\u2264budget; not yet proved for general p.",
+  "proved": {
+    "sum_kappa_prod": true,
+    "e4_formula": true,
+    "rho_min_lt_budget_p_ge_7": true,
+    "sufficient_delta_le_rm_implies_residual": true,
+    "delta_le_rho_min_for_all_p": false,
+    "sum_rho2_le_T_for_all_p": false,
+    "sixteen_N_for_all_p": false,
+    "kappa_bound_for_all_p": false
+  }
+}

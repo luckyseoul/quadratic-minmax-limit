@@ -1,0 +1,217 @@
+{
+  "prop": "15.155",
+  "title": "Prop 15.155: Aut-line e4(s), T\u03c7, Q(s); \u03b7=c1 R4+c0; residual pure E[s^4]; L OPEN",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Closed forms: e\u2084(s)=s\u2074/24+((\u22123n+4)/12)s\u00b2+n(n\u22122)/8; T\u03c7=\u03c7(4p\u22122\u03c3_z); Q=(p/4)[s\u00b2(n\u22124)+n(6\u2212n)] on C\u2082-evecs; \u03b7=c\u2081 R\u2084+c\u2080 with c\u2081=16/(n)_4, c\u2080=\u2212(p\u2074+4p\u00b2\u22129)/(p\u00b2(p\u00b2\u22122)). Residual \u21d4 E[s\u2074]\u2264ED4_suf on switched Max+. Need Weil/design bound. N_ED4_SUF OPEN. L OPEN.",
+  "proved": {
+    "e4_poly_in_s": true,
+    "Tchi_and_Q_structure": true,
+    "eta_affine_R4": true,
+    "census_eta_affine": true,
+    "crude_Es4_dead": true,
+    "residual_for_all_p_ge_5": false,
+    "eta_bound_for_all_p": false,
+    "hyp_residual_for_all_p": false
+  },
+  "algebra": {
+    "e4_poly": {
+      "proved": true,
+      "theorem": "e\u2084(y)=s\u2074/24+((\u22123n+4)/12)s\u00b2+n(n\u22122)/8 for all \u00b11 vectors.",
+      "by_p": {
+        "5": {
+          "n": 26,
+          "A": "1/24",
+          "B": "-37/6",
+          "C": "78",
+          "n_s_checked": 27,
+          "all_match": true
+        },
+        "7": {
+          "n": 50,
+          "A": "1/24",
+          "B": "-73/6",
+          "C": "300",
+          "n_s_checked": 51,
+          "all_match": true
+        },
+        "11": {
+          "n": 122,
+          "A": "1/24",
+          "B": "-181/6",
+          "C": "1830",
+          "n_s_checked": 123,
+          "all_match": true
+        },
+        "13": {
+          "n": 170,
+          "A": "1/24",
+          "B": "-253/6",
+          "C": "3570",
+          "n_s_checked": 171,
+          "all_match": true
+        },
+        "17": {
+          "n": 290,
+          "A": "1/24",
+          "B": "-433/6",
+          "C": "10440",
+          "n_s_checked": 291,
+          "all_match": true
+        },
+        "19": {
+          "n": 362,
+          "A": "1/24",
+          "B": "-541/6",
+          "C": "16290",
+          "n_s_checked": 363,
+          "all_match": true
+        }
+      },
+      "n_checked": 9
+    },
+    "Tchi_Q": {
+      "proved": true,
+      "theorem_Tchi": "T\u03c7(S)=\u03c7(S)(4p\u22122\u03c3_z(S)); \u03ba(C\u2082)=\u03c7 \u03ba(C).",
+      "theorem_Q": "On C\u2082 y=p y: Q=(p/4)[s\u00b2(n\u22124)+n(6\u2212n)] (from C\u20821=p1 and y\u1d40C\u2082y=pn).",
+      "proof_Tchi": "\u03c7(S_{v\u2192r})=\u03c7(S) z_v z_r; sum_r\u2209S C_vr z_r = p z_v \u2212 sum_u\u2208S C_vu z_u.",
+      "proof_Q": "Q=sum_{u<v} C\u2082_uv \u00b7 \u00bd((s\u2212y_u\u2212y_v)\u00b2\u2212(n\u22122)); edge sums: sum C\u2082=pn/2, sum C\u2082(y_u+y_v)=ps, sum C\u2082(y_u+y_v)\u00b2=2pn."
+    },
+    "eta_affine": {
+      "proved": true,
+      "theorem": "\u03b7=c\u2081 R\u2084+c\u2080 with c\u2081=16/(n)_4, c\u2080=\u2212(p\u2074+4p\u00b2\u22129)/(p\u00b2(p\u00b2\u22122)); \u03b7\u2264\u03b7_suf \u21d4 R\u2084\u2264R4_suf.",
+      "by_p": {
+        "5": {
+          "c1": "1/22425",
+          "c0": "-716/575",
+          "eta_flat": "8/2875",
+          "eta_suf": "68/14375",
+          "match": true
+        },
+        "7": {
+          "c1": "1/345450",
+          "c0": "-2588/2303",
+          "eta_flat": "8/25333",
+          "eta_suf": "652/1241317",
+          "match": true
+        },
+        "11": {
+          "c1": "1/13175085",
+          "c0": "-15116/14399",
+          "eta_flat": "8/417571",
+          "eta_suf": "1588/50526091",
+          "match": true
+        },
+        "13": {
+          "c1": "1/50378055",
+          "c0": "-29228/28223",
+          "eta_flat": "8/1157143",
+          "eta_suf": "2212/195557167",
+          "match": true
+        },
+        "17": {
+          "c1": "1/432962460",
+          "c0": "-84668/82943",
+          "eta_flat": "8/5888953",
+          "eta_suf": "92/41509937",
+          "match": true
+        },
+        "19": {
+          "c1": "1/1055583855",
+          "c0": "-131756/129599",
+          "eta_flat": "8/11534311",
+          "eta_suf": "4708/4163886271",
+          "match": true
+        },
+        "23": {
+          "c1": "1/4875914670",
+          "c0": "-281948/278783",
+          "eta_flat": "8/36520573",
+          "eta_suf": "6892/19319383117",
+          "match": true
+        },
+        "29": {
+          "c1": "1/31191003795",
+          "c0": "-710636/705599",
+          "eta_flat": "8/147470191",
+          "eta_suf": "10948/124022430631",
+          "match": true
+        }
+      },
+      "n_checked": 23,
+      "closed_forms": {
+        "e4_of_s": "s^4/24 + ((-3n+4)/12) s^2 + n(n-2)/8",
+        "Q_of_s": "(p/4)[s^2(n-4)+n(6-n)]",
+        "Tchi": "chi*(4p-2 sigma_z)",
+        "c1": "16/(n*(n-1)*(n-2)*(n-3))",
+        "c0": "-(p^4+4p^2-9)/(p^2(p^2-2))",
+        "eta": "c1*R4 + c0"
+      }
+    },
+    "census": {
+      "proved_census": true,
+      "crude_Es4_dead": true,
+      "theorem": "\u03b7 affine matches census p=5,7; crude E[s\u2074]\u22642n\u00b3 exceeds \u03b7_suf (dead).",
+      "by_p": {
+        "5": {
+          "eta": "424/97175",
+          "eta_suf": "68/14375",
+          "match_affine_census": true,
+          "crude_Es4_ub": 35152,
+          "crude_eta": "44/575",
+          "crude_exceeds_eta_suf": true
+        },
+        "7": {
+          "eta": "9304/23548175",
+          "eta_suf": "652/1241317",
+          "match_affine_census": true,
+          "crude_Es4_ub": 250000,
+          "crude_eta": "92/2303",
+          "crude_exceeds_eta_suf": true
+        }
+      }
+    },
+    "open": {
+      "residual_closed_general": false,
+      "eta_le_eta_suf_all_p": false,
+      "aut_line_closed_forms": true,
+      "open": "Prove E[s\u2074]\u2264ED4_suf (\u21d4 \u03b7\u2264\u03b7_suf \u21d4 R\u2084\u2264R4_suf) for all primes p\u22657 via Weil/Paley bounds on the coordinate \u27e8z,y\u27e9 of Max+ in V\u208a, or spherical 3-design defect, or closed W_k.",
+      "sufficient_targets": [
+        "Weil_E_s4_Paley_Maxplus",
+        "spherical_3_design_defect_Maxplus",
+        "closed_W_k"
+      ],
+      "dead": [
+        "crude_Es4_le_2n3",
+        "uniform_m4_le_M_cand",
+        "plain_ULC",
+        "pure_t_e_of_k"
+      ],
+      "progress": "Aut-line fully explicit: e4(s), T\u03c7, Q(s), \u03b7=c1 R4+c0; residual is a pure degree-4 moment of one Paley coordinate."
+    }
+  },
+  "closed_forms": {
+    "e4_of_s": "s^4/24 + ((-3n+4)/12) s^2 + n(n-2)/8",
+    "Q_of_s": "(p/4)[s^2(n-4)+n(6-n)]",
+    "Tchi": "chi*(4p-2 sigma_z)",
+    "c1": "16/(n*(n-1)*(n-2)*(n-3))",
+    "c0": "-(p^4+4p^2-9)/(p^2(p^2-2))",
+    "eta": "c1*R4 + c0"
+  },
+  "status": {
+    "p5_residual_maxplus_free": true,
+    "p7_residual_maxplus_free": true,
+    "type_free_residual_general": false,
+    "aut_line_explicit": true,
+    "eta_bound_open": true,
+    "general_residual": false
+  },
+  "open_attack": "Weil/Paley bound on E[\u27e8z,y\u27e9\u2074] for Max+ p-eigenvectors, or spherical 3-design defect of Max+ in V\u208a.",
+  "backend": "CPU Fraction algebra; GPU unused (F20)",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "residual_closed": false,
+  "compute": {
+    "workers": "Fraction algebra",
+    "gpu": "unused"
+  }
+}

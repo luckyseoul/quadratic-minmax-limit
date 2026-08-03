@@ -1,0 +1,382 @@
+{
+  "prop": "15.118",
+  "backend": "CPU Fraction + Max+ cert p=3,5; GPU unused (F20); no class_key (F19)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "ed4_le_suf_for_all_p": false,
+  "hyp_residual_for_all_p": false,
+  "pointwise_bgf_zero_for_all_p": true,
+  "closed_forms": {
+    "kappa_gamma_f": "p(p^2+1)(p^2-1)(p^2-4)/4",
+    "T2kappa_dot_m4": "8 p^2 (p^4-1)",
+    "T2kappa_dot_f_on_MaxPlus": "8 p^2 (p^4-1)",
+    "rho_min_dot_f": "4(p^4-1)/(3(p^2-5))",
+    "spot_p5_T2": "124800",
+    "spot_p5_rmf": "208/5",
+    "spot_p5_kgf": "16380"
+  },
+  "kappa_gamma_f": {
+    "proved": true,
+    "theorem": "\u27e8\u03ba,\u03b3_y\u2299f_y\u27e9=p(p\u00b2+1)(p\u00b2\u22121)(p\u00b2\u22124)/4 for all Max+ y, by edge expansion + Cy=py + C\u00b2=p\u00b2I.",
+    "by_p": {
+      "3": {
+        "closed": "300",
+        "alt_n_form": "300",
+        "from_edges": "300",
+        "match": true
+      },
+      "5": {
+        "closed": "16380",
+        "alt_n_form": "16380",
+        "from_edges": "16380",
+        "match": true
+      },
+      "7": {
+        "closed": "189000",
+        "alt_n_form": "189000",
+        "from_edges": "189000",
+        "match": true
+      },
+      "11": {
+        "closed": "4710420",
+        "alt_n_form": "4710420",
+        "from_edges": "4710420",
+        "match": true
+      },
+      "13": {
+        "closed": "15315300",
+        "alt_n_form": "15315300",
+        "from_edges": "15315300",
+        "match": true
+      },
+      "17": {
+        "closed": "101163600",
+        "alt_n_form": "101163600",
+        "from_edges": "101163600",
+        "match": true
+      },
+      "19": {
+        "closed": "220990140",
+        "alt_n_form": "220990140",
+        "from_edges": "220990140",
+        "match": true
+      },
+      "23": {
+        "closed": "844767000",
+        "alt_n_form": "844767000",
+        "from_edges": "844767000",
+        "match": true
+      },
+      "29": {
+        "closed": "4291951860",
+        "alt_n_form": "4291951860",
+        "from_edges": "4291951860",
+        "match": true
+      },
+      "31": {
+        "closed": "6849516960",
+        "alt_n_form": "6849516960",
+        "from_edges": "6849516960",
+        "match": true
+      },
+      "37": {
+        "closed": "23663612700",
+        "alt_n_form": "23663612700",
+        "from_edges": "23663612700",
+        "match": true
+      },
+      "41": {
+        "closed": "48572695080",
+        "alt_n_form": "48572695080",
+        "from_edges": "48572695080",
+        "match": true
+      },
+      "43": {
+        "closed": "67807624500",
+        "alt_n_form": "67807624500",
+        "from_edges": "67807624500",
+        "match": true
+      },
+      "47": {
+        "closed": "126426409200",
+        "alt_n_form": "126426409200",
+        "from_edges": "126426409200",
+        "match": true
+      },
+      "53": {
+        "closed": "293259552300",
+        "alt_n_form": "293259552300",
+        "from_edges": "293259552300",
+        "match": true
+      },
+      "59": {
+        "closed": "621447895620",
+        "alt_n_form": "621447895620",
+        "from_edges": "621447895620",
+        "match": true
+      }
+    }
+  },
+  "T2kappa_m4": {
+    "proved": true,
+    "theorem": "\u27e8T\u00b2\u03ba,m\u2084\u27e9=8p\u00b2(p\u2074\u22121) from T\u03ba\u2208E_\u00b1\u03bc, \u03b4\u22a5T\u00b2\u03ba, balanced \u03c1_min split, \u2016b\u2016\u2082\u00b2=6n(n\u22121)(n\u22122)(n\u22126)/p\u2074.",
+    "by_p": {
+      "3": {
+        "from_b2": "5760",
+        "from_n": "5760",
+        "target_8p2_p4m1": "5760",
+        "match": true
+      },
+      "5": {
+        "from_b2": "124800",
+        "from_n": "124800",
+        "target_8p2_p4m1": "124800",
+        "match": true
+      },
+      "7": {
+        "from_b2": "940800",
+        "from_n": "940800",
+        "target_8p2_p4m1": "940800",
+        "match": true
+      },
+      "11": {
+        "from_b2": "14171520",
+        "from_n": "14171520",
+        "target_8p2_p4m1": "14171520",
+        "match": true
+      },
+      "13": {
+        "from_b2": "38613120",
+        "from_n": "38613120",
+        "target_8p2_p4m1": "38613120",
+        "match": true
+      },
+      "17": {
+        "from_b2": "193098240",
+        "from_n": "193098240",
+        "target_8p2_p4m1": "193098240",
+        "match": true
+      },
+      "19": {
+        "from_b2": "376364160",
+        "from_n": "376364160",
+        "target_8p2_p4m1": "376364160",
+        "match": true
+      },
+      "23": {
+        "from_b2": "1184282880",
+        "from_n": "1184282880",
+        "target_8p2_p4m1": "1184282880",
+        "match": true
+      },
+      "29": {
+        "from_b2": "4758579840",
+        "from_n": "4758579840",
+        "target_8p2_p4m1": "4758579840",
+        "match": true
+      },
+      "31": {
+        "from_b2": "7100021760",
+        "from_n": "7100021760",
+        "target_8p2_p4m1": "7100021760",
+        "match": true
+      },
+      "37": {
+        "from_b2": "20525800320",
+        "from_n": "20525800320",
+        "target_8p2_p4m1": "20525800320",
+        "match": true
+      },
+      "41": {
+        "from_b2": "38000820480",
+        "from_n": "38000820480",
+        "target_8p2_p4m1": "38000820480",
+        "match": true
+      },
+      "43": {
+        "from_b2": "50570889600",
+        "from_n": "50570889600",
+        "target_8p2_p4m1": "50570889600",
+        "match": true
+      },
+      "47": {
+        "from_b2": "86233704960",
+        "from_n": "86233704960",
+        "target_8p2_p4m1": "86233704960",
+        "match": true
+      },
+      "53": {
+        "from_b2": "177314866560",
+        "from_n": "177314866560",
+        "target_8p2_p4m1": "177314866560",
+        "match": true
+      },
+      "59": {
+        "from_b2": "337444241280",
+        "from_n": "337444241280",
+        "target_8p2_p4m1": "337444241280",
+        "match": true
+      }
+    }
+  },
+  "pointwise_criterion": {
+    "proved": true,
+    "theorem": "For each y\u2208Max+: \u27e8b,\u03b3\u2299f\u27e9=0 \u21d4 \u27e8Tb,f\u27e9=4p\u27e8b,f\u27e9 \u21d4 \u27e8T\u00b2\u03ba,f\u27e9=8p\u00b2(p\u2074\u22121)."
+  },
+  "rho_min_f": {
+    "proved": true,
+    "theorem": "Under bgf=0: \u27e8\u03c1_min,f_y\u27e9=4(p\u2074\u22121)/(3(p\u00b2\u22125)) for all Max+ y.",
+    "by_p": {
+      "3": {
+        "closed": "80/3",
+        "from_spectral": "80/3",
+        "match": true
+      },
+      "5": {
+        "closed": "208/5",
+        "from_spectral": "208/5",
+        "match": true
+      },
+      "7": {
+        "closed": "800/11",
+        "from_spectral": "800/11",
+        "match": true
+      },
+      "11": {
+        "closed": "4880/29",
+        "from_spectral": "4880/29",
+        "match": true
+      },
+      "13": {
+        "closed": "9520/41",
+        "from_spectral": "9520/41",
+        "match": true
+      },
+      "17": {
+        "closed": "27840/71",
+        "from_spectral": "27840/71",
+        "match": true
+      },
+      "19": {
+        "closed": "43440/89",
+        "from_spectral": "43440/89",
+        "match": true
+      },
+      "23": {
+        "closed": "93280/131",
+        "from_spectral": "93280/131",
+        "match": true
+      },
+      "29": {
+        "closed": "235760/209",
+        "from_spectral": "235760/209",
+        "match": true
+      },
+      "31": {
+        "closed": "307840/239",
+        "from_spectral": "307840/239",
+        "match": true
+      },
+      "37": {
+        "closed": "624720/341",
+        "from_spectral": "624720/341",
+        "match": true
+      },
+      "41": {
+        "closed": "941920/419",
+        "from_spectral": "941920/419",
+        "match": true
+      },
+      "43": {
+        "closed": "1139600/461",
+        "from_spectral": "1139600/461",
+        "match": true
+      },
+      "47": {
+        "closed": "1626560/551",
+        "from_spectral": "1626560/551",
+        "match": true
+      },
+      "53": {
+        "closed": "2630160/701",
+        "from_spectral": "2630160/701",
+        "match": true
+      },
+      "59": {
+        "closed": "4039120/869",
+        "from_spectral": "4039120/869",
+        "match": true
+      }
+    }
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "bgf_max_abs": 7.105427357601002e-15,
+      "bgf_pointwise_zero": true,
+      "T2kappa_f_max_err": 0.0,
+      "T2kappa_f_constant_target": true,
+      "rho_min_f_max_err": 2.4868995751603507e-14,
+      "rho_min_f_closed": true,
+      "kappa_gf_max_err": 0.0,
+      "kappa_gf_closed": true,
+      "b_f_max_err": 7.105427357601002e-15,
+      "b_f_closed": true,
+      "delta2": 2.741753868829669e-29,
+      "room_hyp_24": 0.0,
+      "delta2_le_hyp": true,
+      "target_T2": 5760.0,
+      "pred_rmf": 26.666666666666668,
+      "pred_kgf": 300.0
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "bgf_max_abs": 1.9895196601282805e-13,
+      "bgf_pointwise_zero": true,
+      "T2kappa_f_max_err": 0.0,
+      "T2kappa_f_constant_target": true,
+      "rho_min_f_max_err": 6.394884621840902e-14,
+      "rho_min_f_closed": true,
+      "kappa_gf_max_err": 0.0,
+      "kappa_gf_closed": true,
+      "b_f_max_err": 1.4210854715202004e-13,
+      "b_f_closed": true,
+      "delta2": 23.630769230769253,
+      "room_hyp_24": 23.630769230769232,
+      "delta2_le_hyp": true,
+      "target_T2": 124800.0,
+      "pred_rmf": 41.6,
+      "pred_kgf": 16380.0
+    }
+  },
+  "general_status": {
+    "kappa_gamma_f_proved": true,
+    "T2kappa_m4_proved": true,
+    "pointwise_criterion_proved": true,
+    "pointwise_bgf_zero_proved": true,
+    "rho_min_f_closed_proved": true,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "delta_le_rho_min_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "open_residual": "Prove \u03b4\u00b2\u2264room_hyp/24 for all primes p\u22655. Have pointwise \u27e8\u03c1_min,f_y\u27e9 closed and bgf=0; need \u27e8m\u2084,f_hs\u27e9 / weight enumerator / Gauss sums for coherent mass."
+  },
+  "attack_surface": "Prove \u03b4\u00b2\u2264room_hyp/24 for all primes p\u22655. Have pointwise \u27e8\u03c1_min,f_y\u27e9 closed and bgf=0; need \u27e8m\u2084,f_hs\u27e9 / weight enumerator / Gauss sums for coherent mass.",
+  "verdict": "Proved: \u27e8\u03ba,\u03b3\u2299f\u27e9=p(p\u00b2+1)(p\u00b2\u22121)(p\u00b2\u22124)/4; \u27e8T\u00b2\u03ba,m\u2084\u27e9=8p\u00b2(p\u2074\u22121); pointwise bgf=0 on Max+ (via \u27e8T\u00b2\u03ba,f\u27e9=8p\u00b2(p\u2074\u22121) constancy in T-module); \u27e8\u03c1_min,f_y\u27e9=4(p\u2074\u22121)/(3(p\u00b2\u22125)). Cert p=3,5 full Max+. OPEN: \u03b4\u00b2\u2264room_hyp/24 for general p\u22655. L OPEN.",
+  "settlement_note": "No soft-close. N_ED4_SUF still open for general p. Pointwise residual channel pairings closed; need ED4/m4 pin.",
+  "proved": {
+    "kappa_gamma_f": true,
+    "T2kappa_m4": true,
+    "pointwise_criterion": true,
+    "pointwise_bgf_zero": true,
+    "rho_min_f_closed": true,
+    "cert_p3_p5": true,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "delta_le_rho_min_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  }
+}

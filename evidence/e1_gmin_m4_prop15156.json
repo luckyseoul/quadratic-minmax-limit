@@ -1,0 +1,296 @@
+{
+  "prop": "15.156",
+  "title": "Prop 15.156: \u03ba\u2084=E[s\u2074]\u221212n\u00b2 residual; closed \u03ba4_flat/suf; 4-design LB only; LP/crude dead; L OPEN",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Residual \u21d4 \u03ba\u2084\u2264\u03ba4_suf with \u03ba4_flat=16(p\u00b2+1)(p\u00b2+3)/(p\u00b2\u22125), \u03ba4_suf=4(p\u00b2+1)(9p\u2074+22p\u00b2\u221215)/(p\u00b2(p\u00b2\u22125)). Bridge \u03ba\u2084=(n)_4 \u03b7\u221216n. Spherical 4-design is a lower bound only. Crude 2n\u00b3 and moment-LP dead. Need Weil/3-design-UB on \u03ba\u2084. N_ED4_SUF OPEN. L OPEN.",
+  "proved": {
+    "kappa4_dictionary_closed": true,
+    "bridge_kappa4_eta": true,
+    "design_4des_is_LB": true,
+    "crude_dead": true,
+    "moment_lp_dead": true,
+    "census_kappa4": true,
+    "residual_for_all_p_ge_5": false,
+    "kappa4_bound_for_all_p": false,
+    "hyp_residual_for_all_p": false
+  },
+  "algebra": {
+    "kappa4_dict": {
+      "proved": true,
+      "theorem": "\u03ba\u2084=E[s\u2074]\u221212n\u00b2; residual\u21d4\u03ba\u2084\u2264\u03ba4_suf; \u03ba4_flat=16(p\u00b2+1)(p\u00b2+3)/(p\u00b2\u22125); \u03ba4_suf=4(p\u00b2+1)(9p\u2074+22p\u00b2\u221215)/(p\u00b2(p\u00b2\u22125)).",
+      "by_p": {
+        "5": {
+          "kappa4_flat": "2912/5",
+          "kappa4_suf": "32032/25",
+          "ratio_flat_suf": 0.45454545454545453,
+          "match": true
+        },
+        "7": {
+          "kappa4_flat": "10400/11",
+          "kappa4_suf": "1133600/539",
+          "ratio_flat_suf": 0.44954128440366975,
+          "match": true
+        },
+        "11": {
+          "kappa4_flat": "60512/29",
+          "kappa4_suf": "16398752/3509",
+          "ratio_flat_suf": 0.44649446494464945,
+          "match": true
+        },
+        "13": {
+          "kappa4_flat": "116960/41",
+          "kappa4_suf": "44327840/6929",
+          "ratio_flat_suf": 0.44591029023746703,
+          "match": true
+        },
+        "17": {
+          "kappa4_flat": "338720/71",
+          "kappa4_suf": "219829280/20519",
+          "ratio_flat_suf": 0.4453004622496148,
+          "match": true
+        },
+        "19": {
+          "kappa4_flat": "527072/89",
+          "kappa4_suf": "427455392/32129",
+          "ratio_flat_suf": 0.44512946979038226,
+          "match": true
+        },
+        "23": {
+          "kappa4_flat": "1127840/131",
+          "kappa4_suf": "1341001760/69299",
+          "ratio_flat_suf": 0.4449116904962153,
+          "match": true
+        },
+        "29": {
+          "kappa4_flat": "2842592/209",
+          "kappa4_suf": "5375341472/175769",
+          "ratio_flat_suf": 0.44473823373876253,
+          "match": true
+        }
+      },
+      "n_checked": 13,
+      "closed_forms": {
+        "kappa4": "E[s^4] - 12 n^2",
+        "kappa4_flat": "16(p^2+1)(p^2+3)/(p^2-5)",
+        "kappa4_suf": "4(p^2+1)(9p^4+22p^2-15)/(p^2(p^2-5))",
+        "ed4_4des": "3 n^4 / (d(d+2))"
+      }
+    },
+    "bridge": {
+      "proved": true,
+      "theorem": "\u03ba\u2084=(n)_4 \u03b7 \u2212 16n; residual budgets match under this bridge.",
+      "census": {
+        "5": {
+          "kappa4": "14944/13",
+          "kappa4_from_eta": "14944/13",
+          "eta": "424/97175",
+          "match": true,
+          "ratio_suf": 0.8971797433335895
+        },
+        "7": {
+          "kappa4": "565984/409",
+          "kappa4_from_eta": "565984/409",
+          "eta": "9304/23548175",
+          "match": true,
+          "ratio_suf": 0.6579755777297331
+        }
+      },
+      "algebra_match_n_checked": 13,
+      "algebra_all_match": true
+    },
+    "design": {
+      "proved": true,
+      "theorem": "E[s\u2074]_{4-des}=3n\u2074/(d(d+2)) is a lower bound among 2-designs; strictly below ED4_flat for p\u22655 \u2014 not an upper bound for residual.",
+      "by_p": {
+        "5": {
+          "ED4_4des": "35152/5",
+          "ED4_flat": "43472/5",
+          "ED4_suf": "234832/25",
+          "4des_lt_flat": true,
+          "4des_lt_suf": true
+        },
+        "7": {
+          "ED4_4des": "250000/9",
+          "ED4_flat": "340400/11",
+          "ED4_suf": "17303600/539",
+          "4des_lt_flat": true,
+          "4des_lt_suf": true
+        },
+        "11": {
+          "ED4_4des": "3631696/21",
+          "ED4_flat": "5240144/29",
+          "ED4_suf": "643134224/3509",
+          "4des_lt_flat": true,
+          "4des_lt_suf": true
+        },
+        "13": {
+          "ED4_4des": "9826000/29",
+          "ED4_flat": "14335760/41",
+          "ED4_suf": "2447305040/6929",
+          "4des_lt_flat": true,
+          "4des_lt_suf": true
+        },
+        "17": {
+          "ED4_4des": "48778000/49",
+          "ED4_flat": "71991920/71",
+          "ED4_suf": "20927604080/20519",
+          "4des_lt_flat": true,
+          "4des_lt_suf": true
+        },
+        "19": {
+          "ED4_4des": "94875856/61",
+          "ED4_flat": "140482064/89",
+          "ED4_suf": "50951207504/32129",
+          "4des_lt_flat": true,
+          "4des_lt_suf": true
+        }
+      },
+      "n_checked": 13
+    },
+    "crude_lp": {
+      "proved_crude_dead": true,
+      "proved_lp_dead": true,
+      "theorem": "Crude E[s\u2074]\u22642n\u00b3 exceeds ED4_suf (p\u22655). Moment LP on allowed regular-set weights exceeds ED4_suf (factor \u22733.5 at p=5, growing).",
+      "crude": {
+        "5": {
+          "crude_2n3": 35152,
+          "ED4_suf": "234832/25",
+          "exceeds": true
+        },
+        "7": {
+          "crude_2n3": 250000,
+          "ED4_suf": "17303600/539",
+          "exceeds": true
+        },
+        "11": {
+          "crude_2n3": 3631696,
+          "ED4_suf": "643134224/3509",
+          "exceeds": true
+        },
+        "13": {
+          "crude_2n3": 9826000,
+          "ED4_suf": "2447305040/6929",
+          "exceeds": true
+        },
+        "17": {
+          "crude_2n3": 48778000,
+          "ED4_suf": "20927604080/20519",
+          "exceeds": true
+        },
+        "19": {
+          "crude_2n3": 94875856,
+          "ED4_suf": "50951207504/32129",
+          "exceeds": true
+        }
+      },
+      "lp": {
+        "5": {
+          "ok": true,
+          "max_Es4": 32655.999999999996,
+          "ED4_suf": 9393.28,
+          "ratio": 3.476527900797165
+        },
+        "7": {
+          "ok": true,
+          "max_Es4": 240400.00000000003,
+          "ED4_suf": 32103.153988868275,
+          "ratio": 7.488360803532214
+        },
+        "11": {
+          "ok": true,
+          "max_Es4": 3573135.9999999995,
+          "ED4_suf": 183281.34055286407,
+          "ratio": 19.495361553018515
+        },
+        "13": {
+          "ok": true,
+          "max_Es4": 9711760.0,
+          "ED4_suf": 353197.4368595757,
+          "ratio": 27.49668878220428
+        },
+        "17": {
+          "ok": true,
+          "max_Es4": 48443920.00000001,
+          "ED4_suf": 1019913.4499731956,
+          "ratio": 47.49806956783751
+        },
+        "19": {
+          "ok": true,
+          "max_Es4": 94354576.00000001,
+          "ED4_suf": 1585832.3478477388,
+          "ratio": 59.49845589166865
+        },
+        "23": {
+          "ok": true,
+          "max_Es4": 296634640.0,
+          "ED4_suf": 3390150.95398202,
+          "ratio": 87.4989473998429
+        }
+      }
+    },
+    "census": {
+      "proved_census": true,
+      "theorem": "\u03ba\u2084\u2264\u03ba4_suf at p=5,7 (full W-census).",
+      "by_p": {
+        "5": {
+          "Es4": "120400/13",
+          "kappa4": "14944/13",
+          "kappa4_suf": "32032/25",
+          "le_suf": true,
+          "ratio": 0.8971797433335895,
+          "ED4_4des": "35152/5",
+          "Es4_over_4des": 1.3173558348797312
+        },
+        "7": {
+          "Es4": "12835984/409",
+          "kappa4": "565984/409",
+          "kappa4_suf": "1133600/539",
+          "le_suf": true,
+          "ratio": 0.6579755777297331,
+          "ED4_4des": "250000/9",
+          "Es4_over_4des": 1.1298176625916871
+        }
+      }
+    },
+    "open": {
+      "residual_closed_general": false,
+      "kappa4_le_kappa4_suf_all_p": false,
+      "open": "Prove \u03ba\u2084\u2264\u03ba4_suf for all primes p\u22657 via Weil/Paley bounds on E[\u27e8z,y\u27e9\u2074], spherical 3-design defect upper bound, or closed W_k.",
+      "sufficient_targets": [
+        "Weil_E_s4_Paley_Maxplus",
+        "spherical_3design_defect_UB",
+        "closed_W_k"
+      ],
+      "dead": [
+        "spherical_4design_as_UB",
+        "crude_Es4_le_2n3",
+        "moment_LP_allowed_weights_only",
+        "plain_ULC",
+        "uniform_m4_le_M_cand"
+      ],
+      "progress": "Residual reduced to \u03ba\u2084=E[s\u2074]\u221212n\u00b2 with closed Max+-free budget \u03ba4_suf and bridge \u03ba\u2084=(n)_4 \u03b7\u221216n."
+    }
+  },
+  "closed_forms": {
+    "kappa4": "E[s^4] - 12 n^2",
+    "kappa4_flat": "16(p^2+1)(p^2+3)/(p^2-5)",
+    "kappa4_suf": "4(p^2+1)(9p^4+22p^2-15)/(p^2(p^2-5))",
+    "ed4_4des": "3 n^4 / (d(d+2))"
+  },
+  "status": {
+    "p5_residual_maxplus_free": true,
+    "p7_residual_maxplus_free": true,
+    "type_free_residual_general": false,
+    "kappa4_channel_ready": true,
+    "general_residual": false
+  },
+  "open_attack": "Weil/Paley bound on \u03ba\u2084=E[s\u2074]\u221212n\u00b2, or upper bound on the spherical 3-design defect of Max+ in V\u208a.",
+  "backend": "CPU Fraction + scipy LP; GPU unused (F20)",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "residual_closed": false,
+  "compute": {
+    "workers": "Fraction + LP",
+    "gpu": "unused"
+  }
+}

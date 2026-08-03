@@ -1,0 +1,364 @@
+{
+  "prop": "15.143",
+  "title": "Prop 15.143: Max+-free affine subtype law at p=11 via (n_QR,n_3AP,max_gap); double-switch LB; residual OPEN p\u226511",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. At p=11 all affine H_+ types form exactly 6 G-orbits (sizes 132/330/660) with Max+-free samples. Double-switch gives |H_+|\u226528182 lower bound; non-affine type list may be incomplete. Residual closed Max+-free only at p=5,7. N_ED4_SUF OPEN generally. L OPEN.",
+  "proved": {
+    "affine_type_census_p11": true,
+    "double_switch_expansion_p11": true,
+    "affine_types_complete_p11": true,
+    "all_Hplus_types_complete_p11": false,
+    "residual_for_all_p_ge_5": false,
+    "p11_residual_maxplus_free": false,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  },
+  "algebra": {
+    "affine_census": {
+      "proved": true,
+      "theorem": "At p=11, all affine halfspaces form exactly 6 H_+ G-orbits (sizes 132\u00d71, 330\u00d72, 660\u00d73); constructive samples Max+-free.",
+      "n_affine_orbits": 6,
+      "size_mult": {
+        "132": 1,
+        "330": 2,
+        "660": 3
+      },
+      "table_live": [
+        {
+          "S": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "orbit_size": 330,
+          "match": true
+        },
+        {
+          "S": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            9
+          ],
+          "orbit_size": 330,
+          "match": true
+        },
+        {
+          "S": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            7
+          ],
+          "orbit_size": 132,
+          "match": true
+        },
+        {
+          "S": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6
+          ],
+          "orbit_size": 660,
+          "match": true
+        },
+        {
+          "S": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "orbit_size": 660,
+          "match": true
+        },
+        {
+          "S": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            7
+          ],
+          "orbit_size": 660,
+          "match": true
+        }
+      ],
+      "samples": [
+        {
+          "size": 330,
+          "S": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "n_S": 55
+        },
+        {
+          "size": 660,
+          "S": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "n_S": 110
+        },
+        {
+          "size": 660,
+          "S": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            7
+          ],
+          "n_S": 110
+        },
+        {
+          "size": 660,
+          "S": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6
+          ],
+          "n_S": 110
+        },
+        {
+          "size": 330,
+          "S": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            9
+          ],
+          "n_S": 55
+        },
+        {
+          "size": 132,
+          "S": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            7
+          ],
+          "n_S": 22
+        }
+      ],
+      "G_order": 14520
+    },
+    "double_switch": {
+      "proved": true,
+      "theorem": "Double Seidel\u2013norm-circle at p=11 expands types (ystar 3630, dbl sizes include 7260); nc density depends on affine class (132-rich, 660-empty).",
+      "ystar_orbit_size": 3630,
+      "dbl_sizes_from_ystar": [
+        330,
+        3630,
+        7260
+      ],
+      "n_nc_on_size132": 55,
+      "n_nc_on_size660": 0,
+      "H_plus_lower_bound": 28182,
+      "size_mult_lb": {
+        "132": 1,
+        "330": 2,
+        "660": 3,
+        "3630": 3,
+        "7260": 2
+      },
+      "complete_type_list": false
+    },
+    "open": {
+      "residual_closed_general": false,
+      "residual_closed_p5_maxplus_free": true,
+      "residual_closed_p7_maxplus_free": true,
+      "affine_types_complete_p11": true,
+      "all_Hplus_types_complete_p11": false,
+      "open": "Complete non-affine H_+ types at p\u226511 (beyond double-switch LB); weights+Q_j free residual; general p. Affine subtypes done at p=11.",
+      "dead": [
+        "fourths-coset as general size-k partner",
+        "claim residual from affine types alone",
+        "soft-close L from p=5,7 (F3)",
+        "class_key thrash (F19)"
+      ]
+    }
+  },
+  "closed_forms": {
+    "p11_affine_n_orbits": 6,
+    "p11_affine_sizes": {
+      "132": 1,
+      "330": 2,
+      "660": 3
+    },
+    "p11_affine_table": [
+      {
+        "phi": [
+          4,
+          6,
+          6
+        ],
+        "orbit_size": 330,
+        "sample_S": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "ap": true,
+        "n_qr": 4,
+        "n3ap": 6,
+        "max_gap": 6
+      },
+      {
+        "phi": [
+          4,
+          6,
+          4
+        ],
+        "orbit_size": 330,
+        "sample_S": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          9
+        ],
+        "ap": false,
+        "n_qr": 4,
+        "n3ap": 6,
+        "max_gap": 4
+      },
+      {
+        "phi": [
+          3,
+          5,
+          4
+        ],
+        "orbit_size": 132,
+        "sample_S": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          7
+        ],
+        "ap": false,
+        "n_qr": 3,
+        "n3ap": 5,
+        "max_gap": 4
+      },
+      {
+        "phi": [
+          3,
+          6,
+          5
+        ],
+        "orbit_size": 660,
+        "sample_S": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6
+        ],
+        "ap": false,
+        "n_qr": 3,
+        "n3ap": 6,
+        "max_gap": 5
+      },
+      {
+        "phi": [
+          3,
+          7,
+          5
+        ],
+        "orbit_size": 660,
+        "sample_S": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "ap": false,
+        "n_qr": 3,
+        "n3ap": 7,
+        "max_gap": 5
+      },
+      {
+        "phi": [
+          3,
+          8,
+          4
+        ],
+        "orbit_size": 660,
+        "sample_S": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          7
+        ],
+        "ap": false,
+        "n_qr": 3,
+        "n3ap": 8,
+        "max_gap": 4
+      }
+    ],
+    "p11_Hplus_lb": 28182,
+    "p11_G": 14520,
+    "room_p11": "268800/1769",
+    "nu_G_known": {
+      "3": 0,
+      "5": 2,
+      "7": 7
+    }
+  },
+  "status": {
+    "p5_residual_maxplus_free": true,
+    "p7_residual_maxplus_free": true,
+    "p11_affine_types_maxplus_free": true,
+    "p11_residual_maxplus_free": false,
+    "general_residual": false
+  },
+  "open_attack": "Finish non-affine types at p\u226511; free c_j residual; general p.",
+  "backend": "CPU G-orbits + combinatorial invariants; GPU unused (F20)",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "residual_closed": false,
+  "scratch_evidence": "/tmp/grok-goal-9ac8197fcb0f/implementer/p11_type_law.json"
+}

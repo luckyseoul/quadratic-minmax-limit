@@ -1,0 +1,464 @@
+{
+  "prop": "15.99",
+  "backend": "CPU Fraction + Max+ p=3,5; GPU unused (F20)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "gap_proved_for_all_p": false,
+  "kappa_bound_proved_for_all_p": false,
+  "min_distance": {
+    "proved": true,
+    "theorem": "For any conference matrix of order n=p\u00b2+1 with p odd and any two boolean \u00b1p-eigenvectors y\u2260\u00b1z: d_H(y,z)\u2265p+1, hence |y\u00b7z|\u2264n\u22122(p+1)=(p\u22121)\u00b2\u22122. Proof: v=(y\u2212z)/2 has coordinates in {0,\u00b11}, support size k=d_H, and Cv=pv. Then pk=v\u1d40Cv\u2264\u2211_{i\u2260j}|v_i v_j|=k(k\u22121), so k\u2265p+1 for v\u22600.",
+    "by_p": {
+      "3": {
+        "n": 10,
+        "min_dH": 4,
+        "max_abs_dot_non_antipodal": 2,
+        "equals_formula": true,
+        "proof": "v=(y-z)/2, Cv=pv, pk=v^T C v \u2264 k(k-1) \u21d2 k\u2265p+1"
+      },
+      "5": {
+        "n": 26,
+        "min_dH": 6,
+        "max_abs_dot_non_antipodal": 14,
+        "equals_formula": true,
+        "proof": "v=(y-z)/2, Cv=pv, pk=v^T C v \u2264 k(k-1) \u21d2 k\u2265p+1"
+      },
+      "7": {
+        "n": 50,
+        "min_dH": 8,
+        "max_abs_dot_non_antipodal": 34,
+        "equals_formula": true,
+        "proof": "v=(y-z)/2, Cv=pv, pk=v^T C v \u2264 k(k-1) \u21d2 k\u2265p+1"
+      },
+      "11": {
+        "n": 122,
+        "min_dH": 12,
+        "max_abs_dot_non_antipodal": 98,
+        "equals_formula": true,
+        "proof": "v=(y-z)/2, Cv=pv, pk=v^T C v \u2264 k(k-1) \u21d2 k\u2265p+1"
+      },
+      "13": {
+        "n": 170,
+        "min_dH": 14,
+        "max_abs_dot_non_antipodal": 142,
+        "equals_formula": true,
+        "proof": "v=(y-z)/2, Cv=pv, pk=v^T C v \u2264 k(k-1) \u21d2 k\u2265p+1"
+      },
+      "17": {
+        "n": 290,
+        "min_dH": 18,
+        "max_abs_dot_non_antipodal": 254,
+        "equals_formula": true,
+        "proof": "v=(y-z)/2, Cv=pv, pk=v^T C v \u2264 k(k-1) \u21d2 k\u2265p+1"
+      },
+      "19": {
+        "n": 362,
+        "min_dH": 20,
+        "max_abs_dot_non_antipodal": 322,
+        "equals_formula": true,
+        "proof": "v=(y-z)/2, Cv=pv, pk=v^T C v \u2264 k(k-1) \u21d2 k\u2265p+1"
+      },
+      "23": {
+        "n": 530,
+        "min_dH": 24,
+        "max_abs_dot_non_antipodal": 482,
+        "equals_formula": true,
+        "proof": "v=(y-z)/2, Cv=pv, pk=v^T C v \u2264 k(k-1) \u21d2 k\u2265p+1"
+      },
+      "29": {
+        "n": 842,
+        "min_dH": 30,
+        "max_abs_dot_non_antipodal": 782,
+        "equals_formula": true,
+        "proof": "v=(y-z)/2, Cv=pv, pk=v^T C v \u2264 k(k-1) \u21d2 k\u2265p+1"
+      },
+      "31": {
+        "n": 962,
+        "min_dH": 32,
+        "max_abs_dot_non_antipodal": 898,
+        "equals_formula": true,
+        "proof": "v=(y-z)/2, Cv=pv, pk=v^T C v \u2264 k(k-1) \u21d2 k\u2265p+1"
+      },
+      "37": {
+        "n": 1370,
+        "min_dH": 38,
+        "max_abs_dot_non_antipodal": 1294,
+        "equals_formula": true,
+        "proof": "v=(y-z)/2, Cv=pv, pk=v^T C v \u2264 k(k-1) \u21d2 k\u2265p+1"
+      }
+    }
+  },
+  "budget_algebra": {
+    "proved": true,
+    "theorem": "\u2211M\u00b2=12n\u00b2\u221248n+C_diag+24\u2211\u03c1\u00b2 with C_diag=4n(11n\u221214)/p\u00b2. \u2016\u03ba\u2016_F\u00b2=C_diag+24\u2211\u03c1\u00b2\u226496n \u21d4 \u2211\u03c1\u00b2\u2264n(13p\u00b2+3)/(6p\u00b2). Room 96n\u2212C_diag=4n(13p\u00b2+3)/p\u00b2 for n=p\u00b2+1. C_diag\u226496n for every odd prime (Prop 15.96.6).",
+    "by_p": {
+      "3": {
+        "n": 10,
+        "C_diag": "1280/3",
+        "kappa2_budget_96n": 960,
+        "room_after_C_diag": "1600/3",
+        "rho2_budget": "200/9",
+        "room_over_24_eq_rho2_budget": true,
+        "room_closed_form_ok": true,
+        "C_diag_le_96n": true
+      },
+      "5": {
+        "n": 26,
+        "C_diag": "28288/25",
+        "kappa2_budget_96n": 2496,
+        "room_after_C_diag": "34112/25",
+        "rho2_budget": "4264/75",
+        "room_over_24_eq_rho2_budget": true,
+        "room_closed_form_ok": true,
+        "C_diag_le_96n": true
+      },
+      "7": {
+        "n": 50,
+        "C_diag": "107200/49",
+        "kappa2_budget_96n": 4800,
+        "room_after_C_diag": "128000/49",
+        "rho2_budget": "16000/147",
+        "room_over_24_eq_rho2_budget": true,
+        "room_closed_form_ok": true,
+        "C_diag_le_96n": true
+      },
+      "11": {
+        "n": 122,
+        "C_diag": "648064/121",
+        "kappa2_budget_96n": 11712,
+        "room_after_C_diag": "769088/121",
+        "rho2_budget": "96136/363",
+        "room_over_24_eq_rho2_budget": true,
+        "room_closed_form_ok": true,
+        "C_diag_le_96n": true
+      },
+      "13": {
+        "n": 170,
+        "C_diag": "1262080/169",
+        "kappa2_budget_96n": 16320,
+        "room_after_C_diag": "1496000/169",
+        "rho2_budget": "187000/507",
+        "room_over_24_eq_rho2_budget": true,
+        "room_closed_form_ok": true,
+        "C_diag_le_96n": true
+      },
+      "17": {
+        "n": 290,
+        "C_diag": "3684160/289",
+        "kappa2_budget_96n": 27840,
+        "room_after_C_diag": "4361600/289",
+        "rho2_budget": "545200/867",
+        "room_over_24_eq_rho2_budget": true,
+        "room_closed_form_ok": true,
+        "C_diag_le_96n": true
+      },
+      "19": {
+        "n": 362,
+        "C_diag": "5745664/361",
+        "kappa2_budget_96n": 34752,
+        "room_after_C_diag": "6799808/361",
+        "rho2_budget": "849976/1083",
+        "room_over_24_eq_rho2_budget": true,
+        "room_closed_form_ok": true,
+        "C_diag_le_96n": true
+      },
+      "23": {
+        "n": 530,
+        "C_diag": "12329920/529",
+        "kappa2_budget_96n": 50880,
+        "room_after_C_diag": "14585600/529",
+        "rho2_budget": "1823200/1587",
+        "room_over_24_eq_rho2_budget": true,
+        "room_closed_form_ok": true,
+        "C_diag_le_96n": true
+      },
+      "29": {
+        "n": 842,
+        "C_diag": "31147264/841",
+        "kappa2_budget_96n": 80832,
+        "room_after_C_diag": "36832448/841",
+        "rho2_budget": "4604056/2523",
+        "room_over_24_eq_rho2_budget": true,
+        "room_closed_form_ok": true,
+        "C_diag_le_96n": true
+      },
+      "31": {
+        "n": 962,
+        "C_diag": "40665664/961",
+        "kappa2_budget_96n": 92352,
+        "room_after_C_diag": "48084608/961",
+        "rho2_budget": "6010576/2883",
+        "room_over_24_eq_rho2_budget": true,
+        "room_closed_form_ok": true,
+        "C_diag_le_96n": true
+      },
+      "37": {
+        "n": 1370,
+        "C_diag": "82506880/1369",
+        "kappa2_budget_96n": 131520,
+        "room_after_C_diag": "97544000/1369",
+        "rho2_budget": "12193000/4107",
+        "room_over_24_eq_rho2_budget": true,
+        "room_closed_form_ok": true,
+        "C_diag_le_96n": true
+      }
+    }
+  },
+  "closed_forms": {
+    "proved": true,
+    "theorem": "For every odd prime p with Paley/conference order n=p\u00b2+1: \u2211\u03ba=p\u00b2(p\u00b2\u22121)/4 (Prop 15.73 census form, Max+-free for \u03ba from C); \u2211\u03ba\u00b2=n(n\u22121)(n\u22122)(n\u22125)/8 (Prop 15.71); \u2211m\u2084=\u2212p(p\u22121)(p+1)(p+4)/12 (Prop 15.73 e4); \u2211m\u2084\u03ba=n(n\u22121)(n\u22122)/8 (Prop 15.92); \u2211\u03c1=\u2211m\u2084\u2212(\u2211\u03ba)/p\u00b2; \u2211\u03c1\u03ba=\u2211m\u2084\u03ba\u2212(\u2211\u03ba\u00b2)/p\u00b2. Stratum counts n\u2081=n(n\u22121)(n\u22122)\u00b2/32, n\u2083=n(n\u22121)(n\u22122)(n\u22126)/96, n\u2081+n\u2083=C(n,4).",
+    "by_p": {
+      "3": {
+        "sum_kappa": "18",
+        "sum_kappa2": "450",
+        "sum_m4": "-14",
+        "sum_m4_kappa": "90",
+        "sum_rho": "-16",
+        "sum_rho_kappa": "40",
+        "n1": "180",
+        "n3": "30",
+        "n1_plus_n3_eq_C_n_4": true,
+        "rho2_budget": "200/9"
+      },
+      "5": {
+        "sum_kappa": "150",
+        "sum_kappa2": "40950",
+        "sum_m4": "-90",
+        "sum_m4_kappa": "1950",
+        "sum_rho": "-96",
+        "sum_rho_kappa": "312",
+        "n1": "11700",
+        "n3": "3250",
+        "n1_plus_n3_eq_C_n_4": true,
+        "rho2_budget": "4264/75"
+      },
+      "7": {
+        "sum_kappa": "588",
+        "sum_kappa2": "661500",
+        "sum_m4": "-308",
+        "sum_m4_kappa": "14700",
+        "sum_rho": "-320",
+        "sum_rho_kappa": "1200",
+        "n1": "176400",
+        "n3": "53900",
+        "n1_plus_n3_eq_C_n_4": true,
+        "rho2_budget": "16000/147"
+      },
+      "11": {
+        "sum_kappa": "3630",
+        "sum_kappa2": "25907310",
+        "sum_m4": "-1650",
+        "sum_m4_kappa": "221430",
+        "sum_rho": "-1680",
+        "sum_rho_kappa": "7320",
+        "n1": "6642900",
+        "n3": "2140490",
+        "n1_plus_n3_eq_C_n_4": true,
+        "rho2_budget": "96136/363"
+      },
+      "13": {
+        "sum_kappa": "7098",
+        "sum_kappa2": "99549450",
+        "sum_m4": "-3094",
+        "sum_m4_kappa": "603330",
+        "sum_rho": "-3136",
+        "sum_rho_kappa": "14280",
+        "n1": "25339860",
+        "n3": "8245510",
+        "n1_plus_n3_eq_C_n_4": true,
+        "rho2_budget": "187000/507"
+      },
+      "17": {
+        "sum_kappa": "20808",
+        "sum_kappa2": "859890600",
+        "sum_m4": "-8568",
+        "sum_m4_kappa": "3017160",
+        "sum_rho": "-8640",
+        "sum_rho_kappa": "41760",
+        "n1": "217235520",
+        "n3": "71406120",
+        "n1_plus_n3_eq_C_n_4": true,
+        "rho2_budget": "545200/867"
+      },
+      "19": {
+        "sum_kappa": "32490",
+        "sum_kappa2": "2099406330",
+        "sum_m4": "-13110",
+        "sum_m4_kappa": "5880690",
+        "sum_rho": "-13200",
+        "sum_rho_kappa": "65160",
+        "n1": "529262100",
+        "n3": "174460470",
+        "n1_plus_n3_eq_C_n_4": true,
+        "rho2_budget": "849976/1083"
+      },
+      "23": {
+        "sum_kappa": "69828",
+        "sum_kappa2": "9714820500",
+        "sum_m4": "-27324",
+        "sum_m4_kappa": "18504420",
+        "sum_rho": "-27456",
+        "sum_rho_kappa": "139920",
+        "n1": "2442583440",
+        "n3": "808026340",
+        "n1_plus_n3_eq_C_n_4": true,
+        "rho2_budget": "1823200/1587"
+      },
+      "29": {
+        "sum_kappa": "176610",
+        "sum_kappa2": "62233301970",
+        "sum_m4": "-66990",
+        "sum_m4_kappa": "74352810",
+        "sum_rho": "-67200",
+        "sum_rho_kappa": "353640",
+        "n1": "15614090100",
+        "n3": "5179912430",
+        "n1_plus_n3_eq_C_n_4": true,
+        "rho2_budget": "4604056/2523"
+      },
+      "31": {
+        "sum_kappa": "230640",
+        "sum_kappa2": "106167512880",
+        "sum_m4": "-86800",
+        "sum_m4_kappa": "110937840",
+        "sum_rho": "-87040",
+        "sum_rho_kappa": "461760",
+        "n1": "26625081600",
+        "n3": "8838047920",
+        "n1_plus_n3_eq_C_n_4": true,
+        "rho2_budget": "6010576/2883"
+      },
+      "37": {
+        "sum_kappa": "468198",
+        "sum_kappa2": "437776834950",
+        "sum_m4": "-172938",
+        "sum_m4_kappa": "320715630",
+        "sum_rho": "-173280",
+        "sum_rho_kappa": "937080",
+        "n1": "109684745460",
+        "n3": "36454676610",
+        "n1_plus_n3_eq_C_n_4": true,
+        "rho2_budget": "12193000/4107"
+      }
+    }
+  },
+  "master_source": {
+    "proved": true,
+    "theorem": "Master identity m\u2084=\u03ba/p\u00b2+Ext/(4p) with Ext=T m\u2084 yields (4pI\u2212T)\u03c1=T\u03ba/p\u00b2. Conference calculus (Prop 15.68): T\u03ba=0 on |\u03ba|=1 and T\u03ba=8\u03ba on |\u03ba|=3. Hence RHS supported on the n\u2083 stratum with \u2016RHS\u2016\u00b2=n\u2083\u00b7(24/p\u00b2)\u00b2=576 n\u2083/p\u2074.",
+    "by_p": {
+      "3": {
+        "n3": "30",
+        "rhs_Tkappa_over_p2_sq_norm": "640/3",
+        "identity": "(4pI-T)rho = T kappa / p^2, T kappa = 8 kappa on |kappa|=3, 0 on |kappa|=1"
+      },
+      "5": {
+        "n3": "3250",
+        "rhs_Tkappa_over_p2_sq_norm": "14976/5",
+        "identity": "(4pI-T)rho = T kappa / p^2, T kappa = 8 kappa on |kappa|=3, 0 on |kappa|=1"
+      },
+      "7": {
+        "n3": "53900",
+        "rhs_Tkappa_over_p2_sq_norm": "633600/49",
+        "identity": "(4pI-T)rho = T kappa / p^2, T kappa = 8 kappa on |kappa|=3, 0 on |kappa|=1"
+      },
+      "11": {
+        "n3": "2140490",
+        "rhs_Tkappa_over_p2_sq_norm": "10189440/121",
+        "identity": "(4pI-T)rho = T kappa / p^2, T kappa = 8 kappa on |kappa|=3, 0 on |kappa|=1"
+      },
+      "13": {
+        "n3": "8245510",
+        "rhs_Tkappa_over_p2_sq_norm": "28103040/169",
+        "identity": "(4pI-T)rho = T kappa / p^2, T kappa = 8 kappa on |kappa|=3, 0 on |kappa|=1"
+      },
+      "17": {
+        "n3": "71406120",
+        "rhs_Tkappa_over_p2_sq_norm": "142318080/289",
+        "identity": "(4pI-T)rho = T kappa / p^2, T kappa = 8 kappa on |kappa|=3, 0 on |kappa|=1"
+      },
+      "19": {
+        "n3": "174460470",
+        "rhs_Tkappa_over_p2_sq_norm": "278363520/361",
+        "identity": "(4pI-T)rho = T kappa / p^2, T kappa = 8 kappa on |kappa|=3, 0 on |kappa|=1"
+      },
+      "23": {
+        "n3": "808026340",
+        "rhs_Tkappa_over_p2_sq_norm": "879816960/529",
+        "identity": "(4pI-T)rho = T kappa / p^2, T kappa = 8 kappa on |kappa|=3, 0 on |kappa|=1"
+      },
+      "29": {
+        "n3": "5179912430",
+        "rhs_Tkappa_over_p2_sq_norm": "3547716480/841",
+        "identity": "(4pI-T)rho = T kappa / p^2, T kappa = 8 kappa on |kappa|=3, 0 on |kappa|=1"
+      },
+      "31": {
+        "n3": "8838047920",
+        "rhs_Tkappa_over_p2_sq_norm": "5297310720/961",
+        "identity": "(4pI-T)rho = T kappa / p^2, T kappa = 8 kappa on |kappa|=3, 0 on |kappa|=1"
+      },
+      "37": {
+        "n3": "36454676610",
+        "rhs_Tkappa_over_p2_sq_norm": "15338125440/1369",
+        "identity": "(4pI-T)rho = T kappa / p^2, T kappa = 8 kappa on |kappa|=3, 0 on |kappa|=1"
+      }
+    }
+  },
+  "gap_link": {
+    "proved": true,
+    "theorem": "Paley Max+: mult(\u03bb\u2082)\u2265d\u22121 (Prop 15.98). For every prime p\u22655, mult\u2265d\u22121 and \u2016\u03ba\u2016_F\u00b2\u226496n \u21d2 \u03bb\u2082\u2264\u221a(Q/(d\u22121))\u2264d/(2N) \u21d2 bi-tight empty (Prop 15.98.5 + 15.55\u201315.56). OPEN input: \u2016\u03ba\u2016\u00b2\u226496n for all primes p\u22655."
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "n": 10,
+      "d": 5,
+      "sum_M2": 1680.0,
+      "Wick_hi": 1680,
+      "kappa2": 960.0,
+      "kappa2_budget_96n": 960.0,
+      "kappa2_le_96n": true,
+      "sum_M2_le_Wick": true,
+      "C_diag": 426.6666666666667,
+      "sum_rho2": 22.222222222222246,
+      "rho2_budget": 22.22222222222222,
+      "sum_rho2_le_budget": true,
+      "split_identity_ok": true,
+      "min_dH_non_antipodal": 4,
+      "min_dH_ge_p_plus_1": true,
+      "closed_forms_match_census": true,
+      "ok": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "n": 26,
+      "d": 13,
+      "sum_M2": 9261.538461538461,
+      "Wick_hi": 9360,
+      "kappa2": 2397.538461538461,
+      "kappa2_budget_96n": 2496.0,
+      "kappa2_le_96n": true,
+      "sum_M2_le_Wick": true,
+      "C_diag": 1131.52,
+      "sum_rho2": 52.7507692307635,
+      "rho2_budget": 56.85333333333333,
+      "sum_rho2_le_budget": true,
+      "split_identity_ok": true,
+      "min_dH_non_antipodal": 6,
+      "min_dH_ge_p_plus_1": true,
+      "closed_forms_match_census": true,
+      "ok": true
+    },
+    "7": {
+      "p": 7,
+      "skipped": true,
+      "reason": "Max+ array missing"
+    }
+  },
+  "attack_surface": "OPEN: prove \u2016\u03ba\u2016_F\u00b2\u226496n for all primes p\u22655 (\u21d4 \u2211\u03c1\u00b2\u2264n(13p\u00b2+3)/(6p\u00b2) \u21d4 E[(y\u00b7z)\u2074]\u2264Wick). Tools: (i) resolvent (4pI\u2212T)\u03c1=T\u03ba/p\u00b2 with source only on |\u03ba|=3; (ii) conference association scheme / frame potential for E[D\u2074]; (iii) 16N/H alternate. Min-distance |y\u00b7z|\u2264(p\u22121)\u00b2\u22122 for y\u2260\u00b1z available. With 15.98, \u03ba bound \u21d2 bi-tight empty for Paley p\u22655. NOTE (2026-07-31): halfspace Aut-orbit alone has E[D^4]>Wick at p=5 (orbit size 60 vs full Max+ 260); full Max+ measure is essential for \u03ba\u226496n. Do not replace Max+ by a proper sub-orbit.",
+  "verdict": "Prop 15.99 proves min Hamming distance \u2265p+1 for non-antipodal Max+ pairs, the full Wick/\u03ba/\u03c1 budget algebra with closed forms for \u2211\u03ba,\u2211\u03ba\u00b2,\u2211m\u2084,\u2211m\u2084\u03ba,\u2211\u03c1,\u2211\u03c1\u03ba, and the master residual source T\u03ba on |\u03ba|=3. Certified \u2016\u03ba\u2016\u00b2\u226496n at p=3,5 (eq only p=3). General p\u22655 \u03ba bound remains OPEN. lim \u03b1_n OPEN.",
+  "settlement_note": "Next: close \u2016\u03ba\u2016_F\u00b2\u226496n for all p\u22655 (or 16N/H), then bi-tight via 15.95\u201315.98; then N_DEEP + Main Theorem. L stays OPEN until the full chain.",
+  "proved": true
+}

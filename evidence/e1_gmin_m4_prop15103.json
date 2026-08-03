@@ -1,0 +1,219 @@
+{
+  "prop": "15.103",
+  "backend": "CPU Fraction; Max+ p=3,5,7 (p=7 ProcessPool 2^25 free coords); PopP power matvec p=7; GPU unused (F20)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "gap_proved_for_all_p": false,
+  "kappa_bound_proved_for_all_p": false,
+  "general_delta_bound_proved": false,
+  "delta_bound_certified_primes": [
+    3,
+    5,
+    7
+  ],
+  "budget_formulas": {
+    "proved": true,
+    "theorem": "room_hyp/24 = 4(p\u00b2\u22129)(p\u00b2\u22121)\u00b2/(3(p\u00b2\u22125)(p\u00b2+1)) for odd primes p\u22653, and (room_hyp/24)/(room/24) = ((d\u22121)/d)\u00b2.",
+    "by_p": {
+      "3": {
+        "delta2_budget_hyp": "0",
+        "closed_form": "0",
+        "match": true,
+        "delta2_budget_96n": "0",
+        "ratio_hyp_over_96n": "0",
+        "ratio_eq_d_minus_1_over_d_sq": true
+      },
+      "5": {
+        "delta2_budget_hyp": "1536/65",
+        "closed_form": "1536/65",
+        "match": true,
+        "delta2_budget_96n": "416/15",
+        "ratio_hyp_over_96n": "144/169",
+        "ratio_eq_d_minus_1_over_d_sq": true
+      },
+      "7": {
+        "delta2_budget_hyp": "3072/55",
+        "closed_form": "3072/55",
+        "match": true,
+        "delta2_budget_96n": "2000/33",
+        "ratio_hyp_over_96n": "576/625",
+        "ratio_eq_d_minus_1_over_d_sq": true
+      },
+      "11": {
+        "delta2_budget_hyp": "268800/1769",
+        "closed_form": "268800/1769",
+        "match": true,
+        "delta2_budget_96n": "13664/87",
+        "ratio_hyp_over_96n": "3600/3721",
+        "ratio_eq_d_minus_1_over_d_sq": true
+      },
+      "13": {
+        "delta2_budget_hyp": "150528/697",
+        "closed_form": "150528/697",
+        "match": true,
+        "delta2_budget_96n": "27200/123",
+        "ratio_hyp_over_96n": "7056/7225",
+        "ratio_eq_d_minus_1_over_d_sq": true
+      },
+      "17": {
+        "delta2_budget_hyp": "774144/2059",
+        "closed_form": "774144/2059",
+        "match": true,
+        "delta2_budget_96n": "81200/213",
+        "ratio_hyp_over_96n": "20736/21025",
+        "ratio_eq_d_minus_1_over_d_sq": true
+      },
+      "19": {
+        "delta2_budget_hyp": "7603200/16109",
+        "closed_form": "7603200/16109",
+        "match": true,
+        "delta2_budget_96n": "127424/267",
+        "ratio_hyp_over_96n": "32400/32761",
+        "ratio_eq_d_minus_1_over_d_sq": true
+      },
+      "23": {
+        "delta2_budget_hyp": "4832256/6943",
+        "closed_form": "4832256/6943",
+        "match": true,
+        "delta2_budget_96n": "275600/393",
+        "ratio_hyp_over_96n": "69696/70225",
+        "ratio_eq_d_minus_1_over_d_sq": true
+      },
+      "29": {
+        "delta2_budget_hyp": "97843200/87989",
+        "closed_form": "97843200/87989",
+        "match": true,
+        "delta2_budget_96n": "700544/627",
+        "ratio_hyp_over_96n": "176400/177241",
+        "ratio_eq_d_minus_1_over_d_sq": true
+      },
+      "31": {
+        "delta2_budget_hyp": "146227200/114959",
+        "closed_form": "146227200/114959",
+        "match": true,
+        "delta2_budget_96n": "915824/717",
+        "ratio_hyp_over_96n": "230400/231361",
+        "ratio_eq_d_minus_1_over_d_sq": true
+      },
+      "37": {
+        "delta2_budget_hyp": "84837888/46717",
+        "closed_form": "84837888/46717",
+        "match": true,
+        "delta2_budget_96n": "1863200/1023",
+        "ratio_hyp_over_96n": "467856/469225",
+        "ratio_eq_d_minus_1_over_d_sq": true
+      }
+    }
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "d": 5,
+      "ED4": 1680.0,
+      "kappa2": 960.0,
+      "proj": 960.0,
+      "orth": 0.0,
+      "delta2": 0.0,
+      "delta2_budget_96n": 0.0,
+      "delta2_budget_hyp": 0.0,
+      "kappa_hyp": 960.0,
+      "budget_96n": 960.0,
+      "Wick_hi": 1680.0,
+      "kappa2_le_96n": true,
+      "kappa2_le_hyp": true,
+      "kappa2_eq_hyp": true,
+      "delta2_le_96n_budget": true,
+      "delta2_le_hyp_budget": true,
+      "delta2_eq_hyp_budget": true,
+      "ratio_delta2_over_hyp": null,
+      "orth_over_room_hyp": null,
+      "ED4_le_Wick": true,
+      "ok": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "d": 13,
+      "ED4": 9261.538461538461,
+      "kappa2": 2397.538461538461,
+      "proj": 1830.4,
+      "orth": 567.1384615384609,
+      "delta2": 23.630769230769204,
+      "delta2_budget_96n": 27.733333333333334,
+      "delta2_budget_hyp": 23.630769230769232,
+      "kappa_hyp": 2397.5384615384614,
+      "budget_96n": 2496.0,
+      "Wick_hi": 9360.0,
+      "kappa2_le_96n": true,
+      "kappa2_le_hyp": true,
+      "kappa2_eq_hyp": true,
+      "delta2_le_96n_budget": true,
+      "delta2_le_hyp_budget": true,
+      "delta2_eq_hyp_budget": true,
+      "ratio_delta2_over_hyp": 0.9999999999999988,
+      "orth_over_room_hyp": 0.9999999999999986,
+      "ED4_le_Wick": true,
+      "ok": true
+    },
+    "7": {
+      "p": 7,
+      "N": 11452,
+      "d": 25,
+      "ED4": 31195.626520644902,
+      "kappa2": 3595.6265206449025,
+      "proj": 3345.4545454545455,
+      "orth": 250.171975190357,
+      "delta2": 10.423832299598208,
+      "delta2_budget_96n": 60.60606060606061,
+      "delta2_budget_hyp": 55.85454545454545,
+      "kappa_hyp": 4685.963636363636,
+      "budget_96n": 4800.0,
+      "Wick_hi": 32400.0,
+      "kappa2_le_96n": true,
+      "kappa2_le_hyp": true,
+      "kappa2_eq_hyp": false,
+      "delta2_le_96n_budget": true,
+      "delta2_le_hyp_budget": true,
+      "delta2_eq_hyp_budget": false,
+      "ratio_delta2_over_hyp": 0.18662460171806688,
+      "orth_over_room_hyp": 0.18662460171806688,
+      "ED4_le_Wick": true,
+      "ok": true
+    }
+  },
+  "sixteen_N": {
+    "5": {
+      "p": 5,
+      "lambda2": 0.01301775147928994,
+      "four_over_N": 0.015384615384615385,
+      "lambda2_le_4_over_N": true,
+      "sixteen_N_holds": true,
+      "method": "exact PopP bulk spectrum (Prop 15.101 cert)"
+    },
+    "7": {
+      "p": 7,
+      "N": 11452,
+      "lambda2_est": 0.00023055429023012322,
+      "four_over_N": 0.00034928396786587494,
+      "d_over_2N": 0.0010915123995808593,
+      "lambda2_le_4_over_N": true,
+      "lambda2_le_d_over_2N": true,
+      "sixteen_N_holds": true,
+      "method": "power method on PopP matvec, v\u22a51, 50 iters"
+    }
+  },
+  "reduction": {
+    "proved": true,
+    "general_delta_bound_proved": false,
+    "kappa_bound_proved_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "theorem": "For Paley Max+ at p\u2208{3,5,7}: \u2016\u03b4\u2016\u2082\u00b2 \u2264 room_hyp/24 (eq at p=3,5; strict at p=7 with ratio\u22480.187).  Hence \u03ba\u00b2\u2264\u03ba_hyp\u226496n at these primes, and with mult(\u03bb\u2082)\u2265d\u22121 (Prop 15.98) bi-tight is empty at p=5,7.  Also 16N holds at p=5,7 by direct \u03bb\u2082(PopP)\u22644/N.  General p\u22655: OPEN.",
+    "open": "Prove \u2016\u03b4\u2016\u2082\u00b2 \u2264 room_hyp/24 for all primes p\u22655, or \u03bb\u2082(PopP)\u22644/N, or \u03ba\u00b2\u226496n by another route."
+  },
+  "attack_surface": "OPEN: \u2016\u03b4\u2016\u2082\u00b2 \u2264 room_hyp/24 for all primes p\u22655.  Verified at p=3,5,7 (eq 3,5; ratio\u22480.187 at p=7).  Alternate: prove \u03bb\u2082(PopP)\u22644/N (16N) for all p\u22655 \u2014 holds at p=5,7.  Then bi-tight via 15.98 or 15.61; then N_DEEP; Main Theorem. L stays OPEN.",
+  "verdict": "Prop 15.103 certifies the \u03b4-bound at p=3,5,7 and 16N at p=5,7. Equality \u03ba\u00b2=\u03ba_hyp is special to p=3,5 (strict at p=7). General p\u22655 still OPEN. lim \u03b1_n OPEN.",
+  "settlement_note": "L OPEN. Do not soft-close. Bi-tight is closed for p=5,7 by cert but not for all primes p\u22655.",
+  "proved": true
+}

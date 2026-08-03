@@ -1,0 +1,30 @@
+{
+  "5": {
+    "p": 5,
+    "n_orbits": 42,
+    "nullity": 2,
+    "delta2_from_E4p_proj": 23.630769230769246,
+    "sum_m4_sq": 143.23076923076923,
+    "m4f_flat": 119.6,
+    "delta2_sum_minus_flat": 23.630769230769232,
+    "room": 23.630769230769232,
+    "rho_min2": 29.12,
+    "delta2_le_room": true,
+    "delta2_le_rho_min": true,
+    "match_p5_room": true
+  },
+  "7": {
+    "p": 7,
+    "n_orbits": 128,
+    "nullity": 7,
+    "delta2_from_E4p_proj": 10.423832299598242,
+    "sum_m4_sq": 383.15110502687094,
+    "m4f_flat": 372.72727272727275,
+    "delta2_sum_minus_flat": 10.423832299598189,
+    "room": 55.85454545454545,
+    "rho_min2": 48.23747680890538,
+    "delta2_le_room": true,
+    "delta2_le_rho_min": true,
+    "match_p7_pair": true
+  }
+}

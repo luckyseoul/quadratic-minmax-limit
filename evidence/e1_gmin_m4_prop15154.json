@@ -1,0 +1,208 @@
+{
+  "prop": "15.154",
+  "title": "Prop 15.154: avg(\u03c7 \u03ba)=3/(n\u22123) Max+-free; \u03bc\u2084=\u03ba_main+\u03b7; residual\u21d4\u03b7\u2264\u03b7_suf; L OPEN",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close. Proved avg(\u03c7 \u03ba)=3/(p\u00b2\u22122) by conference+halfspace row-sum algebra. \u03bc\u2084=3/(p\u00b2(p\u00b2\u22122))+\u03b7 with \u03b7=avg(\u03c7 Ext)/(4p). Residual \u21d4 \u03b7\u2264\u03b7_suf=4(13p\u00b2+15)/(p\u2074(p\u00b2\u22122)(p\u00b2\u22125)). \u03ba_main safely under budget; need Weil/Aut bound on \u03b7. N_ED4_SUF OPEN. L OPEN.",
+  "proved": {
+    "avg_chi_kappa_maxplus_free": true,
+    "mu4_kappa_eta_decomposition": true,
+    "census_eta_p5_p7": true,
+    "residual_for_all_p_ge_5": false,
+    "eta_bound_for_all_p": false,
+    "hyp_residual_for_all_p": false
+  },
+  "algebra": {
+    "avg_chi_kappa": {
+      "proved": true,
+      "theorem": "avg(\u03c7 \u03ba)=3/(n\u22123)=3/(p\u00b2\u22122) Max+-free from conference+halfspace row-sum algebra (C\u2082 1=p 1).",
+      "by_p": {
+        "5": {
+          "avg_chi_kappa": "3/23",
+          "kappa_main": "3/575",
+          "match": true
+        },
+        "7": {
+          "avg_chi_kappa": "3/47",
+          "kappa_main": "3/2303",
+          "match": true
+        },
+        "11": {
+          "avg_chi_kappa": "3/119",
+          "kappa_main": "3/14399",
+          "match": true
+        },
+        "13": {
+          "avg_chi_kappa": "3/167",
+          "kappa_main": "3/28223",
+          "match": true
+        },
+        "17": {
+          "avg_chi_kappa": "3/287",
+          "kappa_main": "3/82943",
+          "match": true
+        },
+        "19": {
+          "avg_chi_kappa": "3/359",
+          "kappa_main": "3/129599",
+          "match": true
+        },
+        "23": {
+          "avg_chi_kappa": "3/527",
+          "kappa_main": "3/278783",
+          "match": true
+        },
+        "29": {
+          "avg_chi_kappa": "3/839",
+          "kappa_main": "3/705599",
+          "match": true
+        }
+      },
+      "n_checked": 23,
+      "proof_sketch": "sum_S \u03c7\u03ba = (1/8) sum_{distinct ab,cd} C2_ab C2_cd; inner sum = p(n-4)+2 C2_ab; total = p\u00b2n(n-4)+2n(n-1); avg = 3/(n-3) after n=p\u00b2+1."
+    },
+    "decomposition": {
+      "proved": true,
+      "theorem": "\u03bc\u2084=\u03ba_main+\u03b7 with \u03ba_main=3/(p\u00b2(p\u00b2\u22122)); \u03b7_suf=4(13p\u00b2+15)/(p\u2074(p\u00b2\u22122)(p\u00b2\u22125)); residual\u21d4\u03b7\u2264\u03b7_suf.",
+      "by_p": {
+        "5": {
+          "kappa_main": "3/575",
+          "eta_suf": "68/14375",
+          "mu4_flat": "1/125",
+          "mu4_suf": "143/14375",
+          "flat_minus_main": "8/2875",
+          "match": true
+        },
+        "7": {
+          "kappa_main": "3/2303",
+          "eta_suf": "652/1241317",
+          "mu4_flat": "41/25333",
+          "mu4_suf": "2269/1241317",
+          "flat_minus_main": "8/25333",
+          "match": true
+        },
+        "11": {
+          "kappa_main": "3/14399",
+          "eta_suf": "1588/50526091",
+          "mu4_flat": "95/417571",
+          "mu4_suf": "12115/50526091",
+          "flat_minus_main": "8/417571",
+          "match": true
+        },
+        "13": {
+          "kappa_main": "3/28223",
+          "eta_suf": "2212/195557167",
+          "mu4_flat": "131/1157143",
+          "mu4_suf": "22999/195557167",
+          "flat_minus_main": "8/1157143",
+          "match": true
+        },
+        "17": {
+          "kappa_main": "3/82943",
+          "eta_suf": "92/41509937",
+          "mu4_flat": "13/346409",
+          "mu4_suf": "65329/1701907417",
+          "flat_minus_main": "8/5888953",
+          "match": true
+        },
+        "19": {
+          "kappa_main": "3/129599",
+          "eta_suf": "4708/4163886271",
+          "mu4_flat": "275/11534311",
+          "mu4_suf": "101095/4163886271",
+          "flat_minus_main": "8/11534311",
+          "match": true
+        },
+        "23": {
+          "kappa_main": "3/278783",
+          "eta_suf": "6892/19319383117",
+          "mu4_flat": "401/36520573",
+          "mu4_suf": "214789/19319383117",
+          "flat_minus_main": "8/36520573",
+          "match": true
+        },
+        "29": {
+          "kappa_main": "3/705599",
+          "eta_suf": "10948/124022430631",
+          "mu4_flat": "635/147470191",
+          "mu4_suf": "538255/124022430631",
+          "flat_minus_main": "8/147470191",
+          "match": true
+        }
+      },
+      "n_checked": 23,
+      "closed_forms": {
+        "avg_chi_kappa": "3/(n-3) = 3/(p^2-2)",
+        "kappa_main": "3/(p^2 (p^2-2))",
+        "eta": "mu4 - kappa_main = avg(chi Ext)/(4p)",
+        "eta_suf": "4(13p^2+15)/(p^4 (p^2-2)(p^2-5))",
+        "flat_minus_main": "32/(p^2 (p^2-2)(p^2-5))"
+      }
+    },
+    "census": {
+      "proved_census": true,
+      "theorem": "\u03b7\u2264\u03b7_suf at p=5,7 (full W-census \u03bc\u2084).",
+      "by_p": {
+        "5": {
+          "mu4": "931/97175",
+          "kappa_main": "3/575",
+          "eta": "424/97175",
+          "eta_suf": "68/14375",
+          "eta_le_suf": true,
+          "eta_over_suf": 0.9223807866341803,
+          "mu4_le_mu4_suf": true
+        },
+        "7": {
+          "mu4": "39979/23548175",
+          "kappa_main": "3/2303",
+          "eta": "9304/23548175",
+          "eta_suf": "652/1241317",
+          "eta_le_suf": true,
+          "eta_over_suf": 0.7522246388768056,
+          "mu4_le_mu4_suf": true
+        }
+      }
+    },
+    "open": {
+      "residual_closed_general": false,
+      "eta_le_eta_suf_all_p": false,
+      "kappa_main_closed": true,
+      "open": "Prove \u03b7=avg(\u03c7 Ext)/(4p) \u2264 \u03b7_suf for all primes p\u22657 via Weil/Paley character sums on avg(\u03c7 T m\u2084), Aut-orbit Ext, or closed W_k.",
+      "sufficient_targets": [
+        "Weil_bound_avg_chi_T_m4",
+        "Aut_orbit_Ext_vs_chi",
+        "closed_W_k_or_ED4"
+      ],
+      "dead": [
+        "uniform_m4_le_M_cand",
+        "plain_ULC",
+        "pure_t_e_of_k",
+        "CS_Popoviciu_on_Cov"
+      ],
+      "progress": "\u03ba_main = 3/(p\u00b2(p\u00b2\u22122)) proved Max+-free and strictly below \u03bc4_suf; residual isolated in the single Ext-correlation scalar \u03b7."
+    }
+  },
+  "closed_forms": {
+    "avg_chi_kappa": "3/(n-3) = 3/(p^2-2)",
+    "kappa_main": "3/(p^2 (p^2-2))",
+    "eta": "mu4 - kappa_main = avg(chi Ext)/(4p)",
+    "eta_suf": "4(13p^2+15)/(p^4 (p^2-2)(p^2-5))",
+    "flat_minus_main": "32/(p^2 (p^2-2)(p^2-5))"
+  },
+  "status": {
+    "p5_residual_maxplus_free": true,
+    "p7_residual_maxplus_free": true,
+    "type_free_residual_general": false,
+    "kappa_main_closed": true,
+    "eta_bound_open": true,
+    "general_residual": false
+  },
+  "open_attack": "Weil/Paley bound on \u03b7=avg(\u03c7 T m\u2084)/(4p) \u2264 \u03b7_suf, or Aut-orbit Ext.",
+  "backend": "CPU Fraction algebra; GPU unused (F20)",
+  "F19": "no class_key thrash",
+  "F20": "GPU unused",
+  "residual_closed": false,
+  "compute": {
+    "workers": "Fraction algebra",
+    "gpu": "unused"
+  }
+}

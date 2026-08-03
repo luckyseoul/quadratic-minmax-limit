@@ -3106,6 +3106,175 @@ Evidence: `src/e1_gmin_m4_prop1594.py`, `evidence/e1_gmin_m4_prop1594.json` (alg
 
 Evidence: `src/e1_gmin_m4_prop1595.py`, `evidence/e1_gmin_m4_prop1595.json` (Fraction algebra + Max+ p=3,5,7; GPU unused).
 
+**Proposition 15.96 (Wick–κ calculus; ‖κ‖²≤96n ⇔ ∑M²≤Wick; 2026-07-30).** Continue Prop 15.94–15.95.
+
+1. **Constant quadratic (proved).** For every $y\in\mathrm{Max}_{+}$, $y^\top\Sigma y=2n$ with $\Sigma=I+C/p=2P_{+}$. *Proof.* $\mathrm{Max}_{+}\subset V_{+}$ so $P_{+}y=y$, hence $y^\top\Sigma y=2\|y\|^2=2n$. $\square$
+
+2. **Wick pairing (proved).** $\langle\mathrm{Wick},M\rangle=\sum_{ijkl}\mathrm{Wick}(\Sigma)_{ijkl}M_{ijkl}=12n^2$. *Proof.* Each of the three Isserlis pairings contracts to $(y^\top\Sigma y)^2$; take $E$ and use (1). $\square$
+
+3. **Cumulant inner product (proved).** With $\kappa:=M-\mathrm{Wick}$ and $\|\mathrm{Wick}\|_F^2=12n^2+48n$ (from $\Sigma^2=2\Sigma$),
+   $\langle\mathrm{Wick},\kappa\rangle=-48n$. $\square$
+
+4. **Frobenius split (proved).** $\sum M^2=\|M\|_F^2=12n^2-48n+\|\kappa\|_F^2$. *Proof.* Expand $\|\mathrm{Wick}+\kappa\|^2$ and substitute (3). $\square$
+
+5. **Wick criterion (proved equivalence).** $\sum M^2\le 12n^2+48n$ if and only if $\|\kappa\|_F^2\le 96n$. Combined with Prop 15.95.1 (Wick$\le$thr for $p\ge5$): mult$(\lambda_2)\ge d$ and $\|\kappa\|^2\le96n$ $\Rightarrow$ spectral gap $\Rightarrow$ bi-tight empty for all primes $p\ge5$. $\square$
+
+6. **$C_{\mathrm{diag}}\le96n$ (proved algebra).** $C_{\mathrm{diag}}=4n(11n-14)/p^2\le96n$ for every odd prime $p$ because $(11n-14)/p^2\le24\Leftrightarrow -3\le13p^2$. $\square$
+
+7. **Certified.** At $p=3,5$: $y^\top\Sigma y\equiv2n$, $\langle\mathrm{Wick},M\rangle=12n^2$, $\|\kappa\|^2\le96n$ (equality only $p=3$), mult$(\lambda_2)=d$, gap-by-mult holds at $p=5$ fails at $p=3$. $\square$
+
+8. **What remains OPEN.** Prove $\|\kappa\|_F^2\le96n$ for all primes $p\ge5$, and/or mult$(\lambda_2)\ge d$, or $\lambda_{\max}(FF^\top|_{1^\perp})\le8N$. Deep non-tight still required. **Existence of $\lim\alpha_n$ remains OPEN. $H_{\mathrm{proved}}=\mathrm{false}$.**
+
+Evidence: `src/e1_gmin_m4_prop1596.py`, `evidence/e1_gmin_m4_prop1596.json` (Fraction + Max+ p=3,5; GPU unused).
+
+
+**Proposition 15.97 (Veronese mult identification; Ky Fan criterion for mult$\ge d$; 2026-07-30).** Continue Prop 15.94–15.96.
+
+1. **Veronese identification (proved).** With $c_a=V_+^\top y_a$, $\varphi_a=c_ac_a^\top-2I$, the Gram $G_{ab}=\langle\varphi_a,\varphi_b\rangle$ satisfies $Gx=4d^2 Wx$ on $\mathbf1^\perp$, and $P\odot P=G/(4N^2)$ on mean-zero vectors. Hence
+   \[
+   \mathrm{mult}(\lambda_2(P\odot P))=\mathrm{mult}(\lambda_{\max}(\Gamma|_{\mathrm{Sym}_0}))
+   \]
+   where $\Gamma(B)=\mathbb E[\langle\varphi,B\rangle\varphi]$ is the Veronese covariance on $\mathrm{Sym}_0$. $\square$
+
+2. **Aut-Schur (proved).** $\mathrm{Aut}(\mathrm{Max}_+)$ acts on $\mathrm{Sym}_0$ by conjugation and commutes with $\Gamma$, so $\Gamma$ is scalar on every Aut-irrep (Schur). $\square$
+
+3. **Ky Fan criterion (proved).** $\mathrm{mult}(\lambda_{\max})\ge d$ if and only if there exist orthonormal $B_1,\ldots,B_d\in\mathrm{Sym}_0$ with $\mathrm{Var}(c^\top B_jc)=\lambda_{\max}$ for all $j$. $\square$
+
+4. **Certified.** At $p=3,5$: $\mathrm{mult}(\lambda_2)=d$, top $\Gamma$-mult $=d$, spectra match, and the top $d$ right singular vectors of the Veronese cloud are equal-variance maximizers (Ky Fan equality). $\square$
+
+5. **Gap link.** With Props 15.95–15.96: mult$\ge d$ and $\|\kappa\|_F^2\le96n$ $\Rightarrow$ gap $\Rightarrow$ bi-tight empty for all primes $p\ge5$. $\square$
+
+6. **OPEN.** Construct $d$ orthonormal maximizers of $\mathrm{Var}(c^\top Bc)$ for general primes $p\ge5$ (e.g. Aut/PSL$(2,p^2)$ irrep of degree $d$ in the maximizer locus), and/or $\|\kappa\|^2\le96n$. Or prove $16N$/$H$. Deep non-tight remains. **Existence of $\lim\alpha_n$ remains OPEN.**
+
+Evidence: `src/e1_gmin_m4_prop1597.py`, `evidence/e1_gmin_m4_prop1597.json` (CPU linear algebra + Max+ p=3,5; GPU unused).
+
+
+**Proposition 15.98 (mult$(\lambda_2)\ge d-1$ via PSL; strengthened gap; 2026-07-30).** Continue Prop 15.95–15.97. Scope: Paley Max+ of order $n=p^2+1$.
+
+1. **PSL min irrep (proved).** For $q=p^2$ odd, every nontrivial complex irrep of $\mathrm{PSL}(2,q)$ has dimension $\ge(q-1)/2=d-1$. (Character table of $\mathrm{PSL}(2,q)$.)
+
+2. **Aut action (proved).** $\mathrm{P}\Sigma\mathrm{L}(2,q)$ acts on coordinates of the Paley conference preserving $C$ and $\mathrm{Max}_+$, hence on $L^2(\mathrm{Max}_+)$. $P\odot P$ is equivariant. The antipodal map $y\mapsto -y$ is a design automorphism.
+
+3. **mult$\ge d-1$ (proved for Paley Max+).** The $\lambda_2$-eigenspace $V$ is orthogonal to constants ($\lambda_1$ simple) and nonzero ($\mathrm{Tr}(P\odot P)=d^2/N>\alpha$). It is a nontrivial unitary representation of $\mathrm{PSL}(2,q)$ (image of the acting group: $\mathrm{PSL}(2,q)$ is simple for $q\ge4$, action nontrivial $\Rightarrow$ image $\cong\mathrm{PSL}(2,q)$). Hence $\dim V\ge d-1$. $\square$
+
+4. **Strengthened gap criterion (proved algebra, all primes $p\ge5$).** If $\mathrm{mult}(\lambda_2)\ge d-1$ and $\|\kappa\|_F^2\le96n$ (i.e. $\sum M^2\le\mathrm{Wick}_{\mathrm{hi}}$), then $\lambda_2\le\sqrt{Q/(d-1)}\le d/(2N)$, so bi-tight empty. *Proof.* $N$ cancels; the inequality $\mathrm{Wick}/16-d^2\le(d-1)d^2/4$ reduces to $d(d^2-9d-24)\ge0$, true for $d\ge13$. At $p=3$ the algebra fails (correct). $\square$
+
+5. **Certified.** mult$\ge d-1$ (in fact $=d$) and $\|\kappa\|^2\le96n$ at $p=3,5$; gap-by-mult$_{d-1}$ holds at $p=5$, fails at $p=3$.
+
+6. **OPEN for bi-tight at general $p\ge5$.** Prove $\|\kappa\|_F^2\le96n$ (boolean $\le$ Wick). Then (3)+(4) close bi-tight for all Paley $p\ge5$. Deep ND + Main Theorem remain for $\lim\alpha_n$. **$L$ OPEN.**
+
+Evidence: `src/e1_gmin_m4_prop1598.py`, `evidence/e1_gmin_m4_prop1598.json`.
+
+**Proposition 15.99 (κ-budget structure; min-distance; closed forms; 2026-07-31).** Continue Prop 15.96–15.98.
+
+1. **Min Hamming distance (proved, any conference Max+).** If $y,z\in\mathrm{Max}_{+}$, $y\ne\pm z$, then $d_H(y,z)\ge p+1$, i.e. $|y\cdot z|\le n-2(p+1)=(p-1)^2-2$. *Proof.* $v=(y-z)/2\in\{0,\pm1\}^n$ has support size $k=d_H$ and $Cv=pv$. Then $pk=v^\top Cv\le k(k-1)$, so $k\ge p+1$. $\square$
+
+2. **Wick/ρ budget (proved algebra).** $\|\kappa\|_F^2=C_{\mathrm{diag}}+24\sum_S\rho_S^2$ with $C_{\mathrm{diag}}=4n(11n-14)/p^2$ and $\rho_S=m_4(S)-\kappa(S)/p^2$. Hence $\|\kappa\|^2\le96n$ iff $\sum\rho^2\le n(13p^2+3)/(6p^2)$ iff $\sum M^2\le\mathrm{Wick}_{\mathrm{hi}}$ iff $\mathbb E[(y\cdot z)^4]\le\mathrm{Wick}_{\mathrm{hi}}$. Room $96n-C_{\mathrm{diag}}=4n(13p^2+3)/p^2$. $\square$
+
+3. **Closed forms (proved).** $\sum\kappa=p^2(p^2-1)/4$, $\sum\kappa^2=n(n-1)(n-2)(n-5)/8$, $\sum m_4=-p(p-1)(p+1)(p+4)/12$, $\sum m_4\kappa=n(n-1)(n-2)/8$; $\sum\rho$ and $\sum\rho\kappa$ follow. Stratum $n_1+n_3=\binom{n}{4}$. $\square$
+
+4. **Master residual source (proved).** $(4pI-T)\rho=T\kappa/p^2$ with $T\kappa=0$ on $|\kappa|=1$ and $T\kappa=8\kappa$ on $|\kappa|=3$; $\|\mathrm{RHS}\|^2=576 n_3/p^4$. $\square$
+
+5. **Gap link.** Paley mult$(\lambda_2)\ge d-1$ (15.98) + $\|\kappa\|^2\le96n$ $\Rightarrow$ bi-tight empty for all primes $p\ge5$. $\square$
+
+6. **Certified.** At $p=3,5$: $\|\kappa\|^2\le96n$ (eq only $p=3$), min-distance, closed forms vs census, split identity. $\square$
+
+7. **OPEN.** Prove $\|\kappa\|_F^2\le96n$ for all primes $p\ge5$ (boolean $\le$ Wick), or $16N$/$H$. Deep ND remains. **Existence of $\lim\alpha_n$ remains OPEN. $H_{\mathrm{proved}}=\mathrm{false}$.**
+
+Evidence: `src/e1_gmin_m4_prop1599.py`, `evidence/e1_gmin_m4_prop1599.json` (CPU Fraction + Max+ p=3,5; GPU unused).
+
+**Proposition 15.100 (dual-frame projection; flat Veronese ≤ Wick; κ_hyp; 2026-07-31).** Continue Prop 15.96–15.99.
+
+1. **Dual frame (proved).** $r_j=P_+e_j$, $S=\sum_j r_j^{\otimes 4}$. For boolean measures $\langle S,M\rangle=n$; on Max+ $\langle S,\kappa\rangle=-2n$ and $\langle\mathrm{Wick},\kappa\rangle=-48n$. $\|S\|_F^2=n^2/(16p^2)$. $\square$
+
+2. **Projection formula (proved).** $\|\kappa_{\mathrm{proj}}\|_F^2=64n(p^2-3)/(p^2-5)$ on $\mathrm{span}\{\mathrm{Wick},S\}$; room $96n-\|\kappa_{\mathrm{proj}}\|^2=32n(p^2-9)/(p^2-5)$. $\square$
+
+3. **Flat Veronese bound (proved).** With $\mathrm{rank}(P\odot P)=\binom{d-1}{2}$, CS gives $E[D^4]\ge\mathrm{ED4}_{\mathrm{flat}}=16d^2+32d(d-1)^2/(d-3)$, and $\mathrm{Wick}-\mathrm{ED4}_{\mathrm{flat}}=64d(d-5)/(d-3)\ge0$ for $d\ge5$ (eq only $p=3$). Moreover $\kappa_{\mathrm{flat}}=\|\kappa_{\mathrm{proj}}\|^2$. $\square$
+
+4. **κ_hyp algebra (proved).** $\kappa_{\mathrm{hyp}}=\|\kappa_{\mathrm{proj}}\|^2+\mathrm{room}\cdot((n-2)/n)^2$ satisfies $\kappa_{\mathrm{hyp}}\le96n$ with slack $128p^2(p-3)(p+3)/((p^2-5)(p^2+1))$. $\square$
+
+5. **Certified.** At $p=3,5$: $\|\kappa\|^2=\kappa_{\mathrm{hyp}}$ (eq $96n$ only $p=3$). $\square$
+
+6. **OPEN.** Prove $\|\kappa_{\mathrm{orth}}\|^2\le\mathrm{room}\cdot((d-1)/d)^2$ (i.e. $\|\kappa\|^2\le\kappa_{\mathrm{hyp}}$) for all primes $p\ge5$. Then $\|\kappa\|^2\le96n$ and bi-tight closes via 15.98. **$\lim\alpha_n$ OPEN.**
+
+Evidence: `src/e1_gmin_m4_prop15100.py`, `evidence/e1_gmin_m4_prop15100.json`.
+
+**Proposition 15.101 (Fickus Gram residual / bulk-variance orth reduction; 2026-07-31).** Continue Prop 15.100. Method transfer from Fickus–Jasper–Mixon (arXiv:2605.28738) residual Gram $K=H\odot\overline H$ / Schur rank-nullity and Ge–Liu multiplicity bounds (arXiv:2606.29392), applied to $\mathrm{PopP}=P\odot P$ on Max+.
+
+1. **Fickus–Schur rank (proved).** $G=YY^\top$ has rank $d$; $K=G\odot G=4N^2\,\mathrm{PopP}$ has $\mathrm{rank}=\binom{d-1}{2}=1+m$ with $m=d(d-3)/2$ (Prop 15.59). Schur bound $\mathrm{rank}\le d^2$ is strict. Annihilator: $\mathrm{range}(P)\subset\ker(\mathrm{PopP})$; $\lambda_1=d/N$ simple; bulk sums to $S=d(d-1)/N$. $\square$
+
+2. **Orth as bulk variance (proved).** $E[D^4]=16N^2\mathrm{Tr}(\mathrm{PopP}^2)=16d^2+16N^2\sum_{\mathrm{bulk}}\lambda^2$. Flat CS recovers $\mathrm{ED4}_{\mathrm{flat}}$. Hence
+   \[
+   \|\kappa_{\mathrm{orth}}\|_F^2=E[D^4]-\mathrm{ED4}_{\mathrm{flat}}=16N^2\Bigl(\sum_{\mathrm{bulk}}\lambda^2-\frac{S^2}{m}\Bigr).
+   \]
+   Dual-frame IDs: $\mathrm{ED4}_{\mathrm{flat}}-\mathrm{wick}_{\mathrm{lo}}=\|\kappa_{\mathrm{proj}}\|^2$, $\mathrm{Wick}-\mathrm{ED4}_{\mathrm{flat}}=\mathrm{room}$. $\square$
+
+3. **PSL level count (proved for Paley).** $\mathrm{mult}(\lambda_2)\ge d-1$ (Prop 15.98) $\Rightarrow$ # distinct positive bulk eigenvalues $\le\lfloor m/(d-1)\rfloor=\lfloor d(d-3)/(2(d-1))\rfloor$. $\square$
+
+4. **N-free $\lambda_2$-sufficient criterion (proved algebra).** Majorization $\sum\lambda^2\le\lambda_2\cdot S$ yields $\|\kappa_{\mathrm{orth}}\|^2\le\mathrm{room}$ whenever
+   \[
+   \lambda_2\le\lambda_{\mathrm{flat}}\cdot\bigl(1+\varepsilon\bigr),\qquad
+   \varepsilon=\frac{4(p^2-9)}{(p^2-1)^2},\qquad
+   \lambda_{\mathrm{flat}}=\frac{S}{m}.
+   \]
+   ($N$ cancels after substituting $d=(p^2+1)/2$.) Hyp form: $\varepsilon_{\mathrm{hyp}}=\varepsilon\cdot((d-1)/d)^2$. **Sufficient, not necessary** (at $p=5$ true $\lambda_2>\lambda_{\mathrm{flat}}(1+\varepsilon)$ while orth still equals $\mathrm{room}\cdot((d-1)/d)^2$). $\square$
+
+5. **Certified $p=3,5$.** Bulk flat at $p=3$ (orth$=0$); three bulk levels at $p=5$ with mults $(d,2d,2d)$ and eigs $11/845,9/845,5/845$; $\kappa^2=\kappa_{\mathrm{hyp}}$ both; Fickus rank matches; $\lambda_2\le4/N$ at $p=5$. $\square$
+
+6. **OPEN.** Prove $\|\kappa_{\mathrm{orth}}\|^2\le\mathrm{room}\cdot((d-1)/d)^2$ for all primes $p\ge5$ (closed bulk spectrum / mult-aware majorization / resolvent $\delta$). Then bi-tight via 15.98. **$\lim\alpha_n$ OPEN.**
+
+Evidence: `src/e1_gmin_m4_prop15101.py`, `evidence/e1_gmin_m4_prop15101.json`.
+
+**Proposition 15.102 (resolvent $\delta$-calculus; $\|\kappa_{\mathrm{orth}}\|^2=24\|\delta\|_2^2$; 2026-07-31).** Continue Prop 15.100–15.101. Isolates the orth residual as the ker component of the master resolvent.
+
+1. **Source (proved).** $b=T\kappa/p^2$ is supported on $|\kappa|=3$ with $\|b\|_2^2=576 n_3/p^4$, $n_3=n(n-1)(n-2)(n-6)/96$. $\square$
+
+2. **$\mu^2$-form (proved form; cert $p=3,5$).** $T^2b=\mu^2 b$ with $\mu^2=4(p^2+15)$; $\langle b,Tb\rangle=0$, so $b$ splits equally into $\pm\mu$ eigenspaces of $T$. $\square$
+
+3. **$\rho_{\min}$ closed form (proved).** $\rho_{\min}=b_+/(4p-\mu)+b_-/(4p+\mu)$ has
+   \[
+   \|\rho_{\min}\|_2^2=\frac{5n(p^2-1)(p^2+3)}{6p^2(p^2-5)}.
+   \]
+   $\square$
+
+4. **$\kappa_{\min}=\mathrm{proj}$ (proved).** $C_{\mathrm{diag}}+24\|\rho_{\min}\|_2^2=\|\kappa_{\mathrm{proj}}\|_F^2$ for every odd prime $p\ge3$. $\square$
+
+5. **Orth identity (proved).** Max+ $\rho=\rho_{\min}+\delta$ with $\delta\in\ker(4pI-T)$ and $\rho_{\min}\perp\delta$, hence
+   \[
+   \|\kappa\|_F^2=\|\kappa_{\mathrm{proj}}\|_F^2+24\|\delta\|_2^2,\qquad
+   \|\kappa_{\mathrm{orth}}\|_F^2=24\|\delta\|_2^2.
+   \]
+   $\square$
+
+6. **Target equivalences (proved).** $\|\kappa\|^2\le96n\Leftrightarrow\|\delta\|_2^2\le\mathrm{room}/24$; $\|\kappa\|^2\le\kappa_{\mathrm{hyp}}\Leftrightarrow\|\delta\|_2^2\le\mathrm{room}_{\mathrm{hyp}}/24$. $\square$
+
+7. **Invertible case (proved).** $\lambda_{\max}(T)<4p\Rightarrow\delta=0\Rightarrow\|\kappa\|^2=\mathrm{proj}\le96n$ (holds at $p=3$). $\square$
+
+8. **Certified $p=5$.** $\lambda_{\max}(T)=4p$, $\mathrm{mult}(E_{4p})=d-1=12$, $\|\delta\|_2^2=\mathrm{room}_{\mathrm{hyp}}/24$ exactly ($\kappa^2=\kappa_{\mathrm{hyp}}$). $\square$
+
+9. **OPEN.** Prove $\|\delta\|_2^2\le\mathrm{room}\cdot((d-1)/d)^2/24$ for all primes $p\ge5$. Then bi-tight via 15.98. **$\lim\alpha_n$ OPEN.**
+
+Evidence: `src/e1_gmin_m4_prop15102.py`, `evidence/e1_gmin_m4_prop15102.json`.
+
+**Proposition 15.103 ($\delta$-bound certified $p=3,5,7$; 16N at $p=5,7$; 2026-07-31).** Continue Prop 15.102.
+
+1. **Budget form (proved).** $\mathrm{room}_{\mathrm{hyp}}/24=4(p^2-9)(p^2-1)^2/(3(p^2-5)(p^2+1))$. $\square$
+
+2. **Census (certified).** Full Max+ at $p=3,5,7$ ($N=12,260,11452$):
+   - $p=3$: $\delta^2=0=\mathrm{room}_{\mathrm{hyp}}/24$, $\kappa^2=\kappa_{\mathrm{hyp}}=96n$;
+   - $p=5$: $\delta^2=1536/65=\mathrm{room}_{\mathrm{hyp}}/24$, $\kappa^2=\kappa_{\mathrm{hyp}}<96n$;
+   - $p=7$: $\delta^2\approx10.424\le\mathrm{room}_{\mathrm{hyp}}/24\approx55.855$ (ratio $\approx0.187$), $\kappa^2\approx3595.6<\kappa_{\mathrm{hyp}}\approx4686<4800=96n$ (strict).
+   Equality $\kappa^2=\kappa_{\mathrm{hyp}}$ is **not** universal. $\square$
+
+3. **16N (certified $p=5,7$).** $\lambda_2(P\odot P)\le4/N$ at $p=5$ (exact $11/845<4/260$) and $p=7$ (power method $\lambda_2\approx2.31\cdot10^{-4}<4/11452$). Hence 16N holds; bi-tight empty at these primes via Prop 15.61. Also via $\kappa^2\le96n$+Prop 15.98. $\square$
+
+4. **OPEN.** Prove $\|\delta\|_2^2\le\mathrm{room}_{\mathrm{hyp}}/24$ (or $\lambda_2\le4/N$) for all primes $p\ge5$. **$\lim\alpha_n$ OPEN.**
+
+Evidence: `src/e1_gmin_m4_prop15103.py`, `evidence/e1_gmin_m4_prop15103.json`; Max+ $p=7$ at `/tmp/e1_p7/maxplus.npy`.
+
+
+
+
 **Proposition 15.22 (liminf controlled by the universal cube/sphere floor).** Write
 \[
 \rho_{\min}(n)\,:=\,\min_{A\in\mathcal S_n}\rho(A).
@@ -3434,3 +3603,1292 @@ Exact \(m_n\) harvest under SCRATCH (86-worker Gray `exact_m_parallel.py`):
 5. N. Alon, K. Makarychev, Y. Makarychev, A. Naor, Quadratic forms on graphs, *Invent. Math.* (2006).
 6. B. S. Kashin, S. J. Szarek, On the Gram matrices of systems of uniformly bounded functions, *Proc. Steklov Inst.* (2003).
 7. Yu. Nesterov, Semidefinite relaxation and nonconvex quadratic optimization, *Optim. Methods Softw.* (1998).
+
+## Prop 15.105 (2026-07-31) — Φ variance = κ_orth; 16-criterion
+
+**Proved (Fraction algebra, conference Max+):**
+1. ∑_α λ_α(Φ|Z)² = ED4 − 4n².
+2. **Variance identity:** ∑_α (λ_α − μ̄)² = ‖κ_orth‖_F² with μ̄ = 8(n−2)/(n−6).
+   Hence orth=0 ⇒ Φ is scalar on Z (Fickus residual flat ⇔ Norton operator scalar).
+3. **Exact 16-criterion:** if mult(λ_max)≥d and ‖κ‖_F²≤96n, then
+   λ_max ≤ μ̄ + 8(p²−9)/(p²−5) = 16, so 16N.
+
+**Certified:** p=3,5,7 (mult(top)=d; 16N; variance match).
+
+**OPEN:** ‖κ‖²≤96n (or direct λ_max≤16) for all primes p≥5. L remains OPEN.
+
+## Prop 15.106 (2026-07-31) — Rest-average-8; kurtosis form of residual
+
+**Proved:**
+1. If mult(λ_max(Φ|Z)) ≥ d then λ_max ≤ 16 ⇔ mean(rest spectrum) ≥ 8.
+   At λ_max = 16 the rest mean equals **exactly 8** (the Wick baseline):
+   (T − 16d)/(m − d) = 8 for conference d = n/2 > 5.
+2. ‖κ‖_F² ≤ 96n ⇔ ED4 ≤ wick_hi ⇔ kurtosis κ₄(y·z) ≤ 3 + 12/n.
+
+**Certified** p=3,5,7 (kurtosis bound, 16N, mult=d).
+
+**OPEN:** κ₄ ≤ 3+12/n or λ_max(Φ)≤16 for all primes p≥5. L remains OPEN.
+
+## Prop 15.107 (2026-07-31) — 16N from mult≥d−1 + room_hyp
+
+**Proved (Theorem A):** For every prime \(p\ge 3\),
+\[
+\mathrm{mult}(\lambda_{\max}(\Phi|Z))\ge d-1
+\quad\text{and}\quad
+\|\kappa_{\mathrm{orth}}\|^2 \le \mathrm{room}_{\mathrm{hyp}}
+\implies
+\lambda_{\max}(\Phi|Z)\le 16.
+\]
+Proof: majorization with mult \(\ge d-1\) gives
+\((16-\bar\mu)^2 \ge \mathrm{room}_{\mathrm{hyp}}\cdot(m-m_1)/(m\,m_1)\)
+as a Fraction inequality for all primes \(p\ge 3\). Hence 16N and (Prop 15.61) bi-tight empty for \(p\ge 5\).
+
+**Also proved:** Gegenbauer \(Q_4(t)=t^4-\frac{6}{d+4}t^2+\frac{3}{(d+2)(d+4)}\); 4-design ED4 \(\le\) wick_hi.
+
+**Certified:** orth≤room_hyp and 16N at \(p=3,5,7\).
+
+**OPEN residual:** orth ≤ room_hyp for all primes \(p\ge 5\) (equivalently \(\delta^2\le\mathrm{room}_{\mathrm{hyp}}/24\)). L remains OPEN.
+
+## Prop 15.108 (2026-07-31) — Residual-Gram / Schur dual; algebraic Thm A; Parseval \(T_\rho\)
+
+**Proved (Fraction algebra, conference Max+):**
+
+1. **Theorem A\* (polynomial form of Thm A).** For every prime \(p\ge 3\),
+   \[
+   (16-\bar\mu)^2 - \mathrm{room}_{\mathrm{hyp}}\cdot\frac{m-m_1}{m\,m_1}
+   = \frac{128(p-3)(p+3)(p^4-12p^2-5)}{(p^2-5)^2(p^2+1)^2}\ge 0
+   \]
+   with \(m_1=d-1\), equality at \(p=3\). Hence
+   \(\mathrm{mult}(\lambda_{\max})\ge d-1\) and \(\mathrm{orth}\le\mathrm{room}_{\mathrm{hyp}}\)
+   imply \(\lambda_{\max}(\Phi|Z)\le 16\) for **all** primes \(p\ge 3\) as a polynomial
+   identity (not sample checks).
+
+2. **PopP\(\leftrightarrow\Phi\) conversion.** \(\lambda_{\max}(\Phi|Z)=4N\cdot\lambda_2(P\odot P)\).
+   Hence 16N \(\Leftrightarrow\) \(\lambda_2(P\odot P)\le 4/N\).
+
+3. **Residual-Gram / Schur dual.** Writing \(R=\mathrm{PopP}_{\mathrm{bulk}}-\lambda_{\mathrm{flat}}\Pi_{\mathrm{bulk}}\),
+   \[
+   \mathrm{orth}=16N^2\|R\|_F^2=16N^2\Bigl(\sum_{\mathrm{bulk}}\lambda_i^2-\frac{S^2}{m}\Bigr).
+   \]
+   (Fickus residual-Gram method transfer, arXiv:2605.28738.)
+
+4. **Parseval \(\delta\)-target (single scalar residual).**  
+   \[
+   \mathrm{orth}\le\mathrm{room}_{\mathrm{hyp}}
+   \;\Leftrightarrow\;
+   \|\delta\|_2^2\le\mathrm{room}_{\mathrm{hyp}}/24
+   \;\Leftrightarrow\;
+   \|\rho\|_2^2\le T_\rho(p),
+   \]
+   where \(T_\rho=\|\rho_{\min}\|_2^2+\mathrm{room}_{\mathrm{hyp}}/24\) is Max+-free:
+   \[
+   \|\rho_{\min}\|_2^2=\frac{5n(p^2-1)(p^2+3)}{6p^2(p^2-5)},\quad
+   \frac{\mathrm{room}_{\mathrm{hyp}}}{24}=\frac{4(p^2-9)(p^2-1)^2}{3(p^2-5)(p^2+1)}.
+   \]
+   Path C residual is exactly \(\sum_S\rho(S)^2\le T_\rho(p)\).
+
+5. **\(m_4\) expansion.** \(\sum m_4^2=\|\kappa\|_2^2/p^4+(2/p^2)\langle\kappa,\rho\rangle+\|\rho\|_2^2\)
+   with \(\|\kappa\|_2^2=n(n-1)(n-2)(n-5)/8\) (Prop 15.71).
+
+**Certified:** \(\sum\rho^2\le T_\rho\) (eq \(p=3,5\); strict ratio \(\approx0.639\) at \(p=7\));
+16N via PopP at \(p=3,5,7\).
+
+**OPEN residual:** \(\sum_S\rho(S)^2\le T_\rho(p)\) for all primes \(p\ge 5\)
+(equivalently orth\(\le\)room_hyp). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15108.py`, `evidence/e1_gmin_m4_prop15108.json`, `tests/test_prop15108.py`.
+
+## Prop 15.109 (2026-07-31) — Φ–m₄ identity; Aut-invariant δ; PF+rank obstruction
+
+**Proved:**
+
+1. **Φ–m₄ identity.** For every \(B\in Z\),
+   \(\mathbb E[(y^\top B y)^2]=6\|B\|_F^2+8\sum_S m_4(S)\,\kappa_B(S)\).
+   Hence \(16N\Leftrightarrow \max_{\|B\|=1}\langle m_4,\kappa_B\rangle\le 5/4\).
+
+2. **\(\sum\kappa_B^2\) formula.** For zero-diag symmetric \(B\),
+   \(\sum_S\kappa_B(S)^2=\frac14\mathrm{Tr}(B^4)+\frac18(\mathrm{Tr}B^2)^2+\frac12\sum B_{ij}^4-\sum_i(B^2_{ii})^2\).
+
+3. **Aut-invariant reduction.** \(\delta\in E_{4p}^{\mathrm{Aut}}\); residual is finite-dimensional on double-coset orbits.
+
+4. **PF+rank obstruction.** For \(p\ge5\), \(\lambda_2(P\odot P)<d/N\) strictly (nonnegative PopP, bulk sum \(=(d-1)\cdot(d/N)\), full bulk rank \(\binom{d-1}{2}\) forbids mult\(\ge d-1\) at the PF ceiling).
+
+5. **Scalar form.** If \(\dim E_{4p}^{\mathrm{Aut}}\le1\) then \(\sum\rho^2=\|\rho_{\min}\|^2+c^2\), so residual \(\Leftrightarrow c^2\le\mathrm{room}_{\mathrm{hyp}}/24\).
+
+**Certified p=5:** \(\dim E_{4p}^{\mathrm{Aut}}=1\), \(\delta=cv_0\), \(c^2=\mathrm{room}_{\mathrm{hyp}}/24\) (equality in \(T_\rho\)).
+
+**OPEN:** \(c^2\le\mathrm{room}_{\mathrm{hyp}}/24\) for all primes \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15109.py`, `evidence/e1_gmin_m4_prop15109.json`, `tests/test_prop15109.py`.
+
+## Prop 15.110 (2026-07-31) — Closed Max+ identities; ρ_min²<budget for p≥7
+
+**Proved:**
+
+1. **∑κ∏ identity.** For boolean \(y\) with \(Cy=py\):
+   \(\sum_S\kappa(S)\prod y_i=n(n-1)(n-2)/8\).
+   Proof via \((y^\top Cy)^2=p^2n^2=2n(n-1)+8\sum\kappa\prod\) (case \(|3|=0\) from \(C^2=p^2I\)).
+
+2. **e₄ constant.** On Max+, \(|\sum y_i|=p+1\), hence
+   \(e_4=-p(p-1)(p+1)(p+4)/12\) by Newton (boolean).
+
+3. **⟨m₄,κ⟩.** \(\sum_S m_4\kappa=n(n-1)(n-2)/8\).
+
+4. **ρ_min² < room_hyp/24 for all primes p≥7.**
+   \[
+   \|\rho_{\min}\|_2^2-\frac{\mathrm{room}_{\mathrm{hyp}}}{24}
+   =-\frac{(p^2-1)(3p^6-105p^4+37p^2-15)}{6p^2(p^2-5)(p^2+1)}<0.
+   \]
+
+5. **Sufficient criterion.** For \(p\ge7\): \(\delta^2\le\rho_{\min}^2\Rightarrow\) residual.
+   At \(p=5\), equality \(\delta^2=\mathrm{room}_{\mathrm{hyp}}/24\) certified.
+   \(c=Q_0(\mathrm{halfspace})\) with \(Q_0\) from Aut-invariant \(4p\)-eigenfunction of \(T\).
+
+**Certified:** \(\delta^2\le\rho_{\min}^2\) at \(p=3,5,7\); Theorem 4 for primes \(7\le p\le97\).
+
+**OPEN:** \(\delta^2\le\rho_{\min}^2\) for general \(p\ge5\) (or closed Gauss-sum form of \(c\)). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15110.py`, `evidence/e1_gmin_m4_prop15110.json`, `tests/test_prop15110.py`.
+
+## Prop 15.111 (2026-07-31) — Pair Schur identity; closed α_κ, α_ρ; Φ residual = 8⟨δ,κ_B⟩
+
+**Proved:**
+
+1. **Zero-diag pairing identity.** For real symmetric zero-diagonal \(C,B\):
+   \[
+   \sum_S \kappa_C(S)\kappa_B(S)
+   =\tfrac14\mathrm{Tr}(CBCB)+\tfrac18(\mathrm{Tr}\,CB)^2
+   +\tfrac12\sum_{i,j}C_{ij}^2 B_{ij}^2
+   -\tfrac12\sum_i(CB)_{ii}^2-\tfrac12\sum_i(BC)_{ii}^2.
+   \]
+
+2. **α_κ on Z.** On \(Z\) (\(CB=pB=BC\), ambient diag\(B=0\)): 
+   \(\langle\kappa/p^2,\kappa_B\rangle=\alpha_\kappa\|B\|_F^2\) with
+   \(\alpha_\kappa=(p^2+2)/(4p^2)\).
+
+3. **Pair target.** \(\mathrm{pair}=(\bar\mu-6)/8=(p^2+11)/(4(p^2-5))\).
+
+4. **Closed α_ρ.** \(\alpha_\rho=\mathrm{pair}-\alpha_\kappa=(7p^2+5)/(2p^2(p^2-5))\).
+   Channel form: \(\rho_{\min}=(4p\,b+Tb)/\mathrm{den}\), \(\mathrm{den}=12(p^2-5)\),
+   with \(\langle b,\kappa_B\rangle=(6/p)\|B\|^2\) and
+   \(\langle Tb,\kappa_B\rangle=6(3p^2+5)/p^2\|B\|^2\) (Schur; certified p=3,5,7)
+   recovers \(\alpha_\rho\).
+
+5. **Φ residual is pure δ.** For unit \(B\in Z\):
+   \[
+   \mathbb E[(y^\top By)^2]=\bar\mu\,\|B\|_F^2+8\langle\delta,\kappa_B\rangle.
+   \]
+   Hence \(16N\Leftrightarrow\max\langle\delta,\kappa_B\rangle\le(n-10)/(n-6)\).
+   The particular solution \(\rho_{\min}\) is absorbed into the flat bulk \(\bar\mu\).
+
+**Certified:** Schur scalarity of \(\kappa/p^2\), \(b\), \(Tb\), \(\rho_{\min}\) on \(Z\) at \(p=3,5,7\) with matching closed forms; zero-diag identity on random pairs \(n=6..10\).
+
+**OPEN:** \(\delta^2\le\rho_{\min}^2\) (or \(\max\langle\delta,\kappa_B\rangle\le(n-10)/(n-6)\), or \(c^2\le\mathrm{room}_{\mathrm{hyp}}/24\)) for general \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15111.py`, `evidence/e1_gmin_m4_prop15111.json`, `tests/test_prop15111.py`.
+
+## Prop 15.112 (2026-07-31) — Design moments; conference ‖κ‖²; ED4 residual dictionary
+
+**Proved:**
+
+1. **Conference ‖κ‖².** For conference \(C\) of order \(n=p^2+1\),
+   \(\|\kappa\|_2^2=(n p^4/8)(n-6)+n(n-1)/2\) (zero-diag pairing at \(B=C\)).
+
+2. **Antipodality.** \(Cy=py\) boolean \(\Rightarrow C(-y)=p(-y)\).
+
+3. **Design moments.** If \(E[yy^\top]=2P_+\), then for fixed \(y_0\in\mathrm{Max+}\):
+   \(E[D]=0\), \(E[D^2]=2n\). Antipodality + 2-design \(\Rightarrow\) spherical 3-design.
+
+4. **ED4 dictionary.**
+   \[
+   \mathrm{ED4}=\mathrm{ED4}_{\mathrm{flat}}+24\delta^2,
+   \qquad
+   \delta^2\le\rho_{\min}^2\iff\mathrm{ED4}\le\mathrm{ED4}_{\mathrm{suf}}
+   \]
+   with \(\mathrm{ED4}_{\mathrm{suf}}=\mathrm{ED4}_{\mathrm{flat}}+24\rho_{\min}^2\).
+   For \(p\ge7\): \(\mathrm{ED4}_{\mathrm{suf}}<\mathrm{ED4}_{\mathrm{bud}}\).
+
+**Certified:** \(E[yy^\top]=2P_+\), \(E[D^2]=2n\), \(\delta^2\le\rho_{\min}^2\) at \(p=3,5,7\).
+
+**Attack note:** class_key is not \(m_4\)-equitable at \(p=7\) (do not F19-thrash).
+
+**OPEN:** \(\mathrm{ED4}\le\mathrm{ED4}_{\mathrm{suf}}\) for general \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15112.py`, `evidence/e1_gmin_m4_prop15112.json`, `tests/test_prop15112.py`.
+
+## Prop 15.113 (2026-08-01) — ⟨f_y,Tκ⟩; ED4 via W; Q_δ criterion
+
+**Proved:**
+
+1. **⟨κ,Tκ⟩=0** (conference).
+2. **⟨f_y,Tκ⟩=2p(p⁴−1)** for every boolean \(Cy=py\) (from ⟨ρ,b⟩=⟨ρ_min,b⟩ and constancy).
+3. **ED4 via W:** \(W=\sum_{i<j}y_iy_jz_iz_j\), \(E[W]=n/2\), \(E[D^4]=3n^2+4E[W^2]\).
+4. **Criterion:** if \(Q_\delta(y)\le\rho_{\min}^2\) for all \(y\in\mathrm{Max+}\), then \(\delta^2\le\rho_{\min}^2\).
+
+**Certified** at \(p=3,5,7\). **OPEN:** \(Q_\delta\le\rho_{\min}^2\) or ED4≤ED4_suf for general \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15113.py`, `evidence/e1_gmin_m4_prop15113.json`, `tests/test_prop15113.py`.
+
+## Prop 15.114 (2026-08-01) — γ-calculus; Tf_y multiplicative formula; ∑γ, ∑γ²
+
+**Proved:**
+
+1. **Multiplicative eigenformula.** For boolean \(Cy=py\),
+   \((Tf_y)(S)=(4p-2\gamma_y(S))f_y(S)\) where
+   \(\gamma_y(S)=\sum_{\{i,j\}\subset S}C_{ij}y_iy_j\).
+   Equivalently \(Af_y=2(\gamma_y\odot f_y)\), so \(\langle\delta,\gamma_y\odot f_y\rangle=0\) for all \(\delta\in\ker A\).
+2. **∑γ closed form.** \(\sum_S\gamma_y(S)=(6/p)\binom{n}{4}\) (edge double-count + \(y^\top Cy=pn\)).
+3. **∑γ² closed form.** \(\sum_S\gamma_y(S)^2=6\binom{n}{4}+n(n-1)(n-2)/4\).
+   Adjacent-edge cross terms vanish because \(Cy=py\) and \(n-1=p^2\); matching contribution is \(n(n-1)(n-2)/4\) via \(\sum\kappa\prod=n(n-1)(n-2)/8\).
+4. **‖Tf_y‖² closed.** \(\|Tf_y\|_2^2=(16p^2-72)\binom{n}{4}+n(n-1)(n-2)\).
+5. **Pair-average residual moment.** The ED4 dictionary uses \(N^{-2}\sum_{y,z}(y\cdot z)^4=E_y[\mathrm{ED4}(y)]\), not a single basepoint.
+
+**Certified:** Thm 1–4 at \(p=3,5\); at \(p=7\), Max+ has **three** ED4(y) types (counts 2352, 8400, 700), all \(\le\mathrm{ED4}_{\mathrm{suf}}\), with global mean \(\le\mathrm{ED4}_{\mathrm{suf}}\) (not 2-point homogeneous).
+
+**OPEN:** pair-average \(\mathrm{ED4}\le\mathrm{ED4}_{\mathrm{suf}}\) for general \(p\ge5\). Attack: γ-weighted spectral mass of \(f_y\) on \(E_{4p}\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15114.py`, `evidence/e1_gmin_m4_prop15114.json`, `tests/test_prop15114.py`.
+
+## Prop 15.115 (2026-08-01) — Max+ residual solves \(A\rho=b\); \(\delta=P_{E_{4p}}m_4\); spectral moments of \(f_y\)
+
+**Proved:**
+
+1. **\(E[\gamma\odot f]=2\kappa/p\).** By the Max+ 2-design \(E[y_iy_j]=C_{ij}/p\) and double-counting matchings on each \(K_4\).
+2. **Resolvent.** \(Am_4=4\kappa/p\) and \(A\rho=b\) for the Max+ residual \(\rho=m_4-\kappa/p^2\).
+3. **\(\kappa\perp E_{4p}\).** \(T\kappa\in E_\mu\oplus E_{-\mu}\) with \(\mu^2=4(p^2+15)\); \((4p)^2-\mu^2=12(p^2-5)\ne0\) for primes \(p\ge3\). Hence \(\delta=P_{E_{4p}}m_4=E_y P_{E_{4p}}f_y\).
+4. **Spectral moments of \(f_y\).** \(m_1=4p-12/p\), \(m_2=16p^2-72+24/(p^2-2)\),
+   \(\mathrm{Var}=24(p^2-3)(p^2-4)/(p^2(p^2-2))\).
+5. **Jensen.** \(\delta^2\le E_y\|P_{E_{4p}}f_y\|_2^2\) (full \(E_{4p}\) energy is too crude: at \(p=5\) it is \(\gg\rho_{\min}^2\) while residual still holds).
+
+**Certified:** resolvent + moments at \(p=3,5\); \(Q_\delta\) constant (\(=\delta^2\)) at \(p=3,5\); ED4≤ED4_suf at \(p=3,5,7\).
+
+**OPEN:** \(\delta^2\le\rho_{\min}^2\) for general \(p\ge5\) via the **coherent** mass \(\|E_y P_{E_{4p}}f_y\|_2\), not full \(E_{4p}\) energy. L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15115.py`, `evidence/e1_gmin_m4_prop15115.json`, `tests/test_prop15115.py`.
+
+## Prop 15.116 (2026-08-01) — e₄↔ED4↔δ dictionary; coherent mass; Aut-line criterion
+
+**Proved:**
+
+1. **e₄ poly.** Boolean \(e_4(s)=s^4/24+((4-3n)/12)s^2+n(n-2)/8\).
+2. **∑m₄² from ED4.** \(\sum m_4^2=\mathrm{ED4}/24+n(4-3n)/6+n(n-2)/8\).
+3. **⟨κ,ρ_min⟩.** \(n(n-1)(n-2)(n-6)/(2p^2(p^2-5))\).
+4. **Flat identity.** Pythagoras flat part matches the e₄ constant for all primes \(p\ge3\), \(p^2\neq5\).
+5. **Coherent mass.** \(\delta^2=\|E_y P_{E_{4p}}f_y\|_2^2\).
+6. **Aut-line.** If \(\dim E_{4p}^{\mathrm{Aut}}\le1\) then \(\delta=cv_0\) and residual \(\Leftrightarrow c^2\le\rho_{\min}^2\); when \(Q_0\) constant, \(c=Q_0(x_{\mathrm{hs}})\) (halfspace, Max+-free).
+7. **Min-distance envelope.** \(|D|\le p^2-2p-1\) for \(y\neq\pm z\) yields an ED4 UB that **fails** \(\mathrm{ED4}_{\mathrm{suf}}\) for all primes \(p\ge5\) (dead for closing).
+
+**Certified:** dictionary at \(p=3,5,7\); Aut-line at \(p=3,5\); \(\delta^2\le\rho_{\min}^2\) at \(p=3,5,7\).
+
+**OPEN:** coherent mass \(\delta^2\le\rho_{\min}^2\) for general \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15116.py`, `evidence/e1_gmin_m4_prop15116.json`, `tests/test_prop15116.py`.
+
+## Prop 15.117 (2026-08-01) — Path C hyp residual primary; ρ_min pairings
+
+**Proved:**
+
+1. **Path C primary residual.** For all primes \(p\ge5\),
+   \[
+   \delta^2\le\frac{\mathrm{room}_{\mathrm{hyp}}}{24}
+   =\frac{4(p^2-9)(p^2-1)^2}{3(p^2-5)(p^2+1)}
+   \]
+   \(\Leftrightarrow\) \(\mathrm{orth}\le\mathrm{room}_{\mathrm{hyp}}\) \(\Leftrightarrow\) \(\|\kappa\|_F^2\le\kappa_{\mathrm{hyp}}\) \(\Leftrightarrow\) \(\mathrm{ED4}\le\mathrm{ED4}_{\mathrm{bud}}\).
+2. **ρ_min² vs hyp.** \(\rho_{\min}^2>\mathrm{room}_{\mathrm{hyp}}/24\) at \(p=5\); \(\rho_{\min}^2<\mathrm{room}_{\mathrm{hyp}}/24\) for all primes \(p\ge7\). Thus \(\delta^2\le\rho_{\min}^2\) is sufficient for Path C when \(p\ge7\); at \(p=5\) the hyp form is the tight target.
+3. **Slack.** \(\kappa_{\mathrm{hyp}}-\|\kappa\|_F^2=24(\mathrm{room}_{\mathrm{hyp}}/24-\delta^2)\).
+4. **Pairings.** \(\langle b,f_y\rangle=\langle\rho_{\min},b\rangle=2(p^4-1)/p\) for every \(y\in\mathrm{Max+}\); \(\langle\rho_{\min},m_4\rangle=\rho_{\min}^2+\langle\kappa,\rho_{\min}\rangle/p^2\) closed.
+5. **γ-channel average.** \(E_y\langle b,\gamma_y\odot f_y\rangle=0\). If pointwise zero, then \(\langle\rho_{\min},f_y\rangle=4(p^4-1)/(3(p^2-5))\) constant on Max+.
+6. **Coherent mass.** Path C residual \(\Leftrightarrow\|E_y P_{E_{4p}}f_y\|_2^2\le\mathrm{room}_{\mathrm{hyp}}/24\).
+
+**Certified:** pointwise \(\langle b,\gamma\odot f\rangle=0\) at \(p=3\); hyp residual \(\delta^2\le\mathrm{room}_{\mathrm{hyp}}/24\) at \(p=3\) (eq), and at \(p=5,7\) when Max+ caches are present (eq at 5, strict at 7).
+
+**OPEN:** \(\delta^2\le\mathrm{room}_{\mathrm{hyp}}/24\) for general \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15117.py`, `evidence/e1_gmin_m4_prop15117.json`, `tests/test_prop15117.py`.
+
+## Prop 15.118 (2026-08-01) — Pointwise ⟨b,γ⊙f⟩=0; T²κ pairing; ρ_min·f closed
+
+**Proved:**
+
+1. **⟨κ,γ⊙f⟩ closed.** For every Max+ \(y\),
+   \(\sum_S\kappa(S)\gamma_y(S)f_y(S)=p(p^2+1)(p^2-1)(p^2-4)/4\)
+   (edge expansion + \(Cy=py\) + \(C^2=p^2I\)).
+2. **⟨T²κ,m₄⟩.** With \(T\kappa\in E_\mu\oplus E_{-\mu}\) and \(\delta\perp T^2\kappa\),
+   \(\langle T^2\kappa,m_4\rangle=8p^2(p^4-1)\).
+3. **Pointwise criterion.** For each \(y\in\mathrm{Max+}\):
+   \(\langle b,\gamma\odot f\rangle=0\Leftrightarrow\langle Tb,f\rangle=4p\langle b,f\rangle\Leftrightarrow\langle T^2\kappa,f\rangle=8p^2(p^4-1)\).
+4. **Pointwise vanishing.** \(\langle b,\gamma_y\odot f_y\rangle=0\) and \(\langle T^2\kappa,f_y\rangle=8p^2(p^4-1)\) for all Max+ \(y\) (constancy of the \(T\)-module pairing on Max+ + mean from (2)).
+5. **⟨ρ_min,f_y⟩ closed.** \(\langle\rho_{\min},f_y\rangle=4(p^4-1)/(3(p^2-5))\) for all Max+ \(y\).
+
+**Certified:** full Max+ census at \(p=3\) (\(N=12\)) and \(p=5\) (\(N=260\)): bgf=0, \(T^2\) target, ρ_min pairing, and \(\delta^2=\mathrm{room}_{\mathrm{hyp}}/24\) at \(p=5\).
+
+**OPEN:** \(\delta^2\le\mathrm{room}_{\mathrm{hyp}}/24\) for general \(p\ge5\) (pin \(\langle m_4,f_{\mathrm{hs}}\rangle\) / ED4). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15118.py`, `evidence/e1_gmin_m4_prop15118.json`, `tests/test_prop15118.py`.
+
+## Prop 15.119 (2026-08-01) — Residual budget dictionary; weight enum; halfspace pin
+
+**Proved:**
+
+1. **ED4 budgets (closed rationals).** For primes \(p>\sqrt5\),
+   \[
+   \mathrm{ED4}_{\mathrm{flat}}=\frac{4(p^2-3)(p^2+1)(3p^2+1)}{p^2-5},\qquad
+   \mathrm{ED4}_{\mathrm{bud}}=\frac{4(3p^8+6p^6-104p^4+138p^2-75)}{(p^2-5)(p^2+1)}.
+   \]
+2. **E[W²] channel.** With \(D=y\cdot z\), \(D^2=n+2W\), \(\mathrm{ED4}=3n^2+4\mathbb E[W^2]\):
+   \[
+   \mathrm{EW2}_{\mathrm{flat}}=\frac{(p^2+1)(9p^4-20p^2+3)}{4(p^2-5)},\qquad
+   \mathrm{EW2}_{\mathrm{bud}}=\frac{9p^8+30p^6-380p^4+594p^2-285}{4(p^2-5)(p^2+1)}.
+   \]
+   Path C residual \(\Leftrightarrow\mathbb E[W^2]\le\mathrm{EW2}_{\mathrm{bud}}\). Gap:
+   \(\mathrm{EW2}_{\mathrm{bud}}-\mathrm{EW2}_{\mathrm{flat}}=\mathrm{room}_{\mathrm{hyp}}/4=6\cdot(\mathrm{room}_{\mathrm{hyp}}/24)\).
+3. **⟨m₄,f_y⟩ ↔ ED4.** \(\langle m_4,f_y\rangle=\mathrm{ED4}(y)/24+n(4-3n)/6+n(n-2)/8\). Budget forms:
+   \[
+   \mathrm{m4f}_{\mathrm{flat}}=\frac{(p-1)(p+1)(p^2+1)(3p^2+17)}{24(p^2-5)},\qquad
+   \mathrm{m4f}_{\mathrm{bud}}=\frac{(p-1)(p+1)(3p^2-5)(p^4+20p^2-61)}{24(p^2-5)(p^2+1)}.
+   \]
+4. **Equivalence.** For \(p\ge5\): \(\delta^2\le\mathrm{room}_{\mathrm{hyp}}/24\Leftrightarrow\mathrm{ED4}\le\mathrm{ED4}_{\mathrm{bud}}\Leftrightarrow\mathbb E[W^2]\le\mathrm{EW2}_{\mathrm{bud}}\). When \(Q_\delta\) is constant on Max+ (certified \(p=3,5\)): also \(\Leftrightarrow\langle m_4,f_y\rangle\le\mathrm{m4f}_{\mathrm{bud}}\) (halfspace pin).
+5. **Weight-enumerator structure.** Max+ dots satisfy \(y\cdot z\equiv2\pmod4\), \(|y\cdot z|\le p^2-2p-1\) off \(\pm\) pairs, antipodal measure. Crude envelope \(\mathrm{ED4}\le2n D_{\max}^2\) is strictly larger than \(\mathrm{ED4}_{\mathrm{bud}}\) for \(p\ge5\) (too weak).
+
+**Certified:** full Max+ weight spectra at \(p=3\) (\(\{\pm10,\pm2\}\)) and \(p=5\) (\(\{\pm26,\pm14,\pm10,\pm6,\pm2\}\) with mults \(\{1,13,20,36,60\}\)); \(\mathrm{ED4}=\mathrm{ED4}_{\mathrm{bud}}\) and \(\langle m_4,f_{\mathrm{hs}}\rangle=\mathrm{m4f}_{\mathrm{bud}}\) at both; \(\mathrm{orth}\cdot N=147456\) at \(p=5\). Prior \(p=7\): \(\delta^2/(\mathrm{room}_{\mathrm{hyp}}/24)=124875/669124\).
+
+**OPEN:** \(\delta^2\le\mathrm{room}_{\mathrm{hyp}}/24\) for general \(p\ge5\) (independent upper bound on \(\mathbb E[W^2]\) or \(\langle m_4,f_{\mathrm{hs}}\rangle\)). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15119.py`, `evidence/e1_gmin_m4_prop15119.json`, `tests/test_prop15119.py`.
+
+## Prop 15.120 (2026-08-01) — Pointwise E[W²] factorization; Pythagoras; majorization
+
+**Proved:**
+
+1. **Pointwise residual factorization.** For every \(y\in\mathrm{Max+}\),
+   \(\mathbb E_z[W_y(z)^2]=\mathrm{EW2}_{\mathrm{flat}}+6\,Q_\delta(y)\).
+   Wick wedges + \(\kappa/p^2+\rho_{\min}\) on disjoint edges give the flat part;
+   the \(\delta\)-part of disjoint-edge pairings contributes exactly \(6\langle\delta,f_y\rangle\).
+2. **Pythagoras.** \(\sum m_4^2=F(p)+\delta^2\) with
+   \(F=\|\kappa/p^2+\rho_{\min}\|_2^2=\mathrm{m4f}_{\mathrm{flat}}\) Max+-free.
+3. **Majorization UB.** \(H=G\odot G\succeq0\), \(\lambda_{\max}=2Nn\), \(\mathrm{Tr}=Nn^2\), \(\mathrm{Tr}/\lambda_{\max}=d\)
+   \(\Rightarrow\mathrm{ED4}\le 2n^3\). For all primes \(p\ge5\), \(2n^3>\mathrm{ED4}_{\mathrm{bud}}\) (too weak).
+4. **Dead independent UBs.** CS via \(\|\tilde\gamma\odot f\|\), discrete moment LP \(2n D_{\max}^2\),
+   and majorization \(2n^3\) all exceed residual budgets for \(p\ge5\).
+
+**Certified:** EW2 constant on Max+ and equal to \(\mathrm{EW2}_{\mathrm{flat}}+6\delta^2\) at \(p=3,5\).
+
+**OPEN:** \(\delta^2\le\mathrm{room}_{\mathrm{hyp}}/24\) for general \(p\ge5\) (weight enumerator / Gauss sums). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15120.py`, `evidence/e1_gmin_m4_prop15120.json`, `tests/test_prop15120.py`.
+
+## Prop 15.121 (2026-08-01) — Spectral residual dictionary; Frobenius form
+
+**Proved:**
+
+1. **ED4 from FFT.** \(M_{ab}=(y_a\cdot y_b)^2=nJ+2\,\mathrm{FFT}\) (15.93) \(\Rightarrow\)
+   \(\mathrm{ED4}=4n^2+4N^{-2}\|\mathrm{FFT}|_{1^\perp}\|_F^2\).
+2. **E[W²] from FFT.** \(\mathbb E[W^2]=\|\mathrm{FFT}\|_F^2/N^2=d^2+N^{-2}\|\mathrm{FFT}|_{1^\perp}\|_F^2\),
+   and with 15.120: \(\|\mathrm{FFT}|_{1^\perp}\|_F^2=N^2(\mathrm{EW2}_{\mathrm{flat}}-d^2+6\delta^2)\).
+3. **Φ variance.** \(\sum\lambda_\alpha^2=\mathrm{ED4}-4n^2\), \(\sum(\lambda_\alpha-\bar\mu)^2=\mathrm{orth}=24\delta^2\) (15.105);
+   at \(\delta=0\), \(\Phi\equiv\bar\mu\) on \(Z\).
+4. **EW2_flat closed.** \(\mathrm{EW2}_{\mathrm{flat}}=(n^2+T^2/m)/4\) with \(T=n(n-2)\), \(m=\dim Z\).
+5. **Residual ⇔ Frobenius.** Path C residual \(\Leftrightarrow\|\mathrm{FFT}|_{1^\perp}\|_F^2\le N^2(\mathrm{EW2}_{\mathrm{bud}}-d^2)\)
+   \(\Leftrightarrow\sum(\lambda_\alpha-\bar\mu)^2\le\mathrm{room}_{\mathrm{hyp}}\).
+   Contrast: 16N \(\Leftrightarrow\|\mathrm{FFT}|_{1^\perp}\|_{\mathrm{op}}\le8N\) (operator norm on the same operator).
+6. **H/16N·Tr too weak.** \(\|A\|_F^2\le\|A\|_{\mathrm{op}}\mathrm{Tr}(A)\) under H or 16N yields ED4 UBs \(> \mathrm{ED4}_{\mathrm{bud}}\) for all \(p\ge5\).
+
+**Certified:** spectral identities at \(p=3,5\) (full Max+ Gram/FFT).
+
+**OPEN:** \(\delta^2\le\mathrm{room}_{\mathrm{hyp}}/24\) for general \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15121.py`, `evidence/e1_gmin_m4_prop15121.json`, `tests/test_prop15121.py`.
+
+## Prop 15.122 (2026-08-01) — Max+ disagreement \(u\in V_+\); Aut-line; \(\lambda_{\max}(T)\)
+
+**Proved:**
+
+1. **Disagreement identity.** For \(y,z\in\mathrm{Max}+\), \(D=y\cdot z\), \(k=(n-D)/2\),
+   \(u=(y-z)/2\in\{0,\pm1\}^n\) has weight \(k\) and
+   \(u^\top Cu=pk\) with \(u\in V_+\) (equivalently \(\|P_+u\|_2^2=k\)).
+   Same for \(v=(y+z)/2\) with weight \(n-k\).
+2. **Dot support.** Off \(\pm\) pairs, \(|D|\le p^2-2p-1\), \(D\equiv2\pmod4\), and \(k\) is a
+   ternary \(V_+\) weight. Cert spectra \(p=3,5\).
+3. **\(\lambda_{\max}(T)\) threshold.** \(\lambda_{\max}(T)<4p\Rightarrow\delta=0\) (residual OK).
+   Cert: \(p=3\) strict; \(p=5,7\) equality \(\lambda_{\max}=4p\).
+4. **Aut-line.** \(\delta\in E_{4p}^{\mathrm{Aut}}\); if \(\dim\le1\) then residual \(\Leftrightarrow c^2\le\mathrm{room}_{\mathrm{hyp}}/24\)
+   with \(c=Q_0(x_{\mathrm{hs}})\). Cert equality line at \(p=5\); \(p=7\) has non-constant \(Q_\delta\).
+5. **FFT budget.** Residual \(\Leftrightarrow N^{-2}\|\mathrm{FFT}|_{1^\perp}\|_F^2\le B(p)=\mathrm{EW2}_{\mathrm{bud}}-d^2\) (Max+-free).
+6. **Dead tight attempts.** Discrete LP with exact \(N\), PGL character sums (F18), and prior majorizations all exceed residual budgets.
+
+**OPEN:** \(\delta^2\le\mathrm{room}_{\mathrm{hyp}}/24\) for general \(p\ge5\) (ternary \(V_+\) weight enumerator / Gauss \(Q_0\)). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15122.py`, `evidence/e1_gmin_m4_prop15122.json`, `tests/test_prop15122.py`.
+
+## Prop 15.123 (2026-08-01) — Switching; conference srg; dual Krawtchouk residual
+
+**Proved:**
+
+1. **Switching bijection.** After \(C'=D_yCD_y\), \(1\in\mathrm{Max}+'\) and
+   \(z\mapsto w=(1-D_yz)/2\) bijects \(\mathrm{Max}+'\leftrightarrow V_+\cap\{0,1\}^n\), with
+   \(D(y,z)=n-2\,\mathrm{wt}(w)\).
+2. **Conference srg.** \(G\) with edges \(C'=-1\) is
+   \(\mathrm{srg}(n,\,p(p-1)/2,\,\mu-1,\,\mu)\), \(\mu=((p-1)/2)^2\);
+   \(A\)-eigs \(k_G\), \(\theta=(p-1)/2\) (\(\times d\)), \(\tau=-(p+1)/2\) (\(\times d-1\));
+   \(C'\)-eigs \(\pm p\) each of mult \(d\).
+3. **Regular sets.** Supports of weight-\(k\) codewords are regular sets with
+   \(\alpha=(k-1-p)/2\), \(\beta=k/2\), \(\alpha-\beta=\tau\); allowed
+   \(k\in\{0,n\}\cup\mathrm{even}[p+1,p(p-1)]\).
+4. **Weight = distance dist.** \(B_i=W_i\), \(|X|=N\), \(\mathrm{ED4}=N^{-1}\sum W_k(n-2k)^4\).
+5. **Dual residual.** \(A'_4=\sum m_4^2=\mathrm{m4f}_{\mathrm{flat}}+\delta^2\);
+   residual \(\Leftrightarrow A'_4\le\mathrm{m4f}_{\mathrm{bud}}\). (Hamming Delsarte alone too weak.)
+6. **Two-valued form.** \(\chi_S-(k/n)\mathbf1\in V_+\cap\mathbf1^\perp\) with only two coordinate values
+   and \(\|\cdot\|_2^2=k(n-k)/n\); \(W_k\) counts such vectors.
+
+**Certified:** srg params and full \(W_k\) at \(p=3,5\) (Petersen; srg(26,10,3,4)).
+
+**OPEN:** closed \(W_k\) / \(A'_4\le\mathrm{m4f}_{\mathrm{bud}}\) for all primes \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15123.py`, `evidence/e1_gmin_m4_prop15123.json`, `tests/test_prop15123.py`.
+
+## Prop 15.124 (2026-08-01) — Closed weight moments \(j\le3\); \(E[k^4]\) partition; residual as \(R_4\)
+
+Continues 15.123. Isolates the residual as a single 4-wise mass. Does **not** soft-close.
+
+**Proved:**
+
+1. **Moments \(j\le3\) (Max+-free).** After switch, \(E[s^2]=2n\), \(E[s]=0\), \(E[s^3]=0\), and
+   \[
+   E[k]=\tfrac n2,\quad
+   E[k^2]=\tfrac{n(n+2)}{4},\quad
+   E[k^3]=\tfrac{n^2(n+6)}{8}.
+   \]
+2. **Exact \(\le3\) partition of \(E[k^4]\).** Using only pair/triple design averages,
+   \[
+   \mathrm{exact}_{\le3}
+   =\tfrac n2+n^2+\tfrac{3n^2}{4}+\tfrac{3n(n-2)(n+2)}{4},
+   \]
+   and \(R_4:=E[k^4]-\mathrm{exact}_{\le3}=n(n-1)(n-2)(n-3)\,\overline E[\prod_4 w]\).
+3. **Residual dictionary.** \(E[D^4]=\mathrm{ed4\_from\_exact3}(p)+16 R_4\); Path C residual
+   \(\Leftrightarrow R_4\le R_{4,\mathrm{bud}}\Leftrightarrow A'_4\le\mathrm{m4f}_{\mathrm{bud}}\).
+4. **Hamming Delsarte LP.** Max \(A'_4\) under allowed-weight dual constraints saturates
+   \(\mathrm{m4f}_{\mathrm{bud}}\) at \(p=3\) and **strictly exceeds** it at \(p=5,7\) (too weak for \(p\ge5\)).
+5. **Hoffman layer.** \(W_{p+1}=d\) (regular cocliques) certified at \(p=3,5\).
+
+**Certified:** moments + partition + \(R_4=\mathrm{bud}\) saturation + \(A'_4=\mathrm{m4f}_{\mathrm{bud}}\) at \(p=3,5\).
+
+**OPEN:** closed \(W_k\) / \(A'_4\le\mathrm{m4f}_{\mathrm{bud}}\) for all primes \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15124.py`, `evidence/e1_gmin_m4_prop15124.json`, `tests/test_prop15124.py`.
+
+## Prop 15.125 (2026-08-01) — Perfect 2-colorings; 4-design defect; closed \(R_4\) budget
+
+Continues 15.123–15.124. Does **not** soft-close.
+
+**Proved:**
+
+1. **Perfect 2-colorings.** \(W_k\) equals the number of \(\tau\)-equitable bipartitions
+   (perfect 2-colorings) of the conference srg with \(|S|=k\),
+   \(\alpha=(k-1-p)/2\), \(\beta=k/2\), \(\alpha-\beta=\tau=-(p+1)/2\).
+   Hoffman layer \(k=p+1\) has \(\alpha=0\).
+2. **Spherical 2-design / 4-design defect.** After \(V_+\cong\mathbb R^d\), Max+ is a
+   spherical 2-design (\(E[uu^\top]=I_d/d\)). It is not a 4-design for \(p\ge5\):
+   \(E[s^4]=\mathrm{ED4}\) exceeds \(3n^4/(d(d+2))\). Path C residual is this defect
+   controlled by \(\mathrm{ED4}\le\mathrm{ED4}_{\mathrm{bud}}\).
+3. **Closed \(R_4\) budget.**
+   \(\mathrm{ed4\_from\_exact3}=-(p^2+1)(p^6+3p^4-25p^2+13)\);
+   \(R_{4,\mathrm{bud}}=(\mathrm{ED4}_{\mathrm{bud}}-\mathrm{ed4\_from\_exact3})/16\).
+4. **Delsarte + moments \(j\le3\).** Still saturates only at \(p=3\); weak for \(p\ge5\).
+5. **Antipodal dual.** \(W_k=W_{n-k}\Rightarrow A'_j=A'_{n-j}\).
+
+**Certified:** algebra + LP weak p=5,7; defect ratios and saturation at \(p=3,5\).
+
+**OPEN:** closed \(W_k\) / \(R_4\le R_{4,\mathrm{bud}}\) for all primes \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15125.py`, `evidence/e1_gmin_m4_prop15125.json`, `tests/test_prop15125.py`.
+
+## Prop 15.126 (2026-08-01) — Geometric Hoffman seed; 1-design; simplex bound
+
+Continues 15.123–15.125. Does **not** soft-close.
+
+**Proved:**
+
+1. **Geometric seed.** The subfield line \(F_p\cup\{\infty\}\subset\mathrm{PG}(1,p^2)\) is a
+   Hoffman coclique (\(\tau\)-equitable, \(\alpha=0\), size \(p+1\)) after the standard
+   halfspace Seidel switch. Certified \(p=3,5,7\).
+2. **1-design algebra.** Hoffman cocliques form an Aut-invariant 1-design:
+   \(b(p+1)=nr\), and \(r=(p+1)/2\Longleftrightarrow b=d=n/2\).
+3. **Census equality.** At \(p=3,5\): \(W_{p+1}=d\), \(r=(p+1)/2\), and
+   \(\{\chi_S\}\) is a basis of \(V_+\).
+4. **Simplex bound.** Equal pairwise intersections \(\Rightarrow W_{p+1}\le d\)
+   (Gram rank \(b-1\le d-1\)); equality at \(p=3\) (\(\lambda=1\)).
+5. **ED4 contribution.** If \(W_{p+1}=W_{n-p-1}=d\), Hoffman layers contribute
+   \(2d(p^2-2p-1)^4/N\) to ED4.
+
+**OPEN:** \(W_{p+1}=d\) for all primes \(p\ge5\); full \(W_k\) / 4-design defect bound.
+L remains OPEN. **(W=d general disproved in Prop 15.127.)**
+
+Evidence: `src/e1_gmin_m4_prop15126.py`, `evidence/e1_gmin_m4_prop15126.json`, `tests/test_prop15126.py`.
+
+## Prop 15.127 (2026-08-01) — Closed \(W_{p+1}\); inversive plane; \(W=d\) false
+
+Continues 15.126. Does **not** soft-close residual.
+
+**Proved:**
+
+1. **Inversive plane.** \(F_p\)-sublines of \(\mathrm{PG}(1,p^2)\) form the miquelian
+   inversive plane of order \(p\): \(S(3,p+1,p^2+1)\), \(b=p(p^2+1)\), \(\lambda_2=p+1\), \(\lambda_3=1\).
+2. **Closed Hoffman weight.**
+   \[
+   W_{p+1}
+   =\frac{1+\chi_4(p)}{2}\cdot\frac{p^2+1}{2}
+   +\frac{1-\chi_4(p)}{2}\cdot\frac{3p+1}{2},
+   \quad
+   \chi_4(p)=(-1)^{(p-1)/2}.
+   \]
+   Equivalently: \(W_{p+1}=d\) if \(p\equiv1\pmod4\), and \(W_{p+1}=(3p+1)/2\) if \(p\equiv3\pmod4\).
+3. **Counterexample to \(W_{p+1}=d\).** At \(p=7\), \(W_8=11\neq25=d\).
+4. **Census.** Full max-coclique enumeration: \(W=(5,13,11,17)\) at \(p=3,5,7,11\), matching the formula; coincides with the count of regular sublines.
+5. **Corrected ED4 part.** Hoffman contribution \(2W_{p+1}D_{\max}^4/N\) (not always \(2d\)).
+
+**OPEN:** full closed \(W_k\) / 4-design defect bound for all primes \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15127.py`, `evidence/e1_gmin_m4_prop15127.json`, `tests/test_prop15127.py`.
+
+## Prop 15.128 (2026-08-01) — Full \(W_k\) census \(p=3,5,7\); exact ED4 at \(p=7\)
+
+Continues 15.127. Does **not** soft-close residual.
+
+**Certified:**
+
+1. **Full weight enumerators.**
+   - \(p=3\) (\(N=12\)): \(\{0{:}1,4{:}5,6{:}5,10{:}1\}\)
+   - \(p=5\) (\(N=260\)): \(\{0{:}1,6{:}13,8{:}20,10{:}36,12{:}60,14{:}60,\ldots\}\)
+   - \(p=7\) (\(N=11452\)), free-coord Max+ \(2^{25}\):
+     \(\{0{:}1,8{:}11,12{:}112,14{:}159,16{:}280,18{:}728,20{:}1099,22{:}1502,24{:}1834,\ldots\}\)
+     with \(W_{10}=W_{40}=0\) (allowed by \(\alpha\ge0\) but empty).
+2. **Consistency.** \(\sum W=N\), \(W_k=W_{n-k}\), \(W_{p+1}\) matches 15.127,
+   \(E[k^j]\) for \(j\le3\) match 15.124.
+3. **ED4 at \(p=7\).** \(\mathrm{ED4}=12835984/409<\mathrm{ED4}_{\mathrm{bud}}=1775728/55\)
+   (strict hyp residual); \(\delta^2=82176/4499\).
+4. **Saturation.** \(\mathrm{ED4}=\mathrm{ED4}_{\mathrm{bud}}\) at \(p=3,5\).
+
+**OPEN:** closed \(W_k\) for general primes \(p\ge5\) (must allow structural zeros),
+or character-sum/PBIBD bound on the 4-design defect. L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15128.py`, `evidence/e1_gmin_m4_prop15128.json`, `tests/test_prop15128.py`.
+
+## Prop 15.129 (2026-08-01) — Jensen coherent-mass inequality; Hoffman \(\bar r\)
+
+Continues 15.128. Does **not** soft-close residual.
+
+**Proved:**
+
+1. **Jensen.** \(\delta=E_y[P_{E_{4p}}f_y]\) and
+   \(\delta^2\le E\|P f_y\|_2^2\), equality iff \(P f_y\) is a.s. constant on Max+.
+   Hence \(E\|P f_y\|_2^2\le\mathrm{room}_{\mathrm{hyp}}/24\Rightarrow\) Path C residual.
+2. **Dictionary.** Linear equivalences ED4 \(\leftrightarrow\sum m_4^2\leftrightarrow\delta^2\)
+   certified on full \(W\) at \(p=3,5,7\).
+3. **Average replication.** \(\bar r=W_{p+1}(p+1)/n\) with \(W_{p+1}\) from 15.127.
+   Integral (1-design possible) for \(p\equiv1\pmod4\) and \(p=3\); at \(p=7\),
+   \(\bar r=44/25\notin\mathbb Z\), so the Hoffman layer is **not** a 1-design.
+4. **Hoffman geometry at \(p=5\).** 30 disjoint Hoffman pairs, each giving a
+   regular 12-set; these are exactly half of \(W_{12}\). Every weight-16 set
+   contains exactly two Hoffman cocliques.
+
+**OPEN:** bound \(E\|P_{E_{4p}}f_y\|_2^2\le\mathrm{room}_{\mathrm{hyp}}/24\) for all primes
+\(p\ge5\), or closed general \(W_k\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15129.py`, `evidence/e1_gmin_m4_prop15129.json`, `tests/test_prop15129.py`.
+
+## Prop 15.130 (2026-08-01) — \(P m_4=\delta\); \(\rho_{\min}\)-sufficient residual for \(p\ge7\)
+
+Continues 15.129. Does **not** soft-close residual.
+
+**Proved:**
+
+1. **\(P m_4=\delta\).** Since \(m_4=\kappa/p^2+\rho_{\min}+\delta\) with the first two summands
+   orthogonal to \(E_{4p}\), \(P m_4=\delta\). With \(m_4=E f_y\), \(\delta=E[P f_y]\).
+2. **Jensen.** \(\delta^2\le E\|P f_y\|_2^2\); bound on the right-hand side yields residual.
+3. **Gap algebra.** For all primes \(p\ge7\),
+   \[
+   \frac{\mathrm{room}_{\mathrm{hyp}}}{24}-\rho_{\min}^2
+   =\frac{(p-1)(p+1)(3p^6-105p^4+37p^2-15)}{6p^2(p^2-5)(p^2+1)}>0,
+   \]
+   so \(\delta^2\le\rho_{\min}^2\Rightarrow\) Path C residual. (At \(p=5\), \(\rho_{\min}^2>\mathrm{room}\); use hyp form.)
+4. **Census.** \(\delta^2\le\rho_{\min}^2\) at \(p=3,5,7\) (ratio \(\approx0.379\) at \(p=7\)).
+5. **Aut-line program.** If \(\dim E_{4p}^{\mathrm{Aut}}\le1\), residual \(\Leftrightarrow c^2\le\mathrm{room}/24\)
+   with \(c=Q_0(\mathrm{hs})\) when \(Q_0\) is constant.
+
+**OPEN:** \(\delta^2\le\rho_{\min}^2\) (or \(E\|Pf\|^2\le\mathrm{room}\), or Gauss-sum \(Q_0\)) for general
+\(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15130.py`, `evidence/e1_gmin_m4_prop15130.json`, `tests/test_prop15130.py`.
+
+## Prop 15.131 (2026-08-01) — Pair-avg vs basepoint ED4; p=7 three-type \(Q_\delta\)
+
+Continues 15.130. Does **not** soft-close residual.
+
+**Proved / certified:**
+
+1. **Pair vs basepoint.** \(ED4(y)=ED4_{\mathrm{flat}}+24 Q_\delta(y)\) and
+   \(ED4_{\mathrm{pair}}=ED4_{\mathrm{flat}}+24\delta^2\). When \(Q_\delta\) is non-constant,
+   \(ED4(y_0)\ne ED4_{\mathrm{pair}}\) for a fixed basepoint \(y_0\) (e.g. halfspace);
+   the weight-enumerator moment \(E[(n-2k)^4]\) equals \(ED4(y_0)\), not \(\delta^2\).
+2. **p=7 spectrum (ProcessPool W=86).** Exactly three types:
+   counts \(2352/8400/700\), \(Q_\delta\in\{-124800/4499,\ 82176/4499,\ 200448/4499\}\).
+   \(Q_\delta\) can be negative (not 2-point homogeneous for 4th moment).
+3. **True \(\delta^2\).** Pair-avg \(\delta^2=19180800/1840091\approx10.424\)
+   (prior W-based \(82176/4499\) was \(Q_\delta(\mathrm{hs})\), the middle type).
+   Ratios: \(\delta^2/\rho_{\min}^2\approx0.216\), \(\delta^2/\mathrm{room}\approx0.187\).
+4. **Pointwise criterion.** \(\max Q_\delta=200448/4499\le\rho_{\min}^2=26000/539\)
+   with slack \(812048/220451\); hence residual for \(p=7\) by 15.130.C.
+5. **Variance.** \(\mathrm{Var}(Q_\delta)>0\) at \(p=7\), so pointwise is strictly
+   stronger than \(\delta^2\le\rho_{\min}^2\).
+
+**OPEN:** \(\max_y Q_\delta(y)\le\rho_{\min}^2\) (or \(\delta^2\le\rho_{\min}^2\)) for all primes
+\(p\ge7\); at \(p=5\) use hyp form. Aut-line at \(p=7\) needs care (\(Q\) non-constant).
+L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15131.py`, `evidence/e1_gmin_m4_prop15131.json`, `tests/test_prop15131.py`.
+
+## Prop 15.132 (2026-08-01) — Max+-free residual dictionary; Aut \(\delta\); dead envelopes
+
+Continues 15.131. Does **not** soft-close residual. No full Max+ census for general \(p\).
+
+**Proved / certified:**
+
+1. **Max+-free dictionary.** \(\delta^2=\sum m_4^2-m4f_{\mathrm{flat}}\) with
+   \(m4f_{\mathrm{flat}}\) closed Max+-free. Residual
+   \(\Leftrightarrow\sum m_4^2\le m4f_{\mathrm{bud}}:=m4f_{\mathrm{flat}}+\mathrm{room}/24\).
+   For \(p\ge7\): \(\sum m_4^2\le m4f_{\mathrm{flat}}+\rho_{\min}^2\) suffices.
+2. **Aut-invariance.** \(\delta\) is Aut-invariant; \(Q_\delta\) constant on Aut-orbits of Max+.
+   At \(p=7\), three \(Q\) types \(\Rightarrow\ge3\) Aut-orbits (not transitive).
+3. **\(\gamma\)-parity.** \(\gamma_y(S)\in\{-6,-4,-2,0,2,4,6\}\); formal \(4p\)-fiber is \(\gamma=0\).
+4. **\(\gamma=0\) mass.** Constant \(4350\) at \(p=5\); 3-valued in \(p=7\) sample (parallels \(Q\) types).
+5. **Dead envelopes.** Moment LP on allowed regular-set \(k\), and pole+\(D_{\max}\) mixes with
+   any \(N\ge n\), all strictly exceed \(\mathrm{ED4}_{\mathrm{suf}}\) for primes \(p=5..19\).
+
+**OPEN:** Max+-free bound \(\max Q_\delta\le\rho_{\min}^2\) or \(\delta^2\le\rho_{\min}^2\)
+(character sums / Aut-orbit Bose–Mesner / \(\dim E_{4p}^{\mathrm{Aut}}\le1+Q_0\)) for all
+primes \(p\ge7\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15132.py`, `evidence/e1_gmin_m4_prop15132.json`, `tests/test_prop15132.py`.
+
+## Prop 15.133 (2026-08-01) — class_key Bose–Mesner; F19 quantitative; Aut-line
+
+Continues 15.132. Does **not** soft-close residual. Does **not** thrash class_key (F19).
+
+**Proved / certified:**
+
+1. **Aut-line form.** If \(\dim E_{4p}^{\mathrm{Aut}}\le1\), residual
+   \(\Leftrightarrow c^2\le\mathrm{room}/24\) with \(c=Q_0(\mathrm{hs})\) when \(Q_0\) constant.
+2. **class_key \(T\)-spectrum (ProcessPool W=86).**
+   \(\dim E_{4p}^{\mathrm{ck}}=0,1,0\) at \(p=3,5,7\);
+   \(\lambda_{\max}=4p\) only at \(p=5\) among these.
+3. **F19 quantitative.** At \(p=7\), \(\dim E_{4p}^{\mathrm{ck}}=0\) but
+   \(\delta^2=19180800/1840091>0\), so \(\delta\notin V^{\mathrm{ck}}\)
+   (\(m_4\) not class_key-equitable). class_key cannot close residual at \(p=7\).
+4. **CR dead.** PGL cross-ratio orbits are not \(\mathrm{Aut}(C)\) orbits
+   (\(\kappa\) takes both signs inside CR cells at \(p=5\)); false nullity 0.
+5. **Success locus.** Aut-line via class_key works at \(p=5\) (\(c^2=\mathrm{room}=1536/65\));
+   ambient \(E_{4p}=0\) at \(p=3\); \(p=7\) needs true \(\mathrm{Aut}(C)\) or character sums.
+
+**OPEN:** true \(\mathrm{Aut}(C)\) Bose–Mesner / Gauss \(Q_0\) / \(\max Q_\delta\le\rho_{\min}^2\)
+for general primes. L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15133.py`, `evidence/e1_gmin_m4_prop15133.json`,
+`evidence/e1_gmin_m4_prop15133_classkey_spectrum.json`, `tests/test_prop15133.py`.
+
+## Prop 15.134 (2026-08-01) — Strict Aut(\(C\)) Bose–Mesner; residual projection
+
+Continues 15.133. Does **not** soft-close residual. No class_key / raw PGL thrash.
+
+**Proved / certified:**
+
+1. **Strict Aut \(G\).** Affine square-semilinear maps
+   \(x\mapsto a\cdot\mathrm{Frob}^i(x)+b\) (\(\chi(a)=1\), \(\infty\) fixed) give
+   \(|G|=p^2(p^2-1)\) and \(P^\top CP=C\). Inversion is switch-only; adjoining it
+   yields all of \(\mathrm{PGL}(2,q)\not\le\mathrm{Aut}(C)\).
+2. **Orbits.** Counts \(9/42/128\) at \(p=3,5,7\); \(\kappa\)-constant; \(T\)-equitable;
+   strictly finer than class_key at \(p=5,7\).
+3. **Spectrum.** \(\dim E_{4p}^{G}=0,2,7\) at \(p=3,5,7\); \(\lambda_{\max}=4p\) for
+   \(p=5,7\). Aut-line \(\dim\le1\) **fails** for \(G\) at \(p\ge5\).
+4. **Residual projection.** \(\delta=P_{E_{4p}^{G}}m_4\), \(\delta^2=\|Pm_4\|_2^2\)
+   recovers \(\delta^2=1536/65\) at \(p=5\) and \(19180800/1840091\) at \(p=7\).
+   \(G\) **carries** the residual at \(p=7\) (class_key does not).
+
+**OPEN:** Gauss / character-sum evaluation of \(m_4\) on \(G\)-orbits (Max+-free)
+then project to prove \(\delta^2\le\mathrm{room}/24\) for all primes \(p\ge5\).
+L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15134.py`, `evidence/e1_gmin_m4_prop15134.json`,
+`evidence/e1_gmin_m4_prop15134_strict_aut_spectrum.json`,
+`evidence/e1_gmin_m4_prop15134_residual_proj.json`, `tests/test_prop15134.py`.
+
+## Prop 15.135 (2026-08-01) — Coherent-mass spectral form; halfspace char sums
+
+Continues 15.134. Does **not** soft-close residual.
+
+**Proved / certified:**
+
+1. **Spectral form.** On an \(L^2\)-ONB \(\{v_j\}\) of \(E_{4p}^{G}\),
+   \(\delta=\sum c_j v_j\) with \(c_j=\langle m_4,v_j\rangle=E_y Q_j(y)\), and
+   \(\delta^2=\sum c_j^2\). Residual \(\Leftrightarrow\sum c_j^2\le\mathrm{room}/24\).
+2. **Halfspace character formula.** \(f_{\mathrm{hs}}(S)\) is Max+-free via
+   \(F_p\)-coordinate indicators; \(\sum_S f_{\mathrm{hs}}=e_4\) (same closed form as \(\sum m_4\)).
+3. **\(G\cdot\mathrm{hs}\) dead.** \(|O_{\mathrm{hs}}|\in\{60,168\}\) at \(p=5,7\) vs
+   \(|\mathrm{Max}^+|\in\{260,11452\}\); \(\delta^2\) from \(m_4^{G\mathrm{hs}}\gg\mathrm{room}\).
+4. **Moments don't pin \(\delta\).** \(P_G(\mathbf{1})=P_G(\kappa)=0\) on \(E_{4p}^{G}\);
+   \(e_4\) and \(\langle m_4,\kappa\rangle\) do not constrain the free \(c_j\).
+5. **Program.** Need character sums over **full** Max+ for the \(c_j\) (Max+ has
+   multiple \(G\)-orbits of vectors; \(Q_j\) not constant).
+
+**OPEN:** Gauss/character-sum for \(c_j\) or \(m_4\) on \(G\)-orbits for all primes
+\(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15135.py`, `evidence/e1_gmin_m4_prop15135.json`,
+`tests/test_prop15135.py`.
+
+## Prop 15.136 (2026-08-01) — Max+-free flat on \(G\)-orbits; free \(c_j\) remain
+
+Continues 15.135. Does **not** soft-close residual.
+
+**Proved / certified:**
+
+1. **Max+-free flat.** On the \(G\)-orbit space,
+   \(\rho_{\min}=A^+(T\kappa/p^2)\) (resolvent on \((\ker A)^\perp\)) and
+   \(\mathrm{flat}=\kappa/p^2+\rho_{\min}\) depend only on \(C\). Matches
+   \(\|\rho_{\min}\|^2=\rho_{\min}^2\) and \(\|\mathrm{flat}\|^2=m4f_{\mathrm{flat}}\)
+   at \(p=3,5,7\); construction available for all primes \(p\ge3\).
+2. **Decomposition.** \(m_4=\mathrm{flat}+\delta\) with \(\delta\in E_{4p}^{G}\);
+   residual \(\delta^2=\sum c_j^2\). Certified match at \(p=5,7\).
+3. **Geometry insufficient.** The invariant
+   \((\mathbf{1}_{\infty\in S},\kappa,\dim_{\mathbb F_p}\mathrm{affspan})\)
+   does not determine \(m_4\) (split types at \(p=5,7\)).
+4. **Character-sum form.** \(c_j=N^{-1}\sum_{y\in\mathrm{Max}^+}Q_j(y)\) with
+   Max+-free kernels \(v_j\). Only these \(\nu_G\) coefficients remain.
+5. **Partial.** At \(p=5\), some \(\infty\)-orbits have
+   \(m_4\in\{-1/5,-21/65\}\).
+
+**OPEN:** Gauss/character-sum evaluation of each \(c_j\) over full Max+ for all
+primes \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15136.py`, `evidence/e1_gmin_m4_prop15136.json`,
+`tests/test_prop15136.py`.
+
+## Prop 15.137 (2026-08-01) — \(c_j\) over Max+ \(G\)-orbits; p=5 two-type formula
+
+Continues 15.136. Does **not** soft-close residual.
+
+**Proved / certified:**
+
+1. **G-equivariance.** \(Q_j(g\cdot y)=Q_j(y)\); \(Q_j\) constant on Max+ \(G\)-orbits.
+2. **Hemisphere formula.** \(G\) fixes \(\infty\), so
+   \(c_j=\sum_t w_t Q_j(y_t)\) over \(G\)-orbits in \(H_+=\{y_\infty=+1\}\).
+3. **Census.** \(r=1,2,5\) hemisphere types at \(p=3,5,7\); p=5 weights
+   \(3/13\) (hs) and \(10/13\) (other); p=7 sizes \(\{56,84,294,588,1176\}\).
+4. **p=5 formula.** \(c_j=(3/13)Q_j(\mathrm{hs})+(10/13)Q_j(y_*)\);
+   \(\sum c_j^2=\mathrm{room}=1536/65\).
+5. **\(Q_j(\mathrm{hs})\) Max+-free.** Both \(v_j\) and \(f_{\mathrm{hs}}\) are Max+-free.
+   Using only \(Q_j(\mathrm{hs})\) for \(c_j\) fails when \(r>1\) (\(\sum Q_j(\mathrm{hs})^2\gg\mathrm{room}\)).
+
+**OPEN:** Max+-free non-hs representatives \(y_t\) and character sums \(Q_j(y_t)\)
+for general primes \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15137.py`, `evidence/e1_gmin_m4_prop15137.json`,
+`tests/test_prop15137.py`.
+
+## Prop 15.138 (2026-08-01) — Max+-free non-hs \(y_*\); p=5 residual Max+-free
+
+Continues 15.137. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved / certified:**
+
+1. **hs-switch.** \(C'=D_{\mathrm{hs}}CD_{\mathrm{hs}}\) has \(C'\mathbf1=p\mathbf1\);
+   \(y=\mathrm{hs}\odot z'\) with \(C'z'=pz'\) lies in Max+.
+2. **Norm circles.** \(S_{t,c}=\{u:N(u-t)=c\}\) (\(N(u)=u^{p+1}\)); lex-first
+   \((t^*,c^*)\) making \(S\) a \(C'\)-Hoffman coclique yields Max+-free
+   \(y_*\in H_+\) of non-hs type when found (cert \(p=5,7,11\); empty at \(p=13\)).
+3. **p=5 residual Max+-free.** With \((t,c)=(0,3)\),
+   \(c_j=(3/13)Q_j(\mathrm{hs})+(10/13)Q_j(y_*)\) (both Max+-free) gives
+   \(\sum c_j^2=1536/65=\mathrm{room}\) — residual without Max+ census.
+4. **Partial p=7.** Norm circles cover hs (size 84) and one non-hs orbit
+   (size 588) only — 2 of 5 \(H_+\) types.
+
+**OPEN:** Remaining \(H_+\) G-orbit types for all primes \(p\ge7\); full residual
+for all \(p\ge5\). L remains OPEN (do not promote L from p=5 alone).
+
+Evidence: `src/e1_gmin_m4_prop15138.py`, `evidence/e1_gmin_m4_prop15138.json`,
+`tests/test_prop15138.py`.
+
+## Prop 15.139 (2026-08-01) — Affine halfspaces + double switch; p=7 size classes
+
+Continues 15.138. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved / certified:**
+
+1. **Affine halfspaces.** For \(L\not\equiv0\) linear and \(|S|=(p+1)/2\),
+   \(y_u=+1\Leftrightarrow L(u)\in S\) is Max+ at certified \(p=5,7\) (all such \(S\)).
+2. **AP dichotomy at \(p=7\).** Among all \(\binom{7}{4}=35\) sets \(S\):
+   4-term AP \(\Rightarrow\) \(H_+\) orbit size 84 (21 sets); non-4-AP \(\Rightarrow\)
+   size 56 (14 sets, including QR-half \(\{0,1,2,4\}\)).
+3. **Double Seidel–norm-circle.** \(y=y_0\odot z\) with \(C_0=D_{y_0}CD_{y_0}\)
+   and \(z\) a norm-circle Hoffman evec of \(C_0\) yields Max+.
+4. **All \(p=7\) size classes Max+-free:**
+   84 (AP affine), 56 (non-AP affine), 588 (hs\(\odot\)nc),
+   1176 (\(y_{56}\odot\)nc), 294 (\(y_{\mathrm{nc}}\odot\)nc).
+
+**OPEN:** Max+-free weights \(w_t\) and character sums \(Q_j(y_t)\) for every
+orbit (including four size-1176 orbits); residual for general \(p\ge5\).
+L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15139.py`, `evidence/e1_gmin_m4_prop15139.json`,
+`tests/test_prop15139.py`.
+
+## Prop 15.140 (2026-08-01) — Weights \(|G|/|\mathrm{Stab}|\); character-sum \(Q_j\); p=7 residual form
+
+Continues 15.139. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved / certified:**
+
+1. **Orbit–stabiliser weights.** \(|O_t|=|G|/|\mathrm{Stab}^\infty(y_t)|\);
+   stabs \(\{42,28,8,4,2\}\) for sizes \(\{56,84,294,588,1176\}\);
+   \(|H_+|=5726\); weights sum to 1.
+2. **Character-sum residual.** \(c_j=\sum_t w_t Q_j(y_t)\) with \(Q_j\) on
+   G-quotient \(v_j\in E_{4p}^{G}\) recovers
+   \(\sum c_j^2=19180800/1840091=\delta^2_{\mathrm{pair}}\le\mathrm{room}=3072/55\)
+   at \(p=7\).
+3. **Coverage.** Seven of eight \(H_+\) orbits have Max+-free geometric reps
+   (affine + double Seidel–norm-circle); **one** size-1176 orbit still lacks
+   a Max+-free construction (Q from census only for that type).
+
+**OPEN:** Max+-free \(y\) for the remaining size-1176 orbit; full Max+-free
+\(c_j\) at \(p=7\); residual for general \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15140.py`, `evidence/e1_gmin_m4_prop15140.json`,
+`tests/test_prop15140.py`.
+
+## Prop 15.141 (2026-08-01) — Size-12 Seidel partner; p=7 residual Max+-free
+
+Continues 15.140. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved / certified:**
+
+1. **Size-12 Seidel partner.** For affine halfspace \(y_0\) with
+   \(S=\{2,3,4,5\}\) and field set
+   \(T=\{10,12,13,16,18,25,29,36,38,42,44,48\}\),
+   \(z=-1\) on \(T\), \(C_0=D_{y_0}CD_{y_0}\) has \(C_0z=pz\), and
+   \(y_\sharp=y_0\odot z\) is Max+ of \(H_+\) orbit size 1176 with the
+   previously missing \(Q_j\) signature — Max+-free.
+2. **All eight \(H_+\) types Max+-free** at \(p=7\).
+3. **Residual Max+-free at \(p=7\).** Free weights \(w_t=|G|/|\mathrm{Stab}|\)
+   and free \(Q_j(y_t)\) give \(\sum c_j^2=\delta^2_{\mathrm{pair}}\le\mathrm{room}\).
+4. **Bi-tight at \(p=5,7\).** mult\(\ge d-1\) + residual \(\Rightarrow\) 16N
+   \(\Rightarrow\) bi-tight empty (form already proved); residual Max+-free
+   at \(p=5,7\).
+
+**OPEN:** General primes \(p\ge5\) (uniform type law beyond p=7-explicit \(T\));
+deep ND; Main Theorem. L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15141.py`, `evidence/e1_gmin_m4_prop15141.json`,
+`tests/test_prop15141.py`.
+
+## Prop 15.142 (2026-08-01) — Uniform affine law; partners; p=11 sample
+
+Continues 15.141. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved / certified:**
+
+1. **Affine all-\(S\).** Every \(S\subset\mathbb F_p\) with \(|S|=(p+1)/2\) gives a
+   Max+ affine halfspace at \(p=5,7,11\) (all \(\binom{p}{k}\) sets).
+2. **\(k\)-AP split.** \(p=5\): all AP (one affine orbit). \(p=7\): 21 AP \(\to84\),
+   14 non-AP \(\to56\). \(p=11\): non-AP further splits (orbits 132, 330, 660).
+3. **Fourths-coset partners.** \(z=-1\) on \(t+a\cdot\mathbb F_q^{\times4}\) works
+   at \(p=5\) only; **no** evec hits at \(p=7,11\) — not a uniform size-12 law.
+4. **\(p=7\) size-12 fibre.** 84 distinct field sets of size 12; explicit \(T\)
+   of 15.141 is one; \(k=(q-1)/4\) but \(T\) is not a fourths coset.
+5. **\(p=11\) samples.** Max+-free: affine 132/330/660; ystar 3630;
+   double-switch 3630/7260. Full residual OPEN.
+
+**OPEN:** Complete type law for \(p\ge11\); free \(Q_j\) residual for all
+\(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15142.py`, `evidence/e1_gmin_m4_prop15142.json`,
+`tests/test_prop15142.py`.
+
+## Prop 15.143 (2026-08-01) — p=11 affine 6-orbit census; double-switch LB
+
+Continues 15.142. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved / certified:**
+
+1. **Affine type census at \(p=11\).** All \(\binom{11}{6}=462\) affine halfspaces
+   form **exactly 6** \(H_+\) G-orbits under strict Aut \(G\) (\(|G|=14520\)):
+   sizes \(132\times1\), \(330\times2\), \(660\times3\), with constructive samples.
+2. **Double Seidel–norm-circle.** ystar orbit 3630; double-switch sizes include
+   3630 and 7260; norm-circle count on \(C_0\) depends on affine class
+   (size-132 rich, size-660 empty). Lower bound \(|H_+|\ge28182\).
+3. **Incomplete non-affine list.** Full \(H_+\) type census at \(p=11\) OPEN.
+
+**OPEN:** Non-affine types at \(p\ge11\); free \(c_j\) residual; general \(p\ge5\).
+L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15143.py`, `evidence/e1_gmin_m4_prop15143.json`,
+`tests/test_prop15143.py`.
+
+## Prop 15.144 (2026-08-01) — Free orbits; type-enum residual dead for \(p\ge11\)
+
+Continues 15.143. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved / certified:**
+
+1. **Free G-orbit.** Affine \(S=\{0,1,2,4,5,7\}\) double-switch path
+   \((t,c)=(33,3)\to(69,9)\) yields Max+ with \(|O|=|G|=14520\) (trivial stab).
+2. **Size 2420.** ystar chain \((22,4)\to(91,4)\to(25,4)\to(95,5)\) yields
+   orbit size 2420. Non-affine sizes include \(\{1210,2420,3630,7260,14520\}\).
+3. **Type-enum residual DEAD for \(p\ge11\).** Deep double-switch multiplies
+   free orbits — completing a Max+ G-orbit type list for \(c_j=\sum w_t Q_j\)
+   is not a viable Max+-free proof path.
+4. **Redirect.** Prefer type-free Max+-free residual: \(\delta^2\le\rho_{\min}^2\)
+   for \(p\ge7\), or pointwise \(\sum_j Q_j(y)^2\le\mathrm{room}\).
+
+**OPEN:** Type-free residual for general \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15144.py`, `evidence/e1_gmin_m4_prop15144.json`,
+`tests/test_prop15144.py`.
+
+## Prop 15.145 (2026-08-01) — Type-free residual package
+
+Continues 15.144. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved (Fraction algebra, Max+-free):**
+
+1. **Dictionary.** For primes \(p>\sqrt5\),
+   \[
+   \delta^2\le\rho_{\min}^2
+   \;\Longleftrightarrow\;
+   \|\rho\|_2^2\le 2\rho_{\min}^2
+   \;\Longleftrightarrow\;
+   \|m_4\|_2^2\le m4f_{\mathrm{suf}}
+   \;\Longleftrightarrow\;
+   \mathrm{ED4}\le\mathrm{ED4}_{\mathrm{suf}},
+   \]
+   with closed forms
+   \[
+   m4f_{\mathrm{suf}}=\frac{(p^2-1)(p^2+1)(3p^4+37p^2+60)}{24p^2(p^2-5)},
+   \quad
+   \mathrm{ED4}_{\mathrm{suf}}=\frac{4(p^2+1)(3p^6-3p^4+7p^2-15)}{p^2(p^2-5)}.
+   \]
+   For \(p\ge7\), \(\delta^2\le\rho_{\min}^2\) implies Path C residual
+   (\(\rho_{\min}^2<\mathrm{room}_{\mathrm{hyp}}/24\)).
+2. **Asymptotic.** \(\rho_{\min}^2/(\mathrm{room}_{\mathrm{hyp}}/24)\to 5/8\) as \(p\to\infty\)
+   (monotone on primes \(7\ldots97\)).
+3. **Type-free targets.** \(E\|P f_y\|^2\le\rho_{\min}^2\), pointwise
+   \(Q_\delta\le\rho_{\min}^2\), \(\|m_4\|^2\le m4f_{\mathrm{suf}}\), or
+   \(\mathrm{ED4}\le\mathrm{ED4}_{\mathrm{suf}}\) (weight enumerator / Gauss sums).
+
+**Certified:** \(\delta^2\le\rho_{\min}^2\) at \(p=5,7\) only (prior residual closures).
+
+**OPEN:** type-free \(\delta^2\le\rho_{\min}^2\) for general \(p\ge7\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15145.py`, `evidence/e1_gmin_m4_prop15145.json`,
+`tests/test_prop15145.py`.
+
+## Prop 15.146 (2026-08-01) — Type-free R₄ / μ₄ residual channel
+
+Continues 15.145. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved (Fraction, Max+-free):**
+
+1. **ED4_from_exact3** \(= -n^4+28n^2-40n\).
+2. **R₄ dictionary.** \(\delta^2=(2/3)(R_4-R4_{\mathrm{flat}})\);
+   \(\delta^2\le\rho_{\min}^2\Leftrightarrow R_4\le R4_{\mathrm{suf}}=R4_{\mathrm{flat}}+(3/2)\rho_{\min}^2\);
+   equivalently \(\mu_4\le\mu4_{\mathrm{suf}}\) and
+   \(\bar E[\prod_4 w]\le R4_{\mathrm{suf}}/(n)_4\).
+3. **Central moments.** \(\mu_2=n/2\), \(\mu_3=0\) Max+-free.
+4. **Spectral mass (too weak).** Under \(\lambda_{\max}(T)=4p\),
+   \(\|P f_y\|^2\le (p^2+1)(p^2-2)(p^2-3)(p^2-4)/24\)
+   with \(w^*=(p^2-3)(p^2-4)/(p^2(p^2-1))\) — far above residual budgets,
+   so Jensen+spectral moments cannot close residual.
+
+**Certified:** R₄ channel at \(p=5,7\).
+
+**OPEN:** \(R_4\le R4_{\mathrm{suf}}\) for general \(p\ge7\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15146.py`, `evidence/e1_gmin_m4_prop15146.json`,
+`tests/test_prop15146.py`.
+
+## Prop 15.147 (2026-08-01) — Inclusion-density residual; ULC near-miss
+
+Continues 15.146. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved (Fraction, Max+-free):**
+
+1. **Falling factorial.** \(R_4=E[k^{\underline 4}]\); under design moments,
+   \(\mathrm{exact}_{\le3}=6E[k^3]-11E[k^2]+6E[k]\).
+2. **Inclusion densities.**
+   \(d_1=1/2\), \(d_2=(p^2+1)/(4p^2)\), \(d_3=(p^2+3)/(8p^2)\);
+   \(d_4=R_4/(n)_4\); for \(p\ge7\), residual \(\Leftrightarrow d_4\le d4_{\mathrm{suf}}\).
+3. **ULC comparison.** \(U=d_3^2/d_2=(p^2+3)^2/(16p^2(p^2+1)) < d4_{\mathrm{suf}}\)
+   for all primes \(p\ge5\) via
+   \(P(x)=x^5-8x^4+78x^3-4x^2-7x-60=(x-1)(x^4-7x^3+71x^2+67x+60)>0\) at \(x=p^2\ge25\).
+   Thus \(d_4\le U\) would close residual.
+4. **ULC fails slightly (census).** At \(p=5,7\): \(d_4/U\approx 1.036,1.019\)
+   while \(d_4\le d4_{\mathrm{suf}}\) still holds. Near-miss.
+
+**OPEN:** \(d_4\le d4_{\mathrm{suf}}\) for general \(p\ge7\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15147.py`, `evidence/e1_gmin_m4_prop15147.json`,
+`tests/test_prop15147.py`.
+
+## Prop 15.148 (2026-08-01) — Relaxed-ULC residual calculus
+
+Continues 15.147. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved (Fraction, Max+-free):**
+
+1. **Linear defect.** \(C_{\mathrm{act}}=p^2(d_4/U-1)=C_{\mathrm{flat}}+\kappa\delta^2\) with
+   \(C_{\mathrm{flat}}=x P_{\mathrm{flat}}(x)/((x-5)(x-1)(x-2)(x+3)^2)\),
+   \(P_{\mathrm{flat}}=x^4-8x^3+58x^2-64x+13\),
+   \(\kappa=24p^2/((n-2)(n-3)(n+2)^2)\), \(x=p^2\).
+2. **C_max.** \(C_{\mathrm{max}}=Q(p^2)/((p^2-5)(p^2-2)(p^2+3)^2)\),
+   \(Q=x^4-7x^3+71x^2+67x+60\);
+   residual \(\Leftrightarrow C_{\mathrm{act}}\le C_{\mathrm{max}}\);
+   \(C_{\mathrm{max}}<1\to1^-\).
+3. **Uniform criterion (p≥7).** \(C_{\mathrm{max}}(p)\ge C_7=C_{\mathrm{max}}(7)=79923/87373\);
+   thus \(d_4\le U(1+C_7/p^2)\) implies residual for all primes \(p\ge7\).
+4. **Census window.** \(C_{\mathrm{act}}(5)\approx0.900\), \(C_{\mathrm{act}}(7)\approx0.907\);
+   constant-\(C\) implication window \([C_{\mathrm{act}}(7),C_7]\) nonempty; \(C=1\) fails.
+
+**OPEN:** prove \(d_4\le U(1+C_7/p^2)\) (or \(C_{\mathrm{act}}\le C_{\mathrm{max}}\)) type-free. L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15148.py`, `evidence/e1_gmin_m4_prop15148.json`,
+`tests/test_prop15148.py`.
+
+## Prop 15.149 (2026-08-01) — Size-bias residual form
+
+Continues 15.148. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved (Fraction, Max+-free):**
+
+1. **Size-bias.** Let \(\mu\propto W_k\,k^{\underline 3}\). Then
+   \(d_4/d_3=E_\mu[k-3]/(n-3)\) and residual for \(p\ge7\) is
+   \(E_\mu[k]\le k_{\mathrm{suf}}=3+8\,R4_{\mathrm{suf}}/(n(n-2)(n+2))\).
+   Shift: \(E_\mu[k]-k_{\mathrm{flat}}=12\delta^2/(n(n-2)(n+2))\).
+2. **\(k_{\mathrm{flat}}\) shift.** \(k_{\mathrm{flat}}-n/2\to 3^-\) with closed
+   \(P_k(p^2)/(2(p^2-5)(p^2+1)(p^2-1)(p^2+3))\).
+3. **Independence excesses.** \(d_2-1/4=1/(4(n-1))\), \(d_3-1/8=3/(8(n-1))\),
+   \(d4_{\mathrm{flat}}-1/16=P_{\mathrm{ind}}(p^2)/(16(p^2-5)n_4)>0\) for \(p\ge5\);
+   \(k_{\mathrm{flat}}>(n+3)/2\) (binomial size-bias).
+4. **Uniform \(C_7\).** \(E_\mu[k]\le k_{C7}\Rightarrow\) residual for \(p\ge7\).
+5. **Gauss program.** \(\mu\) mixes regular-set sizes through srg triple types
+   with Aut-constant \(\lambda_\tau\) — finite-type character-sum target.
+
+**OPEN:** \(E_\mu[k]\le k_{\mathrm{suf}}\) for general \(p\ge7\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15149.py`, `evidence/e1_gmin_m4_prop15149.json`,
+`tests/test_prop15149.py`.
+
+## Prop 15.150 (2026-08-01) — srg triples; \(\lambda_e\); \(\pi_e\) residual
+
+Continues 15.149. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved:**
+
+1. **Triple counts.** Closed \(n_e\) for edge-type \(e=0,1,2,3\) in the
+   conference srg after switch:
+   \(n_3=p(p^2+1)(p^2-1)(p-3)/48\), etc.
+2. **Covering numbers.** Under Aut-constancy on edge-types and affine
+   \(\lambda_e=A+Be\), design moments \(j\le3\) force
+   \(\lambda_e=N(p+3-2e)/(8p)\). Certified at \(p=5,7\).
+3. **Mixture.** \(\pi_e=n_e(p+3-2e)/\mathrm{Tot}\) is Max+-free (\(N\) cancels);
+   \(E_\mu[k]=\sum_e\pi_e m_e\) with \(m_e=\) mean regular-set size through a
+   type-\(e\) triple.
+4. **Residual.** For \(p\ge7\): \(\sum\pi_e m_e\le k_{\mathrm{suf}}\).
+
+**OPEN:** bound \(m_e\) (character sums / regular-set constraints). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15150.py`, `evidence/e1_gmin_m4_prop15150.json`,
+`tests/test_prop15150.py`.
+
+## Prop 15.151 (2026-08-01) — \(m_e\) covariance formula
+
+Continues 15.150. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved:**
+
+1. **Regular-set identities.** \(\sum t_e=C(k,3)\), \(\sum e\,t_e=e_S(k-2)\),
+   \(t_2+3t_3=k\binom{\alpha}{2}\).
+2. **\(E[t_e]\) Max+-free.** \(E[t_e]=n_e(p+3-2e)/(8p)\).
+3. **Covariance formula.**
+   \(m_e=n/2+8p\,\mathrm{Cov}(k,t_e)/(n_e(p+3-2e))\);
+   \(E_\mu[k]=n/2+(8p/\mathrm{Tot})\,\mathrm{Cov}(k,C(k,3))\).
+4. **Exact \(m_e\) at \(p=5\).** Fractions certified; \(\sum\pi m\le k_{\mathrm{suf}}\);
+   \(m_0,m_1<k_{\mathrm{suf}}<m_2,m_3\).
+5. **CS/Popoviciu dead** for residual (π-average exceeds \(k_{\mathrm{suf}}\)).
+
+**Note:** weight-constancy of \(t_e\) (Thm B) overstated for \(p=7\); see 15.152.
+
+**OPEN:** closed \(t_e(k)\) or character-sum \(\mathrm{Cov}(k,t_e)\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15151.py`, `evidence/e1_gmin_m4_prop15151.json`,
+`tests/test_prop15151.py`.
+
+## Prop 15.152 (2026-08-01) — free-param \(t_3\); multi-orbit; residual \(\equiv R_4\)
+
+Continues 15.151. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved:**
+
+1. **Free parameter.** On regular sets,
+   \(t_2=R_3-3t_3\), \(t_1=R_2-2R_3+3t_3\), \(t_0=C(k,3)-R_2+R_3-t_3\).
+2. **\(p=5\) closed form.** Mono-type per weight;
+   \(t_3(\alpha)=0\) (\(\alpha\le3\)), \(t_3(\alpha)=3\alpha^2-21\alpha+40\) (\(\alpha\ge4\)).
+3. **\(p=7\) multi-orbit.** Weights \(k\in\{16,18,\ldots,34\}\) have 3–8 distinct
+   \(t\)-vectors (full Max+ census \(N=11452\), \(W=86\)). Pure \(t_e(k)\) is **dead**
+   for general \(p\). Corrects 15.151.B.
+4. **Residual \(\equiv R_4\).** With \(R_4=E[k^{\underline4}]\),
+   \(\mathrm{Cov}(k,C(k,3))=(R_4+(3-n/2)E_3)/6\) and
+   \(E_\mu[k]=3+8R_4/(n(n-2)(n+2))\). Multi-type structure does not open a new
+   residual channel beyond the weight-4 falling moment.
+5. **Per-type reduction.** \(\mathrm{Cov}(k,t_e)=\mathrm{Cov}(\mathrm{det}_e(k))+\gamma_e\mathrm{Cov}(k,t_3)\)
+   with \(\gamma=(-1,3,-3,1)\); \(E[t_3]=n_3(p-3)/(8p)\).
+
+**OPEN:** \(R_4\le R4_{\mathrm{suf}}\) / character-sum \(m_e\) on fixed triples /
+\(\mathrm{Cov}(k,t_3)\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15152.py`, `evidence/e1_gmin_m4_prop15152.json`,
+`tests/test_prop15152.py`.
+
+## Prop 15.153 (2026-08-01) — switched \(\mu_4\) residual dictionary
+
+Continues 15.152. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved:**
+
+1. **Switched low moments.** \(e_1=e_3=0\), \(e_2=1/(n-1)\) Max+-free.
+2. **Four-point expansion.**
+   \(d_4=(1+6/(n-1)+\mu_4)/16\) with \(\mu_4=\mathrm{avg}\,m_4^{\mathrm{sw}}\).
+3. **Closed budgets.**
+   \(\mu4_{\mathrm{flat}}=(3p^2+17)/(p^2(p^2-2)(p^2-5))\),
+   \(\mu4_{\mathrm{suf}}=(3p^4+37p^2+60)/(p^4(p^2-2)(p^2-5))\).
+   Residual for \(p\ge7\): \(\mu_4\le\mu4_{\mathrm{suf}}\).
+4. **Census.** \(\mu_4\le\mu4_{\mathrm{suf}}\) at \(p=5,7\); exact \(m_e\) at \(p=7\).
+
+**OPEN:** Paley/Weil bound \(\mu_4\le\mu4_{\mathrm{suf}}\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15153.py`, `evidence/e1_gmin_m4_prop15153.json`,
+`tests/test_prop15153.py`.
+
+## Prop 15.154 (2026-08-01) — \(\mathrm{avg}(\chi\kappa)=3/(n-3)\); \(\eta\) residual
+
+Continues 15.153. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved:**
+
+1. **Switch.** \(m_4^{\mathrm{sw}}(S)=\chi(S)\,m_4(S)\), \(\chi=\prod z_i\) halfspace.
+2. **Combinatorial average (Max+-free).** By Seidel-switched conference \(C_2\)
+   row-sum algebra:
+   \(\mathrm{avg}(\chi\kappa)=3/(n-3)=3/(p^2-2)\).
+3. **Decomposition.**
+   \(\mu_4=\kappa_{\mathrm{main}}+\eta\) with
+   \(\kappa_{\mathrm{main}}=3/(p^2(p^2-2))\),
+   \(\eta=\mathrm{avg}(\chi\,\mathrm{Ext})/(4p)\).
+4. **Residual.** \(\mu_4\le\mu4_{\mathrm{suf}}\Leftrightarrow\eta\le\eta_{\mathrm{suf}}\) with
+   \(\eta_{\mathrm{suf}}=4(13p^2+15)/(p^4(p^2-2)(p^2-5))\).
+   Strictly \(\kappa_{\mathrm{main}}<\mu4_{\mathrm{flat}}<\mu4_{\mathrm{suf}}\).
+5. **Census.** \(\eta\le\eta_{\mathrm{suf}}\) at \(p=5,7\).
+
+**OPEN:** Weil/Aut bound on \(\eta\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15154.py`, `evidence/e1_gmin_m4_prop15154.json`,
+`tests/test_prop15154.py`.
+
+## Prop 15.155 (2026-08-01) — Aut-line \(e_4/T\chi/Q\); \(\eta=c_1 R_4+c_0\)
+
+Continues 15.154. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved:**
+
+1. **\(e_4(s)\).** For any \(\pm1\) vector with sum \(s\):
+   \(e_4=s^4/24+((-3n+4)/12)s^2+n(n-2)/8\).
+2. **\(T\chi\).** \(T\chi(S)=\chi(S)(4p-2\sigma_z(S))\) with
+   \(\sigma_z=\sum_{uv\subset S}C_{2,uv}\).
+3. **\(Q(s)\).** On \(C_2\)-eigenvectors:
+   \(Q=(p/4)[s^2(n-4)+n(6-n)]\).
+4. **Average.** \(\mathrm{avg}(\chi\,\mathrm{Ext})=E[(4p\,e_4-2Q)/C(n,4)]\).
+5. **Affine.** \(\eta=c_1 R_4+c_0\) with
+   \(c_1=16/(n)_4\), \(c_0=-(p^4+4p^2-9)/(p^2(p^2-2))\).
+   Residual \(\Leftrightarrow R_4\le R4_{\mathrm{suf}}\) (pure \(E[s^4]\)).
+6. **Crude dead.** \(E[s^4]\le 2n^3\) exceeds budget.
+
+**OPEN:** Weil/Paley \(E[\langle z,y\rangle^4]\) or spherical 3-design defect. L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15155.py`, `evidence/e1_gmin_m4_prop15155.json`,
+`tests/test_prop15155.py`.
+
+## Prop 15.156 (2026-08-01) — \(\kappa_4=E[s^4]-12n^2\) residual dictionary
+
+Continues 15.155. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved:**
+
+1. **Cumulant form.** \(\kappa_4:=E[s^4]-12n^2\); residual \(\Leftrightarrow\kappa_4\le\kappa4_{\mathrm{suf}}\).
+2. **Closed budgets.**
+   \(\kappa4_{\mathrm{flat}}=16(p^2+1)(p^2+3)/(p^2-5)\),
+   \(\kappa4_{\mathrm{suf}}=4(p^2+1)(9p^4+22p^2-15)/(p^2(p^2-5))\).
+3. **Bridge.** \(\kappa_4=(n)_4\eta-16n\).
+4. **Design orientation.** Spherical 4-design value \(3n^4/(d(d+2))\) is a
+   **lower** bound among 2-designs; lies below \(\mathrm{ED4}_{\mathrm{flat}}\) for \(p\ge5\).
+5. **Dead ends.** Crude \(E[s^4]\le2n^3\); moment LP on allowed weights (factor \(\gtrsim3.5\) at \(p=5\)).
+6. **Census.** \(\kappa_4\le\kappa4_{\mathrm{suf}}\) at \(p=5,7\) (ratios \(\approx0.90,0.66\)).
+
+**OPEN:** Weil/Paley bound on \(\kappa_4\), or upper bound on the spherical
+3-design defect of Max+ in \(V_+\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15156.py`, `evidence/e1_gmin_m4_prop15156.json`,
+`tests/test_prop15156.py`.
+
+## Prop 15.157 (2026-08-01) — Gegenbauer / 3-design defect residual
+
+Continues 15.156. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved:**
+
+1. **Expansion.** \(t^4=a_0+a_2 Q_2+a_4 Q_4\) on \(S^{d-1}\) with
+   \(a_0=3/(d(d+2))\), \(a_2=6(d-1)/(d(d+4))\),
+   \(a_4=(d^2-1)/((d+2)(d+4))\).
+2. **2-design reduction.** \(E[s^4]=n^4(a_0+a_4\mu_{G4})\) with
+   \(\mu_{G4}=E[Q_4(s/n)]\ge0\).
+3. **Residual.** \(\mu_{G4}\le\mu_{G4,\mathrm{suf}}\) where (with \(x=p^2\))
+   \(\mu_{G4,\mathrm{suf}}=4(21x^3+19x^2+35x-75)(x+9)/[x(x-5)(x+1)^3(x+3)(x-1)]\).
+4. **Census.** Defect positive but inside budget at \(p=5,7\) (ratios \(\approx0.94,0.83\)).
+5. **Dead UBs.** \(\mu\le1\); \(\mu\le1/h_4\) (false at \(p=5\)); \(\mu\le d/h_4\) (too weak for \(p\ge7\)).
+
+**OPEN:** Weil/Aut upper bound on \(\mu_{G4}\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15157.py`, `evidence/e1_gmin_m4_prop15157.json`,
+`tests/test_prop15157.py`.
+
+## Prop 15.158 (2026-08-01) — closed \(Q_4\); Max+ non-scheme; pole bound
+
+Continues 15.157. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved:**
+
+1. **Closed \(Q_4\).**
+   \(Q_4(t)=[(d+2)(d+4)t^4-6(d+2)t^2+3]/(d^2-1)\), \(Q_4(0)=3/(d^2-1)\).
+2. **1-homogeneous tight frame.** Absolute distributions identical; Gram
+   spectrum \(2N\) (mult \(d\)) + \(0\) (mult \(N-d\)). Certified \(p=5\).
+3. **Not IP-scheme.** Intersection numbers fail constancy on several
+   inner-product classes at \(p=5\) — Bose–Mesner on pure \(R_s\) blocked.
+4. **Pole decomposition.**
+   \(\mu_{G4}\le 2/N+P(E)+Q_4(0)P(\mathrm{Eq})\); pure pole bound
+   \(\mu_{G4}\le 2/N\) if \(W\) avoids positive-\(Q_4\) weights except poles.
+5. **Conditional residual.** If \(N\ge N_*=\lceil 2/\mu_{G4,\mathrm{suf}}\rceil\) and
+   nonpositive-\(Q_4\) support, residual holds. \(N\ge N_*\) at \(p=5,7\), but
+   support hypothesis fails (equator / Hoffman exterior).
+6. **Chebyshev split dead** (\(\mathrm{UB}\sim 0.18\gg\mu_{G4,\mathrm{suf}}\)).
+
+**OPEN:** Weil/Paley \(\sum_y Q_4(\langle z,y\rangle/n)\), Aut-coherent configuration,
+or closed \(W_k\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15158.py`, `evidence/e1_gmin_m4_prop15158.json`,
+`tests/test_prop15158.py`.
+

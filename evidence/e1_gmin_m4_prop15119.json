@@ -1,0 +1,671 @@
+{
+  "prop": "15.119",
+  "title": "Residual budget dictionary (m4f/EW2/ED4); weight-enumerator structure; halfspace pin criterion",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close: \u03b4\u00b2\u2264room_hyp/24 not proved for general p\u22655. Shipped closed residual budgets + equivalence + WE structure.",
+  "proved": {
+    "ed4_budgets": true,
+    "ew2_channel": true,
+    "m4f_dictionary": true,
+    "equivalence": true,
+    "we_structure": true,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  },
+  "algebra": {
+    "ed4_budgets": {
+      "proved": true,
+      "theorem": "ED4_flat=4(p\u00b2\u22123)n(3p\u00b2+1)/(p\u00b2\u22125); ED4_bud=4(3p\u2078+6p\u2076\u2212104p\u2074+138p\u00b2\u221275)/((p\u00b2\u22125)(p\u00b2+1)).",
+      "by_p": {
+        "3": {
+          "flat_closed": "1680",
+          "flat_ref": "1680",
+          "bud_closed": "1680",
+          "bud_ref": "1680",
+          "match": true
+        },
+        "5": {
+          "flat_closed": "43472/5",
+          "flat_ref": "43472/5",
+          "bud_closed": "120400/13",
+          "bud_ref": "120400/13",
+          "match": true
+        },
+        "7": {
+          "flat_closed": "340400/11",
+          "flat_ref": "340400/11",
+          "bud_closed": "1775728/55",
+          "bud_ref": "1775728/55",
+          "match": true
+        },
+        "11": {
+          "flat_closed": "5240144/29",
+          "flat_ref": "5240144/29",
+          "bud_closed": "326099984/1769",
+          "bud_ref": "326099984/1769",
+          "match": true
+        },
+        "13": {
+          "flat_closed": "14335760/41",
+          "flat_ref": "14335760/41",
+          "bud_closed": "247320592/697",
+          "bud_ref": "247320592/697",
+          "match": true
+        },
+        "17": {
+          "flat_closed": "71991920/71",
+          "flat_ref": "71991920/71",
+          "bud_closed": "2106345136/2059",
+          "bud_ref": "2106345136/2059",
+          "match": true
+        },
+        "19": {
+          "flat_closed": "140482064/89",
+          "flat_ref": "140482064/89",
+          "bud_closed": "25609730384/16109",
+          "bud_ref": "25609730384/16109",
+          "match": true
+        },
+        "23": {
+          "flat_closed": "442702640/131",
+          "flat_ref": "442702640/131",
+          "bud_closed": "23579214064/6943",
+          "bud_ref": "23579214064/6943",
+          "match": true
+        },
+        "29": {
+          "flat_closed": "1780924304/209",
+          "flat_ref": "1780924304/209",
+          "bud_closed": "752117368784/87989",
+          "bud_ref": "752117368784/87989",
+          "match": true
+        },
+        "31": {
+          "flat_closed": "2657882864/239",
+          "flat_ref": "2657882864/239",
+          "bud_closed": "1281951110384/114959",
+          "bud_ref": "1281951110384/114959",
+          "match": true
+        },
+        "37": {
+          "flat_closed": "7687793360/341",
+          "flat_ref": "7687793360/341",
+          "bud_closed": "1055263799632/46717",
+          "bud_ref": "1055263799632/46717",
+          "match": true
+        },
+        "41": {
+          "flat_closed": "14236165424/419",
+          "flat_ref": "14236165424/419",
+          "bud_closed": "11991491332784/352379",
+          "bud_ref": "11991491332784/352379",
+          "match": true
+        },
+        "43": {
+          "flat_closed": "18946974800/461",
+          "flat_ref": "18946974800/461",
+          "bud_closed": "3510217371088/85285",
+          "bud_ref": "3510217371088/85285",
+          "match": true
+        },
+        "47": {
+          "flat_closed": "32313223280/551",
+          "flat_ref": "32313223280/551",
+          "bud_closed": "7149802809520/121771",
+          "bud_ref": "7149802809520/121771",
+          "match": true
+        },
+        "53": {
+          "flat_closed": "66453600080/701",
+          "flat_ref": "66453600080/701",
+          "bud_closed": "18691123717840/196981",
+          "bud_ref": "18691123717840/196981",
+          "match": true
+        },
+        "59": {
+          "flat_closed": "126480975824/869",
+          "flat_ref": "126480975824/869",
+          "bud_closed": "220371568144784/1512929",
+          "bud_ref": "220371568144784/1512929",
+          "match": true
+        }
+      }
+    },
+    "ew2_channel": {
+      "proved": true,
+      "theorem": "E[W\u00b2]=(ED4\u22123n\u00b2)/4; residual \u21d4 E[W\u00b2]\u2264EW2_bud; EW2_bud\u2212EW2_flat=room_hyp/4=6\u00b7(room_hyp/24).",
+      "by_p": {
+        "3": {
+          "EW2_flat": "345",
+          "EW2_bud": "345",
+          "gap": "0",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "5": {
+          "EW2_flat": "8333/5",
+          "EW2_bud": "23509/13",
+          "gap": "9216/65",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "7": {
+          "EW2_flat": "64475/11",
+          "EW2_bud": "340807/55",
+          "gap": "18432/55",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "11": {
+          "EW2_flat": "986309/29",
+          "EW2_bud": "61777649/1769",
+          "gap": "1612800/1769",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "13": {
+          "EW2_flat": "2695265/41",
+          "EW2_bud": "46722673/697",
+          "gap": "903168/697",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "17": {
+          "EW2_flat": "13519655/71",
+          "EW2_bud": "396714859/2059",
+          "gap": "4644864/2059",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "19": {
+          "EW2_flat": "26373329/89",
+          "EW2_bud": "4819191749/16109",
+          "gap": "45619200/16109",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "23": {
+          "EW2_flat": "83077235/131",
+          "EW2_bud": "4432086991/6943",
+          "gap": "28993536/6943",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "29": {
+          "EW2_flat": "334100969/209",
+          "EW2_bud": "141243567149/87989",
+          "gap": "587059200/87989",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "31": {
+          "EW2_flat": "498584879/239",
+          "EW2_bud": "240696689999/114959",
+          "gap": "877363200/114959",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "37": {
+          "EW2_flat": "1441931165/341",
+          "EW2_bud": "198053596933/46717",
+          "gap": "509027328/46717",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "41": {
+          "EW2_flat": "2669989139/419",
+          "EW2_bud": "2250179918699/352379",
+          "gap": "4719052800/352379",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "43": {
+          "EW2_flat": "3553414325/461",
+          "EW2_bud": "658638408397/85285",
+          "gap": "1256758272/85285",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "47": {
+          "EW2_flat": "6059951495/551",
+          "EW2_bud": "1341394396555/121771",
+          "gap": "2145116160/121771",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "53": {
+          "EW2_flat": "12462025445/701",
+          "EW2_bud": "3506244673885/196981",
+          "gap": "4415523840/196981",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        },
+        "59": {
+          "EW2_flat": "23718215789/869",
+          "EW2_bud": "41335460997449/1512929",
+          "gap": "42047308800/1512929",
+          "gap_eq_room_hyp_over_4": true,
+          "match": true
+        }
+      }
+    },
+    "m4f_dictionary": {
+      "proved": true,
+      "theorem": "\u27e8m\u2084,f_y\u27e9=ED4(y)/24+n(4\u22123n)/6+n(n\u22122)/8; m4f_bud=(p\u22121)(p+1)(3p\u00b2\u22125)(p\u2074+20p\u00b2\u221261)/(24(p\u00b2\u22125)(p\u00b2+1)).",
+      "by_p": {
+        "3": {
+          "m4f_flat": "110/3",
+          "m4f_bud": "110/3",
+          "closed_flat": "110/3",
+          "closed_bud": "110/3",
+          "from_ed4_bud": "110/3",
+          "match": true
+        },
+        "5": {
+          "m4f_flat": "598/5",
+          "m4f_bud": "1862/13",
+          "closed_flat": "598/5",
+          "closed_bud": "1862/13",
+          "from_ed4_bud": "1862/13",
+          "match": true
+        },
+        "7": {
+          "m4f_flat": "4100/11",
+          "m4f_bud": "23572/55",
+          "closed_flat": "4100/11",
+          "closed_bud": "23572/55",
+          "from_ed4_bud": "23572/55",
+          "match": true
+        },
+        "11": {
+          "m4f_flat": "57950/29",
+          "m4f_bud": "3803750/1769",
+          "closed_flat": "57950/29",
+          "closed_bud": "3803750/1769",
+          "from_ed4_bud": "3803750/1769",
+          "match": true
+        },
+        "13": {
+          "m4f_flat": "155890/41",
+          "m4f_bud": "2800658/697",
+          "closed_flat": "155890/41",
+          "closed_bud": "2800658/697",
+          "from_ed4_bud": "2800658/697",
+          "match": true
+        },
+        "17": {
+          "m4f_flat": "769080/71",
+          "m4f_bud": "23077464/2059",
+          "closed_flat": "769080/71",
+          "closed_bud": "23077464/2059",
+          "from_ed4_bud": "23077464/2059",
+          "match": true
+        },
+        "19": {
+          "m4f_flat": "1493250/89",
+          "m4f_bud": "277881450/16109",
+          "closed_flat": "1493250/89",
+          "closed_bud": "277881450/16109",
+          "from_ed4_bud": "277881450/16109",
+          "match": true
+        },
+        "23": {
+          "m4f_flat": "4675660/131",
+          "m4f_bud": "252642236/6943",
+          "closed_flat": "4675660/131",
+          "closed_bud": "252642236/6943",
+          "from_ed4_bud": "252642236/6943",
+          "match": true
+        },
+        "29": {
+          "m4f_flat": "18713450/209",
+          "m4f_bud": "7976205650/87989",
+          "closed_flat": "18713450/209",
+          "closed_bud": "7976205650/87989",
+          "from_ed4_bud": "7976205650/87989",
+          "match": true
+        },
+        "31": {
+          "m4f_flat": "27898000/239",
+          "m4f_bud": "13565165200/114959",
+          "closed_flat": "27898000/239",
+          "closed_bud": "13565165200/114959",
+          "from_ed4_bud": "13565165200/114959",
+          "match": true
+        },
+        "37": {
+          "m4f_flat": "80510790/341",
+          "m4f_bud": "11114816118/46717",
+          "closed_flat": "80510790/341",
+          "closed_bud": "11114816118/46717",
+          "from_ed4_bud": "11114816118/46717",
+          "match": true
+        },
+        "41": {
+          "m4f_flat": "148941100/419",
+          "m4f_bud": "126045973900/352379",
+          "closed_flat": "148941100/419",
+          "closed_bud": "126045973900/352379",
+          "from_ed4_bud": "126045973900/352379",
+          "match": true
+        },
+        "43": {
+          "m4f_flat": "198147950/461",
+          "m4f_bud": "36866830462/85285",
+          "closed_flat": "198147950/461",
+          "closed_bud": "36866830462/85285",
+          "from_ed4_bud": "36866830462/85285",
+          "match": true
+        },
+        "47": {
+          "m4f_flat": "337714520/551",
+          "m4f_bud": "74992428280/121771",
+          "closed_flat": "337714520/551",
+          "closed_bud": "74992428280/121771",
+          "from_ed4_bud": "74992428280/121771",
+          "match": true
+        },
+        "53": {
+          "m4f_flat": "694033470/701",
+          "m4f_bud": "195759325710/196981",
+          "closed_flat": "694033470/701",
+          "closed_bud": "195759325710/196981",
+          "from_ed4_bud": "195759325710/196981",
+          "match": true
+        },
+        "59": {
+          "m4f_flat": "1320287350/869",
+          "m4f_bud": "2305628161150/1512929",
+          "closed_flat": "1320287350/869",
+          "closed_bud": "2305628161150/1512929",
+          "from_ed4_bud": "2305628161150/1512929",
+          "match": true
+        }
+      }
+    },
+    "equivalence": {
+      "proved": true,
+      "theorem": "For p\u22655: \u03b4\u00b2\u2264room_hyp/24 \u21d4 ED4\u2264ED4_bud \u21d4 E[W\u00b2]\u2264EW2_bud. If Q_\u03b4 constant on Max+: also \u21d4 \u27e8m\u2084,f_y\u27e9\u2264m4f_bud for all y (halfspace pin).",
+      "note": "Q_\u03b4 constant certified at p=3,5 (15.118); at p=7 three ED4(y) types (15.114) so use pair-average ED4 / E[W\u00b2] forms."
+    },
+    "we_structure": {
+      "proved": true,
+      "theorem": "Max+ dots: y\u00b7z \u2261 2 (mod 4); |y\u00b7z|\u2264p\u00b2\u22122p\u22121 off \u00b1pairs; antipodal. Crude ED4\u22642n D_max\u00b2 too weak vs ED4_bud for p\u22655.",
+      "by_p": {
+        "3": {
+          "n": 10,
+          "n_mod_4": 2,
+          "D_max": 2,
+          "crude_envelope_2n_Dmax2": "80",
+          "ED4_bud": "1680",
+          "envelope_too_weak": null,
+          "parity_n_eq_2_mod_4": true
+        },
+        "5": {
+          "n": 26,
+          "n_mod_4": 2,
+          "D_max": 14,
+          "crude_envelope_2n_Dmax2": "10192",
+          "ED4_bud": "120400/13",
+          "envelope_too_weak": true,
+          "parity_n_eq_2_mod_4": true
+        },
+        "7": {
+          "n": 50,
+          "n_mod_4": 2,
+          "D_max": 34,
+          "crude_envelope_2n_Dmax2": "115600",
+          "ED4_bud": "1775728/55",
+          "envelope_too_weak": true,
+          "parity_n_eq_2_mod_4": true
+        },
+        "11": {
+          "n": 122,
+          "n_mod_4": 2,
+          "D_max": 98,
+          "crude_envelope_2n_Dmax2": "2343376",
+          "ED4_bud": "326099984/1769",
+          "envelope_too_weak": true,
+          "parity_n_eq_2_mod_4": true
+        },
+        "13": {
+          "n": 170,
+          "n_mod_4": 2,
+          "D_max": 142,
+          "crude_envelope_2n_Dmax2": "6855760",
+          "ED4_bud": "247320592/697",
+          "envelope_too_weak": true,
+          "parity_n_eq_2_mod_4": true
+        },
+        "17": {
+          "n": 290,
+          "n_mod_4": 2,
+          "D_max": 254,
+          "crude_envelope_2n_Dmax2": "37419280",
+          "ED4_bud": "2106345136/2059",
+          "envelope_too_weak": true,
+          "parity_n_eq_2_mod_4": true
+        },
+        "19": {
+          "n": 362,
+          "n_mod_4": 2,
+          "D_max": 322,
+          "crude_envelope_2n_Dmax2": "75067216",
+          "ED4_bud": "25609730384/16109",
+          "envelope_too_weak": true,
+          "parity_n_eq_2_mod_4": true
+        },
+        "23": {
+          "n": 530,
+          "n_mod_4": 2,
+          "D_max": 482,
+          "crude_envelope_2n_Dmax2": "246263440",
+          "ED4_bud": "23579214064/6943",
+          "envelope_too_weak": true,
+          "parity_n_eq_2_mod_4": true
+        },
+        "29": {
+          "n": 842,
+          "n_mod_4": 2,
+          "D_max": 782,
+          "crude_envelope_2n_Dmax2": "1029806416",
+          "ED4_bud": "752117368784/87989",
+          "envelope_too_weak": true,
+          "parity_n_eq_2_mod_4": true
+        },
+        "31": {
+          "n": 962,
+          "n_mod_4": 2,
+          "D_max": 898,
+          "crude_envelope_2n_Dmax2": "1551521296",
+          "ED4_bud": "1281951110384/114959",
+          "envelope_too_weak": true,
+          "parity_n_eq_2_mod_4": true
+        },
+        "37": {
+          "n": 1370,
+          "n_mod_4": 2,
+          "D_max": 1294,
+          "crude_envelope_2n_Dmax2": "4587954640",
+          "ED4_bud": "1055263799632/46717",
+          "envelope_too_weak": true,
+          "parity_n_eq_2_mod_4": true
+        },
+        "41": {
+          "n": 1682,
+          "n_mod_4": 2,
+          "D_max": 1598,
+          "crude_envelope_2n_Dmax2": "8590323856",
+          "ED4_bud": "11991491332784/352379",
+          "envelope_too_weak": true,
+          "parity_n_eq_2_mod_4": true
+        },
+        "43": {
+          "n": 1850,
+          "n_mod_4": 2,
+          "D_max": 1762,
+          "crude_envelope_2n_Dmax2": "11487182800",
+          "ED4_bud": "3510217371088/85285",
+          "envelope_too_weak": true,
+          "parity_n_eq_2_mod_4": true
+        },
+        "47": {
+          "n": 2210,
+          "n_mod_4": 2,
+          "D_max": 2114,
+          "crude_envelope_2n_Dmax2": "19752962320",
+          "ED4_bud": "7149802809520/121771",
+          "envelope_too_weak": true,
+          "parity_n_eq_2_mod_4": true
+        },
+        "53": {
+          "n": 2810,
+          "n_mod_4": 2,
+          "D_max": 2702,
+          "crude_envelope_2n_Dmax2": "41030518480",
+          "ED4_bud": "18691123717840/196981",
+          "envelope_too_weak": true,
+          "parity_n_eq_2_mod_4": true
+        },
+        "59": {
+          "n": 3482,
+          "n_mod_4": 2,
+          "D_max": 3362,
+          "crude_envelope_2n_Dmax2": "78714398416",
+          "ED4_bud": "220371568144784/1512929",
+          "envelope_too_weak": true,
+          "parity_n_eq_2_mod_4": true
+        }
+      }
+    },
+    "orth_N": {
+      "proved_structure": true,
+      "p5_orth_N": "147456",
+      "p5_orth_N_int": true,
+      "p7_orth_N": "12889497600/4499",
+      "p7_delta2_over_room": "124875/669124",
+      "p7_ratio_float": 0.18662460171806722,
+      "note": "orth\u00b7N=147456 at p=5 saturation; p=7 ratio \u03b4\u00b2/(room_hyp/24)=124875/669124; no general N formula."
+    }
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "hs_Cy_py_err": 0.0,
+      "hs_is_evec": true,
+      "dot_spectrum_hs": {
+        "-10": 1,
+        "-2": 5,
+        "2": 5,
+        "10": 1
+      },
+      "dot_spectrum_row0": {
+        "-10": 1,
+        "-2": 5,
+        "2": 5,
+        "10": 1
+      },
+      "spectrum_matches_expected": true,
+      "parity_ok": true,
+      "dmax_ok": true,
+      "max_off_antipode": 2,
+      "D_max": 2,
+      "ED4_global": "1680",
+      "ED4_hs": "1680",
+      "ED4_flat": "1680",
+      "ED4_bud": "1680",
+      "delta2": "0",
+      "room_hyp_24": "0",
+      "delta2_le_hyp": true,
+      "saturates_bud": true,
+      "ED4_le_bud": true,
+      "m4f_hs": "110/3",
+      "m4f_avg": "110/3",
+      "m4f_bud": "110/3",
+      "m4f_hs_le_bud": true,
+      "m4f_hs_eq_bud": true,
+      "EW2_global": "345",
+      "EW2_bud": "345",
+      "EW2_le_bud": true,
+      "orth_times_N": "0"
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "hs_Cy_py_err": 0.0,
+      "hs_is_evec": true,
+      "dot_spectrum_hs": {
+        "-26": 1,
+        "-14": 13,
+        "-10": 20,
+        "-6": 36,
+        "-2": 60,
+        "2": 60,
+        "6": 36,
+        "10": 20,
+        "14": 13,
+        "26": 1
+      },
+      "dot_spectrum_row0": {
+        "-26": 1,
+        "-14": 13,
+        "-10": 20,
+        "-6": 36,
+        "-2": 60,
+        "2": 60,
+        "6": 36,
+        "10": 20,
+        "14": 13,
+        "26": 1
+      },
+      "spectrum_matches_expected": true,
+      "parity_ok": true,
+      "dmax_ok": true,
+      "max_off_antipode": 14,
+      "D_max": 14,
+      "ED4_global": "120400/13",
+      "ED4_hs": "120400/13",
+      "ED4_flat": "43472/5",
+      "ED4_bud": "120400/13",
+      "delta2": "1536/65",
+      "room_hyp_24": "1536/65",
+      "delta2_le_hyp": true,
+      "saturates_bud": true,
+      "ED4_le_bud": true,
+      "m4f_hs": "1862/13",
+      "m4f_avg": "1862/13",
+      "m4f_bud": "1862/13",
+      "m4f_hs_le_bud": true,
+      "m4f_hs_eq_bud": true,
+      "EW2_global": "23509/13",
+      "EW2_bud": "23509/13",
+      "EW2_le_bud": true,
+      "orth_times_N": "147456"
+    }
+  },
+  "status": {
+    "ed4_budgets_proved": true,
+    "ew2_channel_proved": true,
+    "m4f_dictionary_proved": true,
+    "equivalence_proved": true,
+    "we_structure_proved": true,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "delta_le_rho_min_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "open_residual": "Prove \u03b4\u00b2\u2264room_hyp/24 (\u21d4 ED4\u2264ED4_bud \u21d4 E[W\u00b2]\u2264EW2_bud) for all primes p\u22655. Have closed budgets + m4f dictionary + halfspace pin when Q_\u03b4 constant; need independent Max+ weight enumerator / Gauss-sum UB on E[W\u00b2] or \u27e8m\u2084,f_hs\u27e9."
+  },
+  "closed_forms": {
+    "ED4_flat": "4(p^2-3)(p^2+1)(3p^2+1)/(p^2-5)",
+    "ED4_bud": "4(3p^8+6p^6-104p^4+138p^2-75)/((p^2-5)(p^2+1))",
+    "EW2_flat": "(p^2+1)(9p^4-20p^2+3)/(4(p^2-5))",
+    "EW2_bud": "(9p^8+30p^6-380p^4+594p^2-285)/(4(p^2-5)(p^2+1))",
+    "m4f_flat": "(p-1)(p+1)(p^2+1)(3p^2+17)/(24(p^2-5))",
+    "m4f_bud": "(p-1)(p+1)(3p^2-5)(p^4+20p^2-61)/(24(p^2-5)(p^2+1))",
+    "room_hyp_24": "4(p^2-9)(p^2-1)^2/(3(p^2-5)(p^2+1))"
+  },
+  "backend": "CPU Fraction algebra + Max+ cert p=3,5; GPU unused (F20)",
+  "F19": "no class_key"
+}

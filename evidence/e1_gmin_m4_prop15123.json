@@ -1,0 +1,588 @@
+{
+  "prop": "15.123",
+  "title": "Switching reduction; V\u208a\u2229{0,1}\u207f weight enumerator; conference srg regular sets; dual Krawtchouk residual",
+  "L_status": "OPEN",
+  "settlement_note": "No soft-close: \u03b4\u00b2\u2264room_hyp/24 not proved for general p\u22655. Residual \u21d4 A'_4\u2264m4f_bud; W_k = # regular sets of size k in the conference srg; closed W_k still open.",
+  "proved": {
+    "switching_bijection": true,
+    "srg_params": true,
+    "regular_sets_allowed_k": true,
+    "dual_krawtchouk_residual": true,
+    "weight_enumerator_closed": false,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  },
+  "algebra": {
+    "srg_params": {
+      "proved": true,
+      "theorem": "After switching: srg(n, p(p\u22121)/2, \u03bc\u22121, \u03bc) with \u03bc=((p\u22121)/2)\u00b2; A-eigs k_G, \u03b8=(p\u22121)/2 (\u00d7d), \u03c4=\u2212(p+1)/2 (\u00d7d\u22121); C-eigs \u00b1p each of mult d.",
+      "by_p": {
+        "3": {
+          "n": 10,
+          "k_G": 3,
+          "lambda_G": "0",
+          "mu_G": "1",
+          "theta": "1",
+          "tau": "-2",
+          "mult_theta": 5,
+          "mult_tau": 4,
+          "C_eig_on_theta": "-3",
+          "C_eig_on_tau": "3",
+          "trace0": true,
+          "match": true
+        },
+        "5": {
+          "n": 26,
+          "k_G": 10,
+          "lambda_G": "3",
+          "mu_G": "4",
+          "theta": "2",
+          "tau": "-3",
+          "mult_theta": 13,
+          "mult_tau": 12,
+          "C_eig_on_theta": "-5",
+          "C_eig_on_tau": "5",
+          "trace0": true,
+          "match": true
+        },
+        "7": {
+          "n": 50,
+          "k_G": 21,
+          "lambda_G": "8",
+          "mu_G": "9",
+          "theta": "3",
+          "tau": "-4",
+          "mult_theta": 25,
+          "mult_tau": 24,
+          "C_eig_on_theta": "-7",
+          "C_eig_on_tau": "7",
+          "trace0": true,
+          "match": true
+        },
+        "11": {
+          "n": 122,
+          "k_G": 55,
+          "lambda_G": "24",
+          "mu_G": "25",
+          "theta": "5",
+          "tau": "-6",
+          "mult_theta": 61,
+          "mult_tau": 60,
+          "C_eig_on_theta": "-11",
+          "C_eig_on_tau": "11",
+          "trace0": true,
+          "match": true
+        },
+        "13": {
+          "n": 170,
+          "k_G": 78,
+          "lambda_G": "35",
+          "mu_G": "36",
+          "theta": "6",
+          "tau": "-7",
+          "mult_theta": 85,
+          "mult_tau": 84,
+          "C_eig_on_theta": "-13",
+          "C_eig_on_tau": "13",
+          "trace0": true,
+          "match": true
+        },
+        "17": {
+          "n": 290,
+          "k_G": 136,
+          "lambda_G": "63",
+          "mu_G": "64",
+          "theta": "8",
+          "tau": "-9",
+          "mult_theta": 145,
+          "mult_tau": 144,
+          "C_eig_on_theta": "-17",
+          "C_eig_on_tau": "17",
+          "trace0": true,
+          "match": true
+        },
+        "19": {
+          "n": 362,
+          "k_G": 171,
+          "lambda_G": "80",
+          "mu_G": "81",
+          "theta": "9",
+          "tau": "-10",
+          "mult_theta": 181,
+          "mult_tau": 180,
+          "C_eig_on_theta": "-19",
+          "C_eig_on_tau": "19",
+          "trace0": true,
+          "match": true
+        },
+        "23": {
+          "n": 530,
+          "k_G": 253,
+          "lambda_G": "120",
+          "mu_G": "121",
+          "theta": "11",
+          "tau": "-12",
+          "mult_theta": 265,
+          "mult_tau": 264,
+          "C_eig_on_theta": "-23",
+          "C_eig_on_tau": "23",
+          "trace0": true,
+          "match": true
+        },
+        "29": {
+          "n": 842,
+          "k_G": 406,
+          "lambda_G": "195",
+          "mu_G": "196",
+          "theta": "14",
+          "tau": "-15",
+          "mult_theta": 421,
+          "mult_tau": 420,
+          "C_eig_on_theta": "-29",
+          "C_eig_on_tau": "29",
+          "trace0": true,
+          "match": true
+        },
+        "31": {
+          "n": 962,
+          "k_G": 465,
+          "lambda_G": "224",
+          "mu_G": "225",
+          "theta": "15",
+          "tau": "-16",
+          "mult_theta": 481,
+          "mult_tau": 480,
+          "C_eig_on_theta": "-31",
+          "C_eig_on_tau": "31",
+          "trace0": true,
+          "match": true
+        },
+        "37": {
+          "n": 1370,
+          "k_G": 666,
+          "lambda_G": "323",
+          "mu_G": "324",
+          "theta": "18",
+          "tau": "-19",
+          "mult_theta": 685,
+          "mult_tau": 684,
+          "C_eig_on_theta": "-37",
+          "C_eig_on_tau": "37",
+          "trace0": true,
+          "match": true
+        },
+        "41": {
+          "n": 1682,
+          "k_G": 820,
+          "lambda_G": "399",
+          "mu_G": "400",
+          "theta": "20",
+          "tau": "-21",
+          "mult_theta": 841,
+          "mult_tau": 840,
+          "C_eig_on_theta": "-41",
+          "C_eig_on_tau": "41",
+          "trace0": true,
+          "match": true
+        },
+        "43": {
+          "n": 1850,
+          "k_G": 903,
+          "lambda_G": "440",
+          "mu_G": "441",
+          "theta": "21",
+          "tau": "-22",
+          "mult_theta": 925,
+          "mult_tau": 924,
+          "C_eig_on_theta": "-43",
+          "C_eig_on_tau": "43",
+          "trace0": true,
+          "match": true
+        },
+        "47": {
+          "n": 2210,
+          "k_G": 1081,
+          "lambda_G": "528",
+          "mu_G": "529",
+          "theta": "23",
+          "tau": "-24",
+          "mult_theta": 1105,
+          "mult_tau": 1104,
+          "C_eig_on_theta": "-47",
+          "C_eig_on_tau": "47",
+          "trace0": true,
+          "match": true
+        },
+        "53": {
+          "n": 2810,
+          "k_G": 1378,
+          "lambda_G": "675",
+          "mu_G": "676",
+          "theta": "26",
+          "tau": "-27",
+          "mult_theta": 1405,
+          "mult_tau": 1404,
+          "C_eig_on_theta": "-53",
+          "C_eig_on_tau": "53",
+          "trace0": true,
+          "match": true
+        },
+        "59": {
+          "n": 3482,
+          "k_G": 1711,
+          "lambda_G": "840",
+          "mu_G": "841",
+          "theta": "29",
+          "tau": "-30",
+          "mult_theta": 1741,
+          "mult_tau": 1740,
+          "C_eig_on_theta": "-59",
+          "C_eig_on_tau": "59",
+          "trace0": true,
+          "match": true
+        }
+      }
+    },
+    "allowed_k": {
+      "proved": true,
+      "theorem": "Regular-set supports: k even, k\u2208{0,n}\u222a[p+1,p(p\u22121)]; \u03b1\u2212\u03b2=\u03c4=\u2212(p+1)/2. Matches Max+ spectra at p=3,5.",
+      "by_p": {
+        "3": {
+          "allowed_k_count": 4,
+          "k_min_nonzero": 4,
+          "k_max_nonfull": 6,
+          "alpha_minus_beta_eq_tau": true,
+          "matches_cert_spectrum": true
+        },
+        "5": {
+          "allowed_k_count": 10,
+          "k_min_nonzero": 6,
+          "k_max_nonfull": 20,
+          "alpha_minus_beta_eq_tau": true,
+          "matches_cert_spectrum": true
+        },
+        "7": {
+          "allowed_k_count": 20,
+          "k_min_nonzero": 8,
+          "k_max_nonfull": 42,
+          "alpha_minus_beta_eq_tau": true,
+          "matches_cert_spectrum": true
+        },
+        "11": {
+          "allowed_k_count": 52,
+          "k_min_nonzero": 12,
+          "k_max_nonfull": 110,
+          "alpha_minus_beta_eq_tau": true,
+          "matches_cert_spectrum": true
+        },
+        "13": {
+          "allowed_k_count": 74,
+          "k_min_nonzero": 14,
+          "k_max_nonfull": 156,
+          "alpha_minus_beta_eq_tau": true,
+          "matches_cert_spectrum": true
+        },
+        "17": {
+          "allowed_k_count": 130,
+          "k_min_nonzero": 18,
+          "k_max_nonfull": 272,
+          "alpha_minus_beta_eq_tau": true,
+          "matches_cert_spectrum": true
+        },
+        "19": {
+          "allowed_k_count": 164,
+          "k_min_nonzero": 20,
+          "k_max_nonfull": 342,
+          "alpha_minus_beta_eq_tau": true,
+          "matches_cert_spectrum": true
+        },
+        "23": {
+          "allowed_k_count": 244,
+          "k_min_nonzero": 24,
+          "k_max_nonfull": 506,
+          "alpha_minus_beta_eq_tau": true,
+          "matches_cert_spectrum": true
+        },
+        "29": {
+          "allowed_k_count": 394,
+          "k_min_nonzero": 30,
+          "k_max_nonfull": 812,
+          "alpha_minus_beta_eq_tau": true,
+          "matches_cert_spectrum": true
+        },
+        "31": {
+          "allowed_k_count": 452,
+          "k_min_nonzero": 32,
+          "k_max_nonfull": 930,
+          "alpha_minus_beta_eq_tau": true,
+          "matches_cert_spectrum": true
+        },
+        "37": {
+          "allowed_k_count": 650,
+          "k_min_nonzero": 38,
+          "k_max_nonfull": 1332,
+          "alpha_minus_beta_eq_tau": true,
+          "matches_cert_spectrum": true
+        },
+        "41": {
+          "allowed_k_count": 802,
+          "k_min_nonzero": 42,
+          "k_max_nonfull": 1640,
+          "alpha_minus_beta_eq_tau": true,
+          "matches_cert_spectrum": true
+        },
+        "43": {
+          "allowed_k_count": 884,
+          "k_min_nonzero": 44,
+          "k_max_nonfull": 1806,
+          "alpha_minus_beta_eq_tau": true,
+          "matches_cert_spectrum": true
+        },
+        "47": {
+          "allowed_k_count": 1060,
+          "k_min_nonzero": 48,
+          "k_max_nonfull": 2162,
+          "alpha_minus_beta_eq_tau": true,
+          "matches_cert_spectrum": true
+        },
+        "53": {
+          "allowed_k_count": 1354,
+          "k_min_nonzero": 54,
+          "k_max_nonfull": 2756,
+          "alpha_minus_beta_eq_tau": true,
+          "matches_cert_spectrum": true
+        },
+        "59": {
+          "allowed_k_count": 1684,
+          "k_min_nonzero": 60,
+          "k_max_nonfull": 3422,
+          "alpha_minus_beta_eq_tau": true,
+          "matches_cert_spectrum": true
+        }
+      }
+    },
+    "dual_residual": {
+      "proved": true,
+      "theorem": "A'_4=\u2211m\u2084\u00b2=m4f_flat+\u03b4\u00b2; ED4=24 A'_4 \u2212 24 const(n); residual \u21d4 A'_4\u2264m4f_bud. Hamming Delsarte alone too weak.",
+      "by_p": {
+        "3": {
+          "const_e4": "-100/3",
+          "sum_m4_sq_flat": "110/3",
+          "ED4_flat_from_sum_m4_sq": "1680",
+          "ED4_flat_match": true,
+          "A4_budget_m4f_bud": "110/3",
+          "coeff_A4_in_ED4": 24
+        },
+        "5": {
+          "const_e4": "-728/3",
+          "sum_m4_sq_flat": "598/5",
+          "ED4_flat_from_sum_m4_sq": "43472/5",
+          "ED4_flat_match": true,
+          "A4_budget_m4f_bud": "1862/13",
+          "coeff_A4_in_ED4": 24
+        },
+        "7": {
+          "const_e4": "-2750/3",
+          "sum_m4_sq_flat": "4100/11",
+          "ED4_flat_from_sum_m4_sq": "340400/11",
+          "ED4_flat_match": true,
+          "A4_budget_m4f_bud": "23572/55",
+          "coeff_A4_in_ED4": 24
+        },
+        "11": {
+          "const_e4": "-16592/3",
+          "sum_m4_sq_flat": "57950/29",
+          "ED4_flat_from_sum_m4_sq": "5240144/29",
+          "ED4_flat_match": true,
+          "A4_budget_m4f_bud": "3803750/1769",
+          "coeff_A4_in_ED4": 24
+        },
+        "13": {
+          "const_e4": "-32300/3",
+          "sum_m4_sq_flat": "155890/41",
+          "ED4_flat_from_sum_m4_sq": "14335760/41",
+          "ED4_flat_match": true,
+          "A4_budget_m4f_bud": "2800658/697",
+          "coeff_A4_in_ED4": 24
+        },
+        "17": {
+          "const_e4": "-94250/3",
+          "sum_m4_sq_flat": "769080/71",
+          "ED4_flat_from_sum_m4_sq": "71991920/71",
+          "ED4_flat_match": true,
+          "A4_budget_m4f_bud": "23077464/2059",
+          "coeff_A4_in_ED4": 24
+        },
+        "19": {
+          "const_e4": "-146972/3",
+          "sum_m4_sq_flat": "1493250/89",
+          "ED4_flat_from_sum_m4_sq": "140482064/89",
+          "ED4_flat_match": true,
+          "A4_budget_m4f_bud": "277881450/16109",
+          "coeff_A4_in_ED4": 24
+        },
+        "23": {
+          "const_e4": "-315350/3",
+          "sum_m4_sq_flat": "4675660/131",
+          "ED4_flat_from_sum_m4_sq": "442702640/131",
+          "ED4_flat_match": true,
+          "A4_budget_m4f_bud": "252642236/6943",
+          "coeff_A4_in_ED4": 24
+        },
+        "29": {
+          "const_e4": "-796532/3",
+          "sum_m4_sq_flat": "18713450/209",
+          "ED4_flat_from_sum_m4_sq": "1780924304/209",
+          "ED4_flat_match": true,
+          "A4_budget_m4f_bud": "7976205650/87989",
+          "coeff_A4_in_ED4": 24
+        },
+        "31": {
+          "const_e4": "-1039922/3",
+          "sum_m4_sq_flat": "27898000/239",
+          "ED4_flat_from_sum_m4_sq": "2657882864/239",
+          "ED4_flat_match": true,
+          "A4_budget_m4f_bud": "13565165200/114959",
+          "coeff_A4_in_ED4": 24
+        },
+        "37": {
+          "const_e4": "-2109800/3",
+          "sum_m4_sq_flat": "80510790/341",
+          "ED4_flat_from_sum_m4_sq": "7687793360/341",
+          "ED4_flat_match": true,
+          "A4_budget_m4f_bud": "11114816118/46717",
+          "coeff_A4_in_ED4": 24
+        },
+        "41": {
+          "const_e4": "-3180662/3",
+          "sum_m4_sq_flat": "148941100/419",
+          "ED4_flat_from_sum_m4_sq": "14236165424/419",
+          "ED4_flat_match": true,
+          "A4_budget_m4f_bud": "126045973900/352379",
+          "coeff_A4_in_ED4": 24
+        },
+        "43": {
+          "const_e4": "-3848000/3",
+          "sum_m4_sq_flat": "198147950/461",
+          "ED4_flat_from_sum_m4_sq": "18946974800/461",
+          "ED4_flat_match": true,
+          "A4_budget_m4f_bud": "36866830462/85285",
+          "coeff_A4_in_ED4": 24
+        },
+        "47": {
+          "const_e4": "-5491850/3",
+          "sum_m4_sq_flat": "337714520/551",
+          "ED4_flat_from_sum_m4_sq": "32313223280/551",
+          "ED4_flat_match": true,
+          "A4_budget_m4f_bud": "74992428280/121771",
+          "coeff_A4_in_ED4": 24
+        },
+        "53": {
+          "const_e4": "-8879600/3",
+          "sum_m4_sq_flat": "694033470/701",
+          "ED4_flat_from_sum_m4_sq": "66453600080/701",
+          "ED4_flat_match": true,
+          "A4_budget_m4f_bud": "195759325710/196981",
+          "coeff_A4_in_ED4": 24
+        },
+        "59": {
+          "const_e4": "-13635512/3",
+          "sum_m4_sq_flat": "1320287350/869",
+          "ED4_flat_from_sum_m4_sq": "126480975824/869",
+          "ED4_flat_match": true,
+          "A4_budget_m4f_bud": "2305628161150/1512929",
+          "coeff_A4_in_ED4": 24
+        }
+      }
+    }
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "C2_ones_evec": true,
+      "ones_in_Max": true,
+      "switched_evecs_ok": true,
+      "w_in_01": true,
+      "w_evec_ok": true,
+      "weight_dist": {
+        "0": 1,
+        "4": 5,
+        "6": 5,
+        "10": 1
+      },
+      "B_equals_W": true,
+      "ED4": 1680.0,
+      "ED4_bud": 1680.0,
+      "ED4_le_bud": true,
+      "weights_in_allowed_k": true,
+      "srg_params_ok": true,
+      "srg": {
+        "degree": 3,
+        "lambda": [
+          0
+        ],
+        "mu": [
+          1
+        ]
+      }
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "C2_ones_evec": true,
+      "ones_in_Max": true,
+      "switched_evecs_ok": true,
+      "w_in_01": true,
+      "w_evec_ok": true,
+      "weight_dist": {
+        "0": 1,
+        "6": 13,
+        "8": 20,
+        "10": 36,
+        "12": 60,
+        "14": 60,
+        "16": 36,
+        "18": 20,
+        "20": 13,
+        "26": 1
+      },
+      "B_equals_W": true,
+      "ED4": 9261.538461538461,
+      "ED4_bud": 9261.538461538461,
+      "ED4_le_bud": true,
+      "weights_in_allowed_k": true,
+      "srg_params_ok": true,
+      "srg": {
+        "degree": 10,
+        "lambda": [
+          3
+        ],
+        "mu": [
+          4
+        ]
+      }
+    }
+  },
+  "status": {
+    "switching_bijection_proved": true,
+    "srg_params_proved": true,
+    "regular_sets_proved": true,
+    "dual_krawtchouk_residual_proved": true,
+    "weight_enumerator_closed_form": false,
+    "hyp_residual_for_all_p": false,
+    "ed4_le_suf_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "open_residual": "Prove A'_4\u2264m4f_bud for all primes p\u22655 via closed W_k (two-valued count in V\u208a\u22291^\u22a5) or conference-srg Delsarte LP. F19: no class_key."
+  },
+  "closed_forms": {
+    "srg": "srg(p^2+1, p(p-1)/2, mu-1, mu), mu=((p-1)/2)^2",
+    "A_eigs": "k_G, theta=(p-1)/2 (x d), tau=-(p+1)/2 (x d-1)",
+    "C_eigs": "+p (x d) on V+, -p (x d) on V-",
+    "allowed_k": "{0,n} cup even k in [p+1, p(p-1)]",
+    "residual": "A'_4 <= m4f_bud  <=>  delta^2 <= room_hyp/24"
+  },
+  "backend": "CPU Fraction algebra + Max+ cert p=3,5; GPU unused (F20)",
+  "F19": "no class_key"
+}

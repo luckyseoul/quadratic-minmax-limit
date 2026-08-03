@@ -1,0 +1,85 @@
+{
+  "prop": "15.97",
+  "backend": "CPU linear algebra + Max+ p=3,5; GPU unused (F20)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "gap_proved_for_all_p": false,
+  "mult_proved_for_all_p": false,
+  "veronese_identification": {
+    "proved": true,
+    "theorem": "For conference Max+ with c_a=V\u208a\u1d40y_a, \u03c6_a=c_a c_a\u1d40\u22122I: \u27e8\u03c6_a,\u03c6_b\u27e9=(c_a\u00b7c_b)\u00b2\u22124d, and G:=(\u27e8\u03c6_a,\u03c6_b\u27e9) satisfies Gx=4d\u00b2 Wx on 1^\u22a5. Hence nonzero spectra of P\u2299P (even sector) and of the Veronese covariance \u0393(B)=E[\u27e8\u03c6,B\u27e9\u03c6] on Sym_0 agree including multiplicities. In particular mult(\u03bb\u2082(P\u2299P))=mult(\u03bb_max(\u0393|Sym_0)). Proof: expand \u27e8cc\u1d40\u22122I,dd\u1d40\u22122I\u27e9 using \u2016c\u2016\u00b2=2d and E[cc\u1d40]=2I; W_ab=(c_a\u00b7c_b)\u00b2/(4d\u00b2); PopP=(d\u00b2/N\u00b2)W; compare Rayleigh quotients on 1^\u22a5."
+  },
+  "ky_fan_criterion": {
+    "proved": true,
+    "theorem": "Let \u03bb_max=max_{\u2016B\u2016_F=1,B\u2208Sym_0} Var(c\u1d40Bc)=\u03bb_max(\u0393|Sym_0). By Fan's principle \u2211_{i=1}^d \u03bb_i(\u0393)=max_{U\u1d40U=I_d} Tr(U\u1d40\u0393U). Thus mult(\u03bb_max)\u2265d \u21d4 \u2203 orthonormal B_1..B_d in Sym_0 with Var(c\u1d40B_j c)=\u03bb_max for all j. Equivalently the unit maximizers of B\u21a6Var(c\u1d40Bc) contain an ONB of a d-dimensional \u0393-eigenspace for \u03bb_max.",
+    "gap_link": "Props 15.95\u201315.96: mult(\u03bb\u2082)\u2265d and \u2016\u03ba\u2016\u00b2\u226496n \u21d2 gap \u21d2 bi-tight empty (p\u22655)."
+  },
+  "aut_schur": {
+    "proved": true,
+    "theorem": "Any Aut(Max+) preserving pairwise dots acts on Sym_0 by g\u00b7B=gBg\u1d40 (via the induced orthogonal action on V\u208a) and commutes with \u0393. By Schur's lemma \u0393 is scalar on every Aut-irreducible subspace of Sym_0. Hence every Aut-irrep appearing in the maximizer locus contributes its full dimension to mult(\u03bb_max).",
+    "hint": "For Paley, Aut contains (a cover of) PSL(2,p\u00b2), which has an irrep of degree (p\u00b2+1)/2=d. If that irrep embeds into the maximizer locus of \u0393, then mult\u2265d. Embedding verified indirectly by mult=d certs at p=3,5,7."
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "d": 5,
+      "lam2_PopP": 0.3333333333,
+      "mult_PopP": 5,
+      "mult_eq_d": true,
+      "lam_max_K_gram": 192.0,
+      "lam_max_Gamma": 16.000000000000025,
+      "mult_Gamma_top": 5,
+      "mult_Gamma_ge_d": true,
+      "mult_Gamma_eq_d": true,
+      "predicted_lam2_from_K": 0.3333333333333333,
+      "spectra_match": true,
+      "ky_fan_top_d_rays": [
+        16.000000000000025,
+        16.000000000000025,
+        16.00000000000001,
+        16.000000000000014,
+        16.0
+      ],
+      "ky_fan_equal_rays": true,
+      "ok": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "d": 13,
+      "lam2_PopP": 0.0130177515,
+      "mult_PopP": 13,
+      "mult_eq_d": true,
+      "lam_max_K_gram": 3520.0,
+      "lam_max_Gamma": 13.538461538461558,
+      "mult_Gamma_top": 13,
+      "mult_Gamma_ge_d": true,
+      "mult_Gamma_eq_d": true,
+      "predicted_lam2_from_K": 0.01301775147928994,
+      "spectra_match": true,
+      "ky_fan_top_d_rays": [
+        13.53846153846154,
+        13.538461538461542,
+        13.538461538461542,
+        13.538461538461535,
+        13.538461538461545,
+        13.538461538461528,
+        13.538461538461544,
+        13.538461538461535,
+        13.538461538461533,
+        13.538461538461538,
+        13.538461538461533,
+        13.538461538461533,
+        13.53846153846152
+      ],
+      "ky_fan_equal_rays": true,
+      "ok": true
+    }
+  },
+  "attack_surface": "To get mult\u2265d for all p\u22655: exhibit d orthonormal maximizers of Var(c\u1d40Bc) on Sym_0 (Ky Fan), e.g. Aut-irrep of degree d inside the maximizer locus of \u0393 (PSL(2,p\u00b2) discrete series). Still need \u2016\u03ba\u2016\u00b2\u226496n (Prop 15.96) for gap. Or prove 16N/H directly.",
+  "verdict": "Prop 15.97 proves mult(\u03bb\u2082(P\u2299P))=mult(\u03bb_max(\u0393|Sym_0)) via Veronese, Aut-Schur scalarity of \u0393, and the Ky Fan criterion mult\u2265d \u21d4 d orthonormal maximizers of Var(c\u1d40Bc). Certified equality mult=d at p=3,5 with matching \u0393 spectrum. General mult\u2265d still OPEN (need explicit maximizer frame). \u2016\u03ba\u2016\u00b2\u226496n OPEN. lim \u03b1_n OPEN.",
+  "settlement_note": "Next: construct d orthonormal maximizers of Var(c\u1d40Bc) for general prime p\u22655 (Aut/PSL irrep), and/or \u2016\u03ba\u2016\u00b2\u226496n, then 15.95\u201315.96 close bi-tight. Or \u03bb_max(FFT|1\u22a5)\u22648N. Deep ND remains. L OPEN.",
+  "proved": true
+}

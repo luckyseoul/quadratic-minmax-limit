@@ -1,0 +1,453 @@
+{
+  "prop": "15.115",
+  "backend": "CPU Fraction + Max+ cert; GPU unused (F20); no class_key (F19)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "ed4_le_suf_for_all_p": false,
+  "kappa_bound_proved_for_all_p": false,
+  "closed_forms": {
+    "spectral_m1": "4p - 12/p",
+    "spectral_m2": "16p^2 - 72 + 24/(p^2-2)",
+    "spectral_var": "24(p^2-3)(p^2-4)/(p^2(p^2-2))",
+    "spot_p5_var": "11088/575",
+    "spot_p7_var": "49680/2303",
+    "E_gamma_f": "2 kappa / p"
+  },
+  "spectral_moments": {
+    "proved": true,
+    "theorem": "m1=4p\u221212/p; m2=16p\u00b2\u221272+24/(p\u00b2\u22122); Var_spec=24(p\u00b2\u22123)(p\u00b2\u22124)/(p\u00b2(p\u00b2\u22122)).",
+    "by_p": {
+      "3": {
+        "m1": "8",
+        "m1_from_gamma": "8",
+        "m1_match": true,
+        "m2": "528/7",
+        "m2_from_energy": "528/7",
+        "m2_match": true,
+        "var": "80/7",
+        "var_closed": "80/7",
+        "var_match": true,
+        "gap_4p_minus_m1": "4",
+        "gap_eq_12_over_p": true
+      },
+      "5": {
+        "m1": "88/5",
+        "m1_from_gamma": "88/5",
+        "m1_match": true,
+        "m2": "7568/23",
+        "m2_from_energy": "7568/23",
+        "m2_match": true,
+        "var": "11088/575",
+        "var_closed": "11088/575",
+        "var_match": true,
+        "gap_4p_minus_m1": "12/5",
+        "gap_eq_12_over_p": true
+      },
+      "7": {
+        "m1": "184/7",
+        "m1_from_gamma": "184/7",
+        "m1_match": true,
+        "m2": "33488/47",
+        "m2_from_energy": "33488/47",
+        "m2_match": true,
+        "var": "49680/2303",
+        "var_closed": "49680/2303",
+        "var_match": true,
+        "gap_4p_minus_m1": "12/7",
+        "gap_eq_12_over_p": true
+      },
+      "11": {
+        "m1": "472/11",
+        "m1_from_gamma": "472/11",
+        "m1_match": true,
+        "m2": "221840/119",
+        "m2_from_energy": "221840/119",
+        "m2_match": true,
+        "var": "331344/14399",
+        "var_closed": "331344/14399",
+        "var_match": true,
+        "gap_4p_minus_m1": "12/11",
+        "gap_eq_12_over_p": true
+      },
+      "13": {
+        "m1": "664/13",
+        "m1_from_gamma": "664/13",
+        "m1_match": true,
+        "m2": "439568/167",
+        "m2_from_energy": "439568/167",
+        "m2_match": true,
+        "var": "657360/28223",
+        "var_closed": "657360/28223",
+        "var_match": true,
+        "gap_4p_minus_m1": "12/13",
+        "gap_eq_12_over_p": true
+      },
+      "17": {
+        "m1": "1144/17",
+        "m1_from_gamma": "1144/17",
+        "m1_match": true,
+        "m2": "1306448/287",
+        "m2_from_energy": "1306448/287",
+        "m2_match": true,
+        "var": "1956240/82943",
+        "var_closed": "1956240/82943",
+        "var_match": true,
+        "gap_4p_minus_m1": "12/17",
+        "gap_eq_12_over_p": true
+      },
+      "19": {
+        "m1": "1432/19",
+        "m1_from_gamma": "1432/19",
+        "m1_match": true,
+        "m2": "2047760/359",
+        "m2_from_energy": "2047760/359",
+        "m2_match": true,
+        "var": "3067344/129599",
+        "var_closed": "3067344/129599",
+        "var_match": true,
+        "gap_4p_minus_m1": "12/19",
+        "gap_eq_12_over_p": true
+      },
+      "23": {
+        "m1": "2104/23",
+        "m1_from_gamma": "2104/23",
+        "m1_match": true,
+        "m2": "4422608/527",
+        "m2_from_energy": "4422608/527",
+        "m2_match": true,
+        "var": "6627600/278783",
+        "var_closed": "6627600/278783",
+        "var_match": true,
+        "gap_4p_minus_m1": "12/23",
+        "gap_eq_12_over_p": true
+      },
+      "29": {
+        "m1": "3352/29",
+        "m1_from_gamma": "3352/29",
+        "m1_match": true,
+        "m2": "11229200/839",
+        "m2_from_energy": "11229200/839",
+        "m2_match": true,
+        "var": "16833744/705599",
+        "var_closed": "16833744/705599",
+        "var_match": true,
+        "gap_4p_minus_m1": "12/29",
+        "gap_eq_12_over_p": true
+      },
+      "31": {
+        "m1": "3832/31",
+        "m1_from_gamma": "3832/31",
+        "m1_match": true,
+        "m2": "14676560/959",
+        "m2_from_energy": "14676560/959",
+        "m2_match": true,
+        "var": "22003344/921599",
+        "var_closed": "22003344/921599",
+        "var_match": true,
+        "gap_4p_minus_m1": "12/31",
+        "gap_eq_12_over_p": true
+      },
+      "37": {
+        "m1": "5464/37",
+        "m1_from_gamma": "5464/37",
+        "m1_match": true,
+        "m2": "29844368/1367",
+        "m2_from_energy": "29844368/1367",
+        "m2_match": true,
+        "var": "44750160/1871423",
+        "var_closed": "44750160/1871423",
+        "var_match": true,
+        "gap_4p_minus_m1": "12/37",
+        "gap_eq_12_over_p": true
+      },
+      "41": {
+        "m1": "6712/41",
+        "m1_from_gamma": "6712/41",
+        "m1_match": true,
+        "m2": "45037520/1679",
+        "m2_from_energy": "45037520/1679",
+        "m2_match": true,
+        "var": "67536144/2822399",
+        "var_closed": "67536144/2822399",
+        "var_match": true,
+        "gap_4p_minus_m1": "12/41",
+        "gap_eq_12_over_p": true
+      },
+      "43": {
+        "m1": "7384/43",
+        "m1_from_gamma": "7384/43",
+        "m1_match": true,
+        "m2": "54508688/1847",
+        "m2_from_energy": "54508688/1847",
+        "m2_match": true,
+        "var": "81740880/3415103",
+        "var_closed": "81740880/3415103",
+        "var_match": true,
+        "gap_4p_minus_m1": "12/43",
+        "gap_eq_12_over_p": true
+      },
+      "47": {
+        "m1": "8824/47",
+        "m1_from_gamma": "8824/47",
+        "m1_match": true,
+        "m2": "77845328/2207",
+        "m2_from_energy": "77845328/2207",
+        "m2_match": true,
+        "var": "116741520/4875263",
+        "var_closed": "116741520/4875263",
+        "var_match": true,
+        "gap_4p_minus_m1": "12/47",
+        "gap_eq_12_over_p": true
+      },
+      "53": {
+        "m1": "11224/53",
+        "m1_from_gamma": "11224/53",
+        "m1_match": true,
+        "m2": "125955728/2807",
+        "m2_from_energy": "125955728/2807",
+        "m2_match": true,
+        "var": "188899920/7884863",
+        "var_closed": "188899920/7884863",
+        "var_match": true,
+        "gap_4p_minus_m1": "12/53",
+        "gap_eq_12_over_p": true
+      },
+      "59": {
+        "m1": "13912/59",
+        "m1_from_gamma": "13912/59",
+        "m1_match": true,
+        "m2": "193515920/3479",
+        "m2_from_energy": "193515920/3479",
+        "m2_match": true,
+        "var": "290232144/12110399",
+        "var_closed": "290232144/12110399",
+        "var_match": true,
+        "gap_4p_minus_m1": "12/59",
+        "gap_eq_12_over_p": true
+      }
+    }
+  },
+  "four_p_not_pm_mu": {
+    "proved": true,
+    "theorem": "(4p)\u00b2 \u2212 \u03bc\u00b2 = 12(p\u00b2\u22125) \u2260 0 for primes p\u2260\u221a5; hence 4p \u2209 {0, \u00b1\u03bc} and \u03ba \u22a5 E_{4p}.",
+    "by_p": {
+      "3": {
+        "16p2": 144,
+        "mu2": 96,
+        "distinct": true,
+        "diff": 48
+      },
+      "5": {
+        "16p2": 400,
+        "mu2": 160,
+        "distinct": true,
+        "diff": 240
+      },
+      "7": {
+        "16p2": 784,
+        "mu2": 256,
+        "distinct": true,
+        "diff": 528
+      },
+      "11": {
+        "16p2": 1936,
+        "mu2": 544,
+        "distinct": true,
+        "diff": 1392
+      },
+      "13": {
+        "16p2": 2704,
+        "mu2": 736,
+        "distinct": true,
+        "diff": 1968
+      },
+      "17": {
+        "16p2": 4624,
+        "mu2": 1216,
+        "distinct": true,
+        "diff": 3408
+      },
+      "19": {
+        "16p2": 5776,
+        "mu2": 1504,
+        "distinct": true,
+        "diff": 4272
+      },
+      "23": {
+        "16p2": 8464,
+        "mu2": 2176,
+        "distinct": true,
+        "diff": 6288
+      },
+      "29": {
+        "16p2": 13456,
+        "mu2": 3424,
+        "distinct": true,
+        "diff": 10032
+      },
+      "31": {
+        "16p2": 15376,
+        "mu2": 3904,
+        "distinct": true,
+        "diff": 11472
+      },
+      "37": {
+        "16p2": 21904,
+        "mu2": 5536,
+        "distinct": true,
+        "diff": 16368
+      },
+      "41": {
+        "16p2": 26896,
+        "mu2": 6784,
+        "distinct": true,
+        "diff": 20112
+      },
+      "43": {
+        "16p2": 29584,
+        "mu2": 7456,
+        "distinct": true,
+        "diff": 22128
+      },
+      "47": {
+        "16p2": 35344,
+        "mu2": 8896,
+        "distinct": true,
+        "diff": 26448
+      },
+      "53": {
+        "16p2": 44944,
+        "mu2": 11296,
+        "distinct": true,
+        "diff": 33648
+      },
+      "59": {
+        "16p2": 55696,
+        "mu2": 13984,
+        "distinct": true,
+        "diff": 41712
+      }
+    }
+  },
+  "E_gamma_f": {
+    "proved": true,
+    "theorem": "E_y[\u03b3_y(S) f_y(S)]=2\u03ba(S)/p by 2-design E[y_i y_j]=C_ij/p and double-counting matchings on K4.  Hence A m\u2084=4\u03ba/p and A\u03c1=b."
+  },
+  "delta_as_E4p_avg": {
+    "proved": true,
+    "theorem": "P_{E_{4p}}\u03ba=0 (Thm C) \u21d2 \u03b4=P_{E_{4p}} m\u2084=E_y P_{E_{4p}} f_y; \u03b4\u00b2\u2264E\u2016P_{E_{4p}} f_y\u2016\u2082\u00b2 (Jensen)."
+  },
+  "cert_resolvent": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "n": 10,
+      "nQ": 210,
+      "A_rho_eq_b": true,
+      "A_rho_err": 1.0663921880258992e-14,
+      "E_gamma_f_eq_2k_over_p": true,
+      "E_gamma_f_err": 0.0,
+      "A_m4_eq_4k_over_p": true,
+      "A_m4_err": 1.254502891951995e-14,
+      "delta2": 2.741753868829669e-29,
+      "rho_min2": 22.22222222222222,
+      "delta2_le_rho_min2": true,
+      "Q_delta_mean": 2.0002518160329903e-14,
+      "Q_delta_std": 1.934324455480286e-15,
+      "Q_delta_constant": true,
+      "Q_eq_delta2": true,
+      "m1_emp": 8.0,
+      "m1_pred": 8.0,
+      "m1_ok": true,
+      "m2_emp": 75.42857142857143,
+      "m2_pred": 75.42857142857143,
+      "m2_ok": true,
+      "kappa_dot_delta": 1.559863349598345e-14,
+      "kappa_perp_delta": true,
+      "ED4_global_le_suf": true
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "n": 26,
+      "nQ": 14950,
+      "A_rho_eq_b": true,
+      "A_rho_err": 3.083380717930557e-14,
+      "E_gamma_f_eq_2k_over_p": true,
+      "E_gamma_f_err": 0.0,
+      "A_m4_eq_4k_over_p": true,
+      "A_m4_err": 7.628565299927155e-14,
+      "delta2": 23.630769230769253,
+      "rho_min2": 29.12,
+      "delta2_le_rho_min2": true,
+      "Q_delta_mean": 23.630769230769268,
+      "Q_delta_std": 7.327420203694063e-15,
+      "Q_delta_constant": true,
+      "Q_eq_delta2": true,
+      "m1_emp": 17.6,
+      "m1_pred": 17.6,
+      "m1_ok": true,
+      "m2_emp": 329.04347826086956,
+      "m2_pred": 329.04347826086956,
+      "m2_ok": true,
+      "kappa_dot_delta": 6.914468997365475e-13,
+      "kappa_perp_delta": true,
+      "ED4_global_le_suf": true
+    }
+  },
+  "cert_ed4": {
+    "3": {
+      "p": 3,
+      "ED4": "1680",
+      "ED4_suf": "6640/3",
+      "delta2": "0",
+      "rho_min2": "200/9",
+      "ED4_le_suf": true,
+      "delta2_le_rho_min2": true
+    },
+    "5": {
+      "p": 5,
+      "ED4": "120400/13",
+      "ED4_suf": "234832/25",
+      "delta2": "1536/65",
+      "rho_min2": "728/25",
+      "ED4_le_suf": true,
+      "delta2_le_rho_min2": true
+    },
+    "7": {
+      "p": 7,
+      "ED4": "5218435600/167281",
+      "ED4_suf": "17303600/539",
+      "delta2": "19180800/1840091",
+      "rho_min2": "26000/539",
+      "ED4_le_suf": true,
+      "delta2_le_rho_min2": true
+    }
+  },
+  "general_status": {
+    "E_gamma_f_proved": true,
+    "A_rho_eq_b_proved": true,
+    "kappa_perp_E4p_proved": true,
+    "delta_eq_E4p_avg_proved": true,
+    "spectral_moments_proved": true,
+    "ed4_le_suf_for_all_p": false,
+    "delta_le_rho_min_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "open_residual": "Prove \u2016E_y P_{E_4p} f_y\u2016\u2082\u00b2 \u2264 \u03c1_min\u00b2 (\u21d4 \u03b4\u00b2\u2264\u03c1_min\u00b2 \u21d4 ED4\u2264ED4_suf) for all primes p\u22655. Full E_4p energy of f_y is too large (Cantelli and p=5 census); need the coherent Aut-invariant mass only. F19: no class_key."
+  },
+  "attack_surface": "Prove \u2016E_y P_{E_4p} f_y\u2016\u2082\u00b2 \u2264 \u03c1_min\u00b2 (\u21d4 \u03b4\u00b2\u2264\u03c1_min\u00b2 \u21d4 ED4\u2264ED4_suf) for all primes p\u22655. Full E_4p energy of f_y is too large (Cantelli and p=5 census); need the coherent Aut-invariant mass only. F19: no class_key.",
+  "verdict": "Proved: E[\u03b3\u2299f]=2\u03ba/p (2-design) \u21d2 A\u03c1=b for Max+ residual; \u03ba\u22a5E_{4p} \u21d2 \u03b4=P_{E_4p}m\u2084=E_y P_{E_4p}f_y; spectral moments m1=4p\u221212/p, Var=24(p\u00b2\u22123)(p\u00b2\u22124)/(p\u00b2(p\u00b2\u22122)). Cert p=3,5 resolvent+moments; ED4\u2264suf at p=3,5,7. OPEN: \u03b4\u00b2\u2264\u03c1_min\u00b2 for general p\u22655 (coherent E_4p mass). L OPEN.",
+  "settlement_note": "No soft-close. N_ED4_SUF still open. Attack: bound the Aut-invariant / coherent part \u2016E P_{E_4p} f_y\u2016, not full E_4p energy.",
+  "proved": {
+    "E_gamma_f": true,
+    "A_rho_eq_b": true,
+    "kappa_perp_E4p": true,
+    "delta_eq_E4p_avg": true,
+    "spectral_moments": true,
+    "cert_p3_p5": true,
+    "ed4_le_suf_for_all_p": false,
+    "delta_le_rho_min_for_all_p": false,
+    "sixteen_N_for_all_p": false
+  }
+}

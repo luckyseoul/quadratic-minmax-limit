@@ -1,0 +1,332 @@
+{
+  "prop": "15.106",
+  "backend": "CPU Fraction + Max+ cert p=3,5,7; GPU unused (F20)",
+  "L_status": "OPEN",
+  "H_proved": false,
+  "sixteen_N_proved_for_all_p": false,
+  "kappa_bound_proved_for_all_p": false,
+  "rest_average_8": {
+    "proved": true,
+    "theorem": "If mult(\u03bb_max)\u2265d then L\u226416 \u21d4 mean(rest)\u22658. At L=16 the rest mean equals 8 exactly (T\u221216d)/(m\u2212d)=8 for conference d=n/2>5).",
+    "by_p": {
+      "3": {
+        "d": 5,
+        "m": 5,
+        "flat_spectrum": true,
+        "L_eq_16": true,
+        "rest_avg_at_L16": null
+      },
+      "5": {
+        "d": 13,
+        "m": 65,
+        "rest_dim": 52,
+        "T_minus_16d": 416,
+        "rest_avg_at_L16": "8",
+        "equals_8": true,
+        "closed_4d_dm5_over_rest": "8",
+        "mu": "48/5"
+      },
+      "7": {
+        "d": 25,
+        "m": 275,
+        "rest_dim": 250,
+        "T_minus_16d": 2000,
+        "rest_avg_at_L16": "8",
+        "equals_8": true,
+        "closed_4d_dm5_over_rest": "8",
+        "mu": "96/11"
+      },
+      "11": {
+        "d": 61,
+        "m": 1769,
+        "rest_dim": 1708,
+        "T_minus_16d": 13664,
+        "rest_avg_at_L16": "8",
+        "equals_8": true,
+        "closed_4d_dm5_over_rest": "8",
+        "mu": "240/29"
+      },
+      "13": {
+        "d": 85,
+        "m": 3485,
+        "rest_dim": 3400,
+        "T_minus_16d": 27200,
+        "rest_avg_at_L16": "8",
+        "equals_8": true,
+        "closed_4d_dm5_over_rest": "8",
+        "mu": "336/41"
+      },
+      "17": {
+        "d": 145,
+        "m": 10295,
+        "rest_dim": 10150,
+        "T_minus_16d": 81200,
+        "rest_avg_at_L16": "8",
+        "equals_8": true,
+        "closed_4d_dm5_over_rest": "8",
+        "mu": "576/71"
+      },
+      "19": {
+        "d": 181,
+        "m": 16109,
+        "rest_dim": 15928,
+        "T_minus_16d": 127424,
+        "rest_avg_at_L16": "8",
+        "equals_8": true,
+        "closed_4d_dm5_over_rest": "8",
+        "mu": "720/89"
+      },
+      "23": {
+        "d": 265,
+        "m": 34715,
+        "rest_dim": 34450,
+        "T_minus_16d": 275600,
+        "rest_avg_at_L16": "8",
+        "equals_8": true,
+        "closed_4d_dm5_over_rest": "8",
+        "mu": "1056/131"
+      },
+      "29": {
+        "d": 421,
+        "m": 87989,
+        "rest_dim": 87568,
+        "T_minus_16d": 700544,
+        "rest_avg_at_L16": "8",
+        "equals_8": true,
+        "closed_4d_dm5_over_rest": "8",
+        "mu": "1680/209"
+      },
+      "31": {
+        "d": 481,
+        "m": 114959,
+        "rest_dim": 114478,
+        "T_minus_16d": 915824,
+        "rest_avg_at_L16": "8",
+        "equals_8": true,
+        "closed_4d_dm5_over_rest": "8",
+        "mu": "1920/239"
+      },
+      "37": {
+        "d": 685,
+        "m": 233585,
+        "rest_dim": 232900,
+        "T_minus_16d": 1863200,
+        "rest_avg_at_L16": "8",
+        "equals_8": true,
+        "closed_4d_dm5_over_rest": "8",
+        "mu": "2736/341"
+      }
+    }
+  },
+  "kurtosis_equivalence": {
+    "proved": true,
+    "theorem": "With E[D]=0, E[D\u00b2]=2n on Max\u00d7Max: \u2016\u03ba\u2016_F\u00b2\u226496n \u21d4 ED4\u226412n\u00b2+48n \u21d4 kurtosis \u03ba\u2084(D)\u22643+12/n.",
+    "by_p": {
+      "3": {
+        "wick_hi": 1680,
+        "kurtosis_threshold": "21/5",
+        "wick_hi_over_4n2": "21/5",
+        "match": true,
+        "ED2": 20,
+        "equivalence": "\u2016\u03ba\u2016\u00b2\u226496n \u21d4 ED4\u2264wick_hi \u21d4 \u03ba\u2084(D)\u22643+12/n"
+      },
+      "5": {
+        "wick_hi": 9360,
+        "kurtosis_threshold": "45/13",
+        "wick_hi_over_4n2": "45/13",
+        "match": true,
+        "ED2": 52,
+        "equivalence": "\u2016\u03ba\u2016\u00b2\u226496n \u21d4 ED4\u2264wick_hi \u21d4 \u03ba\u2084(D)\u22643+12/n"
+      },
+      "7": {
+        "wick_hi": 32400,
+        "kurtosis_threshold": "81/25",
+        "wick_hi_over_4n2": "81/25",
+        "match": true,
+        "ED2": 100,
+        "equivalence": "\u2016\u03ba\u2016\u00b2\u226496n \u21d4 ED4\u2264wick_hi \u21d4 \u03ba\u2084(D)\u22643+12/n"
+      },
+      "11": {
+        "wick_hi": 184464,
+        "kurtosis_threshold": "189/61",
+        "wick_hi_over_4n2": "189/61",
+        "match": true,
+        "ED2": 244,
+        "equivalence": "\u2016\u03ba\u2016\u00b2\u226496n \u21d4 ED4\u2264wick_hi \u21d4 \u03ba\u2084(D)\u22643+12/n"
+      },
+      "13": {
+        "wick_hi": 354960,
+        "kurtosis_threshold": "261/85",
+        "wick_hi_over_4n2": "261/85",
+        "match": true,
+        "ED2": 340,
+        "equivalence": "\u2016\u03ba\u2016\u00b2\u226496n \u21d4 ED4\u2264wick_hi \u21d4 \u03ba\u2084(D)\u22643+12/n"
+      },
+      "17": {
+        "wick_hi": 1023120,
+        "kurtosis_threshold": "441/145",
+        "wick_hi_over_4n2": "441/145",
+        "match": true,
+        "ED2": 580,
+        "equivalence": "\u2016\u03ba\u2016\u00b2\u226496n \u21d4 ED4\u2264wick_hi \u21d4 \u03ba\u2084(D)\u22643+12/n"
+      },
+      "19": {
+        "wick_hi": 1589904,
+        "kurtosis_threshold": "549/181",
+        "wick_hi_over_4n2": "549/181",
+        "match": true,
+        "ED2": 724,
+        "equivalence": "\u2016\u03ba\u2016\u00b2\u226496n \u21d4 ED4\u2264wick_hi \u21d4 \u03ba\u2084(D)\u22643+12/n"
+      },
+      "23": {
+        "wick_hi": 3396240,
+        "kurtosis_threshold": "801/265",
+        "wick_hi_over_4n2": "801/265",
+        "match": true,
+        "ED2": 1060,
+        "equivalence": "\u2016\u03ba\u2016\u00b2\u226496n \u21d4 ED4\u2264wick_hi \u21d4 \u03ba\u2084(D)\u22643+12/n"
+      },
+      "29": {
+        "wick_hi": 8547984,
+        "kurtosis_threshold": "1269/421",
+        "wick_hi_over_4n2": "1269/421",
+        "match": true,
+        "ED2": 1684,
+        "equivalence": "\u2016\u03ba\u2016\u00b2\u226496n \u21d4 ED4\u2264wick_hi \u21d4 \u03ba\u2084(D)\u22643+12/n"
+      },
+      "31": {
+        "wick_hi": 11151504,
+        "kurtosis_threshold": "1449/481",
+        "wick_hi_over_4n2": "1449/481",
+        "match": true,
+        "ED2": 1924,
+        "equivalence": "\u2016\u03ba\u2016\u00b2\u226496n \u21d4 ED4\u2264wick_hi \u21d4 \u03ba\u2084(D)\u22643+12/n"
+      },
+      "37": {
+        "wick_hi": 22588560,
+        "kurtosis_threshold": "2061/685",
+        "wick_hi_over_4n2": "2061/685",
+        "match": true,
+        "ED2": 2740,
+        "equivalence": "\u2016\u03ba\u2016\u00b2\u226496n \u21d4 ED4\u2264wick_hi \u21d4 \u03ba\u2084(D)\u22643+12/n"
+      }
+    }
+  },
+  "mult_status": {
+    "mult_ge_d_minus_1_proved": true,
+    "mult_ge_d_minus_1_ref": "Prop 15.98 PSL min irrep (q\u22121)/2",
+    "mult_eq_d_certified_primes": [
+      3,
+      5,
+      7
+    ],
+    "mult_eq_d_proved_for_all_p": false,
+    "conjecture_C_star": "mult(\u03bb_max(\u03a6|Z))=d for every prime p\u22655 (top isotypic = Weil/discrete-series irrep of dim (q+1)/2).",
+    "note": "Prop 15.105.E needs mult\u2265d for the exact L\u226416 criterion with orth\u2264room. Prop 15.98 bi-tight only needs mult\u2265d\u22121 + \u03ba\u226496n."
+  },
+  "cert": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "d": 5,
+      "ED4": 1680.0,
+      "kappa2": 960.0,
+      "proj": 960.0,
+      "orth": 0.0,
+      "room": 0.0,
+      "room_hyp": 0.0,
+      "var_from_ED4": 0.0,
+      "orth_matches_var": true,
+      "lambda_max_Phi": 16.000000000000004,
+      "avg_Phi": 16.0,
+      "lambda_max_le_16": true,
+      "mult_top_observed": 5,
+      "mult_ge_d_minus_1": true,
+      "mult_ge_d": true,
+      "kappa2_le_96n": true,
+      "kappa2_le_hyp": true,
+      "sixteen_N": true,
+      "kurtosis": 4.2,
+      "kurtosis_threshold": 4.2,
+      "kurtosis_le_thr": true,
+      "rest_avg_using_obs_mult": null,
+      "rest_avg_ge_8": false,
+      "theorem_A_check": null
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "d": 13,
+      "ED4": 9261.538461538461,
+      "kappa2": 2397.538461538461,
+      "proj": 1830.4,
+      "orth": 567.1384615384609,
+      "room": 665.6,
+      "room_hyp": 567.1384615384616,
+      "var_from_ED4": 567.1384615384613,
+      "orth_matches_var": true,
+      "lambda_max_Phi": 13.538461538461545,
+      "avg_Phi": 9.6,
+      "lambda_max_le_16": true,
+      "mult_top_observed": 13,
+      "mult_ge_d_minus_1": true,
+      "mult_ge_d": true,
+      "kappa2_le_96n": true,
+      "kappa2_le_hyp": true,
+      "sixteen_N": true,
+      "kurtosis": 3.4251251706873007,
+      "kurtosis_threshold": 3.4615384615384617,
+      "kurtosis_le_thr": true,
+      "rest_avg_using_obs_mult": 8.615384615384613,
+      "rest_avg_ge_8": true,
+      "theorem_A_check": true
+    },
+    "7": {
+      "p": 7,
+      "N": 11452,
+      "d": 25,
+      "ED4": 31195.626520644902,
+      "kappa2": 3595.6265206449025,
+      "proj": 3345.4545454545455,
+      "orth": 250.171975190357,
+      "room": 1454.5454545454545,
+      "room_hyp": 1340.509090909091,
+      "var_from_ED4": 250.17197519035835,
+      "orth_matches_var": true,
+      "lambda_max_Phi": 10.562347188264072,
+      "avg_Phi": 8.727272727272727,
+      "lambda_max_le_16": true,
+      "mult_top_observed": 25,
+      "mult_ge_d_minus_1": true,
+      "mult_ge_d": true,
+      "kappa2_le_96n": true,
+      "kappa2_le_hyp": true,
+      "sixteen_N": true,
+      "kurtosis": 3.11956265206449,
+      "kurtosis_threshold": 3.24,
+      "kurtosis_le_thr": true,
+      "rest_avg_using_obs_mult": 8.543765281173593,
+      "rest_avg_ge_8": true,
+      "theorem_A_check": true
+    }
+  },
+  "general_status": {
+    "rest_average_8_proved": true,
+    "kurtosis_equivalence_proved": true,
+    "mult_ge_d_minus_1_proved": true,
+    "mult_eq_d_proved_for_all_p": false,
+    "sixteen_N_proved_for_all_p": false,
+    "kappa_bound_proved_for_all_p": false,
+    "H_proved": false,
+    "open_residual": "Prove \u03ba\u2084(D)\u22643+12/n (\u21d4\u2016\u03ba\u2016\u00b2\u226496n) OR \u03bb_max(\u03a6)\u226416 OR (mult=d and rest-average\u22658) for all primes p\u22655."
+  },
+  "attack_surface": "Prove \u03ba\u2084(D)\u22643+12/n (\u21d4\u2016\u03ba\u2016\u00b2\u226496n) OR \u03bb_max(\u03a6)\u226416 OR (mult=d and rest-average\u22658) for all primes p\u22655.",
+  "verdict": "Proved: rest-average-8 threshold (mult\u2265d \u21d2 L\u226416 \u21d4 rest\u22658; at L=16 rest mean=8=Wick). Kurtosis form \u03ba\u2084\u22643+12/n \u21d4 \u03ba\u226496n. Certified kurtosis+16N at p=3,5,7. OPEN: \u03ba\u2084\u22643+12/n or \u03bb_max\u226416 for general p\u22655. L OPEN.",
+  "settlement_note": "No soft-close. Path C residual remains for general p\u22655.",
+  "proved": {
+    "rest_average_8": true,
+    "kurtosis_equivalence": true,
+    "sixteen_N_for_all_p": false,
+    "kappa_bound_for_all_p": false
+  }
+}
