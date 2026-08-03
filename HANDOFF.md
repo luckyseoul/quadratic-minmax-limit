@@ -2,11 +2,11 @@
 
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-08-03 (Props through **15.158**; N_ED4_SUF **OPEN**; Q₄ closed; Max+ non-scheme; L OPEN)
+**Status date:** 2026-08-03 (Props through **15.160**; N_ED4_SUF **OPEN**; Q₄ closed; Max+ non-scheme; L OPEN)
 
 **External literature scan (2026-08-03):** `evidence/LITERATURE_SCAN_2026-08.md` — MO 413935 still 0 answers; author X prize (2026-07-25) wants existence not numerics (~5h unsolved); Ivanisvili 2025–26 arXiv is hypercube/isoperimetry/Grokability etc., **no paper closes lim α_n or Path C residual**. Near-neighbor Paley SOS / cut-cover SDP / conference spectral determination do **not** yield δ²≤room_hyp/24. **Do not resume prop thrash without a new external theorem.**  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
-**Resume (latest):** `evidence/SESSION_HANDOFF_2026-08-03.md` + **strategy reframe** `evidence/STRATEGY_REFRAME_2026-08-03.md`  
+**Resume (latest):** `evidence/SESSION_HANDOFF_2026-08-03.md` + **strategy reframe** `evidence/STRATEGY_REFRAME_2026-08-03.md` + dual-gap **15.159–15.160** (H⇒G≽I algebra; residual OPEN)  
 **Prior resumes:** `evidence/SESSION_HANDOFF_2026-07-31_prop15112.md`, `evidence/SESSION_HANDOFF_2026-07-30_prop1595.md`, `evidence/SESSION_HANDOFF_2026-07-30.md`  
 **P0 graph:** `evidence/P0_ENGINEERING_GRAPH.md`  
 **Failure graph:** `evidence/E1_FAILURE_GRAPH.md` (F1–**F20**)  
