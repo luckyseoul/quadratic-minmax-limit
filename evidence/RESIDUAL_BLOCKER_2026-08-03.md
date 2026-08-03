@@ -45,3 +45,19 @@ Re-encoding residual (μ_G4, R4, η, …) without a general-p inequality is the 
 10. **Matching spike** (15.30a): implication proved; all-M criterion for p≥5 open; non-matching undercutters open.
 
 **Still blocked:** general-p δ²≤room_hyp/24 (or equivalent). No soft-close.
+
+## Dual-gap preferred target (Props 15.159–15.160)
+
+Named structural objective (not δ thrash):
+
+- Dual gap: \(G=(d/32)(16I-\Phi)\succeq I\) ⇔ \(\lambda_{\max}\le 16(d-2)/d\) ⇔ 16N.
+- Hypothesis H: \(\mathrm{ray}_{\max}\le H(p)=(p+2)^2/d\).
+- **Proved (15.160):** \(\mathrm{thr\_ray}-H=(3p+7)(p-5)/(2d)\), so for all primes \(p\ge5\),
+  \(H\le\mathrm{thr\_ray}\) (eq only \(p=5\)). Thus **H ⇒ G≽I ⇒ 16N**.
+- **Certified:** p=5 ray=H=thr_ray; p=7 ray<H<thray; G≽I at both.
+- **Still OPEN:** H (or any residual equivalent) for general primes \(p\ge5\).
+
+G-Schurian coherent config on Max+ at p=5 has **124** pair orbits (≫ 3 Φ levels),
+so Schurian BM from strict Aut alone does not pin the Φ spectrum.
+
+**GOAL NOT MET** for lim α_n totality; L remains OPEN.
