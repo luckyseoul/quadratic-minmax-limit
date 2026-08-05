@@ -1,4 +1,5 @@
-> **REBOOT+15.167–171 HANDOFF (2026-08-05):** Prop **15.167** bi-tight empty all p≥5. Prop **15.170** residual (i) CLOSED. Prop **15.171** residual (ii) CLOSED (deep freeness-fail k≥3p ND; dual two-level Gsum Farkas). **E(1) CLOSED** ⇒ **L=½ CLOSED** (denseness). residual/16N still OPEN (optional). Modules: `prop15167–15171.py`. No soft-close: E1/L from real predicates only.
+> **FINAL HANDOFF (2026-08-05):** **\(L=\tfrac12\) CLOSED** (Props 15.167–171 + denseness). residual/16N OPEN optional.  
+> Full session report: **`evidence/FINAL_HANDOFF_2026-08-05.md`**. Status table: **`STATUS.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
 
