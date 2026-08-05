@@ -34,7 +34,8 @@ Residual / \(16N\) spectral package remains **optional open** (not required for 
 
 **Also proved:** \(\rho=1\) for Paley conference matrices of order \(n=p^2+1\) (halfspace boolean eigenvector).
 
-See `HANDOFF.md`, `solution.md` (Props 15.167–15.171), `evidence/share/paper/`, `x-cards/`.
+See **`STATUS.md`**, `HANDOFF.md`, `solution.md` (Props 15.167–15.171),
+`evidence/share/paper/`, `x-cards/` (summary + key lemmas).
 
 ## Files
 

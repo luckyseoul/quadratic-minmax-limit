@@ -1,15 +1,16 @@
 # E(1) status on the \(\rho=1\) family (blocking for \(L=\tfrac12\))
 
-**Date:** 2026-07-27  
+**Date:** 2026-08-05 (supersedes 2026-07-27 draft)  
 **Claim E(1):** For \(n=p^2+1\) (Paley over \(\mathbb F_{p^2}\), \(\rho=1\), \(\Phi=\tfrac12 np\)),
 \[
 m_n=\Phi+o(n^{3/2})=\tfrac12 n\sqrt{n-1}-o(n^{3/2}).
 \]
+In fact \(m_n\ge\Phi(C)-2\).
+
+**Status: CLOSED** (Props 15.167 bi-tight; 15.170–15.171 freeness-fail ND).  
 **Consequence:** Prop 6.1–6.2 \(\Rightarrow\lim\alpha_n=\tfrac12\).
 
-**Status: NOT PROVED.** Existence of \(\lim\alpha_n\) remains **OPEN**.
-
-**2026-07-27 addenda:** N10-C6 (360 six-cycles); `phi_mitm`; n=26 MITM-SA 86 seeds min exact 67, 0 undercuts.
+Historical numerics (2026-07-27): N10-C6; `phi_mitm`; n=26 MITM-SA.
 
 ---
 

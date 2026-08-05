@@ -2,8 +2,9 @@
 
 **Machine:** 88 CPU + Tesla V100-SXM2-16GB (CuPy).  
 **Policy:** F17 (no single-core thrash) · F19 (no moduli class-refine loops) · F20 (no GPU theater).  
-**L = lim α_n:** **OPEN** (never soft-close).  
-**Last update:** 2026-08-01 (Prop 15.158 Q₄ closed; Max+ 1-hom non-scheme; L OPEN).
+**L = lim α_n:** **CLOSED** \(=\tfrac12\) (2026-08-05; Props 15.167–15.171 + denseness).  
+**Optional open:** Path-C residual / 16N (not required for L).  
+**Last update:** 2026-08-05 (bi-tight 15.167; freeness-fail ND 15.170–171; E(1)/L closed).
 
 ---
 
@@ -19,7 +20,7 @@
 ## 1. Dependency DAG (what closes L)
 
 ```
-L = lim α_n                                    [OPEN]
+L = lim α_n = 1/2                              [CLOSED 2026-08-05]
  └─ denseness + sandwich                       [PROVED]
      └─ E(1) on ρ=1  OR  Path C + deep ND
          │

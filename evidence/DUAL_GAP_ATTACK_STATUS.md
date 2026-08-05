@@ -18,9 +18,9 @@ G=\frac{d}{32}(16I-\Phi|_Z)\succeq I
 | H ≤ 5 (⇒ 16N if ray≤H) | **Proved** (15.63/15.160) |
 | ray=H=thr_ray at p=5; ray<H<thray at p=7 | **Certified** |
 | G eigs {1,2,4} at p=5 | **Certified** (structure clue) |
-| H for general \(p\ge5\) | **OPEN** |
-| residual δ²≤room_hyp/24 general | **OPEN** |
-| L = lim α_n | **OPEN** |
+| H for general \(p\ge5\) | **OPEN** (optional Path-C / 16N) |
+| residual δ²≤room_hyp/24 general | **OPEN** (optional) |
+| L = lim α_n | **CLOSED** \(=\tfrac12\) via bi-tight 15.167 + freeness ND 15.170–171 (not via H) |
 
 ## Attacks tried this arc (not closing)
 

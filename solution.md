@@ -31,51 +31,32 @@ m_n
 Moreover \(\limsup_n\alpha_n=\lim_n a_n\) where \(a_n=\sup_{k\ge1}\alpha_{kn}\).
 (The lower bound is the dual-Gaussian arcsine argument of Prop.~5.2, valid for **every** Seidel matrix; the classical Bohnenblust–Hille floor \(2^{-5/2}\) is retained as Prop.~5.1.)
 
-**On existence of \(\lim\alpha_n\).** **OPEN.** Neither existence nor non-existence is proved.
-By Proposition 6.2, existence is equivalent to convergence of \(\alpha_n\) along Paley orders alone.
-Soft multipartite/Hadamard inequalities cannot force \(\lambda=\Lambda\) (§9–§10).
-Resume checklist and evidence map: **`HANDOFF.md`**.
+**Main Theorem (limit).** \(\displaystyle L=\lim_{n\to\infty}\alpha_n=\tfrac12\).
 
-**E(2) progress (interval formula, not settlement).** For Paley \(q\equiv1\bmod4\) and the interval
-boolean vector, \(x^\top Cx=2-8\sum_{d\le(q-1)/2}d\chi(d)\) exactly
-(`evidence/E2_INTERVAL_FORMULA.md`, `src/interval_rho_formula.py`). This makes the standard
-constructive lower bound on \(\rho(C)\) elementary; proving \(\rho\to1\) still needs asymptotics of
-that character sum. E(1) remains open (\(n=6\) exact opt; \(n=10\) gap \(2\); SA+exact at \(n=14,18\)
-found no Paley undercut). **Do not read this paragraph as \(\lim\alpha_n\) existing.**
+Path (2026-08-05): sandwich + denseness Prop~6.2 on the \(\rho=1\) Paley family
+\(n=p^2+1\) + E(1) via bi-tight emptiness (Prop~15.167) and freeness-fail ND
+(Props~15.170–15.171). Details: Props~15.167–15.171 below; handoff **`HANDOFF.md`**.
+
+**Optional still open:** Path-C residual / \(16N\) spectral package (not required for \(L\)).
 
 **Corollary (\(\rho=1\) along a dense Paley family).** For every odd prime \(p\), the Paley conference
 matrix of order \(n=p^2+1\) (over \(\mathbb F_{p^2}\)) admits a halfspace boolean eigenvector
 \(Cx=px\), hence \(\rho(C)=1\) and \(\Phi(C)=\tfrac12 n\sqrt{n-1}\). Along \(n_k=p_k^2+1\) one has
-\(n_{k+1}/n_k\to1\) and \(\limsup_k\rho(C_{n_k})=1\). Proof: `evidence/PROOF_rho_eq_1.md`;
-shipped checks: `paley_conference_prime_power`, `halfspace_boolean_vector`.
-This does **not** by itself force \(\lim\alpha_n=\tfrac12\) (needs E(1) and a matching liminf).
+\(n_{k+1}/n_k\to1\) and \(\limsup_k\rho(C_{n_k})=1\). Proof: `evidence/PROOF_rho_eq_1.md`.
+With \(m_n\ge\Phi(C)-2\) (E(1)) this forces \(L=\tfrac12\).
 
-**What is complete (Theorems D–G).** Dual-Gaussian universal lower bound \(m_n\ge n\sqrt{n-1}/\pi\)
-(Prop.~5.2); cut-code identity \(m_n=\binom n2-2\rho(D_n)\) (Prop.~1.2); conference spectral
-identity and exact Nesterov formula (Theorem D); Seidel switching; unique min-op and
-\(\mathrm{tr}(A^4)\) characterisation of conference; \(L^2\)-universality of \(Q\); **exact
-fourth-moment formula** \(\mathbb E[Q^4]\) uniquely minimised at conference; exact optimality
-criterion via spectral gap; **\(m_6=\Phi(C)=5\)** by exhaustive gap check; limsup bound
-\(\limsup\alpha_n\le\tfrac12\limsup_k\rho(C_k)\); optimality \(\Leftrightarrow\) minimisation of
-\(r(A)=\max|x^\top Ax|/(n\sqrt{n-1})\); **\(\rho=1\) for all Paley orders \(n=p^2+1\)**.
+**What is complete.** Dual-Gaussian lower bound; cut-code identity; conference spectral calculus;
+\(\rho=1\) on \(n=p^2+1\); bi-tight empty for \(p\ge5\) (15.167); Type~I freeness-fail ND (15.170);
+deep freeness-fail ND (15.171); denseness \(\Rightarrow L=\tfrac12\).
 
-**What remains for existence (Theorem E).** (1) Asymptotic optimality
-\(m_{n_k}=\Phi(C_k)+o(n_k^{3/2})\) along Paley — proved at \(n=6\); **fails exact optimality at
-\(n=10\)** (exact \(m_{10}=13<\Phi(C_{10})=15\) for Paley \(q=9\)); local edge-opt for Paley
-\(n\le18\) (Prop 15.21); Q4 path dead (Props 15.16, 15.19). E(1) must be asymptotic
-(\(o(n^{3/2})\) gap), not exact. Reduced to product-min of \(\rho\cdot\mathrm{op}\) via
-delocalization/rigidity. (2) \(\rho(C_k)\to\rho_*\) for general Paley — on the subsequence
-\(n=p^2+1\) one already has \(\rho\equiv1\); for other Paley orders, exact \(\rho\) is strictly
-increasing through \(n=42\), while constructive interval lower bounds reach \(\rho_{\mathrm{int}}\gtrsim0.99\)
-(not a full proof of \(\rho\to1\)). Conditional Thm E: both (1)+(2)
-\(\Rightarrow\lim\alpha_n=\rho_*/2\). Stolz (Thm F) still open.
-**Existence of \(\lim\alpha_n\) remains OPEN.**
-
-This partially answers MathOverflow [413935](https://mathoverflow.net/questions/413935) /
+This answers MathOverflow [413935](https://mathoverflow.net/questions/413935) /
 https://x.com/PI010101/status/2081070728422752329
-(the author already knew one-sided bounds; the contribution is the sandwich, denseness,
-majorant identity, Paley reduction, conference spectral/\(L^4\) calculus, switching theory,
-exact optimality at \(n=6\), \(\rho=1\) on \(n=p^2+1\), and obstruction analysis).
+on existence and value of the limit (along the denseness path above).
+
+> **Reader note.** Intermediate propositions below (especially pre-15.167) often end with
+> “Existence of \(\lim\alpha_n\) remains OPEN” written on the day of that prop. Those
+> lines are **historical**. Current status: **CLOSED** via Props **15.167–15.171**
+> at the end of this file. See also `STATUS.md` and `HANDOFF.md`.
 
 ---
 
@@ -5128,7 +5109,7 @@ Also \(\sum_{e'<e''\in G}G^+_{e'e''}=\frac{\mathbb E_+[S^2]-k}2=-\frac{3(p-1)(p-
 
 ## Prop 15.170 (2026-08-05) — Residual (i) close: Type I \(k=3p-2\) cannot have \(s_-\le-1\)
 
-Continues 15.169. Closes residual (i) of E(1) for all primes \(p\ge5\). Residual (ii) / full E(1) / L remain OPEN.
+Continues 15.169. Closes residual (i) of E(1) for all primes \(p\ge5\). Residual (ii) and full E(1)/L closed in Prop~15.171.
 
 **Proved (Fraction / prior props):**
 

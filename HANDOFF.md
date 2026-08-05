@@ -4,7 +4,8 @@
 
 **Status date:** 2026-08-05 (Props through **15.171**; **bi-tight CLOSED**; residual (i)+(ii) CLOSED; **E(1)/Main/L CLOSED**; residual/16N OPEN optional)
 
-**External literature scan (2026-08-03):** `evidence/LITERATURE_SCAN_2026-08.md` — MO 413935 still 0 answers; author X prize (2026-07-25) wants existence not numerics (~5h unsolved); Ivanisvili 2025–26 arXiv is hypercube/isoperimetry/Grokability etc., **no paper closes lim α_n or Path C residual**. Near-neighbor Paley SOS / cut-cover SDP / conference spectral determination do **not** yield δ²≤room_hyp/24. **Do not resume prop thrash without a new external theorem.**  
+**External literature scan (2026-08-03):** `evidence/LITERATURE_SCAN_2026-08.md` — MO 413935 had 0 answers at scan; X prize (2026-07-25). This repo (2026-08-05) closes \(L=\tfrac12\) via Props 15.167–15.171 (not via Path-C residual). Path-C residual/16N still optional open.  
+
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
 **Resume (latest):** Props **15.161–15.171** —
 - **15.164–15.166:** residual/16N still **OPEN** (optional; not required for L)
@@ -187,7 +188,7 @@ Then: 16N (15.107+15.98) → bi-tight → deep ND → Main Theorem.
 
 **MO thread re-audit (2026-07-27):** full re-read of [MO 413935](https://mathoverflow.net/questions/413935) + comments via SE API — **0 answers; no hidden proof**. Author already knew liminf \(\ge2^{-5/2}\) and that such bounds do **not** settle existence; not interested in numerics. Starr’s Bowlin/multipartite pointer is already dead for existence (§9–§10). **Time savings:** stop BH re-derivation, stop multipartite reopen, stop pure-SA as deliverable; only load-bearing E(1) (or permanent relative gap / non-existence) counts. Details: `evidence/MO_THREAD_REAUDIT.md`.
 
-**Existence of \(L\) remains OPEN** — sandwich only; E(1) not proved (reduced to path-cycle/\(k_\star=o(n^{3/2})\) dichotomy, not closed).
+~~**Existence of \(L\) remains OPEN**~~ — **superseded 2026-08-05:** \(L=\tfrac12\) CLOSED (Props 15.167–171). Entries below through 15.166 are historical Path-C residual notes; residual/16N remains optional open.
 - **Prop 15.105 (Norton/Fickus variance identity; 2026-07-31):** **Proved:** ∑(λ_α(Φ|Z)−μ̄)² = ‖κ_orth‖_F² (Fickus residual = Φ spectral variance); orth=0 ⇒ Φ scalar = 8(n−2)/(n−6); mult(λ_max)≥d + ‖κ‖²≤96n ⇒ λ_max(Φ)≤16 exactly (Fraction: μ̄+8(p²−9)/(p²−5)=16). **Certified** variance+16N+mult=d at p=3,5,7. **OPEN:** ‖κ‖²≤96n (or direct λ_max≤16) for all p≥5. Evidence: `src/e1_gmin_m4_prop15105.py`, `evidence/e1_gmin_m4_prop15105.json`. **L OPEN.**
 - **Prop 15.106 (rest-average-8 + kurtosis residual; 2026-07-31):** **Proved:** mult(λ_max)≥d ⇒ (λ_max≤16 ⇔ rest-mean≥8); at λ_max=16 rest-mean=8 (Wick). ‖κ‖²≤96n ⇔ kurtosis κ₄(D)≤3+12/n. **Certified** p=3,5,7. **OPEN:** κ₄≤3+12/n or λ_max≤16 for all p≥5. Evidence: `src/e1_gmin_m4_prop15106.py`, `evidence/e1_gmin_m4_prop15106.json`. **L OPEN.**
 - **Prop 15.107 (16N from mult≥d−1 + room_hyp; 2026-07-31):** **Proved:** mult(λ_max)≥d−1 (15.98) + orth≤room_hyp ⇒ λ_max(Φ)≤16 for all primes p≥3 (Fraction majorization (16−μ̄)²≥room_hyp·(m−m₁)/(m m₁)); Gegenbauer α=−6/(d+4), β=3/((d+2)(d+4)); 4-design ED4≤wick_hi. **Certified** orth≤room_hyp + 16N at p=3,5,7. **OPEN residual:** orth≤room_hyp for general p≥5. Evidence: `src/e1_gmin_m4_prop15107.py`, `evidence/e1_gmin_m4_prop15107.json`. **L OPEN.**
