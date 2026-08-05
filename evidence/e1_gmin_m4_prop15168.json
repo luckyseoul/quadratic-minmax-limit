@@ -1,0 +1,305 @@
+{
+  "title": "Prop 15.168 E(1) structure after 15.167\u2013171 (E1 CLOSED)",
+  "L_status": "CLOSED",
+  "proved": {
+    "tight_cover_obstruction_when_bitight_empty": true,
+    "deep_tight_empty_p_ge_5": true,
+    "type_I_freeness_ND_prior": true,
+    "type_I_fail_k_2p_minus_1_ND": true,
+    "type_I_all_classes_closed": true,
+    "deep_auto_freeness_k_le_3p_minus_2": true,
+    "deep_fail_eq_k_3p_minus_1_impossible": true,
+    "deep_all_ND_closed": true,
+    "E1_closed_general": true,
+    "m_n_ge_Phi_minus_2": true,
+    "L_closed": true,
+    "bi_tight_empty_for_all_p_ge_5": true,
+    "residual_closed_general": false,
+    "sixteen_N_for_all_p": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "theorem": "For every prime p\u22655: bi-tight empty (15.167) \u21d2 no Max+-tight level-s cover of size s p (G_\u22a5 isotropy). Identity g_\u22a5 quad=0 for tight S\u2261s checked; obstruction_fires from bitight_from_majorization.",
+      "n_checked": 15,
+      "by_p_sample": {
+        "5": {
+          "p": 5,
+          "s": 2,
+          "size": 10,
+          "E_edges": 325,
+          "size_lt_E": true,
+          "bitight_empty_15167": true,
+          "g_perp_quad_for_tight": "0",
+          "g_perp_vanishes": true,
+          "obstruction_fires": true,
+          "theorem": "Tight S\u2261s cover of size s p has v\u1d40G_\u22a5v=0; if \u03bb_max(G)=n/2 simple then G_\u22a5\u227d0 ker=span{1} \u21d2 v\u22251 impossible for |H|<E (15.55.4 gen.)."
+        },
+        "7": {
+          "p": 7,
+          "s": 2,
+          "size": 14,
+          "E_edges": 1225,
+          "size_lt_E": true,
+          "bitight_empty_15167": true,
+          "g_perp_quad_for_tight": "0",
+          "g_perp_vanishes": true,
+          "obstruction_fires": true,
+          "theorem": "Tight S\u2261s cover of size s p has v\u1d40G_\u22a5v=0; if \u03bb_max(G)=n/2 simple then G_\u22a5\u227d0 ker=span{1} \u21d2 v\u22251 impossible for |H|<E (15.55.4 gen.)."
+        },
+        "11": {
+          "p": 11,
+          "s": 2,
+          "size": 22,
+          "E_edges": 7381,
+          "size_lt_E": true,
+          "bitight_empty_15167": true,
+          "g_perp_quad_for_tight": "0",
+          "g_perp_vanishes": true,
+          "obstruction_fires": true,
+          "theorem": "Tight S\u2261s cover of size s p has v\u1d40G_\u22a5v=0; if \u03bb_max(G)=n/2 simple then G_\u22a5\u227d0 ker=span{1} \u21d2 v\u22251 impossible for |H|<E (15.55.4 gen.)."
+        },
+        "13": {
+          "p": 13,
+          "s": 2,
+          "size": 26,
+          "E_edges": 14365,
+          "size_lt_E": true,
+          "bitight_empty_15167": true,
+          "g_perp_quad_for_tight": "0",
+          "g_perp_vanishes": true,
+          "obstruction_fires": true,
+          "theorem": "Tight S\u2261s cover of size s p has v\u1d40G_\u22a5v=0; if \u03bb_max(G)=n/2 simple then G_\u22a5\u227d0 ker=span{1} \u21d2 v\u22251 impossible for |H|<E (15.55.4 gen.)."
+        },
+        "17": {
+          "p": 17,
+          "s": 2,
+          "size": 34,
+          "E_edges": 41905,
+          "size_lt_E": true,
+          "bitight_empty_15167": true,
+          "g_perp_quad_for_tight": "0",
+          "g_perp_vanishes": true,
+          "obstruction_fires": true,
+          "theorem": "Tight S\u2261s cover of size s p has v\u1d40G_\u22a5v=0; if \u03bb_max(G)=n/2 simple then G_\u22a5\u227d0 ker=span{1} \u21d2 v\u22251 impossible for |H|<E (15.55.4 gen.)."
+        }
+      }
+    },
+    "B": {
+      "proved": true,
+      "theorem": "Deep tight \u21d2 bi-tight level 2 (15.44.3) \u21d2 empty when 15.167 holds.",
+      "by_p_sample": {
+        "5": {
+          "p": 5,
+          "prior": "15.44.3 deep tight \u21d2 bi-tight level 2",
+          "bitight_empty": true,
+          "empty": true
+        },
+        "7": {
+          "p": 7,
+          "prior": "15.44.3 deep tight \u21d2 bi-tight level 2",
+          "bitight_empty": true,
+          "empty": true
+        },
+        "11": {
+          "p": 11,
+          "prior": "15.44.3 deep tight \u21d2 bi-tight level 2",
+          "bitight_empty": true,
+          "empty": true
+        },
+        "13": {
+          "p": 13,
+          "prior": "15.44.3 deep tight \u21d2 bi-tight level 2",
+          "bitight_empty": true,
+          "empty": true
+        },
+        "17": {
+          "p": 17,
+          "prior": "15.44.3 deep tight \u21d2 bi-tight level 2",
+          "bitight_empty": true,
+          "empty": true
+        }
+      },
+      "n_checked": 15
+    },
+    "CD": {
+      "proved_freeness_ND_prior": true,
+      "proved_k_2p_minus_1_fail_ND": true,
+      "k_3p_minus_2_boundary_open": false,
+      "type_I_all_classes_closed": true,
+      "theorem": "Type I freeness ND = 15.43.1 (prior). Type I fail k=2p\u22121 ND when bi-tight empty (15.43.3+15.44+15.167). k=3p\u22122 closed by 15.170 Gsum Farkas (s_\u2212\u2264\u22121 impossible under freeness-fail).",
+      "by_p_sample": {
+        "5": {
+          "p": 5,
+          "k": 9,
+          "prior_structure": "15.43.3 freeness-fail \u2192 H tight size 2p; 15.44 master lemma",
+          "bitight_empty": true,
+          "tight_2p_obstruction": true,
+          "ND_for_this_class": true
+        },
+        "7": {
+          "p": 7,
+          "k": 13,
+          "prior_structure": "15.43.3 freeness-fail \u2192 H tight size 2p; 15.44 master lemma",
+          "bitight_empty": true,
+          "tight_2p_obstruction": true,
+          "ND_for_this_class": true
+        },
+        "11": {
+          "p": 11,
+          "k": 21,
+          "prior_structure": "15.43.3 freeness-fail \u2192 H tight size 2p; 15.44 master lemma",
+          "bitight_empty": true,
+          "tight_2p_obstruction": true,
+          "ND_for_this_class": true
+        },
+        "13": {
+          "p": 13,
+          "k": 25,
+          "prior_structure": "15.43.3 freeness-fail \u2192 H tight size 2p; 15.44 master lemma",
+          "bitight_empty": true,
+          "tight_2p_obstruction": true,
+          "ND_for_this_class": true
+        },
+        "17": {
+          "p": 17,
+          "k": 33,
+          "prior_structure": "15.43.3 freeness-fail \u2192 H tight size 2p; 15.44 master lemma",
+          "bitight_empty": true,
+          "tight_2p_obstruction": true,
+          "ND_for_this_class": true
+        }
+      },
+      "n_checked": 15
+    },
+    "EFG": {
+      "proved_auto_freeness_k_le_3p_minus_2": true,
+      "proved_fail_eq_k_3p_minus_1_impossible": true,
+      "deep_freeness_fail_k_ge_3p_open": false,
+      "deep_all_ND_closed": true,
+      "theorem": "Auto-freeness for s\u208a=2, k\u22643p\u22122 (Fraction). Fail-eq k=3p\u22121 \u21d2 tight L3 empty under 15.167. Freeness\u21d2ND prior. k\u22653p freeness-fail ND by 15.171 dual two-level Gsum Farkas.",
+      "by_p_sample": {
+        "5": {
+          "auto_at_3p_minus_2": {
+            "p": 5,
+            "k": 13,
+            "N2_N_lb": "7/10",
+            "freeness_thr": "3/5",
+            "auto_freeness": true,
+            "implies_freeness_ND_for_all_e": true
+          },
+          "at_3p_minus_1": {
+            "p": 5,
+            "k": 14,
+            "N2_N_lb": "3/5",
+            "freeness_thr": "3/5",
+            "auto_freeness": false,
+            "implies_freeness_ND_for_all_e": false
+          },
+          "fail_eq": {
+            "p": 5,
+            "k_equality": 14,
+            "H_size_if_S_in_2_4": 15,
+            "tight_L3_obstruction": true,
+            "impossible_when_bitight_empty": true
+          }
+        },
+        "7": {
+          "auto_at_3p_minus_2": {
+            "p": 7,
+            "k": 19,
+            "N2_N_lb": "9/14",
+            "freeness_thr": "4/7",
+            "auto_freeness": true,
+            "implies_freeness_ND_for_all_e": true
+          },
+          "at_3p_minus_1": {
+            "p": 7,
+            "k": 20,
+            "N2_N_lb": "4/7",
+            "freeness_thr": "4/7",
+            "auto_freeness": false,
+            "implies_freeness_ND_for_all_e": false
+          },
+          "fail_eq": {
+            "p": 7,
+            "k_equality": 20,
+            "H_size_if_S_in_2_4": 21,
+            "tight_L3_obstruction": true,
+            "impossible_when_bitight_empty": true
+          }
+        },
+        "11": {
+          "auto_at_3p_minus_2": {
+            "p": 11,
+            "k": 31,
+            "N2_N_lb": "13/22",
+            "freeness_thr": "6/11",
+            "auto_freeness": true,
+            "implies_freeness_ND_for_all_e": true
+          },
+          "at_3p_minus_1": {
+            "p": 11,
+            "k": 32,
+            "N2_N_lb": "6/11",
+            "freeness_thr": "6/11",
+            "auto_freeness": false,
+            "implies_freeness_ND_for_all_e": false
+          },
+          "fail_eq": {
+            "p": 11,
+            "k_equality": 32,
+            "H_size_if_S_in_2_4": 33,
+            "tight_L3_obstruction": true,
+            "impossible_when_bitight_empty": true
+          }
+        },
+        "13": {
+          "auto_at_3p_minus_2": {
+            "p": 13,
+            "k": 37,
+            "N2_N_lb": "15/26",
+            "freeness_thr": "7/13",
+            "auto_freeness": true,
+            "implies_freeness_ND_for_all_e": true
+          },
+          "at_3p_minus_1": {
+            "p": 13,
+            "k": 38,
+            "N2_N_lb": "7/13",
+            "freeness_thr": "7/13",
+            "auto_freeness": false,
+            "implies_freeness_ND_for_all_e": false
+          },
+          "fail_eq": {
+            "p": 13,
+            "k_equality": 38,
+            "H_size_if_S_in_2_4": 39,
+            "tight_L3_obstruction": true,
+            "impossible_when_bitight_empty": true
+          }
+        }
+      },
+      "n_checked": 15
+    },
+    "status": {
+      "bi_tight_empty_for_all_p_ge_5": true,
+      "E1_closed_general": true,
+      "m_n_ge_Phi_minus_2_all_p": true,
+      "L_status": "CLOSED",
+      "residual_closed_general": false,
+      "open_residuals": [],
+      "note": "15.167 bi-tight; 15.170 residual (i); 15.171 residual (ii); E1/L from real predicates; residual/16N still open."
+    }
+  },
+  "L_wire": {
+    "bi_tight": true,
+    "E1": true,
+    "L_closed": true,
+    "L_status": "CLOSED",
+    "rule": "L closed iff bi-tight \u2227 E(1); denseness Prop 6.2"
+  },
+  "open_residual": [],
+  "F3": "E1/L only from real bi-tight \u2227 residual(i) \u2227 residual(ii)",
+  "F13": "15.168\u2013171 E1 ND structure; residual/16N still open"
+}

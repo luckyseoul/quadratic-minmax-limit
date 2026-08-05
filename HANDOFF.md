@@ -1,12 +1,19 @@
-> **SESSION FAILURE HANDOFF (2026-07-29):** see `evidence/SESSION_HANDOFF_2026-07-29_FAILURE.md`. Local git ~121 commits **ahead of GitHub**; do not trust chat transcript. GPU may be DOWN. L OPEN.
+> **REBOOT+15.167–171 HANDOFF (2026-08-05):** Prop **15.167** bi-tight empty all p≥5. Prop **15.170** residual (i) CLOSED. Prop **15.171** residual (ii) CLOSED (deep freeness-fail k≥3p ND; dual two-level Gsum Farkas). **E(1) CLOSED** ⇒ **L=½ CLOSED** (denseness). residual/16N still OPEN (optional). Modules: `prop15167–15171.py`. No soft-close: E1/L from real predicates only.
 
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-08-03 (Props through **15.160**; N_ED4_SUF **OPEN**; Q₄ closed; Max+ non-scheme; L OPEN)
+**Status date:** 2026-08-05 (Props through **15.171**; **bi-tight CLOSED**; residual (i)+(ii) CLOSED; **E(1)/Main/L CLOSED**; residual/16N OPEN optional)
 
 **External literature scan (2026-08-03):** `evidence/LITERATURE_SCAN_2026-08.md` — MO 413935 still 0 answers; author X prize (2026-07-25) wants existence not numerics (~5h unsolved); Ivanisvili 2025–26 arXiv is hypercube/isoperimetry/Grokability etc., **no paper closes lim α_n or Path C residual**. Near-neighbor Paley SOS / cut-cover SDP / conference spectral determination do **not** yield δ²≤room_hyp/24. **Do not resume prop thrash without a new external theorem.**  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
-**Resume (latest):** `evidence/SESSION_HANDOFF_2026-08-03.md` + **strategy reframe** `evidence/STRATEGY_REFRAME_2026-08-03.md` + dual-gap **15.159–15.160** (H⇒G≽I algebra; residual OPEN)  
+**Resume (latest):** Props **15.161–15.171** —
+- **15.164–15.166:** residual/16N still **OPEN** (optional; not required for L)
+- **15.167:** **bi-tight empty all p≥5**. `src/e1_gmin_m4_prop15167.py`
+- **15.168–169:** E(1) ND structure + Type I reduction + multi-s auto-freeness
+- **15.170:** residual (i) CLOSED — Type I k=3p−2 s_−≤−1 impossible. `prop15170.py`
+- **15.171:** residual (ii) CLOSED — deep freeness-fail k≥3p ND. `prop15171.py`
+- **E(1)/L CLOSED** via bi-tight ∧ residual(i) ∧ residual(ii) real predicates.
+**Preferred next:** optional Path-C residual/16N; external writeup / MO answer.  
 **Prior resumes:** `evidence/SESSION_HANDOFF_2026-07-31_prop15112.md`, `evidence/SESSION_HANDOFF_2026-07-30_prop1595.md`, `evidence/SESSION_HANDOFF_2026-07-30.md`  
 **P0 graph:** `evidence/P0_ENGINEERING_GRAPH.md`  
 **Failure graph:** `evidence/E1_FAILURE_GRAPH.md` (F1–**F20**)  
@@ -19,11 +26,21 @@
 
 ## 0. One-line status
 
-**\(L=\lim\alpha_n\) OPEN.** Sandwich \(1/\pi\le\liminf\le\limsup\le1/2\) + dense Paley \(\rho=1\) proved. E(1)/Path C not finished.
+**\(L=\lim\alpha_n=\tfrac12\) CLOSED** (E(1) + bi-tight + denseness Prop 6.2). residual/16N OPEN optional.
 
-### P0 attack (Path C residual) — start here
+### P0 status
 
-**Single open inequality (general primes \(p\ge5\)) — Path C primary:**
+**Bi-tight (CLOSED, 15.167):** mult≥d−1 + λ_min≥6 ⇒ L_* < 2d ⇒ bi-tight empty for p≥5.
+
+**E(1) (CLOSED, 15.168–171):** Type I all classes ND (15.170) + deep freeness/fail-eq/k≥3p ND (15.171) + auto-freeness. **L CLOSED.**
+
+**Optional residual/16N (still OPEN):**
+\[
+E[s^4]\le \mathrm{Es4}_*(p)=\frac{4(3p^8-6p^6-148p^4-10p^2+129)}{p^4-8p^2-1}
+\]
+⇒ λ_max≤16 ⇒ 16N (stronger than bi-tight). Census p=5,7 only.
+
+**Single open inequality (general primes \(p\ge5\)) — Path C primary (equiv. forms):**
 \[
 \delta^2\le\mathrm{room}_{\mathrm{hyp}}/24
 \quad\Longleftrightarrow\quad
@@ -225,8 +242,17 @@ Then: 16N (15.107+15.98) → bi-tight → deep ND → Main Theorem.
 - **Prop 15.157 (Gegenbauer defect μ_G4; 2026-08-01):** **Proved:** on spherical 2-designs E[s⁴]=n⁴(a₀+a₄ μ_G4) with **a₀=3/(d(d+2))**, **a₄=(d²−1)/((d+2)(d+4))**, μ_G4=E[Q₄(s/n)]≥0; residual ⇔ **μ_G4≤μ_G4_suf** with closed **μ_G4_suf=4(21x³+19x²+35x−75)(x+9)/[x(x−5)(x+1)³(x+3)(x−1)]** (x=p²). **Cert** p=5,7 (ratios 0.94, 0.83); not a 3-design. Dead: μ≤1, μ≤1/h₄ (false p=5), μ≤d/h₄ (too weak p≥7). **OPEN:** Weil/Aut bound on μ_G4. Evidence: `src/e1_gmin_m4_prop15157.py`. **L OPEN.**
 - **Prop 15.158 (Q₄ closed; Max+ non-scheme; 2026-08-01):** **Proved:** **Q₄(t)=[(d+2)(d+4)t⁴−6(d+2)t²+3]/(d²−1)**, Q₄(0)=3/(d²−1); Max+ **1-homogeneous** with Gram spectrum **2N (×d)+0 (×N−d)**; **not** an IP-association scheme (p=5); pole decomposition μ_G4≤2/N+P(E)+Q₄(0)P(Eq); conditional residual if N≥N_*=⌈2/μ_G4_suf⌉ and nonpositive-Q₄ support — N_* holds p=5,7 but support fails; Chebyshev split **dead**. **OPEN:** Weil/Aut-coherent config/closed W_k. Evidence: `src/e1_gmin_m4_prop15158.py`. **L OPEN.**
 - **Prop 15.148 (relaxed-ULC residual calculus; 2026-08-01):** **Proved:** C_act=p²(d₄/U−1)=C_flat+κδ²; C_max=Q(p²)/((p²−5)(p²−2)(p²+3)²); residual⇔C_act≤C_max; for p≥7, C_max≥C₇=79923/87373 and d₄≤U(1+C₇/p²)⇒residual (uniform target). C_max→1⁻. Census C_act≈0.90–0.91. **OPEN:** prove relaxed ULC. Evidence: `src/e1_gmin_m4_prop15148.py`. **L OPEN.**
-
----
+- **Prop 15.159 (Φ|Z spectrum + dual gap; 2026-08-03):** **Proved/cert:** exact Φ spectra p=5,7 (mult top=d); design thr 16(d−2)/d algebra; dual gap G=(d/32)(16I−Φ) ≽I at p=5,7; 16N chain mult≥d+‖κ‖²≤96n. **OPEN:** G≽I / residual general p. Evidence: `src/e1_gmin_m4_prop15159.py`. **L OPEN.**
+- **Prop 15.160 (H vs dual-gap algebra; 2026-08-03):** **Proved:** H−thr_ray=(p−5)(p+1)/(2d) so H≤thr_ray for p≥5; H⇒G≽I⇒16N; H⇒16N (15.63). Cert ray=H at p=5. **OPEN:** Hypothesis H (ray_max≤H(p)) all p≥5. Evidence: `src/e1_gmin_m4_prop15160.py`. **L OPEN.**
+- **Prop 15.161 (Φ-frame; mult≥d+κ₄≤48n; 2026-08-05):** **Proved:** ‖v_y‖²=n(n−2); ⟨v_y,v_z⟩=(y·z)²−2n; 16N budgets under mult≥d. Cert p=5,7. **OPEN:** mult≥d and κ₄≤48n general p. Evidence: `src/e1_gmin_m4_prop15161.py`. **L OPEN.**
+- **Prop 15.162 (maximizers in Z; mult≥d−1; 2026-08-05):** **Proved for all p≥5:** maximizers of Γ lie in Z; **mult(Φ)≥d−1** (PSL min irrep); E[s⁴]=C₀+R type expansion; 16N⇔mult≥d+m₄-mass. **OPEN:** mult≥d; m₄-mass/κ₄. Evidence: `src/e1_gmin_m4_prop15162.py`. **L OPEN.**
+- **Prop 15.163 (Wick m₄ mass; Aut₀; H_C; 2026-08-05):** **Proved:** Wick ∑(m₄^W)² closed; η-room n(19p²−3)/(6p²); Aut₀ V₊≅1⊕(d−1) (cert p=5); H_C split 1+(d−1) (cert p=5,7). **OPEN:** η-bound / mult≥d general p. Evidence: `src/e1_gmin_m4_prop15163.py`. **L OPEN.**
+- **Prop 15.164 (16N via mult≥d−1+Es4_*; 2026-08-05):** **Proved:** two-level majorization; Es4_* budget under mult≥d−1+λ_min≥6 (no mult≥d needed); κ4_*/η_* equivalents. Cert 16N p=5,7. **OPEN residual:** E[s⁴]≤Es4_*(p) all p≥5. Evidence: `src/e1_gmin_m4_prop15164.py`. **L OPEN.**
+- **Prop 15.165 (exact Es4; closed Es4_*/η_*; GoG↔Φ; 2026-08-05):** **Proved:** E[s]=0, E[s²]=2n; GoG spectrum ↔ Φ; closed Es4_*=4(3p⁸−…)/(p⁴−8p²−1), η_*; m₄ is C-eigen. Exact Es4 census p=3,5,7 (spectrum not W_CENSUS). **OPEN:** Es4_* general p. Evidence: `src/e1_gmin_m4_prop15165.py`. **L OPEN.**
+- **Prop 15.166 (16N⇔Q₂ thr; Wick C-eigen; 2026-08-05):** **Proved:** Max+ unit 2-design; Wick m₄ C-eigen (does not pin η); λ_max(Φ)=4d(d−1)/N·λ_max(Q₂) ⇒ 16N⇔λ_max(Q₂)≤4N/(d(d−1)). Cert p=5,7. residual_closed_general=false. Evidence: `src/e1_gmin_m4_prop15166.py`. **L OPEN.**
+- **Prop 15.167 (bi-tight majorization; 2026-08-05):** **Proved for all primes p≥5:** mult(λ_max Φ)≥d−1 + λ_min≥6 ⇒ L_*=(p⁴+24p²−1)/(2(p²−1)) < 2d ⇒ λ_cycle < d ⇒ **bi-tight empty**. No residual/16N. Evidence: `src/e1_gmin_m4_prop15167.py`.
+- **Prop 15.169 (Type I k=3p−2 reduction + deep multi-s; 2026-08-05):** **Proved:** freeness-fail k=3p−2 Fraction structure; Φ 2-Lipschitz edge flip; gap-2 Type I forces s_−=−1; multi-s auto-freeness k≤p(s+1)−2. **OPEN:** s_−≤−1 impossible for freeness-fail Type I (cert p=5 MILP only); deep freeness-fail k≥3p ND. E1/L OPEN. Evidence: `src/e1_gmin_m4_prop15169.py`.
+- **Prop 15.168 (E(1) structure; 2026-08-05):** Tight obstruction from 15.167; Type I freeness ND (prior); Type I fail k=2p−1 ND; deep auto-freeness k≤3p−2; deep fail-eq k=3p−1 ⇒ tight L3 empty. **OPEN:** Type I k=3p−2 boundary; deep freeness-fail k≥3p. **E1/L OPEN** (no soft-close). Evidence: `src/e1_gmin_m4_prop15168.py`.
 
 ## 1. Exact quantity (do not restate incorrectly)
 

@@ -238,9 +238,16 @@ def prove_open() -> dict:
         "sixteen_N_for_all_p": False,
         "L_status": "OPEN",
         "open": (
-            "Prove ray_max≤H(p)=2(p+2)²/n for all primes p≥5 "
-            "(⇔ λ_max≤6+2H ⇔ dual gap form of 16N). "
-            "Certified only p=5,7. Equivalents: δ²≤room_hyp/24, orth≤room_hyp."
+            "Prove ray_max≤H(p)=2(p+2)²/n for all primes p≥5, OR the single "
+            "16N inequality E[s⁴]≤Es4_*(p)=4(3p⁸−6p⁶−148p⁴−10p²+129)/(p⁴−8p²−1) "
+            "(Props 15.164–15.165; mult≥d−1 proved). Equiv: ∑η²≤η_* with "
+            "η_*=(p²−1)n(19p⁴−152p²−3)/(6p²(p⁴−8p²−1)). "
+            "Census exact Es4: p=3 equality; p=5 ratio 0.996; p=7 ratio 0.965 "
+            "(Gram/Φ, not single-root W — p=7 not 1-homogeneous). "
+            "Dead this session: spherical Delsarte (→two-level 12097>9297 at p=5); "
+            "BM(C) (maximizers ⊥ I,C,J,C²); C-sig/CR alone; Gershgorin frame. "
+            "Preferred: Weil/Jacobi on Aut-orbit m4; Aut₀ V₊↪V_max Rayleigh; "
+            "SOS on Q₄≤10N‖B‖². See evidence/RESIDUAL_ATTACK_2026-08-05_GPU_B.md."
         ),
     }
 

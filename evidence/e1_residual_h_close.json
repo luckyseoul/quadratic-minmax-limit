@@ -168,7 +168,7 @@
       "H_for_all_p": false,
       "sixteen_N_for_all_p": false,
       "L_status": "OPEN",
-      "open": "Prove ray_max\u2264H(p)=2(p+2)\u00b2/n for all primes p\u22655 (\u21d4 \u03bb_max\u22646+2H \u21d4 dual gap form of 16N). Certified only p=5,7. Equivalents: \u03b4\u00b2\u2264room_hyp/24, orth\u2264room_hyp."
+      "open": "Prove ray_max\u2264H(p)=2(p+2)\u00b2/n for all primes p\u22655, OR the single 16N inequality E[s\u2074]\u2264Es4_*(p) (Prop 15.164; mult\u2265d\u22121 already proved). Es4_*(5)=492752/53, Es4_*(7)=8116400/251. Equiv: \u03ba\u2084\u2264\u03ba4_*, \u2211\u03b7\u00b2\u2264\u03b7_*. Weil/character-sum on Max+ 4th moment. Design LP \u2192 2n\u00b3 too weak."
     }
   },
   "live": {
@@ -216,7 +216,7 @@
     "general_residual": false,
     "sixteen_N_for_all_p": false
   },
-  "open_attack": "Prove ray_max\u2264H(p)=2(p+2)\u00b2/n for all primes p\u22655 (\u21d4 \u03bb_max\u22646+2H \u21d4 dual gap form of 16N). Certified only p=5,7. Equivalents: \u03b4\u00b2\u2264room_hyp/24, orth\u2264room_hyp.",
+  "open_attack": "Prove ray_max\u2264H(p)=2(p+2)\u00b2/n for all primes p\u22655, OR the single 16N inequality E[s\u2074]\u2264Es4_*(p) (Prop 15.164; mult\u2265d\u22121 already proved). Es4_*(5)=492752/53, Es4_*(7)=8116400/251. Equiv: \u03ba\u2084\u2264\u03ba4_*, \u2211\u03b7\u00b2\u2264\u03b7_*. Weil/character-sum on Max+ 4th moment. Design LP \u2192 2n\u00b3 too weak.",
   "F3": "no soft-close",
   "F19": "no class_key thrash",
   "F20": "GPU used for \u03a6 eigensystem when CuPy available"

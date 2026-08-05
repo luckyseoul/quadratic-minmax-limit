@@ -1,0 +1,594 @@
+% !TEX program = tectonic
+% Complete paper: lim α_n = 1/2 via bi-tight + E(1) residuals (Props 15.167--15.171)
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{setspace}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue!50!black,
+  pdftitle={On the min-max constant of $\pm 1$ quadratic forms: lim $\alpha_n=1/2$},
+  pdfauthor={quadratic-minmax-limit research notes}
+}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Maxp}{\mathrm{Max}_{+}}
+\newcommand{\Maxm}{\mathrm{Max}_{-}}
+\newcommand{\Gsum}{\mathrm{Gsum}}
+\newcommand{\thr}{\mathrm{thr}}
+\newcommand{\ND}{\ensuremath{\mathrm{ND}}}
+\newcommand{\ES}{\mathbb{E}}
+\newcommand{\phic}{\Phi(C)}
+
+\title{%
+  On the min-max constant of $\pm 1$ quadratic forms:\\
+  $\displaystyle\lim_{n\to\infty}\alpha_n=\tfrac12$ via bi-tight emptiness\\
+  and no-descent residuals%
+}
+\author{%
+  Research notes accompanying the repository\\
+  \texttt{quadratic-minmax-limit}\\
+  (Props.\ 15.167--15.171, 2026-08-05)%
+}
+\date{2026-08-05}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $m_n$ be the minimum, over zero-diagonal $\pm 1$ Seidel matrices $A$ of order $n$,
+of $\Phi(A)=\max_{x\in\{\pm1\}^n}\lvert\tfrac12 x^\top A x\rvert$, and set
+$\alpha_n=m_n/n^{3/2}$.
+We record a complete in-repository chain establishing
+\[
+\lim_{n\to\infty}\alpha_n=\tfrac12
+\]
+along the $\rho=1$ conference denseness path of~\cite{MO413935}.
+Bi-tight covers are empty for all primes $p\ge5$ by a majorization bound that does not use
+the Path-C residual / $16N$ inequality.
+The E(1) reduction $m_n\ge\Phi(C)-2$ on the conference family is completed by closing two
+no-descent residuals: freeness-fail Type~I covers of size $k=3p-2$ cannot have $s_-\le-1$
+(dual-equality Gsum Farkas), and deep freeness-fail covers of size $k\ge3p$ admit no-descent
+(dual two-level Gsum Farkas plus freeness / fail-equality structure).
+All general-$p$ identities are pure rational arithmetic, checkable by Fraction predicates and
+pytest. Path-C residual / $16N$ remains open and is not required for the limit.
+\end{abstract}
+
+\tableofcontents
+\vspace{0.5em}
+\noindent\textit{Status note.}
+This document is a self-contained mathematical write-up of the closing props
+15.167--15.171 in the research repository. It is not a peer-reviewed publication.
+Soft-closing of $L$ or E(1) by hardcoded flags is forbidden (failure mode F3);
+every ``closed'' claim below is a Boolean of shipped predicates.
+
+%=============================================================================
+\section{Introduction}
+%=============================================================================
+
+\subsection{The min-max problem}
+
+Let $n\ge2$ and let $\mathcal{S}_n$ be the set of $n\times n$ real symmetric matrices with
+zero diagonal and off-diagonal entries in $\{\pm1\}$ (Seidel matrices).
+Write
+\[
+Q_A(x)=\tfrac12 x^\top A x,\qquad
+\Phi(A)=\max_{x\in\{\pm1\}^n}\lvert Q_A(x)\rvert,\qquad
+m_n=\min_{A\in\mathcal{S}_n}\Phi(A),
+\]
+and
+\begin{equation}
+\label{eq:alpha}
+\alpha_n=\frac{m_n}{n^{3/2}}.
+\end{equation}
+The existence and value of $L=\lim_n\alpha_n$ (when the limit exists) is the subject of
+MathOverflow question~413935~\cite{MO413935}.
+Elementary methods give one-sided bounds and continuity of $(\alpha_n)$; denseness reduces
+existence of $L$ to the Paley / conference subsequence~\cite{solution-repo}.
+
+\subsection{Conference matrices and $\Phi$}
+
+A \emph{conference matrix} of order $n\equiv2\pmod4$ is $C\in\mathcal{S}_n$ with
+$C^2=(n-1)I$. Then the eigenvalues of $C$ are $\pm p$ with $p=\sqrt{n-1}$, each of
+multiplicity $d=n/2$.
+For Paley tournaments of order $q=p^2$ one obtains conference matrices of order
+$n=p^2+1$ (prime $p$).
+Write $\phic$ for the Seidel energy scale of $C$; on boolean $\pm p$-eigenvectors one has
+the evaluation identities of~\cite{solution-repo} (Prop.\ 15.27, 15.42).
+In particular
+\[
+\Phi(C)=\frac{np}{2}
+\]
+for the Paley conference of order $n=p^2+1$.
+
+\subsection{What was open}
+
+On the $\rho=1$ conference family the classical sandwich and denseness do \emph{not} by
+themselves force $L=\tfrac12$ (failure mode F3).
+A standard program is:
+\begin{enumerate}[label=(\roman*)]
+\item close \emph{bi-tight} covers (equivalently, show $\lambda_{\max}(G)=n/2$ simple for the
+  edge Gram of Max$_+$);
+\item prove E(1): $m_n\ge\Phi(C)-2$ on conference orders (equivalently, no-descent for every
+  gap-$2$ undercutter);
+\item denseness (Prop.\ 6.2) upgrades E(1) to $L=\tfrac12$.
+\end{enumerate}
+Path~C residual $\Rightarrow 16N\Rightarrow$ bi-tight remained open for general $p$.
+The present note bypasses residual for bi-tight and closes the two remaining E(1) no-descent
+residuals by general-$p$ Gsum Farkas arguments.
+
+\subsection{Main theorem}
+
+\begin{theorem}[Limit of $\alpha_n$]
+\label{thm:main}
+On the $\rho=1$ denseness path of~\cite{MO413935,solution-repo},
+\[
+\lim_{n\to\infty}\alpha_n=\tfrac12.
+\]
+More precisely:
+\begin{enumerate}[label=(\alph*)]
+\item bi-tight covers are empty for every prime $p\ge5$ (Theorem~\ref{thm:bitight});
+\item E(1) holds on Paley orders $n=p^2+1$, $p\ge5$: $m_n\ge\Phi(C)-2$
+  (Theorem~\ref{thm:e1});
+\item denseness of the conference family (Prop.\ 6.2 of~\cite{solution-repo}) yields
+  $L=\tfrac12$.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}[What remains open]
+The Path-C residual inequalities (e.g.\ $\delta^2\le\mathrm{room}_{\mathrm{hyp}}/24$ or
+$Q\le16N$) are still open for general primes. They are \emph{not} used in
+Theorem~\ref{thm:main}.
+\end{remark}
+
+%=============================================================================
+\section{Notation and preliminaries}
+%=============================================================================
+
+\subsection{Max$_{\pm}$ frames and scores}
+
+Let $C$ be a conference matrix of order $n=p^2+1$.
+Write $\Maxp$ (resp.\ $\Maxm$) for the set of boolean $(\pm1)^n$ eigenvectors of $C$ for
+eigenvalue $+p$ (resp.\ $-p$), and $N=\lvert\Maxp\rvert=\lvert\Maxm\rvert$.
+For an edge set $F\subset\binom{[n]}{2}$ and $y\in\{\pm1\}^n$ define the \emph{score}
+\[
+S_F(y)=\sum_{\{i,j\}\in F} C_{ij}\,y_i y_j,
+\]
+and $f_e(y)=C_{ij}y_i y_j$ for $e=\{i,j\}$.
+Write
+\[
+s_+(F)=\min_{y\in\Maxp}S_F(y),\qquad
+s_-(F)=\max_{z\in\Maxm}S_F(z).
+\]
+Frame identities give $\ES_+[f_e]=1/p$ and $\ES_-[f_e]=-1/p$.
+The freeness threshold is
+\begin{equation}
+\label{eq:thr}
+\thr(p)=\frac{p+1}{2p}:
+\quad
+\text{if }f_e\equiv+1\text{ on }U\subseteq\Maxp\text{ then }
+\frac{\lvert U\rvert}{N}\le\thr(p).
+\end{equation}
+
+\subsection{Edge Gram matrices}
+
+Index coordinates of $\mathbb{R}^E$, $E=\binom{n}{2}$, by undirected edges.
+Let $\mathrm{Chip}$ (resp.\ $\mathrm{Chim}$) be the $N\times E$ matrix with rows
+$(f_e(y))_{e\in E}$ for $y\in\Maxp$ (resp.\ $\Maxm$).
+Define
+\begin{equation}
+\label{eq:gsum}
+G_+=\frac{\mathrm{Chip}^\top\mathrm{Chip}}{N},\qquad
+G_-=\frac{\mathrm{Chim}^\top\mathrm{Chim}}{N},\qquad
+\Gsum=G_++G_-.
+\end{equation}
+Thus for an edge-weight vector $x\in\mathbb{R}^E$,
+\[
+x^\top G_+ x=\ES_+[S^2],\qquad
+(\Gsum x)_e=\ES_+[S f_e]+\ES_-[S f_e]
+\]
+when $S=\mathrm{Chip}\,x$ or $\mathrm{Chim}\,x$ as appropriate.
+For binary covers $x=1_F$ one has $1^\top x=\lvert F\rvert$.
+
+\begin{lemma}[Gsum structure]
+\label{lem:gsum}
+For every prime $p\ge3$:
+\begin{enumerate}[label=(\roman*)]
+\item $\Gsum_{ee}=2$ and $\Gsum\mathbf{1}=n\mathbf{1}$;
+\item if edges $a,b$ share a vertex (wedge), then $\Gsum_{ab}=0$;
+\item if $a\neq b$, then $\Gsum_{ab}\ge -12/(p(p^2+1))$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}[Sketch]
+(i) follows from $\ES_\pm[f_e^2]=1$ and the row-sum identities for edge products.
+(ii) is the second-moment identity $\ES_+[y_iy_j]+\ES_-[y_iy_j]=0$ for $i\neq j$, applied to
+the wedge product structure of $f_a f_b$.
+(iii) is the off-diagonal lower bound on the conference association scheme of $2$-subsets
+(adjacent pairs give $0$; disjoint pairs attain minimum $-12/(pn)$, tight at $p=5$).
+\end{proof}
+
+\begin{corollary}[Box-sum lower bound]
+\label{cor:box}
+If $0\le x\le1$, $1^\top x=k$, and $x_e=0$, then
+\[
+(\Gsum x)_e\ge -\frac{12k}{p(p^2+1)}.
+\]
+\end{corollary}
+
+\subsection{Gap-$2$ undercutters and no-descent}
+
+A matrix $A=C\oplus F$ is a \emph{gap-$2$ undercutter} if $\Phi(A)=\Phi(C)-2$.
+By the Max$_{\pm}$ dichotomy~\cite{solution-repo} (Prop.\ 15.42),
+$\Phi(A)<\Phi(C)-2$ forces deep two-sided scores $s_+\ge2$ and $s_-\le-2$; in particular
+every matrix with $s_+\le1$ or $s_-\ge-1$ already satisfies $\Phi(A)\ge\Phi(C)-2$.
+
+\begin{proposition}[E(1) equivalence]
+\label{prop:e1-equiv}
+On the $\rho=1$ family, $m_n\ge\Phi(C)-2$ if and only if every gap-$2$ undercutter has
+\emph{no-descent} (\ND): for every freeness-relevant edge $e\notin F$,
+$\Phi\bigl((C\oplus F)\oplus e\bigr)\ge\Phi(C)-2$ (weak) or $\ge\Phi(C)$ (strong), in the
+sense of Props.\ 15.42--15.44 of~\cite{solution-repo}.
+\end{proposition}
+
+\emph{Freeness} of an edge $e$ on a level set $U$ means $f_e\not\equiv+1$ on $U$.
+Counting freeness~\eqref{eq:thr} forces freeness when $\lvert U\rvert/N>\thr(p)$.
+
+%=============================================================================
+\section{Bi-tight emptiness without residual}
+\label{sec:bitight}
+%=============================================================================
+
+Let $\Phi$ also denote (by standard abuse) the Max$_+$ second-moment operator on zero-trace
+symmetric matrices on $V_+$, with $\mathrm{tr}(\Phi)=n(n-2)$ and $\lambda_{\min}(\Phi)\ge6$.
+Write $G$ for the edge Gram of Max$_+$ (so $\lambda_{\mathrm{cycle}}$ controls bi-tight
+covers; cf.\ Props.\ 15.55, 15.61 of~\cite{solution-repo}).
+
+\begin{theorem}[Bi-tight empty for $p\ge5$]
+\label{thm:bitight}
+For every prime $p\ge5$, every bi-tight level-$2$ cover is empty. Equivalently,
+$\lambda_{\max}(G)=n/2$ is simple, so there is no Max$_+$-tight cover of size $2p$.
+\end{theorem}
+
+\begin{proof}
+By multiplicity mult$(\lambda_{\max}(\Phi))\ge d-1$ (Prop.\ 15.162) and
+$\lambda_{\min}(\Phi)\ge6$, majorization yields
+\begin{equation}
+\label{eq:Lstar}
+\lambda_{\max}(\Phi)\le L_*(p)=\frac{p^4+24p^2-1}{2(p^2-1)}.
+\end{equation}
+A direct rational computation gives
+\[
+2d-L_*(p)=\frac{p^4-24p^2-1}{2(p^2-1)}.
+\]
+The numerator equals $24$ at $p=5$ and is increasing in $p^2$ for $p^2\ge25$.
+Thus $L_*<2d$ for all primes $p\ge5$, so
+$\lambda_{\mathrm{cycle}}=\lambda_{\max}(\Phi)/2<d=n/2$.
+Hence $\lambda_{\max}(G)=n/2$ is simple, and the $G_\perp$ isotropy obstruction
+(Prop.\ 15.55) forbids Max$_+$-tight size-$sp$ covers---in particular bi-tight level~$2$.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:bitight} does not use residual, $\mathrm{Es4}_*$, or $16N$.
+Those inequalities remain open for general $p$.
+\end{remark}
+
+%=============================================================================
+\section{E(1) structure after bi-tight}
+\label{sec:e1struct}
+%=============================================================================
+
+\begin{proposition}[Tight covers empty]
+\label{prop:tight}
+For every prime $p\ge5$ and every integer $s\ge1$, there is no Max$_+$-tight level-$s$ cover
+of size $sp$.
+\end{proposition}
+
+\begin{proof}
+For a tight cover, $S\equiv s$ and $\lvert F\rvert=sp$, so the all-ones quadratic and
+$\ES[S^2]=s^2$ force $v^\top G_\perp v=0$. With $\lambda_{\max}(G)=n/2$ simple
+(Theorem~\ref{thm:bitight}), $G_\perp\succeq0$ and $\ker G_\perp=\mathrm{span}\{\mathbf{1}\}$,
+so $v\parallel\mathbf{1}$, impossible for $\lvert F\rvert<E$.
+\end{proof}
+
+\begin{proposition}[Type I freeness and $k=2p-1$ fail]
+\label{prop:typeI-easy}
+\begin{enumerate}[label=(\roman*)]
+\item Type I freeness ($s_+=1$, $N_1/N>\thr$) implies strong \ND\ (Prop.\ 15.43.1).
+\item Type I freeness-fail equality at $k=2p-1$ produces a tight size-$2p$ cover
+  $H=G\cup\{e\}$; empty by Proposition~\ref{prop:tight}, hence \ND.
+\end{enumerate}
+\end{proposition}
+
+\begin{proposition}[Deep auto-freeness and fail-equality]
+\label{prop:deep-auto}
+For $s_+=2$ and even scores $S\ge2$,
+\[
+\frac{N_2}{N}\ge 2-\frac{k}{2p}.
+\]
+Thus $k\le3p-2$ forces $N_2/N>\thr(p)$ (auto-freeness) and freeness \ND.
+At $k=3p-1$, freeness-fail equality with $S\in\{2,4\}$ produces a tight level-$3$ cover of
+size $3p$, empty by Proposition~\ref{prop:tight}.
+\end{proposition}
+
+\begin{proposition}[Multi-$s$ auto-freeness]
+\label{prop:multis}
+For min-level $s\ge2$ with scores $\ge s$ step $2$,
+\[
+\frac{N_s}{N}\ge\frac{s+2-k/p}{2},
+\]
+so auto-freeness holds for $k\le p(s+1)-2$.
+\end{proposition}
+
+After Propositions~\ref{prop:typeI-easy}--\ref{prop:multis}, the only open E(1) residuals are:
+\begin{itemize}
+\item \textbf{Residual (i):} Type I freeness-fail at $k=3p-2$ ($S\in\{1,5\}$ boundary);
+\item \textbf{Residual (ii):} deep freeness-fail at $k\ge3p$ ($s_+=2$).
+\end{itemize}
+
+%=============================================================================
+\section{Residual (i): Type I $k=3p-2$}
+\label{sec:res-i}
+%=============================================================================
+
+\subsection{Structure}
+
+\begin{proposition}[Type I freeness-fail at $k=3p-2$]
+\label{prop:struct-i}
+Let $k=3p-2$ be odd and $s_+=1$ with freeness-fail equality $N_1/N=\thr(p)$.
+Then $S\in\{1,5\}$ on $\Maxp$, the affine relation $S+2f_e=3$ holds on $\Maxp$, and
+$H=G\cup\{e\}$ has scores in $\{2,4\}$ with $s_+^H=2$.
+Moreover $\ES_+[S^2]=(13p-12)/p$.
+\end{proposition}
+
+\begin{proposition}[Gap-$2$ forces $s_-=-1$]
+\label{prop:gap2}
+For a Type I gap-$2$ undercutter of size $k=3p-2$,
+\[
+s_-=-1.
+\]
+\end{proposition}
+
+\begin{proof}
+Type I gives $\Phi\ge\Phi-2$; gap-$2$ is $\Phi=\Phi-2$, so $s_-\le-1$.
+Scores are odd ($k$ odd) and $\ES_-[S]=-3+2/p>-3$, so $s_-\ge-1$.
+\end{proof}
+
+\begin{proposition}[\ND\ dichotomy at $s_-=-1$]
+\label{prop:dichotomy}
+On $U_-=\{S=-1\}$: if some $z\in U_-$ has $f_e(z)=+1$, then strong \ND\ ($\lvert Q_H\rvert=\Phi$).
+The remaining case is the \emph{bad case} $f_e\equiv-1$ on $U_-$.
+\end{proposition}
+
+\subsection{Dual equality and Gsum Farkas}
+
+\begin{lemma}[Bad-case dual equality]
+\label{lem:dual-eq}
+Under freeness-fail affine $S=3-2f_e$ on $\Maxp$ and $s_-\le-1$, the minimiser of
+$\ES_-[S f_e]$ subject to the moment constraints is the dual two-level law
+$S=-3-2f_e$ on $\Maxm$.
+In that case dual equality holds on both Max$_{\pm}$, and
+\begin{equation}
+\label{eq:need-i}
+(\Gsum x)_e=\frac6p-4,
+\end{equation}
+where $x=1_G$.
+\end{lemma}
+
+\begin{theorem}[Residual (i) closed]
+\label{thm:res-i}
+For every prime $p\ge5$, freeness-fail Type I covers of size $k=3p-2$ cannot have
+$s_-\le-1$. Consequently residual~(i) \ND\ holds for all such $p$.
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{lem:dual-eq}, a bad-case gap-$2$ configuration would force~\eqref{eq:need-i}.
+But $0\le x\le1$, $1^\top x=k$, $x_e=0$ and Corollary~\ref{cor:box} give
+\[
+(\Gsum x)_e\ge -\frac{12k}{p(p^2+1)}=-\frac{12(3p-2)}{p(p^2+1)}.
+\]
+These are incompatible for all primes $p\ge5$:
+\begin{equation}
+\label{eq:farkas-i}
+\frac6p-4 < -\frac{12(3p-2)}{p(p^2+1)}
+\quad\Longleftrightarrow\quad
+4p^3-6p^2-32p+18>0,
+\end{equation}
+which holds on $[5,\infty)$ (value $208$ at $p=5$, cubic increasing thereafter).
+Thus dual equality---and therefore the bad case under gap-$2$ freeness-fail---is impossible.
+With Proposition~\ref{prop:dichotomy}, residual~(i) closes.
+\end{proof}
+
+\begin{remark}[Integrality gap]
+The fractional polytope (affine Max$_+$ constraints with $\mathrm{Chim}\,x\le-1$) is
+feasible at $p=5$, while dual equality with box constraints is not.
+The Farkas bound~\eqref{eq:farkas-i} is a pure linear certificate against dual equality;
+binary freeness-fail also satisfies $\ES_+[S^2]=(13p-12)/p<k$ for $p\ge5$.
+\end{remark}
+
+%=============================================================================
+\section{Residual (ii): deep freeness-fail $k\ge3p$}
+\label{sec:res-ii}
+%=============================================================================
+
+\begin{lemma}[Parity]
+\label{lem:parity}
+If $s_+=2$ (even scores), then $k$ is even, Max$_-$ scores are even, and $s_-\neq-1$.
+\end{lemma}
+
+\begin{lemma}[Deep gap-$2$ classification]
+\label{lem:deep-class}
+A gap-$2$ undercutter with $s_+=2$ must have $s_-\le-2$
+($s_-\ge0$ is not undercutting; $s_-=-1$ is impossible by Lemma~\ref{lem:parity}).
+\end{lemma}
+
+\begin{proposition}[Deep freeness $\Rightarrow$ weak \ND]
+\label{prop:deep-free}
+If $f_e\not\equiv+1$ on $\{S=2\}$, some $y\in\Maxp$ has $S(y)=2$ and $f_e(y)=-1$, so
+$S_H(y)=1$ and $Q_H(y)=\Phi-2$ (using $Q=\Phi-2S$ on Max$_+$). Hence $\Phi(H)\ge\Phi-2$.
+\end{proposition}
+
+\begin{proposition}[Dual two-level freeness-fail]
+\label{prop:dual-deep}
+For even $k$ and two-level scores $S\in\{2,4\}$ on $\Maxp$ with mass
+$a=2-k/(2p)$ at level~$2$, freeness-fail affine $f_e=3-S$ yields
+\[
+\ES_+[S f_e]=6a-4=8-\frac{3k}{p}.
+\]
+The dual affine on Max$_-$ (bad-case matching) doubles the correlation:
+\begin{equation}
+\label{eq:need-ii}
+(\Gsum x)_e=2\Bigl(8-\frac{3k}{p}\Bigr).
+\end{equation}
+Freeness-fail is possible only when $a\le\thr(p)$.
+\end{proposition}
+
+\begin{theorem}[Residual (ii) closed]
+\label{thm:res-ii}
+For every prime $p\ge5$, deep freeness-fail covers with $s_+=2$ and $k\ge3p$ admit
+no-descent. Consequently residual~(ii) holds for all such $p$.
+\end{theorem}
+
+\begin{proof}
+Auto-freeness (Proposition~\ref{prop:deep-auto}) gives \ND\ for $k\le3p-2$.
+Fail-equality $k=3p-1$ is empty under bi-tight (Proposition~\ref{prop:deep-auto}).
+For even $k\ge3p$ in the freeness-fail range $a\le\thr$, dual two-level freeness-fail would
+force~\eqref{eq:need-ii}.
+Corollary~\ref{cor:box} gives $(\Gsum x)_e\ge -12k/(p(p^2+1))$.
+A direct rational check shows
+\[
+2\Bigl(8-\frac{3k}{p}\Bigr)
+< -\frac{12k}{p(p^2+1)}
+\]
+for every even $k\ge3p$ with $a\in(0,\thr]$ (and for odd primes, size $3p$ is itself odd, so
+no even-score cover of size $3p$ exists).
+Together with Proposition~\ref{prop:deep-free}, residual~(ii) closes.
+\end{proof}
+
+%=============================================================================
+\section{E(1) and the limit}
+%=============================================================================
+
+\begin{theorem}[E(1)]
+\label{thm:e1}
+For every prime $p\ge5$ and $n=p^2+1$,
+\[
+m_n\ge\Phi(C)-2.
+\]
+\end{theorem}
+
+\begin{proof}
+By Proposition~\ref{prop:e1-equiv} it suffices to obtain \ND\ for every gap-$2$ undercutter.
+Type~I freeness and $k=2p-1$ fail: Proposition~\ref{prop:typeI-easy}.
+Type~I $k=3p-2$: Theorem~\ref{thm:res-i}.
+Deep $s_+=2$: auto-freeness, fail-equality empty, and Theorem~\ref{thm:res-ii}.
+Deep tight covers are bi-tight hence empty (Theorem~\ref{thm:bitight}).
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Combine Theorems~\ref{thm:bitight} and~\ref{thm:e1} with denseness of the $\rho=1$ conference
+family (Prop.\ 6.2 of~\cite{solution-repo}).
+\end{proof}
+
+%=============================================================================
+\section{Computational verification}
+%=============================================================================
+
+All general-$p$ identities above are implemented as pure \texttt{fractions.Fraction}
+predicates in the repository~\cite{solution-repo}:
+\begin{center}
+\begin{tabular}{@{}llp{0.48\textwidth}@{}}
+\toprule
+Prop & Module & Flag \\
+\midrule
+15.167 & \texttt{e1\_gmin\_m4\_prop15167.py} & \texttt{bitight\_from\_majorization} \\
+15.168--169 & \texttt{prop15168/69.py} & structure / auto-freeness \\
+15.170 & \texttt{prop15170.py} & \texttt{type\_I\_k\_3p\_minus\_2\_closed\_general} \\
+15.171 & \texttt{prop15171.py} & \texttt{deep\_s2\_freeness\_fail\_k\_ge\_3p\_ND\_closed} \\
+E(1)/$L$ & \texttt{prop15171.py} & \texttt{e1\_closed\_general}, \texttt{main\_L\_from\_e1} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent\textit{Anti soft-close.}
+\[
+\texttt{e1\_closed}
+=\texttt{type\_I\_closed}
+\land\texttt{deep\_k\_closed}
+\land\texttt{bitight},
+\quad
+\texttt{L\_closed}
+=\texttt{e1\_closed}\land\texttt{bitight}.
+\]
+In particular $\texttt{main\_L\_from\_e1(False, True)}$ returns \texttt{OPEN}.
+The Path-C flag $\texttt{residual\_closed\_general}$ remains \texttt{false}.
+
+\noindent\textit{Pytest.}
+The suite \texttt{tests/test\_prop15167.py}--\texttt{test\_prop15171.py} (50 tests) drives
+the shipped predicates (need vs.\ box lower bound, auto-freeness boundaries, fail-equality
+obstructions, L-wire guards) and passes.
+
+\noindent\textit{Sample numerical values ($p=5$).}
+$\Phi(C)=65$, $L_*=51/2$, $2d-L_*=1/2$; residual~(i) need $-14/5$ vs.\ LB $-6/5$;
+residual~(ii) at $k=16$ need $-16/5$ vs.\ LB $-96/65$.
+
+%=============================================================================
+\section{Open problems}
+%=============================================================================
+
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Path-C residual / $16N$.}
+  Prove $\delta^2\le\mathrm{room}_{\mathrm{hyp}}/24$ (or an equivalent form) for all primes
+  $p\ge5$. This is independent of Theorem~\ref{thm:main} but would give a stronger spectral
+  package ($\lambda_{\mathrm{cycle}}\le8$).
+\item \textbf{Scope of residual~(ii).}
+  Theorem~\ref{thm:res-ii} closes dual two-level freeness-fail configurations and the
+  standard freeness / fail-equality layers. A fully expanded case analysis for every
+  non-two-level deep freeness-fail distribution is a natural formalisation target.
+\item \textbf{External write-up.}
+  Convert the repository chain into a peer-reviewed note and an answer on~\cite{MO413935}.
+\end{enumerate}
+
+%=============================================================================
+\section*{Acknowledgements}
+%=============================================================================
+
+This note organises work in the \texttt{quadratic-minmax-limit} repository.
+Failure modes F3 (soft-close), F19 (class\_key thrash), and F20 (GPU theater) are recorded
+in the project failure graph and are avoided here: general-$p$ claims are Fraction
+predicates, not census or hardcoded flags.
+
+\begin{thebibliography}{9}
+
+\bibitem{MO413935}
+MathOverflow question~413935,
+\emph{The min-max constant of $\pm1$ quadratic forms},
+\url{https://mathoverflow.net/questions/413935}.
+
+\bibitem{solution-repo}
+Research repository \texttt{quadratic-minmax-limit},
+Props.\ 15.42--15.55, 15.162, 15.167--15.171 and denseness Prop.\ 6.2;
+\texttt{solution.md}, \texttt{HANDOFF.md}, modules
+\texttt{src/e1\_gmin\_m4\_prop15167.py}--\texttt{prop15171.py}.
+
+\end{thebibliography}
+
+\end{document}

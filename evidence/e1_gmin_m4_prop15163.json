@@ -1,0 +1,262 @@
+{
+  "title": "Prop 15.163 Wick m\u2084 mass; Aut\u2080; H_C split; mult\u2265d OPEN",
+  "L_status": "OPEN",
+  "proved": {
+    "wick_T2_and_m4_mass": true,
+    "eta_room_algebra": true,
+    "T_counts_census": true,
+    "eta_room_usage_census": true,
+    "H_split_1_plus_d_minus_1": true,
+    "mult_ge_d_all_p": false,
+    "eta_bound_all_p": false,
+    "sixteen_N_all_p": false,
+    "residual_for_all_p_ge_5": false
+  },
+  "algebra": {
+    "theorem_A": {
+      "proved": true,
+      "theorem": "\u2211_{4-sets} T\u00b2 = n(n\u22121)(n\u22122)(n\u22125)/8 with mean T\u00b2=3(n\u22125)/(n\u22123); \u2211(m\u2084^W)\u00b2=(p\u2074\u22121)(p\u00b2\u22124)/(8p\u00b2).",
+      "by_p": {
+        "5": {
+          "mean_T2": "63/23",
+          "sum_T2": "40950",
+          "sum_T2_via_mean": "40950",
+          "match_sum_T2": true,
+          "wick_m4_sumsq": "1638/25",
+          "wick_via_T_over_p4": "1638/25",
+          "match_wick": true
+        },
+        "7": {
+          "mean_T2": "135/47",
+          "sum_T2": "661500",
+          "sum_T2_via_mean": "661500",
+          "match_sum_T2": true,
+          "wick_m4_sumsq": "13500/49",
+          "wick_via_T_over_p4": "13500/49",
+          "match_wick": true
+        },
+        "11": {
+          "mean_T2": "351/119",
+          "sum_T2": "25907310",
+          "sum_T2_via_mean": "25907310",
+          "match_sum_T2": true,
+          "wick_m4_sumsq": "214110/121",
+          "wick_via_T_over_p4": "214110/121",
+          "match_wick": true
+        },
+        "13": {
+          "mean_T2": "495/167",
+          "sum_T2": "99549450",
+          "sum_T2_via_mean": "99549450",
+          "match_sum_T2": true,
+          "wick_m4_sumsq": "589050/169",
+          "wick_via_T_over_p4": "589050/169",
+          "match_wick": true
+        },
+        "17": {
+          "mean_T2": "855/287",
+          "sum_T2": "859890600",
+          "sum_T2_via_mean": "859890600",
+          "match_sum_T2": true,
+          "wick_m4_sumsq": "2975400/289",
+          "wick_via_T_over_p4": "2975400/289",
+          "match_wick": true
+        },
+        "19": {
+          "mean_T2": "1071/359",
+          "sum_T2": "2099406330",
+          "sum_T2_via_mean": "2099406330",
+          "match_sum_T2": true,
+          "wick_m4_sumsq": "5815530/361",
+          "wick_via_T_over_p4": "5815530/361",
+          "match_wick": true
+        },
+        "23": {
+          "mean_T2": "1575/527",
+          "sum_T2": "9714820500",
+          "sum_T2_via_mean": "9714820500",
+          "match_sum_T2": true,
+          "wick_m4_sumsq": "18364500/529",
+          "wick_via_T_over_p4": "18364500/529",
+          "match_wick": true
+        },
+        "29": {
+          "mean_T2": "2511/839",
+          "sum_T2": "62233301970",
+          "sum_T2_via_mean": "62233301970",
+          "match_sum_T2": true,
+          "wick_m4_sumsq": "73999170/841",
+          "wick_via_T_over_p4": "73999170/841",
+          "match_wick": true
+        },
+        "31": {
+          "mean_T2": "2871/959",
+          "sum_T2": "106167512880",
+          "sum_T2_via_mean": "106167512880",
+          "match_sum_T2": true,
+          "wick_m4_sumsq": "110476080/961",
+          "wick_via_T_over_p4": "110476080/961",
+          "match_wick": true
+        },
+        "37": {
+          "mean_T2": "4095/1367",
+          "sum_T2": "437776834950",
+          "sum_T2_via_mean": "437776834950",
+          "match_sum_T2": true,
+          "wick_m4_sumsq": "319778550/1369",
+          "wick_via_T_over_p4": "319778550/1369",
+          "match_wick": true
+        }
+      }
+    },
+    "theorem_B": {
+      "proved": true,
+      "theorem": "Under Wick-orthogonality of \u03b7: 16N \u21d4 \u2211\u03b7\u00b2 \u2264 n(19p\u00b2\u22123)/(6p\u00b2).",
+      "by_p": {
+        "5": {
+          "eta_room": "6136/75",
+          "budget_minus_wick": "6136/75",
+          "match": true
+        },
+        "7": {
+          "eta_room": "23200/147",
+          "budget_minus_wick": "23200/147",
+          "match": true
+        },
+        "11": {
+          "eta_room": "140056/363",
+          "budget_minus_wick": "140056/363",
+          "match": true
+        },
+        "13": {
+          "eta_room": "272680/507",
+          "budget_minus_wick": "272680/507",
+          "match": true
+        },
+        "17": {
+          "eta_room": "795760/867",
+          "budget_minus_wick": "795760/867",
+          "match": true
+        },
+        "19": {
+          "eta_room": "1240936/1083",
+          "budget_minus_wick": "1240936/1083",
+          "match": true
+        },
+        "23": {
+          "eta_room": "2662720/1587",
+          "budget_minus_wick": "2662720/1587",
+          "match": true
+        },
+        "29": {
+          "eta_room": "6725896/2523",
+          "budget_minus_wick": "6725896/2523",
+          "match": true
+        },
+        "31": {
+          "eta_room": "8781136/2883",
+          "budget_minus_wick": "8781136/2883",
+          "match": true
+        },
+        "37": {
+          "eta_room": "17815480/4107",
+          "budget_minus_wick": "17815480/4107",
+          "match": true
+        }
+      }
+    },
+    "open": {
+      "residual_closed_general": false,
+      "sixteen_N_for_all_p": false,
+      "mult_ge_d_for_all_p": false,
+      "mult_ge_d_minus_1_for_all_p": true,
+      "wick_m4_mass_closed": true,
+      "eta_bound_for_all_p": false,
+      "L_status": "OPEN",
+      "open": "mult\u2265d: prove H_C split 1+(d\u22121) on V_max for all p, or Aut\u2080 embedding V\u208a\u21aaV_max.  \u03ba\u2084/m\u2084: prove \u2211\u03b7\u00b2\u2264n(19p\u00b2\u22123)/(6p\u00b2) by Weil."
+    }
+  },
+  "census": {
+    "T_counts": {
+      "certified": true,
+      "by_p": {
+        "5": {
+          "T_counts": {
+            "-3": 1650,
+            "-1": 5700,
+            "1": 6000,
+            "3": 1600
+          },
+          "sum_T2_live": "40950",
+          "sum_T2_closed": 40950,
+          "match": "True",
+          "wick_m4_sumsq_live": 65.52,
+          "wick_m4_sumsq_closed": 65.52
+        },
+        "7": {
+          "T_counts": {
+            "-3": 25676,
+            "-1": 91728,
+            "1": 84672,
+            "3": 28224
+          },
+          "sum_T2_live": "661500",
+          "sum_T2_closed": 661500,
+          "match": "True",
+          "wick_m4_sumsq_live": 275.51020408163265,
+          "wick_m4_sumsq_closed": 275.51020408163265
+        }
+      }
+    },
+    "eta_room": {
+      "certified": true,
+      "by_p": {
+        "5": {
+          "actual_m4_sumsq": 143.23076923076923,
+          "wick": 65.52,
+          "eta2": 77.71076923076923,
+          "eta_room": 81.81333333333333,
+          "eta2_over_room": 0.9498545782770033,
+          "under_room": true
+        },
+        "7": {
+          "actual_m4_sumsq": 390.9926650366748,
+          "wick": 275.51020408163265,
+          "eta2": 115.48246095504214,
+          "eta_room": 157.8231292517007,
+          "eta2_over_room": 0.7317207655341031,
+          "under_room": true
+        }
+      }
+    },
+    "H_split": {
+      "certified": true,
+      "by_p": {
+        "5": {
+          "d": 13,
+          "mult_top": 13,
+          "H_split_mults": {
+            "0.0333": 12,
+            "0.6": 1
+          },
+          "is_1_plus_d_minus_1": true,
+          "mult_eq_d": true
+        },
+        "7": {
+          "d": 25,
+          "mult_top": 25,
+          "H_split_mults": {
+            "-0.0": 24,
+            "1.0": 1
+          },
+          "is_1_plus_d_minus_1": true,
+          "mult_eq_d": true
+        }
+      }
+    }
+  },
+  "open_attack": "mult\u2265d: prove H_C split 1+(d\u22121) on V_max for all p, or Aut\u2080 embedding V\u208a\u21aaV_max.  \u03ba\u2084/m\u2084: prove \u2211\u03b7\u00b2\u2264n(19p\u00b2\u22123)/(6p\u00b2) by Weil.",
+  "F3": "no soft-close",
+  "F19": "no class_key thrash",
+  "F20": "algebra + census p=5,7"
+}

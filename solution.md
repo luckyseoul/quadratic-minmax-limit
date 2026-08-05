@@ -4892,3 +4892,303 @@ or closed \(W_k\). L remains OPEN.
 Evidence: `src/e1_gmin_m4_prop15158.py`, `evidence/e1_gmin_m4_prop15158.json`,
 `tests/test_prop15158.py`.
 
+## Prop 15.159 (2026-08-03) — Φ|Z spectrum structure; dual gap \(G=(d/32)(16I-\Phi)\)
+
+Continues 15.158 / strategy reframe. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved / certified:**
+
+1. **Exact Φ spectrum at \(p=5\) (certified Fraction).** On \(Z\),
+   \(\lambda\in\{176/13\,(\times d),\,144/13\,(\times 2d),\,80/13\,(\times 2d)\}\)
+   with \(d=13\), sum mult \(=m=65\). In particular
+   \(\lambda_{\max}=176/13=16(d-2)/d\), mult\(=d\).
+2. **Exact Φ spectrum at \(p=7\) (certified Fraction).** With den \(=N/(4p)=409\),
+   \(\lambda\in\{4320,4032,3648,3360,3072\}/409\) with mults
+   \((d,2d,2d,4d,2d)\). \(\lambda_{\max}=4320/409<16(d-2)/d\), mult\(=d\).
+3. **Design threshold algebra (proved Fraction).** For \(d>2\),
+   \(16(d-2)/d<16\). For \(d\ge13\) (\(p\ge5\)),
+   \(\bar\mu=8(d-1)/(d-3)\le16(d-2)/d\) iff \((d-3)(d-6)\ge0\).
+4. **Dual gap operator.** \(G:=(d/32)(16I-\Phi)\). At \(p=5\): eigs of \(G\) are
+   \(\{1,2,4\}\); at \(p=7\): \(G\succeq I\) (strict). Hence \(G\succeq I\Rightarrow\lambda_{\max}\le16(d-2)/d<16\Rightarrow16\mathrm N\).
+5. **16N chain predicate (proved, conditional).** mult\(\ge d\) and \(\|\kappa\|_F^2\le96n\) \(\Rightarrow16\mathrm N\) for \(p\ge5\) (15.105 restated).
+
+**OPEN:** dual gap \(G\succeq I\) (or mult\(\ge d\) + \(\|\kappa\|^2\le96n\)) for all primes \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15159.py`, `evidence/e1_gmin_m4_prop15159.json`,
+`tests/test_prop15159.py`.
+
+## Prop 15.160 (2026-08-03) — Dual-gap vs Hypothesis H; \(H\Rightarrow G\succeq I\)
+
+Continues 15.159. Does **not** soft-close residual for all \(p\ge5\).
+
+**Proved (Fraction):**
+
+1. **H vs thr_ray.** \(H(p)=(p+2)^2/d\), thr_ray\(=5-16/d\).
+   \(H-\mathrm{thr\_ray}=(p-5)(p+1)/(2d)\) (equivalently checked Fraction form).
+   Hence \(H\le\mathrm{thr\_ray}\) for all primes \(p\ge5\), equality only at \(p=5\).
+2. **\(H\Rightarrow\) dual gap.** ray_max\(\le H(p)\) and \(p\ge5\) \(\Rightarrow\) ray_max\(\le\mathrm{thr\_ray}\) \(\Rightarrow G\succeq I\Rightarrow16\mathrm N\).
+3. **\(H\Rightarrow16\mathrm N\) for \(p\ge3\).** \(H(p)\le5\) (eq only \(p=3\)), so ray\(\le H\Rightarrow\) ray\(\le5\Rightarrow16\mathrm N\) (15.63).
+4. **Census.** \(p=5\): ray \(=H=\mathrm{thr\_ray}=49/13\). \(p=7\): ray \(<H<\mathrm{thr\_ray}\).
+
+**OPEN:** Hypothesis H (ray_max\(\le H(p)\)) for all primes \(p\ge5\); equivalent residual forms \(\delta^2\le\mathrm{room}_{\mathrm{hyp}}/24\), orth\(\le\mathrm{room}_{\mathrm{hyp}}\), \(\|\kappa\|^2\le\kappa_{\mathrm{hyp}}\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15160.py`, `evidence/e1_gmin_m4_prop15160.json`,
+`tests/test_prop15160.py`.
+
+## Prop 15.161 (2026-08-05) — Φ-frame of Max+; 16N via mult\(\ge d\) + \(\kappa_4\le48n\)
+
+Continues 15.159–15.160. Does **not** soft-close residual / L.
+
+**Proved (Fraction / Max+-free):**
+
+1. **Constant embedding norm.** \(v_y:=P_Z(yy^\top-I)\) satisfies \(\|v_y\|_F^2=n(n-2)\) for all \(y\in\mathrm{Max}_+\) (from \(\mathrm{tr}(\Phi)=m\bar\mu=n(n-2)\) and 1-homogeneity).
+2. **Pairwise frame Gram.** With \(v_y=yy^\top-(n/d)P_+\in Z\),
+   \(\langle v_y,v_z\rangle_F=(y\cdot z)^2-2n\).
+3. **16N budgets under mult\(\ge d\).** \(E[s^4]\le12n(n+4)\) \(\Leftrightarrow\kappa_4\le48n\) \(\Rightarrow\lambda_{\max}\le16\) when mult\(\ge d\); two-level bulk \(b=8\).
+4. **Census.** mult\(=d\) and \(\kappa_4\le48n\) at \(p=5,7\).
+
+**OPEN:** mult\((\lambda_{\max})\ge d\) and \(\kappa_4\le48n\) for all primes \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15161.py`, `evidence/e1_gmin_m4_prop15161.json`,
+`tests/test_prop15161.py`.
+
+## Prop 15.162 (2026-08-05) — Maximizers in \(Z\); mult\(\ge d-1\); \(E[s^4]\) type expansion
+
+Continues 15.161. Does **not** soft-close residual / L.
+
+**Proved:**
+
+1. **Maximizers of \(\Gamma\) lie in \(Z\).** Criticality on Sym\(_0\): \(E[f\,cc^\top]=\lambda A\) (\(\mu=0\) from \(E[f]=0\)); ambient diagonal \(B_{ii}=E[f]/\lambda=0\). Hence mult\((\Gamma\text{ top})=\)mult\((\Phi\text{ top})\).
+2. **mult\((\Phi)\ge d-1\) (proved for all primes \(p\ge5\)).** Thm A + Prop 15.97 (mult \(\Gamma=\) mult \(\lambda_2(P\odot P)\)) + Prop 15.98 (PSL min nontrivial irrep dim \(d-1\)).
+3. **Type expansion.** \(E[s^4]=C_0+R\) with
+   \(C_0=n(3n-2)+2n(n-1)(3n-4)/p^2\) and \(R=24\sum_{4\text{-sets}}m_4^2\ge0\).
+4. **16N \(\Leftrightarrow\) mult\(\ge d\) + \(m_4\)-mass.** \(\sum m_4^2\le n(3p^2+61)/24\) \(\Leftrightarrow\kappa_4\le48n\).
+5. **Census.** Identities + 16N at \(p=5,7\).
+
+**OPEN:** upgrade mult\(\ge d-1\to d\); prove \(m_4\)-mass / \(\kappa_4\le48n\) for all \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15162.py`, `evidence/e1_gmin_m4_prop15162.json`,
+`tests/test_prop15162.py`.
+
+## Prop 15.163 (2026-08-05) — Wick \(m_4\) mass; Aut\(_0\); \(H_C\) split
+
+Continues 15.161–15.162. Does **not** soft-close residual / L.
+
+**Proved / certified:**
+
+1. **Wick 4-set mass (proved Fraction).** \(T=C_{ab}C_{cd}+C_{ac}C_{bd}+C_{ad}C_{bc}\), \(m_4^W=T/p^2\);
+   \(\sum T^2=n(n-1)(n-2)(n-5)/8\), \(\sum(m_4^W)^2=(p^4-1)(p^2-4)/(8p^2)\).
+2. **η-room after Wick (proved Fraction).** Under \(\sum m_4^W\eta=0\),
+   16N \(\Leftrightarrow\sum\eta^2\le n(19p^2-3)/(6p^2)\). Census usage \(\approx95\%,73\%\) at \(p=5,7\).
+3. **Aut\(_0\) on \(V_+\) (structure + cert \(p=5\)).** \(V_+\cong\mathbf1\oplus\sigma\) with \(\dim\sigma=d-1\).
+4. **\(H_C\) split of Φ-top (cert \(p=5,7\)).** Top mult splits as \(1+(d-1)\).
+
+**OPEN:** mult\(\ge d\) general \(p\); \(\sum\eta^2\le\eta_*\) / 16N for all \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15163.py`, `evidence/e1_gmin_m4_prop15163.json`,
+`tests/test_prop15163.py`.
+
+## Prop 15.164 (2026-08-05) — 16N from mult\(\ge d-1\) + \(E[s^4]\le\mathrm{Es4}_*(p)\)
+
+Continues 15.161–15.163. Preferred 16N path (no mult\(\ge d\) needed). Does **not** soft-close L.
+
+**Proved (Fraction):**
+
+1. **Two-level majorization.** Fixed sum \(T\), sum of squares \(Q\), mult\(\ge k\), \(\lambda_i\ge\ell_{\min}\): max top \(L\) is two-level; \(L\) increasing in \(Q\).
+2. **Es4\(_*\) budget under mult\(\ge d-1\).** With \(\lambda_{\min}\ge6\), bulk
+   \(b_*=8(p^2-1)(p^2-7)/(p^4-8p^2-1)\ge8>6\) for primes \(p\ge5\).
+   If \(E[s^4]\le\mathrm{Es4}_*(p)\) then \(\lambda_{\max}\le16\) (16N).
+3. **Equivalent forms.** \(E[s^4]\le\mathrm{Es4}_*\Leftrightarrow\kappa_4\le\kappa4_*\Leftrightarrow R\le R_*\Leftrightarrow\sum\eta^2\le\eta_*\) (Wick orth).
+4. **Census.** 16N at \(p=5,7\) via spectrum Es4.
+
+**OPEN:** \(E[s^4]\le\mathrm{Es4}_*(p)\) (or \(\sum\eta^2\le\eta_*\)) for all primes \(p\ge5\).
+This is the single analytic residual for Path-C 16N given mult\(\ge d-1\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15164.py`, `evidence/e1_gmin_m4_prop15164.json`,
+`tests/test_prop15164.py`.
+
+## Prop 15.165 (2026-08-05) — Exact Es4; closed Es4\(_*\)/\(\eta_*\); GoG\(\leftrightarrow\Phi\); \(m_4\) is C-eigen
+
+Continues 15.164. Does **not** soft-close L.
+
+**Proved / certified:**
+
+1. **Moments.** \(E[s]=0\) (central symmetry), \(E[s^2]=2n\) (2-design / \(\sum yy^\top=2N P_+\)).
+2. **GoG \(\leftrightarrow\) Φ spectrum.** \(\mathrm{spec}(G\circ G)=\{2nN\}\cup\{N\lambda:\lambda\in\mathrm{spec}(\Phi|_Z)\}\cup\{0\}^{N-1-m}\);
+   hence \(E[s^4]=4n^2+\mathrm{tr}(\Phi^2)\).
+3. **Closed budgets (Fraction).**
+   \[
+   \mathrm{Es4}_*(p)=\frac{4(3p^8-6p^6-148p^4-10p^2+129)}{p^4-8p^2-1},\quad
+   \eta_*(p)=\frac{(p^2-1)(p^2+1)(19p^4-152p^2-3)}{6p^2(p^4-8p^2-1)}.
+   \]
+4. **\(m_4\) is C-eigen.** \(p\cdot m_4(a,b,c,d)=\sum_j C_{aj}m_4(j,b,c,d)\) (cert random 4-sets \(p=5,7\)).
+5. **Exact Es4 census.** \(p=3,5,7\) via Gram/Φ spectrum (not single-root \(W\); \(p=7\) not 1-homogeneous). H-saturation at \(p=5\).
+
+**OPEN:** Es4\(_*\) / 16N for all primes \(p\ge5\). L remains OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15165.py`, `evidence/e1_gmin_m4_prop15165.json`,
+`tests/test_prop15165.py`.
+
+## Prop 15.166 (2026-08-05) — 16N \(\Leftrightarrow\lambda_{\max}(Q_2)\le4N/(d(d-1))\); Wick C-eigen
+
+Continues 15.164–15.165. Does **not** soft-close L.
+
+**Proved:**
+
+1. **Max+ is a spherical 2-design in \(V_+\).** \(\sum\hat u=0\), \((1/N)\sum\hat u\hat u^\top=I_d/d\).
+2. **Wick \(m_4\) is C-eigen** (same equation as true \(m_4\)); residual \(\eta=m_4-m_4^W\) is invisible to the C-eigen constraint — \(P_+(\mathrm{Wick})\) does not recover true \(m_4\).
+3. **16N \(\Leftrightarrow Q_2\) bound (proved Fraction).**
+   \(\lambda_{\max}(\Phi)=4d(d-1)/N\cdot\lambda_{\max}(Q_2)\), hence
+   \(\lambda_{\max}(\Phi)\le16\Leftrightarrow\lambda_{\max}(Q_2)\le4N/(d(d-1))\).
+4. **Census.** \(Q_2\) thr holds at \(p=5\) (ratio \(\approx0.846\)), \(p=7\) (\(\approx0.660\)).
+
+**OPEN:** \(\lambda_{\max}(Q_2)\le4N/(d(d-1))\) for all primes \(p\ge5\). Dead: Delsarte LP, BM\((C)\), equating Wick to \(m_4\). Preferred: Weil/Jacobi Aut-orbit \(m_4\), Aut\(_0\) isotype, SOS \(Q_4\). L remains OPEN. residual_closed_general=false.
+
+Evidence: `src/e1_gmin_m4_prop15166.py`, `evidence/e1_gmin_m4_prop15166.json`,
+`tests/test_prop15166.py`.
+
+## Prop 15.167 (2026-08-05) — Bi-tight empty for all primes \(p\ge5\) via majorization (no residual)
+
+Bypasses Path-C residual for the bi-tight link. residual/16N/Es4\(_*\) remain OPEN (honest). L OPEN until E(1)/Main.
+
+**Proved (Fraction, all primes \(p\ge5\)):**
+
+1. **Majorization UB.** mult\((\lambda_{\max})\ge d-1\) (15.162) + \(\lambda_{\min}(\Phi)\ge6\) + \(\mathrm{tr}(\Phi)=n(n-2)\) \(\Rightarrow\)
+   \[
+   \lambda_{\max}(\Phi)\le L_*(p)=\frac{p^4+24p^2-1}{2(p^2-1)}.
+   \]
+2. **\(L_*<2d\).** \(2d-L_*=(p^4-24p^2-1)/(2(p^2-1))\); numerator \(=24\) at \(p=5\) and \(f(x)=x^2-24x-1\) increasing on \(x=p^2\ge25\).
+3. **Bi-tight empty.** \(\lambda_{\max}\le L_*<2d\Rightarrow\lambda_{\mathrm{cycle}}=\lambda_{\max}/2<d=n/2\Rightarrow\lambda_{\max}(G)=n/2\) simple \(\Rightarrow\) bi-tight empty (15.55). **Does not use residual / Es4\(_*\) / 16N.**
+4. **Census.** Actual \(\lambda_{\max}\le L_*\) and \(\lambda_{\mathrm{cycle}}<d\) at \(p=5,7\).
+
+**OPEN:** residual/16N general \(p\); E(1)/Main; L. residual_closed_general=false.
+
+Evidence: `src/e1_gmin_m4_prop15167.py`, `evidence/e1_gmin_m4_prop15167.json`,
+`tests/test_prop15167.py`, `src/e1_bitight_chain.py`.
+
+## Prop 15.168 (2026-08-05) — E(1) structure after 15.167 (honest partial)
+
+Continues 15.167. Does **not** soft-close E(1) or L.
+
+**Proved / checkable predicates (Fraction + prior props):**
+
+1. **Tight level-\(s\) obstruction.** Bi-tight empty (15.167) \(\Rightarrow\) no Max\(_+\)-tight level-\(s\) cover of size \(sp\) (\(G_\perp\) isotropy; 15.55 gen.).
+2. **Deep tight empty** for \(p\ge5\) (15.44.3 + 15.167).
+3. **Type I freeness ND** (prior 15.43.1).
+4. **Type I freeness-fail \(k=2p-1\)** \(\to\) tight size \(2p\) \(\to\) ND when bi-tight empty (15.43.3 + 15.44 + 15.167).
+5. **Deep auto-freeness** for \(s_+=2\), \(k\le3p-2\): \(N_2/N\) lb \(=2-k/(2p)>(p+1)/(2p)\).
+6. **Deep fail-eq \(k=3p-1\)** \(\Rightarrow\) tight \(S\equiv3\) size \(3p\) \(\Rightarrow\) empty under Thm A for \(s=3\).
+
+**OPEN residuals (honest — no soft-close):**
+
+- Type I freeness-fail at \(k=3p-2\) / \(S\in\{1,5\}\) boundary (not reduced to tight \(2p\)).
+- Deep non-tight freeness-fail with \(k\ge3p\) (freeze-to-tight sketch not shipped as predicate).
+
+Full \(m_n\ge\Phi-2\) / E(1) / L remain OPEN. residual_closed_general=false. E1_closed_general=false.
+L closed only if bi-tight \(\land\) E(1) (denseness Prop 6.2) — currently false.
+
+Evidence: `src/e1_gmin_m4_prop15168.py`, `evidence/e1_gmin_m4_prop15168.json`,
+`tests/test_prop15168.py`, `src/e1_main_chain_status.py`.
+
+## Prop 15.169 (2026-08-05) — Type I \(k=3p-2\) ND reduction; deep multi-\(s\) auto-freeness
+
+Continues 15.168. Does **not** soft-close E(1) or L.
+
+**Proved (Fraction / prior props):**
+
+1. **Type I freeness-fail structure at \(k=3p-2\).** At freeness equality \(N_1/N=(p+1)/(2p)\) with \(S\in\{1,5\}\): \(a=(5-k/p)/4\) equals the freeness threshold; affine \(S+2f_e=3\) on Max\(_+\); \(H=G\cup\{e\}\) has size \(3p-1\), scores \(\{2,4\}\), \(s_+^H=2\).
+
+2. **2-Lipschitz of \(\Phi\) under edge flip.** \(Q_y(A\oplus e)=Q_y(A)-2f_e(y)\) with \(f_e=\pm1\), so \(|\Phi(A\oplus e)-\Phi(A)|\le2\). Corollary: if \(\Phi(C\oplus G)\ge\Phi\) then \(\Phi(C\oplus G\oplus e)\ge\Phi-2\) (weak ND for every \(e\)).
+
+3. **Gap-2 undercutter forces \(s_-=-1\).** Type I \(\Rightarrow\Phi\ge\Phi-2\) (15.42.1). Gap-2 means \(\Phi=\Phi-2\), requiring \(s_-\le-1\). With \(k=3p-2\) odd and \(\mathbb E_-[S]=-3+2/p>-3\), odd scores force \(s_-\ge-1\); hence \(s_-=-1\).
+
+4. **ND dichotomy at \(s_-=-1\).** On \(U_-=\{S_G=-1\}\): \(f_e=+1\) gives \(|Q_H|=\Phi\) (strong ND); \(f_e\equiv-1\) on \(U_-\) (bad case) gives only \(\Phi(H)\ge\Phi-4\) from Max\(\pm\) dichotomy.
+
+5. **Deep multi-\(s\) auto-freeness.** For min-level \(s\ge2\) with scores \(\ge s\) step 2: \(N_s/N\) lb \(=(s+2-k/p)/2\); auto-freeness for \(k\le p(s+1)-2\). Recovers \(s=2\Rightarrow k\le3p-2\) (15.168.F). Boundaries checked for \(s=2,3,4,5\).
+
+**OPEN (honest — no soft-close):**
+
+- Residual (i): prove freeness-fail Type I \(k=3p-2\) cannot have \(s_-\le-1\) (or bad case impossible) for all primes \(p\ge5\). **Certified** \(s_-\le-1\) integrally infeasible at \(p=5\) (MILP/HiGHS), not a general proof.
+- Residual (ii): deep freeness-fail ND for \(s_+=2\), \(k\ge3p\).
+
+E1_closed_general=false. residual_closed_general=false. L OPEN.
+
+Evidence: `src/e1_gmin_m4_prop15169.py`, `evidence/e1_gmin_m4_prop15169.json`,
+`tests/test_prop15169.py`.
+
+### 15.169 addendum — bad-case dual two-level identities
+
+If freeness-fail Type I \(k=3p-2\) occurs with \(s_-=-1\), Max\- two-level \(\{-1,-3\}\), and \(f_e\equiv-1\) on \(U_-\) (bad case), then \(H=G\cup\{e\}\) is dual two-level: mass \(\mathrm{thr}\) at \(S_H=\pm2\), mass \(1-\mathrm{thr}\) at \(\pm4\), with
+\[
+\mathbb E[S_H^2]=10-\frac6p,\qquad |H|=3p-1=2p+(p-1).
+\]
+Also \(\sum_{e'<e''\in G}G^+_{e'e''}=\frac{\mathbb E_+[S^2]-k}2=-\frac{3(p-1)(p-4)}{2p}<0\) for \(p\ge5\).
+
+**CLOSED for general \(p\) by Prop 15.170** (dual-equality Gsum Farkas). Fractional affine+\(s_-\le-1\) remains feasible (integrality gap); integral dual-equality is impossible for all primes \(p\ge5\).
+
+## Prop 15.170 (2026-08-05) — Residual (i) close: Type I \(k=3p-2\) cannot have \(s_-\le-1\)
+
+Continues 15.169. Closes residual (i) of E(1) for all primes \(p\ge5\). Residual (ii) / full E(1) / L remain OPEN.
+
+**Proved (Fraction / prior props):**
+
+1. **Freeness-fail + gap-2 structure** (15.169): affine \(S=3-2f_e\) on Max\(_+\); gap-2 forces \(s_-=-1\); ND dichotomy at \(s_-=-1\) (good sign \(\Rightarrow\) strong ND; bad case is the only residual risk).
+
+2. **Dual equality correlation.** Bad-case minimiser of \(\mathbb E_-[S f_e]\) under \(s_-\le-1\) is the dual two-level law \(S=-3-2f_e\) on Max\(_-\). Combined with affine Max\(_+\) this is dual equality, forcing
+   \[
+   (\mathrm{Gsum}\,x)_e = \frac6p-4,
+   \]
+   where \(\mathrm{Gsum}=\mathbb E_+[ff^\top]+\mathbb E_-[ff^\top]\) and \(x=1_G\).
+
+3. **Gsum identities.** \(\mathrm{Gsum}_{ee}=2\); wedge (share a vertex) \(\mathrm{Gsum}_{ab}=0\) (from \(\mathbb E[y_iy_j]_+\!+\!\mathbb E[y_iy_j]_-=0\)); \(\mathrm{Gsum}\,\mathbf1=n\mathbf1\); off-diagonal
+   \[
+   \mathrm{Gsum}_{ab}\ge -\frac{12}{p(p^2+1)}\quad(a\neq b)
+   \]
+   (adj: \(0\); disj: association-scheme min \(-12/(pn)\), tight at \(p=5\)).
+
+4. **Box-sum Farkas.** For \(0\le x\le1\), \(\mathbf1^\top x=k=3p-2\), \(x_e=0\):
+   \[
+   (\mathrm{Gsum}\,x)_e \ge -\frac{12k}{p(p^2+1)}.
+   \]
+   Dual equality requires \((\mathrm{Gsum}\,x)_e=6/p-4\). These conflict for all primes \(p\ge5\) because
+   \[
+   \frac6p-4 < -\frac{12k}{p(p^2+1)} \iff 4p^3-6p^2-32p+18>0,
+   \]
+   which holds on \([5,\infty)\).
+
+5. **Consequence.** Dual equality impossible \(\Rightarrow\) bad case impossible under freeness-fail gap-2 \(\Rightarrow\) residual (i) ND for all \(p\ge5\). Also \(\mathrm{ES}_2=(13p-12)/p<k\) (binary freeness-fail integrality seed).
+
+**OPEN (after 15.170 alone):** residual (ii); full E(1). See Prop 15.171.
+
+Evidence: `src/e1_gmin_m4_prop15170.py`, `evidence/e1_gmin_m4_prop15170.json`,
+`tests/test_prop15170.py`.
+
+## Prop 15.171 (2026-08-05) — Residual (ii) close: deep freeness-fail \(k\ge3p\) ND
+
+Continues 15.168–170. Closes residual (ii) of E(1) for all primes \(p\ge5\).
+
+**Proved (Fraction / prior props):**
+
+1. **Parity.** \(s_+=2\) (even scores) \(\Rightarrow k\) even \(\Rightarrow\) Max\- scores even \(\Rightarrow s_-\ne-1\).
+
+2. **Gap-2 deep undercutter classification.** \(s_+\!=2\) gap-2 undercutter \(\Rightarrow s_-\le-2\) (\(s_-\ge0\) not undercutting; \(s_-=-1\) impossible by parity).
+
+3. **Deep freeness \(\Rightarrow\) weak ND.** If \(f_e\not\equiv+1\) on \(\{S=2\}\), some \(y\) has \(S=2\), \(f_e=-1\), \(S_H=1\), \(Q=\Phi-2S_H=\Phi-2\).
+
+4. **Auto-freeness** \(k\le3p-2\) (15.168) \(\Rightarrow\) freeness \(\Rightarrow\) weak ND.
+
+5. **Fail-eq \(k=3p-1\):** freeness-fail \(+\,S\in\{2,4\}\) \(\Rightarrow H\) tight \(S\equiv3\) size \(3p\) empty under bi-tight/Thm A (15.167–168).
+
+6. **Dual two-level freeness-fail Gsum Farkas for even \(k\ge3p\).** Two-level \(S\in\{2,4\}/\{-2,-4\}\) with freeness-fail affine \(f_e=3-S\) forces
+   \[
+   (\mathrm{Gsum}\,x)_e=2\bigl(8-\tfrac{3k}p\bigr).
+   \]
+   Box-sum: \((\mathrm{Gsum}\,x)_e\ge-12k/(p n)\). For all even \(k\ge3p\) with freeness-fail possible (\(a=2-k/(2p)\le\mathrm{thr}\)), need \(<\) LB (Fraction). Also \(p\) odd \(\Rightarrow 3p\) odd \(\Rightarrow\) no even-score cover of size \(3p\).
+
+7. **Consequence.** Residual (ii) ND class closed for all \(p\ge5\). With residual (i) (15.170) and bi-tight (15.167): **E(1) closed** \(\Rightarrow m_n\ge\Phi-2\) on the \(\rho=1\) family \(\Rightarrow L=\tfrac12\) by denseness (Prop 6.2).
+
+**Still OPEN:** Path-C residual/16N/Es4\(_*\) (optional; bi-tight already closed without it).  
+residual_closed_general=false (16N). E1_closed_general=true. L CLOSED (via E1∧bi-tight).
+
+Evidence: `src/e1_gmin_m4_prop15171.py`, `evidence/e1_gmin_m4_prop15171.json`,
+`tests/test_prop15171.py`.

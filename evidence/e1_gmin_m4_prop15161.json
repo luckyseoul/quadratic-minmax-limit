@@ -1,0 +1,538 @@
+{
+  "title": "Prop 15.161 \u03a6-frame + 16N via mult\u2265d and \u03ba\u2084\u226448n",
+  "L_status": "OPEN",
+  "proved": {
+    "embedding_norm_identity": true,
+    "frame_gram_identity": true,
+    "majorization_16N_algebra": true,
+    "budget_vs_residual_comparison": true,
+    "census_p5_p7_predicate": true,
+    "mult_ge_d_all_p": false,
+    "kappa4_le_48n_all_p": false,
+    "sixteen_N_all_p": false,
+    "residual_for_all_p_ge_5": false
+  },
+  "algebra": {
+    "theorem_A": {
+      "proved": true,
+      "theorem": "\u2016v_y\u2016_F\u00b2 = n(n\u22122) = m \u03bc\u0304 for all primes p\u22653.",
+      "by_p": {
+        "3": {
+          "m_mu_bar": "80",
+          "n_n_minus_2": "80",
+          "equal": true
+        },
+        "5": {
+          "m_mu_bar": "624",
+          "n_n_minus_2": "624",
+          "equal": true
+        },
+        "7": {
+          "m_mu_bar": "2400",
+          "n_n_minus_2": "2400",
+          "equal": true
+        },
+        "11": {
+          "m_mu_bar": "14640",
+          "n_n_minus_2": "14640",
+          "equal": true
+        },
+        "13": {
+          "m_mu_bar": "28560",
+          "n_n_minus_2": "28560",
+          "equal": true
+        },
+        "17": {
+          "m_mu_bar": "83520",
+          "n_n_minus_2": "83520",
+          "equal": true
+        },
+        "19": {
+          "m_mu_bar": "130320",
+          "n_n_minus_2": "130320",
+          "equal": true
+        },
+        "23": {
+          "m_mu_bar": "279840",
+          "n_n_minus_2": "279840",
+          "equal": true
+        },
+        "29": {
+          "m_mu_bar": "707280",
+          "n_n_minus_2": "707280",
+          "equal": true
+        },
+        "31": {
+          "m_mu_bar": "923520",
+          "n_n_minus_2": "923520",
+          "equal": true
+        },
+        "37": {
+          "m_mu_bar": "1874160",
+          "n_n_minus_2": "1874160",
+          "equal": true
+        },
+        "41": {
+          "m_mu_bar": "2825760",
+          "n_n_minus_2": "2825760",
+          "equal": true
+        },
+        "43": {
+          "m_mu_bar": "3418800",
+          "n_n_minus_2": "3418800",
+          "equal": true
+        },
+        "47": {
+          "m_mu_bar": "4879680",
+          "n_n_minus_2": "4879680",
+          "equal": true
+        },
+        "53": {
+          "m_mu_bar": "7890480",
+          "n_n_minus_2": "7890480",
+          "equal": true
+        },
+        "59": {
+          "m_mu_bar": "12117360",
+          "n_n_minus_2": "12117360",
+          "equal": true
+        },
+        "61": {
+          "m_mu_bar": "13845840",
+          "n_n_minus_2": "13845840",
+          "equal": true
+        },
+        "67": {
+          "m_mu_bar": "20151120",
+          "n_n_minus_2": "20151120",
+          "equal": true
+        },
+        "71": {
+          "m_mu_bar": "25411680",
+          "n_n_minus_2": "25411680",
+          "equal": true
+        },
+        "73": {
+          "m_mu_bar": "28398240",
+          "n_n_minus_2": "28398240",
+          "equal": true
+        },
+        "79": {
+          "m_mu_bar": "38950080",
+          "n_n_minus_2": "38950080",
+          "equal": true
+        }
+      },
+      "n_checked": 21
+    },
+    "theorem_B": {
+      "proved": true,
+      "theorem": "v_y=yy\u1d40\u2212(n/d)P\u208a \u2208 Z for y\u2208Max+; \u27e8v_y,v_z\u27e9=(y\u00b7z)\u00b2\u22122n (conference + n=2d algebra, Max+-free).",
+      "by_p": {
+        "3": {
+          "n_over_d": "2",
+          "n2_over_d": "20",
+          "equals_2n": true
+        },
+        "5": {
+          "n_over_d": "2",
+          "n2_over_d": "52",
+          "equals_2n": true
+        },
+        "7": {
+          "n_over_d": "2",
+          "n2_over_d": "100",
+          "equals_2n": true
+        },
+        "11": {
+          "n_over_d": "2",
+          "n2_over_d": "244",
+          "equals_2n": true
+        },
+        "13": {
+          "n_over_d": "2",
+          "n2_over_d": "340",
+          "equals_2n": true
+        },
+        "17": {
+          "n_over_d": "2",
+          "n2_over_d": "580",
+          "equals_2n": true
+        },
+        "19": {
+          "n_over_d": "2",
+          "n2_over_d": "724",
+          "equals_2n": true
+        },
+        "23": {
+          "n_over_d": "2",
+          "n2_over_d": "1060",
+          "equals_2n": true
+        },
+        "29": {
+          "n_over_d": "2",
+          "n2_over_d": "1684",
+          "equals_2n": true
+        },
+        "31": {
+          "n_over_d": "2",
+          "n2_over_d": "1924",
+          "equals_2n": true
+        },
+        "37": {
+          "n_over_d": "2",
+          "n2_over_d": "2740",
+          "equals_2n": true
+        }
+      }
+    },
+    "theorem_D": {
+      "proved": true,
+      "theorem": "Under mult(\u03bb_max)\u2265d: E[s\u2074]\u226412n(n+4) \u21d4 \u03ba\u2084\u226448n \u21d4 tr(\u03a6\u00b2)\u22648p\u2074+64p\u00b2+56 \u21d2 two-level bulk b=8 and \u03bb_max\u226416 \u21d2 16N for primes p\u22655.",
+      "by_p": {
+        "5": {
+          "b": "8",
+          "b_eq_8": true,
+          "tr2_budget": "6656",
+          "tr2_closed": "6656",
+          "tr2_match": true,
+          "Es4_budget": "9360",
+          "Es4_closed": "9360",
+          "Es4_match": true,
+          "kappa4_budget": "1248",
+          "kappa4_closed": "1248",
+          "kappa4_match": true
+        },
+        "7": {
+          "b": "8",
+          "b_eq_8": true,
+          "tr2_budget": "22400",
+          "tr2_closed": "22400",
+          "tr2_match": true,
+          "Es4_budget": "32400",
+          "Es4_closed": "32400",
+          "Es4_match": true,
+          "kappa4_budget": "2400",
+          "kappa4_closed": "2400",
+          "kappa4_match": true
+        },
+        "11": {
+          "b": "8",
+          "b_eq_8": true,
+          "tr2_budget": "124928",
+          "tr2_closed": "124928",
+          "tr2_match": true,
+          "Es4_budget": "184464",
+          "Es4_closed": "184464",
+          "Es4_match": true,
+          "kappa4_budget": "5856",
+          "kappa4_closed": "5856",
+          "kappa4_match": true
+        },
+        "13": {
+          "b": "8",
+          "b_eq_8": true,
+          "tr2_budget": "239360",
+          "tr2_closed": "239360",
+          "tr2_match": true,
+          "Es4_budget": "354960",
+          "Es4_closed": "354960",
+          "Es4_match": true,
+          "kappa4_budget": "8160",
+          "kappa4_closed": "8160",
+          "kappa4_match": true
+        },
+        "17": {
+          "b": "8",
+          "b_eq_8": true,
+          "tr2_budget": "686720",
+          "tr2_closed": "686720",
+          "tr2_match": true,
+          "Es4_budget": "1023120",
+          "Es4_closed": "1023120",
+          "Es4_match": true,
+          "kappa4_budget": "13920",
+          "kappa4_closed": "13920",
+          "kappa4_match": true
+        },
+        "19": {
+          "b": "8",
+          "b_eq_8": true,
+          "tr2_budget": "1065728",
+          "tr2_closed": "1065728",
+          "tr2_match": true,
+          "Es4_budget": "1589904",
+          "Es4_closed": "1589904",
+          "Es4_match": true,
+          "kappa4_budget": "17376",
+          "kappa4_closed": "17376",
+          "kappa4_match": true
+        },
+        "23": {
+          "b": "8",
+          "b_eq_8": true,
+          "tr2_budget": "2272640",
+          "tr2_closed": "2272640",
+          "tr2_match": true,
+          "Es4_budget": "3396240",
+          "Es4_closed": "3396240",
+          "Es4_match": true,
+          "kappa4_budget": "25440",
+          "kappa4_closed": "25440",
+          "kappa4_match": true
+        },
+        "29": {
+          "b": "8",
+          "b_eq_8": true,
+          "tr2_budget": "5712128",
+          "tr2_closed": "5712128",
+          "tr2_match": true,
+          "Es4_budget": "8547984",
+          "Es4_closed": "8547984",
+          "Es4_match": true,
+          "kappa4_budget": "40416",
+          "kappa4_closed": "40416",
+          "kappa4_match": true
+        },
+        "31": {
+          "b": "8",
+          "b_eq_8": true,
+          "tr2_budget": "7449728",
+          "tr2_closed": "7449728",
+          "tr2_match": true,
+          "Es4_budget": "11151504",
+          "Es4_closed": "11151504",
+          "Es4_match": true,
+          "kappa4_budget": "46176",
+          "kappa4_closed": "46176",
+          "kappa4_match": true
+        },
+        "37": {
+          "b": "8",
+          "b_eq_8": true,
+          "tr2_budget": "15080960",
+          "tr2_closed": "15080960",
+          "tr2_match": true,
+          "Es4_budget": "22588560",
+          "Es4_closed": "22588560",
+          "Es4_match": true,
+          "kappa4_budget": "65760",
+          "kappa4_closed": "65760",
+          "kappa4_match": true
+        },
+        "41": {
+          "b": "8",
+          "b_eq_8": true,
+          "tr2_budget": "22713728",
+          "tr2_closed": "22713728",
+          "tr2_match": true,
+          "Es4_budget": "34030224",
+          "Es4_closed": "34030224",
+          "Es4_match": true,
+          "kappa4_budget": "80736",
+          "kappa4_closed": "80736",
+          "kappa4_match": true
+        },
+        "43": {
+          "b": "8",
+          "b_eq_8": true,
+          "tr2_budget": "27468800",
+          "tr2_closed": "27468800",
+          "tr2_match": true,
+          "Es4_budget": "41158800",
+          "Es4_closed": "41158800",
+          "Es4_match": true,
+          "kappa4_budget": "88800",
+          "kappa4_closed": "88800",
+          "kappa4_match": true
+        },
+        "47": {
+          "b": "8",
+          "b_eq_8": true,
+          "tr2_budget": "39178880",
+          "tr2_closed": "39178880",
+          "tr2_match": true,
+          "Es4_budget": "58715280",
+          "Es4_closed": "58715280",
+          "Es4_match": true,
+          "kappa4_budget": "106080",
+          "kappa4_closed": "106080",
+          "kappa4_match": true
+        },
+        "53": {
+          "b": "8",
+          "b_eq_8": true,
+          "tr2_budget": "63303680",
+          "tr2_closed": "63303680",
+          "tr2_match": true,
+          "Es4_budget": "94888080",
+          "Es4_closed": "94888080",
+          "Es4_match": true,
+          "kappa4_budget": "134880",
+          "kappa4_closed": "134880",
+          "kappa4_match": true
+        },
+        "59": {
+          "b": "8",
+          "b_eq_8": true,
+          "tr2_budget": "97161728",
+          "tr2_closed": "97161728",
+          "tr2_match": true,
+          "Es4_budget": "145659024",
+          "Es4_closed": "145659024",
+          "Es4_match": true,
+          "kappa4_budget": "167136",
+          "kappa4_closed": "167136",
+          "kappa4_match": true
+        }
+      },
+      "n_checked": 15
+    },
+    "theorem_F": {
+      "proved": true,
+      "theorem": "For primes p\u22657: 12n(n+4) \u2265 ED4_suf (16N Es\u2074 target weaker than residual). At p=5: 12n(n+4) slightly below ED4_suf.",
+      "by_p": {
+        "5": {
+          "Es4_16N": "9360",
+          "ED4_suf": "234832/25",
+          "sixteenN_budget_ge_residual_suf": false
+        },
+        "7": {
+          "Es4_16N": "32400",
+          "ED4_suf": "17303600/539",
+          "sixteenN_budget_ge_residual_suf": true
+        },
+        "11": {
+          "Es4_16N": "184464",
+          "ED4_suf": "643134224/3509",
+          "sixteenN_budget_ge_residual_suf": true
+        },
+        "13": {
+          "Es4_16N": "354960",
+          "ED4_suf": "2447305040/6929",
+          "sixteenN_budget_ge_residual_suf": true
+        },
+        "17": {
+          "Es4_16N": "1023120",
+          "ED4_suf": "20927604080/20519",
+          "sixteenN_budget_ge_residual_suf": true
+        },
+        "19": {
+          "Es4_16N": "1589904",
+          "ED4_suf": "50951207504/32129",
+          "sixteenN_budget_ge_residual_suf": true
+        },
+        "23": {
+          "Es4_16N": "3396240",
+          "ED4_suf": "234934070960/69299",
+          "sixteenN_budget_ge_residual_suf": true
+        },
+        "29": {
+          "Es4_16N": "8547984",
+          "ED4_suf": "1500742061264/175769",
+          "sixteenN_budget_ge_residual_suf": true
+        },
+        "31": {
+          "Es4_16N": "11151504",
+          "ED4_suf": "2558676798704/229679",
+          "sixteenN_budget_ge_residual_suf": true
+        },
+        "37": {
+          "Es4_16N": "22588560",
+          "ED4_suf": "10537445847440/466829",
+          "sixteenN_budget_ge_residual_suf": true
+        },
+        "41": {
+          "Es4_16N": "34030224",
+          "ED4_suf": "23954786976944/704339",
+          "sixteenN_budget_ge_residual_suf": true
+        },
+        "43": {
+          "Es4_16N": "41158800",
+          "ED4_suf": "35064614493200/852389",
+          "sixteenN_budget_ge_residual_suf": true
+        },
+        "47": {
+          "Es4_16N": "58715280",
+          "ED4_suf": "71433879486320/1217159",
+          "sixteenN_budget_ge_residual_suf": true
+        }
+      }
+    },
+    "open": {
+      "residual_closed_general": false,
+      "sixteen_N_for_all_p": false,
+      "mult_ge_d_for_all_p": false,
+      "kappa4_le_48n_for_all_p": false,
+      "L_status": "OPEN",
+      "open": "Prove (i) mult(\u03bb_max(\u03a6))\u2265d and (ii) \u03ba\u2084\u226448n for all primes p\u22655; then 15.161.D \u21d2 16N \u21d2 bi-tight.  Equivalently prove H / residual. Census only p=5,7."
+    }
+  },
+  "census": {
+    "certified": true,
+    "by_p": {
+      "5": {
+        "mult_top": 13,
+        "d": 13,
+        "mult_eq_d": true,
+        "Es4": "120400/13",
+        "Es4_budget": "9360",
+        "Es4_le_budget": true,
+        "kappa4": "14944/13",
+        "kappa4_le_48n": true,
+        "sixteen_N_predicate": true,
+        "ED4_suf": "234832/25",
+        "Es4_budget_vs_suf": "budget_tighter_than_residual"
+      },
+      "7": {
+        "mult_top": 25,
+        "d": 25,
+        "mult_eq_d": true,
+        "Es4": "12835984/409",
+        "Es4_budget": "32400",
+        "Es4_le_budget": true,
+        "kappa4": "565984/409",
+        "kappa4_le_48n": true,
+        "sixteen_N_predicate": true,
+        "ED4_suf": "17303600/539",
+        "Es4_budget_vs_suf": "budget_weaker_than_residual"
+      }
+    }
+  },
+  "budgets": {
+    "5": {
+      "Es4_16N": "9360",
+      "kappa4_48n": "1248",
+      "tr2_16N": "6656",
+      "bulk_b": "8"
+    },
+    "7": {
+      "Es4_16N": "32400",
+      "kappa4_48n": "2400",
+      "tr2_16N": "22400",
+      "bulk_b": "8"
+    },
+    "11": {
+      "Es4_16N": "184464",
+      "kappa4_48n": "5856",
+      "tr2_16N": "124928",
+      "bulk_b": "8"
+    },
+    "13": {
+      "Es4_16N": "354960",
+      "kappa4_48n": "8160",
+      "tr2_16N": "239360",
+      "bulk_b": "8"
+    },
+    "17": {
+      "Es4_16N": "1023120",
+      "kappa4_48n": "13920",
+      "tr2_16N": "686720",
+      "bulk_b": "8"
+    }
+  },
+  "open_attack": "Prove (i) mult(\u03bb_max(\u03a6))\u2265d and (ii) \u03ba\u2084\u226448n for all primes p\u22655; then 15.161.D \u21d2 16N \u21d2 bi-tight.  Equivalently prove H / residual. Census only p=5,7.",
+  "F3": "no soft-close",
+  "F19": "no class_key thrash",
+  "F20": "structure algebra; census optional"
+}

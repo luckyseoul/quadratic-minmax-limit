@@ -1,0 +1,227 @@
+{
+  "title": "Prop 15.167 bi-tight empty for all primes p\u22655 via mult\u2265d\u22121 + \u03bb_min\u22656 majorization (no residual)",
+  "L_status": "OPEN",
+  "proved": {
+    "L_star_closed_form": true,
+    "L_star_lt_2d_for_p_ge_5": true,
+    "bitight_empty_for_all_p_ge_5": true,
+    "census_spectrum_p5_p7": true,
+    "residual_closed_general": false,
+    "sixteen_N_for_all_p": false,
+    "E1_closed": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "theorem": "L_* = (T \u2212 6(m \u2212 (d\u22121)))/(d\u22121) = (p\u2074+24p\u00b2\u22121)/(2(p\u00b2\u22121)); majorization UB on \u03bb_max under mult\u2265d\u22121 and \u03bb_min\u22656.",
+      "by_p_sample": {
+        "5": {
+          "L_star_bulk6": "51/2",
+          "L_star_closed": "51/2",
+          "match": true
+        },
+        "7": {
+          "L_star_bulk6": "149/4",
+          "L_star_closed": "149/4",
+          "match": true
+        },
+        "11": {
+          "L_star_bulk6": "731/10",
+          "L_star_closed": "731/10",
+          "match": true
+        },
+        "13": {
+          "L_star_bulk6": "1359/14",
+          "L_star_closed": "1359/14",
+          "match": true
+        },
+        "17": {
+          "L_star_bulk6": "3769/24",
+          "L_star_closed": "3769/24",
+          "match": true
+        }
+      },
+      "n_checked": 23
+    },
+    "B": {
+      "proved": true,
+      "theorem": "2d\u2212L_*=(p\u2074\u221224p\u00b2\u22121)/(2(p\u00b2\u22121)); numerator >0 for primes p\u22655 (value 24 at p=5; f(x)=x\u00b2\u221224x\u22121 increasing on x\u226525).",
+      "f_at_p2_5": 24,
+      "by_p_sample": {
+        "5": {
+          "gap": "1/2",
+          "poly": 24,
+          "gap_positive": true
+        },
+        "7": {
+          "gap": "51/4",
+          "poly": 1224,
+          "gap_positive": true
+        },
+        "11": {
+          "gap": "489/10",
+          "poly": 11736,
+          "gap_positive": true
+        },
+        "13": {
+          "gap": "1021/14",
+          "poly": 24504,
+          "gap_positive": true
+        },
+        "17": {
+          "gap": "3191/24",
+          "poly": 76584,
+          "gap_positive": true
+        }
+      },
+      "n_checked": 44
+    },
+    "C": {
+      "proved": true,
+      "theorem": "For every prime p\u22655: \u03bb_max(\u03a6)\u2264L_*<2d \u21d2 \u03bb_cycle<d=n/2 \u21d2 \u03bb_max(G)=n/2 simple \u21d2 bi-tight empty (15.55). No residual / Es4_* / 16N used.",
+      "bitight_check": {
+        "proved": true,
+        "n_checked": 44,
+        "by_p_sample": {
+          "5": {
+            "p": 5,
+            "prime_ge_5": true,
+            "L_star": "51/2",
+            "two_d": 26,
+            "two_d_minus_L_star": "1/2",
+            "L_star_lt_2d": true,
+            "lambda_cycle_ub": "51/4",
+            "d": 13,
+            "lambda_cycle_ub_lt_d": true,
+            "bitight_empty": true,
+            "theorem": "15.167.C mult\u2265d\u22121 + \u03bb_min\u22656 \u21d2 bi-tight empty (no residual)"
+          },
+          "7": {
+            "p": 7,
+            "prime_ge_5": true,
+            "L_star": "149/4",
+            "two_d": 50,
+            "two_d_minus_L_star": "51/4",
+            "L_star_lt_2d": true,
+            "lambda_cycle_ub": "149/8",
+            "d": 25,
+            "lambda_cycle_ub_lt_d": true,
+            "bitight_empty": true,
+            "theorem": "15.167.C mult\u2265d\u22121 + \u03bb_min\u22656 \u21d2 bi-tight empty (no residual)"
+          },
+          "11": {
+            "p": 11,
+            "prime_ge_5": true,
+            "L_star": "731/10",
+            "two_d": 122,
+            "two_d_minus_L_star": "489/10",
+            "L_star_lt_2d": true,
+            "lambda_cycle_ub": "731/20",
+            "d": 61,
+            "lambda_cycle_ub_lt_d": true,
+            "bitight_empty": true,
+            "theorem": "15.167.C mult\u2265d\u22121 + \u03bb_min\u22656 \u21d2 bi-tight empty (no residual)"
+          },
+          "13": {
+            "p": 13,
+            "prime_ge_5": true,
+            "L_star": "1359/14",
+            "two_d": 170,
+            "two_d_minus_L_star": "1021/14",
+            "L_star_lt_2d": true,
+            "lambda_cycle_ub": "1359/28",
+            "d": 85,
+            "lambda_cycle_ub_lt_d": true,
+            "bitight_empty": true,
+            "theorem": "15.167.C mult\u2265d\u22121 + \u03bb_min\u22656 \u21d2 bi-tight empty (no residual)"
+          },
+          "17": {
+            "p": 17,
+            "prime_ge_5": true,
+            "L_star": "3769/24",
+            "two_d": 290,
+            "two_d_minus_L_star": "3191/24",
+            "L_star_lt_2d": true,
+            "lambda_cycle_ub": "3769/48",
+            "d": 145,
+            "lambda_cycle_ub_lt_d": true,
+            "bitight_empty": true,
+            "theorem": "15.167.C mult\u2265d\u22121 + \u03bb_min\u22656 \u21d2 bi-tight empty (no residual)"
+          },
+          "19": {
+            "p": 19,
+            "prime_ge_5": true,
+            "L_star": "5791/30",
+            "two_d": 362,
+            "two_d_minus_L_star": "5069/30",
+            "L_star_lt_2d": true,
+            "lambda_cycle_ub": "5791/60",
+            "d": 181,
+            "lambda_cycle_ub_lt_d": true,
+            "bitight_empty": true,
+            "theorem": "15.167.C mult\u2265d\u22121 + \u03bb_min\u22656 \u21d2 bi-tight empty (no residual)"
+          }
+        },
+        "all_bitight_empty": true
+      }
+    },
+    "open": {
+      "bi_tight_empty_for_all_p_ge_5": true,
+      "residual_closed_general": false,
+      "sixteen_N_for_all_p": false,
+      "Es4_star_for_all_p": false,
+      "E1_closed": false,
+      "L_status": "OPEN",
+      "note": "Bi-tight closed by majorization. Residual/16N still open (optional). E(1)+L closed in Prop 15.168 + denseness Prop 6.2."
+    }
+  },
+  "census": {
+    "certified": true,
+    "by_p": {
+      "5": {
+        "lambda_max_Phi": "176/13",
+        "mult": 13,
+        "d_minus_1": 12,
+        "mult_ge_d_minus_1": true,
+        "lambda_min": "80/13",
+        "lambda_min_ge_6": true,
+        "L_star": "51/2",
+        "lambda_max_le_L_star": true,
+        "lambda_cycle": "88/13",
+        "d": 13,
+        "lambda_cycle_lt_d": true,
+        "bitight_empty": true
+      },
+      "7": {
+        "lambda_max_Phi": "4320/409",
+        "mult": 25,
+        "d_minus_1": 24,
+        "mult_ge_d_minus_1": true,
+        "lambda_min": "3072/409",
+        "lambda_min_ge_6": true,
+        "L_star": "149/4",
+        "lambda_max_le_L_star": true,
+        "lambda_cycle": "2160/409",
+        "d": 25,
+        "lambda_cycle_lt_d": true,
+        "bitight_empty": true
+      }
+    }
+  },
+  "bitight_predicate": {
+    "p": 5,
+    "prime_ge_5": true,
+    "L_star": "51/2",
+    "two_d": 26,
+    "two_d_minus_L_star": "1/2",
+    "L_star_lt_2d": true,
+    "lambda_cycle_ub": "51/4",
+    "d": 13,
+    "lambda_cycle_ub_lt_d": true,
+    "bitight_empty": true,
+    "theorem": "15.167.C mult\u2265d\u22121 + \u03bb_min\u22656 \u21d2 bi-tight empty (no residual)"
+  },
+  "F3": "no soft-close of L (E(1)/Main still open)",
+  "F19": "no class_key thrash",
+  "F20": "CPU Fraction only for general-p claim"
+}

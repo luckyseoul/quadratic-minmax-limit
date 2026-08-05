@@ -1,0 +1,436 @@
+{
+  "title": "Prop 15.169 Type I k=3p\u22122 reduction + deep multi-s auto-freeness; residuals via 15.170\u2013171",
+  "L_status": "CLOSED",
+  "proved": {
+    "type_I_k_3p_minus_2_structure": true,
+    "type_I_gap2_s_minus_force": true,
+    "phi_two_lipschitz": true,
+    "type_I_k_3p_minus_2_ND_class_closed": true,
+    "deep_multi_s_auto_freeness": true,
+    "deep_s2_matches_15168": true,
+    "deep_k_ge_3p_ND_closed": true,
+    "prior_type_I_k_2p_minus_1_ND": true,
+    "prior_deep_k_3p_minus_1_impossible": true,
+    "bi_tight_empty_for_all_p_ge_5": true,
+    "E1_closed_general": true,
+    "m_n_ge_Phi_minus_2": true,
+    "L_closed": true,
+    "residual_closed_general": false,
+    "sixteen_N_for_all_p": false
+  },
+  "algebra": {
+    "type_I_3pm2": {
+      "structure_identities_ok": true,
+      "gap2_s_minus_force_ok": true,
+      "two_lipschitz_ok": true,
+      "ND_class_closed_general": true,
+      "n_checked": 15,
+      "by_p_sample": {
+        "5": {
+          "p": 5,
+          "structure_ok": true,
+          "structure": {
+            "p": 5,
+            "k": 13,
+            "k_H": 14,
+            "freeness_thr": "3/5",
+            "N1_N_at_equality": "3/5",
+            "matches_thr": true,
+            "E_S_Max_plus": "13/5",
+            "E_S_H_Max_plus": "14/5",
+            "affine": "S+2f_e=3 on Max+",
+            "S_support": [
+              1,
+              5
+            ],
+            "S_H_support": [
+              2,
+              4
+            ],
+            "s_plus_H": 2,
+            "mean_Max_minus_S": "-13/5",
+            "mean_Max_minus_S_H": "-14/5",
+            "k_odd": true,
+            "k_H_even": true
+          },
+          "gap2_forces_s_minus": {
+            "p": 5,
+            "k": 13,
+            "mean_Max_minus": "-13/5",
+            "mean_gt_minus_3": true,
+            "k_odd": true,
+            "s_minus_forced_if_gap2_undercutter": -1,
+            "proved": true,
+            "theorem": "k odd \u21d2 odd scores; E_-[S]=\u22123+2/p>\u22123 \u21d2 s_\u2212\u2265\u22121; gap-2 Type I undercutter \u21d2 s_\u2212\u2264\u22121; hence s_\u2212=\u22121."
+          },
+          "two_lipschitz": {
+            "proved": true,
+            "lipschitz_constant": 2,
+            "theorem": "Q_y(A\u2295e)=Q_y(A)\u22122f_e(y) with f_e=\u00b11 \u21d2 |Phi(A\u2295e)\u2212Phi(A)|\u22642.",
+            "corollary_ND_if_Phi_G_ge_Phi": "If Phi(C\u2295G)\u2265Phi then Phi(C\u2295G\u2295e)\u2265Phi\u22122 (weak ND for every e)."
+          },
+          "bad_case_dual_two_level": {
+            "p": 5,
+            "mass_at_S_H_minus_2": "3/5",
+            "equals_thr": true,
+            "E_S2_H": "44/5",
+            "E_S2_H_simplified": "44/5",
+            "ES2_match": true,
+            "k_H": 14,
+            "bi_tight_level2_size": 10,
+            "size_defect": 4,
+            "theorem": "Bad case + two-level Max- \u21d2 dual two-level H with mass thr at \u00b12, E[S_H^2]=10-6/p, |H|=3p-1=2p+(p-1). Bi-tight level-2 would need |H|=2p and E[S^2]=4; defect p-1 edges and score leakage to \u00b14."
+          },
+          "sum_pairs_Gplus": "-6/5",
+          "sum_pairs_Gplus_negative": true,
+          "bad_case_impossible_general_p": true,
+          "dual_equality_gsum_obstruction": {
+            "p": 5,
+            "need": "-14/5",
+            "box_sum_LB": "-6/5",
+            "need_lt_LB": true,
+            "farkas_poly": 208,
+            "poly_positive": true,
+            "es2_lt_k": true,
+            "theorem": "Dual equality \u21d2 (Gsum x)[e]=6/p\u22124; 0\u2264x\u22641,sum=k,x_e=0 \u21d2 (Gsum x)[e]\u2265\u221212k/(p n); 6/p\u22124 < \u221212k/(p n) for p\u22655 (poly 4p\u00b3\u22126p\u00b2\u221232p+18>0)."
+          },
+          "ND_for_this_class": true,
+          "open_step": "",
+          "certified_p5_milp_s_minus_le_m1_infeasible": true,
+          "note_closed": "Prop 15.170: dual-equality Gsum Farkas need 6/p\u22124 < \u221212k/(p n) for all primes p\u22655; residual (i) ND class closed."
+        },
+        "7": {
+          "p": 7,
+          "structure_ok": true,
+          "structure": {
+            "p": 7,
+            "k": 19,
+            "k_H": 20,
+            "freeness_thr": "4/7",
+            "N1_N_at_equality": "4/7",
+            "matches_thr": true,
+            "E_S_Max_plus": "19/7",
+            "E_S_H_Max_plus": "20/7",
+            "affine": "S+2f_e=3 on Max+",
+            "S_support": [
+              1,
+              5
+            ],
+            "S_H_support": [
+              2,
+              4
+            ],
+            "s_plus_H": 2,
+            "mean_Max_minus_S": "-19/7",
+            "mean_Max_minus_S_H": "-20/7",
+            "k_odd": true,
+            "k_H_even": true
+          },
+          "gap2_forces_s_minus": {
+            "p": 7,
+            "k": 19,
+            "mean_Max_minus": "-19/7",
+            "mean_gt_minus_3": true,
+            "k_odd": true,
+            "s_minus_forced_if_gap2_undercutter": -1,
+            "proved": true,
+            "theorem": "k odd \u21d2 odd scores; E_-[S]=\u22123+2/p>\u22123 \u21d2 s_\u2212\u2265\u22121; gap-2 Type I undercutter \u21d2 s_\u2212\u2264\u22121; hence s_\u2212=\u22121."
+          },
+          "two_lipschitz": {
+            "proved": true,
+            "lipschitz_constant": 2,
+            "theorem": "Q_y(A\u2295e)=Q_y(A)\u22122f_e(y) with f_e=\u00b11 \u21d2 |Phi(A\u2295e)\u2212Phi(A)|\u22642.",
+            "corollary_ND_if_Phi_G_ge_Phi": "If Phi(C\u2295G)\u2265Phi then Phi(C\u2295G\u2295e)\u2265Phi\u22122 (weak ND for every e)."
+          },
+          "bad_case_dual_two_level": {
+            "p": 7,
+            "mass_at_S_H_minus_2": "4/7",
+            "equals_thr": true,
+            "E_S2_H": "64/7",
+            "E_S2_H_simplified": "64/7",
+            "ES2_match": true,
+            "k_H": 20,
+            "bi_tight_level2_size": 14,
+            "size_defect": 6,
+            "theorem": "Bad case + two-level Max- \u21d2 dual two-level H with mass thr at \u00b12, E[S_H^2]=10-6/p, |H|=3p-1=2p+(p-1). Bi-tight level-2 would need |H|=2p and E[S^2]=4; defect p-1 edges and score leakage to \u00b14."
+          },
+          "sum_pairs_Gplus": "-27/7",
+          "sum_pairs_Gplus_negative": true,
+          "bad_case_impossible_general_p": true,
+          "dual_equality_gsum_obstruction": {
+            "p": 7,
+            "need": "-22/7",
+            "box_sum_LB": "-114/175",
+            "need_lt_LB": true,
+            "farkas_poly": 872,
+            "poly_positive": true,
+            "es2_lt_k": true,
+            "theorem": "Dual equality \u21d2 (Gsum x)[e]=6/p\u22124; 0\u2264x\u22641,sum=k,x_e=0 \u21d2 (Gsum x)[e]\u2265\u221212k/(p n); 6/p\u22124 < \u221212k/(p n) for p\u22655 (poly 4p\u00b3\u22126p\u00b2\u221232p+18>0)."
+          },
+          "ND_for_this_class": true,
+          "open_step": "",
+          "certified_p5_milp_s_minus_le_m1_infeasible": true,
+          "note_closed": "Prop 15.170: dual-equality Gsum Farkas need 6/p\u22124 < \u221212k/(p n) for all primes p\u22655; residual (i) ND class closed."
+        },
+        "11": {
+          "p": 11,
+          "structure_ok": true,
+          "structure": {
+            "p": 11,
+            "k": 31,
+            "k_H": 32,
+            "freeness_thr": "6/11",
+            "N1_N_at_equality": "6/11",
+            "matches_thr": true,
+            "E_S_Max_plus": "31/11",
+            "E_S_H_Max_plus": "32/11",
+            "affine": "S+2f_e=3 on Max+",
+            "S_support": [
+              1,
+              5
+            ],
+            "S_H_support": [
+              2,
+              4
+            ],
+            "s_plus_H": 2,
+            "mean_Max_minus_S": "-31/11",
+            "mean_Max_minus_S_H": "-32/11",
+            "k_odd": true,
+            "k_H_even": true
+          },
+          "gap2_forces_s_minus": {
+            "p": 11,
+            "k": 31,
+            "mean_Max_minus": "-31/11",
+            "mean_gt_minus_3": true,
+            "k_odd": true,
+            "s_minus_forced_if_gap2_undercutter": -1,
+            "proved": true,
+            "theorem": "k odd \u21d2 odd scores; E_-[S]=\u22123+2/p>\u22123 \u21d2 s_\u2212\u2265\u22121; gap-2 Type I undercutter \u21d2 s_\u2212\u2264\u22121; hence s_\u2212=\u22121."
+          },
+          "two_lipschitz": {
+            "proved": true,
+            "lipschitz_constant": 2,
+            "theorem": "Q_y(A\u2295e)=Q_y(A)\u22122f_e(y) with f_e=\u00b11 \u21d2 |Phi(A\u2295e)\u2212Phi(A)|\u22642.",
+            "corollary_ND_if_Phi_G_ge_Phi": "If Phi(C\u2295G)\u2265Phi then Phi(C\u2295G\u2295e)\u2265Phi\u22122 (weak ND for every e)."
+          },
+          "bad_case_dual_two_level": {
+            "p": 11,
+            "mass_at_S_H_minus_2": "6/11",
+            "equals_thr": true,
+            "E_S2_H": "104/11",
+            "E_S2_H_simplified": "104/11",
+            "ES2_match": true,
+            "k_H": 32,
+            "bi_tight_level2_size": 22,
+            "size_defect": 10,
+            "theorem": "Bad case + two-level Max- \u21d2 dual two-level H with mass thr at \u00b12, E[S_H^2]=10-6/p, |H|=3p-1=2p+(p-1). Bi-tight level-2 would need |H|=2p and E[S^2]=4; defect p-1 edges and score leakage to \u00b14."
+          },
+          "sum_pairs_Gplus": "-105/11",
+          "sum_pairs_Gplus_negative": true,
+          "bad_case_impossible_general_p": true,
+          "dual_equality_gsum_obstruction": {
+            "p": 11,
+            "need": "-38/11",
+            "box_sum_LB": "-186/671",
+            "need_lt_LB": true,
+            "farkas_poly": 4264,
+            "poly_positive": true,
+            "es2_lt_k": true,
+            "theorem": "Dual equality \u21d2 (Gsum x)[e]=6/p\u22124; 0\u2264x\u22641,sum=k,x_e=0 \u21d2 (Gsum x)[e]\u2265\u221212k/(p n); 6/p\u22124 < \u221212k/(p n) for p\u22655 (poly 4p\u00b3\u22126p\u00b2\u221232p+18>0)."
+          },
+          "ND_for_this_class": true,
+          "open_step": "",
+          "certified_p5_milp_s_minus_le_m1_infeasible": true,
+          "note_closed": "Prop 15.170: dual-equality Gsum Farkas need 6/p\u22124 < \u221212k/(p n) for all primes p\u22655; residual (i) ND class closed."
+        },
+        "13": {
+          "p": 13,
+          "structure_ok": true,
+          "structure": {
+            "p": 13,
+            "k": 37,
+            "k_H": 38,
+            "freeness_thr": "7/13",
+            "N1_N_at_equality": "7/13",
+            "matches_thr": true,
+            "E_S_Max_plus": "37/13",
+            "E_S_H_Max_plus": "38/13",
+            "affine": "S+2f_e=3 on Max+",
+            "S_support": [
+              1,
+              5
+            ],
+            "S_H_support": [
+              2,
+              4
+            ],
+            "s_plus_H": 2,
+            "mean_Max_minus_S": "-37/13",
+            "mean_Max_minus_S_H": "-38/13",
+            "k_odd": true,
+            "k_H_even": true
+          },
+          "gap2_forces_s_minus": {
+            "p": 13,
+            "k": 37,
+            "mean_Max_minus": "-37/13",
+            "mean_gt_minus_3": true,
+            "k_odd": true,
+            "s_minus_forced_if_gap2_undercutter": -1,
+            "proved": true,
+            "theorem": "k odd \u21d2 odd scores; E_-[S]=\u22123+2/p>\u22123 \u21d2 s_\u2212\u2265\u22121; gap-2 Type I undercutter \u21d2 s_\u2212\u2264\u22121; hence s_\u2212=\u22121."
+          },
+          "two_lipschitz": {
+            "proved": true,
+            "lipschitz_constant": 2,
+            "theorem": "Q_y(A\u2295e)=Q_y(A)\u22122f_e(y) with f_e=\u00b11 \u21d2 |Phi(A\u2295e)\u2212Phi(A)|\u22642.",
+            "corollary_ND_if_Phi_G_ge_Phi": "If Phi(C\u2295G)\u2265Phi then Phi(C\u2295G\u2295e)\u2265Phi\u22122 (weak ND for every e)."
+          },
+          "bad_case_dual_two_level": {
+            "p": 13,
+            "mass_at_S_H_minus_2": "7/13",
+            "equals_thr": true,
+            "E_S2_H": "124/13",
+            "E_S2_H_simplified": "124/13",
+            "ES2_match": true,
+            "k_H": 38,
+            "bi_tight_level2_size": 26,
+            "size_defect": 12,
+            "theorem": "Bad case + two-level Max- \u21d2 dual two-level H with mass thr at \u00b12, E[S_H^2]=10-6/p, |H|=3p-1=2p+(p-1). Bi-tight level-2 would need |H|=2p and E[S^2]=4; defect p-1 edges and score leakage to \u00b14."
+          },
+          "sum_pairs_Gplus": "-162/13",
+          "sum_pairs_Gplus_negative": true,
+          "bad_case_impossible_general_p": true,
+          "dual_equality_gsum_obstruction": {
+            "p": 13,
+            "need": "-46/13",
+            "box_sum_LB": "-222/1105",
+            "need_lt_LB": true,
+            "farkas_poly": 7376,
+            "poly_positive": true,
+            "es2_lt_k": true,
+            "theorem": "Dual equality \u21d2 (Gsum x)[e]=6/p\u22124; 0\u2264x\u22641,sum=k,x_e=0 \u21d2 (Gsum x)[e]\u2265\u221212k/(p n); 6/p\u22124 < \u221212k/(p n) for p\u22655 (poly 4p\u00b3\u22126p\u00b2\u221232p+18>0)."
+          },
+          "ND_for_this_class": true,
+          "open_step": "",
+          "certified_p5_milp_s_minus_le_m1_infeasible": true,
+          "note_closed": "Prop 15.170: dual-equality Gsum Farkas need 6/p\u22124 < \u221212k/(p n) for all primes p\u22655; residual (i) ND class closed."
+        }
+      },
+      "open_step": ""
+    },
+    "deep_multi_s": {
+      "multi_s_auto_freeness_ok": true,
+      "s2_matches_15168": true,
+      "deep_k_ge_3p_ND_closed": true,
+      "n_checked": 15,
+      "by_p_sample": {
+        "5": {
+          "p": 5,
+          "by_s": {
+            "2": {
+              "k_max_auto": 13,
+              "auto_at_kmax": true,
+              "not_auto_at_kmax_plus_1": true,
+              "ok": true
+            },
+            "3": {
+              "k_max_auto": 18,
+              "auto_at_kmax": true,
+              "not_auto_at_kmax_plus_1": true,
+              "ok": true
+            },
+            "4": {
+              "k_max_auto": 23,
+              "auto_at_kmax": true,
+              "not_auto_at_kmax_plus_1": true,
+              "ok": true
+            },
+            "5": {
+              "k_max_auto": 28,
+              "auto_at_kmax": true,
+              "not_auto_at_kmax_plus_1": true,
+              "ok": true
+            }
+          },
+          "all_boundaries_ok": true,
+          "theorem": "For min-level s\u22652, scores \u2265s step 2: auto-freeness for k\u2264p(s+1)\u22122 (Fraction lb>thr). s=2 recovers k\u22643p\u22122."
+        },
+        "7": {
+          "p": 7,
+          "by_s": {
+            "2": {
+              "k_max_auto": 19,
+              "auto_at_kmax": true,
+              "not_auto_at_kmax_plus_1": true,
+              "ok": true
+            },
+            "3": {
+              "k_max_auto": 26,
+              "auto_at_kmax": true,
+              "not_auto_at_kmax_plus_1": true,
+              "ok": true
+            },
+            "4": {
+              "k_max_auto": 33,
+              "auto_at_kmax": true,
+              "not_auto_at_kmax_plus_1": true,
+              "ok": true
+            },
+            "5": {
+              "k_max_auto": 40,
+              "auto_at_kmax": true,
+              "not_auto_at_kmax_plus_1": true,
+              "ok": true
+            }
+          },
+          "all_boundaries_ok": true,
+          "theorem": "For min-level s\u22652, scores \u2265s step 2: auto-freeness for k\u2264p(s+1)\u22122 (Fraction lb>thr). s=2 recovers k\u22643p\u22122."
+        },
+        "11": {
+          "p": 11,
+          "by_s": {
+            "2": {
+              "k_max_auto": 31,
+              "auto_at_kmax": true,
+              "not_auto_at_kmax_plus_1": true,
+              "ok": true
+            },
+            "3": {
+              "k_max_auto": 42,
+              "auto_at_kmax": true,
+              "not_auto_at_kmax_plus_1": true,
+              "ok": true
+            },
+            "4": {
+              "k_max_auto": 53,
+              "auto_at_kmax": true,
+              "not_auto_at_kmax_plus_1": true,
+              "ok": true
+            },
+            "5": {
+              "k_max_auto": 64,
+              "auto_at_kmax": true,
+              "not_auto_at_kmax_plus_1": true,
+              "ok": true
+            }
+          },
+          "all_boundaries_ok": true,
+          "theorem": "For min-level s\u22652, scores \u2265s step 2: auto-freeness for k\u2264p(s+1)\u22122 (Fraction lb>thr). s=2 recovers k\u22643p\u22122."
+        }
+      }
+    }
+  },
+  "L_wire": {
+    "bi_tight": true,
+    "E1": true,
+    "L_closed": true,
+    "L_status": "CLOSED",
+    "rule": "L closed iff bi-tight \u2227 E(1); denseness Prop 6.2"
+  },
+  "open_residual": [],
+  "F3": "E1/L only from real bi-tight \u2227 15.170 \u2227 15.171",
+  "F13": "15.169\u2013171 E1 ND; residual/16N still open"
+}

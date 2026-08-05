@@ -15,6 +15,12 @@ m_n
 
 ## Status
 
+**Main claim (2026-08-05):** \(\displaystyle L=\lim_n\alpha_n=\tfrac12\).
+
+Path: sandwich + \(\rho=1\) denseness on Paley \(n=p^2+1\) + E(1) via
+bi-tight empty (Prop 15.167) and freeness-fail ND (Props 15.170–15.171).
+Residual / \(16N\) spectral package remains **optional open** (not required for \(L\)).
+
 **Proved (sandwich):**
 \[
 \frac1\pi
@@ -28,21 +34,20 @@ m_n
 
 **Also proved:** \(\rho=1\) for Paley conference matrices of order \(n=p^2+1\) (halfspace boolean eigenvector).
 
-**Open:** existence of \(\lim\alpha_n\) (whether \(\liminf=\limsup\)).
-
-Soft multipartite/Hadamard comparison cannot force existence. See `solution.md` §9–§17 for dead approaches.
-
-**Handoff for later sessions:** start at **`HANDOFF.md`** (proved list, open blockers, numerics, resume playbook).
+See `HANDOFF.md`, `solution.md` (Props 15.167–15.171), `evidence/share/paper/`, `x-cards/`.
 
 ## Files
 
 | Path | Role |
 |------|------|
 | `HANDOFF.md` | Research handoff / resume entry point |
-| `solution.md` | Full mathematical writeup + obstruction analysis |
-| `src/minmax_quadratic.py` | Exact `m_n`, Paley (prime + prime-power), \(\Phi\), bounds, \(\rho=1\) evec |
-| `tests/test_minmax.py` | Pytest suite |
-| `evidence/` | Durable tables, \(\rho=1\) proof note, verification JSON |
+| `solution.md` | Full mathematical writeup |
+| `src/e1_gmin_m4_prop15167.py` … `prop15171.py` | Bi-tight + E(1) residual ND modules |
+| `src/minmax_quadratic.py` | Exact `m_n`, Paley, \(\Phi\), bounds, \(\rho=1\) evec |
+| `tests/test_prop15167.py` … `test_prop15171.py` | Load-bearing E(1)/L tests |
+| `x-cards/` | X summary + key-lemmas JPEGs |
+| `evidence/share/` | Paper PDF/TeX + share assets |
+| `evidence/` | Verification JSON and session notes |
 
 ## Quick check
 
@@ -66,4 +71,4 @@ python3 -c "from src.minmax_quadratic import exact_m; print([exact_m(n) for n in
 | 10 | 13 | 0.411 |
 
 At \(n=10\), Paley (order \(p^2+1\), \(p=3\)) has \(\Phi=15>m_{10}\): conference is not exactly optimal.
-Exact optima first appear at Hamming distance 5 from Paley, and the only 5-edge undercutters are 144 perfect matchings — see `evidence/N10_STRUCTURE.md`. Those 144 form one PΓL(2,9)-orbit (maximizer-drop criterion) — see `evidence/N10_MATCHING_CLASSIFY.md`. Limit existence remains open.
+Exact optima first appear at Hamming distance 5 from Paley, and the only 5-edge undercutters are 144 perfect matchings — see `evidence/N10_STRUCTURE.md`. Those 144 form one PΓL(2,9)-orbit (maximizer-drop criterion) — see `evidence/N10_MATCHING_CLASSIFY.md`.

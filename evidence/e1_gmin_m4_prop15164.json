@@ -1,0 +1,188 @@
+{
+  "title": "Prop 15.164 16N via mult\u2265d\u22121 + Es4\u2264Es4_* (no mult\u2265d needed)",
+  "L_status": "OPEN",
+  "proved": {
+    "two_level_majorization_algebra": true,
+    "Es4_star_budget_and_b_ge_6": true,
+    "census_p5_p7_sixteen_N": true,
+    "mult_ge_d_minus_1": true,
+    "Es4_star_for_all_p": false,
+    "sixteen_N_for_all_p": false,
+    "residual_for_all_p_ge_5": false
+  },
+  "algebra": {
+    "theorem_B": {
+      "proved": true,
+      "theorem": "For primes p\u22655: b_*\u22656, and E[s\u2074]\u2264Es4_*(p) + mult\u2265d\u22121 + \u03bb_min\u22656 \u21d2 \u03bb_max(\u03a6)\u226416 \u21d2 16N \u21d2 bi-tight empty.",
+      "by_p_sample": {
+        "5": {
+          "b_star": "432/53",
+          "b_ge_8": true,
+          "b_ge_6": true,
+          "b_le_16": true,
+          "Es4_star": "492752/53",
+          "kappa4_star": "62816/53",
+          "R_star": "184080/53",
+          "eta_star": "104936/1325",
+          "eta_star_positive": true
+        },
+        "7": {
+          "b_star": "2016/251",
+          "b_ge_8": true,
+          "b_ge_6": true,
+          "b_le_16": true,
+          "Es4_star": "8116400/251",
+          "kappa4_star": "586400/251",
+          "R_star": "2594400/251",
+          "eta_star": "1908400/12299",
+          "eta_star_positive": true
+        },
+        "11": {
+          "b_star": "13680/1709",
+          "b_ge_8": true,
+          "b_ge_6": true,
+          "b_le_16": true,
+          "Es4_star": "315139664/1709",
+          "kappa4_star": "9898592/1709",
+          "R_star": "88293840/1709",
+          "eta_star": "79234120/206789",
+          "eta_star_positive": true
+        },
+        "13": {
+          "b_star": "27216/3401",
+          "b_ge_8": true,
+          "b_ge_6": true,
+          "b_le_16": true,
+          "Es4_star": "1207001360/3401",
+          "kappa4_star": "27534560/3401",
+          "R_star": "328182960/3401",
+          "eta_star": "307595960/574769",
+          "eta_star_positive": true
+        },
+        "17": {
+          "b_star": "81216/10151",
+          "b_ge_8": true,
+          "b_ge_6": true,
+          "b_le_16": true,
+          "Es4_star": "10385041520/10151",
+          "kappa4_star": "140652320/10151",
+          "R_star": "2731187520/10151",
+          "eta_star": "2684764320/2933639",
+          "eta_star_positive": true
+        },
+        "19": {
+          "b_star": "127440/15929",
+          "b_ge_8": true,
+          "b_ge_6": true,
+          "b_le_16": true,
+          "Es4_star": "25324561424/15929",
+          "kappa4_star": "275762912/15929",
+          "R_star": "6595625520/15929",
+          "eta_star": "6573623160/5750369",
+          "eta_star_positive": true
+        },
+        "23": {
+          "b_star": "275616/34451",
+          "b_ge_8": true,
+          "b_ge_6": true,
+          "b_le_16": true,
+          "Es4_star": "117001659440/34451",
+          "kappa4_star": "874228640/34451",
+          "R_star": "30088676640/34451",
+          "eta_star": "30529191440/18224579",
+          "eta_star_positive": true
+        },
+        "29": {
+          "b_star": "700560/87569",
+          "b_ge_8": true,
+          "b_ge_6": true,
+          "b_le_16": true,
+          "Es4_star": "748532806544/87569",
+          "kappa4_star": "3533584352/87569",
+          "R_star": "190520720880/87569",
+          "eta_star": "196130276440/73645529",
+          "eta_star_positive": true
+        }
+      },
+      "n_checked": 23
+    },
+    "open": {
+      "residual_closed_general": false,
+      "sixteen_N_for_all_p": false,
+      "Es4_star_for_all_p": false,
+      "mult_ge_d_minus_1_for_all_p": true,
+      "L_status": "OPEN",
+      "open": "Single inequality for 16N: E[s\u2074]\u2264Es4_*(p) for all primes p\u22655 (e.g. p=5: Es4_*=492752/53; p=7: 8116400/251). Equivalents: \u03ba\u2084\u2264\u03ba4_*, R\u2264R_*, \u2211\u03b7\u00b2\u2264\u03b7_*. mult\u2265d\u22121 already proved (15.162). Weil/character-sum on \u03b7."
+    }
+  },
+  "census": {
+    "certified": true,
+    "by_p": {
+      "5": {
+        "mult_top": 13,
+        "d": 13,
+        "Es4": "120400/13",
+        "Es4_source": "Phi_spectrum_Gram_global",
+        "Es4_star": "492752/53",
+        "slack": "24576/689",
+        "kappa4_actual": "14944/13",
+        "kappa4_star": "62816/53",
+        "sixteen_N": true,
+        "b_star": "432/53"
+      },
+      "7": {
+        "mult_top": 25,
+        "d": 25,
+        "Es4": "5218435600/167281",
+        "Es4_source": "Phi_spectrum_Gram_global",
+        "Es4_star": "8116400/251",
+        "slack": "47892172800/41987531",
+        "kappa4_actual": "200005600/167281",
+        "kappa4_star": "586400/251",
+        "sixteen_N": true,
+        "b_star": "2016/251"
+      }
+    }
+  },
+  "budgets_sample": {
+    "5": {
+      "Es4_star": "492752/53",
+      "kappa4_star": "62816/53",
+      "R_star": "184080/53",
+      "eta_star": "104936/1325",
+      "b_star": "432/53"
+    },
+    "7": {
+      "Es4_star": "8116400/251",
+      "kappa4_star": "586400/251",
+      "R_star": "2594400/251",
+      "eta_star": "1908400/12299",
+      "b_star": "2016/251"
+    },
+    "11": {
+      "Es4_star": "315139664/1709",
+      "kappa4_star": "9898592/1709",
+      "R_star": "88293840/1709",
+      "eta_star": "79234120/206789",
+      "b_star": "13680/1709"
+    },
+    "13": {
+      "Es4_star": "1207001360/3401",
+      "kappa4_star": "27534560/3401",
+      "R_star": "328182960/3401",
+      "eta_star": "307595960/574769",
+      "b_star": "27216/3401"
+    },
+    "17": {
+      "Es4_star": "10385041520/10151",
+      "kappa4_star": "140652320/10151",
+      "R_star": "2731187520/10151",
+      "eta_star": "2684764320/2933639",
+      "b_star": "81216/10151"
+    }
+  },
+  "open_attack": "Single inequality for 16N: E[s\u2074]\u2264Es4_*(p) for all primes p\u22655 (e.g. p=5: Es4_*=492752/53; p=7: 8116400/251). Equivalents: \u03ba\u2084\u2264\u03ba4_*, R\u2264R_*, \u2211\u03b7\u00b2\u2264\u03b7_*. mult\u2265d\u22121 already proved (15.162). Weil/character-sum on \u03b7.",
+  "F3": "no soft-close",
+  "F19": "no class_key thrash",
+  "F20": "algebra + census"
+}

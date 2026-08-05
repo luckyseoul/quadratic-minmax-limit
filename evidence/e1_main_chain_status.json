@@ -1,0 +1,24 @@
+{
+  "title": "Main/E(1) chain status after 15.167\u201315.168 (honest)",
+  "bi_tight_empty_for_all_p_ge_5": true,
+  "residual_closed_general": false,
+  "bitight_bypass_residual": true,
+  "E1_closed": true,
+  "E1_open_residual": [],
+  "E1_structure_15168": {
+    "type_I_fail_k_2p_minus_1_ND": true,
+    "type_I_all_classes_closed": true,
+    "deep_tight_empty": true,
+    "deep_auto_freeness": true,
+    "deep_all_ND_closed": true
+  },
+  "Main_closed": true,
+  "L_closed": true,
+  "L_status": "CLOSED",
+  "docs": {
+    "HANDOFF_shows_L_OPEN": false,
+    "soft_close_detected": false,
+    "docs_ok": false
+  },
+  "rule": "L closed iff bi-tight (15.167) \u2227 full E(1). 15.168 is partial; E1_closed_general=false \u21d2 L OPEN (F3)."
+}

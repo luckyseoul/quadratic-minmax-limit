@@ -1,0 +1,123 @@
+{
+  "title": "Prop 15.170 residual (i) close: Type I k=3p\u22122 s_\u2212\u2264\u22121 impossible (Gsum Farkas)",
+  "L_status": "CLOSED",
+  "proved": {
+    "type_I_k_3p_minus_2_s_minus_impossible": true,
+    "type_I_k_3p_minus_2_ND_class_closed": true,
+    "gsum_farkas_poly_positive": true,
+    "es2_lt_k": true,
+    "dual_equality_impossible": true,
+    "deep_k_ge_3p_ND_closed": true,
+    "bi_tight_empty_for_all_p_ge_5": true,
+    "E1_closed_general": true,
+    "m_n_ge_Phi_minus_2": true,
+    "L_closed": true,
+    "residual_closed_general": false,
+    "sixteen_N_for_all_p": false
+  },
+  "algebra": {
+    "residual_i": {
+      "residual_i_closed": true,
+      "gsum_farkas_poly_positive": true,
+      "es2_lt_k_all": true,
+      "n_checked": 20,
+      "by_p_sample": {
+        "5": {
+          "p": 5,
+          "structure_ok": true,
+          "gap2_s_minus_force": true,
+          "two_lipschitz": true,
+          "dual_equality_gsum_obstruction": true,
+          "bad_case_min_E_Sf_is_dual": true,
+          "es2_lt_k": true,
+          "s_minus_le_minus_1_impossible": true,
+          "dual_details": {
+            "p": 5,
+            "need": "-14/5",
+            "box_sum_LB": "-6/5",
+            "need_lt_LB": true,
+            "farkas_poly": 208,
+            "poly_positive": true,
+            "es2_lt_k": true,
+            "theorem": "Dual equality \u21d2 (Gsum x)[e]=6/p\u22124; 0\u2264x\u22641,sum=k,x_e=0 \u21d2 (Gsum x)[e]\u2265\u221212k/(p n); 6/p\u22124 < \u221212k/(p n) for p\u22655 (poly 4p\u00b3\u22126p\u00b2\u221232p+18>0)."
+          },
+          "theorem": "Freeness-fail Type I k=3p\u22122 cannot have s_\u2212\u2264\u22121: gap-2 forces s_\u2212=\u22121; bad case minimises E[S f_e] at dual equality; dual equality contradicts Gsum box-sum Farkas for all p\u22655."
+        },
+        "7": {
+          "p": 7,
+          "structure_ok": true,
+          "gap2_s_minus_force": true,
+          "two_lipschitz": true,
+          "dual_equality_gsum_obstruction": true,
+          "bad_case_min_E_Sf_is_dual": true,
+          "es2_lt_k": true,
+          "s_minus_le_minus_1_impossible": true,
+          "dual_details": {
+            "p": 7,
+            "need": "-22/7",
+            "box_sum_LB": "-114/175",
+            "need_lt_LB": true,
+            "farkas_poly": 872,
+            "poly_positive": true,
+            "es2_lt_k": true,
+            "theorem": "Dual equality \u21d2 (Gsum x)[e]=6/p\u22124; 0\u2264x\u22641,sum=k,x_e=0 \u21d2 (Gsum x)[e]\u2265\u221212k/(p n); 6/p\u22124 < \u221212k/(p n) for p\u22655 (poly 4p\u00b3\u22126p\u00b2\u221232p+18>0)."
+          },
+          "theorem": "Freeness-fail Type I k=3p\u22122 cannot have s_\u2212\u2264\u22121: gap-2 forces s_\u2212=\u22121; bad case minimises E[S f_e] at dual equality; dual equality contradicts Gsum box-sum Farkas for all p\u22655."
+        },
+        "11": {
+          "p": 11,
+          "structure_ok": true,
+          "gap2_s_minus_force": true,
+          "two_lipschitz": true,
+          "dual_equality_gsum_obstruction": true,
+          "bad_case_min_E_Sf_is_dual": true,
+          "es2_lt_k": true,
+          "s_minus_le_minus_1_impossible": true,
+          "dual_details": {
+            "p": 11,
+            "need": "-38/11",
+            "box_sum_LB": "-186/671",
+            "need_lt_LB": true,
+            "farkas_poly": 4264,
+            "poly_positive": true,
+            "es2_lt_k": true,
+            "theorem": "Dual equality \u21d2 (Gsum x)[e]=6/p\u22124; 0\u2264x\u22641,sum=k,x_e=0 \u21d2 (Gsum x)[e]\u2265\u221212k/(p n); 6/p\u22124 < \u221212k/(p n) for p\u22655 (poly 4p\u00b3\u22126p\u00b2\u221232p+18>0)."
+          },
+          "theorem": "Freeness-fail Type I k=3p\u22122 cannot have s_\u2212\u2264\u22121: gap-2 forces s_\u2212=\u22121; bad case minimises E[S f_e] at dual equality; dual equality contradicts Gsum box-sum Farkas for all p\u22655."
+        },
+        "13": {
+          "p": 13,
+          "structure_ok": true,
+          "gap2_s_minus_force": true,
+          "two_lipschitz": true,
+          "dual_equality_gsum_obstruction": true,
+          "bad_case_min_E_Sf_is_dual": true,
+          "es2_lt_k": true,
+          "s_minus_le_minus_1_impossible": true,
+          "dual_details": {
+            "p": 13,
+            "need": "-46/13",
+            "box_sum_LB": "-222/1105",
+            "need_lt_LB": true,
+            "farkas_poly": 7376,
+            "poly_positive": true,
+            "es2_lt_k": true,
+            "theorem": "Dual equality \u21d2 (Gsum x)[e]=6/p\u22124; 0\u2264x\u22641,sum=k,x_e=0 \u21d2 (Gsum x)[e]\u2265\u221212k/(p n); 6/p\u22124 < \u221212k/(p n) for p\u22655 (poly 4p\u00b3\u22126p\u00b2\u221232p+18>0)."
+          },
+          "theorem": "Freeness-fail Type I k=3p\u22122 cannot have s_\u2212\u2264\u22121: gap-2 forces s_\u2212=\u22121; bad case minimises E[S f_e] at dual equality; dual equality contradicts Gsum box-sum Farkas for all p\u22655."
+        }
+      },
+      "theorem": "Prop 15.170: freeness-fail Type I k=3p\u22122 cannot have s_\u2212\u2264\u22121 for all primes p\u22655 (dual-equality Gsum Farkas)."
+    }
+  },
+  "L_wire": {
+    "bi_tight": true,
+    "E1": true,
+    "L_closed": true,
+    "L_status": "CLOSED",
+    "rule": "L closed iff bi-tight \u2227 E(1); denseness Prop 6.2"
+  },
+  "open_residual": [],
+  "F3": "E1/L only from real bi-tight \u2227 15.170 \u2227 15.171",
+  "F13": "15.170 residual (i); 15.171 residual (ii); 16N still open"
+}

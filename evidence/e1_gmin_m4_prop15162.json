@@ -1,0 +1,330 @@
+{
+  "title": "Prop 15.162 maximizers in Z; mult\u2265d\u22121; E[s\u2074] expansion; m\u2084-mass 16N",
+  "L_status": "OPEN",
+  "proved": {
+    "maximizers_in_Z": true,
+    "mult_ge_d_minus_1": true,
+    "Es4_type_expansion": true,
+    "16N_m4_mass_algebra": true,
+    "census_p5_p7": true,
+    "mult_ge_d_all_p": false,
+    "m4_mass_all_p": false,
+    "sixteen_N_all_p": false,
+    "residual_for_all_p_ge_5": false
+  },
+  "algebra": {
+    "theorem_A": {
+      "proved": true,
+      "theorem": "Maximizers of \u0393 on unit Sym\u2080 satisfy E[f cc\u1d40]=\u03bbA (\u03bc=0 from E[f]=0), hence ambient B_ii=E[f]/\u03bb=0, so maximizers lie in Z and mult(\u0393 top)=mult(\u03a6 top).",
+      "mean_Sym0_positive": {
+        "5": "104/15",
+        "7": "200/27",
+        "11": "488/63",
+        "13": "680/87"
+      }
+    },
+    "theorem_B": {
+      "proved": true,
+      "theorem": "mult(\u03a6)\u2265d\u22121: Thm A + Prop 15.97 (\u0393 top mult = PopP \u03bb\u2082 mult) + Prop 15.98 (PopP \u03bb\u2082 mult \u2265d\u22121 via PSL min irrep).",
+      "open_upgrade": "mult\u2265d for general p (census =d at p=5,7)."
+    },
+    "theorem_C": {
+      "proved": true,
+      "theorem": "E[s\u2074]=C\u2080+R with C\u2080=n(3n\u22122)+2n(n\u22121)(3n\u22124)/p\u00b2 and R=24\u2211_{4-sets}m\u2084\u00b2\u22650.",
+      "by_p": {
+        "5": {
+          "C0": "5824",
+          "C0_from_counts": "5824",
+          "match": true,
+          "R_budget": "3536",
+          "counts": {
+            "type4": 26,
+            "type31": 2600,
+            "type22": 1950,
+            "type211": 93600,
+            "type1111": 358800
+          }
+        },
+        "7": {
+          "C0": "22000",
+          "C0_from_counts": "22000",
+          "match": true,
+          "R_budget": "10400",
+          "counts": {
+            "type4": 50,
+            "type31": 9800,
+            "type22": 7350,
+            "type211": 705600,
+            "type1111": 5527200
+          }
+        },
+        "11": {
+          "C0": "132736",
+          "C0_from_counts": "132736",
+          "match": true,
+          "R_budget": "51728",
+          "counts": {
+            "type4": 122,
+            "type31": 59048,
+            "type22": 44286,
+            "type211": 10628640,
+            "type1111": 210801360
+          }
+        },
+        "13": {
+          "C0": "258400",
+          "C0_from_counts": "258400",
+          "match": true,
+          "R_budget": "96560",
+          "counts": {
+            "type4": 170,
+            "type31": 114920,
+            "type22": 86190,
+            "type211": 28959840,
+            "type1111": 806048880
+          }
+        },
+        "17": {
+          "C0": "754000",
+          "C0_from_counts": "754000",
+          "match": true,
+          "R_budget": "269120",
+          "counts": {
+            "type4": 290,
+            "type31": 335240,
+            "type22": 251430,
+            "type211": 144823680,
+            "type1111": 6927399360
+          }
+        },
+        "19": {
+          "C0": "1175776",
+          "C0_from_counts": "1175776",
+          "match": true,
+          "R_budget": "414128",
+          "counts": {
+            "type4": 362,
+            "type31": 522728,
+            "type22": 392046,
+            "type211": 282273120,
+            "type1111": 16889341680
+          }
+        },
+        "23": {
+          "C0": "2522800",
+          "C0_from_counts": "2522800",
+          "match": true,
+          "R_budget": "873440",
+          "counts": {
+            "type4": 530,
+            "type31": 1121480,
+            "type22": 841110,
+            "type211": 888212160,
+            "type1111": 78014634720
+          }
+        },
+        "29": {
+          "C0": "6372256",
+          "C0_from_counts": "6372256",
+          "match": true,
+          "R_budget": "2175728",
+          "counts": {
+            "type4": 842,
+            "type31": 2832488,
+            "type22": 2124366,
+            "type211": 3568934880,
+            "type1111": 499056060720
+          }
+        },
+        "31": {
+          "C0": "8319376",
+          "C0_from_counts": "8319376",
+          "match": true,
+          "R_budget": "2832128",
+          "counts": {
+            "type4": 962,
+            "type31": 3697928,
+            "type22": 2773446,
+            "type211": 5325016320,
+            "type1111": 851115108480
+          }
+        },
+        "37": {
+          "C0": "16878400",
+          "C0_from_counts": "16878400",
+          "match": true,
+          "R_budget": "5710160",
+          "counts": {
+            "type4": 1370,
+            "type31": 7502120,
+            "type22": 5626590,
+            "type211": 15394350240,
+            "type1111": 3507346129680
+          }
+        }
+      }
+    },
+    "theorem_D": {
+      "proved": true,
+      "theorem": "Under mult\u2265d: 16N \u21d4 R\u2264n(3p\u00b2+61) \u21d4 \u2211_{4-sets}m\u2084\u00b2\u2264n(3p\u00b2+61)/24.",
+      "by_p": {
+        "5": {
+          "Es4_budget": "9360",
+          "C0": "5824",
+          "room": "3536",
+          "R_budget": "3536",
+          "match": true,
+          "m4_sumsq_budget": "442/3"
+        },
+        "7": {
+          "Es4_budget": "32400",
+          "C0": "22000",
+          "room": "10400",
+          "R_budget": "10400",
+          "match": true,
+          "m4_sumsq_budget": "1300/3"
+        },
+        "11": {
+          "Es4_budget": "184464",
+          "C0": "132736",
+          "room": "51728",
+          "R_budget": "51728",
+          "match": true,
+          "m4_sumsq_budget": "6466/3"
+        },
+        "13": {
+          "Es4_budget": "354960",
+          "C0": "258400",
+          "room": "96560",
+          "R_budget": "96560",
+          "match": true,
+          "m4_sumsq_budget": "12070/3"
+        },
+        "17": {
+          "Es4_budget": "1023120",
+          "C0": "754000",
+          "room": "269120",
+          "R_budget": "269120",
+          "match": true,
+          "m4_sumsq_budget": "33640/3"
+        },
+        "19": {
+          "Es4_budget": "1589904",
+          "C0": "1175776",
+          "room": "414128",
+          "R_budget": "414128",
+          "match": true,
+          "m4_sumsq_budget": "51766/3"
+        },
+        "23": {
+          "Es4_budget": "3396240",
+          "C0": "2522800",
+          "room": "873440",
+          "R_budget": "873440",
+          "match": true,
+          "m4_sumsq_budget": "109180/3"
+        },
+        "29": {
+          "Es4_budget": "8547984",
+          "C0": "6372256",
+          "room": "2175728",
+          "R_budget": "2175728",
+          "match": true,
+          "m4_sumsq_budget": "271966/3"
+        },
+        "31": {
+          "Es4_budget": "11151504",
+          "C0": "8319376",
+          "room": "2832128",
+          "R_budget": "2832128",
+          "match": true,
+          "m4_sumsq_budget": "354016/3"
+        },
+        "37": {
+          "Es4_budget": "22588560",
+          "C0": "16878400",
+          "room": "5710160",
+          "R_budget": "5710160",
+          "match": true,
+          "m4_sumsq_budget": "713770/3"
+        },
+        "41": {
+          "Es4_budget": "34030224",
+          "C0": "25445296",
+          "room": "8584928",
+          "R_budget": "8584928",
+          "match": true,
+          "m4_sumsq_budget": "1073116/3"
+        },
+        "43": {
+          "Es4_budget": "41158800",
+          "C0": "30784000",
+          "room": "10374800",
+          "R_budget": "10374800",
+          "match": true,
+          "m4_sumsq_budget": "1296850/3"
+        },
+        "47": {
+          "Es4_budget": "58715280",
+          "C0": "43934800",
+          "room": "14780480",
+          "R_budget": "14780480",
+          "match": true,
+          "m4_sumsq_budget": "1847560/3"
+        }
+      }
+    },
+    "open": {
+      "residual_closed_general": false,
+      "sixteen_N_for_all_p": false,
+      "mult_ge_d_for_all_p": false,
+      "mult_ge_d_minus_1_for_all_p": true,
+      "m4_mass_for_all_p": false,
+      "L_status": "OPEN",
+      "open": "Upgrade mult\u2265d\u22121 \u2192 mult\u2265d, and prove \u2211_{4-sets}m\u2084\u00b2\u2264n(3p\u00b2+61)/24 (\u21d4 \u03ba\u2084\u226448n \u21d4 E[s\u2074]\u226412n(n+4)).  Then 15.161\u201315.162 \u21d2 16N \u21d2 bi-tight."
+    }
+  },
+  "census": {
+    "certified": true,
+    "by_p": {
+      "5": {
+        "mult_top": 13,
+        "d": 13,
+        "mult_eq_d": true,
+        "Es4": "120400/13",
+        "C0": "5824",
+        "R": "44688/13",
+        "R_ge_0": true,
+        "R_budget": "3536",
+        "R_le_budget": true,
+        "m4_sumsq": "1862/13",
+        "m4_sumsq_budget": "442/3",
+        "room_m4": "160/39",
+        "sixteen_N_via_kappa4": true,
+        "sixteen_N_via_m4_mass": true,
+        "expansion_recovers_Es4": true
+      },
+      "7": {
+        "mult_top": 25,
+        "d": 25,
+        "mult_eq_d": true,
+        "Es4": "12835984/409",
+        "C0": "22000",
+        "R": "3837984/409",
+        "R_ge_0": true,
+        "R_budget": "10400",
+        "R_le_budget": true,
+        "m4_sumsq": "159916/409",
+        "m4_sumsq_budget": "1300/3",
+        "room_m4": "51952/1227",
+        "sixteen_N_via_kappa4": true,
+        "sixteen_N_via_m4_mass": true,
+        "expansion_recovers_Es4": true
+      }
+    }
+  },
+  "open_attack": "Upgrade mult\u2265d\u22121 \u2192 mult\u2265d, and prove \u2211_{4-sets}m\u2084\u00b2\u2264n(3p\u00b2+61)/24 (\u21d4 \u03ba\u2084\u226448n \u21d4 E[s\u2074]\u226412n(n+4)).  Then 15.161\u201315.162 \u21d2 16N \u21d2 bi-tight.",
+  "F3": "no soft-close",
+  "F19": "no class_key thrash",
+  "F20": "algebra + optional census"
+}

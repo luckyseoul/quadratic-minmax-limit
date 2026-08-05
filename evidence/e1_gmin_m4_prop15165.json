@@ -1,0 +1,219 @@
+{
+  "title": "Prop 15.165 exact Es4 + closed Es4_*/\u03b7_* + GoG/\u03a6 (L OPEN)",
+  "L_status": "OPEN",
+  "proved": {
+    "E_s_moments_2design": true,
+    "GoG_Phi_spectrum_link": true,
+    "Es4_star_eta_star_closed_form": true,
+    "m4_C_eigen": true,
+    "exact_Es4_census_p3_5_7": true,
+    "H_saturation_p5": true,
+    "Es4_star_for_all_p": false,
+    "sixteen_N_for_all_p": false,
+    "residual_for_all_p_ge_5": false
+  },
+  "algebra": {
+    "A_moments": {
+      "proved": true,
+      "theorem": "E[s]=0 (central sym); E[s\u00b2]=2n (2-design / \u2211yy\u1d40=2N P\u208a).",
+      "by_p": {
+        "3": {
+          "E_s2_design": "20",
+          "Es4": "1680"
+        },
+        "5": {
+          "E_s2_design": "52",
+          "Es4": "120400/13"
+        },
+        "7": {
+          "E_s2_design": "100",
+          "Es4": "5218435600/167281"
+        }
+      }
+    },
+    "B_GoG_Phi": {
+      "proved": true,
+      "theorem": "spec(GoG)={2nN}\u222a{N \u03bb: \u03bb\u2208spec(\u03a6)}\u222a{0}^{N\u22121\u2212m}; E[s\u2074]=4n\u00b2+tr(\u03a6\u00b2).",
+      "by_p": {
+        "3": {
+          "Es4_from_Phi": "1680",
+          "Es4_exact": "1680",
+          "match": true,
+          "tr_Phi": "80",
+          "tr_expect": "80",
+          "m": 5,
+          "spec_mult_sum": 5
+        },
+        "5": {
+          "Es4_from_Phi": "120400/13",
+          "Es4_exact": "120400/13",
+          "match": true,
+          "tr_Phi": "624",
+          "tr_expect": "624",
+          "m": 65,
+          "spec_mult_sum": 65
+        },
+        "7": {
+          "Es4_from_Phi": "5218435600/167281",
+          "Es4_exact": "5218435600/167281",
+          "match": true,
+          "tr_Phi": "2400",
+          "tr_expect": "2400",
+          "m": 275,
+          "spec_mult_sum": 275
+        }
+      }
+    },
+    "C_closed_budgets": {
+      "proved": true,
+      "theorem": "Es4_*=4(3p\u2078\u22126p\u2076\u2212148p\u2074\u221210p\u00b2+129)/(p\u2074\u22128p\u00b2\u22121); \u03b7_*=(p\u00b2\u22121)(n)(19p\u2074\u2212152p\u00b2\u22123)/(6p\u00b2(p\u2074\u22128p\u00b2\u22121)).",
+      "n_checked": 20,
+      "sample": {
+        "5": {
+          "Es4_star_closed": "492752/53",
+          "eta_star_closed": "104936/1325",
+          "match_API": true
+        },
+        "7": {
+          "Es4_star_closed": "8116400/251",
+          "eta_star_closed": "1908400/12299",
+          "match_API": true
+        },
+        "11": {
+          "Es4_star_closed": "315139664/1709",
+          "eta_star_closed": "79234120/206789",
+          "match_API": true
+        },
+        "13": {
+          "Es4_star_closed": "1207001360/3401",
+          "eta_star_closed": "307595960/574769",
+          "match_API": true
+        },
+        "17": {
+          "Es4_star_closed": "10385041520/10151",
+          "eta_star_closed": "2684764320/2933639",
+          "match_API": true
+        },
+        "19": {
+          "Es4_star_closed": "25324561424/15929",
+          "eta_star_closed": "6573623160/5750369",
+          "match_API": true
+        }
+      },
+      "asymp": {
+        "Es4_star_over_n2_to": 12,
+        "eta_star_over_n_to": "19/6"
+      }
+    },
+    "D_m4_eigen": {
+      "proved": true,
+      "theorem": "p\u00b7m\u2084(a,b,c,d)=\u2211_j C_aj m\u2084(j,b,c,d) from Cy=py on Max+. Certified 200 random 4-sets p=5,7 (GPU).",
+      "evidence": "evidence/gpu_m4_orbits_2h.json"
+    },
+    "F_H_sat": {
+      "proved_saturation_p5": true,
+      "p5": {
+        "lambda_max": "176/13",
+        "6+2H": "176/13",
+        "H": "49/13"
+      },
+      "p7": {
+        "lambda_max": "4320/409",
+        "6+2H": "312/25",
+        "H": "81/25",
+        "strict": true
+      }
+    },
+    "open": {
+      "residual_closed_general": false,
+      "Es4_star_for_all_p": false,
+      "sixteen_N_for_all_p": false,
+      "L_status": "OPEN",
+      "open": "Prove E[s\u2074]\u2264Es4_*(p)=4(3p\u2078\u22126p\u2076\u2212148p\u2074\u221210p\u00b2+129)/(p\u2074\u22128p\u00b2\u22121) for all primes p\u22655 (or \u2211\u03b7\u00b2\u2264\u03b7_*). mult\u2265d\u22121 proved; then 16N\u2192bi-tight. GPU session: exact Es4 p=3,5,7; p=7 W trap; closed Es4_*/\u03b7_*; m4 C-eigen; GoG\u2194\u03a6. Dead: design LP, angle LP, C-sig alone."
+    }
+  },
+  "census": {
+    "certified": true,
+    "by_p": {
+      "3": {
+        "Es4": "1680",
+        "Es4_star": "1680",
+        "ratio": 1.0,
+        "slack": "0",
+        "eta": "280/9",
+        "eta_star": "280/9",
+        "eta_ratio": 1.0,
+        "sixteen_N": true,
+        "Phi_flat_at_16": true,
+        "H_saturated": false
+      },
+      "5": {
+        "Es4": "120400/13",
+        "Es4_star": "492752/53",
+        "ratio": 0.9961634624751162,
+        "slack": "24576/689",
+        "eta": "25256/325",
+        "eta_star": "104936/1325",
+        "eta_ratio": 0.9812339829111957,
+        "sixteen_N": true,
+        "Phi_flat_at_16": false,
+        "H_saturated": true
+      },
+      "7": {
+        "Es4": "5218435600/167281",
+        "Es4_star": "8116400/251",
+        "ratio": 0.9647260185158285,
+        "slack": "47892172800/41987531",
+        "eta": "882307600/8196769",
+        "eta_star": "1908400/12299",
+        "eta_ratio": 0.693709621004761,
+        "sixteen_N": true,
+        "Phi_flat_at_16": false,
+        "H_saturated": false
+      }
+    },
+    "W_CENSUS_p7_is_not_global_Es4": {
+      "single_root_W_Es4": "12835984/409",
+      "global_Es4": "5218435600/167281",
+      "equal": false,
+      "note": "p=7 Max+ not 1-homogeneous; use Gram/spectrum."
+    }
+  },
+  "budgets_sample": {
+    "5": {
+      "Es4_star_closed": "492752/53",
+      "eta_star_closed": "104936/1325",
+      "b_star": "432/53"
+    },
+    "7": {
+      "Es4_star_closed": "8116400/251",
+      "eta_star_closed": "1908400/12299",
+      "b_star": "2016/251"
+    },
+    "11": {
+      "Es4_star_closed": "315139664/1709",
+      "eta_star_closed": "79234120/206789",
+      "b_star": "13680/1709"
+    },
+    "13": {
+      "Es4_star_closed": "1207001360/3401",
+      "eta_star_closed": "307595960/574769",
+      "b_star": "27216/3401"
+    },
+    "17": {
+      "Es4_star_closed": "10385041520/10151",
+      "eta_star_closed": "2684764320/2933639",
+      "b_star": "81216/10151"
+    }
+  },
+  "open_attack": "Prove E[s\u2074]\u2264Es4_*(p)=4(3p\u2078\u22126p\u2076\u2212148p\u2074\u221210p\u00b2+129)/(p\u2074\u22128p\u00b2\u22121) for all primes p\u22655 (or \u2211\u03b7\u00b2\u2264\u03b7_*). mult\u2265d\u22121 proved; then 16N\u2192bi-tight. GPU session: exact Es4 p=3,5,7; p=7 W trap; closed Es4_*/\u03b7_*; m4 C-eigen; GoG\u2194\u03a6. Dead: design LP, angle LP, C-sig alone.",
+  "F3": "no soft-close",
+  "F19": "no class_key thrash",
+  "F20": "GPU Gram/m4 + algebra (real device wall on p=5,7 Max+)",
+  "gpu_artifacts": [
+    "evidence/gpu_es4_angles_2h.json",
+    "evidence/gpu_m4_orbits_2h.json",
+    "evidence/gpu_m4_by_Csig_2h.json",
+    "evidence/GPU_SESSION_2H_B_2026-08-05.md"
+  ]
+}

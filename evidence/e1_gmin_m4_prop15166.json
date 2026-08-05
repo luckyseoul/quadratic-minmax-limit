@@ -1,0 +1,97 @@
+{
+  "title": "Prop 15.166 16N\u21d4Q\u2082 bound; Wick C-eigen; residual OPEN",
+  "L_status": "OPEN",
+  "proved": {
+    "Max_plus_spherical_2design": true,
+    "Wick_is_C_eigen": true,
+    "sixteen_N_iff_Q2_bound": true,
+    "census_Q2_p5_p7": true,
+    "Q2_bound_for_all_p": false,
+    "Es4_star_for_all_p": false,
+    "sixteen_N_for_all_p": false,
+    "residual_for_all_p_ge_5": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "theorem": "Max+ unit vectors \u00fb=c/\u221an in \u211d^d form a spherical 2-design: \u2211\u00fb=0 (central sym), (1/N)\u2211\u00fb\u00fb\u1d40=I_d/d (from \u2211yy\u1d40=2N P\u208a)."
+    },
+    "B": {
+      "proved": true,
+      "theorem": "Wick m\u2084^W from m\u2082=C/p satisfies p\u00b7m\u2084^W=\u2211_j C_aj m\u2084^W(j,\u00b7) (same C-eigen equation as true m\u2084). \u03b7 lives in +p space too.",
+      "by_p": {
+        "5": {
+          "max_eigen_residual_wick": 2.220446049250313e-16,
+          "ok": "True"
+        },
+        "7": {
+          "max_eigen_residual_wick": 1.6653345369377348e-16,
+          "ok": "True"
+        }
+      }
+    },
+    "C": {
+      "proved": true,
+      "theorem": "\u03bb_max(\u03a6)=4d(d\u22121)/N\u00b7\u03bb_max(Q\u2082); hence 16N \u21d4 \u03bb_max(Q\u2082)\u22644N/(d(d\u22121)).",
+      "by_p": {
+        "5": {
+          "lambda_max_Phi": "176/13",
+          "q2_threshold_16N": "20/3",
+          "lambda_Q2_from_Phi": "220/39",
+          "Phi_le_16": true,
+          "Q2_from_Phi_le_thr": true,
+          "match_equiv": true
+        },
+        "7": {
+          "lambda_max_Phi": "4320/409",
+          "q2_threshold_16N": "5726/75",
+          "lambda_Q2_from_Phi": "252/5",
+          "Phi_le_16": true,
+          "Q2_from_Phi_le_thr": true,
+          "match_equiv": true
+        }
+      }
+    },
+    "open": {
+      "residual_closed_general": false,
+      "Q2_bound_for_all_p": false,
+      "Es4_star_for_all_p": false,
+      "sixteen_N_for_all_p": false,
+      "L_status": "OPEN",
+      "open": "Prove \u03bb_max(Q\u2082)\u22644N/(d(d\u22121)) for Max+ unit 2-design for all primes p\u22655 (Prop 15.166.C \u21d4 16N \u21d4 E[s\u2074]\u2264Es4_*). Wick is C-eigen so does not pin \u03b7. Dead: Delsarte; BM(C); P\u208a(Wick)=m\u2084. Preferred: Weil/Jacobi Aut-orbit m\u2084; Aut\u2080 V\u208a\u21aaV_max; SOS Q\u2084\u226410N\u2016B\u2016\u00b2."
+    }
+  },
+  "census": {
+    "certified": true,
+    "by_p": {
+      "5": {
+        "N": 260,
+        "d": 13,
+        "lambda_max_Q2": "220/39",
+        "threshold_16N": "20/3",
+        "Q2_le_threshold": true,
+        "ratio": 0.8461538461538461,
+        "Es4": "120400/13",
+        "Es4_star": "492752/53",
+        "Es4_le_star": true,
+        "sixteen_N": true
+      },
+      "7": {
+        "N": 11452,
+        "d": 25,
+        "lambda_max_Q2": "252/5",
+        "threshold_16N": "5726/75",
+        "Q2_le_threshold": true,
+        "ratio": 0.6601466992665037,
+        "Es4": "5218435600/167281",
+        "Es4_star": "8116400/251",
+        "Es4_le_star": true,
+        "sixteen_N": true
+      }
+    }
+  },
+  "open_attack": "Prove \u03bb_max(Q\u2082)\u22644N/(d(d\u22121)) for Max+ unit 2-design for all primes p\u22655 (Prop 15.166.C \u21d4 16N \u21d4 E[s\u2074]\u2264Es4_*). Wick is C-eigen so does not pin \u03b7. Dead: Delsarte; BM(C); P\u208a(Wick)=m\u2084. Preferred: Weil/Jacobi Aut-orbit m\u2084; Aut\u2080 V\u208a\u21aaV_max; SOS Q\u2084\u226410N\u2016B\u2016\u00b2.",
+  "F3": "no soft-close",
+  "F19": "no class_key thrash",
+  "F20": "CPU Fraction + optional Max+ eigen check"
+}
