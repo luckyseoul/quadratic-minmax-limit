@@ -1,34 +1,52 @@
-> **FINAL HANDOFF (2026-08-05):** **\(L=\tfrac12\) CLOSED** (Props 15.167–171 + denseness). residual/16N OPEN optional.  
-> Full session report: **`evidence/FINAL_HANDOFF_2026-08-05.md`**. Status table: **`STATUS.md`**.
+> **HANDOFF (2026-08-06):** Candidate path \(L=\tfrac12\) via Props 15.167–171 + denseness — **prize not accepted**.  
+> Independent Grok Build 4.5 (via @PI010101) flagged a **gap** in lim=½.  
+> Full report: **`evidence/FINAL_HANDOFF_2026-08-05.md`**. Status: **`STATUS.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-08-05 (Props through **15.171**; **bi-tight CLOSED**; residual (i)+(ii) CLOSED; **E(1)/Main/L CLOSED**; residual/16N OPEN optional)
+**Status date:** 2026-08-06  
+**Claim:** candidate **\(L=\tfrac12\)** (Props 15.167–171 + denseness). **Not prize-closed.** residual/16N still optional open.
 
-**External literature scan (2026-08-03):** `evidence/LITERATURE_SCAN_2026-08.md` — MO 413935 had 0 answers at scan; X prize (2026-07-25). This repo (2026-08-05) closes \(L=\tfrac12\) via Props 15.167–15.171 (not via Path-C residual). Path-C residual/16N still optional open.  
+**External / prize:** [MO 413935](https://mathoverflow.net/questions/413935) · [X prize](https://x.com/PI010101/status/2081070728422752329).  
+@PI010101 asked for GitHub, then posted that Grok Build 4.5 found a gap:  
+https://grok.com/share/c2hhcmQtNA_218425aa-c1d1-4263-a3ea-9114ef04cd9c  
+His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentially correct in 2–3 repeated prompts) **before** he human-verifies. User cannot use MO (new account / no rep) — channel is **X + GitHub**, not MO answer.
 
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
-**Resume (latest):** Props **15.161–15.171** —
-- **15.164–15.166:** residual/16N still **OPEN** (optional; not required for L)
-- **15.167:** **bi-tight empty all p≥5**. `src/e1_gmin_m4_prop15167.py`
-- **15.168–169:** E(1) ND structure + Type I reduction + multi-s auto-freeness
-- **15.170:** residual (i) CLOSED — Type I k=3p−2 s_−≤−1 impossible. `prop15170.py`
-- **15.171:** residual (ii) CLOSED — deep freeness-fail k≥3p ND. `prop15171.py`
-- **E(1)/L CLOSED** via bi-tight ∧ residual(i) ∧ residual(ii) real predicates.
-**Preferred next:** optional Path-C residual/16N; external writeup / MO answer.  
-**Prior resumes:** `evidence/SESSION_HANDOFF_2026-07-31_prop15112.md`, `evidence/SESSION_HANDOFF_2026-07-30_prop1595.md`, `evidence/SESSION_HANDOFF_2026-07-30.md`  
-**P0 graph:** `evidence/P0_ENGINEERING_GRAPH.md`  
-**Failure graph:** `evidence/E1_FAILURE_GRAPH.md` (F1–**F20**)  
-**Source:** [MO 413935](https://mathoverflow.net/questions/413935)
+**GitHub:** https://github.com/luckyseoul/quadratic-minmax-limit (`main`)  
+**Repo description:** updated to CLOSED claim (may need re-OPEN after gap).  
 
-**Skills:** `graph-engineered-completion` · `use-available-compute` · `agent-cost-optimization` · `goal-verifier` · `handoff` · optional `check-work`  
-**Compute (F17/F19/F20):** 88 cores + V100; `./scripts/pytest_full.sh` with `W=nproc-2`; GPU only for true dense batches (else “CPU multi-W, GPU unused”); **no class_key/moduli thrash (F19)** — class_key is **not m₄-equitable at p=7**; never soft-close L (F3).
+**Shipped props (candidate chain):**  
+- **15.167:** bi-tight empty all p≥5 (majorization). `src/e1_gmin_m4_prop15167.py`  
+- **15.170:** Type I freeness-fail ND (Gsum Farkas). `prop15170.py`  
+- **15.171:** deep freeness-fail ND. `prop15171.py`  
+- residual/16N: still **OPEN** optional (not required for this path)
+
+---
+
+## What’s left (simple) — prize path
+
+1. **Find the actual hole** — open Paata’s Grok share (or cold “find the gap” pass). One-sentence writeup of which step fails.  
+2. **Fix or drop the claim** — repair the step, or stop saying CLOSED.  
+3. **Short clean proof package** — thin doc: setup → sandwich → denseness → 3 lemmas → \(L=\frac12\) (not full prop thrash history).  
+4. **Pass his AI test** — 2–3 models, 2–3 prompts each; mostly “essentially correct.” Same gap → fix that hinge.  
+5. **Ping Paata again** — fixed writeup + GitHub. No MO required.
+
+**Do not right now:** residual/16N thrash · more X card chrome · soft-close without hinge audit · treat independent Grok gap as “hallucination” without reading it.
+
+**Hinges cold-flagged earlier (likely gap surface):** \(\lambda_{\min}(\Phi)\ge6\); mult\(\ge d-1\) PSL; Gsum box LB \(-12/(pn)\); dual-equality reduction exhaustiveness; freeness-fail case split; tests import broken (`e1_gmin_m4_prop15100`).
+
+**Prior resumes:** `evidence/FINAL_HANDOFF_2026-08-05.md`, `evidence/SESSION_HANDOFF_2026-07-31_prop15112.md`  
+**P0 graph:** `evidence/P0_ENGINEERING_GRAPH.md` · **Failure graph:** `evidence/E1_FAILURE_GRAPH.md`  
+
+**Skills:** `goal-verifier` · `check-work` · `scientific-critique` · `use-available-compute` (only if residual/16N) · `handoff`  
+**Compute (F17/F19/F20):** 88 cores + V100; no class_key thrash (F19); never soft-close L (F3).
 
 ---
 
 ## 0. One-line status
 
-**\(L=\lim\alpha_n=\tfrac12\) CLOSED** (E(1) + bi-tight + denseness Prop 6.2). residual/16N OPEN optional.
+**Candidate \(L=\lim\alpha_n=\tfrac12\)** (E(1)+bi-tight+denseness) — **prize OPEN** until gap fixed + AI test. residual/16N optional open.
 
 ### P0 status
 

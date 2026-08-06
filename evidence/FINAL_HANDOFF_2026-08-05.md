@@ -1,18 +1,37 @@
 # Final handoff — min-max ±1 quadratic form limit
 
-**Date:** 2026-08-05  
+**Date:** 2026-08-05 (prize update **2026-08-06**)  
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
-**GitHub:** https://github.com/luckyseoul/quadratic-minmax-limit (`main` @ `da435f2`)  
+**GitHub:** https://github.com/luckyseoul/quadratic-minmax-limit (`main`)  
 **Problem:** [MO 413935](https://mathoverflow.net/questions/413935) · [X prize @PI010101](https://x.com/PI010101/status/2081070728422752329)
 
 ---
 
 ## 1. One-line status
 
-**\(L=\lim_{n\to\infty}\alpha_n=\tfrac12\) is CLOSED** on the denseness path  
-(sandwich + \(\rho=1\) Paley family + E(1) via Props **15.167–15.171**).
+**Candidate** \(L=\lim\alpha_n=\tfrac12\) on denseness path (Props **15.167–15.171**).  
+**Prize status: NOT accepted.** Independent Grok Build 4.5 (posted by @PI010101) found a **gap** in lim=½.
 
-**Optional still OPEN (not required for \(L\)):** Path-C residual / \(16N\) / Hypothesis H.
+**Optional still OPEN (not required for this path):** Path-C residual / \(16N\) / Hypothesis H.
+
+### Prize / thread update (2026-08-06)
+
+- @PI010101 asked for full solution on GitHub/PDF; repo linked.  
+- He then posted: *“Grok build 4.5 found a gap in the proof lim=1/2”* with share  
+  https://grok.com/share/c2hhcmQtNA_218425aa-c1d1-4263-a3ea-9114ef04cd9c  
+- His requirement: pass an **“AI test”** — any reasonable AI identifies the solution as essentially correct in **2–3 repeated prompts** — **only then** will he human-verify.  
+- User **cannot use MO** (new account / no points). Delivery channel: **X prize thread + GitHub**.  
+- Thread reply may have been deleted; gate above still stands.
+
+### What’s left (simple)
+
+1. **Find the actual hole** (read Paata’s Grok share or cold gap-find). One-sentence: which step fails.  
+2. **Fix or drop the claim** (repair hinge, or stop saying CLOSED).  
+3. **Short clean proof package** (setup → sandwich → denseness → 3 lemmas → \(L=\frac12\)).  
+4. **Pass AI test** (2–3 models × 2–3 prompts; same gap ⇒ fix that).  
+5. **Ping Paata** with fixed writeup + GitHub.
+
+**Not needed now:** residual/16N · more X cards · MO answer.
 
 ---
 
@@ -124,22 +143,23 @@ fail-eq \(k=3p-1\) empty; remaining dual two-level Gsum vs same box LB ⇒ ND.
 
 ## 8. Preferred next work (priority order)
 
-1. **External verification package**
-   - MO answer on 413935 with theorem statements + link to GitHub / PDF  
-   - Optional arXiv note from `evidence/share/paper/lim_alpha_n_closed.tex`  
-   - Reply in prize thread: lemmas cards + `STATUS.md` + full paper PDF URL  
+1. **Prize path (primary)** — see §1 “What’s left (simple)”  
+   - Extract gap from Paata Grok share  
+   - Hinge audit / fix (λ_min≥6, Gsum LB, case exhaustiveness, dual-equality, tests import)  
+   - Thin self-contained writeup  
+   - Multi-AI “essentially correct” test  
+   - Reply on X with GitHub (no MO)
 
 2. **Peer / formal rigor pass**
    - Cold-read Props 15.167, 15.170, 15.171 against `solution.md`  
-   - Ensure every predicate in `e1_main_chain_status.json` is proof-backed, not census-only  
-   - Run `pytest tests/test_prop15167.py tests/test_prop15170.py tests/test_prop15171.py` (and broader suite)
+   - Every predicate in `e1_main_chain_status.json` proof-backed, not census-only  
+   - Fix `pytest` imports (`ModuleNotFoundError: e1_gmin_m4_prop15100`) then green 15.167/170/171
 
-3. **Optional Path-C residual/16N** (independent of L)
-   - Still open for general \(p\ge5\); only if someone wants bi-tight via residual alone  
+3. **Optional Path-C residual/16N** (independent of L) — only if deliberately reopening Path C  
 
 4. **Cleanup**
-   - Optionally gitignore or drop untracked `evidence/gpu_*.json`  
-   - Historical “L OPEN” footnotes in old props can stay (chronological)
+   - Optionally gitignore untracked `evidence/gpu_*.json`  
+   - Revisit GitHub **About description** after gap fix (currently claims CLOSED)
 
 ---
 
@@ -169,9 +189,9 @@ python3 -c "import json; print(json.load(open('evidence/e1_main_chain_status.jso
 
 ## 11. Session outcome (this arc)
 
-- Mathematical claim: **L = ½ CLOSED** via bi-tight majorization + dual Gsum Farkas freeness-fail ND.  
-- Public repo + entry docs aligned so scrapers (incl. Grok) see CLOSED at `STATUS.md` / README / solution top.  
-- X assets: result two-pager + key-lemmas two-pager.  
-- Residual/16N left honestly optional.  
+- Candidate mathematical claim: **L = ½** via bi-tight majorization + dual Gsum Farkas freeness-fail ND.  
+- Public repo + X cards shipped; GitHub About description set to CLOSED (pending re-honest after gap).  
+- Thread: Paata engaged; independent Grok flagged gap; **AI-test bar** before human verify.  
+- Residual/16N left optional. User has no MO rep — prize via X + GitHub only.
 
-**Next human decision:** post MO answer / arXiv + thread reply with lemmas + GitHub, not more prop thrash unless residual is the chosen goal.
+**Next human decision:** identify/fix gap → AI test → re-ping Paata (not residual thrash, not MO).
