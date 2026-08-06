@@ -15,9 +15,14 @@ REAL (checkable Fraction / prior-prop predicates):
      bi-tight obstruction holds (Thm A for s=3).
 
 OPEN (not claimed proved — no soft-close):
-  (i) CLOSED by Prop 15.170 (Gsum Farkas: freeness-fail Type I k=3p−2 cannot have s_−≤−1).
-  (ii) Deep freeness-fail with k≥3p (freeze-to-tight is a sketch, not shipped).
-  Full m_n≥Φ−2 / E(1) / L remain OPEN until (ii) closes (bi-tight already closed).
+  (i) OPEN — Type I freeness-fail k=3p−2 dual-eq needs Gsum disj LB / |μ|≤2/n
+     or ker-box (15.170, 15.176–192). Structure shipped; general bound not.
+  (ii) PARTIAL — affine dual two-level freeness-fail CLOSED by 15.179 freeze;
+     full residual (ii) OPEN until 15.193 exhaustiveness
+     (freeness-fail ⇒ S∈{2,4} and f_e=3−S) or separate ND for multi-level /
+     non-affine subcases. Auto-freeness k≤3p−2 and fail-eq k=3p−1 shipped.
+  Full m_n≥Φ−2 / E(1) / L remain OPEN until both residuals fully close
+  (bi-tight already closed by 15.167).
 
 Does NOT set L closed. residual_closed_general=false (16N optional open).
 Writes evidence/e1_gmin_m4_prop15168.json
@@ -316,8 +321,9 @@ def prove_theorem_E_F_G_deep(primes: list[int] | None = None) -> dict:
         "deep_all_ND_closed": bool(ok_auto and ok_k3pm1 and deep_k_closed),
         "theorem": (
             "Auto-freeness for s₊=2, k≤3p−2 (Fraction). Fail-eq k=3p−1 ⇒ tight L3 "
-            "empty under 15.167. Freeness⇒ND prior. k≥3p freeness-fail ND by 15.171 "
-            "dual two-level Gsum Farkas."
+            "empty under 15.167. Freeness⇒ND prior. k≥3p affine dual two-level "
+            "freeness-fail closed by 15.179 freeze; full residual (ii) open until "
+            "15.193 exhaustiveness (multi-level / non-affine)."
         ),
         "by_p_sample": {k: rows[k] for k in list(rows)[:4]},
         "n_checked": len(primes),
@@ -337,7 +343,8 @@ def prove_status() -> dict:
         "residual_closed_general": False,  # 16N optional path still open
         "open_residuals": open_res,
         "note": (
-            "15.167 bi-tight; 15.170 residual (i); 15.171 residual (ii); "
+            "15.167 bi-tight; residual (i) OPEN (15.170/176–192); residual (ii) "
+            "affine CLOSED (15.179), full OPEN (15.193 exhaustiveness); "
             "E1/L from real predicates; residual/16N still open."
         ),
     }

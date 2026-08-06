@@ -31,13 +31,16 @@ def test_open_core_nd_ge_2():
 
 
 def test_predicates_honest():
+    from e1_gmin_m4_prop15179 import residual_ii_dual_twolevel_affine_closed
+
     assert gsum_disj_lb_proved_general() is False
     assert e1_closed_general() is False
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True  # residual ii done
+    assert residual_ii_dual_twolevel_affine_closed() is True  # affine branch
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False  # full residual ii open
     h = hinge_status_180()
     assert h["bound_proved_general"] is False
     assert h["residual_i_closed"] is False
-    assert h["residual_ii_closed"] is True
+    assert h["residual_ii_closed"] is False
     out = main()
     assert out["proved"]["L_closed"] is False
     assert out["proved"]["mu4_or_gsum_bound_general"] is False

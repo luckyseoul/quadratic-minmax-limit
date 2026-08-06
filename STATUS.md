@@ -7,19 +7,21 @@
 | Sandwich \(1/\pi\le\liminf\le\limsup\le1/2\) | CLOSED | `solution.md` |
 | \(\rho=1\) on Paley \(n=p^2+1\) | CLOSED | `PROOF_rho_eq_1.md` |
 | Bi-tight majorization algebra (15.167) | CANDIDATE | `prop15167.py` |
-| Type I freeness-fail ND (residual i) | OPEN | needs Gsum disj LB |
-| Deep freeness-fail ND (residual ii) | **CLOSED** | freeze-to-tight 15.179 |
-| E(1) / \(L=\tfrac12\) | **OPEN** | residual (i) hinge |
+| Type I freeness-fail ND (residual i) | OPEN | needs Gsum disj LB / \(\|\mu\|\le2/n\) / ker-box |
+| Deep freeness-fail ND (residual ii) | **PARTIAL** | affine branch CLOSED (15.179); full OPEN (15.193 exhaustiveness) |
+| E(1) / \(L=\tfrac12\) | **OPEN** | residual (i) + full residual (ii) |
 | Path-C residual / 16N | OPEN optional | not required for denseness path |
 | Prize acceptance | OPEN | X + GitHub; Paata AI-test |
 
-### Fatal gap (one sentence)
+### Fatal gaps (honest)
 
-Residual **(i)** dual-equality Farkas (e∉G, Type I \(k=3p-2\)) needs pointwise disj \(\mathrm{Gsum}>\mu_*=(6/p-4)/k\) (Prop **15.176**); sufficient \(\mathrm{Gsum}\ge-1/p\). Residual **(ii)** closed by freeze-to-tight (**15.179**), no Gsum.
+1. Residual **(i)** dual-equality Farkas (e∉G, Type I \(k=3p-2\)) needs pointwise disj \(\mathrm{Gsum}>\mu_*=(6/p-4)/k\) (Prop **15.176**); sufficient \(\mathrm{Gsum}\ge-1/p\) or \(|\mu|\le2/n\) or ker-box empty.
+2. Residual **(ii)** full: affine dual two-level branch CLOSED by freeze-to-tight (**15.179**); multi-level / non-affine freeness-fail still open until exhaustiveness (**15.193**).
 
-### Remainder progress (15.172–181)
+### Remainder progress (15.172–193)
 
-- **15.179 residual (ii) CLOSED:** dual two-level freeness-fail affine \(\Rightarrow S_H\equiv3\Rightarrow k=3p-1\); impossible for \(k\ge3p\); fail-eq empty under bi-tight.  
+- **15.179 residual (ii) affine branch CLOSED:** dual two-level freeness-fail affine \(\Rightarrow S_H\equiv3\Rightarrow k=3p-1\); impossible for \(k\ge3p\); fail-eq empty under bi-tight.  
+- **15.193 residual (ii) exhaustiveness OPEN:** freeness-fail does **not** force \(S\in\{2,4\}\) and \(f_e=3-S\); (ii-a) multi-level and (ii-b) non-affine two-level remain. Full residual (ii) **not** closed.  
 - Avg disj Gsum \(=2/(n-3)\); \(G_0\) PSD; **15.176** μ_* / −1/p sufficiency.  
 - **15.177–178:** |μ₄| hinge form; star identity; dual-eq \(n_d\le1\) kill; \(n_d=2\) wedge kill for \(p\ge7\).  
 - **15.180:** dual-eq Q_pairs=30−6p−24/p<0; open dual-eq core is \(n_d\ge2\) after PSD/score filters.  
@@ -34,7 +36,7 @@ Residual **(i)** dual-equality Farkas (e∉G, Type I \(k=3p-2\)) needs pointwise
 - **15.191 (Max+-free partial):** Derangement permanent of \(C[S,S]\) equals 1 on \(|\kappa|=1\) (64-exhaust); star-sum \(\sum_s\prod_{i\neq s}C_{is}=0\) on \(|\kappa|=1\); Cy-expansion size1+size2 \(=-2\varphi\) (any conference \(C^2\) + Paley \(\pi\)); envelope \(|4\kappa-\varphi|/(pn)\le2/n\le1/(2p)\) for \(p\ge5\). **Correction:** \(|\mu|\le|f_4|\) fails at p=7 (many classes; f4 not a pointwise majorant); viable target remains \(|\mu|\le2/n\) (census p=5,7) or \(\le1/(2p)\).  
 - **15.192 (Max+-free):** Gsum diag\(=2\); row sum\(=n\); avg disj Gsum\(=2/(n-3)\). Aut_e averaging: dual-eq feasible iff Aut_e-invariant dual-eq feasible. \((3/2)\cdot\)scheme-max \(<2-\alpha\) for all \(p\ge5\). **Census Aut_e ker-box:** p=3 feasible (\(\max\kappa_e=14/5\)); p=5,7 empty (\(\max=369/455\), \(11736/19775\); ratios to scheme \(41/28\), \(163/113\), both \(<3/2\)).  
 - **Still open (residual i):** Max+-free \(\max\kappa_e\le(3/2)\cdot\)scheme-max (or any bound \(<2-\alpha\)) for all \(p\ge5\), **or** \(|\mu|\le2/n\) (or \(\le1/(2p)\)) on \(|\kappa|=1\).  
-- `gsum_disj_lb_proved_general()=false`; residual (ii) closed; **E1/L OPEN**.
+- `gsum_disj_lb_proved_general()=false`; residual (ii) affine closed / full open; **E1/L OPEN**.
 
 ### Short package
 
@@ -42,11 +44,12 @@ Residual **(i)** dual-equality Farkas (e∉G, Type I \(k=3p-2\)) needs pointwise
 
 ### Required opens (denseness prize path)
 
-1. **Math:** Prove disj Gsum \(\ge-1/p\) (or any \(\mu>\mu_*\)) for residual **(i)** only (15.176–178); residual (ii) done (15.179).  
-2. **Predicates:** Flip `gsum_disj_lb_proved_general` → residual (i) → E1 → L only after (1).  
-3. **AI-test:** Re-run on short package only after L predicates CLOSED.  
+1. **Math residual (i):** Prove disj Gsum \(\ge-1/p\) (or \(|\mu|\le2/n\), or ker-box empty) for Type I dual-eq (15.176–192).  
+2. **Math residual (ii):** Prove exhaustiveness lemma (15.193): freeness-fail \(\Rightarrow S\in\{2,4\}\) and \(f_e=3-S\) on Max+, **or** close multi-level / non-affine subcases by other ND. Affine branch already done (15.179).  
+3. **Predicates:** Flip hinges → residual (i) ∧ residual (ii) full → E1 → L only after (1)+(2).  
+4. **AI-test:** Re-run on short package only after L predicates CLOSED.  
 
 **Non-required:** Path-C / 16N / Hypothesis H.  
 **Out of agent control:** Ping Paata (user).  
 
-**Current:** residual (ii) closed; residual (i)/E1/L open; claim **not** asserted.
+**Current:** residual (ii) affine closed, full open; residual (i)/E1/L open; claim **not** asserted.

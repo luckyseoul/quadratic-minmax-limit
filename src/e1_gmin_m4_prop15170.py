@@ -29,7 +29,9 @@ Also: ES2=(13p−12)/p < k=3p−2 for p≥5 (binary freeness-fail has xᵀx=k > 
 
 type_I_k_3p_minus_2_closed_general = False until gsum_disj_lb_proved_general
 (Farkas poly is real; disj Gsum LB is not general — 15.158 kills scheme claim).
-E1 still requires residual (ii) + proved Gsum LB. L OPEN until E1 ∧ bi-tight.
+E1 still requires full residual (ii) (15.193 exhaustiveness) + residual (i)
+proved Gsum LB / |μ|≤2/n. Affine residual-(ii) branch closed by 15.179.
+L OPEN until E1 ∧ bi-tight.
 
 Writes evidence/e1_gmin_m4_prop15170.json
 """

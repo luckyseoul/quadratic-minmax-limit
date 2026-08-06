@@ -30,12 +30,12 @@ def test_theorem_all_primes():
     assert th["proved"] is True
 
 
-def test_residual_ii_closed_without_gsum():
-    """Residual (ii) no longer gated on gsum LB."""
+def test_residual_ii_affine_closed_without_gsum():
+    """Affine branch closed by freeze (no Gsum); full residual (ii) still open."""
     assert gsum_disj_lb_proved_general() is False  # residual (i) still open
     assert residual_ii_dual_twolevel_affine_closed() is True
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
-    # E1 still open: residual (i) needs Gsum
+    # Full residual (ii) needs 15.193 exhaustiveness — not just freeze
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
     assert e1_closed_general() is False
     h = hinge_status_179()
     assert h["bound_proved_general"] is False
@@ -43,3 +43,4 @@ def test_residual_ii_closed_without_gsum():
     assert out["proved"]["L_closed"] is False
     assert out["proved"]["residual_i_closed"] is False
     assert out["proved"]["dual_twolevel_affine_impossible_k_ge_3p"] is True
+    assert out["proved"]["residual_ii_dual_twolevel_affine_closed"] is True

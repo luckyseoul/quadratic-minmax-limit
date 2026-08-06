@@ -7,7 +7,7 @@
 ## Verdict
 
 **\(L=\lim\alpha_n=\tfrac12\) is NOT proved.**  
-Candidate path exists; residual (ii) is closed; one **fatal hinge** (residual (i) Gsum LB) still blocks E(1).
+Candidate path exists; residual (ii) affine branch is closed, but **full residual (ii)** is not audit-complete; residual (i) Gsum LB still blocks E(1).
 
 | Piece | Status |
 |-------|--------|
@@ -15,8 +15,9 @@ Candidate path exists; residual (ii) is closed; one **fatal hinge** (residual (i
 | \(\rho=1\) on Paley \(n=p^2+1\) | **Proved** |
 | Denseness (ratio-dense family ⇒ global liminf/limsup) | **Proved** (Prop 6.1) |
 | Bi-tight empty via majorization (15.167) | **Candidate** (algebra OK if mult≥d−1 and λ_min≥6) |
-| Deep freeness-fail ND residual (ii) (15.171+179) | **CLOSED** — freeze-to-tight, no Gsum |
-| Type I freeness-fail residual (i) (15.170) | **OPEN** — needs proved Gsum disj LB |
+| Residual (ii) affine dual two-level (15.179) | **CLOSED** — freeze-to-tight, no Gsum |
+| Residual (ii) full / exhaustiveness (15.193) | **OPEN** — multi-level / non-affine freeness-fail |
+| Type I freeness-fail residual (i) (15.170) | **OPEN** — needs proved Gsum disj LB / \(\|\mu\|\le2/n\) |
 | **E(1) / L = ½** | **OPEN** |
 
 ## Setup
@@ -41,15 +42,16 @@ m_n=\min_{a_{ij}=\pm1}\max_{x=\pm1}\Bigl|\sum_{i<j}a_{ij}x_ix_j\Bigr|,\qquad
 - **Farkas poly** (15.170): under dual equality need \(6/p-4\) and candidate LB \(-12k/(pn)\),  
   poly \(4p^3-6p^2-32p+18>0\) for \(p\ge5\). Algebra OK **if** the LB holds.
 
-## Fatal gap (named)
+## Fatal gaps (named)
 
-**Pointwise disj Gsum lower bound for residual-(i) dual-equality Farkas is not proved for general \(p\ge5\).**
+**Two denseness-path gaps remain.**
 
-- **Residual (ii) CLOSED (15.179):** freeness-fail affine \(f_e=3-S\) on \(S\in\{2,4\}\) freezes \(S_H\equiv3\Rightarrow k=3p-1\); impossible for \(k\ge3p\); fail-eq empty under bi-tight. No Gsum LB.
+- **Residual (ii) affine branch CLOSED (15.179):** freeness-fail affine \(f_e=3-S\) on \(S\in\{2,4\}\) freezes \(S_H\equiv3\Rightarrow k=3p-1\); impossible for \(k\ge3p\); fail-eq empty under bi-tight. No Gsum LB.
+- **Residual (ii) full OPEN (15.193):** freeness-fail does **not** force \(S\in\{2,4\}\) and \(f_e=3-S\). Multi-level (ii-a) and non-affine two-level (ii-b) remain. Predicate `deep_s2_freeness_fail_k_ge_3p_ND_closed()=False`.
 - **Residual (i) OPEN:** freeness edge \(e\notin G\), \(|G|=k=3p-2\). Dual equality forces
-  \((\mathrm{Gsum}\,x)_e=6/p-4\). Threshold \(\mu_*=(6/p-4)/k\); sufficient \(\mathrm{Gsum}\ge-1/p\) (15.176).
+  \((\mathrm{Gsum}\,x)_e=6/p-4\). Threshold \(\mu_*=(6/p-4)/k\); sufficient \(\mathrm{Gsum}\ge-1/p\) or \(|\mu|\le2/n\) (15.176–192).
 - Adjacent Gsum \(=0\), avg disj \(=2/(n-3)\), \(G_0\) PSD **proved**. Candidate \(-12/(pn)\) not general (15.158).
-- Shipped: `gsum_disj_lb_proved_general()→False`; residual (ii) closed; E1/L **OPEN**.
+- Shipped: `gsum_disj_lb_proved_general()→False`; residual (ii) affine closed / full open; E1/L **OPEN**.
 - Support (15.186–188): \(|\varphi|\le2(p-2)\); \(\mu_{\mathrm{part}}\) majorant \(\le1/(2p)\); target \(|\mu|\le2/n\) sufficient for \(p\ge5\); p=5,7 Max± census beat \(1/(2p)\). **Not** a general Max+-free proof — do not treat as closed.
 
 ## Modules
@@ -58,7 +60,8 @@ m_n=\min_{a_{ij}=\pm1}\max_{x=\pm1}\Bigl|\sum_{i<j}a_{ij}x_ix_j\Bigr|,\qquad
 |------|------|
 | Bi-tight majorization | `src/e1_gmin_m4_prop15167.py` |
 | Gsum hinge + residual (i) | `src/e1_gmin_m4_prop15170.py` |
-| Residual (ii) + freeze | `src/e1_gmin_m4_prop15171.py`, `prop15179.py` |
+| Residual (ii) structure + freeze | `src/e1_gmin_m4_prop15171.py`, `prop15179.py` |
+| Residual (ii) exhaustiveness audit | `src/e1_gmin_m4_prop15193.py` |
 | Residual (i) support constraints | `src/e1_gmin_m4_prop15180.py` |
 | Gsum structure / Farkas threshold | `src/e1_gmin_m4_prop15172.py` |
 | Gsum vector structure (ξ, stars, K) | `src/e1_gmin_m4_prop15173.py` |
@@ -70,11 +73,10 @@ m_n=\min_{a_{ij}=\pm1}\max_{x=\pm1}\Bigl|\sum_{i<j}a_{ij}x_ix_j\Bigr|,\qquad
 
 ## What would close L
 
-A Max+-free proof that for all primes \(p\ge5\) and disjoint edges,  
-\(\mathrm{Gsum}_{ab}\ge-1/p\) (or any \(\mu>\mu_*\), or \(\ge-12/(pn)\)),  
-**or** a different proof of residual (i)/(ii) that avoids dual-equality Farkas.
+1. Residual (i): Max+-free \(\mathrm{Gsum}\ge-1/p\) (or \(|\mu|\le2/n\), or ker-box empty) for all primes \(p\ge5\).  
+2. Residual (ii) full: exhaustiveness lemma (freeness-fail \(\Rightarrow S\in\{2,4\}\) and \(f_e=3-S\)), or separate ND for multi-level / non-affine freeness-fail.
 
-Until then: do **not** claim lim α_n = ½.
+Until both: do **not** claim lim α_n = ½.
 
 ## AI-test question (use this file only)
 

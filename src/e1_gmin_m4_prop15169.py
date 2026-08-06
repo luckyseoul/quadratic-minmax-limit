@@ -28,10 +28,12 @@ DEEP multi-s auto-freeness (partial residual (ii)):
      (from E[S]≥s·a+(s+2)(1−a)). Auto-freeness when lb>thr:
      k ≤ p(s+1)−2. Recovers s=2 ⇒ k≤3p−2 (15.168.F).
   H. Deep freeness-fail only possible for k ≥ p(s+1)−1 at that s.
-  I. Deep freeness-fail k≥3p for s₊=2 still OPEN (same Gsum hinge / 15.171).
+  I. Deep freeness-fail k≥3p for s₊=2: affine dual two-level CLOSED (15.179);
+     full residual (ii) OPEN until exhaustiveness (15.193) — multi-level /
+     non-affine freeness-fail not reduced to freeze.
 
-E1_closed_general = False until (i) F and (ii) I close with proved LB.
-residual_closed_general = False. L OPEN.
+E1_closed_general = False until (i) F and (ii) full close (exhaustiveness or
+separate ND). residual_closed_general = False. L OPEN.
 Writes evidence/e1_gmin_m4_prop15169.json
 """
 from __future__ import annotations

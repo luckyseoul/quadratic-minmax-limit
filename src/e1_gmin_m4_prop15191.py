@@ -321,7 +321,7 @@ def certify_mu_le_f4(p: int = 5) -> dict:
 
 def hinge_status_191() -> dict:
     return {
-        "residual_ii_closed": True,
+        "residual_ii_closed": False,  # full open (15.193); affine branch closed by 15.179
         "residual_i_closed": False,
         "gsum_disj_lb_proved_general": gsum_disj_lb_proved_general(),
         "e1_closed_general": e1_closed_general(),

@@ -1,8 +1,10 @@
 {
-  "title": "Prop 15.171 residual (ii) close: deep freeness-fail k\u22653p ND; E1/L follow bi-tight\u2227E1",
+  "title": "Prop 15.171 residual (ii) structure: affine branch CLOSED (15.179); full residual (ii) OPEN (15.193 exhaustiveness); E1/L follow bi-tight\u2227E1",
   "L_status": "OPEN",
   "proved": {
-    "deep_s2_freeness_fail_k_ge_3p_ND": true,
+    "deep_s2_freeness_fail_k_ge_3p_ND": false,
+    "residual_ii_affine_branch_closed": true,
+    "residual_ii_exhaustiveness_proved": false,
     "type_I_k_3p_minus_2_closed": false,
     "bi_tight_empty_for_all_p_ge_5": true,
     "E1_closed_general": false,
@@ -13,11 +15,18 @@
   },
   "algebra": {
     "residual_ii": {
-      "residual_ii_closed": true,
-      "gsum_disj_lb_required": false,
+      "residual_ii_closed": false,
+      "residual_ii_affine_branch_closed": true,
+      "residual_ii_affine_pieces_ok": true,
+      "residual_ii_exhaustiveness_proved": false,
+      "gsum_disj_lb_required_for_affine_branch": false,
       "freeze_to_tight_15_179": true,
+      "open_subcases": [
+        "(ii-a) multi-level freeness-fail s\u208a=2, k\u22653p (S support not forced \u2286{2,4})",
+        "(ii-b) two-level S\u2208{2,4} non-affine freeness-fail (f_e\u2261+1 on U\u2082, not f_e\u2261\u22121 on U\u2084)"
+      ],
       "n_checked": 15,
-      "theorem": "Prop 15.171 + 15.179: dual two-level freeness-fail affine freezes to S_H\u22613 \u21d2 k=3p\u22121 (impossible for k\u22653p); fail-eq empty under bi-tight; auto-freeness k\u22643p\u22122; residual (ii) CLOSED without disj Gsum LB. Residual (i) still needs Gsum (15.170)."
+      "theorem": "Prop 15.171 + 15.179: dual two-level freeness-fail **affine** freezes to S_H\u22613 \u21d2 k=3p\u22121 (impossible for k\u22653p); fail-eq empty under bi-tight; auto-freeness k\u22643p\u22122. Affine branch CLOSED. Prop 15.193: exhaustiveness (freeness-fail \u21d2 S\u2208{2,4} and f_e=3\u2212S) is NOT proved \u2014 multi-level (ii-a) and non-affine two-level (ii-b) remain open. Full residual (ii) OPEN. Residual (i) still needs Gsum."
     }
   },
   "L_wire": {
@@ -28,8 +37,9 @@
     "rule": "L closed iff bi-tight \u2227 E(1); denseness Prop 6.2"
   },
   "open_residual": [
-    "Type I freeness-fail k=3p\u22122 (15.170)"
+    "Type I freeness-fail k=3p\u22122 (15.170)",
+    "deep freeness-fail k\u22653p (15.171)"
   ],
-  "F3": "E1/L only from type_I\u2227deep_k\u22653p\u2227bi-tight real predicates",
-  "F13": "15.171 closes residual (ii); residual/16N still open optional"
+  "F3": "E1/L only from type_I\u2227deep_k\u22653p_full\u2227bi-tight real predicates",
+  "F13": "15.171+15.179 affine branch closed; 15.193 full residual (ii) open; residual/16N still open optional"
 }

@@ -5,8 +5,9 @@ Prop 15.180 — Residual (i) attack log: dual-eq support constraints; hinge OPEN
 Does **not** set gsum_disj_lb_proved_general True. Soft-close forbidden.
 
 CONTEXT
-  Residual (ii) CLOSED (15.179 freeze). Residual (i) Type I k=3p−2 remains
-  the unique denseness-path ND gap for E(1).
+  Residual (ii) affine branch CLOSED (15.179 freeze); full residual (ii)
+  OPEN until 15.193 exhaustiveness. Residual (i) Type I k=3p−2 remains
+  a denseness-path ND gap for E(1).
 
 PROVED Max+-free (this prop + 15.176–178):
   A. Dual equality (e∉G) forces (Gsum x)_e = need = 6/p−4 (15.176).
@@ -166,7 +167,7 @@ def theorem_open_core_nd_ge_2(primes: list[int] | None = None) -> dict:
 
 def hinge_status_180() -> dict:
     return {
-        "residual_ii_closed": True,  # 15.179
+        "residual_ii_closed": False,  # full open (15.193); affine branch closed by 15.179
         "residual_i_closed": False,
         "gsum_disj_lb_proved_general": gsum_disj_lb_proved_general(),
         "e1_closed_general": e1_closed_general(),

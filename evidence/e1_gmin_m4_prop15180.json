@@ -433,7 +433,7 @@
     "nd2_wedge_lb": -2.8284271247461903
   },
   "hinge": {
-    "residual_ii_closed": true,
+    "residual_ii_closed": false,
     "residual_i_closed": false,
     "gsum_disj_lb_proved_general": false,
     "e1_closed_general": false,

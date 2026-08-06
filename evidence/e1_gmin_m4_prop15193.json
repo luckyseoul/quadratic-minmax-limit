@@ -1,0 +1,423 @@
+{
+  "title": "Prop 15.193 residual (ii) exhaustiveness audit: affine branch CLOSED (15.179); full residual (ii) OPEN (no exhaustiveness)",
+  "proved": {
+    "freeness_fail_eq_f_e_plus_on_U2": true,
+    "freeness_fail_kills_Max_plus_weak_ND_witness": true,
+    "freeness_fail_mass_possible_k_ge_3p": true,
+    "affine_dual_twolevel_freeze_15_179": true,
+    "residual_ii_affine_branch_closed": true,
+    "residual_ii_exhaustiveness_proved": false,
+    "residual_ii_full_closed": false,
+    "multi_level_ruled_out": false,
+    "non_affine_two_level_ruled_out": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false,
+    "bi_tight_empty": true
+  },
+  "algebra": {
+    "A_freeness_def": {
+      "proved": true,
+      "theorem": "Deep freeness-fail for edge e means f_e\u2261+1 on U\u2082={S=2}\u2286Max+. Equivalently: no Max+ vector with S=2 and f_e=\u22121."
+    },
+    "B_weak_ND_witness": {
+      "proved": true,
+      "samples": [
+        {
+          "S": 2,
+          "f_e": 1,
+          "S_H": 3,
+          "ge_3": true
+        },
+        {
+          "S": 4,
+          "f_e": -1,
+          "S_H": 3,
+          "ge_3": true
+        },
+        {
+          "S": 4,
+          "f_e": 1,
+          "S_H": 5,
+          "ge_3": true
+        },
+        {
+          "S": 6,
+          "f_e": -1,
+          "S_H": 5,
+          "ge_3": true
+        },
+        {
+          "S": 6,
+          "f_e": 1,
+          "S_H": 7,
+          "ge_3": true
+        },
+        {
+          "S": 8,
+          "f_e": -1,
+          "S_H": 7,
+          "ge_3": true
+        },
+        {
+          "S": 8,
+          "f_e": 1,
+          "S_H": 9,
+          "ge_3": true
+        },
+        {
+          "S": 10,
+          "f_e": -1,
+          "S_H": 9,
+          "ge_3": true
+        },
+        {
+          "S": 10,
+          "f_e": 1,
+          "S_H": 11,
+          "ge_3": true
+        }
+      ],
+      "theorem": "Freeness-fail + s\u208a=2 \u21d2 on Max+: S_H=3 on U\u2082 and S_H\u22653 on S\u22654. Hence no Max+ vector has S_H\u22641; the 15.171.C Max+ weak-ND witness (S=2,f_e=\u22121\u21d2S_H=1) is unavailable."
+    },
+    "C_mass": {
+      "5": {
+        "p": 5,
+        "proved": true,
+        "rows": [
+          {
+            "k": 13,
+            "N2_N_lb": "7/10",
+            "thr": "3/5",
+            "auto_freeness": true,
+            "freeness_can_fail": false
+          },
+          {
+            "k": 14,
+            "N2_N_lb": "3/5",
+            "thr": "3/5",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          },
+          {
+            "k": 15,
+            "N2_N_lb": "1/2",
+            "thr": "3/5",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          },
+          {
+            "k": 16,
+            "N2_N_lb": "2/5",
+            "thr": "3/5",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          },
+          {
+            "k": 17,
+            "N2_N_lb": "3/10",
+            "thr": "3/5",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          }
+        ],
+        "theorem": "N\u2082/N \u2265 2\u2212k/(2p) under s\u208a=2 even scores. Auto-freeness iff lb>thr, i.e. k\u22643p\u22122. For k\u22653p, lb\u22641/2<(p+1)/(2p)=thr so freeness-fail is not mass-obstructed."
+      },
+      "7": {
+        "p": 7,
+        "proved": true,
+        "rows": [
+          {
+            "k": 19,
+            "N2_N_lb": "9/14",
+            "thr": "4/7",
+            "auto_freeness": true,
+            "freeness_can_fail": false
+          },
+          {
+            "k": 20,
+            "N2_N_lb": "4/7",
+            "thr": "4/7",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          },
+          {
+            "k": 21,
+            "N2_N_lb": "1/2",
+            "thr": "4/7",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          },
+          {
+            "k": 22,
+            "N2_N_lb": "3/7",
+            "thr": "4/7",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          },
+          {
+            "k": 23,
+            "N2_N_lb": "5/14",
+            "thr": "4/7",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          }
+        ],
+        "theorem": "N\u2082/N \u2265 2\u2212k/(2p) under s\u208a=2 even scores. Auto-freeness iff lb>thr, i.e. k\u22643p\u22122. For k\u22653p, lb\u22641/2<(p+1)/(2p)=thr so freeness-fail is not mass-obstructed."
+      },
+      "11": {
+        "p": 11,
+        "proved": true,
+        "rows": [
+          {
+            "k": 31,
+            "N2_N_lb": "13/22",
+            "thr": "6/11",
+            "auto_freeness": true,
+            "freeness_can_fail": false
+          },
+          {
+            "k": 32,
+            "N2_N_lb": "6/11",
+            "thr": "6/11",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          },
+          {
+            "k": 33,
+            "N2_N_lb": "1/2",
+            "thr": "6/11",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          },
+          {
+            "k": 34,
+            "N2_N_lb": "5/11",
+            "thr": "6/11",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          },
+          {
+            "k": 35,
+            "N2_N_lb": "9/22",
+            "thr": "6/11",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          }
+        ],
+        "theorem": "N\u2082/N \u2265 2\u2212k/(2p) under s\u208a=2 even scores. Auto-freeness iff lb>thr, i.e. k\u22643p\u22122. For k\u22653p, lb\u22641/2<(p+1)/(2p)=thr so freeness-fail is not mass-obstructed."
+      },
+      "13": {
+        "p": 13,
+        "proved": true,
+        "rows": [
+          {
+            "k": 37,
+            "N2_N_lb": "15/26",
+            "thr": "7/13",
+            "auto_freeness": true,
+            "freeness_can_fail": false
+          },
+          {
+            "k": 38,
+            "N2_N_lb": "7/13",
+            "thr": "7/13",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          },
+          {
+            "k": 39,
+            "N2_N_lb": "1/2",
+            "thr": "7/13",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          },
+          {
+            "k": 40,
+            "N2_N_lb": "6/13",
+            "thr": "7/13",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          },
+          {
+            "k": 41,
+            "N2_N_lb": "11/26",
+            "thr": "7/13",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          }
+        ],
+        "theorem": "N\u2082/N \u2265 2\u2212k/(2p) under s\u208a=2 even scores. Auto-freeness iff lb>thr, i.e. k\u22643p\u22122. For k\u22653p, lb\u22641/2<(p+1)/(2p)=thr so freeness-fail is not mass-obstructed."
+      },
+      "17": {
+        "p": 17,
+        "proved": true,
+        "rows": [
+          {
+            "k": 49,
+            "N2_N_lb": "19/34",
+            "thr": "9/17",
+            "auto_freeness": true,
+            "freeness_can_fail": false
+          },
+          {
+            "k": 50,
+            "N2_N_lb": "9/17",
+            "thr": "9/17",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          },
+          {
+            "k": 51,
+            "N2_N_lb": "1/2",
+            "thr": "9/17",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          },
+          {
+            "k": 52,
+            "N2_N_lb": "8/17",
+            "thr": "9/17",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          },
+          {
+            "k": 53,
+            "N2_N_lb": "15/34",
+            "thr": "9/17",
+            "auto_freeness": false,
+            "freeness_can_fail": true
+          }
+        ],
+        "theorem": "N\u2082/N \u2265 2\u2212k/(2p) under s\u208a=2 even scores. Auto-freeness iff lb>thr, i.e. k\u22643p\u22122. For k\u22653p, lb\u22641/2<(p+1)/(2p)=thr so freeness-fail is not mass-obstructed."
+      }
+    },
+    "E_multi_level": {
+      "exhaustiveness_proved": false,
+      "multi_level_mass_feasible_examples_exist": true,
+      "examples": [
+        {
+          "p": 5,
+          "k": 16,
+          "mass_2": "1/2",
+          "mass_4": "2/5",
+          "mass_6": "1/10",
+          "E_S": "16/5",
+          "a_le_thr": true,
+          "multi_level_mass_feasible": true
+        },
+        {
+          "p": 5,
+          "k": 18,
+          "mass_2": "3/10",
+          "mass_4": "3/5",
+          "mass_6": "1/10",
+          "E_S": "18/5",
+          "a_le_thr": true,
+          "multi_level_mass_feasible": true
+        },
+        {
+          "p": 7,
+          "k": 22,
+          "mass_2": "37/70",
+          "mass_4": "13/35",
+          "mass_6": "1/10",
+          "E_S": "22/7",
+          "a_le_thr": true,
+          "multi_level_mass_feasible": true
+        },
+        {
+          "p": 7,
+          "k": 24,
+          "mass_2": "27/70",
+          "mass_4": "18/35",
+          "mass_6": "1/10",
+          "E_S": "24/7",
+          "a_le_thr": true,
+          "multi_level_mass_feasible": true
+        }
+      ],
+      "theorem": "Score first-moment + freeness thr do not force two-level: there exist (p,k\u22653p) with positive mass at S=6, N\u2082/N\u2264thr, and E[S]=k/p. Multi-level freeness-fail is not mass-impossible. No shipped score inequality kills (ii-a)."
+    },
+    "F_non_affine": {
+      "exhaustiveness_proved": false,
+      "affine_forces_S_H_const_3": true,
+      "non_affine_S_H_not_const": true,
+      "theorem": "Under S\u2208{2,4} and freeness-fail alone: f_e\u2261+1 on U\u2082 only. If some y with S=4 has f_e=+1 then S_H(y)=5 \u2260 3, so S_H is not constantly 3 and 15.179 freeze does not fire. Non-affine two-level freeness-fail (ii-b) is not closed by freeze."
+    },
+    "desired_lemma": {
+      "statement": "Exhaustiveness lemma (desired, NOT proved): Under residual-(ii) hypotheses (deep s\u208a=2 undercutter, freeness-fail for e, k\u22653p), failure of Max+ weak ND implies (1) S\u2208{2,4} on every Max+ vector and (2) f_e=3\u2212S on every Max+ vector (and the dual Max\u2212 affine form if needed for dual two-level).",
+      "proved": false,
+      "if_proved_then": "15.179 freeze closes residual (ii) fully for k\u22653p; fail-eq k=3p\u22121 already empty under bi-tight.",
+      "current_status": "Only (partial) freeness-fail \u21d2 f_e\u2261+1 on U\u2082 is proved. (1) and (2) are open; see multi_level_not_ruled_out and non_affine_two_level_not_ruled_out."
+    },
+    "freeze_15_179": {
+      "proved": true,
+      "freeze": {
+        "proved": true,
+        "theorem": "Freeness-fail affine f_e=3\u2212S with S\u2208{2,4} \u21d2 S_H=S+f_e=3 on every Max+ vector."
+      },
+      "by_p": {
+        "5": {
+          "k_forced": 14,
+          "impossible_k_ge_3p": true
+        },
+        "7": {
+          "k_forced": 20,
+          "impossible_k_ge_3p": true
+        },
+        "11": {
+          "k_forced": 32,
+          "impossible_k_ge_3p": true
+        },
+        "13": {
+          "k_forced": 38,
+          "impossible_k_ge_3p": true
+        },
+        "17": {
+          "k_forced": 50,
+          "impossible_k_ge_3p": true
+        },
+        "19": {
+          "k_forced": 56,
+          "impossible_k_ge_3p": true
+        },
+        "23": {
+          "k_forced": 68,
+          "impossible_k_ge_3p": true
+        },
+        "29": {
+          "k_forced": 86,
+          "impossible_k_ge_3p": true
+        },
+        "31": {
+          "k_forced": 92,
+          "impossible_k_ge_3p": true
+        },
+        "37": {
+          "k_forced": 110,
+          "impossible_k_ge_3p": true
+        }
+      },
+      "n_primes": 10,
+      "theorem": "For every prime p\u22655: dual two-level freeness-fail affine forces k=3p\u22121 and is impossible for k\u22653p (first moment)."
+    }
+  },
+  "hinge": {
+    "residual_ii_affine_branch_k_ge_3p": "CLOSED by 15.179 freeze-to-tight first moment",
+    "residual_ii_exhaustiveness": "OPEN \u2014 freeness-fail does not force S\u2208{2,4} and f_e=3\u2212S",
+    "residual_ii_full": "OPEN until exhaustiveness (or separate ND for ii-a/ii-b)",
+    "residual_i_type_I_k_3p_minus_2": "OPEN \u2014 needs |\u03bc|\u22642/n or ker-box (15.176\u2013192)",
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "bound_proved_general": false,
+    "open_subcases": [
+      "(ii-a) multi-level freeness-fail s\u208a=2, k\u22653p (S support not forced \u2286{2,4})",
+      "(ii-b) two-level S\u2208{2,4} non-affine freeness-fail (f_e\u2261+1 on U\u2082, not f_e\u2261\u22121 on U\u2084)"
+    ],
+    "open": "Prove exhaustiveness lemma (weak ND fail \u21d2 affine two-level), or close (ii-a)/(ii-b) by other ND; residual (i) still needs |\u03bc|\u22642/n or ker-box empty for all p\u22655."
+  },
+  "F3": "Do not claim residual (ii) full CLOSED without exhaustiveness; affine branch alone is 15.179; residual (i)/E1/L still open.",
+  "audit_verdict": "Residual (ii): affine two-level branch closed; full closure not audit-complete."
+}

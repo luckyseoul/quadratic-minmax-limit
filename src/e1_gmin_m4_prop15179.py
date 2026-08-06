@@ -31,10 +31,14 @@ PROVED Max+-free Fraction:
 NOT claimed here:
   F. Residual (i) Type I k=3p−2 (S∈{1,5}, affine S+2f_e=3):
      S_H ∈ {2,4}, not constant — freeze does **not** apply.
-     Still needs Gsum LB (15.176–178). gsum_disj_lb_proved_general False.
-  G. Non-affine deep freeness-fail (f_e≡1 on U₂ but not affine on U₄):
-     handled by 15.171 weak ND / reduction (not re-opened here).
-  H. E1 / L remain OPEN until residual (i) Gsum hinge closes.
+     Still needs Gsum LB / |μ|≤2/n / ker-box (15.176–192).
+     gsum_disj_lb_proved_general False.
+  G. Non-affine / multi-level deep freeness-fail (f_e≡1 on U₂ but not
+     f_e=3−S on support S∈{2,4}, or S support larger): **not** closed by
+     this prop. Prop 15.193 audits that exhaustiveness is missing;
+     15.171 weak ND only covers freeness (not freeness-fail). Full
+     residual (ii) remains OPEN.
+  H. E1 / L remain OPEN until residual (i) and full residual (ii) close.
 
 Writes evidence/e1_gmin_m4_prop15179.json
 """
@@ -143,6 +147,9 @@ def residual_ii_dual_twolevel_affine_closed() -> bool:
     """
     Dual two-level affine branch of residual (ii) closed for k≥3p
     by freeze (no Gsum LB). Fail-eq k=3p−1 still needs bi-tight empty.
+
+    This is **not** full residual (ii) closed — see Prop 15.193
+    exhaustiveness (multi-level / non-affine still open).
     """
     th = theorem_freeze_all_primes()
     # fail-eq uses bi-tight

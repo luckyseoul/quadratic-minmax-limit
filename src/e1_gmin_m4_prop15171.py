@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Prop 15.171 — Residual (ii) close: deep freeness-fail s₊=2, k≥3p ND for all p≥5.
+Prop 15.171 — Residual (ii) structure: deep freeness-fail s₊=2, k≥3p ND pieces.
 
 REAL checkable Fraction / prior-prop chain:
 
@@ -10,19 +10,24 @@ REAL checkable Fraction / prior-prop chain:
   C. Deep freeness (N₂/N > thr): some y with S=2, f_e=−1 ⇒ S_H=1,
      Q=Φ−2S ⇒ Q_H=Φ−2 ⇒ Φ(H)≥Φ−2 (weak ND). Prior style 15.43.2/15.42.
   D. Auto-freeness k≤3p−2 (15.168.F): freeness ⇒ weak ND.
-  E. Fail-eq k=3p−1: freeness-fail + S∈{2,4} ⇒ H tight S≡3 size 3p
+  E. Fail-eq k=3p−1: freeness-fail + S∈{2,4} affine ⇒ H tight S≡3 size 3p
      empty under bi-tight/Thm A (15.168.G + 15.167).
-  F–H (superseded for close). Dual two-level affine Gsum Farkas algebra
-     remains checkable under candidate LB, but is **vacuous** for k≥3p:
+  F–H. Dual two-level affine Gsum Farkas algebra remains checkable under
+     candidate LB, but is **vacuous** for k≥3p after freeze:
   I. **Prop 15.179 freeze-to-tight (proved):** freeness-fail affine f_e=3−S
      with S∈{2,4} ⇒ S_H≡3 on Max+ ⇒ (k+1)/p=3 ⇒ k=3p−1 only.
-     Hence dual two-level freeness-fail affine is impossible for all k≥3p
-     (first moment; no Gsum LB). Combined with E, residual (ii) CLOSED.
+     Hence **affine dual two-level** freeness-fail is impossible for k≥3p.
+  J. **Prop 15.193 exhaustiveness (OPEN):** freeness-fail does **not**
+     currently force S∈{2,4} and f_e=3−S. Multi-level (ii-a) and non-affine
+     two-level (ii-b) remain open. Full residual (ii) is **not** closed.
 
-Consequence: residual (ii) ND class closed for all p≥5 **without**
-gsum_disj_lb_proved_general. Residual (i) Type I still needs Gsum (15.170).
-E1_closed when residual (i) ∧ residual (ii) ∧ bi-tight.
-L closed iff E1 ∧ bi-tight.
+Honest predicates:
+  residual_ii_affine_branch_closed = True  (15.179)
+  residual_ii_full_closed = False          (needs 15.193 exhaustiveness)
+  deep_s2_freeness_fail_k_ge_3p_ND_closed wires to residual_ii_full_closed.
+
+E1_closed when residual (i) ∧ residual (ii) full ∧ bi-tight.
+L closed iff E1 ∧ bi-tight. Soft-close forbidden.
 
 Writes evidence/e1_gmin_m4_prop15171.json
 """
@@ -346,16 +351,11 @@ def deep_s2_freeness_fail_k_ge_3p_ND(p: int) -> dict:
     }
 
 
-def deep_s2_freeness_fail_k_ge_3p_ND_closed() -> bool:
+def residual_ii_affine_branch_pieces_ok() -> bool:
     """
-    Residual (ii) closed for all p≥5.
-
-    Prop **15.179** (freeze-to-tight): dual two-level freeness-fail affine
-    forces k=3p−1, impossible for k≥3p — no Gsum LB required for that branch.
-    Fail-eq k=3p−1 empty under bi-tight (15.168.G). Auto-freeness k≤3p−2
-    and weak ND for freeness remain as in 15.171.A–E.
-
-    Does **not** require gsum_disj_lb_proved_general (that hinge is residual (i)).
+    Shipped structure for residual (ii) *excluding* exhaustiveness:
+    freeze affine branch + auto-freeness + fail-eq + weak ND + bi-tight.
+    Does **not** alone close full residual (ii) (see 15.193).
     """
     from e1_gmin_m4_prop15179 import (
         residual_ii_dual_twolevel_affine_closed,
@@ -366,8 +366,6 @@ def deep_s2_freeness_fail_k_ge_3p_ND_closed() -> bool:
         return False
     if not residual_ii_dual_twolevel_affine_closed():
         return False
-    # Remaining 15.171 pieces (auto / fail-eq / parity / weak ND / bi-tight)
-    # that do not depend on the vacuous dual-twolevel Gsum Farkas for k≥3p.
     primes = [p for p in range(5, 60) if is_prime(p)]
     for p in primes:
         bt = bitight_from_majorization(p)["bitight_empty"]
@@ -384,6 +382,21 @@ def deep_s2_freeness_fail_k_ge_3p_ND_closed() -> bool:
         ):
             return False
     return True
+
+
+def deep_s2_freeness_fail_k_ge_3p_ND_closed() -> bool:
+    """
+    Full residual (ii) closed for all p≥5?
+
+    Requires affine branch pieces (15.179 freeze + auto/fail-eq/weak ND)
+    **and** exhaustiveness (15.193): freeness-fail ⇒ S∈{2,4} and f_e=3−S.
+
+    Exhaustiveness is currently **False** ⇒ this returns False.
+    Affine branch alone: residual_ii_affine_branch_pieces_ok / 15.179.
+    """
+    from e1_gmin_m4_prop15193 import residual_ii_full_closed
+
+    return residual_ii_full_closed()
 
 
 # ---------------------------------------------------------------------------
@@ -422,17 +435,32 @@ def main_L_from_e1(e1: bool, bitight: bool) -> dict:
 def prove_residual_ii(primes: list[int] | None = None) -> dict:
     if primes is None:
         primes = [p for p in range(5, 60) if is_prime(p)]
-    closed = deep_s2_freeness_fail_k_ge_3p_ND_closed()
+    from e1_gmin_m4_prop15179 import residual_ii_dual_twolevel_affine_closed
+    from e1_gmin_m4_prop15193 import (
+        residual_ii_exhaustiveness_proved,
+        residual_ii_full_closed,
+        residual_ii_open_subcases,
+    )
+
+    full = residual_ii_full_closed()
+    affine = residual_ii_dual_twolevel_affine_closed()
+    pieces = residual_ii_affine_branch_pieces_ok()
     return {
-        "residual_ii_closed": closed,
-        "gsum_disj_lb_required": False,  # 15.179 freeze replaces Gsum for residual (ii)
+        "residual_ii_closed": full,  # full only
+        "residual_ii_affine_branch_closed": affine,
+        "residual_ii_affine_pieces_ok": pieces,
+        "residual_ii_exhaustiveness_proved": residual_ii_exhaustiveness_proved(),
+        "gsum_disj_lb_required_for_affine_branch": False,
         "freeze_to_tight_15_179": True,
+        "open_subcases": residual_ii_open_subcases(),
         "n_checked": len(primes),
         "theorem": (
-            "Prop 15.171 + 15.179: dual two-level freeness-fail affine freezes "
+            "Prop 15.171 + 15.179: dual two-level freeness-fail **affine** freezes "
             "to S_H≡3 ⇒ k=3p−1 (impossible for k≥3p); fail-eq empty under "
-            "bi-tight; auto-freeness k≤3p−2; residual (ii) CLOSED without "
-            "disj Gsum LB. Residual (i) still needs Gsum (15.170)."
+            "bi-tight; auto-freeness k≤3p−2. Affine branch CLOSED. "
+            "Prop 15.193: exhaustiveness (freeness-fail ⇒ S∈{2,4} and f_e=3−S) "
+            "is NOT proved — multi-level (ii-a) and non-affine two-level (ii-b) "
+            "remain open. Full residual (ii) OPEN. Residual (i) still needs Gsum."
         ),
     }
 
@@ -445,12 +473,15 @@ def main() -> dict:
     Lwire = main_L_from_e1(e1, bt)
     out = {
         "title": (
-            "Prop 15.171 residual (ii) close: deep freeness-fail k≥3p ND; "
+            "Prop 15.171 residual (ii) structure: affine branch CLOSED (15.179); "
+            "full residual (ii) OPEN (15.193 exhaustiveness); "
             + ("E1/L CLOSED" if e1 and bt else "E1/L follow bi-tight∧E1")
         ),
         "L_status": Lwire["L_status"],
         "proved": {
             "deep_s2_freeness_fail_k_ge_3p_ND": RII["residual_ii_closed"],
+            "residual_ii_affine_branch_closed": RII["residual_ii_affine_branch_closed"],
+            "residual_ii_exhaustiveness_proved": RII["residual_ii_exhaustiveness_proved"],
             "type_I_k_3p_minus_2_closed": type_I_k_3p_minus_2_closed_general(),
             "bi_tight_empty_for_all_p_ge_5": bt,
             "E1_closed_general": e1,
@@ -462,13 +493,19 @@ def main() -> dict:
         "algebra": {"residual_ii": RII},
         "L_wire": Lwire,
         "open_residual": open_res,
-        "F3": "E1/L only from type_I∧deep_k≥3p∧bi-tight real predicates",
-        "F13": "15.171 closes residual (ii); residual/16N still open optional",
+        "F3": "E1/L only from type_I∧deep_k≥3p_full∧bi-tight real predicates",
+        "F13": (
+            "15.171+15.179 affine branch closed; 15.193 full residual (ii) open; "
+            "residual/16N still open optional"
+        ),
     }
     path = ROOT / "evidence" / "e1_gmin_m4_prop15171.json"
     path.write_text(json.dumps(out, indent=2, default=str))
-    print("Prop 15.171 residual (ii) CLOSE")
-    print(f"  residual (ii) closed: {RII['residual_ii_closed']}")
+    print("Prop 15.171 residual (ii) structure (honest)")
+    print(f"  residual (ii) FULL closed: {RII['residual_ii_closed']}")
+    print(f"  residual (ii) affine branch: {RII['residual_ii_affine_branch_closed']}")
+    print(f"  exhaustiveness: {RII['residual_ii_exhaustiveness_proved']}")
+    print(f"  open subcases: {RII.get('open_subcases')}")
     print(f"  type I closed: {type_I_k_3p_minus_2_closed_general()}")
     print(f"  bi-tight: {bt}")
     print(f"  E1_closed={e1}")
