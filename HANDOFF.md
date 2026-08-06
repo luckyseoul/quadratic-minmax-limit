@@ -53,7 +53,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **E(1) OPEN (15.168–171 structure + 15.170–171 Farkas):** Type I freeness ND and auto-freeness structure shipped; residual (i)/(ii) Farkas **blocked** by unproved disj Gsum LB (`gsum_disj_lb_proved_general=False`; 15.158 Max+ not IP-scheme). **L OPEN.**
 
-**Primary denseness-path hinge (general primes \(p\ge5\)):** prove disj \(\mathrm{Gsum}_{ab}>-2/p\) Max+-free (Prop 15.172 Farkas threshold; candidate \(-12/(pn)\) false at \(p=3\)), or alternate residual i/ii. Structure: `src/e1_gmin_m4_prop15172.py`. Package: `evidence/share/denseness_path_package.md`.
+**Primary denseness-path hinge (general primes \(p\ge5\)):** prove \(H_{ab}\ge-1/p\) (i.e. disj Gsum \(>-2/p\)) Max+-free using Prop 15.173 vector structure, or alternate residual i/ii. Modules: `prop15172.py`, `prop15173.py`. Package: `evidence/share/denseness_path_package.md`.
 
 **Optional residual/16N (still OPEN, not required for denseness L):**
 \[

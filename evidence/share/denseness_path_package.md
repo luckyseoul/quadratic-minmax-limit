@@ -60,6 +60,7 @@ m_n=\min_{a_{ij}=\pm1}\max_{x=\pm1}\Bigl|\sum_{i<j}a_{ij}x_ix_j\Bigr|,\qquad
 | Gsum hinge + residual (i) | `src/e1_gmin_m4_prop15170.py` |
 | Residual (ii) | `src/e1_gmin_m4_prop15171.py` |
 | Gsum structure / Farkas threshold | `src/e1_gmin_m4_prop15172.py` |
+| Gsum vector structure (ξ, stars, K) | `src/e1_gmin_m4_prop15173.py` |
 | Max+ not scheme | `src/e1_gmin_m4_prop15158.py` |
 | Main wire | `src/e1_main_chain_status.py` |
 
