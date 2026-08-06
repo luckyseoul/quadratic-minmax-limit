@@ -9,29 +9,24 @@
 
 ## 1. One-line status
 
-**Candidate** \(L=\lim\alpha_n=\tfrac12\) on denseness path (Props **15.167–15.171**).  
-**Prize status: NOT accepted.** Independent Grok Build 4.5 (posted by @PI010101) found a **gap** in lim=½.
+**\(L=\lim\alpha_n=\tfrac12\) is OPEN.** Named fatal hinge: disj Gsum LB for 15.170–171 unjustified (15.158 Max+ not IP-scheme). Soft-close **retracted** 2026-08-06.
 
-**Optional still OPEN (not required for this path):** Path-C residual / \(16N\) / Hypothesis H.
+**Short package:** `evidence/share/denseness_path_package.md`  
+**Prize:** NOT accepted; AI-test (3 cold passes) all say **not proved**, same gap.
 
-### Prize / thread update (2026-08-06)
+### Prize / AI-test (2026-08-06)
 
-- @PI010101 asked for full solution on GitHub/PDF; repo linked.  
-- He then posted: *“Grok build 4.5 found a gap in the proof lim=1/2”* with share  
-  https://grok.com/share/c2hhcmQtNA_218425aa-c1d1-4263-a3ea-9114ef04cd9c  
-- His requirement: pass an **“AI test”** — any reasonable AI identifies the solution as essentially correct in **2–3 repeated prompts** — **only then** will he human-verify.  
-- User **cannot use MO** (new account / no points). Delivery channel: **X prize thread + GitHub**.  
-- Thread reply may have been deleted; gate above still stands.
+- Gap (one sentence): Farkas needs \(\mathrm{Gsum}_{ab}\ge-12/(pn)\) for all \(p\ge5\); only adjacent zero is proved; disj LB was scheme-min but Max+ is not an IP-scheme (15.158).  
+- Predicates: `gsum_disj_lb_proved_general()=False` ⇒ E1/L OPEN.  
+- AI test: 3 independent cold reviews of short package → all **NOT_PROVED** / honest OPEN.  
+- Channel: X + GitHub (no MO). Package ready to send as **current honest status**, not as closed proof.
 
-### What’s left (simple)
+### What’s left to *close* L (math, not this goal)
 
-1. **Find the actual hole** (read Paata’s Grok share or cold gap-find). One-sentence: which step fails.  
-2. **Fix or drop the claim** (repair hinge, or stop saying CLOSED).  
-3. **Short clean proof package** (setup → sandwich → denseness → 3 lemmas → \(L=\frac12\)).  
-4. **Pass AI test** (2–3 models × 2–3 prompts; same gap ⇒ fix that).  
-5. **Ping Paata** with fixed writeup + GitHub.
-
-**Not needed now:** residual/16N · more X cards · MO answer.
+1. Max+-free proof of disj Gsum LB (or alternate residual i/ii).  
+2. Re-enable E1/L predicates.  
+3. Re-run AI test on a closed claim.  
+4. Ping Paata.
 
 ---
 
