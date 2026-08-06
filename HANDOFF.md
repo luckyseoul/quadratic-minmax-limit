@@ -54,9 +54,9 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **Bi-tight majorization (15.167, candidate):** mult≥d−1 + λ_min≥6 ⇒ L_* < 2d (algebra). Does **not** alone close L.
 
-**E(1) OPEN (15.168–171 structure + 15.170–171 Farkas):** Type I freeness ND and auto-freeness structure shipped; residual (i)/(ii) Farkas **blocked** by unproved disj Gsum LB (`gsum_disj_lb_proved_general=False`; 15.158 Max+ not IP-scheme). **L OPEN.**
+**E(1) OPEN:** residual **(ii) CLOSED** (15.179). Residual **(i)** Type I dual-eq still blocked (`gsum_disj_lb_proved_general=False`). **L OPEN.**
 
-**Primary denseness-path hinge (general primes \(p\ge5\)):** prove \(H_{ab}\ge-1/p\) (i.e. disj Gsum \(>-2/p\)) Max+-free using Prop 15.173 vector structure, or alternate residual i/ii. Modules: `prop15172.py`, `prop15173.py`. Package: `evidence/share/denseness_path_package.md`.
+**Primary denseness-path hinge (general primes \(p\ge5\)):** prove \(|\mu_4|\le2/n\) (or dual-eq ker-box empty). Latest modules: `prop15186.py`–`prop15192.py`. Package: `evidence/share/denseness_path_package.md`. Session notes: `evidence/SESSION_HANDOFF_2026-08-06_residual_i.md`.
 
 **Optional residual/16N (still OPEN, not required for denseness L):**
 \[
