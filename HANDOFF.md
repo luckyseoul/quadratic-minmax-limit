@@ -14,27 +14,26 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
 **GitHub:** https://github.com/luckyseoul/quadratic-minmax-limit (`main`)  
-**Repo description:** updated to CLOSED claim (may need re-OPEN after gap).  
+**Repo description:** OPEN (Gsum disj LB blocks denseness path).  
 
-**Shipped props (candidate chain):**  
-- **15.167:** bi-tight empty all p≥5 (majorization). `src/e1_gmin_m4_prop15167.py`  
-- **15.170:** Type I freeness-fail ND (Gsum Farkas). `prop15170.py`  
-- **15.171:** deep freeness-fail ND. `prop15171.py`  
-- residual/16N: still **OPEN** optional (not required for this path)
+**Shipped props (candidate chain; L OPEN):**  
+- **15.167:** bi-tight majorization algebra (candidate if mult/λ_min hold). `src/e1_gmin_m4_prop15167.py`  
+- **15.170 / 15.171:** residual (i)/(ii) structure + **conditional** Farkas; `gsum_disj_lb_proved_general()=False` (15.158).  
+- residual/16N: still **OPEN** optional (not required for denseness path)
 
 ---
 
 ## What’s left (simple) — prize path
 
-1. **Find the actual hole** — open Paata’s Grok share (or cold “find the gap” pass). One-sentence writeup of which step fails.  
-2. **Fix or drop the claim** — repair the step, or stop saying CLOSED.  
-3. **Short clean proof package** — thin doc: setup → sandwich → denseness → 3 lemmas → \(L=\frac12\) (not full prop thrash history).  
-4. **Pass his AI test** — 2–3 models, 2–3 prompts each; mostly “essentially correct.” Same gap → fix that hinge.  
-5. **Ping Paata again** — fixed writeup + GitHub. No MO required.
+**Done (2026-08-06):** gap named (Gsum disj LB / 15.158); claim retracted OPEN; short package `evidence/share/denseness_path_package.md`; load-bearing tests; 3 cold AI passes → NOT_PROVED + honest OPEN.
 
-**Do not right now:** residual/16N thrash · more X card chrome · soft-close without hinge audit · treat independent Grok gap as “hallucination” without reading it.
+**Still for prize:**  
+1. Prove Gsum disj LB (Max+-free) or alternate residual (i)/(ii).  
+2. Re-close E1/L predicates only after hinge proved.  
+3. Re-run AI-test expecting “essentially correct.”  
+4. Ping Paata with fixed package + GitHub.
 
-**Hinges cold-flagged earlier (likely gap surface):** \(\lambda_{\min}(\Phi)\ge6\); mult\(\ge d-1\) PSL; Gsum box LB \(-12/(pn)\); dual-equality reduction exhaustiveness; freeness-fail case split; tests import broken (`e1_gmin_m4_prop15100`).
+**Do not right now:** residual/16N thrash · more X card chrome · soft-close without hinge proof · treat the Gsum gap as fixed without Max+-free LB.
 
 **Prior resumes:** `evidence/FINAL_HANDOFF_2026-08-05.md`, `evidence/SESSION_HANDOFF_2026-07-31_prop15112.md`  
 **P0 graph:** `evidence/P0_ENGINEERING_GRAPH.md` · **Failure graph:** `evidence/E1_FAILURE_GRAPH.md`  

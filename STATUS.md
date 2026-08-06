@@ -23,6 +23,8 @@ Props 15.170–171 Farkas need \(\mathrm{Gsum}_{ab}\ge-12/(pn)\) for disjoint ed
 ### What's left for prize
 
 1. Prove Gsum disj LB (Max+-free) or alternate residual (i)/(ii).  
-2. Re-close E1/L predicates.  
-3. AI-test short package.  
-4. Ping Paata.
+2. Re-close E1/L predicates only after that.  
+3. Re-run AI-test expecting “essentially correct.”  
+4. Ping Paata with package + GitHub.
+
+**Paata AI-test bar (this goal):** met via claim **not asserted** — package honest OPEN; 3 cold reviews all NOT_PROVED on the named hinge (scratch `ai_test/`).
