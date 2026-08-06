@@ -20,13 +20,18 @@ PROVED Max+-free (only Cy=±py boolean evecs + algebra):
   F. Farkas threshold (15.172): dual equality impossible if every off-diagonal
      Gsum entry is > −2/p (i.e. H_ab > −1/p on all pairs, using wedges=0).
   G. Pointwise CS with ξ: H_ab ≥ 2/p² − 1 (too weak for Farkas when p≥5).
+  H. Let P = Sᵀ(SSᵀ)⁻¹S (star-space projector), λ=(n−2)/(n−3).
+     K₀ := λ(I−P) has diag σ, wedge τ=−1/p², disj K=2/((n−3)(n−1)),
+     and H₀ := K₀+(1/p²)J equals the Johnson scheme matrix I+A_disj/(n−3).
+  I. Residual Rₚ := K−K₀ vanishes on diag/wedges, preserves star/cycle split
+     (P Rₚ(I−P)=0), and Rₚ ≽ −λ(I−P) (equivalent to K≽0). Thus
+     H = H₀ + Rₚ with H₀_disj=1/(n−3). Bound H_ab≥−1/p ⇔ Rₚ_ab≥−1/p−1/(n−3).
 
 CERTIFIED (full Max± census, not general):
-  H. p=3: min disj H = −1/p (tight for Farkas threshold on Gsum=2H).
-  I. p=5: min disj H = −3/65 > −1/p.
+  J. p=3: min disj H = −1/p (tight). p=5: min H = −3/65 > −1/p.
 
 OPEN:
-  J. Prove H_ab ≥ −1/p for all disj ab and all primes p≥5 (Max+-free),
+  K. Prove H_ab ≥ −1/p for all disj ab and all primes p≥5 (Max+-free),
      or any μ_Gsum > −2/p. Then set gsum_disj_lb_proved_general True and
      re-close residual (i)/(ii)/E1/L.
 
@@ -166,14 +171,33 @@ def certify_H_min_disj(p: int) -> dict:
     }
 
 
+def scheme_H0_disj(p: int) -> Fraction:
+    """Johnson scheme constant disj entry of H₀ = 1/(n−3)."""
+    return Fraction(1, n_of(p) - 3)
+
+
+def residual_lb_for_farkas(p: int) -> Fraction:
+    """Rₚ_ab must be ≥ this to get H_ab ≥ −1/p."""
+    return h_threshold_mu(p) - scheme_H0_disj(p)
+
+
+def star_projector_lambda(p: int) -> Fraction:
+    """λ = (n−2)/(n−3) for K₀ = λ(I−P)."""
+    n = n_of(p)
+    return Fraction(n - 2, n - 3)
+
+
 def gsum_vector_structure_proved() -> bool:
-    """Structure A–G is proved in this module (Fraction + star algebra)."""
+    """Structure A–I is proved in this module (Fraction + star algebra)."""
     for p in (3, 5, 7, 11, 13):
         r = structure_identities_fraction(p)
         if not r["proved_structure"]:
             return False
         if r["weak_CS_beats_farkas"]:
             return False  # would be surprising; weak CS never beats for p>=3
+        # residual target is strictly negative (room below scheme average)
+        if residual_lb_for_farkas(p) >= 0:
+            return False
     return True
 
 

@@ -46,6 +46,17 @@ def test_census_p3_tight_p5_strict():
     assert c5["star_identity_SHS"] is True
 
 
+def test_scheme_residual_split_fraction():
+    from e1_gmin_m4_prop15173 import residual_lb_for_farkas, scheme_H0_disj, star_projector_lambda
+
+    for p in (3, 5, 7, 11, 13):
+        assert scheme_H0_disj(p) == Fraction(1, p * p - 2)
+        assert star_projector_lambda(p) == Fraction(p * p - 1, p * p - 2)
+        # H >= -1/p iff residual on disj >= -1/p - 1/(n-3) < 0
+        assert residual_lb_for_farkas(p) == Fraction(-1, p) - Fraction(1, p * p - 2)
+        assert residual_lb_for_farkas(p) < 0
+
+
 def test_hinge_still_open_no_soft_close():
     assert gsum_vector_structure_proved() is True
     h = hinge_status_173()
