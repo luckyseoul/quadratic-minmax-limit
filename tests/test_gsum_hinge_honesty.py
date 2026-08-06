@@ -36,8 +36,12 @@ def test_gsum_disj_lb_honest_false():
 
 def test_farkas_poly_still_positive_when_lb_assumed():
     """Algebra of need < k·LB under candidate LB is real Fraction."""
+    from e1_gmin_m4_prop15170 import dual_equality_farkas_algebra_if_lb, dual_equality_impossible_general
+
     for p in (5, 7, 11, 13, 17, 19, 23):
         assert gsum_farkas_poly(p) > 0
+    assert dual_equality_farkas_algebra_if_lb() is True
+    assert dual_equality_impossible_general() is False  # gated; no soft-close
 
 
 def test_e1_and_L_open_until_hinge_closed():

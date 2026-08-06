@@ -50,29 +50,18 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 ### P0 status
 
-**Bi-tight (CLOSED, 15.167):** mult≥d−1 + λ_min≥6 ⇒ L_* < 2d ⇒ bi-tight empty for p≥5.
+**Bi-tight majorization (15.167, candidate):** mult≥d−1 + λ_min≥6 ⇒ L_* < 2d (algebra). Does **not** alone close L.
 
-**E(1) (CLOSED, 15.168–171):** Type I all classes ND (15.170) + deep freeness/fail-eq/k≥3p ND (15.171) + auto-freeness. **L CLOSED.**
+**E(1) OPEN (15.168–171 structure + 15.170–171 Farkas):** Type I freeness ND and auto-freeness structure shipped; residual (i)/(ii) Farkas **blocked** by unproved disj Gsum LB (`gsum_disj_lb_proved_general=False`; 15.158 Max+ not IP-scheme). **L OPEN.**
 
-**Optional residual/16N (still OPEN):**
+**Primary denseness-path hinge (general primes \(p\ge5\)):** prove disj \(\mathrm{Gsum}_{ab}\ge-12/(pn)\) Max+-free (or alternate residual i/ii). Short package: `evidence/share/denseness_path_package.md`.
+
+**Optional residual/16N (still OPEN, not required for denseness L):**
 \[
 E[s^4]\le \mathrm{Es4}_*(p)=\frac{4(3p^8-6p^6-148p^4-10p^2+129)}{p^4-8p^2-1}
 \]
-⇒ λ_max≤16 ⇒ 16N (stronger than bi-tight). Census p=5,7 only.
+⇒ λ_max≤16 ⇒ 16N. Census p=5,7 only. Path-C form \(\delta^2\le\mathrm{room}_{\mathrm{hyp}}/24\) also optional open.
 
-**Single open inequality (general primes \(p\ge5\)) — Path C primary (equiv. forms):**
-\[
-\delta^2\le\mathrm{room}_{\mathrm{hyp}}/24
-\quad\Longleftrightarrow\quad
-\mathrm{orth}\le\mathrm{room}_{\mathrm{hyp}}
-\quad\Longleftrightarrow\quad
-\|\kappa\|_F^2\le\kappa_{\mathrm{hyp}}
-\]
-with \(\mathrm{room}_{\mathrm{hyp}}/24=4(p^2-9)(p^2-1)^2/(3(p^2-5)(p^2+1))\) (15.117).  
-Sufficient for \(p\ge7\): \(\delta^2\le\rho_{\min}^2\) (since \(\rho_{\min}^2<\mathrm{room}_{\mathrm{hyp}}/24\), 15.110).  
-At \(p=5\): hyp form is tighter; cert equality \(\delta^2=\mathrm{room}_{\mathrm{hyp}}/24\).  
-Coherent mass: \(\delta^2=\|E_y P_{E_{4p}}f_y\|_2^2\).  
-Then: 16N (15.107+15.98) → bi-tight → deep ND → Main Theorem.
 
 **Do not re-derive:** 15.98 mult≥d−1; 15.102 δ-calculus; 15.110–15.116 reductions.  
 **Dead for closing residual:** class_key T at p=7 (F19); unrestricted CS/LP on ED4; full \(E_{4p}\) energy of \(f_y\); soft-close from sandwich+denseness (F3).
@@ -207,7 +196,7 @@ Then: 16N (15.107+15.98) → bi-tight → deep ND → Main Theorem.
 
 **MO thread re-audit (2026-07-27):** full re-read of [MO 413935](https://mathoverflow.net/questions/413935) + comments via SE API — **0 answers; no hidden proof**. Author already knew liminf \(\ge2^{-5/2}\) and that such bounds do **not** settle existence; not interested in numerics. Starr’s Bowlin/multipartite pointer is already dead for existence (§9–§10). **Time savings:** stop BH re-derivation, stop multipartite reopen, stop pure-SA as deliverable; only load-bearing E(1) (or permanent relative gap / non-existence) counts. Details: `evidence/MO_THREAD_REAUDIT.md`.
 
-~~**Existence of \(L\) remains OPEN**~~ — **superseded 2026-08-05:** \(L=\tfrac12\) CLOSED (Props 15.167–171). Entries below through 15.166 are historical Path-C residual notes; residual/16N remains optional open.
+**Existence of \(L\) remains OPEN** (2026-08-06). Soft-close \(L=\tfrac12\) CLOSED via Props 15.167–171 was **retracted 2026-08-06** (disj Gsum LB hinge; 15.158). Entries below through 15.166 are historical Path-C residual notes; residual/16N remains optional open.
 - **Prop 15.105 (Norton/Fickus variance identity; 2026-07-31):** **Proved:** ∑(λ_α(Φ|Z)−μ̄)² = ‖κ_orth‖_F² (Fickus residual = Φ spectral variance); orth=0 ⇒ Φ scalar = 8(n−2)/(n−6); mult(λ_max)≥d + ‖κ‖²≤96n ⇒ λ_max(Φ)≤16 exactly (Fraction: μ̄+8(p²−9)/(p²−5)=16). **Certified** variance+16N+mult=d at p=3,5,7. **OPEN:** ‖κ‖²≤96n (or direct λ_max≤16) for all p≥5. Evidence: `src/e1_gmin_m4_prop15105.py`, `evidence/e1_gmin_m4_prop15105.json`. **L OPEN.**
 - **Prop 15.106 (rest-average-8 + kurtosis residual; 2026-07-31):** **Proved:** mult(λ_max)≥d ⇒ (λ_max≤16 ⇔ rest-mean≥8); at λ_max=16 rest-mean=8 (Wick). ‖κ‖²≤96n ⇔ kurtosis κ₄(D)≤3+12/n. **Certified** p=3,5,7. **OPEN:** κ₄≤3+12/n or λ_max≤16 for all p≥5. Evidence: `src/e1_gmin_m4_prop15106.py`, `evidence/e1_gmin_m4_prop15106.json`. **L OPEN.**
 - **Prop 15.107 (16N from mult≥d−1 + room_hyp; 2026-07-31):** **Proved:** mult(λ_max)≥d−1 (15.98) + orth≤room_hyp ⇒ λ_max(Φ)≤16 for all primes p≥3 (Fraction majorization (16−μ̄)²≥room_hyp·(m−m₁)/(m m₁)); Gegenbauer α=−6/(d+4), β=3/((d+2)(d+4)); 4-design ED4≤wick_hi. **Certified** orth≤room_hyp + 16N at p=3,5,7. **OPEN residual:** orth≤room_hyp for general p≥5. Evidence: `src/e1_gmin_m4_prop15107.py`, `evidence/e1_gmin_m4_prop15107.json`. **L OPEN.**

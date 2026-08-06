@@ -82,10 +82,15 @@ def test_type_I_s_minus_impossible_all_sample_primes():
 
 def test_type_I_closed_requires_proved_gsum_lb():
     """Residual (i) general close gated on gsum_disj_lb_proved_general (15.158)."""
-    from e1_gmin_m4_prop15170 import gsum_disj_lb_proved_general
+    from e1_gmin_m4_prop15170 import (
+        dual_equality_farkas_algebra_if_lb,
+        gsum_disj_lb_proved_general,
+    )
 
-    # Farkas algebra still holds under candidate LB
-    assert dual_equality_impossible_general() is True
+    # Conditional Farkas algebra still holds under candidate LB
+    assert dual_equality_farkas_algebra_if_lb() is True
+    # Machine-status dual_equality_impossible_general must NOT soft-close
+    assert dual_equality_impossible_general() is False
     assert gsum_disj_lb_proved_general() is False
     assert type_I_k_3p_minus_2_closed_general() is False
     assert type_I_k_3p_minus_2_ND_class_closed() is False

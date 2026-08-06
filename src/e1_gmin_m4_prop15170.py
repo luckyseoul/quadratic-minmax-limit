@@ -199,6 +199,20 @@ def dual_equality_gsum_obstruction(p: int) -> dict:
 
 
 def dual_equality_impossible_general(primes: list[int] | None = None) -> bool:
+    """
+    True only if disj Gsum LB is proved *and* Farkas algebra fires for all p.
+
+    Conditional algebra (need < k·LB under candidate LB) is
+    dual_equality_farkas_algebra_if_lb(). Do not treat this as closed while
+    gsum_disj_lb_proved_general() is False.
+    """
+    if not gsum_disj_lb_proved_general():
+        return False
+    return dual_equality_farkas_algebra_if_lb(primes)
+
+
+def dual_equality_farkas_algebra_if_lb(primes: list[int] | None = None) -> bool:
+    """Farkas need < k·candidate_LB for all sample primes (conditional on LB)."""
     if primes is None:
         primes = [p for p in range(5, 80) if is_prime(p)]
     return all(dual_equality_gsum_obstruction(p)["need_lt_LB"] for p in primes)
@@ -381,6 +395,8 @@ def main() -> dict:
             "gsum_farkas_poly_positive": RI["gsum_farkas_poly_positive"],
             "es2_lt_k": RI["es2_lt_k_all"],
             "dual_equality_impossible": dual_equality_impossible_general(),
+            "dual_equality_farkas_algebra_if_lb": dual_equality_farkas_algebra_if_lb(),
+            "gsum_disj_lb_proved_general": gsum_disj_lb_proved_general(),
             "deep_k_ge_3p_ND_closed": deep_s2_freeness_fail_k_ge_3p_ND_closed(),
             "bi_tight_empty_for_all_p_ge_5": bt,
             "E1_closed_general": e1,
