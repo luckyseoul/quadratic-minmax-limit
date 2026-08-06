@@ -141,9 +141,13 @@ def gsum_disj_lb_status() -> dict:
         "proved_disj_lb_general": gsum_disj_lb_proved_general(),
         "certified_disj_at_p5": True,  # −6/65 = −12/(5·26)
         "scheme_justification_valid": False,  # 15.158 Max+ not IP-scheme
+        "farkas_threshold_mu": "-2/p",  # Prop 15.172: need μ > −2/p (strict)
+        "candidate_minus_12_over_pn_false_at_p3": True,
         "note": (
-            "Gap (Paata/cold): Farkas needs disj Gsum ≥ −12/(pn) for all p≥5; "
-            "only adjacent zero is proved; disj LB is census/candidate only."
+            "Gap: dual-equality Farkas needs disj Gsum μ > −2/p (15.172), or the "
+            "stronger candidate −12/(pn) for all p≥5. Only adjacent zero is proved; "
+            "pointwise disj LB not proved in general (15.158 kills scheme-min; "
+            "candidate fails at p=3). See prop15172."
         ),
     }
 

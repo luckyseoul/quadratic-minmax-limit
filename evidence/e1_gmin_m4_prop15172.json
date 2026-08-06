@@ -1,0 +1,303 @@
+{
+  "title": "Prop 15.172 Gsum structure + Farkas threshold \u22122/p (denseness remainder; L still OPEN)",
+  "proved": {
+    "avg_disj_identity": true,
+    "G0_spectrum_PSD": true,
+    "matching_psd_average_lb": true,
+    "farkas_threshold_mu_eq_minus_2_over_p": true,
+    "candidate_lb_false_at_p3": true,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed_general": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "avg_disj": {
+      "3": {
+        "p": 3,
+        "n": 10,
+        "n_disj_neighbors": 28,
+        "sum_disj_Gsum": 8,
+        "avg_disj": "2/7",
+        "proved": true,
+        "theorem": "Gsum_ee=2, Gsum1=n1, wedge Gsum=0 \u21d2 sum over disj neighbors = n\u22122; avg = 2/(n\u22123)."
+      },
+      "5": {
+        "p": 5,
+        "n": 26,
+        "n_disj_neighbors": 276,
+        "sum_disj_Gsum": 24,
+        "avg_disj": "2/23",
+        "proved": true,
+        "theorem": "Gsum_ee=2, Gsum1=n1, wedge Gsum=0 \u21d2 sum over disj neighbors = n\u22122; avg = 2/(n\u22123)."
+      },
+      "7": {
+        "p": 7,
+        "n": 50,
+        "n_disj_neighbors": 1128,
+        "sum_disj_Gsum": 48,
+        "avg_disj": "2/47",
+        "proved": true,
+        "theorem": "Gsum_ee=2, Gsum1=n1, wedge Gsum=0 \u21d2 sum over disj neighbors = n\u22122; avg = 2/(n\u22123)."
+      },
+      "11": {
+        "p": 11,
+        "n": 122,
+        "n_disj_neighbors": 7140,
+        "sum_disj_Gsum": 120,
+        "avg_disj": "2/119",
+        "proved": true,
+        "theorem": "Gsum_ee=2, Gsum1=n1, wedge Gsum=0 \u21d2 sum over disj neighbors = n\u22122; avg = 2/(n\u22123)."
+      }
+    },
+    "G0": {
+      "3": {
+        "p": 3,
+        "n": 10,
+        "N_edges": 45,
+        "gamma": "2/7",
+        "eigenvalues": [
+          {
+            "value": "10",
+            "mult": 1
+          },
+          {
+            "value": "0",
+            "mult": 9
+          },
+          {
+            "value": "16/7",
+            "mult": 35
+          }
+        ],
+        "G0_PSD": true,
+        "proved": true,
+        "theorem": "Triangular scheme matrix with diag 2, wedge 0, row sum n has constant disj entry 2/(n\u22123) and spectrum {n, 0, 2(n\u22122)/(n\u22123)}; G0\u227d0."
+      },
+      "5": {
+        "p": 5,
+        "n": 26,
+        "N_edges": 325,
+        "gamma": "2/23",
+        "eigenvalues": [
+          {
+            "value": "26",
+            "mult": 1
+          },
+          {
+            "value": "0",
+            "mult": 25
+          },
+          {
+            "value": "48/23",
+            "mult": 299
+          }
+        ],
+        "G0_PSD": true,
+        "proved": true,
+        "theorem": "Triangular scheme matrix with diag 2, wedge 0, row sum n has constant disj entry 2/(n\u22123) and spectrum {n, 0, 2(n\u22122)/(n\u22123)}; G0\u227d0."
+      },
+      "7": {
+        "p": 7,
+        "n": 50,
+        "N_edges": 1225,
+        "gamma": "2/47",
+        "eigenvalues": [
+          {
+            "value": "50",
+            "mult": 1
+          },
+          {
+            "value": "0",
+            "mult": 49
+          },
+          {
+            "value": "96/47",
+            "mult": 1175
+          }
+        ],
+        "G0_PSD": true,
+        "proved": true,
+        "theorem": "Triangular scheme matrix with diag 2, wedge 0, row sum n has constant disj entry 2/(n\u22123) and spectrum {n, 0, 2(n\u22122)/(n\u22123)}; G0\u227d0."
+      },
+      "11": {
+        "p": 11,
+        "n": 122,
+        "N_edges": 7381,
+        "gamma": "2/119",
+        "eigenvalues": [
+          {
+            "value": "122",
+            "mult": 1
+          },
+          {
+            "value": "0",
+            "mult": 121
+          },
+          {
+            "value": "240/119",
+            "mult": 7259
+          }
+        ],
+        "G0_PSD": true,
+        "proved": true,
+        "theorem": "Triangular scheme matrix with diag 2, wedge 0, row sum n has constant disj entry 2/(n\u22123) and spectrum {n, 0, 2(n\u22122)/(n\u22123)}; G0\u227d0."
+      }
+    },
+    "matching": {
+      "3": {
+        "p": 3,
+        "max_matching_size": 5,
+        "avg_Gsum_on_max_matching_LB": "-1/2",
+        "farkas_threshold_mu": "-2/3",
+        "max_matching_avg_beats_threshold": true,
+        "proved": true,
+        "note": "Matching bound controls averages inside matchings, not pointwise min over all disj pairs. Pointwise still open."
+      },
+      "5": {
+        "p": 5,
+        "max_matching_size": 13,
+        "avg_Gsum_on_max_matching_LB": "-1/6",
+        "farkas_threshold_mu": "-2/5",
+        "max_matching_avg_beats_threshold": true,
+        "proved": true,
+        "note": "Matching bound controls averages inside matchings, not pointwise min over all disj pairs. Pointwise still open."
+      },
+      "7": {
+        "p": 7,
+        "max_matching_size": 25,
+        "avg_Gsum_on_max_matching_LB": "-1/12",
+        "farkas_threshold_mu": "-2/7",
+        "max_matching_avg_beats_threshold": true,
+        "proved": true,
+        "note": "Matching bound controls averages inside matchings, not pointwise min over all disj pairs. Pointwise still open."
+      }
+    },
+    "farkas_if_strict_above_minus_2_over_p": {
+      "5": {
+        "p": 5,
+        "k": 13,
+        "need_total": "-14/5",
+        "need_off": "-24/5",
+        "mu": "-1999/5000",
+        "box_sum_LB_off": "-5997/1250",
+        "need_off_lt_box": true,
+        "threshold_mu": "-2/5",
+        "mu_gt_threshold": true,
+        "borderline_eq": false
+      },
+      "7": {
+        "p": 7,
+        "k": 19,
+        "need_total": "-22/7",
+        "need_off": "-36/7",
+        "mu": "-1999/7000",
+        "box_sum_LB_off": "-17991/3500",
+        "need_off_lt_box": true,
+        "threshold_mu": "-2/7",
+        "mu_gt_threshold": true,
+        "borderline_eq": false
+      },
+      "11": {
+        "p": 11,
+        "k": 31,
+        "need_total": "-38/11",
+        "need_off": "-60/11",
+        "mu": "-1999/11000",
+        "box_sum_LB_off": "-5997/1100",
+        "need_off_lt_box": true,
+        "threshold_mu": "-2/11",
+        "mu_gt_threshold": true,
+        "borderline_eq": false
+      },
+      "13": {
+        "p": 13,
+        "k": 37,
+        "need_total": "-46/13",
+        "need_off": "-72/13",
+        "mu": "-1999/13000",
+        "box_sum_LB_off": "-17991/3250",
+        "need_off_lt_box": true,
+        "threshold_mu": "-2/13",
+        "mu_gt_threshold": true,
+        "borderline_eq": false
+      },
+      "17": {
+        "p": 17,
+        "k": 49,
+        "need_total": "-62/17",
+        "need_off": "-96/17",
+        "mu": "-1999/17000",
+        "box_sum_LB_off": "-11994/2125",
+        "need_off_lt_box": true,
+        "threshold_mu": "-2/17",
+        "mu_gt_threshold": true,
+        "borderline_eq": false
+      }
+    },
+    "candidate_p3": {
+      "p": 3,
+      "n": 10,
+      "candidate_minus_12_over_pn": "-2/5",
+      "census_min_disj": "-2/3",
+      "candidate_false_at_p3": true,
+      "equals_minus_2_over_p": true,
+      "theorem": "Candidate disj LB \u221212/(pn) fails at p=3 (min=\u22122/p). Cannot be a universal-all-primes scheme identity."
+    }
+  },
+  "certified_census": {
+    "p3": {
+      "p": 3,
+      "n": 10,
+      "n_Max_plus": 12,
+      "n_Max_minus": 12,
+      "min_disj_Gsum": "-2/3",
+      "minus_2_over_p": "-2/3",
+      "candidate_minus_12_over_pn": "-2/5",
+      "min_ge_minus_2_over_p": true,
+      "min_gt_minus_2_over_p": false,
+      "min_eq_candidate": false,
+      "certified_census_only": true,
+      "not_general_proof": true
+    },
+    "p5": {
+      "p": 5,
+      "n": 26,
+      "n_Max_plus": 260,
+      "n_Max_minus": 260,
+      "min_disj_Gsum": "-6/65",
+      "minus_2_over_p": "-2/5",
+      "candidate_minus_12_over_pn": "-6/65",
+      "min_ge_minus_2_over_p": true,
+      "min_gt_minus_2_over_p": true,
+      "min_eq_candidate": true,
+      "certified_census_only": true,
+      "not_general_proof": true
+    }
+  },
+  "hinge": {
+    "gsum_disj_lb_proved_general": false,
+    "farkas_threshold_is_minus_2_over_p": true,
+    "strict_mu_above_threshold_obstructs_sample": true,
+    "borderline_mu_eq_threshold_p5": {
+      "p": 5,
+      "k": 13,
+      "need_total": "-14/5",
+      "need_off": "-24/5",
+      "mu": "-2/5",
+      "box_sum_LB_off": "-24/5",
+      "need_off_lt_box": false,
+      "threshold_mu": "-2/5",
+      "mu_gt_threshold": false,
+      "borderline_eq": true
+    },
+    "candidate_scheme_lb_valid_all_primes": false,
+    "open": "Prove disj Gsum \u2265 \u22122/p (strict for p\u22655) Max+-free, or alternate residual (i)/(ii). E1/L remain OPEN.",
+    "progress": [
+      "avg disj = 2/(n\u22123) and G0 spectrum proved Max+-free",
+      "Farkas threshold simplified to \u03bc > \u22122/p",
+      "candidate \u221212/(pn) falsified as universal at p=3",
+      "p=3,5 census mins certified"
+    ]
+  },
+  "F3": "Do not flip gsum_disj_lb_proved_general without Max+-free general LB"
+}

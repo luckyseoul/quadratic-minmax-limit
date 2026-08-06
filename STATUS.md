@@ -14,7 +14,14 @@
 
 ### Fatal gap (one sentence)
 
-Props 15.170–171 Farkas need \(\mathrm{Gsum}_{ab}\ge-12/(pn)\) for disjoint edges for all \(p\ge5\), but that LB is only census/candidate: Prop **15.158** proves Max+ is **not** an IP association scheme, so scheme-min justification is invalid.
+Dual-equality Farkas needs pointwise disj \(\mathrm{Gsum}>\-2/p\) (Prop **15.172** threshold); only wedge-zero + avg \(2/(n-3)\) are proved Max+-free. Candidate \(-12/(pn)\) fails at \(p=3\) and is not scheme-justified (**15.158**).
+
+### Remainder progress (15.172, not a close)
+
+- Avg disj Gsum \(=2/(n-3)\); triangular \(G_0\) spectrum/PSD proved.  
+- Farkas threshold simplified to \(\mu>-2/p\).  
+- Census: \(p=3\) min \(=-2/p\); \(p=5\) min \(=-6/65>-2/p\).  
+- `gsum_disj_lb_proved_general()=false` still; **L OPEN**.
 
 ### Short package
 
@@ -22,9 +29,7 @@ Props 15.170–171 Farkas need \(\mathrm{Gsum}_{ab}\ge-12/(pn)\) for disjoint ed
 
 ### What's left for prize
 
-1. Prove Gsum disj LB (Max+-free) or alternate residual (i)/(ii).  
+1. Prove disj Gsum \(\mu>-2/p\) Max+-free (or alternate residual i/ii).  
 2. Re-close E1/L predicates only after that.  
 3. Re-run AI-test expecting “essentially correct.”  
 4. Ping Paata with package + GitHub.
-
-**Paata AI-test bar (this goal):** met via claim **not asserted** — package honest OPEN; 3 cold reviews all NOT_PROVED on the named hinge (scratch `ai_test/`).

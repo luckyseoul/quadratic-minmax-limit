@@ -42,18 +42,15 @@ m_n=\min_{a_{ij}=\pm1}\max_{x=\pm1}\Bigl|\sum_{i<j}a_{ij}x_ix_j\Bigr|,\qquad
 
 ## Fatal gap (named)
 
-**Disjoint Gsum lower bound \(\mathrm{Gsum}_{ab}\ge -12/(pn)\) is not proved for general \(p\ge5\).**
+**Pointwise disj Gsum lower bound strong enough for dual-equality Farkas is not proved for general \(p\ge5\).**
 
-- Residual (i)/(ii) Farkas needs that LB for all primes.  
-- Adjacent edges: Gsum = 0 is proved.  
-- Disjoint: LB was justified as an association-scheme minimum; **Prop 15.158 proves Max+ is not an IP association scheme.**  
-- Census: LB matches at \(p=5\) (\(-6/65=-12/(5\cdot26)\)). Census ≠ general proof.  
-- Shipped predicate: `gsum_disj_lb_proved_general() → False`  
-  (`src/e1_gmin_m4_prop15170.py`). Consequently  
-  `type_I_k_3p_minus_2_closed_general()`,  
-  `deep_s2_freeness_fail_k_ge_3p_ND_closed()`,  
-  `e1_closed_general()`,  
-  `L_status` all report **OPEN**.
+- **Correct Farkas threshold (Prop 15.172):** dual equality is impossible if every off-diagonal Gsum entry satisfies \(\mu>-2/p\).  
+  (Borderline \(\mu=-2/p\) saturates and needs a separate non-saturation argument.)
+- Adjacent edges: Gsum \(=0\) **proved**. Avg disj entry \(=2/(n-3)\) **proved**. Triangular-scheme matrix \(G_0\) with those constraints is PSD **proved**.
+- Candidate scheme LB \(\mathrm{Gsum}_{ab}\ge-12/(pn)\): **false at \(p=3\)** (census min \(=-2/p<-12/(pn)\)); at \(p=5\) it holds and is tight. **Prop 15.158:** Max+ is not an IP-scheme, so scheme-min is invalid as a general proof.
+- Shipped: `gsum_disj_lb_proved_general() → False`  
+  (`src/e1_gmin_m4_prop15170.py`, structure in `prop15172.py`). Consequently  
+  residual (i)/(ii), `e1_closed_general()`, `L_status` all **OPEN**.
 
 ## Modules
 
@@ -62,14 +59,15 @@ m_n=\min_{a_{ij}=\pm1}\max_{x=\pm1}\Bigl|\sum_{i<j}a_{ij}x_ix_j\Bigr|,\qquad
 | Bi-tight majorization | `src/e1_gmin_m4_prop15167.py` |
 | Gsum hinge + residual (i) | `src/e1_gmin_m4_prop15170.py` |
 | Residual (ii) | `src/e1_gmin_m4_prop15171.py` |
+| Gsum structure / Farkas threshold | `src/e1_gmin_m4_prop15172.py` |
 | Max+ not scheme | `src/e1_gmin_m4_prop15158.py` |
 | Main wire | `src/e1_main_chain_status.py` |
 
 ## What would close L
 
-A Max+-free proof that for all primes \(p\ge5\) and disjoint edges \(a\neq b\),  
-\(\mathrm{Gsum}_{ab}\ge -12/(p(p^2+1))\) (or any LB strong enough for Farkas),  
-**or** a different proof of residual (i)/(ii) that avoids that LB.
+A Max+-free proof that for all primes \(p\ge5\) and disjoint edges,  
+\(\mathrm{Gsum}_{ab}>-2/p\) (or \(\ge-12/(pn)\), or any \(\mu>-2/p\)),  
+**or** a different proof of residual (i)/(ii) that avoids dual-equality Farkas.
 
 Until then: do **not** claim lim α_n = ½.
 
