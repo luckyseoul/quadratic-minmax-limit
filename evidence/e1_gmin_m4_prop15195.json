@@ -1,0 +1,75 @@
+{
+  "title": "Prop 15.195 mass-corrected dual-eq obstruction; criterion proved; general bound OPEN; residual (i) OPEN",
+  "proved": {
+    "mass_corrected_criterion": true,
+    "weak_floors_insufficient_documented": true,
+    "mass_corrected_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "criterion": {
+      "proved": true,
+      "theorem": "Under Gsum_ee=2, wedges=0: dual-eq \u03ba_e=M=2\u2212\u03b1 and 1\u1d40\u03ba=0 and e-row force \u2211_{g\u2260e} \u03ba_g=\u2212M and \u2211 a_f \u03ba_f=\u22122M.  Hence dual-eq is impossible whenever the box-minimum of \u2211a\u03ba subject to \u2211\u03ba=\u2212M is strictly greater than \u22122M.",
+      "proof": [
+        "\u03ba_e=M, 1\u1d40\u03ba=0 \u21d2 \u2211_{\u2260e} \u03ba = \u2212M",
+        "2M + \u2211 a \u03ba = 0 \u21d2 \u2211 a \u03ba = \u22122M",
+        "if min_{box, mass} \u2211 a \u03ba > \u22122M then no feasible \u03ba"
+      ]
+    },
+    "weak_floors": {
+      "proved": true,
+      "theorem": "Worst-case mass min over a\u2265\u22122 (or a\u2265\u22122+4/p) with \u2211_{disj}a=n\u22122 is \u226a \u22122M for all primes p\u22655, so those Max+-free floors alone do not yield the mass-corrected obstruction.  Closing residual (i) via this path still needs a stronger Max+-free control of the true Gsum row (or |\u03bc|\u22642/n directly)."
+    }
+  },
+  "certified": {
+    "mass_min": {
+      "3": {
+        "p": 3,
+        "M": "9/5",
+        "minus_2M": "-18/5",
+        "mass_min_sum_a_kappa": "-94/15",
+        "blocks_dual_eq": false,
+        "exact": true,
+        "n_disj": 28,
+        "n_wedge": 16,
+        "proved_general": false
+      },
+      "5": {
+        "p": 5,
+        "M": "127/65",
+        "minus_2M": "-254/65",
+        "mass_min_sum_a_kappa": "-30/13",
+        "blocks_dual_eq": true,
+        "exact": true,
+        "n_disj": 276,
+        "n_wedge": 48,
+        "proved_general": false
+      },
+      "7": {
+        "p": 7,
+        "M": "347/175",
+        "minus_2M": "-694/175",
+        "mass_min_sum_a_kappa": "-162446/71575",
+        "blocks_dual_eq": true,
+        "exact": false,
+        "n_disj": 1128,
+        "n_wedge": 96,
+        "proved_general": false
+      }
+    },
+    "blocks_p5_p7": true
+  },
+  "hinge": {
+    "mass_corrected_criterion_proved": true,
+    "mass_corrected_bound_general": false,
+    "census_blocks_p5_p7": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove Max+-free mass-min \u2211a\u03ba > \u22122(2\u2212\u03b1) for all p\u22655 (or |\u03bc|\u22642/n / full ker-box empty)."
+  },
+  "F3": "Mass-corrected criterion is real; census blocks p=5,7 only. Do not flip residual/E1/L without Max+-free general bound."
+}
