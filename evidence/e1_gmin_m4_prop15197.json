@@ -1,0 +1,137 @@
+{
+  "title": "Prop 15.197 Max+ min-distance d_H\u2265p+1; exact Q(K\u2084); K\u2084\u226416n\u00b2\u221214n would close residual (i); bound OPEN",
+  "proved": {
+    "min_distance_p_plus_1": true,
+    "Q_from_K4_identity": true,
+    "K4_thr_implies_Q10": true,
+    "K4_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "min_distance": {
+      "proved": true,
+      "theorem": "For any symmetric conference C and any y\u2260z in Max+={\u00b11}^n\u2229{Cy=py}, d_H(y,z)\u2265p+1.  Hence if z\u2260\u2212y then |y\u00b7z|\u2264n\u22122(p+1)=(p\u22121)\u00b2\u22122. Proof: D=diff support; C(y\u2212z)=p(y\u2212z); on k\u2208D, \u2211_{j\u2208D\u2216k} C_kj y_j = p y_k \u21d2 d\u22121\u2265p.",
+      "by_p_sample": {
+        "3": {
+          "d_H_min": 4,
+          "max_dot_y_ne_pm_z": 2,
+          "formula_max_dot": 2,
+          "match": true
+        },
+        "5": {
+          "d_H_min": 6,
+          "max_dot_y_ne_pm_z": 14,
+          "formula_max_dot": 14,
+          "match": true
+        },
+        "7": {
+          "d_H_min": 8,
+          "max_dot_y_ne_pm_z": 34,
+          "formula_max_dot": 34,
+          "match": true
+        },
+        "11": {
+          "d_H_min": 12,
+          "max_dot_y_ne_pm_z": 98,
+          "formula_max_dot": 98,
+          "match": true
+        }
+      },
+      "n_primes": 16
+    },
+    "Q_identity": {
+      "proved": true,
+      "theorem": "Under antipodal Max\u00b1 and K\u2084\u207a=K\u2084\u207b: Q_e = K\u2084/(n(n\u22121)) \u2212 2(3n\u22122)/(n\u22121). Hence Q_e\u226410 \u21d4 K\u2084\u226416n\u00b2\u221214n.",
+      "by_p_sample": {
+        "5": {
+          "K4_thr": "10452",
+          "Q_at_thr": "10",
+          "Q_eq_10": true
+        },
+        "7": {
+          "K4_thr": "39300",
+          "Q_at_thr": "10",
+          "Q_eq_10": true
+        },
+        "11": {
+          "K4_thr": "236436",
+          "Q_at_thr": "10",
+          "Q_eq_10": true
+        }
+      }
+    },
+    "implication": {
+      "proved_implication": true,
+      "K4_bound_proved_general": false,
+      "theorem": "IF K\u2084\u226416n\u00b2\u221214n for all primes p\u22655 (Max+-free), THEN Q_e\u226410 \u21d2 mass-corrected dual-eq impossible (15.195\u2013196) \u21d2 residual (i) dual-eq branch closed \u21d2 with 15.170 Farkas wiring gsum_disj_lb may flip when that bound is the disj Gsum engine. K\u2084 bound itself is OPEN."
+    },
+    "Q10_blocks_p5": {
+      "p": 5,
+      "Qmax": "10",
+      "worst_mass_min": "-202/65",
+      "target_minus_2M": "-254/65",
+      "blocks_dual_eq": true,
+      "worst_k": 1
+    }
+  },
+  "certified": {
+    "3": {
+      "p": 3,
+      "N": 12,
+      "K2": 20.0,
+      "K2_theory_2n": 20,
+      "K4": "1680",
+      "K4_float": 1680.0,
+      "K4_thr_Q10": "1460",
+      "K4_le_thr": false,
+      "Q_from_K4": "112/9",
+      "max_dot_off": 2,
+      "max_dot_theory": 2,
+      "distance_bound_sharp_or_ok": true,
+      "proved_general": false
+    },
+    "5": {
+      "p": 5,
+      "N": 260,
+      "K2": 52.0,
+      "K2_theory_2n": 52,
+      "K4": "120400/13",
+      "K4_float": 9261.538461538461,
+      "K4_thr_Q10": "10452",
+      "K4_le_thr": true,
+      "Q_from_K4": "34512/4225",
+      "max_dot_off": 14,
+      "max_dot_theory": 14,
+      "distance_bound_sharp_or_ok": true,
+      "proved_general": false
+    },
+    "7": {
+      "p": 7,
+      "N": 11452,
+      "K2": 100.0,
+      "K2_theory_2n": 100,
+      "K4": "309969946079/9936327",
+      "K4_float": 31195.626520644902,
+      "K4_thr_Q10": "39300",
+      "K4_le_thr": true,
+      "Q_from_K4": "162912306479/24344001150",
+      "max_dot_off": 34,
+      "max_dot_theory": 34,
+      "distance_bound_sharp_or_ok": true,
+      "proved_general": false
+    }
+  },
+  "hinge": {
+    "min_distance_p_plus_1": true,
+    "Q_from_K4_identity": true,
+    "K4_le_16n2_minus_14n_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove Max+-free K\u2084\u226416n\u00b2\u221214n for all primes p\u22655 (\u21d4 Q_e\u226410 \u21d4 mass-corrected dual-eq empty)."
+  },
+  "F3": "d_H\u2265p+1 and Q(K\u2084) are Max+-free. Do not flip residual/E1/L without K\u2084\u226416n\u00b2\u221214n (or equivalent)."
+}
