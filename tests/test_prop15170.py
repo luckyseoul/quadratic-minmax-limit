@@ -80,13 +80,19 @@ def test_type_I_s_minus_impossible_all_sample_primes():
         assert r["s_minus_le_minus_1_impossible"] is True
 
 
-def test_type_I_closed_general_true():
-    """Residual (i) closed — real Gsum Farkas, not hardcoded."""
+def test_type_I_closed_requires_proved_gsum_lb():
+    """Residual (i) general close gated on gsum_disj_lb_proved_general (15.158)."""
+    from e1_gmin_m4_prop15170 import gsum_disj_lb_proved_general
+
+    # Farkas algebra still holds under candidate LB
     assert dual_equality_impossible_general() is True
-    assert type_I_k_3p_minus_2_closed_general() is True
-    assert type_I_k_3p_minus_2_ND_class_closed() is True
+    assert gsum_disj_lb_proved_general() is False
+    assert type_I_k_3p_minus_2_closed_general() is False
+    assert type_I_k_3p_minus_2_ND_class_closed() is False
     RI = prove_residual_i()
-    assert RI["residual_i_closed"] is True
+    assert RI["residual_i_closed"] is False
+    assert RI["gsum_disj_lb_proved_general"] is False
+    assert RI["farkas_algebra_ok_if_lb"] is True
     assert RI["gsum_farkas_poly_positive"] is True
 
 
@@ -96,36 +102,27 @@ def test_bad_case_min_equals_dual():
         assert b["min_equals_dual"] is True
 
 
-def test_e1_closed_when_both_residuals_closed():
-    """E1/L follow real type_I (15.170) ∧ deep k≥3p (15.171) ∧ bi-tight."""
-    assert type_I_k_3p_minus_2_closed_general() is True
-    # 15.171 may close residual (ii); e1_closed_general reads it via lazy import
+def test_e1_open_until_gsum_lb_proved():
+    """E1/L stay OPEN while disj Gsum LB is unproved (no soft-close)."""
     from e1_gmin_m4_prop15171 import deep_s2_freeness_fail_k_ge_3p_ND_closed as d171
 
-    assert d171() is True
-    assert e1_closed_general() is True
-    assert e1_open_residuals() == []
+    assert type_I_k_3p_minus_2_closed_general() is False
+    assert d171() is False
+    assert e1_closed_general() is False
+    assert e1_open_residuals()  # non-empty
     bt = bitight_from_majorization(5)["bitight_empty"]
     assert bt is True
-    w = main_L_from_e1(e1=True, bitight=True)
-    assert w["L_status"] == "CLOSED"
-    assert w["L_closed"] is True
+    w = main_L_from_e1(e1=False, bitight=True)
+    assert w["L_status"] == "OPEN"
+    assert w["L_closed"] is False
 
 
 def test_main_honest():
     out = main()
-    assert out["proved"]["type_I_k_3p_minus_2_s_minus_impossible"] is True
-    assert out["proved"]["type_I_k_3p_minus_2_ND_class_closed"] is True
-    # residual_closed_general is 16N path — still false
+    # residual (i) not general-closed; Farkas algebra flags still true
+    assert out["proved"]["type_I_k_3p_minus_2_s_minus_impossible"] is False
+    assert out["proved"]["type_I_k_3p_minus_2_ND_class_closed"] is False
+    assert out["proved"]["gsum_farkas_poly_positive"] is True
     assert out["proved"]["residual_closed_general"] is False
-    # E1/L depend on 15.171
-    from e1_gmin_m4_prop15171 import deep_s2_freeness_fail_k_ge_3p_ND_closed as d171
-
-    if d171():
-        assert out["proved"]["deep_k_ge_3p_ND_closed"] is True
-        assert out["proved"]["E1_closed_general"] is True
-        assert out["L_status"] == "CLOSED"
-        assert out["open_residual"] == []
-    else:
-        assert out["proved"]["E1_closed_general"] is False
-        assert out["L_status"] == "OPEN"
+    assert out["proved"]["E1_closed_general"] is False
+    assert out["L_status"] == "OPEN"

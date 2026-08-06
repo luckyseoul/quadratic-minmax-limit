@@ -351,6 +351,17 @@ def deep_s2_freeness_fail_k_ge_3p_ND(p: int) -> dict:
 
 
 def deep_s2_freeness_fail_k_ge_3p_ND_closed() -> bool:
+    """
+    Residual (ii) closed for all p≥5.
+
+    Honest: requires gsum_disj_lb_proved_general() (15.170 hinge). Dual
+    two-level Farkas algebra is checkable *conditional* on that LB; without
+    it this returns False (no soft-close).
+    """
+    from e1_gmin_m4_prop15170 import gsum_disj_lb_proved_general
+
+    if not gsum_disj_lb_proved_general():
+        return False
     primes = [p for p in range(5, 60) if is_prime(p)]
     return all(deep_s2_freeness_fail_k_ge_3p_ND(p)["ND_for_this_class"] for p in primes)
 
@@ -392,14 +403,19 @@ def prove_residual_ii(primes: list[int] | None = None) -> dict:
     if primes is None:
         primes = [p for p in range(5, 60) if is_prime(p)]
     rows = {str(p): deep_s2_freeness_fail_k_ge_3p_ND(p) for p in primes}
-    ok = all(r["ND_for_this_class"] for r in rows.values())
+    # Conditional structure checks (auto-freeness, fail-eq empty, Farkas if LB).
+    structure_ok = all(r["ND_for_this_class"] for r in rows.values())
+    closed = deep_s2_freeness_fail_k_ge_3p_ND_closed()
     return {
-        "residual_ii_closed": ok,
+        "residual_ii_closed": closed,
+        "structure_ok_if_gsum_lb": structure_ok,
+        "gsum_disj_lb_required": True,
         "n_checked": len(primes),
         "by_p_sample": {k: rows[k] for k in list(rows)[:4]},
         "theorem": (
-            "Prop 15.171: deep freeness-fail s₊=2 k≥3p ND for all primes p≥5 "
-            "(freeness weak ND + fail-eq empty + dual two-level Gsum Farkas)."
+            "Prop 15.171: deep freeness-fail structure + dual two-level Farkas "
+            "if disj Gsum LB holds; residual_ii_closed=False until "
+            "gsum_disj_lb_proved_general (15.170 hinge / 15.158)."
         ),
     }
 

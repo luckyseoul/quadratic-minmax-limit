@@ -1,25 +1,27 @@
 {
-  "title": "Main/E(1) chain status after Props 15.167–15.171",
-  "date": "2026-08-05",
+  "title": "Main/E(1) chain status after 15.167\u201315.168 (honest)",
   "bi_tight_empty_for_all_p_ge_5": true,
   "residual_closed_general": false,
   "bitight_bypass_residual": true,
-  "type_I_freeness_fail_ND": true,
-  "deep_freeness_fail_ND": true,
-  "E1_closed": true,
-  "E1_open_residual": [],
-  "Main_closed": true,
-  "L_closed": true,
-  "L_status": "CLOSED",
-  "L_value": "1/2",
-  "path": "sandwich + denseness Prop 6.2 + bi-tight (15.167) + Type I (15.170) + deep freeness-fail (15.171)",
-  "optional_open": ["Path-C residual", "16N", "Hypothesis H"],
-  "docs": {
-    "HANDOFF_shows_L_CLOSED": true,
-    "README_shows_L_CLOSED": true,
-    "solution_top_shows_L_CLOSED": true,
-    "soft_close_detected": false,
-    "docs_ok": true
+  "E1_closed": false,
+  "E1_open_residual": [
+    "Type I freeness-fail k=3p\u22122: s_\u2212\u2264\u22121 / bad case (structure+2-Lipschitz+gap2 shipped; 15.170 Gsum Farkas open/fail)",
+    "deep freeness-fail k\u22653p (s\u208a=2): multi-s auto-freeness shipped; ND for freeness-fail large-k open"
+  ],
+  "E1_structure_15168": {
+    "type_I_fail_k_2p_minus_1_ND": true,
+    "type_I_all_classes_closed": false,
+    "deep_tight_empty": true,
+    "deep_auto_freeness": true,
+    "deep_all_ND_closed": false
   },
-  "rule": "L closed iff bi-tight (15.167) ∧ residual(i) (15.170) ∧ residual(ii) (15.171). residual/16N optional."
+  "Main_closed": false,
+  "L_closed": false,
+  "L_status": "OPEN",
+  "docs": {
+    "HANDOFF_shows_L_OPEN": false,
+    "soft_close_detected": false,
+    "docs_ok": false
+  },
+  "rule": "L closed iff bi-tight (15.167) \u2227 full E(1). 15.168 is partial; E1_closed_general=false \u21d2 L OPEN (F3)."
 }

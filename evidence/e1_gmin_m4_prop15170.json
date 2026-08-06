@@ -1,23 +1,32 @@
 {
   "title": "Prop 15.170 residual (i) close: Type I k=3p\u22122 s_\u2212\u2264\u22121 impossible (Gsum Farkas)",
-  "L_status": "CLOSED",
+  "L_status": "OPEN",
   "proved": {
-    "type_I_k_3p_minus_2_s_minus_impossible": true,
-    "type_I_k_3p_minus_2_ND_class_closed": true,
+    "type_I_k_3p_minus_2_s_minus_impossible": false,
+    "type_I_k_3p_minus_2_ND_class_closed": false,
     "gsum_farkas_poly_positive": true,
     "es2_lt_k": true,
     "dual_equality_impossible": true,
-    "deep_k_ge_3p_ND_closed": true,
+    "deep_k_ge_3p_ND_closed": false,
     "bi_tight_empty_for_all_p_ge_5": true,
-    "E1_closed_general": true,
-    "m_n_ge_Phi_minus_2": true,
-    "L_closed": true,
+    "E1_closed_general": false,
+    "m_n_ge_Phi_minus_2": false,
+    "L_closed": false,
     "residual_closed_general": false,
     "sixteen_N_for_all_p": false
   },
   "algebra": {
     "residual_i": {
-      "residual_i_closed": true,
+      "residual_i_closed": false,
+      "farkas_algebra_ok_if_lb": true,
+      "gsum_disj_lb_proved_general": false,
+      "gsum_disj_lb_status": {
+        "proved_adjacent_zero": true,
+        "proved_disj_lb_general": false,
+        "certified_disj_at_p5": true,
+        "scheme_justification_valid": false,
+        "note": "Gap (Paata/cold): Farkas needs disj Gsum \u2265 \u221212/(pn) for all p\u22655; only adjacent zero is proved; disj LB is census/candidate only."
+      },
       "gsum_farkas_poly_positive": true,
       "es2_lt_k_all": true,
       "n_checked": 20,
@@ -107,17 +116,20 @@
           "theorem": "Freeness-fail Type I k=3p\u22122 cannot have s_\u2212\u2264\u22121: gap-2 forces s_\u2212=\u22121; bad case minimises E[S f_e] at dual equality; dual equality contradicts Gsum box-sum Farkas for all p\u22655."
         }
       },
-      "theorem": "Prop 15.170: freeness-fail Type I k=3p\u22122 cannot have s_\u2212\u2264\u22121 for all primes p\u22655 (dual-equality Gsum Farkas)."
+      "theorem": "Prop 15.170: Farkas poly + dual need < k\u00b7LB if disj Gsum LB holds; disj LB not proved for general p (15.158 kills scheme justification). residual_i_closed = False until gsum_disj_lb_proved_general."
     }
   },
   "L_wire": {
     "bi_tight": true,
-    "E1": true,
-    "L_closed": true,
-    "L_status": "CLOSED",
+    "E1": false,
+    "L_closed": false,
+    "L_status": "OPEN",
     "rule": "L closed iff bi-tight \u2227 E(1); denseness Prop 6.2"
   },
-  "open_residual": [],
+  "open_residual": [
+    "Type I freeness-fail k=3p\u22122: s_\u2212\u2264\u22121 / bad case (15.170 Gsum Farkas)",
+    "deep freeness-fail k\u22653p (s\u208a=2): multi-s auto-freeness shipped; ND for freeness-fail large-k open"
+  ],
   "F3": "E1/L only from real bi-tight \u2227 15.170 \u2227 15.171",
   "F13": "15.170 residual (i); 15.171 residual (ii); 16N still open"
 }

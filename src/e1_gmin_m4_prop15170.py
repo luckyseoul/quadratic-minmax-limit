@@ -27,8 +27,9 @@ REAL checkable Fraction / prior-prop chain:
 
 Also: ES2=(13p−12)/p < k=3p−2 for p≥5 (binary freeness-fail has xᵀx=k > ES2=xᵀGp x).
 
-type_I_k_3p_minus_2_closed_general = True from this chain (no soft-close).
-E1 still requires residual (ii). L OPEN until E1 ∧ bi-tight.
+type_I_k_3p_minus_2_closed_general = False until gsum_disj_lb_proved_general
+(Farkas poly is real; disj Gsum LB is not general — 15.158 kills scheme claim).
+E1 still requires residual (ii) + proved Gsum LB. L OPEN until E1 ∧ bi-tight.
 
 Writes evidence/e1_gmin_m4_prop15170.json
 """
@@ -107,18 +108,44 @@ def dual_equality_correlation_need(p: int) -> Fraction:
 
 def gsum_pairwise_lower_bound(p: int) -> Fraction:
     """
-    Gsum_ab ≥ −12/(p(p²+1)) for a ≠ b.
+    Candidate LB: Gsum_ab ≥ −12/(p(p²+1)) for a ≠ b.
 
     Proved pieces:
       - Adjacent (share a vertex): Gsum_ab = 0.
         f_ab f_ac = C_ab C_ac y_b y_c (y_a²=1);
         E_+[y_b y_c] + E_−[y_b y_c] = C_bc/p + (−C_bc/p) = 0.
-      - Disjoint: the (Max+)+(Max−) 4-point edge Gram on the conference
-        association scheme of 2-subsets attains minimum −12/(p n)
-        (n=p²+1). Equivalent form −12/(p(p²+1)). Tight: at p=5 the
-        min class is −6/65 = −12/(5·26) with multiplicity 48 ≥ k=13.
+      - Disjoint: **NOT proved for general p**. The bound −12/(p n) was
+        motivated as a scheme minimum and is **certified at p=5**
+        (min class −6/65 = −12/(5·26)). Prop 15.158: Max+ is **not** an
+        IP association scheme, so scheme-min cannot be used for all p≥5.
+
+    Use only as a candidate / certified-at-small-p quantity until a
+    Max+-free disj proof ships. See gsum_disj_lb_proved_general().
     """
     return Fraction(-12, p * n_of(p))
+
+
+def gsum_disj_lb_proved_general() -> bool:
+    """
+    Fatal hinge for residual (i)/(ii) Farkas: general-p disj Gsum LB.
+
+    Returns False (honest). 15.158 kills IP-scheme justification.
+    Census tightness at p=5 is not a general proof.
+    """
+    return False
+
+
+def gsum_disj_lb_status() -> dict:
+    return {
+        "proved_adjacent_zero": True,
+        "proved_disj_lb_general": gsum_disj_lb_proved_general(),
+        "certified_disj_at_p5": True,  # −6/65 = −12/(5·26)
+        "scheme_justification_valid": False,  # 15.158 Max+ not IP-scheme
+        "note": (
+            "Gap (Paata/cold): Farkas needs disj Gsum ≥ −12/(pn) for all p≥5; "
+            "only adjacent zero is proved; disj LB is census/candidate only."
+        ),
+    }
 
 
 def gsum_box_sum_lower_bound(p: int) -> Fraction:
@@ -254,7 +281,14 @@ def type_I_s_minus_impossible(p: int) -> dict:
 
 
 def type_I_k_3p_minus_2_closed_general() -> bool:
-    """True: residual (i) closed for all primes p≥5 via Gsum Farkas."""
+    """
+    Residual (i) closed for all primes p≥5 via Gsum Farkas.
+
+    Honest: False until gsum_disj_lb_proved_general() — Farkas algebra
+    (need < k·LB) is fine *if* LB holds; LB is not proved for general p.
+    """
+    if not gsum_disj_lb_proved_general():
+        return False
     primes = [p for p in range(5, 80) if is_prime(p)]
     return all(type_I_s_minus_impossible(p)["s_minus_le_minus_1_impossible"] for p in primes)
 
@@ -306,18 +340,25 @@ def prove_residual_i(primes: list[int] | None = None) -> dict:
     if primes is None:
         primes = [p for p in range(5, 80) if is_prime(p)]
     rows = {str(p): type_I_s_minus_impossible(p) for p in primes}
-    all_closed = all(r["s_minus_le_minus_1_impossible"] for r in rows.values())
+    # Conditional Farkas algebra (need < k·LB) holds for sample primes when
+    # candidate LB is used; general residual-(i) close requires proved LB.
+    farkas_algebra_ok = all(r["s_minus_le_minus_1_impossible"] for r in rows.values())
     poly_ok = all(gsum_farkas_poly(p) > 0 for p in primes)
     es2_ok = all(es2_strictly_less_than_k(p) for p in primes)
+    closed = type_I_k_3p_minus_2_closed_general()
     return {
-        "residual_i_closed": all_closed,
+        "residual_i_closed": closed,
+        "farkas_algebra_ok_if_lb": farkas_algebra_ok,
+        "gsum_disj_lb_proved_general": gsum_disj_lb_proved_general(),
+        "gsum_disj_lb_status": gsum_disj_lb_status(),
         "gsum_farkas_poly_positive": poly_ok,
         "es2_lt_k_all": es2_ok,
         "n_checked": len(primes),
         "by_p_sample": {k: rows[k] for k in list(rows)[:4]},
         "theorem": (
-            "Prop 15.170: freeness-fail Type I k=3p−2 cannot have s_−≤−1 "
-            "for all primes p≥5 (dual-equality Gsum Farkas)."
+            "Prop 15.170: Farkas poly + dual need < k·LB if disj Gsum LB holds; "
+            "disj LB not proved for general p (15.158 kills scheme justification). "
+            "residual_i_closed = False until gsum_disj_lb_proved_general."
         ),
     }
 
@@ -356,8 +397,10 @@ def main() -> dict:
     }
     path = ROOT / "evidence" / "e1_gmin_m4_prop15170.json"
     path.write_text(json.dumps(out, indent=2, default=str))
-    print("Prop 15.170 residual (i) CLOSE (Gsum Farkas)")
+    print("Prop 15.170 residual (i) status (honest Gsum hinge)")
     print(f"  residual (i) closed: {RI['residual_i_closed']}")
+    print(f"  gsum_disj_lb_proved_general: {RI['gsum_disj_lb_proved_general']}")
+    print(f"  farkas_algebra_ok_if_lb: {RI.get('farkas_algebra_ok_if_lb')}")
     print(f"  Gsum Farkas poly>0: {RI['gsum_farkas_poly_positive']}")
     print(f"  ES2 < k: {RI['es2_lt_k_all']}")
     print(f"  type I ND class closed: {type_I_k_3p_minus_2_ND_class_closed()}")

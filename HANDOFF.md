@@ -1,11 +1,11 @@
-> **HANDOFF (2026-08-06):** Candidate path \(L=\tfrac12\) via Props 15.167–171 + denseness — **prize not accepted**.  
-> Independent Grok Build 4.5 (via @PI010101) flagged a **gap** in lim=½.  
-> Full report: **`evidence/FINAL_HANDOFF_2026-08-05.md`**. Status: **`STATUS.md`**.
+> **HANDOFF (2026-08-06):** **\(L=\tfrac12\) OPEN.** Fatal hinge named: disj Gsum LB (15.170/171)  
+> unjustified for general \(p\) because Max+ is **not** an IP-scheme (**15.158**).  
+> Short package: **`evidence/share/denseness_path_package.md`**. Status: **`STATUS.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
 
 **Status date:** 2026-08-06  
-**Claim:** candidate **\(L=\tfrac12\)** (Props 15.167–171 + denseness). **Not prize-closed.** residual/16N still optional open.
+**Claim:** **OPEN** (candidate denseness path; E1 blocked). residual/16N optional open.
 
 **External / prize:** [MO 413935](https://mathoverflow.net/questions/413935) · [X prize](https://x.com/PI010101/status/2081070728422752329).  
 @PI010101 asked for GitHub, then posted that Grok Build 4.5 found a gap:  
@@ -46,7 +46,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 ## 0. One-line status
 
-**Candidate \(L=\lim\alpha_n=\tfrac12\)** (E(1)+bi-tight+denseness) — **prize OPEN** until gap fixed + AI test. residual/16N optional open.
+**\(L=\lim\alpha_n\) OPEN.** Denseness path blocked by unproved disj Gsum LB (15.158 vs 15.170 Farkas). Prize OPEN. residual/16N optional open.
 
 ### P0 status
 

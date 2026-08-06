@@ -31,32 +31,31 @@ m_n
 Moreover \(\limsup_n\alpha_n=\lim_n a_n\) where \(a_n=\sup_{k\ge1}\alpha_{kn}\).
 (The lower bound is the dual-Gaussian arcsine argument of Prop.~5.2, valid for **every** Seidel matrix; the classical Bohnenblust–Hille floor \(2^{-5/2}\) is retained as Prop.~5.1.)
 
-**Main Theorem (limit).** \(\displaystyle L=\lim_{n\to\infty}\alpha_n=\tfrac12\).
+**Main Theorem (limit).** \(\displaystyle L=\lim_{n\to\infty}\alpha_n=\tfrac12\) — **OPEN** (2026-08-06).
 
-Path (2026-08-05): sandwich + denseness Prop~6.2 on the \(\rho=1\) Paley family
-\(n=p^2+1\) + E(1) via bi-tight emptiness (Prop~15.167) and freeness-fail ND
-(Props~15.170–15.171). Details: Props~15.167–15.171 below; handoff **`HANDOFF.md`**.
+Candidate path: sandwich + denseness Prop~6.1 on \(\rho=1\) Paley \(n=p^2+1\) + E(1)
+via bi-tight (15.167) + freeness-fail ND (15.170–15.171).  
+**Fatal hinge:** disj \(\mathrm{Gsum}\) LB used by 15.170–171 is not proved for general \(p\)
+(15.158: Max+ is not an IP association scheme). Short package:
+`evidence/share/denseness_path_package.md`. Handoff: **`HANDOFF.md`**.
 
-**Optional still open:** Path-C residual / \(16N\) spectral package (not required for \(L\)).
+**Optional still open:** Path-C residual / \(16N\) (independent).
 
 **Corollary (\(\rho=1\) along a dense Paley family).** For every odd prime \(p\), the Paley conference
 matrix of order \(n=p^2+1\) (over \(\mathbb F_{p^2}\)) admits a halfspace boolean eigenvector
 \(Cx=px\), hence \(\rho(C)=1\) and \(\Phi(C)=\tfrac12 n\sqrt{n-1}\). Along \(n_k=p_k^2+1\) one has
 \(n_{k+1}/n_k\to1\) and \(\limsup_k\rho(C_{n_k})=1\). Proof: `evidence/PROOF_rho_eq_1.md`.
-With \(m_n\ge\Phi(C)-2\) (E(1)) this forces \(L=\tfrac12\).
+With \(m_n\ge\Phi(C)-2\) (E(1)) this would force \(L=\tfrac12\) — E(1) not closed.
 
-**What is complete.** Dual-Gaussian lower bound; cut-code identity; conference spectral calculus;
-\(\rho=1\) on \(n=p^2+1\); bi-tight empty for \(p\ge5\) (15.167); Type~I freeness-fail ND (15.170);
-deep freeness-fail ND (15.171); denseness \(\Rightarrow L=\tfrac12\).
+**What is complete.** Dual-Gaussian lower bound; denseness framework; \(\rho=1\) on \(n=p^2+1\);
+majorization algebra for bi-tight (15.167, conditional on mult/\(\lambda_{\min}\)); Farkas **poly**
+for dual equality **if** disj Gsum LB holds. **What is not:** general-p disj Gsum LB; E(1); \(L=\tfrac12\).
 
-This answers MathOverflow [413935](https://mathoverflow.net/questions/413935) /
-https://x.com/PI010101/status/2081070728422752329
-on existence and value of the limit (along the denseness path above).
+MathOverflow [413935](https://mathoverflow.net/questions/413935) /
+https://x.com/PI010101/status/2081070728422752329 remain open for existence.
 
-> **Reader note.** Intermediate propositions below (especially pre-15.167) often end with
-> “Existence of \(\lim\alpha_n\) remains OPEN” written on the day of that prop. Those
-> lines are **historical**. Current status: **CLOSED** via Props **15.167–15.171**
-> at the end of this file. See also `STATUS.md` and `HANDOFF.md`.
+> **Reader note.** Soft-close of \(L=\tfrac12\) via scheme-min Gsum was **retracted** 2026-08-06.
+> See `STATUS.md`, `evidence/share/denseness_path_package.md`.
 
 ---
 

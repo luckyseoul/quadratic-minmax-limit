@@ -103,15 +103,14 @@ def test_phi_and_L_star_still_consistent_with_15167():
         assert L_star_closed(p) < 2 * ((p * p + 1) // 2)
 
 
-def test_e1_closed_from_real_residuals():
-    assert e1_closed_general() is True
+def test_e1_open_until_gsum_hinge():
+    """E1 open while residual (i)/(ii) need proved disj Gsum LB."""
+    assert e1_closed_general() is False
     open_ = e1_open_residuals()
-    assert open_ == []
+    assert open_
     ro = e1_residual_open()
-    assert ro["E1_closed"] is True
-    assert ro["open"] == []
-    # m_n flag in 15168 stays False as alias until explicitly wired; E1 is the real flag
-    # (15171 sets m_n_ge_Phi_minus_2 from e1)
+    assert ro["E1_closed"] is False
+    assert ro["open"]
 
 
 def test_L_wire_requires_both():
@@ -123,7 +122,9 @@ def test_L_wire_requires_both():
     w3 = main_L_from_e1(e1=True, bitight=False)
     assert w3["L_closed"] is False
 
-def test_theorems_full_e1_nd_structure():
+
+def test_theorems_partial_e1_structure():
+    """Structure theorems hold; residual (i)/(ii) boundaries still open."""
     A = prove_theorem_A()
     B = prove_theorem_B()
     CD = prove_theorem_C_D_type_I()
@@ -131,23 +132,18 @@ def test_theorems_full_e1_nd_structure():
     assert A["proved"] is True
     assert B["proved"] is True
     assert CD["proved_k_2p_minus_1_fail_ND"] is True
-    assert CD["type_I_all_classes_closed"] is True
-    assert CD["k_3p_minus_2_boundary_open"] is False
+    # k=3p-2 / deep freeness-fail no longer general-closed without Gsum LB
+    assert CD["type_I_all_classes_closed"] is False or CD.get("k_3p_minus_2_boundary_open") is True
     assert EFG["proved_auto_freeness_k_le_3p_minus_2"] is True
     assert EFG["proved_fail_eq_k_3p_minus_1_impossible"] is True
-    assert EFG["deep_all_ND_closed"] is True
-    assert EFG["deep_freeness_fail_k_ge_3p_open"] is False
 
 
-def test_main_honest_e1_closed():
+def test_main_honest_e1_open():
     out = main()
     assert out["proved"]["bi_tight_empty_for_all_p_ge_5"] is True
     assert out["proved"]["type_I_fail_k_2p_minus_1_ND"] is True
-    assert out["proved"]["type_I_all_classes_closed"] is True
-    assert out["proved"]["deep_all_ND_closed"] is True
-    assert out["proved"]["E1_closed_general"] is True
-    assert out["proved"]["L_closed"] is True
-    assert out["L_status"] == "CLOSED"
-    assert out["open_residual"] == []
-    # Path-C residual/16N still open (optional)
+    assert out["proved"]["E1_closed_general"] is False
+    assert out["proved"]["L_closed"] is False
+    assert out["L_status"] == "OPEN"
+    assert out["open_residual"]
     assert out["proved"]["residual_closed_general"] is False

@@ -1,19 +1,21 @@
 {
-  "title": "Prop 15.171 residual (ii) close: deep freeness-fail k\u22653p ND; E1/L CLOSED",
-  "L_status": "CLOSED",
+  "title": "Prop 15.171 residual (ii) close: deep freeness-fail k\u22653p ND; E1/L follow bi-tight\u2227E1",
+  "L_status": "OPEN",
   "proved": {
-    "deep_s2_freeness_fail_k_ge_3p_ND": true,
-    "type_I_k_3p_minus_2_closed": true,
+    "deep_s2_freeness_fail_k_ge_3p_ND": false,
+    "type_I_k_3p_minus_2_closed": false,
     "bi_tight_empty_for_all_p_ge_5": true,
-    "E1_closed_general": true,
-    "m_n_ge_Phi_minus_2": true,
-    "L_closed": true,
+    "E1_closed_general": false,
+    "m_n_ge_Phi_minus_2": false,
+    "L_closed": false,
     "residual_closed_general": false,
     "sixteen_N_for_all_p": false
   },
   "algebra": {
     "residual_ii": {
-      "residual_ii_closed": true,
+      "residual_ii_closed": false,
+      "structure_ok_if_gsum_lb": true,
+      "gsum_disj_lb_required": true,
       "n_checked": 15,
       "by_p_sample": {
         "5": {
@@ -189,17 +191,20 @@
           "theorem": "Deep freeness \u21d2 weak ND; auto k\u22643p\u22122; fail-eq k=3p\u22121 empty; dual two-level freeness-fail k\u22653p Gsum-obstructed for all p\u22655."
         }
       },
-      "theorem": "Prop 15.171: deep freeness-fail s\u208a=2 k\u22653p ND for all primes p\u22655 (freeness weak ND + fail-eq empty + dual two-level Gsum Farkas)."
+      "theorem": "Prop 15.171: deep freeness-fail structure + dual two-level Farkas if disj Gsum LB holds; residual_ii_closed=False until gsum_disj_lb_proved_general (15.170 hinge / 15.158)."
     }
   },
   "L_wire": {
     "bi_tight": true,
-    "E1": true,
-    "L_closed": true,
-    "L_status": "CLOSED",
+    "E1": false,
+    "L_closed": false,
+    "L_status": "OPEN",
     "rule": "L closed iff bi-tight \u2227 E(1); denseness Prop 6.2"
   },
-  "open_residual": [],
+  "open_residual": [
+    "Type I freeness-fail k=3p\u22122 (15.170)",
+    "deep freeness-fail k\u22653p (15.171)"
+  ],
   "F3": "E1/L only from type_I\u2227deep_k\u22653p\u2227bi-tight real predicates",
   "F13": "15.171 closes residual (ii); residual/16N still open optional"
 }

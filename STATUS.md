@@ -1,24 +1,28 @@
 # Status (2026-08-06)
 
-**Candidate** \(L=\lim\alpha_n=\tfrac12\) via denseness + E(1) (Props 15.167–171).  
-**Prize: OPEN** — independent Grok (via @PI010101) flagged a gap; AI-test required before human verify.
+**\(L=\lim\alpha_n=\tfrac12\) is OPEN** (candidate denseness path blocked by a named hinge).
 
 | Claim | Status | Reference |
 |-------|--------|-----------|
-| Sandwich \(1/\pi\le\liminf\le\limsup\le1/2\) | CLOSED | `solution.md` Main Theorem |
-| \(\rho=1\) on Paley \(n=p^2+1\) | CLOSED | Prop / `PROOF_rho_eq_1.md` |
-| Bi-tight covers empty (\(p\ge5\)) | CANDIDATE | Prop 15.167 |
-| Type I freeness-fail ND | CANDIDATE | Prop 15.170 |
-| Deep freeness-fail ND | CANDIDATE | Prop 15.171 |
-| E(1) \(\Rightarrow m_n\ge\Phi-2\) | CANDIDATE | 15.167–171 |
-| Denseness \(\Rightarrow L=\tfrac12\) | CANDIDATE | Prop 6.2 + E(1) |
-| Path-C residual / 16N / H | OPEN (optional) | not required for this path |
-| Prize acceptance | OPEN | X + GitHub; no MO |
+| Sandwich \(1/\pi\le\liminf\le\limsup\le1/2\) | CLOSED | `solution.md` |
+| \(\rho=1\) on Paley \(n=p^2+1\) | CLOSED | `PROOF_rho_eq_1.md` |
+| Bi-tight majorization algebra (15.167) | CANDIDATE | `prop15167.py` |
+| Type I / deep freeness-fail ND | OPEN | needs Gsum disj LB |
+| E(1) / \(L=\tfrac12\) | **OPEN** | gap below |
+| Path-C residual / 16N | OPEN optional | not required for denseness path |
+| Prize acceptance | OPEN | X + GitHub; Paata AI-test |
 
-### What’s left (simple)
+### Fatal gap (one sentence)
 
-1. Find the gap (Paata Grok share). 2. Fix or drop claim. 3. Short clean writeup.  
-4. AI test (2–3 models × 2–3 prompts). 5. Ping Paata.
+Props 15.170–171 Farkas need \(\mathrm{Gsum}_{ab}\ge-12/(pn)\) for disjoint edges for all \(p\ge5\), but that LB is only census/candidate: Prop **15.158** proves Max+ is **not** an IP association scheme, so scheme-min justification is invalid.
 
-Entry points: `HANDOFF.md`, `evidence/FINAL_HANDOFF_2026-08-05.md`, `solution.md`,
-`evidence/share/paper/`, `x-cards/`.
+### Short package
+
+`evidence/share/denseness_path_package.md`
+
+### What's left for prize
+
+1. Prove Gsum disj LB (Max+-free) or alternate residual (i)/(ii).  
+2. Re-close E1/L predicates.  
+3. AI-test short package.  
+4. Ping Paata.

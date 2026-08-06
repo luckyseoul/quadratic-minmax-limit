@@ -1,0 +1,11 @@
+{
+  "p": 11,
+  "N_sample": 2772,
+  "lambda_max_sample": 240.00000000000023,
+  "ray_sample": 117.00000000000011,
+  "H": 2.7704918032786887,
+  "thr": 15.475409836065573,
+  "mult_top_sample": 5,
+  "note": "sample affine+ystar only; not residual certificate",
+  "wall_s": 4.767704248428345
+}

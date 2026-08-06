@@ -15,11 +15,11 @@ m_n
 
 ## Status
 
-**Main claim (2026-08-05):** \(\displaystyle L=\lim_n\alpha_n=\tfrac12\).
+**Main claim:** \(\displaystyle L=\lim_n\alpha_n\) is **OPEN** (2026-08-06).
 
-Path: sandwich + \(\rho=1\) denseness on Paley \(n=p^2+1\) + E(1) via
-bi-tight empty (Prop 15.167) and freeness-fail ND (Props 15.170–15.171).
-Residual / \(16N\) spectral package remains **optional open** (not required for \(L\)).
+Candidate denseness path (sandwich + \(\rho=1\) + E(1)) is **blocked** by an unproved
+disj Gsum lower bound used in Props 15.170–171 (Max+ is not an IP-scheme: 15.158).
+Short honest package: **`evidence/share/denseness_path_package.md`**.
 
 **Proved (sandwich):**
 \[
@@ -32,10 +32,9 @@ Residual / \(16N\) spectral package remains **optional open** (not required for 
 \tfrac12.
 \]
 
-**Also proved:** \(\rho=1\) for Paley conference matrices of order \(n=p^2+1\) (halfspace boolean eigenvector).
+**Also proved:** \(\rho=1\) for Paley conference matrices of order \(n=p^2+1\).
 
-See **`STATUS.md`**, `HANDOFF.md`, `solution.md` (Props 15.167–15.171),
-`evidence/share/paper/`, `x-cards/` (summary + key lemmas).
+See **`STATUS.md`**, `HANDOFF.md`, denseness package, `solution.md`.
 
 ## Files
 
