@@ -64,6 +64,7 @@ m_n=\min_{a_{ij}=\pm1}\max_{x=\pm1}\Bigl|\sum_{i<j}a_{ij}x_ix_j\Bigr|,\qquad
 | Residual (ii) structure + freeze | `src/e1_gmin_m4_prop15171.py`, `prop15179.py` |
 | Residual (ii) exhaustiveness audit | `src/e1_gmin_m4_prop15193.py` |
 | Residual (i) row negative-mass | `src/e1_gmin_m4_prop15194.py` |
+| Residual (i) mass-corrected dual-eq | `src/e1_gmin_m4_prop15195.py` |
 | Residual (i) support constraints | `src/e1_gmin_m4_prop15180.py` |
 | Gsum structure / Farkas threshold | `src/e1_gmin_m4_prop15172.py` |
 | Gsum vector structure (ξ, stars, K) | `src/e1_gmin_m4_prop15173.py` |
