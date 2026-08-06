@@ -27,7 +27,9 @@
         "proved_disj_lb_general": false,
         "certified_disj_at_p5": true,
         "scheme_justification_valid": false,
-        "note": "Gap (Paata/cold): Farkas needs disj Gsum \u2265 \u221212/(pn) for all p\u22655; only adjacent zero is proved; disj LB is census/candidate only."
+        "farkas_threshold_mu": "-2/p",
+        "candidate_minus_12_over_pn_false_at_p3": true,
+        "note": "Gap: dual-equality Farkas needs disj Gsum \u03bc > \u22122/p (15.172), or the stronger candidate \u221212/(pn) for all p\u22655. Only adjacent zero is proved; pointwise disj LB not proved in general (15.158 kills scheme-min; candidate fails at p=3). See prop15172."
       },
       "gsum_farkas_poly_positive": true,
       "es2_lt_k_all": true,
