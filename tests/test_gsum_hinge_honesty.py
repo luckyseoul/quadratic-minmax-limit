@@ -45,9 +45,10 @@ def test_farkas_poly_still_positive_when_lb_assumed():
 
 
 def test_e1_and_L_open_until_hinge_closed():
+    # Residual (i) still needs Gsum LB; residual (ii) closed by freeze (15.179)
     assert type_I_k_3p_minus_2_closed_general() is False
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
-    assert e1_closed_general() is False
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True  # 15.179 freeze
+    assert e1_closed_general() is False  # residual (i) open
     bt = bitight_from_majorization(5)["bitight_empty"]
     assert bt is True
     w = main_L_from_e1(e1=False, bitight=bt)

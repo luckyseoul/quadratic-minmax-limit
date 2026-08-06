@@ -1,0 +1,125 @@
+{
+  "title": "Prop 15.174 hinge dictionary U/cos/H; bound still OPEN",
+  "proved": {
+    "U_PSD_unit_diag": true,
+    "U_wedge_constant": true,
+    "equivalences_H_U_cos": true,
+    "star_row_sum_U_equals_p": true,
+    "H_ge_minus_1_over_p_general": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "equivalents": {
+      "3": {
+        "p": 3,
+        "U_wedge": "1/4",
+        "star_row_sum_U": 3,
+        "H_thr": "-1/3",
+        "cos_thr": "-1/2",
+        "triangle_H_lb": "-1",
+        "weak_CS_H_lb": "-7/9",
+        "U_of_H_thr_is_zero": true,
+        "cos_matches_H_thr": true,
+        "triangle_too_weak": true,
+        "weak_CS_too_weak": true,
+        "bound_proved_general": false
+      },
+      "5": {
+        "p": 5,
+        "U_wedge": "1/6",
+        "star_row_sum_U": 5,
+        "H_thr": "-1/5",
+        "cos_thr": "-1/4",
+        "triangle_H_lb": "-1",
+        "weak_CS_H_lb": "-23/25",
+        "U_of_H_thr_is_zero": true,
+        "cos_matches_H_thr": true,
+        "triangle_too_weak": true,
+        "weak_CS_too_weak": true,
+        "bound_proved_general": false
+      },
+      "7": {
+        "p": 7,
+        "U_wedge": "1/8",
+        "star_row_sum_U": 7,
+        "H_thr": "-1/7",
+        "cos_thr": "-1/6",
+        "triangle_H_lb": "-1",
+        "weak_CS_H_lb": "-47/49",
+        "U_of_H_thr_is_zero": true,
+        "cos_matches_H_thr": true,
+        "triangle_too_weak": true,
+        "weak_CS_too_weak": true,
+        "bound_proved_general": false
+      },
+      "11": {
+        "p": 11,
+        "U_wedge": "1/12",
+        "star_row_sum_U": 11,
+        "H_thr": "-1/11",
+        "cos_thr": "-1/10",
+        "triangle_H_lb": "-1",
+        "weak_CS_H_lb": "-119/121",
+        "U_of_H_thr_is_zero": true,
+        "cos_matches_H_thr": true,
+        "triangle_too_weak": true,
+        "weak_CS_too_weak": true,
+        "bound_proved_general": false
+      },
+      "13": {
+        "p": 13,
+        "U_wedge": "1/14",
+        "star_row_sum_U": 13,
+        "H_thr": "-1/13",
+        "cos_thr": "-1/12",
+        "triangle_H_lb": "-1",
+        "weak_CS_H_lb": "-167/169",
+        "U_of_H_thr_is_zero": true,
+        "cos_matches_H_thr": true,
+        "triangle_too_weak": true,
+        "weak_CS_too_weak": true,
+        "bound_proved_general": false
+      },
+      "17": {
+        "p": 17,
+        "U_wedge": "1/18",
+        "star_row_sum_U": 17,
+        "H_thr": "-1/17",
+        "cos_thr": "-1/16",
+        "triangle_H_lb": "-1",
+        "weak_CS_H_lb": "-287/289",
+        "U_of_H_thr_is_zero": true,
+        "cos_matches_H_thr": true,
+        "triangle_too_weak": true,
+        "weak_CS_too_weak": true,
+        "bound_proved_general": false
+      }
+    }
+  },
+  "certified_census": {
+    "p3": {
+      "p": 3,
+      "min_H_disj": "-1/3",
+      "min_U_disj": 0.0,
+      "min_U_ge_0": true,
+      "star_row_sum_mean": 3.0,
+      "star_row_sum_is_p": true,
+      "U_wedge_ok": true,
+      "not_general_proof": true
+    },
+    "p5": {
+      "p": 5,
+      "min_H_disj": "-3/65",
+      "min_U_disj": 0.1282051282051282,
+      "min_U_ge_0": true,
+      "star_row_sum_mean": 5.0,
+      "star_row_sum_is_p": true,
+      "U_wedge_ok": true,
+      "not_general_proof": true
+    }
+  },
+  "open": "Prove U_ab\u22650 on disj edges (H\u2265\u22121/p) for all primes p\u22655 Max+-free.",
+  "F3": "Do not flip residual/E1/L without general bound"
+}

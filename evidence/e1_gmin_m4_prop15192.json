@@ -1,0 +1,141 @@
+{
+  "title": "Prop 15.192 Gsum row algebra; Aut_e dual-eq reduction; residual (i) OPEN",
+  "proved": {
+    "gsum_diag_two": true,
+    "gsum_row_sum_n": true,
+    "avg_disj_gsum": true,
+    "aut_e_averaging": true,
+    "three_halves_scheme_lt_need": true,
+    "max_ke_bound_general": false,
+    "gsum_disj_lb_proved_general": false,
+    "residual_i_closed": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "diag": {
+      "proved": true,
+      "theorem": "Gsum_ee = 2 for every edge (E\u00b1[f_e\u00b2]=1)."
+    },
+    "row_sum": {
+      "proved": true,
+      "theorem": "\u2211_g Gsum_eg = n for every edge e. From \u2211_g f_g = \u00b1(p n)/2 on Max\u00b1 and E\u00b1[f_e]=\u00b11/p.",
+      "depends_on": [
+        "pi_equals_C_over_p",
+        "star_sum_features"
+      ]
+    },
+    "avg_disj": {
+      "proved": true,
+      "theorem": "avg_{g disj e} Gsum_eg = 2/(n\u22123). Off-diag row sum n\u22122, adjacent 0, #disj=binom(n\u22122,2).",
+      "depends_on": [
+        "gsum_row_sum_n",
+        "adjacent_zero"
+      ],
+      "by_p_sample": {
+        "3": {
+          "avg": "2/7",
+          "match": true
+        },
+        "5": {
+          "avg": "2/23",
+          "match": true
+        },
+        "7": {
+          "avg": "2/47",
+          "match": true
+        },
+        "11": {
+          "avg": "2/119",
+          "match": true
+        }
+      }
+    },
+    "aut_e": {
+      "proved": true,
+      "theorem": "If Aut_e \u2264 Aut(C) stabilises the freeness edge e, then dual-eq feasibility is equivalent to Aut_e-invariant dual-eq feasibility (convex Aut_e-average preserves Gsum \u03ba=0, mass, box, and \u03ba_e)."
+    },
+    "three_halves": {
+      "proved": true,
+      "theorem": "(3/2)\u00b73(n\u22122)/(pn) < 2\u2212\u03b1 for all primes p\u22655 (\u21d4 4p\u00b3\u22129p\u00b2+4p\u22123>0).",
+      "by_p_sample": {
+        "5": {
+          "three_halves_scheme": "54/65",
+          "need": "127/65",
+          "strict_lt": true
+        },
+        "7": {
+          "three_halves_scheme": "108/175",
+          "need": "347/175",
+          "strict_lt": true
+        },
+        "11": {
+          "three_halves_scheme": "270/671",
+          "need": "1339/671",
+          "strict_lt": true
+        },
+        "13": {
+          "three_halves_scheme": "378/1105",
+          "need": "2207/1105",
+          "strict_lt": true
+        }
+      },
+      "note": "If max dual-eq \u03ba_e \u2264 (3/2) scheme_max for all p\u22655, residual (i) closes. Ratio certified <3/2 at p=5,7; open in general."
+    }
+  },
+  "certified": {
+    "aut_e_kerbox": {
+      "3": {
+        "p": 3,
+        "max_kappa_e": 2.799999999999998,
+        "max_kappa_e_frac": "14/5",
+        "scheme_max": 0.8,
+        "need": 1.8,
+        "ratio_to_scheme": 3.4999999999999973,
+        "blocked": false,
+        "aut_e_order": 16,
+        "n_orbits": 8,
+        "ker_dim": 5,
+        "proved_general": false
+      },
+      "5": {
+        "p": 5,
+        "max_kappa_e": 0.8109890109890106,
+        "max_kappa_e_frac": "369/455",
+        "scheme_max": 0.5538461538461539,
+        "need": 1.9538461538461538,
+        "ratio_to_scheme": 1.4642857142857133,
+        "blocked": true,
+        "aut_e_order": 48,
+        "n_orbits": 16,
+        "ker_dim": 7,
+        "proved_general": false
+      },
+      "7": {
+        "p": 7,
+        "max_kappa_e": 0.5934766118836953,
+        "max_kappa_e_frac": "11736/19775",
+        "scheme_max": 0.4114285714285714,
+        "need": 1.9828571428571429,
+        "ratio_to_scheme": 1.4424778761062038,
+        "blocked": true,
+        "aut_e_order": 96,
+        "n_orbits": 27,
+        "ker_dim": 10,
+        "proved_general": false
+      }
+    }
+  },
+  "hinge": {
+    "residual_ii_closed": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "gsum_row_algebra_proved": true,
+    "aut_e_averaging_proved": true,
+    "three_halves_scheme_lt_need_proved": true,
+    "max_ke_le_three_halves_scheme_general": false,
+    "open": "Prove max dual-eq \u03ba_e \u2264 (3/2)\u00b7scheme_max (or any bound <2\u2212\u03b1) for all p\u22655 Max+-free; or |\u03bc|\u22642/n on |\u03ba|=1."
+  },
+  "F3": "Aut_e reduction + (3/2) scheme bound would close residual (i). Census blocks p=5,7; general max_ke bound open. Soft-close forbidden."
+}

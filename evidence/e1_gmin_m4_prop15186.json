@@ -1,0 +1,138 @@
+{
+  "title": "Prop 15.186 |\u03c6|\u22642(p\u22122) all Paley p (Auer\u2013Top); \u03bc_part majorant \u22641/(2p); actual |\u03bc\u2084| still OPEN",
+  "proved": {
+    "H_mod_4": true,
+    "hasse": true,
+    "supersingular_double_residue": true,
+    "phi_bound_paley_all_primes": true,
+    "particular_majorant_le_mu4_thr": true,
+    "actual_mu4_bound_general": false,
+    "minus_1_over_p_suffices": true,
+    "gsum_disj_lb_proved_general": false,
+    "residual_i_closed": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "H_mod_4": {
+      "proved": true,
+      "theorem": "Legendre full 2-torsion \u21d2 4|#E; q=p\u00b2 \u21d2 q+1\u22612 (mod 4) \u21d2 H=#E\u2212(q+1)\u22612 (mod 4)."
+    },
+    "hasse": {
+      "proved": true,
+      "theorem": "|H|\u22642p by Hasse\u2013Weil."
+    },
+    "supersingular_double_residue": {
+      "proved": true,
+      "theorem": "E_\u03bb/F_{p\u00b2} supersingular (p odd) \u21d2 E_\u03bb(F_{p\u00b2})\u2245(Z/(p\u2032\u22121))\u00b2 with p\u2032=(\u22121)^{(p\u22121)/2}p \u22611 (mod 4) \u21d2 E[4] fully rational \u2245(Z/4)\u00b2 \u21d2 \u22121,\u03bb,1\u2212\u03bb all squares in F_{p\u00b2} (2-descent / Auer\u2013Top 2.1) \u21d2 \u03c7(\u03bb)=\u03c7(\u03bb\u22121)=1 (since \u03c7(\u22121)=1 on F_{p\u00b2}). Hence |H|=2p \u21d2 (\u03c7(\u03bb),\u03c7(\u03bb\u22121))=(1,1).",
+      "references": [
+        "Silverman AEC V.3.1 (supersingular j in F_{p\u00b2})",
+        "Waterhouse (group orders of supersingular curves over F_{p\u00b2})",
+        "Auer\u2013Top Prop 2.1, 2.2, 3.1 (Legendre 4-torsion \u21d4 double squares)"
+      ]
+    },
+    "phi_bound": {
+      "proved": true,
+      "theorem": "Paley |\u03ba|=1 finite 4-set: every cross-ratio avoids \u03c7-class (1,1) (dichotomy); hence |H|\u22602p (supersingular double-residue); hence |H|\u22642p\u22124=2(p\u22122) (mod-4 Hasse ladder); hence |\u03c6|=|H|\u22642(p\u22122). All odd primes p.",
+      "depends_on": [
+        "H_mod_4",
+        "hasse",
+        "supersingular_double_residue",
+        "kappa_cr_dichotomy",
+        "phi_eq_abs_H"
+      ]
+    },
+    "particular_majorant": {
+      "proved": true,
+      "theorem": "|\u03c6|\u22642(p\u22122), |\u03ba|=1 \u21d2 |\u03bc_part|\u2264(p\u00b2+4p\u22129)/(p\u00b2(p\u00b2\u22125))\u22641/(2p) for all primes p\u22655 (cubic p\u00b3\u22122p\u00b2\u221213p+18>0 on [5,\u221e)).",
+      "by_p": {
+        "5": {
+          "majorant": "9/125",
+          "mu4_thr": "1/10",
+          "majorant_le_thr": true,
+          "max_explicit_part": "9/125",
+          "explicit_le_majorant": true
+        },
+        "7": {
+          "majorant": "17/539",
+          "mu4_thr": "1/14",
+          "majorant_le_thr": true,
+          "max_explicit_part": "17/539",
+          "explicit_le_majorant": true
+        },
+        "11": {
+          "majorant": "39/3509",
+          "mu4_thr": "1/22",
+          "majorant_le_thr": true,
+          "max_explicit_part": "39/3509",
+          "explicit_le_majorant": true
+        },
+        "13": {
+          "majorant": "53/6929",
+          "mu4_thr": "1/26",
+          "majorant_le_thr": true,
+          "max_explicit_part": "53/6929",
+          "explicit_le_majorant": true
+        },
+        "17": {
+          "majorant": "87/20519",
+          "mu4_thr": "1/34",
+          "majorant_le_thr": true,
+          "max_explicit_part": "87/20519",
+          "explicit_le_majorant": true
+        },
+        "19": {
+          "majorant": "107/32129",
+          "mu4_thr": "1/38",
+          "majorant_le_thr": true,
+          "max_explicit_part": "107/32129",
+          "explicit_le_majorant": true
+        },
+        "23": {
+          "majorant": "153/69299",
+          "mu4_thr": "1/46",
+          "majorant_le_thr": true,
+          "max_explicit_part": "153/69299",
+          "explicit_le_majorant": true
+        },
+        "29": {
+          "majorant": "237/175769",
+          "mu4_thr": "1/58",
+          "majorant_le_thr": true,
+          "max_explicit_part": "237/175769",
+          "explicit_le_majorant": true
+        }
+      },
+      "n_primes": 20,
+      "cubic_positive": true
+    }
+  },
+  "certified": {
+    "lsqr_p5": {
+      "p": 5,
+      "max_abs_lsqr_on_kappa1": 0.05600000000000014,
+      "mu4_thr": 0.1,
+      "lsqr_le_thr": true,
+      "max_err_vs_particular": 5.412337245047638e-16,
+      "equals_particular": true,
+      "not_general_proof": true
+    },
+    "dichotomy_p5": {
+      "p": 5,
+      "dichotomy_holds": true,
+      "n_kappa1": 632,
+      "n_kappa3": 168
+    }
+  },
+  "hinge": {
+    "residual_ii_closed": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "phi_bound_paley_all_p_proved": true,
+    "particular_majorant_beats_thr_proved": true,
+    "actual_mu4_bound_proved": false,
+    "open": "Control \u03b4=\u03bc_actual\u2212\u03bc_part on |\u03ba|=1 (or other |\u03bc\u2084|\u22641/(2p)) for all p\u22655; then flip residual_i."
+  },
+  "F3": "\u03c6 bound and \u03bc_part majorant do not alone flip residual_i: need actual Max\u00b1 |\u03bc\u2084|\u22641/(2p)."
+}

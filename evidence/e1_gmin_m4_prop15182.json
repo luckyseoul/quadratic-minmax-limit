@@ -1,0 +1,224 @@
+{
+  "title": "Prop 15.182 dual-equality normal form (x\u2080+ker); general ker-box obstruction still OPEN",
+  "proved": {
+    "particular_solution_x0": true,
+    "general_solution_form": true,
+    "need_equals_2_half": true,
+    "minus_1_over_p_suffices": true,
+    "ker_box_obstruction_general": false,
+    "gsum_disj_lb_proved_general": false,
+    "residual_i_closed": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "particular": {
+      "proved": true,
+      "theorem": "\u03b1=6/(p n); x\u2080=\u03b11\u22122e_*; F\u00b1x\u2080 equals dual-equality RHS on Max\u00b1 because \u2211_g f_g=\u00b1pn/2; 1\u1d40x\u2080=3(n\u22121)/p\u22122=k for n=p\u00b2+1; (x\u2080)_e=\u03b1\u22122<0 so x\u2080\u2209[0,1]^E.",
+      "by_p": {
+        "5": {
+          "alpha": "3/65",
+          "mass": "13",
+          "k": 13,
+          "x_e": "-127/65",
+          "x_e_negative": true,
+          "match": true
+        },
+        "7": {
+          "alpha": "3/175",
+          "mass": "19",
+          "k": 19,
+          "x_e": "-347/175",
+          "x_e_negative": true,
+          "match": true
+        },
+        "11": {
+          "alpha": "3/671",
+          "mass": "31",
+          "k": 31,
+          "x_e": "-1339/671",
+          "x_e_negative": true,
+          "match": true
+        },
+        "13": {
+          "alpha": "3/1105",
+          "mass": "37",
+          "k": 37,
+          "x_e": "-2207/1105",
+          "x_e_negative": true,
+          "match": true
+        },
+        "17": {
+          "alpha": "3/2465",
+          "mass": "49",
+          "k": 49,
+          "x_e": "-4927/2465",
+          "x_e_negative": true,
+          "match": true
+        },
+        "19": {
+          "alpha": "3/3439",
+          "mass": "55",
+          "k": 55,
+          "x_e": "-6875/3439",
+          "x_e_negative": true,
+          "match": true
+        },
+        "23": {
+          "alpha": "3/6095",
+          "mass": "67",
+          "k": 67,
+          "x_e": "-12187/6095",
+          "x_e_negative": true,
+          "match": true
+        },
+        "29": {
+          "alpha": "3/12209",
+          "mass": "85",
+          "k": 85,
+          "x_e": "-24415/12209",
+          "x_e_negative": true,
+          "match": true
+        }
+      },
+      "n_primes": 20
+    },
+    "general_form": {
+      "proved": true,
+      "form": "x = \u03b1\u00b71 - 2 e_* + \u03ba",
+      "kappa_constraints": [
+        "F+ \u03ba = 0",
+        "F- \u03ba = 0  (\u21d2 \u03ba \u2208 ker(G+) \u2229 ker(G-) \u2286 ker(Gsum))",
+        "\u03ba_e = 2 - \u03b1",
+        "1^T \u03ba = 0",
+        "0 \u2264 \u03b1 + \u03ba_g \u2264 1 for all g \u2260 e",
+        "x_e = 0"
+      ],
+      "row_identity": "Gsum \u03ba = 0 \u21d2 sum_{f\u2260e} Gsum_ef \u03ba_f = -2(2-\u03b1) (wedges contribute 0).",
+      "proof": "Particular x\u2080 from B; general solution of linear systems F\u00b1x=rhs\u00b1 is x\u2080+ker(F\u00b1). Mass identity forces 1\u1d40\u03ba=0 once 1\u1d40x=k. x_e=0 forces \u03ba_e=2\u2212\u03b1. Box is [0,1] on x."
+    },
+    "need": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "need": "-14/5",
+          "2*(3/p-2)": "-14/5",
+          "match": true
+        },
+        "7": {
+          "need": "-22/7",
+          "2*(3/p-2)": "-22/7",
+          "match": true
+        },
+        "11": {
+          "need": "-38/11",
+          "2*(3/p-2)": "-38/11",
+          "match": true
+        },
+        "13": {
+          "need": "-46/13",
+          "2*(3/p-2)": "-46/13",
+          "match": true
+        },
+        "17": {
+          "need": "-62/17",
+          "2*(3/p-2)": "-62/17",
+          "match": true
+        },
+        "19": {
+          "need": "-70/19",
+          "2*(3/p-2)": "-70/19",
+          "match": true
+        },
+        "23": {
+          "need": "-86/23",
+          "2*(3/p-2)": "-86/23",
+          "match": true
+        },
+        "29": {
+          "need": "-110/29",
+          "2*(3/p-2)": "-110/29",
+          "match": true
+        },
+        "31": {
+          "need": "-118/31",
+          "2*(3/p-2)": "-118/31",
+          "match": true
+        },
+        "37": {
+          "need": "-142/37",
+          "2*(3/p-2)": "-142/37",
+          "match": true
+        }
+      }
+    },
+    "farkas_if_minus_1_over_p": {
+      "5": {
+        "p": 5,
+        "k": 13,
+        "need": "-14/5",
+        "mu": "-1/5",
+        "box_k_mu": "-13/5",
+        "need_lt_box": true,
+        "mu_star": "-14/65",
+        "mu_gt_star": true
+      },
+      "7": {
+        "p": 7,
+        "k": 19,
+        "need": "-22/7",
+        "mu": "-1/7",
+        "box_k_mu": "-19/7",
+        "need_lt_box": true,
+        "mu_star": "-22/133",
+        "mu_gt_star": true
+      },
+      "11": {
+        "p": 11,
+        "k": 31,
+        "need": "-38/11",
+        "mu": "-1/11",
+        "box_k_mu": "-31/11",
+        "need_lt_box": true,
+        "mu_star": "-38/341",
+        "mu_gt_star": true
+      },
+      "13": {
+        "p": 13,
+        "k": 37,
+        "need": "-46/13",
+        "mu": "-1/13",
+        "box_k_mu": "-37/13",
+        "need_lt_box": true,
+        "mu_star": "-46/481",
+        "mu_gt_star": true
+      }
+    }
+  },
+  "certified_census": {
+    "p5_ker_box": {
+      "p": 5,
+      "alpha": "3/65",
+      "ker_dim": 194,
+      "lp_success": false,
+      "lp_message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Infeasible)",
+      "ker_box_infeasible": true,
+      "not_general_proof": true,
+      "note": "Dual equality has no x\u2208[0,1]^E at p=5 via ker-lift of x\u2080. General-p ker-box obstruction still open."
+    }
+  },
+  "hinge": {
+    "residual_ii_closed": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "particular_solution_proved": true,
+    "general_form_proved": true,
+    "ker_box_general_proved": false,
+    "bound_proved_general": false,
+    "open": "Prove ker(G+)\u2229ker(G-) box obstruction for all primes p\u22655 (\u03ba_e=2\u2212\u03b1, 1\u1d40\u03ba=0, \u03b1+\u03ba\u2208[0,1] off e), or Gsum\u2265\u22121/p / |\u03bc\u2084|\u22641/(2p).",
+    "mu_star_p5": "-14/65",
+    "alpha_p5": "3/65"
+  },
+  "F3": "Do not flip residual/E1/L without general ker-box obstruction or Gsum/|\u03bc4| bound."
+}

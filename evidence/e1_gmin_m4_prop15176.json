@@ -1,0 +1,131 @@
+{
+  "title": "Prop 15.176 correct e\u2209G Farkas threshold \u03bc_*; \u22121/p suffices, \u22122/p does not; LB still OPEN",
+  "proved": {
+    "e_not_in_G_setup": true,
+    "mu_star_formula": true,
+    "minus_1_over_p_suffices_for_residual_i": true,
+    "minus_2_over_p_does_not_suffice": true,
+    "candidate_beats_star_sample": true,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "by_p": {
+      "5": {
+        "p": 5,
+        "mu_star": "-14/65",
+        "mu_minus_1_over_p": "-1/5",
+        "mu_minus_2_over_p": "-2/5",
+        "mu_candidate_minus_12_pn": "-6/65",
+        "minus_1_over_p_beats_star": true,
+        "minus_2_over_p_beats_star": false,
+        "candidate_beats_star": true,
+        "farkas_if_minus_1_over_p": true,
+        "farkas_if_minus_2_over_p": false,
+        "farkas_if_candidate": true,
+        "wrong_172_claims_minus_2_over_p_suffices": false
+      },
+      "7": {
+        "p": 7,
+        "mu_star": "-22/133",
+        "mu_minus_1_over_p": "-1/7",
+        "mu_minus_2_over_p": "-2/7",
+        "mu_candidate_minus_12_pn": "-6/175",
+        "minus_1_over_p_beats_star": true,
+        "minus_2_over_p_beats_star": false,
+        "candidate_beats_star": true,
+        "farkas_if_minus_1_over_p": true,
+        "farkas_if_minus_2_over_p": false,
+        "farkas_if_candidate": true,
+        "wrong_172_claims_minus_2_over_p_suffices": false
+      },
+      "11": {
+        "p": 11,
+        "mu_star": "-38/341",
+        "mu_minus_1_over_p": "-1/11",
+        "mu_minus_2_over_p": "-2/11",
+        "mu_candidate_minus_12_pn": "-6/671",
+        "minus_1_over_p_beats_star": true,
+        "minus_2_over_p_beats_star": false,
+        "candidate_beats_star": true,
+        "farkas_if_minus_1_over_p": true,
+        "farkas_if_minus_2_over_p": false,
+        "farkas_if_candidate": true,
+        "wrong_172_claims_minus_2_over_p_suffices": false
+      },
+      "13": {
+        "p": 13,
+        "mu_star": "-46/481",
+        "mu_minus_1_over_p": "-1/13",
+        "mu_minus_2_over_p": "-2/13",
+        "mu_candidate_minus_12_pn": "-6/1105",
+        "minus_1_over_p_beats_star": true,
+        "minus_2_over_p_beats_star": false,
+        "candidate_beats_star": true,
+        "farkas_if_minus_1_over_p": true,
+        "farkas_if_minus_2_over_p": false,
+        "farkas_if_candidate": true,
+        "wrong_172_claims_minus_2_over_p_suffices": false
+      },
+      "17": {
+        "p": 17,
+        "mu_star": "-62/833",
+        "mu_minus_1_over_p": "-1/17",
+        "mu_minus_2_over_p": "-2/17",
+        "mu_candidate_minus_12_pn": "-6/2465",
+        "minus_1_over_p_beats_star": true,
+        "minus_2_over_p_beats_star": false,
+        "candidate_beats_star": true,
+        "farkas_if_minus_1_over_p": true,
+        "farkas_if_minus_2_over_p": false,
+        "farkas_if_candidate": true,
+        "wrong_172_claims_minus_2_over_p_suffices": false
+      },
+      "19": {
+        "p": 19,
+        "mu_star": "-14/209",
+        "mu_minus_1_over_p": "-1/19",
+        "mu_minus_2_over_p": "-2/19",
+        "mu_candidate_minus_12_pn": "-6/3439",
+        "minus_1_over_p_beats_star": true,
+        "minus_2_over_p_beats_star": false,
+        "candidate_beats_star": true,
+        "farkas_if_minus_1_over_p": true,
+        "farkas_if_minus_2_over_p": false,
+        "farkas_if_candidate": true,
+        "wrong_172_claims_minus_2_over_p_suffices": false
+      },
+      "23": {
+        "p": 23,
+        "mu_star": "-86/1541",
+        "mu_minus_1_over_p": "-1/23",
+        "mu_minus_2_over_p": "-2/23",
+        "mu_candidate_minus_12_pn": "-6/6095",
+        "minus_1_over_p_beats_star": true,
+        "minus_2_over_p_beats_star": false,
+        "candidate_beats_star": true,
+        "farkas_if_minus_1_over_p": true,
+        "farkas_if_minus_2_over_p": false,
+        "farkas_if_candidate": true,
+        "wrong_172_claims_minus_2_over_p_suffices": false
+      }
+    },
+    "n_primes_checked_sufficiency": 20
+  },
+  "hinge": {
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "correct_mu_star": "(6/p-4)/k = (6-4p)/(p(3p-2))",
+    "sufficient_targets": [
+      "disj Gsum \u2265 -1/p (Fraction-sufficient for residual i Farkas)",
+      "disj Gsum \u2265 -12/(p n) (candidate; algebra OK; unproved general)",
+      "any \u03bc > \u03bc_*(p)"
+    ],
+    "insufficient": "Gsum \u2265 -2/p (H\u2265-1/p) \u2014 does not beat \u03bc_*",
+    "bound_proved_general": false,
+    "open": "Prove disj Gsum \u2265 -1/p (or any \u03bc>\u03bc_*) Max+-free for all primes p\u22655, then set gsum_disj_lb_proved_general True."
+  },
+  "F3": "Do not flip residual/E1/L without proved disj Gsum LB beating \u03bc_*",
+  "retraction": "Prop 15.172 claim '\u03bc>-2/p obstructs dual equality' is invalid for e\u2209G; superseded by \u03bc_*(p) here."
+}

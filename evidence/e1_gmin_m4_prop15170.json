@@ -9,7 +9,7 @@
     "dual_equality_impossible": false,
     "dual_equality_farkas_algebra_if_lb": true,
     "gsum_disj_lb_proved_general": false,
-    "deep_k_ge_3p_ND_closed": false,
+    "deep_k_ge_3p_ND_closed": true,
     "bi_tight_empty_for_all_p_ge_5": true,
     "E1_closed_general": false,
     "m_n_ge_Phi_minus_2": false,
@@ -27,9 +27,11 @@
         "proved_disj_lb_general": false,
         "certified_disj_at_p5": true,
         "scheme_justification_valid": false,
-        "farkas_threshold_mu": "-2/p",
+        "farkas_threshold_mu_star": "(6/p-4)/k  (Prop 15.176; e\u2209G)",
+        "sufficient_lb": "Gsum \u2265 -1/p (beats \u03bc_* for p\u22655)",
+        "superseded_wrong_172_threshold": "-2/p (does not beat \u03bc_*)",
         "candidate_minus_12_over_pn_false_at_p3": true,
-        "note": "Gap: dual-equality Farkas needs disj Gsum \u03bc > \u22122/p (15.172), or the stronger candidate \u221212/(pn) for all p\u22655. Only adjacent zero is proved; pointwise disj LB not proved in general (15.158 kills scheme-min; candidate fails at p=3). See prop15172."
+        "note": "Gap: dual-equality Farkas (e\u2209G) needs disj Gsum \u03bc > \u03bc_*=(6/p-4)/k (15.176). Sufficient: Gsum\u2265\u22121/p. Candidate \u221212/(pn) also beats \u03bc_* but unproved general (15.158; false at p=3). Old 15.172 \u03bc>\u22122/p is invalid for e\u2209G."
       },
       "gsum_farkas_poly_positive": true,
       "es2_lt_k_all": true,
@@ -131,8 +133,7 @@
     "rule": "L closed iff bi-tight \u2227 E(1); denseness Prop 6.2"
   },
   "open_residual": [
-    "Type I freeness-fail k=3p\u22122: s_\u2212\u2264\u22121 / bad case (15.170 Gsum Farkas)",
-    "deep freeness-fail k\u22653p (s\u208a=2): multi-s auto-freeness shipped; ND for freeness-fail large-k open"
+    "Type I freeness-fail k=3p\u22122: s_\u2212\u2264\u22121 / bad case (15.170 Gsum Farkas)"
   ],
   "F3": "E1/L only from real bi-tight \u2227 15.170 \u2227 15.171",
   "F13": "15.170 residual (i); 15.171 residual (ii); 16N still open"

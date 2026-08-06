@@ -7,7 +7,7 @@
 ## Verdict
 
 **\(L=\lim\alpha_n=\tfrac12\) is NOT proved.**  
-Candidate path exists; one **fatal hinge** blocks residual (i)/(ii) and therefore E(1).
+Candidate path exists; residual (ii) is closed; one **fatal hinge** (residual (i) Gsum LB) still blocks E(1).
 
 | Piece | Status |
 |-------|--------|
@@ -15,7 +15,8 @@ Candidate path exists; one **fatal hinge** blocks residual (i)/(ii) and therefor
 | \(\rho=1\) on Paley \(n=p^2+1\) | **Proved** |
 | Denseness (ratio-dense family ⇒ global liminf/limsup) | **Proved** (Prop 6.1) |
 | Bi-tight empty via majorization (15.167) | **Candidate** (algebra OK if mult≥d−1 and λ_min≥6) |
-| Type I / deep freeness-fail ND (15.170–171) | **OPEN** — needs proved Gsum disj LB |
+| Deep freeness-fail ND residual (ii) (15.171+179) | **CLOSED** — freeze-to-tight, no Gsum |
+| Type I freeness-fail residual (i) (15.170) | **OPEN** — needs proved Gsum disj LB |
 | **E(1) / L = ½** | **OPEN** |
 
 ## Setup
@@ -42,15 +43,14 @@ m_n=\min_{a_{ij}=\pm1}\max_{x=\pm1}\Bigl|\sum_{i<j}a_{ij}x_ix_j\Bigr|,\qquad
 
 ## Fatal gap (named)
 
-**Pointwise disj Gsum lower bound strong enough for dual-equality Farkas is not proved for general \(p\ge5\).**
+**Pointwise disj Gsum lower bound for residual-(i) dual-equality Farkas is not proved for general \(p\ge5\).**
 
-- **Correct Farkas threshold (Prop 15.172):** dual equality is impossible if every off-diagonal Gsum entry satisfies \(\mu>-2/p\).  
-  (Borderline \(\mu=-2/p\) saturates and needs a separate non-saturation argument.)
-- Adjacent edges: Gsum \(=0\) **proved**. Avg disj entry \(=2/(n-3)\) **proved**. Triangular-scheme matrix \(G_0\) with those constraints is PSD **proved**.
-- Candidate scheme LB \(\mathrm{Gsum}_{ab}\ge-12/(pn)\): **false at \(p=3\)** (census min \(=-2/p<-12/(pn)\)); at \(p=5\) it holds and is tight. **Prop 15.158:** Max+ is not an IP-scheme, so scheme-min is invalid as a general proof.
-- Shipped: `gsum_disj_lb_proved_general() → False`  
-  (`src/e1_gmin_m4_prop15170.py`, structure in `prop15172.py`). Consequently  
-  residual (i)/(ii), `e1_closed_general()`, `L_status` all **OPEN**.
+- **Residual (ii) CLOSED (15.179):** freeness-fail affine \(f_e=3-S\) on \(S\in\{2,4\}\) freezes \(S_H\equiv3\Rightarrow k=3p-1\); impossible for \(k\ge3p\); fail-eq empty under bi-tight. No Gsum LB.
+- **Residual (i) OPEN:** freeness edge \(e\notin G\), \(|G|=k=3p-2\). Dual equality forces
+  \((\mathrm{Gsum}\,x)_e=6/p-4\). Threshold \(\mu_*=(6/p-4)/k\); sufficient \(\mathrm{Gsum}\ge-1/p\) (15.176).
+- Adjacent Gsum \(=0\), avg disj \(=2/(n-3)\), \(G_0\) PSD **proved**. Candidate \(-12/(pn)\) not general (15.158).
+- Shipped: `gsum_disj_lb_proved_general()→False`; residual (ii) closed; E1/L **OPEN**.
+- Support (15.186–188): \(|\varphi|\le2(p-2)\); \(\mu_{\mathrm{part}}\) majorant \(\le1/(2p)\); target \(|\mu|\le2/n\) sufficient for \(p\ge5\); p=5,7 Max± census beat \(1/(2p)\). **Not** a general Max+-free proof — do not treat as closed.
 
 ## Modules
 
@@ -58,16 +58,20 @@ m_n=\min_{a_{ij}=\pm1}\max_{x=\pm1}\Bigl|\sum_{i<j}a_{ij}x_ix_j\Bigr|,\qquad
 |------|------|
 | Bi-tight majorization | `src/e1_gmin_m4_prop15167.py` |
 | Gsum hinge + residual (i) | `src/e1_gmin_m4_prop15170.py` |
-| Residual (ii) | `src/e1_gmin_m4_prop15171.py` |
+| Residual (ii) + freeze | `src/e1_gmin_m4_prop15171.py`, `prop15179.py` |
+| Residual (i) support constraints | `src/e1_gmin_m4_prop15180.py` |
 | Gsum structure / Farkas threshold | `src/e1_gmin_m4_prop15172.py` |
 | Gsum vector structure (ξ, stars, K) | `src/e1_gmin_m4_prop15173.py` |
+| Hinge dictionary U/cos | `src/e1_gmin_m4_prop15174.py` |
+| Gμ reformulation | `src/e1_gmin_m4_prop15175.py` |
+| **Correct e∉G Farkas threshold μ_*** | `src/e1_gmin_m4_prop15176.py` |
 | Max+ not scheme | `src/e1_gmin_m4_prop15158.py` |
 | Main wire | `src/e1_main_chain_status.py` |
 
 ## What would close L
 
 A Max+-free proof that for all primes \(p\ge5\) and disjoint edges,  
-\(\mathrm{Gsum}_{ab}>-2/p\) (or \(\ge-12/(pn)\), or any \(\mu>-2/p\)),  
+\(\mathrm{Gsum}_{ab}\ge-1/p\) (or any \(\mu>\mu_*\), or \(\ge-12/(pn)\)),  
 **or** a different proof of residual (i)/(ii) that avoids dual-equality Farkas.
 
 Until then: do **not** claim lim α_n = ½.

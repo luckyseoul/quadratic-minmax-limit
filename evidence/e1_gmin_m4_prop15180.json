@@ -1,0 +1,456 @@
+{
+  "title": "Prop 15.180 residual (i) dual-eq support constraints; Gsum LB / |\u03bc\u2084| bound still OPEN",
+  "proved": {
+    "Q_pairs_formula_negative": true,
+    "nd_le_1_impossible": true,
+    "nd2_wedge_p_ge_7": true,
+    "minus_1_over_p_suffices": true,
+    "open_core_nd_ge_2_nonempty": true,
+    "mu4_or_gsum_bound_general": false,
+    "gsum_disj_lb_proved_general": false,
+    "residual_i_closed": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "Q_pairs": {
+      "proved": true,
+      "formula": "30 - 6p - 24/p",
+      "theorem": "Under dual equality ES2+=(ES2\u2212)= (13p\u221212)/p, sum of Gsum over pairs in G equals 2 ES2\u22122k=30\u22126p\u221224/p<0 for p\u22655. Hence G contains at least one vertex-disjoint edge pair.",
+      "by_p": {
+        "5": {
+          "Q_pairs": "-24/5",
+          "closed_form": "-24/5",
+          "match": true,
+          "negative": true
+        },
+        "7": {
+          "Q_pairs": "-108/7",
+          "closed_form": "-108/7",
+          "match": true,
+          "negative": true
+        },
+        "11": {
+          "Q_pairs": "-420/11",
+          "closed_form": "-420/11",
+          "match": true,
+          "negative": true
+        },
+        "13": {
+          "Q_pairs": "-648/13",
+          "closed_form": "-648/13",
+          "match": true,
+          "negative": true
+        },
+        "17": {
+          "Q_pairs": "-1248/17",
+          "closed_form": "-1248/17",
+          "match": true,
+          "negative": true
+        },
+        "19": {
+          "Q_pairs": "-1620/19",
+          "closed_form": "-1620/19",
+          "match": true,
+          "negative": true
+        }
+      },
+      "n_primes": 20
+    },
+    "nd_le_1": {
+      "proved": true,
+      "theorem": "For p\u22655, need=6/p\u22124 < \u22122. PSD \u21d2 Gsum\u2265\u22122 so box\u2265\u22122n_d. n_d=0 \u21d2 box=0>need; n_d=1 \u21d2 box\u2265\u22122>need. Dual equality impossible.",
+      "by_p": {
+        "5": {
+          "need": "-14/5",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "7": {
+          "need": "-22/7",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "11": {
+          "need": "-38/11",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "13": {
+          "need": "-46/13",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "17": {
+          "need": "-62/17",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "19": {
+          "need": "-70/19",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "23": {
+          "need": "-86/23",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "29": {
+          "need": "-110/29",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "31": {
+          "need": "-118/31",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "37": {
+          "need": "-142/37",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "41": {
+          "need": "-158/41",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "43": {
+          "need": "-166/43",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "47": {
+          "need": "-182/47",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "53": {
+          "need": "-206/53",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "59": {
+          "need": "-230/59",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "61": {
+          "need": "-238/61",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "67": {
+          "need": "-262/67",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "71": {
+          "need": "-278/71",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "73": {
+          "need": "-286/73",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "79": {
+          "need": "-310/79",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        }
+      }
+    },
+    "nd2_wedge": {
+      "proved_for_primes_ge_7": true,
+      "threshold_p": 5.121320343559644,
+      "lb": -2.8284271247461903,
+      "p5_need_gt_lb": true,
+      "theorem": "n_d=2 wedge partners: [[2,g1,g2],[g1,2,0],[g2,0,2]]\u227d0 \u21d2 g1\u00b2+g2\u00b2\u22644 \u21d2 g1+g2\u2265\u22122\u221a2. Beats need=6/p\u22124 iff p>3/(2\u2212\u221a2)\u22485.12 (all primes p\u22657). p=5 open for this configuration.",
+      "by_p": {
+        "5": {
+          "need": -2.8,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": false,
+          "expect_kill": false
+        },
+        "7": {
+          "need": -3.142857142857143,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "11": {
+          "need": -3.4545454545454546,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "13": {
+          "need": -3.5384615384615383,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "17": {
+          "need": -3.6470588235294117,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "19": {
+          "need": -3.6842105263157894,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "23": {
+          "need": -3.739130434782609,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "29": {
+          "need": -3.793103448275862,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "31": {
+          "need": -3.806451612903226,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "37": {
+          "need": -3.8378378378378377,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "41": {
+          "need": -3.8536585365853657,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "43": {
+          "need": -3.86046511627907,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "47": {
+          "need": -3.872340425531915,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "53": {
+          "need": -3.8867924528301887,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "59": {
+          "need": -3.8983050847457625,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "61": {
+          "need": -3.901639344262295,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "67": {
+          "need": -3.91044776119403,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "71": {
+          "need": -3.915492957746479,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "73": {
+          "need": -3.9178082191780823,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "79": {
+          "need": -3.9240506329113924,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        }
+      }
+    },
+    "open_core": {
+      "proved_open_core_nonempty": true,
+      "note": "PSD kills n_d\u22641; score parity leaves n_d\u22652 viable. This records the open dual-eq support, not a close.",
+      "by_p": {
+        "5": {
+          "n_open": 12,
+          "min_open_nd": 2,
+          "open_core_nonempty": true
+        },
+        "7": {
+          "n_open": 18,
+          "min_open_nd": 2,
+          "open_core_nonempty": true
+        },
+        "11": {
+          "n_open": 30,
+          "min_open_nd": 2,
+          "open_core_nonempty": true
+        },
+        "13": {
+          "n_open": 36,
+          "min_open_nd": 2,
+          "open_core_nonempty": true
+        },
+        "17": {
+          "n_open": 48,
+          "min_open_nd": 2,
+          "open_core_nonempty": true
+        },
+        "19": {
+          "n_open": 54,
+          "min_open_nd": 2,
+          "open_core_nonempty": true
+        },
+        "23": {
+          "n_open": 66,
+          "min_open_nd": 2,
+          "open_core_nonempty": true
+        },
+        "29": {
+          "n_open": 84,
+          "min_open_nd": 2,
+          "open_core_nonempty": true
+        },
+        "31": {
+          "n_open": 90,
+          "min_open_nd": 2,
+          "open_core_nonempty": true
+        },
+        "37": {
+          "n_open": 108,
+          "min_open_nd": 2,
+          "open_core_nonempty": true
+        }
+      }
+    },
+    "farkas_if_minus_1_over_p": {
+      "5": {
+        "p": 5,
+        "k": 13,
+        "need": "-14/5",
+        "mu": "-1/5",
+        "box_k_mu": "-13/5",
+        "need_lt_box": true,
+        "mu_star": "-14/65",
+        "mu_gt_star": true
+      },
+      "7": {
+        "p": 7,
+        "k": 19,
+        "need": "-22/7",
+        "mu": "-1/7",
+        "box_k_mu": "-19/7",
+        "need_lt_box": true,
+        "mu_star": "-22/133",
+        "mu_gt_star": true
+      },
+      "11": {
+        "p": 11,
+        "k": 31,
+        "need": "-38/11",
+        "mu": "-1/11",
+        "box_k_mu": "-31/11",
+        "need_lt_box": true,
+        "mu_star": "-38/341",
+        "mu_gt_star": true
+      },
+      "13": {
+        "p": 13,
+        "k": 37,
+        "need": "-46/13",
+        "mu": "-1/13",
+        "box_k_mu": "-37/13",
+        "need_lt_box": true,
+        "mu_star": "-46/481",
+        "mu_gt_star": true
+      }
+    },
+    "nd2_wedge_lb": -2.8284271247461903
+  },
+  "hinge": {
+    "residual_ii_closed": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "nd_le_1_impossible": true,
+    "nd2_wedge_p_ge_7_impossible": true,
+    "minus_1_over_p_suffices": true,
+    "bound_proved_general": false,
+    "open": "Prove disj Gsum\u2265\u22121/p or |\u03bc\u2084|\u22641/(2p) on |\u03ba|=1 (or dual-eq impossible on all n_d\u22652 supports) for all primes p\u22655 Max+-free.",
+    "mu_star_p5": "-14/65"
+  },
+  "F3": "Do not flip residual (i)/E1/L without general Gsum or \u03bc\u2084 LB",
+  "dead_approaches": [
+    "weak CS Gsum\u22654/p\u00b2\u22122",
+    "foreign-star CS / K4 U-PSD",
+    "absolute T row-sum bootstrap (4p<d1)",
+    "scheme-min \u221212/(pn) (15.158; false at p=3)",
+    "Type I freeze (S_H\u2208{2,4} not constant)",
+    "non-uniform box with only PSD |Gsum|\u22642"
+  ]
+}

@@ -2,7 +2,7 @@
   "title": "Prop 15.171 residual (ii) close: deep freeness-fail k\u22653p ND; E1/L follow bi-tight\u2227E1",
   "L_status": "OPEN",
   "proved": {
-    "deep_s2_freeness_fail_k_ge_3p_ND": false,
+    "deep_s2_freeness_fail_k_ge_3p_ND": true,
     "type_I_k_3p_minus_2_closed": false,
     "bi_tight_empty_for_all_p_ge_5": true,
     "E1_closed_general": false,
@@ -13,185 +13,11 @@
   },
   "algebra": {
     "residual_ii": {
-      "residual_ii_closed": false,
-      "structure_ok_if_gsum_lb": true,
-      "gsum_disj_lb_required": true,
+      "residual_ii_closed": true,
+      "gsum_disj_lb_required": false,
+      "freeze_to_tight_15_179": true,
       "n_checked": 15,
-      "by_p_sample": {
-        "5": {
-          "p": 5,
-          "bitight_empty": true,
-          "auto_freeness_at_3p_minus_2": true,
-          "fail_eq_k_3p_minus_1_empty": true,
-          "gap2_forces_s_minus_le_m2": true,
-          "deep_freeness_weak_ND": true,
-          "dual_twolevel_gsum_farkas": true,
-          "explicit_k_obstructions": [
-            {
-              "p": 5,
-              "k": 16,
-              "need": "-16/5",
-              "box_sum_LB": "-96/65",
-              "need_lt_LB": true,
-              "can_freeness_fail": true,
-              "mass_at_2": "2/5",
-              "obstructs_when_fail_possible": true
-            },
-            {
-              "p": 5,
-              "k": 18,
-              "need": "-28/5",
-              "box_sum_LB": "-108/65",
-              "need_lt_LB": true,
-              "can_freeness_fail": true,
-              "mass_at_2": "1/5",
-              "obstructs_when_fail_possible": true
-            },
-            {
-              "p": 5,
-              "k": 20,
-              "need": "-8",
-              "box_sum_LB": "-24/13",
-              "need_lt_LB": true,
-              "can_freeness_fail": true,
-              "mass_at_2": "0",
-              "obstructs_when_fail_possible": true
-            }
-          ],
-          "ND_for_this_class": true,
-          "theorem": "Deep freeness \u21d2 weak ND; auto k\u22643p\u22122; fail-eq k=3p\u22121 empty; dual two-level freeness-fail k\u22653p Gsum-obstructed for all p\u22655."
-        },
-        "7": {
-          "p": 7,
-          "bitight_empty": true,
-          "auto_freeness_at_3p_minus_2": true,
-          "fail_eq_k_3p_minus_1_empty": true,
-          "gap2_forces_s_minus_le_m2": true,
-          "deep_freeness_weak_ND": true,
-          "dual_twolevel_gsum_farkas": true,
-          "explicit_k_obstructions": [
-            {
-              "p": 7,
-              "k": 22,
-              "need": "-20/7",
-              "box_sum_LB": "-132/175",
-              "need_lt_LB": true,
-              "can_freeness_fail": true,
-              "mass_at_2": "3/7",
-              "obstructs_when_fail_possible": true
-            },
-            {
-              "p": 7,
-              "k": 24,
-              "need": "-32/7",
-              "box_sum_LB": "-144/175",
-              "need_lt_LB": true,
-              "can_freeness_fail": true,
-              "mass_at_2": "2/7",
-              "obstructs_when_fail_possible": true
-            },
-            {
-              "p": 7,
-              "k": 26,
-              "need": "-44/7",
-              "box_sum_LB": "-156/175",
-              "need_lt_LB": true,
-              "can_freeness_fail": true,
-              "mass_at_2": "1/7",
-              "obstructs_when_fail_possible": true
-            }
-          ],
-          "ND_for_this_class": true,
-          "theorem": "Deep freeness \u21d2 weak ND; auto k\u22643p\u22122; fail-eq k=3p\u22121 empty; dual two-level freeness-fail k\u22653p Gsum-obstructed for all p\u22655."
-        },
-        "11": {
-          "p": 11,
-          "bitight_empty": true,
-          "auto_freeness_at_3p_minus_2": true,
-          "fail_eq_k_3p_minus_1_empty": true,
-          "gap2_forces_s_minus_le_m2": true,
-          "deep_freeness_weak_ND": true,
-          "dual_twolevel_gsum_farkas": true,
-          "explicit_k_obstructions": [
-            {
-              "p": 11,
-              "k": 34,
-              "need": "-28/11",
-              "box_sum_LB": "-204/671",
-              "need_lt_LB": true,
-              "can_freeness_fail": true,
-              "mass_at_2": "5/11",
-              "obstructs_when_fail_possible": true
-            },
-            {
-              "p": 11,
-              "k": 36,
-              "need": "-40/11",
-              "box_sum_LB": "-216/671",
-              "need_lt_LB": true,
-              "can_freeness_fail": true,
-              "mass_at_2": "4/11",
-              "obstructs_when_fail_possible": true
-            },
-            {
-              "p": 11,
-              "k": 38,
-              "need": "-52/11",
-              "box_sum_LB": "-228/671",
-              "need_lt_LB": true,
-              "can_freeness_fail": true,
-              "mass_at_2": "3/11",
-              "obstructs_when_fail_possible": true
-            }
-          ],
-          "ND_for_this_class": true,
-          "theorem": "Deep freeness \u21d2 weak ND; auto k\u22643p\u22122; fail-eq k=3p\u22121 empty; dual two-level freeness-fail k\u22653p Gsum-obstructed for all p\u22655."
-        },
-        "13": {
-          "p": 13,
-          "bitight_empty": true,
-          "auto_freeness_at_3p_minus_2": true,
-          "fail_eq_k_3p_minus_1_empty": true,
-          "gap2_forces_s_minus_le_m2": true,
-          "deep_freeness_weak_ND": true,
-          "dual_twolevel_gsum_farkas": true,
-          "explicit_k_obstructions": [
-            {
-              "p": 13,
-              "k": 40,
-              "need": "-32/13",
-              "box_sum_LB": "-48/221",
-              "need_lt_LB": true,
-              "can_freeness_fail": true,
-              "mass_at_2": "6/13",
-              "obstructs_when_fail_possible": true
-            },
-            {
-              "p": 13,
-              "k": 42,
-              "need": "-44/13",
-              "box_sum_LB": "-252/1105",
-              "need_lt_LB": true,
-              "can_freeness_fail": true,
-              "mass_at_2": "5/13",
-              "obstructs_when_fail_possible": true
-            },
-            {
-              "p": 13,
-              "k": 44,
-              "need": "-56/13",
-              "box_sum_LB": "-264/1105",
-              "need_lt_LB": true,
-              "can_freeness_fail": true,
-              "mass_at_2": "4/13",
-              "obstructs_when_fail_possible": true
-            }
-          ],
-          "ND_for_this_class": true,
-          "theorem": "Deep freeness \u21d2 weak ND; auto k\u22643p\u22122; fail-eq k=3p\u22121 empty; dual two-level freeness-fail k\u22653p Gsum-obstructed for all p\u22655."
-        }
-      },
-      "theorem": "Prop 15.171: deep freeness-fail structure + dual two-level Farkas if disj Gsum LB holds; residual_ii_closed=False until gsum_disj_lb_proved_general (15.170 hinge / 15.158)."
+      "theorem": "Prop 15.171 + 15.179: dual two-level freeness-fail affine freezes to S_H\u22613 \u21d2 k=3p\u22121 (impossible for k\u22653p); fail-eq empty under bi-tight; auto-freeness k\u22643p\u22122; residual (ii) CLOSED without disj Gsum LB. Residual (i) still needs Gsum (15.170)."
     }
   },
   "L_wire": {
@@ -202,8 +28,7 @@
     "rule": "L closed iff bi-tight \u2227 E(1); denseness Prop 6.2"
   },
   "open_residual": [
-    "Type I freeness-fail k=3p\u22122 (15.170)",
-    "deep freeness-fail k\u22653p (15.171)"
+    "Type I freeness-fail k=3p\u22122 (15.170)"
   ],
   "F3": "E1/L only from type_I\u2227deep_k\u22653p\u2227bi-tight real predicates",
   "F13": "15.171 closes residual (ii); residual/16N still open optional"

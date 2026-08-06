@@ -1,0 +1,493 @@
+{
+  "title": "Prop 15.178 star identity + dual-eq n_d case kills; pointwise Gsum LB still OPEN",
+  "proved": {
+    "star_identity": true,
+    "nd_le_1_dual_eq_impossible": true,
+    "nd2_wedge_dual_eq_impossible_p_ge_7": true,
+    "minus_1_over_p_suffices": true,
+    "mu4_bound_proved_general": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "star": {
+      "proved": true,
+      "theorem": "\u2211_S \u03bc\u2084\u03ba = n(n\u22121)(n\u22122)/8; each 4-set hits 6 edges \u21d2 star_e = 3(n\u22122)/2 = 3(p\u00b2\u22121)/2.",
+      "by_p": {
+        "3": {
+          "global_sum_mu4_kappa": "90",
+          "star": "12",
+          "star_from_double_count": "12",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "5": {
+          "global_sum_mu4_kappa": "1950",
+          "star": "36",
+          "star_from_double_count": "36",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "7": {
+          "global_sum_mu4_kappa": "14700",
+          "star": "72",
+          "star_from_double_count": "72",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "11": {
+          "global_sum_mu4_kappa": "221430",
+          "star": "180",
+          "star_from_double_count": "180",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "13": {
+          "global_sum_mu4_kappa": "603330",
+          "star": "252",
+          "star_from_double_count": "252",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "17": {
+          "global_sum_mu4_kappa": "3017160",
+          "star": "432",
+          "star_from_double_count": "432",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "19": {
+          "global_sum_mu4_kappa": "5880690",
+          "star": "540",
+          "star_from_double_count": "540",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "23": {
+          "global_sum_mu4_kappa": "18504420",
+          "star": "792",
+          "star_from_double_count": "792",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "29": {
+          "global_sum_mu4_kappa": "74352810",
+          "star": "1260",
+          "star_from_double_count": "1260",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "31": {
+          "global_sum_mu4_kappa": "110937840",
+          "star": "1440",
+          "star_from_double_count": "1440",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "37": {
+          "global_sum_mu4_kappa": "320715630",
+          "star": "2052",
+          "star_from_double_count": "2052",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "41": {
+          "global_sum_mu4_kappa": "593762820",
+          "star": "2520",
+          "star_from_double_count": "2520",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "43": {
+          "global_sum_mu4_kappa": "790170150",
+          "star": "2772",
+          "star_from_double_count": "2772",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "47": {
+          "global_sum_mu4_kappa": "1347401640",
+          "star": "3312",
+          "star_from_double_count": "3312",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "53": {
+          "global_sum_mu4_kappa": "2770544790",
+          "star": "4212",
+          "star_from_double_count": "4212",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "59": {
+          "global_sum_mu4_kappa": "5272566270",
+          "star": "5220",
+          "star_from_double_count": "5220",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "61": {
+          "global_sum_mu4_kappa": "6440046330",
+          "star": "5580",
+          "star_from_double_count": "5580",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "67": {
+          "global_sum_mu4_kappa": "11307297210",
+          "star": "6732",
+          "star_from_double_count": "6732",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "71": {
+          "global_sum_mu4_kappa": "16012534860",
+          "star": "7560",
+          "star_from_double_count": "7560",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "73": {
+          "global_sum_mu4_kappa": "18916777620",
+          "star": "7992",
+          "star_from_double_count": "7992",
+          "equals_3_halves_p2_minus_1": true
+        },
+        "79": {
+          "global_sum_mu4_kappa": "30385931160",
+          "star": "9360",
+          "star_from_double_count": "9360",
+          "equals_3_halves_p2_minus_1": true
+        }
+      }
+    },
+    "nd_le_1": {
+      "proved": true,
+      "theorem": "For p\u22655, need=6/p\u22124 < \u22122. PSD \u21d2 Gsum\u2265\u22122 so box\u2265\u22122n_d. n_d=0 \u21d2 box=0>need; n_d=1 \u21d2 box\u2265\u22122>need. Dual equality impossible.",
+      "by_p": {
+        "5": {
+          "need": "-14/5",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "7": {
+          "need": "-22/7",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "11": {
+          "need": "-38/11",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "13": {
+          "need": "-46/13",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "17": {
+          "need": "-62/17",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "19": {
+          "need": "-70/19",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "23": {
+          "need": "-86/23",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "29": {
+          "need": "-110/29",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "31": {
+          "need": "-118/31",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "37": {
+          "need": "-142/37",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "41": {
+          "need": "-158/41",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "43": {
+          "need": "-166/43",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "47": {
+          "need": "-182/47",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "53": {
+          "need": "-206/53",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "59": {
+          "need": "-230/59",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "61": {
+          "need": "-238/61",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "67": {
+          "need": "-262/67",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "71": {
+          "need": "-278/71",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "73": {
+          "need": "-286/73",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "79": {
+          "need": "-310/79",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        }
+      }
+    },
+    "nd2_wedge": {
+      "proved_for_primes_ge_7": true,
+      "threshold_p": 5.121320343559644,
+      "lb": -2.8284271247461903,
+      "p5_need_gt_lb": true,
+      "theorem": "n_d=2 wedge partners: [[2,g1,g2],[g1,2,0],[g2,0,2]]\u227d0 \u21d2 g1\u00b2+g2\u00b2\u22644 \u21d2 g1+g2\u2265\u22122\u221a2. Beats need=6/p\u22124 iff p>3/(2\u2212\u221a2)\u22485.12 (all primes p\u22657). p=5 open for this configuration.",
+      "by_p": {
+        "5": {
+          "need": -2.8,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": false,
+          "expect_kill": false
+        },
+        "7": {
+          "need": -3.142857142857143,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "11": {
+          "need": -3.4545454545454546,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "13": {
+          "need": -3.5384615384615383,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "17": {
+          "need": -3.6470588235294117,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "19": {
+          "need": -3.6842105263157894,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "23": {
+          "need": -3.739130434782609,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "29": {
+          "need": -3.793103448275862,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "31": {
+          "need": -3.806451612903226,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "37": {
+          "need": -3.8378378378378377,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "41": {
+          "need": -3.8536585365853657,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "43": {
+          "need": -3.86046511627907,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "47": {
+          "need": -3.872340425531915,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "53": {
+          "need": -3.8867924528301887,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "59": {
+          "need": -3.8983050847457625,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "61": {
+          "need": -3.901639344262295,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "67": {
+          "need": -3.91044776119403,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "71": {
+          "need": -3.915492957746479,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "73": {
+          "need": -3.9178082191780823,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "79": {
+          "need": -3.9240506329113924,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        }
+      }
+    },
+    "p5_nd2_wedge_still_open": true,
+    "sample_farkas_if_minus_1_over_p": {
+      "5": {
+        "p": 5,
+        "k": 13,
+        "need": "-14/5",
+        "mu": "-1/5",
+        "box_k_mu": "-13/5",
+        "need_lt_box": true,
+        "mu_star": "-14/65",
+        "mu_gt_star": true
+      },
+      "7": {
+        "p": 7,
+        "k": 19,
+        "need": "-22/7",
+        "mu": "-1/7",
+        "box_k_mu": "-19/7",
+        "need_lt_box": true,
+        "mu_star": "-22/133",
+        "mu_gt_star": true
+      },
+      "11": {
+        "p": 11,
+        "k": 31,
+        "need": "-38/11",
+        "mu": "-1/11",
+        "box_k_mu": "-31/11",
+        "need_lt_box": true,
+        "mu_star": "-38/341",
+        "mu_gt_star": true
+      },
+      "13": {
+        "p": 13,
+        "k": 37,
+        "need": "-46/13",
+        "mu": "-1/13",
+        "box_k_mu": "-37/13",
+        "need_lt_box": true,
+        "mu_star": "-46/481",
+        "mu_gt_star": true
+      }
+    }
+  },
+  "certified_census": {
+    "p3": {
+      "p": 3,
+      "star_empirical": 12.0,
+      "star_proved": 12.0,
+      "match": true,
+      "not_general_proof": true
+    },
+    "p5": {
+      "p": 5,
+      "star_empirical": 36.000000000000036,
+      "star_proved": 36.0,
+      "match": true,
+      "not_general_proof": true
+    }
+  },
+  "hinge": {
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "proved_nd_le_1_impossible": true,
+    "proved_nd2_wedge_p_ge_7": true,
+    "proved_star_identity": true,
+    "bound_proved_general": false,
+    "open": "Prove |\u03bc\u2084|\u22641/(2p) on |\u03ba|=1 (or any disj Gsum \u03bc>\u03bc_*) for all primes p\u22655 Max+-free \u2014 covers remaining n_d\u22652 (and p=5 n_d=2). Then flip gsum_disj_lb_proved_general.",
+    "mu_star_p5": "-14/65",
+    "mu4_thr_p5": "1/10"
+  },
+  "F3": "Do not flip residual/E1/L without general |\u03bc4|\u22641/(2p) or Gsum\u2265\u22121/p (or alternate covering all n_d)."
+}

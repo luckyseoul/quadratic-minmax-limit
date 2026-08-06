@@ -1,0 +1,159 @@
+{
+  "title": "Prop 15.191 Cy-expansion on |\u03ba|=1; 2/n target; residual (i) OPEN",
+  "proved": {
+    "derangement_perm_kappa1": true,
+    "star_sum_kappa1": true,
+    "size22_minus_3phi": true,
+    "size31_vanishes_kappa1": true,
+    "size1_plus_size2_minus_2phi": true,
+    "f4_envelope_le_two_n_le_half_over_p": true,
+    "mu_le_two_n_general": false,
+    "mu_le_f4_general": false,
+    "gsum_disj_lb_proved_general": false,
+    "residual_i_closed": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "derangement_perm": {
+      "proved": true,
+      "theorem": "On every zero-diag symmetric \u00b11 K4 with |\u03ba|=1, the derangement permanent of C[S,S] equals 1. (|\u03ba|=3 \u21d2 permanent 9.) Exhaustion of 64 labelings.",
+      "multiplicities": {
+        "kappa=-3,derang=9": 8,
+        "kappa=-1,derang=1": 24,
+        "kappa=1,derang=1": 24,
+        "kappa=3,derang=9": 8
+      }
+    },
+    "star_sum": {
+      "proved": true,
+      "theorem": "On every zero-diag symmetric \u00b11 K4 with |\u03ba|=1, \u2211_{s\u2208S} \u220f_{i\u2260s} C_{is} = 0. Exhaustion of 64 labelings.",
+      "multiplicities": {
+        "kappa=-3,star=-4": 4,
+        "kappa=-3,star=4": 4,
+        "kappa=-1,star=0": 24,
+        "kappa=1,star=0": 24,
+        "kappa=3,star=-4": 4,
+        "kappa=3,star=4": 4
+      }
+    },
+    "size22": {
+      "proved": true,
+      "theorem": "Any symmetric conference C\u00b2=(n\u22121)I: the (2,2)-image contribution to E[\u220f_{i\u2208S}(Cy)_i] equals \u22123 \u03c6(S) (six ordered pair-partitions each give \u2212\u03c6, each map counted twice; moment 1). No Max+ used."
+    },
+    "size31": {
+      "proved": true,
+      "theorem": "On |\u03ba|=1, (3,1)-image contribution with \u03c0_\u00b1=\u00b1C/p reduces by C\u00b2 to a multiple of the star-sum, hence vanishes by B. Uses Paley \u03c0 (15.189) and star-sum (B).",
+      "depends_on": [
+        "star_sum_kappa1",
+        "pairwise_pi"
+      ]
+    },
+    "size1_plus_size2": {
+      "proved": true,
+      "theorem": "On |\u03ba|=1 (Paley): size1+size2 contribution to E[\u220f(Cy)_i] equals \u22122 \u03c6(S).  (size1=\u03c6; size2=\u22123\u03c6 from (C)+(D).)",
+      "depends_on": [
+        "size22",
+        "size31",
+        "size1"
+      ]
+    },
+    "f4_envelope": {
+      "proved": true,
+      "theorem": "On |\u03ba|=1 with |\u03c6|\u22642(p\u22122): |4\u03ba\u2212\u03c6|/(pn) \u2264 2/n \u2264 1/(2p) for all primes p\u22655.  Hence |\u03bc|\u2264|f4| \u21d2 residual-(i) Farkas via 15.176.",
+      "by_p_sample": {
+        "5": {
+          "f4_maj": "1/13",
+          "two_over_n": "1/13",
+          "one_over_2p": "1/10",
+          "f4_maj_eq_two_n": true,
+          "two_n_le_thr": true
+        },
+        "7": {
+          "f4_maj": "1/25",
+          "two_over_n": "1/25",
+          "one_over_2p": "1/14",
+          "f4_maj_eq_two_n": true,
+          "two_n_le_thr": true
+        },
+        "11": {
+          "f4_maj": "1/61",
+          "two_over_n": "1/61",
+          "one_over_2p": "1/22",
+          "f4_maj_eq_two_n": true,
+          "two_n_le_thr": true
+        },
+        "13": {
+          "f4_maj": "1/85",
+          "two_over_n": "1/85",
+          "one_over_2p": "1/26",
+          "f4_maj_eq_two_n": true,
+          "two_n_le_thr": true
+        }
+      },
+      "two_over_n_le_half_over_p": true,
+      "depends_on": [
+        "phi_bound_15_186"
+      ]
+    },
+    "implication": {
+      "proved_implication": true,
+      "bound_proved_general": false,
+      "theorem": "IF |\u03bc\u2084|\u22642/n on every |\u03ba|=1 four-set for all primes p\u22655, THEN |\u03bc\u2084|\u22641/(2p) \u21d2 Gsum\u2265\u22121/p \u21d2 residual-(i) dual-eq Farkas \u21d2 gsum_disj_lb_proved_general may flip. (|\u03bc|\u2264|f4| is sufficient when it holds but fails at p=7.)"
+    }
+  },
+  "certified": {
+    "mu_vs_f4_and_two_n": {
+      "3": {
+        "p": 3,
+        "n_kappa1": 180,
+        "max_abs_mu": 0.3333333333333333,
+        "two_over_n": 0.2,
+        "one_over_2p": 0.16666666666666666,
+        "max_abs_mu_over_f4": 1.6666666666666665,
+        "violations_mu_gt_f4": 180,
+        "mu_le_f4": false,
+        "mu_le_two_n": false,
+        "mu_le_thr": false,
+        "proved_general": false
+      },
+      "5": {
+        "p": 5,
+        "n_kappa1": 11700,
+        "max_abs_mu": 0.046153846153846156,
+        "two_over_n": 0.07692307692307693,
+        "one_over_2p": 0.1,
+        "max_abs_mu_over_f4": 1.0,
+        "violations_mu_gt_f4": 0,
+        "mu_le_f4": true,
+        "mu_le_two_n": true,
+        "mu_le_thr": true,
+        "proved_general": false
+      },
+      "7": {
+        "p": 7,
+        "n_kappa1": 176400,
+        "max_abs_mu": 0.03807195249738037,
+        "two_over_n": 0.04,
+        "one_over_2p": 0.07142857142857142,
+        "max_abs_mu_over_f4": 2.750611246943765,
+        "violations_mu_gt_f4": 117600,
+        "mu_le_f4": false,
+        "mu_le_two_n": true,
+        "mu_le_thr": true,
+        "proved_general": false
+      }
+    }
+  },
+  "hinge": {
+    "residual_ii_closed": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "f4_envelope_le_two_n_proved": true,
+    "mu_le_two_n_proved_general": false,
+    "mu_le_f4_fails_at_p7": true,
+    "open": "Prove |\u03bc|\u22642/n (or \u22641/(2p)) on |\u03ba|=1 for all p\u22655 Max+-free; or full dual-eq ker-box empty for all p\u22655. Do not use |\u03bc|\u2264|f4| (false at p=7)."
+  },
+  "F3": "Viable target |\u03bc|\u22642/n (\u22641/(2p) for p\u22655). |\u03bc|\u2264|f4| fails at p=7. Soft-close forbidden; census is not a general proof."
+}

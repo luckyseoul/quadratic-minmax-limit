@@ -1,0 +1,140 @@
+{
+  "title": "Prop 15.190 scheme-ker \u2286 Gsum-ker; dual-eq ker-box analysis; residual (i) OPEN for general p",
+  "proved": {
+    "scheme_ker_in_gsum_ker": true,
+    "scheme_ker_dual_eq_blocked": true,
+    "pairwise_pi": true,
+    "full_ker_box_empty_general": false,
+    "gsum_disj_lb_proved_general": false,
+    "residual_i_closed": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "scheme_ker": {
+      "proved": true,
+      "theorem": "\u03ba_{ij}=f_i+f_j with \u2211f=0 lies in ker(F+)\u2229ker(F\u2212)\u2229ker(Gsum) for any conference boolean evecs (algebra of Cy=\u00b1py)."
+    },
+    "scheme_ker_bound": {
+      "proved": true,
+      "theorem": "Scheme-ker max \u03ba_e = \u03b1(n\u22122)/2 = 3(n\u22122)/(pn) < 2\u2212\u03b1 for all primes p\u22653 (\u21d4 3<2p).",
+      "by_p": {
+        "3": {
+          "scheme_max_kappa_e": "4/5",
+          "need_2_minus_alpha": "9/5",
+          "blocked": true
+        },
+        "5": {
+          "scheme_max_kappa_e": "36/65",
+          "need_2_minus_alpha": "127/65",
+          "blocked": true
+        },
+        "7": {
+          "scheme_max_kappa_e": "72/175",
+          "need_2_minus_alpha": "347/175",
+          "blocked": true
+        },
+        "11": {
+          "scheme_max_kappa_e": "180/671",
+          "need_2_minus_alpha": "1339/671",
+          "blocked": true
+        },
+        "13": {
+          "scheme_max_kappa_e": "252/1105",
+          "need_2_minus_alpha": "2207/1105",
+          "blocked": true
+        },
+        "17": {
+          "scheme_max_kappa_e": "432/2465",
+          "need_2_minus_alpha": "4927/2465",
+          "blocked": true
+        },
+        "19": {
+          "scheme_max_kappa_e": "540/3439",
+          "need_2_minus_alpha": "6875/3439",
+          "blocked": true
+        },
+        "23": {
+          "scheme_max_kappa_e": "792/6095",
+          "need_2_minus_alpha": "12187/6095",
+          "blocked": true
+        },
+        "29": {
+          "scheme_max_kappa_e": "1260/12209",
+          "need_2_minus_alpha": "24415/12209",
+          "blocked": true
+        },
+        "31": {
+          "scheme_max_kappa_e": "1440/14911",
+          "need_2_minus_alpha": "29819/14911",
+          "blocked": true
+        }
+      }
+    },
+    "pairwise_pi": {
+      "proved": true,
+      "theorem": "Paley Max+: E[y_i y_j]=C_ij/p (i\u2260j), =1 (i=j). Max\u2212: E[y_i y_j]=\u2212C_ij/p (i\u2260j). Proof: Aut-orbits on pairs (3 types) + row equations force a=1/p, b\u2212c=2/p; write \u03a0=I+C/p+dF; C\u03a0\u2212p\u03a0=d(CF\u2212pF); CF\u2260pF \u21d2 d=0.",
+      "depends_on": [
+        "sum_identity",
+        "paley_aut_pair_orbits",
+        "C_squared"
+      ]
+    }
+  },
+  "certified": {
+    "three_point_vanish": {
+      "3": {
+        "p": 3,
+        "max_abs_3pt": 0.0,
+        "vanishes": true,
+        "proved_general": false
+      },
+      "5": {
+        "p": 5,
+        "max_abs_3pt": 0.0,
+        "vanishes": true,
+        "proved_general": false
+      }
+    },
+    "kerbox": {
+      "3": {
+        "p": 3,
+        "alpha": 0.2,
+        "need_kappa_e": 1.8,
+        "max_kappa_e": 2.8000000000000025,
+        "scheme_max": 0.8,
+        "dual_eq_feasible": true,
+        "blocked": false
+      },
+      "5": {
+        "p": 5,
+        "alpha": 0.046153846153846156,
+        "need_kappa_e": 1.9538461538461538,
+        "max_kappa_e": 0.8109890109889728,
+        "scheme_max": 0.5538461538461539,
+        "dual_eq_feasible": false,
+        "blocked": true
+      },
+      "7": {
+        "p": 7,
+        "alpha": 0.017142857142857144,
+        "need_kappa_e": 1.9828571428571429,
+        "max_kappa_e": 0.5934766118836636,
+        "scheme_max": 0.4114285714285714,
+        "dual_eq_feasible": false,
+        "blocked": true
+      }
+    }
+  },
+  "hinge": {
+    "residual_ii_closed": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "scheme_ker_in_gsum_ker": true,
+    "scheme_ker_blocks_dual_eq": true,
+    "full_ker_blocks_dual_eq_general": false,
+    "open": "Prove full dual-eq ker-box empty for all p\u22655 (max \u03ba_e<2\u2212\u03b1), or |\u03bc|\u22641/(2p) on |\u03ba|=1."
+  },
+  "F3": "Scheme-ker always blocks dual-eq need, but extra ker can restore feasibility (p=3). Need Max+-free proof that extra ker cannot reach \u03ba_e=2\u2212\u03b1 under box for all p\u22655. Soft-close forbidden."
+}

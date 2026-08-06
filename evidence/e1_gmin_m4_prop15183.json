@@ -1,0 +1,155 @@
+{
+  "title": "Prop 15.183 Max+\u22a5Max\u2212 + Gsum cross term; dual-eq ker form sharpened; residual (i) OPEN",
+  "proved": {
+    "maxplus_orth_maxminus": true,
+    "cross_gram": true,
+    "ones_perp_ker": true,
+    "wedge_Gplus_sq": true,
+    "matching_nd2_psd_analytic": true,
+    "binary_dual_eq_form": true,
+    "minus_1_over_p_suffices": true,
+    "mu4_or_gsum_or_kerbox_general": false,
+    "gsum_disj_lb_proved_general": false,
+    "residual_i_closed": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "orth": {
+      "proved": true,
+      "theorem": "Symmetric conference C, Cy=py, Cz=\u2212pz, y_i,z_i=\u00b11 \u21d2 y\u00b7z=0. Proof: y\u00b7Cz=\u2212p y\u00b7z=(Cy)\u00b7z=p y\u00b7z \u21d2 2p y\u00b7z=0."
+    },
+    "cross": {
+      "proved": true,
+      "formula": "n/(2p^2)",
+      "theorem": "f(y)\u00b7f(z)=\u2212n/2 on Max+\u00d7Max\u2212 by (A)+(B); (G+G\u2212)_ee=(\u2212n/2)(1/p)(\u22121/p)=n/(2p\u00b2).",
+      "by_p": {
+        "3": {
+          "Gplus_Gminus_ee": "5/9",
+          "gsum2_cross_contribution": "10/9"
+        },
+        "5": {
+          "Gplus_Gminus_ee": "13/25",
+          "gsum2_cross_contribution": "26/25"
+        },
+        "7": {
+          "Gplus_Gminus_ee": "25/49",
+          "gsum2_cross_contribution": "50/49"
+        },
+        "11": {
+          "Gplus_Gminus_ee": "61/121",
+          "gsum2_cross_contribution": "122/121"
+        },
+        "13": {
+          "Gplus_Gminus_ee": "85/169",
+          "gsum2_cross_contribution": "170/169"
+        },
+        "17": {
+          "Gplus_Gminus_ee": "145/289",
+          "gsum2_cross_contribution": "290/289"
+        }
+      },
+      "n_primes": 21
+    },
+    "ones_perp_ker": {
+      "proved": true,
+      "theorem": "Gsum 1 = n 1 \u21d2 1 is a positive eigenvector \u21d2 ker(Gsum) \u22a5 1. Dual-eq \u03ba\u2208ker automatically has 1\u1d40\u03ba=0 (Prop 15.182 simplified)."
+    },
+    "wedge": {
+      "proved": true,
+      "formula": "2(n-2)/p^2",
+      "theorem": "Wedge G+_ew=\u00b11/p (E+[y_j y_k]=C_jk/p); n_wedge=2(n-2) \u21d2 sum of squares 2(n-2)/p\u00b2.",
+      "by_p": {
+        "3": {
+          "sum_wedge_Gplus_sq": "16/9"
+        },
+        "5": {
+          "sum_wedge_Gplus_sq": "48/25"
+        },
+        "7": {
+          "sum_wedge_Gplus_sq": "96/49"
+        },
+        "11": {
+          "sum_wedge_Gplus_sq": "240/121"
+        },
+        "13": {
+          "sum_wedge_Gplus_sq": "336/169"
+        },
+        "17": {
+          "sum_wedge_Gplus_sq": "576/289"
+        }
+      }
+    },
+    "matching_nd2": {
+      "proved": true,
+      "formula": "a+b >= -2*sqrt(2+c) for Gsum_fg=c",
+      "samples": {
+        "2.0": -4.0,
+        "1.0": -3.4641016151377544,
+        "0.0": -2.8284271247461903,
+        "-1.0": -2.0,
+        "-2.0": -0.0
+      },
+      "vs_need": {
+        "5": {
+          "need": -2.8,
+          "lb_c0": -2.8284271247461903,
+          "lb_c2": -4.0,
+          "wedge_kills": false,
+          "worst_matching_kills": false
+        },
+        "7": {
+          "need": -3.142857142857143,
+          "lb_c0": -2.8284271247461903,
+          "lb_c2": -4.0,
+          "wedge_kills": true,
+          "worst_matching_kills": false
+        },
+        "11": {
+          "need": -3.4545454545454546,
+          "lb_c0": -2.8284271247461903,
+          "lb_c2": -4.0,
+          "wedge_kills": true,
+          "worst_matching_kills": false
+        },
+        "13": {
+          "need": -3.5384615384615383,
+          "lb_c0": -2.8284271247461903,
+          "lb_c2": -4.0,
+          "wedge_kills": true,
+          "worst_matching_kills": false
+        }
+      },
+      "note": "Worst matching c=2 never kills need (lb=-4 < need). Wedge c=0 kills for p\u22657 as in 15.178."
+    },
+    "binary_form": {
+      "proved": true,
+      "theorem": "Dual equality \u21d2 w=1_G+2e_* satisfies F+w=3\u00b71, F\u2212w=\u22123\u00b71; \u03ba=w\u2212\u03b11 \u2208 ker(G\u00b1), \u03ba_e=2\u2212\u03b1, \u03ba_g\u2208{\u2212\u03b1,1\u2212\u03b1} (g\u2260e), \u03b1=6/(pn).",
+      "alpha": "6/(p n)",
+      "relaxation": "Continuous box \u2212\u03b1\u2264\u03ba_g\u22641\u2212\u03b1 is the [0,1] relaxation of x; binary is the integral case. Infeasibility of the continuous box implies integral dual equality is empty."
+    }
+  },
+  "certified_census": {
+    "p5": {
+      "p": 5,
+      "maxplus_orth_maxminus": true,
+      "Gplus_Gminus_ee": 0.5200000000000014,
+      "expected": 0.52,
+      "match": true,
+      "not_general_proof": true
+    }
+  },
+  "hinge": {
+    "residual_ii_closed": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "maxplus_orth_proved": true,
+    "cross_gram_proved": true,
+    "ones_perp_ker_proved": true,
+    "bound_proved_general": false,
+    "open": "Ker-box obstruction for all p\u22655, or Gsum\u2265\u22121/p, or |\u03bc\u2084|\u22641/(2p) on |\u03ba|=1. Use (A)\u2013(C) for power-sum attacks on the Gsum row.",
+    "alpha_p5": "3/65"
+  },
+  "F3": "Do not flip residual/E1/L without general ker-box / Gsum / |\u03bc4|."
+}

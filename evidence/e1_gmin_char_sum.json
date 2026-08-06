@@ -1,0 +1,23 @@
+{
+  "orbits": [
+    {
+      "p": 3,
+      "orbit_size": 12,
+      "full_size": 12,
+      "g_min_orbit": -0.3333333333333333,
+      "g_min_full": -0.3333333333333333,
+      "orbit_matches_full_gmin": true,
+      "orbit_complete": true
+    },
+    {
+      "p": 5,
+      "orbit_size": 60,
+      "full_size": null,
+      "g_min_orbit": -0.6,
+      "g_min_full": null,
+      "orbit_matches_full_gmin": false,
+      "orbit_complete": false
+    }
+  ],
+  "status": "Affine+Frob orbit of halfspace vs full Max+. If orbit_complete and gmin matches, closed form via character sum is valid."
+}

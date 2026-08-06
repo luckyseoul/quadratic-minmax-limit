@@ -1,11 +1,13 @@
-> **HANDOFF (2026-08-06):** **\(L=\tfrac12\) OPEN.** Fatal hinge named: disj Gsum LB (15.170/171)  
-> unjustified for general \(p\) because Max+ is **not** an IP-scheme (**15.158**).  
-> Short package: **`evidence/share/denseness_path_package.md`**. Status: **`STATUS.md`**.
+> **HANDOFF (2026-08-06 end-of-session):** **\(L=\tfrac12\) OPEN.** Residual **(ii) CLOSED** (15.179 freeze-to-tight).  
+> Residual **(i)** still **OPEN** — needs Max+-free \(|\mu|\le2/n\) (or \(\le1/(2p)\)) on \(|\kappa|=1\), **or** dual-eq ker-box empty for all \(p\ge5\) (e.g. \(\max\kappa_e\le\tfrac32\cdot\)scheme-max).  
+> Predicates honest: `gsum_disj_lb_proved_general=False`, `e1_closed_general=False`. **No soft-close.**  
+> Short package: **`evidence/share/denseness_path_package.md`**. Status: **`STATUS.md`**.  
+> Session detail: **`evidence/SESSION_HANDOFF_2026-08-06_residual_i.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
 
 **Status date:** 2026-08-06  
-**Claim:** **OPEN** (candidate denseness path; E1 blocked). residual/16N optional open.
+**Claim:** **OPEN** (candidate denseness path; E1 blocked by residual i only). residual/16N optional open.
 
 **External / prize:** [MO 413935](https://mathoverflow.net/questions/413935) · [X prize](https://x.com/PI010101/status/2081070728422752329).  
 @PI010101 asked for GitHub, then posted that Grok Build 4.5 found a gap:  
@@ -28,13 +30,13 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 **Done (2026-08-06):** gap named (Gsum disj LB / 15.158); claim retracted OPEN; short package `evidence/share/denseness_path_package.md`; load-bearing tests; 3 cold AI passes → NOT_PROVED + honest OPEN.
 
 **Required opens (prize path):**  
-1. Prove \(H_{ab}\ge-1/p\) (disj Gsum \(>-2/p\)) Max+-free via 15.173, or alternate residual i/ii.  
-2. Flip hinge/E1/L predicates only after (1).  
+1. Residual **(i)** only: Max+-free \(|\mu|\le2/n\) (or \(\le1/(2p)\)) on \(|\kappa|=1\), **or** dual-eq ker-box empty for all \(p\ge5\) (e.g. \(\max\kappa_e\le\tfrac32\cdot\)scheme-max). Residual (ii) **done** (15.179).  
+2. Flip `gsum_disj_lb_proved_general` → E1/L predicates only after (1).  
 3. AI-test package after CLOSED.  
 
 **Non-required:** Path-C/16N. **User:** ping Paata.  
 
-**Do not right now:** residual/16N thrash · X chrome · soft-close without \(H\ge-1/p\) proof.
+**Do not right now:** residual/16N thrash · X chrome · soft-close without Max+-free residual-(i) hinge.
 
 **Prior resumes:** `evidence/FINAL_HANDOFF_2026-08-05.md`, `evidence/SESSION_HANDOFF_2026-07-31_prop15112.md`  
 **P0 graph:** `evidence/P0_ENGINEERING_GRAPH.md` · **Failure graph:** `evidence/E1_FAILURE_GRAPH.md`  

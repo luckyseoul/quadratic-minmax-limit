@@ -1,0 +1,535 @@
+{
+  "title": "Prop 15.181 vertex-star + \u03ba-counts through edge; residual (i) matching-heavy core still OPEN",
+  "proved": {
+    "vertex_star_features": true,
+    "gsum_star_sum": true,
+    "kappa_counts_through_edge": true,
+    "matching_nd2_psd_floor_neg4": true,
+    "nd_le_1_impossible": true,
+    "nd2_wedge_p_ge_7": true,
+    "minus_1_over_p_suffices": true,
+    "mu4_or_gsum_bound_general": false,
+    "gsum_disj_lb_proved_general": false,
+    "residual_i_closed": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "vertex_star_features": {
+      "proved": true,
+      "max_plus": "sum_{e ni i} f_e = p",
+      "max_minus": "sum_{e ni i} f_e = -p",
+      "proof": "sum_{j\u2260i} C_ij y_i y_j = y_i (C y)_i = y_i (\u03bb y_i) = \u03bb with \u03bb=\u00b1p on Max\u00b1."
+    },
+    "gsum_star_sum": {
+      "proved": true,
+      "identity": "sum_{e ni i} Gsum_{e,f} = 2  for all vertices i, edges f",
+      "proof": "E+[f_f * p] + E-[f_f * (-p)] = p/p - p*(-1/p) = 2, using E\u00b1[f_f]=\u00b11/p."
+    },
+    "kappa_counts": {
+      "proved": true,
+      "theorem": "Fix edge e={a,b}, W=V\\e, D=binom(|W|,2). For \u03ba on 4-sets e\u222a{c,d}: \u03ba\u00b2=3+2(cross12+cross13+cross23). Using (C\u00b2)_{uv}=0 for u\u2260v: sum_W C_ac C_bc=0 \u21d2 s23=sum_{c<d} 2(C_ac C_bc)(C_ad C_bd)=\u2212(n\u22122); sum_{c\u2260d} C_cd C_ac C_bd=\u2212C_ab(n\u22122) \u21d2 s12+s13=\u22122(n\u22122). Cross total \u22123(n\u22122). Hence \u2211\u03ba\u00b2=3D\u22123(n\u22122)=3(n\u22122)(n\u22125)/2. With n1+n3=D and n1+9n3=\u2211\u03ba\u00b2: n3=(n\u22122)(n\u22126)/8, n1=3(n\u22122)\u00b2/8.",
+      "by_p": {
+        "3": {
+          "D": "28",
+          "sum_kappa_sq": "60",
+          "cross_total": "-24",
+          "n1": "24",
+          "n3": "4",
+          "match_closed_forms": true
+        },
+        "5": {
+          "D": "276",
+          "sum_kappa_sq": "756",
+          "cross_total": "-72",
+          "n1": "216",
+          "n3": "60",
+          "match_closed_forms": true
+        },
+        "7": {
+          "D": "1128",
+          "sum_kappa_sq": "3240",
+          "cross_total": "-144",
+          "n1": "864",
+          "n3": "264",
+          "match_closed_forms": true
+        },
+        "11": {
+          "D": "7140",
+          "sum_kappa_sq": "21060",
+          "cross_total": "-360",
+          "n1": "5400",
+          "n3": "1740",
+          "match_closed_forms": true
+        },
+        "13": {
+          "D": "14028",
+          "sum_kappa_sq": "41580",
+          "cross_total": "-504",
+          "n1": "10584",
+          "n3": "3444",
+          "match_closed_forms": true
+        },
+        "17": {
+          "D": "41328",
+          "sum_kappa_sq": "123120",
+          "cross_total": "-864",
+          "n1": "31104",
+          "n3": "10224",
+          "match_closed_forms": true
+        },
+        "19": {
+          "D": "64620",
+          "sum_kappa_sq": "192780",
+          "cross_total": "-1080",
+          "n1": "48600",
+          "n3": "16020",
+          "match_closed_forms": true
+        },
+        "23": {
+          "D": "139128",
+          "sum_kappa_sq": "415800",
+          "cross_total": "-1584",
+          "n1": "104544",
+          "n3": "34584",
+          "match_closed_forms": true
+        }
+      },
+      "n_primes": 21,
+      "all_match": true
+    },
+    "matching_nd2_psd": {
+      "proved": true,
+      "min_g1_plus_g2": -4.0,
+      "achieved_at": {
+        "g1": -2.0,
+        "g2": -2.0,
+        "g_fg": 2.0
+      },
+      "wedge_lb": -2.8284271247461903,
+      "matching_weaker_than_wedge": true,
+      "theorem": "Matching n_d=2: [[2,g1,g2],[g1,2,c],[g2,c,2]]\u227d0 allows g1+g2=\u22124 (c=2). Wedge c=0 forces g1+g2\u2265\u22122\u221a2. PSD alone does not kill matching n_d=2 at p=5 (need=\u22122.8\u2208(\u22124,\u22122\u221a2))."
+    },
+    "nd2_config_record": {
+      "proved_new_kill": false,
+      "note": "Matching n_d=2 PSD floor \u22124 never beats need=6/p\u22124>\u22124. Wedge kill for p\u22657 remains the only n_d=2 PSD kill (15.178).",
+      "by_p": {
+        "5": {
+          "need": -2.8,
+          "wedge_lb_neg2sqrt2": -2.8284271247461903,
+          "matching_lb_neg4": -4.0,
+          "wedge_kills": false,
+          "matching_psd_kills": false
+        },
+        "7": {
+          "need": -3.142857142857143,
+          "wedge_lb_neg2sqrt2": -2.8284271247461903,
+          "matching_lb_neg4": -4.0,
+          "wedge_kills": true,
+          "matching_psd_kills": false
+        },
+        "11": {
+          "need": -3.4545454545454546,
+          "wedge_lb_neg2sqrt2": -2.8284271247461903,
+          "matching_lb_neg4": -4.0,
+          "wedge_kills": true,
+          "matching_psd_kills": false
+        },
+        "13": {
+          "need": -3.5384615384615383,
+          "wedge_lb_neg2sqrt2": -2.8284271247461903,
+          "matching_lb_neg4": -4.0,
+          "wedge_kills": true,
+          "matching_psd_kills": false
+        },
+        "17": {
+          "need": -3.6470588235294117,
+          "wedge_lb_neg2sqrt2": -2.8284271247461903,
+          "matching_lb_neg4": -4.0,
+          "wedge_kills": true,
+          "matching_psd_kills": false
+        },
+        "19": {
+          "need": -3.6842105263157894,
+          "wedge_lb_neg2sqrt2": -2.8284271247461903,
+          "matching_lb_neg4": -4.0,
+          "wedge_kills": true,
+          "matching_psd_kills": false
+        },
+        "23": {
+          "need": -3.739130434782609,
+          "wedge_lb_neg2sqrt2": -2.8284271247461903,
+          "matching_lb_neg4": -4.0,
+          "wedge_kills": true,
+          "matching_psd_kills": false
+        },
+        "29": {
+          "need": -3.793103448275862,
+          "wedge_lb_neg2sqrt2": -2.8284271247461903,
+          "matching_lb_neg4": -4.0,
+          "wedge_kills": true,
+          "matching_psd_kills": false
+        },
+        "31": {
+          "need": -3.806451612903226,
+          "wedge_lb_neg2sqrt2": -2.8284271247461903,
+          "matching_lb_neg4": -4.0,
+          "wedge_kills": true,
+          "matching_psd_kills": false
+        },
+        "37": {
+          "need": -3.8378378378378377,
+          "wedge_lb_neg2sqrt2": -2.8284271247461903,
+          "matching_lb_neg4": -4.0,
+          "wedge_kills": true,
+          "matching_psd_kills": false
+        }
+      }
+    },
+    "star_schur_pending_sample": {
+      "5": {
+        "p": 5,
+        "m": 23,
+        "sum_h": 2,
+        "norm_h_sq_le": 4,
+        "single_coord_lb_approx": -1.8260869565217395,
+        "need": -2.8,
+        "single_coord_beats_need": true,
+        "note": "Single pending Gsum LB from one vertex star; not residual-i close."
+      },
+      "7": {
+        "p": 7,
+        "m": 47,
+        "sum_h": 2,
+        "norm_h_sq_le": 4,
+        "single_coord_lb_approx": -1.914893617021277,
+        "need": -3.142857142857143,
+        "single_coord_beats_need": true,
+        "note": "Single pending Gsum LB from one vertex star; not residual-i close."
+      },
+      "11": {
+        "p": 11,
+        "m": 119,
+        "sum_h": 2,
+        "norm_h_sq_le": 4,
+        "single_coord_lb_approx": -1.966386554621849,
+        "need": -3.4545454545454546,
+        "single_coord_beats_need": true,
+        "note": "Single pending Gsum LB from one vertex star; not residual-i close."
+      },
+      "13": {
+        "p": 13,
+        "m": 167,
+        "sum_h": 2,
+        "norm_h_sq_le": 4,
+        "single_coord_lb_approx": -1.976047904191617,
+        "need": -3.5384615384615383,
+        "single_coord_beats_need": true,
+        "note": "Single pending Gsum LB from one vertex star; not residual-i close."
+      }
+    },
+    "nd_le_1": {
+      "proved": true,
+      "theorem": "For p\u22655, need=6/p\u22124 < \u22122. PSD \u21d2 Gsum\u2265\u22122 so box\u2265\u22122n_d. n_d=0 \u21d2 box=0>need; n_d=1 \u21d2 box\u2265\u22122>need. Dual equality impossible.",
+      "by_p": {
+        "5": {
+          "need": "-14/5",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "7": {
+          "need": "-22/7",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "11": {
+          "need": "-38/11",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "13": {
+          "need": "-46/13",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "17": {
+          "need": "-62/17",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "19": {
+          "need": "-70/19",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "23": {
+          "need": "-86/23",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "29": {
+          "need": "-110/29",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "31": {
+          "need": "-118/31",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "37": {
+          "need": "-142/37",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "41": {
+          "need": "-158/41",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "43": {
+          "need": "-166/43",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "47": {
+          "need": "-182/47",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "53": {
+          "need": "-206/53",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "59": {
+          "need": "-230/59",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "61": {
+          "need": "-238/61",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "67": {
+          "need": "-262/67",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "71": {
+          "need": "-278/71",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "73": {
+          "need": "-286/73",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        },
+        "79": {
+          "need": "-310/79",
+          "lb_nd0": "0",
+          "lb_nd1": "-2",
+          "kill_nd0": true,
+          "kill_nd1": true
+        }
+      }
+    },
+    "nd2_wedge": {
+      "proved_for_primes_ge_7": true,
+      "threshold_p": 5.121320343559644,
+      "lb": -2.8284271247461903,
+      "p5_need_gt_lb": true,
+      "theorem": "n_d=2 wedge partners: [[2,g1,g2],[g1,2,0],[g2,0,2]]\u227d0 \u21d2 g1\u00b2+g2\u00b2\u22644 \u21d2 g1+g2\u2265\u22122\u221a2. Beats need=6/p\u22124 iff p>3/(2\u2212\u221a2)\u22485.12 (all primes p\u22657). p=5 open for this configuration.",
+      "by_p": {
+        "5": {
+          "need": -2.8,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": false,
+          "expect_kill": false
+        },
+        "7": {
+          "need": -3.142857142857143,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "11": {
+          "need": -3.4545454545454546,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "13": {
+          "need": -3.5384615384615383,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "17": {
+          "need": -3.6470588235294117,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "19": {
+          "need": -3.6842105263157894,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "23": {
+          "need": -3.739130434782609,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "29": {
+          "need": -3.793103448275862,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "31": {
+          "need": -3.806451612903226,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "37": {
+          "need": -3.8378378378378377,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "41": {
+          "need": -3.8536585365853657,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "43": {
+          "need": -3.86046511627907,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "47": {
+          "need": -3.872340425531915,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "53": {
+          "need": -3.8867924528301887,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "59": {
+          "need": -3.8983050847457625,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "61": {
+          "need": -3.901639344262295,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "67": {
+          "need": -3.91044776119403,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "71": {
+          "need": -3.915492957746479,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "73": {
+          "need": -3.9178082191780823,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        },
+        "79": {
+          "need": -3.9240506329113924,
+          "lb_neg_2_sqrt2": -2.8284271247461903,
+          "kills_dual_eq": true,
+          "expect_kill": true
+        }
+      }
+    }
+  },
+  "certified_census": {
+    "p5_ksparse_box": {
+      "p": 5,
+      "k": 13,
+      "need": -2.8,
+      "lp_min_approx_greedy": -1.2000000000000002,
+      "need_lt_lp_min": true,
+      "dual_eq_linear_empty_p5": true,
+      "pointwise_min_gsum": -0.09230769230769231,
+      "certified_minus_6_over_65": "True",
+      "not_general_proof": true
+    }
+  },
+  "hinge": {
+    "residual_ii_closed": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "vertex_star_proved": true,
+    "kappa_counts_proved": true,
+    "nd_le_1_impossible": true,
+    "nd2_wedge_p_ge_7": true,
+    "matching_nd2_psd_only_neg4": true,
+    "bound_proved_general": false,
+    "open": "Prove disj Gsum\u2265\u22121/p or |\u03bc\u2084|\u22641/(2p) on |\u03ba|=1, or dual-eq kill on all matching-heavy n_d\u22652 (esp. p=5 n_d=2), Max+-free p\u22655.",
+    "mu_star_p5": "-14/65"
+  },
+  "F3": "Do not flip residual/E1/L without general |\u03bc4|\u22641/(2p) or Gsum\u2265\u22121/p or alternate covering all n_d\u22652 matching-heavy."
+}

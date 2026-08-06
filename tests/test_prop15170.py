@@ -108,13 +108,14 @@ def test_bad_case_min_equals_dual():
 
 
 def test_e1_open_until_gsum_lb_proved():
-    """E1/L stay OPEN while disj Gsum LB is unproved (no soft-close)."""
+    """E1/L stay OPEN while residual (i) Gsum LB is unproved (no soft-close)."""
     from e1_gmin_m4_prop15171 import deep_s2_freeness_fail_k_ge_3p_ND_closed as d171
 
     assert type_I_k_3p_minus_2_closed_general() is False
-    assert d171() is False
-    assert e1_closed_general() is False
-    assert e1_open_residuals()  # non-empty
+    assert d171() is True  # residual (ii) closed by freeze (15.179)
+    assert e1_closed_general() is False  # residual (i) still open
+    opens = e1_open_residuals()
+    assert opens  # residual (i) still listed
     bt = bitight_from_majorization(5)["bitight_empty"]
     assert bt is True
     w = main_L_from_e1(e1=False, bitight=True)

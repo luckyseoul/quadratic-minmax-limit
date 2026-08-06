@@ -97,16 +97,16 @@ def test_deep_multi_s_auto_freeness_boundaries():
             assert r2["auto_freeness"] is False
 
 
-def test_deep_k_ge_3p_open_via_15171_hinge():
-    """Residual (ii) OPEN until Gsum LB proved (15.171 gates same hinge)."""
-    assert deep_freeness_fail_k_ge_3p_open() is True
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
+def test_deep_k_ge_3p_closed_via_freeze_15179():
+    """Residual (ii) CLOSED by freeze-to-tight (15.179); no Gsum LB needed."""
+    assert deep_freeness_fail_k_ge_3p_open() is False
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
 
 
-def test_e1_open_both_residuals():
-    """E1 OPEN while residual (i)/(ii) hinge open; bi-tight alone insufficient."""
+def test_e1_open_residual_i_only():
+    """E1 OPEN: residual (i) still open; residual (ii) closed; bi-tight alone insufficient."""
     assert type_I_k_3p_minus_2_closed_general() is False
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
     assert e1_closed_general() is False
     open_res = e1_open_residuals()
     assert len(open_res) >= 1
@@ -131,11 +131,11 @@ def test_prove_and_main_honest():
     TI = prove_type_I_3p_minus_2()
     assert TI["structure_identities_ok"] is True
     assert TI["gap2_s_minus_force_ok"] is True
-    assert TI["ND_class_closed_general"] is False  # Gsum hinge
+    assert TI["ND_class_closed_general"] is False  # residual (i) Gsum hinge
     assert TI["open_step"] != ""
     DP = prove_deep_multi_s()
     assert DP["multi_s_auto_freeness_ok"] is True
-    assert DP["deep_k_ge_3p_ND_closed"] is False  # Gsum hinge
+    assert DP["deep_k_ge_3p_ND_closed"] is True  # residual (ii) freeze 15.179
     out = main()
     assert out["proved"]["type_I_k_3p_minus_2_ND_class_closed"] is False
     assert out["proved"]["type_I_k_3p_minus_2_structure"] is True
@@ -144,16 +144,16 @@ def test_prove_and_main_honest():
     assert out["proved"]["L_closed"] is False
     assert out["L_status"] == "OPEN"
     assert len(out["open_residual"]) >= 1
-    # 16N residual still open
+    # 16N residual still open (optional path)
     assert out["proved"]["residual_closed_general"] is False
 
 
 def test_anti_soft_close_skeptic_patterns():
-    """Skeptic F3: E1/L only from proved residual (i)+(ii)+bi-tight; hinge open."""
+    """Skeptic F3: E1/L only from residual (i)+(ii)+bi-tight; residual (i) open."""
     assert type_I_k_3p_minus_2_closed_general() is False
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True  # res (ii) closed
     assert e1_closed_general() is False
-    assert e1_open_residuals() != []
+    assert e1_open_residuals() != []  # residual (i) still named open
     # L wire refuses soft-close without E1
     w2 = main_L_from_e1(False, True)
     assert w2["L_closed"] is False

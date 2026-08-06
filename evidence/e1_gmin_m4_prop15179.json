@@ -1,0 +1,114 @@
+{
+  "title": "Prop 15.179 residual (ii) freeze-to-tight: dual two-level affine forces k=3p\u22121; residual (i) still OPEN",
+  "proved": {
+    "freeze_S_H_eq_3": true,
+    "first_moment_k_eq_3p_minus_1": true,
+    "dual_twolevel_affine_impossible_k_ge_3p": true,
+    "residual_ii_dual_twolevel_affine_closed": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "proved": true,
+    "freeze": {
+      "proved": true,
+      "theorem": "Freeness-fail affine f_e=3\u2212S with S\u2208{2,4} \u21d2 S_H=S+f_e=3 on every Max+ vector."
+    },
+    "by_p": {
+      "5": {
+        "k_forced": 14,
+        "impossible_k_ge_3p": true
+      },
+      "7": {
+        "k_forced": 20,
+        "impossible_k_ge_3p": true
+      },
+      "11": {
+        "k_forced": 32,
+        "impossible_k_ge_3p": true
+      },
+      "13": {
+        "k_forced": 38,
+        "impossible_k_ge_3p": true
+      },
+      "17": {
+        "k_forced": 50,
+        "impossible_k_ge_3p": true
+      },
+      "19": {
+        "k_forced": 56,
+        "impossible_k_ge_3p": true
+      },
+      "23": {
+        "k_forced": 68,
+        "impossible_k_ge_3p": true
+      },
+      "29": {
+        "k_forced": 86,
+        "impossible_k_ge_3p": true
+      },
+      "31": {
+        "k_forced": 92,
+        "impossible_k_ge_3p": true
+      },
+      "37": {
+        "k_forced": 110,
+        "impossible_k_ge_3p": true
+      },
+      "41": {
+        "k_forced": 122,
+        "impossible_k_ge_3p": true
+      },
+      "43": {
+        "k_forced": 128,
+        "impossible_k_ge_3p": true
+      },
+      "47": {
+        "k_forced": 140,
+        "impossible_k_ge_3p": true
+      },
+      "53": {
+        "k_forced": 158,
+        "impossible_k_ge_3p": true
+      },
+      "59": {
+        "k_forced": 176,
+        "impossible_k_ge_3p": true
+      },
+      "61": {
+        "k_forced": 182,
+        "impossible_k_ge_3p": true
+      },
+      "67": {
+        "k_forced": 200,
+        "impossible_k_ge_3p": true
+      },
+      "71": {
+        "k_forced": 212,
+        "impossible_k_ge_3p": true
+      },
+      "73": {
+        "k_forced": 218,
+        "impossible_k_ge_3p": true
+      },
+      "79": {
+        "k_forced": 236,
+        "impossible_k_ge_3p": true
+      }
+    },
+    "n_primes": 20,
+    "theorem": "For every prime p\u22655: dual two-level freeness-fail affine forces k=3p\u22121 and is impossible for k\u22653p (first moment)."
+  },
+  "hinge": {
+    "residual_ii_dual_twolevel_affine_k_ge_3p": "CLOSED by freeze-to-tight first moment (this prop)",
+    "residual_ii_fail_eq_k_3p_minus_1": "empty when bi-tight empty (15.168.G)",
+    "residual_i_type_I_k_3p_minus_2": "OPEN \u2014 freeze does not apply; needs Gsum LB (15.176\u2013178)",
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "bound_proved_general": false,
+    "open": "Prove disj Gsum\u2265\u22121/p (or |\u03bc\u2084|\u22641/(2p) on |\u03ba|=1) for residual (i); then flip gsum_disj_lb_proved_general and E1/L."
+  },
+  "F3": "Do not flip residual (i)/E1/L without Gsum LB; residual (ii) affine branch no longer needs Gsum."
+}

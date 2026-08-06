@@ -1,0 +1,132 @@
+{
+  "title": "Prop 15.187 global T\u00b2\u03ba; T\u00b2\u03c6 census; \u03bc_part majorant; residual (i) OPEN (need |\u03bc_actual|)",
+  "proved": {
+    "global_T2_kappa": true,
+    "T2_phi_paley_general": false,
+    "T2_phi_certified_p3_p5": true,
+    "phi_bound_all_p": true,
+    "particular_majorant_le_1_over_2p": true,
+    "actual_mu4_le_1_over_2p": false,
+    "gsum_disj_lb_proved_general": false,
+    "residual_i_closed": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "global_T2_kappa": {
+      "proved": true,
+      "theorem": "Any symmetric conference: T\u00b2\u03ba = \u221224\u03c6 + 48\u03ba on every 4-set. C\u00b2 reduction of T(\u22126 star); K4 remainder = 48\u03ba on all 64 edge-labelings (|\u03ba|=1 and |\u03ba|=3).",
+      "n_kappa1_labelings": 48,
+      "n_kappa3_labelings": 16,
+      "rest_equals_48_kappa_all": true
+    },
+    "particular_majorant": {
+      "proved": true,
+      "theorem": "|\u03c6|\u22642(p\u22122), |\u03ba|=1 \u21d2 |\u03bc_part|\u2264(p\u00b2+4p\u22129)/(p\u00b2(p\u00b2\u22125))\u22641/(2p) for all primes p\u22655 (cubic p\u00b3\u22122p\u00b2\u221213p+18>0 on [5,\u221e)).",
+      "by_p": {
+        "5": {
+          "majorant": "9/125",
+          "mu4_thr": "1/10",
+          "majorant_le_thr": true,
+          "max_explicit_part": "9/125",
+          "explicit_le_majorant": true
+        },
+        "7": {
+          "majorant": "17/539",
+          "mu4_thr": "1/14",
+          "majorant_le_thr": true,
+          "max_explicit_part": "17/539",
+          "explicit_le_majorant": true
+        },
+        "11": {
+          "majorant": "39/3509",
+          "mu4_thr": "1/22",
+          "majorant_le_thr": true,
+          "max_explicit_part": "39/3509",
+          "explicit_le_majorant": true
+        },
+        "13": {
+          "majorant": "53/6929",
+          "mu4_thr": "1/26",
+          "majorant_le_thr": true,
+          "max_explicit_part": "53/6929",
+          "explicit_le_majorant": true
+        },
+        "17": {
+          "majorant": "87/20519",
+          "mu4_thr": "1/34",
+          "majorant_le_thr": true,
+          "max_explicit_part": "87/20519",
+          "explicit_le_majorant": true
+        },
+        "19": {
+          "majorant": "107/32129",
+          "mu4_thr": "1/38",
+          "majorant_le_thr": true,
+          "max_explicit_part": "107/32129",
+          "explicit_le_majorant": true
+        },
+        "23": {
+          "majorant": "153/69299",
+          "mu4_thr": "1/46",
+          "majorant_le_thr": true,
+          "max_explicit_part": "153/69299",
+          "explicit_le_majorant": true
+        },
+        "29": {
+          "majorant": "237/175769",
+          "mu4_thr": "1/58",
+          "majorant_le_thr": true,
+          "max_explicit_part": "237/175769",
+          "explicit_le_majorant": true
+        }
+      },
+      "n_primes": 10,
+      "cubic_positive": true
+    },
+    "phi": {
+      "proved": true,
+      "theorem": "Paley |\u03ba|=1 finite 4-set: every cross-ratio avoids \u03c7-class (1,1) (dichotomy); hence |H|\u22602p (supersingular double-residue); hence |H|\u22642p\u22124=2(p\u22122) (mod-4 Hasse ladder); hence |\u03c6|=|H|\u22642(p\u22122). All odd primes p.",
+      "depends_on": [
+        "H_mod_4",
+        "hasse",
+        "supersingular_double_residue",
+        "kappa_cr_dichotomy",
+        "phi_eq_abs_H"
+      ]
+    }
+  },
+  "certified": {
+    "T2_phi": {
+      "certified": true,
+      "proved_general": false,
+      "by_p": {
+        "3": {
+          "max_err": 0.0,
+          "ok": true,
+          "formula": "4(p^2+3)(phi-2kappa)"
+        },
+        "5": {
+          "max_err": 0.0,
+          "ok": true,
+          "formula": "4(p^2+3)(phi-2kappa)"
+        }
+      },
+      "note": "Full enum p=3,5. Symbolic C\u00b2 proof of T\u00b2\u03c6 still open."
+    }
+  },
+  "hinge": {
+    "residual_ii_closed": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "global_T2_kappa_proved": true,
+    "phi_bound_all_p": true,
+    "particular_majorant_le_thr": true,
+    "actual_mu4_bound": false,
+    "open": "Control \u03b4=\u03bc_actual\u2212\u03bc_part on |\u03ba|=1 for all p\u22655 (or direct |\u03bc_actual|\u22641/(2p)); then flip residual_i.",
+    "majorant_p5": "9/125",
+    "majorant_p7": "17/539"
+  },
+  "F3": "Do not flip residual/E1/L without |\u03bc_actual|\u22641/(2p)."
+}

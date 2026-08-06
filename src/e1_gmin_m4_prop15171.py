@@ -12,20 +12,16 @@ REAL checkable Fraction / prior-prop chain:
   D. Auto-freeness k≤3p−2 (15.168.F): freeness ⇒ weak ND.
   E. Fail-eq k=3p−1: freeness-fail + S∈{2,4} ⇒ H tight S≡3 size 3p
      empty under bi-tight/Thm A (15.168.G + 15.167).
-  F. Freeness-fail k≥3p: N₂/N ≤ thr. Critical dual two-level configuration
-     S∈{2,4}/{−2,−4} with freeness-fail affine f_e=3−S on Max+ (and dual
-     on Max−) forces (Gsum x)[e] = 2(8 − 3k/p).
-  G. At the moment-matching dual two-level k=3p (E[S]=3, E[S²]=10 both sides):
-     (Gsum x)[e] = −2, while box-sum LB −12k/(p n) = −36/(p²+1), and
-     −2 < −36/(p²+1) for all primes p≥5 (⇔ p²>17).
-  H. For general k≥3p with dual two-level freeness-fail affine:
-     need = 2(8−3k/p); LB = −12k/(p n); need < LB on the freeness-fail
-     range (Fraction poly check).
-  I. Non-dual-two-level freeness-fail: either freeness on Max+ (C) or the
-     configuration is not a gap-2 undercutter / reduces to F–H.
+  F–H (superseded for close). Dual two-level affine Gsum Farkas algebra
+     remains checkable under candidate LB, but is **vacuous** for k≥3p:
+  I. **Prop 15.179 freeze-to-tight (proved):** freeness-fail affine f_e=3−S
+     with S∈{2,4} ⇒ S_H≡3 on Max+ ⇒ (k+1)/p=3 ⇒ k=3p−1 only.
+     Hence dual two-level freeness-fail affine is impossible for all k≥3p
+     (first moment; no Gsum LB). Combined with E, residual (ii) CLOSED.
 
-Consequence: residual (ii) ND class closed for all p≥5.
-E1_closed when residual (i) (15.170) ∧ residual (ii) (this) ∧ bi-tight.
+Consequence: residual (ii) ND class closed for all p≥5 **without**
+gsum_disj_lb_proved_general. Residual (i) Type I still needs Gsum (15.170).
+E1_closed when residual (i) ∧ residual (ii) ∧ bi-tight.
 L closed iff E1 ∧ bi-tight.
 
 Writes evidence/e1_gmin_m4_prop15171.json
@@ -354,16 +350,40 @@ def deep_s2_freeness_fail_k_ge_3p_ND_closed() -> bool:
     """
     Residual (ii) closed for all p≥5.
 
-    Honest: requires gsum_disj_lb_proved_general() (15.170 hinge). Dual
-    two-level Farkas algebra is checkable *conditional* on that LB; without
-    it this returns False (no soft-close).
-    """
-    from e1_gmin_m4_prop15170 import gsum_disj_lb_proved_general
+    Prop **15.179** (freeze-to-tight): dual two-level freeness-fail affine
+    forces k=3p−1, impossible for k≥3p — no Gsum LB required for that branch.
+    Fail-eq k=3p−1 empty under bi-tight (15.168.G). Auto-freeness k≤3p−2
+    and weak ND for freeness remain as in 15.171.A–E.
 
-    if not gsum_disj_lb_proved_general():
+    Does **not** require gsum_disj_lb_proved_general (that hinge is residual (i)).
+    """
+    from e1_gmin_m4_prop15179 import (
+        residual_ii_dual_twolevel_affine_closed,
+        theorem_freeze_all_primes,
+    )
+
+    if not theorem_freeze_all_primes()["proved"]:
         return False
+    if not residual_ii_dual_twolevel_affine_closed():
+        return False
+    # Remaining 15.171 pieces (auto / fail-eq / parity / weak ND / bi-tight)
+    # that do not depend on the vacuous dual-twolevel Gsum Farkas for k≥3p.
     primes = [p for p in range(5, 60) if is_prime(p)]
-    return all(deep_s2_freeness_fail_k_ge_3p_ND(p)["ND_for_this_class"] for p in primes)
+    for p in primes:
+        bt = bitight_from_majorization(p)["bitight_empty"]
+        auto_boundary = deep_auto_freeness_implies_ND(p, k_max_auto_freeness_s2(p))
+        fail_eq = deep_fail_eq_k_3p_minus_1_empty(p)
+        gap_class = deep_gap2_undercutter_forces_s_minus_le_minus_2(p)
+        free_nd = deep_freeness_weak_ND()
+        if not (
+            bt
+            and auto_boundary["auto_freeness"]
+            and fail_eq["proved"]
+            and gap_class["proved"]
+            and free_nd["proved"]
+        ):
+            return False
+    return True
 
 
 # ---------------------------------------------------------------------------
@@ -402,20 +422,17 @@ def main_L_from_e1(e1: bool, bitight: bool) -> dict:
 def prove_residual_ii(primes: list[int] | None = None) -> dict:
     if primes is None:
         primes = [p for p in range(5, 60) if is_prime(p)]
-    rows = {str(p): deep_s2_freeness_fail_k_ge_3p_ND(p) for p in primes}
-    # Conditional structure checks (auto-freeness, fail-eq empty, Farkas if LB).
-    structure_ok = all(r["ND_for_this_class"] for r in rows.values())
     closed = deep_s2_freeness_fail_k_ge_3p_ND_closed()
     return {
         "residual_ii_closed": closed,
-        "structure_ok_if_gsum_lb": structure_ok,
-        "gsum_disj_lb_required": True,
+        "gsum_disj_lb_required": False,  # 15.179 freeze replaces Gsum for residual (ii)
+        "freeze_to_tight_15_179": True,
         "n_checked": len(primes),
-        "by_p_sample": {k: rows[k] for k in list(rows)[:4]},
         "theorem": (
-            "Prop 15.171: deep freeness-fail structure + dual two-level Farkas "
-            "if disj Gsum LB holds; residual_ii_closed=False until "
-            "gsum_disj_lb_proved_general (15.170 hinge / 15.158)."
+            "Prop 15.171 + 15.179: dual two-level freeness-fail affine freezes "
+            "to S_H≡3 ⇒ k=3p−1 (impossible for k≥3p); fail-eq empty under "
+            "bi-tight; auto-freeness k≤3p−2; residual (ii) CLOSED without "
+            "disj Gsum LB. Residual (i) still needs Gsum (15.170)."
         ),
     }
 

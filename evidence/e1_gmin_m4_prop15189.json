@@ -1,0 +1,164 @@
+{
+  "title": "Prop 15.189 \u03c0_ij=C_ij/p (Paley Max\u00b1); s-identity; G+ PSD |\u03bc|\u22641\u22122/p; residual (i) still OPEN",
+  "proved": {
+    "sum_identity": true,
+    "pairwise_pi_C_over_p": true,
+    "adjacent_gsum_zero": true,
+    "Gplus_psd_bound_1_minus_2_over_p": true,
+    "actual_mu4_le_1_over_2p": false,
+    "gsum_disj_lb_proved_general": false,
+    "residual_i_closed": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "sum_identity": {
+      "proved": true,
+      "theorem": "Normalised symmetric conference order n=p\u00b2+1: y\u2208Max+ \u21d2 1\u1d40y=(p+1)y_\u221e; y\u2208Max\u2212 \u21d2 1\u1d40y=\u2212(p\u22121)y_\u221e."
+    },
+    "pairwise_pi": {
+      "proved": true,
+      "theorem": "Paley Max+: E[y_i y_j]=C_ij/p (i\u2260j), =1 (i=j). Max\u2212: E[y_i y_j]=\u2212C_ij/p (i\u2260j). Proof: Aut-orbits on pairs (3 types) + row equations force a=1/p, b\u2212c=2/p; write \u03a0=I+C/p+dF; C\u03a0\u2212p\u03a0=d(CF\u2212pF); CF\u2260pF \u21d2 d=0.",
+      "depends_on": [
+        "sum_identity",
+        "paley_aut_pair_orbits",
+        "C_squared"
+      ]
+    },
+    "adjacent_gsum": {
+      "proved": true,
+      "theorem": "Adjacent Gsum_ab,ac=0 from \u03c0: E_+[y_b y_c]+E_\u2212[y_b y_c]=C_bc/p\u2212C_bc/p=0.",
+      "depends_on": [
+        "pairwise_pi"
+      ]
+    },
+    "Gplus_psd": {
+      "proved": true,
+      "theorem": "On any |\u03ba|=1 four-set, the 6\u00d76 Max+ edge-feature Gram G+(m) has eigenvalue (p\u22122)/p \u2212 m (exhaustion of the (1,1,\u22121) matching pattern up to isomorphism, symbolic 6\u00d76). PSD \u21d2 m \u2264 1\u22122/p. Sign flip \u21d2 m \u2265 \u2212(1\u22122/p). Hence |m\u2084\u207a|\u22641\u22122/p on |\u03ba|=1.",
+      "bound": "1 - 2/p",
+      "sufficient_for_residual_i": false,
+      "note": "1\u22122/p > 1/(2p) for all primes p\u22653; does not close residual (i)."
+    },
+    "gplus_bound_vs_thr": {
+      "5": {
+        "bound": "3/5",
+        "thr": "1/10",
+        "two_over_n": "1/13",
+        "bound_le_thr": false
+      },
+      "7": {
+        "bound": "5/7",
+        "thr": "1/14",
+        "two_over_n": "1/25",
+        "bound_le_thr": false
+      },
+      "11": {
+        "bound": "9/11",
+        "thr": "1/22",
+        "two_over_n": "1/61",
+        "bound_le_thr": false
+      }
+    }
+  },
+  "certified": {
+    "sum_identity": {
+      "3": {
+        "p": 3,
+        "maxplus_sum_identity": true,
+        "maxminus_sum_identity": true,
+        "unique_sums_plus": [
+          -4.0,
+          4.0
+        ],
+        "unique_sums_minus": [
+          -2.0,
+          2.0
+        ]
+      },
+      "5": {
+        "p": 5,
+        "maxplus_sum_identity": true,
+        "maxminus_sum_identity": true,
+        "unique_sums_plus": [
+          -6.0,
+          6.0
+        ],
+        "unique_sums_minus": [
+          -4.0,
+          4.0
+        ]
+      }
+    },
+    "pairwise_pi": {
+      "3": {
+        "p": 3,
+        "max_err_pi_plus": 0.0,
+        "max_err_pi_minus": 0.0,
+        "tight_frame_err": 0.0,
+        "ok": true
+      },
+      "5": {
+        "p": 5,
+        "max_err_pi_plus": 0.0,
+        "max_err_pi_minus": 0.0,
+        "tight_frame_err": 0.0,
+        "ok": true
+      }
+    },
+    "CF_not_pF": {
+      "3": {
+        "p": 3,
+        "max_abs_CF_minus_pF": 8.0,
+        "nonzero": true
+      },
+      "5": {
+        "p": 5,
+        "max_abs_CF_minus_pF": 24.0,
+        "nonzero": true
+      },
+      "7": {
+        "p": 7,
+        "max_abs_CF_minus_pF": 48.0,
+        "nonzero": true
+      }
+    },
+    "Gplus_eigenvalue": {
+      "3": {
+        "p": 3,
+        "has_zero_eig_at_bound": true,
+        "gmin_at_bound": 5.551115123125783e-17,
+        "gmin_above_bound": -0.009999999999999891,
+        "bound": "1/3",
+        "psd_up_to_bound": true
+      },
+      "5": {
+        "p": 5,
+        "has_zero_eig_at_bound": true,
+        "gmin_at_bound": -4.708472234192058e-17,
+        "gmin_above_bound": -0.010000000000000453,
+        "bound": "3/5",
+        "psd_up_to_bound": true
+      },
+      "7": {
+        "p": 7,
+        "has_zero_eig_at_bound": true,
+        "gmin_at_bound": 1.3597419902273283e-16,
+        "gmin_above_bound": -0.010000000000000142,
+        "bound": "5/7",
+        "psd_up_to_bound": true
+      }
+    }
+  },
+  "hinge": {
+    "residual_ii_closed": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "pairwise_pi_proved": true,
+    "adjacent_gsum_zero_from_pi": true,
+    "Gplus_psd_bound_1_minus_2_over_p": true,
+    "actual_mu4_le_1_over_2p": false,
+    "open": "Prove |\u03bc\u2084|\u22641/(2p) or \u22642/n on |\u03ba|=1 for all p\u22655 Max+-free (G+ PSD only gives 1\u22122/p, too weak)."
+  },
+  "F3": "\u03c0_ij=C_ij/p and adjacent Gsum=0 are Max+-free. G+ PSD \u21d2 |\u03bc|\u22641\u22122/p, NOT enough for residual (i). Still need |\u03bc|\u22641/(2p) or \u22642/n."
+}

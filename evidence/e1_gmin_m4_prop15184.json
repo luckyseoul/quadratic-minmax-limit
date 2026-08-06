@@ -1,0 +1,127 @@
+{
+  "title": "Prop 15.184 T\u00b2\u03ba=\u221224\u03c6+48\u03ba on |\u03ba|=1; \u03c6-bound / |\u03bc\u2084| residual (i) still OPEN",
+  "proved": {
+    "T2_kappa_identity_on_kappa1": true,
+    "abs_T2_formula": true,
+    "minus_1_over_p_suffices": true,
+    "phi_bound_2_p_minus_2_general": false,
+    "mu4_bound_general": false,
+    "gsum_disj_lb_proved_general": false,
+    "residual_i_closed": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "T2_identity": {
+      "proved": true,
+      "theorem": "On |\u03ba|=1: T\u00b2\u03ba = \u221224 \u03c6 + 48 \u03ba = \u221224(\u03c6 \u2212 2\u03ba). Leading \u03c6 from \u2211_v \u2211_r C_vr \u220f_{u\u2260v} C_ru = 4\u03c6; K4 remainder = 48\u03ba by 48-labeling exhaustion + C\u00b2 reduction.",
+      "T2_symbolic": "-24*Phi + 12*e01**2*e02*e13 + 12*e01**2*e03*e12 + 12*e01*e02**2*e23 + 12*e01*e03**2*e23 + 12*e01*e12**2*e23 + 12*e01*e13**2*e23 + 12*e02**2*e03*e12 + 12*e02*e03**2*e13 + 12*e02*e12**2*e13 + 12*e02*e13*e23**2 + 12*e03*e12*e13**2 + 12*e03*e12*e23**2",
+      "n_kappa_abs_1_labelings": 48,
+      "rest_equals_48_kappa": true,
+      "labeling_rest_counts": {
+        "k=-1,rest=-48": 24,
+        "k=1,rest=48": 24
+      },
+      "formula": "T2_kappa = -24*phi + 48*kappa  on |kappa|=1"
+    },
+    "abs_formula": {
+      "proved": true,
+      "theorem": "On |\u03ba|=1: |T\u00b2\u03ba| = 24|\u03c6 \u2212 2\u03ba|. If |\u03c6| \u2264 2(p\u22122) then |\u03c6 \u2212 2\u03ba| \u2264 2(p\u22122) + 2 = 2p \u2212 2, hence |T\u00b2\u03ba| \u2264 48(p \u2212 1).",
+      "conditional_on_phi_bound": true
+    },
+    "mu4_p5_formula": {
+      "p": 5,
+      "formula": "(4*kappa - phi)/(p*n)",
+      "certified": true,
+      "proved_general": false,
+      "note": "At p=5, lstsq residual 0 on all |\u03ba|=1 four-sets. Fails at p=3. General closed form OPEN.",
+      "implies_mu4_bound_if_phi": "If formula and |\u03c6|\u22642(p\u22122): |\u03bc\u2084|\u2264(4+2p\u22124)/(p n)=2/n=2/(p\u00b2+1). For p\u22655: 2/(p\u00b2+1) \u2264 1/(2p) \u21d4 p\u00b2\u22124p+1\u22650, true."
+    }
+  },
+  "certified_census": {
+    "phi_bound": {
+      "certified_for_listed_primes": true,
+      "proved_general": false,
+      "by_p": {
+        "3": {
+          "max_abs_phi": 2,
+          "bound_2_p_minus_2": 2,
+          "phi_values": [
+            -2,
+            2
+          ],
+          "n_kappa1_seen": 180,
+          "ok": true,
+          "full_enum": true
+        },
+        "5": {
+          "max_abs_phi": 6,
+          "bound_2_p_minus_2": 6,
+          "phi_values": [
+            -6,
+            -2,
+            2,
+            6
+          ],
+          "n_kappa1_seen": 11700,
+          "ok": true,
+          "full_enum": true
+        },
+        "7": {
+          "max_abs_phi": 10,
+          "bound_2_p_minus_2": 10,
+          "phi_values": [
+            -10,
+            -6,
+            -2,
+            2,
+            6,
+            10
+          ],
+          "n_kappa1_seen": 3054,
+          "ok": true,
+          "full_enum": false
+        },
+        "11": {
+          "max_abs_phi": 18,
+          "bound_2_p_minus_2": 18,
+          "phi_values": [
+            -18,
+            -14,
+            -10,
+            -6,
+            -2,
+            2,
+            6,
+            10,
+            14,
+            18
+          ],
+          "n_kappa1_seen": 3026,
+          "ok": true,
+          "full_enum": false
+        }
+      },
+      "note": "Census only. General |\u03c6|\u22642(p\u22122) on |\u03ba|=1 still OPEN (Weil gives only |\u03c6|\u22642p+1 on finite Paley 4-sets)."
+    },
+    "T2_paley_p5": {
+      "p": 5,
+      "n_kappa1": 11700,
+      "mismatches": 0,
+      "identity_holds": true,
+      "not_general_proof": true
+    }
+  },
+  "hinge": {
+    "residual_ii_closed": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "T2_kappa_identity_proved": true,
+    "phi_bound_general_proved": false,
+    "mu4_bound_general_proved": false,
+    "open": "Prove |\u03c6|\u22642(p\u22122) on |\u03ba|=1 for all p\u22655, then |\u03bc\u2084|\u22641/(2p) (via master / closed form), or alternate residual-(i) Farkas.",
+    "mu4_thr_p5": "1/10"
+  },
+  "F3": "Do not flip residual/E1/L without general |\u03c6| bound + |\u03bc\u2084| or alternate Max+-free residual-(i) proof."
+}

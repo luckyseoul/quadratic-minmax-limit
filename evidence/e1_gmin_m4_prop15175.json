@@ -1,0 +1,102 @@
+{
+  "title": "Prop 15.175 G\u03bc reformulation; |G\u03bc|\u22641/p sufficient, still OPEN",
+  "proved": {
+    "H_eq_C_twist_Gmu": true,
+    "sufficient_gmu_bound_implies_H": true,
+    "Gmu_diag_1_wedge_0": true,
+    "bound_Gmu_le_1_over_p_general": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "implication_by_p": {
+      "3": {
+        "p": 3,
+        "gmu_abs_thr": "1/3",
+        "H_thr": "-1/3",
+        "implication": "|G\u03bc_disj|\u22641/p \u21d2 H_disj\u2265\u22121/p",
+        "proved_implication": true,
+        "bound_proved_general": false
+      },
+      "5": {
+        "p": 5,
+        "gmu_abs_thr": "1/5",
+        "H_thr": "-1/5",
+        "implication": "|G\u03bc_disj|\u22641/p \u21d2 H_disj\u2265\u22121/p",
+        "proved_implication": true,
+        "bound_proved_general": false
+      },
+      "7": {
+        "p": 7,
+        "gmu_abs_thr": "1/7",
+        "H_thr": "-1/7",
+        "implication": "|G\u03bc_disj|\u22641/p \u21d2 H_disj\u2265\u22121/p",
+        "proved_implication": true,
+        "bound_proved_general": false
+      },
+      "11": {
+        "p": 11,
+        "gmu_abs_thr": "1/11",
+        "H_thr": "-1/11",
+        "implication": "|G\u03bc_disj|\u22641/p \u21d2 H_disj\u2265\u22121/p",
+        "proved_implication": true,
+        "bound_proved_general": false
+      },
+      "13": {
+        "p": 13,
+        "gmu_abs_thr": "1/13",
+        "H_thr": "-1/13",
+        "implication": "|G\u03bc_disj|\u22641/p \u21d2 H_disj\u2265\u22121/p",
+        "proved_implication": true,
+        "bound_proved_general": false
+      },
+      "17": {
+        "p": 17,
+        "gmu_abs_thr": "1/17",
+        "H_thr": "-1/17",
+        "implication": "|G\u03bc_disj|\u22641/p \u21d2 H_disj\u2265\u22121/p",
+        "proved_implication": true,
+        "bound_proved_general": false
+      }
+    }
+  },
+  "certified_census": {
+    "p3": {
+      "p": 3,
+      "n": 10,
+      "N_tot": 24,
+      "E2_is_I": true,
+      "Gmu_wedge_zero": true,
+      "max_abs_Gmu_disj": "1/3",
+      "min_H_disj": "-1/3",
+      "gmu_le_1_over_p": true,
+      "H_ge_minus_1_over_p": true,
+      "sufficient_form_holds_census": true,
+      "certified_census_only": true,
+      "not_general_proof": true
+    },
+    "p5": {
+      "p": 5,
+      "n": 26,
+      "N_tot": 520,
+      "E2_is_I": true,
+      "Gmu_wedge_zero": true,
+      "max_abs_Gmu_disj": "11/65",
+      "min_H_disj": "-3/65",
+      "gmu_le_1_over_p": true,
+      "H_ge_minus_1_over_p": true,
+      "sufficient_form_holds_census": true,
+      "certified_census_only": true,
+      "not_general_proof": true
+    }
+  },
+  "hinge": {
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "sufficient_form": "|G\u03bc_disj| \u2264 1/p  \u21d2  H_disj \u2265 \u22121/p",
+    "bound_proved_general": false,
+    "open": "Prove |G\u03bc_ab| \u2264 1/p on disjoint edge pairs for all primes p\u22655 (Max+-free), or prove H\u2265\u22121/p / alternate residual (i)/(ii)."
+  },
+  "F3": "Do not flip residual/E1/L without general |G\u03bc|\u22641/p or H\u2265\u22121/p"
+}

@@ -14,24 +14,20 @@ PROVED (Fraction / linear algebra, Max+-free):
      so G0 ≽ 0. Actual Gsum = G0 + mean-zero C-refinement (15.158: not a scheme).
   E. Matching PSD: for any matching M of size r≥2,
      average_{pairs in M} Gsum ≥ −2/(r−1).
-  F. **Correct dual-equality Farkas threshold.** Dual equality forces
-     (Gsum x)_e = 6/p−4 with x=1_G (includes diagonal 2), i.e.
-     sum_{e'∈G\\{e}} Gsum_ee' = 6/p−6.
-     Off-diag entries ≥ μ (wedges are 0 ≥ μ when μ≤0) ⇒ sum ≥ (k−1)μ
-     with k=3p−2. Obstruction need_off < (k−1)μ rearranges to the
-     p-independent form **μ > −2/p**. Equality μ=−2/p makes need_off=(k−1)μ
-     (borderline; needs saturation analysis).
+  F. Dual equality with e∉G: (Gsum x)_e = 6/p−4, x=1_G (**no** diagonal).
+     **Original 15.172 claim μ>−2/p assumed e∈G (invalid).** Superseded by
+     Prop **15.176**: μ_*=(6/p−4)/k; **−1/p suffices**, **−2/p does not**.
   G. Candidate scheme LB −12/(p n) is **false at p=3** as a universal-prime
-     bound (census min = −2/3 = −2/p < −12/(3·10)=−2/5). So scheme-min cannot
-     be the general proof (also blocked by 15.158).
+     bound (census min = −2/3 < −12/(3·10)=−2/5). Not a general proof (15.158).
+     Still beats μ_* for p≥5.
 
 CERTIFIED (finite Max+ census, not general proof):
-  H. p=3: disj min Gsum = −2/p (tight for the −2/p threshold).
-  I. p=5: disj min Gsum = −6/65 = −12/(p n) > −2/p; Farkas strict under either LB.
+  H. p=3: disj min Gsum = −2/3.
+  I. p=5: disj min Gsum = −6/65 = −12/(p n) > −1/p > μ_*.
 
 OPEN (hinge remains):
-  J. Prove for all primes p≥5 that disj Gsum_ab ≥ −2/p (or any μ > −2/p),
-     Max+-free — **or** alternate residual-(i)/(ii) avoiding dual-equality Farkas.
+  J. Prove for all primes p≥5 that disj Gsum_ab ≥ −1/p (or any μ > μ_*),
+     Max+-free — **or** alternate residual-(i)/(ii). See Prop 15.176.
   Until then: gsum_disj_lb_proved_general() stays False; E1/L OPEN.
 
 Writes evidence/e1_gmin_m4_prop15172.json
@@ -140,9 +136,10 @@ def matching_psd_bound(p: int) -> dict:
 
 def farkas_threshold_mu(p: int) -> Fraction:
     """
-    Dual equality impossible if every off-diagonal Gsum ≥ μ with μ > −2/p.
+    SUPERSEDED wrong threshold −2/p (assumed e∈G). Kept for API/tests.
 
-    Derivation: need_off = 6/p − 6 = (k−1)μ_eq with μ_eq = −2/p, k=3p−2.
+    Correct e∉G threshold is mu_star in prop15176:
+    μ_* = (6/p−4)/k = (6−4p)/(p(3p−2)); sufficient LB Gsum≥−1/p.
     """
     return Fraction(-2, p)
 

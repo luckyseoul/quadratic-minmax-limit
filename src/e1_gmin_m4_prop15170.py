@@ -141,13 +141,15 @@ def gsum_disj_lb_status() -> dict:
         "proved_disj_lb_general": gsum_disj_lb_proved_general(),
         "certified_disj_at_p5": True,  # −6/65 = −12/(5·26)
         "scheme_justification_valid": False,  # 15.158 Max+ not IP-scheme
-        "farkas_threshold_mu": "-2/p",  # Prop 15.172: need μ > −2/p (strict)
+        "farkas_threshold_mu_star": "(6/p-4)/k  (Prop 15.176; e∉G)",
+        "sufficient_lb": "Gsum ≥ -1/p (beats μ_* for p≥5)",
+        "superseded_wrong_172_threshold": "-2/p (does not beat μ_*)",
         "candidate_minus_12_over_pn_false_at_p3": True,
         "note": (
-            "Gap: dual-equality Farkas needs disj Gsum μ > −2/p (15.172), or the "
-            "stronger candidate −12/(pn) for all p≥5. Only adjacent zero is proved; "
-            "pointwise disj LB not proved in general (15.158 kills scheme-min; "
-            "candidate fails at p=3). See prop15172."
+            "Gap: dual-equality Farkas (e∉G) needs disj Gsum μ > μ_*=(6/p-4)/k "
+            "(15.176). Sufficient: Gsum≥−1/p. Candidate −12/(pn) also beats μ_* "
+            "but unproved general (15.158; false at p=3). Old 15.172 μ>−2/p is "
+            "invalid for e∉G."
         ),
     }
 

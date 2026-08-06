@@ -1,0 +1,227 @@
+{
+  "title": "Prop 15.188 T\u00b2\u03c6 census; \u03bc_part master; p=7 Max\u00b1; target |\u03bc|\u22642/n; residual (i) OPEN",
+  "proved": {
+    "global_T2_kappa": true,
+    "T2_phi_certified_p3_p5": true,
+    "mu_part_solves_master_certified": true,
+    "phi_bound_all_p": true,
+    "particular_majorant_le_1_over_2p": true,
+    "two_over_n_le_1_over_2p": true,
+    "actual_mu4_le_two_over_n_general": false,
+    "actual_mu4_le_1_over_2p_general": false,
+    "gsum_disj_lb_proved_general": false,
+    "residual_i_closed": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "global_T2_kappa": {
+      "proved": true,
+      "theorem": "Any symmetric conference: T\u00b2\u03ba = \u221224\u03c6 + 48\u03ba on every 4-set. C\u00b2 reduction of T(\u22126 star); K4 remainder = 48\u03ba on all 64 edge-labelings (|\u03ba|=1 and |\u03ba|=3).",
+      "n_kappa1_labelings": 48,
+      "n_kappa3_labelings": 16,
+      "rest_equals_48_kappa_all": true
+    },
+    "two_over_n_le_thr": {
+      "proved": true,
+      "theorem": "2/(p\u00b2+1) \u2264 1/(2p) for all primes p\u22655 \u21d4 p\u00b2\u22124p+1 \u2265 0 (value 6 at p=5; increasing for p\u22653).",
+      "by_p_sample": {
+        "5": {
+          "two_over_n": "1/13",
+          "mu4_thr": "1/10",
+          "two_over_n_le_thr": true,
+          "p2_minus_4p_plus_1": 6
+        },
+        "7": {
+          "two_over_n": "1/25",
+          "mu4_thr": "1/14",
+          "two_over_n_le_thr": true,
+          "p2_minus_4p_plus_1": 22
+        },
+        "11": {
+          "two_over_n": "1/61",
+          "mu4_thr": "1/22",
+          "two_over_n_le_thr": true,
+          "p2_minus_4p_plus_1": 78
+        },
+        "13": {
+          "two_over_n": "1/85",
+          "mu4_thr": "1/26",
+          "two_over_n_le_thr": true,
+          "p2_minus_4p_plus_1": 118
+        },
+        "17": {
+          "two_over_n": "1/145",
+          "mu4_thr": "1/34",
+          "two_over_n_le_thr": true,
+          "p2_minus_4p_plus_1": 222
+        },
+        "19": {
+          "two_over_n": "1/181",
+          "mu4_thr": "1/38",
+          "two_over_n_le_thr": true,
+          "p2_minus_4p_plus_1": 286
+        }
+      },
+      "n_primes": 20
+    },
+    "particular_majorant": {
+      "proved": true,
+      "theorem": "|\u03c6|\u22642(p\u22122), |\u03ba|=1 \u21d2 |\u03bc_part|\u2264(p\u00b2+4p\u22129)/(p\u00b2(p\u00b2\u22125))\u22641/(2p) for all primes p\u22655 (cubic p\u00b3\u22122p\u00b2\u221213p+18>0 on [5,\u221e)).",
+      "by_p": {
+        "5": {
+          "majorant": "9/125",
+          "mu4_thr": "1/10",
+          "majorant_le_thr": true,
+          "max_explicit_part": "9/125",
+          "explicit_le_majorant": true
+        },
+        "7": {
+          "majorant": "17/539",
+          "mu4_thr": "1/14",
+          "majorant_le_thr": true,
+          "max_explicit_part": "17/539",
+          "explicit_le_majorant": true
+        },
+        "11": {
+          "majorant": "39/3509",
+          "mu4_thr": "1/22",
+          "majorant_le_thr": true,
+          "max_explicit_part": "39/3509",
+          "explicit_le_majorant": true
+        },
+        "13": {
+          "majorant": "53/6929",
+          "mu4_thr": "1/26",
+          "majorant_le_thr": true,
+          "max_explicit_part": "53/6929",
+          "explicit_le_majorant": true
+        },
+        "17": {
+          "majorant": "87/20519",
+          "mu4_thr": "1/34",
+          "majorant_le_thr": true,
+          "max_explicit_part": "87/20519",
+          "explicit_le_majorant": true
+        },
+        "19": {
+          "majorant": "107/32129",
+          "mu4_thr": "1/38",
+          "majorant_le_thr": true,
+          "max_explicit_part": "107/32129",
+          "explicit_le_majorant": true
+        },
+        "23": {
+          "majorant": "153/69299",
+          "mu4_thr": "1/46",
+          "majorant_le_thr": true,
+          "max_explicit_part": "153/69299",
+          "explicit_le_majorant": true
+        },
+        "29": {
+          "majorant": "237/175769",
+          "mu4_thr": "1/58",
+          "majorant_le_thr": true,
+          "max_explicit_part": "237/175769",
+          "explicit_le_majorant": true
+        }
+      },
+      "n_primes": 10,
+      "cubic_positive": true
+    },
+    "phi": {
+      "proved": true,
+      "theorem": "Paley |\u03ba|=1 finite 4-set: every cross-ratio avoids \u03c7-class (1,1) (dichotomy); hence |H|\u22602p (supersingular double-residue); hence |H|\u22642p\u22124=2(p\u22122) (mod-4 Hasse ladder); hence |\u03c6|=|H|\u22642(p\u22122). All odd primes p.",
+      "depends_on": [
+        "H_mod_4",
+        "hasse",
+        "supersingular_double_residue",
+        "kappa_cr_dichotomy",
+        "phi_eq_abs_H"
+      ]
+    },
+    "implication": {
+      "proved_implication": true,
+      "bound_proved_general": false,
+      "chain": "|\u03bc|\u22642/n \u22641/(2p) (p\u22655) \u21d2 Gsum\u2265\u22122\u00b7(1/(2p))=\u22121/p \u21d2 need 6/p\u22124 < k\u00b7(\u22121/p) for residual-(i) Farkas (15.176).",
+      "minus_1_over_p_suffices": true
+    }
+  },
+  "certified": {
+    "T2_phi": {
+      "certified": true,
+      "proved_general": false,
+      "by_p": {
+        "3": {
+          "max_err": 0.0,
+          "ok": true,
+          "formula": "4(p^2+3)(phi-2kappa)"
+        },
+        "5": {
+          "max_err": 0.0,
+          "ok": true,
+          "formula": "4(p^2+3)(phi-2kappa)"
+        }
+      },
+      "note": "Full enum p=3,5. Symbolic C\u00b2 proof of T\u00b2\u03c6 still open."
+    },
+    "mu_part_master": {
+      "certified": true,
+      "proved_general": false,
+      "note": "Holds when T\u00b2\u03c6=4(p\u00b2+3)(\u03c6\u22122\u03ba); certified p=3,5,7.",
+      "by_p": {
+        "3": {
+          "max_master_residual": 1.4210854715202004e-14,
+          "ok": true
+        },
+        "5": {
+          "max_master_residual": 2.842170943040401e-14,
+          "ok": true
+        }
+      }
+    },
+    "p5": {
+      "p": 5,
+      "formula_on_kappa1": "(4*kappa - phi)/(p*n)",
+      "max_abs_mu": "3/65",
+      "mu4_thr": "1/10",
+      "two_over_n": "1/13",
+      "beats_mu4_thr": true,
+      "beats_two_over_n": true,
+      "not_general_proof": true
+    },
+    "p7": {
+      "p": 7,
+      "n": 50,
+      "abs_Max_plus": 11452,
+      "abs_Max_minus": 11452,
+      "n_kappa1": 176400,
+      "max_abs_mu_kappa1": "109/2863",
+      "max_abs_mu_float": 0.03807195249738037,
+      "mu4_thr": "1/14",
+      "two_over_n": "1/25",
+      "majorant_mu_part": "17/539",
+      "beats_mu4_thr": true,
+      "beats_two_over_n": true,
+      "not_equal_mu_part": true,
+      "not_bounded_by_mu_part_pointwise": true,
+      "n_sets_act_gt_part_abs": 29400,
+      "varies_within_kappa_phi_class": true,
+      "not_general_proof": true
+    }
+  },
+  "hinge": {
+    "residual_ii_closed": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "phi_bound_all_p": true,
+    "particular_majorant_le_thr": true,
+    "two_over_n_le_thr": true,
+    "actual_mu4_le_two_over_n_general": false,
+    "actual_mu4_le_1_over_2p_general": false,
+    "open": "Prove |\u03bc_actual|\u22642/(p\u00b2+1) (or \u22641/(2p)) on |\u03ba|=1 for all primes p\u22655 Max+-free; then flip residual_i / gsum / E1 / L.",
+    "corrected": "|\u03bc_actual|\u2270|\u03bc_part| pointwise (false at p=7); use 2/n target."
+  },
+  "F3": "Do not flip residual/E1/L without Max+-free |\u03bc|\u22642/n or \u22641/(2p). Census-only evidence is not a general proof. |\u03bc_actual|\u2270|\u03bc_part| pointwise (p=7 counterexample)."
+}

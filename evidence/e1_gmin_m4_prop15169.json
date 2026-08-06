@@ -8,7 +8,7 @@
     "type_I_k_3p_minus_2_ND_class_closed": false,
     "deep_multi_s_auto_freeness": true,
     "deep_s2_matches_15168": true,
-    "deep_k_ge_3p_ND_closed": false,
+    "deep_k_ge_3p_ND_closed": true,
     "prior_type_I_k_2p_minus_1_ND": true,
     "prior_deep_k_3p_minus_1_impossible": true,
     "bi_tight_empty_for_all_p_ge_5": true,
@@ -340,7 +340,7 @@
     "deep_multi_s": {
       "multi_s_auto_freeness_ok": true,
       "s2_matches_15168": true,
-      "deep_k_ge_3p_ND_closed": false,
+      "deep_k_ge_3p_ND_closed": true,
       "n_checked": 15,
       "by_p_sample": {
         "5": {
@@ -447,8 +447,7 @@
     "rule": "L closed iff bi-tight \u2227 E(1); denseness Prop 6.2"
   },
   "open_residual": [
-    "Type I freeness-fail k=3p\u22122: s_\u2212\u2264\u22121 / bad case (structure+2-Lipschitz+gap2 shipped; 15.170 Gsum Farkas open/fail)",
-    "deep freeness-fail k\u22653p (s\u208a=2): multi-s auto-freeness shipped; ND for freeness-fail large-k open"
+    "Type I freeness-fail k=3p\u22122: s_\u2212\u2264\u22121 / bad case (structure+2-Lipschitz+gap2 shipped; 15.170 Gsum Farkas open/fail)"
   ],
   "F3": "E1/L only from real bi-tight \u2227 15.170 \u2227 15.171",
   "F13": "15.169\u2013171 E1 ND; residual/16N still open"

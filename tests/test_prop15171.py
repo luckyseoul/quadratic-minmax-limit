@@ -100,27 +100,27 @@ def test_dual_params_mass_formula():
             assert pr["can_freeness_fail"] == (a <= thr)
 
 
-def test_residual_ii_gated_on_gsum_lb():
-    """General residual-(ii) close requires proved disj Gsum LB."""
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
+def test_residual_ii_closed_by_freeze_no_gsum():
+    """Residual (ii) closed via 15.179 freeze; does not need Gsum LB."""
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
     for p in (5, 7, 11, 13, 17, 19, 23):
         r = deep_s2_freeness_fail_k_ge_3p_ND(p)
-        # Conditional structure under candidate LB still checkable
         assert r["fail_eq_k_3p_minus_1_empty"] is True
         assert r["auto_freeness_at_3p_minus_2"] is True
     RII = prove_residual_ii()
-    assert RII["residual_ii_closed"] is False
-    assert RII["gsum_disj_lb_required"] is True
+    assert RII["residual_ii_closed"] is True
+    assert RII["gsum_disj_lb_required"] is False
 
 
 def test_e1_and_L_wire_honest_open():
-    """E1/L closed only if type_I ∧ deep_k≥3p ∧ bi-tight — currently open."""
+    """E1/L open: residual (i) still needs Gsum; residual (ii) closed."""
     assert type_I_k_3p_minus_2_closed_general() is False
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
     bt = bitight_from_majorization(5)["bitight_empty"]
     assert bt is True
     assert e1_closed_general() is False
-    assert e1_open_residuals()
+    opens = e1_open_residuals()
+    assert any("Type I" in s or "3p−2" in s or "3p-2" in s for s in opens)
     w = main_L_from_e1(e1=False, bitight=True)
     assert w["L_closed"] is False
     assert w["L_status"] == "OPEN"
@@ -130,10 +130,10 @@ def test_e1_and_L_wire_honest_open():
 
 def test_main():
     out = main()
-    assert out["proved"]["deep_s2_freeness_fail_k_ge_3p_ND"] is False
+    assert out["proved"]["deep_s2_freeness_fail_k_ge_3p_ND"] is True
     assert out["proved"]["type_I_k_3p_minus_2_closed"] is False
     assert out["proved"]["E1_closed_general"] is False
     assert out["proved"]["L_closed"] is False
     assert out["L_status"] == "OPEN"
-    assert out["open_residual"]
+    assert out["open_residual"]  # residual (i) still open
     assert out["proved"]["residual_closed_general"] is False
