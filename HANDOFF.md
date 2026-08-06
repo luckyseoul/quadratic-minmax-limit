@@ -30,7 +30,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 **Done (2026-08-06):** gap named (Gsum disj LB / 15.158); claim retracted OPEN; short package `evidence/share/denseness_path_package.md`; load-bearing tests; 3 cold AI passes → NOT_PROVED + honest OPEN.
 
 **Required opens (prize path):**  
-1. Residual **(i):** Max+-free \(|\mu|\le2/n\) (or \(\le1/(2p)\)) on \(|\kappa|=1\), **or** dual-eq ker-box empty for all \(p\ge5\).  
+1. Residual **(i) preferred (15.194):** Max+-free row+mass \(\max\kappa_e<2-\alpha\) for all \(p\ge5\) (census blocks p=5,7 at ~1.19/1.17), **or** full ker-box / \(|\mu|\le2/n\) / Gsum\(\ge-1/p\). Pure \(N_e<4-6/p\) **fails** Paley census — dead as stated.  
 2. Residual **(ii) full:** prove exhaustiveness (15.193) or close multi-level / non-affine freeness-fail. Affine branch **done** (15.179).  
 3. Flip hinges → E1/L predicates only after (1)+(2).  
 4. AI-test package after CLOSED.  
@@ -57,7 +57,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **E(1) OPEN:** residual **(ii)** affine branch CLOSED (15.179); full residual (ii) OPEN (15.193 exhaustiveness). Residual **(i)** Type I dual-eq still blocked (`gsum_disj_lb_proved_general=False`). **L OPEN.**
 
-**Primary denseness-path hinge (general primes \(p\ge5\)):** prove \(|\mu_4|\le2/n\) (or dual-eq ker-box empty). Latest modules: `prop15186.py`–`prop15192.py`. Package: `evidence/share/denseness_path_package.md`. Session notes: `evidence/SESSION_HANDOFF_2026-08-06_residual_i.md`.
+**Primary denseness-path hinge (general primes \(p\ge5\)):** prove row+mass \(\max\kappa_e<2-\alpha\) (15.194; preferred over pointwise Gsum), or full ker-box empty, or \(|\mu|\le2/n\). Latest modules: `prop15186.py`–`prop15194.py`. Package: `evidence/share/denseness_path_package.md`. Session notes: `evidence/SESSION_HANDOFF_2026-08-06_residual_i.md`.
 
 **Optional residual/16N (still OPEN, not required for denseness L):**
 \[

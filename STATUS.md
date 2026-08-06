@@ -15,13 +15,14 @@
 
 ### Fatal gaps (honest)
 
-1. Residual **(i)** dual-equality Farkas (e∉G, Type I \(k=3p-2\)) needs pointwise disj \(\mathrm{Gsum}>\mu_*=(6/p-4)/k\) (Prop **15.176**); sufficient \(\mathrm{Gsum}\ge-1/p\) or \(|\mu|\le2/n\) or ker-box empty.
+1. Residual **(i)** dual-equality: needs Max+-free row+mass max \(\kappa_e<2-\alpha\) (15.194), or full ker-box empty, or \(|\mu|\le2/n\), or disj \(\mathrm{Gsum}\ge-1/p\). Pure \(N_e<4-6/p\) **fails** Paley census.
 2. Residual **(ii)** full: affine dual two-level branch CLOSED by freeze-to-tight (**15.179**); multi-level / non-affine freeness-fail still open until exhaustiveness (**15.193**).
 
-### Remainder progress (15.172–193)
+### Remainder progress (15.172–194)
 
 - **15.179 residual (ii) affine branch CLOSED:** dual two-level freeness-fail affine \(\Rightarrow S_H\equiv3\Rightarrow k=3p-1\); impossible for \(k\ge3p\); fail-eq empty under bi-tight.  
 - **15.193 residual (ii) exhaustiveness OPEN:** freeness-fail does **not** force \(S\in\{2,4\}\) and \(f_e=3-S\); (ii-a) multi-level and (ii-b) non-affine two-level remain. Full residual (ii) **not** closed.  
+- **15.194 row negative-mass (residual i):** proved sufficient lemma \(N_e<4-6/p\Rightarrow\) dual-eq empty (independent box min). **Census:** pure \(N_e\) target **fails** at \(p=3,5,7\) (\(N_e=16/3,384/65,\approx13>\) thr). Refined **row+mass LP** max \(\kappa_e\approx1.19,1.17<\) need at \(p=5,7\) (blocks; evidence only). General Max+-free row+mass / ker-box still OPEN.  
 - Avg disj Gsum \(=2/(n-3)\); \(G_0\) PSD; **15.176** μ_* / −1/p sufficiency.  
 - **15.177–178:** |μ₄| hinge form; star identity; dual-eq \(n_d\le1\) kill; \(n_d=2\) wedge kill for \(p\ge7\).  
 - **15.180:** dual-eq Q_pairs=30−6p−24/p<0; open dual-eq core is \(n_d\ge2\) after PSD/score filters.  
@@ -44,7 +45,7 @@
 
 ### Required opens (denseness prize path)
 
-1. **Math residual (i):** Prove disj Gsum \(\ge-1/p\) (or \(|\mu|\le2/n\), or ker-box empty) for Type I dual-eq (15.176–192).  
+1. **Math residual (i) (preferred 15.194):** Prove Max+-free that row+mass \(\max\kappa_e<2-\alpha\) for all \(p\ge5\) (census ~1.19/1.17 at p=5,7), **or** full ker-box empty / \(|\mu|\le2/n\) / \(\mathrm{Gsum}\ge-1/p\). Do **not** pursue pure \(N_e<4-6/p\) (fails Paley).  
 2. **Math residual (ii):** Prove exhaustiveness lemma (15.193): freeness-fail \(\Rightarrow S\in\{2,4\}\) and \(f_e=3-S\) on Max+, **or** close multi-level / non-affine subcases by other ND. Affine branch already done (15.179).  
 3. **Predicates:** Flip hinges → residual (i) ∧ residual (ii) full → E1 → L only after (1)+(2).  
 4. **AI-test:** Re-run on short package only after L predicates CLOSED.  

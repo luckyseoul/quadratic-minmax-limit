@@ -1,0 +1,236 @@
+{
+  "title": "Prop 15.194 row negative-mass obstruction: sufficient lemma proved; pure N_e target fails Paley census; row+mass LP blocks p=5,7; residual (i) still OPEN",
+  "proved": {
+    "row_negative_mass_sufficient_lemma": true,
+    "threshold_algebra": true,
+    "pure_N_e_lt_4_minus_6_over_p_general": false,
+    "row_mass_lp_blocks_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "sufficient_lemma": {
+      "proved": true,
+      "theorem": "Under Gsum_ee=2, wedges=0, row sum n: if for every edge e the disj negative mass N_e < 4\u22126/p, then independent box min of the e-row forces \u03ba_e \u2264 (\u03b1(n\u22122)+N_e)/2 < 2\u2212\u03b1, so dual-eq \u03ba_e=2\u2212\u03b1 is impossible. Continuous ker-box empty \u21d2 residual (i) closes. No pointwise Gsum LB and no |\u03bc\u2084| bound required.",
+      "proof_sketch": [
+        "P_e \u2212 N_e = n\u22122",
+        "2\u03ba_e + \u2211 a_f \u03ba_f = 0",
+        "\u2211 a_f \u03ba_f \u2265 \u2212\u03b1 P_e \u2212 (1\u2212\u03b1) N_e  (box min)",
+        "\u03ba_e \u2264 (\u03b1(n\u22122)+N_e)/2",
+        "\u03ba_e < 2\u2212\u03b1  \u21d4  N_e < 4\u22126/p"
+      ],
+      "by_p_sample": {
+        "5": {
+          "thr": "14/5",
+          "ub_at_thr": "127/65",
+          "need": "127/65",
+          "equality_at_thr": true,
+          "strict_blocks": true,
+          "alpha_n_eq_6_over_p": true
+        },
+        "7": {
+          "thr": "22/7",
+          "ub_at_thr": "347/175",
+          "need": "347/175",
+          "equality_at_thr": true,
+          "strict_blocks": true,
+          "alpha_n_eq_6_over_p": true
+        },
+        "11": {
+          "thr": "38/11",
+          "ub_at_thr": "1339/671",
+          "need": "1339/671",
+          "equality_at_thr": true,
+          "strict_blocks": true,
+          "alpha_n_eq_6_over_p": true
+        },
+        "13": {
+          "thr": "46/13",
+          "ub_at_thr": "2207/1105",
+          "need": "2207/1105",
+          "equality_at_thr": true,
+          "strict_blocks": true,
+          "alpha_n_eq_6_over_p": true
+        }
+      },
+      "n_primes": 20,
+      "note": "Sufficient condition only. Census (E) shows N_e > thr for Paley at p=3,5,7, so the pure N_e target does not hold there."
+    },
+    "threshold_checks": {
+      "5": {
+        "p": 5,
+        "N_e_threshold": "14/5",
+        "need_kappa_e": "127/65",
+        "ub_at_threshold": "127/65",
+        "ub_equals_need_at_thr": true,
+        "proved": true
+      },
+      "7": {
+        "p": 7,
+        "N_e_threshold": "22/7",
+        "need_kappa_e": "347/175",
+        "ub_at_threshold": "347/175",
+        "ub_equals_need_at_thr": true,
+        "proved": true
+      },
+      "11": {
+        "p": 11,
+        "N_e_threshold": "38/11",
+        "need_kappa_e": "1339/671",
+        "ub_at_threshold": "1339/671",
+        "ub_equals_need_at_thr": true,
+        "proved": true
+      },
+      "13": {
+        "p": 13,
+        "N_e_threshold": "46/13",
+        "need_kappa_e": "2207/1105",
+        "ub_at_threshold": "2207/1105",
+        "ub_equals_need_at_thr": true,
+        "proved": true
+      }
+    }
+  },
+  "certified": {
+    "N_e_census": {
+      "3": {
+        "p": 3,
+        "edge": [
+          0,
+          1
+        ],
+        "n_disj": 28,
+        "N_e": "16/3",
+        "P_e": "40/3",
+        "P_minus_N": "8",
+        "n_minus_2": 8,
+        "row_sum_disj_ok": true,
+        "threshold": "2",
+        "N_e_lt_threshold": false,
+        "indep_ub_kappa_e": "52/15",
+        "need_kappa_e": "9/5",
+        "indep_ub_blocks_dual_eq": false,
+        "value_multiplicities": {
+          "-2/3": 8,
+          "2/3": 20
+        },
+        "exact": true,
+        "proved_general": false
+      },
+      "5": {
+        "p": 5,
+        "edge": [
+          0,
+          1
+        ],
+        "n_disj": 276,
+        "N_e": "384/65",
+        "P_e": "1944/65",
+        "P_minus_N": "24",
+        "n_minus_2": 24,
+        "row_sum_disj_ok": true,
+        "threshold": "14/5",
+        "N_e_lt_threshold": false,
+        "indep_ub_kappa_e": "228/65",
+        "need_kappa_e": "127/65",
+        "indep_ub_blocks_dual_eq": false,
+        "value_multiplicities": {
+          "-6/65": 48,
+          "-2/65": 48,
+          "2/65": 24,
+          "6/65": 96,
+          "22/65": 60
+        },
+        "exact": true,
+        "proved_general": false
+      },
+      "7": {
+        "p": 7,
+        "edge": [
+          0,
+          1
+        ],
+        "n_disj": 1128,
+        "N_e": "37440/2863",
+        "P_e": "174864/2863",
+        "P_minus_N": "48",
+        "n_minus_2": 48,
+        "row_sum_disj_ok": true,
+        "threshold": "22/7",
+        "N_e_lt_threshold": false,
+        "indep_ub_kappa_e": "71064/10225",
+        "need_kappa_e": "347/175",
+        "indep_ub_blocks_dual_eq": false,
+        "value_multiplicities": {
+          "-218/2863": 48,
+          "-130/2863": 96,
+          "-122/2863": 48,
+          "-90/2863": 96,
+          "90/2863": 192,
+          "122/2863": 96,
+          "130/2863": 192,
+          "218/2863": 96,
+          "290/2863": 72,
+          "394/2863": 48,
+          "418/2863": 144
+        },
+        "exact": false,
+        "proved_general": false
+      }
+    },
+    "row_mass_lp": {
+      "3": {
+        "p": 3,
+        "max_kappa_e": 2.8000000000000016,
+        "max_kappa_e_frac": "14/5",
+        "need": 1.8,
+        "need_frac": "9/5",
+        "blocks_dual_eq": false,
+        "indep_ub_kappa_e": 3.466666666666667,
+        "success": true,
+        "proved_general": false,
+        "note": "e-row + mass + box only (not full ker). Blocks dual-eq at p=5,7; not at p=3."
+      },
+      "5": {
+        "p": 5,
+        "max_kappa_e": 1.189140271493211,
+        "max_kappa_e_frac": "1314/1105",
+        "need": 1.9538461538461538,
+        "need_frac": "127/65",
+        "blocks_dual_eq": true,
+        "indep_ub_kappa_e": 3.5076923076923077,
+        "success": true,
+        "proved_general": false,
+        "note": "e-row + mass + box only (not full ker). Blocks dual-eq at p=5,7; not at p=3."
+      },
+      "7": {
+        "p": 7,
+        "max_kappa_e": 1.16589886560278,
+        "max_kappa_e_frac": "108319/92906",
+        "need": 1.9828571428571429,
+        "need_frac": "347/175",
+        "blocks_dual_eq": true,
+        "indep_ub_kappa_e": 6.950024449877751,
+        "success": true,
+        "proved_general": false,
+        "note": "e-row + mass + box only (not full ker). Blocks dual-eq at p=5,7; not at p=3."
+      }
+    },
+    "pure_N_e_fails_at_p3_p5": true,
+    "row_mass_blocks_at_p5_p7": true
+  },
+  "hinge": {
+    "row_negative_mass_sufficient_lemma": true,
+    "pure_N_e_lt_thr_for_paley": false,
+    "row_mass_lp_blocks_p5_p7": true,
+    "row_mass_lp_blocks_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove Max+-free that row+mass max \u03ba_e < 2\u2212\u03b1 for all p\u22655 (or full ker-box empty, or |\u03bc|\u22642/n). Pure N_e < 4\u22126/p fails Paley census at p=3,5,7 and is not a viable target as stated."
+  },
+  "F3": "Do not flip residual (i)/E1/L: pure N_e < 4\u22126/p fails census; row+mass LP block at p=5,7 is evidence, not a general proof.",
+  "audit_note": "Sufficient lemma is the four-line box min. Pure L\u00b9 target is too weak for Paley. Prefer proving row+mass max \u03ba_e < 2\u2212\u03b1 Max+-free (census ~1.19/1.17 at p=5,7 vs need ~1.95/1.98)."
+}
