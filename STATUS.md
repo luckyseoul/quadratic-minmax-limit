@@ -30,9 +30,13 @@ Dual-equality Farkas needs pointwise disj \(\mathrm{Gsum}>\-2/p\) (Prop **15.172
 
 `evidence/share/denseness_path_package.md`
 
-### What's left for prize
+### Required opens (denseness prize path)
 
-1. Prove disj Gsum \(\mu>-2/p\) Max+-free (or alternate residual i/ii).  
-2. Re-close E1/L predicates only after that.  
-3. Re-run AI-test expecting “essentially correct.”  
-4. Ping Paata with package + GitHub.
+1. **Math:** Prove \(H_{ab}\ge-1/p\) for disj edges, all primes \(p\ge5\) (Max+-free; Prop 15.173 frame), **or** alternate residual (i)/(ii).  
+2. **Predicates:** Flip `gsum_disj_lb_proved_general` → residual i/ii → E1 → L only after (1).  
+3. **AI-test:** Re-run on short package only after L predicates CLOSED (expect “essentially correct”).  
+
+**Non-required:** Path-C / 16N / Hypothesis H.  
+**Out of agent control:** Ping Paata (user).  
+
+**Current:** (1)–(3) open; claim **not** asserted.

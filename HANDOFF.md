@@ -27,13 +27,14 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **Done (2026-08-06):** gap named (Gsum disj LB / 15.158); claim retracted OPEN; short package `evidence/share/denseness_path_package.md`; load-bearing tests; 3 cold AI passes → NOT_PROVED + honest OPEN.
 
-**Still for prize:**  
-1. Prove Gsum disj LB (Max+-free) or alternate residual (i)/(ii).  
-2. Re-close E1/L predicates only after hinge proved.  
-3. Re-run AI-test expecting “essentially correct.”  
-4. Ping Paata with fixed package + GitHub.
+**Required opens (prize path):**  
+1. Prove \(H_{ab}\ge-1/p\) (disj Gsum \(>-2/p\)) Max+-free via 15.173, or alternate residual i/ii.  
+2. Flip hinge/E1/L predicates only after (1).  
+3. AI-test package after CLOSED.  
 
-**Do not right now:** residual/16N thrash · more X card chrome · soft-close without hinge proof · treat the Gsum gap as fixed without Max+-free LB.
+**Non-required:** Path-C/16N. **User:** ping Paata.  
+
+**Do not right now:** residual/16N thrash · X chrome · soft-close without \(H\ge-1/p\) proof.
 
 **Prior resumes:** `evidence/FINAL_HANDOFF_2026-08-05.md`, `evidence/SESSION_HANDOFF_2026-07-31_prop15112.md`  
 **P0 graph:** `evidence/P0_ENGINEERING_GRAPH.md` · **Failure graph:** `evidence/E1_FAILURE_GRAPH.md`  
