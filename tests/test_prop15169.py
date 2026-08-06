@@ -57,19 +57,24 @@ def test_two_lipschitz_proved():
     assert lip["lipschitz_constant"] == 2
 
 
-def test_ND_reduction_closed_via_15170_gsum_farkas():
-    """ND class closed by Prop 15.170 Gsum Farkas — real predicate, not soft-close."""
+def test_ND_reduction_open_until_gsum_lb_proved():
+    """ND class OPEN: Farkas algebra may hold under candidate LB; hinge not proved."""
     for p in (5, 7, 11, 13, 17, 19):
         r = type_I_k_3p_minus_2_ND_reduction(p)
         assert r["structure_ok"] is True
         assert r["gap2_forces_s_minus"]["proved"] is True
         assert r["two_lipschitz"]["proved"] is True
-        assert r["bad_case_impossible_general_p"] is True
-        assert r["ND_for_this_class"] is True
+        # Conditional algebra under candidate LB (not a close)
+        assert r["farkas_algebra_if_lb"] is True
         dual = r["dual_equality_gsum_obstruction"]
-        assert dual["need_lt_LB"] is True
-        assert r["open_step"] == ""
-    assert type_I_k_3p_minus_2_closed_general() is True
+        assert dual["need_lt_LB"] is True  # candidate-LB arithmetic
+        # Honest gates
+        assert r["gsum_disj_lb_proved_general"] is False
+        assert r["bad_case_impossible_general_p"] is False
+        assert r["ND_for_this_class"] is False
+        assert r["open_step"] != ""
+        assert "gsum_disj_lb" in r["open_step"] or "Gsum" in r["open_step"] or "μ" in r["open_step"]
+    assert type_I_k_3p_minus_2_closed_general() is False
 
 
 def test_deep_multi_s_auto_freeness_boundaries():
@@ -92,18 +97,20 @@ def test_deep_multi_s_auto_freeness_boundaries():
             assert r2["auto_freeness"] is False
 
 
-def test_deep_k_ge_3p_closed_via_15171():
-    """Residual (ii) closed by Prop 15.171 when available."""
-    assert deep_freeness_fail_k_ge_3p_open() is False
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
+def test_deep_k_ge_3p_open_via_15171_hinge():
+    """Residual (ii) OPEN until Gsum LB proved (15.171 gates same hinge)."""
+    assert deep_freeness_fail_k_ge_3p_open() is True
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
 
 
-def test_e1_closed_both_residuals():
-    """E1 closed when residual (i)+(ii)+bi-tight all real."""
-    assert type_I_k_3p_minus_2_closed_general() is True
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
-    assert e1_closed_general() is True
-    assert e1_open_residuals() == []
+def test_e1_open_both_residuals():
+    """E1 OPEN while residual (i)/(ii) hinge open; bi-tight alone insufficient."""
+    assert type_I_k_3p_minus_2_closed_general() is False
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
+    assert e1_closed_general() is False
+    open_res = e1_open_residuals()
+    assert len(open_res) >= 1
+    assert any("3p" in s or "Gsum" in s or "Type I" in s for s in open_res)
 
 
 def test_L_wire_follows_e1_and_bitight():
@@ -112,46 +119,51 @@ def test_L_wire_follows_e1_and_bitight():
     w = main_L_from_e1(e1=False, bitight=True)
     assert w["L_closed"] is False
     assert w["L_status"] == "OPEN"
+    # Hypothetical: if E1 were true, L would close with bi-tight
     w2 = main_L_from_e1(e1=True, bitight=True)
     assert w2["L_closed"] is True
     assert w2["L_status"] == "CLOSED"
+    # Real path: E1 false ⇒ L OPEN
+    assert e1_closed_general() is False
 
 
 def test_prove_and_main_honest():
     TI = prove_type_I_3p_minus_2()
     assert TI["structure_identities_ok"] is True
     assert TI["gap2_s_minus_force_ok"] is True
-    assert TI["ND_class_closed_general"] is True  # 15.170
+    assert TI["ND_class_closed_general"] is False  # Gsum hinge
+    assert TI["open_step"] != ""
     DP = prove_deep_multi_s()
     assert DP["multi_s_auto_freeness_ok"] is True
-    assert DP["deep_k_ge_3p_ND_closed"] is True  # 15.171
+    assert DP["deep_k_ge_3p_ND_closed"] is False  # Gsum hinge
     out = main()
-    assert out["proved"]["type_I_k_3p_minus_2_ND_class_closed"] is True
+    assert out["proved"]["type_I_k_3p_minus_2_ND_class_closed"] is False
     assert out["proved"]["type_I_k_3p_minus_2_structure"] is True
     assert out["proved"]["deep_multi_s_auto_freeness"] is True
-    assert out["proved"]["E1_closed_general"] is True
-    assert out["proved"]["L_closed"] is True
-    assert out["L_status"] == "CLOSED"
-    assert out["open_residual"] == []
+    assert out["proved"]["E1_closed_general"] is False
+    assert out["proved"]["L_closed"] is False
+    assert out["L_status"] == "OPEN"
+    assert len(out["open_residual"]) >= 1
     # 16N residual still open
     assert out["proved"]["residual_closed_general"] is False
 
 
 def test_anti_soft_close_skeptic_patterns():
-    """Skeptic F3: E1/L only from real residual (i)+(ii)+bi-tight predicates."""
-    assert type_I_k_3p_minus_2_closed_general() is True
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
-    assert e1_closed_general() is True
-    assert e1_open_residuals() == []
-    w = main_L_from_e1(True, True)
-    assert w["L_status"] == "CLOSED"
-    assert w["L_closed"] is True
+    """Skeptic F3: E1/L only from proved residual (i)+(ii)+bi-tight; hinge open."""
+    assert type_I_k_3p_minus_2_closed_general() is False
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
+    assert e1_closed_general() is False
+    assert e1_open_residuals() != []
     # L wire refuses soft-close without E1
     w2 = main_L_from_e1(False, True)
     assert w2["L_closed"] is False
+    assert w2["L_status"] == "OPEN"
     r = type_I_k_3p_minus_2_ND_reduction(5)
-    assert r["ND_for_this_class"] is True
-    assert r["bad_case_impossible_general_p"] is True
+    assert r["ND_for_this_class"] is False
+    assert r["bad_case_impossible_general_p"] is False
+    assert r["gsum_disj_lb_proved_general"] is False
+    # Candidate algebra still real (conditional)
+    assert r["farkas_algebra_if_lb"] is True
     assert r["dual_equality_gsum_obstruction"]["need_lt_LB"] is True
 
 

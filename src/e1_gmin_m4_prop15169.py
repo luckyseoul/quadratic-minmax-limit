@@ -16,20 +16,21 @@ TYPE I k=3p−2 freeness-fail (residual (i) of 15.168):
   E. When s_−=−1: U_−={S_G=−1} nonempty. For z∈U_−, Q after adding e:
      f_e(z)=+1 ⇒ |Q_H(z)|=Phi (strong ND); f_e≡−1 on U_− ⇒ s_−^H≤−2
      (dichotomy only gives Phi(H)≥Phi−4).
-  F. (CLOSED, Prop 15.170) Bad case / s_−≤−1 under freeness-fail is impossible
-     for all primes p≥5 via dual-equality Gsum correlation Farkas
-     (need 6/p−4 < −12k/(p n)). Module: prop15170.py.
+  F. (OPEN hinge, Prop 15.170/172) Bad case / s_−≤−1 Farkas is conditional on
+     proved disj Gsum LB (μ > −2/p). Candidate −12/(pn) algebra is real but
+     gsum_disj_lb_proved_general()=False (15.158; candidate false at p=3).
 
-  Consequence for residual (i): ND class closed for all p≥5 (15.170).
+  Consequence for residual (i): structure+gap+lip shipped; ND class OPEN
+  until gsum_disj_lb_proved_general.
 
 DEEP multi-s auto-freeness (partial residual (ii)):
   G. For s₊=s≥2 with scores ≥s same parity, N_s/N lb = (s+2 − k/p)/2
      (from E[S]≥s·a+(s+2)(1−a)). Auto-freeness when lb>thr:
      k ≤ p(s+1)−2. Recovers s=2 ⇒ k≤3p−2 (15.168.F).
   H. Deep freeness-fail only possible for k ≥ p(s+1)−1 at that s.
-  I. Deep freeness-fail k≥3p for s₊=2 still OPEN (freeze-to-tight / Max− ND).
+  I. Deep freeness-fail k≥3p for s₊=2 still OPEN (same Gsum hinge / 15.171).
 
-E1_closed_general = False until (i) F and (ii) I close.
+E1_closed_general = False until (i) F and (ii) I close with proved LB.
 residual_closed_general = False. L OPEN.
 Writes evidence/e1_gmin_m4_prop15169.json
 """
@@ -213,10 +214,11 @@ def sum_pairs_Gplus_negative(p: int) -> bool:
 
 def type_I_k_3p_minus_2_ND_reduction(p: int) -> dict:
     """
-    Full checkable residual-(i) reduction + 15.170 Gsum Farkas close.
+    Residual-(i) reduction + conditional 15.170 Gsum Farkas.
 
-    ND_for_this_class is True only when structure+gap+lip hold and the
-    Prop 15.170 dual-equality Gsum obstruction fires (real predicate).
+    ND_for_this_class / bad_case_impossible_general_p are True only when
+    structure+gap+lip hold **and** gsum_disj_lb_proved_general() (15.170 hinge)
+    **and** the dual-equality algebra fires. Candidate-LB algebra alone is not enough.
     """
     struct = type_I_k_3p_minus_2_params(p)
     gap = type_I_gap2_forces_s_minus_eq_minus_1(p)
@@ -225,13 +227,29 @@ def type_I_k_3p_minus_2_ND_reduction(p: int) -> dict:
     sum_gp = sum_pairs_Gplus_from_ES2(p)
     # Prop 15.170: dual-equality Gsum Farkas (lazy import avoids cycles)
     try:
-        from e1_gmin_m4_prop15170 import dual_equality_gsum_obstruction
+        from e1_gmin_m4_prop15170 import (
+            dual_equality_gsum_obstruction,
+            dual_equality_farkas_algebra_if_lb,
+            gsum_disj_lb_proved_general,
+        )
 
         dual = dual_equality_gsum_obstruction(p)
-        bad_case_impossible_general = bool(dual["need_lt_LB"])
+        lb_proved = bool(gsum_disj_lb_proved_general())
+        farkas_algebra = bool(dual["need_lt_LB"])
+        # Conditional algebra under candidate LB (not a close)
+        dual["farkas_algebra_if_lb"] = dual_equality_farkas_algebra_if_lb([p])
+        dual["gsum_disj_lb_proved_general"] = lb_proved
     except Exception:
-        dual = {"need_lt_LB": False, "error": "prop15170 import failed"}
-        bad_case_impossible_general = False
+        dual = {
+            "need_lt_LB": False,
+            "farkas_algebra_if_lb": False,
+            "gsum_disj_lb_proved_general": False,
+            "error": "prop15170 import failed",
+        }
+        lb_proved = False
+        farkas_algebra = False
+    # Honest: bad case impossible only with proved LB + algebra
+    bad_case_impossible_general = bool(lb_proved and farkas_algebra)
     ND_class_closed = bool(
         struct["matches_thr"]
         and gap["proved"]
@@ -247,6 +265,8 @@ def type_I_k_3p_minus_2_ND_reduction(p: int) -> dict:
         "bad_case_dual_two_level": bad_tl,
         "sum_pairs_Gplus": str(sum_gp),
         "sum_pairs_Gplus_negative": sum_gp < 0,
+        "farkas_algebra_if_lb": farkas_algebra,
+        "gsum_disj_lb_proved_general": lb_proved,
         "bad_case_impossible_general_p": bad_case_impossible_general,
         "dual_equality_gsum_obstruction": dual,
         "ND_for_this_class": ND_class_closed,
@@ -254,14 +274,14 @@ def type_I_k_3p_minus_2_ND_reduction(p: int) -> dict:
             ""
             if ND_class_closed
             else (
-                "Prove freeness-fail Type I k=3p−2 cannot have s_−≤−1 "
-                "(Prop 15.170 Gsum Farkas)."
+                "Prove disj Gsum μ > −2/p Max+-free (15.172) so dual-equality "
+                "Farkas closes residual (i); gsum_disj_lb_proved_general=False."
             )
         ),
         "certified_p5_milp_s_minus_le_m1_infeasible": True,
-        "note_closed": (
-            "Prop 15.170: dual-equality Gsum Farkas need 6/p−4 < −12k/(p n) "
-            "for all primes p≥5; residual (i) ND class closed."
+        "note_status": (
+            "Prop 15.170/172: Farkas algebra under candidate LB is real; "
+            "residual (i) ND class OPEN until gsum_disj_lb_proved_general."
         ),
     }
 
