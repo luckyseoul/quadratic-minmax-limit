@@ -26,53 +26,97 @@ from e1_gmin_m4_prop15168 import (  # noqa: E402
 from e1_gmin_m4_prop15170 import gsum_disj_lb_proved_general  # noqa: E402
 
 
+def _props_15167_171_slice(solution: str) -> str:
+    """Include Prop 15.167–15.171 writeup sections in soft-close scans (not only solution[:2500])."""
+    m = re.search(r"## Prop 15\.167", solution)
+    if not m:
+        return solution[-8000:]  # fallback: tail often has latest props
+    return solution[m.start() :]
+
+
 def check_docs_L_status() -> dict:
     """
-    Docs OK iff top-of-repo status asserts L OPEN (or true L closed with proved hinge)
-    and no bare soft-close 'L CLOSED' while E1 is open.
+    Docs OK iff status asserts L OPEN (or true L closed with proved hinge)
+    and no soft-close 'L CLOSED' / residual closed claims while E1 is open.
+    Scans HANDOFF head, STATUS, solution top, **and** Props 15.167–171 body.
     """
     handoff = (ROOT / "HANDOFF.md").read_text(encoding="utf-8", errors="replace")
     solution = (ROOT / "solution.md").read_text(encoding="utf-8", errors="replace")
     status = (ROOT / "STATUS.md").read_text(encoding="utf-8", errors="replace")
-    head = handoff[:5000] + "\n" + status[:3000] + "\n" + solution[:2500]
+    package = ""
+    pkg_path = ROOT / "evidence" / "share" / "denseness_path_package.md"
+    if pkg_path.exists():
+        package = pkg_path.read_text(encoding="utf-8", errors="replace")
+
+    props_tail = _props_15167_171_slice(solution)
+    head = (
+        handoff[:5000]
+        + "\n"
+        + status[:3000]
+        + "\n"
+        + solution[:2500]
+        + "\n"
+        + props_tail
+        + "\n"
+        + package[:4000]
+    )
 
     e1 = bool(e1_closed_general())
-    # Soft-close: assert L CLOSED while chain open, or bare **L CLOSED** in head when E1 open
+    # Fixed-width patterns only (variable-width look-behind is invalid in re).
     soft_patterns = [
         r"\*\*L CLOSED\.\*\*",
         r"\*\*L CLOSED\*\*",
-        r"L CLOSED\.\s*$",
+        r"L CLOSED \(via E1",
+        r"L CLOSED \(via",
+        r"E1_closed_general\s*=\s*true\.?\s*L CLOSED",
+        r"E1_closed_general=true\. L CLOSED",
         r"L=\s*\\?tfrac\{1\}\{2\}\s*CLOSED",
         r"L=\s*½\s*CLOSED",
         r"lim\s*α_n\s*=\s*1/2\s*CLOSED",
         r"Main claim.*L=.*1/2.*CLOSED",
         r"superseded.*L=.*CLOSED",
+        r"\*\*E\(1\) closed\*\*",
+        r"E\(1\) closed\s*\\?Rightarrow",
+        r"Closes residual \(i\) of E\(1\) for all primes",
+        r"Closes residual \(ii\) of E\(1\) for all primes",
+        r"CLOSED for general \$p\$ by Prop 15\.170",
+        r"disj: association-scheme min",
+        r"association-scheme min \$-12",
     ]
     soft = False
+    soft_hit = None
     if not e1:
         for pat in soft_patterns:
-            if re.search(pat, head, re.I | re.M):
+            m = re.search(pat, head, re.I | re.M)
+            if m:
                 soft = True
+                soft_hit = m.group(0)[:80]
                 break
-        # P0-style false closed
         if re.search(r"E\(1\)\s*\(CLOSED", head, re.I):
             soft = True
+            soft_hit = soft_hit or "E(1) (CLOSED"
 
     handoff_open = bool(
-        re.search(r"L\s*(=\s*lim[^.\n]*)?\s*OPEN|L=\s*\\?lim[^\n]*OPEN|is OPEN", head, re.I)
-    ) or ("L OPEN" in head[:4000])
+        re.search(
+            r"L\s*(=\s*lim[^.\n]*)?\s*OPEN|L=\s*\\?lim[^\n]*OPEN|is OPEN|L OPEN",
+            handoff[:5000] + status[:2000] + solution[:2500],
+            re.I,
+        )
+    )
 
-    docs_ok = bool(handoff_open and not soft and not e1) or bool(e1 and gsum_disj_lb_proved_general())
-    # When E1 open, require OPEN assertion and no soft-close
     if not e1:
         docs_ok = handoff_open and not soft
+    else:
+        docs_ok = bool(e1 and gsum_disj_lb_proved_general())
 
     return {
         "HANDOFF_shows_L_OPEN": handoff_open,
         "soft_close_detected": soft,
+        "soft_close_hit": soft_hit,
         "docs_ok": docs_ok,
         "e1_closed_general": e1,
         "gsum_disj_lb_proved_general": gsum_disj_lb_proved_general(),
+        "scanned_props_15167_171": True,
     }
 
 

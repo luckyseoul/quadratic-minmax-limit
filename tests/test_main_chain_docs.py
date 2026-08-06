@@ -20,6 +20,33 @@ def test_soft_close_detector_flags_bare_L_CLOSED():
     """Unit-level: detector pattern must catch bare '**L CLOSED.**' style."""
     import re
 
-    pat = re.compile(r"\*\*L CLOSED\.\*\*|\*\*L CLOSED\*\*|E\(1\)\s*\(CLOSED", re.I)
+    pat = re.compile(r"\*\*L CLOSED\.\*\*|\*\*L CLOSED\*\*|E\(1\)\s*\(CLOSED|E1_closed_general=true\. L CLOSED", re.I)
     assert pat.search("**E(1) (CLOSED, 15.168–171):** ... **L CLOSED.**")
+    assert pat.search("E1_closed_general=true. L CLOSED (via E1∧bi-tight).")
     assert not pat.search("**L OPEN.** Denseness path blocked")
+
+
+def test_props_15170_171_body_not_soft_closed():
+    """solution.md Props 15.170–171 must not claim residual/E1/L CLOSED while hinge open."""
+    from pathlib import Path
+    import re
+
+    sol = Path(__file__).resolve().parents[1] / "solution.md"
+    text = sol.read_text(encoding="utf-8", errors="replace")
+    # extract from Prop 15.170 onward
+    i = text.find("## Prop 15.170")
+    assert i >= 0
+    tail = text[i:]
+    # forbidden soft-close phrases (post-retraction)
+    bad = [
+        r"E1_closed_general=true\. L CLOSED",
+        r"\*\*E\(1\) closed\*\*",
+        r"Closes residual \(i\) of E\(1\) for all primes",
+        r"Closes residual \(ii\) of E\(1\) for all primes",
+        r"association-scheme min \$-12",
+        r"disj: association-scheme min",
+    ]
+    for pat in bad:
+        assert not re.search(pat, tail), f"soft-close residue matched: {pat}"
+    assert "L OPEN" in tail or "OPEN for general" in tail
+    assert "gsum_disj_lb_proved_general" in tail or "NOT proved for general" in tail

@@ -5104,50 +5104,52 @@ If freeness-fail Type I \(k=3p-2\) occurs with \(s_-=-1\), Max\- two-level \(\{-
 \]
 Also \(\sum_{e'<e''\in G}G^+_{e'e''}=\frac{\mathbb E_+[S^2]-k}2=-\frac{3(p-1)(p-4)}{2p}<0\) for \(p\ge5\).
 
-**CLOSED for general \(p\) by Prop 15.170** (dual-equality Gsum Farkas). Fractional affine+\(s_-\le-1\) remains feasible (integrality gap); integral dual-equality is impossible for all primes \(p\ge5\).
+**Status (2026-08-06):** residual (i) **not** closed for general \(p\). Dual-equality Farkas is **conditional** on a disj Gsum LB that is **not** proved in general (see Prop 15.170). Fractional affine+\(s_-\le-1\) remains feasible (integrality gap).
 
-## Prop 15.170 (2026-08-05) — Residual (i) close: Type I \(k=3p-2\) cannot have \(s_-\le-1\)
+## Prop 15.170 (2026-08-05; status revised 2026-08-06) — Residual (i): Type I \(k=3p-2\), \(s_-\le-1\)
 
-Continues 15.169. Closes residual (i) of E(1) for all primes \(p\ge5\). Residual (ii) and full E(1)/L closed in Prop~15.171.
+Continues 15.169. **OPEN for general primes \(p\ge5\).** Structure and conditional Farkas algebra shipped; general close blocked by disj Gsum LB hinge.
 
-**Proved (Fraction / prior props):**
+**Proved / checkable (Fraction / prior props):**
 
 1. **Freeness-fail + gap-2 structure** (15.169): affine \(S=3-2f_e\) on Max\(_+\); gap-2 forces \(s_-=-1\); ND dichotomy at \(s_-=-1\) (good sign \(\Rightarrow\) strong ND; bad case is the only residual risk).
 
-2. **Dual equality correlation.** Bad-case minimiser of \(\mathbb E_-[S f_e]\) under \(s_-\le-1\) is the dual two-level law \(S=-3-2f_e\) on Max\(_-\). Combined with affine Max\(_+\) this is dual equality, forcing
+2. **Dual equality correlation (conditional).** If the bad case realises the dual two-level law \(S=-3-2f_e\) on Max\(_-\) with affine Max\(_+\), then
    \[
    (\mathrm{Gsum}\,x)_e = \frac6p-4,
    \]
    where \(\mathrm{Gsum}=\mathbb E_+[ff^\top]+\mathbb E_-[ff^\top]\) and \(x=1_G\).
 
-3. **Gsum identities.** \(\mathrm{Gsum}_{ee}=2\); wedge (share a vertex) \(\mathrm{Gsum}_{ab}=0\) (from \(\mathbb E[y_iy_j]_+\!+\!\mathbb E[y_iy_j]_-=0\)); \(\mathrm{Gsum}\,\mathbf1=n\mathbf1\); off-diagonal
-   \[
-   \mathrm{Gsum}_{ab}\ge -\frac{12}{p(p^2+1)}\quad(a\neq b)
-   \]
-   (adj: \(0\); disj: association-scheme min \(-12/(pn)\), tight at \(p=5\)).
+3. **Gsum identities.** \(\mathrm{Gsum}_{ee}=2\); wedge (share a vertex) \(\mathrm{Gsum}_{ab}=0\) (proved: \(\mathbb E[y_iy_j]_+\!+\!\mathbb E[y_iy_j]_-=0\)); \(\mathrm{Gsum}\,\mathbf1=n\mathbf1\).
 
-4. **Box-sum Farkas.** For \(0\le x\le1\), \(\mathbf1^\top x=k=3p-2\), \(x_e=0\):
+4. **Disj Gsum LB — NOT proved for general \(p\).** Candidate bound
    \[
-   (\mathrm{Gsum}\,x)_e \ge -\frac{12k}{p(p^2+1)}.
+   \mathrm{Gsum}_{ab}\ge -\frac{12}{p(p^2+1)}\quad(a\neq b\text{ disjoint})
    \]
-   Dual equality requires \((\mathrm{Gsum}\,x)_e=6/p-4\). These conflict for all primes \(p\ge5\) because
+   was previously justified as an association-scheme minimum and is **certified at \(p=5\)** (\(-6/65=-12/(5\cdot26)\)). **Prop 15.158:** Max+ is **not** an IP association scheme, so scheme-min cannot prove the LB for all primes \(p\ge5\). Shipped flag: `gsum_disj_lb_proved_general()=False`.
+
+5. **Conditional box-sum Farkas.** *If* the candidate LB holds, then for \(0\le x\le1\), \(\mathbf1^\top x=k=3p-2\), \(x_e=0\),
    \[
-   \frac6p-4 < -\frac{12k}{p(p^2+1)} \iff 4p^3-6p^2-32p+18>0,
+   (\mathrm{Gsum}\,x)_e \ge -\frac{12k}{p(p^2+1)},
    \]
-   which holds on \([5,\infty)\).
+   and dual equality conflicts for all primes \(p\ge5\) because
+   \[
+   \frac6p-4 < -\frac{12k}{p(p^2+1)} \iff 4p^3-6p^2-32p+18>0.
+   \]
+   That poly algebra is real (`dual_equality_farkas_algebra_if_lb`); it does **not** alone close residual (i).
 
-5. **Consequence.** Dual equality impossible \(\Rightarrow\) bad case impossible under freeness-fail gap-2 \(\Rightarrow\) residual (i) ND for all \(p\ge5\). Also \(\mathrm{ES}_2=(13p-12)/p<k\) (binary freeness-fail integrality seed).
+6. **Consequence (honest).** residual (i) **OPEN** until disj Gsum LB is proved Max+-free (or an alternate residual-(i) proof). `type_I_k_3p_minus_2_closed_general()=False`. Also \(\mathrm{ES}_2=(13p-12)/p<k\) (integrality seed, independent).
 
-**OPEN (after 15.170 alone):** residual (ii); full E(1). See Prop 15.171.
+**OPEN:** residual (i) general; residual (ii); full E(1); \(L=\tfrac12\).
 
 Evidence: `src/e1_gmin_m4_prop15170.py`, `evidence/e1_gmin_m4_prop15170.json`,
-`tests/test_prop15170.py`.
+`tests/test_prop15170.py`, `evidence/share/denseness_path_package.md`.
 
-## Prop 15.171 (2026-08-05) — Residual (ii) close: deep freeness-fail \(k\ge3p\) ND
+## Prop 15.171 (2026-08-05; status revised 2026-08-06) — Residual (ii): deep freeness-fail \(k\ge3p\) ND
 
-Continues 15.168–170. Closes residual (ii) of E(1) for all primes \(p\ge5\).
+Continues 15.168–170. **OPEN for general primes \(p\ge5\).** Structure (parity, auto-freeness, fail-eq empty) shipped; dual two-level Farkas blocked by the same disj Gsum LB hinge as 15.170.
 
-**Proved (Fraction / prior props):**
+**Proved / checkable (Fraction / prior props):**
 
 1. **Parity.** \(s_+=2\) (even scores) \(\Rightarrow k\) even \(\Rightarrow\) Max\- scores even \(\Rightarrow s_-\ne-1\).
 
@@ -5157,18 +5159,18 @@ Continues 15.168–170. Closes residual (ii) of E(1) for all primes \(p\ge5\).
 
 4. **Auto-freeness** \(k\le3p-2\) (15.168) \(\Rightarrow\) freeness \(\Rightarrow\) weak ND.
 
-5. **Fail-eq \(k=3p-1\):** freeness-fail \(+\,S\in\{2,4\}\) \(\Rightarrow H\) tight \(S\equiv3\) size \(3p\) empty under bi-tight/Thm A (15.167–168).
+5. **Fail-eq \(k=3p-1\):** freeness-fail \(+\,S\in\{2,4\}\) \(\Rightarrow H\) tight \(S\equiv3\) size \(3p\) empty under bi-tight/Thm A (15.167–168) when bi-tight holds.
 
-6. **Dual two-level freeness-fail Gsum Farkas for even \(k\ge3p\).** Two-level \(S\in\{2,4\}/\{-2,-4\}\) with freeness-fail affine \(f_e=3-S\) forces
+6. **Dual two-level freeness-fail Farkas (conditional).** Two-level \(S\in\{2,4\}/\{-2,-4\}\) with freeness-fail affine \(f_e=3-S\) forces
    \[
    (\mathrm{Gsum}\,x)_e=2\bigl(8-\tfrac{3k}p\bigr).
    \]
-   Box-sum: \((\mathrm{Gsum}\,x)_e\ge-12k/(p n)\). For all even \(k\ge3p\) with freeness-fail possible (\(a=2-k/(2p)\le\mathrm{thr}\)), need \(<\) LB (Fraction). Also \(p\) odd \(\Rightarrow 3p\) odd \(\Rightarrow\) no even-score cover of size \(3p\).
+   Box-sum needs the same unproved disj LB \(\mathrm{Gsum}_{ab}\ge-12/(pn)\). Under that LB, need \(<\) LB on freeness-fail range (Fraction). Without proved LB: **not closed**.
 
-7. **Consequence.** Residual (ii) ND class closed for all \(p\ge5\). With residual (i) (15.170) and bi-tight (15.167): **E(1) closed** \(\Rightarrow m_n\ge\Phi-2\) on the \(\rho=1\) family \(\Rightarrow L=\tfrac12\) by denseness (Prop 6.2).
+7. **Consequence (honest).** Residual (ii) **OPEN**. With residual (i) open and Gsum hinge open: **E1_closed_general=false**, **L OPEN** (no soft-close). Denseness cannot force \(L=\tfrac12\) without E(1).
 
-**Still OPEN:** Path-C residual/16N/Es4\(_*\) (optional; bi-tight already closed without it).  
-residual_closed_general=false (16N). E1_closed_general=true. L CLOSED (via E1∧bi-tight).
+**Still OPEN:** residual (i)/(ii) (Gsum disj LB); Path-C residual/16N/Es4\(_*\) (optional).  
+residual_closed_general=false. E1_closed_general=false. **L OPEN.**
 
 Evidence: `src/e1_gmin_m4_prop15171.py`, `evidence/e1_gmin_m4_prop15171.json`,
-`tests/test_prop15171.py`.
+`tests/test_prop15171.py`, `evidence/share/denseness_path_package.md`.
