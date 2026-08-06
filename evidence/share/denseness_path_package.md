@@ -50,7 +50,7 @@ m_n=\min_{a_{ij}=\pm1}\max_{x=\pm1}\Bigl|\sum_{i<j}a_{ij}x_ix_j\Bigr|,\qquad
 - **Residual (ii) full OPEN (15.193):** freeness-fail does **not** force \(S\in\{2,4\}\) and \(f_e=3-S\). Multi-level (ii-a) and non-affine two-level (ii-b) remain. Predicate `deep_s2_freeness_fail_k_ge_3p_ND_closed()=False`.
 - **Residual (i) OPEN:** freeness edge \(e\notin G\), \(|G|=k=3p-2\). Dual equality forces
   \((\mathrm{Gsum}\,x)_e=6/p-4\). Threshold \(\mu_*=(6/p-4)/k\); sufficient \(\mathrm{Gsum}\ge-1/p\) or \(|\mu|\le2/n\) (15.176–192).
-- **15.194–195 row/mass:** sufficient lemma \(N_e<4-6/p\Rightarrow\) dual-eq empty (proved); pure \(N_e\) **fails** Paley. Mass-corrected criterion: dual-eq needs mass-min \(\sum a\kappa\le-2(2-\alpha)\) (proved). Census p=5 exact min \(-30/13>-254/65\) blocks; p=7 blocks. Preferred general target: Max+-free mass-min / row+mass \(\max\kappa_e<2-\alpha\).
+- **15.194–196 row/mass/spectral:** pure \(N_e\) fails Paley. Mass-corrected criterion proved; census blocks p=5,7. Spectral: \(Q_e\le 2(n+\lambda_2(n-2))/(n-1)-4\); **\(Q_e\le10\) would close residual (i)** (checked p=5..47). Census \(Q\approx8.17,6.69\). Preferred: Max+-free \(Q_e\le10\) or \(\lambda_2\le6+5/(n-2)\).
 - Adjacent Gsum \(=0\), avg disj \(=2/(n-3)\), \(G_0\) PSD **proved**. Candidate \(-12/(pn)\) not general (15.158).
 - Shipped: `gsum_disj_lb_proved_general()→False`; residual (ii) affine closed / full open; E1/L **OPEN**.
 - Support (15.186–188): \(|\varphi|\le2(p-2)\); \(\mu_{\mathrm{part}}\) majorant \(\le1/(2p)\); target \(|\mu|\le2/n\) sufficient for \(p\ge5\); p=5,7 Max± census beat \(1/(2p)\). **Not** a general Max+-free proof — do not treat as closed.

@@ -1,0 +1,137 @@
+{
+  "title": "Prop 15.196 spectral row-energy bound for mass-corrected dual-eq; Q\u226410 would close residual (i); general Q/\u03bb\u2082 bound OPEN",
+  "proved": {
+    "entry_floor_minus_2": true,
+    "spectral_Q_ub_formula": true,
+    "lambda2_threshold_for_Q10": true,
+    "Q_le_10_blocks_primes_5_to_47": true,
+    "Q_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "entry_floor": {
+      "proved": true,
+      "theorem": "Gsum_ee=2 and Gsum\u227d0 \u21d2 every off-diagonal entry a\u2265\u22122 (principal 2\u00d72 minor)."
+    },
+    "spectral_Q_ub": {
+      "proved": true,
+      "theorem": "Q_e + 4 = ||Gsum e_*||\u00b2 \u2264 2(n + \u03bb\u2082(n\u22122))/(n\u22121), hence Q_e \u2264 2(n + \u03bb\u2082(n\u22122))/(n\u22121) \u2212 4, where \u03bb\u2082 is the second-largest eigenvalue of Gsum. Uses only Gsum1=n1, Gsum_ee=2, and Gsum\u00b2 \u227c \u03bb\u2082 Gsum on 1^\u22a5.",
+      "formula": "Q_ub(\u03bb\u2082)=2(n+\u03bb\u2082(n-2))/(n-1)-4"
+    },
+    "lambda2_thr": {
+      "proved": true,
+      "theorem": "\u03bb\u2082 \u2264 (6n\u22127)/(n\u22122) = 6+5/(n\u22122) \u21d2 Q_ub(\u03bb\u2082) \u2264 10 for all p\u22655. If also Q_e \u2264 Q_ub and Q\u226410 forces mass-min > \u22122M, residual (i) closes.",
+      "by_p_sample": {
+        "5": {
+          "lambda2_thr": "149/24",
+          "Q_ub_at_thr": "10",
+          "equals_10": true
+        },
+        "7": {
+          "lambda2_thr": "293/48",
+          "Q_ub_at_thr": "10",
+          "equals_10": true
+        },
+        "11": {
+          "lambda2_thr": "145/24",
+          "Q_ub_at_thr": "10",
+          "equals_10": true
+        },
+        "13": {
+          "lambda2_thr": "1013/168",
+          "Q_ub_at_thr": "10",
+          "equals_10": true
+        }
+      }
+    },
+    "Q10_blocks": {
+      "proved_for_primes_5_to_47": true,
+      "proved_general_all_primes": false,
+      "theorem": "For every prime p with 5\u2264p\u226447: under a\u2265\u22122, \u2211a=n\u22122, \u2211a\u00b2\u226410, the two-level mass-min is > \u22122(2\u2212\u03b1).  If this extends to all p\u22655 and Q_e\u226410 Max+-free, residual (i) closes.",
+      "n_primes": 13,
+      "by_p_sample": {
+        "5": {
+          "p": 5,
+          "Qmax": "10",
+          "worst_mass_min": "-202/65",
+          "target_minus_2M": "-254/65",
+          "blocks_dual_eq": true,
+          "worst_k": 1
+        },
+        "7": {
+          "p": 7,
+          "Qmax": "10",
+          "worst_mass_min": "-494/175",
+          "target_minus_2M": "-694/175",
+          "blocks_dual_eq": true,
+          "worst_k": 1
+        },
+        "11": {
+          "p": 11,
+          "Qmax": "10",
+          "worst_mass_min": "-1702/671",
+          "target_minus_2M": "-2678/671",
+          "blocks_dual_eq": true,
+          "worst_k": 1
+        },
+        "13": {
+          "p": 13,
+          "Qmax": "10",
+          "worst_mass_min": "-2714/1105",
+          "target_minus_2M": "-4414/1105",
+          "blocks_dual_eq": true,
+          "worst_k": 1
+        },
+        "47": {
+          "p": 47,
+          "Qmax": "10",
+          "worst_mass_min": "-110494/51935",
+          "target_minus_2M": "-207734/51935",
+          "blocks_dual_eq": true,
+          "worst_k": 1
+        }
+      },
+      "note": "Finite check is evidence for the implication shape; general p needs proof."
+    }
+  },
+  "certified": {
+    "3": {
+      "Q": "112/9",
+      "lambda2": "8",
+      "Q_ub_lambda2": "112/9",
+      "blocks_under_actual_Q": false
+    },
+    "5": {
+      "Q": "34512/4225",
+      "lambda2": "88/13",
+      "Q_ub_lambda2": "144/13",
+      "blocks_under_actual_Q": true,
+      "blocks_under_Q10": true,
+      "blocks_under_Q_ub": false
+    },
+    "7": {
+      "Q": "55009/8220",
+      "lambda2": "2160/409",
+      "Q_ub_lambda2": "168096/20041",
+      "blocks_under_actual_Q": true,
+      "blocks_under_Q10": true,
+      "blocks_under_Q_ub": true
+    },
+    "proved_general": false
+  },
+  "hinge": {
+    "entry_floor_minus_2": true,
+    "spectral_Q_ub_formula": true,
+    "Q_le_10_blocks_checked_p_le_47": true,
+    "Q_bound_general": false,
+    "lambda2_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove Max+-free Q_e\u226410 (or \u03bb\u2082\u22646+5/(n\u22122), or |\u03bc|\u22642/n, or ker-box empty) for all primes p\u22655."
+  },
+  "F3": "Q\u226410 (or \u03bb\u2082\u22646+5/(n\u22122)) Max+-free would close residual (i) via 15.195 mass-min. Census Q\u22488.17/6.69 at p=5,7. No soft-close."
+}

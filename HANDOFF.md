@@ -30,7 +30,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 **Done (2026-08-06):** gap named (Gsum disj LB / 15.158); claim retracted OPEN; short package `evidence/share/denseness_path_package.md`; load-bearing tests; 3 cold AI passes → NOT_PROVED + honest OPEN.
 
 **Required opens (prize path):**  
-1. Residual **(i) preferred (15.194–195):** Max+-free mass-min \(\sum a\kappa>-2(2-\alpha)\) / row+mass \(\max\kappa_e<2-\alpha\) for all \(p\ge5\) (census blocks p=5,7; p=5 exact \(-30/13\)), **or** full ker-box / \(|\mu|\le2/n\) / Gsum\(\ge-1/p\). Pure \(N_e<4-6/p\) **fails** Paley census — dead as stated.  
+1. Residual **(i) preferred (15.194–196):** Max+-free \(Q_e\le10\) or \(\lambda_2\le6+5/(n-2)\) (⇒ mass-min blocks dual-eq; census \(Q\approx8.17/6.69\) at p=5,7), **or** \(|\mu|\le2/n\) / ker-box / Gsum\(\ge-1/p\). Pure \(N_e<4-6/p\) **fails** Paley — dead as stated.  
 2. Residual **(ii) full:** prove exhaustiveness (15.193) or close multi-level / non-affine freeness-fail. Affine branch **done** (15.179).  
 3. Flip hinges → E1/L predicates only after (1)+(2).  
 4. AI-test package after CLOSED.  

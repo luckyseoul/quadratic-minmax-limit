@@ -24,6 +24,7 @@
 - **15.193 residual (ii) exhaustiveness OPEN:** freeness-fail does **not** force \(S\in\{2,4\}\) and \(f_e=3-S\); (ii-a) multi-level and (ii-b) non-affine two-level remain. Full residual (ii) **not** closed.  
 - **15.194 row negative-mass (residual i):** proved sufficient lemma \(N_e<4-6/p\Rightarrow\) dual-eq empty (independent box min). **Census:** pure \(N_e\) target **fails** at \(p=3,5,7\) (\(N_e=16/3,384/65,\approx13>\) thr). Refined **row+mass LP** max \(\kappa_e\approx1.19,1.17<\) need at \(p=5,7\) (blocks; evidence only). General Max+-free row+mass / ker-box still OPEN.  
 - **15.195 mass-corrected dual-eq:** dual-eq needs mass-min \(\sum a\kappa\le-2(2-\alpha)\). Criterion proved. **Census:** p=5 exact min\(-30/13>-254/65\) blocks; p=7 blocks; p=3 does not. PSD/G+ floors too weak for worst-case \(a\). General Max+-free mass-min bound still OPEN.  
+- **15.196 spectral row energy:** \(a\ge-2\) (PSD); \(Q_e\le 2(n+\lambda_2(n-2))/(n-1)-4\). **If \(Q_e\le10\)** (or \(\lambda_2\le6+5/(n-2)\)), mass-min blocks dual-eq for all primes \(5\le p\le47\) (Fraction check). **Census:** \(Q\approx8.17,6.69\) at p=5,7; \(\lambda_2=88/13,2160/409\). Spectral ub alone too weak at p=5 (\(Q_{\mathrm{ub}}\approx11.08>\) critical \(\approx10.86\)). **OPEN:** Max+-free \(Q_e\le10\) or \(\lambda_2\le6+5/(n-2)\).  
 - Avg disj Gsum \(=2/(n-3)\); \(G_0\) PSD; **15.176** μ_* / −1/p sufficiency.  
 - **15.177–178:** |μ₄| hinge form; star identity; dual-eq \(n_d\le1\) kill; \(n_d=2\) wedge kill for \(p\ge7\).  
 - **15.180:** dual-eq Q_pairs=30−6p−24/p<0; open dual-eq core is \(n_d\ge2\) after PSD/score filters.  
@@ -46,7 +47,7 @@
 
 ### Required opens (denseness prize path)
 
-1. **Math residual (i) (preferred 15.194–195):** Prove Max+-free mass-min \(\sum a\kappa>-2(2-\alpha)\) / row+mass \(\max\kappa_e<2-\alpha\) for all \(p\ge5\) (census blocks p=5,7), **or** full ker-box empty / \(|\mu|\le2/n\) / \(\mathrm{Gsum}\ge-1/p\). Do **not** pursue pure \(N_e<4-6/p\) (fails Paley).  
+1. **Math residual (i) (preferred 15.194–196):** Prove Max+-free \(Q_e=\sum_{f\perp e}a_f^2\le10\) (or \(\lambda_2(G_{\mathrm{sum}})\le6+5/(n-2)\)), **or** mass-min \(\sum a\kappa>-2(2-\alpha)\), **or** \(|\mu|\le2/n\) / ker-box / \(\mathrm{Gsum}\ge-1/p\). Pure \(N_e<4-6/p\) fails Paley.  
 2. **Math residual (ii):** Prove exhaustiveness lemma (15.193): freeness-fail \(\Rightarrow S\in\{2,4\}\) and \(f_e=3-S\) on Max+, **or** close multi-level / non-affine subcases by other ND. Affine branch already done (15.179).  
 3. **Predicates:** Flip hinges → residual (i) ∧ residual (ii) full → E1 → L only after (1)+(2).  
 4. **AI-test:** Re-run on short package only after L predicates CLOSED.  
