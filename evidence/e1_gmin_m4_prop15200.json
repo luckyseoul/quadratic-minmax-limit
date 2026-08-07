@@ -1,0 +1,99 @@
+{
+  "title": "Prop 15.200 C\u22122/n\u2208ker(Gsum) Max+-free; free-e dual-eq box; ker-box empty OPEN",
+  "proved": {
+    "C_minus_2n_in_ker": true,
+    "dual_eq_free_e_box": true,
+    "three_halves_implication": true,
+    "kerbox_empty_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "C_ker": {
+      "proved": true,
+      "theorem": "\u03ba_ij=C_ij\u22122/n lies in ker(Gsum) for Paley Max\u00b1. Proof: f(y)\u1d40\u03ba=((1\u1d40y)\u00b2\u2212n)/2 \u2212 (sign)\u00b7p with sign=+ on Max+ / \u2212 on Max\u2212 from y\u1d40Cy=\u00b1pn; plug 1\u1d40y=\u00b1(p\u00b11)y_\u221e (15.189) \u21d2 f\u1d40\u03ba=0 on Max\u00b1 \u21d2 Gsum \u03ba=0. Max+-free (no enumeration).",
+      "depends_on": [
+        "prop15189_sum_identity",
+        "Cy_pm_p_y"
+      ]
+    },
+    "dual_eq_box": {
+      "proved": true,
+      "theorem": "Dual equality feasible \u21d4 max{\u03ba_e: Gsum\u03ba=0, 1\u1d40\u03ba=0, \u2212\u03b1\u2264\u03ba_g\u22641\u2212\u03b1 (g\u2260e)} \u2265 2\u2212\u03b1. Box does not constrain the freeness edge e. (15.182.)"
+    },
+    "three_halves": {
+      "proved_implication": true,
+      "max_bound_proved": false,
+      "theorem": "For all primes p\u22655: (3/2)\u00b7scheme_max < 2\u2212\u03b1 (15.192 cubic). Hence IF max \u03ba_e \u2264 (3/2)\u00b7scheme_max on the free-e ker-box, THEN dual-eq is empty. The IF is OPEN (census ratios ~1.46 at p=5,7).",
+      "by_p_sample": {
+        "5": {
+          "scheme_max": "36/65",
+          "three_halves": "54/65",
+          "need_2_minus_alpha": "127/65",
+          "three_halves_lt_need": true
+        },
+        "7": {
+          "scheme_max": "72/175",
+          "three_halves": "108/175",
+          "need_2_minus_alpha": "347/175",
+          "three_halves_lt_need": true
+        },
+        "11": {
+          "scheme_max": "180/671",
+          "three_halves": "270/671",
+          "need_2_minus_alpha": "1339/671",
+          "three_halves_lt_need": true
+        }
+      }
+    }
+  },
+  "certified": {
+    "C_ker": {
+      "3": {
+        "p": 3,
+        "||Gsum kappa||": 4.909618837050693e-15,
+        "max_|f^T kappa|_Maxpm": 1.1102230246251565e-15,
+        "in_ker": true,
+        "sum_kappa": 1.5543122344752192e-15
+      },
+      "5": {
+        "p": 5,
+        "||Gsum kappa||": 2.8048945003723772e-14,
+        "max_|f^T kappa|_Maxpm": 1.7985612998927536e-14,
+        "in_ker": true,
+        "sum_kappa": 3.019806626980426e-14
+      }
+    },
+    "free_e_box": {
+      "3": {
+        "p": 3,
+        "success": true,
+        "max_kappa_e": 2.2961673873406485,
+        "need_2_minus_alpha": 1.8,
+        "blocks_dual_eq": false,
+        "proved_general": false
+      },
+      "5": {
+        "p": 5,
+        "success": true,
+        "max_kappa_e": 0.8048578420228576,
+        "need_2_minus_alpha": 1.9538461538461538,
+        "blocks_dual_eq": true,
+        "proved_general": false
+      }
+    }
+  },
+  "hinge": {
+    "C_minus_2n_in_ker": true,
+    "dual_eq_free_e_box_form": true,
+    "three_halves_scheme_implication": true,
+    "kerbox_empty_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove free-e ker-box max \u03ba_e < 2\u2212\u03b1 for all primes p\u22655 (e.g. \u2264(3/2)\u00b7scheme-max), or |\u03bc|\u22642/n / K\u2084\u2264Wick_hi."
+  },
+  "F3": "C\u22122/n\u2208ker is Max+-free. Do not flip residual/E1/L without general free-e ker-box emptiness or |\u03bc|/K\u2084 bound."
+}
