@@ -318,11 +318,12 @@ def type_I_s_minus_impossible(p: int) -> dict:
 
 def type_I_k_3p_minus_2_closed_general() -> bool:
     """
-    Residual (i) closed for all primes p≥5.
+    Whether residual (i) Type I is closed for all primes p≥5 (currently False).
 
-    Paths (either sufficient):
+    Paths (either sufficient when proved):
       (1) Gsum Farkas: gsum_disj_lb_proved_general + need < k·LB algebra;
-      (2) Dual-eq empty: residual_i_dual_eq_empty_proved_general (15.216 K₄ thr).
+      (2) Dual-eq empty: residual_i_dual_eq_empty_proved_general
+          (15.216–217: needs ‖m₄‖₂²≤n(n−2)/4; still OPEN).
     """
     if residual_i_dual_eq_empty_proved_general():
         return True
@@ -397,9 +398,11 @@ def prove_residual_i(primes: list[int] | None = None) -> dict:
         "n_checked": len(primes),
         "by_p_sample": {k: rows[k] for k in list(rows)[:4]},
         "theorem": (
-            "Prop 15.170 + 15.216: residual (i) closed for all primes p≥5 via "
-            "dual-eq empty (K₄≤16n²−14n ⇒ Q_e≤10 ⇒ mass-min block).  "
-            "gsum_disj_lb Farkas path remains a separate optional LB (still False)."
+            "Prop 15.170 residual (i) OPEN for all primes p≥5.  "
+            "Gsum Farkas path: disj LB unproved (gsum_disj_lb=False); algebra OK if LB.  "
+            "Dual-eq path (15.216–217): R≤2p ⇔ ‖m₄‖₂²≤n(n−2)/4 (Φ identity); "
+            "that m₄ bound OPEN (false R_ke⇒R convex combo repaired; soft-close forbidden).  "
+            f"residual_i_closed={closed}."
         ),
     }
 

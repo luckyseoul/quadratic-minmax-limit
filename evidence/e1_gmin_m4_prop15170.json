@@ -124,7 +124,7 @@
           "theorem": "Freeness-fail Type I k=3p\u22122 cannot have s_\u2212\u2264\u22121: gap-2 forces s_\u2212=\u22121; bad case minimises E[S f_e] at dual equality; dual equality contradicts Gsum box-sum Farkas for all p\u22655."
         }
       },
-      "theorem": "Prop 15.170 + 15.216: residual (i) closed for all primes p\u22655 via dual-eq empty (K\u2084\u226416n\u00b2\u221214n \u21d2 Q_e\u226410 \u21d2 mass-min block).  gsum_disj_lb Farkas path remains a separate optional LB (still False)."
+      "theorem": "Prop 15.170 residual (i) OPEN for all primes p\u22655.  Gsum Farkas path: disj LB unproved (gsum_disj_lb=False); algebra OK if LB.  Dual-eq path (15.216\u2013217): R\u22642p \u21d4 \u2016m\u2084\u2016\u2082\u00b2\u2264n(n\u22122)/4 (\u03a6 identity); that m\u2084 bound OPEN (false R_ke\u21d2R convex combo repaired; soft-close forbidden).  residual_i_closed=False."
     }
   },
   "L_wire": {
