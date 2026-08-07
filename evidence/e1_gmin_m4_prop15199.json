@@ -1,0 +1,108 @@
+{
+  "title": "Prop 15.199 frame K\u2084=4n\u00b2+E[A\u00b2]; Wick as E[R] thr; \u03bb_max path dead; residual (i) OPEN",
+  "proved": {
+    "frame_identity": true,
+    "wick_target_rayleigh": true,
+    "lambda_max_path_dead": true,
+    "K4_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "frame": {
+      "proved": true,
+      "theorem": "Under S=I+C/p, y\u1d40Sy=2n, S\u00b2=2S, antipodal Max+: \u2016yy\u1d40\u2212S\u2016_F\u00b2=n(n\u22122) constant, and K\u2084=4n\u00b2+E[\u27e8Xc,Zc\u27e9_F\u00b2]. Proof: expand \u27e8X,Z\u27e9=(y\u00b7z)\u00b2; cross terms with S vanish."
+    },
+    "wick_rayleigh": {
+      "proved": true,
+      "theorem": "K\u2084\u2264Wick_hi \u21d4 E[A\u00b2]\u22648n\u00b2+48n \u21d4 E[Rayleigh_\ud835\udc9e(Xc)]\u22648(n+6)/(n\u22122).",
+      "by_p_sample": {
+        "5": {
+          "need_A2": 6656,
+          "need_E_R": "32/3",
+          "formula_8_n_plus_6_over_n_minus_2": "32/3",
+          "match": true
+        },
+        "7": {
+          "need_A2": 22400,
+          "need_E_R": "28/3",
+          "formula_8_n_plus_6_over_n_minus_2": "28/3",
+          "match": true
+        },
+        "11": {
+          "need_A2": 124928,
+          "need_E_R": "128/15",
+          "formula_8_n_plus_6_over_n_minus_2": "128/15",
+          "match": true
+        }
+      }
+    },
+    "lambda_max_dead": {
+      "proved_dead": true,
+      "theorem": "The majorant \u2211\u03bc_i\u00b2\u2264\u03bb_max\u00b7Tr would need \u03bb_max\u22648(n+6)/(n\u22122). At p=3 equality holds (\u03bb_max=need=16, K\u2084=Wick_hi). At p=5, power-iteration on \ud835\udc9e gives \u03bb_max\u224813.54 > need=32/3\u224810.67, while actual K\u2084=120400/13 < Wick_hi (E[R]\u224810.51<10.67). Hence residual (i) via Wick cannot be proved from \u03bb_max(\ud835\udc9e) alone.",
+      "p3_need": "16",
+      "p5_need": "32/3",
+      "p5_lambda_max_certified_approx": "13.538461",
+      "p5_E_R_from_K4": "85248/13"
+    },
+    "p5_exact_E_R": "1776/169",
+    "p5_need_E_R": "32/3",
+    "p5_E_R_lt_need": true
+  },
+  "certified": {
+    "3": {
+      "p": 3,
+      "M": 12,
+      "norm_Xc_mean": 80.0,
+      "norm_Xc_theory": 80,
+      "norm_match": true,
+      "ySy_mean": 20.0,
+      "ySy_theory": 20,
+      "ySy_match": true,
+      "K4": 1680.0,
+      "A2": 1280.0,
+      "E_R": 16.0,
+      "need_E_R_for_Wick": 16.0,
+      "E_R_le_need": true,
+      "Wick_hi": 1680,
+      "K4_le_Wick": true,
+      "proved_general": false
+    },
+    "5": {
+      "p": 5,
+      "M": 260,
+      "norm_Xc_mean": 624.0000000000002,
+      "norm_Xc_theory": 624,
+      "norm_match": true,
+      "ySy_mean": 52.0,
+      "ySy_theory": 52,
+      "ySy_match": true,
+      "K4": 9261.538461538461,
+      "A2": 6557.538461538461,
+      "E_R": 10.508875739644969,
+      "need_E_R_for_Wick": 10.666666666666666,
+      "E_R_le_need": true,
+      "Wick_hi": 9360,
+      "K4_le_Wick": true,
+      "proved_general": false
+    },
+    "7": {
+      "p": 7,
+      "skipped": true,
+      "reason": "enum cost; use 15.198 fractions"
+    }
+  },
+  "hinge": {
+    "frame_identity_K4": true,
+    "wick_target_as_E_R": true,
+    "lambda_max_path_dead_p5": true,
+    "K4_le_Wick_hi_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove \u2211\u03bc_i(\ud835\udc9e)\u00b2\u22648n\u00b2+48n (K\u2084\u2264Wick_hi) or |\u03bc|\u22642/n on |\u03ba|=1 or ker-box empty, Max+-free for all primes p\u22655."
+  },
+  "F3": "Frame identity is Max+-free under 15.189. Do not flip residual/E1/L without K\u2084\u2264Wick_hi or equivalent |\u03bc|/ker-box."
+}
