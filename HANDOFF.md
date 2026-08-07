@@ -1,5 +1,5 @@
 > **HANDOFF (2026-08-06 audit fix):** **\(L=\tfrac12\) OPEN.** Residual **(ii) PARTIAL**: affine dual two-level branch **CLOSED** (15.179 freeze); full residual (ii) **OPEN** until exhaustiveness (15.193).  
-> Residual **(i)** still **OPEN** — needs Max+-free \(|\mu|\le2/n\) (or \(\le1/(2p)\)) on \(|\kappa|=1\), **or** dual-eq ker-box empty for all \(p\ge5\).  
+> Residual **(i)** still **OPEN** — needs Max+-free \(K_4\le\mathrm{Wick}_{hi}=12n^2+48n\) (15.198 reductions: that bound \(\Rightarrow Q<10\) and thr \(16n^2-14n\) for \(p\ge5\)), **or** \(|\mu|\le2/n\) / ker-box empty.  
 > Predicates honest: `gsum_disj_lb_proved_general=False`, `deep_s2_freeness_fail_k_ge_3p_ND_closed=False`, `residual_ii_affine_branch_closed=True`, `e1_closed_general=False`. **No soft-close.**  
 > Short package: **`evidence/share/denseness_path_package.md`**. Status: **`STATUS.md`**.  
 > Session detail: **`evidence/SESSION_HANDOFF_2026-08-06_residual_i.md`**.

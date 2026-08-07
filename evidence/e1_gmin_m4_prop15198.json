@@ -1,0 +1,167 @@
+{
+  "title": "Prop 15.198 Wick_hi\u2264K\u2084-thr; Q_Wick<10; K\u2084 partition; K\u2084\u2264Wick_hi OPEN (residual i)",
+  "proved": {
+    "wick_hi_le_thr_p_ge_5": true,
+    "Q_wick_lt_10": true,
+    "K4_partition_identity": true,
+    "reduction_chain": true,
+    "K4_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "wick_le_thr": {
+      "proved": true,
+      "theorem": "Wick_hi=12n\u00b2+48n \u2264 16n\u00b2\u221214n \u21d4 2n(2n\u221231)\u22650 \u21d4 n\u226516. For primes p\u22655, n=p\u00b2+1\u226526, so Wick_hi \u2264 K\u2084-threshold. At p=3, n=10, Wick_hi > thr (correct).",
+      "by_p_sample": {
+        "3": {
+          "n": 10,
+          "Wick_hi": 1680,
+          "K4_thr": 1460,
+          "thr_minus_Wick": -220,
+          "Wick_le_thr": false,
+          "expected": false,
+          "match": true
+        },
+        "5": {
+          "n": 26,
+          "Wick_hi": 9360,
+          "K4_thr": 10452,
+          "thr_minus_Wick": 1092,
+          "Wick_le_thr": true,
+          "expected": true,
+          "match": true
+        },
+        "7": {
+          "n": 50,
+          "Wick_hi": 32400,
+          "K4_thr": 39300,
+          "thr_minus_Wick": 6900,
+          "Wick_le_thr": true,
+          "expected": true,
+          "match": true
+        },
+        "11": {
+          "n": 122,
+          "Wick_hi": 184464,
+          "K4_thr": 236436,
+          "thr_minus_Wick": 51972,
+          "Wick_le_thr": true,
+          "expected": true,
+          "match": true
+        }
+      }
+    },
+    "Q_wick": {
+      "proved": true,
+      "theorem": "Under K\u2084\u2264Wick_hi: Q\u2264(6n+52)/(n\u22121)=6+58/(n\u22121)<10 for all n\u226526 (p\u22655). At p=5, Q_Wick=8.32; at p=3, Q_Wick=112/9>10.",
+      "by_p_sample": {
+        "5": {
+          "Q_Wick": "208/25",
+          "Q_from_K4_Wick": "208/25",
+          "match": true,
+          "Q_Wick_lt_10": true,
+          "formula": "6+58/(n-1)",
+          "check_formula": true
+        },
+        "7": {
+          "Q_Wick": "352/49",
+          "Q_from_K4_Wick": "352/49",
+          "match": true,
+          "Q_Wick_lt_10": true,
+          "formula": "6+58/(n-1)",
+          "check_formula": true
+        },
+        "11": {
+          "Q_Wick": "784/121",
+          "Q_from_K4_Wick": "784/121",
+          "match": true,
+          "Q_Wick_lt_10": true,
+          "formula": "6+58/(n-1)",
+          "check_formula": true
+        }
+      }
+    },
+    "partition": {
+      "proved": true,
+      "theorem": "With S=I+C/p and boolean Max+: K\u2084=12n\u00b2\u221248n+C_diag+24\u2211_S \u03b7_S\u00b2, C_diag=4n(11n\u221214)/p\u00b2. Equivalent: K\u2084\u2264Wick_hi \u21d4 \u2211_S \u03b7_S\u00b2 \u2264 n(13n\u221210)/(6(n\u22121)). Also K\u2084=24\u2211 m\u208a\u00b2+9n\u00b2\u221210n.",
+      "C_diag_formula": "4n(11n-14)/p^2",
+      "eta_budget_wick": "n(13n-10)/(6(n-1))"
+    },
+    "reduction": {
+      "proved_implications": true,
+      "K4_bound_proved_general": false,
+      "theorem": "K\u2084\u2264Wick_hi \u21d2 Q\u2264Q_Wick<10 \u21d2 dual-eq empty (15.195\u2013196) for p\u22655. Wick_hi\u226416n\u00b2\u221214n for p\u22655 (A). Partition (C) equates K\u2084\u2264Wick_hi with an \u03b7_S\u00b2 budget. OPEN: prove any of these for general p\u22655."
+    }
+  },
+  "certified": {
+    "3": {
+      "p": 3,
+      "n": 10,
+      "K4": "1680",
+      "K4_float": 1680.0,
+      "Wick_hi": 1680,
+      "K4_thr": "1460",
+      "K4_le_Wick": true,
+      "K4_le_thr": false,
+      "K4_over_Wick": 1.0,
+      "Q": "112/9",
+      "Q_Wick": "112/9",
+      "C_diag": "1280/3",
+      "sum_eta_S2": "200/9",
+      "eta_budget_wick": "200/9",
+      "eta_le_budget": true,
+      "proved_general": false
+    },
+    "5": {
+      "p": 5,
+      "n": 26,
+      "K4": "120400/13",
+      "K4_float": 9261.538461538461,
+      "Wick_hi": 9360,
+      "K4_thr": "10452",
+      "K4_le_Wick": true,
+      "K4_le_thr": true,
+      "K4_over_Wick": 0.9894806048652203,
+      "Q": "34512/4225",
+      "Q_Wick": "208/25",
+      "C_diag": "28288/25",
+      "sum_eta_S2": "17144/325",
+      "eta_budget_wick": "4264/75",
+      "eta_le_budget": true,
+      "proved_general": false
+    },
+    "7": {
+      "p": 7,
+      "n": 50,
+      "K4": "5218435600/167281",
+      "K4_float": 31195.626520644902,
+      "Wick_hi": 32400,
+      "K4_thr": "39300",
+      "K4_le_Wick": true,
+      "K4_le_thr": true,
+      "K4_over_Wick": 0.96282797903225,
+      "Q": "54853536/8196769",
+      "Q_Wick": "352/49",
+      "C_diag": "107200/49",
+      "sum_eta_S2": "480833200/8196769",
+      "eta_budget_wick": "16000/147",
+      "eta_le_budget": true,
+      "proved_general": false
+    }
+  },
+  "hinge": {
+    "wick_hi_le_thr_p_ge_5": true,
+    "Q_wick_lt_10_p_ge_5": true,
+    "K4_partition_identity": true,
+    "K4_le_Wick_hi_general": false,
+    "K4_le_16n2_minus_14n_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove Max+-free K\u2084\u2264Wick_hi=12n\u00b2+48n (or \u226416n\u00b2\u221214n / \u03b7-budget / |\u03bc|\u22642/n) for all primes p\u22655. Then residual (i) dual-eq closes."
+  },
+  "F3": "Wick_hi\u2264thr and Q_Wick<10 are Max+-free. Do not flip residual/E1/L without K\u2084\u2264Wick_hi (or equivalent)."
+}

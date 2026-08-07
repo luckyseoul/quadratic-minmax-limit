@@ -26,6 +26,7 @@
 - **15.195 mass-corrected dual-eq:** dual-eq needs mass-min \(\sum a\kappa\le-2(2-\alpha)\). Criterion proved. **Census:** p=5 exact min\(-30/13>-254/65\) blocks; p=7 blocks; p=3 does not. PSD/G+ floors too weak for worst-case \(a\). General Max+-free mass-min bound still OPEN.  
 - **15.196 spectral row energy:** \(a\ge-2\) (PSD); \(Q_e\le 2(n+\lambda_2(n-2))/(n-1)-4\). **If \(Q_e\le10\)** (or \(\lambda_2\le6+5/(n-2)\)), mass-min blocks dual-eq for all primes \(5\le p\le47\) (Fraction check). **Census:** \(Q\approx8.17,6.69\) at p=5,7; \(\lambda_2=88/13,2160/409\). Spectral ub alone too weak at p=5. **OPEN:** Max+-free \(Q_e\le10\) or \(\lambda_2\) thr.  
 - **15.197 min-distance + Q(K₄):** **Proved Max+-free** \(d_H\ge p+1\) on Max± (\(y\neq z\)) ⇒ \(|y\cdot z|\le(p-1)^2-2\). **Proved** \(Q_e=K_4/(n(n-1))-2(3n-2)/(n-1)\) with \(K_4=E[(y\cdot z)^4]\) on Max+². **Proved** \(Q_e\le10\Leftrightarrow K_4\le16n^2-14n\). Census K₄ below thr at p=5,7; above at p=3. **OPEN:** Max+-free \(K_4\le16n^2-14n\).  
+- **15.198 Wick_hi residual-(i) reductions:** **Proved Max+-free** \(\mathrm{Wick}_{hi}=12n^2+48n\le16n^2-14n\) for all primes \(p\ge5\); \(K_4\le\mathrm{Wick}_{hi}\Rightarrow Q\le6+58/(n-1)<10\). **Proved** partition \(K_4=12n^2-48n+C_{\mathrm{diag}}+24\sum\eta_S^2\) with \(C_{\mathrm{diag}}=4n(11n-14)/p^2\). Exact K₄ at p=7: \(5218435600/167281\). Census \(K_4\le\mathrm{Wick}_{hi}\) at p=3(=),5,7. **OPEN:** Max+-free \(K_4\le\mathrm{Wick}_{hi}\) (same scalar as 15.95 \(\sum M^2\le\mathrm{Wick}_{hi}\)).  
 - Avg disj Gsum \(=2/(n-3)\); \(G_0\) PSD; **15.176** μ_* / −1/p sufficiency.  
 - **15.177–178:** |μ₄| hinge form; star identity; dual-eq \(n_d\le1\) kill; \(n_d=2\) wedge kill for \(p\ge7\).  
 - **15.180:** dual-eq Q_pairs=30−6p−24/p<0; open dual-eq core is \(n_d\ge2\) after PSD/score filters.  
@@ -48,7 +49,7 @@
 
 ### Required opens (denseness prize path)
 
-1. **Math residual (i) (preferred 15.197):** Prove Max+-free \(K_4=E[(y\cdot z)^4]\le16n^2-14n\) (⇔ \(Q_e\le10\) ⇔ dual-eq empty via 15.195–196), **or** \(|\mu|\le2/n\) / ker-box / \(\mathrm{Gsum}\ge-1/p\). Min-distance \(d_H\ge p+1\) already proved.  
+1. **Math residual (i) (preferred 15.197–198):** Prove Max+-free \(K_4\le\mathrm{Wick}_{hi}=12n^2+48n\) (⇒ \(Q<10\) and \(K_4\le16n^2-14n\) for \(p\ge5\)), **or** \(K_4\le16n^2-14n\) directly, **or** \(|\mu|\le2/n\) / ker-box / \(\mathrm{Gsum}\ge-1/p\). Min-distance + Wick_hi≤thr + partition already proved.  
 2. **Math residual (ii):** Prove exhaustiveness lemma (15.193): freeness-fail \(\Rightarrow S\in\{2,4\}\) and \(f_e=3-S\) on Max+, **or** close multi-level / non-affine subcases by other ND. Affine branch already done (15.179).  
 3. **Predicates:** Flip hinges → residual (i) ∧ residual (ii) full → E1 → L only after (1)+(2).  
 4. **AI-test:** Re-run on short package only after L predicates CLOSED.  
