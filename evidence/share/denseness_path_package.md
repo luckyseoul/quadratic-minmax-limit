@@ -69,6 +69,7 @@ m_n=\min_{a_{ij}=\pm1}\max_{x=\pm1}\Bigl|\sum_{i<j}a_{ij}x_ix_j\Bigr|,\qquad
 | Residual (i) spectral Q / λ₂ | `src/e1_gmin_m4_prop15196.py` |
 | Residual (i) min-distance + Q(K₄) | `src/e1_gmin_m4_prop15197.py` |
 | Residual (i) Wick_hi reductions | `src/e1_gmin_m4_prop15198.py` |
+| Residual (i) frame K₄ identity | `src/e1_gmin_m4_prop15199.py` |
 | Residual (i) support constraints | `src/e1_gmin_m4_prop15180.py` |
 | Gsum structure / Farkas threshold | `src/e1_gmin_m4_prop15172.py` |
 | Gsum vector structure (ξ, stars, K) | `src/e1_gmin_m4_prop15173.py` |
