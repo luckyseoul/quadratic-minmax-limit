@@ -1,0 +1,125 @@
+{
+  "title": "Prop 15.201 \u03b1(n\u22122) sufficient free-e bound; p=7 \u03bc=109/2863; residual (i) OPEN",
+  "proved": {
+    "alpha_n_minus_2_beats_need": true,
+    "two_over_n_farkas": true,
+    "free_e_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "alpha_bound": {
+      "proved": true,
+      "theorem": "For all primes p\u22655: \u03b1(n\u22122)<2\u2212\u03b1 \u21d4 p(p\u00b2\u22123p+1)>0. Hence free-e max \u03ba_e \u2264 \u03b1(n\u22122) \u21d2 dual-eq empty.",
+      "by_p_sample": {
+        "5": {
+          "alpha_n_minus_2": "72/65",
+          "need": "127/65",
+          "beats": true,
+          "poly_p_p2_minus_3p_plus_1": 55
+        },
+        "7": {
+          "alpha_n_minus_2": "144/175",
+          "need": "347/175",
+          "beats": true,
+          "poly_p_p2_minus_3p_plus_1": 203
+        },
+        "11": {
+          "alpha_n_minus_2": "360/671",
+          "need": "1339/671",
+          "beats": true,
+          "poly_p_p2_minus_3p_plus_1": 979
+        },
+        "13": {
+          "alpha_n_minus_2": "504/1105",
+          "need": "2207/1105",
+          "beats": true,
+          "poly_p_p2_minus_3p_plus_1": 1703
+        }
+      }
+    },
+    "farkas_2n": {
+      "proved": true,
+      "theorem": "Gsum\u2265\u22124/n (i.e. |\u03bc|\u22642/n on opposite pairs) beats \u03bc_* for all primes p\u22655 \u21d4 2p\u00b3\u22129p\u00b2+6p\u22123>0.",
+      "by_p_sample": {
+        "5": {
+          "mu_minus_4_over_n": "-2/13",
+          "mu_star": "-14/65",
+          "farkas": true,
+          "poly": 52
+        },
+        "7": {
+          "mu_minus_4_over_n": "-2/25",
+          "mu_star": "-22/133",
+          "farkas": true,
+          "poly": 284
+        },
+        "11": {
+          "mu_minus_4_over_n": "-2/61",
+          "mu_star": "-38/341",
+          "farkas": true,
+          "poly": 1636
+        }
+      }
+    }
+  },
+  "certified": {
+    "free_e_box": {
+      "3": {
+        "p": 3,
+        "success": true,
+        "max_kappa_e": 2.2961673873406485,
+        "alpha_n_minus_2": 1.6,
+        "need": 1.8,
+        "max_le_alpha_n_minus_2": false,
+        "blocks_dual_eq": false,
+        "ratio_max_over_scheme": 2.8702092341758103,
+        "proved_general": false
+      },
+      "5": {
+        "p": 5,
+        "success": true,
+        "max_kappa_e": 0.8048578420228576,
+        "alpha_n_minus_2": 1.1076923076923078,
+        "need": 1.9538461538461538,
+        "max_le_alpha_n_minus_2": true,
+        "blocks_dual_eq": true,
+        "ratio_max_over_scheme": 1.453215548096826,
+        "proved_general": false
+      },
+      "7": {
+        "p": 7,
+        "success": true,
+        "max_kappa_e": 0.5934766118836863,
+        "alpha_n_minus_2": 0.8228571428571428,
+        "need": 1.9828571428571429,
+        "max_le_alpha_n_minus_2": true,
+        "blocks_dual_eq": true,
+        "ratio_max_over_scheme": 1.442477876106182,
+        "proved_general": false
+      }
+    },
+    "mu_p7": {
+      "p": 7,
+      "max_abs_mu": "109/2863",
+      "max_abs_mu_float": 0.03807195249738037,
+      "two_over_n": "1/25",
+      "mu_le_two_over_n": true,
+      "known_exact": "109/2863",
+      "match_known": true,
+      "proved_general": false
+    }
+  },
+  "hinge": {
+    "alpha_n_minus_2_beats_need_p_ge_5": true,
+    "two_over_n_farkas_sufficient": true,
+    "free_e_max_le_alpha_n_minus_2_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove free-e max \u03ba_e \u2264 \u03b1(n\u22122) (or \u2264(3/2)scheme / |\u03bc|\u22642/n / K\u2084\u2264Wick_hi) for all primes p\u22655."
+  },
+  "F3": "\u03b1(n\u22122)<2\u2212\u03b1 is Max+-free. Do not flip residual/E1/L without general free-e max \u2264 \u03b1(n\u22122) or equivalent."
+}

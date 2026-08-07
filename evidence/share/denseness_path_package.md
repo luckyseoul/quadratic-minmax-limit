@@ -51,7 +51,7 @@ m_n=\min_{a_{ij}=\pm1}\max_{x=\pm1}\Bigl|\sum_{i<j}a_{ij}x_ix_j\Bigr|,\qquad
 - **Residual (i) OPEN:** freeness edge \(e\notin G\), \(|G|=k=3p-2\). Dual equality forces
   \((\mathrm{Gsum}\,x)_e=6/p-4\). Threshold \(\mu_*=(6/p-4)/k\); sufficient \(\mathrm{Gsum}\ge-1/p\) or \(|\mu|\le2/n\) (15.176–192).
 - **15.194–196 row/mass/spectral:** pure \(N_e\) fails Paley. Mass-corrected criterion proved; census blocks p=5,7. Spectral: \(Q_e\le 2(n+\lambda_2(n-2))/(n-1)-4\); **\(Q_e\le10\) would close residual (i)** (checked p=5..47). Census \(Q\approx8.17,6.69\). Preferred: Max+-free \(Q_e\le10\) or \(\lambda_2\le6+5/(n-2)\).
-- **15.197–200 K₄ / ker path:** \(d_H\ge p+1\); \(Q(K_4)\); Wick_hi≤thr; frame \(K_4=4n^2+E[A^2]\); **C−2/n∈ker(Gsum)** Max+-free (15.200). Free-\(e\) ker-box restates dual-eq. Census p=5,7 block. **OPEN:** general free-\(e\) max \(\kappa_e<2-\alpha\), or \(K_4\le\mathrm{Wick}_{hi}\), or \(|\mu|\le2/n\).
+- **15.197–201 K₄ / ker path:** \(d_H\ge p+1\); Wick_hi≤thr; frame \(K_4\); **C−2/n∈ker** (15.200). **Proved:** free-e max κ_e≤α(n−2) ⇒ dual-eq empty for p≥5 (15.201). Census free-e max≤α(n−2) at p=5,7; p=7 max|μ|=109/2863<2/n. **OPEN:** free-e max≤α(n−2) general, or |μ|≤2/n, or K₄≤Wick_hi.
 - Adjacent Gsum \(=0\), avg disj \(=2/(n-3)\), \(G_0\) PSD **proved**. Candidate \(-12/(pn)\) not general (15.158).
 - Shipped: `gsum_disj_lb_proved_general()→False`; residual (ii) affine closed / full open; E1/L **OPEN**.
 - Support (15.186–188): \(|\varphi|\le2(p-2)\); \(\mu_{\mathrm{part}}\) majorant \(\le1/(2p)\); target \(|\mu|\le2/n\) sufficient for \(p\ge5\); p=5,7 Max± census beat \(1/(2p)\). **Not** a general Max+-free proof — do not treat as closed.
@@ -71,6 +71,7 @@ m_n=\min_{a_{ij}=\pm1}\max_{x=\pm1}\Bigl|\sum_{i<j}a_{ij}x_ix_j\Bigr|,\qquad
 | Residual (i) Wick_hi reductions | `src/e1_gmin_m4_prop15198.py` |
 | Residual (i) frame K₄ identity | `src/e1_gmin_m4_prop15199.py` |
 | Residual (i) C−2/n ker + free-e box | `src/e1_gmin_m4_prop15200.py` |
+| Residual (i) α(n−2) free-e sufficient | `src/e1_gmin_m4_prop15201.py` |
 | Residual (i) support constraints | `src/e1_gmin_m4_prop15180.py` |
 | Gsum structure / Farkas threshold | `src/e1_gmin_m4_prop15172.py` |
 | Gsum vector structure (ξ, stars, K) | `src/e1_gmin_m4_prop15173.py` |
