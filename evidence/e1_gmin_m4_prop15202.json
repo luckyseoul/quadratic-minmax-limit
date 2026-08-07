@@ -1,0 +1,160 @@
+{
+  "title": "Prop 15.202 free-e dual form; scheme\u2295cross ker (certified); residual (i) OPEN",
+  "proved": {
+    "scheme_cross_in_ker": true,
+    "free_e_dual_form": true,
+    "alpha_n_minus_2_beats_need": true,
+    "three_halves_scheme_beats_need": true,
+    "free_e_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "scheme_cross": {
+      "proved": true,
+      "theorem": "scheme \u2295 cross \u2286 ker(Gsum): scheme by 15.190 (Cy=\u00b1py algebra); cross by block-off-diagonal A in the C-eigenbasis (y\u1d40A y=0 on V\u00b1 hence on Max\u00b1). dim = n\u22121+n\u00b2/4."
+    },
+    "dual_form": {
+      "proved": true,
+      "theorem": "If upper box is slack at free-e max (certified p=3,5,7), then free-e max \u03ba_e = \u03b1\u00b7S* with S*=min{\u2211_{g\u2260e} w_g : w_e=1, w\u22650, w \u22a5 ker}.  \u22a5scheme \u21d4 regular weighted degree; \u22a5cross \u21d4 (W\u2299C) commutes with C.  Hence free-e max \u2264 \u03b1(n\u22122) \u21d4 S*\u2264n\u22122.",
+      "note": "Upper-box slack is certified at p=3,5,7 (dual yp=0); not yet proved for all p, but the dual form with both boxes always upper-bounds free-e max."
+    },
+    "alpha_bound": {
+      "proved": true,
+      "theorem": "For all primes p\u22655: \u03b1(n\u22122)<2\u2212\u03b1 \u21d4 p(p\u00b2\u22123p+1)>0. Hence free-e max \u03ba_e \u2264 \u03b1(n\u22122) \u21d2 dual-eq empty.",
+      "by_p_sample": {
+        "5": {
+          "alpha_n_minus_2": "72/65",
+          "need": "127/65",
+          "beats": true,
+          "poly_p_p2_minus_3p_plus_1": 55
+        },
+        "7": {
+          "alpha_n_minus_2": "144/175",
+          "need": "347/175",
+          "beats": true,
+          "poly_p_p2_minus_3p_plus_1": 203
+        },
+        "11": {
+          "alpha_n_minus_2": "360/671",
+          "need": "1339/671",
+          "beats": true,
+          "poly_p_p2_minus_3p_plus_1": 979
+        },
+        "13": {
+          "alpha_n_minus_2": "504/1105",
+          "need": "2207/1105",
+          "beats": true,
+          "poly_p_p2_minus_3p_plus_1": 1703
+        }
+      }
+    },
+    "three_halves": {
+      "proved": true,
+      "theorem": "(3/2)\u00b7scheme_max < 2\u2212\u03b1 for all primes p\u22655 \u21d4 4p\u00b3\u22129p\u00b2+4p\u22123>0.  Hence free-e max \u2264 (3/2)\u00b7scheme \u21d2 dual-eq empty.",
+      "by_p_sample": {
+        "5": {
+          "three_halves_scheme": "54/65",
+          "need": "127/65",
+          "beats": true,
+          "poly": 292
+        },
+        "7": {
+          "three_halves_scheme": "108/175",
+          "need": "347/175",
+          "beats": true,
+          "poly": 956
+        },
+        "11": {
+          "three_halves_scheme": "270/671",
+          "need": "1339/671",
+          "beats": true,
+          "poly": 4276
+        },
+        "13": {
+          "three_halves_scheme": "378/1105",
+          "need": "2207/1105",
+          "beats": true,
+          "poly": 7316
+        }
+      }
+    }
+  },
+  "certified": {
+    "3": {
+      "p": 3,
+      "success": true,
+      "dim_scheme_cross": 34,
+      "dim_ker_Gsum": 34,
+      "ker_eq_scheme_cross": true,
+      "max_kappa_e": 2.800000000000003,
+      "S_star": 14.000000000000016,
+      "scheme_max": 0.8,
+      "alpha_n_minus_2": 1.6,
+      "three_halves_scheme": 1.2000000000000002,
+      "need": 1.8,
+      "max_le_alpha_n_minus_2": false,
+      "max_le_three_halves_scheme": false,
+      "S_star_le_n_minus_2": false,
+      "blocks_dual_eq": false,
+      "ratio_max_over_scheme": 3.5000000000000036,
+      "frac": "14/5",
+      "proved_general": false
+    },
+    "5": {
+      "p": 5,
+      "success": true,
+      "dim_scheme_cross": 194,
+      "dim_ker_Gsum": 194,
+      "ker_eq_scheme_cross": true,
+      "max_kappa_e": 0.8109890109877659,
+      "S_star": 17.57142857140159,
+      "scheme_max": 0.5538461538461539,
+      "alpha_n_minus_2": 1.1076923076923078,
+      "three_halves_scheme": 0.8307692307692308,
+      "need": 1.9538461538461538,
+      "max_le_alpha_n_minus_2": true,
+      "max_le_three_halves_scheme": true,
+      "S_star_le_n_minus_2": true,
+      "blocks_dual_eq": true,
+      "ratio_max_over_scheme": 1.464285714283466,
+      "frac": "369/455",
+      "proved_general": false
+    },
+    "7": {
+      "p": 7,
+      "success": true,
+      "dim_scheme_cross": 674,
+      "dim_ker_Gsum": 674,
+      "ker_eq_scheme_cross": true,
+      "max_kappa_e": 0.5934766118848238,
+      "S_star": 34.61946902661474,
+      "scheme_max": 0.4114285714285714,
+      "alpha_n_minus_2": 0.8228571428571428,
+      "three_halves_scheme": 0.6171428571428571,
+      "need": 1.9828571428571429,
+      "max_le_alpha_n_minus_2": true,
+      "max_le_three_halves_scheme": true,
+      "S_star_le_n_minus_2": true,
+      "blocks_dual_eq": true,
+      "ratio_max_over_scheme": 1.4424778761089467,
+      "frac": "11736/19775",
+      "proved_general": false
+    }
+  },
+  "hinge": {
+    "scheme_cross_in_ker": true,
+    "free_e_dual_form": true,
+    "alpha_n_minus_2_beats_need_p_ge_5": true,
+    "three_halves_scheme_beats_need_p_ge_5": true,
+    "ker_eq_scheme_cross_general": false,
+    "free_e_max_le_alpha_n_minus_2_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove free-e max \u03ba_e \u2264 \u03b1(n\u22122) or \u2264(3/2)\u00b7scheme (or |\u03bc|\u22642/n / K\u2084\u2264Wick_hi) for all primes p\u22655.  Dual form: S*\u2264n\u22122 or \u22643(n\u22122)/4."
+  },
+  "F3": "Do not flip residual/E1/L without general free-e max \u2264 \u03b1(n\u22122) or equivalent.  ker=scheme\u2295cross certified only at p=3,5,7."
+}

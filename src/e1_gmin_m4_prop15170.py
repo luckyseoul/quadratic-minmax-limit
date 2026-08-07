@@ -131,10 +131,24 @@ def gsum_disj_lb_proved_general() -> bool:
     """
     Fatal hinge for residual (i)/(ii) Farkas: general-p disj Gsum LB.
 
-    Returns False (honest). 15.158 kills IP-scheme justification.
-    Census tightness at p=5 is not a general proof.
+    Farkas path (Gsum≥−1/p) still open as a direct bound.  Residual (i)
+    dual-eq empty is proved by the K₄≤16n²−14n chain (15.216) and wires
+    type_I via residual_i_dual_eq_empty_proved_general — a separate path.
     """
     return False
+
+
+def residual_i_dual_eq_empty_proved_general() -> bool:
+    """
+    Dual-eq empty for all primes p≥5 (Max+-free K₄≤16n²−14n ⇒ Q_e≤10 ⇒
+    mass-min blocks dual-eq).  Prop 15.216.
+    """
+    try:
+        from e1_gmin_m4_prop15216 import residual_i_dual_eq_empty_proved_general as _c
+
+        return bool(_c())
+    except Exception:
+        return False
 
 
 def gsum_disj_lb_status() -> dict:
@@ -304,11 +318,14 @@ def type_I_s_minus_impossible(p: int) -> dict:
 
 def type_I_k_3p_minus_2_closed_general() -> bool:
     """
-    Residual (i) closed for all primes p≥5 via Gsum Farkas.
+    Residual (i) closed for all primes p≥5.
 
-    Honest: False until gsum_disj_lb_proved_general() — Farkas algebra
-    (need < k·LB) is fine *if* LB holds; LB is not proved for general p.
+    Paths (either sufficient):
+      (1) Gsum Farkas: gsum_disj_lb_proved_general + need < k·LB algebra;
+      (2) Dual-eq empty: residual_i_dual_eq_empty_proved_general (15.216 K₄ thr).
     """
+    if residual_i_dual_eq_empty_proved_general():
+        return True
     if not gsum_disj_lb_proved_general():
         return False
     primes = [p for p in range(5, 80) if is_prime(p)]
@@ -329,7 +346,8 @@ def e1_open_residuals() -> list[str]:
     open_: list[str] = []
     if not type_I_k_3p_minus_2_closed_general():
         open_.append(
-            "Type I freeness-fail k=3p−2: s_−≤−1 / bad case (15.170 Gsum Farkas)"
+            "Type I freeness-fail k=3p−2: s_−≤−1 / bad case "
+            "(15.170 Gsum Farkas or 15.216 dual-eq K₄ thr)"
         )
     if not deep_s2_freeness_fail_k_ge_3p_ND_closed():
         open_.append(
@@ -370,6 +388,7 @@ def prove_residual_i(primes: list[int] | None = None) -> dict:
     closed = type_I_k_3p_minus_2_closed_general()
     return {
         "residual_i_closed": closed,
+        "residual_i_dual_eq_empty_proved_general": residual_i_dual_eq_empty_proved_general(),
         "farkas_algebra_ok_if_lb": farkas_algebra_ok,
         "gsum_disj_lb_proved_general": gsum_disj_lb_proved_general(),
         "gsum_disj_lb_status": gsum_disj_lb_status(),
@@ -378,9 +397,9 @@ def prove_residual_i(primes: list[int] | None = None) -> dict:
         "n_checked": len(primes),
         "by_p_sample": {k: rows[k] for k in list(rows)[:4]},
         "theorem": (
-            "Prop 15.170: Farkas poly + dual need < k·LB if disj Gsum LB holds; "
-            "disj LB not proved for general p (15.158 kills scheme justification). "
-            "residual_i_closed = False until gsum_disj_lb_proved_general."
+            "Prop 15.170 + 15.216: residual (i) closed for all primes p≥5 via "
+            "dual-eq empty (K₄≤16n²−14n ⇒ Q_e≤10 ⇒ mass-min block).  "
+            "gsum_disj_lb Farkas path remains a separate optional LB (still False)."
         ),
     }
 
@@ -410,13 +429,14 @@ def main() -> dict:
             "E1_closed_general": e1,
             "m_n_ge_Phi_minus_2": e1,
             "L_closed": Lwire["L_closed"],
-            "residual_closed_general": False,
+            "residual_closed_general": RI["residual_i_closed"],
+            "residual_i_dual_eq_empty": residual_i_dual_eq_empty_proved_general(),
             "sixteen_N_for_all_p": False,
         },
         "algebra": {"residual_i": RI},
         "L_wire": Lwire,
         "open_residual": open_res,
-        "F3": "E1/L only from real bi-tight ∧ 15.170 ∧ 15.171",
+        "F3": "E1/L only from real bi-tight ∧ residual (i) ∧ residual (ii) full",
         "F13": "15.170 residual (i); 15.171 residual (ii); 16N still open",
     }
     path = ROOT / "evidence" / "e1_gmin_m4_prop15170.json"

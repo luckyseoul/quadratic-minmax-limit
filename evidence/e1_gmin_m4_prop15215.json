@@ -1,0 +1,45 @@
+{
+  "prop": "15.215",
+  "title": "K4/Wick: T\u03ba spectrum, \u03b7_part formula, budget; \u03b4\u2208E_4p still OPEN",
+  "proved": {
+    "star_exhaustion": true,
+    "sum_kappa_sq": true,
+    "n3_count": true,
+    "Tkappa_norm": true,
+    "Tphi_nplus2_star": true,
+    "T3_kappa": true,
+    "eta_part_formula": true,
+    "eta_part_lt_wick_budget": true
+  },
+  "reduction": {
+    "proved_implications": true,
+    "K4_bound_proved_general": false,
+    "theorem": "For Max+ m\u2084: \u03b7=\u03b7_part+\u03b4 with \u03b4\u2208E_{4p}, \u2211\u03b7\u00b2=\u2016\u03b7_part\u2016\u2082\u00b2+\u2016\u03b4\u2016\u2082\u00b2.  If \u2016\u03b4\u2016\u2082\u00b2 \u2264 B_wick\u2212\u2016\u03b7_part\u2016\u2082\u00b2 for all primes p\u22655, then \u2211\u03b7\u00b2\u2264B_wick \u21d4 K\u2084\u2264Wick_hi \u21d2 Q_e<10 \u21d2 dual-eq residual-(i) empty (15.195\u2013198).  OPEN: the \u03b4 bound (J).",
+    "gap_sample": {
+      "5": "160/39",
+      "7": "784/165",
+      "11": "27104/5307"
+    },
+    "note": "gap = B_wick \u2212 \u03b7_part \u2212 room_hyp/24 > 4 for p\u22655; at p=5 census \u2016\u03b4\u2016\u2082\u00b2=room_hyp/24 exactly."
+  },
+  "hinge": {
+    "star_exhaustion": true,
+    "sum_kappa_sq": true,
+    "n3_count": true,
+    "Tkappa_norm": true,
+    "Tphi_nplus2_star": true,
+    "T3_kappa": true,
+    "eta_part_formula": true,
+    "eta_part_lt_wick_budget": true,
+    "delta_E4p_bound": false,
+    "K4_le_wick_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Bound \u2016\u03b4\u2016\u2082\u00b2 on E_{4p} so \u2211\u03b7\u00b2\u2264B_wick for all p\u22655; then K\u2084\u2264Wick_hi and residual-(i) dual-eq closes."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "soft_close": false
+}

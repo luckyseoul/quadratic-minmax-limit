@@ -44,11 +44,15 @@ def test_farkas_poly_still_positive_when_lb_assumed():
     assert dual_equality_impossible_general() is False  # gated; no soft-close
 
 
-def test_e1_and_L_open_until_hinge_closed():
-    # Residual (i) still needs Gsum LB; full residual (ii) open (15.193 exhaustiveness)
+def test_e1_and_L_open_honest():
+    # Residual (i) OPEN (15.216 Rayleigh gap on δ); gsum Farkas LB false.
+    # Full residual (ii) open (15.193) ⇒ E1/L OPEN. Soft-close forbidden.
+    from e1_gmin_m4_prop15170 import residual_i_dual_eq_empty_proved_general
     from e1_gmin_m4_prop15179 import residual_ii_dual_twolevel_affine_closed
 
-    assert type_I_k_3p_minus_2_closed_general() is False
+    assert gsum_disj_lb_proved_general() is False  # Farkas path unused
+    assert residual_i_dual_eq_empty_proved_general() is False  # 15.216 R gap
+    assert type_I_k_3p_minus_2_closed_general() is False  # residual (i) open
     assert residual_ii_dual_twolevel_affine_closed() is True  # 15.179 freeze branch
     assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False  # full residual ii
     assert e1_closed_general() is False

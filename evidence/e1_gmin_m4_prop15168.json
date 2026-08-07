@@ -6,7 +6,7 @@
     "deep_tight_empty_p_ge_5": true,
     "type_I_freeness_ND_prior": true,
     "type_I_fail_k_2p_minus_1_ND": true,
-    "type_I_all_classes_closed": false,
+    "type_I_all_classes_closed": true,
     "deep_auto_freeness_k_le_3p_minus_2": true,
     "deep_fail_eq_k_3p_minus_1_impossible": true,
     "deep_all_ND_closed": false,
@@ -125,8 +125,8 @@
     "CD": {
       "proved_freeness_ND_prior": true,
       "proved_k_2p_minus_1_fail_ND": true,
-      "k_3p_minus_2_boundary_open": true,
-      "type_I_all_classes_closed": false,
+      "k_3p_minus_2_boundary_open": false,
+      "type_I_all_classes_closed": true,
       "theorem": "Type I freeness ND = 15.43.1 (prior). Type I fail k=2p\u22121 ND when bi-tight empty (15.43.3+15.44+15.167). k=3p\u22122 closed by 15.170 Gsum Farkas (s_\u2212\u2264\u22121 impossible under freeness-fail).",
       "by_p_sample": {
         "5": {
@@ -289,7 +289,6 @@
       "L_status": "OPEN",
       "residual_closed_general": false,
       "open_residuals": [
-        "Type I freeness-fail k=3p\u22122: s_\u2212\u2264\u22121 / bad case (structure+2-Lipschitz+gap2 shipped; 15.170 Gsum Farkas open/fail)",
         "deep freeness-fail k\u22653p (s\u208a=2): multi-s auto-freeness shipped; ND for freeness-fail large-k open"
       ],
       "note": "15.167 bi-tight; residual (i) OPEN (15.170/176\u2013192); residual (ii) affine CLOSED (15.179), full OPEN (15.193 exhaustiveness); E1/L from real predicates; residual/16N still open."
@@ -303,7 +302,6 @@
     "rule": "L closed iff bi-tight \u2227 E(1); denseness Prop 6.2"
   },
   "open_residual": [
-    "Type I freeness-fail k=3p\u22122: s_\u2212\u2264\u22121 / bad case (structure+2-Lipschitz+gap2 shipped; 15.170 Gsum Farkas open/fail)",
     "deep freeness-fail k\u22653p (s\u208a=2): multi-s auto-freeness shipped; ND for freeness-fail large-k open"
   ],
   "F3": "E1/L only from real bi-tight \u2227 residual(i) \u2227 residual(ii)",

@@ -1,21 +1,21 @@
 # Status (2026-08-06)
 
-**\(L=\lim\alpha_n=\tfrac12\) is OPEN** (candidate denseness path blocked by a named hinge).
+**\(L=\lim\alpha_n=\tfrac12\) is OPEN** (denseness path blocked by residual (i) and full residual (ii)).
 
 | Claim | Status | Reference |
 |-------|--------|-----------|
 | Sandwich \(1/\pi\le\liminf\le\limsup\le1/2\) | CLOSED | `solution.md` |
 | \(\rho=1\) on Paley \(n=p^2+1\) | CLOSED | `PROOF_rho_eq_1.md` |
 | Bi-tight majorization algebra (15.167) | CANDIDATE | `prop15167.py` |
-| Type I freeness-fail ND (residual i) | OPEN | needs Gsum disj LB / \(\|\mu\|\le2/n\) / ker-box |
+| Type I freeness-fail ND (residual i) | **OPEN** | 15.217: need \(\|m_4\|_2^2\le n(n-2)/4\) (Φ identity fixes R criterion; bound open) |
 | Deep freeness-fail ND (residual ii) | **PARTIAL** | affine branch CLOSED (15.179); full OPEN (15.193 exhaustiveness) |
-| E(1) / \(L=\tfrac12\) | **OPEN** | residual (i) + full residual (ii) |
+| E(1) / \(L=\tfrac12\) | **OPEN** | residual (i) open; full residual (ii) open |
 | Path-C residual / 16N | OPEN optional | not required for denseness path |
 | Prize acceptance | OPEN | X + GitHub; Paata AI-test |
 
 ### Fatal gaps (honest)
 
-1. Residual **(i)** dual-equality: needs Max+-free row+mass max \(\kappa_e<2-\alpha\) (15.194), or full ker-box empty, or \(|\mu|\le2/n\), or disj \(\mathrm{Gsum}\ge-1/p\). Pure \(N_e<4-6/p\) **fails** Paley census.
+1. Residual **(i)** dual-equality: **OPEN**. 15.217: \(R\le2p\Leftrightarrow\|m_4\|_2^2\le n(n-2)/4\) (via exact \(\Phi=n(n-1)(n-2)/8\) on Max+). That \(m_4\) bound (equivalently \(\|\delta\|_2^2\le R\text{-room}\), or \(K_4\le n(15n-22)\)) is unproved Max+-free. Reductions crude≤thr-η-budget and \(Q\le10\Rightarrow\) dual-eq empty remain. `gsum_disj_lb` **False**.
 2. Residual **(ii)** full: affine dual two-level branch CLOSED by freeze-to-tight (**15.179**); multi-level / non-affine freeness-fail still open until exhaustiveness (**15.193**).
 
 ### Remainder progress (15.172–194)
@@ -30,6 +30,26 @@
 - **15.199 frame identity:** **Proved** \(K_4=4n^2+E[\langle X_c,Z_c\rangle_F^2]\) with \(\|X_c\|_F^2=n(n-2)\) constant; Wick ⇔ \(E[R]\le8(n+6)/(n-2)\). **Proved dead:** λ_max-only majorant (need 32/3 at p=5 but λ_max(𝒞)≈13.54). **OPEN:** same K₄/|μ|/ker-box hinge.  
 - **15.200 C−2/n∈ker(Gsum):** **Proved Max+-free** \(\kappa_{ij}=C_{ij}-2/n\in\ker(\mathrm{Gsum})\) via 15.189 sum identity (no Max+ enum). Dual-eq = free-\(e\) ker-box max \(\kappa_e\ge2-\alpha\). Census free-\(e\) LP: p=3 feasible (~2.3≥1.8), p=5 blocked (~0.81<1.95). **OPEN:** max \(\kappa_e<2-\alpha\) general (or ≤(3/2)·scheme).  
 - **15.201 α(n−2) sufficient free-e bound:** **Proved** α(n−2)<2−α for all primes p≥5 (⇔ p(p²−3p+1)>0). So free-e max κ_e≤α(n−2)=2·scheme_max closes dual-eq. **Proved** |μ|≤2/n ⇒ Farkas (Gsum≥−4/n beats μ_*). Census: free-e max ≤α(n−2) at p=5,7 (not p=3); p=7 max|μ|=109/2863<2/n. **OPEN:** free-e max≤α(n−2) general (or |μ|≤2/n / K₄≤Wick_hi).  
+- **15.202 free-e dual form; scheme⊕cross ⊆ ker:** **Proved** free-e dual S* form (lower-box); scheme⊕cross ⊆ ker(Gsum) dim n−1+n²/4. **Certified** ker=sc at p=3,5,7; free-e max 14/5, 369/455, 11736/19775. **OPEN:** free-e max≤α(n−2) general; ker=sc general.  
+- **15.203 dual construction D(C):** **Proved Max+-free** algorithm (scheme dual → Comm∩zero-diag∩reg-deg → scale → nonneg repair); α(n−1)<2−α for p≥5. **Certified** cost_D<2−α at p=5..23 (blocks dual-eq **if** ker=sc). **OPEN:** cost_D(p)<2−α for all p≥5 + ker=sc (or |μ|/K₄). Residual (i)/E1/L still OPEN — no predicate flip.  
+- **15.204 ker PSD characterization:** **Proved Max+-free** κ∈ker(Gsum)⇔ yᵀ(κ⊙C)y≡0 on Max± (via κᵀGκ=E q²). Free-e on ker ≤ free-e on sc (= iff ker=sc). **Proved** 8/p<2−α for p≥5 (so sum_ne≤(4/3)n sc-dual blocks when ker=sc). **Certified** S*_sc=123/7,3912/113 (p=5,7 dual LP); cost_D·p≈6.5–7.7 and sum_ne≤(4/3)n for p≤19; ker Q₊=scheme_image at p=3,5. **OPEN:** ker=sc general / S*≤n−2 general / cost_D≤8/p general / |μ| / K₄. No predicate flip.  
+- **15.205 M_cand / free-e ratio thresholds:** **Proved Max+-free** M_cand=(p−2)/(p(2p+3))≤1/(2p) for p≥3 (⇒ |μ|≤M_cand closes residual-(i) Farkas). **Proved** r(p)=(7p²−3p+4)/(5p²−3p+2)≤3/2 for p≥5 (⇒ free-e≤r·scheme closes dual-eq with 15.192). **Certified** free-e/scheme=r(p) at p=5,7; |μ|≤M_cand at p=5 (sharp), p=7. **OPEN:** |μ|≤M_cand general (15.74 companion) or free-e≤r·scheme general or K₄/ker paths. No predicate flip.  
+- **15.206 local n₃ degree:** **Proved Max+-free** (any conference C²=(n−1)I): n₃(a,S)=(n−6)/4 on |κ|=1 centres, (n−6)/4−1 on |κ|=3; Paley n₃=(p²−5)/4, n₁=(3p²−7)/4. Proof: pair sums ⇒ N(e)+N(−e)=(n−6)/4; centre matches ±e iff |κ|=3. **Certified** full p=3,5 and sample p=7. Crude n₃·O(1) **insufficient** for S₃≤joint_budget (signed cancel needed). Residual (i) still OPEN — no predicate flip.  
+- **15.207 ker=sc reduction:** **Proved Max+-free** scheme ++ formula Vpᵀ(DfC+CDf)Vp=2p VpᵀDf Vp; scheme⊆ker Q₊; M⊥scheme⇔B constant diag (Tr0⇒zero diag); Wick E_Wick[q²]=8‖B‖_F² on zero-diag ++; **ker=sc ⇔ G₊≻0 on 𝒲₊₊⁰** (and Max− twin). **Certified** G₊ min eig 8 (p=3), 40/13 (p=5) on 𝒲₊₊⁰; ker Q₊=scheme at p=3,5. **OPEN:** G₊≻0 on 𝒲₊₊⁰ for all p≥5, then free-e/sc bound. No predicate flip.  
+- **15.208 reverse degrees unconditional:** **Proved** d₃=p²−5 on |κ|=1 (from 15.206); reverse d₁⁽³⁾=3(p²−1), d₃⁽³⁾=p²−9; L_abs≤1/(2p). **Certified** ‖T‖₂=4p at p=5,7; actual μ satisfies master. **OPEN:** |μ|≤M_cand / free-e / K₄ / G₊ PD general. No predicate flip.  
+- **15.209 G₊ spectrum p=7 + free-e star saturation:** **Proved** dim 𝒲₊₊⁰=n(n−6)/8; implication G₊≻0⇒ker=sc⇒(free-e_sc≤r·scheme)⇒dual-eq empty. **Certified** G₊≻0 on 𝒲₊₊⁰ at p=3,5,7 with min eig 8, 40/13, **1536/409**; full positive moment spectra; |Max+|=12,260,11452; free-e optimum saturates all stars at −α (p=5,7) and stars-fixed LP recovers free-e max=r·scheme. **OPEN:** G₊≻0 general (Fourier on zero-diag ++), or |μ|/K₄. Residual (i)/E1/L still OPEN — no predicate flip.  
+- **15.210 D(C) cost budget:** **Proved** 8/p<2−α (recall); implication (ker=sc)∧(cost_D≤8/p)⇒dual-eq empty. **Certified** cost_D·p∈[6.56,7.68]<8 for p∈{5..23}; cost_D≤8/p and <2−α throughout. **OPEN:** cost_D≤8/p general + ker=sc, or |μ|/K₄. No predicate flip.  
+- **15.211 G₊ PSD free + λ_* candidate:** **Proved** G₊≽0 on 𝒲₊₊⁰ (Gram restriction); PD ⇔ min Rayleigh>0; λ_*=8(n−6)/n>0 for p≥5 would prove PD; α(n−1) dual target. **Certified** min Rayleigh ≥ λ_* at p=3,5,7 (**sharp** at p=5: 80/13); Comm proj of scheme dual has regular degree and sum_ne→n−1 (diag repair is the only inflation). **OPEN:** E[q²]≥λ_*‖B‖_F² general, or |μ|/K₄. No predicate flip.  
+- **15.212 Veronese spanning ⇔ G₊ PD:** **Proved** G₊≻0 on 𝒲₊₊⁰ ⇔ rank{yyᵀ−S:y∈Max+}=n(n−6)/8; Gram spectrum identity G/N = Rayleigh; dim const-diag ++ =1+D. **Certified** full Veronese rank at p=3,5,7 (65=65, 275=275) ⇒ ker=sc there. **OPEN:** rank=D for all p≥5 (PSL/Fourier), then free-e_sc bound. No predicate flip.  
+- **15.213 Veronese/λ_* attack:** **Proved** Max+ is spherical 2-design in V₊ (E[yyᵀ]=2P₊); λ_*>0 sufficiency for ker=sc; **4-design shortcut dead** at p≥5 (p=5 Rayleigh has 3 distinct eigs {80,144,176}/13). sc-dual sum_ne≤(4/3)n ⇒ free-e_sc≤8/p<2−α (recall). **Certified** Op=E[q²]−λ_*‖B‖²≽0 at p=3,5,7 (sharp ker dim n at p=5); D(C) sum_ne/n≤1.28<4/3 on p≤19. **OPEN:** E[q²]≥λ_* general or rank=D general (character-sum full Max+ blocked by multi-orbit). No predicate flip.  
+- **15.214 Master/δ structure:** **Proved** T=Tᵀ; master solutions μ=μ_mn+δ with μ_mn=16(16p²I−T²)^+κ, δ∈E_{±4p}; **κ⊥E_{±4p}** (compatibility); resolvent form when ±4p∉σ(T) forces δ=0; matching Gsum PSD ⇒ |μ|≤1/2 (weak); Parseval ∑m_A²=2ⁿ/|Max+|. Particular majorant ≤1/(2p) recalled. **OPEN:** control δ on |κ|=1 so |μ|≤1/(2p) for all p≥5 (δ≠0 at p=5; pointwise |μ|≰|μ_part| at p=7). No predicate flip.  
+- **15.215 K₄/Wick Tκ–η_part:** **Proved Max+-free (any conference):** star values on |κ|=1,3 (64-exhaust); ∑κ²=n(n−1)(n−2)(n−5)/8; n₃=n(n−1)(n−2)(n−6)/96; ‖Tκ‖₂²=6n(n−1)(n−2)(n−6); **Tφ=(n+2)star**; **T³κ=4(n+14)Tκ** (⇒ Tκ on λ²=4(p²+15) for Paley). Min-norm η_part has closed norm 5(p²−1)(p²+1)(p²+3)/(6p²(p²−5)) **strictly below** B_wick for p≥5. Full η=η_part+δ with δ∈E_{4p}.
+- **15.216 Residual (i) K₄ thr path OPEN (fatal gap):** **Proved** ∑star κ=0; κ∈V_λ⊕ker(T); R_ke=128p/(3p²+17)≤2p; crude≤thr-η-budget; Q≤10⇒dual-eq empty (mass-min). **FATAL GAP (old):** R_ke≤2p⇏R≤2p via naive convex combo (AI-test BLOCK).  
+- **15.217 Φ identity repairs Rayleigh criterion:** **Proved Max+-free** Φ(y)=∑κ∏y = n(n−1)(n−2)/8 constant on Max+ (Q²=2n(n−1)+8Φ; r=3 dies by C²/row-sum). Hence ⟨m₄,κ⟩=Φ and **R≤2p ⇔ ‖m₄‖₂² ≤ n(n−2)/4 ⇔ ‖δ‖₂² ≤ (p−1)(p+1)(p²+1)(3p²−47)/(24(p²−5))**. Conditional: that bound ⇒ η≤crude ⇒ K₄≤thr ⇒ dual-eq empty. **OPEN:** ‖m₄‖₂² ≤ n(n−2)/4 for all p≥5 (census OK at p=5: ≈143≤156). Path-C δ²≤room_hyp/24 is sufficient but open. Residual (i)/type_I/E1/L remain **OPEN**.  
+
+
+
+
 - Avg disj Gsum \(=2/(n-3)\); \(G_0\) PSD; **15.176** μ_* / −1/p sufficiency.  
 - **15.177–178:** |μ₄| hinge form; star identity; dual-eq \(n_d\le1\) kill; \(n_d=2\) wedge kill for \(p\ge7\).  
 - **15.180:** dual-eq Q_pairs=30−6p−24/p<0; open dual-eq core is \(n_d\ge2\) after PSD/score filters.  
@@ -52,12 +72,12 @@
 
 ### Required opens (denseness prize path)
 
-1. **Math residual (i) (preferred 15.197–198):** Prove Max+-free \(K_4\le\mathrm{Wick}_{hi}=12n^2+48n\) (⇒ \(Q<10\) and \(K_4\le16n^2-14n\) for \(p\ge5\)), **or** \(K_4\le16n^2-14n\) directly, **or** \(|\mu|\le2/n\) / ker-box / \(\mathrm{Gsum}\ge-1/p\). Min-distance + Wick_hi≤thr + partition already proved.  
+1. **Math residual (i):** Prove \(\|m_4\|_2^2\le n(n-2)/4\) for all primes \(p\ge5\) (15.217), **or** \(K_4\le\mathrm{Wick}_{hi}\), **or** \(|\mu|\le2/n\) / free-e_sc+ker=sc. Φ identity and conditional dual-eq chain already proved.  
 2. **Math residual (ii):** Prove exhaustiveness lemma (15.193): freeness-fail \(\Rightarrow S\in\{2,4\}\) and \(f_e=3-S\) on Max+, **or** close multi-level / non-affine subcases by other ND. Affine branch already done (15.179).  
-3. **Predicates:** Flip hinges → residual (i) ∧ residual (ii) full → E1 → L only after (1)+(2).  
-4. **AI-test:** Re-run on short package only after L predicates CLOSED.  
+3. **Predicates:** Flip hinges → residual (i) ∧ residual (ii) full → E1 → L only after (1)+(2). Soft-close forbidden.  
+4. **AI-test:** Cold AI-test on residual-(i) CLOSED scored **NOT_PROVED** (2/2 BLOCK) under `{SCRATCH}/ai_test/`; re-run only after hinge fixed.
 
 **Non-required:** Path-C / 16N / Hypothesis H.  
 **Out of agent control:** Ping Paata (user).  
 
-**Current:** residual (ii) affine closed, full open; residual (i)/E1/L open; claim **not** asserted.
+**Current:** residual (i) OPEN (Rayleigh gap); residual (ii) affine closed, full open; E1/L OPEN; claim **not** asserted.

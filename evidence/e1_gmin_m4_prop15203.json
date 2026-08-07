@@ -1,0 +1,103 @@
+{
+  "title": "Prop 15.203 Max+-free free-e dual construction D(C); residual (i) OPEN",
+  "proved": {
+    "dual_construction": true,
+    "alpha_n_minus_1_beats_need": true,
+    "cost_D_lt_need_general": false,
+    "ker_eq_sc_general": false,
+    "free_e_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "alpha_n_minus_1": {
+      "proved": true,
+      "theorem": "For all primes p\u22655: \u03b1(n\u22121)<2\u2212\u03b1.  Hence free-e max \u03ba_e \u2264 \u03b1(n\u22121) \u21d2 dual-eq empty.",
+      "by_p_sample": {
+        "5": {
+          "alpha_n_minus_1": "15/13",
+          "need": "127/65",
+          "beats": true,
+          "poly": 52
+        },
+        "7": {
+          "alpha_n_minus_1": "21/25",
+          "need": "347/175",
+          "beats": true,
+          "poly": 200
+        },
+        "11": {
+          "alpha_n_minus_1": "33/61",
+          "need": "1339/671",
+          "beats": true,
+          "poly": 976
+        },
+        "13": {
+          "alpha_n_minus_1": "39/85",
+          "need": "2207/1105",
+          "beats": true,
+          "poly": 1700
+        }
+      }
+    }
+  },
+  "certified": {
+    "dual_D": {
+      "3": {
+        "p": 3,
+        "ok": true,
+        "rnorm": 6.831635152424838e-16,
+        "t0": 0.04890536846524586,
+        "sum_ne": 14.820711170293462,
+        "cost": 2.9641422340586927,
+        "need": 1.8,
+        "blocks_if_ker_eq_sc": false,
+        "degstd": 5.617333549722722e-16,
+        "minW": 0.0,
+        "comm_norm": 8.689408114947734e-15,
+        "proved_general": false
+      },
+      "5": {
+        "p": 5,
+        "ok": true,
+        "rnorm": 7.944331518785468e-16,
+        "t0": 0.012687745600162302,
+        "sum_ne": 31.346300554225884,
+        "cost": 1.446752333271964,
+        "need": 1.9538461538461538,
+        "blocks_if_ker_eq_sc": true,
+        "degstd": 6.689744835886413e-16,
+        "minW": 0.0,
+        "comm_norm": 1.748911921319452e-14,
+        "proved_general": false
+      },
+      "7": {
+        "p": 7,
+        "ok": true,
+        "rnorm": 2.359479169708044e-15,
+        "t0": 0.010994842768447387,
+        "sum_ne": 64.03309438980556,
+        "cost": 1.0977101895395238,
+        "need": 1.9828571428571429,
+        "blocks_if_ker_eq_sc": true,
+        "degstd": 8.091690499107339e-16,
+        "minW": 0.0,
+        "comm_norm": 4.249752802104258e-14,
+        "proved_general": false
+      }
+    }
+  },
+  "hinge": {
+    "dual_construction_max_plus_free": true,
+    "alpha_n_minus_1_beats_need_p_ge_5": true,
+    "cost_D_lt_need_general": false,
+    "ker_eq_scheme_cross_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove cost_D(p)<2\u2212\u03b1 for all primes p\u22655 and ker=scheme\u2295cross (or |\u03bc|\u22642/n / K\u2084\u2264Wick_hi)."
+  },
+  "F3": "Dual D(C) is Max+-free but cost_D<2\u2212\u03b1 and ker=sc are not proved for all p\u22655.  Do not flip residual/E1/L."
+}

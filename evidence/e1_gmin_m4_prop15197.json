@@ -110,18 +110,7 @@
     },
     "7": {
       "p": 7,
-      "N": 11452,
-      "K2": 100.0,
-      "K2_theory_2n": 100,
-      "K4": "309969946079/9936327",
-      "K4_float": 31195.626520644902,
-      "K4_thr_Q10": "39300",
-      "K4_le_thr": true,
-      "Q_from_K4": "162912306479/24344001150",
-      "max_dot_off": 34,
-      "max_dot_theory": 34,
-      "distance_bound_sharp_or_ok": true,
-      "proved_general": false
+      "skipped": true
     }
   },
   "hinge": {

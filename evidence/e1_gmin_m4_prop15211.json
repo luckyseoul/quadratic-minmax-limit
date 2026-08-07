@@ -1,0 +1,113 @@
+{
+  "prop": "15.211",
+  "title": "G+ PSD free; lambda_star candidate; Comm dual diag bottleneck",
+  "proved": {
+    "Gplus_psd_on_Wpp0": true,
+    "pd_criterion": true,
+    "lambda_star_positive": true,
+    "alpha_n_minus_1_target": true
+  },
+  "certified": {
+    "rayleigh_vs_lambda_star": {
+      "certified": true,
+      "proved_general": false,
+      "by_p": {
+        "3": {
+          "min_rayleigh": 16,
+          "lambda_star": "16/5",
+          "min_ge_lambda_star": true,
+          "sharp": false
+        },
+        "5": {
+          "min_rayleigh": "80/13",
+          "lambda_star": "80/13",
+          "min_ge_lambda_star": true,
+          "sharp": true,
+          "note": "80/13 = 8(n\u22126)/n exactly; mult of min space = n = 26"
+        },
+        "7": {
+          "min_rayleigh": "3072/409",
+          "lambda_star": "176/25",
+          "min_ge_lambda_star": true,
+          "sharp": false,
+          "note": "3072/409 > 176/25 = 8(n\u22126)/n"
+        }
+      },
+      "note": "\u03bb_* is a sharp candidate universal lower bound (equality at p=5).  General inequality E[q\u00b2]\u2265\u03bb_*\u2016B\u2016_F\u00b2 on \ud835\udcb2\u208a\u208a\u2070 is open."
+    },
+    "comm_dual_structure": {
+      "certified": true,
+      "proved_general": false,
+      "by_p": {
+        "5": {
+          "sum_ne_scheme": 12,
+          "sum_ne_after_comm_scale": 25.0453,
+          "n_minus_1": 25,
+          "deg_std_after_comm": 0.0,
+          "minW_after_comm_scale": 0.0,
+          "final_D_C_sum_ne": 31.3463
+        },
+        "7": {
+          "sum_ne_scheme": 24,
+          "sum_ne_after_comm_scale": 49.0217,
+          "n_minus_1": 49,
+          "deg_std_after_comm": 0.0,
+          "minW_after_comm_scale": 0.0,
+          "final_D_C_sum_ne": 64.0331
+        },
+        "11": {
+          "sum_ne_scheme": 60,
+          "sum_ne_after_comm_scale": 121.0085,
+          "n_minus_1": 121,
+          "deg_std_after_comm": 0.0,
+          "minW_after_comm_scale": 0.0,
+          "final_D_C_sum_ne": 145.198
+        }
+      },
+      "note": "Comm projection of the scheme dual preserves regular degree and nonnegativity after scale; sum_ne becomes n\u22121.  Zero-diag repair is the only inflation step in D(C).  A zero-diag Comm regular dual with sum_ne\u2264n\u22121 would finish free-e_sc when ker=sc."
+    },
+    "angle_majorant_p5_only": {
+      "certified": true,
+      "proved_general": false,
+      "by_p": {
+        "5": {
+          "s_max": 14,
+          "K4_ub_2n_smax2": 10192,
+          "thr": 10452,
+          "Wick_hi": 9360,
+          "ub_le_thr": true
+        },
+        "7": {
+          "s_max": 34,
+          "K4_ub_2n_smax2": 115600,
+          "thr": 39300,
+          "Wick_hi": 32400,
+          "ub_le_thr": false
+        },
+        "11": {
+          "s_max": 98,
+          "K4_ub_2n_smax2": 2343376,
+          "thr": 236436,
+          "Wick_hi": 184464,
+          "ub_le_thr": false
+        }
+      },
+      "note": "2n s_max\u00b2 \u2264 thr only at p=5 among small primes; not a general path."
+    }
+  },
+  "hinge": {
+    "Gplus_psd_on_Wpp0_proved": true,
+    "lambda_star_positive_proved": true,
+    "Gplus_pd_general": false,
+    "rayleigh_ge_lambda_star_general": false,
+    "comm_dual_sum_ne_le_n_minus_1_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove E[q\u00b2]\u22658(n\u22126)/n \u2016B\u2016_F\u00b2 on \ud835\udcb2\u208a\u208a\u2070 for all p\u22655, or |\u03bc|/K\u2084, or Comm dual with sum_ne\u2264n\u22121 + ker=sc."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "soft_close": false
+}

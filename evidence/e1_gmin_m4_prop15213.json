@@ -1,0 +1,89 @@
+{
+  "prop": "15.213",
+  "title": "Veronese/\u03bb_* attack: 2-design, 4-design dead, \u03bb_* sufficiency; residual (i) OPEN",
+  "proved": {
+    "spherical_2_design": true,
+    "lambda_star_sufficiency": true,
+    "four_design_shortcut_dead": true,
+    "dual_four_thirds_budget": true
+  },
+  "certified": {
+    "lambda_star_floor_p357": {
+      "certified": true,
+      "proved_general": false,
+      "by_p": {
+        "3": {
+          "min_rayleigh": 16,
+          "lambda_star": "16/5",
+          "Op_psd": true,
+          "sharp": false
+        },
+        "5": {
+          "min_rayleigh": "80/13",
+          "lambda_star": "80/13",
+          "Op_psd": true,
+          "sharp": true,
+          "ker_dim_Op": 26,
+          "ker_dim_eq_n": true
+        },
+        "7": {
+          "min_rayleigh": "3072/409",
+          "lambda_star": "176/25",
+          "Op_psd": true,
+          "sharp": false,
+          "note": "3072/409 > 176/25"
+        }
+      },
+      "note": "Op=E[q\u00b2]\u2212\u03bb_*\u2016B\u2016\u00b2 \u227d0 at p=3,5,7 on \ud835\udcb2\u208a\u208a\u2070.  General \u03bb_* floor OPEN."
+    },
+    "cost_D_sum_ne_ratio": {
+      "certified": true,
+      "proved_general": false,
+      "by_p_session": {
+        "5": {
+          "sum_ne_over_n": 1.2056,
+          "lt_4_3": true
+        },
+        "7": {
+          "sum_ne_over_n": 1.2807,
+          "lt_4_3": true
+        },
+        "11": {
+          "sum_ne_over_n": 1.1901,
+          "lt_4_3": true
+        },
+        "13": {
+          "sum_ne_over_n": 1.1403,
+          "lt_4_3": true
+        },
+        "17": {
+          "sum_ne_over_n": 1.1081,
+          "lt_4_3": true
+        },
+        "19": {
+          "sum_ne_over_n": 1.1111,
+          "lt_4_3": true
+        }
+      },
+      "max_ratio_observed": 1.2807,
+      "four_thirds": 1.3333333333333333,
+      "note": "All observed sum_ne/n < 4/3; peak at p=7. Not a general proof."
+    }
+  },
+  "hinge": {
+    "spherical_2_design_proved": true,
+    "lambda_star_sufficiency_proved": true,
+    "four_design_shortcut_dead": true,
+    "dual_four_thirds_budget_proved": true,
+    "lambda_star_floor_general": false,
+    "veronese_full_rank_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove E[q\u00b2]\u2265\u03bb_*\u2016B\u2016\u00b2 on \ud835\udcb2\u208a\u208a\u2070 for all p\u22655 (or rank \ud835\udcb1=D), then free-e_sc; or |\u03bc|/K\u2084.  Character-sum 4-design shortcut dead."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "soft_close": false
+}

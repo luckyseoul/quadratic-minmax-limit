@@ -1,0 +1,172 @@
+{
+  "title": "Prop 15.205 M_cand\u22641/(2p); free-e/scheme ratio algebra; residual (i) OPEN",
+  "proved": {
+    "Mcand_le_1_over_2p": true,
+    "Mcand_le_Mmid_le_Labs": true,
+    "ratio_le_3_2": true,
+    "ratio_ge_1": true,
+    "minus_1_over_p_farkas": true,
+    "Mcand_mu_bound_general": false,
+    "ratio_free_e_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "Mcand_le_thr": {
+      "proved": true,
+      "theorem": "M_cand=(p\u22122)/(p(2p+3)) \u2264 1/(2p) for all primes p\u22653, since 2(p\u22122) \u2264 2p+3 \u21d4 \u22124\u22643.  Hence |\u03bc\u2084|\u2264M_cand \u21d2 |\u03bc\u2084|\u22641/(2p) \u21d2 Gsum\u2265\u22121/p \u21d2 residual-(i) Farkas (15.176).",
+      "by_p_sample": {
+        "3": {
+          "M_cand": "1/27",
+          "mu4_thr_1_over_2p": "1/6",
+          "M_cand_le_thr": true,
+          "two_over_n": "1/5",
+          "M_cand_le_two_over_n": true
+        },
+        "5": {
+          "M_cand": "3/65",
+          "mu4_thr_1_over_2p": "1/10",
+          "M_cand_le_thr": true,
+          "two_over_n": "1/13",
+          "M_cand_le_two_over_n": true
+        },
+        "7": {
+          "M_cand": "5/119",
+          "mu4_thr_1_over_2p": "1/14",
+          "M_cand_le_thr": true,
+          "two_over_n": "1/25",
+          "M_cand_le_two_over_n": false
+        },
+        "11": {
+          "M_cand": "9/275",
+          "mu4_thr_1_over_2p": "1/22",
+          "M_cand_le_thr": true,
+          "two_over_n": "1/61",
+          "M_cand_le_two_over_n": false
+        },
+        "13": {
+          "M_cand": "11/377",
+          "mu4_thr_1_over_2p": "1/26",
+          "M_cand_le_thr": true,
+          "two_over_n": "1/85",
+          "M_cand_le_two_over_n": false
+        }
+      },
+      "depends_on": [
+        "farkas_15_176"
+      ]
+    },
+    "Mcand_chain": {
+      "proved": true,
+      "theorem": "For primes p\u22655: M_cand \u2264 M_mid \u2264 L_abs with M_mid=(p\u22122)/(2p(p+1)), L_abs=(p\u22122)/(2p\u00b2).",
+      "by_p_sample": {
+        "5": {
+          "M_cand": "3/65",
+          "M_mid": "1/20",
+          "L_abs": "3/50",
+          "chain": true
+        },
+        "7": {
+          "M_cand": "5/119",
+          "M_mid": "5/112",
+          "L_abs": "5/98",
+          "chain": true
+        },
+        "11": {
+          "M_cand": "9/275",
+          "M_mid": "3/88",
+          "L_abs": "9/242",
+          "chain": true
+        }
+      }
+    },
+    "ratio_le_3_2": {
+      "proved": true,
+      "theorem": "r(p)=(7p\u00b2\u22123p+4)/(5p\u00b2\u22123p+2) \u2264 3/2 for all primes p\u22655 \u21d4 p\u00b2\u22123p\u22122 \u2265 0 (value 8 at p=5; increasing on [5,\u221e)).  Hence free-e \u2264 r\u00b7scheme and (3/2)\u00b7scheme < 2\u2212\u03b1 (15.192) \u21d2 free-e < 2\u2212\u03b1 for p\u22655.",
+      "by_p_sample": {
+        "5": {
+          "r": "41/28",
+          "r_float": 1.4642857142857142,
+          "le_3_2": true,
+          "poly_p2_minus_3p_minus_2": 8
+        },
+        "7": {
+          "r": "163/113",
+          "r_float": 1.4424778761061947,
+          "le_3_2": true,
+          "poly_p2_minus_3p_minus_2": 26
+        },
+        "11": {
+          "r": "409/287",
+          "r_float": 1.4250871080139373,
+          "le_3_2": true,
+          "poly_p2_minus_3p_minus_2": 86
+        },
+        "13": {
+          "r": "287/202",
+          "r_float": 1.4207920792079207,
+          "le_3_2": true,
+          "poly_p2_minus_3p_minus_2": 128
+        }
+      }
+    },
+    "ratio_ge_1": {
+      "proved": true,
+      "theorem": "r(p) \u2265 1 for primes p\u22652 (\u21d4 2p\u00b2+2 \u2265 0)."
+    }
+  },
+  "certified": {
+    "ratio_match_p5_p7": {
+      "certified": true,
+      "proved_general": false,
+      "by_p": {
+        "5": {
+          "free_e_max": "369/455",
+          "scheme_max": "36/65",
+          "ratio": "41/28",
+          "r_candidate": "41/28",
+          "match": true
+        },
+        "7": {
+          "free_e_max": "11736/19775",
+          "scheme_max": "72/175",
+          "ratio": "163/113",
+          "r_candidate": "163/113",
+          "match": true
+        }
+      },
+      "note": "Exact match at p=5,7; not a general proof."
+    },
+    "mu_le_Mcand_p5_p7": {
+      "certified": true,
+      "proved_general": false,
+      "by_p": {
+        "5": {
+          "max_abs_mu": "3/65",
+          "M_cand": "3/65",
+          "le": true,
+          "sharp": true
+        },
+        "7": {
+          "max_abs_mu": "109/2863",
+          "M_cand": "5/119",
+          "le": true,
+          "sharp": false
+        }
+      }
+    }
+  },
+  "hinge": {
+    "Mcand_le_1_over_2p": true,
+    "ratio_le_3_2": true,
+    "Mcand_bound_general": false,
+    "ratio_free_e_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove |\u03bc\u2084|\u2264M_cand on |\u03ba|=1 for all p\u22655, or free-e\u2264r(p)\u00b7scheme (+ker=sc if sc-dual), or K\u2084\u2264Wick_hi / cost_D+ker=sc."
+  },
+  "F3": "Threshold algebra is Max+-free, but |\u03bc|\u2264M_cand and free-e\u2264r\u00b7scheme are not proved for all p\u22655.  Do not flip residual/E1/L."
+}

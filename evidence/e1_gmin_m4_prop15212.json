@@ -1,0 +1,73 @@
+{
+  "prop": "15.212",
+  "title": "Veronese spanning \u21d4 G+ PD; full rank p=3,5,7",
+  "proved": {
+    "veronese_criterion": true,
+    "gram_spectrum_identity": true,
+    "dim_comparison": true,
+    "implication_rank_to_dual_eq": true
+  },
+  "certified": {
+    "veronese_full_rank": {
+      "certified": true,
+      "proved_general": false,
+      "by_p": {
+        "3": {
+          "N_Max_plus": 12,
+          "dim_Wpp0": 5,
+          "rank_veronese": 5,
+          "full_rank": true,
+          "G_over_N_eigs": {
+            "16": 5
+          },
+          "min_rayleigh": 16,
+          "lambda_star": "16/5"
+        },
+        "5": {
+          "N_Max_plus": 260,
+          "dim_Wpp0": 65,
+          "rank_veronese": 65,
+          "full_rank": true,
+          "G_over_N_eigs": {
+            "80/13": 26,
+            "144/13": 26,
+            "176/13": 13
+          },
+          "min_rayleigh": "80/13",
+          "lambda_star": "80/13",
+          "sharp_lambda_star": true
+        },
+        "7": {
+          "N_Max_plus": 11452,
+          "dim_Wpp0": 275,
+          "rank_veronese": 275,
+          "full_rank": true,
+          "min_rayleigh": "3072/409",
+          "lambda_star": "176/25",
+          "sharp_lambda_star": false,
+          "note": "SVD of edge-Veronese map (binom(n,2)\u00d7N); s_min\u226as_max but rank exact 275"
+        }
+      },
+      "note": "Full Veronese rank at p=3,5,7 \u21d2 G\u208a\u227b0 on \ud835\udcb2\u208a\u208a\u2070 and ker=sc there.  General rank for all p\u22655 is the open step for the free-e/sc path."
+    }
+  },
+  "hinge": {
+    "veronese_criterion_proved": true,
+    "gram_spectrum_identity_proved": true,
+    "veronese_full_rank_general": false,
+    "veronese_full_rank_certified_p": [
+      3,
+      5,
+      7
+    ],
+    "Gplus_pd_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove rank(\ud835\udcb1)=n(n\u22126)/8 for all primes p\u22655, then free-e_sc bound; or |\u03bc|\u2264M_cand / K\u2084\u2264Wick_hi."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "soft_close": false
+}

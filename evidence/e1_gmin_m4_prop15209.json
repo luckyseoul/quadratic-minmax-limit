@@ -1,0 +1,101 @@
+{
+  "prop": "15.209",
+  "title": "G+ spectrum p=7; free-e star saturation; dim W++0",
+  "proved": {
+    "dim_zero_diag_plusplus": true,
+    "implication_Gplus_to_dual_eq": true,
+    "star_count": true
+  },
+  "certified": {
+    "Gplus_spectrum": {
+      "certified": true,
+      "proved_general": false,
+      "by_p": {
+        "3": {
+          "dim_Wpp0": 5,
+          "Gplus_min_eig": 8,
+          "moment_eigs": {
+            "16": 5
+          },
+          "N_Max_plus": 12,
+          "positive_definite": true
+        },
+        "5": {
+          "dim_Wpp0": 65,
+          "Gplus_min_eig": "40/13",
+          "moment_eigs": {
+            "80/13": 26,
+            "144/13": 26,
+            "176/13": 13
+          },
+          "N_Max_plus": 260,
+          "positive_definite": true
+        },
+        "7": {
+          "dim_Wpp0": 275,
+          "Gplus_min_eig": "1536/409",
+          "moment_eigs": {
+            "3072/409": 50,
+            "3360/409": 100,
+            "3648/409": 50,
+            "4032/409": 50,
+            "4320/409": 25
+          },
+          "N_Max_plus": 11452,
+          "positive_definite": true,
+          "note": "Max+ via ProcessPool 2^25 enum; G+ min 1536/409>0"
+        }
+      },
+      "note": "All min eigenvalues >0 at p=3,5,7 \u21d2 G\u208a\u227b0 on \ud835\udcb2\u208a\u208a\u2070 there.  General PD still open (15.207 hinge)."
+    },
+    "free_e_star_saturation": {
+      "certified": true,
+      "proved_general": false,
+      "by_p": {
+        "5": {
+          "free_e_max": "369/455",
+          "r_scheme": "369/455",
+          "match_r_scheme": true,
+          "n_stars": 48,
+          "alpha": "3/65",
+          "stars_fixed_equals_unrestricted": true,
+          "all_stars_active_at_optimum": true,
+          "note": "LP certified this session; see tests/test_prop15209.py"
+        },
+        "7": {
+          "free_e_max": "11736/19775",
+          "r_scheme": "11736/19775",
+          "match_r_scheme": true,
+          "n_stars": 96,
+          "alpha": "3/175",
+          "stars_fixed_equals_unrestricted": true,
+          "all_stars_active_at_optimum": true,
+          "note": "LP certified this session; see tests/test_prop15209.py"
+        }
+      },
+      "note": "At p=5,7 free-e max over sc is attained with \u03ba_star=\u2212\u03b1 on all 2(n\u22122) stars.  Stars-fixed LP recovers the same max.  Not proved for general p."
+    }
+  },
+  "hinge": {
+    "dim_Wpp0_formula_proved": true,
+    "Gplus_pd_general": false,
+    "Gplus_pd_certified_p": [
+      3,
+      5,
+      7
+    ],
+    "free_e_star_saturation_general": false,
+    "free_e_star_saturation_certified_p": [
+      5,
+      7
+    ],
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove G\u208a\u227b0 on \ud835\udcb2\u208a\u208a\u2070 for all p\u22655 (or |\u03bc|\u2264M_cand / K\u2084\u2264Wick_hi / free-e\u2264r\u00b7scheme+ker=sc)."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "soft_close": false
+}

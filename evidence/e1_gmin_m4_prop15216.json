@@ -1,0 +1,36 @@
+{
+  "prop": "15.216",
+  "title": "Residual (i) K\u2084 thr path OPEN \u2014 fatal Rayleigh gap on \u03b4\u2208E_{4p}",
+  "proved": {
+    "star_kappa_orthogonal": true,
+    "kappa_spectral_support": true,
+    "R_ke_formula": true,
+    "R_ke_le_2p": true,
+    "R_m4_le_2p": false,
+    "eta_le_crude_conditional": true,
+    "crude_le_thr_budget": true,
+    "K4_le_thr": false,
+    "Q_le_10": false,
+    "Q10_blocks_dual_eq": true,
+    "dual_eq_empty": false,
+    "residual_i_closed": false
+  },
+  "fatal_gap": "R=(R_ke\u2016ke\u2016\u00b2+4p\u2016\u03b4\u2016\u00b2)/(\u2016ke\u2016\u00b2+\u2016\u03b4\u2016\u00b2) is a convex combination of R_ke and 4p.  R_ke\u22642p \u21cf R\u22642p when \u03b4\u2208E_{4p} may be nonzero.  Need (2p\u2212R_ke)\u2016ke\u2016\u00b2\u22652p\u2016\u03b4\u2016\u00b2 or another \u03b7/K\u2084 bound.",
+  "hinge": {
+    "residual_i_dual_eq_empty": false,
+    "residual_i_closed_via_216": false,
+    "K4_le_thr": false,
+    "Q_le_10": false,
+    "R_m4_le_2p": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "residual_ii_full": false,
+    "L_open": true,
+    "note": "Residual (i) OPEN \u2014 fatal Rayleigh gap on \u03b4\u2208E_{4p} (AI-test BLOCK).  E1/L OPEN.  gsum_disj_lb not flipped."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "soft_close_E1_L": false,
+  "soft_close_residual_i": false
+}

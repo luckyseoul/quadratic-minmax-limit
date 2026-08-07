@@ -1,0 +1,29 @@
+{
+  "prop": "15.217",
+  "title": "\u03a6 identity; residual-(i) reduces to m4\u2082 \u2264 n(n\u22122)/4 (OPEN)",
+  "proved": {
+    "Phi_identity": true,
+    "R_iff_m4_bound": true,
+    "eta_formula_with_Phi": true,
+    "R_implies_dual_eq_conditional": true,
+    "m4_bound": false,
+    "residual_i_closed": false
+  },
+  "open_hinge": "OPEN: \u2016m\u2084\u2016\u2082\u00b2 \u2264 n(n\u22122)/4 for all primes p\u22655.  Equivalent forms: K\u2084 \u2264 n(15n\u221222); \u2016\u03b4\u2016\u2082\u00b2 \u2264 (p\u22121)(p+1)(p\u00b2+1)(3p\u00b2\u221247)/(24(p\u00b2\u22125)).  Path-C residual \u03b4\u00b2\u2264room_hyp/24 is sufficient (room_hyp/24 \u2264 R-room for all primes p\u22655: True) but itself OPEN.  Census: m4\u2082 \u2264 target at p=5 (boolean evec enumeration).",
+  "hinge": {
+    "Phi_identity": true,
+    "R_iff_m4_bound": true,
+    "eta_formula_Phi": true,
+    "R_implies_K4_thr_conditional": true,
+    "m4_bound": false,
+    "residual_i_dual_eq_empty": false,
+    "residual_i_closed_via_217": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "note": "15.217 repairs Rayleigh gap: R\u22642p is equivalent to m4\u2082\u2264n(n\u22122)/4 (via exact \u03a6).  That m4\u2082 bound remains OPEN.  Residual (i) OPEN."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "soft_close": false
+}

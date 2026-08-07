@@ -1,0 +1,92 @@
+{
+  "title": "Prop 15.207 ker=sc reduces to G+\u227b0 on ++ zero-diag; residual (i) OPEN",
+  "proved": {
+    "scheme_plusplus_formula": true,
+    "scheme_in_ker_Qplus": true,
+    "orthogonality_constant_diagonal": true,
+    "wick_identity": true,
+    "ker_sc_reduction": true,
+    "Gplus_pd_general": false,
+    "ker_sc_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "scheme_plusplus": {
+      "proved": true,
+      "theorem": "For A=Df C+C Df: Vp\u1d40 A Vp = 2p Vp\u1d40 Df Vp.  Proof: C=p(P\u208a\u2212P\u208b) \u21d2 P\u208a A P\u208a = 2p P\u208a Df P\u208a."
+    },
+    "scheme_in_ker": {
+      "proved": true,
+      "theorem": "sum f=0 \u21d2 u\u1d40(2p Vp\u1d40 Df Vp)u = 2p \u2211 f_i y_i\u00b2 = 0 on Max+.  scheme-image \u2286 ker Q\u208a."
+    },
+    "ortho_diag": {
+      "proved": true,
+      "theorem": "\u27e8M, Vp\u1d40 Df Vp\u27e9_F = \u2211 f_i B_ii for B=Vp M Vp\u1d40.  M \u22a5 scheme-image (all \u2211f=0) \u21d4 B has constant diagonal; with Tr M=0 \u21d2 zero diagonal."
+    },
+    "wick": {
+      "proved": true,
+      "theorem": "B=P\u208aBP\u208a, zero diagonal, S=2P\u208a: SB=2B, Tr(SB)=0, Tr(SBSB)=4\u2016B\u2016_F\u00b2 \u21d2 E_Wick[(y\u1d40By)\u00b2]=8\u2016B\u2016_F\u00b2."
+    },
+    "reduction": {
+      "proved": true,
+      "theorem": "ker=sc for all p\u22655 once G\u208a \u227b 0 on \ud835\udcb2\u208a\u208a\u2070 (and the Max\u2212 twin), by the decomposition A=A\u208a\u208a+A\u208b\u208b+A\u00d7 and (A)\u2013(E).  G\u208a\u227b0 on \ud835\udcb2\u208a\u208a\u2070 \u21d4 ker Q\u208a = scheme-image.",
+      "open_step": "G\u208a \u227b 0 on \ud835\udcb2\u208a\u208a\u2070 for all primes p\u22655"
+    }
+  },
+  "certified": {
+    "Gplus_pd_subspace": {
+      "certified": true,
+      "proved_general": false,
+      "by_p": {
+        "3": {
+          "dim_subspace": 5,
+          "min_eig_Gplus": 7.999999999999989,
+          "positive_definite": true,
+          "expected_dim": 5
+        },
+        "5": {
+          "dim_subspace": 65,
+          "min_eig_Gplus": 3.0769230769230713,
+          "positive_definite": true,
+          "expected_dim": 65
+        }
+      },
+      "note": "G\u208a\u227b0 on \ud835\udcb2\u208a\u208a\u2070 at p=3,5 (min eig 8 and 40/13).  General PD is the open step for ker=sc."
+    },
+    "ker_Qplus_eq_scheme": {
+      "certified": true,
+      "proved_general": false,
+      "by_p": {
+        "3": {
+          "ker_Qplus_dim": 9,
+          "scheme_rank": 9,
+          "n_minus_1": 9,
+          "residual_outside_scheme": 2.7333688283276597e-15,
+          "match": true
+        },
+        "5": {
+          "ker_Qplus_dim": 25,
+          "scheme_rank": 25,
+          "n_minus_1": 25,
+          "residual_outside_scheme": 1.0036142727446269e-14,
+          "match": true
+        }
+      }
+    }
+  },
+  "hinge": {
+    "scheme_plusplus_formula": true,
+    "wick_identity_zero_diag_plusplus": true,
+    "ker_sc_reduction_to_Gplus_pd": true,
+    "Gplus_pd_on_Wpp0_general": false,
+    "ker_sc_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove G\u208a\u227b0 on \ud835\udcb2\u208a\u208a\u2070 for all p\u22655 (\u21d2 ker=sc), then free-e/sc bound; or |\u03bc|\u2264M_cand / K\u2084\u2264Wick_hi."
+  },
+  "F3": "Reduction of ker=sc to G\u208a\u227b0 on \ud835\udcb2\u208a\u208a\u2070 is Max+-free algebra; G\u208a\u227b0 general remains open.  Do not flip residual/E1/L."
+}

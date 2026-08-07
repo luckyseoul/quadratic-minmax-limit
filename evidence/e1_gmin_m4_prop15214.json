@@ -1,0 +1,65 @@
+{
+  "prop": "15.214",
+  "title": "Master/\u03b4\u2208E\u00b14p structure; T symmetric; residual (i) OPEN",
+  "proved": {
+    "T_symmetric": true,
+    "master_spectral_form": true,
+    "kappa_perp_Epm4p": true,
+    "resolvent_when_invertible": true,
+    "particular_majorant_recall": true,
+    "matching_psd_half": true,
+    "parseval_maxplus": true
+  },
+  "certified": {
+    "certified": true,
+    "proved_general": false,
+    "by_p": {
+      "3": {
+        "T_norm_lt_4p": true,
+        "delta_on_kappa1": "0 (\u03bc=\u03bc_part on |\u03ba|=1)",
+        "max_abs_mu": "1/3",
+        "thr": "1/6",
+        "beats_thr": false
+      },
+      "5": {
+        "T_norm_eq_4p": true,
+        "mult_E_pm4p_lower": {
+          "plus": 65,
+          "minus": 65
+        },
+        "delta_nonzero_on_kappa1": true,
+        "max_abs_mu": "3/65",
+        "M_cand": "3/65",
+        "majorant": "9/125",
+        "thr": "1/10",
+        "beats_thr": true
+      },
+      "7": {
+        "T_norm_eq_4p": true,
+        "max_abs_mu": "109/2863",
+        "thr": "1/14",
+        "beats_thr": true,
+        "not_bounded_by_mu_part_pointwise": true
+      }
+    }
+  },
+  "hinge": {
+    "T_symmetric": true,
+    "master_spectral_form": true,
+    "kappa_perp_Epm4p": true,
+    "particular_majorant": true,
+    "matching_psd_half": true,
+    "parseval_maxplus": true,
+    "delta_control_general": false,
+    "mu_bound_proved_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "minus_1_over_p_suffices": true,
+    "open": "Control \u03b4\u2208E_{\u00b14p} so |\u03bc_mn+\u03b4|\u22641/(2p) on |\u03ba|=1 for all p\u22655; or K\u2084/Veronese/free-e+ker=sc."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "soft_close": false
+}

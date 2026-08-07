@@ -80,18 +80,19 @@ def test_type_I_s_minus_impossible_all_sample_primes():
         assert r["s_minus_le_minus_1_impossible"] is True
 
 
-def test_type_I_closed_requires_proved_gsum_lb():
-    """Residual (i) general close gated on gsum_disj_lb_proved_general (15.158)."""
+def test_type_I_open_honest_no_soft_close():
+    """Residual (i) OPEN: K₄ thr path has Rayleigh gap; gsum Farkas LB false."""
     from e1_gmin_m4_prop15170 import (
         dual_equality_farkas_algebra_if_lb,
         gsum_disj_lb_proved_general,
+        residual_i_dual_eq_empty_proved_general,
     )
 
-    # Conditional Farkas algebra still holds under candidate LB
     assert dual_equality_farkas_algebra_if_lb() is True
-    # Machine-status dual_equality_impossible_general must NOT soft-close
+    # Farkas machine-status dual_equality_impossible_general is gsum-gated (no soft-close)
     assert dual_equality_impossible_general() is False
     assert gsum_disj_lb_proved_general() is False
+    assert residual_i_dual_eq_empty_proved_general() is False  # 15.216 R gap
     assert type_I_k_3p_minus_2_closed_general() is False
     assert type_I_k_3p_minus_2_ND_class_closed() is False
     RI = prove_residual_i()
@@ -107,17 +108,17 @@ def test_bad_case_min_equals_dual():
         assert b["min_equals_dual"] is True
 
 
-def test_e1_open_until_gsum_lb_proved():
-    """E1/L stay OPEN while residual (i) Gsum LB unproved and full residual (ii) open."""
+def test_e1_open_until_residuals_closed():
+    """E1/L stay OPEN while residual (i) and full residual (ii) open."""
     from e1_gmin_m4_prop15171 import deep_s2_freeness_fail_k_ge_3p_ND_closed as d171
     from e1_gmin_m4_prop15179 import residual_ii_dual_twolevel_affine_closed
 
-    assert type_I_k_3p_minus_2_closed_general() is False
+    assert type_I_k_3p_minus_2_closed_general() is False  # residual (i) open
     assert residual_ii_dual_twolevel_affine_closed() is True  # affine branch only
     assert d171() is False  # full residual (ii) open (15.193)
     assert e1_closed_general() is False
     opens = e1_open_residuals()
-    assert opens  # residual (i) and/or full (ii) listed
+    assert opens  # residual (i) and/or full residual (ii) listed
     bt = bitight_from_majorization(5)["bitight_empty"]
     assert bt is True
     w = main_L_from_e1(e1=False, bitight=True)
@@ -127,10 +128,9 @@ def test_e1_open_until_gsum_lb_proved():
 
 def test_main_honest():
     out = main()
-    # residual (i) not general-closed; Farkas algebra flags still true
-    assert out["proved"]["type_I_k_3p_minus_2_s_minus_impossible"] is False
-    assert out["proved"]["type_I_k_3p_minus_2_ND_class_closed"] is False
+    # residual (i) OPEN (Rayleigh gap); E1/L open; no soft-close
     assert out["proved"]["gsum_farkas_poly_positive"] is True
     assert out["proved"]["residual_closed_general"] is False
+    assert out["proved"]["type_I_k_3p_minus_2_ND_class_closed"] is False
     assert out["proved"]["E1_closed_general"] is False
     assert out["L_status"] == "OPEN"

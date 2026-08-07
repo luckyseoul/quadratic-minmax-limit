@@ -1,0 +1,73 @@
+{
+  "prop": "15.210",
+  "title": "D(C) cost census; 8/p dual budget implication",
+  "proved": {
+    "eight_over_p_beats_need": true,
+    "implication_costD_and_ker_sc": true
+  },
+  "certified": {
+    "cost_D_budget": {
+      "certified": true,
+      "proved_general": false,
+      "primes": [
+        5,
+        7,
+        11
+      ],
+      "by_p": {
+        "5": {
+          "sum_ne": 31.346300554225884,
+          "sum_ne_over_n": 1.2056269443933032,
+          "cost": 1.446752333271964,
+          "cost_times_p": 7.23376166635982,
+          "eight_over_p": 1.6,
+          "need": 1.9538461538461538,
+          "cost_le_8_over_p": true,
+          "cost_lt_need": true,
+          "t0": 0.012687745600162302,
+          "blocks_if_ker_sc": true
+        },
+        "7": {
+          "sum_ne": 64.03309438980556,
+          "sum_ne_over_n": 1.2806618877961111,
+          "cost": 1.0977101895395238,
+          "cost_times_p": 7.683971326776667,
+          "eight_over_p": 1.1428571428571428,
+          "need": 1.9828571428571429,
+          "cost_le_8_over_p": true,
+          "cost_lt_need": true,
+          "t0": 0.010994842768447387,
+          "blocks_if_ker_sc": true
+        },
+        "11": {
+          "sum_ne": 145.1979736962958,
+          "sum_ne_over_n": 1.1901473253794739,
+          "cost": 0.6491712683888039,
+          "cost_times_p": 7.140883952276843,
+          "eight_over_p": 0.7272727272727273,
+          "need": 1.9955290611028316,
+          "cost_le_8_over_p": true,
+          "cost_lt_need": true,
+          "t0": 0.003059932949775514,
+          "blocks_if_ker_sc": true
+        }
+      },
+      "max_cost_times_p": 7.683971326776667,
+      "note": "cost_D\u00b7p \u2264 7.6840 < 8 on listed primes; cost_D \u2264 8/p and cost_D < 2\u2212\u03b1 throughout.  General bound open."
+    }
+  },
+  "hinge": {
+    "eight_over_p_beats_need_proved": true,
+    "implication_costD_ker_sc_proved": true,
+    "cost_D_le_8_over_p_general": false,
+    "ker_eq_sc_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove cost_D\u22648/p (or free-e_sc\u2264r\u00b7scheme) and ker=sc for all p\u22655, or |\u03bc|\u2264M_cand / K\u2084\u2264Wick_hi."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "soft_close": false
+}

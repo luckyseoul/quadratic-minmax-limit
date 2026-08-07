@@ -1,0 +1,172 @@
+{
+  "title": "Prop 15.204 ker PSD characterization; free-e dual over sc; residual (i) OPEN",
+  "proved": {
+    "psd_ker_characterization": true,
+    "free_e_sc_bounds_true_ker": true,
+    "eight_over_p_beats_need": true,
+    "ker_eq_sc_general": false,
+    "Sstar_le_n_minus_2_general": false,
+    "cost_D_le_8_over_p_general": false,
+    "free_e_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "psd_ker": {
+      "proved": true,
+      "theorem": "Gsum \u227d 0 and \u03ba\u1d40 Gsum \u03ba = E\u208a[q_\u03ba\u00b2]+E\u208b[q_\u03ba\u00b2] with q_\u03ba(y)=\u00bd y\u1d40(\u03ba\u2299C)y.  Hence ker(Gsum)={\u03ba : q_\u03ba\u22610 on Max\u00b1}."
+    },
+    "free_e_sc": {
+      "proved": true,
+      "theorem": "scheme\u2295cross \u2286 ker(Gsum) \u21d2 free-e max on ker \u2264 free-e max on sc, with equality when ker=sc.  Dual-eq blocked if free-e max_sc < 2\u2212\u03b1 and ker=sc."
+    },
+    "eight_over_p": {
+      "proved": true,
+      "theorem": "For all primes p\u22655: 8/p < 2\u2212\u03b1.  Hence any sc-dual with sum_ne \u2264 (4/3)n yields free-e max_sc \u2264 8/p < 2\u2212\u03b1.",
+      "by_p_sample": {
+        "5": {
+          "8_over_p": "8/5",
+          "need": "127/65",
+          "beats": true,
+          "poly": 27
+        },
+        "7": {
+          "8_over_p": "8/7",
+          "need": "347/175",
+          "beats": true,
+          "poly": 147
+        },
+        "11": {
+          "8_over_p": "8/11",
+          "need": "1339/671",
+          "beats": true,
+          "poly": 843
+        },
+        "13": {
+          "8_over_p": "8/13",
+          "need": "2207/1105",
+          "beats": true,
+          "poly": 1515
+        }
+      }
+    }
+  },
+  "certified": {
+    "Sstar_sc_dual": {
+      "5": {
+        "p": 5,
+        "ok": true,
+        "Sstar": "123/7",
+        "Sstar_float": 17.571428571428356,
+        "free_e_ub": "369/455",
+        "need": "127/65",
+        "blocks_if_ker_sc": true,
+        "n_minus_2": 24,
+        "Sstar_le_n_minus_2": true,
+        "proved_general": false
+      },
+      "7": {
+        "p": 7,
+        "ok": true,
+        "Sstar": "3912/113",
+        "Sstar_float": 34.61946902654979,
+        "free_e_ub": "11736/19775",
+        "need": "347/175",
+        "blocks_if_ker_sc": true,
+        "n_minus_2": 48,
+        "Sstar_le_n_minus_2": true,
+        "proved_general": false
+      }
+    },
+    "cost_D_times_p": {
+      "certified_range": [
+        5,
+        7,
+        11,
+        13,
+        17,
+        19
+      ],
+      "all_block_if_ker_sc_and_sum_ok": true,
+      "by_p": {
+        "5": {
+          "cost": 1.446752333271964,
+          "need": 1.9538461538461538,
+          "cost_times_p": 7.23376166635982,
+          "sum_ne": 31.346300554225884,
+          "four_thirds_n": 34.666666666666664,
+          "sum_ne_le_4_3_n": true,
+          "cost_le_8_over_p": true,
+          "blocks_if_ker_sc": true
+        },
+        "7": {
+          "cost": 1.0977101895395238,
+          "need": 1.9828571428571429,
+          "cost_times_p": 7.683971326776667,
+          "sum_ne": 64.03309438980556,
+          "four_thirds_n": 66.66666666666667,
+          "sum_ne_le_4_3_n": true,
+          "cost_le_8_over_p": true,
+          "blocks_if_ker_sc": true
+        },
+        "11": {
+          "cost": 0.6491712683888039,
+          "need": 1.9955290611028316,
+          "cost_times_p": 7.140883952276843,
+          "sum_ne": 145.1979736962958,
+          "four_thirds_n": 162.66666666666666,
+          "sum_ne_le_4_3_n": true,
+          "cost_le_8_over_p": true,
+          "blocks_if_ker_sc": true
+        },
+        "13": {
+          "cost": 0.5263073513373436,
+          "need": 1.9972850678733032,
+          "cost_times_p": 6.841995567385467,
+          "sum_ne": 193.85654107592157,
+          "four_thirds_n": 226.66666666666666,
+          "sum_ne_le_4_3_n": true,
+          "cost_le_8_over_p": true,
+          "blocks_if_ker_sc": true
+        },
+        "17": {
+          "cost": 0.3911065685307932,
+          "need": 1.9987829614604462,
+          "cost_times_p": 6.648811665023484,
+          "sum_ne": 321.35923047613505,
+          "four_thirds_n": 386.6666666666667,
+          "sum_ne_le_4_3_n": true,
+          "cost_le_8_over_p": true,
+          "blocks_if_ker_sc": true
+        },
+        "19": {
+          "cost": 0.35087566913697854,
+          "need": 1.9991276533876128,
+          "cost_times_p": 6.666637713602592,
+          "sum_ne": 402.2204753873564,
+          "four_thirds_n": 482.6666666666667,
+          "sum_ne_le_4_3_n": true,
+          "cost_le_8_over_p": true,
+          "blocks_if_ker_sc": true
+        }
+      },
+      "proved_general": false,
+      "note": "cost_D\u00b7p \u2248 6.5\u20137.7 on this range; sum_ne\u2264(4/3)n holds. General cost_D\u22648/p still open."
+    }
+  },
+  "hinge": {
+    "psd_ker_characterization": true,
+    "free_e_sc_bounds_true_ker": true,
+    "eight_over_p_beats_need": true,
+    "ker_eq_sc_general": false,
+    "Sstar_le_n_minus_2_general": false,
+    "cost_D_le_8_over_p_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove ker=sc for all p\u22655 and (S*_sc\u2264n\u22122 or cost_D\u22648/p or sum_ne\u2264(4/3)n), or |\u03bc|\u22642/n / K\u2084\u2264Wick_hi Max+-free."
+  },
+  "F3": "PSD ker form and 8/p algebra are Max+-free, but ker=sc and S*/cost_D general bounds remain open.  Do not flip residual/E1/L."
+}

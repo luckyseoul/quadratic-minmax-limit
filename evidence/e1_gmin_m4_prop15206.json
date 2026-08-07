@@ -1,0 +1,124 @@
+{
+  "title": "Prop 15.206 n\u2083=(n\u22126)/4 on |\u03ba|=1 centres Max+-free; residual (i) OPEN",
+  "proved": {
+    "n3_degree": true,
+    "paley_divisibility": true,
+    "crude_S3_insufficient": true,
+    "Mcand_mu_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "n3_degree": {
+      "proved": true,
+      "theorem": "Any symmetric conference C (C\u00b2=(n\u22121)I, zero diag, \u00b11 off): for 4-set S and centre a, n\u2083(a,S)=(n\u22126)/4 if |\u03ba(S)|=1, and (n\u22126)/4\u22121 if |\u03ba(S)|=3.  Proof: pair sums from C\u00b2 give N(e)+N(\u2212e)=(n\u22126)/4 for opposite-triangle sign patterns e; centre a matches \u00b1e iff |\u03ba(S)|=3.  Paley: 4\u2223(n\u22126).",
+      "corollaries": {
+        "kappa1_n3": "(n\u22126)/4",
+        "kappa1_n1": "(3n\u221210)/4",
+        "paley_n3": "(p\u00b2\u22125)/4",
+        "paley_n1": "(3p\u00b2\u22127)/4"
+      }
+    },
+    "divisibility": {
+      "proved": true,
+      "theorem": "For odd p: p\u00b2\u22611 (mod 8), n=p\u00b2+1\u22612 (mod 8), n\u22126\u22614 (mod 8), hence 4\u2223(n\u22126) so (n\u22126)/4 is an integer.",
+      "by_p_sample": {
+        "3": {
+          "n": 10,
+          "n_minus_6_mod4": 0,
+          "ok": true
+        },
+        "5": {
+          "n": 26,
+          "n_minus_6_mod4": 0,
+          "ok": true
+        },
+        "7": {
+          "n": 50,
+          "n_minus_6_mod4": 0,
+          "ok": true
+        },
+        "11": {
+          "n": 122,
+          "n_minus_6_mod4": 0,
+          "ok": true
+        }
+      }
+    },
+    "crude_S3": {
+      "proved": true,
+      "theorem": "n\u2083=(n\u22126)/4 alone with |\u03c1|\u2264(p\u22122)/p+3/p\u00b2 does not imply S\u2083\u2264joint_budget (crude_S3_ub \u226b budget).  Signed cancellation in S\u2083=\u2211 C_ar \u03c1' is required for the M_cand path.",
+      "by_p": {
+        "5": {
+          "n3": 5,
+          "joint_budget": "-16/325",
+          "crude_S3_ub": "18/5",
+          "crude_beats_budget": false
+        },
+        "7": {
+          "n3": 11,
+          "joint_budget": "92/833",
+          "crude_S3_ub": "418/49",
+          "crude_beats_budget": false
+        },
+        "11": {
+          "n3": 29,
+          "joint_budget": "764/3025",
+          "crude_S3_ub": "2958/121",
+          "crude_beats_budget": false
+        },
+        "13": {
+          "n3": 41,
+          "joint_budget": "1424/4901",
+          "crude_S3_ub": "5986/169",
+          "crude_beats_budget": false
+        }
+      }
+    }
+  },
+  "certified": {
+    "n3_census": {
+      "certified": true,
+      "proved_general": true,
+      "by_p": {
+        "3": {
+          "base": 1,
+          "formula_n3_k1": 1,
+          "ok_kappa1_centres": 720,
+          "ok_kappa3_centres": 120,
+          "bad": 0,
+          "match_formula": true
+        },
+        "5": {
+          "base": 5,
+          "formula_n3_k1": 5,
+          "ok_kappa1_centres": 46800,
+          "ok_kappa3_centres": 13000,
+          "bad": 0,
+          "match_formula": true
+        },
+        "7": {
+          "base": 11,
+          "formula_n3_k1": 11,
+          "ok_kappa1_centres": 2299,
+          "ok_kappa3_centres": 701,
+          "bad": 0,
+          "match_formula": true
+        }
+      },
+      "note": "Algebra proves general; census is integrity check."
+    }
+  },
+  "hinge": {
+    "n3_degree_proved": true,
+    "crude_S3_insufficient": true,
+    "Mcand_via_S3_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Signed S\u2083 bound or star\u00b7S\u2081\u22640+joint for |\u03bc|\u2264M_cand; or free-e/K\u2084/ker."
+  },
+  "F3": "n\u2083 formula is Max+-free and general, but residual (i) still needs |\u03bc|\u2264M_cand / free-e / K\u2084 / ker.  Do not flip predicates."
+}
