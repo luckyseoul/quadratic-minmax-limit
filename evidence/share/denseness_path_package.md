@@ -67,6 +67,8 @@ m_n=\min_{a_{ij}=\pm1}\max_{x=\pm1}\Bigl|\sum_{i<j}a_{ij}x_ix_j\Bigr|,\qquad
 | Residual (i) row negative-mass | `src/e1_gmin_m4_prop15194.py` |
 | Residual (i) mass-corrected dual-eq | `src/e1_gmin_m4_prop15195.py` |
 | Residual (i) spectral Q / λ₂ | `src/e1_gmin_m4_prop15196.py` |
+| Residual (i) min-distance + Q(K₄) | `src/e1_gmin_m4_prop15197.py` |
+| Residual (i) Wick_hi reductions | `src/e1_gmin_m4_prop15198.py` |
 | Residual (i) support constraints | `src/e1_gmin_m4_prop15180.py` |
 | Gsum structure / Farkas threshold | `src/e1_gmin_m4_prop15172.py` |
 | Gsum vector structure (ξ, stars, K) | `src/e1_gmin_m4_prop15173.py` |
@@ -78,7 +80,7 @@ m_n=\min_{a_{ij}=\pm1}\max_{x=\pm1}\Bigl|\sum_{i<j}a_{ij}x_ix_j\Bigr|,\qquad
 
 ## What would close L
 
-1. Residual (i): Max+-free row+mass \(\max\kappa_e<2-\alpha\) (15.194 preferred), or ker-box empty / \(|\mu|\le2/n\) / \(\mathrm{Gsum}\ge-1/p\). Pure \(N_e<4-6/p\) fails Paley census.  
+1. Residual (i): Max+-free \(K_4\le\mathrm{Wick}_{hi}=12n^2+48n\) (15.198: that \(\Rightarrow Q<10\) and thr for \(p\ge5\)), or \(K_4\le16n^2-14n\), or \(|\mu|\le2/n\) / ker-box / \(\mathrm{Gsum}\ge-1/p\). Pure \(N_e<4-6/p\) fails Paley census.  
 2. Residual (ii) full: exhaustiveness lemma (freeness-fail \(\Rightarrow S\in\{2,4\}\) and \(f_e=3-S\)), or separate ND for multi-level / non-affine freeness-fail.
 
 Until both: do **not** claim lim α_n = ½.
