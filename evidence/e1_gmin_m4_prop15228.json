@@ -1,0 +1,44 @@
+{
+  "prop": "15.228",
+  "title": "Boolean diamond |\u03bc|+|\u03bd|\u22641; T\u03bc_part=c\u00b7star; |\u03ba|=1\u21d2\u03bd=\u03b4_{+}\u2212\u03b4_{-}; Aut-SOS+diamond; residual OPEN",
+  "proved": {
+    "coupling_masters": true,
+    "boolean_diamond": true,
+    "T_mupart_closed": true,
+    "kappa1_nu_delta": true,
+    "L2_T_orth": true,
+    "diamond_L2_ub": true,
+    "Aut_SOS_structure": true,
+    "Aut_SOS_bound": false,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "T_mupart": "-8/(p^2-5) * star",
+    "nu": "T mu / (4p)",
+    "diamond": "|mu| + |nu| <= 1",
+    "on_kappa1": "nu = delta_+ - delta_-, T mu_part = 0",
+    "c_p5": "-2/5",
+    "c_p7": "-2/11",
+    "diamond_L2_delta_ub_p5": "37076/5",
+    "R_room_p5": "182/5"
+  },
+  "hinge": {
+    "coupling_masters": true,
+    "boolean_diamond": true,
+    "T_mupart_closed": true,
+    "kappa1_nu_delta": true,
+    "L2_T_orth": true,
+    "diamond_L2_ub": true,
+    "Aut_SOS_structure": true,
+    "Aut_SOS_bound": false,
+    "residual_i_closed_via_228": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "Aut-SOS+diamond on E_pm4p^G for |\u03bc|\u22641/(2p); or Path C / K4 / free-e+ker=sc."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "Diamond + T\u03bc_part + |\u03ba|=1 \u03bd=\u03b4_{+}\u2212\u03b4_{-} proved Max+-free.  Aut-SOS certificate still OPEN.  No predicate flip."
+}

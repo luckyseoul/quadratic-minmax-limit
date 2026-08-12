@@ -24,10 +24,17 @@
 | 15.222 | `...15222.py` | ⟨D,TD⟩=2p(p−1)(p+1)(p²+1)(p⁴−11p²+40); CS ‖δ‖₂²≤k₂/\|Max+\| | m0, \|Max+\| |
 | 15.223 | `...15223.py` | gap_wick closed; Path C ⇒ Wick ⇒ residual (i); gap>room_hyp/24 for p≥5 | Path C / CS general |
 | 15.224 | `...15224.py` | T²φ=4(n+2)(φ−2κ); μ_part solves master always | δ∈E_{±4p} for \|μ\| |
+| 15.225 | `...15225.py` | P± on E_{±4p}; **φ⊥E** ⇒ **μ_part=μ_mn**; room_δ closed; L² orth ⟨δ,κ⟩=⟨δ,φ⟩=0 | \|δ\|≤room_δ on \|κ\|=1 |
+| 15.226 | `...15226.py` | μ_f Farkas-sharp; maj≤μ_f; **∑m₄⁺m₄⁻=n(n−2)/8**; δ∈E_{±4p}^G; **‖μ_part‖₂²** closed | \|μ\|≤μ_f / Aut-SOS on E^G |
+| 15.227 | `...15227.py` | **cost≡need at μ_***; gap \((p-4)/(2p+1)\) at −1/p; one-sided form; monotone dual | Aut-SOS bound on E^G |
+| 15.228 | `...15228.py` | **\|μ\|+\|ν\|≤1**; Tμ_part=c·star; on \|κ\|=1: ν=δ_{+}−δ_{-}; diamond L² | Aut-SOS+diamond bound |
+| 15.229 | `...15229.py` | **size-3 Cy=0** on \|κ\|=1 (C²+64-exhaust); **(p⁴−1)μ+2φ=R̄₄** | \|R̄₄\| budget |
+| 15.230 | `...15230.py` | **R_part_max≤B** all p≥5; R̄₄=R_part+(p⁴−1)δ; Cy≡δ room unify | \|R̄₄\| / \|δ\|≤room_δ |
+| 15.231 | `...15231.py` | **R̄₄=∑_{T≠S} per(C[S,T]) μ_T**; crude ∑\|per\| dead (cancel before abs) | \|R̄₄\|≤B signed/Jacobi/Aut-SOS |
 
-Tests: `tests/test_prop15218.py` … `test_prop15224.py`. Evidence JSON alongside.
+Tests: `tests/test_prop15218.py` … `test_prop15231.py`. Evidence JSON alongside.
 
-Scratch (ephemeral): `/tmp/grok-goal-bd1830373544/implementer/e1_l_block.md`, predicate dumps.
+Scratch (ephemeral, session-local): last implementer used `{SCRATCH}/e1_l_block.md`, `predicate_dump.txt`, `pytest_prop15231.txt` — do not depend on paths across sessions.
 
 ## Settled decisions
 
@@ -44,7 +51,7 @@ Scratch (ephemeral): `/tmp/grok-goal-bd1830373544/implementer/e1_l_block.md`, pr
 
 ## Open hinge (any one closes residual i)
 
-1. Control \(\delta\in E_{\pm4p}\): \(|\mu|\le1/(2p)\) or \(\le2/n\) on \(|\kappa|=1\) for all \(p\ge5\)
+1. **Preferred (15.229–231):** Bound \(|\bar R_4|\le B\) on \(|\kappa|=1\). Permanent form \(\bar R_4=\sum_{T\neq S}\mathrm{per}(C[S,T])\mu_T\) proved (15.231); crude \(\sum|per|\) dead. Particular \(R_{\mathrm{part}}\) is already ≤B (proved); only δ-correction / signed size-4 sums open. Attack: Jacobi/cycle pairing **before abs**, Aut-SOS for \(B^2-\bar R_4^2\), Path C, or K₄/free-e.
 2. Path C: \(\delta^2\le\mathrm{room}_{hyp}/24\) for all \(p\ge5\)
 3. Closed \(m_0=\|\chi_{\mathrm{part}}\|_2^2\) and/or \(|Max+|\) so \(k_2/|Max+|\le\mathrm{gap}_{wick}\)
 4. \(K_4\le\mathrm{Wick}_{hi}\) Max+-free
@@ -52,7 +59,7 @@ Scratch (ephemeral): `/tmp/grok-goal-bd1830373544/implementer/e1_l_block.md`, pr
 
 ## Next concrete steps
 
-1. User supplies a proof idea for one hinge above, **or** accept residual-(i) open.
+1. Aut-averaged degree-4 SOS on \((\delta_+,\delta_-)\) with linear constraints from 15.225 H, **or** Boolean moment constraints selecting \(k_\pm\); **or** accept residual-(i) open.
 2. If proved: wire `gsum_disj_lb_proved_general` / `residual_i_dual_eq_empty_proved_general` / `type_I_k_3p_minus_2_closed_general` only via **real imports** from hinge modules; flip STATUS/package; AI-test ≥2 cold.
 3. Residual (ii) full (15.193) still separate open after residual (i).
 
@@ -63,12 +70,14 @@ Scratch (ephemeral): `/tmp/grok-goal-bd1830373544/implementer/e1_l_block.md`, pr
 - \(G_{\min}\ge-2\) (trivial \|\mu\|≤1) dual cost ≫2−α
 - D supported only on \(\pm2\sqrt{p^2+15}\); pairwise LP / 4×4 Loewner alone
 - R_ke⇒R (convex combo fatal); Max+ classical association scheme
+- **Crude \(\sum_{T\neq S}|per(C[S,T])|\)** (15.231 D): at p=5 equals 47500 ≫ B=50.4; all p≥5 \(\binom{n}{4}\cdot24\gg B\). Must cancel **signed** size-4 sums before abs.
+- Unconstrained CS L∞; per-type abs without pairing; ED4/resolvent L2 alone; dim E^G≤1
 
 ## Suggested skills
 
 **Always (every residual-i / denseness session):**
 - **agent-cost-optimization** — short hinge state; no Max± dumps / prop thrash
-- **graph-engineered-completion** — nodes = open hinges (δ, |μ|, K₄, m0, ker=sc); edges = 15.218–224; attack one node
+- **graph-engineered-completion** — nodes = open hinges (δ, |μ|, K₄, m0, ker=sc); edges = 15.218–225; attack one node
 
 **Verification / honesty:**
 - **goal-verifier** — goal restatement + criteria + evidence before any “done”

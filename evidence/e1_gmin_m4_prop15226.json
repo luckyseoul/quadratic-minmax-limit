@@ -1,0 +1,42 @@
+{
+  "prop": "15.226",
+  "title": "Farkas-sharp \u03bc_f; G-invariant \u03b4; Max\u00b1 cross; \u2016\u03bc_part\u2016\u2082\u00b2 closed; residual-(i) OPEN",
+  "proved": {
+    "farkas_sharp_thr": true,
+    "maj_beats_mu_farkas": true,
+    "maxpm_cross_moment": true,
+    "mu_L2_from_m4": true,
+    "delta_G_invariant": true,
+    "mu_part_norm_sq_closed": true,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "mu_f": "(2p-3)/(p(3p-2))",
+    "mu_star": "(6-4p)/(p(3p-2))",
+    "cross": "n(n-2)/8",
+    "mu_part_norm_sq": "(p-1)(p+1)(p^2+1)(3p^2+1)/(24(p^2-5))",
+    "mu_f_p5": "7/65",
+    "mu_f_p7": "11/133",
+    "room_delta_farkas_p5": "58/1625",
+    "room_delta_farkas_p7": "524/10241",
+    "mu_part_norm_sq_p5": "494/5",
+    "mu_part_norm_sq_p7": "3700/11"
+  },
+  "hinge": {
+    "farkas_sharp_thr": true,
+    "maj_beats_mu_farkas": true,
+    "maxpm_cross_moment": true,
+    "mu_L2_from_m4": true,
+    "delta_G_invariant": true,
+    "mu_part_norm_sq_closed": true,
+    "residual_i_closed_via_226": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "|\u03bc|\u2264\u03bc_f on |\u03ba|=1 (or |\u03b4|\u2264room_\u03b4^f via Aut-SOS on E_pm4p^G); or Path C / K4 / free-e+ker=sc."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "Farkas-sharp thr, cross moment, G-invariance, \u2016\u03bc_part\u2016\u2082\u00b2 proved.  Pointwise |\u03bc|\u2264\u03bc_f / Aut-SOS on E^G still OPEN.  No predicate flip."
+}

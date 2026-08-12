@@ -1,0 +1,39 @@
+{
+  "prop": "15.229",
+  "title": "Size-3 Cy vanishes on |\u03ba|=1; (p\u2074\u22121)\u03bc+2\u03c6=R\u0304\u2084; R\u0304\u2084 bound OPEN",
+  "proved": {
+    "s_vanishes_kappa1": true,
+    "size3_collision_formula": true,
+    "size3_vanishes_kappa1": true,
+    "functional_equation": true,
+    "conditional_R_closes": true,
+    "R_bound_general": false,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "size3_weight": "-(n-1)*s",
+    "s_on_kappa1": 0,
+    "s_on_kappa3": "\u00b112",
+    "functional_eq": "(p^4-1)*mu + 2*phi = R_bar_4",
+    "R_bar_budget_p5": "252/5",
+    "R_bar_budget_p7": "1060/7",
+    "mu4_thr_p5": "1/10"
+  },
+  "hinge": {
+    "s_vanishes_kappa1": true,
+    "size3_collision": true,
+    "size3_vanishes": true,
+    "functional_equation": true,
+    "conditional_R_closes": true,
+    "R_bound_general": false,
+    "residual_i_closed_via_229": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "|R\u0304\u2084|\u2264(p\u2074\u22121)/(2p)\u22124(p\u22122) on |\u03ba|=1; or Aut-SOS/Path C/K4/free-e+ker=sc."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "Size-3 vanishes Max+-free (C\u00b2 + 64-exhaust).  Functional equation reduces residual-(i) to an R\u0304\u2084 bound.  No predicate flip."
+}

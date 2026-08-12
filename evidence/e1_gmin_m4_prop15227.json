@@ -1,0 +1,40 @@
+{
+  "prop": "15.227",
+  "title": "Free-e dual sharp at \u03bc_* (cost\u2261need); gap (p\u22124)/(2p+1) at \u22121/p; one-sided residual-(i); Aut-SOS hinge; OPEN",
+  "proved": {
+    "dual_sharp_at_mu_star": true,
+    "dual_gap_minus_1_over_p": true,
+    "onesided_residual_i_form": true,
+    "dual_gap_monotone": true,
+    "Aut_SOS_structure": true,
+    "Aut_SOS_bound": false,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "a_star": "p(3p-2)/(6(p^2-1))",
+    "sum_ne_at_mu_star": "p(p^2+1)/3 - 1",
+    "cost_eq_need": "(2p^3+2p-6)/(p^3+p)",
+    "gap_at_minus_1_over_p": "(p-4)/(2p+1)",
+    "a_star_p5": "65/144",
+    "gap_p5": "1/11",
+    "gap_p7": "1/5",
+    "cost_at_mu_star_p5": "127/65"
+  },
+  "hinge": {
+    "dual_sharp_at_mu_star": true,
+    "dual_gap_minus_1_over_p": true,
+    "onesided_form": true,
+    "dual_gap_monotone": true,
+    "Aut_SOS_structure": true,
+    "Aut_SOS_bound": false,
+    "residual_i_closed_via_227": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "Aut-SOS/Schur on E_pm4p^G for max|\u03bc|\u22641/(2p); or Path C / K4 / free-e+ker=sc."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "Row+ones dual is exactly sharp at Farkas (cost\u2261need at \u03bc_*).  Convenient thr \u22121/p has closed gap (p\u22124)/(2p+1).  Aut-SOS bound on E^G still OPEN.  No predicate flip."
+}

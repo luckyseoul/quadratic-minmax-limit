@@ -1,0 +1,43 @@
+{
+  "prop": "15.225",
+  "title": "Constrained P\u00b1 on E_{\u00b14p}; \u03c6\u22a5E \u21d2 \u03bc_part=\u03bc_mn; \u03b4-room formula; residual-(i) OPEN",
+  "proved": {
+    "constrained_projectors": true,
+    "delta_split": true,
+    "maxpm_realisation": true,
+    "phi_perp_Epm4p": true,
+    "mu_part_equals_mu_mn": true,
+    "avg_part_beats_thr": true,
+    "room_delta_closed": true,
+    "L2_orthogonality": true,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "P_plus": "(4p I + T)/(8p) on E_pm4p",
+    "P_minus": "(4p I - T)/(8p) on E_pm4p",
+    "mu": "mu_part + delta, delta in E_pm4p",
+    "room_delta": "(p^3 - 2p^2 - 13p + 18)/(2 p^2 (p^2 - 5))",
+    "room_delta_p5": "7/250",
+    "room_delta_p7": "43/1078",
+    "avg_coeff_p5": "6/125",
+    "avg_coeff_p7": "12/539"
+  },
+  "hinge": {
+    "constrained_projectors": true,
+    "delta_split": true,
+    "phi_perp_Epm4p": true,
+    "mu_part_equals_mu_mn": true,
+    "avg_part_beats_thr": true,
+    "room_delta_closed": true,
+    "L2_orthogonality": true,
+    "residual_i_closed_via_225": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "|\u03b4_S|\u2264room_\u03b4(p) on |\u03ba|=1 for all p\u22655 (constrained P\u00b1 / Aut-SOS); or Path C / k\u2082 gap / K\u2084 / free-e+ker=sc."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "P\u00b1, \u03c6\u22a5E, \u03bc_part=\u03bc_mn, and room_\u03b4 formula proved Max+-free.  Pointwise |\u03b4|\u2264room_\u03b4 (or other residual-i hinge) still OPEN.  No predicate flip."
+}

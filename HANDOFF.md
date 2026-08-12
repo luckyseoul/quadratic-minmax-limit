@@ -1,6 +1,6 @@
 > **HANDOFF (2026-08-12):** **\(L=\tfrac12\) OPEN.** Residual **(i) OPEN** — no Max+-free general hinge yet. Residual **(ii) PARTIAL**: affine **CLOSED** (15.179); full **OPEN** (15.193).  
-> **This arc shipped structure only (15.218–224):** Gsum dual / m4₂↔K₄ / D-energy / ⟨D,TD⟩+CS δ / Path-C⇒Wick / T²φ+μ_part master. Predicates stay **False**. Soft-close forbidden.  
-> Preferred hinge still \(|\mu|\le1/(2p)\) (control \(\delta\in E_{\pm4p}\)); alts Path C, \(k_2/|Max+|\le\mathrm{gap}_{wick}\), \(K_4\le\mathrm{Wick}_{hi}\), free-e+ker=sc.  
+> **Structure 15.218–231:** + **15.229–230** size-3=0; \(\bar R_4\) eq; **R_part max ≤ budget** (particular Cy safe); Cy≡δ unify; **15.231** permanent form of \(\bar R_4\); crude \(\sum|per|\) dead. Predicates stay **False**. Soft-close forbidden.  
+> Preferred hinge: bound \(\bar R_4\) / \(\delta\) (same room after unify) via character sums (sum before abs) or Aut-SOS+diamond; alts Path C, \(K_4\), free-e+ker=sc, resolvent gain \(\le(p-4)/48\).  
 > Predicates: `gsum_disj_lb_proved_general=False`, `residual_i_dual_eq_empty_proved_general=False`, `e1_closed_general=False`.  
 > Detail: **`evidence/SESSION_HANDOFF_2026-08-12_residual_i.md`**. Package: **`evidence/share/denseness_path_package.md`**. Status: **`STATUS.md`**.
 

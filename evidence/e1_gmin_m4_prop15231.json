@@ -1,0 +1,37 @@
+{
+  "prop": "15.231",
+  "title": "Permanent form of R\u0304\u2084; crude |per| majorant dead; signed size-4 / Aut-SOS still OPEN",
+  "proved": {
+    "permanent_size4_form": true,
+    "R_bar_permanent_form": true,
+    "crude_abs_majorant_dead": true,
+    "per_phi_eigen_general": false,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "R_bar_permanent": "sum_{T!=S} per(C[S,T]) * mu(T)",
+    "functional": "(p^4-1)*mu + 2*phi = R_bar_4",
+    "crude_dead_p5": {
+      "sum_abs_per": 47500,
+      "B": "252/5"
+    },
+    "per_phi_eigenvalue_conjecture": "2*n+1",
+    "thr_p5": "1/10"
+  },
+  "hinge": {
+    "permanent_size4_form": true,
+    "R_bar_permanent_form": true,
+    "crude_abs_majorant_dead": true,
+    "per_phi_eigen_general": false,
+    "R_part_max_le_budget": true,
+    "residual_i_closed_via_231": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "|R\u0304\u2084|\u2264B on |\u03ba|=1 via signed size-4 sums (Jacobi/cycle before abs) or Aut-SOS for B\u00b2\u2212R\u0304\u2084\u00b2; crude |per| dead."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "R\u0304\u2084 is the permanent contraction of \u03bc off the diagonal.  Absolute summation of |per| is strictly larger than B for all p\u22655, so the residual-(i) hinge requires signed cancellation (Jacobi / cycle / Aut-SOS).  No predicate flip."
+}

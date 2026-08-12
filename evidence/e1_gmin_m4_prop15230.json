@@ -1,0 +1,37 @@
+{
+  "prop": "15.230",
+  "title": "R_part_max\u2264R\u0304\u2084-budget for p\u22655; Cy\u2261\u03b4 channel unification; residual OPEN",
+  "proved": {
+    "R_part_coeffs": true,
+    "R_part_max_closed": true,
+    "R_part_max_le_budget": true,
+    "channel_unification": true,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "R_part_max": "(p^6-p^4+20p^3-41p^2-4p+9)/(p^2(p^2-5))",
+    "budget_minus_R_part_max": "(p-1)(p+1)(p^2+1)(p^3-2p^2-13p+18)/(2p^2(p^2-5))",
+    "R_bar": "R_part + (p^4-1)*delta",
+    "R_part_max_p5": "4116/125",
+    "budget_p5": "252/5",
+    "slack_p5": "2184/125",
+    "room_delta_p5": "7/250",
+    "maj_p5": "9/125",
+    "thr_p5": "1/10"
+  },
+  "hinge": {
+    "R_part_coeffs": true,
+    "R_part_max_closed": true,
+    "R_part_max_le_budget": true,
+    "channel_unification": true,
+    "residual_i_closed_via_230": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "|R\u0304\u2084|\u2264B (Cy) or |\u03b4|\u2264room_\u03b4 on |\u03ba|=1; same open scalar after unification.  Alts: Path C, K4, free-e+ker=sc, M_cand."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "Particular Cy image R_part is inside the R\u0304\u2084 budget for all primes p\u22655.  Residual-(i) is exactly the \u03b4-correction to R\u0304\u2084 (same room as thr\u2212maj).  No predicate flip."
+}
