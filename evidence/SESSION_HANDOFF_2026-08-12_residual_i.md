@@ -66,6 +66,8 @@ Scratch (ephemeral): `/tmp/grok-goal-bd1830373544/implementer/e1_l_block.md`, pr
 
 ## Suggested skills
 
+- **agent-cost-optimization** (always): keep context small; avoid prop thrash / redundant census.
+- **graph-engineered-completion** (always): hinge graph — nodes = open scalars (δ, |μ|, K₄, m0, ker=sc); edges = proved implications (15.218–224); attack one node.
 - Domain math only (no soft-close). Optional: `handoff`, `goal-verifier` after a real hinge.
 
 ## Pointers
