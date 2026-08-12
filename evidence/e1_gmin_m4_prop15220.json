@@ -1,0 +1,24 @@
+{
+  "prop": "15.220",
+  "title": "\u2016m\u2084\u2016\u2082\u00b2=(K\u2084\u22129n\u00b2+10n)/24; residual-i \u21d4 K\u2084\u2264n(15n\u221222) (OPEN hinge)",
+  "proved": {
+    "e4_formula": true,
+    "m4_K4_identity": true,
+    "m4_bound_iff_K4": true,
+    "residual_i_closed": false
+  },
+  "hinge": {
+    "e4_formula": true,
+    "m4_K4_identity": true,
+    "m4_iff_K4": true,
+    "residual_i_closed_via_220": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "K\u2084\u2264n(15n\u221222) or \u2264Wick_hi or \u2016m\u2084\u2016\u2082\u00b2\u2264n(n\u22122)/4 for all p\u22655, or |\u03bc|\u22641/(2p) / free-e on true ker.  15.220 supplies the exact m4\u2082\u2194K\u2084 bridge Max+-free."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "Exact m4\u2082\u2194K\u2084 identity proved Max+-free.  K\u2084\u2264n(15n\u221222) still OPEN.  No predicate flip."
+}

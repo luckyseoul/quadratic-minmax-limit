@@ -1,8 +1,8 @@
-> **HANDOFF (2026-08-06 audit fix):** **\(L=\tfrac12\) OPEN.** Residual **(ii) PARTIAL**: affine dual two-level branch **CLOSED** (15.179 freeze); full residual (ii) **OPEN** until exhaustiveness (15.193).  
-> Residual **(i)** still **OPEN** — needs Max+-free \(K_4\le\mathrm{Wick}_{hi}=12n^2+48n\) (15.198 reductions: that bound \(\Rightarrow Q<10\) and thr \(16n^2-14n\) for \(p\ge5\)), **or** \(|\mu|\le2/n\) / ker-box empty.  
-> Predicates honest: `gsum_disj_lb_proved_general=False`, `deep_s2_freeness_fail_k_ge_3p_ND_closed=False`, `residual_ii_affine_branch_closed=True`, `e1_closed_general=False`. **No soft-close.**  
-> Short package: **`evidence/share/denseness_path_package.md`**. Status: **`STATUS.md`**.  
-> Session detail: **`evidence/SESSION_HANDOFF_2026-08-06_residual_i.md`**.
+> **HANDOFF (2026-08-12):** **\(L=\tfrac12\) OPEN.** Residual **(i) OPEN** — no Max+-free general hinge yet. Residual **(ii) PARTIAL**: affine **CLOSED** (15.179); full **OPEN** (15.193).  
+> **This arc shipped structure only (15.218–224):** Gsum dual / m4₂↔K₄ / D-energy / ⟨D,TD⟩+CS δ / Path-C⇒Wick / T²φ+μ_part master. Predicates stay **False**. Soft-close forbidden.  
+> Preferred hinge still \(|\mu|\le1/(2p)\) (control \(\delta\in E_{\pm4p}\)); alts Path C, \(k_2/|Max+|\le\mathrm{gap}_{wick}\), \(K_4\le\mathrm{Wick}_{hi}\), free-e+ker=sc.  
+> Predicates: `gsum_disj_lb_proved_general=False`, `residual_i_dual_eq_empty_proved_general=False`, `e1_closed_general=False`.  
+> Detail: **`evidence/SESSION_HANDOFF_2026-08-12_residual_i.md`**. Package: **`evidence/share/denseness_path_package.md`**. Status: **`STATUS.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
 

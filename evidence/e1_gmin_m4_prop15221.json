@@ -1,0 +1,47 @@
+{
+  "prop": "15.221",
+  "title": "(4pI\u2212T)\u03c7=D; \u2016D\u2016\u2082\u00b2=n(n\u22121)(n\u22122)(n\u22123)+p\u00b2n\u00b2\u22122n(n\u22121); \u03b4-bound OPEN",
+  "proved": {
+    "Tchi_eq_D": true,
+    "wedge_ff_vanishes": true,
+    "D_energy_closed": true,
+    "delta_bound": false,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "D_energy_formula": "374400",
+    "D_energy_by_p": {
+      "3": "5760",
+      "5": "374400",
+      "7": "5644800",
+      "11": "212572800",
+      "13": "810875520"
+    },
+    "delta_path": {
+      "proved": false,
+      "room_positive_p_ge_5": true,
+      "theorem": "OPEN: from (4pI\u2212T)\u03c7=D and exact \u2016D\u2016\u2082\u00b2, prove \u2016\u03b4\u2016\u2082\u00b2 \u2264 room of 15.217 for m\u2084=E[\u03c7], so \u2016m\u2084\u2016\u2082\u00b2\u2264n(n\u22122)/4.",
+      "conditional_chain": "\u2016\u03b4\u2016\u2082\u00b2\u2264room \u21d2 \u2016m\u2084\u2016\u2082\u00b2\u2264n(n\u22122)/4 \u21d2 R\u22642p \u21d2 K\u2084 thr \u21d2 dual-eq empty (15.217/216) \u21d2 residual_i.",
+      "depends_on": [
+        "theorem_Tchi_eq_D",
+        "theorem_D_energy_closed_form",
+        "prop_15_217_room"
+      ]
+    }
+  },
+  "hinge": {
+    "Tchi_eq_D": true,
+    "wedge_ff_vanishes": true,
+    "D_energy_closed": true,
+    "delta_bound": false,
+    "residual_i_closed_via_221": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "\u2016\u03b4\u2016\u2082\u00b2\u226415.217-room (via D-energy+\u03c3(T)), or |\u03bc|\u22641/(2p), or K\u2084 thr, or free-e on true ker."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "D-energy and T\u03c7=D proved Max+-free.  \u03b4\u00b2\u2264room still OPEN.  No predicate flip."
+}

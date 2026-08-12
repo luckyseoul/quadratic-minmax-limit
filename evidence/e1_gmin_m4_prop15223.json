@@ -1,0 +1,66 @@
+{
+  "prop": "15.223",
+  "title": "Path-C residual \u21d2 Wick residual-(i); gap_wick and hyp gap closed forms; \u03b4 bound OPEN",
+  "proved": {
+    "gap_wick_closed": true,
+    "path_C_inside_wick": true,
+    "CS_conditional": true,
+    "delta_bound": false,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "gap_wick_p5": "416/15",
+    "hyp_inside_p5": "160/39",
+    "by_p_gap": {
+      "5": "416/15",
+      "7": "2000/33",
+      "11": "13664/87",
+      "13": "27200/123",
+      "17": "81200/213"
+    },
+    "delta_path": {
+      "proved": false,
+      "theorem": "OPEN: \u03b4\u00b2 \u2264 room_hyp/24 (Path C), or k\u2082/|Max+| \u2264 gap_wick (or \u2264 R-room) Max+-free for all primes p\u22655.",
+      "certified_small_p": {
+        "p5": {
+          "k2": 6912,
+          "Nmax": 260,
+          "k2_over_N": "1728/65",
+          "gap_wick": "416/15",
+          "R_room": "182/5",
+          "hyp": "1536/65",
+          "CS_le_gap": true,
+          "CS_le_R_room": true
+        },
+        "p7": {
+          "k2": 193705,
+          "Nmax": 11452,
+          "k2_over_N": "193705/11452",
+          "gap_wick": "2000/33",
+          "R_room": "2500/11",
+          "CS_le_gap": true,
+          "CS_le_R_room": true
+        }
+      },
+      "depends_on": [
+        "theorem_path_C_inside_wick_gap",
+        "theorem_CS_closes_if_k2_over_N_le_gap"
+      ]
+    }
+  },
+  "hinge": {
+    "gap_wick_closed": true,
+    "path_C_inside_wick": true,
+    "CS_conditional": true,
+    "delta_bound": false,
+    "residual_i_closed_via_223": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "\u03b4\u00b2\u2264room_hyp/24, or k\u2082/|Max+|\u2264gap_wick, or |\u03bc|\u22641/(2p), or free-e+ker=sc, or K\u2084\u2264Wick by other means."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "Path C \u21d2 Wick \u21d2 residual (i) is Max+-free once Path C holds.  \u03b4\u00b2 bound still OPEN.  No predicate flip."
+}

@@ -1,0 +1,72 @@
+{
+  "prop": "15.222",
+  "title": "\u27e8D,TD\u27e9=2p(p\u22121)(p+1)(p\u00b2+1)(p\u2074\u221211p\u00b2+40); \u2016\u03b4\u2016\u2082\u00b2\u2264k\u2082/|Max+| by CS; m0-bound OPEN",
+  "proved": {
+    "dtd_closed": true,
+    "CS_delta": true,
+    "m0_k2_bound": false,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "dtd_formula": "2433600",
+    "dtd_by_p": {
+      "3": "10560",
+      "5": "2433600",
+      "7": "63907200",
+      "11": "4299768000",
+      "13": "19857539520"
+    },
+    "T_pieces_p5": {
+      "T1": "3207360",
+      "T2": "-249600",
+      "T4": "-274560"
+    },
+    "m0_path": {
+      "proved": false,
+      "room_positive_p_ge_5": true,
+      "theorem": "OPEN: Max+-free m0=\u2016\u03c7_part\u2016\u2082\u00b2 (or lower bound) and |Max+| (or lower bound) so that binom(n,4)\u2212m0 \u2264 room(p)\u00b7|Max+| for all primes p\u22655.  CS (G) is proved; comparison open.",
+      "jensen_insufficient_p5": {
+        "jensen_m0_lb": "166400/81",
+        "need_m0_if_Nmax_260": "5486",
+        "jensen_lt_need": true
+      },
+      "certified_small_p": {
+        "p5": {
+          "m0": 8038,
+          "k2": 6912,
+          "Nmax": 260,
+          "k2_over_N": "1728/65",
+          "room": "182/5",
+          "CS_closes_numerically": true
+        },
+        "p7": {
+          "m0": 36595,
+          "k2": 193705,
+          "Nmax": 11452,
+          "k2_over_N": "193705/11452",
+          "room": "2500/11",
+          "CS_closes_numerically": true
+        }
+      },
+      "depends_on": [
+        "theorem_dtd_closed_form",
+        "theorem_CS_delta_le_k2_over_N",
+        "prop_15_217_room"
+      ]
+    }
+  },
+  "hinge": {
+    "dtd_closed": true,
+    "CS_delta": true,
+    "m0_k2_bound": false,
+    "residual_i_closed_via_222": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "m0 \u2265 binom \u2212 room\u00b7|Max+| Max+-free (with |Max+| LB), or |\u03bc|\u22641/(2p), or K\u2084 thr, or free-e on true ker."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "dtd and CS averaging proved Max+-free.  m0/|Max+| comparison still OPEN.  No predicate flip."
+}

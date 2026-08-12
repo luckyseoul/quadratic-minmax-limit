@@ -22,9 +22,11 @@
   "docs": {
     "HANDOFF_shows_L_OPEN": true,
     "soft_close_detected": false,
+    "soft_close_hit": null,
     "docs_ok": true,
     "e1_closed_general": false,
-    "gsum_disj_lb_proved_general": false
+    "gsum_disj_lb_proved_general": false,
+    "scanned_props_15167_171": true
   },
   "rule": "L closed iff bi-tight (15.167) \u2227 full E(1). E1 requires gsum_disj_lb_proved_general (15.170 hinge; 15.158). Soft-close banned (F3)."
 }

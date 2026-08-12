@@ -1,0 +1,26 @@
+{
+  "prop": "15.218",
+  "title": "Max+\u22a5Max\u2212; Gsum=2m\u2081\u03bc\u2084; Tr(Gsum\u00b2)=K\u2084/2\u2212n\u00b2; row+ones free-e dual (OPEN hinge |\u03bc|\u22641/(2p))",
+  "proved": {
+    "Max_plus_perp_Max_minus": true,
+    "Gsum_eq_2_m1_mu4": true,
+    "Tr_Gsum_sq": true,
+    "row_ones_dual_if_Gmin": true,
+    "residual_i_closed": false
+  },
+  "hinge": {
+    "Max_plus_perp_Max_minus": true,
+    "Gsum_eq_2_m1_mu4": true,
+    "Tr_Gsum_sq": true,
+    "row_ones_dual_if_Gmin": true,
+    "residual_i_closed_via_218": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "max_{|\u03ba|=1}|\u03bc\u2084| \u2264 1/(2p)  (or m4\u2082 / K\u2084 / free-e_sc+ker=sc).  15.218 supplies Max+-free dual witness reducing free-e to that |\u03bc| bound."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "Structure proved Max+-free.  Residual (i) still OPEN: need |\u03bc\u2084|\u22641/(2p) on |\u03ba|=1 (or alternate hinge).  No predicate flip."
+}

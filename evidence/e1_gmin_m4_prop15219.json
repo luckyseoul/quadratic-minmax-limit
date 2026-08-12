@@ -1,0 +1,28 @@
+{
+  "prop": "15.219",
+  "title": "R=E[\u03c0 yy\u1d40]; Tr(RC)=pn m\u2084\u207a; inside=4\u03ba/p; cross/outside; formula\u21d22/n (OPEN hinge)",
+  "proved": {
+    "R_structure": true,
+    "Tr_RC": true,
+    "inside_4kappa_over_p": true,
+    "cross_outside": true,
+    "formula_implies_two_over_n_conditional": true,
+    "residual_i_closed": false
+  },
+  "hinge": {
+    "R_structure": true,
+    "Tr_RC": true,
+    "inside_4kappa_over_p": true,
+    "cross_outside": true,
+    "formula_implies_two_over_n": true,
+    "residual_i_closed_via_219": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "max_{|\u03ba|=1}|\u03bc\u2084|\u22641/(2p) (or 2/n, m4\u2082, K\u2084\u2264Wick_hi, free-e_true).  15.219: R-decomposition + formula\u21d22/n; \u03c6-contraction / general stratum formula still OPEN (fails as (\u03ba,\u03c6)-fn at p=7)."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "Structure proved Max+-free. Residual (i) still OPEN: need |\u03bc\u2084|\u22641/(2p) on |\u03ba|=1 (or alternate). No predicate flip. p=5 stratum formula is certified but not general (p=7)."
+}
