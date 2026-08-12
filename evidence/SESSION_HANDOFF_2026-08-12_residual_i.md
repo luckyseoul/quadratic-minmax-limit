@@ -66,9 +66,33 @@ Scratch (ephemeral): `/tmp/grok-goal-bd1830373544/implementer/e1_l_block.md`, pr
 
 ## Suggested skills
 
-- **agent-cost-optimization** (always): keep context small; avoid prop thrash / redundant census.
-- **graph-engineered-completion** (always): hinge graph — nodes = open scalars (δ, |μ|, K₄, m0, ker=sc); edges = proved implications (15.218–224); attack one node.
-- Domain math only (no soft-close). Optional: `handoff`, `goal-verifier` after a real hinge.
+**Always (every residual-i / denseness session):**
+- **agent-cost-optimization** — short hinge state; no Max± dumps / prop thrash
+- **graph-engineered-completion** — nodes = open hinges (δ, |μ|, K₄, m0, ker=sc); edges = 15.218–224; attack one node
+
+**Verification / honesty:**
+- **goal-verifier** — goal restatement + criteria + evidence before any “done”
+- **verification-before-completion** — fresh pytest / predicate dump before CLOSE claims
+- **handoff** — compact next-agent doc (must list always-on skills first)
+- **session-handoff-packager** — package session summary to disk
+
+**Math quality / critique:**
+- **scientific-critique** — cold 9-dim critique of claims / soft-close risk
+- **grill-me** — harden a proof idea one question at a time before formalizing
+- **self-refine-loop** — polish a proof draft only when explicitly invoked (cap 5)
+
+**Research / literature:**
+- **research** — hybrid research router
+- **arxiv** — Paley / conference / association-scheme papers
+- **litreview** — formal lit orientation if needed
+
+**Compute / infra:**
+- **use-available-compute** — ProcessPool/GPU for p=7 Max+ / sparse T; no serial thrash
+
+**MCP (not a skill file; use when stuck or verifying):**
+- **openai-referee** — `health`, `suggest_direction`, `math_review`, `falsify`, `verify`, `deep_review`
+
+**Do not soft-close.** Domain math only until a hinge is proved.
 
 ## Pointers
 
