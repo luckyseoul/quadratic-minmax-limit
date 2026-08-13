@@ -2,7 +2,7 @@
 
 **Audience:** independent AI / human check (Paata AI-test).  
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit  
-**Date:** 2026-08-13 evening (residual (ii) ND closed; residual (i) still OPEN; post-4d89353 residual-(i) attacks did not close)
+**Date:** 2026-08-13 late (residual (ii) ND closed; residual (i) still OPEN; exact 4-point sums at p=3,5,7; hinge still open)
 
 ## Verdict
 
@@ -55,7 +55,7 @@ Census: holds at \(p=5\). Soft-close forbidden.
 
 **15.232–235 structure (not a close):** intersection split of \(\bar R_4\); k=3 linear, k=2 bilinear (per2), k=1 Laplace/trilinear, k=0 S₄ cycle-type + 4-cycle inverse pairing. Unsigned every layer dead except k=3 for \(p\ge89\). Predicates stay False.
 
-**Post-4d89353 residual-(i) (not a close):** switching Max+\(\leftrightarrow\)Max−; far-sum; Comm-repair dual needs ker=sc; envelope holds on all \(|\kappa|=1\) at \(p=5,7\); \(\mu\) is a CR-class function. Dead list and viable hinges: `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`. No predicate flip.
+**Post-4d89353 residual-(i) (not a close):** switching; far-sum; Comm-repair dual needs ker=sc; envelope holds; \(\mu\) is a CR-class function. Exact sums: \(p=3\to4\kappa\), \(p=5\to8\kappa-2\varphi\), \(p=7\to240\kappa-10\varphi+\)split. New dead: 4×4 Gram, quad level-sets, CR-LP (\(\max|\mu|=1\)), IP-valency \(K_4\), global \(t(p)\) mix. Detail: `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`. No predicate flip.
 
 ## Fatal gaps (named)
 

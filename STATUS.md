@@ -1,6 +1,6 @@
-# Status (2026-08-13 evening)
+# Status (2026-08-13 late)
 
-**\(L=\lim\alpha_n=\tfrac12\) is OPEN** (denseness path blocked by residual (i) only; residual (ii) ND closed 2026-08-13). Post-4d89353 residual-(i) attacks did not close the hinge (dead list: `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`).
+**\(L=\lim\alpha_n=\tfrac12\) is OPEN** (denseness path blocked by residual (i) only; residual (ii) ND closed 2026-08-13). Post-0443d55 continue did not close the hinge (dead list: `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`).
 
 | Claim | Status | Reference |
 |-------|--------|-----------|
@@ -95,4 +95,4 @@
 
 **Current:** residual (i) OPEN; residual (ii) CLOSED; E1/L OPEN; claim **not** asserted.
 
-**Residual-(i) attack (2026-08-13 evening, not a close):** switching Max+\(\leftrightarrow\)Max−, far-sum identity, Comm-repair dual (needs ker=sc), interval envelope on all \(|\kappa|=1\) at \(p=5,7\), \(\mu\) a CR-class function. Dead: Fréchet/joint Fréchet, \(|\mu|\le|f_4|\), \(|\delta|\le\mathrm{room}_\delta\), W0\(\in\mathrm{im}(\mathrm{Gsum})\), Type I+switching rigidity, low-degree Farkas \(y\), 3-wise interpolant, \(\kappa_B\perp E_{\pm4p}\), max-\(|\mu|\) at extreme \(|\varphi|\), halfspace orbit as full \(\mu\). Viable next: general envelope, \(G_+\succ0\) then dual, \(|\mu|\le2/n\), \(K_4\le n(15n-22)\), CR \(F(\lambda)\), non-low-degree dual-eq Farkas.
+**Residual-(i) attack (2026-08-13 late, not a close):** exact 4-point sums at \(p=3,5,7\) (\(\mu=\mu_{\mathrm{part}}\), \(f_4\), linear+CR-split); \(\nu\equiv0\); envelope holds. New dead: 4×4 Gram; affine-quadratic level sets; CR-class master+diamond LP (\(\max|\mu|=1\)); IP-valency \(K_4\) (not regular at \(p=7\)); global \(t(p)\) mix. Viable: general envelope, \(F(\lambda)\) matching those sums, \(G_+\succ0\) then Comm-repair dual, \(|\mu|\le2/n\), \(K_4\le n(15n-22)\), non-low-degree dual-eq Farkas.

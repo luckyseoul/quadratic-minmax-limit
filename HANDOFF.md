@@ -1,10 +1,10 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-13 evening):** **\(L\) OPEN.** Residual **(ii) CLOSED** (affine 15.179 + (ii-b) 15.236 + (ii-a) 15.237). `residual_ii_full_closed` / `deep_s2` **True**. Only leftover: residual **(i)** \(|\mu|\le 1/(2p)\) (or \(|\mu|\le 2/n\), Gsum\(\ge-1/p\), dual-eq empty) for all primes \(p\ge5\). `gsum_disj_lb` / `type_I` / `e1_closed_general` **False**. Soft-close forbidden. Post-4d89353 residual-(i) attacks did **not** close the hinge (dead list in session handoff).  
+> **Now (2026-08-13 late):** **\(L\) OPEN.** Residual **(ii) CLOSED**. Only leftover: residual **(i)** \(|\mu|\le 1/(2p)\) for all primes \(p\ge5\). `gsum_disj_lb` / `type_I` / `e1_closed_general` **False**. Post-0443d55 continue did **not** close the hinge (4×4 Gram, quad level-sets, CR-LP, IP-valency, global \(t(p)\) mix all dead). Exact 4-point sums now known at \(p=3,5,7\) (census).  
 > Session: **`evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-08-13 evening  
+**Status date:** 2026-08-13 late  
 **Claim:** **OPEN** (E1 blocked by residual **(i)** only). Residual **(ii)** full ND closed. residual/16N optional open.
 
 **External / prize:** [MO 413935](https://mathoverflow.net/questions/413935) · [X prize](https://x.com/PI010101/status/2081070728422752329).  
@@ -37,11 +37,13 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **Do not right now:** residual/16N thrash · X chrome · soft-close · ship a 15.xxx whose predicates stay False · flip e1 on census \(p\le7\) · re-thrash the residual-(i) dead list in the session handoff.
 
-**Post-4d89353 residual-(i) (census / algebra, not a close):** switching \(z_\infty=-y_\infty\), \(z_x=y_{nx}\) (nonsquare \(n\)) maps Max+\(\leftrightarrow\)Max−; far-sum \(\sum_{\mathrm{far}}C_{ki}C_{kj}C_{ij}=C_{k0}\); Comm-repair dual cost\(<2-\alpha\) at \(p=5..23\) **if** ker=sc; interval envelope holds on all \(\lvert\kappa\rvert=1\) at \(p=5,7\); \(\mu\) is a PGL CR-class function; \(\nu=0\) on those sets. None of this flips a predicate.
+**Census (not a close):** \(\nu\equiv0\) and \(\mu\) a CR-class function at \(p=5,7\). Exact \(\sum_y\prod y_i\): \(p=3\) \(\to4\kappa\) (\(\mu=\mu_{\mathrm{part}}\)); \(p=5\) \(\to8\kappa-2\varphi\) (\(\mu=f_4\)); \(p=7\) \(\to240\kappa-10\varphi+96\kappa\varepsilon 1_{\lvert\varphi\rvert=10}\) (CR 9 vs 10). Envelope holds at \(p=3,5,7\). Switching / far-sum / Comm-repair dual (needs ker=sc) as before.
 
-**Dead this session (do not re-thrash):** Fréchet / joint Fréchet; \(\lvert\mu\rvert\le\lvert f_4\rvert\) pointwise; \(\lvert\delta\rvert\le\mathrm{room}_\delta\); W0\(\in\mathrm{im}(\mathrm{Gsum})\); Type I+switching \(G=\pi(G)\); low-degree Farkas \(y\); 3-wise interpolant; \(\kappa_B\perp E_{\pm4p}\); matching-PSD / one-edge \(\sum\mu\); max-\(\lvert\mu\rvert\) at extreme \(\lvert\varphi\rvert\); halfspace \(G\)-orbit as full \(\mu\); \(\chi(\)never-zero quadratic\()\) in Max+; unsigned Per; Aut-line dim\(\le1\); 15.237 pair-span as Type I kill.
+**Dead this continue:** 4×4 Gram (only \(1-2/p\)); affine-quadratic level sets (only 60 HS at \(p=5\)); CR-class master+diamond LP (\(\max\lvert\mu\rvert=1\)); IP-valency \(K_4\) (not regular at \(p=7\)); global \(t(p)\) mix of \(\mu_{\mathrm{part}}\) and \(f_4\).
 
-**Still viable:** general envelope; \(G_+\succ0\)/ker=sc then wire Comm-repair dual; \(\lvert\mu\rvert\le2/n\); \(K_4\le n(15n-22)\); Max+-free CR \(F(\lambda)\); dual-eq Farkas not low-degree in \(f_e\).
+**Earlier dead (still dead):** Fréchet / joint Fréchet; \(\lvert\mu\rvert\le\lvert f_4\rvert\) pointwise; \(\lvert\delta\rvert\le\mathrm{room}_\delta\); W0\(\in\mathrm{im}(\mathrm{Gsum})\); Type I+switching \(G=\pi(G)\); low-degree Farkas \(y\); 3-wise interpolant; \(\kappa_B\perp E_{\pm4p}\); matching-PSD; max-\(\lvert\mu\rvert\) at extreme \(\lvert\varphi\rvert\); halfspace orbit as full \(\mu\); unsigned Per; Aut-line dim\(\le1\); 15.237 pair-span as Type I kill.
+
+**Still viable:** general envelope; Max+-free \(F(\lambda)\) matching the three exact sums; \(G_+\succ0\)/ker=sc then Comm-repair dual; \(\lvert\mu\rvert\le2/n\); \(K_4\le n(15n-22)\); dual-eq Farkas not low-degree in \(f_e\).
 
 **Prior resumes:** `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`, `evidence/SESSION_HANDOFF_2026-08-12_residual_i.md`  
 **P0 graph:** `evidence/P0_ENGINEERING_GRAPH.md` · **Failure graph:** `evidence/E1_FAILURE_GRAPH.md`  

@@ -51,6 +51,11 @@ Detail: `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`.
 - \(\chi(\)never-zero quadratic\()\) in Max+ — \(0/300\) at \(p=5\).
 - Unsigned Per / \(\sum\lvert\mathrm{per}\rvert\) — 15.231.
 - Aut-line dim\(\le1\); 15.237 pair-span as a Type I kill.
+- 4×4 Gram \(\{1,f_e,f_f,\chi_S\}\) — only \(\lvert m_4\rvert\le1-2/p\).
+- Affine-quadratic level sets on AG(2,5) — only 60 linear halfspaces; 200 Max+ are not \(Q^{-1}(S)\).
+- CR-class master+diamond LP — \(\max\lvert\mu\rvert=1\) at \(p=5,7\) (\(E_{\pm4p}\) survives).
+- Single IP-valency \(K_4\) — regular at \(p=5\), not at \(p=7\).
+- Global mix \(\mu=(1-t)\mu_{\mathrm{part}}+t f_4\) with \(t=t(p)\) — \(t\) depends on \((\kappa,\varphi)\).
 
 **Live graph (update every turn):** `evidence/P0_ENGINEERING_GRAPH.md` — nodes, critical path, compute routing, change log. **Banner on that file was stale (claimed L CLOSED 2026-08-05); current L is OPEN — trust `HANDOFF.md` / `STATUS.md`.**
 
