@@ -1,0 +1,35 @@
+{
+  "prop": "15.244",
+  "title": "\u2211\u03c6 \u03ba_B=\u2212n/4 \u2016B\u2016\u00b2 Max+-free; \u03bc_part pairing; \u03bb_* rewrite; m4\u2212\u03bc_part budget OPEN",
+  "proved": {
+    "phi_kappa_B_identity": true,
+    "mu_part_kappa_B": true,
+    "lambda_star_mupart_criterion": true,
+    "m4_mupart_budget_general": false,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "phi_kappa_B": "-n/4",
+    "mu_part_kappa_B": "(p^2+3)/(4(p^2-5))",
+    "gamma": "(3p^2+5)/(2 p^2 (p^2-5))",
+    "mu_part_p5": "7/20",
+    "gamma_p5": "2/25",
+    "m4_mupart_budget_p5": "-43/130",
+    "rho_budget_p5": "-163/650"
+  },
+  "hinge": {
+    "phi_kappa_B_proved": true,
+    "mu_part_kappa_B_proved": true,
+    "lambda_star_mupart_criterion": true,
+    "m4_mupart_budget_general": false,
+    "residual_i_closed_via_244": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "\u2211(m4\u2212\u03bc_part)\u03ba_B \u2265 rho_budget \u2212 \u03b3 on unit W++0 for all p\u22655, or \u2211\u03c1 \u03ba_B \u2265 \u22126/n\u22121/(2p\u00b2), or hull/|\u03bc|\u22641/(2p)/K4"
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "\u03c6\u2013\u03ba_B identity is Max+-free and pairs with 15.243 to close the \u03bc_part contribution.  Residual-(i) still needs a Max+ bound on \u2211(m4\u2212\u03bc_part)\u03ba_B or equivalent.  No predicate flip."
+}

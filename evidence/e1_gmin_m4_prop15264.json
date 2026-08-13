@@ -1,0 +1,59 @@
+{
+  "title": "Prop 15.264 scheme Ext eq for \u03bc_part; Ext[\u03b4]=(p\u2074\u22121)\u03b4; Ext\u03a0=\u03a0Ext; residual (i) OPEN",
+  "proved": {
+    "mupart_ext_equation": true,
+    "all_primes_coeff": true,
+    "delta_ext_eigen": true,
+    "ext_commutes_Pi": true,
+    "pi_odd_kernel_trivial": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "mupart_ext": {
+      "proved": true,
+      "all_primes_5_to_200": true,
+      "n_checked": 44,
+      "theorem": "On |\u03ba|=1: Ext[\u03bc_part]=(p\u2074\u22121)\u03bc_part+2\u03c6, from Per \u03ba=p\u2074\u03ba\u22126\u03c6, Per \u03c6=(2n+1)\u03c6, and a,b of \u03bc_part.  Coeff identity \u22126a+2nb\u2212b(p\u2074\u22121)=2 holds for all primes p\u22655.",
+      "depends_on": [
+        "per_kappa_phi_239",
+        "mu_part_formula_224"
+      ]
+    },
+    "delta_eigen": {
+      "proved": true,
+      "theorem": "On |\u03ba|=1: Ext[\u03b4]=(p\u2074\u22121)\u03b4 for \u03b4=\u03bc\u2212\u03bc_part, since both \u03bc and \u03bc_part satisfy Ext[f]=(p\u2074\u22121)f+2\u03c6.",
+      "depends_on": [
+        "theorem_mupart_ext_equation",
+        "ext_mu_251_263"
+      ]
+    },
+    "ext_Pi": {
+      "proved": true,
+      "theorem": "Paley: Per \u03a0 = \u03a0 Per via U^T C U=\u2212C and the permanent sign identity per(C[S,T])=\u03c7_D(S)\u03c7_D(T) per(C[\u03c0^{-1}S,\u03c0^{-1}T]).  Hence Ext \u03a0 = \u03a0 Ext on |\u03ba|=1, and Ext preserves \u03c0-parity.",
+      "depends_on": [
+        "paley_monomial_conjugation_254",
+        "permanent_definition"
+      ]
+    }
+  },
+  "certified": {
+    "5": {
+      "ok": true,
+      "max_err_mupart_ext": 1.7763568394002505e-13,
+      "mupart_ext_ok": "True"
+    }
+  },
+  "hinge": {
+    "mupart_ext_equation": true,
+    "delta_ext_eigen": true,
+    "ext_commutes_Pi": true,
+    "pi_odd_kernel_trivial": false,
+    "residual_i_closed": false,
+    "open": "Scheme Ext eq for \u03bc_part + Ext[\u03b4]=(p\u2074\u22121)\u03b4 + Ext\u03a0=\u03a0Ext proved; \u03c0-odd ker of Ext\u2212(p\u2074\u22121)I on |\u03ba|=1 still OPEN."
+  },
+  "F3": "\u03bc_part satisfies Ext eq on |\u03ba|=1 by Per eigenforms; Ext[\u03b4]=(p\u2074\u22121)\u03b4; Ext commutes with \u03a0.  \u03c0-odd kernel gap OPEN.  No predicate flip."
+}

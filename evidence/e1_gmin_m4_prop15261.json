@@ -1,0 +1,75 @@
+{
+  "title": "Prop 15.261 exact Max\u00b1 config multiplicities; Q-match \u21d4 \u03bd=0; residual (i) OPEN",
+  "proved": {
+    "mult_formula": true,
+    "mult_nonneg_bound": true,
+    "bound_sufficient_for_residual_i": false,
+    "orientation_mult_equivalence": true,
+    "nu_zero_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "mult_formula": {
+      "proved": true,
+      "theorem": "mult_+(\u03b1)=(N/16)(1+qf(\u03b1)/(2p)+pr(\u03b1)m\u2084\u207a(S)) and mult_-(\u03b1)=(N/16)(1\u2212qf(\u03b1)/(2p)+pr(\u03b1)m\u2084\u207b(S)), for any 4-set S, under odd-moment vanishing and \u03c0=\u00b1C/p.",
+      "depends_on": [
+        "pairwise_pi_189",
+        "odd_moments_250",
+        "hypercube_fourier"
+      ]
+    },
+    "nonneg_bound": {
+      "proved": true,
+      "bound_sufficient_for_residual_i": false,
+      "theorem": "mult\u00b1\u22650 \u21d2 linear inequalities on m\u2084\u00b1.  If q_max=max|\u03b1\u1d40A\u03b1| and both signs appear for both products, |m\u2084\u00b1|\u22641\u2212q_max/(2p).  On |\u03ba|=1, q_max\u22648 \u21d2 |m\u2084\u00b1|\u22641\u22124/p, which is >1/(2p) for p\u22655.",
+      "depends_on": [
+        "theorem_mult_formula",
+        "seidel4_spectrum_257"
+      ]
+    },
+    "orientation_eq": {
+      "proved": true,
+      "hypothesis_proved_general": false,
+      "theorem": "On |\u03ba|=1 with Q\u1d40AQ=\u2212A, det D=+1: mult_+(\u03b1)=mult_-(Q\u1d40\u03b1) \u2200\u03b1  \u21d4  \u03bd(S)=0.  Proof: plug mult formulas and qf(Q\u1d40\u03b1)=\u2212qf(\u03b1).  Either side OPEN as a general statement (census both true p=5,7).",
+      "depends_on": [
+        "theorem_mult_formula",
+        "theorem_orientation_258"
+      ]
+    }
+  },
+  "certified": {
+    "5": {
+      "ok": true,
+      "n_sets_checked": 30,
+      "max_formula_err": 3.552713678800501e-15,
+      "formula_ok": "True",
+      "q_max_observed": 12,
+      "bound_1_minus_4_over_p": 0.19999999999999996,
+      "thr_1_over_2p": 0.1,
+      "bound_weaker_than_thr": true
+    },
+    "7": {
+      "ok": true,
+      "n_sets_checked": 10,
+      "max_formula_err": 1.1368683772161603e-13,
+      "formula_ok": "True",
+      "q_max_observed": 12,
+      "bound_1_minus_4_over_p": 0.4285714285714286,
+      "thr_1_over_2p": 0.07142857142857142,
+      "bound_weaker_than_thr": true
+    }
+  },
+  "hinge": {
+    "mult_formula": true,
+    "mult_nonneg_bound": true,
+    "orientation_mult_equivalence": true,
+    "nu_zero_general": false,
+    "residual_i_closed": false,
+    "open": "mult formula proved; Q-match \u21d4 \u03bd=0 on |\u03ba|=1; still need \u03bd=0 or reflection or tighter L^\u221e bound Max+-free."
+  },
+  "F3": "Exact mult_\u00b1(\u03b1)=(N/16)(1\u00b1qf/(2p)+pr m\u2084\u00b1) proved Max+-free.  On |\u03ba|=1, Q-config-match \u21d4 \u03bd=0.  Bound 1\u22124/p too weak for 1/(2p).  Residual-(i) still OPEN.  No predicate flip."
+}

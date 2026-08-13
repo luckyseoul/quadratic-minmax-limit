@@ -1,0 +1,160 @@
+{
+  "title": "Prop 15.253 |\u03c1_f4|\u2264L_abs; Wick-reflection criterion; residual (i) OPEN on reflection hyp",
+  "proved": {
+    "rho_f4_closed_form": true,
+    "rho_f4_le_L_abs": true,
+    "reflection_criterion": true,
+    "reflection_hyp_general": false,
+    "hull_implies_Labs": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "rho_f4_form": {
+      "proved": true,
+      "theorem": "On |\u03ba|=1: \u03c1_f4 = \u03ba(4p\u2212p\u00b2\u22121)/(p\u00b2 n) \u2212 \u03c6/(p n).  Algebraic rearrangement of f4\u2212\u03ba/p\u00b2.",
+      "depends_on": [
+        "f4_definition",
+        "n_eq_p2_plus_1"
+      ]
+    },
+    "rho_f4_le_L_abs": {
+      "proved": true,
+      "theorem": "On |\u03ba|=1 with |\u03c6|\u22642(p\u22122): |\u03c1_f4|\u2264(3p\u00b2\u22128p+1)/(p\u00b2n)\u2264L_abs for all primes p\u22655 (g(p)=p\u00b3\u22128p\u00b2+17p\u22124>0; g(5)=6, g'>0 on [5,\u221e)).",
+      "by_p_sample": {
+        "5": {
+          "rho_f4_maj": "18/325",
+          "L_abs": "3/50",
+          "maj_le_L": true,
+          "max_explicit": "18/325",
+          "explicit_le_maj": true,
+          "g_cubic": 6
+        },
+        "7": {
+          "rho_f4_maj": "46/1225",
+          "L_abs": "5/98",
+          "maj_le_L": true,
+          "max_explicit": "46/1225",
+          "explicit_le_maj": true,
+          "g_cubic": 66
+        },
+        "11": {
+          "rho_f4_maj": "138/7381",
+          "L_abs": "9/242",
+          "maj_le_L": true,
+          "max_explicit": "138/7381",
+          "explicit_le_maj": true,
+          "g_cubic": 546
+        },
+        "13": {
+          "rho_f4_maj": "202/14365",
+          "L_abs": "11/338",
+          "maj_le_L": true,
+          "max_explicit": "202/14365",
+          "explicit_le_maj": true,
+          "g_cubic": 1062
+        },
+        "17": {
+          "rho_f4_maj": "366/41905",
+          "L_abs": "15/578",
+          "maj_le_L": true,
+          "max_explicit": "366/41905",
+          "explicit_le_maj": true,
+          "g_cubic": 2886
+        }
+      },
+      "g5": true,
+      "gp5": 12,
+      "depends_on": [
+        "phi_bound_15_186",
+        "L_abs_15_205"
+      ]
+    },
+    "reflection_criterion": {
+      "proved": true,
+      "theorem": "On |\u03ba|=1: |\u03c1|\u2264|\u03c1_f4| \u21d4 \u03bc \u2208 [min(f4,f4^\u266f), max(f4,f4^\u266f)] with f4^\u266f=2\u03ba/p\u00b2\u2212f4.  Combined with (B): the reflection hypothesis \u21d2 |\u03c1|\u2264L_abs \u21d2 |\u03bc|\u22641/(2p) \u21d2 residual-(i) Farkas.",
+      "hypothesis_proved_general": false,
+      "depends_on": [
+        "theorem_rho_f4_le_L_abs",
+        "prop_15_252_rho_path"
+      ]
+    },
+    "hull_implies_Labs": {
+      "proved": true,
+      "theorem": "Hull \u03bc\u2208conv{0,\u03bc_part,f4} on |\u03ba|=1 \u21d2 |\u03c1|\u2264max(1/p\u00b2,|\u03c1_part|,|\u03c1_f4|) \u2264L_abs for all primes p\u22655 (each term \u2264L_abs Max+-free).  Hence hull \u21d2 residual-(i) via the \u03c1-path.",
+      "by_p_sample": {
+        "5": {
+          "one_over_p2": "1/25",
+          "rho_part_maj": "4/125",
+          "rho_f4_maj": "18/325",
+          "triple_le_L": true
+        },
+        "7": {
+          "one_over_p2": "1/49",
+          "rho_part_maj": "6/539",
+          "rho_f4_maj": "46/1225",
+          "triple_le_L": true
+        },
+        "11": {
+          "one_over_p2": "1/121",
+          "rho_part_maj": "10/3509",
+          "rho_f4_maj": "138/7381",
+          "triple_le_L": true
+        },
+        "13": {
+          "one_over_p2": "1/169",
+          "rho_part_maj": "12/6929",
+          "rho_f4_maj": "202/14365",
+          "triple_le_L": true
+        }
+      },
+      "depends_on": [
+        "hull_15_241",
+        "rho_part_maj",
+        "theorem_rho_f4_le_L_abs"
+      ]
+    }
+  },
+  "certified": {
+    "reflection_census": {
+      "5": {
+        "ok": true,
+        "n_kappa1": 11700,
+        "reflection_viol": 0,
+        "rho_le_rho_f4_viol": 0,
+        "max_abs_rho": 0.055384615384615386,
+        "max_abs_rho_f4": 0.055384615384615386,
+        "L_abs": 0.06,
+        "rho_le_L_abs": true,
+        "rho_f4_le_L_abs": true,
+        "reflection_ok": true
+      },
+      "7": {
+        "ok": true,
+        "n_kappa1": 176400,
+        "reflection_viol": 0,
+        "rho_le_rho_f4_viol": 0,
+        "max_abs_rho": 0.01766378923207425,
+        "max_abs_rho_f4": 0.026122448979591834,
+        "L_abs": 0.05102040816326531,
+        "rho_le_L_abs": true,
+        "rho_f4_le_L_abs": true,
+        "reflection_ok": true
+      }
+    }
+  },
+  "hinge": {
+    "rho_f4_le_L_abs": true,
+    "reflection_criterion": true,
+    "reflection_hyp_general": false,
+    "hull_implies_Labs": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove |\u03c1|\u2264|\u03c1_f4| (\u03bc\u2208[f4,f4^\u266f]) on |\u03ba|=1 for all primes p\u22655, or hull / Ext maj / Es4 / ker=sc."
+  },
+  "F3": "|\u03c1_f4|\u2264L_abs proved Max+-free for p\u22655.  Reflection hyp |\u03c1|\u2264|\u03c1_f4| (\u21d4 \u03bc\u2208[f4,f4^\u266f]) would close residual-i; census holds at p=5,7 with 0 viol.  Pure |\u03bc|\u2264|f4| is false at p=7.  No predicate flip."
+}

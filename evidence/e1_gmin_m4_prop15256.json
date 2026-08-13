@@ -1,0 +1,108 @@
+{
+  "title": "Prop 15.256 global \u2211\u03bc and (\u03ba,\u03c6) extension sums; residual (i) OPEN on vanishing / reflection",
+  "proved": {
+    "global_sum_mu": true,
+    "extension_sum_kappa": true,
+    "extension_sum_phi": true,
+    "f4_extension_nonzero": true,
+    "algebraic_E4_identity": true,
+    "vanishing_sum_general": false,
+    "reflection_hyp_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "sum_mu": {
+      "proved": true,
+      "theorem": "Under bal pairwise + 3-wise vanish and Q\u2261\u00b1p on Max\u00b1: \u2211_S \u03bc(S)=\u2212p\u00b2(p\u00b2\u22121)/12.  Proof: E[Q\u00b2]=p\u00b2=binom(n,2)+6\u2211\u03bc (wedges die); equivalently E[(1\u1d40y)\u2074]=n+3n(n\u22121)+24\u2211\u03bc with E[(1\u1d40y)\u2074]=p\u2074+6p\u00b2+1.",
+      "formula": "sum_mu = -p^2 (p^2-1)/12",
+      "depends_on": [
+        "sum_identity_189",
+        "pairwise_bal",
+        "odd_moments_250"
+      ]
+    },
+    "ext_kappa": {
+      "proved": true,
+      "theorem": "Normalised Paley (finite row-sum 1): for S={\u221e,a,b,c}, \u2211_{j\u2209S} \u03ba({j,a,b,c})=3\u2212\u03ba0\u00b2 with \u03ba0=C_ab+C_ac+C_bc.  On |\u03ba0|=1 the sum equals 2.",
+      "depends_on": [
+        "paley_row_sum_1",
+        "C_off_diag_pm1"
+      ]
+    },
+    "ext_phi": {
+      "proved": true,
+      "theorem": "Normalised Paley: \u2211_{j\u2209S} \u03c6({j,a,b,c})=p\u00b2+P with P=(\u03ba0\u00b2\u22123)/2.  On |\u03ba0|=1: \u2211\u03c6=p\u00b2\u22121.  Proof: expand \u2211_r C_ra C_rb C_rc(row_r\u2212C_r\u221e\u2212\u2211_{u\u2208{a,b,c}}C_ru); C\u00b2 kills cross pairs; \u03c6(S)=\u03c4\u2083\u22121.",
+      "depends_on": [
+        "paley_row_sum_1",
+        "C_squared",
+        "C_infty_border"
+      ]
+    },
+    "f4_ext": {
+      "proved": true,
+      "theorem": "On |\u03ba0|=1, the f4-extension sum equals (9\u2212p\u00b2)/(p n)\u22600 for p\u22655.  Hence local vanishing \u2211\u03bc_ext=0 cannot hold for \u03bc=f4 on all extensions; the |\u03ba|=3 layer must cancel (structure).",
+      "depends_on": [
+        "theorem_extension_sum_kappa",
+        "theorem_extension_sum_phi",
+        "f4_definition"
+      ]
+    },
+    "sum_mu_formula": {
+      "5": "-50",
+      "7": "-196",
+      "11": "-1210",
+      "13": "-2366"
+    },
+    "f4_ext_formula": {
+      "5": "-8/65",
+      "7": "-4/35",
+      "11": "-56/671",
+      "13": "-16/221"
+    }
+  },
+  "certified": {
+    "5": {
+      "ok": true,
+      "sum_mu_theory": "-50",
+      "sum_mu_via_Q": "-50",
+      "census_sum_mu": -50.0,
+      "census_matches": true,
+      "n_kappa1_infty_triples": 1800,
+      "max_err_sum_kappa": 0.0,
+      "max_err_sum_phi": 0.0,
+      "extension_sums_ok": true,
+      "f4_extension_sum": "-8/65",
+      "f4_extension_nonzero": true
+    },
+    "7": {
+      "ok": true,
+      "sum_mu_theory": "-196",
+      "sum_mu_via_Q": "-196",
+      "census_sum_mu": null,
+      "census_matches": true,
+      "n_kappa1_infty_triples": 14112,
+      "max_err_sum_kappa": 0.0,
+      "max_err_sum_phi": 0.0,
+      "extension_sums_ok": true,
+      "f4_extension_sum": "-4/35",
+      "f4_extension_nonzero": true
+    }
+  },
+  "hinge": {
+    "global_sum_mu": true,
+    "extension_sum_kappa": true,
+    "extension_sum_phi": true,
+    "f4_extension_nonzero": true,
+    "vanishing_sum_general": false,
+    "reflection_hyp_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove \u2211_{j\u2209S} \u03bc=0 on |\u03ba0|=1 (\u21d4 m\u2084\u207a=m\u2084\u207b), or reflection |\u03c1|\u2264|\u03c1_f4|, or Es4/ker=sc/hull.  Global \u2211\u03bc and (\u03ba,\u03c6) extension sums do not force local vanishing."
+  },
+  "F3": "\u2211_S \u03bc=\u2212p\u00b2(p\u00b2\u22121)/12 proved Max+-free.  Extension \u2211\u03ba=3\u2212\u03ba0\u00b2 and \u2211\u03c6=p\u00b2+P proved on normalised Paley.  f4-extension sum (9\u2212p\u00b2)/(pn)\u22600 so local vanishing needs |\u03ba|=3 cancellation.  Census OK p=5,7.  Vanishing / reflection / residual-(i) still OPEN.  No predicate flip."
+}

@@ -1,0 +1,31 @@
+{
+  "prop": "15.240",
+  "title": "maj\u22642/n; envelope criterion \u21d2 residual-(i); envelope OPEN",
+  "proved": {
+    "maj_le_two_over_n": true,
+    "envelope_criterion_chain": true,
+    "envelope_hypothesis": false,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "maj_le_2n_slack": "(p-1)(p^3-3p^2-5p-9)/(p^2(p^2-5)(p^2+1))",
+    "maj_p5": "9/125",
+    "two_over_n_p5": "1/13",
+    "thr_p5": "1/10"
+  },
+  "hinge": {
+    "maj_le_two_over_n": true,
+    "envelope_criterion": true,
+    "envelope_hypothesis": false,
+    "free_e_sc_structure": true,
+    "residual_i_closed_via_240": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "envelope |\u03bc|\u2264max(|\u03bc_part|,|f4|) or ker=sc (\u03bb_*) or |\u03bc|\u2264M_cand/K4/Path C"
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "Envelope is a clean sufficient Max+-free target reduced to 2/n by maj\u22642/n.  Hypothesis not proved for general p.  No predicate flip."
+}

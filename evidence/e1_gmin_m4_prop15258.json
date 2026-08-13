@@ -1,0 +1,38 @@
+{
+  "title": "Prop 15.258 C_S\u223c_sp\u2212C_S \u21d4 |\u03ba|=1; lift OPEN; residual (i) OPEN",
+  "proved": {
+    "orientation_theorem": true,
+    "lift_to_m4_eq": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "orientation": {
+      "proved": true,
+      "theorem": "For every 4\u00d74 Seidel matrix A: A\u223c_sp \u2212A \u21d4 |\u03ba(A)|=1.  |\u03ba|=3: \u03c3(A)\u2260\u03c3(\u2212A) blocks similarity.  |\u03ba|=1: exhaustive signed-perm conjugacy with det D=+1.",
+      "depends_on": [
+        "theorem_seidel4_spectrum_257"
+      ]
+    }
+  },
+  "certified": {
+    "n_kappa1": 48,
+    "n_kappa3": 16,
+    "all_kappa1_have_conjugator": true,
+    "all_kappa3_blocked": true,
+    "detD_values_on_kappa1": [
+      1
+    ],
+    "detD_always_plus_one": true
+  },
+  "hinge": {
+    "orientation_theorem": true,
+    "lift_to_m4_eq": false,
+    "residual_i_closed": false,
+    "open": "Lift C_S\u223c_sp\u2212C_S on |\u03ba|=1 to m\u2084\u207a=m\u2084\u207b Max+-free, or reflection, or Es4/ker=sc/hull."
+  },
+  "F3": "C_S\u223c_sp\u2212C_S iff |\u03ba|=1 proved Max+-free (spectrum block on |\u03ba|=3; exhaustive conjugacy on |\u03ba|=1 with det D=+1).  Matches \u03bd-support.  Lift to m\u2084\u207a=m\u2084\u207b still OPEN.  No predicate flip."
+}

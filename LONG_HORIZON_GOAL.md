@@ -30,9 +30,9 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
 - Bi-tight empty for all primes \(p\ge5\) (15.167).
 - Exact Paley optimality is **false** (\(m_{10}=13<15\)). E(1) is asymptotic.
 
-Therefore the remaining theorem is **E(1)** on \(n=p^2+1\). Residual **(ii)** is **CLOSED** (affine 15.179 + (ii-b) 15.236 + (ii-a) 15.237). The only leftover:
+Therefore the remaining theorem is **E(1)** on \(n=p^2+1\). Residual **(ii)** is **CLOSED** (affine 15.179 + (ii-b) 15.236 + (ii-a) 15.237). \(\nu=0\) on every \(|\kappa|=1\) four-set is **proved** (15.268), so \(m_4^+=m_4^-=\mu=\mu_{\mathrm{part}}+2\delta_+\) there. The only leftover:
 
-1. Residual **(i)** — Type I freeness-fail \(k=3p-2\): \(|\mu_4|\le 1/(2p)\) on every \(|\kappa|=1\) four-set (or \(|\mu|\le 2/n\), Gsum\(\ge-1/p\), dual-eq empty). Particular majorant is already under the threshold.
+1. Residual **(i)** — Type I freeness-fail \(k=3p-2\): control the **even** \(\delta\in E_{\pm4p}\) so \(|\mu_4|\le 1/(2p)\) on every \(|\kappa|=1\) four-set (or envelope / reflection / \(\|m_4\|_2^2\le n(n-2)/4\) / \(K_4\le\mathrm{Wick}_{hi}\) / \(\ker=\mathrm{sc}\) + free-\(e\), or Gsum\(\ge-1/p\), dual-eq empty). Particular majorant is already under the threshold. Local 4–5 point Grams only give \(|\mu|\le1-2/p\) (dead).
 
 Path-C / 16N / 15.193 exhaustiveness is **not** required.
 

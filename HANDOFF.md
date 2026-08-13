@@ -1,11 +1,11 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-13 late):** **\(L\) OPEN.** Residual **(ii) CLOSED**. Only leftover: residual **(i)** \(|\mu|\le 1/(2p)\) for all primes \(p\ge5\). `gsum_disj_lb` / `type_I` / `e1_closed_general` **False**. Post-0443d55 continue did **not** close the hinge (4×4 Gram, quad level-sets, CR-LP, IP-valency, global \(t(p)\) mix all dead). Exact 4-point sums now known at \(p=3,5,7\) (census).  
+> **Now (2026-08-13 night):** **\(L\) OPEN.** Residual **(ii) CLOSED**. **15.268:** \(\nu=0\) on every \(|\kappa|=1\) four-set (pairing-pole square; \(m_4^+(S)=\varepsilon(g,S)m_4^+(g(S))\); \(g=m_\sigma\circ\tau\)). Leftover is **even** \(\delta\in E_{\pm4p}\) so \(|\mu|\le 1/(2p)\) (or envelope / reflection / \(E[s^4]\) / \(\ker=\mathrm{sc}\)). `gsum` / `type_I` / `e1` **False**. After `/goal clear` start a **new** `/goal` (cannot resume).  
 > Session: **`evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-08-13 late  
-**Claim:** **OPEN** (E1 blocked by residual **(i)** only). Residual **(ii)** full ND closed. residual/16N optional open.
+**Status date:** 2026-08-13 night  
+**Claim:** **OPEN** (E1 blocked by residual **(i)** only). Residual **(ii)** full ND closed. \(\nu=0\) on \(|\kappa|=1\) proved (15.268). residual/16N optional open.
 
 **External / prize:** [MO 413935](https://mathoverflow.net/questions/413935) · [X prize](https://x.com/PI010101/status/2081070728422752329).  
 @PI010101 asked for GitHub, then posted that Grok Build 4.5 found a gap:  
@@ -29,27 +29,27 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 **Done (2026-08-06):** gap named (Gsum disj LB / 15.158); claim retracted OPEN; short package `evidence/share/denseness_path_package.md`; load-bearing tests; 3 cold AI passes → NOT_PROVED + honest OPEN.
 
 **Required opens (prize path):**  
-1. Residual **(i) only:** Max+-free \(|\mu|\le 1/(2p)\) on \(|\kappa|=1\) for all primes \(p\ge5\) (⇔ Gsum\(\ge-1/p\)). Sufficient alts: \(|\mu|\le 2/n\); envelope \(|\mu|\le\max(|\mu_{\mathrm{part}}|,|f_4|)\); dual-eq empty; Gsum≽0+master+Fréchet \(\Rightarrow|\mu|\le 2/n\). Census OK at p=5,7.  
+1. Residual **(i) only:** even \(\delta\in E_{\pm4p}\) so \(\max_{|\kappa|=1}|\mu|\le 1/(2p)\) for all primes \(p\ge5\) (⇔ Gsum\(\ge-1/p\)). \(\nu=0\) already (15.268). Alts: envelope / reflection / \(\|m_4\|_2^2\le n(n-2)/4\) / \(K_4\le\mathrm{Wick}_{hi}\) / \(\ker=\mathrm{sc}\)+free-\(e\). Census OK at p=5,7.  
 2. Wire `gsum_disj_lb_proved_general` / `type_I` / `e1_closed_general` via **real imports** only after (1). Then Main Theorem \(L=\tfrac12\).  
 3. AI-test package after CLOSED. Residual (ii) exhaustiveness (15.193) is **not** required (ND path closed).  
 
 **Non-required:** Path-C/16N. **User:** ping Paata after L actually closed.  
 
-**Do not right now:** residual/16N thrash · X chrome · soft-close · ship a 15.xxx whose predicates stay False · flip e1 on census \(p\le7\) · re-thrash the residual-(i) dead list in the session handoff.
+**Do not right now:** residual/16N thrash · X chrome · soft-close · ship a 15.xxx whose predicates stay False · flip e1 on census \(p\le7\) · re-thrash the residual-(i) dead list · `/goal resume` after `/goal clear` (start a **new** `/goal`).
 
-**Census (not a close):** \(\nu\equiv0\) and \(\mu\) a CR-class function at \(p=5,7\). Exact \(\sum_y\prod y_i\): \(p=3\) \(\to4\kappa\) (\(\mu=\mu_{\mathrm{part}}\)); \(p=5\) \(\to8\kappa-2\varphi\) (\(\mu=f_4\)); \(p=7\) \(\to240\kappa-10\varphi+96\kappa\varepsilon 1_{\lvert\varphi\rvert=10}\) (CR 9 vs 10). Envelope holds at \(p=3,5,7\). Switching / far-sum / Comm-repair dual (needs ker=sc) as before.
+**Census (not a close):** \(\nu\equiv0\) now **proved** (15.268), not just census. \(\mu\) a CR-class function at \(p=5,7\). Exact \(\sum_y\prod y_i\): \(p=3\) \(\to4\kappa\) (\(\mu=\mu_{\mathrm{part}}\)); \(p=5\) \(\to8\kappa-2\varphi\) (\(\mu=f_4\)); \(p=7\) \(\to240\kappa-10\varphi+96\kappa\varepsilon 1_{\lvert\varphi\rvert=10}\) (CR 9 vs 10). Envelope holds at \(p=3,5,7\). Switching / far-sum / Comm-repair dual (needs ker=sc) as before.
 
-**Dead this continue:** 4×4 Gram (only \(1-2/p\)); affine-quadratic level sets (only 60 HS at \(p=5\)); CR-class master+diamond LP (\(\max\lvert\mu\rvert=1\)); IP-valency \(K_4\) (not regular at \(p=7\)); global \(t(p)\) mix of \(\mu_{\mathrm{part}}\) and \(f_4\).
+**Dead this continue:** 4×4 / 5-point / K5 Gram (only \(1-2/p\)); Gsum 6×6 (\(|\mu|\le1\)); affine-quadratic level sets; CR-class master+diamond LP; IP-valency \(K_4\); global \(t(p)\) mix; 15.267 \(g^{-1}\) Aut slot (corrected in 15.268); unsigned Per even with \(|\mu|\le1-2/p\); Per-row CS; \(|\delta|\le\mathrm{room}_\delta\) from \(\mu_{\mathrm{part}}\) (false at \(p=5\)).
 
-**Earlier dead (still dead):** Fréchet / joint Fréchet; \(\lvert\mu\rvert\le\lvert f_4\rvert\) pointwise; \(\lvert\delta\rvert\le\mathrm{room}_\delta\); W0\(\in\mathrm{im}(\mathrm{Gsum})\); Type I+switching \(G=\pi(G)\); low-degree Farkas \(y\); 3-wise interpolant; \(\kappa_B\perp E_{\pm4p}\); matching-PSD; max-\(\lvert\mu\rvert\) at extreme \(\lvert\varphi\rvert\); halfspace orbit as full \(\mu\); unsigned Per; Aut-line dim\(\le1\); 15.237 pair-span as Type I kill.
+**Earlier dead (still dead):** Fréchet / joint Fréchet; \(\lvert\mu\rvert\le\lvert f_4\rvert\) pointwise; W0\(\in\mathrm{im}(\mathrm{Gsum})\); Type I+switching \(G=\pi(G)\); low-degree Farkas \(y\); 3-wise interpolant; \(\kappa_B\perp E_{\pm4p}\); matching-PSD; max-\(\lvert\mu\rvert\) at extreme \(\lvert\varphi\rvert\); halfspace orbit as full \(\mu\); Aut-line dim\(\le1\); 15.237 pair-span as Type I kill.
 
-**Still viable:** general envelope; Max+-free \(F(\lambda)\) matching the three exact sums; \(G_+\succ0\)/ker=sc then Comm-repair dual; \(\lvert\mu\rvert\le2/n\); \(K_4\le n(15n-22)\); dual-eq Farkas not low-degree in \(f_e\).
+**Still viable:** general envelope / reflection; Aut-SOS / \(P_\pm\) / \(G_+=B^*B\) on even \(E_{\pm4p}\); \(G_+\succ0\)/ker=sc then Comm-repair dual; \(E[s^4]\le15n^2-22n\); \(\lvert\mu\rvert\le2/n\); \(K_4\le n(15n-22)\).
 
 **Prior resumes:** `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`, `evidence/SESSION_HANDOFF_2026-08-12_residual_i.md`  
 **P0 graph:** `evidence/P0_ENGINEERING_GRAPH.md` · **Failure graph:** `evidence/E1_FAILURE_GRAPH.md`  
 
-**Suggested skills:** `agent-cost-optimization` · `graph-engineered-completion` · `goal-verifier` · `verification-before-completion` · `handoff` · `session-handoff-packager` · `scientific-critique` · `grill-me` · `self-refine-loop` · `research` · `arxiv` · `litreview` · `use-available-compute` · `openai-referee`  
-**Compute:** 88 cores + idle V100; ProcessPool/GPU for Max+ contractions; no class_key thrash (F19); never soft-close L (F3).
+**Suggested skills:** `graph-engineered-completion` · `goal-verifier` · `verification-before-completion` · `handoff` · `session-handoff-packager` · `scientific-critique` · `grill-me` · `self-refine-loop` · `research` · `arxiv` · `litreview` · `use-available-compute` · `openai-referee`  
+**Compute:** 88 cores + idle V100; ProcessPool/GPU for Max+ contractions; no class_key thrash (F19); never soft-close L (F3). Token budget not a constraint this week — start a **new** `/goal` after `/goal clear` (cannot resume). Do not leave orphaned stdin `python3` eigsh jobs.
 
 ---
 
@@ -63,7 +63,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **E(1) OPEN:** residual **(ii) CLOSED** — affine 15.179 + (ii-b) 15.236 + (ii-a) 15.237; `residual_ii_full_closed=True`. Residual **(i)** Type I dual-eq still blocked (`gsum_disj_lb_proved_general=False`). **L OPEN.**
 
-**Primary hinge (general primes \(p\ge5\)):** \(|\mu|\le 1/(2p)\) on \(|\kappa|=1\), or \(|\mu|\le 2/n\), or dual-eq empty, or \(G_+\succ0\) (ker=sc) + Comm-repair dual, or \(K_4\le n(15n-22)\). Latest residual-(i) modules: `prop15186.py`–`prop15235.py`. Residual-(ii) hinges: `prop15236.py`, `prop15237.py`. Session: `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`.
+**Primary hinge (general primes \(p\ge5\)):** even \(\delta\) so \(|\mu|\le 1/(2p)\) on \(|\kappa|=1\) (15.268 already killed \(\nu\)). Alts: envelope / reflection / \(E[s^4]\) / \(G_+\succ0\) + Comm-repair / \(K_4\le n(15n-22)\). Latest: `prop15268.py` (\(\nu=0\)). Residual-(ii): `prop15236.py`, `prop15237.py`. Session: `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`.
 
 **Optional residual/16N (still OPEN, not required for denseness L):**
 \[

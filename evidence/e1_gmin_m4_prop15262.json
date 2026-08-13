@@ -1,0 +1,131 @@
+{
+  "title": "Prop 15.262 change-of-var m\u2084\u207a=\u03c7_D m\u2084\u207b\u2218\u03c0; matched particulars; \u03bc_part extension 0; residual (i) OPEN",
+  "proved": {
+    "change_of_var_identity": true,
+    "nu_anti_invariance_finite": true,
+    "forces_nu_zero": false,
+    "matched_particulars": true,
+    "mupart_extension_vanishes": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "change_of_var": {
+      "proved": true,
+      "theorem": "For every 4-set S: m\u2084\u207a(S)=\u03c7_D(S) m\u2084\u207b(\u03c0S), via y'_i=D_i y_{\u03c0^{-1}i} bijection Max+\u2192Max\u2212 and y_i=D_i y'_{\u03c0 i}.",
+      "depends_on": [
+        "theorem_paley_monomial_conjugation_254",
+        "Max_minus_image_254"
+      ]
+    },
+    "nu_anti": {
+      "proved": true,
+      "forces_nu_zero_on_kappa1": false,
+      "theorem": "On finite 4-sets: \u03bd(S)=\u2212\u03bd(\u03c0S).  Proof: m\u2084\u207a(S)=m\u2084\u207b(\u03c0S) and m\u2084\u207b(S)=m\u2084\u207a(\u03c0S) (\u03c0\u00b2\u2208Aut).  Does not alone force \u03bd=0 on |\u03ba|=1.",
+      "depends_on": [
+        "theorem_change_of_var_identity",
+        "theorem_mu_from_m4plus_pullback_254"
+      ]
+    },
+    "matched_particulars": {
+      "proved": true,
+      "theorem": "In V=span{\u03ba,\u03c6,star}: m\u2084_part\u207a=a\u03ba+b\u03c6+z\u208a star solves (4pI\u2212T)m=4\u03ba/p and m\u2084_part\u207b=a\u03ba+b\u03c6+z\u208b star solves (4pI+T)m=4\u03ba/p, same a,b as \u03bc_part, z\u208b=\u2212z\u208a=2/(p(p\u00b2\u22125)).  On |\u03ba|=1 both equal \u03bc_part (star=0).",
+      "a_p5": "6/125",
+      "b_p5": "-1/250",
+      "z_plus_p5": "-1/50",
+      "z_minus_p5": "1/50",
+      "depends_on": [
+        "T_action_on_V_215",
+        "m4_part_plus_247"
+      ]
+    },
+    "mupart_ext": {
+      "proved": true,
+      "theorem": "On |\u03ba\u2080|=1: \u2211_j \u03bc_part(T_j)=[(p\u00b2\u22121)\u00b7\u2211\u03ba \u2212 2\u00b7\u2211\u03c6]/(p\u00b2(p\u00b2\u22125)) with \u2211\u03ba=2, \u2211\u03c6=p\u00b2\u22121 \u21d2 sum=0.  Hence m\u2084\u207a=m\u2084\u207b on \u221e-sets \u21d4 \u2211_j (\u03bc\u2212\u03bc_part)(T_j)=0.",
+      "algebra_checks": {
+        "5": true,
+        "7": true,
+        "11": true,
+        "13": true,
+        "17": true,
+        "19": true,
+        "23": true
+      },
+      "all_zero_numerators": true,
+      "depends_on": [
+        "extension_kappa_phi_256",
+        "mu_part_formula_224"
+      ]
+    }
+  },
+  "certified": {
+    "identity_anti_nu": {
+      "5": {
+        "ok": true,
+        "n_sets": 14950,
+        "n_finite": 12650,
+        "max_identity_err": 0.0,
+        "identity_ok": true,
+        "max_nu_plus_nu_pi_finite": 0.0,
+        "anti_ok": true,
+        "max_abs_nu_kappa1": 0.0,
+        "n_ext_checked": 1800,
+        "max_abs_sum_mupart_ext": 2.1510571102112408e-16,
+        "mupart_ext_ok": true
+      },
+      "7": {
+        "ok": true,
+        "n_sets": 8000,
+        "n_finite": 7321,
+        "max_identity_err": 0.0,
+        "identity_ok": true,
+        "max_nu_plus_nu_pi_finite": 0.0,
+        "anti_ok": true,
+        "max_abs_nu_kappa1": 0.0,
+        "n_ext_checked": 303,
+        "max_abs_sum_mupart_ext": 1.3183898417423734e-16,
+        "mupart_ext_ok": true
+      }
+    },
+    "particular_algebra": {
+      "5": {
+        "plus_ok": true,
+        "minus_ok": true,
+        "z_opposite": true,
+        "same_ab": true
+      },
+      "7": {
+        "plus_ok": true,
+        "minus_ok": true,
+        "z_opposite": true,
+        "same_ab": true
+      },
+      "11": {
+        "plus_ok": true,
+        "minus_ok": true,
+        "z_opposite": true,
+        "same_ab": true
+      },
+      "13": {
+        "plus_ok": true,
+        "minus_ok": true,
+        "z_opposite": true,
+        "same_ab": true
+      }
+    }
+  },
+  "hinge": {
+    "change_of_var_identity": true,
+    "nu_anti_invariance_finite": true,
+    "matched_particulars": true,
+    "mupart_extension_vanishes": true,
+    "nu_zero_general": false,
+    "envelope_general": false,
+    "residual_i_closed": false,
+    "open": "Identity m\u2084\u207a=\u03c7_D m\u2084\u207b\u2218\u03c0 and \u03bd(S)=\u2212\u03bd(\u03c0S) finite proved; matched particulars + \u03bc_part extension 0 proved; still need \u03bd=0 or envelope or reflection Max+-free."
+  },
+  "F3": "Proved m\u2084\u207a(S)=\u03c7_D(S)m\u2084\u207b(\u03c0S) and \u03bd(S)=\u2212\u03bd(\u03c0S) on finite sets; matched Max\u00b1 particulars with opposite star coeff; \u2211 \u03bc_part extensions =0 on |\u03ba\u2080|=1.  Residual-(i) still OPEN (need \u03bd=0 / envelope / reflection).  No predicate flip."
+}

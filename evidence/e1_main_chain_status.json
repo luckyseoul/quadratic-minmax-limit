@@ -6,15 +6,14 @@
   "gsum_disj_lb_proved_general": false,
   "E1_closed": false,
   "E1_open_residual": [
-    "Type I freeness-fail k=3p\u22122: s_\u2212\u2264\u22121 / bad case (structure+2-Lipschitz+gap2 shipped; 15.170 Gsum Farkas open/fail)",
-    "deep freeness-fail k\u22653p (s\u208a=2): multi-s auto-freeness shipped; ND for freeness-fail large-k open"
+    "Type I freeness-fail k=3p\u22122: s_\u2212\u2264\u22121 / bad case (structure+2-Lipschitz+gap2 shipped; 15.170 Gsum Farkas open/fail)"
   ],
   "E1_structure_15168": {
     "type_I_fail_k_2p_minus_1_ND": true,
     "type_I_all_classes_closed": false,
     "deep_tight_empty": true,
     "deep_auto_freeness": true,
-    "deep_all_ND_closed": false
+    "deep_all_ND_closed": true
   },
   "Main_closed": false,
   "L_closed": false,

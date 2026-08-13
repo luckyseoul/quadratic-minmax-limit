@@ -1,0 +1,208 @@
+{
+  "title": "Prop 15.249 Algebraic free-e dual D_alg; cost_D<2\u2212\u03b1 via Weil; residual (i) OPEN on ker=sc",
+  "proved": {
+    "degree_regular_after_Comm": true,
+    "We_sum_ne_alg_closed": true,
+    "star_positive": true,
+    "cost_D_lt_need_free_e_sc_paley_Weil": true,
+    "ker_eq_sc_general": false,
+    "free_e_sc_cost_bound": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "degree_diag": {
+      "proved": true,
+      "theorem": "Any symmetric conference: Comm(scheme dual) has regular W-degree 1 and traceless diagonal of the form \u03b3 c_e (C e\u2080 \u2299 C e\u2081); Comm(diag) inverse zeros the diagonal and preserves degree; \u27e8S,C\u27e9_F=n throughout.",
+      "depends_on": [
+        "conference_C2",
+        "Pplus_Pminus",
+        "scheme_dual_W0"
+      ]
+    },
+    "We_sum_ne": {
+      "proved": true,
+      "theorem": "After Comm(scheme) + Comm(diag) zero-diag repair: We=(p\u2074\u22124p\u00b2+1)/(2p\u00b2(p\u00b2\u22122)), sum_ne\u00b9=p\u00b2(p\u00b2+1)(p\u00b2\u22122)/(p\u2074\u22124p\u00b2+1)\u22121, star=(p\u00b2+1)/(p\u2074\u22124p\u00b2+1)>0.  Degree regular throughout.",
+      "by_p_sample": {
+        "5": {
+          "We": "263/575",
+          "sum_ne1": "7212/263",
+          "star": "13/263"
+        },
+        "7": {
+          "We": "1103/2303",
+          "sum_ne1": "56472/1103",
+          "star": "25/1103"
+        },
+        "11": {
+          "We": "7079/14399",
+          "sum_ne1": "871260/7079",
+          "star": "61/7079"
+        },
+        "13": {
+          "We": "13943/28223",
+          "sum_ne1": "2385012/13943",
+          "star": "85/13943"
+        },
+        "17": {
+          "We": "41183/82943",
+          "sum_ne1": "11985552/41183",
+          "star": "145/41183"
+        }
+      },
+      "depends_on": [
+        "conference_C2",
+        "Comm_projection",
+        "scheme_dual_W0",
+        "Comm_diag_inverse",
+        "degree_regularity_after_Comm"
+      ]
+    },
+    "cost_via_Weil": {
+      "proved": true,
+      "theorem": "Assuming Paley Weil |Q_ij|\u22642p on far 4-point sums (J): m_p\u22651\u22122p \u21d2 t\u2080\u22642(2p\u22121)/den \u21d2 sum_ne(t_ub)<(2\u2212\u03b1)/\u03b1 \u21d2 cost_D<2\u2212\u03b1 for all primes p\u22655.  Free-e max_sc < 2\u2212\u03b1.",
+      "by_p_sample": {
+        "5": {
+          "sum_ne_ub": "633/17",
+          "budget": "127/3",
+          "cost": "1899/1105",
+          "need": "127/65",
+          "t_ub": "9/263",
+          "beats": true
+        },
+        "7": {
+          "sum_ne_ub": "6032/93",
+          "budget": "347/3",
+          "cost": "6032/5425",
+          "need": "347/175",
+          "t_ub": "13/1103",
+          "beats": true
+        },
+        "11": {
+          "sum_ne_ub": "51312/355",
+          "budget": "1339/3",
+          "cost": "153936/238205",
+          "need": "1339/671",
+          "t_ub": "21/7079",
+          "beats": true
+        },
+        "13": {
+          "sum_ne_ub": "57169/291",
+          "budget": "2207/3",
+          "cost": "57169/107185",
+          "need": "2207/1105",
+          "t_ub": "25/13943",
+          "beats": true
+        },
+        "17": {
+          "sum_ne_ub": "208881/644",
+          "budget": "4927/3",
+          "cost": "626643/1587460",
+          "need": "4927/2465",
+          "t_ub": "33/41183",
+          "beats": true
+        },
+        "19": {
+          "sum_ne_ub": "716960/1791",
+          "budget": "6875/3",
+          "cost": "716960/2053083",
+          "need": "6875/3439",
+          "t_ub": "37/64439",
+          "beats": true
+        },
+        "23": {
+          "sum_ne_ub": "1819248/3157",
+          "budget": "12187/3",
+          "cost": "5457744/19241915",
+          "need": "12187/6095",
+          "t_ub": "45/138863",
+          "beats": true
+        }
+      },
+      "depends_on": [
+        "We_sum_ne_alg",
+        "far_Sp_ternary",
+        "Weil_cubic_character_sum",
+        "t_repair_formula",
+        "alpha_particular"
+      ],
+      "paley_specific": true
+    }
+  },
+  "certified": {
+    "dual_D_alg": {
+      "5": {
+        "We_match": true,
+        "sum_ne1_match": true,
+        "deg_std": 7.181877670904412e-16,
+        "diag_max": 1.3877787807814457e-17,
+        "m_p": -1.0000000000000062,
+        "m_p_ge_1_minus_2p": true,
+        "minW": -0.003802281368821323,
+        "star_min": 0.04942965779467689,
+        "t0": 0.003802281368821323,
+        "t_ub": 0.034220532319391636,
+        "t0_le_tub": true,
+        "Sf": 28.54545454545461,
+        "cost": 1.3174825174825207,
+        "need": 1.9538461538461538,
+        "blocks_if_ker_sc": true
+      },
+      "7": {
+        "We_match": true,
+        "sum_ne1_match": true,
+        "deg_std": 4.440892098500626e-16,
+        "diag_max": 1.734723475976807e-17,
+        "m_p": -8.999999999999995,
+        "m_p_ge_1_minus_2p": true,
+        "minW": -0.008159564823209403,
+        "star_min": 0.02266545784224833,
+        "t0": 0.008159564823209403,
+        "t_ub": 0.011786038077969175,
+        "t0_le_tub": true,
+        "Sf": 60.6906474820142,
+        "cost": 1.040411099691672,
+        "need": 1.9828571428571429,
+        "blocks_if_ker_sc": true
+      },
+      "11": {
+        "We_match": true,
+        "sum_ne1_match": true,
+        "deg_std": 6.084263956177856e-16,
+        "diag_max": 8.673617379884035e-18,
+        "m_p": -17.000000000000078,
+        "m_p_ge_1_minus_2p": true,
+        "minW": -0.0024014691340585254,
+        "star_min": 0.008617036304562885,
+        "t0": 0.0024014691340585254,
+        "t_ub": 0.00296652069501342,
+        "t0_le_tub": true,
+        "Sf": 140.46223224351948,
+        "cost": 0.6279980577206534,
+        "need": 1.9955290611028316,
+        "blocks_if_ker_sc": true
+      }
+    }
+  },
+  "hinge": {
+    "algebraic_dual_construction": true,
+    "We_sum_ne_closed": true,
+    "degree_regular_after_Comm": true,
+    "cost_D_lt_need_via_Weil_paley": true,
+    "ker_eq_scheme_cross_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "ker(Gsum)=scheme\u2295cross for all p\u22655 (or \u2016\u03b4\u2016\u2082\u00b2\u2264room_\u03b4^R / |\u03bc|\u22641/(2p)). Cost_D<2\u2212\u03b1 for free-e_sc is Max+-free on Paley via Weil."
+  },
+  "closed_forms": {
+    "We": "(p^4-4p^2+1)/(2 p^2 (p^2-2))",
+    "sum_ne1": "p^2(p^2+1)(p^2-2)/(p^4-4p^2+1) - 1",
+    "star": "(p^2+1)/(p^4-4p^2+1)",
+    "t_ub": "2(2p-1)/(p^4-4p^2+1)",
+    "m_p_lower": "1-2p"
+  },
+  "F3": "D_alg gives free-e_sc cost < 2\u2212\u03b1 Max+-free on Paley (Weil). Still need ker=sc (or R-path / |\u03bc|) for residual_i.  No predicate flip."
+}

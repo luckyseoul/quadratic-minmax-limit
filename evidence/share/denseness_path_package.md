@@ -2,7 +2,7 @@
 
 **Audience:** independent AI / human check (Paata AI-test).  
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit  
-**Date:** 2026-08-13 late (residual (ii) ND closed; residual (i) still OPEN; exact 4-point sums at p=3,5,7; hinge still open)
+**Date:** 2026-08-13 night (residual (ii) ND closed; \(\nu=0\) on \(|\kappa|=1\) proved 15.268; residual (i) still OPEN on even \(\delta\) / \(|\mu|\))
 
 ## Verdict
 
@@ -19,7 +19,7 @@ Residual **(ii)** ND is **CLOSED** (affine 15.179 + (ii-b) 15.236 + (ii-a) 15.23
 | Residual (ii-b) ND (15.236) | **CLOSED** |
 | Residual (ii-a) ND (15.237) | **CLOSED** |
 | Residual (ii) full | **CLOSED** (`residual_ii_full_closed=True`; exhaustiveness still False, not required) |
-| Type I freeness-fail residual (i) (15.170/216) | **OPEN** — \(|\mu|\le 1/(2p)\) / dual-eq empty unproved |
+| Type I freeness-fail residual (i) (15.170/216) | **OPEN** — \(\nu=0\) proved (15.268); \(|\mu|\le 1/(2p)\) / dual-eq empty unproved |
 | **E(1) / L = ½** | **OPEN** |
 
 ## Setup

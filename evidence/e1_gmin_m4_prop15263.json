@@ -1,0 +1,55 @@
+{
+  "title": "Prop 15.263 same Ext equation for m\u2084\u00b1; Ext[\u03bd]=(p\u2074\u22121)\u03bd on |\u03ba|=1; residual (i) OPEN",
+  "proved": {
+    "m4minus_same_ext": true,
+    "ext_nu_eigen": true,
+    "forces_nu_zero": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "m4minus_ext": {
+      "proved": true,
+      "theorem": "On |\u03ba|=1: (p\u2074\u22121)m\u2084\u207b+2\u03c6=Ext[m\u2084\u207b] with the same Ext as Max+.  Proof: Cy=\u2212py \u21d2 \u220f(Cy)=p\u2074\u220fy; Per=1; size1+size2=\u22122\u03c6 (pairwise \u03c0=\u2212C/p, two minuses); size3=0; size4=Ext.",
+      "depends_on": [
+        "cy_ext_maxplus_251",
+        "derangement_perm_kappa1_191",
+        "size3_vanishes_229",
+        "pairwise_pi_minus"
+      ],
+      "note_size12": "size1+size2=\u22122\u03c6 for Max\u2212 certified p=5,7; local 64-exhaust is Max\u00b1-free (same C-contractions as 15.191)."
+    },
+    "ext_nu": {
+      "proved": true,
+      "forces_nu_zero": false,
+      "theorem": "On |\u03ba|=1: (p\u2074\u22121)\u03bd=Ext[\u03bd], since both m\u2084\u00b1 solve the same inhomogeneous Ext equation.  \u03c0-odd kernel gap OPEN.",
+      "depends_on": [
+        "theorem_m4minus_same_ext",
+        "cy_ext_maxplus_251"
+      ]
+    }
+  },
+  "certified": {
+    "5": {
+      "ok": true,
+      "n_sample": 8,
+      "max_err_m4plus": 1.7763568394002505e-13,
+      "max_err_m4minus": 6.972200594645983e-14,
+      "max_err_nu": 3.9745984281580604e-14,
+      "same_ext_ok": "True",
+      "nu_eigen_ok": "True",
+      "max_abs_nu_kappa1": 0.0
+    }
+  },
+  "hinge": {
+    "m4minus_same_ext": true,
+    "ext_nu_eigen": true,
+    "pi_odd_kernel_trivial": false,
+    "residual_i_closed": false,
+    "open": "Ext[\u03bd]=(p\u2074\u22121)\u03bd on |\u03ba|=1 proved; need \u03c0-odd spectral gap or envelope/reflection/|\u03bc|."
+  },
+  "F3": "Both m\u2084\u00b1 solve (p\u2074\u22121)f+2\u03c6=Ext[f] on |\u03ba|=1 \u21d2 Ext[\u03bd]=(p\u2074\u22121)\u03bd.  \u03c0-odd kernel gap still OPEN.  No predicate flip."
+}

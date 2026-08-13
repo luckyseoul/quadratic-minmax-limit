@@ -1,0 +1,32 @@
+{
+  "prop": "15.241",
+  "title": "hull criterion \u21d2 residual-(i); halfspace cancellation; hull OPEN",
+  "proved": {
+    "hull_criterion_chain": true,
+    "hull_hypothesis": false,
+    "segment_convexity": true,
+    "halfspace_orbit_insufficient": true,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "hull": "min(0,\u03bc_part,f4) \u2264 \u03bc \u2264 max(0,\u03bc_part,f4)",
+    "implies": "|\u03bc|\u2264max(|\u03bc_part|,|f4|)\u22642/n\u22641/(2p)",
+    "thr_p5": "1/10",
+    "maj_p5": "9/125"
+  },
+  "hinge": {
+    "hull_criterion": true,
+    "hull_hypothesis": false,
+    "segment_convexity": true,
+    "halfspace_insufficient": true,
+    "residual_i_closed_via_241": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "hull min(0,\u03bc_part,f4)\u2264\u03bc\u2264max(0,\u03bc_part,f4) on |\u03ba|=1 for all p\u22655, or max-abs envelope / \u03bb_* / K4\u2264Wick_hi / M_cand"
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "Hull is the census-stable sufficient form (needs the 0 vertex at p=7).  Halfspace-only path is dead.  No predicate flip."
+}

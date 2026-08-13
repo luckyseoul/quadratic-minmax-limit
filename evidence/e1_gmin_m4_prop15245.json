@@ -1,0 +1,35 @@
+{
+  "prop": "15.245",
+  "title": "Z-frame in W++0; Op=E[Z\u2297Z]; scheme ker; average Rayleigh; \u03bb_* floor OPEN",
+  "proved": {
+    "Z_in_Wpp0": true,
+    "Op_trace_average": true,
+    "lstar_le_average": true,
+    "Op_ge_lstar_general": false,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "Z_norm_sq": "n(n-2)",
+    "Z_pairing": "(y\u00b7z)^2 - 2n",
+    "average_rayleigh": "8(n-2)/(n-6)",
+    "lambda_star": "8(n-6)/n",
+    "avg_p5": "48/5",
+    "lstar_p5": "80/13"
+  },
+  "hinge": {
+    "Z_frame_proved": true,
+    "trace_average_proved": true,
+    "lstar_le_average": true,
+    "Op_ge_lstar_general": false,
+    "residual_i_closed_via_245": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "Op \u227d \u03bb_* I on W++0 for all p\u22655 (\u2211\u03c1 \u03ba_B budget), or hull/|\u03bc|\u22641/(2p)/K4\u2264Wick_hi",
+    "rho_budget_p5": "-163/650"
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "Z-frame + scheme kernel reduce residual-(i) PD to a spectral gap Op\u227d\u03bb_* on W++0.  Average is strictly above \u03bb_*.  Gap OPEN. No predicate flip."
+}

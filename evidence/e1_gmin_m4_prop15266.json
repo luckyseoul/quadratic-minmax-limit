@@ -1,0 +1,161 @@
+{
+  "title": "Prop 15.266 type-averages of \u03c0-odd vanish; type-T \u00b14p evecs agree on star=0 (p=5); residual (i) OPEN",
+  "proved": {
+    "type_averages_odd_vanish": true,
+    "reduction_to_within_type": true,
+    "type_T_p5": true,
+    "within_type_odd_zero_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "type_averages": {
+      "proved": true,
+      "theorem": "On finite 4-sets \u03c0 preserves (\u03ba,\u03c6), so every \u03c0-odd function has zero average on each finite (\u03ba,\u03c6)-class.  In particular type-averages of \u03bd on finite |\u03ba|=1 vanish.",
+      "depends_on": [
+        "pi_type_transport_259",
+        "nu_anti_invariance_262"
+      ]
+    },
+    "reduction": {
+      "proved": true,
+      "hypothesis_proved_general": false,
+      "theorem": "On finite |\u03ba|=1: T\u03b4=0 \u21d4 the within-type \u03c0-odd part of \u03bd vanishes (type-averages already 0).  Point-transitivity reduces the global statement to \u221e-sets.",
+      "depends_on": [
+        "theorem_type_averages_odd_vanish",
+        "Tdelta_reduction_265",
+        "Aut_point_transitive"
+      ]
+    },
+    "type_T_p5": {
+      "proved": true,
+      "scope": "p=5 type-quotient (12 classes)",
+      "general_p": false,
+      "theorem": "At p=5 the type-quotient of T is a 12\u00d712 matrix with simple eigenvalues \u00b120=\u00b14p, and the two eigenvectors agree on the four star=0 types.  Type-constant odd E vanishes on |\u03ba|=1.",
+      "depends_on": [
+        "T_definition",
+        "type_classification"
+      ]
+    }
+  },
+  "certified": {
+    "n_types": 12,
+    "types": [
+      [
+        -3,
+        -6,
+        -4
+      ],
+      [
+        -3,
+        -6,
+        4
+      ],
+      [
+        -3,
+        10,
+        -4
+      ],
+      [
+        -3,
+        10,
+        4
+      ],
+      [
+        -1,
+        -6,
+        0
+      ],
+      [
+        -1,
+        2,
+        0
+      ],
+      [
+        1,
+        -2,
+        0
+      ],
+      [
+        1,
+        6,
+        0
+      ],
+      [
+        3,
+        -10,
+        -4
+      ],
+      [
+        3,
+        -10,
+        4
+      ],
+      [
+        3,
+        6,
+        -4
+      ],
+      [
+        3,
+        6,
+        4
+      ]
+    ],
+    "counts": [
+      300,
+      450,
+      400,
+      500,
+      1500,
+      4200,
+      3600,
+      2400,
+      150,
+      250,
+      525,
+      675
+    ],
+    "eig_min_dist_4p": 4.263256414560601e-14,
+    "eig_min_dist_m4p": 0.0,
+    "simple_pm_4p": true,
+    "evec_plus_star0": {
+      "(-1, -6, 0)": -0.1849000654084095,
+      "(-1, 2, 0)": -0.04622501635210238,
+      "(1, -2, 0)": 0.04622501635210244,
+      "(1, 6, 0)": 0.18490006540840967
+    },
+    "evec_minus_star0": {
+      "(-1, -6, 0)": -0.18490006540840945,
+      "(-1, 2, 0)": -0.046225016352102535,
+      "(1, -2, 0)": 0.04622501635210258,
+      "(1, 6, 0)": 0.18490006540840978
+    },
+    "star0_restrictions_agree": true,
+    "ok": true
+  },
+  "hinge": {
+    "type_averages_odd_vanish": true,
+    "reduction_to_within_type": true,
+    "type_T_p5_evecs_agree": true,
+    "within_type_odd_zero_general": false,
+    "residual_i_closed": false,
+    "open": "Type-averages of \u03bd vanish on finite |\u03ba|=1; type-constant odd E vanishes at p=5.  Within-type \u03c0-odd variation still OPEN."
+  },
+  "F3": "\u03c0-odd type-averages vanish on finite |\u03ba|=1; at p=5 type-T has simple \u00b14p with evecs agreeing on star=0.  Within-type odd variation still OPEN.  No predicate flip.",
+  "certified_p7_type_T": {
+    "n_types": 14,
+    "extreme_eigs": [
+      -16,
+      -16,
+      16,
+      16
+    ],
+    "has_pm_4p": false,
+    "gap_to_28": 12,
+    "note": "E_{\u00b14p} not in type-constant space at p=7"
+  }
+}

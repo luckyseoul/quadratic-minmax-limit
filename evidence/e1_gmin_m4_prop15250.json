@@ -1,0 +1,125 @@
+{
+  "title": "Prop 15.250 R-path \u21d4 E[s\u2074]\u226415n\u00b2\u221222n; odd moments vanish; residual (i) OPEN",
+  "proved": {
+    "odd_moments_vanish": true,
+    "Es4_expansion": true,
+    "R_path_iff_Es4": true,
+    "Es4_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "odd_moments": {
+      "proved": true,
+      "theorem": "Max+ is closed under y\u21a6\u2212y (Cy=py \u21d2 C(\u2212y)=p(\u2212y)).  Hence every odd multilinear moment on Max+ vanishes; in particular E[y_a y_b y_c]=0 for distinct a,b,c.  Max+-free.",
+      "depends_on": [
+        "Max_plus_boolean_evec",
+        "conference_C2"
+      ]
+    },
+    "Es4_expansion": {
+      "proved": true,
+      "theorem": "E_{y,z\u2208Max+}[(y\u00b7z)\u2074] = 9n\u00b2\u221210n + 24\u2016m4\u2016\u2082\u00b2.  Proof: expand \u2211 \u03bc_ijkl\u00b2 by equality type; odd type-(3,1) uses E[y_a y_b]=C_ab/p; type (2,1,1) same; type (1\u2074)=24\u2016m4\u2016\u2082\u00b2; type (2,2) and (4) are 1; simplify with p\u00b2=n\u22121.",
+      "by_p_sample": {
+        "5": {
+          "known_part": "5824",
+          "9n2_minus_10n": "5824",
+          "match": true
+        },
+        "7": {
+          "known_part": "22000",
+          "9n2_minus_10n": "22000",
+          "match": true
+        },
+        "11": {
+          "known_part": "132736",
+          "9n2_minus_10n": "132736",
+          "match": true
+        }
+      },
+      "depends_on": [
+        "odd_moments_vanish",
+        "second_moment_2_design",
+        "conference_p2_n_minus_1"
+      ]
+    },
+    "R_path_iff": {
+      "proved": true,
+      "theorem": "\u2016m4\u2016\u2082\u00b2 \u2264 n(n\u22122)/4 \u21d4 E[s\u2074] \u2264 15n\u00b2\u221222n.  Hence R\u22642p (15.217) \u21d4 the fourth-moment bound on Max+.",
+      "by_p_sample": {
+        "5": {
+          "m4_target": "156",
+          "Es4_bound": "9568",
+          "match": true
+        },
+        "7": {
+          "m4_target": "600",
+          "Es4_bound": "36400",
+          "match": true
+        },
+        "11": {
+          "m4_target": "3660",
+          "Es4_bound": "220576",
+          "match": true
+        },
+        "13": {
+          "m4_target": "7140",
+          "Es4_bound": "429760",
+          "match": true
+        }
+      },
+      "depends_on": [
+        "Es4_expansion",
+        "prop_15_217_R_path"
+      ]
+    }
+  },
+  "certified": {
+    "census_Es4": {
+      "5": {
+        "ok": true,
+        "M": 260,
+        "Es4": 9261.538461538461,
+        "Es4_bound": 9568.0,
+        "Es4_le_bound": true,
+        "m4_norm_sq": 143.2307692307591,
+        "m4_target": 156.0,
+        "m4_le_target": true,
+        "expansion_match": true,
+        "room_Es4": 306.461538461539,
+        "room_m4": 12.769230769240892
+      },
+      "7": {
+        "ok": true,
+        "M": 11452,
+        "Es4": 31195.626520644902,
+        "Es4_bound": 36400.0,
+        "Es4_le_bound": true,
+        "m4_norm_sq": 383.15110502764264,
+        "m4_target": 600.0,
+        "m4_le_target": true,
+        "expansion_match": true,
+        "room_Es4": 5204.3734793550975,
+        "room_m4": 216.84889497235736
+      }
+    }
+  },
+  "hinge": {
+    "odd_moments_vanish": true,
+    "Es4_expansion": true,
+    "R_path_iff_Es4_bound": true,
+    "Es4_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove E[(y\u00b7z)\u2074]\u226415n\u00b2\u221222n on Max+ for all primes p\u22655 (or ker=sc for 15.249 / |\u03bc|\u22641/(2p))."
+  },
+  "closed_forms": {
+    "Es4": "9n^2 - 10n + 24 ||m4||_2^2",
+    "Es4_R_bound": "15n^2 - 22n",
+    "m4_target_R": "n(n-2)/4"
+  },
+  "F3": "R-path is exactly the Max+ fourth-moment bound E[s\u2074]\u226415n\u00b2\u221222n.  Odd moments vanish Max+-free.  The inequality itself is OPEN.  No predicate flip."
+}

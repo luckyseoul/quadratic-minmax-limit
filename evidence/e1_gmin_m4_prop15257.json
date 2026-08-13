@@ -1,0 +1,106 @@
+{
+  "title": "Prop 15.257 Seidel 4\u00d74 spectrum / resolvent on |\u03ba|=1; Schur structure; residual (i) OPEN",
+  "proved": {
+    "seidel4_spectrum": true,
+    "resolvent_kappa1": true,
+    "schur_average_identity": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "spectrum": {
+      "proved": true,
+      "theorem": "Every 4\u00d74 zero-diag \u00b11 symmetric matrix has |\u03ba|=1 \u21d2 \u03c3={\u00b11,\u00b1\u221a5}, \u03c7=\u03bb\u2074\u22126\u03bb\u00b2+5; |\u03ba|=3 \u21d2 \u03c3\u2208{{3,\u22121\u00b3},{-3,1\u00b3}}.  Exhaustive 2\u2076 / tr A\u00b2=12."
+    },
+    "resolvent": {
+      "proved": true,
+      "theorem": "On |\u03ba|=1: det(pI\u2212C_S)=(p\u00b2\u22121)(p\u00b2\u22125); (pI\u2212A)^{-1}=[p\u00b3I+p\u00b2A+p(A\u00b2\u22126I)+(A\u00b3\u22126A)]/[(p\u00b2\u22121)(p\u00b2\u22125)].  Same det for \u2212pI\u2212A.",
+      "depends_on": [
+        "theorem_seidel4_spectrum"
+      ]
+    }
+  },
+  "certified": {
+    "n_patterns": 64,
+    "spectra_by_kappa": {
+      "3": [
+        [
+          -3.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0,
+          3.0
+        ]
+      ],
+      "1": [
+        [
+          -2.236068,
+          -1.0,
+          1.0,
+          2.236068
+        ]
+      ],
+      "-1": [
+        [
+          -2.236068,
+          -1.0,
+          1.0,
+          2.236068
+        ]
+      ],
+      "-3": [
+        [
+          -3.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0,
+          3.0
+        ]
+      ]
+    },
+    "kappa1_spectrum_ok": true,
+    "kappa3_spectra": [
+      [
+        -3.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        -1.0,
+        -1.0,
+        -1.0,
+        3.0
+      ]
+    ],
+    "kappa3_ok": true,
+    "resolvent_ok": true,
+    "det_formula": {
+      "5": 480,
+      "7": 2112,
+      "11": 13920,
+      "13": 27552
+    }
+  },
+  "hinge": {
+    "seidel4_spectrum": true,
+    "resolvent_kappa1": true,
+    "schur_average_identity": false,
+    "residual_i_closed": false,
+    "open": "Close Schur multilin average identity m\u2084\u207a=m\u2084\u207b on |\u03ba|=1, or reflection |\u03c1|\u2264|\u03c1_f4|, or Es4/ker=sc/hull."
+  },
+  "F3": "Seidel 4\u00d74: |\u03ba|=1\u21d2{\u00b11,\u00b1\u221a5}, resolvent (pI\u2212A)^{-1} with det=(p\u00b2\u22121)(p\u00b2\u22125) proved.  Schur form of \u220fy_S set up for m\u2084\u207a=m\u2084\u207b attack.  Average identity OPEN.  No predicate flip."
+}

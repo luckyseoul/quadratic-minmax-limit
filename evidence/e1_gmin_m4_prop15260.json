@@ -1,0 +1,126 @@
+{
+  "title": "Prop 15.260 \u2211\u03bc\u03ba and \u2211\u03bc\u03c6 identities; layer counts; residual (i) OPEN",
+  "proved": {
+    "sum_mu_kappa": true,
+    "sum_mu_phi": true,
+    "layer_counts": true,
+    "algebraic_checks": true,
+    "pi_covariance_general": false,
+    "reflection_hyp_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "sum_mu_kappa": {
+      "proved": true,
+      "theorem": "\u2211_S \u03bc \u03ba = n p\u00b2(p\u00b2\u22121)/8.  Proof: E[R\u00b2]=binom(n,2)+2\u2211\u03ba\u03bc with E[R\u00b2]=p\u00b2n\u00b2/4.",
+      "depends_on": [
+        "R_identity_Maxpm",
+        "bal_pairwise",
+        "matching_expand"
+      ]
+    },
+    "sum_mu_phi": {
+      "proved": true,
+      "theorem": "\u2211_S \u03bc \u03c6 = n \u2211 \u03bc = \u2212n p\u00b2(p\u00b2\u22121)/12.  Proof: \u2211_r(Cy)_r\u2074=np\u2074 on Max\u00b1; expand; (3,1)/(2,1,1) die; type (4)+(2,2)+(1\u2074) give the identity.",
+      "depends_on": [
+        "Cy_eq_pm_py",
+        "bal_pairwise",
+        "C_squared",
+        "sum_mu_256"
+      ]
+    },
+    "layer_counts": {
+      "proved": true,
+      "theorem": "n\u2083=(\u2211\u03ba\u00b2\u2212binom(n,4))/8, n\u2081=binom(n,4)\u2212n\u2083 with \u2211\u03ba\u00b2=n(n\u22121)(n\u22122)(n\u22125)/8.",
+      "depends_on": [
+        "sum_kappa_sq_226"
+      ]
+    },
+    "formulas": {
+      "5": {
+        "sum_mu": "-50",
+        "sum_mu_kappa": "1950",
+        "sum_mu_phi": "-1300",
+        "n1_n3": [
+          11700,
+          3250
+        ]
+      },
+      "7": {
+        "sum_mu": "-196",
+        "sum_mu_kappa": "14700",
+        "sum_mu_phi": "-9800",
+        "n1_n3": [
+          176400,
+          53900
+        ]
+      },
+      "11": {
+        "sum_mu": "-1210",
+        "sum_mu_kappa": "221430",
+        "sum_mu_phi": "-147620",
+        "n1_n3": [
+          6642900,
+          2140490
+        ]
+      },
+      "13": {
+        "sum_mu": "-2366",
+        "sum_mu_kappa": "603330",
+        "sum_mu_phi": "-402220",
+        "n1_n3": [
+          25339860,
+          8245510
+        ]
+      }
+    }
+  },
+  "certified": {
+    "5": {
+      "ok": true,
+      "sum_mu": -50.0,
+      "sum_mu_theory": -50.0,
+      "sum_mu_kappa": 1950.0,
+      "sum_mu_kappa_theory": 1950.0,
+      "sum_mu_phi": -1300.0000000000007,
+      "sum_mu_phi_theory": -1300.0,
+      "n1": 11700,
+      "n1_theory": 11700,
+      "n3": 3250,
+      "n3_theory": 3250,
+      "max_abs_mu_kappa1": 0.046153846153846156,
+      "thr_1_over_2p": 0.1,
+      "matches": true
+    },
+    "7": {
+      "ok": true,
+      "sum_mu": -196.00000000000003,
+      "sum_mu_theory": -196.0,
+      "sum_mu_kappa": 14700.000000000002,
+      "sum_mu_kappa_theory": 14700.0,
+      "sum_mu_phi": -9800.000000000004,
+      "sum_mu_phi_theory": -9800.0,
+      "n1": 176400,
+      "n1_theory": 176400,
+      "n3": 53900,
+      "n3_theory": 53900,
+      "max_abs_mu_kappa1": 0.03807195249738037,
+      "thr_1_over_2p": 0.07142857142857142,
+      "matches": true
+    }
+  },
+  "hinge": {
+    "sum_mu_kappa": true,
+    "sum_mu_phi": true,
+    "layer_counts": true,
+    "pi_covariance_general": false,
+    "reflection_hyp_general": false,
+    "residual_i_closed": false,
+    "open": "Moments control averages only.  Still need \u03c0-covariance / reflection / |\u03bc|\u22641/(2p) Max+-free on |\u03ba|=1."
+  },
+  "F3": "\u2211\u03bc\u03ba=np\u00b2(p\u00b2\u22121)/8 and \u2211\u03bc\u03c6=n\u2211\u03bc proved Max+-free.  Layer counts closed.  L^\u221e hinge on |\u03ba|=1 still OPEN.  No predicate flip."
+}

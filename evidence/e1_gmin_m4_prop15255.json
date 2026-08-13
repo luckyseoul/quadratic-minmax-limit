@@ -1,0 +1,90 @@
+{
+  "title": "Prop 15.255 m\u2084\u00b1 expansion on \u221e-sets; m\u2084-eq reduction; residual (i) OPEN on vanishing sum",
+  "proved": {
+    "m4plus_expansion_infty": true,
+    "m4minus_expansion_infty": true,
+    "m4_eq_reduction_criterion": true,
+    "vanishing_sum_general": false,
+    "reflection_sum_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "m4plus_exp": {
+      "proved": true,
+      "theorem": "For normalised conference, S={\u221e,a,b,c}, \u03ba=C_ab+C_ac+C_bc: m\u2084\u207a(S)=\u03ba/p\u00b2 + p\u207b\u00b9\u2211_{j\u2209S} m\u2084\u207a({j,a,b,c}).  Proof: y_\u221e=(1\u1d40y)/(p+1); expand E[y_\u221e y_a y_b y_c]; 3-wise vanish; \u03c0-pairs give \u03ba/p; solve for m\u2084\u207a.",
+      "depends_on": [
+        "sum_identity_189",
+        "pairwise_pi_189",
+        "odd_moments_250"
+      ]
+    },
+    "m4minus_exp": {
+      "proved": true,
+      "theorem": "Same S: m\u2084\u207b(S)=\u03ba/p\u00b2 \u2212 p\u207b\u00b9\u2211_{j\u2209S} m\u2084\u207b({j,a,b,c}).  Proof: y_\u221e=\u2212(1\u1d40y)/(p\u22121); \u03c0=\u2212C/p; same expansion.",
+      "depends_on": [
+        "sum_identity_189_minus",
+        "pairwise_pi_189_minus",
+        "odd_moments_250"
+      ]
+    },
+    "m4_eq_reduction": {
+      "proved": true,
+      "hypothesis_proved_general": false,
+      "theorem": "On |\u03ba|=1 with \u221e\u2208S: m\u2084\u207a=m\u2084\u207b \u21d4 \u2211_{j\u2209S} \u03bc({j,a,b,c})=0.  By 3-transitivity of Aut(C), m\u2084\u207a=m\u2084\u207b on all |\u03ba|=1 iff this vanishing holds for every such triple.  Vanishing OPEN.",
+      "depends_on": [
+        "theorem_m4plus_expansion_infty",
+        "theorem_m4minus_expansion_infty",
+        "PSL_3_transitive"
+      ]
+    },
+    "reflection_sum": {
+      "proved_criterion": true,
+      "hypothesis_proved_general": false,
+      "theorem": "When m\u2084\u207a=m\u2084\u207b=\u03bc on S\u220b\u221e with |\u03ba|=1: \u03c1=\u03bc\u2212\u03ba/p\u00b2 = p\u207b\u00b9\u2211_{j\u2209S} \u03bc({j,a,b,c}).  Reflection |\u03c1|\u2264|\u03c1_f4| \u21d4 |\u2211_{j\u2209S} \u03bc({j,a,b,c})| \u2264 p|\u03c1_f4(S)|.  Combined with 15.253 B (\u03c1_f4 maj \u2264 L_abs) would close residual-(i) on \u221e-sets; Aut transports to all |\u03ba|=1.",
+      "depends_on": [
+        "theorem_m4_eq_reduction",
+        "theorem_rho_f4_le_L_abs_253"
+      ]
+    }
+  },
+  "certified": {
+    "expansions": {
+      "5": {
+        "ok": true,
+        "n_kappa1_with_infty": 1800,
+        "max_err_m4plus_expansion": 6.938893903907228e-17,
+        "max_err_m4minus_expansion": 3.469446951953614e-17,
+        "max_abs_sum_mu": 1.1102230246251565e-16,
+        "expansions_ok": "True",
+        "sum_mu_vanishes": "True",
+        "m4_eq": true
+      },
+      "7": {
+        "ok": true,
+        "n_kappa1_with_infty": 14112,
+        "max_err_m4plus_expansion": 4.163336342344337e-17,
+        "max_err_m4minus_expansion": 3.469446951953614e-17,
+        "max_abs_sum_mu": 1.97758476261356e-16,
+        "expansions_ok": "True",
+        "sum_mu_vanishes": "True",
+        "m4_eq": true
+      }
+    }
+  },
+  "hinge": {
+    "m4plus_expansion_infty": true,
+    "m4minus_expansion_infty": true,
+    "m4_eq_reduction": true,
+    "vanishing_sum_general": false,
+    "reflection_sum_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove \u2211_{j\u2209S} \u03bc({j,a,b,c})=0 for |\u03ba({\u221e,a,b,c})|=1 (\u21d4 m\u2084\u207a=m\u2084\u207b on all |\u03ba|=1), or |\u2211 \u03bc|\u2264p|\u03c1_f4| for reflection."
+  },
+  "F3": "m\u2084\u207a=\u03ba/p\u00b2+T\u208a/p and m\u2084\u207b=\u03ba/p\u00b2\u2212T\u208b/p on \u221e-sets proved Max+-free.  m\u2084\u207a=m\u2084\u207b on all |\u03ba|=1 \u21d4 \u2211\u03bc over finite 1-point extensions vanishes.  Census vanishing at p=5,7.  General vanishing / reflection still OPEN.  No predicate flip."
+}

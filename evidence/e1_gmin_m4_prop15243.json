@@ -1,0 +1,33 @@
+{
+  "prop": "15.243",
+  "title": "\u2211\u03ba_C \u03ba_B=(n+1)/4\u2016B\u2016\u00b2 proved Max+-free; \u03bb_* residual form; \u03c1 budget OPEN",
+  "proved": {
+    "kappaC_kappaB_identity": true,
+    "E_q2_closed_form": true,
+    "lambda_star_criterion_chain": true,
+    "rho_budget_general": false,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "kappaC_kappaB": "(n+1)/4",
+    "E_q2": "(8+4/p^2)||B||^2 + 8 sum rho kappa_B",
+    "lambda_star_iff": "sum rho kappa_B >= -6/n - 1/(2p^2)",
+    "budget_p5": "-163/650",
+    "budget_p7": "-319/2450"
+  },
+  "hinge": {
+    "kappaC_kappaB_proved": true,
+    "E_q2_closed_form": true,
+    "lambda_star_criterion": true,
+    "rho_budget_general": false,
+    "residual_i_closed_via_243": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "\u2211 \u03c1 \u03ba_B \u2265 \u22126/n \u2212 1/(2p\u00b2) on unit W++0 for all p\u22655, or hull/|\u03bc|\u22641/(2p)/K4\u2264Wick_hi"
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "Identity (E) is Max+-free and upgrades 15.89.2.  Residual-(i) still needs the Max+ residual lower bound on \u2211\u03c1 \u03ba_B (sharp at p=5).  No predicate flip."
+}

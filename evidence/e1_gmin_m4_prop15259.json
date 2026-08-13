@@ -1,0 +1,79 @@
+{
+  "title": "Prop 15.259 transport lemma + \u03c0-covariance reduction; residual (i) OPEN",
+  "proved": {
+    "transport_lemma": true,
+    "reduction_to_pi_covariance": true,
+    "pi_type_transport": true,
+    "pi_covariance_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "transport": {
+      "proved": true,
+      "theorem": "On |\u03ba(S)|=1, local orientation (D,\u03a0) with det D=+1 extends by id outside S to C'=D P\u1d40 C P D with C'_S=\u2212C_S, Max\u207a(C)\u2245Max\u207a(C') via \u03a6(y)=D P\u1d40 y, and m\u2084\u207a(C,S)=m\u2084\u207a(C',S).",
+      "depends_on": [
+        "theorem_orientation_258",
+        "conference_signed_perm"
+      ]
+    },
+    "reduction": {
+      "proved": true,
+      "hypothesis_proved_general": false,
+      "theorem": "On |\u03ba|=1: m\u2084\u207a=m\u2084\u207b \u21d4 m\u2084\u207a(S)=\u03c7_D(S) m\u2084\u207a(\u03c0\u207b\u00b9S).  Finite: \u21d4 m\u2084\u207a(S)=m\u2084\u207a(\u03c0\u207b\u00b9S).  \u221e\u2208S: \u21d4 m\u2084\u207a(S)=\u2212m\u2084\u207a(\u03c0\u207b\u00b9S).  \u03c0-covariance OPEN general.",
+      "depends_on": [
+        "theorem_mu_from_m4plus_pullback_254"
+      ]
+    },
+    "pi_type": {
+      "proved": true,
+      "theorem": "Paley: finite S \u21d2 (\u03ba,\u03c6)(\u03c0S)=(\u03ba,\u03c6)(S); \u221e\u2208S \u21d2 (\u03ba,\u03c6)(\u03c0S)=(\u2212\u03ba,\u2212\u03c6)(S).",
+      "depends_on": [
+        "paley_quadratic_character",
+        "infty_border"
+      ]
+    }
+  },
+  "certified": {
+    "5": {
+      "ok": true,
+      "n_transport": 40,
+      "transport_ok": true,
+      "max_transport_resid": 0.0,
+      "pi_finite_ok": 80,
+      "pi_finite_n": 80,
+      "pi_inf_ok": 80,
+      "pi_inf_n": 80,
+      "m4eq_max_err": 0.0,
+      "m4eq_n": 160,
+      "pi_covariance_sample_ok": true,
+      "m4eq_sample_ok": true
+    },
+    "7": {
+      "ok": true,
+      "n_transport": 20,
+      "transport_ok": true,
+      "max_transport_resid": 0.0,
+      "pi_finite_ok": 60,
+      "pi_finite_n": 60,
+      "pi_inf_ok": 60,
+      "pi_inf_n": 60,
+      "m4eq_max_err": 0.0,
+      "m4eq_n": 120,
+      "pi_covariance_sample_ok": true,
+      "m4eq_sample_ok": true
+    }
+  },
+  "hinge": {
+    "transport_lemma": true,
+    "reduction_to_pi_covariance": true,
+    "pi_type_transport": true,
+    "pi_covariance_general": false,
+    "residual_i_closed": false,
+    "open": "Prove m\u2084\u207a(S)=\u03c7_D(S) m\u2084\u207a(\u03c0\u207b\u00b9S) on |\u03ba|=1 Max+-free (\u03c0-covariance), or Schur average, or reflection."
+  },
+  "F3": "Transport lemma m\u2084\u207a(C,S)=m\u2084\u207a(C',S) under local orientation proved Max+-free.  m\u2084\u207a=m\u2084\u207b \u21d4 \u03c0-covariance of m\u2084\u207a on |\u03ba|=1.  \u03c0-covariance certified p=5,7; general OPEN.  No predicate flip."
+}

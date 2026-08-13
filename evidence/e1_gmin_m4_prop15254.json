@@ -1,0 +1,111 @@
+{
+  "title": "Prop 15.254 T m\u2084\u00b1 closed forms; Paley C\u223c\u2212C; residual (i) OPEN on m\u2084\u207a=m\u2084\u207b / reflection",
+  "proved": {
+    "T_m4plus_formula": true,
+    "T_m4minus_formula": true,
+    "T_mu_identity": true,
+    "paley_monomial_conjugation": true,
+    "mu_from_m4plus_pullback": true,
+    "m4_eq_kappa1_structure": true,
+    "m4_eq_kappa1_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "T_m4plus": {
+      "proved": true,
+      "theorem": "On every 4-set, for Max+ with \u03c0=C/p: (T m\u2084\u207a)(S)=4p m\u2084\u207a(S)\u22124\u03ba(S)/p.  Proof: pointwise Cy=py expansion of the T-weight; take E; E[X y_e]=C_{e^*}/p; \u2211_e C_e C_{e^*}=2\u03ba.",
+      "depends_on": [
+        "Cy_eq_py",
+        "pairwise_pi_189",
+        "T_definition"
+      ]
+    },
+    "T_m4minus": {
+      "proved": true,
+      "theorem": "On every 4-set, for Max\u2212 with \u03c0=\u2212C/p: (T m\u2084\u207b)(S)=\u22124p m\u2084\u207b(S)+4\u03ba(S)/p.  Proof: same expansion with Cy=\u2212py; E_\u2212[X y_e]=\u2212C_{e^*}/p.",
+      "depends_on": [
+        "Cy_eq_minus_py",
+        "pairwise_pi_189_minus",
+        "T_definition"
+      ]
+    },
+    "T_mu": {
+      "proved": true,
+      "theorem": "T\u03bc=\u00bd(Tm\u2084\u207a+Tm\u2084\u207b)=2p(m\u2084\u207a\u2212m\u2084\u207b) on all 4-sets.  Hence \u03bd:=T\u03bc/(4p)=\u00bd(m\u2084\u207a\u2212m\u2084\u207b), and T\u03bc=0 wherever m\u2084\u207a=m\u2084\u207b.",
+      "depends_on": [
+        "theorem_T_m4plus",
+        "theorem_T_m4minus"
+      ]
+    },
+    "conjugation": {
+      "proved": true,
+      "theorem": "Paley n=p\u00b2+1: for nonsquare \u03c3\u2208F_{p\u00b2}^\u00d7 and \u03c0(\u221e)=\u221e, \u03c0(x)=\u03c3x, D_\u221e=\u22121, D_x=1: D P^T C P D = \u2212C.  Finite block from \u03c7(\u03c3\u00b7)=\u2212\u03c7; \u221e-row from D flip of the all-ones border.",
+      "depends_on": [
+        "paley_construction",
+        "quadratic_character"
+      ]
+    },
+    "mu_pullback": {
+      "proved": true,
+      "theorem": "Paley: Max\u2212={D\u00b7(y\u2218\u03c0^{-1}): y\u2208Max+}, hence m\u2084\u207b(S)=\u03c7_D(S) m\u2084\u207a(\u03c0^{-1}S) and \u03bc(S)=\u00bd[m\u2084\u207a(S)+\u03c7_D(S) m\u2084\u207a(\u03c0^{-1}S)].",
+      "depends_on": [
+        "theorem_paley_monomial_conjugation"
+      ]
+    },
+    "kappa1_eq": {
+      "proved_structure": true,
+      "bound_proved_general": false,
+      "theorem": "On |\u03ba|=1: m\u2084\u207a=m\u2084\u207b \u21d4 m\u2084\u207a(S)=\u03c7_D(S) m\u2084\u207a(\u03c0^{-1}S) (Paley).  Then T\u03bc=0 and \u03bd=0 on |\u03ba|=1.  Equality certified p=5,7; general OPEN.",
+      "depends_on": [
+        "theorem_T_mu",
+        "theorem_mu_from_m4plus_pullback"
+      ]
+    }
+  },
+  "certified": {
+    "T_and_conjugation": {
+      "5": {
+        "ok": true,
+        "T_m4plus_formula_err": 1.7763568394002505e-15,
+        "T_m4minus_formula_err": 1.7763568394002505e-15,
+        "T_mu_formula_err": 2.6645352591003757e-15,
+        "max_abs_m4plus_minus_m4minus_kappa1": 0.0,
+        "max_abs_Tmu_kappa1": 3.3306690738754696e-16,
+        "n_kappa1": 11700,
+        "formulas_ok": true,
+        "m4_eq_on_kappa1": true,
+        "Tmu_zero_on_kappa1": true
+      },
+      "7": {
+        "ok": true,
+        "T_m4plus_formula_err": 1.5543122344752192e-15,
+        "T_m4minus_formula_err": 1.5543122344752192e-15,
+        "T_mu_formula_err": 1.3322676295501878e-15,
+        "max_abs_m4plus_minus_m4minus_kappa1": 0.0,
+        "max_abs_Tmu_kappa1": 3.7816971776294395e-16,
+        "n_kappa1": 176400,
+        "formulas_ok": true,
+        "m4_eq_on_kappa1": true,
+        "Tmu_zero_on_kappa1": true
+      }
+    }
+  },
+  "hinge": {
+    "T_m4plus_formula": true,
+    "T_m4minus_formula": true,
+    "T_mu_identity": true,
+    "paley_conjugation": true,
+    "mu_pullback_formula": true,
+    "m4plus_eq_m4minus_kappa1_general": false,
+    "reflection_hyp_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove m\u2084\u207a=m\u2084\u207b on |\u03ba|=1 (Paley functional eq under nonsquare map) and/or reflection |\u03c1|\u2264|\u03c1_f4| (15.253)."
+  },
+  "F3": "Tm\u2084\u207a=4p m\u2084\u207a\u22124\u03ba/p and Tm\u2084\u207b=\u22124p m\u2084\u207b+4\u03ba/p proved Max+-free; T\u03bc=2p(m\u2084\u207a\u2212m\u2084\u207b).  Paley: D P^T C P D=\u2212C, \u03bc=\u00bd[m\u2084\u207a+\u03c7_D m\u2084\u207a\u2218\u03c0\u207b\u00b9].  Census m\u2084\u207a=m\u2084\u207b and T\u03bc=0 on |\u03ba|=1 at p=5,7.  General m\u2084 eq / reflection still OPEN.  No predicate flip."
+}

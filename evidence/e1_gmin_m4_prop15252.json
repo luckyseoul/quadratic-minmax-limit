@@ -1,0 +1,177 @@
+{
+  "title": "Prop 15.252 Master/T\u00b2/Ext residual-(i) criteria; envelope+Ext census p=5,7; residual (i) OPEN",
+  "proved": {
+    "T2_master_rewrite": true,
+    "rho_L_abs_suffices": true,
+    "Ext_triangle_two_over_n": true,
+    "envelope_criterion": true,
+    "envelope_hyp_general": false,
+    "Ext_bound_general": false,
+    "rho_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "T2_master": {
+      "proved": true,
+      "theorem": "Master (16p\u00b2I\u2212T\u00b2)\u03bc=16\u03ba \u21d2 T\u00b2\u03bc=16(p\u00b2\u03bc\u2212\u03ba) pointwise on all 4-sets, and 16\u03ba+T\u00b2\u03bc=16p\u00b2\u03bc.  Max+-free (any conference).  Triangle on |16\u03ba+T\u00b2\u03bc| alone is vacuous for bounding |\u03bc|.",
+      "depends_on": [
+        "master_equation_15_177",
+        "T_symmetric_15_214"
+      ]
+    },
+    "rho_L_abs": {
+      "proved": true,
+      "theorem": "On |\u03ba|=1: |\u03bc|\u22641/p\u00b2+|\u03c1| with \u03c1=\u03bc\u2212\u03ba/p\u00b2.  |\u03c1|\u2264L_abs=(p\u22122)/(2p\u00b2) \u21d2 |\u03bc|\u22641/(2p) for all primes p\u22653.",
+      "by_p_sample": {
+        "3": {
+          "L_abs": "1/18",
+          "one_over_p2_plus_L_abs": "1/6",
+          "one_over_2p": "1/6",
+          "equal": true
+        },
+        "5": {
+          "L_abs": "3/50",
+          "one_over_p2_plus_L_abs": "1/10",
+          "one_over_2p": "1/10",
+          "equal": true
+        },
+        "7": {
+          "L_abs": "5/98",
+          "one_over_p2_plus_L_abs": "1/14",
+          "one_over_2p": "1/14",
+          "equal": true
+        },
+        "11": {
+          "L_abs": "9/242",
+          "one_over_p2_plus_L_abs": "1/22",
+          "one_over_2p": "1/22",
+          "equal": true
+        },
+        "13": {
+          "L_abs": "11/338",
+          "one_over_p2_plus_L_abs": "1/26",
+          "one_over_2p": "1/26",
+          "equal": true
+        }
+      },
+      "depends_on": [
+        "L_abs_15_205",
+        "kappa_abs_1"
+      ]
+    },
+    "Ext_triangle": {
+      "proved": true,
+      "theorem": "On |\u03ba|=1: (p\u2074\u22121)\u03bc+2\u03c6=Ext.  If |Ext|\u22642(p\u00b2\u22121)\u22122|\u03c6| then |\u03bc|\u22642/n.  Under |\u03c6|\u22642(p\u22122), the bound |Ext|\u22642p\u00b2\u22124p+6 is equivalent and implies |\u03bc|\u22642/n\u22641/(2p) for primes p\u22655.",
+      "by_p_sample": {
+        "5": {
+          "Ext_uniform_maj": 36,
+          "budget_with_phi_max": 36,
+          "equal": true,
+          "two_over_n": "1/13"
+        },
+        "7": {
+          "Ext_uniform_maj": 76,
+          "budget_with_phi_max": 76,
+          "equal": true,
+          "two_over_n": "1/25"
+        },
+        "11": {
+          "Ext_uniform_maj": 204,
+          "budget_with_phi_max": 204,
+          "equal": true,
+          "two_over_n": "1/61"
+        },
+        "13": {
+          "Ext_uniform_maj": 292,
+          "budget_with_phi_max": 292,
+          "equal": true,
+          "two_over_n": "1/85"
+        }
+      },
+      "depends_on": [
+        "Cy_identity_15_251",
+        "phi_bound_15_186",
+        "two_over_n_15_188"
+      ]
+    },
+    "envelope": {
+      "proved_criterion": true,
+      "hypothesis_proved_general": false,
+      "theorem": "If |\u03bc|\u2264max(|\u03bc_part|,|f4|) on every |\u03ba|=1 four-set for all primes p\u22655, then |\u03bc|\u22642/n\u22641/(2p) (by maj\u22642/n, |f4|\u22642/n, 2/n\u22641/(2p)), hence disj Gsum\u2265\u22121/p and residual-(i) Farkas applies.  The pointwise envelope hypothesis remains OPEN in general (certified p=3,5,7 only).",
+      "depends_on": [
+        "theorem_maj_le_two_over_n",
+        "prop_15_191_f4_majorant",
+        "prop_15_176_farkas"
+      ],
+      "sufficient_for_residual_i": false
+    }
+  },
+  "certified": {
+    "census": {
+      "5": {
+        "ok": true,
+        "n_kappa1": 11700,
+        "max_abs_mu": 0.046153846153846156,
+        "max_abs_Ext": 24.8,
+        "max_abs_comb": 28.8,
+        "max_abs_rho": 0.055384615384615386,
+        "two_over_n": 0.07692307692307693,
+        "one_over_2p": 0.1,
+        "M_cand": 0.046153846153846156,
+        "L_abs": 0.06,
+        "Ext_uniform_maj": 36,
+        "comb_thr_for_2n": 48,
+        "mu_le_2n": true,
+        "mu_le_half_p": true,
+        "mu_le_Mcand": true,
+        "rho_le_L_abs": true,
+        "Ext_le_uniform_maj": true,
+        "comb_le_thr": true,
+        "envelope_viol": 0,
+        "f4_only_viol": 0,
+        "envelope_ok": true
+      },
+      "7": {
+        "ok": true,
+        "n_kappa1": 176400,
+        "max_abs_mu": 0.03807195249738037,
+        "max_abs_Ext": 71.37268599371289,
+        "max_abs_comb": 91.37268599371289,
+        "max_abs_rho": 0.01766378923207425,
+        "two_over_n": 0.04,
+        "one_over_2p": 0.07142857142857142,
+        "M_cand": 0.04201680672268908,
+        "L_abs": 0.05102040816326531,
+        "Ext_uniform_maj": 76,
+        "comb_thr_for_2n": 96,
+        "mu_le_2n": true,
+        "mu_le_half_p": true,
+        "mu_le_Mcand": true,
+        "rho_le_L_abs": true,
+        "Ext_le_uniform_maj": true,
+        "comb_le_thr": true,
+        "envelope_viol": 0,
+        "f4_only_viol": 117600,
+        "envelope_ok": true
+      }
+    }
+  },
+  "hinge": {
+    "T2_master_rewrite": true,
+    "rho_L_abs_suffices": true,
+    "Ext_triangle_two_over_n": true,
+    "envelope_criterion": true,
+    "envelope_hyp_general": false,
+    "Ext_bound_general": false,
+    "rho_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove envelope / |Ext|\u22642p\u00b2\u22124p+6 / |\u03c1|\u2264L_abs on |\u03ba|=1 for all primes p\u22655, or Es4 / ker=sc alternate."
+  },
+  "F3": "Master rewrite T\u00b2\u03bc=16(p\u00b2\u03bc\u2212\u03ba); |\u03c1|\u2264L_abs\u21d2|\u03bc|\u22641/(2p); |Ext|\u22642p\u00b2\u22124p+6\u21d2|\u03bc|\u22642/n.  Census p=5,7: envelope OK, Ext and \u03c1 under budget, |\u03bc|\u22642/n.  General bounds still OPEN.  No predicate flip."
+}

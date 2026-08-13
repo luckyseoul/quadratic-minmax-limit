@@ -1,0 +1,37 @@
+{
+  "prop": "15.248",
+  "title": "Comm scheme-dual We and sum_ne closed forms Max+-free; full D(C)+ker=sc OPEN",
+  "proved": {
+    "We_closed_form": true,
+    "sum_ne_comm_closed": true,
+    "sum_ne_comm_below_budget": true,
+    "three_halves_budget": true,
+    "full_DC_and_ker_sc": false,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "We": "(p^4-2p^2-1)/(2 p^2 (p^2-2))",
+    "sum_ne_comm": "p^2(p^2+1)(p^2-2)/(p^4-2p^2-1) - 1",
+    "We_p5": "287/575",
+    "sum_ne_comm_p5": "7188/287",
+    "budget_p5": "75/2"
+  },
+  "hinge": {
+    "We_closed": true,
+    "sum_ne_comm_closed": true,
+    "three_halves_budget": true,
+    "full_DC_sum_ne_general": false,
+    "ker_sc_general": false,
+    "residual_i_closed_via_248": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "Full D(C) sum_ne \u2264 (3/2)(n\u22121) for all p\u22655 and ker=sc, or \u2016\u03b4\u2016\u2082\u00b2\u2264room_\u03b4^R / Cov\u227d4(n\u22126)/n / |\u03bc|\u22641/(2p)",
+    "sum_ne_comm_p5": "7188/287",
+    "We_p5": "287/575"
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "Comm stage of D(C) is under the (3/2)(n\u22121) dual budget Max+-free. Still need LS+nonneg inflation control and ker=sc.  No predicate flip."
+}

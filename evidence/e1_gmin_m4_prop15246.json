@@ -1,0 +1,38 @@
+{
+  "prop": "15.246",
+  "title": "edge-feature Cov=Op/2; R-path \u03b7-budget weaker than Wick; spectral gap OPEN",
+  "proved": {
+    "edge_feature_sphere": true,
+    "Op_eq_two_Cov": true,
+    "R_path_eta_budget_algebra": true,
+    "R_path_hypothesis": false,
+    "cov_avg_ge_lstar_half": true,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "f_mu_norm_sq": "n(n-2)/2",
+    "cov_target": "4(n-6)/n",
+    "R_eta_budget": "n(n-2)(n-5)/(8(n-1))",
+    "Wick_eta_budget": "n(13n-10)/(6(n-1))",
+    "R_bud_p5": "1638/25",
+    "Wick_bud_p5": "4264/75"
+  },
+  "hinge": {
+    "edge_sphere": true,
+    "Op_two_Cov": true,
+    "R_path_budget_algebra": true,
+    "R_path_budget_general": false,
+    "cov_avg_ge_lstar": true,
+    "residual_i_closed_via_246": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "Cov \u227d 4(n\u22126)/n I on span{f\u2212\u03bc} (\u21d4 Op\u227d\u03bb_*), or \u2211\u03b7\u00b2 \u2264 n(n\u22122)(n\u22125)/(8(n\u22121)) (\u21d4 R\u22642p), or |\u03bc|\u22641/(2p)",
+    "rho_budget_p5": "-163/650",
+    "R_eta_budget_p5": "1638/25"
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "Unifies Z-frame (15.245) with constant-weight edge code; clarifies that 15.217 L\u00b2 target is strictly weaker than K\u2084\u2264Wick_hi.  Spectral / L\u00b2 gap still OPEN.  No predicate flip."
+}

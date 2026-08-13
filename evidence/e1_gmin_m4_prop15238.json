@@ -1,0 +1,31 @@
+{
+  "prop": "15.238",
+  "title": "Per-eigenrelations \u21d2 Per \u03bc_part Cy-FE; \u03b4 is Per-eigen p\u2074 on |\u03ba|=1; residual OPEN",
+  "proved": {
+    "per_mupart_identity": true,
+    "delta_Per_structure": true,
+    "per_eigen_general": false,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "Per_kappa_form": "p^4*kappa - 6*phi",
+    "Per_phi_form": "(2*n+1)*phi",
+    "identity": "Per mu_part = p^4 mu_part + 2 phi on |kappa|=1",
+    "thr_p5": "1/10",
+    "maj_p5": "9/125"
+  },
+  "hinge": {
+    "per_mupart_identity": true,
+    "delta_Per_structure": true,
+    "per_eigen_general": false,
+    "residual_i_closed_via_238": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "Prove Per \u03ba / Per \u03c6 eigenrelations for all p\u22655, then bound |\u03bc| or |\u03b4| on |\u03ba|=1 (envelope / 2/n / Aut-SOS / Path C / K4)."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "Conditional eigenrelations close the particular Cy channel exactly.  Residual-(i) still needs a pointwise |\u03bc| or |\u03b4| bound. No predicate flip."
+}

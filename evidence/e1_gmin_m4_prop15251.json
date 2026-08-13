@@ -1,0 +1,100 @@
+{
+  "title": "Prop 15.251 Cy-identity on |\u03ba|=1; |\u03bc\u2084|\u22642/n census p=5,7; residual (i) OPEN",
+  "proved": {
+    "per_equals_1_on_kappa1": true,
+    "Cy_identity_structure": true,
+    "two_over_n_suffices_for_residual_i": true,
+    "mu4_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "per": {
+      "proved": true,
+      "theorem": "C_ii=0 \u21d2 Per(C[S,S])=derang_perm. On |\u03ba|=1, derang_perm=1 (15.191 A). Hence Per=1 on |\u03ba|=1.",
+      "depends_on": [
+        "derang_perm_kappa1",
+        "zero_diagonal"
+      ]
+    },
+    "Cy_identity": {
+      "proved": true,
+      "theorem": "On |\u03ba|=1 for Max+ (Paley): (p\u2074\u22121)m\u2084\u207a + 2\u03c6 = Ext[m\u2084\u207a], with Ext the external-injection transfer.  From Cy-expansion p\u2074 m\u2084\u207a = \u22122\u03c6 + A[m\u2084\u207a], Per=1 on diagonal (A\u2013B), size3 expectation vanishes (15.191 D).",
+      "depends_on": [
+        "size1_plus_size2",
+        "size31_vanishes",
+        "per_equals_1",
+        "pairwise_pi_189"
+      ]
+    },
+    "two_over_n_suffices": {
+      "proved": true,
+      "theorem": "|m\u2084\u207a|\u22642/n and |m\u2084\u207b|\u22642/n on |\u03ba|=1 \u21d2 |\u03bc\u2084|\u22642/n \u22641/(2p) (p\u22655) \u21d2 Gsum\u2265\u22121/p \u21d2 residual-(i) Farkas (15.176\u2013177).",
+      "by_p_sample": {
+        "5": {
+          "2/n": "1/13",
+          "1/(2p)": "1/10",
+          "2n_le_half_p": true
+        },
+        "7": {
+          "2/n": "1/25",
+          "1/(2p)": "1/14",
+          "2n_le_half_p": true
+        },
+        "11": {
+          "2/n": "1/61",
+          "1/(2p)": "1/22",
+          "2n_le_half_p": true
+        },
+        "13": {
+          "2/n": "1/85",
+          "1/(2p)": "1/26",
+          "2n_le_half_p": true
+        }
+      },
+      "depends_on": [
+        "f4_majorant_two_over_n",
+        "mu4_gsum_farkas_176"
+      ]
+    }
+  },
+  "certified": {
+    "mu4_census": {
+      "5": {
+        "ok": true,
+        "n_kappa1": 11700,
+        "max_abs_mu4": 0.046153846153846156,
+        "max_abs_m4plus_minus_m4minus": 0.0,
+        "two_over_n": 0.07692307692307693,
+        "one_over_2p": 0.1,
+        "mu4_le_2n": true,
+        "mu4_le_half_p": true,
+        "m4plus_eq_m4minus": true
+      },
+      "7": {
+        "ok": true,
+        "n_kappa1": 176400,
+        "max_abs_mu4": 0.03807195249738037,
+        "max_abs_m4plus_minus_m4minus": 0.0,
+        "two_over_n": 0.04,
+        "one_over_2p": 0.07142857142857142,
+        "mu4_le_2n": true,
+        "mu4_le_half_p": true,
+        "m4plus_eq_m4minus": true
+      }
+    }
+  },
+  "hinge": {
+    "Cy_identity_structure": true,
+    "two_over_n_suffices": true,
+    "mu4_bound_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "Prove |\u03bc\u2084|\u22642/n on |\u03ba|=1 for all primes p\u22655 (or Es4 R-path / ker=sc / hull)."
+  },
+  "F3": "Cy-expansion gives (p\u2074\u22121)m\u2084+2\u03c6=Ext on |\u03ba|=1.  |m\u2084\u207a|,|m\u2084\u207b|\u22642/n would close residual-i.  Census holds at p=5,7 with m\u2084\u207a=m\u2084\u207b.  General |\u03bc\u2084|\u22642/n still OPEN.  No predicate flip."
+}

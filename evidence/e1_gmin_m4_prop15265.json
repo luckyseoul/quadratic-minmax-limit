@@ -1,0 +1,85 @@
+{
+  "title": "Prop 15.265 T anticommutes with \u03a0; even/odd masters; \u03bd=0\u21d4T\u03b4=0 on |\u03ba|=1; residual (i) OPEN",
+  "proved": {
+    "C_pi_formula": true,
+    "T_anticommutes_Pi": true,
+    "even_odd_master_split": true,
+    "nu_zero_iff_Tmu": true,
+    "Tdelta_zero_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "C_pi": {
+      "proved": true,
+      "theorem": "Paley: C_{\u03c0i,\u03c0j} = \u2212D_i D_j C_{ij} for i\u2260j, from D P^T C P D=\u2212C.",
+      "depends_on": [
+        "paley_monomial_conjugation_254"
+      ]
+    },
+    "T_Pi": {
+      "proved": true,
+      "theorem": "T \u03a0 + \u03a0 T = 0 on functions of 4-sets.  Proof: reindex T under \u03c0 using C_{\u03c0a,\u03c0b}=\u2212D_a D_b C_{ab}; Johnson neighbours preserved; sign product \u03c7_D \u00b7 D_a D_b collapses to \u22121.",
+      "depends_on": [
+        "theorem_C_pi_formula",
+        "T_definition",
+        "Pi_definition"
+      ]
+    },
+    "even_odd": {
+      "proved": true,
+      "theorem": "With T\u03a0=\u2212\u03a0T, \u03bc even, \u03bd odd: T\u03bc=4p\u03bd and T\u03bd=4p\u03bc\u22124\u03ba/p.  Hence (16p\u00b2I\u2212T\u00b2)\u03bc=16\u03ba.",
+      "depends_on": [
+        "theorem_T_anticommutes_Pi",
+        "T_m4plus_m4minus_254",
+        "mu_nu_parity_262"
+      ]
+    },
+    "nu_iff": {
+      "proved": true,
+      "hypothesis_proved_general": false,
+      "theorem": "On |\u03ba|=1: \u03bd=0 \u21d4 T\u03bc=0 \u21d4 T\u03b4=0 (since T\u03bc_part=0 there).  \u221e-sets: \u21d4 \u2211_j \u03b4(T_j)=0.  General vanishing OPEN.",
+      "depends_on": [
+        "theorem_even_odd_master_split",
+        "T_mupart_star_215",
+        "mupart_extension_262"
+      ]
+    }
+  },
+  "certified": {
+    "5": {
+      "ok": true,
+      "C_pi_err": 0.0,
+      "T_Pi_anticommutator_max": 1.2434497875801753e-14,
+      "Tmu_eq_4p_nu_err": 2.6645352591003757e-15,
+      "Tnu_eq_err": 4.440892098500626e-16,
+      "max_abs_nu_kappa1": 0.0,
+      "n_kappa1_checked": 11700,
+      "anticommutes_ok": "True",
+      "master_split_ok": "True"
+    },
+    "7": {
+      "ok": true,
+      "C_pi_err": 0.0,
+      "T_Pi_anticommutator_max": 3.552713678800501e-14,
+      "Tmu_eq_4p_nu_err": null,
+      "Tnu_eq_err": null,
+      "max_abs_nu_kappa1": 0.0,
+      "n_kappa1_checked": 58,
+      "anticommutes_ok": "True",
+      "master_split_ok": null
+    }
+  },
+  "hinge": {
+    "T_anticommutes_Pi": true,
+    "even_odd_split": true,
+    "nu_zero_iff_Tmu": true,
+    "Tdelta_zero_general": false,
+    "residual_i_closed": false,
+    "open": "T\u03a0=\u2212\u03a0T and even/odd masters proved; still need T\u03b4=0 on |\u03ba|=1 or Ext \u03c0-odd gap or envelope/reflection."
+  },
+  "F3": "T\u03a0=\u2212\u03a0T proved; T\u03bc=4p\u03bd and T\u03bd=4p\u03bc\u22124\u03ba/p; on |\u03ba|=1 \u03bd=0\u21d4T\u03b4=0.  Vanishing of T\u03b4 still OPEN.  No predicate flip."
+}

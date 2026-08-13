@@ -59,7 +59,18 @@
 - **15.234 signed k=1 (2026-08-12):** **Proved Max+-free** 18 survivors, |per|≤18; Laplace along the shared column per=∑_{x≠a} C_{xa} per_3(C[S\{x},new]); trilinear in the three new vertices. Unsigned |R^{(1)}|≤12(p²−3)(p²−4)(p²−5) exceeds B for all p≥5. No predicate flip. Evidence: `src/e1_gmin_m4_prop15234.py`.
 - **15.235 signed k=0 (2026-08-12):** **Proved Max+-free** full 24-perm permanent; S₄ cycle-type split 1+6+3+8+6; 4-cycle inverse pairing (P_4cyc even, |P_4cyc|≤6). Unsigned 24·C(n−4,4) still exceeds B for all p≥5 (n=p²+1). Layer types named; residual (i)/E1/L still **OPEN**. Evidence: `src/e1_gmin_m4_prop15235.py`.
 - **15.236 residual (ii-b) ND CLOSED (2026-08-13):** Even \(k\le4p-2\) ⇒ max_Max− \(S\ge-2\); dichotomy weak-ND or dual-bad two-level; dual-bad empty by 15.50 slopes + \(v_p(|Max_\pm|)=1\). `residual_ii_b_ND_closed=True`. Evidence: `src/e1_gmin_m4_prop15236.py`.
-- **15.237 residual (ii-a) ND CLOSED (2026-08-13):** Dual-bad \(U=\{S=-4,f_e=-1\}\) is a 0-1 pair-span; L²=L ⇒ star or triangle; constants / pair-slices / triangle 3-equals cannot be U. `residual_ii_a_ND_closed=True`. `residual_ii_full_closed` = affine ∧ (ii-a) ∧ (ii-b). Residual (i) / E1 / L still **OPEN**. Evidence: `src/e1_gmin_m4_prop15237.py`.
+- **15.237 residual (ii-a) ND CLOSED (2026-08-13):** Dual-bad \(U=\{S=-4,f_e=-1\}\) is a 0-1 pair-span; L²=L ⇒ star or triangle; constants / pair-slices / triangle 3-equals cannot be U. `residual_ii_a_ND_closed=True`. `residual_ii_full_closed` = affine ∧ (ii-a) ∧ (ii-b). Residual (i) / E1 / L still **OPEN**. Evidence: `src/e1_gmin_m4_prop15237.py`.  
+- **15.238 Per-eigenrelations ⇒ Per μ_part Cy-FE (2026-08-13):** **Proved Max+-free** coefficient identity: if Per κ=p⁴κ−6φ and Per φ=(2n+1)φ, then Per μ_part=p⁴μ_part+2φ. Superseded as unconditional by 15.239. Evidence: `src/e1_gmin_m4_prop15238.py`.  
+- **15.239 Per φ / Per κ Max+-free eigenforms (2026-08-13):** **Proved** for any symmetric conference: Per φ=(2n+1)φ and Per κ=(n−1)²κ−6φ on every 4-set (inj+IE / matching collision calculus + C²). Paley: (n−1)²=p⁴ ⇒ **Per μ_part=p⁴μ_part+2φ** unconditional; on |κ|=1 Cy-FE ⇒ Per δ=p⁴δ (structure). **OPEN:** |μ|≤1/(2p). No predicate flip. Evidence: `src/e1_gmin_m4_prop15239.py`.  
+- **15.240 maj≤2/n + envelope criterion (2026-08-13):** **Proved** maj≤2/n for all primes p≥5 (cubic p³−3p²−5p−9). **Proved** criterion: envelope |μ|≤max(|μ_part|,|f4|) on |κ|=1 ⇒ |μ|≤2/n≤1/(2p) ⇒ residual-(i) Farkas. Free-e_sc budget recall (needs ker=sc). **OPEN:** envelope hypothesis / ker=sc (λ_*) / M_cand. No predicate flip. Evidence: `src/e1_gmin_m4_prop15240.py`.  
+- **15.241 hull criterion + halfspace dead (2026-08-13):** **Proved** hull criterion: min(0,μ_part,f4)≤μ≤max(0,μ_part,f4) on |κ|=1 ⇒ residual-(i) (⇔ max-abs envelope when μ_part f4≤0; strictly stronger same-sign coherence when μ_part f4>0). **Proved** segment convexity on [μ_part,f4]. **Proved dead:** halfspace-only character sums (m4_H exceeds 1/(2p) at p=5,7; full Max+ needs non-halfspace cancellation). **OPEN:** hull/envelope hypothesis general. No predicate flip. Evidence: `src/e1_gmin_m4_prop15241.py`.  
+- **15.242 Rayleigh spectrum p=3,5,7 (2026-08-13):** **Proved** λ_* sufficiency recall + dim 𝒲₊₊⁰ + Wick residual form. **Certified** full E[q²] spectrum on 𝒲₊₊⁰: p=3 single 16; p=5 eigenvalues {80,144,176}/13 with mult {n,n,d}, min=λ_* sharp; p=7 eigenvalues k/409 (409=|Max+|/(4p)) with mult {n,2n,n,n,d}, min=3072/409>λ_*. Min eigenspace mult=n at p=5,7. **OPEN:** E[q²]≥λ_* for all p≥5 (Aut-isotypic / orbit SOS). No predicate flip. Evidence: `src/e1_gmin_m4_prop15242.py`.  
+- **15.243 ∑κ_C κ_B identity proved (2026-08-13):** **Proved Max+-free** (any conference, zero-diag B=P₊BP₊): ∑_S κ_C(S)κ_B(S)=(n+1)/4‖B‖_F² (parallel=1/4 via W=C⊙B row-sums; cross=n/4 via S_dist=n‖B‖² from Tr(CBCB)−corr). Upgrades 15.89.2 census→proved. **Proved** E[q²]=(8+4/p²)‖B‖²+8∑ρ κ_B and λ_* ⇔ ∑ρ κ_B≥−6/n−1/(2p²) (sharp p=5). **OPEN:** ρ residual lower bound. No predicate flip. Evidence: `src/e1_gmin_m4_prop15243.py`.  
+- **15.244 ∑φ κ_B = −n/4 + μ_part rewrite (2026-08-13):** **Proved Max+-free** ∑_S φ(S)κ_B(S)=−(n/4)‖B‖_F² (per-star Z=xxᵀ⊙B, x=C_r·; σ₁=0 via CB=pB; Parallel_r=‖B‖²/4−(n/2)ρ_r; sum_r). **Proved** ∑ μ_part κ_B=(p²+3)/(4(p²−5))‖B‖² and γ(p)=∑(μ_part−κ_C/p²)κ_B/‖B‖²=(3p²+5)/(2p²(p²−5))>0. **Proved** λ_* ⇔ ∑(m4−μ_part)κ_B ≥ −6/n−1/(2p²)−γ(p). μ_part already overshoots Wick; Max+ residual m4−μ_part must not be too negative. **OPEN:** that residual (or hull/|μ|/K₄). No predicate flip. Evidence: `src/e1_gmin_m4_prop15244.py`.  
+- **15.245 Z-frame / Op average (2026-08-13):** **Proved Max+-free** Z_y=yyᵀ−2P₊∈𝒲₊₊⁰ with ‖Z‖_F²=n(n−2), ⟨Z_y,Z_z⟩=(y·z)²−2n; yᵀBy=⟨B,Z_y⟩; Op=E[Z⊗Z]; scheme-image = ker Op on traceless ++ and traceless++=scheme⊕𝒲₊₊⁰ orthogonally; Tr(Op)=n(n−2), average Rayleigh=8(n−2)/(n−6)≥λ_* for p≥5. **OPEN:** Op≽λ_*I on 𝒲₊₊⁰ (CS on ρ dead; 4-design dead; s_max K₄ bound too crude). No predicate flip. Evidence: `src/e1_gmin_m4_prop15245.py`.  
+- **15.246 edge Cov=Op/2 + R-path budget (2026-08-13):** **Proved Max+-free** edge features f_{ij}=y_i y_j: ‖f‖₂²=|E|, 1ᵀf=p, μ=C_edge/p, ‖f−μ‖₂²=n(n−2)/2; Z lifts f−μ; Rayleigh_Op=2·Rayleigh_Cov on 𝒲₊₊⁰ so Op≽λ_* ⇔ Cov≽4(n−6)/n I. **Proved** 15.217 ∑η²≤n(n−2)(n−5)/(8(n−1)) is **strictly weaker** than Wick_hi eta budget for all p≥5. **OPEN:** Cov gap / ∑η² bound / |μ|. No predicate flip. Evidence: `src/e1_gmin_m4_prop15246.py`.  
+- **15.247 m4_part + room_δ^R (2026-08-13):** **Proved Max+-free** m4_part=aκ+bφ+z star solves (4pI−T)m=4κ/p in span{κ,φ,star} with a,b as μ_part, z=−2p/D; ‖m4_part‖₂²=‖μ_part‖₂²+z²‖star‖₂²; R≤2p ⇔ ‖m4−m4_part‖₂²≤room_δ^R=delta_room_for_R>0. **Proved** α·(3/2)(n−1)<2−α (dual budget). **OPEN:** ‖δ‖₂²≤room_δ^R. Evidence: `src/e1_gmin_m4_prop15247.py`.  
+- **15.248 Comm scheme-dual We/sum_ne closed forms (2026-08-13):** **Proved Max+-free** after Comm-proj of scheme dual: We=½−1/(2p²(p²−2)); sum_ne^Comm=(n/2)/We−1=p²(p²+1)(p²−2)/(p⁴−2p²−1)−1 < (3/2)(n−1) for all primes p≥5 (restricted triple sum −C_e(n−2); Sp expansion). **OPEN:** full D(C) inflation (LS+nonneg) still ≤(3/2)(n−1), and ker=sc. Evidence: `src/e1_gmin_m4_prop15248.py`.
 
 
 
@@ -96,3 +107,149 @@
 **Current:** residual (i) OPEN; residual (ii) CLOSED; E1/L OPEN; claim **not** asserted.
 
 **Residual-(i) attack (2026-08-13 late, not a close):** exact 4-point sums at \(p=3,5,7\) (\(\mu=\mu_{\mathrm{part}}\), \(f_4\), linear+CR-split); \(\nu\equiv0\); envelope holds. New dead: 4×4 Gram; affine-quadratic level sets; CR-class master+diamond LP (\(\max|\mu|=1\)); IP-valency \(K_4\) (not regular at \(p=7\)); global \(t(p)\) mix. Viable: general envelope, \(F(\lambda)\) matching those sums, \(G_+\succ0\) then Comm-repair dual, \(|\mu|\le2/n\), \(K_4\le n(15n-22)\), non-low-degree dual-eq Farkas.
+
+### 15.249 (this resume) — algebraic free-e dual D_alg
+- **Proved Max+-free (Paley/Weil):** cost_D < 2−α for free-e over scheme⊕cross for all primes p≥5 via Comm+Comm(diag) repair + Weil |Q|≤2p far bound.
+- Closed forms: We_alg, sum_ne¹, stars>0; m_p≥1−2p; t_ub=2(2p−1)/den.
+- **OPEN:** ker=sc (or ‖δ‖₂²≤room / |μ|). Predicates still **False**.
+
+### 15.250 — R-path ⇔ E[s⁴]≤15n²−22n
+- Odd Max+ moments vanish; Es4 expansion Max+-free.
+- R≤2p ⇔ fourth-moment bound on Max+. Census p=5,7 holds.
+- **OPEN:** prove Es4 bound general. Predicates **False**.
+
+### 15.251 — Cy-identity; |μ₄|≤2/n path
+- (p⁴−1)m₄+2φ=Ext on |κ|=1 Max+-free structure.
+- |m₄⁺|,|m₄⁻|≤2/n ⇒ residual-i. Census p=5,7 holds (m₄⁺=m₄⁻).
+- **OPEN:** |μ₄|≤2/n general. Predicates **False**.
+
+### 15.252 — Master/T²/Ext residual-(i) criteria
+- **Proved Max+-free:** T²μ=16(p²μ−κ) pointwise (master rewrite); |ρ|≤L_abs=(p−2)/(2p²)⇒|μ|≤1/(2p); |Ext|≤2p²−4p+6 (under |φ|≤2(p−2))⇒|μ|≤2/n.
+- Triangle on |16κ+T²μ| alone is **vacuous** for bounding |μ| (equals 16p²|μ|).
+- **Census p=5,7:** envelope OK; Ext≤uniform maj (p=7: 71.37≤76); |ρ|≤L_abs (p=5: 0.055≤0.060 sharpish); |μ|≰|f4| at p=7 (117600 viol) while max-abs envelope holds.
+- **OPEN:** envelope / Ext maj / |ρ|≤L_abs general (or Es4 / ker=sc). Predicates **False**.
+
+### 15.253 — Wick-reflection residual-(i) criteria (preferred)
+- **Proved Max+-free:** |ρ_f4|≤L_abs for all primes p≥5 (maj (3p²−8p+1)/(p²n); cubic g=p³−8p²+17p−4>0).
+- **Proved criterion:** |ρ|≤|ρ_f4| ⇔ μ∈[f4, f4^♯] with f4^♯=2κ/p²−f4 (Wick reflection) ⇒ residual-(i) Farkas.
+- **Proved:** hull ⇒ |ρ|≤L_abs via triple majorant max(1/p²,|ρ_part|,|ρ_f4|).
+- **Census p=5,7:** reflection viol=0; t=(μ−f4)/ρ_f4 ∈[−1.70,−0.10]⊂[−2,0]. Pure |μ|≤|f4| remains false at p=7.
+- **OPEN:** prove reflection hyp |ρ|≤|ρ_f4| (t∈[−2,0]) general. Predicates **False**.
+
+
+### 15.254 — T m₄± closed forms; Paley C∼−C
+- **Proved Max+-free (any conference with π):** (Tm₄⁺)=4p m₄⁺−4κ/p; (Tm₄⁻)=−4p m₄⁻+4κ/p; Tμ=2p(m₄⁺−m₄⁻); ν=½(m₄⁺−m₄⁻).
+- **Proved Paley:** D Pᵀ C P D=−C (P=mult-by-nonsquare, D_∞=−1); Max−=monomial image of Max+; μ=½[m₄⁺+χ_D m₄⁺∘π⁻¹].
+- On |κ|=1: m₄⁺=m₄⁻ ⇔ m₄⁺(S)=χ_D(S)m₄⁺(π⁻¹S); then Tμ=ν=0.
+- **(κ,φ) under π:** ∞∉S ⇒ (κ,φ) fixed; ∞∈S ⇒ (κ,φ)→(−κ,−φ); f4(S)=χ_D f4(π⁻¹S).
+- **Census p=5,7:** T formulas exact; m₄⁺=m₄⁻ and Tμ=0 on all |κ|=1.
+- **OPEN:** m₄⁺=m₄⁻ general on |κ|=1; reflection (15.253). Predicates **False**.
+
+### 15.255 — m₄± ∞-expansions; m₄-eq ⇔ vanishing ∑μ
+- **Proved Max+-free:** m₄⁺(S)=κ/p²+T₊/p, m₄⁻(S)=κ/p²−T₋/p on S∋∞; m₄⁺=m₄⁻ ⇔ ∑_{j∉S}μ({j,a,b,c})=0; Aut 3-transitive reduces to triples.
+- Reflection on ∞-sets ⇔ |∑μ|≤p|ρ_f4| when equality holds.
+- **Census p=5,7:** expansions exact; ∑μ=0. Predicates **False**.
+
+### 15.256 — Global ∑μ and extension (κ,φ) sums
+- **Proved Max+-free:** ∑_S μ(S)=−p²(p²−1)/12 (via E[Q²]=p²=binom(n,2)+6∑μ; equiv. E[(1ᵀy)⁴]=n+3n(n−1)+24∑μ with E=p⁴+6p²+1).
+- **Proved (normalised Paley):** on S={∞,a,b,c}, ∑_{j∉S}κ(T_j)=3−κ0² (=2 on |κ0|=1); ∑_{j∉S}φ(T_j)=p²+P with P=(κ0²−3)/2 (=p²−1 on |κ0|=1).
+- **Proved structure:** f4-extension sum (9−p²)/(pn)≠0 for p≥5 — local vanishing needs |κ|=3 cancellation (cannot hold if μ=f4 on all extensions).
+- **Census p=5,7:** ∑μ and extension sums exact (1800 / 14112 triples).
+- **OPEN:** vanishing ∑μ / reflection / residual-(i). Predicates **False**. Global ∑μ and (κ,φ) extension sums alone do not force local vanishing.
+
+### 15.257 — Seidel 4×4 spectrum / resolvent; Schur setup
+- **Proved Max+-free (all 4×4 Seidel):** |κ|=1 ⇒ σ={±1,±√5}, χ=λ⁴−6λ²+5; |κ|=3 ⇒ {3,−1³} or {−3,1³}.
+- **Proved:** on |κ|=1, det(pI−C_S)=(p²−1)(p²−5); resolvent (pI−A)^{-1}=[p³I+p²A+p(A²−6I)+(A³−6A)]/det; same det for −pI−A.
+- **Structure:** Schur y_S=(±pI−C_S)^{-1}e ⇒ ∏y_S multilin in external field; m₄⁺−m₄⁻ = difference of Max± averages (OPEN identity on |κ|=1).
+- **OPEN:** Schur average identity / reflection / residual-(i). Predicates **False**.
+
+### 15.258 — Orientation theorem C_S ∼_sp −C_S ⇔ |κ|=1
+- **Proved Max+-free:** A ∼_sp −A (signed permutation) ⇔ |κ(A)|=1.
+  - |κ|=3: σ(A)≠σ(−A) ⇒ not similar.
+  - |κ|=1: exhaustive conjugacy, always with det D=+1 (4-product invariant under local conjugator).
+- Matches census: ν=0 exactly on |κ|=1, nonzero on |κ|=3 (p=3,5,7).
+- **OPEN:** lift local ∼_sp to m₄⁺=m₄⁻ (permutation need not extend to Aut(C); pure switching insufficient). Reflection / residual-(i) still OPEN. Predicates **False**.
+
+### 15.259 — Transport lemma; π-covariance reduction
+- **Proved Max+-free:** Local orientation extends to C'=D Pᵀ C P D with C'_S=−C_S; Φ(y)=D Pᵀ y bijection Max⁺(C)→Max⁺(C'); det D=+1 ⇒ m₄⁺(C,S)=m₄⁺(C',S).
+- **Proved:** m₄⁺=m₄⁻ on |κ|=1 ⇔ m₄⁺(S)=χ_D(S) m₄⁺(π⁻¹S) (finite: m₄⁺(S)=m₄⁺(πS); ∞: m₄⁺(S)=−m₄⁺(πS)).
+- **Proved:** π preserves (κ,φ) on finite 4-sets; flips sign on ∞-sets.
+- **Census p=5,7:** transport exact; π-covariance on finite+∞ |κ|=1 samples; m₄⁺=m₄⁻.
+- **OPEN:** π-covariance general (Aut-orbit of S vs πS not automatic: type-class sizes at p=5 do not divide |PGL(2,25)|). Residual-(i) still OPEN. Predicates **False**.
+
+### 15.260 — ∑μκ and ∑μφ identities; layer counts
+- **Proved Max+-free:** ∑_S μ κ = n p²(p²−1)/8 (via E[R²]=binom(n,2)+2∑κμ).
+- **Proved Max+-free:** ∑_S μ φ = n ∑μ = −n p²(p²−1)/12 (via ∑_r(Cy)_r⁴=np⁴ expansion).
+- **Proved:** n₁,n₃ from ∑κ² and binom(n,4).
+- **Census p=5,7:** identities exact; max|μ| on |κ|=1 is 3/65, 436/11452 <1/(2p).
+- **OPEN:** L^∞ hinge (π-covariance / reflection / |μ|≤1/(2p)). Predicates **False**.
+
+### 15.261 — Exact Max± configuration multiplicities
+- **Proved Max+-free:** mult_±(α)=(N/16)(1±qf(α)/(2p)+pr(α)m₄±(S)) via hypercube Fourier + odd vanishing + pairwise π (any 4-set).
+- **Proved:** mult≥0 ⇒ |m₄±|≤1−q_max/(2p); on |κ|=1 q_max≤8 ⇒ |m₄|≤1−4/p (too weak for 1/(2p) when p≥5).
+- **Proved:** on |κ|=1 with orientation Q, mult_+(α)=mult_-(Qᵀα) ∀α ⇔ ν=0.
+- **Census:** formula exact p=5,7; Q-match and ν=0 both hold on |κ|=1.
+- **OPEN:** ν=0 / π-covariance / reflection / residual-(i). Predicates **False**.
+
+### 15.262 — Change-of-var identity; matched Max± particulars; μ_part-extension 0
+- **Proved Max+-free:** m₄⁺(S)=χ_D(S) m₄⁻(πS) for every 4-set (change of variables y'_i=D_i y_{π^{-1}i}: Max+≅Max−).
+- **Proved:** on finite 4-sets ν(S)=−ν(πS) (anti-invariance under π; π²∈Aut).  Does **not** alone force ν=0 on |κ|=1.
+- **Proved Max+-free:** Max± particulars in span{κ,φ,star} share (a,b)=μ_part coeffs and have opposite star coeffs z_∓=±2/(p(p²−5)); on |κ|=1 both reduce to μ_part (star=0), so ν=0 ⇔ δ₊=δ₋ on |κ|=1.
+- **Proved:** ∑_j μ_part(T_j)=0 on every |κ₀|=1 ∞-triple (uses 15.256 ∑κ=2, ∑φ=p²−1).  Hence m₄⁺=m₄⁻ ⇔ ∑(μ−μ_part)=0 on extensions.
+- **Certified** identity/anti-ν/μ_part-ext at p=5,7; particular algebra for p≤13.
+- **OPEN:** ν=0 / envelope |μ|≤max(|μ_part|,|f4|) / reflection. Predicates still **False**.
+- Evidence: `src/e1_gmin_m4_prop15262.py`, `evidence/e1_gmin_m4_prop15262.json`.
+
+
+### 15.263 — Same Ext equation for m₄±; Ext[ν]=(p⁴−1)ν on |κ|=1
+- **Proved Max+-free:** on |κ|=1, (p⁴−1)m₄⁻+2φ=Ext[m₄⁻] with the **same** Ext as Max+ (Cy=−py ⇒ ∏(Cy)=p⁴∏y; Per=1; size1+size2=−2φ under π=−C/p; size3=0).
+- **Proved:** both m₄± solve the same inhomogeneous Ext equation ⇒ **(p⁴−1)ν = Ext[ν]** on |κ|=1.
+- Combined with 15.262: ν|_{|κ|=1} is π-odd in ker(Ext−(p⁴−1)I) (coupled to |κ|=3).
+- **Certified** same Ext / eigenrelation at p=5 (8 |κ|=1 samples, machine precision); ν=0 there.
+- **OPEN:** prove π-odd kernel of Ext−(p⁴−1)I is trivial on |κ|=1 (spectral gap), **or** envelope / reflection / |μ|. Predicates still **False**.
+- Evidence: `src/e1_gmin_m4_prop15263.py`, `evidence/e1_gmin_m4_prop15263.json`.
+
+
+### 15.264 — Scheme Ext eq for μ_part; Ext[δ]=(p⁴−1)δ; ExtΠ=ΠExt
+- **Proved Max+-free (scheme algebra):** on |κ|=1, Ext[μ_part]=(p⁴−1)μ_part+2φ via Per κ=p⁴κ−6φ, Per φ=(2n+1)φ and a,b of μ_part (coeff identity −6a+2nb−b(p⁴−1)=2 for all primes p≥5).
+- **Proved:** Ext[δ]=(p⁴−1)δ on |κ|=1 for δ=μ−μ_part (subtract true Ext eq for μ).
+- **Proved Paley:** ExtΠ=ΠExt (Per commutes with Π via UᵀCU=−C / permanent signs); Ext preserves π-parity.
+- **Structure:** ν|_{|κ|=1} ∈ ker(Ext−(p⁴−1)I) ∩ π-odd (coupled to |κ|=3); census {0} at p=5,7.
+- **Certified** Fraction identity p=5..200; numeric Ext[μ_part] at p=5.
+- **OPEN:** π-odd kernel triviality / envelope / reflection. Predicates **False**.
+- Evidence: `src/e1_gmin_m4_prop15264.py`, `evidence/e1_gmin_m4_prop15264.json`.
+
+
+### 15.265 — T anticommutes with Π; even/odd master split
+- **Proved Paley:** C_{πi,πj}=−D_i D_j C_{ij} from D Pᵀ C P D=−C.
+- **Proved:** TΠ+ΠT=0 on functions of 4-sets (reindex Johnson neighbours; sign product −1).
+- **Proved:** even/odd split Tμ=4pν, Tν=4pμ−4κ/p; recovers (16p²I−T²)μ=16κ.
+- **Proved:** on |κ|=1, ν=0 ⇔ Tμ=0 ⇔ Tδ=0 (Tμ_part=0 there via star=0).
+- **Certified** TΠ+ΠT=0 at p=5,7; master split exact at p=5; ν=0 on |κ|=1 samples.
+- **OPEN:** Tδ=0 / Ext π-odd gap / envelope / reflection. Predicates **False**.
+- Evidence: `src/e1_gmin_m4_prop15265.py`, `evidence/e1_gmin_m4_prop15265.json`.
+
+
+### 15.266 — Type-averages of π-odd vanish; type-T ±4p evecs agree on star=0 (p=5)
+- **Proved Paley:** π-odd functions have zero average on every finite (κ,φ)-class (π preserves (κ,φ)).  In particular type-averages of ν on finite |κ|=1 vanish.
+- **Proved:** Tδ=0 on finite |κ|=1 ⇔ within-type π-odd variation of ν vanishes.  Point-transitivity reduces the rest to ∞-sets.
+- **Proved (p=5 type-quotient):** T on the 12 (κ,φ,star) classes has simple eigenvalues ±4p, and the two evecs **agree** on star=0; type-constant odd E is 0 on |κ|=1.
+- **Certified** 12×12 eig at p=5 (star0 restrictions agree).  At p=7 the 14×14 type-T has extreme eigs ±16, **not** ±28=±4p (E_{±4p} is purely within-type).  Census ν̃=0 at p=5,7.
+- **OPEN at 15.266:** within-type odd variation (closed later by 15.268). Predicates **False**.
+- Evidence: `src/e1_gmin_m4_prop15266.py`, `evidence/e1_gmin_m4_prop15266.json`.
+
+### 15.267 — CR dichotomy; PSL fusion S∼πS; signed Aut; ε hinge
+- **Proved Max+-free:** χ(λ)=T₂T₃, χ(1−λ)=T₁T₂; |κ|=1 ⇔ χ(λ)χ(1−λ)=−1; V4 dets put Stab_PGL(S) in the nonsquare coset, so S∼_PSL πS on finite |κ|=1.
+- **Proved:** signed PSL Aut D_x=χ(cx+d); m₄ transform with a sign ε (convention corrected in 15.268).
+- **OPEN at 15.267:** ε=+1 was stated for the g⁻¹ convention (wrong slot). Predicates **False**.
+- Evidence: `src/e1_gmin_m4_prop15267.py`, `evidence/e1_gmin_m4_prop15267.json`.
+
+### 15.268 — Pairing-pole square; ε(m_σ∘τ,S)=+1; ν=0 on all |κ|=1
+- **Proved Max+-free:** pairing involution swapping a↔b, c↔d has pole r=(ab−cd)/(a+b−c−d) when Δ≠0, and ∏(s−r) is a square ⇒ ε(τ,S)=+1. Δ=0 ⇒ affine pairing ⇒ χ(det)=+1.
+- **Proved:** on finite |κ|=1 a pairing τ has χ(det)=−1; g=m_σ∘τ ∈ PSL, g(S)=πS, ε(g,S)=+1.
+- **Proved:** correct Aut convention (Uy)_i=D_i y_{g(i)} is orthogonal, so m₄⁺(S)=ε(g,S) m₄⁺(g(S)).
+- **Proved:** m₄⁺(S)=m₄⁺(πS)=m₄⁻(S) on finite |κ|=1 ⇒ ν=0; PSL 3-transitive transport ⇒ ν=0 on every |κ|=1 four-set.  Closes the 15.266 within-type π-odd obstruction.
+- **Certified** polynomial square identity; p=5 all 9900 finite |κ|=1 have ε=+1 and (Max+ cache) m₄⁺(S)=m₄⁺(πS); χ(−1)=1.
+- **OPEN:** |μ|≤1/(2p) (ν=0 does not kill even δ: p=5 μ=f4≠μ_part; p=7 within-type even span). Residual (i)/E1/L still **OPEN**. Predicates **False**.
+- Evidence: `src/e1_gmin_m4_prop15268.py`, `evidence/e1_gmin_m4_prop15268.json`.
+

@@ -1,0 +1,107 @@
+{
+  "prop": "15.242",
+  "title": "Rayleigh spectrum p=3,5,7; \u03bb_* mult pattern; floor OPEN",
+  "proved": {
+    "lambda_star_sufficiency": true,
+    "Wpp0_dimension": true,
+    "wick_residual_form": true,
+    "lambda_star_floor_general": false,
+    "residual_i_closed": false
+  },
+  "certified": {
+    "spectrum_p357": {
+      "certified_only": true,
+      "by_p": {
+        "3": {
+          "dim_Wpp0": 5,
+          "lambda_star": "16/5",
+          "eigenvalues": [
+            {
+              "value": "16",
+              "mult": 5
+            }
+          ],
+          "min_ge_lambda_star": true,
+          "min_equals_lambda_star": false
+        },
+        "5": {
+          "dim_Wpp0": 65,
+          "lambda_star": "80/13",
+          "eigenvalues": [
+            {
+              "value": "80/13",
+              "mult": 26,
+              "note": "mult=n, =\u03bb_*"
+            },
+            {
+              "value": "144/13",
+              "mult": 26,
+              "note": "mult=n"
+            },
+            {
+              "value": "176/13",
+              "mult": 13,
+              "note": "mult=d"
+            }
+          ],
+          "min_ge_lambda_star": true,
+          "min_equals_lambda_star": true
+        },
+        "7": {
+          "dim_Wpp0": 275,
+          "lambda_star": "176/25",
+          "D_denom": "409 = |Max+|/(4p)",
+          "eigenvalues": [
+            {
+              "value": "3072/409",
+              "mult": 50,
+              "note": "mult=n"
+            },
+            {
+              "value": "3360/409",
+              "mult": 100,
+              "note": "mult=2n"
+            },
+            {
+              "value": "3648/409",
+              "mult": 50,
+              "note": "mult=n"
+            },
+            {
+              "value": "4032/409",
+              "mult": 50,
+              "note": "mult=n"
+            },
+            {
+              "value": "4320/409",
+              "mult": 25,
+              "note": "mult=d"
+            }
+          ],
+          "min_ge_lambda_star": true,
+          "min_equals_lambda_star": false,
+          "min_vs_lambda_star": "3072/409 > 176/25"
+        }
+      },
+      "note": "Full diagonalization of E[q\u00b2] on \ud835\udcb2\u208a\u208a\u2070 with Max+ caches.  General \u03bb_min\u2265\u03bb_* OPEN.  Mult=n at the bottom for p=5,7."
+    },
+    "min_mult_n_p57": true
+  },
+  "hinge": {
+    "lambda_star_sufficiency": true,
+    "Wpp0_dimension": true,
+    "wick_residual_form": true,
+    "spectrum_p357_certified": true,
+    "min_ge_lambda_star_p357": true,
+    "lambda_star_floor_general": false,
+    "residual_i_closed_via_242": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "e1": false,
+    "open_hinge": "E[q\u00b2]\u2265\u03bb_* on \ud835\udcb2\u208a\u208a\u2070 for all p\u22655, or hull/envelope, or K4\u2264Wick_hi"
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "e1_closed_general": false,
+  "note": "Spectrum structure strongly suggests Aut-isotypic blocks with mult n at \u03bb_min.  General floor OPEN.  No predicate flip."
+}

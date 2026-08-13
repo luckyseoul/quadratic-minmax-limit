@@ -1,0 +1,86 @@
+{
+  "title": "Prop 15.268 pairing-pole square; \u03b5(m_\u03c3\u2218\u03c4,S)=+1; \u03bd=0 on all |\u03ba|=1; residual (i) OPEN on |\u03bc|",
+  "proved": {
+    "pairing_pole_square": true,
+    "epsilon_plus_one": true,
+    "m4_transform_gS": true,
+    "nu_zero_on_kappa1": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "pole_square": {
+      "proved": true,
+      "theorem": "For the pairing involution swapping a\u2194b, c\u2194d with \u0394=a+b\u2212c\u2212d\u22600, the pole is r=(ab\u2212cd)/\u0394 and \u220f(s\u2212r) is a square in F_q^\u00d7, hence \u03b5(\u03c4,S)=+1.  \u0394=0 \u21d2 affine pairing \u21d2 \u03c7(det)=1.",
+      "depends_on": [
+        "trace_zero_involution",
+        "chi_minus_one_is_one"
+      ]
+    },
+    "epsilon": {
+      "proved": true,
+      "theorem": "On every finite |\u03ba|=1 four-set there is \u03c4\u2208Stab_PGL(S) with \u03c7(det \u03c4)=\u22121, and g=m_\u03c3\u2218\u03c4 lies in PSL, sends S to \u03c0S, and satisfies \u03b5(g,S)=\u03b5(\u03c4,S)=+1.",
+      "depends_on": [
+        "theorem_pairing_pole_square",
+        "theorem_CR_T_identities",
+        "theorem_PSL_fusion"
+      ]
+    },
+    "transform": {
+      "proved": true,
+      "theorem": "For g\u2208PSL, (Uy)_i=D_i y_{g(i)} is an orthogonal Aut of C, hence m\u2084\u207a(S)=\u03b5(g,S) m\u2084\u207a(g(S)) and \u03bd(S)=\u03b5(g,S) \u03bd(g(S)).",
+      "depends_on": [
+        "theorem_signed_PSL_Aut",
+        "signed_permutation_orthogonal"
+      ]
+    },
+    "nu_zero": {
+      "proved": true,
+      "hypothesis_proved_general": true,
+      "theorem": "\u03bd=0 on every |\u03ba|=1 four-set: finite case by \u03b5=+1 and m\u2084\u207b(S)=m\u2084\u207a(\u03c0S); \u221e-sets by 3-transitive PSL transport.",
+      "depends_on": [
+        "theorem_epsilon_plus_one",
+        "theorem_m4_transform_correct",
+        "m4minus_pullback_254",
+        "PSL_3_transitive"
+      ]
+    }
+  },
+  "certified": {
+    "poly_square": true,
+    "5": {
+      "n_k1": 9900,
+      "constructed": 9900,
+      "eps_plus": 9900,
+      "eps_minus": 0,
+      "eps_plus_only": true,
+      "chi_minus_one": 1,
+      "m4_checked": 9900,
+      "m4_S_eq_m4_piS": 9900
+    },
+    "7": {
+      "n_k1": 1949,
+      "constructed": 1949,
+      "eps_plus": 1949,
+      "eps_minus": 0,
+      "eps_plus_only": true,
+      "chi_minus_one": 1,
+      "m4_checked": 0,
+      "m4_S_eq_m4_piS": 0
+    }
+  },
+  "hinge": {
+    "pairing_pole_square": true,
+    "epsilon_plus_one_relevant": true,
+    "m4_transform_gS": true,
+    "nu_zero_finite_kappa1": true,
+    "nu_zero_all_kappa1": true,
+    "within_type_odd_nu_vanishes": true,
+    "residual_i_closed": false,
+    "open": "\u03bd=0 on all |\u03ba|=1 (15.266 obstruction closed).  Still need |\u03bc|\u22641/(2p) / envelope / reflection / Es4 / ker=sc."
+  },
+  "F3": "\u03bd=0 on every |\u03ba|=1 four-set (finite by \u03b5=+1 for g=m_\u03c3\u2218\u03c4; \u221e-sets by PSL transport).  15.266 obstruction closed.  |\u03bc|\u22641/(2p) still OPEN.  No predicate flip."
+}

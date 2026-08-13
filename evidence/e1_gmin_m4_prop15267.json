@@ -1,0 +1,85 @@
+{
+  "title": "Prop 15.267 CR dichotomy; PSL fusion S\u223c\u03c0S on finite |\u03ba|=1; m\u2084\u207a=\u03b5 m\u2084\u207a\u2218\u03c0; residual (i) OPEN on \u03b5=+1",
+  "proved": {
+    "CR_dichotomy": true,
+    "PSL_fusion": true,
+    "signed_PSL_Aut": true,
+    "m4_transform": true,
+    "epsilon_plus_one_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "E1_closed": false,
+    "L_closed": false
+  },
+  "algebra": {
+    "CR": {
+      "proved": true,
+      "theorem": "After affine normalisation, \u03c7(\u03bb)=T\u2082T\u2083 and \u03c7(1\u2212\u03bb)=T\u2081T\u2082.  |\u03ba|=3 \u21d4 \u03c7(\u03bb)=\u03c7(1\u2212\u03bb)=1; |\u03ba|=1 \u21d4 \u03c7(\u03bb)\u03c7(1\u2212\u03bb)=\u22121.",
+      "depends_on": [
+        "paley_chi",
+        "affine_invariance_of_kappa"
+      ]
+    },
+    "PSL_fusion": {
+      "proved": true,
+      "theorem": "On finite |\u03ba|=1, Stab_PGL(S) meets PGL\u2216PSL (V4 dets are \u03c7(\u03bb), \u03c7(1\u2212\u03bb), \u03c7(\u03bb)\u03c7(1\u2212\u03bb)), hence S and \u03c0S lie in one PSL-orbit.",
+      "depends_on": [
+        "theorem_CR_T_identities",
+        "V4_in_Stab_PGL_79"
+      ]
+    },
+    "signed_Aut": {
+      "proved": true,
+      "theorem": "g\u2208PSL acts as a signed automorphism of Paley C via D_x=\u03c7(cx+d): \u03c7(g(x)\u2212g(y))=\u03c7(x\u2212y)\u03c7(cx+d)\u03c7(cy+d).",
+      "depends_on": [
+        "mobius_difference_formula",
+        "chi_of_squares"
+      ]
+    },
+    "m4_transform": {
+      "proved": true,
+      "epsilon_plus_one_general": false,
+      "theorem": "m\u2084\u207a(S)=\u03b5(S) m\u2084\u207a(\u03c0S) on finite |\u03ba|=1, \u03b5\u2208{\u00b11} well-defined on the PSL-coset.  \u03b5=+1 \u21d2 \u03bd=0 there.  \u03b5=+1 OPEN general.",
+      "depends_on": [
+        "theorem_PSL_fusion",
+        "theorem_signed_PSL_Aut",
+        "m4minus_pullback_254"
+      ]
+    }
+  },
+  "certified": {
+    "5": {
+      "n_k1_checked": 9900,
+      "n_k3_checked": 2750,
+      "bad_k1": 3100,
+      "bad_k3": 0,
+      "CR_ok": false,
+      "eps_hits": 5,
+      "eps_plus": 5,
+      "eps_minus": 0,
+      "eps_plus_only": true
+    },
+    "7": {
+      "n_k1_checked": 6135,
+      "n_k3_checked": 1865,
+      "bad_k1": 1977,
+      "bad_k3": 0,
+      "CR_ok": false,
+      "eps_hits": 1,
+      "eps_plus": 1,
+      "eps_minus": 0,
+      "eps_plus_only": true
+    }
+  },
+  "hinge": {
+    "CR_dichotomy": true,
+    "PSL_fusion": true,
+    "signed_PSL_Aut": true,
+    "m4_transform": true,
+    "epsilon_plus_one_general": false,
+    "residual_i_closed": false,
+    "open": "S\u223c_PSL \u03c0S on finite |\u03ba|=1 proved; m\u2084\u207a=\u03b5 m\u2084\u207a\u2218\u03c0; need \u03b5=+1 general to kill within-type odd \u03bd."
+  },
+  "F3": "|\u03ba|=1 \u21d4 \u03c7(\u03bb)\u03c7(1\u2212\u03bb)=\u22121 proved; S\u223c_PSL \u03c0S on finite |\u03ba|=1; m\u2084\u207a=\u03b5 m\u2084\u207a\u2218\u03c0.  \u03b5=+1 still OPEN general (certified +1 at p=5,7).  No predicate flip."
+}
