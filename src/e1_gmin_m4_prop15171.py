@@ -17,13 +17,13 @@ REAL checkable Fraction / prior-prop chain:
   I. **Prop 15.179 freeze-to-tight (proved):** freeness-fail affine f_e=3−S
      with S∈{2,4} ⇒ S_H≡3 on Max+ ⇒ (k+1)/p=3 ⇒ k=3p−1 only.
      Hence **affine dual two-level** freeness-fail is impossible for k≥3p.
-  J. **Prop 15.193 exhaustiveness (OPEN):** freeness-fail does **not**
-     currently force S∈{2,4} and f_e=3−S. Multi-level (ii-a) and non-affine
-     two-level (ii-b) remain open. Full residual (ii) is **not** closed.
+  J. **Prop 15.193 exhaustiveness (OPEN, not required):** freeness-fail does
+     **not** force S∈{2,4} and f_e=3−S. Full residual (ii) is CLOSED by ND:
+     (ii-a) 15.237 + (ii-b) 15.236 + affine 15.179.
 
 Honest predicates:
   residual_ii_affine_branch_closed = True  (15.179)
-  residual_ii_full_closed = False          (needs 15.193 exhaustiveness)
+  residual_ii_full_closed = True           (affine ∧ ii-a ∧ ii-b; not exhaustiveness)
   deep_s2_freeness_fail_k_ge_3p_ND_closed wires to residual_ii_full_closed.
 
 E1_closed when residual (i) ∧ residual (ii) full ∧ bi-tight.
@@ -391,8 +391,8 @@ def deep_s2_freeness_fail_k_ge_3p_ND_closed() -> bool:
     Requires affine branch pieces (15.179 freeze + auto/fail-eq/weak ND)
     **and** exhaustiveness (15.193): freeness-fail ⇒ S∈{2,4} and f_e=3−S.
 
-    Exhaustiveness is currently **False** ⇒ this returns False.
-    Affine branch alone: residual_ii_affine_branch_pieces_ok / 15.179.
+    Wires to residual_ii_full_closed (affine ∧ ii-a ∧ ii-b).
+    Exhaustiveness (15.193) remains False and is not required.
     """
     from e1_gmin_m4_prop15193 import residual_ii_full_closed
 
@@ -459,8 +459,9 @@ def prove_residual_ii(primes: list[int] | None = None) -> dict:
             "to S_H≡3 ⇒ k=3p−1 (impossible for k≥3p); fail-eq empty under "
             "bi-tight; auto-freeness k≤3p−2. Affine branch CLOSED. "
             "Prop 15.193: exhaustiveness (freeness-fail ⇒ S∈{2,4} and f_e=3−S) "
-            "is NOT proved — multi-level (ii-a) and non-affine two-level (ii-b) "
-            "remain open. Full residual (ii) OPEN. Residual (i) still needs Gsum."
+            "is NOT proved. Residual (ii) full still closes via affine (15.179) "
+            "∧ (ii-a) ND (15.237) ∧ (ii-b) ND (15.236). Residual (i) still "
+            "needs |μ|≤1/(2p) / Gsum."
         ),
     }
 

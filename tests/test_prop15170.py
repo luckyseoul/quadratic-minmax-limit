@@ -115,7 +115,7 @@ def test_e1_open_until_residuals_closed():
 
     assert type_I_k_3p_minus_2_closed_general() is False  # residual (i) open
     assert residual_ii_dual_twolevel_affine_closed() is True  # affine branch only
-    assert d171() is False  # full residual (ii) open (15.193)
+    assert d171() is True  # residual (ii) full via 15.179+236+237
     assert e1_closed_general() is False
     opens = e1_open_residuals()
     assert opens  # residual (i) and/or full residual (ii) listed

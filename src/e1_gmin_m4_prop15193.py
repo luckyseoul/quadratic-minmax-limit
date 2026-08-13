@@ -7,10 +7,10 @@ force both (1) S∈{2,4} on every Max+ vector and (2) f_e=3−S everywhere?
 
 VERDICT (this prop): **exhaustiveness is NOT proved.**
   Affine dual two-level branch is CLOSED by Prop 15.179 freeze-to-tight.
-  Full residual (ii) remains OPEN until exhaustiveness (or a separate ND
-  for multi-level / non-affine freeness-fail) is proved.
+  Full residual (ii) is CLOSED by separate ND: (ii-a) 15.237 + (ii-b) 15.236
+  + affine 15.179. Exhaustiveness is not required.
 
-Does **not** soft-close residual (ii) / E1 / L. Soft-close forbidden.
+Does **not** soft-close residual (i) / E1 / L. Soft-close forbidden.
 
 SETUP (residual (ii): deep freeness-fail s₊=2, k≥3p)
   s₊=2: min Max+ score is 2; scores even when k even.
@@ -31,27 +31,27 @@ WHAT IS PROVED (score algebra, Max+-free Fraction):
   D. Affine dual two-level freeness-fail (S∈{2,4} and f_e=3−S):
      S_H≡3 ⇒ k=3p−1, impossible for k≥3p (15.179 freeze). Branch CLOSED.
 
-WHAT IS NOT PROVED (gaps — do not claim residual (ii) full CLOSED):
+WHAT IS NOT PROVED (exhaustiveness still False; ND closed elsewhere):
   E. Exhaustiveness. Freeness-fail does **not** by itself force
-     support(S)⊆{2,4} on Max+. Multi-level S∈{2,4,6,…} with N₂/N≤thr
-     and f_e≡+1 on U₂ remains a residual-(ii) subcase.
+     support(S)⊆{2,4} on Max+. Multi-level is closed by ND in 15.237, not
+     by forcing two-level.
   F. Affine completion. Even under two-level S∈{2,4} and freeness-fail
-     (f_e≡+1 on U₂), f_e need not be ≡−1 on U₄. Non-affine two-level
-     freeness-fail is not ruled out by freeze (S_H not constantly 3).
+     (f_e≡+1 on U₂), f_e need not be ≡−1 on U₄. Non-affine two-level is
+     closed by ND in 15.236, not by freeze.
   G. Prop 15.171 dual two-level Gsum Farkas assumes affine f_e=3−S on
-     both Max±; it does not cover E–F. Prop 15.179.G deferred non-affine
-     to 15.171, but 15.171 does not supply the missing reduction.
+     both Max±; it is not needed after 15.236/15.237.
 
 PREDICATES
   residual_ii_affine_branch_closed()  = True   (15.179)
   residual_ii_exhaustiveness_proved() = False  (this prop)
-  residual_ii_full_closed()           = False  (affine ∧ exhaustiveness)
+  residual_ii_full_closed()           = affine ∧ (ii-a) ∧ (ii-b)
+                                        (15.179 + 15.237 + 15.236; not exhaustiveness)
   deep_s2_freeness_fail_k_ge_3p_ND_closed() wires to residual_ii_full_closed
 
-OPEN residual (ii) subcases for k≥3p freeness-fail:
-  (ii-a) multi-level Max+ scores with f_e≡+1 on U₂
-  (ii-b) two-level S∈{2,4} non-affine (f_e≡+1 on U₂, not f_e≡−1 on U₄)
-  Affine two-level (ii-c) is CLOSED by 15.179.
+Residual (ii) subcases for k≥3p freeness-fail:
+  (ii-a) multi-level: CLOSED by 15.237
+  (ii-b) two-level non-affine: CLOSED by 15.236
+  Affine two-level (ii-c): CLOSED by 15.179
 
 Writes evidence/e1_gmin_m4_prop15193.json
 """
@@ -76,6 +76,10 @@ from e1_gmin_m4_prop15179 import (  # noqa: E402
     residual_ii_dual_twolevel_affine_closed,
     freeze_S_H_equals_3,
     theorem_freeze_all_primes,
+)
+from e1_gmin_m4_prop15236 import (  # noqa: E402
+    residual_ii_a_ND_closed,
+    residual_ii_b_ND_closed,
 )
 
 
@@ -287,21 +291,25 @@ def residual_ii_affine_branch_closed() -> bool:
 
 def residual_ii_full_closed() -> bool:
     """
-    Residual (ii) fully closed only if affine branch AND exhaustiveness.
-    Currently False (exhaustiveness missing).
+    Residual (ii) fully closed if affine branch AND ND for both (ii-a) and
+    (ii-b). Exhaustiveness (force affine two-level) is a separate path.
+    (ii-b) ND is 15.236; (ii-a) ND is 15.237.
     """
     return bool(
-        residual_ii_affine_branch_closed() and residual_ii_exhaustiveness_proved()
+        residual_ii_affine_branch_closed()
+        and residual_ii_a_ND_closed()
+        and residual_ii_b_ND_closed()
     )
 
 
 def residual_ii_open_subcases() -> list[str]:
     out = []
-    if not residual_ii_exhaustiveness_proved():
+    if not residual_ii_a_ND_closed():
         out.append(
             "(ii-a) multi-level freeness-fail s₊=2, k≥3p "
-            "(S support not forced ⊆{2,4})"
+            "(S support not forced ⊆{2,4}; no two-level slope)"
         )
+    if not residual_ii_b_ND_closed():
         out.append(
             "(ii-b) two-level S∈{2,4} non-affine freeness-fail "
             "(f_e≡+1 on U₂, not f_e≡−1 on U₄)"
@@ -318,11 +326,22 @@ def hinge_status_193() -> dict:
             if residual_ii_affine_branch_closed()
             else "OPEN"
         ),
+        "residual_ii_b_ND": (
+            "CLOSED by 15.236 (dichotomy + dual-bad-case empty)"
+            if residual_ii_b_ND_closed()
+            else "OPEN"
+        ),
+        "residual_ii_a_ND": (
+            "CLOSED"
+            if residual_ii_a_ND_closed()
+            else "OPEN — multi-level"
+        ),
         "residual_ii_exhaustiveness": (
             "OPEN — freeness-fail does not force S∈{2,4} and f_e=3−S"
         ),
         "residual_ii_full": (
-            "OPEN until exhaustiveness (or separate ND for ii-a/ii-b)"
+            "CLOSED" if residual_ii_full_closed() else
+            "OPEN until (ii-a) ND (15.236 closed (ii-b); affine is 15.179)"
         ),
         "residual_i_type_I_k_3p_minus_2": (
             "OPEN — needs |μ|≤2/n or ker-box (15.176–192)"
@@ -366,9 +385,12 @@ def main() -> dict:
             "affine_dual_twolevel_freeze_15_179": freeze_th["proved"] and affine,
             "residual_ii_affine_branch_closed": affine,
             "residual_ii_exhaustiveness_proved": exhaust,
+            "residual_ii_b_ND_closed": residual_ii_b_ND_closed(),
+            "residual_ii_a_ND_closed": residual_ii_a_ND_closed(),
             "residual_ii_full_closed": full,
             "multi_level_ruled_out": False,
-            "non_affine_two_level_ruled_out": False,
+            "non_affine_two_level_ND_closed": residual_ii_b_ND_closed(),
+            "non_affine_two_level_exhaustiveness": False,
             "residual_i_closed": False,
             "gsum_disj_lb_proved_general": gsum_disj_lb_proved_general(),
             "E1_closed": e1_closed_general(),

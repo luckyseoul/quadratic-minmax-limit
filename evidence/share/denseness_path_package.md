@@ -2,12 +2,12 @@
 
 **Audience:** independent AI / human check (Paata AI-test).  
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit  
-**Date:** 2026-08-07 (revised after cold AI-test BLOCK on residual-i)
+**Date:** 2026-08-13 (residual (ii) ND closed; residual (i) still OPEN)
 
 ## Verdict
 
 **\(L=\lim\alpha_n=\tfrac12\) is NOT proved.**  
-Residual **(i)** is **OPEN** (15.216 K₄ thr path has a fatal Rayleigh gap on \(\delta\in E_{4p}\)). Residual (ii) affine is closed; **full residual (ii)** is open. Both block E(1)/L.
+Residual **(ii)** ND is **CLOSED** (affine 15.179 + (ii-b) 15.236 + (ii-a) 15.237). Residual **(i)** is **OPEN** (no Max+-free \(|\mu|\le 1/(2p)\) / dual-eq hinge). Only residual (i) blocks E(1)/L.
 
 | Piece | Status |
 |-------|--------|
@@ -16,8 +16,10 @@ Residual **(i)** is **OPEN** (15.216 K₄ thr path has a fatal Rayleigh gap on \
 | Denseness (ratio-dense family ⇒ global liminf/limsup) | **Proved** (Prop 6.1) |
 | Bi-tight empty via majorization (15.167) | **Candidate** (algebra OK if mult≥d−1 and λ_min≥6) |
 | Residual (ii) affine dual two-level (15.179) | **CLOSED** — freeze-to-tight, no Gsum |
-| Residual (ii) full / exhaustiveness (15.193) | **OPEN** — multi-level / non-affine freeness-fail |
-| Type I freeness-fail residual (i) (15.170/216) | **OPEN** — fatal gap: \(R_{ke}\le2p\not\Rightarrow R(m_4)\le2p\) |
+| Residual (ii-b) ND (15.236) | **CLOSED** |
+| Residual (ii-a) ND (15.237) | **CLOSED** |
+| Residual (ii) full | **CLOSED** (`residual_ii_full_closed=True`; exhaustiveness still False, not required) |
+| Type I freeness-fail residual (i) (15.170/216) | **OPEN** — \(|\mu|\le 1/(2p)\) / dual-eq empty unproved |
 | **E(1) / L = ½** | **OPEN** |
 
 ## Setup
@@ -51,15 +53,16 @@ m_n=\min_{a_{ij}=\pm1}\max_{x=\pm1}\Bigl|\sum_{i<j}a_{ij}x_ix_j\Bigr|,\qquad
 \(\|m_4\|_2^2 \le n(n-2)/4\) (equivalently \(\|\delta\|_2^2 \le R\)-room). That bound is unproved.
 Census: holds at \(p=5\). Soft-close forbidden.
 
+**15.232–235 structure (not a close):** intersection split of \(\bar R_4\); k=3 linear, k=2 bilinear (per2), k=1 Laplace/trilinear, k=0 S₄ cycle-type + 4-cycle inverse pairing. Unsigned every layer dead except k=3 for \(p\ge89\). Predicates stay False.
+
 ## Fatal gaps (named)
 
-**Two denseness-path gaps remain.**
+**One denseness-path gap remains.**
 
-- **Residual (i) OPEN (15.216–217):** Old claim \(R_{ke}\le2p\Rightarrow R\le2p\) was false (AI-test BLOCK). **15.217 repair:** exact \(\Phi=\langle m_4,\kappa\rangle=n(n-1)(n-2)/8\) on Max+ gives the correct criterion \(R\le2p\Leftrightarrow\|m_4\|_2^2\le n(n-2)/4\). That \(m_4\) bound is still unproved Max+-free (census OK at \(p=5\)). Predicates residual_i/type_I/gsum all **False**.
+- **Residual (i) OPEN (15.216–217):** Old claim \(R_{ke}\le2p\Rightarrow R\le2p\) was false (AI-test BLOCK). **15.217 repair:** exact \(\Phi=\langle m_4,\kappa\rangle=n(n-1)(n-2)/8\) on Max+ gives the correct criterion \(R\le2p\Leftrightarrow\|m_4\|_2^2\le n(n-2)/4\). That \(m_4\) bound (equivalently \(|\mu|\le 1/(2p)\)) is still unproved Max+-free (census OK at \(p=5,7\)). Predicates residual_i/type_I/gsum all **False**.
 
-- **Residual (ii) affine branch CLOSED (15.179):** freeness-fail affine \(f_e=3-S\) on \(S\in\{2,4\}\) freezes \(S_H\equiv3\Rightarrow k=3p-1\); impossible for \(k\ge3p\); fail-eq empty under bi-tight. No Gsum LB.
-- **Residual (ii) full OPEN (15.193):** freeness-fail does **not** force \(S\in\{2,4\}\) and \(f_e=3-S\). Multi-level (ii-a) and non-affine two-level (ii-b) remain. Predicate `deep_s2_freeness_fail_k_ge_3p_ND_closed()=False`. **Blocks E1/L.**
-- Shipped: residual (i) open; residual (ii) affine closed / full open; E1/L **OPEN**. Soft-close forbidden.
+- **Residual (ii) CLOSED (15.179+15.236+15.237):** affine freeze + (ii-b) Max− dichotomy + (ii-a) L²=L pair-span. Exhaustiveness (15.193) remains False and is not required. `residual_ii_full_closed=True`, `deep_s2=True`.
+- Shipped: residual (i) open; residual (ii) closed; E1/L **OPEN**. Soft-close forbidden.
 
 ## Modules
 
@@ -69,6 +72,8 @@ Census: holds at \(p=5\). Soft-close forbidden.
 | Gsum hinge + residual (i) | `src/e1_gmin_m4_prop15170.py` |
 | Residual (ii) structure + freeze | `src/e1_gmin_m4_prop15171.py`, `prop15179.py` |
 | Residual (ii) exhaustiveness audit | `src/e1_gmin_m4_prop15193.py` |
+| Residual (ii-b) ND | `src/e1_gmin_m4_prop15236.py` |
+| Residual (ii-a) ND | `src/e1_gmin_m4_prop15237.py` |
 | Residual (i) K₄ thr path (OPEN) | `src/e1_gmin_m4_prop15215.py`, `prop15216.py` |
 | Residual (i) Φ identity + m4₂ reduction | `src/e1_gmin_m4_prop15217.py` |
 | Residual (i) min-distance + Q(K₄) | `src/e1_gmin_m4_prop15197.py` |
@@ -77,10 +82,9 @@ Census: holds at \(p=5\). Soft-close forbidden.
 
 ## What would close L
 
-1. Residual (i): prove \(R(m_4)\le2p\) (control \(\delta\)), or \(K_4\le\mathrm{Wick}_{hi}\), or \(|\mu|\le2/n\) / ker-box / free-e_sc.  
-2. Residual (ii) full: exhaustiveness lemma (freeness-fail \(\Rightarrow S\in\{2,4\}\) and \(f_e=3-S\)), or separate ND for multi-level / non-affine freeness-fail.
+1. Residual (i) only: prove \(R(m_4)\le2p\) (control \(\delta\)), or \(K_4\le\mathrm{Wick}_{hi}\), or \(|\mu|\le 1/(2p)\) / \(|\mu|\le2/n\) / dual-eq empty.
 
-Until both: do **not** claim lim α_n = ½.
+Until residual (i) is closed: do **not** claim lim α_n = ½. Residual (ii) is already closed.
 
 ## AI-test questions (use this file only)
 
@@ -90,4 +94,4 @@ Until both: do **not** claim lim α_n = ½.
 
 **Q2 (L — honesty):**  
 > Is lim α_n = ½ proved by this package?  
-> Answer: **not proved** (residual i open + full residual ii open).
+> Answer: **not proved** (residual i open; residual ii closed).

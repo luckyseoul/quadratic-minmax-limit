@@ -103,32 +103,32 @@ def test_dual_params_mass_formula():
 
 
 def test_residual_ii_affine_closed_full_open():
-    """Affine branch closed via 15.179 freeze; full residual (ii) open (15.193)."""
+    """Affine branch closed via 15.179; full residual (ii) via 15.236+237."""
     assert residual_ii_dual_twolevel_affine_closed() is True
     assert residual_ii_affine_branch_pieces_ok() is True
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False  # exhaustiveness missing
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True  # 15.179+236+237
     for p in (5, 7, 11, 13, 17, 19, 23):
         r = deep_s2_freeness_fail_k_ge_3p_ND(p)
         assert r["fail_eq_k_3p_minus_1_empty"] is True
         assert r["auto_freeness_at_3p_minus_2"] is True
     RII = prove_residual_ii()
-    assert RII["residual_ii_closed"] is False
+    assert RII["residual_ii_closed"] is True  # affine ∧ (ii-a) ∧ (ii-b)
     assert RII["residual_ii_affine_branch_closed"] is True
     assert RII["residual_ii_exhaustiveness_proved"] is False
     assert RII["gsum_disj_lb_required_for_affine_branch"] is False
-    assert any("ii-a" in s or "ii-b" in s for s in RII["open_subcases"])
+    assert not any("ii-a" in s or "ii-b" in s for s in RII["open_subcases"])
 
 
 def test_e1_and_L_wire_honest_open():
-    """E1/L open: residual (i) open and full residual (ii) open."""
+    """E1/L open: residual (i) open (full residual (ii) closed by 15.237)."""
     assert type_I_k_3p_minus_2_closed_general() is False
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
     bt = bitight_from_majorization(5)["bitight_empty"]
     assert bt is True
     assert e1_closed_general() is False
     opens = e1_open_residuals()
     assert any("Type I" in s or "3p−2" in s or "3p-2" in s for s in opens)
-    assert any("deep freeness-fail" in s or "k≥3p" in s or "k>=3p" in s for s in opens)
+    assert not any("deep freeness-fail" in s or "k≥3p" in s or "k>=3p" in s for s in opens)
     w = main_L_from_e1(e1=False, bitight=True)
     assert w["L_closed"] is False
     assert w["L_status"] == "OPEN"
@@ -138,7 +138,7 @@ def test_e1_and_L_wire_honest_open():
 
 def test_main():
     out = main()
-    assert out["proved"]["deep_s2_freeness_fail_k_ge_3p_ND"] is False
+    assert out["proved"]["deep_s2_freeness_fail_k_ge_3p_ND"] is True
     assert out["proved"]["residual_ii_affine_branch_closed"] is True
     assert out["proved"]["residual_ii_exhaustiveness_proved"] is False
     assert out["proved"]["type_I_k_3p_minus_2_closed"] is False

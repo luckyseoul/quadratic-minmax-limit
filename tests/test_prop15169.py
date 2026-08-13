@@ -102,19 +102,19 @@ def test_deep_k_ge_3p_full_open_affine_closed():
     from e1_gmin_m4_prop15179 import residual_ii_dual_twolevel_affine_closed
 
     assert residual_ii_dual_twolevel_affine_closed() is True
-    assert deep_freeness_fail_k_ge_3p_open() is True  # full open
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
+    assert deep_freeness_fail_k_ge_3p_open() is False  # 15.237 closed (ii-a)
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
 
 
 def test_e1_open_both_residuals():
-    """E1 OPEN: residual (i) open and full residual (ii) open."""
+    """E1 OPEN: residual (i) open (full residual (ii) closed)."""
     assert type_I_k_3p_minus_2_closed_general() is False
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
     assert e1_closed_general() is False
     open_res = e1_open_residuals()
-    assert len(open_res) >= 2
+    assert len(open_res) >= 1
     assert any("3p" in s or "Gsum" in s or "Type I" in s for s in open_res)
-    assert any("deep freeness-fail" in s or "k≥3p" in s for s in open_res)
+    assert not any("deep freeness-fail" in s or "k≥3p" in s for s in open_res)
 
 
 def test_L_wire_follows_e1_and_bitight():
@@ -139,7 +139,7 @@ def test_prove_and_main_honest():
     assert TI["open_step"] != ""
     DP = prove_deep_multi_s()
     assert DP["multi_s_auto_freeness_ok"] is True
-    assert DP["deep_k_ge_3p_ND_closed"] is False  # full residual (ii) open (15.193)
+    assert DP["deep_k_ge_3p_ND_closed"] is True  # 15.179+236+237
     out = main()
     assert out["proved"]["type_I_k_3p_minus_2_ND_class_closed"] is False
     assert out["proved"]["type_I_k_3p_minus_2_structure"] is True
@@ -158,7 +158,7 @@ def test_anti_soft_close_skeptic_patterns():
 
     assert type_I_k_3p_minus_2_closed_general() is False
     assert residual_ii_dual_twolevel_affine_closed() is True  # affine branch only
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False  # full residual ii open
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True  # 15.179+236+237
     assert e1_closed_general() is False
     assert e1_open_residuals() != []
     # L wire refuses soft-close without E1

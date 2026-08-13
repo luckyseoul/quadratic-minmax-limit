@@ -15,10 +15,13 @@ m_n
 
 ## Status
 
-**Main claim:** \(\displaystyle L=\lim_n\alpha_n\) is **OPEN** (2026-08-06).
+**Goal:** settle the limit (see **`LONG_HORIZON_GOAL.md`**). Not done until \(L\) is proved or disproved.
 
-Candidate denseness path (sandwich + \(\rho=1\) + E(1)) is **blocked** by an unproved
-disj Gsum lower bound used in Props 15.170–171 (Max+ is not an IP-scheme: 15.158).
+**Main claim:** \(\displaystyle L=\lim_n\alpha_n\) is **OPEN** (2026-08-13).
+
+Residual **(ii)** ND is **CLOSED** (15.179+15.236+15.237). Denseness path is **blocked**
+by residual **(i)** only: unproved disj Gsum LB / \(|\mu|\le 1/(2p)\) on Paley
+\(n=p^2+1\) (Max+ is not an IP-scheme: 15.158). Soft-close forbidden.
 Short honest package: **`evidence/share/denseness_path_package.md`**.
 
 **Proved (sandwich):**

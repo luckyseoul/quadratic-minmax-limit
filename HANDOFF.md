@@ -1,13 +1,11 @@
-> **HANDOFF (2026-08-12):** **\(L=\tfrac12\) OPEN.** Residual **(i) OPEN** — no Max+-free general hinge yet. Residual **(ii) PARTIAL**: affine **CLOSED** (15.179); full **OPEN** (15.193).  
-> **Structure 15.218–231:** + **15.229–230** size-3=0; \(\bar R_4\) eq; **R_part max ≤ budget** (particular Cy safe); Cy≡δ unify; **15.231** permanent form of \(\bar R_4\); crude \(\sum|per|\) dead. Predicates stay **False**. Soft-close forbidden.  
-> Preferred hinge: bound \(\bar R_4\) / \(\delta\) (same room after unify) via character sums (sum before abs) or Aut-SOS+diamond; alts Path C, \(K_4\), free-e+ker=sc, resolvent gain \(\le(p-4)/48\).  
-> Predicates: `gsum_disj_lb_proved_general=False`, `residual_i_dual_eq_empty_proved_general=False`, `e1_closed_general=False`.  
-> Detail: **`evidence/SESSION_HANDOFF_2026-08-12_residual_i.md`**. Package: **`evidence/share/denseness_path_package.md`**. Status: **`STATUS.md`**.
+> **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
+> **Now (2026-08-13):** **\(L\) OPEN.** Residual **(ii) CLOSED** (affine 15.179 + (ii-b) 15.236 + (ii-a) 15.237). `residual_ii_full_closed` / `deep_s2` **True**. Only leftover: residual **(i)** \(|\mu|\le 1/(2p)\) (or \(|\mu|\le 2/n\), Gsum\(\ge-1/p\), dual-eq empty) for all primes \(p\ge5\). `gsum_disj_lb` / `type_I` / `e1_closed_general` **False**. Soft-close forbidden.  
+> Session: **`evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-08-06  
-**Claim:** **OPEN** (candidate denseness path; E1 blocked by residual i **and** full residual ii exhaustiveness). residual/16N optional open.
+**Status date:** 2026-08-13  
+**Claim:** **OPEN** (E1 blocked by residual **(i)** only). Residual **(ii)** full ND closed. residual/16N optional open.
 
 **External / prize:** [MO 413935](https://mathoverflow.net/questions/413935) · [X prize](https://x.com/PI010101/status/2081070728422752329).  
 @PI010101 asked for GitHub, then posted that Grok Build 4.5 found a gap:  
@@ -20,7 +18,8 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **Shipped props (candidate chain; L OPEN):**  
 - **15.167:** bi-tight majorization algebra (candidate if mult/λ_min hold). `src/e1_gmin_m4_prop15167.py`  
-- **15.170 / 15.171:** residual (i)/(ii) structure + **conditional** Farkas; `gsum_disj_lb_proved_general()=False` (15.158).  
+- **15.170 / 15.171:** residual (i)/(ii) structure + **conditional** Farkas; `gsum_disj_lb_proved_general()=False`.  
+- **15.179 / 15.236 / 15.237:** residual (ii) affine + (ii-b) + (ii-a) ND. `residual_ii_full_closed()=True`.  
 - residual/16N: still **OPEN** optional (not required for denseness path)
 
 ---
@@ -30,34 +29,33 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 **Done (2026-08-06):** gap named (Gsum disj LB / 15.158); claim retracted OPEN; short package `evidence/share/denseness_path_package.md`; load-bearing tests; 3 cold AI passes → NOT_PROVED + honest OPEN.
 
 **Required opens (prize path):**  
-1. Residual **(i) preferred (15.197):** Max+-free \(K_4\le16n^2-14n\) (⇔ \(Q_e\le10\); census OK at p=5,7). Min-distance \(d_H\ge p+1\) **proved**. Or \(|\mu|\le2/n\) / ker-box / Gsum\(\ge-1/p\).  
-2. Residual **(ii) full:** prove exhaustiveness (15.193) or close multi-level / non-affine freeness-fail. Affine branch **done** (15.179).  
-3. Flip hinges → E1/L predicates only after (1)+(2).  
-4. AI-test package after CLOSED.  
+1. Residual **(i) only:** Max+-free \(|\mu|\le 1/(2p)\) on \(|\kappa|=1\) for all primes \(p\ge5\) (⇔ Gsum\(\ge-1/p\)). Sufficient alts: \(|\mu|\le 2/n\); envelope \(|\mu|\le\max(|\mu_{\mathrm{part}}|,|f_4|)\); dual-eq empty; Gsum≽0+master+Fréchet \(\Rightarrow|\mu|\le 2/n\). Census OK at p=5,7.  
+2. Wire `gsum_disj_lb_proved_general` / `type_I` / `e1_closed_general` via **real imports** only after (1). Then Main Theorem \(L=\tfrac12\).  
+3. AI-test package after CLOSED. Residual (ii) exhaustiveness (15.193) is **not** required (ND path closed).  
 
-**Non-required:** Path-C/16N. **User:** ping Paata.  
+**Non-required:** Path-C/16N. **User:** ping Paata after L actually closed.  
 
-**Do not right now:** residual/16N thrash · X chrome · soft-close without Max+-free residual-(i) hinge.
+**Do not right now:** residual/16N thrash · X chrome · soft-close · ship a 15.xxx whose predicates stay False · flip e1 on census \(p\le7\).
 
-**Prior resumes:** `evidence/FINAL_HANDOFF_2026-08-05.md`, `evidence/SESSION_HANDOFF_2026-07-31_prop15112.md`  
+**Prior resumes:** `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`, `evidence/SESSION_HANDOFF_2026-08-12_residual_i.md`  
 **P0 graph:** `evidence/P0_ENGINEERING_GRAPH.md` · **Failure graph:** `evidence/E1_FAILURE_GRAPH.md`  
 
-**Skills:** `goal-verifier` · `check-work` · `scientific-critique` · `use-available-compute` (only if residual/16N) · `handoff`  
-**Compute (F17/F19/F20):** 88 cores + V100; no class_key thrash (F19); never soft-close L (F3).
+**Suggested skills:** `agent-cost-optimization` · `graph-engineered-completion` · `goal-verifier` · `verification-before-completion` · `handoff` · `session-handoff-packager` · `scientific-critique` · `grill-me` · `self-refine-loop` · `research` · `arxiv` · `litreview` · `use-available-compute` · `openai-referee`  
+**Compute:** 88 cores + idle V100; ProcessPool/GPU for Max+ contractions; no class_key thrash (F19); never soft-close L (F3).
 
 ---
 
 ## 0. One-line status
 
-**\(L=\lim\alpha_n\) OPEN.** Denseness path blocked by unproved disj Gsum LB (15.158 vs 15.170 Farkas). Prize OPEN. residual/16N optional open.
+**\(L=\lim\alpha_n\) OPEN.** Residual (ii) ND closed. Denseness path blocked by residual **(i)** (\(|\mu|\le 1/(2p)\) / Gsum disj LB). Prize OPEN.
 
 ### P0 status
 
 **Bi-tight majorization (15.167, candidate):** mult≥d−1 + λ_min≥6 ⇒ L_* < 2d (algebra). Does **not** alone close L.
 
-**E(1) OPEN:** residual **(ii)** affine branch CLOSED (15.179); full residual (ii) OPEN (15.193 exhaustiveness). Residual **(i)** Type I dual-eq still blocked (`gsum_disj_lb_proved_general=False`). **L OPEN.**
+**E(1) OPEN:** residual **(ii) CLOSED** — affine 15.179 + (ii-b) 15.236 + (ii-a) 15.237; `residual_ii_full_closed=True`. Residual **(i)** Type I dual-eq still blocked (`gsum_disj_lb_proved_general=False`). **L OPEN.**
 
-**Primary denseness-path hinge (general primes \(p\ge5\)):** prove row+mass \(\max\kappa_e<2-\alpha\) (15.194; preferred over pointwise Gsum), or full ker-box empty, or \(|\mu|\le2/n\). Latest modules: `prop15186.py`–`prop15194.py`. Package: `evidence/share/denseness_path_package.md`. Session notes: `evidence/SESSION_HANDOFF_2026-08-06_residual_i.md`.
+**Primary hinge (general primes \(p\ge5\)):** \(|\mu|\le 1/(2p)\) on \(|\kappa|=1\), or \(|\mu|\le 2/n\), or dual-eq empty, or Gsum≽0+master+Fréchet \(\Rightarrow|\mu|\le 2/n\). Latest residual-(i) modules: `prop15186.py`–`prop15235.py`. Residual-(ii) hinges: `prop15236.py`, `prop15237.py`. Session: `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`.
 
 **Optional residual/16N (still OPEN, not required for denseness L):**
 \[

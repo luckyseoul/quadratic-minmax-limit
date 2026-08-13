@@ -1,5 +1,7 @@
 # Session handoff — residual (i) 2026-08-12
 
+**Superseded for residual (ii) / current leftover:** `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md` (residual (ii) ND closed 2026-08-13; leftover is residual (i) only).
+
 ## Goal and status
 
 **Goal:** Prove Max+-free residual-(i) hinge for all primes \(p\ge5\) (prefer \(\max_{|\kappa|=1}|\mu_4|\le1/(2p)\); else m4₂ / K₄ / free-e / Path C), then wire `residual_i` / `type_I` via real imports.
@@ -31,8 +33,12 @@
 | 15.229 | `...15229.py` | **size-3 Cy=0** on \|κ\|=1 (C²+64-exhaust); **(p⁴−1)μ+2φ=R̄₄** | \|R̄₄\| budget |
 | 15.230 | `...15230.py` | **R_part_max≤B** all p≥5; R̄₄=R_part+(p⁴−1)δ; Cy≡δ room unify | \|R̄₄\| / \|δ\|≤room_δ |
 | 15.231 | `...15231.py` | **R̄₄=∑_{T≠S} per(C[S,T]) μ_T**; crude ∑\|per\| dead (cancel before abs) | \|R̄₄\|≤B signed/Jacobi/Aut-SOS |
+| 15.232 | `...15232.py` | Intersection split; **k=3 per 11-term + column-linear**; C² pairing; unsigned k=0,1,2 dead; k=3 R-safe \(p\ge89\) | signed k=0,1,2 / Aut-SOS |
+| 15.233 | `...15233.py` | **k=2 14-term per2 form**; bilinear in new columns; unsigned still dead | μ-weighted C⊗C / k=0,1 |
+| 15.234 | `...15234.py` | **k=1 Laplace** ∑ C_{xa} per_3; trilinear; unsigned still dead | μ-weighted C⊗C⊗C / k=0 |
+| 15.235 | `...15235.py` | **k=0 S₄ cycle-type** + 4-cycle inverse pairing; unsigned still dead | μ-weighted char-sums / Aut-SOS |
 
-Tests: `tests/test_prop15218.py` … `test_prop15231.py`. Evidence JSON alongside.
+Tests: `tests/test_prop15218.py` … `test_prop15235.py`. Evidence JSON alongside.
 
 Scratch (ephemeral, session-local): last implementer used `{SCRATCH}/e1_l_block.md`, `predicate_dump.txt`, `pytest_prop15231.txt` — do not depend on paths across sessions.
 
@@ -51,7 +57,7 @@ Scratch (ephemeral, session-local): last implementer used `{SCRATCH}/e1_l_block.
 
 ## Open hinge (any one closes residual i)
 
-1. **Preferred (15.229–231):** Bound \(|\bar R_4|\le B\) on \(|\kappa|=1\). Permanent form \(\bar R_4=\sum_{T\neq S}\mathrm{per}(C[S,T])\mu_T\) proved (15.231); crude \(\sum|per|\) dead. Particular \(R_{\mathrm{part}}\) is already ≤B (proved); only δ-correction / signed size-4 sums open. Attack: Jacobi/cycle pairing **before abs**, Aut-SOS for \(B^2-\bar R_4^2\), Path C, or K₄/free-e.
+1. **Preferred (15.229–235):** Bound \(|\bar R_4|\le B\) on \(|\kappa|=1\). Layer types named: k=3 linear, k=2 bilinear, k=1 trilinear, k=0 degree-4 cycle-type. Unsigned dead except k=3 for \(p\ge89\). Remaining: **μ-weighted signed sums** (character sums before abs), Aut-SOS+diamond, Path C, or K₄/free-e.
 2. Path C: \(\delta^2\le\mathrm{room}_{hyp}/24\) for all \(p\ge5\)
 3. Closed \(m_0=\|\chi_{\mathrm{part}}\|_2^2\) and/or \(|Max+|\) so \(k_2/|Max+|\le\mathrm{gap}_{wick}\)
 4. \(K_4\le\mathrm{Wick}_{hi}\) Max+-free
@@ -59,9 +65,9 @@ Scratch (ephemeral, session-local): last implementer used `{SCRATCH}/e1_l_block.
 
 ## Next concrete steps
 
-1. Aut-averaged degree-4 SOS on \((\delta_+,\delta_-)\) with linear constraints from 15.225 H, **or** Boolean moment constraints selecting \(k_\pm\); **or** accept residual-(i) open.
+1. μ-weighted signed layer sums of \(\bar R_4\) (character sums before abs on the 15.232–235 forms), **or** Aut-SOS+diamond on \((\delta_+,\delta_-)\); **or** accept residual-(i) open.
 2. If proved: wire `gsum_disj_lb_proved_general` / `residual_i_dual_eq_empty_proved_general` / `type_I_k_3p_minus_2_closed_general` only via **real imports** from hinge modules; flip STATUS/package; AI-test ≥2 cold.
-3. Residual (ii) full (15.193) still separate open after residual (i).
+3. Residual (ii) was still open on 2026-08-12; closed 2026-08-13 by 15.236+15.237 (see 08-13 session handoff).
 
 ## Dead / weak paths (do not re-thrash)
 
@@ -71,6 +77,8 @@ Scratch (ephemeral, session-local): last implementer used `{SCRATCH}/e1_l_block.
 - D supported only on \(\pm2\sqrt{p^2+15}\); pairwise LP / 4×4 Loewner alone
 - R_ke⇒R (convex combo fatal); Max+ classical association scheme
 - **Crude \(\sum_{T\neq S}|per(C[S,T])|\)** (15.231 D): at p=5 equals 47500 ≫ B=50.4; all p≥5 \(\binom{n}{4}\cdot24\gg B\). Must cancel **signed** size-4 sums before abs.
+- **Unsigned intersection layers k=0,1,2** (15.232 E / 15.233–235): each tighter |per|-ub majorant still exceeds B for every prime p≥5. Unsigned k=3 exceeds B for 5≤p<89.
+- **Cycle-abs pairing on k=0** (15.235 D): inverse-pairing 4-cycles does not beat B.
 - Unconstrained CS L∞; per-type abs without pairing; ED4/resolvent L2 alone; dim E^G≤1
 
 ## Suggested skills
@@ -108,4 +116,4 @@ Scratch (ephemeral, session-local): last implementer used `{SCRATCH}/e1_l_block.
 - Plan: session `goal/plan.md` (prove residual-i hinge then wire)
 - STATUS: `STATUS.md` · package: `evidence/share/denseness_path_package.md`
 - Prior: `evidence/SESSION_HANDOFF_2026-08-06_residual_i.md`
-- Props: `src/e1_gmin_m4_prop15218.py`–`15224.py`
+- Props: `src/e1_gmin_m4_prop15218.py`–`15235.py`

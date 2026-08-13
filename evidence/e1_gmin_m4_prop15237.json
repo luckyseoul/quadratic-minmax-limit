@@ -1,0 +1,112 @@
+{
+  "title": "Prop 15.237 residual (ii-a) ND: dual-bad U is not a 0-1 pair-span function",
+  "proved": {
+    "dual_bad_mass": true,
+    "four_quadrants": true,
+    "k4_independence": true,
+    "U_empty": true,
+    "residual_ii_a_ND_closed": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false,
+    "bi_tight_empty": true
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "n_primes": 20,
+      "n_pairs": 383
+    },
+    "B": {
+      "proved": true,
+      "n_primes": 10,
+      "theorem": "Wedges: G=\u00b11/p>\u22121+2/p. Disjoint: G\u2086\u227b0 (indep. of 6 pair features) \u21d2 open PSD interval \u21d2 G>\u22121+2/p. Hence P(f=f\u2032=1)>0 and all four sign pairs occur."
+    },
+    "D": {
+      "proved": true,
+      "n_primes": 20,
+      "theorem": "L\u00b2=L + four quadrants: 0-1 pair-span functions are constants, pair-slices, or triangle 3-equals. None can be U_{-4,\u2212}."
+    },
+    "independence": {
+      "even_types": {
+        "n_types": 7,
+        "rank": 6,
+        "proved": true,
+        "theorem": "The 7 even types of {\u00b11}^4 other than {all \u00b1} already span R^6 under the 6 pair monomials (integer 7\u00d76 matrix, rank 6)."
+      },
+      "weight_hits": true,
+      "p5_anchor_bad_fours": 0,
+      "p7_anchor_bad_fours": 0,
+      "proved": true
+    },
+    "L2_L": {
+      "disjoint_product": {
+        "lstsq_residual": 2.0,
+        "rank": 3,
+        "fourth_predicted": -3.0,
+        "fourth_actual": 1.0,
+        "proved": true,
+        "theorem": "On the four sign pairs, f f\u2032=a+b f+c f\u2032 overdetermines: the first three pairs force (a,b,c)=(\u22121,1,1), the fourth needs 1=\u22123. Hence a disjoint product is not pair-span, so a 2-matching in supp(a) cannot satisfy L\u00b2=L."
+      },
+      "support": {
+        "n_K4_matchings": 3,
+        "n_3edge": 20,
+        "n_3edge_with_matching": 12,
+        "n_3edge_intersecting": 8,
+        "proved": true,
+        "theorem": "An edge set with no 2-matching is a clique of pairwise adjacent edges: a triangle or a star (including 0\u20131 edges). Any 4-edge subset of K4 contains a matching; path-3 does too."
+      }
+    },
+    "sample_mass_p5_k16": {
+      "p": 5,
+      "k": 16,
+      "U_mass": "1/5",
+      "in_open_half": true,
+      "proved": true,
+      "theorem": "Two-level {\u22122,\u22124} and f_e\u2261\u22121 on {S=\u22122} force {f_e=+1}\u2286{S=\u22124}. P(f_e=\u22121)=(p+1)/(2p), P(S=\u22122)=2\u2212k/(2p), so P(U)=(k\u22123p+1)/(2p)."
+    },
+    "wedge_p5": {
+      "p": 5,
+      "G_abs": "1/5",
+      "thr": "-3/5",
+      "plus_beats": true,
+      "minus_beats": true,
+      "proved": true,
+      "theorem": "Wedge G=\u00b11/p (15.48, Max\u2212 opposite to Max+). \u22121/p>\u22121+2/p \u21d4 p>3."
+    },
+    "triangle_pd_p5": {
+      "p": 5,
+      "eigs": [
+        "7/5",
+        "4/5",
+        "4/5"
+      ],
+      "pd": true,
+      "proved": true,
+      "theorem": "Triangle pair Gram: diag 1, off \u00b11/p; eigs 1+2/p, 1\u22121/p (\u00d72)."
+    },
+    "three_equal_SH": {
+      "SH_on_3equal": [
+        -2.0,
+        -5.0
+      ],
+      "dual_bad_SH": [
+        -5,
+        -3
+      ],
+      "disjoint": true,
+      "proved": true,
+      "theorem": "If 1_U is a triangle 3-equal, the unique expansion in the PD triangle Gram gives 2(S+f_e)+7+\u2211\u03b5 f_tri=0, so S_H=(\u22127\u2212\u2211\u03b5 f)/2. 3-equal is |\u2211\u03b5 f|=3, hence S_H\u2208{\u22125,\u22122}. Dual-bad needs S_H\u2208{\u22125,\u22123}."
+    }
+  },
+  "hinge": {
+    "residual_ii_a_ND": "CLOSED: dual-bad U cannot be a 0-1 pair-span function",
+    "residual_i": "OPEN",
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "bound_proved_general": true,
+    "open": "Close residual (i) |\u03bc|\u22641/(2p); then E1/L."
+  },
+  "F3": "Do not claim E1/L CLOSED: residual (i) |\u03bc|\u22641/(2p) remains open. (ii-a) ND only."
+}

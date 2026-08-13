@@ -1,0 +1,37 @@
+{
+  "prop": "15.233",
+  "title": "Signed k=2: 14-term per2 form, bilinear in new columns; unsigned still dead; residual OPEN",
+  "proved": {
+    "k2_surviving_14": true,
+    "k2_permanent_closed_form": true,
+    "k2_bilinear": true,
+    "k2_unsigned_still_dead": true,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "abs_per_k2_ub": 14,
+    "k2_unsigned_majorant": "42(p^2-3)(p^2-4)",
+    "k2_majorant_p5": 19404,
+    "B_p5": "252/5"
+  },
+  "hinge": {
+    "k3_permanent_closed_form": true,
+    "unsigned_layers_012_dead": true,
+    "k2_surviving_14": true,
+    "k2_permanent_closed_form": true,
+    "k2_bilinear": true,
+    "k2_unsigned_still_dead": true,
+    "residual_i_closed_via_233": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "type_I": false,
+    "e1": false,
+    "open_hinge": "|R\u0304\u2084|\u2264B via signed k=0,1 (and \u03bc-weighted k=2 bilinear) or Aut-SOS+diamond / Path C / K\u2084 / free-e+ker=sc."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "residual_i_dual_eq_empty_proved_general": false,
+  "type_I_k_3p_minus_2_closed_general": false,
+  "e1_closed_general": false,
+  "note": "k=2 per is a bilinear C\u2297C form in the two new vertices.  Unsigned still exceeds B.  No predicate flip."
+}

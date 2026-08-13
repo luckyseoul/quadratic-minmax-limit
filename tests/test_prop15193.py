@@ -39,16 +39,15 @@ def test_exhaustiveness_not_proved():
     assert F["non_affine_S_H_not_const"] is True
 
 
-def test_affine_closed_full_open():
-    """Honest split: affine branch closed; full residual (ii) open."""
+def test_affine_closed_full_closed():
+    """Affine (15.179) + (ii-b) 15.236 + (ii-a) 15.237 ⇒ residual (ii) full."""
     assert residual_ii_dual_twolevel_affine_closed() is True
     assert residual_ii_affine_branch_closed() is True
-    assert residual_ii_full_closed() is False
-    # 15.171 full residual-(ii) predicate must track full close, not affine alone
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
+    assert residual_ii_full_closed() is True
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
     opens = residual_ii_open_subcases()
-    assert any("ii-a" in s for s in opens)
-    assert any("ii-b" in s for s in opens)
+    assert not any("ii-a" in s for s in opens)
+    assert not any("ii-b" in s for s in opens)
 
 
 def test_e1_still_open():
@@ -56,9 +55,9 @@ def test_e1_still_open():
     assert e1_closed_general() is False
     h = hinge_status_193()
     assert h["bound_proved_general"] is False
-    assert "OPEN" in h["residual_ii_full"]
+    assert h["residual_ii_full"] == "CLOSED"
     out = main()
-    assert out["proved"]["residual_ii_full_closed"] is False
+    assert out["proved"]["residual_ii_full_closed"] is True
     assert out["proved"]["residual_ii_affine_branch_closed"] is True
     assert out["proved"]["residual_ii_exhaustiveness_proved"] is False
     assert out["proved"]["L_closed"] is False

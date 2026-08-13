@@ -1,6 +1,6 @@
-# Status (2026-08-06)
+# Status (2026-08-13)
 
-**\(L=\lim\alpha_n=\tfrac12\) is OPEN** (denseness path blocked by residual (i) and full residual (ii)).
+**\(L=\lim\alpha_n=\tfrac12\) is OPEN** (denseness path blocked by residual (i) only; residual (ii) ND closed 2026-08-13).
 
 | Claim | Status | Reference |
 |-------|--------|-----------|
@@ -8,20 +8,20 @@
 | \(\rho=1\) on Paley \(n=p^2+1\) | CLOSED | `PROOF_rho_eq_1.md` |
 | Bi-tight majorization algebra (15.167) | CANDIDATE | `prop15167.py` |
 | Type I freeness-fail ND (residual i) | **OPEN** | 15.217: need \(\|m_4\|_2^2\le n(n-2)/4\) (Φ identity fixes R criterion; bound open) |
-| Deep freeness-fail ND (residual ii) | **PARTIAL** | affine branch CLOSED (15.179); full OPEN (15.193 exhaustiveness) |
-| E(1) / \(L=\tfrac12\) | **OPEN** | residual (i) open; full residual (ii) open |
+| Deep freeness-fail ND (residual ii) | **CLOSED** | affine 15.179 + (ii-b) 15.236 + (ii-a) 15.237; exhaustiveness still False (not required) |
+| E(1) / \(L=\tfrac12\) | **OPEN** | residual (i) open |
 | Path-C residual / 16N | OPEN optional | not required for denseness path |
 | Prize acceptance | OPEN | X + GitHub; Paata AI-test |
 
 ### Fatal gaps (honest)
 
 1. Residual **(i)** dual-equality: **OPEN**. 15.217: \(R\le2p\Leftrightarrow\|m_4\|_2^2\le n(n-2)/4\) (via exact \(\Phi=n(n-1)(n-2)/8\) on Max+). That \(m_4\) bound (equivalently \(\|\delta\|_2^2\le R\text{-room}\), or \(K_4\le n(15n-22)\)) is unproved Max+-free. Reductions crude≤thr-η-budget and \(Q\le10\Rightarrow\) dual-eq empty remain. `gsum_disj_lb` **False**.
-2. Residual **(ii)** full: affine dual two-level branch CLOSED by freeze-to-tight (**15.179**); multi-level / non-affine freeness-fail still open until exhaustiveness (**15.193**).
+2. Residual **(ii)** full ND: **CLOSED** (15.179 affine + 15.236 (ii-b) + 15.237 (ii-a)). Exhaustiveness (15.193) remains False and is not required.
 
 ### Remainder progress (15.172–194)
 
 - **15.179 residual (ii) affine branch CLOSED:** dual two-level freeness-fail affine \(\Rightarrow S_H\equiv3\Rightarrow k=3p-1\); impossible for \(k\ge3p\); fail-eq empty under bi-tight.  
-- **15.193 residual (ii) exhaustiveness OPEN:** freeness-fail does **not** force \(S\in\{2,4\}\) and \(f_e=3-S\); (ii-a) multi-level and (ii-b) non-affine two-level remain. Full residual (ii) **not** closed.  
+- **15.193 residual (ii) exhaustiveness still False (not required):** freeness-fail does **not** force \(S\in\{2,4\}\) and \(f_e=3-S\). Full residual (ii) is **CLOSED** by ND: (ii-a) 15.237 + (ii-b) 15.236 + affine 15.179.
 - **15.194 row negative-mass (residual i):** proved sufficient lemma \(N_e<4-6/p\Rightarrow\) dual-eq empty (independent box min). **Census:** pure \(N_e\) target **fails** at \(p=3,5,7\) (\(N_e=16/3,384/65,\approx13>\) thr). Refined **row+mass LP** max \(\kappa_e\approx1.19,1.17<\) need at \(p=5,7\) (blocks; evidence only). General Max+-free row+mass / ker-box still OPEN.  
 - **15.195 mass-corrected dual-eq:** dual-eq needs mass-min \(\sum a\kappa\le-2(2-\alpha)\). Criterion proved. **Census:** p=5 exact min\(-30/13>-254/65\) blocks; p=7 blocks; p=3 does not. PSD/G+ floors too weak for worst-case \(a\). General Max+-free mass-min bound still OPEN.  
 - **15.196 spectral row energy:** \(a\ge-2\) (PSD); \(Q_e\le 2(n+\lambda_2(n-2))/(n-1)-4\). **If \(Q_e\le10\)** (or \(\lambda_2\le6+5/(n-2)\)), mass-min blocks dual-eq for all primes \(5\le p\le47\) (Fraction check). **Census:** \(Q\approx8.17,6.69\) at p=5,7; \(\lambda_2=88/13,2160/409\). Spectral ub alone too weak at p=5. **OPEN:** Max+-free \(Q_e\le10\) or \(\lambda_2\) thr.  
@@ -54,6 +54,12 @@
 - **15.229 size-3 Cy vanishes + functional eq (2026-08-12):** **Proved Max+-free** size-3 contribution to E[∏(Cy)_i] is 0 on |κ|=1 (C² collision calculus + 64-exhaust s=0); **(p⁴−1)μ+2φ=R̄₄** with R̄₄ the size-4 non-self-image remainder; conditional |R̄₄|≤(p⁴−1)/(2p)−4(p−2)⇒|μ|≤1/(2p). **OPEN:** bound R̄₄. No predicate flip. Evidence: `src/e1_gmin_m4_prop15229.py`.  
 - **15.230 R_part≤budget + Cy≡δ unify (2026-08-12):** **Proved** R_part=(p⁴−1)μ_part+2φ has |R_part|≤R_part_max with closed form; **R_part_max≤B** for all primes p≥5 with slack (p−1)(p+1)(p²+1)(p³−2p²−13p+18)/(2p²(p²−5))>0 (same cubic as maj≤1/(2p)); **R̄₄=R_part+(p⁴−1)δ** and (B−R_part_max)/(p⁴−1)=room_δ. Particular Cy image is R-safe; residual-(i) = δ-correction only. **OPEN:** |R̄₄|≤B / |δ|≤room_δ. No predicate flip. Evidence: `src/e1_gmin_m4_prop15230.py`.  
 - **15.231 permanent form of R̄₄; crude |per| dead (2026-08-12):** **Proved Max+-free** R̄₄(S)=∑_{T≠S} per(C[S,T]) μ_T=(Per μ)_S−μ_S on |κ|=1 (size-4 Cy = permanent operator). **Proved** crude ∑|per| majorant is dead for residual-(i) (p=5: 47500≫B=50.4; all p≥5: binom(n,4)·24≫B) — signed cancellation required (Jacobi/cycle before abs or Aut-SOS). Certified only: Per φ=(2n+1)φ on |κ|=1 for p=3,5,7 (not general). **OPEN:** |R̄₄|≤B. No predicate flip. Evidence: `src/e1_gmin_m4_prop15231.py`.
+- **15.232 intersection split / k=3 per + C² pairing (2026-08-12):** **Proved Max+-free** R̄₄=∑_{k=0}^{3} R^{(k)}; k=3 permanent 11-term closed form (column-linear in the new vertex, |per|≤11); C² pairing ∑_{t∉S} C_{ut}C_{vt}=(n−1)1_{u=v}−∑_{s∈S} C_{su}C_{sv}. **Proved dead:** unsigned layers k=0,1,2 each exceed B for all primes p≥5. **Proved:** k=3 unsigned |R^{(3)}|≤44(p²−3)≤B for all primes p≥89 (f(p)=p⁴−88p³−8p²+280p−1; f(89)>0, f'>0); unsigned k=3 dead for 5≤p<89. Residual (i)/E1/L still **OPEN** — no predicate flip. Evidence: `src/e1_gmin_m4_prop15232.py`.
+- **15.233 signed k=2 (2026-08-12):** **Proved Max+-free** 14 surviving perms, |per|≤14; per2 / κ grouped closed form; bilinear in the two new columns (C⊗C contraction). Unsigned |R^{(2)}|≤42(p²−3)(p²−4) still exceeds B for all p≥5. No predicate flip. Evidence: `src/e1_gmin_m4_prop15233.py`.
+- **15.234 signed k=1 (2026-08-12):** **Proved Max+-free** 18 survivors, |per|≤18; Laplace along the shared column per=∑_{x≠a} C_{xa} per_3(C[S\{x},new]); trilinear in the three new vertices. Unsigned |R^{(1)}|≤12(p²−3)(p²−4)(p²−5) exceeds B for all p≥5. No predicate flip. Evidence: `src/e1_gmin_m4_prop15234.py`.
+- **15.235 signed k=0 (2026-08-12):** **Proved Max+-free** full 24-perm permanent; S₄ cycle-type split 1+6+3+8+6; 4-cycle inverse pairing (P_4cyc even, |P_4cyc|≤6). Unsigned 24·C(n−4,4) still exceeds B for all p≥5 (n=p²+1). Layer types named; residual (i)/E1/L still **OPEN**. Evidence: `src/e1_gmin_m4_prop15235.py`.
+- **15.236 residual (ii-b) ND CLOSED (2026-08-13):** Even \(k\le4p-2\) ⇒ max_Max− \(S\ge-2\); dichotomy weak-ND or dual-bad two-level; dual-bad empty by 15.50 slopes + \(v_p(|Max_\pm|)=1\). `residual_ii_b_ND_closed=True`. Evidence: `src/e1_gmin_m4_prop15236.py`.
+- **15.237 residual (ii-a) ND CLOSED (2026-08-13):** Dual-bad \(U=\{S=-4,f_e=-1\}\) is a 0-1 pair-span; L²=L ⇒ star or triangle; constants / pair-slices / triangle 3-equals cannot be U. `residual_ii_a_ND_closed=True`. `residual_ii_full_closed` = affine ∧ (ii-a) ∧ (ii-b). Residual (i) / E1 / L still **OPEN**. Evidence: `src/e1_gmin_m4_prop15237.py`.
 
 
 
@@ -72,7 +78,7 @@
 - **15.191 (Max+-free partial):** Derangement permanent of \(C[S,S]\) equals 1 on \(|\kappa|=1\) (64-exhaust); star-sum \(\sum_s\prod_{i\neq s}C_{is}=0\) on \(|\kappa|=1\); Cy-expansion size1+size2 \(=-2\varphi\) (any conference \(C^2\) + Paley \(\pi\)); envelope \(|4\kappa-\varphi|/(pn)\le2/n\le1/(2p)\) for \(p\ge5\). **Correction:** \(|\mu|\le|f_4|\) fails at p=7 (many classes; f4 not a pointwise majorant); viable target remains \(|\mu|\le2/n\) (census p=5,7) or \(\le1/(2p)\).  
 - **15.192 (Max+-free):** Gsum diag\(=2\); row sum\(=n\); avg disj Gsum\(=2/(n-3)\). Aut_e averaging: dual-eq feasible iff Aut_e-invariant dual-eq feasible. \((3/2)\cdot\)scheme-max \(<2-\alpha\) for all \(p\ge5\). **Census Aut_e ker-box:** p=3 feasible (\(\max\kappa_e=14/5\)); p=5,7 empty (\(\max=369/455\), \(11736/19775\); ratios to scheme \(41/28\), \(163/113\), both \(<3/2\)).  
 - **Still open (residual i):** Max+-free \(\max\kappa_e\le(3/2)\cdot\)scheme-max (or any bound \(<2-\alpha\)) for all \(p\ge5\), **or** \(|\mu|\le2/n\) (or \(\le1/(2p)\)) on \(|\kappa|=1\).  
-- `gsum_disj_lb_proved_general()=false`; residual (ii) affine closed / full open; **E1/L OPEN**.
+- `gsum_disj_lb_proved_general()=false`; residual (ii) **CLOSED**; residual (i) / **E1/L OPEN**.
 
 ### Short package
 
@@ -80,12 +86,11 @@
 
 ### Required opens (denseness prize path)
 
-1. **Math residual (i):** Prove \(\|m_4\|_2^2\le n(n-2)/4\) for all primes \(p\ge5\) (15.217), **or** \(K_4\le\mathrm{Wick}_{hi}\), **or** \(|\mu|\le2/n\) / free-e_sc+ker=sc. Φ identity and conditional dual-eq chain already proved.  
-2. **Math residual (ii):** Prove exhaustiveness lemma (15.193): freeness-fail \(\Rightarrow S\in\{2,4\}\) and \(f_e=3-S\) on Max+, **or** close multi-level / non-affine subcases by other ND. Affine branch already done (15.179).  
-3. **Predicates:** Flip hinges → residual (i) ∧ residual (ii) full → E1 → L only after (1)+(2). Soft-close forbidden.  
-4. **AI-test:** Cold AI-test on residual-(i) CLOSED scored **NOT_PROVED** (2/2 BLOCK) under `{SCRATCH}/ai_test/`; re-run only after hinge fixed.
+1. **Math residual (i) only:** Prove \(\|m_4\|_2^2\le n(n-2)/4\) for all primes \(p\ge5\) (15.217), **or** \(K_4\le\mathrm{Wick}_{hi}\), **or** \(|\mu|\le 1/(2p)\) / \(|\mu|\le 2/n\) / dual-eq empty / free-e_sc+ker=sc. Φ identity and conditional dual-eq chain already proved. Residual (ii) ND is **CLOSED** (15.179+15.236+15.237); exhaustiveness (15.193) remains False and is **not** required.  
+2. **Predicates:** Flip `gsum_disj_lb` / `type_I` / `e1_closed_general` via **real imports** only after (1). Then Main Theorem \(L=\tfrac12\). Soft-close forbidden.  
+3. **AI-test:** Cold AI-test on residual-(i) CLOSED scored **NOT_PROVED** (2/2 BLOCK) under `{SCRATCH}/ai_test/`; re-run only after hinge fixed.
 
-**Non-required:** Path-C / 16N / Hypothesis H.  
+**Non-required:** Path-C / 16N / Hypothesis H / 15.193 exhaustiveness.  
 **Out of agent control:** Ping Paata (user).  
 
-**Current:** residual (i) OPEN (Rayleigh gap); residual (ii) affine closed, full open; E1/L OPEN; claim **not** asserted.
+**Current:** residual (i) OPEN; residual (ii) CLOSED; E1/L OPEN; claim **not** asserted.

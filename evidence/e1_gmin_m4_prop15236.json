@@ -1,0 +1,112 @@
+{
+  "title": "Prop 15.236 residual (ii-b) ND: dual-bad-case empty by 15.50 slopes + v_p(|Max\u00b1|)=1",
+  "proved": {
+    "max_minus_ge_minus_2": true,
+    "dichotomy": true,
+    "N_mod_p2": true,
+    "dual_bad_case_empty": true,
+    "residual_ii_b_ND_closed": true,
+    "residual_ii_a_ND_closed": true,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "E1_closed": false,
+    "L_closed": false,
+    "bi_tight_empty": true
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "n_primes": 20,
+      "n_pairs": 383
+    },
+    "C": {
+      "proved": true,
+      "census_congruence": true,
+      "by_p": {
+        "5": 10,
+        "7": 35,
+        "11": 99,
+        "13": 26,
+        "17": 34,
+        "19": 323,
+        "23": 483,
+        "29": 58
+      }
+    },
+    "D": {
+      "proved": true,
+      "n_pairs": 383
+    },
+    "sample_cleared": {
+      "p": 5,
+      "k": 16,
+      "rhs_without_M": -32,
+      "p_divides_2": false,
+      "p_divides_k_minus_4p": false,
+      "p_divides_p_minus_1": false,
+      "p_divides_rhs_coeff": false,
+      "contradiction": true,
+      "proved": true,
+      "theorem": "Multiply the interpolant-slope identity by N\u208aN\u208b; substitute N\u00b1=p M\u00b1 from Thm C. The \u03bd-term contributes an extra p (A N_\u2212\u2212B N\u208a=p(\u2026)), so after /p\u00b2 the left is p[\u2026]. Right 2(k\u22124p)(p\u22121)M\u208aM\u208b is not divisible by p."
+    },
+    "sample_slope": {
+      "p": 5,
+      "k": 16,
+      "B_plus": "-2/3",
+      "B_minus": "2/3",
+      "dB_first_moment": "-4/3",
+      "dB_expect": "-4/3",
+      "first_moment_match": true,
+      "wedge_samples": [
+        {
+          "n_taup": 0,
+          "d_w": 0,
+          "wedge_dB": "0",
+          "form": "0",
+          "match": true
+        },
+        {
+          "n_taup": 1,
+          "d_w": 2,
+          "wedge_dB": "5/12",
+          "form": "5/12",
+          "match": true
+        },
+        {
+          "n_taup": 5,
+          "d_w": 10,
+          "wedge_dB": "25/12",
+          "form": "25/12",
+          "match": true
+        },
+        {
+          "n_taup": 16,
+          "d_w": 16,
+          "wedge_dB": "10",
+          "form": "10",
+          "match": true
+        }
+      ],
+      "proved": true
+    },
+    "Q_signs_p5": {
+      "p": 5,
+      "Phi": "65",
+      "Phi_plus_2S_at_S_min": "29",
+      "positive": true,
+      "proved": true,
+      "theorem": "On Max+, Q=\u03a6\u22122S. On Max\u2212, q=\u2212\u03a6\u22122S and \u03a6+2S\u2265\u03a6\u22122(4p\u22122)>0 for p\u22655, so Q=\u03a6+2S."
+    }
+  },
+  "hinge": {
+    "residual_ii_b_ND": "CLOSED: dichotomy + dual-bad-case empty (this prop)",
+    "residual_ii_a_ND": "CLOSED by 15.237",
+    "residual_ii_exhaustiveness": "OPEN \u2014 not forced affine",
+    "residual_i": "OPEN",
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "bound_proved_general": true,
+    "open": "Close (ii-a) multi-level ND and residual (i) |\u03bc|\u22641/(2p); then E1/L."
+  },
+  "F3": "Do not claim E1/L CLOSED: (ii-a) and residual (i) remain open. (ii-b) ND only."
+}

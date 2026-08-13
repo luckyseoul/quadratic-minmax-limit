@@ -1,0 +1,43 @@
+{
+  "prop": "15.235",
+  "title": "Signed k=0: S\u2084 cycle-type + 4-cycle inverse pairing; unsigned still dead; residual OPEN",
+  "proved": {
+    "k0_full_s4": true,
+    "k0_cycle_type_split": true,
+    "k0_four_cycle_inverse_pairing": true,
+    "k0_unsigned_still_dead": true,
+    "residual_i_closed": false
+  },
+  "algebra": {
+    "abs_per_k0_ub": 24,
+    "class_sizes": {
+      "id": 1,
+      "trans": 6,
+      "dbl": 3,
+      "3cyc": 8,
+      "4cyc": 6
+    },
+    "k0_unsigned_majorant": "(p^2-3)(p^2-4)(p^2-5)(p^2-6)",
+    "k0_majorant_p5": 175560,
+    "B_p5": "252/5"
+  },
+  "hinge": {
+    "k1_laplace": true,
+    "k0_full_s4": true,
+    "k0_cycle_type_split": true,
+    "k0_four_cycle_inverse_pairing": true,
+    "k0_unsigned_still_dead": true,
+    "residual_i_closed_via_235": false,
+    "residual_i_dual_eq_empty": false,
+    "gsum_disj_lb": false,
+    "type_I": false,
+    "e1": false,
+    "open_hinge": "|R\u0304\u2084|\u2264B on |\u03ba|=1 via \u03bc-weighted signed layer sums (character sums before abs) or Aut-SOS+diamond / Path C / K\u2084 / free-e+ker=sc.  Layer types named; unsigned dead."
+  },
+  "residual_i_closed": false,
+  "gsum_disj_lb_proved_general": false,
+  "residual_i_dual_eq_empty_proved_general": false,
+  "type_I_k_3p_minus_2_closed_general": false,
+  "e1_closed_general": false,
+  "note": "k=0 per is the full S\u2084 permanent; 4-cycles pair with inverses before abs.  Unsigned still exceeds B.  No predicate flip.  Signed-layer structure (k=3,2,1,0) is named."
+}
