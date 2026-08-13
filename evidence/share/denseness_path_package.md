@@ -2,7 +2,7 @@
 
 **Audience:** independent AI / human check (Paata AI-test).  
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit  
-**Date:** 2026-08-13 (residual (ii) ND closed; residual (i) still OPEN)
+**Date:** 2026-08-13 evening (residual (ii) ND closed; residual (i) still OPEN; post-4d89353 residual-(i) attacks did not close)
 
 ## Verdict
 
@@ -54,6 +54,8 @@ m_n=\min_{a_{ij}=\pm1}\max_{x=\pm1}\Bigl|\sum_{i<j}a_{ij}x_ix_j\Bigr|,\qquad
 Census: holds at \(p=5\). Soft-close forbidden.
 
 **15.232–235 structure (not a close):** intersection split of \(\bar R_4\); k=3 linear, k=2 bilinear (per2), k=1 Laplace/trilinear, k=0 S₄ cycle-type + 4-cycle inverse pairing. Unsigned every layer dead except k=3 for \(p\ge89\). Predicates stay False.
+
+**Post-4d89353 residual-(i) (not a close):** switching Max+\(\leftrightarrow\)Max−; far-sum; Comm-repair dual needs ker=sc; envelope holds on all \(|\kappa|=1\) at \(p=5,7\); \(\mu\) is a CR-class function. Dead list and viable hinges: `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`. No predicate flip.
 
 ## Fatal gaps (named)
 

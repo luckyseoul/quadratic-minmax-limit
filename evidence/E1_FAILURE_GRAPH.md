@@ -30,8 +30,29 @@
 | **F18** | Character sums / moments on affine or PGL orbit of halfspace as full Max+ | Orbit size 60 of 260 at \(p=5\) (PGL+Frob+sign); affine gmin ≈ −0.6 ≠ −3/65 | Incomplete orbit; wrong \(g_{\min}\) |
 | **F19** | **Moduli class-invariant thrash** after constancy already achieved | type6+CR already m4-constant at p=5 (26) and p=7 (48); coarse+CR / +κ / e4 / denser evec **do not** drop p=7 nullity below 2; local multi-param grid exceeds M_cand | New scripts `refine*`, `pin_extra`, more keys; no proof edge; user rebukes loops |
 | **F20** | **GPU theater** — claim GPU while wall is CPU | CuPy m4 for 0.1–0.4s then hours of ProcessPool class-build/evec with `nvidia-smi` util 0%; evidence still says `use_gpu=True` | User: “haven’t seen you use the GPU a single time” |
+| **F21** | Residual-(i) theater: ship a 15.xxx whose `gsum`/`type_I`/`e1` stay False | Does not settle L; LONG_HORIZON_GOAL forbids it | New `prop152xx.py` with `proved=True` on an identity that does not flip leftover |
+| **F22** | Flip `e1_closed_general` on census \(p\le7\) | Envelope / max\(\lvert\mu\rvert\) hold at \(p=5,7\) only | Predicate True without Max+-free general hinge |
 
-**Live graph (update every turn):** `evidence/P0_ENGINEERING_GRAPH.md` — nodes, critical path, compute routing, change log.
+### Residual-(i) dead mechanisms (2026-08-13; do not re-run)
+
+Detail: `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`.
+
+- Fréchet alone; joint Fréchet (two laws, opposite pairwise, same \(\mu\)) — only \(\lvert\mu\rvert\le1-2/p\).
+- \(\lvert\mu\rvert\le\lvert f_4\rvert\) pointwise — false at \(p=7\).
+- \(\lvert\delta\rvert\le\mathrm{room}_\delta\) pointwise — false at \(p=5\).
+- W0 (scheme dual) \(\in\mathrm{im}(\mathrm{Gsum})\) — resid 0.54 at \(p=5\).
+- Type I + switching \(G=\pi(G)\) — rank \(132<600\) at \(p=7\).
+- Low-degree Farkas \(y\) in \(f_e\) — 66 values, corr \(\sim-0.2\).
+- 3-wise interpolant — \(\varphi\) not a function of the 6 \(K_4\) edges.
+- \(\kappa_B\perp E_{\pm4p}\) — rel resid 0.997.
+- Matching-PSD / one-edge \(\sum\mu\) — no pointwise.
+- max-\(\lvert\mu\rvert\) at extreme \(\lvert\varphi\rvert\) — false at \(p=5\).
+- Halfspace \(G\)-orbit as full \(\mu\) — differs \(\sim0.6\).
+- \(\chi(\)never-zero quadratic\()\) in Max+ — \(0/300\) at \(p=5\).
+- Unsigned Per / \(\sum\lvert\mathrm{per}\rvert\) — 15.231.
+- Aut-line dim\(\le1\); 15.237 pair-span as a Type I kill.
+
+**Live graph (update every turn):** `evidence/P0_ENGINEERING_GRAPH.md` — nodes, critical path, compute routing, change log. **Banner on that file was stale (claimed L CLOSED 2026-08-05); current L is OPEN — trust `HANDOFF.md` / `STATUS.md`.**
 
 ---
 

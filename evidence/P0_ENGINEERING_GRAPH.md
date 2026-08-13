@@ -1,10 +1,10 @@
 # P0 Engineering Graph (persistent — update every turn)
 
 **Machine:** 88 CPU + Tesla V100-SXM2-16GB (CuPy).  
-**Policy:** F17 (no single-core thrash) · F19 (no moduli class-refine loops) · F20 (no GPU theater).  
-**L = lim α_n:** **CLOSED** \(=\tfrac12\) (2026-08-05; Props 15.167–15.171 + denseness).  
-**Optional open:** Path-C residual / 16N (not required for L).  
-**Last update:** 2026-08-05 (bi-tight 15.167; freeness-fail ND 15.170–171; E(1)/L closed).
+**Policy:** F17 (no single-core thrash) · F19 (no moduli class-refine loops) · F20 (no GPU theater) · F21 (no False-predicate 15.xxx) · F22 (no e1 flip on census).  
+**L = lim α_n:** **OPEN** (2026-08-13). The 2026-08-05 “CLOSED” claim was retracted (disj Gsum LB / 15.158). Residual **(ii) CLOSED**; residual **(i) OPEN**. Trust `HANDOFF.md` / `STATUS.md`, not the DAG below (stale Path-C framing).  
+**Optional open:** Path-C residual / 16N (not required for denseness L).  
+**Last update:** 2026-08-13 evening (residual-(i) attack log; leftover still \(\lvert\mu\rvert\le1/(2p)\)).
 
 ---
 

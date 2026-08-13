@@ -1,10 +1,10 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-13):** **\(L\) OPEN.** Residual **(ii) CLOSED** (affine 15.179 + (ii-b) 15.236 + (ii-a) 15.237). `residual_ii_full_closed` / `deep_s2` **True**. Only leftover: residual **(i)** \(|\mu|\le 1/(2p)\) (or \(|\mu|\le 2/n\), Gsum\(\ge-1/p\), dual-eq empty) for all primes \(p\ge5\). `gsum_disj_lb` / `type_I` / `e1_closed_general` **False**. Soft-close forbidden.  
+> **Now (2026-08-13 evening):** **\(L\) OPEN.** Residual **(ii) CLOSED** (affine 15.179 + (ii-b) 15.236 + (ii-a) 15.237). `residual_ii_full_closed` / `deep_s2` **True**. Only leftover: residual **(i)** \(|\mu|\le 1/(2p)\) (or \(|\mu|\le 2/n\), Gsum\(\ge-1/p\), dual-eq empty) for all primes \(p\ge5\). `gsum_disj_lb` / `type_I` / `e1_closed_general` **False**. Soft-close forbidden. Post-4d89353 residual-(i) attacks did **not** close the hinge (dead list in session handoff).  
 > Session: **`evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-08-13  
+**Status date:** 2026-08-13 evening  
 **Claim:** **OPEN** (E1 blocked by residual **(i)** only). Residual **(ii)** full ND closed. residual/16N optional open.
 
 **External / prize:** [MO 413935](https://mathoverflow.net/questions/413935) · [X prize](https://x.com/PI010101/status/2081070728422752329).  
@@ -35,7 +35,13 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **Non-required:** Path-C/16N. **User:** ping Paata after L actually closed.  
 
-**Do not right now:** residual/16N thrash · X chrome · soft-close · ship a 15.xxx whose predicates stay False · flip e1 on census \(p\le7\).
+**Do not right now:** residual/16N thrash · X chrome · soft-close · ship a 15.xxx whose predicates stay False · flip e1 on census \(p\le7\) · re-thrash the residual-(i) dead list in the session handoff.
+
+**Post-4d89353 residual-(i) (census / algebra, not a close):** switching \(z_\infty=-y_\infty\), \(z_x=y_{nx}\) (nonsquare \(n\)) maps Max+\(\leftrightarrow\)Max−; far-sum \(\sum_{\mathrm{far}}C_{ki}C_{kj}C_{ij}=C_{k0}\); Comm-repair dual cost\(<2-\alpha\) at \(p=5..23\) **if** ker=sc; interval envelope holds on all \(\lvert\kappa\rvert=1\) at \(p=5,7\); \(\mu\) is a PGL CR-class function; \(\nu=0\) on those sets. None of this flips a predicate.
+
+**Dead this session (do not re-thrash):** Fréchet / joint Fréchet; \(\lvert\mu\rvert\le\lvert f_4\rvert\) pointwise; \(\lvert\delta\rvert\le\mathrm{room}_\delta\); W0\(\in\mathrm{im}(\mathrm{Gsum})\); Type I+switching \(G=\pi(G)\); low-degree Farkas \(y\); 3-wise interpolant; \(\kappa_B\perp E_{\pm4p}\); matching-PSD / one-edge \(\sum\mu\); max-\(\lvert\mu\rvert\) at extreme \(\lvert\varphi\rvert\); halfspace \(G\)-orbit as full \(\mu\); \(\chi(\)never-zero quadratic\()\) in Max+; unsigned Per; Aut-line dim\(\le1\); 15.237 pair-span as Type I kill.
+
+**Still viable:** general envelope; \(G_+\succ0\)/ker=sc then wire Comm-repair dual; \(\lvert\mu\rvert\le2/n\); \(K_4\le n(15n-22)\); Max+-free CR \(F(\lambda)\); dual-eq Farkas not low-degree in \(f_e\).
 
 **Prior resumes:** `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`, `evidence/SESSION_HANDOFF_2026-08-12_residual_i.md`  
 **P0 graph:** `evidence/P0_ENGINEERING_GRAPH.md` · **Failure graph:** `evidence/E1_FAILURE_GRAPH.md`  
@@ -55,7 +61,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **E(1) OPEN:** residual **(ii) CLOSED** — affine 15.179 + (ii-b) 15.236 + (ii-a) 15.237; `residual_ii_full_closed=True`. Residual **(i)** Type I dual-eq still blocked (`gsum_disj_lb_proved_general=False`). **L OPEN.**
 
-**Primary hinge (general primes \(p\ge5\)):** \(|\mu|\le 1/(2p)\) on \(|\kappa|=1\), or \(|\mu|\le 2/n\), or dual-eq empty, or Gsum≽0+master+Fréchet \(\Rightarrow|\mu|\le 2/n\). Latest residual-(i) modules: `prop15186.py`–`prop15235.py`. Residual-(ii) hinges: `prop15236.py`, `prop15237.py`. Session: `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`.
+**Primary hinge (general primes \(p\ge5\)):** \(|\mu|\le 1/(2p)\) on \(|\kappa|=1\), or \(|\mu|\le 2/n\), or dual-eq empty, or \(G_+\succ0\) (ker=sc) + Comm-repair dual, or \(K_4\le n(15n-22)\). Latest residual-(i) modules: `prop15186.py`–`prop15235.py`. Residual-(ii) hinges: `prop15236.py`, `prop15237.py`. Session: `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`.
 
 **Optional residual/16N (still OPEN, not required for denseness L):**
 \[
@@ -68,7 +74,7 @@ E[s^4]\le \mathrm{Es4}_*(p)=\frac{4(3p^8-6p^6-148p^4-10p^2+129)}{p^4-8p^2-1}
 **Dead for closing residual:** class_key T at p=7 (F19); unrestricted CS/LP on ED4; full \(E_{4p}\) energy of \(f_y\); soft-close from sandwich+denseness (F3).
 
 **Modules:** `src/e1_gmin_m4_prop15110.py` … `prop15149.py` · evidence JSON same stems · tests `tests/test_prop1511*.py` `tests/test_prop1512*.py` `tests/test_prop1513*.py`  
-**Max+ caches:** `/tmp/maxplus_p5.npy`, `/tmp/e1_p7/maxplus.npy`, `/tmp/maxplus_p7.npy`
+**Max± caches:** `/tmp/maxplus_p5.npy` (260×26), `/tmp/maxminus_p5.npy`, `/tmp/maxplus_p7.npy` (11452×50), `/tmp/maxminus_p7.npy`, `/tmp/e1_p7/maxplus.npy`.
 **Props 15.45–15.51 (load-bearing, do not re-derive):**
 - Stars never bi-tight (wedge \(G^++G^-=0\)).
 - Bi-tight level-2 empty if \(g_{\min}>-(p-2)/(p(2p-1))\) (Prop 15.47). **Certified \(p=5,7\)**.
