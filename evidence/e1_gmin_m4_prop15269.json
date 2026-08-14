@@ -1,0 +1,95 @@
+{
+  "prop": "15.269",
+  "title": "Fourier support of Max+; Wick 3-point; \u03ba\u2083 criterion",
+  "theorems": {
+    "fourier_support": {
+      "proved": true,
+      "theorem": "y\u2208Max+, y_\u221e=+1 \u21d2 \u1e91 supported on {0}\u222a\u03a9 with \u1e91(0)=p and \u2211|\u1e91|\u00b2=p\u2074, where \u03a9={\u03be: \u03c7\u0302(\u03be)=p}.  Proof: FT of \u03c7\u2217z=pz\u22121.",
+      "depends_on": [
+        "Cy_eq_py",
+        "paley_kernel_convolution",
+        "gauss_sum_eval"
+      ]
+    },
+    "zhat_two_point": {
+      "proved": true,
+      "theorem": "E[\u1e91(\u03be)\u1e91(\u03b7)]=2p\u00b2 if \u03b7=\u2212\u03be\u2208\u03a9, else 0 (\u03be,\u03b7\u22600).  Proof: expand E[z(x)z(w)]=C_{xw}/p and evaluate Gauss sums.",
+      "depends_on": [
+        "2_design_15_189",
+        "theorem_fourier_support_structure"
+      ]
+    },
+    "wick_le_half_p": {
+      "proved": true,
+      "theorem": "On |\u03ba|=1 \u221e-sets: |Wick|=|\u03ba/p\u00b2\u22122/p\u00b3|\u2264(p+2)/p\u00b3\u22641/(2p) for all primes p\u22655 (p\u00b2\u22122p\u22124\u22650).  Room for \u03ba\u2083 is (p\u00b2\u22122p\u22124)/(2p\u00b3).",
+      "by_p_sample": {
+        "5": {
+          "wick_maj": "7/125",
+          "half_p": "1/10",
+          "room": "11/250",
+          "wick_plus": "3/125",
+          "wick_minus": "-7/125"
+        },
+        "7": {
+          "wick_maj": "9/343",
+          "half_p": "1/14",
+          "room": "31/686",
+          "wick_plus": "5/343",
+          "wick_minus": "-9/343"
+        },
+        "11": {
+          "wick_maj": "13/1331",
+          "half_p": "1/22",
+          "room": "95/2662",
+          "wick_plus": "9/1331",
+          "wick_minus": "-13/1331"
+        },
+        "13": {
+          "wick_maj": "15/2197",
+          "half_p": "1/26",
+          "room": "139/4394",
+          "wick_plus": "11/2197",
+          "wick_minus": "-15/2197"
+        }
+      },
+      "depends_on": [
+        "2_design_15_189",
+        "kappa_infty_matchings"
+      ]
+    },
+    "kappa3_criterion": {
+      "proved": true,
+      "hypothesis_proved_general": false,
+      "theorem": "If |\u03ba\u2083|\u2264(p\u00b2\u22122p\u22124)/(2p\u00b3) on every |\u03ba|=1 \u221e-set for all primes p\u22655, then |\u03bc|\u22641/(2p) on all |\u03ba|=1 four-sets (3-transitive Aut + 15.176).  The \u03ba\u2083 bound is OPEN.",
+      "depends_on": [
+        "theorem_wick_le_half_p",
+        "PSL_3_transitive",
+        "prop_15_176_farkas"
+      ]
+    }
+  },
+  "certified_p5_support": {
+    "certified": true,
+    "n_yinf_plus": 130,
+    "Cy_residual": 0.0,
+    "zsum_ok": true
+  },
+  "hinge": {
+    "fourier_support": true,
+    "zhat_two_point": true,
+    "wick_le_half_p": true,
+    "kappa3_criterion": true,
+    "nu_zero": true,
+    "kappa3_bound": false,
+    "residual_i_closed": false,
+    "open": "Need |\u03ba\u2083|\u2264(p\u00b2\u22122p\u22124)/(2p\u00b3) on |\u03ba|=1 \u221e-sets (bound E[\u1e91(\u03be)\u1e91(\u03b7)\u1e91(\u03b8)] on \u03a9-triples, or another listed hinge)."
+  },
+  "predicates": {
+    "residual_i_closed_via_269": false,
+    "gsum_disj_lb_proved_general": false,
+    "type_I": false,
+    "e1_closed_general": false
+  },
+  "soft_close": false,
+  "L_status": "OPEN"
+}

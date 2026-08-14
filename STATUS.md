@@ -1,6 +1,6 @@
-# Status (2026-08-13 late)
+# Status (2026-08-14)
 
-**\(L=\lim\alpha_n=\tfrac12\) is OPEN** (denseness path blocked by residual (i) only; residual (ii) ND closed 2026-08-13). Post-0443d55 continue did not close the hinge (dead list: `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`).
+**\(L=\lim\alpha_n=\tfrac12\) is OPEN** (denseness path blocked by residual (i) only; residual (ii) ND closed 2026-08-13). Active attack: \(G_+\succ0\) via inversion-\(T\) Mellin \(N(\varphi)\neq0\) (certified \(7\le p\le79\); general proof OPEN). Session: `evidence/SESSION_HANDOFF_2026-08-14_residual_i.md`.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|
@@ -252,4 +252,15 @@
 - **Certified** polynomial square identity; p=5 all 9900 finite |κ|=1 have ε=+1 and (Max+ cache) m₄⁺(S)=m₄⁺(πS); χ(−1)=1.
 - **OPEN:** |μ|≤1/(2p) (ν=0 does not kill even δ: p=5 μ=f4≠μ_part; p=7 within-type even span). Residual (i)/E1/L still **OPEN**. Predicates **False**.
 - Evidence: `src/e1_gmin_m4_prop15268.py`, `evidence/e1_gmin_m4_prop15268.json`.
+
+### 15.269 — Additive Fourier support of Max+; Wick 3-point; \(\kappa_3\) criterion
+- **Proved (Paley):** \(y\in\mathrm{Max}+\), \(y_\infty=+1\) \(\Rightarrow\hat z\) supported on \(\{0\}\cup\Omega\), \(\hat z(0)=p\), \(\sum\lvert\hat z\rvert^2=p^4\). Two-point: \(E[\hat z(\xi)\hat z(\eta)]=2p^2\) if \(\eta=-\xi\in\Omega\), else 0.
+- **Proved:** on \(\infty\)-sets, \(\mu=\mathrm{Wick}+\kappa_3\) with \(\mathrm{Wick}=\kappa/p^2-2/p^3\); \(\lvert\mathrm{Wick}\rvert\le(p+2)/p^3\le1/(2p)\) for all primes \(p\ge5\). Room for \(\kappa_3\): \((p^2-2p-4)/(2p^3)\).
+- **OPEN:** \(\lvert\kappa_3\rvert\le\) that room (or another listed residual-(i) hinge). `residual_i_closed_via_269()=False`. Predicates **False**.
+- Evidence: `src/e1_gmin_m4_prop15269.py`, `evidence/e1_gmin_m4_prop15269.json`.
+
+### G+ / inversion-T (scratch 2026-08-14; not a shipped close)
+- **Proved Max+-free (scratch, see 08-14 session handoff):** no cuspidals in \(\mathcal W_{++}^0\); G-span(\(F\))=all; affine disks span \(F_{\mathrm{aff}}\); \(\hat z_{\mathrm{inv}}=0\) off \(\Omega\); separable formula \(\hat z(\omega t^2)=p1_{x=0}+p1_{y=0}+G_p[\chi_p(-2)J(2x^2)+\chi_p(-2\,\mathrm{ib})J(2\,\mathrm{ib}\,y^2)]\).
+- **Certified:** affine+inv-\(T\) spans \(F\) at \(7\le p\le23\); \(N\neq0\) on every even K-character at every prime \(7\le p\le79\).
+- **OPEN (blocks residual i):** prove \(N(\varphi)\neq0\) for all \(p\ge7\). Do not flip predicates on the census.
 
