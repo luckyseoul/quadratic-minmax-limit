@@ -29,7 +29,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **Done (2026-08-06):** gap named (Gsum disj LB / 15.158); claim retracted OPEN; short package `evidence/share/denseness_path_package.md`; load-bearing tests; 3 cold AI passes → NOT_PROVED + honest OPEN.
 
-**Prize path leftover:** Paata AI-test on `evidence/share/denseness_path_package.md`. This session: 2/3 cold agents + referee Q1/Q2 **PASS**; one critique **NO** (“D–G too sketchy if you refuse citations”). Next writeup step if any: expand D–G in that file only. Do **not** unflip \(L\) / E(1). User pings Paata (X + GitHub).  
+**Prize path leftover:** **Do not ping Paata.** Hostile review (2026-08-15) found load-bearing holes: (1) \(\lambda_{\min}\ge6\) / \(G_{u,\mathrm{disj}}\) not a Gram; (2) residual (ii) \(k\ge4p\); (3) Type I multi-level Max−; (4) Lemma D A3 existence / 2-plane. Package verdict is **not prize-ready**. Johnson Lemma E has no algebraic GAP (`evidence/share/lemma_E_johnson.md`). Do **not** claim \(L=1/2\) in public until (1)–(3) close. Live `e1` still True (wiring); do not treat that as a prize stamp.  
 
 **Non-required:** Path-C/16N. **User:** ping Paata after L actually closed.  
 

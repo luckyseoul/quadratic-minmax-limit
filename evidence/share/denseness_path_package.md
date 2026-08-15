@@ -6,8 +6,9 @@
 
 ## Verdict
 
-**\(L=\lim\alpha_n=\tfrac12\) is proved** by sandwich + Paley denseness + E(1).  
-E(1) is Type I ∧ residual (ii) ∧ bi-tight, each for every prime \(p\ge5\). Residual (ii) is ND-closed. Residual (i) Type I is dual-eq empty via \(G_+\succ0\) on \(\mathcal W_{++}^0\) (15.272), not the 15.216 \(K_4\) path and not Gsum. Bi-tight is empty for all \(p\ge5\) by 15.167 (mult\((\lambda_{\max})\ge d-1\), \(\lambda_{\min}(\Phi)\ge6\), \(L_*<2d\)).
+**15.272** writes a Max+-free spanning argument that \(k=1\cup k=3\) fills \(\mathcal W_{++}^0\) (Lemmas B–G), hence \(G_+\succ0\), hence dual-eq is empty on \(\mathrm{sc}\) (H–I). Aut-Schur is **false**. Gsum is unused.
+
+**Do not send this to Paata as a finished \(L=1/2\) proof.** Independent hostile review (2026-08-15) found three load-bearing holes **outside** the 15.272 span, plus two writeup holes **inside** Lemma D. They are listed under **Public caveats**. Live code still gates E(1) as True; that is a wiring fact, not a substitute for those holes.
 
 | Piece | Status |
 |-------|--------|
@@ -20,7 +21,7 @@ E(1) is Type I ∧ residual (ii) ∧ bi-tight, each for every prime \(p\ge5\). R
 | Aut-Schur / Jacquet | **False** (\(p=5\) \(k=3\) rank \(61/65\); unused) |
 | Gsum disj LB | **False** / unused |
 | Pairing \(1^\top K^{-1}v\) | **Open** / unused |
-| **E(1) / \(L=\tfrac12\)** | **Proved** |
+| **E(1) / \(L=\tfrac12\)** | **Not prize-ready** — see Public caveats |
 
 ---
 
@@ -35,6 +36,18 @@ L\stackrel{?}{=}\lim_n\alpha_n.
 Paley conference \(C\) of order \(n=p^2+1\) on \(\{\infty\}\cup\mathbb F_q\), \(q=p^2\), \(p\ge5\) prime. \(C_{\infty x}=1\), \(C_{xy}=\chi(x-y)\). \(\mathrm{Max}_+=\{y\in\{\pm1\}^n:Cy=py\}\). \(\Omega=\{\xi\in\mathbb F_q^\times:\hat\chi(\xi)=p\}\). \(m=(p+1)/2\). \(V_+=\{v:Cv=pv\}\). \(\mathcal W_{++}^0\) is the space of zero-diag \(++\) forms, dimension \(n(n-6)/8\).
 
 E(1) on this family means \(m_n\ge\Phi(C)-2\) with \(\Phi(C)=\tfrac12 n\sqrt{n-1}\). Then \(\alpha_n\to\tfrac12\) along \(n=p^2+1\).
+
+---
+
+## Named priors (one paragraph each)
+
+**Sandwich limsup.** A conference matrix of order \(n\) (Paley, or \(q\equiv1\pmod4\)) has \(\|C\|_{\mathrm{op}}=\sqrt{n-1}\), hence \(\Phi(C)=\tfrac12 n\sqrt{n-1}\) and \(\alpha_n\le\tfrac12\sqrt{1-1/n}\). Infinitely many such \(n\) with consecutive ratio \(\to1\), so \(\limsup\alpha_n\le\tfrac12\). (Lower sandwich \(\liminf\ge1/\pi\) is the dual-Gaussian arcsine bound, used only as a floor, not for the value \(1/2\).)
+
+**\(\rho=1\).** On Paley \(n=p^2+1\), the halfspace boolean vector \(x_\infty=1\), \(x_u=\sigma(L(u))\) for an \(F_p\)-form \(L\) and \(S\subset F_p\) of size \(m\) satisfies \(Cx=px\) (`evidence/PROOF_rho_eq_1.md`: fibre character sums \(p-1\) on \(\ker L\) and \(-1\) off). Thus \(\rho(C)=1\) and \(\Phi(C)=\tfrac12 n\sqrt{n-1}\).
+
+**Bi-tight, all \(p\ge5\).** \(\mathrm{mult}(\lambda_{\max}(\Phi))\ge d-1\) (PSL min irrep). \(\lambda_{\min}(\Phi)\ge6\) because \(Q_4\) is a Gram Rayleigh of Max+ edge signs, hence \(Q_4\ge0\Rightarrow\mathrm{ray}\ge0\Rightarrow\lambda_{\min}\ge6\). Majorization then gives \(\lambda_{\max}\le L_*=(p^4+24p^2-1)/(2(p^2-1))\), and \(2d-L_*=(p^4-24p^2-1)/(2(p^2-1))>0\) for \(p\ge5\) (\(f(x)=x^2-24x-1\), \(f(25)=24\), \(f'>0\)). So \(\lambda_{\mathrm{cycle}}<d\) and bi-tight covers are empty.
+
+**Residual (ii).** Affine two-level branch empty (15.179: forces \(k=3p-1\), impossible for \(k\ge3p\)). Even \(k\le4p-2\) Max− dichotomy (15.236). Dual-bad pair-span \(\{S=-4,f_e=-1\}\) cannot be a star, pair-slice, or triangle (15.237). Exhaustiveness that freeness-fail forces \(S\in\{2,4\}\) is **not** claimed and is not required.
 
 ---
 
@@ -82,29 +95,96 @@ and \(\tfrac12(p^2-1)(2C(m,2)-1)=\dim F^\perp\). This is an isomorphism, not a d
 
 ## Lemma D (bad \(\mu\)).
 
-For bad \(\mu\), unique pairs are the edges of \(K_m\). Every triple of good lines occurs as a \(k=3\) Max+ (A3 sawtooth + phase lock \(s_0+s_1+s_2\equiv-2\); \(M_3=C(m,3)p^2(p-1)\) matches the complete enum \(100,1176,24200\) at \(p=5,7,11\)). Each triple spans the \(2\)-plane \(\{x+y+z=0\}\) on its three edges (A5: distinct phases; Fejer \(\neq0\)). The line graph of \(K_m\) is connected for \(m\ge3\), so \(\chi_e-\chi_f\) generate \(1^\perp\). That is the bad-\(\mu\) isotypic.
+Write \(m=(p+1)/2\). The set \(\Omega\) is a union of \(m\) punctured \(F_p\)-lines (the *good* lines). A frequency \(\mu\neq0\) is **bad** when \(F_p\cdot\mu\cap\Omega=\emptyset\). Then \(S_\mu\) contains no same-line pair, so unique unordered pairs \(\{\xi,\mu-\xi\}\) are exactly the edges of the complete graph \(K_m\) on the \(m\) good lines: there are \(C(m,2)=(p^2-1)/8\) of them. (Check: \(|S_\mu|=(p^2-1)/4\) ordered, hence \(C(m,2)\) unique.)
+
+**Every triple of good lines occurs.** Let \(L_1,L_2,L_3\) be any three distinct good \(F_p\)-forms. Any two are independent, so after \((L_1,L_2):\mathbb F_q\cong\mathbb F_p^2\) one has \(L_3=\alpha L_1+\beta L_2\) with \(\beta\neq0\). Occupancies \(N,M,K:\mathbb F_p\to\{0,\ldots,p\}\) of the three fibres satisfy \(N(x)+M(y)+K(\alpha x+\beta y)\in\{p+1,2p+1\}\) and \(\sum N=p(p+1)/2\). Steps of \(N\) lie in \(\{0,\pm p\}\); a constant occupancy is a \(2\)-line function, impossible for Max+. Integer sumsets with \(|A+B|\le3\) force both step-sets to be \(2\)-term APs of common difference \(\pm p\). The only legal reconstruction with the occupancy sum is the *sawtooth*
+\[
+N(x)=1+(\lambda x+s)\bmod p,\qquad\lambda\in\mathbb F_p^*,\ s\in\mathbb F_p
+\]
+(and likewise \(M,K\)). Boolean \(z=\mathrm{maj}\) of the three sawtooths has \(\hat z\) supported on the three dual \(\Omega\)-lines and \(\hat z(0)=p\), hence \(Cy=py\) by Lemma B. The Plücker relation \(\alpha_1 L_1+\alpha_2 L_2+\alpha_3 L_3\equiv0\) plus \(\sum N\equiv1\pmod p\) forces the phase lock \(s_0+s_1+s_2\equiv-2\pmod p\). Thus \(s_0,s_1\) are free (\(p^2\) choices) and \(s_2\) is determined; the common fibre scale \(\lambda\) runs through \(\mathbb F_p^*\) (\(p-1\) choices). Count:
+\[
+M_3=C(m,3)\,p^2(p-1).
+\]
+This is \(100,1176,24200\) at \(p=5,7,11\), matching the complete maj-3 enum (a check, not the existence proof). The construction uses an arbitrary triple, so every unordered triple of good lines occurs.
+
+**One triple spans the \(2\)-plane.** A locked triple contributes products on its three edges \(E(T)\), summing to \(0\) (convolution). Shifts with the lock give three Fejer-nonzero coordinates times three characters on \(\mathbb F_p^2\) with phase vectors \((c_1,c_2)\), \((c_1-c_3,-c_3)\), \((-c_3,c_2-c_3)\). Equality of any two forces some \(c_i=0\), contradicting Fejer (sawtooth DFT never vanishes off \(0\)). Hence the three characters are distinct, the three edge-vectors are not \(\mathbb C\)-parallel, and they span the full \(2\)-plane \(\{x+y+z=0\}\) on \(E(T)\).
+
+**Line graph.** The line graph of \(K_m\) is connected for \(m\ge3\). The \(2\)-plane of any triangle containing a given pair of adjacent edges contains \(\chi_e-\chi_f\). Therefore all differences \(\chi_e-\chi_{e_0}\) lie in the span, which is \(1^\perp\) on \(E(K_m)\). That is the bad-\(\mu\) isotypic (Lemma C).
 
 ---
 
 ## Lemma E (Johnson same-line).
 
-\(k=1\) Max+ are \(z=f\circ L\) for a good form \(L\) and every \(f=2\,1_S-1\), \(|S|=m\) (15.269 B). On a good \(\mu\)-line, \(P_S(k)=\hat f(k)\hat f(\alpha-k)\) is even and lies in \(\sum P=0\). If \(\sum_k c_k P_S(k)=0\) for every such \(S\) with \(c_k=c_{\alpha-k}\), then \(g^\top Bg=0\) on all Johnson \(g\), where
+**Cylinders.** If \(z=f\circ L\) for a good form \(L\) and \(f=2\,1_S-1\) with \(|S|=m\), then \(\sum f=2m-p=1\), so \(\hat z(0)=p\sum f_{\mathrm{fibre}}=p\), and \(\hat z\) is supported on the dual line \(\subset\{0\}\cup\Omega\). Lemma B gives \(Cy=py\). Conversely a Max+ with one-line support is of this form, and every \(m\)-subset occurs. Count \(N_1=m\,C(p,m)\).
+
+**Products.** On a good \(\mu\)-line identify the line with \(\mathbb F_p\) so \(\mu\) corresponds to \(\alpha\neq0\). Write \(\hat f(k)=\sum_x f(x)\omega^{kx}\). Then
 \[
-B_{xy}=\omega^{\alpha y}\,\hat c(x-y).
+P_S(k)=\hat f(k)\hat f(\alpha-k),\qquad
+\sum_k P_S(k)=\sum_x f(x)^2\,p\,\omega^{\alpha x}=p\sum_x\omega^{\alpha x}=0
 \]
-Evenness \(\hat c(d)=\omega^{\alpha d}\hat c(-d)\) makes \(B\) symmetric. A 1-swap plus the subset-sum lemma (\(WW^\top|_{1^\perp}\) has eigenvalue \(C(n-2,k-2)(n-k)/(k-1)>0\) at \(n=p-2\), \(k=(p-1)/2\)) gives off-diagonal form \(\beta+u_i+u_j\). The quadratic of the rank-1 piece is \(2\sigma(u\cdot g)\) with \(\sigma=2m-p=1\neq0\), so \(u\) is constant and \(B=D+\beta(J-I)\). Then \(B_{x,x+d}=\omega^{\alpha(x+d)}\hat c(-d)\) is \(x\)-independent iff \(\hat c=0\) off \(0\) (good \(\mu\) has \(\alpha\neq0\), so \(x\mapsto\omega^{\alpha x}\) is nonconstant). Hence \(\{P_S\}\) spans the \((m-1)\)-dimensional same-line hyperplane.
+(\(\alpha\neq0\), \(f^2=1\)). Also \(P_S(k)=P_S(\alpha-k)\).
+
+**Annihilator \(\Rightarrow\) quadratic form.** If \(\sum_k c_k P_S(k)=0\) for every \(m\)-subset \(S\) and \(c_k=c_{\alpha-k}\),
+\begin{align*}
+\sum_k c_k\hat f(k)\hat f(\alpha-k)
+&=\sum_{x,y}f(x)f(y)\sum_k c_k\omega^{kx}\omega^{(\alpha-k)y}\\
+&=\sum_{x,y}f(x)f(y)\,\omega^{\alpha y}\,\hat c(x-y)
+=g^\top Bg,
+\end{align*}
+with \(B_{xy}=\omega^{\alpha y}\hat c(x-y)\) and \(g=f\).
+
+**Evenness \(\Rightarrow\) symmetry.** \(\hat c(d)=\sum_k c_k\omega^{kd}\). The substitution \(k\mapsto\alpha-k\) and \(c_k=c_{\alpha-k}\) give \(\hat c(d)=\omega^{\alpha d}\hat c(-d)\). Then \(B_{yx}=\omega^{\alpha x}\hat c(y-x)\). With \(d=x-y\), \(y=x-d\),
+\[
+B_{xy}=\omega^{\alpha(x-d)}\hat c(d)=\omega^{\alpha x}\omega^{-\alpha d}\hat c(d)=\omega^{\alpha x}\hat c(-d)=B_{yx}.
+\]
+
+**1-swap \(\Rightarrow\) \(\beta+u_i+u_j\).** Let \(M=B\) (already symmetric). For \(a\in S\), \(b\notin S\), \(S'=(S\setminus\{a\})\cup\{b\}\), the identity \(g^\top Mg=0=(g')^\top Mg'\) and \(g'=g+2(e_b-e_a)\) imply that all \((m-1)\)-subset sums of \(\delta_i=M_{bi}-M_{ai}\) on \(X=\mathbb F_p\setminus\{a,b\}\) are constant. Here \(|X|=p-2\) and \(k=m-1=(p-1)/2\), so \(1<k<n\). The incidence \(W\) of \(k\)-subsets vs ground set has
+\[
+(WW^\top)_{ii}=C(n-1,k-1),\quad(WW^\top)_{ij}=C(n-2,k-2)\ (i\neq j),
+\]
+hence \(WW^\top|_{1^\perp}\) has eigenvalue \(C(n-1,k-1)-C(n-2,k-2)=C(n-2,k-1)>0\). So \(\delta\) is constant on \(X\): \(M_{bi}-M_{ai}\) is independent of \(i\neq a,b\). That is \(M_{ij}=\beta+u_i+u_j\) off-diagonal.
+
+**\(\sigma=1\) kills \(u\).** For \(g\in\{\pm1\}^p\) with \(\sum g=\sigma\),
+\[
+g^\top(u1^\top+1u^\top)g=2\sigma(u\cdot g).
+\]
+Here \(\sigma=2m-p=1\neq0\), so \(u\cdot g\) constant on all Johnson \(g\) ⇒ \(u\) constant (same subset-sum lemma). Absorb \(u\) into \(\beta\). Diagonal is free because \(g_x^2=1\). Thus \(B=D+\beta(J-I)\).
+
+**Fourier annihilator.** \(B_{x,x+d}=\omega^{\alpha(x+d)}\hat c(-d)\). Off-diagonals constant and \(\alpha\neq0\) force \(\hat c(-d)=0\) for \(d\neq0\). So \(c\) is constant — the convolution-hyperplane normal — and \(\{P_S\}\) spans the \((m-1)\)-dimensional same-line hyperplane.
 
 ---
 
 ## Lemma F (good \(\mu\)).
 
-Unique pairs \(= m\) same-line \(+ C(m-1,2)\) mixed \(= C(m,2)+1\); convolution ⇒ hyperplane dim \(C(m,2)\). Lemma E contributes dim \(m-1\). Complementary mixed: Lemma D on \(K_{m-1}\) for \(p\ge7\) (\(m-1\ge3\)) contributes \(C(m-1,2)-1\). Intersection \(0\), sum \(C(m,2)-1\). A through-\(L_0\) \(k=3\) triple has mixed Fejer \(\beta\neq0\), so \(\sum_{\mathrm{same}}wf=-2\beta\neq0\), the last direction. At \(p=5\), only \(k=1,3\) exist and the Veronese rank is \(65=\dim\mathcal W_{++}^0\).
+A good \(\mu\) lies on one good line \(L_0\). Unique pairs: \(m\) same-line pairs \(\{k,\alpha-k\}\) on \(L_0\), plus \(C(m-1,2)\) mixed pairs among the other good lines. Total \(m+C(m-1,2)=C(m,2)+1\). Convolution cuts one dimension, so the isotypic has dim \(C(m,2)\).
+
+Lemma E contributes the same-line hyperplane (dim \(m-1\), mixed coordinates \(0\)).
+
+**Complementary mixed.** The mixed pairs are \(E(K_{m-1})\) on the other good lines. For \(p\ge7\), \(m-1\ge3\). Relative to those \(m-1\) lines, \(\mu\) lies *off* them, so it is bad for that \(K_{m-1}\). Lemma D therefore spans \(1^\perp\) on the mixed edges (dim \(C(m-1,2)-1\), same-line coordinates \(0\)).
+
+These two subspaces intersect at \(0\) (disjoint supports). Sum of dimensions: \((m-1)+(C(m-1,2)-1)=C(m,2)-1\), one short of the isotypic.
+
+**Through-\(L_0\).** Take a \(k=3\) triple that includes \(L_0\) and two other good lines. Convolution on unique pairs of this good \(\mu\) reads \(2\sum_{\mathrm{same}}\Gamma+\sum_{\mathrm{mixed}}\Gamma=0\). The mixed coordinates of this triple are a Fejer product on an edge of \(K_{m-1}\) through a third line; A5+Fejer give a nonzero mixed amplitude \(\beta\). Then \(\sum_{\mathrm{same}}w f=-2\beta\neq0\): the same-line component is *not* in the hyperplane \(\sum P=0\) that Lemma E spans. Hence the vector is outside \(k{=}1\oplus\) mixed and supplies the last direction.
+
+**\(p=5\).** Here \(m=3\), so \(m-1=2\) and \(K_2\) has no triangle: the complementary-mixed step is vacuous. Only \(k=1\) and \(k=3\) exist. The Veronese \(\{yy^\top-S:y\in\mathrm{Max}_+\}\) of that finite set has rank \(65=\dim\mathcal W_{++}^0=26\cdot20/8\) (full SVD; \(k=3\) alone is \(61/65\)). A complete rank computation at one prime is a proof at that prime.
 
 ---
 
 ## Lemma G (\(G_+\succ0\)).
 
-Singer / Fejer / Weil / Gershgorin+DFT: the \(k=3\) Gram is PD on the Aut_∞-circulant space \(F\) for every prime \(p\ge7\) (at \(p=5\) the \(\mu=0\) block is singular). Lemmas D–F give \(F^\perp\)-injectivity of \(k=1\cup k=3\). Hence the Veronese spans \(\mathcal W_{++}^0\), so \(G_+\succ0\) (15.212). Aut-Schur is **not** used: Jacquet does not force the \(k=3\)-only space \(F\) to meet every irrep (\(p=5\) rank \(61/65\)).
+\(\dim F=(p^2-5)/4\) (even mean-zero functions on \(\Omega\)). \(\dim\mathcal W_{++}^0=n(n-6)/8\). \(\dim F^\perp=(p^2-5)(p^2-1)/8\).
+
+**Singer PD on \(F\), every prime \(p\ge7\).** The \(k=3\) locked-triple circulant on the \(m\) good lines:
+- \(\mu=0\) block eigenvalues \(3(m-1)(m-2)/2\) and \((m-2)(m-3)/2\), both \(>0\) iff \(m\ge4\) i.e. \(p\ge7\). At \(p=5\), \(m=3\), the second eigenvalue is \(0\).
+- Even-class Fejer stretch on each good line is a circulant with off-diagonal row-sum \((p^2-1)/8-|\hat s(1)|^2\) and \(|\hat s(1)|^2=1/(4\sin^2(\pi/(2p)))\). Diagonal dominance is \(\sin(\pi/(2p))<2/\sqrt{p^2-1}\), from \(\sin x<x\) and \(\pi\sqrt{p^2-1}<4p\) (\(p\ge3\)). So even stretches are invertible.
+- Off \(\mu=0\): locked pair-sum \(g=\tfrac12(U+T)+\varepsilon_\infty\) with \(|T|\le2\sqrt{p}+1\) (Weil / Perel'muter on a squarefree quadratic of degree \(2\)) and \(|g|\le\sqrt{p}+2\). Gershgorin PD iff \(\sqrt{p}+2<(p-3)/4\), i.e. \(p-4\sqrt{p}-11>0\), which holds for every prime \(p\ge37\).
+- Finitely many primes \(7\le p\le31\): direct DFT of the Singer Gram, no vanishing coefficient.
+
+Thus \(G_{k=3}\succ0\) on \(F\) for all primes \(p\ge7\).
+
+Lemmas D–F give \(F^\perp\)-injectivity of \(k=1\cup k=3\). Together with Singer PD on \(F\) (and the \(p=5\) rank-\(65\) fill), the Veronese spans \(\mathcal W_{++}^0\). By 15.212, \(G_+\succ0\) on \(\mathcal W_{++}^0\) iff that Veronese has rank \(\dim\mathcal W_{++}^0\).
+
+Aut-Schur / Jacquet is **false** and unused: at \(p=5\) the \(k=3\)-only Veronese has rank \(61<65\).
 
 ---
 
@@ -140,6 +220,24 @@ Lemma H + I ⇒ free-\(e\) max on \(\mathrm{sc}\) is \(<2-\alpha\) ⇒ dual-eq e
 - Path-C / \(16N\) (optional, independent).
 
 Historical remarks “\(L\) OPEN” in Props 15.20–15.171 refer to those older routes and are not the current claim.
+
+---
+
+## Public caveats (do not skip)
+
+A hostile review for public scrutiny found the following. **None of these is Aut-Schur or Gsum.**
+
+1. **\(\lambda_{\min}(\Phi)\ge6\) is not proved for all \(p\).** 15.167 majorization needs this floor. The citation “\(Q_4=Be^\top G_{u,\mathrm{disj}}Be\) is a Gram” is **false**: \(G_{u,\mathrm{disj}}\) is a Hadamard mask of a Gram and has negative eigenvalues (\(\approx-30\) at \(p=3\), \(\approx-635\) at \(p=5\)). Floor certified only at \(p=5,7\) from exact \(\Phi\) spectra. Without a uniform floor, bi-tight need not be empty for \(p\ge11\), so E(1) is not proved on the whole Paley family.
+
+2. **Residual (ii) ND is written for even \(k\in[3p+1,4p-2]\)** (15.236/237). Affine two-level is dead for all \(k\ge3p\) (15.179). Two-level non-affine at **\(k\ge4p\)** (where \(E_-[S]\le-4\) and \(N_2/N\le0\)) is not in those ND lemmas.
+
+3. **Type I dual-eq is the two-level Max− law \(S\in\{-1,-3\}\).** The 15.169 bad case \(f_e\equiv-1\) on \(\{S=-1\}\) only gives \(\Phi(H)\ge\Phi-4\) if Max− is multi-level. Dual-eq empty does not by itself write ND for that multi-level bad case.
+
+4. **Lemma D existence / 2-plane (writeup).** The sawtooth+lock count \(M_3=C(m,3)p^2(p-1)\) is a schema. A pointwise \(z=\mathrm{maj}\) with three-line Fourier support is not fully written in-repo (`A3_PROOF.md` is missing). Distinct Fejer characters on a triangle cannot all lie in a \(2\)-plane and stay non-parallel unless amplitudes depend on the phase; that dependence is not written. Rank-\(2\) at each triple is certified at \(p=5,7,11\) only.
+
+5. **Lemma E Johnson** (same-line hyperplane) was expanded independently and has **no algebraic GAP** relative to 15.269 B + the \(WW^\top\) identity. See `evidence/share/lemma_E_johnson.md`.
+
+Until (1)–(3) are closed, **do not claim \(L=1/2\) as a prize result.** Until (4) is written, do not treat bad-\(\mu\) spanning as a complete general proof (finite rank-2 + \(p=5\) Veronese 65 remain).
 
 ---
 

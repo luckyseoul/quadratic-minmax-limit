@@ -56,6 +56,33 @@ def test_cost_bound_via_weil():
         assert t_ub_from_weil(p) > 0
 
 
+def test_lemma_I_cost_D_majorant_identity():
+    """(2-α)-α(S1+tN) = 2(p^4-3p^3-10p^2+9p+1)/(p^4-4p^2+1)."""
+    for p in (5, 7, 11, 13, 17, 19, 23):
+        alpha = Fraction(6, p * (p * p + 1))
+        assert alpha == alpha_particular(p)
+        S1 = sum_ne_alg(p)
+        t = t_ub_from_weil(p)
+        n = n_of(p)
+        N = Fraction(n * (n - 1), 2)
+        left = (2 - alpha) - alpha * (S1 + t * N)
+        rhs = Fraction(
+            2 * (p**4 - 3 * p**3 - 10 * p * p + 9 * p + 1),
+            p**4 - 4 * p * p + 1,
+        )
+        assert left == rhs
+        assert left > 0
+
+    def f(x: int) -> int:
+        return x**4 - 3 * x**3 - 10 * x * x + 9 * x + 1
+
+    def fprime(x: int) -> int:
+        return 4 * x**3 - 9 * x * x - 20 * x + 9
+
+    assert f(5) == 46
+    assert all(fprime(x) > 0 for x in range(5, 201))
+
+
 def test_degree_structure_stated():
     t = theorem_degree_and_diag_structure()
     assert t["proved"] is True

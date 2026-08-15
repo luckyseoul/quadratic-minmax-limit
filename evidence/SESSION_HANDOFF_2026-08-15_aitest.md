@@ -33,7 +33,14 @@ Pytest: `15272/270/170/249/216` → 38 passed.
 
 ## What a fresh agent should do
 
-**Only leftover that matters:** Paata AI-test. File: `evidence/share/denseness_path_package.md` (Lemmas A–J). Channel is **X + GitHub**, not MO. User pings Paata.
+**Do not ping Paata.** Close the public caveats in `evidence/share/denseness_path_package.md` first:
+
+1. Prove \(\lambda_{\min}(\Phi)\ge6\) without calling \(G_{u,\mathrm{disj}}\) a Gram (it is not PSD).
+2. Residual (ii) for even \(k\ge4p\).
+3. Type I bad case when Max− is not two-level.
+4. Write A3 existence + the 2-plane amplitude model for Lemma D.
+
+Johnson same-line (Lemma E) is algebraically clean. Live `e1` is still True; that is not a prize stamp.
 
 Cold-read score (this session):
 
