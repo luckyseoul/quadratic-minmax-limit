@@ -58,11 +58,9 @@ bi-tight (15.167); residual (ii); residual (i) via 15.272 \(k=1\cup k=3\)
 \(\Rightarrow G_+\succ0\Rightarrow\ker=\mathrm{sc}\) (15.207) \(\Rightarrow\) dual-eq empty
 (15.249/15.216); E(1); \(L=\tfrac12\).  Aut-Schur remains false.  Gsum disj LB unused.
 
-MathOverflow [413935](https://mathoverflow.net/questions/413935) /
-https://x.com/PI010101/status/2081070728422752329 remain open for existence.
+The mathematical claim of this file is \(L=\tfrac12\). Prize acceptance (Paata AI-test / human) is a separate channel: X + GitHub, not a MathOverflow answer. The cold-read package is `evidence/share/denseness_path_package.md`.
 
-> **Reader note.** Soft-close of \(L=\tfrac12\) via scheme-min Gsum was **retracted** 2026-08-06.
-> See `STATUS.md`, `evidence/share/denseness_path_package.md`.
+> **Reader note.** Soft-close of \(L=\tfrac12\) via scheme-min Gsum was **retracted** 2026-08-06. The present close is 15.272 (\(k=1\cup k=3\) span), not Gsum and not Aut-Schur. Historical “\(L\) OPEN” remarks in Props 15.20–15.171 refer to those older routes.
 
 ---
 
@@ -5147,7 +5145,7 @@ Continues 15.169. **OPEN for general primes \(p\ge5\).** Structure and condition
 
 6. **Consequence (honest).** residual (i) **OPEN** until disj Gsum LB is proved Max+-free (or an alternate residual-(i) proof). `type_I_k_3p_minus_2_closed_general()=False`. Also \(\mathrm{ES}_2=(13p-12)/p<k\) (integrality seed, independent).
 
-**OPEN:** residual (i) general; residual (ii); full E(1); \(L=\tfrac12\).
+**Addendum (2026-08-15).** The Gsum path above remains unused (`gsum_disj_lb_proved_general=False`). Type I is closed by the **dual-eq** path: 15.272 \(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\Rightarrow\ker=\mathrm{sc}\) (15.207) \(\Rightarrow\mathrm{cost}_D<2-\alpha\) (15.249) \(\Rightarrow\) dual-eq empty (15.216). See Prop 15.272 and `evidence/share/denseness_path_package.md`.
 
 Evidence: `src/e1_gmin_m4_prop15170.py`, `evidence/e1_gmin_m4_prop15170.json`,
 `tests/test_prop15170.py`, `evidence/share/denseness_path_package.md`.
@@ -5176,8 +5174,29 @@ Continues 15.168–170. **OPEN for general primes \(p\ge5\).** Structure (parity
 
 7. **Consequence (honest).** Residual (ii) **OPEN**. With residual (i) open and Gsum hinge open: **E1_closed_general=false**, **L OPEN** (no soft-close). Denseness cannot force \(L=\tfrac12\) without E(1).
 
-**Still OPEN:** residual (i)/(ii) (Gsum disj LB); Path-C residual/16N/Es4\(_*\) (optional).  
-residual_closed_general=false. E1_closed_general=false. **L OPEN.**
+**Addendum (2026-08-13/15).** Residual (ii) later closed by ND (15.179 affine + 15.236 (ii-b) + 15.237 (ii-a)); exhaustiveness 15.193 stays False and is not required. Residual (i) / \(L\) close by 15.272, not Gsum. Path-C / \(16N\) remain optional open.
 
 Evidence: `src/e1_gmin_m4_prop15171.py`, `evidence/e1_gmin_m4_prop15171.json`,
 `tests/test_prop15171.py`, `evidence/share/denseness_path_package.md`.
+
+## Prop 15.272 (2026-08-15) — \(k=1\cup k=3\) spans \(\mathcal W_{++}^0\)
+
+**Statement.** For every prime \(p\ge5\), the \(k=1\) cylinders together with the \(k=3\) locked triples span \(\mathcal W_{++}^0\). Hence \(G_+\succ0\), \(\ker(\mathrm{Gsum})=\mathrm{sc}\), dual-eq is empty, Type I residual (i) is closed, and with residual (ii) and bi-tight at \(p=5\) one has E(1) and \(L=\tfrac12\).
+
+Aut-Schur is **false** (Jacquet \(\nRightarrow\) PSL-span of \(k=3\) \(F\); \(p=5\) rank \(61/65\)). Gsum disj LB is unused. The pairing \(1^\top K^{-1}v\) is unused.
+
+**Proof (linear).** See `evidence/share/denseness_path_package.md` Lemmas B–J, written for a cold read. In outline:
+
+1. \(V_+\cong\mathbb C^{\{0\}\cup\Omega}\) (FT of \(Cv=pv\); \(\hat z(0)=p v_\infty\); support \(\subseteq\{0\}\cup\Omega\)).
+2. Each Aut_∞ isotypic of \(F^\perp\) is the convolution hyperplane on unique pairs of \(S_\mu\) (zero-diag is DFT inversion, not a dimension leap).
+3. Bad \(\mu\): \(k=3\) triangles + connected line graph of \(K_m\) span \(1^\perp\). Every triple occurs.
+4. Good \(\mu\): Johnson products \(P_S(k)=\hat f(k)\hat f(\alpha-k)\) span the same-line hyperplane of dim \(m-1\) via \(B_{xy}=\omega^{\alpha y}\hat c(x-y)\), 1-swap, and \(\sigma=2m-p=1\). Complementary mixed + through-\(L_0\) Fejer fill the rest. \(p=5\): Veronese rank \(65\).
+5. Singer PD of \(k=3\) on \(F\) for \(p\ge7\).
+6. 15.207 + 15.249: \(\mathrm{cost}_D<2-\alpha\) is the rational
+   \[
+   (2-\alpha)-\alpha(S_1+tN)=\frac{2(p^4-3p^3-10p^2+9p+1)}{p^4-4p^2+1}>0
+   \]
+   for every prime \(p\ge5\) (\(f(5)=46\), \(f'>0\) on \([5,\infty)\)).
+
+Evidence: `src/e1_gmin_m4_prop15272.py`, `src/e1_gmin_m4_prop15270.py`,
+`src/e1_gmin_m4_prop15249.py`, `tests/test_prop15272.py`.

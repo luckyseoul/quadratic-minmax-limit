@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """
-Prop 15.272 — F^⊥ isotypic geometry of the k=3 Veronese.
+Prop 15.272 — F^⊥ via k=1∪k=3; imported residual-(i) hinge.
 
-Does **not** flip residual_i / gsum / E1 / L. Soft-close forbidden.
+This module's k13_spans / fperp flags are the live residual-(i) hinge
+(imported by 15.270 gplus, then 15.207 / 15.249 / 15.216 / 15.170).
+Aut-Schur and Gsum stay False. Soft-close of a different path forbidden.
 
 SETUP
   Aut_∞ translations decompose 𝒲₊₊⁰ = F ⊕ F^⊥.  Cv=pv on V₊ never
-  uses ±1: ẑ(χ̂−p)=0, so every v∈V₊ has Fourier support in {0}∪Ω
-  (15.269 B is the same linear equation).  A ++ form is therefore a
+  uses ±1: at ξ≠0 one has ẑ(χ̂−p)=0, and ẑ(0)=p v_∞, so every v∈V₊
+  has supp ẑ ⊆ {0}∪Ω (15.269 B is the same linear equation).  FT is
+  an iso V₊ ≅ ℂ^{{0}∪Ω}.  A ++ form is therefore a
   symmetric kernel Γ on ({0}∪Ω)².  Translation multiplies ˆB(ξ,η) by
   ψ((ξ+η)t), so the μ-isotypic is Γ on
         S_μ={ξ∈Ω∪{0} : μ−ξ∈Ω∪{0}}.
@@ -95,7 +98,7 @@ PROVED Max+-free (k=1 ∪ k=3 span; pairing unused)
      ⇒ k=1∪k=3 Veronese = 𝒲₊₊⁰ ⇒ G₊≻0.  The k=3-only pairing
      1ᵀK^{−1}v is unused and stays open.
 
-Until imported: residual_i / E1 / L follow 15.270 gplus ∧ 15.249.
+Imported: residual_i / E1 / L follow 15.270 gplus ∧ 15.249. Gsum unused.
 
 Writes evidence/e1_gmin_m4_prop15272.json
 """

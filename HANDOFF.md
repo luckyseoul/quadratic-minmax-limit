@@ -29,7 +29,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **Done (2026-08-06):** gap named (Gsum disj LB / 15.158); claim retracted OPEN; short package `evidence/share/denseness_path_package.md`; load-bearing tests; 3 cold AI passes → NOT_PROVED + honest OPEN.
 
-**Prize path leftover:** AI-test package (Paata bar). Residual (ii) exhaustiveness (15.193) is **not** required (ND path closed). Residual **(i)** is closed by 15.272, not Aut-Schur and not Gsum. Do not unflip \(L\) / E(1).  
+**Prize path leftover:** Paata AI-test on `evidence/share/denseness_path_package.md` (2–3 cold reads). Residual (ii) exhaustiveness (15.193) is **not** required. Residual **(i)** is closed by 15.272, not Aut-Schur and not Gsum. Do not unflip \(L\) / E(1).  
 
 **Non-required:** Path-C/16N. **User:** ping Paata after L actually closed.  
 
