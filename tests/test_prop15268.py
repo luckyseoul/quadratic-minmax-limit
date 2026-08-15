@@ -22,7 +22,7 @@ def test_theorems_proved():
     assert _poly_square_identity() is True
 
 
-def test_predicates_open():
+def test_predicates_268_not_the_hinge():
     assert residual_i_closed_via_268() is False
     assert gsum_disj_lb_proved_general() is False
     assert e1_closed_general() is False

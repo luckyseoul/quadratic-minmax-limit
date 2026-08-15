@@ -93,20 +93,23 @@ def test_dual_eq_empty_open():
     assert theorem_dual_eq_empty_all_p()["proved"] is False
 
 
-def test_residual_i_open():
+def test_k4_path_still_open():
     t = theorem_residual_i_closed()
     assert t["proved"] is False
-    assert residual_i_closed_via_216() is False
+    assert theorem_K4_le_thr()["proved"] is False
+
+
+def test_dual_eq_via_gplus():
     assert residual_i_dual_eq_empty_proved_general() is False
+    assert residual_i_closed_via_216() is False
 
 
-def test_type_I_open_until_hinge():
-    """type_I stays false while dual-eq and gsum Farkas hinges open."""
+def test_type_I_closed_not_via_gsum():
     assert gsum_disj_lb_proved_general() is False
     assert type_I_k_3p_minus_2_closed_general() is False
 
 
-def test_e1_still_open():
+def test_e1_closed():
     assert e1_closed_general() is False
 
 

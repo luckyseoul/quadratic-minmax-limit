@@ -398,10 +398,10 @@ def prove_residual_i(primes: list[int] | None = None) -> dict:
         "n_checked": len(primes),
         "by_p_sample": {k: rows[k] for k in list(rows)[:4]},
         "theorem": (
-            "Prop 15.170 residual (i) OPEN for all primes p≥5.  "
-            "Gsum Farkas path: disj LB unproved (gsum_disj_lb=False); algebra OK if LB.  "
-            "Dual-eq path (15.216–217): R≤2p ⇔ ‖m₄‖₂²≤n(n−2)/4 (Φ identity); "
-            "that m₄ bound OPEN (false R_ke⇒R convex combo repaired; soft-close forbidden).  "
+            "Prop 15.170 residual (i) OPEN for all primes p≥5.  Dual-eq empty "
+            "via 15.270 Aut-Schur was a failed lift (Jacquet ⇏ "
+            "PSL-span(k=3 F)=𝒲₊₊⁰; p=5 k=3 rank 61/65).  Gsum Farkas disj "
+            "LB remains unproved.  "
             f"residual_i_closed={closed}."
         ),
     }

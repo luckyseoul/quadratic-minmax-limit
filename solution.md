@@ -31,13 +31,16 @@ m_n
 Moreover \(\limsup_n\alpha_n=\lim_n a_n\) where \(a_n=\sup_{k\ge1}\alpha_{kn}\).
 (The lower bound is the dual-Gaussian arcsine argument of Prop.~5.2, valid for **every** Seidel matrix; the classical Bohnenblust–Hille floor \(2^{-5/2}\) is retained as Prop.~5.1.)
 
-**Main Theorem (limit).** \(\displaystyle L=\lim_{n\to\infty}\alpha_n=\tfrac12\) — **OPEN** (2026-08-06).
+**Main Theorem (limit).** OPEN. The existence of
+\(\displaystyle L=\lim_{n\to\infty}\alpha_n\) (equivalently \(L=\tfrac12\))
+is not proved. Residual (i) of E(1) remains open.
 
-Candidate path: sandwich + denseness Prop~6.1 on \(\rho=1\) Paley \(n=p^2+1\) + E(1)
-via bi-tight (15.167) + freeness-fail ND (15.170–15.171).  
-**Fatal hinge:** disj \(\mathrm{Gsum}\) LB used by 15.170–171 is not proved for general \(p\)
-(15.158: Max+ is not an IP association scheme). Short package:
-`evidence/share/denseness_path_package.md`. Handoff: **`HANDOFF.md`**.
+Path if closed: sandwich + denseness Prop~6.1 on \(\rho=1\) Paley \(n=p^2+1\) + E(1)
+via bi-tight (15.167) + residual (ii) (15.171/15.193) + residual (i) Type I.
+The 15.270 Aut-Schur lift (Jacquet \(\Rightarrow\) PSL-span of \(k=3\) \(F\)
+equals \(\mathcal W_{++}^0\)) is **false**: at \(p=5\) the \(k=3\) Veronese
+has rank \(61/65\); \(\dim F\sim p^2/4\) vs \(\dim\mathcal W_{++}^0\sim p^4/8\).
+Do not treat \(G_+\succ0\) / \(\ker=\mathrm{sc}\) / dual-eq / Type I as closed.
 
 **Optional still open:** Path-C residual / \(16N\) (independent).
 

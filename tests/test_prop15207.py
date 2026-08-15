@@ -39,9 +39,9 @@ def test_ker_Qplus_eq_scheme_p3_p5():
     assert c["by_p"]["5"]["ker_Qplus_dim"] == 25
 
 
-def test_predicates_remain_open():
-    assert free_e_bound_proved_general() is False
+def test_ker_sc_via_gplus():
     assert ker_sc_proved_general() is False
+    assert free_e_bound_proved_general() is False
     assert residual_i_closed_via_207() is False
     assert gsum_disj_lb_proved_general() is False
     assert e1_closed_general() is False

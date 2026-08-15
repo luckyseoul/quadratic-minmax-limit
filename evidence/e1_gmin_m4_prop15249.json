@@ -195,7 +195,7 @@
     "residual_i_closed": false,
     "gsum_disj_lb_proved_general": false,
     "e1_closed_general": false,
-    "open": "ker(Gsum)=scheme\u2295cross for all p\u22655 (or \u2016\u03b4\u2016\u2082\u00b2\u2264room_\u03b4^R / |\u03bc|\u22641/(2p)). Cost_D<2\u2212\u03b1 for free-e_sc is Max+-free on Paley via Weil."
+    "open": "ker=sc or cost_D on sc still open."
   },
   "closed_forms": {
     "We": "(p^4-4p^2+1)/(2 p^2 (p^2-2))",

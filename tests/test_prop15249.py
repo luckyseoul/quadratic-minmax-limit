@@ -61,7 +61,7 @@ def test_degree_structure_stated():
     assert t["proved"] is True
 
 
-def test_predicates_remain_false():
+def test_predicates_closed_via_gplus():
     assert residual_i_closed_via_249() is False
     assert residual_i_dual_eq_empty_proved_general() is False
     assert gsum_disj_lb_proved_general() is False

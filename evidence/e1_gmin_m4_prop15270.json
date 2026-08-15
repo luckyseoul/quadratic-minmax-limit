@@ -1,0 +1,40 @@
+{
+  "title": "Prop 15.270 G+\u227b0 on W++0 via k=3 Singer Gram",
+  "proved": {
+    "fejer": true,
+    "mu0": true,
+    "g_identity": true,
+    "weil_T": true,
+    "gershgorin_p_ge_37": true,
+    "small_dft": true,
+    "p5_veronese": true,
+    "no_cuspidal": true,
+    "aut_schur": false,
+    "psl_span_F_eq_Wpp0": false,
+    "p5_k3_misses": {
+      "p": 5,
+      "dim_Wpp0": 65,
+      "k3_veronese_rank": 61,
+      "misses": 4,
+      "spans": false,
+      "k1_union_k3_rank": 65,
+      "note": "Jacquet (every irrep has a U-invariant) does not force the k=3 locked-triple space F to meet every irrep of \ud835\udcb2\u208a\u208a\u2070."
+    },
+    "gplus_pd_proved_general": false
+  },
+  "gplus_pd_proved_general": false,
+  "small_dft": {
+    "certified": true,
+    "by_p_min_abs_dft": {
+      "7": 1.0,
+      "11": 6.0,
+      "13": 8.999999999999995,
+      "17": 20.78786632304501,
+      "19": 26.867239282297966,
+      "23": 42.44653367985642,
+      "29": 76.94791088093405,
+      "31": 87.98743393046509
+    },
+    "theorem": "For 7\u2264p\u226431 the locked-triple Singer circulant has no vanishing DFT coefficient (direct computation of the Gram on the good-line Singer cycle).  Combined with Gershgorin for p\u226537 this gives PD of every G^{(\u03bc)} for all primes p\u22657."
+  }
+}

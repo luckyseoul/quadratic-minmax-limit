@@ -1,11 +1,11 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-14):** **\(L\) OPEN.** Residual **(ii) CLOSED**. Active residual-(i) path: \(G_+\succ0\) via affine + inversion-\(T\) on \(F\), then 15.249 Comm-repair. Leftover is **\(N(\varphi)\neq0\)** on every even K-character of \(\mathbb F_{p^2}^*\) for all primes \(p\ge7\) (certified \(7\le p\le79\); closed \(\hat z\) form in the 08-14 session handoff). `gsum` / `type_I` / `e1` **False**. After `/goal clear` start a **new** `/goal` (cannot resume).  
-> Session: **`evidence/SESSION_HANDOFF_2026-08-14_residual_i.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**.
+> **Now (2026-08-15):** **\(L\) OPEN.** Residual **(ii) CLOSED**. **15.270 Aut-Schur rejected** (Jacquet \(\nRightarrow\) PSL-span of \(k=3\) \(F=\mathcal W_{++}^0\); \(p=5\) \(k=3\) Veronese rank \(61/65\)). Live flags unflipped: `gplus` / `ker_sc` / dual-eq / `type_I` / `e1` **False**. `solution.md` Main Theorem **OPEN**. Active residual-(i): \(G_+\succ0\) on the **full** \(\mathcal W_{++}^0\) (not \(k=3\)-only \(F\)), or \(N(\varphi)\neq0\) leftovers (D2 last parity when \(8\mid S\); D6NEQ \(p\equiv5\pmod{24}\); GALB \(d\notin\{2,6\}\); even \(\hat P\neq0\)). Do **not** resume the rejected Aut-Schur close.  
+> Session: **`evidence/SESSION_HANDOFF_2026-08-15_unflip.md`**. Prior: `evidence/SESSION_HANDOFF_2026-08-14_residual_i.md`. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
 
-**Status date:** 2026-08-14  
-**Claim:** **OPEN** (E1 blocked by residual **(i)** only). Residual **(ii)** full ND closed. \(\nu=0\) on \(|\kappa|=1\) proved (15.268). Active hinge: \(N(\varphi)\neq0\) \(\Rightarrow G_+\succ0\Rightarrow\ker=\mathrm{sc}\) then 15.249. residual/16N optional open.
+**Status date:** 2026-08-15  
+**Claim:** **OPEN** (E1 blocked by residual **(i)** only). Residual **(ii)** full ND closed. \(\nu=0\) on \(|\kappa|=1\) proved (15.268). 15.249 \(\mathrm{cost}_D<2-\alpha\) on sc is True. \(G_+\succ0\) on full \(\mathcal W_{++}^0\) is **not** proved (Aut-Schur / Jacquet lift **dead**). residual/16N optional open.
 
 **External / prize:** [MO 413935](https://mathoverflow.net/questions/413935) · [X prize](https://x.com/PI010101/status/2081070728422752329).  
 @PI010101 asked for GitHub, then posted that Grok Build 4.5 found a gap:  
@@ -29,7 +29,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 **Done (2026-08-06):** gap named (Gsum disj LB / 15.158); claim retracted OPEN; short package `evidence/share/denseness_path_package.md`; load-bearing tests; 3 cold AI passes → NOT_PROVED + honest OPEN.
 
 **Required opens (prize path):**  
-1. Residual **(i) only.** Preferred: prove \(N(\varphi)\neq0\) on even K-characters for all \(p\ge7\) (separable \(\hat z_{\mathrm{inv}}\) form; \(p=5\) already Veronese). Then \(G_+\succ0\) on \(\mathcal W_{++}^0\), \(\ker=\mathrm{sc}\), 15.249 free-\(e\) dual empties dual-eq. Alts: envelope / reflection / \(\|m_4\|_2^2\le n(n-2)/4\) / \(K_4\le\mathrm{Wick}_{hi}\) / \(\lvert\kappa_3\rvert\) room (15.269 criterion). \(\nu=0\) already (15.268). Census \(N\neq0\) through \(p=79\) is **not** a proof.  
+1. Residual **(i) only.** Preferred: prove \(G_+\succ0\) on the **full** \(\mathcal W_{++}^0\) (not \(k=3\)-only \(F\); Aut-Schur is dead), then 15.207+15.249. Alt: \(N(\varphi)\neq0\) leftovers (D2 when \(8\mid S\); D6NEQ \(p\equiv5\pmod{24}\); GALB; even \(\hat P\neq0\)). Envelope / reflection / \(K_4\le\mathrm{Wick}_{hi}\) / \(\lvert\mu\rvert\le2/n\) are dead. \(\nu=0\) already (15.268). Census \(N\neq0\) through \(p=79\) is **not** a proof.  
 2. Wire `gsum_disj_lb_proved_general` / dual-eq / `type_I` / `e1_closed_general` via **real imports** only after (1). Then Main Theorem \(L=\tfrac12\).  
 3. AI-test package after CLOSED. Residual (ii) exhaustiveness (15.193) is **not** required (ND path closed).  
 
@@ -39,12 +39,13 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **Census (not a close):** \(\nu\equiv0\) now **proved** (15.268), not just census. \(\mu\) a CR-class function at \(p=5,7\). Exact \(\sum_y\prod y_i\): \(p=3\) \(\to4\kappa\) (\(\mu=\mu_{\mathrm{part}}\)); \(p=5\) \(\to8\kappa-2\varphi\) (\(\mu=f_4\)); \(p=7\) \(\to240\kappa-10\varphi+96\kappa\varepsilon 1_{\lvert\varphi\rvert=10}\) (CR 9 vs 10). Envelope holds at \(p=3,5,7\). Switching / far-sum / Comm-repair dual (needs ker=sc) as before.
 
-**Dead this continue (2026-08-14):** inversion-T as a \(p=5\) hinge (\(N=0\) on 2/3 K-chars; use Veronese); two-term \(M\) coded as if \(\Omega=\)squares (false zeros at \(p\equiv1\pmod4\)); Stickelberger digit-sum only \(\sim1/3\) of K-chars; affine-only / inv-T-alone kernels (together they span at \(7\le p\le23\)); envelope \(\lvert\mu\rvert\le2/n\) (false at \(p=11\)).  
+**Dead this continue (2026-08-15):** Aut-Schur / Jacquet “every irrep has a U-invariant \(\Rightarrow\) PSL-span of \(k=3\) \(F=\mathcal W_{++}^0\)”. Witness: \(p=5\) \(k=3\) Veronese rank \(61/65\); \(\dim F\sim p^2/4\) vs \(\dim\mathcal W_{++}^0=n(n-6)/8\sim p^4/8\). Singer Gram PD (Fejer / \(\mu=0\) / Weil / DFT) is only on even-on-\(\Omega\) \(F\), not a residual-(i) close. Do not re-import `gplus_pd` as True on that AND.  
+**Dead 2026-08-14:** inversion-T as a \(p=5\) hinge (\(N=0\) on 2/3 K-chars; use Veronese); two-term \(M\) coded as if \(\Omega=\)squares (false zeros at \(p\equiv1\pmod4\)); Stickelberger digit-sum only \(\sim1/3\) of K-chars; affine-only / inv-T-alone kernels (together they span at \(7\le p\le23\)); envelope \(\lvert\mu\rvert\le2/n\) (false at \(p=11\)).  
 **Dead earlier continue:** 4×4 / 5-point / K5 Gram (only \(1-2/p\)); Gsum 6×6 (\(|\mu|\le1\)); affine-quadratic level sets; CR-class master+diamond LP; IP-valency \(K_4\); global \(t(p)\) mix; 15.267 \(g^{-1}\) Aut slot (corrected in 15.268); unsigned Per even with \(|\mu|\le1-2/p\); Per-row CS; \(|\delta|\le\mathrm{room}_\delta\) from \(\mu_{\mathrm{part}}\) (false at \(p=5\)).
 
 **Earlier dead (still dead):** Fréchet / joint Fréchet; \(\lvert\mu\rvert\le\lvert f_4\rvert\) pointwise; W0\(\in\mathrm{im}(\mathrm{Gsum})\); Type I+switching \(G=\pi(G)\); low-degree Farkas \(y\); 3-wise interpolant; \(\kappa_B\perp E_{\pm4p}\); matching-PSD; max-\(\lvert\mu\rvert\) at extreme \(\lvert\varphi\rvert\); halfspace orbit as full \(\mu\); Aut-line dim\(\le1\); 15.237 pair-span as Type I kill.
 
-**Still viable:** prove \(N\neq0\) from the separable \(\hat z\) (active); Aut-SOS / \(P_\pm\) / \(G_+=B^*B\); \(G_+\succ0\)/ker=sc then Comm-repair (15.249 dual already closed on sc); \(E[s^4]\le15n^2-22n\); envelope / reflection; \(\lvert\kappa_3\rvert\) room (15.269).
+**Still viable:** \(G_+\succ0\) on the **full** \(\mathcal W_{++}^0\) (all Max+ Veronese, Aut-SOS / \(P_\pm\) / \(G_+=B^*B\), or a real spanning argument — **not** \(k=3\)-only \(F\)); then 15.207 \(\ker=\mathrm{sc}\) + 15.249 \(\mathrm{cost}_D\). \(N(\varphi)\neq0\) leftovers: D2 last parity \(\sum_{\mathrm{NR}}S(2k)\equiv T(T-1)\pmod8\) when \(8\mid S\); D6NEQ for \(p\equiv5\pmod{24}\), \(p\ge29\); GALB \(d\notin\{2,6\}\); even \(\hat P\neq0\) on \(\lambda\)-ntriv. Envelope / reflection / \(\|m_4\|_2^2\le n(n-2)/4\) / \(K_4\le\mathrm{Wick}_{hi}\) / \(\lvert\mu\rvert\le2/n\) are **dead** (counterexamples).
 
 **Prior resumes:** `evidence/SESSION_HANDOFF_2026-08-14_residual_i.md`, `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`, `evidence/SESSION_HANDOFF_2026-08-12_residual_i.md`  
 **P0 graph:** `evidence/P0_ENGINEERING_GRAPH.md` · **Failure graph:** `evidence/E1_FAILURE_GRAPH.md`  
@@ -56,7 +57,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 ## 0. One-line status
 
-**\(L=\lim\alpha_n\) OPEN.** Residual (ii) ND closed. Denseness path blocked by residual **(i)** (\(N(\varphi)\neq0\Rightarrow G_+\succ0\Rightarrow\ker=\mathrm{sc}\), or \(\lvert\mu\rvert\le1/(2p)\)). Prize OPEN.
+**\(L=\lim\alpha_n\) OPEN.** Residual (ii) ND closed. Denseness path blocked by residual **(i)** (\(G_+\succ0\) on full \(\mathcal W_{++}^0\), or \(N(\varphi)\neq0\), or \(\lvert\mu\rvert\le1/(2p)\)). 15.270 Aut-Schur is a failed lift. Prize OPEN.
 
 ### P0 status
 

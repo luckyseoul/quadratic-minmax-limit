@@ -26,7 +26,7 @@
     "e1_closed_general": false,
     "residual_ii_full": false,
     "L_open": true,
-    "note": "Residual (i) OPEN \u2014 fatal Rayleigh gap on \u03b4\u2208E_{4p} (AI-test BLOCK).  E1/L OPEN.  gsum_disj_lb not flipped."
+    "note": "K\u2084 / R\u22642p path remains OPEN (Rayleigh gap).  Dual-eq empty via 15.249/15.270 Aut-Schur is a failed lift (not imported as closed).  gsum_disj_lb not flipped.  L OPEN."
   },
   "residual_i_closed": false,
   "gsum_disj_lb_proved_general": false,

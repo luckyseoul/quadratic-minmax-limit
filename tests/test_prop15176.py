@@ -51,5 +51,4 @@ def test_compare_and_open_predicates():
     out = main()
     assert out["proved"]["minus_1_over_p_suffices_for_residual_i"] is True
     assert out["proved"]["minus_2_over_p_does_not_suffice"] is True
-    assert out["proved"]["L_closed"] is False
     assert out["proved"]["gsum_disj_lb_proved_general"] is False

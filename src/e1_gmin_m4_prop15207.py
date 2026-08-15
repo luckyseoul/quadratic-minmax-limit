@@ -262,7 +262,10 @@ def free_e_bound_proved_general() -> bool:
 
 
 def ker_sc_proved_general() -> bool:
-    return False
+    """ker=sc for all p≥5 once G₊≻0 (15.207 E).  G₊ from 15.270."""
+    from e1_gmin_m4_prop15270 import gplus_pd_proved_general
+
+    return bool(gplus_pd_proved_general())
 
 
 def residual_i_closed_via_207() -> bool:
@@ -275,7 +278,7 @@ def hinge_status_207() -> dict:
         "wick_identity_zero_diag_plusplus": True,
         "ker_sc_reduction_to_Gplus_pd": True,
         "Gplus_pd_on_Wpp0_general": False,
-        "ker_sc_general": False,
+        "ker_sc_general": ker_sc_proved_general(),
         "residual_i_closed": residual_i_closed_via_207(),
         "gsum_disj_lb_proved_general": gsum_disj_lb_proved_general(),
         "e1_closed_general": e1_closed_general(),
@@ -306,7 +309,7 @@ def main() -> dict:
             "wick_identity": d["proved"],
             "ker_sc_reduction": e["proved"],
             "Gplus_pd_general": False,
-            "ker_sc_general": False,
+            "ker_sc_general": ker_sc_proved_general(),
             "residual_i_closed": residual_i_closed_via_207(),
             "gsum_disj_lb_proved_general": gsum_disj_lb_proved_general(),
             "E1_closed": e1_closed_general(),

@@ -1,6 +1,6 @@
-# Status (2026-08-14)
+# Status (2026-08-15)
 
-**\(L=\lim\alpha_n=\tfrac12\) is OPEN** (denseness path blocked by residual (i) only; residual (ii) ND closed 2026-08-13). Active attack: \(G_+\succ0\) via inversion-\(T\) Mellin \(N(\varphi)\neq0\) (certified \(7\le p\le79\); general proof OPEN). Session: `evidence/SESSION_HANDOFF_2026-08-14_residual_i.md`.
+**\(L=\lim\alpha_n=\tfrac12\) is OPEN** (denseness path blocked by residual (i) only; residual (ii) ND closed 2026-08-13). **15.270 Aut-Schur rejected** (Jacquet \(\nRightarrow\) span of \(k=3\) \(F\); \(p=5\) rank \(61/65\)). Live `gplus`/`ker_sc`/dual-eq/`type_I`/`e1` are False. Active: \(G_+\succ0\) on full \(\mathcal W_{++}^0\), or \(N(\varphi)\neq0\) leftovers. Session: `evidence/SESSION_HANDOFF_2026-08-15_unflip.md`.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|

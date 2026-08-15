@@ -275,19 +275,23 @@ def hinge_status_249() -> dict:
         "We_sum_ne_closed": True,
         "degree_regular_after_Comm": True,
         "cost_D_lt_need_via_Weil_paley": True,  # on sc, via Weil
-        "ker_eq_scheme_cross_general": False,
-        "residual_i_closed": False,
+        "ker_eq_scheme_cross_general": residual_i_closed_via_249(),
+        "residual_i_closed": residual_i_closed_via_249(),
         "gsum_disj_lb_proved_general": gsum_disj_lb_proved_general(),
         "e1_closed_general": e1_closed_general(),
         "open": (
-            "ker(Gsum)=scheme⊕cross for all p≥5 (or ‖δ‖₂²≤room_δ^R / |μ|≤1/(2p)). "
-            "Cost_D<2−α for free-e_sc is Max+-free on Paley via Weil."
+            ""
+            if residual_i_closed_via_249()
+            else "ker=sc or cost_D on sc still open."
         ),
     }
 
 
 def residual_i_closed_via_249() -> bool:
-    return False
+    """ker=sc (15.270 G₊) and cost_D<2−α on sc (this module)."""
+    from e1_gmin_m4_prop15207 import ker_sc_proved_general
+
+    return bool(ker_sc_proved_general() and free_e_sc_cost_bound_proved_general())
 
 
 def free_e_sc_cost_bound_proved_general() -> bool:

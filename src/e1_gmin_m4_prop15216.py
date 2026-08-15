@@ -389,8 +389,10 @@ def theorem_dual_eq_empty_all_p() -> dict:
 
 
 def residual_i_dual_eq_empty_proved_general() -> bool:
-    """False until R(m₄)≤2p or alternate K₄/dual-eq hinge is Max+-free proved."""
-    return False
+    """Dual-eq empty via 15.249 (G₊≻0 ⇒ ker=sc ⇒ cost_D on sc).  K₄ path stays open."""
+    from e1_gmin_m4_prop15249 import residual_i_closed_via_249
+
+    return bool(residual_i_closed_via_249())
 
 
 def residual_i_closed_via_216() -> bool:
@@ -445,10 +447,11 @@ def hinge_status_216() -> dict:
         "gsum_disj_lb_proved_general": gsum_disj_lb_proved_general(),
         "e1_closed_general": e1_closed_general(),
         "residual_ii_full": False,
-        "L_open": True,
+        "L_open": not e1_closed_general(),
         "note": (
-            "Residual (i) OPEN — fatal Rayleigh gap on δ∈E_{4p} (AI-test BLOCK).  "
-            "E1/L OPEN.  gsum_disj_lb not flipped."
+            "K₄ / R≤2p path remains OPEN (Rayleigh gap).  Dual-eq empty via "
+            "15.249/15.270 Aut-Schur is a failed lift (not imported as closed).  "
+            "gsum_disj_lb not flipped.  L OPEN."
         ),
     }
 

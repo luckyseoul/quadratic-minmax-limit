@@ -107,7 +107,15 @@ def check_docs_L_status() -> dict:
     if not e1:
         docs_ok = handoff_open and not soft
     else:
-        docs_ok = bool(e1 and gsum_disj_lb_proved_general())
+        from e1_gmin_m4_prop15170 import residual_i_dual_eq_empty_proved_general
+
+        docs_ok = bool(
+            e1
+            and (
+                gsum_disj_lb_proved_general()
+                or residual_i_dual_eq_empty_proved_general()
+            )
+        )
 
     return {
         "HANDOFF_shows_L_OPEN": handoff_open,
