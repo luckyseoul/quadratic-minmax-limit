@@ -25,6 +25,9 @@ from e1_gmin_m4_prop15272 import (
     theorem_every_triple_occurs,
     theorem_even_c_annihilator_is_constants,
     theorem_isotypic_dim_fill,
+    theorem_isotypic_is_pair_hyperplane,
+    theorem_Vplus_omega_support,
+    theorem_zero_diag_is_convolution,
     theorem_good_mu_span,
     theorem_k1_cylinders,
     theorem_k1_sameline_hyperplane,
@@ -95,6 +98,9 @@ def test_johnson_oneswap_algebra():
     assert theorem_through_L0_last_dim()["proved"] is True
     assert theorem_every_triple_occurs()["proved"] is True
     assert theorem_isotypic_dim_fill()["proved"] is True
+    assert theorem_Vplus_omega_support()["proved"] is True
+    assert theorem_zero_diag_is_convolution()["proved"] is True
+    assert theorem_isotypic_is_pair_hyperplane()["proved"] is True
     # k1 same-line is the AND of those units, not cylinders alone
     assert theorem_k1_cylinders()["proved"] is True
     assert theorem_k1_sameline_hyperplane()["proved"] is True
@@ -131,6 +137,9 @@ def test_live_flags_via_k13():
     assert h["bad_mu_span"] is True
     assert h["every_triple_occurs"] is True
     assert h["isotypic_dim_fill"] is True
+    assert h["Vplus_omega_support"] is True
+    assert h["zero_diag_is_convolution"] is True
+    assert h["isotypic_is_pair_hyperplane"] is True
     assert h["k1_sameline_hyperplane"] is True
     assert h["K_invertible"] is True
     assert h["same_line_pairing"] is False

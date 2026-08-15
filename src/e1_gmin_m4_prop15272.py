@@ -5,17 +5,20 @@ Prop 15.272 — F^⊥ isotypic geometry of the k=3 Veronese.
 Does **not** flip residual_i / gsum / E1 / L. Soft-close forbidden.
 
 SETUP
-  Aut_∞ translations decompose 𝒲₊₊⁰ = F ⊕ F^⊥.  Additive isotypics of
-  F^⊥ are indexed by μ∈F_q^×.  Write Ω for {χ̂=p}, m=(p+1)/2 good
-  F_p-lines in Ω.  For μ≠0 the products ẑ(ξ)ẑ(μ−ξ) live on
+  Aut_∞ translations decompose 𝒲₊₊⁰ = F ⊕ F^⊥.  Cv=pv on V₊ never
+  uses ±1: ẑ(χ̂−p)=0, so every v∈V₊ has Fourier support in {0}∪Ω
+  (15.269 B is the same linear equation).  A ++ form is therefore a
+  symmetric kernel Γ on ({0}∪Ω)².  Translation multiplies ˆB(ξ,η) by
+  ψ((ξ+η)t), so the μ-isotypic is Γ on
         S_μ={ξ∈Ω∪{0} : μ−ξ∈Ω∪{0}}.
-  Unique unordered pairs {ξ,μ−ξ} have cardinality (p²+7)/8 (good μ)
-  or C(m,2)=(p²−1)/8 (bad μ).  Convolution z=±1 gives
-        ∑_ξ ẑ(ξ)ẑ(μ−ξ)=0   (μ≠0),
-  so the image lies in a hyperplane N^⊥.  Dimension count:
+  Symmetry ⇒ functions on unique unordered pairs.  Zero diagonal:
+        B_{xx}=∑_μ ψ(−μ x) ∑_{ξ+η=μ} Γ(ξ,η),
+  hence B_{xx}≡0 ⇔ each pair-sum (convolution) vanishes.  Unique
+  pairs have cardinality (p²+7)/8 (good μ) or C(m,2)=(p²−1)/8 (bad).
+  Convolution cuts one dimension, so
         dim(good μ)=C(m,2),  dim(bad μ)=C(m,2)−1,
-  and ½(p²−1)(C(m,2)+C(m,2)−1)=dim F^⊥.  Hence each isotypic *is*
-  that hyperplane.
+  and ½(p²−1)(2C(m,2)−1)=dim F^⊥.  This is an isomorphism of the
+  Aut_∞ isotypic onto the pair-hyperplane, not a dimension leap.
 
 PROVED Max+-free
   A. Convolution hyperplane.  FT(z²)=q 1_{μ=0} and ẑ-support {0}∪Ω
@@ -71,14 +74,13 @@ PROVED Max+-free (k=1 ∪ k=3 span; pairing unused)
 
   H. Johnson same-line hyperplane.  On a good μ-line, P_S(k)=f̂(k)f̂(α−k)
      is even under k↔α−k and lies in ∑ P=0 (f²=1 ⇒
-     ∑_k f̂(k)f̂(α−k)=p ∑_x ω^{−α x}=0).  If ∑ c_k P_S(k)=0 for every
-     m-subset S, with c_k=c_{α−k}, then gᵀ A g=0 on all Johnson
-     g=2 1_S−1, A_{xy}=ω^{−α y} ĉ(y−x).  Swapping one element of S
-     forces A_sym∈span{I,J}.  Evenness of c gives
-     ĉ(d)=ω^{α d} ĉ(−d); A_sym∈span{I,J} forces the opposite sign
-     unless ĉ=0 off 0.  Hence c is constant — the known hyperplane
-     normal — and {P_S} spans the (m−1)-dimensional same-line
-     hyperplane.  ∎
+     ∑_k f̂(k)f̂(α−k)=p ∑_x ω^{α x}=0).  If ∑ c_k P_S(k)=0 for every
+     m-subset S, with c_k=c_{α−k}, then gᵀ B g=0 on all Johnson
+     g=2 1_S−1, B_{xy}=ω^{α y} ĉ(x−y).  Evenness makes B symmetric.
+     1-swap + subset-sum + σ=2m−p=1 force B=D+β(J−I).  Then
+     B_{x,x+d}=ω^{α(x+d)}ĉ(−d) is x-independent iff ĉ=0 off 0.
+     Hence c is constant and {P_S} spans the (m−1)-dimensional
+     same-line hyperplane.  ∎
 
   I. Good-μ fill.  Unique pairs = m same + C(m−1,2) mixed
      = C(m,2)+1; convolution ⇒ hyperplane dim C(m,2)=isotypic dim.
@@ -207,7 +209,7 @@ def theorem_every_triple_occurs() -> dict:
 
 
 def theorem_isotypic_dim_fill() -> dict:
-    """∑_μ dim(hyperplane_μ) = dim F^⊥, so each isotypic *is* that hyperplane."""
+    """∑_μ dim(hyperplane_μ) = dim F^⊥.  Necessary, not an identification."""
     ok = True
     sample = {}
     for p in range(5, 80):
@@ -229,9 +231,150 @@ def theorem_isotypic_dim_fill() -> dict:
         "proved": ok,
         "theorem": (
             "½(p²−1)(C(m,2)+C(m,2)−1)=(p²−5)(p²−1)/8=dim F^⊥.  "
-            "Each Aut_∞ isotypic is the convolution hyperplane on S_μ."
+            "Identification is theorem_isotypic_is_pair_hyperplane."
         ),
         "by_p_sample": sample,
+    }
+
+
+def _trace_fp2(x: int, p: int, ia: int) -> int:
+    """Tr_{F_{p²}/F_p}(x0+x1 ω) = 2x0 + ia x1, ω²=ia ω+ib."""
+    return (2 * (x % p) + ia * (x // p)) % p
+
+
+def _vplus_fourier_supported(p: int) -> bool:
+    """Every + eigenvector of Paley C has ẑ supported on {0}∪{χ̂=p}."""
+    import numpy as np
+    from e1_gmin_m4_prop15270 import _make_field
+    from minmax_quadratic import paley_conference_prime_power
+
+    C = paley_conference_prime_power(p).astype(np.float64)
+    _w, V = np.linalg.eigh(C)
+    plus = V[:, np.abs(_w - p) < 1e-6]
+    if plus.shape[1] != (p * p + 1) // 2:
+        return False
+    F = _make_field(p)
+    q = p * p
+    ia = F["ia"]
+    mul = F["mul"]
+    chi = F["chi"]
+
+    def psi(u: int):
+        return np.exp(2j * np.pi * _trace_fp2(u, p, ia) / p)
+
+    chihat = np.zeros(q, dtype=np.complex128)
+    for xi in range(q):
+        s = 0j
+        for x in range(q):
+            s += chi(x) * psi(mul(xi, x))
+        chihat[xi] = s
+    omega_set = {0}
+    for xi in range(1, q):
+        if abs(chihat[xi] - p) < 1e-5:
+            omega_set.add(xi)
+    if len(omega_set) != 1 + (q - 1) // 2:
+        return False
+    for j in range(plus.shape[1]):
+        z = plus[1:, j]
+        for xi in range(q):
+            zh = 0j
+            for x in range(q):
+                zh += z[x] * psi(mul(xi, x))
+            if xi not in omega_set and abs(zh) > 1e-6:
+                return False
+    return True
+
+
+def theorem_Vplus_omega_support() -> dict:
+    """Cv=pv ⇒ ẑ(χ̂−p)=0.  Same linear algebra as 15.269 B; no ±1."""
+    from e1_gmin_m4_prop15269 import theorem_fourier_support_structure
+
+    ok = bool(theorem_fourier_support_structure()["proved"])
+    live = {}
+    for p in (5, 7):
+        good = _vplus_fourier_supported(p)
+        live[str(p)] = good
+        if not good:
+            ok = False
+    return {
+        "proved": ok,
+        "theorem": (
+            "Every v∈V₊ has supp ẑ ⊆ {0}∪Ω, with ẑ(0)=p v_∞.  "
+            "Proof: v_∞+(χ∗z)=p z; FT at ξ≠0 gives ẑ(ξ)(χ̂(ξ)−p)=0; "
+            "at 0 the row-sum is ẑ(0)=p v_∞.  Individual vectors may "
+            "omit some frequencies.  FT: V₊→ℂ^{{0}∪Ω} is an iso "
+            "(dims (q+1)/2).  Live: + eigenspace of Paley C at p=5,7."
+        ),
+        "live": live,
+        "depends_on": ["prop_15_269_B"],
+    }
+
+
+def _zero_diag_convolution_identity(n: int) -> bool:
+    """B_x=∑_{ξ,η} Γ_{ξη} ω^{-(ξ+η)x} equals ∑_μ S_μ ω^{-μ x}, S=pair-sum."""
+    import numpy as np
+
+    rng = np.random.default_rng(n)
+    Gamma = rng.normal(size=(n, n)) + 1j * rng.normal(size=(n, n))
+    Gamma = 0.5 * (Gamma + Gamma.T)
+    omega = np.exp(2j * np.pi / n)
+    B = np.zeros(n, dtype=np.complex128)
+    for x in range(n):
+        s = 0j
+        for xi in range(n):
+            for eta in range(n):
+                s += Gamma[xi, eta] * (omega ** (-(xi + eta) * x))
+        B[x] = s
+    S = np.zeros(n, dtype=np.complex128)
+    for mu in range(n):
+        for xi in range(n):
+            S[mu] += Gamma[xi, (mu - xi) % n]
+    B2 = np.array(
+        [sum(S[mu] * (omega ** (-mu * x)) for mu in range(n)) for x in range(n)]
+    )
+    return bool(np.max(np.abs(B - B2)) < 1e-8)
+
+
+def theorem_zero_diag_is_convolution() -> dict:
+    """B_{xx}≡0 ⇔ ∑_{ξ+η=μ} Γ(ξ,η)=0 for every μ (DFT inversion)."""
+    ok = True
+    sample = {}
+    for n in (5, 8, 9, 25):
+        good = _zero_diag_convolution_identity(n)
+        sample[str(n)] = good
+        if not good:
+            ok = False
+    return {
+        "proved": ok,
+        "theorem": (
+            "Fourier inversion: B_{xx}=∑_μ ψ(−μ x) S_μ with "
+            "S_μ=∑_{ξ+η=μ} Γ(ξ,η).  Hence zero diagonal cuts exactly "
+            "the convolution hyperplane in each μ-isotypic."
+        ),
+        "live": sample,
+    }
+
+
+def theorem_isotypic_is_pair_hyperplane() -> dict:
+    """The μ-isotypic of F^⊥ is the convolution hyperplane on unique pairs of S_μ."""
+    vplus = theorem_Vplus_omega_support()
+    zd = theorem_zero_diag_is_convolution()
+    dims = theorem_isotypic_dim_fill()
+    ok = bool(vplus["proved"] and zd["proved"] and dims["proved"])
+    return {
+        "proved": ok,
+        "theorem": (
+            "V₊ ≃ functions with supp ⊂ {0}∪Ω, so a ++ form is a "
+            "symmetric kernel Γ on ({0}∪Ω)².  The μ-isotypic is Γ on "
+            "S_μ; symmetry ⇒ unique pairs; zero-diag ⇒ convolution "
+            "hyperplane.  Dim match then identifies each Aut_∞ "
+            "isotypic of F^⊥ with that hyperplane."
+        ),
+        "depends_on": [
+            "theorem_Vplus_omega_support",
+            "theorem_zero_diag_is_convolution",
+            "theorem_isotypic_dim_fill",
+        ],
     }
 
 
@@ -489,10 +632,10 @@ def _even_pairs(p: int, alpha: int) -> list[tuple[int, int]]:
 
 
 def _even_c_offdiag_variation_rank(p: int, alpha: int) -> int:
-    """Rank of even-c ↦ (off-diag of A_sym minus its mean).
+    """Rank of even-c ↦ (off-diag of B minus its mean).
 
-    A_xy = ω^{-α y} ĉ(y−x), ĉ(d)=∑_k c_k ω^{k d}.  Must be m−1: only
-    constants give A_sym ∈ span{I, J} on the off-diagonal.
+    B_xy = ω^{α y} ĉ(x−y), ĉ(d)=∑_k c_k ω^{k d}.  Must be m−1: only
+    constants give B ∈ span{I, J} on the off-diagonal.
     """
     import numpy as np
 
@@ -509,13 +652,13 @@ def _even_c_offdiag_variation_rank(p: int, alpha: int) -> int:
             [np.dot(c, omega ** (ks * d)) for d in range(p)],
             dtype=np.complex128,
         )
-        A = np.zeros((p, p), dtype=np.complex128)
+        B = np.zeros((p, p), dtype=np.complex128)
         for x in range(p):
             for y in range(p):
-                A[x, y] = (omega ** (-alpha * y)) * hat[(y - x) % p]
-        As = 0.5 * (A + A.conj().T)
+                B[x, y] = (omega ** (alpha * y)) * hat[(x - y) % p]
+        Bs = 0.5 * (B + B.conj().T)
         mask = ~np.eye(p, dtype=bool)
-        off = As[mask]
+        off = Bs[mask]
         offs.append(off - off.mean())
     M = np.stack(offs, axis=0)
     s = np.linalg.svd(M, compute_uv=False)
@@ -523,11 +666,11 @@ def _even_c_offdiag_variation_rank(p: int, alpha: int) -> int:
 
 
 def theorem_even_c_annihilator_is_constants() -> dict:
-    """A_xy=ω^{-α y} ĉ(y-x) with c_k=c_{α-k} and A_sym=D+β(J-I) ⇒ ĉ∝δ_0.
+    """B_xy=ω^{α y} ĉ(x-y) with c_k=c_{α-k} and B=D+β(J-I) ⇒ ĉ∝δ_0.
 
-    Evenness: k↦α-k gives ĉ(d)=ω^{α d} ĉ(-d).  Then
-    A_sym_{x,x+d}=ω^{-α x} ĉ(-d).  x-independence (α≠0) forces ĉ=0 off 0.
-    Live: off-diag variation of the even-c space has rank m−1.
+    Evenness: k↦α-k gives ĉ(d)=ω^{α d} ĉ(-d) and makes B symmetric.
+    Then B_{x,x+d}=ω^{α(x+d)} ĉ(-d).  x-independence (α≠0) forces ĉ=0
+    off 0.  Live: off-diag variation of the even-c space has rank m−1.
     """
     t = theorem_oneswap_A_sym_form()
     ok = bool(t["proved"])
@@ -558,10 +701,10 @@ def theorem_even_c_annihilator_is_constants() -> dict:
     return {
         "proved": ok,
         "theorem": (
-            "Even c (c_k=c_{α-k}) has ĉ(d)=ω^{α d}ĉ(-d).  A_sym "
-            "off-diag is ω^{-α x}ĉ(-d), x-dependent unless ĉ=0 off 0.  "
-            "Live DFT: even-c off-diag variation has rank m−1 for every "
-            "α≠0 at p=5,7,11,13."
+            "Even c (c_k=c_{α-k}) has ĉ(d)=ω^{α d}ĉ(-d) and "
+            "B_xy=ω^{α y}ĉ(x−y) is symmetric.  B_{x,x+d}=ω^{α(x+d)}ĉ(-d) "
+            "is x-dependent unless ĉ=0 off 0.  Live DFT: even-c off-diag "
+            "variation has rank m−1 for every α≠0 at p=5,7,11,13."
         ),
         "by_p_sample": sample,
         "depends_on": ["theorem_oneswap_A_sym_form"],
@@ -678,7 +821,7 @@ def fperp_injective_proved_general() -> bool:
         theorem_bad_mu_span()["proved"]
         and theorem_good_mu_span()["proved"]
         and theorem_convolution_hyperplane()["proved"]
-        and theorem_isotypic_dim_fill()["proved"]
+        and theorem_isotypic_is_pair_hyperplane()["proved"]
     )
 
 
@@ -705,6 +848,9 @@ def hinge_status_272() -> dict:
         "complementary_mixed": theorem_complementary_mixed()["proved"],
         "every_triple_occurs": theorem_every_triple_occurs()["proved"],
         "isotypic_dim_fill": theorem_isotypic_dim_fill()["proved"],
+        "Vplus_omega_support": theorem_Vplus_omega_support()["proved"],
+        "zero_diag_is_convolution": theorem_zero_diag_is_convolution()["proved"],
+        "isotypic_is_pair_hyperplane": theorem_isotypic_is_pair_hyperplane()["proved"],
         "k1_cylinders": theorem_k1_cylinders()["proved"],
         "subset_sum_kernel": theorem_subset_sum_kernel_is_constants()["proved"],
         "oneswap_delta": theorem_oneswap_delta_vanishes()["proved"],
