@@ -1,6 +1,6 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-15):** **\(L=1/2\).** Residual **(ii) CLOSED**. Residual **(i)** via 15.272 \(k=1\cup k=3\) (Johnson same-line hyperplane + \(k=3\) bad-\(\mu\)/mixed/through-\(L_0\)). **15.270 Aut-Schur still rejected** (Jacquet \(\nRightarrow\) PSL-span; \(p=5\) \(k=3\) rank \(61/65\)) and is not the hinge. Live `gplus` / `ker_sc` / dual-eq / `type_I` / `e1` import 15.272.  
-> Session: **`evidence/SESSION_HANDOFF_2026-08-15_unflip.md`**. Prior: `evidence/SESSION_HANDOFF_2026-08-14_residual_i.md`. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**.
+> **Now (2026-08-15):** **\(L=1/2\).** Residual **(ii) CLOSED**. Residual **(i)** via 15.272 \(k=1\cup k=3\). Aut-Schur still **false**. Gsum unused. Prize leftover is the Paata AI-test on the package, not a new hinge.  
+> Session: **`evidence/SESSION_HANDOFF_2026-08-15_aitest.md`**. Prior: `…_unflip.md`, `…-08-14_residual_i.md`. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
 
@@ -29,7 +29,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **Done (2026-08-06):** gap named (Gsum disj LB / 15.158); claim retracted OPEN; short package `evidence/share/denseness_path_package.md`; load-bearing tests; 3 cold AI passes → NOT_PROVED + honest OPEN.
 
-**Prize path leftover:** Paata AI-test on `evidence/share/denseness_path_package.md` (2–3 cold reads). Residual (ii) exhaustiveness (15.193) is **not** required. Residual **(i)** is closed by 15.272, not Aut-Schur and not Gsum. Do not unflip \(L\) / E(1).  
+**Prize path leftover:** Paata AI-test on `evidence/share/denseness_path_package.md`. This session: 2/3 cold agents + referee Q1/Q2 **PASS**; one critique **NO** (“D–G too sketchy if you refuse citations”). Next writeup step if any: expand D–G in that file only. Do **not** unflip \(L\) / E(1). User pings Paata (X + GitHub).  
 
 **Non-required:** Path-C/16N. **User:** ping Paata after L actually closed.  
 
@@ -43,12 +43,13 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **Earlier dead (still dead):** Fréchet / joint Fréchet; \(\lvert\mu\rvert\le\lvert f_4\rvert\) pointwise; W0\(\in\mathrm{im}(\mathrm{Gsum})\); Type I+switching \(G=\pi(G)\); low-degree Farkas \(y\); 3-wise interpolant; \(\kappa_B\perp E_{\pm4p}\); matching-PSD; max-\(\lvert\mu\rvert\) at extreme \(\lvert\varphi\rvert\); halfspace orbit as full \(\mu\); Aut-line dim\(\le1\); 15.237 pair-span as Type I kill.
 
-**Still viable:** \(G_+\succ0\) on the **full** \(\mathcal W_{++}^0\) (all Max+ Veronese, Aut-SOS / \(P_\pm\) / \(G_+=B^*B\), or a real spanning argument — **not** \(k=3\)-only \(F\)); then 15.207 \(\ker=\mathrm{sc}\) + 15.249 \(\mathrm{cost}_D\). \(N(\varphi)\neq0\) leftovers: D2 last parity \(\sum_{\mathrm{NR}}S(2k)\equiv T(T-1)\pmod8\) when \(8\mid S\); D6NEQ for \(p\equiv5\pmod{24}\), \(p\ge29\); GALB \(d\notin\{2,6\}\); even \(\hat P\neq0\) on \(\lambda\)-ntriv. Envelope / reflection / \(\|m_4\|_2^2\le n(n-2)/4\) / \(K_4\le\mathrm{Wick}_{hi}\) / \(\lvert\mu\rvert\le2/n\) are **dead** (counterexamples).
+**Hinge already shipped:** 15.272 \(k=1\cup k=3\) span of \(\mathcal W_{++}^0\) (not \(k=3\)-only \(F\)). Do not reopen Aut-Schur or \(N(\varphi)\neq0\). Envelope / reflection / \(\|m_4\|_2^2\le n(n-2)/4\) / \(K_4\le\mathrm{Wick}_{hi}\) / \(\lvert\mu\rvert\le2/n\) stay **dead**.
 
 **Prior resumes:** `evidence/SESSION_HANDOFF_2026-08-14_residual_i.md`, `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`, `evidence/SESSION_HANDOFF_2026-08-12_residual_i.md`  
 **P0 graph:** `evidence/P0_ENGINEERING_GRAPH.md` · **Failure graph:** `evidence/E1_FAILURE_GRAPH.md`  
 
-**Suggested skills:** `agent-cost-optimization` · `graph-engineered-completion` · `goal-verifier` · `verification-before-completion` · `handoff` · `session-handoff-packager` · `scientific-critique` · `grill-me` · `self-refine-loop` · `research` · `arxiv` · `litreview` · `use-available-compute` · `openai-referee`  
+**Suggested skills:** `agent-cost-optimization` · `graph-engineered-completion` · `scientific-critique` · `grill-me` · `self-refine-loop` · `handoff` · `session-handoff-packager` · `verification-before-completion` · `use-available-compute` · `research` · `arxiv` · `litreview` · `openai-referee`  
+(`goal-verifier` is the PBSS harness — **do not** run it on this MO goal.)  
 **Compute:** 88 cores + idle V100; ProcessPool/GPU for Max+ contractions; no class_key thrash (F19); never soft-close L (F3). Token budget not a constraint this week — start a **new** `/goal` after `/goal clear` (cannot resume). Do not leave orphaned stdin `python3` eigsh jobs.
 
 ---
