@@ -1,11 +1,11 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-15):** **\(L\) OPEN.** Residual **(ii) CLOSED**. **15.270 Aut-Schur rejected** (Jacquet \(\nRightarrow\) PSL-span of \(k=3\) \(F=\mathcal W_{++}^0\); \(p=5\) \(k=3\) Veronese rank \(61/65\)). Live flags unflipped: `gplus` / `ker_sc` / dual-eq / `type_I` / `e1` **False**. `solution.md` Main Theorem **OPEN**. Active residual-(i): \(G_+\succ0\) on the **full** \(\mathcal W_{++}^0\) (not \(k=3\)-only \(F\)), or \(N(\varphi)\neq0\) leftovers (D2 last parity when \(8\mid S\); D6NEQ \(p\equiv5\pmod{24}\); GALB \(d\notin\{2,6\}\); even \(\hat P\neq0\)). Do **not** resume the rejected Aut-Schur close.  
+> **Now (2026-08-15):** **\(L=1/2\).** Residual **(ii) CLOSED**. Residual **(i)** via 15.272 \(k=1\cup k=3\) (Johnson same-line hyperplane + \(k=3\) bad-\(\mu\)/mixed/through-\(L_0\)). **15.270 Aut-Schur still rejected** (Jacquet \(\nRightarrow\) PSL-span; \(p=5\) \(k=3\) rank \(61/65\)) and is not the hinge. Live `gplus` / `ker_sc` / dual-eq / `type_I` / `e1` import 15.272.  
 > Session: **`evidence/SESSION_HANDOFF_2026-08-15_unflip.md`**. Prior: `evidence/SESSION_HANDOFF_2026-08-14_residual_i.md`. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
 
 **Status date:** 2026-08-15  
-**Claim:** **OPEN** (E1 blocked by residual **(i)** only). Residual **(ii)** full ND closed. \(\nu=0\) on \(|\kappa|=1\) proved (15.268). 15.249 \(\mathrm{cost}_D<2-\alpha\) on sc is True. \(G_+\succ0\) on full \(\mathcal W_{++}^0\) is **not** proved (Aut-Schur / Jacquet lift **dead**). residual/16N optional open.
+**Claim:** **\(L=1/2\)** (E1 closed). Residual **(ii)** full ND closed. Residual **(i)** via 15.272 \(k=1\cup k=3\) span. Aut-Schur / Jacquet lift remains **dead** and unused. residual/16N optional open.
 
 **External / prize:** [MO 413935](https://mathoverflow.net/questions/413935) · [X prize](https://x.com/PI010101/status/2081070728422752329).  
 @PI010101 asked for GitHub, then posted that Grok Build 4.5 found a gap:  
@@ -14,13 +14,14 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
 **GitHub:** https://github.com/luckyseoul/quadratic-minmax-limit (`main`)  
-**Repo description:** OPEN (Gsum disj LB blocks denseness path).  
+**Repo description:** \(L=1/2\) via 15.272 \(k=1\cup k=3\); Aut-Schur rejected; Gsum disj LB unused.
 
-**Shipped props (candidate chain; L OPEN):**  
-- **15.167:** bi-tight majorization algebra (candidate if mult/λ_min hold). `src/e1_gmin_m4_prop15167.py`  
-- **15.170 / 15.171:** residual (i)/(ii) structure + **conditional** Farkas; `gsum_disj_lb_proved_general()=False`.  
+**Shipped close:**  
+- **15.167:** bi-tight majorization algebra. `src/e1_gmin_m4_prop15167.py`  
+- **15.170 / 15.171:** residual (i) Type I via dual-eq (15.216←249←207←270←272); residual (ii) ND. `gsum_disj_lb_proved_general()=False` (unused).  
 - **15.179 / 15.236 / 15.237:** residual (ii) affine + (ii-b) + (ii-a) ND. `residual_ii_full_closed()=True`.  
-- residual/16N: still **OPEN** optional (not required for denseness path)
+- **15.272:** \(k=1\cup k=3\) spans \(\mathcal W_{++}^0\). Live units: built WWᵀ, DFT even-\(c\) rank \(m-1\), \(2\sigma=2\), \(M_3\) enum, isotypic dim fill. Pairing \(1^\top K^{-1}v\) stays False / unused.  
+- residual/16N: still **OPEN** optional (not required)
 
 ---
 
@@ -28,10 +29,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **Done (2026-08-06):** gap named (Gsum disj LB / 15.158); claim retracted OPEN; short package `evidence/share/denseness_path_package.md`; load-bearing tests; 3 cold AI passes → NOT_PROVED + honest OPEN.
 
-**Required opens (prize path):**  
-1. Residual **(i) only.** Preferred: prove \(G_+\succ0\) on the **full** \(\mathcal W_{++}^0\) (not \(k=3\)-only \(F\); Aut-Schur is dead), then 15.207+15.249. Alt: \(N(\varphi)\neq0\) leftovers (D2 when \(8\mid S\); D6NEQ \(p\equiv5\pmod{24}\); GALB; even \(\hat P\neq0\)). Envelope / reflection / \(K_4\le\mathrm{Wick}_{hi}\) / \(\lvert\mu\rvert\le2/n\) are dead. \(\nu=0\) already (15.268). Census \(N\neq0\) through \(p=79\) is **not** a proof.  
-2. Wire `gsum_disj_lb_proved_general` / dual-eq / `type_I` / `e1_closed_general` via **real imports** only after (1). Then Main Theorem \(L=\tfrac12\).  
-3. AI-test package after CLOSED. Residual (ii) exhaustiveness (15.193) is **not** required (ND path closed).  
+**Prize path leftover:** AI-test package (Paata bar). Residual (ii) exhaustiveness (15.193) is **not** required (ND path closed). Residual **(i)** is closed by 15.272, not Aut-Schur and not Gsum. Do not unflip \(L\) / E(1).  
 
 **Non-required:** Path-C/16N. **User:** ping Paata after L actually closed.  
 
@@ -57,15 +55,15 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 ## 0. One-line status
 
-**\(L=\lim\alpha_n\) OPEN.** Residual (ii) ND closed. Denseness path blocked by residual **(i)** (\(G_+\succ0\) on full \(\mathcal W_{++}^0\), or \(N(\varphi)\neq0\), or \(\lvert\mu\rvert\le1/(2p)\)). 15.270 Aut-Schur is a failed lift. Prize OPEN.
+**\(L=\lim\alpha_n=1/2\).** Residual (ii) ND closed. Residual (i) closed by 15.272 \(k=1\cup k=3\) \(\Rightarrow G_+\succ0\Rightarrow\) 15.249 dual-eq empty. Aut-Schur stays false. Gsum disj LB unused. Prize / AI-test still OPEN.
 
 ### P0 status
 
-**Bi-tight majorization (15.167, candidate):** mult≥d−1 + λ_min≥6 ⇒ L_* < 2d (algebra). Does **not** alone close L.
+**Bi-tight majorization (15.167):** mult≥d−1 + λ_min≥6 ⇒ L_* < 2d (algebra). In the E(1) AND at \(p=5\).
 
-**E(1) OPEN:** residual **(ii) CLOSED** — affine 15.179 + (ii-b) 15.236 + (ii-a) 15.237; `residual_ii_full_closed=True`. Residual **(i)** Type I dual-eq still blocked (`gsum_disj_lb_proved_general=False`). **L OPEN.**
+**E(1) CLOSED:** residual **(ii)** affine 15.179 + (ii-b) 15.236 + (ii-a) 15.237; residual **(i)** Type I via 15.272 (not `gsum_disj_lb`). **\(L=1/2\).**
 
-**Primary hinge (general primes \(p\ge5\)):** \(N(\varphi)\neq0\) on even K-characters, all \(p\ge7\), then \(G_+\succ0\) + 15.249. Alts: envelope / reflection / \(E[s^4]\) / \(K_4\le n(15n-22)\) / 15.269 \(\kappa_3\). Latest shipped: `prop15269.py` (Fourier support; \(\kappa_3\) bound OPEN). Residual-(ii): `prop15236.py`, `prop15237.py`. Session: `evidence/SESSION_HANDOFF_2026-08-14_residual_i.md`.
+**Hinge (every prime \(p\ge5\)):** 15.272 Johnson same-line hyperplane (live WWᵀ + DFT rank \(m-1\) + \(2\sigma=2\)) + \(k=3\) bad-\(\mu\) / complementary mixed / through-\(L_0\) + Singer PD on \(F\) for \(p\ge7\) + \(p=5\) rank 65. Pairing \(1^\top K^{-1}v\) unused. 15.271 \(k=3\)-only `fperp` stays False.
 
 **Optional residual/16N (still OPEN, not required for denseness L):**
 \[
@@ -292,7 +290,7 @@ m_n
 L\stackrel{?}{=}\lim_{n\to\infty}\alpha_n.
 \]
 
-**Existence of \(L\) is OPEN** — neither proved nor disproved. This handoff does **not** claim \(L\) exists or fails to exist.
+**Existence:** \(L=1/2\) (sandwich + Paley denseness + E(1) via 15.272). Historical per-prop “L OPEN” lines below are leftover from the search and are not the current claim.
 
 ### Equivalent matrix form (`solution.md` §1)
 

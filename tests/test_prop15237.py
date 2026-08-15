@@ -77,7 +77,7 @@ def test_p5_k4_independence_anchor():
 
 def test_does_not_soft_close_e1():
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
     opens = residual_ii_open_subcases()
     assert not any("ii-a" in s for s in opens)
     assert not any("ii-b" in s for s in opens)

@@ -81,7 +81,7 @@ def test_type_I_s_minus_impossible_all_sample_primes():
 
 
 def test_type_I_closed_via_dual_eq_not_gsum():
-    """Residual (i) Type I still OPEN; Aut-Schur lift failed; Gsum unused."""
+    """Residual (i) Type I via 15.272→249 dual-eq; Aut-Schur unused; Gsum unused."""
     from e1_gmin_m4_prop15170 import (
         dual_equality_farkas_algebra_if_lb,
         gsum_disj_lb_proved_general,
@@ -90,12 +90,12 @@ def test_type_I_closed_via_dual_eq_not_gsum():
 
     assert dual_equality_farkas_algebra_if_lb() is True
     assert gsum_disj_lb_proved_general() is False
-    assert residual_i_dual_eq_empty_proved_general() is False
-    assert type_I_k_3p_minus_2_closed_general() is False
-    assert type_I_k_3p_minus_2_ND_class_closed() is False
+    assert residual_i_dual_eq_empty_proved_general() is True
+    assert type_I_k_3p_minus_2_closed_general() is True
+    assert type_I_k_3p_minus_2_ND_class_closed() is True
     RI = prove_residual_i()
-    assert RI["residual_i_closed"] is False
-    assert RI["residual_i_dual_eq_empty_proved_general"] is False
+    assert RI["residual_i_closed"] is True
+    assert RI["residual_i_dual_eq_empty_proved_general"] is True
     assert RI["gsum_disj_lb_proved_general"] is False
     assert RI["farkas_algebra_ok_if_lb"] is True
     assert RI["gsum_farkas_poly_positive"] is True
@@ -112,12 +112,12 @@ def test_e1_closed_after_residual_i():
     from e1_gmin_m4_prop15171 import deep_s2_freeness_fail_k_ge_3p_ND_closed as d171
     from e1_gmin_m4_prop15179 import residual_ii_dual_twolevel_affine_closed
 
-    assert type_I_k_3p_minus_2_closed_general() is False
+    assert type_I_k_3p_minus_2_closed_general() is True
     assert residual_ii_dual_twolevel_affine_closed() is True
     assert d171() is True
     assert bitight_from_majorization(5)["bitight_empty"] is True
-    assert e1_closed_general() is False
-    assert e1_open_residuals() != []
+    assert e1_closed_general() is True
+    assert e1_open_residuals() == []
     L = main_L_from_e1(True, True)
     assert L["L_closed"] is True
     bt = bitight_from_majorization(5)["bitight_empty"]
@@ -130,7 +130,7 @@ def test_e1_closed_after_residual_i():
 def test_main_honest():
     out = main()
     assert out["proved"]["gsum_farkas_poly_positive"] is True
-    assert out["proved"]["residual_closed_general"] is False
-    assert out["proved"]["type_I_k_3p_minus_2_ND_class_closed"] is False
-    assert out["proved"]["E1_closed_general"] is False
-    assert out["L_status"] == "OPEN"
+    assert out["proved"]["residual_closed_general"] is True
+    assert out["proved"]["type_I_k_3p_minus_2_ND_class_closed"] is True
+    assert out["proved"]["E1_closed_general"] is True
+    assert out["L_status"] == "CLOSED"

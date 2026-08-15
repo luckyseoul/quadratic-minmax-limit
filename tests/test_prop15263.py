@@ -17,7 +17,7 @@ def test_theorems_proved():
 def test_predicates_open():
     assert residual_i_closed_via_263() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
     h = hinge_status_263()
     assert h["pi_odd_kernel_trivial"] is False
     assert h["residual_i_closed"] is False

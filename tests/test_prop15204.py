@@ -46,4 +46,4 @@ def test_predicates_remain_open():
     assert free_e_bound_proved_general() is False
     assert residual_i_closed_via_204() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True

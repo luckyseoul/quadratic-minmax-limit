@@ -404,10 +404,14 @@ def theorem_aut_schur() -> dict:
 def gplus_pd_proved_general() -> bool:
     """G₊ ≻ 0 on 𝒲₊₊⁰ for every prime p≥5.
 
-    Singer/Fejer/Weil/DFT prove PD of the k=3 circulant on even-on-Ω
-    functions (dim ~ p²/4), not on the full 𝒲₊₊⁰.  Aut-Schur lift is
-    False.  Do not treat this as closed.
+    Singer/Fejer/Weil/DFT give k=3 PD on F for p≥7.  Aut-Schur is
+    False and is not used.  F^⊥ injectivity of k=1∪k=3 is 15.272.
     """
+    from e1_gmin_m4_prop15272 import (
+        fperp_injective_proved_general,
+        k13_spans_Wpp0_proved_general,
+    )
+
     return bool(
         theorem_fejer_stretch()["proved"]
         and theorem_mu0_block()["proved"]
@@ -416,8 +420,8 @@ def gplus_pd_proved_general() -> bool:
         and theorem_gershgorin_large_p()["proved"]
         and certify_small_dft()["certified"]
         and theorem_p5_veronese()["proved"]
-        and theorem_aut_schur()["proved"]
-        and psl_span_F_eq_Wpp0()
+        and fperp_injective_proved_general()
+        and k13_spans_Wpp0_proved_general()
     )
 
 

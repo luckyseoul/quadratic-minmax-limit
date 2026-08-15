@@ -54,7 +54,7 @@ def test_hull_implies_Labs():
 def test_predicates_open():
     assert residual_i_closed_via_253() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
     h = hinge_status_253()
     assert h["reflection_hyp_general"] is False
     assert h["rho_f4_le_L_abs"] is True

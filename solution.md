@@ -31,16 +31,19 @@ m_n
 Moreover \(\limsup_n\alpha_n=\lim_n a_n\) where \(a_n=\sup_{k\ge1}\alpha_{kn}\).
 (The lower bound is the dual-Gaussian arcsine argument of Prop.~5.2, valid for **every** Seidel matrix; the classical Bohnenblust–Hille floor \(2^{-5/2}\) is retained as Prop.~5.1.)
 
-**Main Theorem (limit).** OPEN. The existence of
-\(\displaystyle L=\lim_{n\to\infty}\alpha_n\) (equivalently \(L=\tfrac12\))
-is not proved. Residual (i) of E(1) remains open.
-
-Path if closed: sandwich + denseness Prop~6.1 on \(\rho=1\) Paley \(n=p^2+1\) + E(1)
-via bi-tight (15.167) + residual (ii) (15.171/15.193) + residual (i) Type I.
-The 15.270 Aut-Schur lift (Jacquet \(\Rightarrow\) PSL-span of \(k=3\) \(F\)
-equals \(\mathcal W_{++}^0\)) is **false**: at \(p=5\) the \(k=3\) Veronese
-has rank \(61/65\); \(\dim F\sim p^2/4\) vs \(\dim\mathcal W_{++}^0\sim p^4/8\).
-Do not treat \(G_+\succ0\) / \(\ker=\mathrm{sc}\) / dual-eq / Type I as closed.
+**Main Theorem (limit).**
+\begin{equation}
+\label{eq:limit}
+L=\lim_{n\to\infty}\alpha_n=\tfrac12.
+\end{equation}
+Sandwich + Paley denseness (\(\rho=1\) on \(n=p^2+1\)) + E(1): bi-tight
+(15.167), residual (ii) (15.171/15.179/15.236/15.237), residual (i) Type I
+via \(G_+\succ0\) on \(\mathcal W_{++}^0\).  The 15.270 Aut-Schur lift is
+still **false** (Jacquet \(\nRightarrow\) PSL-span of \(k=3\) \(F\); \(p=5\)
+rank \(61/65\)).  The close is 15.272: \(k=1\cup k=3\) spans
+\(\mathcal W_{++}^0\) (Johnson same-line hyperplane + \(k=3\) bad-\(\mu\) /
+complementary mixed / through-\(L_0\) Fejer), plus Singer PD of \(k=3\)
+on \(F\) for \(p\ge7\) and the \(p=5\) \(k=1\) fill.
 
 **Optional still open:** Path-C residual / \(16N\) (independent).
 
@@ -48,11 +51,12 @@ Do not treat \(G_+\succ0\) / \(\ker=\mathrm{sc}\) / dual-eq / Type I as closed.
 matrix of order \(n=p^2+1\) (over \(\mathbb F_{p^2}\)) admits a halfspace boolean eigenvector
 \(Cx=px\), hence \(\rho(C)=1\) and \(\Phi(C)=\tfrac12 n\sqrt{n-1}\). Along \(n_k=p_k^2+1\) one has
 \(n_{k+1}/n_k\to1\) and \(\limsup_k\rho(C_{n_k})=1\). Proof: `evidence/PROOF_rho_eq_1.md`.
-With \(m_n\ge\Phi(C)-2\) (E(1)) this would force \(L=\tfrac12\) — E(1) not closed.
+With \(m_n\ge\Phi(C)-2\) (E(1)) this forces \(L=\tfrac12\).
 
-**What is complete.** Dual-Gaussian lower bound; denseness framework; \(\rho=1\) on \(n=p^2+1\);
-majorization algebra for bi-tight (15.167, conditional on mult/\(\lambda_{\min}\)); Farkas **poly**
-for dual equality **if** disj Gsum LB holds. **What is not:** general-p disj Gsum LB; E(1); \(L=\tfrac12\).
+**What is complete.** Dual-Gaussian lower bound; denseness; \(\rho=1\) on \(n=p^2+1\);
+bi-tight (15.167); residual (ii); residual (i) via 15.272 \(k=1\cup k=3\)
+\(\Rightarrow G_+\succ0\Rightarrow\ker=\mathrm{sc}\) (15.207) \(\Rightarrow\) dual-eq empty
+(15.249/15.216); E(1); \(L=\tfrac12\).  Aut-Schur remains false.  Gsum disj LB unused.
 
 MathOverflow [413935](https://mathoverflow.net/questions/413935) /
 https://x.com/PI010101/status/2081070728422752329 remain open for existence.

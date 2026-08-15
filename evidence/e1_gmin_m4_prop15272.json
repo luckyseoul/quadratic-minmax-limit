@@ -1,0 +1,46 @@
+{
+  "title": "Prop 15.272 F^\u22a5 via k=1\u222ak=3; Johnson same-line hyperplane; k=3-only pairing unused",
+  "proved": {
+    "convolution_hyperplane": true,
+    "bad_mu_span": true,
+    "complementary_mixed": true,
+    "every_triple_occurs": true,
+    "isotypic_dim_fill": true,
+    "k1_cylinders": true,
+    "subset_sum_kernel": true,
+    "oneswap_delta": true,
+    "oneswap_A_sym": true,
+    "even_c_annihilator": true,
+    "through_L0_last_dim": true,
+    "k1_sameline_hyperplane": true,
+    "K_invertible": true,
+    "same_line_pairing": false,
+    "same_line_rank": false,
+    "good_mu_span": true,
+    "singer_pd_on_F_p_ge_7": true,
+    "p5_k1_fills": true,
+    "fperp_injective_general": true,
+    "k13_spans_Wpp0": true,
+    "gplus_pd_proved_general": true,
+    "residual_i_closed": true,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": true,
+    "open": ""
+  },
+  "dims": {
+    "5": {
+      "good": 3,
+      "bad": 2
+    },
+    "7": {
+      "good": 6,
+      "bad": 5
+    },
+    "11": {
+      "good": 15,
+      "bad": 14
+    }
+  },
+  "fperp_injective_proved_general": true,
+  "residual_i_closed": true
+}

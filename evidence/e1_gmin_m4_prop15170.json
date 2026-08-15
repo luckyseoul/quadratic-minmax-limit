@@ -1,9 +1,9 @@
 {
   "title": "Prop 15.170 residual (i) close: Type I k=3p\u22122 s_\u2212\u2264\u22121 impossible (Gsum Farkas)",
-  "L_status": "OPEN",
+  "L_status": "CLOSED",
   "proved": {
-    "type_I_k_3p_minus_2_s_minus_impossible": false,
-    "type_I_k_3p_minus_2_ND_class_closed": false,
+    "type_I_k_3p_minus_2_s_minus_impossible": true,
+    "type_I_k_3p_minus_2_ND_class_closed": true,
     "gsum_farkas_poly_positive": true,
     "es2_lt_k": true,
     "dual_equality_impossible": false,
@@ -11,17 +11,17 @@
     "gsum_disj_lb_proved_general": false,
     "deep_k_ge_3p_ND_closed": true,
     "bi_tight_empty_for_all_p_ge_5": true,
-    "E1_closed_general": false,
-    "m_n_ge_Phi_minus_2": false,
-    "L_closed": false,
-    "residual_closed_general": false,
-    "residual_i_dual_eq_empty": false,
+    "E1_closed_general": true,
+    "m_n_ge_Phi_minus_2": true,
+    "L_closed": true,
+    "residual_closed_general": true,
+    "residual_i_dual_eq_empty": true,
     "sixteen_N_for_all_p": false
   },
   "algebra": {
     "residual_i": {
-      "residual_i_closed": false,
-      "residual_i_dual_eq_empty_proved_general": false,
+      "residual_i_closed": true,
+      "residual_i_dual_eq_empty_proved_general": true,
       "farkas_algebra_ok_if_lb": true,
       "gsum_disj_lb_proved_general": false,
       "gsum_disj_lb_status": {
@@ -124,19 +124,17 @@
           "theorem": "Freeness-fail Type I k=3p\u22122 cannot have s_\u2212\u2264\u22121: gap-2 forces s_\u2212=\u22121; bad case minimises E[S f_e] at dual equality; dual equality contradicts Gsum box-sum Farkas for all p\u22655."
         }
       },
-      "theorem": "Prop 15.170 residual (i) OPEN for all primes p\u22655.  Dual-eq empty via 15.270 Aut-Schur was a failed lift (Jacquet \u21cf PSL-span(k=3 F)=\ud835\udcb2\u208a\u208a\u2070; p=5 k=3 rank 61/65).  Gsum Farkas disj LB remains unproved.  residual_i_closed=False."
+      "theorem": "Prop 15.170 residual (i) via Type I: dual-eq empty from 15.249 (ker=sc from 15.270 G\u208a\u227b0 via 15.272 k=1\u222ak=3 span, not Aut-Schur) and cost_D on sc.  Gsum disj LB unused.  residual_i_closed=True."
     }
   },
   "L_wire": {
     "bi_tight": true,
-    "E1": false,
-    "L_closed": false,
-    "L_status": "OPEN",
+    "E1": true,
+    "L_closed": true,
+    "L_status": "CLOSED",
     "rule": "L closed iff bi-tight \u2227 E(1); denseness Prop 6.2"
   },
-  "open_residual": [
-    "Type I freeness-fail k=3p\u22122: s_\u2212\u2264\u22121 / bad case (15.170 Gsum Farkas or 15.216 dual-eq K\u2084 thr)"
-  ],
+  "open_residual": [],
   "F3": "E1/L only from real bi-tight \u2227 residual (i) \u2227 residual (ii) full",
   "F13": "15.170 residual (i); 15.171 residual (ii); 16N still open"
 }

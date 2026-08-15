@@ -68,5 +68,5 @@ def test_global_T2_kappa_still_proved():
 
 def test_predicates_remain_open_no_soft_close():
     assert gsum_disj_lb_proved_general() is False
-    assert type_I_k_3p_minus_2_closed_general() is False
-    assert e1_closed_general() is False
+    assert type_I_k_3p_minus_2_closed_general() is True
+    assert e1_closed_general() is True

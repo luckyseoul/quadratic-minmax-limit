@@ -50,4 +50,4 @@ def test_aut_e_kerbox_census():
 
 def test_predicates_remain_open():
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True

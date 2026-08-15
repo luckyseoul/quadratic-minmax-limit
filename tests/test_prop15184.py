@@ -45,4 +45,4 @@ def test_T2_paley_p5_census():
 
 def test_hinge_still_open():
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True

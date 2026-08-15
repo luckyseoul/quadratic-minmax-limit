@@ -86,7 +86,7 @@ def test_predicates_honest_false():
     assert Gplus_pd_proved_general() is False
     assert residual_i_closed_via_209() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
     h = hinge_status_209()
     assert h["residual_i_closed"] is False
     assert h["Gplus_pd_general"] is False

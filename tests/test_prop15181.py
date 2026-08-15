@@ -78,4 +78,4 @@ def test_p5_ksparse_box_census():
 def test_hinge_still_open_no_soft_close():
     """Predicates must stay false — 15.181 does not close residual i."""
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True

@@ -69,10 +69,10 @@ def test_min_mult_pattern_not_general():
 
 def test_predicates_stay_false():
     assert residual_i_closed_via_242() is False
-    assert residual_i_dual_eq_empty_proved_general() is False
+    assert residual_i_dual_eq_empty_proved_general() is True
     assert gsum_disj_lb_proved_general() is False
-    assert type_I_k_3p_minus_2_closed_general() is False
-    assert e1_closed_general() is False
+    assert type_I_k_3p_minus_2_closed_general() is True
+    assert e1_closed_general() is True
     h = hinge_status_242()
     assert h["lambda_star_floor_general"] is False
     assert h["residual_i_closed_via_242"] is False

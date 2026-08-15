@@ -37,7 +37,7 @@ def test_census_gmu_small_p():
 
 def test_predicates_still_open():
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
     h = hinge_status_175()
     assert h["bound_proved_general"] is False
     out = main()

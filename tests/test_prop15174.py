@@ -42,7 +42,7 @@ def test_census_U_nonneg_small_p():
 
 def test_predicates_still_open():
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
     out = main()
     assert out["proved"]["L_closed"] is False
     assert out["proved"]["H_ge_minus_1_over_p_general"] is False

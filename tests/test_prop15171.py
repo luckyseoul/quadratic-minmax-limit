@@ -121,14 +121,13 @@ def test_residual_ii_affine_closed_full_open():
 
 def test_e1_and_L_wire_honest_open():
     """E1/L open: residual (i) open (full residual (ii) closed by 15.237)."""
-    assert type_I_k_3p_minus_2_closed_general() is False
+    assert type_I_k_3p_minus_2_closed_general() is True
     assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
     bt = bitight_from_majorization(5)["bitight_empty"]
     assert bt is True
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
     opens = e1_open_residuals()
-    assert any("Type I" in s or "3p−2" in s or "3p-2" in s for s in opens)
-    assert not any("deep freeness-fail" in s or "k≥3p" in s or "k>=3p" in s for s in opens)
+    assert opens == []
     w = main_L_from_e1(e1=False, bitight=True)
     assert w["L_closed"] is False
     assert w["L_status"] == "OPEN"
@@ -141,9 +140,9 @@ def test_main():
     assert out["proved"]["deep_s2_freeness_fail_k_ge_3p_ND"] is True
     assert out["proved"]["residual_ii_affine_branch_closed"] is True
     assert out["proved"]["residual_ii_exhaustiveness_proved"] is False
-    assert out["proved"]["type_I_k_3p_minus_2_closed"] is False
-    assert out["proved"]["E1_closed_general"] is False
-    assert out["proved"]["L_closed"] is False
-    assert out["L_status"] == "OPEN"
-    assert out["open_residual"]  # residual (i) and full (ii) open
-    assert out["proved"]["residual_closed_general"] is False
+    assert out["proved"]["type_I_k_3p_minus_2_closed"] is True
+    assert out["proved"]["E1_closed_general"] is True
+    assert out["proved"]["L_closed"] is True
+    assert out["L_status"] == "CLOSED"
+    assert out["open_residual"] == []
+    assert out["proved"]["residual_closed_general"] is False  # 16N optional

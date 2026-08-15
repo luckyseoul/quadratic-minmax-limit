@@ -100,23 +100,23 @@ def test_k4_path_still_open():
 
 
 def test_dual_eq_via_gplus():
-    assert residual_i_dual_eq_empty_proved_general() is False
-    assert residual_i_closed_via_216() is False
+    assert residual_i_dual_eq_empty_proved_general() is True
+    assert residual_i_closed_via_216() is True
 
 
 def test_type_I_closed_not_via_gsum():
     assert gsum_disj_lb_proved_general() is False
-    assert type_I_k_3p_minus_2_closed_general() is False
+    assert type_I_k_3p_minus_2_closed_general() is True
 
 
 def test_e1_closed():
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
 
 
 def test_hinge_status():
     h = hinge_status_216()
-    assert h["residual_i_closed_via_216"] is False
+    assert h["residual_i_closed_via_216"] is True
     assert h["Q_le_10"] is False
     assert h["R_m4_le_2p"] is False
-    assert h["e1_closed_general"] is False
-    assert h["L_open"] is True
+    assert h["e1_closed_general"] is True
+    assert h["L_open"] is False

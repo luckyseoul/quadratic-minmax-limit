@@ -104,13 +104,13 @@ def test_phi_and_L_star_still_consistent_with_15167():
 
 
 def test_e1_open_until_gsum_hinge():
-    """E1 open while residual (i)/(ii) need proved disj Gsum LB."""
-    assert e1_closed_general() is False
+    """E1 closed via 15.272 dual-eq; Gsum LB unused."""
+    assert e1_closed_general() is True
     open_ = e1_open_residuals()
-    assert open_
+    assert open_ == []
     ro = e1_residual_open()
-    assert ro["E1_closed"] is False
-    assert ro["open"]
+    assert ro["E1_closed"] is True
+    assert ro["open"] == []
 
 
 def test_L_wire_requires_both():
@@ -132,8 +132,8 @@ def test_theorems_partial_e1_structure():
     assert A["proved"] is True
     assert B["proved"] is True
     assert CD["proved_k_2p_minus_1_fail_ND"] is True
-    # k=3p-2 / deep freeness-fail no longer general-closed without Gsum LB
-    assert CD["type_I_all_classes_closed"] is False or CD.get("k_3p_minus_2_boundary_open") is True
+    assert CD["type_I_all_classes_closed"] is True
+    assert CD.get("k_3p_minus_2_boundary_open") is False
     assert EFG["proved_auto_freeness_k_le_3p_minus_2"] is True
     assert EFG["proved_fail_eq_k_3p_minus_1_impossible"] is True
 
@@ -142,8 +142,9 @@ def test_main_honest_e1_open():
     out = main()
     assert out["proved"]["bi_tight_empty_for_all_p_ge_5"] is True
     assert out["proved"]["type_I_fail_k_2p_minus_1_ND"] is True
-    assert out["proved"]["E1_closed_general"] is False
-    assert out["proved"]["L_closed"] is False
-    assert out["L_status"] == "OPEN"
-    assert out["open_residual"]
+    assert out["proved"]["E1_closed_general"] is True
+    assert out["proved"]["L_closed"] is True
+    assert out["L_status"] == "CLOSED"
+    assert out["open_residual"] == []
+    # 15.168 stores 16N/old residual as a separate unused False
     assert out["proved"]["residual_closed_general"] is False

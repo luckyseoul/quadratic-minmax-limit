@@ -61,7 +61,7 @@ def test_predicates_open():
     assert K4_bound_proved_general() is False
     assert residual_i_closed_via_K4() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
     h = hinge_status_197()
     assert h["min_distance_p_plus_1"] is True
     assert h["residual_i_closed"] is False

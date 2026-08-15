@@ -1,15 +1,15 @@
 {
-  "title": "Prop 15.171 residual (ii) structure: affine branch CLOSED (15.179); full residual (ii) OPEN (15.193 exhaustiveness); E1/L follow bi-tight\u2227E1",
-  "L_status": "OPEN",
+  "title": "Prop 15.171 residual (ii) structure: affine branch CLOSED (15.179); full residual (ii) OPEN (15.193 exhaustiveness); E1/L CLOSED",
+  "L_status": "CLOSED",
   "proved": {
     "deep_s2_freeness_fail_k_ge_3p_ND": true,
     "residual_ii_affine_branch_closed": true,
     "residual_ii_exhaustiveness_proved": false,
-    "type_I_k_3p_minus_2_closed": false,
+    "type_I_k_3p_minus_2_closed": true,
     "bi_tight_empty_for_all_p_ge_5": true,
-    "E1_closed_general": false,
-    "m_n_ge_Phi_minus_2": false,
-    "L_closed": false,
+    "E1_closed_general": true,
+    "m_n_ge_Phi_minus_2": true,
+    "L_closed": true,
     "residual_closed_general": false,
     "sixteen_N_for_all_p": false
   },
@@ -28,14 +28,12 @@
   },
   "L_wire": {
     "bi_tight": true,
-    "E1": false,
-    "L_closed": false,
-    "L_status": "OPEN",
+    "E1": true,
+    "L_closed": true,
+    "L_status": "CLOSED",
     "rule": "L closed iff bi-tight \u2227 E(1); denseness Prop 6.2"
   },
-  "open_residual": [
-    "Type I freeness-fail k=3p\u22122 (15.170)"
-  ],
+  "open_residual": [],
   "F3": "E1/L only from type_I\u2227deep_k\u22653p_full\u2227bi-tight real predicates",
   "F13": "15.171+15.179 affine branch closed; 15.193 full residual (ii) open; residual/16N still open optional"
 }

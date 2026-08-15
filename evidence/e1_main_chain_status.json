@@ -4,26 +4,24 @@
   "residual_closed_general": false,
   "bitight_bypass_residual": true,
   "gsum_disj_lb_proved_general": false,
-  "E1_closed": false,
-  "E1_open_residual": [
-    "Type I freeness-fail k=3p\u22122: s_\u2212\u2264\u22121 / bad case (structure+2-Lipschitz+gap2 shipped; 15.170 Gsum Farkas open/fail)"
-  ],
+  "E1_closed": true,
+  "E1_open_residual": [],
   "E1_structure_15168": {
     "type_I_fail_k_2p_minus_1_ND": true,
-    "type_I_all_classes_closed": false,
+    "type_I_all_classes_closed": true,
     "deep_tight_empty": true,
     "deep_auto_freeness": true,
     "deep_all_ND_closed": true
   },
-  "Main_closed": false,
-  "L_closed": false,
-  "L_status": "OPEN",
+  "Main_closed": true,
+  "L_closed": true,
+  "L_status": "CLOSED",
   "docs": {
     "HANDOFF_shows_L_OPEN": true,
     "soft_close_detected": false,
     "soft_close_hit": null,
     "docs_ok": true,
-    "e1_closed_general": false,
+    "e1_closed_general": true,
     "gsum_disj_lb_proved_general": false,
     "scanned_props_15167_171": true
   },

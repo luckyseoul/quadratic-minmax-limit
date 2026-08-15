@@ -130,10 +130,10 @@ def test_numeric_phi_kappa_on_exact_Wpp0():
 
 def test_predicates_stay_false():
     assert residual_i_closed_via_244() is False
-    assert residual_i_dual_eq_empty_proved_general() is False
+    assert residual_i_dual_eq_empty_proved_general() is True
     assert gsum_disj_lb_proved_general() is False
-    assert type_I_k_3p_minus_2_closed_general() is False
-    assert e1_closed_general() is False
+    assert type_I_k_3p_minus_2_closed_general() is True
+    assert e1_closed_general() is True
     h = hinge_status_244()
     assert h["phi_kappa_B_proved"] is True
     assert h["mu_part_kappa_B_proved"] is True

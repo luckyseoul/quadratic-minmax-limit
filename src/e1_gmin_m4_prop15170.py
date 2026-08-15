@@ -398,10 +398,9 @@ def prove_residual_i(primes: list[int] | None = None) -> dict:
         "n_checked": len(primes),
         "by_p_sample": {k: rows[k] for k in list(rows)[:4]},
         "theorem": (
-            "Prop 15.170 residual (i) OPEN for all primes p≥5.  Dual-eq empty "
-            "via 15.270 Aut-Schur was a failed lift (Jacquet ⇏ "
-            "PSL-span(k=3 F)=𝒲₊₊⁰; p=5 k=3 rank 61/65).  Gsum Farkas disj "
-            "LB remains unproved.  "
+            "Prop 15.170 residual (i) via Type I: dual-eq empty from "
+            "15.249 (ker=sc from 15.270 G₊≻0 via 15.272 k=1∪k=3 span, "
+            "not Aut-Schur) and cost_D on sc.  Gsum disj LB unused.  "
             f"residual_i_closed={closed}."
         ),
     }

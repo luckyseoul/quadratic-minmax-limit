@@ -65,4 +65,4 @@ def test_Gplus_psd_bound():
 
 def test_predicates_remain_open():
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True

@@ -101,10 +101,10 @@ def test_E_q2_form_stated():
 
 def test_predicates_stay_false():
     assert residual_i_closed_via_243() is False
-    assert residual_i_dual_eq_empty_proved_general() is False
+    assert residual_i_dual_eq_empty_proved_general() is True
     assert gsum_disj_lb_proved_general() is False
-    assert type_I_k_3p_minus_2_closed_general() is False
-    assert e1_closed_general() is False
+    assert type_I_k_3p_minus_2_closed_general() is True
+    assert e1_closed_general() is True
     h = hinge_status_243()
     assert h["kappaC_kappaB_proved"] is True
     assert h["rho_budget_general"] is False

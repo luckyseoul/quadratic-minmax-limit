@@ -64,10 +64,10 @@ def test_sum_ne_formula_p5():
 
 def test_residual_i_218_path_open_live_dual_eq_closed():
     assert residual_i_closed_via_218() is False
-    assert residual_i_dual_eq_empty_proved_general() is False
-    assert type_I_k_3p_minus_2_closed_general() is False
+    assert residual_i_dual_eq_empty_proved_general() is True
+    assert type_I_k_3p_minus_2_closed_general() is True
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
 
 
 def test_hinge_status():

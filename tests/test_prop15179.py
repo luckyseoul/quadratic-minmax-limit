@@ -36,7 +36,7 @@ def test_residual_ii_affine_closed_without_gsum():
     assert residual_ii_dual_twolevel_affine_closed() is True
     # Full residual (ii) closed by 15.179+236+237 (ND, not exhaustiveness)
     assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
     h = hinge_status_179()
     assert h["bound_proved_general"] is False
     out = main()

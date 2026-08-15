@@ -68,7 +68,7 @@ def test_predicates_open():
     assert Q_bound_proved_general() is False
     assert residual_i_closed_via_spectral_Q() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
     h = hinge_status_196()
     assert h["entry_floor_minus_2"] is True
     assert h["residual_i_closed"] is False

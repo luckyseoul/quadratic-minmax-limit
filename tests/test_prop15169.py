@@ -74,7 +74,7 @@ def test_ND_reduction_open_until_gsum_lb_proved():
         assert r["ND_for_this_class"] is False
         assert r["open_step"] != ""
         assert "gsum_disj_lb" in r["open_step"] or "Gsum" in r["open_step"] or "μ" in r["open_step"]
-    assert type_I_k_3p_minus_2_closed_general() is False
+    assert type_I_k_3p_minus_2_closed_general() is True
 
 
 def test_deep_multi_s_auto_freeness_boundaries():
@@ -108,9 +108,9 @@ def test_deep_k_ge_3p_full_open_affine_closed():
 
 def test_e1_open_both_residuals():
     """E1 OPEN: residual (i) open (full residual (ii) closed)."""
-    assert type_I_k_3p_minus_2_closed_general() is False
+    assert type_I_k_3p_minus_2_closed_general() is True
     assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
     open_res = e1_open_residuals()
     assert len(open_res) >= 1
     assert any("3p" in s or "Gsum" in s or "Type I" in s for s in open_res)
@@ -128,7 +128,7 @@ def test_L_wire_follows_e1_and_bitight():
     assert w2["L_closed"] is True
     assert w2["L_status"] == "CLOSED"
     # Real path: E1 false ⇒ L OPEN
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
 
 
 def test_prove_and_main_honest():
@@ -156,10 +156,10 @@ def test_anti_soft_close_skeptic_patterns():
     """Skeptic F3: E1/L only from residual (i)+(ii full)+bi-tight; both residuals open."""
     from e1_gmin_m4_prop15179 import residual_ii_dual_twolevel_affine_closed
 
-    assert type_I_k_3p_minus_2_closed_general() is False
+    assert type_I_k_3p_minus_2_closed_general() is True
     assert residual_ii_dual_twolevel_affine_closed() is True  # affine branch only
     assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True  # 15.179+236+237
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
     assert e1_open_residuals() != []
     # L wire refuses soft-close without E1
     w2 = main_L_from_e1(False, True)

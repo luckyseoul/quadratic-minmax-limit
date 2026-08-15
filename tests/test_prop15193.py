@@ -52,7 +52,7 @@ def test_affine_closed_full_closed():
 
 def test_e1_still_open():
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
     h = hinge_status_193()
     assert h["bound_proved_general"] is False
     assert h["residual_ii_full"] == "CLOSED"

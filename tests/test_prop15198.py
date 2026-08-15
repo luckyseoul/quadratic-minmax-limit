@@ -95,7 +95,7 @@ def test_predicates_still_open():
     assert K4_bound_proved_general() is False
     assert residual_i_closed_via_K4_wick() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
     h = hinge_status_198()
     assert h["wick_hi_le_thr_p_ge_5"] is True
     assert h["Q_wick_lt_10_p_ge_5"] is True

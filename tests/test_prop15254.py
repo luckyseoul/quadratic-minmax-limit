@@ -25,7 +25,7 @@ def test_paley_conjugation_proved():
 def test_predicates_open():
     assert residual_i_closed_via_254() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
     h = hinge_status_254()
     assert h["m4plus_eq_m4minus_kappa1_general"] is False
     assert h["residual_i_closed"] is False

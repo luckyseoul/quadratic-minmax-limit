@@ -1,0 +1,53 @@
+{
+  "title": "Prop 15.271 k=3 Veronese ker\u2286F; Singer PD on F for p\u22657; F^\u22a5 injectivity OPEN",
+  "proved": {
+    "majority_identity": true,
+    "phase_lock": true,
+    "fibre_dft": true,
+    "slice_sizes": true,
+    "phase_frequencies_distinct": true,
+    "singer_pd_on_F_p_ge_7": true,
+    "p5_k1_fills": true,
+    "fperp_injective_certified_p_5_7_11": true,
+    "fperp_injective_general": false,
+    "k3_spans_Wpp0_general": false,
+    "gplus_pd_proved_general": false,
+    "residual_i_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "e1_closed_general": false,
+    "open": "F^\u22a5 leftover: good-\u03bc Gram mixes same-line and mixed-line coordinates (cross terms certified at p=5).  Bad-\u03bc is mixed-line only; phase characters are distinct.  Do not import residual_i."
+  },
+  "certified": {
+    "certified": true,
+    "proved_general": false,
+    "by_p": {
+      "5": {
+        "dim_F": 5,
+        "dim_Wpp0": 65,
+        "rank_on_F": 1,
+        "rank_on_Fperp": 60,
+        "rank_total": 61,
+        "ker_in_F": true
+      },
+      "7": {
+        "dim_F": 11,
+        "dim_Wpp0": 275,
+        "rank_on_F": 11,
+        "rank_on_Fperp": 264,
+        "rank_total": 275,
+        "ker_in_F": true
+      },
+      "11": {
+        "dim_F": 29,
+        "dim_Wpp0": 1769,
+        "rank_on_F": 29,
+        "rank_on_Fperp": 1740,
+        "rank_total": 1769,
+        "ker_in_F": true
+      }
+    },
+    "note": "GPU SVD of explicit A3 k=3 family.  F^\u22a5 injectivity general is the leftover (odd-odd / isolation).  Census is not a proof."
+  },
+  "k3_spans_Wpp0_proved_general": false,
+  "residual_i_closed": false
+}

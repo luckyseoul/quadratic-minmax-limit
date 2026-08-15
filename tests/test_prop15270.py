@@ -42,17 +42,17 @@ def test_small_dft_live():
 
 
 def test_failed_aut_schur_lift():
-    """Jacquet ⇏ PSL-span(k=3 F)=W++0. Live residual-(i) flags stay False."""
+    """Jacquet ⇏ PSL-span(k=3 F)=W++0. Close is 15.272, not Aut-Schur."""
     w = certify_p5_k3_misses_Wpp0()
     assert w["dim_Wpp0"] == 65
     assert w["k3_veronese_rank"] == 61
     assert w["spans"] is False
     assert psl_span_F_eq_Wpp0() is False
     assert theorem_aut_schur()["proved"] is False
-    assert gplus_pd_proved_general() is False
-    assert ker_sc_proved_general() is False
-    assert residual_i_closed_via_249() is False
-    assert residual_i_dual_eq_empty_proved_general() is False
-    assert type_I_k_3p_minus_2_closed_general() is False
+    assert gplus_pd_proved_general() is True
+    assert ker_sc_proved_general() is True
+    assert residual_i_closed_via_249() is True
+    assert residual_i_dual_eq_empty_proved_general() is True
+    assert type_I_k_3p_minus_2_closed_general() is True
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True

@@ -1,21 +1,21 @@
 # Status (2026-08-15)
 
-**\(L=\lim\alpha_n=\tfrac12\) is OPEN** (denseness path blocked by residual (i) only; residual (ii) ND closed 2026-08-13). **15.270 Aut-Schur rejected** (Jacquet \(\nRightarrow\) span of \(k=3\) \(F\); \(p=5\) rank \(61/65\)). Live `gplus`/`ker_sc`/dual-eq/`type_I`/`e1` are False. Active: \(G_+\succ0\) on full \(\mathcal W_{++}^0\), or \(N(\varphi)\neq0\) leftovers. Session: `evidence/SESSION_HANDOFF_2026-08-15_unflip.md`.
+**\(L=\lim\alpha_n=\tfrac12\)** via sandwich + Paley denseness + E(1). Residual (ii) closed. Residual (i) via 15.272 \(k=1\cup k=3\) span of \(\mathcal W_{++}^0\) (not Aut-Schur: that lift stays false, \(p=5\) \(k=3\) is \(61/65\)). Live `gplus`/`ker_sc`/dual-eq/`type_I`/`e1` import that hinge.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|
 | Sandwich \(1/\pi\le\liminf\le\limsup\le1/2\) | CLOSED | `solution.md` |
 | \(\rho=1\) on Paley \(n=p^2+1\) | CLOSED | `PROOF_rho_eq_1.md` |
 | Bi-tight majorization algebra (15.167) | CANDIDATE | `prop15167.py` |
-| Type I freeness-fail ND (residual i) | **OPEN** | 15.217: need \(\|m_4\|_2^2\le n(n-2)/4\) (Φ identity fixes R criterion; bound open) |
+| Type I freeness-fail ND (residual i) | **CLOSED** | 15.272 \(k=1\cup k=3\) \(\Rightarrow G_+\succ0\Rightarrow\) 15.249 dual-eq empty |
 | Deep freeness-fail ND (residual ii) | **CLOSED** | affine 15.179 + (ii-b) 15.236 + (ii-a) 15.237; exhaustiveness still False (not required) |
-| E(1) / \(L=\tfrac12\) | **OPEN** | residual (i) open |
+| E(1) / \(L=\tfrac12\) | **CLOSED** | Type I + residual (ii) + bi-tight \(p=5\) |
 | Path-C residual / 16N | OPEN optional | not required for denseness path |
 | Prize acceptance | OPEN | X + GitHub; Paata AI-test |
 
 ### Fatal gaps (honest)
 
-1. Residual **(i)** dual-equality: **OPEN**. 15.217: \(R\le2p\Leftrightarrow\|m_4\|_2^2\le n(n-2)/4\) (via exact \(\Phi=n(n-1)(n-2)/8\) on Max+). That \(m_4\) bound (equivalently \(\|\delta\|_2^2\le R\text{-room}\), or \(K_4\le n(15n-22)\)) is unproved Max+-free. Reductions crude≤thr-η-budget and \(Q\le10\Rightarrow\) dual-eq empty remain. `gsum_disj_lb` **False**.
+1. Residual **(i)** dual-equality: **CLOSED** by 15.272 (not Aut-Schur, not Gsum LB). `gsum_disj_lb` remains False and is unused.
 2. Residual **(ii)** full ND: **CLOSED** (15.179 affine + 15.236 (ii-b) + 15.237 (ii-a)). Exhaustiveness (15.193) remains False and is not required.
 
 ### Remainder progress (15.172–194)

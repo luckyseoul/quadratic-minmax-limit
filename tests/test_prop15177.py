@@ -41,7 +41,7 @@ def test_census_and_open_predicates():
     assert bool(c5["Gsum_kappa3_nonnegative"]) is True
     assert bool(c5["Gsum_ge_minus_1_over_p"]) is True
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
     h = hinge_status_177()
     assert h["bound_proved_general"] is False
     out = main()

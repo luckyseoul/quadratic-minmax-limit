@@ -60,7 +60,7 @@ def test_predicates_open():
     assert mass_corrected_bound_proved_general() is False
     assert residual_i_closed_via_mass_corrected() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is False
+    assert e1_closed_general() is True
     h = hinge_status_195()
     assert h["mass_corrected_criterion_proved"] is True
     assert h["residual_i_closed"] is False
