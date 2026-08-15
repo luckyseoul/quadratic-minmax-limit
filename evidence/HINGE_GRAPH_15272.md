@@ -46,4 +46,4 @@ GSUM ↛ RI
 - PAIR: cotangent pairing leftover; do not census further.
 - GSUM disj LB unused.
 - Path-C / 16N optional.
-- Prize AI-test after writeup.
+- Independent cold read of `evidence/share/denseness_path_package.md` after caveats close.

@@ -1,5 +1,5 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-15):** **\(L=1/2\).** Residual **(ii) CLOSED**. Residual **(i)** via 15.272 \(k=1\cup k=3\). Aut-Schur still **false**. Gsum unused. Prize leftover is the Paata AI-test on the package, not a new hinge.  
+> **Now (2026-08-15):** Residual **(ii) CLOSED**. Residual **(i)** hinge is 15.272 \(k=1\cup k=3\). Aut-Schur still **false**. Gsum unused. \(L=\tfrac12\) is **not settled**: see caveats in `evidence/share/denseness_path_package.md`.  
 > Session: **`evidence/SESSION_HANDOFF_2026-08-15_aitest.md`**. Prior: `…_unflip.md`, `…-08-14_residual_i.md`. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
@@ -7,7 +7,7 @@
 **Status date:** 2026-08-15  
 **Claim:** **\(L=1/2\)** (E1 closed). Residual **(ii)** full ND closed. Residual **(i)** via 15.272 \(k=1\cup k=3\) span. Aut-Schur / Jacquet lift remains **dead** and unused. residual/16N optional open.
 
-**External / prize:** [MO 413935](https://mathoverflow.net/questions/413935) · [X prize](https://x.com/PI010101/status/2081070728422752329).  
+**Problem:** [MO 413935](https://mathoverflow.net/questions/413935) · [X thread](https://x.com/PI010101/status/2081070728422752329).  
 @PI010101 asked for GitHub, then posted that Grok Build 4.5 found a gap:  
 https://grok.com/share/c2hhcmQtNA_218425aa-c1d1-4263-a3ea-9114ef04cd9c  
 His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentially correct in 2–3 repeated prompts) **before** he human-verifies. User cannot use MO (new account / no rep) — channel is **X + GitHub**, not MO answer.
@@ -25,13 +25,13 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 ---
 
-## What’s left (simple) — prize path
+## What’s left
 
 **Done (2026-08-06):** gap named (Gsum disj LB / 15.158); claim retracted OPEN; short package `evidence/share/denseness_path_package.md`; load-bearing tests; 3 cold AI passes → NOT_PROVED + honest OPEN.
 
-**Prize path leftover:** **Do not ping Paata.** Hostile review (2026-08-15) found load-bearing holes: (1) \(\lambda_{\min}\ge6\) / \(G_{u,\mathrm{disj}}\) not a Gram; (2) residual (ii) \(k\ge4p\); (3) Type I multi-level Max−; (4) Lemma D A3 existence / 2-plane. Package verdict is **not prize-ready**. Johnson Lemma E has no algebraic GAP (`evidence/share/lemma_E_johnson.md`). Do **not** claim \(L=1/2\) in public until (1)–(3) close. Live `e1` still True (wiring); do not treat that as a prize stamp.  
+**Open (blocks \(L=\tfrac12\)):** (1) \(\lambda_{\min}(\Phi)\ge6\) / \(G_{u,\mathrm{disj}}\) is not a Gram; (2) residual (ii) for even \(k\ge4p\); (3) Type I when Max− is not two-level; (4) Lemma D existence / 2-plane. Johnson Lemma E has no algebraic gap. Live `e1` is still True (wiring only).  
 
-**Non-required:** Path-C/16N. **User:** ping Paata after L actually closed.  
+**Non-required:** Path-C / \(16N\).  
 
 **Do not right now:** residual/16N thrash · X chrome · soft-close · ship a 15.xxx whose predicates stay False · flip e1 on census \(p\le7\) · re-thrash the residual-(i) dead list · `/goal resume` after `/goal clear` (start a **new** `/goal`).
 
@@ -56,7 +56,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 ## 0. One-line status
 
-**\(L=\lim\alpha_n=1/2\).** Residual (ii) ND closed. Residual (i) closed by 15.272 \(k=1\cup k=3\) \(\Rightarrow G_+\succ0\Rightarrow\) 15.249 dual-eq empty. Aut-Schur stays false. Gsum disj LB unused. Prize / AI-test still OPEN.
+Residual (ii) ND closed. Residual (i) hinge is 15.272 \(k=1\cup k=3\) \(\Rightarrow G_+\succ0\Rightarrow\) 15.249 dual-eq empty. Aut-Schur stays false. Gsum disj LB unused. \(L=\tfrac12\) is **not settled** (caveats in the denseness-path package).
 
 ### P0 status
 
@@ -404,7 +404,7 @@ Soft multipartite / Hadamard / annealed / rank-one blow-up **cannot** force \(\l
 ### 4.4 Independent external artifacts (context only)
 
 - Sol / Codex writeup: sandwich \(1/\pi\)…\(1/2\) + cut-code ([Robby955/mo-413935-ai-attempt](https://github.com/Robby955/mo-413935-ai-attempt)) — aligns with our Prop 5.2.
-- Curtis cut-code \(M_{11}=17\): [antipodal-cut-code-k11](https://github.com/CurtisAccelerate/antipodal-cut-code-k11) — finite; does not settle the limit (author Paata confirmed).
+- Curtis cut-code \(M_{11}=17\): [antipodal-cut-code-k11](https://github.com/CurtisAccelerate/antipodal-cut-code-k11) — finite; does not settle the limit.
 - X thread: mostly AI hallucinations (Parisi/SK, graphon uniqueness, Wick holomorphy). See prior triage notes if present; ignore as proofs.
 
 ---

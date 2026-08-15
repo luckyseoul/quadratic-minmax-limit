@@ -58,7 +58,7 @@ bi-tight (15.167); residual (ii); residual (i) via 15.272 \(k=1\cup k=3\)
 \(\Rightarrow G_+\succ0\Rightarrow\ker=\mathrm{sc}\) (15.207) \(\Rightarrow\) dual-eq empty
 (15.249/15.216); E(1); \(L=\tfrac12\).  Aut-Schur remains false.  Gsum disj LB unused.
 
-The intended close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Prize status (2026-08-15):** do not send to Paata yet. Hostile review: \(\lambda_{\min}(\Phi)\ge6\) is not proved (\(G_{u,\mathrm{disj}}\) is not a Gram); residual (ii) ND is for \(k\le4p-2\); Type I dual-eq is the two-level Max− law; Lemma D existence/2-plane is not fully written. Details: `evidence/share/denseness_path_package.md` § Public caveats.
+The intended close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-08-15).** Independent review: \(\lambda_{\min}(\Phi)\ge6\) is not proved (\(G_{u,\mathrm{disj}}\) is not a Gram); residual (ii) ND is for \(k\le4p-2\); Type I dual-eq is the two-level Max− law; Lemma D existence/2-plane is not fully written. Details: `evidence/share/denseness_path_package.md` § Caveats.
 
 > **Reader note.** Soft-close of \(L=\tfrac12\) via scheme-min Gsum was **retracted** 2026-08-06. Aut-Schur remains false. Historical “\(L\) OPEN” remarks in Props 15.20–15.171 refer to those older routes.
 

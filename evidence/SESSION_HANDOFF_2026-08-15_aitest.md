@@ -1,7 +1,7 @@
 # Session handoff (2026-08-15, AI-test / writeup)
 
 **Repo:** `/home/nick/quadratic-minmax-limit` · `luckyseoul/quadratic-minmax-limit` `main`  
-**Tip of tree at write:** `091ca3d` (`docs: Paata AI-test package for the 15.272 close`) plus this commit.  
+**Tip of tree at write:** see `git log` on `main`.  
 **Do not** `/goal clear`. **Do not** unflip \(L\) / E(1). **Do not** run PBSS `goal-verifier` (wrong harness). **Do not** re-search MO/X after every compression.
 
 ## Goal
@@ -33,14 +33,14 @@ Pytest: `15272/270/170/249/216` → 38 passed.
 
 ## What a fresh agent should do
 
-**Do not ping Paata.** Close the public caveats in `evidence/share/denseness_path_package.md` first:
+Close the caveats in `evidence/share/denseness_path_package.md` first:
 
 1. Prove \(\lambda_{\min}(\Phi)\ge6\) without calling \(G_{u,\mathrm{disj}}\) a Gram (it is not PSD).
 2. Residual (ii) for even \(k\ge4p\).
 3. Type I bad case when Max− is not two-level.
 4. Write A3 existence + the 2-plane amplitude model for Lemma D.
 
-Johnson same-line (Lemma E) is algebraically clean. Live `e1` is still True; that is not a prize stamp.
+Johnson same-line (Lemma E) is algebraically clean. Live `e1` is still True (wiring only).
 
 Cold-read score (this session):
 
@@ -60,7 +60,7 @@ If continuing writeup (not math): expand package Lemmas **D–G** so a cold read
 - Snip-snap: stop marking \(L\) closed then open.  
 - Referee MCP when stuck; not every turn.  
 - Subagents must use local compute (`use-available-compute`; pytest `-n 86`).  
-- Load `scientific-critique` for Paata self-check (not only referee).  
+- Load `scientific-critique` for a cold read of the package (not only referee).  
 - Graph engineering + arXiv stay in the working set.
 
 ## Pointers

@@ -1,14 +1,14 @@
 # Denseness-path package: \(L=\lim\alpha_n=\tfrac12\)
 
-**Audience:** independent AI / human check (Paata AI-test). Use **this file only**.  
+**Audience:** independent check of the denseness-path argument. Use **this file only**.  
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit  
-**Date:** 2026-08-15. Close is 15.272, not Aut-Schur and not Gsum.
+**Date:** 2026-08-15. The residual-(i) hinge is 15.272, not Aut-Schur and not Gsum.
 
 ## Verdict
 
 **15.272** writes a Max+-free spanning argument that \(k=1\cup k=3\) fills \(\mathcal W_{++}^0\) (Lemmas B–G), hence \(G_+\succ0\), hence dual-eq is empty on \(\mathrm{sc}\) (H–I). Aut-Schur is **false**. Gsum is unused.
 
-**Do not send this to Paata as a finished \(L=1/2\) proof.** Independent hostile review (2026-08-15) found three load-bearing holes **outside** the 15.272 span, plus two writeup holes **inside** Lemma D. They are listed under **Public caveats**. Live code still gates E(1) as True; that is a wiring fact, not a substitute for those holes.
+Independent review (2026-08-15) found three load-bearing holes **outside** the 15.272 span, plus two writeup holes **inside** Lemma D. They are listed under **Caveats**. Live code still gates E(1) as True; that is a wiring fact, not a substitute for those holes.
 
 | Piece | Status |
 |-------|--------|
@@ -21,7 +21,7 @@
 | Aut-Schur / Jacquet | **False** (\(p=5\) \(k=3\) rank \(61/65\); unused) |
 | Gsum disj LB | **False** / unused |
 | Pairing \(1^\top K^{-1}v\) | **Open** / unused |
-| **E(1) / \(L=\tfrac12\)** | **Not prize-ready** — see Public caveats |
+| **E(1) / \(L=\tfrac12\)** | **Not settled** — see Caveats |
 
 ---
 
@@ -223,7 +223,7 @@ Historical remarks “\(L\) OPEN” in Props 15.20–15.171 refer to those older
 
 ---
 
-## Public caveats (do not skip)
+## Caveats
 
 A hostile review for public scrutiny found the following. **None of these is Aut-Schur or Gsum.**
 
@@ -237,7 +237,7 @@ A hostile review for public scrutiny found the following. **None of these is Aut
 
 5. **Lemma E Johnson** (same-line hyperplane) was expanded independently and has **no algebraic GAP** relative to 15.269 B + the \(WW^\top\) identity. See `evidence/share/lemma_E_johnson.md`.
 
-Until (1)–(3) are closed, **do not claim \(L=1/2\) as a prize result.** Until (4) is written, do not treat bad-\(\mu\) spanning as a complete general proof (finite rank-2 + \(p=5\) Veronese 65 remain).
+Until (1)–(3) are closed, \(L=\tfrac12\) is not established. Until (4) is written, do not treat bad-\(\mu\) spanning as a complete general proof (finite rank-2 + \(p=5\) Veronese 65 remain).
 
 ---
 

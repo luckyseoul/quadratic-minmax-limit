@@ -63,6 +63,6 @@ A session may end only if one of these happened:
 
 “We shipped structure and left \(L\) OPEN on purpose” is **not** an allowed end condition for this goal.
 
-## Prize / channel (after a terminal state only)
+## After a terminal state
 
-Paata’s bar: pass an AI-test (2–3 cold reads call the writeup essentially correct) **before** human verification. Channel is X + GitHub, not MO. Do not ping, package, or chrome until a terminal state is actually reached.
+The writeup must stand on its own: independent cold reads of `evidence/share/denseness_path_package.md` should call the argument essentially correct. Channel is X + GitHub, not a MathOverflow answer.

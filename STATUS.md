@@ -1,6 +1,6 @@
 # Status (2026-08-15)
 
-**\(L=\lim\alpha_n=\tfrac12\)** via sandwich + Paley denseness + E(1). Residual (ii) closed. Residual (i) via 15.272 \(k=1\cup k=3\) span of \(\mathcal W_{++}^0\) (not Aut-Schur: that lift stays false, \(p=5\) \(k=3\) is \(61/65\)). Live `gplus`/`ker_sc`/dual-eq/`type_I`/`e1` import that hinge.
+Residual (ii) closed. Residual (i) hinge is 15.272 \(k=1\cup k=3\) span of \(\mathcal W_{++}^0\) (not Aut-Schur: that lift stays false, \(p=5\) \(k=3\) is \(61/65\)). Live `gplus`/`ker_sc`/dual-eq/`type_I`/`e1` import that hinge. \(L=\tfrac12\) is **not settled** — see `evidence/share/denseness_path_package.md` § Caveats.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|
@@ -9,9 +9,8 @@
 | Bi-tight majorization algebra (15.167) | CANDIDATE | `prop15167.py` |
 | Type I freeness-fail ND (residual i) | **CLOSED** | 15.272 \(k=1\cup k=3\) \(\Rightarrow G_+\succ0\Rightarrow\) 15.249 dual-eq empty |
 | Deep freeness-fail ND (residual ii) | **CLOSED** | affine 15.179 + (ii-b) 15.236 + (ii-a) 15.237; exhaustiveness still False (not required) |
-| E(1) / \(L=\tfrac12\) | **CLOSED** | Type I + residual (ii) + bi-tight \(p=5\) |
+| E(1) / \(L=\tfrac12\) | **not settled** | caveats: \(\lambda_{\min}\ge6\); residual (ii) \(k\ge4p\); Type I multi-level Max−; Lemma D |
 | Path-C residual / 16N | OPEN optional | not required for denseness path |
-| Prize acceptance | OPEN | X + GitHub; Paata AI-test |
 
 ### Fatal gaps (honest)
 
@@ -95,16 +94,16 @@
 
 `evidence/share/denseness_path_package.md`
 
-### Required opens (denseness prize path)
+### Required opens
 
-1. **Math residual (i) only:** Prove \(\|m_4\|_2^2\le n(n-2)/4\) for all primes \(p\ge5\) (15.217), **or** \(K_4\le\mathrm{Wick}_{hi}\), **or** \(|\mu|\le 1/(2p)\) / \(|\mu|\le 2/n\) / dual-eq empty / free-e_sc+ker=sc. Φ identity and conditional dual-eq chain already proved. Residual (ii) ND is **CLOSED** (15.179+15.236+15.237); exhaustiveness (15.193) remains False and is **not** required.  
-2. **Predicates:** Flip `gsum_disj_lb` / `type_I` / `e1_closed_general` via **real imports** only after (1). Then Main Theorem \(L=\tfrac12\). Soft-close forbidden.  
-3. **AI-test:** Cold AI-test on residual-(i) CLOSED scored **NOT_PROVED** (2/2 BLOCK) under `{SCRATCH}/ai_test/`; re-run only after hinge fixed.
+1. \(\lambda_{\min}(\Phi)\ge6\) without treating \(G_{u,\mathrm{disj}}\) as a Gram (it is not PSD).
+2. Residual (ii) for even \(k\ge4p\).
+3. Type I when Max− is not two-level.
+4. Lemma D: \(k=3\) existence and the 2-plane amplitude model.
 
-**Non-required:** Path-C / 16N / Hypothesis H / 15.193 exhaustiveness.  
-**Out of agent control:** Ping Paata (user).  
+**Non-required:** Path-C / 16N / Hypothesis H / 15.193 exhaustiveness.
 
-**Current:** residual (i) OPEN; residual (ii) CLOSED; E1/L OPEN; claim **not** asserted.
+**Current:** 15.272 span written; E(1)/\(L\) not settled. See the denseness-path package caveats.
 
 **Residual-(i) attack (2026-08-13 late, not a close):** exact 4-point sums at \(p=3,5,7\) (\(\mu=\mu_{\mathrm{part}}\), \(f_4\), linear+CR-split); \(\nu\equiv0\); envelope holds. New dead: 4×4 Gram; affine-quadratic level sets; CR-class master+diamond LP (\(\max|\mu|=1\)); IP-valency \(K_4\) (not regular at \(p=7\)); global \(t(p)\) mix. Viable: general envelope, \(F(\lambda)\) matching those sums, \(G_+\succ0\) then Comm-repair dual, \(|\mu|\le2/n\), \(K_4\le n(15n-22)\), non-low-degree dual-eq Farkas.
 
