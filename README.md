@@ -17,12 +17,14 @@ m_n
 
 **Goal:** settle the limit (see **`LONG_HORIZON_GOAL.md`**). Not done until \(L\) is proved or disproved.
 
-**Main claim:** \(\displaystyle L=\lim_n\alpha_n\) is **OPEN** (2026-08-13).
+**Main claim:** \(\displaystyle L=\lim_n\alpha_n\) is **OPEN** (2026-08-16).
 
-Residual **(ii)** ND is **CLOSED** (15.179+15.236+15.237). Denseness path is **blocked**
-by residual **(i)** only: unproved disj Gsum LB / \(|\mu|\le 1/(2p)\) on Paley
-\(n=p^2+1\) (Max+ is not an IP-scheme: 15.158). Soft-close forbidden.
-Short honest package: **`evidence/share/denseness_path_package.md`**.
+Sandwich and Paley \(\rho=1\) are proved. E(1) on \(n=p^2+1\) is **not**.
+Four leftovers (`GOAL.md`): \(\lambda_{\min}(\Phi)\ge6\); residual (ii) for
+even \(k\ge4p\); Type I when Max− is multi-level; Lemma D (writeup exists,
+hostile check still due). Residual (ii) is closed only for the affine branch
+and even \(k\le4p-2\) (15.179/236/237), not for the statement E(1) needs.
+Soft-close forbidden. Package: **`evidence/share/denseness_path_package.md`**.
 
 **Proved (sandwich):**
 \[

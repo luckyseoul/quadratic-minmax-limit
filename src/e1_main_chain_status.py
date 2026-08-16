@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Main / E(1) wiring check after Props 15.167–15.171.
+Public-doc honesty check for E(1) / L.
 
-L closed only if bi-tight AND full E(1) (m_n≥Φ−2 all p≥5).
-Honest 2026-08-06: E1 open until gsum_disj_lb_proved_general (15.170 hinge).
+Writeup may assert L=1/2 only after the four GOAL.md leftovers are
+actually imported (not the live e1_closed_general old AND, and not
+the retired Gsum hinge). Soft-close banned (F3).
 """
 from __future__ import annotations
 
@@ -24,6 +25,31 @@ from e1_gmin_m4_prop15168 import (  # noqa: E402
     main_L_from_e1,
 )
 from e1_gmin_m4_prop15170 import gsum_disj_lb_proved_general  # noqa: E402
+
+
+def four_e1_units_closed() -> dict:
+    """GOAL.md acceptance: four leftovers, not the old e1 AND."""
+    try:
+        from e1_gmin_m4_prop15278 import phi_F_ge_6_proved_general
+        from e1_gmin_m4_prop15274 import residual_ii_k_ge_4p_ND_closed
+        from e1_gmin_m4_prop15275 import type_I_multilevel_bad_case_ND_closed
+        from e1_gmin_m4_prop15276 import (
+            lemma_D_existence_written,
+            lemma_D_2plane_amplitudes_proved,
+        )
+    except ImportError as exc:  # pragma: no cover
+        return {"closed": False, "import_error": str(exc)}
+    floor = bool(phi_F_ge_6_proved_general())
+    resii = bool(residual_ii_k_ge_4p_ND_closed())
+    type_i = bool(type_I_multilevel_bad_case_ND_closed())
+    lem_d = bool(lemma_D_existence_written() and lemma_D_2plane_amplitudes_proved())
+    return {
+        "phi_F_ge_6": floor,
+        "residual_ii_k_ge_4p": resii,
+        "type_I_multilevel": type_i,
+        "lemma_D": lem_d,
+        "closed": bool(floor and resii and type_i and lem_d),
+    }
 
 
 def _props_15167_171_slice(solution: str) -> str:
@@ -104,25 +130,42 @@ def check_docs_L_status() -> dict:
         )
     )
 
-    if not e1:
-        docs_ok = handoff_open and not soft
-    else:
-        from e1_gmin_m4_prop15170 import residual_i_dual_eq_empty_proved_general
+    units = four_e1_units_closed()
+    overclaim_patterns = [
+        r"\*\*Main Theorem \(limit\)\.\*\*",
+        r"E\(1\); \$L=\\tfrac12\$",
+        r"\*\*E\(1\) CLOSED:\*\*",
+        r"\*\*Claim:\*\* \*\*\\?\$?L=1/2",
+        r"Denseness path is \*\*blocked\*\*\s+by residual \*\*\(i\)\*\* only",
+        r"Deep freeness-fail ND \(residual ii\) \| \*\*CLOSED\*\*",
+        r"Residual \*\*\(ii\)\*\* ND is \*\*CLOSED\*\*",
+        r"Residual \(ii\) full ND closed",
+        r"Full residual \(ii\) is \*\*CLOSED\*\*",
+    ]
+    overclaim = False
+    overclaim_hit = None
+    if not units.get("closed"):
+        for pat in overclaim_patterns:
+            m = re.search(pat, head, re.I | re.M)
+            if m:
+                overclaim = True
+                overclaim_hit = m.group(0)[:80]
+                break
 
-        docs_ok = bool(
-            e1
-            and (
-                gsum_disj_lb_proved_general()
-                or residual_i_dual_eq_empty_proved_general()
-            )
-        )
+    if not units.get("closed"):
+        docs_ok = handoff_open and not soft and not overclaim
+    else:
+        docs_ok = not soft
 
     return {
         "HANDOFF_shows_L_OPEN": handoff_open,
         "soft_close_detected": soft,
         "soft_close_hit": soft_hit,
+        "overclaim_detected": overclaim,
+        "overclaim_hit": overclaim_hit,
         "docs_ok": docs_ok,
         "e1_closed_general": e1,
+        "four_e1_units": units,
         "gsum_disj_lb_proved_general": gsum_disj_lb_proved_general(),
         "scanned_props_15167_171": True,
     }
@@ -137,10 +180,10 @@ def run_main_chain() -> dict:
     bi = bool(bt["bi_tight_empty_for_all_p_ge_5"])
     residual = bool(o["residual_closed_general"])
     Lwire = main_L_from_e1(e1_closed, bi)
-    L_closed = bool(Lwire["L_closed"])
     docs = check_docs_L_status()
+    L_closed = bool(docs["four_e1_units"]["closed"])
     out = {
-        "title": "Main/E(1) chain status after 15.167–15.171 (honest Gsum hinge)",
+        "title": "Main/E(1) chain status (four GOAL leftovers, not Gsum hinge)",
         "bi_tight_empty_for_all_p_ge_5": bi,
         "residual_closed_general": residual,
         "bitight_bypass_residual": True,
@@ -163,11 +206,12 @@ def run_main_chain() -> dict:
         "Main_closed": L_closed,
         "L_closed": L_closed,
         "L_status": "CLOSED" if L_closed else "OPEN",
+        "writeup_L_closed": bool(docs["four_e1_units"]["closed"]),
         "docs": docs,
         "rule": (
-            "L closed iff bi-tight (15.167) ∧ full E(1). "
-            "E1 requires gsum_disj_lb_proved_general (15.170 hinge; 15.158). "
-            "Soft-close banned (F3)."
+            "Public writeup may assert L=1/2 only after four leftovers: "
+            "phi_F_ge_6, residual_ii k≥4p, multi-level Type I, Lemma D. "
+            "Live e1_closed_general is a separate wiring fact. Soft-close banned (F3)."
         ),
     }
     return out

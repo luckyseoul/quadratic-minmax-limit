@@ -1,8 +1,8 @@
-# Denseness-path package: \(L=\lim\alpha_n=\tfrac12\)
+# Denseness-path package (intended \(L=\tfrac12\); the limit is OPEN)
 
 **Audience:** independent check of the denseness-path argument. Use **this file only**.  
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit  
-**Date:** 2026-08-15. The residual-(i) hinge is 15.272, not Aut-Schur and not Gsum.
+**Date:** 2026-08-16. The residual-(i) two-level hinge is 15.272, not Aut-Schur and not Gsum. \(L=\tfrac12\) is **not proved**.
 
 ## Verdict
 
@@ -15,9 +15,11 @@ Independent review (2026-08-15) found three load-bearing holes **outside** the 1
 | Sandwich \(1/\pi\le\liminf\le\limsup\le\tfrac12\) | **Proved** (`solution.md` §4–5) |
 | \(\rho=1\) on Paley \(n=p^2+1\) | **Proved** (`evidence/PROOF_rho_eq_1.md`) |
 | Denseness (Prop 6.1) | **Proved** (below) |
-| Bi-tight empty, all \(p\ge5\) (15.167) | **Proved** |
-| Residual (ii) ND | **Proved** (15.179+236+237) |
-| Residual (i) Type I | **Proved** (15.272 → 15.207 → 15.249 → 15.216) |
+| Bi-tight empty, all \(p\ge5\) (15.167) | **Not proved** — majorization needs \(\lambda_{\min}(\Phi)\ge6\); \(G_{u,\mathrm{disj}}\) is not a Gram |
+| Residual (ii), affine + even \(k\le4p-2\) | **Proved** (15.179+236+237) |
+| Residual (ii), even \(k\ge4p\) | **Open** |
+| Residual (i) Type I, two-level Max− | **Proved** (15.272 → 15.207 → 15.249 → 15.216) |
+| Residual (i) Type I, multi-level Max− | **Open** |
 | Aut-Schur / Jacquet | **False** (\(p=5\) \(k=3\) rank \(61/65\); unused) |
 | Gsum disj LB | **False** / unused |
 | Pairing \(1^\top K^{-1}v\) | **Open** / unused |
@@ -45,9 +47,9 @@ E(1) on this family means \(m_n\ge\Phi(C)-2\) with \(\Phi(C)=\tfrac12 n\sqrt{n-1
 
 **\(\rho=1\).** On Paley \(n=p^2+1\), the halfspace boolean vector \(x_\infty=1\), \(x_u=\sigma(L(u))\) for an \(F_p\)-form \(L\) and \(S\subset F_p\) of size \(m\) satisfies \(Cx=px\) (`evidence/PROOF_rho_eq_1.md`: fibre character sums \(p-1\) on \(\ker L\) and \(-1\) off). Thus \(\rho(C)=1\) and \(\Phi(C)=\tfrac12 n\sqrt{n-1}\).
 
-**Bi-tight, all \(p\ge5\).** \(\mathrm{mult}(\lambda_{\max}(\Phi))\ge d-1\) (PSL min irrep). \(\lambda_{\min}(\Phi)\ge6\) because \(Q_4\) is a Gram Rayleigh of Max+ edge signs, hence \(Q_4\ge0\Rightarrow\mathrm{ray}\ge0\Rightarrow\lambda_{\min}\ge6\). Majorization then gives \(\lambda_{\max}\le L_*=(p^4+24p^2-1)/(2(p^2-1))\), and \(2d-L_*=(p^4-24p^2-1)/(2(p^2-1))>0\) for \(p\ge5\) (\(f(x)=x^2-24x-1\), \(f(25)=24\), \(f'>0\)). So \(\lambda_{\mathrm{cycle}}<d\) and bi-tight covers are empty.
+**Bi-tight algebra, conditional on the floor.** \(\mathrm{mult}(\lambda_{\max}(\Phi))\ge d-1\) (PSL min irrep). **If** \(\lambda_{\min}(\Phi)\ge6\), majorization gives \(\lambda_{\max}\le L_*=(p^4+24p^2-1)/(2(p^2-1))\), and \(2d-L_*>0\) for \(p\ge5\). The step “\(Q_4\) is a Gram of \(G_{u,\mathrm{disj}}\)” is **false** (\(G_{u,\mathrm{disj}}\) has negative eigenvalues). Floor certified at \(p=5,7\) only. See Caveat 1.
 
-**Residual (ii).** Affine two-level branch empty (15.179: forces \(k=3p-1\), impossible for \(k\ge3p\)). Even \(k\le4p-2\) Max− dichotomy (15.236). Dual-bad pair-span \(\{S=-4,f_e=-1\}\) cannot be a star, pair-slice, or triangle (15.237). Exhaustiveness that freeness-fail forces \(S\in\{2,4\}\) is **not** claimed and is not required.
+**Residual (ii), proved range.** Affine two-level branch empty (15.179: forces \(k=3p-1\), impossible for \(k\ge3p\)). Even \(k\le4p-2\) Max− dichotomy (15.236). Dual-bad pair-span \(\{S=-4,f_e=-1\}\) cannot be a star, pair-slice, or triangle (15.237). Even \(k\ge4p\) is **not** in those ND lemmas (Caveat 2). Exhaustiveness that freeness-fail forces \(S\in\{2,4\}\) is not claimed.
 
 ---
 
@@ -255,4 +257,4 @@ Until (1)–(3) are closed, \(L=\tfrac12\) is not established. Caveat (4) is the
 Is residual (i) (Type I freeness-fail dual-eq empty for all primes \(p\ge5\)) essentially proved by this package?
 
 **Q2 (\(L\)).**  
-Is \(\lim\alpha_n=\tfrac12\) proved by this package?
+Is \(\lim\alpha_n=\tfrac12\) proved by this package? (The honest answer is no until Caveats 1–3 close.)

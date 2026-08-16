@@ -31,19 +31,18 @@ m_n
 Moreover \(\limsup_n\alpha_n=\lim_n a_n\) where \(a_n=\sup_{k\ge1}\alpha_{kn}\).
 (The lower bound is the dual-Gaussian arcsine argument of Prop.~5.2, valid for **every** Seidel matrix; the classical Bohnenblust–Hille floor \(2^{-5/2}\) is retained as Prop.~5.1.)
 
-**Main Theorem (limit).**
+**Target (limit) — not a theorem.** Sandwich + Paley denseness (\(\rho=1\)
+on \(n=p^2+1\)) + E(1) on that family would give
 \begin{equation}
 \label{eq:limit}
 L=\lim_{n\to\infty}\alpha_n=\tfrac12.
 \end{equation}
-Sandwich + Paley denseness (\(\rho=1\) on \(n=p^2+1\)) + E(1): bi-tight
-(15.167), residual (ii) (15.171/15.179/15.236/15.237), residual (i) Type I
-via \(G_+\succ0\) on \(\mathcal W_{++}^0\).  The 15.270 Aut-Schur lift is
-still **false** (Jacquet \(\nRightarrow\) PSL-span of \(k=3\) \(F\); \(p=5\)
-rank \(61/65\)).  The close is 15.272: \(k=1\cup k=3\) spans
-\(\mathcal W_{++}^0\) (Johnson same-line hyperplane + \(k=3\) bad-\(\mu\) /
-complementary mixed / through-\(L_0\) Fejer), plus Singer PD of \(k=3\)
-on \(F\) for \(p\ge7\) and the \(p=5\) \(k=1\) fill.
+E(1) is **not proved** for all primes \(p\ge5\). Four obligations remain
+(`GOAL.md`; `evidence/share/denseness_path_package.md` § Caveats):
+(1) \(\lambda_{\min}(\Phi)\ge6\) Max+-free (\(G_{u,\mathrm{disj}}\) is not a
+Gram); (2) residual (ii) for even \(k\ge4p\); (3) Type I when Max− is not
+two-level; (4) Lemma D existence / 2-plane (writeup `A3_PROOF.md` + 15.276;
+still wants a hostile check). Aut-Schur is **false**. Gsum unused.
 
 **Optional still open:** Path-C residual / \(16N\) (independent).
 
@@ -51,14 +50,17 @@ on \(F\) for \(p\ge7\) and the \(p=5\) \(k=1\) fill.
 matrix of order \(n=p^2+1\) (over \(\mathbb F_{p^2}\)) admits a halfspace boolean eigenvector
 \(Cx=px\), hence \(\rho(C)=1\) and \(\Phi(C)=\tfrac12 n\sqrt{n-1}\). Along \(n_k=p_k^2+1\) one has
 \(n_{k+1}/n_k\to1\) and \(\limsup_k\rho(C_{n_k})=1\). Proof: `evidence/PROOF_rho_eq_1.md`.
-With \(m_n\ge\Phi(C)-2\) (E(1)) this forces \(L=\tfrac12\).
+**If** \(m_n\ge\Phi(C)-2\) (E(1)) this would force \(L=\tfrac12\). E(1) is open.
 
 **What is complete.** Dual-Gaussian lower bound; denseness; \(\rho=1\) on \(n=p^2+1\);
-bi-tight (15.167); residual (ii); residual (i) via 15.272 \(k=1\cup k=3\)
-\(\Rightarrow G_+\succ0\Rightarrow\ker=\mathrm{sc}\) (15.207) \(\Rightarrow\) dual-eq empty
-(15.249/15.216); E(1); \(L=\tfrac12\).  Aut-Schur remains false.  Gsum disj LB unused.
+15.167 majorization algebra (the floor \(\lambda_{\min}(\Phi)\ge6\) is **not**
+proved); residual (ii) affine + even \(k\le 4p-2\) (15.179/236/237), **not**
+even \(k\ge4p\); residual (i) two-level Type I via 15.272
+\(k=1\cup k=3\Rightarrow G_+\succ0\Rightarrow\ker=\mathrm{sc}\) (15.207)
+\(\Rightarrow\) dual-eq empty (15.249/15.216). Aut-Schur remains false. Gsum
+disj LB unused. **E(1) and \(L=1/2\) are not complete.**
 
-The intended close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-08-15).** Independent review: \(\lambda_{\min}(\Phi)\ge6\) is not proved (\(G_{u,\mathrm{disj}}\) is not a Gram); residual (ii) ND is for \(k\le4p-2\); Type I dual-eq is the two-level Max− law; Lemma D existence/2-plane is not fully written. Details: `evidence/share/denseness_path_package.md` § Caveats.
+The intended Type I close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-08-16).** \(L\) is OPEN. Details: `evidence/share/denseness_path_package.md` § Caveats.
 
 > **Reader note.** Soft-close of \(L=\tfrac12\) via scheme-min Gsum was **retracted** 2026-08-06. Aut-Schur remains false. Historical “\(L\) OPEN” remarks in Props 15.20–15.171 refer to those older routes.
 

@@ -5,7 +5,7 @@
 # Research handoff: min-max ±1 quadratic form limit
 
 **Status date:** 2026-08-15  
-**Claim:** **\(L=1/2\)** (E1 closed). Residual **(ii)** full ND closed. Residual **(i)** via 15.272 \(k=1\cup k=3\) span. Aut-Schur / Jacquet lift remains **dead** and unused. residual/16N optional open.
+**Claim:** sandwich and Paley \(\rho=1\) are proved. **\(L=1/2\) is not.** E(1) still needs \(\lambda_{\min}(\Phi)\ge6\), residual (ii) for even \(k\ge4p\), multi-level Type I, and a hostile check of Lemma D. Residual (ii) is closed only for affine + even \(k\le4p-2\). Aut-Schur remains **dead**. Gsum unused. residual/16N optional open.
 
 **Problem:** [MO 413935](https://mathoverflow.net/questions/413935) · [X thread](https://x.com/PI010101/status/2081070728422752329).  
 @PI010101 asked for GitHub, then posted that Grok Build 4.5 found a gap:  
@@ -14,7 +14,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **Workspace:** `/home/nick/quadratic-minmax-limit/`  
 **GitHub:** https://github.com/luckyseoul/quadratic-minmax-limit (`main`)  
-**Repo description:** \(L=1/2\) via 15.272 \(k=1\cup k=3\); Aut-Schur rejected; Gsum disj LB unused.
+**Repo description:** sandwich + Paley \(\rho=1\) proved; \(L=1/2\) OPEN pending four E(1) leftovers. Aut-Schur rejected; Gsum unused.
 
 **Shipped close:**  
 - **15.167:** bi-tight majorization algebra. `src/e1_gmin_m4_prop15167.py`  
@@ -56,13 +56,13 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 ## 0. One-line status
 
-Residual (ii) ND closed. Residual (i) hinge is 15.272 \(k=1\cup k=3\) \(\Rightarrow G_+\succ0\Rightarrow\) 15.249 dual-eq empty. Aut-Schur stays false. Gsum disj LB unused. \(L=\tfrac12\) is **not settled** (caveats in the denseness-path package).
+Residual (ii) closed for affine + even \(k\le4p-2\), **OPEN** for even \(k\ge4p\). Residual (i) two-level hinge is 15.272 \(k=1\cup k=3\) \(\Rightarrow G_+\succ0\Rightarrow\) 15.249 dual-eq empty; multi-level Type I is OPEN. Aut-Schur stays false. Gsum unused. \(L=\tfrac12\) is **OPEN**.
 
 ### P0 status
 
 **Bi-tight majorization (15.167):** mult≥d−1 + λ_min≥6 ⇒ L_* < 2d (algebra). In the E(1) AND at \(p=5\).
 
-**E(1) CLOSED:** residual **(ii)** affine 15.179 + (ii-b) 15.236 + (ii-a) 15.237; residual **(i)** Type I via 15.272 (not `gsum_disj_lb`). **\(L=1/2\).**
+**E(1) not closed:** live `e1_closed_general` is still the old AND (wiring). Writeup must not treat that as a proof. Residual **(ii)** affine + \(k\le4p-2\) is ND; \(k\ge4p\) is open. Residual **(i)** two-level Type I via 15.272 (not `gsum_disj_lb`). **\(L=1/2\) is OPEN.**
 
 **Hinge (every prime \(p\ge5\)):** 15.272 Johnson same-line hyperplane (live WWᵀ + DFT rank \(m-1\) + \(2\sigma=2\)) + \(k=3\) bad-\(\mu\) / complementary mixed / through-\(L_0\) + Singer PD on \(F\) for \(p\ge7\) + \(p=5\) rank 65. Pairing \(1^\top K^{-1}v\) unused. 15.271 \(k=3\)-only `fperp` stays False.
 

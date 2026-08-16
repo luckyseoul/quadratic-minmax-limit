@@ -27,7 +27,7 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
 - Sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le 1/2\).
 - Denseness: the limit exists globally iff it exists along Paley orders \(n_k=p_k^2+1\).
 - \(\rho=1\) on that Paley family, so \(\Phi(C_n)=\frac12 n\sqrt{n-1}\) and \(\alpha_{n_k}\to 1/2\) **if** E(1) holds there.
-- Bi-tight empty for all primes \(p\ge5\) (15.167).
+- 15.167 majorization algebra: bi-tight empty **if** \(\lambda_{\min}(\Phi)\ge6\). The floor is **not** proved (\(G_{u,\mathrm{disj}}\) is not a Gram).
 - Exact Paley optimality is **false** (\(m_{10}=13<15\)). E(1) is asymptotic.
 
 Therefore the remaining theorem is **E(1)** on \(n=p^2+1\). Residual **(ii)** is **CLOSED** (affine 15.179 + (ii-b) 15.236 + (ii-a) 15.237). \(\nu=0\) on every \(|\kappa|=1\) four-set is **proved** (15.268), so \(m_4^+=m_4^-=\mu=\mu_{\mathrm{part}}+2\delta_+\) there. The only leftover:

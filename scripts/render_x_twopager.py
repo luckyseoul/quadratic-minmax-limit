@@ -318,15 +318,15 @@ def main():
     for name in ("page1.jpg", "page2.jpg", "twopager.pdf"):
         src = OUT / name
         if name.endswith(".jpg"):
-            (share / f"L_closed_{name}").write_bytes(src.read_bytes())
+            (share / f"sandwich_{name}").write_bytes(src.read_bytes())
         else:
-            (share / "L_closed_two_pager.pdf").write_bytes(src.read_bytes())
+            (share / "sandwich_two_pager.pdf").write_bytes(src.read_bytes())
     gap = 16
     w = max(imgs[0].width, imgs[1].width)
     canvas = Image.new("RGB", (w, imgs[0].height + imgs[1].height + gap), (15, 20, 25))
     canvas.paste(imgs[0], (0, 0))
     canvas.paste(imgs[1], (0, imgs[0].height + gap))
-    canvas.save(share / "L_closed_two_pager_stacked.jpg", "JPEG", quality=90, optimize=True)
+    canvas.save(share / "sandwich_two_pager_stacked.jpg", "JPEG", quality=90, optimize=True)
     canvas.save(OUT / "twopager_stacked.jpg", "JPEG", quality=90, optimize=True)
     print("mirrored to evidence/share/")
 

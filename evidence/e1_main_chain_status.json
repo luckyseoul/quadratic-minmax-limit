@@ -1,5 +1,5 @@
 {
-  "title": "Main/E(1) chain status after 15.167\u201315.171 (honest Gsum hinge)",
+  "title": "Main/E(1) chain status (four GOAL leftovers, not Gsum hinge)",
   "bi_tight_empty_for_all_p_ge_5": true,
   "residual_closed_general": false,
   "bitight_bypass_residual": true,
@@ -13,17 +13,27 @@
     "deep_auto_freeness": true,
     "deep_all_ND_closed": true
   },
-  "Main_closed": true,
-  "L_closed": true,
-  "L_status": "CLOSED",
+  "Main_closed": false,
+  "L_closed": false,
+  "L_status": "OPEN",
+  "writeup_L_closed": false,
   "docs": {
     "HANDOFF_shows_L_OPEN": true,
     "soft_close_detected": false,
     "soft_close_hit": null,
+    "overclaim_detected": false,
+    "overclaim_hit": null,
     "docs_ok": true,
     "e1_closed_general": true,
+    "four_e1_units": {
+      "phi_F_ge_6": false,
+      "residual_ii_k_ge_4p": false,
+      "type_I_multilevel": false,
+      "lemma_D": true,
+      "closed": false
+    },
     "gsum_disj_lb_proved_general": false,
     "scanned_props_15167_171": true
   },
-  "rule": "L closed iff bi-tight (15.167) \u2227 full E(1). E1 requires gsum_disj_lb_proved_general (15.170 hinge; 15.158). Soft-close banned (F3)."
+  "rule": "Public writeup may assert L=1/2 only after four leftovers: phi_F_ge_6, residual_ii k\u22654p, multi-level Type I, Lemma D. Live e1_closed_general is a separate wiring fact. Soft-close banned (F3)."
 }
