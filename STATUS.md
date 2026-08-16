@@ -1,6 +1,6 @@
-# Status (2026-08-15)
+# Status (2026-08-16)
 
-Residual (ii) closed. Residual (i) hinge is 15.272 \(k=1\cup k=3\) span of \(\mathcal W_{++}^0\) (not Aut-Schur: that lift stays false, \(p=5\) \(k=3\) is \(61/65\)). Live `gplus`/`ker_sc`/dual-eq/`type_I`/`e1` import that hinge. \(L=\tfrac12\) is **not settled** — see `evidence/share/denseness_path_package.md` § Caveats.
+Leftover campaign: 15.273–15.279 A–Y shipped; floor / Type I 3-point / residual (ii) \(k\ge4p\) still OPEN. Live `e1` is still the old AND. Residual (i) hinge is 15.272 \(k=1\cup k=3\) span of \(\mathcal W_{++}^0\) (not Aut-Schur: that lift stays false, \(p=5\) \(k=3\) is \(61/65\)). \(L=\tfrac12\) is **not settled** — see `evidence/share/denseness_path_package.md` § Caveats. Session: `evidence/SESSION_HANDOFF_2026-08-16_leftover.md`.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|

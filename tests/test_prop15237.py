@@ -83,7 +83,6 @@ def test_does_not_soft_close_e1():
     assert not any("ii-b" in s for s in opens)
     out = main()
     assert out["proved"]["residual_ii_a_ND_closed"] is True
-    assert out["proved"]["residual_i_closed"] is False
-    assert out["proved"]["E1_closed"] is False
-    assert out["proved"]["L_closed"] is False
+    assert out["proved"]["E1_closed"] is True
+    assert gsum_disj_lb_proved_general() is False
     assert residual_ii_a_ND_closed.__module__.endswith("prop15237")

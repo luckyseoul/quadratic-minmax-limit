@@ -20,9 +20,13 @@ from e1_gmin_m4_prop15111 import (  # noqa: E402
     main,
     mubar,
     pair_const,
+    phi_kappa_closed_on_Z,
     prove_alpha_kappa_on_Z,
     prove_channel_alpha_rho,
     prove_pair_and_alpha_rho,
+    prove_phi_kappa_pairing,
+    prove_star_kappa_pairing,
+    prove_Tb_kappa_pairing,
     prove_zero_diag_pairing,
     sixteen_N_delta_budget,
 )
@@ -32,6 +36,33 @@ def test_zero_diag_pairing_identity():
     r = prove_zero_diag_pairing([6, 7, 8], trials=15)
     assert r["proved"] is True
     assert r["max_abs_err"] < 1e-8
+
+
+def test_star_kappa_pairing_identity():
+    """∑ star κ_B trace form, and Z-collapse ⟨star,κ_B⟩=−p‖B‖² ⇒ β_b=6/p."""
+    r = prove_star_kappa_pairing([6, 7, 8], trials=10)
+    assert r["proved"] is True
+    assert r["max_abs_err"] < 1e-8
+    assert r["beta_b_algebraic"] is True
+    for p in (3, 5):
+        c = r["Z_collapse"][str(p)]
+        assert c["holds"] is True
+        assert c["expect"] == -p
+
+
+def test_phi_and_Tb_kappa_pairing():
+    """⟨φ,κ_B⟩=−n/4 and ⟨Tb,κ_B⟩=6(3p²+5)/p², Max+-free."""
+    phi = prove_phi_kappa_pairing()
+    assert phi["proved"] is True
+    assert phi["fraction_ok"] is True
+    tb = prove_Tb_kappa_pairing()
+    assert tb["proved"] is True
+    assert tb["beta_Tb_algebraic"] is True
+    assert tb["fraction_ok"] is True
+    assert beta_Tb(5) == Fraction(96, 5)
+    assert phi_kappa_closed_on_Z(5) == -Fraction(26, 4)
+    # channel identity still reconstructs α_ρ from the now-algebraic scalars
+    assert prove_channel_alpha_rho([5, 7, 11])["proved"] is True
 
 
 def test_alpha_kappa_algebra():
@@ -89,6 +120,10 @@ def test_main_honest_open():
     out = main()
     assert out["L_status"] == "OPEN"
     assert out["proved"]["zero_diag_pairing"] is True
+    assert out["proved"]["star_kappa_pairing"] is True
+    assert out["proved"]["beta_b_algebraic"] is True
+    assert out["proved"]["beta_Tb_algebraic"] is True
+    assert out["proved"]["phi_kappa_pairing"] is True
     assert out["proved"]["alpha_kappa_on_Z"] is True
     assert out["proved"]["pair_and_alpha_rho_forms"] is True
     assert out["proved"]["channel_alpha_rho"] is True

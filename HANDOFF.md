@@ -1,6 +1,6 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-15):** Residual **(ii) CLOSED**. Residual **(i)** hinge is 15.272 \(k=1\cup k=3\). Aut-Schur still **false**. Gsum unused. \(L=\tfrac12\) is **not settled**: see caveats in `evidence/share/denseness_path_package.md`.  
-> Session: **`evidence/SESSION_HANDOFF_2026-08-15_aitest.md`**. Prior: `…_unflip.md`, `…-08-14_residual_i.md`. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**.
+> **Now (2026-08-16):** Leftover campaign mid-arc. 15.273–15.279 shipped (A–**Y**); \(\lambda_{\min}(\Phi)\ge6\), Type I 3-point, residual (ii) \(k\ge4p\) still OPEN. Aut-Schur **false**. Gsum unused. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**: `evidence/share/denseness_path_package.md` § Caveats.  
+> Session: **`evidence/SESSION_HANDOFF_2026-08-16_leftover.md`**. Prior: `…-08-15_aitest.md`, `…_unflip.md`. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**. Next `/goal`: **`GOAL.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
 
@@ -49,7 +49,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 **P0 graph:** `evidence/P0_ENGINEERING_GRAPH.md` · **Failure graph:** `evidence/E1_FAILURE_GRAPH.md`  
 
 **Suggested skills:** `agent-cost-optimization` · `graph-engineered-completion` · `scientific-critique` · `grill-me` · `self-refine-loop` · `handoff` · `session-handoff-packager` · `verification-before-completion` · `use-available-compute` · `research` · `arxiv` · `litreview` · `openai-referee`  
-(`goal-verifier` is the PBSS harness — **do not** run it on this MO goal.)  
+
 **Compute:** 88 cores + idle V100; ProcessPool/GPU for Max+ contractions; no class_key thrash (F19); never soft-close L (F3). Token budget not a constraint this week — start a **new** `/goal` after `/goal clear` (cannot resume). Do not leave orphaned stdin `python3` eigsh jobs.
 
 ---

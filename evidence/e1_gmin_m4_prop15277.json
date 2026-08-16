@@ -1,0 +1,318 @@
+{
+  "prop": "15.277",
+  "title": "Pointwise |2|+|3|+|4| + one-edge \u03bc\u0304; G_{u,disj} is not a Gram; general \u03bb_min\u22656 OPEN",
+  "L_status": "OPEN",
+  "proved": {
+    "pointwise_partition": true,
+    "cs_dictionary": true,
+    "one_edge_is_mu_bar": true,
+    "adjacent_cb": true,
+    "singer_mu0_not_gplus": true,
+    "rho_beats_q4_budget": false,
+    "lambda_min_ge_6_proved_general": false,
+    "lambda_min_ge_5_proved_p_ge_7": false,
+    "census_spectrum_p5_p7": true,
+    "gu_disj_is_gram": false,
+    "gsum_disj_lb_proved_general": false,
+    "aut_schur": false,
+    "pairing": false,
+    "E1_closed": true
+  },
+  "algebra": {
+    "pointwise": "q^2 = 4||By||^2 - 2||B||^2 + 8 four",
+    "cs_iff": "E[||By_perp||^2] <= 2(n-3)/n  <=>  lambda_min>=6",
+    "one_edge_rayleigh": "8(p^2-1)/(p^2-5) = mu_bar",
+    "one_edge_norm2": "(p^2-5)/(2p^2)",
+    "same_plus_adj": "6+2/p^2",
+    "q4_iff": "<m4, kappa_B> >= 0",
+    "A": {
+      "proved": true,
+      "theorem": "Boolean y, zero-diag symmetric B: (y\u1d40By)\u00b2 = 2\u2016B\u2016_F\u00b2 + 4(\u2016By\u2016\u00b2\u2212\u2016B\u2016_F\u00b2) + 8 four = 4\u2016By\u2016\u00b2 \u2212 2\u2016B\u2016_F\u00b2 + 8 four.  On Max+ and B\u2208Z, E[\u2016By\u2016\u00b2]=2\u2016B\u2016\u00b2 so E[q\u00b2]=6\u2016B\u2016\u00b2+8\u27e8m\u2084,\u03ba_B\u27e9.",
+      "by_p_sample": {
+        "5": {
+          "same_coeff": 2,
+          "wedge_coeff_of_By2_minus_B2": 4,
+          "average_floor": 6,
+          "ok": true
+        },
+        "7": {
+          "same_coeff": 2,
+          "wedge_coeff_of_By2_minus_B2": 4,
+          "average_floor": 6,
+          "ok": true
+        },
+        "11": {
+          "same_coeff": 2,
+          "wedge_coeff_of_By2_minus_B2": 4,
+          "average_floor": 6,
+          "ok": true
+        },
+        "13": {
+          "same_coeff": 2,
+          "wedge_coeff_of_By2_minus_B2": 4,
+          "average_floor": 6,
+          "ok": true
+        }
+      },
+      "depends_on": [
+        "boolean_y",
+        "zero_diag",
+        "E_yyT_eq_2Pplus"
+      ]
+    },
+    "B": {
+      "proved": true,
+      "hypothesis_proved_general": false,
+      "theorem": "CB=pB \u21d2 By\u2208V\u208a.  By=(q/n)y+By_\u22a5 gives E[q\u00b2]=n(2\u2016B\u2016\u00b2\u2212E[\u2016By_\u22a5\u2016\u00b2]). E[q\u00b2]\u22656\u2016B\u2016\u00b2 iff E[\u2016By_\u22a5\u2016\u00b2]\u22642(n\u22123)/n \u2016B\u2016\u00b2.  Pointwise q\u00b2\u22653\u2016By\u2016\u00b2 is false; the bound on the average is OPEN.",
+      "by_p_sample": {
+        "5": {
+          "by_perp_budget": "23/13",
+          "n_times_2_minus_budget": "6",
+          "ok": true
+        },
+        "7": {
+          "by_perp_budget": "47/25",
+          "n_times_2_minus_budget": "6",
+          "ok": true
+        },
+        "11": {
+          "by_perp_budget": "119/61",
+          "n_times_2_minus_budget": "6",
+          "ok": true
+        },
+        "13": {
+          "by_perp_budget": "167/85",
+          "n_times_2_minus_budget": "6",
+          "ok": true
+        }
+      },
+      "pointwise_q2_ge_3_By2": false
+    },
+    "C": {
+      "proved": true,
+      "theorem": "Hollow ++ lift of a single edge: y\u1d40B^{ij}y=2(y_i y_j\u2212C_{ij}/p), \u2016B\u2016_F\u00b2=(p\u00b2\u22125)/(2p\u00b2), E[q\u00b2]=4(p\u00b2\u22121)/p\u00b2, Rayleigh=8(p\u00b2\u22121)/(p\u00b2\u22125)=\u03bc\u0304.  (P\u2299P)^{\u22121}=4p\u00b2/(p\u00b2\u22121)I\u22122/(p\u00b2\u22121)J.",
+      "by_p_sample": {
+        "5": {
+          "rayleigh": "48/5",
+          "mu_bar": "48/5",
+          "norm2": "2/5",
+          "Eq2": "96/25",
+          "ok": true
+        },
+        "7": {
+          "rayleigh": "96/11",
+          "mu_bar": "96/11",
+          "norm2": "22/49",
+          "Eq2": "192/49",
+          "ok": true
+        },
+        "11": {
+          "rayleigh": "240/29",
+          "mu_bar": "240/29",
+          "norm2": "58/121",
+          "Eq2": "480/121",
+          "ok": true
+        },
+        "13": {
+          "rayleigh": "336/41",
+          "mu_bar": "336/41",
+          "norm2": "82/169",
+          "Eq2": "672/169",
+          "ok": true
+        },
+        "17": {
+          "rayleigh": "576/71",
+          "mu_bar": "576/71",
+          "norm2": "142/289",
+          "Eq2": "1152/289",
+          "ok": true
+        }
+      },
+      "depends_on": [
+        "E_yiyj_eq_Cij_over_p_15_189",
+        "Pplus_hadamard_closed_form",
+        "frame_diagonal_correction"
+      ]
+    },
+    "D": {
+      "proved": true,
+      "theorem": "CB=pB \u21d2 wedge \u2211 B_ab B_ac C_bc=(p/2)\u2016B\u2016\u00b2 and W-wedges=\u2212\u00bd\u2016B\u2016\u00b2. Same+adjacent of E[q\u00b2] equal 6+2/p\u00b2 on unit Z.  Disjoint remainder 8\u27e8m\u2084,\u03ba_B\u27e9\u22122/p\u00b2; nonnegativity \u21d4 \u27e8m\u2084,\u03ba_B\u27e9\u22650.",
+      "by_p_sample": {
+        "5": {
+          "same": "48/25",
+          "adjacent": "104/25",
+          "same_plus_adj": "152/25",
+          "wick": "204/25",
+          "ok": true
+        },
+        "7": {
+          "same": "96/49",
+          "adjacent": "200/49",
+          "same_plus_adj": "296/49",
+          "wick": "396/49",
+          "ok": true
+        },
+        "11": {
+          "same": "240/121",
+          "adjacent": "488/121",
+          "same_plus_adj": "728/121",
+          "wick": "972/121",
+          "ok": true
+        },
+        "13": {
+          "same": "336/169",
+          "adjacent": "680/169",
+          "same_plus_adj": "1016/169",
+          "wick": "1356/169",
+          "ok": true
+        }
+      },
+      "depends_on": [
+        "CB_eq_pB",
+        "W_row_sums_vanish"
+      ]
+    },
+    "E": {
+      "proved": true,
+      "is_gplus_floor": false,
+      "is_phi_floor": false,
+      "theorem": "Locked-triple Singer circulant (15.270) has \u03bc=0 low eig (m\u22122)(m\u22123)/2 with m=(p+1)/2, which is \u22653 iff p\u226511 (\u21d4(p\u22123)(p\u22125)\u226524).  This is **not** \u03bb_min(G\u208a) and **not** \u03bb_min(\u03a6|Z): G_{k=3} lives on F, G\u208a mixes F\u2295F\u22a5, and the circulant is on the m-cycle of good lines, not on Z.",
+      "below_3": [
+        5,
+        7
+      ],
+      "by_p_sample": {
+        "5": {
+          "mu0_lo": "0",
+          "ge3": false
+        },
+        "7": {
+          "mu0_lo": "1",
+          "ge3": false
+        },
+        "11": {
+          "mu0_lo": "6",
+          "ge3": true
+        },
+        "13": {
+          "mu0_lo": "10",
+          "ge3": true
+        },
+        "17": {
+          "mu0_lo": "21",
+          "ge3": true
+        }
+      }
+    },
+    "F": {
+      "proved": false,
+      "theorem": "Q\u2084\u22650 iff \u27e8\u03c1,\u03ba_B\u27e9\u2265\u22121/4\u22121/(2p\u00b2) on unit Z (15.243/15.273).  No Max+-free lower bound meeting this budget is shipped.  CS on all 4-sets misses by \u0398(p\u00b2).  Weil bounds C-four-point sums, not Max+ \u03c1.  Pointwise q\u00b2\u22653\u2016By\u2016\u00b2 fails.",
+      "by_p_sample": {
+        "5": {
+          "lb": null,
+          "budget": "-27/100",
+          "beats": false
+        },
+        "7": {
+          "lb": null,
+          "budget": "-51/196",
+          "beats": false
+        },
+        "11": {
+          "lb": null,
+          "budget": "-123/484",
+          "beats": false
+        },
+        "13": {
+          "lb": null,
+          "budget": "-171/676",
+          "beats": false
+        },
+        "17": {
+          "lb": null,
+          "budget": "-291/1156",
+          "beats": false
+        },
+        "19": {
+          "lb": null,
+          "budget": "-363/1444",
+          "beats": false
+        },
+        "23": {
+          "lb": null,
+          "budget": "-531/2116",
+          "beats": false
+        }
+      },
+      "cs_too_weak": true,
+      "gu_disj_is_gram": false
+    }
+  },
+  "census": {
+    "spectra": {
+      "proved_census": true,
+      "proved_general": false,
+      "by_p": {
+        "5": {
+          "lambda_min": "80/13",
+          "lambda_min_ge_6": true,
+          "equals_lambda_star": true,
+          "m4_kappa_min": "1/52"
+        },
+        "7": {
+          "lambda_min": "3072/409",
+          "lambda_min_ge_6": true,
+          "equals_lambda_star": false,
+          "m4_kappa_min": "309/1636"
+        }
+      },
+      "note": "Finite exact \u03a6 spectra (15.159).  At both p, \u03a6|F meets \u03bb_min (certified).  Not a general floor."
+    },
+    "pointwise_p5": {
+      "p": 5,
+      "rel_err": 2.7000623958883807e-13,
+      "identity_ok": true,
+      "E_q2": 9.23262407178798,
+      "E_By2": 2.0,
+      "E_four": 0.40407800897349755,
+      "pointwise_q2_ge_3By2": false,
+      "frac_neg_q2_minus_3By2": 0.5461538461538461
+    },
+    "one_edge_p5": {
+      "p": 5,
+      "norm2": 0.39999999999999947,
+      "norm2_formula": 0.4,
+      "Eq2": 3.8399999999999928,
+      "Eq2_formula": 3.84,
+      "rayleigh": 9.599999999999994,
+      "mu_bar": 9.6,
+      "q_pred_err": 8.881784197001252e-15,
+      "ok": true
+    },
+    "wrong_one_edge_formula": {
+      "bad_equals_mu_bar_any": false,
+      "ok": true
+    }
+  },
+  "leftover": "\u27e8m\u2084,\u03ba_B\u27e9\u22650 on Z for every prime p\u22655.  Equivalent leftover: E[\u2016By_\u22a5\u2016\u00b2]\u22642(n\u22123)/n, or a closed n-irrep / F Rayleigh \u22656.  Singer (m\u22122)(m\u22123)/2 is not G\u208a.  G_{u,disj} is not a Gram.  p=5,7 spectra certify those orders only.",
+  "hinge": {
+    "lambda_min_ge_6_proved_general": false,
+    "lambda_min_ge_5_proved_p_ge_7": false,
+    "pointwise_partition": true,
+    "cs_dictionary": true,
+    "one_edge_is_mu_bar": true,
+    "adjacent_cb": true,
+    "singer_mu0_not_gplus": true,
+    "rho_beats_q4_budget": false,
+    "census_p5_p7": true,
+    "gsum_disj_lb": false,
+    "e1": true,
+    "gu_disj_is_gram": false,
+    "aut_schur": false,
+    "pairing": false,
+    "open_hinge": "\u27e8m\u2084,\u03ba_B\u27e9\u22650 on Z (equivalently E[\u2016By_\u22a5\u2016\u00b2]\u22642(n\u22123)/n, or a closed Rayleigh \u22656 on the n-dimensional Aut-irrep / on F)"
+  },
+  "F3": "no soft-close of L",
+  "F19": "no class_key thrash",
+  "F20": "CPU Fraction for general-p claims; p=5 Max+ identity checks only"
+}

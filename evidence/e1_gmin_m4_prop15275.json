@@ -1,0 +1,795 @@
+{
+  "prop": "15.275",
+  "title": "Type I multi-level bad case empty: mass/pairing/Aut_e weights + imported dual-eq empty",
+  "proved": {
+    "mass_identity": true,
+    "fe_budget": true,
+    "pairing_minimum": true,
+    "residual_second_moment": true,
+    "integrality": true,
+    "dual_eq_slice_empty": true,
+    "leftover_empty": false,
+    "two_orbit_identities": true,
+    "three_orbit_empty_slices": true,
+    "equal_star_empty": true,
+    "plus_only_empty": true,
+    "zero_far_bad_case_empty": true,
+    "three_orbit_family_bad_case_empty": true,
+    "split_far_identities": true,
+    "three_type_Y_collapses_to_H": true,
+    "split_far_3AB_identities": true,
+    "wick_six_type_3ab_positive": true,
+    "aut_e_3AB_sign_identities": true,
+    "p5_through_e_3AB_positive": true,
+    "mu_le_maj_false_at_p7": true,
+    "mu_le_L_not_T_as_bound": true,
+    "mu_le_L_census_p5p7": true,
+    "even_delta_Tnu_feed": true,
+    "kappa3_particular_beats_thr": true,
+    "aut_e_3AB_positive_general": false,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "residual_i_dual_eq_empty": true,
+    "two_level_claimed_here": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "n_primes": 20,
+      "by_p_sample": {
+        "5": {
+          "p": 5,
+          "mean": "-13/5",
+          "two_level_a": "1/5",
+          "samples": [
+            {
+              "c": "1/10",
+              "a": "3/10",
+              "b": "3/5",
+              "lhs": "2/5",
+              "rhs": "2/5",
+              "match": true,
+              "a_gt_one_over_p": true,
+              "feasible": true
+            },
+            {
+              "c": "1/7",
+              "a": "12/35",
+              "b": "18/35",
+              "lhs": "2/5",
+              "rhs": "2/5",
+              "match": true,
+              "a_gt_one_over_p": true,
+              "feasible": true
+            },
+            {
+              "c": "1/5",
+              "a": "2/5",
+              "b": "2/5",
+              "lhs": "2/5",
+              "rhs": "2/5",
+              "match": true,
+              "a_gt_one_over_p": true,
+              "feasible": true
+            },
+            {
+              "c": "2/5",
+              "a": "3/5",
+              "b": "0",
+              "lhs": "2/5",
+              "rhs": "2/5",
+              "match": true,
+              "a_gt_one_over_p": true,
+              "feasible": true
+            }
+          ],
+          "deeper_a_at_c_1_20": "3/10",
+          "proved": true,
+          "theorem": "2a+c(3+\u03bc_c)=2/p; c>0 and \u03bc_c\u2264\u22125 \u21d2 a>1/p. Two-level is a=1/p, c=0."
+        },
+        "7": {
+          "p": 7,
+          "mean": "-19/7",
+          "two_level_a": "1/7",
+          "samples": [
+            {
+              "c": "1/10",
+              "a": "17/70",
+              "b": "23/35",
+              "lhs": "2/7",
+              "rhs": "2/7",
+              "match": true,
+              "a_gt_one_over_p": true,
+              "feasible": true
+            },
+            {
+              "c": "1/7",
+              "a": "2/7",
+              "b": "4/7",
+              "lhs": "2/7",
+              "rhs": "2/7",
+              "match": true,
+              "a_gt_one_over_p": true,
+              "feasible": true
+            },
+            {
+              "c": "3/14",
+              "a": "5/14",
+              "b": "3/7",
+              "lhs": "2/7",
+              "rhs": "2/7",
+              "match": true,
+              "a_gt_one_over_p": true,
+              "feasible": true
+            },
+            {
+              "c": "3/7",
+              "a": "4/7",
+              "b": "0",
+              "lhs": "2/7",
+              "rhs": "2/7",
+              "match": true,
+              "a_gt_one_over_p": true,
+              "feasible": true
+            }
+          ],
+          "deeper_a_at_c_1_20": "17/70",
+          "proved": true,
+          "theorem": "2a+c(3+\u03bc_c)=2/p; c>0 and \u03bc_c\u2264\u22125 \u21d2 a>1/p. Two-level is a=1/p, c=0."
+        },
+        "11": {
+          "p": 11,
+          "mean": "-31/11",
+          "two_level_a": "1/11",
+          "samples": [
+            {
+              "c": "1/10",
+              "a": "21/110",
+              "b": "39/55",
+              "lhs": "2/11",
+              "rhs": "2/11",
+              "match": true,
+              "a_gt_one_over_p": true,
+              "feasible": true
+            },
+            {
+              "c": "1/7",
+              "a": "18/77",
+              "b": "48/77",
+              "lhs": "2/11",
+              "rhs": "2/11",
+              "match": true,
+              "a_gt_one_over_p": true,
+              "feasible": true
+            },
+            {
+              "c": "5/22",
+              "a": "7/22",
+              "b": "5/11",
+              "lhs": "2/11",
+              "rhs": "2/11",
+              "match": true,
+              "a_gt_one_over_p": true,
+              "feasible": true
+            },
+            {
+              "c": "5/11",
+              "a": "6/11",
+              "b": "0",
+              "lhs": "2/11",
+              "rhs": "2/11",
+              "match": true,
+              "a_gt_one_over_p": true,
+              "feasible": true
+            }
+          ],
+          "deeper_a_at_c_1_20": "21/110",
+          "proved": true,
+          "theorem": "2a+c(3+\u03bc_c)=2/p; c>0 and \u03bc_c\u2264\u22125 \u21d2 a>1/p. Two-level is a=1/p, c=0."
+        },
+        "13": {
+          "p": 13,
+          "mean": "-37/13",
+          "two_level_a": "1/13",
+          "samples": [
+            {
+              "c": "1/10",
+              "a": "23/130",
+              "b": "47/65",
+              "lhs": "2/13",
+              "rhs": "2/13",
+              "match": true,
+              "a_gt_one_over_p": true,
+              "feasible": true
+            },
+            {
+              "c": "1/7",
+              "a": "20/91",
+              "b": "58/91",
+              "lhs": "2/13",
+              "rhs": "2/13",
+              "match": true,
+              "a_gt_one_over_p": true,
+              "feasible": true
+            },
+            {
+              "c": "3/13",
+              "a": "4/13",
+              "b": "6/13",
+              "lhs": "2/13",
+              "rhs": "2/13",
+              "match": true,
+              "a_gt_one_over_p": true,
+              "feasible": true
+            },
+            {
+              "c": "6/13",
+              "a": "7/13",
+              "b": "0",
+              "lhs": "2/13",
+              "rhs": "2/13",
+              "match": true,
+              "a_gt_one_over_p": true,
+              "feasible": true
+            }
+          ],
+          "deeper_a_at_c_1_20": "23/130",
+          "proved": true,
+          "theorem": "2a+c(3+\u03bc_c)=2/p; c>0 and \u03bc_c\u2264\u22125 \u21d2 a>1/p. Two-level is a=1/p, c=0."
+        }
+      },
+      "theorem": "2a+c(3+\u03bc_c)=2/p; c>0 and \u03bc_c\u2264\u22125 \u21d2 a>1/p. Two-level is a=1/p, c=0."
+    },
+    "B": {
+      "proved": true,
+      "n_primes": 20,
+      "by_p_sample": {
+        "5": {
+          "p": 5,
+          "thr": "3/5",
+          "P_fe_minus": "3/5",
+          "P_fe_plus": "2/5",
+          "three_level_c_max": "2/5",
+          "a_at_c_max": "3/5",
+          "equals_thr": true,
+          "b_at_c_max": "0",
+          "proved": true,
+          "theorem": "P(f_e=\u22121)=thr; bad case \u21d2 a\u2264thr, eq iff f_e\u2261+1 off U_\u2212. \u03bc_c=\u22125: a=1/p+c\u2264thr \u21d4 c\u2264(p\u22121)/(2p) \u21d4 b=0 at equality."
+        },
+        "7": {
+          "p": 7,
+          "thr": "4/7",
+          "P_fe_minus": "4/7",
+          "P_fe_plus": "3/7",
+          "three_level_c_max": "3/7",
+          "a_at_c_max": "4/7",
+          "equals_thr": true,
+          "b_at_c_max": "0",
+          "proved": true,
+          "theorem": "P(f_e=\u22121)=thr; bad case \u21d2 a\u2264thr, eq iff f_e\u2261+1 off U_\u2212. \u03bc_c=\u22125: a=1/p+c\u2264thr \u21d4 c\u2264(p\u22121)/(2p) \u21d4 b=0 at equality."
+        },
+        "11": {
+          "p": 11,
+          "thr": "6/11",
+          "P_fe_minus": "6/11",
+          "P_fe_plus": "5/11",
+          "three_level_c_max": "5/11",
+          "a_at_c_max": "6/11",
+          "equals_thr": true,
+          "b_at_c_max": "0",
+          "proved": true,
+          "theorem": "P(f_e=\u22121)=thr; bad case \u21d2 a\u2264thr, eq iff f_e\u2261+1 off U_\u2212. \u03bc_c=\u22125: a=1/p+c\u2264thr \u21d4 c\u2264(p\u22121)/(2p) \u21d4 b=0 at equality."
+        },
+        "13": {
+          "p": 13,
+          "thr": "7/13",
+          "P_fe_minus": "7/13",
+          "P_fe_plus": "6/13",
+          "three_level_c_max": "6/13",
+          "a_at_c_max": "7/13",
+          "equals_thr": true,
+          "b_at_c_max": "0",
+          "proved": true,
+          "theorem": "P(f_e=\u22121)=thr; bad case \u21d2 a\u2264thr, eq iff f_e\u2261+1 off U_\u2212. \u03bc_c=\u22125: a=1/p+c\u2264thr \u21d4 c\u2264(p\u22121)/(2p) \u21d4 b=0 at equality."
+        }
+      }
+    },
+    "C": {
+      "proved": true,
+      "n_primes": 20,
+      "by_p_sample": {
+        "5": {
+          "p": 5,
+          "min": "-7/5",
+          "two_level": "1/5",
+          "saturated": "-7/5",
+          "gsum_need": "-14/5",
+          "samples": [
+            {
+              "c": "0",
+              "E_Sf": "1/5",
+              "ge_min": true,
+              "eq_min": false
+            },
+            {
+              "c": "1/5",
+              "E_Sf": "-3/5",
+              "ge_min": true,
+              "eq_min": false
+            },
+            {
+              "c": "2/5",
+              "E_Sf": "-7/5",
+              "ge_min": true,
+              "eq_min": true
+            }
+          ],
+          "proved": true,
+          "theorem": "Bad case + rearrangement: E_\u2212[S f_e]\u22653/p\u22122, equality iff a=thr and E[S|f=+1]=\u22125.  Two-level {\u22121,\u22123} has E[Sf]=1/p>min. E_+[S f_e]=3/p\u22122 (affine).  Dual-eq gsum need is 6/p\u22124=2\u00b7min."
+        },
+        "7": {
+          "p": 7,
+          "min": "-11/7",
+          "two_level": "1/7",
+          "saturated": "-11/7",
+          "gsum_need": "-22/7",
+          "samples": [
+            {
+              "c": "0",
+              "E_Sf": "1/7",
+              "ge_min": true,
+              "eq_min": false
+            },
+            {
+              "c": "3/14",
+              "E_Sf": "-5/7",
+              "ge_min": true,
+              "eq_min": false
+            },
+            {
+              "c": "3/7",
+              "E_Sf": "-11/7",
+              "ge_min": true,
+              "eq_min": true
+            }
+          ],
+          "proved": true,
+          "theorem": "Bad case + rearrangement: E_\u2212[S f_e]\u22653/p\u22122, equality iff a=thr and E[S|f=+1]=\u22125.  Two-level {\u22121,\u22123} has E[Sf]=1/p>min. E_+[S f_e]=3/p\u22122 (affine).  Dual-eq gsum need is 6/p\u22124=2\u00b7min."
+        },
+        "11": {
+          "p": 11,
+          "min": "-19/11",
+          "two_level": "1/11",
+          "saturated": "-19/11",
+          "gsum_need": "-38/11",
+          "samples": [
+            {
+              "c": "0",
+              "E_Sf": "1/11",
+              "ge_min": true,
+              "eq_min": false
+            },
+            {
+              "c": "5/22",
+              "E_Sf": "-9/11",
+              "ge_min": true,
+              "eq_min": false
+            },
+            {
+              "c": "5/11",
+              "E_Sf": "-19/11",
+              "ge_min": true,
+              "eq_min": true
+            }
+          ],
+          "proved": true,
+          "theorem": "Bad case + rearrangement: E_\u2212[S f_e]\u22653/p\u22122, equality iff a=thr and E[S|f=+1]=\u22125.  Two-level {\u22121,\u22123} has E[Sf]=1/p>min. E_+[S f_e]=3/p\u22122 (affine).  Dual-eq gsum need is 6/p\u22124=2\u00b7min."
+        },
+        "13": {
+          "p": 13,
+          "min": "-23/13",
+          "two_level": "1/13",
+          "saturated": "-23/13",
+          "gsum_need": "-46/13",
+          "samples": [
+            {
+              "c": "0",
+              "E_Sf": "1/13",
+              "ge_min": true,
+              "eq_min": false
+            },
+            {
+              "c": "3/13",
+              "E_Sf": "-11/13",
+              "ge_min": true,
+              "eq_min": false
+            },
+            {
+              "c": "6/13",
+              "E_Sf": "-23/13",
+              "ge_min": true,
+              "eq_min": true
+            }
+          ],
+          "proved": true,
+          "theorem": "Bad case + rearrangement: E_\u2212[S f_e]\u22653/p\u22122, equality iff a=thr and E[S|f=+1]=\u22125.  Two-level {\u22121,\u22123} has E[Sf]=1/p>min. E_+[S f_e]=3/p\u22122 (affine).  Dual-eq gsum need is 6/p\u22124=2\u00b7min."
+        }
+      }
+    },
+    "D": {
+      "proved": true,
+      "n_primes": 20,
+      "by_p_sample": {
+        "5": {
+          "p": 5,
+          "ES2_plus": "53/5",
+          "ES2_two_level": "37/5",
+          "ES2_dual": "53/5",
+          "E_R2_two_level": "16/5",
+          "E_R2_dual": "0",
+          "cs_floor_a_thr": "8/5",
+          "E_R2_minus1_3_7": "8/5",
+          "samples": [
+            {
+              "c": "0",
+              "ES2": "37/5",
+              "E_Sf": "1/5",
+              "E_R2": "16/5",
+              "R2_ge0": true
+            },
+            {
+              "c": "1/5",
+              "ES2": "9",
+              "E_Sf": "-3/5",
+              "E_R2": "8/5",
+              "R2_ge0": true
+            },
+            {
+              "c": "2/5",
+              "ES2": "53/5",
+              "E_Sf": "-7/5",
+              "E_R2": "0",
+              "R2_ge0": true
+            }
+          ],
+          "proved": true,
+          "theorem": "E[R\u00b2]=E[S\u00b2]\u22125+4 E[Sf].  At pairing min this is E[S\u00b2]\u2212(13\u221212/p); vanishes iff dual-eq.  Two-level {\u22121,\u22123} has E[R\u00b2]=4(p\u22121)/p>0.  CS floor at a=thr is 2(p\u22121)/p."
+        },
+        "7": {
+          "p": 7,
+          "ES2_plus": "79/7",
+          "ES2_two_level": "55/7",
+          "ES2_dual": "79/7",
+          "E_R2_two_level": "24/7",
+          "E_R2_dual": "0",
+          "cs_floor_a_thr": "12/7",
+          "E_R2_minus1_3_7": "12/7",
+          "samples": [
+            {
+              "c": "0",
+              "ES2": "55/7",
+              "E_Sf": "1/7",
+              "E_R2": "24/7",
+              "R2_ge0": true
+            },
+            {
+              "c": "3/14",
+              "ES2": "67/7",
+              "E_Sf": "-5/7",
+              "E_R2": "12/7",
+              "R2_ge0": true
+            },
+            {
+              "c": "3/7",
+              "ES2": "79/7",
+              "E_Sf": "-11/7",
+              "E_R2": "0",
+              "R2_ge0": true
+            }
+          ],
+          "proved": true,
+          "theorem": "E[R\u00b2]=E[S\u00b2]\u22125+4 E[Sf].  At pairing min this is E[S\u00b2]\u2212(13\u221212/p); vanishes iff dual-eq.  Two-level {\u22121,\u22123} has E[R\u00b2]=4(p\u22121)/p>0.  CS floor at a=thr is 2(p\u22121)/p."
+        },
+        "11": {
+          "p": 11,
+          "ES2_plus": "131/11",
+          "ES2_two_level": "91/11",
+          "ES2_dual": "131/11",
+          "E_R2_two_level": "40/11",
+          "E_R2_dual": "0",
+          "cs_floor_a_thr": "20/11",
+          "E_R2_minus1_3_7": "20/11",
+          "samples": [
+            {
+              "c": "0",
+              "ES2": "91/11",
+              "E_Sf": "1/11",
+              "E_R2": "40/11",
+              "R2_ge0": true
+            },
+            {
+              "c": "5/22",
+              "ES2": "111/11",
+              "E_Sf": "-9/11",
+              "E_R2": "20/11",
+              "R2_ge0": true
+            },
+            {
+              "c": "5/11",
+              "ES2": "131/11",
+              "E_Sf": "-19/11",
+              "E_R2": "0",
+              "R2_ge0": true
+            }
+          ],
+          "proved": true,
+          "theorem": "E[R\u00b2]=E[S\u00b2]\u22125+4 E[Sf].  At pairing min this is E[S\u00b2]\u2212(13\u221212/p); vanishes iff dual-eq.  Two-level {\u22121,\u22123} has E[R\u00b2]=4(p\u22121)/p>0.  CS floor at a=thr is 2(p\u22121)/p."
+        },
+        "13": {
+          "p": 13,
+          "ES2_plus": "157/13",
+          "ES2_two_level": "109/13",
+          "ES2_dual": "157/13",
+          "E_R2_two_level": "48/13",
+          "E_R2_dual": "0",
+          "cs_floor_a_thr": "24/13",
+          "E_R2_minus1_3_7": "24/13",
+          "samples": [
+            {
+              "c": "0",
+              "ES2": "109/13",
+              "E_Sf": "1/13",
+              "E_R2": "48/13",
+              "R2_ge0": true
+            },
+            {
+              "c": "3/13",
+              "ES2": "133/13",
+              "E_Sf": "-11/13",
+              "E_R2": "24/13",
+              "R2_ge0": true
+            },
+            {
+              "c": "6/13",
+              "ES2": "157/13",
+              "E_Sf": "-23/13",
+              "E_R2": "0",
+              "R2_ge0": true
+            }
+          ],
+          "proved": true,
+          "theorem": "E[R\u00b2]=E[S\u00b2]\u22125+4 E[Sf].  At pairing min this is E[S\u00b2]\u2212(13\u221212/p); vanishes iff dual-eq.  Two-level {\u22121,\u22123} has E[R\u00b2]=4(p\u22121)/p>0.  CS floor at a=thr is 2(p\u22121)/p."
+        }
+      }
+    },
+    "E": {
+      "proved": true,
+      "census_congruence": true,
+      "n_primes": 20,
+      "by_p_sample": {
+        "5": {
+          "p": 5,
+          "vp": {
+            "p": 5,
+            "residue": 10,
+            "v_p_residue": 1,
+            "p2_does_not_divide": true,
+            "proved": true
+          },
+          "proved": true,
+          "theorem": "N=pM, p\u2224M; n_{\u22121}=M+n_c+t; c>0 \u21d2 n_{\u22121}\u2265M+1; a\u2264thr \u21d4 n_c+t\u2264M(p\u22121)/2.  Cleared: 2n_{\u22121}+3n_c+\u03a3_c=2M."
+        },
+        "7": {
+          "p": 7,
+          "vp": {
+            "p": 7,
+            "residue": 35,
+            "v_p_residue": 1,
+            "p2_does_not_divide": true,
+            "proved": true
+          },
+          "proved": true,
+          "theorem": "N=pM, p\u2224M; n_{\u22121}=M+n_c+t; c>0 \u21d2 n_{\u22121}\u2265M+1; a\u2264thr \u21d4 n_c+t\u2264M(p\u22121)/2.  Cleared: 2n_{\u22121}+3n_c+\u03a3_c=2M."
+        },
+        "11": {
+          "p": 11,
+          "vp": {
+            "p": 11,
+            "residue": 99,
+            "v_p_residue": 1,
+            "p2_does_not_divide": true,
+            "proved": true
+          },
+          "proved": true,
+          "theorem": "N=pM, p\u2224M; n_{\u22121}=M+n_c+t; c>0 \u21d2 n_{\u22121}\u2265M+1; a\u2264thr \u21d4 n_c+t\u2264M(p\u22121)/2.  Cleared: 2n_{\u22121}+3n_c+\u03a3_c=2M."
+        },
+        "13": {
+          "p": 13,
+          "vp": {
+            "p": 13,
+            "residue": 26,
+            "v_p_residue": 1,
+            "p2_does_not_divide": true,
+            "proved": true
+          },
+          "proved": true,
+          "theorem": "N=pM, p\u2224M; n_{\u22121}=M+n_c+t; c>0 \u21d2 n_{\u22121}\u2265M+1; a\u2264thr \u21d4 n_c+t\u2264M(p\u22121)/2.  Cleared: 2n_{\u22121}+3n_c+\u03a3_c=2M."
+        }
+      }
+    },
+    "F": {
+      "proved": true,
+      "dual_eq_empty": true,
+      "slopes_ok": true,
+      "gsum_disj_lb": false,
+      "theorem": "a=thr and E[R\u00b2]=0 is pointwise dual-eq S=\u22123\u22122f_e, empty by 15.216 (cost_D<2\u2212\u03b1 on sc).  Gsum disj LB unused."
+    },
+    "G": {
+      "proved": false,
+      "two_orbit_identities": true,
+      "three_orbit_empty_slices": true,
+      "equal_star_empty": true,
+      "plus_only_empty": true,
+      "zero_far_bad_case_empty": true,
+      "three_orbit_family_bad_case_empty": true,
+      "split_far_identities": true,
+      "three_type_Y_collapses_to_H": true,
+      "split_far_3AB_identities": true,
+      "wick_six_type_3ab_positive": true,
+      "aut_e_3AB_sign_identities": true,
+      "p5_through_e_3AB_positive": true,
+      "mu_le_maj_false_at_p7": true,
+      "mu_le_L_not_T_as_bound": true,
+      "mu_le_L_census_p5p7": true,
+      "even_delta_Tnu_feed": true,
+      "kappa3_particular_beats_thr": true,
+      "aut_e_3AB_positive_general": false,
+      "dual_eq_empty": true,
+      "n_primes": 20,
+      "by_p_sample": {
+        "5": {
+          "mu_far": "-7/60",
+          "mu_far_negative": true,
+          "mass_eq_k": true,
+          "star_far_sums": true,
+          "slope_incompatible": true,
+          "n_star_orbits": 2,
+          "equal_star_empty": true,
+          "plus_only_empty": true,
+          "zero_far_in_box": true,
+          "three_orbit_bad_case_empty": true,
+          "split_far_delta": true,
+          "three_type_collapses": true,
+          "threeAB_conversion": true,
+          "wick_six_type": true,
+          "Q_chi": true,
+          "through_e_moments": true,
+          "pairing_four_point": true,
+          "gmin_T_thresholds": true,
+          "kappa3_3AB": true,
+          "mu_part_vs_T": true,
+          "mu_le_L_not_T": true,
+          "even_delta_feed": true,
+          "kappa3_particular": true
+        },
+        "7": {
+          "mu_far": "-11/168",
+          "mu_far_negative": true,
+          "mass_eq_k": true,
+          "star_far_sums": true,
+          "slope_incompatible": true,
+          "n_star_orbits": 2,
+          "equal_star_empty": true,
+          "plus_only_empty": true,
+          "zero_far_in_box": true,
+          "three_orbit_bad_case_empty": true,
+          "split_far_delta": true,
+          "three_type_collapses": true,
+          "threeAB_conversion": true,
+          "wick_six_type": true,
+          "Q_chi": true,
+          "through_e_moments": true,
+          "pairing_four_point": true,
+          "gmin_T_thresholds": true,
+          "kappa3_3AB": true,
+          "mu_part_vs_T": true,
+          "mu_le_L_not_T": true,
+          "even_delta_feed": true,
+          "kappa3_particular": true
+        },
+        "11": {
+          "mu_far": "-19/660",
+          "mu_far_negative": true,
+          "mass_eq_k": true,
+          "star_far_sums": true,
+          "slope_incompatible": true,
+          "n_star_orbits": 2,
+          "equal_star_empty": true,
+          "plus_only_empty": true,
+          "zero_far_in_box": true,
+          "three_orbit_bad_case_empty": true,
+          "split_far_delta": true,
+          "three_type_collapses": true,
+          "threeAB_conversion": true,
+          "wick_six_type": true,
+          "Q_chi": true,
+          "through_e_moments": true,
+          "pairing_four_point": true,
+          "gmin_T_thresholds": true,
+          "kappa3_3AB": true,
+          "mu_part_vs_T": true,
+          "mu_le_L_not_T": true,
+          "even_delta_feed": true,
+          "kappa3_particular": true
+        },
+        "13": {
+          "mu_far": "-23/1092",
+          "mu_far_negative": true,
+          "mass_eq_k": true,
+          "star_far_sums": true,
+          "slope_incompatible": true,
+          "n_star_orbits": 2,
+          "equal_star_empty": true,
+          "plus_only_empty": true,
+          "zero_far_in_box": true,
+          "three_orbit_bad_case_empty": true,
+          "split_far_delta": true,
+          "three_type_collapses": true,
+          "threeAB_conversion": true,
+          "wick_six_type": true,
+          "Q_chi": true,
+          "through_e_moments": true,
+          "pairing_four_point": true,
+          "gmin_T_thresholds": true,
+          "kappa3_3AB": true,
+          "mu_part_vs_T": true,
+          "mu_le_L_not_T": true,
+          "even_delta_feed": true,
+          "kappa3_particular": true
+        }
+      },
+      "hole": "Y\u2264\u22123 and \u03bc\u22650 force a far Aut_e class with 3A+B\u22640.  On |\u03ba|=1 this is G>T (15.268 \u03bd=0 + J).  |\u03bc|\u2264|L| would close it (L>T) but is not proved for all p; |\u03bc|\u2264|T| is not a closing bound; |\u03bc|\u2264maj is false at p=7 (109/2863>17/539).  Census |\u03bc|\u2264|L| at p=5,7.  p=5 is a finite from-C theorem (276/276).  |\u03ba|=3 particular/Wick beat the linear form; leftover is even/odd \u03b4.",
+      "theorem": "2-orbit / equal-star / \u03bc_\u22a0=0 slices empty.  Whole \u03bc_far\u22650 3-weight family is bad-case empty (H).  Coarse 3-type collapses to H (I).  3A+B conversion / Wick 6-type / Q_\u03c7 are Max+-free (J).  K reduces the Aut_e sign to g_min>T.  |\u03bc|\u2264|L| suffices and holds at p=5,7; |\u03bc|\u2264|T| does not close; |\u03bc|\u2264maj false at p=7.  Sign stays open."
+    },
+    "two_level_H": {
+      "note": "15.169 path; not this flag",
+      "p5": {
+        "p": 5,
+        "mass_at_S_H_minus_2": "3/5",
+        "equals_thr": true,
+        "E_S2_H": "44/5",
+        "E_S2_H_simplified": "44/5",
+        "ES2_match": true,
+        "k_H": 14,
+        "bi_tight_level2_size": 10,
+        "size_defect": 4,
+        "theorem": "Bad case + two-level Max- \u21d2 dual two-level H with mass thr at \u00b12, E[S_H^2]=10-6/p, |H|=3p-1=2p+(p-1). Bi-tight level-2 would need |H|=2p and E[S^2]=4; defect p-1 edges and score leakage to \u00b14."
+      }
+    },
+    "key_identity": "2a+c(3+\u03bc_c)=2/p; E[R\u00b2]=E[S\u00b2]\u22125+4 E[Sf]; \u03bc_far=\u22122(2p\u22123)/(p(p\u00b2\u22121))<0; n_{\u22121}=M+n_c+t; \u03c3_\u25a1=(p\u22121)(1+f_e); \u03bc_\u22a0=0\u21d2\u03bc_\u25a1<0; F_\u2212|_{f=+1}=\u2212(p+1)/(p\u22121)+\u03bc_far p(p+1); Y+3=4(p\u22122)\u03bc_\u25a1+\u2211\u03bc(3A+B); 3-type Y=H; 3A+B=[2(p\u22122)n_O+p(3(p\u22121)G_++(p+1)G_\u2212)]/(p\u00b2\u22121); G_+=G_\u2212\u21d23A+B>0\u21d4G>T; Wick 6-type 3a+b>0; \u2211_{S\u220be}\u03bc\u03ba=3(p\u00b2\u22121)/2; G=\u03c7d \u03bc; 1/(2p)\u21cfG>T; |\u03bc|\u2270maj at p=7; |\u03bc|\u2264|L|\u21cf|\u03bc|\u2264|T|; p=5 276 from C; |\u03ba|=3 particular>thr"
+  },
+  "hinge": {
+    "type_I_multilevel_bad_case_ND": false,
+    "residual_i_dual_eq_empty": true,
+    "gsum_disj_lb_proved_general": false,
+    "two_level_is_a_different_path": true,
+    "e1_closed_general": true,
+    "type_I_three_orbit_equal_star_empty": true,
+    "type_I_three_orbit_plus_only_empty": true,
+    "type_I_zero_far_bad_case_empty": true,
+    "type_I_three_orbit_family_bad_case_empty": true,
+    "type_I_split_far_identities_ok": true,
+    "type_I_three_type_Y_collapses_to_H": true,
+    "type_I_split_far_3AB_identities_ok": true,
+    "type_I_wick_six_type_3ab_positive": true,
+    "type_I_aut_e_3AB_sign_identities_ok": true,
+    "type_I_p5_through_e_3AB_positive": true,
+    "type_I_aut_e_3AB_positive_general": false,
+    "mu_le_L_not_T_as_bound": true,
+    "mu_le_L_census_p5p7": true,
+    "even_delta_Tnu_feed": true,
+    "kappa3_particular_beats_thr": true,
+    "note": "A\u2013K proved as identities: \u03bc_far=0 / 3-weight / coarse 3-type empty; 3A+B conversion / Wick / Q_\u03c7 / through-e moments / pairing / T-vs-1/(2p) Max+-free.  p=5 finite from C.  |\u03bc|\u2264|L| suffices (not |\u03bc|\u2264|T|); |\u03bc|\u2264maj false at p=7; census |\u03bc|\u2264|L| at p=5,7.  General Aut_e 3A+B>0 (g_min>T / |\u03bc|\u2264|L|) keeps ND False.  Two-level is 15.169/15.216.  Gsum unused.  type_I / e1 / L unflipped."
+  },
+  "F3": "Multi-level Type I bad case only.  Two-level is 15.169/216. Gsum disj LB False.  15.170 wiring not edited."
+}

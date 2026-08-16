@@ -1,0 +1,416 @@
+{
+  "title": "Prop 15.274 residual (ii) even k\u22654p: slope obstruction extends off p|k; two-value leftover empty; multi-level open",
+  "proved": {
+    "twolevel_empty_k_ge_4p": true,
+    "dual_bad_mass_empty_k_gt_4p": true,
+    "slope_obstructs_k_not_div_p": true,
+    "pairspan_extends": true,
+    "k_4p_max_minus_ge_minus_2": true,
+    "twovalue_empty": true,
+    "lipschitz_sminus_ge_0": true,
+    "leftover_identities": true,
+    "leftover_identities_I": true,
+    "leftover_identities_J": true,
+    "leftover_identities_L": true,
+    "residual_ii_SH_twolevel_mass": true,
+    "residual_ii_SH_slice_g_eq_e_not_res_ii": true,
+    "residual_ii_SH_slice_g_in_G_tight_empty": true,
+    "residual_ii_aut_e_rigidity": true,
+    "residual_ii_no_full_star_k_4p": true,
+    "residual_ii_plus_slice_leftover_empty": true,
+    "residual_ii_minus_slice_three_level_empty": true,
+    "residual_ii_three_weight_athr_mu_far_neg": true,
+    "residual_ii_minus_slice_needs_S_le_minus_8": true,
+    "residual_ii_3eq_e_on_T_eps_e_minus": true,
+    "residual_ii_3eq_mass_minus3_empty": true,
+    "residual_ii_pure_pair_dstar_p_3mod4_empty": true,
+    "lemma_dual_bad_slope_obstructs_k_not_div_p": true,
+    "residual_ii_k_not_div_p_dual_bad_empty": true,
+    "residual_ii_twolevel_k_ge_4p_empty": true,
+    "residual_ii_S_equiv_4_k_4p_empty": true,
+    "residual_ii_twovalue_k_4p_empty": true,
+    "residual_ii_twovalue_unclassified_empty": true,
+    "residual_ii_sminus_ge_0_ND": true,
+    "residual_ii_k_eq_4p_empty": false,
+    "multilevel_ND_k_ge_4p": false,
+    "residual_ii_k_ge_4p_ND_closed": false,
+    "gsum_disj_lb_proved_general": false,
+    "psl_span_F_eq_Wpp0": false,
+    "same_line_pairing": false,
+    "E1_closed": true,
+    "L_closed": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "n_pairs": 1592
+    },
+    "B": {
+      "proved": true,
+      "n_pairs": 1572
+    },
+    "C": {
+      "proved": true,
+      "n_pairs": 2418,
+      "n_obstructs": 2338,
+      "n_no_obstruction": 80
+    },
+    "D": {
+      "proved": true
+    },
+    "E": {
+      "proved": true,
+      "leftover": "max=\u22122, f_e\u2261\u22121 on U_{\u22122}, some S\u2264\u22126; Max+ s\u208a=2 multi-level."
+    },
+    "F": {
+      "proved": true,
+      "n_unclassified": 163190
+    },
+    "G": {
+      "proved": true
+    },
+    "H": {
+      "proved": true,
+      "closes_multilevel": false
+    },
+    "I": {
+      "proved": true,
+      "closes_multilevel": false
+    },
+    "J": {
+      "proved": true,
+      "closes_multilevel": false,
+      "n_pure_pair_empty": 11
+    },
+    "L": {
+      "proved": true,
+      "closes_multilevel": false,
+      "closes_01": false
+    },
+    "sample_cleared_k4p": {
+      "p": 5,
+      "k": 20,
+      "rhs_without_M": 0,
+      "p_divides_2": false,
+      "p_divides_p_minus_1": false,
+      "p_divides_k_minus_4p": true,
+      "p_divides_k": true,
+      "k_minus_4p_equiv_k": true,
+      "p_divides_rhs_coeff": true,
+      "contradiction": false,
+      "obstructs": false,
+      "identity_holds": true,
+      "proved_obstruction": false,
+      "proved": true,
+      "theorem": "p[\u2026]=2(k\u22124p)(p\u22121)M\u208aM\u208b. Left \u22610 (mod p). Right \u22610 iff p|k. No obstruction when k\u22610 (mod p), including k=4p (RHS=0)."
+    },
+    "sample_cleared_k6p": {
+      "p": 5,
+      "k": 30,
+      "rhs_without_M": 80,
+      "p_divides_2": false,
+      "p_divides_p_minus_1": false,
+      "p_divides_k_minus_4p": true,
+      "p_divides_k": true,
+      "k_minus_4p_equiv_k": true,
+      "p_divides_rhs_coeff": true,
+      "contradiction": false,
+      "obstructs": false,
+      "identity_holds": true,
+      "proved_obstruction": false,
+      "proved": true,
+      "theorem": "p[\u2026]=2(k\u22124p)(p\u22121)M\u208aM\u208b. Left \u22610 (mod p). Right \u22610 iff p|k. No obstruction when k\u22610 (mod p), including k=4p (RHS=0)."
+    },
+    "sample_cleared_k_not_div": {
+      "p": 5,
+      "k": 22,
+      "rhs_without_M": 16,
+      "p_divides_2": false,
+      "p_divides_p_minus_1": false,
+      "p_divides_k_minus_4p": false,
+      "p_divides_k": false,
+      "k_minus_4p_equiv_k": true,
+      "p_divides_rhs_coeff": false,
+      "contradiction": true,
+      "obstructs": true,
+      "identity_holds": true,
+      "proved_obstruction": true,
+      "proved": true,
+      "theorem": "p[\u2026]=2(k\u22124p)(p\u22121)M\u208aM\u208b. Left \u22610 (mod p). Right \u22610 iff p|k. No obstruction when k\u22610 (mod p), including k=4p (RHS=0)."
+    },
+    "sample_slope_k4p": {
+      "p": 5,
+      "k": 20,
+      "B_plus": "0",
+      "B_minus": "0",
+      "dB_first_moment": "0",
+      "dB_expect": "0",
+      "first_moment_match": true,
+      "wedge_samples": [
+        {
+          "n_taup": 0,
+          "d_w": 0,
+          "wedge_dB": "0",
+          "form": "0",
+          "match": true
+        },
+        {
+          "n_taup": 1,
+          "d_w": 2,
+          "wedge_dB": "5/12",
+          "form": "5/12",
+          "match": true
+        },
+        {
+          "n_taup": 5,
+          "d_w": 10,
+          "wedge_dB": "25/12",
+          "form": "25/12",
+          "match": true
+        },
+        {
+          "n_taup": 20,
+          "d_w": 20,
+          "wedge_dB": "25/2",
+          "form": "25/2",
+          "match": true
+        }
+      ],
+      "proved": true
+    },
+    "sample_slope_k6p": {
+      "p": 5,
+      "k": 30,
+      "B_plus": "5/3",
+      "B_minus": "-5/3",
+      "dB_first_moment": "10/3",
+      "dB_expect": "10/3",
+      "first_moment_match": true,
+      "wedge_samples": [
+        {
+          "n_taup": 0,
+          "d_w": 0,
+          "wedge_dB": "0",
+          "form": "0",
+          "match": true
+        },
+        {
+          "n_taup": 1,
+          "d_w": 2,
+          "wedge_dB": "5/12",
+          "form": "5/12",
+          "match": true
+        },
+        {
+          "n_taup": 5,
+          "d_w": 10,
+          "wedge_dB": "25/12",
+          "form": "25/12",
+          "match": true
+        },
+        {
+          "n_taup": 30,
+          "d_w": 30,
+          "wedge_dB": "75/4",
+          "form": "75/4",
+          "match": true
+        }
+      ],
+      "proved": true
+    },
+    "sample_multilevel_p5": {
+      "p": 5,
+      "k": 20,
+      "mass_2": "1/10",
+      "mass_4": "4/5",
+      "mass_6": "1/10",
+      "E_S": "4",
+      "matches_mean": true,
+      "a_le_thr": true,
+      "a_positive": true,
+      "feasible": true,
+      "proved": true,
+      "theorem": "E[S]=4 and s\u208a=2 even scores allow a=P(S=2)=P(S=6)>0, P(S=4)=1\u22122a. First moment does not force S\u22614."
+    },
+    "sample_twovalue_26": {
+      "p": 5,
+      "s_ext": -2,
+      "s_lo": -6,
+      "s_hi": -2,
+      "mass_ext": "1/2",
+      "mass_lo": "1/2",
+      "in_01": true,
+      "classified": false,
+      "unclassified": true,
+      "proved": true,
+      "theorem": "At k=4p, two-value through \u00b12 and \u00b12\u00b12m has extreme-mass 1\u22121/m, unclassified, hence not a 0-1 pair-span (15.237 C)."
+    },
+    "sample_pairing_p5": {
+      "p": 5,
+      "gamma_lo": "-8/5",
+      "gamma_hi": "4/5",
+      "beta_lo": "-5/2",
+      "beta_hi": "0",
+      "beta_mu_far_0": "-5/6",
+      "mu_far_at_beta_lo": "-2/15",
+      "mu_far_at_beta_hi": "1/15",
+      "two_orbit_negative_below": "-5/6",
+      "proved": true,
+      "theorem": "Leftover k=4p: E[Sf]\u2208[2/p\u22122,4/p], \u03b2\u2208[\u22122p/(p\u22121),0]. Aut_e 2-orbit \u03bc_f<0 for \u03b2<\u22124p/(p\u00b2\u22121). Not assumed 2-orbit."
+    },
+    "sample_athr_mu_p5": {
+      "p": 5,
+      "mu_far_u2": "-2/15",
+      "mu_far_u4": "-1/30",
+      "mu_far_u3": "-1/12",
+      "negative_on_segment": true,
+      "proved": true,
+      "theorem": "3-weight Aut_e on the minus-slice leftover has \u03bc_f(u=2)=\u22124/(p(p+1))<0 and \u03bc_f(u=4)=\u22122(p\u22123)/(p(p\u00b2\u22121))<0. Not assumed for a general (multi-far-orbit) G."
+    },
+    "sample_four_level_p5": {
+      "p": 5,
+      "e_lo": "1/5",
+      "e_hi": "3/10",
+      "samples": [
+        {
+          "e": "1/5",
+          "b": "0",
+          "d": "1/5",
+          "mean": "-4",
+          "tot": "1",
+          "a_eq_tail": true
+        },
+        {
+          "e": "1/4",
+          "b": "1/20",
+          "d": "1/10",
+          "mean": "-4",
+          "tot": "1",
+          "a_eq_tail": true
+        },
+        {
+          "e": "3/10",
+          "b": "1/10",
+          "d": "0",
+          "mean": "-4",
+          "tot": "1",
+          "a_eq_tail": true
+        }
+      ],
+      "proved": true,
+      "theorem": "Minus-slice four-level {\u22122,\u22124,\u22126,\u22128} is first-moment feasible iff P(S=\u22128)\u2208[1/p,(p+1)/(4p)], with b=e\u22121/p and d=thr\u22122e."
+    },
+    "sample_3weight_ms_p5": {
+      "p": 5,
+      "mu_f_max": "1/30",
+      "samples": [
+        {
+          "mu_f": "0",
+          "mu_box": "7/12",
+          "mu_boxtimes": "1/4",
+          "u_plus": "14/3",
+          "u_minus": "3",
+          "v_plus": "-7",
+          "v_minus": "-2",
+          "mass": "20"
+        },
+        {
+          "mu_f": "1/60",
+          "mu_box": "61/120",
+          "mu_boxtimes": "2/15",
+          "u_plus": "5",
+          "u_minus": "5/2",
+          "v_plus": "-7",
+          "v_minus": "-2",
+          "mass": "20"
+        },
+        {
+          "mu_f": "1/30",
+          "mu_box": "13/30",
+          "mu_boxtimes": "1/60",
+          "u_plus": "16/3",
+          "u_minus": "2",
+          "v_plus": "-7",
+          "v_minus": "-2",
+          "mass": "20"
+        }
+      ],
+      "u_minus_over_cap": "7/4",
+      "n_box_mufar0": "14",
+      "n_boxtimes_mufar0": "6",
+      "unique_mufar0": false,
+      "closes_multilevel": false,
+      "proved": true,
+      "theorem": "Minus-slice 3-weight is 1-parametric with \u03bc_f\u22644/(p(p\u00b2\u22121)) from Max+ u_\u2212\u22652. The \u03bc_f=0 end is a [0,1] double-star (3p\u22121, p+1). Not a leftover close."
+    },
+    "sample_pure_pair_p7": {
+      "p": 7,
+      "n2_box": 10,
+      "n2_boxtimes": 4,
+      "sign_count": 4,
+      "sign_count_even": true,
+      "empty_by_parity": true,
+      "proved": true,
+      "theorem": "Pure-pair double-star minus-slice has S=2\u2211\u03b7 on {f=\u22121} with (p+1)/2 signs. p\u22613 (mod 4) makes that count even, so \u2211\u03b7\u2262\u22121 and the configuration is empty."
+    },
+    "sample_SH_mass_p5": {
+      "p": 5,
+      "mean": "21/5",
+      "mass": "2/5",
+      "minus_eval": "2/5",
+      "equals_minus_eval": true,
+      "also_3eq_plus": true,
+      "proved": true,
+      "theorem": "Leftover |H|=4p+1 \u21d2 E[S_H]=4+1/p. Two-level {3,5} has P(S_H=3)=(p\u22121)/(2p)=P_+(f=\u22121). At p=5 this also equals (p+3)/(4p); for p>5 it is only the pair-slice mass."
+    },
+    "sample_SH_mass_p7": {
+      "p": 7,
+      "mean": "29/7",
+      "mass": "3/7",
+      "minus_eval": "3/7",
+      "equals_minus_eval": true,
+      "also_3eq_plus": false,
+      "proved": true,
+      "theorem": "Leftover |H|=4p+1 \u21d2 E[S_H]=4+1/p. Two-level {3,5} has P(S_H=3)=(p\u22121)/(2p)=P_+(f=\u22121). At p=5 this also equals (p+3)/(4p); for p>5 it is only the pair-slice mass."
+    },
+    "sample_rigidity": {
+      "proved": true,
+      "theorem": "If S\u0304(y)=2 and S\u22652 on Aut_e\u00b7y then \u0394=S\u2212S\u0304\u22650 there, and \u2211_\u03b3 \u0394(\u03b3y)=0, hence S\u22612 on the orbit. Dual: S\u0304=\u22122 \u21d2 S\u2261\u22122."
+    },
+    "sample_star_p5": {
+      "p": 5,
+      "star": 24,
+      "k": 20,
+      "star_gt_k": true,
+      "proved": true,
+      "theorem": "Aut_e star orbits have size p\u00b2\u22121>4p for every prime p\u22655, so a leftover 0-1 G cannot contain a full star orbit."
+    },
+    "B_plus_k4p": "0",
+    "B_minus_k4p": "0"
+  },
+  "hinge": {
+    "dual_bad_slope_k_not_div_p": "PROVED: p[\u2026]=2(k\u22124p)(p\u22121)M\u208aM\u208b obstructs iff k\u22620 (mod p)",
+    "twolevel_k_ge_4p": "EMPTY (mass / S\u22614 tight)",
+    "twovalue_k_4p": "EMPTY (15.237 C + 1\u22121/m unclassified)",
+    "sminus_ge_0_ND": "ND by Lipschitz",
+    "plus_slice_leftover": "EMPTY",
+    "minus_slice_three_level": "EMPTY",
+    "three_weight_athr": "\u03bc_f<0 (3-weight only)",
+    "minus_slice_S_le_minus_8": "some S\u2264\u22128",
+    "three_equal_eps_e": "\u03b5_e=\u22121, mass \u2260(p\u22123)/(4p)",
+    "pure_pair_dstar_p_3mod4": "EMPTY",
+    "SH_twolevel_mass": "mass (p\u22121)/(2p)",
+    "SH_slice_g_eq_e": "S\u22614",
+    "SH_slice_g_in_G": "tight empty",
+    "aut_e_rigidity": "tight average \u21d2 tight on orbit",
+    "no_full_star_k_4p": "p\u00b2\u22121>4p",
+    "k_eq_4p_full": "OPEN \u2014 multi-level leftover",
+    "k_ge_4p_ND": "OPEN \u2014 multi-level",
+    "gsum_disj_lb_proved_general": false,
+    "psl_span_F_eq_Wpp0": false,
+    "same_line_pairing": false,
+    "e1_closed_general": true,
+    "open": "Multi-level Max\u2212 (3+ even scores) with no S_H=\u22121 witness: k=4p max=\u22122 and f_e\u2261\u22121 on U_{\u22122}; even k>4p with max\u2264\u22124 (tight constants empty only when k=2mp). Two-value through \u00b12 at k=4p is empty; s_{-}\u22650 is Lipschitz ND. Plus-slice and minus-slice three-level are empty; minus-slice needs S\u2264\u22128; 3-equal e-on-T has \u03b5_e=\u22121; pure-pair double-star empty for p\u22613 (mod 4). Two-level S_H pair-slice g=e / g\u2208G empty; Aut_e rigidity holds; no full star in a 4p-set. 1_{S=\u22122} is not a pair-span in general; 3-weight minus-slice is 1-parametric, not empty. 0-1 two-sided leftover is not emptied: Aut_e-fractional leftover is feasible and g\u2209G / non-tight averages remain."
+  },
+  "F3": "Do not claim residual (ii) k\u22654p ND CLOSED: multi-level leftover. Two-value through \u00b12 at k=4p is empty; 3+ level is not. J identities (minus-slice S\u2264\u22128, 3-equal \u03b5_e, pure-pair p\u22613 (mod 4)) do not close ND. L (Aut_e rigidity, S_H slice g=e / g\u2208G) does not empty 0-1 leftover. Slope obstruction is only for k\u22620 (mod p). Do not flip e1 AND."
+}

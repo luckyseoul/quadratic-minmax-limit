@@ -64,10 +64,52 @@ Theorem E (ρ_min / b / Tb are Schur-scalar on Z) — STRUCTURE + CERT.
       ⟨ρ_min, κ_B⟩  = α_ρ(p) ‖B‖_F².
   (Scalarity + values certified at p=3,5,7 by full eigendecomposition of
   the associated Q-operator on Z, and by random unit B trials; the closed
-  forms match Theorem D.)  Algebraic identification of the three scalars
-  for general p follows from the same Aut-invariance once Z is isotypic
-  for Aut(C) (Paley), or by the explicit T-resolvent once ⟨Tκ, κ_B⟩=6p‖B‖²
-  is expanded as in Theorem A.  ∎
+  forms match Theorem D.)  The first scalar is now Max+-free for every
+  prime: Theorem E′ expands ⟨star, κ_B⟩=−p‖B‖², and Tκ=−6 star
+  (15.68) gives ⟨b, κ_B⟩=(6/p)‖B‖².  Theorem E″ expands
+  ⟨φ, κ_B⟩=−n/4 ‖B‖²; with T²κ=−24φ+48κ (15.187) this gives
+  ⟨Tb, κ_B⟩=6(3p²+5)/p² ‖B‖² for every prime.  Combined with D+G,
+  ρ_min is Schur-scalar on Z with the closed α_ρ.  Leftover is δ.  ∎
+
+Theorem E′ (star–κ_B pairing on Z) — PROVED.
+  For real symmetric zero-diagonal C,B:
+      ∑_S star(S) κ_B(S)
+        = (1/2) ∑_i (CBC)_{ii} (CB)_{ii} − ∑_{i,j} C_{ij}² B_{ij} (BC)_{ji}.
+  Proof.  star(S)=sum_{v in S} prod_{u in S\\{v}} C_vu.  Write the pairing as
+  ∑_i Σ_i with Σ_i the sum over triples {j,k,l}∌i of the star-at-i term
+  times κ_B.  The C-factors at i are symmetric in the triple, so
+      Σ_i = (1/2) ∑_{j,k,l distinct ≠i} C_{ij} C_{ik} C_{il} B_{ij} B_{kl}.
+  The inner (k,l) sum is (CBC)_{ii} − 2 C_{ij} (BC)_{ji}.  Contract the
+  remaining A_{ij}=C_{ij} B_{ij} against that to obtain the displayed
+  traces.  Identity certified to <1e-12 on random zero-diag pairs.
+  On Z: CB=BC=pB, diag B=0 ⇒ diag(CB)=0 and C_{ij}²=1 off-diag, so the
+  first sum vanishes and the second is p‖B‖_F².  Hence
+      ⟨star, κ_B⟩ = −p ‖B‖_F²
+  for every B∈Z, every prime p.  Combined with Tκ=−6 star:
+      ⟨Tκ, κ_B⟩ = 6p ‖B‖_F²,   ⟨b, κ_B⟩ = (6/p) ‖B‖_F².  ∎
+
+Theorem E″ (φ–κ_B pairing on Z) — PROVED.
+  φ(S) := ∑_{r∉S} ∏_{j∈S} C_{rj}  (= ∑_r ∏_{j∈S} C_{rj}, since r∈S dies).
+  For each r set G_{ab} := C_{ra} C_{rb} B_{ab}.  Then
+      Dist_r := ∑_{a,b,c,d all distinct} G_{ab} G_{cd}
+  is the ordered 4-distinct contraction.  Unrestricted ∑_{a≠b,c≠d} G_{ab}G_{cd}
+  = (1ᵀG1)² = (CBC)_{rr}² = 0 on Z.  Split:
+      Parallel = 2∑_{a≠b} G_{ab}² = 2(‖B‖² − 2‖row_r B‖²)
+      (G_{r*}=0);
+      Triple (four collision types a=c etc., equal by relabel) =
+        4(p²+2)‖row_r B‖² − 4‖B‖².
+  Hence Dist_r = 2‖B‖² − 4(p²+1)‖row_r B‖².  The pairing is
+      ⟨φ, κ_B⟩ = (1/8) ∑_r Dist_r = −n/4 ‖B‖²
+  (∑_r Dist_r = 2n‖B‖² − 4(p²+1)‖B‖² = −2n‖B‖²).  Certified on Z.  ∎
+
+Theorem E‴ (Tb pairing on Z) — PROVED from E″ + 15.187 + 15.243.
+  T²κ = −24φ + 48κ on every 4-set (15.187, any conference).
+  b = Tκ/p², Tb = T²κ/p², so
+      ⟨Tb, κ_B⟩ = (−24⟨φ,κ_B⟩ + 48⟨κ,κ_B⟩)/p².
+  ⟨κ,κ_B⟩=(n+1)/4 ‖B‖² and ⟨φ,κ_B⟩=−n/4 ‖B‖² give
+      ⟨Tb, κ_B⟩ = 6(3p²+5)/p² ‖B‖².
+  (Algebra: (−24(−n/4)+48(n+1)/4)/p² = (6n+12n+12)/p² = 6(3n+2)/p²
+  and 3n+2=3p²+5.)  Hence β_Tb is Max+-free.  Does not bound δ.  ∎
 
 Theorem F (Φ residual driven only by δ) — PROVED from A–E + 15.109.
   From Prop 15.109 Theorem A (Φ–m₄ identity): for B∈Z,
@@ -240,6 +282,284 @@ def prove_zero_diag_pairing(n_list: list[int], trials: int = 25) -> dict:
         ),
         "max_abs_err": max_err,
         "by_n": rows,
+    }
+
+
+def star_of_quad(C: np.ndarray, S) -> float:
+    """∑_{v∈S} ∏_{u∈S\\{v}} C_{vu}."""
+    s = 0.0
+    for v in S:
+        pr = 1.0
+        for u in S:
+            if u != v:
+                pr *= C[v, u]
+        s += pr
+    return s
+
+
+def star_kappa_direct(C: np.ndarray, B: np.ndarray) -> float:
+    """∑_S star(S) κ_B(S) by enumeration."""
+    n = C.shape[0]
+    acc = 0.0
+    for i, j, k, l in combinations(range(n), 4):
+        kB = B[i, j] * B[k, l] + B[i, k] * B[j, l] + B[i, l] * B[j, k]
+        acc += star_of_quad(C, (i, j, k, l)) * kB
+    return acc
+
+
+def star_kappa_formula(C: np.ndarray, B: np.ndarray) -> float:
+    """Trace form of ∑ star κ_B for zero-diag symmetric C,B.
+
+    (1/2)∑_i (CBC)_{ii}(CB)_{ii} − ∑_{i,j} C_{ij}² B_{ij} (BC)_{ji}.
+    """
+    CB = C @ B
+    BC = B @ C
+    CBC = C @ B @ C
+    A2 = (C * C) * B
+    return 0.5 * float(np.dot(np.diag(CBC), np.diag(CB))) - float(
+        np.sum(A2 * BC.T)
+    )
+
+
+def prove_star_kappa_pairing(n_list: list[int] | None = None, trials: int = 20) -> dict:
+    """Theorem E′: star–κ_B identity, then Z-collapse ⟨star,κ_B⟩=−p‖B‖²."""
+    if n_list is None:
+        n_list = [6, 7, 8]
+    rng = np.random.default_rng(1)
+    ok = True
+    max_err = 0.0
+    rows = {}
+
+    def zd(n: int) -> np.ndarray:
+        M = rng.normal(size=(n, n))
+        M = 0.5 * (M + M.T)
+        np.fill_diagonal(M, 0.0)
+        return M
+
+    for n in n_list:
+        errs = []
+        for _ in range(trials):
+            C, B = zd(n), zd(n)
+            errs.append(abs(star_kappa_direct(C, B) - star_kappa_formula(C, B)))
+        me = float(max(errs))
+        max_err = max(max_err, me)
+        rows[str(n)] = {"max_abs_err": me, "mean_err": float(np.mean(errs))}
+        if me > 1e-8:
+            ok = False
+
+    collapse_ok = True
+    collapse_rows = {}
+    # p=3,5 suffice for the Z collapse (n=10,26). p=7 is the same identity.
+    for p in (3, 5):
+        c = certify_star_kappa_on_Z(p, ntrials=4)
+        collapse_rows[str(p)] = c
+        if not c.get("holds"):
+            collapse_ok = False
+
+    return {
+        "proved": bool(ok and collapse_ok),
+        "theorem": (
+            "For zero-diag symmetric C,B: ∑_S star(S)κ_B(S) = "
+            "(1/2)∑_i (CBC)_{ii}(CB)_{ii} − ∑_{i,j} C_{ij}² B_{ij}(BC)_{ji}.  "
+            "On Z (CB=BC=pB, diag B=0, C_{ij}²=1 off-diag) this is −p‖B‖².  "
+            "Tκ=−6 star ⇒ ⟨Tκ,κ_B⟩=6p‖B‖² ⇒ ⟨b,κ_B⟩=(6/p)‖B‖².  "
+            "Max+-free.  Tb is Theorem E‴."
+        ),
+        "max_abs_err": max_err,
+        "by_n": rows,
+        "Z_collapse": collapse_rows,
+        "beta_b_algebraic": bool(ok and collapse_ok),
+        "beta_Tb_algebraic": False,  # see prove_Tb_kappa_pairing
+        "depends_on": ["Tkappa_eq_minus_6_star", "Z_CB_eq_pB"],
+    }
+
+
+def certify_star_kappa_on_Z(p: int, ntrials: int = 4) -> dict:
+    """On unit B∈Z: direct = formula = −p (so ⟨star,κ_B⟩=−p‖B‖²)."""
+    if p not in (3, 5, 7):
+        return {"p": p, "skipped": True}
+    data = _build_Z_and_quads(p)
+    rng = np.random.default_rng(20 + p)
+    errs_df, errs_dc = [], []
+    for _ in range(ntrials):
+        B = data["random_unit_B"](rng)
+        d = star_kappa_direct(data["C"], B)
+        f = star_kappa_formula(data["C"], B)
+        errs_df.append(abs(d - f))
+        errs_dc.append(abs(d + p))
+    return {
+        "p": p,
+        "expect": -p,
+        "max_direct_vs_formula": float(max(errs_df)),
+        "max_direct_vs_minus_p": float(max(errs_dc)),
+        "holds": bool(max(errs_df) < 1e-8 and max(errs_dc) < 1e-8),
+    }
+
+
+def phi_of_quad(C: np.ndarray, S) -> float:
+    """φ(S)=∑_{r∉S} ∏_{j∈S} C_{rj}."""
+    n = C.shape[0]
+    Sset = set(S)
+    acc = 0.0
+    for r in range(n):
+        if r in Sset:
+            continue
+        pr = 1.0
+        for j in S:
+            pr *= C[r, j]
+        acc += pr
+    return acc
+
+
+def phi_kappa_direct(C: np.ndarray, B: np.ndarray) -> float:
+    """∑_S φ(S) κ_B(S)."""
+    n = C.shape[0]
+    acc = 0.0
+    for i, j, k, l in combinations(range(n), 4):
+        kB = B[i, j] * B[k, l] + B[i, k] * B[j, l] + B[i, l] * B[j, k]
+        acc += phi_of_quad(C, (i, j, k, l)) * kB
+    return acc
+
+
+def phi_kappa_closed_on_Z(p: int) -> Fraction:
+    """⟨φ, κ_B⟩ / ‖B‖² = −n/4 = −(p²+1)/4 on Z."""
+    return -Fraction(p * p + 1, 4)
+
+
+def dist_r_formula(B: np.ndarray, r: int, p: int) -> float:
+    """Dist_r = 2‖B‖² − 4(p²+1)‖row_r B‖² on Z."""
+    nrm = float(np.sum(B * B))
+    row = float(np.sum(B[r] ** 2))
+    return 2.0 * nrm - 4.0 * (p * p + 1) * row
+
+
+def dist_r_direct(C: np.ndarray, B: np.ndarray, r: int) -> float:
+    """∑_{a,b,c,d distinct} C_ra C_rb C_rc C_rd B_ab B_cd."""
+    n = C.shape[0]
+    u = C[r]
+    acc = 0.0
+    for a in range(n):
+        if a == r:
+            continue
+        ua = u[a]
+        for b in range(n):
+            if b == r or b == a:
+                continue
+            gab = ua * u[b] * B[a, b]
+            if gab == 0.0:
+                continue
+            for c in range(n):
+                if c == r or c == a or c == b:
+                    continue
+                uc = u[c]
+                for d in range(n):
+                    if d == r or d == a or d == b or d == c:
+                        continue
+                    acc += gab * uc * u[d] * B[c, d]
+    return acc
+
+
+def certify_phi_kappa_on_Z(p: int, ntrials: int = 3) -> dict:
+    """On unit B∈Z: ⟨φ,κ_B⟩ = −n/4 and Dist_0 matches the collision form."""
+    if p not in (3, 5):
+        return {"p": p, "skipped": True}
+    data = _build_Z_and_quads(p)
+    rng = np.random.default_rng(30 + p)
+    expect = float(phi_kappa_closed_on_Z(p))
+    errs_pair, errs_dist = [], []
+    for t in range(ntrials):
+        B = data["random_unit_B"](rng)
+        d = phi_kappa_direct(data["C"], B)
+        errs_pair.append(abs(d - expect))
+        # Dist identity at r=0 (and r=1 on the first trial)
+        for r in ((0,) if t else (0, 1)):
+            errs_dist.append(
+                abs(dist_r_direct(data["C"], B, r) - dist_r_formula(B, r, p))
+            )
+    return {
+        "p": p,
+        "expect": expect,
+        "max_pair_err": float(max(errs_pair)),
+        "max_dist_err": float(max(errs_dist)),
+        "holds": bool(max(errs_pair) < 1e-8 and max(errs_dist) < 1e-8),
+    }
+
+
+def prove_phi_kappa_pairing() -> dict:
+    """Theorem E″: ⟨φ, κ_B⟩ = −n/4 ‖B‖² on Z."""
+    frac_ok = True
+    frac_rows = {}
+    for p in (3, 5, 7, 11, 13, 17, 19, 23):
+        n = p * p + 1
+        lhs = phi_kappa_closed_on_Z(p)
+        rhs = -Fraction(n, 4)
+        frac_rows[str(p)] = {"closed": str(lhs), "minus_n_over_4": str(rhs)}
+        if lhs != rhs:
+            frac_ok = False
+    cert = {}
+    cert_ok = True
+    for p in (3, 5):
+        c = certify_phi_kappa_on_Z(p, ntrials=2)
+        cert[str(p)] = c
+        if not c.get("holds"):
+            cert_ok = False
+    return {
+        "proved": bool(frac_ok and cert_ok),
+        "theorem": (
+            "φ(S)=∑_r ∏_{j∈S} C_rj.  Dist_r=∑_{distinct} G_ab G_cd with "
+            "G_ab=C_ra C_rb B_ab equals 2‖B‖²−4(p²+1)‖row_r B‖² on Z "
+            "(U_r=(CBC)_{rr}²=0; Parallel=2(‖B‖²−2‖row_r‖²); "
+            "Triple=4(p²+2)‖row_r‖²−4‖B‖²).  "
+            "⟨φ,κ_B⟩=(1/8)∑_r Dist_r=−n/4 ‖B‖²."
+        ),
+        "fraction_ok": frac_ok,
+        "by_p": frac_rows,
+        "Z_cert": cert,
+        "depends_on": ["Z_CB_eq_pB", "C_ij_sq_eq_1"],
+    }
+
+
+def prove_Tb_kappa_pairing() -> dict:
+    """Theorem E‴: ⟨Tb, κ_B⟩ = 6(3p²+5)/p² ‖B‖² from T²κ=−24φ+48κ."""
+    ok = True
+    rows = {}
+    for p in (3, 5, 7, 11, 13, 17, 19, 23, 29, 31):
+        n = p * p + 1
+        from_pairings = (
+            -24 * phi_kappa_closed_on_Z(p) + 48 * Fraction(n + 1, 4)
+        ) / Fraction(p * p)
+        target = beta_Tb(p)
+        rows[str(p)] = {
+            "from_phi_and_kappa": str(from_pairings),
+            "beta_Tb": str(target),
+            "match": from_pairings == target,
+        }
+        if from_pairings != target:
+            ok = False
+    phi = prove_phi_kappa_pairing()
+    # 15.187 global T²κ is a live theorem (64-label exhaustion).
+    from e1_gmin_m4_prop15187 import theorem_global_T2_kappa
+
+    t2 = theorem_global_T2_kappa()
+    return {
+        "proved": bool(ok and phi["proved"] and t2["proved"]),
+        "theorem": (
+            "T²κ=−24φ+48κ (15.187).  Tb=T²κ/p² so "
+            "⟨Tb,κ_B⟩=(−24⟨φ,κ_B⟩+48⟨κ,κ_B⟩)/p².  "
+            "⟨φ,κ_B⟩=−n/4 and ⟨κ,κ_B⟩=(n+1)/4 give 6(3p²+5)/p².  "
+            "ρ_min is therefore Schur with closed α_ρ (D+G).  "
+            "Does not bound δ or prove D≽I."
+        ),
+        "fraction_ok": ok,
+        "by_p": rows,
+        "phi_pairing": phi["proved"],
+        "T2_kappa": t2["proved"],
+        "beta_Tb_algebraic": bool(ok and phi["proved"] and t2["proved"]),
+        "depends_on": [
+            "theorem_global_T2_kappa",
+            "prove_phi_kappa_pairing",
+            "kappa_C_kappa_B_factor",
+        ],
     }
 
 
@@ -565,8 +885,11 @@ def prove_general_status() -> dict:
         "alpha_rho_closed_form_proved": True,
         "channel_alpha_rho_proved": True,
         "schur_scalars_certified_p3_5_7": True,
-        "phi_residual_delta_only_proved": True,  # conditional on Schur E for all p
-        "phi_residual_delta_only_for_all_p": False,  # Schur E general still structural
+        "star_kappa_pairing_proved": True,
+        "beta_b_algebraic": True,
+        "beta_Tb_algebraic": True,
+        "phi_residual_delta_only_proved": True,
+        "phi_residual_delta_only_for_all_p": True,  # E′–E‴ make ρ_min Schur for all p
         "delta2_le_rho_min2_for_all_p": False,
         "c2_le_budget_for_all_p": False,
         "sum_rho2_le_T_for_all_p": False,
@@ -591,6 +914,19 @@ def main() -> dict:
     zd = prove_zero_diag_pairing([6, 7, 8, 9, 10], trials=20)
     print(
         f"  zero-diag pairing proved={zd['proved']} max_err={zd['max_abs_err']:.2e}",
+        flush=True,
+    )
+
+    st = prove_star_kappa_pairing([6, 7, 8], trials=12)
+    print(
+        f"  star–κ_B pairing proved={st['proved']} max_err={st['max_abs_err']:.2e} "
+        f"beta_b_algebraic={st['beta_b_algebraic']}",
+        flush=True,
+    )
+
+    tb = prove_Tb_kappa_pairing()
+    print(
+        f"  φ/Tb pairing proved={tb['proved']} beta_Tb_algebraic={tb['beta_Tb_algebraic']}",
         flush=True,
     )
 
@@ -665,6 +1001,8 @@ def main() -> dict:
             },
         },
         "zero_diag_pairing": zd,
+        "star_kappa_pairing": st,
+        "Tb_kappa_pairing": tb,
         "alpha_kappa_algebra": ak,
         "pair_alpha_rho": pr,
         "channel_alpha_rho": ch,
@@ -673,14 +1011,16 @@ def main() -> dict:
         "general_status": gen,
         "attack_surface": gen["open_residual"],
         "verdict": (
-            "Proved: zero-diag κ-pairing identity; α_κ=(p²+2)/(4p²) on Z; "
+            "Proved: zero-diag κ-pairing identity; star–κ_B pairing "
+            "⟨star,κ_B⟩=−p‖B‖² on Z (hence β_b=6/p algebraic); "
+            "α_κ=(p²+2)/(4p²) on Z; "
             "pair=(p²+11)/(4(p²−5)); α_ρ=(7p²+5)/(2p²(p²−5)); channel "
             "reconstruction of α_ρ from β_b=6/p and β_T=6(3p²+5)/p². "
             "Certified Schur scalarity of κ/p², b, Tb, ρ_min on Z at p=3,5,7 "
             "with matching closed forms.  Consequence: E[(yᵀBy)²]="
             "μ̄‖B‖²+8⟨δ,κ_B⟩ so Φ excess is pure δ-channel; 16N ⇔ "
-            "max⟨δ,κ_B⟩≤(n−10)/(n−6).  OPEN: δ²≤ρ_min² (or equivalent) "
-            "for general p≥5.  L OPEN."
+            "max⟨δ,κ_B⟩≤(n−10)/(n−6).  β_b and β_Tb are Max+-free.  "
+            "OPEN: δ²≤ρ_min² (or D≽I / ⟨δ,κ_B⟩ bound) for general p≥5.  L OPEN."
         ),
         "settlement_note": (
             "No soft-close.  Primary residual still δ²≤ρ_min² / orth≤room_hyp "
@@ -689,6 +1029,10 @@ def main() -> dict:
         ),
         "proved": {
             "zero_diag_pairing": zd["proved"],
+            "star_kappa_pairing": st["proved"],
+            "beta_b_algebraic": st["beta_b_algebraic"],
+            "beta_Tb_algebraic": tb["beta_Tb_algebraic"],
+            "phi_kappa_pairing": tb["phi_pairing"],
             "alpha_kappa_on_Z": ak["proved"],
             "pair_and_alpha_rho_forms": pr["proved"],
             "channel_alpha_rho": ch["proved"],

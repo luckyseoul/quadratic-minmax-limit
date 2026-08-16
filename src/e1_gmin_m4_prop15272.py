@@ -29,15 +29,16 @@ PROVED Max+-free
 
   B. Bad-μ spanning (every prime p≥5).  For bad μ the unique pairs
      are the edges of K_m (15.271 A4).  A k=3 triple T contributes
-     products supported on E(T), summing to 0.  Shifts with
-     s0+s1+s2≡−2 give three Fejer-nonzero coordinates times three
-     distinct characters on F_p² (15.271 A5).  The ratio of any two
-     coordinates is a nonconstant character, so the vectors are not
-     all ℂ-parallel and span the full 2-plane {x+y+z=0} on E(T).
+     products supported on E(T), summing to 0.  Edge amplitudes are
+     Fejer products F_{λ,s}(c)=2p ω^{−c λ^{-1}s}/(ω^{c λ^{-1}}−1)
+     (15.276; A3_PROOF §8–9).  Shifts with s0+s1+s2≡−2 give three
+     Fejer-nonzero coordinates times three distinct characters on
+     F_p² (15.271 A5).  No c_i=0; the 3-vector is not ℂ-parallel
+     (A01/A02 depends on (c1,c2,c3)).  They span {x+y+z=0} on E(T).
      The line graph of K_m is connected for m≥3, and χ_e−χ_f for
      adjacent edges lies in that 2-plane.  Hence the span over all
-     triples (every triple of good lines occurs) is 1^⊥ on E(K_m).
-     That is the bad-μ isotypic.  ∎
+     triples (every triple of good lines occurs, A3 not M₃) is 1^⊥
+     on E(K_m).  That is the bad-μ isotypic.  ∎
 
   C. Complementary mixed (good μ, p≥7).  The μ-line is one good
      line L_0.  Mixed unique pairs are E(K_{m−1}) on the other good
@@ -178,18 +179,22 @@ _KNOWN_M3 = {5: 100, 7: 1176, 11: 24200}
 
 
 def theorem_every_triple_occurs() -> dict:
-    """M₃ = C(m,3) p² (p−1) matches the complete enum at p=5,7,11.
+    """Every triple of good lines is a k=3 Max+ (A3 occupancy-sum).
 
-    A3 sawtooth exists for any 3 good forms once s₀+s₁+s₂≡−2, so every
-    unordered triple of good lines occurs.  Line graph of K_m is the
-    full line graph.
+    Existence is evidence/share/A3_PROOF.md plus the live constructor
+    in 15.276 (Cy=py, ẑ(0)=p). M₃ matching enum is a check only.
     """
-    ok = True
+    from e1_gmin_m4_prop15276 import (
+        lemma_D_existence_written,
+        M3_count as M3_live,
+    )
+
+    ok = bool(lemma_D_existence_written())
     sample = {}
     for p, known in _KNOWN_M3.items():
         got = M3_count(p)
-        sample[str(p)] = {"M3": got, "enum": known}
-        if got != known:
+        sample[str(p)] = {"M3": got, "enum": known, "live": M3_live(p)}
+        if got != known or got != M3_live(p):
             ok = False
     for p in range(5, 80):
         if not is_prime(p):
@@ -203,11 +208,15 @@ def theorem_every_triple_occurs() -> dict:
         "proved": ok,
         "theorem": (
             "Every triple of good F_p-lines occurs as a k=3 Max+ "
-            "(A3 + phase lock).  M₃=C(m,3)p²(p−1) matches enum "
-            "100, 1176, 24200 at p=5,7,11."
+            "(occupancy-sum sawtooth + phase lock, A3_PROOF / 15.276).  "
+            "M₃=C(m,3)p²(p−1) matches enum 100, 1176, 24200 at p=5,7,11."
         ),
         "by_p": sample,
-        "depends_on": ["theorem_phase_lock", "prop_15_271_A3"],
+        "depends_on": [
+            "theorem_phase_lock",
+            "prop_15_276_A3_live",
+            "A3_PROOF.md",
+        ],
     }
 
 
@@ -386,8 +395,14 @@ def theorem_bad_mu_span() -> dict:
     sl = theorem_slice_sizes()
     lock = theorem_phase_lock()
     triples = theorem_every_triple_occurs()
+    from e1_gmin_m4_prop15276 import lemma_D_2plane_amplitudes_proved
+
     ok = bool(
-        t["proved"] and sl["proved"] and lock["proved"] and triples["proved"]
+        t["proved"]
+        and sl["proved"]
+        and lock["proved"]
+        and triples["proved"]
+        and lemma_D_2plane_amplitudes_proved()
     )
     # dim check C(m,2)-1
     ok = ok and all(
@@ -400,8 +415,9 @@ def theorem_bad_mu_span() -> dict:
         "theorem": (
             "For every prime p≥5 and every bad μ, k=3 products span "
             "1^⊥ on E(K_m).  Each triple fills the 2-plane on its three "
-            "edges (A5: phase ratios nonconstant; Fejer ≠0); the line "
-            "graph of K_m generates 1^⊥.  Every triple occurs (M₃)."
+            "edges (A5 distinct characters; Fejer amplitudes nonzero "
+            "and not C-parallel, 15.276); the line graph of K_m "
+            "generates 1^⊥.  Every triple occurs (A3, not M₃ alone)."
         ),
         "depends_on": [
             "theorem_phase_frequencies_distinct",
@@ -409,6 +425,7 @@ def theorem_bad_mu_span() -> dict:
             "theorem_phase_lock",
             "theorem_convolution_hyperplane",
             "theorem_every_triple_occurs",
+            "lemma_D_2plane_amplitudes_proved",
         ],
     }
 

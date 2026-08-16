@@ -339,12 +339,18 @@ def theorem_p5_veronese() -> dict:
 
 
 def theorem_no_cuspidal() -> dict:
-    """Character inner product vs discrete series. Does **not** imply span(F)."""
+    """Character inner product vs discrete series. Does **not** imply span(k=3 F)."""
+    from e1_gmin_m4_prop15278 import theorem_no_cuspidal_in_Z
+
+    N = theorem_no_cuspidal_in_Z()
     return {
-        "proved": True,
+        "proved": bool(N["proved"]),
         "theorem": (
             "Signed PSL acts on S²(V₊).  χ_{𝒲₊₊⁰}(g)=½(χ_{V₊}(g)²+χ_{V₊}(g²))"
-            "−#fix(g).  Weil values give χ(elliptic)=0, "
+            "−#fix(g).  P₊=(I+C/p)/2 gives χ_V=(fix_s+Tr(PC)/p)/2.  On "
+            "elliptics fix_s=0 and Tr(PC)=1−χ(−1)=0 (quadratic Gauss sum "
+            "∑χ(ax²+bx+c)=−χ(a), disc=τ²−4; χ(−1)=1).  The elliptic torus "
+            "has odd order (q+1)/2 so g² is elliptic and χ_Z≡0 there.  "
             "χ(unip_□)=(p+5)(p−1)/8, χ(unip_⊠)=(p−5)(p+1)/8.  Every "
             "discrete series θ of PSL(2,p²) has θ(unip)=−1 and degree q−1.  "
             "The inner product uses only {1}∪{unipotents}: dim(𝒲₊₊⁰)·(q−1) "
@@ -354,6 +360,8 @@ def theorem_no_cuspidal() -> dict:
             "𝒲₊₊⁰ (see psl_span_F_eq_Wpp0)."
         ),
         "does_not_imply_span_F": True,
+        "elliptic": N.get("elliptic"),
+        "unipotent": N.get("unipotent"),
     }
 
 

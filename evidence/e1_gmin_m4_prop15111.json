@@ -57,6 +57,112 @@
       }
     }
   },
+  "star_kappa_pairing": {
+    "proved": true,
+    "theorem": "For zero-diag symmetric C,B: \u2211_S star(S)\u03ba_B(S) = (1/2)\u2211_i (CBC)_{ii}(CB)_{ii} \u2212 \u2211_{i,j} C_{ij}\u00b2 B_{ij}(BC)_{ji}.  On Z (CB=BC=pB, diag B=0, C_{ij}\u00b2=1 off-diag) this is \u2212p\u2016B\u2016\u00b2.  T\u03ba=\u22126 star \u21d2 \u27e8T\u03ba,\u03ba_B\u27e9=6p\u2016B\u2016\u00b2 \u21d2 \u27e8b,\u03ba_B\u27e9=(6/p)\u2016B\u2016\u00b2.  Max+-free.  Tb is Theorem E\u2034.",
+    "max_abs_err": 3.3306690738754696e-15,
+    "by_n": {
+      "6": {
+        "max_abs_err": 1.7763568394002505e-15,
+        "mean_err": 4.932397083360721e-16
+      },
+      "7": {
+        "max_abs_err": 3.3306690738754696e-15,
+        "mean_err": 1.27675647831893e-15
+      },
+      "8": {
+        "max_abs_err": 2.6645352591003757e-15,
+        "mean_err": 1.2923689896027213e-15
+      }
+    },
+    "Z_collapse": {
+      "3": {
+        "p": 3,
+        "expect": -3,
+        "max_direct_vs_formula": 8.881784197001252e-16,
+        "max_direct_vs_minus_p": 1.3322676295501878e-15,
+        "holds": true
+      },
+      "5": {
+        "p": 5,
+        "expect": -5,
+        "max_direct_vs_formula": 1.3322676295501878e-14,
+        "max_direct_vs_minus_p": 1.2434497875801753e-14,
+        "holds": true
+      }
+    },
+    "beta_b_algebraic": true,
+    "beta_Tb_algebraic": false,
+    "depends_on": [
+      "Tkappa_eq_minus_6_star",
+      "Z_CB_eq_pB"
+    ]
+  },
+  "Tb_kappa_pairing": {
+    "proved": true,
+    "theorem": "T\u00b2\u03ba=\u221224\u03c6+48\u03ba (15.187).  Tb=T\u00b2\u03ba/p\u00b2 so \u27e8Tb,\u03ba_B\u27e9=(\u221224\u27e8\u03c6,\u03ba_B\u27e9+48\u27e8\u03ba,\u03ba_B\u27e9)/p\u00b2.  \u27e8\u03c6,\u03ba_B\u27e9=\u2212n/4 and \u27e8\u03ba,\u03ba_B\u27e9=(n+1)/4 give 6(3p\u00b2+5)/p\u00b2.  \u03c1_min is therefore Schur with closed \u03b1_\u03c1 (D+G).  Does not bound \u03b4 or prove D\u227dI.",
+    "fraction_ok": true,
+    "by_p": {
+      "3": {
+        "from_phi_and_kappa": "64/3",
+        "beta_Tb": "64/3",
+        "match": true
+      },
+      "5": {
+        "from_phi_and_kappa": "96/5",
+        "beta_Tb": "96/5",
+        "match": true
+      },
+      "7": {
+        "from_phi_and_kappa": "912/49",
+        "beta_Tb": "912/49",
+        "match": true
+      },
+      "11": {
+        "from_phi_and_kappa": "2208/121",
+        "beta_Tb": "2208/121",
+        "match": true
+      },
+      "13": {
+        "from_phi_and_kappa": "3072/169",
+        "beta_Tb": "3072/169",
+        "match": true
+      },
+      "17": {
+        "from_phi_and_kappa": "5232/289",
+        "beta_Tb": "5232/289",
+        "match": true
+      },
+      "19": {
+        "from_phi_and_kappa": "6528/361",
+        "beta_Tb": "6528/361",
+        "match": true
+      },
+      "23": {
+        "from_phi_and_kappa": "9552/529",
+        "beta_Tb": "9552/529",
+        "match": true
+      },
+      "29": {
+        "from_phi_and_kappa": "15168/841",
+        "beta_Tb": "15168/841",
+        "match": true
+      },
+      "31": {
+        "from_phi_and_kappa": "17328/961",
+        "beta_Tb": "17328/961",
+        "match": true
+      }
+    },
+    "phi_pairing": true,
+    "T2_kappa": true,
+    "beta_Tb_algebraic": true,
+    "depends_on": [
+      "theorem_global_T2_kappa",
+      "prove_phi_kappa_pairing",
+      "kappa_C_kappa_B_factor"
+    ]
+  },
   "alpha_kappa_algebra": {
     "proved": true,
     "theorem": "On Z: CB=pB=BC, diag B=0, Tr(CB)=0 \u21d2 \u2211\u03ba \u03ba_B = ((p\u00b2+2)/4)\u2016B\u2016\u00b2 \u21d2 \u03b1_\u03ba=(p\u00b2+2)/(4p\u00b2).",
@@ -797,8 +903,11 @@
     "alpha_rho_closed_form_proved": true,
     "channel_alpha_rho_proved": true,
     "schur_scalars_certified_p3_5_7": true,
+    "star_kappa_pairing_proved": true,
+    "beta_b_algebraic": true,
+    "beta_Tb_algebraic": true,
     "phi_residual_delta_only_proved": true,
-    "phi_residual_delta_only_for_all_p": false,
+    "phi_residual_delta_only_for_all_p": true,
     "delta2_le_rho_min2_for_all_p": false,
     "c2_le_budget_for_all_p": false,
     "sum_rho2_le_T_for_all_p": false,
@@ -807,10 +916,14 @@
     "open_residual": "Prove \u03b4\u00b2\u2264\u03c1_min\u00b2 for all primes p\u22655 (sufficient for residual p\u22657 by 15.110 Thm D+E), OR bound max\u27e8\u03b4,\u03ba_B\u27e9\u2264(n\u221210)/(n\u22126) on unit Z, OR evaluate c=Q_0(halfspace)\u2264\u221a(room_hyp/24).  Pair Schur + closed \u03b1_\u03c1 reduce \u03a6 excess to the pure E_{4p} channel \u03b4."
   },
   "attack_surface": "Prove \u03b4\u00b2\u2264\u03c1_min\u00b2 for all primes p\u22655 (sufficient for residual p\u22657 by 15.110 Thm D+E), OR bound max\u27e8\u03b4,\u03ba_B\u27e9\u2264(n\u221210)/(n\u22126) on unit Z, OR evaluate c=Q_0(halfspace)\u2264\u221a(room_hyp/24).  Pair Schur + closed \u03b1_\u03c1 reduce \u03a6 excess to the pure E_{4p} channel \u03b4.",
-  "verdict": "Proved: zero-diag \u03ba-pairing identity; \u03b1_\u03ba=(p\u00b2+2)/(4p\u00b2) on Z; pair=(p\u00b2+11)/(4(p\u00b2\u22125)); \u03b1_\u03c1=(7p\u00b2+5)/(2p\u00b2(p\u00b2\u22125)); channel reconstruction of \u03b1_\u03c1 from \u03b2_b=6/p and \u03b2_T=6(3p\u00b2+5)/p\u00b2. Certified Schur scalarity of \u03ba/p\u00b2, b, Tb, \u03c1_min on Z at p=3,5,7 with matching closed forms.  Consequence: E[(y\u1d40By)\u00b2]=\u03bc\u0304\u2016B\u2016\u00b2+8\u27e8\u03b4,\u03ba_B\u27e9 so \u03a6 excess is pure \u03b4-channel; 16N \u21d4 max\u27e8\u03b4,\u03ba_B\u27e9\u2264(n\u221210)/(n\u22126).  OPEN: \u03b4\u00b2\u2264\u03c1_min\u00b2 (or equivalent) for general p\u22655.  L OPEN.",
+  "verdict": "Proved: zero-diag \u03ba-pairing identity; star\u2013\u03ba_B pairing \u27e8star,\u03ba_B\u27e9=\u2212p\u2016B\u2016\u00b2 on Z (hence \u03b2_b=6/p algebraic); \u03b1_\u03ba=(p\u00b2+2)/(4p\u00b2) on Z; pair=(p\u00b2+11)/(4(p\u00b2\u22125)); \u03b1_\u03c1=(7p\u00b2+5)/(2p\u00b2(p\u00b2\u22125)); channel reconstruction of \u03b1_\u03c1 from \u03b2_b=6/p and \u03b2_T=6(3p\u00b2+5)/p\u00b2. Certified Schur scalarity of \u03ba/p\u00b2, b, Tb, \u03c1_min on Z at p=3,5,7 with matching closed forms.  Consequence: E[(y\u1d40By)\u00b2]=\u03bc\u0304\u2016B\u2016\u00b2+8\u27e8\u03b4,\u03ba_B\u27e9 so \u03a6 excess is pure \u03b4-channel; 16N \u21d4 max\u27e8\u03b4,\u03ba_B\u27e9\u2264(n\u221210)/(n\u22126).  \u03b2_b and \u03b2_Tb are Max+-free.  OPEN: \u03b4\u00b2\u2264\u03c1_min\u00b2 (or D\u227dI / \u27e8\u03b4,\u03ba_B\u27e9 bound) for general p\u22655.  L OPEN.",
   "settlement_note": "No soft-close.  Primary residual still \u03b4\u00b2\u2264\u03c1_min\u00b2 / orth\u2264room_hyp for general p\u22655; reduced to pure E_{4p} channel with closed Schur constants \u03b1_\u03ba, \u03b1_\u03c1, pair.",
   "proved": {
     "zero_diag_pairing": true,
+    "star_kappa_pairing": true,
+    "beta_b_algebraic": true,
+    "beta_Tb_algebraic": true,
+    "phi_kappa_pairing": true,
     "alpha_kappa_on_Z": true,
     "pair_and_alpha_rho_forms": true,
     "channel_alpha_rho": true,

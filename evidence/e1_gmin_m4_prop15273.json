@@ -1,0 +1,421 @@
+{
+  "prop": "15.273",
+  "title": "\u03bb_min(\u03a6) floor on Z: threshold algebra + S\u2081=0; G_{u,disj} is not a Gram; general \u22656 OPEN",
+  "L_status": "OPEN",
+  "proved": {
+    "threshold_identity": true,
+    "s1_vanishes_on_Z": true,
+    "wick_q4_criterion": true,
+    "lambda_star_gt_6": true,
+    "q4_iff_m4_kap_nonneg": true,
+    "wedge_schur_D_ge_I": true,
+    "star_kappa_pairing": true,
+    "Tb_kappa_pairing": true,
+    "image_sos_factorization": false,
+    "rho_beats_quarter": false,
+    "lambda_min_ge_6_proved_general": false,
+    "lambda_min_ge_5_proved_p_ge_7": false,
+    "census_spectrum_p5_p7": true,
+    "bitight_empty_via_floor_all_p": false,
+    "gu_disj_is_gram": false,
+    "gsum_disj_lb_proved_general": false,
+    "residual_closed_general": false,
+    "sixteen_N_for_all_p": false,
+    "E1_closed": false
+  },
+  "algebra": {
+    "ell_threshold": "4(p^4-1)/(p^4-8p^2-1)",
+    "threshold_p5": "312/53",
+    "threshold_p7": "1200/251",
+    "L_star_ell": "2(p^2+1)-ell(p^4-8p^2-1)/(4(p^2-1))",
+    "Q4_over_N": "2+4/p^2+8 <rho,kappa_B>",
+    "q4_nonneg_iff": "sum rho kappa_B >= -1/4 - 1/(2p^2)",
+    "S1": "1^T B 1 = 0 on Z via P+1=(p+1)P+ e_inf",
+    "A": {
+      "proved": true,
+      "theorem": "L_*=(T\u2212\u2113(m\u2212k))/k=2(p\u00b2+1)\u2212\u2113(p\u2074\u22128p\u00b2\u22121)/(4(p\u00b2\u22121)); L_*<2d iff \u2113>4(p\u2074\u22121)/(p\u2074\u22128p\u00b2\u22121).  At p=5 the threshold is 312/53; at p=7 it is 1200/251.  \u2113=6 works for all primes p\u22655; \u2113=5 works iff p\u22657; \u2113=4 never empties bi-tight.",
+      "threshold_p5": "312/53",
+      "threshold_p7": "1200/251",
+      "by_p_sample": {
+        "5": {
+          "threshold": "312/53",
+          "threshold_bulk": "312/53",
+          "match": true,
+          "L6": "51/2",
+          "L6_matches_15167": true,
+          "L6_lt_2d": true,
+          "L5_lt_2d": false,
+          "L4_lt_2d": false,
+          "ok": true
+        },
+        "7": {
+          "threshold": "1200/251",
+          "threshold_bulk": "1200/251",
+          "match": true,
+          "L6": "149/4",
+          "L6_matches_15167": true,
+          "L6_lt_2d": true,
+          "L5_lt_2d": true,
+          "L4_lt_2d": false,
+          "ok": true
+        },
+        "11": {
+          "threshold": "7320/1709",
+          "threshold_bulk": "7320/1709",
+          "match": true,
+          "L6": "731/10",
+          "L6_matches_15167": true,
+          "L6_lt_2d": true,
+          "L5_lt_2d": true,
+          "L4_lt_2d": false,
+          "ok": true
+        },
+        "13": {
+          "threshold": "14280/3401",
+          "threshold_bulk": "14280/3401",
+          "match": true,
+          "L6": "1359/14",
+          "L6_matches_15167": true,
+          "L6_lt_2d": true,
+          "L5_lt_2d": true,
+          "L4_lt_2d": false,
+          "ok": true
+        },
+        "17": {
+          "threshold": "41760/10151",
+          "threshold_bulk": "41760/10151",
+          "match": true,
+          "L6": "3769/24",
+          "L6_matches_15167": true,
+          "L6_lt_2d": true,
+          "L5_lt_2d": true,
+          "L4_lt_2d": false,
+          "ok": true
+        },
+        "19": {
+          "threshold": "65160/15929",
+          "threshold_bulk": "65160/15929",
+          "match": true,
+          "L6": "5791/30",
+          "L6_matches_15167": true,
+          "L6_lt_2d": true,
+          "L5_lt_2d": true,
+          "L4_lt_2d": false,
+          "ok": true
+        },
+        "23": {
+          "threshold": "139920/34451",
+          "threshold_bulk": "139920/34451",
+          "match": true,
+          "L6": "12189/44",
+          "L6_matches_15167": true,
+          "L6_lt_2d": true,
+          "L5_lt_2d": true,
+          "L4_lt_2d": false,
+          "ok": true
+        },
+        "29": {
+          "threshold": "353640/87569",
+          "threshold_bulk": "353640/87569",
+          "match": true,
+          "L6": "30311/70",
+          "L6_matches_15167": true,
+          "L6_lt_2d": true,
+          "L5_lt_2d": true,
+          "L4_lt_2d": false,
+          "ok": true
+        }
+      },
+      "n_checked": 28
+    },
+    "B": {
+      "proved": true,
+      "theorem": "Paley C_{\u221ej}=1 and \u2211_{x\u22600}\u03c7(x)=0 \u21d2 C1=(p\u00b2,1,\u2026,1) \u21d2 P\u208a1=(p+1)P\u208ae_\u221e.  Hence (P\u208a1)(P\u208a1)\u1d40=(p+1)\u00b2 P\u208aE_{\u221e\u221e}P\u208a is the ++ compression of a diagonal, so u\u1d40Bu=0 for every B\u2208Z (Z = ker of the ++ diagonal map).  Thus 1\u1d40B1=0 on Z.",
+      "by_p_sample": {
+        "5": {
+          "u_inf": "3",
+          "u_fin": "3/5",
+          "ppe_scaled_inf": "3",
+          "ppe_scaled_fin": "3/5",
+          "scale": 36,
+          "match": true
+        },
+        "7": {
+          "u_inf": "4",
+          "u_fin": "4/7",
+          "ppe_scaled_inf": "4",
+          "ppe_scaled_fin": "4/7",
+          "scale": 64,
+          "match": true
+        },
+        "11": {
+          "u_inf": "6",
+          "u_fin": "6/11",
+          "ppe_scaled_inf": "6",
+          "ppe_scaled_fin": "6/11",
+          "scale": 144,
+          "match": true
+        },
+        "13": {
+          "u_inf": "7",
+          "u_fin": "7/13",
+          "ppe_scaled_inf": "7",
+          "ppe_scaled_fin": "7/13",
+          "scale": 196,
+          "match": true
+        },
+        "17": {
+          "u_inf": "9",
+          "u_fin": "9/17",
+          "ppe_scaled_inf": "9",
+          "ppe_scaled_fin": "9/17",
+          "scale": 324,
+          "match": true
+        },
+        "19": {
+          "u_inf": "10",
+          "u_fin": "10/19",
+          "ppe_scaled_inf": "10",
+          "ppe_scaled_fin": "10/19",
+          "scale": 400,
+          "match": true
+        },
+        "23": {
+          "u_inf": "12",
+          "u_fin": "12/23",
+          "ppe_scaled_inf": "12",
+          "ppe_scaled_fin": "12/23",
+          "scale": 576,
+          "match": true
+        }
+      },
+      "depends_on": [
+        "paley_C_inf_row",
+        "quadratic_character_sum_zero",
+        "diag_map_on_plusplus_surjective_15_91"
+      ]
+    },
+    "C": {
+      "proved": true,
+      "theorem": "Unit B\u2208Z: Q\u2084/N=2+4/p\u00b2+8\u27e8\u03c1,\u03ba_B\u27e9 via \u2211\u03ba_C \u03ba_B=(n+1)/4\u2016B\u2016\u00b2. Q\u2084\u22650 iff \u27e8\u03c1,\u03ba_B\u27e9\u2265\u22121/4\u22121/(2p\u00b2).  \u03bb_min\u22655 iff \u27e8\u03c1,\u03ba_B\u27e9\u2265\u22123/8\u22121/(2p\u00b2).  The \u03bb_* budget \u22126/n\u22121/(2p\u00b2) is strictly stronger and is a non-goal.",
+      "by_p_sample": {
+        "5": {
+          "wick_Q4_over_N": "54/25",
+          "from_kappaC_kappaB": "54/25",
+          "rho_budget_ge6": "-27/100",
+          "rho_budget_ge5": "-79/200",
+          "lambda_star_rho_budget": "-163/650",
+          "ok": true
+        },
+        "7": {
+          "wick_Q4_over_N": "102/49",
+          "from_kappaC_kappaB": "102/49",
+          "rho_budget_ge6": "-51/196",
+          "rho_budget_ge5": "-151/392",
+          "lambda_star_rho_budget": "-319/2450",
+          "ok": true
+        },
+        "11": {
+          "wick_Q4_over_N": "246/121",
+          "from_kappaC_kappaB": "246/121",
+          "rho_budget_ge6": "-123/484",
+          "rho_budget_ge5": "-367/968",
+          "lambda_star_rho_budget": "-787/14762",
+          "ok": true
+        },
+        "13": {
+          "wick_Q4_over_N": "342/169",
+          "from_kappaC_kappaB": "342/169",
+          "rho_budget_ge6": "-171/676",
+          "rho_budget_ge5": "-511/1352",
+          "lambda_star_rho_budget": "-1099/28730",
+          "ok": true
+        },
+        "17": {
+          "wick_Q4_over_N": "582/289",
+          "from_kappaC_kappaB": "582/289",
+          "rho_budget_ge6": "-291/1156",
+          "rho_budget_ge5": "-871/2312",
+          "lambda_star_rho_budget": "-1879/83810",
+          "ok": true
+        },
+        "19": {
+          "wick_Q4_over_N": "726/361",
+          "from_kappaC_kappaB": "726/361",
+          "rho_budget_ge6": "-363/1444",
+          "rho_budget_ge5": "-1087/2888",
+          "lambda_star_rho_budget": "-2347/130682",
+          "ok": true
+        },
+        "23": {
+          "wick_Q4_over_N": "1062/529",
+          "from_kappaC_kappaB": "1062/529",
+          "rho_budget_ge6": "-531/2116",
+          "rho_budget_ge5": "-1591/4232",
+          "lambda_star_rho_budget": "-3439/280370",
+          "ok": true
+        },
+        "29": {
+          "wick_Q4_over_N": "1686/841",
+          "from_kappaC_kappaB": "1686/841",
+          "rho_budget_ge6": "-843/3364",
+          "rho_budget_ge5": "-2527/6728",
+          "lambda_star_rho_budget": "-5467/708122",
+          "ok": true
+        }
+      },
+      "n_checked": 20,
+      "hypothesis_proved_general": false
+    },
+    "D": {
+      "proved": false,
+      "theorem": "A PSD factorisation of G_{u,disj} on Im{Be:B\u2208Z} would give Q\u2084\u22650.  The unrestricted mask is not PSD (Kneser \u2212(n\u22123); certified \u03bb_min(G_{u,disj})=-29.888543819998336 at p=3).  Restriction to Im(Z) is PSD at p=3,5 (same as \u03a6\u22126I) but no general factor is written.",
+      "gu_disj_is_psd": false,
+      "gu_disj_min_eig_p3": -29.888543819998336,
+      "kneser_neg_eig": "-(n-3)",
+      "depends_on": [
+        "typeA_wedge_15_62",
+        "kneser_KG_n_2"
+      ]
+    },
+    "E": {
+      "proved": false,
+      "theorem": "Q\u2084\u22650 iff \u27e8\u03c1,\u03ba_B\u27e9\u2265\u22121/4\u22121/(2p\u00b2).  Paley Weil |\u2211\u03c7(cubic)|\u22642p controls C-four-point sums (15.249), not Max+ \u03c1.  CS on all 4-sets misses the budget by \u0398(p\u00b2).  No V\u208a/zero-diag contraction beating \u22121/4 is shipped.",
+      "cs_too_weak": true,
+      "weil_on_C_not_on_rho": true
+    },
+    "open": {
+      "lambda_min_ge_6_proved_general": false,
+      "lambda_min_ge_5_for_p_ge_7": false,
+      "bitight_empty_via_floor_all_p": false,
+      "gu_disj_is_gram": false,
+      "gsum_disj_lb_proved_general": false,
+      "aut_schur": false,
+      "pairing": false,
+      "sixteen_N_for_all_p": false,
+      "H_proved": false,
+      "Es4_star_for_all_p": false,
+      "L_status": "OPEN",
+      "note": "Threshold algebra and S\u2081=0 are Max+-free.  Uniform \u03bb_min\u22656 and the p\u22657 floor \u2113\u22655 remain open.  p=5,7 spectra empty bi-tight at those orders only."
+    }
+  },
+  "census": {
+    "spectra": {
+      "proved_census": true,
+      "proved_general": false,
+      "by_p": {
+        "5": {
+          "lambda_min": "80/13",
+          "lambda_min_ge_6": true,
+          "threshold": "312/53",
+          "lambda_min_gt_threshold": true,
+          "L_star_at_lmin": "968/39",
+          "L_star_lt_2d": true,
+          "bitight_empty": true,
+          "mult_top": 13,
+          "d_minus_1": 12
+        },
+        "7": {
+          "lambda_min": "3072/409",
+          "lambda_min_ge_6": true,
+          "threshold": "1200/251",
+          "lambda_min_gt_threshold": true,
+          "L_star_at_lmin": "8772/409",
+          "L_star_lt_2d": true,
+          "bitight_empty": true,
+          "mult_top": 25,
+          "d_minus_1": 24
+        }
+      },
+      "note": "Finite exact \u03a6 spectra (15.159).  Not a general floor."
+    },
+    "gu_disj_p3": {
+      "p": 3,
+      "N": 12,
+      "E": 45,
+      "min_eig": -29.888543819998336,
+      "n_neg": 25,
+      "is_psd": false,
+      "kneser_neg": -7,
+      "note": "Hadamard mask of a Gram; negative eigs \u21d2 not a Gram."
+    },
+    "s1_p5": {
+      "p": 5,
+      "u_minus_pplus1_ppe": 2.3863339371437894e-15,
+      "u_identity_ok": true,
+      "max_abs_1TB1": 2.8033131371785203e-15,
+      "s1_vanishes": true,
+      "dim_Z": 65
+    },
+    "wrong_floor": {
+      "ell4_p5_bitight_empty": false,
+      "ell4_p5_L_star_lt_2d": false,
+      "shipped_p5_floor": "80/13",
+      "shipped_p5_bitight_empty": true,
+      "ok": true
+    }
+  },
+  "floors": {
+    "p5": "80/13",
+    "p7": "3072/409",
+    "p11": "0",
+    "gram": "0"
+  },
+  "bitight_predicate_p5_shipped": {
+    "p": 5,
+    "prime_ge_5": true,
+    "ell": "80/13",
+    "threshold": "312/53",
+    "ell_gt_threshold": true,
+    "L_star": "968/39",
+    "two_d": 26,
+    "two_d_minus_L_star": "46/39",
+    "L_star_lt_2d": true,
+    "lambda_cycle_ub": "484/39",
+    "d": 13,
+    "lambda_cycle_ub_lt_d": true,
+    "bitight_empty": true,
+    "theorem": "15.167 with variable floor: mult\u2265d\u22121 + \u03bb_min\u2265\u2113 \u21d2 \u03bb_max\u2264L_*<2d iff \u2113>4(p\u2074\u22121)/(p\u2074\u22128p\u00b2\u22121)"
+  },
+  "bitight_predicate_p5_ell4": {
+    "p": 5,
+    "prime_ge_5": true,
+    "ell": "4",
+    "threshold": "312/53",
+    "ell_gt_threshold": false,
+    "L_star": "103/3",
+    "two_d": 26,
+    "two_d_minus_L_star": "-25/3",
+    "L_star_lt_2d": false,
+    "lambda_cycle_ub": "103/6",
+    "d": 13,
+    "lambda_cycle_ub_lt_d": false,
+    "bitight_empty": false,
+    "theorem": "15.167 with variable floor: mult\u2265d\u22121 + \u03bb_min\u2265\u2113 \u21d2 \u03bb_max\u2264L_*<2d iff \u2113>4(p\u2074\u22121)/(p\u2074\u22128p\u00b2\u22121)"
+  },
+  "hinge": {
+    "lambda_min_ge_6_proved_general": false,
+    "lambda_min_ge_5_proved_p_ge_7": false,
+    "image_sos": false,
+    "rho_beats_quarter": false,
+    "threshold_identity": true,
+    "s1_vanishes_on_Z": true,
+    "wick_criterion": true,
+    "lambda_star_gt_6": true,
+    "q4_iff_m4_kap": true,
+    "wedge_schur_D_ge_I": true,
+    "star_kappa_pairing": true,
+    "Tb_kappa_pairing": true,
+    "census_p5_p7": true,
+    "bitight_empty_via_floor_all_p": false,
+    "floor_p5": "80/13",
+    "floor_p7": "3072/409",
+    "floor_p11": "0",
+    "gsum_disj_lb": false,
+    "e1": true,
+    "open_hinge": "PSD factor of G_{u,disj} on Im(Z), or Aut-isotypic spec(\u03a6)\u22656, or Weil+V\u208a contraction \u27e8\u03c1,\u03ba_B\u27e9\u2265\u22121/4\u22121/(2p\u00b2); alternatively a general \u2113\u22655 for all primes p\u22657 (plus p=5 spectrum)"
+  },
+  "F3": "no soft-close of L",
+  "F19": "no class_key thrash",
+  "F20": "CPU Fraction for general-p claims; p=3 Gu_disj eigensystem only"
+}

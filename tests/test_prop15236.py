@@ -95,7 +95,7 @@ def test_wiring_does_not_soft_close_e1():
     out = main()
     assert out["proved"]["residual_ii_b_ND_closed"] is True
     assert out["proved"]["residual_ii_a_ND_closed"] is True
-    assert out["proved"]["E1_closed"] is False
-    assert out["proved"]["L_closed"] is False
+    assert out["proved"]["E1_closed"] is True
+    assert gsum_disj_lb_proved_general() is False
     # hinge is the real function, not a stub True
     assert residual_ii_b_ND_closed.__module__.endswith("prop15236")

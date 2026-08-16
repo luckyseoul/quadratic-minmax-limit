@@ -1,0 +1,158 @@
+{
+  "title": "Prop 15.276 Lemma D existence (A3 sawtooth triple) and 2-plane Fejer amplitudes",
+  "proved": {
+    "a3_proof_present": true,
+    "live_construction": true,
+    "fejer_never_zero": true,
+    "A5_characters_distinct": true,
+    "amplitudes_not_parallel": true,
+    "amplitude_formula": true,
+    "lemma_D_existence_written": true,
+    "lemma_D_2plane_amplitudes_proved": true,
+    "by_p": {
+      "5": {
+        "cy_eq_py": true,
+        "zhat0": 5.0,
+        "support_in_omega": true,
+        "fejer_matches_live": true,
+        "rank2_across_mu": true,
+        "M3": 100
+      },
+      "7": {
+        "cy_eq_py": true,
+        "zhat0": 7.0,
+        "support_in_omega": true,
+        "fejer_matches_live": true,
+        "rank2_across_mu": true,
+        "M3": 1176
+      },
+      "11": {
+        "cy_eq_py": true,
+        "zhat0": 11.0,
+        "support_in_omega": true,
+        "fejer_matches_live": true,
+        "rank2_across_mu": true,
+        "M3": 24200
+      }
+    }
+  },
+  "lemma_D_existence_written": true,
+  "lemma_D_2plane_amplitudes_proved": true,
+  "amplitude_formula": "F_{\u03bb,s}(c)=2p \u03c9^{\u2212c \u03bb^{-1} s}/(\u03c9^{c \u03bb^{-1}}\u22121) (c\u22600); A01=F(c1,s0)F(c2,s1), A02=F(c1\u2212c3,s0)F(\u2212c3,s2), A12=F(\u2212c3,s1)F(c2\u2212c3,s2).",
+  "certified": {
+    "ok": true,
+    "by_p": {
+      "5": {
+        "p": 5,
+        "cy_eq_py": true,
+        "cy_err": 0.0,
+        "zhat0": 5.0,
+        "zhat0_is_p": true,
+        "support_in_omega": true,
+        "support_on_three_lines": true,
+        "off_omega": [],
+        "fejer_matches_live": true,
+        "edge_formula_matches_live": true,
+        "amplitudes_not_one": true,
+        "edge_amps_live": [
+          "(13.819660112501035-42.532540417601986j)",
+          "(-36.18033988749894-26.286555605956675j)",
+          "(22.36067977499792+68.81909602355869j)"
+        ],
+        "edge_amps_formula": [
+          "(13.819660112501058-42.532540417602j)",
+          "(-36.180339887498945-26.286555605956682j)",
+          "(22.36067977499789+68.8190960235587j)"
+        ],
+        "rank2_across_mu": true,
+        "svals": [
+          154.91933384829665,
+          116.30934633553925,
+          1.767452739021671e-14
+        ],
+        "n_bad_used": 6,
+        "phase_lock": [
+          0,
+          1,
+          2
+        ],
+        "M3": 100,
+        "used_paley_conference_prime_power": true
+      },
+      "7": {
+        "p": 7,
+        "cy_eq_py": true,
+        "cy_err": 0.0,
+        "zhat0": 7.0,
+        "zhat0_is_p": true,
+        "support_in_omega": true,
+        "support_on_three_lines": true,
+        "off_omega": [],
+        "fejer_matches_live": true,
+        "edge_formula_matches_live": true,
+        "amplitudes_not_one": true,
+        "edge_amps_live": [
+          "(25.776329548241378+112.93347867716186j)",
+          "(-57.918886753598144+27.892265810120456j)",
+          "(32.142557205356795-140.8257444872823j)"
+        ],
+        "edge_amps_formula": [
+          "(25.77632954824127+112.93347867716173j)",
+          "(-57.91888675359816+27.892265810120414j)",
+          "(32.142557205356894-140.82574448728215j)"
+        ],
+        "rank2_across_mu": true,
+        "svals": [
+          365.9674231270896,
+          252.81897839704496,
+          3.3719601392343773e-14
+        ],
+        "n_bad_used": 6,
+        "phase_lock": [
+          0,
+          1,
+          4
+        ],
+        "M3": 1176,
+        "used_paley_conference_prime_power": true
+      },
+      "11": {
+        "p": 11,
+        "cy_eq_py": true,
+        "cy_err": 0.0,
+        "zhat0": 11.0,
+        "zhat0_is_p": true,
+        "support_in_omega": true,
+        "support_on_three_lines": true,
+        "off_omega": [],
+        "fejer_matches_live": true,
+        "edge_formula_matches_live": true,
+        "amplitudes_not_one": true,
+        "edge_amps_live": [
+          "(226.1099540845197-4.263256414560601e-14j)",
+          "(-249.12971375591158+160.10594528404079j)",
+          "(23.019759671391924-160.10594528404087j)"
+        ],
+        "edge_amps_formula": [
+          "(226.10995408451979+6.750155989720952e-14j)",
+          "(-249.12971375591167+160.10594528404073j)",
+          "(23.019759671392023-160.10594528404076j)"
+        ],
+        "rank2_across_mu": true,
+        "svals": [
+          2068.2392354062927,
+          1049.9189698686837,
+          2.0098230172200968e-13
+        ],
+        "n_bad_used": 6,
+        "phase_lock": [
+          0,
+          1,
+          8
+        ],
+        "M3": 24200,
+        "used_paley_conference_prime_power": true
+      }
+    }
+  }
+}
