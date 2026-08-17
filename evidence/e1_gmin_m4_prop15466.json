@@ -1,0 +1,86 @@
+{
+  "prop": "15.466",
+  "title": "Named L tables in 15.298 miss live Q++ at p=5 and p=7",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "named_L_misses": true,
+    "mup_mum_misses": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "Lpar_1d": {
+            "pred": 4.693333333333324,
+            "err": 1.001025641025631
+          },
+          "Lpar_R": {
+            "pred": 4.454399999999998,
+            "err": 0.7620923076923054
+          },
+          "mup_sq": {
+            "pred": 3.0399999999999983,
+            "err": 0.6523076923076943
+          },
+          "mup_mum": {
+            "pred": 4.159999999999998,
+            "err": 0.46769230769230585
+          },
+          "wrong_m": {
+            "pred": 5.546666666666658,
+            "err": 1.8543589743589655
+          }
+        },
+        "7": {
+          "Lpar_1d": {
+            "pred": 4.8489795918367165,
+            "err": 1.0739184671423398
+          },
+          "Lpar_R": {
+            "pred": 4.80466472303207,
+            "err": 1.029603598337693
+          },
+          "mup_sq": {
+            "pred": 3.0204081632653055,
+            "err": 0.7546529614290711
+          },
+          "mup_mum": {
+            "pred": 4.408163265306121,
+            "err": 0.6331021406117445
+          },
+          "wrong_m": {
+            "pred": 5.583673469387741,
+            "err": 1.8086123446933646
+          }
+        }
+      },
+      "theorem": "Named L fills miss live Q++ by \u22650.46. Fail: Lpar_1d fill equals 48/13."
+    },
+    "B": {
+      "proved": true,
+      "mup_mum5": 4.159999999999998,
+      "mup_mum7": 4.408163265306121,
+      "theorem": "\u03bc\u208a\u03bc\u208b fill is 4.16 at p=5, not 48/13. Fail: it equals 48/13."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Named L catalogs miss Q++. L_\u03c4 still unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
