@@ -1,0 +1,77 @@
+{
+  "prop": "15.484",
+  "title": "TR L++ is not a formula in p; 2-point interpolant dies at p=11",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "interp_hits_live_57": true,
+    "interp_dies_p11": true,
+    "TR_L_not_fn_of_p": true,
+    "raw_T_not_TR_4pt": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "live": "24",
+          "named": "24",
+          "drop12": "24"
+        },
+        "7": {
+          "live": "1337/12",
+          "named": "1337/12",
+          "drop12": "445/4"
+        }
+      },
+      "theorem": "L_interp=\u03bc+\u00b2\u2212\u03c7+(1\u2212\u03c7)/12 hits live TR L++ at p=5,7. Fail: drop 1/12 (445/4\u22601337/12)."
+    },
+    "B": {
+      "proved": true,
+      "n": 4,
+      "values": [
+        "3927/5",
+        "11693/15",
+        "11693/15",
+        "11693/15"
+      ],
+      "pred": "9089/12",
+      "theorem": "p=11 AGL Max+ TR L++ misses L_interp=9089/12. Fail: claim the interpolant at p=11."
+    },
+    "C": {
+      "proved": true,
+      "nuniq_p11": 2,
+      "values": [
+        "3927/5",
+        "11693/15",
+        "11693/15",
+        "11693/15"
+      ],
+      "theorem": "TR L++ is not a function of p (\u22652 values at p=11). Fail: one TR L++ at p=11."
+    },
+    "D": {
+      "proved": true,
+      "raw5": "18",
+      "tr5": "24",
+      "theorem": "Raw T L++=18\u226024 at p=5. Fail: raw T is the TR 4-point."
+    },
+    "E": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "TR L++ is not a formula in p. Q_\u03c4 unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}

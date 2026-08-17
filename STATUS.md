@@ -1,6 +1,6 @@
 # Status (2026-08-17 evening)
 
-Leftover campaign: 15.273–15.483 shipped. Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.483: 4-point not Cy=py-constant; TR \(L_{++}\) constant; p=5 \(Q_{\mathrm{eq}}\) mix dies at p=7. \(Q_\tau\) unnamed in \(p\). Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
+Leftover campaign: 15.273–15.484 shipped. Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.484: TR \(L_{++}\) is not a function of \(p\); 2-point interpolant dies at p=11. \(Q_\tau\) unnamed in \(p\). Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|
