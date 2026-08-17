@@ -1,0 +1,167 @@
+{
+  "prop": "15.462",
+  "title": "No single mixed occupancy + C(r,3) lands in [c_min,c_eq] at p=13 or p=17",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "c1_gap": true,
+    "extras_no_integer_hit": true,
+    "not_live_at_p7": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "13": {
+          "c1s": [
+            7,
+            42,
+            105,
+            140,
+            210,
+            420,
+            630,
+            840,
+            1260,
+            2520,
+            5040
+          ],
+          "gap": [],
+          "nearest_below": 455,
+          "nearest_above": 665,
+          "window": [
+            551,
+            617
+          ],
+          "c_CRRR": 35
+        },
+        "17": {
+          "c1s": [
+            1,
+            9,
+            72,
+            84,
+            252,
+            504,
+            630,
+            756,
+            1260,
+            1512,
+            1680,
+            2520,
+            3024,
+            3780,
+            5040,
+            7560,
+            10080,
+            15120,
+            22680,
+            30240,
+            45360,
+            60480,
+            90720,
+            181440,
+            362880
+          ],
+          "gap": [],
+          "nearest_below": 5124,
+          "nearest_above": 7644,
+          "window": [
+            5784,
+            6471
+          ],
+          "c_CRRR": 84
+        }
+      },
+      "theorem": "No mixed c1 in the needed gap. Nearest 455,665 at p=13 and 5124,7644 at p=17. Fail: 665\u2208window."
+    },
+    "B": {
+      "proved": true,
+      "rec": {
+        "13": {
+          "flat": {
+            "n": 0,
+            "cs": []
+          },
+          "half": {
+            "n": 0,
+            "cs": []
+          },
+          "p2": {
+            "n": 10,
+            "cs": [
+              "1225/2"
+            ]
+          },
+          "three_halves": {
+            "n": 0,
+            "cs": []
+          }
+        },
+        "17": {
+          "flat": {
+            "n": 0,
+            "cs": []
+          },
+          "half": {
+            "n": 0,
+            "cs": []
+          },
+          "p2": {
+            "n": 0,
+            "cs": []
+          },
+          "three_halves": {
+            "n": 0,
+            "cs": []
+          }
+        }
+      },
+      "theorem": "Named extras: 0 integer window hits. p=13 (p-2)/2 on c1=105 is 1225/2, not an integer. Fail: 1225/2 names c."
+    },
+    "C": {
+      "proved": true,
+      "c1s": [
+        4,
+        6,
+        12,
+        24
+      ],
+      "vals": [
+        8,
+        10,
+        16,
+        28
+      ],
+      "window": [
+        18,
+        19
+      ],
+      "hits": {
+        "flat": 0,
+        "half": 0,
+        "p2": 0,
+        "three_halves": 0
+      },
+      "theorem": "C(4,3)+c1 never in {18,19}. Nearest 16. Fail: 16=19."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Single mixed + CRRR is dead as a name. Unnamed two-occupancy sums can land; no filter. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
