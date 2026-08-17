@@ -1,0 +1,86 @@
+{
+  "prop": "15.470",
+  "title": "Quartic L_\u03c8 odd moments vanish; image misses live Q++",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "odd_Lpsi_vanish_ensemble": true,
+    "L0_ns_named": true,
+    "quartic_image_misses_Qpp": true,
+    "L2_pp_not_cov": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "ens_L1_max": 3.552713678800501e-15,
+          "ens_L3_max": 3.552713678800501e-15,
+          "pointwise_max": 254.95097567963927
+        },
+        "7": {
+          "ens_L1_max": 0.0,
+          "ens_L3_max": 0.0,
+          "pointwise_max": 2450.0
+        }
+      },
+      "theorem": "Ensemble L_1=L_3=0 for every s; not pointwise. Fail: L_1(++)=3\u22124i at p=5."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "L0_ns": 300.0,
+          "L2_ns": 0.0,
+          "named": 300.0
+        },
+        "7": {
+          "L0_ns": 3528.0,
+          "L2_ns": 0.0,
+          "named": 3528.0
+        }
+      },
+      "theorem": "L_2(ns)=0 and L_0(ns)=(q\u22121)\u03bc+\u03bc\u2212. Fail: L_0(ns)=0 at p=5."
+    },
+    "C": {
+      "proved": true,
+      "pred5": 9.038769230769164,
+      "pred7": -87.24355072102192,
+      "live5": 3.6923076923076925,
+      "live7": 3.7750611246943766,
+      "theorem": "Quartic half-Gauss image misses live Q++. Fail: pred=48/13 at p=5."
+    },
+    "D": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "L2_pp": "3080/13",
+          "cov": "10/39"
+        },
+        "7": {
+          "L2_pp": "641508/409",
+          "cov": "2793/1636"
+        }
+      },
+      "theorem": "L_2(++)=3080/13, 641508/409, not Cov++. Fail: L_2(++)=10/39."
+    },
+    "E": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Odd L_\u03c8 vanishes in the ensemble. Quartic image misses Q++. Cov++ unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
