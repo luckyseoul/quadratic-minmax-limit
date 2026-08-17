@@ -1,0 +1,146 @@
+{
+  "prop": "15.395",
+  "title": "S0+CS occupancy does not force S_\u25a1\u22656; phi_F unimported",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Q_cs0_misses_window": true,
+    "twopoint_cs_strict": true,
+    "T_and_1D_outside_window": true,
+    "sbox_cs_ge_6": false,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "Q_cs0": "0",
+          "Q_lo": "11/4",
+          "sm_j0": "-16"
+        },
+        "13": {
+          "Q_cs0": "16/5",
+          "Q_lo": "15/4",
+          "sm_j0": "-48/25"
+        },
+        "17": {
+          "Q_cs0": "24/7",
+          "Q_lo": "245/64",
+          "sm_j0": "-64/49"
+        },
+        "29": {
+          "Q_cs0": "48/13",
+          "Q_lo": "767/196",
+          "sm_j0": "-112/169"
+        },
+        "37": {
+          "Q_cs0": "64/17",
+          "Q_lo": "425/108",
+          "sm_j0": "-144/289"
+        }
+      },
+      "theorem": "Var(M)\u22650 \u21d2 Q++\u2265Q_cs0<Q_lo, so sm_j0<6. Fail: sm_j0(0)\u22656 at p=5."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "cs_quad": "36",
+          "cs_2pt": "54",
+          "En4_T": "354/5",
+          "En4_1d": "94"
+        },
+        "13": {
+          "cs_quad": "1764",
+          "cs_2pt": "2058",
+          "En4_T": "2742",
+          "En4_1d": "2994"
+        },
+        "17": {
+          "cs_quad": "5184",
+          "cs_2pt": "5832",
+          "En4_T": "7512",
+          "En4_1d": "8008"
+        },
+        "29": {
+          "cs_quad": "44100",
+          "cs_2pt": "47250",
+          "En4_T": "283206/5",
+          "En4_1d": "58618"
+        },
+        "37": {
+          "cs_quad": "116964",
+          "cs_2pt": "123462",
+          "En4_T": "143658",
+          "En4_1d": "147438"
+        }
+      },
+      "theorem": "E[n\u2074]\u2265\u03bc(\u03bc+1)\u00b3 > (E[n\u00b2])\u00b2. Fail: 54=36 at p=5."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "Q_T": "64/15",
+          "Q_1d": "16/9",
+          "Q_lo": "11/4",
+          "Q_ub": "26/7",
+          "minS_T": "32/15",
+          "minS_1d": "-16/9"
+        },
+        "13": {
+          "Q_T": "1168/231",
+          "Q_1d": "1280/121",
+          "Q_lo": "15/4",
+          "Q_ub": "310/71",
+          "minS_T": "9472/3465",
+          "minS_1d": "-2832/121"
+        },
+        "17": {
+          "Q_T": "808/135",
+          "Q_1d": "3304/225",
+          "Q_lo": "245/64",
+          "Q_ub": "560/127",
+          "minS_T": "-1084/945",
+          "minS_1d": "-9136/225"
+        },
+        "29": {
+          "Q_T": "3824/405",
+          "Q_1d": "19552/729",
+          "Q_lo": "767/196",
+          "Q_ub": "1742/391",
+          "minS_T": "-568544/36855",
+          "minS_1d": "-65680/729"
+        },
+        "37": {
+          "Q_T": "72832/5985",
+          "Q_1d": "42704/1225",
+          "Q_lo": "425/108",
+          "Q_ub": "2890/647",
+          "minS_T": "-24331424/915705",
+          "minS_1d": "-150096/1225"
+        }
+      },
+      "theorem": "Q_T>Q^{ub} all listed p\u22611; Q_1D<Q_lo at p=5 and Q_1D>Q^{ub} at p\u226513. Fail: Q_T(5)\u226426/7."
+    },
+    "D": {
+      "proved": false,
+      "sbox_cs_ge_6": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "CS/Var(M)\u22650 and 3R+C / 1D endpoints miss the S0 window. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
