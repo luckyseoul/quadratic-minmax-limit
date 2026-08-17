@@ -1,0 +1,97 @@
+{
+  "prop": "15.461",
+  "title": "p=7 remainder families J6\u00d7J2^{r-1}, J4\u00b2\u00d7J2^{r-2}, aff+J2\u00d7J2^{r-1} do not extend; C(r,3)+15=50 misses window",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "J_shapes_r4_only": true,
+    "affJ2_k15_absent": true,
+    "naive_50_misses": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "3": {
+          "J6J2": 5,
+          "J4J2": 5,
+          "C_r_2": 3
+        },
+        "4": {
+          "J6J2": 6,
+          "J4J2": 6,
+          "C_r_2": 6
+        },
+        "5": {
+          "J6J2": 7,
+          "J4J2": 7,
+          "C_r_2": 10
+        },
+        "7": {
+          "J6J2": 9,
+          "J4J2": 9,
+          "C_r_2": 21
+        },
+        "9": {
+          "J6J2": 11,
+          "J4J2": 11,
+          "C_r_2": 36
+        }
+      },
+      "theorem": "J6\u00d7J2^{r-1} and J4\u00b2\u00d7J2^{r-2} have sum k=r+2, legal iff r=4. Fail: legal at r=7 (9\u226021)."
+    },
+    "B": {
+      "proved": true,
+      "k_set13": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "need13": 15,
+      "k_set7": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "need7": 3,
+      "theorem": "aff+J2\u00d7J2^6 needs k_aff=15\u2209{4..12} at p=13. Fail: 15 in the k-set."
+    },
+    "C": {
+      "proved": true,
+      "naive7": 19,
+      "naive13": 50,
+      "window13": [
+        551,
+        617,
+        67
+      ],
+      "theorem": "C(r,3)+15 is 19 at p=7 and 50\u2209[551,617] at p=13. Fail: 50 names c."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "p=7 remainder shapes are r=4-only. Mixed R_aff/J8+ types unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
