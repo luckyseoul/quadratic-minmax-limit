@@ -1,0 +1,60 @@
+{
+  "prop": "15.416",
+  "title": "NL L_par(R) is the nested-AP 4-point (24,133); L_par(C)=140/3 from 5 AP+2 Singer; mix 2113/19 open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Lpar_R_flag": true,
+    "Lpar_C_singer": true,
+    "p5_NL_is_R_flag": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": "24",
+        "7": "133",
+        "11": "5379/5"
+      },
+      "indep_p5": "49/2",
+      "theorem": "Nested-AP flag 4-point names L_par(R)=24,133. Fail: independent Johnson (49/2\u226024)."
+    },
+    "B": {
+      "proved": true,
+      "L_C": "140/3",
+      "all_AP": "133/3",
+      "theorem": "p=7 C is 5 AP+2 Singer; 4-point=140/3. Fail: 7 APs (133/3\u2260140/3)."
+    },
+    "C": {
+      "proved": true,
+      "p5": "24",
+      "p7_R": "133",
+      "p7_NL": "2113/19",
+      "theorem": "p=5 NL L_par=24 is the R flag 4-point. Fail: L_par(R)=L_par^{NL} at p=7."
+    },
+    "D": {
+      "proved": false,
+      "L_par_NL_7": "2113/19",
+      "Q_NL_5": "64/15",
+      "Q_NL_7": "632/171",
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q_NL_is_short_rational": false,
+      "note": "L_par(R) named all p; L_par(C) named at p=7. p=7 NL mix 2113/19 still has unnamed O-types. Q_NL unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
