@@ -1,0 +1,60 @@
+{
+  "prop": "15.436",
+  "title": "Six type L_par are den|12 4-points; Hoffman mix is L_par^{NL}",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "type_Lpar_den12": true,
+    "hoffman_mix_is_Lpar_NL": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "atoms": {
+        "CRRR": "1337/12",
+        "O219": "683/6",
+        "O665": "1331/12",
+        "O671": "329/3",
+        "O344": "1321/12",
+        "O695": "219/2"
+      },
+      "hand19_CRRR": "1337/19",
+      "dropC": "133",
+      "theorem": "Six type L_par are den|12 4-points. Fail: drop C; fail: atom den 19."
+    },
+    "B": {
+      "proved": true,
+      "mix19": "2113/19",
+      "mix18": "2113/18",
+      "Lpar_R": "133",
+      "theorem": "Hoffman mix of the six is L_par^{NL}=2113/19. Fail: den 18; fail: L_par(R)."
+    },
+    "C": {
+      "proved": false,
+      "L_ns_atoms_are_Lpar": false,
+      "Q_NL_5": "64/15",
+      "Q_1d_5": "16/9",
+      "Q_NL_gt_Q1d_p5": true,
+      "Q_NL_7": "632/171",
+      "Q_NL_7_has_19": true,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q_NL_is_short_rational": false,
+      "note": "L_par^{NL} is the Hoffman mix of den|12 type 4-points. L_ns type-\u03b4 still not 4-points. Q_NL unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
