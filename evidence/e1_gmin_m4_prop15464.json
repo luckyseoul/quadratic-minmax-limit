@@ -1,0 +1,76 @@
+{
+  "prop": "15.464",
+  "title": "ns E[N]=\u03bc_-; live Paley-N* is 1496/409 not S0 Qn; mean-field L misses Q++",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "E_N_ns_is_mu_minus": true,
+    "paley_Nstar_ne_Qn": true,
+    "meanfield_misses_Qpp": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": "5/2",
+        "7": "7",
+        "11": "22",
+        "13": "65/2",
+        "17": "119/2",
+        "19": "76"
+      },
+      "drop_p5": "10",
+      "theorem": "E[N]_ns=p \u03bc(\u03bc-1)/(p-1)=\u03bc_-. Fail: drop p-1 (10\u22605/2)."
+    },
+    "B": {
+      "proved": true,
+      "Q5": {
+        "('pm1',)": "8",
+        "(1, 1, 'sub')": "48/13",
+        "(-1, -1, 'N*')": "32/13",
+        "(-1, 1, 'N1')": "48/13",
+        "(1, -1, 'N1')": "48/13"
+      },
+      "Q7": {
+        "('pm1',)": "8",
+        "(1, 1, 'sub')": "1544/409",
+        "(-1, -1, 'N*')": "1496/409",
+        "(-1, -1, 'N1')": "1376/409",
+        "(-1, 1, 'N*')": "1496/409",
+        "(1, -1, 'N*')": "1496/409",
+        "(1, 1, 'N1')": "1544/409"
+      },
+      "Qn5": "32/13",
+      "Qn7": "1440/409",
+      "QNpaley5": "32/13",
+      "QNpaley7": "1496/409",
+      "theorem": "Live Paley-N* is 1496/409 at p=7, not S0 Qn=1440/409. Fail: 1496/409=1440/409."
+    },
+    "C": {
+      "proved": true,
+      "mf5": 3.9999999999999982,
+      "mf7": 4.0,
+      "err5": 0.3076923076923057,
+      "err7": 0.2249388753056234,
+      "theorem": "Mean-field L=\u03bc_\u03c7 \u03bc_{\u03c7 \u03c7(s)} misses live Q++. Fail: mean-field equals 48/13 at p=5."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "ns E[N] named; Paley-N* is not S0 Qn; mean-field L does not name Q++. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
