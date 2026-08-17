@@ -1,6 +1,6 @@
 # Status (2026-08-17 evening)
 
-Leftover campaign: 15.273–15.494 shipped. Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.494: \(A_r=0\) iff \(\chi(r+1)=-1\) (supp \(\hat z\subset\{0\}\cup\Omega\)); does not name \(Q_\tau\). Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
+Leftover campaign: 15.273–15.494 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.494: \(A_r=0\) iff \(\chi(r+1)=-1\); does not name \(Q_\tau\). Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|

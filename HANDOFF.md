@@ -1,11 +1,11 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-17 evening):** Leftover 1 still **OPEN**. 15.494: \(A_r=E[\hat1_D(\xi)\hat1_D(r\xi)\hat1_D(-(1+r)\xi)]=0\) iff \(\chi(r+1)=-1\) (support of \(\hat z\)). Does not name \(Q_\tau\). Do **not** import \(\phi_F\). Residual (ii) / Type I still OPEN. Aut-Schur **false**. Live `e1` is the old AND. \(L=\tfrac12\) is **not settled**.  
+> **Now (2026-08-17 evening):** **Three of four leftovers remain.** Lemma D is already True (do not unflip). Still OPEN: (1) floor \(\lambda_{\min}(\Phi)\ge6\) / name \(Q_\tau\) (15.494: \(A_r=0\) iff \(\chi(r+1)=-1\), not a \(Q_\tau\) name); (2) residual (ii) even \(k\ge4p\); (3) Type I multi-level. Do **not** import \(\phi_F\). Aut-Schur **false**. Live `e1` is the old AND. \(L=\tfrac12\) is **not settled**.  
 > Afternoon: **`evidence/SESSION_HANDOFF_2026-08-17_qtau.md`**. Morning: **`evidence/SESSION_HANDOFF_2026-08-17_leftover.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**. Next `/goal`: **`GOAL.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
 
 **Status date:** 2026-08-17  
-**Claim:** sandwich and Paley \(\rho=1\) are proved. **\(L=1/2\) is not.** E(1) still needs \(\lambda_{\min}(\Phi)\ge6\) (name \(Q_\tau\)), residual (ii) for even \(k\ge4p\), multi-level Type I, and Lemma D left checkable. Residual (ii) is closed only for affine + even \(k\le4p-2\). Aut-Schur remains **dead**. Gsum unused. residual/16N optional open.
+**Claim:** sandwich and Paley \(\rho=1\) are proved. **\(L=1/2\) is not.** E(1) still needs three leftovers: \(\lambda_{\min}(\Phi)\ge6\) (name \(Q_\tau\)), residual (ii) for even \(k\ge4p\), and multi-level Type I. Lemma D is already flagged True — do not cascade. Residual (ii) is closed only for affine + even \(k\le4p-2\). Aut-Schur remains **dead**. Gsum unused. residual/16N optional open.
 
 **Problem:** [MO 413935](https://mathoverflow.net/questions/413935) · [X thread](https://x.com/PI010101/status/2081070728422752329).  
 @PI010101 asked for GitHub, then posted that Grok Build 4.5 found a gap:  
