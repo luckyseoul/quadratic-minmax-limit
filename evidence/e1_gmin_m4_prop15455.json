@@ -1,0 +1,82 @@
+{
+  "prop": "15.455",
+  "title": "J2 alignments name n_NL at p=5 not p=7; (C,R_aff\u00b3)=4p\u00b2(p\u22121) at p=7; residual is aff+J2",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "J2_names_nNL_p5": true,
+    "CRRR_named_p7": true,
+    "residual_is_affJ2": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "n_pool": 20,
+      "n_good": 100,
+      "n_all": 8000,
+      "n_NL": 100,
+      "theorem": "p=5 J2 alignments: 100=n_NL=p\u00b2(p\u22121). Fail: all 8000."
+    },
+    "B": {
+      "proved": true,
+      "named": 1176,
+      "slot": 294,
+      "n_1d4": 560,
+      "p5_analogue": 300,
+      "p5_nNL": 100,
+      "ex_k": 21,
+      "ex_half": true,
+      "theorem": "p=7 (C,R_aff\u00b3)=4p\u00b2(p\u22121)=1176. Fail: 3p\u00b2(p\u22121)=n_NL(5); fail: 4 n_1d=1176."
+    },
+    "C": {
+      "proved": true,
+      "affJ2": [
+        0,
+        1,
+        1,
+        2,
+        5,
+        5,
+        7
+      ],
+      "J6": [
+        0,
+        0,
+        2,
+        2,
+        5,
+        6,
+        6
+      ],
+      "residual_is_J2": false,
+      "theorem": "residual is aff+J2, not J2. J6 is the other \u03bb=6 type. Fail: residual is J2."
+    },
+    "D": {
+      "proved": false,
+      "Nr5": 130,
+      "Nr7": 5726,
+      "named_pieces": {
+        "n_1d5": 30,
+        "J2_5": 100,
+        "n_1d7": 140,
+        "CRRR7": 1176,
+        "rest7": 4410
+      },
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "J2 names n_NL at p=5 only. (C,R_aff\u00b3) is 1176 of 5586 NL at p=7. N_r unnamed in p. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
