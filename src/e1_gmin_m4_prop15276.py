@@ -7,13 +7,14 @@ builds y=(1,z) on {∞}∪F_q, and checks Cy=py against the shipped
 Paley conference (minmax_quadratic.paley_conference_prime_power).
 M3=C(m,3)p²(p−1) is a check, not the existence proof.
 
-The amplitude 3-vector is the explicit Fejer product
+The amplitude 3-vector on a locked triple is the geometric Fejer
+product (15.440), not the A5-free (c1,c2,c3) triple:
     F_{λ,s}(c) = 2p ω^{−c λ^{-1} s} / (ω^{c λ^{-1}} − 1)   (c≠0)
-    A = (F(c1,s0) F(c2,s1),
-         F(c1−c3,s0) F(−c3,s2),
-         F(−c3,s1) F(c2−c3,s2)).
-Fejer: no c_i=0. Distinct A5 characters plus A not C-parallel
-(ratio A01/A02 depends on (c1,c2,c3)) span {x+y+z=0} on E(T).
+    Geo(c,d) = (F(c,s0)F(d,s1),
+                F(c−d,s0)F(−d,s2),
+                F(d−c,s1)F(−c,s2)).
+Fejer: no coordinate 0. Geo lies on {x+y+z=0} by the reciprocal
+identity. A5-free (1,2,3) does not. Two Geo vectors span the plane.
 
 Does **not** flip Aut-Schur / Gsum / pairing / 15.170 e1 AND.
 
@@ -526,33 +527,45 @@ def theorem_amplitudes_not_parallel() -> dict:
         f_m4 = fejer_F(p, (-4) % p, 0, 1)
         if abs(f_m2 - f_m4) < 1e-10:
             ok = False
-        if abs(sum(a)) > 1e-6 or abs(sum(b)) > 1e-6:
-            # A5 products need not sum to 0 at s=0 without the live
-            # additive μ-constraint; the plane relation is checked live.
-            pass
+        # A5-free is NOT the plane (15.440 C).  Fail if it sums to 0.
+        if abs(sum(a)) < 1e-6 or abs(sum(b)) < 1e-6:
+            ok = False
         if p in (5, 7, 11):
             sample[str(p)] = {
                 "minor_01": abs(minors),
                 "ratio_123": str(r1),
                 "ratio_124": str(r2),
+                "A5_sum_abs": abs(sum(a)),
             }
+    from e1_gmin_m4_prop15440 import (  # noqa: PLC0415
+        geo_amplitude_vector,
+        plane_identity_proved,
+    )
+
+    for p in (5, 7, 11, 13):
+        s = locked_phases(0, 1, p)
+        g12 = geo_amplitude_vector(p, 1, 2, *s, 1)
+        g13 = geo_amplitude_vector(p, 1, 3, *s, 1)
+        if abs(g12.sum()) > 1e-8 or abs(g13.sum()) > 1e-8:
+            ok = False
+        if abs(g12[0] * g13[1] - g12[1] * g13[0]) < 1e-8:
+            ok = False
     fejer = theorem_fejer_never_zero()
     a5 = theorem_A5_characters_distinct()
-    ok = bool(ok and fejer["proved"] and a5["proved"])
+    ok = bool(ok and fejer["proved"] and a5["proved"] and plane_identity_proved())
     return {
         "proved": ok,
         "theorem": (
-            "A(c,s,λ)=(F(c1,s0)F(c2,s1), F(c1−c3,s0)F(−c3,s2), "
-            "F(−c3,s1)F(c2−c3,s2)) has no zero coordinate (Fejer, ci≠0). "
-            "A5 characters are distinct, so the three edge-vectors are "
-            "not C-parallel unless two amps vanish.  Independently, "
-            "A01/A02 at (1,2,3) vs (1,2,4) differs because F(−2)≠F(−4). "
-            "Two non-parallel vectors span {x+y+z=0}."
+            "A5-free characters are distinct and not C-parallel "
+            "(F(−2)≠F(−4)), but A5-free is not on the plane.  "
+            "Geo(c,d) sums to 0 (15.440 A–B) and two Geo vectors "
+            "span {x+y+z=0}."
         ),
         "sample": sample,
         "depends_on": [
             "theorem_fejer_never_zero",
             "theorem_A5_characters_distinct",
+            "prop_15_440_geo_plane",
             "A3_PROOF.md §8–9",
         ],
     }
@@ -581,17 +594,17 @@ def theorem_amplitude_formula() -> dict:
 
 
 def lemma_D_2plane_amplitudes_proved() -> bool:
-    """True only with a Max+-free Fejer + formula reason, not p=5,7,11 rank."""
+    """True only with Geo-on-plane (15.440), not A5-free or p=5,7,11 rank."""
     par = theorem_amplitudes_not_parallel()
     form = theorem_amplitude_formula()
-    # require the general ratio identity, not only certified rank
     if not (par["proved"] and form["proved"]):
         return False
-    # live rank is a check; do not treat it as the proof by itself
     live = certify_construction()
     if not live["ok"]:
         return False
-    return True
+    from e1_gmin_m4_prop15440 import plane_identity_proved  # noqa: PLC0415
+
+    return bool(plane_identity_proved())
 
 
 def lemma_D_existence_written() -> bool:

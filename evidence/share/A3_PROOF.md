@@ -265,13 +265,22 @@ F_{\lambda,s}(c)
 \]
 The 3-vector of amplitudes is
 \(\mathbf A(c,s,\lambda)=(A_{01},A_{02},A_{12})\).
+That A5-free triple is **not** the plane (15.440 C): at
+\((c_1,c_2,c_3)=(1,2,3)\) one has \(\sum A\neq0\).
 
-**No \(c_i=0\).** An edge frequency \(c_i=0\) is the DC term on that
-line, i.e. \(\xi=0\). For a bad \(\mu\) the unique pair on an edge
-has both endpoints nonzero in \(\Omega\) (if \(\xi=0\) then
-\(\mu-\xi=\mu\in\Omega\), contradicting badness). Fejer then says
-every coordinate of \(\mathbf A\) is nonzero. Convolution on the
-three-line support puts \(\mathbf A\) in the plane
+The locked-edge products that convolution actually produces are the
+geometric Fejer triple (15.440 B)
+\[
+\operatorname{Geo}(c,d)
+=\bigl(F_{\lambda,s_0}(c)F_{\lambda,s_1}(d),\;
+F_{\lambda,s_0}(c-d)F_{\lambda,s_2}(-d),\;
+F_{\lambda,s_1}(d-c)F_{\lambda,s_2}(-c)\bigr),
+\]
+with \(c\neq d\) and \(s_0+s_1+s_2\equiv-2\). After cancelling the
+common lock character this is a scalar times
+\(1/((u-1)(v-1)),\,1/((u-v)(1-v)),\,1/((v-u)(1-u))\)
+(\(u=\omega^{c/\lambda}\), \(v=\omega^{d/\lambda}\)), which sums to
+\(0\) as a 0-polynomial. Thus \(\operatorname{Geo}\) lies in
 \(\{x+y+z=0\}\subset\mathbb C^{E(T)}\). If two coordinates vanished
 the third would vanish by that plane relation, contradicting Fejer.
 
@@ -292,9 +301,10 @@ depends on \((c_1,c_2,c_3)\). With \(s=0\), \(\lambda=1\),
 At \((c_1,c_2,c_3)=(1,2,3)\) versus \((1,2,4)\) (all six A5
 frequencies nonzero for every prime \(p\ge5\)) the ratios are equal
 iff \(F(-2)=F(-4)\) iff \(\omega^{-2}=\omega^{-4}\) iff \(p\mid 2\),
-which is false. Hence two amplitude 3-vectors are not
-\(\mathbb C\)-parallel, and they span the full 2-plane
-\(\{x+y+z=0\}\).
+which is false. Those A5 vectors are not \(\mathbb C\)-parallel,
+but they are not a basis of the plane (they do not lie on it).
+The spanning pair is \(\operatorname{Geo}(1,2)\) and
+\(\operatorname{Geo}(1,3)\) (15.440 D).
 
 (The same non-constancy is visible in the 2-homothety
 \(F(2k)/F(k)\propto 1/(\omega^k+1)\), which depends on \(k\) because
