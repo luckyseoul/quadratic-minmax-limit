@@ -1,0 +1,88 @@
+{
+  "prop": "15.472",
+  "title": "Z_\u03c8 not constant (E=0); named GJ miss \u039b_1 at both primes",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Zpsi_not_constant": true,
+    "Lam1_not_GJ": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "nunique": 4,
+          "mean_re": 0.0,
+          "mean_im": 0.0,
+          "std": 3.7684457581279664,
+          "min_abs": 13.416407864998739,
+          "max_abs": 22.360679774997898,
+          "EZ2": 253.8461538461539
+        },
+        "7": {
+          "nunique": 5,
+          "mean_re": 0.0,
+          "mean_im": 0.0,
+          "std": 14.78157999117372,
+          "min_abs": 0.0,
+          "max_abs": 84.0,
+          "EZ2": 776.3325183374083
+        }
+      },
+      "theorem": "Z_\u03c8 is not constant; E[Z_\u03c8]=0. Fail: Z_\u03c8=S_\u03c7=30 at p=5."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "Lam1": [
+            16.923076923076913,
+            -8.461538461538467
+          ],
+          "G": [
+            2.2360679774997902,
+            4.472135954999579
+          ],
+          "Jpp": [
+            3.0,
+            -4.0
+          ]
+        },
+        "7": {
+          "Lam1": [
+            32.3471882640587,
+            0.0
+          ],
+          "G": [
+            6.999999999999998,
+            1.3877787807814457e-16
+          ],
+          "Jpp": [
+            7.0,
+            0.0
+          ]
+        }
+      },
+      "theorem": "\u039b_1(\u25a1) is not G(\u03c8) or J(\u03c8,\u03c8). Fail: \u039b_1(\u25a1)=G(\u03c8)."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Z_\u03c8 varies; named GJ atoms miss \u039b_1. Q_\u03c4 unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
