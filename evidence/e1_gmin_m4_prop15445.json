@@ -1,0 +1,102 @@
+{
+  "prop": "15.445",
+  "title": "Complete sums name the p\u22611 ++/N* \u03c7-block; L-ratio for Q++\u2265Q_N* open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "T_sum_minus_one": true,
+    "type_block_matrix": true,
+    "ns_drops_dC_named": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "hyp": -1,
+          "T_hits": "8/8"
+        },
+        "7": {
+          "hyp": -1,
+          "T_hits": "8/8"
+        },
+        "11": {
+          "hyp": -1,
+          "T_hits": "8/8"
+        },
+        "13": {
+          "hyp": -1,
+          "T_hits": "8/8"
+        }
+      },
+      "theorem": "\u2211_T \u03c7(1+rs)=\u22121 on T\\{\u00b11}. Fail: claim the T-sum is 0."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "SS": 2,
+          "ST": -8,
+          "TT": 4,
+          "Mpp": -10,
+          "MN": 0
+        },
+        "13": {
+          "SS": 90,
+          "ST": -24,
+          "TT": 12,
+          "Mpp": 54,
+          "MN": -96
+        },
+        "17": {
+          "SS": 182,
+          "ST": -32,
+          "TT": 16,
+          "Mpp": 134,
+          "MN": -192
+        },
+        "29": {
+          "SS": 650,
+          "ST": -56,
+          "TT": 28,
+          "Mpp": 566,
+          "MN": -672
+        },
+        "37": {
+          "SS": 1122,
+          "ST": -72,
+          "TT": 36,
+          "Mpp": 1014,
+          "MN": -1152
+        }
+      },
+      "theorem": "p\u22611: SS=(p\u22123)(p\u22124), ST=\u22122(p\u22121), TT=p\u22121, M[++|++]=p\u00b2\u221210p+15, M[++|N*]=\u2212(p\u22125)(p\u22121). Fail: ST=0 at p=5."
+    },
+    "C": {
+      "proved": true,
+      "dC_pp5": "25/3",
+      "dC_N5": "-15",
+      "ratio5": "9/5",
+      "theorem": "ns drops from Q++\u2212Q_N*; \u0394C++=25/3, \u0394CN*=\u221215 at p=5. Fail: claim \u0394CN*\u22650."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "need_L_ratio_p5": "9/5",
+      "note": "Q++\u2265Q_N* iff L++/LN*\u22659/5 at p=5. Unproved. Q_\u03c4 unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
