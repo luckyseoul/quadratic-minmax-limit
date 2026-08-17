@@ -1,0 +1,79 @@
+{
+  "prop": "15.483",
+  "title": "4-point not Cy=py-constant; p=5 Q_eq mix dies at p=7",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Lpp_not_constant": true,
+    "TR_L_constant_Q_not": true,
+    "Qeq_mix_dies_p7": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "nuniq_L": 2,
+          "n_tr": 100,
+          "n_par": 30
+        },
+        "7": {
+          "nuniq_L": 8,
+          "n_tr": 1176,
+          "n_par": 4550
+        }
+      },
+      "theorem": "Per-row L++ is not Cy=py-constant. Fail: one 4-point."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "nuniq_L_tr": 1,
+          "nuniq_Q_tr": 1,
+          "L_tr": 24.0,
+          "Q_tr": 3.1999999999999944
+        },
+        "7": {
+          "nuniq_L_tr": 1,
+          "nuniq_Q_tr": 7,
+          "L_tr": 111.41666666666666,
+          "Q_tr": 4.444444444444442
+        }
+      },
+      "theorem": "TR L++ is constant; TR Q++ is not (7 values at p=7). Fail: claim TR Q++ constant."
+    },
+    "C": {
+      "proved": true,
+      "Q_eq5": "16/5",
+      "Q_TR5": 3.1999999999999944,
+      "mix5": 3.692307692307687,
+      "live5": 3.6923076923076925,
+      "Q_eq7": "40/11",
+      "Q_TR7": 4.444444444444442,
+      "par5": {
+        "16": 10,
+        "0": 20
+      },
+      "theorem": "p=5 mix Q_eq / {0,16} recovers 48/13. Fail: Q_TR=Q_eq at p=7 (40/9\u226040/11)."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "4-point not Cy=py-constant; TR L++ constant; Q_TR=Q_eq dies at p=7. Q_perp unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
