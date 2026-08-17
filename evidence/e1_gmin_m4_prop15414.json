@@ -1,0 +1,79 @@
+{
+  "prop": "15.414",
+  "title": "Paley ++ = F_p-parallel + extra-++; L_par^{1D} named Max+-free; NL L_par/L_spl open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "par_split_mix": true,
+    "Lpar_1d_named": true,
+    "p5_NL_pure_parallel": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "n_par": 2,
+          "n_spl": 0,
+          "Lpar": "24",
+          "Lspl": null,
+          "L++": "24",
+          "mix": "24"
+        },
+        "7": {
+          "n_par": 4,
+          "n_spl": 2,
+          "Lpar": "2113/19",
+          "Lspl": "673/6",
+          "L++": "38143/342",
+          "mix": "38143/342"
+        }
+      },
+      "theorem": "L_++ = (n_par L_par + n_spl L_spl)/n_++. Fail: Paley ++ purely same-slope at p=7."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": "100/3",
+        "7": "2793/20",
+        "11": "32065/36",
+        "13": "19266/11",
+        "17": "77452/15",
+        "19": "549081/68"
+      },
+      "wrong_m_p5": "200/3",
+      "theorem": "L_par^{1D}=p\u00b2(p\u22121)(p\u00b3\u22125p\u22124)/(16(p+1)(p\u22122)). Fail: |A|=(p+1)/2 (200/3\u2260100/3)."
+    },
+    "C": {
+      "proved": true,
+      "p5_L": "24",
+      "p7_Lpar": "2113/19",
+      "theorem": "p=5 NL Paley ++ is purely parallel and L=q\u22121=24. Fail: L_par^{NL}=q\u22121 at p=7."
+    },
+    "D": {
+      "proved": false,
+      "Q_NL_5": "64/15",
+      "Q_NL_7": "632/171",
+      "L_par_NL_7": "2113/19",
+      "L_spl_NL_7": "673/6",
+      "Q_NL_is_short_rational": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "note": "L_par^{1D} named. NL L_par=2113/19 and L_spl=673/6 unnamed in p. Full L table still needed for 15.298. C(p) interpolant not imported. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
