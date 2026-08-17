@@ -1,0 +1,103 @@
+{
+  "prop": "15.431",
+  "title": "Square-slot C_\u03c4 named in p; Q_NL still open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "C_slots_named": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "pm1+": "2/3",
+          "pm1-": "-8/3",
+          "pp_fp+": "2/3",
+          "pp_fp-": "17/3",
+          "pp_U+": "14/3",
+          "pp_U-": "8",
+          "N*+": "-2",
+          "N*-": "-2",
+          "mm": {
+            "+": "0",
+            "-": "0"
+          },
+          "ns+": "-6",
+          "ns-": "-6"
+        },
+        "7": {
+          "pm1+": "6",
+          "pm1-": "-8",
+          "pp_fp+": "50/3",
+          "pp_fp-": "12",
+          "pp_U+": "11/3",
+          "pp_U-": "32/3",
+          "N*+": "-32/3",
+          "N*-": "-4/3",
+          "mm+": "-20/3",
+          "mm-": "8/3",
+          "ns+": "-12",
+          "ns-": "-12"
+        },
+        "11": {
+          "pm1+": "10",
+          "pm1-": "-12",
+          "pp_fp+": "164/3",
+          "pp_fp-": "18",
+          "pp_U+": "49/3",
+          "pp_U-": "20",
+          "N*+": "-42",
+          "N*-": "2",
+          "mm+": "-14",
+          "mm-": "8",
+          "ns+": "-30",
+          "ns-": "-30"
+        },
+        "13": {
+          "pm1+": "54/11",
+          "pm1-": "-76/11",
+          "pp_fp+": "582/11",
+          "pp_fp-": "153/11",
+          "pp_U+": "402/11",
+          "pp_U-": "480/11",
+          "N*+": "-642/11",
+          "N*-": "-18/11",
+          "mm": {
+            "+": "0",
+            "-": "0"
+          },
+          "ns+": "-42",
+          "ns-": "-42"
+        }
+      },
+      "pm1_allp_p5": "4",
+      "Nstar_halfn_p7": "-6",
+      "theorem": "C_\u03c4,\u03c7 named in p by p mod 4. Fail: pm1=\u22121+\u03c7p at p=5; --N1=0 at p=7; N*=\u2212n/2 at p=7."
+    },
+    "B": {
+      "proved": false,
+      "Q_NL_5": "64/15",
+      "Q_1d_5": "16/9",
+      "Q_NL_gt_Q1d_p5": true,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q_NL_is_short_rational": false,
+      "note": "C_\u03c4 named. Slot-constant L still misses Q_NL. u unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
