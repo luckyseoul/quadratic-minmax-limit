@@ -1,0 +1,77 @@
+{
+  "prop": "15.486",
+  "title": "15.276 family is the TR orbit; does not name c",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "family_size_M3": true,
+    "p5_family_is_NL": true,
+    "p7_family_is_TR_not_c": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "M3": 100,
+          "drop": 25
+        },
+        "7": {
+          "M3": 1176,
+          "drop": 196
+        },
+        "11": {
+          "M3": 24200,
+          "drop": 2420
+        },
+        "13": {
+          "M3": 70980,
+          "drop": 5915
+        }
+      },
+      "theorem": "Family size C(m,3)p\u00b2(p\u22121). Fail: drop (p\u22121) (25\u2260100 at p=5)."
+    },
+    "B": {
+      "proved": true,
+      "enum": {
+        "n_max": 100,
+        "n_tr": 100,
+        "n_unique": 100,
+        "n_fullge2": 0,
+        "family": 100
+      },
+      "theorem": "p=5 family = unique NL/TR orbit (100). Fail: a 1D hit."
+    },
+    "C": {
+      "proved": true,
+      "enum": {
+        "n_max": 1176,
+        "n_tr": 1176,
+        "n_unique": 1176,
+        "n_fullge2": 0,
+        "family": 1176
+      },
+      "c_family": 4,
+      "c_live": 19,
+      "theorem": "p=7 family = unique TR orbit (1176); c_family=4\u226019. Fail: family names c."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "15.276 family is TR-only. Does not pin c=c_eq. Q_\u03c4 unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
