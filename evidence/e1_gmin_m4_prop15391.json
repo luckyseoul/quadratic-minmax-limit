@@ -1,0 +1,87 @@
+{
+  "prop": "15.391",
+  "title": "k is # of circle-line roots with y<x; c unnamed",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "T_is_y_lt_x": true,
+    "k_from_ineq": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "n_lt_match": 25,
+          "n_le_match": 20,
+          "nT": 10,
+          "n_le_size": 15
+        },
+        "13": {
+          "n_lt_match": 169,
+          "n_le_match": 156,
+          "nT": 78,
+          "n_le_size": 91
+        },
+        "17": {
+          "n_lt_match": 289,
+          "n_le_match": 272,
+          "nT": 136,
+          "n_le_size": 153
+        },
+        "29": {
+          "n_lt_match": 841,
+          "n_le_match": 812,
+          "nT": 406,
+          "n_le_size": 435
+        }
+      },
+      "theorem": "T={y<x} after A^{-1}. Fail: y\u2264x (includes diagonal)."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "t": 0,
+          "c": 2,
+          "n_ok": 15,
+          "n_drop": 9,
+          "n_tot": 15
+        },
+        "13": {
+          "t": 0,
+          "c": 5,
+          "n_ok": 39,
+          "n_drop": 27,
+          "n_tot": 39
+        },
+        "17": {
+          "t": 0,
+          "c": 3,
+          "n_ok": 51,
+          "n_drop": 36,
+          "n_tot": 51
+        }
+      },
+      "theorem": "k=#{u\u2208S\u2229\u2113: y<x}. Fail: k=m."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "k named given (t,c); c and D unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
