@@ -1,0 +1,68 @@
+{
+  "prop": "15.443",
+  "title": "c=c_NC+4\u00b71_{p\u22613} at p=5,7; stab-8 is ystar\u2299NC",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "c_NC_closure": true,
+    "c_split_live": true,
+    "Q_NL_from_split": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "stabs5": [
+        6
+      ],
+      "stabs7": [
+        2,
+        2,
+        2,
+        4,
+        8
+      ],
+      "c_NC5": 1,
+      "c_NC7": 15,
+      "drop8": 14,
+      "stab8_tc": [
+        37,
+        4
+      ],
+      "theorem": "c_NC=1,15 at p=5,7. Stab-8 is ystar\u2299(37,4). Fail: drop that circle (14); fail: c_NC(7)=19."
+    },
+    "B": {
+      "proved": true,
+      "c5": 1,
+      "c7": 19,
+      "drop4": 15,
+      "add4_p5": 5,
+      "theorem": "c=c_NC+4\u00b71_{p\u22613} at p=5,7. Fail: drop 4 at p=7; fail: add 4 at p=5."
+    },
+    "C": {
+      "proved": true,
+      "Q5": "64/15",
+      "Q7": "632/171",
+      "Q7_cNC": "632/135",
+      "theorem": "Q_NL=2 B_NL/(c p(p\u22121)) with this c. Fail: c=c_NC(7)=15 (632/135\u2260632/171)."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "B_NL5": "128/3",
+      "note": "+4 is the p=7 CRRR contribution, not a general p\u22613 orbit size. c_NC is a constructor count. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
