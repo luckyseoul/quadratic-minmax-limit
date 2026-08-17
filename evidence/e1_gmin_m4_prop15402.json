@@ -1,0 +1,291 @@
+{
+  "prop": "15.402",
+  "title": "Square-direction \u221e-stars are 1-level S\u2261\u22121 on Max\u2212; 4p is S\u2261\u22124, not two-level; Type I is never 1-level",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "chi_q_trivial_on_Fp": true,
+    "square_pstar_ES2_is_1": true,
+    "r_line_union_S_eq_minus_r": true,
+    "vertex_star_S_eq_minus_p": true,
+    "type_I_mean_not_integer": true,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "n_Fp_star": 4,
+          "n_chi_q_minus": 0,
+          "n_chi_p_nonsquare": 2
+        },
+        "7": {
+          "n_Fp_star": 6,
+          "n_chi_q_minus": 0,
+          "n_chi_p_nonsquare": 3
+        },
+        "11": {
+          "n_Fp_star": 10,
+          "n_chi_q_minus": 0,
+          "n_chi_p_nonsquare": 5
+        },
+        "13": {
+          "n_Fp_star": 12,
+          "n_chi_q_minus": 0,
+          "n_chi_p_nonsquare": 6
+        },
+        "17": {
+          "n_Fp_star": 16,
+          "n_chi_q_minus": 0,
+          "n_chi_p_nonsquare": 8
+        },
+        "19": {
+          "n_Fp_star": 18,
+          "n_chi_q_minus": 0,
+          "n_chi_p_nonsquare": 9
+        },
+        "23": {
+          "n_Fp_star": 22,
+          "n_chi_q_minus": 0,
+          "n_chi_p_nonsquare": 11
+        },
+        "29": {
+          "n_Fp_star": 28,
+          "n_chi_q_minus": 0,
+          "n_chi_p_nonsquare": 14
+        },
+        "31": {
+          "n_Fp_star": 30,
+          "n_chi_q_minus": 0,
+          "n_chi_p_nonsquare": 15
+        }
+      },
+      "theorem": "\u03c7_q|_{F_p^\u00d7}\u2261+1 via N(c)=c\u00b2. Fail: \u03c7_q|_{F_p}=\u03c7_p."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "square": "1",
+          "nonsquare": "9"
+        },
+        "7": {
+          "square": "1",
+          "nonsquare": "13"
+        },
+        "11": {
+          "square": "1",
+          "nonsquare": "21"
+        },
+        "13": {
+          "square": "1",
+          "nonsquare": "25"
+        },
+        "17": {
+          "square": "1",
+          "nonsquare": "33"
+        },
+        "19": {
+          "square": "1",
+          "nonsquare": "37"
+        },
+        "23": {
+          "square": "1",
+          "nonsquare": "45"
+        },
+        "31": {
+          "square": "1",
+          "nonsquare": "61"
+        }
+      },
+      "theorem": "E_\u2212[S\u00b2]=p\u2212(p\u22121)\u03c7(d). Square \u21d2 S\u2261\u22121. Fail: swap square/nonsquare."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "prefix": {
+            "1": [
+              -1
+            ],
+            "2": [
+              -2
+            ],
+            "3": [
+              -3
+            ],
+            "4": [
+              -4
+            ],
+            "5": [
+              -5
+            ]
+          },
+          "dir1_square": true
+        },
+        "7": {
+          "prefix": {
+            "1": [
+              -1
+            ],
+            "2": [
+              -2
+            ],
+            "3": [
+              -3
+            ],
+            "4": [
+              -4
+            ],
+            "5": [
+              -5
+            ],
+            "6": [
+              -6
+            ],
+            "7": [
+              -7
+            ]
+          },
+          "dir1_square": true
+        }
+      },
+      "live": {
+        "5": {
+          "1": [
+            -1
+          ],
+          "2": [
+            -2
+          ],
+          "3": [
+            -3
+          ],
+          "4": [
+            -4
+          ],
+          "5": [
+            -5
+          ]
+        },
+        "7": {
+          "1": [
+            -1
+          ],
+          "2": [
+            -2
+          ],
+          "3": [
+            -3
+          ],
+          "4": [
+            -4
+          ],
+          "5": [
+            -5
+          ],
+          "6": [
+            -6
+          ],
+          "7": [
+            -7
+          ]
+        }
+      },
+      "theorem": "r square-dir lines: S\u2261\u2212r. 4p is 1-level \u22124. Fail: claim two-level {\u22121,\u22123}."
+    },
+    "D": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "star_support": [
+            -5
+          ]
+        },
+        "7": {
+          "star_support": [
+            -7
+          ]
+        }
+      },
+      "theorem": "Vertex stars S\u2261\u2212p on Max\u2212. Fail: S\u2261\u22121."
+    },
+    "E": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "mean": "-13/5",
+          "k": 13,
+          "odd": true
+        },
+        "7": {
+          "mean": "-19/7",
+          "k": 19,
+          "odd": true
+        },
+        "11": {
+          "mean": "-31/11",
+          "k": 31,
+          "odd": true
+        },
+        "13": {
+          "mean": "-37/13",
+          "k": 37,
+          "odd": true
+        },
+        "17": {
+          "mean": "-49/17",
+          "k": 49,
+          "odd": true
+        },
+        "19": {
+          "mean": "-55/19",
+          "k": 55,
+          "odd": true
+        },
+        "23": {
+          "mean": "-67/23",
+          "k": 67,
+          "odd": true
+        },
+        "29": {
+          "mean": "-85/29",
+          "k": 85,
+          "odd": true
+        },
+        "31": {
+          "mean": "-91/31",
+          "k": 91,
+          "odd": true
+        }
+      },
+      "theorem": "Type I E_\u2212[S]=\u22123+2/p\u2209\u2124, not 1-level. Fail: E[S]=\u22121."
+    },
+    "F": {
+      "proved": false,
+      "type_I_multilevel_bad_case_ND_closed": false,
+      "type_I_aut_e_3AB_positive_general": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "gsum": false,
+      "rhat": false,
+      "note": "3A+B>0 on Aut_e far classes remains G>T (15.275). f_e\u2261\u22121 on large {S=\u22121} exists off Type I Max+ at p=5, so Max\u2212-only emptiness is false. Flags unflipped."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "type_I_multilevel_bad_case_ND_closed",
+    "type_I_aut_e_3AB_positive_general",
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}

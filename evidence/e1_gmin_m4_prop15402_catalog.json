@@ -1,0 +1,130 @@
+{
+  "A": {
+    "5": {
+      "n_Fp_star": 4,
+      "n_chi_q_minus": 0,
+      "n_chi_p_nonsquare": 2
+    },
+    "7": {
+      "n_Fp_star": 6,
+      "n_chi_q_minus": 0,
+      "n_chi_p_nonsquare": 3
+    },
+    "11": {
+      "n_Fp_star": 10,
+      "n_chi_q_minus": 0,
+      "n_chi_p_nonsquare": 5
+    },
+    "13": {
+      "n_Fp_star": 12,
+      "n_chi_q_minus": 0,
+      "n_chi_p_nonsquare": 6
+    },
+    "17": {
+      "n_Fp_star": 16,
+      "n_chi_q_minus": 0,
+      "n_chi_p_nonsquare": 8
+    },
+    "19": {
+      "n_Fp_star": 18,
+      "n_chi_q_minus": 0,
+      "n_chi_p_nonsquare": 9
+    },
+    "23": {
+      "n_Fp_star": 22,
+      "n_chi_q_minus": 0,
+      "n_chi_p_nonsquare": 11
+    },
+    "29": {
+      "n_Fp_star": 28,
+      "n_chi_q_minus": 0,
+      "n_chi_p_nonsquare": 14
+    },
+    "31": {
+      "n_Fp_star": 30,
+      "n_chi_q_minus": 0,
+      "n_chi_p_nonsquare": 15
+    }
+  },
+  "B": {
+    "5": {
+      "square": "1",
+      "nonsquare": "9"
+    },
+    "7": {
+      "square": "1",
+      "nonsquare": "13"
+    },
+    "11": {
+      "square": "1",
+      "nonsquare": "21"
+    },
+    "13": {
+      "square": "1",
+      "nonsquare": "25"
+    },
+    "17": {
+      "square": "1",
+      "nonsquare": "33"
+    },
+    "19": {
+      "square": "1",
+      "nonsquare": "37"
+    },
+    "23": {
+      "square": "1",
+      "nonsquare": "45"
+    },
+    "31": {
+      "square": "1",
+      "nonsquare": "61"
+    }
+  },
+  "C": {
+    "5": {
+      "1": [
+        -1
+      ],
+      "2": [
+        -2
+      ],
+      "3": [
+        -3
+      ],
+      "4": [
+        -4
+      ],
+      "5": [
+        -5
+      ]
+    },
+    "7": {
+      "1": [
+        -1
+      ],
+      "2": [
+        -2
+      ],
+      "3": [
+        -3
+      ],
+      "4": [
+        -4
+      ],
+      "5": [
+        -5
+      ],
+      "6": [
+        -6
+      ],
+      "7": [
+        -7
+      ]
+    }
+  },
+  "E": {
+    "5": "-13/5",
+    "7": "-19/7",
+    "11": "-31/11"
+  }
+}
