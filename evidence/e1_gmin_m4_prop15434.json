@@ -1,0 +1,90 @@
+{
+  "prop": "15.434",
+  "title": "J_\u0394 slot-constant on pp_fp/pp_U; p=7 only /19; Q_NL open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "J_slot_constant": true,
+    "mean_extra_named_live": true,
+    "K_pattern_dies_p11": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "pp_fp": "-2",
+          "pp_U": "2"
+        },
+        "7": {
+          "pp_fp": "-120/19",
+          "pp_U": "-12/19"
+        }
+      },
+      "theorem": "J_\u0394 constant on pp_fp / pp_U, not on ++. Fail: J_\u0394=0; fail: one value on all ++."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "mean": "2/3",
+          "extra": "32/375"
+        },
+        "7": {
+          "mean": "-84/19",
+          "extra": "-192/931"
+        }
+      },
+      "theorem": "mean_{++} J_\u0394=2/3, \u221284/19. extra=32/375, \u2212192/931. Fail: J_\u0394=0."
+    },
+    "C": {
+      "proved": true,
+      "K_unm_fp": {
+        "5": [
+          "2"
+        ],
+        "7": [
+          "2"
+        ],
+        "11": [
+          "1"
+        ],
+        "13": [
+          "2/5",
+          "4/5",
+          "6/5"
+        ]
+      },
+      "fake7_fp": "2",
+      "S7_has_19": false,
+      "theorem": "Unmixed |meanK| on pp_fp is 2 at p=5,7, not at p=11,13. Field-fake dies at p=7. 19 not GJ. Fail: |K|=2 at p=11."
+    },
+    "D": {
+      "proved": false,
+      "p7_fp_den19": true,
+      "p7_U_den19": true,
+      "p7_mean_den19": true,
+      "Q_NL_5": "64/15",
+      "Q_1d_5": "16/9",
+      "Q_NL_gt_Q1d_p5": true,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q_NL_is_short_rational": false,
+      "note": "p=7 J_\u0394 only as /19 (Hoffman, not GJ). Q_NL unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
