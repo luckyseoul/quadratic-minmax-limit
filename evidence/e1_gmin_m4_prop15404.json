@@ -1,0 +1,73 @@
+{
+  "prop": "15.404",
+  "title": "Q_T=4(p+3)/15 for p\u22613; S(p) specialises to 15.403 / p=5 pair",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "QT_p3_eq_4_pplus3_over_15": true,
+    "S_specialises_403_and_p5": true,
+    "ensemble_in_S": false,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "7": {
+          "Q_T": "8/3",
+          "named": "8/3",
+          "Q_AP": "40/9"
+        },
+        "11": {
+          "Q_T": "56/15",
+          "named": "56/15",
+          "Q_AP": "56/9"
+        },
+        "19": {
+          "Q_T": "88/15",
+          "named": "88/15",
+          "Q_AP": "88/9"
+        },
+        "23": {
+          "Q_T": "104/15",
+          "named": "104/15",
+          "Q_AP": "104/9"
+        }
+      },
+      "theorem": "Q_T=4(p+3)/15 for p\u22613. Fail: den 9 (Q_AP); or 4(p+3)/15 at p=5 (32/15\u226064/15)."
+    },
+    "B": {
+      "proved": true,
+      "S5": [
+        "16/9",
+        "64/15"
+      ],
+      "S7": [
+        "104/15",
+        "32/9",
+        "40/9",
+        "8/3"
+      ],
+      "ensemble_in_S7": false,
+      "theorem": "S(p) hits {Q_1d, Q_T} at p=5 and the 15.403 list at p=7. Fail: 32/9\u2208S(5); S(7)={Q_1d,Q_T}; 1544/409\u2208S(7)."
+    },
+    "C": {
+      "proved": false,
+      "ensemble_in_S": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "S(p) names a constructor/type-mean set, not ensemble Q_\u03c4. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
