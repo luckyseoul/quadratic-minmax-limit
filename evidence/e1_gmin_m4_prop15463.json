@@ -1,0 +1,127 @@
+{
+  "prop": "15.463",
+  "title": "No two-occupancy type-support pair recovers c=1,19 and the p=13 window",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "flat_no_19": true,
+    "p7_five_miss_window": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "n_supports": 11,
+      "n_pairs": 55,
+      "c7_vals": [
+        "12",
+        "14",
+        "20",
+        "22",
+        "28",
+        "32",
+        "34",
+        "40",
+        "44",
+        "46",
+        "52",
+        "64"
+      ],
+      "theorem": "Flat extra: no absent-at-5 pair has nS+nT=15. c7\u2208{12,14,20,22,\u2026}, never 19. Fail: 20=19."
+    },
+    "B": {
+      "proved": true,
+      "n_fifteen": 5,
+      "rows": [
+        {
+          "S": [
+            "J2",
+            "J4",
+            "R"
+          ],
+          "T": [
+            "J6"
+          ],
+          "c7": "19",
+          "c13": "7001/2",
+          "in_win": false
+        },
+        {
+          "S": [
+            "J2",
+            "J6",
+            "R"
+          ],
+          "T": [
+            "J6"
+          ],
+          "c7": "19",
+          "c13": "911/2",
+          "in_win": false
+        },
+        {
+          "S": [
+            "J2",
+            "J4",
+            "J6"
+          ],
+          "T": [
+            "J6"
+          ],
+          "c7": "19",
+          "c13": "71/2",
+          "in_win": false
+        },
+        {
+          "S": [
+            "J6"
+          ],
+          "T": [
+            "A",
+            "J6",
+            "R"
+          ],
+          "c7": "19",
+          "c13": "1541/2",
+          "in_win": false
+        },
+        {
+          "S": [
+            "J6"
+          ],
+          "T": [
+            "A",
+            "J4",
+            "J6"
+          ],
+          "c7": "19",
+          "c13": "28155/2",
+          "in_win": false
+        }
+      ],
+      "c_J6_J2J4R_13": "7001/2",
+      "window13": [
+        551,
+        617
+      ],
+      "theorem": "Five p7-extra pairs give c(7)=19 and c(5)=1; none land in [551,617]. Fail: {J6}+{J2,J4,R} in window."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Two-occupancy support pairs are dead as a name of c. Q_\u03c4 unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
