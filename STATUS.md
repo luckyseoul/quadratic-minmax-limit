@@ -1,6 +1,6 @@
 # Status (2026-08-17 evening)
 
-Leftover campaign: 15.273–15.467 shipped. Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.467: coarse \(L_{ns}=\mu_+\mu_-\); named atoms miss \(L_{++}\); \(D\equiv3\pmod p\) dies at \(p=3\). Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
+Leftover campaign: 15.273–15.468 shipped. Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.468: Max+ χ-pairs named from \(Cy=py\); 3-point of \(1_D\) not constant; \(L_{++}\) unnamed. Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|
