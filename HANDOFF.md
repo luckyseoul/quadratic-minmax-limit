@@ -1,5 +1,5 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-17 evening):** Leftover 1 still **OPEN**. 15.453–15.479 shipped. Complementary \(\Delta^2=0\) iff one full line with no empty parallel; else 15.477. \(Q_\tau\) / \(u(p)\) unnamed. p=11 6-net — leave PID 712954. Do **not** import \(\phi_F\). Residual (ii) \(k\ge4p\) and Type I multi-level still OPEN. Aut-Schur **false**. Live `e1` is the old AND. \(L=\tfrac12\) is **not settled**.  
+> **Now (2026-08-17 evening):** Leftover 1 still **OPEN**. 15.453–15.480 shipped. Three I_sm quadratic-χ kernels are \(\mathrm{Kl}(1,\alpha^2/4)\) (and phases). Cubic \(W_c\) and \(Q_\tau\) unnamed. p=11 6-net — leave PID 712954. Do **not** import \(\phi_F\). Residual (ii) \(k\ge4p\) and Type I multi-level still OPEN. Aut-Schur **false**. Live `e1` is the old AND. \(L=\tfrac12\) is **not settled**.  
 > Afternoon: **`evidence/SESSION_HANDOFF_2026-08-17_qtau.md`**. Morning: **`evidence/SESSION_HANDOFF_2026-08-17_leftover.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**. Next `/goal`: **`GOAL.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
