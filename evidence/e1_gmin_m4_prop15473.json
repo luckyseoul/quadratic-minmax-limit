@@ -1,0 +1,75 @@
+{
+  "prop": "15.473",
+  "title": "Z_\u03c8=(G(\u03c8)/q)\u2211 \u03c8\u0304(\u2212\u03b1)|hat 1_D(\u03b1)|\u00b2; does not name Q_\u03c4",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "dft_identity": true,
+    "drop_psi_fails": true,
+    "EZ2_over_Qpp_not_const": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "err": 7.944109290391274e-15,
+          "err_chiG": 38.042260651806146,
+          "G": [
+            2.2360679774997902,
+            4.472135954999579
+          ]
+        },
+        "7": {
+          "err": 5.686780817743182e-14,
+          "err_chiG": 4.28195044221665e-14,
+          "G": [
+            6.999999999999998,
+            1.3877787807814457e-16
+          ]
+        }
+      },
+      "theorem": "Z_\u03c8=(G(\u03c8)/q) W on every Max+. Fail: G(\u03c8)\u21a6G(\u03c7)."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "err_drop": 37.41657386773942,
+          "W_drop": 150.0,
+          "k_qmink": 150.0
+        },
+        "7": {
+          "err_drop": 168.00000000000003,
+          "W_drop": 588.0,
+          "k_qmink": 588.0
+        }
+      },
+      "theorem": "Drop \u03c8\u0304 \u21d2 Z constant, misses live Z_\u03c8. Fail: dropped form equals live Z."
+    },
+    "C": {
+      "proved": true,
+      "ratio5": 68.75000000000001,
+      "ratio7": 205.64766839378237,
+      "theorem": "E|Z|\u00b2/Q++ is 275/4 at p=5, not at p=7. Fail: the p=5 ratio at p=7."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "DFT names Z_\u03c8 as G(\u03c8)W/q. W unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
