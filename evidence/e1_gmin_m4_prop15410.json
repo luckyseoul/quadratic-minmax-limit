@@ -1,0 +1,114 @@
+{
+  "prop": "15.410",
+  "title": "Zero-far Type I is gap-2 and not bad-case for all p\u22655; p=7 gap-2 bad-case box empty",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "zerofar_gap2_not_badcase": true,
+    "p5_p7_zerofar_cache": true,
+    "p7_badcase_box_empty": true,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "Y+": "-3/2",
+          "cut": "3/2"
+        },
+        "7": {
+          "Y+": "-4/3",
+          "cut": "5/3"
+        },
+        "11": {
+          "Y+": "-6/5",
+          "cut": "9/5"
+        },
+        "13": {
+          "Y+": "-7/6",
+          "cut": "11/6"
+        },
+        "17": {
+          "Y+": "-9/8",
+          "cut": "15/8"
+        },
+        "19": {
+          "Y+": "-10/9",
+          "cut": "17/9"
+        },
+        "23": {
+          "Y+": "-12/11",
+          "cut": "21/11"
+        },
+        "29": {
+          "Y+": "-15/14",
+          "cut": "27/14"
+        },
+        "31": {
+          "Y+": "-16/15",
+          "cut": "29/15"
+        }
+      },
+      "theorem": "Zero-far is gap-2 and not bad-case for all odd p\u22655. Fail: Y_++3\u22640."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "plus": [
+            1,
+            5
+          ],
+          "smax": -1.4999999999999998,
+          "Y+": -1.5,
+          "cut": 1.5000000000000002,
+          "affine_err": 1.7763568394002505e-15
+        },
+        "7": {
+          "plus": [
+            1,
+            5
+          ],
+          "smax": -1.3333333333333321,
+          "Y+": -1.333333333333333,
+          "cut": 1.6666666666666679,
+          "affine_err": 4.440892098500626e-15
+        }
+      },
+      "theorem": "p=5,7 zero-far x is Type I {1,5}, gap-2, not bad-case. Fail: drop square-star at p=5."
+    },
+    "C": {
+      "proved": true,
+      "badcase_lp_feasible": false,
+      "badcase_status": 2,
+      "n_unique_plus": 5726,
+      "n_unique_minus": 5726,
+      "theorem": "p=7 [0,1] Type I + S\u2264\u22121 + S+3f_e\u22640 is infeasible. Fail: claim the bad-case LP feasible."
+    },
+    "D": {
+      "proved": false,
+      "type_I_multilevel_bad_case_ND_closed": false,
+      "type_I_aut_e_3AB_positive_general": false,
+      "phi_F_ge_6": false,
+      "residual_ii_k_eq_4p_empty": false,
+      "e1": true,
+      "gsum": false,
+      "note": "Zero-far is never the bad case; p=7 pointwise box empty. 3A+B>0 on Aut_e far classes remains G>T. Flags unflipped."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "type_I_multilevel_bad_case_ND_closed",
+    "type_I_aut_e_3AB_positive_general",
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}

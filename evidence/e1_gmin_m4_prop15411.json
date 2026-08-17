@@ -1,0 +1,92 @@
+{
+  "prop": "15.411",
+  "title": "B_NL=8A\u2212D_1d Q_1d names p u Q_NL; c=1 misses the S0 window for p\u22611, p\u226513",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "B_NL_equals_pu_QNL": true,
+    "c1_misses_p1_window": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "D_form_on_lattice_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "B_NL": "128/3",
+          "puQNL": "128/3",
+          "Q_NL": "64/15"
+        },
+        "7": {
+          "B_NL": "4424/3",
+          "puQNL": "4424/3",
+          "Q_NL": "632/171"
+        }
+      },
+      "theorem": "B_NL=8A\u2212D_1d Q_1d equals p u Q_NL at p=5,7. Fail: drop the 1D term (48\u2260128/3)."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "13": {
+          "u_c1": 6,
+          "window": [
+            3306,
+            3854
+          ],
+          "Q": "47404/135",
+          "Qub": "310/71"
+        },
+        "17": {
+          "u_c1": 8,
+          "window": [
+            46265,
+            53347
+          ],
+          "Q": "3496416/6571",
+          "Qub": "560/127"
+        },
+        "29": {
+          "u_c1": 14,
+          "window": [
+            143377965,
+            163331255
+          ],
+          "Q": "9307045464/10029353",
+          "Qub": "1742/391"
+        },
+        "37": {
+          "u_c1": 18,
+          "window": [
+            32384560375,
+            36775795378
+          ],
+          "Q": "1343120019844/1134392079",
+          "Qub": "2890/647"
+        }
+      },
+      "theorem": "c=1 gives u=(p\u22121)/2 below u_lo at every p\u22611, 13\u2264p\u226437. Fail: 6\u2208[3306,3854]."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q5": "48/13",
+      "Q7": "1544/409",
+      "note": "Q_NL unnamed so u unnamed. c=1 dead for p\u22611, p\u226513. D_form stays off-lattice. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
