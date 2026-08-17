@@ -1,0 +1,154 @@
+{
+  "prop": "15.406",
+  "title": "Interior 4-level empty at p=5,7 (Walsh on U\u21d2U^c); p=5 leftover witness is not interior",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "chi_Odd_const_on_U": true,
+    "S_Uc_residue_is_cut_Odd": true,
+    "walsh_U_implies_Uc_p357": true,
+    "p5_leftover_not_interior": true,
+    "interior_empty_p5_p7": true,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "n_minus": 11,
+          "prod_sign": -1
+        },
+        "7": {
+          "n_minus": 15,
+          "prod_sign": -1
+        },
+        "11": {
+          "n_minus": 23,
+          "prod_sign": -1
+        },
+        "13": {
+          "n_minus": 27,
+          "prod_sign": -1
+        },
+        "19": {
+          "n_minus": 39,
+          "prod_sign": -1
+        }
+      },
+      "theorem": "Leftover S\u2261\u22122 on U \u21d2 n_minus=2p+1 odd \u21d2 \u03c7_Odd const on U. Fail: n_minus=2p."
+    },
+    "B": {
+      "proved": true,
+      "r_even": 2,
+      "r_odd": 0,
+      "witness_Uc_mods": [
+        0
+      ],
+      "theorem": "S(z)\u22612+2|D\u2229Odd| (mod 4) on U^c. Single residue iff \u03c7_Odd const on U^c. Fail: S\u2261\u22122 (mod 4) on the witness."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "3": {
+          "p": 3,
+          "nU": 8,
+          "nUc": 4,
+          "rank_BU": 5,
+          "ker_dim": 5,
+          "ker_mixed": 0,
+          "aff_solvable": true,
+          "aff_mixed": 0,
+          "closed": true
+        },
+        "5": {
+          "p": 5,
+          "nU": 156,
+          "nUc": 104,
+          "rank_BU": 13,
+          "ker_dim": 13,
+          "ker_mixed": 0,
+          "aff_solvable": true,
+          "aff_mixed": 0,
+          "closed": true
+        },
+        "7": {
+          "p": 7,
+          "nU": 6544,
+          "nUc": 4908,
+          "rank_BU": 25,
+          "ker_dim": 25,
+          "ker_mixed": 0,
+          "aff_solvable": true,
+          "aff_mixed": 0,
+          "closed": true
+        }
+      },
+      "theorem": "Walsh const on U \u21d2 const on U^c at p=3,5,7. Fail: mixed column at p=5."
+    },
+    "D": {
+      "proved": true,
+      "witness": {
+        "setU": [
+          -2
+        ],
+        "setUc": [
+          -12,
+          -8,
+          -4
+        ],
+        "setAll": [
+          -12,
+          -8,
+          -4,
+          -2
+        ],
+        "maxAll": -2,
+        "U_is_m2": true,
+        "leftover": true,
+        "interior": false,
+        "Uc_mods": [
+          0
+        ],
+        "Odd": [
+          8,
+          9,
+          10,
+          12,
+          13,
+          15,
+          16,
+          18,
+          21,
+          25
+        ],
+        "chi_eq_minus_yiyj": true,
+        "n_edges": 20,
+        "histUc": {
+          "-12": 16,
+          "-8": 46,
+          "-4": 42
+        }
+      },
+      "theorem": "p=5 WITNESS is leftover, not interior, \u03c7_Odd=\u2212y_i y_j. Fail: claim interior; fail: no leftover at p=5."
+    },
+    "E": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Interior empty at p=5,7 via Walsh rref. Walsh \u2200p\u226511 unproved. 5+ levels and even k>4p stay open. residual_ii_k_eq_4p_empty stays False. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
