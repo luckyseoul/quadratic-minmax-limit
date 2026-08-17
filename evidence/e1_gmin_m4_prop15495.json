@@ -1,0 +1,108 @@
+{
+  "prop": "15.495",
+  "title": "L_\u03c7^{NL} is not named in p; 15.298 does not name Q_NL",
+  "proved": {
+    "L_NL_p5_is_n_or_qm1": true,
+    "L_NL_p7_not_gj": true,
+    "gauss_image_needs_unnamed_L": true,
+    "phi_F_ge_6_proved_general": false,
+    "Q_tau_named_in_p": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "('pm1',)": "26",
+          "(1, 1, 'sub')": "24",
+          "(-1, -1, 'N*')": "24",
+          "(-1, 1, 'N1')": "26",
+          "(1, -1, 'N1')": "26",
+          "dens": [
+            1
+          ],
+          "n_NL": 100,
+          "n_1d": 30
+        },
+        "7": {
+          "('pm1',)": "4435/38",
+          "(1, 1, 'sub')": "2113/19",
+          "(-1, -1, 'N*')": "12349/114",
+          "(-1, -1, 'N1')": "6131/57",
+          "(-1, 1, 'N*')": "6269/57",
+          "(1, -1, 'N*')": "6269/57",
+          "(1, 1, 'N1')": "673/6",
+          "dens": [
+            6,
+            19,
+            38,
+            57,
+            114
+          ],
+          "n_NL": 5586,
+          "n_1d": 140
+        }
+      },
+      "theorem": "p=5 NL L_+=n or q\u22121; p=7 dens {6,19,38,57,114} not 409. Fail: L(pm1)=n or L(sub)=q\u22121 at p=7."
+    },
+    "B": {
+      "proved": true,
+      "slot_in_gj": {
+        "('pm1',)": false,
+        "(1, 1, 'sub')": false,
+        "(1, 1, 'N1')": false,
+        "(-1, -1, 'N1')": false,
+        "(-1, -1, 'N*')": false,
+        "(-1, 1, 'N*')": false,
+        "(1, -1, 'N*')": false
+      },
+      "S7_has_19": false,
+      "Lpar_R_7": "133",
+      "theorem": "p=7 NL square L not in GJ closure. Fail: 19\u2208S7 or 2113/19=L_par(R)."
+    },
+    "C": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "live": "64/15",
+          "target": "64/15",
+          "p5law": "1568/375",
+          "mumu": "104/25"
+        },
+        "7": {
+          "live": "632/171",
+          "target": "632/171",
+          "p5law": "-10453/2887",
+          "mumu": "216/49"
+        }
+      },
+      "theorem": "15.298(live L_NL)=Q_NL. p=5 L-names miss. Fail: p=5 law recovers 64/15 or 632/171."
+    },
+    "D": {
+      "proved": false,
+      "Q_tau_named_in_p": false,
+      "phi_F_imported": false,
+      "Q_1d_eq_Q_NL": false,
+      "Q_1d_pp": {
+        "5": "16/9",
+        "7": "104/15"
+      },
+      "note": "L_NL unnamed in p; 15.298 cannot import Q_NL. Q_1d\u2260Q_NL so the mixture still has unnamed N+. \u27e8\u03b4,\u03c8\u27e9\u22642 stays OPEN."
+    }
+  },
+  "L_status": "OPEN",
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "residual_ii_k_eq_4p_empty": false,
+  "D_form_on_lattice_general": false,
+  "Q_NL_is_short_rational": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

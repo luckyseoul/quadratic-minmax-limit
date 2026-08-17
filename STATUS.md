@@ -1,6 +1,6 @@
 # Status (2026-08-17 evening)
 
-Leftover campaign: 15.273–15.494 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.494: \(A_r=0\) iff \(\chi(r+1)=-1\); does not name \(Q_\tau\). Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
+Leftover campaign: 15.273–15.495 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.495: \(\sum_{\mathrm{far}\,|\kappa|=1} y_u y_v\equiv0\) on Max± (does not close \(|\mu|\le|L|\)). 15.494: \(A_r=0\) iff \(\chi(r+1)=-1\); does not name \(Q_\tau\). Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|
@@ -10,7 +10,7 @@ Leftover campaign: 15.273–15.494 shipped. **Three leftovers remain** (Lemma D 
 | Type I freeness-fail ND (two-level Max−) | **CLOSED** (that slice) | 15.272 \(k=1\cup k=3\) \(\Rightarrow G_+\succ0\Rightarrow\) 15.249 dual-eq empty |
 | Residual (ii), affine + even \(k\le4p-2\) | **CLOSED** (that range) | 15.179 + 15.236 + 15.237 |
 | Residual (ii), even \(k\ge4p\) | **OPEN** | multi-level Max− leftover (15.274) |
-| Type I, multi-level Max− | **OPEN** | 15.275; `type_I_multilevel_bad_case_ND_closed=False` |
+| Type I, multi-level Max− | **OPEN** | 15.275; 15.495 \(\sigma_{k1}\equiv0\); `type_I_multilevel_bad_case_ND_closed=False` |
 | \(\lambda_{\min}(\Phi)\ge6\) | **OPEN** | 15.279; `phi_F_ge_6=False` |
 | E(1) / \(L=\tfrac12\) | **OPEN** | needs the four leftovers above |
 | Path-C residual / 16N | OPEN optional | not required for denseness path |
