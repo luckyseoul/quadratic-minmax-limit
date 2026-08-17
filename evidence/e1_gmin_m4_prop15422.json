@@ -1,0 +1,76 @@
+{
+  "prop": "15.422",
+  "title": "R\u00d7C is 259/3 under \u03c6={id,\u22121}; O-pairings named; L_spl^{NL}(7)=673/6; Q_NL still open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "RC_259_3": true,
+    "O_pairings_named": true,
+    "Lspl_NL_p7_mix": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "form": "259/3",
+      "axis": "245/3",
+      "ferrers": "245/3",
+      "allAP": "77",
+      "Cmix": "245/3",
+      "theorem": "R\u00d7C \u03c6={id,\u22121} is 259/3. Fail: axis \u03c6 / Ferrers / all-AP / three-type C mix."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "F1F1": "262/3",
+        "G1_011": "395/3",
+        "sg_022": "409/3",
+        "F3_2447": "112",
+        "F1_ap": "329/3",
+        "G3G3": "302/3",
+        "F4_2266": "386/3",
+        "3455": "421/3",
+        "G4G4": "274/3"
+      },
+      "theorem": "O-pairings are single-d 15.418\u201315.419 4-points. Fail: a d-average flattens J."
+    },
+    "C": {
+      "proved": true,
+      "mix": "673/6",
+      "wrong": "12731/114",
+      "types": {
+        "343/3": "343/3",
+        "219/2": "219/2",
+        "671/6": "671/6",
+        "665/6": "665/6",
+        "344/3": "344/3",
+        "695/6": "695/6"
+      },
+      "theorem": "Hoffman 4+4+4+4+2+1 mix of the six type L_spl is 673/6. Fail: R\u00d7C axis \u03c6 (12731/114)."
+    },
+    "D": {
+      "proved": false,
+      "Lspl_NL_7": "673/6",
+      "Q_NL_5": "64/15",
+      "Q_1d_5": "16/9",
+      "Q_NL_gt_Q1d_p5": true,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q_NL_is_short_rational": false,
+      "note": "L_spl^{NL} named at p=5 (empty extra) and p=7 (mix). Not a formula in p. Q_NL unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
