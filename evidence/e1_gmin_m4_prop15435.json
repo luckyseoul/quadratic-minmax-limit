@@ -1,0 +1,78 @@
+{
+  "prop": "15.435",
+  "title": "30/19 and 3/38 are Hoffman mixes of den|12 type-\u03b4",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "unmixed_hoffman_mix": true,
+    "mixed_hoffman_mix": true,
+    "J_delta_is_mix_image": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "mix19": "30/19",
+      "mix18": "5/3",
+      "atoms": {
+        "p/6": "7/6",
+        "(p-2)/12": "5/12",
+        "1": "1",
+        "p/3": "7/3",
+        "(q+4)/12": "53/12",
+        "(p-1)/4": "3/2"
+      },
+      "hand19": {
+        "p/6": "7/19",
+        "(p-2)/12": "5/19",
+        "1": "1/19",
+        "p/3": "7/19",
+        "(q+4)/12": "53/19",
+        "(p-1)/4": "6/19"
+      },
+      "theorem": "Unmixed 30/19 = Hoffman mix of den|12 type-\u03b4. Fail: den 18; fail: atom den 19."
+    },
+    "B": {
+      "proved": true,
+      "mix19": "3/38",
+      "mix18": "1/12",
+      "unsigned": "21/38",
+      "theorem": "Mixed 3/38 = signed Hoffman mix. Fail: den 18; fail: unsigned mix."
+    },
+    "C": {
+      "proved": true,
+      "J_fp": "-120/19",
+      "J_U": "-12/19",
+      "fail18": "-20/3",
+      "theorem": "Consistency: 15.434 J_\u0394(pp_fp)=\u22124\u00b7(30/19), J_\u0394(pp_U)=\u22128\u00b7(3/38). Fail: \u22124\u00b7(30/18)."
+    },
+    "D": {
+      "proved": false,
+      "crrr_p5": "1/2",
+      "crrr_p7": "7/6",
+      "crrr_joint": false,
+      "amp_unm_has_19": true,
+      "mix_kills_19_as_field": true,
+      "Q_NL_5": "64/15",
+      "Q_1d_5": "16/9",
+      "Q_NL_gt_Q1d_p5": true,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q_NL_is_short_rational": false,
+      "note": "30/19 and 3/38 are Hoffman mixes, not field GJ. Six atoms remain p=7 den|12 names (CRRR 7/6 \u2260 p=5 1/2). Q_NL unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
