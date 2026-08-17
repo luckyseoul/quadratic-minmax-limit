@@ -1,0 +1,59 @@
+{
+  "prop": "15.456",
+  "title": "remaining p=7 NL is 4u+2u+9u alignment counts; 15u is p=7-only (not N_r in p)",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "affJ2_vs_J6": true,
+    "J4_pair_split": true,
+    "rest_15u_dies_at_p5": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "u": 294,
+      "affJ2": 1176,
+      "J6": 588,
+      "per_slot_aff": 294,
+      "per_slot_J6": 147,
+      "theorem": "aff+J2 is 4u=1176; J6 is 2u=588. Fail: same per-slot (294\u2260147)."
+    },
+    "B": {
+      "proved": true,
+      "special": 735,
+      "ordinary": 294,
+      "from_pairs": 2646,
+      "all_equal_wrong": 1764,
+      "theorem": "J4\u00b2J2\u00b2=9u=2646 via 2\u00d7735+4\u00d7294. Fail: 6 equal pairs (1764\u22602646)."
+    },
+    "C": {
+      "proved": true,
+      "rest7": 4410,
+      "rest5": 1500,
+      "n_NL5": 100,
+      "fake_Nr5": 1830,
+      "false_19u_Nr5": 1930,
+      "theorem": "rest=15u=4410. Fail: 15u=n_NL(5) (1500\u2260100); fail: n_1d+19u names N_r(5) (1930\u2260130)."
+    },
+    "D": {
+      "proved": false,
+      "Nr7": 5726,
+      "Hplus7": 5726,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "4410=15u at p=7. 15 is p=7-only. N_r unnamed in p. c not pinned. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
