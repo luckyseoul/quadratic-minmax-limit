@@ -1,0 +1,91 @@
+{
+  "prop": "15.450",
+  "title": "Hoffman lattice \u2229 S0 window is a named c-interval that never divides by 19; 3p\u22122 and 2p+5 miss it",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "u_from_c": true,
+    "c_window_s0": true,
+    "interpolants_miss": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "c": 1,
+          "u": 2,
+          "wrong_u": 1
+        },
+        "7": {
+          "c": 19,
+          "u": 57,
+          "wrong_u": 19
+        }
+      },
+      "theorem": "u=c(p\u22121)/2. Fail: u=c (1\u22602 at p=5)."
+    },
+    "B": {
+      "proved": true,
+      "c_window_5": [
+        1,
+        1,
+        1
+      ],
+      "bad_3p2_u5": 26,
+      "bad_2p5_u5": 30,
+      "theorem": "p\u22611 S0 floor \u21d4 c\u2208c_window. Never divides by 19. Fail: 3p\u22122 at p=5 (u=26\u2209{2})."
+    },
+    "C": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "c_min": 1,
+          "c_max": 1,
+          "n": 1
+        },
+        "13": {
+          "c_min": 551,
+          "c_max": 642,
+          "n": 92
+        },
+        "17": {
+          "c_min": 5784,
+          "c_max": 6668,
+          "n": 885
+        },
+        "29": {
+          "c_min": 10241284,
+          "c_max": 11666518,
+          "n": 1425235
+        }
+      },
+      "u_window_13": [
+        3306,
+        3854
+      ],
+      "theorem": "c_window(5)={1}; 3p\u22122 and 2p+5 miss at p=13,17,29. Fail: interpolants at p=13."
+    },
+    "D": {
+      "proved": false,
+      "n_hits_7": 4,
+      "n_hits_13": 92,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "B_NL_5": "128/3",
+      "note": "c-window is named and 19-free. |c_window|\u22654 for p\u22657 so c is not pinned. Q_\u03c4 unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
