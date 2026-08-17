@@ -1,0 +1,91 @@
+{
+  "prop": "15.454",
+  "title": "complementary M-sum of every \u03bc-half-net is named; J2 names two O-signatures, not the \u03bb=6 residual",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "M_comp_named": true,
+    "one_d_MH_tuple": true,
+    "J2_not_all_O": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "M_comp": 90
+        },
+        "7": {
+          "M_comp": 336
+        },
+        "13": {
+          "M_comp": 3822
+        }
+      },
+      "bad_p5": 60,
+      "one_d_p5": 90,
+      "theorem": "\u2211_comp n\u00b2=p(p\u22121)(p+1)\u00b2/8. Fail: initial k-set at p=5 (60\u226090)."
+    },
+    "B": {
+      "proved": true,
+      "C": 63,
+      "H": 147,
+      "n_1d7": 140,
+      "Hplus7": 5726,
+      "theorem": "1D M-tuple is C^{r\u22121}\u00d7H, count n_1d. Fail: N_r=n_1d at p=7 (140\u22605726)."
+    },
+    "C": {
+      "proved": true,
+      "J2_plus": [
+        1,
+        1,
+        3,
+        3,
+        4,
+        4,
+        5
+      ],
+      "J2_minus": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        5,
+        5
+      ],
+      "residual": [
+        0,
+        1,
+        1,
+        2,
+        5,
+        5,
+        7
+      ],
+      "residual_is_Jr4": false,
+      "theorem": "J2 names two O-signatures. Fail: (0,1,1,2,5,5,7) is J2."
+    },
+    "D": {
+      "proved": false,
+      "M_comp7": 336,
+      "den7": 409,
+      "n4_bad": 4844,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Total complementary M is named. Per-class M and N_r still have den 409. c not pinned. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
