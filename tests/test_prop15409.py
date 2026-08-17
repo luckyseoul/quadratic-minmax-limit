@@ -16,8 +16,10 @@ from e1_gmin_m4_prop15409 import (
     D_1d_wrong_m,
     D_form_on_lattice_general,
     D_lattice,
+    dform_minus_d1d_mod_p,
     live_u,
     main,
+    n1d_two_forms,
     on_lattice,
     paley_region_counts,
     prove_A,
@@ -48,6 +50,7 @@ def test_lattice_named():
     assert D_1d(11) == 126
     assert D_1d_wrong_m(5) == 9
     assert D_1d_wrong_m(5) != D_1d(5)
+    assert n1d_two_forms(5) and n1d_two_forms(7) and n1d_two_forms(11)
     assert D_live(5) == D_lattice(5, 2)
     assert D_live(7) == D_lattice(7, 57)
     assert live_u(5) == 2
@@ -62,7 +65,12 @@ def test_D_form_off_lattice():
     assert on_lattice(7, D_form(7))
     assert not on_lattice(3, D_form(3))
     assert not on_lattice(11, D_form(11))
-    assert (D_form(11) - D_1d(11)) % 11 != 0
+    assert (D_form(11) - D_1d(11)) % 11 == 35 % 11
+    assert dform_minus_d1d_mod_p(5) == 30
+    assert dform_minus_d1d_mod_p(7) == 35
+    assert dform_minus_d1d_mod_p(13) == 30
+    assert 30 % 13 != 0
+    assert 35 % 11 != 0
     assert D_form_on_lattice_general() is False
 
 

@@ -76,20 +76,27 @@
         5,
         7
       ],
-      "n_off": 19,
-      "off_head": [
-        3,
-        11,
-        13,
-        17,
-        19,
-        23,
-        29,
-        31
-      ],
+      "residues": {
+        "5": {
+          "got": 0,
+          "pred": 0
+        },
+        "7": {
+          "got": 0,
+          "pred": 0
+        },
+        "11": {
+          "got": 2,
+          "pred": 2
+        },
+        "13": {
+          "got": 4,
+          "pred": 4
+        }
+      },
       "D_form_11": 11106,
       "D_1d_11": 126,
-      "theorem": "D_form off the lattice at p=3 and all 11\u2264p\u226479. Fail: D_form(11)=126+11u."
+      "theorem": "D_form\u2212D_1d \u226130 (p\u22611) or 35 (p\u22613) (mod p); on-lattice iff p\u2208{5,7}. Fail: 30\u22610 (mod 13)."
     },
     "D": {
       "proved": true,

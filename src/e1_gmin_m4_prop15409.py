@@ -12,6 +12,7 @@ Does **not** flip phi_F_ge_6 / e1 / L / Aut-Schur / Gsum / pairing /
 
 ============================================================================
 Setup.  Aut_∞ = {x ↦ a x^{p^k}+b : a∈□, k∈{0,1}}, |G|=p²(p²−1).
+m=(p+1)/2 and n_1d = m C(p,m) = p C(p−1,(p−1)/2) (15.292).
 H_+ = n_1d Type+ 1D + NL G-orbits (15.331 A).  Translations
 preserving a size-k set are line-unions (15.332 A).  Nonsquare-
 direction lines meet every Max+ in (p−1)/2 points (15.305 C),
@@ -33,11 +34,13 @@ Theorem B — PROVED (A + 2p | n_1d).
       D = D_1d + p u,   u∈ℤ≥0.
   Fail: claim D_1d = m C(p−1,m−1)/2 (that is 9≠3 at p=5).  ∎
 
-Theorem C — PROVED (exact integers).
-  D_form = 2A − 3(p+1)/2 + C(p,(p−1)/2) equals live D at p=5,7
-  and is off the lattice of B at p=3 and at every prime 11≤p≤79.
-  Fail: claim D_form(11)=D_1d(11)+11u for some integer u
-  (11106−126 is not divisible by 11).  Do not rehab D_form.  ∎
+Theorem C — PROVED (congruence; every odd prime p≥5).
+  Lucas: C(p,(p−1)/2)≡0 (mod p).  (1+x)^{p−1}≡(1−x+x²−⋯)(1+x^p)
+  gives C(p−1,(p−1)/2)≡χ_p(−1) (mod p), so D_1d≡χ_p(−1)(p+1)/2.
+  D_form≡−8 n_pp − 3(p+1)/2, hence
+      D_form−D_1d ≡ 30 (p≡1),  35 (p≡3)  (mod p).
+  On the lattice iff p|30 (p≡1) or p|35 (p≡3), i.e. only p=5,7.
+  Fail: claim 30≡0 (mod 13) or 35≡0 (mod 11).  Do not rehab.  ∎
 
 Theorem D — PROVED (complete counts; p=5,7).
   Named Paley-region counts
@@ -87,6 +90,7 @@ from e1_gmin_m4_prop15292 import n_1d  # noqa: E402
 from e1_gmin_m4_prop15321 import Qpp_floor_ub  # noqa: E402
 from e1_gmin_m4_prop15326 import Q_lo_named  # noqa: E402
 from e1_gmin_m4_prop15357 import D_live  # noqa: E402
+from e1_gmin_m4_prop15355 import n_pp_named  # noqa: E402
 from e1_gmin_m4_prop15367 import A_num  # noqa: E402
 from e1_gmin_m4_prop15371 import D_form  # noqa: E402
 
@@ -157,6 +161,17 @@ def u_window(p: int) -> tuple[int, int]:
     umin = (dmin - d1) / p
     umax = (dmax - d1) / p
     return _ceil_frac(umin), _floor_frac(umax)
+
+
+def n1d_two_forms(p: int) -> bool:
+    """m C(p,m) = p C(p−1,(p−1)/2) with m=(p+1)/2."""
+    m = (p + 1) // 2
+    return m * comb(p, m) == p * comb(p - 1, (p - 1) // 2)
+
+
+def dform_minus_d1d_mod_p(p: int) -> int:
+    """Named residue: 30 if p≡1 (mod 4), 35 if p≡3 (mod 4)."""
+    return 30 if p % 4 == 1 else 35
 
 
 def D_form_on_lattice_general() -> bool:
@@ -234,6 +249,9 @@ def prove_B() -> dict:
         n1 = n_1d(p)
         d1 = D_1d(p)
         cen = comb(p - 1, (p - 1) // 2)
+        m = (p + 1) // 2
+        ok = ok and n1d_two_forms(p)
+        ok = ok and n1 == m * comb(p, m)
         ok = ok and n1 == p * cen
         ok = ok and 2 * p * d1 == n1
         ok = ok and cen % 2 == 0
@@ -259,34 +277,45 @@ def prove_B() -> dict:
 
 def prove_C() -> dict:
     ok = True
-    off = []
     on = []
+    residues = {}
     for p in P_FORM:
+        if p == 3:
+            ok = ok and not on_lattice(3, D_form(3))
+            continue
         Df = D_form(p)
-        hit = on_lattice(p, Df)
+        d1 = D_1d(p)
+        pred = dform_minus_d1d_mod_p(p)
+        got = (Df - d1) % p
+        ok = ok and got == (pred % p)
+        residues[str(p)] = {"got": got, "pred": pred % p}
+        # Lucas / Fermat neighbours used above
+        ok = ok and comb(p, (p - 1) // 2) % p == 0
+        if p % 4 == 1:
+            ok = ok and n_pp_named(p) == 2 * (p - 2)
+        else:
+            ok = ok and n_pp_named(p) == 3 * (p - 3) // 2
         if p in (5, 7):
-            ok = ok and hit and Df == D_live(p)
+            ok = ok and on_lattice(p, Df) and Df == D_live(p)
             on.append(p)
         else:
-            ok = ok and (not hit)
-            off.append(p)
-        if p == 11 and on_lattice(11, Df):
-            ok = False
-        if p >= 11 and hit:
-            ok = False
+            ok = ok and (not on_lattice(p, Df))
+            ok = ok and pred % p != 0
+    ok = ok and 30 % 13 != 0
+    ok = ok and 35 % 11 != 0
     ok = ok and not on_lattice(11, D_form(11))
-    ok = ok and (D_form(11) - D_1d(11)) % 11 != 0
     ok = ok and not D_form_on_lattice_general()
+    if 30 % 13 == 0 or 35 % 11 == 0:
+        ok = False
     return {
         "proved": bool(ok),
         "on": on,
-        "n_off": len(off),
-        "off_head": off[:8],
+        "residues": {k: residues[k] for k in ("5", "7", "11", "13")},
         "D_form_11": D_form(11),
         "D_1d_11": D_1d(11),
         "theorem": (
-            "D_form off the lattice at p=3 and all 11≤p≤79. "
-            "Fail: D_form(11)=126+11u."
+            "D_form−D_1d ≡30 (p≡1) or 35 (p≡3) (mod p); "
+            "on-lattice iff p∈{5,7}. Fail: 30≡0 (mod 13)."
         ),
     }
 
@@ -369,7 +398,7 @@ def main() -> dict:
     print(f"  B lattice: {B['proved']} D_1d5={D_1d(5)} u={B['u_live']}", flush=True)
     C = prove_C()
     print(
-        f"  C D_form off: {C['proved']} on={C['on']} n_off={C['n_off']}",
+        f"  C D_form cong: {C['proved']} on={C['on']} r11={C['residues']['11']}",
         flush=True,
     )
     D = prove_D()
