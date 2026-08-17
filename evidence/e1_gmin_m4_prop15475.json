@@ -1,0 +1,72 @@
+{
+  "prop": "15.475",
+  "title": "\u0394\u00b2 named on parallel-union class; complementary open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "parunion_delta2_named": true,
+    "complement_differs": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "3": {
+          "d2": 324.0,
+          "pred": 324,
+          "leak": 1.6023737137301804e-31
+        },
+        "5": {
+          "d2": 12500.000000000005,
+          "pred": 12500,
+          "leak": 7.518830502887768e-31
+        },
+        "7": {
+          "d2": 345744.0000000003,
+          "pred": 345744,
+          "leak": 1.232595164407831e-30
+        }
+      },
+      "theorem": "Parallel-union \u0394\u00b2 = M\u00b2 (p\u22613(4)) or p\u2075(p\u22121)\u00b2/4 (p\u22611(4)). Fail: p\u22613 formula at p=5."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "3": {
+          "nmatch": 6,
+          "ntot": 6,
+          "pred": 324.0
+        },
+        "5": {
+          "nmatch": 30,
+          "ntot": 130,
+          "pred": 12500.0
+        },
+        "7": {
+          "nmatch": 140,
+          "ntot": 5726,
+          "pred": 345744.0
+        }
+      },
+      "theorem": "Live parallel-unions match A; complementary \u0394\u00b2 differs. Fail: all p=5 Max+ have \u0394\u00b2=12500."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Names \u0394\u00b2 on the parallel-union class only. Complementary \u0394\u00b2 and Q_\u03c4 unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
