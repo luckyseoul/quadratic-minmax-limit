@@ -1,0 +1,82 @@
+{
+  "prop": "15.465",
+  "title": "Paley-N*/Qn = 1+4p(p-5)/[(p+1)(p-2)(p-1)^2] at p=5,7; drop (p-5) misses 1",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "ratio_named_live": true,
+    "four_from_Jacobi": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "R": "1",
+          "live": "1"
+        },
+        "7": {
+          "R": "187/180",
+          "live": "187/180"
+        }
+      },
+      "drop5": "5/72",
+      "theorem": "R=1+4p(p-5)/[(p+1)(p-2)(p-1)^2] equals the live ratio at p=5,7. Fail: drop (p-5) (5/72\u22601 at p=5)."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "J": -1,
+          "named": -1,
+          "four": 4
+        },
+        "7": {
+          "J": 1,
+          "named": 1,
+          "four": 4
+        },
+        "11": {
+          "J": 1,
+          "named": 1,
+          "four": 4
+        },
+        "13": {
+          "J": -1,
+          "named": -1,
+          "four": 4
+        },
+        "17": {
+          "J": -1,
+          "named": -1,
+          "four": 4
+        },
+        "19": {
+          "J": 1,
+          "named": 1,
+          "four": 4
+        }
+      },
+      "theorem": "J(\u03c7,\u03c7)=\u2212\u03c7(\u22121) so \u22124 J \u03c7(\u22121)=4. Fail: J=0."
+    },
+    "C": {
+      "proved": false,
+      "R13": "706/693",
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "R names the 409-free ratio at p=5,7 only. Q_\u03c4 unnamed for p\u226513. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
