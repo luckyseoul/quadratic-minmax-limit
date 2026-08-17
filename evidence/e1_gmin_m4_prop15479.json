@@ -1,0 +1,59 @@
+{
+  "prop": "15.479",
+  "title": "Complementary \u0394\u00b2=0 iff balanced full line; else 15.477",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "comp_delta2_named": true,
+    "p5_no_balanced": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "3": {
+          "n_comp": 0,
+          "n_bal": 0,
+          "n_nfull1": 6,
+          "err": 0.0
+        },
+        "5": {
+          "n_comp": 100,
+          "n_bal": 0,
+          "n_nfull1": 0,
+          "err": 9.094947017729282e-12
+        },
+        "7": {
+          "n_comp": 5586,
+          "n_bal": 1176,
+          "n_nfull1": 3528,
+          "err": 1.7462298274040222e-10
+        }
+      },
+      "theorem": "Complementary \u0394\u00b2=0 iff balanced full line; else 15.477. Fail: n_full=1 \u21d2 \u0394\u00b2=0."
+    },
+    "B": {
+      "proved": true,
+      "n_bal5": 0,
+      "theorem": "No p=5 complementary row is balanced-full-line. Fail: claim one is."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Complementary \u0394\u00b2 named as a type-function. Q_\u03c4 / u(p) unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
