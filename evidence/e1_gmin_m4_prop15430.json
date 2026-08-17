@@ -1,0 +1,106 @@
+{
+  "prop": "15.430",
+  "title": "L_par(R)=p(p\u22122)(10p\u00b2\u221221p\u22121)/90; Q_NL still open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "S_named": true,
+    "Lpar_R_named_in_p": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "hits": "4/4",
+          "shift_all": false
+        },
+        "7": {
+          "hits": "6/6",
+          "shift_all": false
+        },
+        "11": {
+          "hits": "10/10",
+          "shift_all": false
+        },
+        "13": {
+          "hits": "12/12",
+          "shift_all": false
+        },
+        "17": {
+          "hits": "16/16",
+          "shift_all": false
+        },
+        "19": {
+          "hits": "18/18",
+          "shift_all": false
+        }
+      },
+      "theorem": "S(s)=s\u00b2\u2212ps+p(p\u22121)/2. Fail: S(s)=s(p\u2212s) for all s."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "named": "24",
+          "flag": "24",
+          "naive": "24"
+        },
+        "7": {
+          "named": "133",
+          "flag": "133",
+          "naive": "150"
+        },
+        "11": {
+          "named": "5379/5",
+          "flag": "5379/5",
+          "naive": "1350"
+        },
+        "13": {
+          "named": "33748/15",
+          "flag": "33748/15",
+          "naive": "2904"
+        },
+        "17": {
+          "named": "7174",
+          "flag": "7174",
+          "naive": "9600"
+        },
+        "19": {
+          "named": "34561/3",
+          "flag": "34561/3",
+          "naive": "15606"
+        }
+      },
+      "indep_p5": "49/2",
+      "naive_p7": "150",
+      "theorem": "L_par(R)=p(p\u22122)(10p\u00b2\u221221p\u22121)/90. Fail: Johnson 49/2; naive 150 at p=7."
+    },
+    "C": {
+      "proved": false,
+      "Lpar_NL_7": "2113/19",
+      "Lpar_R_7": "133",
+      "Q_NL_5": "64/15",
+      "Q_1d_5": "16/9",
+      "Q_NL_gt_Q1d_p5": true,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q_NL_is_short_rational": false,
+      "note": "L_par(R) named in p. L_par^{NL}(7)=2113/19 is the Hoffman mix, not 133. Q_NL and u unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}

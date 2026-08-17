@@ -3,9 +3,10 @@
 Prop 15.429 — The 15.298 nonsquare Gauss coefficient is
     C_ns,χ(r) = −(q−1)/4
 for both χ and every r∈T\\{±1}.  Field-only (Max+-free).
-With L_ns=μ₊μ₋ the ns+base block of Q/q² is
-    (q−1)(4p+5−p²)/(2p²)
-and vanishes at p=5.  This does not name Q_NL or u in p.
+The constant-L_ns plug-in (L_ns≡μ₊μ₋) of the ns+base
+block is (q−1)(4p+5−p²)/(2p²) and vanishes at p=5.
+Live L_ns is not constant, so that plug-in is not the
+true ns block.  Q_NL and u stay unnamed in p.
 phi_F not imported.
 
 Does **not** flip phi_F_ge_6 / e1 / L / Aut-Schur / Gsum / pairing /
@@ -33,15 +34,15 @@ Theorem A2 — PROVED (Gauss of μ; Max+-free; all odd p).
   Hence G_μ(1)+G_μ(r)=p and A0=k(k+p)=p²(q−1)/4.
   Fail: claim G_μ(1)+G_μ(r)=0.  ∎
 
-Theorem B — PROVED (A + named L_ns + named A0).
-  The ns+base contribution to Q/q² is
-      4(q−1)/q + (16/q²)·2·μ₊μ₋·(−(q−1)/4)
-    = (q−1)(4p+5−p²)/(2p²).
-  Equals 0 at p=5 and −384/49 at p=7.
-  Fail: claim this equals Q_NL (0≠64/15; −384/49≠632/171).  ∎
+Theorem B — PROVED as a constant-L plug-in (not the live ns block).
+  If L_ns were the constant μ₊μ₋, the ns+base piece of Q/q²
+  would be (q−1)(4p+5−p²)/(2p²) (0 at p=5, −384/49 at p=7).
+  Live L_ns is not constant (p=5 values {12,13}, not 25/2),
+  so this is not the 15.298-NL ns contribution.
+  Fail: claim the plug-in equals Q_NL (0≠64/15).  ∎
 
-Theorem C — OPEN.  Square-s slots still carry Q_NL.
-  u and c(p) unnamed.  phi_F not imported.
+Theorem C — OPEN.  Square-s C_τ and per-s L_ns still carry
+  Q_NL.  u and c(p) unnamed.  phi_F not imported.
 
 ============================================================================
 Backend: field tables only.  Writes
@@ -180,8 +181,8 @@ def prove_B() -> dict:
         "QNL5": str(LIVE_QNL[5]),
         "QNL7": str(LIVE_QNL[7]),
         "theorem": (
-            "ns+base=(q−1)(4p+5−p²)/(2p²). 0 at p=5, −384/49 at p=7. "
-            "Fail: claim this is Q_NL."
+            "Constant-L_ns plug-in is (q−1)(4p+5−p²)/(2p²). "
+            "Not the live ns block. Fail: claim this is Q_NL."
         ),
     }
 
