@@ -1,0 +1,101 @@
+{
+  "prop": "15.398",
+  "title": "p\u22611 floor reduces to Q++\u2265Q_N* and Q++\u2264Q^{ub}; neither proved",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Qeq_ge_Qlo": true,
+    "live_Qpp_ge_Qn": true,
+    "four_closes_ub_p_ge_13": true,
+    "sbox_qn_and_four": false,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "Q_eq": "16/5",
+          "Q_lo": "11/4"
+        },
+        "13": {
+          "Q_eq": "160/41",
+          "Q_lo": "15/4"
+        },
+        "17": {
+          "Q_eq": "280/71",
+          "Q_lo": "245/64"
+        },
+        "29": {
+          "Q_eq": "832/209",
+          "Q_lo": "767/196"
+        },
+        "37": {
+          "Q_eq": "1360/341",
+          "Q_lo": "425/108"
+        }
+      },
+      "theorem": "Q_eq\u2265Q_lo via (p\u00b2+11)(p\u22123)>0. Fail: 16/5=11/4."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "Qpp": "48/13",
+          "Qn": "32/13"
+        },
+        "7": {
+          "Qpp": "1544/409",
+          "Qn": "1440/409"
+        }
+      },
+      "theorem": "Live Q++\u2265Q_N*; on S0 that is Q++\u2265Q_eq. Fail: 48/13<32/13."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "Q_ub": "26/7",
+          "four_le_ub": false
+        },
+        "13": {
+          "Q_ub": "310/71",
+          "four_le_ub": true
+        },
+        "17": {
+          "Q_ub": "560/127",
+          "four_le_ub": true
+        },
+        "29": {
+          "Q_ub": "1742/391",
+          "four_le_ub": true
+        },
+        "37": {
+          "Q_ub": "2890/647",
+          "four_le_ub": true
+        }
+      },
+      "theorem": "4\u2264Q^{ub} for p\u22611\u226513, not at p=5. Fail: 4\u226426/7."
+    },
+    "D": {
+      "proved": false,
+      "sbox_qn_and_four": false,
+      "Q_T_5": "64/15",
+      "Q_T_gt_4": true,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "p\u22611 floor reduces to Q++\u2265Q_N* and Q++\u2264Q^{ub} (Q++\u22644 would serve for p\u226513). Neither is Max+-free. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
