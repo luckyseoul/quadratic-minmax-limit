@@ -1,0 +1,151 @@
+{
+  "prop": "15.409",
+  "title": "D = C(p\u22121,(p\u22121)/2)/2 + p u; D_form off the lattice for all p\u226511; Paley regions miss 409",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Hplus_cong_n1d_mod_psq": true,
+    "D_lattice_D1d_plus_p_u": true,
+    "D_form_off_lattice_p_ge_11": true,
+    "paley_region_misses_409": true,
+    "u_window_pins_p5": true,
+    "D_form_on_lattice_general": false,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "type_I_aut_e_3AB_positive_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "N": 130,
+          "n_1d": 30,
+          "N_mod": 5
+        },
+        "7": {
+          "N": 5726,
+          "n_1d": 140,
+          "N_mod": 42
+        }
+      },
+      "p11_form_mod_p": 0,
+      "p11_form_mod_psq": 44,
+      "theorem": "|H+| \u2261 n_1d (mod p\u00b2). Fail: claim only mod p (D_form(11) is 0 mod 11 and 44 mod 121)."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "D_1d": 3,
+          "n_1d": 30
+        },
+        "7": {
+          "D_1d": 10,
+          "n_1d": 140
+        },
+        "11": {
+          "D_1d": 126,
+          "n_1d": 2772
+        },
+        "13": {
+          "D_1d": 462,
+          "n_1d": 12012
+        },
+        "17": {
+          "D_1d": 6435,
+          "n_1d": 218790
+        },
+        "19": {
+          "D_1d": 24310,
+          "n_1d": 923780
+        },
+        "23": {
+          "D_1d": 352716,
+          "n_1d": 16224936
+        }
+      },
+      "u_live": {
+        "5": 2,
+        "7": 57
+      },
+      "theorem": "D=C(p\u22121,(p\u22121)/2)/2 + p u. Fail: D_1d=m C(p\u22121,m\u22121)/2 (9 at p=5)."
+    },
+    "C": {
+      "proved": true,
+      "on": [
+        5,
+        7
+      ],
+      "n_off": 19,
+      "off_head": [
+        3,
+        11,
+        13,
+        17,
+        19,
+        23,
+        29,
+        31
+      ],
+      "D_form_11": 11106,
+      "D_1d_11": 126,
+      "theorem": "D_form off the lattice at p=3 and all 11\u2264p\u226479. Fail: D_form(11)=126+11u."
+    },
+    "D": {
+      "proved": true,
+      "p5": {
+        "squares": 12,
+        "chi_x_xm1": 5,
+        "pp_raw": 2,
+        "parallelogram": 24,
+        "box_xm1_ym1": 25
+      },
+      "p7": {
+        "squares": 24,
+        "chi_x_xm1": 11,
+        "pp_raw": 6,
+        "parallelogram": 144,
+        "box_xm1_ym1": 121
+      },
+      "theorem": "Paley-region counts miss {13,409}. Fail: parallelogram=409 (it is 144)."
+    },
+    "E": {
+      "proved": true,
+      "window_5": [
+        2,
+        2
+      ],
+      "window_7": [
+        53,
+        64
+      ],
+      "live_u": {
+        "5": 2,
+        "7": 57
+      },
+      "theorem": "S0 floor window pins u(5)=2 and is {53..64} at p=7. Fail: p=5 window contains 0 or 1."
+    },
+    "F": {
+      "proved": false,
+      "D_form_on_lattice_general": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "type_I_aut_e_3AB_positive_general": false,
+      "type_I_multilevel_bad_case_ND_closed": false,
+      "note": "u(p) unnamed for p\u22657. D_form dead as a general name. Paley regions miss 409. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty",
+    "type_I_multilevel_bad_case_ND_closed",
+    "type_I_aut_e_3AB_positive_general"
+  ]
+}
