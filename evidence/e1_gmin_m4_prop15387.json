@@ -1,0 +1,146 @@
+{
+  "prop": "15.387",
+  "title": "T occupancy named in p; p=7 NL hists from 15.352; ensemble open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "R_occupancy": true,
+    "T_occupancy": true,
+    "p7_NL_hists_from_sigs": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "En4_R": {
+        "5": "354/5",
+        "7": "325",
+        "11": "2303",
+        "13": "4670"
+      },
+      "theorem": "R: P(k)=1/p on {0..p\u22121}. Fail: drop (3p\u00b2\u22123p\u22121)."
+    },
+    "B": {
+      "proved": true,
+      "En4_T": {
+        "5": "354/5",
+        "7": "264",
+        "13": "2742",
+        "17": "7512",
+        "29": "283206/5"
+      },
+      "P_T_mu": {
+        "5": "1/5",
+        "7": "5/14",
+        "13": "55/91"
+      },
+      "theorem": "T is 3 R + (n_sq\u22123) C. Fail: all-R at p=7 (1/7\u22605/14)."
+    },
+    "C": {
+      "proved": true,
+      "hists": {
+        "T_CRRR": [
+          3,
+          3,
+          3,
+          10,
+          3,
+          3,
+          3,
+          0
+        ],
+        "TNC": [
+          1,
+          6,
+          5,
+          6,
+          2,
+          7,
+          0,
+          1
+        ],
+        "SHARP": [
+          0,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "LAST": [
+          1,
+          4,
+          8,
+          7,
+          1,
+          4,
+          2,
+          1
+        ],
+        "YSTAR": [
+          2,
+          5,
+          4,
+          6,
+          4,
+          5,
+          2,
+          0
+        ],
+        "TNC2": [
+          4,
+          4,
+          0,
+          6,
+          8,
+          6,
+          0,
+          0
+        ],
+        "HS": [
+          4,
+          0,
+          0,
+          21,
+          0,
+          0,
+          0,
+          3
+        ]
+      },
+      "En4": {
+        "T_CRRR": "264",
+        "TNC": "1965/7",
+        "SHARP": "300",
+        "LAST": "2112/7",
+        "YSTAR": "1824/7",
+        "TNC2": "1572/7",
+        "HS": "318"
+      },
+      "theorem": "p=7 exotic hists = 15.352 signature sums. Fail: T\u2299NC\u00b2 is a 1176."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "n_1d": {
+        "5": 30,
+        "7": 140
+      },
+      "note": "T occupancy named in p; exotic O and ensemble den D open. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
