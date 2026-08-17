@@ -113,7 +113,8 @@ def prove_A() -> dict:
         "p5": str(LIVE_LN[5]),
         "theorem": (
             "L_N* pair mix 4:8 is 12475/114. p=5 is 24=L_par(R). "
-            "Fail: L_N*(0∞)=L_spl (gap 73/19); one pair type."
+            "Fail: L_N*(0∞)=L_spl (12349/114 vs 673/6, gap 73/19); "
+            "mix vs L_spl is 52/19; one pair type."
         ),
     }
 
