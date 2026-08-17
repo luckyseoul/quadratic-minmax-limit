@@ -1,0 +1,13 @@
+{
+  "A": true,
+  "B": true,
+  "C": true,
+  "p13": {
+    "c_min": 551,
+    "c_max_lo": 642,
+    "n_lo": 92,
+    "c_eq": 617,
+    "n_eq": 67
+  },
+  "n_halfnet5": 130
+}

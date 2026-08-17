@@ -1,0 +1,87 @@
+{
+  "prop": "15.451",
+  "title": "Q++\u2265Q_eq cuts c_window at c_eq (67 points at p=13); p=5 half-net count equals |H+|; Type\u2212 is not a half-net",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "c_eq_cut": true,
+    "p5_halfnet_iff": true,
+    "type_minus_not_halfnet": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "c_min": 1,
+          "c_max_lo": 1,
+          "n_lo": 1,
+          "c_eq": 1,
+          "n_eq": 1
+        },
+        "13": {
+          "c_min": 551,
+          "c_max_lo": 642,
+          "n_lo": 92,
+          "c_eq": 617,
+          "n_eq": 67
+        },
+        "17": {
+          "c_min": 5784,
+          "c_max_lo": 6668,
+          "n_lo": 885,
+          "c_eq": 6471,
+          "n_eq": 688
+        },
+        "29": {
+          "c_min": 10241284,
+          "c_max_lo": 11666518,
+          "n_lo": 1425235,
+          "c_eq": 11467579,
+          "n_eq": 1226296
+        }
+      },
+      "theorem": "Q++\u2265Q_eq \u21d4 c\u2264c_eq. Fail: Q_lo cut at p=13 (642\u2260617)."
+    },
+    "B": {
+      "proved": true,
+      "n_halfnet": 130,
+      "Hplus": 130,
+      "n_1d": 30,
+      "theorem": "p=5 half-net count=130=|H+|. Fail: count=n_1d=30."
+    },
+    "C": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "n_type_minus": 30,
+          "n_halfnet": 0
+        },
+        "7": {
+          "n_type_minus": 140,
+          "n_halfnet": 0
+        }
+      },
+      "theorem": "Type\u2212 is not a half-net. Fail: Type\u2212 \u2282 H+."
+    },
+    "D": {
+      "proved": false,
+      "n_eq_13": 67,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "c_eq leaves 67 lattice points at p=13. Half-net count unnamed for p\u22657. Q_\u03c4 unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
