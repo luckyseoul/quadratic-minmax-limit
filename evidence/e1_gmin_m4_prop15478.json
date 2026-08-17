@@ -1,0 +1,136 @@
+{
+  "prop": "15.478",
+  "title": "Paley++ type-indicator Fourier: n_++ named; linear-\u03c7 / quartic families miss Q++",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "n_pp_CM_named": true,
+    "K_lin_gauss_named": true,
+    "lin_misses_Qpp": true,
+    "quartic_and_twolevel_dead": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "3": {
+          "live": 0,
+          "named": 0,
+          "aE2": 0
+        },
+        "5": {
+          "live": 2,
+          "named": 2,
+          "aE2": 4
+        },
+        "7": {
+          "live": 6,
+          "named": 6,
+          "aE2": 0
+        },
+        "11": {
+          "live": 16,
+          "named": 16,
+          "aE2": 0
+        },
+        "13": {
+          "live": 18,
+          "named": 18,
+          "aE2": 36
+        },
+        "17": {
+          "live": 38,
+          "named": 38,
+          "aE2": 4
+        },
+        "19": {
+          "live": 48,
+          "named": 48,
+          "aE2": 0
+        },
+        "23": {
+          "live": 70,
+          "named": 70,
+          "aE2": 0
+        },
+        "29": {
+          "live": 98,
+          "named": 98,
+          "aE2": 100
+        },
+        "31": {
+          "live": 126,
+          "named": 126,
+          "aE2": 0
+        }
+      },
+      "theorem": "n_++=(p\u00b2+2p\u221215\u2212a_E\u00b2)/8. Fail: drop a_E\u00b2 at p=5; interpolant at p=11."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "err": 5.164700352369266e-16,
+          "err_drop3": 0.37500000000000044
+        },
+        "7": {
+          "err": 7.976043175647668e-16,
+          "err_drop3": 0.37500000000000044
+        }
+      },
+      "theorem": "K_lin(\u03b1)=(1/8)[\u03c7(\u03b1)G(1+e(\u03b1)+e(\u2212\u03b1))\u22123] (\u03b1\u22600, r-sums on F_q^\u00d7). Fail: drop the \u22123."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "Q_lin": "87/13",
+          "Q_full": "48/13",
+          "live": "48/13"
+        },
+        "7": {
+          "Q_lin": "5039/1227",
+          "Q_full": "1544/409",
+          "live": "1544/409"
+        }
+      },
+      "theorem": "Linear-\u03c7 / I_sm-truncation predictor is 87/13 and 5039/1227, not live Q++. Full I_++ recovers live. Fail: Q++_lin=48/13."
+    },
+    "D": {
+      "proved": true,
+      "proj_err": {
+        "5": 2.4120226591665963,
+        "7": 3.048917339522305
+      },
+      "Q_proj5": 2.871794871794873,
+      "n_twolevel": {
+        "5": 100,
+        "7": 0
+      },
+      "theorem": "Quartic proj of K\u0303_I misses; \u03a9\u00b1 two-level is 0 rows at p=7. Fail: every p=7 Max+ is 2-level on \u03a9\u00b1."
+    },
+    "E": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Linear-\u03c7 and quartic-projected type-indicator Fourier predictors miss Q++. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "referees": {
+    "claude_math_review": "PASS-WITH-NOTE",
+    "openai_math_review": "PASS-WITH-NOTE",
+    "action": "do_not_branch"
+  },
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
