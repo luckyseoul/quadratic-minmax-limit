@@ -1,0 +1,163 @@
+{
+  "prop": "15.396",
+  "title": "Dual floor \u03bb=\u03bb_mean+\u27e8\u0394Q,J\u27e9; Q\u22650 dual misses; phi_F unimported",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Q_avg_from_S0": true,
+    "lambda_mean_gt_6": true,
+    "rearrangement_dual_misses": true,
+    "dual_ge_6": false,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "Q_avg": "16/5",
+          "Q_wick": "48/13",
+          "S0": "48"
+        },
+        "7": {
+          "Q_avg": "40/11",
+          "Q_wick": "96/25",
+          "S0": "96"
+        },
+        "11": {
+          "Q_avg": "112/29",
+          "Q_wick": "240/61",
+          "S0": "240"
+        },
+        "13": {
+          "Q_avg": "160/41",
+          "Q_wick": "336/85",
+          "S0": "336"
+        },
+        "17": {
+          "Q_avg": "280/71",
+          "Q_wick": "576/145",
+          "S0": "576"
+        },
+        "19": {
+          "Q_avg": "352/89",
+          "Q_wick": "720/181",
+          "S0": "720"
+        },
+        "29": {
+          "Q_avg": "832/209",
+          "Q_wick": "1680/421",
+          "S0": "1680"
+        },
+        "37": {
+          "Q_avg": "1360/341",
+          "Q_wick": "2736/685",
+          "S0": "2736"
+        }
+      },
+      "theorem": "Q_avg=4(q\u22129)/(q\u22125) from S0. Fail: 4(q\u22121)/(q+1)."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "lambda_mean": "48/5",
+          "thresh": "-18/5"
+        },
+        "7": {
+          "lambda_mean": "96/11",
+          "thresh": "-30/11"
+        },
+        "11": {
+          "lambda_mean": "240/29",
+          "thresh": "-66/29"
+        },
+        "13": {
+          "lambda_mean": "336/41",
+          "thresh": "-90/41"
+        },
+        "17": {
+          "lambda_mean": "576/71",
+          "thresh": "-150/71"
+        },
+        "19": {
+          "lambda_mean": "720/89",
+          "thresh": "-186/89"
+        },
+        "29": {
+          "lambda_mean": "1680/209",
+          "thresh": "-426/209"
+        },
+        "37": {
+          "lambda_mean": "2736/341",
+          "thresh": "-690/341"
+        }
+      },
+      "theorem": "\u03bb=8(q\u22121)/(q\u22125)+\u27e8\u0394Q,J\u27e9 and the mean mode is >6. Fail: \u03bb_mean=6 at p=5."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "thresh": "-18/5",
+          "dual_Qge0": "-32/5",
+          "dual_box04": "-48/5"
+        },
+        "7": {
+          "thresh": "-30/11",
+          "dual_Qge0": "-80/11",
+          "dual_box04": "-96/11"
+        },
+        "11": {
+          "thresh": "-66/29",
+          "dual_Qge0": "-224/29",
+          "dual_box04": "-240/29"
+        },
+        "13": {
+          "thresh": "-90/41",
+          "dual_Qge0": "-320/41",
+          "dual_box04": "-336/41"
+        },
+        "17": {
+          "thresh": "-150/71",
+          "dual_Qge0": "-560/71",
+          "dual_box04": "-576/71"
+        },
+        "19": {
+          "thresh": "-186/89",
+          "dual_Qge0": "-704/89",
+          "dual_box04": "-720/89"
+        },
+        "29": {
+          "thresh": "-426/209",
+          "dual_Qge0": "-1664/209",
+          "dual_box04": "-1680/209"
+        },
+        "37": {
+          "thresh": "-690/341",
+          "dual_Qge0": "-2720/341",
+          "dual_box04": "-2736/341"
+        }
+      },
+      "theorem": "Q\u22650 and Q\u2208[0,4] rearrangement duals miss \u22122(q+11)/(q\u22125). Fail: 8(q\u22129)\u22642(q+11) at p=5."
+    },
+    "D": {
+      "proved": false,
+      "dual_ge_6": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Mean mode is above 6; rearrangement duals miss the cov threshold. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
