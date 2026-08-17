@@ -1,0 +1,78 @@
+{
+  "prop": "15.423",
+  "title": "L_pm1=E[N\u00b2] Hoffman mix 4435/38; w_L\u2260w_Q; Q_NL still open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Lpm1_is_EN2": true,
+    "wL_neq_wQ": true,
+    "Lpm1_NL_named": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "live": {
+        "5": "26",
+        "7": "4435/38"
+      },
+      "mu2": {
+        "5": "25",
+        "7": "441/4"
+      },
+      "theorem": "L_pm1=E[N\u00b2] is 26 and 4435/38. Fail: \u03bc_+\u00b2."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "w_L": "1",
+          "w_Q": "3/13"
+        },
+        "7": {
+          "w_L": "2/3",
+          "w_Q": "10/409"
+        }
+      },
+      "theorem": "w_L=n_par/n_++ \u2260 w_Q=n_1d/|H+|. Fail: w_L=w_Q."
+    },
+    "C": {
+      "proved": true,
+      "types": {
+        "721/6": "721/6",
+        "346/3": "346/3",
+        "113": "113",
+        "231/2": "231/2",
+        "737/6": "737/6",
+        "695/6": "695/6"
+      },
+      "mix": "4435/38",
+      "p5": "26",
+      "dropC": "427/3",
+      "theorem": "Hoffman mix of same-class E[J\u00b2] is 4435/38; p=5 flag is 26. Fail: drop C (427/3)."
+    },
+    "D": {
+      "proved": false,
+      "Q_NL_5": "64/15",
+      "Q_1d_5": "16/9",
+      "Q_NL_gt_Q1d_p5": true,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q_NL_is_short_rational": false,
+      "note": "pm1 named. N* / --N1 and Q_NL unnamed in p. w_L is not w_Q. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
