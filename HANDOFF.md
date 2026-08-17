@@ -1,5 +1,5 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-17 evening):** Leftover 1 still **OPEN**. 15.488–15.493 shipped. 15.493: \(\{1,\psi\}\) Gram + 15.491 remainders do not certify \(2-\langle\delta,\psi\rangle\). Do **not** import \(\phi_F\). Residual (ii) \(k\ge4p\) and Type I multi-level still OPEN. Aut-Schur **false**. Live `e1` is the old AND. \(L=\tfrac12\) is **not settled**.  
+> **Now (2026-08-17 evening):** Leftover 1 still **OPEN**. 15.494: \(A_r=E[\hat1_D(\xi)\hat1_D(r\xi)\hat1_D(-(1+r)\xi)]=0\) iff \(\chi(r+1)=-1\) (support of \(\hat z\)). Does not name \(Q_\tau\). Do **not** import \(\phi_F\). Residual (ii) / Type I still OPEN. Aut-Schur **false**. Live `e1` is the old AND. \(L=\tfrac12\) is **not settled**.  
 > Afternoon: **`evidence/SESSION_HANDOFF_2026-08-17_qtau.md`**. Morning: **`evidence/SESSION_HANDOFF_2026-08-17_leftover.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**. Next `/goal`: **`GOAL.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
@@ -29,7 +29,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **Done (2026-08-06):** gap named (Gsum disj LB / 15.158); claim retracted OPEN; short package `evidence/share/denseness_path_package.md`; load-bearing tests; 3 cold AI passes → NOT_PROVED + honest OPEN.
 
-**Open (blocks \(L=\tfrac12\)):** (1) \(\lambda_{\min}(\Phi)\ge6\) — name \(Q_\tau\) or \(A_4/G(\bar\psi)\ge0\) (15.493: no Gram+15.491 cert). (2) residual (ii) for even \(k\ge4p\); (3) Type I when Max− is not two-level; (4) Lemma D already flagged True — do not cascade. Live `e1` is still True (wiring only).  
+**Open (blocks \(L=\tfrac12\)):** (1) \(\lambda_{\min}(\Phi)\ge6\) — name \(Q_\tau\) or \(A_4/G(\bar\psi)\ge0\) (15.494: \(A_r=0\) on \(\chi(r+1)=-1\), not a \(Q_\tau\) name). (2) residual (ii) for even \(k\ge4p\); (3) Type I when Max− is not two-level; (4) Lemma D already flagged True — do not cascade. Live `e1` is still True (wiring only).  
 
 **Non-required:** Path-C / \(16N\).  
 
