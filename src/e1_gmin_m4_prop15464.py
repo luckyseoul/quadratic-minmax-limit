@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
 Prop 15.464 — Three Gauss/design facts about Q_τ on the
-15.290 Paley×norm types.  (1) ns-line hypergeometric names
-E[N]=μ_−.  (2) Live Paley-N* Q is 1496/409 at p=7, not the
-S0 dual Qn=1440/409.  (3) Mean-field L=μ_χ(d) μ_χ(sd) in
-the 15.298 half-Gauss formula misses live Q++.
+15.290 Paley×norm types.  (1) Uniform-μ-subset model on
+each ns-line names E[N]=μ_− (a fixed 2-set need not hit
+the mean).  (2) Live Paley-N* Q is 1496/409 at p=7, not
+the S0 dual Qn=1440/409.  (3) Mean-field L=μ_χ(d) μ_χ(sd)
+in the 15.298 half-Gauss formula misses live Q++.
 phi_F not imported.
 
 Does **not** flip phi_F_ge_6 / e1 / L / Aut-Schur / Gsum / pairing /
@@ -17,10 +18,14 @@ E[N(δ)]=μ_± by χ(δ).  15.290 types: pm1, Paley×{sub,N1,N*}.
 
 ============================================================================
 Theorem A — PROVED (hypergeometric; all odd p≥5).
-  On each of the p lines parallel to an ns-direction, a
-  μ-half-net is a μ-subset of F_p.  Hence
+  Model: on each of the p lines parallel to an ns-direction,
+  D∩ℓ is an independent uniform random μ-subset of F_p
+  (not a fixed subset).  Then
+      E[|A∩(A−1)|] = C(p−2,μ−2)/C(p,μ)·p = μ(μ−1)/(p−1),
       E[N(δ)] = p μ(μ−1)/(p−1) = p(p−3)/4 = μ_−.
-  Fail: drop p−1 (then  p μ(μ−1) = 10 ≠ 5/2 at p=5).  ∎
+  A fixed A need not hit the mean: A={0,1} at p=5 has
+  |A∩(A−1)|=1 ≠ 1/2.  Fail: drop p−1 (10≠5/2);
+  fail: claim every 2-subset has |A∩(A−1)|=1/2.  ∎
 
 Theorem B — PROVED (15.290 live Q; certified p=5,7).
   Paley×norm Q-values:
@@ -54,6 +59,7 @@ import sys
 from collections import defaultdict
 from fractions import Fraction
 from functools import lru_cache
+from math import comb
 from pathlib import Path
 
 import numpy as np
@@ -81,7 +87,7 @@ CAT = ROOT / "evidence" / "e1_gmin_m4_prop15464_catalog.json"
 
 
 def E_N_ns_named(p: int) -> Fraction:
-    """Hypergeometric E[N] on an ns-parallel class."""
+    """E[N] if each ns-line section is a uniform random μ-subset."""
     mu = (p - 1) // 2
     return Fraction(p * mu * (mu - 1), p - 1)
 
@@ -89,6 +95,23 @@ def E_N_ns_named(p: int) -> Fraction:
 def E_N_ns_drop_den(p: int) -> Fraction:
     mu = (p - 1) // 2
     return Fraction(p * mu * (mu - 1))
+
+
+def line_pair_mean(p: int) -> Fraction:
+    """E[|A∩(A−1)|] for A uniform among μ-subsets of F_p."""
+    mu = (p - 1) // 2
+    return Fraction(mu * (mu - 1), p - 1)
+
+
+def line_pair_mean_from_binom(p: int) -> Fraction:
+    mu = (p - 1) // 2
+    return Fraction(comb(p - 2, mu - 2) * p, comb(p, mu))
+
+
+def line_pair_fixed_01(p: int) -> int:
+    """|A∩(A−1)| for the fixed 2-set {0,1}.  Not the mean."""
+    A = {0, 1}
+    return sum(1 for x in range(p) if x in A and (x - 1) % p in A)
 
 
 @lru_cache(maxsize=4)
@@ -156,6 +179,10 @@ def prove_A() -> dict:
         en = E_N_ns_named(p)
         if en != mu_minus(p):
             ok = False
+        if line_pair_mean(p) != line_pair_mean_from_binom(p):
+            ok = False
+        if p * line_pair_mean(p) != en:
+            ok = False
         rows[str(p)] = str(en)
     if E_N_ns_drop_den(5) == mu_minus(5):
         ok = False
@@ -163,12 +190,22 @@ def prove_A() -> dict:
         ok = False
     if E_N_ns_named(5) != Fraction(5, 2):
         ok = False
+    if line_pair_fixed_01(5) != 1:
+        ok = False
+    if line_pair_fixed_01(5) == line_pair_mean(5):
+        ok = False
+    if line_pair_mean(5) != Fraction(1, 2):
+        ok = False
     return {
         "proved": bool(ok),
         "rows": rows,
         "drop_p5": str(E_N_ns_drop_den(5)),
+        "fixed_01_p5": line_pair_fixed_01(5),
+        "mean_line_p5": str(line_pair_mean(5)),
         "theorem": (
-            "E[N]_ns=p μ(μ-1)/(p-1)=μ_-. Fail: drop p-1 (10≠5/2)."
+            "Uniform-μ-subset model: E[N]_ns=μ_-. "
+            "Fail: drop p-1 (10≠5/2); fail: every 2-set has mean 1/2 "
+            "({0,1} has 1)."
         ),
     }
 

@@ -11,6 +11,9 @@ from e1_gmin_m4_prop15330 import LIVE_QPP
 from e1_gmin_m4_prop15464 import (
     E_N_ns_drop_den,
     E_N_ns_named,
+    line_pair_fixed_01,
+    line_pair_mean,
+    line_pair_mean_from_binom,
     live_QN_paley,
     live_Q_by_type,
     main,
@@ -30,6 +33,11 @@ def test_ns_hypergeometric():
     assert E_N_ns_named(13) == mu_minus(13)
     assert E_N_ns_drop_den(5) == 10
     assert E_N_ns_drop_den(5) != mu_minus(5)
+    assert line_pair_mean(5) == Fraction(1, 2)
+    assert line_pair_mean(5) == line_pair_mean_from_binom(5)
+    assert line_pair_fixed_01(5) == 1
+    assert line_pair_fixed_01(5) != line_pair_mean(5)
+    assert 5 * line_pair_mean(5) == E_N_ns_named(5)
 
 
 def test_paley_Nstar_not_Qn():

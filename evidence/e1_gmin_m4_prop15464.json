@@ -21,7 +21,9 @@
         "19": "76"
       },
       "drop_p5": "10",
-      "theorem": "E[N]_ns=p \u03bc(\u03bc-1)/(p-1)=\u03bc_-. Fail: drop p-1 (10\u22605/2)."
+      "fixed_01_p5": 1,
+      "mean_line_p5": "1/2",
+      "theorem": "Uniform-\u03bc-subset model: E[N]_ns=\u03bc_-. Fail: drop p-1 (10\u22605/2); fail: every 2-set has mean 1/2 ({0,1} has 1)."
     },
     "B": {
       "proved": true,
