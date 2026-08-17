@@ -1,0 +1,68 @@
+{
+  "prop": "15.413",
+  "title": "NL parallelogram P(++)=4k(k\u22121) and L=q\u22121 at p=5; both die at p=7",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "P_ns_is_W_mass": true,
+    "p5_NL_P_is_4kkm1": true,
+    "p7_NL_P_not_4kkm1": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "P_ns": "300",
+          "W": 300,
+          "P_pp": "360"
+        },
+        "7": {
+          "P_ns": "3528",
+          "W": 3528,
+          "P_pp": "216580/57"
+        }
+      },
+      "theorem": "P(nonsquare)=W-mass on NL. Fail: P(++)=W at p=5 (360\u2260300)."
+    },
+    "B": {
+      "proved": true,
+      "P_pp": "360",
+      "P_Nstar": "360",
+      "L_pp": "24",
+      "P_pm1": "390",
+      "theorem": "p=5 NL: P(++)=P(N*)=4k(k\u22121)=360, L(1,++)=q\u22121=24. Fail: P(pm1)=360; L=k."
+    },
+    "C": {
+      "proved": true,
+      "P_pp": "216580/57",
+      "fourkk": 1680,
+      "L_pp": "38143/342",
+      "q_minus_1": 48,
+      "theorem": "p=7 NL: P(++)=216580/57\u22601680, L(1,++)=38143/342\u226048. Fail: 4k(k\u22121) or q\u22121."
+    },
+    "D": {
+      "proved": false,
+      "Q_NL_5": "64/15",
+      "Q_NL_7": "632/171",
+      "Q_NL_is_short_rational": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "note": "p=5 parallelogram/L names die at p=7. Q_NL unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
