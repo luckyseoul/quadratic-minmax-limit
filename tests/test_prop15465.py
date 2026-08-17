@@ -35,7 +35,7 @@ def test_ratio_hits_live():
 
 
 def test_drop_pm5_misses_p5():
-    assert R_drop_pm5(5) == Fraction(5, 72)
+    assert R_drop_pm5(5) == Fraction(77, 72)
     assert R_drop_pm5(5) != 1
     assert R_drop_pm5(5) != R_named(5)
     # 409 cancelled: live ratio is 1496/1440

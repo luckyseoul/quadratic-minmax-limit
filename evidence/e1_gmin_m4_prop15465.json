@@ -21,8 +21,8 @@
           "live": "187/180"
         }
       },
-      "drop5": "5/72",
-      "theorem": "R=1+4p(p-5)/[(p+1)(p-2)(p-1)^2] equals the live ratio at p=5,7. Fail: drop (p-5) (5/72\u22601 at p=5)."
+      "drop5": "77/72",
+      "theorem": "R=1+4p(p-5)/[(p+1)(p-2)(p-1)^2] equals the live ratio at p=5,7. Fail: drop (p-5) (77/72\u22601 at p=5)."
     },
     "B": {
       "proved": true,

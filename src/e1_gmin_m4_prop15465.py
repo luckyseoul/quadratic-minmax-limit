@@ -18,8 +18,8 @@ Setup.  15.464 B: Paley-N* Q is 32/13, 1496/409; S0 Qn is
 Theorem A — PROVED (named field counts; p=5,7 live).
   R(p) = 1 + 4p(p−5)/[(p+1)(p−2)(p−1)²]
   equals live_QN_paley(p)/Qn(Q++) at p=5 and p=7.
-  Fail: drop (p−5) (then R=4p/[(p+1)(p−2)(p−1)²] is
-  5/72 ≠ 1 at p=5).  ∎
+  Fail: drop (p−5) (then 1+4p/[(p+1)(p−2)(p−1)²] is
+  77/72 ≠ 1 at p=5).  ∎
 
 Theorem B — PROVED (Jacobi identity on F_p).
   J(χ,χ)=∑_x χ(x)χ(1−x)=−χ(−1), so
@@ -87,9 +87,9 @@ def R_named(p: int) -> Fraction:
 
 
 def R_drop_pm5(p: int) -> Fraction:
-    """Fail-when-wrong: omit (p−5)."""
+    """Fail-when-wrong: omit (p−5) but keep the 1+."""
     den = (p + 1) * (p - 2) * (p - 1) ** 2
-    return Fraction(4 * p, den)
+    return 1 + Fraction(4 * p, den)
 
 
 def live_ratio(p: int) -> Fraction:
@@ -112,7 +112,7 @@ def prove_A() -> dict:
         ok = False
     if R_drop_pm5(5) == 1:
         ok = False
-    if R_drop_pm5(5) != Fraction(5, 72):
+    if R_drop_pm5(5) != Fraction(77, 72):
         ok = False
     if live_ratio(7) == 1:
         ok = False
@@ -122,7 +122,7 @@ def prove_A() -> dict:
         "drop5": str(R_drop_pm5(5)),
         "theorem": (
             "R=1+4p(p-5)/[(p+1)(p-2)(p-1)^2] equals the live "
-            "ratio at p=5,7. Fail: drop (p-5) (5/72≠1 at p=5)."
+            "ratio at p=5,7. Fail: drop (p-5) (77/72≠1 at p=5)."
         ),
     }
 
