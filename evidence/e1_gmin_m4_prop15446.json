@@ -1,0 +1,67 @@
+{
+  "prop": "15.446",
+  "title": "L splits Sub/Tor; weighted ns does not drop from Q++\u2212Q_N*",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "L_Sub_Tor_split": true,
+    "ns_weighted_not_zero": true,
+    "ratio_445_not_necessary": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "L_Sub+": "340/13",
+          "L_Tor+": "645/26",
+          "L_N*+": "290/13",
+          "merged_const": false
+        },
+        "7": {
+          "L_Sub+": "91539/818",
+          "L_Tor+": [
+            "43848/409",
+            "91665/818"
+          ],
+          "L_N*+": [
+            "88305/818",
+            "89775/818"
+          ],
+          "merged_const": false
+        }
+      },
+      "theorem": "L constant on Sub, Tor, N*; two values on ++ at p=5. Fail: L constant on ++ at p=5."
+    },
+    "B": {
+      "proved": true,
+      "Delta_ns": "50/13",
+      "live_dQ": "16/13",
+      "theorem": "Weighted ns block is \u0394_ns=50/13 at p=5, not 0. Fail: \u0394_ns=0."
+    },
+    "C": {
+      "proved": true,
+      "live_Sub_over_Nstar": "34/29",
+      "need_445": "9/5",
+      "theorem": "34/29<9/5, so the 15.445 merged ratio is not necessary. Fail: 34/29\u22659/5."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Corrected criterion for Q++\u2265Q_N* uses Sub/Tor/ns. Q_\u03c4 unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
