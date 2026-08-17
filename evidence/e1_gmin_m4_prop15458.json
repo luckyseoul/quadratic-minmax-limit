@@ -1,0 +1,50 @@
+{
+  "prop": "15.458",
+  "title": "restricted \u2211k=C(r,2) type-count hits c(5),c(7) and overshoots [551,617] at p=13",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "hits_live_1_19": true,
+    "overshoots_p13": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "c5": "1",
+      "c7": "19",
+      "c7_no_extra": "14",
+      "theorem": "Restricted count is 1,19. Fail: extra\u22611 at p=7 (14\u226019)."
+    },
+    "B": {
+      "proved": true,
+      "c13": "2831/2",
+      "window13": [
+        551,
+        617,
+        67
+      ],
+      "c_eq13": 617,
+      "theorem": "Count is 2831/2\u2209[551,617] and \u2260c_eq=617. Fail: count=617."
+    },
+    "C": {
+      "proved": false,
+      "c13": "2831/2",
+      "c_eq13": 617,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "This type-count is dead for p\u226513. c=c_eq is still a candidate, not a theorem. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
