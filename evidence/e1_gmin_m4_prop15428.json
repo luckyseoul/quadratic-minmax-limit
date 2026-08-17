@@ -1,6 +1,6 @@
 {
   "prop": "15.428",
-  "title": "Q_NL is 15.298 image of NL L_\u03c7; still unnamed in p",
+  "title": "At p=5,7 Q_NL equals 15.298-NL; unnamed in general p",
   "series": "15.x leftover campaign (OPEN)",
   "proved": {
     "QNL_p5_merge": true,
@@ -34,7 +34,7 @@
       "residual_ii_k_eq_4p_empty": false,
       "D_form_on_lattice_general": false,
       "Q_NL_is_short_rational": false,
-      "note": "Q_NL is the 15.298 image of the NL L table at p=5,7. Still unnamed as a closed form in p. phi_F not imported."
+      "note": "Q_NL equals 15.298-NL at p=5,7 only. Not a general-p name. phi_F not imported."
     }
   },
   "L_status": "OPEN",

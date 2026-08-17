@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Prop 15.428 — Q_NL is the 15.298 Gauss image of the NL L_χ
-table on the 15.314 coarse classes (mixed Paley N1 merged
-into ++ when p≡1).  Certified p=5,7.  Q_NL still unnamed
-as a closed form in p.  phi_F not imported.
+Prop 15.428 — At p=5 and p=7 only, Q_NL equals the 15.298
+Gauss image of the NL L_χ table on the 15.314 coarse
+classes (mixed Paley N1 merged into ++ at p=5).  Not a
+general-p identification.  Q_NL still unnamed as a closed
+form in p.  phi_F not imported.
 
 Does **not** flip phi_F_ge_6 / e1 / L / Aut-Schur / Gsum / pairing /
 15.279–15.427 flags.
@@ -26,9 +27,9 @@ Theorem B — PROVED (15.298 on NL; certified p=7).
   No mixed class.  15.298-NL Q++ = 632/171 = Q_NL(7).
   Fail: claim this is the ensemble Q++=1544/409.  ∎
 
-Theorem C — OPEN.  The Gauss image is not yet a closed
-  form in p (L_χ still Hoffman mixes at p=7).  phi_F not
-  imported.
+Theorem C — OPEN.  The p=5,7 certificates do not name
+  Q_NL for general p (class multiplicities and L_χ may
+  change).  No closed form in p.  phi_F not imported.
 
 ============================================================================
 Backend: 15.298 predict_Q on the NL mask.  Writes
@@ -155,8 +156,8 @@ def prove_open() -> dict:
         "D_form_on_lattice_general": D_form_on_lattice_general(),
         "Q_NL_is_short_rational": Q_NL_is_short_rational(),
         "note": (
-            "Q_NL is the 15.298 image of the NL L table at p=5,7. "
-            "Still unnamed as a closed form in p. phi_F not imported."
+            "Q_NL equals 15.298-NL at p=5,7 only. "
+            "Not a general-p name. phi_F not imported."
         ),
     }
 
@@ -178,7 +179,7 @@ def main() -> dict:
     )
     out = {
         "prop": "15.428",
-        "title": "Q_NL is 15.298 image of NL L_χ; still unnamed in p",
+        "title": "At p=5,7 Q_NL equals 15.298-NL; unnamed in general p",
         "series": "15.x leftover campaign (OPEN)",
         "proved": {
             "QNL_p5_merge": A["proved"],
