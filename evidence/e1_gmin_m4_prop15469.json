@@ -1,0 +1,66 @@
+{
+  "prop": "15.469",
+  "title": "Cov++ is 10/39 and 2793/1636; named atoms miss both",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "cov_values": true,
+    "named_atoms_miss_cov": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": "10/39",
+        "7": "2793/1636"
+      },
+      "theorem": "Cov++=10/39, 2793/1636. Fail: Cov++=0."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "Lpar_1d": "100/3",
+          "Lpar_R": "24",
+          "Lspl_1d": "25",
+          "L1d_pp": "100/3",
+          "mup_sq": "25",
+          "mup_mum": "25/2",
+          "S_chi": "30",
+          "chi+": "30",
+          "k": "10"
+        },
+        "7": {
+          "Lpar_1d": "2793/20",
+          "Lpar_R": "133",
+          "Lspl_1d": "539/5",
+          "L1d_pp": "3871/30",
+          "mup_sq": "441/4",
+          "mup_mum": "147/2",
+          "S_chi": "84",
+          "chi+": "126",
+          "k": "21"
+        }
+      },
+      "theorem": "Named atoms/ratios miss Cov++ at both primes. Fail: Lpar_1d\u2212\u03bc+\u00b2=10/39."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Cov++ isolated as 10/39, 2793/1636. Jac/edge6 pairings that cut Aut_\u221e ker still have den D. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
