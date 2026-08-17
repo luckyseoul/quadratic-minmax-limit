@@ -1,6 +1,6 @@
-# Status (2026-08-17)
+# Status (2026-08-17 afternoon)
 
-Leftover campaign: 15.273–15.382 shipped; floor / Type I multi-level / residual (ii) \(k\ge4p\) still OPEN. 15.381 emptied both 4-level J-corners; 15.382 emptied pure-pair Aut_e double-stars as interior 4-level. Live `e1` is still the old AND. Residual (i) hinge is 15.272 \(k=1\cup k=3\) span of \(\mathcal W_{++}^0\) (not Aut-Schur: that lift stays false, \(p=5\) \(k=3\) is \(61/65\)). \(L=\tfrac12\) is **not settled** — see `evidence/share/denseness_path_package.md` § Caveats. Session: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
+Leftover campaign: 15.273–15.465 shipped. Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.453–15.465 closed occupancy pins of \(c\) and recorded that live Paley-\(N^*\) \(Q\neq\) S0 \(Q_n\); 15.465 names the 409-free **ratio** at \(p=5,7\) only. Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|
