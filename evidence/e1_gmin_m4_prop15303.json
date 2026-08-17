@@ -1,0 +1,100 @@
+{
+  "prop": "15.303",
+  "title": "Q/q\u00b2=4(q\u22121)/q + L^conn on T; torus Gauss type-constant",
+  "proved": {
+    "named_constant_on_T": true,
+    "GU_type_constant": true,
+    "Qpp_bound_certified_p57": true,
+    "Qpp_bound_general": false,
+    "phi_F_ge_6_proved_general": false,
+    "Q_tau_named_in_p": false,
+    "S_k_named_in_p": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "flip_hit": 2,
+      "by_p": {
+        "5": {
+          "Gplus": "5/2",
+          "G_nonsquare_scale": "-10",
+          "named_Q_over_q2": "96/25"
+        },
+        "7": {
+          "Gplus": "7/2",
+          "G_nonsquare_scale": "-21",
+          "named_Q_over_q2": "192/49"
+        }
+      },
+      "theorem": "G_+=p/2 on \u03a9; G_r=G_+ for r\u2208T; 16\u00b7named/q\u00b2=4(q\u22121)/q. Nonsquare scale flips G to \u2212p(p\u22121)/2."
+    },
+    "B": {
+      "proved": true,
+      "p5_even_j_squares_eq_p": true,
+      "p7_j2_square_spread": 13.88769082971932,
+      "by_p": {
+        "5": {
+          "j0_plancherel": 150.0,
+          "j0_class_spreads_max": 2.6645352591003757e-15,
+          "j2_square_spread": 9.769962616701378e-15,
+          "j2_square_min": 4.999999999999995,
+          "j2_square_max": 5.000000000000004,
+          "j2_plancherel": 150.0,
+          "j2_class_spreads_max": 1.4210854715202004e-14,
+          "j4_plancherel": 150.0,
+          "j4_class_spreads_max": 2.1316282072803006e-14
+        },
+        "7": {
+          "j0_plancherel": 392.0,
+          "j0_class_spreads_max": 7.105427357601002e-15,
+          "j2_square_spread": 13.88769082971932,
+          "j2_square_min": 0.5670397172175025,
+          "j2_square_max": 14.454730546936823,
+          "j2_plancherel": 392.00000000000006,
+          "j2_class_spreads_max": 7.105427357601002e-15,
+          "j4_plancherel": 391.99999999999994,
+          "j4_class_spreads_max": 2.842170943040401e-14,
+          "j6_plancherel": 392.0,
+          "j6_class_spreads_max": 3.907985046680551e-14
+        }
+      },
+      "theorem": "|G_U(j,\u03b1)|\u00b2 type-constant; Plancherel q|U|. p=5 even j\u22600: |G_U|=\u221ap on squares. p=7 spread>10."
+    },
+    "C": {
+      "proved": true,
+      "general_bound": false,
+      "by_p": {
+        "5": {
+          "Qpp": "48/13",
+          "ub": "26/7",
+          "room": "2/91"
+        },
+        "7": {
+          "Qpp": "1544/409",
+          "ub": "34/9",
+          "room": "10/3681"
+        }
+      },
+      "p5_threshold": "32-7*(4-2/7)=6",
+      "theorem": "Live Q_++ \u2264 4\u22122/(p+2) at p=5,7.  At p=5 this is equivalent to the j=2 eigenvalue \u22656.  Not a general proof; Q_++ unnamed."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Q_tau_named_in_p": false,
+      "S_k_named_in_p": false,
+      "note": "Named constant 4(q\u22121)/q does not separate ++ from N*. Q_++ / Q_N* still unnamed. Floor OPEN."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

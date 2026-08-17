@@ -1,6 +1,6 @@
-# Status (2026-08-16)
+# Status (2026-08-17)
 
-Leftover campaign: 15.273–15.279 A–Y shipped; floor / Type I 3-point / residual (ii) \(k\ge4p\) still OPEN. Live `e1` is still the old AND. Residual (i) hinge is 15.272 \(k=1\cup k=3\) span of \(\mathcal W_{++}^0\) (not Aut-Schur: that lift stays false, \(p=5\) \(k=3\) is \(61/65\)). \(L=\tfrac12\) is **not settled** — see `evidence/share/denseness_path_package.md` § Caveats. Session: `evidence/SESSION_HANDOFF_2026-08-16_leftover.md`.
+Leftover campaign: 15.273–15.382 shipped; floor / Type I multi-level / residual (ii) \(k\ge4p\) still OPEN. 15.381 emptied both 4-level J-corners; 15.382 emptied pure-pair Aut_e double-stars as interior 4-level. Live `e1` is still the old AND. Residual (i) hinge is 15.272 \(k=1\cup k=3\) span of \(\mathcal W_{++}^0\) (not Aut-Schur: that lift stays false, \(p=5\) \(k=3\) is \(61/65\)). \(L=\tfrac12\) is **not settled** — see `evidence/share/denseness_path_package.md` § Caveats. Session: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|

@@ -1,0 +1,77 @@
+{
+  "prop": "15.357",
+  "title": "w=1 at p=3; k=n_1d/(2p); p=11 1D hole-types",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "w_eq_1_at_p3": true,
+    "k_integer": true,
+    "p11_hole_types": true,
+    "Q_NL_named_in_p": false,
+    "w_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "n_Hplus": 6,
+      "n_1d": 6,
+      "w": 1,
+      "theorem": "p=3: |H_+|=n_1d, w=1, NL empty."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "3": 1.0,
+        "5": 3.0,
+        "7": 10.0,
+        "11": 126.0,
+        "13": 462.0,
+        "17": 6435.0,
+        "19": 24310.0,
+        "23": 352716.0,
+        "29": 20058300.0,
+        "31": 77558760.0
+      },
+      "k5": 3,
+      "k7": 10,
+      "D5": 13,
+      "D7": 409,
+      "theorem": "k=n_1d/(2p)\u2208\u2115; w=k/D; D\u2260dim V_+ at p=7."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "d1": {
+          "maxplus": true,
+          "Q": "544/45"
+        },
+        "d2": {
+          "maxplus": true,
+          "Q": "632/45"
+        }
+      },
+      "Q_AP": "56/9",
+      "Q_1d": "344/27",
+      "theorem": "p=11 hole-types Q\u2208{544/45,632/45}\u2260Q_AP,Q_1D."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_NL_named_in_p": false,
+      "w_named_in_p": false,
+      "Q_tau_named_in_p": false,
+      "note": "w=1 at p=3.  k named.  D and Q_NL unnamed.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

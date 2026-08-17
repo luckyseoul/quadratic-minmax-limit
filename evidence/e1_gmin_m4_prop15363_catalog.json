@@ -1,0 +1,15 @@
+{
+  "T52": 2040,
+  "N5": 130,
+  "flat_per_slope": 130,
+  "n_fourier_nonzero_a0": 625,
+  "n_affine": 25,
+  "occ_affine": [2040, 0, 0, 0, 0],
+  "occ_quad": [440, 400, 400, 400, 400],
+  "occ_cubic": [460, 395, 395, 395, 395],
+  "S_affine": 2040,
+  "S_quad": 40,
+  "S_cubic": 65,
+  "T7_times_13_mod_204": 168,
+  "formula_hits": {"T_over": [], "T_rat": [], "prod3": []}
+}

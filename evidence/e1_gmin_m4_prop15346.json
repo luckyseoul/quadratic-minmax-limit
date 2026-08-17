@@ -1,0 +1,168 @@
+{
+  "prop": "15.346",
+  "title": "E[n_i\u00b2 n_j\u00b2] exact; bivariate LP misses; p=5 2+2 constant",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "cross_moment_exact": true,
+    "bivar_lp_misses": true,
+    "p5_22_type_constant": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "H": 130,
+          "E_M": "30",
+          "E_M2": "12300/13",
+          "E_n4": "990/13",
+          "E_n2n2": "735/26",
+          "den": 26,
+          "H_over_p": 26
+        },
+        "7": {
+          "H": 5726,
+          "E_M": "84",
+          "E_M2": "2939265/409",
+          "E_n4": "115140/409",
+          "E_n2n2": "101585/818",
+          "den": 818,
+          "H_over_p": 818
+        }
+      },
+      "theorem": "E[n_i\u00b2 n_j\u00b2]=735/26, 101585/818; den=|H_+|/p."
+    },
+    "B": {
+      "proved": true,
+      "p5": {
+        "E_nn": "7/2",
+        "sum_lo": 0,
+        "max": 51.5,
+        "min": 14.357142857142856
+      },
+      "live": "735/26",
+      "live_interior": true,
+      "theorem": "Bivariate LP from 15.344 + \u2211n=k does not pin E[n\u00b2n'\u00b2] to 735/26 (max=51.5)."
+    },
+    "C": {
+      "proved": true,
+      "p5": {
+        "n_types": 12,
+        "n_const": 12,
+        "n_split": 0
+      },
+      "p7": {
+        "n_types": 30,
+        "n_const": 16,
+        "n_split": 14
+      },
+      "p5_types": {
+        "(2, 'match', 1, 1, 1, 0)": {
+          "unique": [
+            5
+          ],
+          "n": 5,
+          "const": true
+        },
+        "(2, 'path', 0, 0, 1, 0)": {
+          "unique": [
+            4
+          ],
+          "n": 10,
+          "const": true
+        },
+        "(3, '', 0, 0, 1, 0)": {
+          "unique": [
+            2
+          ],
+          "n": 10,
+          "const": true
+        },
+        "(2, 'match', 0, 1, 1, 1)": {
+          "unique": [
+            6
+          ],
+          "n": 10,
+          "const": true
+        },
+        "(3, '', 0, 1, 1, 4)": {
+          "unique": [
+            1
+          ],
+          "n": 10,
+          "const": true
+        },
+        "(2, 'match', 0, 0, 1, 0)": {
+          "unique": [
+            6
+          ],
+          "n": 5,
+          "const": true
+        },
+        "(2, 'path', 0, 0, 4, 0)": {
+          "unique": [
+            4
+          ],
+          "n": 10,
+          "const": true
+        },
+        "(4, '', 1, 1, 4, 0)": {
+          "unique": [
+            1
+          ],
+          "n": 5,
+          "const": true
+        },
+        "(3, '', 0, 1, 4, 4)": {
+          "unique": [
+            3
+          ],
+          "n": 10,
+          "const": true
+        },
+        "(3, '', 0, 0, 4, 0)": {
+          "unique": [
+            2
+          ],
+          "n": 10,
+          "const": true
+        },
+        "(1, '', 0, 1, 4, 1)": {
+          "unique": [
+            8
+          ],
+          "n": 10,
+          "const": true
+        },
+        "(2, 'match', 0, 0, 4, 0)": {
+          "unique": [
+            6
+          ],
+          "n": 5,
+          "const": true
+        }
+      },
+      "theorem": "p=5 2+2 n_4 is constant on K_{2,2}\u00d7\u03c7_p(side,\u03b4).  Same dictionary splits at p=7."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "interval_closed": false,
+      "note": "E[n_i\u00b2 n_j\u00b2] is now an exact rational with den |H_+|/p.  The 15.344 bivariate LP does not reach [Q_lo, ub].  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

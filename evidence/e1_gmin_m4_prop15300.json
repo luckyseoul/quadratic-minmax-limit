@@ -1,0 +1,151 @@
+{
+  "prop": "15.300",
+  "title": "Coarse Q-types not a Schur ring; integer J; S still N/(4p)",
+  "proved": {
+    "not_schur": true,
+    "jacobi_J_integer": true,
+    "phi_F_ge_6_proved_general": false,
+    "Q_tau_named_in_p": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "blocks": {
+        "5": {
+          "nvar": 4,
+          "ntot": 27,
+          "worst_spread": 2,
+          "p_pp_pp_pp": [
+            0,
+            2,
+            2
+          ],
+          "sizes": {
+            "pm1": 2,
+            "++": 6,
+            "N*": 4
+          }
+        },
+        "7": {
+          "nvar": 14,
+          "ntot": 64,
+          "worst_spread": 4,
+          "p_pp_pp_pp": [
+            0,
+            2,
+            2
+          ],
+          "sizes": {
+            "pm1": 2,
+            "++": 6,
+            "N*": 12,
+            "--N1": 4
+          }
+        }
+      },
+      "theorem": "Coarse Q-classes are not a Schur ring on T. p^{++}_{++,++} varies (spread 2 at p=5, 2 at p=7 on ++)."
+    },
+    "B": {
+      "proved": true,
+      "invert_hit": 2,
+      "invert_tot": 2,
+      "blocks": {
+        "5": {
+          "names": [
+            "pm1",
+            "++",
+            "N*"
+          ],
+          "ks": [
+            0,
+            2,
+            6
+          ],
+          "J": [
+            [
+              2,
+              6,
+              4
+            ],
+            [
+              2,
+              -4,
+              2
+            ],
+            [
+              2,
+              2,
+              -4
+            ]
+          ],
+          "det": 144.0,
+          "S0": 48.00000000000001,
+          "S0_named": 48,
+          "recov_err": 0.0
+        },
+        "7": {
+          "names": [
+            "pm1",
+            "++",
+            "N*",
+            "--N1"
+          ],
+          "ks": [
+            0,
+            2,
+            8,
+            12
+          ],
+          "J": [
+            [
+              2,
+              6,
+              12,
+              4
+            ],
+            [
+              2,
+              -4,
+              2,
+              0
+            ],
+            [
+              2,
+              0,
+              -6,
+              4
+            ],
+            [
+              2,
+              6,
+              -4,
+              -4
+            ]
+          ],
+          "det": -2688.0000000000005,
+          "S0": 96.0,
+          "S0_named": 96,
+          "recov_err": 4.440892098500626e-16
+        }
+      },
+      "theorem": "J_\u03c4(\u03c8_k) is an integer complete character sum. det=144 (p=5), \u22122688 (p=7). S_0=2(q\u22121). Flip J_++(k=2) breaks recovery of Q_++."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Q_tau_named_in_p": false,
+      "note": "det J is not the Q-denominator (144\u226013, 2688\u2260409). S_{k\u22600} still N/(4p). Floor OPEN."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

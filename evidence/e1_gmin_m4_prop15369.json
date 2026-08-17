@@ -1,0 +1,53 @@
+{
+  "prop": "15.369",
+  "title": "Only affine S=T is constant at p=5 and p=7; deg-2 dies",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "affine_S_is_T": true,
+    "deg2_constancy_dies_p7": true,
+    "D_not_3term_named": true,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "p5_S_x_is_T": true,
+      "nT": 2040,
+      "theorem": "Affine S=T at p=5; algebra of 15.363 gives it for all p."
+    },
+    "B": {
+      "proved": true,
+      "p5_x2_eq_x2x": true,
+      "p5_S": 40,
+      "p7_x2_occ0": 179539290,
+      "p7_x2x_occ0": 230044675,
+      "theorem": "S(x\u00b2)=S(x\u00b2+x)=40 at p=5; occupancies split at p=7."
+    },
+    "C": {
+      "proved": true,
+      "n_hits": 0,
+      "dimVp7": 25,
+      "theorem": "No 3-term named linear form hits D=13 and 409; dim V+ dies."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "D_named_in_p": false,
+      "note": "Affine S=T is the only tested type with one formula at both primes.  It does not name D.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

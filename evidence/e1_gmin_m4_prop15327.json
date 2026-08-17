@@ -1,0 +1,68 @@
+{
+  "prop": "15.327",
+  "title": "E[vv\u1d40]=(1/2)\u03a0_\u03b8+; CS 4-point Var(e) majorant too weak",
+  "proved": {
+    "ensemble_2point_half_Pi": true,
+    "cs4_too_weak": true,
+    "p3_Var_e_not_enough": true,
+    "A_square_named": false,
+    "Q_tau_named_in_p": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "equals_full_Pi_false": true,
+      "by_p": {
+        "5": {
+          "n_pos": 12,
+          "dim_theta_plus": 12,
+          "eig_min": 0.4999999999999995,
+          "eig_max": 0.5000000000000006
+        },
+        "7": {
+          "n_pos": 24,
+          "dim_theta_plus": 24,
+          "eig_min": 0.49999999999999856,
+          "eig_max": 0.5000000000000001
+        }
+      },
+      "theorem": "E[vv\u1d40]=(1/2) \u03a0_{\u03b8+}.  Full \u03a0 (eigs 1) fails."
+    },
+    "B": {
+      "proved": true,
+      "cs_closes_p5_false": true,
+      "var_ub_p5": 92.31373784244094,
+      "need_p5": 2.5714285714285716,
+      "theorem": "CS on 4-distinct moments + Boolean collisions gives Var(e)\u226492.31 at p=5, not \u226418/7."
+    },
+    "C": {
+      "proved": true,
+      "Asq_isolates_Qpp_p7_false": true,
+      "Qmm_live": "1376/409",
+      "Qpp_live": "1544/409",
+      "min_S_live": "3072/409",
+      "theorem": "p\u22613: S0 + Var(e) leave a residual parameter; A_\u25a1 does not isolate Q++ (Q-- live 1376/409)."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "A_square_named": false,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "note": "Named 2-point of v does not bound the 4-point. CS majorant misses 18/7.  Lasserre is a p=5 probe. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

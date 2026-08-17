@@ -1,0 +1,130 @@
+{
+  "prop": "15.331",
+  "title": "NL Aut_\u221e stabs divide p+1; 409|\u03a6_24(7) is p=7-only",
+  "proved": {
+    "orbit_stab_sum": true,
+    "nl_stabs_div_pplus1": true,
+    "cyclo_409_is_p7_only": true,
+    "Hplus_named_in_p": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "3": {
+          "n_1d": 6,
+          "Nplus": 6,
+          "extra": 0,
+          "nl_stabs": [],
+          "recon": 0
+        },
+        "5": {
+          "n_1d": 30,
+          "Nplus": 130,
+          "extra": 100,
+          "nl_stabs": [
+            6
+          ],
+          "recon": 100
+        },
+        "7": {
+          "n_1d": 140,
+          "Nplus": 5726,
+          "extra": 5586,
+          "nl_stabs": [
+            2,
+            2,
+            2,
+            2,
+            4,
+            8
+          ],
+          "recon": 5586
+        }
+      },
+      "G_drop_frob_is_not_G": true,
+      "theorem": "|H_+|=n_1d+\u03a3|G|/s_\u03c4.  Drop Frob breaks |G|."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "3": {
+          "stabs": [],
+          "div_pplus1": true,
+          "c": 0,
+          "three_is_nl": false,
+          "fourp_is_nl": false
+        },
+        "5": {
+          "stabs": [
+            6
+          ],
+          "div_pplus1": true,
+          "c": 1,
+          "three_is_nl": false,
+          "fourp_is_nl": false
+        },
+        "7": {
+          "stabs": [
+            2,
+            2,
+            2,
+            2,
+            4,
+            8
+          ],
+          "div_pplus1": true,
+          "c": 19,
+          "three_is_nl": false,
+          "fourp_is_nl": false
+        }
+      },
+      "c_p": {
+        "3": 0,
+        "5": 1,
+        "7": 19
+      },
+      "stab3_not_nl_p7": true,
+      "stab4p_not_nl": true,
+      "theorem": "NL stabs | p+1.  c(3,5,7)=(0,1,19).  3 and 4p are not NL stabs."
+    },
+    "C": {
+      "proved": true,
+      "Phi24_7": 5762401,
+      "Phi24_7_factor": [
+        409,
+        73,
+        193
+      ],
+      "Phi24_is_not_409": true,
+      "Phi12_5": 601,
+      "Phi12_5_div_by_13": false,
+      "Phi4_5": 26,
+      "T_p5": 12,
+      "T_p7": 24,
+      "c_3p_minus_2_p5": 13,
+      "theorem": "409 | \u03a6_24(7) but 409\u2260\u03a6_24(7).  13 \u2224 \u03a6_{|T|}(5).  Not a general den formula."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Hplus_named_in_p": false,
+      "Q_tau_named_in_p": false,
+      "den_Qpp_p7": 409,
+      "note": "NL stab multiplicities unnamed.  |H_+| unnamed.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

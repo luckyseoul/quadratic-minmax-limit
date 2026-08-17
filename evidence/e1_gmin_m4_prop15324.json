@@ -1,0 +1,122 @@
+{
+  "prop": "15.324",
+  "title": "Fiber-avg W=EW; U-Parseval; GU spreads on \u03a9; Var_2orb open",
+  "proved": {
+    "fiber_avg": true,
+    "U_parseval": true,
+    "GU_spreads_on_Omega": true,
+    "A_square_named": false,
+    "Q_tau_named_in_p": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "W_c_constant_false": true,
+      "by_p": {
+        "5": {
+          "named_sum": 60.0,
+          "err": 0.0,
+          "EW": 30,
+          "n_fibers": 2,
+          "per_c": {
+            "1": {
+              "mean": 30.0,
+              "var": 50.76923076923077,
+              "nuniq": 4
+            },
+            "4": {
+              "mean": 30.0,
+              "var": 50.76923076923077,
+              "nuniq": 4
+            }
+          }
+        },
+        "7": {
+          "named_sum": 252.0,
+          "err": 0.0,
+          "EW": 84,
+          "n_fibers": 3,
+          "per_c": {
+            "1": {
+              "mean": 84.0,
+              "var": 52.577017114914426,
+              "nuniq": 13
+            },
+            "2": {
+              "mean": 84.0,
+              "var": 52.577017114914426,
+              "nuniq": 13
+            },
+            "4": {
+              "mean": 84.0,
+              "var": 52.577017114914426,
+              "nuniq": 13
+            }
+          }
+        }
+      },
+      "theorem": "\u2211_{c\u25a1} W(c)=n_f E[W] on every Max+. Each W(c) still varies."
+    },
+    "B": {
+      "proved": true,
+      "odd_hats_false": true,
+      "by_p": {
+        "5": {
+          "A": 950.7692307692307,
+          "E_N2": 29.615384615384617,
+          "even_hats": {
+            "0": 950.7692307692307,
+            "2": 57.69230769230769,
+            "4": 57.69230769230769
+          },
+          "odd_max": 5.486693022411356e-28,
+          "parseval_ok": true
+        },
+        "7": {
+          "A": 7108.577017114914,
+          "E_N2": 117.81051344743277,
+          "even_hats": {
+            "0": 7108.577017114914,
+            "2": 92.00977995110024,
+            "4": 247.2762836185819,
+            "6": 92.00977995110024
+          },
+          "odd_max": 1.6209913258567775e-27,
+          "parseval_ok": true
+        }
+      },
+      "theorem": "Odd U-hats of N vanish.  Parseval: A_\u25a1 + \u2211_{even j\u22600} E|N\u0302_U(j)|\u00b2=(p+1)\u00b2 E[N\u00b2_\u25a1]."
+    },
+    "C": {
+      "proved": true,
+      "GU_const_on_Omega_false": true,
+      "Omega_spread": 11.180339887498958,
+      "Omega_min": 1.9098300562505244,
+      "Omega_max": 13.090169943749482,
+      "square_spread": 9.769962616701378e-15,
+      "theorem": "|G_U(2)|\u00b2=p on squares at p=5, but spreads on \u03a9. Cannot factor |G_U|\u00b2 out of E|inner|\u00b2."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "A_square_named": false,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "Var_2orb": "660/13",
+      "note": "Fiber-average and U-Parseval do not name A_\u25a1 or bound Var by Var_2orb.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

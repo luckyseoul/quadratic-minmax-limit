@@ -1,0 +1,106 @@
+{
+  "perfect": [],
+  "tests": {
+    "fiber": {
+      "n_keys": 5,
+      "n_split": 2,
+      "pure": false,
+      "perfect": false
+    },
+    "ncrit": {
+      "n_keys": 4,
+      "n_split": 2,
+      "pure": false,
+      "perfect": false
+    },
+    "im": {
+      "n_keys": 3,
+      "n_split": 3,
+      "pure": false,
+      "perfect": false
+    },
+    "Wchi": {
+      "n_keys": 11,
+      "n_split": 11,
+      "pure": false,
+      "perfect": false
+    },
+    "Wadd": {
+      "n_keys": 100,
+      "n_split": 40,
+      "pure": false,
+      "perfect": false
+    },
+    "lead_chi": {
+      "n_keys": 2,
+      "n_split": 2,
+      "pure": false,
+      "perfect": false
+    },
+    "sf": {
+      "n_keys": 2,
+      "n_split": 2,
+      "pure": false,
+      "perfect": false
+    },
+    "n0": {
+      "n_keys": 5,
+      "n_split": 4,
+      "pure": false,
+      "perfect": false
+    },
+    "dep": {
+      "n_keys": 25,
+      "n_split": 0,
+      "pure": true,
+      "perfect": false
+    },
+    "fiber,ncrit": {
+      "n_keys": 8,
+      "n_split": 0,
+      "pure": true,
+      "perfect": false
+    },
+    "fiber,Wchi": {
+      "n_keys": 35,
+      "n_split": 10,
+      "pure": false,
+      "perfect": false
+    },
+    "ncrit,Wchi": {
+      "n_keys": 28,
+      "n_split": 14,
+      "pure": false,
+      "perfect": false
+    },
+    "Wchi,lead": {
+      "n_keys": 22,
+      "n_split": 14,
+      "pure": false,
+      "perfect": false
+    },
+    "dep,Wchi": {
+      "n_keys": 150,
+      "n_split": 0,
+      "pure": true,
+      "perfect": false
+    },
+    "fiber,ncrit,Wchi": {
+      "n_keys": 50,
+      "n_split": 0,
+      "pure": true,
+      "perfect": false
+    },
+    "im,ncrit,Wchi": {
+      "n_keys": 44,
+      "n_split": 6,
+      "pure": false,
+      "perfect": false
+    }
+  },
+  "class_n": {
+    "610": 500,
+    "555": 1000,
+    "415": 1000
+  }
+}

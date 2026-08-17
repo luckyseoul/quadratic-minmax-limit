@@ -1,0 +1,65 @@
+{
+  "prop": "15.373",
+  "title": "Q++_form in [Q_lo,ub] for all odd p\u22655; p\u22611 S0 floor if D_form=D",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "A_D_positive": true,
+    "Qform_in_interval_all_odd_p": true,
+    "p1_even_S_ge_6_on_interval": true,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "A5": 6,
+      "A_lb5": 6,
+      "D5": 13,
+      "theorem": "A>0, D>0 for odd p\u22655 via C\u2265C(p,2)."
+    },
+    "B": {
+      "proved": true,
+      "dC_lo5": 196,
+      "N_lo5": -1764,
+      "N_up5": -144,
+      "checked_primes": [
+        5,
+        7,
+        11,
+        13,
+        17,
+        19,
+        23,
+        29
+      ],
+      "Qbad_drop": "16",
+      "theorem": "N_lo<0, N_up<0, dC>0 \u21d2 Q_form in [Q_lo,ub] for all odd p\u22655."
+    },
+    "C": {
+      "proved": true,
+      "gap5": 72,
+      "minS_at_Qform5": "80/13",
+      "sm_j0_at_Qlo": 6,
+      "theorem": "All four even S0 families \u22656 on [Q_lo,ub] for every p\u22611\u22655."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "D_named_in_p": false,
+      "note": "S0 floor for p\u22611 follows from D_form=D. D_form untested at p\u226511.  p\u22613 retains Q_{--}. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

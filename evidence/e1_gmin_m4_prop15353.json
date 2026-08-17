@@ -1,0 +1,52 @@
+{
+  "prop": "15.353",
+  "title": "Ensemble Q++ is a 2-/4-level mix; 2-type dies at p=7",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "p5_two_level_mix": true,
+    "p7_four_level_mix_not_2type": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "hist": {
+        "16/9": 30,
+        "64/15": 100
+      },
+      "mix": "48/13",
+      "twotype": "48/13",
+      "theorem": "p=5: Q_y^{++}\u2208{16/9,64/15} mix to 48/13."
+    },
+    "B": {
+      "proved": true,
+      "hist": {
+        "40/9": 2730,
+        "32/3": 56,
+        "8/3": 1764,
+        "32/9": 1176
+      },
+      "mix": "1544/409",
+      "twotype": "1796/409",
+      "theorem": "p=7: four Q_y^{++} values mix to 1544/409.  hs+triangle 2-type is 1796/409, not the ensemble."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "note": "Mixture of named per-y values recovers the ensemble at p=5,7 but is not a Gauss/Jacobi formula in p.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

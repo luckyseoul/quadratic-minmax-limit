@@ -1,0 +1,156 @@
+{
+  "prop": "15.316",
+  "title": "Torus Gauss is Kloosterman; W-fibers; F_1(0) unnamed",
+  "proved": {
+    "kloosterman_K": true,
+    "W_means": true,
+    "MU_identity": true,
+    "Q_tau_named_in_p": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "minus1_fails": true,
+      "chiN_fails": true,
+      "by_p": {
+        "5": {
+          "err": 5.551115123125783e-16,
+          "err_minus1": 4.23606797749979,
+          "err_chiN": 2.23606797749979,
+          "K0": 6
+        },
+        "7": {
+          "err": 9.694605782913356e-16,
+          "err_minus1": 3.692021471630096,
+          "err_chiN": 5.493959207434934,
+          "K0": 8
+        }
+      },
+      "theorem": "K(\u03b1)=\u2212Kl(\u2212N(\u03b1),\u22121) for \u03b1\u22600; K(0)=p+1. \u22121 and \u2212\u03c7_p(N) both miss."
+    },
+    "B": {
+      "proved": true,
+      "E_W_is_not_k": true,
+      "by_p": {
+        "5": {
+          "1": {
+            "mean": 30.0,
+            "want": 30.0,
+            "fiber": 6,
+            "unique": 4
+          },
+          "4": {
+            "mean": 30.0,
+            "want": 30.0,
+            "fiber": 6,
+            "unique": 4
+          },
+          "3": {
+            "mean": 15.0,
+            "want": 15.0,
+            "fiber": 6,
+            "unique": 4
+          },
+          "2": {
+            "mean": 15.0,
+            "want": 15.0,
+            "fiber": 6,
+            "unique": 4
+          }
+        },
+        "7": {
+          "1": {
+            "mean": 84.0,
+            "want": 84.0,
+            "fiber": 8,
+            "unique": 13
+          },
+          "4": {
+            "mean": 84.0,
+            "want": 84.0,
+            "fiber": 8,
+            "unique": 13
+          },
+          "2": {
+            "mean": 84.0,
+            "want": 84.0,
+            "fiber": 8,
+            "unique": 13
+          },
+          "5": {
+            "mean": 56.0,
+            "want": 56.0,
+            "fiber": 8,
+            "unique": 10
+          },
+          "6": {
+            "mean": 56.0,
+            "want": 56.0,
+            "fiber": 8,
+            "unique": 10
+          },
+          "3": {
+            "mean": 56.0,
+            "want": 56.0,
+            "fiber": 8,
+            "unique": 10
+          }
+        }
+      },
+      "theorem": "E[W(c)]=(p+1) \u03bc_{\u03c7_p(c)}.  Not equal to k. E[W(c)\u00b2] is \u03c7_p(c)-constant (den 13, 409)."
+    },
+    "C": {
+      "proved": true,
+      "p5_rejects_mu_prod": true,
+      "by_p": {
+        "5": {
+          "antipode": {
+            "1": 849.2307692307693,
+            "4": 849.2307692307693,
+            "3": 212.30769230769232,
+            "2": 212.30769230769232
+          },
+          "named_mu_prod": 450.0,
+          "same_char_prod": 900.0,
+          "F1": 30.769230769230774,
+          "F1_named_from_Q": 30.769230769230774
+        },
+        "7": {
+          "antipode": {
+            "1": 4704.0,
+            "4": 4704.0,
+            "2": 4704.0,
+            "5": 4704.0,
+            "6": 4704.0,
+            "3": 4704.0
+          },
+          "named_mu_prod": 4704.0,
+          "same_char_prod": 7056.0,
+          "F1": 37.007334963325185,
+          "F1_named_from_Q": 37.00733496332518
+        }
+      },
+      "theorem": "M_U=k(p+1)\u2212\u2211_c Kl(\u2212N(\u03be)c,\u22121) W(c). E[W(c)W(\u2212c)]=(p+1)\u00b2 \u03bc_+ \u03bc_- iff p\u22613 (mod 4). F_1(0) still has den N_+/(2p)."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "note": "K is Kloosterman. F_1(0) is a Kl-image of the W-gram. W-gram still unnamed in p. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

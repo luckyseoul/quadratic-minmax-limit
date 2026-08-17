@@ -1,0 +1,126 @@
+{
+  "prop": "15.283",
+  "L_status": "OPEN",
+  "proved": {
+    "aut_invariance_k_le_4": true,
+    "paley_type_determines_n": false,
+    "dim1_ap_names_n": true,
+    "dim2_paley_does_not_determine": true,
+    "phi_F_ge_6_proved_general": false,
+    "inequality_proved": false,
+    "Nplus_named": false,
+    "mixture_meets_floor": false
+  },
+  "status": {
+    "floor": false,
+    "identity_A": true,
+    "identity_B": true
+  },
+  "census": [
+    {
+      "3": {
+        "p": 5,
+        "k": 3,
+        "Nplus": 130,
+        "n_sets": 2300,
+        "aut_orbits": 8,
+        "aut_spanning": 0,
+        "aut_constant": true,
+        "paley_types": 4,
+        "paley_spanning_types": 4,
+        "paley_type_constant": false,
+        "paley_spans": {
+          "(1, 1, 1)": 2,
+          "(-1, 1, 1)": 1,
+          "(-1, -1, 1)": 1,
+          "(-1, -1, -1)": 2
+        },
+        "workers": 71
+      },
+      "4": {
+        "p": 5,
+        "k": 4,
+        "Nplus": 130,
+        "n_sets": 12650,
+        "aut_orbits": 34,
+        "aut_spanning": 0,
+        "aut_constant": true,
+        "paley_types": 7,
+        "paley_spanning_types": 4,
+        "paley_type_constant": false,
+        "paley_spans": {
+          "(-1, -1, 1, 1, 1, 1)": 3,
+          "(-1, 1, 1, 1, 1, 1)": 2,
+          "(-1, -1, -1, 1, 1, 1)": 3,
+          "(-1, -1, -1, -1, 1, 1)": 1
+        },
+        "workers": 86
+      }
+    },
+    {
+      "3": {
+        "p": 7,
+        "k": 3,
+        "Nplus": 5726,
+        "n_sets": 18424,
+        "aut_orbits": 14,
+        "aut_spanning": 0,
+        "aut_constant": true,
+        "paley_types": 4,
+        "paley_spanning_types": 4,
+        "paley_type_constant": false,
+        "paley_spans": {
+          "(1, 1, 1)": 18,
+          "(-1, 1, 1)": 16,
+          "(-1, -1, 1)": 16,
+          "(-1, -1, -1)": 34
+        },
+        "workers": 86
+      },
+      "4": {
+        "p": 7,
+        "k": 4,
+        "Nplus": 5726,
+        "n_sets": 211876,
+        "aut_orbits": 114,
+        "aut_spanning": 0,
+        "aut_constant": true,
+        "paley_types": 7,
+        "paley_spanning_types": 7,
+        "paley_type_constant": false,
+        "paley_spans": {
+          "(1, 1, 1, 1, 1, 1)": 28,
+          "(-1, 1, 1, 1, 1, 1)": 16,
+          "(-1, -1, 1, 1, 1, 1)": 53,
+          "(-1, -1, -1, 1, 1, 1)": 55,
+          "(-1, -1, -1, -1, 1, 1)": 42,
+          "(-1, -1, -1, -1, -1, 1)": 11,
+          "(-1, -1, -1, -1, -1, -1)": 10
+        },
+        "workers": 86
+      }
+    }
+  ],
+  "dim1": [
+    {
+      "p": 5,
+      "dim1_classes": 2,
+      "dim1_split": 0,
+      "dim2_pal_split": 4
+    },
+    {
+      "p": 7,
+      "dim1_classes": 4,
+      "dim1_split": 0,
+      "dim2_pal_split": 6
+    }
+  ],
+  "open": {
+    "floor_closed": false,
+    "Nplus_named": false,
+    "mixture_meets_floor": false,
+    "n_S_named_formula": false,
+    "phi_F_ge_6": false,
+    "rhat_ge_budget": false
+  }
+}

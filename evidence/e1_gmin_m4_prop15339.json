@@ -1,0 +1,126 @@
+{
+  "prop": "15.339",
+  "title": "dim(E_+\u2229V_even)=(p\u00b2+3)/4; p=11 opposite-high SA empty",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "even_Eplus_dim": true,
+    "sa_p11_opposite_high_empty": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "p": 5,
+          "dim_even": 14,
+          "dim_even_Eplus": 7,
+          "named_even": 14,
+          "named_cap": 7
+        },
+        "7": {
+          "p": 7,
+          "dim_even": 26,
+          "dim_even_Eplus": 13,
+          "named_even": 26,
+          "named_cap": 13
+        },
+        "11": {
+          "p": 11,
+          "dim_even": 62,
+          "dim_even_Eplus": 31,
+          "named_even": 62,
+          "named_cap": 31
+        },
+        "13": {
+          "p": 13,
+          "dim_even": 86,
+          "dim_even_Eplus": 43,
+          "named_even": 86,
+          "named_cap": 43
+        },
+        "17": {
+          "p": 17,
+          "dim_even": 146,
+          "dim_even_Eplus": 73,
+          "named_even": 146,
+          "named_cap": 73
+        },
+        "19": {
+          "p": 19,
+          "dim_even": 182,
+          "dim_even_Eplus": 91,
+          "named_even": 182,
+          "named_cap": 91
+        },
+        "23": {
+          "p": 23,
+          "dim_even": 266,
+          "dim_even_Eplus": 133,
+          "named_even": 266,
+          "named_cap": 133
+        }
+      },
+      "theorem": "dim(E_+ \u2229 V_even)=(p\u00b2+3)/4."
+    },
+    "B": {
+      "proved": true,
+      "p7_kvec_maxplus": 24,
+      "p11_n_patterns": 15,
+      "p11_min_energy": 16.0,
+      "p11_any_zero": false,
+      "p11_sample": [
+        {
+          "g": 1,
+          "e": 20.0,
+          "zero": false
+        },
+        {
+          "g": 1,
+          "e": 20.0,
+          "zero": false
+        },
+        {
+          "g": 1,
+          "e": 20.0,
+          "zero": false
+        },
+        {
+          "g": 2,
+          "e": 16.0,
+          "zero": false
+        },
+        {
+          "g": 2,
+          "e": 24.0,
+          "zero": false
+        },
+        {
+          "g": 2,
+          "e": 32.0,
+          "zero": false
+        }
+      ],
+      "theorem": "k-vector Max+ at p=7 (24).  Opposite-high explicit patterns at p=11 have \u2016Cy\u2212py\u2016_\u221e \u2265 p\u22123 = 8, none zero."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "pair_rule_p11": false,
+      "note": "Even +p space is (p\u00b2+3)/4-dimensional.  Isolated-type \u00b11 vector at p=11 unfound.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

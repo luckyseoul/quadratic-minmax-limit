@@ -1,0 +1,176 @@
+{
+  "prop": "15.304",
+  "title": "\u03bb_j=8/(p+1) q^{-2} E|\u27e8\u0394N,G_U(j)\u27e9|\u00b2; den=|U|",
+  "proved": {
+    "hatN_contraction": true,
+    "square_named_den_U": true,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false,
+    "Q_tau_named_in_p": false,
+    "S_k_named_in_p": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "drop_delta_hit": 1,
+      "by_p": {
+        "5": {
+          "0": {
+            "live": 13.53846153846154,
+            "pred": 13.538461538461542,
+            "err": 5.506923198891681e-15
+          },
+          "2": {
+            "live": 6.153846153846153,
+            "pred": 6.153846153846154,
+            "err": 9.173923655450043e-16
+          },
+          "4": {
+            "live": 6.1538461538461515,
+            "pred": 6.153846153846152,
+            "err": 1.5963856009938333e-15
+          }
+        },
+        "7": {
+          "0": {
+            "live": 7.511002444987774,
+            "pred": 7.511002444987772,
+            "err": 2.2312404877330242e-15
+          },
+          "2": {
+            "live": 8.215158924205376,
+            "pred": 8.215158924205378,
+            "err": 1.9594324339968126e-15
+          },
+          "4": {
+            "live": 9.858190709046458,
+            "pred": 9.85819070904645,
+            "err": 7.41847248372486e-15
+          },
+          "6": {
+            "live": 8.215158924205378,
+            "pred": 8.21515892420538,
+            "err": 3.194702444246027e-15
+          }
+        }
+      },
+      "theorem": "\u03bb_j=16 q^{-2} E[hatN \u27e8\u0394N,G_U(j)\u27e9] on all even j. Replacing \u0394N by N breaks it."
+    },
+    "B": {
+      "proved": true,
+      "den1_hit": 2,
+      "dimVplus_hit": 2,
+      "by_p": {
+        "5": {
+          "0": {
+            "live": 13.53846153846154,
+            "pred": 13.538461538461538,
+            "err": 1.7763568394002505e-15,
+            "den": 6
+          },
+          "2": {
+            "live": 6.153846153846153,
+            "pred": 6.153846153846154,
+            "err": 8.881784197001252e-16,
+            "den": 6
+          },
+          "4": {
+            "live": 6.1538461538461515,
+            "pred": 6.153846153846154,
+            "err": 2.6645352591003757e-15,
+            "den": 6
+          }
+        },
+        "7": {
+          "0": {
+            "live": 7.511002444987774,
+            "pred": 7.511002444987773,
+            "err": 8.881784197001252e-16,
+            "den": 8
+          },
+          "2": {
+            "live": 8.215158924205376,
+            "pred": 8.215158924205378,
+            "err": 1.7763568394002505e-15,
+            "den": 8
+          },
+          "4": {
+            "live": 9.858190709046458,
+            "pred": 9.858190709046452,
+            "err": 5.329070518200751e-15,
+            "den": 8
+          },
+          "6": {
+            "live": 8.215158924205378,
+            "pred": 8.215158924205378,
+            "err": 0.0,
+            "den": 8
+          }
+        }
+      },
+      "named_den": "p+1 = |U|",
+      "theorem": "\u03bb_j=8/(p+1) q^{-2} E|\u27e8\u0394N,G_U(j)\u27e9|\u00b2.  Den |U| is not dim V_+ and not N/(4p).  den=1 or den=dim V_+ fail."
+    },
+    "C": {
+      "proved": false,
+      "live_square_beats_threshold": true,
+      "threshold": "E|inner|\u00b2 \u2265 (3/4)(p+1) q\u00b2  \u21d4  \u03bb_j\u22656",
+      "rooms": {
+        "5": {
+          "0": {
+            "E_abs2": 6346.153846153846,
+            "need": 2812.5,
+            "ge": true
+          },
+          "2": {
+            "E_abs2": 2884.6153846153848,
+            "need": 2812.5,
+            "ge": true
+          },
+          "4": {
+            "E_abs2": 2884.6153846153848,
+            "need": 2812.5,
+            "ge": true
+          }
+        },
+        "7": {
+          "0": {
+            "E_abs2": 18033.916870415644,
+            "need": 14406.0,
+            "ge": true
+          },
+          "2": {
+            "E_abs2": 19724.596577017113,
+            "need": 14406.0,
+            "ge": true
+          },
+          "4": {
+            "E_abs2": 23669.51589242053,
+            "need": 14406.0,
+            "ge": true
+          },
+          "6": {
+            "E_abs2": 19724.596577017113,
+            "need": 14406.0,
+            "ge": true
+          }
+        }
+      },
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Q_tau_named_in_p": false,
+      "S_k_named_in_p": false,
+      "note": "Square formula names the den as |U|=p+1 and proves \u03bb_j\u22650. The comparison to 6 is live at p=5,7 and unproved in general. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

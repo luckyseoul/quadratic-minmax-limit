@@ -1,0 +1,51 @@
+{
+  "prop": "15.362",
+  "title": "N is the universal Desarguesian r-net 0-1 count",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "net_count_independent": true,
+    "two_dir_is_A008300": true,
+    "D_named_in_p": false,
+    "Q_NL_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "p3": 6,
+      "p5_inf01": 130,
+      "p5_024": 130,
+      "p7_mixed": 5726,
+      "p7_QR": 5726,
+      "p7_3p1": 5726,
+      "fake_434": 434,
+      "theorem": "Half-net count is net-independent and equals N."
+    },
+    "B": {
+      "proved": true,
+      "T31": 6,
+      "T52": 2040,
+      "T73": 68938800,
+      "theorem": "Two-direction count is A008300 T(p,m); N=T only at p=3."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "D_named_in_p": false,
+      "Q_NL_named_in_p": false,
+      "Q_tau_named_in_p": false,
+      "note": "N is the universal r-net 0-1 count, Paley-free, not a Gauss/Jacobi product.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "prop": "15.299",
+  "title": "Wick 3-point Gauss-invisible on \u03a9; Q_++ \u2260 4(q\u22121)/(q+1)",
+  "proved": {
+    "wick_A_zero": true,
+    "tempting_Qpp_fails_p7": true,
+    "phi_F_ge_6_proved_general": false,
+    "Q_tau_named_in_p": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "A_wick_abs": 3.019616655110705e-30,
+          "inverted_abs": 125.00000000000006
+        },
+        "7": {
+          "A_wick_abs": 3.9475066815672235e-30,
+          "inverted_abs": 342.99999999999983
+        }
+      },
+      "invert_hit": 2,
+      "invert_tot": 2,
+      "theorem": "A_Wick(\u03be,\u03b7,\u03b8)=0 on \u03a9-triples because every Wick contraction contains \u2211_x e_{\u03be+\u03b7}(x)=0.  Forgetting that factor yields size p\u00b3."
+    },
+    "B": {
+      "proved": true,
+      "p5_tempting_is_48_13": true,
+      "p7_live_Qpp": "1544/409",
+      "p7_tempting": "96/25",
+      "p7_gap": 0.0649388753056237,
+      "dimVplus_p7": 25,
+      "dimVplus_is_not_409": true,
+      "theorem": "Q_++/q\u00b2=4(q\u22121)/(q+1) at p=5 only.  dim V\u208a is not the p=7 denominator 409.  Catalog of named Jacobi/type counts has no short rational for the three off classes."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Q_tau_named_in_p": false,
+      "note": "Wick does not name A.  4(q\u22121)/(q+1) does not name Q_++. N\u208a/(2p) stays unnamed. Floor OPEN."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

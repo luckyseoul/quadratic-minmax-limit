@@ -1,0 +1,79 @@
+{
+  "prop": "15.363",
+  "title": "A008300 cut is full-spectrum; p=5 ratio dies at p=7",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "fourier_identity": true,
+    "S_on_deg_le_3": true,
+    "p5_ratio_fails_p7": true,
+    "D_named_in_p": false,
+    "Q_NL_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "N_p5": 130,
+      "T52": 2040,
+      "fake_S0_over_p": 408.0,
+      "theorem": "N=p^{-p}\u2211S; wrap-flat count in T(5,2) is 130, not 408."
+    },
+    "B": {
+      "proved": true,
+      "n_T": 2040,
+      "occ_affine": [
+        2040,
+        0,
+        0,
+        0,
+        0
+      ],
+      "occ_x2": [
+        440,
+        400,
+        400,
+        400,
+        400
+      ],
+      "occ_x3": [
+        460,
+        395,
+        395,
+        395,
+        395
+      ],
+      "S_x2": 40,
+      "S_x3": 65,
+      "theorem": "Affine pairing vanishes on T; quad S=40, cubic S=65."
+    },
+    "C": {
+      "proved": true,
+      "T7": 68938800,
+      "ratio_num": 896204400,
+      "ratio_den": 204,
+      "remainder": 168,
+      "T7_over_7": 9848400,
+      "N7": 5726,
+      "theorem": "T\u00b713/204 is not integral at p=7; T/7\u22605726."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "D_named_in_p": false,
+      "Q_NL_named_in_p": false,
+      "Q_tau_named_in_p": false,
+      "note": "A008300 cut is a full-spectrum cyclotomic sum.  No product name.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

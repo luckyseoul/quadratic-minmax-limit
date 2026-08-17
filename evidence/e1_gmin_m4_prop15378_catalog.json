@@ -1,0 +1,51 @@
+{
+  "A": {
+    "7": {
+      "Qmm": "24/7",
+      "interp": "24/7",
+      "eq_interp": true,
+      "Qpp": "40/9",
+      "Q_AP": "40/9",
+      "eq_QAP": true
+    },
+    "11": {
+      "Qmm": "128/55",
+      "interp": "128/55",
+      "eq_interp": true,
+      "Qpp": "3976/495",
+      "Q_AP": "56/9",
+      "eq_QAP": false
+    },
+    "19": {
+      "Qmm": "256/171",
+      "interp": "144/95",
+      "eq_interp": false,
+      "Qpp": "15064/855",
+      "Q_AP": "88/9",
+      "eq_QAP": false
+    }
+  },
+  "B": {
+    "7": {
+      "kQn": "76",
+      "fit": "76/21",
+      "two_pt": "76/21",
+      "eq_3pt": true,
+      "eq_2pt": true
+    },
+    "11": {
+      "kQn": "144",
+      "fit": "144/55",
+      "two_pt": "144/55",
+      "eq_3pt": true,
+      "eq_2pt": true
+    },
+    "19": {
+      "kQn": "272",
+      "fit": "272/171",
+      "two_pt": "280/171",
+      "eq_3pt": true,
+      "eq_2pt": false
+    }
+  }
+}

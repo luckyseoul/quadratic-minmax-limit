@@ -1,0 +1,88 @@
+{
+  "prop": "15.374",
+  "title": "p\u22613 S0 residual: Qm_min named; Q++\u2265QN* misses sm0=6",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "S0_recovers_live_QN": true,
+    "Qm_min_named_pair_misses": true,
+    "Qm_min_le_Qlo": true,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "Qn": "1496/409",
+      "live_QN": "1496/409",
+      "coarse_QN": "1440/409",
+      "Qpp": "1544/409",
+      "theorem": "S0 at Q++=Q_form recovers live Q_N*=1496/409, not 1440/409."
+    },
+    "B": {
+      "proved": true,
+      "Qm_min": "1273/409",
+      "Qm_Qpp_ge_Qn": "1232/409",
+      "gap": "41/409",
+      "sm0_at_pair": "2208/409",
+      "sm0_at_min": "6",
+      "sm0_live": "3072/409",
+      "theorem": "Q++\u2265Q_N* misses the sm0=6 cut by 41/409."
+    },
+    "C": {
+      "proved": true,
+      "p7_Qmmin_le_Qlo": true,
+      "rows": [
+        [
+          7,
+          "1273/409",
+          "10/3"
+        ],
+        [
+          11,
+          "99212/27765",
+          "92/25"
+        ],
+        [
+          19,
+          "108231352/28396875",
+          "104/27"
+        ],
+        [
+          23,
+          "2107494530/546562731",
+          "470/121"
+        ],
+        [
+          31,
+          "508413747289/130234063340",
+          "98/25"
+        ],
+        [
+          43,
+          "394226319705210/100134654148991",
+          "580/147"
+        ]
+      ],
+      "theorem": "Qm_min\u2264Q_lo \u21d4 Q_form\u2265Q_lo, already proved."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "D_named_in_p": false,
+      "note": "Q_{--} is not proved to lie in [Qm_min, t_smh]. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

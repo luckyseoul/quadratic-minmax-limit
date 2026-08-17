@@ -1,0 +1,117 @@
+{
+  "prop": "15.305",
+  "title": "Var(hatN)=q\u00b2/4; ns-lines |D\u2229\u2113|=(p\u22121)/2; E[S\u00b2] names Q++ if E[(\u2211n\u00b2)\u00b2] named",
+  "proved": {
+    "hatN_variance": true,
+    "Fp_orbit_ES2": true,
+    "ns_lines_constant": true,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false,
+    "Q_tau_named_in_p": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "mean": 12.499999999999996,
+          "var": 156.24999999999997,
+          "expect_mean": 12.5,
+          "expect_var": 156.25
+        },
+        "7": {
+          "mean": 24.49999999999999,
+          "var": 600.2500000000001,
+          "expect_mean": 24.5,
+          "expect_var": 600.25
+        }
+      },
+      "theorem": "Var(hatN)=q\u00b2/4 on \u03a9.  E[hatN]=q/2.  Not q\u00b2/2."
+    },
+    "B": {
+      "proved": true,
+      "antipode_hit": 2,
+      "by_p": {
+        "5": {
+          "E_S2": 3653.846153846153,
+          "pred": 3653.8461538461543,
+          "wrong_no_antipode": 2980.7692307692314,
+          "Qpp": 3.6923076923076934,
+          "err": 1.3642420526593924e-12
+        },
+        "7": {
+          "E_S2": 28001.882640586788,
+          "pred": 28001.882640586795,
+          "wrong_no_antipode": 24197.853300733495,
+          "Qpp": 3.775061124694376,
+          "err": 7.275957614183426e-12
+        }
+      },
+      "theorem": "E[S\u00b2]=(p\u22121)q\u00b2+(p\u22121)(p\u22123)q\u00b2 Q_{++}/16. Omitting antipodes (p\u22122 in place of p\u22123) fails."
+    },
+    "C": {
+      "proved": true,
+      "chi_line_sum_plus_one": true,
+      "square_dir_varies": 7,
+      "by_p": {
+        "5": {
+          "chi_offspan": [
+            1,
+            1,
+            1
+          ],
+          "ns_spreads": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sq_spreads": [
+            5.0,
+            5.0,
+            5.0
+          ],
+          "target": 2.0
+        },
+        "7": {
+          "chi_offspan": [
+            1,
+            1,
+            1
+          ],
+          "ns_spreads": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sq_spreads": [
+            7.0,
+            7.0,
+            7.0,
+            7.0
+          ],
+          "target": 3.0
+        }
+      },
+      "theorem": "Nonsquare-direction lines meet D in (p\u22121)/2 points. \u2211_t \u03c7(w+tv)=+1 off \u27e8v\u27e9.  Square directions vary (spread p)."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "note": "ns-line theorem and E[S\u00b2]\u2194Q_{++} do not name E[(\u2211 n\u00b2)\u00b2] on a square parallel class, nor prove the 15.304 square-mass bound. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

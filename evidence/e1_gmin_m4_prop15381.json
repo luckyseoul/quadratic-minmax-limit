@@ -1,0 +1,202 @@
+{
+  "prop": "15.381",
+  "title": "Max\u2212 E[f_e]=\u22121/p; both 4-level J-corners empty (p=7 3-equal both-signs)",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "E_fe_minus_is_minus_1_over_p": true,
+    "a_thr_iff_minus_slice": true,
+    "low_corner_empty_p_ne_7": true,
+    "high_corner_empty_all_p": true,
+    "p7_low_corner_3equal_empty": true,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "mean": -0.19999999999999996,
+          "spread": 0.0,
+          "named": -0.2,
+          "wrong_plus": 0.2
+        },
+        "7": {
+          "mean": -0.14285714285714282,
+          "spread": 0.0,
+          "named": -0.14285714285714285,
+          "wrong_plus": 0.14285714285714285
+        }
+      },
+      "theorem": "E_\u2212[f_e]=\u22121/p. Fail: claim +1/p."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "a_thr": "3/5",
+          "one_minus_2a": "-1/5",
+          "E_f": "-1/5"
+        },
+        "7": {
+          "a_thr": "4/7",
+          "one_minus_2a": "-1/7",
+          "E_f": "-1/7"
+        },
+        "11": {
+          "a_thr": "6/11",
+          "one_minus_2a": "-1/11",
+          "E_f": "-1/11"
+        },
+        "13": {
+          "a_thr": "7/13",
+          "one_minus_2a": "-1/13",
+          "E_f": "-1/13"
+        },
+        "19": {
+          "a_thr": "10/19",
+          "one_minus_2a": "-1/19",
+          "E_f": "-1/19"
+        },
+        "23": {
+          "a_thr": "12/23",
+          "one_minus_2a": "-1/23",
+          "E_f": "-1/23"
+        }
+      },
+      "theorem": "a=thr iff minus-slice under E[f]=\u22121/p. Fail: claim the lock is a=1/2."
+    },
+    "C": {
+      "proved": true,
+      "interpolant_atoms": [
+        "0",
+        "0",
+        "1"
+      ],
+      "rows": {
+        "5": {
+          "mass": "1/5",
+          "classified": false,
+          "is_3equal": false,
+          "empty": true
+        },
+        "7": {
+          "mass": "1/7",
+          "classified": true,
+          "is_3equal": true,
+          "empty": false
+        },
+        "11": {
+          "mass": "1/11",
+          "classified": false,
+          "is_3equal": false,
+          "empty": true
+        },
+        "13": {
+          "mass": "1/13",
+          "classified": false,
+          "is_3equal": false,
+          "empty": true
+        },
+        "17": {
+          "mass": "1/17",
+          "classified": false,
+          "is_3equal": false,
+          "empty": true
+        },
+        "19": {
+          "mass": "1/19",
+          "classified": false,
+          "is_3equal": false,
+          "empty": true
+        },
+        "23": {
+          "mass": "1/23",
+          "classified": false,
+          "is_3equal": false,
+          "empty": true
+        },
+        "31": {
+          "mass": "1/31",
+          "classified": false,
+          "is_3equal": false,
+          "empty": true
+        }
+      },
+      "theorem": "Low corner 1_{S=\u22128} has mass 1/p, unclassified for p\u22607. Fail: claim 1/p=(p\u22121)/(2p)."
+    },
+    "D": {
+      "proved": true,
+      "interpolant_atoms": [
+        "0",
+        "0",
+        "1"
+      ],
+      "rows": {
+        "5": {
+          "mass": "3/10",
+          "classified": false
+        },
+        "7": {
+          "mass": "2/7",
+          "classified": false
+        },
+        "11": {
+          "mass": "3/11",
+          "classified": false
+        },
+        "13": {
+          "mass": "7/26",
+          "classified": false
+        },
+        "17": {
+          "mass": "9/34",
+          "classified": false
+        },
+        "19": {
+          "mass": "5/19",
+          "classified": false
+        },
+        "23": {
+          "mass": "6/23",
+          "classified": false
+        },
+        "31": {
+          "mass": "8/31",
+          "classified": false
+        }
+      },
+      "theorem": "High corner 1_{S=\u22128} has mass (p+1)/(4p), unclassified for every p\u22655. Fail: claim (p+3)/(4p)."
+    },
+    "E": {
+      "proved": true,
+      "nU": 1636,
+      "mass": "1/7",
+      "both": 1222,
+      "const_plus": 0,
+      "const_minus": 0,
+      "nE": 1225,
+      "max_abs_Efe_U": "259/409",
+      "N_minus": 11452,
+      "theorem": "p=7 certified: |Max\u2212|=11452, nU=1636, every e\u2209T has |E[f_e|U]|=\u2264259/409<1 (both signs). Fail: const_plus>0 or max=1."
+    },
+    "F": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Both 4-level J-corners empty for every p\u22655. Interior 4-level and 5+ levels stay open. residual_ii_k_eq_4p_empty stays False. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}

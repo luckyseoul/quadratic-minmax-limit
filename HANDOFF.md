@@ -1,6 +1,6 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-16):** Leftover campaign mid-arc. 15.273–15.279 shipped (A–**Y**); \(\lambda_{\min}(\Phi)\ge6\), Type I 3-point, residual (ii) \(k\ge4p\) still OPEN. Aut-Schur **false**. Gsum unused. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**: `evidence/share/denseness_path_package.md` § Caveats.  
-> Session: **`evidence/SESSION_HANDOFF_2026-08-16_leftover.md`**. Prior: `…-08-15_aitest.md`, `…_unflip.md`. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**. Next `/goal`: **`GOAL.md`**.
+> **Now (2026-08-17):** Leftover campaign mid-arc. 15.273–15.382 shipped. \(\lambda_{\min}(\Phi)\ge6\), Type I multi-level, residual (ii) \(k\ge4p\) still OPEN. 15.381 emptied both 4-level J-corners; 15.382 emptied pure-pair Aut_e double-stars as interior 4-level. Aut-Schur **false**. Gsum unused. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**: `evidence/share/denseness_path_package.md` § Caveats.  
+> Session: **`evidence/SESSION_HANDOFF_2026-08-17_leftover.md`**. Prior: `…-08-16_leftover.md`. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**. Next `/goal`: **`GOAL.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
 
@@ -48,7 +48,9 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 **Prior resumes:** `evidence/SESSION_HANDOFF_2026-08-14_residual_i.md`, `evidence/SESSION_HANDOFF_2026-08-13_residual_i.md`, `evidence/SESSION_HANDOFF_2026-08-12_residual_i.md`  
 **P0 graph:** `evidence/P0_ENGINEERING_GRAPH.md` · **Failure graph:** `evidence/E1_FAILURE_GRAPH.md`  
 
-**Suggested skills:** `agent-cost-optimization` · `graph-engineered-completion` · `scientific-critique` · `grill-me` · `self-refine-loop` · `handoff` · `session-handoff-packager` · `verification-before-completion` · `use-available-compute` · `research` · `arxiv` · `litreview` · `openai-referee`  
+**Suggested skills:** `agent-cost-optimization` · `graph-engineered-completion` · `scientific-critique` · `grill-me` · `self-refine-loop` · `handoff` · `session-handoff-packager` · `verification-before-completion` · `use-available-compute` · `research` · `arxiv` · `litreview` · `openai-referee`  · `claude-referee`
+
+**Referee:** `openai-referee` for stuck help and final checks after major units. When it is out of tokens, use `claude-referee` the same way in its place (not in parallel).  
 
 **Compute:** 88 cores + idle V100; ProcessPool/GPU for Max+ contractions; no class_key thrash (F19); never soft-close L (F3). Token budget not a constraint this week — start a **new** `/goal` after `/goal clear` (cannot resume). Do not leave orphaned stdin `python3` eigsh jobs.
 

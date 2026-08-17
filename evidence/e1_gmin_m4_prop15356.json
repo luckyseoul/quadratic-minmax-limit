@@ -1,0 +1,75 @@
+{
+  "prop": "15.356",
+  "title": "Q_1D++ named in p; ensemble is the 1D/NL mix",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Q_1d_pp_named_in_p": true,
+    "Q_1d_Nstar_zero": true,
+    "ensemble_is_1d_NL_mix": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": "16/9",
+        "7": "104/15",
+        "11": "344/27",
+        "13": "1280/121",
+        "17": "3304/225",
+        "19": "1208/51",
+        "23": "1832/63",
+        "29": "19552/729",
+        "31": "3464/87"
+      },
+      "theorem": "Q_1D++ is named in p and is not Q_AP or the ensemble at p=7."
+    },
+    "B": {
+      "proved": true,
+      "Q_1d_off": 0,
+      "live_QN": {
+        "5": "32/13",
+        "7": "1440/409"
+      },
+      "theorem": "1D contributes 0 to ensemble Q_N*."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "w": "3/13",
+          "Q_1d": "16/9",
+          "Q_NL": "64/15",
+          "mix": "48/13"
+        },
+        "7": {
+          "w": "10/409",
+          "Q_1d": "104/15",
+          "Q_NL": "632/171",
+          "mix": "1544/409"
+        }
+      },
+      "fake_w_p7": "10/31",
+      "theorem": "Ensemble is the 1D/NL mix; w and Q_NL unnamed in p."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "box_is_a_bound": false,
+      "note": "Q_1D++ named.  Ensemble still needs w=n_1d/|H+| and Q_NL in p.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

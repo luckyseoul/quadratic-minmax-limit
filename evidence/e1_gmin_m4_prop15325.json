@@ -1,0 +1,302 @@
+{
+  "prop": "15.325",
+  "title": "A_U on Paley \u03b8+ is \u2212Kl(\u03c7=\u2212\u03c7(\u22121)); two-point Var 180 at p=5",
+  "proved": {
+    "AU_spectrum_named": true,
+    "nn_N_constant": true,
+    "twopoint_too_weak": true,
+    "A_square_named": false,
+    "Q_tau_named_in_p": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "squares_all_p_false": true,
+      "by_p": {
+        "5": {
+          "n_named": 2,
+          "n_distinct": 2,
+          "named": [
+            -1.23606798,
+            3.23606798
+          ],
+          "equals_squares": false
+        },
+        "7": {
+          "n_named": 3,
+          "n_distinct": 3,
+          "named": [
+            -2.04891734,
+            2.35689587,
+            2.69202147
+          ],
+          "equals_squares": true
+        },
+        "11": {
+          "n_named": 5,
+          "n_distinct": 5,
+          "named": [
+            -3.10768824,
+            -0.72472418,
+            0.75758744,
+            2.35787226,
+            5.71695272
+          ],
+          "equals_squares": true
+        },
+        "13": {
+          "n_named": 6,
+          "n_distinct": 6,
+          "named": [
+            -6.29622981,
+            0.23963728,
+            0.87063844,
+            3.02992783,
+            3.33598616,
+            4.8200401
+          ],
+          "equals_squares": false
+        },
+        "17": {
+          "n_named": 8,
+          "n_distinct": 8,
+          "named": [
+            -4.64445948,
+            -4.53698561,
+            -2.00765183,
+            1.70143525,
+            2.34349364,
+            3.23379859,
+            3.95002338,
+            7.96034606
+          ],
+          "equals_squares": false
+        },
+        "19": {
+          "n_named": 9,
+          "n_distinct": 9,
+          "named": [
+            -5.4937029,
+            -3.99165871,
+            -2.01089484,
+            -0.89477112,
+            1.84243169,
+            2.9223764,
+            4.27501502,
+            4.84239964,
+            7.50880482
+          ],
+          "equals_squares": true
+        },
+        "23": {
+          "n_named": 11,
+          "n_distinct": 11,
+          "named": [
+            -7.27506072,
+            -2.37463983,
+            -2.14535566,
+            -2.04637078,
+            -0.83465282,
+            -0.25280217,
+            0.08592815,
+            4.47790183,
+            6.45350806,
+            7.45323908,
+            7.45830485
+          ],
+          "equals_squares": true
+        }
+      },
+      "theorem": "spec(A_U|\u03b8+)={\u2212Kl(\u2212s,\u22121): \u03c7_p(s)=\u2212\u03c7_p(\u22121)}. Squares-for-all-p fails at p=5."
+    },
+    "B": {
+      "proved": true,
+      "fiber_split_false": true,
+      "by_p": {
+        "5": {
+          "1": [
+            2,
+            2
+          ],
+          "2": [
+            0,
+            0
+          ],
+          "3": [
+            2,
+            2
+          ],
+          "4": [
+            1,
+            1
+          ]
+        },
+        "7": {
+          "1": [
+            0,
+            0
+          ],
+          "2": [
+            2,
+            2
+          ],
+          "3": [
+            0,
+            0
+          ],
+          "4": [
+            1,
+            1
+          ],
+          "5": [
+            2,
+            2
+          ],
+          "6": [
+            2,
+            2
+          ]
+        },
+        "11": {
+          "1": [
+            2,
+            2
+          ],
+          "2": [
+            2,
+            2
+          ],
+          "3": [
+            2,
+            2
+          ],
+          "4": [
+            1,
+            1
+          ],
+          "5": [
+            0,
+            0
+          ],
+          "6": [
+            0,
+            0
+          ],
+          "7": [
+            2,
+            2
+          ],
+          "8": [
+            2,
+            2
+          ],
+          "9": [
+            0,
+            0
+          ],
+          "10": [
+            0,
+            0
+          ]
+        },
+        "13": {
+          "1": [
+            0,
+            0
+          ],
+          "2": [
+            0,
+            0
+          ],
+          "3": [
+            0,
+            0
+          ],
+          "4": [
+            1,
+            1
+          ],
+          "5": [
+            2,
+            2
+          ],
+          "6": [
+            0,
+            0
+          ],
+          "7": [
+            2,
+            2
+          ],
+          "8": [
+            2,
+            2
+          ],
+          "9": [
+            2,
+            2
+          ],
+          "10": [
+            2,
+            2
+          ],
+          "11": [
+            0,
+            0
+          ],
+          "12": [
+            2,
+            2
+          ]
+        }
+      },
+      "theorem": "|U \u2229 (b+U)| is N(b)-constant."
+    },
+    "C": {
+      "proved": true,
+      "twopoint_closes_p5_false": true,
+      "ub5": 179.99999999999997,
+      "Vfloor5": "360/7",
+      "by_p": {
+        "5": {
+          "two_point": 179.99999999999997,
+          "Var2orb": 50.76923076923077
+        },
+        "7": {
+          "two_point": 742.8720389323751,
+          "Var2orb": 93.33333333333333
+        },
+        "13": {
+          "two_point": 49166.01472238144,
+          "Var2orb": 297.8181818181818
+        },
+        "17": {
+          "two_point": 203665.8365888409,
+          "Var2orb": 498.13953488372096
+        }
+      },
+      "theorem": "Two-point Var\u2264180 at p=5, which is not \u2264360/7. Spectrum names the interval, not the floor."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "A_square_named": false,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "note": "Named A_U spectrum on V_\u03b8+ does not bound Var by Var_2orb or V_floor.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

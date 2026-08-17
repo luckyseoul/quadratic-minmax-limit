@@ -1,0 +1,108 @@
+{
+  "prop": "15.345",
+  "title": "AP n_3 constant; single-line 3-/4-moments miss the floor",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "n3_constant_on_AP": true,
+    "moment3_lp_misses_floor": true,
+    "moment4_lp_misses_floor": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "ap_unique": [
+            14
+          ],
+          "nap_unique": [],
+          "n_ap": 50,
+          "n_nap": 0
+        },
+        "7": {
+          "ap_unique": [
+            691
+          ],
+          "nap_unique": [
+            699
+          ],
+          "n_ap": 147,
+          "n_nap": 98
+        }
+      },
+      "theorem": "n_3 constant on 3-APs and on non-APs of a square line. p=5: 14.  p=7: 691 vs 699."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "n_sigs": 18,
+          "E_M2_max": 1013.8461538461547,
+          "E_M2_min": 900.6153846153848,
+          "Qpp_max": 9.107692307692382,
+          "Qpp_min": 0.04923076923077474,
+          "Qlo": 2.75,
+          "Qub": 3.7142857142857144,
+          "closes": false
+        },
+        "7": {
+          "n_sigs": 155,
+          "E_M2_max": 8140.1284558961825,
+          "E_M2_min": 7057.0,
+          "Qpp_max": 16.75004701899568,
+          "Qpp_min": 2.0136054421768703,
+          "Qlo": 3.3333333333333335,
+          "Qub": 4.117647058823529,
+          "closes": false
+        }
+      },
+      "theorem": "3-moment signature LP misses [Q_lo, ub].  p=5 max Q++ > 26/7."
+    },
+    "C": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "n_sigs": 18,
+          "E_M2_max": 975.604395604396,
+          "E_M2_min": 903.6923076923078,
+          "Qpp_max": 6.048351648351678,
+          "Qpp_min": 0.2953846153846236,
+          "Qlo": 2.75,
+          "Qub": 3.7142857142857144,
+          "closes": false
+        },
+        "7": {
+          "n_sigs": 155,
+          "E_M2_max": 7543.020184154395,
+          "E_M2_min": 7057.000000000096,
+          "Qpp_max": 8.62612495448157,
+          "Qpp_min": 2.0136054421781795,
+          "Qlo": 3.3333333333333335,
+          "Qub": 4.117647058823529,
+          "closes": false
+        }
+      },
+      "theorem": "4-moments of one line still miss the floor."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "interval_closed": false,
+      "note": "15.344 2-point + single-line 3-/4-moments of n do not reach [Q_lo, ub].  Need E[n_i\u00b2 n_j\u00b2] or |H_+|.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "prop": "15.344",
+  "title": "Named Paley 2-point of D; n_2 not constant; box y=2 unique",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "named_2point": true,
+    "ns_n3_vanishes_p5": true,
+    "En4_keeps_Hplus_den": true,
+    "named_box_unique_upper": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "n1_over_H": "2/5",
+          "n2_edge": "1/5",
+          "n2_non": "1/10",
+          "pair_mean": "3/20"
+        },
+        "7": {
+          "n1_over_H": "3/7",
+          "n2_edge": "3/14",
+          "n2_non": "1/7",
+          "pair_mean": "5/28"
+        },
+        "11": {
+          "n1_over_H": "5/11",
+          "n2_edge": "5/22",
+          "n2_non": "2/11",
+          "pair_mean": "9/44"
+        },
+        "13": {
+          "n1_over_H": "6/13",
+          "n2_edge": "3/13",
+          "n2_non": "5/26",
+          "pair_mean": "11/52"
+        },
+        "17": {
+          "n1_over_H": "8/17",
+          "n2_edge": "4/17",
+          "n2_non": "7/34",
+          "pair_mean": "15/68"
+        },
+        "19": {
+          "n1_over_H": "9/19",
+          "n2_edge": "9/38",
+          "n2_non": "4/19",
+          "pair_mean": "17/76"
+        }
+      },
+      "cache": {
+        "5": {
+          "H": 130,
+          "n1": 52,
+          "n1_over_H": "2/5",
+          "n2_edge_unique": [
+            26
+          ],
+          "n2_non_unique": [
+            13
+          ],
+          "n2_edge_over_H": "1/5",
+          "n2_non_over_H": "1/10"
+        },
+        "7": {
+          "H": 5726,
+          "n1": 2454,
+          "n1_over_H": "3/7",
+          "n2_edge_unique": [
+            1227
+          ],
+          "n2_non_unique": [
+            818
+          ],
+          "n2_edge_over_H": "3/14",
+          "n2_non_over_H": "1/7"
+        }
+      },
+      "theorem": "n_2(\u03c7=1)/|H_+|=(p\u22121)/(4p), n_2(\u03c7=\u22121)/|H_+|=(p\u22123)/(4p). Not a 2-design of pairs."
+    },
+    "B": {
+      "proved": true,
+      "p5_ns_n3": 0,
+      "p5_cap": 2,
+      "p7_cap": 3,
+      "p7_n3_not_constant": true,
+      "theorem": "n_t=0 on ns-lines for t>(p\u22121)/2.  p=5 \u21d2 n_3=0. p=7 n_3 splits (not a 3-design)."
+    },
+    "C": {
+      "proved": true,
+      "p5_En4": "990/13",
+      "p5_4design": "72/7",
+      "p7_En4": "115140/409",
+      "theorem": "E[n\u00b3], E[n\u2074] retain den |H_+|/(2p).  4-design moment is not E[n\u2074]."
+    },
+    "D": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "nm_lo": "7/2",
+          "nm_hi": "26/7",
+          "Qlo": "11/4",
+          "Qub": "26/7",
+          "in_floor": true
+        },
+        "7": {
+          "nm_lo": "11/3",
+          "nm_hi": "34/9",
+          "Qlo": "10/3",
+          "Qub": "70/17",
+          "in_floor": true
+        },
+        "13": {
+          "nm_lo": "23/6",
+          "nm_hi": "58/15",
+          "Qlo": "15/4",
+          "Qub": "310/71",
+          "in_floor": true
+        },
+        "17": {
+          "nm_lo": "31/8",
+          "nm_hi": "74/19",
+          "Qlo": "245/64",
+          "Qub": "560/127",
+          "in_floor": true
+        },
+        "29": {
+          "nm_lo": "55/14",
+          "nm_hi": "122/31",
+          "Qlo": "767/196",
+          "Qub": "1742/391",
+          "in_floor": true
+        }
+      },
+      "alt_boxes_y": [
+        [
+          -3,
+          2
+        ],
+        [
+          -2,
+          2
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "unique_upper_y": 2,
+      "not_the_ensemble": true,
+      "theorem": "Named box sits in the floor interval; unique upper 4\u22122/(p+2) in this family.  Not equal to live Q++."
+    },
+    "E": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "interval_closed": false,
+      "note": "Named 2-point of D is not a second S0-relation on (Q++, Qn).  E[M\u00b2] still has den |H_+|/(2p).  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "prop": "15.313",
+  "title": "Size-12 orbit Q++=8/3; p=7 mix names Q_\u03c4; floor only p=5,7",
+  "proved": {
+    "size12_Q": true,
+    "p7_mixture": true,
+    "floor_p5_p7": true,
+    "Q_tau_named_in_p": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "err2": 2.842170943040401e-14,
+      "err1": 7.45473054693682,
+      "Qpp": "8/3",
+      "Qn": "4",
+      "Qpm1": 8.000000000000014,
+      "T": [
+        10,
+        12,
+        13,
+        16,
+        18,
+        25,
+        29,
+        36,
+        38,
+        42,
+        44,
+        48
+      ],
+      "fourths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        14,
+        21,
+        28,
+        35,
+        42
+      ],
+      "T_is_fourths": false,
+      "fourths_is_C0_evec": false,
+      "theorem": "Size-12 partner: \u1e91=\u1e91_AP\u22122\u0393_T, Q++=8/3, Q_N*=4, Q_pm1=8. T is not the fourth-power subgroup."
+    },
+    "B": {
+      "proved": true,
+      "N": 5726,
+      "Qpp": "1544/409",
+      "Qn": "1496/409",
+      "Qm": "1376/409",
+      "drop12_Qpp": "264/65",
+      "sizes": {
+        "AP": 84,
+        "QR0": 56,
+        "APNC": 588,
+        "QR0NC": 1176,
+        "size12": 1176,
+        "APNCgen2": 1176,
+        "CRRR": 1176,
+        "o294": 294
+      },
+      "theorem": "p=7 eight-type mix recovers live Q_\u03c4. Dropping the size-12 orbit misses 1544/409."
+    },
+    "C": {
+      "proved": true,
+      "lambda_p7": {
+        "0": 96.0,
+        "2": 8.215158924205376,
+        "8": 7.511002444987783,
+        "12": 10.562347188264061
+      },
+      "lambda_min_p7": 7.511002444987783,
+      "delta_max_p7": 0.488997555012217,
+      "p5_lambda_min": 6.153846153846154,
+      "general": false,
+      "theorem": "Named Q_\u03c4 \u21d2 \u03bb_min=3072/409>6 at p=7 and 80/13>6 at p=5. Not a type list for all p\u22655. phi_F not imported."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "note": "p=5 and p=7 Q_\u03c4 named by Fejer/Gauss/\u1e91\u22122\u0393 mixtures. No general-p NL type list (size-12 T is p=7-only; NC empty at p=13). phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

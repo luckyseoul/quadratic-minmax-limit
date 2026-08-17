@@ -1,0 +1,14 @@
+{
+  "quad_unique_5": 30,
+  "quad_unique_7": 140,
+  "cubic_unique_5": 130,
+  "cubic_forms_5": 9765625,
+  "p5_energy_count": 130,
+  "p5_gpu_enum": 33554432,
+  "identity_max_abs_err": 0.0,
+  "nl_const1_p5": 3,
+  "1d_const1_p5": 5,
+  "cubic_unique_7": 280,
+  "cubic_forms_7": 282475249,
+  "cubic_exhausts_p7": false
+}

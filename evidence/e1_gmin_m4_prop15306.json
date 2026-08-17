@@ -1,0 +1,106 @@
+{
+  "prop": "15.306",
+  "title": "1_D is Paley \u03b8_+-eigenfunction; Q++ linear in E[M\u00b2]; E[n\u2074] unnamed",
+  "proved": {
+    "theta_plus_eigenfunction": true,
+    "pairing_2design": true,
+    "Qpp_from_EM2": true,
+    "En4_named": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false,
+    "Q_tau_named_in_p": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "e": "6",
+          "e_from_theta_plus": "6",
+          "e_from_theta_minus": "3",
+          "e_out": "4"
+        },
+        "7": {
+          "e": "12",
+          "e_from_theta_plus": "12",
+          "e_from_theta_minus": "8",
+          "e_out": "9"
+        },
+        "11": {
+          "e": "30",
+          "e_from_theta_plus": "30",
+          "e_from_theta_minus": "24",
+          "e_out": "25"
+        }
+      },
+      "theorem": "1_D\u2212(k/q)1 is a Paley \u03b8_+=(p\u22121)/2 eigenfunction. \u03b8_\u2212 gives the wrong in-D degree."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "2design_E_pair2": "2",
+          "Var_n": "2",
+          "4design_moment": 10.285714285714286
+        },
+        "7": {
+          "2design_E_pair2": "3",
+          "Var_n": "3",
+          "4design_moment": 24.923076923076923
+        },
+        "11": {
+          "2design_E_pair2": "5",
+          "Var_n": "5",
+          "4design_moment": 72.58064516129032
+        }
+      },
+      "p5_4design_vs_live": {
+        "4design": 10.285714285714286,
+        "live_central4": 8.461538461538462
+      },
+      "theorem": "Var(n)=(p\u22121)/2 is the V_{\u03b8_+} 2-design pairing. Real 4-design moment fails at p=5 (1728/168 vs 110/13)."
+    },
+    "C": {
+      "proved": true,
+      "antipode_hit": 2,
+      "by_p": {
+        "5": {
+          "E_S2": 3653.846153846153,
+          "pred": 3653.8461538461543,
+          "wrong_no_antipode": 2980.7692307692314,
+          "Qpp": 3.6923076923076934,
+          "err": 1.3642420526593924e-12
+        },
+        "7": {
+          "E_S2": 28001.882640586788,
+          "pred": 28001.882640586795,
+          "wrong_no_antipode": 24197.853300733495,
+          "Qpp": 3.775061124694376,
+          "err": 7.275957614183426e-12
+        }
+      },
+      "E_M_named": "p(q\u22121)/4",
+      "Qpp_formula": "16(E[(pM\u2212k\u00b2)\u00b2]/((p\u22121)q\u00b2)\u22121)/(p\u22123)",
+      "E_M2_named": false,
+      "theorem": "Q_{++} is the stated linear image of E[M\u00b2]. E[M\u00b2] / E[n\u2074] remain unnamed (den 13, 409)."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "note": "E[n\u2074] on a square-direction line is not a named Gauss/Jacobi value. Q_{++} and the 15.304 square-mass bound stay open. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

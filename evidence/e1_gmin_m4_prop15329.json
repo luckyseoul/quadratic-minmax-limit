@@ -1,0 +1,75 @@
+{
+  "prop": "15.329",
+  "title": "E[y]=1/p; 3-point Paley\u00d7norm-constant; n_+-only dead",
+  "proved": {
+    "Ey_eq_1_over_p": true,
+    "yyy_type_constant": true,
+    "A_square_named": false,
+    "Q_tau_named_in_p": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "mean_zero_false": true,
+      "by_p": {
+        "5": {
+          "Ey": 0.2,
+          "want": 0.2
+        },
+        "7": {
+          "Ey": 0.14285714285714285,
+          "want": 0.14285714285714285
+        }
+      },
+      "theorem": "E[y_x]=1/p."
+    },
+    "B": {
+      "proved": true,
+      "nplus_only_false": true,
+      "by_p": {
+        "5": {
+          "nkeys": 52,
+          "spread": 0.0,
+          "nplus_spread": {
+            "3": 0.12307692307692311,
+            "2": 0.06153846153846155,
+            "1": 0.061538461538461556,
+            "0": 0.123076923076923
+          }
+        },
+        "7": {
+          "nkeys": 156,
+          "spread": 0.0,
+          "nplus_spread": {
+            "2": 0.022354173943416007,
+            "3": 0.025148445686343005,
+            "1": 0.022354173943416007,
+            "0": 0.047502619629759005
+          }
+        }
+      },
+      "theorem": "E[y_a y_b y_c] is Paley\u00d7norm-triangle constant. Not a function of n_+ alone (p=7)."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "A_square_named": false,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "note": "3-point is type-constant with den N_+/(2p). Not a second linear form on Q_\u03c4.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

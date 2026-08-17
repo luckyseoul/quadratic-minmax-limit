@@ -1,0 +1,104 @@
+{
+  "prop": "15.298",
+  "title": "Full-ensemble Q is the half-Gauss image of L_\u03c7",
+  "proved": {
+    "gauss_identity": true,
+    "Q_coarsening_certified": true,
+    "phi_F_ge_6_proved_general": false,
+    "Q_tau_named_in_p": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "blocks": [
+        {
+          "p": 5,
+          "Nplus": 130,
+          "n_L_keys": 22,
+          "max_err_over_q2": 5.820766091346741e-15,
+          "naive_ns_err_over_q2": 0.6892307692307673
+        },
+        {
+          "p": 7,
+          "Nplus": 5726,
+          "n_L_keys": 30,
+          "max_err_over_q2": 1.2121545379730822e-14,
+          "naive_ns_err_over_q2": 0.6418841375180977
+        }
+      ],
+      "theorem": "Q(r)/16 = k\u00b2 + k(G_++G_r) + \u2211_s \u2211_\u03c7 L_\u03c7(s) S_\u03c7(1+rs). \u03bc_+\u03bc_- on all nonsquare s fails."
+    },
+    "B": {
+      "proved": true,
+      "merges": {
+        "pp_merge": true,
+        "Nstar_merge": true
+      },
+      "blocks": [
+        {
+          "p": 3,
+          "spreads": {
+            "pm1": 3.552713678800501e-15,
+            "--N1": 1.0956401461402925e-32
+          },
+          "means": {
+            "pm1": "8",
+            "--N1": "0"
+          },
+          "n_coarse": 2
+        },
+        {
+          "p": 5,
+          "spreads": {
+            "pm1": 1.7763568394002505e-15,
+            "++": 8.881784197001252e-16,
+            "N*": 0.0,
+            "mixed:-1:1:N1": 8.881784197001252e-16,
+            "mixed:1:-1:N1": 0.0
+          },
+          "means": {
+            "pm1": "8",
+            "++": "48/13",
+            "N*": "32/13",
+            "mixed:-1:1:N1": "48/13",
+            "mixed:1:-1:N1": "48/13"
+          },
+          "n_coarse": 5
+        },
+        {
+          "p": 7,
+          "spreads": {
+            "pm1": 0.0,
+            "++": 0.0,
+            "N*": 8.881784197001252e-16,
+            "--N1": 4.440892098500626e-16
+          },
+          "means": {
+            "pm1": "8",
+            "++": "1544/409",
+            "N*": "1496/409",
+            "--N1": "1376/409"
+          },
+          "n_coarse": 4
+        }
+      ],
+      "theorem": "At p=3,5,7, Q is constant on {pm1, ++, N*, --N1, mixed}. ++ sub merges with ++ N1; all N* Paley classes merge."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "note": "Gauss image names Q in terms of L_\u03c7, not in p. Three off values still unnamed. Floor OPEN."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

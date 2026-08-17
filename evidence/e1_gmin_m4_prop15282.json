@@ -1,0 +1,198 @@
+{
+  "prop": "15.282",
+  "title": "Prop 15.282: Gauss-fibre / circ Jacobi / n_T / generic DFT Cross_y on Type+ 1D\u2299Hoffman nc; mixture/floor OPEN",
+  "L_status": "OPEN",
+  "settlement_note": "Named Max+-free Cross_y on 1D\u2299nc (Gauss-fibre all slots; circ J(\u03c7,\u03b7)\u03b7(\u2212\u03b2\u00b2\u0394F/4) collapse; n_T; ker-Tr DFT).  N+(p) unnamed; Aut_\u221e mixture does not meet 3q(q\u22121)/16 without a type-list.  No flag flip.",
+  "proved": {
+    "gauss_fibre": true,
+    "circ_cross": true,
+    "nT": true,
+    "generic_cross": true,
+    "triv_on_circ_is_identity": false,
+    "triv_on_circ_p7_is_identity": false,
+    "eta_fp_is_identity": false,
+    "ync_hs_formula_is_identity": false,
+    "invert_Cy_is_identity": false,
+    "t0_wrong_is_identity": false,
+    "Nplus_named": false,
+    "mixture_meets_floor": false,
+    "phi_F_ge_6_proved_general": false,
+    "inequality_proved": false
+  },
+  "algebra": {
+    "gauss_fibre": {
+      "proved": true,
+      "theorem": "On Type+ 1D\u2299Hoffman nc, Cross_y is the Gauss-fibre sum of \u039b on every even slot.  Invert-Cy is not an identity.",
+      "by_p": {
+        "5": {
+          "ok": 10,
+          "n": 10,
+          "hoffman": "10/10",
+          "invert": "0/10",
+          "by_slot": {
+            "circ": "2/2",
+            "gen": "4/4",
+            "triv": "4/4"
+          }
+        },
+        "7": {
+          "ok": 44,
+          "n": 44,
+          "hoffman": "44/44",
+          "invert": "0/44",
+          "by_slot": {
+            "circ": "8/8",
+            "gen": "24/24",
+            "triv": "12/12"
+          }
+        }
+      },
+      "by_slot": {
+        "circ": "10/10",
+        "gen": "28/28",
+        "triv": "16/16"
+      },
+      "invert_Cy_is_identity": false,
+      "hoffman_ok": true,
+      "n_checks": 54,
+      "gauss": "54/54"
+    },
+    "circ": {
+      "proved": true,
+      "theorem": "On 1D\u2299nc and (p+1)|k, \u03c8=\u03b7\u2218N and \u039b=\u03c7_p(ib)\u03b7(\u2212ib \u03b2\u00b2)J; Cy collapses to n_T \u03c3 W \u03b7\u00b2.  \u03b7=\u03c8|F_p is not the identity.  triv formula on circ is a p=5 accident.",
+      "by_p": {
+        "5": {
+          "Cy": "2/2",
+          "Lambda": "30/30",
+          "etaN": "48/48",
+          "triv_on_circ": "2/2"
+        },
+        "7": {
+          "Cy": "8/8",
+          "Lambda": "168/168",
+          "etaN": "384/384",
+          "triv_on_circ": "0/8"
+        }
+      },
+      "triv_on_circ_is_identity": false,
+      "triv_on_circ_p7_is_identity": false,
+      "triv_on_circ": {
+        "5": "2/2",
+        "7": "0/8"
+      },
+      "eta_fp_is_identity": false,
+      "eta_fp": "2/10",
+      "Lambda_naive_no_chi_is_identity": false,
+      "etaN": "432/432",
+      "Lambda": "198/198",
+      "n_checks": 10
+    },
+    "nT": {
+      "proved": true,
+      "theorem": "n_T(\u03b2)=1+\u03c7_p(c+ib(\u03b2\u2212t1)\u00b2) on every scale-translate of H; independent of t0.  Replacing t1 by t0 is not an identity.",
+      "by_p": {
+        "5": {
+          "geom": "500/500",
+          "t0_indep": "20/20",
+          "t0_wrong": "220/500",
+          "hoffman_nT": "5/5"
+        },
+        "7": {
+          "geom": "2058/2058",
+          "t0_indep": "42/42",
+          "t0_wrong": "882/2058",
+          "hoffman_nT": "21/21"
+        }
+      },
+      "t0_wrong_is_identity": false,
+      "n_checks": 2558
+    },
+    "generic": {
+      "proved": true,
+      "theorem": "On 1D\u2299nc, generic/triv Cross_y is the ker-Tr DFT of \u03c8\u0304 against the n_T-weighted exponential fibre sum (plus the on-fibre (p\u22121) term on triv).  hs formula on ync is not an identity.",
+      "by_p": {
+        "5": {
+          "ok": 10,
+          "n": 10,
+          "by_slot": {
+            "circ": "2/2",
+            "gen": "4/4",
+            "triv": "4/4"
+          }
+        },
+        "7": {
+          "ok": 44,
+          "n": 44,
+          "by_slot": {
+            "circ": "8/8",
+            "gen": "24/24",
+            "triv": "12/12"
+          }
+        }
+      },
+      "ync_hs_formula_is_identity": false,
+      "ync_hs": "0/22",
+      "n_checks": 54
+    },
+    "open": {
+      "floor_closed": false,
+      "Nplus_named": false,
+      "mixture_meets_floor": false,
+      "mixture_meets_floor_general": false,
+      "one_d_plus_hs_yp_meets_floor_p7k8": false,
+      "one_d_plus_hs_yp_mix_p7k8": 241.52567237163822,
+      "one_d_plus_hs_yp_mix": {
+        "energies": {
+          "Paley": 1.5206936220976741e-27,
+          "AP": 4115.999999999997,
+          "hs\u2299nc": 1596.0000000000005,
+          "yP\u2299nc": 84.00000000000036
+        },
+        "sizes": {
+          "Paley": 56,
+          "AP": 84,
+          "hs\u2299nc": 588,
+          "yP\u2299nc": 1176
+        },
+        "num": 1382976.0000000005,
+        "den_census": 5726,
+        "mix": 241.52567237163822,
+        "floor": 441.0,
+        "meets_floor": false
+      },
+      "open": "Cross_y named on 1D\u2299nc (A\u2013D).  Aut_\u221e mixture \u2265 3q(q\u22121)/16 needs N+(p) / a type-list (DEAD p\u226511).  1D+hs+yP = 241.5<441 at p=7 k=8.  Census mix at p=5,7 is above the floor and is not a general proof.",
+      "dead": [
+        "1D-only mixture",
+        "1D+hs\u2299nc as the full mixture",
+        "1D+hs+yP as the full mixture",
+        "triv Cross_y on circ k",
+        "hs Cross_y on ync\u2299nc",
+        "15.144 type-list for N+ at p\u226511"
+      ]
+    }
+  },
+  "closed_forms": {
+    "gauss_fibre": "Cy=\u2211_{y\u2208T} \u03c3(L(y)) \u2211_{m\u2208M} \u039b(y\u2212m\u03c9), \u039b=15.281 C",
+    "circ_Lambda": "\u03c7_p(ib) \u03b7(\u2212ib \u03b2\u00b2) J(\u03c7_p,\u03b7)  (ia=0, \u0394_F/4=ib)",
+    "circ_Cy": "\u03c7_p(ib) \u03b7(\u2212ib) J(\u03c7_p,\u03b7) \u2211_\u03b2 n_T(\u03b2)\u03c3(\u03b2) \u2211_{m\u2208M,m\u2260\u03b2} \u03b7\u00b2(\u03b2\u2212m), \u03c8=\u03b7\u2218N",
+    "nT": "n_T(\u03b2)=1+\u03c7_p(c+ib(\u03b2\u2212t1)\u00b2)  (independent of t0)",
+    "generic_Cy": "p/G(\u03c8\u0304) \u2211_{t\u22600} \u03c8\u0304(t\u03c9) \u2211_\u03b2 n_T(\u03b2)\u03c3(\u03b2) \u2211_{m\u2260\u03b2} e^{4\u03c0i ib t(\u03b2\u2212m)/p} + 1_triv (p\u22121)\u2211_{L(y)\u2208M} \u03c3",
+    "Nhat_Delta": "N\u0302_D + N\u0302_{\u03c7\u03c8,T} + 2 Cross_y"
+  },
+  "fail_when_wrong": [
+    "15.281 triv Cross_y on a (p+1)|k slot at p=7",
+    "\u03b7=\u03c8|F_p in place of \u03b7_N",
+    "\u039b without \u03c7_p(ib \u03b2\u00b2)",
+    "invert Cross_y in N\u0302_\u0394",
+    "n_T with t0 in place of t1",
+    "1D Cross_y / hs formula on ync\u2299nc",
+    "1D+hs+yP as the Aut_\u221e mixture at p=7 k=8"
+  ],
+  "status": {
+    "identities_A_B_C_D": true,
+    "identities_A_B_C": true,
+    "floor": false
+  },
+  "backend": "CPU field + character sums; ProcessPool over (p,rec,k); GPU unused",
+  "residual_closed": false
+}

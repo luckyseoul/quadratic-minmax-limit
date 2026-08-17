@@ -1,0 +1,112 @@
+{
+  "prop": "15.309",
+  "title": "QR0-hs stab=p(p\u22121); p=7 AP/QR split; AP\u2299NC empty at p=13",
+  "proved": {
+    "QR0_stab_p_pm1": true,
+    "p7_AP_QR_dichotomy": true,
+    "NC_not_general": true,
+    "Hplus_named": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false,
+    "Q_tau_named_in_p": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "S": [
+            0,
+            1,
+            4
+          ],
+          "S_is_AP": true,
+          "orbit": 30,
+          "stab": 20,
+          "named_orbit": 30,
+          "named_stab": 20
+        },
+        "7": {
+          "S": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "S_is_AP": false,
+          "orbit": 56,
+          "stab": 42,
+          "named_orbit": 56,
+          "named_stab": 42
+        },
+        "11": {
+          "S": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            9
+          ],
+          "S_is_AP": false,
+          "orbit": 132,
+          "stab": 110,
+          "named_orbit": 132,
+          "named_stab": 110
+        }
+      },
+      "theorem": "QR0-hs |Stab_G|=p(p\u22121), |O|=p(p+1). Equals the AP-orbit iff QR0 is an AP (p=5)."
+    },
+    "B": {
+      "proved": true,
+      "p7": {
+        "n_AP": 21,
+        "n_QR_images": 14,
+        "n_other": 0,
+        "Cpm": 35
+      },
+      "p11_not_dichotomy": {
+        "n_AP": 55,
+        "n_QR_images": 22,
+        "Cpm": 462
+      },
+      "theorem": "p=7: every m-set is AP or AGL\u00b7QR0. p=11: 55+22 < 462, dichotomy fails."
+    },
+    "C": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "hits": 10
+        },
+        "7": {
+          "hits": 7
+        },
+        "13": {
+          "hits": 0,
+          "from": "YSTAR_CERT"
+        }
+      },
+      "ystar_p13_found": false,
+      "theorem": "AP\u2299NC is nonempty at p=5,7 (hits=2p, p) and empty at p=13. Not a general NL generator. #hits=2p at p=5, not p."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Hplus_named": false,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "note": "Affine stabs {4p, p(p\u22121), \u2026} named; NL stabs not. NC generation dies at p=13. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

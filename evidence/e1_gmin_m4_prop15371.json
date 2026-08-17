@@ -1,0 +1,80 @@
+{
+  "prop": "15.371",
+  "title": "D=2A-3(p+1)/2+C(p,m) at p=5,7; split 2k^2; phi_F open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "D_form_p5_p7": true,
+    "N4_split_is_two_k2": true,
+    "D3_not_named": true,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "D_form": {
+        "5": 13,
+        "7": 409,
+        "3": 3
+      },
+      "D_live": {
+        "5": 13,
+        "7": 409
+      },
+      "drop_binom": {
+        "5": 3,
+        "7": 374
+      },
+      "n_1d": {
+        "5": 30,
+        "7": 140
+      },
+      "n_pp": {
+        "5": 6,
+        "7": 6
+      },
+      "A": {
+        "5": 6,
+        "7": 193
+      },
+      "k": {
+        "5": 10,
+        "7": 21
+      },
+      "theorem": "D=2A\u22123(p+1)/2+C(p,m) at p=5,7. Drop binom or evaluate at p=3 fails."
+    },
+    "B": {
+      "proved": true,
+      "diff": 882,
+      "two_k2": 882,
+      "p5_N4": 20,
+      "p5_N4_constant": true,
+      "theorem": "N4(H)\u2212N4(O)=2k\u00b2 at p=7; one 4-net type at p=5 with N4=20."
+    },
+    "C": {
+      "proved": true,
+      "n_hits_D3": 0,
+      "theorem": "No tested form hits D3=(13,22157).  22157 unnamed."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "D_named_in_p": false,
+      "D_form_equals_live_p5_p7": true,
+      "note": "D_form matches live D at p=5,7 and fails at p=3. Untested at p\u226511.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

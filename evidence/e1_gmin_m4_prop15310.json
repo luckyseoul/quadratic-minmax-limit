@@ -1,0 +1,102 @@
+{
+  "prop": "15.310",
+  "title": "Q_AP is AP-averaged Fejer; Q_QR0 is Gauss; full Q_\u03c4 unnamed",
+  "proved": {
+    "Q_AP_Fejer": true,
+    "Q_QR0_Gauss": true,
+    "Q_tau_named_in_p": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "n_sub": 2,
+          "live_sub": [
+            5.333333333333335,
+            5.333333333333336
+          ],
+          "fejer_sub": [
+            5.333333333333333,
+            5.333333333333333
+          ],
+          "single_sub": [
+            5.3333333333333295,
+            5.333333333333336
+          ],
+          "max_err": 2.6645352591003757e-15,
+          "two_p_plus_3_over_3": 5.333333333333333
+        },
+        "7": {
+          "n_sub": 4,
+          "live_sub": [
+            6.666666666666666,
+            6.666666666666666,
+            6.666666666666666,
+            6.666666666666666
+          ],
+          "fejer_sub": [
+            6.666666666666665,
+            6.666666666666667,
+            6.666666666666667,
+            6.666666666666667
+          ],
+          "single_sub": [
+            6.2198325283494835,
+            12.987918414869878,
+            12.987918414869863,
+            6.219832528349511
+          ],
+          "max_err": 8.881784197001252e-16,
+          "two_p_plus_3_over_3": 6.666666666666667
+        }
+      },
+      "p11_fejer_spread": 76.26666666666665,
+      "theorem": "Q_AP = AP-averaged Fejer. Single interval fails at p=7. 2(p+3)/3 holds at p=5,7 not p=11."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "coincides_AP": true
+        },
+        "7": {
+          "max_err": 1.4210854715202004e-14,
+          "live_pm1": [
+            16.0,
+            16.0
+          ],
+          "live_sub": [
+            16.0,
+            16.0,
+            16.000000000000004
+          ],
+          "live_off_max": 6.970631108338455e-32,
+          "pred_sub": 16.000000000000007
+        }
+      },
+      "theorem": "Q_QR0 = Gauss 4th moment of 1_QR0. At p=7 equals 16 on F_p^\u00d7, 0 off; not identically 0 on sub."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "p5_Qpp_live": 3.6923076923076934,
+      "note": "Affine Q_\u03c4 named by Fejer/Gauss. Full-ensemble Q_\u03c4 is the NL mixture and still has den |H_+|/(2p). phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

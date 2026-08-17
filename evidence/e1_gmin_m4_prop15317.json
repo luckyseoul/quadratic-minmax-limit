@@ -1,0 +1,79 @@
+{
+  "prop": "15.317",
+  "title": "\u03c7\u22171_D named; Plancherel names E[N\u00b2] sum; split/W-gram OPEN",
+  "proved": {
+    "chi_conv": true,
+    "plancherel_sum": true,
+    "indep_lines_false": true,
+    "Q_tau_named_in_p": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "theta_minus_fails": true,
+      "by_p": {
+        "5": {
+          "err": 0.0,
+          "nchk": 130
+        },
+        "7": {
+          "err": 0.0,
+          "nchk": 40
+        }
+      },
+      "theorem": "\u03c7\u22171_D = p 1_D \u2212 ((p\u22121)/2) 1, hence (p+1)/2 on D. Claiming p on D fails."
+    },
+    "B": {
+      "proved": true,
+      "drop_Omega_fails": true,
+      "by_p": {
+        "5": {
+          "live": 450.0,
+          "named": "450",
+          "dropped": "300",
+          "E_N2_sq": 29.615384615384617,
+          "E_N2_ns": 7.884615384615385
+        },
+        "7": {
+          "live": 4116.0,
+          "named": "4116",
+          "dropped": "3528",
+          "E_N2_sq": 117.81051344743277,
+          "E_N2_ns": 53.68948655256724
+        }
+      },
+      "theorem": "E[\u2211_{\u03b4\u22600} N\u00b2]=k\u2074/q+|\u03a9|q/2\u2212k\u00b2. |T|(E[N\u00b2_\u25a1]+E[N\u00b2_ns]) matches. Drop |\u03a9|q/2 misses."
+    },
+    "C": {
+      "proved": true,
+      "indep_p5": "15/2",
+      "live_p5": "205/26",
+      "indep_p7": "259/5",
+      "live_p7": "21959/409",
+      "signed_p5": "3390/13",
+      "signed_p7": "629412/409",
+      "theorem": "Independent-lines E[N\u00b2_ns] is not live. \u03c7-signed \u2211 N\u00b2 still has den 13, 409."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "W_gram_named": false,
+      "note": "Plancherel names the sum of the two E[N\u00b2]. The split / W-gram still unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

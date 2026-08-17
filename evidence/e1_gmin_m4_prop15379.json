@@ -1,0 +1,109 @@
+{
+  "prop": "15.379",
+  "title": "4-level E[S\u00b2]=16+8(a+e); min 20+12/p; leftover K open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "ES2_identity": true,
+    "min_ES2_named": true,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": [
+        [
+          5,
+          "112/5",
+          "112/5"
+        ],
+        [
+          7,
+          "152/7",
+          "152/7"
+        ],
+        [
+          11,
+          "232/11",
+          "232/11"
+        ],
+        [
+          13,
+          "272/13",
+          "272/13"
+        ],
+        [
+          19,
+          "392/19",
+          "392/19"
+        ]
+      ],
+      "p5_drop_e": "112/5",
+      "theorem": "E[S\u00b2]=16+8(a+e). Fail: drop 8e (104/5\u2260112/5 at p=5)."
+    },
+    "B": {
+      "proved": true,
+      "rows": [
+        [
+          5,
+          "4/5",
+          "112/5"
+        ],
+        [
+          7,
+          "5/7",
+          "152/7"
+        ],
+        [
+          11,
+          "7/11",
+          "232/11"
+        ],
+        [
+          13,
+          "8/13",
+          "272/13"
+        ],
+        [
+          17,
+          "10/17",
+          "352/17"
+        ],
+        [
+          19,
+          "11/19",
+          "392/19"
+        ],
+        [
+          23,
+          "13/23",
+          "472/23"
+        ],
+        [
+          31,
+          "17/31",
+          "632/31"
+        ]
+      ],
+      "theorem": "Corner a=(p+1)/(2p), e=1/p is feasible; min E[S\u00b2]=20+12/p. Fail: min a+e=(p\u22121)/p."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "No Paley majorant E[S\u00b2]<20+12/p. residual_ii_k_eq_4p_empty stays False. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}

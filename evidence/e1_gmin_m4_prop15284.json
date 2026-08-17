@@ -1,0 +1,272 @@
+{
+  "prop": "15.284",
+  "L_status": "OPEN",
+  "proved": {
+    "minpoly_determines_n": true,
+    "pal_Tr_is_identity": false,
+    "pal_N_is_identity": false,
+    "phi_F_ge_6_proved_general": false,
+    "inequality_proved": false,
+    "n_values_named_in_p": false
+  },
+  "status": {
+    "floor": false,
+    "identity_A": true
+  },
+  "blocks": [
+    {
+      "p": 5,
+      "n_dim2": 6,
+      "pal_Tr_N_classes": 6,
+      "pal_Tr_N_split": 0,
+      "pal_Tr_split": 0,
+      "pal_N_split": 1,
+      "pal_split": 2,
+      "orbits": [
+        {
+          "n": 16,
+          "pal": [
+            1,
+            1,
+            1
+          ],
+          "Tr": 1,
+          "N": 1,
+          "key": [
+            1,
+            13
+          ]
+        },
+        {
+          "n": 10,
+          "pal": [
+            -1,
+            1,
+            1
+          ],
+          "Tr": 4,
+          "N": 1,
+          "key": [
+            1,
+            12
+          ]
+        },
+        {
+          "n": 9,
+          "pal": [
+            -1,
+            1,
+            1
+          ],
+          "Tr": 0,
+          "N": 3,
+          "key": [
+            1,
+            5
+          ]
+        },
+        {
+          "n": 4,
+          "pal": [
+            -1,
+            -1,
+            1
+          ],
+          "Tr": 0,
+          "N": 2,
+          "key": [
+            1,
+            10
+          ]
+        },
+        {
+          "n": 3,
+          "pal": [
+            -1,
+            -1,
+            1
+          ],
+          "Tr": 1,
+          "N": 2,
+          "key": [
+            1,
+            8
+          ]
+        },
+        {
+          "n": 2,
+          "pal": [
+            -1,
+            -1,
+            -1
+          ],
+          "Tr": 1,
+          "N": 1,
+          "key": [
+            5,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "p": 7,
+      "n_dim2": 10,
+      "pal_Tr_N_classes": 10,
+      "pal_Tr_N_split": 0,
+      "pal_Tr_split": 2,
+      "pal_N_split": 3,
+      "pal_split": 2,
+      "orbits": [
+        {
+          "n": 681,
+          "pal": [
+            1,
+            1,
+            1
+          ],
+          "Tr": 1,
+          "N": 4,
+          "key": [
+            1,
+            18
+          ]
+        },
+        {
+          "n": 500,
+          "pal": [
+            -1,
+            1,
+            1
+          ],
+          "Tr": 6,
+          "N": 4,
+          "key": [
+            1,
+            17
+          ]
+        },
+        {
+          "n": 496,
+          "pal": [
+            -1,
+            1,
+            1
+          ],
+          "Tr": 6,
+          "N": 6,
+          "key": [
+            1,
+            10
+          ]
+        },
+        {
+          "n": 495,
+          "pal": [
+            -1,
+            1,
+            1
+          ],
+          "Tr": 0,
+          "N": 4,
+          "key": [
+            1,
+            7
+          ]
+        },
+        {
+          "n": 484,
+          "pal": [
+            -1,
+            1,
+            1
+          ],
+          "Tr": 4,
+          "N": 1,
+          "key": [
+            1,
+            9
+          ]
+        },
+        {
+          "n": 334,
+          "pal": [
+            -1,
+            -1,
+            1
+          ],
+          "Tr": 1,
+          "N": 3,
+          "key": [
+            1,
+            25
+          ]
+        },
+        {
+          "n": 323,
+          "pal": [
+            -1,
+            -1,
+            1
+          ],
+          "Tr": 6,
+          "N": 3,
+          "key": [
+            1,
+            24
+          ]
+        },
+        {
+          "n": 322,
+          "pal": [
+            -1,
+            -1,
+            1
+          ],
+          "Tr": 1,
+          "N": 6,
+          "key": [
+            1,
+            11
+          ]
+        },
+        {
+          "n": 318,
+          "pal": [
+            -1,
+            -1,
+            1
+          ],
+          "Tr": 4,
+          "N": 6,
+          "key": [
+            1,
+            16
+          ]
+        },
+        {
+          "n": 172,
+          "pal": [
+            -1,
+            -1,
+            -1
+          ],
+          "Tr": 1,
+          "N": 4,
+          "key": [
+            8,
+            19
+          ]
+        }
+      ]
+    }
+  ],
+  "open": {
+    "floor_closed": false,
+    "n_values_named_in_p": false,
+    "Nplus_named": false,
+    "mixture_meets_floor": false,
+    "phi_F_ge_6": false,
+    "rhat_ge_budget": false
+  }
+}

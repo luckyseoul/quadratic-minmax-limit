@@ -1,0 +1,60 @@
+{
+  "prop": "15.286",
+  "L_status": "OPEN",
+  "proved": {
+    "p5_nNL_eq_nH": true,
+    "overcount_constant": true,
+    "p7_nH_eq_nNL": false,
+    "phi_F_ge_6_proved_general": false,
+    "inequality_proved": false,
+    "n_NL_named_in_p": false,
+    "n_H_named_in_p": false,
+    "Nplus_named": false
+  },
+  "status": {
+    "floor": false,
+    "identity_A": true,
+    "identity_B": true
+  },
+  "A": {
+    "proved": true,
+    "nH_sets": 100,
+    "Nplus": 130,
+    "n1D": 30,
+    "all_orbits_nH_eq_nNL": true,
+    "type_minus_also_eq": false,
+    "type_minus_swap_changes_nH": true,
+    "n_orbits": 8
+  },
+  "B": {
+    "proved": true,
+    "blocks": [
+      {
+        "p": 5,
+        "kappa": 3.0,
+        "constant": true,
+        "n_d2": 6,
+        "p7_nH_eq_nNL": null,
+        "nH_sets": 100
+      },
+      {
+        "p": 7,
+        "kappa": 1.0,
+        "constant": true,
+        "n_d2": 10,
+        "p7_nH_eq_nNL": false,
+        "nH_sets": 1764
+      }
+    ]
+  },
+  "open": {
+    "floor_closed": false,
+    "n_NL_named_in_p": false,
+    "n_H_named_in_p": false,
+    "Nplus_named": false,
+    "kappa_named_in_p": false,
+    "phi_F_ge_6": false,
+    "rhat_ge_budget": false
+  },
+  "n1d_set_count_5": 30
+}

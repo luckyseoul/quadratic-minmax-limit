@@ -1,0 +1,65 @@
+{
+  "prop": "15.372",
+  "title": "Q++_form in S0/named box; 6-net replaces 3-net",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "six_net_recovers_5_7": true,
+    "Qform_in_s0_and_box": true,
+    "p1_S0_even_ge_6_at_Qform": true,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "p5_3net": 130,
+      "p7_4net": 5726,
+      "p11_6net": null,
+      "N_pred_11": 244332,
+      "p11_eq_pred": null,
+      "replaced_3net": true,
+      "theorem": "6-net UP count recovers 130 and 5726. 3-net is not D(11).  Fail: p=7 count is 434."
+    },
+    "B": {
+      "proved": true,
+      "Q5": "48/13",
+      "Q7": "1544/409",
+      "Qbad_drop": "16",
+      "all_s0": true,
+      "all_box": true,
+      "theorem": "Q++_form is in [Q_lo,ub] and the named box at p=5..79."
+    },
+    "C": {
+      "proved": true,
+      "minS_p5": "80/13",
+      "minS_drop": "-80",
+      "all_p1_ge6": true,
+      "worst": {
+        "p": 5,
+        "minS": "80/13"
+      },
+      "theorem": "p\u22611, 5\u2264p\u226479: S0 even families \u22656 at Q++_form; drop-binom dies."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "D_named_in_p": false,
+      "p11_6net_done": false,
+      "p11_matches_D_form": null,
+      "note": "S0 floor for p\u22611 would follow from D_form=D. p\u22613 residual remains.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

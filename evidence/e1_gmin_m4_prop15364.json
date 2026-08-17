@@ -1,0 +1,60 @@
+{
+  "prop": "15.364",
+  "title": "15.290 type Q; Paley-(1,1)=Q++; S0 Q_N* is a mixture",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "type_constant_and_p7_split": true,
+    "paley11_equals_ensemble_Qpp": true,
+    "S0_QN_is_mixture": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "p5": {
+        "('pm1',)": "8",
+        "(1, 1, 'sub')": "48/13",
+        "(-1, -1, 'N*')": "32/13",
+        "(-1, 1, 'N1')": "48/13",
+        "(1, -1, 'N1')": "48/13"
+      },
+      "p7_m1m1_N1": "1376/409",
+      "p7_m1m1_Ns": "1496/409",
+      "theorem": "Q constant on 15.290 classes; (\u22121,\u22121) splits at p=7."
+    },
+    "B": {
+      "proved": true,
+      "p5_11_sub": "48/13",
+      "p5_Q1d": "16/9",
+      "p7_11_sub": "1544/409",
+      "p7_11_N1": "1544/409",
+      "theorem": "Paley-(1,1) types equal ensemble Q++, not Q_1D."
+    },
+    "C": {
+      "proved": true,
+      "S0_QN": "1440/409",
+      "type_Ns": "1496/409",
+      "type_N1mm": "1376/409",
+      "theorem": "S0 Q_N* is a coarse mixture, not a 15.290 value."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "D_named_in_p": false,
+      "note": "Type table certified.  Q_\u03c4 unnamed in p.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

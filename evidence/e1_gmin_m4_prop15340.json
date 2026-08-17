@@ -1,0 +1,97 @@
+{
+  "prop": "15.340",
+  "title": "15.338 k-vector is Max+ at p=11; pair-rule unnamed in p",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "p11_kvec_maxplus_exists": true,
+    "not_interpolant_not_isolated": true,
+    "no_deg2_square_predicate": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "energy": 0.0,
+      "nD": 55,
+      "k_hist": {
+        "0": 1,
+        "2": 8,
+        "3": 2,
+        "5": 1
+      },
+      "roles": {
+        "full": [
+          "s3"
+        ],
+        "empty": [
+          "s9"
+        ],
+        "high": [
+          "s0",
+          "s8"
+        ],
+        "low": [
+          "inf",
+          "s1",
+          "s2",
+          "s4",
+          "s5",
+          "s6",
+          "s7",
+          "s10"
+        ]
+      },
+      "kvec": {
+        "inf": 2,
+        "s0": 3,
+        "s1": 2,
+        "s2": 2,
+        "s3": 5,
+        "s4": 2,
+        "s5": 2,
+        "s6": 2,
+        "s7": 2,
+        "s8": 3,
+        "s9": 0,
+        "s10": 2
+      },
+      "theorem": "Named 15.338 k-vector is Max+ at p=11 for this pair-table. (full,empty)=(s3,s9), not {0,\u221e}."
+    },
+    "B": {
+      "proved": true,
+      "eq_interpolant": false,
+      "interpolant_size": 59,
+      "halfspace": false,
+      "same_qr0": false,
+      "same_ystar": false,
+      "has_nc": true,
+      "theorem": "Not interpolant / 1D / QR0NC / ystar; NC-degree \u2265 1."
+    },
+    "C": {
+      "proved": true,
+      "n_deg2": 0,
+      "sample": null,
+      "n_bits": 50,
+      "theorem": "No deg\u22642 \u03c7-predicate reproduces the p=11 pair-table."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "pair_rule_named_in_p": false,
+      "note": "Existence of a 15.338 Max+ at p=11 is closed.  The pair-selection is not a deg\u22642 square predicate and is not yet named in p.  Ensemble Q_\u03c4 unnamed.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

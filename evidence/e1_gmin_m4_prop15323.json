@@ -1,0 +1,118 @@
+{
+  "prop": "15.323",
+  "title": "AP W not \u00b12p at p=13; Var_2orb sufficient, unproved",
+  "proved": {
+    "AP_orbit_hists": true,
+    "Var2orb_sufficient": true,
+    "A_square_named": false,
+    "Q_tau_named_in_p": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "APpm2p_all_p1_false": true,
+      "by_p": {
+        "5": {
+          "n": 30,
+          "want": 30,
+          "hist": {
+            "20": 15,
+            "40": 15
+          },
+          "mean": 30.0,
+          "var": 100.0,
+          "EW": 30
+        },
+        "7": {
+          "n": 84,
+          "want": 84,
+          "hist": {
+            "56": 28,
+            "98": 56
+          },
+          "mean": 84.0,
+          "var": 392.0,
+          "EW": 84
+        },
+        "13": {
+          "n": 546,
+          "want": 546,
+          "hist": {
+            "312": 91,
+            "520": 182,
+            "624": 182,
+            "676": 91
+          },
+          "mean": 546.0,
+          "var": 14196.0,
+          "EW": 546
+        }
+      },
+      "theorem": "AP G-orbit W-hists as displayed; {EW\u00b12p} fails at p=13."
+    },
+    "B": {
+      "proved": true,
+      "Var2orb_eq_live_p7_false": true,
+      "by_p": {
+        "5": {
+          "Var_2orb": "660/13",
+          "floor_Var": "360/7",
+          "Q_from_v2": "48/13",
+          "ub": "26/7",
+          "le": true
+        },
+        "13": {
+          "Var_2orb": "3276/11",
+          "floor_Var": "72072/71",
+          "Q_from_v2": "40/11",
+          "ub": "310/71",
+          "le": true
+        },
+        "17": {
+          "Var_2orb": "21420/43",
+          "floor_Var": "323136/127",
+          "Q_from_v2": "5061/1376",
+          "ub": "560/127",
+          "le": true
+        },
+        "29": {
+          "Var_2orb": "102660/73",
+          "floor_Var": "6650280/391",
+          "Q_from_v2": "94536/25039",
+          "ub": "1742/391",
+          "le": true
+        },
+        "37": {
+          "Var_2orb": "70300/31",
+          "floor_Var": "26877096/647",
+          "Q_from_v2": "86224/22599",
+          "ub": "2890/647",
+          "le": true
+        }
+      },
+      "theorem": "Var\u22644p(p+1)(2p+1)/(5p+1) \u21d2 Q++\u2264floor ub for p\u22611. Equality at p=5; strict at p=7 live."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "A_square_named": false,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "Var_2orb_proved": false,
+      "note": "Var\u2264Var_2orb is a sufficient majorant for the p\u22611 floor, unproved. AP support is not {EW\u00b12p} at p=13. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

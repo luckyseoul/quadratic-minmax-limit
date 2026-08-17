@@ -1,0 +1,60 @@
+{
+  "prop": "15.367",
+  "title": "NUM_SUM=16p(2 n_1d-4 n_pp-3k); Gal-classes still unnamed",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "NUM_SUM_named_16pA": true,
+    "no_3key_gal_classifier": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "p5": 480,
+      "p7": 21616,
+      "drop_k_p5": 2880,
+      "n1d_p7": 2240,
+      "A": {
+        "5": 6,
+        "7": 193
+      },
+      "theorem": "16p(2 n_1d-4 n_pp-3k) hits both live NUM_SUM; drop-3k and 16 n_1d die."
+    },
+    "B": {
+      "proved": true,
+      "Wchi_same": true,
+      "Wchi_classes": [
+        555,
+        610
+      ],
+      "fiber_same": true,
+      "fiber_classes": [
+        555,
+        610
+      ],
+      "perfect": [],
+      "dep_nkeys": 25,
+      "theorem": "W_\u03c7 and fiber do not determine the Gal-class (explicit witnesses)."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "num_named_via_A": true,
+      "D_named_in_p": false,
+      "note": "NUM_SUM is named at p=5,7 by 16p A.  Q++=8A/D still has unnamed D=|H+|/(2p).  Gal-classes unnamed.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

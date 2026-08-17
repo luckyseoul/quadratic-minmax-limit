@@ -1,0 +1,125 @@
+{
+  "prop": "15.361",
+  "title": "QR half-net certified; n_AP named; 1D+Hoffman not N",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "n_AP_named_in_p": true,
+    "halfnet_certified": true,
+    "one_d_plus_hoff_not_N": true,
+    "no_3feature_name": true,
+    "D_named_in_p": false,
+    "Q_NL_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "3": {
+          "n_AP": 6,
+          "from_qr": 6,
+          "AP_orbit": 6,
+          "n_1d": 6
+        },
+        "5": {
+          "n_AP": 30,
+          "from_qr": 30,
+          "AP_orbit": 30,
+          "n_1d": 30
+        },
+        "7": {
+          "n_AP": 84,
+          "from_qr": 84,
+          "AP_orbit": 84,
+          "n_1d": 140
+        },
+        "11": {
+          "n_AP": 330,
+          "from_qr": 330,
+          "AP_orbit": 330,
+          "n_1d": 2772
+        },
+        "13": {
+          "n_AP": 546,
+          "from_qr": 546,
+          "AP_orbit": 546,
+          "n_1d": 12012
+        },
+        "17": {
+          "n_AP": 1224,
+          "from_qr": 1224,
+          "AP_orbit": 1224,
+          "n_1d": 218790
+        },
+        "19": {
+          "n_AP": 1710,
+          "from_qr": 1710,
+          "AP_orbit": 1710,
+          "n_1d": 923780
+        }
+      },
+      "fake_Cpm_p7": 140,
+      "theorem": "n_AP=p(p\u00b2\u22121)/4=|G|/(4p); not n_1d at p=7."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "n": 130,
+          "n_halfnet": 130,
+          "const1_min": 3,
+          "const1_max": 5,
+          "r": 3
+        },
+        "7": {
+          "n": 5726,
+          "n_halfnet": 5726,
+          "const1_min": 4,
+          "const1_max": 7,
+          "r": 4
+        }
+      },
+      "theorem": "Every live y_\u221e=+1 Max+ is a QR half-net."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "3": 24,
+        "5": 130,
+        "7": 434
+      },
+      "live": {
+        "3": 6,
+        "5": 130,
+        "7": 5726
+      },
+      "theorem": "n_1d+n_Hoff hits p=5 and misses p=3,7."
+    },
+    "D": {
+      "proved": true,
+      "n_hits_N": 0,
+      "n_hits_NL": 0,
+      "n_hits_D": 0,
+      "theorem": "No 3-feature geometric product names N, n_NL, or D."
+    },
+    "E": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "D_named_in_p": false,
+      "Q_NL_named_in_p": false,
+      "Q_tau_named_in_p": false,
+      "note": "Half-nets certified.  n_AP named.  1D+Hoffman is not N.  D unnamed.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "prop": "15.332",
+  "title": "NL \u2229 Trans={id}; Stab\u21aaU\u22caFrob (|Stab| | 2(p+1))",
+  "proved": {
+    "line_union": true,
+    "NL_trans_trivial": true,
+    "U_subseteq_squares": true,
+    "stab_embeds_in_U_rtimes_Frob": true,
+    "stab_divides_pplus1_general": false,
+    "Hplus_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "D": 10,
+          "r": 2,
+          "r_p": 10
+        },
+        "7": {
+          "D": 21,
+          "r": 3,
+          "r_p": 21
+        },
+        "11": {
+          "D": 55,
+          "r": 5,
+          "r_p": 55
+        },
+        "13": {
+          "D": 78,
+          "r": 6,
+          "r_p": 78
+        },
+        "17": {
+          "D": 136,
+          "r": 8,
+          "r_p": 136
+        },
+        "19": {
+          "D": 171,
+          "r": 9,
+          "r_p": 171
+        },
+        "23": {
+          "D": 253,
+          "r": 11,
+          "r_p": 253
+        }
+      },
+      "D_always_0_mod_p": true,
+      "theorem": "T_b-invariant D of size p(p\u22121)/2 is a union of (p\u22121)/2 F_p-lines in direction b."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "3": {
+          "n_hs": 6,
+          "n_1d": 6,
+          "n_all_dir_choose": 12,
+          "n_hs_is_not_all_dir": true
+        },
+        "5": {
+          "n_hs": 30,
+          "n_1d": 30,
+          "n_all_dir_choose": 60,
+          "n_hs_is_not_all_dir": true
+        },
+        "7": {
+          "n_hs": 140,
+          "n_1d": 140,
+          "n_all_dir_choose": 280,
+          "n_hs_is_not_all_dir": true
+        }
+      },
+      "NL_trans_trivial": true,
+      "theorem": "n_hs=n_1d < (p+1)C(p,(p\u22121)/2).  Nonsquare line-unions are not Max+.  NL \u2229 Trans={id}."
+    },
+    "C": {
+      "proved": true,
+      "by_p": {
+        "3": {
+          "U_in_squares": true,
+          "pm_even": true
+        },
+        "5": {
+          "U_in_squares": true,
+          "pm_even": true
+        },
+        "7": {
+          "U_in_squares": true,
+          "pm_even": true
+        },
+        "11": {
+          "U_in_squares": true,
+          "pm_even": true
+        },
+        "13": {
+          "U_in_squares": true,
+          "pm_even": true
+        }
+      },
+      "p_minus_1_even": true,
+      "theorem": "U={g^{(p\u22121)j}} \u2286 \u25a1 because p\u22121 is even."
+    },
+    "D": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "p": 5,
+          "n_nl_types": 1,
+          "n_stab_el": 6,
+          "n_N_not_1": 0,
+          "n_frob": 3,
+          "all_N_eq_1": true
+        },
+        "7": {
+          "p": 7,
+          "n_nl_types": 6,
+          "n_stab_el": 20,
+          "n_N_not_1": 0,
+          "n_frob": 9,
+          "all_N_eq_1": true
+        }
+      },
+      "embeds_in_U_rtimes_Frob": true,
+      "order_divides_2_pplus1": true,
+      "order_divides_pplus1_general": false,
+      "theorem": "NL Stab injects into U\u22ca\u27e8Frob\u27e9, so |Stab| | 2(p+1).  Every linear coefficient has N=1.  Frob occurs."
+    },
+    "E": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "stab_embeds_in_U_rtimes_Frob": true,
+      "stab_divides_pplus1_general": false,
+      "Hplus_named_in_p": false,
+      "Q_tau_named_in_p": false,
+      "note": "Stab \u21aa U\u22caFrob (order 2(p+1)).  Multiplicities unnamed.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

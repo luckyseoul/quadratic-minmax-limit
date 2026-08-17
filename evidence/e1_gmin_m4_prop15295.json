@@ -1,0 +1,136 @@
+{
+  "prop": "15.295",
+  "title": "Unsplit pairing Cov(u,X_A)=S_\u25a1; Paley\u00d7norm not a scheme",
+  "proved": {
+    "paley_norm_not_scheme": true,
+    "E_XA_zero": true,
+    "E_u_XA_is_S": true,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "sample": {
+        "5": {
+          "spread": 2,
+          "scheme": false
+        },
+        "7": {
+          "spread": 4,
+          "scheme": false
+        },
+        "11": {
+          "spread": 12,
+          "scheme": false
+        },
+        "13": {
+          "spread": 16,
+          "scheme": false
+        },
+        "17": {
+          "spread": 24,
+          "scheme": false
+        },
+        "19": {
+          "spread": 40,
+          "scheme": false
+        }
+      },
+      "invert_hit": 0,
+      "invert_tot": 6
+    },
+    "B": {
+      "proved": true,
+      "sample": {
+        "5": {
+          "sum_sq_psi_bar": "(-0.9999999999999993-2.449293598294706e-16j)",
+          "sum_ns_psi_bar": "(-1.3551523844546272e-15+1.1102230246251565e-15j)",
+          "I_even": true,
+          "triv_sum_sq": 12,
+          "ok": true
+        },
+        "7": {
+          "sum_sq_psi_bar": "(-1.0000000000000007+8.652936647956859e-16j)",
+          "sum_ns_psi_bar": "(-3.941291737419306e-15-1.4988010832439613e-15j)",
+          "I_even": true,
+          "triv_sum_sq": 24,
+          "ok": true
+        },
+        "11": {
+          "sum_sq_psi_bar": "(-0.999999999999996-6.045844663495913e-15j)",
+          "sum_ns_psi_bar": "(-6.9062675075804095e-15+3.70536934468646e-15j)",
+          "I_even": true,
+          "triv_sum_sq": 60,
+          "ok": true
+        },
+        "13": {
+          "sum_sq_psi_bar": "(-1.0000000000000044+3.1690064408928857e-15j)",
+          "sum_ns_psi_bar": "(-4.60255473148321e-15-3.3306690738754696e-16j)",
+          "I_even": true,
+          "triv_sum_sq": 84,
+          "ok": true
+        }
+      },
+      "invert_hit": 0,
+      "invert_tot": 4
+    },
+    "C": {
+      "proved": true,
+      "sample": {
+        "5:2": {
+          "E_u": 50.0,
+          "E_XA_re": -1.311771204480185e-15,
+          "E_u_XA_over_q2": 6.153846153846154,
+          "spectrum_hit": true,
+          "E_XA_zero": true
+        },
+        "5:10": {
+          "E_u": 50.0,
+          "E_XA_re": -1.4298306128834016e-13,
+          "E_u_XA_over_q2": 6.153846153846142,
+          "spectrum_hit": true,
+          "E_XA_zero": true
+        },
+        "5:16": {
+          "E_u": 50.0,
+          "E_XA_re": 9.269849844993307e-14,
+          "E_u_XA_over_q2": 11.076923076923052,
+          "spectrum_hit": true,
+          "E_XA_zero": true
+        },
+        "7:2": {
+          "E_u": 98.0,
+          "E_XA_re": 2.2094081909992023e-13,
+          "E_u_XA_over_q2": 8.21515892420539,
+          "spectrum_hit": true,
+          "E_XA_zero": true
+        },
+        "7:40": {
+          "E_u": 98.0,
+          "E_XA_re": -1.5947130293049598e-13,
+          "E_u_XA_over_q2": 7.511002444987687,
+          "spectrum_hit": true,
+          "E_XA_zero": true
+        }
+      },
+      "invert_hit": 2,
+      "invert_tot": 5,
+      "floor_iff": "Cov(u,X_A)\u22656q\u00b2"
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "note": "Unsplit floor is Cov(u,X_A)\u22656q\u00b2.  Paley\u00d7norm is not a scheme.  CS overshoots.  Familywise S\u22656 is false (15.294)."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

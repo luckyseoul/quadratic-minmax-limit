@@ -1,0 +1,116 @@
+{
+  "E_fe_minus": {
+    "5": {
+      "mean": -0.19999999999999996,
+      "spread": 0.0,
+      "named": -0.2,
+      "wrong_plus": 0.2
+    },
+    "7": {
+      "mean": -0.14285714285714282,
+      "spread": 0.0,
+      "named": -0.14285714285714285,
+      "wrong_plus": 0.14285714285714285
+    }
+  },
+  "low_corner": {
+    "5": {
+      "mass": "1/5",
+      "classified": false,
+      "is_3equal": false,
+      "empty": true
+    },
+    "7": {
+      "mass": "1/7",
+      "classified": true,
+      "is_3equal": true,
+      "empty": false
+    },
+    "11": {
+      "mass": "1/11",
+      "classified": false,
+      "is_3equal": false,
+      "empty": true
+    },
+    "13": {
+      "mass": "1/13",
+      "classified": false,
+      "is_3equal": false,
+      "empty": true
+    },
+    "17": {
+      "mass": "1/17",
+      "classified": false,
+      "is_3equal": false,
+      "empty": true
+    },
+    "19": {
+      "mass": "1/19",
+      "classified": false,
+      "is_3equal": false,
+      "empty": true
+    },
+    "23": {
+      "mass": "1/23",
+      "classified": false,
+      "is_3equal": false,
+      "empty": true
+    },
+    "31": {
+      "mass": "1/31",
+      "classified": false,
+      "is_3equal": false,
+      "empty": true
+    }
+  },
+  "high_corner": {
+    "5": {
+      "mass": "3/10",
+      "classified": false
+    },
+    "7": {
+      "mass": "2/7",
+      "classified": false
+    },
+    "11": {
+      "mass": "3/11",
+      "classified": false
+    },
+    "13": {
+      "mass": "7/26",
+      "classified": false
+    },
+    "17": {
+      "mass": "9/34",
+      "classified": false
+    },
+    "19": {
+      "mass": "5/19",
+      "classified": false
+    },
+    "23": {
+      "mass": "6/23",
+      "classified": false
+    },
+    "31": {
+      "mass": "8/31",
+      "classified": false
+    }
+  },
+  "p7_3equal": {
+    "both": 1222,
+    "const_plus": 0,
+    "nU": 1636
+  },
+  "min_ES2": {
+    "5": "112/5",
+    "7": "152/7",
+    "11": "232/11"
+  },
+  "corner_p5": {
+    "a": "3/5",
+    "b": "0",
+    "d": "1/5",
+    "e": "1/5"
+  }
+}

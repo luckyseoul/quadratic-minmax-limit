@@ -1,0 +1,104 @@
+{
+  "prop": "15.365",
+  "title": "GJ neighbours of Q++ hit p=5 and die at p=7",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "neigh_dim_dies_p7": true,
+    "neigh_wick_dies_p7": true,
+    "catalog_misses_1544_409": true,
+    "p5_u_5atom_not_p7": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "p5": "48/13",
+      "p7": "48/25",
+      "live7": "1544/409",
+      "n_pp": {
+        "5": 6,
+        "7": 6
+      },
+      "dim_Vp": {
+        "5": 13,
+        "7": 25
+      },
+      "theorem": "8 n_pp / dim V+ hits p=5 and dies at p=7."
+    },
+    "B": {
+      "proved": true,
+      "p5": "48/13",
+      "p7": "96/25",
+      "live7": "1544/409",
+      "theorem": "4(q-1)/(q+1) hits p=5 and dies at p=7."
+    },
+    "C": {
+      "proved": true,
+      "S7_has_409": false,
+      "S7_has_dimVp": true,
+      "S7_has_q2": true,
+      "weil_E_range": [
+        36,
+        64
+      ],
+      "cyclo_max": 47,
+      "kl2_max": 36,
+      "fermat": {
+        "2": 48,
+        "3": 60,
+        "4": 88
+      },
+      "gj_multiples_of_409": [],
+      "theorem": "409 is excluded from every 1-term GJ/CM/cyclo/Fermat family by size or explicit count; it divides no named_gj_int(7).  Hence no a/b, 4-2a/b, 8a/b in the catalog equals 1544/409."
+    },
+    "D": {
+      "proved": true,
+      "p5_n_atoms": 5,
+      "p5_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          200,
+          -40
+        ],
+        [
+          200,
+          40
+        ],
+        [
+          600,
+          -200
+        ],
+        [
+          600,
+          200
+        ]
+      ],
+      "p5_exact": true,
+      "p7_outsider": 989.5877985464,
+      "p7_gap": 338.3041700620703,
+      "p7_err_bound": 1e-09,
+      "theorem": "p=5 u-support is the named 5-atom in Z[\u221a5]; the 5-atom and its p=7 twin fail at p=7 with gap>1."
+    },
+    "E": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "note": "Neighbours that hit p=5 die at p=7, so they do not imply <delta,psi> <= 2.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

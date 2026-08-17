@@ -1,0 +1,207 @@
+{
+  "prop": "15.314",
+  "title": "Named T-types and F_1; floor is three Q-inequalities",
+  "proved": {
+    "type_sizes": true,
+    "U_split": true,
+    "F1_rewrite": true,
+    "Q_tau_named_in_p": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "six_constant_false": true,
+      "by_p": {
+        "3": {
+          "named": {
+            "pm1": 2,
+            "++": 0,
+            "N*": 0,
+            "--N1": 2
+          },
+          "live": {
+            "pm1": 2,
+            "--N1": 2
+          },
+          "ns_ok": true
+        },
+        "5": {
+          "named": {
+            "pm1": 2,
+            "++": 6,
+            "N*": 4,
+            "--N1": 0
+          },
+          "live": {
+            "pm1": 2,
+            "++": 6,
+            "N*": 4
+          },
+          "ns_ok": true
+        },
+        "7": {
+          "named": {
+            "pm1": 2,
+            "++": 6,
+            "N*": 12,
+            "--N1": 4
+          },
+          "live": {
+            "pm1": 2,
+            "++": 6,
+            "N*": 12,
+            "--N1": 4
+          },
+          "ns_ok": true
+        },
+        "11": {
+          "named": {
+            "pm1": 2,
+            "++": 12,
+            "N*": 40,
+            "--N1": 6
+          },
+          "live": {
+            "pm1": 2,
+            "++": 12,
+            "N*": 40,
+            "--N1": 6
+          },
+          "ns_ok": true
+        },
+        "13": {
+          "named": {
+            "pm1": 2,
+            "++": 22,
+            "N*": 60,
+            "--N1": 0
+          },
+          "live": {
+            "pm1": 2,
+            "++": 22,
+            "N*": 60
+          },
+          "ns_ok": true
+        },
+        "17": {
+          "named": {
+            "pm1": 2,
+            "++": 30,
+            "N*": 112,
+            "--N1": 0
+          },
+          "live": {
+            "pm1": 2,
+            "++": 30,
+            "N*": 112
+          },
+          "ns_ok": true
+        },
+        "19": {
+          "named": {
+            "pm1": 2,
+            "++": 24,
+            "N*": 144,
+            "--N1": 10
+          },
+          "live": {
+            "pm1": 2,
+            "++": 24,
+            "N*": 144,
+            "--N1": 10
+          },
+          "ns_ok": true
+        }
+      },
+      "theorem": "|pm1|=2, |N*|=(p\u22121)(p\u22123)/2, |--|=0 or (p+1)/2, |++|=2p\u22124 or 3(p\u22123)/2 by p mod 4. N*=T\\(F_p^\u00d7\u222aU)."
+    },
+    "B": {
+      "proved": true,
+      "bothplus_on_p1mod4": false,
+      "swap_odd_is_wrong": true,
+      "by_p": {
+        "3": {
+          "want_prod": 1,
+          "bothplus": 0,
+          "split_ok": true
+        },
+        "5": {
+          "want_prod": -1,
+          "bothplus": 0,
+          "split_ok": true
+        },
+        "7": {
+          "want_prod": 1,
+          "bothplus": 2,
+          "split_ok": true
+        },
+        "11": {
+          "want_prod": 1,
+          "bothplus": 4,
+          "split_ok": true
+        },
+        "13": {
+          "want_prod": -1,
+          "bothplus": 0,
+          "split_ok": true
+        },
+        "17": {
+          "want_prod": -1,
+          "bothplus": 0,
+          "split_ok": true
+        },
+        "19": {
+          "want_prod": 1,
+          "bothplus": 8,
+          "split_ok": true
+        }
+      },
+      "theorem": "\u03c7_q(u\u00b2\u22121)=\u2212\u03c7_p(\u22121) on U\\{\u00b11}. p\u22611 (mod 4): all mixed. p\u22613 (mod 4): --N1=U\\U\u00b2, ++\u2229U=U\u00b2\\{\u00b11}."
+    },
+    "C": {
+      "proved": true,
+      "drop_special_j_fails": true,
+      "by_p": {
+        "5": {
+          "Qpp": "48/13",
+          "Qn": "32/13",
+          "Qmm": "0",
+          "f1_err": 5.773159728050814e-15,
+          "s0": 32.00000000000001,
+          "live_min": 6.153846153846136,
+          "named_min": 6.15384615384615
+        },
+        "7": {
+          "Qpp": "1544/409",
+          "Qn": "1496/409",
+          "Qmm": "1376/409",
+          "f1_err": 1.0658141036401503e-14,
+          "s0": 80.0,
+          "live_min": 7.511002444987761,
+          "named_min": 7.511002444987771
+        }
+      },
+      "theorem": "F_1(j) is the named linear form; every even S_k is F_1(j)+\u03c3 F_*(j). Live mins 80/13 and 3072/409. Dropping the j=(p+1)/2 slot misses F_1 at p=7."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "note": "Type sizes and F_1(j) named for all odd primes. The three off Q values still carry den N_+/(2p). phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

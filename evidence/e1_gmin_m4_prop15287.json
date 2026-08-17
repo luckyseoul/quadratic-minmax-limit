@@ -1,0 +1,103 @@
+{
+  "prop": "15.287",
+  "L_status": "OPEN",
+  "proved": {
+    "paley_ncirc_formula": true,
+    "ap_not_paley": true,
+    "three_p_is_identity": false,
+    "phi_F_ge_6_proved_general": false,
+    "inequality_proved": false,
+    "n_H_named_in_p": false,
+    "n_NL_named_in_p": false,
+    "Nplus_named": false
+  },
+  "status": {
+    "floor": false,
+    "identity_A": true,
+    "identity_B": true
+  },
+  "A": {
+    "proved": true,
+    "blocks": [
+      {
+        "p": 5,
+        "counts": [
+          10,
+          10,
+          10
+        ],
+        "formula": 10,
+        "three_p": 15,
+        "three_p_wrong": true
+      },
+      {
+        "p": 7,
+        "counts": [
+          21,
+          21,
+          21
+        ],
+        "formula": 21,
+        "three_p": 21,
+        "three_p_wrong": false
+      },
+      {
+        "p": 11,
+        "counts": [
+          55,
+          55,
+          55
+        ],
+        "formula": 55,
+        "three_p": 33,
+        "three_p_wrong": true
+      },
+      {
+        "p": 13,
+        "counts": [
+          78,
+          78,
+          78
+        ],
+        "formula": 78,
+        "three_p": 39,
+        "three_p_wrong": true
+      }
+    ]
+  },
+  "B": {
+    "proved": true,
+    "blocks": [
+      {
+        "p": 5,
+        "paley": 10,
+        "ap": 10,
+        "equal": true,
+        "same_plus_set": false
+      },
+      {
+        "p": 7,
+        "paley": 21,
+        "ap": 7,
+        "equal": false,
+        "same_plus_set": false
+      },
+      {
+        "p": 13,
+        "paley": 78,
+        "ap": 0,
+        "equal": false,
+        "same_plus_set": false
+      }
+    ]
+  },
+  "open": {
+    "floor_closed": false,
+    "n_H_named_in_p": false,
+    "n_NL_named_in_p": false,
+    "Nplus_named": false,
+    "ap_ncirc_named_in_p": false,
+    "phi_F_ge_6": false,
+    "rhat_ge_budget": false
+  }
+}

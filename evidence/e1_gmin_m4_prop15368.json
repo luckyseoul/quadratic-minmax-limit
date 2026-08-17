@@ -1,0 +1,70 @@
+{
+  "prop": "15.368",
+  "title": "p=7 S(\u03b1): S2=40 and one deg-4 class die; D=dim V+ dies",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "S2_S3_p5_die_p7": true,
+    "deg4_not_one_class_p7": true,
+    "D_dimVp_dies_p7": true,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "p5_occ2": [
+        440,
+        400,
+        400,
+        400,
+        400
+      ],
+      "p7_x2_occ0": 179539290,
+      "p7_x3_palindromic": true,
+      "p7_S2_in_Q": false,
+      "p7_S3_in_Q": false,
+      "theorem": "S(x\u00b2), S(x\u00b3) \u2209 Q at p=7, so they are not 40 or 65."
+    },
+    "B": {
+      "proved": true,
+      "x2_eq_x4": true,
+      "x2_palindromic": false,
+      "n_deg4_occ0": 5,
+      "deg4_occ0": [
+        129033905,
+        179539290,
+        230044675,
+        280550060,
+        331055445
+      ],
+      "theorem": "At p=7, S(x\u00b2)=S(x\u2074) complex; deg-4 has \u22655 occ0 classes."
+    },
+    "C": {
+      "proved": true,
+      "D_dim_p5": 13,
+      "D_dim_p7": 25,
+      "live_D7": 409,
+      "theorem": "D=dim V+ hits p=5 and dies at p=7 (25\u2260409)."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "D_named_in_p": false,
+      "NUM_SUM_named_p5": 480,
+      "note": "p=7 deg-4 has \u22655 occupancy classes, so the three p=5 S \u2208 Q(\u03b6_5) are not a formula in p.  D unnamed.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

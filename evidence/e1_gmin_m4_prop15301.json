@@ -1,0 +1,105 @@
+{
+  "prop": "15.301",
+  "title": "S_k=16\u221216(p\u2212Re J)/d holds at p=5 and fails at p=7",
+  "proved": {
+    "jacobi_abs_p": true,
+    "formula_p5_only": true,
+    "phi_F_ge_6_proved_general": false,
+    "Q_tau_named_in_p": false,
+    "S_k_named_in_p": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "invert_hit": 4,
+      "invert_tot": 5,
+      "by_p": {
+        "5": {
+          "2": {
+            "J_re": -2.9999999999999987,
+            "J_im": 3.9999999999999982,
+            "absJ": 4.999999999999998,
+            "absJ_eq_p": true,
+            "inv_diff": 4.472135954999574
+          },
+          "6": {
+            "J_re": 3.0000000000000018,
+            "J_im": -4.000000000000003,
+            "absJ": 5.0000000000000036,
+            "absJ_eq_p": true,
+            "inv_diff": 8.944271909999172
+          }
+        },
+        "7": {
+          "2": {
+            "J_re": -4.999999999999999,
+            "J_im": 4.898979485566356,
+            "absJ": 6.999999999999999,
+            "absJ_eq_p": true,
+            "inv_diff": 4.459993011230382
+          },
+          "8": {
+            "J_re": -1.0000000000000018,
+            "J_im": 6.9282032302755265,
+            "absJ": 7.000000000000018,
+            "absJ_eq_p": true,
+            "inv_diff": 11.142214052851976
+          },
+          "12": {
+            "J_re": 7.0,
+            "J_im": 2.1205259770340528e-14,
+            "absJ": 7.0,
+            "absJ_eq_p": true,
+            "inv_diff": 2.668534018874154e-14
+          }
+        }
+      },
+      "theorem": "J(\u03c7,\u03c8_k)=G(\u03c7)G(\u03c8)/G(\u03c7\u03c8), |J|=p on the 15.300 basis k\u22600. Inverted G(\u03c7\u03c8\u0304) differs."
+    },
+    "B": {
+      "proved": true,
+      "p5_S_err": {
+        "2": 8.881784197001252e-16,
+        "6": 7.105427357601002e-15
+      },
+      "p7_S_err": {
+        "2": 0.10484107579462609,
+        "8": 3.3689975550122195,
+        "12": 5.437652811735948
+      },
+      "p7_max_S_err": 5.437652811735948,
+      "inversion": {
+        "5": {
+          "Qpp_live": 3.6923076923076934,
+          "Qpp_formula": 3.6923076923076925,
+          "err": 8.881784197001252e-16
+        },
+        "7": {
+          "Qpp_live": 3.775061124694376,
+          "Qpp_formula": 4.095238095238096,
+          "err": 0.32017697054371963
+        }
+      },
+      "formula": "16 - 16(p - Re J(\u03c7,\u03c8_k))/dim V_+",
+      "theorem": "S=16\u221216(p\u2212Re J)/d matches both p=5 basis characters and recovers Q via J^{-1}S.  At p=7 the same formula misses live S (max err>1) and live Q_++."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Q_tau_named_in_p": false,
+      "S_k_named_in_p": false,
+      "note": "The named-den formula 16\u221216(p\u2212Re J)/d is p=5-only. S_{k\u22600} still unnamed for general p. Floor OPEN."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

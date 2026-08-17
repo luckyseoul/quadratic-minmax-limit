@@ -1,0 +1,77 @@
+{
+  "prop": "15.342",
+  "title": "Q++ not 4-2/(p+2); S_k not ReJ-linear; S^{(k)} not \u03c7-sparse",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Sk_not_ReJ_linear": true,
+    "Qpp_not_pplus2_or_endpoint": true,
+    "Sk_not_2term_chi": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "coef": [
+        10.25497472115836,
+        -0.05015233125371121,
+        -0.024889270097482583,
+        -0.519988479902048
+      ],
+      "max_err": 2.047185290977751,
+      "n": 16,
+      "theorem": "Even S_k is not A+B ReJ+C ReJ2+D ImJ at p=5,7 together."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "live": "48/13",
+          "4-2/(p+2)": "26/7",
+          "Q_lo": "11/4",
+          "Q_ub": "26/7",
+          "eq_cand": false,
+          "eq_lo": false,
+          "eq_ub": false,
+          "in_interval": true
+        },
+        "7": {
+          "live": "1544/409",
+          "4-2/(p+2)": "34/9",
+          "Q_lo": "10/3",
+          "Q_ub": "70/17",
+          "eq_cand": false,
+          "eq_lo": false,
+          "eq_ub": false,
+          "in_interval": true
+        }
+      },
+      "theorem": "Live Q++ is strictly inside (Q_lo, ub) and \u2260 4\u22122/(p+2)."
+    },
+    "C": {
+      "proved": true,
+      "n_2term": 0,
+      "sample": null,
+      "n_bits": 55,
+      "theorem": "No 2-term deg\u22643 \u03c7-predicate recovers S^{(k)}.",
+      "note": "4-term 2.1e6 census in scratch cpu_Sk_unify.json also 0 hits."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "note": "Ensemble Q_\u03c4 still unnamed.  S^{(k)} not a single low-degree \u03c7 polynomial.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

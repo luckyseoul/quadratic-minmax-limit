@@ -1,0 +1,77 @@
+{
+  "prop": "15.358",
+  "title": "2-feature catalog misses D/Q_NL; 2-type above Q_ub for p\u22611\u226513",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "catalog_miss": true,
+    "quadratic_not_2p_multiple": true,
+    "twotype_above_ub_p1": true,
+    "D_named_in_p": false,
+    "Q_NL_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "n_D_hits": 0,
+      "n_QNL_hits": 0,
+      "wrong": {
+        "3p-2_at_p5": 13,
+        "dimVp_at_p7": 25,
+        "p2pp1_at_p5": 31
+      },
+      "theorem": "2-feature catalog misses D and Q_NL; 3p\u22122 and dim V_+ fail."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "3": 6,
+        "5": 130,
+        "7": 5726,
+        "11": 33334
+      },
+      "p11_mod_22": 4,
+      "theorem": "Quadratic through |H+|(3,5,7) is not a 2p-multiple at p=11."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "13": {
+          "Q_1d": "1280/121",
+          "Q_T": "1168/231",
+          "Q_ub": "310/71"
+        },
+        "17": {
+          "Q_1d": "3304/225",
+          "Q_T": "808/135",
+          "Q_ub": "560/127"
+        },
+        "29": {
+          "Q_1d": "19552/729",
+          "Q_T": "3824/405",
+          "Q_ub": "1742/391"
+        }
+      },
+      "theorem": "Q_1D and Q_T both exceed Q^{ub} at p=13,17,29."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "D_named_in_p": false,
+      "Q_NL_named_in_p": false,
+      "Q_tau_named_in_p": false,
+      "note": "Catalog + quadratic + 2-type obstruction.  D, Q_NL unnamed."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

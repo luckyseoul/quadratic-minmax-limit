@@ -1,0 +1,72 @@
+{
+  "prop": "15.297",
+  "title": "Aut involutions do not sign Cov; Hoffman ker X_A is p=5-only",
+  "proved": {
+    "aut_pair_below_floor": true,
+    "Hoffman_XA_zero_only_p5": true,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "floor": 3750,
+      "E_uXA": 3846.153846153848,
+      "maps": {
+        "signed_inv": {
+          "hits": 130,
+          "pair_min": -17082.039324993675,
+          "below_floor": true
+        },
+        "frob": {
+          "hits": 130,
+          "pair_min": -17082.03932499371,
+          "below_floor": true
+        },
+        "negx": {
+          "hits": 130,
+          "pair_min": -17082.03932499371,
+          "below_floor": true
+        },
+        "trans1": {
+          "hits": 130,
+          "pair_min": -17082.039324993722,
+          "below_floor": true
+        }
+      },
+      "invert_hit": 0,
+      "invert_tot": 1
+    },
+    "B": {
+      "proved": true,
+      "sample": {
+        "5:2": {
+          "n_H": 100,
+          "max_abs_XA": 1.3237136558474086e-13,
+          "vanishes": true
+        },
+        "7:40": {
+          "n_H": 1764,
+          "max_abs_XA": 1118.5991239045438,
+          "vanishes": false
+        }
+      },
+      "invert_hit": 0,
+      "invert_tot": 1
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "note": "Aut partners and Hoffman-vanishing do not sign Cov for all p."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

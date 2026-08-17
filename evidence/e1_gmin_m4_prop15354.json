@@ -1,0 +1,90 @@
+{
+  "prop": "15.354",
+  "title": "Named box sits in [Q_lo, Q_ub]; box-as-bound open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "box_lo_above_Q_lo": true,
+    "box_hi_below_Q_ub": true,
+    "live_in_box": true,
+    "box_is_a_bound": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "identity": "Q_box_lo - Q_lo = 12/(p-1)^2",
+      "rows": {
+        "5": "3/4",
+        "7": "1/3",
+        "11": "3/25",
+        "13": "1/12",
+        "17": "3/64",
+        "19": "1/27",
+        "23": "3/121",
+        "29": "3/196",
+        "31": "1/75",
+        "37": "1/108",
+        "41": "3/400",
+        "43": "1/147",
+        "47": "3/529",
+        "53": "3/676"
+      },
+      "theorem": "Box lower edge strictly above Q_lo for every p\u22655."
+    },
+    "B": {
+      "proved": true,
+      "identity": "Q_ub - Q_box_hi = (p-5)(p+1)(p+6)/[2(p+2)(p^2-2p-1)]",
+      "p5_equal": true,
+      "p13_strict": "532/1065",
+      "rows": {
+        "5": "0",
+        "7": "52/153",
+        "11": "306/637",
+        "13": "532/1065",
+        "17": "1242/2413",
+        "19": "250/483",
+        "23": "3132/6025",
+        "29": "6300/12121",
+        "31": "7696/14817",
+        "37": "13072/25233",
+        "41": "378/731",
+        "43": "20482/39645",
+        "47": "3816/7399",
+        "53": "38232/74305"
+      },
+      "theorem": "Box upper edge \u2264 floor ub, equality only at p=5."
+    },
+    "C": {
+      "proved": true,
+      "p5": [
+        "7/2",
+        "48/13",
+        "26/7"
+      ],
+      "p7": [
+        "11/3",
+        "1544/409",
+        "34/9"
+      ],
+      "theorem": "Live 48/13 and 1544/409 sit strictly inside the box."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "box_is_a_bound": false,
+      "Q_tau_named_in_p": false,
+      "note": "Box \u2286 [Q_lo, Q_ub] is named.  Box as a bound on ensemble Q++ is open.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

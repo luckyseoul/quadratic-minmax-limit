@@ -1,0 +1,91 @@
+{
+  "prop": "15.328",
+  "title": "AP extrema of e_s; Lasserre-4=5; Poincar\u00e9-3.85>18/7",
+  "proved": {
+    "AP_realises_e_extrema": true,
+    "lasserre4_is_AP_var": true,
+    "poincare_d6_too_weak": true,
+    "A_square_named": false,
+    "Q_tau_named_in_p": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "nonAP_outside_AP_range_false": true,
+      "by_p": {
+        "5": {
+          "n_ap": 30,
+          "n_all": 130,
+          "ap_min": 0.7639320225002101,
+          "ap_max": 5.236067977499792,
+          "all_min": 0.7639320225002101,
+          "all_max": 5.236067977499792,
+          "var_ap": 5.0,
+          "var_all": 2.5384615384615383
+        },
+        "7": {
+          "n_ap": 84,
+          "n_all": 5726,
+          "ap_min": 0.6159570567398078,
+          "ap_max": 10.09783467904462,
+          "all_min": 0.6159570567398078,
+          "all_max": 10.09783467904462,
+          "var_ap": 18.666666666666654,
+          "var_all": 2.5036674816625903
+        }
+      },
+      "theorem": "AP G-orbit realises min and max of e_s at p=5,7. Var_AP=5 and 56/3."
+    },
+    "B": {
+      "proved": true,
+      "lasserre_le_18_7_false": true,
+      "value": 5.0,
+      "need": 2.5714285714285716,
+      "theorem": "Degree-4 Lasserre with the named 2-point equals 5 (AP variance), not \u226418/7."
+    },
+    "C": {
+      "proved": true,
+      "poincare_closes_false": true,
+      "by": {
+        "uniq_pos": [
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18,
+          20
+        ],
+        "nedges6": 650,
+        "gap": 4.790423179888389,
+        "Dir": 2400.0,
+        "var": 2.5384615384615383,
+        "ub": 3.8538429212361556
+      },
+      "need": 2.5714285714285716,
+      "theorem": "p=5 Hamming isolation min d=6 (650 edges). Poincar\u00e9 ub\u22483.85>18/7."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "A_square_named": false,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "note": "AP extrema + Lasserre-4=5 + Poincar\u00e9-3.85 do not give Var(e)\u226418/7.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

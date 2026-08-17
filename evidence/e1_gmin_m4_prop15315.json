@@ -1,0 +1,175 @@
+{
+  "prop": "15.315",
+  "title": "Boolean B=\u22122p\u1e91; named \u03c1 counts; no second linear Q-relation",
+  "proved": {
+    "boolean_minus_2p": true,
+    "rho_counts": true,
+    "no_second_rel_in_catalog": true,
+    "Q_tau_named_in_p": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "p_pminus2_fails": true,
+      "by_p": {
+        "5": {
+          "err": 2.404323753877496e-13,
+          "err_p_pminus2": 404.5084971874738,
+          "n_checked": 130,
+          "named_B2": 5000.0,
+          "|R|": 5
+        },
+        "7": {
+          "err": 1.0876643226625024e-12,
+          "err_p_pminus2": 970.1505037879436,
+          "n_checked": 120,
+          "named_B2": 19208.0,
+          "|R|": 11
+        }
+      },
+      "theorem": "\u2211_{t\u2208R} \u1e91(t\u03be)\u1e91((1\u2212t)\u03be)=\u22122p \u1e91(\u03be). p(p\u22122) misses by O(10\u00b2). E[|B|\u00b2]=8p\u00b2q."
+    },
+    "B": {
+      "proved": true,
+      "mm_empty": true,
+      "by_p": {
+        "3": {
+          "named": {
+            "pm1": 1,
+            "++": 0,
+            "N*": 0,
+            "--N1": 0
+          },
+          "live": {
+            "pm1": 1
+          },
+          "match": true
+        },
+        "5": {
+          "named": {
+            "pm1": 1,
+            "++": 4,
+            "N*": 0,
+            "--N1": 0
+          },
+          "live": {
+            "++": 4,
+            "pm1": 1
+          },
+          "match": true
+        },
+        "7": {
+          "named": {
+            "pm1": 1,
+            "++": 6,
+            "N*": 4,
+            "--N1": 0
+          },
+          "live": {
+            "++": 6,
+            "pm1": 1,
+            "N*": 4
+          },
+          "match": true
+        },
+        "11": {
+          "named": {
+            "pm1": 1,
+            "++": 12,
+            "N*": 16,
+            "--N1": 0
+          },
+          "live": {
+            "++": 12,
+            "pm1": 1,
+            "N*": 16
+          },
+          "match": true
+        },
+        "13": {
+          "named": {
+            "pm1": 1,
+            "++": 16,
+            "N*": 24,
+            "--N1": 0
+          },
+          "live": {
+            "++": 16,
+            "pm1": 1,
+            "N*": 24
+          },
+          "match": true
+        },
+        "17": {
+          "named": {
+            "pm1": 1,
+            "++": 22,
+            "N*": 48,
+            "--N1": 0
+          },
+          "live": {
+            "++": 22,
+            "pm1": 1,
+            "N*": 48
+          },
+          "match": true
+        },
+        "19": {
+          "named": {
+            "pm1": 1,
+            "++": 24,
+            "N*": 64,
+            "--N1": 0
+          },
+          "live": {
+            "++": 24,
+            "pm1": 1,
+            "N*": 64
+          },
+          "match": true
+        }
+      },
+      "theorem": "\u03c1(R)={s\u2208T:\u03c7(s+1)=+1}; |\u03c1\u2229--N1|=0; counts named by p mod 4."
+    },
+    "C": {
+      "proved": true,
+      "extra_named_hits": 0,
+      "s0_constant_coeff_hits": 0,
+      "s0_ok": true,
+      "EM_ij_den_is_U": false,
+      "Q5": {
+        "pm1": "8",
+        "++": "48/13",
+        "N*": "32/13"
+      },
+      "Q7": {
+        "pm1": "8",
+        "++": "1544/409",
+        "N*": "1496/409",
+        "--N1": "1376/409"
+      },
+      "theorem": "|B|\u00b2 is tautological. No (a,b,c) independent of S_0 hits the named catalog at both primes. E[M_i M_j] den \u2260 |U|."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "second_linear_relation": false,
+      "note": "Boolean and \u03c1-counts named. The only named linear form in the three Q values remains S_0. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

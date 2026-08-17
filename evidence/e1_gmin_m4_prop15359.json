@@ -1,0 +1,63 @@
+{
+  "prop": "15.359",
+  "title": "D quadratic dead at p=11; no small cubic or 3-feature name",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "D_quad_formula": true,
+    "p11_census_kills_D_quad": true,
+    "no_small_cubic_or_3feature": true,
+    "D_named_in_p": false,
+    "Q_NL_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "3": 1,
+        "5": 13,
+        "7": 409,
+        "11": 2353
+      },
+      "p11_Hplus_pred": 51766,
+      "theorem": "D_quad hits 1,13,409 and predicts D(11)=2353."
+    },
+    "B": {
+      "proved": true,
+      "n_rows": 143132,
+      "n_maxplus": 85052,
+      "n_not": 58080,
+      "maxerr_bad": 24.0,
+      "D_lb": 3866,
+      "Hplus_pred_quad": 51766,
+      "theorem": "p=11 cache has 85052 Max+ > 22\u00b72353; D_quad is dead."
+    },
+    "C": {
+      "proved": true,
+      "n_cubic": 0,
+      "n_prod3": 0,
+      "n_lin3": 0,
+      "fake_cubic_p3": 16,
+      "theorem": "No small cubic / 3-product / 3-linear names D on {3,5,7}."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "D_named_in_p": false,
+      "Q_NL_named_in_p": false,
+      "Q_tau_named_in_p": false,
+      "note": "D_quad and small 3-feature forms are dead.  D unnamed."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "prop": "15.380",
+  "title": "Paley E[f_e]=1/p; regular 4p-graphs have E[S\u00b2]>24",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "E_fe_is_1_over_p": true,
+    "adj_pm_disj_nminus3": true,
+    "regular_ES2_gt_24": true,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "mean": 0.19999999999999996,
+          "spread": 0.0,
+          "named": 0.2
+        },
+        "7": {
+          "mean": 0.14285714285714282,
+          "spread": 0.0,
+          "named": 0.14285714285714285
+        }
+      },
+      "theorem": "E[f_e]=1/p on every edge. Fail: E[f]=0."
+    },
+    "B": {
+      "proved": true,
+      "adj": {
+        "n": 7800,
+        "mean": 4.554761126667309e-19,
+        "mean_frac": "0",
+        "unique": [
+          "-1/5",
+          "1/5"
+        ]
+      },
+      "disj_mean": "1/23",
+      "disj_named": "1/23",
+      "theorem": "Adj Gram {\u00b11/p} mean 0; disjoint mean 1/(n\u22123). Fail: either mean is 1/p\u00b2."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "d": "20/13",
+          "d_integral": false,
+          "ES2_reg": "10640/299"
+        },
+        "7": {
+          "d": "28/25",
+          "d_integral": false,
+          "ES2_reg": "51632/1175"
+        },
+        "11": {
+          "d": "44/61",
+          "d_integral": false,
+          "ES2_reg": null
+        },
+        "13": {
+          "d": "52/85",
+          "d_integral": false,
+          "ES2_reg": null
+        },
+        "19": {
+          "d": "76/181",
+          "d_integral": false,
+          "ES2_reg": null
+        },
+        "23": {
+          "d": "92/265",
+          "d_integral": false,
+          "ES2_reg": null
+        }
+      },
+      "theorem": "d=8p/(p\u00b2+1) never integral (p\u00b2+1|8 impossible). No regular 4p-graph. Formal ES2_reg>24 at p=5,7. Fail: d\u2208Z at p=5."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Leftover G is not known to be regular. Almost-stars at p=5 have S-support {0,2,\u2026,10}, not 4-level. No general majorant. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}

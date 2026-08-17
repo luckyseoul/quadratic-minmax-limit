@@ -1,0 +1,74 @@
+{
+  "prop": "15.335",
+  "title": "QR0\u2299NC Q_\u03c4 named as rationals; not ensemble Q_\u03c4",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "qr0nc_Q_via_zhat_minus_2Gamma": true,
+    "not_ensemble_Q_tau": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "Qpp": "64/15",
+          "Qn": "16/5",
+          "err2": 5.329070518200751e-15,
+          "err1": 4.253254041760201,
+          "match": true
+        },
+        "7": {
+          "Qpp": "40/9",
+          "Qn": "76/21",
+          "err2": 7.32410687763558e-15,
+          "err1": 5.158833603697055,
+          "match": true
+        },
+        "11": {
+          "Qpp": "3976/495",
+          "Qn": "144/55",
+          "err2": 5.149137308761362e-14,
+          "err1": 6.565732664335263,
+          "match": true
+        },
+        "13": {
+          "Qpp": "22688/3003",
+          "Qn": "2992/1365",
+          "err2": 3.9331364521694443e-14,
+          "err1": 7.158525494337356,
+          "match": true
+        }
+      },
+      "theorem": "QR0\u2299NC Q_\u03c4 = \u03a9-avg |\u1e91_QR0\u22122\u0393|\u00b2.  Drop 2 fails."
+    },
+    "B": {
+      "proved": true,
+      "qr0nc_p5": "64/15",
+      "ensemble_p5": "48/13",
+      "qr0nc_p7": "40/9",
+      "ensemble_p7": "1544/409",
+      "dens_not_Hplus": true,
+      "theorem": "QR0\u2299NC Q++ is 64/15 and 40/9, not the ensemble 48/13 and 1544/409."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "Hplus_named_in_p": false,
+      "note": "QR0\u2299NC type Q is certified, not the H_+ mixture.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

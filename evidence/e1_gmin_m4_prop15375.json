@@ -1,0 +1,156 @@
+{
+  "prop": "15.375",
+  "title": "Q--_form=8(A-k)/D in [Qm_min,t_smh]; p\u22613 even S\u22656 at the form pair",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "affine_Qmm_zero": true,
+    "form_hits_live_p7": true,
+    "Qmm_form_ge_Qlo": true,
+    "even_S_ge_6_at_form_pair": true,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "Qmm_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "AP_mm": "0",
+      "QR0_mm": "0",
+      "QR0_pp": "32/3",
+      "QR0_pp_named": "32/3",
+      "w_1d": "10/409",
+      "Q_NL_mm_p7": "1376/399",
+      "theorem": "Affine Type+ constructors vanish on --. Fail: Q_QR0^{--}=4(p+1)/3."
+    },
+    "B": {
+      "proved": true,
+      "form": "1376/409",
+      "dropk": "1544/409",
+      "Qn_hit": "1496/409",
+      "A_minus_k_p3": 0,
+      "theorem": "8(A\u2212k)/D_form hits live Q_{--}. Drop-k and 8(A\u2212n++)/D are not Q_{--}."
+    },
+    "C": {
+      "proved": true,
+      "dC": "17p+13",
+      "N_num_7": -8784,
+      "f_lo_7": 10944,
+      "derivs_pos": true,
+      "rows": [
+        [
+          7,
+          "228",
+          "3072/409"
+        ],
+        [
+          11,
+          "66896",
+          "14260/1851"
+        ],
+        [
+          19,
+          "30806880",
+          "13290336/1893125"
+        ],
+        [
+          23,
+          "545734320",
+          "113023966/16562507"
+        ],
+        [
+          31,
+          "162290003436",
+          "300539997120/45581922169"
+        ],
+        [
+          43,
+          "782724808078848",
+          "41731296099521/6502250269415"
+        ]
+      ],
+      "theorem": "Q_{--}^{form}\u2265Q_lo for all p\u22613\u22657 by C(p,4); sm0\u22656 at Q++=Q_form."
+    },
+    "D": {
+      "proved": true,
+      "dC_tsh_7": 408,
+      "dC_spo_7": 348,
+      "dC_sph_7": 696,
+      "f_tsh_7": 228672,
+      "f_spo_7": 171936,
+      "f_sph_7": 537408,
+      "derivs_pos": true,
+      "rows": [
+        [
+          7,
+          "11999/2863",
+          "4032/409",
+          "3648/409",
+          "3072/409"
+        ],
+        [
+          11,
+          "491924/116613",
+          "15980/1851",
+          "14840/1851",
+          "14260/1851"
+        ],
+        [
+          19,
+          "2855017016/690990625",
+          "47302768/5679375",
+          "1625224/227175",
+          "13290336/1893125"
+        ],
+        [
+          23,
+          "22651763270/5515314831",
+          "1509486434/182187577",
+          "1265504520/182187577",
+          "113023966/16562507"
+        ],
+        [
+          31,
+          "22405969156571/5495877472948",
+          "5623709308736/683728832535",
+          "28433710336/4246762935",
+          "300539997120/45581922169"
+        ],
+        [
+          43,
+          "24411347045170270/6022384199532173",
+          "3346569402280537/409641766973145",
+          "532337037780482/81928353394629",
+          "41731296099521/6502250269415"
+        ],
+        [
+          79,
+          "64613586160077504599666419801/16042964799248465937779928545",
+          "4326842629890581094101984754/534404896212322466167450081",
+          "176311822322671329396575760/28126573484859077166707899",
+          "255759649576606763796808938/41108068939409420474419237"
+        ]
+      ],
+      "theorem": "Q++_form\u2264t_smh and sph,spo\u22656 for all p\u22613\u22657 by C(p,4) bounds with positive jets at p=7."
+    },
+    "E": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "D_named_in_p": false,
+      "Qmm_named_in_p": false,
+      "note": "Q_{--}^{form} sits in the floor window if D_form=D and live Q_{--} equals the form.  Neither is known at p\u226511.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

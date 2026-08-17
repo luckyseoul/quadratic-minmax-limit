@@ -1,0 +1,85 @@
+{
+  "prop": "15.334",
+  "title": "QR0\u2299NC exists at p=5,7,11,13; AP\u2299NC empty at p=13",
+  "series": "15.x leftover campaign (OPEN). Not 16.x fail, not 17.x close.",
+  "proved": {
+    "qr0nc_exists_p13": true,
+    "qr0nc_NL_p7_p13": true,
+    "Hplus_named_in_p": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "p": 5,
+          "found": true,
+          "cy_eq_py": true,
+          "t": 5,
+          "c": 3
+        },
+        "7": {
+          "p": 7,
+          "found": true,
+          "cy_eq_py": true,
+          "t": 7,
+          "c": 4
+        },
+        "11": {
+          "p": 11,
+          "found": true,
+          "cy_eq_py": true,
+          "t": 22,
+          "c": 3
+        },
+        "13": {
+          "p": 13,
+          "found": true,
+          "cy_eq_py": true,
+          "t": 13,
+          "c": 11
+        }
+      },
+      "AP_nc_empty_p13": true,
+      "theorem": "QR0\u2299NC exists and is Cy=py at p=5,7,11,13.  AP\u2299NC is empty at p=13."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "7": {
+          "is_hs": false,
+          "found": true
+        },
+        "13": {
+          "is_hs": false,
+          "found": true
+        },
+        "5": {
+          "is_hs": false,
+          "note": "QR0 is AP at p=5; may coincide with ystar"
+        }
+      },
+      "theorem": "QR0\u2299NC is NL (not a halfspace) for p=7 and p=13."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Hplus_named_in_p": false,
+      "Q_tau_named_in_p": false,
+      "note": "QR0\u2299NC is one NL family through p=13.  It does not name |H_+|.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

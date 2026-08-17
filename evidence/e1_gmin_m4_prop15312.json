@@ -1,0 +1,68 @@
+{
+  "prop": "15.312",
+  "title": "QR0\u2299NC and gen2 Q via \u1e91\u22122\u0393; 294 named; one 1176 missing",
+  "proved": {
+    "QR0_NC_40_9": true,
+    "gen2_32_9": true,
+    "orbit_294": true,
+    "Q_tau_named_in_p": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "err2": 7.32410687763558e-15,
+      "err1": 5.158833603697055,
+      "Qpp": "40/9",
+      "Qn": "76/21",
+      "ystar_Qpp": "8/3",
+      "t_c": [
+        7,
+        4
+      ],
+      "theorem": "QR0\u2299NC: \u1e91=\u1e91_QR0\u22122\u0393, Q++=40/9 \u2260 8/3=AP\u2299NC."
+    },
+    "B": {
+      "proved": true,
+      "err2": 1.0886980803209723e-14,
+      "err1": 5.158833603697048,
+      "Qpp": "32/9",
+      "Qn": "256/63",
+      "t_c": [
+        7,
+        2
+      ],
+      "theorem": "AP\u2299NC\u2299NC lex-first: Q++=32/9. Not 8/3 or 40/9."
+    },
+    "C": {
+      "proved": true,
+      "orbit": 294,
+      "named_orbit": 294,
+      "Qpp": "40/9",
+      "Qn": "24/7",
+      "err2": 5.329070518200751e-15,
+      "n_cand": 10,
+      "theorem": "Smallest new G-orbit of QR0\u2299NC\u2299NC has size |G|/(p+1)=294 and Q++=40/9, Q_N*=24/7. Not 1176."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "missing": "1176-orbit with Q++=8/3, Q_N*=4 not in depth-2 NC from {AP,QR0}",
+      "note": "Named QR0\u2299NC, AP\u2299NC\u2299NC (32/9), and 294. Full Q_\u03c4 unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

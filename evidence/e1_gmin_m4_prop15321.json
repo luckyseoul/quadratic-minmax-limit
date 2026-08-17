@@ -1,0 +1,98 @@
+{
+  "prop": "15.321",
+  "title": "\u2211 H on \u25a1 named; A_\u25a1=\u03b1+\u03b2 Q++ for p\u22611; floor ub named, unproved",
+  "proved": {
+    "H_sum_squares": true,
+    "Asq_linear_p1": true,
+    "floor_ub_equiv": true,
+    "A_square_named": false,
+    "Q_tau_named_in_p": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "sum_zero_false": true,
+      "by_p": {
+        "5": {
+          "live": 1,
+          "named": 1
+        },
+        "7": {
+          "live": -1,
+          "named": -1
+        },
+        "11": {
+          "live": -1,
+          "named": -1
+        },
+        "13": {
+          "live": 1,
+          "named": 1
+        }
+      },
+      "theorem": "\u2211_{c\u2208F_p^{\u00d7\u25a1}} H(c)=\u03c7_p(\u22121)."
+    },
+    "B": {
+      "proved": true,
+      "drop_H_fails": true,
+      "by_p": {
+        "5": {
+          "alpha": "840",
+          "beta": "30",
+          "Csum": "-48",
+          "Csum_dropH": "-18",
+          "A_at_live_Qpp": "12360/13"
+        },
+        "13": {
+          "alpha": "294840",
+          "beta": "4914/5",
+          "Csum": "-672"
+        }
+      },
+      "theorem": "C_off named in p.  p\u22611: A_\u25a1=\u03b1+\u03b2 Q_{++} (p=5: 840+30 Q_{++})."
+    },
+    "C": {
+      "proved": true,
+      "pplus2_equals_floor_all_p1_false": true,
+      "cs_closes_false": true,
+      "by_p": {
+        "5": {
+          "floor_ub": "26/7",
+          "cand_4_minus": "26/7",
+          "A_at_ub": "6660/7"
+        },
+        "13": {
+          "floor_ub": "310/71",
+          "cand_4_minus": "58/15",
+          "equal": false
+        },
+        "cs_p5": {
+          "A_ub": "1350",
+          "Qpp_ub": "17"
+        }
+      },
+      "theorem": "S_0 + (2Q++\u2212Q_N*\u22645) \u21d4 Q++\u2264(5b+rhs)/(2b+a). Not 4\u22122/(p+2) at p=13. CS does not close."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "A_square_named": false,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "note": "A_\u25a1=\u03b1+\u03b2 Q++ names the pair for p\u22611, not either number. Floor ub on Q++ is named but unproved as a bound. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

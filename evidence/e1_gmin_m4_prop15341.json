@@ -1,0 +1,80 @@
+{
+  "prop": "15.341",
+  "title": "named pair-selection g=(p+1)/4, S^{(k)}, Max+ at p=11",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "named_rebuild_p11": true,
+    "only_named_g": true,
+    "mutations_break": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "energy": 0.0,
+      "nD": 55,
+      "eq_15340": true,
+      "g": 3,
+      "theorem": "g=(p+1)/4 + GL(2) + S^{(k)} rebuilds the 15.340 Max+."
+    },
+    "B": {
+      "proved": true,
+      "gens": [
+        3,
+        4,
+        5,
+        9
+      ],
+      "named_g": 3,
+      "by_g": {
+        "3": {
+          "energy": 0.0,
+          "nD": 55,
+          "named": true
+        },
+        "4": {
+          "energy": 40.0,
+          "nD": 55,
+          "named": false
+        },
+        "5": {
+          "energy": 40.0,
+          "nD": 55,
+          "named": false
+        },
+        "9": {
+          "energy": 28.0,
+          "nD": 55,
+          "named": false
+        }
+      },
+      "theorem": "Only g=(p+1)/4 among generators of \u25a1 is Max+."
+    },
+    "C": {
+      "proved": true,
+      "e_named": 0.0,
+      "e_S0_pm2": 28.0,
+      "e_A_id": 36.0,
+      "theorem": "S^{(0)}={0,\u00b12} and A=I are not Max+."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "pair_rule_single_GJ": false,
+      "note": "Five named S^{(k)} rebuild p=11 Max+.  Not a single Gauss/Jacobi polynomial in (s,t).  Ensemble Q_\u03c4 unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

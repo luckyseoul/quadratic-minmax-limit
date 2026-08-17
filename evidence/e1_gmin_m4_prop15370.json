@@ -1,0 +1,74 @@
+{
+  "prop": "15.370",
+  "title": "N4 splits by PGL cross-ratio; no non-linear D name",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Sx3_not_Q_at_p7": true,
+    "D_not_nonlin_named": true,
+    "N4_splits_by_PGL_type": true,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "p7_x3_in_Q": false,
+      "p7_x3_palindromic": true,
+      "p7_x3_occ13": [
+        90305460,
+        47015010,
+        14195685
+      ],
+      "p5_S_x3": 65,
+      "theorem": "S(x\u00b3)\u2208Q at p=5 (65) and S(x\u00b3)\u2209Q at p=7."
+    },
+    "B": {
+      "proved": true,
+      "n_hits_2atom": 0,
+      "n_hits_3atom": 0,
+      "dimVp7": 25,
+      "theorem": "No tested non-linear named formula hits D=13 and 409."
+    },
+    "C": {
+      "proved": true,
+      "N3": 310198,
+      "N3_constant": true,
+      "N4_H_pairs": 9,
+      "N4_O_pairs": 6,
+      "pop5_line_unions": 210,
+      "fail_N4_13_is_not_5726": true,
+      "theorem": "N_4 splits by PGL cross-ratio: 5726 on type H, 4844 on type O. N_3=310198 on every extra slope."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "D_named_in_p": false,
+      "p5_orbits": {
+        "10": 3,
+        "100": 1
+      },
+      "p7_orbits": {
+        "14": 4,
+        "21": 4,
+        "147": 14,
+        "294": 12
+      },
+      "p7_n_orbits": 34,
+      "p7_n_line_union": 140,
+      "note": "Type-H N_4 is |H+|=2p D.  Type O is a different integer. Neither names D.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

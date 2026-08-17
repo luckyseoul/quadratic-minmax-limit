@@ -1,0 +1,82 @@
+{
+  "prop": "15.350",
+  "title": "Q++(A\u00b7T_0) is the 3-line Fejer average; ensemble OPEN",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "S_three_line": true,
+    "L_named_in_Omega": true,
+    "Qpp_triangle_Fejer": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "max_err": 9.992007221626409e-16,
+          "diag_nonzero": true
+        },
+        "13": {
+          "max_err": 5.35564958840998e-14,
+          "diag_nonzero": true
+        }
+      },
+      "theorem": "S is the stated 3-line geometric sum.  S\u22600 on \u03bc=\u03bd\u22600."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "ib": 2,
+          "n_L": 12,
+          "n_Omega": 12,
+          "L_subset": true,
+          "n_++": 6,
+          "n_++_named": 6
+        },
+        "13": {
+          "ib": 2,
+          "n_L": 36,
+          "n_Omega": 84,
+          "L_subset": true,
+          "n_++": 22,
+          "n_++_named": 22
+        }
+      },
+      "theorem": "L=L0\u222aL+\u222aL\u2212 \u2282 \u03a9, |L|=3(p\u22121), |++|=2p\u22124.  L\u2260\u03a9 at p=13."
+    },
+    "C": {
+      "proved": true,
+      "Qpp": {
+        "5": "64/15",
+        "13": "1168/231"
+      },
+      "drop16": {
+        "5": "4/15",
+        "13": "73/231"
+      },
+      "p37": "72832/5985",
+      "no_deg32_five_primes": true,
+      "theorem": "The L-average is 64/15 and 1168/231.  Dropping 16 misses.  Not the ensemble 48/13."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "Q_triangle_named": true,
+      "note": "Fejer/L formula names the p\u22611 triangle orbit.  Ensemble den |H_+|/(2p) remains.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

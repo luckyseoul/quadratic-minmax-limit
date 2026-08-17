@@ -1,0 +1,77 @@
+{
+  "prop": "15.290",
+  "title": "Field-norm split of Q(r); floor is Fourier bound \u27e8\u03b4,\u03c8\u27e9\u22642",
+  "proved": {
+    "type_constancy_p5_p7": true,
+    "paley_only_splits": true,
+    "deficit_le_2_certified": true,
+    "phi_F_ge_6_proved_general": false,
+    "rhat_ge_budget": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "paley_class_splits": 1,
+      "blocks": [
+        {
+          "p": 5,
+          "n_types": 5,
+          "type_spread": {
+            "('pm1',)": 1.4551915228366853e-15,
+            "(1, 1, 'sub')": 7.275957614183426e-16,
+            "(-1, -1, 'N*')": 0.0,
+            "(-1, 1, 'N1')": 7.275957614183426e-16,
+            "(1, -1, 'N1')": 0.0
+          },
+          "orbits_ok": true
+        },
+        {
+          "p": 7,
+          "n_types": 7,
+          "type_spread": {
+            "('pm1',)": 0.0,
+            "(1, 1, 'sub')": 0.0,
+            "(-1, -1, 'N*')": 0.0,
+            "(-1, -1, 'N1')": 3.787982931165882e-16,
+            "(-1, 1, 'N*')": 7.575965862331764e-16,
+            "(1, -1, 'N*')": 0.0,
+            "(1, 1, 'N1')": 0.0
+          },
+          "orbits_ok": true
+        }
+      ],
+      "theorem": "Q is Frob/inv invariant.  At p=5,7 it is constant on (\u03c7(r\u22121),\u03c7(r+1),norm-type).  Paley type alone splits."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "lambda_min": "80/13",
+          "max_deficit": 1.8461538461538458,
+          "bound_2": true
+        },
+        "7": {
+          "lambda_min": "3072/409",
+          "max_deficit": 0.48899755501222497,
+          "bound_2": true
+        }
+      },
+      "theorem": "On the certified \u03a6 spectra (15.159), 8\u2212\u03bb \u2264 2, i.e. \u03bb\u22656, with p=5 max deficit 24/13.  Not a general proof."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat_budget": false,
+      "note": "\u27e8\u03b4,\u03c8\u27e9\u22642 for all even \u03c8\u2209{1,\u03c7} and all p\u22655 is the floor. Q_\u03c4 named by type, not yet a formula in p."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

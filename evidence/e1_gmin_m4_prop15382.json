@@ -1,0 +1,108 @@
+{
+  "prop": "15.382",
+  "title": "Interior 4-level is not a pure-pair Aut_e double-star; |G\u2229\u22a0|=p+1",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "interior_needs_both_mod4": true,
+    "pure_pair_not_interior": true,
+    "n_boxtimes_eq_p_plus_1": true,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "m4_mod": 0,
+      "m6_mod": 2,
+      "theorem": "Interior needs S=\u22124 and S=\u22126 on {f=+1}, distinct mod 4. Fail: \u22124\u2261\u22126 (mod 4)."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "S_mod4": 2,
+          "p_mod4": 1
+        },
+        "7": {
+          "S_mod4": 0,
+          "p_mod4": 3
+        },
+        "11": {
+          "S_mod4": 0,
+          "p_mod4": 3
+        },
+        "13": {
+          "S_mod4": 2,
+          "p_mod4": 1
+        },
+        "17": {
+          "S_mod4": 2,
+          "p_mod4": 1
+        },
+        "19": {
+          "S_mod4": 0,
+          "p_mod4": 3
+        },
+        "23": {
+          "S_mod4": 0,
+          "p_mod4": 3
+        }
+      },
+      "theorem": "Pure-pair double-star: S\u2261\u2212(3p\u22121) (mod 4) on {f=+1}. Not both \u22124 and \u22126. Fail: S\u22610 (mod 4) at p=5."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "E_U_box": "0",
+          "E_U_bt": "-1/3",
+          "n_bt": 6,
+          "n_box": 14
+        },
+        "7": {
+          "E_U_box": "0",
+          "E_U_bt": "-1/4",
+          "n_bt": 8,
+          "n_box": 20
+        },
+        "11": {
+          "E_U_box": "0",
+          "E_U_bt": "-1/6",
+          "n_bt": 12,
+          "n_box": 32
+        },
+        "13": {
+          "E_U_box": "0",
+          "E_U_bt": "-1/7",
+          "n_bt": 14,
+          "n_box": 38
+        },
+        "19": {
+          "E_U_box": "0",
+          "E_U_bt": "-1/10",
+          "n_bt": 20,
+          "n_box": 56
+        }
+      },
+      "theorem": "Minus-slice + double-star \u21d2 |G\u2229\u22a0|=p+1. Fail: claim 3p\u22121."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Interior 4-level with singles, or with far Aut_e edges, stays open. residual_ii_k_eq_4p_empty stays False. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}

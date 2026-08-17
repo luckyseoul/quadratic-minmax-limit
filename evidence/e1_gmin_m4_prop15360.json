@@ -1,0 +1,98 @@
+{
+  "prop": "15.360",
+  "title": "Energy conditioning of Max+; cubic fibers exhaust p=5",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "energy_identity": true,
+    "p5_count_130": true,
+    "quadrics_are_1d": true,
+    "cubics_exhaust_p5": true,
+    "nl_line_sum_type": true,
+    "D_named_in_p": false,
+    "Q_NL_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "n": 260,
+          "sum_ok": true,
+          "E_ok": true,
+          "id_ok": true,
+          "target_E": 120,
+          "E_minmax": [
+            120.0,
+            120.0
+          ]
+        },
+        "7": {
+          "n": 11452,
+          "sum_ok": true,
+          "E_ok": true,
+          "id_ok": true,
+          "target_E": 336,
+          "E_minmax": [
+            336.0,
+            336.0
+          ]
+        }
+      },
+      "theorem": "\u2016Qz\u2212pz+y_\u221e1\u2016\u00b2=2p(p\u00b3\u2212p\u2212E) on every cache Max+."
+    },
+    "B": {
+      "proved": true,
+      "n_energy_p5": 130,
+      "cache_n": 260,
+      "theorem": "Exactly 130 energy k-sets at p=5; not 65."
+    },
+    "C": {
+      "proved": true,
+      "quad_unique": {
+        "5": 30,
+        "7": 140
+      },
+      "n_1d": {
+        "5": 30,
+        "7": 140
+      },
+      "theorem": "Quadratic fibers = 1D family; miss all NL."
+    },
+    "D": {
+      "proved": true,
+      "cubic_unique_5": 130,
+      "theorem": "Cubic fibers exhaust all 130 energy k-sets at p=5."
+    },
+    "E": {
+      "proved": true,
+      "n_1d": 30,
+      "n_nl": 100,
+      "const1_1d": [
+        5
+      ],
+      "const1_nl": [
+        3
+      ],
+      "theorem": "1D has p const-sum-1 dirs; NL at p=5 has exactly (p+1)/2."
+    },
+    "F": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "D_named_in_p": false,
+      "Q_NL_named_in_p": false,
+      "note": "Energy conditioning is named.  Cubic fibers exhaust p=5.  The half-net count N=|H_+| is not a formula in p.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "prop": "15.311",
+  "title": "AP\u2299NC Q is \u03a9-avg |\u1e91_hs\u22122\u0393|\u00b2; p=5 Q++ named; p\u22657 NL extra",
+  "proved": {
+    "fourier_minus_2Gamma": true,
+    "Q_ystar_Omega": true,
+    "p5_mixture_48_13": true,
+    "Q_tau_named_in_p": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "err_minus2": 3.202372833989377e-15,
+          "err_minus1": 4.253254041760202,
+          "n_Omega": 12
+        },
+        "7": {
+          "err_minus2": 7.160723346098895e-15,
+          "err_minus1": 5.158833603697051,
+          "n_Omega": 24
+        }
+      },
+      "theorem": "\u1e91_{y_*}=\u1e91_hs\u22122\u0393 on \u03a9.  Dropping the 2 fails."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "Qpp_ystar": "64/15",
+          "Qpp_xi0": 6.651805842666445,
+          "Qpp_Fejer": 1.7777777777777777,
+          "Q_Nstar": 3.2
+        },
+        "7": {
+          "Qpp_ystar": "8/3",
+          "Qpp_xi0": 0.6408886828974875,
+          "Qpp_Fejer": 4.444444444444445,
+          "Q_Nstar": 3.4285714285714253
+        }
+      },
+      "theorem": "\u03a9-average of |\u1e91_hs\u22122\u0393|\u00b2 gives Q_{++}^{ystar}=64/15, 8/3. Fejer and \u03be0-only fail at p=7."
+    },
+    "C": {
+      "proved": true,
+      "n_AP": 30,
+      "n_star": 100,
+      "Q_AP": 1.7777777777777777,
+      "Q_ystar": 4.2666666666666675,
+      "mix": "48/13",
+      "drop_star": 1.7777777777777777,
+      "fejer_in_star_slot": 1.7777777777777777,
+      "theorem": "p=5 Q_{++}=(n_AP Q_AP + n_* Q_ystar)/(n_AP+n_*)=48/13. Dropping n_* or using Fejer in the * slot fails."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "p5_Qpp_named": true,
+      "note": "AP\u2299NC Q_\u03c4 named by \u1e91_hs\u22122\u0393. p=5 full Q_{++} named. p\u22657 extra NL orbits unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

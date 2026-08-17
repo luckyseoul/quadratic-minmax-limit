@@ -1,0 +1,106 @@
+{
+  "prop": "15.343",
+  "title": "S0+Q\u22650 sandwich misses [Q_lo, ub]; Qn\u22644 still short",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Qn_ge0_ub_weaker_than_floor": true,
+    "Qn_le4_misses_Qlo": true,
+    "Qn_le_Qpp_not_maxplus_free": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "Qn_ge0_ub": "16/3",
+          "named": "16/3",
+          "floor_ub": "26/7",
+          "strictly_weaker": true
+        },
+        "7": {
+          "Qn_ge0_ub": "8",
+          "named": "8",
+          "floor_ub": "70/17",
+          "strictly_weaker": true
+        },
+        "13": {
+          "Qn_ge0_ub": "160/11",
+          "named": "160/11",
+          "floor_ub": "310/71",
+          "strictly_weaker": true
+        },
+        "17": {
+          "Qn_ge0_ub": "56/3",
+          "named": "56/3",
+          "floor_ub": "560/127",
+          "strictly_weaker": true
+        },
+        "29": {
+          "Qn_ge0_ub": "832/27",
+          "named": "832/27",
+          "floor_ub": "1742/391",
+          "strictly_weaker": true
+        }
+      },
+      "theorem": "Qn\u22650 \u21d2 Q++\u2264(p\u00b2\u22129)/(p\u22122), strictly above floor ub."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "Q++_if_Qn_le4": "8/3",
+          "Q_lo": "11/4",
+          "misses_Qlo": true
+        },
+        "7": {
+          "Q++_if_Qn_le4": "16/5",
+          "Q_lo": "10/3",
+          "misses_Qlo": true
+        },
+        "13": {
+          "Q++_if_Qn_le4": "40/11",
+          "Q_lo": "15/4",
+          "misses_Qlo": true
+        }
+      },
+      "theorem": "Qn\u22644 would give Q++\u22658/3,16/5, still below Q_lo."
+    },
+    "C": {
+      "proved": true,
+      "isol_Qpp": "8/3",
+      "isol_Qn": "4",
+      "isol_Qn_gt_Qpp": true,
+      "live_Qn": {
+        "5": "32/13",
+        "7": "1440/409"
+      },
+      "ISOL_TUPLE": [
+        "O:1,1,2,2,3,6,6",
+        "O:1,1,2,2,4,4,7",
+        "O:1,1,3,3,4,4,5",
+        "O:1,2,2,3,3,5,5"
+      ],
+      "theorem": "Qn\u2264Q++ fails on the isolated p=7 orbit (4>8/3)."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "interval_closed": false,
+      "note": "S0+Q\u22650 sandwich is strictly larger than [Q_lo, ub]. Qn\u22644 is unproved as an ensemble bound and would still miss Q_lo.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

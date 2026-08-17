@@ -1,0 +1,10 @@
+{
+  "p3_any_2net": 6,
+  "p5_any_3net": 130,
+  "p7_QR": 5726,
+  "p7_mixed": 5726,
+  "p7_3p1": 5726,
+  "T_A008300": {"3,1": 6, "5,2": 2040, "7,3": 68938800},
+  "QR_is_special": false,
+  "note": "All tested r-nets give the same count as N=|H+|."
+}

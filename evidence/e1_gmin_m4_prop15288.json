@@ -1,0 +1,100 @@
+{
+  "prop": "15.288",
+  "L_status": "OPEN",
+  "proved": {
+    "nU_formula": true,
+    "invert_is_identity": false,
+    "type_minus_is_identity": false,
+    "phi_F_ge_6_proved_general": false,
+    "inequality_proved": false,
+    "n_H_named_in_p": false,
+    "n_NL_named_in_p": false
+  },
+  "status": {
+    "floor": false,
+    "identity_A": true
+  },
+  "A": {
+    "proved": true,
+    "blocks": [
+      {
+        "p": 5,
+        "checked": 2000,
+        "bad": 0,
+        "n1_match": 2000
+      },
+      {
+        "p": 7,
+        "checked": 16464,
+        "bad": 0,
+        "n1_match": 16464
+      }
+    ],
+    "invert_hit": 100,
+    "invert_tot": 18464,
+    "minus_eq": 0,
+    "minus_tot": 18464,
+    "dim1_formula_applied_hits": 0
+  },
+  "open": {
+    "floor_closed": false,
+    "n_H_named_in_p": false,
+    "n_NL_named_in_p": false,
+    "tau_k_named": false,
+    "Nplus_named": false,
+    "phi_F_ge_6": false,
+    "rhat_ge_budget": false
+  },
+  "sample_p5": {
+    "0": [
+      0,
+      9,
+      18,
+      3
+    ],
+    "1": [
+      1,
+      9,
+      15,
+      5
+    ],
+    "2": [
+      2,
+      9,
+      12,
+      7
+    ],
+    "3": [
+      3,
+      9,
+      9,
+      9
+    ]
+  },
+  "sample_p7": {
+    "0": [
+      4,
+      48,
+      72,
+      16
+    ],
+    "1": [
+      8,
+      46,
+      64,
+      22
+    ],
+    "2": [
+      12,
+      44,
+      56,
+      28
+    ],
+    "3": [
+      16,
+      42,
+      48,
+      34
+    ]
+  }
+}

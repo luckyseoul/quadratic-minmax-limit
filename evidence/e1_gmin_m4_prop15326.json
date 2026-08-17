@@ -1,0 +1,149 @@
+{
+  "prop": "15.326",
+  "title": "Var(W)=\u03ba(p) Var(e_s); p\u22611 floor \u21d4 Q++ in [Q_lo, ub]",
+  "proved": {
+    "energies_exchangeable": true,
+    "kappa_named": true,
+    "S0_modes_interval": true,
+    "A_square_named": false,
+    "Q_tau_named_in_p": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "independent_false": true,
+      "by_p": {
+        "5": {
+          "m": 2,
+          "alpha": "33/13",
+          "off": "-33/13",
+          "off_from_sum": "-33/13"
+        },
+        "7": {
+          "m": 3,
+          "alpha": "1024/409",
+          "off": "-512/409",
+          "off_from_sum": "-512/409"
+        }
+      },
+      "theorem": "e_s exchangeable with constant sum \u21d2 Cov=\u03b1(I\u221211\u1d40/m). Independent fails."
+    },
+    "B": {
+      "proved": true,
+      "p3_formula_at_p5_false": true,
+      "by_p": {
+        "5": {
+          "kappa": "20",
+          "sum_lam_err": 4.440892098500626e-16,
+          "sum_lam2_err": 0.0
+        },
+        "7": {
+          "kappa": "21",
+          "sum_lam_err": 8.881784197001252e-16,
+          "sum_lam2_err": 0.0
+        },
+        "11": {
+          "kappa": "55",
+          "sum_lam_err": 1.7763568394002505e-15,
+          "sum_lam2_err": 0.0
+        },
+        "13": {
+          "kappa": "468/5",
+          "sum_lam_err": 7.105427357601002e-15,
+          "sum_lam2_err": 1.4210854715202004e-14
+        },
+        "17": {
+          "kappa": "1088/7",
+          "sum_lam_err": 1.0658141036401503e-14,
+          "sum_lam2_err": 2.842170943040401e-14
+        },
+        "19": {
+          "kappa": "171",
+          "sum_lam_err": 5.329070518200751e-15,
+          "sum_lam2_err": 0.0
+        },
+        "23": {
+          "kappa": "253",
+          "sum_lam_err": 3.552713678800501e-15,
+          "sum_lam2_err": 0.0
+        }
+      },
+      "theorem": "Var(W)=\u03ba Var(e) with \u03ba=p(p\u22121)\u00b2/(2(p\u22123)) (p\u22611) and p(p\u22121)/2 (p\u22613)."
+    },
+    "C": {
+      "proved": true,
+      "sp_j0_depends_on_Q_false": true,
+      "by_p": {
+        "5": {
+          "Q_lo": "11/4",
+          "ub": "26/7",
+          "sp_j0": "48",
+          "sm_joth_ub": "6",
+          "sm_j0_lo": "6",
+          "min_lo": "6",
+          "min_ub": "6"
+        },
+        "13": {
+          "Q_lo": "15/4",
+          "ub": "310/71",
+          "sp_j0": "336",
+          "sm_joth_ub": "6",
+          "sm_j0_lo": "6",
+          "min_lo": "6",
+          "min_ub": "6"
+        },
+        "17": {
+          "Q_lo": "245/64",
+          "ub": "560/127",
+          "sp_j0": "576",
+          "sm_joth_ub": "6",
+          "sm_j0_lo": "6",
+          "min_lo": "6",
+          "min_ub": "6"
+        },
+        "29": {
+          "Q_lo": "767/196",
+          "ub": "1742/391",
+          "sp_j0": "1680",
+          "sm_joth_ub": "6",
+          "sm_j0_lo": "6",
+          "min_lo": "6",
+          "min_ub": "6"
+        },
+        "37": {
+          "Q_lo": "425/108",
+          "ub": "2890/647",
+          "sp_j0": "2736",
+          "sm_joth_ub": "6",
+          "sm_j0_lo": "6",
+          "min_lo": "6",
+          "min_ub": "6"
+        }
+      },
+      "theorem": "p\u22611 S0 line: all even S\u22656 \u21d4 Q_lo\u2264Q++\u2264floor ub. \u03c3=+ HD is 2(p\u00b2\u22121)."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "A_square_named": false,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "Var_e_need_p5": "18/7",
+      "live_Var_e_p5": "33/13",
+      "note": "p\u22611 floor \u21d4 Var(e_*)\u2264V_floor/\u03ba (18/7 at p=5). Unproved. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

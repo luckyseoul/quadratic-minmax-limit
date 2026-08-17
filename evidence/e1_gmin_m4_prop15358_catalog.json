@@ -1,0 +1,20 @@
+{
+  "n_lin_jobs": 6480,
+  "hits": {
+    "D": [],
+    "H": [],
+    "C": [],
+    "NUM": [],
+    "LMIN": []
+  },
+  "qnl_hits": [],
+  "wrong_guesses": {
+    "D_is_dimVp_p7": false,
+    "D_is_3pm2_p5": true,
+    "D_is_p2pp1_p5": false,
+    "c_is_3pm2_p5": false,
+    "H_quad_p11": 33334
+  },
+  "n_D_hits": 0,
+  "n_QNL_hits": 0
+}

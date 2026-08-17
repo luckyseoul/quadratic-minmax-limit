@@ -1,0 +1,136 @@
+{
+  "prop": "15.330",
+  "title": "409 not GJ; shared |H+| den; sq-conf rank; K first-moment dead",
+  "proved": {
+    "409_not_gauss_jacobi": true,
+    "shared_Hplus_den": true,
+    "sqconf_does_not_raise_rank": true,
+    "K_first_moment_does_not_empty": true,
+    "maj_does_not_close_type_I": true,
+    "Q_tau_named_in_p": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "type_I_ND": false,
+    "lemma_D_existence": true
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "S5_has_13": true,
+      "S5_has_409": false,
+      "S7_has_13": false,
+      "S7_has_409": false,
+      "S7_has_2401": true,
+      "S7_has_q": true,
+      "S7_has_dimVp": true,
+      "n_S7": 22,
+      "product_hits_409": [],
+      "q2_is_not_409": true,
+      "theorem": "409 is not a named Gauss/Jacobi integer at p=7; q\u00b2=2401 is.  13 may equal dim V_+ at p=5 only."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "Hplus": 130,
+          "den_Qpp": 13,
+          "den_mu": 65,
+          "Hplus_over_2p": 13,
+          "Hplus_over_2": 65
+        },
+        "7": {
+          "Hplus": 5726,
+          "den_Qpp": 409,
+          "den_mu": 2863,
+          "Hplus_over_2p": 409,
+          "Hplus_over_2": 2863
+        }
+      },
+      "dimVp_p7": 25,
+      "dimVp_is_not_den": true,
+      "theorem": "den(Q++)=|H+|/(2p) and den(|\u03bc|_max)=|H+|/2.  dim V_+ is not the p=7 denominator."
+    },
+    "C": {
+      "proved": true,
+      "source": "route1_sqconf.json",
+      "p5": {
+        "p": 5,
+        "n4": 34,
+        "n_eq": 2300,
+        "n_conf": 2024,
+        "n_sq": 276,
+        "rank_conf": 33,
+        "rank_all": 33,
+        "nullity_conf": 1,
+        "nullity_all": 1,
+        "unique": false,
+        "res_live": 3.0000000000000004,
+        "res_sol": 4.169891674494913,
+        "sol_vs_live": 0.5651151579465086,
+        "recovers_live": false
+      },
+      "p7": {
+        "p": 7,
+        "n4": 120,
+        "n_eq": 17313,
+        "n_conf": 17296,
+        "n_sq": 17,
+        "rank_conf": 115,
+        "rank_all": 115,
+        "nullity_conf": 5,
+        "nullity_all": 5,
+        "unique": false,
+        "res_live": 3.0000000000000004,
+        "res_sol": 4.69968831983334,
+        "sol_vs_live": 0.6296281230624524,
+        "recovers_live": false
+      },
+      "unique_recovery": false,
+      "theorem": "Squared conference LHS does not raise Aut_\u221e 4-type rank (nullity 1 at p=5, 5 at p=7)."
+    },
+    "D": {
+      "proved": true,
+      "n_primes": 9,
+      "all_have_4level": true,
+      "p5": true,
+      "p7": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "theorem": "First-moment + N=pM admits a 4-level leftover-K law at every prime 5..31.  Does not empty K."
+    },
+    "E": {
+      "proved": true,
+      "live_mu_p7": "109/2863",
+      "maj_p7": "17/539",
+      "L_abs_p7": "5/98",
+      "live_gt_maj": true,
+      "live_le_L": true,
+      "maj_does_not_close": true,
+      "type_I_ND": false,
+      "theorem": "maj \u2264|L| is not a bound at p=7 (109/2863 > maj).  Type I ND stays False."
+    },
+    "F": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Q_tau_named_in_p": false,
+      "residual_ii_k_eq_4p_empty": false,
+      "type_I_ND": false,
+      "lemma_D_existence": true,
+      "lemma_D_2plane": true,
+      "note": "409 is the |H+| obstruction, not a missing Jacobi value.  phi_F not imported.  Lemma D writeup stays True, not cascaded."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty",
+    "type_I_multilevel_bad_case_ND"
+  ]
+}

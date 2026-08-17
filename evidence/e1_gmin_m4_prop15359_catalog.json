@@ -1,0 +1,16 @@
+{
+  "D_quad": {
+    "3": 1,
+    "5": 13,
+    "7": 409,
+    "11": 2353
+  },
+  "D_quad_11_below_bound": true,
+  "n_cubic": 0,
+  "cubic_surviving_p11": [],
+  "n_prod3": 0,
+  "prod3": [],
+  "n_lin3": 0,
+  "lin3_surviving_p11": [],
+  "D11_LO": 13657
+}

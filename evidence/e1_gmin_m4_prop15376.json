@@ -1,0 +1,77 @@
+{
+  "prop": "15.376",
+  "title": "1D is the Q--=0 slice; Q_N*(y_*)=24/p at p=7,11",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Qmm_zero_is_1d": true,
+    "QN_ystar_24_over_p": true,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "Qmm_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "nzero": 140,
+      "mean_Qpp_zero": "104/15",
+      "AP": 84,
+      "QR0": 56,
+      "Q_1d_pp": "104/15",
+      "theorem": "Q--=0 iff 1D (n_1d=140); AP 84 at Q++=40/9, QR0 56 at Q++=32/3; mean 104/15."
+    },
+    "B": {
+      "proved": true,
+      "p7": {
+        "++": "8/3",
+        "--N1": "80/21",
+        "N*": "24/7"
+      },
+      "p11": {
+        "++": "2008/495",
+        "--N1": "224/55",
+        "N*": "24/11"
+      },
+      "QN_named": {
+        "7": "24/7",
+        "11": "24/11"
+      },
+      "p11_Qmm_form": "21104/5553",
+      "p11_Qmm_ystar": "224/55",
+      "cert": {
+        "7": {
+          "t": 35,
+          "c": 4,
+          "type": "OTHER",
+          "found": true
+        },
+        "11": {
+          "t": 88,
+          "c": 4,
+          "type": "OTHER",
+          "found": true
+        }
+      },
+      "theorem": "y_* is the (8/3,80/21,24/7) atom at p=7; Q_N*(y_*)=24/p at p=7,11. Not the ensemble Q--."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "D_named_in_p": false,
+      "Qmm_named_in_p": false,
+      "note": "24/p names Q_N* on the 15.138 constructor, not ensemble Q--. D_form untested at p\u226511. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

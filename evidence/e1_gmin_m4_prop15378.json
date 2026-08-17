@@ -1,0 +1,90 @@
+{
+  "prop": "15.378",
+  "title": "QR0\u2299NC interpolants die at p=19; 3-point QN fit is not a name",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Qmm_interp_dies_p19": true,
+    "Qn_3pt_is_interpolant": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "7": {
+          "Qmm": "24/7",
+          "interp": "24/7",
+          "eq_interp": true,
+          "Qpp": "40/9",
+          "Q_AP": "40/9",
+          "eq_QAP": true
+        },
+        "11": {
+          "Qmm": "128/55",
+          "interp": "128/55",
+          "eq_interp": true,
+          "Qpp": "3976/495",
+          "Q_AP": "56/9",
+          "eq_QAP": false
+        },
+        "19": {
+          "Qmm": "256/171",
+          "interp": "144/95",
+          "eq_interp": false,
+          "Qpp": "15064/855",
+          "Q_AP": "88/9",
+          "eq_QAP": false
+        }
+      },
+      "theorem": "2(p+53)/(5p) and Q++=Q_AP die at p=19. Fail: claim the interpolant at p=19."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "7": {
+          "kQn": "76",
+          "fit": "76/21",
+          "two_pt": "76/21",
+          "eq_3pt": true,
+          "eq_2pt": true
+        },
+        "11": {
+          "kQn": "144",
+          "fit": "144/55",
+          "two_pt": "144/55",
+          "eq_3pt": true,
+          "eq_2pt": true
+        },
+        "19": {
+          "kQn": "272",
+          "fit": "272/171",
+          "two_pt": "280/171",
+          "eq_3pt": true,
+          "eq_2pt": false
+        }
+      },
+      "two_pt_p19": "280/171",
+      "live_qn_p19": "272/171",
+      "theorem": "3-point deg\u22642 / k fit of Q_N* is the interpolant. 2-point (17p\u221243)/k dies at p=19 (280/171\u2260272/171)."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "D_named_in_p": false,
+      "note": "No catalog name survives p=19. 3-point fit is not a name. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

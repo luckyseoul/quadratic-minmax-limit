@@ -1,0 +1,12 @@
+{
+  "n_hits_N": 0,
+  "n_hits_NL": 0,
+  "n_hits_D": 0,
+  "n_features": 40,
+  "n_triples": 64000,
+  "N_live": {"3": 6, "5": 130, "7": 5726},
+  "n1d_plus_hoff": {"3": 24, "5": 130, "7": 434},
+  "halfnet_p5": 130,
+  "halfnet_p7": 5726,
+  "nl_translation_classes": {"5": 4, "7": 114}
+}

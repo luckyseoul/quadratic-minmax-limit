@@ -1,0 +1,229 @@
+{
+  "prop": "15.294",
+  "title": "Q_rest at p=7; familywise S\u22656 false; floor open",
+  "proved": {
+    "rest_Q_type_constant_p7": true,
+    "familywise_S_ge_6_false": true,
+    "Q_rest_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "sample": {
+        "5": {
+          "n_1d": 30,
+          "n_1d_formula": 30,
+          "n_H": 100,
+          "n_Hset": 100,
+          "n_rest": 0,
+          "max_rel_rest_H": null,
+          "Q_rest": {},
+          "Q_H": {
+            "('pm1',)": {
+              "n": 2,
+              "mean": 4.8000000000000025,
+              "frac": "24/5",
+              "spread": 0.0
+            },
+            "(1, 1, 'sub')": {
+              "n": 2,
+              "mean": 3.2,
+              "frac": "16/5",
+              "spread": 0.0
+            },
+            "(-1, -1, 'N*')": {
+              "n": 4,
+              "mean": 3.2,
+              "frac": "16/5",
+              "spread": 0.0
+            },
+            "(-1, 1, 'N1')": {
+              "n": 2,
+              "mean": 4.800000000000002,
+              "frac": "24/5",
+              "spread": 1.7763568394002505e-15
+            },
+            "(1, -1, 'N1')": {
+              "n": 2,
+              "mean": 4.800000000000002,
+              "frac": "24/5",
+              "spread": 1.7763568394002505e-15
+            }
+          }
+        },
+        "7": {
+          "n_1d": 140,
+          "n_1d_formula": 140,
+          "n_H": 1764,
+          "n_Hset": 1764,
+          "n_rest": 3822,
+          "max_rel_rest_H": 0.7032967032967026,
+          "Q_rest": {
+            "('pm1',)": {
+              "n": 2,
+              "mean": 7.296703296703297,
+              "frac": "664/91",
+              "spread": 0.0
+            },
+            "(1, 1, 'sub')": {
+              "n": 4,
+              "mean": 3.4285714285714284,
+              "frac": "24/7",
+              "spread": 0.0
+            },
+            "(-1, -1, 'N*')": {
+              "n": 4,
+              "mean": 3.8388278388278385,
+              "frac": "1048/273",
+              "spread": 0.0
+            },
+            "(-1, -1, 'N1')": {
+              "n": 4,
+              "mean": 3.399267399267399,
+              "frac": "928/273",
+              "spread": 0.0
+            },
+            "(-1, 1, 'N*')": {
+              "n": 4,
+              "mean": 3.8388278388278385,
+              "frac": "1048/273",
+              "spread": 0.0
+            },
+            "(1, -1, 'N*')": {
+              "n": 4,
+              "mean": 3.8388278388278385,
+              "frac": "1048/273",
+              "spread": 0.0
+            },
+            "(1, 1, 'N1')": {
+              "n": 2,
+              "mean": 4.014652014652015,
+              "frac": "1096/273",
+              "spread": 8.881784197001252e-16
+            }
+          },
+          "Q_H": {
+            "('pm1',)": {
+              "n": 2,
+              "mean": 8.0,
+              "frac": "8",
+              "spread": 0.0
+            },
+            "(1, 1, 'sub')": {
+              "n": 4,
+              "mean": 4.0,
+              "frac": "4",
+              "spread": 8.881784197001252e-16
+            },
+            "(-1, -1, 'N*')": {
+              "n": 4,
+              "mean": 3.5555555555555554,
+              "frac": "32/9",
+              "spread": 0.0
+            },
+            "(-1, -1, 'N1')": {
+              "n": 4,
+              "mean": 3.5555555555555554,
+              "frac": "32/9",
+              "spread": 0.0
+            },
+            "(-1, 1, 'N*')": {
+              "n": 4,
+              "mean": 3.555555555555556,
+              "frac": "32/9",
+              "spread": 8.881784197001252e-16
+            },
+            "(1, -1, 'N*')": {
+              "n": 4,
+              "mean": 3.5555555555555554,
+              "frac": "32/9",
+              "spread": 0.0
+            },
+            "(1, 1, 'N1')": {
+              "n": 2,
+              "mean": 3.5555555555555554,
+              "frac": "32/9",
+              "spread": 0.0
+            }
+          }
+        }
+      },
+      "invert_hit": 0,
+      "invert_tot": 2
+    },
+    "B": {
+      "proved": true,
+      "sample": {
+        "5": {
+          "Smin": {
+            "1d": 26.666666666666668,
+            "H": -3.241851231905457e-14,
+            "rest": null,
+            "full": 6.1538461538461355
+          },
+          "worst": {
+            "1d": {
+              "k": 2,
+              "S_over_q2": 26.666666666666668
+            },
+            "H": {
+              "k": 16,
+              "S_over_q2": -3.241851231905457e-14
+            },
+            "full": {
+              "k": 10,
+              "S_over_q2": 6.1538461538461355
+            }
+          },
+          "S_1d_ntriv_formula": "80/3"
+        },
+        "7": {
+          "Smin": {
+            "1d": 33.59999999999972,
+            "H": 7.999999999999943,
+            "rest": 4.923076923076846,
+            "full": 7.511002444987729
+          },
+          "worst": {
+            "1d": {
+              "k": 44,
+              "S_over_q2": 33.59999999999972
+            },
+            "H": {
+              "k": 20,
+              "S_over_q2": 7.999999999999943
+            },
+            "rest": {
+              "k": 30,
+              "S_over_q2": 4.923076923076846
+            },
+            "full": {
+              "k": 40,
+              "S_over_q2": 7.511002444987729
+            }
+          },
+          "S_1d_ntriv_formula": "168/5"
+        }
+      },
+      "invert_hit": 0,
+      "invert_tot": 2,
+      "theorem": "S_H/q\u00b2=0 at p=5 and S_rest/q\u00b2<6 at p=7, so familywise S\u22656 cannot import the floor.  Mixture needs N+."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "note": "Q_rest type-constant at p=7, unnamed in p.  Familywise S\u22656 is false.  Floor OPEN."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "prop": "15.348",
+  "title": "n_4 not Jacobi/norm-linear; E[n_i\u00b2 n_j\u00b2] not deg\u22643/deg\u22641",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "n4_not_linear_in_norm_features": true,
+    "n4_not_linear_in_Weil": true,
+    "no_deg31_formula": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "err5": 0.5670995670995325,
+      "err7": 16.07305833065169,
+      "err_both": 17.722503329117785,
+      "rank5": 7,
+      "rank7": 8,
+      "n3_exact_subsets": 0,
+      "n5": 9,
+      "n7": 36,
+      "theorem": "Linear Jacobi/norm features do not name n_4 (p=5 residual >1/2)."
+    },
+    "B": {
+      "proved": true,
+      "err": 100.0855305959883,
+      "rank": 7,
+      "samples": [
+        {
+          "n4": 5,
+          "W4": 5,
+          "p_plus_W4": 10
+        },
+        {
+          "n4": 4,
+          "W4": 1,
+          "p_plus_W4": 6
+        },
+        {
+          "n4": 2,
+          "W4": -3,
+          "p_plus_W4": 2
+        },
+        {
+          "n4": 6,
+          "W4": -11,
+          "p_plus_W4": -6
+        }
+      ],
+      "theorem": "n_4 is not linear in Weil sums W_4, W_3, W_2."
+    },
+    "C": {
+      "proved": true,
+      "n_hits": 0,
+      "hits": [],
+      "fw_wrong": "12 != 735/26",
+      "theorem": "No deg\u22643/deg\u22641 formula for F, EH, d_p, or |H_+|."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "interval_closed": false,
+      "cross": {
+        "5": "735/26",
+        "7": "101585/818"
+      },
+      "live_Qpp": {
+        "5": "48/13",
+        "7": "1544/409"
+      },
+      "note": "n_4 is type-constant (15.347) but not a Jacobi-linear function of that type.  phi_F not imported from the table."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

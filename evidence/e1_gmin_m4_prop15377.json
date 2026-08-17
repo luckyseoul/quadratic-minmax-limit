@@ -1,0 +1,93 @@
+{
+  "prop": "15.377",
+  "title": "All p=7 joint atoms constructed; QR0\u2299NC Q++\u2260Q_AP at p=11,19",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "all_eight_atoms_constructed": true,
+    "QR0NC_not_QAP": true,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "Qmm_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "qr0_nc": {
+        "40/9|24/7|76/21": 21
+      },
+      "ystar_nc": {
+        "32/9|24/7|256/63": 4,
+        "40/9|8/3|32/9": 2,
+        "40/9|0|0": 1,
+        "40/9|80/21|24/7": 2
+      },
+      "sharp": [
+        "8/3",
+        "4",
+        "4"
+      ],
+      "all_eight": true,
+      "theorem": "y_*\u2299NC produces the missing 1176 and the 294 atom. All eight p=7 joint atoms have constructors."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "7": {
+          "Q": {
+            "++": "40/9",
+            "--N1": "24/7",
+            "N*": "76/21"
+          },
+          "Q_AP": "40/9",
+          "Qpp_eq_QAP": true,
+          "Qmm_interp": "24/7",
+          "Qmm_eq_interp": true
+        },
+        "11": {
+          "Q": {
+            "++": "3976/495",
+            "--N1": "128/55",
+            "N*": "144/55"
+          },
+          "Q_AP": "56/9",
+          "Qpp_eq_QAP": false,
+          "Qmm_interp": "128/55",
+          "Qmm_eq_interp": true
+        },
+        "19": {
+          "Q": {
+            "++": "15064/855",
+            "--N1": "256/171",
+            "N*": "272/171"
+          },
+          "Q_AP": "88/9",
+          "Qpp_eq_QAP": false,
+          "Qmm_interp": "144/95",
+          "Qmm_eq_interp": false
+        }
+      },
+      "theorem": "QR0\u2299NC Q++\u2260Q_AP at p=11,19. 2(p+53)/(5p) dies at p=19."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "ystar_p19": false,
+      "Q_tau_named_in_p": false,
+      "D_named_in_p": false,
+      "Qmm_named_in_p": false,
+      "note": "y_* empty at p=19. NL atom Q's have no name surviving p=19. Ensemble unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

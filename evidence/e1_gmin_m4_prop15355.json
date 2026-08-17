@@ -1,0 +1,261 @@
+{
+  "prop": "15.355",
+  "title": "Q_AP++ named in p; Q_QR0++ named for p\u22613",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "subfield_in_pp": true,
+    "n_pp_named": true,
+    "mu_AP_fejer_identity": true,
+    "Q_AP_named_in_p": true,
+    "Q_QR0_named_p3": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "chi_bad": [],
+          "sub_in_pp": 2,
+          "sub_need": 2
+        },
+        "7": {
+          "chi_bad": [],
+          "sub_in_pp": 4,
+          "sub_need": 4
+        },
+        "11": {
+          "chi_bad": [],
+          "sub_in_pp": 8,
+          "sub_need": 8
+        },
+        "13": {
+          "chi_bad": [],
+          "sub_in_pp": 10,
+          "sub_need": 10
+        },
+        "17": {
+          "chi_bad": [],
+          "sub_in_pp": 14,
+          "sub_need": 14
+        },
+        "19": {
+          "chi_bad": [],
+          "sub_in_pp": 16,
+          "sub_need": 16
+        },
+        "23": {
+          "chi_bad": [],
+          "sub_in_pp": 20,
+          "sub_need": 20
+        },
+        "29": {
+          "chi_bad": [],
+          "sub_in_pp": 26,
+          "sub_need": 26
+        },
+        "31": {
+          "chi_bad": [],
+          "sub_in_pp": 28,
+          "sub_need": 28
+        }
+      },
+      "theorem": "\u03c7_q\u22611 on F_p^\u00d7 \u21d2 F_p^\u00d7\\{\u00b11} \u2282 ++."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": 6,
+        "7": 6,
+        "11": 12,
+        "13": 22,
+        "17": 30,
+        "19": 24,
+        "23": 30,
+        "29": 54,
+        "31": 42
+      },
+      "formula": "2(p-2) if p\u22611; 3(p-3)/2 if p\u22613",
+      "jacobi_ww4": {
+        "5": -1,
+        "7": -1,
+        "11": -1,
+        "13": -1,
+        "17": -1,
+        "19": -1,
+        "23": -1,
+        "29": -1,
+        "31": -1
+      },
+      "theorem": "|++| from N1 torus Jacobi (sign product \u2212\u03c7_p(\u22121))."
+    },
+    "C_fejer": {
+      "proved": true,
+      "identity": "\u03bc_AP = 32/((p+1)(p-3))*((p\u00b2-1)/4 E[F] \u2212 2 E[F\u00b2]) = 2(p+3)/3",
+      "rows": {
+        "5": {
+          "mu": "16/3",
+          "EF": "3/2",
+          "EF2": "7/2",
+          "EF_named": "3/2",
+          "EF2_named": "7/2"
+        },
+        "7": {
+          "mu": "20/3",
+          "EF": "2",
+          "EF2": "26/3",
+          "EF_named": "2",
+          "EF2_named": "26/3"
+        },
+        "11": {
+          "mu": "28/3",
+          "EF": "3",
+          "EF2": "31",
+          "EF_named": "3",
+          "EF2_named": "31"
+        },
+        "13": {
+          "mu": "32/3",
+          "EF": "7/2",
+          "EF2": "301/6",
+          "EF_named": "7/2",
+          "EF2_named": "301/6"
+        },
+        "17": {
+          "mu": "40/3",
+          "EF": "9/2",
+          "EF2": "219/2",
+          "EF_named": "9/2",
+          "EF2_named": "219/2"
+        }
+      },
+      "theorem": "Fejer/Parseval names \u03bc_AP=2(p+3)/3 for every odd p\u22655."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "p": 5,
+          "n_pp": 6,
+          "Q_AP": "16/9",
+          "Q_QR0": "16/9",
+          "Q_AP_named": "16/9",
+          "AP_hit": true,
+          "QR0_p3_hit": true,
+          "derived": "16/9"
+        },
+        "7": {
+          "p": 7,
+          "n_pp": 6,
+          "Q_AP": "40/9",
+          "Q_QR0": "32/3",
+          "Q_AP_named": "40/9",
+          "AP_hit": true,
+          "QR0_p3_hit": true,
+          "derived": "40/9"
+        },
+        "11": {
+          "p": 11,
+          "n_pp": 12,
+          "Q_AP": "56/9",
+          "Q_QR0": "16",
+          "Q_AP_named": "56/9",
+          "AP_hit": true,
+          "QR0_p3_hit": true,
+          "derived": "56/9"
+        },
+        "13": {
+          "p": 13,
+          "n_pp": 22,
+          "Q_AP": "160/33",
+          "Q_QR0": "928/77",
+          "Q_AP_named": "160/33",
+          "AP_hit": true,
+          "QR0_p3_hit": true,
+          "derived": "160/33"
+        },
+        "17": {
+          "p": 17,
+          "n_pp": 30,
+          "Q_AP": "56/9",
+          "Q_QR0": "440/27",
+          "Q_AP_named": "56/9",
+          "AP_hit": true,
+          "QR0_p3_hit": true,
+          "derived": "56/9"
+        },
+        "19": {
+          "p": 19,
+          "n_pp": 24,
+          "Q_AP": "88/9",
+          "Q_QR0": "80/3",
+          "Q_AP_named": "88/9",
+          "AP_hit": true,
+          "QR0_p3_hit": true,
+          "derived": "88/9"
+        },
+        "23": {
+          "p": 23,
+          "n_pp": 30,
+          "Q_AP": "104/9",
+          "Q_QR0": "32",
+          "Q_AP_named": "104/9",
+          "AP_hit": true,
+          "QR0_p3_hit": true,
+          "derived": "104/9"
+        },
+        "29": {
+          "p": 29,
+          "n_pp": 54,
+          "Q_AP": "832/81",
+          "Q_QR0": "11584/405",
+          "Q_AP_named": "832/81",
+          "AP_hit": true,
+          "QR0_p3_hit": true,
+          "derived": "832/81"
+        },
+        "31": {
+          "p": 31,
+          "n_pp": 42,
+          "Q_AP": "136/9",
+          "Q_QR0": "128/3",
+          "Q_AP_named": "136/9",
+          "AP_hit": true,
+          "QR0_p3_hit": true,
+          "derived": "136/9"
+        }
+      },
+      "theorem": "Q_AP++ = (p-3)\u00b72(p+3)/(3|++|) named in p."
+    },
+    "D": {
+      "proved": true,
+      "rows": {
+        "7": "32/3",
+        "11": "16",
+        "19": "80/3",
+        "23": "32",
+        "31": "128/3"
+      },
+      "theorem": "Q_QR0++ = 4(p+1)/3 for p\u22613."
+    },
+    "E": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "Q_QR0_p1_named": false,
+      "note": "AP ++ is named in p.  QR0 ++ is named for p\u22613.  Ensemble mix still unnamed.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

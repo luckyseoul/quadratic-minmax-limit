@@ -1,0 +1,101 @@
+{
+  "prop": "15.285",
+  "L_status": "OPEN",
+  "proved": {
+    "typeplus_binomial": true,
+    "formula_3": true,
+    "formula_4_dim1": true,
+    "pal_without_dim_is_identity": false,
+    "invert_binom_is_identity": false,
+    "n_equals_n1D_p5_4sets": false,
+    "phi_F_ge_6_proved_general": false,
+    "inequality_proved": false,
+    "n_NL_named_in_p": false,
+    "Nplus_named": false,
+    "term4_reduced_to_1d": false
+  },
+  "status": {
+    "floor": false,
+    "identity_A": true,
+    "identity_B": true
+  },
+  "lifts": [
+    {
+      "p": 3,
+      "Nplus": 6,
+      "n1D": 6,
+      "n1Dm": 6,
+      "formula": 6,
+      "n_plus_forms": 2,
+      "n_minus_forms": 2,
+      "subset": true
+    },
+    {
+      "p": 5,
+      "Nplus": 130,
+      "n1D": 30,
+      "n1Dm": 30,
+      "formula": 30,
+      "n_plus_forms": 3,
+      "n_minus_forms": 3,
+      "subset": true
+    },
+    {
+      "p": 7,
+      "Nplus": 5726,
+      "n1D": 140,
+      "n1Dm": 140,
+      "formula": 140,
+      "n_plus_forms": 4,
+      "n_minus_forms": 4,
+      "subset": true
+    }
+  ],
+  "blocks3": [
+    {
+      "p": 5,
+      "checked": 2300,
+      "bad": 0,
+      "+++_n1_by_dim": {
+        "1": 4,
+        "2": 3
+      }
+    },
+    {
+      "p": 7,
+      "checked": 18424,
+      "bad": 0,
+      "+++_n1_by_dim": {
+        "1": 18,
+        "2": 16
+      }
+    }
+  ],
+  "blocks4": [
+    {
+      "p": 5,
+      "checked": 150,
+      "bad": 0,
+      "nNL_pos": 75,
+      "typeplus_n1": 4,
+      "typeplus_n1m": 0
+    },
+    {
+      "p": 7,
+      "checked": 1960,
+      "bad": 0,
+      "nNL_pos": 980,
+      "typeplus_n1": 15,
+      "typeplus_n1m": 0
+    }
+  ],
+  "open": {
+    "floor_closed": false,
+    "n_NL_named_in_p": false,
+    "Nplus_named": false,
+    "mixture_meets_floor": false,
+    "term4_reduced_to_1d": false,
+    "phi_F_ge_6": false,
+    "rhat_ge_budget": false
+  }
+}

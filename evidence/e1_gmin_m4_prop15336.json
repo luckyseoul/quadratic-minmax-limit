@@ -1,0 +1,71 @@
+{
+  "prop": "15.336",
+  "title": "p=7 isolated NL orbit is deg-0, Q++=8/3, one full line",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "nc_isolates_1176_at_p7": true,
+    "isolated_Q_wick_off_pp": true,
+    "one_full_line_and_involution": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by": {
+        "5": {
+          "n": 130,
+          "deg_min": 10,
+          "deg_max": 10,
+          "n_isolated": 0
+        },
+        "7_isol": {
+          "n": 1176,
+          "deg_min": 0,
+          "deg_max": 0,
+          "all_zero": true
+        }
+      },
+      "theorem": "p=5 NC-connected; p=7 isolated 1176-orbit is deg 0."
+    },
+    "B": {
+      "proved": true,
+      "Q": {
+        "pm1": "8",
+        "++": "8/3",
+        "N*": "4",
+        "--N1": "4"
+      },
+      "not_qr0nc": true,
+      "not_ensemble": true,
+      "theorem": "Isolated Q++=8/3, Q_N*=Q_--=4, Q_pm1=8."
+    },
+    "C": {
+      "proved": true,
+      "n": 1176,
+      "full_min": 1,
+      "full_max": 1,
+      "stab": 2,
+      "invol_minus": true,
+      "theorem": "Each isolated D has exactly one full line; Stab=<x|->-x+b>."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "isolated_named_in_p": false,
+      "note": "Isolated orbit Q and NC-degree named at p=7; no general construction.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

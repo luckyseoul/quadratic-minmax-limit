@@ -1,0 +1,126 @@
+{
+  "prop": "15.281",
+  "title": "Prop 15.281: Cross_\u03c8 Jacobi/Hoffman/Gauss on Hoffman pairs; 1D triv |N\u0302_\u0394|\u00b2; mixture/floor OPEN",
+  "L_status": "OPEN",
+  "settlement_note": "Named Max+-free Cross (A) and Hoffman N\u0302_\u0394 (B) and 1D triv energy (C). N+(p) unnamed; Aut_\u221e mixture does not meet 3q(q\u22121)/16 without it. No flag flip.",
+  "proved": {
+    "jacobi_cross": true,
+    "hoffman_delta": true,
+    "triv_1d_energy": true,
+    "bad_eta_is_identity": false,
+    "invert_Cy_is_identity": false,
+    "yp_ratio_is_identity": false,
+    "ync_triv_formula_is_identity": false,
+    "Nplus_named": false,
+    "mixture_meets_floor": false,
+    "phi_F_ge_6_proved_general": false,
+    "inequality_proved": false
+  },
+  "algebra": {
+    "jacobi": {
+      "proved": true,
+      "theorem": "Cross(D, t+\u03bbH) is the Jacobi combination of F_D^{\u03c8\u00b7(\u03b7_\u2113\u2218N)}(t). \u03b7 via dlog/(p\u22121) is not the identity.",
+      "by_p": {
+        "5": {
+          "ok": 10,
+          "n": 10,
+          "bad_eta_ok": 0
+        },
+        "7": {
+          "ok": 66,
+          "n": 66,
+          "bad_eta_ok": 6
+        }
+      },
+      "bad_eta_is_identity": false,
+      "n_checks": 76
+    },
+    "hoffman": {
+      "proved": true,
+      "theorem": "Hoffman: N\u0302_\u0394=N\u0302_D+N\u0302_{\u03c7\u03c8,T}+2 Cross_y, Cross(I,J)=(N\u0302T\u2212N\u0302\u03c7T)/4, N\u0302_I via S_1 \u03bc, \u03bc via J_H.  Invert-Cy and non-Hoffman fail.",
+      "by_p": {
+        "5": {
+          "delta": "10/10",
+          "Cross_IJ": "10/10",
+          "mu": "10/10",
+          "Nhat_I": "10/10",
+          "invert_Cy": "0/10"
+        },
+        "7": {
+          "delta": "66/66",
+          "Cross_IJ": "66/66",
+          "mu": "66/66",
+          "Nhat_I": "66/66",
+          "invert_Cy": "2/66"
+        }
+      },
+      "invert_Cy_is_identity": false,
+      "half_formula_always": false,
+      "half_ok": 58,
+      "half_n": 76,
+      "nonhoffman_breaks_B_p5": true,
+      "n_nonhoffman_scanned": 1,
+      "n_checks": 76
+    },
+    "triv_1d": {
+      "proved": true,
+      "theorem": "1D F_D is a Gauss line-sum; triv Cross_y=\u22122 N\u0302_D/(p\u22121); |N\u0302_\u0394|\u00b2=p\u00b2(p+1)\u00b2(p\u22125)\u00b2/16.  Formula fails on ync; Cross=N\u0302_D/|D| fails on yP.",
+      "by_p": {
+        "5": {
+          "Cy_triv": "4/4",
+          "energy_triv": "4/4",
+          "pred_E": 0.0,
+          "hs_ratio_Nd_over_D": "10/10",
+          "Lambda_gauss": "12/12"
+        },
+        "7": {
+          "Cy_triv": "12/12",
+          "energy_triv": "12/12",
+          "pred_E": 784.0,
+          "hs_ratio_Nd_over_D": "6/22",
+          "Lambda_gauss": "12/12"
+        }
+      },
+      "yp_ratio_is_identity": false,
+      "yp_ratio": "6/22",
+      "ync_triv_formula_is_identity": false,
+      "ync_triv": "0/6"
+    },
+    "open": {
+      "floor_closed": false,
+      "Nplus_named": false,
+      "mixture_meets_floor": false,
+      "one_d_plus_hs_meets_floor_p7k8": false,
+      "open": "Cross is named (A\u2013C).  Aut_\u221e mixture still needs N+(p) and general-p orbit masses.  1D+hs\u2299nc \u2248224<441 at p=7 k=8.",
+      "dead": [
+        "linear Cross in (N\u0302_D,N\u0302_T,N\u0302_I) for all types",
+        "1D-only mixture",
+        "1D+hs\u2299nc as the full mixture",
+        "Cross=N\u0302_D/|D| for general 1D types",
+        "N\u0302_I=(N\u0302_T+N\u0302_{\u03c7\u03c8})/4 on every Hoffman type",
+        "15.144 type-list for N+ at p\u226511"
+      ]
+    }
+  },
+  "closed_forms": {
+    "Cross": "1_{t\u2208D}(p+1)1_{(p+1)|k} \u03c8(\u03bb) + (1/(p\u22121))\u2211_\u2113 J(\u03b7_\u2113\u2218N,\u03c8) \u03b7_\u2113(c^{-1}) F_D^{\u03c8(\u03b7_\u2113\u2218N)}(t)",
+    "Nhat_Delta": "N\u0302_D + N\u0302_{\u03c7\u03c8,T} + 2 Cross_y",
+    "Cross_IJ": "(N\u0302_T \u2212 N\u0302_{\u03c7\u03c8,T})/4",
+    "Nhat_I": "(N\u0302_T + N\u0302_{\u03c7\u03c8,T} \u2212 2 S_1 \u03bc)/4",
+    "triv_1d_energy": "p\u00b2(p+1)\u00b2(p\u22125)\u00b2/16"
+  },
+  "fail_when_wrong": [
+    "\u03b7_\u2113(c^{-1}) via dlog_q/(p\u22121)",
+    "invert Cross_y in N\u0302_\u0394",
+    "Hoffman B on non-Hoffman T",
+    "Cross=N\u0302_D/|D| on yP\u2299nc",
+    "1D triv Cross_y formula on ync\u2299nc",
+    "invert (p+1)|k vanishing of N\u0302_T (15.280 B)"
+  ],
+  "status": {
+    "identities_A_B_C": true,
+    "floor": false
+  },
+  "backend": "CPU field + character sums; GPU unused",
+  "residual_closed": false
+}

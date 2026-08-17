@@ -1,0 +1,199 @@
+{
+  "prop": "15.338",
+  "title": "Named k-vector for p\u22613; interpolant \u03b1 is p=7-only Max+",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "kvec_specialises_15337": true,
+    "t2_alpha_three_levels": true,
+    "interpolant_p7_only": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "p7_hist": {
+        "full": 3,
+        "high": [
+          1,
+          2
+        ],
+        "low": [
+          5,
+          1
+        ],
+        "empty": 0
+      },
+      "matches_15337": true,
+      "n_high_p11": 2,
+      "by_p": {
+        "7": {
+          "n_high": 1,
+          "n_low": 5,
+          "k_full": 3,
+          "k_high": 2,
+          "k_low": 1,
+          "sum_k": 10,
+          "size": 21
+        },
+        "11": {
+          "n_high": 2,
+          "n_low": 8,
+          "k_full": 5,
+          "k_high": 3,
+          "k_low": 2,
+          "sum_k": 27,
+          "size": 55
+        },
+        "19": {
+          "n_high": 4,
+          "n_low": 14,
+          "k_full": 9,
+          "k_high": 5,
+          "k_low": 4,
+          "sum_k": 85,
+          "size": 171
+        },
+        "23": {
+          "n_high": 5,
+          "n_low": 17,
+          "k_full": 11,
+          "k_high": 6,
+          "k_low": 5,
+          "sum_k": 126,
+          "size": 253
+        },
+        "31": {
+          "n_high": 7,
+          "n_low": 23,
+          "k_full": 15,
+          "k_high": 8,
+          "k_low": 7,
+          "sum_k": 232,
+          "size": 465
+        },
+        "43": {
+          "n_high": 10,
+          "n_low": 32,
+          "k_full": 21,
+          "k_high": 11,
+          "k_low": 10,
+          "sum_k": 451,
+          "size": 903
+        },
+        "47": {
+          "n_high": 11,
+          "n_low": 35,
+          "k_full": 23,
+          "k_high": 12,
+          "k_low": 11,
+          "sum_k": 540,
+          "size": 1081
+        },
+        "59": {
+          "n_high": 14,
+          "n_low": 44,
+          "k_full": 29,
+          "k_high": 15,
+          "k_low": 14,
+          "sum_k": 855,
+          "size": 1711
+        }
+      },
+      "theorem": "Named k-vector specialises to (3,2,1^5,0) at p=7."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "7": {
+          "k0": 3,
+          "k_square": [
+            2
+          ],
+          "k_ns": [
+            1
+          ]
+        },
+        "11": {
+          "k0": 5,
+          "k_square": [
+            3
+          ],
+          "k_ns": [
+            2
+          ]
+        },
+        "19": {
+          "k0": 9,
+          "k_square": [
+            5
+          ],
+          "k_ns": [
+            4
+          ]
+        }
+      },
+      "theorem": "t\u00b2\u2212\u03b1 square realises the three named k-levels."
+    },
+    "C": {
+      "proved": true,
+      "alpha7": {
+        "1": 5,
+        "2": 6,
+        "3": 4,
+        "4": 6,
+        "5": 3,
+        "6": 6
+      },
+      "by_p": {
+        "7": {
+          "n": 21,
+          "want": 21,
+          "ev": 0.0,
+          "maxplus": true,
+          "size_ok": true
+        },
+        "11": {
+          "n": 59,
+          "want": 55,
+          "ev": 36.0,
+          "maxplus": false,
+          "size_ok": false
+        },
+        "19": {
+          "n": 185,
+          "want": 171,
+          "ev": 64.0,
+          "maxplus": false,
+          "size_ok": false
+        },
+        "23": {
+          "n": 265,
+          "want": 253,
+          "ev": 88.0,
+          "maxplus": false,
+          "size_ok": false
+        }
+      },
+      "theorem": "Interpolant \u03b1 is isolated-Max+ at p=7 only."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "pair_rule_Maxplus_general": false,
+      "note": "k-vector named for p\u22613.  Pair-selection that stays Max+ for p=11,19 is still OPEN.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

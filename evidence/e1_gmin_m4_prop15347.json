@@ -1,0 +1,86 @@
+{
+  "prop": "15.347",
+  "title": "N_{q/p} kills p=7 2+2/1+2 splits; E[|\u0125|\u2074]=p\u2074/2; Q_\u03c4 open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "norm_types_constant": true,
+    "hat_nz4_is_p4_over_2": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "22": {
+            "n_types": 9,
+            "n_const": 9,
+            "n_split": 0
+          },
+          "12": {
+            "n_types": 6,
+            "n_const": 6,
+            "n_split": 0
+          }
+        },
+        "7": {
+          "22": {
+            "n_types": 36,
+            "n_const": 36,
+            "n_split": 0
+          },
+          "12": {
+            "n_types": 12,
+            "n_const": 12,
+            "n_split": 0
+          }
+        },
+        "p7_chi_only_splits": 14
+      },
+      "theorem": "N_{q/p} types make 2+2 and 1+2 n_t constant at p=5,7. \u03c7_p alone splits at p=7."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "live": 312.5,
+          "named_p4_over_2": 312.5
+        },
+        "7": {
+          "live": 1200.5,
+          "named_p4_over_2": 1200.5
+        }
+      },
+      "theorem": "E[|\u0125(\u03b1)|\u2074]=p\u2074/2 at p=5,7 (not p\u2074/4). Not general-p."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "interval_closed": false,
+      "cross": {
+        "5": "735/26",
+        "7": "101585/818"
+      },
+      "Qlo5": "11/4",
+      "Qub5": "26/7",
+      "live_Qpp": {
+        "5": "48/13",
+        "7": "1544/409"
+      },
+      "note": "Norm types classify the 4-point support.  Values of n_4/|H_+| and E[n_i\u00b2 n_j\u00b2] still carry den |H_+|/p. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

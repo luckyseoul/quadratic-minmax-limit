@@ -1,0 +1,76 @@
+{
+  "prop": "15.366",
+  "title": "Q++ = NUM_SUM/N; 16 n_1d dies; deg-4 is 3 Gal-classes",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Qpp_is_NUM_over_N": true,
+    "neigh_16n1d_dies_p7": true,
+    "deg4_three_gal_classes": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "NUM_SUM": {
+        "5": "480",
+        "7": "21616"
+      },
+      "theorem": "Q++ = NUM_SUM / N with NUM_SUM = 480, 21616."
+    },
+    "B": {
+      "proved": true,
+      "p5_16n1d": 480,
+      "p7_16n1d": 2240,
+      "p7_Q": "160/409",
+      "p7_live": "1544/409",
+      "theorem": "16 n_1d / N hits p=5 and dies at p=7 (160/409 \u2260 1544/409)."
+    },
+    "C": {
+      "proved": true,
+      "n_classes": 3,
+      "sizes": [
+        500,
+        1000,
+        1000
+      ],
+      "occ0": [
+        415,
+        555,
+        610
+      ],
+      "n_deg4": 2500,
+      "theorem": "Deg-4 S has exactly 3 Gal-occupancy classes, sizes 1000,500,1000."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "Q_tau_named_in_p": false,
+      "split_p5": [
+        1000,
+        500,
+        1000
+      ],
+      "split_p7": [
+        4116,
+        2058,
+        4116
+      ],
+      "split_p7_sum": 10290,
+      "deg4_p7": 14406,
+      "split_is_p5_only": true,
+      "note": "Three Gal-classes at p=5; 2p^3(p-1) sizes fail at p=7. 16 n_1d is not NUM_SUM in p.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

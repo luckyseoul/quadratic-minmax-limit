@@ -1,0 +1,95 @@
+{
+  "prop": "15.318",
+  "title": "Twisted \u2211 \u03c8(N)N Max+-free iff {1,\u03c7_p}; A_\u25a1 unnamed",
+  "proved": {
+    "named_twists": true,
+    "other_twists_vary": true,
+    "A_square_named": false,
+    "Q_tau_named_in_p": false,
+    "lambda_ge_6": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "pk_fails": true,
+      "by_p": {
+        "5": {
+          "sumN": 90.0,
+          "sumN_named": 90,
+          "sumChiN": 30.0,
+          "sumChiN_named": 30.0,
+          "pk": 50
+        },
+        "7": {
+          "sumN": 420.0,
+          "sumN_named": 420,
+          "sumChiN": 84.0,
+          "sumChiN_named": 84.0,
+          "pk": 147
+        }
+      },
+      "theorem": "\u2211 N = k(k\u22121) and \u2211 \u03c7 N = k(p+1)/2 are Max+-free. \u2211 \u03c7 N = p k is false."
+    },
+    "B": {
+      "proved": true,
+      "other_twists_constant": false,
+      "by_p": {
+        "5": {
+          "1": {
+            "unique": 4,
+            "spread": 40.0,
+            "mean_abs": 15.480470613460081
+          },
+          "3": {
+            "unique": 4,
+            "spread": 40.000000000000014,
+            "mean_abs": 15.480470613460088
+          }
+        },
+        "7": {
+          "1": {
+            "unique": 16,
+            "spread": 105.00000000000004,
+            "mean_abs": 20.398761143101556
+          },
+          "2": {
+            "unique": 14,
+            "spread": 105.00000000000003,
+            "mean_abs": 20.39876114310156
+          },
+          "4": {
+            "unique": 14,
+            "spread": 104.99999999999999,
+            "mean_abs": 20.398761143101552
+          },
+          "5": {
+            "unique": 16,
+            "spread": 104.99999999999997,
+            "mean_abs": 20.398761143101563
+          }
+        }
+      },
+      "theorem": "\u03c8\u22601,\u03c7_p: \u2211 \u03c8(N) N is not Max+-free. Connected W-gram \u22a5 {1, \u03c7_p}."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "e1": true,
+      "Q_tau_named_in_p": false,
+      "lambda_ge_6": false,
+      "A_square_named": false,
+      "note": "W-gram hats on the remaining p\u22123 characters still have den 13, 409 and are not integer Jacobi multiples. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}

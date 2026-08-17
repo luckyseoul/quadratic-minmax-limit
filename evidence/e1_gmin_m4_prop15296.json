@@ -1,0 +1,96 @@
+{
+  "prop": "15.296",
+  "title": "X_A is \u03c8-mode of u; complementary {0,4q} and Q\u2265Coll false",
+  "proved": {
+    "XA_is_psi_mode": true,
+    "sum_u_constant": true,
+    "u_not_two_level": true,
+    "Q_lt_Coll_p5": true,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "sample": {
+        "5": {
+          "max_diff": 4.687428401686771e-13,
+          "n": 130,
+          "ok": true
+        },
+        "7": {
+          "max_diff": 3.6326458277177284e-12,
+          "n": 5726,
+          "ok": true
+        }
+      },
+      "invert_hit": 0,
+      "invert_tot": 2
+    },
+    "B": {
+      "proved": true,
+      "sample": {
+        "5": {
+          "want": 600,
+          "max_err": 5.684341886080801e-13,
+          "ok": true
+        },
+        "7": {
+          "want": 2352,
+          "max_err": 2.2737367544323206e-12,
+          "ok": true
+        }
+      },
+      "invert_hit": 0,
+      "invert_tot": 2
+    },
+    "C": {
+      "proved": true,
+      "sample": {
+        "5": {
+          "n_unique": 5,
+          "near0": 0.15384615384615385,
+          "near4q": 0.0,
+          "two_level": false,
+          "max_u": 261.803399
+        },
+        "7": {
+          "n_unique": 26,
+          "near0": 0.06968215158924206,
+          "near4q": 0.0,
+          "two_level": false,
+          "max_u": 989.587799
+        }
+      },
+      "invert_hit": 0,
+      "invert_tot": 2
+    },
+    "D": {
+      "proved": true,
+      "coll_off_over_q2": 2.6,
+      "min_Q_off_over_q2": 2.4615384615384617,
+      "by_type": {
+        "(1, 1, 'sub')": 3.692307692307693,
+        "(-1, -1, 'N*')": 2.4615384615384617,
+        "(-1, 1, 'N1')": 3.692307692307694,
+        "(1, -1, 'N1')": 3.692307692307693
+      },
+      "invert_hit": 0,
+      "invert_tot": 1
+    },
+    "E": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "rhat": false,
+      "note": "X_A=(\u03c8*u)(\u03be).  Complementary {0,4q} and Q\u2265Coll are false.  Cov(u,X_A)\u22656q\u00b2 unsigned."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}
