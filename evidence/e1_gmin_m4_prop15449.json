@@ -1,0 +1,124 @@
+{
+  "prop": "15.449",
+  "title": "L_NL is a function of (15.448 slot, N); essential den 19 is not GJ; ystar is not L_NL at p=7",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "const_on_slot_N": true,
+    "live_constant_slots": true,
+    "den19_not_GJ": true,
+    "ystar_not_NL": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "n_NL": 100,
+          "split_slots": {
+            "ns_mix": [
+              "12",
+              "13"
+            ]
+          },
+          "n_classes": 8
+        },
+        "7": {
+          "n_NL": 5586,
+          "split_slots": {
+            "sq_mm": [
+              "6131/57",
+              "12349/114"
+            ],
+            "ns_mix": [
+              "1395/19",
+              "147/2",
+              "1398/19"
+            ]
+          },
+          "n_classes": 14
+        }
+      },
+      "theorem": "L_NL constant on (15.448 slot, N). Fail: constant on ns_mix."
+    },
+    "B": {
+      "proved": true,
+      "live": {
+        "5": {
+          "Sub": [
+            "24"
+          ],
+          "sq_mm": [
+            "24"
+          ],
+          "pm1": [
+            "26"
+          ],
+          "sq_mix": [
+            "26"
+          ],
+          "ns_11": [
+            "13"
+          ],
+          "ns_mm": [
+            "12"
+          ]
+        },
+        "7": {
+          "Sub": [
+            "2113/19"
+          ],
+          "pm1": [
+            "4435/38"
+          ],
+          "sq_11": [
+            "673/6"
+          ],
+          "sq_mix": [
+            "6269/57"
+          ],
+          "ns_11": [
+            "2853/38"
+          ],
+          "ns_mm": [
+            "2733/38"
+          ]
+        }
+      },
+      "Lpar_R_7": "133",
+      "theorem": "Constant-slot L_NL as listed. Fail: L_Sub^{NL}(7)=L_par(R)=133."
+    },
+    "C": {
+      "proved": true,
+      "gcd": 1,
+      "in_S7": false,
+      "theorem": "19 essential in 2113/19 and not in named_gj_ints(7). Fail: 19|2113; fail: 19\u2208S7."
+    },
+    "D": {
+      "proved": true,
+      "ystar5": 100,
+      "ystar7": 588,
+      "L_Sub_ystar7": "1321/12",
+      "L_Sub_NL7": "2113/19",
+      "theorem": "ystar=NL at p=5; L_Sub(ystar)=1321/12\u22602113/19 at p=7. Fail: ystar names L_NL."
+    },
+    "E": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "L_NL on 15.448 slots is not a field GJ formula (essential 19). Ensemble L_\u03c4 still has w=n_1d/|H+|. Q_\u03c4 unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
