@@ -1,0 +1,87 @@
+{
+  "prop": "15.385",
+  "title": "1D square-line occupancy named; p=5 NL uniform; ensemble open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "P_1d_named": true,
+    "En4_1d_named": true,
+    "p5_mixture_p7_obstruction": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "P0": "1/5",
+          "Pp": "2/15",
+          "Pmu": "2/3"
+        },
+        "7": {
+          "P0": "1/7",
+          "Pp": "3/28",
+          "Pmu": "3/4"
+        },
+        "11": {
+          "P0": "1/11",
+          "Pp": "5/66",
+          "Pmu": "5/6"
+        },
+        "13": {
+          "P0": "1/13",
+          "Pp": "6/91",
+          "Pmu": "6/7"
+        }
+      },
+      "theorem": "P_1D(0)=1/p, P_1D(p)=(p\u22121)/(p(p+1)), P_1D(\u03bc)=(p\u22121)/(p+1). Fail: P_1D(p)=1/p."
+    },
+    "B": {
+      "proved": true,
+      "En4": {
+        "5": "94",
+        "7": "318",
+        "11": "1630",
+        "13": "2994"
+      },
+      "drop5": "32/3",
+      "theorem": "E[n\u2074|1D]=(p\u22121)/(p+1)\u00b7(p\u00b3+\u03bc\u2074). Fail: drop p\u00b3."
+    },
+    "C": {
+      "proved": true,
+      "w5": "3/13",
+      "P_ens_5": {
+        "0": "1/5",
+        "1": "2/13",
+        "2": "4/13",
+        "3": "2/13",
+        "4": "2/13",
+        "5": "2/65"
+      },
+      "p7_1d_only_n_eq_p": 420,
+      "p7_live_n_eq_p": 3948,
+      "theorem": "p=5 NL uniform on {0..4} recovers live hist. Fail: P_NL(p)=0 at p=7 (420\u22603948)."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "EM2_still_unnamed": {
+        "5": "12300/13",
+        "7": "2939265/409"
+      },
+      "note": "1D occupancy named; ensemble / NL occupancy still den D. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}

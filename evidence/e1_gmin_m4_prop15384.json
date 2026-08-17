@@ -1,0 +1,48 @@
+{
+  "prop": "15.384",
+  "title": "Var(M) named from Q++; E[M\u00b2] catalog empty; Q_\u03c4 open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Var_M_identity": true,
+    "EM2_catalog_empty": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": "600/13",
+        "7": "53361/409"
+      },
+      "drop7": "113484/409",
+      "theorem": "Var(M)=(p\u22121)p\u00b2/4\u00b7((5\u2212p)+(p\u22123)Q++/4). Fail: drop (5\u2212p)."
+    },
+    "B": {
+      "proved": true,
+      "EM2": {
+        "5": "12300/13",
+        "7": "2939265/409"
+      },
+      "n_1term_hits": 0,
+      "theorem": "Live E[M\u00b2]=12300/13, 2939265/409. Catalog 1-term empty. Fail: Var(M)=0."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "E[M\u00b2] unnamed in p. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}

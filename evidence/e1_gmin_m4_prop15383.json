@@ -1,0 +1,70 @@
+{
+  "prop": "15.383",
+  "title": "p\u22611 S0 floor \u21d4 V_lo\u2264Var(e_*)\u2264V_hi; phi_F open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Ve_window": true,
+    "square_threshold": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "V_lo": "9/8",
+          "V_hi": "18/7"
+        },
+        "13": {
+          "V_lo": "35/8",
+          "V_hi": "770/71"
+        },
+        "17": {
+          "V_lo": "189/32",
+          "V_hi": "2079/127"
+        },
+        "29": {
+          "V_lo": "585/56",
+          "V_hi": "15210/391"
+        },
+        "37": {
+          "V_lo": "323/24",
+          "V_hi": "38114/647"
+        }
+      },
+      "p5_hi": "18/7",
+      "p5_lo": "9/8",
+      "theorem": "p\u22611 S0 floor \u21d4 V_lo\u2264Var(e_*)\u2264V_hi. Fail: drop \u03ba (360/7\u226018/7)."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": "5625/2",
+        "7": "14406",
+        "11": "131769",
+        "13": "599781/2",
+        "19": "1954815"
+      },
+      "theorem": "\u03bb_j\u22656 \u21d4 E|\u27e8\u0394N,G_U\u27e9|\u00b2\u2265(3/4)(p+1)q\u00b2. Fail: drop (p+1)."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "V_hi is the named p\u22611 window, not a proved majorant. p\u22613 still needs Q_{--}. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
