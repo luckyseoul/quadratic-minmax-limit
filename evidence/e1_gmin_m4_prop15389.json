@@ -1,0 +1,184 @@
+{
+  "prop": "15.389",
+  "title": "T\u2299NC R-pairing: affine n(j) for p\u22611; polarised k; \u03c4-law dead at 17",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "affine_n": true,
+    "polarised_k": true,
+    "tau_law_dies_p17": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "pred": [
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "got": [
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        "13": {
+          "pred": [
+            [
+              7,
+              0
+            ],
+            [
+              7,
+              12
+            ],
+            [
+              12,
+              0
+            ]
+          ],
+          "got": [
+            [
+              7,
+              0
+            ],
+            [
+              7,
+              12
+            ],
+            [
+              12,
+              0
+            ]
+          ]
+        },
+        "17": {
+          "pred": [
+            [
+              9,
+              0
+            ],
+            [
+              9,
+              16
+            ],
+            [
+              16,
+              0
+            ]
+          ],
+          "got": [
+            [
+              9,
+              0
+            ],
+            [
+              9,
+              16
+            ],
+            [
+              16,
+              0
+            ]
+          ]
+        },
+        "29": {
+          "pred": [
+            [
+              15,
+              0
+            ],
+            [
+              15,
+              28
+            ],
+            [
+              28,
+              0
+            ]
+          ],
+          "got": [
+            [
+              15,
+              0
+            ],
+            [
+              15,
+              28
+            ],
+            [
+              28,
+              0
+            ]
+          ]
+        }
+      },
+      "theorem": "n(j)=aj+b, (a,b)\u2208{(\u22121,0),(\u03bc+1,0),(\u03bc+1,\u22121)}. Fail: (1,0) at p=13."
+    },
+    "B": {
+      "proved": true,
+      "p5_13": true,
+      "p17": false,
+      "theorem": "Largest-n secant / smaller-n tangent recovers n\u2081 at p=5,13 and dies at p=17. Fail: claim it at p=17."
+    },
+    "C": {
+      "proved": true,
+      "p17_t": 0,
+      "p17_c": 3,
+      "p17_tangents": [
+        [
+          4,
+          13
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          6,
+          11
+        ]
+      ],
+      "old_tau_dies_at_17": true,
+      "theorem": "\u03c7-meet with \u03c4=(p\u22121)/4 and \u03c4=2 matches p=5,13 and dies at p=17. Fail: claim it at p=17."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "m(j) in p and p\u22613 pairing open. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
