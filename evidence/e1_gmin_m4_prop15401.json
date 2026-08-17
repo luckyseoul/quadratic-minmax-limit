@@ -1,0 +1,118 @@
+{
+  "prop": "15.401",
+  "title": "Mix-aware: NL D-type means can be <6; 1D not \u03bb-constant at p=7",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "D_type_not_lambda_constant": true,
+    "NL_type_means_can_be_lt_6": true,
+    "one_d_not_constant_p7": true,
+    "nl_type_means_ge_6": false,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "p5": [
+        {
+          "tag": "('R', 'R', 'R')",
+          "n": 100,
+          "mean": 3.790739603222034e-31,
+          "min": 3.7907396032220344e-31,
+          "max": 3.7907396032220344e-31,
+          "nunique": 1,
+          "n0": 100,
+          "n_lt6": 100
+        },
+        {
+          "tag": "('C', 'C', 'H')",
+          "n": 30,
+          "mean": 26.66666666666666,
+          "min": 26.666666666666664,
+          "max": 26.666666666666675,
+          "nunique": 1,
+          "n0": 0,
+          "n_lt6": 0
+        }
+      ],
+      "p7_n1176_split": 4,
+      "p7_n294_const0": 1,
+      "theorem": "\u03bb constant on p=5 types and p=7 size-294. p=7 1176-types split 392\u00b3. Fail: nunique=1 there."
+    },
+    "B": {
+      "proved": true,
+      "n_mean_8_3": 2,
+      "rows_at_8_3": 2352,
+      "mix": "3360/409",
+      "nl_type_means_ge_6": false,
+      "means": [
+        {
+          "n": 1176,
+          "mean": 2.666666666666666,
+          "n_lt6": 1176
+        },
+        {
+          "n": 1176,
+          "mean": 13.333333333333334,
+          "n_lt6": 392
+        },
+        {
+          "n": 1176,
+          "mean": 7.999999999999998,
+          "n_lt6": 784
+        },
+        {
+          "n": 1176,
+          "mean": 2.666666666666666,
+          "n_lt6": 1176
+        },
+        {
+          "n": 588,
+          "mean": 18.666666666666668,
+          "n_lt6": 196
+        },
+        {
+          "n": 294,
+          "mean": 9.304234374894485e-32,
+          "n_lt6": 294
+        },
+        {
+          "n": 140,
+          "mean": 33.6,
+          "n_lt6": 84
+        }
+      ],
+      "theorem": "p=7 j=2 type-means 8/3,40/3,8,8/3,56/3,0,168/5. Fail: every NL type-mean \u22656."
+    },
+    "C": {
+      "proved": true,
+      "n_1d": 140,
+      "mean": 33.6,
+      "s1d": "168/5",
+      "n0_AP": 56,
+      "nunique": 4,
+      "theorem": "p=7 1D mean is S_1D=168/5 but 56 AP rows have \u03bb=0. Fail: every 1D lift has \u03bb=S_1D."
+    },
+    "D": {
+      "proved": false,
+      "nl_type_means_ge_6": false,
+      "pointwise_floor": false,
+      "one_d_lb_p7": "336/409",
+      "one_d_lb_p7_lt_6": true,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Mix-aware table: two 1176-types sit below 6; 294 vanishes. Type-means unnamed in p. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
