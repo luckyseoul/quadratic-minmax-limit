@@ -1,0 +1,55 @@
+{
+  "prop": "15.477",
+  "title": "Triple-rainbow \u0394\u00b2 named; other complementary open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "tr_delta2_named": true,
+    "agl_triangle_is_tr": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "n_tr": 100,
+          "pred": 4500,
+          "err": 9.094947017729282e-12
+        },
+        "7": {
+          "n_tr": 1176,
+          "pred": 38416,
+          "err": 1.4551915228366852e-10
+        }
+      },
+      "theorem": "TR \u0394\u00b2 = p S_\u03c7\u00b2 (p\u22611(4)) or (M/\u03bb)\u00b2 (p\u22613(4)). Fail: swap congruence."
+    },
+    "B": {
+      "proved": true,
+      "leak5": 18.090169943749476,
+      "leak7": 65.07127860267842,
+      "n_hit": 600,
+      "n_unique": 100,
+      "n_tr": 100,
+      "theorem": "Raw T leaks. AGL(2,5)\u2229Max+ = all TR. Fail: raw T is Max+."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Names \u0394\u00b2 on the triple-rainbow class only. Other complementary types and Q_\u03c4 unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
