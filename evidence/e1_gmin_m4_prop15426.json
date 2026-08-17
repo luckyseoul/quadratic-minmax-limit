@@ -1,0 +1,71 @@
+{
+  "prop": "15.426",
+  "title": "N* same-pair 12349/114 and cross 6269/57 named; Q_NL still open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "LN_same_types": true,
+    "LN_cross_types": true,
+    "LN_mix_12475_114": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "219": "1303/12",
+        "671": "223/2",
+        "665": "1295/12",
+        "344": "106",
+        "695": "219/2",
+        "RRRC": "637/6"
+      },
+      "F1same": "326/3",
+      "theorem": "Type same-pairs named under N* \u03c6. Fail: F1 same-orient in 219 (326/3)."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "219": "655/6",
+        "671": "655/6",
+        "RRRC": "665/6",
+        "665": "665/6",
+        "344": "1321/12",
+        "695": "219/2"
+      },
+      "RRonly": "413/3",
+      "theorem": "Type cross-pairs named under N* \u03c6. Fail: RRRC as R\u00d7R only (413/3)."
+    },
+    "C": {
+      "proved": true,
+      "same": "12349/114",
+      "cross": "6269/57",
+      "mix": "12475/114",
+      "drop219": "9743/90",
+      "theorem": "Hoffman mixes are 12349/114 and 6269/57; 4:8 mix is 12475/114. Fail: drop 219 same."
+    },
+    "D": {
+      "proved": false,
+      "Q_NL_5": "64/15",
+      "Q_1d_5": "16/9",
+      "Q_NL_gt_Q1d_p5": true,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q_NL_is_short_rational": false,
+      "note": "L_N* named at p=5,7 as pair mixes. --N1 and Q_NL unnamed in p. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}

@@ -18,7 +18,7 @@
       "Lspl": "673/6",
       "gap": "73/19",
       "p5": "24",
-      "theorem": "L_N* pair mix 4:8 is 12475/114. p=5 is 24=L_par(R). Fail: L_N*(0\u221e)=L_spl (gap 73/19); one pair type."
+      "theorem": "L_N* pair mix 4:8 is 12475/114. p=5 is 24=L_par(R). Fail: L_N*(0\u221e)=L_spl (12349/114 vs 673/6, gap 73/19); mix vs L_spl is 52/19; one pair type."
     },
     "B": {
       "proved": true,
