@@ -1,0 +1,25 @@
+{
+  "A": {
+    "7": {
+      "fermat": {
+        "2": 48,
+        "3": 60,
+        "4": 88,
+        "6": 12,
+        "8": 336
+      },
+      "has_409": false
+    },
+    "5": {
+      "has_13": true,
+      "has_409": false,
+      "has_48": false
+    }
+  },
+  "B": {
+    "proved": true,
+    "p5_ratio": false,
+    "p7_ratio": false,
+    "theorem": "No catalog ratio equals live Q++. Fail: 48/13 or 1544/409 is a catalog ratio."
+  }
+}

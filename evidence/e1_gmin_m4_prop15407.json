@@ -1,0 +1,59 @@
+{
+  "prop": "15.407",
+  "title": "Q_\u03c4 is not a Gauss/Jacobi/Fermat integer ratio; 409 absent",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "409_absent_from_catalog": true,
+    "no_catalog_ratio_is_live_Q": true,
+    "Qtau_is_gj_ratio": false,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "7": {
+          "fermat": {
+            "2": 48,
+            "3": 60,
+            "4": 88,
+            "6": 12,
+            "8": 336
+          },
+          "has_409": false
+        },
+        "5": {
+          "has_13": true,
+          "has_409": false,
+          "has_48": false
+        }
+      },
+      "theorem": "409\u2209expanded catalog. Fail: 409=#X_8(F_49)=336."
+    },
+    "B": {
+      "proved": true,
+      "p5_ratio": false,
+      "p7_ratio": false,
+      "theorem": "No catalog ratio equals live Q++. Fail: 48/13 or 1544/409 is a catalog ratio."
+    },
+    "C": {
+      "proved": false,
+      "Qtau_is_gj_ratio": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Q_\u03c4 still unnamed. Not an S(p) mix. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
