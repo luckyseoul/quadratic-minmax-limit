@@ -1,0 +1,222 @@
+{
+  "prop": "15.408",
+  "title": "Type I Max+ {1,5} 0-1 exists at p=5 and does not empty unrestricted f_e\u2261\u22121; gap-2 bad-case box empty at p=5",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "H_lift_max_minus_2": true,
+    "zerofar_counts_swapped": true,
+    "p5_typeI_01_exists": true,
+    "p5_typeI_unrestricted_fe_not_empty": true,
+    "p5_gap2_badcase_box_empty": true,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "muH": "-14/5",
+          "kH": 14,
+          "even": true
+        },
+        "7": {
+          "muH": "-20/7",
+          "kH": 20,
+          "even": true
+        },
+        "11": {
+          "muH": "-32/11",
+          "kH": 32,
+          "even": true
+        },
+        "13": {
+          "muH": "-38/13",
+          "kH": 38,
+          "even": true
+        },
+        "17": {
+          "muH": "-50/17",
+          "kH": 50,
+          "even": true
+        },
+        "19": {
+          "muH": "-56/19",
+          "kH": 56,
+          "even": true
+        },
+        "23": {
+          "muH": "-68/23",
+          "kH": 68,
+          "even": true
+        },
+        "29": {
+          "muH": "-86/29",
+          "kH": 86,
+          "even": true
+        },
+        "31": {
+          "muH": "-92/31",
+          "kH": 92,
+          "even": true
+        }
+      },
+      "theorem": "Type I + s_\u2212=\u22121 + bad case \u21d2 max S_H=\u22122. Fail: drop bad case (S_H=0)."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "maxplus": [
+            3,
+            10
+          ],
+          "pairmin": [
+            10,
+            3
+          ]
+        },
+        "7": {
+          "maxplus": [
+            4,
+            15
+          ],
+          "pairmin": [
+            15,
+            4
+          ]
+        },
+        "11": {
+          "maxplus": [
+            6,
+            25
+          ],
+          "pairmin": [
+            25,
+            6
+          ]
+        },
+        "13": {
+          "maxplus": [
+            7,
+            30
+          ],
+          "pairmin": [
+            30,
+            7
+          ]
+        },
+        "17": {
+          "maxplus": [
+            9,
+            40
+          ],
+          "pairmin": [
+            40,
+            9
+          ]
+        },
+        "19": {
+          "maxplus": [
+            10,
+            45
+          ],
+          "pairmin": [
+            45,
+            10
+          ]
+        },
+        "23": {
+          "maxplus": [
+            12,
+            55
+          ],
+          "pairmin": [
+            55,
+            12
+          ]
+        },
+        "29": {
+          "maxplus": [
+            15,
+            70
+          ],
+          "pairmin": [
+            70,
+            15
+          ]
+        },
+        "31": {
+          "maxplus": [
+            16,
+            75
+          ],
+          "pairmin": [
+            75,
+            16
+          ]
+        }
+      },
+      "theorem": "Zero-far Max+ counts ((p+1)/2, 5(p\u22121)/2); pairing-min is the swap. Fail: swap the two pairs."
+    },
+    "C": {
+      "proved": true,
+      "plus": [
+        1,
+        5
+      ],
+      "minus_ext": [
+        -11,
+        11
+      ],
+      "n_m1": 36,
+      "bad": false,
+      "n_S1": 156,
+      "n_S5": 104,
+      "theorem": "p=5 WIT is Type I {1,5}, s_max=+11, n_{\u22121}=36<53, f_e mixed. Fail: drop (0,6)."
+    },
+    "D": {
+      "proved": true,
+      "plus": [
+        1,
+        5
+      ],
+      "n_m1": 24,
+      "bad": true,
+      "s_max": 5,
+      "theorem": "p=5 BAD_WIT is Type I with f_e\u2261\u22121 on {S=\u22121}, n_{\u22121}=24<53, s_max=+5. Fail: claim inhabited or gap-2."
+    },
+    "E": {
+      "proved": true,
+      "gap2_lp_feasible": true,
+      "badcase_lp_feasible": false,
+      "badcase_status": 2,
+      "gap2_Y_fplus": -1.489367705152682,
+      "theorem": "p=5 [0,1] Type I + S\u2264\u22121 + S+3f_e\u22640 is infeasible. Drop S+3f_e and the LP is feasible with Y>\u22123."
+    },
+    "F": {
+      "proved": false,
+      "type_I_multilevel_bad_case_ND_closed": false,
+      "type_I_aut_e_3AB_positive_general": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "gsum": false,
+      "note": "3A+B>0 on Aut_e far classes remains G>T (15.275). Type I Max+ empties the p=5 pointwise gap-2 bad-case box but not unrestricted f_e\u2261\u22121. Flags unflipped."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "type_I_multilevel_bad_case_ND_closed",
+    "type_I_aut_e_3AB_positive_general",
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
