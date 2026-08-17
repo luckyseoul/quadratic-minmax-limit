@@ -1,0 +1,59 @@
+{
+  "prop": "15.403",
+  "title": "p=7 D-type Q++ is {Q_1d, 4(p\u22121)/9, 4(p+1)/9, Q_AP}; not ensemble",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "p7_type_Qpp_named": true,
+    "p5_NL_is_QT_not_triple": true,
+    "ensemble_Qpp_is_type_value": false,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "values": [
+        "104/15",
+        "32/9",
+        "40/9",
+        "8/3"
+      ],
+      "weights": {
+        "104/15": 140,
+        "40/9": 2646,
+        "32/9": 1176,
+        "8/3": 1764
+      },
+      "mix": "1544/409",
+      "theorem": "p=7 D-type Q++ \u2208 {104/15, 8/3, 32/9, 40/9}. Fail: 32/3 or 1544/409 is a type value; 32/9=Q_AP."
+    },
+    "B": {
+      "proved": true,
+      "values": [
+        "16/9",
+        "64/15"
+      ],
+      "mix": "48/13",
+      "qpp_p3_is_NL": false,
+      "theorem": "p=5 types {16/9, 64/15=Q_T}. Fail: NL Q++=4(p+3)/9=32/9."
+    },
+    "C": {
+      "proved": false,
+      "ensemble_Qpp_is_type_value": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "D-type Q++ named at p=7 as Q_AP-family + 4(p+1)/9 + Q_1d. Ensemble still den N+. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
