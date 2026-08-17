@@ -1,0 +1,61 @@
+{
+  "prop": "15.485",
+  "title": "Aut_\u221e orbits at p=7 are AG types; not all s=2 are TR",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "orbit_table_p7": true,
+    "one_s2_is_TR": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "n_orbits": 8,
+      "c_nl": 19,
+      "ones": [
+        {
+          "sz": 84,
+          "s": 28
+        },
+        {
+          "sz": 56,
+          "s": 42
+        }
+      ],
+      "nl_s": [
+        2,
+        2,
+        2,
+        2,
+        4,
+        8
+      ],
+      "theorem": "8 Aut_\u221e orbits; 1D splits 84+56; NL stabs 2\u2074\u00b74\u00b78; c=19. Fail: one 1D orbit of size 140."
+    },
+    "B": {
+      "proved": true,
+      "n_s2": 4,
+      "n_s2_TR": 1,
+      "n_s2_NF1": 3,
+      "theorem": "Exactly one s=2 orbit is TR; three are NF1. Fail: every s=2 orbit is TR."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Multiplicities of NL stabs unnamed in p. Q_\u03c4 unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
