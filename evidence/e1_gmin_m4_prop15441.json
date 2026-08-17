@@ -1,0 +1,112 @@
+{
+  "prop": "15.441",
+  "title": "Var_2orb is not a sufficient S0-floor majorant for p\u22611\u226513",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "V2_below_Vlo": true,
+    "mode_below_6": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "V2": "660/13",
+          "Vlo": "45/2",
+          "Vhi": "360/7",
+          "Q2": "48/13",
+          "Qlo": "11/4",
+          "V2_lt_Vlo": false,
+          "V2_le_Vhi": true,
+          "Q2_lt_Qlo": false
+        },
+        "13": {
+          "V2": "3276/11",
+          "Vlo": "819/2",
+          "Vhi": "72072/71",
+          "Q2": "40/11",
+          "Qlo": "15/4",
+          "V2_lt_Vlo": true,
+          "V2_le_Vhi": true,
+          "Q2_lt_Qlo": true
+        },
+        "17": {
+          "V2": "21420/43",
+          "Vlo": "918",
+          "Vhi": "323136/127",
+          "Q2": "5061/1376",
+          "Qlo": "245/64",
+          "V2_lt_Vlo": true,
+          "V2_le_Vhi": true,
+          "Q2_lt_Qlo": true
+        },
+        "29": {
+          "V2": "102660/73",
+          "Vlo": "9135/2",
+          "Vhi": "6650280/391",
+          "Q2": "94536/25039",
+          "Qlo": "767/196",
+          "V2_lt_Vlo": true,
+          "V2_le_Vhi": true,
+          "Q2_lt_Qlo": true
+        },
+        "37": {
+          "V2": "70300/31",
+          "Vlo": "18981/2",
+          "Vhi": "26877096/647",
+          "Q2": "86224/22599",
+          "Qlo": "425/108",
+          "V2_lt_Vlo": true,
+          "V2_le_Vhi": true,
+          "Q2_lt_Qlo": true
+        }
+      },
+      "theorem": "Var_2orb < V_lo and Q_2 < Q_lo at p\u22611\u226513. Fail: Var_2orb \u2265 V_lo at p=13."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "sm_j0": "176/13",
+          "ge6": true
+        },
+        "13": {
+          "sm_j0": "48/11",
+          "ge6": false
+        },
+        "17": {
+          "sm_j0": "140/43",
+          "ge6": false
+        },
+        "29": {
+          "sm_j0": "944/511",
+          "ge6": false
+        },
+        "37": {
+          "sm_j0": "400/279",
+          "ge6": false
+        }
+      },
+      "theorem": "even S(\u03c3=\u22121,j=0) at Q_2 is <6 for p\u22611\u226513 (48/11 at p=13). Var\u2264Var_2orb is not floor-sufficient. Fail: mode \u22656 at p=13."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "2-orbit majorant is not floor-sufficient for p\u22611\u226513. c(p) unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
