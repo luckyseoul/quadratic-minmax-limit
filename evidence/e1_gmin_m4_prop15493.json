@@ -1,0 +1,176 @@
+{
+  "prop": "15.493",
+  "title": "Max\u2212 Gram mean 1/(n\u22123); switching S_C=S_{C^z}; p=3 leftover+s\u208a=2 is ND",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "maxminus_disj_mean": true,
+    "switching_identity": true,
+    "two_flip_Sall": true,
+    "p3_resii_exists_and_ND": true,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "disj_mean": "1/23",
+          "n_minus_3": 23,
+          "not_1_over_p2": "1/25"
+        },
+        "7": {
+          "disj_mean": "1/47",
+          "n_minus_3": 47,
+          "not_1_over_p2": "1/49"
+        },
+        "11": {
+          "disj_mean": "1/119",
+          "n_minus_3": 119,
+          "not_1_over_p2": "1/121"
+        },
+        "13": {
+          "disj_mean": "1/167",
+          "n_minus_3": 167,
+          "not_1_over_p2": "1/169"
+        }
+      },
+      "theorem": "Max\u2212 disjoint Gram mean is 1/(n\u22123), not 1/p\u00b2. Fail: 1/25 at p=5."
+    },
+    "B": {
+      "proved": true,
+      "samples": [
+        {
+          "p": 3,
+          "transport": true,
+          "drop_z_equals_switched": false
+        }
+      ],
+      "theorem": "S_C(y)=S_{C^z}(y\u2299z) on the cube; C^z transports Max\u00b1. Fail: drop z-factors."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "3": {
+          "Sall": "-7",
+          "not_minus_Phi": "-15"
+        },
+        "5": {
+          "Sall": "-49",
+          "not_minus_Phi": "-65"
+        },
+        "7": {
+          "Sall": "-151",
+          "not_minus_Phi": "-175"
+        },
+        "11": {
+          "Sall": "-631",
+          "not_minus_Phi": "-671"
+        }
+      },
+      "p5_2flip_absQ": 53.0,
+      "p5_Phi": 65,
+      "theorem": "2-flip of z\u2208U has S_all=\u2212p(n\u22128)/2\u22124.  At p=5 the double-star 2-flip has |Q|=53<65.  Fail: S_all=\u2212\u03a6."
+    },
+    "D": {
+      "proved": true,
+      "witness": {
+        "k": 12,
+        "nYm": 12,
+        "nYp": 12,
+        "max_m": -2,
+        "min_p": 2,
+        "set_m": [
+          -8,
+          -2
+        ],
+        "set_p": [
+          2,
+          4,
+          6
+        ],
+        "leftover": true,
+        "official": true,
+        "splus_eq_2": true,
+        "n_U2": 4,
+        "freeness_fail": true,
+        "n_nd_plus": 0,
+        "Phi_G": 29.0,
+        "Phi_H": 31.0,
+        "phi": 15.0,
+        "Maxpm_absQ_G": 11.0,
+        "ND": true,
+        "res_ii": true
+      },
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "theorem": "p=3 P3_RESII is leftover official + s\u208a=2 + freeness-fail and \u03a6(H)=31\u226513.  Fail: empty; fail: undercut."
+    },
+    "E": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "leftover-G-empty is dead (15.406 D and 15.493 D). leftover\u21d2s\u208a\u22602 is dead at p=3.  Fractional leftover+s\u208a\u22652 is feasible, so LP Farkas dies.  0-1 leftover+s\u208a=2 at p\u22655 and even k>4p stay open.  residual_ii_k_eq_4p_empty stays False.  phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}

@@ -1,6 +1,6 @@
 # Status (2026-08-17 evening)
 
-Leftover campaign: 15.273–15.492 shipped. Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.492: per-Max+ \(\mathrm{Var}(e_*)\) is not \(V_{\mathrm{floor}}/\kappa\) (p=5: 1d has 5>18/7, NL has 9/5; 33/13 is the mixture). 15.491 names the D-free constant of \(\delta\). \(\langle\delta,\psi\rangle\le2\) still open. Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
+Leftover campaign: 15.273–15.493 shipped. Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.493: no \(\{1,\psi\}\)-Gram + 15.491 PSD certificate of \(2-\langle\delta,\psi\rangle\). \(\langle\delta,\psi\rangle\le2\) still open. Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|
