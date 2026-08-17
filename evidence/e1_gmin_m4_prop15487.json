@@ -1,0 +1,159 @@
+{
+  "prop": "15.487",
+  "title": "Paley-type masses CM-named; mixed type-indicator is not a name of Q++",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "paley_masses_CM": true,
+    "norm_masses_named": true,
+    "mixed_I_not_Qpp": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "3": {
+          "+-": 0,
+          "named": 0,
+          "--": 2
+        },
+        "5": {
+          "+-": 2,
+          "named": 2,
+          "--": 4
+        },
+        "7": {
+          "+-": 4,
+          "named": 4,
+          "--": 8
+        },
+        "11": {
+          "+-": 12,
+          "named": 12,
+          "--": 18
+        },
+        "13": {
+          "+-": 22,
+          "named": 22,
+          "--": 20
+        },
+        "17": {
+          "+-": 32,
+          "named": 32,
+          "--": 40
+        },
+        "19": {
+          "+-": 40,
+          "named": 40,
+          "--": 50
+        },
+        "23": {
+          "+-": 60,
+          "named": 60,
+          "--": 72
+        },
+        "29": {
+          "+-": 110,
+          "named": 110,
+          "--": 100
+        },
+        "31": {
+          "+-": 112,
+          "named": 112,
+          "--": 128
+        }
+      },
+      "theorem": "n_{+-}=(p\u00b2\u22122p\u22123+a_E\u00b2)/8, n_{--}=((p+1)\u00b2\u2212a_E\u00b2)/8. Fail: drop a_E\u00b2 at p=5."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "3": {
+          "N1": 2,
+          "sub": 0,
+          "N*": 0
+        },
+        "5": {
+          "N1": 4,
+          "sub": 2,
+          "N*": 4
+        },
+        "7": {
+          "N1": 6,
+          "sub": 4,
+          "N*": 12
+        },
+        "11": {
+          "N1": 10,
+          "sub": 8,
+          "N*": 40
+        },
+        "13": {
+          "N1": 12,
+          "sub": 10,
+          "N*": 60
+        },
+        "17": {
+          "N1": 16,
+          "sub": 14,
+          "N*": 112
+        },
+        "19": {
+          "N1": 18,
+          "sub": 16,
+          "N*": 144
+        },
+        "23": {
+          "N1": 22,
+          "sub": 20,
+          "N*": 220
+        },
+        "29": {
+          "N1": 28,
+          "sub": 26,
+          "N*": 364
+        },
+        "31": {
+          "N1": 30,
+          "sub": 28,
+          "N*": 420
+        }
+      },
+      "theorem": "n_N1=p\u22121, n_sub=p\u22123, n_N*=(p\u22121)(p\u22123)/2. Fail: n_N1=(p+1)/2 at p=5; half n_N* at p=7."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "pred": "48/13",
+          "Qpp": "48/13",
+          "Qn": "32/13"
+        },
+        "7": {
+          "pred": "1496/409",
+          "Qpp": "1544/409",
+          "Qn": "1496/409"
+        }
+      },
+      "theorem": "I_{+-} pairing is 48/13 at p=5 and 1496/409 at p=7. Fail: =48/13 at p=7; =32/13 at p=5."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Paley masses named. Mixed Paley Fourier is not Q++. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}

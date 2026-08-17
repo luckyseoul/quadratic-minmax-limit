@@ -1,6 +1,6 @@
 # Status (2026-08-17 evening)
 
-Leftover campaign: 15.273–15.486 shipped. Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.486: 15.276 family is the TR orbit; \(c_{\mathrm{family}}=4\neq19\). \(Q_\tau\) unnamed in \(p\). Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
+Leftover campaign: 15.273–15.487 shipped. Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.487: Paley/norm masses CM-named; mixed type-indicator Fourier is not \(Q_{++}\). \(Q_\tau\) unnamed in \(p\). Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|
