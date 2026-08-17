@@ -1,0 +1,33 @@
+{
+  "A": {
+    "proved": true,
+    "row": {
+      "n_total": 130,
+      "n_1d_flag": 30,
+      "n_1d_named": 30,
+      "by": {
+        "1d=False|Var=1.8": 100,
+        "1d=True|Var=5.0": 30
+      },
+      "need": 2.5714285714285716
+    }
+  },
+  "B": {
+    "proved": true,
+    "n_1d_flag": 140,
+    "n_1d_named": 140,
+    "vars_1d": {
+      "0.0": 56,
+      "18.66666667": 84
+    }
+  },
+  "D": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "Per-D Var is not the 15.326 floor. Ensemble mean 33/13 still unnamed as a law. \u27e8\u03b4,\u03c8\u27e9\u22642 open."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false
+}

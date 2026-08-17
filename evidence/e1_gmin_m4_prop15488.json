@@ -1,0 +1,26 @@
+{
+  "A": {
+    "proved": true,
+    "nF": 4,
+    "N": 6,
+    "N_flip_T1": 0,
+    "N_drop_level": 0
+  },
+  "B": {
+    "proved": true,
+    "nF": 31,
+    "N": 130,
+    "N_flip_T1": 0,
+    "N_drop_level": 100,
+    "N_drop_affine": 30
+  },
+  "D": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "p=7 F has size 288, not named in p; GPU CSP N=5726 (scratch netcount_ridge). D=|H+|/(2p) still unnamed."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false
+}

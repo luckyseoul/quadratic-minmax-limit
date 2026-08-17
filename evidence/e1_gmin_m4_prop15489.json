@@ -1,0 +1,25 @@
+{
+  "A": {
+    "proved": true,
+    "N3": 6,
+    "N5": 130,
+    "nF5": 61,
+    "N5_flip": 0
+  },
+  "B": {
+    "proved": true,
+    "nF": 638,
+    "nF_drop_chi": 78,
+    "gpu_N_full": 5726,
+    "gpu_N_drop_chi": 1316
+  },
+  "D": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "F is named as a generating set; D=|H+|/(2p) is the ridge CSP, not a short Jacobi value. Floor OPEN."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false
+}

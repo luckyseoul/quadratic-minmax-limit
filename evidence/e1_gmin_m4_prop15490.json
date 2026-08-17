@@ -1,0 +1,44 @@
+{
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "N_ceq": 130,
+        "Hplus": 130
+      },
+      "7": {
+        "N_ceq": 5726,
+        "Hplus": 5726
+      }
+    },
+    "N_cmin_p7": 5432
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": "48/13",
+      "7": "1544/409"
+    }
+  },
+  "C": {
+    "proved": true,
+    "by_p": {
+      "5": "32/13",
+      "7": "1496/409"
+    }
+  },
+  "D": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "c_eq_general": false,
+    "note": "Numerators named on ++ and --N*. D is the ridge CSP / c_eq lattice, not a Gauss integer (15.330). p\u226511 open."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "LIVE_C": {
+    "5": 1,
+    "7": 19
+  }
+}

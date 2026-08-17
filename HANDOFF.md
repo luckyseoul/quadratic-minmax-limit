@@ -1,5 +1,5 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-17 evening):** Leftover 1 still **OPEN**. 15.453–15.487 shipped. 15.487: Paley masses \(n_{+-},n_{--},n_{N^*}\) CM-named; mixed \(I_{+-}\) Fourier is \(48/13\) at \(p=5\) and Paley-\(N^*\) at \(p=7\), not a name of \(Q_{++}\). \(Q_\tau\) unnamed. p=11 6-net — leave PID 712954. Do **not** import \(\phi_F\). Residual (ii) \(k\ge4p\) and Type I multi-level still OPEN. Aut-Schur **false**. Live `e1` is the old AND. \(L=\tfrac12\) is **not settled**.  
+> **Now (2026-08-17 evening):** Leftover 1 still **OPEN**. 15.488–15.492 shipped. 15.491: \(\sum_T Q=2q^2(q-1)\), off-deficit sum \(=8\). 15.492: per-D \(\mathrm{Var}(e_*)\) is not the 15.326 floor (1d exceeds 18/7). Live \(\max\langle\delta,\psi\rangle=24/13,200/409\). Do **not** import \(\phi_F\). Residual (ii) \(k\ge4p\) and Type I multi-level still OPEN. Aut-Schur **false**. Live `e1` is the old AND. \(L=\tfrac12\) is **not settled**.  
 > Afternoon: **`evidence/SESSION_HANDOFF_2026-08-17_qtau.md`**. Morning: **`evidence/SESSION_HANDOFF_2026-08-17_leftover.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**. Next `/goal`: **`GOAL.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
@@ -29,7 +29,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **Done (2026-08-06):** gap named (Gsum disj LB / 15.158); claim retracted OPEN; short package `evidence/share/denseness_path_package.md`; load-bearing tests; 3 cold AI passes → NOT_PROVED + honest OPEN.
 
-**Open (blocks \(L=\tfrac12\)):** (1) \(\lambda_{\min}(\Phi)\ge6\) — name \(Q_\tau\) by a **character-sum** formula on 15.290 types (15.466–467: named L fills miss Q++, coarse \(L_{ns}=\mu_+\mu_-\), named atoms miss \(L_{++}\), \(D\equiv3\pmod p\) dies at \(p=3\)); (2) residual (ii) for even \(k\ge4p\); (3) Type I when Max− is not two-level; (4) Lemma D already flagged True — do not cascade. Live `e1` is still True (wiring only).  
+**Open (blocks \(L=\tfrac12\)):** (1) \(\lambda_{\min}(\Phi)\ge6\) — name \(Q_\tau\) or a PSD bound \(\langle\delta,\psi\rangle\le2\) (15.491 constant of \(\delta\); 15.492 per-D Var is not the floor). Live max pairings already \(\le2\). Type-LP=8. CS on \(\delta_0\) overshoots. (2) residual (ii) for even \(k\ge4p\); (3) Type I when Max− is not two-level; (4) Lemma D already flagged True — do not cascade. Live `e1` is still True (wiring only).  
 
 **Non-required:** Path-C / \(16N\).  
 
