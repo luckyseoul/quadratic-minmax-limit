@@ -1,0 +1,94 @@
+{
+  "prop": "15.397",
+  "title": "J_++(\u03c8_2)=\u22124 and J_N*(\u03c8_2)=+2; \u03bb(\u03c8_2)=sm_joth; Q_\u03c4 open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Jpp2_eq_m4": true,
+    "lambda_psi2_is_sm_joth": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "Jpp": -4,
+          "Jn": 2,
+          "Jpm1": 2,
+          "Jmm": 0,
+          "n_pp": 6
+        },
+        "7": {
+          "Jpp": -4,
+          "Jn": 2,
+          "Jpm1": 2,
+          "Jmm": 0,
+          "n_pp": 6
+        },
+        "11": {
+          "Jpp": -4,
+          "Jn": 2,
+          "Jpm1": 2,
+          "Jmm": 0,
+          "n_pp": 12
+        },
+        "13": {
+          "Jpp": -4,
+          "Jn": 2,
+          "Jpm1": 2,
+          "Jmm": 0,
+          "n_pp": 22
+        },
+        "17": {
+          "Jpp": -4,
+          "Jn": 2,
+          "Jpm1": 2,
+          "Jmm": 0,
+          "n_pp": 30
+        },
+        "19": {
+          "Jpp": -4,
+          "Jn": 2,
+          "Jpm1": 2,
+          "Jmm": 0,
+          "n_pp": 24
+        }
+      },
+      "theorem": "J_++(\u03c8_2)=\u22124, J_N*(\u03c8_2)=+2. Fail: J_++=0 or \u2212n_++."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "lambda_psi2": "80/13",
+          "sm_joth": "80/13",
+          "drop": "272/13"
+        },
+        "7": {
+          "lambda_psi2": "3248/409",
+          "drop": "9424/409",
+          "S0_p3": true
+        }
+      },
+      "theorem": "\u03bb(\u03c8_2)=16\u22124Q+++2Q_N* = sm_joth on S0. Fail: drop \u22124."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "\u03c8_2 Jacobi weights are named and p-independent. Q_\u03c4 still unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
