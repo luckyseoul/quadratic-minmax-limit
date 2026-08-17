@@ -1,0 +1,58 @@
+{
+  "prop": "15.405",
+  "title": "N+-free mixes of S(p) miss ensemble Q++; live mix still uses N+",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "equal_weight_misses": true,
+    "n1d_nhoff_misses_p7": true,
+    "wick_misses_p7": true,
+    "catalog_4tuple_misses": true,
+    "catalog_mix_hits_live": false,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "eq5": "136/45",
+      "eq7": "22/5",
+      "theorem": "Equal-weight S misses live. Fail: 136/45=48/13."
+    },
+    "B": {
+      "proved": true,
+      "m5": "48/13",
+      "m7": "376/93",
+      "theorem": "n_1d:n_hoff hits p=5 and is 376/93 at p=7. Fail: 376/93=1544/409."
+    },
+    "C": {
+      "proved": true,
+      "w5": "48/13",
+      "w7": "96/25",
+      "theorem": "Wick=live at p=5, 96/25 at p=7. Fail: 96/25=1544/409."
+    },
+    "D": {
+      "proved": true,
+      "nhoff3": "880/219",
+      "catalog_hit": false,
+      "theorem": "Named-catalog 4-tuple (n_1d,u,u,u) misses 1544/409. Fail: that tuple equals live."
+    },
+    "E": {
+      "proved": false,
+      "catalog_mix_hits_live": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "N+-free mixes of S(p) miss ensemble Q++. Live mix still uses |O_\u03c4|/N+. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}

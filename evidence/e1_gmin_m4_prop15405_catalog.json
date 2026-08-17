@@ -1,0 +1,24 @@
+{
+  "A": {
+    "proved": true,
+    "eq5": "136/45",
+    "eq7": "22/5",
+    "theorem": "Equal-weight S misses live. Fail: 136/45=48/13."
+  },
+  "B": {
+    "m5": "48/13",
+    "m7": "376/93"
+  },
+  "C": {
+    "proved": true,
+    "w5": "48/13",
+    "w7": "96/25",
+    "theorem": "Wick=live at p=5, 96/25 at p=7. Fail: 96/25=1544/409."
+  },
+  "D": {
+    "proved": true,
+    "nhoff3": "880/219",
+    "catalog_hit": false,
+    "theorem": "Named-catalog 4-tuple (n_1d,u,u,u) misses 1544/409. Fail: that tuple equals live."
+  }
+}
