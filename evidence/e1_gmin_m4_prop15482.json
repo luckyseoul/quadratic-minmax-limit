@@ -1,0 +1,122 @@
+{
+  "prop": "15.482",
+  "title": "W_c real \u03a6(Tr,N); mean-field pairing \u22614; 48 is not a Gaussian norm",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Wc_real_Phi_TrN": true,
+    "mean_field_pairing_is_4": true,
+    "48_not_gaussian_norm": true,
+    "den_candidate_not_Hplus": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "3": {
+          "imag_max": 9.992007221626409e-16,
+          "phi_keys": 6,
+          "collisions": 0,
+          "homog_err": 3.0000000000000004
+        },
+        "5": {
+          "imag_max": 1.2212453270876722e-15,
+          "phi_keys": 15,
+          "collisions": 0,
+          "homog_err": 14.70820393249937
+        },
+        "7": {
+          "imag_max": 1.7208456881689926e-15,
+          "phi_keys": 28,
+          "collisions": 0,
+          "homog_err": 25.74823458407065
+        },
+        "11": {
+          "imag_max": 4.440892098500626e-15,
+          "phi_keys": 66,
+          "collisions": 0,
+          "homog_err": 43.31292023628532
+        }
+      },
+      "theorem": "W_c\u2208\u211d and W_c=\u03a6(Tr,N). Fail: \u03c7-homogeneous (err=14.71 at p=5)."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "wick": 3.9999999999999956,
+          "live": 3.6923076923076925,
+          "full": 3.6923076923076876
+        },
+        "7": {
+          "wick": 3.9999999999999987,
+          "live": 3.7750611246943766,
+          "full": 3.7750611246943753
+        }
+      },
+      "theorem": "Mean-field pairing \u22614 \u2260 live Q++. Fail: wick=48/13."
+    },
+    "C": {
+      "proved": true,
+      "13": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "409": [
+        [
+          3,
+          20
+        ],
+        [
+          20,
+          3
+        ]
+      ],
+      "48": [],
+      "1544": [
+        [
+          10,
+          38
+        ],
+        [
+          38,
+          10
+        ]
+      ],
+      "theorem": "13=2\u00b2+3\u00b2, 409=3\u00b2+20\u00b2 are norms; 48 is not. Fail: claim 48=N(\u03b1)."
+    },
+    "D": {
+      "proved": true,
+      "N5": 13,
+      "N7": 409,
+      "N3": 153,
+      "Hplus3_over_2p": 1,
+      "theorem": "N(p\u22123(\u03c0+2+i)) hits 13,409 and is not |H+|/(2p) at p=3 (153\u22601). Dead as a general |H+| name."
+    },
+    "E": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "aE2_5": 4,
+      "note": "W_c is real \u03a6(Tr,N), not \u03c7-homogeneous. Mean-field pairing is 4, not Q++. Q_\u03c4 unnamed in p. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
