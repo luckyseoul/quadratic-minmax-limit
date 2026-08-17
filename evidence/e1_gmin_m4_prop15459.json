@@ -1,0 +1,64 @@
+{
+  "prop": "15.459",
+  "title": "k\u22643 type-count is 3/2 at p=13; no (max_k,n0) slice lands in [551,617]",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "k3_undershoots": true,
+    "no_slice_in_window": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "k3_p5": "1",
+      "k3_p7": "19",
+      "k3_p13": "3/2",
+      "c_min13": 551,
+      "theorem": "k\u22643 count is 1,19,3/2. Fail: 3/2\u2265c_min(13)=551."
+    },
+    "B": {
+      "proved": true,
+      "n_slices": 40,
+      "n_in_win": 0,
+      "nearest_above": {
+        "max_k": 6,
+        "n0_min": 2,
+        "n0_max": 2,
+        "c": "630",
+        "c_f": 630.0
+      },
+      "nearest_below": {
+        "max_k": 6,
+        "n0_min": 0,
+        "n0_max": 1,
+        "c": "1011/2",
+        "c_f": 505.5
+      },
+      "window": [
+        551,
+        617,
+        67
+      ],
+      "theorem": "No p=13 slice in [551,617]. Nearest 630 and 1011/2. Fail: 630\u2208window."
+    },
+    "C": {
+      "proved": false,
+      "c_eq13": 617,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "k\u22643 undershoots; full restricted count overshoots; no n0/max_k slice hits the window. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
