@@ -1,0 +1,111 @@
+{
+  "prop": "15.417",
+  "title": "den(Q_NL) is not [H\u208a:Stab]/c(p); 15.298 unnamed-L slack exceeds the floor window",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "index_identification_dead": true,
+    "slack_too_wide": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "G": 600,
+          "Hplus": 130,
+          "n_nl": 100,
+          "den_QNL": 15,
+          "stabs": [
+            6
+          ],
+          "orbits": [
+            100
+          ],
+          "c": 1,
+          "index_hits": false
+        },
+        "7": {
+          "G": 2352,
+          "Hplus": 5726,
+          "n_nl": 5586,
+          "den_QNL": 171,
+          "stabs": [
+            2,
+            2,
+            2,
+            2,
+            4,
+            8
+          ],
+          "orbits": [
+            1176,
+            1176,
+            1176,
+            1176,
+            588,
+            294
+          ],
+          "c": 19,
+          "index_hits": false
+        }
+      },
+      "theorem": "den(Q_NL) is not [H\u208a:Stab] or [G:Stab] or c(p). Fail: 15|130; 19|2352; c(7)=171."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "dQ_dL_plus": "368/625",
+          "slack_k2": "1472/25",
+          "window": "27/28",
+          "slack_gt_window": true
+        },
+        "7": {
+          "dQ_dL_plus": "688/2401",
+          "slack_k2": "6192/49",
+          "window": "40/51",
+          "slack_gt_window": true
+        },
+        "11": {
+          "dQ_dL_plus": "1744/14641",
+          "slack_k2": "43600/121",
+          "window": "792/1225",
+          "slack_gt_window": true
+        },
+        "13": {
+          "dQ_dL_plus": "2544/28561",
+          "slack_k2": "91584/169",
+          "window": "175/284",
+          "slack_gt_window": true
+        }
+      },
+      "theorem": "15.298 ++-slot k\u00b2 slack exceeds Q^{ub}\u2212Q_lo at p=5,7. Fail: dQ/dL_++=0."
+    },
+    "C": {
+      "proved": false,
+      "Q_NL_5": "64/15",
+      "Q_NL_7": "632/171",
+      "index_hits_p5": false,
+      "index_hits_p7": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q_NL_is_short_rational": false,
+      "note": "Both leftover-1 referee directions fail their fail-when-wrong. c(7)=19 divides L_par den, not Q_NL. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}

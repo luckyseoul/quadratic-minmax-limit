@@ -1,0 +1,68 @@
+{
+  "A": {
+    "5": {
+      "G": 600,
+      "Hplus": 130,
+      "n_nl": 100,
+      "den_QNL": 15,
+      "stabs": [
+        6
+      ],
+      "orbits": [
+        100
+      ],
+      "c": 1,
+      "index_hits": false
+    },
+    "7": {
+      "G": 2352,
+      "Hplus": 5726,
+      "n_nl": 5586,
+      "den_QNL": 171,
+      "stabs": [
+        2,
+        2,
+        2,
+        2,
+        4,
+        8
+      ],
+      "orbits": [
+        1176,
+        1176,
+        1176,
+        1176,
+        588,
+        294
+      ],
+      "c": 19,
+      "index_hits": false
+    }
+  },
+  "B": {
+    "5": {
+      "dQ_dL_plus": "368/625",
+      "slack_k2": "1472/25",
+      "window": "27/28",
+      "slack_gt_window": true
+    },
+    "7": {
+      "dQ_dL_plus": "688/2401",
+      "slack_k2": "6192/49",
+      "window": "40/51",
+      "slack_gt_window": true
+    },
+    "11": {
+      "dQ_dL_plus": "1744/14641",
+      "slack_k2": "43600/121",
+      "window": "792/1225",
+      "slack_gt_window": true
+    },
+    "13": {
+      "dQ_dL_plus": "2544/28561",
+      "slack_k2": "91584/169",
+      "window": "175/284",
+      "slack_gt_window": true
+    }
+  }
+}
