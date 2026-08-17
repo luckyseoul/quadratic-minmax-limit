@@ -1,0 +1,97 @@
+{
+  "prop": "15.471",
+  "title": "Lag-s \u039b_0,\u039b_2 named; \u039b_1 \u2260 Cov++; n_k halves of \u03c7\u00b1",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "nk_halves": true,
+    "Lam02_named": true,
+    "Lam1_not_cov": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "mean": [
+            15.0,
+            7.5,
+            15.0,
+            7.5
+          ],
+          "nunique": 4,
+          "n1_min": 5.0,
+          "n1_max": 10.0
+        },
+        "7": {
+          "mean": [
+            63.0,
+            42.0,
+            63.0,
+            42.0
+          ],
+          "nunique": 5,
+          "n1_min": 42.0,
+          "n1_max": 42.0
+        }
+      },
+      "theorem": "E[n_k] are the named halves of \u03c7\u00b1. Fail: n1 constant at p=5."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "Lam0+": 450.0,
+          "named0+": 450.0,
+          "Lam2+": 150.0,
+          "named2+": 150.0
+        },
+        "7": {
+          "Lam0+": 4410.0,
+          "named0+": 4410.0,
+          "Lam2+": 882.0000000000001,
+          "named2+": 882.0
+        }
+      },
+      "theorem": "\u039b_0=\u03bc k(k\u22121) and \u039b_2=\u03c7 \u03bc S_\u03c7 (15.468). Fail: \u039b_2(+)=0."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "Lam1_sq": [
+            16.923076923076913,
+            -8.461538461538467
+          ],
+          "cov": "10/39"
+        },
+        "7": {
+          "Lam1_sq": [
+            32.3471882640587,
+            0.0
+          ],
+          "cov": "2793/1636"
+        }
+      },
+      "theorem": "\u039b_1(\u25a1)=220/13\u2212(110/13)i and 13230/409, not Cov++. Fail: \u039b_1(\u25a1)=10/39."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "\u039b_1 is the odd lag moment, not Cov++. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
