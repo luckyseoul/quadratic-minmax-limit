@@ -1,0 +1,81 @@
+{
+  "prop": "15.452",
+  "title": "Type+ S=q(q\u22121)/4 on a 2/(p+1) slice; E_1D and S_NL=2q do not name ensemble Q++",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "S_star_named": true,
+    "E1_inversion_not_live": true,
+    "Snl_2q_dies": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "nz": 10,
+          "z": 20,
+          "S": "150",
+          "named": "150",
+          "no4": "600"
+        },
+        "7": {
+          "nz": 35,
+          "z": 105,
+          "S": "588",
+          "named": "588",
+          "no4": "2352"
+        }
+      },
+      "theorem": "S_*=q(q\u22121)/4 on C(p,m) Type+ lifts. Fail: drop /4."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "Q_from_E1": "16",
+          "live": "48/13"
+        },
+        "7": {
+          "Q_from_E1": "20",
+          "live": "1544/409"
+        }
+      },
+      "theorem": "E_1D inversion is 16,20 not live Q++. Fail: 16=48/13."
+    },
+    "C": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "50": 100
+        },
+        "7": {
+          "0": 294,
+          "98": 2646,
+          "196": 2205,
+          "294": 441
+        }
+      },
+      "false_Q7": "-332/409",
+      "theorem": "S_NL=2q at p=5 not p=7. Fail: inversion \u2212332/409\u22601544/409."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "E_1D[S\u00b2] named. E_ens[S\u00b2] still has den |H+|. Q_\u03c4 unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
