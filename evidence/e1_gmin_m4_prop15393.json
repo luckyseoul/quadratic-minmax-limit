@@ -1,0 +1,78 @@
+{
+  "prop": "15.393",
+  "title": "first_nc(T) empty at p=37,41; Paley-half names the small-p c",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "paley_half_matches_or_empty": true,
+    "no_circle_at_37": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "hits": [
+            2,
+            3
+          ],
+          "min": 2
+        },
+        "13": {
+          "hits": [
+            5
+          ],
+          "min": 5
+        },
+        "17": {
+          "hits": [
+            3
+          ],
+          "min": 3
+        },
+        "29": {
+          "hits": [
+            17
+          ],
+          "min": 17
+        },
+        "37": {
+          "hits": [],
+          "min": null
+        },
+        "41": {
+          "hits": [],
+          "min": null
+        }
+      },
+      "theorem": "Paley-half names live c at p=5,13,17,29 and is empty at p=37,41. Fail: ib at p=13."
+    },
+    "B": {
+      "proved": true,
+      "p37": {
+        "Maxplus": true,
+        "n_clique": 0,
+        "first": null
+      },
+      "theorem": "y_T is Max+ at p=37 and C_T has 0 clique norm-circles. Fail: claim a t=0 clique."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "T\u2299NC empty at p=37,41 so first_nc c is not a general name. Ensemble D / Q_\u03c4 still unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}

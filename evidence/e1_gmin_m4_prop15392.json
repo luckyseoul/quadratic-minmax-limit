@@ -1,0 +1,123 @@
+{
+  "prop": "15.392",
+  "title": "first_nc(T) t=0; good c nsq; c=ib dies; catalog empty",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "t_eq_0": true,
+    "c_nonsquare": true,
+    "ib_dies": true,
+    "catalog_empty": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "t": 0,
+          "c": 2
+        },
+        "13": {
+          "t": 0,
+          "c": 5
+        },
+        "17": {
+          "t": 0,
+          "c": 3
+        },
+        "29": {
+          "t": 0,
+          "c": 17
+        }
+      },
+      "theorem": "first_nc(T) has t=0 at p\u22611. Fail: t=1."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "good_c": [
+            2,
+            3
+          ],
+          "first_c": 2
+        },
+        "13": {
+          "good_c": [
+            5
+          ],
+          "first_c": 5
+        },
+        "17": {
+          "good_c": [
+            3
+          ],
+          "first_c": 3
+        },
+        "29": {
+          "good_c": [
+            17
+          ],
+          "first_c": 17
+        }
+      },
+      "theorem": "Good c at t=0 are nonsquares; first_nc c=min. Fail: c=1."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "min_c": 2,
+          "ib": 2,
+          "eq": true
+        },
+        "13": {
+          "min_c": 5,
+          "ib": 2,
+          "eq": false
+        },
+        "17": {
+          "min_c": 3,
+          "ib": 3,
+          "eq": true
+        },
+        "29": {
+          "min_c": 17,
+          "ib": 2,
+          "eq": false
+        }
+      },
+      "theorem": "c=ib dies at p=13 (5\u22602). Fail: c=ib at p=13."
+    },
+    "D": {
+      "proved": true,
+      "eq_hits": [],
+      "ratio_hits": [],
+      "live": {
+        "5": 2,
+        "13": 5,
+        "17": 3,
+        "29": 17
+      },
+      "theorem": "No catalog feat equals live c at all four primes."
+    },
+    "E": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "min nsq Hoffman c unnamed as a short formula. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
