@@ -1,0 +1,105 @@
+{
+  "prop": "15.444",
+  "title": "J(\u03c7,\u03c8_2)=-(p-2)\u00b12i\u221a(p-1) dies at p\u226511; C_\u03c4 not type-constant",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "J_formula_dies": true,
+    "C_tau_not_const": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "re": -2.9999999999999987,
+          "im": 3.9999999999999982,
+          "want_re": -3,
+          "hit": true
+        },
+        "7": {
+          "re": -4.999999999999999,
+          "im": 4.898979485566356,
+          "want_re": -5,
+          "hit": true
+        },
+        "11": {
+          "re": -10.708203932499373,
+          "im": 2.5168171447296457,
+          "want_re": -9,
+          "hit": false
+        },
+        "13": {
+          "re": -2.8237079999591654,
+          "im": 12.689628565524162,
+          "want_re": -11,
+          "hit": false
+        },
+        "17": {
+          "re": 6.485355277018763,
+          "im": -15.714329986698292,
+          "want_re": -15,
+          "hit": false
+        },
+        "19": {
+          "re": -12.06473810975259,
+          "im": 14.67794584889464,
+          "want_re": -17,
+          "hit": false
+        },
+        "23": {
+          "re": 2.839993111498888,
+          "im": -22.82398823883852,
+          "want_re": -21,
+          "hit": false
+        }
+      },
+      "theorem": "J(\u03c7,\u03c8_2)=-(p-2)\u00b12i\u221a(p-1) at p=5,7 and not at p\u226511. Fail: claim the formula at p=11."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "C_pp": [
+            "14",
+            "9"
+          ],
+          "const": false
+        },
+        "7": {
+          "C_pp": [
+            "18",
+            "25"
+          ],
+          "const": false
+        },
+        "11": {
+          "C_pp": [
+            "36",
+            "69"
+          ],
+          "const": false
+        }
+      },
+      "theorem": "C_++ takes \u22652 values at p=5,7,11. Fail: claim C_++ constant at p=5."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "J(\u03c7,\u03c8_2) has no 0-parameter name from the p=5,7 pattern. C_\u03c4 is not type-constant. Q_\u03c4 unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
