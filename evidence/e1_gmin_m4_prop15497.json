@@ -1,0 +1,107 @@
+{
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n_N*": 4,
+        "values": [
+          -4,
+          -2,
+          2
+        ],
+        "named_set": [
+          -4,
+          -2,
+          2
+        ]
+      },
+      "7": {
+        "n_N*": 12,
+        "values": [
+          -6,
+          -4,
+          2
+        ],
+        "named_set": [
+          -6,
+          -4,
+          2
+        ]
+      },
+      "11": {
+        "n_N*": 40,
+        "values": [
+          -10,
+          -8,
+          2
+        ],
+        "named_set": [
+          -10,
+          -8,
+          2
+        ]
+      },
+      "13": {
+        "n_N*": 60,
+        "values": [
+          -12,
+          -10,
+          2
+        ],
+        "named_set": [
+          -12,
+          -10,
+          2
+        ]
+      },
+      "17": {
+        "n_N*": 112,
+        "values": [
+          -16,
+          -14,
+          2
+        ],
+        "named_set": [
+          -16,
+          -14,
+          2
+        ]
+      },
+      "19": {
+        "n_N*": 144,
+        "values": [
+          -18,
+          -16,
+          2
+        ],
+        "named_set": [
+          -18,
+          -16,
+          2
+        ]
+      }
+    }
+  },
+  "B": {
+    "proved": true,
+    "max_live": 1.8461538461538607,
+    "max_named": "24/13",
+    "n_checked": 10
+  },
+  "C": {
+    "proved": true,
+    "D_live": 13,
+    "D_need": "64/5",
+    "max_pair": "24/13",
+    "D_1d_too_small": true
+  },
+  "D": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "J_{N*} named; pairing reduced to D. D=|H+|/(2p) unnamed. p\u22613 still has a --N1 term. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false
+}
