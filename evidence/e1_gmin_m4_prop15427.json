@@ -1,0 +1,87 @@
+{
+  "prop": "15.427",
+  "title": "L_--N1 is CROSS mix under ++ \u03c6; Q_NL still open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "LM1_extras": true,
+    "LM1_dest_34": true,
+    "LM1_mix_6131_57": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "p5": [],
+      "p7": [
+        9,
+        12,
+        44,
+        47
+      ],
+      "slopes": [
+        "4",
+        "3",
+        "3",
+        "4"
+      ],
+      "theorem": "extra --N1 empty at p=5; {9,12,44,47} slopes {3,4} at p=7. Fail: extras vertical; nonempty at p=5."
+    },
+    "B": {
+      "proved": true,
+      "dest0": {
+        "9": [
+          "4"
+        ],
+        "12": [
+          "3"
+        ],
+        "44": [
+          "3"
+        ],
+        "47": [
+          "4"
+        ]
+      },
+      "theorem": "--N1 extras send slope 0 to {3,4}, not {inf}. Fail: vertical dest."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "219": "325/3",
+        "671": "325/3",
+        "RRRC": "105",
+        "665": "1309/12",
+        "344": "213/2",
+        "695": "323/3"
+      },
+      "mix": "6131/57",
+      "Nstar_phi": "6269/57",
+      "same_pp": "673/6",
+      "theorem": "CROSS slots under ++ \u03c6 mix to 6131/57. Fail: N* \u03c6 6269/57; same-pair ++ 673/6."
+    },
+    "D": {
+      "proved": false,
+      "Q_NL_5": "64/15",
+      "Q_1d_5": "16/9",
+      "Q_NL_gt_Q1d_p5": true,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q_NL_is_short_rational": false,
+      "note": "L_--N1 named at p=5,7 as CROSS mix under ++ \u03c6. Q_NL unnamed in p. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
