@@ -1,0 +1,73 @@
+{
+  "prop": "15.432",
+  "title": "L_ns is Paley\u00d7norm indexed; not \u03bc\u03bc; Q_NL open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Lns_not_N_only": true,
+    "Lns_sum_2mumu": true,
+    "p5_law_dies_p7": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "N3_Lplus": [
+        "1398/19",
+        "2733/38"
+      ],
+      "theorem": "L_ns constant on (Paley, N), not on N only. Fail: N=3 one L at p=7."
+    },
+    "B": {
+      "proved": true,
+      "two_mumu": {
+        "5": "25",
+        "7": "147"
+      },
+      "zero_diff_p7": [
+        [
+          -1,
+          1,
+          6
+        ],
+        [
+          1,
+          -1,
+          6
+        ]
+      ],
+      "theorem": "L\u208a+L\u208b=2\u03bc\u208a\u03bc\u208b. Fail: L\u208a=L\u208b on every class."
+    },
+    "C": {
+      "proved": true,
+      "p5_law": "\u03bc\u03bc+(N\u2212p/2)",
+      "p7_law_on_mm_N3": "73",
+      "p7_live": "2733/38",
+      "theorem": "p=5 L\u208a=\u03bc\u03bc+(N\u2212p/2). Fail: same law at p=7 (73\u22602733/38)."
+    },
+    "D": {
+      "proved": false,
+      "Q_NL_5": "64/15",
+      "Q_1d_5": "16/9",
+      "Q_NL_gt_Q1d_p5": true,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q_NL_is_short_rational": false,
+      "note": "L_ns Paley\u00d7norm indexed. No formula in p. Q_NL unnamed. phi_F not imported."
+    },
+    "fold_matches_LIVE": true
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
