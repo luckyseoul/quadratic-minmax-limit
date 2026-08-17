@@ -1,0 +1,113 @@
+{
+  "prop": "15.460",
+  "title": "k_R=(p^2-1)/24; CRRR count is C(r,3) u; c_CRRR=35 misses the p=13 window",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "k_R_identity": true,
+    "n_CRRR_binom": true,
+    "c_CRRR_misses_window": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "k_R": 1,
+          "k_sig": 1,
+          "3k": 3,
+          "C_r_2": 3
+        },
+        "7": {
+          "k_R": 2,
+          "k_sig": 2,
+          "3k": 6,
+          "C_r_2": 6
+        },
+        "11": {
+          "k_R": 5,
+          "k_sig": 5,
+          "3k": 15,
+          "C_r_2": 15
+        },
+        "13": {
+          "k_R": 7,
+          "k_sig": 7,
+          "3k": 21,
+          "C_r_2": 21
+        },
+        "17": {
+          "k_R": 12,
+          "k_sig": 12,
+          "3k": 36,
+          "C_r_2": 36
+        },
+        "19": {
+          "k_R": 15,
+          "k_sig": 15,
+          "3k": 45,
+          "C_r_2": 45
+        },
+        "23": {
+          "k_R": 22,
+          "k_sig": 22,
+          "3k": 66,
+          "C_r_2": 66
+        },
+        "29": {
+          "k_R": 35,
+          "k_sig": 35,
+          "3k": 105,
+          "C_r_2": 105
+        }
+      },
+      "theorem": "k_R=(p^2-1)/24 and 3 k_R=C(r,2). Fail: k_R=1 at p=7."
+    },
+    "B": {
+      "proved": true,
+      "n5": 100,
+      "n7": 1176,
+      "named": {
+        "5": 100,
+        "7": 1176,
+        "13": 70980
+      },
+      "old_r_u_p5": 300,
+      "C_r4_u_p7": 294,
+      "theorem": "n=C(r,3) u is 100,1176,70980. Fail: r u at p=5 (300\u2260100)."
+    },
+    "C": {
+      "proved": true,
+      "c5": 1,
+      "c7": 4,
+      "c13": 35,
+      "window13": [
+        551,
+        617,
+        67
+      ],
+      "c_eq13": 617,
+      "theorem": "c_CRRR=C(r,3) is 1,4,35. 35\u2209[551,617]. Fail: 35=c_eq."
+    },
+    "D": {
+      "proved": false,
+      "c_CRRR13": 35,
+      "c_eq13": 617,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "CRRR is named in p and undershoots the window. Remaining types unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
