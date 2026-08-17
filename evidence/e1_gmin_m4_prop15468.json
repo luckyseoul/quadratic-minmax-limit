@@ -1,0 +1,98 @@
+{
+  "prop": "15.468",
+  "title": "Max+ \u03c7-pair count named from Cy=py; 3-point not constant",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "pair_law": true,
+    "pair_cache": true,
+    "triple_not_constant": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "3": {
+          "S": 6,
+          "chi+": "3",
+          "chi-": "0",
+          "drop": "15/2"
+        },
+        "5": {
+          "S": 30,
+          "chi+": "30",
+          "chi-": "15",
+          "drop": "65/2"
+        },
+        "7": {
+          "S": 84,
+          "chi+": "126",
+          "chi-": "84",
+          "drop": "175/2"
+        },
+        "11": {
+          "S": 330,
+          "chi+": "825",
+          "chi-": "660",
+          "drop": "671/2"
+        },
+        "13": {
+          "S": 546,
+          "chi+": "1638",
+          "chi-": "1365",
+          "drop": "1105/2"
+        }
+      },
+      "theorem": "S_\u03c7=p(p\u00b2\u22121)/4 from Cy=py. Fail: drop \u221e-border (65/2=30 at p=5)."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "3": {
+          "n": 6,
+          "S": 6,
+          "chi+": "3",
+          "max_err": 0.0
+        },
+        "5": {
+          "n": 130,
+          "S": 30,
+          "chi+": "30",
+          "max_err": 0.0
+        },
+        "7": {
+          "n": 5726,
+          "S": 84,
+          "chi+": "126",
+          "max_err": 0.0
+        }
+      },
+      "theorem": "Pair counts hold on every live Max+. Fail: \u03c7+=C(k,2)/2 at p=5."
+    },
+    "C": {
+      "proved": true,
+      "nunique": 16,
+      "n_rows": 130,
+      "multiset_size": 16,
+      "theorem": "p=5 \u03c7-triple fingerprint takes 16 values. Fail: a single fingerprint."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "2-point of 1_D is named. 3-point is not constant. L++ still unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
