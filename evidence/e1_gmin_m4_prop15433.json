@@ -1,0 +1,80 @@
+{
+  "prop": "15.433",
+  "title": "L_ns \u03b4 signs are \u03c7_p(N+1) / \u03c7(s\u22121); amps not in p",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "p5_chi_N1": true,
+    "p7_sign_law": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "(-1, -1, 2)": {
+          "\u03b4": "-1/2",
+          "law": "-1/2"
+        },
+        "(-1, 1, 2)": {
+          "\u03b4": "-1/2",
+          "law": "-1/2"
+        },
+        "(-1, 1, 3)": {
+          "\u03b4": "1/2",
+          "law": "1/2"
+        },
+        "(1, -1, 2)": {
+          "\u03b4": "-1/2",
+          "law": "-1/2"
+        },
+        "(1, -1, 3)": {
+          "\u03b4": "1/2",
+          "law": "1/2"
+        },
+        "(1, 1, 3)": {
+          "\u03b4": "1/2",
+          "law": "1/2"
+        }
+      },
+      "hand19": "-1/19",
+      "theorem": "p=5 \u03b4=\u03c7_p(N+1)/2. Fail: L\u2261\u03bc\u03bc; fail: den 19 (\u03c7_p(N+1)/19\u2260\u00b11/2)."
+    },
+    "B": {
+      "proved": true,
+      "mix_amp": "3/38",
+      "unm_amp": "30/19",
+      "p5_amp": "1/2",
+      "N3_amps": [
+        "3/38",
+        "30/19"
+      ],
+      "theorem": "p=7 mixed \u03b4=\u03c7_p(N+1)\u00b73/38 (0 if N=\u22121); unmixed \u03b4=\u03c7(s\u22121)\u00b730/19. Fail: amp 1/2 at p=7; N-only."
+    },
+    "C": {
+      "proved": false,
+      "amp_unm_has_19": true,
+      "amp_mix_has_19": true,
+      "Q_NL_5": "64/15",
+      "Q_1d_5": "16/9",
+      "Q_NL_gt_Q1d_p5": true,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q_NL_is_short_rational": false,
+      "note": "Signs named. Amplitudes 30/19 and 3/38 not field GJ. Q_NL unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
