@@ -1,0 +1,73 @@
+{
+  "prop": "15.425",
+  "title": "N* \u03c6=\u00d7{1,2,5,6}; opposite R\u00d7R is 133; R\u00d7C \u00d72 is 238/3; RRRC same-pair 637/6; Q_NL still open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Nstar_phi_1256": true,
+    "RR_opp_133": true,
+    "RC_x2_238_3": true,
+    "RRRC_637_6": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "Nstar_k": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "pp_k": [
+        3,
+        4
+      ],
+      "theorem": "Vertical N* \u03c6=\u00d7{1,2,5,6}=F_7^\u00d7\\{3,4}. Fail: N* uses ++ {\u00d73,\u00d74}."
+    },
+    "B": {
+      "proved": true,
+      "form": "133",
+      "same_orient": "413/3",
+      "pp_opp": "427/3",
+      "theorem": "Opposite R\u00d7R under N* \u03c6 is L_par(R)=133. Fail: same-orient 413/3; ++ \u03c6 427/3."
+    },
+    "C": {
+      "proved": true,
+      "form": "238/3",
+      "id": "245/3",
+      "x3": "84",
+      "theorem": "R\u00d7C N* relative \u00d72 is 238/3. Fail: id 245/3; \u00d73 84."
+    },
+    "D": {
+      "proved": true,
+      "mix": "637/6",
+      "noC": "133",
+      "theorem": "RRRC same-pair N*=(133+238/3)/2=637/6. Fail: 133."
+    },
+    "E": {
+      "proved": false,
+      "LN_same": "12349/114",
+      "Q_NL_5": "64/15",
+      "Q_1d_5": "16/9",
+      "Q_NL_gt_Q1d_p5": true,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q_NL_is_short_rational": false,
+      "note": "N* \u03c6 and R/C slots named. Full mix 12349/114 needs O orientations. Q_NL unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
