@@ -1,0 +1,21 @@
+{
+  "A": {
+    "proved": true,
+    "extra_5": [],
+    "extra_7": [
+      21,
+      28
+    ],
+    "vert_types_7": {
+      "n_vert": 6,
+      "n_pp": 2
+    },
+    "theorem": "extra ++ = (p F_p^\u00d7) \u2229 ++. Empty at p=5; {21,28} at p=7. Fail: extra = all of p F_p^\u00d7; fail: extra nonempty at p=5."
+  },
+  "B": {
+    "Lspl": "673/6"
+  },
+  "C": {
+    "E_JJ": "673/294"
+  }
+}

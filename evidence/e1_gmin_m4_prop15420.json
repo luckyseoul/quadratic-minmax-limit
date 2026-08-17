@@ -1,0 +1,64 @@
+{
+  "prop": "15.420",
+  "title": "Extra ++ is (p F_p^\u00d7)\u2229++; L_spl is two-slope rank-1 4-point; Q_NL still open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "extra_is_vert_pp": true,
+    "Lspl_two_slope": true,
+    "cov_rank1": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "extra_5": [],
+      "extra_7": [
+        21,
+        28
+      ],
+      "vert_types_7": {
+        "n_vert": 6,
+        "n_pp": 2
+      },
+      "theorem": "extra ++ = (p F_p^\u00d7) \u2229 ++. Empty at p=5; {21,28} at p=7. Fail: extra = all of p F_p^\u00d7; fail: extra nonempty at p=5."
+    },
+    "B": {
+      "proved": true,
+      "Lspl": "673/6",
+      "indep": "441/4",
+      "cov_sum": "23/12",
+      "theorem": "L_spl is the two-slope 4-point. Fail: independence 441/4 \u2260 673/6."
+    },
+    "C": {
+      "proved": true,
+      "E_JJ": "673/294",
+      "cov_entry": "23/588",
+      "rank": 1,
+      "theorem": "E[J_\u2113 J_m]=673/294 constant; Cov rank 1. Fail: Cov=0."
+    },
+    "D": {
+      "proved": false,
+      "Q_NL_5": "64/15",
+      "Q_1d_5": "16/9",
+      "Q_NL_gt_Q1d_p5": true,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q_NL_is_short_rational": false,
+      "note": "L_spl^{NL} is the two-slope 4-point at p=7. 673/6 unnamed in p. Q_NL unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
