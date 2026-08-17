@@ -1,0 +1,86 @@
+{
+  "prop": "15.480",
+  "title": "I_sm quadratic-\u03c7 kernels are Kl(1, \u03b1\u00b2/4) and phases",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "S_is_kloosterman": true,
+    "complete_square_W": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "3": {
+          "err": 1.5100665727558131e-15,
+          "err_wrong": 3.0000000000000004,
+          "G": [
+            3.0,
+            -3.3306690738754696e-16
+          ]
+        },
+        "5": {
+          "err": 2.0380985511143445e-15,
+          "err_wrong": 8.94427190999916,
+          "G": [
+            -5.0,
+            0.0
+          ]
+        },
+        "7": {
+          "err": 3.66205343881779e-15,
+          "err_wrong": 14.64071122600185,
+          "G": [
+            7.0,
+            3.3306690738754696e-16
+          ]
+        },
+        "11": {
+          "err": 2.880167609092343e-14,
+          "err_wrong": 28.03528254529297,
+          "G": [
+            11.000000000000009,
+            -7.771561172376096e-16
+          ]
+        }
+      },
+      "theorem": "S(\u03b2)=Kl(1, \u03b2\u00b2/4). Fail: Kl(1, \u2212\u03b2\u00b2/4)."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "err_s": 1.9860273225978185e-15,
+          "err_rm": 2.5121479338940403e-15,
+          "err_rp": 2.220446049250313e-15,
+          "err_drop_phase": 11.584191620695654
+        },
+        "7": {
+          "err_s": 2.8435583831733384e-15,
+          "err_rm": 3.563539207208429e-15,
+          "err_rp": 3.202372833989377e-15,
+          "err_drop_phase": 19.112365384208886
+        }
+      },
+      "theorem": "W_{r(r\u22121)}=e(\u03b1/2)S(\u03b1/2), W_{r(r+1)}=e(\u2212\u03b1/2)S(\u03b1/2). Fail: drop e(\u03b1/2)."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Three quadratic-\u03c7 kernels are Kl. Cubic W_c and Q_\u03c4 unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
