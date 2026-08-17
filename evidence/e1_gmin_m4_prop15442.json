@@ -1,0 +1,85 @@
+{
+  "prop": "15.442",
+  "title": "p=7 NL multiplicity {4\u00d72,1\u00d74,1\u00d78} is not a p\u22613 law",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "second_stab4_p11": true,
+    "c_lo_table": true,
+    "p7_pattern_not_p3_law": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "found": true,
+      "t": 91,
+      "c": 4,
+      "stab": 4,
+      "ystar_stab": 4,
+      "same_orbit_as_ystar": false,
+      "theorem": "p=11 has a second stab-4 NL orbit (ystar\u2299NC). Fail: same_orbit(ystar, ystar\u2299NC)."
+    },
+    "B": {
+      "proved": true,
+      "by_p": {
+        "5": {
+          "stabs": [
+            6
+          ],
+          "c_lo": 1
+        },
+        "7": {
+          "stabs": [
+            4,
+            2,
+            2,
+            2
+          ],
+          "c_lo": 14,
+          "n_stab2": 3
+        },
+        "11": {
+          "stabs": [
+            4,
+            2,
+            2,
+            4
+          ],
+          "c_lo": 18
+        }
+      },
+      "theorem": "c_lo=1,14,18 at p=5,7,11. Fail: c_lo=19 at p=7; unique stab-2 at p=7."
+    },
+    "C": {
+      "proved": true,
+      "m4_p11": 2,
+      "p7_pattern": [
+        2,
+        2,
+        2,
+        2,
+        4,
+        8
+      ],
+      "theorem": "p=7 multiplicity {4\u00d72,1\u00d74,1\u00d78} is not a p\u22613 law (m(4)\u22652 at p=11). Fail: m(4)=1 at p=11."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Constructor table kills the p=7 multiplicity as a p\u22613 law. c(p) unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
