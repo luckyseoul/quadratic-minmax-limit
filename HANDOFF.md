@@ -1,5 +1,5 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-17 afternoon):** Leftover 1 still **OPEN**. 15.453–15.465 shipped. Type-counts / CRRR / two-occupancy pairs are dead as a pin of \(c\) for \(p\ge13\). Live Paley-\(N^*\) \(Q=1496/409\) is **not** S0 \(Q_n=1440/409\). The 15.465 ratio \(R(p)\) hits \(p=5,7\) only — not a general \(Q_\tau\). Do **not** import \(\phi_F\). Residual (ii) \(k\ge4p\) and Type I multi-level still OPEN. Aut-Schur **false**. Live `e1` is the old AND. \(L=\tfrac12\) is **not settled**.  
+> **Now (2026-08-17 evening):** Leftover 1 still **OPEN**. 15.453–15.467 shipped. Coarse \(L_{ns}=\mu_+\mu_-\) at \(p=5,7\); named atoms miss \(L_{++}\); \(D\equiv3\pmod p\) dies at \(p=3\). Type-Fourier / \(S_k\) GJ / occupancy are dead. p=11 6-net ETA \(\ge580\) h — leave PID 712954, do not wait. Do **not** import \(\phi_F\). Residual (ii) \(k\ge4p\) and Type I multi-level still OPEN. Aut-Schur **false**. Live `e1` is the old AND. \(L=\tfrac12\) is **not settled**.  
 > Afternoon: **`evidence/SESSION_HANDOFF_2026-08-17_qtau.md`**. Morning: **`evidence/SESSION_HANDOFF_2026-08-17_leftover.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**. Next `/goal`: **`GOAL.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
@@ -29,7 +29,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 **Done (2026-08-06):** gap named (Gsum disj LB / 15.158); claim retracted OPEN; short package `evidence/share/denseness_path_package.md`; load-bearing tests; 3 cold AI passes → NOT_PROVED + honest OPEN.
 
-**Open (blocks \(L=\tfrac12\)):** (1) \(\lambda_{\min}(\Phi)\ge6\) — name \(Q_\tau\) by a **character-sum** formula on 15.290 types (15.458–465 killed occupancy pins and the 15.465 2-point ratio as a general law); (2) residual (ii) for even \(k\ge4p\); (3) Type I when Max− is not two-level; (4) Lemma D already flagged True — do not cascade. Live `e1` is still True (wiring only).  
+**Open (blocks \(L=\tfrac12\)):** (1) \(\lambda_{\min}(\Phi)\ge6\) — name \(Q_\tau\) by a **character-sum** formula on 15.290 types (15.466–467: named L fills miss Q++, coarse \(L_{ns}=\mu_+\mu_-\), named atoms miss \(L_{++}\), \(D\equiv3\pmod p\) dies at \(p=3\)); (2) residual (ii) for even \(k\ge4p\); (3) Type I when Max− is not two-level; (4) Lemma D already flagged True — do not cascade. Live `e1` is still True (wiring only).  
 
 **Non-required:** Path-C / \(16N\).  
 
@@ -58,7 +58,7 @@ His bar: pass an **“AI test”** (any reasonable AI calls the writeup essentia
 
 ## 0. One-line status
 
-Residual (ii) closed for affine + even \(k\le4p-2\), **OPEN** for even \(k\ge4p\). Floor leftover 1: \(Q_\tau\) still unnamed in \(p\) (15.465 ratio is \(p=5,7\) only). Multi-level Type I is OPEN. Aut-Schur stays false. Gsum unused. \(L=\tfrac12\) is **OPEN**.
+Residual (ii) closed for affine + even \(k\le4p-2\), **OPEN** for even \(k\ge4p\). Floor leftover 1: \(Q_\tau\) still unnamed in \(p\) (15.467: name \(L_{++}\); ns average is \(\mu_+\mu_-\)). Multi-level Type I is OPEN. Aut-Schur stays false. Gsum unused. \(L=\tfrac12\) is **OPEN**.
 
 ### P0 status
 

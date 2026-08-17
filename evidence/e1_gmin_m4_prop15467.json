@@ -1,0 +1,110 @@
+{
+  "prop": "15.467",
+  "title": "Coarse L++ is not a named L atom; L_ns=\u03bc+\u03bc\u2212; D\u22623 (mod 3) at p=3",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "coarse_L_values": true,
+    "coarse_Lns_is_mupm": true,
+    "named_atoms_miss_Lpp": true,
+    "D_mod_p_not_3_at_p3": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "++": {
+            "1": "985/39",
+            "-1": "215/39"
+          },
+          "N*": {
+            "1": "290/13",
+            "-1": "85/13"
+          },
+          "ns": {
+            "1": "25/2",
+            "-1": "25/2"
+          }
+        },
+        "7": {
+          "++": {
+            "1": "91581/818",
+            "-1": "19061/409"
+          },
+          "N*": {
+            "1": "89285/818",
+            "-1": "20062/409"
+          },
+          "ns": {
+            "1": "147/2",
+            "-1": "147/2"
+          }
+        }
+      },
+      "theorem": "Coarse L++(+)=985/39, 91581/818. Fail: L++(+)=\u03bc+\u00b2."
+    },
+    "B": {
+      "proved": true,
+      "ns5": "25/2",
+      "ns7": "147/2",
+      "mupm5": "25/2",
+      "mupm7": "147/2",
+      "theorem": "Coarse L_ns=\u03bc+\u03bc\u2212 at p=5 and p=7. Fail: the fine slot 180/13 equals 25/2."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "Lpar_1d": "100/3",
+          "Lpar_R": "24",
+          "Lspl_1d": "25",
+          "L1d_pp": "100/3",
+          "mup_sq": "25",
+          "mup_mum": "25/2"
+        },
+        "7": {
+          "Lpar_1d": "2793/20",
+          "Lpar_R": "133",
+          "Lspl_1d": "539/5",
+          "L1d_pp": "3871/30",
+          "mup_sq": "441/4",
+          "mup_mum": "147/2"
+        }
+      },
+      "theorem": "Named L atoms miss L++(+) at both primes. Fail: Lpar_1d(5)=985/39."
+    },
+    "D": {
+      "proved": true,
+      "D": {
+        "3": 1,
+        "5": 13,
+        "7": 409
+      },
+      "residues": {
+        "3": 1,
+        "5": 3,
+        "7": 3
+      },
+      "theorem": "D\u22613 (mod p) at p=5,7 and not at p=3. Fail: D(3)\u22613 (mod 3)."
+    },
+    "E": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Coarse L++ named as cache fractions only. L_++ still unnamed in p. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
