@@ -1,6 +1,6 @@
 # Status (2026-08-17 evening)
 
-Leftover campaign: 15.273–15.480 shipped. Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.480: three I_sm quadratic-χ kernels are Kloosterman; cubic \(W_c\) and \(Q_\tau\) unnamed. Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
+Leftover campaign: 15.273–15.481 shipped. Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.481: \(W_c\) is the E-sum on \(y^2=x^3-x\); named \(K_{++}\) recovers \(Q_{++}\). \(Q_\tau\) is not a rational in \(p\). Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|

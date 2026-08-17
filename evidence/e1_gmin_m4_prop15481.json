@@ -1,0 +1,77 @@
+{
+  "prop": "15.481",
+  "title": "W_c is the E-sum on y\u00b2=x\u00b3\u2212x; named K_++ recovers Q++",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Wc_is_E_sum": true,
+    "Kpp_identity": true,
+    "named_K_recovers_Qpp": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "err": 2.094764613337708e-15,
+          "Wc0": 6.0,
+          "Eminus1": 31
+        },
+        "7": {
+          "err": 3.625264947627759e-15,
+          "Wc0": 14.0,
+          "Eminus1": 63
+        }
+      },
+      "theorem": "W_c(\u03b1\u22600)=\u2211(1+\u03c7(x\u00b3\u2212x))e(\u03b1x); W_c(0)=2p\u2212a_E\u00b2. Fail: W_c(0)=#E\u22121."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "err": 5.389157964038493e-16,
+          "err_drop38": 0.37500000000000044
+        },
+        "7": {
+          "err": 9.652865622940191e-16,
+          "err_drop38": 0.3750000000000009
+        }
+      },
+      "theorem": "K_++ = K_lin+3/8+(W's+W_c)/8\u2212\u00bd(1+e+e\u2212). Fail: drop 3/8."
+    },
+    "C": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "Q": 3.6923076923076876,
+          "Q_drop_c": 3.538461538461537,
+          "live": 3.6923076923076925
+        },
+        "7": {
+          "Q": 3.7750611246943753,
+          "Q_drop_c": 3.3276283618581903,
+          "live": 3.7750611246943766
+        }
+      },
+      "theorem": "Named K_++ recovers live Q++. Fail: drop W_c."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "W_c is the E-sum on y\u00b2=x\u00b3\u2212x, not a short rational in p. Q_\u03c4 unnamed as a formula in p. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
