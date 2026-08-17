@@ -1,0 +1,64 @@
+{
+  "prop": "15.439",
+  "title": "19 cannot cancel in Q_NL; Q_NL=2 B_NL/(c p (p\u22121))",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Q_NL_from_c": true,
+    "19_essential_not_GJ": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "c": 1,
+          "Q": "64/15"
+        },
+        "7": {
+          "c": 19,
+          "Q": "632/171"
+        }
+      },
+      "drop7": "632/9",
+      "hand19_p5": "64/285",
+      "theorem": "Q_NL=2 B_NL/(c p (p\u22121)). Fail: drop c at p=7 (632/9\u2260632/171); fail: den 19 at p=5 (64/285)."
+    },
+    "B": {
+      "proved": true,
+      "gcd": 1,
+      "den": 171,
+      "S7_has_19": false,
+      "n_prod": 0,
+      "theorem": "19 is essential in den(Q_NL(7))=171. 19\u2209GJ. Fail: 19|632; fail: 19\u2208S7."
+    },
+    "C": {
+      "proved": false,
+      "c5": 1,
+      "c7": 19,
+      "p7_fit_at_5": "376/105",
+      "p7_fit_is_live5": false,
+      "Q_NL_5": "64/15",
+      "Q_1d_5": "16/9",
+      "Q_NL_gt_Q1d_p5": true,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q_NL_is_short_rational": false,
+      "note": "19 cannot cancel as GJ or by dropping c. c(p) unnamed. Interpolants banned. Q_NL unnamed in p. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
