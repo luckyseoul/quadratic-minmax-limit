@@ -39,7 +39,7 @@ Tests: `tests/test_prop15381.py` 8/8, `tests/test_prop15382.py` 6/6.
 ## Live compute (do not duplicate)
 
 - **p=11 6-net** `cpu_D11_countnet.py`: 86 Numba workers, genuine backtrack, ~2h+, p=5=130 and p=7=5726 certified. **Zero p=11 shards finished** (`ex.map` only prints per shard of ~5.4 masks). \(N_{\mathrm{pred}}=244332\). Do **not** launch another 86-worker job. Kill only if the owner wants the cores back.
-- **GPU** V100 idle except leftover hunters. `gpu_dstar_singles.py`: p=5 sample **0/4000** double-stars with \(S\equiv-2\) on \(U\) (no interior hit). p=7 sampling in flight.
+- **GPU** V100. `gpu_dstar_singles.py` **finished**: p=5 **0** const-\(U\) and **0** interior among all 32 \((n_{2\square},n_{2\boxtimes})\) families (~125 each); p=7 **0/40** per family. Sampled Aut_e double-stars never even have \(S\equiv-2\) on \(U\). Next unit should turn that into a Max+-free variance / Gram argument (15.383), not another census.
 - Budget while 6-net owns the box: `recommended_workers=1`. GPU-first for Grams / Max± scores.
 
 ## Next concrete steps
