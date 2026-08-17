@@ -1,0 +1,101 @@
+{
+  "prop": "15.429",
+  "title": "C_ns=\u2212(q\u22121)/4; ns+base is not Q_NL; u still open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "C_ns_named": true,
+    "base_ns_not_QNL": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "by_p": {
+        "3": {
+          "C_ns": "-2",
+          "n_r": 2,
+          "sample_hits": "4/4"
+        },
+        "5": {
+          "C_ns": "-6",
+          "n_r": 10,
+          "sample_hits": "8/8"
+        },
+        "7": {
+          "C_ns": "-12",
+          "n_r": 22,
+          "sample_hits": "8/8"
+        },
+        "11": {
+          "C_ns": "-30",
+          "n_r": 58,
+          "sample_hits": "8/8"
+        },
+        "13": {
+          "C_ns": "-42",
+          "n_r": 82,
+          "sample_hits": "8/8"
+        },
+        "17": {
+          "C_ns": "-72",
+          "n_r": 142,
+          "sample_hits": "8/8"
+        },
+        "19": {
+          "C_ns": "-90",
+          "n_r": 178,
+          "sample_hits": "8/8"
+        },
+        "23": {
+          "C_ns": "-132",
+          "n_r": 262,
+          "sample_hits": "8/8"
+        },
+        "29": {
+          "C_ns": "-210",
+          "n_r": 418,
+          "sample_hits": "8/8"
+        },
+        "31": {
+          "C_ns": "-240",
+          "n_r": 478,
+          "sample_hits": "8/8"
+        }
+      },
+      "zero_wrong": "0",
+      "theorem": "C_ns,\u03c7=\u2212(q\u22121)/4 on T\\{\u00b11}, both \u03c7, p=3..31. Fail: C_ns=0."
+    },
+    "B": {
+      "proved": true,
+      "p5": "0",
+      "p7": "-384/49",
+      "QNL5": "64/15",
+      "QNL7": "632/171",
+      "theorem": "ns+base=(q\u22121)(4p+5\u2212p\u00b2)/(2p\u00b2). 0 at p=5, \u2212384/49 at p=7. Fail: claim this is Q_NL."
+    },
+    "C": {
+      "proved": false,
+      "Q_NL_5": "64/15",
+      "Q_1d_5": "16/9",
+      "Q_NL_gt_Q1d_p5": true,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q_NL_is_short_rational": false,
+      "note": "C_ns named in p. Square-s slots still carry Q_NL. u unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
