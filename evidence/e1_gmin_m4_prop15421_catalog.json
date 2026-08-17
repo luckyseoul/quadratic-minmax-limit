@@ -1,0 +1,11 @@
+{
+  "A": {
+    "proved": true,
+    "form": "427/3",
+    "ferrers": "133",
+    "theorem": "R\u00d7R paired-shift reverse flag = 427/3. Fail: Ferrers 133."
+  },
+  "B": {
+    "mix": "343/3"
+  }
+}
