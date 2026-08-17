@@ -1,0 +1,70 @@
+{
+  "prop": "15.457",
+  "title": "live c equals named c_eq not c_min; naive type-sum 665 misses the p=13 window",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "c_live_is_c_eq": true,
+    "c_eq13_unique_max": true,
+    "gf_ones_not_19": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "c_eq": 1,
+          "c_min": 1,
+          "Q_eq_cut": "48/13",
+          "Q_min_cut": "48/13",
+          "live": "48/13"
+        },
+        "7": {
+          "c_eq": 19,
+          "c_min": 18,
+          "Q_eq_cut": "1544/409",
+          "Q_min_cut": "386/97",
+          "live": "1544/409"
+        }
+      },
+      "theorem": "c_live=c_eq at p=5,7. Fail: c=c_min at p=7 (Q=386/97\u22601544/409)."
+    },
+    "B": {
+      "proved": true,
+      "c_eq13": 617,
+      "window13": [
+        551,
+        617,
+        67
+      ],
+      "naive13": 665,
+      "interp_3p2": 37,
+      "theorem": "c_eq(13)=617, unique max of 67 points. Fail: C(3,r)+19 C(r,4)=665\u2209[551,617]."
+    },
+    "C": {
+      "proved": true,
+      "gf_ones_r3": 10,
+      "gf_ones_r4": 44,
+      "theorem": "All-ones GF is 44 at r=4, not 19. Nonnegative 3-weight GF has 0 hits on (1,19) and the window."
+    },
+    "D": {
+      "proved": false,
+      "c_eq13": 617,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "c=c_eq is the named pin candidate (hits live; unique max of [c_min,c_eq]). Not proved for p\u226513. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
