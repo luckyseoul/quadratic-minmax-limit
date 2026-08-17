@@ -1,0 +1,67 @@
+{
+  "prop": "15.415",
+  "title": "L_spl^{1D}=p\u00b2(p\u00b3\u22124p\u00b2+3p+8)/(16(p\u22122)) for p\u22613; 1D Paley ++ L named; NL still open",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "Lspl_1d_named": true,
+    "L1d_pp_named": true,
+    "p7_live_Lspl": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "Q_NL_is_short_rational": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "7": "539/5",
+        "11": "4477/6",
+        "19": "247285/34",
+        "23": "111619/7"
+      },
+      "wrong_p5": "25",
+      "theorem": "L_spl^{1D}=p\u00b2(p\u00b3\u22124p\u00b2+3p+8)/(16(p\u22122)) for p\u22613. Fail: use it at p=5 (25\u2260100/3)."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": "100/3",
+        "13": "19266/11",
+        "17": "77452/15",
+        "7": "3871/30",
+        "11": "22748/27",
+        "19": "398183/51"
+      },
+      "wrong_mix_p5": "275/9",
+      "theorem": "L_1D(1,++)=L_par (p\u22611) and (2 L_par+L_spl)/3 (p\u22613). Fail: p\u22613 mix at p=5."
+    },
+    "C": {
+      "proved": true,
+      "live": "539/5",
+      "form": "539/5",
+      "Lpar": "2793/20",
+      "theorem": "p=7 live 1D L_spl=539/5. Fail: L_spl^{1D}=L_par^{1D}."
+    },
+    "D": {
+      "proved": false,
+      "Q_NL_5": "64/15",
+      "Q_NL_7": "632/171",
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "D_form_on_lattice_general": false,
+      "Q_NL_is_short_rational": false,
+      "note": "1D Paley ++ L is named. NL L_par=2113/19 and L_spl=673/6 unnamed. Q_NL unnamed. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
