@@ -1,0 +1,85 @@
+{
+  "prop": "15.474",
+  "title": "hat 1_D=0 off \u03a9; W=\u03c4\u0304\u0394; \u0394 unnamed",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "omega_support": true,
+    "plancherel_split": true,
+    "delta_not_constant": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "3": {
+          "leak": 1.6023737137301804e-31,
+          "sigma": 1,
+          "Omega": 4
+        },
+        "5": {
+          "leak": 9.86076131526265e-31,
+          "sigma": -1,
+          "Omega": 12
+        },
+        "7": {
+          "leak": 4.042912139257686e-30,
+          "sigma": 1,
+          "Omega": 24
+        }
+      },
+      "theorem": "hat 1_D=0 off \u03a9={\u03c7=\u03c3}. Fail: unlifted G(\u03c7_p) predicts k\u2208{0,25}."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "3": {
+          "kqmk": 18.0,
+          "sum_err": 0.0,
+          "split_err": 0.0,
+          "delta_mean": 0.0
+        },
+        "5": {
+          "kqmk": 150.0,
+          "sum_err": 5.684341886080802e-14,
+          "split_err": 5.684496560498002e-14,
+          "delta_mean": -2.1862853408003084e-15
+        },
+        "7": {
+          "kqmk": 588.0,
+          "sum_err": 4.547473508864641e-13,
+          "split_err": 4.831690603168681e-13,
+          "delta_mean": -5.527491376475359e-14
+        }
+      },
+      "theorem": "W=\u03c4\u0304\u0394, U_++U_-=k(q\u2212k), E[\u0394]=0. Fail: U_++U_- \u2260 150 at p=5."
+    },
+    "C": {
+      "proved": true,
+      "nunique": {
+        "3": 2,
+        "5": 4,
+        "7": 5
+      },
+      "theorem": "\u0394 not constant (2/4/5 values). Fail: \u0394=0 on every Max+ at p=5."
+    },
+    "D": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "\u03a9-support + Plancherel split. \u0394 unnamed. Signed \u0394 is not dilation-invariant. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
