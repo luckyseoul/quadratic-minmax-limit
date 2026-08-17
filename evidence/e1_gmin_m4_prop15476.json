@@ -1,0 +1,66 @@
+{
+  "prop": "15.476",
+  "title": "\u0394\u00b2 is a function of AG(2,p) direction type; complementary unnamed",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "delta2_fn_of_dirtype": true,
+    "triple_rainbow_not_all_comp": true,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "n_sig": 2,
+          "split": 0,
+          "nfull_split": 0
+        },
+        "7": {
+          "n_sig": 7,
+          "split": 0,
+          "nfull_split": 1
+        }
+      },
+      "theorem": "\u0394\u00b2 is a function of direction type. Fail: n_full determines \u0394\u00b2 at p=7."
+    },
+    "B": {
+      "proved": true,
+      "rows": {
+        "5": {
+          "n_parunion": 30,
+          "n_triple_rainbow": 100,
+          "tr_d2": [
+            4500.0
+          ]
+        },
+        "7": {
+          "n_parunion": 140,
+          "n_triple_rainbow": 1176,
+          "tr_d2": [
+            38416.0
+          ]
+        }
+      },
+      "theorem": "Triple-rainbow is one complementary class, not all. Fail: every p=7 complementary row is triple-rainbow."
+    },
+    "C": {
+      "proved": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "residual_ii_k_eq_4p_empty": false,
+      "note": "Direction type determines \u0394\u00b2 on the live ensemble. Complementary values unnamed in p. phi_F not imported."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
