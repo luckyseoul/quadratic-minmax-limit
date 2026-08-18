@@ -1,0 +1,60 @@
+{
+  "A": {
+    "proved": true,
+    "n_check": 12,
+    "neg1": 4
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "G_over_H": 2,
+        "forces_2level": true
+      },
+      "7": {
+        "G_over_H": 3,
+        "forces_2level": true
+      },
+      "11": {
+        "G_over_H": 5,
+        "forces_2level": false
+      },
+      "13": {
+        "G_over_H": 6,
+        "forces_2level": false
+      },
+      "17": {
+        "G_over_H": 8,
+        "forces_2level": false
+      }
+    }
+  },
+  "C": {
+    "proved": true,
+    "n_zero_orbits": 6,
+    "n_live_orbits": 1,
+    "max_n_distinct_off": 3,
+    "max_off_spread": 1980229.3333333354,
+    "live_C_off": {
+      "2": 1142440.0000000026,
+      "3": 3122669.3333333377,
+      "4": 3122669.333333337,
+      "5": 2132554.6666666684,
+      "6": 1142440.0000000023,
+      "7": 1142440.0000000026,
+      "8": 2132554.6666666684,
+      "9": 3122669.333333337,
+      "10": 3122669.333333337,
+      "11": 1142440.0000000026
+    }
+  },
+  "D": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "2-level C at p=5,7 is evenness plus |G/H|\u22643, not a name of the off value. p=13 1D kills the p-law. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false
+}
