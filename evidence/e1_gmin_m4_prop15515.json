@@ -1,0 +1,42 @@
+{
+  "prop": "15.515",
+  "title": "p=5 26\u22127 Q++ incidence; not a nonnegative count",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "fold": {
+      "n": 130,
+      "sum": "20",
+      "n_1d": 30,
+      "n_neg": 100,
+      "by_1d": {
+        "122/9": 30
+      },
+      "by_NL": {
+        "-58/15": 100
+      }
+    },
+    "named": 20,
+    "wrong_n1d": 30,
+    "theorem": "\u2211(26\u22127 Q_y)=n_1d\u2212k=4p. Fail all\u22650; sum=n_1d."
+  },
+  "B": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "p=5 sum is named and positive, but NL summands are negative, so this is not a nonnegative count. Not a p-law for Q++\u226426/7. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}

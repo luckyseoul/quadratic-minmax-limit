@@ -1,0 +1,134 @@
+{
+  "prop": "15.514",
+  "title": "Even pairing S2 named in M; Q_\u03c4 unnamed",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "n_primes": 9,
+    "rows": {
+      "5": {
+        "p": 5,
+        "named": [
+          "10",
+          "-96",
+          "256"
+        ],
+        "jcnt": [
+          "10",
+          "-96",
+          "256"
+        ],
+        "ok": true,
+        "a_zero": false,
+        "vertex": "24/5"
+      },
+      "13": {
+        "p": 13,
+        "named": [
+          "574/55",
+          "-224/5",
+          "256/5"
+        ],
+        "jcnt": [
+          "574/55",
+          "-224/5",
+          "256/5"
+        ],
+        "ok": true,
+        "a_zero": false,
+        "vertex": "88/41"
+      },
+      "17": {
+        "p": 17,
+        "named": [
+          "426/35",
+          "-288/7",
+          "256/7"
+        ],
+        "jcnt": [
+          "426/35",
+          "-288/7",
+          "256/7"
+        ],
+        "ok": true,
+        "a_zero": false,
+        "vertex": "120/71"
+      },
+      "29": {
+        "p": 29,
+        "named": [
+          "2090/117",
+          "-480/13",
+          "256/13"
+        ],
+        "jcnt": [
+          "2090/117",
+          "-480/13",
+          "256/13"
+        ],
+        "ok": true,
+        "a_zero": false,
+        "vertex": "216/209"
+      },
+      "37": {
+        "p": 37,
+        "named": [
+          "12958/595",
+          "-608/17",
+          "256/17"
+        ],
+        "jcnt": [
+          "12958/595",
+          "-608/17",
+          "256/17"
+        ],
+        "ok": true,
+        "a_zero": false,
+        "vertex": "280/341"
+      },
+      "41": {
+        "p": 41,
+        "named": [
+          "5866/247",
+          "-672/19",
+          "256/19"
+        ],
+        "jcnt": [
+          "5866/247",
+          "-672/19",
+          "256/19"
+        ],
+        "ok": true,
+        "a_zero": false,
+        "vertex": "312/419"
+      }
+    },
+    "theorem": "S2=a(p)M\u00b2+b(p)M+c(p) named. Fail a=0; vertex=24/13."
+  },
+  "B": {
+    "proved": true,
+    "s2_need": "5920/49",
+    "s2_pos4_ub": "640",
+    "pos4_too_loose": true,
+    "theorem": "0\u2264\u03b4\u22644 gives S2\u2264640>5920/49. Fail claim that majorant closes M\u226512/7."
+  },
+  "C": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "S2 names a quadratic in M, not M. No CS majorant hits S2\u22645920/49. Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}

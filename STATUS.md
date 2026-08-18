@@ -1,6 +1,6 @@
 # Status (2026-08-18)
 
-Leftover campaign: 15.273–15.513 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.513: for \(p\equiv1\), the even pairing first moment is \(-16\) independent of \(M=n_{pp}\delta_{++}\) (hence of \(Q_{++}\)). \(J_{N^*}\) counts: \(n(J=2)=|N^*|\), \(n(J=-(p-1))=p-3\), \(n(J=-(p-3))=p-1\). Fail: \(n(J=2)=n_{pp}\); \(S_1=0\). Does not name \(Q_\tau\). \(\phi_F\) not imported. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**.
+Leftover campaign: 15.273–15.514 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.514: even pairing \(S_2=(q-1)E_2-128=a(p)M^2+b(p)M+c(p)\) (p=5: \(10M^2-96M+256\)). CS/box majorants overshoot \(S_2\le5920/49\) (need for \(Q_{++}\le26/7\)). Live \(S_2=19072/13^2\). Does not name \(M\) or \(Q_\tau\). \(\phi_F\) not imported. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|
