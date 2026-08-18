@@ -1,0 +1,319 @@
+{
+  "prop": "15.534",
+  "title": "I is Gauss \u00d7 cubic S, not a \u03c7-type p-law",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "p": 5,
+        "G": -5,
+        "S0": -1,
+        "S1": -1,
+        "S_m1": 6,
+        "S_unique": [
+          -10,
+          -6,
+          -2,
+          -1,
+          2,
+          6
+        ],
+        "n_pairs": 625,
+        "n_ok": 625,
+        "max_err": 2.7533531010703882e-14,
+        "formula_ok": true,
+        "func_ok": true,
+        "live_11": -29.999999999999996,
+        "drop_chi_collisions": 0,
+        "G_eq_p_collisions_off": 0,
+        "split_types": {
+          "(-1, 1, -1)": [
+            -2,
+            6
+          ],
+          "(-1, -1, 1)": [
+            -6,
+            2
+          ]
+        },
+        "n_split_types": 2
+      },
+      "7": {
+        "p": 7,
+        "G": 7,
+        "S0": -1,
+        "S1": -1,
+        "S_m1": 14,
+        "S_unique": [
+          -10,
+          -6,
+          -2,
+          -1,
+          2,
+          6,
+          10,
+          14
+        ],
+        "n_pairs": 2401,
+        "n_ok": 2401,
+        "max_err": 1.5005184594851784e-13,
+        "formula_ok": true,
+        "func_ok": true,
+        "live_11": 98.0,
+        "drop_chi_collisions": 0,
+        "G_eq_p_collisions_off": 0,
+        "split_types": {
+          "(1, 1, 1)": [
+            -2,
+            14
+          ],
+          "(1, -1, -1)": [
+            -10,
+            -2
+          ],
+          "(-1, 1, 1)": [
+            -10,
+            -2
+          ],
+          "(-1, 1, -1)": [
+            -10,
+            -2,
+            6
+          ],
+          "(-1, -1, 1)": [
+            -6,
+            2,
+            10
+          ],
+          "(-1, -1, -1)": [
+            2,
+            10
+          ]
+        },
+        "n_split_types": 6
+      },
+      "11": {
+        "p": 11,
+        "G": 11,
+        "S0": -1,
+        "S1": -1,
+        "S_m1": 22,
+        "S_unique": [
+          -18,
+          -14,
+          -10,
+          -6,
+          -2,
+          -1,
+          2,
+          6,
+          10,
+          14,
+          18,
+          22
+        ],
+        "n_pairs": 8,
+        "n_ok": 8,
+        "max_err": 1.2256862191861728e-13,
+        "formula_ok": true,
+        "func_ok": true,
+        "live_11": 241.99999999999997,
+        "drop_chi_collisions": 0,
+        "G_eq_p_collisions_off": 0,
+        "split_types": {
+          "(1, 1, 1)": [
+            -10,
+            6,
+            22
+          ],
+          "(1, -1, -1)": [
+            -18,
+            -10,
+            6,
+            14
+          ],
+          "(-1, 1, -1)": [
+            -18,
+            -10,
+            -2,
+            6,
+            14
+          ],
+          "(-1, -1, -1)": [
+            -14,
+            2,
+            10,
+            18
+          ],
+          "(-1, -1, 1)": [
+            -14,
+            -6,
+            2,
+            10,
+            18
+          ],
+          "(1, -1, 1)": [
+            -10,
+            -2
+          ],
+          "(1, 1, -1)": [
+            -10,
+            6
+          ],
+          "(-1, 1, 1)": [
+            -18,
+            -10,
+            -2,
+            14
+          ]
+        },
+        "n_split_types": 8
+      },
+      "13": {
+        "p": 13,
+        "G": -13,
+        "S0": -1,
+        "S1": -1,
+        "S_m1": -10,
+        "S_unique": [
+          -26,
+          -22,
+          -18,
+          -14,
+          -10,
+          -6,
+          -2,
+          -1,
+          2,
+          6,
+          10,
+          14,
+          18,
+          22
+        ],
+        "n_pairs": 8,
+        "n_ok": 8,
+        "max_err": 2.788880237858393e-13,
+        "formula_ok": true,
+        "func_ok": true,
+        "live_11": 129.9999999999999,
+        "drop_chi_collisions": 0,
+        "G_eq_p_collisions_off": 0,
+        "split_types": {
+          "(1, 1, 1)": [
+            -10,
+            6,
+            22
+          ],
+          "(-1, 1, 1)": [
+            -18,
+            -10,
+            -2,
+            6,
+            14,
+            22
+          ],
+          "(1, -1, -1)": [
+            -18,
+            -10,
+            6,
+            14
+          ],
+          "(-1, 1, -1)": [
+            -10,
+            -2,
+            6,
+            14,
+            22
+          ],
+          "(-1, -1, 1)": [
+            -22,
+            -14,
+            -6,
+            2,
+            10
+          ],
+          "(1, -1, 1)": [
+            -10,
+            -2,
+            6,
+            22
+          ],
+          "(1, 1, -1)": [
+            -26,
+            -10,
+            6
+          ],
+          "(-1, -1, -1)": [
+            -22,
+            -14,
+            -6,
+            2,
+            10,
+            18
+          ]
+        },
+        "n_split_types": 8
+      }
+    },
+    "p5_I11": -29.999999999999996,
+    "p7_I11": 98.0,
+    "p5_I_1p": {
+      "live": 10.0,
+      "pred": 10,
+      "drop": -10
+    },
+    "fail_G_eq_p_at_11": 30,
+    "theorem": "I(\u03b7,\u03b8)=G \u03c7(\u03b8) S(\u2212\u03b7/\u03b8) (\u03b8\u22600); I(\u03b7,0)=\u2212\u03c7(\u03b7)G; S(0)=S(1)=\u22121.  Fail: drop \u03c7(\u03b8); G\u2261p; I single p-law."
+  },
+  "B": {
+    "proved": true,
+    "p5_split": {
+      "(-1, 1, -1)": [
+        -2,
+        6
+      ],
+      "(-1, -1, 1)": [
+        -6,
+        2
+      ]
+    },
+    "p7_n_split": 6,
+    "witness": {
+      "type": "(-1, -1, 1)",
+      "S": [
+        -6,
+        2
+      ]
+    },
+    "theorem": "3-\u03c7 types do not pin S (p=5 type (\u22121,\u22121,+1) has S\u2208{\u22126,2}). I is not a \u03c7-piecewise law."
+  },
+  "C": {
+    "proved": false,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false,
+    "Delta_conn_p_rational": false,
+    "note": "I-name does not clear den 13,409 in A (15.529).  \u0394_conn rewrite still carries D.  Aut_e 3A+B still G>T.  Flags unflipped."
+  },
+  "proved": {
+    "I_equals_G_chi_S": true,
+    "chi_types_do_not_pin_S": true,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "type_I_multilevel_bad_case_ND_closed",
+    "type_I_aut_e_3AB_positive_general",
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
