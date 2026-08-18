@@ -1,0 +1,109 @@
+{
+  "prop": "15.543",
+  "title": "Type+ 1D 3-point on |\u03ba|=1 is \u03ba/(p(p\u22122))",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "identities": {
+      "5": {
+        "plus": "1/15",
+        "minus": "-1/15",
+        "from_n2": "1/15",
+        "wrong_p2": "1/25"
+      },
+      "7": {
+        "plus": "1/35",
+        "minus": "-1/35",
+        "from_n2": "1/35",
+        "wrong_p2": "1/49"
+      },
+      "11": {
+        "plus": "1/99",
+        "minus": "-1/99",
+        "from_n2": "1/99",
+        "wrong_p2": "1/121"
+      },
+      "13": {
+        "plus": "1/143",
+        "minus": "-1/143",
+        "from_n2": "1/143",
+        "wrong_p2": "1/169"
+      }
+    },
+    "live": {
+      "5": {
+        "n_1d": 30,
+        "n_kappa1": 1800,
+        "n_ok": 1800,
+        "max_err": 0.0,
+        "ok": true
+      },
+      "7": {
+        "n_1d": 140,
+        "n_kappa1": 14112,
+        "n_ok": 14112,
+        "max_err": 0.0,
+        "ok": true
+      }
+    },
+    "theorem": "\u03bc_1d=\u03ba/(p(p\u22122)) on |\u03ba|=1.  Fail: \u03ba/p\u00b2; fail T at p=7."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "abs_mu_1d": "1/15",
+        "abs_T": "1/15",
+        "le": true,
+        "eq": true
+      },
+      "7": {
+        "abs_mu_1d": "1/35",
+        "abs_T": "5/91",
+        "le": true,
+        "eq": false
+      },
+      "11": {
+        "abs_mu_1d": "1/99",
+        "abs_T": "3/77",
+        "le": true,
+        "eq": false
+      },
+      "13": {
+        "abs_mu_1d": "1/143",
+        "abs_T": "11/325",
+        "le": true,
+        "eq": false
+      }
+    },
+    "theorem": "|\u03bc_1d|\u2264|T| for p\u22655, equality iff p=5.  Does not close Aut_e (free \u03bc unnamed)."
+  },
+  "C": {
+    "proved": false,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false,
+    "A_full_named_p_law": false,
+    "Delta_conn_p_rational": false,
+    "note": "\u03bc_1d named; free/full-\u03a9 \u03bc and A_full still unnamed as p-laws.  Aut_e G>T open.  Flags unflipped."
+  },
+  "proved": {
+    "mu_1d_named": true,
+    "mu_1d_le_T": true,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "type_I_multilevel_bad_case_ND_closed",
+    "type_I_aut_e_3AB_positive_general",
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
