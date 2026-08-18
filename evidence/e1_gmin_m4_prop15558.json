@@ -1,0 +1,164 @@
+{
+  "prop": "15.558",
+  "title": "J_all and J_T named; \u03a6_free still carries Q3_T",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "maxerr_S": {
+          "000": 8.882033993669077e-14,
+          "001": 3.197519408812099e-14,
+          "010": 2.7412393475024943e-14,
+          "011": 1.0695084443661336e-14,
+          "100": 9.952807302678498e-14,
+          "101": 2.652317926234488e-14,
+          "110": 2.8567917499490804e-14,
+          "111": 1.5938178610895598e-14
+        },
+        "maxerr_J": 3.824331575279093e-15,
+        "drop111": 3.75,
+        "drop_eighth": 420.0,
+        "ok": true
+      },
+      "7": {
+        "maxerr_S": {
+          "000": 2.816658919321583e-12,
+          "001": 1.1951502542343555e-12,
+          "010": 9.663387583995096e-13,
+          "011": 1.7765566683049394e-13,
+          "100": 7.203996303702027e-13,
+          "101": 4.980931184949339e-14,
+          "110": 1.1449085786826615e-13,
+          "111": 5.364399594162186e-14
+        },
+        "maxerr_J": 7.833927999510841e-14,
+        "drop111": 12.249999999999996,
+        "drop_eighth": 1848.0,
+        "ok": true
+      },
+      "11": {
+        "maxerr_S": {
+          "000": 1.4694023978518426e-11,
+          "001": 3.167636972204744e-13,
+          "010": 2.3433108548379875e-13,
+          "011": 7.247715837562348e-13,
+          "100": 5.459036795078072e-12,
+          "101": 8.526541741130118e-13,
+          "110": 6.200833336718084e-13,
+          "111": 1.5066022118934112e-12
+        },
+        "maxerr_J": 7.966263653532011e-13,
+        "drop111": 30.25000000000003,
+        "drop_eighth": 12180.0,
+        "ok": true
+      },
+      "13": {
+        "maxerr_S": {
+          "000": 1.55466751599139e-11,
+          "001": 5.0936096020871036e-11,
+          "010": 5.229619150621678e-11,
+          "011": 4.311695198288378e-13,
+          "100": 3.092418556911719e-11,
+          "101": 3.746241922506816e-13,
+          "110": 6.02225190794162e-13,
+          "111": 8.137230002064629e-13
+        },
+        "maxerr_J": 8.912898619288178e-13,
+        "drop111": 35.750000000000746,
+        "drop_eighth": 24108.0,
+        "ok": true
+      }
+    },
+    "theorem": "J_all=(1/8)\u03a3 \u03c7_\u03a9^{|\u03b5|} S_\u03b5. Fail drop S_{111}; fail drop 1/8."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "err_1line": 3.554447978966673e-15,
+        "err_double": 3.554447978966673e-15,
+        "err_n3": 9.226380847435024e-16,
+        "J1_eq_Jall_err": 6.0,
+        "ok": true
+      },
+      "7": {
+        "err_1line": 1.0660453750117863e-14,
+        "err_double": 1.0660453750117863e-14,
+        "err_n3": 7.469550889370674e-15,
+        "J1_eq_Jall_err": 17.99999999999998,
+        "ok": true
+      },
+      "11": {
+        "err_1line": 4.2638210657992064e-14,
+        "err_double": 3.9532836442375327e-14,
+        "err_n3": 5.542615508755649e-13,
+        "J1_eq_Jall_err": 100.00000000000071,
+        "ok": true
+      },
+      "13": {
+        "err_1line": 1.3555687023102888e-13,
+        "err_double": 5.689950542959976e-14,
+        "err_n3": 3.198712533496803e-13,
+        "J1_eq_Jall_err": 180.00000000000205,
+        "ok": true
+      }
+    },
+    "theorem": "J_1line=\u03a3_{c\u2208F_p^\u00d7\\{-1}} S_\u03a9((1+c)v\u2212cu). Fail J_1line=J_all. Fail J_double=J_1line (p\u22657)."
+  },
+  "C": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "N": 130,
+        "n": 552,
+        "err_identity": 7.105427357601002e-15,
+        "err_G02_is_free": 24.32,
+        "err_one_Q3": 17.92,
+        "ok": true
+      },
+      "7": {
+        "N": 5726,
+        "n": 2256,
+        "err_identity": 2.2737367544323206e-13,
+        "err_G02_is_free": 270.04081632653066,
+        "err_one_Q3": 172.4081632653062,
+        "ok": true
+      }
+    },
+    "theorem": "G3=G02+q^{-3}\u03a3_T Q3_T J_T. Fail G02=\u03a6_free. Fail one Q3."
+  },
+  "D": {
+    "proved": false,
+    "Phi_free_pointwise_named": false,
+    "Q3_named_in_p": false,
+    "NUM_SUM_16pA_general": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "J_all and J_T are named complete sums. Q3_T splits (p=5: \u22125000/\u221225000; p=7: three values) with den 13,409, not a Gauss/Jacobi integer in p. \u03a6_free still carries Q3_T. Q3_02=\u22124N(2p\u00b2+1)/p follows from F=\u22122(3p\u00b2+2) certified field-only at p=5,7,11,13,17,19,23 (not a 2-point fit; not proved for all p). Do not interpolate (p\u22125)/15. 16pA unnamed. phi_F not imported."
+  },
+  "proved": {
+    "J_all_8_term": true,
+    "J_T_S_Omega": true,
+    "G3_Q3_identity": true,
+    "Q3_named_in_p": false,
+    "Phi_free_pointwise_named": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ],
+  "identity": "J_all=(1/8)\u03a3 \u03c7_\u03a9^{|\u03b5|} S_\u03b5; J_1line=\u03a3_{c\u2208F_p^\u00d7\\{-1}} S_\u03a9((1+c)v\u2212cu); G3=G02+q^{-3}\u03a3_T Q3_T J_T",
+  "obstruction": "Q3_T not a p-law (den 13,409); \u03a6_free carries Q3_T"
+}
