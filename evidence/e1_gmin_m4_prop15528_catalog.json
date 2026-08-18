@@ -1,0 +1,40 @@
+{
+  "highs_leftover_splus_nf_7_20": {
+    "nF_lo": 7,
+    "nF_hi": 20,
+    "k": 20,
+    "status": "Infeasible",
+    "time_limit": 3600.0,
+    "seconds": 1738.89,
+    "nodes": 493277,
+    "splus": "S>=2"
+  },
+  "leftover_only": {
+    "k": 20,
+    "nF": 8,
+    "min_p": -8,
+    "max_m": -2,
+    "leftover": true,
+    "official": false,
+    "splus_ge_2": false,
+    "freeness_fail": false,
+    "sup_m": [
+      -10,
+      -6,
+      -2
+    ],
+    "sup_p": [
+      -8,
+      -6,
+      -4,
+      -2,
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12
+    ]
+  }
+}

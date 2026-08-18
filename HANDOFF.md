@@ -1,5 +1,5 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-18):** HEAD 15.527. **Three leftovers remain.** Floor: \(n_{\mathrm{free}}=n_R+n_X\) with \((4,0)\) at p=5 and \((16,98)\) at p=7 (15.527). Fail \(n_R=p-1\) at p=7. \(D=n_{1d}/(2p)+(p/2)n_{\mathrm{free}}\) (15.526). Residual (ii): leftover+s₊ empty nF=0..7. Type I: 15.523. \(\phi_F\) not imported. \(L=\tfrac12\) is **not settled**.  
+> **Now (2026-08-18):** HEAD 15.528+15.529. **Three leftovers remain.** Residual (ii): leftover+s₊=2 at p=5 \(k=20\) is empty for **all nF** (15.528: nF∈[7,20] HiGHS Infeasible, \(S\ge2\), 1739s; leftover-only nF=8 exists). even \(k>4p\) with far stays open. Floor: \(n_{\mathrm{free}}=n_R+n_X\) (15.527). Type I: 15.523 \(\kappa\)-contraction; 15.529 \(\Delta_{\mathrm{conn}}\). \(\phi_F\) not imported. \(L=\tfrac12\) is **not settled**.  
 > Afternoon: **`evidence/SESSION_HANDOFF_2026-08-17_qtau.md`**. Morning: **`evidence/SESSION_HANDOFF_2026-08-17_leftover.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**. Next `/goal`: **`GOAL.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
