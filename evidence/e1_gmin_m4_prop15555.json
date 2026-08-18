@@ -1,0 +1,117 @@
+{
+  "prop": "15.555",
+  "title": "G3(0,u,v)=\u03a6(N(u),N(v),N(v\u2212u)); Q3 is a norm-fiber sum",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n_keys": 52,
+        "n_constant": 52,
+        "n_split": 0,
+        "nuniq_Phi": 7,
+        "chi_split": 8,
+        "chi_max_nuniq": 2,
+        "ok": true
+      },
+      "7": {
+        "n_keys": 156,
+        "n_constant": 156,
+        "n_split": 0,
+        "nuniq_Phi": 14,
+        "chi_split": 8,
+        "chi_max_nuniq": 4,
+        "ok": true
+      }
+    },
+    "theorem": "G3(0,u,v)=\u03a6(N(u),N(v),N(v\u2212u)). Fail \u03c7-only (p=5 a \u03c7-type takes 2 and 18)."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "Phi_rebuild_maxerr": 0.0,
+        "samples": {
+          "double": {
+            "raw": -4999.999999999998,
+            "named": -5000.000000000003,
+            "drop_coll": -3700.0000000000027,
+            "live": -5000.0,
+            "match": true,
+            "drop_fails": true
+          },
+          "n3": {
+            "raw": -25000.000000000007,
+            "named": -25000.0,
+            "drop_coll": -23700.0,
+            "live": -25000.0,
+            "match": true,
+            "drop_fails": true
+          }
+        },
+        "ok": true
+      },
+      "7": {
+        "Phi_rebuild_maxerr": 0.0,
+        "samples": {
+          "double": {
+            "raw": -441784.0000000001,
+            "named": -441784.00000000035,
+            "drop_coll": -361620.00000000035,
+            "live": -441784.0,
+            "match": true,
+            "drop_fails": true
+          },
+          "generic": {
+            "raw": -1248520.0,
+            "named": -1248519.9999999988,
+            "drop_coll": -1168355.9999999988,
+            "live": -1248520.0,
+            "match": true,
+            "drop_fails": true
+          },
+          "n3": {
+            "raw": -672280.0,
+            "named": -672280.0000000006,
+            "drop_coll": -592116.0000000006,
+            "live": -672280.0,
+            "match": true,
+            "drop_fails": true
+          }
+        },
+        "ok": true
+      }
+    },
+    "theorem": "Q3=\u22122Np + q \u03a3 \u03a6(N(u),N(v),N(v\u2212u)) e_\u03b8(u) e_\u03c6(v). Fail drop \u22122Np."
+  },
+  "C": {
+    "proved": false,
+    "Phi_named_in_p": false,
+    "Q3_named_in_p": false,
+    "NUM_SUM_16pA_general": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "\u03a6 takes 7 values at p=5 and 14 at p=7; not a short \u03c7_p-polynomial. Q3 constants / 16pA / Q_\u03c4 unnamed."
+  },
+  "proved": {
+    "G3_is_Phi_of_norms": true,
+    "Q3_Fourier_of_Phi": true,
+    "Q3_named_in_p": false,
+    "NUM_SUM_16pA_general": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ]
+}
