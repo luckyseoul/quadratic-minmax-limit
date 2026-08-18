@@ -1,0 +1,33 @@
+{
+  "highs_leftover_splus_nf7": "Infeasible",
+  "leftover_only": {
+    "k": 20,
+    "nF": 7,
+    "min_p": -8,
+    "max_m": -2,
+    "leftover": true,
+    "official": true,
+    "splus_ge_2": false,
+    "freeness_fail": false,
+    "sup_m": [
+      -10,
+      -6,
+      -2
+    ],
+    "sup_p": [
+      -8,
+      -6,
+      -4,
+      -2,
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16
+    ]
+  }
+}
