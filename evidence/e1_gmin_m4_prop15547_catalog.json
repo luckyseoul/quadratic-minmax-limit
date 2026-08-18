@@ -1,0 +1,99 @@
+{
+  "highs_leftover_splus": {
+    "0": {
+      "status": "Infeasible",
+      "time_limit": 240.0,
+      "seconds": 0.5538482666015625,
+      "nodes": 1,
+      "threads": 8,
+      "splus": "S>=2"
+    },
+    "3": {
+      "status": "Infeasible",
+      "time_limit": 240.0,
+      "seconds": 123.03017091751099,
+      "nodes": 10150,
+      "threads": 8,
+      "splus": "S>=2"
+    },
+    "4": {
+      "status": "Infeasible",
+      "time_limit": 900.0,
+      "seconds": 150.28295159339905,
+      "nodes": 20244,
+      "threads": 16,
+      "splus": "S>=2"
+    },
+    "5": {
+      "status": "Infeasible",
+      "time_limit": 240.0,
+      "seconds": 103.43741130828857,
+      "nodes": 7992,
+      "threads": 8,
+      "splus": "S>=2"
+    },
+    "6": {
+      "status": "Infeasible",
+      "time_limit": 900.0,
+      "seconds": 358.52654933929443,
+      "nodes": 52767,
+      "threads": 16,
+      "splus": "S>=2"
+    },
+    "7": {
+      "status": "Infeasible",
+      "time_limit": 1200.0,
+      "seconds": 799.5856468677521,
+      "nodes": 93306,
+      "threads": 16,
+      "splus": "S>=2"
+    },
+    "8": {
+      "status": "Infeasible",
+      "time_limit": 1800.0,
+      "seconds": 814.4115104675293,
+      "nodes": 119211,
+      "threads": 16,
+      "splus": "S>=2"
+    },
+    "14": {
+      "status": "Infeasible",
+      "time_limit": 900.0,
+      "seconds": 40.55136322975159,
+      "nodes": 11153,
+      "threads": 12,
+      "splus": "S>=2"
+    }
+  },
+  "leftover_only": {
+    "k": 22,
+    "nF": 3,
+    "min_p": -8,
+    "max_m": -2,
+    "leftover": true,
+    "official": true,
+    "splus_ge_2": false,
+    "freeness_fail": false,
+    "sup_m": [
+      -16,
+      -12,
+      -8,
+      -4,
+      -2
+    ],
+    "sup_p": [
+      -8,
+      -6,
+      -4,
+      -2,
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ]
+  }
+}

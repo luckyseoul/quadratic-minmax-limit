@@ -1,0 +1,148 @@
+{
+  "prop": "15.547",
+  "title": "p=5 k=22 leftover+splus empty nF=0,3-8,14 (even k>4p)",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "leftover_only_official_nf3": true,
+    "leftover_splus_nf_emptied": true,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "row": {
+        "k": 22,
+        "nF": 3,
+        "min_p": -8,
+        "max_m": -2,
+        "leftover": true,
+        "official": true,
+        "splus_ge_2": false,
+        "freeness_fail": false,
+        "sup_m": [
+          -16,
+          -12,
+          -8,
+          -4,
+          -2
+        ],
+        "sup_p": [
+          -8,
+          -6,
+          -4,
+          -2,
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12,
+          14
+        ]
+      },
+      "theorem": "p=5 k=22 official leftover-only exists at nF=3 with min_+<2. Fail: leftover empty; fail: L3 has s\u208a\u22652."
+    },
+    "B": {
+      "proved": true,
+      "highs": {
+        "0": {
+          "status": "Infeasible",
+          "time_limit": 240.0,
+          "seconds": 0.5538482666015625,
+          "nodes": 1,
+          "threads": 8,
+          "splus": "S>=2"
+        },
+        "3": {
+          "status": "Infeasible",
+          "time_limit": 240.0,
+          "seconds": 123.03017091751099,
+          "nodes": 10150,
+          "threads": 8,
+          "splus": "S>=2"
+        },
+        "4": {
+          "status": "Infeasible",
+          "time_limit": 900.0,
+          "seconds": 150.28295159339905,
+          "nodes": 20244,
+          "threads": 16,
+          "splus": "S>=2"
+        },
+        "5": {
+          "status": "Infeasible",
+          "time_limit": 240.0,
+          "seconds": 103.43741130828857,
+          "nodes": 7992,
+          "threads": 8,
+          "splus": "S>=2"
+        },
+        "6": {
+          "status": "Infeasible",
+          "time_limit": 900.0,
+          "seconds": 358.52654933929443,
+          "nodes": 52767,
+          "threads": 16,
+          "splus": "S>=2"
+        },
+        "7": {
+          "status": "Infeasible",
+          "time_limit": 1200.0,
+          "seconds": 799.5856468677521,
+          "nodes": 93306,
+          "threads": 16,
+          "splus": "S>=2"
+        },
+        "8": {
+          "status": "Infeasible",
+          "time_limit": 1800.0,
+          "seconds": 814.4115104675293,
+          "nodes": 119211,
+          "threads": 16,
+          "splus": "S>=2"
+        },
+        "14": {
+          "status": "Infeasible",
+          "time_limit": 900.0,
+          "seconds": 40.55136322975159,
+          "nodes": 11153,
+          "threads": 12,
+          "splus": "S>=2"
+        }
+      },
+      "leftover_only_exists": true,
+      "emptied_nF": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        14
+      ],
+      "theorem": "leftover+splus Infeasible at nF=0,3,4,5,6,7,8,14 (HiGHS S\u22652). Fail: leftover-only empty (A). Not an S\u22612 equality harvest."
+    },
+    "C": {
+      "proved": false,
+      "residual_ii_k_eq_4p_empty": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "nF_9_to_13_open": true,
+      "k_gt_4p_far_open": true,
+      "note": "leftover+splus empty at p=5 k=22 for nF=0,3-8,14 (and leftover-only-empty nF). nF=9..13 and other even k>4p stay open. residual_ii_k_eq_4p_empty stays False."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
