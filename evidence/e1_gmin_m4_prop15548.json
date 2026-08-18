@@ -1,0 +1,77 @@
+{
+  "prop": "15.548",
+  "title": "H_+ 2-point (N/p)\u03c7; |\u03ba|=3 is the I_3 Jacobi split",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "proved": true,
+        "N": 130,
+        "max_err": 0.0,
+        "n_plus": 150,
+        "n_minus": 150,
+        "E_y": 0.2,
+        "g_plus": 26.0,
+        "g_minus": -26.0
+      },
+      "7": {
+        "proved": true,
+        "N": 5726,
+        "max_err": 0.0,
+        "n_plus": 588,
+        "n_minus": 588,
+        "E_y": 0.14285714285714285,
+        "g_plus": 818.0,
+        "g_minus": -818.0
+      }
+    },
+    "theorem": "G(a,b)=(N/p)\u03c7(b\u2212a) on F_q. Fail G\u22610 (p=5 g_+=26.0). Fail E[y_a]=0."
+  },
+  "B": {
+    "proved": true,
+    "fold": {
+      "F_all": 299999.99999999994,
+      "F_coll": 211249.9999999996,
+      "K1": 88750.00000000009,
+      "K_lam": 21550.000000000025,
+      "K_1mlam": 111550.00000000065,
+      "K_lam1mlam": 111549.99999999999,
+      "K3_direct": 83349.99999999984,
+      "K3_jacobi": 83350.00000000019,
+      "drop_prod": 55462.50000000019,
+      "n_I3": 66000,
+      "match": true,
+      "drop_fails": true,
+      "NUM_SUM_yfirst": 479.9999999999999,
+      "16pA": 480
+    },
+    "theorem": "K_3=(K_1+K_\u03bb+K_{1\u2212\u03bb}+K_{\u03bb(1\u2212\u03bb)})/4 equals 83350 at p=5. Fail drop \u03bb(1\u2212\u03bb) (55462.50000000019\u226083349.99999999984)."
+  },
+  "C": {
+    "proved": false,
+    "NUM_SUM_16pA_general": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "K_lam_named": false,
+    "note": "K_\u03bb=21550 and K_{1\u2212\u03bb}=111550 at p=5 are not a p-law. 16pA still only the live fold. phi_F not imported."
+  },
+  "proved": {
+    "G_paley_radial": true,
+    "K3_jacobi_split": true,
+    "NUM_SUM_16pA_general": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}
