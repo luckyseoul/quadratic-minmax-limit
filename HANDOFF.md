@@ -1,5 +1,5 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-18):** HEAD 15.510. **Three leftovers remain.** Translations \(T_b\) (\(b\neq0\)): \(\mathrm{Fix}=C(p,m)\) on squares, \(0\) on nonsquares; \(D\) and \(Q_\tau\) still unnamed. \(\phi_F\) not imported. \(L=\tfrac12\) is **not settled**.  
+> **Now (2026-08-18):** HEAD 15.511. **Three leftovers remain.** 1D involution Fix named \(\frac{p+1}{2}\,C(\frac{p-1}{2},\lfloor\frac{p-1}{4}\rfloor)\); NL leftover 42 at p=7. \(D\) and \(Q_\tau\) still unnamed. \(\phi_F\) not imported. \(L=\tfrac12\) is **not settled**.  
 > Afternoon: **`evidence/SESSION_HANDOFF_2026-08-17_qtau.md`**. Morning: **`evidence/SESSION_HANDOFF_2026-08-17_leftover.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**. Next `/goal`: **`GOAL.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit

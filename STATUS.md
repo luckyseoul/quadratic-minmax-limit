@@ -1,6 +1,6 @@
 # Status (2026-08-18)
 
-Leftover campaign: 15.273–15.510 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.510: translations \(T_b\) (\(b\neq0\)) have \(\mathrm{Fix}=C(p,m)\) on squares in \(\mathbb F_q\) and \(\mathrm{Fix}=0\) on nonsquares (\(m=(p+1)/2\)); \(\sum_{b\neq0}\mathrm{Fix}=(p-1)n_{1d}\). Fail: \(\mathrm{Fix}=p+1\) on squares (\(6\neq10\) at p=5). Identity term is \(|H_+|\), so \(D\) unnamed. \(\phi_F\) not imported. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**.
+Leftover campaign: 15.273–15.511 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.511: 1D involution Fix equals \(\frac{p+1}{2}\,C(\frac{p-1}{2},\lfloor\frac{p-1}{4}\rfloor)\) (Type+ forms × even \(m\)-subsets). Live 2,6,12 at p=3,5,7. Fail: \(n_{1d}/p\) (20≠12 at p=7); drop the form-count; claim this is full Fix (12≠54). NL leftover 0,0,42 unnamed. \(D\) unnamed. \(\phi_F\) not imported. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|

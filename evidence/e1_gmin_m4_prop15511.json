@@ -1,0 +1,138 @@
+{
+  "prop": "15.511",
+  "title": "1D involution Fix named; NL leftover / D unnamed",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "live": 1,
+        "named": 1,
+        "wrong": 1
+      },
+      "5": {
+        "live": 2,
+        "named": 2,
+        "wrong": 2
+      },
+      "7": {
+        "live": 3,
+        "named": 3,
+        "wrong": 3
+      },
+      "11": {
+        "live": 10,
+        "named": 10,
+        "wrong": 5
+      },
+      "13": {
+        "live": 20,
+        "named": 20,
+        "wrong": 6
+      },
+      "17": {
+        "live": 70,
+        "named": 70,
+        "wrong": 8
+      },
+      "19": {
+        "live": 126,
+        "named": 126,
+        "wrong": 9
+      }
+    },
+    "theorem": "#{A:|A|=m, A=\u2212A}=C((p\u22121)/2,\u230a(p\u22121)/4\u230b). Fail C(*,1)."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "named": 2,
+        "wrong_n1dp": 2,
+        "wrong_drop_m": 1
+      },
+      "5": {
+        "named": 6,
+        "wrong_n1dp": 6,
+        "wrong_drop_m": 2
+      },
+      "7": {
+        "named": 12,
+        "wrong_n1dp": 20,
+        "wrong_drop_m": 3
+      },
+      "11": {
+        "named": 60,
+        "wrong_n1dp": 252,
+        "wrong_drop_m": 10
+      },
+      "13": {
+        "named": 140,
+        "wrong_n1dp": 924,
+        "wrong_drop_m": 20
+      },
+      "17": {
+        "named": 630,
+        "wrong_n1dp": 12870,
+        "wrong_drop_m": 70
+      },
+      "19": {
+        "named": 1260,
+        "wrong_n1dp": 48620,
+        "wrong_drop_m": 126
+      }
+    },
+    "theorem": "n_1D,inv=((p+1)/2)\u00b7C((p\u22121)/2,\u230a(p\u22121)/4\u230b). Fail n_1d/p."
+  },
+  "C": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "n_1d_live": 2,
+        "n_fix_live": 2,
+        "named": 2,
+        "full_fix": 2,
+        "nl_left": 0
+      },
+      "5": {
+        "n_1d_live": 6,
+        "n_fix_live": 6,
+        "named": 6,
+        "full_fix": 6,
+        "nl_left": 0
+      },
+      "7": {
+        "n_1d_live": 12,
+        "n_fix_live": 54,
+        "named": 12,
+        "full_fix": 54,
+        "nl_left": 42
+      }
+    },
+    "theorem": "1D Fix(g_0)=n_1D,inv. Fail claim = full Fix."
+  },
+  "D": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_imported": false,
+    "nl_leftover": {
+      "3": 0,
+      "5": 0,
+      "7": 42
+    },
+    "note": "1D involution Fix is named. NL leftover 0,0,42 unnamed. D / Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
