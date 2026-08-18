@@ -1,0 +1,177 @@
+{
+  "prop": "15.576",
+  "title": "p=5 k=24 leftover-only empty nF=1,2,15-24 (leftover+splus too)",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "leftover_only_official_nf8_k24": true,
+    "leftover_only_nf_emptied": true,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "row": {
+        "k": 24,
+        "nF": 8,
+        "min_p": -6,
+        "max_m": -2,
+        "leftover": true,
+        "official": true,
+        "splus_ge_2": false,
+        "freeness_fail": false,
+        "sup_m": [
+          -16,
+          -12,
+          -8,
+          -4,
+          -2
+        ],
+        "sup_p": [
+          -6,
+          -4,
+          -2,
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12,
+          14,
+          16
+        ]
+      },
+      "theorem": "p=5 k=24 official leftover-only exists at nF=8 with min_+<2. Fail: leftover empty; fail: L24 has s\u208a\u22652."
+    },
+    "B": {
+      "proved": true,
+      "highs": {
+        "1": {
+          "status": "Infeasible",
+          "time_limit": 20.0,
+          "seconds": 12.157920598983765,
+          "nF": 1
+        },
+        "2": {
+          "status": "Infeasible",
+          "time_limit": 20.0,
+          "seconds": 2.3945794105529785,
+          "nF": 2
+        },
+        "15": {
+          "status": "Infeasible",
+          "time_limit": 20.0,
+          "seconds": 0.34305357933044434,
+          "nF": 15
+        },
+        "16": {
+          "status": "Infeasible",
+          "time_limit": 20.0,
+          "seconds": 0.2691764831542969,
+          "nF": 16
+        },
+        "17": {
+          "status": "Infeasible",
+          "time_limit": 20.0,
+          "seconds": 0.2702329158782959,
+          "nF": 17
+        },
+        "18": {
+          "status": "Infeasible",
+          "time_limit": 20.0,
+          "seconds": 0.26735591888427734,
+          "nF": 18
+        },
+        "19": {
+          "status": "Infeasible",
+          "time_limit": 20.0,
+          "seconds": 0.2708132266998291,
+          "nF": 19
+        },
+        "20": {
+          "status": "Infeasible",
+          "time_limit": 20.0,
+          "seconds": 0.3056509494781494,
+          "nF": 20
+        },
+        "21": {
+          "status": "Infeasible",
+          "time_limit": 20.0,
+          "seconds": 0.2667088508605957,
+          "nF": 21
+        },
+        "22": {
+          "status": "Infeasible",
+          "time_limit": 20.0,
+          "seconds": 0.27755022048950195,
+          "nF": 22
+        },
+        "23": {
+          "status": "Infeasible",
+          "time_limit": 20.0,
+          "seconds": 0.27077221870422363,
+          "nF": 23
+        },
+        "24": {
+          "status": "Infeasible",
+          "time_limit": 20.0,
+          "seconds": 0.27024006843566895,
+          "nF": 24
+        }
+      },
+      "leftover_only_exists": true,
+      "emptied_nF": [
+        1,
+        2,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "inhabited_nF": [
+        0,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "theorem": "leftover-only Infeasible at nF=1,2,15..24 (HiGHS). leftover+splus empty there. Fail: leftover-only empty (A). Not a k=24 leftover+splus MIP."
+    },
+    "C": {
+      "proved": false,
+      "residual_ii_k_eq_4p_empty": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "nF_10_open": true,
+      "k24_splus_inhabited_open": true,
+      "k_gt_4p_far_open": true,
+      "note": "leftover+splus empty at p=5 k=24 for leftover-only-empty nF (1,2,15..24). Inhabited nF={0,3..14} leftover+splus not run. nF=10 at k=22 TLE. residual_ii_k_eq_4p_empty stays False."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty",
+    "type_I"
+  ]
+}
