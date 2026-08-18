@@ -1,6 +1,6 @@
 # Status (2026-08-18)
 
-Leftover campaign: 15.273–15.506 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.506: \(T\) acts regularly on \(\Omega\), so \(\sum_T Q/q^2=2(q-1)\) and \(\sum_{\mathrm{off}}\delta=8\) are Max+-free (not just p=5,7 cache). The p=7 three-type A-shifts that recover \(D=409\) give \(D=77097/7\notin\mathbb Z\) at p=11 — not a \(p\equiv3\) law. Ensemble \(Q_\tau\) unnamed. \(\phi_F\) not imported. Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
+Leftover campaign: 15.273–15.507 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.507: for \(p\equiv1\) the even pairing is a named function of one mass \(M=n_{++}(4-Q_{++}/q^2)\). Worst branch \(J_{N^*}=2\) is \(\le2\) iff \(Q_{++}\le Q^{\mathrm{floor\,ub}}\) (\(26/7\) at p=5). Fail: \(16/|N^*|\le2\) at p=5 (that is 4). Inequality not proved Max+-free. \(\phi_F\) not imported. Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|

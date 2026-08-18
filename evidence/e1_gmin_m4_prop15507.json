@@ -1,0 +1,71 @@
+{
+  "prop": "15.507",
+  "title": "p\u22611 pairing is one mass; J=2 \u21d4 Q++\u2264Qpp_floor_ub",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "p": 5,
+        "n_pp": 6,
+        "named_n_pp": 6,
+        "ok": true,
+        "generic_Jpp": -4
+      },
+      "13": {
+        "p": 13,
+        "n_pp": 22,
+        "named_n_pp": 22,
+        "ok": true,
+        "generic_Jpp": -4
+      },
+      "17": {
+        "p": 17,
+        "n_pp": 30,
+        "named_n_pp": 30,
+        "ok": true,
+        "generic_Jpp": -4
+      }
+    },
+    "theorem": "J_++=\u22122\u2212J_{N*}. Fail flip sign."
+  },
+  "B": {
+    "proved": true,
+    "M5": "24/13",
+    "pair": "24/13",
+    "flipped": "40/13",
+    "theorem": "p=5 J=2 live M recovers 24/13. Fail flipped J_++."
+  },
+  "C": {
+    "proved": true,
+    "ub5": "4",
+    "ub13": "4/15",
+    "theorem": "16/|N*|\u22642 iff p\u226513. Fail at p=5 (4>2)."
+  },
+  "D": {
+    "proved": true,
+    "Qpp_ub_J2": "26/7",
+    "floor_ub": "26/7",
+    "wrong_lo": "10/3",
+    "live": "48/13",
+    "theorem": "p=5 J=2 floor \u21d4 Q++\u226426/7=Qpp_floor_ub. Fail 10/3."
+  },
+  "E": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "Pairing at p\u22611 is named in one mass. The J=2 bound is Q++\u2264Qpp_floor_ub, not proved Max+-free. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
