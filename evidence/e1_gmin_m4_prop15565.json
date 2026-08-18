@@ -1,0 +1,140 @@
+{
+  "prop": "15.565",
+  "title": "Max\u00b1 of C write \u2264\u03a6\u22124 in Type I bad case; path DEAD",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "Phi": "65",
+        "Q_H": [
+          {
+            "S": 1,
+            "f_e": 1,
+            "S_H": 2,
+            "Q_H": "61"
+          },
+          {
+            "S": 5,
+            "f_e": -1,
+            "S_H": 4,
+            "Q_H": "57"
+          }
+        ],
+        "max_abs_QH": "61"
+      },
+      "7": {
+        "Phi": "175",
+        "Q_H": [
+          {
+            "S": 1,
+            "f_e": 1,
+            "S_H": 2,
+            "Q_H": "171"
+          },
+          {
+            "S": 5,
+            "f_e": -1,
+            "S_H": 4,
+            "Q_H": "167"
+          }
+        ],
+        "max_abs_QH": "171"
+      },
+      "11": {
+        "Phi": "671",
+        "Q_H": [
+          {
+            "S": 1,
+            "f_e": 1,
+            "S_H": 2,
+            "Q_H": "667"
+          },
+          {
+            "S": 5,
+            "f_e": -1,
+            "S_H": 4,
+            "Q_H": "663"
+          }
+        ],
+        "max_abs_QH": "667"
+      },
+      "13": {
+        "Phi": "1105",
+        "Q_H": [
+          {
+            "S": 1,
+            "f_e": 1,
+            "S_H": 2,
+            "Q_H": "1101"
+          },
+          {
+            "S": 5,
+            "f_e": -1,
+            "S_H": 4,
+            "Q_H": "1097"
+          }
+        ],
+        "max_abs_QH": "1101"
+      }
+    },
+    "theorem": "Max+ S_H\u2208{2,4} \u21d2 Q_H\u2208{\u03a6\u22124,\u03a6\u22128}.  Fail: Q=\u03a6\u2212S (S_H=2 would write \u03a6\u22122)."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "q_U": "-63",
+        "good_abs": "65",
+        "bad_abs": "61",
+        "Phi": "65"
+      },
+      "7": {
+        "q_U": "-173",
+        "good_abs": "175",
+        "bad_abs": "171",
+        "Phi": "175"
+      },
+      "11": {
+        "q_U": "-669",
+        "good_abs": "671",
+        "bad_abs": "667",
+        "Phi": "671"
+      },
+      "13": {
+        "q_U": "-1103",
+        "good_abs": "1105",
+        "bad_abs": "1101",
+        "Phi": "1105"
+      }
+    },
+    "theorem": "Bad U_\u2212 has |q_H|=\u03a6\u22124; other Max\u2212 levels \u2264\u03a6\u22124.  Fail: bad U_\u2212 writes \u03a6\u22122."
+  },
+  "C": {
+    "proved": false,
+    "path_dead": true,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false,
+    "note": "Max\u00b1 of C write \u2264\u03a6\u22124 in the bad case.  \u03a6(H)\u2265\u03a6\u22122 needs a non-Max\u00b1 vector or good-sign f_e on U_\u2212.  The latter is Aut_e G>T (15.559 DEAD).  Flags unflipped."
+  },
+  "proved": {
+    "maxplus_writes_Phi_minus_4": true,
+    "maxminus_bad_writes_Phi_minus_4": true,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "type_I_multilevel_bad_case_ND_closed",
+    "type_I_aut_e_3AB_positive_general",
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}

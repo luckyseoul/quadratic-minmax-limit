@@ -1,0 +1,118 @@
+{
+  "prop": "15.567",
+  "title": "2\u03c7 A_dbl=[8p\u00b2(2\u03c7(2)\u22121)(1\u2212\u03c7(\u22121))/(p\u22121)] \u03c7(\u03b4)",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "err": 1.7763568394002505e-15,
+        "drop2_err": 10.0,
+        "match": true,
+        "drop2_fails": true
+      },
+      "7": {
+        "err": 1.0658141036401503e-14,
+        "drop2_err": 14.0,
+        "match": true,
+        "drop2_fails": true
+      },
+      "11": {
+        "err": 1.4210854715202004e-14,
+        "drop2_err": 22.0,
+        "match": true,
+        "drop2_fails": true
+      },
+      "13": {
+        "err": 2.842170943040401e-14,
+        "drop2_err": 26.0,
+        "match": true,
+        "drop2_fails": true
+      }
+    },
+    "theorem": "\u1e91(c)=2 G_\u03c7(c) k\u0302(c). Fail drop 2."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "amp": -0.0,
+        "maxerr": 3.197442310920451e-14,
+        "dropchi_err": 3.197442310920451e-14,
+        "p11_8p2_3_err": 66.66666666666667,
+        "drop_m1_err": 150.0,
+        "match": true,
+        "fails_ok": true
+      },
+      "7": {
+        "amp": 130.66666666666666,
+        "maxerr": 1.9895196601282805e-13,
+        "dropchi_err": 261.3333333333335,
+        "p11_8p2_3_err": 0.0,
+        "drop_m1_err": 1.0,
+        "match": true,
+        "fails_ok": true
+      },
+      "11": {
+        "amp": -580.8,
+        "maxerr": 5.684341886080801e-13,
+        "dropchi_err": 1161.6000000000004,
+        "p11_8p2_3_err": 903.4666666666667,
+        "drop_m1_err": 1.0,
+        "match": true,
+        "fails_ok": true
+      },
+      "13": {
+        "amp": -0.0,
+        "maxerr": 9.000207986294602e-14,
+        "dropchi_err": 9.000207986294602e-14,
+        "p11_8p2_3_err": 450.6666666666667,
+        "drop_m1_err": 338.0,
+        "match": true,
+        "fails_ok": true
+      }
+    },
+    "theorem": "2\u03c7 A_dbl=[8p\u00b2(2\u03c7(2)\u22121)(1\u2212\u03c7(\u22121))/(p\u22121)] \u03c7(\u03b4). Fail drop \u03c7; fail 8p\u00b2/3 at p=11; fail drop (1\u2212\u03c7(\u22121)) at p=5."
+  },
+  "C": {
+    "proved": true,
+    "n_sample": 400,
+    "pred_vs_live_max": 2.5071218198634234e-12,
+    "sample_line_mean": -126.90999999999998,
+    "uniform_2chi_mean": -6.767073673905716e-16,
+    "want_typeA": 152.44444444444446,
+    "match": true,
+    "uniform_fails": true,
+    "theorem": "Live k reconstructs A_dbl (sample). Uniform 2\u03c7 mean is 0, not +4p\u00b3/9."
+  },
+  "D": {
+    "proved": false,
+    "A_full_dbl_named_in_p": false,
+    "Q3_double_named_in_p": false,
+    "NUM_SUM_16pA_general": false,
+    "phi_F_imported": false,
+    "note": "2\u03c7 integrand is a p-law. Live QR/NR weights and unmatched k-measure are p=7 census. Do not interpolate (p\u22125)/15. phi_F not imported."
+  },
+  "proved": {
+    "zhat_2G_khat": true,
+    "twochi_amp_named": true,
+    "live_k_reconstructs": true,
+    "A_full_dbl_named_in_p": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ],
+  "identity": "E_g zhat(g)^2 zhat(-2g) = [8 p^2 (2 chi(2)-1)(1-chi(-1))/(p-1)] chi(delta) on 2chi lines"
+}
