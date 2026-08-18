@@ -1,0 +1,93 @@
+{
+  "prop": "15.580",
+  "title": "Max\u2212 \u03a9_\u2212 Galois + F=\u22122(3p\u00b2+2); DEAD as Type I kill",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "nH": 130,
+        "z0_err": 0.0,
+        "nsupp_Om_plus_max": 0,
+        "kcnt": {
+          "1": 30,
+          "3": 100
+        },
+        "n_partial_line": 0,
+        "nsupp_mod": [
+          0
+        ],
+        "n_lines": 3,
+        "ok": true
+      },
+      "7": {
+        "nH": 5726,
+        "z0_err": 0.0,
+        "nsupp_Om_plus_max": 0,
+        "kcnt": {
+          "1": 140,
+          "3": 1176,
+          "4": 4410
+        },
+        "n_partial_line": 0,
+        "nsupp_mod": [
+          0
+        ],
+        "n_lines": 4,
+        "ok": true
+      }
+    },
+    "theorem": "Max\u2212 y_\u221e=+1: \u1e91(0)=\u2212p, support \u03a9_\u2212 line-union.  Fail: \u1e91(0)=+p; fail support on \u03a9_+; fail nsupp=18 at p=5."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "I": 2.0000000000000018,
+        "F": -154.0,
+        "F_named": -154.0,
+        "ok": true
+      },
+      "7": {
+        "I": 1.9999999999999907,
+        "F": -298.0000000000005,
+        "F_named": -298.0,
+        "ok": true
+      },
+      "11": {
+        "I": 1.9999999999999338,
+        "F": -729.9999999999961,
+        "F_named": -730.0,
+        "ok": true
+      }
+    },
+    "theorem": "F=\u22122(3p\u00b2+2) on \u03a9_\u2212-triples.  Fail: drop 6; fail Jsum with \u03c7_\u03a9."
+  },
+  "C": {
+    "proved": false,
+    "path_dead": true,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false,
+    "note": "Max\u2212 Galois + F name the 02 complete sum, not f_e on U_\u2212.  Far pairing remainder is Q3_T/A_full (15.564 E).  Flags unflipped."
+  },
+  "proved": {
+    "maxminus_omega_minus_galois": true,
+    "F_on_Omega_minus": true,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "type_I_multilevel_bad_case_ND_closed",
+    "type_I_aut_e_3AB_positive_general",
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
