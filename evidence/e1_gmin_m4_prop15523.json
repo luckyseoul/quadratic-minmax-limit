@@ -1,0 +1,249 @@
+{
+  "prop": "15.523",
+  "title": "\u03ba-contraction is 3p \u03c7_p(\u22121)\u03c7(\u03be)",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "G": -5,
+        "chi_p(-1)": 1
+      },
+      "7": {
+        "G": 7,
+        "chi_p(-1)": -1
+      },
+      "11": {
+        "G": 11,
+        "chi_p(-1)": -1
+      },
+      "13": {
+        "G": -13,
+        "chi_p(-1)": 1
+      },
+      "17": {
+        "G": -17,
+        "chi_p(-1)": 1
+      },
+      "19": {
+        "G": 19,
+        "chi_p(-1)": -1
+      },
+      "23": {
+        "G": 23,
+        "chi_p(-1)": -1
+      }
+    },
+    "theorem": "G(\u03c7)=\u2212p \u03c7_p(\u22121). Fail: G\u2261p (p=5)."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "5:+1": {
+        "full": 15,
+        "drop": 5,
+        "want": 15
+      },
+      "5:-1": {
+        "full": -15,
+        "drop": -5,
+        "want": -15
+      },
+      "7:+1": {
+        "full": -21,
+        "drop": -7,
+        "want": -21
+      },
+      "7:-1": {
+        "full": 21,
+        "drop": 7,
+        "want": 21
+      },
+      "11:+1": {
+        "full": -33,
+        "drop": -11,
+        "want": -33
+      },
+      "11:-1": {
+        "full": 33,
+        "drop": 11,
+        "want": 33
+      },
+      "13:+1": {
+        "full": 39,
+        "drop": 13,
+        "want": 39
+      },
+      "13:-1": {
+        "full": -39,
+        "drop": -13,
+        "want": -39
+      },
+      "17:+1": {
+        "full": 51,
+        "drop": 17,
+        "want": 51
+      },
+      "17:-1": {
+        "full": -51,
+        "drop": -17,
+        "want": -51
+      },
+      "19:+1": {
+        "full": -57,
+        "drop": -19,
+        "want": -57
+      },
+      "19:-1": {
+        "full": 57,
+        "drop": 19,
+        "want": 57
+      },
+      "23:+1": {
+        "full": -69,
+        "drop": -23,
+        "want": -69
+      },
+      "23:-1": {
+        "full": 69,
+        "drop": 23,
+        "want": 69
+      },
+      "29:+1": {
+        "full": 87,
+        "drop": 29,
+        "want": 87
+      },
+      "29:-1": {
+        "full": -87,
+        "drop": -29,
+        "want": -87
+      },
+      "31:+1": {
+        "full": -93,
+        "drop": -31,
+        "want": -93
+      },
+      "31:-1": {
+        "full": 93,
+        "drop": 31,
+        "want": 93
+      }
+    },
+    "theorem": "\u2211 \u03c7(x)\u03c7(y)\u03ba \u03c8_\u03be=3p \u03c7_p(\u22121)\u03c7(\u03be).  Fail: drop one pairing \u2192 p \u03c7_p(\u22121)\u03c7(\u03be)."
+  },
+  "C": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "1": {
+          "live": 15.000000000000007,
+          "want": 15.0,
+          "drop": 5.0,
+          "T_a": 4.999999999999999,
+          "T_b": 5.0,
+          "T_c": 4.999999999999997,
+          "ok": true
+        },
+        "-1": {
+          "live": -14.999999999999998,
+          "want": -15.0,
+          "drop": -5.0,
+          "T_a": -5.000000000000009,
+          "T_b": -5.000000000000011,
+          "T_c": -4.999999999999996,
+          "ok": true
+        }
+      },
+      "7": {
+        "1": {
+          "live": -21.00000000000006,
+          "want": -21.0,
+          "drop": -7.0,
+          "T_a": -6.999999999999998,
+          "T_b": -7.00000000000003,
+          "T_c": -7.000000000000012,
+          "ok": true
+        },
+        "-1": {
+          "live": 21.000000000000018,
+          "want": 21.0,
+          "drop": 7.0,
+          "T_a": 6.999999999999995,
+          "T_b": 7.000000000000014,
+          "T_c": 7.0000000000000036,
+          "ok": true
+        }
+      },
+      "11": {
+        "1": {
+          "live": -32.999999999999964,
+          "want": -33.0,
+          "drop": -11.0,
+          "T_a": -10.999999999999872,
+          "T_b": -11.000000000000234,
+          "T_c": -10.999999999999837,
+          "ok": true
+        },
+        "-1": {
+          "live": 32.99999999999984,
+          "want": 33.0,
+          "drop": 11.0,
+          "T_a": 10.999999999999996,
+          "T_b": 11.000000000000135,
+          "T_c": 10.999999999999957,
+          "ok": true
+        }
+      },
+      "13": {
+        "1": {
+          "live": 38.99999999999989,
+          "want": 39.0,
+          "drop": 13.0,
+          "T_a": 13.000000000000107,
+          "T_b": 13.000000000000123,
+          "T_c": 13.000000000000306,
+          "ok": true
+        },
+        "-1": {
+          "live": -38.99999999999965,
+          "want": -39.0,
+          "drop": -13.0,
+          "T_a": -12.999999999999979,
+          "T_b": -13.000000000000878,
+          "T_c": -13.00000000000009,
+          "ok": true
+        }
+      }
+    },
+    "theorem": "Field sum equals 3p \u03c7_p(\u22121)\u03c7(\u03be) at p=5,7,11,13.  Each pairing equals \u2212\u03c7(\u03be)G(\u03c7).  Fail: the dropped value."
+  },
+  "D": {
+    "proved": false,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false,
+    "Delta_conn_named": false,
+    "note": "Live \u0394_conn (\u2212328/65, \u22121144/2863) unnamed.  3A+B>0 remains G>T.  Flags unflipped."
+  },
+  "proved": {
+    "G_chi": true,
+    "three_pairings": true,
+    "field_sum": true,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "type_I_multilevel_bad_case_ND_closed",
+    "type_I_aut_e_3AB_positive_general",
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
