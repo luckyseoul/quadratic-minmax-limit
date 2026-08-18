@@ -1,0 +1,146 @@
+{
+  "prop": "15.564",
+  "title": "F=\u22122(3p\u00b2+2); Q3_02=\u22124N(2p\u00b2+1)/p is a p-law",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "I_re": 1.9999999999999816,
+        "err": 2.223219874253422e-14,
+        "match": true,
+        "I0_fails": true
+      },
+      "7": {
+        "I_re": 1.9999999999999858,
+        "err": 1.7631236498432405e-14,
+        "match": true,
+        "I0_fails": true
+      },
+      "11": {
+        "I_re": 1.9999999999999933,
+        "err": 1.4536987431896979e-13,
+        "match": true,
+        "I0_fails": true
+      }
+    },
+    "theorem": "I=\u03a3_{3-dist} e_\u03b8(u)e_\u03c6(v)=2. Fail I=0."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "chi_m1": 1,
+        "G_re": -5.0,
+        "G2_err": 0.0,
+        "match": true,
+        "G2_neg_fails": true
+      },
+      "7": {
+        "chi_m1": 1,
+        "G_re": 7.0,
+        "G2_err": 4.6629367034256575e-15,
+        "match": true,
+        "G2_neg_fails": true
+      },
+      "11": {
+        "chi_m1": 1,
+        "G_re": 11.000000000000009,
+        "G2_err": 1.9968526998644756e-13,
+        "match": true,
+        "G2_neg_fails": true
+      }
+    },
+    "theorem": "\u03c7(\u22121)=1 on F_{p\u00b2} and G\u00b2=q. Fail \u03c7(\u22121)=\u22121; fail G\u00b2=\u2212q."
+  },
+  "C": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "chi_om": -1,
+        "err": 7.392218066502452e-14,
+        "match": true,
+        "drop6_fails": true
+      },
+      "7": {
+        "chi_om": 1,
+        "err": 2.3948928617001886e-14,
+        "match": true,
+        "drop6_fails": true
+      },
+      "11": {
+        "chi_om": 1,
+        "err": 1.2046610489125993e-13,
+        "match": true,
+        "drop6_fails": true
+      }
+    },
+    "theorem": "J_u+J_v+J_w=\u22126 G \u03c7_\u03a9 on \u03a9-triples. Fail drop 6."
+  },
+  "D": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "F_re": -154.00000000000028,
+        "F_named": -154.0,
+        "match_F": true,
+        "I0_fails": true,
+        "live_Q302": -5304.0,
+        "match_Q302": true,
+        "drop_plus1_fails": true
+      },
+      "7": {
+        "F_re": -297.9999999999999,
+        "F_named": -298.0,
+        "match_F": true,
+        "I0_fails": true,
+        "live_Q302": -323928.0,
+        "match_Q302": true,
+        "drop_plus1_fails": true
+      },
+      "11": {
+        "F_re": -730.0000000000001,
+        "F_named": -730.0,
+        "match_F": true,
+        "I0_fails": true,
+        "live_Q302": null,
+        "match_Q302": true,
+        "drop_plus1_fails": true
+      }
+    },
+    "theorem": "F=\u22122(3p\u00b2+2); Q3_02=\u22124N(2p\u00b2+1)/p is a p-law. Fail drop +1."
+  },
+  "E": {
+    "proved": false,
+    "Q3_double_named_in_p": false,
+    "Q3_n3_named_in_p": false,
+    "A_full_dbl_named_in_p": false,
+    "NUM_SUM_16pA_general": false,
+    "phi_F_imported": false,
+    "note": "Q3_02 is a p-law. Q3_dbl / Q3_n3 still carry A_full for m>3. Uniform k-families give A_dbl=0; live k reconstructs A_dbl via \u1e91=2 G_\u03c7 k\u0302 but the measure on k is unnamed. Do not interpolate (p\u22125)/15. phi_F not imported."
+  },
+  "proved": {
+    "I_equals_2": true,
+    "chi_m1_and_G2": true,
+    "Jsum_named": true,
+    "F_and_Q302_named": true,
+    "Q3_double_named_in_p": false,
+    "Q3_n3_named_in_p": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ],
+  "identity": "F=-2(3p^2+2); Q3_02=-4N(2p^2+1)/p"
+}
