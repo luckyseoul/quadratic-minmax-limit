@@ -1,0 +1,107 @@
+{
+  "prop": "15.569",
+  "title": "A3 pair product = Gauss expansion of (2\u2212x\u2212y)\u00b2(2\u2212x^{\u22122}\u2212y^{\u22122})",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n": 6,
+        "maxerr": 1.2135639397017894e-13,
+        "drop_inv_err": 500.0000000000002,
+        "drop8_err": 437.5000000000001,
+        "n_monomials": 16,
+        "match": true,
+        "fails_ok": true
+      },
+      "7": {
+        "n": 15,
+        "maxerr": 4.547663887281848e-13,
+        "drop_inv_err": 522.6666666666674,
+        "drop8_err": 686.000000000001,
+        "n_monomials": 16,
+        "match": true,
+        "fails_ok": true
+      },
+      "11": {
+        "n": 45,
+        "maxerr": 3.194862024810276e-12,
+        "drop_inv_err": 1548.800000000003,
+        "drop8_err": 3388.000000000003,
+        "n_monomials": 16,
+        "match": true,
+        "fails_ok": true
+      },
+      "13": {
+        "n": 66,
+        "maxerr": 2.0370742875230354e-12,
+        "drop_inv_err": 2929.333333333332,
+        "drop8_err": 1774.5000000000007,
+        "n_monomials": 16,
+        "match": true,
+        "fails_ok": true
+      }
+    },
+    "theorem": "A3 pair product = 8\u03c4\u00b3\u03c7(\u22122)/(p\u22121) times the (2\u2212x\u2212y)\u00b2(2\u2212x^{\u22122}\u2212y^{\u22122}) Gauss expansion. Fail drop x^{\u22122}; fail drop 8."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "named_mean": 500.0,
+        "sixteen_p2": 400.0,
+        "match_p7_or_not_16": true,
+        "sixteen_fails_off_p7": true
+      },
+      "7": {
+        "named_mean": 784.0000000000009,
+        "sixteen_p2": 784.0,
+        "match_p7_or_not_16": true,
+        "sixteen_fails_off_p7": true
+      },
+      "11": {
+        "named_mean": -3484.8000000000015,
+        "sixteen_p2": 1936.0,
+        "match_p7_or_not_16": true,
+        "sixteen_fails_off_p7": true
+      },
+      "13": {
+        "named_mean": 585.8666666666667,
+        "sixteen_p2": 2704.0,
+        "match_p7_or_not_16": true,
+        "sixteen_fails_off_p7": true
+      }
+    },
+    "theorem": "15.568 A3 family mean is the expansion average. p=7: 16p\u00b2. Fail 16p\u00b2 at p=11."
+  },
+  "C": {
+    "proved": false,
+    "A3_family_short_p_law": false,
+    "A_full_dbl_named_in_p": false,
+    "NUM_SUM_16pA_general": false,
+    "phi_F_imported": false,
+    "note": "A3 pair product is a complete Gauss expansion. The same-\u03c7 family mean is not 16p\u00b2 off p=7. Do not interpolate (p\u22125)/15. phi_F not imported."
+  },
+  "proved": {
+    "a3_pair_expansion": true,
+    "a3_family_mean": true,
+    "A3_family_short_p_law": false,
+    "A_full_dbl_named_in_p": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ],
+  "identity": "A3 E_g zhat^2 zhat(-2g) = 8 tau^3 chi(-2)/(p-1) * Gauss[(2-x-y)^2 (2-x^{-2}-y^{-2})]"
+}
