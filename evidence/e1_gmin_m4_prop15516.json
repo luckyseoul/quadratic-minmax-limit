@@ -1,0 +1,51 @@
+{
+  "prop": "15.516",
+  "title": "Ensemble L_ns_mix=\u03bc\u208a\u03bc\u208b; Q_\u03c4 unnamed",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "mean": "25/2",
+        "named": "25/2",
+        "nuniq": 2,
+        "vals": [
+          "315/26",
+          "335/26"
+        ],
+        "ns11": "50/3"
+      },
+      "7": {
+        "mean": "147/2",
+        "named": "147/2",
+        "nuniq": 3,
+        "vals": [
+          "147/2",
+          "30030/409",
+          "30093/409"
+        ],
+        "ns11": "1617/20"
+      }
+    },
+    "theorem": "Ensemble L_ns_mix=\u03bc\u208a\u03bc\u208b. Fail constant; fail ns_11."
+  },
+  "B": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "One ensemble L slot is named. Other slots still have den D. Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}

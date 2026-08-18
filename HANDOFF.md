@@ -1,5 +1,5 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-18):** HEAD 15.515. **Three leftovers remain.** \(S_2\) is a named quadratic in \(M\); p=5 \(26-7Q_{++}\) sums to \(n_{1d}-k\) but NL summands are negative. \(Q_\tau\) unnamed. \(\phi_F\) not imported. \(L=\tfrac12\) is **not settled**.  
+> **Now (2026-08-18):** HEAD 15.516. **Three leftovers remain.** Ensemble \(L\) on the ns_mix slot equals \(\mu_+\mu_-\); other slots still have den \(D\). \(Q_\tau\) unnamed. \(\phi_F\) not imported. \(L=\tfrac12\) is **not settled**.  
 > Afternoon: **`evidence/SESSION_HANDOFF_2026-08-17_qtau.md`**. Morning: **`evidence/SESSION_HANDOFF_2026-08-17_leftover.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**. Next `/goal`: **`GOAL.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
