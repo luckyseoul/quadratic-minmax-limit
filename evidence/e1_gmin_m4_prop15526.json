@@ -1,0 +1,79 @@
+{
+  "prop": "15.526",
+  "title": "H_+ = n_1d + q n_free; D named in n_free",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "nH": 130,
+        "n_orbits": 10,
+        "sizes": {
+          "5": 6,
+          "25": 4
+        },
+        "n_free_orbits": 4,
+        "n_periodic_orbits": 6,
+        "n_1d_in_H": 30,
+        "n_non1d_in_H": 100,
+        "n_1d_named": 30,
+        "ok": true
+      },
+      "7": {
+        "nH": 5726,
+        "n_orbits": 134,
+        "sizes": {
+          "7": 20,
+          "49": 114
+        },
+        "n_free_orbits": 114,
+        "n_periodic_orbits": 20,
+        "n_1d_in_H": 140,
+        "n_non1d_in_H": 5586,
+        "n_1d_named": 140,
+        "ok": true
+      }
+    },
+    "theorem": "F_q^+ on H_+: Type+ 1D is the size-p orbits (count n_1d); NL is size-q free orbits. Fail |H_+|=n_1d."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n_free": 4,
+        "D_from_nfree": 13.0,
+        "D_live": 13,
+        "D_drop_nfree": 3.0,
+        "ok": true
+      },
+      "7": {
+        "n_free": 114,
+        "D_from_nfree": 409.0,
+        "D_live": 409,
+        "D_drop_nfree": 10.0,
+        "ok": true
+      }
+    },
+    "theorem": "D=n_1d/(2p)+(p/2)n_free. Fail n_free=0 (D=3 at p=5); fail n_free=p\u22121 at p=7."
+  },
+  "C": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "n_free_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "n_free is 4 at p=5 and 114 at p=7, not a named p-law. Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
