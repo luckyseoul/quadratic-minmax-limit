@@ -1,0 +1,57 @@
+{
+  "prop": "15.544",
+  "title": "p=5 |\u03bc_full|=1/p\u00b2; 1D+full mix gives Aut_e G>T",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "live": {
+      "n_1d": 30,
+      "n_full": 100,
+      "nH": 130,
+      "n_kappa1": 1800,
+      "n_abs_1p2": 1800,
+      "n_sign_opp_kappa": 600,
+      "n_pos": 900,
+      "n_neg": 900,
+      "max_abs_mu": 0.046153846153846156,
+      "ok_abs": true
+    },
+    "theorem": "p=5: |\u03bc_full|=1/p\u00b2 on all |\u03ba|=1.  Fail: \u03bc_full=\u03ba/p\u00b2 (sign); fail \u03ba-only."
+  },
+  "B": {
+    "proved": true,
+    "mix_bound": "3/65",
+    "T_abs": "1/15",
+    "drop_full": "1/15",
+    "live_max_mu": "3/65",
+    "theorem": "p=5 mix |\u03bc|\u22643/65<|T|.  Fail: drop full-\u03a9 (then |\u03bc|=T)."
+  },
+  "C": {
+    "proved": false,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false,
+    "A_full_named_p_law": false,
+    "mu_full_p_law_general": false,
+    "note": "p=7 \u03bc_full\u2208{13,17,29}/(15p\u00b2), |S|=2p\u22124 splits.  A_full,dbl not a p-law.  Aut_e p>5 open.  Flags unflipped."
+  },
+  "proved": {
+    "mu_full_abs_p5": true,
+    "mix_G_gt_T_p5": true,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "type_I_multilevel_bad_case_ND_closed",
+    "type_I_aut_e_3AB_positive_general",
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
