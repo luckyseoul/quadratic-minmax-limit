@@ -1,0 +1,53 @@
+{
+  "prop": "15.527",
+  "title": "n_free = n_R + n_X; p=5 all R, p=7 is 16+98",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n_free": 4,
+        "n_reps": 4,
+        "n_R": 4,
+        "n_X": 0,
+        "ok": true
+      },
+      "7": {
+        "n_free": 114,
+        "n_reps": 114,
+        "n_R": 16,
+        "n_X": 98,
+        "ok": true
+      }
+    },
+    "theorem": "n_free=n_R+n_X with (4,0) at p=5 and (16,98) at p=7. p=5 NL is all affine-R (15.505)."
+  },
+  "B": {
+    "proved": true,
+    "p7_n_R": 16,
+    "p7_n_X": 98,
+    "p7_pm1": 6,
+    "theorem": "Fail n_R=p\u22121 at p=7 (16\u22606). Fail n_X=0 at p=7. p\u22121 equals n_R only at p=5."
+  },
+  "C": {
+    "proved": false,
+    "n_R_named_in_p": false,
+    "n_X_named_in_p": false,
+    "n_free_named_in_p": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "n_R=4,16 and n_X=0,98 are not p-laws. Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
