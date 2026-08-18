@@ -1,6 +1,6 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-18):** HEAD 15.562. **Three leftovers remain.** Floor: 15.562 \(A_{k=3,n3}=-16p^3/((p-1)(p-3))\) and \(n_{k=3}A=-p^5(p^2-1)/3\) (this *is* \(Q_{3,n3}\) at \(p=5\)). \(Q_{3,\mathrm{generic}}\) named. For \(m>3\), \(A_{\mathrm{full}}\) still open. \(\phi_F\) not imported. \(L=\tfrac12\) is **not settled**.  
-> Latest: **`evidence/SESSION_HANDOFF_2026-08-18.md`**. Afternoon: **`evidence/SESSION_HANDOFF_2026-08-17_qtau.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**. Next `/goal`: **`GOAL.md`**.
+> **Now (2026-08-18 wrap):** HEAD 15.563. **Three leftovers remain.** Floor: \(A_{\mathrm{full}}\) for \(m>3\). Claude deep_review PASS-WITH-NOTE; OpenAI PASS; both `do_not_branch`. Naming \(A_{\mathrm{full}}\) names \(Q_3\), not automatically \(\langle\delta,\psi\rangle\le2\). \(Q_{3,02}\) certified \(p\le23\) only. \(\phi_F\) not imported. \(L=\tfrac12\) is **not settled**.  
+> Latest: **`evidence/SESSION_HANDOFF_2026-08-18_leftovers.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**. Next `/goal`: **`GOAL.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
 
