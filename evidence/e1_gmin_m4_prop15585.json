@@ -1,0 +1,328 @@
+{
+  "prop": "15.585",
+  "title": "leftover+splus at k=4p forces min_+=2; {2,4,6} not plus-slice",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "leftover_splus_k4p_min_eq_2": true,
+    "three_level_246_not_plus_slice": true,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "n_primes": 20,
+      "rows": {
+        "5": {
+          "k": 20,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "7": {
+          "k": 28,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "11": {
+          "k": 44,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "13": {
+          "k": 52,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "17": {
+          "k": 68,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "19": {
+          "k": 76,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "23": {
+          "k": 92,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "29": {
+          "k": 116,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "31": {
+          "k": 124,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "37": {
+          "k": 148,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "41": {
+          "k": 164,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "43": {
+          "k": 172,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "47": {
+          "k": 188,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "53": {
+          "k": 212,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "59": {
+          "k": 236,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "61": {
+          "k": 244,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "67": {
+          "k": 268,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "71": {
+          "k": 284,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "73": {
+          "k": 292,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        },
+        "79": {
+          "k": 316,
+          "mean": "4",
+          "min_ge_4_forces_S4": true,
+          "S4_empty": true
+        }
+      },
+      "theorem": "leftover+splus at k=4p: S\u22652, E=4 \u21d2 min_+=2 (min\u22654 \u21d2 S\u22614 empty). Fail: s\u208a\u22654 leftover+splus."
+    },
+    "B": {
+      "proved": true,
+      "n_primes": 20,
+      "rows": {
+        "5": {
+          "plus": "3/5",
+          "plus_gt_half": true,
+          "plus_b": "-1/5",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "7": {
+          "plus": "4/7",
+          "plus_gt_half": true,
+          "plus_b": "-1/7",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "11": {
+          "plus": "6/11",
+          "plus_gt_half": true,
+          "plus_b": "-1/11",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "13": {
+          "plus": "7/13",
+          "plus_gt_half": true,
+          "plus_b": "-1/13",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "17": {
+          "plus": "9/17",
+          "plus_gt_half": true,
+          "plus_b": "-1/17",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "19": {
+          "plus": "10/19",
+          "plus_gt_half": true,
+          "plus_b": "-1/19",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "23": {
+          "plus": "12/23",
+          "plus_gt_half": true,
+          "plus_b": "-1/23",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "29": {
+          "plus": "15/29",
+          "plus_gt_half": true,
+          "plus_b": "-1/29",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "31": {
+          "plus": "16/31",
+          "plus_gt_half": true,
+          "plus_b": "-1/31",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "37": {
+          "plus": "19/37",
+          "plus_gt_half": true,
+          "plus_b": "-1/37",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "41": {
+          "plus": "21/41",
+          "plus_gt_half": true,
+          "plus_b": "-1/41",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "43": {
+          "plus": "22/43",
+          "plus_gt_half": true,
+          "plus_b": "-1/43",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "47": {
+          "plus": "24/47",
+          "plus_gt_half": true,
+          "plus_b": "-1/47",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "53": {
+          "plus": "27/53",
+          "plus_gt_half": true,
+          "plus_b": "-1/53",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "59": {
+          "plus": "30/59",
+          "plus_gt_half": true,
+          "plus_b": "-1/59",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "61": {
+          "plus": "31/61",
+          "plus_gt_half": true,
+          "plus_b": "-1/61",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "67": {
+          "plus": "34/67",
+          "plus_gt_half": true,
+          "plus_b": "-1/67",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "71": {
+          "plus": "36/71",
+          "plus_gt_half": true,
+          "plus_b": "-1/71",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "73": {
+          "plus": "37/73",
+          "plus_gt_half": true,
+          "plus_b": "-1/73",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        },
+        "79": {
+          "plus": "40/79",
+          "plus_gt_half": true,
+          "plus_b": "-1/79",
+          "plus_infeasible": true,
+          "a_half_b": "0",
+          "mean_at_half": "4"
+        }
+      },
+      "theorem": "{2,4,6} leftover+splus has a\u22641/2, so 1_{S=2} is not a plus pair-slice. Fail: (1+f_e)/2 at p=5 (mass 3/5)."
+    },
+    "C": {
+      "proved": false,
+      "residual_ii_k_eq_4p_empty": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "leftover_only_exists": true,
+      "leftover_splus_general_p_open": true,
+      "unclassified_1_S2_open": true,
+      "note": "leftover+splus at k=4p is 3+ level Max+ with min=2 and leftover 4+ level Max\u2212. leftover-only exists (p=5 L8). residual_ii_k_eq_4p_empty stays False."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty",
+    "type_I"
+  ]
+}
