@@ -1,6 +1,6 @@
 # Status (2026-08-18)
 
-Leftover campaign: 15.273–15.509 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.509: Aut\(_\infty\) involution class \(\{u\mapsto-u+b\}\) has size \(q\) and cycle type \((1,1,2^{(q-1)/2})\) (field); on the p=3,5,7 caches \(\mathrm{Fix}(g)=2\cdot3^{C((p-1)/2,2)}\) (2, 6, 54). Fail: class size \(2q\); Fix \(n_{1d}/p\) (dies at p=7: \(20\neq54\)). Does not name \(D\) or \(Q_\tau\). Factorization and p≥11 untested. \(\phi_F\) not imported. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**.
+Leftover campaign: 15.273–15.510 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.510: translations \(T_b\) (\(b\neq0\)) have \(\mathrm{Fix}=C(p,m)\) on squares in \(\mathbb F_q\) and \(\mathrm{Fix}=0\) on nonsquares (\(m=(p+1)/2\)); \(\sum_{b\neq0}\mathrm{Fix}=(p-1)n_{1d}\). Fail: \(\mathrm{Fix}=p+1\) on squares (\(6\neq10\) at p=5). Identity term is \(|H_+|\), so \(D\) unnamed. \(\phi_F\) not imported. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|

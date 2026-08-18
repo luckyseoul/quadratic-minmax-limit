@@ -1,0 +1,84 @@
+{
+  "prop": "15.510",
+  "title": "Burnside translations Fix=C(p,m) on \u25a1; D unnamed",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "n_sq": 4,
+        "n_ns": 4,
+        "fix_sq": 3,
+        "wrong": 4,
+        "live_sq": [
+          3
+        ],
+        "live_ns": [
+          0
+        ]
+      },
+      "5": {
+        "n_sq": 12,
+        "n_ns": 12,
+        "fix_sq": 10,
+        "wrong": 6,
+        "live_sq": [
+          10
+        ],
+        "live_ns": [
+          0
+        ]
+      },
+      "7": {
+        "n_sq": 24,
+        "n_ns": 24,
+        "fix_sq": 35,
+        "wrong": 8,
+        "live_sq": [
+          35
+        ],
+        "live_ns": [
+          0
+        ]
+      }
+    },
+    "theorem": "Fix(T_b)=C(p,m) on squares, 0 on nonsquares. Fail p+1."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "sum": 12,
+        "named": 12
+      },
+      "5": {
+        "sum": 120,
+        "named": 120
+      },
+      "7": {
+        "sum": 840,
+        "named": 840
+      }
+    },
+    "theorem": "\u2211_{b\u22600} Fix(T_b)=(p\u22121) n_1d. Fail drop squares."
+  },
+  "C": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "Translation Fix is named off the identity. The b=0 term is |H_+|, so Burnside still does not name D. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
