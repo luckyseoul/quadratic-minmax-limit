@@ -1,0 +1,261 @@
+{
+  "prop": "15.536",
+  "title": "On \u03a9-triples I=p S(r/(1+r)); doubles are CM S(\u22121)",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "p": 5,
+        "G": -5,
+        "chi_Omega": -1,
+        "n_tri": 60,
+        "n_dbl": 36,
+        "n_ok": 60,
+        "I_eq_pS": true,
+        "n_GS_collisions": 0,
+        "S_half": 6,
+        "S_2": 6,
+        "S_m1": 6,
+        "S_cm_equal": true,
+        "S_m1_named": 6,
+        "S_m1_hits_named": true,
+        "I_dbl": [
+          30
+        ],
+        "I_dist": [
+          -50
+        ],
+        "S_dist": [
+          -10
+        ],
+        "I_dbl_is_p_Sm1": true,
+        "I_dbl_is_2p2": false,
+        "type111_S": [
+          6
+        ]
+      },
+      "7": {
+        "p": 7,
+        "G": 7,
+        "chi_Omega": 1,
+        "n_tri": 264,
+        "n_dbl": 72,
+        "n_ok": 264,
+        "I_eq_pS": true,
+        "n_GS_collisions": 264,
+        "S_half": 14,
+        "S_2": 14,
+        "S_m1": 14,
+        "S_cm_equal": true,
+        "S_m1_named": 14,
+        "S_m1_hits_named": true,
+        "I_dbl": [
+          98
+        ],
+        "I_dist": [
+          -14
+        ],
+        "S_dist": [
+          -2
+        ],
+        "I_dbl_is_p_Sm1": true,
+        "I_dbl_is_2p2": true,
+        "type111_S": [
+          -2,
+          14
+        ]
+      },
+      "11": {
+        "p": 11,
+        "G": 11,
+        "chi_Omega": 1,
+        "n_tri": 1740,
+        "n_dbl": 180,
+        "n_ok": 1740,
+        "I_eq_pS": true,
+        "n_GS_collisions": 1740,
+        "S_half": 22,
+        "S_2": 22,
+        "S_m1": 22,
+        "S_cm_equal": true,
+        "S_m1_named": 22,
+        "S_m1_hits_named": true,
+        "I_dbl": [
+          242
+        ],
+        "I_dist": [
+          -110,
+          66,
+          242
+        ],
+        "S_dist": [
+          -10,
+          6,
+          22
+        ],
+        "I_dbl_is_p_Sm1": true,
+        "I_dbl_is_2p2": true,
+        "type111_S": [
+          -10,
+          6,
+          22
+        ]
+      },
+      "13": {
+        "p": 13,
+        "G": -13,
+        "chi_Omega": -1,
+        "n_tri": 3444,
+        "n_dbl": 252,
+        "n_ok": 3444,
+        "I_eq_pS": true,
+        "n_GS_collisions": 0,
+        "S_half": -10,
+        "S_2": -10,
+        "S_m1": -10,
+        "S_cm_equal": true,
+        "S_m1_named": -10,
+        "S_m1_hits_named": true,
+        "I_dbl": [
+          -130
+        ],
+        "I_dist": [
+          -338,
+          -130,
+          78,
+          286
+        ],
+        "S_dist": [
+          -26,
+          -10,
+          6,
+          22
+        ],
+        "I_dbl_is_p_Sm1": true,
+        "I_dbl_is_2p2": false,
+        "type111_S": [
+          -10,
+          6,
+          22
+        ]
+      }
+    },
+    "p5_I_dbl": [
+      30
+    ],
+    "p5_GS": -30,
+    "theorem": "On \u03a9-triples I=p S(r/(1+r)).  Fail: I=G S (p=5 dbl \u221230\u226030); I=2p\u00b2 (30\u226050)."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "S_m1": 6,
+        "named": 6,
+        "ap2": 4,
+        "I_dbl": [
+          30
+        ],
+        "is_2p2": false,
+        "ok": true
+      },
+      "7": {
+        "S_m1": 14,
+        "named": 14,
+        "ap2": 0,
+        "I_dbl": [
+          98
+        ],
+        "is_2p2": true,
+        "ok": true
+      },
+      "11": {
+        "S_m1": 22,
+        "named": 22,
+        "ap2": 0,
+        "I_dbl": [
+          242
+        ],
+        "is_2p2": true,
+        "ok": true
+      },
+      "13": {
+        "S_m1": -10,
+        "named": -10,
+        "ap2": 36,
+        "I_dbl": [
+          -130
+        ],
+        "is_2p2": false,
+        "ok": true
+      },
+      "17": {
+        "S_m1": 30,
+        "named": 30,
+        "ap2": 4,
+        "I_dbl": [
+          510
+        ],
+        "is_2p2": false,
+        "ok": true
+      },
+      "19": {
+        "S_m1": 38,
+        "named": 38,
+        "ap2": 0,
+        "I_dbl": [
+          722
+        ],
+        "is_2p2": true,
+        "ok": true
+      }
+    },
+    "theorem": "I_dbl=p S(\u22121)=p(2p\u2212a_p\u00b2).  Equals 2p\u00b2 iff p\u22613 (mod 4).  Fail: 2p\u00b2 at p=5."
+  },
+  "C": {
+    "proved": false,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false,
+    "Delta_conn_p_rational": false,
+    "S_dist_p5": [
+      -10
+    ],
+    "S_dist_p7": [
+      -2
+    ],
+    "S_dist_p11": [
+      -10,
+      6,
+      22
+    ],
+    "type111_p7": [
+      -2,
+      14
+    ],
+    "generic_S_is_p_law": false,
+    "split_p11": true,
+    "split_type111_p7": true,
+    "note": "Generic S on distinct \u03a9-triples is not a p-law (\u221210, \u22122, split at p=11).  \u0394_conn still den 13,409.  Aut_e 3A+B still G>T.  Flags unflipped."
+  },
+  "proved": {
+    "I_Omega_eq_p_S": true,
+    "I_dbl_CM": true,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "type_I_multilevel_bad_case_ND_closed",
+    "type_I_aut_e_3AB_positive_general",
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
