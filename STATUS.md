@@ -1,6 +1,6 @@
 # Status (2026-08-18)
 
-Leftover campaign: 15.273–15.507 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.507: for \(p\equiv1\) the even pairing is a named function of one mass \(M=n_{++}(4-Q_{++}/q^2)\). Worst branch \(J_{N^*}=2\) is \(\le2\) iff \(Q_{++}\le Q^{\mathrm{floor\,ub}}\) (\(26/7\) at p=5). Fail: \(16/|N^*|\le2\) at p=5 (that is 4). Inequality not proved Max+-free. \(\phi_F\) not imported. Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
+Leftover campaign: 15.273–15.508 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.508: Aut\(_\infty\) ω-class \(\{u\mapsto\omega u+b:\omega^3=1\neq\omega\}\) has size \(2q\); on the p=5,7 caches \(\mathrm{Fix}(g)=p-\chi_p(-1)\). Fail: class size \(q\); Fix \(p+\chi_p(-1)\). Does not name \(D\) or \(Q_\tau\). \(\phi_F\) not imported. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|

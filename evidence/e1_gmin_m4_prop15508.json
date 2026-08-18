@@ -1,0 +1,96 @@
+{
+  "prop": "15.508",
+  "title": "Burnside \u03c9-class size 2q, Fix=p\u2212\u03c7_p(\u22121); D unnamed",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "n": 50,
+        "named": 50,
+        "n_omega": 2
+      },
+      "7": {
+        "n": 98,
+        "named": 98,
+        "n_omega": 2
+      },
+      "11": {
+        "n": 242,
+        "named": 242,
+        "n_omega": 2
+      },
+      "13": {
+        "n": 338,
+        "named": 338,
+        "n_omega": 2
+      },
+      "17": {
+        "n": 578,
+        "named": 578,
+        "n_omega": 2
+      },
+      "19": {
+        "n": 722,
+        "named": 722,
+        "n_omega": 2
+      }
+    },
+    "theorem": "|\u03c9-class|=2q. Fail |class|=q."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "n": 50,
+        "fix": 4,
+        "wrong": 6,
+        "live_min": 4,
+        "live_max": 4
+      },
+      "7": {
+        "n": 98,
+        "fix": 8,
+        "wrong": 6,
+        "live_min": 8,
+        "live_max": 8
+      }
+    },
+    "theorem": "Fix(g_{\u03c9,b})=p\u2212\u03c7_p(\u22121) constantly. Fail p+\u03c7(\u22121)."
+  },
+  "C": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "contrib_orbits": 0.3333333333333333,
+        "n_orbits": 2,
+        "after_drop": 1.6666666666666667
+      },
+      "7": {
+        "contrib_orbits": 0.3333333333333333,
+        "n_orbits": 8,
+        "after_drop": 7.666666666666667
+      }
+    },
+    "theorem": "Dropping the \u03c9-class, Burnside is not n_orbits."
+  },
+  "D": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "\u03c9-class Fix is named at p=5,7. n_orbits and |H+| / D / Q_\u03c4 stay unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}

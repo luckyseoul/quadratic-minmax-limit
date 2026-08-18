@@ -1,5 +1,5 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-18):** **Three of four leftovers remain.** Lemma D is already True (do not unflip). Still OPEN: (1) floor \(\lambda_{\min}(\Phi)\ge6\) / name \(Q_\tau\) (15.507: \(p\equiv1\) pairing is one mass \(M\); \(J_{N^*}=2\) iff \(Q_{++}\le Q^{\mathrm{floor\,ub}}=26/7\) at p=5; not proved Max+-free). (2) residual (ii) even \(k\ge4p\); (3) Type I multi-level. Do **not** import \(\phi_F\). Aut-Schur **false**. Live `e1` is the old AND. \(L=\tfrac12\) is **not settled**.  
+> **Now (2026-08-18):** HEAD 15.508. **Three leftovers remain.** Burnside ω-class named (\(|class|=2q\), \(\mathrm{Fix}=p-\chi_p(-1)\) at p=5,7); \(D=|H_+|/(2p)\) and ensemble \(Q_\tau\) still unnamed. \(\phi_F\) not imported. \(L=\tfrac12\) is **not settled**.  
 > Afternoon: **`evidence/SESSION_HANDOFF_2026-08-17_qtau.md`**. Morning: **`evidence/SESSION_HANDOFF_2026-08-17_leftover.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**. Next `/goal`: **`GOAL.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
