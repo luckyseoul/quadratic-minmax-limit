@@ -1,0 +1,84 @@
+{
+  "prop": "15.573",
+  "title": "Q_sub exclusive 1D/k=3/full mix of the 1-line 4-point",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "mix": 3.692307692307692,
+        "live": 3.692307692307692,
+        "err": 0.0,
+        "parts": {
+          "1d": {
+            "n": 30,
+            "mu": 3333.3333333333335,
+            "contrib": 1.2307692307692308
+          },
+          "k3": {
+            "n": 100,
+            "mu": 2000.0,
+            "contrib": 2.4615384615384617
+          }
+        },
+        "dup_mix": 6.153846153846154,
+        "match": true,
+        "dup_fails": true
+      },
+      "7": {
+        "mix": 3.7750611246943757,
+        "live": 3.7750611246943766,
+        "err": 8.881784197001252e-16,
+        "parts": {
+          "1d": {
+            "n": 140,
+            "mu": 24970.400000000005,
+            "contrib": 0.25427872860635703
+          },
+          "k3": {
+            "n": 1176,
+            "mu": 9604.0,
+            "contrib": 0.8215158924205379
+          },
+          "full": {
+            "n": 4410,
+            "mu": 8414.933333333332,
+            "contrib": 2.699266503667481
+          }
+        },
+        "dup_mix": null,
+        "match": true,
+        "dup_fails": true
+      }
+    },
+    "theorem": "Exclusive 1D/k=3/full mix names Q_sub at p=5,7. Fail double-count k=3 at p=5."
+  },
+  "B": {
+    "proved": false,
+    "Q_sub_mu_named_in_p": false,
+    "Q_Nstar_named_in_p": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "Q_sub is the exclusive support mix of a 1-line 4-point. The three \u03bc pieces are not a p-law. Do not interpolate (p\u22125)/15. phi_F not imported."
+  },
+  "proved": {
+    "Q_sub_exclusive_mix": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ],
+  "identity": "Q_sub = (n_1d mu_1d + n_k3 mu_k3 + n_full mu_full)/N"
+}

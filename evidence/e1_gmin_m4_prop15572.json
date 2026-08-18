@@ -1,0 +1,145 @@
+{
+  "prop": "15.572",
+  "title": "A6 family mean is a Jacobi mix of T_gen and deg(\u03c7(2),\u03c7(3))",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "got": 1000.0000000000006,
+        "named": 1000.0,
+        "frac": "1000",
+        "err": 5.684341886080801e-13,
+        "guess_3mchi2": -0.0,
+        "drop_chi3": 200.0,
+        "t12": 600.0,
+        "match": true,
+        "amp_guess_fails_or_ok": true,
+        "t12_fails_or_ok": true,
+        "chi3_fails_or_ok": true
+      },
+      "7": {
+        "got": 130.66666666666742,
+        "named": 130.66666666666666,
+        "frac": "392/3",
+        "err": 7.673861546209082e-13,
+        "guess_3mchi2": 130.66666666666666,
+        "drop_chi3": 130.66666666666666,
+        "t12": 784.0,
+        "match": true,
+        "amp_guess_fails_or_ok": true,
+        "t12_fails_or_ok": true,
+        "chi3_fails_or_ok": true
+      },
+      "11": {
+        "got": -1161.6000000000004,
+        "named": -1161.6,
+        "frac": "-5808/5",
+        "err": 4.547473508864641e-13,
+        "guess_3mchi2": -1161.6,
+        "drop_chi3": -1161.6,
+        "t12": -1161.6,
+        "match": true,
+        "amp_guess_fails_or_ok": true,
+        "t12_fails_or_ok": true,
+        "chi3_fails_or_ok": true
+      },
+      "13": {
+        "got": -630.9333333333337,
+        "named": -630.9333333333333,
+        "frac": "-9464/15",
+        "err": 4.547473508864641e-13,
+        "guess_3mchi2": -0.0,
+        "drop_chi3": -270.4,
+        "t12": 1352.0,
+        "match": true,
+        "amp_guess_fails_or_ok": true,
+        "t12_fails_or_ok": true,
+        "chi3_fails_or_ok": true
+      },
+      "17": {
+        "got": 11725.142857142851,
+        "named": 11725.142857142857,
+        "frac": "82076/7",
+        "err": 5.4569682106375694e-12,
+        "guess_3mchi2": 0.0,
+        "drop_chi3": 12055.42857142857,
+        "t12": -1734.0,
+        "match": true,
+        "amp_guess_fails_or_ok": true,
+        "t12_fails_or_ok": true,
+        "chi3_fails_or_ok": true
+      },
+      "23": {
+        "got": 692.5090909090909,
+        "named": 692.5090909090909,
+        "frac": "38088/55",
+        "err": 0.0,
+        "guess_3mchi2": 384.72727272727275,
+        "drop_chi3": 692.5090909090909,
+        "t12": 2308.3636363636365,
+        "match": true,
+        "amp_guess_fails_or_ok": true,
+        "t12_fails_or_ok": true,
+        "chi3_fails_or_ok": true
+      },
+      "29": {
+        "got": -9389.626373626339,
+        "named": -9389.626373626374,
+        "frac": "-854456/91",
+        "err": 3.456079866737127e-11,
+        "guess_3mchi2": -0.0,
+        "drop_chi3": -9685.362637362638,
+        "t12": 2883.4285714285716,
+        "match": true,
+        "amp_guess_fails_or_ok": true,
+        "t12_fails_or_ok": true,
+        "chi3_fails_or_ok": true
+      },
+      "73": {
+        "got": 69970.61587301693,
+        "named": 69970.61587301588,
+        "frac": "22040744/315",
+        "err": 1.0477378964424133e-09,
+        "guess_3mchi2": 0.0,
+        "drop_chi3": 69699.93650793651,
+        "t12": -7105.333333333333,
+        "match": true,
+        "amp_guess_fails_or_ok": true,
+        "t12_fails_or_ok": true,
+        "chi3_fails_or_ok": true
+      }
+    },
+    "theorem": "A6 Jacobi mix of T_gen and \u03c7(2),\u03c7(3)-deg. Fail amp(3\u2212\u03c7(2))/2 at p=23; fail drop \u03c7(3) at p=13."
+  },
+  "B": {
+    "proved": false,
+    "A_full_dbl_named_in_p": false,
+    "Q3_double_named_in_p": false,
+    "Q_tau_named": false,
+    "NUM_SUM_16pA_general": false,
+    "phi_F_imported": false,
+    "note": "A6 family mean is a Jacobi integer. A_full / Q3_dbl / Q_\u03c4 still unnamed. Do not interpolate (p\u22125)/15. phi_F not imported. Aut_e DEAD."
+  },
+  "proved": {
+    "a6_family_jacobi": true,
+    "A_full_dbl_named_in_p": false,
+    "Q3_double_named_in_p": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ],
+  "identity": "A6 = mix((p-5)/(p-3) * 8 p^2 chi(-1)chi(2) T_gen/(p-1), 2/(p-3) * 32 p^2 (11+10 chi(2)+4 chi(2)chi(3))/(p-1))"
+}
