@@ -1,0 +1,81 @@
+{
+  "prop": "15.556",
+  "title": "G3_1d is named; \u03a6=G3_1d+\u03a6_free with \u03a6_free unnamed",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n_1d": 30,
+        "n_pairs": 552,
+        "n_collinear": 72,
+        "maxerr": 0.0,
+        "drop_mu3_err": 6.0,
+        "nonspec_err": 8.0,
+        "ok": true
+      },
+      "7": {
+        "n_1d": 140,
+        "n_pairs": 2256,
+        "n_collinear": 240,
+        "maxerr": 0.0,
+        "drop_mu3_err": 12.0,
+        "nonspec_err": 16.0,
+        "ok": true
+      }
+    },
+    "theorem": "G3_1d=[n_spec/p\u22123(m\u2212n_spec)/(p(p\u22122))] C(p,m). Fail drop \u03bc\u2083; fail n_spec=(3+\u03c3)/2 on collinear."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n_keys": 52,
+        "n_split": 0,
+        "max_abs_free": 36.0,
+        "nuniq_free": 5,
+        "ok": true
+      },
+      "7": {
+        "n_keys": 156,
+        "n_split": 0,
+        "max_abs_free": 642.0,
+        "nuniq_free": 14,
+        "ok": true
+      }
+    },
+    "theorem": "\u03a6=G3_1d+\u03a6_free. Fail \u03a6_free\u22610."
+  },
+  "C": {
+    "proved": false,
+    "Phi_free_named_in_p": false,
+    "Phi_named_in_p": false,
+    "Q3_named_in_p": false,
+    "NUM_SUM_16pA_general": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "G3_1d is named. \u03a6_free takes 5 values at p=5 and 14 at p=7. 16pA / Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "proved": {
+    "G3_1d_named": true,
+    "Phi_split": true,
+    "Phi_named_in_p": false,
+    "NUM_SUM_16pA_general": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ],
+  "identity": "G3_1d=[n_spec/p\u22123(m\u2212n_spec)/(p(p\u22122))] C(p,m), n_spec=(1+\u03c7(u))/2 if v/u\u2208F_p else (3+\u03c7(u)+\u03c7(v)+\u03c7(v\u2212u))/2"
+}
