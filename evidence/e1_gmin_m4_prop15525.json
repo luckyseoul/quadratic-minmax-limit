@@ -1,0 +1,295 @@
+{
+  "prop": "15.525",
+  "title": "Type-index Gram named and misses live \u03b4; no catalog D=N(a+bi)",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "p": 5,
+        "keys": [
+          "++",
+          "N*"
+        ],
+        "n": {
+          "++": 6,
+          "N*": 4
+        },
+        "G": [
+          [
+            72,
+            -48
+          ],
+          [
+            -48,
+            64
+          ]
+        ],
+        "named_live_err": 1.1368683772161603e-13,
+        "drop_minus_err": 71.99999999999989
+      },
+      "7": {
+        "p": 7,
+        "keys": [
+          "++",
+          "--N1",
+          "N*"
+        ],
+        "n": {
+          "++": 6,
+          "--N1": 4,
+          "N*": 12
+        },
+        "G": [
+          [
+            216,
+            -48,
+            -144
+          ],
+          [
+            -48,
+            160,
+            -96
+          ],
+          [
+            -144,
+            -96,
+            288
+          ]
+        ],
+        "named_live_err": 4.634358637530585e-13,
+        "drop_minus_err": 288.0000000000003
+      },
+      "11": {
+        "p": 11,
+        "keys": [
+          "++",
+          "--N1",
+          "N*"
+        ],
+        "n": {
+          "++": 12,
+          "--N1": 6,
+          "N*": 40
+        },
+        "G": [
+          [
+            1152,
+            -144,
+            -960
+          ],
+          [
+            -144,
+            648,
+            -480
+          ],
+          [
+            -960,
+            -480,
+            1600
+          ]
+        ],
+        "named_live_err": 5.786401698842065e-12,
+        "drop_minus_err": 2399.9999999999964
+      },
+      "13": {
+        "p": 13,
+        "keys": [
+          "++",
+          "N*"
+        ],
+        "n": {
+          "++": 22,
+          "N*": 60
+        },
+        "G": [
+          [
+            2728,
+            -2640
+          ],
+          [
+            -2640,
+            2880
+          ]
+        ],
+        "named_live_err": 1.0459189070388675e-11,
+        "drop_minus_err": 5039.999999999989
+      },
+      "17": {
+        "p": 17,
+        "keys": [
+          "++",
+          "N*"
+        ],
+        "n": {
+          "++": 30,
+          "N*": 112
+        },
+        "G": [
+          [
+            6840,
+            -6720
+          ],
+          [
+            -6720,
+            7168
+          ]
+        ],
+        "named_live_err": 4.127483932373768e-11,
+        "drop_minus_err": 16127.999999999984
+      },
+      "19": {
+        "p": 19,
+        "keys": [
+          "++",
+          "--N1",
+          "N*"
+        ],
+        "n": {
+          "++": 24,
+          "--N1": 10,
+          "N*": 144
+        },
+        "G": [
+          [
+            7488,
+            -480,
+            -6912
+          ],
+          [
+            -480,
+            3400,
+            -2880
+          ],
+          [
+            -6912,
+            -2880,
+            10368
+          ]
+        ],
+        "named_live_err": 3.588821408677696e-11,
+        "drop_minus_err": 25919.999999999993
+      }
+    },
+    "theorem": "G_\u03c4\u03c3=((q\u22121)/2)(|\u03c4\u2229\u03c3|+|\u03c4\u2229(\u2212\u03c3)|)\u22122|\u03c4||\u03c3|. Fail drop minus (p=5 err>1)."
+  },
+  "B": {
+    "proved": true,
+    "p5": {
+      "keys": [
+        "++",
+        "N*"
+      ],
+      "n": {
+        "++": 6,
+        "N*": 4
+      },
+      "G": [
+        [
+          72,
+          -48
+        ],
+        [
+          -48,
+          64
+        ]
+      ],
+      "delta": [
+        4,
+        20
+      ],
+      "Gdelta": [
+        -672,
+        1088
+      ],
+      "wedge": 17792
+    },
+    "p7": {
+      "keys": [
+        "++",
+        "--N1",
+        "N*"
+      ],
+      "n": {
+        "++": 6,
+        "--N1": 4,
+        "N*": 12
+      },
+      "G": [
+        [
+          216,
+          -48,
+          -144
+        ],
+        [
+          -48,
+          160,
+          -96
+        ],
+        [
+          -144,
+          -96,
+          288
+        ]
+      ],
+      "delta": [
+        92,
+        260,
+        140
+      ],
+      "Gdelta": [
+        -12768,
+        23744,
+        2112
+      ],
+      "svals": [
+        27042.526508353454,
+        239.43275674090188
+      ]
+    },
+    "theorem": "Live \u03b4 is not an eigenvector of the type-index Gram. Fail p=5 wedge=0."
+  },
+  "C": {
+    "proved": true,
+    "catalog_hits": [],
+    "laws_2_3": [
+      "(p-1)/2"
+    ],
+    "laws_3_20": [],
+    "dimVplus_7": 25,
+    "D7": 409,
+    "theorem": "No catalog (f,g) names D=N(f+gi) at both p=5,7. Fail D=dim V_+ at p=7."
+  },
+  "D": {
+    "proved": true,
+    "Jchi_k2_N": {
+      "5": 25,
+      "7": 49
+    },
+    "q": {
+      "5": 25,
+      "7": 49
+    },
+    "theorem": "|J(\u03c7,\u03c8)|\u00b2=q \u2260 D. Fail D=q at p=7."
+  },
+  "E": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "pairing_forced": false,
+    "phi_F_imported": false,
+    "note": "Type-index Gram does not pin \u03b4. Catalog p-laws miss (3,20). Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
