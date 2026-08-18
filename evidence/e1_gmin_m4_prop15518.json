@@ -1,0 +1,185 @@
+{
+  "prop": "15.518",
+  "title": "p=11 affine leftover includes stab=2p; p=7 dichotomy has no 2p",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "fold": {
+      "nS": 35,
+      "summary": {
+        "AP": {
+          "nS": 21,
+          "orbits": [
+            84
+          ],
+          "stabs": [
+            28
+          ],
+          "orbit_hist": {
+            "84": 21
+          },
+          "stab_hist": {
+            "28": 21
+          }
+        },
+        "QR0": {
+          "nS": 14,
+          "orbits": [
+            56
+          ],
+          "stabs": [
+            42
+          ],
+          "orbit_hist": {
+            "56": 14
+          },
+          "stab_hist": {
+            "42": 14
+          }
+        }
+      },
+      "W": 35
+    },
+    "theorem": "p=7 L=(0,1) S are AP (stab 4p) or QR0 (stab p(p\u22121)). Not 2p."
+  },
+  "B": {
+    "proved": true,
+    "fold": {
+      "nS": 462,
+      "summary": {
+        "AP": {
+          "nS": 55,
+          "orbits": [
+            330
+          ],
+          "stabs": [
+            44
+          ],
+          "orbit_hist": {
+            "330": 55
+          },
+          "stab_hist": {
+            "44": 55
+          }
+        },
+        "other": {
+          "nS": 385,
+          "orbits": [
+            330,
+            660
+          ],
+          "stabs": [
+            22,
+            44
+          ],
+          "orbit_hist": {
+            "330": 55,
+            "660": 330
+          },
+          "stab_hist": {
+            "22": 330,
+            "44": 55
+          }
+        },
+        "QR0": {
+          "nS": 22,
+          "orbits": [
+            132
+          ],
+          "stabs": [
+            110
+          ],
+          "orbit_hist": {
+            "132": 22
+          },
+          "stab_hist": {
+            "110": 22
+          }
+        }
+      },
+      "W": 40
+    },
+    "theorem": "p=11 leftover S have stabs {2p,4p}; 2p is new. Not a single stab."
+  },
+  "C": {
+    "proved": true,
+    "distinct_reps": true,
+    "affine_sum_if_four": 1452,
+    "n_1d": 2772,
+    "fold": {
+      "nS": 462,
+      "summary": {
+        "AP": {
+          "nS": 55,
+          "orbits": [
+            330
+          ],
+          "stabs": [
+            44
+          ],
+          "orbit_hist": {
+            "330": 55
+          },
+          "stab_hist": {
+            "44": 55
+          }
+        },
+        "other": {
+          "nS": 385,
+          "orbits": [
+            330,
+            660
+          ],
+          "stabs": [
+            22,
+            44
+          ],
+          "orbit_hist": {
+            "330": 55,
+            "660": 330
+          },
+          "stab_hist": {
+            "22": 330,
+            "44": 55
+          }
+        },
+        "QR0": {
+          "nS": 22,
+          "orbits": [
+            132
+          ],
+          "stabs": [
+            110
+          ],
+          "orbit_hist": {
+            "132": 22
+          },
+          "stab_hist": {
+            "110": 22
+          }
+        }
+      },
+      "W": 40
+    },
+    "theorem": "Four distinct L=(0,1) orbits; sum 1452\u2260n_1d=2772."
+  },
+  "D": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "Affine leftover stab 2p is named at p=11 only as a cache of L=(0,1) S. NL / |H_+| / Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}

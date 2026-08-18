@@ -1,5 +1,5 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-18):** HEAD 15.517. **Three leftovers remain.** p=5 \(H_+\) \(W\)-hist is the 15.323 two-orbit law (Var=\(\mathrm{Var}_{2\mathrm{orb}}\)); p=7 is not (13 values). Ensemble \(L_{\mathrm{ns\_mix}}=\mu_+\mu_-\). \(Q_\tau\) unnamed. \(\phi_F\) not imported. \(L=\tfrac12\) is **not settled**.  
+> **Now (2026-08-18):** HEAD 15.518. **Three leftovers remain.** p=11 affine leftover \(S\) include a named stab \(2p\) class (fail: unique leftover stab; fail: non-AP stab \(=2p\) at p=7; fail: four orbits exhaust \(n_{1d}\)). \(Q_\tau\) unnamed. \(\phi_F\) not imported. \(L=\tfrac12\) is **not settled**.  
 > Afternoon: **`evidence/SESSION_HANDOFF_2026-08-17_qtau.md`**. Morning: **`evidence/SESSION_HANDOFF_2026-08-17_leftover.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**. Next `/goal`: **`GOAL.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
