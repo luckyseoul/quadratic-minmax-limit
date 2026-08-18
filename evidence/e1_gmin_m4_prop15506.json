@@ -1,0 +1,92 @@
+{
+  "prop": "15.506",
+  "title": "S0 is Max+-free; p=7 A-shifts are not a p\u22613 law",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "n_Omega": 12,
+        "named": 12,
+        "G1": -5.0,
+        "Omega_eq_T": false,
+        "transitive": true
+      },
+      "7": {
+        "n_Omega": 24,
+        "named": 24,
+        "G1": 7.0,
+        "Omega_eq_T": true,
+        "transitive": true
+      },
+      "11": {
+        "n_Omega": 60,
+        "named": 60,
+        "G1": 11.0,
+        "Omega_eq_T": true,
+        "transitive": true
+      },
+      "13": {
+        "n_Omega": 84,
+        "named": 84,
+        "G1": -13.000000000000002,
+        "Omega_eq_T": false,
+        "transitive": true
+      },
+      "17": {
+        "n_Omega": 144,
+        "named": 144,
+        "G1": -17.0,
+        "Omega_eq_T": false,
+        "transitive": true
+      }
+    },
+    "theorem": "|\u03a9|=(q\u22121)/2; T acts regularly. Fail |\u03a9|=p+1; \u03a9=T at p=5."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "got": "48",
+        "named": "48"
+      },
+      "7": {
+        "got": "96",
+        "named": "96"
+      }
+    },
+    "theorem": "\u2211_T Q/q\u00b2 = 2(q\u22121). Fail 2(q+1)."
+  },
+  "C": {
+    "proved": true,
+    "rows": {
+      "5": "8",
+      "7": "8"
+    },
+    "theorem": "\u2211_off \u03b4 = 8. Fail 4 or 16."
+  },
+  "D": {
+    "proved": true,
+    "D7": "409",
+    "D11": "77097/7",
+    "theorem": "p=7 three-type A-shifts recover D=409; at p=11 D=77097/7 \u2209 \u2124. Not a p\u22613 law."
+  },
+  "E": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "S0 is Max+-free but does not name the off Q values. p=7 three-type shifts die at p=11. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
