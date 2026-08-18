@@ -11,7 +11,7 @@ Leftover campaign: 15.273–15.529 and 15.531–15.553 shipped. 15.550: \(S(\lam
 | Residual (ii), affine + even \(k\le4p-2\) | **CLOSED** (that range) | 15.179 + 15.236 + 15.237 |
 | Residual (ii), even \(k\ge4p\) | **OPEN** | multi-level Max− leftover (15.274); p=5 \(k=20\) leftover+splus empty all nF (15.521/524/528); p=5 \(k=22\) leftover+splus empty nF=0,3–9,11–14 (15.547+15.552); nF=10 TLE |
 | Type I, multi-level Max− | **OPEN** | 15.543 \(\mu_{1d}\); 15.544 p=5 mix; 15.546 p=7 mix \(109/2863<|T|\); 15.551 Galois line-union; Aut_e \(p\ge11\) / \(A_{\mathrm{full}}\) open; `type_I_multilevel_bad_case_ND_closed=False` |
-| \(\lambda_{\min}(\Phi)\ge6\) | **OPEN** | 15.279; 15.550 \(S=\mathrm{Kl}\); 15.553 Term0 named, Ω-bulk of \(K_\lambda^{\mathrm{all}}\) unnamed; `phi_F_ge_6=False` |
+| \(\lambda_{\min}(\Phi)\ge6\) | **OPEN** | 15.279; 15.550 \(S=\mathrm{Kl}\); 15.553 Term0; 15.554 Cross+\(\Omega\Omega\) split, Q3 by line type not a \(p\)-law; `phi_F_ge_6=False` |
 | E(1) / \(L=\tfrac12\) | **OPEN** | needs the four leftovers above |
 | Path-C residual / 16N | OPEN optional | not required for denseness path |
 

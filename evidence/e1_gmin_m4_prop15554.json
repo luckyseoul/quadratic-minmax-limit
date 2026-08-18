@@ -1,0 +1,152 @@
+{
+  "prop": "15.554",
+  "title": "\u0177 k-point supported on \u03a3\u03b1=0; Q3 constant on line types; K_all=Term0+Cross+\u03a9\u03a9",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "nOmega": 12,
+        "m1_max": 2.842170943040401e-14,
+        "m2_off_max": 8.384404281969182e-13,
+        "m2_on_err": 1.8189894035458565e-12,
+        "q3_nont_max": 4.206412995699793e-12,
+        "q3_trip_max": 25000.000000000007,
+        "n_trip": 60,
+        "ok": true
+      },
+      "7": {
+        "nOmega": 24,
+        "m1_max": 2.7284841053187847e-12,
+        "m2_off_max": 1.4279066817834973e-10,
+        "m2_on_err": 0.0,
+        "q3_nont_max": 3.2014213502407074e-10,
+        "q3_trip_max": 1248520.0000000002,
+        "n_trip": 264,
+        "ok": true
+      }
+    },
+    "theorem": "\u03a3 \u220f\u0177(\u03b1_i)=0 unless \u03a3\u03b1_i=0. Fail Q3(nont)=Q3(triple)."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "double": {
+          "n": 36,
+          "mean": -5000.0,
+          "min": -5000.000000000002,
+          "max": -4999.999999999998,
+          "want": -5000.0,
+          "ok": true
+        },
+        "n3": {
+          "n": 24,
+          "mean": -25000.000000000004,
+          "min": -25000.000000000007,
+          "max": -25000.0,
+          "want": -25000.0,
+          "ok": true
+        },
+        "generic": {
+          "n": 0,
+          "ok": true
+        },
+        "Q2": {
+          "want": 6500.0,
+          "ok": true
+        },
+        "ok": true
+      },
+      "7": {
+        "double": {
+          "n": 72,
+          "mean": -441784.00000000006,
+          "min": -441784.00000000023,
+          "max": -441784.0,
+          "want": -441784.0,
+          "ok": true
+        },
+        "n3": {
+          "n": 144,
+          "mean": -672280.0,
+          "min": -672280.0000000001,
+          "max": -672279.9999999999,
+          "want": -672280.0,
+          "ok": true
+        },
+        "generic": {
+          "n": 48,
+          "mean": -1248520.0,
+          "min": -1248520.0000000002,
+          "max": -1248520.0,
+          "want": -1248520.0,
+          "ok": true
+        },
+        "Q2": {
+          "want": 561148.0,
+          "ok": true
+        },
+        "ok": true
+      }
+    },
+    "theorem": "Q2=2Nq on antipodes. Q3 constant on 3-line / double / generic 1-line. Fail Q3\u22610; fail 3-line=double."
+  },
+  "C": {
+    "proved": false,
+    "split_certified": true,
+    "K_all_named_in_p": false,
+    "Q3_named_in_p": false,
+    "Q4_is_Wick": false,
+    "NUM_SUM_16pA_general": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "splits": {
+      "5": {
+        "N": 130,
+        "Term0": 649.9999999999998,
+        "Cross": 7040.0000000001,
+        "OO": 241360.0000000011,
+        "Kall": 249050.0000000012,
+        "WickOO": 31839600.0,
+        "bulk": 248400.0000000012,
+        "match": true,
+        "wick_fails": true
+      },
+      "7": {
+        "N": 5726,
+        "Term0": 578326.0000000005,
+        "Cross": 1040032.0000000003,
+        "OO": 40429424.00000001,
+        "Kall": 42047782.00000001,
+        "WickOO": 242493214095.99902,
+        "bulk": 41469456.00000001,
+        "match": true,
+        "wick_fails": true
+      }
+    },
+    "note": "K_all=Term0+Cross+\u03a9\u03a9 certified p=5,7. Q3 constants live but not a p-law. Q4\u2260Wick. 16pA / Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "proved": {
+    "ypoint_support": true,
+    "Q3_constant_on_types": true,
+    "K_all_split": true,
+    "K_all_named_in_p": false,
+    "NUM_SUM_16pA_general": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ]
+}
