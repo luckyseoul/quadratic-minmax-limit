@@ -1,5 +1,5 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-18):** HEAD 15.519. **Three leftovers remain.** QR0 halfspace \(Q=2(p+1)\) on \(\mathbb F_p^\times\) for \(p\equiv3\pmod4\) (Gauss: \(|\hat1_{\mathrm{QR0}}|^2=(p+1)/4\)). Fail: same at \(p=13\); fail: \(2(p+1)=16/3\) at \(p=5\). Ensemble \(Q_\tau\) unnamed. \(\phi_F\) not imported. \(L=\tfrac12\) is **not settled**.  
+> **Now (2026-08-18):** HEAD 15.520. **Three leftovers remain.** p=11 leftover-\(2p\) Fejer is \(904/45\) (Johnson+15.519), not \(832/45\). Fail: leftover-\(2p\) at p=7; fail constant at p=19. Ensemble \(Q_\tau\) unnamed. \(\phi_F\) not imported. \(L=\tfrac12\) is **not settled**.  
 > Afternoon: **`evidence/SESSION_HANDOFF_2026-08-17_qtau.md`**. Morning: **`evidence/SESSION_HANDOFF_2026-08-17_leftover.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**. Next `/goal`: **`GOAL.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit

@@ -1,0 +1,114 @@
+{
+  "prop": "15.520",
+  "title": "p=11 leftover-2p Fejer is 904/45 (not 832/45)",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "live": "904/45",
+    "johnson": "904/45",
+    "wrong_832_45": "832/45",
+    "fold": {
+      "n": {
+        "AP": 55,
+        "2p": 330,
+        "4p": 55,
+        "QR0": 22
+      },
+      "Q": {
+        "AP": {
+          "n": 55,
+          "pm1": "248/3",
+          "sub": [
+            "32/5",
+            "184/15",
+            "184/15",
+            "32/5",
+            "32/5",
+            "184/15",
+            "184/15",
+            "32/5"
+          ],
+          "sub_const": false,
+          "sub0": "32/5"
+        },
+        "2p": {
+          "n": 330,
+          "pm1": "1784/45",
+          "sub": [
+            "904/45",
+            "904/45",
+            "904/45",
+            "904/45",
+            "904/45",
+            "904/45",
+            "904/45",
+            "904/45"
+          ],
+          "sub_const": true,
+          "sub0": "904/45"
+        },
+        "4p": {
+          "n": 55,
+          "pm1": "536/15",
+          "sub": [
+            "24",
+            "272/15",
+            "272/15",
+            "24",
+            "24",
+            "272/15",
+            "272/15",
+            "24"
+          ],
+          "sub_const": false,
+          "sub0": "24"
+        },
+        "QR0": {
+          "n": 22,
+          "pm1": "24",
+          "sub": [
+            "24",
+            "24",
+            "24",
+            "24",
+            "24",
+            "24",
+            "24",
+            "24"
+          ],
+          "sub_const": true,
+          "sub0": "24"
+        }
+      }
+    },
+    "theorem": "p=11 leftover-2p Fejer=904/45=Johnson(15.292,15.519,AP,4p)."
+  },
+  "B": {
+    "proved": true,
+    "p7_tags": {
+      "AP": 21,
+      "QR0": 14
+    },
+    "p11_live": "904/45",
+    "theorem": "No leftover-2p at p=7. Fail 832/45 at p=11."
+  },
+  "C": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "904/45 is the p=11 leftover-2p family Fejer, not ensemble Q_\u03c4. p=19 leftover-2p Fejer is not constant. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
