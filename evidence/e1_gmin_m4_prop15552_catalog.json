@@ -1,0 +1,78 @@
+{
+  "highs_leftover_splus": {
+    "9": {
+      "status": "Infeasible",
+      "time_limit": 1800.0,
+      "seconds": 1157.6652035713196,
+      "nodes": 144477,
+      "threads": 16,
+      "splus": "S>=2"
+    },
+    "11": {
+      "status": "Infeasible",
+      "time_limit": 3600.0,
+      "seconds": 2260.030903816223,
+      "nodes": 281095,
+      "threads": 14,
+      "splus": "S>=2"
+    },
+    "12": {
+      "status": "Infeasible",
+      "time_limit": 3600.0,
+      "seconds": 1903.6442847251892,
+      "nodes": 309884,
+      "threads": 14,
+      "splus": "S>=2"
+    },
+    "13": {
+      "status": "Infeasible",
+      "time_limit": 3600.0,
+      "seconds": 1771.2568247318268,
+      "nodes": 256581,
+      "threads": 14,
+      "splus": "S>=2"
+    }
+  },
+  "tle": {
+    "10": {
+      "status": "Time limit reached",
+      "time_limit": 1800.0,
+      "seconds": 1800.2135710716248,
+      "nodes": 287404,
+      "threads": 16,
+      "splus": "S>=2"
+    }
+  },
+  "leftover_only": {
+    "k": 22,
+    "nF": 9,
+    "min_p": -12,
+    "max_m": -2,
+    "leftover": true,
+    "official": true,
+    "splus_ge_2": false,
+    "freeness_fail": false,
+    "sup_m": [
+      -12,
+      -8,
+      -4,
+      -2
+    ],
+    "sup_p": [
+      -12,
+      -10,
+      -6,
+      -4,
+      -2,
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16
+    ]
+  }
+}

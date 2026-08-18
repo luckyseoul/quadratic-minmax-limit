@@ -1,0 +1,210 @@
+{
+  "prop": "15.550",
+  "title": "S(\u03bb)=Kl(1, \u03bb\u00b2/4); K_\u03bb^{all} is a W-rewrite not a p-law",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "q": 25,
+        "G1_re": -5.0,
+        "G2_re": -5.0,
+        "chi_m1": 1,
+        "pref_re": 1.0,
+        "S0_re": -1.0,
+        "maxerr_S_eq_K": 2.0380985511143445e-15,
+        "maxerr_S_eq_pref_K": 2.412868066583466e-15,
+        "ok": true
+      },
+      "7": {
+        "q": 49,
+        "G1_re": 7.0,
+        "G2_re": 7.0,
+        "chi_m1": 1,
+        "pref_re": 1.0,
+        "S0_re": -1.0,
+        "maxerr_S_eq_K": 3.66205343881779e-15,
+        "maxerr_S_eq_pref_K": 3.570089236083939e-15,
+        "ok": true
+      },
+      "11": {
+        "q": 121,
+        "G1_re": 11.000000000000009,
+        "G2_re": 10.999999999999993,
+        "chi_m1": 1,
+        "pref_re": 0.9999999999999987,
+        "S0_re": -1.0,
+        "maxerr_S_eq_K": 2.880167609092343e-14,
+        "maxerr_S_eq_pref_K": 4.976799263352728e-14,
+        "ok": true
+      },
+      "13": {
+        "q": 169,
+        "G1_re": -13.0,
+        "G2_re": -13.0,
+        "chi_m1": 1,
+        "pref_re": 1.0,
+        "S0_re": -1.0,
+        "maxerr_S_eq_K": 2.403857190071896e-14,
+        "maxerr_S_eq_pref_K": 2.413857164368403e-14,
+        "ok": true
+      },
+      "17": {
+        "q": 289,
+        "G1_re": -17.000000000000004,
+        "G2_re": -17.000000000000046,
+        "chi_m1": 1,
+        "pref_re": 1.0000000000000024,
+        "S0_re": -1.0,
+        "maxerr_S_eq_K": 1.075246270717511e-13,
+        "maxerr_S_eq_pref_K": 1.8152989938920098e-13,
+        "ok": true
+      },
+      "19": {
+        "q": 361,
+        "G1_re": 19.0,
+        "G2_re": 18.999999999999947,
+        "chi_m1": 1,
+        "pref_re": 0.9999999999999971,
+        "S0_re": -1.0,
+        "maxerr_S_eq_K": 1.7110305438059476e-13,
+        "maxerr_S_eq_pref_K": 2.7957146874872064e-13,
+        "ok": true
+      }
+    },
+    "theorem": "S(\u03bb)=\u03c7(\u22121)G\u2082(1)/G\u2081\u00b7Kl(1,\u03bb\u00b2/4)=Kl(1,\u03bb\u00b2/4). Fail Kl(1,\u2212\u03bb\u00b2/4)."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "G": 14.854101966249685,
+        "mG": 9.618033988749895,
+        "chiG": 14.854101966249685,
+        "drop4": 8.94427190999916,
+        "lam": 14.47213595499958,
+        "sign": 8.94427190999916,
+        "ok": true
+      },
+      "7": {
+        "G": 18.65279281113198,
+        "mG": 19.76808588652038,
+        "chiG": 15.45473054693682,
+        "drop4": 18.9637552446096,
+        "lam": 17.08575309391448,
+        "sign": 14.64071122600185,
+        "ok": true
+      },
+      "11": {
+        "G": 27.8542122256423,
+        "mG": 32.96891413421174,
+        "chiG": 25.496969560764633,
+        "drop4": 32.109609621835595,
+        "lam": 27.71849989888642,
+        "sign": 28.03528254529297,
+        "ok": true
+      },
+      "13": {
+        "G": 38.94257397176315,
+        "mG": 36.25459306139828,
+        "chiG": 38.812256029230426,
+        "drop4": 34.21918638106844,
+        "lam": 42.052986943622216,
+        "sign": 39.58508379913191,
+        "ok": true
+      },
+      "17": {
+        "G": 49.11713755401847,
+        "mG": 47.93787418256734,
+        "chiG": 49.11713755401847,
+        "drop4": 59.336443569423594,
+        "lam": 56.209668101369545,
+        "sign": 47.9736878453083,
+        "ok": true
+      },
+      "19": {
+        "G": 55.76409158475766,
+        "mG": 56.51261547619345,
+        "chiG": 53.17469434303413,
+        "drop4": 58.33835688454818,
+        "lam": 69.14934314562547,
+        "sign": 55.165453710118456,
+        "ok": true
+      }
+    },
+    "theorem": "S\u2262\u00b1G(\u03c7), S\u2262\u03c7(\u03bb)G, S\u2262Kl(1,\u03bb), S\u2262Kl(1,\u03bb\u00b2), S\u2262Kl(1,\u2212\u03bb\u00b2/4)."
+  },
+  "C": {
+    "proved": false,
+    "K_all_named_in_p": false,
+    "NUM_SUM_16pA_general": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "J_named_ok": true,
+    "rewrite_ok": true,
+    "J": {
+      "5": {
+        "p": 5,
+        "n": 96,
+        "maxerr": 3.66205343881779e-15,
+        "ok": true
+      },
+      "7": {
+        "p": 7,
+        "n": 96,
+        "maxerr": 4.189529226675416e-15,
+        "ok": true
+      },
+      "11": {
+        "p": 11,
+        "n": 96,
+        "maxerr": 1.7962296908674955e-14,
+        "ok": true
+      },
+      "13": {
+        "p": 13,
+        "n": 96,
+        "maxerr": 2.8546336281444334e-14,
+        "ok": true
+      }
+    },
+    "rewrite": {
+      "N": 130,
+      "yhat0_err": 0.0,
+      "max_off_Omega": 1.6946818973100074e-15,
+      "err_W_aminus": 1.777218376886466e-14,
+      "err_W_aplus": 30.77683537175254,
+      "K_all": 249049.99999999997,
+      "term0": 649.9999999999993,
+      "match_249050": true,
+      "term0_not_bulk": true,
+      "plus_fails": true,
+      "minus_ok": true,
+      "p5_Kall_over_N": "24905/13",
+      "p7_Kall_over_N": "3003413/409"
+    },
+    "note": "W=q^{-1}[pJ+\u03a3_\u03a9 \u0177 J] and J=e S reconstruct K_\u03bb^{all} (p=5: 249050) but K_all/N has Max+ denominators 13,409, not a Gauss/Jacobi integer in p. 16pA / Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "proved": {
+    "S_is_kloosterman": true,
+    "S_fail_when_wrong": true,
+    "K_all_named_in_p": false,
+    "NUM_SUM_16pA_general": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ],
+  "identity": "S(\u03bb)=\u03c7(\u22121)G2(1)/G1\u00b7Kl(1,\u03bb\u00b2/4)=Kl(1,\u03bb\u00b2/4)"
+}

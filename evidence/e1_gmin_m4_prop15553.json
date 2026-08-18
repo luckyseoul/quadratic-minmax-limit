@@ -1,0 +1,108 @@
+{
+  "prop": "15.553",
+  "title": "Term0 of K_\u03bb^{all} is a named Kloosterman complete sum",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "xi": 5,
+        "r": 2,
+        "coeff_re": 4.999999999999991,
+        "coeff_im": 2.131628207280301e-15,
+        "N": 130,
+        "Term0": 649.9999999999989,
+        "ok": true
+      },
+      "7": {
+        "xi": 1,
+        "r": 2,
+        "coeff_re": 101.00000000000001,
+        "coeff_im": -1.2180732613030288e-14,
+        "N": 5726,
+        "Term0": 578326.0000000001,
+        "ok": true
+      },
+      "11": {
+        "xi": 1,
+        "r": 2,
+        "coeff_re": 196.9999999999999,
+        "coeff_im": 5.708564933890806e-14,
+        "ok": true
+      },
+      "13": {
+        "xi": 13,
+        "r": 2,
+        "coeff_re": 484.99999999999983,
+        "coeff_im": -7.214741624641018e-14,
+        "ok": true
+      }
+    },
+    "theorem": "Term0=N(1+p^{-1}\u03a3 \u03c7(\u03b4)e_{-\u03be}(\u03b4)Kl(1,r\u00b2\u03be\u00b2\u03b4\u00b2/16)\u00b2). p=5,7,11,13: Term0/N=5,101,197,485."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "drop_chi": 20.799999999999976,
+        "drop16": 0.0,
+        "Kl_to_G": 21.000000000000007,
+        "ok": true,
+        "drop16_invisible_p5": true
+      },
+      "7": {
+        "drop_chi": 9.142857142857181,
+        "drop16": 46.999999999999986,
+        "Kl_to_G": 51.00000000000001,
+        "ok": true,
+        "drop16_invisible_p5": false
+      },
+      "11": {
+        "drop_chi": 141.09090909090907,
+        "drop16": 159.99999999999977,
+        "Kl_to_G": 74.9999999999997,
+        "ok": true,
+        "drop16_invisible_p5": false
+      },
+      "13": {
+        "drop_chi": 211.07692307692344,
+        "drop16": 160.0,
+        "Kl_to_G": 314.99999999999983,
+        "ok": true,
+        "drop16_invisible_p5": false
+      }
+    },
+    "theorem": "Fail drop \u03c7; fail Kl\u21a6G(\u03c7); fail drop 1/16 at p\u22657 (16=1 in F_5 so /16 is invisible there)."
+  },
+  "C": {
+    "proved": false,
+    "K_all_named_in_p": false,
+    "NUM_SUM_16pA_general": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "term0_is_bulk": false,
+    "note": "Term0 is named but not the bulk (650 vs 249050 at p=5). \u03a9 4-point of \u0177 unnamed. 16pA / Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "proved": {
+    "Term0_named": true,
+    "Term0_fail_when_wrong": true,
+    "K_all_named_in_p": false,
+    "NUM_SUM_16pA_general": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ],
+  "identity": "Term0=N(1+p^{-1}\u03a3_{\u03b4\u22600} \u03c7(\u03b4) e_{-\u03be}(\u03b4) Kl(1,r\u00b2\u03be\u00b2\u03b4\u00b2/16)\u00b2)"
+}
