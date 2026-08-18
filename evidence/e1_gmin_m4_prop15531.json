@@ -1,0 +1,65 @@
+{
+  "prop": "15.531",
+  "title": "axis n_R not invariant; lin-form affine is all of n_free",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n_free": 4,
+        "n_R_axis_any": 4,
+        "n_R_axis_minkey": 4,
+        "n_R_lin": 4,
+        "n_X_lin": 0,
+        "ok": true
+      },
+      "7": {
+        "n_free": 114,
+        "n_R_axis_any": 20,
+        "n_R_axis_minkey": 16,
+        "n_R_lin": 114,
+        "n_X_lin": 0,
+        "ok": true
+      }
+    },
+    "theorem": "n_R^{lin}=n_free (15.305). Axis n_R is not translation-invariant at p=7 (16\u226020). Fail n_X^{lin}=98."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "hits": 1577,
+        "n": 8600,
+        "rate": 0.18337209302325583,
+        "ok": true
+      },
+      "7": {
+        "hits": 106,
+        "n": 8600,
+        "rate": 0.012325581395348837,
+        "ok": true
+      }
+    },
+    "theorem": "Random k-subsets are not all lin-affine (p=5: 1577/8600; p=7: 106/8600). Fail rate=1."
+  },
+  "C": {
+    "proved": false,
+    "n_free_named_in_p": false,
+    "n_R_named_in_p": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "Occupancy splits cannot name n_free (15.305 C). Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
