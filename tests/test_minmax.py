@@ -200,6 +200,20 @@ def test_dual_gaussian_lower_bound_holds_for_exact_m(exact_table):
         assert m + 1e-9 >= dual_gaussian_lower_bound(n)
 
 
+def test_prop52_two_v_mass_is_twice_the_floor():
+    """(2/π)·C(n,2)·2v = 2 n √(n-1)/π, not the floor n √(n-1)/π (issue #1)."""
+    from math import comb, pi, sqrt
+
+    for n in range(2, 40):
+        v = 1.0 / sqrt(n - 1)
+        lhs = (2.0 / pi) * comb(n, 2) * (2.0 * v)
+        twice = 2.0 * n * sqrt(n - 1) / pi
+        floor = n * sqrt(n - 1) / pi
+        assert abs(lhs - twice) < 1e-12
+        assert abs(lhs - floor) > 0.2
+        assert abs(twice - 2.0 * dual_gaussian_lower_bound(n)) < 1e-12
+
+
 def test_dual_gaussian_beats_dmp_asymptotically():
     """1/pi > 2^{-5/2}; dual-Gaussian dominates BH for large n."""
     assert dual_gaussian_lower_bound(100) > dmp_lower_bound(100)

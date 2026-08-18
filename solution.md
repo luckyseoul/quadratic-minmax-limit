@@ -214,8 +214,9 @@ Therefore
 \ge
 \frac2\pi\cdot\binom n2\cdot 2v
 =
-\frac{n\sqrt{n-1}}{\pi}.
+\frac{2n\sqrt{n-1}}{\pi},
 \]
+since \(v=1/\sqrt{n-1}\) and \(\binom n2=n(n-1)/2\).
 Both expectations lie in \([-\Phi(A),\Phi(A)]\), so their difference is at most \(2\Phi(A)\).
 Halving gives \eqref{eq:dual-gauss}. Minimising over \(A\) and passing to the limit produces the
 claim on \(\alpha_n\). \(\square\)
