@@ -1,0 +1,119 @@
+{
+  "prop": "15.577",
+  "title": "Type+ 1D Johnson kernel p+1; DEAD as Type I kill",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "ambient": 16,
+        "rank": 10,
+        "ker": 6
+      },
+      "7": {
+        "ambient": 29,
+        "rank": 21,
+        "ker": 8
+      },
+      "11": {
+        "ambient": 67,
+        "rank": 55,
+        "ker": 12
+      },
+      "13": {
+        "ambient": 92,
+        "rank": 78,
+        "ker": 14
+      }
+    },
+    "live": {
+      "5": {
+        "n_eps": 10,
+        "ambient": 16,
+        "rank": 10,
+        "named": 10,
+        "ker": 6
+      },
+      "7": {
+        "n_eps": 35,
+        "ambient": 29,
+        "rank": 21,
+        "named": 21,
+        "ker": 8
+      }
+    },
+    "theorem": "deg\u22642 rank on Type+ is C(p,2); ker dim p+1.  Fail: rank=ambient; fail rank=C(p,2)\u22121."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "n_ok": 10,
+        "n_tot": 10,
+        "k_part": 17,
+        "k_typeI": 13
+      },
+      "7": {
+        "n_ok": 35,
+        "n_tot": 35,
+        "k_part": 37,
+        "k_typeI": 19
+      },
+      "11": {
+        "n_ok": 462,
+        "n_tot": 462,
+        "k_part": 101,
+        "k_typeI": 31
+      }
+    },
+    "theorem": "Zero-star particular S=3\u22122\u03b5(0) on all Type+ \u03b5.  Fail: S\u22610; fail drop 2 in q_{\u03b1\u03b2}.  Size \u22603p\u22122."
+  },
+  "C": {
+    "proved": false,
+    "path_dead": true,
+    "p5_size13_shadow": {
+      "ninf": [
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "t": 3,
+      "const": 3,
+      "qsum": 6,
+      "rhs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "k": 13,
+      "want": 13,
+      "ok": true
+    },
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false,
+    "note": "1D Johnson kernel leaves p+1 dofs; p=5 has |G|=13 shadows.  Does not empty Type I or force good-sign f_e.  Flags unflipped."
+  },
+  "proved": {
+    "johnson_ker_p_plus_1": true,
+    "zero_star_particular": true,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "type_I_multilevel_bad_case_ND_closed",
+    "type_I_aut_e_3AB_positive_general",
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
