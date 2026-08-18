@@ -1,0 +1,125 @@
+{
+  "prop": "15.541",
+  "title": "c_eq is the named Q_eq-Hoffman floor; live pin still p=5,7",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "floor": 1,
+        "c_eq": 1,
+        "ceil": 2,
+        "drop_p2m9": 1,
+        "raw": "6/5",
+        "ok": true
+      },
+      "7": {
+        "floor": 19,
+        "c_eq": 19,
+        "ceil": 20,
+        "drop_p2m9": 20,
+        "raw": "691/35",
+        "ok": true
+      },
+      "11": {
+        "floor": 198,
+        "c_eq": 198,
+        "ceil": 199,
+        "drop_p2m9": 200,
+        "raw": "30567/154",
+        "ok": true
+      },
+      "13": {
+        "floor": 617,
+        "c_eq": 617,
+        "ceil": 618,
+        "drop_p2m9": 622,
+        "raw": "481271/780",
+        "ok": true
+      },
+      "17": {
+        "floor": 6471,
+        "c_eq": 6471,
+        "ceil": 6472,
+        "drop_p2m9": 6518,
+        "raw": "4400781/680",
+        "ok": true
+      },
+      "19": {
+        "floor": 21705,
+        "c_eq": 21705,
+        "ceil": 21706,
+        "drop_p2m9": 21846,
+        "raw": "54436333/2508",
+        "ok": true
+      },
+      "23": {
+        "floor": 257092,
+        "c_eq": 257092,
+        "ceil": 257093,
+        "drop_p2m9": 258484,
+        "raw": "4227891543/16445",
+        "ok": true
+      },
+      "29": {
+        "floor": 11467579,
+        "c_eq": 11467579,
+        "ceil": 11467580,
+        "drop_p2m9": 11516924,
+        "raw": "242103531147/21112",
+        "ok": true
+      },
+      "31": {
+        "floor": 41371673,
+        "c_eq": 41371673,
+        "ceil": 41371674,
+        "drop_p2m9": 41538291,
+        "raw": "109014359303/2635",
+        "ok": true
+      }
+    },
+    "theorem": "c_eq = floor((4Ap(p\u00b2\u22125)\u2212n_1d(p\u00b2\u22129))/(p\u00b2(p\u22121)(p\u00b2\u22129))). Fail ceil (p=5: 2\u22601); fail drop p\u00b2\u22129 (p=7: 20\u226019)."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "Q_hoff": "48/13",
+        "Q_live": "48/13",
+        "Q_ceil": "48/23",
+        "ok": true
+      },
+      "7": {
+        "Q_hoff": "1544/409",
+        "Q_live": "1544/409",
+        "Q_ceil": "772/215",
+        "ok": true
+      }
+    },
+    "theorem": "Q_hoff recovers live 48/13, 1544/409. Fail D(ceil) (p=7: 772/215\u22601544/409)."
+  },
+  "C": {
+    "proved": false,
+    "live_c_eq_general": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "Floor names the 15.451 Hoffman endpoint. Live c=\u03a3(p+1)/s_\u03c4 equals that floor only at the p=5,7 cache. 15.507 is p\u22611 only. Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "Q_eq": {
+    "5": "16/5",
+    "7": "40/11",
+    "13": "160/41"
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}

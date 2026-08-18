@@ -1,0 +1,120 @@
+{
+  "prop": "15.540",
+  "title": "A_1d on all r-classes; A_free is not a p-law",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "A_1d": {
+          "dbl": [
+            "-500/3"
+          ],
+          "nfp": [
+            "0"
+          ]
+        },
+        "want": "-500/3",
+        "ok": true
+      },
+      "7": {
+        "A_1d": {
+          "dbl": [
+            "-1372/5"
+          ],
+          "fp": [
+            "-1372/5"
+          ],
+          "nfp": [
+            "0"
+          ]
+        },
+        "want": "-1372/5",
+        "ok": true
+      }
+    },
+    "theorem": "A_1d(r)=\u22124p\u00b3/(p\u22122) on F_p (1+r\u22600), else 0.  Fail: same value off F_p."
+  },
+  "B": {
+    "proved": true,
+    "p5_full": {
+      "dbl": [
+        "0"
+      ],
+      "nfp": [
+        "-250"
+      ]
+    },
+    "p7_full": {
+      "dbl": [
+        "-1372/15"
+      ],
+      "fp": [
+        "-1372/5"
+      ],
+      "nfp": [
+        "-1372/15"
+      ]
+    },
+    "p7_part": {
+      "dbl": [
+        "0"
+      ],
+      "fp": [
+        "0"
+      ],
+      "nfp": [
+        "-686/3"
+      ]
+    },
+    "n": {
+      "5": {
+        "1d": 30,
+        "full": 100,
+        "part": 0
+      },
+      "7": {
+        "1d": 140,
+        "full": 4410,
+        "part": 1176
+      }
+    },
+    "A_free_dbl": {
+      "5": "0",
+      "7": "-1372/19"
+    },
+    "theorem": "A_part(F_p)=0, A_part(off)=\u22122p\u00b3/3 (p=7).  A_full,dbl is 0, \u22124p\u00b3/15 \u2014 not a p-law.  Fail: A_full,dbl=0 at p=7; fail =A_1d."
+  },
+  "C": {
+    "proved": false,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false,
+    "Delta_conn_p_rational": false,
+    "A_free_named_p_law": false,
+    "A_free_dbl": {
+      "5": "0",
+      "7": "-1372/19"
+    },
+    "note": "A_free,dbl=\u22124p\u00b3/19 at p=7 is D-free as a fraction but 19 is not a p-law.  Mixed A still den 13,409.  Aut_e G>T open."
+  },
+  "proved": {
+    "A_1d_all_r": true,
+    "A_free_split_not_plaw": true,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "type_I_multilevel_bad_case_ND_closed",
+    "type_I_aut_e_3AB_positive_general",
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
