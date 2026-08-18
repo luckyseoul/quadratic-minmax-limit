@@ -1,0 +1,104 @@
+{
+  "prop": "15.532",
+  "title": "T_v free on H_+ iff \u03c7(v)=\u22121; |H_+|=p n_orb(T_ns)",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n_1d": 30,
+        "Cpm": 10,
+        "sq": {
+          "dir": [
+            1,
+            0
+          ],
+          "chi": 1,
+          "type_plus": false,
+          "live_fix": 10,
+          "named_fix": 10,
+          "ok": true
+        },
+        "ns": {
+          "dir": [
+            1,
+            2
+          ],
+          "chi": -1,
+          "type_plus": false,
+          "live_fix": 0,
+          "named_fix": 0,
+          "ok": true
+        },
+        "ok": true
+      },
+      "7": {
+        "n_1d": 140,
+        "Cpm": 35,
+        "sq": {
+          "dir": [
+            1,
+            0
+          ],
+          "chi": 1,
+          "type_plus": true,
+          "live_fix": 35,
+          "named_fix": 35,
+          "ok": true
+        },
+        "ns": {
+          "dir": [
+            1,
+            1
+          ],
+          "chi": -1,
+          "type_plus": false,
+          "live_fix": 0,
+          "named_fix": 0,
+          "ok": true
+        },
+        "ok": true
+      }
+    },
+    "theorem": "Fix(T_v)=C(p,m) on squares, 0 on nonsquares. Fail T_1 free."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "nH": 130,
+        "n_orb": 26,
+        "D": 13,
+        "two_D": 26,
+        "ok": true
+      },
+      "7": {
+        "nH": 5726,
+        "n_orb": 818,
+        "D": 409,
+        "two_D": 818,
+        "ok": true
+      }
+    },
+    "theorem": "|H_+|=p n_orb(T_ns) and n_orb=2D live. Fail n_orb=D."
+  },
+  "C": {
+    "proved": false,
+    "D_named_as_orbits": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "n_orb=2D is live, not a named involution pairing. Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
