@@ -1,0 +1,92 @@
+{
+  "prop": "15.539",
+  "title": "n_free=c(p\u22121) \u21d4 D=D_lattice(c); pin only at p=5,7",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "c_eq": 1,
+        "n_free_pred": 4,
+        "D_eq": 13,
+        "D_from_nfree": 13.0,
+        "D_u_eq_c": 8,
+        "ok": true
+      },
+      "7": {
+        "c_eq": 19,
+        "n_free_pred": 114,
+        "D_eq": 409,
+        "D_from_nfree": 409.0,
+        "D_u_eq_c": 143,
+        "ok": true
+      },
+      "11": {
+        "c_eq": 198,
+        "n_free_pred": 1980,
+        "D_eq": 11016,
+        "D_from_nfree": 11016.0,
+        "D_u_eq_c": 2304,
+        "ok": true
+      },
+      "13": {
+        "c_eq": 617,
+        "n_free_pred": 7404,
+        "D_eq": 48588,
+        "D_from_nfree": 48588.0,
+        "D_u_eq_c": 8483,
+        "ok": true
+      },
+      "17": {
+        "c_eq": 6471,
+        "n_free_pred": 103536,
+        "D_eq": 886491,
+        "D_from_nfree": 886491.0,
+        "D_u_eq_c": 116442,
+        "ok": true
+      }
+    },
+    "theorem": "n_free=c(p\u22121) \u21d4 D=D_lattice(c). Fail u=c (p=7: 143\u2260409)."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "live": 4,
+        "c_eq_times_pm1": 4,
+        "c_min_times_pm1": 4,
+        "D_live": 13,
+        "ok": true
+      },
+      "7": {
+        "live": 114,
+        "c_eq_times_pm1": 114,
+        "c_min_times_pm1": 108,
+        "D_live": 409,
+        "ok": true
+      }
+    },
+    "theorem": "Live n_free=c_eq(p\u22121) at p=5,7. Fail c_min at p=7 (108\u2260114)."
+  },
+  "C": {
+    "proved": false,
+    "n_free_general": false,
+    "D_eq_general": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "p11_Hplus_absent": true,
+    "note": "Pin n_free=c_eq(p\u22121) is a p=5,7 cache identity, not a theorem for p\u226511. 15.507 is p\u22611 only. Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
