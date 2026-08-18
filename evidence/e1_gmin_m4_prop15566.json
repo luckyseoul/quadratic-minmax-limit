@@ -1,0 +1,432 @@
+{
+  "prop": "15.566",
+  "title": "two-value leftover+splus at k=4p+2: 3-equal only at p=5",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "classified_only_m2_and_p5_m3": true,
+    "three_eq_26_only_p5": true,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "n_primes": 20,
+      "rows": {
+        "5": {
+          "hits": [
+            2,
+            3
+          ],
+          "expect": [
+            2,
+            3
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": true,
+          "minus_slice_k_m2": 22,
+          "fail_m4_p5_classified": true,
+          "m4_mass": "7/10"
+        },
+        "7": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 30,
+          "fail_m4_p5_classified": false
+        },
+        "11": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 46,
+          "fail_m4_p5_classified": false
+        },
+        "13": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 54,
+          "fail_m4_p5_classified": false
+        },
+        "17": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 70,
+          "fail_m4_p5_classified": false
+        },
+        "19": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 78,
+          "fail_m4_p5_classified": false
+        },
+        "23": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 94,
+          "fail_m4_p5_classified": false
+        },
+        "29": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 118,
+          "fail_m4_p5_classified": false
+        },
+        "31": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 126,
+          "fail_m4_p5_classified": false
+        },
+        "37": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 150,
+          "fail_m4_p5_classified": false
+        },
+        "41": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 166,
+          "fail_m4_p5_classified": false
+        },
+        "43": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 174,
+          "fail_m4_p5_classified": false
+        },
+        "47": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 190,
+          "fail_m4_p5_classified": false
+        },
+        "53": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 214,
+          "fail_m4_p5_classified": false
+        },
+        "59": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 238,
+          "fail_m4_p5_classified": false
+        },
+        "61": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 246,
+          "fail_m4_p5_classified": false
+        },
+        "67": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 270,
+          "fail_m4_p5_classified": false
+        },
+        "71": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 286,
+          "fail_m4_p5_classified": false
+        },
+        "73": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 294,
+          "fail_m4_p5_classified": false
+        },
+        "79": {
+          "hits": [
+            2
+          ],
+          "expect": [
+            2
+          ],
+          "m2_is_minus_slice": true,
+          "m2_also_3eq": false,
+          "minus_slice_k_m2": 318,
+          "fail_m4_p5_classified": false
+        }
+      },
+      "theorem": "k=4p+2 two-value leftover+splus classified only at m=2 (minus-slice) and at p=5 m=3 (plus-slice). Fail: m=4 at p=5 k=22 classified. Unclassified empty (15.274 F)."
+    },
+    "B": {
+      "proved": true,
+      "n_primes": 20,
+      "rows": {
+        "5": {
+          "k_law": 22,
+          "k_3eq_allplus": "22",
+          "mass_3eq_eq_minus_slice": true,
+          "moment_hits_k4p2": true,
+          "only_at_p5": true
+        },
+        "7": {
+          "k_law": 30,
+          "k_3eq_allplus": "32",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        },
+        "11": {
+          "k_law": 46,
+          "k_3eq_allplus": "52",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        },
+        "13": {
+          "k_law": 54,
+          "k_3eq_allplus": "62",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        },
+        "17": {
+          "k_law": 70,
+          "k_3eq_allplus": "82",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        },
+        "19": {
+          "k_law": 78,
+          "k_3eq_allplus": "92",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        },
+        "23": {
+          "k_law": 94,
+          "k_3eq_allplus": "112",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        },
+        "29": {
+          "k_law": 118,
+          "k_3eq_allplus": "142",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        },
+        "31": {
+          "k_law": 126,
+          "k_3eq_allplus": "152",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        },
+        "37": {
+          "k_law": 150,
+          "k_3eq_allplus": "182",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        },
+        "41": {
+          "k_law": 166,
+          "k_3eq_allplus": "202",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        },
+        "43": {
+          "k_law": 174,
+          "k_3eq_allplus": "212",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        },
+        "47": {
+          "k_law": 190,
+          "k_3eq_allplus": "232",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        },
+        "53": {
+          "k_law": 214,
+          "k_3eq_allplus": "262",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        },
+        "59": {
+          "k_law": 238,
+          "k_3eq_allplus": "292",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        },
+        "61": {
+          "k_law": 246,
+          "k_3eq_allplus": "302",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        },
+        "67": {
+          "k_law": 270,
+          "k_3eq_allplus": "332",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        },
+        "71": {
+          "k_law": 286,
+          "k_3eq_allplus": "352",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        },
+        "73": {
+          "k_law": 294,
+          "k_3eq_allplus": "362",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        },
+        "79": {
+          "k_law": 318,
+          "k_3eq_allplus": "392",
+          "mass_3eq_eq_minus_slice": false,
+          "moment_hits_k4p2": false,
+          "only_at_p5": true
+        }
+      },
+      "theorem": "3-equal {2,6} leftover+splus at k=4p+2 is first-moment and mass feasible iff p=5. Fail: empty at p=5 k=22. Fail: feasible at p=7 k=30."
+    },
+    "C": {
+      "proved": false,
+      "residual_ii_k_eq_4p_empty": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "pair_slice_26_open": true,
+      "p5_plus_slice_28_open": true,
+      "nF_10_open": true,
+      "k_gt_4p_far_open": true,
+      "note": "3-equal {2,6} leftover+splus empty at k=4p+2 for p>5. Pair-slice {2,6}, p=5 3-equal, and p=5 {2,8} stay open. Multi-level leftover+splus and residual_ii stay open/False."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty",
+    "type_I"
+  ]
+}
