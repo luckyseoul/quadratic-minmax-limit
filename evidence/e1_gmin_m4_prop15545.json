@@ -1,0 +1,83 @@
+{
+  "prop": "15.545",
+  "title": "NL mass M_NL=16pA\u2212n_1d Q_1d^{++} at p=5,7",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n_1d_Q1d_pp": "160/3",
+        "n_1d_Q1d_sub": "160",
+        "ok": true
+      },
+      "7": {
+        "n_1d_Q1d_pp": "2912/3",
+        "n_1d_Q1d_sub": "1456",
+        "ok": true
+      },
+      "11": {
+        "n_1d_Q1d_pp": "105952/3",
+        "n_1d_Q1d_sub": "52976",
+        "ok": true
+      },
+      "13": {
+        "n_1d_Q1d_pp": "1397760/11",
+        "n_1d_Q1d_sub": "279552",
+        "ok": true
+      }
+    },
+    "theorem": "NUM_SUM = n_1d Q_1d^{++} + M_NL. Fail n_1d Q_1d^{sub} (p=5: 160\u2260160/3)."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "named": "1280/3",
+        "live": "1280/3",
+        "drop_1d": "480",
+        "drop_k": "8480/3",
+        "n_NL": 100,
+        "Q_NL": "64/15",
+        "ok": true
+      },
+      "7": {
+        "named": "61936/3",
+        "live": "61936/3",
+        "drop_1d": "21616",
+        "drop_k": "83104/3",
+        "n_NL": 5586,
+        "Q_NL": "632/171",
+        "ok": true
+      }
+    },
+    "theorem": "M_NL=16pA\u2212n_1d Q_1d^{++} hits live 1280/3, 61936/3. Fail drop 1D (p=5: 480\u22601280/3). Fail drop 3k (p=5: 8480/3\u22601280/3)."
+  },
+  "C": {
+    "proved": false,
+    "NUM_SUM_16pA_general": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "M_NL_pred_no_cache": {
+      "11": "2708816/3",
+      "13": "52832416/11",
+      "17": "578326672/5"
+    },
+    "note": "Named remainder assumes 15.367 NUM_SUM=16pA, which is only live at p=5,7. Predictions at p\u226511 are untested. Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "k_named": {
+    "5": 10,
+    "7": 21
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
