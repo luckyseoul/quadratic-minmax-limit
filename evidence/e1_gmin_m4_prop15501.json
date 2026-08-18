@@ -1,0 +1,123 @@
+{
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "expanded": "26/7",
+        "Qub": "26/7",
+        "Qlo": "11/4"
+      },
+      "13": {
+        "expanded": "310/71",
+        "Qub": "310/71",
+        "Qlo": "15/4"
+      },
+      "17": {
+        "expanded": "560/127",
+        "Qub": "560/127",
+        "Qlo": "245/64"
+      },
+      "29": {
+        "expanded": "1742/391",
+        "Qub": "1742/391",
+        "Qlo": "767/196"
+      },
+      "37": {
+        "expanded": "2890/647",
+        "Qub": "2890/647",
+        "Qlo": "425/108"
+      }
+    }
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "num": 8,
+        "A": 6,
+        "drop_n1d_num": -2152
+      },
+      "13": {
+        "num": 4244040,
+        "A": 23702,
+        "drop_n1d_num": -80280
+      },
+      "17": {
+        "num": 131057360,
+        "A": 437052,
+        "drop_n1d_num": -216640
+      },
+      "29": {
+        "num": 1982400335432,
+        "A": 2326761366,
+        "drop_n1d_num": -1570168
+      },
+      "37": {
+        "num": 926752812929400,
+        "A": 671560009922,
+        "drop_n1d_num": -3906600
+      }
+    },
+    "C12": 924
+  },
+  "C": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "c_min": 1,
+        "c_eq": 1,
+        "nwin": 1,
+        "D_cmin": 13,
+        "D_ceq": 13,
+        "D_need": "64/5",
+        "pair_at_cmin": "24/13"
+      },
+      "13": {
+        "c_min": 551,
+        "c_eq": 617,
+        "nwin": 67,
+        "D_cmin": 43440,
+        "D_ceq": 48588,
+        "D_need": "37952",
+        "pair_at_cmin": "400/543"
+      },
+      "17": {
+        "c_min": 5784,
+        "c_eq": 6471,
+        "nwin": 688,
+        "D_cmin": 793059,
+        "D_ceq": 886491,
+        "D_need": "3496624/5",
+        "pair_at_cmin": "648776/793059"
+      },
+      "29": {
+        "c_min": 10241284,
+        "c_eq": 11467579,
+        "nwin": 1226296,
+        "D_cmin": 4178019604,
+        "D_ceq": 4675895374,
+        "D_need": "18614091328/5",
+        "pair_at_cmin": "6298056/6917251"
+      },
+      "37": {
+        "c_min": 1799142244,
+        "c_eq": 2015815022,
+        "nwin": 216672779,
+        "D_cmin": 1202766302154,
+        "D_ceq": 1347070372302,
+        "D_need": "5372480079904/5",
+        "pair_at_cmin": "561414871288/601383151077"
+      }
+    }
+  },
+  "D": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "p1_floor_unconditional": false,
+    "note": "Window \u21d2 D\u2265D_need is named for p\u22611. Q=8A/D and 15.497 pairing still not general. p\u22613 open. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false
+}

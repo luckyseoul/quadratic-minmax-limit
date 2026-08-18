@@ -1,6 +1,6 @@
-# Status (2026-08-17 evening)
+# Status (2026-08-18)
 
-Leftover campaign: 15.273–15.499 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.499: translations free on NL, \(n_T=c_{\mathrm{eq}}(p-1)\) at p=5,7; \(\mathbb{F}_p^\times\) orbits of T-orbits are **not** all size \(p-1\) (p=7: \{3,6\}, 26≠19). \(D\) unnamed. Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
+Leftover campaign: 15.273–15.501 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.501: for every \(p\equiv1\ge5\), every Hoffman-window \(c\) has \(D(c)\ge8(A+2p-8)/5\) (named inequality \(5A\ge Q^{\mathrm{ub}}(A+2p-8)\)). Pinning \(c=c_{\mathrm{eq}}\) is not needed for the p≡1 pairing bound. Still need \(Q=8A/D\) and 15.497 pairing as general identities. p≡3 open. \(D\) unnamed. Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|

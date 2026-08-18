@@ -1,0 +1,98 @@
+{
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n_nl_central": 0,
+        "n_all_central": 6,
+        "hyp": 0,
+        "n_1d_central": 6
+      },
+      "7": {
+        "n_nl_central": 42,
+        "n_all_central": 54,
+        "hyp": 42,
+        "n_1d_central": 12
+      },
+      "3": {
+        "n_nl_central": 0,
+        "nH": 6,
+        "n1d": 6
+      }
+    }
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "3": {
+        "n_1d_central": 2,
+        "hyp": 2,
+        "n_1d": 6
+      },
+      "5": {
+        "n_1d_central": 6,
+        "hyp": 6,
+        "n_1d": 30
+      },
+      "7": {
+        "n_1d_central": 12,
+        "hyp": 12,
+        "n_1d": 140
+      }
+    }
+  },
+  "C": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "a": 2,
+        "ord": 4,
+        "n_full": 6,
+        "n_cand": 0,
+        "hits": {
+          "with0": 0,
+          "without0": 0,
+          "with0_nl": 0,
+          "without0_nl": 0,
+          "without0_1d": 0
+        }
+      },
+      "7_ord6": {
+        "a": 3,
+        "ord": 6,
+        "n_full": 8,
+        "n_cand": 0,
+        "hits": {
+          "with0": 0,
+          "without0": 0,
+          "with0_nl": 0,
+          "without0_nl": 0,
+          "without0_1d": 0
+        }
+      },
+      "7_ord3": {
+        "a": 2,
+        "ord": 3,
+        "n_full": 16,
+        "n_cand": 11440,
+        "hits": {
+          "with0": 0,
+          "without0": 8,
+          "with0_nl": 0,
+          "without0_nl": 0,
+          "without0_1d": 8
+        }
+      }
+    }
+  },
+  "D": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "nS_free_named": false,
+    "note": "NL-central count and stab\u2286{\u00b11} certified p=5,7. n_T = 1_{p\u22613} p(p\u22121) + nS_free(p\u22121) still has nS_free unnamed. D unnamed."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false
+}
