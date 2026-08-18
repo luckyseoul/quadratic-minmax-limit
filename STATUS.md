@@ -1,6 +1,6 @@
 # Status (2026-08-18)
 
-Leftover campaign: 15.273–15.516 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.516: ensemble \(L\) on the 15.448 ns_mix slot equals \(\mu_+\mu_-\) (named). The slot still splits; other slots keep den \(D\). Fail: constant on ns_mix; ns_11\(=\mu_+\mu_-\). \(Q_\tau\) unnamed. \(\phi_F\) not imported. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**.
+Leftover campaign: 15.273–15.517 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.517: p=5 \(H_+\) \(W\)-hist is the two-orbit law \(\{20,24,36,40\}=15:50:50:15\), so \(\mathrm{Var}(W)=\mathrm{Var}_{2\mathrm{orb}}=660/13\). Fail: same 4-point support or \(\mathrm{Var}=\mathrm{Var}_{2\mathrm{orb}}\) at p=7. Does not prove \(\mathrm{Var}\le\mathrm{Var}_{2\mathrm{orb}}\) for \(p\equiv1\). 15.516: ensemble \(L_{\mathrm{ns\_mix}}=\mu_+\mu_-\). \(Q_\tau\) unnamed. \(\phi_F\) not imported. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|

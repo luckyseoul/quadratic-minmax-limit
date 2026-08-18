@@ -1,0 +1,94 @@
+{
+  "prop": "15.517",
+  "title": "p=5 H_+ W-hist is 2-orbit; Var=Var_2orb; p=7 fails",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "fold": {
+      "n": 130,
+      "mean": "30",
+      "var": "660/13",
+      "hist": {
+        "20": 15,
+        "24": 50,
+        "36": 50,
+        "40": 15
+      },
+      "nuniq": 4,
+      "support": [
+        20,
+        24,
+        36,
+        40
+      ]
+    },
+    "want": {
+      "20": 15,
+      "24": 50,
+      "36": 50,
+      "40": 15
+    },
+    "Var_2orb": "660/13",
+    "theorem": "p=5 H_+ W-hist is 2-orbit {20,24,36,40}=15:50:50:15."
+  },
+  "B": {
+    "proved": true,
+    "fold": {
+      "n": 5726,
+      "mean": "84",
+      "var": "21504/409",
+      "hist": {
+        "56": 28,
+        "68": 196,
+        "72": 98,
+        "74": 392,
+        "76": 392,
+        "80": 784,
+        "82": 392,
+        "84": 154,
+        "86": 2156,
+        "92": 392,
+        "94": 392,
+        "96": 98,
+        "98": 252
+      },
+      "nuniq": 13,
+      "support": [
+        56,
+        68,
+        72,
+        74,
+        76,
+        80,
+        82,
+        84,
+        86,
+        92,
+        94,
+        96,
+        98
+      ]
+    },
+    "Var_2orb": "280/3",
+    "theorem": "p=7 has 13 W-values; Var<Var_2orb. Fail 4-point / Var=Var_2orb."
+  },
+  "C": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "Two-orbit W-law is cache at p=5, false as support at p=7. Var\u2264Var_2orb unproved for p\u22611. Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
