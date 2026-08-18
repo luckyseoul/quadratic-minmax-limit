@@ -1,0 +1,67 @@
+{
+  "prop": "15.582",
+  "title": "1D 4-point vanishes off F_p; p=5 Q_N*/q\u00b2=32/13",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "r_N*": 6,
+        "mu_1d_N*": -7.159922564683315e-32,
+        "mu_1d_N1": 2.5995641489204976e-30,
+        "mu_1d_sub": 3333.3333333333335,
+        "vanish": true,
+        "ne_sub": true
+      },
+      "7": {
+        "r_N*": 7,
+        "mu_1d_N*": -1.3577157302771392e-30,
+        "mu_1d_N1": 1.1753528417766696e-29,
+        "mu_1d_sub": 24970.4,
+        "vanish": true,
+        "ne_sub": true
+      }
+    },
+    "theorem": "\u03bc_1d=0 on N* and N1. Fail \u03bc_1d(N*)=\u03bc_1d(sub)."
+  },
+  "B": {
+    "proved": true,
+    "Qnstar": "32/13",
+    "with_1d": "48/13",
+    "Qpp": "48/13",
+    "theorem": "p=5 Q_N*/q\u00b2=32/13. Fail add 1D (48/13); fail 32=48."
+  },
+  "C": {
+    "proved": false,
+    "p7_k3_++N1": 12805.333333333336,
+    "p7_k3_sub": 9604.0,
+    "k3_2line_eq_1line": false,
+    "diff_times_D_p5": 16,
+    "diff_times_D_p7": 48,
+    "sixteen_p_minus_4_not_imported": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "p=5 Q_N* named. p\u22657 still has \u03bc_full. k=3 2-line \u2260 1-line Fej\u00e9r on every type. 16(p\u22124)/D interpolates (Q++\u2212Q_N*)D and is not imported. Do not interpolate (p\u22125)/15. phi_F not imported."
+  },
+  "proved": {
+    "mu_1d_vanishes_off_Fp": true,
+    "Qnstar_p5_named_32_13": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ],
+  "identity": "Q_N*(p=5)/q^2 = 32/13; mu_1d(r)=0 for r not in F_p"
+}
