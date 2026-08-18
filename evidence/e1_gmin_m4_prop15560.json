@@ -1,0 +1,116 @@
+{
+  "prop": "15.560",
+  "title": "p=5 leftover+splus nF=0 empty at even k=26,28,30",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "leftover_only_official_nf0_k26": true,
+    "leftover_splus_nf0_emptied": true,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "row": {
+        "k": 26,
+        "nF": 0,
+        "min_p": -2,
+        "max_m": -2,
+        "leftover": true,
+        "official": true,
+        "splus_ge_2": false,
+        "freeness_fail": false,
+        "sup_m": [
+          -16,
+          -12,
+          -8,
+          -4,
+          -2
+        ],
+        "sup_p": [
+          -2,
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12,
+          14,
+          16
+        ]
+      },
+      "theorem": "p=5 k=26 official leftover-only exists at nF=0 with min_+<2. Fail: leftover empty; fail: L26 has s\u208a\u22652."
+    },
+    "B": {
+      "proved": true,
+      "highs": {
+        "26": {
+          "status": "Infeasible",
+          "time_limit": 20.0,
+          "seconds": 0.20382237434387207,
+          "nodes": 1,
+          "threads": 8,
+          "splus": "S>=2",
+          "nF": 0
+        },
+        "28": {
+          "status": "Infeasible",
+          "time_limit": 20.0,
+          "seconds": 0.1372683048248291,
+          "nodes": 1,
+          "threads": 8,
+          "splus": "S>=2",
+          "nF": 0
+        },
+        "30": {
+          "status": "Infeasible",
+          "time_limit": 20.0,
+          "seconds": 0.043786048889160156,
+          "nodes": 0,
+          "threads": 8,
+          "splus": "S>=2",
+          "nF": 0
+        }
+      },
+      "leftover_only_nf0_empty_k": {
+        "32": {
+          "status": "Infeasible",
+          "time_limit": 20.0,
+          "seconds": 0.02105879783630371,
+          "nodes": 0,
+          "threads": 8,
+          "nF": 0
+        }
+      },
+      "leftover_only_exists": true,
+      "emptied_k": [
+        26,
+        28,
+        30
+      ],
+      "theorem": "leftover+splus Infeasible at nF=0 for k=26,28,30 (HiGHS S\u22652, \u22640.21s). leftover-only nF=0 empty at k=32. Fail: leftover-only empty (A). Not an S\u22612 equality harvest."
+    },
+    "C": {
+      "proved": false,
+      "residual_ii_k_eq_4p_empty": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "nF_10_open": true,
+      "k_gt_4p_far_open": true,
+      "k24_splus_not_claimed": true,
+      "note": "leftover+splus nF=0 empty at p=5 k=22,26,28,30,32. nF=10 at k=22 TLE; leftover+splus with far at even k>4p and k=24 stay open. residual_ii_k_eq_4p_empty stays False."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty",
+    "type_I"
+  ]
+}

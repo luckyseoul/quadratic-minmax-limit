@@ -1,0 +1,70 @@
+{
+  "highs_leftover_splus_nf0": {
+    "26": {
+      "status": "Infeasible",
+      "time_limit": 20.0,
+      "seconds": 0.20382237434387207,
+      "nodes": 1,
+      "threads": 8,
+      "splus": "S>=2",
+      "nF": 0
+    },
+    "28": {
+      "status": "Infeasible",
+      "time_limit": 20.0,
+      "seconds": 0.1372683048248291,
+      "nodes": 1,
+      "threads": 8,
+      "splus": "S>=2",
+      "nF": 0
+    },
+    "30": {
+      "status": "Infeasible",
+      "time_limit": 20.0,
+      "seconds": 0.043786048889160156,
+      "nodes": 0,
+      "threads": 8,
+      "splus": "S>=2",
+      "nF": 0
+    }
+  },
+  "leftover_only_nf0_empty_k": {
+    "32": {
+      "status": "Infeasible",
+      "time_limit": 20.0,
+      "seconds": 0.02105879783630371,
+      "nodes": 0,
+      "threads": 8,
+      "nF": 0
+    }
+  },
+  "leftover_only": {
+    "k": 26,
+    "nF": 0,
+    "min_p": -2,
+    "max_m": -2,
+    "leftover": true,
+    "official": true,
+    "splus_ge_2": false,
+    "freeness_fail": false,
+    "sup_m": [
+      -16,
+      -12,
+      -8,
+      -4,
+      -2
+    ],
+    "sup_p": [
+      -2,
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16
+    ]
+  }
+}
