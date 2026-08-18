@@ -69,7 +69,8 @@
     "proved": true,
     "D7": "409",
     "D11": "77097/7",
-    "theorem": "p=7 three-type A-shifts recover D=409; at p=11 D=77097/7 \u2209 \u2124. Not a p\u22613 law."
+    "Hplus_p11": "1696134/7",
+    "theorem": "p=7 three-type A-shifts recover D=409; at p=11 D=77097/7 makes |H+|=2pD=1696134/7 not an integer. Not a p\u22613 law."
   },
   "E": {
     "proved": false,

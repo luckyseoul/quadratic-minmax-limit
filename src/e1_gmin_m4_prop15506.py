@@ -26,12 +26,14 @@ Theorem B — PROVED (A + 15.296 B).
   two/three-type live Q values (no new census).  ∎
 
 Theorem C — PROVED (B + Wick Q(±1)=8q²).
+  q=p²≡1 (mod 8) ⇒ −1∈T, so |off|=(q−1)/2−2.
   ∑_{r∈T\\{±1}} (4 − Q(r)/q²) = 8.  Fail: 4 or 16.  ∎
 
 Theorem D — PROVED (S0 linear algebra; not a D-name).
   The p=7 identities Q++=8A/D, Q_N*=8(A−n_pp)/D, Q_{--N1}=8(A−k)/D
-  plus (C) recover D=409.  The same shifts at p=11 give D=77097/7 ∉ ℤ.
-  Fail: claim they are a p≡3 law or that 77097/7 names |H+|/(2p).  ∎
+  plus (C) recover D=409.  The same shifts at p=11 give D=77097/7,
+  hence |H+|=2p D=1696134/7 ∉ ℤ.  Fail: claim they are a p≡3 law
+  or that 77097/7 names |H+|/(2p).  ∎
 
 Theorem E — OPEN.  S0 does not name the off-values.  Two-type 8A/D
   + (C) still forces D∉ℤ at p=13 (15.502).  phi_F not imported.  ∎
@@ -217,9 +219,10 @@ def prove_D() -> dict:
         "proved": bool(ok),
         "D7": str(d7),
         "D11": str(d11),
+        "Hplus_p11": str(2 * 11 * d11),
         "theorem": (
-            "p=7 three-type A-shifts recover D=409; at p=11 D=77097/7 ∉ ℤ. "
-            "Not a p≡3 law."
+            "p=7 three-type A-shifts recover D=409; at p=11 D=77097/7 "
+            "makes |H+|=2pD=1696134/7 not an integer. Not a p≡3 law."
         ),
     }
 

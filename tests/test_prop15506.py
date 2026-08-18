@@ -50,7 +50,7 @@ def test_threetype_dies_at_p11():
     assert D["proved"] is True
     assert D_threetype_npp_k(7) == 409
     assert D_threetype_npp_k(11) == Fraction(77097, 7)
-    assert D_threetype_npp_k(11).denominator != 1
+    assert (2 * 11 * D_threetype_npp_k(11)).denominator != 1
 
 
 def test_flags_untouched():
