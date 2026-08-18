@@ -1,0 +1,369 @@
+{
+  "prop": "15.579",
+  "title": "leftover {-2,-6} and official 3-level empty at k=4p+2",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "leftover_26_empty_k4p2": true,
+    "official_3level_empty_k4p2": true,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "n_primes": 20,
+      "rows": {
+        "5": {
+          "k": 22,
+          "mean": "-22/5",
+          "P_S_m2": "2/5",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "7": {
+          "k": 30,
+          "mean": "-30/7",
+          "P_S_m2": "3/7",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "11": {
+          "k": 46,
+          "mean": "-46/11",
+          "P_S_m2": "5/11",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "13": {
+          "k": 54,
+          "mean": "-54/13",
+          "P_S_m2": "6/13",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "17": {
+          "k": 70,
+          "mean": "-70/17",
+          "P_S_m2": "8/17",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "19": {
+          "k": 78,
+          "mean": "-78/19",
+          "P_S_m2": "9/19",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "23": {
+          "k": 94,
+          "mean": "-94/23",
+          "P_S_m2": "11/23",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "29": {
+          "k": 118,
+          "mean": "-118/29",
+          "P_S_m2": "14/29",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "31": {
+          "k": 126,
+          "mean": "-126/31",
+          "P_S_m2": "15/31",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "37": {
+          "k": 150,
+          "mean": "-150/37",
+          "P_S_m2": "18/37",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "41": {
+          "k": 166,
+          "mean": "-166/41",
+          "P_S_m2": "20/41",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "43": {
+          "k": 174,
+          "mean": "-174/43",
+          "P_S_m2": "21/43",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "47": {
+          "k": 190,
+          "mean": "-190/47",
+          "P_S_m2": "23/47",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "53": {
+          "k": 214,
+          "mean": "-214/53",
+          "P_S_m2": "26/53",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "59": {
+          "k": 238,
+          "mean": "-238/59",
+          "P_S_m2": "29/59",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "61": {
+          "k": 246,
+          "mean": "-246/61",
+          "P_S_m2": "30/61",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "67": {
+          "k": 270,
+          "mean": "-270/67",
+          "P_S_m2": "33/67",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "71": {
+          "k": 286,
+          "mean": "-286/71",
+          "P_S_m2": "35/71",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "73": {
+          "k": 294,
+          "mean": "-294/73",
+          "P_S_m2": "36/73",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        },
+        "79": {
+          "k": 318,
+          "mean": "-318/79",
+          "P_S_m2": "39/79",
+          "is_plus_slice": true,
+          "is_minus_slice": false,
+          "plus_not_leftover": true
+        }
+      },
+      "theorem": "leftover {\u22122,\u22126} at k=4p+2 has plus-slice mass, hence empty. Fail: minus-slice mass. Fail: official leftover {\u22122,\u22126}."
+    },
+    "B": {
+      "proved": true,
+      "n_primes": 20,
+      "rows": {
+        "5": {
+          "a": "3/5",
+          "b_k4p2": "-2/5",
+          "b_k4p": "-1/5",
+          "b_neg": true,
+          "d": "4/5",
+          "mean": "-22/5"
+        },
+        "7": {
+          "a": "4/7",
+          "b_k4p2": "-2/7",
+          "b_k4p": "-1/7",
+          "b_neg": true,
+          "d": "5/7",
+          "mean": "-30/7"
+        },
+        "11": {
+          "a": "6/11",
+          "b_k4p2": "-2/11",
+          "b_k4p": "-1/11",
+          "b_neg": true,
+          "d": "7/11",
+          "mean": "-46/11"
+        },
+        "13": {
+          "a": "7/13",
+          "b_k4p2": "-2/13",
+          "b_k4p": "-1/13",
+          "b_neg": true,
+          "d": "8/13",
+          "mean": "-54/13"
+        },
+        "17": {
+          "a": "9/17",
+          "b_k4p2": "-2/17",
+          "b_k4p": "-1/17",
+          "b_neg": true,
+          "d": "10/17",
+          "mean": "-70/17"
+        },
+        "19": {
+          "a": "10/19",
+          "b_k4p2": "-2/19",
+          "b_k4p": "-1/19",
+          "b_neg": true,
+          "d": "11/19",
+          "mean": "-78/19"
+        },
+        "23": {
+          "a": "12/23",
+          "b_k4p2": "-2/23",
+          "b_k4p": "-1/23",
+          "b_neg": true,
+          "d": "13/23",
+          "mean": "-94/23"
+        },
+        "29": {
+          "a": "15/29",
+          "b_k4p2": "-2/29",
+          "b_k4p": "-1/29",
+          "b_neg": true,
+          "d": "16/29",
+          "mean": "-118/29"
+        },
+        "31": {
+          "a": "16/31",
+          "b_k4p2": "-2/31",
+          "b_k4p": "-1/31",
+          "b_neg": true,
+          "d": "17/31",
+          "mean": "-126/31"
+        },
+        "37": {
+          "a": "19/37",
+          "b_k4p2": "-2/37",
+          "b_k4p": "-1/37",
+          "b_neg": true,
+          "d": "20/37",
+          "mean": "-150/37"
+        },
+        "41": {
+          "a": "21/41",
+          "b_k4p2": "-2/41",
+          "b_k4p": "-1/41",
+          "b_neg": true,
+          "d": "22/41",
+          "mean": "-166/41"
+        },
+        "43": {
+          "a": "22/43",
+          "b_k4p2": "-2/43",
+          "b_k4p": "-1/43",
+          "b_neg": true,
+          "d": "23/43",
+          "mean": "-174/43"
+        },
+        "47": {
+          "a": "24/47",
+          "b_k4p2": "-2/47",
+          "b_k4p": "-1/47",
+          "b_neg": true,
+          "d": "25/47",
+          "mean": "-190/47"
+        },
+        "53": {
+          "a": "27/53",
+          "b_k4p2": "-2/53",
+          "b_k4p": "-1/53",
+          "b_neg": true,
+          "d": "28/53",
+          "mean": "-214/53"
+        },
+        "59": {
+          "a": "30/59",
+          "b_k4p2": "-2/59",
+          "b_k4p": "-1/59",
+          "b_neg": true,
+          "d": "31/59",
+          "mean": "-238/59"
+        },
+        "61": {
+          "a": "31/61",
+          "b_k4p2": "-2/61",
+          "b_k4p": "-1/61",
+          "b_neg": true,
+          "d": "32/61",
+          "mean": "-246/61"
+        },
+        "67": {
+          "a": "34/67",
+          "b_k4p2": "-2/67",
+          "b_k4p": "-1/67",
+          "b_neg": true,
+          "d": "35/67",
+          "mean": "-270/67"
+        },
+        "71": {
+          "a": "36/71",
+          "b_k4p2": "-2/71",
+          "b_k4p": "-1/71",
+          "b_neg": true,
+          "d": "37/71",
+          "mean": "-286/71"
+        },
+        "73": {
+          "a": "37/73",
+          "b_k4p2": "-2/73",
+          "b_k4p": "-1/73",
+          "b_neg": true,
+          "d": "38/73",
+          "mean": "-294/73"
+        },
+        "79": {
+          "a": "40/79",
+          "b_k4p2": "-2/79",
+          "b_k4p": "-1/79",
+          "b_neg": true,
+          "d": "41/79",
+          "mean": "-318/79"
+        }
+      },
+      "theorem": "Official leftover three-level {\u22122,\u22124,\u22126} at k=4p+2 has b=\u22122/p<0. Fail: b=\u22121/p as at k=4p."
+    },
+    "C": {
+      "proved": false,
+      "residual_ii_k_eq_4p_empty": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "leftover_4plus_open": true,
+      "leftover_splus_open": true,
+      "nF_10_open": true,
+      "k_gt_4p_far_open": true,
+      "note": "leftover {\u22122,\u22126} and official 3-level empty at k=4p+2. leftover 4+ levels, leftover+splus, nF=10, far stay open. residual_ii_k_eq_4p_empty stays False."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty",
+    "type_I"
+  ]
+}
