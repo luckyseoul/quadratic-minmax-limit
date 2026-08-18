@@ -1,0 +1,96 @@
+{
+  "highs_leftover_splus": {
+    "4": "Infeasible",
+    "5": "Infeasible",
+    "6": "Infeasible"
+  },
+  "leftover_only": {
+    "4": {
+      "k": 20,
+      "nF": 4,
+      "min_p": -6,
+      "max_m": -2,
+      "leftover": true,
+      "official": false,
+      "splus_ge_2": false,
+      "freeness_fail": false,
+      "sup_m": [
+        -14,
+        -10,
+        -6,
+        -2
+      ],
+      "sup_p": [
+        -6,
+        -4,
+        -2,
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16
+      ]
+    },
+    "5": {
+      "k": 20,
+      "nF": 5,
+      "min_p": -6,
+      "max_m": -2,
+      "leftover": true,
+      "official": false,
+      "splus_ge_2": false,
+      "freeness_fail": false,
+      "sup_m": [
+        -14,
+        -10,
+        -6,
+        -2
+      ],
+      "sup_p": [
+        -6,
+        -4,
+        -2,
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14
+      ]
+    },
+    "6": {
+      "k": 20,
+      "nF": 6,
+      "min_p": -8,
+      "max_m": -2,
+      "leftover": true,
+      "official": false,
+      "splus_ge_2": false,
+      "freeness_fail": false,
+      "sup_m": [
+        -14,
+        -10,
+        -6,
+        -2
+      ],
+      "sup_p": [
+        -8,
+        -4,
+        -2,
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ]
+    }
+  }
+}

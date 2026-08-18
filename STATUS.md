@@ -1,6 +1,6 @@
 # Status (2026-08-18)
 
-Leftover campaign: 15.273–15.520 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.520: p=11 leftover-\(2p\) Fejer equals \(904/45\) by Johnson partition + 15.519. Fail: \(832/45\) (integer-hat2 rounding); fail: leftover-\(2p\) at p=7; fail: same constant at p=19. Ensemble \(Q_\tau\) unnamed. \(\phi_F\) not imported. 15.519: QR0 \(Q=2(p+1)\) on \(\mathbb F_p^\times\) for \(p\equiv3\pmod4\). 15.518: p=11 affine leftover includes stab \(=2p\). 15.517: p=5 \(H_+\) \(W\)-hist is the two-orbit law \(\{20,24,36,40\}=15:50:50:15\), so \(\mathrm{Var}(W)=\mathrm{Var}_{2\mathrm{orb}}=660/13\). Fail: same 4-point support or \(\mathrm{Var}=\mathrm{Var}_{2\mathrm{orb}}\) at p=7. Does not prove \(\mathrm{Var}\le\mathrm{Var}_{2\mathrm{orb}}\) for \(p\equiv1\). 15.516: ensemble \(L_{\mathrm{ns\_mix}}=\mu_+\mu_-\). \(Q_\tau\) unnamed. \(\phi_F\) not imported. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**.
+Leftover campaign: 15.273–15.521 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.521: leftover+s₊=2 at p=5 \(k=20\) is empty for nF=4,5,6 (HiGHS Infeasible); leftover-only at those nF exists (min₊∈{−6,−8}). Combined with nF=0..3, leftover+s₊=2 at p=5 \(k=20\) needs nF≥7. Fail: leftover-only empty. 3600s harvest with \(S\equiv2\) on Max+ is not a leftover+splus certificate. 15.520: p=11 leftover-\(2p\) Fejer equals \(904/45\) by Johnson partition + 15.519. Fail: \(832/45\) (integer-hat2 rounding); fail: leftover-\(2p\) at p=7; fail: same constant at p=19. Ensemble \(Q_\tau\) unnamed. \(\phi_F\) not imported. 15.519: QR0 \(Q=2(p+1)\) on \(\mathbb F_p^\times\) for \(p\equiv3\pmod4\). 15.518: p=11 affine leftover includes stab \(=2p\). 15.517: p=5 \(H_+\) \(W\)-hist is the two-orbit law \(\{20,24,36,40\}=15:50:50:15\), so \(\mathrm{Var}(W)=\mathrm{Var}_{2\mathrm{orb}}=660/13\). Fail: same 4-point support or \(\mathrm{Var}=\mathrm{Var}_{2\mathrm{orb}}\) at p=7. Does not prove \(\mathrm{Var}\le\mathrm{Var}_{2\mathrm{orb}}\) for \(p\equiv1\). 15.516: ensemble \(L_{\mathrm{ns\_mix}}=\mu_+\mu_-\). \(Q_\tau\) unnamed. \(\phi_F\) not imported. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|
@@ -9,7 +9,7 @@ Leftover campaign: 15.273–15.520 shipped. **Three leftovers remain** (Lemma D 
 | Bi-tight majorization algebra (15.167) | CANDIDATE | `prop15167.py` |
 | Type I freeness-fail ND (two-level Max−) | **CLOSED** (that slice) | 15.272 \(k=1\cup k=3\) \(\Rightarrow G_+\succ0\Rightarrow\) 15.249 dual-eq empty |
 | Residual (ii), affine + even \(k\le4p-2\) | **CLOSED** (that range) | 15.179 + 15.236 + 15.237 |
-| Residual (ii), even \(k\ge4p\) | **OPEN** | multi-level Max− leftover (15.274) |
+| Residual (ii), even \(k\ge4p\) | **OPEN** | multi-level Max− leftover (15.274); p=5 \(k=20\) leftover+splus empty nF=0..6 (15.521) |
 | Type I, multi-level Max− | **OPEN** | 15.275; 15.495 \(\sigma_{k1}\equiv0\); `type_I_multilevel_bad_case_ND_closed=False` |
 | \(\lambda_{\min}(\Phi)\ge6\) | **OPEN** | 15.279; `phi_F_ge_6=False` |
 | E(1) / \(L=\tfrac12\) | **OPEN** | needs the four leftovers above |

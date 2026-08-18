@@ -1,0 +1,135 @@
+{
+  "prop": "15.521",
+  "title": "p=5 k=20 leftover+splus empty at nF=4,5,6",
+  "series": "15.x leftover campaign (OPEN)",
+  "proved": {
+    "leftover_only_nf456": true,
+    "leftover_splus_nf456_empty": true,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6_proved_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "rows": {
+        "4": {
+          "k": 20,
+          "nF": 4,
+          "min_p": -6,
+          "max_m": -2,
+          "leftover": true,
+          "official": false,
+          "splus_ge_2": false,
+          "freeness_fail": false,
+          "sup_m": [
+            -14,
+            -10,
+            -6,
+            -2
+          ],
+          "sup_p": [
+            -6,
+            -4,
+            -2,
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14,
+            16
+          ]
+        },
+        "5": {
+          "k": 20,
+          "nF": 5,
+          "min_p": -6,
+          "max_m": -2,
+          "leftover": true,
+          "official": false,
+          "splus_ge_2": false,
+          "freeness_fail": false,
+          "sup_m": [
+            -14,
+            -10,
+            -6,
+            -2
+          ],
+          "sup_p": [
+            -6,
+            -4,
+            -2,
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12,
+            14
+          ]
+        },
+        "6": {
+          "k": 20,
+          "nF": 6,
+          "min_p": -8,
+          "max_m": -2,
+          "leftover": true,
+          "official": false,
+          "splus_ge_2": false,
+          "freeness_fail": false,
+          "sup_m": [
+            -14,
+            -10,
+            -6,
+            -2
+          ],
+          "sup_p": [
+            -8,
+            -4,
+            -2,
+            0,
+            2,
+            4,
+            6,
+            8,
+            10,
+            12
+          ]
+        }
+      },
+      "theorem": "p=5 k=20 leftover-only exists at nF=4,5,6 with min_+<2. Fail: leftover empty; fail: those G have s\u208a=2."
+    },
+    "B": {
+      "proved": true,
+      "highs": {
+        "4": "Infeasible",
+        "5": "Infeasible",
+        "6": "Infeasible"
+      },
+      "leftover_only_exists": true,
+      "theorem": "leftover+splus Infeasible at nF=4,5,6 (HiGHS). Fail: leftover-only empty (A)."
+    },
+    "C": {
+      "proved": false,
+      "residual_ii_k_eq_4p_empty": false,
+      "phi_F_ge_6": false,
+      "e1": true,
+      "rhat": false,
+      "nf_ge_7_open": true,
+      "note": "leftover+splus nF=0..6 empty at p=5 k=20. nF\u22657 and even k>4p with far stay open. 3600s JSON with S\u22612 on Max+ is not a leftover+splus certificate. residual_ii_k_eq_4p_empty stays False."
+    }
+  },
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii_k_eq_4p_empty"
+  ]
+}
