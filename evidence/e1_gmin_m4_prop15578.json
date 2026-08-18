@@ -1,0 +1,104 @@
+{
+  "prop": "15.578",
+  "title": "2\u03c7 4-point 4p/(p\u22121); 15.568 families hit p=7 buckets",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "sine_sum": 1.2500000000000002,
+        "p_over_4": 1.25,
+        "E4": 5.000000000000001,
+        "named": 5.0,
+        "mu": 2000.0,
+        "match": true,
+        "fail4": true,
+        "fail5_or_p5": true,
+        "r1_not_p4": true
+      },
+      "7": {
+        "sine_sum": 1.7500000000000004,
+        "p_over_4": 1.75,
+        "E4": 4.666666666666668,
+        "named": 4.666666666666667,
+        "mu": 3658.6666666666665,
+        "match": true,
+        "fail4": true,
+        "fail5_or_p5": true,
+        "r1_not_p4": true
+      },
+      "11": {
+        "sine_sum": 2.75,
+        "p_over_4": 2.75,
+        "E4": 4.4,
+        "named": 4.4,
+        "mu": 8518.4,
+        "match": true,
+        "fail4": true,
+        "fail5_or_p5": true,
+        "r1_not_p4": true
+      },
+      "13": {
+        "sine_sum": 3.25,
+        "p_over_4": 3.25,
+        "E4": 4.333333333333333,
+        "named": 4.333333333333333,
+        "mu": 11717.333333333334,
+        "match": true,
+        "fail4": true,
+        "fail5_or_p5": true,
+        "r1_not_p4": true
+      }
+    },
+    "theorem": "2\u03c7 E4=4p/(p\u22121). Fail 4; fail 5 at p=7; fail r=1."
+  },
+  "B": {
+    "proved": true,
+    "E4_A3": 46.66666666666664,
+    "E4_A6": 11.66666666666666,
+    "E4_B4w": 14.77777777777778,
+    "E4_B4u": 15.399999999999993,
+    "E4_B4_dropAP": 16.607843137254893,
+    "live": {
+      "A3": 46.666666666666664,
+      "A6": 11.666666666666666,
+      "B4": 14.777777777777779
+    },
+    "theorem": "p=7 A3/A6/weighted-B4 4-points hit 140/3, 35/3, 133/9. Fail uniform B4; fail drop 4-AP."
+  },
+  "C": {
+    "proved": false,
+    "mix_p5": 2800.0,
+    "live_p5_full": 2000.0,
+    "mix_is_plaw": false,
+    "mu_full_le_muk3_Nstar_p7": false,
+    "Nstar_mufull_p7": 9695.466666666669,
+    "muk3_p7": 9604.0,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "2\u03c7 4-point is named. The 15.568 bucket mix is p=7-only (2800\u22602000 at p=5). \u03bc_full\u2264\u03bc_k3 fails on N* at p=7. Do not interpolate (p\u22125)/15. phi_F not imported."
+  },
+  "proved": {
+    "twochi_E4_fejer": true,
+    "p7_buckets_are_15568_families": true,
+    "mu_full_named_in_p": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ],
+  "identity": "E4_2chi = 4p/(p-1); mu_2chi = 64 p^3/(p-1)",
+  "claude_leftover1": "deep_review BLOCK on mix-as-p-identity; do_not_import_mix"
+}
