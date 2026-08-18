@@ -1,0 +1,95 @@
+{
+  "prop": "15.557",
+  "title": "\u03a3 \u03a6_free = 2N(1/p\u2212p)+(p\u22121)(p+1)\u00b2 C(p,m)/p",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "sum_G3": -1248.0,
+        "named": -1248.0,
+        "drop_2Np": -1300.0,
+        "match": true,
+        "drop_fails": true
+      },
+      "7": {
+        "sum_G3": -78528.0,
+        "named": -78528.0,
+        "drop_2Np": -80164.0,
+        "match": true,
+        "drop_fails": true
+      }
+    },
+    "theorem": "\u03a3 G3=2N(1/p\u2212p). Fail drop 2N/p."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "sum_1d": -288.0,
+        "named": -288.0,
+        "match": true,
+        "drop_C_fails": true
+      },
+      "7": {
+        "sum_1d": -1920.0,
+        "named": -1920.0,
+        "match": true,
+        "drop_C_fails": true
+      }
+    },
+    "theorem": "\u03a3 G3_1d=\u2212(p\u22121)(p+1)\u00b2 C(p,m)/p. Fail drop C."
+  },
+  "C": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "sum_free": -960.0,
+        "named": -960.0,
+        "N": 130,
+        "match": true,
+        "zero_fails": true
+      },
+      "7": {
+        "sum_free": -76608.0,
+        "named": -76608.0,
+        "N": 5726,
+        "match": true,
+        "zero_fails": true
+      }
+    },
+    "theorem": "\u03a3 \u03a6_free=2N(1/p\u2212p)+(p\u22121)(p+1)\u00b2 C(p,m)/p. Fail \u03a6_free\u22610."
+  },
+  "D": {
+    "proved": false,
+    "Phi_free_pointwise_named": false,
+    "Q3_named_in_p": false,
+    "NUM_SUM_16pA_general": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "Pair-sum of \u03a6_free is named. Pointwise \u03a6_free / Q3 constants / 16pA / Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "proved": {
+    "sum_G3_named": true,
+    "sum_G3_1d_named": true,
+    "sum_Phi_free_named": true,
+    "Phi_free_pointwise": false,
+    "NUM_SUM_16pA_general": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ],
+  "identity": "\u03a3\u03a6_free=2N(1/p\u2212p)+(p\u22121)(p+1)\u00b2 C(p,(p+1)/2)/p"
+}
