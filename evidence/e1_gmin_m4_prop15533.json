@@ -1,0 +1,58 @@
+{
+  "prop": "15.533",
+  "title": "n_inv(\u2212id)=15.509 Fix; no free Aut_\u221e pairing of T_ns-orbits",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n_inv_neg": 6,
+        "n_inv_g1": 6,
+        "named": 6,
+        "n_1d_over_p": 6,
+        "ok": true
+      },
+      "7": {
+        "n_inv_neg": 54,
+        "n_inv_g1": 54,
+        "named": 54,
+        "n_1d_over_p": 20,
+        "ok": true
+      }
+    },
+    "theorem": "n_inv(\u2212id)=n_inv(g_1)=2\u00b73^{C((p\u22121)/2,2)}. Fail 0; fail n_1d/p at p=7."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "frob": 2,
+        "frob_neg": 22
+      },
+      "7": {
+        "frob": 218,
+        "frob_neg": 218
+      }
+    },
+    "theorem": "Frob n_inv=2,218; Frob\u2218(\u2212id)=22,218. Fail 0."
+  },
+  "C": {
+    "proved": false,
+    "D_named_as_orbits": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "No tested Aut_\u221e involution freely pairs T_ns-orbits. D and Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
