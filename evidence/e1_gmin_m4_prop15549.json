@@ -1,0 +1,75 @@
+{
+  "prop": "15.549",
+  "title": "K_\u03bb is the complete \u03c7(\u03bb) 4-linear minus 2Nq(q\u22122)",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "G_rxi": 5.0,
+        "G_mrxi": 5.0,
+        "ok": true
+      },
+      "7": {
+        "G_rxi": 7.000000000000001,
+        "G_mrxi": 7.0,
+        "ok": true
+      },
+      "11": {
+        "G_rxi": 10.999999999999996,
+        "G_mrxi": 10.999999999999995,
+        "ok": true
+      },
+      "13": {
+        "G_rxi": 12.999999999999998,
+        "G_mrxi": 12.999999999999998,
+        "ok": true
+      }
+    },
+    "theorem": "G(\u03c7, r\u03be)=p on ++. Fail G=\u2212p."
+  },
+  "B": {
+    "proved": true,
+    "fold": {
+      "N": 130,
+      "K_lam": 21550.000000000004,
+      "K_all": 249049.9999999999,
+      "coll": 227500,
+      "named": 21549.999999999913,
+      "wrong_omit_aabb": 99549.99999999991,
+      "match": true,
+      "drop_fails": true,
+      "omit_aabb_fails": true,
+      "p7_coll": 39841508,
+      "p7_Kall_from_B": 42047782.0,
+      "p7_back": 2206274.0
+    },
+    "theorem": "K_\u03bb=K_\u03bb^{all}\u2212Nq(3q\u22125). Fail drop (p=5: 249049.9999999999\u226021550.000000000004). Fail omit a=b,c=d: 99549.99999999991\u226021550.000000000004."
+  },
+  "C": {
+    "proved": false,
+    "K_all_named_in_p": false,
+    "NUM_SUM_16pA_general": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "Complete sum K_\u03bb^{all} is not a Gauss/Jacobi integer in p. 16pA / Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "proved": {
+    "G_chi_rxi_eq_p": true,
+    "K_lam_complete_minus_gauss": true,
+    "NUM_SUM_16pA_general": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ]
+}
