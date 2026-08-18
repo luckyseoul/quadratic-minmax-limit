@@ -1,0 +1,158 @@
+{
+  "prop": "15.562",
+  "title": "A_k3,n3=\u221216p\u00b3/((p\u22121)(p\u22123)); n_k3 A=\u2212p^5(p\u00b2\u22121)/3",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "S_re": -1.0,
+        "named": -1.0,
+        "err": 1.6653345369377348e-16,
+        "match": true,
+        "pm1_fails": true,
+        "drop24_fails": true
+      },
+      "7": {
+        "S_re": -2.000000000000001,
+        "named": -2.0,
+        "err": 3.447059237218225e-15,
+        "match": true,
+        "pm1_fails": true,
+        "drop24_fails": true
+      },
+      "11": {
+        "S_re": -5.000000000000002,
+        "named": -5.0,
+        "err": 1.0805156823142815e-14,
+        "match": true,
+        "pm1_fails": true,
+        "drop24_fails": true
+      },
+      "13": {
+        "S_re": -6.999999999999998,
+        "named": -7.0,
+        "err": 3.7345763888702946e-14,
+        "match": true,
+        "pm1_fails": true,
+        "drop24_fails": true
+      },
+      "17": {
+        "S_re": -11.999999999999968,
+        "named": -12.0,
+        "err": 6.521915363565902e-14,
+        "match": true,
+        "pm1_fails": true,
+        "drop24_fails": true
+      },
+      "19": {
+        "S_re": -14.999999999999837,
+        "named": -15.0,
+        "err": 1.7964931771204152e-13,
+        "match": true,
+        "pm1_fails": true,
+        "drop24_fails": true
+      },
+      "23": {
+        "S_re": -21.99999999999934,
+        "named": -22.0,
+        "err": 7.98151741044921e-13,
+        "match": true,
+        "pm1_fails": true,
+        "drop24_fails": true
+      }
+    },
+    "theorem": "\u03a3 \u03c9^{2t}/(\u03c9^t\u22121)^3=\u2212(p\u00b2\u22121)/24. Fail (p\u22121)/24; fail drop 24."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "A_k3_dbl_mean": 2.9324854591557702e-15,
+        "match": true,
+        "A1d_fails": true
+      },
+      "7": {
+        "A_k3_dbl_mean": 5.7852399027513395e-15,
+        "match": true,
+        "A1d_fails": true
+      }
+    },
+    "theorem": "A_{k=3,dbl}=0 (Fejer 1-line). Fail A_{k=3,dbl}=A_1d."
+  },
+  "C": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "live": -250.00000000000009,
+        "named": -250.0,
+        "match": true,
+        "pminus2_fails": true
+      },
+      "7": {
+        "live": -228.66666666666666,
+        "named": -228.66666666666666,
+        "match": true,
+        "pminus2_fails": true
+      }
+    },
+    "theorem": "A_{k=3,n3}=\u221216p\u00b3/((p\u22121)(p\u22123)). Fail (p\u22122)."
+  },
+  "D": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "k3_piece": -25000.0,
+        "n_k3_A": -25000.0,
+        "live_Q3_n3": -25000.0,
+        "match_piece": true,
+        "p5_Q3n3_or_p7_not_full": true,
+        "p5_Q3dbl_or_p7_not_1d_only": true,
+        "drop_third_fails": true
+      },
+      "7": {
+        "k3_piece": -268912.0,
+        "n_k3_A": -268912.0,
+        "live_Q3_n3": -672280.0,
+        "match_piece": true,
+        "p5_Q3n3_or_p7_not_full": true,
+        "p5_Q3dbl_or_p7_not_1d_only": true,
+        "drop_third_fails": true
+      }
+    },
+    "theorem": "n_{k=3} A_{k=3,n3}=\u2212p^5(p\u00b2\u22121)/3. Equals Q3_n3 iff m=3. Fail drop 1/3."
+  },
+  "E": {
+    "proved": false,
+    "Q3_double_named_in_p": false,
+    "Q3_n3_named_in_p": false,
+    "A_full_dbl_named_in_p": false,
+    "NUM_SUM_16pA_general": false,
+    "phi_F_imported": false,
+    "note": "A_k3 and the k=3 piece of Q3_n3 are named. At p=5 (m=3) this closes both Q3_n3 and Q3_dbl. For m>3, A_full,dbl=A_full,n3=\u22124p\u00b3/15 at p=7 is not a p-law. Do not interpolate (p\u22125)/15. phi_F not imported."
+  },
+  "proved": {
+    "S_fejer_named": true,
+    "A_k3_dbl_zero": true,
+    "A_k3_n3_named": true,
+    "Q3_n3_k3_piece_named": true,
+    "Q3_double_named_in_p": false,
+    "Q3_n3_named_in_p": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ],
+  "identity": "A_k3,n3=-16p^3/((p-1)(p-3)); n_k3 A=-p^5(p^2-1)/3"
+}
