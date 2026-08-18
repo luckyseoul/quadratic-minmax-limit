@@ -1,0 +1,31 @@
+{
+  "A": {
+    "proved": true,
+    "by_p": {
+      "7": {
+        "n": 4,
+        "n_named": 4,
+        "values": [
+          -4,
+          0,
+          4
+        ]
+      }
+    }
+  },
+  "B": {
+    "proved": true,
+    "max_live": 0.4889975550122274,
+    "max_named": "200/409",
+    "A_minus_3p": 172
+  },
+  "D": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "J_{--} named for p\u22613. A\u22123p only certified at p=7. D unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false
+}
