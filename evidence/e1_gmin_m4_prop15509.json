@@ -1,0 +1,135 @@
+{
+  "prop": "15.509",
+  "title": "Burnside \u2212id class size q, Fix=2\u00b73^{C((p\u22121)/2,2)}; D unnamed",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "n": 9,
+        "named": 9,
+        "chi_q_neg1": 1,
+        "neg1_in_squares": true
+      },
+      "5": {
+        "n": 25,
+        "named": 25,
+        "chi_q_neg1": 1,
+        "neg1_in_squares": true
+      },
+      "7": {
+        "n": 49,
+        "named": 49,
+        "chi_q_neg1": 1,
+        "neg1_in_squares": true
+      },
+      "11": {
+        "n": 121,
+        "named": 121,
+        "chi_q_neg1": 1,
+        "neg1_in_squares": true
+      },
+      "13": {
+        "n": 169,
+        "named": 169,
+        "chi_q_neg1": 1,
+        "neg1_in_squares": true
+      },
+      "17": {
+        "n": 289,
+        "named": 289,
+        "chi_q_neg1": 1,
+        "neg1_in_squares": true
+      },
+      "19": {
+        "n": 361,
+        "named": 361,
+        "chi_q_neg1": 1,
+        "neg1_in_squares": true
+      }
+    },
+    "theorem": "|\u2212id-class|=q and \u03c7_q(\u22121)=1. Fail |class|=2q."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "n_ok": 9,
+        "q": 9,
+        "want_n2": 4
+      },
+      "5": {
+        "n_ok": 25,
+        "q": 25,
+        "want_n2": 12
+      },
+      "7": {
+        "n_ok": 49,
+        "q": 49,
+        "want_n2": 24
+      },
+      "11": {
+        "n_ok": 121,
+        "q": 121,
+        "want_n2": 60
+      },
+      "13": {
+        "n_ok": 169,
+        "q": 169,
+        "want_n2": 84
+      }
+    },
+    "theorem": "cycle type (1,1,2^{(q\u22121)/2}). Fail 3-cycles."
+  },
+  "C": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "n": 9,
+        "fix": 2,
+        "wrong": 2,
+        "live_min": 2,
+        "live_max": 2,
+        "cyc_ok": true
+      },
+      "5": {
+        "n": 25,
+        "fix": 6,
+        "wrong": 6,
+        "live_min": 6,
+        "live_max": 6,
+        "cyc_ok": true
+      },
+      "7": {
+        "n": 49,
+        "fix": 54,
+        "wrong": 20,
+        "live_min": 54,
+        "live_max": 54,
+        "cyc_ok": true
+      }
+    },
+    "theorem": "Fix(g_b)=2\u00b73^{C((p\u22121)/2,2)} constantly on H_+. Fail n_1d/p."
+  },
+  "D": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_imported": false,
+    "p11_predicted": 118098,
+    "p13_predicted": 28697814,
+    "note": "Involution class size and cycle type are field-named. Fix formula is a p=3,5,7 cache identity. Factorization and p\u226511 untested. |H+| / D / Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}

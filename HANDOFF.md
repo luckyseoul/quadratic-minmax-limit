@@ -1,5 +1,5 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-18):** HEAD 15.508. **Three leftovers remain.** Burnside ω-class named (\(|class|=2q\), \(\mathrm{Fix}=p-\chi_p(-1)\) at p=5,7); \(D=|H_+|/(2p)\) and ensemble \(Q_\tau\) still unnamed. \(\phi_F\) not imported. \(L=\tfrac12\) is **not settled**.  
+> **Now (2026-08-18):** HEAD 15.509. **Three leftovers remain.** Burnside −id class named (\(|class|=q\), cycle \((1,1,2^{(q-1)/2})\), cache \(\mathrm{Fix}=2\cdot3^{C((p-1)/2,2)}\) at p=3,5,7); \(D=|H_+|/(2p)\) and ensemble \(Q_\tau\) still unnamed. \(\phi_F\) not imported. \(L=\tfrac12\) is **not settled**.  
 > Afternoon: **`evidence/SESSION_HANDOFF_2026-08-17_qtau.md`**. Morning: **`evidence/SESSION_HANDOFF_2026-08-17_leftover.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**. Next `/goal`: **`GOAL.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit
