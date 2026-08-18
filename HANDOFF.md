@@ -1,5 +1,5 @@
 > **LONG-HORIZON GOAL (binding):** settle MO 413935 — prove \(L=\lim\alpha_n\) exists and give its value, or prove non-existence. **Not done** until a terminal state in `LONG_HORIZON_GOAL.md`. Structure increments, honest OPEN, and “new prop shipped” are not completion.  
-> **Now (2026-08-18):** HEAD 15.531–15.545. **Three leftovers remain.** Floor: 15.545 names the NL mass \(M_{\mathrm{NL}}=16pA-n_{1d}Q_{1d}^{++}\) at p=5,7; \(16pA\) still not a p-law. 15.541 \(c_{\mathrm{eq}}\) floor. Type I: 15.544 p=5 mix \(G>T\). Residual (ii) even \(k>4p\) open. \(\phi_F\) not imported. \(L=\tfrac12\) is **not settled**.  
+> **Now (2026-08-18):** HEAD 15.531–15.545. **Three leftovers remain.** Floor: 15.545 names the NL mass \(M_{\mathrm{NL}}=16pA-n_{1d}Q_{1d}^{++}\) at p=5,7; \(16pA\) still not a p-law. 15.541 \(c_{\mathrm{eq}}\) floor. Type I: 15.544 p=5 mix \(G>T\); 15.546 p=7 mix \(109/2863<|T|\). Residual (ii) even \(k>4p\) open. \(\phi_F\) not imported. \(L=\tfrac12\) is **not settled**.  
 > Latest: **`evidence/SESSION_HANDOFF_2026-08-18.md`**. Afternoon: **`evidence/SESSION_HANDOFF_2026-08-17_qtau.md`**. Status: **`STATUS.md`**. Package: **`evidence/share/denseness_path_package.md`**. Next `/goal`: **`GOAL.md`**.
 
 # Research handoff: min-max ±1 quadratic form limit

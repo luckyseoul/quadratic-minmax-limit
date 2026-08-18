@@ -1,0 +1,58 @@
+{
+  "prop": "15.546",
+  "title": "p=7 mix |\u03bc|\u2264109/2863<|T|; Aut_e G>T on the ensemble",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "live": {
+      "n_1d": 140,
+      "n_full": 4410,
+      "n_part": 1176,
+      "nH": 5726,
+      "n_kappa1": 14112,
+      "max_full": "29/735",
+      "max_part": "5/147",
+      "max_mix": "109/2863",
+      "n_full_vals": 6
+    },
+    "C_full": "29/735",
+    "C_part": "5/147",
+    "theorem": "p=7: |\u03bc_full|\u2264(4p+1)/(15p\u00b2), |\u03bc_part|\u2264(p\u22122)/(3p\u00b2).  Fail: either equals 1/p\u00b2."
+  },
+  "B": {
+    "proved": true,
+    "mix_bound": "109/2863",
+    "T_abs": "5/91",
+    "drop_15": "283/2863",
+    "live_max_mu": "109/2863",
+    "theorem": "p=7 mix |\u03bc|\u2264109/2863<|T|.  Fail: drop 15 in the full majorant (bound > T)."
+  },
+  "C": {
+    "proved": false,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false,
+    "A_full_named_p_law": false,
+    "mu_full_p_law_general": false,
+    "note": "Majorants not shown for p\u226511.  A_full still three magnitudes.  Aut_e general still G>T.  Flags unflipped."
+  },
+  "proved": {
+    "mu_majorants_p7": true,
+    "mix_G_gt_T_p7": true,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "type_I_multilevel_bad_case_ND_closed",
+    "type_I_aut_e_3AB_positive_general",
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
