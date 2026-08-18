@@ -1,0 +1,88 @@
+{
+  "prop": "15.529",
+  "title": "\u0394_conn is the \u03a9-triple A\u2013I contraction",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "p": 5,
+        "G": -5,
+        "n_Omega": 12,
+        "n_ord": 60,
+        "n_Hplus": 130,
+        "pred": -5.046153846153845,
+        "pred_frac": "-328/65",
+        "live": "-328/65",
+        "match": true,
+        "drop_pred_frac": "-1025000/13",
+        "drop_is_live": false,
+        "drop_scale": 15625.0,
+        "q3": 15625,
+        "I_dbl_unique": [
+          30.0
+        ],
+        "I_dst_unique": [
+          -50.0
+        ]
+      },
+      "7": {
+        "p": 7,
+        "G": 7,
+        "n_Omega": 24,
+        "n_ord": 264,
+        "n_Hplus": 5726,
+        "pred": -0.39958085923856107,
+        "pred_frac": "-1144/2863",
+        "live": "-1144/2863",
+        "match": true,
+        "drop_pred_frac": "-19227208/409",
+        "drop_is_live": false,
+        "drop_scale": 117649.00000000001,
+        "q3": 117649,
+        "I_dbl_unique": [
+          98.0
+        ],
+        "I_dst_unique": [
+          -14.0
+        ]
+      }
+    },
+    "theorem": "\u0394_conn=2G/((p\u00b2\u22121)p\u2076) \u2211_{\u03a9, \u03be+\u03b7+\u03b8=0} A I.  Equals \u2212328/65, \u22121144/2863.  Fail: drop q^{\u22123}."
+  },
+  "B": {
+    "proved": true,
+    "p5_I_dbl_vs_2q": [
+      30,
+      50
+    ],
+    "theorem": "I_dbl is not 2p\u00b2 (p=5: 30\u226050). Not a p-law."
+  },
+  "C": {
+    "proved": false,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false,
+    "Delta_conn_p_rational": false,
+    "note": "A still has den 13,409 (15.269).  \u0394_conn not a p-rational.  Aut_e 3A+B still G>T.  Flags unflipped."
+  },
+  "proved": {
+    "AI_identity": true,
+    "I_dbl_not_2p2": true,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "type_I_multilevel_bad_case_ND_closed",
+    "type_I_aut_e_3AB_positive_general",
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
