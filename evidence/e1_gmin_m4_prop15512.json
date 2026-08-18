@@ -1,0 +1,74 @@
+{
+  "prop": "15.512",
+  "title": "Frobenius \u03c9-class size 2q, Fix=2; D unnamed",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "n": 50,
+        "named": 50
+      },
+      "7": {
+        "n": 98,
+        "named": 98
+      },
+      "11": {
+        "n": 242,
+        "named": 242
+      },
+      "13": {
+        "n": 338,
+        "named": 338
+      },
+      "17": {
+        "n": 578,
+        "named": 578
+      },
+      "19": {
+        "n": 722,
+        "named": 722
+      }
+    },
+    "theorem": "|\u03c9-Frob class|=2q. Fail |class|=q."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "n": 50,
+        "fix": 2,
+        "wrong": 4,
+        "live_min": 2,
+        "live_max": 2
+      },
+      "7": {
+        "n": 98,
+        "fix": 2,
+        "wrong": 8,
+        "live_min": 2,
+        "live_max": 2
+      }
+    },
+    "theorem": "Fix(g_{\u03c9,b}^{(p)})=2 constantly. Fail p\u2212\u03c7(\u22121)."
+  },
+  "C": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "\u03c9-Frob Fix is 2 at p=5,7. Remaining Frob Fix unnamed. D / Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}

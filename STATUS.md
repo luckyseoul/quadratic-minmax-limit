@@ -1,6 +1,6 @@
 # Status (2026-08-18)
 
-Leftover campaign: 15.273–15.511 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.511: 1D involution Fix equals \(\frac{p+1}{2}\,C(\frac{p-1}{2},\lfloor\frac{p-1}{4}\rfloor)\) (Type+ forms × even \(m\)-subsets). Live 2,6,12 at p=3,5,7. Fail: \(n_{1d}/p\) (20≠12 at p=7); drop the form-count; claim this is full Fix (12≠54). NL leftover 0,0,42 unnamed. \(D\) unnamed. \(\phi_F\) not imported. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**.
+Leftover campaign: 15.273–15.512 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.512: Frobenius ω-class \(\{u\mapsto\omega u^p+b\}\) has size \(2q\); on the p=5,7 caches \(\mathrm{Fix}=2\). Fail: class size \(q\); Fix \(p-\chi_p(-1)\) (the 15.508 k=0 value). Remaining Frob Fix unnamed. \(D\) unnamed. \(\phi_F\) not imported. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|
