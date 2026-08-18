@@ -1,6 +1,6 @@
 # Status (2026-08-18)
 
-Leftover campaign: 15.273–15.512 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.512: Frobenius ω-class \(\{u\mapsto\omega u^p+b\}\) has size \(2q\); on the p=5,7 caches \(\mathrm{Fix}=2\). Fail: class size \(q\); Fix \(p-\chi_p(-1)\) (the 15.508 k=0 value). Remaining Frob Fix unnamed. \(D\) unnamed. \(\phi_F\) not imported. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**.
+Leftover campaign: 15.273–15.513 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.513: for \(p\equiv1\), the even pairing first moment is \(-16\) independent of \(M=n_{pp}\delta_{++}\) (hence of \(Q_{++}\)). \(J_{N^*}\) counts: \(n(J=2)=|N^*|\), \(n(J=-(p-1))=p-3\), \(n(J=-(p-3))=p-1\). Fail: \(n(J=2)=n_{pp}\); \(S_1=0\). Does not name \(Q_\tau\). \(\phi_F\) not imported. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|

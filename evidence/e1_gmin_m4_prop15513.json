@@ -1,0 +1,104 @@
+{
+  "prop": "15.513",
+  "title": "Even pairing first moment \u221216; Q_\u03c4 unnamed",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "n_primes": 9,
+    "rows": {
+      "5": {
+        "p": 5,
+        "n_k": 10,
+        "n2": 4,
+        "nm1": 2,
+        "nm3": 4
+      },
+      "13": {
+        "p": 13,
+        "n_k": 82,
+        "n2": 60,
+        "nm1": 10,
+        "nm3": 12
+      },
+      "17": {
+        "p": 17,
+        "n_k": 142,
+        "n2": 112,
+        "nm1": 14,
+        "nm3": 16
+      },
+      "29": {
+        "p": 29,
+        "n_k": 418,
+        "n2": 364,
+        "nm1": 26,
+        "nm3": 28
+      },
+      "37": {
+        "p": 37,
+        "n_k": 682,
+        "n2": 612,
+        "nm1": 34,
+        "nm3": 36
+      },
+      "41": {
+        "p": 41,
+        "n_k": 838,
+        "n2": 760,
+        "nm1": 38,
+        "nm3": 40
+      }
+    },
+    "theorem": "jcnt named. Fail n(J=2)=n_pp."
+  },
+  "B": {
+    "proved": true,
+    "n_primes": 9,
+    "rows": {
+      "5": {
+        "c_M": "0",
+        "c_0": "-16"
+      },
+      "13": {
+        "c_M": "0",
+        "c_0": "-16"
+      },
+      "17": {
+        "c_M": "0",
+        "c_0": "-16"
+      },
+      "29": {
+        "c_M": "0",
+        "c_0": "-16"
+      },
+      "37": {
+        "c_M": "0",
+        "c_0": "-16"
+      },
+      "41": {
+        "c_M": "0",
+        "c_0": "-16"
+      }
+    },
+    "theorem": "S1=\u221216, independent of M. Fail S1=0 or c_M\u22600."
+  },
+  "C": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "D_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "S1 does not determine M (c_M=0). S2 still depends on M. Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
