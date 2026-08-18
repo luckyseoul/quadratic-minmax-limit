@@ -1,0 +1,92 @@
+{
+  "prop": "15.559",
+  "title": "Aut_e inversion does not preserve full-\u03a9; A_full unnamed",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "n_full": 100,
+        "n_y0plus": 60,
+        "n_stay_full": 60,
+        "n_to_part": 0,
+        "nsupp_after": [
+          12
+        ],
+        "preserves": true
+      },
+      "7": {
+        "n_full": 4410,
+        "n_y0plus": 2520,
+        "n_stay_full": 2496,
+        "n_to_part": 24,
+        "nsupp_after": [
+          18,
+          24
+        ],
+        "preserves": false
+      }
+    },
+    "theorem": "Aut_e inversion preserves full-\u03a9 at p=5 (60/60) and sends 24 vectors to nsupp=18 at p=7.  Fail: preserves at p=7; fail: fails at p=5."
+  },
+  "B": {
+    "proved": true,
+    "double_reality": {
+      "5": {
+        "n_full": 100,
+        "frac_pure_imag": 1.0,
+        "mean_re": -4.053448014129172e-15,
+        "mean_re_frac": "0"
+      },
+      "7": {
+        "n_full": 4410,
+        "frac_pure_imag": 0.0,
+        "mean_re": -91.46666666666673,
+        "mean_re_frac": "-1372/15"
+      }
+    },
+    "A_full_dbl": {
+      "5": "0",
+      "7": "-1372/15"
+    },
+    "mu_full_Sphi_split": {
+      "class": "(1,-10,-10)",
+      "n": 1652,
+      "mu_cnt": {
+        "29/735": 819,
+        "13/735": 833
+      },
+      "n_vals": 2
+    },
+    "aut_e_names_A_full": false,
+    "theorem": "A_full is not Aut_e-radial.  A_full,dbl is 0 vs \u22124p\u00b3/15 (P\u2208i\u211d at p=5, never at p=7).  \u03bc_full not a function of (\u03ba,S,\u03c6).  Aut_e cannot name A_full.  Fail: A_full,dbl=0 at p=7; fail P\u2208i\u211d at p=7."
+  },
+  "C": {
+    "proved": false,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false,
+    "A_full_named_p_law": false,
+    "aut_e_names_A_full": false,
+    "note": "Aut_e still acts on mixed Max+, so 3A+B is G>T on mixed \u03bc (15.275 J), not an Aut_e name of A_full.  Flags unflipped."
+  },
+  "proved": {
+    "aut_e_inv_not_full_omega": true,
+    "aut_e_dead_for_A_full": true,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "type_I_multilevel_bad_case_ND_closed",
+    "type_I_aut_e_3AB_positive_general",
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
