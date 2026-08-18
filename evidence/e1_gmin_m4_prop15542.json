@@ -1,0 +1,65 @@
+{
+  "prop": "15.542",
+  "title": "ns \u03bc-half-nets = H_+ at p=5,7; n_free=c_eq(p\u22121) live",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n_H": 130,
+        "n_H_halfnet": 130,
+        "n_hn": 130,
+        "n_1d": 30,
+        "ok": true
+      },
+      "7": {
+        "n_H": 5726,
+        "n_H_halfnet": 5726,
+        "n_hn": 5726,
+        "n_1d": 140,
+        "ok": true
+      }
+    },
+    "theorem": "n_hn=|H_+| at p=5,7 (130,5726). Fail n_hn=n_1d; fail extra half-nets at p=7."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n_free_from_hn": 4,
+        "n_free_live": 4,
+        "c_eq_times_pm1": 4,
+        "c_min_times_pm1": 4,
+        "ok": true
+      },
+      "7": {
+        "n_free_from_hn": 114,
+        "n_free_live": 114,
+        "c_eq_times_pm1": 114,
+        "c_min_times_pm1": 108,
+        "ok": true
+      }
+    },
+    "theorem": "n_free=(n_hn\u2212n_1d)/q = c_eq(p\u22121) at p=5,7. Fail c_min at p=7."
+  },
+  "C": {
+    "proved": false,
+    "n_free_general": false,
+    "halfnet_eq_H_general": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "n_hn=|H_+| and n_free=c_eq(p\u22121) not proved for p\u226511. 15.507 is p\u22611 only. Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
