@@ -1,0 +1,119 @@
+{
+  "prop": "15.571",
+  "title": "A6 pair Gauss expansions; amp(3\u2212\u03c7(2))/2 dies at p=23",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n_nondeg": 0,
+        "n_deg": 1,
+        "nondeg_err": 0.0,
+        "deg_err": 3.4196282140383835e-13,
+        "mis_3pt_err": 800.0000000000008,
+        "match": true,
+        "fail_3pt_on_deg": true
+      },
+      "7": {
+        "n_nondeg": 3,
+        "n_deg": 0,
+        "nondeg_err": 4.605340347045888e-13,
+        "deg_err": 0.0,
+        "mis_3pt_err": 0.0,
+        "match": true,
+        "fail_3pt_on_deg": true
+      },
+      "11": {
+        "n_nondeg": 10,
+        "n_deg": 0,
+        "nondeg_err": 1.4502788197966659e-12,
+        "deg_err": 0.0,
+        "mis_3pt_err": 0.0,
+        "match": true,
+        "fail_3pt_on_deg": true
+      },
+      "13": {
+        "n_nondeg": 12,
+        "n_deg": 3,
+        "nondeg_err": 3.3272166197171073e-12,
+        "deg_err": 4.359194473556965e-12,
+        "mis_3pt_err": 9013.333333333323,
+        "match": true,
+        "fail_3pt_on_deg": true
+      }
+    },
+    "theorem": "A6 nondeg/deg pair products are the two Gauss expansions. Fail 3-point expansion on p=5 degenerates."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "7": {
+        "live": 130.66666666666683,
+        "amp": 130.66666666666666,
+        "ratio": 1.0000000000000013,
+        "guess_3mchi2": 130.66666666666666,
+        "guess_pm3_4": 130.66666666666666,
+        "g1_ok_or_dies_p23": true,
+        "g2_ok_small_or_dies": true
+      },
+      "11": {
+        "live": -1161.6000000000004,
+        "amp": -580.8,
+        "ratio": 2.000000000000001,
+        "guess_3mchi2": -1161.6,
+        "guess_pm3_4": -1161.6,
+        "g1_ok_or_dies_p23": true,
+        "g2_ok_small_or_dies": true
+      },
+      "19": {
+        "live": -1925.3333333333305,
+        "amp": -962.6666666666666,
+        "ratio": 1.9999999999999971,
+        "guess_3mchi2": -1925.3333333333333,
+        "guess_pm3_4": -3850.6666666666665,
+        "g1_ok_or_dies_p23": true,
+        "g2_ok_small_or_dies": true
+      },
+      "23": {
+        "live": 692.5090909090874,
+        "amp": 384.72727272727275,
+        "ratio": 1.7999999999999907,
+        "guess_3mchi2": 384.72727272727275,
+        "guess_pm3_4": 1923.6363636363637,
+        "g1_ok_or_dies_p23": true,
+        "g2_ok_small_or_dies": true
+      }
+    },
+    "theorem": "amp(3\u2212\u03c7(2))/2 dies at p=23 (ratio 9/5). amp(p\u22123)/4 dies at p=19. Neither is a p-law."
+  },
+  "C": {
+    "proved": false,
+    "A6_named_in_p": false,
+    "A_full_dbl_named_in_p": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "A6 pair products are named expansions. Family mean is not a short p-integer. Do not interpolate (p\u22125)/15. phi_F not imported."
+  },
+  "proved": {
+    "a6_pair_expansion": true,
+    "a6_amp_guesses_die": true,
+    "A6_named_in_p": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ],
+  "identity": "A6 nondeg = Gauss[(1+2(x+y+xy))^2 (1+2(x^{-2}+y^{-2}+(xy)^{-2}))]; amp(3-chi(2))/2 dies at p=23"
+}
