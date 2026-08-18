@@ -1,0 +1,89 @@
+{
+  "prop": "15.535",
+  "title": "Twisted \u03c3=a x\u0304+b freely pairs T_ns at p=7, not p=5",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "N_plus": 1,
+        "N_minus": 1,
+        "n_b_plus": 5,
+        "n_b_minus": 5,
+        "involution": true
+      },
+      "7": {
+        "N_plus": 1,
+        "N_minus": 1,
+        "n_b_plus": 7,
+        "n_b_minus": 7,
+        "involution": true
+      },
+      "11": {
+        "N_plus": 1,
+        "N_minus": 1,
+        "n_b_plus": 11,
+        "n_b_minus": 11,
+        "involution": true
+      },
+      "13": {
+        "N_plus": 1,
+        "N_minus": 1,
+        "n_b_plus": 13,
+        "n_b_minus": 13,
+        "involution": true
+      }
+    },
+    "theorem": "a=\u00b1v^{1-p} has N(a)=1; #{b: b+a b\u0304=0}=p; \u03c3 is an involution. Fail N(a)\u22601."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n_maps": 10,
+        "n_free": 0,
+        "fix_set": [
+          2,
+          30
+        ],
+        "inv_set": [
+          2,
+          6
+        ],
+        "ok": true
+      },
+      "7": {
+        "n_maps": 14,
+        "n_free": 14,
+        "fix_set": [
+          0
+        ],
+        "inv_set": [
+          0
+        ],
+        "ok": true
+      }
+    },
+    "theorem": "All 14 twisted \u03c3 are free at p=7; none of 10 at p=5 (fix\u2208{2,30}, inv\u2208{2,6}). Fail a=+ free at p=5."
+  },
+  "C": {
+    "proved": false,
+    "D_named_as_orbits": false,
+    "free_pairing_p5": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "\u27e8T_ns,\u03c3\u27e9 is free only for p\u22613 in the named twisted family. p=5 has no free Aut_\u221e-normalizer of T_ns. D and Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}
