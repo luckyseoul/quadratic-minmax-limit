@@ -1,0 +1,51 @@
+{
+  "prop": "15.581",
+  "title": "p=5 Q++/q\u00b2=48/13<26/7 from named \u03bc_1d and \u03bc_k3",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "n_1d": 30,
+    "n_k3": 100,
+    "N": 130,
+    "Qpp": "48/13",
+    "drop_k3": "16/3",
+    "thr": "26/7",
+    "theorem": "p=5 Q++/q\u00b2=48/13 from named \u03bc_1d, \u03bc_k3. Fail drop k=3 (16/3); fail value=26/7."
+  },
+  "B": {
+    "proved": true,
+    "Qpp": "48/13",
+    "thr": "26/7",
+    "slack": "2/91",
+    "theorem": "48/13<26/7 (slack 2/91). J=2 floor from named \u03bc."
+  },
+  "C": {
+    "proved": false,
+    "Qpp_le_4_general": false,
+    "p7_1dk3_only_mix": "4.68>4",
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "p=5 floor is named. p\u22657 needs n_full/\u03bc_full or a tighter ub than the 1D+k=3-only mix. Do not interpolate (p\u22125)/15. Do not import the 15.568 mix. phi_F not imported."
+  },
+  "proved": {
+    "Qpp_p5_named_48_13": true,
+    "J2_floor_from_named_mu": true,
+    "Q_tau_named_in_p": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ],
+  "identity": "Q++/q^2 = 48/13 < 26/7 at p=5"
+}
