@@ -1,0 +1,82 @@
+{
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n1d": 30,
+        "nNL": 100,
+        "nT": 4,
+        "T_sizes": [
+          25
+        ],
+        "n_fixed": 0
+      },
+      "7": {
+        "n1d": 140,
+        "nNL": 5586,
+        "nT": 114,
+        "T_sizes": [
+          49
+        ],
+        "n_fixed": 0
+      }
+    }
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "nT": 4,
+        "c_eq_times_pm1": 4,
+        "c_min_times_pm1": 4,
+        "c_eq": 1,
+        "c_min": 1
+      },
+      "7": {
+        "nT": 114,
+        "c_eq_times_pm1": 114,
+        "c_min_times_pm1": 108,
+        "c_eq": 19,
+        "c_min": 18
+      }
+    }
+  },
+  "C": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "nS": 1,
+        "sizes": [
+          4
+        ],
+        "size_hist": {
+          "4": 1
+        },
+        "n_neg1_stab": 0,
+        "c_eq": 1
+      },
+      "7": {
+        "nS": 26,
+        "sizes": [
+          3,
+          6
+        ],
+        "size_hist": {
+          "3": 14,
+          "6": 12
+        },
+        "n_neg1_stab": 14,
+        "c_eq": 19
+      }
+    }
+  },
+  "D": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "T-orbits named in p\u00b2; n_T=c_eq(p\u22121) only as a p=5,7 cache identity. F_p^\u00d7 orbits are not all size p\u22121. D unnamed."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false
+}
