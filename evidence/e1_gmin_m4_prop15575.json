@@ -1,0 +1,100 @@
+{
+  "prop": "15.575",
+  "title": "\u03bc_1d=2p\u2074(p\u22121\u22124/(p\u22122)), Type+ Johnson 4-point",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "E_sub": 16.0,
+        "got": 3333.3333333333335,
+        "named": 3333.3333333333335,
+        "const_eps": 7500.0,
+        "sixteen_over_3": 3333.3333333333335,
+        "drop4": 5000.0,
+        "live": 3333.3333333333335,
+        "err": 0.0,
+        "match": true,
+        "const_fails": true,
+        "sixteen_fails_or_p5": true,
+        "drop4_fails": true,
+        "live_ok": true
+      },
+      "7": {
+        "E_sub": 41.59999999999998,
+        "got": 24970.399999999987,
+        "named": 24970.4,
+        "const_eps": 38416.0,
+        "sixteen_over_3": 12805.333333333334,
+        "drop4": 28812.0,
+        "live": 24970.400000000005,
+        "err": 1.4551915228366852e-11,
+        "match": true,
+        "const_fails": true,
+        "sixteen_fails_or_p5": true,
+        "drop4_fails": true,
+        "live_ok": true
+      },
+      "11": {
+        "E_sub": 114.66666666666667,
+        "got": 279805.7777777778,
+        "named": 279805.77777777775,
+        "const_eps": 351384.0,
+        "sixteen_over_3": 78085.33333333333,
+        "drop4": 292820.0,
+        "live": null,
+        "err": 5.820766091346741e-11,
+        "match": true,
+        "const_fails": true,
+        "sixteen_fails_or_p5": true,
+        "drop4_fails": true,
+        "live_ok": true
+      },
+      "13": {
+        "E_sub": 162.90909090909076,
+        "got": 664692.3636363631,
+        "named": 664692.3636363636,
+        "const_eps": 799708.0,
+        "sixteen_over_3": 152325.33333333334,
+        "drop4": 685464.0,
+        "live": null,
+        "err": 5.820766091346741e-10,
+        "match": true,
+        "const_fails": true,
+        "sixteen_fails_or_p5": true,
+        "drop4_fails": true,
+        "live_ok": true
+      }
+    },
+    "theorem": "\u03bc_1d=2p\u2074(p\u22121\u22124/(p\u22122)). Fail constant |\u03b5\u0302|; fail 16p\u2074/3 at p=7; fail drop 4/(p\u22122)."
+  },
+  "B": {
+    "proved": false,
+    "mu_full_named_in_p": false,
+    "Q_sub_closed_in_p": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "\u03bc_1d is Johnson. \u03bc_full equals the 15.568 k 4-point at p=7, not a p-law. P(r) splits at p\u226511. Do not interpolate (p\u22125)/15. phi_F not imported. Aut_e DEAD."
+  },
+  "proved": {
+    "mu_1d_johnson_named": true,
+    "mu_full_named_in_p": false,
+    "Q_sub_closed_in_p": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ],
+  "identity": "mu_1d = 2 p^4 (p-1 - 4/(p-2))"
+}
