@@ -1,0 +1,54 @@
+{
+  "A": {
+    "proved": true,
+    "by_p": {
+      "7": {
+        "sub": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "n_y": 5726,
+        "sub_max_spread": 6.060772689865411e-15,
+        "pp_max_spread": 16.00000000000002,
+        "pp_n_y_spread": 4550,
+        "pp_n_r": 6
+      }
+    }
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "++": {
+          "ens_spread": 0.0,
+          "n_r": 2
+        },
+        "N*": {
+          "ens_spread": 0.0,
+          "n_r": 4
+        }
+      },
+      "7": {
+        "++": {
+          "ens_spread": 8.881784197001252e-16,
+          "n_r": 6
+        },
+        "N*": {
+          "ens_spread": 0.0,
+          "n_r": 12
+        }
+      }
+    }
+  },
+  "D": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "Numerical flatness on sub at p=7, not an exact \u211a identity. No general reason; p\u226513 untested. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false
+}
