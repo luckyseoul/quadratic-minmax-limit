@@ -1,6 +1,6 @@
 # Status (2026-08-18)
 
-Leftover campaign: 15.273–15.504 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.504: autocorrelation of \(u\) on \(\mathbb{F}_p^\times\)-orbits of \(\Omega\) is at most two-level at p=5,7 by evenness and \(|(p-1)/2|\in\{2,3\}\) (one level if \(u\) is orbit-constant); a Type+ 1D at p=13 has three off values, so it is not a \(p\)-law and does not name \(Q_\tau\). \(\phi_F\) not imported. Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
+Leftover campaign: 15.273–15.505 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.505: affine-R occupancy Fourier names \(Q_R(2)/q^2=16/5\) at p=5 (exact \(\sin(\pi/5)\sin(2\pi/5)=\sqrt5/4\)); live \(Q_{\mathrm{NL}}=16/5\); mixture \((30\cdot16/3+100\cdot16/5)/130=48/13\). Fail: drop 1D; claim \(16/5\) is ensemble \(Q_{++}\) at p=5 or p=7. Ensemble \(Q_\tau\) unnamed for \(p\ge7\). \(\phi_F\) not imported. Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|

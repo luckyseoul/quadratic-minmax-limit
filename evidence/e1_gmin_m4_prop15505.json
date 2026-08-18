@@ -1,0 +1,32 @@
+{
+  "A": {
+    "proved": true,
+    "trig": 3.2000000000000006,
+    "exact": "16/5",
+    "live_Qpp_p5": "48/13"
+  },
+  "B": {
+    "proved": true,
+    "Q_NL_p5": "16/5",
+    "Q_R_p5": "16/5",
+    "trig_p7": 8.690143396125345,
+    "live_p7": "1544/409"
+  },
+  "C": {
+    "proved": true,
+    "mixture": "48/13",
+    "drop_1d": "16/5",
+    "n_1d": 30,
+    "n_R": 100,
+    "Q_1d_sub": "16/3"
+  },
+  "D": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "Q_R(r) is named for all-R Max+. At p=5 that is all NL and the mixture evaluates 48/13. p=7 NL is not all R. Ensemble Q_\u03c4 unnamed for p\u22657. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false
+}
