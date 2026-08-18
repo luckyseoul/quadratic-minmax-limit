@@ -1,6 +1,6 @@
 # Status (2026-08-18)
 
-Leftover campaign: 15.273–15.501 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.501: for every \(p\equiv1\ge5\), every Hoffman-window \(c\) has \(D(c)\ge8(A+2p-8)/5\) (named inequality \(5A\ge Q^{\mathrm{ub}}(A+2p-8)\)). Pinning \(c=c_{\mathrm{eq}}\) is not needed for the p≡1 pairing bound. Still need \(Q=8A/D\) and 15.497 pairing as general identities. p≡3 open. \(D\) unnamed. Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
+Leftover campaign: 15.273–15.502 shipped. **Three leftovers remain** (Lemma D already True). Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.502: 15.497 pairing is a formal corollary of the two Q-forms; those forms plus S0 force a non-integer D at p=13; Paley×norm classes are not single \(\langle\mathrm{Frob},\mathrm{inv}\rangle\)-orbits for \(p\equiv1\ge13\). Aut does not give a single \(Q_{++}\). Do not import \(\phi_F\). Live `e1` is still the old AND. Residual (i) hinge is 15.272. \(L=\tfrac12\) is **not settled**. Afternoon: `evidence/SESSION_HANDOFF_2026-08-17_qtau.md`. Morning: `evidence/SESSION_HANDOFF_2026-08-17_leftover.md`.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|

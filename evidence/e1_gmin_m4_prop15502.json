@@ -1,0 +1,72 @@
+{
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n_match": 10,
+        "n_even": 10,
+        "n_drop_diff": 10
+      },
+      "13": {
+        "n_match": 82,
+        "n_even": 82,
+        "n_drop_diff": 82
+      },
+      "17": {
+        "n_match": 142,
+        "n_even": 142,
+        "n_drop_diff": 142
+      },
+      "29": {
+        "n_match": 418,
+        "n_even": 418,
+        "n_drop_diff": 418
+      }
+    }
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "D_S0": "13",
+        "A": 6
+      },
+      "13": {
+        "D_S0": "485621/10",
+        "den": 10,
+        "A": 23702
+      },
+      "17": {
+        "D_S0": "4432748/5"
+      }
+    }
+  },
+  "C": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "n_bad": 0,
+        "n_classes": 5
+      },
+      "13": {
+        "n_bad": 7,
+        "n_classes": 8,
+        "sub_n": 10,
+        "sub_orb": 2
+      },
+      "17": {
+        "n_bad": 7
+      }
+    }
+  },
+  "D": {
+    "proved": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "Q_forms_on_S0_all_p1": false,
+    "note": "Pairing is a corollary of the Q-forms. The forms miss S0 at p=13. Aut does not force one Q++ for p\u22611\u226513. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false
+}
