@@ -1,0 +1,151 @@
+{
+  "prop": "15.570",
+  "title": "A3=96p\u00b2(2\u03c7(2)\u22121)/(p\u22121) (p\u22613 mod 4); \u221232p\u00b3(1+2\u03c7(2))/((p\u22121)(p\u22123)) (p\u22611)",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": true,
+    "by_p": {
+      "5": {
+        "got": 500.0,
+        "named": 500.0,
+        "sixteen_p2": 400.0,
+        "six_amp": -0.0,
+        "drop_chi2": -500.0,
+        "err": 0.0,
+        "match": true,
+        "sixteen_fails": true,
+        "six_amp_fails_or_p3": true,
+        "drop_chi2_fails_or_ok": true
+      },
+      "7": {
+        "got": 784.0000000000009,
+        "named": 784.0,
+        "sixteen_p2": 784.0,
+        "six_amp": 784.0,
+        "drop_chi2": 784.0,
+        "err": 9.094947017729282e-13,
+        "match": true,
+        "sixteen_fails": true,
+        "six_amp_fails_or_p3": true,
+        "drop_chi2_fails_or_ok": true
+      },
+      "11": {
+        "got": -3484.8000000000015,
+        "named": -3484.8,
+        "sixteen_p2": 1936.0,
+        "six_amp": -3484.7999999999997,
+        "drop_chi2": 1161.6,
+        "err": 1.3642420526593924e-12,
+        "match": true,
+        "sixteen_fails": true,
+        "six_amp_fails_or_p3": true,
+        "drop_chi2_fails_or_ok": true
+      },
+      "13": {
+        "got": 585.8666666666667,
+        "named": 585.8666666666667,
+        "sixteen_p2": 2704.0,
+        "six_amp": -0.0,
+        "drop_chi2": -585.8666666666667,
+        "err": 0.0,
+        "match": true,
+        "sixteen_fails": true,
+        "six_amp_fails_or_p3": true,
+        "drop_chi2_fails_or_ok": true
+      },
+      "17": {
+        "got": -2105.571428571427,
+        "named": -2105.5714285714284,
+        "sixteen_p2": 4624.0,
+        "six_amp": 0.0,
+        "drop_chi2": -701.8571428571429,
+        "err": 1.3642420526593924e-12,
+        "match": true,
+        "sixteen_fails": true,
+        "six_amp_fails_or_p3": true,
+        "drop_chi2_fails_or_ok": true
+      },
+      "19": {
+        "got": -5775.99999999999,
+        "named": -5776.0,
+        "sixteen_p2": 5776.0,
+        "six_amp": -5776.0,
+        "drop_chi2": 1925.3333333333333,
+        "err": 1.000444171950221e-11,
+        "match": true,
+        "sixteen_fails": true,
+        "six_amp_fails_or_p3": true,
+        "drop_chi2_fails_or_ok": true
+      }
+    },
+    "theorem": "A3=96p\u00b2(2\u03c7(2)\u22121)/(p\u22121) on p\u22613 (mod 4); A3=\u221232p\u00b3(1+2\u03c7(2))/((p\u22121)(p\u22123)) on p\u22611 (mod 4). Fail 16p\u00b2; fail 6\u00b7amp at p=5; fail drop \u03c7(2) at p=11."
+  },
+  "B": {
+    "proved": true,
+    "by_p": {
+      "7": {
+        "A6": 130.66666666666683,
+        "guess": 130.66666666666666,
+        "amp": 130.66666666666666,
+        "err": 1.7053025658242404e-13,
+        "guess_ok_small_p": true,
+        "guess_dies_p19": true
+      },
+      "11": {
+        "A6": -1161.6000000000004,
+        "guess": -1161.6,
+        "amp": -580.8,
+        "err": 4.547473508864641e-13,
+        "guess_ok_small_p": true,
+        "guess_dies_p19": true
+      },
+      "19": {
+        "A6": -1925.3333333333305,
+        "guess": -3850.6666666666665,
+        "amp": -962.6666666666666,
+        "err": 1925.333333333336,
+        "guess_ok_small_p": true,
+        "guess_dies_p19": true
+      },
+      "23": {
+        "A6": 692.5090909090874,
+        "guess": 1923.6363636363637,
+        "amp": 384.72727272727275,
+        "err": 1231.1272727272762,
+        "guess_ok_small_p": true,
+        "guess_dies_p19": true
+      }
+    },
+    "theorem": "A6=amp(p\u22123)/4 at p=7,11; dies at p=19,23. A6 is not that p-law."
+  },
+  "C": {
+    "proved": false,
+    "A6_named_in_p": false,
+    "A_full_dbl_named_in_p": false,
+    "NUM_SUM_16pA_general": false,
+    "phi_F_imported": false,
+    "note": "A3 family mean is a Jacobi integer. A6 is not amp(p\u22123)/4. A_full still not a p-law. Do not interpolate (p\u22125)/15. phi_F not imported. Aut_e DEAD."
+  },
+  "proved": {
+    "a3_family_jacobi": true,
+    "a6_not_amp_pm3_over_4": true,
+    "A6_named_in_p": false,
+    "A_full_dbl_named_in_p": false,
+    "phi_F_ge_6": false
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "L_status": "OPEN",
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing",
+    "residual_ii",
+    "type_I"
+  ],
+  "identity": "A3_named = 96 p^2 (2 chi(2)-1)/(p-1) if p=3 mod 4; -32 p^3 (1+2 chi(2))/((p-1)(p-3)) if p=1 mod 4"
+}
