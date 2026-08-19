@@ -1,0 +1,35 @@
+{
+  "host_gpu": "Tesla V100-SXM2-16GB",
+  "results": [
+    {
+      "p": 5,
+      "n": 26,
+      "nullity": 13,
+      "search_space": 8192,
+      "n_maxplus": 260,
+      "enum_sec": 0.13,
+      "dimZ": 65,
+      "dimZ_closed": 65,
+      "lambda_min": 6.153846153846141,
+      "lambda_max": 13.538461538461544,
+      "floor_ge_6": true,
+      "cand_8n_minus6_over_n": 6.153846153846154,
+      "spec_sec": 0.04
+    },
+    {
+      "p": 7,
+      "n": 50,
+      "nullity": 25,
+      "search_space": 33554432,
+      "n_maxplus": 11452,
+      "enum_sec": 0.38,
+      "dimZ": 275,
+      "dimZ_closed": 275,
+      "lambda_min": 7.511002444987765,
+      "lambda_max": 10.562347188264066,
+      "floor_ge_6": true,
+      "cand_8n_minus6_over_n": 7.04,
+      "spec_sec": 0.04
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "prop": "15.586",
+  "A_uniform_Zperp": {
+    "proved": true,
+    "max_dev": 4.263256414560601e-14,
+    "primes": [
+      5,
+      7
+    ]
+  },
+  "B_gram_reduction": {
+    "proved": true,
+    "max_dev": 1.2434497875801753e-14,
+    "per_prime": {
+      "5": {
+        "n_nonzero": 65,
+        "dim_Z": 65,
+        "max_dev": 1.0658141036401503e-14
+      },
+      "7": {
+        "n_nonzero": 275,
+        "dim_Z": 275,
+        "max_dev": 1.2434497875801753e-14
+      }
+    }
+  },
+  "C_closed_forms": {
+    "proved": true,
+    "per_prime": {
+      "5": {
+        "dim_Z": true,
+        "tr_Phi": true,
+        "tr_K": true,
+        "pairspan": true,
+        "rank_pairspan": 66,
+        "tr_Phi_val": 623.9999999999999
+      },
+      "7": {
+        "dim_Z": true,
+        "tr_Phi": true,
+        "tr_K": true,
+        "pairspan": true,
+        "rank_pairspan": 276,
+        "tr_Phi_val": 2400.0
+      }
+    }
+  },
+  "D_wick_baseline": {
+    "proved": true,
+    "max_dev": 0.0,
+    "wick_value": 8.0,
+    "floor_equivalent": "lambda_max(8I - Phi) <= 2"
+  },
+  "E_exact_spectra": {
+    "proved": true,
+    "per_prime": {
+      "5": {
+        "spectrum_matches": true,
+        "lam_max_K": 1.846153846153861,
+        "equals_48_over_n": true,
+        "floor_ge_6": true
+      },
+      "7": {
+        "spectrum_matches": true,
+        "lam_max_K": 0.4889975550122392,
+        "equals_48_over_n": false,
+        "floor_ge_6": true
+      }
+    }
+  },
+  "reduction_proved": true,
+  "phi_F_ge_6_still_open": true
+}
