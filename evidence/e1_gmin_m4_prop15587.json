@@ -1,0 +1,152 @@
+{
+  "prop": "15.587",
+  "A_mu_is_kappa1_moment": {
+    "proved": true,
+    "per_prime": {
+      "5": {
+        "mu": "3/65",
+        "expected": "3/65",
+        "match": true,
+        "n_kappa1": 11700,
+        "n_quads": 14950,
+        "kappa_values": [
+          -3,
+          -1,
+          1,
+          3
+        ]
+      },
+      "7": {
+        "mu": "109/2863",
+        "expected": "109/2863",
+        "match": true,
+        "n_kappa1": 176400,
+        "n_quads": 230300,
+        "kappa_values": [
+          -3,
+          -1,
+          1,
+          3
+        ]
+      }
+    }
+  },
+  "B_matching_consistent": {
+    "proved": true,
+    "note": "all three matchings agree to 1e-12"
+  },
+  "C_LT_closed_forms": {
+    "proved": true,
+    "n_primes": 12,
+    "per_prime": {
+      "5": {
+        "L": "3/50",
+        "T": "1/15",
+        "T_gt_L": true,
+        "match": true
+      },
+      "7": {
+        "L": "5/98",
+        "T": "5/91",
+        "T_gt_L": true,
+        "match": true
+      },
+      "11": {
+        "L": "9/242",
+        "T": "3/77",
+        "T_gt_L": true,
+        "match": true
+      },
+      "13": {
+        "L": "11/338",
+        "T": "11/325",
+        "T_gt_L": true,
+        "match": true
+      },
+      "17": {
+        "L": "15/578",
+        "T": "5/187",
+        "T_gt_L": true,
+        "match": true
+      },
+      "19": {
+        "L": "17/722",
+        "T": "17/703",
+        "T_gt_L": true,
+        "match": true
+      },
+      "23": {
+        "L": "21/1058",
+        "T": "7/345",
+        "T_gt_L": true,
+        "match": true
+      },
+      "29": {
+        "L": "27/1682",
+        "T": "9/551",
+        "T_gt_L": true,
+        "match": true
+      },
+      "31": {
+        "L": "29/1922",
+        "T": "29/1891",
+        "T_gt_L": true,
+        "match": true
+      },
+      "37": {
+        "L": "35/2738",
+        "T": "35/2701",
+        "T_gt_L": true,
+        "match": true
+      },
+      "41": {
+        "L": "39/3362",
+        "T": "13/1107",
+        "T_gt_L": true,
+        "match": true
+      },
+      "43": {
+        "L": "41/3698",
+        "T": "41/3655",
+        "T_gt_L": true,
+        "match": true
+      }
+    }
+  },
+  "D_margin": {
+    "proved": true,
+    "per_prime": {
+      "5": {
+        "mu": "3/65",
+        "L": "3/50",
+        "ratio": 0.7692307692307693,
+        "mu_le_L": true
+      },
+      "7": {
+        "mu": "109/2863",
+        "L": "5/98",
+        "ratio": 0.7462102689486553,
+        "mu_le_L": true
+      }
+    },
+    "note": "stable ~25% headroom: a crude bound closes Type I"
+  },
+  "E_global_m4_lt_one": {
+    "proved": true,
+    "per_prime": {
+      "5": {
+        "max_abs_m4": "21/65",
+        "expected": "21/65",
+        "lt_one": true,
+        "match": true
+      },
+      "7": {
+        "max_abs_m4": "327/2863",
+        "expected": "327/2863",
+        "lt_one": true,
+        "match": true
+      }
+    }
+  },
+  "type_I_still_open": true
+}
