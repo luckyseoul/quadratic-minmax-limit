@@ -1,0 +1,172 @@
+{
+  "prop": "15.588",
+  "part_I": {
+    "A_flat_marginals": {
+      "name": "flat marginals in exactly one direction class",
+      "proved": true,
+      "per_prime": {
+        "5": {
+          "square": false,
+          "nonsquare": true
+        },
+        "7": {
+          "square": false,
+          "nonsquare": true
+        }
+      }
+    },
+    "B_profile_bijection": {
+      "name": "profile bijection",
+      "proved": true,
+      "per_prime": {
+        "5": {
+          "N": 260,
+          "m": 3,
+          "reconstruction": true
+        },
+        "7": {
+          "N": 11452,
+          "m": 4,
+          "reconstruction": true
+        }
+      }
+    },
+    "C_degree_bound": {
+      "name": "degree <= k-2",
+      "proved": true,
+      "per_prime": {
+        "5": {
+          "k_values": [
+            1,
+            3
+          ],
+          "max_degree_per_k": {
+            "1": 0,
+            "3": 1
+          },
+          "violations": {}
+        },
+        "7": {
+          "k_values": [
+            1,
+            3,
+            4
+          ],
+          "max_degree_per_k": {
+            "1": 0,
+            "3": 1,
+            "4": 2
+          },
+          "violations": {}
+        }
+      }
+    },
+    "D_k2_empty": {
+      "name": "k=0 and k=2 empty",
+      "proved": true,
+      "per_prime": {
+        "5": {
+          "k_values": [
+            1,
+            3
+          ]
+        },
+        "7": {
+          "k_values": [
+            1,
+            3,
+            4
+          ]
+        }
+      }
+    },
+    "E_strata_counts": {
+      "name": "strata counts",
+      "proved": true,
+      "per_prime": {
+        "5": {
+          "counts_eps_plus": {
+            "1": 30,
+            "3": 100
+          },
+          "n_1d_closed": 30,
+          "n_k3_closed": 100,
+          "n_full_is_k_ge_4": 0
+        },
+        "7": {
+          "counts_eps_plus": {
+            "1": 140,
+            "3": 1176,
+            "4": 4410
+          },
+          "n_1d_closed": 140,
+          "n_k3_closed": 1176,
+          "n_full_is_k_ge_4": 4410
+        }
+      }
+    },
+    "F_translation_gauge": {
+      "name": "translation gauge / pure-parabola canonical form",
+      "proved": true,
+      "per_prime": {
+        "7": {
+          "k4_count": 4410,
+          "pure_reps": 90,
+          "k4_over_q": "90",
+          "one_rep_per_translation_class": true,
+          "isotropy_law_holds": true
+        }
+      }
+    }
+  },
+  "part_II": {
+    "G_class_function": {
+      "name": "tr(Phi pi(g)) = T(g)",
+      "proved": true,
+      "per_prime": {
+        "5": {
+          "max_abs_error": 2.2737367544323206e-13,
+          "sample": 25
+        },
+        "7": {
+          "max_abs_error": 9.094947017729282e-13,
+          "sample": 25
+        }
+      }
+    },
+    "H_eigenvalues_from_characters": {
+      "name": "lambda_k = <T,chi_k>/<chi_k,chi_k>",
+      "proved": true,
+      "p": 5,
+      "group_order": 15600,
+      "n_classes": 30,
+      "lambdas_direct": [
+        6.153846153846138,
+        11.076923076923055,
+        13.538461538461519
+      ],
+      "lambdas_from_characters": [
+        6.153846153846142,
+        11.076923076923073,
+        13.538461538461544
+      ],
+      "max_recovery_error": 2.4868995751603507e-14,
+      "max_identity_error": 1.3642420526593924e-12
+    }
+  },
+  "p11_k4_enumeration": {
+    "total_eps_plus": 58080,
+    "per_subset_count_over_q": {
+      "40": 9,
+      "20": 6
+    },
+    "n_1d_closed": 2772,
+    "n_k3_closed": 24200
+  },
+  "flags": {
+    "profile_classification_proved_general": true,
+    "floor_class_function_reduction_proved_general": true,
+    "phi_F_ge_6_proved_general_via_15588": false,
+    "leftover_flags_unchanged": true
+  }
+}
