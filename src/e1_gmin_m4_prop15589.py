@@ -401,6 +401,30 @@ Theorem R (QVAR is closed on k=5 for every prime).
   prime.  The exceptional variance now remains only on k>=6, first possible
   at p=11.
 
+Theorem S (the k=6 stratum is empty for every prime p>=47).
+  A k=6 profile has reduced degree at most four.  If its one-dimensional
+  quartic leading-coefficient scalar vanishes, every active profile has degree
+  at most three.  Exact cubic minima at p=47,53,59,61 and the degree-three
+  Fourier bound for p>=67 make each use more than one sixth of the total;
+  lower degrees use still more by Theorem L.  Hence the scalar is nonzero and
+  all six profiles are genuinely quartic.
+
+  Translating the input depresses a quartic to
+
+      f(s)=a s^4+c s^2+d s+e,  a nonzero.
+
+  Exact lift enumeration at every prime from 47 through 139 gives normalized
+  minima
+
+      47:50, 53:66, 59:81, 61:88, 67:105, 71:122, 73:131,
+      79:158, 83:178, 89:190, 97:241, 101:264, 103:297,
+      107:310, 109:312, 113:359, 127:464, 131:485, 137:539, 139:540.
+
+  In every case 6b_min>T=(p^2-1)/8.  Theorem M handles p>=149 because
+  p>4*6^2.  Therefore k=6 is empty for every p>=47.  Since the complete p=11
+  full-support census already clears QVAR, k=6 remains only at
+  p=13,17,19,23,29,31,37,41,43; all other exceptional strata start at k>=7.
+
 Writes evidence/e1_gmin_m4_prop15589.json.
 """
 from __future__ import annotations
@@ -1415,6 +1439,60 @@ def theorem_R_k5_QVAR_all_primes() -> dict:
     }
 
 
+def theorem_S_k6_empty_for_p_ge_47() -> dict:
+    """Exact depressed-quartic minima plus Theorem M close k=6 at p>=47."""
+    minima = {
+        47: 50,
+        53: 66,
+        59: 81,
+        61: 88,
+        67: 105,
+        71: 122,
+        73: 131,
+        79: 158,
+        83: 178,
+        89: 190,
+        97: 241,
+        101: 264,
+        103: 297,
+        107: 310,
+        109: 312,
+        113: 359,
+        127: 464,
+        131: 485,
+        137: 539,
+        139: 540,
+    }
+    finite = {
+        str(p): {
+            "minimum_quartic_b": minimum,
+            "normalized_total_T": (p * p - 1) // 8,
+            "six_minima_exceed_total": 6 * minimum > (p * p - 1) // 8,
+        }
+        for p, minimum in minima.items()
+    }
+    return {
+        "proved": (
+            all(row["six_minima_exceed_total"] for row in finite.values())
+            and weil_activity_barrier_excludes(149, 6)
+        ),
+        "zero_quartic_scalar_excluded": {
+            "finite_cubic_checks": [47, 53, 59, 61],
+            "analytic_degree_at_most_three_range": "p>=67",
+        },
+        "finite_exact_range": finite,
+        "analytic_range": {
+            "first_prime": 149,
+            "reason": "p>4k^2 with k=6",
+        },
+        "conclusion": "the k=6 Max+ profile stratum is empty for p>=47",
+        "remaining_k6_primes": [13, 17, 19, 23, 29, 31, 37, 41, 43],
+        "remaining_exceptional_strata": (
+            "k=6 at nine primes p=13..43; k>=7 from p=13 onward"
+        ),
+    }
+
+
 def leftover_flags_unchanged() -> bool:
     from e1_gmin_m4_prop15278 import phi_F_ge_6_proved_general
 
@@ -1440,6 +1518,7 @@ def main() -> dict:
     P = theorem_P_k5_empty_for_p_ge_41()
     Q = theorem_Q_k5_reduced_to_four_primes()
     R = theorem_R_k5_QVAR_all_primes()
+    S = theorem_S_k6_empty_for_p_ge_47()
     out = {
         "prop": "15.589",
         "title": "Exact PSL decomposition of Z; one exceptional floor scalar",
@@ -1473,6 +1552,7 @@ def main() -> dict:
             "k5_empty_p_ge_41": P["proved"],
             "k5_reduced_to_p13_p17_p19_p23": Q["proved"],
             "k5_QVAR_all_primes": R["proved"],
+            "k6_empty_p_ge_47": S["proved"],
             "lambda_exc_ge_6": False,
             "lambda_min_ge_6_general": False,
         },
@@ -1495,11 +1575,12 @@ def main() -> dict:
             "P": P,
             "Q": Q,
             "R": R,
+            "S": S,
         },
         "remaining_floor_targets": [
             "lambda_exc=Phi|W_e >= 6",
             "equivalently E|Z_psi|^2 >= 3q(q-1)/16 for psi^2=chi",
-            "the exceptional inequality remains only on k>=6 from p=11 onward",
+            "k=6 remains at p=13,17,19,23,29,31,37,41,43; k>=7 remains from p=13",
             "equivalently bound the degree-4 odd-coset harmonic excess below by the spherical QVAR gap",
             "delta2 <= n(n+10)^2/(6(n-6)^2) for principal minimum",
         ],
@@ -1526,7 +1607,8 @@ def main() -> dict:
     print(f"  k=5 empty for p>=41: {P['proved']}")
     print(f"  k=5 reduced to p=13,17,19,23: {Q['proved']}")
     print(f"  all-prime k=5 QVAR closed: {R['proved']}")
-    print("  floor still OPEN: k>=6 QVAR and delta variance")
+    print(f"  k=6 empty for p>=47: {S['proved']}")
+    print("  floor still OPEN: finite k=6 / general k>=7 QVAR and delta variance")
     return out
 
 

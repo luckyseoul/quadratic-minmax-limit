@@ -367,6 +367,18 @@ At `p=19,23`, the signed profile-energy identity gives
 possible at `p=11`.  Certificates:
 `evidence/k5_p{13,17,19,23}_coefficient_sieve.{py,json}` (Prop 15.589 R).
 
+The next activity level has a complete high-prime energy cutoff.  A genuine
+quartic profile can be translated to `a s^4+c s^2+d s+e`.  Exact lift minima
+at every prime from 47 through 139 satisfy `6b_min>T`; the smallest margin is
+24 at `p=47`.  The general `p>4k^2` barrier handles `p>=149`.  If the quartic
+top scalar vanishes, exact cubic minima at `p=47,53,59,61` and the
+degree-at-most-three Fourier bound from `p=67` also exceed one sixth per
+active profile.  Therefore `k=6` is empty for every `p>=47`.  Since the
+complete `p=11,k=6` census already clears QVAR, the residual `k=6` primes are
+`13,17,19,23,29,31,37,41,43`; all other live exceptional strata start at
+`k=7`.  Certificate: `evidence/k6_quartic_energy_probe.py` and
+`k6_quartic_energy_probe_{low,high}.json` (Prop 15.589 S).
+
 ## 6. Odd-coset shell and spherical benchmark
 
 There is a useful lattice reformulation, with one important trap.  Set
@@ -524,12 +536,14 @@ kills the ordinary-minimum-shell shortcut.
 
 Leftover 1 is now reduced to two explicit inequalities:
 
-1. prove the quartic variance `(QVAR)` on `k>=6` from `p=11`,
+1. prove the quartic variance `(QVAR)` on `k=6` at
+   `p=13,17,19,23,29,31,37,41,43` and on `k>=7` from `p=13`,
    using an ensemble-level coupling that mixes active direction configurations
    and adjacent actual-degree families in their exact proportions, rather than
    the pointwise, fixed-subset, or coefficient-class constraints killed above;
    the general energy barrier reduces this asymptotically to
-   `k>=sqrt(p)/2`; `k=4` and `k=5` are closed for every prime;
+   `k>=sqrt(p)/2`; `k=4,5` are closed for every prime and `k=6` is empty
+   for `p>=47`;
 2. prove the principal variance room
    `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`.
 

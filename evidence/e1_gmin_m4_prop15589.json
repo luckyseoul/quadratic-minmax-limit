@@ -23,6 +23,7 @@
     "k5_empty_p_ge_41": true,
     "k5_reduced_to_p13_p17_p19_p23": true,
     "k5_QVAR_all_primes": true,
+    "k6_empty_p_ge_47": true,
     "lambda_exc_ge_6": false,
     "lambda_min_ge_6_general": false
   },
@@ -1319,12 +1320,143 @@
       },
       "conclusion": "QVAR holds on k=5 for every prime p>=5",
       "remaining_exceptional_strata": "k>=6 for p>=11"
+    },
+    "S": {
+      "proved": true,
+      "zero_quartic_scalar_excluded": {
+        "finite_cubic_checks": [
+          47,
+          53,
+          59,
+          61
+        ],
+        "analytic_degree_at_most_three_range": "p>=67"
+      },
+      "finite_exact_range": {
+        "47": {
+          "minimum_quartic_b": 50,
+          "normalized_total_T": 276,
+          "six_minima_exceed_total": true
+        },
+        "53": {
+          "minimum_quartic_b": 66,
+          "normalized_total_T": 351,
+          "six_minima_exceed_total": true
+        },
+        "59": {
+          "minimum_quartic_b": 81,
+          "normalized_total_T": 435,
+          "six_minima_exceed_total": true
+        },
+        "61": {
+          "minimum_quartic_b": 88,
+          "normalized_total_T": 465,
+          "six_minima_exceed_total": true
+        },
+        "67": {
+          "minimum_quartic_b": 105,
+          "normalized_total_T": 561,
+          "six_minima_exceed_total": true
+        },
+        "71": {
+          "minimum_quartic_b": 122,
+          "normalized_total_T": 630,
+          "six_minima_exceed_total": true
+        },
+        "73": {
+          "minimum_quartic_b": 131,
+          "normalized_total_T": 666,
+          "six_minima_exceed_total": true
+        },
+        "79": {
+          "minimum_quartic_b": 158,
+          "normalized_total_T": 780,
+          "six_minima_exceed_total": true
+        },
+        "83": {
+          "minimum_quartic_b": 178,
+          "normalized_total_T": 861,
+          "six_minima_exceed_total": true
+        },
+        "89": {
+          "minimum_quartic_b": 190,
+          "normalized_total_T": 990,
+          "six_minima_exceed_total": true
+        },
+        "97": {
+          "minimum_quartic_b": 241,
+          "normalized_total_T": 1176,
+          "six_minima_exceed_total": true
+        },
+        "101": {
+          "minimum_quartic_b": 264,
+          "normalized_total_T": 1275,
+          "six_minima_exceed_total": true
+        },
+        "103": {
+          "minimum_quartic_b": 297,
+          "normalized_total_T": 1326,
+          "six_minima_exceed_total": true
+        },
+        "107": {
+          "minimum_quartic_b": 310,
+          "normalized_total_T": 1431,
+          "six_minima_exceed_total": true
+        },
+        "109": {
+          "minimum_quartic_b": 312,
+          "normalized_total_T": 1485,
+          "six_minima_exceed_total": true
+        },
+        "113": {
+          "minimum_quartic_b": 359,
+          "normalized_total_T": 1596,
+          "six_minima_exceed_total": true
+        },
+        "127": {
+          "minimum_quartic_b": 464,
+          "normalized_total_T": 2016,
+          "six_minima_exceed_total": true
+        },
+        "131": {
+          "minimum_quartic_b": 485,
+          "normalized_total_T": 2145,
+          "six_minima_exceed_total": true
+        },
+        "137": {
+          "minimum_quartic_b": 539,
+          "normalized_total_T": 2346,
+          "six_minima_exceed_total": true
+        },
+        "139": {
+          "minimum_quartic_b": 540,
+          "normalized_total_T": 2415,
+          "six_minima_exceed_total": true
+        }
+      },
+      "analytic_range": {
+        "first_prime": 149,
+        "reason": "p>4k^2 with k=6"
+      },
+      "conclusion": "the k=6 Max+ profile stratum is empty for p>=47",
+      "remaining_k6_primes": [
+        13,
+        17,
+        19,
+        23,
+        29,
+        31,
+        37,
+        41,
+        43
+      ],
+      "remaining_exceptional_strata": "k=6 at nine primes p=13..43; k>=7 from p=13 onward"
     }
   },
   "remaining_floor_targets": [
     "lambda_exc=Phi|W_e >= 6",
     "equivalently E|Z_psi|^2 >= 3q(q-1)/16 for psi^2=chi",
-    "the exceptional inequality remains only on k>=6 from p=11 onward",
+    "k=6 remains at p=13,17,19,23,29,31,37,41,43; k>=7 remains from p=13",
     "equivalently bound the degree-4 odd-coset harmonic excess below by the spherical QVAR gap",
     "delta2 <= n(n+10)^2/(6(n-6)^2) for principal minimum"
   ],

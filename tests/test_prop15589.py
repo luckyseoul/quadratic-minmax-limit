@@ -439,6 +439,36 @@ def test_k5_QVAR_is_closed_for_every_prime():
     assert rows[23]["clears_QVAR"]
 
 
+def test_quartic_energy_barrier_makes_k6_empty_from_p47():
+    S = M.theorem_S_k6_empty_for_p_ge_47()
+    assert S["proved"], S
+    assert S["analytic_range"]["first_prime"] == 149
+    assert S["remaining_k6_primes"] == [13, 17, 19, 23, 29, 31, 37, 41, 43]
+    assert all(
+        row["six_minima_exceed_total"]
+        for row in S["finite_exact_range"].values()
+    )
+    assert S["finite_exact_range"]["47"]["minimum_quartic_b"] == 50
+
+    root = Path(__file__).parents[1] / "evidence"
+    low = json.loads((root / "k6_quartic_energy_probe_low.json").read_text())
+    high = json.loads((root / "k6_quartic_energy_probe_high.json").read_text())
+    combined = {**low, **high}
+    assert {
+        p: row["minimum_quartic_b"]
+        for p, row in combined.items()
+        if int(p) >= 47
+    } == {
+        p: row["minimum_quartic_b"]
+        for p, row in S["finite_exact_range"].items()
+    }
+    assert all(
+        row["nonzero_top_scalar_empty_by_energy"]
+        for p, row in combined.items()
+        if int(p) >= 47
+    )
+
+
 @pytest.mark.parametrize("p", [5, 7])
 def test_square_affine_line_is_a_shorter_ordinary_lattice_vector(p):
     C = paley_conference_prime_power(p)

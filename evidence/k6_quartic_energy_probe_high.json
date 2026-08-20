@@ -1,0 +1,182 @@
+{
+  "59": {
+    "p": 59,
+    "normalized_total_T": 435,
+    "minimum_quartic_b": 81,
+    "six_minima_minus_total": 51,
+    "maximum_relevant_b": 30,
+    "relevant_type_histogram": {},
+    "energy_partitions": [],
+    "nonzero_top_scalar_empty_by_energy": true
+  },
+  "61": {
+    "p": 61,
+    "normalized_total_T": 465,
+    "minimum_quartic_b": 88,
+    "six_minima_minus_total": 63,
+    "maximum_relevant_b": 25,
+    "relevant_type_histogram": {},
+    "energy_partitions": [],
+    "nonzero_top_scalar_empty_by_energy": true
+  },
+  "67": {
+    "p": 67,
+    "normalized_total_T": 561,
+    "minimum_quartic_b": 105,
+    "six_minima_minus_total": 69,
+    "maximum_relevant_b": 36,
+    "relevant_type_histogram": {},
+    "energy_partitions": [],
+    "nonzero_top_scalar_empty_by_energy": true
+  },
+  "71": {
+    "p": 71,
+    "normalized_total_T": 630,
+    "minimum_quartic_b": 122,
+    "six_minima_minus_total": 102,
+    "maximum_relevant_b": 20,
+    "relevant_type_histogram": {},
+    "energy_partitions": [],
+    "nonzero_top_scalar_empty_by_energy": true
+  },
+  "73": {
+    "p": 73,
+    "normalized_total_T": 666,
+    "minimum_quartic_b": 131,
+    "six_minima_minus_total": 120,
+    "maximum_relevant_b": 11,
+    "relevant_type_histogram": {},
+    "energy_partitions": [],
+    "nonzero_top_scalar_empty_by_energy": true
+  },
+  "79": {
+    "p": 79,
+    "normalized_total_T": 780,
+    "minimum_quartic_b": 158,
+    "six_minima_minus_total": 168,
+    "maximum_relevant_b": -10,
+    "relevant_type_histogram": {},
+    "energy_partitions": [],
+    "nonzero_top_scalar_empty_by_energy": true
+  },
+  "83": {
+    "p": 83,
+    "normalized_total_T": 861,
+    "minimum_quartic_b": 178,
+    "six_minima_minus_total": 207,
+    "maximum_relevant_b": -29,
+    "relevant_type_histogram": {},
+    "energy_partitions": [],
+    "nonzero_top_scalar_empty_by_energy": true
+  },
+  "89": {
+    "p": 89,
+    "normalized_total_T": 990,
+    "minimum_quartic_b": 190,
+    "six_minima_minus_total": 150,
+    "maximum_relevant_b": 40,
+    "relevant_type_histogram": {},
+    "energy_partitions": [],
+    "nonzero_top_scalar_empty_by_energy": true
+  },
+  "97": {
+    "p": 97,
+    "normalized_total_T": 1176,
+    "minimum_quartic_b": 241,
+    "six_minima_minus_total": 270,
+    "maximum_relevant_b": -29,
+    "relevant_type_histogram": {},
+    "energy_partitions": [],
+    "nonzero_top_scalar_empty_by_energy": true
+  },
+  "101": {
+    "p": 101,
+    "normalized_total_T": 1275,
+    "minimum_quartic_b": 264,
+    "six_minima_minus_total": 309,
+    "maximum_relevant_b": -45,
+    "relevant_type_histogram": {},
+    "energy_partitions": [],
+    "nonzero_top_scalar_empty_by_energy": true
+  },
+  "103": {
+    "p": 103,
+    "normalized_total_T": 1326,
+    "minimum_quartic_b": 297,
+    "six_minima_minus_total": 456,
+    "maximum_relevant_b": -159,
+    "relevant_type_histogram": {},
+    "energy_partitions": [],
+    "nonzero_top_scalar_empty_by_energy": true
+  },
+  "107": {
+    "p": 107,
+    "normalized_total_T": 1431,
+    "minimum_quartic_b": 310,
+    "six_minima_minus_total": 429,
+    "maximum_relevant_b": -119,
+    "relevant_type_histogram": {},
+    "energy_partitions": [],
+    "nonzero_top_scalar_empty_by_energy": true
+  },
+  "109": {
+    "p": 109,
+    "normalized_total_T": 1485,
+    "minimum_quartic_b": 312,
+    "six_minima_minus_total": 387,
+    "maximum_relevant_b": -75,
+    "relevant_type_histogram": {},
+    "energy_partitions": [],
+    "nonzero_top_scalar_empty_by_energy": true
+  },
+  "113": {
+    "p": 113,
+    "normalized_total_T": 1596,
+    "minimum_quartic_b": 359,
+    "six_minima_minus_total": 558,
+    "maximum_relevant_b": -199,
+    "relevant_type_histogram": {},
+    "energy_partitions": [],
+    "nonzero_top_scalar_empty_by_energy": true
+  },
+  "127": {
+    "p": 127,
+    "normalized_total_T": 2016,
+    "minimum_quartic_b": 464,
+    "six_minima_minus_total": 768,
+    "maximum_relevant_b": -304,
+    "relevant_type_histogram": {},
+    "energy_partitions": [],
+    "nonzero_top_scalar_empty_by_energy": true
+  },
+  "131": {
+    "p": 131,
+    "normalized_total_T": 2145,
+    "minimum_quartic_b": 485,
+    "six_minima_minus_total": 765,
+    "maximum_relevant_b": -280,
+    "relevant_type_histogram": {},
+    "energy_partitions": [],
+    "nonzero_top_scalar_empty_by_energy": true
+  },
+  "137": {
+    "p": 137,
+    "normalized_total_T": 2346,
+    "minimum_quartic_b": 539,
+    "six_minima_minus_total": 888,
+    "maximum_relevant_b": -349,
+    "relevant_type_histogram": {},
+    "energy_partitions": [],
+    "nonzero_top_scalar_empty_by_energy": true
+  },
+  "139": {
+    "p": 139,
+    "normalized_total_T": 2415,
+    "minimum_quartic_b": 540,
+    "six_minima_minus_total": 825,
+    "maximum_relevant_b": -285,
+    "relevant_type_histogram": {},
+    "energy_partitions": [],
+    "nonzero_top_scalar_empty_by_energy": true
+  }
+}
