@@ -23,6 +23,10 @@ from kgen4 import _flip_solve
 from flipnb import flip_batch
 
 import cupy as cp
+import os
+
+_nw = int(os.environ.get("GPU_WORKERS", "3"))
+cp.get_default_memory_pool().set_limit(size=int(15 * 1024**3 / _nw))
 
 
 @njit(cache=True)
@@ -226,7 +230,7 @@ def process_outer_gpu(p, k, q, upper, UU, Tm, c0, eps, tester, sols,
     cprobes = np.ascontiguousarray(cov[:, :, probe_idx].astype(np.int16))
     codes = np.zeros(gen_cap, np.int64)
     fsums = np.zeros(gen_cap, np.int64)
-    CH = 1_000_000
+    CH = 250_000
     s_ar = np.arange(p, dtype=np.int64)
 
     def decode(cc_sub):
@@ -254,16 +258,29 @@ def process_outer_gpu(p, k, q, upper, UU, Tm, c0, eps, tester, sols,
             for r in range(len(f0_idx)):
                 sols.append(np.where(PS[r] == thi, 1, -1).astype(np.int8))
         if len(fl_idx):
-            SIG, FV = decode(cc[fl_idx])
-            ybuf = np.zeros((200000, q), np.int8)
-            ycount = np.zeros(1, np.int64)
-            flip_batch(p, k, q, SIG, FV, Tm, tester.LIDX, thi, tlo,
-                       ybuf, ycount, 5_000_000)
-            ny = int(ycount[0])
-            if ny > ybuf.shape[0]:
-                raise RuntimeError("flip ybuf overflow")
-            for r in range(ny):
-                sols.append(ybuf[r].copy())
+            _resolve_flips(cc[fl_idx], ff[fl_idx])
+
+    def _resolve_flips(cc_sub, ff_sub):
+        # splits automatically if a chunk yields more solutions than the
+        # output buffer holds, instead of crashing (larger p can produce
+        # far more solutions per candidate batch than smaller p did)
+        SIG, FV = decode(cc_sub)
+        cap = max(200_000, 8 * len(cc_sub) + 1000)
+        ybuf = np.zeros((cap, q), np.int8)
+        ycount = np.zeros(1, np.int64)
+        flip_batch(p, k, q, SIG, FV, Tm, tester.LIDX, thi, tlo,
+                   ybuf, ycount, 5_000_000)
+        ny = int(ycount[0])
+        if ny > cap:
+            if len(cc_sub) <= 1:
+                raise RuntimeError(f"flip ybuf overflow on a single candidate "
+                                    f"(ny={ny}); pathological, not a sizing issue")
+            mid = len(cc_sub) // 2
+            _resolve_flips(cc_sub[:mid], ff_sub[:mid])
+            _resolve_flips(cc_sub[mid:], ff_sub[mid:])
+            return
+        for r in range(ny):
+            sols.append(ybuf[r].copy())
 
     # stream over uu-chunks so a single huge outer cannot overflow buffers
     worst_per_uu = 1

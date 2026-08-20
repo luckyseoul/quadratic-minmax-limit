@@ -2,7 +2,7 @@
 incremental line-local updates, and weight bookkeeping. No 2^n brute."""
 import numpy as np
 
-def flip_solve(p,k,sigstd,idxs,fvec,Tm,thi,tlo,out,node_cap=500000):
+def flip_solve(p,k,sigstd,idxs,fvec,Tm,thi,tlo,out,node_cap=8_000_000):
     q=Tm.shape[1]
     A=np.zeros(q,dtype=np.int64)
     for j in range(k): A=A+sigstd[j][Tm[j]]
