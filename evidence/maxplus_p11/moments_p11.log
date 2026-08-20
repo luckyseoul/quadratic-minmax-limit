@@ -1,0 +1,19 @@
+p=11: Nh=37457112  n=122
+npair=7381
+  chunk 100/750  78s
+  chunk 200/750  146s
+  chunk 300/750  213s
+  chunk 400/750  280s
+  chunk 500/750  348s
+  chunk 600/750  415s
+  chunk 700/750  482s
+  chunk 750/750  515s
+M4 built (7381, 7381) in 515.6s
+quads: 8,783,390
+pairing consistency max diff: 0.00e+00
+max |mu| over |kappa|=1 four-sets: 0.011422344   (mu*Nh = 427848.000)
+L=(p-2)/2p^2 = 0.037190083   |mu| <= L ? True
+|T|=(p-2)/(p(2p-1)) = 0.038961039   |mu| < |T| ? True
+max |m4| over ALL four-sets: 0.033641675
+through-e |kappa|=1 sets: 5400   min G = -0.011422344   > -|T| ? True
+done

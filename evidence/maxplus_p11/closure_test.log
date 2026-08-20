@@ -1,0 +1,19 @@
+loaded (37457112, 122)  (2s)
+sorted keys (28s)
+group size 120
+sanity (sample in set): True
+  gamma[  0]: 20000/20000 images in set
+  gamma[ 10]: 20000/20000 images in set
+  gamma[ 20]: 20000/20000 images in set
+  gamma[ 30]: 20000/20000 images in set
+  gamma[ 40]: 20000/20000 images in set
+  gamma[ 50]: 20000/20000 images in set
+  gamma[ 60]: 20000/20000 images in set
+  gamma[ 70]: 20000/20000 images in set
+  gamma[ 80]: 20000/20000 images in set
+  gamma[ 90]: 20000/20000 images in set
+  gamma[100]: 20000/20000 images in set
+  gamma[110]: 20000/20000 images in set
+
+TOTAL closure failures: 0 over 12 group elements x 20000 samples
+VERDICT: CLOSED (set consistent with completeness)
