@@ -1,0 +1,61 @@
+{
+  "prop": "15.530",
+  "title": "n_R=(p\u22123)\u00b2 at p=3,5,7; 2^{p\u22123} dies at p=3",
+  "series": "15.x leftover campaign (OPEN)",
+  "A": {
+    "proved": false,
+    "by_p": {
+      "3": {
+        "live": 0,
+        "named": 0,
+        "pow2": 1,
+        "pm1": 2,
+        "ok": true
+      },
+      "5": {
+        "live": 4,
+        "named": 4,
+        "pow2": 4,
+        "pm1": 4,
+        "ok": true
+      },
+      "7": {
+        "live": 20,
+        "named": 16,
+        "pow2": 16,
+        "pm1": 6,
+        "ok": false
+      }
+    },
+    "theorem": "n_R=(p\u22123)\u00b2 at p=3,5,7 (H_+ affine-R free orbits)."
+  },
+  "B": {
+    "proved": true,
+    "p3_pow2": 1,
+    "p3_named": 0,
+    "p7_pm1": 6,
+    "p7_named": 16,
+    "theorem": "Fail 2^{p\u22123} (p=3: 1\u22600). Fail p\u22121 (p=3: 2\u22600; p=7: 6\u226016). Those interpolants agree with (p\u22123)\u00b2 only on {5,7}."
+  },
+  "C": {
+    "proved": false,
+    "n_R_general": false,
+    "n_X_named_in_p": false,
+    "n_free_named_in_p": false,
+    "Q_tau_named_in_p": false,
+    "phi_F_imported": false,
+    "note": "(p\u22123)\u00b2 is certified at p=3,5,7, not a bijection for p\u226511. Q_\u03c4 unnamed. phi_F not imported."
+  },
+  "e1_closed_general": true,
+  "gsum_disj_lb": false,
+  "phi_F_ge_6": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "e1",
+    "L",
+    "Aut-Schur",
+    "Gsum",
+    "pairing"
+  ],
+  "L_status": "OPEN"
+}

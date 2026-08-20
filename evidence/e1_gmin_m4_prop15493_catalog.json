@@ -1,0 +1,40 @@
+{
+  "disj_mean": {
+    "5": "1/23",
+    "7": "1/47",
+    "11": "1/119"
+  },
+  "two_flip_Sall": {
+    "3": "-7",
+    "5": "-49",
+    "7": "-151"
+  },
+  "p3": {
+    "k": 12,
+    "nYm": 12,
+    "nYp": 12,
+    "max_m": -2,
+    "min_p": 2,
+    "set_m": [
+      -8,
+      -2
+    ],
+    "set_p": [
+      2,
+      4,
+      6
+    ],
+    "leftover": true,
+    "official": true,
+    "splus_eq_2": true,
+    "n_U2": 4,
+    "freeness_fail": true,
+    "n_nd_plus": 0,
+    "Phi_G": 29.0,
+    "Phi_H": 31.0,
+    "phi": 15.0,
+    "Maxpm_absQ_G": 11.0,
+    "ND": true,
+    "res_ii": true
+  }
+}

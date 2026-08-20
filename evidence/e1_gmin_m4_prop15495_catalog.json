@@ -1,0 +1,99 @@
+{
+  "r_flip": {
+    "p5_r2_U": "-49",
+    "p5_r4_Sind_m2": "-33"
+  },
+  "parity": {
+    "3": {
+      "4p": -1,
+      "6p": 1,
+      "4p+2": 1
+    },
+    "5": {
+      "4p": -1,
+      "6p": 1,
+      "4p+2": 1
+    },
+    "7": {
+      "4p": -1,
+      "6p": 1,
+      "4p+2": 1
+    }
+  },
+  "twovalue_m": {
+    "3": "4",
+    "5": "3",
+    "7": "8/3"
+  },
+  "p3_k14": {
+    "k": 14,
+    "e_in_G": false,
+    "set_m": [
+      -10,
+      -2
+    ],
+    "set_p": [
+      2,
+      4,
+      6
+    ],
+    "max_m": -2,
+    "min_p": 2,
+    "n_Um": 8,
+    "n_fe_m": 8,
+    "leftover": true,
+    "official": true,
+    "splus_eq_2": true,
+    "n_U2": 2,
+    "freeness_fail": true,
+    "n_nd_plus": 0,
+    "Phi_G": 29.0,
+    "Phi_H": 31.0,
+    "phi": 15.0,
+    "Maxpm_absQ_G": 11.0,
+    "Maxpm_absQ_H": 9.0,
+    "ND": true,
+    "res_ii": true,
+    "prod_sign": 1,
+    "n_minus": 8
+  },
+  "p5_k22": {
+    "k": 22,
+    "e_in_G": false,
+    "set_m": [
+      -10,
+      -6,
+      -2
+    ],
+    "set_p": [
+      -6,
+      -4,
+      -2,
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      18
+    ],
+    "max_m": -2,
+    "min_p": -6,
+    "n_Um": 156,
+    "n_fe_m": 156,
+    "leftover": true,
+    "official": true,
+    "splus_eq_2": false,
+    "Q_G": 85.0,
+    "Q_H": 83.0,
+    "Phi_G_lb": 85.0,
+    "Phi_H_lb": 83.0,
+    "phi": 65.0,
+    "ND": true,
+    "prod_sign": 1,
+    "n_minus": 12,
+    "twovalue_m3": false
+  }
+}
