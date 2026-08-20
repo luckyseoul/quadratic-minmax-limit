@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+from collections import Counter
 from fractions import Fraction
 from pathlib import Path
 
@@ -232,6 +233,37 @@ def test_p11_k4_requires_active_subset_mixing():
     assert data["n_full_vectors"] == J["n_full_k4_vectors"]
     assert data["aggregate_E_B2"] == J["aggregate_E_B2"]
     assert {row["E_B2"] for row in data["subsets"].values()} == {"5", "63"}
+
+
+def test_full_support_requires_top_degree_mixing():
+    K = M.theorem_K_full_support_top_degree_mixing()
+    assert K["proved_counterexample"], K
+    assert K["p7"]["top_zero_count"] == 0
+    assert K["p7"]["E_B2_per_nonzero_class"] == "44/15"
+    assert K["p11"]["top_zero_E_B2"] == "137/36"
+    assert K["p11"]["top_zero_fails_QVAR"]
+    assert K["p11"]["E_B2_per_nonzero_class"] == "111483/14039"
+    assert K["p11"]["nonzero_classes_clear_QVAR"]
+    assert K["p11"]["degree_drops_twice_count"] == 0
+    assert K["p11"]["aggregate_E_B2"] == "114771/14903"
+    assert K["p11"]["aggregate_clears_QVAR"]
+    assert [
+        (row["n_projective_classes"], row["vectors_per_class"], row["E_B2_per_class"])
+        for row in K["p11"]["degree3_projective_orbits"]
+    ] == [(6, 123_420, "151/51"), (6, 225_060, "397/93")]
+
+    data = json.loads(
+        (Path(__file__).parents[1] / "evidence" / "maxplus_p11" /
+         "full_support_top_degree_p7_p11.json").read_text()
+    )
+    assert data["p7"]["full_support_count"] == K["p7"]["full_support_count"]
+    assert data["p11"]["full_support_count"] == K["p11"]["full_support_count"]
+    assert data["p11"]["top_zero_count"] == K["p11"]["top_zero_count"]
+    assert data["p11"]["aggregate_E_B2"] == K["p11"]["aggregate_E_B2"]
+    projective = list(data["p11"]["degree_drop_projective_classes"].values())
+    assert Counter((row["count"], row["E_B2"]) for row in projective) == Counter(
+        {(123_420, "151/51"): 6, (225_060, "397/93"): 6}
+    )
 
 
 @pytest.mark.parametrize("p", [5, 7])

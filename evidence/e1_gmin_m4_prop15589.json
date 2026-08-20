@@ -15,6 +15,7 @@
     "odd_coset_spherical_reduction": true,
     "coarse_profile_constraints_insufficient": true,
     "active_subsetwise_QVAR_false": true,
+    "top_profile_degreewise_QVAR_false": true,
     "lambda_exc_ge_6": false,
     "lambda_min_ge_6_general": false
   },
@@ -905,6 +906,48 @@
       "aggregate_clears_QVAR": true,
       "route_killed": "QVAR on every fixed active direction-subset, even inside k=4",
       "surviving_requirement": "mix projective direction configurations before taking the quartic second moment"
+    },
+    "K": {
+      "proved_counterexample": true,
+      "p7": {
+        "full_support_count": 4410,
+        "top_profile_degree": 2,
+        "top_zero_count": 0,
+        "n_nonzero_scalar_classes": 6,
+        "vectors_per_nonzero_class": 735,
+        "E_B2_per_nonzero_class": "44/15",
+        "normalized_QVAR_threshold": "9/4"
+      },
+      "p11": {
+        "full_support_count": 36065260,
+        "top_profile_degree": 4,
+        "top_zero_count": 2090880,
+        "top_zero_actual_degree": 3,
+        "top_zero_E_B2": "137/36",
+        "top_zero_fails_QVAR": true,
+        "n_nonzero_scalar_classes": 10,
+        "vectors_per_nonzero_class": 3397438,
+        "E_B2_per_nonzero_class": "111483/14039",
+        "nonzero_classes_clear_QVAR": true,
+        "degree3_projective_orbits": [
+          {
+            "n_projective_classes": 6,
+            "vectors_per_class": 123420,
+            "E_B2_per_class": "151/51"
+          },
+          {
+            "n_projective_classes": 6,
+            "vectors_per_class": 225060,
+            "E_B2_per_class": "397/93"
+          }
+        ],
+        "degree_drops_twice_count": 0,
+        "aggregate_E_B2": "114771/14903",
+        "aggregate_clears_QVAR": true,
+        "normalized_QVAR_threshold": "45/8"
+      },
+      "route_killed": "QVAR separately on actual top-profile-degree or on every leading-coefficient projective class",
+      "surviving_requirement": "mix adjacent profile-degree families in their exact ensemble proportions"
     }
   },
   "remaining_floor_targets": [

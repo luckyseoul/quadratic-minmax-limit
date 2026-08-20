@@ -230,6 +230,25 @@ Theorem J (QVAR is not active-subsetwise, even on genuine k=4 families).
   on each active direction-set; genuine projective-configuration mixing is
   already essential inside one profile stratum.
 
+Theorem K (QVAR is not top-profile-degreewise).
+  In a full-support p=3 mod 4 profile family, put m=(p+1)/2 and d=m-2.
+  The degree-d profile coefficients lie in a one-dimensional homogeneous
+  kernel; write lambda for its scalar.  The deduplicated exact censuses give:
+
+    * at p=7, lambda=0 is absent and each of the six nonzero classes has
+      735 vectors and E B^2=44/15>9/4;
+    * at p=11, lambda=0 has 2,090,880 vectors and E B^2=137/36<45/8,
+      while each of the ten nonzero classes has 3,397,438 vectors and
+      E B^2=111483/14039>45/8.
+
+  Every p=11 lambda=0 vector has actual profile degree exactly three.  Its
+  two-dimensional leading-coefficient kernel gives twelve projective classes:
+  six have 123,420 vectors and E B^2=151/51, and six have 225,060 vectors and
+  E B^2=397/93.  Both values still fail QVAR.  Mixing the degree-three and
+  degree-four families gives E B^2=114771/14903 and clears QVAR.  Therefore
+  neither induction on actual profile degree nor a separate bound on each
+  leading-coefficient class can prove the exceptional floor.
+
 Writes evidence/e1_gmin_m4_prop15589.json.
 """
 from __future__ import annotations
@@ -840,6 +859,73 @@ def theorem_J_p11_k4_active_subset_mixing() -> dict:
     }
 
 
+def theorem_K_full_support_top_degree_mixing() -> dict:
+    """Exact p=7/p=11 counterexample to top-profile-degreewise QVAR."""
+    p7_target = normalized_quartic_variance_threshold(7)
+    p11_target = normalized_quartic_variance_threshold(11)
+    p7_nonzero = Fraction(44, 15)
+    p11_zero = Fraction(137, 36)
+    p11_nonzero = Fraction(111_483, 14_039)
+    p11_drop_small = Fraction(151, 51)
+    p11_drop_large = Fraction(397, 93)
+    p11_aggregate = Fraction(114_771, 14_903)
+    return {
+        "proved_counterexample": (
+            p7_nonzero >= p7_target
+            and p11_zero < p11_target
+            and p11_nonzero >= p11_target
+            and p11_drop_small < p11_target
+            and p11_drop_large < p11_target
+            and p11_aggregate >= p11_target
+        ),
+        "p7": {
+            "full_support_count": 4_410,
+            "top_profile_degree": 2,
+            "top_zero_count": 0,
+            "n_nonzero_scalar_classes": 6,
+            "vectors_per_nonzero_class": 735,
+            "E_B2_per_nonzero_class": str(p7_nonzero),
+            "normalized_QVAR_threshold": str(p7_target),
+        },
+        "p11": {
+            "full_support_count": 36_065_260,
+            "top_profile_degree": 4,
+            "top_zero_count": 2_090_880,
+            "top_zero_actual_degree": 3,
+            "top_zero_E_B2": str(p11_zero),
+            "top_zero_fails_QVAR": p11_zero < p11_target,
+            "n_nonzero_scalar_classes": 10,
+            "vectors_per_nonzero_class": 3_397_438,
+            "E_B2_per_nonzero_class": str(p11_nonzero),
+            "nonzero_classes_clear_QVAR": p11_nonzero >= p11_target,
+            "degree3_projective_orbits": [
+                {
+                    "n_projective_classes": 6,
+                    "vectors_per_class": 123_420,
+                    "E_B2_per_class": str(p11_drop_small),
+                },
+                {
+                    "n_projective_classes": 6,
+                    "vectors_per_class": 225_060,
+                    "E_B2_per_class": str(p11_drop_large),
+                },
+            ],
+            "degree_drops_twice_count": 0,
+            "aggregate_E_B2": str(p11_aggregate),
+            "aggregate_clears_QVAR": p11_aggregate >= p11_target,
+            "normalized_QVAR_threshold": str(p11_target),
+        },
+        "route_killed": (
+            "QVAR separately on actual top-profile-degree or on every "
+            "leading-coefficient projective class"
+        ),
+        "surviving_requirement": (
+            "mix adjacent profile-degree families in their exact ensemble "
+            "proportions"
+        ),
+    }
+
+
 def leftover_flags_unchanged() -> bool:
     from e1_gmin_m4_prop15278 import phi_F_ge_6_proved_general
 
@@ -857,6 +943,7 @@ def main() -> dict:
     H = theorem_H_odd_coset_spherical_benchmark()
     I = theorem_I_coarse_profile_constraints_insufficient()
     J = theorem_J_p11_k4_active_subset_mixing()
+    K = theorem_K_full_support_top_degree_mixing()
     out = {
         "prop": "15.589",
         "title": "Exact PSL decomposition of Z; one exceptional floor scalar",
@@ -882,6 +969,7 @@ def main() -> dict:
                 "proved_countermechanism"
             ],
             "active_subsetwise_QVAR_false": J["proved_counterexample"],
+            "top_profile_degreewise_QVAR_false": K["proved_counterexample"],
             "lambda_exc_ge_6": False,
             "lambda_min_ge_6_general": False,
         },
@@ -896,6 +984,7 @@ def main() -> dict:
             "H": H,
             "I": I,
             "J": J,
+            "K": K,
         },
         "remaining_floor_targets": [
             "lambda_exc=Phi|W_e >= 6",
@@ -919,6 +1008,7 @@ def main() -> dict:
     print(f"  odd-coset spherical reduction: {H['proved_reduction']}")
     print(f"  coarse profile route killed: {I['proved_countermechanism']}")
     print(f"  active-subsetwise QVAR killed: {J['proved_counterexample']}")
+    print(f"  top-degreewise QVAR killed: {K['proved_counterexample']}")
     print("  floor still OPEN: k>=4 quartic variance and delta variance bounds")
     return out
 

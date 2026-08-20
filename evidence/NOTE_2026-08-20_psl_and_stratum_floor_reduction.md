@@ -348,13 +348,36 @@ kills the ordinary-minimum-shell shortcut.
    taking the quartic second moment.  Reproducible extraction:
    `evidence/maxplus_p11/k4_active_subset_quartic_p11.{py,json}`.
 
+7. **QVAR is false after conditioning on actual top profile degree.**  For a
+   full-support family let `d=(p-3)/2`.  The degree-`d` coefficients lie in a
+   one-dimensional homogeneous kernel.  In the exact `p=7` census its zero
+   class is empty, and all six nonzero classes have `E B^2=44/15>9/4`.  In the
+   deduplicated exact `p=11` census, the split is instead
+
+   ```
+   degree <= 3 (lambda=0):  2,090,880 vectors, E B^2=137/36 < 45/8;
+   degree = 4 (lambda!=0):  10 classes of 3,397,438 vectors each,
+                            E B^2=111483/14039 > 45/8 per class.
+   ```
+
+   Every vector in the first line has degree exactly three.  Its
+   two-dimensional leading-coefficient kernel has twelve projective classes:
+   six of size 123,420 with moment `151/51`, and six of size 225,060 with
+   moment `397/93`; all twelve still fail QVAR.  Only the adjacent-degree
+   mixture, with `E B^2=114771/14903`, clears the target.  Therefore induction
+   on profile degree and classwise leading-coefficient bounds are both dead.
+   A proof must control the exact population transfer between degree families.
+   Reproducible extraction:
+   `evidence/maxplus_p11/full_support_top_degree_p7_p11.{py,json}`.
+
 ## 8. Live targets
 
 Leftover 1 is now reduced to two explicit inequalities:
 
 1. prove the quartic variance `(QVAR)` on the union of profile strata `k>=4`,
    using an ensemble-level coupling that mixes active direction configurations
-   rather than the pointwise or fixed-subset constraints killed above;
+   and adjacent actual-degree families in their exact proportions, rather than
+   the pointwise, fixed-subset, or coefficient-class constraints killed above;
 2. prove the principal variance room
    `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`.
 

@@ -1,10 +1,11 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-20 (updated through `54fd110`; prior content preserved below)
+**Date:** 2026-08-20 (current branch; use `git log -1` for the exact checkpoint)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **Current branch:** `codex/leftover-moment-attack` (use `git log -1` for the
-current hash).  The latest continuation adds Prop 15.589 Theorem J, the exact
-p=11 fixed-active-subset counterexample described below.  All 93 focused Prop
+current hash).  The latest continuation adds Prop 15.589 Theorems J--K, the
+exact p=11 active-subset and top-profile-degree counterexamples described
+below.  All 94 focused Prop
 15.588/15.589 tests pass.
 **Statement:** [MathOverflow 413935](https://mathoverflow.net/questions/413935).
 \(\alpha_n=n^{-3/2}\min_{a_{ij}=\pm1}\max_{x=\pm1}\lvert\sum_{i<j}a_{ij}x_ix_j\rvert\).
@@ -77,6 +78,16 @@ families has normalized moment `E B^2=5<45/8`; six unbalanced families have
 `E B^2=63` and rescue the count-weighted aggregate to `39/2`.  Therefore the
 proof must mix projective direction configurations even before mixing profile
 strata (Prop 15.589 J).
+
+The full-support coefficient descent kills another tempting induction.  At
+`p=7` the top-degree-zero class is empty and every nonzero class clears QVAR.
+At `p=11`, however, all `2,090,880` top-degree-zero vectors have actual profile
+degree exactly three and moment `E B^2=137/36<45/8`; each of their twelve
+projective leading-coefficient classes also fails.  The ten degree-four
+nonzero classes each have the identical moment `111483/14039>45/8` and rescue
+the exact mixture to `114771/14903`.  Thus QVAR cannot be proved separately by
+actual profile degree or leading-coefficient class; adjacent degree families
+must be mixed in their exact ensemble proportions (Prop 15.589 K).
 
 **Settled.** Sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\) (`solution.md`). Paley \(\rho=1\) on \(n=p^2+1\) (`evidence/PROOF_rho_eq_1.md`).
 
