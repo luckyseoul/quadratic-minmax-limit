@@ -1,8 +1,8 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-18  
-**Repo:** https://github.com/luckyseoul/quadratic-minmax-limit (`main`)  
-**Statement:** [MathOverflow 413935](https://mathoverflow.net/questions/413935).  
+**Date:** 2026-08-20 (updated; prior 2026-08-18 content preserved below)
+**Repo:** https://github.com/luckyseoul/quadratic-minmax-limit (`main`)
+**Statement:** [MathOverflow 413935](https://mathoverflow.net/questions/413935).
 \(\alpha_n=n^{-3/2}\min_{a_{ij}=\pm1}\max_{x=\pm1}\lvert\sum_{i<j}a_{ij}x_ix_j\rvert\).
 
 **Settled.** Sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\) (`solution.md`). Paley \(\rho=1\) on \(n=p^2+1\) (`evidence/PROOF_rho_eq_1.md`).
@@ -10,6 +10,55 @@
 **Not settled.** \(L=\lim\alpha_n=1/2\). That needs E(1): Paley \(C\) is a \(\Phi\)-minimizer for every prime \(p\ge5\). Soft-close from sandwich plus denseness, without E(1), is not a proof.
 
 Live `e1_closed_general` is True only by the old wiring (affine residual (ii) plus two-level Type I). That is not E(1) for all \(p\ge5\). Aut-Schur, Gsum disj LB, and the cotangent pairing stay unused and False.
+
+## 2026-08-20 session — read this first
+
+**No flag flipped. `Max+` at `p=11` is now fully enumerated**, breaking the wall
+`fable.md` names as the likely common blocker to leftovers 1 and 3 ("Max+ is
+enumerable only for `p<=7`"). Full derivations, exact data, and eight corrections
+to claims made mid-session: `evidence/TECHNICAL_NOTES_2026-08-20_maxplus_p11.md`.
+Read `evidence/METHOD_why_500_props_never_moved_a_flag.md` before writing a new
+numbered proposition — it names the loop that produced most of the ~500 that
+never moved a flag, and gives four rules to avoid repeating it.
+
+**Leftover 1** (row below still says "Open, ensemble unnamed" — still true, but
+narrower now): reduces to `var(spec Phi) <= 32(n+10)^2/(n-6)^3` together with
+`mult(lambda_min) >= n`. Both hold at `p=7` (+32.7% slack) and `p=11` (+91.0%
+slack); `p=5` stays a finite check. Proved: no bound using only `dim Z, tr(Phi),
+tr(Phi^2)` can ever close this — the best such bound is `10-16x` too weak, and the
+gap widens with `p`. The variance is computable from leftover 3's own four-point
+tensor: `tr(Phi^2) = 4||M||_F^2 - 3n^2 + 2n^2(n-1)/p^2`, verified exactly at
+`p=5,7,11`. **Single remaining target for this route: bound `||M||_F^2` at
+general `p`.** Detail: `evidence/NOTE_leftover1_variance_multiplicity_route.md`.
+
+**Leftover 3**: `mu/L` slack grows `0.769 -> 0.746 -> 0.307` (i.e. **growing**
+headroom) from `p=5,7,11`. No structural change, just a third confirming point
+with more room, not less.
+
+**k=4 stratum of Max+ terminates at p=19** (confirmed both by GPU and by
+independent uncapped CPU DFS on all three `p=19` subsets, with a `p=17` positive
+control matching exactly — see technical notes §6). Not itself a leftover, but was
+this session's original target before the enumeration wall turned out to be the
+more useful thing to attack.
+
+**Correction to the "Bottom multiplicity is exactly n" claim two sections below**:
+false at `p=11`, where it is `244 = 2n`. The weaker `mult >= n` form survives and
+is what the leftover-1 route above uses.
+
+**Repo housekeeping**: GPU code that made the p=11 run possible
+(`gpu_inner.py`'s auto-splitting flip resolution, memory-pool capping) had been
+sitting **uncommitted on a tmpfs RAM disk** for a full session — a reboot would
+have destroyed it. It is committed now. Branch `prop15586-maxplus-gram-reduction`
+(`1fa0301`) is an ancestor of `main`; nothing from it was lost.
+
+**Conflict worth knowing about**: the "Do not commit... 15.496, or 15.530" line
+further down was written by a prior session and left unexplained beyond being
+grouped with other dead ends. Both are now tracked on `main` per an explicit
+live instruction in the 2026-08-20 session, with 15.530's two failing tests
+quarantined as `xfail(strict=True)` rather than left red. If you are the one who
+wrote that original instruction and had a reason beyond "these are dead ends",
+that reason is not recorded anywhere — leaving this note so it is not silently
+overridden twice.
 
 ## Open for E(1)
 
@@ -58,7 +107,9 @@ Two-level Max− is closed (15.272). Multi-level is open. Dead as a multi-level 
 
 Occupancy / Aut-involution pairing of \(T_{\mathrm{ns}}\) / \(\bar n_0\) interpolants / half-net census as a \(p\)-law / Aut\(_e\) as a name of \(A_{\mathrm{full}}\) / \((p-5)/15\) / \(10p-46\) / \(16(p-4)/D\) / Paley type as a \(Q\)-constant (false at \(p=7\)) / exclusive mix as a general \(Q_\tau\) / pointwise Wick or Boolean collision as a proof of \(Q_{++}\le4q^2\) / Gsum as a Gram / Aut-Schur.
 
-Do not commit the untracked 15.495 catalogs, 15.496, or 15.530.
+15.495 catalogs, 15.496, and 15.530 **are now committed** (2026-08-20, see note
+at top of file) — this line originally said not to. Left visible rather than
+deleted so the reversal is traceable.
 
 ## Files
 
@@ -69,6 +120,15 @@ Do not commit the untracked 15.495 catalogs, 15.496, or 15.530.
 | `solution.md` | Sandwich; Main Theorem (limit) stays OPEN |
 | `evidence/share/denseness_path_package.md` | Stand-alone path; § Caveats |
 | `evidence/SESSION_HANDOFF_2026-08-18_leftovers.md` | Named identities 15.550–15.585 |
+| `evidence/TECHNICAL_NOTES_2026-08-20_maxplus_p11.md` | p=11 enumeration, derivations, corrections (2026-08-20) |
+| `evidence/NOTE_leftover1_variance_multiplicity_route.md` | Leftover 1 reduction, single remaining target |
+| `evidence/METHOD_why_500_props_never_moved_a_flag.md` | Read before writing a new numbered proposition |
+| `evidence/maxplus_p11/` | Scripts + logs for the p=11 spectrum/moment computations |
 | `LONG_HORIZON_GOAL.md` | Terminal states |
 
-**HEAD:** `0f50da5` (15.585).
+Large `.npy` arrays (Max+ at p=11, 4.5 GB each) are **not in git** — they live at
+`/mnt/storage/e1work/maxplus_p11/` on soulkiller, verified by md5 against the
+original computation. Scripts there have hardcoded `/tmp/e1work` paths; repoint
+before rerunning.
+
+**HEAD:** `d877359` (tracks stranded props + method note; ancestor chain includes 15.585 → 15.588 → p=11 enumeration).
