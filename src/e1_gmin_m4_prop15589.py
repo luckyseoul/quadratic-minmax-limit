@@ -116,6 +116,19 @@ Theorem F (profile-energy form when p=3 mod 4).
   Thus QVAR is a signed profile-energy imbalance for p=3 mod 4.  This is an
   exact general-p identity, not a census fit.
 
+  The profile-degree theorem of 15.588 also forces a_L in 2p Z.  After a
+  global sign assume eps=1 and write h_L=rhohat_L-(p-1)/2.  The reduced
+  polynomial rho_L has degree at most k-2 <= (p-3)/2, so rho_L^2 has degree
+  at most p-3.  Power-sum orthogonality gives sum_s h_L(s)^2=0 mod p;
+  zero-sum integrality gives the factor 2.  Hence, with b_L=a_L/(2p),
+
+      sum_L b_L = T=(p^2-1)/8,
+      Z_psi/(2p) = sum_L psi(g_L)b_L = T mod 2.
+
+  The normalized QVAR target is E|sum psi(g_L)b_L|^2 >= 3T/8.  The parity
+  floor is 1 when p=3 mod 8 and 0 when p=7 mod 8, so divisibility alone is
+  much too weak.
+
 Theorem G (the k=1 and k=3 strata clear QVAR for every prime).
   For p=3 mod 4, put S=p(p^2-1)/4 and m=(p+1)/2.  On k=1, |Z|^2=S^2.  On
   k=3, each active affine profile has energy S/3 and every direction-triple
@@ -168,6 +181,38 @@ Theorem H (odd-coset shell and spherical benchmark).
   nonnegativity of that harmonic theta coefficient is a sufficient stronger
   target.  Ordinary minimum-shell design theorems do not settle this because
   L has the shorter norm-(p+1) shell.
+
+Theorem I (coarse profile constraints cannot prove QVAR).
+  Suppose p=3 mod 4 and p>=7.  Order the m=(p+1)/2 square directions
+  cyclically, so the quartic signs are w_j=(-1)^j.  Put
+
+      T=(p^2-1)/8,  S=2pT=p(p^2-1)/4.
+
+  Writing p=4t+3, there is a vector b with t+1 entries t and t+1 entries
+  t+1, sum b_j=T, and, with r=T mod 2,
+
+      |sum_j w_j b_j| = T mod 2.
+
+  Moreover each a_j=2pb_j is individually the squared norm of an admissible
+  integer, zero-sum degree-(m-2) line profile h_j.  For p>=11 take
+  h_j(s)=sum_i u_i chi(s-i), where sum u_i=0 and sum u_i^2=2b_j; the shifted
+  Legendre sequences have Gram matrix pI-J, and the coefficients can be chosen
+  with l1 norm at most (p-3)/2.  Their leading terms cancel because sum u_i=0,
+  giving degree at most m-2.  The p=7 witnesses are explicit.  Thus
+  sigma_j=1+2h_j has p admissible odd line sums in [-p,p].
+
+  Take the uniform cyclic orbit of a.  This artificial energy ensemble has
+  full support, exact total S, equal directional means, cyclic invariance,
+  individually admissible low-degree line profiles, and the genuine
+  divisibility a_j in 2p Z, but
+
+      E |sum_j w_j a_j|^2 = 4p^2 r < 3p^2(p^2-1)/16.
+
+  Thus no proof using only positivity/integrality, ENERGY, directional
+  symmetry, full support, separate low-degree line-profile admissibility, or
+  2p-divisibility can establish QVAR.  A successful profile proof must use the
+  cross-direction coefficient kernels and simultaneous Boolean ridge
+  reconstruction, or an equivalent constraint coupling the profiles.
 
 Writes evidence/e1_gmin_m4_prop15589.json.
 """
@@ -392,6 +437,62 @@ def profile_energy_total(p: int) -> int:
     return p * (q - 1) // 4
 
 
+def normalized_profile_energy_total(p: int) -> int:
+    """Sum of b_L=a_L/(2p), proved integral when p=3 mod 4."""
+    if p % 4 != 3:
+        raise ValueError("requires p=3 mod 4")
+    return (p * p - 1) // 8
+
+
+def normalized_quartic_variance_threshold(p: int) -> Fraction:
+    """QVAR after writing Z_psi=2p B."""
+    if p % 4 != 3:
+        raise ValueError("requires p=3 mod 4")
+    return Fraction(3 * (p * p - 1), 64)
+
+
+def quartic_pointwise_parity(p: int) -> int:
+    """Parity of B=Z_psi/(2p) forced by sum b_L=(p^2-1)/8."""
+    return normalized_profile_energy_total(p) % 2
+
+
+def theorem_F_profile_energy_arithmetic(
+    primes=(7, 11, 19, 23, 31),
+) -> dict:
+    """General 2p-divisibility and parity reduction for p=3 mod 4."""
+    rows = {}
+    ok = True
+    for p in primes:
+        T = normalized_profile_energy_total(p)
+        parity = quartic_pointwise_parity(p)
+        threshold = normalized_quartic_variance_threshold(p)
+        row_ok = (
+            profile_energy_total(p) == 2 * p * T
+            and quartic_variance_floor_threshold(p) == 4 * p * p * threshold
+            and parity == (1 if p % 8 == 3 else 0)
+        )
+        rows[str(p)] = {
+            "normalized_total_T": T,
+            "forced_parity_of_Z_over_2p": parity,
+            "pointwise_B_squared_floor": parity,
+            "normalized_QVAR_threshold": str(threshold),
+            "parity_floor_is_insufficient": Fraction(parity) < threshold,
+            "ok": row_ok,
+        }
+        ok = ok and row_ok and Fraction(parity) < threshold
+    return {
+        "proved_energy_divisibility_2p": bool(ok),
+        "proved_pointwise_parity": bool(ok),
+        "normalized_QVAR": "E|B|^2 >= 3(p^2-1)/64 = 3T/8",
+        "proof": (
+            "Degree(rho)<=k-2<=(p-3)/2 makes the square power sum zero "
+            "mod p; sum h=0 makes its squared norm even. Modulo 2 the "
+            "quartic signs are all 1."
+        ),
+        "by_p": rows,
+    }
+
+
 def k1_quartic_variance(p: int) -> Fraction:
     """Exact E|Z_psi|^2 on the k=1 profile stratum."""
     if p % 4 == 3:
@@ -503,6 +604,172 @@ def theorem_H_odd_coset_spherical_benchmark(
     }
 
 
+def _legendre(a: int, p: int) -> int:
+    """Quadratic character of F_p, extended by zero."""
+    a %= p
+    if a == 0:
+        return 0
+    value = pow(a, (p - 1) // 2, p)
+    return -1 if value == p - 1 else value
+
+
+def admissible_line_profile(p: int, b: int) -> list[int]:
+    """Zero-sum line profile h with ||h||^2=2pb for Theorem I."""
+    if p == 7:
+        witnesses = {
+            # rho=1+s^2 and rho=s respectively, centered by (p-1)/2.
+            1: [-2, -1, 2, 0, 0, 2, -1],
+            2: [-3, -2, -1, 0, 1, 2, 3],
+        }
+        if b not in witnesses:
+            raise ValueError("the p=7 construction uses b in {1,2}")
+        return witnesses[b]
+    if p < 11 or p % 4 != 3:
+        raise ValueError("requires p=3 mod 4 and p>=7")
+
+    if b == 1:
+        coefficients = [1, -1]
+    elif b == 2:
+        coefficients = [1, 1, -1, -1]
+    else:
+        coefficients = [2, -1, -1]
+        for _ in range(b - 3):
+            coefficients.extend((1, -1))
+    if len(coefficients) > p:
+        raise ArithmeticError("too many distinct Legendre shifts")
+    if sum(coefficients) != 0 or sum(u * u for u in coefficients) != 2 * b:
+        raise ArithmeticError("coefficient norm construction failed")
+
+    # Distinct translates of chi have Gram matrix pI-J.  Since sum u_i=0,
+    # this gives ||h||^2=p sum u_i^2=2pb exactly.
+    return [
+        sum(u * _legendre(s - shift, p) for shift, u in enumerate(coefficients))
+        for s in range(p)
+    ]
+
+
+def _degree_from_values_mod_p(values: list[int], p: int) -> int:
+    """Degree (<p) from ordinary finite differences at 0,...,p-1."""
+    row = [value % p for value in values]
+    degree = 0
+    for order in range(p):
+        if any(row):
+            degree = order
+        if len(row) == 1:
+            break
+        row = [(row[j + 1] - row[j]) % p for j in range(len(row) - 1)]
+    return degree
+
+
+def coarse_profile_counterexample(p: int) -> dict:
+    """Cyclic full-support energy ensemble violating QVAR for p=3 mod 4."""
+    if p < 7 or p % 4 != 3:
+        raise ValueError("requires p=3 mod 4 and p>=7")
+    m = (p + 1) // 2
+    t = (p - 3) // 4
+    T = (p * p - 1) // 8
+    parity = T % 2
+    high_count = t + 1
+    high_plus = (high_count + parity) // 2
+    high_minus = (high_count - parity) // 2
+    if high_plus + high_minus != high_count:
+        raise ArithmeticError("balanced profile construction failed")
+
+    b = [t] * m
+    for j in range(0, 2 * high_plus, 2):
+        b[j] += 1
+    for j in range(1, 2 * high_minus + 1, 2):
+        b[j] += 1
+    a = [2 * p * value for value in b]
+    signed = sum(
+        (1 if j % 2 == 0 else -1) * value
+        for j, value in enumerate(a)
+    )
+    variance = signed * signed
+    threshold = quartic_variance_floor_threshold(p)
+    profiles = {value: admissible_line_profile(p, value) for value in set(b)}
+    profile_degrees = {
+        b_value: _degree_from_values_mod_p(
+            [value + (p - 1) // 2 for value in h], p
+        )
+        for b_value, h in profiles.items()
+    }
+    profiles_ok = all(
+        len(h) == p
+        and sum(h) == 0
+        and sum(value * value for value in h) == 2 * p * b_value
+        and min(h) >= -(p + 1) // 2
+        and max(h) <= (p - 1) // 2
+        and profile_degrees[b_value] <= m - 2
+        for b_value, h in profiles.items()
+    )
+    return {
+        "m": m,
+        "t": t,
+        "T": T,
+        "parity": parity,
+        "b": b,
+        "a": a,
+        "sum_a": sum(a),
+        "expected_sum_a": profile_energy_total(p),
+        "signed_energy_magnitude": abs(signed),
+        "cyclic_orbit_variance": variance,
+        "QVAR_threshold": threshold,
+        "full_support": all(value > 0 for value in a),
+        "all_energies_divisible_by_2p": all(
+            value % (2 * p) == 0 for value in a
+        ),
+        "line_profile_witnesses": profiles,
+        "line_profile_degrees_mod_p": profile_degrees,
+        "line_profile_degree_bound": m - 2,
+        "all_energies_individually_profile_admissible": profiles_ok,
+        "equal_directional_means_under_cyclic_orbit": True,
+        "violates_QVAR": variance < threshold,
+    }
+
+
+def theorem_I_coarse_profile_constraints_insufficient(
+    primes=(7, 11, 19, 23, 31),
+) -> dict:
+    """Audit the general coarse-profile countermechanism on sample primes."""
+    rows = {}
+    ok = True
+    for p in primes:
+        rec = coarse_profile_counterexample(p)
+        row_ok = (
+            rec["sum_a"] == rec["expected_sum_a"]
+            and rec["full_support"]
+            and rec["all_energies_divisible_by_2p"]
+            and rec["all_energies_individually_profile_admissible"]
+            and rec["equal_directional_means_under_cyclic_orbit"]
+            and rec["signed_energy_magnitude"] == 2 * p * rec["parity"]
+            and rec["violates_QVAR"]
+        )
+        rows[str(p)] = {
+            **rec,
+            "QVAR_threshold": str(rec["QVAR_threshold"]),
+            "ok": row_ok,
+        }
+        ok = ok and row_ok
+    return {
+        "proved_countermechanism": bool(ok),
+        "scope": "all primes p=3 mod 4, p>=7",
+        "constraints_shown_insufficient": [
+            "nonnegative integer directional energies",
+            "pointwise conserved total ENERGY",
+            "full directional support",
+            "cyclic direction symmetry and equal means",
+            "separate degree-(m-2) admissibility of every line profile",
+            "the genuine divisibility a_L in 2p Z",
+        ],
+        "missing_kind_of_input": (
+            "cross-direction coefficient kernels and simultaneous Boolean "
+            "ridge reconstruction, or an equivalent profile coupling"
+        ),
+        "by_p": rows,
+    }
+
+
 def leftover_flags_unchanged() -> bool:
     from e1_gmin_m4_prop15278 import phi_F_ge_6_proved_general
 
@@ -515,8 +782,10 @@ def main() -> dict:
     C = theorem_C_phi_multiplicity_reduction()
     D = theorem_D_variance_alternatives()
     E = theorem_E_exceptional_quartic_variance()
+    FA = theorem_F_profile_energy_arithmetic()
     FG = theorem_FG_profile_energy_and_low_strata()
     H = theorem_H_odd_coset_spherical_benchmark()
+    I = theorem_I_coarse_profile_constraints_insufficient()
     out = {
         "prop": "15.589",
         "title": "Exact PSL decomposition of Z; one exceptional floor scalar",
@@ -530,10 +799,17 @@ def main() -> dict:
             "exceptional_profile_energy_p3mod4": FG[
                 "proved_profile_energy_identity_p3mod4"
             ],
+            "exceptional_profile_energy_divisible_2p": FA[
+                "proved_energy_divisibility_2p"
+            ],
+            "exceptional_normalized_parity": FA["proved_pointwise_parity"],
             "exceptional_k1_k3_QVAR_all_primes": FG[
                 "proved_k1_k3_QVAR_all_primes"
             ],
             "odd_coset_spherical_reduction": H["proved_reduction"],
+            "coarse_profile_constraints_insufficient": I[
+                "proved_countermechanism"
+            ],
             "lambda_exc_ge_6": False,
             "lambda_min_ge_6_general": False,
         },
@@ -543,8 +819,10 @@ def main() -> dict:
             "C": C,
             "D": D,
             "E": E,
+            "FA": FA,
             "FG": FG,
             "H": H,
+            "I": I,
         },
         "remaining_floor_targets": [
             "lambda_exc=Phi|W_e >= 6",
@@ -563,8 +841,10 @@ def main() -> dict:
     print(f"  Z multiplicity-free: {B['proved']}")
     print(f"  Phi multiplicity reduction: {C['proved']}")
     print(f"  exceptional quartic reduction: {E['proved_reduction']}")
+    print(f"  profile energy divisible by 2p: {FA['proved_energy_divisibility_2p']}")
     print(f"  exceptional k=1,3 strata closed: {FG['proved_k1_k3_QVAR_all_primes']}")
     print(f"  odd-coset spherical reduction: {H['proved_reduction']}")
+    print(f"  coarse profile route killed: {I['proved_countermechanism']}")
     print("  floor still OPEN: k>=4 quartic variance and delta variance bounds")
     return out
 

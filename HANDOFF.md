@@ -1,11 +1,16 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-20 (updated; prior 2026-08-18 content preserved below)
-**Repo:** https://github.com/luckyseoul/quadratic-minmax-limit (`main`)
+**Date:** 2026-08-20 (updated through `e23edef`; prior content preserved below)
+**Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
+**Current branch:** `codex/leftover-moment-attack` at `e23edef`
+**Working tree after that commit:** Prop 15.589 Theorem I adds a general
+coarse-profile countermechanism and the exact `2p` arithmetic reduction;
+92 focused Prop 15.588/15.589 tests pass, but this continuation is not yet
+committed.
 **Statement:** [MathOverflow 413935](https://mathoverflow.net/questions/413935).
 \(\alpha_n=n^{-3/2}\min_{a_{ij}=\pm1}\max_{x=\pm1}\lvert\sum_{i<j}a_{ij}x_ix_j\rvert\).
 
-## 2026-08-20 post-d470078: exact PSL multiplicity reduction
+## Binding status after e23edef: exact PSL and high-stratum reduction
 
 Work on `codex/leftover-moment-attack` gives the multiplicity-free
 decomposition
@@ -36,6 +41,12 @@ stratum for every prime.  Thus the exceptional scalar remains open only on
 the union `k>=4`; the principal delta-variance target is unchanged.  See the
 updated reduction note and Prop 15.589.
 
+The same degree theorem now gives exact arithmetic on every genuine profile:
+`a_L in 2p Z`.  With `b_L=a_L/(2p)` and `T=(p^2-1)/8`, one has
+`sum b_L=T` and `Z_psi/(2p)=T (mod 2)`.  Thus QVAR is the integer
+anti-concentration target `E|sum psi(L)b_L|^2 >= 3T/8`.  Parity alone is far
+too weak, but this normalization is binding and explains the p=11 histogram.
+
 There is also an exact lattice-coset reformulation.  Max+ is the first shell
 of the odd coset `y0+2 ker_Z(C-pI)`, not the ordinary lattice's first shell
 (the latter has explicit norm-`p+1` Baer-line vectors).  The radius-sphere
@@ -48,6 +59,18 @@ The full p=11 directional covariance also kills a tempting shortcut: although
 the quartic direction is top for the complete mixture, it is bottom among the
 nonzero modes on k=4 and not top on k=6.  Stratum invariance alone cannot prove
 QVAR by a top-eigenmode argument.
+
+The latest attack kills a broader profile-only shortcut for every
+`p=3 mod 4`, `p>=7`.  There are artificial full-support energy ensembles with
+the exact conserved total, cyclic directional symmetry, equal means, integer
+energies, separately admissible line profiles in every direction, and the
+actual divisibility `a_L in 2p Z`, but quartic variance zero or `4p^2`,
+below QVAR.  The fake profiles can also satisfy the individual polynomial
+degree bound from Prop 15.588.
+Therefore those facts cannot prove the bound even in combination.  Any
+surviving profile argument must use the cross-direction coefficient kernels
+and simultaneous Boolean ridge reconstruction, or an equivalent coupling
+among directions (Prop 15.589 I).
 
 **Settled.** Sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\) (`solution.md`). Paley \(\rho=1\) on \(n=p^2+1\) (`evidence/PROOF_rho_eq_1.md`).
 
@@ -65,15 +88,21 @@ Read `evidence/METHOD_why_500_props_never_moved_a_flag.md` before writing a new
 numbered proposition — it names the loop that produced most of the ~500 that
 never moved a flag, and gives four rules to avoid repeating it.
 
-**Leftover 1** (row below still says "Open, ensemble unnamed" — still true, but
-narrower now): reduces to `var(spec Phi) <= 32(n+10)^2/(n-6)^3` together with
-`mult(lambda_min) >= n`. Both hold at `p=7` (+32.7% slack) and `p=11` (+91.0%
-slack); `p=5` stays a finite check. Proved: no bound using only `dim Z, tr(Phi),
-tr(Phi^2)` can ever close this — the best such bound is `10-16x` too weak, and the
-gap widens with `p`. The variance is computable from leftover 3's own four-point
-tensor: `tr(Phi^2) = 4||M||_F^2 - 3n^2 + 2n^2(n-1)/p^2`, verified exactly at
-`p=5,7,11`. **Single remaining target for this route: bound `||M||_F^2` at
-general `p`.** Detail: `evidence/NOTE_leftover1_variance_multiplicity_route.md`.
+**Leftover 1, current form.**  The older variance-plus-multiplicity route below
+has been refined by Prop 15.589.  Multiplicity is now proved exactly: every
+principal block has degree `n`, and the only smaller block is one exceptional
+degree-`n/2` scalar.  The live route therefore has two separate targets:
+
+1. exceptional QVAR on `k>=4`,
+   `E|Z_psi|^2 >= 3q(q-1)/16` (the `k=1,3` strata are proved); and
+2. the principal sufficient room
+   `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`.
+
+The identity `tr(Phi^2) = 4||M||_F^2 - 3n^2 + 2n^2(n-1)/p^2` remains a live
+way to attack target 2, but bounding `||M||_F^2` alone is no longer the single
+floor target because the exceptional block must be handled by QVAR.  The
+finite `p=5` floor is already checked.  See the PSL reduction note and the
+older `NOTE_leftover1_variance_multiplicity_route.md` for the variance history.
 
 **Leftover 3**: `mu/L` slack grows `0.769 -> 0.746 -> 0.307` (i.e. **growing**
 headroom) from `p=5,7,11`. No structural change, just a third confirming point
@@ -108,14 +137,29 @@ overridden twice.
 
 | Item | Flag | Status |
 |---|---|---|
-| \(\lambda_{\min}(\Phi\rvert_F)\ge6\) \(\Leftrightarrow\langle\delta,\psi\rangle\le2\) | `phi_F_ge_6_proved_general=False` | Open. Ensemble \(Q_\tau\) (or \(D=\lvert H_+\rvert/(2p)\)) unnamed in \(p\). |
+| \(\lambda_{\min}(\Phi)\ge6\) on \(Z\) | `phi_F_ge_6_proved_general=False` | Open. Exceptional QVAR remains only on `k>=4`; principal blocks retain the delta-variance target. |
 | Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open. Affine and even \(k\le4p-2\) are closed (15.179, 15.236, 15.237). |
 | Type I, Max− not two-level \(\{-1,-3\}\) | `type_I_multilevel_bad_case_ND_closed=False` | Open. Remainder is \(A_{\mathrm{full}}\). |
 | Lemma D | True | Closed. Do not unflip. |
 
-**Next identity.** Name ensemble \(Q(r)=E[u(\xi)u(r\xi)]\) on the 15.290 Paley×norm types by a Gauss/Jacobi (or equivalent) formula in \(p\), with a fail-when-wrong test; or prove \(\langle\delta,\psi\rangle\le2\) for every even \(\psi\notin\{1,\chi\}\) without that name. Then import `phi_F_ge_6` only if the pairing bound follows. Do not import from a \(p=5\) evaluation or a two-point interpolant.
+**Next attack.**  For the exceptional block, prove QVAR directly on the union
+`k>=4`, or prove the equivalent odd-coset degree-four harmonic excess is at
+least `-q(q-1)(q-11)/(16(q+5))`.  Do not use a pointwise/orbitwise floor,
+restricted-stratum PSD, ordinary minimum-shell design, or “quartic is top on
+every stratum”: each is now disproved.  Positivity, conserved total, cyclic
+symmetry, full support, and coarse divisibility are also insufficient; a
+profile proof must now exploit the cross-direction coefficient kernels and
+simultaneous Boolean realizability.  In parallel, an upper bound on
+`||M||_F^2` may close the principal delta room.  Import `phi_F_ge_6` only when
+both block types are controlled generally, never from finite-p data.
 
 ## Floor (leftover 1)
+
+**Current block decomposition.** `Z=W_e direct-sum principal series`; QVAR is
+the exact exceptional condition and the delta room is the current sufficient
+principal condition.  The formulas below are the older equivalent Fourier
+description and remain useful, but “name all of Q(r)” is no longer the binding
+next step.
 
 Wick: \(Q(\pm1)=8q^2\), off-diagonal \(4q^2\). \(\delta=4-Q/q^2\). Floor \(S_\square\ge6q^2\Leftrightarrow\langle\delta,\psi\rangle\le2\).
 
@@ -165,7 +209,10 @@ deleted so the reversal is traceable.
 | `evidence/share/denseness_path_package.md` | Stand-alone path; § Caveats |
 | `evidence/SESSION_HANDOFF_2026-08-18_leftovers.md` | Named identities 15.550–15.585 |
 | `evidence/TECHNICAL_NOTES_2026-08-20_maxplus_p11.md` | p=11 enumeration, derivations, corrections (2026-08-20) |
-| `evidence/NOTE_leftover1_variance_multiplicity_route.md` | Leftover 1 reduction, single remaining target |
+| `evidence/NOTE_2026-08-20_psl_and_stratum_floor_reduction.md` | Binding PSL decomposition, QVAR, low-stratum theorem, odd-coset route, and killed routes |
+| `evidence/quartic_profile_attack.py` | Direct quartic/profile-energy diagnostic |
+| `evidence/maxplus_p11/directional_energy_covariance_p11.{py,json}` | Full p=11 directional covariance and top-mode counterexample |
+| `evidence/NOTE_leftover1_variance_multiplicity_route.md` | Historical principal variance route and `||M||_F^2` target |
 | `evidence/METHOD_why_500_props_never_moved_a_flag.md` | Read before writing a new numbered proposition |
 | `evidence/maxplus_p11/` | Scripts + logs for the p=11 spectrum/moment computations |
 | `LONG_HORIZON_GOAL.md` | Terminal states |
@@ -175,4 +222,7 @@ Large `.npy` arrays (Max+ at p=11, 4.5 GB each) are **not in git** — they live
 original computation. Scripts there have hardcoded `/tmp/e1work` paths; repoint
 before rerunning.
 
-**HEAD:** `d877359` (tracks stranded props + method note; ancestor chain includes 15.585 → 15.588 → p=11 enumeration).
+**HEAD:** `e23edef` on `codex/leftover-moment-attack` (PSL decomposition,
+low-stratum QVAR theorem, odd-coset benchmark, and p=11 covariance evidence).
+The current uncommitted continuation adds the handoff corrections and the
+general coarse-profile countermechanism in Prop 15.589 I.

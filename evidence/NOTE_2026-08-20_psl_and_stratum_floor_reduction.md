@@ -142,6 +142,25 @@ of plus/minus entries then give the second pointwise identity
 sum_L a_L(y) = p(p^2-1)/4.                  (ENERGY)
 ```
 
+There is also an exact arithmetic reduction.  After changing the global sign
+assume `y_inf=1` and write `h_L=rhohat_L-(p-1)/2`.  Prop 15.588 gives
+`deg rho_L <= k-2 <= (p-3)/2`, so `rho_L^2` has degree at most `p-3`.
+The power sums of every polynomial of degree below `p-1` vanish modulo `p`;
+hence `a_L=sum h_L^2` is divisible by `p`.  It is even because `sum h_L=0`.
+Thus, pointwise,
+
+```
+a_L = 2p b_L,              b_L in Z_{>=0},
+sum_L b_L = T=(p^2-1)/8,
+B:=Z_psi/(2p)=sum_L psi(L)b_L = T (mod 2).       (ARITH)
+```
+
+QVAR is now the integer anti-concentration statement
+`E B^2 >= 3(p^2-1)/64 = 3T/8`.  The parity floor only gives `B^2>=1` for
+`p=3 mod 8` and permits `B=0` for `p=7 mod 8`, so it does not approach the
+required order-`p^2` moment.  It does explain the p=11 histogram's odd
+multiples of `2p` exactly.
+
 For `k=1`, all energy is on one direction.  For `k=3`, each affine profile is
 a centered permutation of `F_p`, so all three energies equal one third of
 `(ENERGY)`.  The direction character has `(p+1)/4` signs of each kind and every
@@ -282,11 +301,43 @@ kills the ordinary-minimum-shell shortcut.
    proof may still bound the full quartic mode directly, but cannot obtain it
    by asserting that every invariant profile component puts that mode on top.
 
+5. **Coarse profile constraints do not imply QVAR.**  This failure is general,
+   not another finite-p anomaly.  For `p=3 mod 4`, cyclically order the
+   `m=(p+1)/2` square directions so the quartic signs alternate.  Write
+   `p=4t+3` and set `T=(p^2-1)/8`.  Take `t+1` entries of `b` equal to `t` and
+   `t+1` equal to `t+1`, distributed between the two signs so the alternating
+   sum has magnitude `r=T mod 2`.  The uniform cyclic orbit of `a=2p b` has
+   full support, exact total `(ENERGY)`, equal directional means, cyclic
+   symmetry, and the genuine divisibility `a_L in 2p Z`, yet
+
+   ```
+   E|sum_L psi(L) a_L|^2 = 4p^2 r
+                            < 3p^2(p^2-1)/16.
+   ```
+
+   This cannot be repaired by imposing each direction's line-profile rules
+   separately.  Every energy `2pb`, `b in {t,t+1}`, above is the norm of an
+   admissible integer zero-sum profile satisfying the degree bound `m-2`.
+   For `p>=11`, take
+   `h(s)=sum_i u_i chi(s-i)` with `sum u_i=0`, `sum u_i^2=2b`, and
+   `||u||_1<=(p-3)/2`; the translate Gram matrix `pI-J` proves
+   `||h||^2=2pb`, while the l1 bound makes `sigma=1+2h` a valid vector of odd
+   line sums in `[-p,p]`.  Since `chi(s-i)` has degree `m-1` and `sum u_i=0`,
+   its leading term cancels and `deg h<=m-2`.  Explicit witnesses handle p=7.
+
+   Thus positivity/integrality, conservation, symmetry, full support, separate
+   low-degree line-profile admissibility, and actual `2p` divisibility are
+   jointly insufficient.  A surviving proof must exploit the cross-direction
+   coefficient kernels and *simultaneous* Boolean ridge reconstruction, or an
+   equivalent coupling.
+
 ## 8. Live targets
 
 Leftover 1 is now reduced to two explicit inequalities:
 
-1. prove the quartic variance `(QVAR)` on the union of profile strata `k>=4`;
+1. prove the quartic variance `(QVAR)` on the union of profile strata `k>=4`,
+   using a genuine realizability/coupling property rather than the coarse
+   constraints killed in item 5;
 2. prove the principal variance room
    `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`.
 

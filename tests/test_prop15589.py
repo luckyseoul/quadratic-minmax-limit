@@ -80,6 +80,27 @@ def test_p3mod4_profile_energy_conservation_constant(p, total):
     assert p * (p * p - 1) != total
 
 
+@pytest.mark.parametrize("p", [7, 11, 19, 23, 31, 43])
+def test_profile_energy_2p_divisibility_normalization_and_parity(p):
+    T = M.normalized_profile_energy_total(p)
+    assert M.profile_energy_total(p) == 2 * p * T
+    assert M.normalized_quartic_variance_threshold(p) == Fraction(3 * T, 8)
+    assert M.quartic_variance_floor_threshold(p) == (
+        4 * p * p * M.normalized_quartic_variance_threshold(p)
+    )
+    assert M.quartic_pointwise_parity(p) == (1 if p % 8 == 3 else 0)
+    assert Fraction(M.quartic_pointwise_parity(p)) < (
+        M.normalized_quartic_variance_threshold(p)
+    )
+
+
+def test_profile_energy_arithmetic_theorem():
+    FA = M.theorem_F_profile_energy_arithmetic()
+    assert FA["proved_energy_divisibility_2p"], FA
+    assert FA["proved_pointwise_parity"], FA
+    assert all(row["ok"] for row in FA["by_p"].values())
+
+
 def test_low_strata_exact_values_match_censuses():
     assert M.k1_quartic_variance(5) == 500
     assert M.k1_quartic_variance(7) == 7056
@@ -145,6 +166,46 @@ def test_odd_coset_reduction_does_not_claim_the_harmonic_bound():
     assert H["maxplus_is_ordinary_lattice_first_shell"] is False
     assert H["ordinary_minimum_shell_design_route_applies"] is False
     assert H["sufficient_harmonic_target"].endswith(">= 0")
+
+
+@pytest.mark.parametrize("p", [7, 11, 19, 23, 31, 43])
+def test_coarse_profile_counterexample_has_all_claimed_constraints(p):
+    rec = M.coarse_profile_counterexample(p)
+    assert rec["m"] == (p + 1) // 2
+    assert rec["sum_a"] == M.profile_energy_total(p)
+    assert rec["full_support"]
+    assert rec["all_energies_divisible_by_2p"]
+    assert rec["all_energies_individually_profile_admissible"]
+    assert rec["equal_directional_means_under_cyclic_orbit"]
+    assert rec["signed_energy_magnitude"] == 2 * p * rec["parity"]
+    assert rec["cyclic_orbit_variance"] < rec["QVAR_threshold"]
+    assert rec["violates_QVAR"]
+
+    t = (p - 3) // 4
+    assert set(rec["b"]) == {t, t + 1}
+    assert rec["b"].count(t) == rec["b"].count(t + 1) == (p + 1) // 4
+    for b, h in rec["line_profile_witnesses"].items():
+        assert len(h) == p
+        assert sum(h) == 0
+        assert sum(value * value for value in h) == 2 * p * b
+        assert min(h) >= -(p + 1) // 2
+        assert max(h) <= (p - 1) // 2
+        sigma = [1 + 2 * value for value in h]
+        assert sum(sigma) == p
+        assert all(-p <= value <= p and value % 2 for value in sigma)
+        assert rec["line_profile_degrees_mod_p"][b] <= (
+            rec["line_profile_degree_bound"]
+        )
+
+
+def test_coarse_profile_countermechanism_kills_only_coarse_route():
+    I = M.theorem_I_coarse_profile_constraints_insufficient()
+    assert I["proved_countermechanism"], I
+    assert "Boolean ridge reconstruction" in I["missing_kind_of_input"]
+    assert "coefficient kernels" in I["missing_kind_of_input"]
+    assert all(row["ok"] for row in I["by_p"].values())
+    with pytest.raises(ValueError):
+        M.coarse_profile_counterexample(13)
 
 
 @pytest.mark.parametrize("p", [5, 7])
