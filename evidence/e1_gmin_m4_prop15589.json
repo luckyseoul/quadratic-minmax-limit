@@ -18,6 +18,7 @@
     "top_profile_degreewise_QVAR_false": true,
     "k4_empty_p_ge_41": true,
     "low_activity_empty_when_p_gt_4k2": true,
+    "k4_QVAR_closed_p3mod4": true,
     "lambda_exc_ge_6": false,
     "lambda_min_ge_6_general": false
   },
@@ -1042,6 +1043,68 @@
           "boundary_check": true
         }
       }
+    },
+    "N": {
+      "proved": true,
+      "finite_coefficient_sieve": {
+        "19": {
+          "n_direction_subsets": 210,
+          "energy_partitions": [
+            [
+              10,
+              10,
+              10,
+              15
+            ]
+          ],
+          "total_coefficient_candidates": 0,
+          "k4_empty": true
+        },
+        "23": {
+          "n_direction_subsets": 495,
+          "energy_partitions": [
+            [
+              16,
+              16,
+              16,
+              18
+            ],
+            [
+              16,
+              16,
+              17,
+              17
+            ]
+          ],
+          "total_coefficient_candidates": 0,
+          "k4_empty": true
+        },
+        "31": {
+          "n_direction_subsets": 1820,
+          "energy_partitions": [
+            [
+              30,
+              30,
+              30,
+              30
+            ]
+          ],
+          "total_coefficient_candidates": 0,
+          "k4_empty": true
+        }
+      },
+      "nonempty_primes": [
+        7,
+        11
+      ],
+      "nonempty_QVAR_moments": {
+        "7": "44/15",
+        "11": "39/2"
+      },
+      "analytic_empty_range": "p>=41",
+      "zero_top_scalar_excluded_by_energy": true,
+      "conclusion": "for p=3 mod 4, k=4 exists only at p=7,11 and clears QVAR at both",
+      "remaining_QVAR_strata_p3mod4": "k>=5 for p>=19"
     }
   },
   "remaining_floor_targets": [

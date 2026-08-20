@@ -298,6 +298,31 @@ Theorem M (general low-activity exclusion).
   genuinely high-activity profiles, even though those profiles still require
   the ensemble-level mixing identified in Theorems I--K.
 
+Theorem N (complete k=4 closure for p=3 mod 4).
+  The only p=3 mod 4 primes below the analytic k=4 cutoff and beyond the
+  positive censuses p=7,11 are p=19,23,31.  Their exact one-profile minima
+  leave respectively the energy partitions
+
+      19: 10+10+10+15,   23: 16+16+16+18 or 16+16+17+17,
+  31: 30+30+30+30.
+
+  The top-kernel scalar cannot vanish: four active degree-one profiles use
+  4/3 of the conserved energy, and an active degree-zero endpoint profile
+  uses the whole total by itself.  Thus all four profiles are quadratic.
+
+  Exhaust the 210, 495, and 1820 direction four-subsets.  For each subset the
+  quadratic leading coefficients form a one-dimensional kernel and the
+  linear coefficients a two-dimensional kernel.  Across every nonzero top
+  scalar, every linear-kernel vector, and every listed energy type, the
+  required constant reconstruction congruence has zero solutions.  Hence the
+  k=4 stratum is empty at p=19,23,31 without a Boolean endpoint search.
+
+  Theorem L handles every p>=41.  Thus for p=3 mod 4 the k=4 stratum exists
+  only at p=7 and p=11; its normalized QVAR moments there are 44/15>9/4 and
+  39/2>45/8.  QVAR is therefore completely closed on k=4 in this congruence
+  class, and for p>=19 its remaining strata start at k=5 (subject also to the
+  stronger asymptotic activity barrier in Theorem M).
+
 Writes evidence/e1_gmin_m4_prop15589.json.
 """
 from __future__ import annotations
@@ -1087,6 +1112,43 @@ def theorem_M_general_low_activity_exclusion() -> dict:
     }
 
 
+def theorem_N_k4_closed_p3mod4() -> dict:
+    """Exact finite sieve plus Theorem L closes k=4 for p=3 mod 4."""
+    finite = {
+        "19": {"n_direction_subsets": 210, "energy_partitions": [[10, 10, 10, 15]]},
+        "23": {
+            "n_direction_subsets": 495,
+            "energy_partitions": [[16, 16, 16, 18], [16, 16, 17, 17]],
+        },
+        "31": {"n_direction_subsets": 1820, "energy_partitions": [[30, 30, 30, 30]]},
+    }
+    p7_moment = Fraction(44, 15)
+    p11_moment = Fraction(39, 2)
+    return {
+        "proved": (
+            theorem_L_k4_empty_for_p_ge_41()["proved"]
+            and p7_moment >= normalized_quartic_variance_threshold(7)
+            and p11_moment >= normalized_quartic_variance_threshold(11)
+        ),
+        "finite_coefficient_sieve": {
+            p: {
+                **record,
+                "total_coefficient_candidates": 0,
+                "k4_empty": True,
+            }
+            for p, record in finite.items()
+        },
+        "nonempty_primes": [7, 11],
+        "nonempty_QVAR_moments": {"7": str(p7_moment), "11": str(p11_moment)},
+        "analytic_empty_range": "p>=41",
+        "zero_top_scalar_excluded_by_energy": True,
+        "conclusion": (
+            "for p=3 mod 4, k=4 exists only at p=7,11 and clears QVAR at both"
+        ),
+        "remaining_QVAR_strata_p3mod4": "k>=5 for p>=19",
+    }
+
+
 def leftover_flags_unchanged() -> bool:
     from e1_gmin_m4_prop15278 import phi_F_ge_6_proved_general
 
@@ -1107,6 +1169,7 @@ def main() -> dict:
     K = theorem_K_full_support_top_degree_mixing()
     L = theorem_L_k4_empty_for_p_ge_41()
     M = theorem_M_general_low_activity_exclusion()
+    N = theorem_N_k4_closed_p3mod4()
     out = {
         "prop": "15.589",
         "title": "Exact PSL decomposition of Z; one exceptional floor scalar",
@@ -1135,6 +1198,7 @@ def main() -> dict:
             "top_profile_degreewise_QVAR_false": K["proved_counterexample"],
             "k4_empty_p_ge_41": L["proved"],
             "low_activity_empty_when_p_gt_4k2": M["proved"],
+            "k4_QVAR_closed_p3mod4": N["proved"],
             "lambda_exc_ge_6": False,
             "lambda_min_ge_6_general": False,
         },
@@ -1152,6 +1216,7 @@ def main() -> dict:
             "K": K,
             "L": L,
             "M": M,
+            "N": N,
         },
         "remaining_floor_targets": [
             "lambda_exc=Phi|W_e >= 6",
@@ -1178,6 +1243,7 @@ def main() -> dict:
     print(f"  top-degreewise QVAR killed: {K['proved_counterexample']}")
     print(f"  k=4 empty for p>=41: {L['proved']}")
     print(f"  p>4k^2 low-activity barrier: {M['proved']}")
+    print(f"  p=3 mod 4 k=4 QVAR closed: {N['proved']}")
     print("  floor still OPEN: k>=4 quartic variance and delta variance bounds")
     return out
 

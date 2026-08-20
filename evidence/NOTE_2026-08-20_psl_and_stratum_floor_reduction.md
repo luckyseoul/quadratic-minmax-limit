@@ -283,6 +283,30 @@ Since `k=1,3` already clear QVAR, the asymptotic exceptional problem is now
 confined to genuinely high-activity profiles.  This does not itself control
 their signed energy imbalance.
 
+For `p=3 mod 4`, the finite gap before the analytic cutoff can also be closed.
+At `p=19,23,31`, the exact quadratic energy partitions are respectively
+
+```
+10+10+10+15;
+16+16+16+18 or 16+16+17+17;
+30+30+30+30.
+```
+
+A zero degree-two kernel scalar is impossible: four active linear profiles
+already use `4/3` of the conserved energy, while one active degree-zero
+endpoint profile uses the whole total.  For a nonzero scalar, exhaust every
+direction four-subset (210, 495, and 1820), every top scalar, the full
+two-dimensional degree-one kernel, and every displayed energy type.  The
+constant reconstruction congruence has zero candidates in every case, before
+any Boolean endpoint search.  Reproducible certificate:
+`evidence/k4_p3mod4_coefficient_sieve.{py,json}`.
+
+Consequently, for `p=3 mod 4`, the `k=4` stratum exists only at `p=7,11`.
+Its normalized moments are `44/15>9/4` and `39/2>45/8`, so QVAR is completely
+closed on `k=4` in this congruence class.  For `p>=19`, the remaining QVAR
+union starts at `k=5`, with the stronger `k>=sqrt(p)/2` restriction
+asymptotically.
+
 ## 6. Odd-coset shell and spherical benchmark
 
 There is a useful lattice reformulation, with one important trap.  Set

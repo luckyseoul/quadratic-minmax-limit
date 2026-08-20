@@ -103,6 +103,14 @@ works at arbitrary profile degree: a `k>=4` stratum is empty whenever
 exceptional scalar is therefore asymptotically a high-activity problem
 (Prop 15.589 M).
 
+For `p=19,23,31`, the exact energy partitions and degree-2/degree-1
+coefficient kernels leave zero constant-compatible candidates on all
+`210,495,1820` direction subsets, respectively.  Together with the `p>=41`
+barrier, this proves that when `p=3 mod 4`, `k=4` exists only at `p=7,11`;
+its QVAR moment clears the target at both.  Thus the `k=4` contribution is
+fully closed in this congruence class, and for `p>=19` QVAR starts at `k=5`
+(Prop 15.589 N).
+
 **Settled.** Sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\) (`solution.md`). Paley \(\rho=1\) on \(n=p^2+1\) (`evidence/PROOF_rho_eq_1.md`).
 
 **Not settled.** \(L=\lim\alpha_n=1/2\). That needs E(1): Paley \(C\) is a \(\Phi\)-minimizer for every prime \(p\ge5\). Soft-close from sandwich plus denseness, without E(1), is not a proof.

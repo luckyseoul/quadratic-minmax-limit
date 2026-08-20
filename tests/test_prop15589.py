@@ -302,6 +302,26 @@ def test_general_weil_energy_barrier_excludes_low_activity():
     assert not M.weil_activity_barrier_excludes(1009, 16)
 
 
+def test_k4_is_completely_closed_for_p3mod4():
+    N = M.theorem_N_k4_closed_p3mod4()
+    assert N["proved"], N
+    assert N["nonempty_primes"] == [7, 11]
+    assert N["nonempty_QVAR_moments"] == {"7": "44/15", "11": "39/2"}
+    assert all(
+        record["k4_empty"] and record["total_coefficient_candidates"] == 0
+        for record in N["finite_coefficient_sieve"].values()
+    )
+
+    data = json.loads(
+        (Path(__file__).parents[1] / "evidence" /
+         "k4_p3mod4_coefficient_sieve.json").read_text()
+    )
+    assert data["19"]["coefficient_candidate_histogram"] == {"0": 210}
+    assert data["23"]["coefficient_candidate_histogram"] == {"0": 495}
+    assert data["31"]["coefficient_candidate_histogram"] == {"0": 1820}
+    assert all(record["k4_empty"] for record in data.values())
+
+
 @pytest.mark.parametrize("p", [5, 7])
 def test_square_affine_line_is_a_shorter_ordinary_lattice_vector(p):
     C = paley_conference_prime_power(p)
