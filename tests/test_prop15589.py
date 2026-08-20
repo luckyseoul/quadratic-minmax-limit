@@ -266,6 +266,30 @@ def test_full_support_requires_top_degree_mixing():
     )
 
 
+@pytest.mark.parametrize(
+    "p,minimum",
+    [(7, 1), (11, 3), (19, 10), (23, 16), (31, 30),
+     (41, 54), (43, 60), (47, 74), (53, 96), (59, 119), (61, 122)],
+)
+def test_exact_minimum_quadratic_profile_energy(p, minimum):
+    assert M.quadratic_profile_min_b(p) == minimum
+
+
+def test_quadratic_energy_barrier_makes_k4_empty_from_p41():
+    L = M.theorem_L_k4_empty_for_p_ge_41()
+    assert L["proved"], L
+    assert L["scope"] == "every odd prime p>=41"
+    assert L["analytic_range"]["first_possible_prime"] == 67
+    assert all(
+        row["ok"] and row["four_profiles_exceed_total"]
+        for row in L["finite_exact_range"].values()
+    )
+    assert 4 * M.quadratic_profile_min_b(31) == (31 * 31 - 1) // 8
+    assert 4 * M.quadratic_profile_min_b(37) < (37 * 37 - 1) // 8
+    with pytest.raises(ValueError):
+        M.quadratic_profile_min_b(5)
+
+
 @pytest.mark.parametrize("p", [5, 7])
 def test_square_affine_line_is_a_shorter_ordinary_lattice_vector(p):
     C = paley_conference_prime_power(p)

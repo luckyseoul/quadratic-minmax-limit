@@ -16,6 +16,7 @@
     "coarse_profile_constraints_insufficient": true,
     "active_subsetwise_QVAR_false": true,
     "top_profile_degreewise_QVAR_false": true,
+    "k4_empty_p_ge_41": true,
     "lambda_exc_ge_6": false,
     "lambda_min_ge_6_general": false
   },
@@ -948,6 +949,57 @@
       },
       "route_killed": "QVAR separately on actual top-profile-degree or on every leading-coefficient projective class",
       "surviving_requirement": "mix adjacent profile-degree families in their exact ensemble proportions"
+    },
+    "L": {
+      "proved": true,
+      "scope": "every odd prime p>=41",
+      "finite_exact_range": {
+        "41": {
+          "minimum_quadratic_b": 54,
+          "normalized_total_T": 210,
+          "four_profiles_exceed_total": true,
+          "ok": true
+        },
+        "43": {
+          "minimum_quadratic_b": 60,
+          "normalized_total_T": 231,
+          "four_profiles_exceed_total": true,
+          "ok": true
+        },
+        "47": {
+          "minimum_quadratic_b": 74,
+          "normalized_total_T": 276,
+          "four_profiles_exceed_total": true,
+          "ok": true
+        },
+        "53": {
+          "minimum_quadratic_b": 96,
+          "normalized_total_T": 351,
+          "four_profiles_exceed_total": true,
+          "ok": true
+        },
+        "59": {
+          "minimum_quadratic_b": 119,
+          "normalized_total_T": 435,
+          "four_profiles_exceed_total": true,
+          "ok": true
+        },
+        "61": {
+          "minimum_quadratic_b": 122,
+          "normalized_total_T": 465,
+          "four_profiles_exceed_total": true,
+          "ok": true
+        }
+      },
+      "analytic_range": {
+        "first_possible_prime": 67,
+        "profile_energy_lower_bound": "(p^2-1)(p-2sqrt(p))/12",
+        "quarter_total": "p(p^2-1)/16",
+        "strict_inequality_reason": "p>64"
+      },
+      "linear_profile_energy": "p(p^2-1)/12",
+      "conclusion": "the k=4 Max+ profile stratum is empty for p>=41",
+      "remaining_k4_primes": "p<=37"
     }
   },
   "remaining_floor_targets": [

@@ -249,6 +249,38 @@ Theorem K (QVAR is not top-profile-degreewise).
   neither induction on actual profile degree nor a separate bound on each
   leading-coefficient class can prove the exceptional floor.
 
+Theorem L (the k=4 stratum is empty for every prime p>=41).
+  An active k=4 profile has reduced degree at most two.  A degree-zero active
+  profile can only mix the two endpoint lifts of the same residue; zero sum
+  then gives it the entire conserved energy, so it forces k=1 rather than
+  k=4.  A degree-one profile is a permutation of F_p and has centered energy
+  p(p^2-1)/12, already more than one quarter of the conserved total
+  p(p^2-1)/4.
+
+  Complete the square in a degree-two profile.  Its value multiplicities are
+
+      #{s:a s^2+c=v} = 1 + chi(a) chi(v-c).
+
+  If z(v) is the centered representative of v, replacing an endpoint lift
+  can only increase z(v)^2.  Therefore its energy is at least
+
+      p(p^2-1)/12 + eps sum_v z(v)^2 chi(v-c).
+
+  The nonzero Fourier coefficients of z^2 are
+
+      p(-1)^r cos(pi r/p)/(2 sin^2(pi r/p)),
+
+  while every nonzero Fourier coefficient of chi has modulus sqrt(p).  The
+  triangle inequality and sum csc^2(pi r/p)=(p^2-1)/3 give the lower bound
+
+      (p^2-1)(p-2 sqrt(p))/12.
+
+  This is strictly greater than p(p^2-1)/16 when p>64.  Exact enumeration of
+  the two possible chi(a) classes and p constant shifts gives normalized
+  minimum energies b=a_L/(2p) equal to 54,60,74,96,119,122 at
+  p=41,43,47,53,59,61; each has 4b>(p^2-1)/8.  Four active profiles would
+  therefore exceed the conserved total.  Hence k=4 is empty for all p>=41.
+
 Writes evidence/e1_gmin_m4_prop15589.json.
 """
 from __future__ import annotations
@@ -926,6 +958,83 @@ def theorem_K_full_support_top_degree_mixing() -> dict:
     }
 
 
+def quadratic_profile_min_b(p: int) -> int:
+    """Exact minimum a_L/(2p) among admissible active quadratic profiles.
+
+    Completing the square reduces the value distribution to the two choices
+    chi(a)=+/-1 and a constant shift.  The actual integer lift lies in
+    [-(p+1)/2,(p-1)/2].  Relative to centered representatives, only the top
+    endpoint has a second lift; using it lowers the sum by p and raises the
+    squared norm by p.
+    """
+    if p < 7 or p % 2 == 0:
+        raise ValueError("requires an odd prime p>=7")
+    midpoint = (p - 1) // 2
+    centered = [value if value <= midpoint else value - p for value in range(p)]
+    chi = [0] + [
+        1 if pow(value, (p - 1) // 2, p) == 1 else -1
+        for value in range(1, p)
+    ]
+    best = None
+    for leading_class in (-1, 1):
+        base_counts = [
+            1 if value == 0 else 2 if chi[value] == leading_class else 0
+            for value in range(p)
+        ]
+        for constant in range(p):
+            counts = [base_counts[(value - constant) % p] for value in range(p)]
+            standard_sum = sum(
+                counts[value] * centered[value] for value in range(p)
+            )
+            if standard_sum % p:
+                raise RuntimeError("centered lift sum is not divisible by p")
+            endpoint_replacements = standard_sum // p
+            if not 0 <= endpoint_replacements <= counts[midpoint]:
+                continue
+            energy = sum(
+                counts[value] * centered[value] ** 2 for value in range(p)
+            ) + endpoint_replacements * p
+            if energy % (2 * p):
+                raise RuntimeError("quadratic profile energy is not in 2p Z")
+            normalized = energy // (2 * p)
+            best = normalized if best is None else min(best, normalized)
+    if best is None:
+        raise RuntimeError("no admissible active quadratic profile")
+    return best
+
+
+def theorem_L_k4_empty_for_p_ge_41() -> dict:
+    """Fourier energy barrier plus six exact small-prime checks."""
+    finite = {41: 54, 43: 60, 47: 74, 53: 96, 59: 119, 61: 122}
+    rows = {}
+    ok = True
+    for p, expected in finite.items():
+        minimum = quadratic_profile_min_b(p)
+        total = (p * p - 1) // 8
+        row_ok = minimum == expected and 4 * minimum > total
+        rows[str(p)] = {
+            "minimum_quadratic_b": minimum,
+            "normalized_total_T": total,
+            "four_profiles_exceed_total": 4 * minimum > total,
+            "ok": row_ok,
+        }
+        ok = ok and row_ok
+    return {
+        "proved": bool(ok),
+        "scope": "every odd prime p>=41",
+        "finite_exact_range": rows,
+        "analytic_range": {
+            "first_possible_prime": 67,
+            "profile_energy_lower_bound": "(p^2-1)(p-2sqrt(p))/12",
+            "quarter_total": "p(p^2-1)/16",
+            "strict_inequality_reason": "p>64",
+        },
+        "linear_profile_energy": "p(p^2-1)/12",
+        "conclusion": "the k=4 Max+ profile stratum is empty for p>=41",
+        "remaining_k4_primes": "p<=37",
+    }
+
+
 def leftover_flags_unchanged() -> bool:
     from e1_gmin_m4_prop15278 import phi_F_ge_6_proved_general
 
@@ -944,6 +1053,7 @@ def main() -> dict:
     I = theorem_I_coarse_profile_constraints_insufficient()
     J = theorem_J_p11_k4_active_subset_mixing()
     K = theorem_K_full_support_top_degree_mixing()
+    L = theorem_L_k4_empty_for_p_ge_41()
     out = {
         "prop": "15.589",
         "title": "Exact PSL decomposition of Z; one exceptional floor scalar",
@@ -970,6 +1080,7 @@ def main() -> dict:
             ],
             "active_subsetwise_QVAR_false": J["proved_counterexample"],
             "top_profile_degreewise_QVAR_false": K["proved_counterexample"],
+            "k4_empty_p_ge_41": L["proved"],
             "lambda_exc_ge_6": False,
             "lambda_min_ge_6_general": False,
         },
@@ -985,6 +1096,7 @@ def main() -> dict:
             "I": I,
             "J": J,
             "K": K,
+            "L": L,
         },
         "remaining_floor_targets": [
             "lambda_exc=Phi|W_e >= 6",
@@ -1009,6 +1121,7 @@ def main() -> dict:
     print(f"  coarse profile route killed: {I['proved_countermechanism']}")
     print(f"  active-subsetwise QVAR killed: {J['proved_counterexample']}")
     print(f"  top-degreewise QVAR killed: {K['proved_counterexample']}")
+    print(f"  k=4 empty for p>=41: {L['proved']}")
     print("  floor still OPEN: k>=4 quartic variance and delta variance bounds")
     return out
 

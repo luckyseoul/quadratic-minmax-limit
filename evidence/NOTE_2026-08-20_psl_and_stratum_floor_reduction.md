@@ -217,6 +217,51 @@ theorem.  Reproducible record:
 
 Reproducible diagnostic: `evidence/quartic_profile_attack.py`.
 
+### 5.1 Eventual emptiness of the k=4 stratum
+
+The degree theorem does give a positive global result for one stratum.  An
+active `k=4` profile has reduced degree at most two.  A degree-zero active
+profile consists of the two endpoint lifts of one residue and consumes the
+entire conserved energy, hence forces `k=1`.  A degree-one profile permutes
+`F_p` and has energy `p(p^2-1)/12`, already greater than one quarter of the
+total `p(p^2-1)/4`.
+
+For a quadratic profile, completing the square gives value multiplicities
+
+```
+#{s : a s^2+c=v} = 1 + chi(a) chi(v-c).
+```
+
+Let `z(v)` be the centered integer representative of `v`.  The alternate
+endpoint lift only increases the squared norm.  The nonzero Fourier
+coefficients of `z^2` are
+
+```
+p (-1)^r cos(pi r/p) / (2 sin^2(pi r/p)),
+```
+
+and those of `chi` have modulus `sqrt(p)`.  Fourier inversion, the triangle
+inequality, and `sum csc^2(pi r/p)=(p^2-1)/3` therefore give the quadratic
+energy lower bound
+
+```
+(p^2-1)(p-2 sqrt(p))/12 > p(p^2-1)/16       (p>64).
+```
+
+The right side is one quarter of the conserved total.  The only primes from
+41 through 64 have exact normalized quadratic minima `b=a_L/(2p)`
+
+```
+p:     41  43  47  53  59  61
+b_min: 54  60  74  96 119 122,
+```
+
+and each satisfies `4b_min>(p^2-1)/8`.  The exact check is exhaustive because
+only `chi(a)=+/-1` and the `p` constant shifts affect the value distribution.
+Thus four active profiles exceed the total for every prime `p>=41`, proving
+that the `k=4` stratum is empty in that range.  This result does **not** apply
+to `k>=5`, whose profile degrees are larger.
+
 ## 6. Odd-coset shell and spherical benchmark
 
 There is a useful lattice reformulation, with one important trap.  Set

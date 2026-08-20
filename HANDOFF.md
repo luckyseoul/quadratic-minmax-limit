@@ -89,6 +89,13 @@ the exact mixture to `114771/14903`.  Thus QVAR cannot be proved separately by
 actual profile degree or leading-coefficient class; adjacent degree families
 must be mixed in their exact ensemble proportions (Prop 15.589 K).
 
+There is also one positive high-prime closure.  A centered-Fourier bound for
+nonconstant quadratic line profiles, plus six exact two-character-class
+checks at `p=41,43,47,53,59,61`, proves that every active quadratic profile
+uses more than one quarter of the conserved profile energy for every
+`p>=41`.  Four active profiles are therefore impossible: the `k=4` stratum is
+empty for all primes `p>=41` (Prop 15.589 L).  This does not remove `k>=5`.
+
 **Settled.** Sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\) (`solution.md`). Paley \(\rho=1\) on \(n=p^2+1\) (`evidence/PROOF_rho_eq_1.md`).
 
 **Not settled.** \(L=\lim\alpha_n=1/2\). That needs E(1): Paley \(C\) is a \(\Phi\)-minimizer for every prime \(p\ge5\). Soft-close from sandwich plus denseness, without E(1), is not a proof.
