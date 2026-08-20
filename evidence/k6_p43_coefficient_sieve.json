@@ -1,0 +1,36 @@
+{
+  "p": 43,
+  "n_square_directions": 22,
+  "n_direction_subsets": 74613,
+  "n_cyclic_subset_orbits": 3399,
+  "cyclic_orbit_size_histogram": {
+    "11": 15,
+    "22": 3384
+  },
+  "normalized_total_T": 231,
+  "energy_partition": [
+    38,
+    38,
+    38,
+    38,
+    38,
+    41
+  ],
+  "relevant_type_histogram": {
+    "38": 42,
+    "41": 42
+  },
+  "required_depressed_constant_sum_mod_p": 21,
+  "coefficient_candidate_histogram": {
+    "0": 74613
+  },
+  "total_coefficient_candidates": 0,
+  "endpoint_branches": 0,
+  "boolean_representatives_mod_translation": 0,
+  "eps_plus_count_including_translations": 0,
+  "normalized_quartic_abs_histogram": {},
+  "E_B2": null,
+  "normalized_QVAR_threshold": "693/8",
+  "clears_QVAR": true,
+  "k6_empty": true
+}

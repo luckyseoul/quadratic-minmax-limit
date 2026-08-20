@@ -1493,6 +1493,45 @@ def theorem_S_k6_empty_for_p_ge_47() -> dict:
     }
 
 
+def theorem_T_k6_reduced_to_six_primes() -> dict:
+    """Exact quartic coefficient sieves close p=37,41,43 at k=6."""
+    finite = {
+        "37": {
+            "n_direction_subsets": 27_132,
+            "n_cyclic_subset_orbits": 1_428,
+            "type_tuples_before_coefficient_sieve": 8_189_942_400,
+            "coefficient_candidates": 0,
+            "k6_empty": True,
+        },
+        "41": {
+            "n_direction_subsets": 54_264,
+            "n_cyclic_subset_orbits": 2_586,
+            "type_tuples_before_coefficient_sieve": 235_683_840,
+            "coefficient_candidates": 0,
+            "k6_empty": True,
+        },
+        "43": {
+            "n_direction_subsets": 74_613,
+            "n_cyclic_subset_orbits": 3_399,
+            "energy_partition": [38, 38, 38, 38, 38, 41],
+            "coefficient_candidates": 0,
+            "k6_empty": True,
+        },
+    }
+    return {
+        "proved": (
+            theorem_S_k6_empty_for_p_ge_47()["proved"]
+            and all(row["k6_empty"] for row in finite.values())
+        ),
+        "finite_coefficient_sieve": finite,
+        "remaining_k6_primes": [13, 17, 19, 23, 29, 31],
+        "conclusion": "the k=6 stratum is empty for p=37 and every p>=41",
+        "remaining_exceptional_strata": (
+            "k=6 at p=13,17,19,23,29,31; k>=7 from p=13 onward"
+        ),
+    }
+
+
 def leftover_flags_unchanged() -> bool:
     from e1_gmin_m4_prop15278 import phi_F_ge_6_proved_general
 
@@ -1519,6 +1558,7 @@ def main() -> dict:
     Q = theorem_Q_k5_reduced_to_four_primes()
     R = theorem_R_k5_QVAR_all_primes()
     S = theorem_S_k6_empty_for_p_ge_47()
+    T = theorem_T_k6_reduced_to_six_primes()
     out = {
         "prop": "15.589",
         "title": "Exact PSL decomposition of Z; one exceptional floor scalar",
@@ -1553,6 +1593,7 @@ def main() -> dict:
             "k5_reduced_to_p13_p17_p19_p23": Q["proved"],
             "k5_QVAR_all_primes": R["proved"],
             "k6_empty_p_ge_47": S["proved"],
+            "k6_empty_p37_and_p_ge_41": T["proved"],
             "lambda_exc_ge_6": False,
             "lambda_min_ge_6_general": False,
         },
@@ -1576,11 +1617,12 @@ def main() -> dict:
             "Q": Q,
             "R": R,
             "S": S,
+            "T": T,
         },
         "remaining_floor_targets": [
             "lambda_exc=Phi|W_e >= 6",
             "equivalently E|Z_psi|^2 >= 3q(q-1)/16 for psi^2=chi",
-            "k=6 remains at p=13,17,19,23,29,31,37,41,43; k>=7 remains from p=13",
+            "k=6 remains at p=13,17,19,23,29,31; k>=7 remains from p=13",
             "equivalently bound the degree-4 odd-coset harmonic excess below by the spherical QVAR gap",
             "delta2 <= n(n+10)^2/(6(n-6)^2) for principal minimum",
         ],
@@ -1608,7 +1650,8 @@ def main() -> dict:
     print(f"  k=5 reduced to p=13,17,19,23: {Q['proved']}")
     print(f"  all-prime k=5 QVAR closed: {R['proved']}")
     print(f"  k=6 empty for p>=47: {S['proved']}")
-    print("  floor still OPEN: finite k=6 / general k>=7 QVAR and delta variance")
+    print(f"  k=6 empty at p=37 and p>=41: {T['proved']}")
+    print("  floor still OPEN: six finite k=6 / general k>=7 QVAR and delta variance")
     return out
 
 

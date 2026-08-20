@@ -469,6 +469,29 @@ def test_quartic_energy_barrier_makes_k6_empty_from_p47():
     )
 
 
+def test_k6_is_reduced_to_six_small_primes():
+    T = M.theorem_T_k6_reduced_to_six_primes()
+    assert T["proved"], T
+    assert T["remaining_k6_primes"] == [13, 17, 19, 23, 29, 31]
+    assert T["conclusion"] == "the k=6 stratum is empty for p=37 and every p>=41"
+
+    root = Path(__file__).parents[1] / "evidence"
+    rows = {
+        p: json.loads((root / f"k6_p{p}_coefficient_sieve.json").read_text())
+        for p in (37, 41, 43)
+    }
+    assert rows[37]["total_type_tuples_before_coefficient_sieve"] == 8_189_942_400
+    assert rows[41]["total_type_tuples_before_coefficient_sieve"] == 235_683_840
+    assert rows[43]["energy_partition"] == [38, 38, 38, 38, 38, 41]
+    assert {
+        p: row["n_direction_subsets"] for p, row in rows.items()
+    } == {37: 27_132, 41: 54_264, 43: 74_613}
+    assert all(
+        row["total_coefficient_candidates"] == 0 and row["k6_empty"]
+        for row in rows.values()
+    )
+
+
 @pytest.mark.parametrize("p", [5, 7])
 def test_square_affine_line_is_a_shorter_ordinary_lattice_vector(p):
     C = paley_conference_prime_power(p)

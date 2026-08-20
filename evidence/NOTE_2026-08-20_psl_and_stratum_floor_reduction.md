@@ -379,6 +379,12 @@ complete `p=11,k=6` census already clears QVAR, the residual `k=6` primes are
 `k=7`.  Certificate: `evidence/k6_quartic_energy_probe.py` and
 `k6_quartic_energy_probe_{low,high}.json` (Prop 15.589 S).
 
+Exact coefficient-kernel sieves subsequently eliminate `p=37,41,43` as
+well: every direction subset has zero coefficient-compatible candidate.
+Thus the residual `k=6` primes are now only `13,17,19,23,29,31`.
+Certificates: `evidence/k6_p{37,41,43}_coefficient_sieve.{py,json}`
+(Prop 15.589 T).
+
 ## 6. Odd-coset shell and spherical benchmark
 
 There is a useful lattice reformulation, with one important trap.  Set
@@ -537,13 +543,13 @@ kills the ordinary-minimum-shell shortcut.
 Leftover 1 is now reduced to two explicit inequalities:
 
 1. prove the quartic variance `(QVAR)` on `k=6` at
-   `p=13,17,19,23,29,31,37,41,43` and on `k>=7` from `p=13`,
+   `p=13,17,19,23,29,31` and on `k>=7` from `p=13`,
    using an ensemble-level coupling that mixes active direction configurations
    and adjacent actual-degree families in their exact proportions, rather than
    the pointwise, fixed-subset, or coefficient-class constraints killed above;
    the general energy barrier reduces this asymptotically to
    `k>=sqrt(p)/2`; `k=4,5` are closed for every prime and `k=6` is empty
-   for `p>=47`;
+   for `p=37` and every `p>=41`;
 2. prove the principal variance room
    `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`.
 

@@ -24,6 +24,7 @@
     "k5_reduced_to_p13_p17_p19_p23": true,
     "k5_QVAR_all_primes": true,
     "k6_empty_p_ge_47": true,
+    "k6_empty_p37_and_p_ge_41": true,
     "lambda_exc_ge_6": false,
     "lambda_min_ge_6_general": false
   },
@@ -1451,12 +1452,55 @@
         43
       ],
       "remaining_exceptional_strata": "k=6 at nine primes p=13..43; k>=7 from p=13 onward"
+    },
+    "T": {
+      "proved": true,
+      "finite_coefficient_sieve": {
+        "37": {
+          "n_direction_subsets": 27132,
+          "n_cyclic_subset_orbits": 1428,
+          "type_tuples_before_coefficient_sieve": 8189942400,
+          "coefficient_candidates": 0,
+          "k6_empty": true
+        },
+        "41": {
+          "n_direction_subsets": 54264,
+          "n_cyclic_subset_orbits": 2586,
+          "type_tuples_before_coefficient_sieve": 235683840,
+          "coefficient_candidates": 0,
+          "k6_empty": true
+        },
+        "43": {
+          "n_direction_subsets": 74613,
+          "n_cyclic_subset_orbits": 3399,
+          "energy_partition": [
+            38,
+            38,
+            38,
+            38,
+            38,
+            41
+          ],
+          "coefficient_candidates": 0,
+          "k6_empty": true
+        }
+      },
+      "remaining_k6_primes": [
+        13,
+        17,
+        19,
+        23,
+        29,
+        31
+      ],
+      "conclusion": "the k=6 stratum is empty for p=37 and every p>=41",
+      "remaining_exceptional_strata": "k=6 at p=13,17,19,23,29,31; k>=7 from p=13 onward"
     }
   },
   "remaining_floor_targets": [
     "lambda_exc=Phi|W_e >= 6",
     "equivalently E|Z_psi|^2 >= 3q(q-1)/16 for psi^2=chi",
-    "k=6 remains at p=13,17,19,23,29,31,37,41,43; k>=7 remains from p=13",
+    "k=6 remains at p=13,17,19,23,29,31; k>=7 remains from p=13",
     "equivalently bound the degree-4 odd-coset harmonic excess below by the spherical QVAR gap",
     "delta2 <= n(n+10)^2/(6(n-6)^2) for principal minimum"
   ],
