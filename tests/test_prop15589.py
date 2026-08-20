@@ -322,6 +322,28 @@ def test_k4_is_completely_closed_for_p3mod4():
     assert all(record["k4_empty"] for record in data.values())
 
 
+def test_k4_QVAR_is_closed_for_every_prime():
+    O = M.theorem_O_k4_QVAR_all_primes()
+    assert O["proved"], O
+    assert O["remaining_exceptional_strata"] == "k>=5"
+    assert O["p1mod4"]["13"]["E_abs_Zpsi_sq"] == "8788"
+    assert O["p1mod4"]["17"]["E_abs_Zpsi_sq"] == "314432/3"
+    assert O["p1mod4"]["29"]["coefficient_candidates"] == 0
+    assert O["p1mod4"]["37"]["coefficient_candidates"] == 0
+
+    data = json.loads(
+        (Path(__file__).parents[1] / "evidence" / "k4_p1mod4_closure.json").read_text()
+    )
+    assert data["empty"]["29"]["coefficient_candidate_histogram"] == {"0": 1365}
+    assert data["empty"]["37"]["coefficient_candidate_histogram"] == {"0": 3876}
+    assert data["nonempty"]["13"]["quartic"]["E_abs_Zpsi_sq"] == "8788"
+    assert data["nonempty"]["17"]["quartic"]["E_abs_Zpsi_sq"] == "314432/3"
+    assert data["nonempty"]["17"]["quartic"]["abs_Zpsi_sq_histogram"] == {
+        "0": 41_616,
+        "314432": 20_808,
+    }
+
+
 @pytest.mark.parametrize("p", [5, 7])
 def test_square_affine_line_is_a_shorter_ordinary_lattice_vector(p):
     C = paley_conference_prime_power(p)

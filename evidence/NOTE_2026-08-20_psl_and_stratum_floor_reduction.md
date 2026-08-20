@@ -112,8 +112,8 @@ The p=11 enumeration is in profile order `k=1,3,4,5,6`. Every stratum clears
 The same stratumwise inequality holds in the exact p=5 and p=7 censuses;
 the weakest finite case is p=7, k=4, with induced scalar `7.82222`.
 
-This suggests a profilewise proof of `(QVAR)`, but it is not yet a theorem:
-the general distributions in the `k>=4` coefficient spaces remain unnamed.
+This suggested a profilewise proof of `(QVAR)`.  The later coefficient sieve
+closes `k=4`; the general distributions in the `k>=5` spaces remain unnamed.
 
 For the four-point residual, p=11 is not primarily a cancellation miracle:
 the dominant k=6 stratum already has `||delta_k6||^2=2.15503`, and the full
@@ -122,8 +122,8 @@ cross-stratum cancellation.
 
 ## 5. General low-profile theorem
 
-The quartic target is now proved on every `k=1` and `k=3` profile stratum,
-for every prime.  Only `k>=4` remains in `(QVAR)`.
+The quartic target is proved below first on every `k=1` and `k=3` profile
+stratum.  The later k=4 closure narrows the final remainder to `k>=5`.
 
 When `p=3 mod 4`, the quartic character is trivial on `F_p^*`.  Grouping
 ordered pairs of the minus set by their projective `F_p`-direction gives,
@@ -307,6 +307,27 @@ closed on `k=4` in this congruence class.  For `p>=19`, the remaining QVAR
 union starts at `k=5`, with the stronger `k>=sqrt(p)/2` restriction
 asymptotically.
 
+For `p=1 mod 4`, the same coefficient sieve has zero candidates at `p=29`
+and `p=37`, across 1,365 and 3,876 direction subsets.  The only nonempty
+cases beyond the trivial `p=5` direction count are `p=13,17`.  Regenerating
+their complete `eps=+1` families gives 28,392 and 62,424 vectors, and direct
+Gaussian-integer quartic pair sums give
+
+```
+p=13: E|Z_psi|^2 = 8788       > 10647/2,
+p=17: E|Z_psi|^2 = 314432/3   > 15606.
+```
+
+At `p=17`, exactly 41,616 vectors have `|Z_psi|^2=0` and 20,808 have
+`|Z_psi|^2=314432`, emphasizing again that this is an ensemble statement.
+The coefficient counts independently reproduce the earlier `168p^2` and
+`216p^2` family sizes.  Reproducible certificate:
+`evidence/k4_p1mod4_closure.{py,json}`.
+
+Combining both congruence classes with the analytic `p>=41` cutoff proves
+QVAR on `k=4` for every prime.  Together with the low-stratum theorem, the
+exceptional variance now remains only on `k>=5`.
+
 ## 6. Odd-coset shell and spherical benchmark
 
 There is a useful lattice reformulation, with one important trap.  Set
@@ -464,12 +485,12 @@ kills the ordinary-minimum-shell shortcut.
 
 Leftover 1 is now reduced to two explicit inequalities:
 
-1. prove the quartic variance `(QVAR)` on the union of profile strata `k>=4`,
+1. prove the quartic variance `(QVAR)` on the union of profile strata `k>=5`,
    using an ensemble-level coupling that mixes active direction configurations
    and adjacent actual-degree families in their exact proportions, rather than
    the pointwise, fixed-subset, or coefficient-class constraints killed above;
    the general energy barrier reduces this asymptotically to
-   `k>=sqrt(p)/2` (and removes `k=4` completely for `p>=41`);
+   `k>=sqrt(p)/2`; `k=4` is now closed for every prime;
 2. prove the principal variance room
    `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`.
 
@@ -477,5 +498,6 @@ The other two original leftovers (residual (ii) and Type-I multi-level) are
 unchanged.
 
 Reproducible artifacts: `src/e1_gmin_m4_prop15589.py`,
-`tests/test_prop15589.py`, and the `evidence/maxplus_p11/stratum_*` scripts and
-JSON records.
+`tests/test_prop15589.py`, `evidence/k4_p3mod4_coefficient_sieve.{py,json}`,
+`evidence/k4_p1mod4_closure.{py,json}`, and the
+`evidence/maxplus_p11/stratum_*` scripts and JSON records.

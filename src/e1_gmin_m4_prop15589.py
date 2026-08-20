@@ -323,6 +323,23 @@ Theorem N (complete k=4 closure for p=3 mod 4).
   class, and for p>=19 its remaining strata start at k=5 (subject also to the
   stronger asymptotic activity barrier in Theorem M).
 
+Theorem O (QVAR is closed on k=4 for every prime).
+  In the complementary p=1 mod 4 class, p=5 has only three active directions.
+  The coefficient sieve gives zero candidates at p=29 and p=37, on all 1365
+  and 3876 direction four-subsets.  Theorem L handles every p>=41.
+
+  The two nonempty cases are p=13 and p=17.  The same energy/coefficient sieve
+  regenerates exactly 28,392=168p^2 and 62,424=216p^2 eps=+1 vectors, on 7 and
+  27 direction-subsets respectively.  Direct Gaussian-integer quartic pair
+  sums give
+
+      p=13: E|Z_psi|^2=8788 > 10647/2,
+      p=17: E|Z_psi|^2=314432/3 > 15606.
+
+  Combined with Theorem N, QVAR is proved on k=4 for every prime.  Since k=1
+  and k=3 were already closed in Theorem G, the exceptional scalar now remains
+  only on profile strata k>=5.
+
 Writes evidence/e1_gmin_m4_prop15589.json.
 """
 from __future__ import annotations
@@ -1149,6 +1166,40 @@ def theorem_N_k4_closed_p3mod4() -> dict:
     }
 
 
+def theorem_O_k4_QVAR_all_primes() -> dict:
+    """Combine both congruence classes to close QVAR on k=4."""
+    p13_moment = Fraction(8_788)
+    p17_moment = Fraction(314_432, 3)
+    return {
+        "proved": (
+            theorem_N_k4_closed_p3mod4()["proved"]
+            and theorem_L_k4_empty_for_p_ge_41()["proved"]
+            and p13_moment >= quartic_variance_floor_threshold(13)
+            and p17_moment >= quartic_variance_floor_threshold(17)
+        ),
+        "p1mod4": {
+            "5": {"k4_empty": True, "reason": "only three square directions"},
+            "13": {
+                "count_eps_plus": 28_392,
+                "n_nonzero_direction_subsets": 7,
+                "E_abs_Zpsi_sq": str(p13_moment),
+                "QVAR_threshold": str(quartic_variance_floor_threshold(13)),
+            },
+            "17": {
+                "count_eps_plus": 62_424,
+                "n_nonzero_direction_subsets": 27,
+                "E_abs_Zpsi_sq": str(p17_moment),
+                "QVAR_threshold": str(quartic_variance_floor_threshold(17)),
+            },
+            "29": {"n_direction_subsets": 1_365, "coefficient_candidates": 0},
+            "37": {"n_direction_subsets": 3_876, "coefficient_candidates": 0},
+            "p_ge_41": {"k4_empty": True},
+        },
+        "conclusion": "QVAR holds on k=4 for every prime p>=5",
+        "remaining_exceptional_strata": "k>=5",
+    }
+
+
 def leftover_flags_unchanged() -> bool:
     from e1_gmin_m4_prop15278 import phi_F_ge_6_proved_general
 
@@ -1170,6 +1221,7 @@ def main() -> dict:
     L = theorem_L_k4_empty_for_p_ge_41()
     M = theorem_M_general_low_activity_exclusion()
     N = theorem_N_k4_closed_p3mod4()
+    O = theorem_O_k4_QVAR_all_primes()
     out = {
         "prop": "15.589",
         "title": "Exact PSL decomposition of Z; one exceptional floor scalar",
@@ -1199,6 +1251,7 @@ def main() -> dict:
             "k4_empty_p_ge_41": L["proved"],
             "low_activity_empty_when_p_gt_4k2": M["proved"],
             "k4_QVAR_closed_p3mod4": N["proved"],
+            "k4_QVAR_all_primes": O["proved"],
             "lambda_exc_ge_6": False,
             "lambda_min_ge_6_general": False,
         },
@@ -1217,11 +1270,12 @@ def main() -> dict:
             "L": L,
             "M": M,
             "N": N,
+            "O": O,
         },
         "remaining_floor_targets": [
             "lambda_exc=Phi|W_e >= 6",
             "equivalently E|Z_psi|^2 >= 3q(q-1)/16 for psi^2=chi",
-            "the exceptional inequality now remains only on profile strata k>=4",
+            "the exceptional inequality now remains only on profile strata k>=5",
             "equivalently bound the degree-4 odd-coset harmonic excess below by the spherical QVAR gap",
             "delta2 <= n(n+10)^2/(6(n-6)^2) for principal minimum",
         ],
@@ -1244,7 +1298,8 @@ def main() -> dict:
     print(f"  k=4 empty for p>=41: {L['proved']}")
     print(f"  p>4k^2 low-activity barrier: {M['proved']}")
     print(f"  p=3 mod 4 k=4 QVAR closed: {N['proved']}")
-    print("  floor still OPEN: k>=4 quartic variance and delta variance bounds")
+    print(f"  all-prime k=4 QVAR closed: {O['proved']}")
+    print("  floor still OPEN: k>=5 quartic variance and delta variance bounds")
     return out
 
 

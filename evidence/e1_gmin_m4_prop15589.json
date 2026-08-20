@@ -19,6 +19,7 @@
     "k4_empty_p_ge_41": true,
     "low_activity_empty_when_p_gt_4k2": true,
     "k4_QVAR_closed_p3mod4": true,
+    "k4_QVAR_all_primes": true,
     "lambda_exc_ge_6": false,
     "lambda_min_ge_6_general": false
   },
@@ -1105,12 +1106,46 @@
       "zero_top_scalar_excluded_by_energy": true,
       "conclusion": "for p=3 mod 4, k=4 exists only at p=7,11 and clears QVAR at both",
       "remaining_QVAR_strata_p3mod4": "k>=5 for p>=19"
+    },
+    "O": {
+      "proved": true,
+      "p1mod4": {
+        "5": {
+          "k4_empty": true,
+          "reason": "only three square directions"
+        },
+        "13": {
+          "count_eps_plus": 28392,
+          "n_nonzero_direction_subsets": 7,
+          "E_abs_Zpsi_sq": "8788",
+          "QVAR_threshold": "10647/2"
+        },
+        "17": {
+          "count_eps_plus": 62424,
+          "n_nonzero_direction_subsets": 27,
+          "E_abs_Zpsi_sq": "314432/3",
+          "QVAR_threshold": "15606"
+        },
+        "29": {
+          "n_direction_subsets": 1365,
+          "coefficient_candidates": 0
+        },
+        "37": {
+          "n_direction_subsets": 3876,
+          "coefficient_candidates": 0
+        },
+        "p_ge_41": {
+          "k4_empty": true
+        }
+      },
+      "conclusion": "QVAR holds on k=4 for every prime p>=5",
+      "remaining_exceptional_strata": "k>=5"
     }
   },
   "remaining_floor_targets": [
     "lambda_exc=Phi|W_e >= 6",
     "equivalently E|Z_psi|^2 >= 3q(q-1)/16 for psi^2=chi",
-    "the exceptional inequality now remains only on profile strata k>=4",
+    "the exceptional inequality now remains only on profile strata k>=5",
     "equivalently bound the degree-4 odd-coset harmonic excess below by the spherical QVAR gap",
     "delta2 <= n(n+10)^2/(6(n-6)^2) for principal minimum"
   ],

@@ -3,9 +3,8 @@
 **Date:** 2026-08-20 (current branch; use `git log -1` for the exact checkpoint)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **Current branch:** `codex/leftover-moment-attack` (use `git log -1` for the
-current hash).  The latest continuation adds Prop 15.589 Theorems J--K, the
-exact p=11 active-subset and top-profile-degree counterexamples described
-below.  All 94 focused Prop
+current hash).  The latest continuation adds Prop 15.589 Theorems J--O,
+including the all-prime `k=4` QVAR closure described below.  All 109 focused Prop
 15.588/15.589 tests pass.
 **Statement:** [MathOverflow 413935](https://mathoverflow.net/questions/413935).
 \(\alpha_n=n^{-3/2}\min_{a_{ij}=\pm1}\max_{x=\pm1}\lvert\sum_{i<j}a_{ij}x_ix_j\rvert\).
@@ -37,8 +36,9 @@ is exactly a signed sum of nonnegative directional profile energies whose
 pointwise total is `p(p^2-1)/4`.  Combining that identity with the affine
 profile classification, and using the Euler-product lower bound for
 `L(2,chi_p)` when `p=1 mod 4`, proves `(QVAR)` on every `k=1` and `k=3`
-stratum for every prime.  Thus the exceptional scalar remains open only on
-the union `k>=4`; the principal delta-variance target is unchanged.  See the
+stratum for every prime.  Theorems L--O now close `k=4` as well, so the
+exceptional scalar remains open only on the union `k>=5`; the principal
+delta-variance target is unchanged.  See the
 updated reduction note and Prop 15.589.
 
 The same degree theorem now gives exact arithmetic on every genuine profile:
@@ -111,6 +111,13 @@ its QVAR moment clears the target at both.  Thus the `k=4` contribution is
 fully closed in this congruence class, and for `p>=19` QVAR starts at `k=5`
 (Prop 15.589 N).
 
+In the complementary congruence class, the same sieve proves `k=4` empty at
+`p=29,37`; `p>=41` was already eliminated.  It regenerates the complete
+`p=13,17` families and gives exact quartic moments `8788` and `314432/3`, both
+above QVAR.  Since `p=5` has only three square directions, QVAR is now proved
+on `k=4` for every prime.  The exceptional target starts at `k=5`
+(Prop 15.589 O).
+
 **Settled.** Sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\) (`solution.md`). Paley \(\rho=1\) on \(n=p^2+1\) (`evidence/PROOF_rho_eq_1.md`).
 
 **Not settled.** \(L=\lim\alpha_n=1/2\). That needs E(1): Paley \(C\) is a \(\Phi\)-minimizer for every prime \(p\ge5\). Soft-close from sandwich plus denseness, without E(1), is not a proof.
@@ -132,8 +139,8 @@ has been refined by Prop 15.589.  Multiplicity is now proved exactly: every
 principal block has degree `n`, and the only smaller block is one exceptional
 degree-`n/2` scalar.  The live route therefore has two separate targets:
 
-1. exceptional QVAR on `k>=4`,
-   `E|Z_psi|^2 >= 3q(q-1)/16` (the `k=1,3` strata are proved); and
+1. exceptional QVAR on `k>=5`,
+   `E|Z_psi|^2 >= 3q(q-1)/16` (the `k=1,3,4` strata are proved); and
 2. the principal sufficient room
    `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`.
 
@@ -176,13 +183,13 @@ overridden twice.
 
 | Item | Flag | Status |
 |---|---|---|
-| \(\lambda_{\min}(\Phi)\ge6\) on \(Z\) | `phi_F_ge_6_proved_general=False` | Open. Exceptional QVAR remains only on `k>=4`; principal blocks retain the delta-variance target. |
+| \(\lambda_{\min}(\Phi)\ge6\) on \(Z\) | `phi_F_ge_6_proved_general=False` | Open. Exceptional QVAR remains only on `k>=5`; principal blocks retain the delta-variance target. |
 | Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open. Affine and even \(k\le4p-2\) are closed (15.179, 15.236, 15.237). |
 | Type I, Max− not two-level \(\{-1,-3\}\) | `type_I_multilevel_bad_case_ND_closed=False` | Open. Remainder is \(A_{\mathrm{full}}\). |
 | Lemma D | True | Closed. Do not unflip. |
 
 **Next attack.**  For the exceptional block, prove QVAR directly on the union
-`k>=4`, or prove the equivalent odd-coset degree-four harmonic excess is at
+`k>=5`, or prove the equivalent odd-coset degree-four harmonic excess is at
 least `-q(q-1)(q-11)/(16(q+5))`.  Do not use a pointwise/orbitwise floor,
 restricted-stratum PSD, ordinary minimum-shell design, or “quartic is top on
 every stratum”: each is now disproved.  Positivity, conserved total, cyclic
@@ -253,6 +260,8 @@ deleted so the reversal is traceable.
 | `evidence/quartic_profile_attack.py` | Direct quartic/profile-energy diagnostic |
 | `evidence/maxplus_p11/directional_energy_covariance_p11.{py,json}` | Full p=11 directional covariance and top-mode counterexample |
 | `evidence/maxplus_p11/k4_active_subset_quartic_p11.{py,json}` | Exact p=11 k=4 active-subset split: balanced families fail QVAR, aggregate clears |
+| `evidence/k4_p3mod4_coefficient_sieve.{py,json}` | Exact p=19,23,31 coefficient-level emptiness certificate |
+| `evidence/k4_p1mod4_closure.{py,json}` | Exact p=13,17 quartic moments and p=29,37 emptiness; completes all-prime k=4 QVAR |
 | `evidence/NOTE_leftover1_variance_multiplicity_route.md` | Historical principal variance route and `||M||_F^2` target |
 | `evidence/METHOD_why_500_props_never_moved_a_flag.md` | Read before writing a new numbered proposition |
 | `evidence/maxplus_p11/` | Scripts + logs for the p=11 spectrum/moment computations |

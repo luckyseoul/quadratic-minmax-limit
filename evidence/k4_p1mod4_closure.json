@@ -1,0 +1,87 @@
+{
+  "empty": {
+    "29": {
+      "p": 29,
+      "n_square_directions": 15,
+      "n_direction_subsets": 1365,
+      "normalized_total_T": 105,
+      "minimum_quadratic_b": 26,
+      "relevant_energy_partitions": [
+        [
+          26,
+          26,
+          26,
+          27
+        ]
+      ],
+      "coefficient_candidate_histogram": {
+        "0": 1365
+      },
+      "total_coefficient_candidates": 0,
+      "boolean_endpoint_search_needed": false,
+      "k4_empty": true
+    },
+    "37": {
+      "p": 37,
+      "n_square_directions": 19,
+      "n_direction_subsets": 3876,
+      "normalized_total_T": 171,
+      "minimum_quadratic_b": 42,
+      "relevant_energy_partitions": [
+        [
+          42,
+          42,
+          42,
+          45
+        ]
+      ],
+      "coefficient_candidate_histogram": {
+        "0": 3876
+      },
+      "total_coefficient_candidates": 0,
+      "boolean_endpoint_search_needed": false,
+      "k4_empty": true
+    }
+  },
+  "nonempty": {
+    "13": {
+      "count_eps_plus": 28392,
+      "n_nonzero_direction_subsets": 7,
+      "vectors_per_nonzero_subset": [
+        4056
+      ],
+      "generation_audit": {
+        "coefficient_candidates": 28392,
+        "endpoint_branches": 28392
+      },
+      "quartic": {
+        "E_abs_Zpsi_sq": "8788",
+        "QVAR_threshold": "10647/2",
+        "clears_QVAR": true,
+        "abs_Zpsi_sq_histogram": {
+          "8788": 28392
+        }
+      }
+    },
+    "17": {
+      "count_eps_plus": 62424,
+      "n_nonzero_direction_subsets": 27,
+      "vectors_per_nonzero_subset": [
+        2312
+      ],
+      "generation_audit": {
+        "coefficient_candidates": 62424,
+        "endpoint_branches": 62424
+      },
+      "quartic": {
+        "E_abs_Zpsi_sq": "314432/3",
+        "QVAR_threshold": "15606",
+        "clears_QVAR": true,
+        "abs_Zpsi_sq_histogram": {
+          "0": 41616,
+          "314432": 20808
+        }
+      }
+    }
+  }
+}
