@@ -1,0 +1,63 @@
+{
+  "title": "Exceptional projection shell diagnostic",
+  "small_prime_full_shells": {
+    "5": {
+      "p": 5,
+      "n": 26,
+      "row_count": 260,
+      "lambda_exceptional": 13.538461538461535,
+      "mean_projection_norm_sq": 175.99999999999997,
+      "target_3n": 78,
+      "shells": [
+        {
+          "norm_sq": "176",
+          "count": 260
+        }
+      ],
+      "min_nonzero_norm_sq": "176",
+      "observed_quantum": "16/3",
+      "all_shells_are_quantum_multiples": true
+    },
+    "7": {
+      "p": 7,
+      "n": 50,
+      "row_count": 11452,
+      "lambda_exceptional": 10.562347188264061,
+      "mean_projection_norm_sq": 264.05867970660165,
+      "target_3n": 150,
+      "shells": [
+        {
+          "norm_sq": "0",
+          "count": 2352
+        },
+        {
+          "norm_sq": "928/3",
+          "count": 8400
+        },
+        {
+          "norm_sq": "608",
+          "count": 700
+        }
+      ],
+      "min_nonzero_norm_sq": "928/3",
+      "observed_quantum": "8/3",
+      "all_shells_are_quantum_multiples": true
+    }
+  },
+  "p11_nonzero_below_3n_witness": {
+    "p": 11,
+    "n": 122,
+    "census_index": 11453817,
+    "row_sha256": "028e6cab37e02c454f27fa020b3dd5e3fd86c716fa35a40715461ef3873b4a9b",
+    "lambda_exceptional": 8.664378396284265,
+    "norm_sq": "4304/15",
+    "target_3n": 366,
+    "nonzero": true,
+    "below_target": true,
+    "observed_quantum": "16/15",
+    "is_quantum_multiple": true
+  },
+  "pointwise_exceptional_floor_false": true,
+  "nonzero_shell_ge_3n_false": true,
+  "interpretation": "QVAR is an ensemble mean bound.  Neither a pointwise floor nor a lower bound of 3n on every nonzero exceptional shell can prove it."
+}

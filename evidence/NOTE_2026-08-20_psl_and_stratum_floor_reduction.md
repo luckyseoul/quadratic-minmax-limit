@@ -521,6 +521,33 @@ kills the ordinary-minimum-shell shortcut.
    exceptional scalar is zero. `(QVAR)` is an ensemble-mixing statement, not
    a pointwise or orbitwise inequality.
 
+   Excluding the zero orbit does not rescue a pointwise shell argument.  If
+   `e_y` denotes the squared norm of the projection of the centered Veronese
+   vector onto `W_e`, then `(QVAR)` is the mean target `E e_y >= 3n`.  The full
+   p=7 shell distribution is
+
+   ```
+   e_y = 0       (2,352 vectors),
+         928/3   (8,400 vectors),
+         608     (700 vectors).
+   ```
+
+   A complete Intel-A380 census of all 37,457,112 p=11 vectors in the
+   `epsilon=+1` half finds exactly 37 shells and no zero shell.  Their minimum
+   is `4304/15 < 366=3n`, attained 442,860 times in `k=6`; the exact aggregate
+   mean is
+
+   ```
+   E e_y = 74989008/141883 = 528.52708217334 = 61 lambda_exc.
+   ```
+
+   Thus even the strengthened claim “every nonzero exceptional shell clears
+   `3n`” is false.  Every observed p=5,7,11 shell is a multiple of
+   `128/(p^2-1)`, but that quantization is far too fine to imply the mean
+   bound.  Reproducible diagnostics:
+   `evidence/exceptional_projection_shell_probe.{py,json}` and
+   `evidence/maxplus_p11/exceptional_projection_shells_p11_xpu.{py,json}`.
+
 3. **Ordinary lattice minimum-shell design is the wrong shell.**  The explicit
    norm-`p+1` vectors above are strictly shorter than Max+'s norm `p^2+1` for
    every `p>=5`.  The replacement target is the degree-four harmonic

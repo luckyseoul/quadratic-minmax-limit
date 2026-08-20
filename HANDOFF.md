@@ -263,7 +263,10 @@ every stratum”: each is now disproved.  Positivity, conserved total, cyclic
 symmetry, full support, and coarse divisibility are also insufficient; a
 profile proof must now exploit the cross-direction coefficient kernels and
 simultaneous Boolean realizability, with active-direction configurations mixed
-before taking the second moment.  In parallel, an upper bound on
+before taking the second moment.  Quantization of exceptional projection norms
+does not help by itself: the full p=11 census has 37 shells, no zero shell, and
+minimum `4304/15 < 366=3n`, so even the nonzero-shell pointwise repair is
+false.  In parallel, an upper bound on
 `||M||_F^2` may close the principal delta room.  Import `phi_F_ge_6` only when
 both block types are controlled generally, never from finite-p data.
 
@@ -333,6 +336,8 @@ deleted so the reversal is traceable.
 | `evidence/merge_k6_coefficient_shards.py` | Validates and merges complete k=6 shard certificates |
 | `evidence/k6_p{13,17,19,23,29,31}_coefficient_sieve.json` | Residual finite k=6 moments/emptiness; completes all-prime k=6 QVAR |
 | `evidence/k7_quintic_profile_probe.py` | Exact depressed-quintic lift minima and universal seven-direction kernel audit |
+| `evidence/exceptional_projection_shell_probe.{py,json}` | Full p=5,7 exceptional shells and an explicit p=11 nonzero shell below `3n`; kills the nonzero-shell pointwise repair |
+| `evidence/maxplus_p11/exceptional_projection_shells_p11_xpu.{py,json}` | Full 37.46M-row p=11 exceptional shell census: 37 shells, no zero, minimum `4304/15`, exact mean |
 | `evidence/NOTE_leftover1_variance_multiplicity_route.md` | Historical principal variance route and `||M||_F^2` target |
 | `evidence/METHOD_why_500_props_never_moved_a_flag.md` | Read before writing a new numbered proposition |
 | `evidence/maxplus_p11/` | Scripts + logs for the p=11 spectrum/moment computations |
@@ -342,6 +347,12 @@ Large `.npy` arrays (Max+ at p=11, 4.5 GB each) are **not in git** — they live
 `/mnt/storage/e1work/maxplus_p11/` on soulkiller, verified by md5 against the
 original computation. Scripts there have hardcoded `/tmp/e1work` paths; repoint
 before rerunning.
+
+Jellyfin (`192.168.1.191`) now has a validated Intel Arc A380 environment at
+`/home/nick/.venvs/mo-intel`: `torch 2.13.0+xpu`, `dpctl 0.22.1`, and
+`pyopencl 2025.1`.  Torch XPU, Level Zero, and OpenCL all see the A380.  During
+the shell census the soulkiller repo and p=11 data were mounted read-only under
+`/home/nick/mnt/soulkiller-{repo,e1work}` via SSHFS.
 
 **Checkpoint entering the latest continuation:** `54fd110` (exact `2p`
 arithmetic, normalized integer QVAR, and the general coarse-profile
