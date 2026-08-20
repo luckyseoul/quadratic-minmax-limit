@@ -6,6 +6,7 @@
     "Z_multiplicity_free": true,
     "Phi_multiplicity_reduction": true,
     "variance_alternatives": true,
+    "exception_removed_principal_variance": true,
     "exceptional_quartic_variance_reduction": true,
     "exceptional_quartic_variance_general": false,
     "exceptional_profile_energy_p3mod4": true,
@@ -233,6 +234,70 @@
           "variance_room_mult_d": "34596/704969",
           "delta2_room_mult_n": "521823/7921",
           "delta2_room_mult_d": "521823/15842",
+          "ok": true
+        }
+      }
+    },
+    "Dplus": {
+      "proved": true,
+      "depends_on_for_floor": "lambda_exc>=6 (QVAR)",
+      "does_not_prove_moment_bound": true,
+      "theorem": "After lambda_exc>=6, removing its degree-n/2 block and applying the one-low-principal-scalar second-moment extremum gives ||delta||^2<=n(n+10)^2/[6(n-14)(n-6)].",
+      "completed_square": "B(e)-B_min=n(n-14)/(48(n-18)) *(e-8(n-8)/(n-14))^2",
+      "principal_mean_guard": "If the principal mean is <=6, then e>=(n+22)/2 and the minimum possible delta^2 already exceeds B_min for n>18.",
+      "by_p": {
+        "5": {
+          "exceptional_vertex": "12",
+          "old_delta2_room": "351/25",
+          "new_delta2_room": "117/5",
+          "improvement_factor": "5/3",
+          "Es4_budget": "9256",
+          "kappa4_budget": "1144",
+          "ok": true
+        },
+        "7": {
+          "exceptional_vertex": "28/3",
+          "old_delta2_room": "1875/121",
+          "new_delta2_room": "625/33",
+          "improvement_factor": "11/9",
+          "Es4_budget": "31400",
+          "kappa4_budget": "1400",
+          "ok": true
+        },
+        "11": {
+          "exceptional_vertex": "76/9",
+          "old_delta2_room": "22143/841",
+          "new_delta2_room": "7381/261",
+          "improvement_factor": "29/27",
+          "Es4_budget": "544120/3",
+          "kappa4_budget": "8296/3",
+          "ok": true
+        },
+        "13": {
+          "exceptional_vertex": "108/13",
+          "old_delta2_room": "57375/1681",
+          "new_delta2_room": "19125/533",
+          "improvement_factor": "41/39",
+          "Es4_budget": "4556680/13",
+          "kappa4_budget": "48280/13",
+          "ok": true
+        },
+        "17": {
+          "exceptional_vertex": "188/23",
+          "old_delta2_room": "271875/5041",
+          "new_delta2_room": "90625/1633",
+          "improvement_factor": "71/69",
+          "Es4_budget": "23351960/23",
+          "kappa4_budget": "140360/23",
+          "ok": true
+        },
+        "19": {
+          "exceptional_vertex": "236/29",
+          "old_delta2_room": "521823/7921",
+          "new_delta2_room": "173941/2581",
+          "improvement_factor": "89/87",
+          "Es4_budget": "45821960/29",
+          "kappa4_budget": "218648/29",
           "ok": true
         }
       }
@@ -1550,7 +1615,7 @@
     "equivalently E|Z_psi|^2 >= 3q(q-1)/16 for psi^2=chi",
     "k>=7 remains from p=13",
     "equivalently bound the degree-4 odd-coset harmonic excess below by the spherical QVAR gap",
-    "delta2 <= n(n+10)^2/(6(n-6)^2) for principal minimum"
+    "after QVAR: delta2 <= n(n+10)^2/(6(n-14)(n-6)) for principal minimum"
   ],
   "flags_not_flipped": [
     "phi_F_ge_6",

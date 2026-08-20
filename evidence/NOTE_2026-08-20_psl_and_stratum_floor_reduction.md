@@ -96,6 +96,38 @@ If the minimum were the exceptional `d`-block, the variance room is exactly
 half as large. It is preferable to prove `(QVAR)` separately and retain the
 larger principal room.
 
+There is a strictly sharper consequence once `(QVAR)` is available.  Remove
+the exceptional block before applying the second-moment extremum to the
+`r=(n-10)/8` distinct principal scalars.  If `e=lambda_exc`, fixing the trace
+and putting one principal scalar at six gives a delta budget `B(e)`.  Completing
+the square gives
+
+```
+B(e) - B_min
+  = n(n-14)/(48(n-18)) * (e-8(n-8)/(n-14))^2,
+B_min
+  = n(n+10)^2/[6(n-14)(n-6)].
+```
+
+If the principal mean were at most six, then `e>=(n+22)/2`; the minimum total
+variance forced by that split already exceeds `B_min` for `n>18`.  Therefore
+
+```
+lambda_exc >= 6
+and ||delta||^2 <= n(n+10)^2/[6(n-14)(n-6)]
+imply every principal scalar is >= 6.
+```
+
+The improvement factor over the previous principal room is `(n-6)/(n-14)`.
+The equivalent fourth-moment and cumulant targets simplify to
+
+```
+E[(y dot z)^4] <= 4n(3n^2-37n+2)/(n-14),
+kappa_4          <= 4n(5n+2)/(n-14).
+```
+
+This sharpens the open target; it does not prove the moment inequality.
+
 ## 4. Profile-stratum diagnostics
 
 The p=11 enumeration is in profile order `k=1,3,4,5,6`. Every stratum clears
@@ -396,6 +428,26 @@ from `p=13`.  Certificates:
 `evidence/k6_p{13,17,19,23,29,31}_coefficient_sieve.json` and
 `evidence/k6_coefficient_sieve_fast.py` (Prop 15.589 U).
 
+The coefficient mechanism itself extends uniformly.  In a top-saturated
+`k`-active stratum, the degree `k-2` kernel is one-dimensional with full
+support and the degree `k-3` kernel is two-dimensional.  Translation acts
+isomorphically from `F_p^2` onto the latter, so every translation orbit has a
+unique representative with degree `k-3` coefficient zero.  At each lower
+degree `d`, any `d+1` direction columns are invertible; one can enumerate the
+`k-d-1` free coefficients and solve those pivots exactly.  Thus `k=7` reduces
+canonically to
+
+```
+a*s^5 + c*s^3 + d*s^2 + e*s + f.
+```
+
+The exact first-stage probe finds minimum normalized profile energies
+`1,3,4` at `p=13,17,19`, respectively.  None gives an energy-only closure,
+but every one of the `1,36,120` seven-direction subsets has the predicted
+kernel ladder `1,2,3,4,5`.  This validates recursive elimination as the next
+coupled sieve and rules out another minimum-energy shortcut.  Reproducible
+script: `evidence/k7_quintic_profile_probe.py`.
+
 ## 6. Odd-coset shell and spherical benchmark
 
 There is a useful lattice reformulation, with one important trap.  Set
@@ -560,7 +612,7 @@ Leftover 1 is now reduced to two explicit inequalities:
    the general energy barrier reduces this asymptotically to
    `k>=sqrt(p)/2`; `k=4,5,6` are closed for every prime;
 2. prove the principal variance room
-   `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`.
+   `||delta||^2 <= n(n+10)^2/[6(n-14)(n-6)]` after `(QVAR)`.
 
 The other two original leftovers (residual (ii) and Type-I multi-level) are
 unchanged.

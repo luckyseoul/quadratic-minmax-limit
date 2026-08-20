@@ -4,8 +4,8 @@
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **Current branch:** `codex/leftover-moment-attack` (use `git log -1` for the
 current hash).  The latest continuation adds Prop 15.589 Theorems J--U,
-including the all-prime `k=4,5,6` QVAR closures described below.  All 115
-focused Prop 15.588/15.589 tests pass.
+including the all-prime `k=4,5,6` QVAR closures described below.  All 124
+focused Prop 15.588/15.589 and k=7 probe tests pass.
 **Statement:** [MathOverflow 413935](https://mathoverflow.net/questions/413935).
 \(\alpha_n=n^{-3/2}\min_{a_{ij}=\pm1}\max_{x=\pm1}\lvert\sum_{i<j}a_{ij}x_ix_j\rvert\).
 
@@ -23,8 +23,12 @@ least `n=p^2+1` except one exceptional scalar. That scalar is exactly
 
 so its floor is the single quartic variance inequality
 `E|Z_psi|^2 >= 3q(q-1)/16`. The remaining principal floor route is the
-existing delta room `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`. Neither inequality
-is proved generally; no flag is flipped. See
+exception-removed delta room
+`||delta||^2 <= n(n+10)^2/[6(n-14)(n-6)]`.  This is sharper than the old
+room by the factor `(n-6)/(n-14)` and is equivalent to
+`E[(y dot z)^4] <= 4n(3n^2-37n+2)/(n-14)`.  It applies after QVAR proves
+`lambda_exc>=6`. Neither open inequality is proved generally; no flag is
+flipped. See
 `evidence/NOTE_2026-08-20_psl_and_stratum_floor_reduction.md` and Prop 15.589.
 
 Two routes are now explicitly dead: restricted Phi does not have floor 6 on
@@ -42,8 +46,19 @@ stratum for every prime.  Theorems L--O close `k=4`, and Theorem P makes
 `p>=47`; coefficient sieves close every remaining finite case, while its
 `p=11` case already clears by complete census.  Thus the exceptional scalar
 is closed through `k=6` for every prime and remains only on `k>=7` from
-`p=13`; the principal delta-variance target is unchanged.  See the
+`p=13`; the principal delta-variance target is sharpened as above.  See the
 updated reduction note and Prop 15.589.
+
+The high-activity coefficient attack now has a general normal form.  Whenever
+the top degree `k-2` is nonzero, translation uniquely kills the full
+two-dimensional degree-`k-3` level.  Every lower degree `d` has
+`k-d-1` free coefficients, with any `d+1` direction coefficients serving as
+invertible pivots.  For `k=7` this gives depressed quintics
+`a*s^5+c*s^3+d*s^2+e*s+f`.  Exact probes at `p=13,17,19` find minimum profile
+energies `1,3,4`; energy alone does not eliminate the stratum, while all
+`1,36,120` direction subsets have the predicted kernel ladder.  The next
+exceptional computation should therefore be a recursive coupled coefficient
+sieve, not a Cartesian product (`evidence/k7_quintic_profile_probe.py`).
 
 The same degree theorem now gives exact arithmetic on every genuine profile:
 `a_L in 2p Z`.  With `b_L=a_L/(2p)` and `T=(p^2-1)/8`, one has
@@ -317,6 +332,7 @@ deleted so the reversal is traceable.
 | `evidence/k6_coefficient_sieve_fast.py` | Exact Numba quadratic-three/linear-two elimination with orbit sharding |
 | `evidence/merge_k6_coefficient_shards.py` | Validates and merges complete k=6 shard certificates |
 | `evidence/k6_p{13,17,19,23,29,31}_coefficient_sieve.json` | Residual finite k=6 moments/emptiness; completes all-prime k=6 QVAR |
+| `evidence/k7_quintic_profile_probe.py` | Exact depressed-quintic lift minima and universal seven-direction kernel audit |
 | `evidence/NOTE_leftover1_variance_multiplicity_route.md` | Historical principal variance route and `||M||_F^2` target |
 | `evidence/METHOD_why_500_props_never_moved_a_flag.md` | Read before writing a new numbered proposition |
 | `evidence/maxplus_p11/` | Scripts + logs for the p=11 spectrum/moment computations |

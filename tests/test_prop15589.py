@@ -54,6 +54,35 @@ def test_variance_room_halves_for_exceptional_block(p):
     assert Fraction(M.d_of(p), D) * gap * gap == M.variance_room_exceptional(p)
 
 
+@pytest.mark.parametrize("p", [5, 7, 11, 13, 17, 19])
+def test_removing_exception_sharpens_principal_variance_room(p):
+    n = M.n_of(p)
+    old = M.delta2_room_principal(p)
+    new = M.delta2_room_principal_after_exception(p)
+    vertex = Fraction(8 * (n - 8), n - 14)
+    assert new / old == Fraction(n - 6, n - 14)
+    assert M.delta2_principal_exclusion_budget(p, vertex) == new
+    assert M.principal_Es4_budget_after_exception(p) - 12 * n * n == (
+        M.principal_kappa4_budget_after_exception(p)
+    )
+
+    for exceptional in (Fraction(6), vertex, M.spectral_mean(p), Fraction(16)):
+        gap = M.delta2_principal_exclusion_budget(p, exceptional) - new
+        expected = (
+            Fraction(n * (n - 14), 48 * (n - 18))
+            * (exceptional - vertex) ** 2
+        )
+        assert gap == expected
+
+
+def test_exception_removed_variance_theorem_is_reduction_not_moment_claim():
+    Dplus = M.theorem_Dplus_exception_removed_variance()
+    assert Dplus["proved"], Dplus
+    assert Dplus["depends_on_for_floor"] == "lambda_exc>=6 (QVAR)"
+    assert Dplus["does_not_prove_moment_bound"]
+    assert all(row["ok"] for row in Dplus["by_p"].values())
+
+
 def test_FWW_wrong_principal_count_breaks_dimension():
     for p in (5, 7, 11):
         r = M.n_principal_constituents(p)

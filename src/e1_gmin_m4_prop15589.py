@@ -71,6 +71,23 @@ Theorem D (variance alternatives).
       ||delta||^2 <= n(n+10)^2/[6(n-6)^2]
   and half that value.
 
+Theorem D+ (remove the exceptional block before testing the principal floor).
+  Once lambda_exc>=6 is known, the exceptional block need not be charged to
+  the variance of the principal scalars.  If e=lambda_exc, fixing e and the
+  trace and placing one principal scalar at 6 gives an exact exclusion budget
+  B(e).  This quadratic is minimized at e=8(n-8)/(n-14), and its minimum is
+
+      B_min = n(n+10)^2/[6(n-14)(n-6)].
+
+  Hence lambda_exc>=6 and ||delta||^2<=B_min imply every principal scalar is
+  at least 6.  This improves Theorem D's principal room by the factor
+  (n-6)/(n-14).  Equivalently it is enough to prove
+
+      E[(y dot z)^4] <= 4n(3n^2-37n+2)/(n-14),
+
+  or fourth cumulant <=4n(5n+2)/(n-14).  This is still an open moment bound;
+  the theorem sharpens the target rather than claiming it.
+
 Theorem E (quartic variance form of the exceptional scalar).
   In the multiplicative Fourier model of 15.279, the exceptional U-fixed line
   is the unique pair {psi,conj(psi)} with psi^2=chi.  For a Max+ vector write
@@ -569,6 +586,50 @@ def delta2_room_exceptional(p: int) -> Fraction:
     return delta2_room_principal(p) / 2
 
 
+def principal_scalar_mean_given_exception(
+    p: int, lambda_exceptional: Fraction | int
+) -> Fraction:
+    """Mean of the (q-9)/8 distinct degree-n principal scalars."""
+    n = n_of(p)
+    e = Fraction(lambda_exceptional)
+    return Fraction(4 * (2 * n - 4), n - 10) - Fraction(4, n - 10) * e
+
+
+def delta2_principal_exclusion_budget(
+    p: int, lambda_exceptional: Fraction | int
+) -> Fraction:
+    """Exact delta^2 boundary with one principal scalar equal to six."""
+    n = n_of(p)
+    d = d_of(p)
+    r = n_principal_constituents(p)
+    e = Fraction(lambda_exceptional)
+    scalar_sum = Fraction(n - 2) - e / 2
+    remaining = scalar_sum - 6
+    boundary_tr2 = d * e * e + n * (
+        Fraction(36) + remaining * remaining / (r - 1)
+    )
+    flat_tr2 = Fraction(n * n * (n - 2) ** 2, dim_Z(p))
+    return (boundary_tr2 - flat_tr2) / 24
+
+
+def delta2_room_principal_after_exception(p: int) -> Fraction:
+    """Uniform principal room after lambda_exc>=6 is proved separately."""
+    n = n_of(p)
+    return Fraction(n * (n + 10) ** 2, 6 * (n - 14) * (n - 6))
+
+
+def principal_Es4_budget_after_exception(p: int) -> Fraction:
+    """Equivalent E[(y dot z)^4] budget for the sharpened principal room."""
+    n = n_of(p)
+    return Fraction(4 * n * (3 * n * n - 37 * n + 2), n - 14)
+
+
+def principal_kappa4_budget_after_exception(p: int) -> Fraction:
+    """Equivalent fourth-cumulant budget E[s^4]-12n^2."""
+    n = n_of(p)
+    return Fraction(4 * n * (5 * n + 2), n - 14)
+
+
 def theorem_D_variance_alternatives(primes=(5, 7, 11, 13, 17, 19)) -> dict:
     rows = {}
     ok = True
@@ -599,6 +660,65 @@ def theorem_D_variance_alternatives(primes=(5, 7, 11, 13, 17, 19)) -> dict:
         "theorem": (
             "The variance room for a degree-d exceptional minimum is exactly "
             "half the room for a minimum of multiplicity n."
+        ),
+        "by_p": rows,
+    }
+
+
+def theorem_Dplus_exception_removed_variance(
+    primes=(5, 7, 11, 13, 17, 19),
+) -> dict:
+    """Sharpen the principal variance room after QVAR closes the exception."""
+    rows = {}
+    ok = True
+    for p in primes:
+        n = n_of(p)
+        e_vertex = Fraction(8 * (n - 8), n - 14)
+        new_room = delta2_room_principal_after_exception(p)
+        old_room = delta2_room_principal(p)
+        at_vertex = delta2_principal_exclusion_budget(p, e_vertex)
+
+        # E[s^4]=4n^2+tr(Phi^2), with
+        # tr(Phi^2)=T^2/D+24||delta||^2.
+        T = n * (n - 2)
+        Es4_from_room = (
+            Fraction(4 * n * n)
+            + Fraction(T * T, dim_Z(p))
+            + 24 * new_room
+        )
+        row_ok = (
+            at_vertex == new_room
+            and new_room / old_room == Fraction(n - 6, n - 14)
+            and Es4_from_room == principal_Es4_budget_after_exception(p)
+            and Es4_from_room - 12 * n * n
+            == principal_kappa4_budget_after_exception(p)
+        )
+        rows[str(p)] = {
+            "exceptional_vertex": str(e_vertex),
+            "old_delta2_room": str(old_room),
+            "new_delta2_room": str(new_room),
+            "improvement_factor": str(new_room / old_room),
+            "Es4_budget": str(principal_Es4_budget_after_exception(p)),
+            "kappa4_budget": str(principal_kappa4_budget_after_exception(p)),
+            "ok": row_ok,
+        }
+        ok = ok and row_ok
+    return {
+        "proved": bool(ok),
+        "depends_on_for_floor": "lambda_exc>=6 (QVAR)",
+        "does_not_prove_moment_bound": True,
+        "theorem": (
+            "After lambda_exc>=6, removing its degree-n/2 block and applying "
+            "the one-low-principal-scalar second-moment extremum gives "
+            "||delta||^2<=n(n+10)^2/[6(n-14)(n-6)]."
+        ),
+        "completed_square": (
+            "B(e)-B_min=n(n-14)/(48(n-18)) "
+            "*(e-8(n-8)/(n-14))^2"
+        ),
+        "principal_mean_guard": (
+            "If the principal mean is <=6, then e>=(n+22)/2 and the "
+            "minimum possible delta^2 already exceeds B_min for n>18."
         ),
         "by_p": rows,
     }
@@ -1610,6 +1730,7 @@ def main() -> dict:
     B = theorem_B_Z_decomposition()
     C = theorem_C_phi_multiplicity_reduction()
     D = theorem_D_variance_alternatives()
+    Dplus = theorem_Dplus_exception_removed_variance()
     E = theorem_E_exceptional_quartic_variance()
     FA = theorem_F_profile_energy_arithmetic()
     FG = theorem_FG_profile_energy_and_low_strata()
@@ -1635,6 +1756,7 @@ def main() -> dict:
             "Z_multiplicity_free": B["proved"],
             "Phi_multiplicity_reduction": C["proved"],
             "variance_alternatives": D["proved"],
+            "exception_removed_principal_variance": Dplus["proved"],
             "exceptional_quartic_variance_reduction": E["proved_reduction"],
             "exceptional_quartic_variance_general": E["proved_general_inequality"],
             "exceptional_profile_energy_p3mod4": FG[
@@ -1671,6 +1793,7 @@ def main() -> dict:
             "B": B,
             "C": C,
             "D": D,
+            "Dplus": Dplus,
             "E": E,
             "FA": FA,
             "FG": FG,
@@ -1694,7 +1817,7 @@ def main() -> dict:
             "equivalently E|Z_psi|^2 >= 3q(q-1)/16 for psi^2=chi",
             "k>=7 remains from p=13",
             "equivalently bound the degree-4 odd-coset harmonic excess below by the spherical QVAR gap",
-            "delta2 <= n(n+10)^2/(6(n-6)^2) for principal minimum",
+            "after QVAR: delta2 <= n(n+10)^2/(6(n-14)(n-6)) for principal minimum",
         ],
         "flags_not_flipped": ["phi_F_ge_6", "residual_ii", "type_I", "e1", "L"],
         "L_status": "OPEN",
@@ -1705,6 +1828,7 @@ def main() -> dict:
     print(f"  character decomposition: {A['proved']}")
     print(f"  Z multiplicity-free: {B['proved']}")
     print(f"  Phi multiplicity reduction: {C['proved']}")
+    print(f"  exception-removed principal variance: {Dplus['proved']}")
     print(f"  exceptional quartic reduction: {E['proved_reduction']}")
     print(f"  profile energy divisible by 2p: {FA['proved_energy_divisibility_2p']}")
     print(f"  exceptional k=1,3 strata closed: {FG['proved_k1_k3_QVAR_all_primes']}")

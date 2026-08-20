@@ -38,6 +38,22 @@ def test_C_degree_bound():
     assert r["per_prime"][7]["max_degree_per_k"][3] == 1
 
 
+def test_Cplus_general_depressed_normal_form_and_recursive_elimination():
+    r = M.theorem_Cplus_depressed_normal_form()
+    assert r["proved"], r
+    assert r["k7_normal_form"] == "a*s^5+c*s^3+d*s^2+e*s+f"
+    k7 = r["by_p"]["13"]["by_k"]["7"]
+    assert k7["top_degree"] == 5
+    assert k7["top_kernel_dimension"] == 1
+    assert k7["removed_degree"] == 4
+    assert k7["removed_kernel_dimension"] == 2
+    assert k7["lower_level_free_dimensions"] == {
+        "1": 5,
+        "2": 4,
+        "3": 3,
+    }
+
+
 def test_D_k0_k2_empty():
     r = M.theorem_D_k2_empty(PRIMES)
     assert r["proved"], r
