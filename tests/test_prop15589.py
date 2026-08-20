@@ -3,9 +3,12 @@ from __future__ import annotations
 
 from fractions import Fraction
 
+import numpy as np
 import pytest
 
 import e1_gmin_m4_prop15589 as M
+from e1_gmin_m4_prop15534 import field_tables
+from minmax_quadratic import paley_conference_prime_power
 
 
 @pytest.mark.parametrize("p,r", [(5, 2), (7, 5), (11, 14), (13, 20), (19, 44)])
@@ -68,6 +71,127 @@ def test_exceptional_scalar_is_quartic_variance():
     assert E["proved_general_inequality"] is False
     assert M.lambda_exc_from_quartic_variance(5, Fraction(3300, 13)) == Fraction(176, 13)
     assert M.lambda_exc_from_quartic_variance(7, Fraction(317520, 409)) == Fraction(4320, 409)
+
+
+@pytest.mark.parametrize("p,total", [(7, 84), (11, 330), (19, 1710)])
+def test_p3mod4_profile_energy_conservation_constant(p, total):
+    assert M.profile_energy_total(p) == total
+    # Dropping the factor 1/4 is the natural pair-counting error.
+    assert p * (p * p - 1) != total
+
+
+def test_low_strata_exact_values_match_censuses():
+    assert M.k1_quartic_variance(5) == 500
+    assert M.k1_quartic_variance(7) == 7056
+    assert M.k1_quartic_variance(11) == 108900
+    assert M.k3_quartic_variance_p3mod4(7) == 784
+    assert M.k3_quartic_variance_p3mod4(11) == 21780
+
+
+@pytest.mark.parametrize("p", [7, 11, 19, 23, 31])
+def test_p3mod4_k1_k3_clear_QVAR(p):
+    threshold = M.quartic_variance_floor_threshold(p)
+    assert M.k1_quartic_variance(p) >= threshold
+    assert M.k3_quartic_variance_p3mod4(p) >= threshold
+
+
+@pytest.mark.parametrize("p", [13, 17, 29, 37])
+def test_p1mod4_euler_product_k3_bound_clears_QVAR(p):
+    lower = M.k3_quartic_variance_lower_p1mod4(p)
+    assert lower >= M.quartic_variance_floor_threshold(p)
+
+
+def test_p1mod4_euler_constant_is_load_bearing_at_p13():
+    threshold = M.quartic_variance_floor_threshold(13)
+    assert Fraction(13**6, 30**2) >= threshold
+    assert Fraction(13**6, 31**2) < threshold
+
+
+def test_profile_energy_reduction_closes_exactly_low_strata():
+    FG = M.theorem_FG_profile_energy_and_low_strata()
+    assert FG["proved_profile_energy_identity_p3mod4"]
+    assert FG["proved_profile_energy_conservation_p3mod4"]
+    assert FG["proved_k1_k3_QVAR_all_primes"]
+    assert FG["remaining_exceptional_strata"] == "k>=4"
+    assert all(row["k1_clears"] and row["k3_clears"] for row in FG["by_p"].values())
+
+
+@pytest.mark.parametrize(
+    "p,value",
+    [
+        (5, Fraction(130)),
+        (7, Fraction(4900, 9)),
+        (11, Fraction(73810, 21)),
+    ],
+)
+def test_odd_coset_spherical_benchmark_exact_values(p, value):
+    assert M.spherical_quartic_variance(p) == value
+    assert M.spherical_QVAR_gap(p) > 0
+
+
+@pytest.mark.parametrize("p", [5, 7, 11, 13, 17, 19])
+def test_spherical_gap_closed_form_and_shorter_ordinary_shell(p):
+    q = p * p
+    assert M.spherical_QVAR_gap(p) == Fraction(
+        q * (q - 1) * (q - 11), 16 * (q + 5)
+    )
+    assert p + 1 < M.n_of(p)
+
+
+def test_odd_coset_reduction_does_not_claim_the_harmonic_bound():
+    H = M.theorem_H_odd_coset_spherical_benchmark()
+    assert H["proved_reduction"]
+    assert H["maxplus_is_odd_coset_first_shell"]
+    assert H["maxplus_is_ordinary_lattice_first_shell"] is False
+    assert H["ordinary_minimum_shell_design_route_applies"] is False
+    assert H["sufficient_harmonic_target"].endswith(">= 0")
+
+
+@pytest.mark.parametrize("p", [5, 7])
+def test_square_affine_line_is_a_shorter_ordinary_lattice_vector(p):
+    C = paley_conference_prime_power(p)
+    r = np.zeros(p * p + 1)
+    r[0] = 1
+    r[1 : p + 1] = 1  # infinity plus the square-direction line F_p
+    assert np.array_equal(C @ r, p * r)
+    assert r @ r == p + 1 < p * p + 1
+    wrong = r.copy()
+    wrong[0] = 0
+    assert not np.array_equal(C @ wrong, p * wrong)
+
+
+def test_spherical_benchmark_trace_and_hilbert_schmidt_inputs_at_p5():
+    p = 5
+    q = p * p
+    F = field_tables(p)
+    mul, sub = F["mul"], F["sub"]
+
+    generator = None
+    for g in range(2, q):
+        x, seen = 1, set()
+        for _ in range(q - 1):
+            seen.add(x)
+            x = int(mul[x, g])
+        if len(seen) == q - 1:
+            generator = g
+            break
+    assert generator is not None
+
+    psi = np.zeros(q, dtype=np.complex128)
+    x = 1
+    for exponent in range(q - 1):
+        psi[x] = (1j) ** (exponent % 4)
+        x = int(mul[x, generator])
+    K = psi[sub]
+    np.fill_diagonal(K, 0)
+    K_ext = np.zeros((q + 1, q + 1), dtype=np.complex128)
+    K_ext[1:, 1:] = K
+    C = paley_conference_prime_power(p)
+    P = (np.eye(q + 1) + C / p) / 2
+    A = P @ K_ext @ P / 4
+
+    assert abs(np.trace(A)) < 1e-10
+    assert np.vdot(A, A).real == pytest.approx(q * (q - 1) / 32)
 
 
 @pytest.mark.parametrize("p", [5, 7, 11, 13])

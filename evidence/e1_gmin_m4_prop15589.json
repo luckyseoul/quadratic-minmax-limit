@@ -8,6 +8,9 @@
     "variance_alternatives": true,
     "exceptional_quartic_variance_reduction": true,
     "exceptional_quartic_variance_general": false,
+    "exceptional_profile_energy_p3mod4": true,
+    "exceptional_k1_k3_QVAR_all_primes": true,
+    "odd_coset_spherical_reduction": true,
     "lambda_exc_ge_6": false,
     "lambda_min_ge_6_general": false
   },
@@ -240,11 +243,128 @@
           "ok": true
         }
       }
+    },
+    "FG": {
+      "proved_profile_energy_identity_p3mod4": true,
+      "proved_profile_energy_conservation_p3mod4": true,
+      "proved_k1_k3_QVAR_all_primes": true,
+      "remaining_exceptional_strata": "k>=4",
+      "theorem": "For p=3 mod 4, Z_psi is the signed directional-profile energy and the total energy is p(p^2-1)/4. The k=1 and k=3 strata satisfy QVAR for every prime; p=1 mod 4 uses the Euler-product lower bound L(2,chi)>=pi^2/15 for k=3, with p=5 exact.",
+      "by_p": {
+        "5": {
+          "threshold": "225/2",
+          "k1_exact": "500",
+          "k3_value_or_lower": "180",
+          "k3_kind": "exact finite base case",
+          "k1_clears": true,
+          "k3_clears": true
+        },
+        "7": {
+          "threshold": "441",
+          "k1_exact": "7056",
+          "k3_value_or_lower": "784",
+          "k3_kind": "exact profile-energy average",
+          "k1_clears": true,
+          "k3_clears": true
+        },
+        "11": {
+          "threshold": "5445/2",
+          "k1_exact": "108900",
+          "k3_value_or_lower": "21780",
+          "k3_kind": "exact profile-energy average",
+          "k1_clears": true,
+          "k3_clears": true
+        },
+        "13": {
+          "threshold": "10647/2",
+          "k1_exact": "553644/11",
+          "k3_value_or_lower": "4826809/900",
+          "k3_kind": "Euler-product lower bound",
+          "k1_clears": true,
+          "k3_clears": true
+        },
+        "17": {
+          "threshold": "15606",
+          "k1_exact": "943296/5",
+          "k3_value_or_lower": "24137569/900",
+          "k3_kind": "Euler-product lower bound",
+          "k1_clears": true,
+          "k3_clears": true
+        },
+        "19": {
+          "threshold": "48735/2",
+          "k1_exact": "2924100",
+          "k3_value_or_lower": "758100",
+          "k3_kind": "exact profile-energy average",
+          "k1_clears": true,
+          "k3_clears": true
+        }
+      }
+    },
+    "H": {
+      "proved_reduction": true,
+      "maxplus_is_odd_coset_first_shell": true,
+      "maxplus_is_ordinary_lattice_first_shell": false,
+      "ordinary_minimum_shell_design_route_applies": false,
+      "sufficient_harmonic_target": "degree-4 odd-coset coefficient >= 0",
+      "exact_harmonic_target": "degree-4 odd-coset excess >= -q(q-1)(q-11)/(16(q+5))",
+      "by_p": {
+        "5": {
+          "ordinary_lattice_short_vector_norm_sq": 6,
+          "odd_coset_first_shell_norm_sq": 26,
+          "sphere_variance": "130",
+          "QVAR_threshold": "225/2",
+          "sphere_minus_threshold": "35/2",
+          "ok": true
+        },
+        "7": {
+          "ordinary_lattice_short_vector_norm_sq": 8,
+          "odd_coset_first_shell_norm_sq": 50,
+          "sphere_variance": "4900/9",
+          "QVAR_threshold": "441",
+          "sphere_minus_threshold": "931/9",
+          "ok": true
+        },
+        "11": {
+          "ordinary_lattice_short_vector_norm_sq": 12,
+          "odd_coset_first_shell_norm_sq": 122,
+          "sphere_variance": "73810/21",
+          "QVAR_threshold": "5445/2",
+          "sphere_minus_threshold": "33275/42",
+          "ok": true
+        },
+        "13": {
+          "ordinary_lattice_short_vector_norm_sq": 14,
+          "odd_coset_first_shell_norm_sq": 170,
+          "sphere_variance": "201110/29",
+          "QVAR_threshold": "10647/2",
+          "sphere_minus_threshold": "93457/58",
+          "ok": true
+        },
+        "17": {
+          "ordinary_lattice_short_vector_norm_sq": 18,
+          "odd_coset_first_shell_norm_sq": 290,
+          "sphere_variance": "1005720/49",
+          "QVAR_threshold": "15606",
+          "sphere_minus_threshold": "241026/49",
+          "ok": true
+        },
+        "19": {
+          "ordinary_lattice_short_vector_norm_sq": 20,
+          "odd_coset_first_shell_norm_sq": 362,
+          "sphere_variance": "1960230/61",
+          "QVAR_threshold": "48735/2",
+          "sphere_minus_threshold": "947625/122",
+          "ok": true
+        }
+      }
     }
   },
   "remaining_floor_targets": [
     "lambda_exc=Phi|W_e >= 6",
     "equivalently E|Z_psi|^2 >= 3q(q-1)/16 for psi^2=chi",
+    "the exceptional inequality now remains only on profile strata k>=4",
+    "equivalently bound the degree-4 odd-coset harmonic excess below by the spherical QVAR gap",
     "delta2 <= n(n+10)^2/(6(n-6)^2) for principal minimum"
   ],
   "flags_not_flipped": [

@@ -27,6 +27,28 @@ Two routes are now explicitly dead: restricted Phi does not have floor 6 on
 every profile stratum, and at p=7 a full PSL orbit of size 1,176 has
 `Z_psi=0`, so the quartic bound is not pointwise/orbitwise.
 
+The exceptional target has since narrowed again.  For `p=3 mod 4`, `Z_psi`
+is exactly a signed sum of nonnegative directional profile energies whose
+pointwise total is `p(p^2-1)/4`.  Combining that identity with the affine
+profile classification, and using the Euler-product lower bound for
+`L(2,chi_p)` when `p=1 mod 4`, proves `(QVAR)` on every `k=1` and `k=3`
+stratum for every prime.  Thus the exceptional scalar remains open only on
+the union `k>=4`; the principal delta-variance target is unchanged.  See the
+updated reduction note and Prop 15.589.
+
+There is also an exact lattice-coset reformulation.  Max+ is the first shell
+of the odd coset `y0+2 ker_Z(C-pI)`, not the ordinary lattice's first shell
+(the latter has explicit norm-`p+1` Baer-line vectors).  The radius-sphere
+benchmark for the exceptional quartic moment exceeds QVAR by
+`q(q-1)(q-11)/(16(q+5))`.  Thus the live exceptional target is equivalently a
+lower bound on one degree-4 odd-coset harmonic coefficient; proving that
+coefficient nonnegative would suffice, but is still open.
+
+The full p=11 directional covariance also kills a tempting shortcut: although
+the quartic direction is top for the complete mixture, it is bottom among the
+nonzero modes on k=4 and not top on k=6.  Stratum invariance alone cannot prove
+QVAR by a top-eigenmode argument.
+
 **Settled.** Sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\) (`solution.md`). Paley \(\rho=1\) on \(n=p^2+1\) (`evidence/PROOF_rho_eq_1.md`).
 
 **Not settled.** \(L=\lim\alpha_n=1/2\). That needs E(1): Paley \(C\) is a \(\Phi\)-minimizer for every prime \(p\ge5\). Soft-close from sandwich plus denseness, without E(1), is not a proof.

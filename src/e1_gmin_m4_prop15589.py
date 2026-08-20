@@ -99,6 +99,76 @@ Theorem E (quartic variance form of the exceptional scalar).
   the exact p=5,7 censuses and at p=11 via the verified exceptional spectral
   scalar, but its general proof remains open.
 
+Theorem F (profile-energy form when p=3 mod 4).
+  Here psi is trivial on F_p^*.  For every projective F_p-direction L choose
+  g_L in L, let sigma_L be the line-sum profile, and put eps=y_inf.  Directly
+  grouping the ordered pairs in D by their direction gives
+
+      Z_psi(y) = sum_L psi(g_L) a_L(y),
+      a_L(y)   = (1/4) sum_s (sigma_L(s)-eps)^2 >= 0.
+
+  The mean-zero ridge functions h_L=(sigma_L-eps)/2 are mutually orthogonal.
+  The profile reconstruction formula and the fixed numbers of +/- entries
+  therefore give the pointwise conservation law
+
+      sum_L a_L(y) = p(p^2-1)/4.
+
+  Thus QVAR is a signed profile-energy imbalance for p=3 mod 4.  This is an
+  exact general-p identity, not a census fit.
+
+Theorem G (the k=1 and k=3 strata clear QVAR for every prime).
+  For p=3 mod 4, put S=p(p^2-1)/4 and m=(p+1)/2.  On k=1, |Z|^2=S^2.  On
+  k=3, each active affine profile has energy S/3 and every direction-triple
+  has the same number (p-1)p^2 of lifts, so
+
+      E_k3 |Z|^2 = S^2 (m-3)/(3(m-1)).
+
+  For p=1 mod 4, eta=psi|F_p^* is the Legendre character.  On a k=3 affine
+  profile line, quartic Fourier inversion gives a contribution of common
+  magnitude p S_p and Gaussian-unit phase, where
+
+      S_p = sum_{a!=0} eta(a)/|1-exp(2 pi i a/p)|^2
+          = p^2 L(2,eta)/(2 pi^2) >= p^2/30.
+
+  The last inequality is the Euler-product bound
+  L(2,eta)>=prod_l(1+l^-2)^-1=zeta(4)/zeta(2)=pi^2/15.  A sum of three
+  Gaussian units has modulus at least one, hence |Z|^2>=p^6/900.  This clears
+  QVAR for p>=13; p=5 has the exact value 180>225/2.  The k=1 average follows
+  by sampling a fixed-size subset of F_p in the signed Paley graph and equals
+
+      p^3 (p-1)^2 (p+1) / (8(p-2)),
+
+  which also clears QVAR.  Therefore the exceptional target is reduced
+  further to the union of profile strata k>=4.
+
+Theorem H (odd-coset shell and spherical benchmark).
+  Let L=ker_Z(C-pI).  Once y0 is any Max+ vector, the odd vectors of L are
+  exactly the coset y0+2L.  Every vector in that coset has squared norm at
+  least n, with equality exactly for its {+1,-1}-vectors.  Thus the full
+  antipodal Max+ family is the first shell of one lattice coset, although it
+  is not the first shell of L itself: a square affine F_p-line A gives the
+  shorter vector 1_{{infinity} union A} in L of norm p+1<n.
+
+  Put K_psi(a,b)=psi(a-b) on the finite coordinates, zero at infinity, and
+  A_psi=P K_psi P/4 on V_+.  Then Z_psi(y)=y^T A_psi y.  Character
+  orthogonality gives
+
+      tr(A_psi)=0,  ||A_psi||_HS^2=q(q-1)/32.
+
+  The radius-sqrt(n) spherical average in d=n/2 dimensions is therefore
+
+      V_sph=q(q-1)(q+1)/(4(q+5)).
+
+  It exceeds the QVAR threshold by
+
+      q(q-1)(q-11)/(16(q+5)) > 0                 (p>=5).
+
+  Hence QVAR is equivalent to requiring the degree-four harmonic excess of
+  the first odd-coset shell to be no smaller than the negative of this gap;
+  nonnegativity of that harmonic theta coefficient is a sufficient stronger
+  target.  Ordinary minimum-shell design theorems do not settle this because
+  L has the shorter norm-(p+1) shell.
+
 Writes evidence/e1_gmin_m4_prop15589.json.
 """
 from __future__ import annotations
@@ -316,6 +386,123 @@ def theorem_E_exceptional_quartic_variance() -> dict:
     }
 
 
+def profile_energy_total(p: int) -> int:
+    """Pointwise sum of directional profile energies for p=3 mod 4."""
+    q = q_of(p)
+    return p * (q - 1) // 4
+
+
+def k1_quartic_variance(p: int) -> Fraction:
+    """Exact E|Z_psi|^2 on the k=1 profile stratum."""
+    if p % 4 == 3:
+        return Fraction(profile_energy_total(p) ** 2)
+    return Fraction(p**3 * (p - 1) ** 2 * (p + 1), 8 * (p - 2))
+
+
+def k3_quartic_variance_p3mod4(p: int) -> Fraction:
+    """Exact E|Z_psi|^2 on k=3 when p=3 mod 4."""
+    if p % 4 != 3:
+        raise ValueError("requires p=3 mod 4")
+    m = (p + 1) // 2
+    S = profile_energy_total(p)
+    return Fraction(S * S * (m - 3), 3 * (m - 1))
+
+
+def k3_quartic_variance_lower_p1mod4(p: int) -> Fraction:
+    """Euler-product lower bound on k=3 for p=1 mod 4, p>=13."""
+    if p % 4 != 1 or p < 13:
+        raise ValueError("requires p=1 mod 4 and p>=13")
+    return Fraction(p**6, 900)
+
+
+def theorem_FG_profile_energy_and_low_strata(
+    primes=(5, 7, 11, 13, 17, 19),
+) -> dict:
+    rows = {}
+    ok = True
+    for p in primes:
+        threshold = quartic_variance_floor_threshold(p)
+        k1 = k1_quartic_variance(p)
+        if p == 5:
+            k3 = Fraction(180)
+            k3_kind = "exact finite base case"
+        elif p % 4 == 3:
+            k3 = k3_quartic_variance_p3mod4(p)
+            k3_kind = "exact profile-energy average"
+        else:
+            k3 = k3_quartic_variance_lower_p1mod4(p)
+            k3_kind = "Euler-product lower bound"
+        row_ok = k1 >= threshold and k3 >= threshold
+        rows[str(p)] = {
+            "threshold": str(threshold),
+            "k1_exact": str(k1),
+            "k3_value_or_lower": str(k3),
+            "k3_kind": k3_kind,
+            "k1_clears": k1 >= threshold,
+            "k3_clears": k3 >= threshold,
+        }
+        ok = ok and row_ok
+    return {
+        "proved_profile_energy_identity_p3mod4": True,
+        "proved_profile_energy_conservation_p3mod4": True,
+        "proved_k1_k3_QVAR_all_primes": bool(ok),
+        "remaining_exceptional_strata": "k>=4",
+        "theorem": (
+            "For p=3 mod 4, Z_psi is the signed directional-profile energy "
+            "and the total energy is p(p^2-1)/4. The k=1 and k=3 strata "
+            "satisfy QVAR for every prime; p=1 mod 4 uses the Euler-product "
+            "lower bound L(2,chi)>=pi^2/15 for k=3, with p=5 exact."
+        ),
+        "by_p": rows,
+    }
+
+
+def spherical_quartic_variance(p: int) -> Fraction:
+    """Radius-sqrt(n) sphere average of |Z_psi|^2 in V_+."""
+    q = q_of(p)
+    return Fraction(q * (q - 1) * (q + 1), 4 * (q + 5))
+
+
+def spherical_QVAR_gap(p: int) -> Fraction:
+    """Amount by which the spherical benchmark clears QVAR."""
+    return spherical_quartic_variance(p) - quartic_variance_floor_threshold(p)
+
+
+def theorem_H_odd_coset_spherical_benchmark(
+    primes=(5, 7, 11, 13, 17, 19),
+) -> dict:
+    rows = {}
+    ok = True
+    for p in primes:
+        q = q_of(p)
+        sphere = spherical_quartic_variance(p)
+        threshold = quartic_variance_floor_threshold(p)
+        gap = spherical_QVAR_gap(p)
+        closed_gap = Fraction(q * (q - 1) * (q - 11), 16 * (q + 5))
+        row_ok = p + 1 < n_of(p) and gap == closed_gap and gap > 0
+        rows[str(p)] = {
+            "ordinary_lattice_short_vector_norm_sq": p + 1,
+            "odd_coset_first_shell_norm_sq": n_of(p),
+            "sphere_variance": str(sphere),
+            "QVAR_threshold": str(threshold),
+            "sphere_minus_threshold": str(gap),
+            "ok": row_ok,
+        }
+        ok = ok and row_ok
+    return {
+        "proved_reduction": bool(ok),
+        "maxplus_is_odd_coset_first_shell": True,
+        "maxplus_is_ordinary_lattice_first_shell": False,
+        "ordinary_minimum_shell_design_route_applies": False,
+        "sufficient_harmonic_target": "degree-4 odd-coset coefficient >= 0",
+        "exact_harmonic_target": (
+            "degree-4 odd-coset excess >= "
+            "-q(q-1)(q-11)/(16(q+5))"
+        ),
+        "by_p": rows,
+    }
+
+
 def leftover_flags_unchanged() -> bool:
     from e1_gmin_m4_prop15278 import phi_F_ge_6_proved_general
 
@@ -328,6 +515,8 @@ def main() -> dict:
     C = theorem_C_phi_multiplicity_reduction()
     D = theorem_D_variance_alternatives()
     E = theorem_E_exceptional_quartic_variance()
+    FG = theorem_FG_profile_energy_and_low_strata()
+    H = theorem_H_odd_coset_spherical_benchmark()
     out = {
         "prop": "15.589",
         "title": "Exact PSL decomposition of Z; one exceptional floor scalar",
@@ -338,13 +527,30 @@ def main() -> dict:
             "variance_alternatives": D["proved"],
             "exceptional_quartic_variance_reduction": E["proved_reduction"],
             "exceptional_quartic_variance_general": E["proved_general_inequality"],
+            "exceptional_profile_energy_p3mod4": FG[
+                "proved_profile_energy_identity_p3mod4"
+            ],
+            "exceptional_k1_k3_QVAR_all_primes": FG[
+                "proved_k1_k3_QVAR_all_primes"
+            ],
+            "odd_coset_spherical_reduction": H["proved_reduction"],
             "lambda_exc_ge_6": False,
             "lambda_min_ge_6_general": False,
         },
-        "algebra": {"A": A, "B": B, "C": C, "D": D, "E": E},
+        "algebra": {
+            "A": A,
+            "B": B,
+            "C": C,
+            "D": D,
+            "E": E,
+            "FG": FG,
+            "H": H,
+        },
         "remaining_floor_targets": [
             "lambda_exc=Phi|W_e >= 6",
             "equivalently E|Z_psi|^2 >= 3q(q-1)/16 for psi^2=chi",
+            "the exceptional inequality now remains only on profile strata k>=4",
+            "equivalently bound the degree-4 odd-coset harmonic excess below by the spherical QVAR gap",
             "delta2 <= n(n+10)^2/(6(n-6)^2) for principal minimum",
         ],
         "flags_not_flipped": ["phi_F_ge_6", "residual_ii", "type_I", "e1", "L"],
@@ -357,7 +563,9 @@ def main() -> dict:
     print(f"  Z multiplicity-free: {B['proved']}")
     print(f"  Phi multiplicity reduction: {C['proved']}")
     print(f"  exceptional quartic reduction: {E['proved_reduction']}")
-    print("  floor still OPEN: quartic variance and delta variance bounds")
+    print(f"  exceptional k=1,3 strata closed: {FG['proved_k1_k3_QVAR_all_primes']}")
+    print(f"  odd-coset spherical reduction: {H['proved_reduction']}")
+    print("  floor still OPEN: k>=4 quartic variance and delta variance bounds")
     return out
 
 
