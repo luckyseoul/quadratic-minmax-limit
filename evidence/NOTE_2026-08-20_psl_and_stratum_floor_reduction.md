@@ -331,13 +331,30 @@ kills the ordinary-minimum-shell shortcut.
    coefficient kernels and *simultaneous* Boolean ridge reconstruction, or an
    equivalent coupling.
 
+6. **QVAR is false on fixed active direction-subsets.**  This is a genuine
+   Max+ counterexample, not an artificial energy model.  Translation leaves
+   profile energies unchanged, so the exact p=11 k=4 family reduces from
+   58,080 vectors to 480 pure parabolas.  In quartic sign order
+   `(+,-,-,+,+,-)`, the 15 four-subsets split into:
+
+   * nine balanced `2+ / 2-` subsets, 40 pure reps each, each with
+     `B` histogram `{-3:10,-1:10,1:10,3:10}` and `E B^2=5<45/8`;
+   * six unbalanced `3+ / 1-` subsets (up to sign), 20 reps each, each with
+     `|B|` histogram `{3:5,9:15}` and `E B^2=63`.
+
+   The count-weighted aggregate is `E B^2=39/2`, equivalently
+   `E|Z_psi|^2=9438`, and clears QVAR.  Consequently even a proof confined to
+   one profile stratum must mix projective direction configurations before
+   taking the quartic second moment.  Reproducible extraction:
+   `evidence/maxplus_p11/k4_active_subset_quartic_p11.{py,json}`.
+
 ## 8. Live targets
 
 Leftover 1 is now reduced to two explicit inequalities:
 
 1. prove the quartic variance `(QVAR)` on the union of profile strata `k>=4`,
-   using a genuine realizability/coupling property rather than the coarse
-   constraints killed in item 5;
+   using an ensemble-level coupling that mixes active direction configurations
+   rather than the pointwise or fixed-subset constraints killed above;
 2. prove the principal variance room
    `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`.
 

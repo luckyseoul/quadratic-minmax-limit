@@ -1,12 +1,11 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-20 (updated through `e23edef`; prior content preserved below)
+**Date:** 2026-08-20 (updated through `54fd110`; prior content preserved below)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
-**Current branch:** `codex/leftover-moment-attack` at `e23edef`
-**Working tree after that commit:** Prop 15.589 Theorem I adds a general
-coarse-profile countermechanism and the exact `2p` arithmetic reduction;
-92 focused Prop 15.588/15.589 tests pass, but this continuation is not yet
-committed.
+**Current branch:** `codex/leftover-moment-attack` (use `git log -1` for the
+current hash).  The latest continuation adds Prop 15.589 Theorem J, the exact
+p=11 fixed-active-subset counterexample described below.  All 93 focused Prop
+15.588/15.589 tests pass.
 **Statement:** [MathOverflow 413935](https://mathoverflow.net/questions/413935).
 \(\alpha_n=n^{-3/2}\min_{a_{ij}=\pm1}\max_{x=\pm1}\lvert\sum_{i<j}a_{ij}x_ix_j\rvert\).
 
@@ -71,6 +70,13 @@ Therefore those facts cannot prove the bound even in combination.  Any
 surviving profile argument must use the cross-direction coefficient kernels
 and simultaneous Boolean ridge reconstruction, or an equivalent coupling
 among directions (Prop 15.589 I).
+
+The p=11 k=4 pure-parabola census further shows that the live inequality is
+not fixed-active-subsetwise.  Each of nine genuine balanced four-direction
+families has normalized moment `E B^2=5<45/8`; six unbalanced families have
+`E B^2=63` and rescue the count-weighted aggregate to `39/2`.  Therefore the
+proof must mix projective direction configurations even before mixing profile
+strata (Prop 15.589 J).
 
 **Settled.** Sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\) (`solution.md`). Paley \(\rho=1\) on \(n=p^2+1\) (`evidence/PROOF_rho_eq_1.md`).
 
@@ -149,7 +155,8 @@ restricted-stratum PSD, ordinary minimum-shell design, or “quartic is top on
 every stratum”: each is now disproved.  Positivity, conserved total, cyclic
 symmetry, full support, and coarse divisibility are also insufficient; a
 profile proof must now exploit the cross-direction coefficient kernels and
-simultaneous Boolean realizability.  In parallel, an upper bound on
+simultaneous Boolean realizability, with active-direction configurations mixed
+before taking the second moment.  In parallel, an upper bound on
 `||M||_F^2` may close the principal delta room.  Import `phi_F_ge_6` only when
 both block types are controlled generally, never from finite-p data.
 
@@ -212,6 +219,7 @@ deleted so the reversal is traceable.
 | `evidence/NOTE_2026-08-20_psl_and_stratum_floor_reduction.md` | Binding PSL decomposition, QVAR, low-stratum theorem, odd-coset route, and killed routes |
 | `evidence/quartic_profile_attack.py` | Direct quartic/profile-energy diagnostic |
 | `evidence/maxplus_p11/directional_energy_covariance_p11.{py,json}` | Full p=11 directional covariance and top-mode counterexample |
+| `evidence/maxplus_p11/k4_active_subset_quartic_p11.{py,json}` | Exact p=11 k=4 active-subset split: balanced families fail QVAR, aggregate clears |
 | `evidence/NOTE_leftover1_variance_multiplicity_route.md` | Historical principal variance route and `||M||_F^2` target |
 | `evidence/METHOD_why_500_props_never_moved_a_flag.md` | Read before writing a new numbered proposition |
 | `evidence/maxplus_p11/` | Scripts + logs for the p=11 spectrum/moment computations |
@@ -222,7 +230,7 @@ Large `.npy` arrays (Max+ at p=11, 4.5 GB each) are **not in git** — they live
 original computation. Scripts there have hardcoded `/tmp/e1work` paths; repoint
 before rerunning.
 
-**HEAD:** `e23edef` on `codex/leftover-moment-attack` (PSL decomposition,
-low-stratum QVAR theorem, odd-coset benchmark, and p=11 covariance evidence).
-The current uncommitted continuation adds the handoff corrections and the
-general coarse-profile countermechanism in Prop 15.589 I.
+**Checkpoint entering the latest continuation:** `54fd110` (exact `2p`
+arithmetic, normalized integer QVAR, and the general coarse-profile
+countermechanism).  The latest commit(s) after that checkpoint add the p=11
+fixed-active-subset counterexample in Prop 15.589 J; use `git log -1` for HEAD.

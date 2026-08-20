@@ -1,7 +1,9 @@
 """Prop 15.589 — PSL decomposition and exceptional-scalar reduction."""
 from __future__ import annotations
 
+import json
 from fractions import Fraction
+from pathlib import Path
 
 import numpy as np
 import pytest
@@ -206,6 +208,30 @@ def test_coarse_profile_countermechanism_kills_only_coarse_route():
     assert all(row["ok"] for row in I["by_p"].values())
     with pytest.raises(ValueError):
         M.coarse_profile_counterexample(13)
+
+
+def test_p11_k4_requires_active_subset_mixing():
+    J = M.theorem_J_p11_k4_active_subset_mixing()
+    assert J["proved_counterexample"], J
+    assert J["normalized_QVAR_threshold"] == "45/8"
+    assert J["balanced"]["E_B2"] == "5"
+    assert J["balanced"]["fails_QVAR"]
+    assert J["unbalanced"]["E_B2"] == "63"
+    assert J["unbalanced"]["clears_QVAR"]
+    assert J["n_pure_reps"] == 480
+    assert J["n_full_k4_vectors"] == 58_080
+    assert J["aggregate_E_B2"] == "39/2"
+    assert J["aggregate_E_Z2"] == "9438"
+    assert J["aggregate_clears_QVAR"]
+
+    data = json.loads(
+        (Path(__file__).parents[1] / "evidence" / "maxplus_p11" /
+         "k4_active_subset_quartic_p11.json").read_text()
+    )
+    assert data["n_pure_reps"] == J["n_pure_reps"]
+    assert data["n_full_vectors"] == J["n_full_k4_vectors"]
+    assert data["aggregate_E_B2"] == J["aggregate_E_B2"]
+    assert {row["E_B2"] for row in data["subsets"].values()} == {"5", "63"}
 
 
 @pytest.mark.parametrize("p", [5, 7])

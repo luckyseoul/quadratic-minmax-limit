@@ -214,6 +214,22 @@ Theorem I (coarse profile constraints cannot prove QVAR).
   cross-direction coefficient kernels and simultaneous Boolean ridge
   reconstruction, or an equivalent constraint coupling the profiles.
 
+Theorem J (QVAR is not active-subsetwise, even on genuine k=4 families).
+  At p=11, translation gauge reduces the 58,080 k=4 vectors to 480 pure
+  parabolas without changing their directional energies.  In the direction
+  order used by the exact census the quartic signs are (+,-,-,+,+,-).
+  The 15 active four-subsets split exactly as follows:
+
+    * nine balanced 2-plus/2-minus subsets, 40 pure reps each, with B histogram
+      {-3:10,-1:10,1:10,3:10}; hence E B^2=5<45/8;
+    * six unbalanced 3-plus/1-minus or 1-plus/3-minus subsets, 20 reps each,
+      with absolute B histogram {3:5,9:15}; hence E B^2=63.
+
+  Their count-weighted mixture has E B^2=39/2, exactly the known k=4 value
+  9438/(2p)^2, and clears QVAR.  Thus a proof cannot demand QVAR separately
+  on each active direction-set; genuine projective-configuration mixing is
+  already essential inside one profile stratum.
+
 Writes evidence/e1_gmin_m4_prop15589.json.
 """
 from __future__ import annotations
@@ -770,6 +786,60 @@ def theorem_I_coarse_profile_constraints_insufficient(
     }
 
 
+def theorem_J_p11_k4_active_subset_mixing() -> dict:
+    """Exact p=11 k=4 counterexample to active-subsetwise QVAR."""
+    target = normalized_quartic_variance_threshold(11)
+    balanced = {
+        "n_direction_subsets": 9,
+        "pure_reps_per_subset": 40,
+        "B_histogram_per_subset": {"-3": 10, "-1": 10, "1": 10, "3": 10},
+        "E_B2": Fraction(5),
+    }
+    unbalanced = {
+        "n_direction_subsets": 6,
+        "pure_reps_per_subset": 20,
+        "absolute_B_histogram_per_subset": {"3": 5, "9": 15},
+        "E_B2": Fraction(63),
+    }
+    n_bal = balanced["n_direction_subsets"] * balanced["pure_reps_per_subset"]
+    n_unbal = (
+        unbalanced["n_direction_subsets"]
+        * unbalanced["pure_reps_per_subset"]
+    )
+    aggregate = Fraction(
+        n_bal * balanced["E_B2"] + n_unbal * unbalanced["E_B2"],
+        n_bal + n_unbal,
+    )
+    return {
+        "proved_counterexample": balanced["E_B2"] < target,
+        "translation_orbit_size": 11 * 11,
+        "quartic_direction_signs": [1, -1, -1, 1, 1, -1],
+        "normalized_QVAR_threshold": str(target),
+        "balanced": {
+            **balanced,
+            "E_B2": str(balanced["E_B2"]),
+            "fails_QVAR": balanced["E_B2"] < target,
+        },
+        "unbalanced": {
+            **unbalanced,
+            "E_B2": str(unbalanced["E_B2"]),
+            "clears_QVAR": unbalanced["E_B2"] >= target,
+        },
+        "n_pure_reps": n_bal + n_unbal,
+        "n_full_k4_vectors": (n_bal + n_unbal) * 11 * 11,
+        "aggregate_E_B2": str(aggregate),
+        "aggregate_E_Z2": str(aggregate * (2 * 11) ** 2),
+        "aggregate_clears_QVAR": aggregate >= target,
+        "route_killed": (
+            "QVAR on every fixed active direction-subset, even inside k=4"
+        ),
+        "surviving_requirement": (
+            "mix projective direction configurations before taking the "
+            "quartic second moment"
+        ),
+    }
+
+
 def leftover_flags_unchanged() -> bool:
     from e1_gmin_m4_prop15278 import phi_F_ge_6_proved_general
 
@@ -786,6 +856,7 @@ def main() -> dict:
     FG = theorem_FG_profile_energy_and_low_strata()
     H = theorem_H_odd_coset_spherical_benchmark()
     I = theorem_I_coarse_profile_constraints_insufficient()
+    J = theorem_J_p11_k4_active_subset_mixing()
     out = {
         "prop": "15.589",
         "title": "Exact PSL decomposition of Z; one exceptional floor scalar",
@@ -810,6 +881,7 @@ def main() -> dict:
             "coarse_profile_constraints_insufficient": I[
                 "proved_countermechanism"
             ],
+            "active_subsetwise_QVAR_false": J["proved_counterexample"],
             "lambda_exc_ge_6": False,
             "lambda_min_ge_6_general": False,
         },
@@ -823,6 +895,7 @@ def main() -> dict:
             "FG": FG,
             "H": H,
             "I": I,
+            "J": J,
         },
         "remaining_floor_targets": [
             "lambda_exc=Phi|W_e >= 6",
@@ -845,6 +918,7 @@ def main() -> dict:
     print(f"  exceptional k=1,3 strata closed: {FG['proved_k1_k3_QVAR_all_primes']}")
     print(f"  odd-coset spherical reduction: {H['proved_reduction']}")
     print(f"  coarse profile route killed: {I['proved_countermechanism']}")
+    print(f"  active-subsetwise QVAR killed: {J['proved_counterexample']}")
     print("  floor still OPEN: k>=4 quartic variance and delta variance bounds")
     return out
 

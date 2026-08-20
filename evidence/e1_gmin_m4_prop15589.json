@@ -14,6 +14,7 @@
     "exceptional_k1_k3_QVAR_all_primes": true,
     "odd_coset_spherical_reduction": true,
     "coarse_profile_constraints_insufficient": true,
+    "active_subsetwise_QVAR_false": true,
     "lambda_exc_ge_6": false,
     "lambda_min_ge_6_general": false
   },
@@ -862,6 +863,48 @@
           "ok": true
         }
       }
+    },
+    "J": {
+      "proved_counterexample": true,
+      "translation_orbit_size": 121,
+      "quartic_direction_signs": [
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "normalized_QVAR_threshold": "45/8",
+      "balanced": {
+        "n_direction_subsets": 9,
+        "pure_reps_per_subset": 40,
+        "B_histogram_per_subset": {
+          "-3": 10,
+          "-1": 10,
+          "1": 10,
+          "3": 10
+        },
+        "E_B2": "5",
+        "fails_QVAR": true
+      },
+      "unbalanced": {
+        "n_direction_subsets": 6,
+        "pure_reps_per_subset": 20,
+        "absolute_B_histogram_per_subset": {
+          "3": 5,
+          "9": 15
+        },
+        "E_B2": "63",
+        "clears_QVAR": true
+      },
+      "n_pure_reps": 480,
+      "n_full_k4_vectors": 58080,
+      "aggregate_E_B2": "39/2",
+      "aggregate_E_Z2": "9438",
+      "aggregate_clears_QVAR": true,
+      "route_killed": "QVAR on every fixed active direction-subset, even inside k=4",
+      "surviving_requirement": "mix projective direction configurations before taking the quartic second moment"
     }
   },
   "remaining_floor_targets": [

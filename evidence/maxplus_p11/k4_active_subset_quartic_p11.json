@@ -1,0 +1,174 @@
+{
+  "p": 11,
+  "quartic_direction_weights": [
+    1,
+    -1,
+    -1,
+    1,
+    1,
+    -1
+  ],
+  "n_full_vectors": 58080,
+  "translation_orbit_size": 121,
+  "n_pure_reps": 480,
+  "n_balanced_subsets": 9,
+  "n_unbalanced_subsets": 6,
+  "normalized_QVAR_threshold": "45/8",
+  "aggregate_E_B2": "39/2",
+  "aggregate_E_Z2": "9438",
+  "subsets": {
+    "0,1,2,3": {
+      "kind": "balanced",
+      "n_pure_reps": 40,
+      "B_histogram": {
+        "-3": 10,
+        "-1": 10,
+        "1": 10,
+        "3": 10
+      },
+      "E_B2": "5"
+    },
+    "0,1,2,4": {
+      "kind": "balanced",
+      "n_pure_reps": 40,
+      "B_histogram": {
+        "-3": 10,
+        "-1": 10,
+        "1": 10,
+        "3": 10
+      },
+      "E_B2": "5"
+    },
+    "0,1,2,5": {
+      "kind": "unbalanced",
+      "n_pure_reps": 20,
+      "B_histogram": {
+        "-9": 15,
+        "-3": 5
+      },
+      "E_B2": "63"
+    },
+    "0,1,3,4": {
+      "kind": "unbalanced",
+      "n_pure_reps": 20,
+      "B_histogram": {
+        "3": 5,
+        "9": 15
+      },
+      "E_B2": "63"
+    },
+    "0,1,3,5": {
+      "kind": "balanced",
+      "n_pure_reps": 40,
+      "B_histogram": {
+        "-3": 10,
+        "-1": 10,
+        "1": 10,
+        "3": 10
+      },
+      "E_B2": "5"
+    },
+    "0,1,4,5": {
+      "kind": "balanced",
+      "n_pure_reps": 40,
+      "B_histogram": {
+        "-3": 10,
+        "-1": 10,
+        "1": 10,
+        "3": 10
+      },
+      "E_B2": "5"
+    },
+    "0,2,3,4": {
+      "kind": "unbalanced",
+      "n_pure_reps": 20,
+      "B_histogram": {
+        "3": 5,
+        "9": 15
+      },
+      "E_B2": "63"
+    },
+    "0,2,3,5": {
+      "kind": "balanced",
+      "n_pure_reps": 40,
+      "B_histogram": {
+        "-3": 10,
+        "-1": 10,
+        "1": 10,
+        "3": 10
+      },
+      "E_B2": "5"
+    },
+    "0,2,4,5": {
+      "kind": "balanced",
+      "n_pure_reps": 40,
+      "B_histogram": {
+        "-3": 10,
+        "-1": 10,
+        "1": 10,
+        "3": 10
+      },
+      "E_B2": "5"
+    },
+    "0,3,4,5": {
+      "kind": "unbalanced",
+      "n_pure_reps": 20,
+      "B_histogram": {
+        "3": 5,
+        "9": 15
+      },
+      "E_B2": "63"
+    },
+    "1,2,3,4": {
+      "kind": "balanced",
+      "n_pure_reps": 40,
+      "B_histogram": {
+        "-3": 10,
+        "-1": 10,
+        "1": 10,
+        "3": 10
+      },
+      "E_B2": "5"
+    },
+    "1,2,3,5": {
+      "kind": "unbalanced",
+      "n_pure_reps": 20,
+      "B_histogram": {
+        "-9": 15,
+        "-3": 5
+      },
+      "E_B2": "63"
+    },
+    "1,2,4,5": {
+      "kind": "unbalanced",
+      "n_pure_reps": 20,
+      "B_histogram": {
+        "-9": 15,
+        "-3": 5
+      },
+      "E_B2": "63"
+    },
+    "1,3,4,5": {
+      "kind": "balanced",
+      "n_pure_reps": 40,
+      "B_histogram": {
+        "-3": 10,
+        "-1": 10,
+        "1": 10,
+        "3": 10
+      },
+      "E_B2": "5"
+    },
+    "2,3,4,5": {
+      "kind": "balanced",
+      "n_pure_reps": 40,
+      "B_histogram": {
+        "-3": 10,
+        "-1": 10,
+        "1": 10,
+        "3": 10
+      },
+      "E_B2": "5"
+    }
+  }
+}
