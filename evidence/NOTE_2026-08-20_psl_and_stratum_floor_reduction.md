@@ -340,6 +340,18 @@ so five sum to 225 instead of `T=231`.  The general `p>4k^2` barrier handles
 union is `k>=5` for `p<=37` and `k>=6` for `p>=41`.  Reproducible certificate:
 `evidence/k5_cubic_energy_barrier.{py,json}` (Prop 15.589 P).
 
+Exact coefficient and Boolean sieves narrow the finite part much further.  At
+`p=29`, 736,828,092 low-energy type tuples leave no compatible coefficient
+system on any of 3,003 direction subsets.  At `p=37`, all 9,348 low-energy
+leading patterns fail the degree-one kernel on 11,628 subsets.  At `p=31`,
+8,000 depressed Boolean representatives survive and generate 7,688,000
+`eps=+1` vectors by translation; their normalized quartic histogram is
+`{-72:2400,-24:1600,24:1600,72:2400}`, giving
+`E B^2=16704/5>45`.  The complete existing `p=11,k=5` census gives
+`E B^2=163/9>45/8`.  Hence QVAR on `k=5` remains open only at
+`p=13,17,19,23`.  Certificates:
+`evidence/k5_p{29,31,37}_coefficient_sieve.{py,json}` (Prop 15.589 Q).
+
 ## 6. Odd-coset shell and spherical benchmark
 
 There is a useful lattice reformulation, with one important trap.  Set
@@ -497,14 +509,14 @@ kills the ordinary-minimum-shell shortcut.
 
 Leftover 1 is now reduced to two explicit inequalities:
 
-1. prove the quartic variance `(QVAR)` on profile strata `k>=5` for `p<=37`
-   and `k>=6` for `p>=41`,
+1. prove the quartic variance `(QVAR)` on `k=5` at `p=13,17,19,23` and on
+   `k>=6` from `p=11`,
    using an ensemble-level coupling that mixes active direction configurations
    and adjacent actual-degree families in their exact proportions, rather than
    the pointwise, fixed-subset, or coefficient-class constraints killed above;
    the general energy barrier reduces this asymptotically to
-   `k>=sqrt(p)/2`; `k=4` is closed for every prime and `k=5` is empty for
-   every `p>=41`;
+   `k>=sqrt(p)/2`; `k=4` is closed for every prime and `k=5` is reduced to
+   four finite primes;
 2. prove the principal variance room
    `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`.
 

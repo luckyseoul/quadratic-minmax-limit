@@ -1,0 +1,63 @@
+{
+  "p": 31,
+  "n_square_directions": 16,
+  "n_direction_subsets": 4368,
+  "normalized_total_T": 120,
+  "minimum_cubic_b": 23,
+  "energy_partitions": [
+    [
+      23,
+      23,
+      23,
+      24,
+      27
+    ],
+    [
+      23,
+      23,
+      24,
+      24,
+      26
+    ],
+    [
+      24,
+      24,
+      24,
+      24,
+      24
+    ]
+  ],
+  "relevant_type_histogram": {
+    "23": 60,
+    "24": 20,
+    "26": 120,
+    "27": 50
+  },
+  "required_depressed_constant_sum_mod_p": 15,
+  "scalar_pattern_histogram": {
+    "0": 1440,
+    "10": 1552,
+    "20": 1376
+  },
+  "total_scalar_patterns": 43040,
+  "total_type_tuples_before_constant_and_linear_sieves": 54803200,
+  "coefficient_candidate_histogram": {
+    "0": 4288,
+    "100": 80
+  },
+  "total_coefficient_candidates": 8000,
+  "endpoint_branches": 8000,
+  "boolean_representatives_mod_translation": 8000,
+  "eps_plus_count_including_translations": 7688000,
+  "normalized_quartic_histogram": {
+    "-72": 2400,
+    "-24": 1600,
+    "24": 1600,
+    "72": 2400
+  },
+  "E_B2": "16704/5",
+  "normalized_QVAR_threshold": "45",
+  "clears_QVAR": true,
+  "boolean_endpoint_search_needed": false,
+  "k5_empty": false
+}

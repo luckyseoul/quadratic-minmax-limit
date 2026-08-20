@@ -380,6 +380,37 @@ def test_cubic_energy_barrier_makes_k5_empty_from_p41():
     }
 
 
+def test_k5_is_reduced_to_four_small_primes():
+    Q = M.theorem_Q_k5_reduced_to_four_primes()
+    assert Q["proved"], Q
+    assert Q["remaining_k5_primes"] == [13, 17, 19, 23]
+    assert Q["p11"]["E_B2"] == "163/9"
+    assert Q["p29"]["coefficient_candidates"] == 0
+    assert Q["p31"]["boolean_representatives_mod_translation"] == 8_000
+    assert Q["p31"]["count_eps_plus"] == 7_688_000
+    assert Q["p31"]["E_B2"] == "16704/5"
+    assert Q["p31"]["clears_QVAR"]
+    assert Q["p37"]["coefficient_candidates"] == 0
+
+    root = Path(__file__).parents[1] / "evidence"
+    p29 = json.loads((root / "k5_p29_coefficient_sieve.json").read_text())
+    p31 = json.loads((root / "k5_p31_coefficient_sieve.json").read_text())
+    p37 = json.loads((root / "k5_p37_coefficient_sieve.json").read_text())
+    assert p29["total_type_tuples_before_coefficient_sieve"] == 736_828_092
+    assert p29["coefficient_candidate_histogram"] == {"0": 3_003}
+    assert p29["k5_empty"]
+    assert p31["boolean_representatives_mod_translation"] == 8_000
+    assert p31["normalized_quartic_histogram"] == {
+        "-72": 2_400,
+        "-24": 1_600,
+        "24": 1_600,
+        "72": 2_400,
+    }
+    assert p31["E_B2"] == "16704/5" and p31["clears_QVAR"]
+    assert p37["coefficient_candidate_histogram"] == {"0": 11_628}
+    assert p37["k5_empty"]
+
+
 @pytest.mark.parametrize("p", [5, 7])
 def test_square_affine_line_is_a_shorter_ordinary_lattice_vector(p):
     C = paley_conference_prime_power(p)

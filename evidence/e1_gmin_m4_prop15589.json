@@ -21,6 +21,7 @@
     "k4_QVAR_closed_p3mod4": true,
     "k4_QVAR_all_primes": true,
     "k5_empty_p_ge_41": true,
+    "k5_reduced_to_p13_p17_p19_p23": true,
     "lambda_exc_ge_6": false,
     "lambda_min_ge_6_general": false
   },
@@ -1239,12 +1240,61 @@
         "p<=37": "k>=5",
         "p>=41": "k>=6"
       }
+    },
+    "Q": {
+      "proved": true,
+      "direction_count_empty": [
+        5,
+        7
+      ],
+      "p11": {
+        "count_eps_plus": 1306800,
+        "E_B2": "163/9",
+        "normalized_QVAR_threshold": "45/8",
+        "clears_QVAR": true
+      },
+      "p29": {
+        "n_direction_subsets": 3003,
+        "type_tuples_before_coefficient_sieve": 736828092,
+        "coefficient_candidates": 0,
+        "k5_empty": true
+      },
+      "p31": {
+        "n_direction_subsets": 4368,
+        "boolean_representatives_mod_translation": 8000,
+        "count_eps_plus": 7688000,
+        "normalized_quartic_histogram": {
+          "-72": 2400,
+          "-24": 1600,
+          "24": 1600,
+          "72": 2400
+        },
+        "E_B2": "16704/5",
+        "normalized_QVAR_threshold": "45",
+        "clears_QVAR": true
+      },
+      "p37": {
+        "n_direction_subsets": 11628,
+        "leading_patterns_after_energy_and_constants": 9348,
+        "coefficient_candidates": 0,
+        "k5_empty": true
+      },
+      "p_ge_41": {
+        "k5_empty": true
+      },
+      "remaining_k5_primes": [
+        13,
+        17,
+        19,
+        23
+      ],
+      "remaining_exceptional_strata": "k>=5 at p=13,17,19,23; k>=6 at p=11 and every p>=29"
     }
   },
   "remaining_floor_targets": [
     "lambda_exc=Phi|W_e >= 6",
     "equivalently E|Z_psi|^2 >= 3q(q-1)/16 for psi^2=chi",
-    "the exceptional inequality remains on k>=5 for p<=37 and k>=6 for p>=41",
+    "k=5 remains only at p=13,17,19,23; k>=6 remains from p=11 onward",
     "equivalently bound the degree-4 odd-coset harmonic excess below by the spherical QVAR gap",
     "delta2 <= n(n+10)^2/(6(n-6)^2) for principal minimum"
   ],

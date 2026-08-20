@@ -1,0 +1,34 @@
+{
+  "p": 37,
+  "n_square_directions": 19,
+  "n_direction_subsets": 11628,
+  "normalized_total_T": 171,
+  "minimum_cubic_b": 34,
+  "energy_partition": [
+    34,
+    34,
+    34,
+    34,
+    35
+  ],
+  "relevant_type_histogram_before_constant_sieve": {
+    "34": 36,
+    "35": 72
+  },
+  "constant_sieve": {
+    "required_rho_constant_sum_mod_p": 34,
+    "surviving_b35_constant": 18,
+    "discarded_b35_constant": 19
+  },
+  "scalar_pattern_histogram": {
+    "0": 10849,
+    "12": 779
+  },
+  "total_scalar_patterns": 9348,
+  "coefficient_candidate_histogram": {
+    "0": 11628
+  },
+  "total_coefficient_candidates": 0,
+  "boolean_endpoint_search_needed": false,
+  "k5_empty": true
+}
