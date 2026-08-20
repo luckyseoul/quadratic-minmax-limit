@@ -411,6 +411,34 @@ def test_k5_is_reduced_to_four_small_primes():
     assert p37["k5_empty"]
 
 
+def test_k5_QVAR_is_closed_for_every_prime():
+    R = M.theorem_R_k5_QVAR_all_primes()
+    assert R["proved"], R
+    assert R["remaining_exceptional_strata"] == "k>=6 for p>=11"
+    assert R["p13"]["E_abs_Zpsi_sq"] == "297468/31"
+    assert R["p17"]["E_abs_Zpsi_sq"] == "1650768/29"
+    assert R["p19"]["E_B2"] == "29417/65"
+    assert R["p23"]["E_B2"] == "8908/19"
+
+    root = Path(__file__).parents[1] / "evidence"
+    rows = {
+        p: json.loads((root / f"k5_p{p}_coefficient_sieve.json").read_text())
+        for p in (13, 17, 19, 23)
+    }
+    assert rows[13]["boolean_representatives_mod_translation"] == 22_568
+    assert rows[13]["E_abs_Zpsi_sq"] == "297468/31"
+    assert rows[13]["clears_QVAR"]
+    assert rows[17]["boolean_representatives_mod_translation"] == 12_528
+    assert rows[17]["E_abs_Zpsi_sq"] == "1650768/29"
+    assert rows[17]["clears_QVAR"]
+    assert rows[19]["boolean_representatives_mod_translation"] == 11_700
+    assert rows[19]["E_B2"] == "29417/65"
+    assert rows[19]["clears_QVAR"]
+    assert rows[23]["boolean_representatives_mod_translation"] == 5_016
+    assert rows[23]["E_B2"] == "8908/19"
+    assert rows[23]["clears_QVAR"]
+
+
 @pytest.mark.parametrize("p", [5, 7])
 def test_square_affine_line_is_a_shorter_ordinary_lattice_vector(p):
     C = paley_conference_prime_power(p)

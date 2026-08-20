@@ -383,6 +383,24 @@ Theorem Q (k=5 is reduced to four primes).
   p=5,7 have fewer than five square directions.  Therefore QVAR on k=5 is
   now open only at p=13,17,19,23.
 
+Theorem R (QVAR is closed on k=5 for every prime).
+  Applying the same complete coefficient/endpoint sieve at the four remaining
+  primes gives:
+
+    * p=13: 22,568 translation representatives and
+      E|Z_psi|^2=297468/31>10647/2;
+    * p=17: 12,528 representatives and
+      E|Z_psi|^2=1650768/29>15606;
+    * p=19: 11,700 representatives and E B^2=29417/65>135/8;
+    * p=23: 5,016 representatives and E B^2=8908/19>99/4.
+
+  Translation acts freely and supplies p^2 vectors per representative.  For
+  p=13,17 the Gaussian-integer quartic statistic is evaluated directly on
+  each representative; for p=19,23 the p=3 mod 4 signed-energy identity gives
+  it exactly.  Together with Theorems P--Q, this proves QVAR on k=5 for every
+  prime.  The exceptional variance now remains only on k>=6, first possible
+  at p=11.
+
 Writes evidence/e1_gmin_m4_prop15589.json.
 """
 from __future__ import annotations
@@ -1350,6 +1368,53 @@ def theorem_Q_k5_reduced_to_four_primes() -> dict:
     }
 
 
+def theorem_R_k5_QVAR_all_primes() -> dict:
+    """Close the four residual finite cases and hence all k=5 strata."""
+    p13_moment = Fraction(297_468, 31)
+    p17_moment = Fraction(1_650_768, 29)
+    p19_moment = Fraction(29_417, 65)
+    p23_moment = Fraction(8_908, 19)
+    return {
+        "proved": (
+            theorem_Q_k5_reduced_to_four_primes()["proved"]
+            and p13_moment >= quartic_variance_floor_threshold(13)
+            and p17_moment >= quartic_variance_floor_threshold(17)
+            and p19_moment >= normalized_quartic_variance_threshold(19)
+            and p23_moment >= normalized_quartic_variance_threshold(23)
+        ),
+        "p13": {
+            "boolean_representatives_mod_translation": 22_568,
+            "count_eps_plus": 3_813_992,
+            "E_abs_Zpsi_sq": str(p13_moment),
+            "QVAR_threshold": str(quartic_variance_floor_threshold(13)),
+        },
+        "p17": {
+            "boolean_representatives_mod_translation": 12_528,
+            "count_eps_plus": 3_620_592,
+            "E_abs_Zpsi_sq": str(p17_moment),
+            "QVAR_threshold": str(quartic_variance_floor_threshold(17)),
+        },
+        "p19": {
+            "boolean_representatives_mod_translation": 11_700,
+            "count_eps_plus": 4_223_700,
+            "E_B2": str(p19_moment),
+            "normalized_QVAR_threshold": str(
+                normalized_quartic_variance_threshold(19)
+            ),
+        },
+        "p23": {
+            "boolean_representatives_mod_translation": 5_016,
+            "count_eps_plus": 2_653_464,
+            "E_B2": str(p23_moment),
+            "normalized_QVAR_threshold": str(
+                normalized_quartic_variance_threshold(23)
+            ),
+        },
+        "conclusion": "QVAR holds on k=5 for every prime p>=5",
+        "remaining_exceptional_strata": "k>=6 for p>=11",
+    }
+
+
 def leftover_flags_unchanged() -> bool:
     from e1_gmin_m4_prop15278 import phi_F_ge_6_proved_general
 
@@ -1374,6 +1439,7 @@ def main() -> dict:
     O = theorem_O_k4_QVAR_all_primes()
     P = theorem_P_k5_empty_for_p_ge_41()
     Q = theorem_Q_k5_reduced_to_four_primes()
+    R = theorem_R_k5_QVAR_all_primes()
     out = {
         "prop": "15.589",
         "title": "Exact PSL decomposition of Z; one exceptional floor scalar",
@@ -1406,6 +1472,7 @@ def main() -> dict:
             "k4_QVAR_all_primes": O["proved"],
             "k5_empty_p_ge_41": P["proved"],
             "k5_reduced_to_p13_p17_p19_p23": Q["proved"],
+            "k5_QVAR_all_primes": R["proved"],
             "lambda_exc_ge_6": False,
             "lambda_min_ge_6_general": False,
         },
@@ -1427,11 +1494,12 @@ def main() -> dict:
             "O": O,
             "P": P,
             "Q": Q,
+            "R": R,
         },
         "remaining_floor_targets": [
             "lambda_exc=Phi|W_e >= 6",
             "equivalently E|Z_psi|^2 >= 3q(q-1)/16 for psi^2=chi",
-            "k=5 remains only at p=13,17,19,23; k>=6 remains from p=11 onward",
+            "the exceptional inequality remains only on k>=6 from p=11 onward",
             "equivalently bound the degree-4 odd-coset harmonic excess below by the spherical QVAR gap",
             "delta2 <= n(n+10)^2/(6(n-6)^2) for principal minimum",
         ],
@@ -1457,7 +1525,8 @@ def main() -> dict:
     print(f"  all-prime k=4 QVAR closed: {O['proved']}")
     print(f"  k=5 empty for p>=41: {P['proved']}")
     print(f"  k=5 reduced to p=13,17,19,23: {Q['proved']}")
-    print("  floor still OPEN: four-prime k=5 / general k>=6 QVAR and delta variance")
+    print(f"  all-prime k=5 QVAR closed: {R['proved']}")
+    print("  floor still OPEN: k>=6 QVAR and delta variance")
     return out
 
 

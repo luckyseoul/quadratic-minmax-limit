@@ -22,6 +22,7 @@
     "k4_QVAR_all_primes": true,
     "k5_empty_p_ge_41": true,
     "k5_reduced_to_p13_p17_p19_p23": true,
+    "k5_QVAR_all_primes": true,
     "lambda_exc_ge_6": false,
     "lambda_min_ge_6_general": false
   },
@@ -1289,12 +1290,41 @@
         23
       ],
       "remaining_exceptional_strata": "k>=5 at p=13,17,19,23; k>=6 at p=11 and every p>=29"
+    },
+    "R": {
+      "proved": true,
+      "p13": {
+        "boolean_representatives_mod_translation": 22568,
+        "count_eps_plus": 3813992,
+        "E_abs_Zpsi_sq": "297468/31",
+        "QVAR_threshold": "10647/2"
+      },
+      "p17": {
+        "boolean_representatives_mod_translation": 12528,
+        "count_eps_plus": 3620592,
+        "E_abs_Zpsi_sq": "1650768/29",
+        "QVAR_threshold": "15606"
+      },
+      "p19": {
+        "boolean_representatives_mod_translation": 11700,
+        "count_eps_plus": 4223700,
+        "E_B2": "29417/65",
+        "normalized_QVAR_threshold": "135/8"
+      },
+      "p23": {
+        "boolean_representatives_mod_translation": 5016,
+        "count_eps_plus": 2653464,
+        "E_B2": "8908/19",
+        "normalized_QVAR_threshold": "99/4"
+      },
+      "conclusion": "QVAR holds on k=5 for every prime p>=5",
+      "remaining_exceptional_strata": "k>=6 for p>=11"
     }
   },
   "remaining_floor_targets": [
     "lambda_exc=Phi|W_e >= 6",
     "equivalently E|Z_psi|^2 >= 3q(q-1)/16 for psi^2=chi",
-    "k=5 remains only at p=13,17,19,23; k>=6 remains from p=11 onward",
+    "the exceptional inequality remains only on k>=6 from p=11 onward",
     "equivalently bound the degree-4 odd-coset harmonic excess below by the spherical QVAR gap",
     "delta2 <= n(n+10)^2/(6(n-6)^2) for principal minimum"
   ],

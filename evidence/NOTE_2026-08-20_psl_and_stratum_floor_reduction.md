@@ -352,6 +352,21 @@ leading patterns fail the degree-one kernel on 11,628 subsets.  At `p=31`,
 `p=13,17,19,23`.  Certificates:
 `evidence/k5_p{29,31,37}_coefficient_sieve.{py,json}` (Prop 15.589 Q).
 
+Running the identical complete sieve at those four residual primes finishes
+the activity level.  At `p=13,17`, direct Gaussian-integer quartic evaluation
+on the translation representatives gives
+
+```
+p=13: E|Z_psi|^2 = 297468/31 > 10647/2,
+p=17: E|Z_psi|^2 = 1650768/29 > 15606.
+```
+
+At `p=19,23`, the signed profile-energy identity gives
+`E B^2=29417/65>135/8` and `8908/19>99/4`.  Therefore QVAR is proved on
+`k=5` for every prime.  The live exceptional union now starts at `k=6`, first
+possible at `p=11`.  Certificates:
+`evidence/k5_p{13,17,19,23}_coefficient_sieve.{py,json}` (Prop 15.589 R).
+
 ## 6. Odd-coset shell and spherical benchmark
 
 There is a useful lattice reformulation, with one important trap.  Set
@@ -509,14 +524,12 @@ kills the ordinary-minimum-shell shortcut.
 
 Leftover 1 is now reduced to two explicit inequalities:
 
-1. prove the quartic variance `(QVAR)` on `k=5` at `p=13,17,19,23` and on
-   `k>=6` from `p=11`,
+1. prove the quartic variance `(QVAR)` on `k>=6` from `p=11`,
    using an ensemble-level coupling that mixes active direction configurations
    and adjacent actual-degree families in their exact proportions, rather than
    the pointwise, fixed-subset, or coefficient-class constraints killed above;
    the general energy barrier reduces this asymptotically to
-   `k>=sqrt(p)/2`; `k=4` is closed for every prime and `k=5` is reduced to
-   four finite primes;
+   `k>=sqrt(p)/2`; `k=4` and `k=5` are closed for every prime;
 2. prove the principal variance room
    `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`.
 

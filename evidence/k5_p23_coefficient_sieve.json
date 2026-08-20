@@ -1,0 +1,181 @@
+{
+  "p": 23,
+  "n_square_directions": 12,
+  "n_direction_subsets": 792,
+  "n_cyclic_subset_orbits": 66,
+  "cyclic_orbit_size_histogram": {
+    "12": 66
+  },
+  "normalized_total_T": 66,
+  "minimum_cubic_b": 11,
+  "energy_partitions": [
+    [
+      11,
+      11,
+      11,
+      11,
+      22
+    ],
+    [
+      11,
+      11,
+      11,
+      12,
+      21
+    ],
+    [
+      11,
+      11,
+      11,
+      14,
+      19
+    ],
+    [
+      11,
+      11,
+      11,
+      15,
+      18
+    ],
+    [
+      11,
+      11,
+      11,
+      16,
+      17
+    ],
+    [
+      11,
+      11,
+      12,
+      12,
+      20
+    ],
+    [
+      11,
+      11,
+      12,
+      14,
+      18
+    ],
+    [
+      11,
+      11,
+      12,
+      15,
+      17
+    ],
+    [
+      11,
+      11,
+      12,
+      16,
+      16
+    ],
+    [
+      11,
+      11,
+      14,
+      14,
+      16
+    ],
+    [
+      11,
+      11,
+      14,
+      15,
+      15
+    ],
+    [
+      11,
+      12,
+      12,
+      12,
+      19
+    ],
+    [
+      11,
+      12,
+      12,
+      14,
+      17
+    ],
+    [
+      11,
+      12,
+      12,
+      15,
+      16
+    ],
+    [
+      11,
+      12,
+      14,
+      14,
+      15
+    ],
+    [
+      12,
+      12,
+      12,
+      12,
+      18
+    ],
+    [
+      12,
+      12,
+      12,
+      14,
+      16
+    ],
+    [
+      12,
+      12,
+      12,
+      15,
+      15
+    ],
+    [
+      12,
+      12,
+      14,
+      14,
+      14
+    ]
+  ],
+  "relevant_type_histogram": {
+    "11": 22,
+    "12": 22,
+    "14": 132,
+    "15": 110,
+    "16": 132,
+    "17": 330,
+    "18": 242,
+    "19": 484,
+    "20": 528,
+    "21": 308,
+    "22": 836
+  },
+  "required_depressed_constant_sum_mod_p": 11,
+  "total_type_tuples_before_coefficient_sieve": 851598000,
+  "coefficient_candidate_histogram": {
+    "0": 564,
+    "22": 228
+  },
+  "total_coefficient_candidates": 5016,
+  "endpoint_branches": 5016,
+  "boolean_representatives_mod_translation": 5016,
+  "eps_plus_count_including_translations": 2653464,
+  "normalized_quartic_abs_histogram": {
+    "0": 1056,
+    "2": 528,
+    "20": 1056,
+    "22": 1320,
+    "26": 528,
+    "42": 528
+  },
+  "E_B2": "8908/19",
+  "normalized_QVAR_threshold": "99/4",
+  "clears_QVAR": true,
+  "k5_empty": false
+}

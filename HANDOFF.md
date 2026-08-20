@@ -3,9 +3,9 @@
 **Date:** 2026-08-20 (current branch; use `git log -1` for the exact checkpoint)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **Current branch:** `codex/leftover-moment-attack` (use `git log -1` for the
-current hash).  The latest continuation adds Prop 15.589 Theorems J--Q,
-including the all-prime `k=4` closure and the reduction of `k=5` to four
-finite primes described below.  All 111 focused Prop
+current hash).  The latest continuation adds Prop 15.589 Theorems J--R,
+including the all-prime `k=4` and `k=5` QVAR closures described below.  All
+112 focused Prop
 15.588/15.589 tests pass.
 **Statement:** [MathOverflow 413935](https://mathoverflow.net/questions/413935).
 \(\alpha_n=n^{-3/2}\min_{a_{ij}=\pm1}\max_{x=\pm1}\lvert\sum_{i<j}a_{ij}x_ix_j\rvert\).
@@ -38,10 +38,10 @@ pointwise total is `p(p^2-1)/4`.  Combining that identity with the affine
 profile classification, and using the Euler-product lower bound for
 `L(2,chi_p)` when `p=1 mod 4`, proves `(QVAR)` on every `k=1` and `k=3`
 stratum for every prime.  Theorems L--O close `k=4`, and Theorem P makes
-`k=5` empty for every `p>=41`.  Exact finite sieves additionally close `k=5`
-at `p=11,29,31,37`, leaving only `p=13,17,19,23` at that activity.  Thus the
-exceptional scalar remains open on those four `k=5` strata and on `k>=6` from
-`p=11` onward; the principal delta-variance target is unchanged.  See the
+`k=5` empty for every `p>=41`.  Exact finite sieves close every remaining
+`k=5` case as well.  Thus the exceptional scalar remains open only on
+`k>=6`, first possible at `p=11`; the principal delta-variance target is
+unchanged.  See the
 updated reduction note and Prop 15.589.
 
 The same degree theorem now gives exact arithmetic on every genuine profile:
@@ -139,6 +139,13 @@ nonempty but has only 8,000 translation representatives and exact moment
 `p=13,17,19,23` (Prop 15.589 Q;
 `evidence/k5_p{29,31,37}_coefficient_sieve.{py,json}`).
 
+The same complete sieve closes those last four cases.  At `p=13,17`, direct
+Gaussian-integer quartic evaluation gives moments `297468/31` and
+`1650768/29`, above thresholds `10647/2` and `15606`.  At `p=19,23`, the
+signed-energy moments are `29417/65>135/8` and `8908/19>99/4`.  Consequently
+QVAR is proved on `k=5` for every prime (Prop 15.589 R;
+`evidence/k5_p{13,17,19,23}_coefficient_sieve.{py,json}`).
+
 **Settled.** Sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\) (`solution.md`). Paley \(\rho=1\) on \(n=p^2+1\) (`evidence/PROOF_rho_eq_1.md`).
 
 **Not settled.** \(L=\lim\alpha_n=1/2\). That needs E(1): Paley \(C\) is a \(\Phi\)-minimizer for every prime \(p\ge5\). Soft-close from sandwich plus denseness, without E(1), is not a proof.
@@ -160,8 +167,8 @@ has been refined by Prop 15.589.  Multiplicity is now proved exactly: every
 principal block has degree `n`, and the only smaller block is one exceptional
 degree-`n/2` scalar.  The live route therefore has two separate targets:
 
-1. exceptional QVAR on `k=5` at `p=13,17,19,23` and on `k>=6` from `p=11`
-   onward, `E|Z_psi|^2 >= 3q(q-1)/16` (the `k=1,3,4` strata are proved); and
+1. exceptional QVAR on `k>=6` from `p=11` onward,
+   `E|Z_psi|^2 >= 3q(q-1)/16` (the `k=1,3,4,5` strata are proved); and
 2. the principal sufficient room
    `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`.
 
@@ -204,13 +211,13 @@ overridden twice.
 
 | Item | Flag | Status |
 |---|---|---|
-| \(\lambda_{\min}(\Phi)\ge6\) on \(Z\) | `phi_F_ge_6_proved_general=False` | Open. Exceptional QVAR remains on four `k=5` primes and on `k>=6` from `p=11`; principal blocks retain the delta-variance target. |
+| \(\lambda_{\min}(\Phi)\ge6\) on \(Z\) | `phi_F_ge_6_proved_general=False` | Open. Exceptional QVAR remains only on `k>=6` from `p=11`; principal blocks retain the delta-variance target. |
 | Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open. Affine and even \(k\le4p-2\) are closed (15.179, 15.236, 15.237). |
 | Type I, Max− not two-level \(\{-1,-3\}\) | `type_I_multilevel_bad_case_ND_closed=False` | Open. Remainder is \(A_{\mathrm{full}}\). |
 | Lemma D | True | Closed. Do not unflip. |
 
 **Next attack.**  For the exceptional block, prove QVAR directly on the union
-of `k=5` at `p=13,17,19,23` and `k>=6` from `p=11`, or prove the equivalent odd-coset degree-four harmonic excess is at
+`k>=6` from `p=11`, or prove the equivalent odd-coset degree-four harmonic excess is at
 least `-q(q-1)(q-11)/(16(q+5))`.  Do not use a pointwise/orbitwise floor,
 restricted-stratum PSD, ordinary minimum-shell design, or “quartic is top on
 every stratum”: each is now disproved.  Positivity, conserved total, cyclic
