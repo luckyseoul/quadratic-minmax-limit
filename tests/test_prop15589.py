@@ -344,6 +344,42 @@ def test_k4_QVAR_is_closed_for_every_prime():
     }
 
 
+def test_cubic_energy_barrier_makes_k5_empty_from_p41():
+    P = M.theorem_P_k5_empty_for_p_ge_41()
+    assert P["proved"], P
+    assert P["zero_cubic_scalar_excluded_by_degree_at_most_two_energy"]
+    assert P["analytic_range"]["first_prime"] == 101
+    assert P["remaining_exceptional_strata"] == {
+        "p<=37": "k>=5",
+        "p>=41": "k>=6",
+    }
+    p43 = P["finite_exact_range"]["43"]
+    assert not p43["five_minima_exceed_total"]
+    assert p43["relevant_type_histogram"] == {"45": 28}
+    assert p43["five_relevant_profiles_total"] == 225
+    assert not any(
+        row["energy_partition_exists"]
+        for row in P["finite_exact_range"].values()
+    )
+
+    data = json.loads(
+        (Path(__file__).parents[1] / "evidence" /
+         "k5_cubic_energy_barrier.json").read_text()
+    )
+    assert data["proved"]
+    assert data["finite_exact_range"]["43"]["relevant_type_histogram"] == {
+        "45": 28
+    }
+    assert data["finite_exact_range"]["43"]["energy_partitions"] == []
+    assert {
+        p: row["minimum_cubic_b"]
+        for p, row in data["finite_exact_range"].items()
+    } == {
+        p: row["minimum_cubic_b"]
+        for p, row in P["finite_exact_range"].items()
+    }
+
+
 @pytest.mark.parametrize("p", [5, 7])
 def test_square_affine_line_is_a_shorter_ordinary_lattice_vector(p):
     C = paley_conference_prime_power(p)

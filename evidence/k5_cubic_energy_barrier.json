@@ -1,0 +1,300 @@
+{
+  "scope": "k=5 and every prime p>=41",
+  "normalization": "b=||h||^2/(2p), T=(p^2-1)/8",
+  "finite_exact_range": {
+    "41": {
+      "minimum_cubic_b": 43,
+      "normalized_total_T": 210,
+      "five_minima_exceed_total": true,
+      "maximum_relevant_b": 38,
+      "relevant_type_histogram": {},
+      "energy_partitions": [],
+      "k5_empty_by_energy": true
+    },
+    "43": {
+      "minimum_cubic_b": 45,
+      "normalized_total_T": 231,
+      "five_minima_exceed_total": false,
+      "maximum_relevant_b": 51,
+      "relevant_type_histogram": {
+        "45": 28
+      },
+      "energy_partitions": [],
+      "k5_empty_by_energy": true,
+      "relevant_types": [
+        {
+          "b": 45,
+          "leading": 7,
+          "linear": 0,
+          "constant": 21
+        },
+        {
+          "b": 45,
+          "leading": 7,
+          "linear": 0,
+          "constant": 22
+        },
+        {
+          "b": 45,
+          "leading": 9,
+          "linear": 0,
+          "constant": 21
+        },
+        {
+          "b": 45,
+          "leading": 9,
+          "linear": 0,
+          "constant": 22
+        },
+        {
+          "b": 45,
+          "leading": 13,
+          "linear": 0,
+          "constant": 21
+        },
+        {
+          "b": 45,
+          "leading": 13,
+          "linear": 0,
+          "constant": 22
+        },
+        {
+          "b": 45,
+          "leading": 14,
+          "linear": 0,
+          "constant": 21
+        },
+        {
+          "b": 45,
+          "leading": 14,
+          "linear": 0,
+          "constant": 22
+        },
+        {
+          "b": 45,
+          "leading": 15,
+          "linear": 0,
+          "constant": 21
+        },
+        {
+          "b": 45,
+          "leading": 15,
+          "linear": 0,
+          "constant": 22
+        },
+        {
+          "b": 45,
+          "leading": 17,
+          "linear": 0,
+          "constant": 21
+        },
+        {
+          "b": 45,
+          "leading": 17,
+          "linear": 0,
+          "constant": 22
+        },
+        {
+          "b": 45,
+          "leading": 18,
+          "linear": 0,
+          "constant": 21
+        },
+        {
+          "b": 45,
+          "leading": 18,
+          "linear": 0,
+          "constant": 22
+        },
+        {
+          "b": 45,
+          "leading": 25,
+          "linear": 0,
+          "constant": 21
+        },
+        {
+          "b": 45,
+          "leading": 25,
+          "linear": 0,
+          "constant": 22
+        },
+        {
+          "b": 45,
+          "leading": 26,
+          "linear": 0,
+          "constant": 21
+        },
+        {
+          "b": 45,
+          "leading": 26,
+          "linear": 0,
+          "constant": 22
+        },
+        {
+          "b": 45,
+          "leading": 28,
+          "linear": 0,
+          "constant": 21
+        },
+        {
+          "b": 45,
+          "leading": 28,
+          "linear": 0,
+          "constant": 22
+        },
+        {
+          "b": 45,
+          "leading": 29,
+          "linear": 0,
+          "constant": 21
+        },
+        {
+          "b": 45,
+          "leading": 29,
+          "linear": 0,
+          "constant": 22
+        },
+        {
+          "b": 45,
+          "leading": 30,
+          "linear": 0,
+          "constant": 21
+        },
+        {
+          "b": 45,
+          "leading": 30,
+          "linear": 0,
+          "constant": 22
+        },
+        {
+          "b": 45,
+          "leading": 34,
+          "linear": 0,
+          "constant": 21
+        },
+        {
+          "b": 45,
+          "leading": 34,
+          "linear": 0,
+          "constant": 22
+        },
+        {
+          "b": 45,
+          "leading": 36,
+          "linear": 0,
+          "constant": 21
+        },
+        {
+          "b": 45,
+          "leading": 36,
+          "linear": 0,
+          "constant": 22
+        }
+      ]
+    },
+    "47": {
+      "minimum_cubic_b": 58,
+      "normalized_total_T": 276,
+      "five_minima_exceed_total": true,
+      "maximum_relevant_b": 44,
+      "relevant_type_histogram": {},
+      "energy_partitions": [],
+      "k5_empty_by_energy": true
+    },
+    "53": {
+      "minimum_cubic_b": 77,
+      "normalized_total_T": 351,
+      "five_minima_exceed_total": true,
+      "maximum_relevant_b": 43,
+      "relevant_type_histogram": {},
+      "energy_partitions": [],
+      "k5_empty_by_energy": true
+    },
+    "59": {
+      "minimum_cubic_b": 97,
+      "normalized_total_T": 435,
+      "five_minima_exceed_total": true,
+      "maximum_relevant_b": 47,
+      "relevant_type_histogram": {},
+      "energy_partitions": [],
+      "k5_empty_by_energy": true
+    },
+    "61": {
+      "minimum_cubic_b": 99,
+      "normalized_total_T": 465,
+      "five_minima_exceed_total": true,
+      "maximum_relevant_b": 69,
+      "relevant_type_histogram": {},
+      "energy_partitions": [],
+      "k5_empty_by_energy": true
+    },
+    "67": {
+      "minimum_cubic_b": 129,
+      "normalized_total_T": 561,
+      "five_minima_exceed_total": true,
+      "maximum_relevant_b": 45,
+      "relevant_type_histogram": {},
+      "energy_partitions": [],
+      "k5_empty_by_energy": true
+    },
+    "71": {
+      "minimum_cubic_b": 144,
+      "normalized_total_T": 630,
+      "five_minima_exceed_total": true,
+      "maximum_relevant_b": 54,
+      "relevant_type_histogram": {},
+      "energy_partitions": [],
+      "k5_empty_by_energy": true
+    },
+    "73": {
+      "minimum_cubic_b": 153,
+      "normalized_total_T": 666,
+      "five_minima_exceed_total": true,
+      "maximum_relevant_b": 54,
+      "relevant_type_histogram": {},
+      "energy_partitions": [],
+      "k5_empty_by_energy": true
+    },
+    "79": {
+      "minimum_cubic_b": 181,
+      "normalized_total_T": 780,
+      "five_minima_exceed_total": true,
+      "maximum_relevant_b": 56,
+      "relevant_type_histogram": {},
+      "energy_partitions": [],
+      "k5_empty_by_energy": true
+    },
+    "83": {
+      "minimum_cubic_b": 210,
+      "normalized_total_T": 861,
+      "five_minima_exceed_total": true,
+      "maximum_relevant_b": 21,
+      "relevant_type_histogram": {},
+      "energy_partitions": [],
+      "k5_empty_by_energy": true
+    },
+    "89": {
+      "minimum_cubic_b": 244,
+      "normalized_total_T": 990,
+      "five_minima_exceed_total": true,
+      "maximum_relevant_b": 14,
+      "relevant_type_histogram": {},
+      "energy_partitions": [],
+      "k5_empty_by_energy": true
+    },
+    "97": {
+      "minimum_cubic_b": 288,
+      "normalized_total_T": 1176,
+      "five_minima_exceed_total": true,
+      "maximum_relevant_b": 24,
+      "relevant_type_histogram": {},
+      "energy_partitions": [],
+      "k5_empty_by_energy": true
+    }
+  },
+  "analytic_range": {
+    "first_prime": 101,
+    "reason": "general activity barrier p>4k^2 with k=5"
+  },
+  "proved": true
+}

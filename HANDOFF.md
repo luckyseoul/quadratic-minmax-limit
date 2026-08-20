@@ -3,8 +3,9 @@
 **Date:** 2026-08-20 (current branch; use `git log -1` for the exact checkpoint)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **Current branch:** `codex/leftover-moment-attack` (use `git log -1` for the
-current hash).  The latest continuation adds Prop 15.589 Theorems J--O,
-including the all-prime `k=4` QVAR closure described below.  All 109 focused Prop
+current hash).  The latest continuation adds Prop 15.589 Theorems J--P,
+including the all-prime `k=4` closure and the `k=5,p>=41` emptiness result
+described below.  All 110 focused Prop
 15.588/15.589 tests pass.
 **Statement:** [MathOverflow 413935](https://mathoverflow.net/questions/413935).
 \(\alpha_n=n^{-3/2}\min_{a_{ij}=\pm1}\max_{x=\pm1}\lvert\sum_{i<j}a_{ij}x_ix_j\rvert\).
@@ -36,9 +37,10 @@ is exactly a signed sum of nonnegative directional profile energies whose
 pointwise total is `p(p^2-1)/4`.  Combining that identity with the affine
 profile classification, and using the Euler-product lower bound for
 `L(2,chi_p)` when `p=1 mod 4`, proves `(QVAR)` on every `k=1` and `k=3`
-stratum for every prime.  Theorems L--O now close `k=4` as well, so the
-exceptional scalar remains open only on the union `k>=5`; the principal
-delta-variance target is unchanged.  See the
+stratum for every prime.  Theorems L--O close `k=4`, and Theorem P makes
+`k=5` empty for every `p>=41`.  Thus the exceptional scalar remains open on
+`k>=5` for `p<=37`, but only `k>=6` for `p>=41`; the principal delta-variance
+target is unchanged.  See the
 updated reduction note and Prop 15.589.
 
 The same degree theorem now gives exact arithmetic on every genuine profile:
@@ -94,7 +96,7 @@ nonconstant quadratic line profiles, plus six exact two-character-class
 checks at `p=41,43,47,53,59,61`, proves that every active quadratic profile
 uses more than one quarter of the conserved profile energy for every
 `p>=41`.  Four active profiles are therefore impossible: the `k=4` stratum is
-empty for all primes `p>=41` (Prop 15.589 L).  This does not remove `k>=5`.
+empty for all primes `p>=41` (Prop 15.589 L).
 
 The same centered-Fourier argument plus Weil's additive-character estimate
 works at arbitrary profile degree: a `k>=4` stratum is empty whenever
@@ -118,6 +120,15 @@ above QVAR.  Since `p=5` has only three square directions, QVAR is now proved
 on `k=4` for every prime.  The exceptional target starts at `k=5`
 (Prop 15.589 O).
 
+For `k=5`, a zero cubic-kernel scalar is impossible by the degree-at-most-two
+energy bounds.  With nonzero scalar, all five profiles are cubic; translating
+the input reduces exact energy enumeration to depressed cubics
+`a s^3+c s+d`.  Their minima eliminate every prime `41<=p<101`, including the
+sole numerical exception `p=43`, where all 28 relevant types have `b=45` and
+sum to `225`, not the required `T=231`.  The general activity barrier handles
+`p>=101`.  Hence `k=5` is empty for every `p>=41` (Prop 15.589 P;
+`evidence/k5_cubic_energy_barrier.{py,json}`).
+
 **Settled.** Sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\) (`solution.md`). Paley \(\rho=1\) on \(n=p^2+1\) (`evidence/PROOF_rho_eq_1.md`).
 
 **Not settled.** \(L=\lim\alpha_n=1/2\). That needs E(1): Paley \(C\) is a \(\Phi\)-minimizer for every prime \(p\ge5\). Soft-close from sandwich plus denseness, without E(1), is not a proof.
@@ -139,8 +150,9 @@ has been refined by Prop 15.589.  Multiplicity is now proved exactly: every
 principal block has degree `n`, and the only smaller block is one exceptional
 degree-`n/2` scalar.  The live route therefore has two separate targets:
 
-1. exceptional QVAR on `k>=5`,
-   `E|Z_psi|^2 >= 3q(q-1)/16` (the `k=1,3,4` strata are proved); and
+1. exceptional QVAR on `k>=5` for `p<=37` and `k>=6` for `p>=41`,
+   `E|Z_psi|^2 >= 3q(q-1)/16` (the `k=1,3,4` strata are proved, and
+   `k=5` is empty for `p>=41`); and
 2. the principal sufficient room
    `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`.
 
@@ -183,13 +195,13 @@ overridden twice.
 
 | Item | Flag | Status |
 |---|---|---|
-| \(\lambda_{\min}(\Phi)\ge6\) on \(Z\) | `phi_F_ge_6_proved_general=False` | Open. Exceptional QVAR remains only on `k>=5`; principal blocks retain the delta-variance target. |
+| \(\lambda_{\min}(\Phi)\ge6\) on \(Z\) | `phi_F_ge_6_proved_general=False` | Open. Exceptional QVAR remains on `k>=5` for `p<=37` and `k>=6` for `p>=41`; principal blocks retain the delta-variance target. |
 | Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open. Affine and even \(k\le4p-2\) are closed (15.179, 15.236, 15.237). |
 | Type I, Max− not two-level \(\{-1,-3\}\) | `type_I_multilevel_bad_case_ND_closed=False` | Open. Remainder is \(A_{\mathrm{full}}\). |
 | Lemma D | True | Closed. Do not unflip. |
 
 **Next attack.**  For the exceptional block, prove QVAR directly on the union
-`k>=5`, or prove the equivalent odd-coset degree-four harmonic excess is at
+`k>=5` for `p<=37` and `k>=6` for `p>=41`, or prove the equivalent odd-coset degree-four harmonic excess is at
 least `-q(q-1)(q-11)/(16(q+5))`.  Do not use a pointwise/orbitwise floor,
 restricted-stratum PSD, ordinary minimum-shell design, or “quartic is top on
 every stratum”: each is now disproved.  Positivity, conserved total, cyclic

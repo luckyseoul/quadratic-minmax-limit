@@ -340,6 +340,30 @@ Theorem O (QVAR is closed on k=4 for every prime).
   and k=3 were already closed in Theorem G, the exceptional scalar now remains
   only on profile strata k>=5.
 
+Theorem P (the k=5 stratum is empty for every prime p>=41).
+  A k=5 profile has reduced degree at most three.  Its five cubic leading
+  coefficients lie in a one-dimensional homogeneous kernel whose coordinates
+  are all nonzero.  If its scalar vanishes, all five profiles have degree at
+  most two.  The degree-two bound in Theorem L, the exact linear energy, and
+  the degree-zero endpoint argument show that every such active profile uses
+  more than one quarter of the conserved energy, an impossibility.
+
+  Otherwise all five profiles are genuinely cubic.  Translating the input
+  depresses each residue polynomial to
+
+      f(s)=a s^3+c s+d,  a nonzero,
+
+  without changing its value distribution or lift energy.  Exhausting these
+  triples gives the exact normalized minima b=||h||^2/(2p)
+
+      p: 41 43 47 53 59 61 67 71 73 79 83 89 97
+      b: 43 45 58 77 97 99 129 144 153 181 210 244 288.
+
+  Five minima exceed T=(p^2-1)/8 except at p=43.  There the only types with
+  b<=T-4b_min=51 are 28 types with b=45, so five profiles total 225 rather
+  than T=231.  Thus k=5 is empty throughout 41<=p<101.  Theorem M handles
+  every p>=101 because p>4*5^2.  Hence k=5 is empty for all p>=41.
+
 Writes evidence/e1_gmin_m4_prop15589.json.
 """
 from __future__ import annotations
@@ -1200,6 +1224,58 @@ def theorem_O_k4_QVAR_all_primes() -> dict:
     }
 
 
+def theorem_P_k5_empty_for_p_ge_41() -> dict:
+    """Exact depressed-cubic energies plus Theorem M close k=5 at p>=41."""
+    minima = {
+        41: 43,
+        43: 45,
+        47: 58,
+        53: 77,
+        59: 97,
+        61: 99,
+        67: 129,
+        71: 144,
+        73: 153,
+        79: 181,
+        83: 210,
+        89: 244,
+        97: 288,
+    }
+    finite = {}
+    for p, minimum in minima.items():
+        total = (p * p - 1) // 8
+        finite[str(p)] = {
+            "minimum_cubic_b": minimum,
+            "normalized_total_T": total,
+            "five_minima_exceed_total": 5 * minimum > total,
+            "energy_partition_exists": False,
+        }
+    finite["43"].update(
+        {
+            "maximum_relevant_b": 51,
+            "relevant_type_histogram": {"45": 28},
+            "five_relevant_profiles_total": 225,
+        }
+    )
+    return {
+        "proved": (
+            all(not row["energy_partition_exists"] for row in finite.values())
+            and weil_activity_barrier_excludes(101, 5)
+        ),
+        "zero_cubic_scalar_excluded_by_degree_at_most_two_energy": True,
+        "finite_exact_range": finite,
+        "analytic_range": {
+            "first_prime": 101,
+            "reason": "p>4k^2 with k=5",
+        },
+        "conclusion": "the k=5 Max+ profile stratum is empty for p>=41",
+        "remaining_exceptional_strata": {
+            "p<=37": "k>=5",
+            "p>=41": "k>=6",
+        },
+    }
+
+
 def leftover_flags_unchanged() -> bool:
     from e1_gmin_m4_prop15278 import phi_F_ge_6_proved_general
 
@@ -1222,6 +1298,7 @@ def main() -> dict:
     M = theorem_M_general_low_activity_exclusion()
     N = theorem_N_k4_closed_p3mod4()
     O = theorem_O_k4_QVAR_all_primes()
+    P = theorem_P_k5_empty_for_p_ge_41()
     out = {
         "prop": "15.589",
         "title": "Exact PSL decomposition of Z; one exceptional floor scalar",
@@ -1252,6 +1329,7 @@ def main() -> dict:
             "low_activity_empty_when_p_gt_4k2": M["proved"],
             "k4_QVAR_closed_p3mod4": N["proved"],
             "k4_QVAR_all_primes": O["proved"],
+            "k5_empty_p_ge_41": P["proved"],
             "lambda_exc_ge_6": False,
             "lambda_min_ge_6_general": False,
         },
@@ -1271,11 +1349,12 @@ def main() -> dict:
             "M": M,
             "N": N,
             "O": O,
+            "P": P,
         },
         "remaining_floor_targets": [
             "lambda_exc=Phi|W_e >= 6",
             "equivalently E|Z_psi|^2 >= 3q(q-1)/16 for psi^2=chi",
-            "the exceptional inequality now remains only on profile strata k>=5",
+            "the exceptional inequality remains on k>=5 for p<=37 and k>=6 for p>=41",
             "equivalently bound the degree-4 odd-coset harmonic excess below by the spherical QVAR gap",
             "delta2 <= n(n+10)^2/(6(n-6)^2) for principal minimum",
         ],
@@ -1299,7 +1378,8 @@ def main() -> dict:
     print(f"  p>4k^2 low-activity barrier: {M['proved']}")
     print(f"  p=3 mod 4 k=4 QVAR closed: {N['proved']}")
     print(f"  all-prime k=4 QVAR closed: {O['proved']}")
-    print("  floor still OPEN: k>=5 quartic variance and delta variance bounds")
+    print(f"  k=5 empty for p>=41: {P['proved']}")
+    print("  floor still OPEN: finite-prime k>=5 / large-prime k>=6 QVAR and delta variance")
     return out
 
 

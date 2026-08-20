@@ -328,6 +328,18 @@ Combining both congruence classes with the analytic `p>=41` cutoff proves
 QVAR on `k=4` for every prime.  Together with the low-stratum theorem, the
 exceptional variance now remains only on `k>=5`.
 
+The next profile degree also has a complete high-prime energy closure.  For a
+`k=5` family, vanishing of the one-dimensional cubic leading-coefficient
+kernel would leave five active degree-at-most-two profiles, which already
+exceed the conserved energy.  Otherwise every profile is cubic.  Translating
+the input depresses its residue polynomial to `a s^3+c s+d`; exhaustive exact
+lift-energy enumeration eliminates every prime `41<=p<101`.  At the only
+near miss, `p=43`, all 28 relevant profile types have normalized energy 45,
+so five sum to 225 instead of `T=231`.  The general `p>4k^2` barrier handles
+`p>=101`.  Therefore `k=5` is empty for every `p>=41`; the live exceptional
+union is `k>=5` for `p<=37` and `k>=6` for `p>=41`.  Reproducible certificate:
+`evidence/k5_cubic_energy_barrier.{py,json}` (Prop 15.589 P).
+
 ## 6. Odd-coset shell and spherical benchmark
 
 There is a useful lattice reformulation, with one important trap.  Set
@@ -485,12 +497,14 @@ kills the ordinary-minimum-shell shortcut.
 
 Leftover 1 is now reduced to two explicit inequalities:
 
-1. prove the quartic variance `(QVAR)` on the union of profile strata `k>=5`,
+1. prove the quartic variance `(QVAR)` on profile strata `k>=5` for `p<=37`
+   and `k>=6` for `p>=41`,
    using an ensemble-level coupling that mixes active direction configurations
    and adjacent actual-degree families in their exact proportions, rather than
    the pointwise, fixed-subset, or coefficient-class constraints killed above;
    the general energy barrier reduces this asymptotically to
-   `k>=sqrt(p)/2`; `k=4` is now closed for every prime;
+   `k>=sqrt(p)/2`; `k=4` is closed for every prime and `k=5` is empty for
+   every `p>=41`;
 2. prove the principal variance room
    `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`.
 
