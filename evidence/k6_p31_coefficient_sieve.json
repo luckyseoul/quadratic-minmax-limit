@@ -1,0 +1,171 @@
+{
+  "p": 31,
+  "algorithm": "quadratic-3 plus linear-2 exact elimination",
+  "shards_merged": 16,
+  "n_square_directions": 16,
+  "n_direction_subsets": 8008,
+  "n_cyclic_subset_orbits": 504,
+  "normalized_total_T": 120,
+  "minimum_quartic_b": 17,
+  "energy_partitions": [
+    [
+      17,
+      17,
+      17,
+      17,
+      17,
+      35
+    ],
+    [
+      17,
+      17,
+      17,
+      17,
+      21,
+      31
+    ],
+    [
+      17,
+      17,
+      17,
+      17,
+      22,
+      30
+    ],
+    [
+      17,
+      17,
+      17,
+      17,
+      23,
+      29
+    ],
+    [
+      17,
+      17,
+      17,
+      17,
+      24,
+      28
+    ],
+    [
+      17,
+      17,
+      17,
+      17,
+      25,
+      27
+    ],
+    [
+      17,
+      17,
+      17,
+      17,
+      26,
+      26
+    ],
+    [
+      17,
+      17,
+      17,
+      21,
+      21,
+      27
+    ],
+    [
+      17,
+      17,
+      17,
+      21,
+      22,
+      26
+    ],
+    [
+      17,
+      17,
+      17,
+      21,
+      23,
+      25
+    ],
+    [
+      17,
+      17,
+      17,
+      21,
+      24,
+      24
+    ],
+    [
+      17,
+      17,
+      17,
+      22,
+      22,
+      25
+    ],
+    [
+      17,
+      17,
+      17,
+      22,
+      23,
+      24
+    ],
+    [
+      17,
+      17,
+      17,
+      23,
+      23,
+      23
+    ],
+    [
+      17,
+      17,
+      21,
+      21,
+      21,
+      23
+    ],
+    [
+      17,
+      17,
+      21,
+      21,
+      22,
+      22
+    ]
+  ],
+  "relevant_type_histogram": {
+    "17": 30,
+    "21": 390,
+    "22": 450,
+    "23": 765,
+    "24": 570,
+    "25": 1065,
+    "26": 1140,
+    "27": 2415,
+    "28": 3435,
+    "29": 5190,
+    "30": 5505,
+    "31": 8430,
+    "32": 11370,
+    "33": 13920,
+    "34": 16065,
+    "35": 18255
+  },
+  "total_type_tuples_before_coefficient_sieve": 2970960391440,
+  "coefficient_candidate_histogram": {
+    "0": 8008
+  },
+  "total_coefficient_candidates": 0,
+  "endpoint_branches": 0,
+  "boolean_representatives_mod_translation": 0,
+  "eps_plus_count_including_translations": 0,
+  "abs_Zpsi_sq_histogram": {},
+  "E_abs_Zpsi_sq": null,
+  "QVAR_threshold": "172980",
+  "clears_QVAR": true,
+  "k6_empty": true
+}

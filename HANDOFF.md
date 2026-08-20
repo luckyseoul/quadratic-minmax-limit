@@ -3,14 +3,13 @@
 **Date:** 2026-08-20 (current branch; use `git log -1` for the exact checkpoint)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **Current branch:** `codex/leftover-moment-attack` (use `git log -1` for the
-current hash).  The latest continuation adds Prop 15.589 Theorems J--T,
-including the all-prime `k=4,5` QVAR closures and the `k=6,p>=47` emptiness
-result described below.  All 114 focused Prop
-15.588/15.589 tests pass.
+current hash).  The latest continuation adds Prop 15.589 Theorems J--U,
+including the all-prime `k=4,5,6` QVAR closures described below.  All 115
+focused Prop 15.588/15.589 tests pass.
 **Statement:** [MathOverflow 413935](https://mathoverflow.net/questions/413935).
 \(\alpha_n=n^{-3/2}\min_{a_{ij}=\pm1}\max_{x=\pm1}\lvert\sum_{i<j}a_{ij}x_ix_j\rvert\).
 
-## Binding status after e23edef: exact PSL and high-stratum reduction
+## Binding status: exact PSL and high-stratum reduction
 
 Work on `codex/leftover-moment-attack` gives the multiplicity-free
 decomposition
@@ -40,10 +39,10 @@ profile classification, and using the Euler-product lower bound for
 stratum for every prime.  Theorems L--O close `k=4`, and Theorem P makes
 `k=5` empty for every `p>=41`.  Exact finite sieves close every remaining
 `k=5` case as well.  Exact quartic-profile energies make `k=6` empty for every
-`p>=47`; coefficient sieves also make it empty at `p=37,41,43`, while its
+`p>=47`; coefficient sieves close every remaining finite case, while its
 `p=11` case already clears by complete census.  Thus the exceptional scalar
-remains on `k=6` only at `p=13,17,19,23,29,31`, and on
-`k>=7` from `p=13`; the principal delta-variance target is unchanged.  See the
+is closed through `k=6` for every prime and remains only on `k>=7` from
+`p=13`; the principal delta-variance target is unchanged.  See the
 updated reduction note and Prop 15.589.
 
 The same degree theorem now gives exact arithmetic on every genuine profile:
@@ -163,6 +162,14 @@ direction subsets.  The same conclusion holds on all 54,264 subsets at
 problem is reduced to `p=13,17,19,23,29,31` (Prop 15.589 T;
 `evidence/k6_p{37,41,43}_coefficient_sieve.{py,json}`).
 
+The accelerated exact elimination then closes all six residual cases at
+once.  The `p=13,17,19` aggregate quartic moments are respectively
+`8896212/955`, `149941632/2879`, and `10591740/103`, all above QVAR.  The
+`p=23,29,31` coefficient sieves are empty after scanning 71.207, 20.937, and
+2.971 trillion raw tuples.  Together with the complete `p=11` census and the
+high-prime energy barrier, QVAR now holds on `k=6` for every prime
+(Prop 15.589 U; `evidence/k6_p{13,17,19,23,29,31}_coefficient_sieve.json`).
+
 **Settled.** Sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\) (`solution.md`). Paley \(\rho=1\) on \(n=p^2+1\) (`evidence/PROOF_rho_eq_1.md`).
 
 **Not settled.** \(L=\lim\alpha_n=1/2\). That needs E(1): Paley \(C\) is a \(\Phi\)-minimizer for every prime \(p\ge5\). Soft-close from sandwich plus denseness, without E(1), is not a proof.
@@ -184,8 +191,8 @@ has been refined by Prop 15.589.  Multiplicity is now proved exactly: every
 principal block has degree `n`, and the only smaller block is one exceptional
 degree-`n/2` scalar.  The live route therefore has two separate targets:
 
-1. exceptional QVAR on `k=6` at `p=13,17,19,23,29,31` and on
-   `k>=7` from `p=13`, `E|Z_psi|^2 >= 3q(q-1)/16`; and
+1. exceptional QVAR on `k>=7` from `p=13`,
+   `E|Z_psi|^2 >= 3q(q-1)/16`; and
 2. the principal sufficient room
    `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`.
 
@@ -228,13 +235,13 @@ overridden twice.
 
 | Item | Flag | Status |
 |---|---|---|
-| \(\lambda_{\min}(\Phi)\ge6\) on \(Z\) | `phi_F_ge_6_proved_general=False` | Open. Exceptional QVAR remains on six finite `k=6` cases and on `k>=7` from `p=13`; principal blocks retain the delta-variance target. |
+| \(\lambda_{\min}(\Phi)\ge6\) on \(Z\) | `phi_F_ge_6_proved_general=False` | Open. Exceptional QVAR is closed through `k=6` and remains on `k>=7` from `p=13`; principal blocks retain the delta-variance target. |
 | Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open. Affine and even \(k\le4p-2\) are closed (15.179, 15.236, 15.237). |
 | Type I, Max− not two-level \(\{-1,-3\}\) | `type_I_multilevel_bad_case_ND_closed=False` | Open. Remainder is \(A_{\mathrm{full}}\). |
 | Lemma D | True | Closed. Do not unflip. |
 
-**Next attack.**  For the exceptional block, prove QVAR directly on the union
-of the six residual `k=6` cases and `k>=7` from `p=13`, or prove the equivalent odd-coset degree-four harmonic excess is at
+**Next attack.**  For the exceptional block, prove QVAR directly on `k>=7`
+from `p=13`, or prove the equivalent odd-coset degree-four harmonic excess is at
 least `-q(q-1)(q-11)/(16(q+5))`.  Do not use a pointwise/orbitwise floor,
 restricted-stratum PSD, ordinary minimum-shell design, or “quartic is top on
 every stratum”: each is now disproved.  Positivity, conserved total, cyclic
@@ -307,6 +314,9 @@ deleted so the reversal is traceable.
 | `evidence/maxplus_p11/k4_active_subset_quartic_p11.{py,json}` | Exact p=11 k=4 active-subset split: balanced families fail QVAR, aggregate clears |
 | `evidence/k4_p3mod4_coefficient_sieve.{py,json}` | Exact p=19,23,31 coefficient-level emptiness certificate |
 | `evidence/k4_p1mod4_closure.{py,json}` | Exact p=13,17 quartic moments and p=29,37 emptiness; completes all-prime k=4 QVAR |
+| `evidence/k6_coefficient_sieve_fast.py` | Exact Numba quadratic-three/linear-two elimination with orbit sharding |
+| `evidence/merge_k6_coefficient_shards.py` | Validates and merges complete k=6 shard certificates |
+| `evidence/k6_p{13,17,19,23,29,31}_coefficient_sieve.json` | Residual finite k=6 moments/emptiness; completes all-prime k=6 QVAR |
 | `evidence/NOTE_leftover1_variance_multiplicity_route.md` | Historical principal variance route and `||M||_F^2` target |
 | `evidence/METHOD_why_500_props_never_moved_a_flag.md` | Read before writing a new numbered proposition |
 | `evidence/maxplus_p11/` | Scripts + logs for the p=11 spectrum/moment computations |

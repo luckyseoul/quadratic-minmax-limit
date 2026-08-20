@@ -385,6 +385,17 @@ Thus the residual `k=6` primes are now only `13,17,19,23,29,31`.
 Certificates: `evidence/k6_p{37,41,43}_coefficient_sieve.{py,json}`
 (Prop 15.589 T).
 
+The exact elimination can be sharpened by enumerating records only in the
+three smallest profile groups, solving the other three quadratic
+coefficients, then solving the last two linear coefficients.  In this form it
+closes every residual case.  At `p=13,17,19`, the aggregate moments are
+`8896212/955`, `149941632/2879`, and `10591740/103`, all above QVAR.  At
+`p=23,29,31`, every coefficient candidate is eliminated.  Thus QVAR holds on
+`k=6` for every prime, and the live exceptional union now starts at `k>=7`
+from `p=13`.  Certificates:
+`evidence/k6_p{13,17,19,23,29,31}_coefficient_sieve.json` and
+`evidence/k6_coefficient_sieve_fast.py` (Prop 15.589 U).
+
 ## 6. Odd-coset shell and spherical benchmark
 
 There is a useful lattice reformulation, with one important trap.  Set
@@ -542,14 +553,12 @@ kills the ordinary-minimum-shell shortcut.
 
 Leftover 1 is now reduced to two explicit inequalities:
 
-1. prove the quartic variance `(QVAR)` on `k=6` at
-   `p=13,17,19,23,29,31` and on `k>=7` from `p=13`,
+1. prove the quartic variance `(QVAR)` on `k>=7` from `p=13`,
    using an ensemble-level coupling that mixes active direction configurations
    and adjacent actual-degree families in their exact proportions, rather than
    the pointwise, fixed-subset, or coefficient-class constraints killed above;
    the general energy barrier reduces this asymptotically to
-   `k>=sqrt(p)/2`; `k=4,5` are closed for every prime and `k=6` is empty
-   for `p=37` and every `p>=41`;
+   `k>=sqrt(p)/2`; `k=4,5,6` are closed for every prime;
 2. prove the principal variance room
    `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`.
 

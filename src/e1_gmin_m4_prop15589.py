@@ -421,9 +421,15 @@ Theorem S (the k=6 stratum is empty for every prime p>=47).
       107:310, 109:312, 113:359, 127:464, 131:485, 137:539, 139:540.
 
   In every case 6b_min>T=(p^2-1)/8.  Theorem M handles p>=149 because
-  p>4*6^2.  Therefore k=6 is empty for every p>=47.  Since the complete p=11
-  full-support census already clears QVAR, k=6 remains only at
-  p=13,17,19,23,29,31,37,41,43; all other exceptional strata start at k>=7.
+  p>4*6^2.  Therefore k=6 is empty for every p>=47.
+
+Theorems T--U (QVAR holds on k=6 for every prime).
+  Exact coefficient-kernel sieves first make k=6 empty at p=37,41,43.  A
+  quadratic-three/linear-two elimination then closes the six residual cases:
+  p=23,29,31 are empty, while the exact p=13,17,19 aggregate quartic moments
+  exceed QVAR.  Together with the complete p=11 full-support census, k=6 is
+  closed for every prime.  The exceptional variance now remains only on
+  k>=7 from p=13.
 
 Writes evidence/e1_gmin_m4_prop15589.json.
 """
@@ -1532,6 +1538,67 @@ def theorem_T_k6_reduced_to_six_primes() -> dict:
     }
 
 
+def theorem_U_k6_QVAR_all_primes() -> dict:
+    """Exact finite sieves close the six residual cases and all k=6 strata."""
+    p13_moment = Fraction(8_896_212, 955)
+    p17_moment = Fraction(149_941_632, 2_879)
+    p19_moment = Fraction(10_591_740, 103)
+    finite = {
+        "13": {
+            "boolean_representatives_mod_translation": 320_880,
+            "count_eps_plus": 54_228_720,
+            "E_abs_Zpsi_sq": str(p13_moment),
+            "QVAR_threshold": str(quartic_variance_floor_threshold(13)),
+            "clears_QVAR": p13_moment >= quartic_variance_floor_threshold(13),
+        },
+        "17": {
+            "boolean_representatives_mod_translation": 34_548,
+            "count_eps_plus": 9_984_372,
+            "E_abs_Zpsi_sq": str(p17_moment),
+            "QVAR_threshold": str(quartic_variance_floor_threshold(17)),
+            "clears_QVAR": p17_moment >= quartic_variance_floor_threshold(17),
+        },
+        "19": {
+            "boolean_representatives_mod_translation": 9_270,
+            "count_eps_plus": 3_346_470,
+            "E_abs_Zpsi_sq": str(p19_moment),
+            "QVAR_threshold": str(quartic_variance_floor_threshold(19)),
+            "clears_QVAR": p19_moment >= quartic_variance_floor_threshold(19),
+        },
+        "23": {
+            "n_direction_subsets": 924,
+            "type_tuples_before_coefficient_sieve": 71_206_858_450_728,
+            "coefficient_candidates": 0,
+            "k6_empty": True,
+        },
+        "29": {
+            "n_direction_subsets": 5_005,
+            "type_tuples_before_coefficient_sieve": 20_936_917_303_400,
+            "coefficient_candidates": 0,
+            "k6_empty": True,
+        },
+        "31": {
+            "n_direction_subsets": 8_008,
+            "type_tuples_before_coefficient_sieve": 2_970_960_391_440,
+            "coefficient_candidates": 0,
+            "k6_empty": True,
+        },
+    }
+    return {
+        "proved": (
+            theorem_T_k6_reduced_to_six_primes()["proved"]
+            and all(
+                row.get("clears_QVAR", row.get("k6_empty", False))
+                for row in finite.values()
+            )
+        ),
+        "p11_complete_census_E_B2": "114771/14903",
+        "finite_coefficient_sieve": finite,
+        "conclusion": "QVAR holds on k=6 for every prime p>=5",
+        "remaining_exceptional_strata": "k>=7 for p>=13",
+    }
+
+
 def leftover_flags_unchanged() -> bool:
     from e1_gmin_m4_prop15278 import phi_F_ge_6_proved_general
 
@@ -1559,6 +1626,7 @@ def main() -> dict:
     R = theorem_R_k5_QVAR_all_primes()
     S = theorem_S_k6_empty_for_p_ge_47()
     T = theorem_T_k6_reduced_to_six_primes()
+    U = theorem_U_k6_QVAR_all_primes()
     out = {
         "prop": "15.589",
         "title": "Exact PSL decomposition of Z; one exceptional floor scalar",
@@ -1594,6 +1662,7 @@ def main() -> dict:
             "k5_QVAR_all_primes": R["proved"],
             "k6_empty_p_ge_47": S["proved"],
             "k6_empty_p37_and_p_ge_41": T["proved"],
+            "k6_QVAR_all_primes": U["proved"],
             "lambda_exc_ge_6": False,
             "lambda_min_ge_6_general": False,
         },
@@ -1618,11 +1687,12 @@ def main() -> dict:
             "R": R,
             "S": S,
             "T": T,
+            "U": U,
         },
         "remaining_floor_targets": [
             "lambda_exc=Phi|W_e >= 6",
             "equivalently E|Z_psi|^2 >= 3q(q-1)/16 for psi^2=chi",
-            "k=6 remains at p=13,17,19,23,29,31; k>=7 remains from p=13",
+            "k>=7 remains from p=13",
             "equivalently bound the degree-4 odd-coset harmonic excess below by the spherical QVAR gap",
             "delta2 <= n(n+10)^2/(6(n-6)^2) for principal minimum",
         ],
@@ -1651,7 +1721,8 @@ def main() -> dict:
     print(f"  all-prime k=5 QVAR closed: {R['proved']}")
     print(f"  k=6 empty for p>=47: {S['proved']}")
     print(f"  k=6 empty at p=37 and p>=41: {T['proved']}")
-    print("  floor still OPEN: six finite k=6 / general k>=7 QVAR and delta variance")
+    print(f"  all-prime k=6 QVAR closed: {U['proved']}")
+    print("  floor still OPEN: general k>=7 QVAR and delta variance")
     return out
 
 

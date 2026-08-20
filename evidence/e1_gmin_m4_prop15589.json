@@ -25,6 +25,7 @@
     "k5_QVAR_all_primes": true,
     "k6_empty_p_ge_47": true,
     "k6_empty_p37_and_p_ge_41": true,
+    "k6_QVAR_all_primes": true,
     "lambda_exc_ge_6": false,
     "lambda_min_ge_6_general": false
   },
@@ -1495,12 +1496,59 @@
       ],
       "conclusion": "the k=6 stratum is empty for p=37 and every p>=41",
       "remaining_exceptional_strata": "k=6 at p=13,17,19,23,29,31; k>=7 from p=13 onward"
+    },
+    "U": {
+      "proved": true,
+      "p11_complete_census_E_B2": "114771/14903",
+      "finite_coefficient_sieve": {
+        "13": {
+          "boolean_representatives_mod_translation": 320880,
+          "count_eps_plus": 54228720,
+          "E_abs_Zpsi_sq": "8896212/955",
+          "QVAR_threshold": "10647/2",
+          "clears_QVAR": true
+        },
+        "17": {
+          "boolean_representatives_mod_translation": 34548,
+          "count_eps_plus": 9984372,
+          "E_abs_Zpsi_sq": "149941632/2879",
+          "QVAR_threshold": "15606",
+          "clears_QVAR": true
+        },
+        "19": {
+          "boolean_representatives_mod_translation": 9270,
+          "count_eps_plus": 3346470,
+          "E_abs_Zpsi_sq": "10591740/103",
+          "QVAR_threshold": "48735/2",
+          "clears_QVAR": true
+        },
+        "23": {
+          "n_direction_subsets": 924,
+          "type_tuples_before_coefficient_sieve": 71206858450728,
+          "coefficient_candidates": 0,
+          "k6_empty": true
+        },
+        "29": {
+          "n_direction_subsets": 5005,
+          "type_tuples_before_coefficient_sieve": 20936917303400,
+          "coefficient_candidates": 0,
+          "k6_empty": true
+        },
+        "31": {
+          "n_direction_subsets": 8008,
+          "type_tuples_before_coefficient_sieve": 2970960391440,
+          "coefficient_candidates": 0,
+          "k6_empty": true
+        }
+      },
+      "conclusion": "QVAR holds on k=6 for every prime p>=5",
+      "remaining_exceptional_strata": "k>=7 for p>=13"
     }
   },
   "remaining_floor_targets": [
     "lambda_exc=Phi|W_e >= 6",
     "equivalently E|Z_psi|^2 >= 3q(q-1)/16 for psi^2=chi",
-    "k=6 remains at p=13,17,19,23,29,31; k>=7 remains from p=13",
+    "k>=7 remains from p=13",
     "equivalently bound the degree-4 odd-coset harmonic excess below by the spherical QVAR gap",
     "delta2 <= n(n+10)^2/(6(n-6)^2) for principal minimum"
   ],

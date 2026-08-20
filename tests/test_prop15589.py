@@ -492,6 +492,46 @@ def test_k6_is_reduced_to_six_small_primes():
     )
 
 
+def test_k6_QVAR_is_closed_for_every_prime():
+    U = M.theorem_U_k6_QVAR_all_primes()
+    assert U["proved"], U
+    assert U["conclusion"] == "QVAR holds on k=6 for every prime p>=5"
+    assert U["remaining_exceptional_strata"] == "k>=7 for p>=13"
+    assert U["p11_complete_census_E_B2"] == "114771/14903"
+    assert U["finite_coefficient_sieve"]["13"]["E_abs_Zpsi_sq"] == (
+        "8896212/955"
+    )
+    assert U["finite_coefficient_sieve"]["17"]["E_abs_Zpsi_sq"] == (
+        "149941632/2879"
+    )
+    assert U["finite_coefficient_sieve"]["19"]["E_abs_Zpsi_sq"] == (
+        "10591740/103"
+    )
+
+    root = Path(__file__).parents[1] / "evidence"
+    rows = {
+        p: json.loads((root / f"k6_p{p}_coefficient_sieve.json").read_text())
+        for p in (13, 17, 19, 23, 29, 31)
+    }
+    assert rows[13]["boolean_representatives_mod_translation"] == 320_880
+    assert rows[17]["boolean_representatives_mod_translation"] == 34_548
+    assert rows[19]["boolean_representatives_mod_translation"] == 9_270
+    assert rows[13]["E_abs_Zpsi_sq"] == "8896212/955"
+    assert rows[17]["E_abs_Zpsi_sq"] == "149941632/2879"
+    assert rows[19]["E_abs_Zpsi_sq"] == "10591740/103"
+    assert all(rows[p]["clears_QVAR"] for p in rows)
+    assert all(rows[p]["k6_empty"] for p in (23, 29, 31))
+    assert rows[23]["total_type_tuples_before_coefficient_sieve"] == (
+        71_206_858_450_728
+    )
+    assert rows[29]["total_type_tuples_before_coefficient_sieve"] == (
+        20_936_917_303_400
+    )
+    assert rows[31]["total_type_tuples_before_coefficient_sieve"] == (
+        2_970_960_391_440
+    )
+
+
 @pytest.mark.parametrize("p", [5, 7])
 def test_square_affine_line_is_a_shorter_ordinary_lattice_vector(p):
     C = paley_conference_prime_power(p)
