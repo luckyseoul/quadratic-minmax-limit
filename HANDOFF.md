@@ -96,6 +96,13 @@ uses more than one quarter of the conserved profile energy for every
 `p>=41`.  Four active profiles are therefore impossible: the `k=4` stratum is
 empty for all primes `p>=41` (Prop 15.589 L).  This does not remove `k>=5`.
 
+The same centered-Fourier argument plus Weil's additive-character estimate
+works at arbitrary profile degree: a `k>=4` stratum is empty whenever
+`p>4k^2`.  Hence every surviving stratum is `k=1`, `k=3`, or
+`k>=sqrt(p)/2`; the first two already satisfy QVAR.  The unresolved
+exceptional scalar is therefore asymptotically a high-activity problem
+(Prop 15.589 M).
+
 **Settled.** Sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\) (`solution.md`). Paley \(\rho=1\) on \(n=p^2+1\) (`evidence/PROOF_rho_eq_1.md`).
 
 **Not settled.** \(L=\lim\alpha_n=1/2\). That needs E(1): Paley \(C\) is a \(\Phi\)-minimizer for every prime \(p\ge5\). Soft-close from sandwich plus denseness, without E(1), is not a proof.

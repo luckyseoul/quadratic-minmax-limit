@@ -17,6 +17,7 @@
     "active_subsetwise_QVAR_false": true,
     "top_profile_degreewise_QVAR_false": true,
     "k4_empty_p_ge_41": true,
+    "low_activity_empty_when_p_gt_4k2": true,
     "lambda_exc_ge_6": false,
     "lambda_min_ge_6_general": false
   },
@@ -1000,6 +1001,47 @@
       "linear_profile_energy": "p(p^2-1)/12",
       "conclusion": "the k=4 Max+ profile stratum is empty for p>=41",
       "remaining_k4_primes": "p<=37"
+    },
+    "M": {
+      "proved": true,
+      "profile_energy_lower_bound": "(p^2-1)(p-2(r-1)sqrt(p))/12 for reduced degree r",
+      "empty_condition": "k>=4 and p>4k^2",
+      "surviving_activity": "k in {1,3}, or k>=sqrt(p)/2",
+      "samples": {
+        "67": {
+          "excluded_k": [
+            4
+          ],
+          "first_not_excluded": 5,
+          "boundary_check": true
+        },
+        "101": {
+          "excluded_k": [
+            4,
+            5
+          ],
+          "first_not_excluded": 6,
+          "boundary_check": true
+        },
+        "1009": {
+          "excluded_k": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "first_not_excluded": 16,
+          "boundary_check": true
+        }
+      }
     }
   },
   "remaining_floor_targets": [

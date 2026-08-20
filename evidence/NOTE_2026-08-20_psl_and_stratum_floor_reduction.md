@@ -262,6 +262,27 @@ Thus four active profiles exceed the total for every prime `p>=41`, proving
 that the `k=4` stratum is empty in that range.  This result does **not** apply
 to `k>=5`, whose profile degrees are larger.
 
+There is, however, a degree-dependent extension.  For a polynomial `f` of
+degree `r<p`, Fourier inversion of `z(f(s))^2` and Weil's bound
+`|sum_s exp(2 pi i t f(s)/p)| <= (r-1)sqrt(p)` give
+
+```
+energy(f) >= (p^2-1)(p-2(r-1)sqrt(p))/12.
+```
+
+In a `k`-active stratum, `r<=k-2`.  For `k>=4`, the displayed lower bound is
+strictly greater than one `k`th of the conserved energy precisely under the
+sufficient condition `p>4k^2`.  It cannot then hold in all `k` active
+directions.  Therefore an occurring profile stratum must satisfy
+
+```
+k in {1,3}, or k >= sqrt(p)/2.
+```
+
+Since `k=1,3` already clear QVAR, the asymptotic exceptional problem is now
+confined to genuinely high-activity profiles.  This does not itself control
+their signed energy imbalance.
+
 ## 6. Odd-coset shell and spherical benchmark
 
 There is a useful lattice reformulation, with one important trap.  Set
@@ -423,6 +444,8 @@ Leftover 1 is now reduced to two explicit inequalities:
    using an ensemble-level coupling that mixes active direction configurations
    and adjacent actual-degree families in their exact proportions, rather than
    the pointwise, fixed-subset, or coefficient-class constraints killed above;
+   the general energy barrier reduces this asymptotically to
+   `k>=sqrt(p)/2` (and removes `k=4` completely for `p>=41`);
 2. prove the principal variance room
    `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`.
 

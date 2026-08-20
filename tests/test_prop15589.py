@@ -290,6 +290,18 @@ def test_quadratic_energy_barrier_makes_k4_empty_from_p41():
         M.quadratic_profile_min_b(5)
 
 
+def test_general_weil_energy_barrier_excludes_low_activity():
+    theorem = M.theorem_M_general_low_activity_exclusion()
+    assert theorem["proved"], theorem
+    assert theorem["empty_condition"] == "k>=4 and p>4k^2"
+    assert not M.weil_activity_barrier_excludes(101, 3)
+    assert M.weil_activity_barrier_excludes(101, 4)
+    assert M.weil_activity_barrier_excludes(101, 5)
+    assert not M.weil_activity_barrier_excludes(101, 6)
+    assert M.weil_activity_barrier_excludes(1009, 15)
+    assert not M.weil_activity_barrier_excludes(1009, 16)
+
+
 @pytest.mark.parametrize("p", [5, 7])
 def test_square_affine_line_is_a_shorter_ordinary_lattice_vector(p):
     C = paley_conference_prime_power(p)

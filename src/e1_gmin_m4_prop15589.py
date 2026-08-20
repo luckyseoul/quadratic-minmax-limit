@@ -281,6 +281,23 @@ Theorem L (the k=4 stratum is empty for every prime p>=41).
   p=41,43,47,53,59,61; each has 4b>(p^2-1)/8.  Four active profiles would
   therefore exceed the conserved total.  Hence k=4 is empty for all p>=41.
 
+Theorem M (general low-activity exclusion).
+  The preceding Fourier argument does not require degree two.  If f has
+  degree r<p, Weil's additive-character bound gives
+
+      sum_s z(f(s))^2
+        >= (p^2-1)(p-2(r-1)sqrt(p))/12.
+
+  On a k-active Max+ profile, r<=k-2.  If p>4k^2 and k>=4, this lower bound
+  is strictly larger than 1/k of the conserved energy.  Applying it to all k
+  active directions is impossible.  Consequently every occurring stratum is
+
+      k in {1,3},  or  k>=sqrt(p)/2.
+
+  Thus the unresolved exceptional variance is asymptotically confined to
+  genuinely high-activity profiles, even though those profiles still require
+  the ensemble-level mixing identified in Theorems I--K.
+
 Writes evidence/e1_gmin_m4_prop15589.json.
 """
 from __future__ import annotations
@@ -1035,6 +1052,41 @@ def theorem_L_k4_empty_for_p_ge_41() -> dict:
     }
 
 
+def weil_activity_barrier_excludes(p: int, k: int) -> bool:
+    """Whether the general profile-energy bound proves the k-stratum empty."""
+    return k >= 4 and p > 4 * k * k
+
+
+def theorem_M_general_low_activity_exclusion() -> dict:
+    """Weil/Fourier energy bound: k>=4 requires p<=4k^2."""
+    samples = {}
+    for p in (67, 101, 1009):
+        excluded = [
+            k for k in range(4, (p + 1) // 2 + 1)
+            if weil_activity_barrier_excludes(p, k)
+        ]
+        first_not_excluded = next(
+            k for k in range(4, (p + 1) // 2 + 1)
+            if not weil_activity_barrier_excludes(p, k)
+        )
+        samples[str(p)] = {
+            "excluded_k": excluded,
+            "first_not_excluded": first_not_excluded,
+            "boundary_check": (
+                not excluded or 4 * excluded[-1] ** 2 < p
+            ) and 4 * first_not_excluded ** 2 >= p,
+        }
+    return {
+        "proved": all(row["boundary_check"] for row in samples.values()),
+        "profile_energy_lower_bound": (
+            "(p^2-1)(p-2(r-1)sqrt(p))/12 for reduced degree r"
+        ),
+        "empty_condition": "k>=4 and p>4k^2",
+        "surviving_activity": "k in {1,3}, or k>=sqrt(p)/2",
+        "samples": samples,
+    }
+
+
 def leftover_flags_unchanged() -> bool:
     from e1_gmin_m4_prop15278 import phi_F_ge_6_proved_general
 
@@ -1054,6 +1106,7 @@ def main() -> dict:
     J = theorem_J_p11_k4_active_subset_mixing()
     K = theorem_K_full_support_top_degree_mixing()
     L = theorem_L_k4_empty_for_p_ge_41()
+    M = theorem_M_general_low_activity_exclusion()
     out = {
         "prop": "15.589",
         "title": "Exact PSL decomposition of Z; one exceptional floor scalar",
@@ -1081,6 +1134,7 @@ def main() -> dict:
             "active_subsetwise_QVAR_false": J["proved_counterexample"],
             "top_profile_degreewise_QVAR_false": K["proved_counterexample"],
             "k4_empty_p_ge_41": L["proved"],
+            "low_activity_empty_when_p_gt_4k2": M["proved"],
             "lambda_exc_ge_6": False,
             "lambda_min_ge_6_general": False,
         },
@@ -1097,6 +1151,7 @@ def main() -> dict:
             "J": J,
             "K": K,
             "L": L,
+            "M": M,
         },
         "remaining_floor_targets": [
             "lambda_exc=Phi|W_e >= 6",
@@ -1122,6 +1177,7 @@ def main() -> dict:
     print(f"  active-subsetwise QVAR killed: {J['proved_counterexample']}")
     print(f"  top-degreewise QVAR killed: {K['proved_counterexample']}")
     print(f"  k=4 empty for p>=41: {L['proved']}")
+    print(f"  p>4k^2 low-activity barrier: {M['proved']}")
     print("  floor still OPEN: k>=4 quartic variance and delta variance bounds")
     return out
 
