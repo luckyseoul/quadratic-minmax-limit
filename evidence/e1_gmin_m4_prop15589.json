@@ -1,0 +1,258 @@
+{
+  "prop": "15.589",
+  "title": "Exact PSL decomposition of Z; one exceptional floor scalar",
+  "proved": {
+    "character_decomposition": true,
+    "Z_multiplicity_free": true,
+    "Phi_multiplicity_reduction": true,
+    "variance_alternatives": true,
+    "exceptional_quartic_variance_reduction": true,
+    "exceptional_quartic_variance_general": false,
+    "lambda_exc_ge_6": false,
+    "lambda_min_ge_6_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "theorem": "For q=p^2 and W_e the degree-(q+1)/2 even Weil character, Sym^2(W_e)=1+St+W_e+sum_{(q-9)/8 distinct alpha} rho(alpha), where every rho(alpha) is principal series of degree q+1. This follows by the standard PSL(2,q) character-table inner products using chi_Sym2(g)=(chi(g)^2+chi(g^2))/2.",
+      "by_p": {
+        "5": {
+          "q": 25,
+          "exceptional_degree": 13,
+          "principal_degree": 26,
+          "n_principal": 2,
+          "n_constituents": 3,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "7": {
+          "q": 49,
+          "exceptional_degree": 25,
+          "principal_degree": 50,
+          "n_principal": 5,
+          "n_constituents": 6,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "11": {
+          "q": 121,
+          "exceptional_degree": 61,
+          "principal_degree": 122,
+          "n_principal": 14,
+          "n_constituents": 15,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "13": {
+          "q": 169,
+          "exceptional_degree": 85,
+          "principal_degree": 170,
+          "n_principal": 20,
+          "n_constituents": 21,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "17": {
+          "q": 289,
+          "exceptional_degree": 145,
+          "principal_degree": 290,
+          "n_principal": 35,
+          "n_constituents": 36,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "19": {
+          "q": 361,
+          "exceptional_degree": 181,
+          "principal_degree": 362,
+          "n_principal": 44,
+          "n_constituents": 45,
+          "multiplicity_free": true,
+          "dimension_check": true
+        }
+      },
+      "gap_audit": {
+        "25": {
+          "exceptional": 1,
+          "principal": 2,
+          "all_multiplicity_one": true
+        },
+        "49": {
+          "exceptional": 1,
+          "principal": 5,
+          "all_multiplicity_one": true
+        },
+        "121": {
+          "exceptional": 1,
+          "principal": 14,
+          "all_multiplicity_one": true
+        }
+      }
+    },
+    "B": {
+      "proved": true,
+      "theorem": "diag(Sym^2(V_+)) is the projective-line module 1+St, hence Z=W_e direct-sum (q-9)/8 distinct principal-series irreps. Thus dim Z=n(n-6)/8 and dim Z^U=1+2(q-9)/8=(q-5)/4.",
+      "no_trivial": true,
+      "no_steinberg": true,
+      "no_cuspidal": true,
+      "multiplicity_free": true,
+      "by_p": {
+        "5": {
+          "q": 25,
+          "exceptional_degree": 13,
+          "principal_degree": 26,
+          "n_principal": 2,
+          "n_constituents": 3,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "7": {
+          "q": 49,
+          "exceptional_degree": 25,
+          "principal_degree": 50,
+          "n_principal": 5,
+          "n_constituents": 6,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "11": {
+          "q": 121,
+          "exceptional_degree": 61,
+          "principal_degree": 122,
+          "n_principal": 14,
+          "n_constituents": 15,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "13": {
+          "q": 169,
+          "exceptional_degree": 85,
+          "principal_degree": 170,
+          "n_principal": 20,
+          "n_constituents": 21,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "17": {
+          "q": 289,
+          "exceptional_degree": 145,
+          "principal_degree": 290,
+          "n_principal": 35,
+          "n_constituents": 36,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "19": {
+          "q": 361,
+          "exceptional_degree": 181,
+          "principal_degree": 362,
+          "n_principal": 44,
+          "n_constituents": 45,
+          "multiplicity_free": true,
+          "dimension_check": true
+        }
+      }
+    },
+    "C": {
+      "proved": true,
+      "theorem": "Phi is G-equivariant and Z is multiplicity-free. Phi is scalar on one degree-d exceptional constituent and on each degree-n principal constituent. Therefore every eigenvalue not solely exceptional has multiplicity at least n; the only possible sub-n multiplicity is lambda_exc=Phi|W_e, with multiplicity d.",
+      "exact_remaining_scalar": "lambda_exc >= 6",
+      "observed_exceptional_is_top": {
+        "5": true,
+        "7": true,
+        "11": true
+      },
+      "observed_ordering_promoted_to_theorem": false,
+      "mult_lambda_min_ge_n_proved_unconditionally": false
+    },
+    "D": {
+      "proved": true,
+      "theorem": "The variance room for a degree-d exceptional minimum is exactly half the room for a minimum of multiplicity n.",
+      "by_p": {
+        "5": {
+          "mean": "48/5",
+          "variance_room_mult_n": "648/125",
+          "variance_room_mult_d": "324/125",
+          "delta2_room_mult_n": "351/25",
+          "delta2_room_mult_d": "351/50",
+          "ok": true
+        },
+        "7": {
+          "mean": "96/11",
+          "variance_room_mult_n": "1800/1331",
+          "variance_room_mult_d": "900/1331",
+          "delta2_room_mult_n": "1875/121",
+          "delta2_room_mult_d": "1875/242",
+          "ok": true
+        },
+        "11": {
+          "mean": "240/29",
+          "variance_room_mult_n": "8712/24389",
+          "variance_room_mult_d": "4356/24389",
+          "delta2_room_mult_n": "22143/841",
+          "delta2_room_mult_d": "22143/1682",
+          "ok": true
+        },
+        "13": {
+          "mean": "336/41",
+          "variance_room_mult_n": "16200/68921",
+          "variance_room_mult_d": "8100/68921",
+          "delta2_room_mult_n": "57375/1681",
+          "delta2_room_mult_d": "57375/3362",
+          "ok": true
+        },
+        "17": {
+          "mean": "576/71",
+          "variance_room_mult_n": "45000/357911",
+          "variance_room_mult_d": "22500/357911",
+          "delta2_room_mult_n": "271875/5041",
+          "delta2_room_mult_d": "271875/10082",
+          "ok": true
+        },
+        "19": {
+          "mean": "720/89",
+          "variance_room_mult_n": "69192/704969",
+          "variance_room_mult_d": "34596/704969",
+          "delta2_room_mult_n": "521823/7921",
+          "delta2_room_mult_d": "521823/15842",
+          "ok": true
+        }
+      }
+    },
+    "E": {
+      "proved_reduction": true,
+      "proved_census": true,
+      "proved_general_inequality": false,
+      "theorem": "For the quartic character psi^2=chi, the unique exceptional Phi scalar is lambda_exc=32 E|Z_psi|^2/[q(q-1)]. Hence lambda_exc>=6 iff E|Z_psi|^2>=3q(q-1)/16.",
+      "by_p": {
+        "5": {
+          "E_abs_Zpsi_sq": "3300/13",
+          "lambda_exc": "176/13",
+          "floor_threshold": "225/2",
+          "lambda_exc_ge_6": true,
+          "ok": true
+        },
+        "7": {
+          "E_abs_Zpsi_sq": "317520/409",
+          "lambda_exc": "4320/409",
+          "floor_threshold": "441",
+          "lambda_exc_ge_6": true,
+          "ok": true
+        }
+      }
+    }
+  },
+  "remaining_floor_targets": [
+    "lambda_exc=Phi|W_e >= 6",
+    "equivalently E|Z_psi|^2 >= 3q(q-1)/16 for psi^2=chi",
+    "delta2 <= n(n+10)^2/(6(n-6)^2) for principal minimum"
+  ],
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "residual_ii",
+    "type_I",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN"
+}

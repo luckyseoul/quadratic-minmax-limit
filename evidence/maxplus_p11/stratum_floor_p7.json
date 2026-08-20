@@ -1,0 +1,27 @@
+{
+  "p": 7,
+  "dimZ": 275,
+  "strata": {
+    "k1": {
+      "count_eps_plus": 140,
+      "rank": 83,
+      "lambda_min": -2.9055524041391724e-14,
+      "lambda_max": 96.00000000000017,
+      "lambda_min_ge_6": false
+    },
+    "k3": {
+      "count_eps_plus": 1176,
+      "rank": 275,
+      "lambda_min": 2.6666666666666625,
+      "lambda_max": 18.666666666666664,
+      "lambda_min_ge_6": false
+    },
+    "k4": {
+      "count_eps_plus": 4410,
+      "rank": 275,
+      "lambda_min": 5.6888888888888935,
+      "lambda_max": 10.750601947555502,
+      "lambda_min_ge_6": false
+    }
+  }
+}

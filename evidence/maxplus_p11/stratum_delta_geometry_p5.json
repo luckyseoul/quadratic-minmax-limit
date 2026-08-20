@@ -1,0 +1,46 @@
+{
+  "p": 5,
+  "source": "/tmp/maxplus_p5.npy",
+  "counts": {
+    "k1": 30,
+    "k3": 100
+  },
+  "weights": {
+    "k1": 0.23076923076923078,
+    "k3": 0.7692307692307693
+  },
+  "pairing_consistency_max_integer_error": {
+    "k1": 0,
+    "k3": 0
+  },
+  "m4_flat_norm_sq": "598/5",
+  "delta_norm_sq_by_stratum": {
+    "k1": 443.73333333333346,
+    "k3": 61.44
+  },
+  "delta_inner_product_matrix_order": [
+    "k1",
+    "k3"
+  ],
+  "delta_inner_product_matrix": [
+    [
+      443.73333333333346,
+      -102.39999999999999
+    ],
+    [
+      -102.39999999999999,
+      61.44
+    ]
+  ],
+  "delta_cosine_matrix": [
+    [
+      0.9999999999999999,
+      -0.6201736729460421
+    ],
+    [
+      -0.6201736729460421,
+      1.0
+    ]
+  ],
+  "weighted_global_delta_norm_sq": 23.630769230769243
+}

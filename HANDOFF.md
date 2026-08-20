@@ -5,6 +5,28 @@
 **Statement:** [MathOverflow 413935](https://mathoverflow.net/questions/413935).
 \(\alpha_n=n^{-3/2}\min_{a_{ij}=\pm1}\max_{x=\pm1}\lvert\sum_{i<j}a_{ij}x_ix_j\rvert\).
 
+## 2026-08-20 post-d470078: exact PSL multiplicity reduction
+
+Work on `codex/leftover-moment-attack` gives the multiplicity-free
+decomposition
+
+`Z = W_e direct-sum ((p^2-9)/8 distinct degree-(p^2+1) principal series)`,
+
+where `dim W_e=(p^2+1)/2`. Thus every Phi eigenvalue has multiplicity at
+least `n=p^2+1` except one exceptional scalar. That scalar is exactly
+
+`lambda_exc = 32 E|Z_psi|^2/[q(q-1)]`, `psi^2=chi`,
+
+so its floor is the single quartic variance inequality
+`E|Z_psi|^2 >= 3q(q-1)/16`. The remaining principal floor route is the
+existing delta room `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`. Neither inequality
+is proved generally; no flag is flipped. See
+`evidence/NOTE_2026-08-20_psl_and_stratum_floor_reduction.md` and Prop 15.589.
+
+Two routes are now explicitly dead: restricted Phi does not have floor 6 on
+every profile stratum, and at p=7 a full PSL orbit of size 1,176 has
+`Z_psi=0`, so the quartic bound is not pointwise/orbitwise.
+
 **Settled.** Sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le1/2\) (`solution.md`). Paley \(\rho=1\) on \(n=p^2+1\) (`evidence/PROOF_rho_eq_1.md`).
 
 **Not settled.** \(L=\lim\alpha_n=1/2\). That needs E(1): Paley \(C\) is a \(\Phi\)-minimizer for every prime \(p\ge5\). Soft-close from sandwich plus denseness, without E(1), is not a proof.
