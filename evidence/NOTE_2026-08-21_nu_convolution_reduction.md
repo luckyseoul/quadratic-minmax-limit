@@ -528,3 +528,54 @@ Why the obvious inputs cannot close it, all already established:
 Measured ‖δ‖²/n: 0.9089, 0.2085, 0.01941 (three points, recorded and NOT
 extrapolated; the p=5 value already exceeds the leftover-1 threshold,
 which is why p=5,7 are handed to census).
+
+## 16. The δ-hierarchy (Prop 15.595): two open roots, not three
+
+**Scope first.**  `e1_closed_general()` returns True, but the repo's own
+`e1_main_chain_status` records that as "a separate wiring fact": the gate
+is the FOUR GOAL units — phi_F_ge_6 (leftover 1), residual_ii_k_ge_4p
+(leftover 2), type_I_multilevel (leftover 3), lemma_D — with lemma_D True
+and the other three False, `L_status = OPEN`.  Nothing in §§12–16 changes
+that; a test in `tests/test_prop15595.py` pins the distinction so this
+work cannot be misread as a close.
+
+**Three units, one inequality.**  All exact and data-free:
+
+| unit | requires ‖δ‖² ≤ | limit | at p=11 |
+|---|---|---|---|
+| leftover 1 (λ_min ≥ 6) | n(λ̄−6)²/48 | n/12 | 0.1079 n |
+| leftover 3 (3A+B > 0) | c₃(p)n/24 | ~2.9n | 0.646 n |
+| residual-(i) R≤2p (15.217) | (p²−1)n(3p²−47)/(24(p²−5)) | ~n²/8 | 13.62 n |
+
+The ordering `r₁ < r₃ < r_residual-i` holds at every prime 5..47, so
+**leftover 1 is the binding one and ‖δ‖² ≤ n/12 closes all three.**  Note
+the third row is the repo's own `delta_room_for_R` from 15.217 — the
+residual-(i) route was already a ‖δ‖² bound; that is now visible as the
+loosest member of one hierarchy rather than a separate technique.
+
+Measured ‖δ‖²/n = 0.9089, 0.2085, 0.01941 vs the binding threshold ≈ 1/12:
+fails at p=5,7 (both handed to census) and holds at p=11 with 4.3× margin.
+
+**Leftover 2 does NOT join — proved, not assumed.**  Leftover 2 lives on
+size-k subsets, k = 4p, where any four-point statement is Σ_{S⊆G} m₄(S)
+and the δ-part admits only the Cauchy–Schwarz bound √C(k,4)·‖δ‖ against a
+signal of scale C(k,4)/n.  The ratio is
+
+    error/signal ≈ n^{3/2}/(√12·√C(k,4)) ≈ p/11.4 ,
+
+crossing 1 at p ≈ 11 and **diverging**: 0.55 (p=5), 1.06 (p=11), 2.11
+(p=23).  Even the optimal ‖δ‖² ≤ n/12 gives an error bar exceeding the
+entire four-point signal for every p ≥ 11.  Do not attempt leftover 2
+through an L² bound on δ; it stays on the Max− minus-slice/Walsh route.
+
+### Net structure of the program after today
+
+    lemma_D                                            TRUE (already)
+    leftover 1  ─┐
+                 ├─ (R1)  ‖P_{E_4p} m₄⁺‖² ≤ n/12       OPEN
+    leftover 3  ─┘
+    leftover 2  ─── (R2)  Max− minus-slice / Walsh     OPEN, independent
+
+Two open roots. R1 additionally implies residual-(i)'s R≤2p with ~n²/8 of
+room to spare.  Everything else in the leftover-1 and leftover-3 chains is
+proved or data-free-computable.
