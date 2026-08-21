@@ -204,3 +204,59 @@ Open verification items before any flip claim:
 1. Trace the |μ|≤L ⇒ type_I sufficiency WIRING in code (15.275 imports).
 2. Extend the rigorous LB to p=37..47 and check LB < allowed_L throughout.
 3. The Weil bound on χ⋆μ_part (the real work).
+
+## 9. Sufficiency wiring traced; the complete reduction (both class types)
+
+Traced in `src/e1_gmin_m4_prop15275.py` (T_bitight, L_abs_gmin,
+pairing_G_values, three_AB_kappa3_from_mu_nu, and the 3A+B identity
+lemma).  Signs: T(p) = −(p−2)/(p(2p−1)) and L(p) = −(p−2)/2p² are both
+NEGATIVE; "L>T" and "|L|<|T|" are the same statement.
+
+`type_I_aut_e_3AB_positive_general` needs, on every Aut_e far class:
+
+* **|κ|=1 classes.**  The three pairing G's are {+μ,+μ,−μ} (up to the
+  class sign), and 3A+B>0 ⟺ G>T.  Worst pairing needs −|μ| > T, i.e.
+  |μ| < |T|; |μ| ≤ |L| closes it strictly.
+* **|κ|=3 classes.**  3A+B = 2n_O[(p−2) + p·χd·w]/(p²−1),
+  w = (2p−1)μ + (p−2)ν.  Frame fact: on a κ=+3 four-set EVERY edge has
+  χd = +1 (all pairs involve ∞, {0,1} with χ(−1)=1, or χ(w), χ(1−w) —
+  all +1 on the locus).  So the condition is just w > −(p−2)/p.
+* **κ=−3 four-sets do not exist** (theorem, via sharp 3-transitivity:
+  frame κ = 1+χ(w)+χ(1−w) ∈ {3,1,−1}).  No third case.
+
+Both conditions route through identity (B).  For (ii), the convolution at
+locus points gives μ(l) ≥ 3/p² − M·A₃/p, and with ν ≥ −M:
+w > −(p−2)/p ⟸ M ≤ c₂(p) := [(p−2)/p + 3(2p−1)/p²] / [(2p−1)A₃/p + (p−2)],
+where A₃(p) = max over locus l of Σ_f|S_f(l)|.  Combined, data-free:
+
+| p | A₁ | A₃ | c₁ (κ=1) | c₂ (κ=3) | binding·p | truth M·p |
+|---|---|---|---|---|---|---|
+| 5 | 3 | 4 | 3.33e-2 | 1.65e-1 | 0.167 | 0.880 — census |
+| 7 | 7 | 10 | 3.06e-2 | 6.41e-2 | 0.214 | 0.318 — census |
+| 11 | 11 | 16 | 2.89e-2 | 3.39e-2 | 0.318 | **0.074** |
+| 13 | 15 | 28 | 2.31e-2 | 1.99e-2 | 0.259 | ~0.051 |
+| 17 | 33 | 46 | 1.16e-2 | 1.17e-2 | 0.197 | ~0.030 |
+| 23 | 51 | 74 | 8.10e-3 | 7.05e-3 | 0.162 | ~0.016 |
+| 29 | 85 | 120 | 5.07e-3 | 4.32e-3 | 0.125 | ~0.010 |
+| 37 | 125 | 192 | 3.57e-3 | 2.67e-3 | 0.099 | ~0.006 |
+| 47 | 217 | 310 | 2.11e-3 | 1.65e-3 | 0.077 | ~0.004 |
+
+Budget fails at exactly the census primes 5, 7 and closes from p=11 with
+margin growing like ~p/2.4 (4.3× at p=11 → 20× at p=47).  A(p) grows like
+~p²/10 because the per-fiber triangle costs the FIBER COUNT (~p²/24, each
+|S_f| = O(1) by Weil); hence binding ~ 3.6/p² vs truth ~ 8.6/p³.
+
+### The complete reduction of leftover 3 (current sharpest form)
+
+> **leftover 3 ⟸ census at p=5,7 (done) + `M(p) = max_f|ν̂_f| ≤
+> binding(p) ≈ 3.6/p²` for all p ≥ 11**, binding(p) data-free
+> (table above to p=47; general p needs the A(p) growth made rigorous,
+> a per-fiber Weil bound |S_f| ≤ 2√|f|+O(1) plus the fiber count).
+
+Status: OPEN estimate; truth known only at p=5,7,11 (holds at 11 with
+4.3× margin); rigorous LB ~ 8.05/p³ sits a factor ~p/2.2 below the
+requirement at every computed prime — no computable quantity currently
+threatens it, unlike the falsified §5 form.  Proof target: M = O(1/p²)
+with constant < 3.6 via ν = (1/p)χ⋆μ_part + (1/p)χ⋆(μ−μ_part)
+(μ_part Max-free from 15.247 A; Weil on the first term; the second needs
+line-L¹ = O(p) — crude-tolerant).
