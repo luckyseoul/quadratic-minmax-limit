@@ -1,0 +1,319 @@
+{
+  "5": {
+    "p": 5,
+    "Nh": 260,
+    "n_quads": 14950,
+    "n_kappa1": 11700,
+    "n_classes": 4,
+    "constant_on_kappa_phi": true,
+    "max_abs_mu": "3/65",
+    "max_abs_mu_reduced": "3/65",
+    "L": "3/50",
+    "mu_over_L": 0.7692307692307693,
+    "le_L": true,
+    "linear_fit": {
+      "a": "2/65",
+      "b": "-1/130",
+      "c": "0",
+      "matches_all_classes": true,
+      "n_classes": 4
+    },
+    "classes": [
+      {
+        "kappa": -1,
+        "phi": -6,
+        "n_sets": 1500,
+        "n_distinct_m4": 1,
+        "m4_int": [
+          4
+        ],
+        "mu": "1/65",
+        "mu_part": "-3/125",
+        "mu_minus_part": "64/1625"
+      },
+      {
+        "kappa": -1,
+        "phi": 2,
+        "n_sets": 4200,
+        "n_distinct_m4": 1,
+        "m4_int": [
+          -12
+        ],
+        "mu": "-3/65",
+        "mu_part": "-7/125",
+        "mu_minus_part": "16/1625"
+      },
+      {
+        "kappa": 1,
+        "phi": -2,
+        "n_sets": 3600,
+        "n_distinct_m4": 1,
+        "m4_int": [
+          12
+        ],
+        "mu": "3/65",
+        "mu_part": "7/125",
+        "mu_minus_part": "-16/1625"
+      },
+      {
+        "kappa": 1,
+        "phi": 6,
+        "n_sets": 2400,
+        "n_distinct_m4": 1,
+        "m4_int": [
+          -4
+        ],
+        "mu": "-1/65",
+        "mu_part": "3/125",
+        "mu_minus_part": "-64/1625"
+      }
+    ],
+    "n_class_rows": 4
+  },
+  "7": {
+    "p": 7,
+    "Nh": 11452,
+    "n_quads": 230300,
+    "n_kappa1": 176400,
+    "n_classes": 6,
+    "constant_on_kappa_phi": false,
+    "max_abs_mu": "109/2863",
+    "max_abs_mu_reduced": "109/2863",
+    "L": "5/98",
+    "mu_over_L": 0.7462102689486553,
+    "le_L": true,
+    "linear_fit": null,
+    "classes": [
+      {
+        "kappa": -1,
+        "phi": -6,
+        "n_sets": 25872,
+        "n_distinct_m4": 1,
+        "m4_int": [
+          -180
+        ],
+        "mu": "-45/2863",
+        "mu_part": "-9/539",
+        "mu_minus_part": "216/220451"
+      },
+      {
+        "kappa": -1,
+        "phi": 2,
+        "n_sets": 30576,
+        "n_distinct_m4": 1,
+        "m4_int": [
+          -260
+        ],
+        "mu": "-65/2863",
+        "mu_part": "-13/539",
+        "mu_minus_part": "312/220451"
+      },
+      {
+        "kappa": -1,
+        "phi": 10,
+        "n_sets": 35280,
+        "n_distinct_m4": 2,
+        "m4_int": [
+          -436,
+          -244,
+          2
+        ],
+        "mu": "VARIES",
+        "mu_part": "-17/539",
+        "mu_minus_part": "VARIES"
+      },
+      {
+        "kappa": 1,
+        "phi": -10,
+        "n_sets": 23520,
+        "n_distinct_m4": 2,
+        "m4_int": [
+          244,
+          436,
+          2
+        ],
+        "mu": "VARIES",
+        "mu_part": "17/539",
+        "mu_minus_part": "VARIES"
+      },
+      {
+        "kappa": 1,
+        "phi": -2,
+        "n_sets": 28224,
+        "n_distinct_m4": 1,
+        "m4_int": [
+          260
+        ],
+        "mu": "65/2863",
+        "mu_part": "13/539",
+        "mu_minus_part": "-312/220451"
+      },
+      {
+        "kappa": 1,
+        "phi": 6,
+        "n_sets": 32928,
+        "n_distinct_m4": 1,
+        "m4_int": [
+          180
+        ],
+        "mu": "45/2863",
+        "mu_part": "9/539",
+        "mu_minus_part": "-216/220451"
+      }
+    ],
+    "n_class_rows": 6
+  },
+  "11": {
+    "p": 11,
+    "Nh": 37457112,
+    "n_quads": 8783390,
+    "n_kappa1": 6642900,
+    "n_classes": 10,
+    "constant_on_kappa_phi": false,
+    "max_abs_mu": "17827/1560713",
+    "max_abs_mu_reduced": "17827/1560713",
+    "L": "9/242",
+    "mu_over_L": 0.30713412537873536,
+    "le_L": true,
+    "linear_fit": null,
+    "classes": [
+      {
+        "kappa": -1,
+        "phi": -14,
+        "n_sets": 588060,
+        "n_distinct_m4": 2,
+        "m4_int": [
+          -240456,
+          -220872,
+          2
+        ],
+        "mu": "VARIES",
+        "mu_part": "-23/3509",
+        "mu_minus_part": "VARIES"
+      },
+      {
+        "kappa": -1,
+        "phi": -6,
+        "n_sets": 421080,
+        "n_distinct_m4": 1,
+        "m4_int": [
+          -298344
+        ],
+        "mu": "-12431/1560713",
+        "mu_part": "-27/3509",
+        "mu_minus_part": "-134648/497867447"
+      },
+      {
+        "kappa": -1,
+        "phi": 2,
+        "n_sets": 900240,
+        "n_distinct_m4": 2,
+        "m4_int": [
+          -332552,
+          -312456,
+          2
+        ],
+        "mu": "VARIES",
+        "mu_part": "-31/3509",
+        "mu_minus_part": "VARIES"
+      },
+      {
+        "kappa": -1,
+        "phi": 10,
+        "n_sets": 958320,
+        "n_distinct_m4": 2,
+        "m4_int": [
+          -378152,
+          -373928,
+          2
+        ],
+        "mu": "VARIES",
+        "mu_part": "-35/3509",
+        "mu_minus_part": "VARIES"
+      },
+      {
+        "kappa": -1,
+        "phi": 18,
+        "n_sets": 508200,
+        "n_distinct_m4": 2,
+        "m4_int": [
+          -427848,
+          -404040,
+          2
+        ],
+        "mu": "VARIES",
+        "mu_part": "-39/3509",
+        "mu_minus_part": "VARIES"
+      },
+      {
+        "kappa": 1,
+        "phi": -18,
+        "n_sets": 377520,
+        "n_distinct_m4": 2,
+        "m4_int": [
+          404040,
+          427848,
+          2
+        ],
+        "mu": "VARIES",
+        "mu_part": "39/3509",
+        "mu_minus_part": "VARIES"
+      },
+      {
+        "kappa": 1,
+        "phi": -10,
+        "n_sets": 813120,
+        "n_distinct_m4": 2,
+        "m4_int": [
+          373928,
+          378152,
+          2
+        ],
+        "mu": "VARIES",
+        "mu_part": "35/3509",
+        "mu_minus_part": "VARIES"
+      },
+      {
+        "kappa": 1,
+        "phi": -2,
+        "n_sets": 871200,
+        "n_distinct_m4": 2,
+        "m4_int": [
+          312456,
+          332552,
+          2
+        ],
+        "mu": "VARIES",
+        "mu_part": "31/3509",
+        "mu_minus_part": "VARIES"
+      },
+      {
+        "kappa": 1,
+        "phi": 6,
+        "n_sets": 464640,
+        "n_distinct_m4": 1,
+        "m4_int": [
+          298344
+        ],
+        "mu": "12431/1560713",
+        "mu_part": "27/3509",
+        "mu_minus_part": "134648/497867447"
+      },
+      {
+        "kappa": 1,
+        "phi": 14,
+        "n_sets": 740520,
+        "n_distinct_m4": 2,
+        "m4_int": [
+          220872,
+          240456,
+          2
+        ],
+        "mu": "VARIES",
+        "mu_part": "23/3509",
+        "mu_minus_part": "VARIES"
+      }
+    ],
+    "n_class_rows": 10
+  }
+}

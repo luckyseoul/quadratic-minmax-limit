@@ -1,0 +1,18 @@
+{
+  "p": 13,
+  "n": 170,
+  "algorithm": "signed-PSL BFS with packed negative-bit keys",
+  "generator_count": 4,
+  "generator_conference_audit": true,
+  "orbit_size": 4826640,
+  "projective_psl_order": 2413320,
+  "signed_psl_lift_order": 4826640,
+  "signed_stabilizer_order": 1,
+  "epsilon_plus_count": 2413320,
+  "epsilon_minus_count": 2413320,
+  "complete_orbit": true,
+  "elapsed_seconds": 79.77219410298858,
+  "source_witness": "/mnt/storage/e1work/maxplus_p13/orbit_attack_2026-08-20/k7_p13_ninth_orbit_seed.json",
+  "packed_orbit": "/mnt/storage/e1work/maxplus_p13/orbit_attack_2026-08-20/k7_p13_ninth_signed_psl_orbit.npy",
+  "packed_sha256": "b4531ad905322727d786d3b0fa31d94a5e3bf8f9d7ec9c4a59366fde941b0e29"
+}

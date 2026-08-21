@@ -92,3 +92,67 @@ def test_second_orbit_seed_is_an_independent_k7_maxplus_vector():
     imag = int(negative @ kernel_imag.astype(np.int64) @ negative)
     assert (real, imag) == (-132, -198)
     assert real * real + imag * imag == 56_628
+
+
+def test_second_signed_orbit_is_free_and_balanced():
+    report = _load("k7_p13_second_signed_psl_orbit.json")
+    assert report["complete_orbit"] is True
+    assert report["orbit_size"] == report["signed_psl_lift_order"] == 4_826_640
+    assert report["projective_psl_order"] == 2_413_320
+    assert report["signed_stabilizer_order"] == 1
+    assert report["epsilon_plus_count"] == report["epsilon_minus_count"] == 2_413_320
+    assert report["packed_sha256"] == (
+        "a3ce4e19e68770b41951b4ba28153fd5ed23884d0bcd912eeb43c421fa0e31c3"
+    )
+
+
+def test_second_orbit_and_k7_slice_clear_qvar_exactly():
+    report = _load("k7_p13_second_orbit_quartic_xpu.json")
+    threshold = Fraction(report["QVAR_threshold"])
+    histogram = {int(k): int(v) for k, v in report["histogram"].items()}
+    assert sum(histogram.values()) == report["evaluated_rows"] == 2_413_320
+    assert sum(value * count for value, count in histogram.items()) == report[
+        "sum_abs_Zpsi_sq"
+    ]
+    assert Fraction(report["E_abs_Zpsi_sq"]) == Fraction(806_468, 85) > threshold
+    assert Fraction(report["induced_exceptional_scalar"]) == Fraction(19_088, 1_785) > 6
+
+    by_k = report["by_activity"]
+    assert {int(k): row["count"] for k, row in by_k.items()} == {
+        6: 28_392,
+        7: 2_384_928,
+    }
+    assert Fraction(by_k["7"]["E_abs_Zpsi_sq"]) == Fraction(198_692, 21)
+    assert Fraction(by_k["7"]["E_abs_Zpsi_sq"]) > threshold
+    assert by_k["7"]["clears_QVAR"] is True
+
+
+def test_nonzero_quintic_scalars_are_equidistributed_in_second_orbit():
+    report = _load("k7_p13_extract_second_orbit_representatives.json")
+    scalar_counts = {int(k): int(v) for k, v in report["top_scalar_histogram"].items()}
+    assert scalar_counts == {scalar: 1_071 for scalar in range(1, 13)}
+    assert report["scalar7_representatives"] == 1_071
+    assert report["representatives_sha256"] == (
+        "49cacd5fe098de3aa1d2a88ecd94dba52debc532861026c3b798c429a553dbab"
+    )
+
+
+def test_first_and_second_scalar7_representatives_are_disjoint():
+    report = _load("k7_p13_scalar7_union_orbit12.json")
+    assert report["orbit1_count"] == report["orbit2_count"] == 1_071
+    assert report["overlap"] == 0
+    assert report["union_count"] == 2_142
+    assert report["disjoint"] is True
+    assert report["union_sha256"] == (
+        "ac2615f788195cc0f446f5573d82040a72a2f28245207093cee561557fbaecf2"
+    )
+
+
+def test_independent_seeds_found_the_same_second_orbit_vector():
+    seed17 = _load("k7_p13_orbit_completeness_seed17.json")
+    seed41 = _load("k7_p13_orbit_completeness_seed41.json")
+    assert seed17["outside_orbit_solution_found"] is True
+    assert seed41["outside_orbit_solution_found"] is True
+    assert seed17["outside_orbit_Zpsi"]["abs_sq"] == seed41["outside_orbit_Zpsi"]["abs_sq"] == 56_628
+    assert seed17["outside_orbit_Zpsi"]["real"] == seed41["outside_orbit_Zpsi"]["real"] == -132
+    assert seed17["outside_orbit_Zpsi"]["imag"] == seed41["outside_orbit_Zpsi"]["imag"] == -198

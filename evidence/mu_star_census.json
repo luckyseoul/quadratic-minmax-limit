@@ -1,0 +1,137 @@
+{
+  "5": {
+    "p": 5,
+    "Nh": 260,
+    "n_kappa1": 11700,
+    "n_classes_kps": 4,
+    "n_varying": 0,
+    "constant": true,
+    "max_abs_mu": "3/65",
+    "max_spread_int": 0,
+    "varying_samples": []
+  },
+  "7": {
+    "p": 7,
+    "Nh": 11452,
+    "n_kappa1": 176400,
+    "n_classes_kps": 6,
+    "n_varying": 2,
+    "constant": false,
+    "max_abs_mu": "109/2863",
+    "max_spread_int": 192,
+    "varying_samples": [
+      {
+        "kappa": -1,
+        "phi": 10,
+        "star": 0,
+        "n": 35280,
+        "min": -436,
+        "max": -244,
+        "spread": 192,
+        "n_distinct": 2
+      },
+      {
+        "kappa": 1,
+        "phi": -10,
+        "star": 0,
+        "n": 23520,
+        "min": 244,
+        "max": 436,
+        "spread": 192,
+        "n_distinct": 2
+      }
+    ]
+  },
+  "11": {
+    "p": 11,
+    "Nh": 37457112,
+    "n_kappa1": 6642900,
+    "n_classes_kps": 10,
+    "n_varying": 8,
+    "constant": false,
+    "max_abs_mu": "17827/1560713",
+    "max_spread_int": 23808,
+    "varying_samples": [
+      {
+        "kappa": -1,
+        "phi": -14,
+        "star": 0,
+        "n": 588060,
+        "min": -240456,
+        "max": -220872,
+        "spread": 19584,
+        "n_distinct": 2
+      },
+      {
+        "kappa": -1,
+        "phi": 2,
+        "star": 0,
+        "n": 900240,
+        "min": -332552,
+        "max": -312456,
+        "spread": 20096,
+        "n_distinct": 2
+      },
+      {
+        "kappa": -1,
+        "phi": 10,
+        "star": 0,
+        "n": 958320,
+        "min": -378152,
+        "max": -373928,
+        "spread": 4224,
+        "n_distinct": 2
+      },
+      {
+        "kappa": -1,
+        "phi": 18,
+        "star": 0,
+        "n": 508200,
+        "min": -427848,
+        "max": -404040,
+        "spread": 23808,
+        "n_distinct": 2
+      },
+      {
+        "kappa": 1,
+        "phi": -18,
+        "star": 0,
+        "n": 377520,
+        "min": 404040,
+        "max": 427848,
+        "spread": 23808,
+        "n_distinct": 2
+      },
+      {
+        "kappa": 1,
+        "phi": -10,
+        "star": 0,
+        "n": 813120,
+        "min": 373928,
+        "max": 378152,
+        "spread": 4224,
+        "n_distinct": 2
+      },
+      {
+        "kappa": 1,
+        "phi": -2,
+        "star": 0,
+        "n": 871200,
+        "min": 312456,
+        "max": 332552,
+        "spread": 20096,
+        "n_distinct": 2
+      },
+      {
+        "kappa": 1,
+        "phi": 14,
+        "star": 0,
+        "n": 740520,
+        "min": 220872,
+        "max": 240456,
+        "spread": 19584,
+        "n_distinct": 2
+      }
+    ]
+  }
+}

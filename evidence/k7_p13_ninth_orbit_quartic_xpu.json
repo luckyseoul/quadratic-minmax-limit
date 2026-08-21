@@ -1,0 +1,81 @@
+{
+  "p": 13,
+  "packed_orbit": "/home/nick/mnt/soulkiller-e1work/maxplus_p13/orbit_attack_2026-08-20/k7_p13_ninth_signed_psl_orbit.npy",
+  "packed_rows": 4826640,
+  "epsilon_plus_only": true,
+  "evaluated_rows": 2413320,
+  "device": "Intel(R) Arc(TM) A380 Graphics",
+  "torch_version": "2.13.0+xpu",
+  "dpctl_version": "0.22.1",
+  "batch_size": 65536,
+  "float32_exact_integer_bound": true,
+  "cpu_int64_audit_rows": 256,
+  "cpu_int64_audit_ok": true,
+  "sum_abs_Zpsi_sq": 24586222752,
+  "E_abs_Zpsi_sq": "865956/85",
+  "QVAR_threshold": "10647/2",
+  "orbit_average_clears_QVAR": true,
+  "induced_exceptional_scalar": "976/85",
+  "min_abs_Zpsi_sq": 52,
+  "max_abs_Zpsi_sq": 56628,
+  "histogram": {
+    "52": 283920,
+    "468": 283920,
+    "1300": 227136,
+    "2548": 227136,
+    "4212": 198744,
+    "6292": 184548,
+    "8788": 227136,
+    "11700": 127764,
+    "15028": 141960,
+    "18772": 170352,
+    "22932": 56784,
+    "27508": 70980,
+    "32500": 42588,
+    "37908": 42588,
+    "43732": 28392,
+    "49972": 56784,
+    "56628": 42588
+  },
+  "by_activity": {
+    "6": {
+      "count": 70980,
+      "sum_abs_Zpsi_sq": 907237968,
+      "E_abs_Zpsi_sq": "63908/5",
+      "clears_QVAR": true,
+      "histogram": {
+        "468": 14196,
+        "2548": 14196,
+        "4212": 14196,
+        "18772": 14196,
+        "37908": 14196
+      }
+    },
+    "7": {
+      "count": 2342340,
+      "sum_abs_Zpsi_sq": 23678984784,
+      "E_abs_Zpsi_sq": "1668004/165",
+      "clears_QVAR": true,
+      "histogram": {
+        "52": 283920,
+        "468": 269724,
+        "1300": 227136,
+        "2548": 212940,
+        "4212": 184548,
+        "6292": 184548,
+        "8788": 227136,
+        "11700": 127764,
+        "15028": 141960,
+        "18772": 156156,
+        "22932": 56784,
+        "27508": 70980,
+        "32500": 42588,
+        "37908": 28392,
+        "43732": 28392,
+        "49972": 56784,
+        "56628": 42588
+      }
+    }
+  },
+  "elapsed_seconds": 11.592774168995675
+}

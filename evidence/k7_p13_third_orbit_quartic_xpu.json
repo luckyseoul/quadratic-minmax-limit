@@ -1,0 +1,77 @@
+{
+  "p": 13,
+  "packed_orbit": "/home/nick/mnt/soulkiller-e1work/maxplus_p13/orbit_attack_2026-08-20/k7_p13_third_signed_psl_orbit.npy",
+  "packed_rows": 4826640,
+  "epsilon_plus_only": true,
+  "evaluated_rows": 2413320,
+  "device": "Intel(R) Arc(TM) A380 Graphics",
+  "torch_version": "2.13.0+xpu",
+  "dpctl_version": "0.22.1",
+  "batch_size": 65536,
+  "float32_exact_integer_bound": true,
+  "cpu_int64_audit_rows": 256,
+  "cpu_int64_audit_ok": true,
+  "sum_abs_Zpsi_sq": 16601938080,
+  "E_abs_Zpsi_sq": "116948/17",
+  "QVAR_threshold": "10647/2",
+  "orbit_average_clears_QVAR": true,
+  "induced_exceptional_scalar": "2768/357",
+  "min_abs_Zpsi_sq": 52,
+  "max_abs_Zpsi_sq": 79092,
+  "histogram": {
+    "52": 440076,
+    "468": 241332,
+    "1300": 283920,
+    "2548": 312312,
+    "4212": 283920,
+    "6292": 212940,
+    "8788": 184548,
+    "11700": 141960,
+    "15028": 70980,
+    "18772": 56784,
+    "22932": 14196,
+    "27508": 28392,
+    "32500": 42588,
+    "37908": 28392,
+    "43732": 28392,
+    "49972": 28392,
+    "79092": 14196
+  },
+  "by_activity": {
+    "6": {
+      "count": 28392,
+      "sum_abs_Zpsi_sq": 13287456,
+      "E_abs_Zpsi_sq": "468",
+      "clears_QVAR": false,
+      "histogram": {
+        "468": 28392
+      }
+    },
+    "7": {
+      "count": 2384928,
+      "sum_abs_Zpsi_sq": 16588650624,
+      "E_abs_Zpsi_sq": "146068/21",
+      "clears_QVAR": true,
+      "histogram": {
+        "52": 440076,
+        "468": 212940,
+        "1300": 283920,
+        "2548": 312312,
+        "4212": 283920,
+        "6292": 212940,
+        "8788": 184548,
+        "11700": 141960,
+        "15028": 70980,
+        "18772": 56784,
+        "22932": 14196,
+        "27508": 28392,
+        "32500": 42588,
+        "37908": 28392,
+        "43732": 28392,
+        "49972": 28392,
+        "79092": 14196
+      }
+    }
+  },
+  "elapsed_seconds": 11.374639681002009
+}

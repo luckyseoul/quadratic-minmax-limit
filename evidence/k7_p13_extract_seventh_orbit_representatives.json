@@ -1,0 +1,23 @@
+{
+  "p": 13,
+  "source_orbit": "/mnt/storage/e1work/maxplus_p13/orbit_attack_2026-08-20/k7_p13_seventh_signed_psl_orbit.npy",
+  "depressed_k7_representatives": 6720,
+  "top_scalar_histogram": {
+    "1": 560,
+    "2": 560,
+    "3": 560,
+    "4": 560,
+    "5": 560,
+    "6": 560,
+    "7": 560,
+    "8": 560,
+    "9": 560,
+    "10": 560,
+    "11": 560,
+    "12": 560
+  },
+  "scalar7_representatives": 560,
+  "representatives_path": "/mnt/storage/e1work/maxplus_p13/orbit_attack_2026-08-20/k7_p13_scalar7_seventh_orbit_representatives.npy",
+  "representatives_sha256": "5931af3c4adec54dbc7e58a30c0918a1857d627a73dc52b009db12aad77c4a3c",
+  "independent_profile_reconstruction": true
+}

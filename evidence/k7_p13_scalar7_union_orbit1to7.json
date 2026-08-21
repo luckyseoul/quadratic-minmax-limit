@@ -1,0 +1,17 @@
+{
+  "orbit_counts": [
+    1071,
+    1071,
+    1127,
+    1092,
+    1113,
+    539,
+    560
+  ],
+  "sum_counts": 6573,
+  "overlap_dropped": 0,
+  "union_count": 6573,
+  "disjoint": true,
+  "union_path": "/mnt/storage/e1work/maxplus_p13/orbit_attack_2026-08-20/k7_p13_scalar7_union_orbit1to7_representatives.npy",
+  "union_sha256": "750e0b993b8f799fd7c3560ce4a989eaf731dbe784d6eb0c1b5f8357bcd259e7"
+}

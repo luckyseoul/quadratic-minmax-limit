@@ -222,6 +222,22 @@ high-prime energy barrier, QVAR now holds on `k=6` for every prime
 
 Live `e1_closed_general` is True only by the old wiring (affine residual (ii) plus two-level Type I). That is not E(1) for all \(p\ge5\). Aut-Schur, Gsum disj LB, and the cotangent pairing stay unused and False.
 
+## 2026-08-21 — remaining estimates isolated; no flag flipped
+
+The p=13 k=7 signed-PSL census is not a leftover close. Three Max+-free
+estimates remain; none is proved. See
+`evidence/NOTE_2026-08-21_remaining_general_p_estimates.md`.
+
+| Leftover | Predicate | Remaining estimate |
+|---|---|---|
+| 1 | `phi_F_ge_6_proved_general` | QVAR on k≥7 (all p≥13) **and** principal `\|\|δ\|\|^2 ≤ n(n+10)^2/[6(n-14)(n-6)]`. Crude `E[s^4]≤2n^3` is too weak. |
+| 2 | `residual_ii_k_eq_4p_empty` / `multilevel_ND_k_ge_4p_proved` | leftover+splus at k=4p: Paley majorant `E_-[S^2]<20+12/p`, or Walsh pair-slice span (interior 4-level only). Leftover-only with min_+<2 exists and is not residual (ii). |
+| 3 | `type_I_multilevel_bad_case_ND_closed` | `\|μ\|≤(p-2)/(2p^2)` on \|κ\|=1, equivalently `\|R̄₄\| ≤ \|L\|(p^4-1)+4(p-2)`. `\|μ\|≤\|T\|` does not close; `\|μ\|≤maj` is false at p=7. |
+
+Live dump (twice): all three leftovers False; Gsum False; pairing False.
+`e1_closed_general` is still True only by the old incomplete wiring.
+Aut-Schur unused. L=1/2 OPEN. Do not import a leftover from p=13 orbits.
+
 ## 2026-08-20 session — read this first
 
 **No flag flipped. `Max+` at `p=11` is now fully enumerated**, breaking the wall

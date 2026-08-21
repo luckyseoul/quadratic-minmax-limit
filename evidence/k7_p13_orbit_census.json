@@ -1,0 +1,121 @@
+{
+  "p": 13,
+  "k": 7,
+  "top_scalar": 7,
+  "QVAR_threshold": "10647/2",
+  "n_orbits": 7,
+  "orbits": [
+    {
+      "orbit": 1,
+      "orbit_size": 4826640,
+      "signed_stabilizer_order": 1,
+      "packed_sha256": "7223169420a18477dbdf95f6c3685186fbc6a7a1916ac875d761b22800c01eb2",
+      "E_abs_Zpsi_sq": "806468/85",
+      "k7_E_abs_Zpsi_sq": "1606124/167",
+      "lambda_exc": "19088/1785",
+      "orbit_clears_QVAR": true,
+      "k7_clears_QVAR": true,
+      "scalar7_representatives": 1071,
+      "representatives_sha256": "341cbfec0e076e36df4f7b517d98b51689e5bd8d3bdc82478a12d92c1ba992eb"
+    },
+    {
+      "orbit": 2,
+      "orbit_size": 4826640,
+      "signed_stabilizer_order": 1,
+      "packed_sha256": "a3ce4e19e68770b41951b4ba28153fd5ed23884d0bcd912eeb43c421fa0e31c3",
+      "E_abs_Zpsi_sq": "806468/85",
+      "k7_E_abs_Zpsi_sq": "198692/21",
+      "lambda_exc": "19088/1785",
+      "orbit_clears_QVAR": true,
+      "k7_clears_QVAR": true,
+      "scalar7_representatives": 1071,
+      "representatives_sha256": "49cacd5fe098de3aa1d2a88ecd94dba52debc532861026c3b798c429a553dbab"
+    },
+    {
+      "orbit": 3,
+      "orbit_size": 4826640,
+      "signed_stabilizer_order": 1,
+      "packed_sha256": "2f52e40847b19bb5604db73b5ba23b8c5e312bd1819bdbab23c7bb6c802409b8",
+      "E_abs_Zpsi_sq": "116948/17",
+      "k7_E_abs_Zpsi_sq": "146068/21",
+      "lambda_exc": "2768/357",
+      "orbit_clears_QVAR": true,
+      "k7_clears_QVAR": true,
+      "scalar7_representatives": 1127,
+      "representatives_sha256": "aa935a8231eaf4c60aed85d0925e043e711d498f3b00610c4b331e4a1b526785"
+    },
+    {
+      "orbit": 4,
+      "orbit_size": 4826640,
+      "signed_stabilizer_order": 1,
+      "packed_sha256": "0b49da430b40e3f39c3d0635facd6c12162ace8d28ce15e520238941e69785b6",
+      "E_abs_Zpsi_sq": "138580/17",
+      "k7_E_abs_Zpsi_sq": "167492/21",
+      "lambda_exc": "3280/357",
+      "orbit_clears_QVAR": true,
+      "k7_clears_QVAR": true,
+      "scalar7_representatives": 1092,
+      "representatives_sha256": "1ddc211423051473c47fe96b5eff7af212e3c1d413109a8886700aabd3cd3564"
+    },
+    {
+      "orbit": 5,
+      "orbit_size": 4826640,
+      "signed_stabilizer_order": 1,
+      "packed_sha256": "38bf52c29efa3fd5b01d9df6a02a450c076e3d4dfc87ff00b95e46a994337963",
+      "E_abs_Zpsi_sq": "892996/85",
+      "k7_E_abs_Zpsi_sq": "72852/7",
+      "lambda_exc": "21136/1785",
+      "orbit_clears_QVAR": true,
+      "k7_clears_QVAR": true,
+      "scalar7_representatives": 1113,
+      "representatives_sha256": "043175b39f8922c5fed3096f45a55edb1deb09d25f567b9886940442f721108c"
+    },
+    {
+      "orbit": 6,
+      "orbit_size": 2413320,
+      "signed_stabilizer_order": 2,
+      "packed_sha256": "315b90621f1490c61c6f0cac6a5093d27d88490546374018a91ed26e0aa2c78b",
+      "E_abs_Zpsi_sq": "984932/85",
+      "k7_E_abs_Zpsi_sq": "230308/21",
+      "lambda_exc": "23312/1785",
+      "orbit_clears_QVAR": true,
+      "k7_clears_QVAR": true,
+      "scalar7_representatives": 539,
+      "representatives_sha256": "95aa2143a3b216e0875f89ac9b54cdada09e6981e0e089439a646cd37e0c66ad"
+    },
+    {
+      "orbit": 7,
+      "orbit_size": 2413320,
+      "signed_stabilizer_order": 2,
+      "packed_sha256": "4a2da50b39d4d85e55352eadefe51975d7dd50550a871c4df42a38110b94ca41",
+      "E_abs_Zpsi_sq": "957892/85",
+      "k7_E_abs_Zpsi_sq": "75660/7",
+      "lambda_exc": "22672/1785",
+      "orbit_clears_QVAR": true,
+      "k7_clears_QVAR": true,
+      "scalar7_representatives": 560,
+      "representatives_sha256": "5931af3c4adec54dbc7e58a30c0918a1857d627a73dc52b009db12aad77c4a3c"
+    }
+  ],
+  "all_orbits_clear_QVAR": true,
+  "all_k7_slices_clear_QVAR": true,
+  "scalar7_union": {
+    "orbit_counts": [
+      1071,
+      1071,
+      1127,
+      1092,
+      1113,
+      539,
+      560
+    ],
+    "sum_counts": 6573,
+    "overlap_dropped": 0,
+    "union_count": 6573,
+    "disjoint": true,
+    "union_path": "/mnt/storage/e1work/maxplus_p13/orbit_attack_2026-08-20/k7_p13_scalar7_union_orbit1to7_representatives.npy",
+    "union_sha256": "750e0b993b8f799fd7c3560ce4a989eaf731dbe784d6eb0c1b5f8357bcd259e7"
+  },
+  "phi_F_ge_6_imported": false,
+  "note": "Finite p=13 k=7 signed-PSL census of CP-SAT scalar-7 depressed representatives. Does not import leftover 1."
+}
