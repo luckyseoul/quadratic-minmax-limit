@@ -557,12 +557,16 @@ class MuLab:
                 kv[c] = -M[ri][fc]
             kvs.append(kv)
         sol = None
-        if not free_cols and not incons:
-            sol = [None] * NV
+        particular = None
+        if not incons:
+            particular = [Fraction(0)] * NV
             for ri, c in enumerate(piv_cols):
-                sol[c] = M[ri][NV]
+                particular[c] = M[ri][NV]
+            if not free_cols:
+                sol = particular
         return dict(maps=maps, NV=NV, rank=r, kernel_dim=NV - r,
-                    inconsistent=incons, kernel=kvs, solution=sol, nrows=len(rows))
+                    inconsistent=incons, kernel=kvs, solution=sol,
+                    particular=particular, free_cols=free_cols, nrows=len(rows))
 
     def solution_matches_data(self, sysres) -> bool:
         """Reconstruct per-set μ from the unique solution and compare EXACTLY."""

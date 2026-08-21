@@ -1,0 +1,59 @@
+{
+  "prop": "15.590",
+  "title": "mu/delta contraction closure; determination at p=5; level-4 SDP kill",
+  "star_mu_p5": {
+    "tested": 7800,
+    "violations": 0
+  },
+  "out_mu_p5_violations": 0,
+  "deg6_p5_violations": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "s_identity_p5": true,
+  "kappa1_delta_dead_p5": "True",
+  "deg4_kernel_p5": 1,
+  "joint_kernel_p5": 0,
+  "determined_p5": true,
+  "psd_kill_p5": {
+    "killed": true,
+    "feasible_mu_int": 60.992000005095704,
+    "threshold_2n_int": 40.0,
+    "threshold_L_int": 31.2,
+    "true_max_mu_int": 24.0,
+    "lambda_min_at_point": -1.253452890714986e-13
+  },
+  "star_mu_p7": {
+    "tested": 300,
+    "violations": 0
+  },
+  "s_identity_p7": true,
+  "kappa1_delta_dead_p7": "True",
+  "deg4_kernel_p7": 2,
+  "psd_kill_p7": {
+    "killed": true,
+    "feasible_mu_int": 2434.4290354131417,
+    "threshold_2n_int": 916.16,
+    "threshold_L_int": 1168.5714285714287,
+    "true_max_mu_int": 872.0,
+    "lambda_min_at_point": -2.7151895479501115e-12
+  },
+  "deg6_p7_violations": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "joint_kernel_p7": 4,
+  "flags_not_flipped": [
+    "type_I",
+    "phi_F_ge_6",
+    "residual_ii",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "seconds": 490.9
+}
