@@ -1,0 +1,36 @@
+{
+  "prop": "15.596",
+  "title": "15.406 Theorem C extended to p=11, exact over the full Max- ensemble",
+  "p11_result": {
+    "p": 11,
+    "n": 122,
+    "n_over_2": 61,
+    "n_total_ensemble": 37457112,
+    "sampled": false,
+    "nU": 20431152,
+    "nUc": 17025960,
+    "rank_BU": 60,
+    "ker_dim": 62,
+    "solvable": true,
+    "ker_mixed": 0,
+    "aff_mixed": 0,
+    "closed": true,
+    "rank_equals_n_over_2": false,
+    "seconds": 740
+  },
+  "census_primes": [
+    3,
+    5,
+    7,
+    11
+  ],
+  "general_p_proved": false,
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "multilevel_ND_k_ge_4p_proved",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "seconds": 0.0
+}

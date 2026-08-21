@@ -1,4 +1,9 @@
-# Leftover 2: Walsh mechanism (15.406 Theorem C) — first evidence at p=11, IN PROGRESS
+# Leftover 2: Walsh mechanism (15.406 Theorem C) — first evidence at p=11
+
+> **RESOLVED — full-ensemble result landed.**  `closed = True`, EXACT,
+> over all 37,457,112 points (not a sample).  See Prop 15.596
+> (`src/e1_gmin_m4_prop15596.py`).  This is still only a FOURTH census
+> point (p=3,5,7,11), not a general-p proof; leftover 2 stays False.
 
 Date: 2026-08-21.  Target: `residual_ii_k_eq_4p_empty` / `multilevel_ND_k_ge_4p_proved`
 (leftover 2), currently False.  Route: 15.406 Theorem E — the Walsh
@@ -41,24 +46,27 @@ not the complete ensemble. p=5 and p=7's certified results use the full
 cached arrays (260 and 11452 points respectively, small enough to hold
 entirely); nothing analogous exists yet at p=11.
 
-## Full-ensemble verification: IN PROGRESS
+## Full-ensemble verification: DONE (Prop 15.596)
 
-A rigorous check needs the actual algebraic certificate over the complete
-37.4M-point Max− ensemble, not a subsample. First implementation attempt
-had a performance bug (a ~2.3 billion-call pure-Python `bin().count('1')`
-loop in the consistency-check pass) that would have taken hours; killed
-before completion. Rewritten with `np.bitwise_count` (numpy ≥2.0) for a
-fully vectorized pass 2, packing each 122-bit row as a `(lo:uint64,
-hi:uint64)` pair. Three streaming passes over the array:
-  1. build the GF(2) echelon basis of B_U (exact rank, not sampled),
-  2. augmented elimination to solve `B_U x₁ = 1` (solvability),
-  3. vectorized parity check of every null/affine basis vector against
-     every row of U^c.
+First implementation attempt had a performance bug (a ~2.3 billion-call
+pure-Python `bin().count('1')` loop in the consistency-check pass) that
+would have taken hours; killed before completion. Rewritten with
+`np.bitwise_count` (numpy ≥2.0) for a fully vectorized pass 2, packing
+each 122-bit row as a `(lo:uint64, hi:uint64)` pair
+(`scripts/walsh_theorem_c_p11_full.py`). Three streaming passes over all
+37,457,112 points (740s total, no subsampling):
 
-Running as `/mnt/storage/e1work/leftover3_mu/walsh_p11_full2.py`
-(log: `walsh_p11_full2.log`). Will be reported — as True or False,
-whichever it is — in a follow-up commit. **Do not cite the sample result
-above as a proof of Theorem C at p=11 until the full-ensemble run lands.**
+    rank(B_U) = 60   (stable from the first 500K rows onward)
+    ker_dim   = 62   solvable = True
+    ker_mixed = 0    aff_mixed = 0
+    CLOSED = True
+
+**Note the mechanism differs from p=5,7**: there rank(B_U) = n/2 exactly
+(B_U alone spans the whole Max− flat, making the containment trivial).
+At p=11, rank(B_U) = 60 < n/2 = 61 — Theorem C holds through the genuine
+algebraic containment N₀∪(x₁+N₀) ⊆ constant-on-U^c, NOT because B_U has
+full rank. Any future general-p proof attempted via "B_U has full rank"
+would be false at p=11; do not use that route.
 
 ## What this would mean if it lands True
 
