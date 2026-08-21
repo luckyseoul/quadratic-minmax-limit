@@ -1,0 +1,26 @@
+{
+  "p": 13,
+  "k": 7,
+  "top_scalar": 7,
+  "algorithm": "CP-SAT after forbidding all 1071 scalar-7 representatives from the first signed-PSL orbit",
+  "status": "OPTIMAL",
+  "workers": 8,
+  "random_seed": 41,
+  "forbidden_representatives": 1071,
+  "forbidden_representatives_sha256": "341cbfec0e076e36df4f7b517d98b51689e5bd8d3bdc82478a12d92c1ba992eb",
+  "outside_first_orbit": true,
+  "Zpsi": {
+    "real": -132,
+    "imag": -198,
+    "abs_sq": 56628
+  },
+  "negative_indices": [
+    0, 1, 2, 4, 6, 8, 14, 16, 18, 20, 25, 26, 28, 30, 32, 37, 38,
+    40, 42, 43, 44, 48, 49, 50, 51, 52, 56, 61, 62, 66, 73, 74, 77, 78,
+    80, 85, 86, 87, 89, 92, 97, 98, 99, 101, 103, 104, 107, 109, 110,
+    111, 113, 114, 115, 119, 121, 122, 123, 125, 127, 128, 129, 133,
+    135, 137, 141, 145, 146, 147, 149, 151, 153, 156, 157, 158, 159,
+    161, 163, 165
+  ],
+  "finite_diagnostic_only": true
+}

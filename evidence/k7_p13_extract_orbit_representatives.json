@@ -1,0 +1,23 @@
+{
+  "p": 13,
+  "source_orbit": "/mnt/storage/e1work/maxplus_p13/k7_p13_signed_psl_orbit.npy",
+  "depressed_k7_representatives": 12852,
+  "top_scalar_histogram": {
+    "1": 1071,
+    "2": 1071,
+    "3": 1071,
+    "4": 1071,
+    "5": 1071,
+    "6": 1071,
+    "7": 1071,
+    "8": 1071,
+    "9": 1071,
+    "10": 1071,
+    "11": 1071,
+    "12": 1071
+  },
+  "scalar7_representatives": 1071,
+  "representatives_path": "/tmp/k7_p13_scalar7_orbit_representatives.npy",
+  "representatives_sha256": "341cbfec0e076e36df4f7b517d98b51689e5bd8d3bdc82478a12d92c1ba992eb",
+  "independent_profile_reconstruction": true
+}

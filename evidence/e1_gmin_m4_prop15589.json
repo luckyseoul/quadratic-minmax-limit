@@ -1,0 +1,1628 @@
+{
+  "prop": "15.589",
+  "title": "Exact PSL decomposition of Z; one exceptional floor scalar",
+  "proved": {
+    "character_decomposition": true,
+    "Z_multiplicity_free": true,
+    "Phi_multiplicity_reduction": true,
+    "variance_alternatives": true,
+    "exception_removed_principal_variance": true,
+    "exceptional_quartic_variance_reduction": true,
+    "exceptional_quartic_variance_general": false,
+    "exceptional_profile_energy_p3mod4": true,
+    "exceptional_profile_energy_divisible_2p": true,
+    "exceptional_normalized_parity": true,
+    "exceptional_k1_k3_QVAR_all_primes": true,
+    "odd_coset_spherical_reduction": true,
+    "coarse_profile_constraints_insufficient": true,
+    "active_subsetwise_QVAR_false": true,
+    "top_profile_degreewise_QVAR_false": true,
+    "k4_empty_p_ge_41": true,
+    "low_activity_empty_when_p_gt_4k2": true,
+    "k4_QVAR_closed_p3mod4": true,
+    "k4_QVAR_all_primes": true,
+    "k5_empty_p_ge_41": true,
+    "k5_reduced_to_p13_p17_p19_p23": true,
+    "k5_QVAR_all_primes": true,
+    "k6_empty_p_ge_47": true,
+    "k6_empty_p37_and_p_ge_41": true,
+    "k6_QVAR_all_primes": true,
+    "lambda_exc_ge_6": false,
+    "lambda_min_ge_6_general": false
+  },
+  "algebra": {
+    "A": {
+      "proved": true,
+      "theorem": "For q=p^2 and W_e the degree-(q+1)/2 even Weil character, Sym^2(W_e)=1+St+W_e+sum_{(q-9)/8 distinct alpha} rho(alpha), where every rho(alpha) is principal series of degree q+1. This follows by the standard PSL(2,q) character-table inner products using chi_Sym2(g)=(chi(g)^2+chi(g^2))/2.",
+      "by_p": {
+        "5": {
+          "q": 25,
+          "exceptional_degree": 13,
+          "principal_degree": 26,
+          "n_principal": 2,
+          "n_constituents": 3,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "7": {
+          "q": 49,
+          "exceptional_degree": 25,
+          "principal_degree": 50,
+          "n_principal": 5,
+          "n_constituents": 6,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "11": {
+          "q": 121,
+          "exceptional_degree": 61,
+          "principal_degree": 122,
+          "n_principal": 14,
+          "n_constituents": 15,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "13": {
+          "q": 169,
+          "exceptional_degree": 85,
+          "principal_degree": 170,
+          "n_principal": 20,
+          "n_constituents": 21,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "17": {
+          "q": 289,
+          "exceptional_degree": 145,
+          "principal_degree": 290,
+          "n_principal": 35,
+          "n_constituents": 36,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "19": {
+          "q": 361,
+          "exceptional_degree": 181,
+          "principal_degree": 362,
+          "n_principal": 44,
+          "n_constituents": 45,
+          "multiplicity_free": true,
+          "dimension_check": true
+        }
+      },
+      "gap_audit": {
+        "25": {
+          "exceptional": 1,
+          "principal": 2,
+          "all_multiplicity_one": true
+        },
+        "49": {
+          "exceptional": 1,
+          "principal": 5,
+          "all_multiplicity_one": true
+        },
+        "121": {
+          "exceptional": 1,
+          "principal": 14,
+          "all_multiplicity_one": true
+        }
+      }
+    },
+    "B": {
+      "proved": true,
+      "theorem": "diag(Sym^2(V_+)) is the projective-line module 1+St, hence Z=W_e direct-sum (q-9)/8 distinct principal-series irreps. Thus dim Z=n(n-6)/8 and dim Z^U=1+2(q-9)/8=(q-5)/4.",
+      "no_trivial": true,
+      "no_steinberg": true,
+      "no_cuspidal": true,
+      "multiplicity_free": true,
+      "by_p": {
+        "5": {
+          "q": 25,
+          "exceptional_degree": 13,
+          "principal_degree": 26,
+          "n_principal": 2,
+          "n_constituents": 3,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "7": {
+          "q": 49,
+          "exceptional_degree": 25,
+          "principal_degree": 50,
+          "n_principal": 5,
+          "n_constituents": 6,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "11": {
+          "q": 121,
+          "exceptional_degree": 61,
+          "principal_degree": 122,
+          "n_principal": 14,
+          "n_constituents": 15,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "13": {
+          "q": 169,
+          "exceptional_degree": 85,
+          "principal_degree": 170,
+          "n_principal": 20,
+          "n_constituents": 21,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "17": {
+          "q": 289,
+          "exceptional_degree": 145,
+          "principal_degree": 290,
+          "n_principal": 35,
+          "n_constituents": 36,
+          "multiplicity_free": true,
+          "dimension_check": true
+        },
+        "19": {
+          "q": 361,
+          "exceptional_degree": 181,
+          "principal_degree": 362,
+          "n_principal": 44,
+          "n_constituents": 45,
+          "multiplicity_free": true,
+          "dimension_check": true
+        }
+      }
+    },
+    "C": {
+      "proved": true,
+      "theorem": "Phi is G-equivariant and Z is multiplicity-free. Phi is scalar on one degree-d exceptional constituent and on each degree-n principal constituent. Therefore every eigenvalue not solely exceptional has multiplicity at least n; the only possible sub-n multiplicity is lambda_exc=Phi|W_e, with multiplicity d.",
+      "exact_remaining_scalar": "lambda_exc >= 6",
+      "observed_exceptional_is_top": {
+        "5": true,
+        "7": true,
+        "11": true
+      },
+      "observed_ordering_promoted_to_theorem": false,
+      "mult_lambda_min_ge_n_proved_unconditionally": false
+    },
+    "D": {
+      "proved": true,
+      "theorem": "The variance room for a degree-d exceptional minimum is exactly half the room for a minimum of multiplicity n.",
+      "by_p": {
+        "5": {
+          "mean": "48/5",
+          "variance_room_mult_n": "648/125",
+          "variance_room_mult_d": "324/125",
+          "delta2_room_mult_n": "351/25",
+          "delta2_room_mult_d": "351/50",
+          "ok": true
+        },
+        "7": {
+          "mean": "96/11",
+          "variance_room_mult_n": "1800/1331",
+          "variance_room_mult_d": "900/1331",
+          "delta2_room_mult_n": "1875/121",
+          "delta2_room_mult_d": "1875/242",
+          "ok": true
+        },
+        "11": {
+          "mean": "240/29",
+          "variance_room_mult_n": "8712/24389",
+          "variance_room_mult_d": "4356/24389",
+          "delta2_room_mult_n": "22143/841",
+          "delta2_room_mult_d": "22143/1682",
+          "ok": true
+        },
+        "13": {
+          "mean": "336/41",
+          "variance_room_mult_n": "16200/68921",
+          "variance_room_mult_d": "8100/68921",
+          "delta2_room_mult_n": "57375/1681",
+          "delta2_room_mult_d": "57375/3362",
+          "ok": true
+        },
+        "17": {
+          "mean": "576/71",
+          "variance_room_mult_n": "45000/357911",
+          "variance_room_mult_d": "22500/357911",
+          "delta2_room_mult_n": "271875/5041",
+          "delta2_room_mult_d": "271875/10082",
+          "ok": true
+        },
+        "19": {
+          "mean": "720/89",
+          "variance_room_mult_n": "69192/704969",
+          "variance_room_mult_d": "34596/704969",
+          "delta2_room_mult_n": "521823/7921",
+          "delta2_room_mult_d": "521823/15842",
+          "ok": true
+        }
+      }
+    },
+    "Dplus": {
+      "proved": true,
+      "depends_on_for_floor": "lambda_exc>=6 (QVAR)",
+      "does_not_prove_moment_bound": true,
+      "theorem": "After lambda_exc>=6, removing its degree-n/2 block and applying the one-low-principal-scalar second-moment extremum gives ||delta||^2<=n(n+10)^2/[6(n-14)(n-6)].",
+      "completed_square": "B(e)-B_min=n(n-14)/(48(n-18)) *(e-8(n-8)/(n-14))^2",
+      "principal_mean_guard": "If the principal mean is <=6, then e>=(n+22)/2 and the minimum possible delta^2 already exceeds B_min for n>18.",
+      "by_p": {
+        "5": {
+          "exceptional_vertex": "12",
+          "old_delta2_room": "351/25",
+          "new_delta2_room": "117/5",
+          "improvement_factor": "5/3",
+          "Es4_budget": "9256",
+          "kappa4_budget": "1144",
+          "ok": true
+        },
+        "7": {
+          "exceptional_vertex": "28/3",
+          "old_delta2_room": "1875/121",
+          "new_delta2_room": "625/33",
+          "improvement_factor": "11/9",
+          "Es4_budget": "31400",
+          "kappa4_budget": "1400",
+          "ok": true
+        },
+        "11": {
+          "exceptional_vertex": "76/9",
+          "old_delta2_room": "22143/841",
+          "new_delta2_room": "7381/261",
+          "improvement_factor": "29/27",
+          "Es4_budget": "544120/3",
+          "kappa4_budget": "8296/3",
+          "ok": true
+        },
+        "13": {
+          "exceptional_vertex": "108/13",
+          "old_delta2_room": "57375/1681",
+          "new_delta2_room": "19125/533",
+          "improvement_factor": "41/39",
+          "Es4_budget": "4556680/13",
+          "kappa4_budget": "48280/13",
+          "ok": true
+        },
+        "17": {
+          "exceptional_vertex": "188/23",
+          "old_delta2_room": "271875/5041",
+          "new_delta2_room": "90625/1633",
+          "improvement_factor": "71/69",
+          "Es4_budget": "23351960/23",
+          "kappa4_budget": "140360/23",
+          "ok": true
+        },
+        "19": {
+          "exceptional_vertex": "236/29",
+          "old_delta2_room": "521823/7921",
+          "new_delta2_room": "173941/2581",
+          "improvement_factor": "89/87",
+          "Es4_budget": "45821960/29",
+          "kappa4_budget": "218648/29",
+          "ok": true
+        }
+      }
+    },
+    "E": {
+      "proved_reduction": true,
+      "proved_census": true,
+      "proved_general_inequality": false,
+      "theorem": "For the quartic character psi^2=chi, the unique exceptional Phi scalar is lambda_exc=32 E|Z_psi|^2/[q(q-1)]. Hence lambda_exc>=6 iff E|Z_psi|^2>=3q(q-1)/16.",
+      "by_p": {
+        "5": {
+          "E_abs_Zpsi_sq": "3300/13",
+          "lambda_exc": "176/13",
+          "floor_threshold": "225/2",
+          "lambda_exc_ge_6": true,
+          "ok": true
+        },
+        "7": {
+          "E_abs_Zpsi_sq": "317520/409",
+          "lambda_exc": "4320/409",
+          "floor_threshold": "441",
+          "lambda_exc_ge_6": true,
+          "ok": true
+        }
+      }
+    },
+    "FA": {
+      "proved_energy_divisibility_2p": true,
+      "proved_pointwise_parity": true,
+      "normalized_QVAR": "E|B|^2 >= 3(p^2-1)/64 = 3T/8",
+      "proof": "Degree(rho)<=k-2<=(p-3)/2 makes the square power sum zero mod p; sum h=0 makes its squared norm even. Modulo 2 the quartic signs are all 1.",
+      "by_p": {
+        "7": {
+          "normalized_total_T": 6,
+          "forced_parity_of_Z_over_2p": 0,
+          "pointwise_B_squared_floor": 0,
+          "normalized_QVAR_threshold": "9/4",
+          "parity_floor_is_insufficient": true,
+          "ok": true
+        },
+        "11": {
+          "normalized_total_T": 15,
+          "forced_parity_of_Z_over_2p": 1,
+          "pointwise_B_squared_floor": 1,
+          "normalized_QVAR_threshold": "45/8",
+          "parity_floor_is_insufficient": true,
+          "ok": true
+        },
+        "19": {
+          "normalized_total_T": 45,
+          "forced_parity_of_Z_over_2p": 1,
+          "pointwise_B_squared_floor": 1,
+          "normalized_QVAR_threshold": "135/8",
+          "parity_floor_is_insufficient": true,
+          "ok": true
+        },
+        "23": {
+          "normalized_total_T": 66,
+          "forced_parity_of_Z_over_2p": 0,
+          "pointwise_B_squared_floor": 0,
+          "normalized_QVAR_threshold": "99/4",
+          "parity_floor_is_insufficient": true,
+          "ok": true
+        },
+        "31": {
+          "normalized_total_T": 120,
+          "forced_parity_of_Z_over_2p": 0,
+          "pointwise_B_squared_floor": 0,
+          "normalized_QVAR_threshold": "45",
+          "parity_floor_is_insufficient": true,
+          "ok": true
+        }
+      }
+    },
+    "FG": {
+      "proved_profile_energy_identity_p3mod4": true,
+      "proved_profile_energy_conservation_p3mod4": true,
+      "proved_k1_k3_QVAR_all_primes": true,
+      "remaining_exceptional_strata": "k>=4",
+      "theorem": "For p=3 mod 4, Z_psi is the signed directional-profile energy and the total energy is p(p^2-1)/4. The k=1 and k=3 strata satisfy QVAR for every prime; p=1 mod 4 uses the Euler-product lower bound L(2,chi)>=pi^2/15 for k=3, with p=5 exact.",
+      "by_p": {
+        "5": {
+          "threshold": "225/2",
+          "k1_exact": "500",
+          "k3_value_or_lower": "180",
+          "k3_kind": "exact finite base case",
+          "k1_clears": true,
+          "k3_clears": true
+        },
+        "7": {
+          "threshold": "441",
+          "k1_exact": "7056",
+          "k3_value_or_lower": "784",
+          "k3_kind": "exact profile-energy average",
+          "k1_clears": true,
+          "k3_clears": true
+        },
+        "11": {
+          "threshold": "5445/2",
+          "k1_exact": "108900",
+          "k3_value_or_lower": "21780",
+          "k3_kind": "exact profile-energy average",
+          "k1_clears": true,
+          "k3_clears": true
+        },
+        "13": {
+          "threshold": "10647/2",
+          "k1_exact": "553644/11",
+          "k3_value_or_lower": "4826809/900",
+          "k3_kind": "Euler-product lower bound",
+          "k1_clears": true,
+          "k3_clears": true
+        },
+        "17": {
+          "threshold": "15606",
+          "k1_exact": "943296/5",
+          "k3_value_or_lower": "24137569/900",
+          "k3_kind": "Euler-product lower bound",
+          "k1_clears": true,
+          "k3_clears": true
+        },
+        "19": {
+          "threshold": "48735/2",
+          "k1_exact": "2924100",
+          "k3_value_or_lower": "758100",
+          "k3_kind": "exact profile-energy average",
+          "k1_clears": true,
+          "k3_clears": true
+        }
+      }
+    },
+    "H": {
+      "proved_reduction": true,
+      "maxplus_is_odd_coset_first_shell": true,
+      "maxplus_is_ordinary_lattice_first_shell": false,
+      "ordinary_minimum_shell_design_route_applies": false,
+      "sufficient_harmonic_target": "degree-4 odd-coset coefficient >= 0",
+      "exact_harmonic_target": "degree-4 odd-coset excess >= -q(q-1)(q-11)/(16(q+5))",
+      "by_p": {
+        "5": {
+          "ordinary_lattice_short_vector_norm_sq": 6,
+          "odd_coset_first_shell_norm_sq": 26,
+          "sphere_variance": "130",
+          "QVAR_threshold": "225/2",
+          "sphere_minus_threshold": "35/2",
+          "ok": true
+        },
+        "7": {
+          "ordinary_lattice_short_vector_norm_sq": 8,
+          "odd_coset_first_shell_norm_sq": 50,
+          "sphere_variance": "4900/9",
+          "QVAR_threshold": "441",
+          "sphere_minus_threshold": "931/9",
+          "ok": true
+        },
+        "11": {
+          "ordinary_lattice_short_vector_norm_sq": 12,
+          "odd_coset_first_shell_norm_sq": 122,
+          "sphere_variance": "73810/21",
+          "QVAR_threshold": "5445/2",
+          "sphere_minus_threshold": "33275/42",
+          "ok": true
+        },
+        "13": {
+          "ordinary_lattice_short_vector_norm_sq": 14,
+          "odd_coset_first_shell_norm_sq": 170,
+          "sphere_variance": "201110/29",
+          "QVAR_threshold": "10647/2",
+          "sphere_minus_threshold": "93457/58",
+          "ok": true
+        },
+        "17": {
+          "ordinary_lattice_short_vector_norm_sq": 18,
+          "odd_coset_first_shell_norm_sq": 290,
+          "sphere_variance": "1005720/49",
+          "QVAR_threshold": "15606",
+          "sphere_minus_threshold": "241026/49",
+          "ok": true
+        },
+        "19": {
+          "ordinary_lattice_short_vector_norm_sq": 20,
+          "odd_coset_first_shell_norm_sq": 362,
+          "sphere_variance": "1960230/61",
+          "QVAR_threshold": "48735/2",
+          "sphere_minus_threshold": "947625/122",
+          "ok": true
+        }
+      }
+    },
+    "I": {
+      "proved_countermechanism": true,
+      "scope": "all primes p=3 mod 4, p>=7",
+      "constraints_shown_insufficient": [
+        "nonnegative integer directional energies",
+        "pointwise conserved total ENERGY",
+        "full directional support",
+        "cyclic direction symmetry and equal means",
+        "separate degree-(m-2) admissibility of every line profile",
+        "the genuine divisibility a_L in 2p Z"
+      ],
+      "missing_kind_of_input": "cross-direction coefficient kernels and simultaneous Boolean ridge reconstruction, or an equivalent profile coupling",
+      "by_p": {
+        "7": {
+          "m": 4,
+          "t": 1,
+          "T": 6,
+          "parity": 0,
+          "b": [
+            2,
+            2,
+            1,
+            1
+          ],
+          "a": [
+            28,
+            28,
+            14,
+            14
+          ],
+          "sum_a": 84,
+          "expected_sum_a": 84,
+          "signed_energy_magnitude": 0,
+          "cyclic_orbit_variance": 0,
+          "QVAR_threshold": "441",
+          "full_support": true,
+          "all_energies_divisible_by_2p": true,
+          "line_profile_witnesses": {
+            "1": [
+              -2,
+              -1,
+              2,
+              0,
+              0,
+              2,
+              -1
+            ],
+            "2": [
+              -3,
+              -2,
+              -1,
+              0,
+              1,
+              2,
+              3
+            ]
+          },
+          "line_profile_degrees_mod_p": {
+            "1": 2,
+            "2": 1
+          },
+          "line_profile_degree_bound": 2,
+          "all_energies_individually_profile_admissible": true,
+          "equal_directional_means_under_cyclic_orbit": true,
+          "violates_QVAR": true,
+          "ok": true
+        },
+        "11": {
+          "m": 6,
+          "t": 2,
+          "T": 15,
+          "parity": 1,
+          "b": [
+            3,
+            3,
+            3,
+            2,
+            2,
+            2
+          ],
+          "a": [
+            66,
+            66,
+            66,
+            44,
+            44,
+            44
+          ],
+          "sum_a": 330,
+          "expected_sum_a": 330,
+          "signed_energy_magnitude": 22,
+          "cyclic_orbit_variance": 484,
+          "QVAR_threshold": "5445/2",
+          "full_support": true,
+          "all_energies_divisible_by_2p": true,
+          "line_profile_witnesses": {
+            "2": [
+              -1,
+              1,
+              1,
+              -1,
+              2,
+              2,
+              -2,
+              -4,
+              -2,
+              2,
+              2
+            ],
+            "3": [
+              0,
+              3,
+              -3,
+              2,
+              2,
+              0,
+              -4,
+              -2,
+              0,
+              4,
+              -2
+            ]
+          },
+          "line_profile_degrees_mod_p": {
+            "2": 4,
+            "3": 4
+          },
+          "line_profile_degree_bound": 4,
+          "all_energies_individually_profile_admissible": true,
+          "equal_directional_means_under_cyclic_orbit": true,
+          "violates_QVAR": true,
+          "ok": true
+        },
+        "19": {
+          "m": 10,
+          "t": 4,
+          "T": 45,
+          "parity": 1,
+          "b": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "a": [
+            190,
+            190,
+            190,
+            190,
+            190,
+            152,
+            152,
+            152,
+            152,
+            152
+          ],
+          "sum_a": 1710,
+          "expected_sum_a": 1710,
+          "signed_energy_magnitude": 38,
+          "cyclic_orbit_variance": 1444,
+          "QVAR_threshold": "48735/2",
+          "full_support": true,
+          "all_energies_divisible_by_2p": true,
+          "line_profile_witnesses": {
+            "4": [
+              2,
+              3,
+              -5,
+              -1,
+              5,
+              0,
+              0,
+              2,
+              -4,
+              2,
+              -2,
+              0,
+              0,
+              -4,
+              2,
+              -2,
+              4,
+              2,
+              -4
+            ],
+            "5": [
+              2,
+              3,
+              -3,
+              -1,
+              3,
+              1,
+              1,
+              0,
+              -4,
+              4,
+              -2,
+              0,
+              0,
+              -6,
+              4,
+              -4,
+              6,
+              0,
+              -4
+            ]
+          },
+          "line_profile_degrees_mod_p": {
+            "4": 8,
+            "5": 8
+          },
+          "line_profile_degree_bound": 8,
+          "all_energies_individually_profile_admissible": true,
+          "equal_directional_means_under_cyclic_orbit": true,
+          "violates_QVAR": true,
+          "ok": true
+        },
+        "23": {
+          "m": 12,
+          "t": 5,
+          "T": 66,
+          "parity": 0,
+          "b": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          "a": [
+            276,
+            276,
+            276,
+            276,
+            276,
+            276,
+            230,
+            230,
+            230,
+            230,
+            230,
+            230
+          ],
+          "sum_a": 3036,
+          "expected_sum_a": 3036,
+          "signed_energy_magnitude": 0,
+          "cyclic_orbit_variance": 0,
+          "QVAR_threshold": "52371",
+          "full_support": true,
+          "all_energies_divisible_by_2p": true,
+          "line_profile_witnesses": {
+            "5": [
+              4,
+              1,
+              1,
+              1,
+              1,
+              -3,
+              3,
+              -2,
+              0,
+              4,
+              -8,
+              2,
+              2,
+              2,
+              -4,
+              -2,
+              4,
+              -2,
+              2,
+              -2,
+              -4,
+              4,
+              -4
+            ],
+            "6": [
+              6,
+              -1,
+              3,
+              -1,
+              1,
+              -3,
+              3,
+              -1,
+              1,
+              4,
+              -8,
+              2,
+              0,
+              4,
+              -6,
+              0,
+              4,
+              -4,
+              2,
+              0,
+              -4,
+              2,
+              -4
+            ]
+          },
+          "line_profile_degrees_mod_p": {
+            "5": 10,
+            "6": 10
+          },
+          "line_profile_degree_bound": 10,
+          "all_energies_individually_profile_admissible": true,
+          "equal_directional_means_under_cyclic_orbit": true,
+          "violates_QVAR": true,
+          "ok": true
+        },
+        "31": {
+          "m": 16,
+          "t": 7,
+          "T": 120,
+          "parity": 0,
+          "b": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            8,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "a": [
+            496,
+            496,
+            496,
+            496,
+            496,
+            496,
+            496,
+            496,
+            434,
+            434,
+            434,
+            434,
+            434,
+            434,
+            434,
+            434
+          ],
+          "sum_a": 7440,
+          "expected_sum_a": 7440,
+          "signed_energy_magnitude": 0,
+          "cyclic_orbit_variance": 0,
+          "QVAR_threshold": "172980",
+          "full_support": true,
+          "all_energies_divisible_by_2p": true,
+          "line_profile_witnesses": {
+            "8": [
+              2,
+              1,
+              1,
+              -3,
+              3,
+              3,
+              -5,
+              3,
+              3,
+              -1,
+              1,
+              -3,
+              -1,
+              0,
+              2,
+              -2,
+              2,
+              -2,
+              0,
+              6,
+              -6,
+              2,
+              -8,
+              6,
+              -6,
+              10,
+              -8,
+              2,
+              2,
+              -2,
+              -2
+            ],
+            "7": [
+              2,
+              3,
+              1,
+              -3,
+              3,
+              1,
+              -3,
+              3,
+              1,
+              1,
+              1,
+              -4,
+              -2,
+              0,
+              4,
+              -4,
+              2,
+              0,
+              -2,
+              6,
+              -6,
+              2,
+              -6,
+              6,
+              -6,
+              8,
+              -6,
+              0,
+              4,
+              -4,
+              -2
+            ]
+          },
+          "line_profile_degrees_mod_p": {
+            "8": 14,
+            "7": 14
+          },
+          "line_profile_degree_bound": 14,
+          "all_energies_individually_profile_admissible": true,
+          "equal_directional_means_under_cyclic_orbit": true,
+          "violates_QVAR": true,
+          "ok": true
+        }
+      }
+    },
+    "J": {
+      "proved_counterexample": true,
+      "translation_orbit_size": 121,
+      "quartic_direction_signs": [
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "normalized_QVAR_threshold": "45/8",
+      "balanced": {
+        "n_direction_subsets": 9,
+        "pure_reps_per_subset": 40,
+        "B_histogram_per_subset": {
+          "-3": 10,
+          "-1": 10,
+          "1": 10,
+          "3": 10
+        },
+        "E_B2": "5",
+        "fails_QVAR": true
+      },
+      "unbalanced": {
+        "n_direction_subsets": 6,
+        "pure_reps_per_subset": 20,
+        "absolute_B_histogram_per_subset": {
+          "3": 5,
+          "9": 15
+        },
+        "E_B2": "63",
+        "clears_QVAR": true
+      },
+      "n_pure_reps": 480,
+      "n_full_k4_vectors": 58080,
+      "aggregate_E_B2": "39/2",
+      "aggregate_E_Z2": "9438",
+      "aggregate_clears_QVAR": true,
+      "route_killed": "QVAR on every fixed active direction-subset, even inside k=4",
+      "surviving_requirement": "mix projective direction configurations before taking the quartic second moment"
+    },
+    "K": {
+      "proved_counterexample": true,
+      "p7": {
+        "full_support_count": 4410,
+        "top_profile_degree": 2,
+        "top_zero_count": 0,
+        "n_nonzero_scalar_classes": 6,
+        "vectors_per_nonzero_class": 735,
+        "E_B2_per_nonzero_class": "44/15",
+        "normalized_QVAR_threshold": "9/4"
+      },
+      "p11": {
+        "full_support_count": 36065260,
+        "top_profile_degree": 4,
+        "top_zero_count": 2090880,
+        "top_zero_actual_degree": 3,
+        "top_zero_E_B2": "137/36",
+        "top_zero_fails_QVAR": true,
+        "n_nonzero_scalar_classes": 10,
+        "vectors_per_nonzero_class": 3397438,
+        "E_B2_per_nonzero_class": "111483/14039",
+        "nonzero_classes_clear_QVAR": true,
+        "degree3_projective_orbits": [
+          {
+            "n_projective_classes": 6,
+            "vectors_per_class": 123420,
+            "E_B2_per_class": "151/51"
+          },
+          {
+            "n_projective_classes": 6,
+            "vectors_per_class": 225060,
+            "E_B2_per_class": "397/93"
+          }
+        ],
+        "degree_drops_twice_count": 0,
+        "aggregate_E_B2": "114771/14903",
+        "aggregate_clears_QVAR": true,
+        "normalized_QVAR_threshold": "45/8"
+      },
+      "route_killed": "QVAR separately on actual top-profile-degree or on every leading-coefficient projective class",
+      "surviving_requirement": "mix adjacent profile-degree families in their exact ensemble proportions"
+    },
+    "L": {
+      "proved": true,
+      "scope": "every odd prime p>=41",
+      "finite_exact_range": {
+        "41": {
+          "minimum_quadratic_b": 54,
+          "normalized_total_T": 210,
+          "four_profiles_exceed_total": true,
+          "ok": true
+        },
+        "43": {
+          "minimum_quadratic_b": 60,
+          "normalized_total_T": 231,
+          "four_profiles_exceed_total": true,
+          "ok": true
+        },
+        "47": {
+          "minimum_quadratic_b": 74,
+          "normalized_total_T": 276,
+          "four_profiles_exceed_total": true,
+          "ok": true
+        },
+        "53": {
+          "minimum_quadratic_b": 96,
+          "normalized_total_T": 351,
+          "four_profiles_exceed_total": true,
+          "ok": true
+        },
+        "59": {
+          "minimum_quadratic_b": 119,
+          "normalized_total_T": 435,
+          "four_profiles_exceed_total": true,
+          "ok": true
+        },
+        "61": {
+          "minimum_quadratic_b": 122,
+          "normalized_total_T": 465,
+          "four_profiles_exceed_total": true,
+          "ok": true
+        }
+      },
+      "analytic_range": {
+        "first_possible_prime": 67,
+        "profile_energy_lower_bound": "(p^2-1)(p-2sqrt(p))/12",
+        "quarter_total": "p(p^2-1)/16",
+        "strict_inequality_reason": "p>64"
+      },
+      "linear_profile_energy": "p(p^2-1)/12",
+      "conclusion": "the k=4 Max+ profile stratum is empty for p>=41",
+      "remaining_k4_primes": "p<=37"
+    },
+    "M": {
+      "proved": true,
+      "profile_energy_lower_bound": "(p^2-1)(p-2(r-1)sqrt(p))/12 for reduced degree r",
+      "empty_condition": "k>=4 and p>4k^2",
+      "surviving_activity": "k in {1,3}, or k>=sqrt(p)/2",
+      "samples": {
+        "67": {
+          "excluded_k": [
+            4
+          ],
+          "first_not_excluded": 5,
+          "boundary_check": true
+        },
+        "101": {
+          "excluded_k": [
+            4,
+            5
+          ],
+          "first_not_excluded": 6,
+          "boundary_check": true
+        },
+        "1009": {
+          "excluded_k": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "first_not_excluded": 16,
+          "boundary_check": true
+        }
+      }
+    },
+    "N": {
+      "proved": true,
+      "finite_coefficient_sieve": {
+        "19": {
+          "n_direction_subsets": 210,
+          "energy_partitions": [
+            [
+              10,
+              10,
+              10,
+              15
+            ]
+          ],
+          "total_coefficient_candidates": 0,
+          "k4_empty": true
+        },
+        "23": {
+          "n_direction_subsets": 495,
+          "energy_partitions": [
+            [
+              16,
+              16,
+              16,
+              18
+            ],
+            [
+              16,
+              16,
+              17,
+              17
+            ]
+          ],
+          "total_coefficient_candidates": 0,
+          "k4_empty": true
+        },
+        "31": {
+          "n_direction_subsets": 1820,
+          "energy_partitions": [
+            [
+              30,
+              30,
+              30,
+              30
+            ]
+          ],
+          "total_coefficient_candidates": 0,
+          "k4_empty": true
+        }
+      },
+      "nonempty_primes": [
+        7,
+        11
+      ],
+      "nonempty_QVAR_moments": {
+        "7": "44/15",
+        "11": "39/2"
+      },
+      "analytic_empty_range": "p>=41",
+      "zero_top_scalar_excluded_by_energy": true,
+      "conclusion": "for p=3 mod 4, k=4 exists only at p=7,11 and clears QVAR at both",
+      "remaining_QVAR_strata_p3mod4": "k>=5 for p>=19"
+    },
+    "O": {
+      "proved": true,
+      "p1mod4": {
+        "5": {
+          "k4_empty": true,
+          "reason": "only three square directions"
+        },
+        "13": {
+          "count_eps_plus": 28392,
+          "n_nonzero_direction_subsets": 7,
+          "E_abs_Zpsi_sq": "8788",
+          "QVAR_threshold": "10647/2"
+        },
+        "17": {
+          "count_eps_plus": 62424,
+          "n_nonzero_direction_subsets": 27,
+          "E_abs_Zpsi_sq": "314432/3",
+          "QVAR_threshold": "15606"
+        },
+        "29": {
+          "n_direction_subsets": 1365,
+          "coefficient_candidates": 0
+        },
+        "37": {
+          "n_direction_subsets": 3876,
+          "coefficient_candidates": 0
+        },
+        "p_ge_41": {
+          "k4_empty": true
+        }
+      },
+      "conclusion": "QVAR holds on k=4 for every prime p>=5",
+      "remaining_exceptional_strata": "k>=5"
+    },
+    "P": {
+      "proved": true,
+      "zero_cubic_scalar_excluded_by_degree_at_most_two_energy": true,
+      "finite_exact_range": {
+        "41": {
+          "minimum_cubic_b": 43,
+          "normalized_total_T": 210,
+          "five_minima_exceed_total": true,
+          "energy_partition_exists": false
+        },
+        "43": {
+          "minimum_cubic_b": 45,
+          "normalized_total_T": 231,
+          "five_minima_exceed_total": false,
+          "energy_partition_exists": false,
+          "maximum_relevant_b": 51,
+          "relevant_type_histogram": {
+            "45": 28
+          },
+          "five_relevant_profiles_total": 225
+        },
+        "47": {
+          "minimum_cubic_b": 58,
+          "normalized_total_T": 276,
+          "five_minima_exceed_total": true,
+          "energy_partition_exists": false
+        },
+        "53": {
+          "minimum_cubic_b": 77,
+          "normalized_total_T": 351,
+          "five_minima_exceed_total": true,
+          "energy_partition_exists": false
+        },
+        "59": {
+          "minimum_cubic_b": 97,
+          "normalized_total_T": 435,
+          "five_minima_exceed_total": true,
+          "energy_partition_exists": false
+        },
+        "61": {
+          "minimum_cubic_b": 99,
+          "normalized_total_T": 465,
+          "five_minima_exceed_total": true,
+          "energy_partition_exists": false
+        },
+        "67": {
+          "minimum_cubic_b": 129,
+          "normalized_total_T": 561,
+          "five_minima_exceed_total": true,
+          "energy_partition_exists": false
+        },
+        "71": {
+          "minimum_cubic_b": 144,
+          "normalized_total_T": 630,
+          "five_minima_exceed_total": true,
+          "energy_partition_exists": false
+        },
+        "73": {
+          "minimum_cubic_b": 153,
+          "normalized_total_T": 666,
+          "five_minima_exceed_total": true,
+          "energy_partition_exists": false
+        },
+        "79": {
+          "minimum_cubic_b": 181,
+          "normalized_total_T": 780,
+          "five_minima_exceed_total": true,
+          "energy_partition_exists": false
+        },
+        "83": {
+          "minimum_cubic_b": 210,
+          "normalized_total_T": 861,
+          "five_minima_exceed_total": true,
+          "energy_partition_exists": false
+        },
+        "89": {
+          "minimum_cubic_b": 244,
+          "normalized_total_T": 990,
+          "five_minima_exceed_total": true,
+          "energy_partition_exists": false
+        },
+        "97": {
+          "minimum_cubic_b": 288,
+          "normalized_total_T": 1176,
+          "five_minima_exceed_total": true,
+          "energy_partition_exists": false
+        }
+      },
+      "analytic_range": {
+        "first_prime": 101,
+        "reason": "p>4k^2 with k=5"
+      },
+      "conclusion": "the k=5 Max+ profile stratum is empty for p>=41",
+      "remaining_exceptional_strata": {
+        "p<=37": "k>=5",
+        "p>=41": "k>=6"
+      }
+    },
+    "Q": {
+      "proved": true,
+      "direction_count_empty": [
+        5,
+        7
+      ],
+      "p11": {
+        "count_eps_plus": 1306800,
+        "E_B2": "163/9",
+        "normalized_QVAR_threshold": "45/8",
+        "clears_QVAR": true
+      },
+      "p29": {
+        "n_direction_subsets": 3003,
+        "type_tuples_before_coefficient_sieve": 736828092,
+        "coefficient_candidates": 0,
+        "k5_empty": true
+      },
+      "p31": {
+        "n_direction_subsets": 4368,
+        "boolean_representatives_mod_translation": 8000,
+        "count_eps_plus": 7688000,
+        "normalized_quartic_histogram": {
+          "-72": 2400,
+          "-24": 1600,
+          "24": 1600,
+          "72": 2400
+        },
+        "E_B2": "16704/5",
+        "normalized_QVAR_threshold": "45",
+        "clears_QVAR": true
+      },
+      "p37": {
+        "n_direction_subsets": 11628,
+        "leading_patterns_after_energy_and_constants": 9348,
+        "coefficient_candidates": 0,
+        "k5_empty": true
+      },
+      "p_ge_41": {
+        "k5_empty": true
+      },
+      "remaining_k5_primes": [
+        13,
+        17,
+        19,
+        23
+      ],
+      "remaining_exceptional_strata": "k>=5 at p=13,17,19,23; k>=6 at p=11 and every p>=29"
+    },
+    "R": {
+      "proved": true,
+      "p13": {
+        "boolean_representatives_mod_translation": 22568,
+        "count_eps_plus": 3813992,
+        "E_abs_Zpsi_sq": "297468/31",
+        "QVAR_threshold": "10647/2"
+      },
+      "p17": {
+        "boolean_representatives_mod_translation": 12528,
+        "count_eps_plus": 3620592,
+        "E_abs_Zpsi_sq": "1650768/29",
+        "QVAR_threshold": "15606"
+      },
+      "p19": {
+        "boolean_representatives_mod_translation": 11700,
+        "count_eps_plus": 4223700,
+        "E_B2": "29417/65",
+        "normalized_QVAR_threshold": "135/8"
+      },
+      "p23": {
+        "boolean_representatives_mod_translation": 5016,
+        "count_eps_plus": 2653464,
+        "E_B2": "8908/19",
+        "normalized_QVAR_threshold": "99/4"
+      },
+      "conclusion": "QVAR holds on k=5 for every prime p>=5",
+      "remaining_exceptional_strata": "k>=6 for p>=11"
+    },
+    "S": {
+      "proved": true,
+      "zero_quartic_scalar_excluded": {
+        "finite_cubic_checks": [
+          47,
+          53,
+          59,
+          61
+        ],
+        "analytic_degree_at_most_three_range": "p>=67"
+      },
+      "finite_exact_range": {
+        "47": {
+          "minimum_quartic_b": 50,
+          "normalized_total_T": 276,
+          "six_minima_exceed_total": true
+        },
+        "53": {
+          "minimum_quartic_b": 66,
+          "normalized_total_T": 351,
+          "six_minima_exceed_total": true
+        },
+        "59": {
+          "minimum_quartic_b": 81,
+          "normalized_total_T": 435,
+          "six_minima_exceed_total": true
+        },
+        "61": {
+          "minimum_quartic_b": 88,
+          "normalized_total_T": 465,
+          "six_minima_exceed_total": true
+        },
+        "67": {
+          "minimum_quartic_b": 105,
+          "normalized_total_T": 561,
+          "six_minima_exceed_total": true
+        },
+        "71": {
+          "minimum_quartic_b": 122,
+          "normalized_total_T": 630,
+          "six_minima_exceed_total": true
+        },
+        "73": {
+          "minimum_quartic_b": 131,
+          "normalized_total_T": 666,
+          "six_minima_exceed_total": true
+        },
+        "79": {
+          "minimum_quartic_b": 158,
+          "normalized_total_T": 780,
+          "six_minima_exceed_total": true
+        },
+        "83": {
+          "minimum_quartic_b": 178,
+          "normalized_total_T": 861,
+          "six_minima_exceed_total": true
+        },
+        "89": {
+          "minimum_quartic_b": 190,
+          "normalized_total_T": 990,
+          "six_minima_exceed_total": true
+        },
+        "97": {
+          "minimum_quartic_b": 241,
+          "normalized_total_T": 1176,
+          "six_minima_exceed_total": true
+        },
+        "101": {
+          "minimum_quartic_b": 264,
+          "normalized_total_T": 1275,
+          "six_minima_exceed_total": true
+        },
+        "103": {
+          "minimum_quartic_b": 297,
+          "normalized_total_T": 1326,
+          "six_minima_exceed_total": true
+        },
+        "107": {
+          "minimum_quartic_b": 310,
+          "normalized_total_T": 1431,
+          "six_minima_exceed_total": true
+        },
+        "109": {
+          "minimum_quartic_b": 312,
+          "normalized_total_T": 1485,
+          "six_minima_exceed_total": true
+        },
+        "113": {
+          "minimum_quartic_b": 359,
+          "normalized_total_T": 1596,
+          "six_minima_exceed_total": true
+        },
+        "127": {
+          "minimum_quartic_b": 464,
+          "normalized_total_T": 2016,
+          "six_minima_exceed_total": true
+        },
+        "131": {
+          "minimum_quartic_b": 485,
+          "normalized_total_T": 2145,
+          "six_minima_exceed_total": true
+        },
+        "137": {
+          "minimum_quartic_b": 539,
+          "normalized_total_T": 2346,
+          "six_minima_exceed_total": true
+        },
+        "139": {
+          "minimum_quartic_b": 540,
+          "normalized_total_T": 2415,
+          "six_minima_exceed_total": true
+        }
+      },
+      "analytic_range": {
+        "first_prime": 149,
+        "reason": "p>4k^2 with k=6"
+      },
+      "conclusion": "the k=6 Max+ profile stratum is empty for p>=47",
+      "remaining_k6_primes": [
+        13,
+        17,
+        19,
+        23,
+        29,
+        31,
+        37,
+        41,
+        43
+      ],
+      "remaining_exceptional_strata": "k=6 at nine primes p=13..43; k>=7 from p=13 onward"
+    },
+    "T": {
+      "proved": true,
+      "finite_coefficient_sieve": {
+        "37": {
+          "n_direction_subsets": 27132,
+          "n_cyclic_subset_orbits": 1428,
+          "type_tuples_before_coefficient_sieve": 8189942400,
+          "coefficient_candidates": 0,
+          "k6_empty": true
+        },
+        "41": {
+          "n_direction_subsets": 54264,
+          "n_cyclic_subset_orbits": 2586,
+          "type_tuples_before_coefficient_sieve": 235683840,
+          "coefficient_candidates": 0,
+          "k6_empty": true
+        },
+        "43": {
+          "n_direction_subsets": 74613,
+          "n_cyclic_subset_orbits": 3399,
+          "energy_partition": [
+            38,
+            38,
+            38,
+            38,
+            38,
+            41
+          ],
+          "coefficient_candidates": 0,
+          "k6_empty": true
+        }
+      },
+      "remaining_k6_primes": [
+        13,
+        17,
+        19,
+        23,
+        29,
+        31
+      ],
+      "conclusion": "the k=6 stratum is empty for p=37 and every p>=41",
+      "remaining_exceptional_strata": "k=6 at p=13,17,19,23,29,31; k>=7 from p=13 onward"
+    },
+    "U": {
+      "proved": true,
+      "p11_complete_census_E_B2": "114771/14903",
+      "finite_coefficient_sieve": {
+        "13": {
+          "boolean_representatives_mod_translation": 320880,
+          "count_eps_plus": 54228720,
+          "E_abs_Zpsi_sq": "8896212/955",
+          "QVAR_threshold": "10647/2",
+          "clears_QVAR": true
+        },
+        "17": {
+          "boolean_representatives_mod_translation": 34548,
+          "count_eps_plus": 9984372,
+          "E_abs_Zpsi_sq": "149941632/2879",
+          "QVAR_threshold": "15606",
+          "clears_QVAR": true
+        },
+        "19": {
+          "boolean_representatives_mod_translation": 9270,
+          "count_eps_plus": 3346470,
+          "E_abs_Zpsi_sq": "10591740/103",
+          "QVAR_threshold": "48735/2",
+          "clears_QVAR": true
+        },
+        "23": {
+          "n_direction_subsets": 924,
+          "type_tuples_before_coefficient_sieve": 71206858450728,
+          "coefficient_candidates": 0,
+          "k6_empty": true
+        },
+        "29": {
+          "n_direction_subsets": 5005,
+          "type_tuples_before_coefficient_sieve": 20936917303400,
+          "coefficient_candidates": 0,
+          "k6_empty": true
+        },
+        "31": {
+          "n_direction_subsets": 8008,
+          "type_tuples_before_coefficient_sieve": 2970960391440,
+          "coefficient_candidates": 0,
+          "k6_empty": true
+        }
+      },
+      "conclusion": "QVAR holds on k=6 for every prime p>=5",
+      "remaining_exceptional_strata": "k>=7 for p>=13"
+    }
+  },
+  "remaining_floor_targets": [
+    "lambda_exc=Phi|W_e >= 6",
+    "equivalently E|Z_psi|^2 >= 3q(q-1)/16 for psi^2=chi",
+    "k>=7 remains from p=13",
+    "equivalently bound the degree-4 odd-coset harmonic excess below by the spherical QVAR gap",
+    "after QVAR: delta2 <= n(n+10)^2/(6(n-14)(n-6)) for principal minimum"
+  ],
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "residual_ii",
+    "type_I",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN"
+}

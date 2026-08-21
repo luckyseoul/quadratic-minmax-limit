@@ -1,0 +1,86 @@
+{
+  "p": 13,
+  "packed_orbit": "/home/nick/mnt/soulkiller-e1work/maxplus_p13/k7_p13_signed_psl_orbit.npy",
+  "packed_rows": 4826640,
+  "epsilon_plus_only": true,
+  "evaluated_rows": 2413320,
+  "device": "Intel(R) Arc(TM) A380 Graphics",
+  "torch_version": "2.13.0+xpu",
+  "dpctl_version": "0.22.1",
+  "batch_size": 65536,
+  "float32_exact_integer_bound": true,
+  "cpu_int64_audit_rows": 256,
+  "cpu_int64_audit_ok": true,
+  "sum_abs_Zpsi_sq": 22897239456,
+  "E_abs_Zpsi_sq": "806468/85",
+  "QVAR_threshold": "10647/2",
+  "orbit_average_clears_QVAR": true,
+  "induced_exceptional_scalar": "19088/1785",
+  "min_abs_Zpsi_sq": 52,
+  "max_abs_Zpsi_sq": 63700,
+  "histogram": {
+    "52": 283920,
+    "468": 198744,
+    "1300": 212940,
+    "2548": 298116,
+    "4212": 354900,
+    "6292": 113568,
+    "8788": 156156,
+    "11700": 156156,
+    "15028": 184548,
+    "18772": 141960,
+    "22932": 113568,
+    "27508": 56784,
+    "32500": 28392,
+    "37908": 14196,
+    "43732": 42588,
+    "56628": 28392,
+    "63700": 28392
+  },
+  "by_activity": {
+    "5": {
+      "count": 14196,
+      "sum_abs_Zpsi_sq": 59793552,
+      "E_abs_Zpsi_sq": "4212",
+      "clears_QVAR": false,
+      "histogram": {
+        "4212": 14196
+      }
+    },
+    "6": {
+      "count": 28392,
+      "sum_abs_Zpsi_sq": 36909600,
+      "E_abs_Zpsi_sq": "1300",
+      "clears_QVAR": false,
+      "histogram": {
+        "1300": 28392
+      }
+    },
+    "7": {
+      "count": 2370732,
+      "sum_abs_Zpsi_sq": 22800536304,
+      "E_abs_Zpsi_sq": "1606124/167",
+      "clears_QVAR": true,
+      "histogram": {
+        "52": 283920,
+        "468": 198744,
+        "1300": 184548,
+        "2548": 298116,
+        "4212": 340704,
+        "6292": 113568,
+        "8788": 156156,
+        "11700": 156156,
+        "15028": 184548,
+        "18772": 141960,
+        "22932": 113568,
+        "27508": 56784,
+        "32500": 28392,
+        "37908": 14196,
+        "43732": 42588,
+        "56628": 28392,
+        "63700": 28392
+      }
+    }
+  },
+  "elapsed_seconds": 11.63222284000949
+}

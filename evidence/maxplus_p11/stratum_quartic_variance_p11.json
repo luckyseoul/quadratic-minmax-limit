@@ -1,0 +1,102 @@
+{
+  "p": 11,
+  "q": 121,
+  "counts": {
+    "k1": 2772,
+    "k3": 24200,
+    "k4": 58080,
+    "k5": 1306800,
+    "k6": 36065260
+  },
+  "strata": {
+    "k1": {
+      "count": 2772,
+      "sum_abs_Zpsi_sq": 301870800,
+      "E_abs_Zpsi_sq": 108900.0,
+      "lambda_exc_if_stratum_measure": 240.0,
+      "nonzero_fraction": 1.0,
+      "n_values": 2,
+      "histogram": {
+        "-330+0i": 1386,
+        "330+0i": 1386
+      }
+    },
+    "k3": {
+      "count": 24200,
+      "sum_abs_Zpsi_sq": 527076000,
+      "E_abs_Zpsi_sq": 21780.0,
+      "lambda_exc_if_stratum_measure": 48.0,
+      "nonzero_fraction": 1.0,
+      "n_values": 4,
+      "histogram": {
+        "-330+0i": 1210,
+        "-110+0i": 10890,
+        "110+0i": 10890,
+        "330+0i": 1210
+      }
+    },
+    "k4": {
+      "count": 58080,
+      "sum_abs_Zpsi_sq": 548159040,
+      "E_abs_Zpsi_sq": 9438.0,
+      "lambda_exc_if_stratum_measure": 20.8,
+      "nonzero_fraction": 1.0,
+      "n_values": 6,
+      "histogram": {
+        "-198+0i": 5445,
+        "-66+0i": 12705,
+        "-22+0i": 10890,
+        "22+0i": 10890,
+        "66+0i": 12705,
+        "198+0i": 5445
+      }
+    },
+    "k5": {
+      "count": 1306800,
+      "sum_abs_Zpsi_sq": 11455118400,
+      "E_abs_Zpsi_sq": 8765.777777777777,
+      "lambda_exc_if_stratum_measure": 19.318518518518516,
+      "nonzero_fraction": 1.0,
+      "n_values": 8,
+      "histogram": {
+        "-154+0i": 152460,
+        "-110+0i": 108900,
+        "-66+0i": 156090,
+        "-22+0i": 235950,
+        "22+0i": 235950,
+        "66+0i": 156090,
+        "110+0i": 108900,
+        "154+0i": 152460
+      }
+    },
+    "k6": {
+      "count": 36065260,
+      "sum_abs_Zpsi_sq": 134428976880,
+      "E_abs_Zpsi_sq": 3727.3813326175937,
+      "lambda_exc_if_stratum_measure": 8.214614507146212,
+      "nonzero_fraction": 1.0,
+      "n_values": 10,
+      "histogram": {
+        "-198+0i": 62920,
+        "-154+0i": 352110,
+        "-110+0i": 2154405,
+        "-66+0i": 5899960,
+        "-22+0i": 9563235,
+        "22+0i": 9563235,
+        "66+0i": 5899960,
+        "110+0i": 2154405,
+        "154+0i": 352110,
+        "198+0i": 62920
+      }
+    }
+  },
+  "total": {
+    "count": 37457112,
+    "sum_abs_Zpsi_sq": 147261201120,
+    "E_abs_Zpsi_sq": 3931.461697313984,
+    "floor_threshold": 2722.5,
+    "lambda_exc": 8.664378396284263,
+    "matches_verified_p11_spectrum": true,
+    "elapsed_seconds": 72.09913635253906
+  }
+}

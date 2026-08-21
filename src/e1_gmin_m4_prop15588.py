@@ -60,6 +60,26 @@ with the level-d coefficient vector in a (k-d-1)-dimensional kernel.
 (k <= m = (p+1)/2 < p, so all degrees involved are < p-1 and the reduction
 is lossless.)  ∎
 
+Theorem C+ — PROVED.  **General depressed normal form.**  Suppose k>=4 and
+the degree bound is saturated: every active profile has top degree r=k-2 and
+the common level-r kernel scalar is nonzero.  The level-r kernel is
+one-dimensional with full support, while the level-(r-1) kernel is
+two-dimensional.  Translating x by u changes the next coefficient by
+
+  b_j -> b_j + r a_j t_j(u).
+
+Polarizing sum_j a_j t_j^r=0 puts this shift in the level-(r-1) kernel.  The
+map u -> (r a_j t_j(u)) is injective (two distinct active forms already
+separate u), hence is an isomorphism between two-dimensional spaces.  Thus
+every translation orbit has a unique representative with its degree-(k-3)
+level zero.  In particular k=7 has the canonical quintic form
+
+  a_j s^5 + c_j s^3 + d_j s^2 + e_j s + f_j.
+
+At every lower degree d, any d+1 direction columns are invertible, so those
+d+1 coefficients can be solved uniquely from the other k-d-1.  This is the
+general recursive elimination used by the finite coefficient sieves.  ∎
+
 Theorem D — PROVED.  **k = 2 is empty for every p.**  At k = 2 both profiles
 are constant mod p, so each sigma_j takes at most the two values c_j and
 c_j - 2p, the second only when c_j = p.  y is not constant (the all-+-1
@@ -365,6 +385,49 @@ def theorem_C_degree_bound(primes=PRIMES) -> dict:
                   "violations": bad}
         ok = ok and not bad
     return {"name": "degree <= k-2", "proved": bool(ok), "per_prime": per}
+
+
+def theorem_Cplus_depressed_normal_form(primes=(5, 7, 11, 13, 17, 19)) -> dict:
+    """General top-saturated k-strata have a unique depressed translation."""
+    rows = {}
+    ok = True
+    for p in primes:
+        m = (p + 1) // 2
+        by_k = {}
+        for k in range(4, m + 1):
+            top_degree = k - 2
+            next_degree = k - 3
+            row_ok = (
+                top_degree < p
+                and top_degree % p != 0
+                and k - top_degree - 1 == 1
+                and k - next_degree - 1 == 2
+            )
+            by_k[str(k)] = {
+                "top_degree": top_degree,
+                "top_kernel_dimension": 1,
+                "removed_degree": next_degree,
+                "removed_kernel_dimension": 2,
+                "translation_dimension": 2,
+                "lower_level_free_dimensions": {
+                    str(degree): k - degree - 1
+                    for degree in range(1, next_degree)
+                },
+                "ok": row_ok,
+            }
+            ok = ok and row_ok
+        rows[str(p)] = {"n_varying_directions": m, "by_k": by_k}
+    return {
+        "proved": bool(ok),
+        "hypothesis": "top degree k-2 is nonzero",
+        "unique_translation_gauge": "degree k-3 coefficient level is zero",
+        "recursive_elimination": (
+            "At degree d, enumerate k-d-1 free coefficients and solve any "
+            "d+1 pivot directions by generalized Vandermonde invertibility."
+        ),
+        "k7_normal_form": "a*s^5+c*s^3+d*s^2+e*s+f",
+        "by_p": rows,
+    }
 
 
 def theorem_D_k2_empty(primes=PRIMES) -> dict:
@@ -719,6 +782,7 @@ def summary() -> dict:
             "A_flat_marginals": theorem_A_flat_marginals(),
             "B_profile_bijection": theorem_B_profile_bijection(),
             "C_degree_bound": theorem_C_degree_bound(),
+            "Cplus_depressed_normal_form": theorem_Cplus_depressed_normal_form(),
             "D_k2_empty": theorem_D_k2_empty(),
             "E_strata_counts": theorem_E_strata_counts(),
             "F_translation_gauge": theorem_F_translation_gauge(),

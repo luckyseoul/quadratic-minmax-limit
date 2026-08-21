@@ -1,0 +1,98 @@
+{
+  "p": 37,
+  "n_square_directions": 19,
+  "n_direction_subsets": 27132,
+  "n_cyclic_subset_orbits": 1428,
+  "normalized_total_T": 171,
+  "minimum_quartic_b": 27,
+  "energy_partitions": [
+    [
+      27,
+      27,
+      27,
+      27,
+      27,
+      36
+    ],
+    [
+      27,
+      27,
+      27,
+      27,
+      29,
+      34
+    ],
+    [
+      27,
+      27,
+      27,
+      27,
+      30,
+      33
+    ],
+    [
+      27,
+      27,
+      27,
+      27,
+      31,
+      32
+    ],
+    [
+      27,
+      27,
+      27,
+      29,
+      29,
+      32
+    ],
+    [
+      27,
+      27,
+      27,
+      29,
+      30,
+      31
+    ],
+    [
+      27,
+      27,
+      27,
+      30,
+      30,
+      30
+    ],
+    [
+      27,
+      27,
+      29,
+      29,
+      29,
+      30
+    ]
+  ],
+  "relevant_type_histogram": {
+    "27": 36,
+    "29": 72,
+    "30": 72,
+    "31": 234,
+    "32": 252,
+    "33": 162,
+    "34": 324,
+    "35": 612,
+    "36": 1638
+  },
+  "total_type_tuples_before_coefficient_sieve": 8189942400,
+  "coefficient_candidate_histogram": {
+    "0": 27132
+  },
+  "total_coefficient_candidates": 0,
+  "endpoint_branches": 0,
+  "boolean_representatives_mod_translation": 0,
+  "eps_plus_count_including_translations": 0,
+  "abs_Zpsi_sq_histogram": {},
+  "E_abs_Zpsi_sq": null,
+  "QVAR_threshold": "702297/2",
+  "clears_QVAR": true,
+  "k6_empty": true
+}

@@ -1,0 +1,124 @@
+{
+  "p": 13,
+  "n_square_directions": 7,
+  "n_direction_subsets": 21,
+  "n_cyclic_subset_orbits": 3,
+  "cyclic_orbit_size_histogram": {
+    "7": 3
+  },
+  "normalized_total_T": 21,
+  "minimum_cubic_b": 3,
+  "energy_partitions": [
+    [
+      3,
+      3,
+      3,
+      3,
+      9
+    ],
+    [
+      3,
+      3,
+      3,
+      4,
+      8
+    ],
+    [
+      3,
+      3,
+      3,
+      5,
+      7
+    ],
+    [
+      3,
+      3,
+      3,
+      6,
+      6
+    ],
+    [
+      3,
+      3,
+      4,
+      4,
+      7
+    ],
+    [
+      3,
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      3,
+      3,
+      5,
+      5,
+      5
+    ],
+    [
+      3,
+      4,
+      4,
+      4,
+      6
+    ],
+    [
+      3,
+      4,
+      4,
+      5,
+      5
+    ],
+    [
+      4,
+      4,
+      4,
+      4,
+      5
+    ]
+  ],
+  "relevant_type_histogram": {
+    "3": 24,
+    "4": 48,
+    "5": 144,
+    "6": 240,
+    "7": 272,
+    "8": 228,
+    "9": 184
+  },
+  "required_depressed_constant_sum_mod_p": 6,
+  "total_type_tuples_before_coefficient_sieve": 161914536,
+  "coefficient_candidate_histogram": {
+    "748": 7,
+    "860": 7,
+    "1536": 7
+  },
+  "total_coefficient_candidates": 22008,
+  "endpoint_branches": 22568,
+  "boolean_representatives_mod_translation": 22568,
+  "eps_plus_count_including_translations": 3813992,
+  "abs_Zpsi_sq_histogram": {
+    "52": 2016,
+    "468": 2016,
+    "1300": 4536,
+    "2548": 4452,
+    "4212": 448,
+    "6292": 420,
+    "11700": 3108,
+    "18772": 2856,
+    "22932": 504,
+    "27508": 924,
+    "37908": 28,
+    "43732": 588,
+    "49972": 504,
+    "71188": 84,
+    "105300": 84
+  },
+  "E_abs_Zpsi_sq": "297468/31",
+  "QVAR_threshold": "10647/2",
+  "clears_QVAR": true,
+  "k5_empty": false
+}

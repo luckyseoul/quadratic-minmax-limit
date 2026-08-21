@@ -1,0 +1,38 @@
+{
+  "p": 11,
+  "dimZ": 1769,
+  "spectra": {
+    "k4": {
+      "count_eps_plus": 58080,
+      "lambda_min": 4.797421480763672,
+      "lambda_max": 33.2000002223974,
+      "lambda_min_ge_6": false,
+      "trace": 14640.000192642212,
+      "trace2": 133988.80315728858
+    },
+    "k5": {
+      "count_eps_plus": 1306800,
+      "lambda_min": 6.990497008144613,
+      "lambda_max": 19.31851887704881,
+      "lambda_min_ge_6": true,
+      "trace": 14640.000279426575,
+      "trace2": 123260.92378946145
+    },
+    "k6": {
+      "count_eps_plus": 36065260,
+      "lambda_min": 7.967489811063582,
+      "lambda_max": 8.642202328728198,
+      "lambda_min_ge_6": true,
+      "trace": 14640.000065803528,
+      "trace2": 121210.34260544117
+    },
+    "all": {
+      "count_eps_plus": 37457112,
+      "lambda_min": 8.054446179706975,
+      "lambda_max": 8.664379645840365,
+      "lambda_min_ge_6": true,
+      "trace": 14640.00020980835,
+      "trace2": 121215.46955543601
+    }
+  }
+}

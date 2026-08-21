@@ -1,0 +1,20 @@
+{
+  "p": 5,
+  "dimZ": 65,
+  "strata": {
+    "k1": {
+      "count_eps_plus": 30,
+      "rank": 29,
+      "lambda_min": -1.6715867410525212e-14,
+      "lambda_max": 48.00000000000003,
+      "lambda_min_ge_6": false
+    },
+    "k3": {
+      "count_eps_plus": 100,
+      "rank": 61,
+      "lambda_min": -5.641610657154288e-15,
+      "lambda_max": 16.000000000000014,
+      "lambda_min_ge_6": false
+    }
+  }
+}

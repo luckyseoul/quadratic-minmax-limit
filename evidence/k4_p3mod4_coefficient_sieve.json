@@ -1,0 +1,71 @@
+{
+  "19": {
+    "p": 19,
+    "n_square_directions": 10,
+    "n_direction_subsets": 210,
+    "normalized_total_T": 45,
+    "minimum_quadratic_b": 10,
+    "relevant_energy_partitions": [
+      [
+        10,
+        10,
+        10,
+        15
+      ]
+    ],
+    "coefficient_candidate_histogram": {
+      "0": 210
+    },
+    "total_coefficient_candidates": 0,
+    "boolean_endpoint_search_needed": false,
+    "k4_empty": true
+  },
+  "23": {
+    "p": 23,
+    "n_square_directions": 12,
+    "n_direction_subsets": 495,
+    "normalized_total_T": 66,
+    "minimum_quadratic_b": 16,
+    "relevant_energy_partitions": [
+      [
+        16,
+        16,
+        16,
+        18
+      ],
+      [
+        16,
+        16,
+        17,
+        17
+      ]
+    ],
+    "coefficient_candidate_histogram": {
+      "0": 495
+    },
+    "total_coefficient_candidates": 0,
+    "boolean_endpoint_search_needed": false,
+    "k4_empty": true
+  },
+  "31": {
+    "p": 31,
+    "n_square_directions": 16,
+    "n_direction_subsets": 1820,
+    "normalized_total_T": 120,
+    "minimum_quadratic_b": 30,
+    "relevant_energy_partitions": [
+      [
+        30,
+        30,
+        30,
+        30
+      ]
+    ],
+    "coefficient_candidate_histogram": {
+      "0": 1820
+    },
+    "total_coefficient_candidates": 0,
+    "boolean_endpoint_search_needed": false,
+    "k4_empty": true
+  }
+}
