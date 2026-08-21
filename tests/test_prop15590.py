@@ -128,3 +128,48 @@ def test_p7_joint_deg46_kernel_dim_four():
     j = lb.equivariant_system(deg6=True)
     assert not j["inconsistent"]
     assert j["kernel_dim"] == 4
+
+
+# ---------------------------------------------------------------- frame line
+def _frame(p):
+    import importlib.util
+    from pathlib import Path
+    root = Path(__file__).resolve().parents[1]
+    spec = importlib.util.spec_from_file_location(
+        "frame_line_system", root / "scripts" / "frame_line_system.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+@pytest.mark.parametrize(
+    "p,kernel,live_nu,lb_p4",
+    [(5, 1, 2, 50.00), (7, 2, 3, 62.36), (11, 4, 5, 91.79), (13, 6, 7, 107.17)],
+)
+def test_frame_line_matches_four_set_implementation(p, kernel, live_nu, lb_p4):
+    """The frame-line reduction must reproduce the four-set system exactly.
+    V is normalization-dependent; LB = |V|/sum|c| is not, so compare LB."""
+    r = _frame(p).build(p)
+    assert r["inconsistent"] is False
+    assert r["kernel"] == kernel
+    assert r["live_nu"] == live_nu
+    assert r["ann_dim"] == 1
+    assert abs(r["lb_p4"] - lb_p4) < 0.01
+
+
+def test_nu_dead_fibers_are_exactly_kappa1():
+    """V_4 pairing mechanism: nu dies precisely on |kappa|=1 fibers."""
+    m = _frame(11)
+    G = m.Geom(11)
+    L, lab, smu, snu, dead = m.fibers(G)
+    for w in L:
+        kap = 1 + G.chi[w] + G.chi[G.sub(G.ONE, w)]
+        assert (lab[w] in dead) == (abs(kap) == 1)
+
+
+def test_C110_hypothesis_is_falsified_at_p17():
+    """LB is a rigorous data-free lower bound on max_f|nu_hat_f|.
+    LB*p^4 = 138.39 > 110 at p=17 kills the uniform C/p^4 form."""
+    r = _frame(17).build(17)
+    assert r["lb_p4"] > 110.0
+    assert abs(r["lb_p4"] - 138.39) < 0.01

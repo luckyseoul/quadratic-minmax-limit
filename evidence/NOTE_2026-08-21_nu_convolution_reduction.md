@@ -1,5 +1,11 @@
 # Leftover 3 → ONE scalar: the w-line convolution and the fiber budget
 
+> **FALSIFIED SAME DAY — read §7 before §5.**  The scalar hypothesis stated
+> in §5 (`M ≤ 110/p⁴`) is **false**: a rigorous data-free lower bound gives
+> `M·p⁴ ≥ 138.39` at p=17.  The scaling itself was wrong — `M ≳ 8/p³`, not
+> `C/p⁴`.  §§1–4 (the identities, the fibers, the budget inequality) stand;
+> §5's reduction does not.
+
 Date: 2026-08-21.  Supersedes the "signed ν required" scoping in
 `NOTE_2026-08-21_signed_nu_dataset.md` (see §0).  Scripts:
 `/mnt/storage/e1work/leftover3_mu/{line_convolution,fiber_budget}.py`.
@@ -69,24 +75,17 @@ From (B) with |κ(l)|=1, writing M := max_f |ν̂_f| and A(p) := max_{|κ(l)|=1}
 Slack grows monotonically (0.35, 0.43 at p=5,7 — hence the census there —
 then 1.08 → 4.35 by p=47), and asymptotically slack ~ 4p/C.
 
-## 5. The single remaining estimate
+## 5. The single remaining estimate  — ***FALSIFIED, see §7***
 
-> **Leftover 3 follows from:  max over fibers f of |ν̂_f| ≤ C/p⁴ with
-> C = 110**, where ν̂ = ν/N on the both-squares locus.  Everything else in
-> §4 is proved or data-free-computable.
+> ~~**Leftover 3 follows from:  max over fibers f of |ν̂_f| ≤ C/p⁴ with
+> C = 110**~~ — retracted.  The premise is false for p ≥ 17.
 
-**Honest status of the hypothesis:** M·p⁴ = 96.2, 109.0, 98.6 at
-p=5,7,11 — three points.  Per `METHOD_why_500_props_never_moved_a_flag.md`
-a three-point fit carries no evidence, and this note does NOT claim it.
-It is named here because it is now the *only* missing input, it is a
-magnitude bound on a single scalar (not a closed form, not a census), and
-C is generous: any C ≤ 115 works from p=29 up, and the p=11..23 rows
-tolerate C up to ~8.1e-3·11⁴ = 119 (p=11 is the binding case).
-
-Testing it out-of-sample at p=13 needs only max|ν| on the 41-point locus
-— Route A of `p13p17enum.md` (orbit-representative moments), NOT a full
-Max± census.  That is the next experiment, and it is the one that decides
-whether this route lives.
+Retained only as a record of what was tried.  The original reasoning: with
+`M := max_f|ν̂_f|` bounded by `C/p⁴`, §4's case analysis (census at p=5,7;
+computed `A(p)` at p=11..23; trivial tail at p≥29) closes leftover 3.  The
+empirical basis was `M·p⁴ = 96.2, 109.0, 98.6` at p=5,7,11 — three points,
+flagged at the time as carrying no evidence per the METHOD note, and indeed
+carrying none.  See §7.
 
 ## 6. Also settled
 
@@ -94,3 +93,73 @@ The joint degree-4+6 kernel at p=7 projects onto the (μ₄,δ₄) block with
 rank 2 = the degree-4 kernel dimension: degree 6 adds nothing to the
 4-point sector at p=7.  Degree escalation stays dead (see the K₄ table in
 `NOTE_2026-08-21_leftover3_contraction_closure.md`).
+
+## 7. Falsification (same day, data-free)
+
+### The pinned functional gives a rigorous lower bound on M
+
+The degree-4 system pins exactly one linear functional of the ν-vector:
+`Σ_f c_f ν_f = V`, with the annihilator `c` and the value `V` both computed
+from the equivariant system alone — **no Max± data**.  Hence
+
+    M = max_f |ν̂_f|  ≥  |V| / Σ_f |c_f|  =:  LB(p)          (rigorous)
+
+`LB` is normalization-independent (`V` and `c` scale together).  Computed by
+`scripts/frame_line_system.py`; validated against the four-set implementation
+at p=5,7,11,13 (kernel dims 1,2,4,6 and LB·p⁴ = 50.00, 62.36, 91.79, 107.17
+reproduced exactly).
+
+| p | LB·p⁴ | allowed·p⁴ | LB/allowed | **LB·p⁴/p** |
+|---|---|---|---|---|
+| 5 | 50.00 | 38.46 | 1.300 | 10.00 |
+| 7 | 62.36 | 47.04 | 1.326 | 8.91 |
+| 11 | 91.79 | 119.02 | 0.771 | 8.34 |
+| 13 | 107.17 | 144.74 | 0.740 | 8.24 |
+| 17 | **138.39** | 147.85 | 0.936 | 8.14 |
+| 19 | **154.13** | 166.37 | 0.926 | 8.11 |
+| 23 | **185.76** | 237.67 | 0.782 | 8.08 |
+| 29 | **233.39** | 286.25 | 0.815 | 8.048 |
+
+(Self-consistency: LB exceeds the budget exactly at p=5,7 — the two primes
+§4 hands to census — and falls below from p=11 on.  Not built in.)
+
+### Two conclusions
+
+1. **`M ≤ 110/p⁴` is false.**  LB·p⁴ = 138.39 > 110 at p=17, and grows.
+2. **The scaling was wrong, not just the constant.**  `LB·p⁴/p` →
+   8.34, 8.24, 8.14, 8.11, 8.08, 8.048: flat.  So `M ≳ 8/p³`.  No constant
+   `C` bounds `M·p⁴`, so the §4 tail argument (which needs a uniform `C`)
+   has no premise.
+
+### Does the per-prime budget survive?
+
+Not formally dead: `LB < allowed` at every p ≥ 11, because `allowed·p⁴/p`
+also scales like p (range 8.70–11.13).  But the margin is gone.  At the
+binding primes p=17,19 the gap is ~7%, and the measured LB-to-true gap at
+p=11 is **7.4%** (true/LB = 98.58/91.79 = 1.074).  Propagating it:
+
+    estimated true/allowed  =  1.005 (p=17),  0.995 (p=19)
+
+i.e. the budget most likely **fails at p=17**.  Deciding it needs true `M`
+at p=17 — Max± at p=17, out of reach.  A route needing an estimate accurate
+to 7% is not one a crude bound closes.
+
+### Methodological note
+
+The three-point fit at p=5,7,11 sat in the pre-asymptotic regime (`M·p⁴`
+appears flat there only because `p` has not yet grown).  The note hedged
+that it was "recorded only as scaling, NOT fitted" and cited the METHOD
+warning — the hedge was insufficient.  The correct action was to compute a
+fourth point *before* writing §5.  The frame-line reduction that makes this
+a 30-second computation per prime was one refactor away and was built two
+hours later.  **Compute the next point before naming the estimate.**
+
+### What survives
+
+- §2 convolution identities (A),(B),(C): exact, 189/189 verified.
+- §3 fibers = anharmonic S₃ × Frobenius orbits; ν-death is the V₄ pairing
+  mechanism (15.268 generalized: ν dies on a fiber iff some pairing has
+  χ(det)=−1, i.e. iff |κ|=1 — verified set-wise).
+- §4's budget *inequality* (only the hypothesis feeding it is dead).
+- `scripts/frame_line_system.py`: ~120× faster than the four-set code,
+  reaches p=31 in ~2 min where the four-set path could not reach p=17.

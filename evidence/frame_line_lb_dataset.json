@@ -1,0 +1,61 @@
+{
+ "description": "Rigorous data-free lower bound on max_f|nu_hat_f| from the pinned functional of the degree-4 contraction system (Prop 15.590). LB*p^4/p is flat ~8.0, so M >~ 8/p^3 and no uniform C/p^4 bound exists; this falsifies the C=110 hypothesis at p=17.",
+ "rows": [
+  {
+   "p": 5,
+   "lb_p4": 50.0,
+   "kernel": 1,
+   "live_nu": 2,
+   "lb_p3": 10.0
+  },
+  {
+   "p": 7,
+   "lb_p4": 62.36,
+   "kernel": 2,
+   "live_nu": 3,
+   "lb_p3": 8.909
+  },
+  {
+   "p": 11,
+   "lb_p4": 91.79,
+   "kernel": 4,
+   "live_nu": 5,
+   "lb_p3": 8.345
+  },
+  {
+   "p": 13,
+   "lb_p4": 107.17,
+   "kernel": 6,
+   "live_nu": 7,
+   "lb_p3": 8.244
+  },
+  {
+   "p": 17,
+   "lb_p4": 138.39,
+   "kernel": 9,
+   "live_nu": 10,
+   "lb_p3": 8.141
+  },
+  {
+   "p": 19,
+   "lb_p4": 154.13,
+   "kernel": 11,
+   "live_nu": 12,
+   "lb_p3": 8.112
+  },
+  {
+   "p": 23,
+   "lb_p4": 185.76,
+   "kernel": 15,
+   "live_nu": 16,
+   "lb_p3": 8.077
+  },
+  {
+   "p": 29,
+   "lb_p4": 233.39,
+   "kernel": 23,
+   "live_nu": 24,
+   "lb_p3": 8.048
+  }
+ ]
+}
