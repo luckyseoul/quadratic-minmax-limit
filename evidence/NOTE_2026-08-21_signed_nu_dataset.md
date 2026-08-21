@@ -1,5 +1,11 @@
 # Signed ν on the |κ|=3 locus — exact dataset at p=5,7,11; reduction validated end-to-end
 
+> **SCOPE CORRECTION (same day):** where this note says signed ν values are
+> *required* and magnitude-only bounds insufficient, that is proved only for
+> the **affine-parametrization** hypothesis set.  The w-line convolution in
+> `NOTE_2026-08-21_nu_convolution_reduction.md` is a magnitude-only estimate
+> that closes for p≥11.  Read that note for the current reduction.
+
 Date: 2026-08-21.  Follows `NOTE_2026-08-21_leftover3_contraction_closure.md`
 (prop 15.590).  Data: `evidence/nu_of_w_dataset.json` (45 exact values),
 `evidence/p11_orbit_mu_nu_values.json`.  Scripts in
