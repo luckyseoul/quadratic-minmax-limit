@@ -1,0 +1,39 @@
+{
+  "prop": "15.592",
+  "title": "nu L2 identity; leftover 3 reduces to Es4 with leading constant 12",
+  "orthogonality_p5": true,
+  "identity_p5": true,
+  "Es4_p5": {
+    "exact": "120400/13",
+    "excess_per_n": 44.21301775147929
+  },
+  "orthogonality_p7": true,
+  "identity_p7": true,
+  "Es4_p7": {
+    "exact": "5218435600/167281",
+    "excess_per_n": 23.912530412898057
+  },
+  "Es4_p11": {
+    "p": 11,
+    "sum_nu_sq": "1717603129960/20130785689",
+    "Es4_exact": "3638669026914064/20130785689",
+    "Es4_float": 180751.46609415897,
+    "excess_over_12n2_per_n": 17.569394214417738,
+    "min_locus_orbit": 147620,
+    "min_locus_orbit_eq": "(q^3-q)/12"
+  },
+  "needed_p11": {
+    "allowed_sum_nu_sq": 123.51239669421487,
+    "needed_Es4_excess_per_n": 32.59504132231405
+  },
+  "chain_closes_p11": true,
+  "flags_not_flipped": [
+    "type_I",
+    "phi_F_ge_6",
+    "residual_ii",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "seconds": 315.1
+}

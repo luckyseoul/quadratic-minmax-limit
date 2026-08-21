@@ -351,3 +351,51 @@ on the locus for p ≥ 11 (RHS ≈ 3.6/p² − 12/p³; measured usage 10% at
 p=11).  ν_res is the χ-convolution of the 15.247 D spectral residual;
 Cauchy–Schwarz on the line loses a factor ~p, so genuine cancellation in
 K(δ_spec) is the one remaining hard core of leftover 3.
+
+## 13. The residual solved-into-Es4 (Prop 15.592): leftover 3 = the shared blocker, exactly
+
+Attacking ‖ν_res‖∞ by convolution loses a factor p everywhere.  The way
+through is equivariance + an exact L² identity:
+
+* **Orthogonality (trivial but load-bearing):** Max+ ⊂ V₊ ⊥ V₋ ⊃ Max−,
+  so y·z = 0 for EVERY cross pair.  All cross moments are forced:
+  E₊₋[e₄] = e₄(0) = n(n−2)/8 exactly.  (Verified exhaustively: 260² and
+  11452² pairs.)
+* **The identity (exact, verified at p=5,7):**
+      Σ_S ν(S)² = ½‖m₄⁺‖₂² − n(n−2)/16 .
+* **Per-fiber sup via orbit size:** ν̂_F² ≤ Σν²/|orb_F|, with the minimum
+  locus orbit the equianharmonic one, |orb| = (q³−q)/12 (exact at p=11).
+
+Chaining through the §9 budget, with every constant pinned:
+
+> **leftover 3 ⟸ census(5,7) + [ Es4 := E_{y,z∈Max+}[(y·z)⁴] ≤ 12n² + x(p)·n ]**
+> with x(p) data-free; x(11) = 32.60.  Verified at p=11: true excess 17.57.
+
+| p | Es4 − 12n², per n (TRUE) | allowed x(p) |
+|---|---|---|
+| 5 | 44.21 | census |
+| 7 | 23.91 | census |
+| 11 | **17.57** | 32.60 |
+| ∞ | ? | ≈ 85 |
+
+New data point: **Es4(11) = 12n² + 17.57n exactly** (from the ν dataset
+read backwards through the identity — the first Es4 value beyond census
+reach; p=5,7 were 120400/13 and 31196).
+
+**The unification, now exact:** leftover-1's principal room demands
+Es4 ≤ 12n² + ≈20n; leftover-3 needs only ≤ 12n² + x(p)n with x growing
+from 32.6 to ≈85.  So leftover-1's room strictly implies leftover-3's
+residual at every relevant prime — the "single underlying problem" of
+fable.md is now a theorem-level statement with constants.
+
+**Kill (built-in asymptotic falsifier):** any Es4 majorant with leading
+constant (12+ε)n² cannot close leftover 3 — εn² swamps 85n immediately.
+The leading constant must be exactly 12.  Do not attack the residual with
+crude Es4 bounds (2n³, 14.56n², sphere/LP bounds above 12n²): they are
+structurally insufficient, not just numerically loose.
+
+**Status of leftover 3 after today:** everything is proved or data-free
+except one inequality — `Es4 ≤ 12n² + O(n)` with the explicit O(n)
+budget above.  Truth sequence 44.2, 23.9, 17.6 (falling; recorded, not
+extrapolated).  This is the same wall leftover 1 faces, reached here by
+an independent route and with 1.9–4× more room in the lower-order term.
