@@ -1129,8 +1129,10 @@ def aut_span_F_equals_Z_proved_general() -> bool:
 
 
 def phi_F_ge_6_proved_general() -> bool:
-    """Even-circulant Gram floor.  Still open."""
-    return False
+    """Even-circulant Gram floor.  True only if leftover-1 QVAR k≥7 and principal δ-room both hold for every prime p≥5."""
+    from e1_gmin_leftover1_qvar_principal import leftover1_qvar_and_principal_proved
+
+    return bool(leftover1_qvar_and_principal_proved())
 
 
 def lambda_min_via_F_proved_general() -> bool:

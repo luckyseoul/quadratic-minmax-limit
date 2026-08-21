@@ -1,7 +1,8 @@
 # Isolated remaining general-p estimates (no flag flipped)
 
-Date: 2026-08-21. No leftover predicate is True. p=13 k=7 orbit
-exhaustion is not a leftover close. Aut-Schur / Gsum disj LB / pairing
+Date: 2026-08-21. No leftover predicate is True. `phi_F_ge_6` imports
+`leftover1_qvar_and_principal_proved` (`src/e1_gmin_leftover1_qvar_principal.py`);
+that AND is False. p=13 k=7 orbit exhaustion is not a leftover close. Aut-Schur / Gsum disj LB / pairing
 stay False. L=1/2 stays OPEN.
 
 The three leftovers reduce to the following Max+-free estimates. Census
@@ -48,8 +49,18 @@ On |κ|=1, ν=0 (15.268). Then 3A+B>0 iff G>T. Sufficient:
 ```
 
 on every |κ|=1 four-set. |μ|≤|T| is not a close (G=T ⇒ 3A+B=0).
-|μ|≤maj is false at p=7. Census |μ|≤|L| at p=5,7,11 with slack
-0.769 → 0.746 → 0.307. Equivalent size-4 remainder (15.229 F):
+|μ|≤maj is false at p=7 and p=11. Census |μ|≤|L| at p=5,7,11 with slack
+0.769 → 0.746 → 0.307.
+
+p=5 is already a finite from-C theorem (15.275 L). For every prime
+p≥7, the 15.191 target `|μ|≤2/n` is strictly stronger than `|μ|≤L`
+(`2/n < L` ⇔ p≥7) and would close Type I. Census: p=7 109/2863 vs
+2/50 (~5% slack, tight); p=11 17827/1560713 vs 2/122. Do **not**
+prove `|μ|≤|f4|` (false at p=7). Triangle `|R̄₄|+2|φ|` is too weak
+for `|μ|≤L` even at p=5. L2 conversion of 3A+B is rejected. Not
+imported.
+
+Equivalent size-4 remainder (15.229 F):
 
 ```
 (p^4 − 1)μ + 2φ = R̄₄,     |R̄₄| ≤ |L|(p^4−1) + 4(p−2).

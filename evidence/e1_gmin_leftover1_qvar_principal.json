@@ -1,0 +1,186 @@
+{
+  "title": "Leftover 1 QVAR+principal hinge (not a close)",
+  "numbered": false,
+  "A_qvar_iff": {
+    "proved": true,
+    "theorem": "\u03bb_exc=32 E|Z_\u03c8|\u00b2/[q(q-1)] \u21d4 QVAR E|Z_\u03c8|\u00b2\u22653q(q-1)/16 \u21d4 E[|y\u1d40A_\u03c8 y|\u00b2]\u22656||A_\u03c8||_HS\u00b2.  Fail: drop 16; replace 32 by 16.",
+    "by_p": {
+      "5": {
+        "thr": "225/2",
+        "6_hs": "225/2",
+        "ok": true
+      },
+      "7": {
+        "thr": "441",
+        "6_hs": "441",
+        "ok": true
+      },
+      "11": {
+        "thr": "5445/2",
+        "6_hs": "5445/2",
+        "ok": true
+      },
+      "13": {
+        "thr": "10647/2",
+        "6_hs": "10647/2",
+        "ok": true
+      },
+      "17": {
+        "thr": "15606",
+        "6_hs": "15606",
+        "ok": true
+      },
+      "19": {
+        "thr": "48735/2",
+        "6_hs": "48735/2",
+        "ok": true
+      },
+      "23": {
+        "thr": "52371",
+        "6_hs": "52371",
+        "ok": true
+      }
+    },
+    "census_formula": true,
+    "qvar_general": false
+  },
+  "B_spherical_exceeds": {
+    "proved": true,
+    "theorem": "V_sph=q(q-1)(q+1)/(4(q+5)) exceeds QVAR by q(q-1)(q-11)/(16(q+5))>0 for every prime p\u22655.  This is a 2-design spherical average, not a 4-design, so it does not prove QVAR.  Fail: drop q+5.",
+    "by_p": {
+      "5": {
+        "V_sph": "130",
+        "thr": "225/2",
+        "gap": "35/2",
+        "ok": true
+      },
+      "7": {
+        "V_sph": "4900/9",
+        "thr": "441",
+        "gap": "931/9",
+        "ok": true
+      },
+      "11": {
+        "V_sph": "73810/21",
+        "thr": "5445/2",
+        "gap": "33275/42",
+        "ok": true
+      },
+      "13": {
+        "V_sph": "201110/29",
+        "thr": "10647/2",
+        "gap": "93457/58",
+        "ok": true
+      },
+      "17": {
+        "V_sph": "1005720/49",
+        "thr": "15606",
+        "gap": "241026/49",
+        "ok": true
+      },
+      "19": {
+        "V_sph": "1960230/61",
+        "thr": "48735/2",
+        "gap": "947625/122",
+        "ok": true
+      },
+      "23": {
+        "V_sph": "6168140/89",
+        "thr": "52371",
+        "gap": "1507121/89",
+        "ok": true
+      },
+      "29": {
+        "V_sph": "24784270/141",
+        "thr": "264915/2",
+        "gap": "12215525/282",
+        "ok": true
+      },
+      "31": {
+        "V_sph": "36979280/161",
+        "thr": "172980",
+        "gap": "9129500/161",
+        "ok": true
+      }
+    },
+    "is_4_design": false,
+    "qvar_general": false
+  },
+  "C_principal_room_reduction": {
+    "proved": true,
+    "does_not_prove_moment": true,
+    "theorem": "After \u03bb_exc\u22656, ||\u03b4||\u00b2\u2264n(n+10)\u00b2/[6(n-14)(n-6)] forces every principal scalar \u22656 (15.589 D+).  Fail: n-14\u21a6n-6.  Crude E[s\u2074]\u22642n\u00b3 exceeds the Es4 budget (\u0398(n\u00b3) vs \u0398(n\u00b2)).",
+    "by_p": {
+      "5": {
+        "B_min": "117/5",
+        "Es4_budget": "9256",
+        "crude_2n3": "35152",
+        "crude_too_weak": true,
+        "ok": true
+      },
+      "7": {
+        "B_min": "625/33",
+        "Es4_budget": "31400",
+        "crude_2n3": "250000",
+        "crude_too_weak": true,
+        "ok": true
+      },
+      "11": {
+        "B_min": "7381/261",
+        "Es4_budget": "544120/3",
+        "crude_2n3": "3631696",
+        "crude_too_weak": true,
+        "ok": true
+      },
+      "13": {
+        "B_min": "19125/533",
+        "Es4_budget": "4556680/13",
+        "crude_2n3": "9826000",
+        "crude_too_weak": true,
+        "ok": true
+      },
+      "17": {
+        "B_min": "90625/1633",
+        "Es4_budget": "23351960/23",
+        "crude_2n3": "48778000",
+        "crude_too_weak": true,
+        "ok": true
+      },
+      "19": {
+        "B_min": "173941/2581",
+        "Es4_budget": "45821960/29",
+        "crude_2n3": "94875856",
+        "crude_too_weak": true,
+        "ok": true
+      }
+    },
+    "principal_moment_general": false
+  },
+  "D_floor_iff": {
+    "proved": true,
+    "pointwise_q2_ge_3By2": false,
+    "theorem": "On Z, E[q\u00b2]=6||B||\u00b2+8\u27e8m4,\u03ba_B\u27e9 so \u03bb_min\u22656 \u21d4 \u27e8m4,\u03ba_B\u27e9\u22650 (15.277).  Pointwise q\u00b2\u22653||By||\u00b2 is false."
+  },
+  "proved": {
+    "reductions": true,
+    "qvar_k_ge_7": false,
+    "principal_moment": false,
+    "leftover1": false,
+    "phi_F_ge_6": false,
+    "gsum_disj_lb_proved_general": false
+  },
+  "predicates": {
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "residual_ii_k_ge_4p_ND_closed": false,
+    "multilevel_ND_k_ge_4p_proved": false,
+    "type_I_multilevel_bad_case_ND_closed": false,
+    "type_I_aut_e_3AB_positive_general": false,
+    "e1_closed_general": true,
+    "gsum_disj_lb_proved_general": false,
+    "qvar_k_ge_7_proved_general": false,
+    "principal_delta_room_moment_proved": false,
+    "leftover1_qvar_and_principal_proved": false
+  },
+  "L_status": "OPEN"
+}

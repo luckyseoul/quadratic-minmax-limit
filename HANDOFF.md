@@ -1,5 +1,47 @@
 # Handoff: min-max ±1 quadratic form
 
+**Date:** 2026-08-21 (session compact: identity + leftover-3 2/n path;
+**no flag flipped**)
+
+`tr(Phi^2) = 4||M||_F^2 - 3n^2 + 2n^2(n-1)/p^2` is identity (I) in
+`TECHNICAL_NOTES.md` §4 / `METHOD.md`: leftovers 1 and 3 are moments of
+one four-point tensor. It is proved (index split + E[(y·z)^2]=2n). It
+does **not** close leftover 1: CS on dim Z, tr Φ, tr(Φ²) alone cannot
+get λ_min≥6, and the exceptional block still needs QVAR k≥7.
+
+Leftover 3 next sufficient target, not imported: p=5 is already a finite
+from-C theorem (`type_I_p5_through_e_3AB_positive`). For every prime
+p≥7, `|μ|≤2/n` on |κ|=1 is strictly stronger than `|μ|≤L=(p-2)/(2p^2)`
+and would close Type I (`2/n < L` iff p≥7). Census slack at p=7 is
+tight: 109/2863 vs 2/50 (~5%). Do **not** use `|μ|≤|f4|` (false at p=7,
+15.191 I). `|μ|≤maj` remains false at p=7 and p=11. Triangle
+`|R̄₄|+2|φ|` is too weak for `|μ|≤L` even at p=5. L2 conversion of
+3A+B is rejected. p=5 μ=f4 on each (κ,φ) class; p=7,11 split inside
+(κ,φ).
+
+Leftover 2: leftover+splus empty all nF at p=5 k=20 (15.528);
+leftover-only is not residual (ii). Walsh cannot flip leftover 2
+(interior 4-level only). Uniform Paley E_-[S²]<20+12/p is false.
+
+`src/e1_gmin_leftover1_qvar_principal.py` is the Max+-free leftover-1
+import. `phi_F_ge_6_proved_general` is `leftover1_qvar_and_principal_proved()`,
+which is True only if QVAR on k≥7 **and** the principal δ-moment both hold
+for every prime p≥5. Both estimates stay False. Identities A–D (QVAR iff,
+V_sph>threshold, D+ room formula, ⟨m4,κ_B⟩≥0 iff floor 6) have fail-eqs
+and tests. p=13 orbits are not imported. Aut-Schur / Gsum / pairing False.
+L OPEN. Leftovers 2 and 3 False. Live `e1` is still the old AND.
+
+Claude-referee health: CLI authenticated (opus). `suggest_direction`
+was not called this session.
+
+**Suggested skills for the next agent:** `agent-cost-optimization`,
+`graph-engineered-completion`, `use-available-compute` (mesh; lucky DNS
+only; nuka for serial/vcache), `claude-referee` then `openai-referee`,
+`verification-before-completion`, `handoff`, `scientific-critique`,
+`grill-me`, `self-refine-loop`, `research`, `arxiv`.
+
+---
+
 **Date:** 2026-08-20 (current branch; use `git log -1` for the exact checkpoint)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **Current branch:** `codex/leftover-moment-attack` (use `git log -1` for the
