@@ -260,3 +260,35 @@ threatens it, unlike the falsified §5 form.  Proof target: M = O(1/p²)
 with constant < 3.6 via ν = (1/p)χ⋆μ_part + (1/p)χ⋆(μ−μ_part)
 (μ_part Max-free from 15.247 A; Weil on the first term; the second needs
 line-L¹ = O(p) — crude-tolerant).
+
+## 10. First step of the proof route: the μ_part split, evaluated on data
+
+Split ν = ν_part + ν_res with ν_part := (1/p)·K(μ_part), where μ_part is
+the Max-free 15.247 A particular solution transported to the line:
+μ_part(w) = [(p²−1)κ(w) − 2φ(w) − 8p·1_{κ=3}]/(p²(p²−5))  (star = +4 on
+the locus in the frame, 0 off it).  ν_part is a FINITE EXPLICIT character
+sum — no Max± input.  Exact evaluation against the ν data:
+
+| p | max\|ν_part\|·p³ | max\|ν_res\|·p³ | true M·p³ | residual/binding | sign of ν_part on locus |
+|---|---|---|---|---|---|
+| 7 | 11.45 | 9.21 | 15.57 | 0.878 | all negative |
+| 11 | 11.38 | 3.97 | 8.96 | **0.103** | all negative |
+
+- **The uniform negativity of ν is carried by the explicit term**:
+  K(μ_part) < 0 on the whole locus at both primes.
+- ν_part·p³ is stable (~11.4) — the explicit term captures the true scale.
+- The open residual uses 10% of its budget at p=11 and is falling.
+- Caveat: the naive leading term −2q/(p²(p²−5)) is NOT the full closed
+  form (K(μ_part)/(−2q/D) = 2.86, 5.45 at p=7,11 — growing); the complete
+  evaluation of K(μ_part) is classical character-sum algebra (Jacobsthal +
+  one elliptic-type double sum), still to be done.  Two data points on the
+  residual decay — per §7's lesson, NOT extrapolated.
+
+Refined open estimate (current sharpest form of leftover 3):
+
+> |ν_res(l)| = |ν(l) − (1/p)K(μ_part)(l)| ≤ binding(p) − |ν_part|(p)
+> on the locus, for p ≥ 11 — with ν_part explicit and binding(p)
+> data-free.  Measured usage at p=11: 10%.
+
+Rigorous LB tail (frame_line): p=37 gives LB·p⁴ = 297.09, LB·p⁴/p = 8.03
+(seventh point on the flat line); LB/binding ≈ 0.06 — no tension.
