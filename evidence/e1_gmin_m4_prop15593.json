@@ -1,0 +1,77 @@
+{
+  "prop": "15.593",
+  "title": "Es4 = 4n^2 + tr(Phi^2); design floor; both leftovers reduce to V",
+  "pointwise_p5": true,
+  "es4_p5": {
+    "p": 5,
+    "Es4": "120400/13",
+    "trPhi2": "85248/13",
+    "identity_Es4": true,
+    "floor_agrees": true,
+    "V": "36864/65",
+    "V_per_n": 21.81301775147929,
+    "Es4_excess_per_n": 44.21301775147929,
+    "floor_excess_per_n": 22.4
+  },
+  "decomposition_p5": {
+    "p": 5,
+    "dimZ": 65,
+    "n_principal_constituents": 2,
+    "expected_principal": 2,
+    "lambda_exc": 13.538461538461528,
+    "lambda_min": 6.1538461538461435,
+    "lambda_bar": 9.6,
+    "V_spectral": 567.1384615384615,
+    "V_decomposition": 567.1384615384607,
+    "trPhi": 624.0,
+    "trPhi_exact": 624,
+    "proved": "True"
+  },
+  "pointwise_p7": true,
+  "es4_p7": {
+    "p": 7,
+    "Es4": "5218435600/167281",
+    "trPhi2": "3545625600/167281",
+    "identity_Es4": true,
+    "floor_agrees": true,
+    "V": "460339200/1840091",
+    "V_per_n": 5.003439503807149,
+    "Es4_excess_per_n": 23.912530412898057,
+    "floor_excess_per_n": 18.90909090909091
+  },
+  "decomposition_p7": {
+    "p": 7,
+    "dimZ": 275,
+    "n_principal_constituents": 5,
+    "expected_principal": 5,
+    "lambda_exc": 10.562347188264047,
+    "lambda_min": 7.511002444987763,
+    "lambda_bar": 8.727272727272727,
+    "V_spectral": 250.17197519035773,
+    "V_decomposition": 250.1719751903559,
+    "trPhi": 2400.0,
+    "trPhi_exact": 2400,
+    "proved": "True"
+  },
+  "p11": {
+    "Es4_exact": "3638669026914064/20130785689",
+    "V": "33185937008640/583792784981",
+    "V_per_n": 0.4659459385556692,
+    "floor_excess_per_n": 17.103448275862068,
+    "pct_of_excess": 2.6520318963149347,
+    "threshold_leftover1_per_n": 2.5897740784780026,
+    "threshold_leftover3_per_n": 15.49655172413793,
+    "margin_leftover1": 5.558099908555352,
+    "margin_leftover3": 33.25826118835559,
+    "leftover1_implies_leftover3": true
+  },
+  "flags_not_flipped": [
+    "type_I",
+    "phi_F_ge_6",
+    "residual_ii",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "seconds": 154.2
+}

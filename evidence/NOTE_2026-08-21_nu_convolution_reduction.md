@@ -399,3 +399,76 @@ except one inequality — `Es4 ≤ 12n² + O(n)` with the explicit O(n)
 budget above.  Truth sequence 44.2, 23.9, 17.6 (falling; recorded, not
 extrapolated).  This is the same wall leftover 1 faces, reached here by
 an independent route and with 1.9–4× more room in the lower-order term.
+
+## 14. Es4 attacked (Prop 15.593): the design floor, and BOTH leftovers = one variance
+
+Es4 is not an isolated moment — it is the repo's own Φ in disguise.  For
+y ∈ Max+ set B̃_y := y yᵀ − 2P₊.  Then **B̃_y ∈ Z pointwise** (zero
+diagonal since diag(yyᵀ)=diag(2P₊)=I; C B̃_y = p B̃_y since Cy = py and
+C P₊ = p P₊), with ‖B̃_y‖²_F = n(n−2) for EVERY y.  Hence
+
+    s² = 2n + ⟨B̃_y, B̃_z⟩,     Es4 = 4n² + tr(Φ²),     tr Φ = n(n−2),
+
+with Φ the 15.589 Gram operator on Z and λ̄ = 8(n−2)/(n−6) its spectral
+mean — the same λ̄ 15.589 already computes.
+
+**New exact lower bound (design floor).**  Cauchy–Schwarz tr(Φ²) ≥
+(trΦ)²/dim Z gives, with dim Z = n(n−6)/8:
+
+    Es4  ≥  12n² + 16n + 128n/(n−6),      equality iff Φ is scalar.
+
+Verified as an exact Fraction identity for all p ≤ 47.  So the leading
+constant 12 is not an estimate to be proven — it is **forced**, and the
+whole question is the residual
+
+    V := ‖Φ − λ̄I‖²_F = Es4 − floor ≥ 0.
+
+By multiplicity-freeness of Z (15.589 B), V decomposes exactly:
+
+    V = (n/2)(λ_exc − λ̄)² + n · Σ_α (λ_α − λ̄)²      [(q−9)/8 principals]
+
+verified at p=5 (2 principals) and p=7 (5 principals — note two are
+COINCIDENT at mult 2n and must be counted twice; the identity fails if
+they are not).  The p=5 spectrum reproduces the repo's λ_min = 80/13.
+
+| p | floor excess /n | TRUE excess /n | V/n |
+|---|---|---|---|
+| 5 | 22.40 | 44.21 | 21.813 |
+| 7 | 18.91 | 23.91 | 5.003 |
+| 11 | 17.10 | 17.57 | **0.4659** |
+
+At p=11 the variance accounts for only **2.7%** of the O(n) excess: Max+
+is already nearly a perfect 4-design in the Z-sense.
+
+### Both leftovers are now the same inequality, with constants
+
+* **Leftover 1.**  If λ_min < 6 then V > m(λ̄−6)²; by 15.589 C the only
+  possible sub-n multiplicity is λ_exc at m = n/2, so
+  `V ≤ (n/2)(λ̄−6)² ⟹ λ_min ≥ 6`.  Threshold c₁ = (2n+20)²/(2(n−6)²) → **2**.
+* **Leftover 3.**  Via 15.592: `V ≤ (x(p) − 16 − 128/(n−6))·n`.
+  Threshold c₃(11) = **15.50**, growing to ≈ 69.
+
+c₃ > c₁ at every prime, so **leftover 1's variance bound strictly implies
+leftover 3's** — fable.md's "single underlying problem", now an explicit
+inequality with computed constants.  At p=11 both hold with margin:
+5.6× (leftover 1) and 33.3× (leftover 3).
+
+### Why 12 is structurally forced
+
+For norm-√n vectors uniform in dimension d, E[(y·z)⁴] = 3n⁴/(d(d+2));
+at d = dim V₊ = n/2 that is 12n³/(n+4) = 12n² − 48n + O(1).  So 12 is the
+Gaussian/4-design constant in V₊, and "Es4 = 12n² + O(n)" says precisely
+that **Max+ is 4-design-like in V₊**.  This is why 15.592 F holds: a
+majorant with leading constant (12+ε)n² is structurally, not numerically,
+insufficient.
+
+### The single open core, now shared by leftovers 1 and 3
+
+> **Prove V = O(n)**, i.e. (½)(λ_exc−λ̄)² + Σ_α(λ_α−λ̄)² = O(1) over the
+> ≈ n/8 constituents — equidistribution of the energies ‖P_c B̃_y‖²
+> across the PSL(2,q)-constituents of Z.
+
+Measured V/n = 21.81, 5.00, 0.466 (collapsing; three points, recorded and
+NOT extrapolated).  Delsarte 2-design + minimum distance is provably
+insufficient input (15.590's LP kill).  Everything else in both leftover
+chains is now proved or data-free-computable.
