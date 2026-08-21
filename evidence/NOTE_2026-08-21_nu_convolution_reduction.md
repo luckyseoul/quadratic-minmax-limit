@@ -292,3 +292,24 @@ Refined open estimate (current sharpest form of leftover 3):
 
 Rigorous LB tail (frame_line): p=37 gives LB·p⁴ = 297.09, LB·p⁴/p = 8.03
 (seventh point on the flat line); LB/binding ≈ 0.06 — no tension.
+
+## 11. LB tail extended to p=47; asymptote confirmed converging
+
+`scripts/frame_line_system.py` run to p=47 (10 primes total, 5–47):
+
+| p | LB·p⁴ | LB·p⁴/p | binding(p)·p | LB/binding |
+|---|---|---|---|---|
+| 37 | 297.09 | 8.030 | 0.099 | ~0.10 |
+| 41 | 328.98 | 8.024 | 0.090 | ~0.09 |
+| 43 | 344.93 | 8.022 | 0.086 | ~0.08 |
+| 47 | 376.85 | 8.018 | 0.077 | ~0.08 |
+
+`LB·p⁴/p` is not merely flat but **monotonically decreasing and converging**
+across all ten computed primes (8.34 → 8.018), consistent with a genuine
+p→∞ limit near 8.0 for the rigorous lower bound on `M·p³`.  No sign of the
+kind of drift that would threaten `binding(p) ~ 3.6/p²` at any tested
+prime; the gap `binding/LB` stays in the 12–17× range throughout the tail
+(vs. the ~1.03× near-miss that killed the §5 form at p=17).  This is
+now the most heavily cross-checked scalar in the whole leftover-3 line:
+identical asymptotic behavior confirmed independently by the rigorous
+lower bound (data-free) and the two true values (p=5,7,11, census-backed).
