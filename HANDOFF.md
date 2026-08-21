@@ -35,6 +35,14 @@ Two routes are now explicitly dead: restricted Phi does not have floor 6 on
 every profile stratum, and at p=7 a full PSL orbit of size 1,176 has
 `Z_psi=0`, so the quartic bound is not pointwise/orbitwise.
 
+The pointwise repair also fails inside the first live stratum itself.  An
+exact coupled coefficient/profile/Boolean CP-SAT model at `p=13,k=7` found a
+translation-gauged Max+ representative with `Z_psi=-28-42i`, hence
+`|Z_psi|^2=2548 < 10647/2`.  The stored support is independently checked
+against `Cy=13y`, all seven active square directions, and the direct quartic
+kernel.  Thus QVAR on `k>=7` must use the ensemble mixture even at its first
+unresolved prime.  See `evidence/k7_p13_cpsat_{probe.py,witness.json}`.
+
 The exceptional target has since narrowed again.  For `p=3 mod 4`, `Z_psi`
 is exactly a signed sum of nonnegative directional profile energies whose
 pointwise total is `p(p^2-1)/4`.  Combining that identity with the affine
@@ -266,7 +274,10 @@ simultaneous Boolean realizability, with active-direction configurations mixed
 before taking the second moment.  Quantization of exceptional projection norms
 does not help by itself: the full p=11 census has 37 shells, no zero shell, and
 minimum `4304/15 < 366=3n`, so even the nonzero-shell pointwise repair is
-false.  In parallel, an upper bound on
+false.  The exact `p=13,k=7` witness `|Z_psi|^2=2548<10647/2` kills that
+repair directly in the first unresolved stratum.  The coupled CP-SAT model is
+now available for an orbit/weighted complete `k=7` second-moment computation;
+more pointwise minimization cannot prove QVAR.  In parallel, an upper bound on
 `||M||_F^2` may close the principal delta room.  Import `phi_F_ge_6` only when
 both block types are controlled generally, never from finite-p data.
 
@@ -336,6 +347,7 @@ deleted so the reversal is traceable.
 | `evidence/merge_k6_coefficient_shards.py` | Validates and merges complete k=6 shard certificates |
 | `evidence/k6_p{13,17,19,23,29,31}_coefficient_sieve.json` | Residual finite k=6 moments/emptiness; completes all-prime k=6 QVAR |
 | `evidence/k7_quintic_profile_probe.py` | Exact depressed-quintic lift minima and universal seven-direction kernel audit |
+| `evidence/k7_p13_cpsat_probe.py`, `k7_p13_cpsat_witness.json` | Exact coupled p=13,k=7 model and independently checked pointwise-QVAR counterexample |
 | `evidence/exceptional_projection_shell_probe.{py,json}` | Full p=5,7 exceptional shells and an explicit p=11 nonzero shell below `3n`; kills the nonzero-shell pointwise repair |
 | `evidence/maxplus_p11/exceptional_projection_shells_p11_xpu.{py,json}` | Full 37.46M-row p=11 exceptional shell census: 37 shells, no zero, minimum `4304/15`, exact mean |
 | `evidence/NOTE_leftover1_variance_multiplicity_route.md` | Historical principal variance route and `||M||_F^2` target |

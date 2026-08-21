@@ -249,7 +249,30 @@ theorem.  Reproducible record:
 
 Reproducible diagnostic: `evidence/quartic_profile_attack.py`.
 
-### 5.1 Eventual emptiness of the k=4 stratum
+### 5.1 Coupled p=13, k=7 witness
+
+The first unresolved stratum also defeats every pointwise repair.  The exact
+model in `k7_p13_cpsat_probe.py` selects one lifted depressed quintic on each
+of the seven square directions and simultaneously imposes the degree-3,
+degree-2, and degree-1 homogeneous coefficient kernels, the constant
+congruence, total normalized energy 21, and all 169 Boolean reconstruction
+equations.  For top-kernel scalar 7 it returns a Max+ vector with 78 negative
+finite coordinates and
+
+```
+Cy = 13y,
+k = 7,
+Z_psi = -28 - 42i,
+|Z_psi|^2 = 2548 < 10647/2.
+```
+
+`tests/test_k7_p13_cpsat_witness.py` recomputes these facts directly from the
+stored negative support, without trusting the solver's profile constraints.
+Therefore the remaining exceptional inequality is genuinely an
+ensemble-second-moment statement already at `p=13,k=7`; neither a pointwise
+QVAR floor nor a nonzero-shell floor can close it.
+
+### 5.2 Eventual emptiness of the k=4 stratum
 
 The degree theorem does give a positive global result for one stratum.  An
 active `k=4` profile has reduced degree at most two.  A degree-zero active
