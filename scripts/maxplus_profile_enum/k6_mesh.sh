@@ -4,7 +4,9 @@
 # outer. Start of one worker never stops another.
 set -euo pipefail
 ROOT="${K6_ROOT:-/mnt/storage/e1work/maxplus_p13}"
-CODE="${K6_CODE:-/home/nick/quadratic-minmax-limit/scripts/maxplus_profile_enum}"
+# Default to this script's directory so dash/start still work after mesh
+# scripts left main (they live on mesh/k6-p13-enum).
+CODE="${K6_CODE:-$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)}"
 SSH=(ssh -F /home/nick/.ssh/mesh.config)
 PIDS="$ROOT/mesh_pids"
 GAUGE="$ROOT/k6_gpu_out"

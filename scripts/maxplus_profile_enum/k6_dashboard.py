@@ -15,17 +15,17 @@ from urllib.parse import urlparse
 
 from k6_control import WORKERS, stop_flag_state
 
+HERE = Path(__file__).resolve().parent
 ROOT = Path(os.environ.get("K6_ROOT", "/mnt/storage/e1work/maxplus_p13"))
-CODE = Path(os.environ.get(
-    "K6_CODE",
-    str(Path(__file__).resolve().parent),
-))
+# Always the copy next to this file. K6_CODE can be stale (dash started from
+# main after mesh scripts moved to mesh/k6-p13-enum) and would 500-crash POST.
+CODE = HERE
 OUT = ROOT / "k6_gpu_out"
 RESUME = ROOT / "k6_resume.json"
 MARK = ROOT / "k6_mesh_mark.json"
 HTML = ROOT / "k6_dashboard.html"
 PIDS = ROOT / "mesh_pids"
-MESH = CODE / "k6_mesh.sh"
+MESH = HERE / "k6_mesh.sh"
 N_TASKS = 17805
 SSH = ["ssh", "-F", "/home/nick/.ssh/mesh.config", "-o", "ConnectTimeout=2",
        "-o", "BatchMode=yes"]
@@ -268,18 +268,23 @@ Soft stop finishes the current orbit.</p>
 {''.join(cards)}
 </div>
 <script>
+let busy = false;
 async function act(op, name) {{
   const m = document.getElementById('msg');
+  if (busy) {{ m.textContent = 'wait — request in flight'; return; }}
+  busy = true;
   m.textContent = op + ' ' + name + ' …';
   try {{
     const r = await fetch('/api/' + op + '/' + name, {{method: 'POST'}});
     const t = await r.text();
-    m.textContent = t;
+    m.textContent = r.ok ? t : (r.status + ' ' + t);
   }} catch (e) {{
     m.textContent = String(e);
+  }} finally {{
+    busy = false;
   }}
 }}
-setInterval(function() {{ location.reload(); }}, 15000);
+setInterval(function() {{ if (!busy) location.reload(); }}, 15000);
 </script>
 """
     return page, eta, rate
@@ -288,7 +293,7 @@ setInterval(function() {{ location.reload(); }}, 15000);
 def write_html():
     s = snapshot()
     html, eta, rate = render(s)
-    tmp = HTML.with_suffix(".html.tmp")
+    tmp = HTML.with_name(f"k6_dashboard.{os.getpid()}.{time.time_ns()}.tmp")
     tmp.write_text(html)
     tmp.replace(HTML)
     line = (
@@ -306,17 +311,19 @@ def write_html():
 
 
 def _spawn_mesh(args: list[str]) -> str:
+    if not MESH.is_file():
+        raise FileNotFoundError(f"mesh script missing: {MESH}")
     env = os.environ.copy()
-    env["PYTHONPATH"] = str(CODE) + os.pathsep + env.get("PYTHONPATH", "")
+    env["PYTHONPATH"] = str(HERE) + os.pathsep + env.get("PYTHONPATH", "")
     env["K6_ROOT"] = str(ROOT)
-    env["K6_CODE"] = str(CODE)
+    env["K6_CODE"] = str(HERE)
     log = ROOT / "k6_mesh_cli.log"
     with log.open("a") as fh:
         fh.write(f"\n===== {' '.join(args)} {time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}\n")
         fh.flush()
         subprocess.Popen(
             [str(MESH), *args],
-            cwd=str(CODE),
+            cwd=str(HERE),
             env=env,
             stdout=fh,
             stderr=subprocess.STDOUT,
@@ -345,19 +352,33 @@ class Handler(SimpleHTTPRequestHandler):
             return
         return SimpleHTTPRequestHandler.do_GET(self)
 
+    def _read_body(self):
+        n = int(self.headers.get("Content-Length") or 0)
+        if n:
+            self.rfile.read(n)
+
+    def _text(self, code: int, msg: str):
+        body = msg.encode()
+        self.send_response(code)
+        self.send_header("Content-Type", "text/plain; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.send_header("Cache-Control", "no-store")
+        self.end_headers()
+        self.wfile.write(body)
+
     def do_POST(self):
         u = urlparse(self.path)
         parts = u.path.strip("/").split("/")
         ok_names = set(WORKERS) | {"all"}
+        self._read_body()
         if len(parts) == 3 and parts[0] == "api" and parts[1] in ("start", "stop") and parts[2] in ok_names:
             op, name = parts[1], parts[2]
-            msg = _spawn_mesh([op, name])
-            body = msg.encode()
-            self.send_response(202)
-            self.send_header("Content-Type", "text/plain")
-            self.send_header("Content-Length", str(len(body)))
-            self.end_headers()
-            self.wfile.write(body)
+            try:
+                msg = _spawn_mesh([op, name])
+            except Exception as e:
+                self._text(500, f"{type(e).__name__}: {e}")
+                return
+            self._text(202, msg)
             return
         self.send_error(404)
 

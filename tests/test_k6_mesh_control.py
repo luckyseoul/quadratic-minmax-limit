@@ -142,3 +142,11 @@ def test_dashboard_html_is_mobile():
     assert "OMP_NUM_THREADS=1" in cpu
     assert "NUMBA_NUM_THREADS=1" in cpu
     assert "NUMBA_NUM_THREADS=44" not in cpu
+    # Start/stop POST must spawn the mesh script next to the dashboard,
+    # never the main-tree path that no longer has k6_mesh.sh.
+    assert "if (!busy) location.reload()" in page
+    from k6_dashboard import HERE, MESH
+    assert MESH == HERE / "k6_mesh.sh"
+    assert MESH.is_file()
+    assert 'CODE="${K6_CODE:-$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)}"' in mesh
+    assert 'CODE="${K6_CODE:-/home/nick/quadratic-minmax-limit/scripts/maxplus_profile_enum}"' not in mesh
