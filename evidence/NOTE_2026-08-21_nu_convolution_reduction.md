@@ -472,3 +472,59 @@ Measured V/n = 21.81, 5.00, 0.466 (collapsing; three points, recorded and
 NOT extrapolated).  Delsarte 2-design + minimum distance is provably
 insufficient input (15.590's LP kill).  Everything else in both leftover
 chains is now proved or data-free-computable.
+
+## 15. V = 24‖δ‖² (Prop 15.594): the whole program is ONE inequality
+
+Going after V = O(n) ended by identifying V with a quantity the repo has
+tracked since 15.217/15.247.  With the master equation
+(4pI − T)m₄ = 4κ/p, particular solution m₄_part = aκ + bφ + z·star
+(15.247 A), and residual δ := m₄⁺ − m₄_part ∈ ker(4pI − T):
+
+    ⟨δ, m₄_part⟩ = 0   (exactly)  and   **V = 24‖δ‖²**   (exactly)
+
+Verified as exact rationals — remainder identically zero, not zero to
+tolerance:
+
+| p | ‖m₄_part‖² | ‖δ‖² | V | 24‖δ‖² | ‖δ‖²/n |
+|---|---|---|---|---|---|
+| 5 | 598/5 | 1536/65 | 567.1385 | 567.1385 | 0.9089 |
+| 7 | 4100/11 | 19180800/1840091 | 250.1720 | 250.1720 | 0.2085 |
+| 11 | — | V/24 | 56.85 | — | **0.01941** |
+
+Mechanism: Es4 = 24‖m₄⁺‖² + (explicit repeat terms), and that explicit
+part is exactly the design floor plus 24‖m₄_part‖².  The only free
+content on either side of 15.593 is the E_{4p}-component of m₄⁺.
+
+### The unification is complete
+
+Both 15.593 thresholds become bounds on the SAME object:
+
+| leftover | requirement on ‖δ‖² | limit | p=11 margin |
+|---|---|---|---|
+| 1 (λ_min ≥ 6) | ≤ n(λ̄−6)²/48 | → n/12 | 5.6× |
+| 3 (3A+B > 0) | ≤ c₃(p)·n/24 | → ~2.9n | 33.3× |
+
+`c₃ > c₁` at every prime, so **leftover 1 ⟹ leftover 3** as an inequality
+between explicit constants — and this ‖δ‖² is *literally* leftover-1's
+"principal room" from 15.217/15.247, not an analogue of it.  fable.md's
+"getting Max+ moments at general p is plausibly the single underlying
+problem" is now a proved identity rather than a guess.
+
+### The single open statement of the entire E(1) leftover program
+
+> **‖P_{E_{4p}} m₄⁺‖² ≤ n/12**, given only (i) the master equation
+> (4pI − T)m₄ = 4κ/p and (ii) |m₄⁺(S)| ≤ 1 pointwise.
+
+Equivalently (15.593 D): the energies ‖P_c B̃_y‖² equidistribute across
+the PSL(2,q)-constituents of Z to O(1).  Equivalently: κ₄(y·z) = O(n).
+
+Why the obvious inputs cannot close it, all already established:
+* the master equation alone — δ *is* its kernel component, by definition;
+* level-4 moment / SoS positivity — 15.590 H exhibits feasible violators;
+* Delsarte 2-design + minimum distance — 15.590's LP kill (12688>9256 at
+  p=5, 116187>31400 at p=7);
+* any Es4 majorant with leading constant (12+ε)n² — 15.592 F, structural.
+
+Measured ‖δ‖²/n: 0.9089, 0.2085, 0.01941 (three points, recorded and NOT
+extrapolated; the p=5 value already exceeds the leftover-1 threshold,
+which is why p=5,7 are handed to census).

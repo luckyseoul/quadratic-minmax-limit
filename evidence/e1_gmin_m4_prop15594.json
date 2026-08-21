@@ -1,0 +1,47 @@
+{
+  "prop": "15.594",
+  "title": "V = 24||delta||^2: leftovers 1 and 3 are one bound on the master residual",
+  "p5": {
+    "p": 5,
+    "n": 26,
+    "m4_sq": "1862/13",
+    "m4_part_sq": "598/5",
+    "delta_sq": "1536/65",
+    "orthogonal": true,
+    "pythagoras": true,
+    "V": "36864/65",
+    "V_eq_24_delta_sq": true,
+    "delta_sq_per_n": 0.9088757396449704
+  },
+  "p7": {
+    "p": 7,
+    "n": 50,
+    "m4_sq": "64093900/167281",
+    "m4_part_sq": "4100/11",
+    "delta_sq": "19180800/1840091",
+    "orthogonal": true,
+    "pythagoras": true,
+    "V": "460339200/1840091",
+    "V_eq_24_delta_sq": true,
+    "delta_sq_per_n": 0.20847664599196453
+  },
+  "p11": {
+    "V": "33185937008640/583792784981",
+    "delta_sq": "1382747375360/583792784981",
+    "delta_sq_per_n": 0.019414414106486214,
+    "threshold_leftover1": 13.164684898929846,
+    "threshold_leftover3": 78.79166666666667,
+    "margin_leftover1": 5.558099908555352,
+    "margin_leftover3": 33.26566178052033,
+    "leftover1_implies_leftover3": true
+  },
+  "flags_not_flipped": [
+    "type_I",
+    "phi_F_ge_6",
+    "residual_ii",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "seconds": 111.1
+}
