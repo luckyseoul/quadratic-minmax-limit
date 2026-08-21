@@ -272,6 +272,32 @@ Therefore the remaining exceptional inequality is genuinely an
 ensemble-second-moment statement already at `p=13,k=7`; neither a pointwise
 QVAR floor nor a nonzero-shell floor can close it.
 
+The complete signed-PSL orbit of this witness was then enumerated with exact
+packed-bit actions.  It is free of size `4,826,640`, with `2,413,320` vectors
+in each global-sign half.  An Intel-A380 census of the epsilon-plus half gives
+
+```
+E_orbit |Z_psi|^2 = 806468/85 > 10647/2,
+lambda_exc(orbit) = 19088/1785 > 6.
+```
+
+The activity split is `14,196`, `28,392`, `2,370,732` at `k=5,6,7`.
+Importantly, the `k=7` slice itself has
+`E|Z_psi|^2=1606124/167>10647/2`, so the positive orbit mean is not supplied
+by the already-closed lower strata.  Reconstructing all profile coefficients
+finds 12,852 depressed nonzero-quintic representatives, 1,071 for each scalar
+in `F_13^*`.
+
+This first orbit does not exhaust the stratum.  After forbidding its 1,071
+scalar-7 representatives, independent CP-SAT searches found an outside-orbit
+solution with `Z_psi=-132-198i`, `|Z_psi|^2=56628`.  Thus the finite p=13
+route is now an iterative orbit decomposition.  The second seed also has a
+free signed orbit of size `4,826,640`; its epsilon-plus mean is again
+`806468/85`, and its `2,384,928`-vector k=7 slice has exact moment
+`198692/21>10647/2`.  Enumerate each new orbit,
+accumulate one scalar's depressed representatives, and repeat until the
+outside-union model is infeasible.  No general or p=13 QVAR flag is flipped.
+
 ### 5.2 Eventual emptiness of the k=4 stratum
 
 The degree theorem does give a positive global result for one stratum.  An

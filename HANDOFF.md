@@ -43,6 +43,29 @@ against `Cy=13y`, all seven active square directions, and the direct quartic
 kernel.  Thus QVAR on `k>=7` must use the ensemble mixture even at its first
 unresolved prime.  See `evidence/k7_p13_cpsat_{probe.py,witness.json}`.
 
+Orbit averaging makes real progress on that counterexample.  Its signed-PSL
+lift orbit is free and has size `4,826,640`, split evenly between the two
+global signs.  Jellyfin's A380 evaluated all `2,413,320` epsilon-plus vectors:
+
+```
+E_orbit |Z_psi|^2 = 806468/85 > 10647/2,
+lambda_exc(orbit) = 19088/1785 > 6.
+```
+
+The orbit contains `14,196`, `28,392`, and `2,370,732` vectors at activities
+`k=5,6,7`.  Crucially, its `k=7` slice alone clears QVAR with exact moment
+`1606124/167`.  Independent profile reconstruction finds 12,852 depressed
+nonzero-quintic representatives, exactly 1,071 in each of the twelve scalar
+classes.  This does **not** close `p=13,k=7`: after forbidding all 1,071
+scalar-7 representatives, independent eight-worker CP-SAT runs on Nuka and
+Jellyfin found a second-orbit seed with `Z_psi=-132-198i` and
+`|Z_psi|^2=56628`.  That seed also has a free 4,826,640-vector signed orbit.
+Its full epsilon-plus orbit has the same exact mean `806468/85`; its
+2,384,928-vector `k=7` slice has moment `198692/21`, again above QVAR.  The
+next finite task is therefore iterative orbit decomposition, not pointwise
+minimization.  Both packed orbits and the second census are in the platter
+backup named below.
+
 The exceptional target has since narrowed again.  For `p=3 mod 4`, `Z_psi`
 is exactly a signed sum of nonnegative directional profile energies whose
 pointwise total is `p(p^2-1)/4`.  Combining that identity with the affine
@@ -263,8 +286,13 @@ overridden twice.
 | Type I, Max− not two-level \(\{-1,-3\}\) | `type_I_multilevel_bad_case_ND_closed=False` | Open. Remainder is \(A_{\mathrm{full}}\). |
 | Lemma D | True | Closed. Do not unflip. |
 
-**Next attack.**  For the exceptional block, prove QVAR directly on `k>=7`
-from `p=13`, or prove the equivalent odd-coset degree-four harmonic excess is at
+**Next attack.**  Complete the `p=13,k=7` orbit decomposition: accumulate the
+depressed scalar-7 representatives from each new free orbit, ask CP-SAT for a
+solution outside their union, and compute each orbit's exact `k=7` moment on
+Jellyfin until infeasibility certifies exhaustion.  The first orbit contributes
+1,071 scalar-7 representatives and its `k=7` slice clears QVAR; a second orbit
+seed is already stored.  In parallel, prove QVAR generally on `k>=7`, or prove
+the equivalent odd-coset degree-four harmonic excess is at
 least `-q(q-1)(q-11)/(16(q+5))`.  Do not use a pointwise/orbitwise floor,
 restricted-stratum PSD, ordinary minimum-shell design, or “quartic is top on
 every stratum”: each is now disproved.  Positivity, conserved total, cyclic
@@ -348,6 +376,9 @@ deleted so the reversal is traceable.
 | `evidence/k6_p{13,17,19,23,29,31}_coefficient_sieve.json` | Residual finite k=6 moments/emptiness; completes all-prime k=6 QVAR |
 | `evidence/k7_quintic_profile_probe.py` | Exact depressed-quintic lift minima and universal seven-direction kernel audit |
 | `evidence/k7_p13_cpsat_probe.py`, `k7_p13_cpsat_witness.json` | Exact coupled p=13,k=7 model and independently checked pointwise-QVAR counterexample |
+| `evidence/k7_p13_signed_psl_orbit.py`, `k7_p13_signed_psl_orbit.json` | Packed-bit signed-PSL traversal: first witness has a free 4,826,640-vector signed orbit |
+| `evidence/k7_p13_orbit_quartic_xpu.py`, `k7_p13_orbit_quartic_xpu.json` | Exact A380 quartic/activity census; first orbit and its k=7 slice both clear QVAR |
+| `evidence/k7_p13_extract_orbit_representatives.py`, `k7_p13_orbit_completeness.py`, `k7_p13_second_orbit_seed.json` | Extracts 1,071 representatives per scalar and searches for the next orbit; a second seed was found and independently checked |
 | `evidence/exceptional_projection_shell_probe.{py,json}` | Full p=5,7 exceptional shells and an explicit p=11 nonzero shell below `3n`; kills the nonzero-shell pointwise repair |
 | `evidence/maxplus_p11/exceptional_projection_shells_p11_xpu.{py,json}` | Full 37.46M-row p=11 exceptional shell census: 37 shells, no zero, minimum `4304/15`, exact mean |
 | `evidence/NOTE_leftover1_variance_multiplicity_route.md` | Historical principal variance route and `||M||_F^2` target |
@@ -359,6 +390,16 @@ Large `.npy` arrays (Max+ at p=11, 4.5 GB each) are **not in git** — they live
 `/mnt/storage/e1work/maxplus_p11/` on soulkiller, verified by md5 against the
 original computation. Scripts there have hardcoded `/tmp/e1work` paths; repoint
 before rerunning.
+
+The p=13 orbit attack is centrally backed up at
+`/mnt/storage/e1work/maxplus_p13/orbit_attack_2026-08-20/`.  It contains the
+111 MB packed first and second orbits, the 1,071 packed scalar-7
+representatives, both independent second-orbit CP-SAT certificates, both
+orbit metadata records, both A380 censuses, and a SHA-256 manifest.  The
+first-orbit packed hash is
+`7223169420a18477dbdf95f6c3685186fbc6a7a1916ac875d761b22800c01eb2`.
+The second is
+`a3ce4e19e68770b41951b4ba28153fd5ed23884d0bcd912eeb43c421fa0e31c3`.
 
 Jellyfin (`192.168.1.191`) now has a validated Intel Arc A380 environment at
 `/home/nick/.venvs/mo-intel`: `torch 2.13.0+xpu`, `dpctl 0.22.1`, and
