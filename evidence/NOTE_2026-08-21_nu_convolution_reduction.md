@@ -163,3 +163,44 @@ hours later.  **Compute the next point before naming the estimate.**
 - §4's budget *inequality* (only the hypothesis feeding it is dead).
 - `scripts/frame_line_system.py`: ~120× faster than the four-set code,
   reaches p=31 in ~2 min where the four-set path could not reach p=17.
+
+## 8. Reassessment against the ACTUAL leftover-3 target (L, not 2/n)
+
+§§4–7 measured the budget against `2/n` — the 15.191 convenience target.
+Leftover 3 itself needs only the weaker `|μ| ≤ L = (p−2)/2p²` on |κ|=1
+(15.275/15.268: on |κ|=1 ν=0, 3A+B>0 ⟺ G>T, and |μ|≤L < |T| suffices;
+`2/n < L` for p≥7).  Same identity (B), same A(p), weaker target:
+
+    |μ| ≤ 1/p² + (1/p)·M·A(p) ≤ L   ⟸   M ≤ (p−4)/(2p·A(p)) ≈ 1/(6p).
+
+| p | allowed_L·p⁴ | rigorous LB·p⁴ | true·p⁴ | truth/allowed |
+|---|---|---|---|---|
+| 5 | 20.8 | 50.00 | 96.2 | 4.62 — census (15.275 L) |
+| 7 | 73.5 | 62.36 | 109.0 | 1.48 — census (109/2863 < 5/98) |
+| 11 | 423.5 | 91.79 | 98.6 | **0.233** |
+| 13 | 659.1 | 107.17 | — | ~0.17 (est from LB+7.4%) |
+| 17 | 967.7 | 138.39 | — | ~0.15 |
+| 19 | 1254.7 | 154.13 | — | ~0.13 |
+| 23 | 2266.4 | 185.76 | — | ~0.09 |
+| 29 | 3586.6 | 233.39 | — | ~0.07 |
+| 31 | — | 249.30 (·/p = 8.042) | — | — |
+
+The §7 falsification does NOT touch this: the requirement `M ≲ 1/(6p)` is
+three orders above the true scale `M ~ 8.6/p³`, the rigorous LB sits far
+below it (a lower bound cannot threaten an upper-bound requirement it does
+not reach), the margin grows like p²/50, and the budget fails at exactly
+the two primes (5, 7) that census already covers.
+
+**Status per the pre-asymptotic-fit discipline:** the inequality chain is
+proved arithmetic (identity (B) exact; A(p) data-free); `M ≤ 1/(6p)` is an
+OPEN estimate whose truth is verified only at p=5,7,11 (holding at 11, the
+only budget-relevant prime with known truth).  Candidate proof route, so
+far untried: split ν = (1/p)χ⋆μ_part + (1/p)χ⋆(μ−μ_part); the μ_part term
+is Max-free (15.247 A) and Weil-bounded at O(1/p²); the residual needs
+only a crude O(1) line-L¹ bound — the first leftover-3 route with room
+for crude bounds.
+
+Open verification items before any flip claim:
+1. Trace the |μ|≤L ⇒ type_I sufficiency WIRING in code (15.275 imports).
+2. Extend the rigorous LB to p=37..47 and check LB < allowed_L throughout.
+3. The Weil bound on χ⋆μ_part (the real work).
