@@ -1,8 +1,8 @@
-"""GPU inner engine: numba generates packed candidate codes, cupy tests them.
+"""GPU inner engine: device atomic emit + cupy test.
 
 Per outer:
-  CPU (numba): odometer over (uu rows x v-lists), vlast lookup; emit packed
-               codes (ci * 16^6 + v-index nibbles). No testing.
+  GPU (RawKernel): one thread per (UU-row, odometer combo); atomicAdd cursor
+               + atomicExch packed codes (ci * 16^6 + v-index nibbles).
   GPU (cupy):  unpack codes, gather per-profile contribution vectors
                (int16, length q), sum -> PS.
                f0 candidates: pass iff all PS in {tlo, thi}.
@@ -25,8 +25,38 @@ from flipnb import flip_batch
 import cupy as cp
 import os
 
-_nw = int(os.environ.get("GPU_WORKERS", "3"))
-cp.get_default_memory_pool().set_limit(size=int(15 * 1024**3 / _nw))
+_nw = max(1, int(os.environ.get("GPU_WORKERS", "3")))
+_free, _tot = cp.cuda.runtime.memGetInfo()
+_frac = float(os.environ.get("GPU_MEM_FRAC", "0.70"))
+_lim = int(min(_tot * _frac, 15 * 1024**3) / _nw)
+cp.get_default_memory_pool().set_limit(size=max(_lim, 256 * 1024**2))
+
+
+def _cc_major():
+    try:
+        cc = cp.cuda.Device().compute_capability
+    except Exception:
+        return 0
+    if isinstance(cc, tuple):
+        return int(cc[0])
+    s = str(cc).replace(".", "")
+    return int(s[0]) if s else 0
+
+
+def _enable_ampere_math():
+    """TF32 tensor GEMM on sm_80+ (Orin). No-op on V100 sm_70."""
+    if _cc_major() < 8:
+        return False
+    try:
+        h = cp.cuda.device.get_cublas_handle()
+        cp.cuda.cublas.setMathMode(h, cp.cuda.cublas.CUBLAS_TF32_TENSOR_OP_MATH)
+        os.environ.setdefault("NVIDIA_TF32_OVERRIDE", "1")
+        return True
+    except Exception:
+        return False
+
+
+AMPERE_TF32 = _enable_ampere_math()
 
 
 @njit(cache=True)
@@ -128,6 +158,8 @@ class GpuTester:
                 L[j, x, Tm[j, x]] = 1.0
         self.L_g = cp.asarray(L)
         self.ones_q = cp.ones((q, 1), dtype=cp.float32)
+        self.ampere = _cc_major() >= 8
+        self.ones_q16 = cp.ones((q, 1), dtype=cp.float16) if self.ampere else None
         p_ = p
         LIDX = np.zeros((k, p_, p_), dtype=np.int64)
         for j in range(k):
@@ -177,7 +209,11 @@ class GpuTester:
         isf0 = fg == 0
         okpt = (PS == self.thi) | (PS == self.tlo)
         # all along axis=1 without reductions: matmul trick
-        cnt = okpt.astype(cp.float32) @ self.ones_q      # B x 1
+        # Ampere: FP16 tensor count (q<=169 exact in f16) + TF32 on line GEMMs
+        if self.ampere:
+            cnt = okpt.astype(cp.float16) @ self.ones_q16
+        else:
+            cnt = okpt.astype(cp.float32) @ self.ones_q      # B x 1
         f0_pass = isf0 & (cnt[:, 0] == float(q))
         # flips: g bounds
         diff = PS - self.thi
@@ -190,9 +226,13 @@ class GpuTester:
             rows = uj * p + vj
             COV += self.cov_g[j][rows]
         gok = (g >= -1) & (g <= fg[:, None]) & (g <= COV.astype(cp.int16))
-        gcnt = gok.astype(cp.float32) @ self.ones_q
+        if self.ampere:
+            gcnt = gok.astype(cp.float16) @ self.ones_q16
+        else:
+            gcnt = gok.astype(cp.float32) @ self.ones_q
         flip_ok = (~isf0) & (gcnt[:, 0] == float(q))
         # line test on flip survivors only (keep full-batch math; cheap)
+        # Ampere: this BxQ @ QxP GEMM is TF32 tensor (cublas math mode)
         gf = g.astype(cp.float32)
         line_ok = cp.ones(B, dtype=cp.bool_)
         F = fg.astype(cp.float32)
@@ -218,8 +258,10 @@ class GpuTester:
 
 
 def process_outer_gpu(p, k, q, upper, UU, Tm, c0, eps, tester, sols,
-                      gen_cap=40_000_000):
-    """Full outer: streamed generation (uu-chunks) -> GPU test -> resolve."""
+                      gen_cap=None):
+    """Full outer: streamed device emit (uu-chunks) -> GPU test -> resolve."""
+    if gen_cap is None:
+        gen_cap = int(os.environ.get("GEN_CAP", "40000000"))
     thi = (k - 1) * eps + p
     tlo = (k - 1) * eps - p
     bases, av, af, an, aull = _prep_tables(p, k, upper, eps)
@@ -228,12 +270,19 @@ def process_outer_gpu(p, k, q, upper, UU, Tm, c0, eps, tester, sols,
     probe_idx = np.linspace(0, q - 1, npr).astype(np.int64)
     probes = np.ascontiguousarray(cont[:, :, probe_idx])
     cprobes = np.ascontiguousarray(cov[:, :, probe_idx].astype(np.int16))
-    codes = np.zeros(gen_cap, np.int64)
-    fsums = np.zeros(gen_cap, np.int64)
+    from gpu_gen_device import prepare_emit_tables, emit_chunk_device
+    tab = prepare_emit_tables(p, k, av, af, an, aull, UU, probes, cprobes)
+    codes_g = cp.zeros(gen_cap, dtype=cp.int64)
+    fsums_g = cp.zeros(gen_cap, dtype=cp.int64)
+    ctr = cp.zeros(1, dtype=cp.uint64)
     CH = 250_000
     s_ar = np.arange(p, dtype=np.int64)
 
+    def _host(a):
+        return cp.asnumpy(a) if isinstance(a, cp.ndarray) else a
+
     def decode(cc_sub):
+        cc_sub = _host(cc_sub)
         B = len(cc_sub)
         ci = (cc_sub // 16 ** 6).astype(np.int64)
         SIG = np.zeros((B, k, p), np.int64)
@@ -264,6 +313,8 @@ def process_outer_gpu(p, k, q, upper, UU, Tm, c0, eps, tester, sols,
         # splits automatically if a chunk yields more solutions than the
         # output buffer holds, instead of crashing (larger p can produce
         # far more solutions per candidate batch than smaller p did)
+        cc_sub = _host(cc_sub)
+        ff_sub = _host(ff_sub)
         SIG, FV = decode(cc_sub)
         cap = max(200_000, 8 * len(cc_sub) + 1000)
         ybuf = np.zeros((cap, q), np.int8)
@@ -289,14 +340,11 @@ def process_outer_gpu(p, k, q, upper, UU, Tm, c0, eps, tester, sols,
     UCH = max(1, min(2000, gen_cap // max(1, worst_per_uu)))
     ncand = 0
     for ulo in range(0, UU.shape[0], UCH):
-        count = np.zeros(1, np.int64)
-        _gen_candidates(p, k, av, af, an, aull, UU, c0, ulo,
-                        min(ulo + UCH, UU.shape[0]),
-                        codes, fsums, count, probes, cprobes, thi, tlo)
-        nc = int(count[0])
-        if nc > gen_cap:
-            raise RuntimeError(f"candidate overflow {nc}")
+        uhi = min(ulo + UCH, UU.shape[0])
+        nc = emit_chunk_device(
+            p, k, c0, thi, tlo, ulo, uhi, tab, codes_g, fsums_g, ctr,
+        )
         ncand += nc
         for lo in range(0, nc, CH):
-            resolve(codes[lo:lo + CH], fsums[lo:lo + CH])
+            resolve(codes_g[lo:lo + CH], fsums_g[lo:lo + CH])
     return ncand
