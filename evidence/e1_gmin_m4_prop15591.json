@@ -1,0 +1,59 @@
+{
+  "prop": "15.591",
+  "title": "closed form of nu_part on the w-line; strict negativity on the locus",
+  "lemma_A_p5": true,
+  "lemma_B_p5": true,
+  "lemma_C_p5": true,
+  "theorem_D_p5": true,
+  "theorem_E_p5": {
+    "p": 5,
+    "locus_size": 5,
+    "all_negative": true,
+    "max_abs": "2/25",
+    "bound_12p": "12/125",
+    "within_bound": true,
+    "hasse_ok": true,
+    "proved": true
+  },
+  "lemma_A_p7": true,
+  "lemma_B_p7": true,
+  "lemma_C_p7": true,
+  "theorem_D_p7": true,
+  "theorem_E_p7": {
+    "p": 7,
+    "locus_size": 11,
+    "all_negative": true,
+    "max_abs": "18/539",
+    "bound_12p": "18/539",
+    "within_bound": true,
+    "hasse_ok": true,
+    "proved": true
+  },
+  "lemma_A_p11": true,
+  "lemma_B_p11": true,
+  "lemma_C_p11": true,
+  "theorem_D_p11": true,
+  "theorem_E_p11": {
+    "p": 11,
+    "locus_size": 29,
+    "all_negative": true,
+    "max_abs": "30/3509",
+    "bound_12p": "30/3509",
+    "within_bound": true,
+    "hasse_ok": true,
+    "proved": true
+  },
+  "samples": {
+    "p7_l3_K_mu_part": "-10/77",
+    "p11_harmonic2_K_mu_part": "-30/319"
+  },
+  "flags_not_flipped": [
+    "type_I",
+    "phi_F_ge_6",
+    "residual_ii",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "seconds": 1.7
+}

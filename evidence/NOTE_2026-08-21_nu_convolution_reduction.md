@@ -313,3 +313,41 @@ prime; the gap `binding/LB` stays in the 12–17× range throughout the tail
 now the most heavily cross-checked scalar in the whole leftover-3 line:
 identical asymptotic behavior confirmed independently by the rigorous
 lower bound (data-free) and the two true values (p=5,7,11, census-backed).
+
+## 12. ν_part in closed form (Prop 15.591) — the explicit half is DONE
+
+The §10 caveat is resolved: K(μ_part) evaluates completely.  Three lemmas
+(elementary character algebra, χ(−1)=1, verified exhaustively at p=5,7 and
+sampled at p=11; `src/e1_gmin_m4_prop15591.py`, 9/9 tests):
+
+    S_κ(l)    = −2κ(l)
+    S_star(l) = −2κ(l) + φ(l)
+    S_φ(l)    =  q·χ(l(l−1)) + κ(l)      ← all elliptic content cancels
+
+giving, exactly and Max-free:
+
+    ν_part(l) = −2[ (p−2)κ(l) + p·χ(l(l−1)) + φ(l) ] / (p²(p²−5)).
+
+Consequences, now THEOREMS (not observations):
+
+* **ν_part < 0 on the entire locus for every p ≥ 5** (κ=3, χ(l(l−1))=1
+  there, and Hasse |φ| ≤ 2p gives 4p−6+φ ≥ 2p−6 > 0).  The uniform
+  negativity of ν's explicit part is proved.
+* **max_locus|ν_part| ≤ 12(p−1)/(p²(p²−5)) ≈ 12/p³**, with equality iff
+  a locus fiber is supersingular (φ = 2p) — which happens for p ≡ 3 mod 4
+  (harmonic and equianharmonic classes; verified: equality at p=7,11,
+  strict at p=5).  This explains the φ=22=2p seen at both special fibers
+  in the p=11 dataset.
+* Cross-checks: the closed form reproduces the measured K(μ_part) samples
+  −10/77 (p=7) and −30/319 (p=11 harmonic) and the measured
+  max|ν_part| = 18/539 (p=7), 30/3509 (p=11) to the digit.
+
+**Remaining for leftover 3** (unchanged in shape, now with the explicit
+half proven): census(5,7) + the residual estimate
+
+    ‖ν_res‖∞ = ‖(1/p)K(μ − μ_part)‖∞ ≤ binding(p) − 12(p−1)/(p²(p²−5))
+
+on the locus for p ≥ 11 (RHS ≈ 3.6/p² − 12/p³; measured usage 10% at
+p=11).  ν_res is the χ-convolution of the 15.247 D spectral residual;
+Cauchy–Schwarz on the line loses a factor ~p, so genuine cancellation in
+K(δ_spec) is the one remaining hard core of leftover 3.
