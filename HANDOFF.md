@@ -1,12 +1,45 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-22 (class-function route Step 6; **no flag flipped**)
+**Date:** 2026-08-22 (15.598 square-direction lines; **no flag flipped**)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main` (this commit). Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.598 — square-direction affine lines cut Max− (proved; Walsh still open)
+
+`src/e1_gmin_m4_prop15598.py`. Max+-free character sums, then Cy=−py.
+
+- Jacobi: \(\sum_{x\in\mathbb F_p}\chi_p(x(x+\delta))=-1\) for \(\delta\neq0\).
+- \(\chi_{p^2}(z)=\chi_p(N(z))\). Off an affine line \(L=a+\mathbb F_p b\),
+  \(\sum_{i\in L}C_{ij}=-\chi(b)\). Square direction \(\Rightarrow\)
+  \(\sigma_{\mathrm{out}}=0\) and on-\(S\) row-sums \(=p\).
+- Hence every Max− vector has \(\sum_{k\in S}y_k=0\) on
+  \(S=\{\infty\}\cup L\), \(L\) square-direction. So
+  \(\langle x,1_S\rangle=(p+1)/2\), even for \(p\equiv3\pmod4\), odd for
+  \(p\equiv1\pmod4\). Fail: Max+ (many values); fail: nonsquare direction
+  (not identically 0).
+- Pair-slice \(U\) is the xor-hyperplane \(x_i+x_j=c\) of \(\mathbb F_2^n\).
+
+Walsh (15.406 E) is now: affine_span(\(U\))=H\cap{ℓ=c} with
+H=affine_span(Max−). Certified dim \(U\)=dim \(H\)−1 at p=3,5,7 (full)
+and p=11 (full rank(\(B_U\))=60, 200k-sample dir(\(H\))=60, **not**
+\(n/2=61\); 15.596's comparison to \(n/2\) assumed the p=5,7 value).
+Square-line indicators with \(\chi(\mathrm{dir})=+1\) span the dual at
+p=3,7 and their differences span it at p=5. Spanning for general p is
+the remaining Walsh step. residual_ii stays False (leftover-only / 5+).
+
+Scripts: `scripts/walsh_gf2_dual.py`, `walsh_subline_dual.py`,
+`walsh_affine_line_dual.py`. Evidence jsons alongside. p=11 full
+37,457,112×132 line popcounts: const_even=66, mixed=66, const_odd=0,
+matching \(\frac12 p(p+1)\). Backend: field Jacobi serial (inherently
+sequential, \(p<80\)); Max− inner products numpy; p=11 stream one
+process over mmap (bandwidth, not 86-way GE). GPU unused (bit geometry).
+
+Do **not** reopen Paley \(E_-[S^2]<20+12/p\) (false). Do not flip
+residual_ii from Walsh alone.
 
 ## Since `5ce0258` (do not lose)
 
@@ -546,7 +579,7 @@ estimates remain; none is proved. See
 | Leftover | Predicate | Remaining estimate |
 |---|---|---|
 | 1 | `phi_F_ge_6_proved_general` | QVAR on k≥7 (all p≥13) **and** principal `\|\|δ\|\|^2 ≤ n(n+10)^2/[6(n-14)(n-6)]`. Crude `E[s^4]≤2n^3` is too weak. |
-| 2 | `residual_ii_k_eq_4p_empty` / `multilevel_ND_k_ge_4p_proved` | leftover+splus at k=4p: Paley majorant `E_-[S^2]<20+12/p`, or Walsh pair-slice span (interior 4-level only). Leftover-only with min_+<2 exists and is not residual (ii). |
+| 2 | `residual_ii_k_eq_4p_empty` / `multilevel_ND_k_ge_4p_proved` | leftover+splus at k=4p. Walsh = U spans xor-hyperplane of affine_span(Max−) (15.598 cuts H; spanning open). Paley ES2 majorant is false. Leftover-only with min_+<2 exists and is not residual (ii). |
 | 3 | `type_I_multilevel_bad_case_ND_closed` | `\|μ\|≤(p-2)/(2p^2)` on \|κ\|=1, equivalently `\|R̄₄\| ≤ \|L\|(p^4-1)+4(p-2)`. `\|μ\|≤\|T\|` does not close; `\|μ\|≤maj` is false at p=7. |
 
 Live dump (twice): all three leftovers False; Gsum False; pairing False.
@@ -672,6 +705,7 @@ Official class is leftover Max− together with \(s_+\ge2\). leftover-only (\(s_
 
 - leftover+\(s_+\) empty for all \(n_F\) at \(p=5\), \(k=20\) (15.528).
 - 15.585: leftover+\(s_+\) at \(k=4p\) forces \(\min_+=2\); \(\{2,4,6\}\) cannot have \(1_{S=2}\) a plus pair-slice.
+- 15.598: square-direction \(\infty\cup L\) forces \(\sum_S y=0\) on Max−. Walsh ∀p is spanning of the xor-slice of H.
 - No identity that leftover+\(s_+\) is empty at every even \(k\ge4p\).
 
 ## Type I
@@ -694,6 +728,7 @@ deleted so the reversal is traceable.
 | `GOAL.md` | Acceptance for E(1) / \(L=1/2\) |
 | `solution.md` | Sandwich; Main Theorem (limit) stays OPEN |
 | `evidence/share/denseness_path_package.md` | Stand-alone path; § Caveats |
+| `src/e1_gmin_m4_prop15598.py` | Square-direction affine lines cut Max− (proved); Walsh spanning open |
 | `evidence/SESSION_HANDOFF_2026-08-18_leftovers.md` | Named identities 15.550–15.585 |
 | `evidence/TECHNICAL_NOTES_2026-08-20_maxplus_p11.md` | p=11 enumeration, derivations, corrections (2026-08-20) |
 | `evidence/NOTE_2026-08-20_psl_and_stratum_floor_reduction.md` | Binding PSL decomposition, QVAR, low-stratum theorem, odd-coset route, and killed routes |

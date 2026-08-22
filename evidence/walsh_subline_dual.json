@@ -1,0 +1,66 @@
+{
+  "small": {
+    "3": {
+      "p": 3,
+      "n": 10,
+      "n_sublines": 30,
+      "formula_pn": 30,
+      "rank_subline": 9,
+      "standard_all_even": true,
+      "n_odd_sublines": 15,
+      "n_bad_maxminus": 12,
+      "Max_lin": 5,
+      "Max_dir": 5,
+      "dual_lin_dim": 5,
+      "subline_fills_dual": false
+    },
+    "5": {
+      "p": 5,
+      "n": 26,
+      "n_sublines": 130,
+      "formula_pn": 130,
+      "rank_subline": 25,
+      "standard_all_even": false,
+      "n_odd_sublines": 80,
+      "n_bad_maxminus": 260,
+      "Max_lin": 14,
+      "Max_dir": 13,
+      "dual_lin_dim": 12,
+      "subline_fills_dual": false
+    },
+    "7": {
+      "p": 7,
+      "n": 50,
+      "n_sublines": 350,
+      "formula_pn": 350,
+      "rank_subline": 49,
+      "standard_all_even": true,
+      "n_odd_sublines": 175,
+      "n_bad_maxminus": 11452,
+      "Max_lin": 25,
+      "Max_dir": 25,
+      "dual_lin_dim": 25,
+      "subline_fills_dual": false
+    }
+  },
+  "p11_sample": {
+    "nsamp": 80000,
+    "nU": 43484,
+    "nUc": 36516,
+    "Max_lin": 60,
+    "Max_dir": 60,
+    "U_lin": 60,
+    "U_dir": 59,
+    "Uc_lin": 59,
+    "Uc_dir": 59,
+    "standard_all_even_sample": true,
+    "standard_odd_count": 0,
+    "P_U": 0.54355
+  },
+  "p11_full_std": {
+    "n_total": 37457112,
+    "n_odd": 0,
+    "all_even": true,
+    "subline_wt": 12
+  }
+}

@@ -33,12 +33,14 @@ J-corners are empty.
 
 Remaining estimate, minus-slice interior 4-level (and 5+ / unclassified):
 
-- Paley majorant `E_-[S^2] < 20+12/p` empties every 4-level lattice
-  point including interior (15.379 C, open); or
-- affine F_2-span of a Max− pair-slice equals the hyperplane section of
-  affine_span(Max−) (Walsh: characters constant on {f_e=-1} are constant
-  on {f_e=+1}). Certified p=3,5,7 rref (15.406 C); not proved for
-  p≥11. That empties interior 4-level only.
+- Paley majorant `E_-[S^2] < 20+12/p` is **false** (p=5 leftover witness;
+  15.379 C killed 2026-08-21). Do not reopen.
+- Walsh: affine F_2-span of a Max− pair-slice equals the xor-hyperplane
+  section of affine_span(Max−). Certified p=3,5,7 rref (15.406 C) and
+  p=11 full ensemble (15.596). **15.598 proved:** square-direction
+  affine lines cut Max− by \(\sum_S y=0\), so U is the xor cut of a
+  named affine-geometry space. Spanning (Walsh ∀p) still open. That
+  empties interior 4-level only; leftover-only / 5+ remain.
 
 ## Leftover 3 (`type_I_multilevel_bad_case_ND_closed`)
 

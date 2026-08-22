@@ -93,13 +93,18 @@ discrete series).
    the explicit character values.  This would close R1, hence leftovers
    1 and 3 simultaneously.
 
-## R2 (leftover 2), unchanged and independent
+## R2 (leftover 2)
 
 Max− Walsh containment, exact at p=3,5,7,11 (15.596).  Documented trap:
-at p=11 `rank(B_U) = 60 < n/2 = 61`, so a general-p proof via "B_U has
-full rank" is FALSE — the mechanism is the genuine algebraic containment.
-Natural tool: the same signed-orbit/character-sum machinery, applied to
-the fixed-edge U/U^c split rather than to four-point moments.
+at p=11 `rank(B_U) = 60`; dim H is **60, not n/2=61** (15.598 census).
+A general-p proof via "B_U has full rank n/2" is FALSE.
+
+**15.598 (proved):** square-direction affine lines \(L=a+\mathbb F_p b\),
+\(\chi(b)=1\), force \(\sum_{S=\{\infty\}\cup L} y=0\) on Max−, by the
+elementary sum \(\sum\chi_p(x(x+\delta))=-1\) and
+\(\sum_{i\in L}C_{ij}=-\chi(b)\). Pair-slice \(U\) is the xor cut of
+\(\mathbb F_2^n\). Walsh ∀p reduces to affine_span(\(U\))=H∩{ℓ=c}.
+residual_ii still False (leftover-only / 5+ / k>4p).
 
 ---
 

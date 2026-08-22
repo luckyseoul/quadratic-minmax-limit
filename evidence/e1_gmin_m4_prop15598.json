@@ -1,0 +1,101 @@
+{
+  "prop": "15.598",
+  "title": "Square-direction affine lines cut Max- over F2",
+  "proved": {
+    "jacobi_quad_sum": true,
+    "line_character_sum": true,
+    "maxminus_square_line_sum_zero": true,
+    "xor_pair_slice": true,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "n_primes": 20,
+    "theorem": "\u03a3 \u03c7_p(x(x+\u03b4))=-1 for \u03b4\u22600. Fail: 0 or p-1."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "norm_mismatch": 0,
+        "chi_Fp": true,
+        "sq_sums": [
+          -1
+        ],
+        "nsq_sums": [
+          1
+        ]
+      },
+      "7": {
+        "norm_mismatch": 0,
+        "chi_Fp": true,
+        "sq_sums": [
+          -1
+        ],
+        "nsq_sums": [
+          1
+        ]
+      },
+      "11": {
+        "norm_mismatch": 0,
+        "chi_Fp": true,
+        "sq_sums": [
+          -1
+        ],
+        "nsq_sums": [
+          1
+        ]
+      },
+      "13": {
+        "norm_mismatch": 0,
+        "chi_Fp": true,
+        "sq_sums": [
+          -1
+        ],
+        "nsq_sums": [
+          1
+        ]
+      }
+    },
+    "theorem": "\u03a3_{i\u2208L} C_ij=\u2212\u03c7(b) off the line. Square \u21d2 \u03c3=0. Fail: \u03c3=0 on a nonsquare direction."
+  },
+  "C": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "n_square_lines": 15,
+        "n_bad_square": 0,
+        "nsq_nunique": 7,
+        "parity": 1
+      },
+      "7": {
+        "n_square_lines": 28,
+        "n_bad_square": 0,
+        "nsq_nunique": 9,
+        "parity": 0
+      }
+    },
+    "theorem": "Max\u2212 has \u03a3_S y=0 on every square-direction \u221e\u222aL. Fail: nonsquare direction, or the same claim on Max+."
+  },
+  "D": {
+    "proved": true,
+    "theorem": "y_i y_j=-1 \u21d4 x_i XOR x_j=1. Fail: claim XOR=0."
+  },
+  "E": {
+    "proved": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "walsh_general_p": false,
+    "note": "Walsh = affine_span(U)=H\u2229{x_i+x_j=c}. Certified dim U=dim H-1 at p=3,5,7 and p=11 sample. Square-line equations of C contain H. Spanning for general p open. residual_ii stays False."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "multilevel_ND_k_ge_4p_proved",
+    "phi_F_ge_6_proved_general",
+    "type_I_multilevel_bad_case_ND_closed",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "seconds": 0.136
+}

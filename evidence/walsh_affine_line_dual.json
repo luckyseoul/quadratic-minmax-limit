@@ -1,0 +1,68 @@
+{
+  "small": {
+    "3": {
+      "p": 3,
+      "n_lines": 12,
+      "rank_line_code": 9,
+      "const_even": 6,
+      "const_odd": 0,
+      "mixed": 6,
+      "all_affine_chars": false,
+      "spans_linear_dual": false,
+      "Max_lin": 5,
+      "dual_dim": 5
+    },
+    "5": {
+      "p": 5,
+      "n_lines": 30,
+      "rank_line_code": 25,
+      "const_even": 0,
+      "const_odd": 15,
+      "mixed": 15,
+      "all_affine_chars": false,
+      "spans_linear_dual": false,
+      "Max_lin": 14,
+      "dual_dim": 12
+    },
+    "7": {
+      "p": 7,
+      "n_lines": 56,
+      "rank_line_code": 49,
+      "const_even": 28,
+      "const_odd": 0,
+      "mixed": 28,
+      "all_affine_chars": false,
+      "spans_linear_dual": false,
+      "Max_lin": 25,
+      "dual_dim": 25
+    }
+  },
+  "p11_dir": {
+    "nsamp": 200000,
+    "Max_lin": 60,
+    "Max_dir": 60,
+    "U_lin": 60,
+    "U_dir": 59,
+    "Uc_lin": 59,
+    "Uc_dir": 59,
+    "nU": 109154
+  },
+  "p11_lines": {
+    "n_total": 37457112,
+    "n_lines": 132,
+    "const_even": 66,
+    "const_odd": 0,
+    "mixed": 66,
+    "all_affine_chars": false,
+    "odd_counts_head": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
