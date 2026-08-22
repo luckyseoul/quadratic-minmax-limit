@@ -57,6 +57,19 @@ def _lib():
             ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p,
             ctypes.c_void_p, ctypes.c_void_p, ctypes.c_int64,
         ]
+        if hasattr(_LIB, "sycl_test_load"):
+            _LIB.sycl_test_load.restype = ctypes.c_int
+            _LIB.sycl_test_load.argtypes = [
+                ctypes.c_int, ctypes.c_int, ctypes.c_int, ctypes.c_int,
+                ctypes.c_int, ctypes.c_int,
+                ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p,
+                ctypes.c_void_p, ctypes.c_void_p,
+            ]
+            _LIB.sycl_test_batch.restype = ctypes.c_int
+            _LIB.sycl_test_batch.argtypes = [
+                ctypes.c_int64, ctypes.c_void_p, ctypes.c_void_p,
+                ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p,
+            ]
     return _LIB
 
 
@@ -103,3 +116,48 @@ def gen_candidates_sycl(
         codes[:n] = codes_[:n]
         fsums[:n] = fsums_[:n]
     return n
+
+
+def sycl_has_tester() -> bool:
+    return hasattr(_lib(), "sycl_test_load")
+
+
+def sycl_test_load(p, k, q, thi, tlo, UU, av, af, Tm, cont, cov) -> None:
+    UU_ = np.ascontiguousarray(UU, dtype=np.int32)
+    av_ = np.ascontiguousarray(av, dtype=np.int32)
+    af_ = np.ascontiguousarray(af, dtype=np.int32)
+    Tm_ = np.ascontiguousarray(Tm, dtype=np.int32)
+    cont_ = np.ascontiguousarray(cont, dtype=np.int16)
+    cov_ = np.ascontiguousarray(cov, dtype=np.int8)
+    rc = int(
+        _lib().sycl_test_load(
+            int(p), int(k), int(q), int(thi), int(tlo), int(UU_.shape[0]),
+            UU_.ctypes.data, av_.ctypes.data, af_.ctypes.data, Tm_.ctypes.data,
+            cont_.ctypes.data, cov_.ctypes.data,
+        )
+    )
+    if rc != 0:
+        raise RuntimeError(f"sycl_test_load rc={rc}")
+
+
+def sycl_test_batch(codes, fsums):
+    B = int(len(codes))
+    if B <= 0:
+        z = np.zeros(0, dtype=np.int32)
+        return z, z
+    codes_ = np.ascontiguousarray(codes, dtype=np.int64)
+    fsums_ = np.ascontiguousarray(fsums, dtype=np.int64)
+    f0 = np.empty(B, dtype=np.int32)
+    fl = np.empty(B, dtype=np.int32)
+    n_f0 = np.zeros(1, dtype=np.int32)
+    n_fl = np.zeros(1, dtype=np.int32)
+    rc = int(
+        _lib().sycl_test_batch(
+            ctypes.c_int64(B), codes_.ctypes.data, fsums_.ctypes.data,
+            f0.ctypes.data, fl.ctypes.data, n_f0.ctypes.data, n_fl.ctypes.data,
+        )
+    )
+    if rc != 0:
+        raise RuntimeError(f"sycl_test_batch rc={rc}")
+    # atomic fill is unordered; np.where is sorted
+    return np.sort(f0[: int(n_f0[0])]), np.sort(fl[: int(n_fl[0])])

@@ -206,6 +206,8 @@ export NUMBA_NUM_THREADS=14 OMP_NUM_THREADS=14
 export NUMBA_THREADING_LAYER=workqueue
 export OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 export K6_HOST=a380 K6_BACKEND=sycl GPU_GEN_SYCL_SO=/tmp/e1work/libgpu_gen_sycl.so
+export ONEAPI_DEVICE_SELECTOR=level_zero:gpu
+export ZE_FLAT_DEVICE_HIERARCHY=COMPOSITE
 export PYTHONPATH=/tmp/e1work
 cd /tmp/e1work
 echo "===== mesh a380 \$(date -Is) =====" >> $JF_MNT/enum_p13_k6_a380.log

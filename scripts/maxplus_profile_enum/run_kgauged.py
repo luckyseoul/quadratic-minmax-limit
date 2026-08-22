@@ -178,17 +178,31 @@ if __name__=='__main__':
     # dict built by enumerate() over a deterministically-ordered states
     # list), so orb{tvidx}.npy from a prior interrupted run lines up with
     # this run's task list exactly. Skip anything already on disk.
+    # Filename-only: do not np.load every orb (sshfs on a380/orin/nuka
+    # would stall here for minutes just to recount solutions).
+    resume_path=os.environ.get(
+        "RESUME_JSON",
+        os.path.join(os.path.dirname(os.path.abspath(outdir)), "k6_resume.json"),
+    )
+    import json as _json
     total=0
-    done_prior=0
-    tasks=[]
-    for t in tasks_all:
-        tvidx=t[3]
-        fp=f'{outdir}/orb{tvidx}.npy'
-        if os.path.exists(fp):
-            total+=len(np.load(fp))
-            done_prior+=1
-        else:
-            tasks.append(t)
+    if os.path.isfile(resume_path):
+        try:
+            total=int(_json.load(open(resume_path)).get("n_solutions", 0) or 0)
+        except (OSError, ValueError, TypeError, _json.JSONDecodeError):
+            total=0
+    done_ids=set()
+    try:
+        for name in os.listdir(outdir):
+            if name.startswith("orb") and name.endswith(".npy"):
+                try:
+                    done_ids.add(int(name[3:-4]))
+                except ValueError:
+                    pass
+    except OSError:
+        pass
+    done_prior=len(done_ids)
+    tasks=[t for t in tasks_all if t[3] not in done_ids]
     if shard_mod>1:
         tasks=[t for t in tasks if t[3]%shard_mod==shard_rem]
     if done_prior:
@@ -196,10 +210,6 @@ if __name__=='__main__':
               f"({total} solutions); {len(tasks)} remaining "
               f"shard={shard_rem}/{shard_mod}",flush=True)
     print(f"this process tasks={len(tasks)}",flush=True)
-    resume_path=os.environ.get(
-        "RESUME_JSON",
-        os.path.join(os.path.dirname(os.path.abspath(outdir)), "k6_resume.json"),
-    )
     write_resume_file(resume_path, k, len(tasks_all), outdir, total)
     print(f"RESUME_JSON {resume_path}", flush=True)
     done=done_prior
@@ -246,7 +256,7 @@ if __name__=='__main__':
                 pass
             host=os.environ.get("K6_HOST","")
             tag=f" {host}" if host else ""
-            print(f"[{done}/{len(tasks_all)}]{tag} {phase} reps={len(R)} |tv|={len(tv)} -> {cnt_here}  cand={nc} {dt:.0f}s  cum={total}",flush=True)
+            print(f"[{done}/{len(tasks_all)}]{tag} {phase} tvidx={tvidx} reps={len(R)} |tv|={len(tv)} -> {cnt_here}  cand={nc} {dt:.0f}s  cum={total}",flush=True)
     npy_n=len([f for f in os.listdir(outdir) if f.startswith('orb') and f.endswith('.npy')])
     host=os.environ.get("K6_HOST","")
     if n_soft:

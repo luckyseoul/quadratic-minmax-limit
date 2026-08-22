@@ -95,6 +95,38 @@ class NumpyTester:
         return np.where(f0_pass)[0], np.where(flip_pass)[0]
 
 
+class SyclTester(NumpyTester):
+    """Arc A380 test_batch. Falls back to NumpyTester if SYCL load fails."""
+
+    def __init__(self, p, k, Tm, UU, eps=1):
+        super().__init__(p, k, Tm, UU, eps=eps)
+        self._sycl = False
+        self.Tm_i32 = np.ascontiguousarray(Tm, dtype=np.int32)
+
+    def load_outer(self, av, af, bases):
+        cont, cov = super().load_outer(av, af, bases)
+        try:
+            from gpu_gen_sycl import sycl_device_name, sycl_test_load
+
+            sycl_test_load(
+                self.p, self.k, self.q, self.thi, self.tlo,
+                self.UU, self.av, self.af, self.Tm_i32, cont, cov,
+            )
+            self._sycl = True
+            print(f"  SYCL tester device={sycl_device_name()!r}", flush=True)
+        except Exception as e:
+            self._sycl = False
+            print(f"  SYCL tester fallback numpy: {e}", flush=True)
+        return cont, cov
+
+    def test_batch(self, codes, fsums):
+        if not self._sycl:
+            return super().test_batch(codes, fsums)
+        from gpu_gen_sycl import sycl_test_batch
+
+        return sycl_test_batch(codes, fsums)
+
+
 def process_outer_host(p, k, q, upper, UU, Tm, c0, eps, tester, sols,
                        gen_cap=None, emit="cpu"):
     """cpu (numba prange) or sycl emit, then NumpyTester."""
@@ -190,15 +222,22 @@ def process_outer_host(p, k, q, upper, UU, Tm, c0, eps, tester, sols,
     UCH = max(1, min(2000, gen_cap // max(1, worst_per_uu)))
     ncand = 0
     t_em = time.time()
+    t_emit = 0.0
+    t_test = 0.0
     nchunk = 0
     for ulo in range(0, UU.shape[0], UCH):
+        t0 = time.time()
         nc = emit_chunk(ulo, min(ulo + UCH, UU.shape[0]))
+        t_emit += time.time() - t0
         ncand += nc
         nchunk += 1
+        t1 = time.time()
         for lo in range(0, nc, CH):
             resolve(codes[lo:lo + CH], fsums[lo:lo + CH])
+        t_test += time.time() - t1
         if nchunk == 1 or nchunk % 20 == 0:
             print(f"  {host} emit chunks={nchunk} ncand={ncand} "
+                  f"emit={t_emit:.0f}s test={t_test:.0f}s "
                   f"{time.time()-t_em:.0f}s",
                   flush=True)
     return ncand
@@ -206,7 +245,9 @@ def process_outer_host(p, k, q, upper, UU, Tm, c0, eps, tester, sols,
 
 def make_tester(p, k, Tm, UU, backend=None):
     backend = backend or os.environ.get("K6_BACKEND", "cuda")
-    if backend in ("cpu", "sycl"):
+    if backend == "sycl":
+        return SyclTester(p, k, Tm, UU)
+    if backend == "cpu":
         return NumpyTester(p, k, Tm, UU)
     from gpu_inner import GpuTester
     return GpuTester(p, k, Tm, UU)

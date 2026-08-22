@@ -95,6 +95,34 @@ def test_starve_skips_inflight_and_drop_only_dummy(tmp_path):
     assert not (out / ".lock_2").exists()
 
 
+def test_a380_sycl_tester_not_host_numpy():
+    """a380 must test on the Arc. Host NumpyTester was 93% of wall."""
+    from k6_backend import NumpyTester, SyclTester, make_tester
+
+    assert issubclass(SyclTester, NumpyTester)
+    be = (TOOL / "k6_backend.py").read_text()
+    assert "class SyclTester" in be
+    assert "return SyclTester" in be
+    cpp = (TOOL / "gpu_gen_sycl.cpp").read_text()
+    assert "sycl_test_batch" in cpp
+    assert "sycl_test_load" in cpp
+    py = (TOOL / "gpu_gen_sycl.py").read_text()
+    assert "def sycl_test_batch" in py
+    mesh = (TOOL / "k6_mesh.sh").read_text()
+    a380 = mesh.split("start_a380()")[1].split("start_cpu44()")[0]
+    assert "ONEAPI_DEVICE_SELECTOR=level_zero:gpu" in a380
+    assert "K6_BACKEND=sycl" in a380
+    # soulkiller has no Arc; constructor only (load_outer is jellyfin)
+    import numpy as np
+
+    p, k = 13, 6
+    Tm = np.tile(np.arange(p), (k, p))
+    UU = np.zeros((2, k), dtype=np.int32)
+    t = make_tester(p, k, Tm, UU, backend="sycl")
+    assert isinstance(t, SyclTester)
+    assert not isinstance(make_tester(p, k, Tm, UU, backend="cpu"), SyclTester)
+
+
 def test_worker_nc_minus_two_matches_claim(tmp_path):
     """run_kgauged.worker returns nc=-2 when try_claim_orbit would skip."""
     stop = tmp_path / "stop"

@@ -34,7 +34,7 @@ HORSE = {
     "v100": "soulkiller Tesla V100 16 GiB · 2 CUDA workers · GEN_CAP 40e6",
     "nuka": "RX 9070 XT HIP · 1 worker · GEN_CAP 40e6",
     "orin": "Orin Ampere sm_87 · 1 CUDA worker · GEN_CAP 8e6 · 6c / 7.5 GiB",
-    "a380": "jellyfin Arc A380 SYCL emit + host test · GEN_CAP 20e6",
+    "a380": "jellyfin Arc A380 SYCL emit+test · GEN_CAP 20e6",
     "cpu44": "soulkiller 44 orbit processes · OMP=1 · no CUDA · GEN_CAP 8e6",
     "dash": "HTTP UI :8765",
 }

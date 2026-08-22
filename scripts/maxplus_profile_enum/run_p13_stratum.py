@@ -264,7 +264,7 @@ def run_gpu_gauged(p: int, k: int, nw: int) -> int:
             total += cnt_here
             done += 1
             print(
-                f"[{done}/{len(tasks_all)}] {phase} reps={len(R)} |tv|={len(tv)} "
+                f"[{done}/{len(tasks_all)}] {phase} tvidx={tvidx} reps={len(R)} |tv|={len(tv)} "
                 f"-> {cnt_here}  cand={nc} {dt:.0f}s  cum={total}",
                 flush=True,
             )
