@@ -625,3 +625,47 @@ p=7 binding (order 8) is the unique min leftover Q≈8077.7 vs Wick 9604.
 Next that is not a rewrite of z²=1 or Aut-invariance: Boolean 4-point
 of V_+ as a function of Aut-orbits of 4-tuples (cross-ratio, not a
 linear model in {κ,star,φ} — that already fails at p=5,7).
+
+---
+
+# Step 8: Boolean 4-point of V_+ is Aut-constant and not a function of (κ,CR,star)
+
+`scripts/m4_aut_orbit_vplus.py`.  Max+ ⊂ V_+ ∩ {±1}^n, p=5 and p=7
+exact (MuLab).  4-sets of P¹, permutation Aut(C).
+
+m₄(S)=E[∏_{i∈S} y_i] is constant on every Aut-orbit: 42/42 at p=5,
+128/128 at p=7 (dead_labels=0).  Distinct finite values:
+
+- p=5 (denom 65=N/4): ±{1,3,9,13,21}/65  (ten values)
+- p=7 (denom 2863=N/4=7·409): ±{45,61,65,67,99,109,139,191,279,327}/2863
+  (twenty values)
+
+Linear {1,κ,φ,star} maxerr 0.114 (p=5) / 0.027 (p=7).  15.597
+particular solution vs true m₄: same size error.  Confirmed: true
+Boolean 4-point is **not** the particular m₄.
+
+(κ, has_∞) splits all 8 keys.  (κ, has_∞, CR) still splits 6/21
+(p=5) and 27/44 (p=7).  Adding star and φ does not kill the split
+(4 leftover at p=5, 24 at p=7).  The scratch line “affine m₄ is a
+function of (cross-ratio, κ_C, star)” is **false** as a complete
+invariant: Aut-orbits are strictly finer.  (CR labels used
+`canon_cr_fn` minmax encoding; Aut-orbits themselves are 15590/C
+and do not depend on that.)
+
+⟨m₄, κ_A⟩ lives entirely on **finite** 4-sets (∞-containing orbits
+contribute 0 for both QVAR and the binding even character):
+
+| p | ⟨m₄,κ_QVAR⟩ | ⟨m₄,κ_bind⟩ |
+|---|---|---|
+| 5 | 14.135 | 0.180 |
+| 7 | 41.917 | 6.941 |
+
+Both positive (census floor).  Binding at p=5 is tight.  No
+single-orbit closed form in p presented itself (values are odd
+over N/4, not a Jacobi list we could match).  Character-sum of m₄
+on Aut-orbits of 4-sets is the same open as 15.48 for g_min.
+
+**Killed:** m₄ as a function of {κ,φ,star}; m₄ as a function of
+(κ,CR,star).  Aut-constancy is Aut-invariance, not a floor.
+Do not add an identity file.  Floor F̂(ψ)≥0 still OPEN.  No flag
+flipped.

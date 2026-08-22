@@ -106,8 +106,15 @@ on y_∞=+1.  Squared form is the tautology 4p² Q(r)=E[|∑B|² u(r·)].
 Off-diagonal bilinear Gram Γ is not linear in Aut-orbit Q (maxerr
 757 / 1226 at p=5,7) and splits Aut-ratio buckets at p=7.  ρ(R)
 misses leftover orbits.  Do not reopen as a floor argument (15.279 T
-already: Boolean rewrite returns M).  Next: Boolean 4-point of V_+
-on Aut-orbits of 4-tuples.  No flag flipped.
+already: Boolean rewrite returns M).
+
+Step 8: Boolean 4-point of V_+ is Aut-constant (42/42 p=5, 128/128
+p=7) and **not** a function of {κ,φ,star} nor of (κ,CR,star)
+(`scripts/m4_aut_orbit_vplus.py`).  Finite m₄ values are odd over
+N/4 (ten at p=5, twenty at p=7).  ⟨m₄,κ_A⟩ lives on finite 4-sets
+only; binding pairing 0.180 at p=5.  Character-sum of those orbit
+values is 15.48 still open.  Do not add an identity file.  No flag
+flipped.
 
 ## 15.597 Theorem A* (proved — not a census)
 
