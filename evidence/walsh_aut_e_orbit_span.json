@@ -1,0 +1,171 @@
+{
+  "small": {
+    "5": {
+      "p": 5,
+      "n": 26,
+      "nU": 156,
+      "line_flip": {
+        "p": 5,
+        "flip_is_eigen": false,
+        "flip_in_ensemble": false
+      },
+      "orbits": [
+        {
+          "lin": 12,
+          "dir": 11,
+          "norb": 48
+        },
+        {
+          "lin": 11,
+          "dir": 10,
+          "norb": 24
+        },
+        {
+          "lin": 10,
+          "dir": 9,
+          "norb": 24
+        },
+        {
+          "lin": 6,
+          "dir": 5,
+          "norb": 24
+        },
+        {
+          "lin": 12,
+          "dir": 11,
+          "norb": 48
+        },
+        {
+          "lin": 12,
+          "dir": 11,
+          "norb": 48
+        },
+        {
+          "lin": 11,
+          "dir": 10,
+          "norb": 24
+        },
+        {
+          "lin": 10,
+          "dir": 9,
+          "norb": 24
+        },
+        {
+          "lin": 10,
+          "dir": 9,
+          "norb": 24
+        },
+        {
+          "lin": 7,
+          "dir": 6,
+          "norb": 12
+        },
+        {
+          "lin": 6,
+          "dir": 5,
+          "norb": 24
+        },
+        {
+          "lin": 6,
+          "dir": 5,
+          "norb": 24
+        }
+      ],
+      "max_dir": 11,
+      "min_dir": 5,
+      "any_full_slice": false,
+      "all_full_slice": false,
+      "target_slice_dir": 12
+    },
+    "7": {
+      "p": 7,
+      "n": 50,
+      "nU": 6544,
+      "line_flip": {
+        "p": 7,
+        "flip_is_eigen": false,
+        "flip_in_ensemble": false
+      },
+      "orbits": [
+        {
+          "lin": 15,
+          "dir": 14,
+          "norb": 96
+        },
+        {
+          "lin": 25,
+          "dir": 24,
+          "norb": 96
+        },
+        {
+          "lin": 23,
+          "dir": 22,
+          "norb": 96
+        },
+        {
+          "lin": 25,
+          "dir": 24,
+          "norb": 96
+        },
+        {
+          "lin": 17,
+          "dir": 16,
+          "norb": 96
+        },
+        {
+          "lin": 25,
+          "dir": 24,
+          "norb": 96
+        },
+        {
+          "lin": 23,
+          "dir": 22,
+          "norb": 96
+        },
+        {
+          "lin": 17,
+          "dir": 16,
+          "norb": 48
+        },
+        {
+          "lin": 23,
+          "dir": 22,
+          "norb": 96
+        },
+        {
+          "lin": 23,
+          "dir": 22,
+          "norb": 96
+        },
+        {
+          "lin": 25,
+          "dir": 24,
+          "norb": 96
+        },
+        {
+          "lin": 25,
+          "dir": 24,
+          "norb": 96
+        }
+      ],
+      "max_dir": 24,
+      "min_dir": 14,
+      "any_full_slice": true,
+      "all_full_slice": false,
+      "target_slice_dir": 24
+    }
+  },
+  "p11": {
+    "nsamp": 30000,
+    "nU": 16381,
+    "Max_lin_half": 60,
+    "Max_dir_half": 60,
+    "Max_lin_anti": 61,
+    "Max_dir_anti": 61,
+    "U_lin_half": 60,
+    "U_dir_half": 59,
+    "U_lin_anti": 61,
+    "U_dir_anti": 60,
+    "n_over_2": 61
+  }
+}

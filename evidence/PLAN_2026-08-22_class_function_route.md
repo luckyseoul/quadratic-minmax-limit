@@ -104,7 +104,11 @@ A general-p proof via "B_U has full rank n/2" is FALSE.
 elementary sum \(\sum\chi_p(x(x+\delta))=-1\) and
 \(\sum_{i\in L}C_{ij}=-\chi(b)\). Pair-slice \(U\) is the xor cut of
 \(\mathbb F_2^n\). Walsh ∀p reduces to affine_span(\(U\))=H∩{ℓ=c}.
-residual_ii still False (leftover-only / 5+ / k>4p).
+
+**15.599 (proved pin, Walsh still open):** rank(SSᵀ)=n/2−1,
+rank(S)≤n/2, so rank∈{n/2−1,n/2}; equality n/2 at p=3..37.
+Antipodes fix the p=11 dim-60 half-ensemble. Aut_e-irreducibility
+is false (referees: do not reopen). residual_ii still False.
 
 ---
 

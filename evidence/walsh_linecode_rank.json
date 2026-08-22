@@ -1,0 +1,373 @@
+{
+  "ranks": {
+    "11": {
+      "p": 11,
+      "n": 122,
+      "n_over_2": 61,
+      "n_lines": 66,
+      "formula_half": 66,
+      "rank": 61,
+      "rank_plus_ones": 61,
+      "sol_dim": 61,
+      "p_mod_4": 3,
+      "p_mod_8": 3
+    },
+    "3": {
+      "p": 3,
+      "n": 10,
+      "n_over_2": 5,
+      "n_lines": 6,
+      "formula_half": 6,
+      "rank": 5,
+      "rank_plus_ones": 5,
+      "sol_dim": 5,
+      "p_mod_4": 3,
+      "p_mod_8": 3
+    },
+    "5": {
+      "p": 5,
+      "n": 26,
+      "n_over_2": 13,
+      "n_lines": 15,
+      "formula_half": 15,
+      "rank": 13,
+      "rank_plus_ones": 13,
+      "sol_dim": 13,
+      "p_mod_4": 1,
+      "p_mod_8": 5
+    },
+    "7": {
+      "p": 7,
+      "n": 50,
+      "n_over_2": 25,
+      "n_lines": 28,
+      "formula_half": 28,
+      "rank": 25,
+      "rank_plus_ones": 25,
+      "sol_dim": 25,
+      "p_mod_4": 3,
+      "p_mod_8": 7
+    },
+    "13": {
+      "p": 13,
+      "n": 170,
+      "n_over_2": 85,
+      "n_lines": 91,
+      "formula_half": 91,
+      "rank": 85,
+      "rank_plus_ones": 85,
+      "sol_dim": 85,
+      "p_mod_4": 1,
+      "p_mod_8": 5
+    },
+    "17": {
+      "p": 17,
+      "n": 290,
+      "n_over_2": 145,
+      "n_lines": 153,
+      "formula_half": 153,
+      "rank": 145,
+      "rank_plus_ones": 145,
+      "sol_dim": 145,
+      "p_mod_4": 1,
+      "p_mod_8": 1
+    },
+    "19": {
+      "p": 19,
+      "n": 362,
+      "n_over_2": 181,
+      "n_lines": 190,
+      "formula_half": 190,
+      "rank": 181,
+      "rank_plus_ones": 181,
+      "sol_dim": 181,
+      "p_mod_4": 3,
+      "p_mod_8": 3
+    },
+    "23": {
+      "p": 23,
+      "n": 530,
+      "n_over_2": 265,
+      "n_lines": 276,
+      "formula_half": 276,
+      "rank": 265,
+      "rank_plus_ones": 265,
+      "sol_dim": 265,
+      "p_mod_4": 3,
+      "p_mod_8": 7
+    },
+    "29": {
+      "p": 29,
+      "n": 842,
+      "n_over_2": 421,
+      "n_lines": 435,
+      "formula_half": 435,
+      "rank": 421,
+      "rank_plus_ones": 421,
+      "sol_dim": 421,
+      "p_mod_4": 1,
+      "p_mod_8": 5
+    },
+    "31": {
+      "p": 31,
+      "n": 962,
+      "n_over_2": 481,
+      "n_lines": 496,
+      "formula_half": 496,
+      "rank": 481,
+      "rank_plus_ones": 481,
+      "sol_dim": 481,
+      "p_mod_4": 3,
+      "p_mod_8": 7
+    },
+    "37": {
+      "p": 37,
+      "n": 1370,
+      "n_over_2": 685,
+      "n_lines": 703,
+      "formula_half": 703,
+      "rank": 685,
+      "rank_plus_ones": 685,
+      "sol_dim": 685,
+      "p_mod_4": 1,
+      "p_mod_8": 5
+    }
+  },
+  "irreducibility": {
+    "5": {
+      "p": 5,
+      "dim_H0_lin": 13,
+      "dim_ker_ell_in_H0": 12,
+      "random_orbit_dims_H0": [
+        [
+          13,
+          24
+        ],
+        [
+          13,
+          48
+        ],
+        [
+          13,
+          48
+        ],
+        [
+          6,
+          24
+        ],
+        [
+          11,
+          24
+        ],
+        [
+          13,
+          48
+        ],
+        [
+          13,
+          48
+        ],
+        [
+          9,
+          24
+        ]
+      ],
+      "random_orbit_dims_slice": [
+        [
+          11,
+          48
+        ],
+        [
+          11,
+          24
+        ],
+        [
+          11,
+          48
+        ],
+        [
+          11,
+          48
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          11,
+          48
+        ],
+        [
+          7,
+          12
+        ],
+        [
+          9,
+          12
+        ]
+      ],
+      "H0_all_full": false,
+      "slice_all_full": false,
+      "stab_ok": true,
+      "linecode_Aut_e_invariant": true,
+      "n_random": 8
+    },
+    "7": {
+      "p": 7,
+      "dim_H0_lin": 25,
+      "dim_ker_ell_in_H0": 24,
+      "random_orbit_dims_H0": [
+        [
+          25,
+          96
+        ],
+        [
+          25,
+          96
+        ],
+        [
+          23,
+          96
+        ],
+        [
+          20,
+          96
+        ],
+        [
+          22,
+          96
+        ],
+        [
+          22,
+          96
+        ],
+        [
+          23,
+          96
+        ],
+        [
+          21,
+          96
+        ]
+      ],
+      "random_orbit_dims_slice": [
+        [
+          23,
+          96
+        ],
+        [
+          21,
+          96
+        ],
+        [
+          22,
+          96
+        ],
+        [
+          23,
+          96
+        ],
+        [
+          22,
+          96
+        ],
+        [
+          20,
+          96
+        ],
+        [
+          22,
+          96
+        ],
+        [
+          23,
+          96
+        ]
+      ],
+      "H0_all_full": false,
+      "slice_all_full": false,
+      "stab_ok": true,
+      "linecode_Aut_e_invariant": true,
+      "n_random": 8
+    },
+    "11": {
+      "p": 11,
+      "dim_H0_lin": 61,
+      "dim_ker_ell_in_H0": 60,
+      "random_orbit_dims_H0": [
+        [
+          59,
+          240
+        ],
+        [
+          61,
+          240
+        ],
+        [
+          59,
+          240
+        ],
+        [
+          61,
+          240
+        ],
+        [
+          57,
+          240
+        ],
+        [
+          54,
+          240
+        ],
+        [
+          53,
+          240
+        ],
+        [
+          61,
+          240
+        ]
+      ],
+      "random_orbit_dims_slice": [
+        [
+          55,
+          240
+        ],
+        [
+          59,
+          240
+        ],
+        [
+          57,
+          240
+        ],
+        [
+          54,
+          240
+        ],
+        [
+          59,
+          240
+        ],
+        [
+          59,
+          240
+        ],
+        [
+          58,
+          240
+        ],
+        [
+          57,
+          240
+        ]
+      ],
+      "H0_all_full": false,
+      "slice_all_full": false,
+      "stab_ok": true,
+      "linecode_Aut_e_invariant": true,
+      "n_random": 8
+    }
+  },
+  "workers": 11
+}

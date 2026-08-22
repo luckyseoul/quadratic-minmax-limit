@@ -8,6 +8,27 @@
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
 
+## 15.599 — rank pin, antipodes, Aut_e reducible (Walsh still open)
+
+`src/e1_gmin_m4_prop15599.py`. Max-free F2 geometry of the square-line
+incidence S.
+
+- **Proved:** rank(SSᵀ)=n/2−1 (block-diagonal J−I, (p+1)/2 classes);
+  class-sums = 1 ⇒ rank(S)≤n/2; hence rank(S)∈{n/2−1, n/2}.
+- **Certified p=3..37:** rank(S)=n/2, so dim H0=n/2.
+- **Antipodes:** y↦−y preserves Max− and the xor. The p=11 eps1 half
+  (y_∞≡+1) has dim 60; with complements dim H=61=n/2 and dim U=60.
+  15.596 compared a half-ensemble to n/2.
+- **Killed:** Aut_e-irreducibility on H0 / xor-slice (proper cyclic
+  modules at p=5,7,11). Line-flip of a square-line block is not Max−
+  (exterior determines the signs on S). A single Aut_e-orbit of a U-point
+  spans the slice at p=7, not at p=5.
+- Walsh spanning still open. residual_ii stays False.
+
+Referees (suggest_direction, both houses): do not more-census p=11
+without antipodes; do not reopen Aut_e-irreducibility. ProcessPool
+W=11 for ranks; GPU unused (F2).
+
 ## 15.598 — square-direction affine lines cut Max− (proved; Walsh still open)
 
 `src/e1_gmin_m4_prop15598.py`. Max+-free character sums, then Cy=−py.
@@ -729,6 +750,7 @@ deleted so the reversal is traceable.
 | `solution.md` | Sandwich; Main Theorem (limit) stays OPEN |
 | `evidence/share/denseness_path_package.md` | Stand-alone path; § Caveats |
 | `src/e1_gmin_m4_prop15598.py` | Square-direction affine lines cut Max− (proved); Walsh spanning open |
+| `src/e1_gmin_m4_prop15599.py` | Square-line F2-rank pin {n/2−1, n/2}; antipodes; Aut_e reducible |
 | `evidence/SESSION_HANDOFF_2026-08-18_leftovers.md` | Named identities 15.550–15.585 |
 | `evidence/TECHNICAL_NOTES_2026-08-20_maxplus_p11.md` | p=11 enumeration, derivations, corrections (2026-08-20) |
 | `evidence/NOTE_2026-08-20_psl_and_stratum_floor_reduction.md` | Binding PSL decomposition, QVAR, low-stratum theorem, odd-coset route, and killed routes |

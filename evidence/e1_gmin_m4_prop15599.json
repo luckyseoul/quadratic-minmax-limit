@@ -1,0 +1,142 @@
+{
+  "prop": "15.599",
+  "title": "Square-line rank in {n/2-1, n/2}; antipodes; Walsh open",
+  "proved": {
+    "sst_rank_n_over_2_minus_1": true,
+    "class_sum_upper_n_over_2": true,
+    "rank_interval": true,
+    "rank_equals_n_over_2_all_p": false,
+    "antipodes_preserve": true,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "n_primes": 15,
+    "theorem": "rank(SS\u1d40)=n/2-1 via (p+1)/2 blocks of J-I. Fail: n/2."
+  },
+  "B": {
+    "proved": true,
+    "n_primes": 20,
+    "theorem": "Class-sums = 1 \u21d2 rank(S)\u2264n/2. Fail: class-sum 0."
+  },
+  "C": {
+    "proved": true,
+    "n_primes": 20,
+    "theorem": "rank(S)\u2208{n/2-1, n/2}. Fail: \u2264n/2-2."
+  },
+  "D": {
+    "proved": false,
+    "certified_equality": true,
+    "rows": {
+      "3": {
+        "p": 3,
+        "n": 10,
+        "n_over_2": 5,
+        "n_lines": 6,
+        "formula_half": 6,
+        "rank": 5,
+        "rank_plus_ones": 5,
+        "sol_dim": 5,
+        "p_mod_4": 3,
+        "p_mod_8": 3
+      },
+      "5": {
+        "p": 5,
+        "n": 26,
+        "n_over_2": 13,
+        "n_lines": 15,
+        "formula_half": 15,
+        "rank": 13,
+        "rank_plus_ones": 13,
+        "sol_dim": 13,
+        "p_mod_4": 1,
+        "p_mod_8": 5
+      },
+      "7": {
+        "p": 7,
+        "n": 50,
+        "n_over_2": 25,
+        "n_lines": 28,
+        "formula_half": 28,
+        "rank": 25,
+        "rank_plus_ones": 25,
+        "sol_dim": 25,
+        "p_mod_4": 3,
+        "p_mod_8": 7
+      },
+      "11": {
+        "p": 11,
+        "n": 122,
+        "n_over_2": 61,
+        "n_lines": 66,
+        "formula_half": 66,
+        "rank": 61,
+        "rank_plus_ones": 61,
+        "sol_dim": 61,
+        "p_mod_4": 3,
+        "p_mod_8": 3
+      },
+      "13": {
+        "p": 13,
+        "n": 170,
+        "n_over_2": 85,
+        "n_lines": 91,
+        "formula_half": 91,
+        "rank": 85,
+        "rank_plus_ones": 85,
+        "sol_dim": 85,
+        "p_mod_4": 1,
+        "p_mod_8": 5
+      },
+      "17": {
+        "p": 17,
+        "n": 290,
+        "n_over_2": 145,
+        "n_lines": 153,
+        "formula_half": 153,
+        "rank": 145,
+        "rank_plus_ones": 145,
+        "sol_dim": 145,
+        "p_mod_4": 1,
+        "p_mod_8": 1
+      },
+      "19": {
+        "p": 19,
+        "n": 362,
+        "n_over_2": 181,
+        "n_lines": 190,
+        "formula_half": 190,
+        "rank": 181,
+        "rank_plus_ones": 181,
+        "sol_dim": 181,
+        "p_mod_4": 3,
+        "p_mod_8": 3
+      }
+    },
+    "theorem": "rank(S)=n/2 at p=3..19 (and 23..37 in evidence). Not \u2200p."
+  },
+  "E": {
+    "proved": true,
+    "p11_half_dim": 60,
+    "p11_n_over_2": 61,
+    "theorem": "Antipodes preserve Max- and \u2113. p=11 half-ensemble dim 60 is not H0; with antipodes dim=61. Fail: eps1 already spans."
+  },
+  "F": {
+    "proved": false,
+    "aut_e_irreducible": false,
+    "line_flip_preserves_maxminus": false,
+    "walsh_general_p": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "Aut_e reducible at p=5,7,11. Line-flip not Max-. Single Aut_e-orbit spans the xor-slice at p=7, not p=5. Walsh spanning open. residual_ii stays False."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "multilevel_ND_k_ge_4p_proved",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "seconds": 0.243
+}
