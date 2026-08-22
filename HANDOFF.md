@@ -116,6 +116,13 @@ only; binding pairing 0.180 at p=5.  Character-sum of those orbit
 values is 15.48 still open.  Do not add an identity file.  No flag
 flipped.
 
+Step 9: q-dependent split-Γ formula **fails the p=11 gate**
+(`scripts/split_gamma_dilation_ansatz.py`).  Dilation t=−1 has
+ensemble Γ=2(n−2) at p=5,7, not pointwise ±2p.  Cosine
+a_j=A+B/q predicts p=11 λ_min≈5.6<6.  Re J(χ,α_k) is not linear
+in λ−8 even at p=5,7.  Paley+order grouping of Γ(t) is a p=5,7
+artifact.  No identity file.  No flag flipped.
+
 ## 15.597 Theorem A* (proved — not a census)
 
 `src/e1_gmin_m4_prop15597.py`. Distinct from 15.108's old "Theorem A*"

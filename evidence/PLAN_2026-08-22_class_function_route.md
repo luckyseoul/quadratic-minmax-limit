@@ -669,3 +669,52 @@ on Aut-orbits of 4-sets is the same open as 15.48 for g_min.
 (κ,CR,star).  Aut-constancy is Aut-invariance, not a floor.
 Do not add an identity file.  Floor F̂(ψ)≥0 still OPEN.  No flag
 flipped.
+
+---
+
+# Step 9: q-dependent split-Γ formula — cosine and Jacobi fail the p=11 gate
+
+`scripts/split_gamma_dilation_ansatz.py`.  Square dilation z↦t z
+on P¹ (∞↦∞) is the gauge of a split PSL element; s=1 Aut lift iff
+t is a square.  Γ(t)=E[(y·πy)²]−2n on that lift.
+
+## What holds
+
+Identity dilation t=1: Γ=n(n−2) (tr Φ).  Involution t=−1:
+Γ=2(n−2) **exactly** at p=5 (48) and p=7 (96).  p=11 150k sample
+237.3 vs 240 (sampling).  **Not pointwise:** y·Uy takes many values
+(p=5: {−14,−2,2,6,10,14,26}, not only ±2p).  Ensemble only.  Do not
+promote to a general-p unit without a Max+-free argument; 4-point
+of this one involution is a special pairing, not the floor.
+
+Split Aut Γ takes **2** leftover values at p=5 (−240/13, −48/13)
+and **3** at p=7 (−6240/409, −3360/409, −2208/409).  These are the
+PLAN Step 3 class-function values.  Binding is the unique min
+(p=5 order-12 (−−); p=7 order-8 (−−)).  At p=5 and p=7, Γ is a
+function of (χ(t),χ(t−1),χ(t+1),in F_p, order) with 0 splits —
+a two-prime artifact (cf. “τ∈F_p is one number” at p=5).
+
+## KILLED at the p=11 gate
+
+1. **λ−8 = a₀(q)+a₁(q)cos(4πk/(q−1))+…** with a_j=A+B/q, n_harm≤3,
+   fitted on all even k at p=5,7.  p=11 max|λ−pred|≈3.7–4.0 and
+   predicted min 4.8–5.8, **below 6**.  Do not reopen p-independent
+   or A+B/q cosine.
+
+2. **λ−8 linear in Re J(χ,α_k)/q, |J|/q, 1/q.** |J|=p constantly
+   (Weil).  Fit on p=5,7 already maxerr 2.87.  Phase of J does not
+   linearly give λ (p=5 QVAR k=6 has Re J=2.24 but the largest λ−8;
+   k=4 has Re J=p and medium λ).
+
+3. **(p−1)/2 unique split Γ values** (2,3 at p=5,7).  p=11 sample
+   has many distinct split Γ (23 at 0.1 rounding; involution se is
+   ~3 so this oversplits, but it is not 5).  Paley type of t±1 plus
+   order does **not** determine Γ at p=11 (order 60 appears in many
+   buckets).  The 0-split 5-tuple at p=5,7 is the same small-prime
+   collapse as subfield-one-value.
+
+Dilation-Γ and even-character λ are Mellin duals.  A short
+q-dependent formula on one side is a short formula on the other.
+Bounded-term cosine/Jacobi on λ failed the gate; Aut leftover
+dofs of Γ(t) remain.  Floor F̂(ψ)≥0 still OPEN.  No flag flipped.
+No identity file.
