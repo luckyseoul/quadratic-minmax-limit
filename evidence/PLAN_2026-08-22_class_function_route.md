@@ -100,3 +100,58 @@ at p=11 `rank(B_U) = 60 < n/2 = 61`, so a general-p proof via "B_U has
 full rank" is FALSE — the mechanism is the genuine algebraic containment.
 Natural tool: the same signed-orbit/character-sum machinery, applied to
 the fixed-edge U/U^c split rather than to four-point moments.
+
+---
+
+# Step 1 EXECUTED (2026-08-22) — the compression is real and Γ_δ is quantized
+
+`scripts/gamma_class_function.py`, p=5 (|G⁺| = 31,200 enumerated by BFS on
+signed permutations, |Max+| = 260):
+
+* **Γ is a class function** — 0/300 conjugation violations (tested, not
+  assumed).
+* **Γ takes only 14 distinct values** over 31,200 group elements.  Γ(e) =
+  624 = n(n−2) ✓.  It does NOT reduce to the fixed-point count alone
+  (fix=0 → 3 values, fix=1 → 4, fix=2 → 4), so the genuine conjugacy class
+  is needed — consistent with ≈ q+4 classes.
+
+## Theory sharpened while running it
+
+    Γ(g) = tr(Φ·π(g))        ⟹      Γ = Σ_c λ_c χ_c ,
+
+so **the λ_c are exactly the Fourier coefficients of Γ** and λ_c = ⟨Γ,χ_c⟩
+by orthogonality.  Splitting with Theorem A* (Φ = λ̄I + Φ_δ):
+
+    Γ(g) = λ̄·ψ_Z(g) + Γ_δ(g),      Γ_δ(g) := tr(Φ_δ π(g)) = Σ_c(λ_c−λ̄)χ_c(g)
+
+and ψ_Z — the character of Z — is **known in closed form** (15.589 B:
+Z = W_e ⊕ (q−9)/8 principal series).  So the explicit half of Γ is already
+determined for all p, and every open bit sits in Γ_δ.
+
+## Γ_δ is quantized (new, exact)
+
+At p=5, Γ_δ takes **12 distinct values, all integer multiples of a single
+unit** u := ‖δ‖²/24 = 64/65:
+
+    Γ_δ / u  ∈  {−10, −9, −6, −4, −1, 0, 2, 6, 9, 10, 12, 24}
+
+with Γ_δ(e) = 0 — matching the proved corollary tr(Φ_δ) = 0 — and
+max Γ_δ = 24u = ‖δ‖² = 1536/65 exactly.  Γ_δ is nonzero on 74.8% of G⁺.
+
+This is the structure a closed form needs: the open content of R1 is a
+class function taking ~12 integer multiples of one scale, and
+λ_min(Φ) ≥ 6 ⟺ λ̄ + min_c ⟨Γ_δ, χ_c⟩ ≥ 6 — a finite pairing of an
+integer-valued class function against the classical PSL(2,q) character
+table.  **Nothing proved yet**; the quantization is one prime (p=5), and
+per the pre-asymptotic discipline it must be reproduced at p=7 before any
+closed form is proposed.
+
+## Revised next steps
+
+1. Repeat at p=7 (|G⁺| ≈ 117,600, |Max+| = 11,452): confirm class-function
+   property, count distinct Γ_δ values, and test whether the quantization
+   unit is again ‖δ‖²/24.  **This is the gate** — if the integrality fails
+   at p=7 the closed-form hunt is off.
+2. If it holds, identify which conjugacy classes carry which multiples
+   (by trace / split / non-split / unipotent type).
+3. Then pair against the explicit character table and bound ⟨Γ_δ, χ_c⟩.
