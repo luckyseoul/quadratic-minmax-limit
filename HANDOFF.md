@@ -55,6 +55,11 @@ exact (\(T\kappa=-6\star\)); at \(p=5\), \(\dim E_{4p}^{\mathrm{Aut}}=2\)
 and \(\min\langle m,\kappa_{A_\psi}\rangle=-285/4<0\), while true Max+
 pairing is \(+14.13\). Same kill at \(p=7\) (ker 7, LP min \(\approx-2708\)).
 Need a constraint outside linear 4-point theory (15.589 I).
+Checked and redundant/useless for recovering the sign: \((1^\top y)^4=(1+p)^4\)
+is already in the master affine space; \(P_{E_{4p}}\kappa_{A_\psi}\) is
+indefinite (both signs at \(p=5\)); \(\ell^1\) CS overshoots (\(-172\) vs need
+\(-6.75\)). Next constraint is simultaneous Boolean ridge / 6-point coupling,
+not another 4-point rewrite.
 
 ## What shipped (wiring, not a close)
 
