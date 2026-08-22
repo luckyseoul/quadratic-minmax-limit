@@ -1,0 +1,968 @@
+{
+  "title": "QVAR k>=7 (not a close)",
+  "numbered": false,
+  "A_floors": {
+    "proved": true,
+    "theorem": "E|Z_\u03c8|\u00b2\u22653q(q-1)/16 \u21d4 \u03bb_exc\u22656 \u21d4 (p\u22613 mod 4) E|B|\u00b2\u22653T/8 with T=(p\u00b2-1)/8.  Fail: drop 16; T/8\u21a6T/4.",
+    "by_p": {
+      "5": {
+        "T": 3,
+        "E_Z_floor": "225/2",
+        "integer_3T_8": "9/8",
+        "equivalent": true,
+        "lambda_exc_at_floor": "6",
+        "ok": true
+      },
+      "7": {
+        "T": 6,
+        "E_Z_floor": "441",
+        "integer_3T_8": "9/4",
+        "equivalent": true,
+        "lambda_exc_at_floor": "6",
+        "ok": true
+      },
+      "11": {
+        "T": 15,
+        "E_Z_floor": "5445/2",
+        "integer_3T_8": "45/8",
+        "equivalent": true,
+        "lambda_exc_at_floor": "6",
+        "ok": true
+      },
+      "13": {
+        "T": 21,
+        "E_Z_floor": "10647/2",
+        "integer_3T_8": "63/8",
+        "equivalent": true,
+        "lambda_exc_at_floor": "6",
+        "ok": true
+      },
+      "17": {
+        "T": 36,
+        "E_Z_floor": "15606",
+        "integer_3T_8": "27/2",
+        "equivalent": true,
+        "lambda_exc_at_floor": "6",
+        "ok": true
+      },
+      "19": {
+        "T": 45,
+        "E_Z_floor": "48735/2",
+        "integer_3T_8": "135/8",
+        "equivalent": true,
+        "lambda_exc_at_floor": "6",
+        "ok": true
+      },
+      "23": {
+        "T": 66,
+        "E_Z_floor": "52371",
+        "integer_3T_8": "99/4",
+        "equivalent": true,
+        "lambda_exc_at_floor": "6",
+        "ok": true
+      },
+      "31": {
+        "T": 120,
+        "E_Z_floor": "172980",
+        "integer_3T_8": "45",
+        "equivalent": true,
+        "lambda_exc_at_floor": "6",
+        "ok": true
+      },
+      "43": {
+        "T": 231,
+        "E_Z_floor": "1281357/2",
+        "integer_3T_8": "693/8",
+        "equivalent": true,
+        "lambda_exc_at_floor": "6",
+        "ok": true
+      },
+      "47": {
+        "T": 276,
+        "E_Z_floor": "914526",
+        "integer_3T_8": "207/2",
+        "equivalent": true,
+        "lambda_exc_at_floor": "6",
+        "ok": true
+      }
+    }
+  },
+  "C_weil_vacuous": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "top_stratum_never_vacuous": true,
+    "theorem": "15.589 M: k-stratum empty for k\u22654 and p>4k\u00b2, hence QVAR vacuous on those (k,p) for k\u22657.  Fail: 4k\u00b2\u21a6k\u00b2 (p=50,k=7).  Does not cover k=m=(p+1)/2.",
+    "samples": {
+      "k7_p13": {
+        "vacuous": false,
+        "expect": false,
+        "ok": true
+      },
+      "k7_p197": {
+        "vacuous": true,
+        "expect": true,
+        "ok": true
+      },
+      "k8_p257": {
+        "vacuous": true,
+        "expect": true,
+        "ok": true
+      },
+      "k7_p193": {
+        "vacuous": false,
+        "expect": false,
+        "ok": true
+      }
+    }
+  },
+  "D_p13_k7_counterexample": {
+    "proved": true,
+    "pointwise_abs_Zpsi_sq": 2548,
+    "floor": "10647/2",
+    "pointwise_below_floor": true,
+    "lambda_exc_pointwise": "112/39",
+    "orbit_mean": "806468/85",
+    "orbit_mean_clears": true,
+    "orbit_mean_imported": false,
+    "theorem": "p=13 k=7 CP-SAT witness |Z_\u03c8|\u00b2=2548<10647/2, so pointwise and single-vector QVAR are false.  A free signed-PSL orbit averages to 806468/85>floor; that is not imported."
+  },
+  "G_kernel_ladder": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "theorem": "For k distinct P\u00b9(F_p) points, deg-d evaluation has rank min(d+1,k), so leading-coefficient ker dim = k\u2212d\u22121 (k\u2265d+1). Fail: k\u2212d.  Top d=k\u22122 is 1-dimensional with full support. Sieve normal form, not QVAR.",
+    "samples": {
+      "p13_k7": {
+        "kernel_dims": {
+          "1": 5,
+          "2": 4,
+          "3": 3,
+          "4": 2,
+          "5": 1
+        },
+        "top_full_support": true,
+        "ok": true
+      },
+      "p17_k7": {
+        "kernel_dims": {
+          "1": 5,
+          "2": 4,
+          "3": 3,
+          "4": 2,
+          "5": 1
+        },
+        "top_full_support": true,
+        "ok": true
+      },
+      "p17_k8": {
+        "kernel_dims": {
+          "1": 6,
+          "2": 5,
+          "3": 4,
+          "4": 3,
+          "5": 2,
+          "6": 1
+        },
+        "top_full_support": true,
+        "ok": true
+      },
+      "p19_k7": {
+        "kernel_dims": {
+          "1": 5,
+          "2": 4,
+          "3": 3,
+          "4": 2,
+          "5": 1
+        },
+        "top_full_support": true,
+        "ok": true
+      },
+      "p19_k9": {
+        "kernel_dims": {
+          "1": 7,
+          "2": 6,
+          "3": 5,
+          "4": 4,
+          "5": 3,
+          "6": 2,
+          "7": 1
+        },
+        "top_full_support": true,
+        "ok": true
+      }
+    }
+  },
+  "H_zero_top_scalar_weil": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "k7_empty_lambda0_from": 113,
+    "top_stratum_never_excluded": true,
+    "theorem": "If the top kernel scalar vanishes, r\u2264k\u22123 and Weil empties the class once (k\u22123)\u00b2p > 4k\u00b2(k\u22124)\u00b2 (k=7: p\u2265113).  Fail: the r=k\u22122 cutoff p>4k\u00b2 (p=113,k=7 is \u03bb=0-empty but not Weil-vacuous).  Does not cover nonzero \u03bb or k=m."
+  },
+  "I_top_not_exactly_spherical": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "p": 11,
+    "k": 6,
+    "E_abs_Zpsi_sq": "55549164/14903",
+    "V_sph": "73810/21",
+    "QVAR_threshold": "5445/2",
+    "equals_spherical": false,
+    "theorem": "Top stratum k=m at p=11 (k=6, 15.589 U) has E|Z_\u03c8|\u00b2=4p\u00b2\u00b7114771/14903 \u2260 V_sph, so the top stratum is not exactly the spherical 4-design value.  Fail: claim equality with V_sph.  Does not prove k\u22657 QVAR."
+  },
+  "J_bochner_too_weak": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "bochner_gives": "E|Z_\u03c8|\u00b2 \u2265 0",
+    "meets_qvar_floor": false,
+    "theorem": "u=|1\u0302_D|\u00b2, Q(r)=E[u(\u03be)u(r\u03be)] is an averaged autocorrelation, hence positive-definite on F_q^*.  Its \u03c8-mode is a nonnegative multiple of E|Z_\u03c8|\u00b2, so E|Z_\u03c8|\u00b2\u22650.  Fail: claim 0 meets 3q(q-1)/16 (floor is positive for every prime p\u22655).  Does not prove k\u22657 QVAR.",
+    "by_p": {
+      "5": {
+        "floor": "225/2",
+        "floor_positive": true,
+        "ok": true
+      },
+      "7": {
+        "floor": "441",
+        "floor_positive": true,
+        "ok": true
+      },
+      "11": {
+        "floor": "5445/2",
+        "floor_positive": true,
+        "ok": true
+      },
+      "13": {
+        "floor": "10647/2",
+        "floor_positive": true,
+        "ok": true
+      },
+      "17": {
+        "floor": "15606",
+        "floor_positive": true,
+        "ok": true
+      },
+      "19": {
+        "floor": "48735/2",
+        "floor_positive": true,
+        "ok": true
+      },
+      "23": {
+        "floor": "52371",
+        "floor_positive": true,
+        "ok": true
+      }
+    }
+  },
+  "K_harm4_not_1dim": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "unique_invariant_4_harmonic": false,
+    "theorem": "GAP L2(p\u00b2) Weil degree (q+1)/2: dim Harm_4(W_e)^G = 2,3,6 at p=5,7,11 (Sym^4^G \u2212 1).  Fail: claim dimension 1.  Hence E|Z_\u03c8|\u00b2\u2212V_sph is not determined by Es4\u2212ED4, so leftover 3 does not imply QVAR.  Does not prove k\u22657 QVAR.",
+    "by_p": {
+      "5": {
+        "Harm4_G": 2,
+        "is_one": false,
+        "ok": true
+      },
+      "7": {
+        "Harm4_G": 3,
+        "is_one": false,
+        "ok": true
+      },
+      "11": {
+        "Harm4_G": 6,
+        "is_one": false,
+        "ok": true
+      }
+    }
+  },
+  "L_A_psi_not_rank1": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "rank_ge_2": true,
+    "theorem": "tr A_\u03c8=0 (15.589 H) and ||A_\u03c8||_HS\u00b2=q(q-1)/32>0, hence rank(A_\u03c8)\u22652 over R.  Fail: claim rank 1.  Therefore y\u1d40A_\u03c8 y is not c(y\u00b7v)\u00b2 and QVAR is not E[(y\u00b7v)\u2074].  Does not prove k\u22657 QVAR.",
+    "by_p": {
+      "5": {
+        "HS_sq": "75/4",
+        "ok": true
+      },
+      "7": {
+        "HS_sq": "147/2",
+        "ok": true
+      },
+      "11": {
+        "HS_sq": "1815/4",
+        "ok": true
+      },
+      "13": {
+        "HS_sq": "3549/4",
+        "ok": true
+      },
+      "17": {
+        "HS_sq": "2601",
+        "ok": true
+      },
+      "19": {
+        "HS_sq": "16245/4",
+        "ok": true
+      },
+      "23": {
+        "HS_sq": "17457/2",
+        "ok": true
+      }
+    }
+  },
+  "N_lambda_mass_not_uniform": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "p11_p0": "864/14903",
+    "uniform_1_over_p": "1/11",
+    "uniform_lambda_mass": false,
+    "theorem": "\u03bb-mixture E_k=p0 E_{\u03bb=0}+p\u2260 E_{\u03bb\u22600} is an identity.  Uniform \u03bb\u2208F_p would give p0=1/p, false at p=11 full support (15.589 K: 2090880 zero vs 3397438 per nonzero class).  Fail: claim p0=1/11.  Does not prove k\u22657 QVAR."
+  },
+  "O_cs_harm4_too_weak": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "p": 5,
+    "excess": "1610/13",
+    "gap": "35/2",
+    "cs_hypothesis_excess_le_gap": false,
+    "theorem": "On the 2-design, E|Z_\u03c8|\u00b2 = V_sph + \u27e8\u03bc_4,f_4\u27e9.  CS gives \u27e8\u03bc_4,f_4\u27e9 \u2265 \u2212||\u03bc_4|| ||f_4||, and ||\u03bc||||f|| \u2265 |excess|.  At p=5, |3300/13 \u2212 V_sph| > q(q-1)(q-11)/16(q+5), so the CS hypothesis ||\u03bc||||f|| \u2264 gap is false.  Fail: claim |excess|\u2264gap.  Does not prove k\u22657 QVAR."
+  },
+  "P_top_plus_energy_identity": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "p": 7,
+    "n_top": 8820,
+    "E_abs_Zpsi_sq": "8624/15",
+    "plus_energy_second_moment": "2156/15",
+    "four_times_plus_moment": "8624/15",
+    "pointwise_min_on_top": 0,
+    "qvar_iff_plus_moment_ge_floor_over_4": true,
+    "plus_moment_bound_proved": false,
+    "theorem": "Top stratum, p=3 mod 4: ENERGY and Theorem F give |Z_\u03c8|\u00b2=(2T\u208a\u2212S)\u00b2, so E|Z_\u03c8|\u00b2=4 E[(T\u208a\u2212S/2)\u00b2].  QVAR iff that plus-energy moment \u2265 floor/4.  Fail: drop the 4.  p=7 k=4: exact 8624/15=4\u00b72156/15, pointwise min 0.  The variance bound is open; not a k\u22657 close."
+  },
+  "Q_equal_energy_not_lower_bound": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "equal_energy_is_lower_bound": false,
+    "p11_k4_actual": "9438",
+    "p11_k4_equal_energy": "10890",
+    "k_le_m_minus_1_E_eq_meets_floor": true,
+    "top_E_eq_is_zero": true,
+    "theorem": "Equal-energy signed prediction E_eq=S\u00b2(m\u2212k)/(k(m\u22121)) matches k=1,3 exactly and meets the QVAR floor for every k\u2264m\u22121, but is not a lower bound: p=11 k=4 has 9438<10890=E_eq (15.589 J).  Fail: claim actual \u2265 E_eq.  Does not prove k\u22657 QVAR."
+  },
+  "R_two_type_not_unique": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "unique_opposite_pair_moment": false,
+    "p11_k6_opp_spread": 10.311310000000049,
+    "p11_k6_same_spread": 0.6136530000003404,
+    "theorem": "p=11 top (k=6) directional-energy gram: opposite-sign pairs split 2917.8\u20132919.3 vs 2927.1\u20132928.1; same-sign stay inside 2923.7\u20132924.3.  Fail: claim a unique opposite-pair moment.  Do not prove QVAR by two-type uniqueness.  Not a k\u22657 close."
+  },
+  "S_lambda_nonzero_not_pointwise": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "top_scalar": 7,
+    "pointwise_abs_Zpsi_sq": 2548,
+    "p_mod_4": 1,
+    "lambda_nonzero_pointwise_qvar": false,
+    "theorem": "p=13 k=7 CP-SAT witness has top_scalar=7\u22600 and full-support leading (4,7,1,3,3,1,7), with |Z_\u03c8|\u00b2=2548<10647/2.  Fail: claim top_scalar=0.  \u03bb\u22600 does not give pointwise QVAR; p\u22611 (mod 4) so the T\u208a identity is the wrong congruence.  Does not prove k\u22657 QVAR."
+  },
+  "T_two_design_not_Var_a": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "C_coll": 1428,
+    "E_Q2_p7_eps_plus": "1575252/409",
+    "R4_nonzero": true,
+    "two_design_determines_Var_a": false,
+    "theorem": "On a square-direction pencil, 2-design collisions give C_coll=2p(p\u22121)(3p\u22124) (n_two=2p\u00b2(p\u22121), n_three=4p\u00b2(p\u22121)(p\u22122), E[y_i y_j]=1/p).  Fail: drop (3p\u22124).  At p=7, E[Q\u00b2]=1575252/409 \u2260 1428, so the 4-distinct remainder is the main term.  2-design does not determine Var(a_L) or top-stratum QVAR."
+  },
+  "U_second_moment_rayleigh": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "p": 7,
+    "wKw": "8624/15",
+    "all_ones_rayleigh_S2_over_m": "1764",
+    "equals_all_ones_rayleigh": false,
+    "lambda_min_bound_proved": false,
+    "rayleigh_not_automatically_eigenvalue": true,
+    "theorem": "k-stratum second-moment matrix K=E[aa\u1d40]: E|Z_\u03c8|\u00b2=w\u1d40Kw.  QVAR iff that Rayleigh \u2265 floor.  Fail: claim w\u1d40Kw=S\u00b2/m (p=7 top: 8624/15 \u2260 1764).  \u03bb_min of the sign-isotypic block is a sufficient unproved bound (multiplicity-one not assumed).  Not a k\u22657 close."
+  },
+  "V_singer_circulant_nyquist": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "lambda_min_bound_proved": false,
+    "sign_is_eigenvector_p3mod4": true,
+    "nyquist_iff_qvar_p3mod4": true,
+    "p13_has_real_sign": false,
+    "p7_top_K_multiple_of_I": false,
+    "p7_top_lambda": "2156/15",
+    "p7_top_EZ": "8624/15",
+    "p7_S2_over_m": "1764",
+    "by_p": {
+      "5": {
+        "m": 3,
+        "sign_character": false,
+        "sign_multiplicity": 0,
+        "regular_action": true,
+        "ok": true
+      },
+      "7": {
+        "m": 4,
+        "sign_character": true,
+        "sign_multiplicity": 1,
+        "regular_action": true,
+        "ok": true
+      },
+      "11": {
+        "m": 6,
+        "sign_character": true,
+        "sign_multiplicity": 1,
+        "regular_action": true,
+        "ok": true
+      },
+      "13": {
+        "m": 7,
+        "sign_character": false,
+        "sign_multiplicity": 0,
+        "regular_action": true,
+        "ok": true
+      },
+      "17": {
+        "m": 9,
+        "sign_character": false,
+        "sign_multiplicity": 0,
+        "regular_action": true,
+        "ok": true
+      },
+      "19": {
+        "m": 10,
+        "sign_character": true,
+        "sign_multiplicity": 1,
+        "regular_action": true,
+        "ok": true
+      },
+      "23": {
+        "m": 12,
+        "sign_character": true,
+        "sign_multiplicity": 1,
+        "regular_action": true,
+        "ok": true
+      }
+    },
+    "p7_by_k": {
+      "1": {
+        "n": 280,
+        "circulant": true,
+        "sign_eigenvector": true,
+        "nyquist_identity": true,
+        "lambda_nyquist": "1764",
+        "E_Z2": "7056",
+        "K_multiple_of_I": true
+      },
+      "3": {
+        "n": 2352,
+        "circulant": true,
+        "sign_eigenvector": true,
+        "nyquist_identity": true,
+        "lambda_nyquist": "196",
+        "E_Z2": "784",
+        "K_multiple_of_I": false
+      },
+      "4": {
+        "n": 8820,
+        "circulant": true,
+        "sign_eigenvector": true,
+        "nyquist_identity": true,
+        "lambda_nyquist": "2156/15",
+        "E_Z2": "8624/15",
+        "K_multiple_of_I": false
+      }
+    },
+    "theorem": "C_m acts regularly on square directions, so K^{(k)} is circulant every k.  p\u22613 mod 4: unique sign character, multiplicity one, w eigenvector, QVAR iff \u03bb_{m/2}\u2265floor/m.  Fail: |C_m|=p+1; sign at p=13; multiplicity 2; K=(S\u00b2/m)I on p=7 top (8624/15 \u2260 1764).  Bound OPEN.  p\u22611 mod 4 has no real sign (m odd); use 15.473."
+  },
+  "W_top_kernel_alternating": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "p3mod4_gcd_always_2": true,
+    "leading_energy_sign_blind_p3mod4": true,
+    "qvar_bound_proved": false,
+    "by_p": {
+      "7": {
+        "aligned": true,
+        "not_all_ones": true,
+        "full_support": true,
+        "gcd": 2,
+        "ok": true
+      },
+      "11": {
+        "aligned": true,
+        "not_all_ones": true,
+        "full_support": true,
+        "gcd": 2,
+        "ok": true
+      },
+      "19": {
+        "aligned": true,
+        "not_all_ones": true,
+        "full_support": true,
+        "gcd": 2,
+        "ok": true
+      },
+      "23": {
+        "aligned": true,
+        "not_all_ones": true,
+        "full_support": true,
+        "gcd": 2,
+        "ok": true
+      },
+      "31": {
+        "aligned": true,
+        "not_all_ones": true,
+        "full_support": true,
+        "gcd": 2,
+        "ok": true
+      },
+      "5": {
+        "aligned": true,
+        "not_all_ones": true,
+        "full_support": true,
+        "gcd": 1,
+        "ok": true
+      },
+      "13": {
+        "aligned": true,
+        "not_all_ones": true,
+        "full_support": true,
+        "gcd": 1,
+        "ok": true
+      },
+      "17": {
+        "aligned": true,
+        "not_all_ones": true,
+        "full_support": true,
+        "gcd": 1,
+        "ok": true
+      }
+    },
+    "theorem": "Singer-gauge top kernel is (\u22121)^k.  p\u22613 mod 4: gcd(m,p\u22121)=2 so the only F_p-rational C_m-characters are 1 and sign; all-ones is not the kernel, hence sign.  Fail: all-ones at p=7.  Leading energy is sign-blind and drops from Z.  Top QVAR is a lower-degree remainder.  Bound OPEN."
+  },
+  "X_top_leading_sign_isotypic": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "p7_all_saturate": true,
+    "p7_all_align": true,
+    "p11_has_lambda0": true,
+    "p7_census": {
+      "n_top": 8820,
+      "n_align": 8820,
+      "n_zero": 0,
+      "n_other": 0
+    },
+    "qvar_bound_proved": false,
+    "theorem": "Top, p\u22613 mod 4, Singer gauge: F_p-leading \u2208 span{w} (15.588 C + W).  Fail: all-ones kernel; fail: p=7 top has \u03bb=0 (0 of 8820).  p=11 top has a \u03bb=0 class (15.589 K), so saturation is not general.  Integer-energy remainder unbound.  Not a k\u22657 close."
+  },
+  "Y_psi_mode_of_Phi": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "lambda_min_bound_proved": false,
+    "constant_Phi_implies_EZ_zero": true,
+    "p7_EZ": "317520/409",
+    "by_p": {
+      "5": {
+        "prefactor_16q": 400,
+        "phi_sum": 30000,
+        "mode_floor": 45000,
+        "ok": true
+      },
+      "7": {
+        "prefactor_16q": 784,
+        "phi_sum": 230496,
+        "mode_floor": 345744,
+        "ok": true
+      },
+      "11": {
+        "prefactor_16q": 1936,
+        "phi_sum": 3513840,
+        "mode_floor": 5270760,
+        "ok": true
+      },
+      "13": {
+        "prefactor_16q": 2704,
+        "phi_sum": 9596496,
+        "mode_floor": 14394744,
+        "ok": true
+      },
+      "17": {
+        "prefactor_16q": 4624,
+        "phi_sum": 48108096,
+        "mode_floor": 72162144,
+        "ok": true
+      },
+      "19": {
+        "prefactor_16q": 5776,
+        "phi_sum": 93831120,
+        "mode_floor": 140746680,
+        "ok": true
+      },
+      "23": {
+        "prefactor_16q": 8464,
+        "phi_sum": 295512096,
+        "mode_floor": 443268144,
+        "ok": true
+      },
+      "47": {
+        "prefactor_16q": 35344,
+        "phi_sum": 21548671296,
+        "mode_floor": 32323006944,
+        "ok": true
+      }
+    },
+    "theorem": "E|Z_\u03c8|\u00b2=E|\u2211_\u03a9 \u03c8 \u03c1|\u00b2/(16q).  QVAR iff the \u03c8-mode of \u03a6 is at least 3q\u00b2(q\u22121).  Fail: 16q\u21a616p; drop q in the mode floor; \u03a6 constant (would force EZ=0, false at p=7: 317520/409).  \u2211_{squares} \u03a6=2q\u00b2(q\u22121); \u03a6(r)\u2264\u03a6(1); Bochner too weak.  Bound OPEN.  Not a k\u22657 close."
+  },
+  "Z_three_level_not_lb": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "lambda_min_bound_proved": false,
+    "three_level_is_lower_bound": false,
+    "p7_top_phi1": "266168/15",
+    "p7_top_8q2": 19208,
+    "p7_top_cs": "9604",
+    "p7_three_level_S": "976864/55",
+    "p7_true_S": "845152/45",
+    "wick_8q2_not_per_stratum": true,
+    "theorem": "k-stratum CS \u03a6(1)\u22654q\u00b2 m/k (fail: drop m/k).  \u03a6(1)=\u03a6(\u22121).  3-level S_\u25a1=2(q\u22121)(\u03a6(1)\u22124q\u00b2)/(q\u22125) is not a lower bound (p=7 top: true S_\u25a1>3-level; Wick 8q\u00b2 is global-only, \u03a6(1)=266168/15<19208).  Bound OPEN.  Not a k\u22657 close."
+  },
+  "AA_line_dft_both_congruences": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "lambda_min_bound_proved": false,
+    "eta_trivial_iff_p3mod4": true,
+    "p13_eta_legendre": true,
+    "p5_k1_EZ": "500",
+    "p5_k3_EZ": "180",
+    "p7_k4_EZ": "8624/15",
+    "p5_census": {
+      "1": {
+        "n": 60,
+        "E_Z2": "500"
+      },
+      "3": {
+        "n": 200,
+        "E_Z2": "180"
+      }
+    },
+    "p7_census": {
+      "1": {
+        "n": 280,
+        "E_Z2": "7056"
+      },
+      "3": {
+        "n": 2352,
+        "E_Z2": "784"
+      },
+      "4": {
+        "n": 8820,
+        "E_Z2": "8624/15"
+      }
+    },
+    "eta_rows": {
+      "5": {
+        "psi_Fp_gen": "(-1+0j)",
+        "ok": true
+      },
+      "7": {
+        "psi_Fp_gen": "(1+0j)",
+        "ok": true
+      },
+      "11": {
+        "psi_Fp_gen": "(1+0j)",
+        "ok": true
+      },
+      "13": {
+        "psi_Fp_gen": "(-1+0j)",
+        "ok": true
+      },
+      "17": {
+        "psi_Fp_gen": "(-1+0j)",
+        "ok": true
+      },
+      "19": {
+        "psi_Fp_gen": "(1+0j)",
+        "ok": true
+      },
+      "23": {
+        "psi_Fp_gen": "(1+0j)",
+        "ok": true
+      },
+      "29": {
+        "psi_Fp_gen": "(-1+0j)",
+        "ok": true
+      },
+      "31": {
+        "psi_Fp_gen": "(1+0j)",
+        "ok": true
+      },
+      "37": {
+        "psi_Fp_gen": "(-1+0j)",
+        "ok": true
+      },
+      "41": {
+        "psi_Fp_gen": "(-1+0j)",
+        "ok": true
+      },
+      "43": {
+        "psi_Fp_gen": "(1+0j)",
+        "ok": true
+      },
+      "47": {
+        "psi_Fp_gen": "(1+0j)",
+        "ok": true
+      }
+    },
+    "theorem": "\u0177(\u03bb \u03b1_j)=\u03c3\u0302_j(\u03bb); \u2211_\u03a9 \u03c8 \u03c1=\u2211_j \u03be_j with \u03be_j=\u2211_{\u2113_j} \u03c8 \u03c1.  \u03b7=\u03c8|F_p^* is 1 (p\u22613) or Legendre (p\u22611); fail: i^{p+1}\u21a6i^{p-1}; fail: \u03b7 trivial at p=13.  Plancherel W=4p a (fail: drop p).  K_\u03be circulant, QVAR is the trivial mode (p=5 k=1,3: 500, 180; p=7 top: 8624/15).  Unrestricted Weil is the wrong operator.  Bound OPEN.  Not a k\u22657 close."
+  },
+  "AB_jacobi_gram": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "lambda_min_bound_proved": false,
+    "unrestricted_weil_is_certificate": false,
+    "p13_deg5_n_neg": 3,
+    "p13_deg5_min_eig": -39871.022060317744,
+    "p5_affine_n_neg": 0,
+    "p5_affine_J11": 22.360679774997898,
+    "p5_S_p": 0.8944271909999159,
+    "coupled_dim_k7": 22,
+    "coupled_dim_k4": 7,
+    "J11_eta1": {
+      "5": {
+        "J11_eta1": 50,
+        "ok": true
+      },
+      "7": {
+        "J11_eta1": 196,
+        "ok": true
+      },
+      "11": {
+        "J11_eta1": 1210,
+        "ok": true
+      },
+      "13": {
+        "J11_eta1": 2366,
+        "ok": true
+      },
+      "17": {
+        "J11_eta1": 6936,
+        "ok": true
+      },
+      "19": {
+        "J11_eta1": 10830,
+        "ok": true
+      }
+    },
+    "theorem": "W=c^T J c on monomials, J_{de}(\u03b7)=\u2211_{\u03bb\u22600} \u03b7(\u03bb)G_d conj(G_e).  \u03b7=1: J=p\u03bc_{d+e}\u2212\u03bc_d\u03bc_e PSD with J_{00}=0 (fail: drop centering; fail: drop p in G_1=p/(\u03c9\u22121); fail: J_{\u03b7=1} has a negative pivot).  \u03b7=\u03c7 at p=13 deg\u22645 is indefinite (fail: claim J_\u03c7\u2ab00) so unrestricted Weil is not a certificate.  Affine p=5 recovers p\u00b2 S_p.  dim V_{p,k}=k+(k\u22122)(k\u22121)/2 includes \u03bb=0 (fail: drop leading; fail: drop constants).  Coupled LDL OPEN.  Not a k\u22657 close."
+  },
+  "AC_coupled_leading_pivot": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "lambda_min_bound_proved": false,
+    "cd_last_pivot_vanishes_p3_top": true,
+    "p13_top_alpha_zero": false,
+    "p7_expansion_ok": true,
+    "coupled_dim_p13_k7": 22,
+    "theorem": "Q=Q_<r+2\u03bb C(c_low)+\u03bb\u00b2\u03b1 on V_{p,k}, \u03bb=0 allowed.  \u03c8(\u03b7)=i^{p-1} (fail: i^{p+1}; fail: \u03c8 constant at p=7).  Top p\u22613: \u03b1=0, last CD pivot vanishes (fail: \u03b1=m J_rr).  Top p\u22611: \u03b1=m \u03c8_0 J_rr\u22600 (fail: \u03b1=0 at p=13).  Fail: drop 2\u03bb (p=7 integer expansion).  Equal-energy top has Q=0 because \u03b1=C=0.  E|Q|\u00b2 bound OPEN.  Not a k\u22657 close."
+  },
+  "AD_ridge_pythagoras": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "lambda_min_bound_proved": false,
+    "p7_inner_eq_2Z": true,
+    "p7_F2_eq_pS": true,
+    "p7_E_Z2": "8624/15",
+    "p7_lam_independent": true,
+    "ridge_floor_3pS": true,
+    "theorem": "p\u22613: Z=\u27e8y,F\u27e9/2 with ||F||\u00b2=pS (fail: drop 2; fail: drop p).  QVAR iff E[\u27e8y,F\u27e9\u00b2]\u22653pS (fail: 3\u21a61).  Pythagoras Q\u00b2=Q_low\u00b2+4\u03bb\u00b2C\u00b2+4\u03bb Q_low C (fail: drop a 4).  Actual E[Z\u00b2] independent of |\u03bb| at p=7 (fail: \u221d\u03bb\u00b2).  Bound OPEN.  Not a k\u22657 close."
+  },
+  "AE_k7_energy_empty": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "lambda_min_bound_proved": false,
+    "k7_empty_p": [
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89
+    ],
+    "k7_live_p_in_table": [
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47
+    ],
+    "by_p": {
+      "13": {
+        "minimum_quintic_b": 1,
+        "T": 21,
+        "seven_min": 7,
+        "empty_by_energy": false,
+        "ok": true
+      },
+      "17": {
+        "minimum_quintic_b": 3,
+        "T": 36,
+        "seven_min": 21,
+        "empty_by_energy": false,
+        "ok": true
+      },
+      "19": {
+        "minimum_quintic_b": 4,
+        "T": 45,
+        "seven_min": 28,
+        "empty_by_energy": false,
+        "ok": true
+      },
+      "23": {
+        "minimum_quintic_b": 6,
+        "T": 66,
+        "seven_min": 42,
+        "empty_by_energy": false,
+        "ok": true
+      },
+      "29": {
+        "minimum_quintic_b": 12,
+        "T": 105,
+        "seven_min": 84,
+        "empty_by_energy": false,
+        "ok": true
+      },
+      "31": {
+        "minimum_quintic_b": 10,
+        "T": 120,
+        "seven_min": 70,
+        "empty_by_energy": false,
+        "ok": true
+      },
+      "37": {
+        "minimum_quintic_b": 21,
+        "T": 171,
+        "seven_min": 147,
+        "empty_by_energy": false,
+        "ok": true
+      },
+      "41": {
+        "minimum_quintic_b": 30,
+        "T": 210,
+        "seven_min": 210,
+        "empty_by_energy": false,
+        "ok": true
+      },
+      "43": {
+        "minimum_quintic_b": 31,
+        "T": 231,
+        "seven_min": 217,
+        "empty_by_energy": false,
+        "ok": true
+      },
+      "47": {
+        "minimum_quintic_b": 38,
+        "T": 276,
+        "seven_min": 266,
+        "empty_by_energy": false,
+        "ok": true
+      },
+      "53": {
+        "minimum_quintic_b": 56,
+        "T": 351,
+        "seven_min": 392,
+        "empty_by_energy": true,
+        "ok": true
+      },
+      "59": {
+        "minimum_quintic_b": 68,
+        "T": 435,
+        "seven_min": 476,
+        "empty_by_energy": true,
+        "ok": true
+      },
+      "61": {
+        "minimum_quintic_b": 78,
+        "T": 465,
+        "seven_min": 546,
+        "empty_by_energy": true,
+        "ok": true
+      },
+      "67": {
+        "minimum_quintic_b": 92,
+        "T": 561,
+        "seven_min": 644,
+        "empty_by_energy": true,
+        "ok": true
+      },
+      "71": {
+        "minimum_quintic_b": 108,
+        "T": 630,
+        "seven_min": 756,
+        "empty_by_energy": true,
+        "ok": true
+      },
+      "73": {
+        "minimum_quintic_b": 116,
+        "T": 666,
+        "seven_min": 812,
+        "empty_by_energy": true,
+        "ok": true
+      },
+      "79": {
+        "minimum_quintic_b": 139,
+        "T": 780,
+        "seven_min": 973,
+        "empty_by_energy": true,
+        "ok": true
+      },
+      "83": {
+        "minimum_quintic_b": 155,
+        "T": 861,
+        "seven_min": 1085,
+        "empty_by_energy": true,
+        "ok": true
+      },
+      "89": {
+        "minimum_quintic_b": 178,
+        "T": 990,
+        "seven_min": 1246,
+        "empty_by_energy": true,
+        "ok": true
+      }
+    },
+    "theorem": "k=7 depressed-quintic b_min: 7 b_min>T empties the stratum (fail: 7\u21a66 at p=53; fail: empty at p=13; fail: \u2265 instead of > at p=41 where 7*30=T).  Exact empty p=53,59,61,67,71,73,79,83,89.  Live p=13..47 in the table; Weil p>196.  Not a top close and not a k\u22657 close."
+  },
+  "AF_p41_k7_stratum_fails_qvar": {
+    "proved": true,
+    "covers_general_k_ge_7": false,
+    "lambda_min_bound_proved": false,
+    "k7_empty": false,
+    "stratum_qvar": false,
+    "boolean_mod_translation": 6720,
+    "E_abs_Zpsi_sq": 0,
+    "QVAR_threshold": 529515,
+    "official_Z_matches_kernel": true,
+    "a_L_in_2pZ": true,
+    "maxplus_Cy_eq_py": true,
+    "theorem": "p=41 k=7 unique partition 7\u00d730=T (fail: >).  Coupled sieve + Boolean: nonempty, a_L=2p\u00b730\u22082p\u2124, official Z_\u03c8 matches the quartic kernel, E|Z_\u03c8|\u00b2 < 3q(q\u22121)/16 (fail: empty; fail: E\u2265floor; fail: drop 16).  p\u22611 so \u2211\u03c8(g_L)a_L is not Z_\u03c8.  Per-stratum QVAR false at this pair.  Not a k\u22657 close."
+  },
+  "qvar_k_ge_7_proved_general": false,
+  "p13_orbits_not_a_close": true,
+  "L_status": "OPEN"
+}

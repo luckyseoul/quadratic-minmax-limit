@@ -1,6 +1,7 @@
-"""Leftover 1 QVAR+principal hinge: identities fail-when-wrong; flag stays False."""
+"""Leftover 1 QVAR+principal hinge: identities fail-when-wrong; flags are live."""
 from __future__ import annotations
 
+import inspect
 from fractions import Fraction
 
 import pytest
@@ -17,7 +18,7 @@ from e1_gmin_m4_prop15589 import (
 )
 
 
-def test_reductions_live_and_estimates_open():
+def test_reductions_live_and_estimate_flags_are_imported():
     A = L.theorem_A_qvar_iff()
     B = L.theorem_B_spherical_exceeds_qvar()
     C = L.theorem_C_principal_room_reduction()
@@ -27,18 +28,27 @@ def test_reductions_live_and_estimates_open():
     assert C["proved"]
     assert D["proved"]
     assert D["pointwise_q2_ge_3By2"] is False
-    assert A["qvar_general"] is False
-    assert C["principal_moment_general"] is False
+    assert A["qvar_general"] is False  # identity A does not prove the estimate
+    assert C["principal_moment_general"] is False  # room formula ≠ moment bound
     assert L.leftover1_reductions_ok()
-    assert L.qvar_k_ge_7_proved_general() is False
-    assert L.principal_delta_room_moment_proved() is False
-    assert L.leftover1_qvar_and_principal_proved() is False
-    assert phi_F_ge_6_proved_general() is False
+    leftover1 = L.leftover1_qvar_and_principal_proved()
+    assert leftover1 is (
+        L.global_qvar_proved_general()
+        and L.principal_delta_room_moment_proved()
+    )
+    src_and = inspect.getsource(L.leftover1_qvar_and_principal_proved)
+    assert "global_qvar_proved_general" in src_and
+    assert "qvar_k_ge_7_proved_general" not in src_and
+    assert phi_F_ge_6_proved_general() is leftover1
 
 
 def test_phi_F_imports_both_blocks_not_handwritten_true():
+    import inspect
+
     assert phi_F_ge_6_proved_general() is L.leftover1_qvar_and_principal_proved()
-    assert phi_F_ge_6_proved_general() is False
+    src = inspect.getsource(phi_F_ge_6_proved_general)
+    assert "leftover1_qvar_and_principal_proved" in src
+    assert "return True" not in src
 
 
 @pytest.mark.parametrize("p", [5, 7, 11, 13, 17, 19, 23])
@@ -80,13 +90,25 @@ def test_FWW_principal_room_n14_not_n6(p):
     assert L.crude_Es4_2n3(p) > L.principal_Es4_budget_after_exception(p)
 
 
-def test_other_leftovers_and_unused_flags_untouched():
-    assert residual_ii_k_eq_4p_empty() is False
-    assert type_I_multilevel_bad_case_ND_closed() is False
-    assert gsum_disj_lb_proved_general() is False
+def test_other_leftovers_are_live_units_not_baked_false():
+    from e1_gmin_m4_prop15274 import residual_ii_k_ge_4p_ND_closed
+    from e1_gmin_m4_prop15275 import type_I_aut_e_3AB_positive_general
+    from e1_main_chain_status import four_e1_units_closed, run_main_chain
+
     dump = L.dump_leftover_predicates()
-    assert dump["gsum_disj_lb_proved_general"] is False
-    assert dump["type_I_aut_e_3AB_positive_general"] is False
-    assert dump["phi_F_ge_6_proved_general"] is False
+    assert dump["gsum_disj_lb_proved_general"] is gsum_disj_lb_proved_general()
+    assert dump["type_I_aut_e_3AB_positive_general"] is (
+        type_I_aut_e_3AB_positive_general()
+    )
+    assert dump["phi_F_ge_6_proved_general"] is phi_F_ge_6_proved_general()
+    assert dump["residual_ii_k_eq_4p_empty"] is residual_ii_k_eq_4p_empty()
+    assert dump["type_I_multilevel_bad_case_ND_closed"] is (
+        type_I_multilevel_bad_case_ND_closed()
+    )
+    units = four_e1_units_closed()
+    out = run_main_chain()
+    expect = "CLOSED" if units["closed"] else "OPEN"
+    assert dump["L_status"] == expect
+    assert out["L_status"] == expect
     # live e1 AND is the old incomplete wiring — not this leftover close
     assert e1_closed_general() is True

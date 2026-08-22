@@ -1,0 +1,107 @@
+{
+  "p": 41,
+  "k": 7,
+  "normalized_total_T": 210,
+  "minimum_quintic_b": 30,
+  "unique_energy_partition": [
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30
+  ],
+  "n_square_directions": 21,
+  "n_direction_subsets": 116280,
+  "n_cyclic_subset_orbits": 5538,
+  "n_min_energy_leadings": 16,
+  "min_energy_leadings": [
+    7,
+    8,
+    10,
+    11,
+    16,
+    17,
+    19,
+    20,
+    21,
+    22,
+    24,
+    25,
+    30,
+    31,
+    33,
+    34
+  ],
+  "n_types_at_min": 136,
+  "n_types_by_leading": {
+    "7": 7,
+    "8": 10,
+    "10": 10,
+    "11": 10,
+    "16": 7,
+    "17": 10,
+    "19": 7,
+    "20": 7,
+    "21": 7,
+    "22": 7,
+    "24": 10,
+    "25": 7,
+    "30": 10,
+    "31": 10,
+    "33": 10,
+    "34": 7
+  },
+  "total_coefficient_candidates": 25536,
+  "n_hit_orbits": 2,
+  "hit_orbits": [
+    {
+      "subset": [
+        0,
+        1,
+        2,
+        3,
+        12,
+        15,
+        16
+      ],
+      "orbit_size": 21,
+      "n_coeff_rep": 1064,
+      "n_boolean_weighted": 5880
+    },
+    {
+      "subset": [
+        0,
+        1,
+        2,
+        8,
+        13,
+        19,
+        20
+      ],
+      "orbit_size": 3,
+      "n_coeff_rep": 1064,
+      "n_boolean_weighted": 840
+    }
+  ],
+  "boolean_representatives_mod_translation": 6720,
+  "abs_Zpsi_sq_histogram": {
+    "0": 6720
+  },
+  "E_abs_Zpsi_sq": 0,
+  "QVAR_threshold": 529515,
+  "clears_QVAR": false,
+  "k7_empty": false,
+  "stratum_qvar": false,
+  "a_L_expected": 2460,
+  "a_L_in_2pZ_on_endpoint_tuples": true,
+  "boolean_a_L_eq_2p_gmin": 6720,
+  "boolean_a_L_all_match": true,
+  "official_Z_checked": 6,
+  "official_Z_matches_kernel": true,
+  "p_mod_4": 1,
+  "integer_signed_sum_is_Z": false,
+  "maxplus_Cy_eq_py": true,
+  "maxplus_residual": 0.0
+}

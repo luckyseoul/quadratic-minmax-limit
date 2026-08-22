@@ -1,13 +1,79 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-21 (session compact: identity + leftover-3 2/n path;
-**no flag flipped**)
+**Date:** 2026-08-22 (GLOBAL QVAR wiring shipped; **no flag flipped**)
+**Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
+**Branch:** `main` — working brain is ALWAYS main. Mesh k=6 enum is
+`mesh/k6-p13-enum` in worktree `/home/nick/quadratic-minmax-limit-k6-mesh`.
+Do not mix mesh into main. Do **not** restart cpu44 unless the user names
+cpu44 in the same turn (compaction previously replayed that request).
+
+**No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
+Gsum / pairing False. `e1_closed_general` True only by the old incomplete
+wiring. p=13 orbits / mesh k=6 are not a close.
+
+## What shipped (wiring, not a close)
+
+Leftover-1 conjunct is now **GLOBAL QVAR**, not per-stratum k≥7:
+
+| File | Role |
+|---|---|
+| `src/e1_gmin_global_qvar.py` | Mixed-k floor identities A–I, P. `global_qvar_proved_general()` is A.proved and (P or G or H or I `inequality_proved`). All inequalities False. No handwritten True. |
+| `src/e1_gmin_leftover1_qvar_principal.py` | `leftover1 = global_qvar AND principal_delta_room`. Does **not** AND `qvar_k_ge_7`. |
+| `src/e1_gmin_qvar_k_ge_7.py` | Per-stratum k≥7 is **false** at (41,7) E=0 Cy=py and (13,7) pointwise. Flag False. Not a leftover-1 import. |
+| `src/e1_gmin_r1_principal_pge11.py` | R1 L² recorded, **not** proved. `r1_l2_bound_for_p_ge_11` False. Interpolant 4/(p−3)² killed. |
+| `src/e1_gmin_m4_prop15278.py` | `phi_F_ge_6` imports leftover1 AND. |
+
+Gating tests: `tests/test_global_qvar.py`, `tests/test_leftover1_qvar_principal.py`,
+`tests/test_qvar_k_ge_7.py`, `tests/test_r1_principal_pge11.py`.
+
+## Live obstruction
+
+Prove \(\hat F(\psi)\ge 0\) / Gauss 4-distinct pairing of \(m_4\) on the
+full Max+ mixture (all \(k\), \(\lambda=0\) unsplit). Equivalently
+\(\langle m_4,\kappa_{A_\psi}\rangle\ge 0\). Import `inequality_proved`
+only if that sign is actually proved.
+
+Do **not** add another equivalent identity with `inequality_proved=False`.
+Do not set leftover 1 True until GLOBAL QVAR **and** R1. Do not set
+`qvar_k_ge_7` True. Leftover 2/3 / L stay their own units.
+
+Killed as proofs: per-stratum k≥7, CS on \(\langle\delta,\kappa_A\rangle\),
+two-level occupancy as a p-law (fails p=11 k=4/5), B-weighted 15.588
+tautology, energy-only (15.589 I), Delsarte, cyclotomy \(E[E_0 E_r]\),
+2-point fit-as-proof, pointwise SOS (Z=0 attained).
+
+Scratch Aut/Torb probes on nuka (`/tmp/qvar-nuka/`,
+`/tmp/grok-goal-f38dc225339a/implementer/probe_nuka_*.py`) are **not
+shipped**. Torb vs \(T|_V\) still undiagnosed; do not import as a theorem.
+
+## Mesh (out of QVAR scope)
+
+cpu44 hard-closed (2072 `orb*.npy` kept; stop flag still set). Uncommitted
+11-orbit × 4-thread control exists only in the mesh worktree. User:
+stop working on cpu44 every compaction.
+
+## Compute
+
+nuka (5700X3D) for serial / vcache. lucky is DNS only. Never 86 workers
+on Orin. Soft-stop mesh unless the user hard-closes a named node.
+
+## Suggested skills
+
+`agent-cost-optimization`, `graph-engineered-completion`,
+`use-available-compute`, `claude-referee` then `openai-referee`,
+`verification-before-completion`, `handoff`, `scientific-critique`,
+`grill-me`, `self-refine-loop`, `research`, `arxiv`.
+
+---
+
+**Date:** 2026-08-21 (R1 L² unit recorded, **not** proved; **no flag flipped**)
 
 `tr(Phi^2) = 4||M||_F^2 - 3n^2 + 2n^2(n-1)/p^2` is identity (I) in
 `TECHNICAL_NOTES.md` §4 / `METHOD.md`: leftovers 1 and 3 are moments of
 one four-point tensor. It is proved (index split + E[(y·z)^2]=2n). It
 does **not** close leftover 1: CS on dim Z, tr Φ, tr(Φ²) alone cannot
-get λ_min≥6, and the exceptional block still needs QVAR k≥7.
+get λ_min≥6, and the exceptional block still needs GLOBAL QVAR (mixed-k;
+per-stratum k≥7 is false).
 
 Leftover 3 next sufficient target, not imported: p=5 is already a finite
 from-C theorem (`type_I_p5_through_e_3AB_positive`). For every prime
@@ -23,22 +89,22 @@ Leftover 2: leftover+splus empty all nF at p=5 k=20 (15.528);
 leftover-only is not residual (ii). Walsh cannot flip leftover 2
 (interior 4-level only). Uniform Paley E_-[S²]<20+12/p is false.
 
+R1 (`‖P_{E_{4p}} m₄⁺‖² ≤ n/12`) is the binding leftover-1/3 face
+(15.595). `src/e1_gmin_r1_principal_pge11.py` records exact measured
+‖δ‖² vs R1 (exceeds at p=5,7; census-holds at p=11). p=5 measured
+equals κ_hyp_δ (1536/65). The interpolant κ_hyp_δ·4/(p−3)² is **killed
+as a retained δ-bound** (equality law false at p=7,11; Aut-dim
+ν_G-ratio dies at p=7; no operator identity). `r1_l2_bound_for_p_ge_11`
+is False. `principal_delta_room_moment_proved` imports that unit only.
+
 `src/e1_gmin_leftover1_qvar_principal.py` is the Max+-free leftover-1
 import. `phi_F_ge_6_proved_general` is `leftover1_qvar_and_principal_proved()`,
-which is True only if QVAR on k≥7 **and** the principal δ-moment both hold
-for every prime p≥5. Both estimates stay False. Identities A–D (QVAR iff,
-V_sph>threshold, D+ room formula, ⟨m4,κ_B⟩≥0 iff floor 6) have fail-eqs
-and tests. p=13 orbits are not imported. Aut-Schur / Gsum / pairing False.
-L OPEN. Leftovers 2 and 3 False. Live `e1` is still the old AND.
-
-Claude-referee health: CLI authenticated (opus). `suggest_direction`
-was not called this session.
-
-**Suggested skills for the next agent:** `agent-cost-optimization`,
-`graph-engineered-completion`, `use-available-compute` (mesh; lucky DNS
-only; nuka for serial/vcache), `claude-referee` then `openai-referee`,
-`verification-before-completion`, `handoff`, `scientific-critique`,
-`grill-me`, `self-refine-loop`, `research`, `arxiv`.
+which is True only if **GLOBAL** QVAR (mixed-k) **and** the principal
+δ-moment both hold for every prime p≥5. Both estimates stay False.
+Identities A–D (QVAR iff, V_sph>threshold, D+ room formula,
+⟨m4,κ_B⟩≥0 iff floor 6) have fail-eqs and tests. p=13 orbits are not
+imported. Aut-Schur / Gsum / pairing False. L OPEN. Leftovers 2 and 3
+False. Live `e1` is still the old AND.
 
 ---
 

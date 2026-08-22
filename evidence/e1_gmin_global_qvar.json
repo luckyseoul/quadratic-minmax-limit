@@ -1,0 +1,500 @@
+{
+  "title": "Global QVAR (not a close)",
+  "numbered": false,
+  "A_global_floor_iff": {
+    "proved": true,
+    "inequality_proved": false,
+    "per_stratum_equivalent": false,
+    "theorem": "On the full Max+ ensemble, \u03bb_exc=32 E|Z_\u03c8|\u00b2/[q(q-1)] \u21d4 E|Z_\u03c8|\u00b2\u22653q(q-1)/16 \u21d4 S_\u25a1\u22656q\u00b2 \u21d4 the Gauss 4-distinct pairing of m\u2084 is \u22650 \u21d4 F\u0302(\u03c8)\u22650 (15.589 E, 15.279 L/M).  Fail: drop 16.  The k-stratum restriction is not a 2-design and is not equivalent to this identity.",
+    "by_p": {
+      "5": {
+        "thr": "225/2",
+        "lambda_exc_at_floor": "6",
+        "ok": true
+      },
+      "7": {
+        "thr": "441",
+        "lambda_exc_at_floor": "6",
+        "ok": true
+      },
+      "11": {
+        "thr": "5445/2",
+        "lambda_exc_at_floor": "6",
+        "ok": true
+      },
+      "13": {
+        "thr": "10647/2",
+        "lambda_exc_at_floor": "6",
+        "ok": true
+      },
+      "17": {
+        "thr": "15606",
+        "lambda_exc_at_floor": "6",
+        "ok": true
+      },
+      "19": {
+        "thr": "48735/2",
+        "lambda_exc_at_floor": "6",
+        "ok": true
+      },
+      "23": {
+        "thr": "52371",
+        "lambda_exc_at_floor": "6",
+        "ok": true
+      },
+      "41": {
+        "thr": "529515",
+        "lambda_exc_at_floor": "6",
+        "ok": true
+      }
+    },
+    "census_formula": true
+  },
+  "B_per_stratum_is_not_global": {
+    "proved": true,
+    "p13_k7_pointwise_abs_Zpsi_sq": 2548,
+    "p13_k7_pointwise_below_floor": true,
+    "p41_k7_E_abs_Zpsi_sq": 0,
+    "p41_k7_Cy_eq_py": true,
+    "p41_k7_a_L_in_2pZ": true,
+    "p41_k7_stratum_qvar": false,
+    "imported_as_p_law": false,
+    "qvar_k_ge_7_proved_general": false,
+    "theorem": "p=13 k=7 has a Max+ witness |Z_\u03c8|\u00b2=2548<10647/2 (fail: meets floor).  p=41 k=7 is a nonempty Max+ stratum (Cy=py, a_L=2p\u00b730) with ensemble E|Z_\u03c8|\u00b2=0<529515 (fail: empty; fail: E\u2265floor).  Neither is a p-law and neither is required of the global mixture.  Per-stratum k\u22657 QVAR is false, so leftover-1 must not import qvar_k_ge_7_proved_general."
+  },
+  "C_k1_through_k6_not_a_cover": {
+    "proved": true,
+    "covers_p_le_11": true,
+    "covers_p_ge_13": false,
+    "k1_k3": true,
+    "k4": true,
+    "k5": true,
+    "k6": true,
+    "theorem": "QVAR holds on every k=1..6 stratum for every prime (15.589 FG/O/R/U).  For p\u226411 one has m\u22646, so the global ensemble is a mixture of closed strata.  Fail: claim this covers p=13 (m=7) or every p\u226513."
+  },
+  "D_do_not_split_lambda_zero": {
+    "proved": true,
+    "lambda_zero_alone_can_miss": true,
+    "mixture_clears_p11": true,
+    "theorem": "The \u03bb=0 class of a single stratum can miss QVAR (p=11 k=6: E B\u00b2=137/36<45/8) while the unsplit mixture clears (15.589 K).  Global QVAR does not split \u03bb=0.",
+    "p11_k6_lambda0_E_B2": "137/36",
+    "p11_k6_mixture_E_B2": "114771/14903"
+  },
+  "E_census_not_a_close": {
+    "proved": true,
+    "covers_general": false,
+    "by_p": {
+      "5": {
+        "E_abs_Zpsi_sq": "3300/13",
+        "thr": "225/2",
+        "V_sph": "130",
+        "clears_floor": true,
+        "clears_V_sph": true,
+        "V_sph_gap": "35/2"
+      },
+      "7": {
+        "E_abs_Zpsi_sq": "317520/409",
+        "thr": "441",
+        "V_sph": "4900/9",
+        "clears_floor": true,
+        "clears_V_sph": true,
+        "V_sph_gap": "931/9"
+      }
+    },
+    "theorem": "Exact Max+ censuses at p=5,7 have E|Z_\u03c8|\u00b2 above both the QVAR floor and V_sph.  Fail: interpolate those two values as a p-law.  V_sph>floor is a 2-design spherical average, not a 4-design, so it does not prove the floor at p\u226513."
+  },
+  "F_mean_above_floor_ordering_open": {
+    "proved": true,
+    "ordering_proved_general": false,
+    "suffices_if_exc_is_max": true,
+    "theorem": "tr(\u03a6)/dim Z = \u03bc=8(n\u22122)/(n\u22126)>6 for every prime p\u22655 (fail: drop n\u22126).  If the exceptional scalar were the maximal \u03a6-eigenvalue then \u03bb_exc\u2265\u03bc>6 and global QVAR would follow.  That ordering holds at p=5,7 (census \u03bb_exc>\u03bc) and is reported at p=11 (15.589 C) but is not a p-law: the exceptional block may drop below the principal series.  Fail: infer \u03bb_exc>6 from \u03bc>6 alone.",
+    "by_p": {
+      "5": {
+        "mu": "48/5",
+        "mu_gt_6": true,
+        "ok": true
+      },
+      "7": {
+        "mu": "96/11",
+        "mu_gt_6": true,
+        "ok": true
+      },
+      "11": {
+        "mu": "240/29",
+        "mu_gt_6": true,
+        "ok": true
+      },
+      "13": {
+        "mu": "336/41",
+        "mu_gt_6": true,
+        "ok": true
+      },
+      "17": {
+        "mu": "576/71",
+        "mu_gt_6": true,
+        "ok": true
+      },
+      "19": {
+        "mu": "720/89",
+        "mu_gt_6": true,
+        "ok": true
+      },
+      "23": {
+        "mu": "1056/131",
+        "mu_gt_6": true,
+        "ok": true
+      },
+      "41": {
+        "mu": "3360/419",
+        "mu_gt_6": true,
+        "ok": true
+      }
+    }
+  },
+  "G_nyquist_deficit_split": {
+    "proved": true,
+    "inequality_proved": false,
+    "qvar_iff_B_ge_3q2": true,
+    "bochner_only_lambda_ge_0": true,
+    "equal_density_would_suffice": true,
+    "theorem": "On T, exceptional \u03c8 is Nyquist (\u03b7).  \u2211_T Q=2q\u00b2(q\u22121) and Q(\u00b11)=8q\u00b2 force the Wick deficit A+B=8q\u00b2 (fail: 8\u21a64).  \u03bb_exc=2B/q\u00b2, so QVAR \u21d4 B\u22653q\u00b2 (fail: B\u22652q\u00b2).  PD/Bochner only gives B\u22650.  Equal density B=4q\u00b2(q\u22121)/(q\u22125)>3q\u00b2 at every p\u22655, unproved.  A\u2212B sign OPEN.",
+    "by_p": {
+      "5": {
+        "A_plus_B": 5000,
+        "eight_q2": 5000,
+        "off": 10,
+        "n_H_off": 4,
+        "n_K": 6,
+        "equal_density_B": "3000",
+        "equal_density_suffices": true,
+        "ok": true
+      },
+      "7": {
+        "A_plus_B": 19208,
+        "eight_q2": 19208,
+        "off": 22,
+        "n_H_off": 10,
+        "n_K": 12,
+        "equal_density_B": "115248/11",
+        "equal_density_suffices": true,
+        "ok": true
+      },
+      "11": {
+        "A_plus_B": 117128,
+        "eight_q2": 117128,
+        "off": 58,
+        "n_H_off": 28,
+        "n_K": 30,
+        "equal_density_B": "1756920/29",
+        "equal_density_suffices": true,
+        "ok": true
+      },
+      "13": {
+        "A_plus_B": 228488,
+        "eight_q2": 228488,
+        "off": 82,
+        "n_H_off": 40,
+        "n_K": 42,
+        "equal_density_B": "4798248/41",
+        "equal_density_suffices": true,
+        "ok": true
+      },
+      "17": {
+        "A_plus_B": 668168,
+        "eight_q2": 668168,
+        "off": 142,
+        "n_H_off": 70,
+        "n_K": 72,
+        "equal_density_B": "24054048/71",
+        "equal_density_suffices": true,
+        "ok": true
+      },
+      "19": {
+        "A_plus_B": 1042568,
+        "eight_q2": 1042568,
+        "off": 178,
+        "n_H_off": 88,
+        "n_K": 90,
+        "equal_density_B": "46915560/89",
+        "equal_density_suffices": true,
+        "ok": true
+      },
+      "23": {
+        "A_plus_B": 2238728,
+        "eight_q2": 2238728,
+        "off": 262,
+        "n_H_off": 130,
+        "n_K": 132,
+        "equal_density_B": "147756048/131",
+        "equal_density_suffices": true,
+        "ok": true
+      },
+      "41": {
+        "A_plus_B": 22606088,
+        "eight_q2": 22606088,
+        "off": 838,
+        "n_H_off": 418,
+        "n_K": 420,
+        "equal_density_B": "4747278480/419",
+        "equal_density_suffices": true,
+        "ok": true
+      }
+    }
+  },
+  "H_singer_circulant_p_eq_3_mod_4": {
+    "proved": true,
+    "inequality_proved": false,
+    "covers_p_eq_1_mod_4": false,
+    "imported_as_p_law": false,
+    "qvar_iff_nyquist_eig": true,
+    "qvar_iff_Lpp_pairing": true,
+    "qvar_iff_delta_imbalance": true,
+    "qvar_iff_Uplus_Uminus_ceiling": true,
+    "eta_block_1dim_RR_tautological": true,
+    "r_star_r_constructed": false,
+    "EN2_two_level_by_chi": true,
+    "Lpp_two_level_on_squares": false,
+    "nonsquare_L_named": true,
+    "census_p7_p11": {
+      "7": {
+        "lags_E_aa": {
+          "0": "233730/409",
+          "1": "160524/409",
+          "2": "166698/409"
+        },
+        "E_abs_Zpsi_sq": "317520/409",
+        "lambda_exc": "4320/409",
+        "circulant": true,
+        "weights_nyquist_alt": true,
+        "nunique_Lpp_on_squares": 6,
+        "Lpp_two_level_on_squares": false,
+        "N_S_even_dft_ratio_to_nyquist": {
+          "2": "1/9",
+          "4": "14/15",
+          "6": "38/45",
+          "8": "32/105",
+          "12": "1"
+        }
+      },
+      "11": {
+        "lags_E_aa": {
+          "0": "1517186330/425649",
+          "1": "413328740/141883",
+          "2": "177502160/60807",
+          "3": "414446780/141883"
+        },
+        "E_abs_Zpsi_sq": "557807580/141883",
+        "lambda_exc": "1229328/141883",
+        "circulant": true,
+        "weights_nyquist_alt": true
+      }
+    },
+    "theorem": "For p\u22613 (mod 4) the square F_p-directions form one Singer cycle of length m=(p+1)/2 under \u03b8=\u03c0^{p-1}, and \u03c8(\u03b8)=i^{p-1}=\u22121 (fail: p\u22611).  The Max+ Gram of a_L is the palindromic circulant of this cycle, so QVAR is the Nyquist eigenvalue \u03bb_\u03b7 \u2265 3p\u00b2(p\u22121)/8.  Line occupancy has Var(|D\u2229\u2113|)=(p\u22121)/2 (fail: hypergeometric (p\u22121)/4).  Z_\u03c8=\u2211_{\u25a1}\u03c8(\u03b4)N(\u03b4), so E|Z|\u00b2=((q\u22121)/2)\u2211_{\u25a1}\u03c8 L_{++} and QVAR \u21d4 \u2211\u03c8 L_{++}\u22653q/8 (fail: 3q/4).  Aut F_q^{\u00d72} is transitive on squares, so E[N(\u03b4)\u00b2] is 2-level by \u03c7 (values unnamed; 15.317 B names only the mixed sum).  \u2211_{\u25a1}N is k-pointwise constant (15.318 A; fail: \u2211\u03c7N=pk).  15.474: U_++U_-=k(q\u2212k) pointwise, \u0394=U_+\u2212U_-, \u0394\u00b2=K\u00b2\u22124U_+U_- so QVAR \u21d4 E[U_+U_-]\u2264(K\u00b2\u2212T)/4 (fail: drop 4; Z=0 saturates the product and is allowed).  L_{++} is not 2-level on squares (p=7: 6 values).  Lags are F_p-periodizations of L_{++}; theorem W names L on nonsquares, L_{++} on squares OPEN.  p=7,11 census lags are not a p-law.  Coarse {t,t+1} cyclic b-orbits miss the floor and are not this Aut-circulant.",
+    "by_p": {
+      "7": {
+        "m": 4,
+        "n_pair_classes": 2,
+        "psi_theta": -1,
+        "Var_k": "3",
+        "mean_a": 21,
+        "lambda_eta_threshold": "441/4",
+        "ok": true
+      },
+      "11": {
+        "m": 6,
+        "n_pair_classes": 3,
+        "psi_theta": -1,
+        "Var_k": "5",
+        "mean_a": 55,
+        "lambda_eta_threshold": "1815/4",
+        "ok": true
+      },
+      "19": {
+        "m": 10,
+        "n_pair_classes": 5,
+        "psi_theta": -1,
+        "Var_k": "9",
+        "mean_a": 171,
+        "lambda_eta_threshold": "9747/4",
+        "ok": true
+      },
+      "23": {
+        "m": 12,
+        "n_pair_classes": 6,
+        "psi_theta": -1,
+        "Var_k": "11",
+        "mean_a": 253,
+        "lambda_eta_threshold": "17457/4",
+        "ok": true
+      },
+      "31": {
+        "m": 16,
+        "n_pair_classes": 8,
+        "psi_theta": -1,
+        "Var_k": "15",
+        "mean_a": 465,
+        "lambda_eta_threshold": "43245/4",
+        "ok": true
+      },
+      "43": {
+        "m": 22,
+        "n_pair_classes": 11,
+        "psi_theta": -1,
+        "Var_k": "21",
+        "mean_a": 903,
+        "lambda_eta_threshold": "116487/4",
+        "ok": true
+      }
+    }
+  },
+  "I_oa_occupancy_orbit_mass": {
+    "proved": true,
+    "inequality_proved": false,
+    "covers_p_eq_1_mod_4": false,
+    "imported_as_p_law": false,
+    "qvar_iff_nyquist_occupancy_energy": true,
+    "S_j_eq_pE_minus_k2": true,
+    "square_duals_partition_Omega": true,
+    "psi_constant_on_Fp_orbit_p_eq_3": true,
+    "eta_block_1dim_RR_tautological": false,
+    "goryainov_lin_oa_basis": true,
+    "census_p5_p7_energy_lags": {
+      "5": {
+        "E_energy_lags": {
+          "0": "12300/13",
+          "1": "11400/13",
+          "2": "11400/13"
+        },
+        "unique_E": [
+          20,
+          30,
+          50
+        ],
+        "cauchy_min_attained": true,
+        "psi_constant_on_Fp_orbit": false,
+        "m_odd": true
+      },
+      "7": {
+        "E_energy_lags": {
+          "0": "2939265/409",
+          "1": "2866059/409",
+          "2": "2872233/409",
+          "3": "2866059/409"
+        },
+        "unique_E": [
+          63,
+          77,
+          91,
+          105,
+          147
+        ],
+        "cauchy_min_attained": true,
+        "psi_constant_on_Fp_orbit": true,
+        "m_even": true
+      }
+    },
+    "theorem": "Paley P(p\u00b2) is the block graph of OA(m,p) with m=(p+1)/2 quadratic slopes (Goryainov\u2013Lin; fail: nonsquare slopes).  Square-direction duals partition \u03a9: \u03c7|ker Tr=\u03c3 (fail: \u2212\u03c3) and m(p\u22121)=|\u03a9|.  Fourier of a line gives S_j=p\u2211_s n_{j,s}\u00b2\u2212k\u00b2 (fail: drop p).  \u2211_j E_j=p(p+1)(p\u00b2\u22121)/8 pointwise (fail: expectation only).  Nonsquare n=(p\u22121)/2 locked (15.305 C).  For p\u22613, \u03c8 is Nyquist-constant on each dual orbit so \u0394=p\u2211\u03c8(L_j) E_j and QVAR \u21d4 E[Nyquist E]\u00b2\u22653p\u00b2(p\u00b2\u22121)/16.  p\u22611: m odd, \u03c8 splits F_p-orbits, this pairing does not apply.  Occupancy-energy lags at p=5,7 are not a p-law.  Cauchy min E_j=k\u00b2/p (S_j=0) is attained on some Max+ rows and is compatible with Z=0; the ensemble Nyquist is OPEN.",
+    "by_p": {
+      "5": {
+        "m": 3,
+        "singer_even": false,
+        "mean_E": 30,
+        "sum_E": 90,
+        "cauchy_min_E": 20,
+        "chi_kerTr": -1,
+        "sigma": -1,
+        "ok": true
+      },
+      "7": {
+        "m": 4,
+        "singer_even": true,
+        "mean_E": 84,
+        "sum_E": 336,
+        "cauchy_min_E": 63,
+        "chi_kerTr": 1,
+        "sigma": 1,
+        "ok": true
+      },
+      "11": {
+        "m": 6,
+        "singer_even": true,
+        "mean_E": 330,
+        "sum_E": 1980,
+        "cauchy_min_E": 275,
+        "chi_kerTr": 1,
+        "sigma": 1,
+        "ok": true
+      },
+      "13": {
+        "m": 7,
+        "singer_even": false,
+        "mean_E": 546,
+        "sum_E": 3822,
+        "cauchy_min_E": 468,
+        "chi_kerTr": -1,
+        "sigma": -1,
+        "ok": true
+      },
+      "17": {
+        "m": 9,
+        "singer_even": false,
+        "mean_E": 1224,
+        "sum_E": 11016,
+        "cauchy_min_E": 1088,
+        "chi_kerTr": -1,
+        "sigma": -1,
+        "ok": true
+      },
+      "19": {
+        "m": 10,
+        "singer_even": true,
+        "mean_E": 1710,
+        "sum_E": 17100,
+        "cauchy_min_E": 1539,
+        "chi_kerTr": 1,
+        "sigma": 1,
+        "ok": true
+      },
+      "23": {
+        "m": 12,
+        "singer_even": true,
+        "mean_E": 3036,
+        "sum_E": 36432,
+        "cauchy_min_E": 2783,
+        "chi_kerTr": 1,
+        "sigma": 1,
+        "ok": true
+      },
+      "31": {
+        "m": 16,
+        "singer_even": true,
+        "mean_E": 7440,
+        "sum_E": 119040,
+        "cauchy_min_E": 6975,
+        "chi_kerTr": 1,
+        "sigma": 1,
+        "ok": true
+      },
+      "43": {
+        "m": 22,
+        "singer_even": true,
+        "mean_E": 19866,
+        "sum_E": 437052,
+        "cauchy_min_E": 18963,
+        "chi_kerTr": 1,
+        "sigma": 1,
+        "ok": true
+      }
+    }
+  },
+  "P_pairing_positivity": {
+    "proved": true,
+    "inequality_proved": false,
+    "theorem": "S_\u25a1\u22126q\u00b2 equals the Gauss 4-distinct pairing of m\u2084 and equals F\u0302(\u03c8) for F=Q\u2212Coll (15.279 L/M).  Wick already gives S_\u25a1,Wick=8q\u00b2.  Positivity of the Boolean remainder is OPEN: no SoS for F, Paley+\u03c9 is not a scheme at p\u226511, CS on \u27e8\u03c1,K\u27e9 overshoots, 1D lifts do not exhaust Max+ and some Aut-orbits have S_\u25a1=0."
+  },
+  "global_qvar_proved_general": false,
+  "qvar_k_ge_7_proved_general": false,
+  "p13_orbits_not_a_close": true,
+  "L_status": "OPEN",
+  "no_handwritten_true": true
+}

@@ -1,0 +1,457 @@
+{
+  "title": "R1 principal L2 room (not a close)",
+  "numbered": false,
+  "A_threshold": {
+    "proved": true,
+    "theorem": "Leftover-1 threshold R1(p)=n(\u03bb\u0304\u22126)\u00b2/48, \u03bb\u0304=8(n\u22122)/(n\u22126).  R1(p)/n \u2212 1/12 = 8(n+2)/(3(n-6)\u00b2)>0, so n/12 is strictly stronger at every finite n>6 (limit 1/12).  Fail: 48\u21a624; claim R1=n/12 exactly at p=5; drop 8 or 3 in the gap.",
+    "by_p": {
+      "5": {
+        "R1": "351/50",
+        "R1_per_n": "27/100",
+        "n_over_12": "13/6",
+        "gap_R1_minus_n12_per_n": "14/75",
+        "ok": true
+      },
+      "7": {
+        "R1": "1875/242",
+        "R1_per_n": "75/484",
+        "n_over_12": "25/6",
+        "gap_R1_minus_n12_per_n": "26/363",
+        "ok": true
+      },
+      "11": {
+        "R1": "22143/1682",
+        "R1_per_n": "363/3364",
+        "n_over_12": "61/6",
+        "gap_R1_minus_n12_per_n": "62/2523",
+        "ok": true
+      },
+      "13": {
+        "R1": "57375/3362",
+        "R1_per_n": "675/6724",
+        "n_over_12": "85/6",
+        "gap_R1_minus_n12_per_n": "86/5043",
+        "ok": true
+      },
+      "17": {
+        "R1": "271875/10082",
+        "R1_per_n": "1875/20164",
+        "n_over_12": "145/6",
+        "gap_R1_minus_n12_per_n": "146/15123",
+        "ok": true
+      },
+      "19": {
+        "R1": "521823/15842",
+        "R1_per_n": "2883/31684",
+        "n_over_12": "181/6",
+        "gap_R1_minus_n12_per_n": "182/23763",
+        "ok": true
+      },
+      "23": {
+        "R1": "1609875/34322",
+        "R1_per_n": "6075/68644",
+        "n_over_12": "265/6",
+        "gap_R1_minus_n12_per_n": "266/51483",
+        "ok": true
+      },
+      "47": {
+        "R1": "113455875/607202",
+        "R1_per_n": "102675/1214404",
+        "n_over_12": "1105/6",
+        "gap_R1_minus_n12_per_n": "1106/910803",
+        "ok": true
+      }
+    },
+    "limit_1_over_12": true,
+    "exact_n_over_12_at_p5": false,
+    "n_over_12_strictly_below_leftover1": true
+  },
+  "B_measured": {
+    "proved": true,
+    "theorem": "Exact \u2016\u03b4\u2016\u00b2/n exceeds both R1/n and 1/12 at p=5 and p=7; holds vs both at p=11.  Fail: claim the p=5 or p=7 measurement is \u2264 R1 or \u2264 n/12.  p=11 is census, not a proof for p\u226511.  A uniform n/12 claim for all p\u22655 is false.",
+    "by_p": {
+      "5": {
+        "delta_sq": "1536/65",
+        "R1": "351/50",
+        "delta_sq_per_n": "768/845",
+        "R1_per_n": "27/100",
+        "n_over_12": "1/12",
+        "meets_R1": false,
+        "exceeds_n_over_12": true
+      },
+      "7": {
+        "delta_sq": "19180800/1840091",
+        "R1": "1875/242",
+        "delta_sq_per_n": "383616/1840091",
+        "R1_per_n": "75/484",
+        "n_over_12": "1/12",
+        "meets_R1": false,
+        "exceeds_n_over_12": true
+      },
+      "11": {
+        "delta_sq": "1382747375360/583792784981",
+        "R1": "22143/1682",
+        "delta_sq_per_n": "11333994880/583792784981",
+        "R1_per_n": "363/3364",
+        "n_over_12": "1/12",
+        "meets_R1": true,
+        "exceeds_n_over_12": false
+      }
+    },
+    "p11_is_census_not_plaw": true,
+    "n_over_12_not_claimed_at_p5_p7": true
+  },
+  "C_moment_problem_too_weak": {
+    "proved": true,
+    "theorem": "E s\u00b2=2n and |s|\u2264A=(p\u22121)\u00b2\u22122 (sharp at p=5,7) give E s\u2074 \u2264 2n A\u00b2 = \u0398(n\u00b3), which exceeds the leftover-1 Es4 budget at every prime p\u22655.  Fail: claim 2n A\u00b2 \u2264 12 n\u00b2 at p=11.",
+    "by_p": {
+      "5": {
+        "majorant_2n_A2": "10192",
+        "leftover1_Es4_budget": "221572/25",
+        "too_weak": true,
+        "ok": true
+      },
+      "7": {
+        "majorant_2n_A2": "115600",
+        "leftover1_Es4_budget": "3766900/121",
+        "too_weak": true,
+        "ok": true
+      },
+      "11": {
+        "majorant_2n_A2": "2343376",
+        "leftover1_Es4_budget": "152229892/841",
+        "too_weak": true,
+        "ok": true
+      },
+      "13": {
+        "majorant_2n_A2": "6855760",
+        "leftover1_Es4_budget": "588454660/1681",
+        "too_weak": true,
+        "ok": true
+      },
+      "17": {
+        "majorant_2n_A2": "37419280",
+        "leftover1_Es4_budget": "5114688820/5041",
+        "too_weak": true,
+        "ok": true
+      },
+      "19": {
+        "majorant_2n_A2": "75067216",
+        "leftover1_Es4_budget": "12509165572/7921",
+        "too_weak": true,
+        "ok": true
+      },
+      "23": {
+        "majorant_2n_A2": "246263440",
+        "leftover1_Es4_budget": "58013364340/17161",
+        "too_weak": true,
+        "ok": true
+      },
+      "29": {
+        "majorant_2n_A2": "1029806416",
+        "leftover1_Es4_budget": "372289580932/43681",
+        "too_weak": true,
+        "ok": true
+      },
+      "31": {
+        "majorant_2n_A2": "1551521296",
+        "leftover1_Es4_budget": "635347614772/57121",
+        "too_weak": true,
+        "ok": true
+      },
+      "37": {
+        "majorant_2n_A2": "4587954640",
+        "leftover1_Es4_budget": "2621863664260/116281",
+        "too_weak": true,
+        "ok": true
+      },
+      "41": {
+        "majorant_2n_A2": "8590323856",
+        "leftover1_Es4_budget": "5965555229812/175561",
+        "too_weak": true,
+        "ok": true
+      },
+      "43": {
+        "majorant_2n_A2": "11487182800",
+        "leftover1_Es4_budget": "8735355415300/212521",
+        "too_weak": true,
+        "ok": true
+      },
+      "47": {
+        "majorant_2n_A2": "19752962320",
+        "leftover1_Es4_budget": "17805947497780/303601",
+        "too_weak": true,
+        "ok": true
+      }
+    },
+    "A_sharp_at_p5_p7": true
+  },
+  "D_hecke_gap": {
+    "proved": true,
+    "theorem": "D = n(\u03bb\u0304\u22126)\u00b2 \u2212 2\u2211_c \u2016P_c(\u03a6\u2212\u03bb\u0304 I)\u2016_F\u00b2 = 2\u2211_c dim(c)(\u03c4 \u2212 (\u03bb_c\u2212\u03bb\u0304)\u00b2), \u03c4=16(n+10)\u00b2/(n\u22126)\u00b3.  Hecke coefficients of the isotypic deviation norms are \u22122, so a dual SOS in End_G(Z) from traces alone cannot prove D\u22650.  Fail: \u22122\u21a6+2; 16\u21a68 in \u03c4; claim D\u22650 at p=5 or p=7.",
+    "D_p5": "-259128/325",
+    "D_p7": "-2599817400/20241001",
+    "D_p11": "8773359353775528/16929990764449",
+    "D_negative_p5_p7": true,
+    "D_positive_p11_census": true,
+    "hecke_deviation_coeff": -2,
+    "hecke_dual_nonneg_coeffs_p_ge_11": false,
+    "identity_p5": true,
+    "identity_p7": true,
+    "tau_matches_R1": true,
+    "dim_Z_p5": 65,
+    "n_principal_p5": 2,
+    "n5": 26,
+    "n7": 50
+  },
+  "E_known_majorants_too_weak": {
+    "proved": true,
+    "proves_r1_for_p_ge_11": false,
+    "theorem": "15.100/15.102 room/24 = 4n(p\u00b2\u22129)/(3(p\u00b2\u22125)) and the \u03ba_hyp form both exceed n/12 and R1(p) at every prime p\u22655.  Together with the \u0398(n\u00b3) 2-design+distance majorant (C), no shipped Max+-free estimate proves \u2016\u03b4\u2016\u00b2\u2264n/12 for p\u226511.  Fail: claim room/24 \u2264 n/12 at p=11; /24\u21a6/12.",
+    "by_p": {
+      "5": {
+        "n_over_12": "13/6",
+        "R1": "351/50",
+        "room_over_24": "416/15",
+        "kappa_hyp_delta": "1536/65",
+        "room_over_24_exceeds_n12": true,
+        "ok": true
+      },
+      "7": {
+        "n_over_12": "25/6",
+        "R1": "1875/242",
+        "room_over_24": "2000/33",
+        "kappa_hyp_delta": "3072/55",
+        "room_over_24_exceeds_n12": true,
+        "ok": true
+      },
+      "11": {
+        "n_over_12": "61/6",
+        "R1": "22143/1682",
+        "room_over_24": "13664/87",
+        "kappa_hyp_delta": "268800/1769",
+        "room_over_24_exceeds_n12": true,
+        "ok": true
+      },
+      "13": {
+        "n_over_12": "85/6",
+        "R1": "57375/3362",
+        "room_over_24": "27200/123",
+        "kappa_hyp_delta": "150528/697",
+        "room_over_24_exceeds_n12": true,
+        "ok": true
+      },
+      "17": {
+        "n_over_12": "145/6",
+        "R1": "271875/10082",
+        "room_over_24": "81200/213",
+        "kappa_hyp_delta": "774144/2059",
+        "room_over_24_exceeds_n12": true,
+        "ok": true
+      },
+      "19": {
+        "n_over_12": "181/6",
+        "R1": "521823/15842",
+        "room_over_24": "127424/267",
+        "kappa_hyp_delta": "7603200/16109",
+        "room_over_24_exceeds_n12": true,
+        "ok": true
+      },
+      "23": {
+        "n_over_12": "265/6",
+        "R1": "1609875/34322",
+        "room_over_24": "275600/393",
+        "kappa_hyp_delta": "4832256/6943",
+        "room_over_24_exceeds_n12": true,
+        "ok": true
+      },
+      "29": {
+        "n_over_12": "421/6",
+        "R1": "6366783/87362",
+        "room_over_24": "700544/627",
+        "kappa_hyp_delta": "97843200/87989",
+        "room_over_24_exceeds_n12": true,
+        "ok": true
+      },
+      "31": {
+        "n_over_12": "481/6",
+        "R1": "9467523/114242",
+        "room_over_24": "915824/717",
+        "kappa_hyp_delta": "146227200/114959",
+        "room_over_24_exceeds_n12": true,
+        "ok": true
+      },
+      "37": {
+        "n_over_12": "685/6",
+        "R1": "27177375/232562",
+        "room_over_24": "1863200/1023",
+        "kappa_hyp_delta": "84837888/46717",
+        "room_over_24_exceeds_n12": true,
+        "ok": true
+      },
+      "41": {
+        "n_over_12": "841/6",
+        "R1": "50159763/351122",
+        "room_over_24": "2812304/1257",
+        "kappa_hyp_delta": "786508800/352379",
+        "room_over_24_exceeds_n12": true,
+        "ok": true
+      },
+      "43": {
+        "n_over_12": "925/6",
+        "R1": "66669375/425042",
+        "room_over_24": "3404000/1383",
+        "kappa_hyp_delta": "209459712/85285",
+        "room_over_24_exceeds_n12": true,
+        "ok": true
+      },
+      "47": {
+        "n_over_12": "1105/6",
+        "R1": "113455875/607202",
+        "room_over_24": "4862000/1653",
+        "kappa_hyp_delta": "357519360/121771",
+        "room_over_24_exceeds_n12": true,
+        "ok": true
+      }
+    }
+  },
+  "G_interpolating_majorant_algebra_only": {
+    "proved": true,
+    "proves_delta_le_B": false,
+    "B_le_n12_algebra_p_ge_11": true,
+    "theorem": "B(p)=\u03ba_hyp_\u03b4(p)\u00b74/(p\u22123)\u00b2 equals measured \u2016\u03b4\u2016\u00b2 at p=5 and dominates p=7,11 census.  B\u2264n/12 for p\u226511 follows from h(p)=p\u00b3\u22123p\u00b2\u221269p\u2212177 with h(11)=32 and h'>0 for p\u22657 (sufficient comparison (p\u00b2\u22125)(p\u22123)\u226564(p+3)).  Fail: 4\u21a62; (p\u22123)\u21a6(p\u22121); drop 69 or 3 in h; claim B\u2264n/12 at p=5.  \u2016\u03b4\u2016\u00b2\u2264B is not a bound (theorem H).",
+    "by_p": {
+      "5": {
+        "B": "1536/65",
+        "n_over_12": "13/6",
+        "B_per_n": "768/845",
+        "h": -472,
+        "B_le_n12": false,
+        "ge_measured": true,
+        "ok": true
+      },
+      "7": {
+        "B": "768/55",
+        "n_over_12": "25/6",
+        "B_per_n": "384/1375",
+        "h": -464,
+        "B_le_n12": false,
+        "ge_measured": true,
+        "ok": true
+      },
+      "11": {
+        "B": "16800/1769",
+        "n_over_12": "61/6",
+        "B_per_n": "8400/107909",
+        "h": 32,
+        "B_le_n12": true,
+        "ge_measured": true,
+        "ok": true
+      },
+      "13": {
+        "B": "150528/17425",
+        "n_over_12": "85/6",
+        "B_per_n": "75264/1481125",
+        "h": 616,
+        "B_le_n12": true,
+        "ok": true
+      },
+      "17": {
+        "B": "110592/14413",
+        "n_over_12": "145/6",
+        "B_per_n": "55296/2089885",
+        "h": 2696,
+        "B_le_n12": true,
+        "ok": true
+      },
+      "19": {
+        "B": "118800/16109",
+        "n_over_12": "181/6",
+        "B_per_n": "59400/2915729",
+        "h": 4288,
+        "B_le_n12": true,
+        "ok": true
+      },
+      "23": {
+        "B": "1208064/173575",
+        "n_over_12": "265/6",
+        "B_per_n": "604032/45997375",
+        "h": 8816,
+        "B_le_n12": true,
+        "ok": true
+      },
+      "29": {
+        "B": "7526400/1143857",
+        "n_over_12": "421/6",
+        "B_per_n": "3763200/481563797",
+        "h": 19688,
+        "B_le_n12": true,
+        "ok": true
+      },
+      "31": {
+        "B": "5222400/804713",
+        "n_over_12": "481/6",
+        "B_per_n": "2611200/387066953",
+        "h": 24592,
+        "B_le_n12": true,
+        "ok": true
+      },
+      "37": {
+        "B": "4990464/794189",
+        "n_over_12": "685/6",
+        "B_per_n": "2495232/544019465",
+        "h": 43816,
+        "B_le_n12": true,
+        "ok": true
+      },
+      "41": {
+        "B": "41395200/6695201",
+        "n_over_12": "841/6",
+        "B_per_n": "20697600/5630664041",
+        "h": 60872,
+        "B_le_n12": true,
+        "ok": true
+      },
+      "43": {
+        "B": "13091232/2132125",
+        "n_over_12": "925/6",
+        "B_per_n": "6545616/1972215625",
+        "h": 70816,
+        "B_le_n12": true,
+        "ok": true
+      },
+      "47": {
+        "B": "8125440/1339481",
+        "n_over_12": "1105/6",
+        "B_per_n": "812544/296025301",
+        "h": 93776,
+        "B_le_n12": true,
+        "ok": true
+      }
+    },
+    "equals_measured_p5": true,
+    "delta_sq_le_B": false,
+    "h11": 32
+  },
+  "H_interpolant_killed": {
+    "proved": true,
+    "interpolant_retained_as_delta_bound": false,
+    "equality_law_fails_p7_p11": true,
+    "nu_G_ratio_killed_p7": true,
+    "nu_G_p7_majorant": "12288/2695",
+    "measured_p7": "19180800/1840091",
+    "theorem": "Killed as a \u03b4-bound.  (i) \u03b4\u00b2=\u03ba_hyp_\u03b4\u00b74/(p\u22123)\u00b2 is false at p=7 and p=11.  Fail: claim equality at p=7.  (ii) the Aut-dim interpolant \u03ba_hyp_\u03b4\u00b7(2/\u03bd_G)\u00b2 is false at p=7 (19180800/1840091 > 12288/2695).  Fail: \u03bd_G(5)\u21a61.  (iii) no operator identity yields 4/(p\u22123)\u00b2.  Do not retain B as a bound on \u03b4.  r1_l2 stays False.  p=5 measured=\u03ba_hyp_\u03b4 still holds."
+  },
+  "r1_l2_bound_for_p_ge_11": false,
+  "interpolant_retained_as_delta_bound": false,
+  "flags_not_flipped": [
+    "type_I",
+    "phi_F_ge_6",
+    "residual_ii",
+    "e1",
+    "L",
+    "qvar_k_ge_7"
+  ],
+  "L_status": "OPEN",
+  "p13_orbits_not_a_close": true
+}

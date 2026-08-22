@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """
 Leftover 1 hinge — Max+-free reductions for
-  (i)  QVAR on every k≥7 stratum (equivalently global λ_exc≥6)
+  (i)  GLOBAL QVAR on the full Max+ ensemble (all k mixed; λ=0 unsplit)
   (ii) principal ||δ||² room after QVAR
 Do **not** number this unless both estimates are proved for all primes p≥5.
+Per-stratum QVAR on every k≥7 is false at (41,7) and is **not** equivalent
+to (i).
 
-Does **not** treat G_{u,disj} as a Gram.  Does **not** flip Aut-Schur /
-Gsum / pairing / L.  p=13 orbits are not a close.
+Does **not** treat G_{u,disj} as a Gram.  Aut-Schur / Gsum / pairing stay
+their own units.  L follows the four-leftover AND and may close if leftover
+1, leftover 2/3, and lemma D are all actually proved.  p=13 orbits are not
+a close.
 
 IDENTITIES (proved Max+-free Fraction)
   A. λ_exc = 32 E|Z_ψ|² / [q(q-1)]  (15.589 E).  QVAR
@@ -25,13 +29,23 @@ IDENTITIES (proved Max+-free Fraction)
      (15.277).  Fail: claim pointwise q²≥3||By||² (false, 15.277 C).
 
 OPEN (blocks leftover 1)
-  E. QVAR on k≥7, all p≥13.  k=1..6 closed (15.589).  Pointwise and
-     orbitwise QVAR are false.  V_sph>threshold is not a 4-design.
+  E. GLOBAL QVAR, all primes p≥13: E|Z_ψ|² ≥ 3q(q-1)/16 on the full
+     Max+ mixture (all k; do not split λ=0; do not require each
+     k-stratum).  k=1..6 closed (15.589).  Per-stratum k≥7 is false
+     at p=41 k=7 (E=0, Cy=py) and pointwise at p=13 k=7; those are
+     not p-laws.  V_sph>threshold is not a 4-design.  Floor iff
+     F̂(ψ)≥0 / Gauss 4-dist pairing of m₄ (15.279 L).
   F. The moment bound (C), equivalently ||δ||²≤B_min.  Crude
      E[s⁴]≤2n³ is Θ(n³) vs Θ(n²) budget.
 
-Until E∧F: leftover1_qvar_and_principal_proved is False, so
-phi_F_ge_6_proved_general stays False.
+Until E∧F: leftover1_qvar_and_principal_proved stays False, so
+phi_F_ge_6_proved_general stays False.  If E∧F both hold, leftover 1 /
+phi_F flip; L still needs leftover 2/3 and lemma D.  E is imported from
+`e1_gmin_global_qvar.global_qvar_proved_general` (not
+`qvar_k_ge_7_proved_general`).  F is imported from
+`e1_gmin_r1_principal_pge11.r1_l2_bound_for_p_ge_11` (currently False):
+measured ‖δ‖² exceeds n/12 at p=5,7; 2-design+sharp min-distance cannot
+prove R1; p≥11 remains open.
 """
 from __future__ import annotations
 
@@ -216,31 +230,50 @@ def theorem_D_floor_iff_m4_pairing() -> dict:
 
 
 def qvar_k_ge_7_proved_general() -> bool:
-    """k=1..6 closed; k≥7 from p=13 remains open. Not a p=13 census."""
-    return False
+    """Per-stratum k≥7 unit.  False at (41,7); not the leftover-1 conjunct."""
+    from e1_gmin_qvar_k_ge_7 import qvar_k_ge_7_proved_general as _qvar
+
+    return bool(_qvar())
+
+
+def global_qvar_proved_general() -> bool:
+    """True only by importing the global (mixed-k) QVAR unit."""
+    from e1_gmin_global_qvar import global_qvar_proved_general as _g
+
+    return bool(_g())
 
 
 def principal_delta_room_moment_proved() -> bool:
-    """The D+ reduction is proved; the moment bound is not."""
-    return False
+    """True only by importing the R1 L² unit. False: interpolant 4/(p−3)²
+    is not a retained δ-bound; p=5,7 exceed n/12 (census)."""
+    from e1_gmin_r1_principal_pge11 import r1_l2_bound_for_p_ge_11
+
+    return bool(r1_l2_bound_for_p_ge_11())
 
 
 def leftover1_qvar_and_principal_proved() -> bool:
     """Both leftover-1 blocks, all primes p≥5.  False until E∧F."""
     return bool(
-        qvar_k_ge_7_proved_general() and principal_delta_room_moment_proved()
+        global_qvar_proved_general() and principal_delta_room_moment_proved()
     )
 
 
 def leftover1_reductions_ok() -> bool:
+    """Identities A–D.  Independent of whether the two estimates are proved."""
     return bool(
         theorem_A_qvar_iff()["proved"]
         and theorem_B_spherical_exceeds_qvar()["proved"]
         and theorem_C_principal_room_reduction()["proved"]
         and theorem_D_floor_iff_m4_pairing()["proved"]
         and theorem_D_floor_iff_m4_pairing()["pointwise_q2_ge_3By2"] is False
-        and not leftover1_qvar_and_principal_proved()
     )
+
+
+def live_L_status() -> str:
+    """CLOSED only if leftover 1, leftover 2/3, and lemma D are all proved."""
+    from e1_main_chain_status import four_e1_units_closed
+
+    return "CLOSED" if four_e1_units_closed().get("closed") else "OPEN"
 
 
 def dump_leftover_predicates() -> dict:
@@ -269,8 +302,10 @@ def dump_leftover_predicates() -> dict:
         "e1_closed_general": bool(e1_closed_general()),
         "gsum_disj_lb_proved_general": bool(gsum_disj_lb_proved_general()),
         "qvar_k_ge_7_proved_general": qvar_k_ge_7_proved_general(),
+        "global_qvar_proved_general": global_qvar_proved_general(),
         "principal_delta_room_moment_proved": principal_delta_room_moment_proved(),
         "leftover1_qvar_and_principal_proved": leftover1_qvar_and_principal_proved(),
+        "L_status": live_L_status(),
     }
 
 
@@ -292,13 +327,14 @@ def main() -> dict:
         "proved": {
             "reductions": leftover1_reductions_ok(),
             "qvar_k_ge_7": qvar_k_ge_7_proved_general(),
+            "global_qvar": global_qvar_proved_general(),
             "principal_moment": principal_delta_room_moment_proved(),
             "leftover1": leftover1_qvar_and_principal_proved(),
             "phi_F_ge_6": dump["phi_F_ge_6_proved_general"],
             "gsum_disj_lb_proved_general": dump["gsum_disj_lb_proved_general"],
         },
         "predicates": dump,
-        "L_status": "OPEN",
+        "L_status": dump["L_status"],
     }
     path = ROOT / "evidence" / "e1_gmin_leftover1_qvar_principal.json"
     write_json_atomic(path, out)
@@ -307,7 +343,8 @@ def main() -> dict:
     print(f"  B V_sph>thr: {B['proved']}", flush=True)
     print(f"  C room reduction: {C['proved']}", flush=True)
     print(f"  D m4 pairing iff: {D['proved']}", flush=True)
-    print(f"  qvar k>=7: {qvar_k_ge_7_proved_general()}", flush=True)
+    print(f"  qvar k>=7 (not leftover-1): {qvar_k_ge_7_proved_general()}", flush=True)
+    print(f"  global qvar: {global_qvar_proved_general()}", flush=True)
     print(f"  principal moment: {principal_delta_room_moment_proved()}", flush=True)
     print(f"  leftover1 both: {leftover1_qvar_and_principal_proved()}", flush=True)
     print(f"  phi_F_ge_6: {dump['phi_F_ge_6_proved_general']}", flush=True)

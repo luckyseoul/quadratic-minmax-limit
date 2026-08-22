@@ -164,6 +164,7 @@
   "proved": {
     "reductions": true,
     "qvar_k_ge_7": false,
+    "global_qvar": false,
     "principal_moment": false,
     "leftover1": false,
     "phi_F_ge_6": false,
@@ -179,8 +180,10 @@
     "e1_closed_general": true,
     "gsum_disj_lb_proved_general": false,
     "qvar_k_ge_7_proved_general": false,
+    "global_qvar_proved_general": false,
     "principal_delta_room_moment_proved": false,
-    "leftover1_qvar_and_principal_proved": false
+    "leftover1_qvar_and_principal_proved": false,
+    "L_status": "OPEN"
   },
   "L_status": "OPEN"
 }
