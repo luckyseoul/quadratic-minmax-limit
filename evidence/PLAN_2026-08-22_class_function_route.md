@@ -444,3 +444,17 @@ p=7 at k=8: 3072/409).  That is 15.277 G, named.
 Not proved.  Do not replace leftover 1 by QVAR alone.  The 6+4/n
 trace is false (mixes Wick-6 with λ̄; “only k=4 gets 4-point” dies at
 p=7).
+
+Parseval (character orthogonality, Max+-free): even α satisfy
+∑_{α(−1)=1} |Z_α|² = (q−1) ∑_{a≠0} N(a)².
+At p=5 this checks: E∑ N²=1200, (q−1)∑N²=28800, and the even Fourier
+mass (trivial 26100 + χ 900 + the rest 1800) matches.  Threshold
+3q(q−1)/16=112.5; min E|Z_α|²=1500/13≈115.38; gap 75/26.  Mean of
+the leftover characters is 180, so the average clears and the min
+just clears.  Average > threshold is not a proof of the min
+(equal-density shortcut, already killed).
+
+p=11 even-character scan (37.4M, 86-way fork) is **not** a Step 5
+gate: that array is labeled by `paley_conference_prime_power`, not
+15590 `field_ops`.  Outliers (λ̂=66 vs Φ∈[8.05,8.66]) are a
+coordinate mismatch, not a counterexample.
