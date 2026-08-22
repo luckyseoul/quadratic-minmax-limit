@@ -21,6 +21,11 @@ PROVED
      (`scripts/phi_part_scalar_check.py`, no dim-Z basis needed, no Max±
      data): ⟨W,Φ_part W⟩/‖W‖² = 8.727272727 = λ̄(7) on three independent
      random W, deviation 0.0e0 / 0.0e0 / 1.8e−15 (Z-residual ≤ 7e−15).
+     Verified DIRECTLY at p=11 the same way (8.8M four-sets, chunked):
+     ⟨W,Φ_part W⟩/‖W‖² = 8.275862069 = λ̄(11) on three independent random
+     W, deviations 1.8e−15 / 0.0e0 / 1.8e−15 (Z-residual ≤ 1.6e−14).
+     So Theorem A is now directly verified at p=5,7,11 — data-free at
+     every prime, needing no Max± ensemble.
   B. Consequence:  **all spectral deviation of Φ comes from δ.**  The
      particular solution — the entire explicit, Max-free part of the
      moment tensor — contributes a perfectly flat spectrum and cannot
