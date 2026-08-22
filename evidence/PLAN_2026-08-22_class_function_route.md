@@ -718,3 +718,38 @@ q-dependent formula on one side is a short formula on the other.
 Bounded-term cosine/Jacobi on λ failed the gate; Aut leftover
 dofs of Γ(t) remain.  Floor F̂(ψ)≥0 still OPEN.  No flag flipped.
 No identity file.
+
+---
+
+# Step 10: involution 4-distinct mass is 2(n−2); Kloosterman is not Γ(t)
+
+`scripts/involution_kloosterman.py`.
+
+Involution dilation t=−1, s=∑ d_i y_i y_{πi}, π(x)=−x.  Index split of
+E[s²] (empirical, p=5 and p=7, exact):
+
+| |{i,πi,j,πj}| | #(i,j) p=5 | mass | 2-point pred |
+|---|---|---|---|
+| 1 (fixed pts) | 2 | 2 | 2 |
+| 2 | 50=2q | 2q | 2q |
+| 3 | 96 | 0 | 0 |
+| 4 (two 2-cycles) | 528 | **2(n−2)** | unknown |
+
+So Γ(−1)=2(n−2) iff the 4-distinct mass is 2(n−2).  2-point/Boolean
+on collisions already match and cannot supply it.
+
+Those 4-sets are involution rectangles {a,−a,b,−b}.  m₄ is **not**
+constant on them (p=5: six values, all the positive Aut-orbit m₄'s;
+p=7: ten).  The mean is **2/(q−3)** = 1/11 at p=5, 1/23 at p=7.
+Boolean on the cycle monomials m_P=z_a z_{−a}=±1 gives this mean
+iff E[(∑_P m_P)²]=q−1.  That is equivalent to the involution identity,
+not a 2-point proof.  (DFT: ∑_x z_x z_{−x}=(1/q)∑_ξ ẑ(ξ)², square not
+|ẑ|²; the |ẑ|² Plancherel would have forced the pairing constant,
+which is false.)
+
+Kloosterman Kl(1,t) and χ-Bessel ∑ χ(x) e(Tr(t x+x^{−1})) do not
+linearly give Γ(t) (maxerr hundreds including identity; on leftover,
+|Kl| takes more values than Γ and is not monotone with the binding
+orbit at p=7).  Not a formula.
+
+No identity file.  Floor still OPEN.  No flag flipped.

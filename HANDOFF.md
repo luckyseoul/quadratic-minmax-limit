@@ -123,6 +123,11 @@ a_j=A+B/q predicts p=11 λ_min≈5.6<6.  Re J(χ,α_k) is not linear
 in λ−8 even at p=5,7.  Paley+order grouping of Γ(t) is a p=5,7
 artifact.  No identity file.  No flag flipped.
 
+Step 10: involution E[s²] splits as 2-point mass 2+2q and
+4-distinct mass 2(n−2).  Mean m₄ on {a,−a,b,−b} is 2/(q−3), not
+constant.  2-point cannot prove Γ(−1)=2(n−2).  Kloosterman/Bessel
+are not a formula for Γ(t).  No flag flipped.
+
 ## 15.597 Theorem A* (proved — not a census)
 
 `src/e1_gmin_m4_prop15597.py`. Distinct from 15.108's old "Theorem A*"
