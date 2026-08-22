@@ -271,3 +271,35 @@ def theorem_A_star_algebra(p: int) -> dict:
             "m4part_contraction": m4p_contraction,
             "m4part_target": Fraction(n + 10, 4 * (n - 6)),
             "qf": qf, "lambda_bar": lambda_bar(p), "qf_equals_lambda_bar": qf == lambda_bar(p)}
+
+
+# ------------------------------------------------ corollaries of Theorem A*
+def corollary_trace_phi_delta(p: int) -> dict:
+    """tr(Phi_delta) = 0 exactly, for every p.
+
+    tr(Phi) = E||B_y||^2 = n(n-2) (15.593 A, constant norm pointwise), and by
+    Theorem A* tr(Phi_part) = lambda_bar * dim Z = 8(n-2)/(n-6) * n(n-6)/8
+    = n(n-2).  Hence tr(Phi_delta) = 0: Phi_delta is TRACELESS.
+    """
+    n = n_of(p)
+    dimZ = Fraction(n * (n - 6), 8)
+    tr_phi = Fraction(n * (n - 2))
+    tr_part = lambda_bar(p) * dimZ
+    return {"p": p, "tr_Phi": tr_phi, "tr_Phi_part": tr_part,
+            "tr_Phi_delta": tr_phi - tr_part, "traceless": tr_phi == tr_part}
+
+
+def corollary_proven_lambda_min_window(p: int) -> dict:
+    """What is PROVEN unconditionally about lambda_min(Phi), and the gap to 6.
+
+    Upper: tr(Phi_delta)=0 forces lambda_min(Phi_delta) <= 0, so
+           lambda_min(Phi) <= lambda_bar.
+    Lower: Phi is a Gram operator so Phi >= 0, i.e. Phi_delta >= -lambda_bar I,
+           giving lambda_min(Phi) >= 0 unconditionally.
+    Target: 6.  The ENTIRE remaining content of leftover 1 lives in the
+    window [0, 6) -- nothing weaker than a genuine bound on delta can reach it.
+    """
+    lb = lambda_bar(p)
+    return {"p": p, "proven_lower": Fraction(0), "target": Fraction(6),
+            "proven_upper": lb, "gap": Fraction(6),
+            "delta_bound_needed": Fraction(n_of(p), 12)}

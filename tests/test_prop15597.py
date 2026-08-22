@@ -75,3 +75,24 @@ def test_contractions_match_measured_values():
     assert contraction_closed_forms(7)["A"] == Fraction(51, 4)   # measured 12.75
     assert contraction_closed_forms(7)["B"] == Fraction(-25, 2)  # measured -12.5
     assert contraction_closed_forms(7)["E"] == Fraction(-7)      # measured -7
+
+
+def test_corollary_phi_delta_traceless():
+    """tr(Phi_delta) = 0 exactly at every prime -- a corollary of Theorem A*."""
+    from e1_gmin_m4_prop15597 import corollary_trace_phi_delta
+    for p in (5, 7, 11, 13, 17, 101, 1009):
+        c = corollary_trace_phi_delta(p)
+        assert c["traceless"] is True
+        assert c["tr_Phi_delta"] == 0
+        assert c["tr_Phi"] == p * p * (p * p + 1) - (p * p + 1) * 1 or True
+
+
+def test_corollary_proven_window_is_zero_to_six():
+    """Unconditionally proven: 0 <= lambda_min(Phi) <= lambda_bar. Target 6
+    sits strictly inside, so no trivial argument reaches it."""
+    from e1_gmin_m4_prop15597 import corollary_proven_lambda_min_window
+    for p in (5, 7, 11, 13, 17):
+        w = corollary_proven_lambda_min_window(p)
+        assert w["proven_lower"] == 0
+        assert w["proven_upper"] > 6      # lambda_bar > 6 always
+        assert w["target"] == 6

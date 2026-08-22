@@ -579,3 +579,42 @@ through an L² bound on δ; it stays on the Max− minus-slice/Walsh route.
 Two open roots. R1 additionally implies residual-(i)'s R≤2p with ~n²/8 of
 room to spare.  Everything else in the leftover-1 and leftover-3 chains is
 proved or data-free-computable.
+
+## 17. Φ_part = λ̄I PROVED for all p (Prop 15.597 Theorem A*)
+
+The first general-p theorem of this line, not a census.  For W ∈ Z
+(symmetric, diag 0, CW = pW; C² = (n−1)I) three lemmas:
+
+    L1  WC = pW  ⟹  W²C = pW²,  tr(W²C)/p = ‖W‖²
+    L2  Σ_j C_ij W_ij = (CW)_ii = p·W_ii = 0 — every row sum of the
+        Hadamard product C∘W vanishes
+    L3  CWC = p²W  ⟹  cᵀWc = 0 and Wc = p·W_{·r} for c = C e_r
+
+close the three contractions exactly (t(S) := W_ij W_kl + W_ik W_jl + W_il W_jk):
+
+| contraction | value | mechanism |
+|---|---|---|
+| Σ_S κ·t | (n+1)‖W‖²/4 | L2 kills row sums; tr_distinct(CWCW) = tr(CWCW)+‖W‖² = n‖W‖² |
+| Σ_S φ·t | −n‖W‖²/4 | per-r reduction, Σ_e v_e = ½(CWC)_rr = 0 |
+| Σ_S star·t | −p‖W‖² | inner pair-sum telescopes via L3 |
+
+Combining with p²=n−1, D=(n−1)(n−6):
+(n−2)A − 2B − 2pE = (n²+9n−10)/4 = (n−1)(n+10)/4, hence
+⟨W,Φ_part W⟩ = 8(n−2)/(n−6)‖W‖² = λ̄‖W‖² for every W ∈ Z.  ∎
+
+Closed forms reproduce the measured contractions exactly (6.75, −6.5, −5 at
+p=5; 12.75, −12.5, −7 at p=7) and the algebra closes symbolically to p=10007.
+Independently, the quadratic form was verified directly at p=5,7,11,13.
+
+### Corollaries (proved)
+
+* **tr(Φ_δ) = 0** — Φ_δ is traceless, since tr Φ = n(n−2) = λ̄·dim Z.
+* **0 ≤ λ_min(Φ) ≤ λ̄** unconditionally: the lower bound because Φ is a Gram
+  operator (Φ ⪰ 0 ⟹ Φ_δ ⪰ −λ̄I), the upper because tracelessness forces
+  λ_min(Φ_δ) ≤ 0.
+
+So the **entire** remaining content of leftover 1 lives in the window
+[0, 6): the explicit half of the moment tensor is provably flat and
+contributes nothing, and no argument short of a genuine bound on δ can
+cross that window.  Leftover 1 is exactly Φ_δ ⪰ −(2n+20)/(n−6)·I,
+equivalently ‖δ‖² ≤ n/12 via the multiplicity floor.
