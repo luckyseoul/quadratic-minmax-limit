@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-22 (history/references note; GLOBAL QVAR still OPEN)
+**Date:** 2026-08-22 (QVAR probes + history note; **no flag flipped**)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main` (this commit). Working brain is ALWAYS main.
 
@@ -8,19 +8,68 @@
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
 
-## This turn (literature + wiring, not a close)
+## Since `5ce0258` (do not lose)
 
-- **`evidence/HISTORY_AND_REFERENCES.md`** — MO 413935 / X prize / Paata
-  education / pre-internet lineage (Littlewood 4/3, Paley 1933,
-  Goethals–Seidel 1967, Blei Thm 34, DMP, Talagrand). Fetched live
-  (SE API, X thread, blog, CV, arXiv). No classical existence theorem.
-  Do not reopen BH, typical-\(A\), Bowlin, or “Paley \(\Rightarrow\lim=1/2\)”.
-- Gating test `test_pairing_open_and_flag_imported` now ORs theorem I
-  (shipped `global_qvar_proved_general` already did). Dump JSON refreshed
-  for equal-density \(=\bar\lambda\). `src/e1_gmin_qvar_bool6.py` stays
-  **uncommitted**.
-- GLOBAL QVAR still False: Gauss 4-dist / \(\hat F(\psi)\ge0\) on the
-  mixed-\(k\) Max+ ensemble is OPEN. leftover-1 = global QVAR \(\land\) R1.
+Literature (shipped): `evidence/HISTORY_AND_REFERENCES.md`. MO 413935 /
+X prize / Paata SPbU+Volberg / Littlewood 4/3 / Paley 1933 /
+Goethals–Seidel 1967 / Blei 34 / DMP / Talagrand. No classical
+existence theorem. Do not reopen BH, typical-\(A\), Bowlin, or
+“Paley \(\Rightarrow\lim=1/2\)”.
+
+Wiring: `test_pairing_open_and_flag_imported` now ORs theorem I (shipped
+flag already did). Dump JSON has equal-density \(=\bar\lambda\).
+`src/e1_gmin_qvar_bool6.py` stays **uncommitted**.
+
+GLOBAL QVAR still False. leftover-1 = global QVAR \(\land\) R1.
+
+**Killed this stretch (scratch; not a new identity file):**
+
+- **k=1 mass does not lift the floor.** \(E|Z|^2\ge n_{1d}S^2/|\mathrm{Max}+|\)
+  beats QVAR iff \(|\mathrm{Max}+|\le n_{1d}(q-1)/3\). At p=5 that bound
+  is 240 vs live 260: \(30\cdot900/260<225/2\). At p=7 it is worse
+  (\(n_{1d}=140\), \(|\mathrm{Max}+|=11452\)). Named k=1+k=3 counts still
+  need an upper bound on \(|\mathrm{Max}+|\). For \(p\ge13\) the bulk is
+  the **top stratum** \(k=m=(p+1)/2\ge7\), not k=1. (p=41 k=7 is thin
+  vs \(n_{1d}\); p=13 k=7 **is** the top stratum.)
+- **Reconstruction inner product is the pairing.** With
+  \(h_j=(\sigma_j-\varepsilon)/2\), \(F=\sum_j h_j\circ t_j\),
+  \(F_w=\sum_j w_j h_j\circ t_j\): \(\sum_x F F_w=pZ_\psi\). Cross-direction
+  terms vanish (affine plane: each pair of parallels from different
+  square directions meets once; \(h_j\) mean-zero). \(\sum F^2=pS\) is
+  the already-named \(\sum a_L=S\). Does not sign \(\hat F(\psi)\).
+  Same as “B-weighted 15.588 tautology” in the kill list below.
+- **\(\chi*1_D=p1_D-\frac{p-1}{2}1\) is linear** (15.317 A). It names
+  2-point / Ω-support, not 4-point. L2 of the Fourier form
+  \(f*f=-2p f\) on Ω is an identity, not a floor.
+- **Independent \(\widehat N(\xi)\) would miss QVAR.** Named
+  \(\mathrm{Var}(\widehat N)=q^2/4\) (15.305 A). Independence gives
+  \(E[\Delta^2]=(q-1)q^2/8=2q^2(q-1)/16\), below the floor
+  \(3q^2(q-1)/16\). Nyquist pairing needs **positive** same-sign
+  frequency correlation (deficit on \(K\), not a Wick/independent lag).
+- **Wrong quantifier:** \(\min_y Z^2=0\) (attained). QVAR is the
+  **uniform** average on Max+, not a pointwise SOS of \(Z^2-\)threshold.
+  Dirac on a \(Z=0\) vector is a different measure.
+- **Orbitwise QVAR is false** (already in NOTE 2026-08-20): p=7 PSL
+  orbit of size 1176 has \(Z_\psi=0\). Mixing \(k\) inside one orbit is
+  allowed; mixing **orbits** is required. No named orbit sizes.
+- Type A (2+2 on two square lines): Wick isotropic; off-diagonal
+  Nyquist of Type A is **negative**; QVAR is carried by the
+  same-direction block of \(\Pi_i=2a_i-p(p-1)/2\). Paley-type mix of
+  Type A (sign of \(n_{++}^{\mathrm{same}}-n_{++}^{\mathrm{opp}}\))
+  **reverses** p=7 vs p=11,13 — not a p-law. \(m_4\) splits inside
+  Paley type (2–5 means). Occupancy 4th moments have Max+ denominators
+  (409 at p=7).
+- 3-point of \(1_D\) is **not** constant on Max+ (15.468 C, 16
+  fingerprints at p=5). Not Wick. Gale–Ryser scratch used a reversed
+  conjugate; those rates are **invalid**.
+- Occupancy-energy probe on p=5/7 caches used the **wrong D-slice**
+  (dropped infinity; \(k=9\) vs 10 / \(20\) vs 21). Discard.
+
+Do **not** add another equivalent identity with `inequality_proved=False`.
+Next constraint is still simultaneous Boolean ridge / Gauss 4-distinct
+pairing on the size-weighted mix, or an odd-coset 4-harmonic that mixes
+\(k\) **and** orbits. Do not split \(\lambda=0\). Do not require each
+k-stratum. H/I Nyquist of occupancy covers \(p\equiv3\) only.
 
 ## 15.597 Theorem A* (proved — not a census)
 
@@ -134,8 +183,11 @@ Do not set leftover 1 True until GLOBAL QVAR **and** R1. Do not set
 
 Killed as proofs: per-stratum k≥7, CS on \(\langle\delta,\kappa_A\rangle\),
 two-level occupancy as a p-law (fails p=11 k=4/5), B-weighted 15.588
-tautology, energy-only (15.589 I), Delsarte, cyclotomy \(E[E_0 E_r]\),
-2-point fit-as-proof, pointwise SOS (Z=0 attained).
+tautology (\(\langle F,F_w\rangle=pZ\)), energy-only (15.589 I), Delsarte,
+cyclotomy \(E[E_0 E_r]\), 2-point fit-as-proof, pointwise SOS (Z=0
+attained), k=1 mass lift, independent \(\widehat N\), \(\chi*1_D\) as
+4-point, Type A Paley-type factorisation, orbitwise QVAR, linear 4-point
++ box, SOS-4, linear 6-point, Boolean-6 as a p-law.
 
 Scratch Aut/Torb probes on nuka (`/tmp/qvar-nuka/`,
 `/tmp/grok-goal-f38dc225339a/implementer/probe_nuka_*.py`) are **not
