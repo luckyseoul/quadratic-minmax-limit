@@ -454,7 +454,18 @@ the leftover characters is 180, so the average clears and the min
 just clears.  Average > threshold is not a proof of the min
 (equal-density shortcut, already killed).
 
-p=11 even-character scan (37.4M, 86-way fork) is **not** a Step 5
-gate: that array is labeled by `paley_conference_prime_power`, not
-15590 `field_ops`.  Outliers (λ̂=66 vs Φ∈[8.05,8.66]) are a
-coordinate mismatch, not a counterexample.
+p=11 even-character scan (37.4M, 86-way fork) with **15590 encoding
+is not a Step 5 kill**: that array is labeled by
+`paley_conference_prime_power` (`e=a+bp`, ω²=2).  HIP rerun on nuka
+9070 XT with that field (`even_char_hip_nuka.py minmax`): **29/29**
+even k match spec(Φ) to ~1e-6.  GPU 9.75s / wall 12.5s.
+
+| p=11 | value |
+|---|---|
+| QVAR k=30=(q−1)/4 | 8.664378 = λ_exc (mult 61) |
+| binding min k=8,28,32,52 | 8.054447 = Φ_min (mult 244) |
+| threshold 3q(q-1)/16 | 2722.5; min E\|Z_α\|²=3654.7 |
+
+Step 5 is now a three-prime identity (p=5,7 MuLab; p=11 minmax
+labeling).  Leftover 1 is still the **min** over those even α, not
+the mean and not QVAR alone.  No flag flipped.

@@ -37,7 +37,8 @@ void n_from_shifts(const char* Z, const int* shift, float* N, int B, int q) {
 """
 
 
-def field_ops(p: int):
+def field_ops_15590(p: int):
+    """e = p*a + b ↔ a + b t, t^2 = nonresidue.  MuLab / 15590."""
     r = next(x for x in range(2, p) if pow(x, (p - 1) // 2, p) == p - 1)
 
     def fmul(e1, e2):
@@ -52,6 +53,38 @@ def field_ops(p: int):
 
     one = p
     return fmul, fadd, one
+
+
+def field_ops_minmax(p: int):
+    """e = a + b p ↔ a + b ω, ω^2 = ia ω + ib.  paley_conference_prime_power.
+
+    First irreducible (ia, ib) in the same nested loop as minmax_quadratic.
+    Column 1+e of maxplus_p11_eps1.npy is this encoding.
+    """
+    def is_irr(a, b):
+        return all((x * x - a * x - b) % p != 0 for x in range(p))
+
+    ia = ib = None
+    for a in range(p):
+        for b in range(p):
+            if is_irr(a, b):
+                ia, ib = a, b
+                break
+        if ia is not None:
+            break
+
+    def fmul(u, v):
+        c0, c1 = u % p, u // p
+        d0, d1 = v % p, v // p
+        e0 = (c0 * d0 + c1 * d1 * ib) % p
+        e1 = (c0 * d1 + c1 * d0 + c1 * d1 * ia) % p
+        return e0 + e1 * p
+
+    def fadd(u, v):
+        return (u % p + v % p) % p + ((u // p + v // p) % p) * p
+
+    one = 1
+    return fmul, fadd, one, (ia, ib)
 
 
 def primitive_root(q, fmul, one):
@@ -78,6 +111,8 @@ def main():
     )
     phipath = ypath.with_name("phiZ_p11.npy")
     batch = int(sys.argv[2]) if len(sys.argv) > 2 else 262144
+    # p=11 Max+ is paley_conference_prime_power labeling (minmax).
+    field = sys.argv[3] if len(sys.argv) > 3 else "minmax"
 
     free, tot = cp.cuda.runtime.memGetInfo()
     print(
@@ -94,7 +129,14 @@ def main():
     cp.cuda.runtime.deviceSynchronize()
     print(f"hiprtc RawKernel compiled in {time.perf_counter()-t_compile:.2f}s", flush=True)
 
-    fmul, fadd, one = field_ops(p)
+    if field == "minmax":
+        fmul, fadd, one, irr = field_ops_minmax(p)
+        print(f"field=minmax irr={irr} one={one}", flush=True)
+    elif field == "15590":
+        fmul, fadd, one = field_ops_15590(p)
+        print(f"field=15590 one={one}", flush=True)
+    else:
+        raise SystemExit(f"unknown field {field}")
     gen = primitive_root(q, fmul, one)
     dlog = np.full(q, -1, dtype=np.int32)
     x = one
