@@ -24,8 +24,31 @@ PROVED
      Verified DIRECTLY at p=11 the same way (8.8M four-sets, chunked):
      ⟨W,Φ_part W⟩/‖W‖² = 8.275862069 = λ̄(11) on three independent random
      W, deviations 1.8e−15 / 0.0e0 / 1.8e−15 (Z-residual ≤ 1.6e−14).
-     So Theorem A is now directly verified at p=5,7,11 — data-free at
+     Verified DIRECTLY at p=13 the same way (33.6M four-sets):
+     8.195121951 = λ̄(13), deviations 0.0 / 5.3e−15 / 0.0.
+     So Theorem A is directly verified at p=5,7,11,13 — data-free at
      every prime, needing no Max± ensemble.
+
+  A'. TOWARD A GENERAL-p PROOF (two lemmas proved; contraction open).
+      For W ∈ Z:
+        (i)  W C = p W  (transpose of CW = pW, both symmetric), hence
+             W²C = pW² and  tr(W²C)/p = ‖W‖²_F.
+        (ii) **(C∘W)·1 = 0**: every row sum of the Hadamard product
+             vanishes, since Σ_j C_ij W_ij = Σ_j C_ij W_ji = (CW)_ii
+             = p·W_ii = 0 (diag W = 0).
+      With (i) the quadratic form collapses to
+        ⟨W,Φ_part W⟩ = 8·Σ_S m₄_part(S)·t(S) + 6‖W‖²,
+        t(S) := W_ij W_kl + W_ik W_jl + W_il W_jk,
+      so Theorem A is EQUIVALENT to the single contraction identity
+        Σ_S m₄_part(S) t(S) = (n+10)/(4(n−6)) · ‖W‖²_F ,
+      i.e. (n−2)A − 2B − 2p·E = (n−1)(n+10)/4 · ‖W‖² with
+      A=Σ_S κt, B=Σ_S φt, E=Σ_S star·t (using p²=n−1, D=(n−1)(n−6)).
+      The κ-part is already done: its same-pairing piece equals
+      ‖W‖²/4 by (ii) (all row sums R_i vanish), and its cross-pairing
+      piece is governed by tr(CWCW) = p²‖W‖² = (n−1)‖W‖².  The φ- and
+      star-contractions remain; both are traces of products of C and W
+      subject to CW = pW, so the route is closed-form.  NOT completed
+      here — recorded as the concrete next step.
   B. Consequence:  **all spectral deviation of Φ comes from δ.**  The
      particular solution — the entire explicit, Max-free part of the
      moment tensor — contributes a perfectly flat spectrum and cannot
