@@ -44,7 +44,9 @@ Theorem D — PROVED (explicit G at p=5).
 Theorem E — OPEN.  Walsh for general p≥11 is not proved, so
   interior 4-level is not emptied for all p.  5+ levels and
   even k>4p stay open.  residual_ii_k_eq_4p_empty stays False.
-  phi_F not imported.
+  phi_F not imported.  A proposed Aut_e single-orbit spanning
+  proof is false at p=5 (dir ≤11 < 12); Aut_e-invariant extra
+  duals are empty (15.601) but that is not Walsh.
 
 ============================================================================
 Backend: Fraction identities + GF(2) rref on Max− caches

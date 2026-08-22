@@ -31,6 +31,10 @@ irreducibility is false. Walsh spanning open. residual_ii stays False.
 prime, via \(1\in\ker S\cap(\ker S)^\perp\). dim H0=n/2 is a theorem.
 Walsh spanning of the xor-hyperplane still open. residual_ii False.
 
+**15.601 PROVED** (not Walsh, not a leftover close): pencil through 0
+gives 1_QR ∈ rowspan(S) (p≡3) or rowspan(S)+span{ℓ} (p≡1). 15.406 E
+stays OPEN; single-orbit Aut_e spanning is false at p=5.
+
 `tr(Phi^2)=4||M||_F^2-3n^2+2n^2(n-1)/p^2` is a proved identity, not a
 bound (TECHNICAL_NOTES §4). Leftover 3 next target: p=5 finite from C;
 p≥7 `|μ|≤2/n` on |κ|=1 would close Type I (strictly stronger than L;

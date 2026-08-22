@@ -1,0 +1,98 @@
+{
+  "prop": "15.601",
+  "title": "QR indicator is in rowspan(S) or rowspan(S)+span{\u2113}",
+  "proved": {
+    "pencil_identity": true,
+    "QR_on_H0": true,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "wt_w": 3,
+        "half": 3,
+        "p_mod_4": 1,
+        "match": true
+      },
+      "7": {
+        "wt_w": 4,
+        "half": 4,
+        "p_mod_4": 3,
+        "match": true
+      },
+      "11": {
+        "wt_w": 6,
+        "half": 6,
+        "p_mod_4": 3,
+        "match": true
+      },
+      "13": {
+        "wt_w": 7,
+        "half": 7,
+        "p_mod_4": 1,
+        "match": true
+      },
+      "17": {
+        "wt_w": 9,
+        "half": 9,
+        "p_mod_4": 1,
+        "match": true
+      },
+      "19": {
+        "wt_w": 10,
+        "half": 10,
+        "p_mod_4": 3,
+        "match": true
+      }
+    },
+    "theorem": "S\u1d40w=((p+1)/2)(e_0+e_\u221e)+1_QR. p\u22611\u21d2QR+\u2113\u2208rowspan S; p\u22613\u21d2QR\u2208rowspan S. Fail: swap congruences."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "rS": 13,
+        "rQ": 14,
+        "rQE": 13,
+        "ell_extra": true
+      },
+      "7": {
+        "rS": 25,
+        "rQ": 25,
+        "rQE": 26,
+        "ell_extra": true
+      },
+      "11": {
+        "rS": 61,
+        "rQ": 61,
+        "rQE": 62,
+        "ell_extra": true
+      },
+      "13": {
+        "rS": 85,
+        "rQ": 86,
+        "rQE": 85,
+        "ell_extra": true
+      }
+    },
+    "theorem": "On H0, QR\u00b7x=\u2113(x) (p\u22611) or 0 (p\u22613). Fail: QR independent of {S,\u2113}."
+  },
+  "C": {
+    "proved": false,
+    "walsh_general_p": false,
+    "single_orbit_spans_W": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "15.406 E stays OPEN. Single Aut_e-orbit spanning is false at p=5. residual_ii stays False."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "seconds": 0.132
+}

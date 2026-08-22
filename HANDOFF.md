@@ -8,6 +8,23 @@
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
 
+## Walsh is NOT closed (single-orbit proof BLOCKED)
+
+A proposed general-p Walsh proof (Aut_e-orbit of one U-difference spans
+W because Aut_e-submodules would be PSL-submodules) was falsified by
+both referees. Aut_e is the edge stabilizer, not PSL; it is reducible;
+at p=5 a single orbit has dir ≤11 < 12=dim W. Do **not** flip 15.406 E
+or residual_ii. Repair must use the full set of U-differences, not one
+orbit.
+
+## 15.601 — QR indicator in rowspan(S) or S+ℓ (proved)
+
+`src/e1_gmin_m4_prop15601.py`. Pencil of the (p+1)/2 square-direction
+lines through 0: Sᵀw = ((p+1)/2)(e_0+e_∞)+1_QR. Hence
+p≡1 (mod 4) ⇒ 1_QR+ℓ ∈ rowspan(S); p≡3 ⇒ 1_QR ∈ rowspan(S).
+On H0, QR·x equals ℓ(x) or 0. Aut_e-invariant extra duals of the
+xor-slice are empty. Walsh spanning still open.
+
 ## 15.600 — rank(S)=n/2 for every odd prime (proved)
 
 `src/e1_gmin_m4_prop15600.py`. The 15.599 Gram gap is closed.
@@ -767,6 +784,7 @@ deleted so the reversal is traceable.
 | `src/e1_gmin_m4_prop15598.py` | Square-direction affine lines cut Max− (proved); Walsh spanning open |
 | `src/e1_gmin_m4_prop15599.py` | Square-line F2-rank pin {n/2−1, n/2}; antipodes; Aut_e reducible |
 | `src/e1_gmin_m4_prop15600.py` | rank(S)=n/2 all odd p (radical ⟨1⟩); Walsh spanning still open |
+| `src/e1_gmin_m4_prop15601.py` | QR in rowspan(S) or S+ℓ (pencil); 15.406 E still OPEN |
 | `evidence/SESSION_HANDOFF_2026-08-18_leftovers.md` | Named identities 15.550–15.585 |
 | `evidence/TECHNICAL_NOTES_2026-08-20_maxplus_p11.md` | p=11 enumeration, derivations, corrections (2026-08-20) |
 | `evidence/NOTE_2026-08-20_psl_and_stratum_floor_reduction.md` | Binding PSL decomposition, QVAR, low-stratum theorem, odd-coset route, and killed routes |

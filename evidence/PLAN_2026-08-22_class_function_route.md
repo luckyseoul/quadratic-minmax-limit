@@ -113,6 +113,10 @@ is false (referees: do not reopen). residual_ii still False.
 **15.600 (proved):** rank(S)=n/2 for every odd prime. dim H0=n/2
 is a theorem. Walsh remaining: U spans the xor-hyperplane of H⊂H0.
 
+**15.601 (proved, not Walsh):** pencil through 0 puts 1_QR in
+rowspan(S) or S+ℓ. Single-orbit Aut_e Walsh proof is BLOCKED at p=5.
+15.406 E stays OPEN.
+
 ---
 
 # Step 1 EXECUTED (2026-08-22) — the compression is real and Γ_δ is quantized

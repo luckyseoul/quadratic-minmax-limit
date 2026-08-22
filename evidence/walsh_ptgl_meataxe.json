@@ -1,0 +1,64 @@
+{
+  "5": {
+    "p": 5,
+    "dim_H0": 13,
+    "ptgl_dims": [
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13
+    ],
+    "ptgl_all_full": true,
+    "qr_in_rowspan": false,
+    "ell_independent": true,
+    "S_ell_QR_rank": 14,
+    "QR_on_U": [
+      0
+    ],
+    "QR_on_Uc": [
+      1
+    ],
+    "QR_walsh_character": true,
+    "QR_const_on_Uc": true,
+    "QR_same_both": false
+  },
+  "7": {
+    "p": 7,
+    "dim_H0": 25,
+    "ptgl_dims": [
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25
+    ],
+    "ptgl_all_full": true,
+    "qr_in_rowspan": true,
+    "ell_independent": true,
+    "S_ell_QR_rank": 26,
+    "QR_on_U": [
+      0
+    ],
+    "QR_on_Uc": [
+      0
+    ],
+    "QR_walsh_character": true,
+    "QR_const_on_Uc": true,
+    "QR_same_both": true
+  }
+}
