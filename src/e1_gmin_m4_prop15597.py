@@ -17,10 +17,10 @@ PROVED
      Verified exactly at p=5 (dim Z = 65): the full spectrum of Φ_part,
      built DATA-FREE from κ, φ, star alone, is the single value 9.6 =
      λ̄(5) with spread 4.1e−14 and ‖Φ_part − λ̄I‖_F = 1.6e−14.
-     At p=7 it is forced: Φ_part is G-equivariant, Z is multiplicity-free
-     (15.589 B) so Φ_part is scalar on each constituent, and
-     ‖Φ − λ̄I‖²_F = 24‖δ‖² (15.594 B, exact at p=7) leaves no room for a
-     non-λ̄ constituent scalar in Φ_part.
+     Verified DIRECTLY at p=7 by the quadratic form on random W ∈ Z
+     (`scripts/phi_part_scalar_check.py`, no dim-Z basis needed, no Max±
+     data): ⟨W,Φ_part W⟩/‖W‖² = 8.727272727 = λ̄(7) on three independent
+     random W, deviation 0.0e0 / 0.0e0 / 1.8e−15 (Z-residual ≤ 7e−15).
   B. Consequence:  **all spectral deviation of Φ comes from δ.**  The
      particular solution — the entire explicit, Max-free part of the
      moment tensor — contributes a perfectly flat spectrum and cannot
