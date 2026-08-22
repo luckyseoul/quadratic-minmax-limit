@@ -1,0 +1,35 @@
+{
+  "title": "box+master+Aut cannot prove GLOBAL QVAR",
+  "numbered": false,
+  "theorem": {
+    "proved": true,
+    "inequality_proved": false,
+    "method_killed": "Aut-inv master equation + |m4|<=1",
+    "claim_lp_min_ge_0": false,
+    "p5_lp": {
+      "p": 5,
+      "n_orbits": 42,
+      "dead": 0,
+      "kap_orbit_std": 0.0,
+      "Torb_kappa_err": 0.0,
+      "ker_dim": 2,
+      "min_pairing": -71.24999999999928,
+      "max_pairing": 78.74999999999908,
+      "lp_ok": true,
+      "HS2": 15.0,
+      "named_HS2": 18.75
+    },
+    "p5_true": {
+      "p": 5,
+      "Nplus": 260,
+      "pairing": 14.134615384615389,
+      "E_yAy_sq": 203.07692307692307,
+      "QVAR_threshold": 112.5,
+      "clears_QVAR": true,
+      "max_abs_m4": 0.3230769230769231
+    },
+    "p5_lp_min_is_neg285_over_4": true,
+    "theorem": "At p=5 the Aut-quotient of T m=4p m\u22124\u03ba/p with |m|\u22641 is a nonempty polytope of E_{4p}^{Aut}-dimension 2, and min \u27e8m,\u03ba_{A_\u03c8}\u27e9=\u2212285/4<0, while true Max+ pairing is positive.  Fail: claim that min is \u22650.  Hence Aut + 4-point master + box cannot prove QVAR."
+  },
+  "global_qvar_not_claimed": true
+}

@@ -27,16 +27,25 @@ IDENTITIES (proved Max+-free Fraction)
      Fail: replace n-14 by n-6 (old unsharpened room).
   D. On Z, E[q²]=6||B||²+8⟨m4,κ_B⟩ and λ_min(Φ)≥6 ⇔ ⟨m4,κ_B⟩≥0
      (15.277).  Fail: claim pointwise q²≥3||By||² (false, 15.277 C).
+  A*. 15.597: Φ_part = λ̄ I on Z for every prime p≥5 (closed-form
+     contractions; not 15.108's 16N Theorem A*).  Fail: claim this
+     bounds δ.  All spectral deviation of Φ is Φ_δ.  Leftover 1
+        ⇔  Φ_δ ⪰ −(2n+20)/(n−6) I
+     (`e1_gmin_m4_prop15597.leftover1_operator_criterion`).  Corollaries:
+     tr(Φ_δ)=0; 0 ≤ λ_min(Φ) ≤ λ̄ unconditionally; target 6 sits in
+     that window.
 
 OPEN (blocks leftover 1)
   E. GLOBAL QVAR, all primes p≥13: E|Z_ψ|² ≥ 3q(q-1)/16 on the full
      Max+ mixture (all k; do not split λ=0; do not require each
-     k-stratum).  k=1..6 closed (15.589).  Per-stratum k≥7 is false
+     k-stratum).  Equivalently the exceptional isotype of Φ_δ clears
+     6−λ̄.  k=1..6 closed (15.589).  Per-stratum k≥7 is false
      at p=41 k=7 (E=0, Cy=py) and pointwise at p=13 k=7; those are
      not p-laws.  V_sph>threshold is not a 4-design.  Floor iff
      F̂(ψ)≥0 / Gauss 4-dist pairing of m₄ (15.279 L).
-  F. The moment bound (C), equivalently ||δ||²≤B_min.  Crude
-     E[s⁴]≤2n³ is Θ(n³) vs Θ(n²) budget.
+  F. The moment bound (C) / R1, equivalently ||δ||²≤n/12 via the
+     multiplicity floor (15.595).  Crude E[s⁴]≤2n³ is Θ(n³) vs Θ(n²).
+     After A*, E∧F together are Φ_δ ⪰ −(2n+20)/(n−6) I.
 
 Until E∧F: leftover1_qvar_and_principal_proved stays False, so
 phi_F_ge_6_proved_general stays False.  If E∧F both hold, leftover 1 /

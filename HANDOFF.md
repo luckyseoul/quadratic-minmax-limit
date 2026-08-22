@@ -1,15 +1,60 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-22 (GLOBAL QVAR wiring shipped; **no flag flipped**)
+**Date:** 2026-08-22 (15.597 Theorem A* proved; **no leftover flag flipped**)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
-**Branch:** `main` — working brain is ALWAYS main. Mesh k=6 enum is
-`mesh/k6-p13-enum` in worktree `/home/nick/quadratic-minmax-limit-k6-mesh`.
-Do not mix mesh into main. Do **not** restart cpu44 unless the user names
-cpu44 in the same turn (compaction previously replayed that request).
+**HEAD:** `e4e359b` on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close.
+
+## 15.597 Theorem A* (new, proved — not a census)
+
+`src/e1_gmin_m4_prop15597.py`. Distinct from 15.108's old "Theorem A*"
+(16N). For every prime \(p\ge5\), on \(Z\):
+
+\[
+\Phi_{\mathrm{part}}=\bar\lambda\,I,\qquad
+\bar\lambda=8(n-2)/(n-6).
+\]
+
+Closed-form contractions (lemmas L1–L3 on \(W\in Z\)): \(\sum\kappa t=(n+1)\|W\|^2/4\),
+\(\sum\phi t=-n\|W\|^2/4\), \(\sum\star t=-p\|W\|^2\). Direct quadratic-form
+checks at \(p=5,7,11,13\) match. The particular solution is spectrally
+**invisible**: all deviation of \(\Phi\) is \(\Phi_\delta\).
+
+**Sharpened leftover 1** (equivalence, inequality still open):
+
+\[
+\lambda_{\min}(\Phi)\ge6
+\iff
+\Phi_\delta\succeq -\frac{2n+20}{n-6}\,I
+\quad\text{on }Z.
+\]
+
+The \(n/12\) R1 bound is the multiplicity-floor op-norm form of the same
+statement. Global QVAR is the exceptional isotype of \(\Phi_\delta\);
+principal room is the rest.
+
+**Corollaries (proved, buy nothing toward 6):** \(\mathrm{tr}(\Phi_\delta)=0\),
+so \(\lambda_{\min}(\Phi_\delta)\le0\). \(\Phi\) is Gram, so \(\Phi\succeq0\)
+and \(0\le\lambda_{\min}(\Phi)\le\bar\lambda\). Target 6 sits strictly inside
+that window. The remaining content of leftover 1 is pushing the proven
+lower bound from 0 up to 6; nothing short of a genuine bound on \(\delta\)
+crosses it. Do not re-derive Gram \(\ge0\) or tracelessness as a floor
+argument.
+
+Do **not** add another equivalent identity with `inequality_proved=False`.
+A* removes \(m_4^{\mathrm{part}}\) from the spectral problem; it does not
+bound \(\delta\in\ker(4pI-T)\).
+
+**Killed (2026-08-22):** Aut-invariant 4-point master equation
+\(Tm=4pm-4\kappa/p\) plus \(|m_4|\le1\) cannot prove QVAR.
+`src/e1_gmin_qvar_box_master.py`: permutation Aut quotient of \(T\) is
+exact (\(T\kappa=-6\star\)); at \(p=5\), \(\dim E_{4p}^{\mathrm{Aut}}=2\)
+and \(\min\langle m,\kappa_{A_\psi}\rangle=-285/4<0\), while true Max+
+pairing is \(+14.13\). Same kill at \(p=7\) (ker 7, LP min \(\approx-2708\)).
+Need a constraint outside linear 4-point theory (15.589 I).
 
 ## What shipped (wiring, not a close)
 
@@ -28,10 +73,13 @@ Gating tests: `tests/test_global_qvar.py`, `tests/test_leftover1_qvar_principal.
 
 ## Live obstruction
 
-Prove \(\hat F(\psi)\ge 0\) / Gauss 4-distinct pairing of \(m_4\) on the
-full Max+ mixture (all \(k\), \(\lambda=0\) unsplit). Equivalently
-\(\langle m_4,\kappa_{A_\psi}\rangle\ge 0\). Import `inequality_proved`
-only if that sign is actually proved.
+Prove \(\Phi_\delta\succeq -(2n+20)/(n-6)\,I\) on \(Z\) (15.597). Split as:
+
+- exceptional isotype = GLOBAL QVAR: \(\hat F(\psi)\ge 0\) / Gauss 4-distinct
+  pairing of \(m_4\) on the full Max+ mixture (all \(k\), \(\lambda=0\) unsplit);
+- rest = R1 / \(\|\delta\|^2\le n/12\).
+
+Import `inequality_proved` only if that sign is actually proved.
 
 Do **not** add another equivalent identity with `inequality_proved=False`.
 Do not set leftover 1 True until GLOBAL QVAR **and** R1. Do not set
@@ -48,9 +96,12 @@ shipped**. Torb vs \(T|_V\) still undiagnosed; do not import as a theorem.
 
 ## Mesh (out of QVAR scope)
 
-cpu44 hard-closed (2072 `orb*.npy` kept; stop flag still set). Uncommitted
-11-orbit × 4-thread control exists only in the mesh worktree. User:
-stop working on cpu44 every compaction.
+PR #4 merged `mesh/k6-p13-enum` **into main** (`99cbf09`), so
+`scripts/maxplus_profile_enum/` now lives on main. The live enum campaign
+is still not a leftover close. cpu44 was hard-closed (2072 `orb*.npy`
+kept; stop flag still set). Do **not** restart cpu44 unless the user
+names cpu44 in the same turn. Worktree
+`/home/nick/quadratic-minmax-limit-k6-mesh` may lag main.
 
 ## Compute
 

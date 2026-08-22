@@ -1,13 +1,19 @@
-# Status (2026-08-21)
+# Status (2026-08-22)
 
-No leftover flag flipped. `phi_F_ge_6` now imports
+No leftover flag flipped. `phi_F_ge_6` imports
 `leftover1_qvar_and_principal_proved()` from
 `src/e1_gmin_leftover1_qvar_principal.py` (unnumbered hinge). That
-predicate is False until QVAR k≥7 **and** principal ||δ||² room are
-proved for all p≥5. Fail-eqs: drop 16 in QVAR; 32↦16 in λ_exc; drop
+predicate is False until **GLOBAL** QVAR (mixed-k; not per-stratum
+k≥7) **and** principal ||δ||² / R1 are proved for all p≥5. Per-stratum
+k≥7 is false at (41,7). Fail-eqs: drop 16 in QVAR; 32↦16 in λ_exc; drop
 q+5 in V_sph; n-14↦n-6 in B_min. Uniform Paley E[S²]<20+12/p is false
 (p=5 leftover witness 25.17>22.4). Leftover 2/3 False. Gsum / pairing
 / Aut-Schur False. L OPEN. Live `e1` is still the old AND.
+
+**15.597 Theorem A* PROVED** (not a leftover close): Φ_part = λ̄ I on Z
+for every prime p≥5. Leftover 1 ⇔ Φ_δ ⪰ −(2n+20)/(n−6) I. Corollaries:
+tr(Φ_δ)=0; 0 ≤ λ_min(Φ) ≤ λ̄; remaining gap is [0,6). Distinct from
+15.108 Theorem A*.
 
 `tr(Phi^2)=4||M||_F^2-3n^2+2n^2(n-1)/p^2` is a proved identity, not a
 bound (TECHNICAL_NOTES §4). Leftover 3 next target: p=5 finite from C;

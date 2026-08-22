@@ -34,6 +34,8 @@ OPEN
   Gauss 4-dist pairing of m₄ / F̂(ψ)≥0 on the full Max+ fiber
   (15.279 L inequality).  Census exceed-floor at p=5,7 is not a
   p-law.  Wick Q(1)=8q² is global-only and does not sign F.
+  Aut-inv master equation + |m₄|≤1 cannot prove the pairing
+  (`e1_gmin_qvar_box_master`: LP min=−285/4 at p=5).
   For p≡3 the square-direction Gram is the Singer circulant and
   ψ is Nyquist (theorem H); the Nyquist eigenvalue is unnamed.
   Theorem I names the Ω-orbit mass S_j=p∑n_s²−k² from OA occupancy
