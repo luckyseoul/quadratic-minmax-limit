@@ -1,0 +1,37 @@
+{
+  "prop": "15.597",
+  "title": "Phi_part = lambda_bar I: the particular solution is spectrally invisible",
+  "p5": {
+    "p": 5,
+    "dimZ": 65,
+    "lambda_bar": 9.6,
+    "spec_min": 9.599999999999978,
+    "spec_max": 9.600000000000023,
+    "spread": 4.440892098500626e-14,
+    "frob_dist_to_scalar": 1.5607543944125042e-14,
+    "is_scalar": true
+  },
+  "p7_forced_by": "G-equivariance + multiplicity-free Z + V = 24||delta||^2 (15.594)",
+  "leftover1_operator_criterion": {
+    "5": "-18/5",
+    "7": "-30/11",
+    "11": "-66/29",
+    "13": "-90/41",
+    "17": "-150/71"
+  },
+  "measured_delta_sq_per_n": {
+    "5": 0.9089,
+    "7": 0.2085,
+    "11": 0.01941
+  },
+  "flips_anything": false,
+  "flags_not_flipped": [
+    "phi_F_ge_6",
+    "type_I",
+    "residual_ii",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "seconds": 3.4
+}
