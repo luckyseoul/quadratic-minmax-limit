@@ -101,6 +101,16 @@ def test_nyquist_deficit_A_plus_B_is_8q2():
         assert G.qvar_iff_B_wrong_2q2(2 * q * q, p)
         eqB = Fraction(4 * q * q * (q - 1), q - 5)
         assert eqB > 3 * q * q
+        eq_lambda = Fraction(2 * eqB, q * q)
+        n = q + 1
+        lbar = Fraction(8 * (n - 2), n - 6)
+        assert eq_lambda == lbar
+        assert eq_lambda == G.mean_Phi(p)
+        assert eq_lambda > 6
+        assert eq_lambda != Fraction(6)
+        row = Gd["by_p"][str(p)]
+        assert row["equal_density_is_lambda_bar"] is True
+    assert Gd["equal_density_is_exceptional_above_mean"] is True
 
 
 def test_pairing_open_and_flag_imported():

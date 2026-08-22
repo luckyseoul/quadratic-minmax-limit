@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-22 (15.597 Theorem A* proved; **no leftover flag flipped**)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
-**HEAD:** `e4e359b` on `main`. Working brain is ALWAYS main.
+**HEAD:** `bcbdaf6` on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
@@ -63,7 +63,19 @@ not another 4-point rewrite.
 Linear 6-point contractions + box still miss: p=5 min \(-101/4\); p=7
 15.590 joint deg-6 ker 4, box min \(-10633/8\). SOS-4 along the deg-4
 kernel is feasible at pairing \(-45/4\). True pairings positive. Need
-strictly stronger than SOS-4 / linear 6-point (Boolean support or SOS-6).
+strictly stronger than SOS-4 / linear 6-point (overlapping Boolean
+support or SOS-6). Local Boolean-6 (each 6-set a \(\{\pm1\}^6\) moment)
+is **not a p-law**: p=5 min \(=+27/4\) equals the particular pairing;
+p=7 HiGHS-IPM min \(\approx-172.75<0\) while true pairing is positive
+(uncommitted `src/e1_gmin_qvar_bool6.py`, do not treat p=5 positivity
+as general).
+
+**Equal-density is the unproved ordering, not a weaker sufficient.**
+Mean \(Q\) (or deficit) equal on fourth-powers-off-\(\pm1\) vs the
+complementary squares gives \(B=4q^2(q-1)/(q-5)\) and
+\(\lambda_{\mathrm{exc}}=8(q-1)/(q-5)=\bar\lambda\). That is theorem F
+(exceptional above the \(\Phi\)-mean), strictly stronger than QVAR.
+Singer/OA Nyquist pairing does not cover \(p=13\equiv1\pmod4\) (\(m\) odd).
 
 ## What shipped (wiring, not a close)
 

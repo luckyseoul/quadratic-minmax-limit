@@ -599,8 +599,11 @@ def theorem_G_nyquist_deficit_split(
     satisfies A+B=8q² (fail: 8↦4).  Then S_□=2B and
         λ_exc = 2B/q²  ⇔  QVAR  B≥3q²
     (fail: B≥2q², which is λ≥4).  Equal density on |K|=(q−1)/4 vs
-    |H\\{±1}|=(q−9)/4 would give B=4q²(q−1)/(q−5)>3q² at every
-    p≥5, but that comparison is not proved.  Sign of A−B OPEN.
+    |H\\{±1}|=(q−9)/4 would give B=4q²(q−1)/(q−5), hence
+        λ_exc = 2B/q² = 8(q−1)/(q−5) = λ̄ = tr(Φ)/dim Z.
+    That is the unproved exceptional-above-mean ordering (theorem F),
+    strictly stronger than QVAR (λ̄>6).  Do not reopen equal-density
+    as a weaker sufficient bound.  Sign of A−B / λ_exc≥λ̄ OPEN.
     """
     ok = True
     rows = {}
@@ -613,8 +616,10 @@ def theorem_G_nyquist_deficit_split(
         nT = squares_group_order(p)
         nH_off = (q - 9) // 4
         nK = (q - 1) // 4
-        # equal-density B would suffice
+        # equal Q on Hoff vs K  ⇔  λ_exc = λ̄ (not a weaker sufficient)
         eqB = Fraction(4 * q * q * (q - 1), q - 5)
+        eq_lambda = Fraction(2 * eqB, q * q)
+        lbar = mean_Phi(p)
         row_ok = (
             nT == nH_off + nK + 2
             and off == nH_off + nK
@@ -628,6 +633,9 @@ def theorem_G_nyquist_deficit_split(
             and not qvar_iff_B_ge_3q2(3 * q * q - 1, p)
             and qvar_iff_B_wrong_2q2(2 * q * q, p)
             and eqB > 3 * q * q
+            and eq_lambda == lbar
+            and lbar > 6
+            and eq_lambda != Fraction(6)
         )
         rows[str(p)] = {
             "A_plus_B": ab,
@@ -636,6 +644,8 @@ def theorem_G_nyquist_deficit_split(
             "n_H_off": nH_off,
             "n_K": nK,
             "equal_density_B": str(eqB),
+            "equal_density_lambda": str(eq_lambda),
+            "equal_density_is_lambda_bar": eq_lambda == lbar,
             "equal_density_suffices": eqB > 3 * q * q,
             "ok": row_ok,
         }
@@ -646,12 +656,16 @@ def theorem_G_nyquist_deficit_split(
         "qvar_iff_B_ge_3q2": True,
         "bochner_only_lambda_ge_0": True,
         "equal_density_would_suffice": True,
+        "equal_density_is_exceptional_above_mean": True,
         "theorem": (
             "On T, exceptional ψ is Nyquist (η).  ∑_T Q=2q²(q−1) and "
             "Q(±1)=8q² force the Wick deficit A+B=8q² (fail: 8↦4).  "
             "λ_exc=2B/q², so QVAR ⇔ B≥3q² (fail: B≥2q²).  PD/Bochner "
-            "only gives B≥0.  Equal density B=4q²(q−1)/(q−5)>3q² at "
-            "every p≥5, unproved.  A−B sign OPEN."
+            "only gives B≥0.  Equal Q (or equal deficit) on Hoff vs K "
+            "gives B=4q²(q−1)/(q−5) and λ_exc=8(q−1)/(q−5)=λ̄ "
+            "(fail: claim this is λ=6).  That is theorem F's unproved "
+            "exceptional-above-mean ordering, strictly stronger than "
+            "QVAR; do not reopen it as a weaker sufficient.  A−B OPEN."
         ),
         "by_p": rows,
     }
