@@ -77,6 +77,18 @@ complementary squares gives \(B=4q^2(q-1)/(q-5)\) and
 (exceptional above the \(\Phi\)-mean), strictly stronger than QVAR.
 Singer/OA Nyquist pairing does not cover \(p=13\equiv1\pmod4\) (\(m\) odd).
 
+Do not reopen as QVAR proofs (already killed / tautological):
+- Unique \(G\)-invariant 4-harmonic: \(\dim\mathrm{Harm}_4(W_e)^G=2,3,6\)
+  at \(p=5,7,11\) (`theorem_K_harm4_not_one_dimensional`). \(E|Z|^2-V_{\mathrm{sph}}\)
+  is not a multiple of leftover-3.
+- Pointwise SOS of \(Z^2-\mathrm{threshold}\): \(Z=0\) is attained.
+- Spectrum of real \(A_\psi|_{V_+}\) is \(\{0\}\cup\{\pm\sigma\}\)
+  (\(\sigma=p/4\) at \(p=7\); \(\sqrt5/2\) at \(p=5\)). Converts QVAR to
+  an imbalance \(E[(t-s)^2]\ge3(p^2-1)\) for \(p\equiv3\), same floor.
+- Frozen ridge 2-design: \(F=Ky\) linear, \(\|F\|^2=pS\), frozen \(F\in V_+\)
+  gives \(E[\langle y,F\rangle^2]=(p+1)S<3pS\). The gap is \(y\)–\(F(y)\)
+  correlation (RidgeAD), still unbound.
+
 ## What shipped (wiring, not a close)
 
 Leftover-1 conjunct is now **GLOBAL QVAR**, not per-stratum k≥7:
