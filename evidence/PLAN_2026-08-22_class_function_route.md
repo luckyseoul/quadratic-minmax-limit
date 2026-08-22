@@ -335,3 +335,74 @@ Weil character (Adams 6.4), invert the split Fourier transform at p=5
 principal spectrum before claiming.
 
 No flag flipped.  `leftover1` stays `global_qvar AND r1_l2`, both False.
+
+---
+
+# Step 4: A_e is the 4|k principal series; Fourier inversion is exact
+
+`scripts/gamma_ae_fourier.py`.  Canonical PSL lifts (`d[0]=+1`, no
+Frobenius).  `χ_Z = (χ_W(g)² + χ_W(g²))/2 − #fix(π)` (15.589 A).
+PSL principal series `ρ(α_k)`: even `k ∈ (0,(q−1)/2)`, excluding the
+quadratic `k=(q−1)/2`.  Inner products over `|PSL|`.  p=7 Γ on the V100.
+
+## Identification of A_e
+
+⟨χ_Z, ρ_k⟩ ∈ {0,1} exactly.  The 1's are:
+
+| p | PS indices | A_e (`⟨χ_Z,ρ⟩=1`) | 4\|k in PS |
+|---|---|---|---|
+| 5 | 2,4,6,8,10 | **4, 8** | 4, 8 |
+| 7 | 2,4,…,22 | **4, 8, 12, 16, 20** | 4, 8, 12, 16, 20 |
+
+**Count identity (all odd p, q=p²≡1 mod 8).**  Even `k` in `(0,(q−1)/2)`
+with `4|k` and `k ≠ (q−1)/2`: `(q−1)/2` is itself `0 mod 4` and is the
+excluded quadratic, so there are `(q−1)/8 − 1 = (q−9)/8` such `k`.
+This is exactly `|A_e|`.  Equivalently: `α` is trivial on the unique
+subgroup `μ_4 ⊂ F_q^*`.
+
+Do not promote the inner-product identification to a general-p character
+theorem yet (verified at two primes + the count).  Do not reopen "A_e is
+α trivial on F_p^*": that is 3 series at p=7, not 5.
+
+## Fourier inversion (exact at both primes)
+
+`χ_{W_e⊂Z} = χ_Z − ∑_{k∈A_e} ρ_k`  (not `tr(U|_{V_+})`; that pairing
+missed `λ_exc`).  Then `λ_c = ⟨Γ, χ_c⟩`:
+
+| p | `λ_exc=⟨Γ,χ_W⟩` | principal `λ_k=⟨Γ,ρ_k⟩` |
+|---|---|---|
+| 5 | `176/13` | `k=4: 80/13`, `k=8: 144/13` |
+| 7 | `4320/409` | `4: 3360/409`, `8: 4032/409`, `12: 3648/409`, `16: 3072/409`, `20: 3360/409` |
+
+Reconstruction `Γ = λ_exc χ_W + ∑ λ_k ρ_k` has **0 mismatches** on all
+7800 PSL elements at p=5 and all 58800 at p=7 (every family).
+
+p=7: `λ_4=λ_20` (multiplicity `2n` in the Φ spectrum).  `λ_8 ≠ λ_16`.
+The pairing `k ↔ (q−1)/2−k` is `ρ(α)` vs `ρ(χ_2 α)`, not automatic
+equality of scalars.
+
+## p=11 spectrum (stored Φ, not a Γ census)
+
+`phiZ_p11.npy`, dim Z=1769.  Clusters:
+
+- `λ_exc=8.664378` (mult 61=`n/2`)
+- 6 principal values, mult 122=`n`
+- 4 principal values, mult 244=`2n` (coincident pairs)
+- 6+4·2=14=`(121−9)/8` constituents.  All in `[8.054, 8.637]`.
+
+Numerically leftover 1 holds at p=11 with margin (already in 15.593 G).
+Not a p-law.
+
+## Where leftover 1 sits, sharpened
+
+```
+λ_min(Φ)≥6  ⇔  λ_exc≥6  and  λ_k≥6 for every k=4,8,…,(q−1)/2−4.
+```
+
+The binding principal scalar is at p=5: `80/13≈6.154`.  At p=7 the
+minimum is `3072/409≈7.511`; at p=11, `8.054`.  A closed form
+`λ(k,q)≥6` would close the principal floor; QVAR remains `λ_exc≥6`.
+p=7 cosine fit `λ(k)=(3456 − 192 cos 2θ − 480 cos 3θ)/409`,
+`θ=2πk/(q−1)`, is **one prime** — do not predict p=11 from it.
+
+No flag flipped.

@@ -199,6 +199,7 @@ def classify_perm(pi, p, q, n, fmul, fadd, fneg, one, finv, frob, squares):
         tr=int(tr),
         det=int(det),
         nfix=nfix,
+        A=(int(a), int(b), int(c), int(d)),
     )
 
 

@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-22 (QVAR probes + history note; **no flag flipped**)
+**Date:** 2026-08-22 (class-function route Step 4; **no flag flipped**)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main` (this commit). Working brain is ALWAYS main.
 
@@ -70,6 +70,25 @@ Next constraint is still simultaneous Boolean ridge / Gauss 4-distinct
 pairing on the size-weighted mix, or an odd-coset 4-harmonic that mixes
 \(k\) **and** orbits. Do not split \(\lambda=0\). Do not require each
 k-stratum. H/I Nyquist of occupancy covers \(p\equiv3\) only.
+
+## Class-function route (d512824–HEAD) — leftover 1, not a close
+
+Plan: `evidence/PLAN_2026-08-22_class_function_route.md`.  Scripts:
+`gamma_class_function.py`, `gamma_class_p7_gate.py`,
+`gamma_conjugacy_classes.py`, `gamma_class_parameter.py`,
+`gamma_ae_fourier.py`.  Pointwise constituent energy is dead at p=7.
+`Γ_δ` quantization is a p=5 artifact.  `Γ(−g)=Γ(g)` is a theorem.
+Order+fix does not determine `Γ`.
+
+Step 3–4: on PSL, elliptic `Γ=0`, involution `Γ=2(n−2)` (p=5,7),
+unipotent `Γ` is determined by `λ_exc`.  Split `Γ` is a function of
+`τ=tr²/det`; the p=5 O(1)-in-p split recipes **fail** at p=7.
+`A_e` is the principal series `ρ(α_k)` with `4|k` (count identity
+`(q−9)/8` for all `q=p²`; inner product 0/1 at p=5,7).  Fourier
+inversion `λ_c=⟨Γ,χ_c⟩` reconstructs `Γ` with 0 mismatches on all of
+PSL at both primes.  Principal floor binding value is p=5 `λ_4=80/13`.
+p=11 stored `Φ` has min principal `8.054`, `λ_exc=8.664`.  No flag
+flipped.  leftover 1 remains `λ_exc≥6` and `λ_k≥6` for those `k`.
 
 ## 15.597 Theorem A* (proved — not a census)
 

@@ -1,0 +1,28 @@
+{
+  "note": "A_e = PSL principal series rho(alpha_k) with 4|k. Fourier inversion exact at p=5,7. No flag flipped.",
+  "A_e_rule": "even k in (0, (q-1)/2) with 4|k; equivalently alpha trivial on mu_4 in F_q^*. Count = (q-9)/8.",
+  "verified_inner_product": [5, 7],
+  "reconstruction_mismatches": {"5": 0, "7": 0},
+  "p5": {
+    "lambda_exc": "176/13",
+    "principal": {"4": "80/13", "8": "144/13"}
+  },
+  "p7": {
+    "lambda_exc": "4320/409",
+    "principal": {
+      "4": "3360/409",
+      "8": "4032/409",
+      "12": "3648/409",
+      "16": "3072/409",
+      "20": "3360/409"
+    }
+  },
+  "p11_phiZ_clusters": {
+    "source": "/mnt/storage/e1work/maxplus_p11/phiZ_p11.npy",
+    "lambda_exc": 8.664378396284,
+    "lambda_exc_mult": 61,
+    "principal_min": 8.054448680085,
+    "n_principal_constituents": 14,
+    "n_double_values": 4
+  }
+}
