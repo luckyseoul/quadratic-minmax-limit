@@ -6,7 +6,16 @@ from fractions import Fraction
 
 p=int(sys.argv[1]) if len(sys.argv)>1 else 11
 q=p*p;n=q+1
-if p==11:
+ypath=sys.argv[2] if len(sys.argv)>2 else None
+if ypath:
+    Y=np.load(ypath).astype(np.int8)
+    if Y.shape[1]==q:
+        Yfull=np.concatenate([np.ones((len(Y),1),dtype=np.int8), Y],1)
+    elif Y.shape[1]==n:
+        Yfull=Y[Y[:,0]==1] if not np.all(Y[:,0]==1) else Y
+    else:
+        raise SystemExit(f"bad Y shape {Y.shape} want {q} or {n} cols")
+elif p==11:
     Yfull=np.load('/tmp/e1work/maxplus_p11_eps1.npy').astype(np.int8)
 else:
     Y=np.load(f'/tmp/maxplus_p{p}.npy').astype(np.int8)

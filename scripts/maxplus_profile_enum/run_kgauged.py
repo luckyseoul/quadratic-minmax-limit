@@ -1,13 +1,15 @@
 """Generic dilation+translation-gauged GPU enumeration of the k-stratum.
 
-Usage: python3 run_kgauged.py <k> <workers> [validate]
+Usage: PALEY_P=13 GAUGE_OUT=... python3 run_kgauged.py <k> <workers> [validate]
 Phase T: top = lam*K[deg][0] (lam != 0), level deg-1 = 0 (translation gauge),
          lower levels full lattices; expand reps by transversal x translations.
 Phase L: top = 0, levels deg-1..2 full lattices; expand by transversal only.
 Orbits under the 120-element dilation/Frobenius group across subsets.
 """
 import numpy as np, sys, time, itertools, os, pickle
-sys.path.insert(0,'/tmp/e1work')
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, _HERE)
+sys.path.insert(0, '/tmp/e1work')
 os.environ.setdefault("OMP_NUM_THREADS","1")
 from kgen import square_coords
 from kgen3 import prep_subset
@@ -16,7 +18,41 @@ from kgen6 import translation_tables
 from dilation import build_group, orbits
 from multiprocessing import Pool
 
-p=11; q=p*p
+p=int(os.environ.get("PALEY_P","11")); q=p*p
+
+
+def write_resume_file(path, k, n_tasks, outdir, total):
+    """Single JSON resume file. Source of truth for progress is orb*.npy."""
+    import json, glob
+    done_ids = []
+    for f in glob.glob(os.path.join(outdir, "orb*.npy")):
+        b = os.path.basename(f)
+        if b.startswith("orb") and b.endswith(".npy"):
+            try:
+                done_ids.append(int(b[3:-4]))
+            except ValueError:
+                pass
+    rec = {
+        "p": int(p),
+        "k": int(k),
+        "q": int(q),
+        "n_tasks": int(n_tasks),
+        "n_done": len(done_ids),
+        "n_remaining": int(n_tasks) - len(done_ids),
+        "n_solutions": int(total),
+        "outdir": os.path.abspath(outdir),
+        "load_tasks": os.environ.get("LOAD_TASKS") or "",
+        "device_gen": True,
+        "kernel": "gpu_gen_device.emit_cands atomicAdd+atomicExch (arch-agnostic RawKernel)",
+        "updated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+    }
+    tmp = path + ".tmp"
+    with open(tmp, "w") as fh:
+        json.dump(rec, fh, indent=2)
+        fh.write("\n")
+        fh.flush()
+        os.fsync(fh.fileno())
+    os.replace(tmp, path)
 
 def lattice(basis):
     if len(basis)==0:
@@ -53,21 +89,42 @@ def build_states(k,ctxs,subsets):
 def worker(args):
     phase,sub,cf,tvidx=args
     global _ctxs,_testers,_k
-    from gpu_inner import GpuTester,process_outer_gpu
-    ctx=_ctxs[sub]
-    if sub not in _testers:
-        _testers[sub]=GpuTester(p,_k,ctx['Tm'],ctx['UU'])
-    tester=_testers[sub]
-    s_ar=np.arange(p,dtype=np.int64)
-    upper=np.zeros((_k,p),dtype=np.int64)
-    for d,vec in cf.items():
-        upper=(upper+np.outer(vec,(s_ar**d)%p))%p
-    sols=[]
-    t0=time.time()
-    nc=process_outer_gpu(p,_k,q,upper,ctx['UU'],ctx['Tm'],ctx['c0'],1,tester,sols)
-    reps=_activity_filter(sols,ctx['Tm'],p,_k,1)
-    R=np.stack(reps).astype(np.int8) if reps else np.zeros((0,q),np.int8)
-    return phase,sub,tvidx,R,nc,time.time()-t0
+    from k6_control import try_claim_orbit
+    outdir=os.environ.get("GAUGE_OUT", f"/mnt/storage/e1work/maxplus_p{p}/k{_k}_gpu_out")
+    # Soft-soft: do not take a new lock if a stop flag is up. Orbits that
+    # already hold .lock_* run to completion (this function is already in them).
+    claimed=try_claim_orbit(outdir, tvidx)
+    if claimed < 0:
+        return phase,sub,tvidx,None,claimed,0.0
+    lock=f'{outdir}/.lock_{tvidx}'
+    host=os.environ.get("K6_HOST","")
+    backend=os.environ.get("K6_BACKEND","cuda")
+    print(f"CLAIM {host} tvidx={tvidx} backend={backend} "
+          f"NUMBA={os.environ.get('NUMBA_NUM_THREADS','')} "
+          f"OMP={os.environ.get('OMP_NUM_THREADS','')}",
+          flush=True)
+    try:
+        from k6_backend import make_tester, process_outer
+        ctx=_ctxs[sub]
+        if sub not in _testers:
+            _testers[sub]=make_tester(p,_k,ctx['Tm'],ctx['UU'])
+        tester=_testers[sub]
+        s_ar=np.arange(p,dtype=np.int64)
+        upper=np.zeros((_k,p),dtype=np.int64)
+        for d,vec in cf.items():
+            upper=(upper+np.outer(vec,(s_ar**d)%p))%p
+        sols=[]
+        t0=time.time()
+        nc=process_outer(p,_k,q,upper,ctx['UU'],ctx['Tm'],ctx['c0'],1,tester,sols)
+        reps=_activity_filter(sols,ctx['Tm'],p,_k,1)
+        R=np.stack(reps).astype(np.int8) if reps else np.zeros((0,q),np.int8)
+        return phase,sub,tvidx,R,nc,time.time()-t0
+    except Exception:
+        try:
+            os.rmdir(lock)
+        except OSError:
+            pass
+        raise
 
 def initw(k,ctxs):
     global _ctxs,_testers,_k
@@ -76,47 +133,94 @@ def initw(k,ctxs):
 if __name__=='__main__':
     k=int(sys.argv[1]); nw=int(sys.argv[2])
     validate=len(sys.argv)>3 and sys.argv[3]=='validate'
-    dirs,forms,coords=square_coords(p)
-    m=len(dirs)
-    subsets=list(itertools.combinations(range(m),k))
-    ctxs={sub:prep_subset(p,list(sub),forms,coords) for sub in subsets}
-    group,gcoords=build_group(p)
-    TT=translation_tables(p)
-    t0=time.time()
-    T,L=build_states(k,ctxs,subsets)
-    print(f"states: T={len(T)} L={len(L)}",flush=True)
-    orbT=orbits(T,group,p); orbL=orbits(L,group,p)
-    print(f"orbits: T={len(orbT)} L={len(orbL)}  ({time.time()-t0:.0f}s)",flush=True)
-    outdir=f'/tmp/e1work/k{k}_gpu_out'
+    shard_mod=int(os.environ.get("ENUM_SHARD_MOD","1"))
+    shard_rem=int(os.environ.get("ENUM_SHARD_REM","0"))
+    load=os.environ.get("LOAD_TASKS")
+    dump=os.environ.get("DUMP_TASKS")
+    print(f"LAUNCH p={p} k={k} nw={nw} GPU_WORKERS={os.environ.get('GPU_WORKERS',nw)} "
+          f"K6_HOST={os.environ.get('K6_HOST','')} "
+          f"K6_BACKEND={os.environ.get('K6_BACKEND','cuda')} "
+          f"DEVICE_GEN=1 GEN_CAP={os.environ.get('GEN_CAP','40000000')} "
+          f"shard={shard_rem}/{shard_mod} LOAD={bool(load)}",flush=True)
+    if load:
+        with open(load,'rb') as fh:
+            data=pickle.load(fh)
+        ctxs=data['ctxs']; tvstore=data['tvstore']; tasks_all=data['tasks_all']
+        TT=data['TT']
+        print(f"LOADED {load} tasks_all={len(tasks_all)}",flush=True)
+    else:
+        dirs,forms,coords=square_coords(p)
+        m=len(dirs)
+        subsets=list(itertools.combinations(range(m),k))
+        ctxs={sub:prep_subset(p,list(sub),forms,coords) for sub in subsets}
+        group,gcoords=build_group(p)
+        TT=translation_tables(p)
+        t0=time.time()
+        T,L=build_states(k,ctxs,subsets)
+        print(f"states: T={len(T)} L={len(L)}",flush=True)
+        orbT=orbits(T,group,p); orbL=orbits(L,group,p)
+        print(f"orbits: T={len(orbT)} L={len(orbL)}  ({time.time()-t0:.0f}s)",flush=True)
+    outdir=os.environ.get("GAUGE_OUT", f"/mnt/storage/e1work/maxplus_p{p}/k{k}_gpu_out")
     os.makedirs(outdir,exist_ok=True)
-    tasks_all=[]
-    tvstore=[]
-    for phase,orb in (('T',orbT),('L',orbL)):
-        for (sub,cf),tv in orb:
-            tvstore.append(tv)
-            tasks_all.append((phase,sub,cf,len(tvstore)-1))
+    if not load:
+        tasks_all=[]
+        tvstore=[]
+        for phase,orb in (('T',orbT),('L',orbL)):
+            for (sub,cf),tv in orb:
+                tvstore.append(tv)
+                tasks_all.append((phase,sub,cf,len(tvstore)-1))
+        if dump:
+            with open(dump,'wb') as fh:
+                pickle.dump(dict(p=p,k=k,q=q,ctxs=ctxs,tvstore=tvstore,
+                                 tasks_all=tasks_all,TT=TT), fh, protocol=5)
+            print(f"DUMPED {dump}",flush=True)
     # RESUME: tvidx assignment is deterministic (orbits() iterates a
     # dict built by enumerate() over a deterministically-ordered states
     # list), so orb{tvidx}.npy from a prior interrupted run lines up with
     # this run's task list exactly. Skip anything already on disk.
+    # Filename-only: do not np.load every orb (sshfs on a380/orin/nuka
+    # would stall here for minutes just to recount solutions).
+    resume_path=os.environ.get(
+        "RESUME_JSON",
+        os.path.join(os.path.dirname(os.path.abspath(outdir)), "k6_resume.json"),
+    )
+    import json as _json
     total=0
-    done_prior=0
-    tasks=[]
-    for t in tasks_all:
-        tvidx=t[3]
-        fp=f'{outdir}/orb{tvidx}.npy'
-        if os.path.exists(fp):
-            total+=len(np.load(fp))
-            done_prior+=1
-        else:
-            tasks.append(t)
+    if os.path.isfile(resume_path):
+        try:
+            total=int(_json.load(open(resume_path)).get("n_solutions", 0) or 0)
+        except (OSError, ValueError, TypeError, _json.JSONDecodeError):
+            total=0
+    done_ids=set()
+    try:
+        for name in os.listdir(outdir):
+            if name.startswith("orb") and name.endswith(".npy"):
+                try:
+                    done_ids.add(int(name[3:-4]))
+                except ValueError:
+                    pass
+    except OSError:
+        pass
+    done_prior=len(done_ids)
+    tasks=[t for t in tasks_all if t[3] not in done_ids]
+    if shard_mod>1:
+        tasks=[t for t in tasks if t[3]%shard_mod==shard_rem]
     if done_prior:
         print(f"RESUMED: {done_prior}/{len(tasks_all)} outers already on disk "
-              f"({total} solutions); {len(tasks)} remaining",flush=True)
-    perm_inv={id(g):np.argsort(g[0]) for g in group}
+              f"({total} solutions); {len(tasks)} remaining "
+              f"shard={shard_rem}/{shard_mod}",flush=True)
+    print(f"this process tasks={len(tasks)}",flush=True)
+    write_resume_file(resume_path, k, len(tasks_all), outdir, total)
+    print(f"RESUME_JSON {resume_path}", flush=True)
     done=done_prior
+    n_soft=0
     with Pool(nw,initializer=initw,initargs=(k,ctxs)) as pool:
         for phase,sub,tvidx,R,nc,dt in pool.imap_unordered(worker,tasks):
+            if nc == -2:
+                n_soft+=1
+                continue
+            if nc < 0 or R is None:
+                continue
             tv=tvstore[tvidx]
             cnt_here=0
             outs=[]
@@ -138,11 +242,30 @@ if __name__=='__main__':
                     os.fsync(fh.fileno())
             else:
                 # zero-solution orbit: still mark it done so a restart skips it
-                np.save(f'{outdir}/orb{tvidx}.npy',np.zeros((0,q),np.int8))
+                zfp=f'{outdir}/orb{tvidx}.npy'
+                np.save(zfp,np.zeros((0,q),np.int8))
+                with open(zfp,'rb') as fh:
+                    os.fsync(fh.fileno())
             total+=cnt_here
             done+=1
-            print(f"[{done}/{len(tasks_all)}] {phase} reps={len(R)} |tv|={len(tv)} -> {cnt_here}  cand={nc} {dt:.0f}s  cum={total}",flush=True)
-    print(f"k={k} gauged GPU TOTAL = {total}",flush=True)
+            write_resume_file(resume_path, k, len(tasks_all), outdir, total)
+            lock=f'{outdir}/.lock_{tvidx}'
+            try:
+                os.rmdir(lock)
+            except OSError:
+                pass
+            host=os.environ.get("K6_HOST","")
+            tag=f" {host}" if host else ""
+            print(f"[{done}/{len(tasks_all)}]{tag} {phase} tvidx={tvidx} reps={len(R)} |tv|={len(tv)} -> {cnt_here}  cand={nc} {dt:.0f}s  cum={total}",flush=True)
+    npy_n=len([f for f in os.listdir(outdir) if f.startswith('orb') and f.endswith('.npy')])
+    host=os.environ.get("K6_HOST","")
+    if n_soft:
+        print(f"k={k} SOFT STOP host={host} skipped_new_orbits={n_soft} "
+              f"npy={npy_n}/{len(tasks_all)}",flush=True)
+    elif npy_n>=len(tasks_all):
+        print(f"k={k} gauged GPU TOTAL = {total} npy={npy_n}",flush=True)
+    else:
+        print(f"k={k} gauged GPU NODE EXIT npy={npy_n}/{len(tasks_all)}",flush=True)
     if validate and k==5:
         print("comparing against k5_p11_full.npy as a SET ...",flush=True)
         import glob

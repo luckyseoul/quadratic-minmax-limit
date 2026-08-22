@@ -1,0 +1,149 @@
+.TH K6-MESH 1 "August 2026" "quadratic-minmax-limit" "k=6 p=13 mesh"
+.SH NAME
+k6-mesh \- start, soft-stop, and status for the p=13 k=6 orbit mesh
+.SH SYNOPSIS
+.B k6-mesh
+.BR start | stop | status | man | dash
+.RI [ NAME ]
+.P
+.B k6-mesh stop --hard
+.I NAME
+.SH DESCRIPTION
+Runs the gauged k=6 Max+ enumerator across the LAN mesh. Orbits are claimed
+with
+.I GAUGE_OUT/.lock_<tvidx>
+and written as
+.I orb<tvidx>.npy .
+Resume is those npy files. Workers never steal an orbit another host has locked.
+.P
+.B Stop is always soft
+unless
+.B --hard
+is given. Soft stop writes a flag under
+.I $K6_ROOT/mesh_stop/
+and workers that have not yet taken a lock skip new orbits. Any outer that
+already holds
+.I .lock_*
+runs to completion and writes its npy. There is no SIGKILL of an in-flight
+orbit on the default path.
+.P
+Starting one worker never stops another.
+.SH NAMES
+.TP
+.B all
+Every compute worker (and dash on start).
+.TP
+.B v100
+soulkiller Tesla V100, 2 CUDA processes. Log: enum_p13_k6.log
+.TP
+.B nuka
+RX 9070 XT via HIP/CuPy (WSL). Log: enum_p13_k6_nuka.log
+.TP
+.B orin
+Jetson Orin Ampere sm_87, 1 CUDA process, GEN_CAP=8e6. Log: enum_p13_k6_orin.log
+.TP
+.B a380
+jellyfin Intel Arc A380 SYCL emit + host test. Log: enum_p13_k6_a380.log
+.TP
+.B cpu44
+soulkiller 44 orbit processes (OMP=1 each), CUDA hidden. Log: enum_p13_k6_cpu44.log
+.TP
+.B dash
+HTTP dashboard on :8765.
+.SH COMMANDS
+.TP
+.B start NAME
+Make that worker runnable without un-stopping the others (if ALL is set,
+it is converted into per-worker flags on everyone else) and launch it
+if it is not already running.
+.B start all
+brings up dash, v100, nuka, orin, a380, cpu44.
+.TP
+.B stop NAME
+Soft-soft stop of that worker only: write
+.I mesh_stop/NAME
+and wait until the process exits after finishing current orbit(s).
+The rest of the mesh keeps claiming new orbs. Dummy lock starve is
+.B not
+used here (starve is mesh-wide).
+.TP
+.B stop all
+Write
+.I mesh_stop/ALL
+and occupy unclaimed slots with STARVE-marked dummy locks so
+.B old
+workers that predate the flag still finish in-flight orbs and then
+exit. Dummy locks are dropped only after those processes are gone;
+in-flight (unmarked) locks are never removed.
+.TP
+.B stop --hard NAME
+SIGTERM, then SIGKILL. Can leave a .lock_* without npy; the next start
+drops stale locks.
+.TP
+.B status
+One-line ETA plus pid alive/stopped for each name.
+.TP
+.B dash
+Serve the dashboard in the foreground.
+.TP
+.B man
+Show this page (
+.B man -l k6-mesh.1
+).
+.SH DASHBOARD
+.B http://127.0.0.1:8765/k6_dashboard.html
+.P
+The LAN is firewalled; from a laptop:
+.P
+.RS
+ssh -L 8765:127.0.0.1:8765 nick@192.168.1.113
+.RE
+.P
+Each worker card has
+.B Start
+and
+.B Soft stop
+. Start/stop of one card does not touch the others. Soft stop is the same
+flag as
+.B k6-mesh stop NAME .
+The page is a single column under 600px with 44px tap targets.
+.SH ENVIRONMENT
+.TP
+.B K6_ROOT
+Default /mnt/storage/e1work/maxplus_p13
+.TP
+.B K6_CODE
+Default .../scripts/maxplus_profile_enum
+.TP
+.B K6_HOST
+Set by the launcher (v100, nuka, ...).
+.TP
+.B K6_BACKEND
+cuda (V100/nuka/orin), sycl (a380), cpu (cpu44).
+.TP
+.B K6_STOP_DIR
+Default $K6_ROOT/mesh_stop
+.SH FILES
+.I $K6_ROOT/k6_gpu_out/orb*.npy
+.I $K6_ROOT/k6_tasks.pkl
+.I $K6_ROOT/k6_resume.json
+.I $K6_ROOT/mesh_stop/<NAME>
+.I $K6_ROOT/mesh_pids/<NAME>.pid
+.SH NOTES
+lucky (192.168.1.82) is DNS only and is never used.
+cpu44 and v100 share soulkiller: cpu44 sets CUDA_VISIBLE_DEVICES empty and
+uses 44 of 88 threads so the V100 host process still has cores.
+Remote workers sshfs the platter at
+.I /home/nick/mnt/maxplus_p13
+and need
+.I ~/.ssh/mesh.config
+(k6-mesh copies it if missing).
+.P
+.B man k6-mesh
+after
+.I ~/.local/share/man/man1/k6-mesh.1
+is installed, or
+.B ./k6-mesh man
+from the scripts directory.
+.SH SEE ALSO
+run_kgauged.py, k6_control.py, k6_dashboard.py
