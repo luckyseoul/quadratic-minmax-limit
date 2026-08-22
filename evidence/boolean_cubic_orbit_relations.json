@@ -1,0 +1,102 @@
+{
+  "5": {
+    "p": 5,
+    "M": 260,
+    "n_R": 5,
+    "n_orb": 4,
+    "cubic_maxres": 2.0059465858669662e-13,
+    "Q1": 5000.000000000003,
+    "Q1_expect": 5000,
+    "row_sum": 30000.000000000007,
+    "row_sum_expect": 30000,
+    "Gamma_sum": 4999.999999999998,
+    "lhs_4p2Eu": 5000.0,
+    "diag_Gamma_is_Qrho": true,
+    "n_Gamma_buckets": 15,
+    "n_split_buckets": 0,
+    "Gamma_lin_Q_maxerr": 757.4422673632221,
+    "Gamma_lin_Q_rank": 6,
+    "tautology_maxerr": 1.1641532182693481e-10,
+    "leftover": [
+      {
+        "rep": 6,
+        "size_T": 2,
+        "Q": 1538.4615384615386,
+        "Wick": 2500,
+        "Q_minus_Wick": -961.5384615384614
+      },
+      {
+        "rep": 10,
+        "size_T": 1,
+        "Q": 2307.6923076923076,
+        "Wick": 2500,
+        "Q_minus_Wick": -192.30769230769238
+      },
+      {
+        "rep": 12,
+        "size_T": 2,
+        "Q": 2307.692307692308,
+        "Wick": 2500,
+        "Q_minus_Wick": -192.30769230769192
+      }
+    ],
+    "naive_Wick_sum": 25000.0
+  },
+  "7": {
+    "p": 7,
+    "M": 11452,
+    "n_R": 11,
+    "n_orb": 6,
+    "cubic_maxres": 1.7730295683949793e-12,
+    "Q1": 19208.0,
+    "Q1_expect": 19208,
+    "row_sum": 230496.0,
+    "row_sum_expect": 230496,
+    "Gamma_sum": 19207.999999999978,
+    "lhs_4p2Eu": 19208.0,
+    "diag_Gamma_is_Qrho": true,
+    "n_Gamma_buckets": 40,
+    "n_split_buckets": 10,
+    "Gamma_lin_Q_maxerr": 1225.7469687617468,
+    "Gamma_lin_Q_rank": 6,
+    "tautology_maxerr": 9.313225746154785e-10,
+    "leftover": [
+      {
+        "rep": 1,
+        "size_T": 2,
+        "Q": 8782.141809290953,
+        "Wick": 9604,
+        "Q_minus_Wick": -821.8581907090465
+      },
+      {
+        "rep": 3,
+        "size_T": 1,
+        "Q": 9063.921760391198,
+        "Wick": 9604,
+        "Q_minus_Wick": -540.0782396088016
+      },
+      {
+        "rep": 10,
+        "size_T": 4,
+        "Q": 8782.141809290953,
+        "Wick": 9604,
+        "Q_minus_Wick": -821.8581907090465
+      },
+      {
+        "rep": 14,
+        "size_T": 2,
+        "Q": 9063.921760391198,
+        "Wick": 9604,
+        "Q_minus_Wick": -540.0782396088016
+      },
+      {
+        "rep": 15,
+        "size_T": 2,
+        "Q": 8077.691931540342,
+        "Wick": 9604,
+        "Q_minus_Wick": -1526.308068459658
+      }
+    ],
+    "naive_Wick_sum": 211288.0
+  }
+}

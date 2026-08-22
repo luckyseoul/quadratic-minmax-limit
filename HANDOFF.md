@@ -97,8 +97,17 @@ L(i)=L(ω₃) as a p-law (true at p=5,7, false at p=11 sample);
 p-independent cosine of λ(k) (p=5+7 does not predict p=11).  p=5
 only: λ(k)=8+8/13−(64/13)cos(πk/6).  Uniform L≥L_min is not a floor
 proof (binding character eats the slack).  Aut leftover dofs stay
-n_orb−2.  Next: Boolean cubic on Ω as a relation among leftover
-orbit values.  No flag flipped.
+n_orb−2.
+
+Step 7: Boolean cubic on Ω **does not cut leftover Aut-dofs of Q**
+(`scripts/boolean_cubic_orbit_relations.py`).  It is Fourier of
+\(z_x^2=1\): `2ẑ(0)ẑ+∑_R ẑ(tξ)ẑ((1−t)ξ)=0` to 1e-12; `2pẑ+∑B` only
+on y_∞=+1.  Squared form is the tautology 4p² Q(r)=E[|∑B|² u(r·)].
+Off-diagonal bilinear Gram Γ is not linear in Aut-orbit Q (maxerr
+757 / 1226 at p=5,7) and splits Aut-ratio buckets at p=7.  ρ(R)
+misses leftover orbits.  Do not reopen as a floor argument (15.279 T
+already: Boolean rewrite returns M).  Next: Boolean 4-point of V_+
+on Aut-orbits of 4-tuples.  No flag flipped.
 
 ## 15.597 Theorem A* (proved — not a census)
 

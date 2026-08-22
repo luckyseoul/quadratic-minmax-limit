@@ -569,3 +569,59 @@ No flag flipped.  Floor is still F̂(ψ)≥0 for every even ψ∉{1,χ}.
 Next constraint that could cut Aut-dofs is the Boolean cubic on Ω
 (15.279 T) as a linear relation among leftover orbit values, not
 another Paley-type or cyclotomic collapse.
+
+---
+
+# Step 7: Boolean cubic on Ω does not cut leftover Aut-dofs of Q
+
+`scripts/boolean_cubic_orbit_relations.py`.  15.279 T, all Max+ at
+p=5,7 (MuLab; vectorized DFT).
+
+The cubic is the Fourier of \(z_x^2=1\):
+
+    ∑_η ẑ(η)ẑ(ξ−η) = q² 1_{ξ=0}.
+
+Restricted to ξ∈Ω with ẑ supported on {0}∪Ω this is
+
+    2 ẑ(0) ẑ(ξ) + ∑_{t∈R} ẑ(tξ)ẑ((1−t)ξ) = 0,
+
+ẑ(0)=p y_∞.  Residual of `2ẑ(0)ẑ+∑B` is 2e-13 (p=5) / 2e-12 (p=7).
+The published form `2pẑ+∑B` holds only on y_∞=+1 (fails on y_∞=−1
+by |4pẑ|).  Magnitude |∑B|=2p|ẑ| on both signs.
+
+Squared and averaged: ∑_{t,s∈R} Γ_{t,s} = 4p² E u = Q(1)=8q², and
+`4p² Q(r)=E[|∑B|² u(r·)]` to 1e-10.  Both are the cubic tautology
+(15.279 T: “Boolean rewrite returns M”).  They do **not** give a
+linear relation on leftover Aut-orbit Q beyond Q(±1)=8q² and the
+row-sum ∑_{r□} Q(r)=2q²(q−1) (checked exact).
+
+Diagonal of the bilinear Gram is Q: Γ_{t,t}=Q(ρ(t)), ρ(t)=(1−t)/t.
+ρ(R) **misses** leftover orbits (p=5: the i-orbit is not in ρ(R)).
+Naive |ẑ|²-Wick of Γ is 5× too big (∑=25000 vs 5000 at p=5).
+
+Off-diagonal Γ is **not** linear in Aut-orbit Q (lstsq maxerr 757
+at p=5, 1226 at p=7).  At p=7 it is not even a class function of
+(orb ρt, ρs, s/t, t=s, t=1−s): 10 split buckets, spreads ~10³.
+(At p=5 those keys do not split, still not linear in Q.)
+
+Γ ⪰ 0 is automatic (Gram of the B_t).  Putting a Q-model on the
+off-diagonal and requiring PSD is the SOS-4 / linear 4-point
+relaxation already killed.
+
+**Killed:** Boolean cubic on Ω as a source of new linear constraints
+on leftover Aut-orbit Q.  Aut leftover dofs stay n_orb−2.  Floor
+F̂(ψ)≥0 still OPEN.  No flag flipped.
+
+Named Q on Aut-orbits (full mix; Wick off ±1 is 4q²):
+
+| p=5 orbit | Q | Q−4q² |
+|---|---|---|
+| ±1 | 5000 | +2500 |
+| i and ω₃ | 30000/13 | −2500/13 |
+| binding (order 12) | 20000/13 | −12500/13 |
+
+p=7 binding (order 8) is the unique min leftover Q≈8077.7 vs Wick 9604.
+
+Next that is not a rewrite of z²=1 or Aut-invariance: Boolean 4-point
+of V_+ as a function of Aut-orbits of 4-tuples (cross-ratio, not a
+linear model in {κ,star,φ} — that already fails at p=5,7).
