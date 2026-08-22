@@ -469,3 +469,24 @@ even k match spec(Φ) to ~1e-6.  GPU 9.75s / wall 12.5s.
 Step 5 is now a three-prime identity (p=5,7 MuLab; p=11 minmax
 labeling).  Leftover 1 is still the **min** over those even α, not
 the mean and not QVAR alone.  No flag flipped.
+
+This is the same object as **15.279 Φ|_F** (even characters of
+F_q^×/{±1}, pairs {ψ,χψ}, dim F=(q−5)/4).  Identified constants:
+λ=2 E|M_ψ|²/(p⁴(p²−1))=32 E|Z_α|²/[q(q−1)].  Theorem D:
+λ=8+ˆR_rest/q², so leftover 1 is ˆR_rest≥−2q² for every even
+ψ∉{1,χ}, equivalently Gauss 4-distinct pairing of m₄ ≥0 (15.279 L),
+equivalently F̂(ψ)≥0 on squares (15.279 M).  That is the QVAR goal
+language, now required for **all** even characters, not just α²=χ.
+
+Measured ˆR_rest at the binding character (budget −2q²):
+
+| p | λ_min | ˆR_rest | −2q² | margin |
+|---|---|---|---|---|
+| 5 | 80/13 | −15000/13 | −1250 | 1250/13=(λ−6)q² |
+| 7 | 3072/409 | −1174.08 | −4802 | 3628 |
+| 11 | 8.054447 | +791 | −29282 | λ_min>8 so remainder **positive** |
+
+|ẑ|² on Ω (15.279 support): energy off Ω is 0; E[|ẑ|²]=2q.  Not
+two-valued (p=5: five values in Q(√5), including 0; p=7: many
+values, including 0).  Pointwise |M|²=0 is attained; ensemble
+average is the floor.  No flag flipped.
