@@ -1,5 +1,7 @@
 # Status (2026-08-22)
 
+History/references: `evidence/HISTORY_AND_REFERENCES.md` (MO/X/Paata/pre-internet). Not a close.
+
 No leftover flag flipped. `phi_F_ge_6` imports
 `leftover1_qvar_and_principal_proved()` from
 `src/e1_gmin_leftover1_qvar_principal.py` (unnumbered hinge). That

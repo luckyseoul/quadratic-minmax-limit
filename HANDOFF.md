@@ -1,14 +1,28 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-22 (15.597 Theorem A* proved; **no leftover flag flipped**)
+**Date:** 2026-08-22 (history/references note; GLOBAL QVAR still OPEN)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
-**HEAD:** `bcbdaf6` on `main`. Working brain is ALWAYS main.
+**HEAD:** on `main` (this commit). Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
-wiring. p=13 orbits / mesh k=6 are not a close.
+wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
 
-## 15.597 Theorem A* (new, proved — not a census)
+## This turn (literature + wiring, not a close)
+
+- **`evidence/HISTORY_AND_REFERENCES.md`** — MO 413935 / X prize / Paata
+  education / pre-internet lineage (Littlewood 4/3, Paley 1933,
+  Goethals–Seidel 1967, Blei Thm 34, DMP, Talagrand). Fetched live
+  (SE API, X thread, blog, CV, arXiv). No classical existence theorem.
+  Do not reopen BH, typical-\(A\), Bowlin, or “Paley \(\Rightarrow\lim=1/2\)”.
+- Gating test `test_pairing_open_and_flag_imported` now ORs theorem I
+  (shipped `global_qvar_proved_general` already did). Dump JSON refreshed
+  for equal-density \(=\bar\lambda\). `src/e1_gmin_qvar_bool6.py` stays
+  **uncommitted**.
+- GLOBAL QVAR still False: Gauss 4-dist / \(\hat F(\psi)\ge0\) on the
+  mixed-\(k\) Max+ ensemble is OPEN. leftover-1 = global QVAR \(\land\) R1.
+
+## 15.597 Theorem A* (proved — not a census)
 
 `src/e1_gmin_m4_prop15597.py`. Distinct from 15.108's old "Theorem A*"
 (16N). For every prime \(p\ge5\), on \(Z\):
@@ -144,9 +158,9 @@ on Orin. Soft-stop mesh unless the user hard-closes a named node.
 ## Suggested skills
 
 `agent-cost-optimization`, `graph-engineered-completion`,
-`use-available-compute`, `claude-referee` then `openai-referee`,
-`verification-before-completion`, `handoff`, `scientific-critique`,
-`grill-me`, `self-refine-loop`, `research`, `arxiv`.
+`use-available-compute`, `verification-before-completion`, `handoff`,
+`scientific-critique`, `grill-me`, `self-refine-loop`, `research`,
+`arxiv`, `litreview`. Referees only if the user names them.
 
 ---
 

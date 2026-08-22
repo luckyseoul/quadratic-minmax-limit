@@ -157,7 +157,8 @@
     "qvar_iff_B_ge_3q2": true,
     "bochner_only_lambda_ge_0": true,
     "equal_density_would_suffice": true,
-    "theorem": "On T, exceptional \u03c8 is Nyquist (\u03b7).  \u2211_T Q=2q\u00b2(q\u22121) and Q(\u00b11)=8q\u00b2 force the Wick deficit A+B=8q\u00b2 (fail: 8\u21a64).  \u03bb_exc=2B/q\u00b2, so QVAR \u21d4 B\u22653q\u00b2 (fail: B\u22652q\u00b2).  PD/Bochner only gives B\u22650.  Equal density B=4q\u00b2(q\u22121)/(q\u22125)>3q\u00b2 at every p\u22655, unproved.  A\u2212B sign OPEN.",
+    "equal_density_is_exceptional_above_mean": true,
+    "theorem": "On T, exceptional \u03c8 is Nyquist (\u03b7).  \u2211_T Q=2q\u00b2(q\u22121) and Q(\u00b11)=8q\u00b2 force the Wick deficit A+B=8q\u00b2 (fail: 8\u21a64).  \u03bb_exc=2B/q\u00b2, so QVAR \u21d4 B\u22653q\u00b2 (fail: B\u22652q\u00b2).  PD/Bochner only gives B\u22650.  Equal Q (or equal deficit) on Hoff vs K gives B=4q\u00b2(q\u22121)/(q\u22125) and \u03bb_exc=8(q\u22121)/(q\u22125)=\u03bb\u0304 (fail: claim this is \u03bb=6).  That is theorem F's unproved exceptional-above-mean ordering, strictly stronger than QVAR; do not reopen it as a weaker sufficient.  A\u2212B OPEN.",
     "by_p": {
       "5": {
         "A_plus_B": 5000,
@@ -166,6 +167,8 @@
         "n_H_off": 4,
         "n_K": 6,
         "equal_density_B": "3000",
+        "equal_density_lambda": "48/5",
+        "equal_density_is_lambda_bar": true,
         "equal_density_suffices": true,
         "ok": true
       },
@@ -176,6 +179,8 @@
         "n_H_off": 10,
         "n_K": 12,
         "equal_density_B": "115248/11",
+        "equal_density_lambda": "96/11",
+        "equal_density_is_lambda_bar": true,
         "equal_density_suffices": true,
         "ok": true
       },
@@ -186,6 +191,8 @@
         "n_H_off": 28,
         "n_K": 30,
         "equal_density_B": "1756920/29",
+        "equal_density_lambda": "240/29",
+        "equal_density_is_lambda_bar": true,
         "equal_density_suffices": true,
         "ok": true
       },
@@ -196,6 +203,8 @@
         "n_H_off": 40,
         "n_K": 42,
         "equal_density_B": "4798248/41",
+        "equal_density_lambda": "336/41",
+        "equal_density_is_lambda_bar": true,
         "equal_density_suffices": true,
         "ok": true
       },
@@ -206,6 +215,8 @@
         "n_H_off": 70,
         "n_K": 72,
         "equal_density_B": "24054048/71",
+        "equal_density_lambda": "576/71",
+        "equal_density_is_lambda_bar": true,
         "equal_density_suffices": true,
         "ok": true
       },
@@ -216,6 +227,8 @@
         "n_H_off": 88,
         "n_K": 90,
         "equal_density_B": "46915560/89",
+        "equal_density_lambda": "720/89",
+        "equal_density_is_lambda_bar": true,
         "equal_density_suffices": true,
         "ok": true
       },
@@ -226,6 +239,8 @@
         "n_H_off": 130,
         "n_K": 132,
         "equal_density_B": "147756048/131",
+        "equal_density_lambda": "1056/131",
+        "equal_density_is_lambda_bar": true,
         "equal_density_suffices": true,
         "ok": true
       },
@@ -236,6 +251,8 @@
         "n_H_off": 418,
         "n_K": 420,
         "equal_density_B": "4747278480/419",
+        "equal_density_lambda": "3360/419",
+        "equal_density_is_lambda_bar": true,
         "equal_density_suffices": true,
         "ok": true
       }

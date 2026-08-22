@@ -46,6 +46,7 @@ See **`STATUS.md`**, `HANDOFF.md`, denseness package, `solution.md`.
 | Path | Role |
 |------|------|
 | `HANDOFF.md` | Research handoff / resume entry point |
+| `evidence/HISTORY_AND_REFERENCES.md` | MO/X/Paata education and pre-internet sources (not a close) |
 | `solution.md` | Full mathematical writeup |
 | `src/e1_gmin_m4_prop15167.py` … `prop15171.py` | Bi-tight + E(1) residual ND modules |
 | `src/minmax_quadratic.py` | Exact `m_n`, Paley, \(\Phi\), bounds, \(\rho=1\) evec |

@@ -117,17 +117,19 @@ def test_pairing_open_and_flag_imported():
     P = G.theorem_P_pairing_positivity()
     Gd = G.theorem_G_nyquist_deficit_split()
     H = G.theorem_H_singer_circulant_p_eq_3_mod_4()
+    I = G.theorem_I_oa_occupancy_orbit_mass()
     assert P["proved"]
     assert P["inequality_proved"] is False
     assert Gd["inequality_proved"] is False
     assert H["inequality_proved"] is False
-    assert G.global_qvar_proved_general() is False
+    assert I["inequality_proved"] is False
     assert G.global_qvar_proved_general() is (
         G.theorem_A_global_floor_iff()["proved"]
         and (
             P["inequality_proved"]
             or Gd["inequality_proved"]
             or H["inequality_proved"]
+            or I["inequality_proved"]
         )
     )
     src = inspect.getsource(G.global_qvar_proved_general)
@@ -135,6 +137,8 @@ def test_pairing_open_and_flag_imported():
     assert "inequality_proved" in src
     assert "theorem_G_nyquist_deficit_split" in src
     assert "theorem_H_singer_circulant_p_eq_3_mod_4" in src
+    assert "theorem_I_oa_occupancy_orbit_mass" in src
+    assert "theorem_P_pairing_positivity" in src
 
 
 def test_singer_circulant_p_eq_3_structure_not_a_close():
