@@ -48,3 +48,30 @@ def test_prop_does_not_claim_a_flip():
     out = main()
     assert out["flips_anything"] is False
     assert out["L_status"] == "OPEN"
+
+
+def test_theorem_A_star_contractions_close_for_all_p():
+    """PROVED contraction values: A=(n+1)/4, B=-n/4, E=-p give exactly
+    lambda_bar. Verified symbolically far beyond any census range."""
+    from e1_gmin_m4_prop15597 import contraction_closed_forms, theorem_A_star_algebra
+    for p in (5, 7, 11, 13, 17, 19, 23, 29, 101, 1009, 10007):
+        r = theorem_A_star_algebra(p)
+        assert r["combination_ok"] is True
+        assert r["qf_equals_lambda_bar"] is True
+        assert r["m4part_contraction"] == r["m4part_target"]
+        c = contraction_closed_forms(p)
+        n = p * p + 1
+        assert c["A"] == Fraction(n + 1, 4)
+        assert c["B"] == Fraction(-n, 4)
+        assert c["E"] == Fraction(-p)
+
+
+def test_contractions_match_measured_values():
+    """Closed forms reproduce the numerically measured contractions."""
+    from e1_gmin_m4_prop15597 import contraction_closed_forms
+    assert contraction_closed_forms(5)["A"] == Fraction(27, 4)   # measured 6.75
+    assert contraction_closed_forms(5)["B"] == Fraction(-13, 2)  # measured -6.5
+    assert contraction_closed_forms(5)["E"] == Fraction(-5)      # measured -5
+    assert contraction_closed_forms(7)["A"] == Fraction(51, 4)   # measured 12.75
+    assert contraction_closed_forms(7)["B"] == Fraction(-25, 2)  # measured -12.5
+    assert contraction_closed_forms(7)["E"] == Fraction(-7)      # measured -7

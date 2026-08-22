@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""
+r"""
 Prop 15.597 — Φ_part = λ̄·I exactly: the particular solution is spectrally
 invisible, so leftovers 1 and 3 are statements about Φ_δ alone.
 
@@ -29,7 +29,11 @@ PROVED
      So Theorem A is directly verified at p=5,7,11,13 — data-free at
      every prime, needing no Max± ensemble.
 
-  A'. TOWARD A GENERAL-p PROOF (two lemmas proved; contraction open).
+  A''. **PROVED FOR ALL p (2026-08-22).**  See Theorem A* below; the
+      contraction identities are now closed in closed form, so
+      Phi_part = lambda_bar I is a general-p THEOREM, not a census.
+
+  A'. (superseded by A*, retained for the reduction it records)
       For W ∈ Z:
         (i)  W C = p W  (transpose of CW = pW, both symmetric), hence
              W²C = pW² and  tr(W²C)/p = ‖W‖²_F.
@@ -47,8 +51,50 @@ PROVED
       ‖W‖²/4 by (ii) (all row sums R_i vanish), and its cross-pairing
       piece is governed by tr(CWCW) = p²‖W‖² = (n−1)‖W‖².  The φ- and
       star-contractions remain; both are traces of products of C and W
-      subject to CW = pW, so the route is closed-form.  NOT completed
-      here — recorded as the concrete next step.
+      subject to CW = pW, so the route is closed-form.  COMPLETED in A*.
+
+THEOREM A* — Phi_part = lambda_bar * I for EVERY prime p >= 5 (PROVED).
+  Lemmas (all for W in Z: W symmetric, diag W = 0, CW = pW; C^2 = (n-1)I):
+    L1.  WC = pW (transpose), so W^2 C = pW^2 and tr(W^2 C)/p = ||W||^2.
+    L2.  (CW)_ii = p W_ii = 0, and since C,W are symmetric
+         sum_j C_ij W_ij = sum_j C_ij W_ji = (CW)_ii = 0:
+         **every row sum of the Hadamard product C.W vanishes.**
+    L3.  CWC = p(WC) = p^2 W, hence for c := C e_r (any column of C)
+         c^T W c = (CWC)_rr = p^2 W_rr = 0,  and  W c = p W_{.r}.
+  Contractions (t(S) := W_ij W_kl + W_ik W_jl + W_il W_jk):
+    A = sum_S kappa(S) t(S) = (n+1)/4 * ||W||^2.
+        Same-pairing part = sum over DISJOINT edge pairs of u_e u_f,
+        u := C.W.  By L2 all row sums R_i = 0, so
+        sum_{e<f} u_e u_f = -||W||^2/4 and sum_adjacent = -||W||^2/2,
+        giving disjoint part = ||W||^2/4.  Cross-pairing part: two
+        distinct perfect matchings of a 4-set union to a 4-cycle, and
+        each C/W-alternating labelled 4-cycle is hit by exactly 4 index
+        tuples of tr(CWCW), so it equals tr_distinct(CWCW)/4.  By
+        inclusion-exclusion the a=c and b=d terms vanish (each is
+        sum_a (CW)_aa^2 = 0 by L2) while a=c AND b=d contributes
+        +||W||^2, so tr_distinct = tr(CWCW) + ||W||^2 = p^2||W||^2 +
+        ||W||^2 = n||W||^2.  Hence A = ||W||^2/4 + n||W||^2/4.  QED
+    B = sum_S phi(S) t(S) = -n/4 * ||W||^2.
+        Fix r and set v_ij := C_ri C_rj W_ij on V minus {r}.  Then
+        sum_e v_e = (1/2) c^T W c = 0 by L3, the v-row sums are
+        p C_ri W_ir by L3 (W c = p W_{.r}), and sum_e v_e^2 =
+        ||W||^2/2 - s_r with s_r := sum_j W_rj^2.  The same
+        disjoint-pair identity gives ||W||^2/4 - (n/2) s_r per r
+        (using 1 + p^2 = n); summing over r with sum_r s_r = ||W||^2
+        gives (n/4)||W||^2 - (n/2)||W||^2.  QED
+    E = sum_S star(S) t(S) = -p * ||W||^2.
+        Fix s and d := C_{.s}.  For the term pairing c with s, the inner
+        sum over {a,b} disjoint from {s,c} telescopes:
+        sum_{a<b != s,c} d_a d_b W_ab = (1/2) d^T W d - d_c (W d)_c
+        = 0 - d_c p W_cs by L3.  Hence E = -p sum_{s,c} d_c^2 W_cs^2
+        = -p ||W||^2.  QED
+  Combination (p^2 = n-1, D = p^2(p^2-5) = (n-1)(n-6)):
+    (n-2)A - 2B - 2p E = (n-2)(n+1)/4 + n/2 + 2(n-1) = (n^2+9n-10)/4
+                       = (n-1)(n+10)/4 ,
+    so sum_S m4_part(S) t(S) = (n+10)/(4(n-6)) * ||W||^2, and with L1
+    <W, Phi_part W> = 8*(n+10)/(4(n-6))*||W||^2 + 6||W||^2
+                    = (8n-16)/(n-6) * ||W||^2 = lambda_bar * ||W||^2.
+  Since W in Z was arbitrary, Phi_part = lambda_bar I on Z.  QED
   B. Consequence:  **all spectral deviation of Φ comes from δ.**  The
      particular solution — the entire explicit, Max-free part of the
      moment tensor — contributes a perfectly flat spectrum and cannot
@@ -203,3 +249,25 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# ----------------------------------------------------------- Theorem A* checks
+def contraction_closed_forms(p: int) -> dict:
+    """The three proved contraction values (Theorem A*)."""
+    n = n_of(p)
+    return {"A": Fraction(n + 1, 4), "B": Fraction(-n, 4), "E": Fraction(-p)}
+
+
+def theorem_A_star_algebra(p: int) -> dict:
+    """Verify the PROVED combination closes symbolically for this p."""
+    n = n_of(p)
+    c = contraction_closed_forms(p)
+    comb = (n - 2) * c["A"] - 2 * c["B"] - 2 * p * c["E"]
+    target = Fraction((n - 1) * (n + 10), 4)
+    m4p_contraction = comb / Fraction((n - 1) * (n - 6))
+    qf = 8 * m4p_contraction + 6
+    return {"p": p, "n": n,
+            "combination": comb, "target": target, "combination_ok": comb == target,
+            "m4part_contraction": m4p_contraction,
+            "m4part_target": Fraction(n + 10, 4 * (n - 6)),
+            "qf": qf, "lambda_bar": lambda_bar(p), "qf_equals_lambda_bar": qf == lambda_bar(p)}
