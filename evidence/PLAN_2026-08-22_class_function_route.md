@@ -155,3 +155,58 @@ closed form is proposed.
 2. If it holds, identify which conjugacy classes carry which multiples
    (by trace / split / non-split / unipotent type).
 3. Then pair against the explicit character table and bound ⟨Γ_δ, χ_c⟩.
+
+---
+
+# Step 1 GATE RESULT (p=7): quantization is DEAD; the compression SURVIVES
+
+`scripts/gamma_class_p7_gate.py`, p=7 (3,254 distinct elements sampled by
+random walk on G⁺, |Max+| = 11,452, dim Z = 275).
+
+Sanity anchors all pass: Γ(e) = 2400 = n(n−2) ✓, ψ_Z(e) = 275 = dim Z ✓,
+Γ_δ(e) = 0 ✓ (the proved tr(Φ_δ) = 0).
+
+## KILLED: Γ_δ is not quantized
+
+With u := ‖δ‖²/24 = 0.434326 (the p=5 unit), Γ_δ/u at p=7 reads
+
+    −44.81, −15.03, −14.79, −10.07, −3.34, −0.64, 0,
+      1.18,   4.23,   4.42,   7.66,  14.79, 30.66
+
+— **not integers.**  The p=5 integrality (exact multiples of 64/65) was an
+artifact of Max+ being a single G-orbit at p=5; at p=7 it cannot be, since
+|G⁺|/|Max+| ∉ ℤ.  So the "find a closed form for Γ_δ via integrality"
+shortcut is off.  Do not reopen it.  (No other unit was fished for — that
+would be exactly the pre-asymptotic fitting error this discipline exists
+to prevent.)
+
+## SURVIVES: the class-function compression, and it is stronger than expected
+
+| p | \|G⁺\| | distinct Γ values |
+|---|---|---|
+| 5 | 31,200 (full enumeration) | **14** |
+| 7 | 117,600 (3,254 sampled) | **15** (lower bound — sampled) |
+
+The group grows 3.8× and the number of distinct Γ values goes 14 → 15.
+PSL(2,49) has ≈ q+4 = 53 conjugacy classes, so Γ is *far* more compressed
+than one-value-per-class: many classes share a Γ value.  If that
+persists, Γ is carried by ~15 numbers largely independent of p.  Caveat:
+the p=7 count comes from a 2.8% sample, so 15 is a floor, not a census.
+
+## What is theorem (not empirical) and remains the frame
+
+* `Γ(g) = tr(Φ·π(g))`  ⟹  `Γ = Σ_c λ_c χ_c`: the λ_c ARE Γ's Fourier
+  coefficients, λ_c = ⟨Γ, χ_c⟩.
+* `Γ = λ̄·ψ_Z + Γ_δ` with ψ_Z known in closed form (15.589 B), so the
+  explicit half of Γ is solved at every p and all open content is Γ_δ.
+* `λ_min(Φ) ≥ 6  ⟺  λ̄ + min_c ⟨Γ_δ, χ_c⟩ ≥ 6`.
+
+## Revised next step
+
+The closed form must come from structure, not integrality.  The concrete
+lead: determine which conjugacy classes share a Γ value, and whether the
+partition is by the classical PGL(2,q) element types (split / non-split /
+unipotent / central, by trace).  If Γ is constant on those four families
+plus a few strata, it is carried by O(1) numbers and the character pairing
+is a finite closed-form computation for all p.  That is testable at p=5
+by full enumeration (classes are computable there) before any claim.
