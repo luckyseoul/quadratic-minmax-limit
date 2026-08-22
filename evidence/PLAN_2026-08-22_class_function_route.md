@@ -256,3 +256,82 @@ PSL(2,q) character table is a finite computation valid for all p, and R1
 (hence leftovers 1 and 3) closes.  Without it, this route is a better
 frame but not yet a proof.  Any proposed form must be fitted at p=5,7 and
 then PREDICT p=11 out of sample before it is claimed.
+
+Clarification vs the opening claim: `λ_min(Φ)≥6` is leftover 1 as a
+whole (QVAR on `W_e` **and** the principal floor).  It is not Type I
+leftover 3.  15.595 is a variance sufficient condition, not that unit.
+
+---
+
+# Step 3 (p=5 fit, p=7 gate): Γ on PSL is a class-parameter function; the O(1)-in-p split formula is dead
+
+`scripts/gamma_class_parameter.py`.  Full Aut(C): p=5 |G⁺|=31,200; p=7
+|G⁺|=235,200.  No-Frobenius half is signed PSL (`2|PSL|`).  Möbius
+recovered from the permutation; class parameter `τ = tr²/det ∈ F_q`.
+`Γ` on GPU (CuPy batched gather).  No flag flipped.
+
+## What is theorem, or holds at both primes
+
+Write `d=n/2`, `n=q+1`, `q=p²`.  Restrict to PSL (no Frobenius).  Then:
+
+1. **Elliptic (anisotropic, 0 fixed points):** `Γ ≡ 0` and `χ_{V_+} ≡ 0`.
+   All 7,200 elements at p=5; all 56,448 at p=7.  This is the
+   character-table prediction: Z contains only `W_e` and principal series
+   (15.589 B); principal series vanish off Borel classes; the even Weil
+   of `PSL(2,p²)` is 0 on anisotropic classes (integer-valued Weil,
+   `√q=p`).  So `Γ = ∑ λ_c χ_c` vanishes there automatically and **does
+   not constrain any `λ_c`**.
+
+2. **Identity:** `Γ(e) = n(n-2)` (already proved; `tr Φ`).  The extra
+   signed element with `π=id`, `d≡-1` has the same `Γ` (`Γ(-g)=Γ(g)`).
+
+3. **Involution (`τ=0`, ratio `r=-1`):** `Γ = 2(n-2)`.  Exact at p=5
+   (`48`) and p=7 (`96`).  Not promoted to a general-p theorem here.
+
+4. **Unipotents (parabolic, 1 fixed point):** exactly two `Γ` values, and
+   `χ_{V_+}` takes the Weil unipotent values `(1±p)/2`.  Classical
+   principal-series characters are `1` on non-identity unipotents, so
+
+       Γ(u_±) = λ_exc · (1±p)/2 + (tr Φ − λ_exc d)/n.
+
+   This is an identity, not a bound: it **reproduces** the two measured
+   unipotent `Γ` at p=5 (`752/13`, `-128/13`) and p=7 (`34752/409`,
+   `4512/409`) from the known `λ_exc`.  Unipotents do not separate the
+   principal scalars.
+
+5. **Split:** `τ` determines `Γ` (one value per `τ`).  Number of split
+   `τ` is `(q-1)/4` (6 at p=5, 12 at p=7).  Further collapse: 6→3 values
+   at p=5, 12→4 at p=7 (including the involution).  `χ_{V_+}=±1`.
+
+## KILLED: an O(1)-in-p formula for all split `τ`
+
+p=5-only fit, **predicted** for split no-Frob:
+
+| class | predicted `Γ` | p=7 measured | |
+|---|---|---|---|
+| involution `τ=0` | `2(n-2)=96` | `96` | holds |
+| elliptic | `0` | `0` | holds |
+| `τ ∈ F_p^*` | `-4(n-2)/n = -3.84` | `-2208/409` and `-6240/409` (two values) | **fail** |
+| `τ ∉ F_p` | `-4(n-2)p/n = -26.88` | `-3360/409` (one value) | **fail** |
+
+p=5 had only **one** non-involution subfield class (`F_5^*/{r∼r^{-1}, r≠±1}`
+is a singleton), so “`τ ∈ F_p` is one number” was an artifact.  Do not
+reopen that formula.  Non-subfield split **did** collapse to a single
+`Γ` at both primes; the value is not `-4(n-2)p/n`.
+
+## Where leftover 1 actually sits
+
+Identity, unipotent, and elliptic are either tautological or equivalent
+to `λ_exc` plus the trace.  Every remaining Fourier coefficient of `Φ`
+is on **split classes**:
+
+    Γ(r) = λ_exc χ_W(r) + ∑_{α ∈ A_e} λ_α (α(r)+α(r^{-1})),
+
+`A_e` the `(q-9)/8` principal-series parameters in 15.589 A, `r` the
+eigenvalue ratio.  `λ_min(Φ)≥6` is this finite system together with
+`λ_exc≥6`.  Next named step: identify `A_e` from the square map on the
+Weil character (Adams 6.4), invert the split Fourier transform at p=5
+(2 parameters) and p=7 (5 parameters), then **predict** the p=11
+principal spectrum before claiming.
+
+No flag flipped.  `leftover1` stays `global_qvar AND r1_l2`, both False.
