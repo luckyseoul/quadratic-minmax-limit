@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-22 (class-function route Step 4; **no flag flipped**)
+**Date:** 2026-08-22 (class-function route Step 6; **no flag flipped**)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main` (this commit). Working brain is ALWAYS main.
 
@@ -89,6 +89,16 @@ inversion `λ_c=⟨Γ,χ_c⟩` reconstructs `Γ` with 0 mismatches on all of
 PSL at both primes.  Principal floor binding value is p=5 `λ_4=80/13`.
 p=11 stored `Φ` has min principal `8.054`, `λ_exc=8.664`.  No flag
 flipped.  leftover 1 remains `λ_exc≥6` and `λ_k≥6` for those `k`.
+
+Step 6: Aut-orbit values of L named at p=5,7
+(`scripts/aut_orbit_L_and_lambda_fit.py`).  Binding leftover orbit is
+the unique min (p=5 order-12 (−−); p=7 order-8 (−−)).  **Killed:**
+L(i)=L(ω₃) as a p-law (true at p=5,7, false at p=11 sample);
+p-independent cosine of λ(k) (p=5+7 does not predict p=11).  p=5
+only: λ(k)=8+8/13−(64/13)cos(πk/6).  Uniform L≥L_min is not a floor
+proof (binding character eats the slack).  Aut leftover dofs stay
+n_orb−2.  Next: Boolean cubic on Ω as a relation among leftover
+orbit values.  No flag flipped.
 
 ## 15.597 Theorem A* (proved — not a census)
 

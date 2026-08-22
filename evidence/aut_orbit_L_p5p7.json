@@ -1,0 +1,234 @@
+{
+  "p5_orbits": [
+    {
+      "rep": 5,
+      "size": 1,
+      "L": "1200",
+      "L_float": 1200.0,
+      "in_Fp": true,
+      "order": 1,
+      "chi_rm1": 0,
+      "chi_rp1": 1,
+      "norm_a": 1,
+      "norm_b": 0,
+      "tr_a": 2,
+      "tr_b": 0,
+      "dlog": 0,
+      "const_on_orbit": true
+    },
+    {
+      "rep": 10,
+      "size": 1,
+      "L": "14550/13",
+      "L_float": 1119.2307692307693,
+      "in_Fp": true,
+      "order": 4,
+      "chi_rm1": 1,
+      "chi_rp1": 1,
+      "norm_a": 4,
+      "norm_b": 0,
+      "tr_a": 4,
+      "tr_b": 0,
+      "dlog": 18,
+      "const_on_orbit": true
+    },
+    {
+      "rep": 6,
+      "size": 2,
+      "L": "14250/13",
+      "L_float": 1096.1538461538462,
+      "in_Fp": false,
+      "order": 12,
+      "chi_rm1": -1,
+      "chi_rp1": -1,
+      "norm_a": 4,
+      "norm_b": 0,
+      "tr_a": 2,
+      "tr_b": 0,
+      "dlog": 14,
+      "const_on_orbit": true
+    },
+    {
+      "rep": 12,
+      "size": 2,
+      "L": "14550/13",
+      "L_float": 1119.2307692307693,
+      "in_Fp": false,
+      "order": 3,
+      "chi_rm1": -1,
+      "chi_rp1": 1,
+      "norm_a": 1,
+      "norm_b": 0,
+      "tr_a": 4,
+      "tr_b": 0,
+      "dlog": 8,
+      "const_on_orbit": true
+    }
+  ],
+  "p7_orbits": [
+    {
+      "rep": 3,
+      "size": 1,
+      "L": "3239880/409",
+      "L_float": 7921.466992665037,
+      "in_Fp": false,
+      "order": 4,
+      "chi_rm1": 1,
+      "chi_rp1": 1,
+      "norm_a": 1,
+      "norm_b": 0,
+      "tr_a": 0,
+      "tr_b": 0,
+      "dlog": 12,
+      "const_on_orbit": true
+    },
+    {
+      "rep": 7,
+      "size": 1,
+      "L": "8232",
+      "L_float": 8232.0,
+      "in_Fp": true,
+      "order": 1,
+      "chi_rm1": 0,
+      "chi_rp1": 1,
+      "norm_a": 1,
+      "norm_b": 0,
+      "tr_a": 2,
+      "tr_b": 0,
+      "dlog": 0,
+      "const_on_orbit": true
+    },
+    {
+      "rep": 1,
+      "size": 2,
+      "L": "3236352/409",
+      "L_float": 7912.841075794621,
+      "in_Fp": false,
+      "order": 12,
+      "chi_rm1": -1,
+      "chi_rp1": -1,
+      "norm_a": 4,
+      "norm_b": 0,
+      "tr_a": 0,
+      "tr_b": 0,
+      "dlog": 20,
+      "const_on_orbit": true
+    },
+    {
+      "rep": 14,
+      "size": 2,
+      "L": "3239880/409",
+      "L_float": 7921.466992665037,
+      "in_Fp": true,
+      "order": 3,
+      "chi_rm1": 1,
+      "chi_rp1": 1,
+      "norm_a": 4,
+      "norm_b": 0,
+      "tr_a": 4,
+      "tr_b": 0,
+      "dlog": 32,
+      "const_on_orbit": true
+    },
+    {
+      "rep": 15,
+      "size": 2,
+      "L": "3227532/409",
+      "L_float": 7891.276283618582,
+      "in_Fp": false,
+      "order": 8,
+      "chi_rm1": -1,
+      "chi_rp1": -1,
+      "norm_a": 1,
+      "norm_b": 0,
+      "tr_a": 4,
+      "tr_b": 0,
+      "dlog": 18,
+      "const_on_orbit": true
+    },
+    {
+      "rep": 10,
+      "size": 4,
+      "L": "3236352/409",
+      "L_float": 7912.841075794621,
+      "in_Fp": false,
+      "order": 24,
+      "chi_rm1": 1,
+      "chi_rp1": -1,
+      "norm_a": 2,
+      "norm_b": 0,
+      "tr_a": 2,
+      "tr_b": 0,
+      "dlog": 46,
+      "const_on_orbit": true
+    }
+  ],
+  "p5_lams": [
+    [
+      2,
+      6.153846153846156
+    ],
+    [
+      4,
+      11.076923076923077
+    ],
+    [
+      6,
+      13.538461538461538
+    ],
+    [
+      8,
+      11.076923076923077
+    ],
+    [
+      10,
+      6.153846153846159
+    ]
+  ],
+  "p7_lams": [
+    [
+      2,
+      8.215158924205378
+    ],
+    [
+      4,
+      9.858190709046454
+    ],
+    [
+      6,
+      8.919315403422983
+    ],
+    [
+      8,
+      7.511002444987772
+    ],
+    [
+      10,
+      8.21515892420539
+    ],
+    [
+      12,
+      10.562347188264058
+    ],
+    [
+      14,
+      8.215158924205383
+    ],
+    [
+      16,
+      7.5110024449877715
+    ],
+    [
+      18,
+      8.919315403422983
+    ],
+    [
+      20,
+      9.858190709046454
+    ],
+    [
+      22,
+      8.215158924205385
+    ]
+  ]
+}

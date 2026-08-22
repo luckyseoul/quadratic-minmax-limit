@@ -490,3 +490,82 @@ Measured ˆR_rest at the binding character (budget −2q²):
 two-valued (p=5: five values in Q(√5), including 0; p=7: many
 values, including 0).  Pointwise |M|²=0 is attained; ensemble
 average is the floor.  No flag flipped.
+
+---
+
+# Step 6: Aut-orbit values of L; two p-laws killed at p=11
+
+`scripts/aut_orbit_L_and_lambda_fit.py`.  L(r)=E ∑_{δ≠0} N(δ)N(rδ)
+on squares.  Aut-invariant (15.279 Q), so constant on ⟨Frob,inv⟩-orbits
+of T=F_q^×/{±1}.  Full Max+ mix (both y_∞) at p=5,7; y_∞=+1 half
+matches Wick+Plancherel for L(1) and is the p=11 `eps1` convention.
+
+## Named orbit values (full mix)
+
+p=5, 4 orbits (formula (p+3)²/16=4):
+
+| rep | size | order | Paley (χ(r−1),χ(r+1)) | L |
+|---|---|---|---|---|
+| 1 | 1 | 1 | (0,+) | 1200 |
+| i ∈ F_p | 1 | 4 | (++) | 14550/13 |
+| cube | 2 | 3 | (−+) | 14550/13 |
+| binding | 2 | 12 | (−−) | 14250/13 |
+
+p=7, 6 orbits:
+
+| order | Paley | L |
+|---|---|---|
+| 1 | (0,+) | 8232 |
+| 3 and 4 (i and ω₃) | (++) | 3239880/409 |
+| 12 (−−) and 24 (+−) | | 3236352/409 |
+| 8 (−−) binding | | 3227532/409 |
+
+y_∞=+1 only: L(1)=450 (p=5), 4116 (p=7), 76230 (p=11 sample).
+These three match Wick Q(1)=8q² + Plancherel + A=p(2−p)+4N, which
+is **y_∞=+1 only**.  y_∞=−1 uses A=−p(p+2)+4N (nD=p(p+1)/2).
+Binding orbit stays the unique smallest leftover at both primes.
+
+## KILLED: L(i)=L(ω₃) as a p-law
+
+At p=5 and p=7, the 4th-root and 3rd-root orbits have **the same** L
+(full mix and y_∞=+1 half).  That is **not** Aut-invariance: they are
+distinct ⟨Frob,inv⟩-orbits.  On every Type+ 1D lift the difference is
+a nonzero constant (p=5: +100 on all 3 lifts; p=7: −490 on all 4),
+so the equality is an ensemble-mixing identity, not a 1D identity.
+
+p=11, 200k sample of `maxplus_p11_eps1.npy` (y_∞=+1):
+
+| r | L mean | se |
+|---|---|---|
+| 1 | 76230.22 | 1.67 |
+| i | 74346.90 | 1.02 |
+| ω₃ | 74365.84 | 0.76 |
+
+L(i) ≠ L(ω₃) at ~14σ on this sample.  Do not promote the p=5,7
+coincidence.  Leftover Aut-dofs stay n_orb−2.
+
+## KILLED: p-independent cosine model of λ(k)
+
+Fit λ(k)−8 = a₀ + ∑_{m=1}^M a_m cos(2π m k/(q−1)) on p=5+7 jointly,
+predict p=11 (HIP 29 even k).  Max |λ−pred| ≳ 0.95 already at M=1
+and does not drop below ~2 at M=6.  Per-prime: p=5 is exact at
+M=2, including QVAR,
+
+    λ(k) = 8 + 8/13 − (64/13) cos(π k / 6)     (even k, p=5 only).
+
+p=7 is not a cosine in θ=2πk/(q−1) of degree ≤7 across all even k
+(the PLAN p=7 formula is PSL indexing, principal series only, not
+QVAR).  Polynomial in x=cos(4πk/(q−1)) is exact at p=5 (deg 1) and
+p=7 (deg 5) and still 0.35 maxerr at p=11 deg 1.  Do not predict
+p=11 from a p=5/p=7 cosine.
+
+Naive bound L≥L_min on leftover squares gives
+E|Z|² ≥ 2(L(1)−L_min)=2700/13≈207.7 at p=5, above threshold 112.5,
+but the true min is 1500/13≈115.4: the binding character's oscillation
+against the leftover δ=L−L_min eats the slack.  Uniform L_min is not
+a proof.
+
+No flag flipped.  Floor is still F̂(ψ)≥0 for every even ψ∉{1,χ}.
+Next constraint that could cut Aut-dofs is the Boolean cubic on Ω
+(15.279 T) as a linear relation among leftover orbit values, not
+another Paley-type or cyclotomic collapse.
