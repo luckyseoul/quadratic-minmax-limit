@@ -406,3 +406,41 @@ p=7 cosine fit `λ(k)=(3456 − 192 cos 2θ − 480 cos 3θ)/409`,
 `θ=2πk/(q−1)`, is **one prime** — do not predict p=11 from it.
 
 No flag flipped.
+
+---
+
+# Step 5: leftover 1 is QVAR for every even character of F_q^*
+
+`scripts/lambda_as_char_moment.py`.  Same constant as 15.589 E, now on
+the whole of F=Z^U.
+
+On F_q write z=y|_{F_q}, D={z=−1}, N(a)=|D∩(D−a)|,
+Z_α=∑_{a≠0} α(a) N(a).  Even characters: α(−1)=1, i.e. even k.
+
+**Certified p=5 and p=7, exact:** for every even k∈(0,(q−1)/2)
+(all even nontrivial non-quadratic α, up to inverse),
+
+    32 E|Z_α|² / [q(q−1)]
+
+equals an eigenvalue of Φ, and these values are **exactly** spec(Φ).
+The QVAR character is the unique even α with α²=χ (k=(q−1)/4); it
+gives λ_exc (the **top** at p=5,7,11).  The other even k give the
+principal scalars.  Count: (q−5)/4 = dim F (15.278).
+
+Same factor for every such α because the Aut_∞-circulants β(t)=α(t)
+all have ‖β‖²=q−1; 15.589 E computes the constant once.
+
+Quadratic α=χ gives 2(n−2), not a Φ-eigenvalue (B_χ∉Z).  For
+nontrivial even α, R(a)=∑ z_x z_{x+a} satisfies Z_R=−4 Z_N.
+
+Leftover 1 is therefore the single inequality
+
+    E|Z_α|² ≥ 3q(q−1)/16
+
+for every even character α of F_q^* other than 1 and χ.  QVAR is one
+character in that list, not the binding one (p=5 binds at k=2: 80/13;
+p=7 at k=8: 3072/409).  That is 15.277 G, named.
+
+Not proved.  Do not replace leftover 1 by QVAR alone.  The 6+4/n
+trace is false (mixes Wick-6 with λ̄; “only k=4 gets 4-point” dies at
+p=7).
