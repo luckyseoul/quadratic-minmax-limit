@@ -1,0 +1,286 @@
+{
+  "3": {
+    "p": 3,
+    "n": 10,
+    "rank_S": 5,
+    "n_over_2": 5,
+    "S1_zero": true,
+    "one_in_dual": true,
+    "H0_all_even": true,
+    "dim_H0": 5,
+    "dim_rad_H0": 1,
+    "ST_ones_zero": true,
+    "p_mod_4": 3,
+    "eq": true,
+    "psl": {
+      "p": 3,
+      "dim_H0": 5,
+      "dims": [
+        [
+          5,
+          15
+        ],
+        [
+          5,
+          15
+        ],
+        [
+          5,
+          15
+        ],
+        [
+          5,
+          15
+        ],
+        [
+          5,
+          15
+        ],
+        [
+          5,
+          15
+        ],
+        [
+          5,
+          15
+        ],
+        [
+          5,
+          15
+        ]
+      ],
+      "all_full": true,
+      "any_full": true,
+      "max_dim": 5
+    }
+  },
+  "11": {
+    "p": 11,
+    "n": 122,
+    "rank_S": 61,
+    "n_over_2": 61,
+    "S1_zero": true,
+    "one_in_dual": true,
+    "H0_all_even": true,
+    "dim_H0": 61,
+    "dim_rad_H0": 1,
+    "ST_ones_zero": true,
+    "p_mod_4": 3,
+    "eq": true,
+    "psl": {
+      "skipped": true
+    }
+  },
+  "13": {
+    "p": 13,
+    "n": 170,
+    "rank_S": 85,
+    "n_over_2": 85,
+    "S1_zero": true,
+    "one_in_dual": true,
+    "H0_all_even": true,
+    "dim_H0": 85,
+    "dim_rad_H0": 1,
+    "ST_ones_zero": false,
+    "p_mod_4": 1,
+    "eq": true,
+    "psl": {
+      "skipped": true
+    }
+  },
+  "17": {
+    "p": 17,
+    "n": 290,
+    "rank_S": 145,
+    "n_over_2": 145,
+    "S1_zero": true,
+    "one_in_dual": true,
+    "H0_all_even": true,
+    "dim_H0": 145,
+    "dim_rad_H0": 1,
+    "ST_ones_zero": false,
+    "p_mod_4": 1,
+    "eq": true,
+    "psl": {
+      "skipped": true
+    }
+  },
+  "19": {
+    "p": 19,
+    "n": 362,
+    "rank_S": 181,
+    "n_over_2": 181,
+    "S1_zero": true,
+    "one_in_dual": true,
+    "H0_all_even": true,
+    "dim_H0": 181,
+    "dim_rad_H0": 1,
+    "ST_ones_zero": true,
+    "p_mod_4": 3,
+    "eq": true,
+    "psl": {
+      "skipped": true
+    }
+  },
+  "5": {
+    "p": 5,
+    "n": 26,
+    "rank_S": 13,
+    "n_over_2": 13,
+    "S1_zero": true,
+    "one_in_dual": true,
+    "H0_all_even": true,
+    "dim_H0": 13,
+    "dim_rad_H0": 1,
+    "ST_ones_zero": false,
+    "p_mod_4": 1,
+    "eq": true,
+    "psl": {
+      "p": 5,
+      "dim_H0": 13,
+      "dims": [
+        [
+          13,
+          65
+        ],
+        [
+          13,
+          325
+        ],
+        [
+          13,
+          650
+        ],
+        [
+          13,
+          1950
+        ],
+        [
+          13,
+          780
+        ],
+        [
+          13,
+          1950
+        ],
+        [
+          13,
+          650
+        ],
+        [
+          13,
+          780
+        ]
+      ],
+      "all_full": true,
+      "any_full": true,
+      "max_dim": 13
+    }
+  },
+  "23": {
+    "p": 23,
+    "n": 530,
+    "rank_S": 265,
+    "n_over_2": 265,
+    "S1_zero": true,
+    "one_in_dual": true,
+    "H0_all_even": true,
+    "dim_H0": 265,
+    "dim_rad_H0": 1,
+    "ST_ones_zero": true,
+    "p_mod_4": 3,
+    "eq": true,
+    "psl": {
+      "skipped": true
+    }
+  },
+  "29": {
+    "p": 29,
+    "n": 842,
+    "rank_S": 421,
+    "n_over_2": 421,
+    "S1_zero": true,
+    "one_in_dual": true,
+    "H0_all_even": true,
+    "dim_H0": 421,
+    "dim_rad_H0": 1,
+    "ST_ones_zero": false,
+    "p_mod_4": 1,
+    "eq": true,
+    "psl": {
+      "skipped": true
+    }
+  },
+  "31": {
+    "p": 31,
+    "n": 962,
+    "rank_S": 481,
+    "n_over_2": 481,
+    "S1_zero": true,
+    "one_in_dual": true,
+    "H0_all_even": true,
+    "dim_H0": 481,
+    "dim_rad_H0": 1,
+    "ST_ones_zero": true,
+    "p_mod_4": 3,
+    "eq": true,
+    "psl": {
+      "skipped": true
+    }
+  },
+  "7": {
+    "p": 7,
+    "n": 50,
+    "rank_S": 25,
+    "n_over_2": 25,
+    "S1_zero": true,
+    "one_in_dual": true,
+    "H0_all_even": true,
+    "dim_H0": 25,
+    "dim_rad_H0": 1,
+    "ST_ones_zero": true,
+    "p_mod_4": 3,
+    "eq": true,
+    "psl": {
+      "p": 7,
+      "dim_H0": 25,
+      "dims": [
+        [
+          25,
+          117600
+        ],
+        [
+          25,
+          29400
+        ],
+        [
+          25,
+          58800
+        ],
+        [
+          25,
+          29400
+        ],
+        [
+          25,
+          117600
+        ],
+        [
+          25,
+          58800
+        ],
+        [
+          25,
+          117600
+        ],
+        [
+          25,
+          117600
+        ]
+      ],
+      "all_full": true,
+      "any_full": true,
+      "max_dim": 25
+    }
+  }
+}

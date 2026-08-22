@@ -27,6 +27,10 @@ rank(S)≤n/2, so rank(S)∈{n/2−1,n/2}. Equality n/2 certified p=3..37.
 p=11 dim-60 was the y_∞=+1 half; antipodes restore n/2. Aut_e
 irreducibility is false. Walsh spanning open. residual_ii stays False.
 
+**15.600 PROVED** (not a leftover close): rank(S)=n/2 for every odd
+prime, via \(1\in\ker S\cap(\ker S)^\perp\). dim H0=n/2 is a theorem.
+Walsh spanning of the xor-hyperplane still open. residual_ii False.
+
 `tr(Phi^2)=4||M||_F^2-3n^2+2n^2(n-1)/p^2` is a proved identity, not a
 bound (TECHNICAL_NOTES §4). Leftover 3 next target: p=5 finite from C;
 p≥7 `|μ|≤2/n` on |κ|=1 would close Type I (strictly stronger than L;

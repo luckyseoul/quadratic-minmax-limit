@@ -1,0 +1,88 @@
+{
+  "prop": "15.600",
+  "title": "rank(S)=n/2 for every odd prime",
+  "proved": {
+    "one_in_radical": true,
+    "rank_S_equals_n_over_2": true,
+    "psl_irreducible_all_p": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "n_primes": 21,
+    "theorem": "1\u2208ker S \u2229 (ker S)^\u22a5. Fail: S1=1 (p+1 odd)."
+  },
+  "B": {
+    "proved": true,
+    "n_primes": 21,
+    "theorem": "rank(S)=n/2. Fail: rank(S)=n/2-1."
+  },
+  "B_rref": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "p": 5,
+        "n": 26,
+        "n_over_2": 13,
+        "n_lines": 15,
+        "formula_half": 15,
+        "rank": 13,
+        "rank_plus_ones": 13,
+        "sol_dim": 13,
+        "p_mod_4": 1,
+        "p_mod_8": 5
+      },
+      "7": {
+        "p": 7,
+        "n": 50,
+        "n_over_2": 25,
+        "n_lines": 28,
+        "formula_half": 28,
+        "rank": 25,
+        "rank_plus_ones": 25,
+        "sol_dim": 25,
+        "p_mod_4": 3,
+        "p_mod_8": 7
+      },
+      "11": {
+        "p": 11,
+        "n": 122,
+        "n_over_2": 61,
+        "n_lines": 66,
+        "formula_half": 66,
+        "rank": 61,
+        "rank_plus_ones": 61,
+        "sol_dim": 61,
+        "p_mod_4": 3,
+        "p_mod_8": 3
+      }
+    }
+  },
+  "C": {
+    "proved": false,
+    "certified": {
+      "3": true,
+      "5": true,
+      "7": true
+    },
+    "aut_e_reducible": true,
+    "theorem": "P\u0393L-cyclic modules of H0 are full at p=3,5,7 (8/8). Not a general-p irreducibility proof."
+  },
+  "D": {
+    "proved": false,
+    "walsh_general_p": false,
+    "rank_S_equals_n_over_2": true,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "dim H0=n/2 is a theorem. Walsh is still U spanning the xor-hyperplane of H=affine_span(Max\u2212)\u2282H0. residual_ii False."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "multilevel_ND_k_ge_4p_proved",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "seconds": 0.017
+}

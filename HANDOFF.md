@@ -8,6 +8,21 @@
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
 
+## 15.600 — rank(S)=n/2 for every odd prime (proved)
+
+`src/e1_gmin_m4_prop15600.py`. The 15.599 Gram gap is closed.
+
+- \(1\in\ker S\cap(\ker S)^\perp\): \(S1=0\) (\(|v_L|=p+1\) even) and \(1\)
+  is a parallel-class sum of rows.
+- Over \(\mathbb F_2\), \(\mathrm{rank}(SS^\top)=\mathrm{rank}(S)-\dim(K\cap K^\perp)\).
+  Radical at least 1 plus 15.599 A,B forces \(\mathrm{rank}(S)=n/2\).
+  Fail: \(\mathrm{rank}(S)=n/2-1\).
+- \(\dim H_0=n/2\) is now a theorem, not a census. PΓL-cyclic modules of
+  \(H_0\) are full at p=3,5,7 (8/8); Aut_e still reducible. Walsh is
+  still spanning of the xor-hyperplane. residual_ii stays False.
+
+Backend: identities (serial, inherently); rref cross-check p=5,7,11.
+
 ## 15.599 — rank pin, antipodes, Aut_e reducible (Walsh still open)
 
 `src/e1_gmin_m4_prop15599.py`. Max-free F2 geometry of the square-line
@@ -751,6 +766,7 @@ deleted so the reversal is traceable.
 | `evidence/share/denseness_path_package.md` | Stand-alone path; § Caveats |
 | `src/e1_gmin_m4_prop15598.py` | Square-direction affine lines cut Max− (proved); Walsh spanning open |
 | `src/e1_gmin_m4_prop15599.py` | Square-line F2-rank pin {n/2−1, n/2}; antipodes; Aut_e reducible |
+| `src/e1_gmin_m4_prop15600.py` | rank(S)=n/2 all odd p (radical ⟨1⟩); Walsh spanning still open |
 | `evidence/SESSION_HANDOFF_2026-08-18_leftovers.md` | Named identities 15.550–15.585 |
 | `evidence/TECHNICAL_NOTES_2026-08-20_maxplus_p11.md` | p=11 enumeration, derivations, corrections (2026-08-20) |
 | `evidence/NOTE_2026-08-20_psl_and_stratum_floor_reduction.md` | Binding PSL decomposition, QVAR, low-stratum theorem, odd-coset route, and killed routes |
