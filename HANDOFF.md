@@ -60,6 +60,10 @@ is already in the master affine space; \(P_{E_{4p}}\kappa_{A_\psi}\) is
 indefinite (both signs at \(p=5\)); \(\ell^1\) CS overshoots (\(-172\) vs need
 \(-6.75\)). Next constraint is simultaneous Boolean ridge / 6-point coupling,
 not another 4-point rewrite.
+Linear 6-point contractions + box still miss: p=5 min \(-101/4\); p=7
+15.590 joint deg-6 ker 4, box min \(-10633/8\). SOS-4 along the deg-4
+kernel is feasible at pairing \(-45/4\). True pairings positive. Need
+strictly stronger than SOS-4 / linear 6-point (Boolean support or SOS-6).
 
 ## What shipped (wiring, not a close)
 

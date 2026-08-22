@@ -36,6 +36,9 @@ OPEN
   p-law.  Wick Q(1)=8q² is global-only and does not sign F.
   Aut-inv master equation + |m₄|≤1 cannot prove the pairing
   (`e1_gmin_qvar_box_master`: LP min=−285/4 at p=5).
+  Linear 6-point contractions + box and SOS-4 also fail
+  (`e1_gmin_qvar_sixpoint`: −101/4 and −45/4 at p=5; p=7 joint
+  deg-6 box −10633/8 recorded).
   For p≡3 the square-direction Gram is the Singer circulant and
   ψ is Nyquist (theorem H); the Nyquist eigenvalue is unnamed.
   Theorem I names the Ω-orbit mass S_j=p∑n_s²−k² from OA occupancy

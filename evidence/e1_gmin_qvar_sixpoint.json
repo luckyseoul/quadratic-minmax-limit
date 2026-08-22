@@ -1,0 +1,55 @@
+{
+  "title": "6-point linear and SOS-4 cannot prove QVAR",
+  "numbered": false,
+  "theorem": {
+    "proved": true,
+    "inequality_proved": false,
+    "claim_sixpoint_min_ge_0": false,
+    "claim_sos4_min_ge_0": false,
+    "p5_sixpoint": {
+      "p": 5,
+      "n4": 42,
+      "n6": 448,
+      "ker_dim": 3,
+      "rank": 487,
+      "min_pairing": -25.250000000000043,
+      "lp_ok": true,
+      "lstsq_res": 1.587618925213974e-14
+    },
+    "p5_sos4": {
+      "kernel_dim": 1,
+      "true_pairing": 14.134615384615389,
+      "min_edge_pairing": -11.250000001874888,
+      "min_edge_t": 132.00000000974944,
+      "edges": [
+        {
+          "t": 132.00000000974944,
+          "pairing": -11.250000001874888,
+          "lmin": -9.999958652520084e-10
+        },
+        {
+          "t": -68.57142858257102,
+          "pairing": 27.321428573571346,
+          "lmin": -9.9999894735764e-10
+        }
+      ],
+      "claim_sos4_min_ge_0": false
+    },
+    "p5_true": {
+      "p": 5,
+      "Nplus": 260,
+      "pairing": 14.134615384615389,
+      "E_yAy_sq": 203.07692307692307,
+      "QVAR_threshold": 112.5,
+      "clears_QVAR": true,
+      "max_abs_m4": 0.3230769230769231
+    },
+    "p7_joint_deg6_recorded": {
+      "kernel_dim": 4,
+      "min_pairing": -1329.125,
+      "true_pairing_positive": true,
+      "imported_as_p_law": false
+    },
+    "theorem": "Linear 6-point Aut-contractions + 4-point master + |m|\u22641 have min pairing \u2212101/4 at p=5 (ker dim 3).  SOS-4 along the 15.590 deg-4 kernel is feasible at pairing \u221245/4.  True Max+ pairing is positive.  Fail: claim either min is \u22650.  At p=7 the full 15.590 joint deg-4+6 system (ker dim 4) has box-LP min \u221210633/8 (recorded, not a p-law).  Linear 6-point theory does not prove QVAR."
+  }
+}
