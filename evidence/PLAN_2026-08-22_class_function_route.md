@@ -210,3 +210,49 @@ unipotent / central, by trace).  If Γ is constant on those four families
 plus a few strata, it is carried by O(1) numbers and the character pairing
 is a finite closed-form computation for all p.  That is testable at p=5
 by full enumeration (classes are computable there) before any claim.
+
+---
+
+# Step 2 (p=5, full class enumeration): what makes Γ collapse
+
+`scripts/gamma_conjugacy_classes.py`, p=5: all 31,200 elements of G⁺,
+conjugacy classes computed by orbit under conjugation (not assumed).
+
+**36 conjugacy classes → 14 distinct Γ values.**  The mechanism:
+
+## Γ(−g) = Γ(g) — a theorem, and the first factor of 2
+
+s(y, (−g)·y) = −s(y, g·y) and Γ squares it, so Γ is invariant under the
+central sign twist.  Confirmed in the data: every Γ value is carried by a
+class pair identical in (order, #fixed points) and differing only in sign
+pattern (#neg = 0 vs 12), e.g. (12,fix2), (10,fix1), (4,fix2), (2,fix6).
+The extreme case is Γ(−I) = Γ(I) = 624 = n(n−2).
+So **Γ descends to G⁺/{±1}: 36 → 18 classes**, then four further
+coincidences bring it to 14.
+
+## Γ is NOT a function of (order, fixed-point count)
+
+Two distinct ±-class-pairs both have order 10 and exactly 1 fixed point,
+yet Γ = −17.2308 and Γ = +8.6154.  So the coarse invariants do not
+determine Γ; it needs the genuine class datum (for semisimple elements of
+PGL(2,q), the eigenvalue ratio up to inversion).  This is consistent with
+the principal/discrete-series split of the character table, and it means
+a closed form must be indexed by that ratio, not by order or fixed points.
+
+## Where the route stands
+
+Established as theorem, independent of the failed quantization:
+* Γ(g) = tr(Φ·π(g)) ⟹ λ_c = ⟨Γ, χ_c⟩,
+* Γ = λ̄·ψ_Z + Γ_δ with ψ_Z known in closed form,
+* Γ(−g) = Γ(g), so everything lives on G⁺/{±1},
+* λ_min(Φ) ≥ 6 ⟺ λ̄ + min_c ⟨Γ_δ, χ_c⟩ ≥ 6.
+
+Established empirically: the compression is severe and stable —
+36 classes → 14 values at p=5; ≥15 values at p=7 out of ≈53 classes.
+
+Remaining for a closed form: **Γ(K) as a function of the eigenvalue-ratio
+class parameter and q.**  With that, the pairing against the explicit
+PSL(2,q) character table is a finite computation valid for all p, and R1
+(hence leftovers 1 and 3) closes.  Without it, this route is a better
+frame but not yet a proof.  Any proposed form must be fitted at p=5,7 and
+then PREDICT p=11 out of sample before it is claimed.
