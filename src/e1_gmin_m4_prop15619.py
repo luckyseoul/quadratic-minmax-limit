@@ -18,9 +18,10 @@ Theorem A — PROVED (Gauss + Z[i] UFD; all p≡1 (mod 4)).
   ζ∈{±i},
       n_ζ=|{x∈L: ψ(x)=ζ}|
          =(p−1)/4 + (1/2) Re(ζ̄ S),   S=∑_L ψ ∈ Z[i].
-  Completing the square, S is a 4th-root times
+  Completing the square (N(α+t)=t²+Tr(α)t+N(α); s=t+Tr(α)/2),
+  S is a 4th-root times
       J=∑_{s∈F_p} χ_4(s²−Δ),   Δ nsq in F_p.
-  Gauss: |J|=√p.  J∈Z[i] of norm p, so J is a unit times a+bi.
+  Gauss: |J|=√p.  J∈Z[i] of norm p, so J is a unit times a±bi.
   Hence Re(ζ̄ S)∈{±a,±b}.  n_ζ∈Z forces Re even, so ±b
   (a odd).  Thus n_ζ=(p−1)/4 ± b/2.  Write b=2c, a=2m+1:
       n_ζ=m(m+1)+c(c±1)
@@ -38,7 +39,8 @@ Theorem C — OPEN.  W1 p≡1, W2, Walsh ∀p, leftover 2.
 
 ============================================================================
 Backend: Gauss identity serial; fiber census p=5,13.  GPU unused.
-OpenAI referee: quota (retry after 2026-08-27); not routed to Fable.
+OpenAI referee math_review PASS-WITH-NOTE (do_not_branch):
+Tr sign +Tr; J associated to a±bi. Not routed to Fable.
 Writes evidence/e1_gmin_m4_prop15619.json
 """
 from __future__ import annotations
@@ -199,7 +201,10 @@ def main() -> dict:
         "L_status": "OPEN",
         "walsh_15_406_E": "OPEN",
         "backend": "serial Gauss; fiber census p=5,13; GPU unused",
-        "openai_referee": "quota until 2026-08-27; not routed to Fable",
+        "openai_referee": (
+            "math_review PASS-WITH-NOTE do_not_branch; "
+            "Tr=+Tr(α); J ~ a±bi"
+        ),
         "seconds": round(time.time() - t0, 3),
     }
     dest = ROOT / "evidence" / "e1_gmin_m4_prop15619.json"

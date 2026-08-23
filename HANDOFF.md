@@ -14,8 +14,8 @@ wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
 for p=a²+b², both even (Gauss |J|=√p + Z[i] UFD: Re ∈ {±a,±b}
 forced to ±b). 0-fiber already even. So odd_QNR of any φ-pullback
 vanishes, including s_N. f·n_odd^{QR}≡1 still certified only.
-W1 p≡1 / W2 / Walsh / leftover 2 open. OpenAI referee quota until
-2026-08-27 — not routed to Fable (Fable is deep consult/review only).
+W1 p≡1 / W2 / Walsh / leftover 2 open. OpenAI referee math_review
+PASS-WITH-NOTE (Tr=+Tr(α); J associated to a±bi). Fable unused.
 
 ## 15.618 — Φ=ε p-law; s_N is a φ-pullback; 1_M coprime to g
 
