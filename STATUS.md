@@ -1,5 +1,10 @@
 # Status (2026-08-23)
 
+**15.611 PROVED** (not a leftover close): W ≅ F2[M] ≅ F2[X]/(X^N+1)
+as D-modules (Ind of regular F_p^×). W_0 is the unique D-invariant
+hyperplane. dim ker((D−I)^2)∩W_0=2 is a p-law (a=v_2(N)≥2).
+Walsh is F2[D]-ideal generation. Fable xhigh PASS. residual_ii False.
+
 **15.610 PROVED** (not a leftover close; uniqueness KILL): W_0=extra^⊥∩W;
 ker((D−I)^k)∩W_0 is I-invariant (char 2). ker((D−I)^2) has dim 2
 (certified p=3,5,7,11), so Aut({0,∞}) uniqueness for Walsh is DEAD.

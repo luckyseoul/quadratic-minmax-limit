@@ -29,7 +29,7 @@ Theorem B — PROVED (char 2; all odd p).
   ker(D−I) with a complementary line.  ∎
 
 Theorem C — PROVED as a uniqueness kill; dim ker((D−I)^2)=2
-  CERTIFIED p=3,5,7,11.
+  CERTIFIED p=3,5,7,11; p-law in 15.611.
   p odd ⇒ p²≡1 (mod 8) ⇒ 4 | N.  ker(D−I)∩W_0=⟨extra⟩ dim 1
   (15.604).  ker((D−I)^2)∩W_0 has dim 2 at p=3,5,7,11, hence
   properly contains ⟨extra⟩ and is proper in W_0 (dim N−1≥3).

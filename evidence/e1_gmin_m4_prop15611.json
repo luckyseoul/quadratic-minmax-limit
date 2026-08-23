@@ -1,0 +1,131 @@
+{
+  "prop": "15.611",
+  "title": "W \u2245 F2[X]/(X^N+1); dim ker((D\u2212I)^2)\u2229W_0=2 is a p-law",
+  "proved": {
+    "W_cyclic_F2M": true,
+    "W0_unique_D_hyperplane": true,
+    "ker2_dim_is_p_law": true,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "N": 4,
+        "dim_W": 4,
+        "D_N_is_I": true,
+        "W_cyclic_D": true,
+        "cyclic_trial": 3,
+        "dim_WH": 2,
+        "WH_cyclic_Fpstar": true,
+        "WH_orbit_Cp": 2,
+        "WH_simple_Cp": true,
+        "fp_trial": 1,
+        "n_nsq": 2,
+        "index_M_over_Fpstar": 2
+      },
+      "5": {
+        "N": 12,
+        "dim_W": 12,
+        "D_N_is_I": true,
+        "W_cyclic_D": true,
+        "cyclic_trial": 15,
+        "dim_WH": 4,
+        "WH_cyclic_Fpstar": true,
+        "WH_orbit_Cp": 4,
+        "WH_simple_Cp": true,
+        "fp_trial": 1,
+        "n_nsq": 3,
+        "index_M_over_Fpstar": 3
+      },
+      "7": {
+        "N": 24,
+        "dim_W": 24,
+        "D_N_is_I": true,
+        "W_cyclic_D": true,
+        "cyclic_trial": 7,
+        "dim_WH": 6,
+        "WH_cyclic_Fpstar": true,
+        "WH_orbit_Cp": 6,
+        "WH_simple_Cp": false,
+        "fp_trial": 1,
+        "n_nsq": 4,
+        "index_M_over_Fpstar": 4
+      }
+    },
+    "theorem": "W \u2245 F2[M] \u2245 F2[X]/(X^N+1) as D-modules (Ind of regular F_p^\u00d7).  Fail: minpoly(D) has degree <N; fail: W^H simple as C_p at p=7."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "rank_im_DminusI": 3,
+        "im_vanishes_at_0": true,
+        "dim_W0": 3,
+        "N_minus_1": 3,
+        "extra_at_0": 0
+      },
+      "5": {
+        "rank_im_DminusI": 11,
+        "im_vanishes_at_0": true,
+        "dim_W0": 11,
+        "N_minus_1": 11,
+        "extra_at_0": 0
+      },
+      "7": {
+        "rank_im_DminusI": 23,
+        "im_vanishes_at_0": true,
+        "dim_W0": 23,
+        "N_minus_1": 23,
+        "extra_at_0": 0
+      }
+    },
+    "theorem": "Unique D-invariant hyperplane is W_0=im(D\u2212I) \u2245 F2[X]/((X^N+1)/(X+1)).  Fail: extra\u2209W_0; fail: a second invariant hyperplane."
+  },
+  "C": {
+    "proved": true,
+    "ker2_dim_is_p_law": true,
+    "rows": {
+      "3": {
+        "N": 4,
+        "v2_N": 2,
+        "four_divides_N": true,
+        "dim_ker1_W0": 1,
+        "dim_ker2_W0": 2
+      },
+      "5": {
+        "N": 12,
+        "v2_N": 2,
+        "four_divides_N": true,
+        "dim_ker1_W0": 1,
+        "dim_ker2_W0": 2
+      },
+      "7": {
+        "N": 24,
+        "v2_N": 3,
+        "four_divides_N": true,
+        "dim_ker1_W0": 1,
+        "dim_ker2_W0": 2
+      }
+    },
+    "theorem": "dim ker((D\u2212I)^2)\u2229W_0=2 for every odd p (a=v_2(N)\u22652; (X+1)-primary of W_0 has dim 2^a\u22121\u22653).  Fail: dim=1."
+  },
+  "D": {
+    "proved": false,
+    "walsh_general_p": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "Walsh is F2[D]-ideal generation by all U-differences in W_0, not cyclicity of W.  residual_ii stays False."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "serial F2 identities; rref p=3,5,7; GPU unused",
+  "claude_referee": "deep_review PASS confidence 0.93 on W\u2245F2[M] and ker2 dim 2",
+  "seconds": 0.743
+}

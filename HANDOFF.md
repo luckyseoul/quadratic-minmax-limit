@@ -1,12 +1,24 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.610 pair-stab uniqueness DEAD; **no flag flipped**)
+**Date:** 2026-08-23 (15.611 W cyclic F2[M]; ker2 dim 2 p-law; **no flag flipped**)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.611 — W ≅ F2[X]/(X^N+1); ker2 dim 2 is a p-law (proved)
+
+`src/e1_gmin_m4_prop15611.py`. Even nsq-line invariants W^H ≅ F2[F_p^×]
+(regular; restriction to F_p^×, f(0)=∑f). M transits nsq lines with
+Stab=F_p^×, so W ≅ Ind F2[F_p^×] ≅ F2[M] ≅ F2[X]/(X^N+1) as
+D-modules. Unique D-invariant hyperplane is W_0=im(D−I). p odd ⇒
+4|N=2^a m with a≥2, so dim ker((D−I)^2)∩W_0=2 for every odd p
+(upgrades 15.610 C from certified to a theorem). Fail: minpoly(D)
+degree <N; fail: W^H simple as C_p at p=7; fail: ker² dim 1.
+Fable xhigh PASS (0.93). Walsh is still F2[D]-ideal generation by
+all U-differences. residual_ii False.
 
 ## 15.610 — Aut({0,∞}) uniqueness for Walsh is DEAD (proved kill)
 
