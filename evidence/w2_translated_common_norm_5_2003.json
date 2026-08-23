@@ -1,0 +1,91 @@
+{
+  "title": "Collective factor-free W2 certificate from translated antipodal boundary norms",
+  "date": "2026-08-23",
+  "status": "finite computational certificate; uniform W2 remains open",
+  "logical_reduction": {
+    "modulus": "g=(X^M+1)/(X+1), M=oddpart((p^2-1)/2)",
+    "norm": "N_a=c_a(X)c_a(X^-1) mod g",
+    "sufficient_condition": "gcd(g,N_a over all scanned a)=1",
+    "reason": "For every irreducible f|g, some genuine U-difference then has f not dividing its content. This is stronger than the factor-orbit condition W2 and need not supply one unit-content row."
+  },
+  "boundary_common_norm_census": {
+    "prime_range": [5, 2003],
+    "n_primes": 302,
+    "translated_boundary_failures": [5],
+    "p5_fallback": "the direct normalized pole family has a unit-content U-difference",
+    "all_primes_5_2003_W2_certified": true,
+    "max_rows_to_common_gcd_one": 15,
+    "max_rows_prime": 1721,
+    "rows_to_common_gcd_one_histogram_including_p5_failure_row": {
+      "1": 134,
+      "2": 90,
+      "3": 36,
+      "4": 14,
+      "5": 13,
+      "6": 10,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "15": 1
+    },
+    "collective_clearance_before_any_unit_row_count": 51,
+    "illustrative_collective_only_prefixes": [953, 1429, 1637, 1801]
+  },
+  "two_row_residual_structure": {
+    "nontrivial_after_a_1_2_count": 78,
+    "aut_multiplier_invariance_checked": "all 78 residuals are invariant under X->X^p and X->X^-1 modulo X^M+1",
+    "repetition_polynomial_count": 74,
+    "repetition_polynomial_form": "R_d=1+X+...+X^(d-1)",
+    "non_repetition_residuals": [
+      {
+        "p": 953,
+        "degree": 12,
+        "hex": "0x1e4f",
+        "factor_hex": ["0x5b", "0x6d"],
+        "factor_orders": [63, 63]
+      },
+      {
+        "p": 1613,
+        "degree": 22,
+        "hex": "0x74dd97",
+        "factor_hex": ["0x7", "0x6a7", "0x72b"],
+        "factor_orders": [3, 93, 93]
+      },
+      {
+        "p": 1709,
+        "degree": 866,
+        "decomposition": "R_855 times 0x13f9",
+        "extra_factor_hex": ["0x67", "0x73"],
+        "extra_factor_orders": [63, 63]
+      },
+      {
+        "p": 1721,
+        "degree": 10,
+        "hex": "0x421",
+        "factor_hex": ["0x7", "0x13", "0x19"],
+        "factor_orders": [3, 15, 15]
+      }
+    ],
+    "interpretation": "The corrected structural object is a union of complete Aut factor-orbits, not always one root subgroup R_d. This is census evidence, not a theorem."
+  },
+  "phi3_boundary_census": {
+    "prime_range": [5, 3001],
+    "n_primes": 429,
+    "translated_boundary_failures": [5],
+    "max_first_good_a": 15,
+    "max_prime": 1721,
+    "consequence": "The former apparent a<=10 bound is false; no fixed-prefix claim is made."
+  },
+  "raw_archive": {
+    "path": "/mnt/storage/e1work/maxplus_p13/w2_translated_attack_2026-08-23",
+    "sha256": {
+      "w2_common_trace_5_1601.json": "3f659b63560ed526ad469c21ab26659eb03a3752d6e88428367fb2fb12545b32",
+      "w2_common_trace_1603_2003.json": "2c08b82300e9825c716b44e94f026c7b72bd0ede683215a23cd25032bdb8b445",
+      "w2_p1709_a2.json": "dfa4bb757449b3669d5faa87c92aae2ba1b4acd48fd348f838faf49491b90c8f",
+      "w2_phi3_boundary_5_1601.json": "e294a17926bd317642bf75bd672e081efe875743e5fbe0c018c24f568c6c78a0",
+      "w2_phi3_boundary_1603_3001.json": "312e6d5bce9c3f3e6768cdbc057ec6b5f1b624c62857e9098155a218ef3a6321"
+    }
+  },
+  "open_gap": "Prove that the translated boundary contents are not identically zero on any odd Aut character orbit. W2 stays OPEN; no proposition or closure flag is claimed."
+}

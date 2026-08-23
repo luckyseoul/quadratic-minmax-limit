@@ -275,12 +275,56 @@ Thus the first three endpoints are not a p-law either, and the growing bad
 prefix makes a small fixed disjunction a poor proof target.  The scan's
 maximum first-good offset is 4; this is census evidence, not a uniform bound.
 
+### Collective boundary norms: a stronger factor-free reduction
+
+The unit-content boundary scan leaves useful information on the floor.  For
+each valid translated boundary pair let
+
+    N_a = c_a(X)c_a(X^-1) mod g.
+
+If the polynomial gcd of `g` and all the `N_a` is 1, then for every
+irreducible `f|g` at least one genuine U-difference has `f` not dividing its
+content.  In particular no Aut orbit-product can divide every content, so
+W2 follows for that prime.  This is stronger than W2, but weaker than asking
+one `c_a` to be a unit: different rows may remove different factors.
+
+The running-gcd backend now implements this test directly, with no
+factorization.  On all 302 primes `5<=p<=2003`, the boundary norms generate
+the unit ideal except at the already isolated `p=5`; the direct normalized
+pole witness handles that prime.  Thus W2 is computationally certified
+through `p=2003`.  The most delayed clearance is `p=1721`, where Φ_3 divides
+the first fourteen norms and `a=15` clears it.  In 51 primes the common gcd
+becomes 1 before any scanned row is itself a unit, concretely demonstrating
+that the collective certificate is the right object.
+
+There is substantial but nonuniform cyclotomic structure.  Of the 78 primes
+whose common gcd after `a=1,2` remains nontrivial, 74 residuals are repetition
+polynomials `R_d=1+X+...+X^(d-1)`.  The four exceptions are not noise: at
+`p=953,1613,1709,1721` they factor into complete order layers / reciprocal
+pairs.  Every one of the 78 residuals was checked to be invariant under both
+`X->X^p` and `X->X^-1`, exactly the Aut factor-orbit structure relevant to
+15.612.  The earlier tempting statement “two rows leave one R_d” is therefore
+false; the corrected target is a union of complete Aut factor-orbits.
+
+A dedicated GF(4) boundary scanner evaluates Φ_3 without FFT or
+factorization.  Across all 429 primes `5<=p<=3001`, its only translated
+boundary failure is `p=5`, and its maximum first-good row is `a=15` at
+`p=1721`.  This kills the apparent `a<=10` bound and gives no reason to expect
+any small fixed prefix to be a theorem.
+
+Compact results and hashes are in
+`evidence/w2_translated_common_norm_5_2003.json`; full traces are archived at
+`/mnt/storage/e1work/maxplus_p13/w2_translated_attack_2026-08-23`.
+
 ### Revised gap
 
-Derive c_t mod f_O as a finite-field multiplicative Fourier/Jacobi sum and
-show it is not identically zero on the upper-half interval.  Since O is
-handled separately, no
-factor-count or union-bound loss occurs.  A unit-content witness remains a
+Derive the translated boundary `c_a mod f_O` as a finite-field
+multiplicative Fourier/Jacobi sum and show it is not identically zero as `a`
+runs over the valid half-edge.  Since `O` is handled separately, no
+factor-count or union-bound loss occurs.  The formal `a=0` antipodal pair is
+a unit, so a viable proof would propagate hypothetical vanishing on every
+valid translation back to `a=0`.  The growing Φ_3 prefixes show that this
+cannot be a bounded-row recurrence.  A unit-content witness remains a
 convenient computational certificate, but is no longer the proof target.
 
 W2 stays OPEN.  No proposition number or closure flag is claimed.

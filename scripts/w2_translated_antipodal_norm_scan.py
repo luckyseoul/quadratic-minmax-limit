@@ -19,8 +19,12 @@ s=-a.  Both pole endpoints lie in U precisely on
 
     1 <= a < u <= (p-1)/2,   a+u > (p-1)/2.
 
-The parallel edge u=(p-1)/2-r is scanned one representative at a time
-and also through the xor of the norms with a<(p-1)/4.
+The parallel edge u=(p-1)/2-r is scanned one representative at a time.
+Besides testing each norm for coprimality, the scanner takes their running
+polynomial gcd.  A common gcd of 1 is already enough for W2: for every
+irreducible factor f of g, at least one genuine U-difference then has
+f not dividing its content.  This collective certificate can succeed even
+when no individual content is a unit modulo g.
 """
 from __future__ import annotations
 
@@ -139,8 +143,14 @@ def apply_pole(z: np.ndarray, bits: np.ndarray, perm, switch) -> tuple[bool, np.
     return in_u, wfn
 
 
-def record(job: tuple[int, int, int, bool]) -> dict:
-    p, max_edges, max_a, stop_after_first_unit = job
+def record(job: tuple[int, int, int, bool, bool]) -> dict:
+    (
+        p,
+        max_edges,
+        max_a,
+        stop_after_first_unit,
+        stop_after_individual_common_gcd,
+    ) = job
     t0 = time.time()
     _z0, _b0, q, mul, add, chi, lam = named_z_without_conference(p)
     q2, _mul2, _add2, _chi2, _frob, _norm, ia, ib = field_ctx(p)
@@ -153,7 +163,16 @@ def record(job: tuple[int, int, int, bool]) -> dict:
         legendre[value] = 1 if pow(value, (p - 1) // 2, p) == 1 else -1
     sig = next(value for value in range(1, q) if chi(value) == -1)
     sinv = _finv(mul, q, sig)
-    ell = np.fromiter((mul(sinv, x) // p for x in range(q)), dtype=np.int32)
+    field_points = np.arange(q, dtype=np.int64)
+    point_a = field_points % p
+    point_b = field_points // p
+    sinv_a, sinv_b = sinv % p, sinv // p
+    ell = (
+        sinv_a * point_b
+        + sinv_b * point_a
+        + sinv_b * point_b * ia
+    ) % p
+    ell = ell.astype(np.int32)
     omega = _primitive(mul, q)
     gen = mul(omega, omega)
     ncoord = (q - 1) // 2
@@ -174,9 +193,10 @@ def record(job: tuple[int, int, int, bool]) -> dict:
 
     half = (p - 1) // 2
     common_gcd = g
+    individual_common_gcd = g
     edge_rows = []
     first_unit_pair = None
-    for offset in range(min(max_edges, max(0, (half - 1) // 2))):
+    for offset in range(min(max_edges, half // 2)):
         u = half - offset
         actions = []
         for opposite_u in (u, p - u):
@@ -187,7 +207,11 @@ def record(job: tuple[int, int, int, bool]) -> dict:
         aggregate = np.zeros(oddpart, dtype=np.uint8)
         n_rows = 0
         unit_pairs = []
-        a_stop = (half + 1) // 2
+        individual_gcd_trace = []
+        # Reflection identifies a with half-a at the norm level.  Keep one
+        # representative including the self-reflecting midpoint when half
+        # is even (notably the unique p=5 boundary row).
+        a_stop = half // 2 + 1
         if max_a > 0:
             a_stop = min(a_stop, max_a + 1)
         for a in range(offset + 1, a_stop):
@@ -210,13 +234,36 @@ def record(job: tuple[int, int, int, bool]) -> dict:
             norm ^= folded_autocorrelation(pair, nonsquare_points, oddpart)
             aggregate ^= norm
             n_rows += 1
-            norm_gcd = f2_gcd_bits(poly_bits(norm), g)
+            norm_bits = poly_bits(norm)
+            norm_gcd = f2_gcd_bits(norm_bits, g)
+            individual_common_gcd = f2_gcd_bits(
+                individual_common_gcd, norm_bits
+            )
+            individual_degree = individual_common_gcd.bit_length() - 1
+            all_ones_order = individual_common_gcd.bit_length()
+            if individual_common_gcd != (1 << all_ones_order) - 1:
+                all_ones_order = None
+            individual_gcd_trace.append(
+                {
+                    "a": a,
+                    "degree": individual_degree,
+                    "all_ones_order": all_ones_order,
+                    "phi3_bad": f2_gcd_bits(norm_bits, 0b111) == 0b111,
+                    "gcd_hex": (
+                        hex(individual_common_gcd)
+                        if individual_degree <= 4096
+                        else None
+                    ),
+                }
+            )
             if norm_gcd == 1:
                 unit_pairs.append([a, u])
                 if first_unit_pair is None:
                     first_unit_pair = [a, u]
                 if stop_after_first_unit:
                     break
+            if stop_after_individual_common_gcd and individual_common_gcd == 1:
+                break
         aggregate_bits = poly_bits(aggregate)
         aggregate_gcd = f2_gcd_bits(aggregate_bits, g)
         common_gcd = f2_gcd_bits(common_gcd, aggregate_bits)
@@ -228,19 +275,31 @@ def record(job: tuple[int, int, int, bool]) -> dict:
                 "aggregate_norm_weight": int(aggregate.sum()),
                 "aggregate_gcd_degree": aggregate_gcd.bit_length() - 1,
                 "common_gcd_degree": common_gcd.bit_length() - 1,
+                "individual_common_gcd_degree": (
+                    individual_common_gcd.bit_length() - 1
+                ),
+                "individual_gcd_trace": individual_gcd_trace,
                 "unit_pairs": unit_pairs,
             }
         )
         if common_gcd == 1 and first_unit_pair is not None:
             break
+        if stop_after_individual_common_gcd and individual_common_gcd == 1:
+            break
     return {
         "p": p,
+        "oddpart_length": oddpart,
         "max_edges": max_edges,
         "max_a": max_a,
         "stopped_after_first_unit": stop_after_first_unit,
+        "stopped_after_individual_common_gcd": stop_after_individual_common_gcd,
         "first_unit_pair": first_unit_pair,
         "aggregate_unit_ideal": common_gcd == 1,
         "final_common_gcd_degree": common_gcd.bit_length() - 1,
+        "individual_norms_generate_unit_ideal": individual_common_gcd == 1,
+        "final_individual_common_gcd_degree": (
+            individual_common_gcd.bit_length() - 1
+        ),
         "edges": edge_rows,
         "elapsed_seconds": time.time() - t0,
     }
@@ -258,6 +317,7 @@ def main() -> None:
         help="scan only a <= this value (0 means the full half-edge)",
     )
     ap.add_argument("--stop-after-first-unit", action="store_true")
+    ap.add_argument("--stop-after-individual-common-gcd", action="store_true")
     ap.add_argument("--workers", type=int, default=min(16, os.cpu_count() or 1))
     ap.add_argument("--output", type=Path, required=True)
     args = ap.parse_args()
@@ -265,6 +325,7 @@ def main() -> None:
     t0 = time.time()
     jobs = [
         (p, args.max_edges, args.max_a, args.stop_after_first_unit)
+        + (args.stop_after_individual_common_gcd,)
         for p in primes
     ]
     if args.workers == 1:
@@ -280,11 +341,27 @@ def main() -> None:
         "max_edges": args.max_edges,
         "max_a": args.max_a,
         "stopped_after_first_unit": args.stop_after_first_unit,
+        "stopped_after_individual_common_gcd": (
+            args.stop_after_individual_common_gcd
+        ),
         "n_primes": len(rows),
         "no_unit_pair": [row["p"] for row in rows if row["first_unit_pair"] is None],
         "aggregate_failures": [
             row["p"] for row in rows if not row["aggregate_unit_ideal"]
         ],
+        "individual_common_gcd_failures": [
+            row["p"]
+            for row in rows
+            if not row["individual_norms_generate_unit_ideal"]
+        ],
+        "max_rows_to_individual_common_gcd_one": max(
+            (
+                sum(edge["n_half_edge_rows"] for edge in row["edges"])
+                for row in rows
+                if row["individual_norms_generate_unit_ideal"]
+            ),
+            default=None,
+        ),
         "rows": rows,
         "elapsed_seconds": time.time() - t0,
     }
@@ -293,6 +370,8 @@ def main() -> None:
         f"p={args.start}..{args.stop} primes={len(rows)} "
         f"no-unit={out['no_unit_pair']} "
         f"aggregate-failures={out['aggregate_failures']} "
+        f"individual-common-gcd-failures="
+        f"{out['individual_common_gcd_failures']} "
         f"seconds={out['elapsed_seconds']:.3f}",
         flush=True,
     )
