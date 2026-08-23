@@ -41,10 +41,9 @@ Theorem C — PROVED (I in PSL).
   each orbit of B, and permutes the square 0-pencil (15.602 C).
   Fail: I sends a square circle to a nonsquare circle.  ∎
 
-Theorem D — CERTIFIED p=3,5,7,11, not a p-law.
-  I(rowspan(S))=rowspan(S), equivalently I(H0)=H0.  Off-0 square
-  ∞-circles map into rowspan(S) but are not rows.  Fail: I maps a
-  square row into rowspan(S').
+Theorem D — now 15.609 (p-law).  I(H0)=H0 for every odd p by the
+  tangency lemma (opposite-type circles never meet in one point).
+  This unit only certified it.
 
 Theorem E — PROVED (Walsh lemma, not a close).
   U is closed under y↦−y (C_ij y_i y_j is even in y).  Antipodal

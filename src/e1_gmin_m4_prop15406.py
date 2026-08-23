@@ -54,6 +54,7 @@ Theorem E — OPEN.  Walsh for general p≥11 is not proved, so
   15.607: W is G_aff^□-irreducible for every odd p (F_p^× transits
   Φ_p-factors), so dir(affine_span(Max−))=H0.
   15.608: two PSL-orbits of F_p-sublines; 1∈dir(U) by antipodes.
+  15.609: I(H0)=H0 (opposite-type circles never tangent).
   Walsh spanning of V/⟨1⟩ stays OPEN.
 
 ============================================================================

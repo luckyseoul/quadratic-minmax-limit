@@ -1,0 +1,169 @@
+{
+  "prop": "15.609",
+  "title": "Opposite-type circles never tangent; I(H0)=H0",
+  "proved": {
+    "H0prime_equals_H0_perp": true,
+    "no_mixed_tangency": true,
+    "I_preserves_H0": true,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "rank_S": 5,
+        "rank_Sprime": 5,
+        "n_over_2": 5,
+        "S_perp_Sprime": true,
+        "sample_caps": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "5": {
+        "rank_S": 13,
+        "rank_Sprime": 13,
+        "n_over_2": 13,
+        "S_perp_Sprime": true,
+        "sample_caps": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "7": {
+        "rank_S": 25,
+        "rank_Sprime": 25,
+        "n_over_2": 25,
+        "S_perp_Sprime": true,
+        "sample_caps": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "11": {
+        "rank_S": 61,
+        "rank_Sprime": 61,
+        "n_over_2": 61,
+        "S_perp_Sprime": true,
+        "sample_caps": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    },
+    "theorem": "H0'=H0^\u22a5=rowspan(S): opposite-direction \u221e-circles meet in two points.  Fail: |C\u2229C'|=1."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "infty_opposite_caps": [
+          2
+        ],
+        "inverted_vs_nsq_caps": [
+          0,
+          2
+        ],
+        "n_off0": 4
+      },
+      "5": {
+        "infty_opposite_caps": [
+          2
+        ],
+        "inverted_vs_nsq_caps": [
+          0,
+          2
+        ],
+        "n_off0": 12
+      },
+      "7": {
+        "infty_opposite_caps": [
+          2
+        ],
+        "inverted_vs_nsq_caps": [
+          0,
+          2
+        ],
+        "n_off0": 24
+      }
+    },
+    "theorem": "Opposite-type circles are never tangent, so |\u2229|\u2208{0,2}.  Fail: a square\u2013nsq pair with |\u2229|=1."
+  },
+  "C": {
+    "proved": true,
+    "H0_invariance_p_law": true,
+    "rows": {
+      "3": {
+        "H0_preserved": true,
+        "off0_in_rowspan_S": true,
+        "off0_in_rowspan_Sprime": false,
+        "off0_is_row": false,
+        "dim_H0": 5,
+        "n_over_2": 5
+      },
+      "5": {
+        "H0_preserved": true,
+        "off0_in_rowspan_S": true,
+        "off0_in_rowspan_Sprime": false,
+        "off0_is_row": false,
+        "dim_H0": 13,
+        "n_over_2": 13
+      },
+      "7": {
+        "H0_preserved": true,
+        "off0_in_rowspan_S": true,
+        "off0_in_rowspan_Sprime": false,
+        "off0_is_row": false,
+        "dim_H0": 25,
+        "n_over_2": 25
+      }
+    },
+    "theorem": "I(H0)=H0 for every odd p.  Span of all square circles equals rowspan(S).  Fail: I maps a square row into rowspan(S')."
+  },
+  "D": {
+    "proved": false,
+    "walsh_general_p": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "I acts on H0 and on the xor-slice for {0,\u221e}.  Walsh spanning of V/\u27e81\u27e9 stays OPEN.  residual_ii False."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "serial F2 identities; intersection p=3,5,7; GPU unused",
+  "claude_referee": "deep_review PASS (fable-5 xhigh) on tangency lemma",
+  "seconds": 0.072
+}

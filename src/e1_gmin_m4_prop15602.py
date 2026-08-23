@@ -42,7 +42,8 @@ Theorem C — PROVED for the 0-pencil; H0-invariance CERTIFIED p=3,5,7,11.
   {∞}∪F_p b^{−1}, χ(b^{−1})=χ(b), so permutes the square-pencil
   through 0.  Fail: claim I permutes every row of S (a line with
   0∉L maps to a (p+1)-set not containing ∞).  Full H0-invariance
-  (column-space residual 0) holds at p=3,5,7,11.  Not a p-law.
+  (column-space residual 0) holds at p=3,5,7,11; 15.609 proves it
+  for every odd p.
 
 Theorem D — OPEN.  Walsh 15.406 E is dir(U)=ker S ∩ ker ℓ.
   Spanning of H0 is not Walsh.  residual_ii stays False.
