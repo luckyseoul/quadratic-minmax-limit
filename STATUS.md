@@ -1,5 +1,9 @@
 # Status (2026-08-23)
 
+**15.627 PROVED kill/split**: octic+(a mod 8) does not rescue
+the linear stay box. Split-involution class is W2-nonempty at
+p=31 (76 hits). Counting identity OPEN.
+
 **15.626 PROVED kill/split**: bounded box |u,v,w|≤4 |k|≤8 of
 ua+vb+wi+k is not W1 on p=a²+64c² (61 primes; not all of Z⁴).
 W2 t=-2 at p=17, not a p-law (p=31).

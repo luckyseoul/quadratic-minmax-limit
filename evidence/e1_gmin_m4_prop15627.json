@@ -1,0 +1,84 @@
+{
+  "prop": "15.627",
+  "title": "Octic linear-box empty; split-involution class W2 at p=31",
+  "proved": {
+    "octic_box_empty": true,
+    "W1_residual": false,
+    "W2_class_nonempty_p31": true,
+    "W2_p_law": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "W1_residual": false,
+    "oct8_601": 1,
+    "oct8_1201": -1,
+    "n_inter_plus": 0,
+    "n_inter_minus": 0,
+    "n_cells": 4,
+    "theorem": "Octic split does not rescue the bounded linear stay box.  Fail: a box form on all oct=+ primes."
+  },
+  "B": {
+    "proved": false,
+    "certified": true,
+    "W2_p_law": false,
+    "p17_tm2": {
+      "eigen_minus": true,
+      "inU_y": true,
+      "inU_z": true,
+      "W2": true,
+      "ABCD": [
+        1,
+        0,
+        15,
+        16
+      ]
+    },
+    "p31_xin_xminus1": {
+      "eigen_minus": true,
+      "inU_y": true,
+      "inU_z": true,
+      "W2": true,
+      "ABCD": [
+        1,
+        0,
+        1,
+        30
+      ]
+    },
+    "class_17": {
+      "n_class": 153,
+      "n_eigen": 153,
+      "n_inU": 49,
+      "n_W2": 17
+    },
+    "class_31": {
+      "n_class": 496,
+      "n_eigen": 496,
+      "n_inU": 146,
+      "n_W2": 76
+    },
+    "theorem": "Split-involution class is W2-nonempty at p=31 (76 hits) though t=-2 fails.  Fail: 0 W2 at p=31.  Count OPEN."
+  },
+  "C": {
+    "proved": false,
+    "W1_all_odd_p": false,
+    "W2_p_law": false,
+    "walsh_general_p": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "theorem": "W1 residual and W2 class-count remain.  Fail: Walsh from this unit."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "W1 prefix ProcessPool 86; W2 class ProcessPool 86; GPU unused",
+  "fable": "suggest_direction rank2: class existence, discriminator p=31.  Rank1 octic linear class function is empty in the tested box.",
+  "seconds": 5.016,
+  "openai_referee": "math_review PASS; do_not_branch"
+}

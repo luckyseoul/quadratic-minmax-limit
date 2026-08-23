@@ -71,6 +71,8 @@ Remaining estimate, minus-slice interior 4-level (and 5+ / unclassified):
   p=a²+64c². CLASS exhaustive. leftover 2 still open.
   15.626: bounded box |u,v,w|≤4 |k|≤8 of ua+vb+wi+k is empty
   on that class (not all of Z⁴). W2 t=-2 hits p=17, dies at p=31.
+  15.627: octic split of that box is still empty. W2 class at
+  p=31 has 76 hits (t=-2 is not the class). Count OPEN.
   Spanning of the xor-slice (Walsh ∀p) still open. That empties
   interior 4-level only; leftover-only / 5+ remain.
 

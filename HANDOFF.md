@@ -1,12 +1,22 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.626 W1 a,b,i kill / W2 t=-2 at p=17)
+**Date:** 2026-08-23 (15.627 octic box empty / W2 class at p=31)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.627 — octic linear box empty; split-involution class W2 at p=31
+
+`src/e1_gmin_m4_prop15627.py`. Fable rank 1 as a piecewise linear
+stay on (2/p)_8 (and (octic, a_G mod 8)) is empty in the 15.626
+box. Rank 2: every switched split involution is Max−; class size
+p(p+1)/2. p=17: 17 W2 / 49 in U / 153. p=31: 76 W2 / 146 in U /
+496, including x/(x−1), though t=-2 fails. W2 p-law = counting
+identity, not another named t. k=6 mesh skipped. leftover flags
+untouched.
 
 ## 15.626 — Fable a,b-windows empty; W2 t=-2 through p=17
 
@@ -1080,6 +1090,7 @@ deleted so the reversal is traceable.
 | `src/e1_gmin_m4_prop15605.py` | Paley A²=A over F2; H0=⟨1⟩⊕ translate-span of extra |
 | `src/e1_gmin_m4_prop15606.py` | W=⊕ nsq W^H; M transits; irred if 2 primitive root mod p |
 | `src/e1_gmin_m4_prop15607.py` | W G_aff-irred all odd p (F_p^× mixes Φ_p); dir(Max−)=H0 |
+| `src/e1_gmin_m4_prop15627.py` | Octic linear-box empty; split-involution class W2-nonempty at p=31 |
 | `src/e1_gmin_m4_prop15626.py` | Bounded a,b,i stay box empty on residual W1; W2 t=-2 at p=17 not p-law |
 | `src/e1_gmin_m4_prop15608.py` | Two PSL-orbits of F_p-sublines; 1∈dir(U); I(H0) via 15.609 |
 | `src/e1_gmin_m4_prop15609.py` | Opposite-type never tangent; I(H0)=H0 for every odd p |
