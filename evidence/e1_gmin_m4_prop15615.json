@@ -1,0 +1,73 @@
+{
+  "prop": "15.615",
+  "title": "two-fiber W1-1 false at p=17; W2 named-pool miss; L2 not closed",
+  "proved": {
+    "two_fiber_biconditional": false,
+    "W1_p_eq_1": false,
+    "W2_p_law": false,
+    "walsh_general_p": false,
+    "residual_ii": false
+  },
+  "A": {
+    "proved": true,
+    "biconditional_false": true,
+    "rows": {
+      "5": {
+        "eps": 1,
+        "fable_pred": 1,
+        "p_mod_4": 1
+      },
+      "17": {
+        "eps": 0,
+        "fable_pred": 1,
+        "p_mod_4": 1
+      }
+    },
+    "theorem": "\u03b5(two-fiber)=1 iff p\u22611 is false (p=17, \u03b5=0).  Fail: \u03b5=1 for every p\u22611."
+  },
+  "B": {
+    "proved": false,
+    "W1_p_eq_1": false,
+    "rows": {
+      "5": {
+        "n_stay_eps1": 5,
+        "certified_also": [
+          13,
+          17
+        ]
+      }
+    },
+    "theorem": "Named z has stay U-diffs with \u03b5=1 at p=5,13,17.  No uniform a.  W1 for p\u22611 not a p-law."
+  },
+  "C": {
+    "proved": false,
+    "W2_p_law": false,
+    "p11_named_Dspan_misses_g": true,
+    "rows": {
+      "11": {
+        "ann_deg": 35,
+        "n_g_factors": 4,
+        "g_divides_ann": true
+      }
+    },
+    "theorem": "Named z+Dz (and two-fiber) miss every g-orbit at p=11.  W2 / Walsh OPEN."
+  },
+  "D": {
+    "proved": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "p5_k20_leftover_splus_empty": true,
+    "note": "Fable's min_+=2 scan at p=5 k=20 is 15.528 (empty leftover+splus, leftover-only L8 min_+<2).  even k>4p / p\u22657 remain.  Fail: Walsh as leftover-2 close."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "serial F2; rref p=5,11,17; GPU unused",
+  "claude_referee": "3 deep_reviews: W1-1 UNCERTAIN then p=17 kills two-fiber; W2 BLOCK named pool; leftover2 PASS-WITH-NOTE (15.528 already)",
+  "seconds": 5.88
+}

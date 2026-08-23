@@ -1,5 +1,9 @@
 # Status (2026-08-23)
 
+**15.615 PROVED kill** (not a leftover close): ε(two-fiber)=1 iff
+p≡1 is false (p=17). W2 named-pool misses g at p=11. leftover+splus
+at p=5 k=20 already empty (15.528). residual_ii / Walsh OPEN.
+
 **15.614 PROVED split** (not a leftover close): W1 for every p≡3
 (mod 4) via W-lift of z+Dz; ε=p(p−1)/2 (mod 2). W1 for p≡1 and
 W2 open (named vectors killed by g at p=11). Walsh OPEN.

@@ -1,12 +1,22 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.614 W1 for p≡3; **no flag flipped**)
+**Date:** 2026-08-23 (15.615 two-fiber W1-1 false at p=17; **no flag flipped**)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.615 — two-fiber W1-1 killed; W2 named-pool miss; L2 not closed
+
+`src/e1_gmin_m4_prop15615.py`. Three Fable xhigh queries. (1) Two-fiber
+ε=1 iff p≡1 is **false** at p=17 (ε=0); Fable's (p+1)/2 guess dies
+there. Named z still has stay diffs with ε=1 at p=5,13,17, no uniform
+a. (2) W2: named z+Dz / two-fiber / Frob / stay of this z miss g at
+p=11. Need new U-differences. (3) leftover 2: Fable's p=5 k=20
+min_+=2 scan is already 15.528 (empty leftover+splus). residual_ii
+False. Walsh OPEN.
 
 ## 15.614 — W1 for p≡3; named D-spans miss W2 (split)
 

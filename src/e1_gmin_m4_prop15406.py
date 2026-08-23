@@ -62,8 +62,9 @@ Theorem E — OPEN.  Walsh for general p≥11 is not proved, so
   (CLASS p-law). W1 not a p-law.
   15.613: named halfspace-anti z∈U; ε(y+Dy) constant on U;
   ε=odd Krylov coeffs vs 1_M.
-  15.614: W1 for p≡3 (ε(z+Dz)=p(p−1)/2 mod 2). W1 for p≡1
-  and W2 (named vectors miss g at p=11) stay open.
+  15.614: W1 for p≡3 (ε(z+Dz)=p(p−1)/2 mod 2).
+  15.615: two-fiber W1-1 false at p=17; named pool misses W2
+  at p=11; leftover+splus p=5 k=20 already 15.528.
   V/⟨1⟩ stays OPEN.
 
 ============================================================================
