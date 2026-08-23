@@ -1,0 +1,140 @@
+{
+  "prop": "15.608",
+  "title": "Square/nsq PSL-orbits of F_p-sublines; 1\u2208dir(U)",
+  "proved": {
+    "type_independent": true,
+    "two_PSL_orbits": true,
+    "I_preserves_type": true,
+    "I_H0_p_law": false,
+    "one_in_dir_U": true,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "sq_rows": 6,
+        "nsq_rows": 6,
+        "sq_type_flips": 0,
+        "nsq_type_flips": 0
+      },
+      "5": {
+        "sq_rows": 15,
+        "nsq_rows": 15,
+        "sq_type_flips": 0,
+        "nsq_type_flips": 0
+      },
+      "7": {
+        "sq_rows": 28,
+        "nsq_rows": 28,
+        "sq_type_flips": 0,
+        "nsq_type_flips": 0
+      }
+    },
+    "theorem": "\u03c7-type of an F_p-subline is independent of the basepoint; changing basepoint replaces b by b^{\u22121}.  Fail: \u03c7 flips."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "Fp_in_squares": true,
+        "orbit": 15,
+        "n_square_circles": 15,
+        "n_circles": 30
+      },
+      "5": {
+        "Fp_in_squares": true,
+        "orbit": 65,
+        "n_square_circles": 65,
+        "n_circles": 130
+      },
+      "7": {
+        "Fp_in_squares": true,
+        "orbit": 175,
+        "n_square_circles": 175,
+        "n_circles": 350
+      },
+      "11": {
+        "Fp_in_squares": true,
+        "orbit": 671,
+        "n_square_circles": 671,
+        "n_circles": 1342
+      },
+      "13": {
+        "Fp_in_squares": true,
+        "orbit": 1105,
+        "n_square_circles": 1105,
+        "n_circles": 2210
+      }
+    },
+    "theorem": "Stab(P\u00b9(F_p))=PGL(2,p)\u2282PSL(2,q); two PSL-orbits, square vs nsq.  Fail: a single orbit of all circles."
+  },
+  "C": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "I_sq_type_flips": 0,
+        "I_nsq_type_flips": 0,
+        "pencil_to_row": 2,
+        "half": 2
+      },
+      "5": {
+        "I_sq_type_flips": 0,
+        "I_nsq_type_flips": 0,
+        "pencil_to_row": 3,
+        "half": 3
+      },
+      "7": {
+        "I_sq_type_flips": 0,
+        "I_nsq_type_flips": 0,
+        "pencil_to_row": 4,
+        "half": 4
+      }
+    },
+    "theorem": "I\u2208PSL permutes square circles and the square 0-pencil.  Fail: I sends a square circle to a nonsquare circle."
+  },
+  "D": {
+    "proved": false,
+    "certified": true,
+    "H0_invariance_p_law": false,
+    "rows": {
+      "3": {
+        "H0_preserved": true,
+        "off0_in_rowspan_S": true,
+        "off0_in_rowspan_Sprime": false,
+        "off0_is_row": false
+      },
+      "5": {
+        "H0_preserved": true,
+        "off0_in_rowspan_S": true,
+        "off0_in_rowspan_Sprime": false,
+        "off0_is_row": false
+      },
+      "7": {
+        "H0_preserved": true,
+        "off0_in_rowspan_S": true,
+        "off0_in_rowspan_Sprime": false,
+        "off0_is_row": false
+      }
+    },
+    "theorem": "I(H0)=H0 certified at listed primes, not a p-law.  Fail: I maps a square row into rowspan(S')."
+  },
+  "E": {
+    "proved": true,
+    "one_in_dir_U": true,
+    "walsh_general_p": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "U is antipode-closed, so 1\u2208dir(affine_span(U)).  Walsh is spanning of V/\u27e81\u27e9, V=H0\u2229ker \u2113.  residual_ii stays False."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "serial F2 identities; type-check p=3,5,7; GPU unused",
+  "seconds": 0.739
+}

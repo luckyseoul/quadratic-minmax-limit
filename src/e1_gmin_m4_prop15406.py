@@ -52,7 +52,9 @@ Theorem E — OPEN.  Walsh for general p≥11 is not proved, so
   15.605: H0=⟨1⟩⊕W, W=translate-span of extra, Paley A²=A over F2.
   15.606: W=⊕ nsq W^H and M transits.
   15.607: W is G_aff^□-irreducible for every odd p (F_p^× transits
-  Φ_p-factors), so dir(affine_span(Max−))=H0. Walsh stays OPEN.
+  Φ_p-factors), so dir(affine_span(Max−))=H0.
+  15.608: two PSL-orbits of F_p-sublines; 1∈dir(U) by antipodes.
+  Walsh spanning of V/⟨1⟩ stays OPEN.
 
 ============================================================================
 Backend: Fraction identities + GF(2) rref on Max− caches

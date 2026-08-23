@@ -1,12 +1,25 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.607 W G_aff-irred all odd p; **no flag flipped**)
+**Date:** 2026-08-23 (15.608 Möbius type / 1∈dir(U); **no flag flipped**)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.608 — square/nsq PSL-orbits of F_p-sublines; 1∈dir(U) (proved)
+
+`src/e1_gmin_m4_prop15608.py`. Changing the basepoint of an F_p-subline
+replaces the direction b by b^{−1}, so χ is well-defined. Setwise
+Stab of P¹(F_p) in PGL(2,q) is PGL(2,p) (unique Möbius on three
+points), inside PSL(2,q). All circles are one PGL-orbit; PSL
+normal of index 2 with Stab⊂PSL splits that into two equal
+PSL-orbits. PSL preserves χ-type (PSL_∞ is square dilations). I(z)=1/z lies in PSL
+and preserves each orbit. I(H0)=H0 is certified p=3,5,7, not a p-law
+(off-0 images lie in rowspan(S), not as rows, not in rowspan(S')).
+U is antipode-closed, so 1∈dir(affine_span(U)). Walsh spanning of
+V/⟨1⟩ still OPEN. Fail: one PSL-orbit; fail: χ flips with basepoint.
 
 ## 15.607 — W irreducible as G_aff^□-module, all odd p (proved)
 
@@ -880,6 +893,7 @@ deleted so the reversal is traceable.
 | `src/e1_gmin_m4_prop15605.py` | Paley A²=A over F2; H0=⟨1⟩⊕ translate-span of extra |
 | `src/e1_gmin_m4_prop15606.py` | W=⊕ nsq W^H; M transits; irred if 2 primitive root mod p |
 | `src/e1_gmin_m4_prop15607.py` | W G_aff-irred all odd p (F_p^× mixes Φ_p); dir(Max−)=H0 |
+| `src/e1_gmin_m4_prop15608.py` | Two PSL-orbits of F_p-sublines; 1∈dir(U); I(H0) not a p-law |
 | `evidence/SESSION_HANDOFF_2026-08-18_leftovers.md` | Named identities 15.550–15.585 |
 | `evidence/TECHNICAL_NOTES_2026-08-20_maxplus_p11.md` | p=11 enumeration, derivations, corrections (2026-08-20) |
 | `evidence/NOTE_2026-08-20_psl_and_stratum_floor_reduction.md` | Binding PSL decomposition, QVAR, low-stratum theorem, odd-coset route, and killed routes |

@@ -1,5 +1,10 @@
 # Status (2026-08-23)
 
+**15.608 PROVED** (not a leftover close): χ-type of an F_p-subline
+is independent of basepoint; two PSL-orbits of circles (square vs
+nsq); I∈PSL preserves each orbit. 1∈dir(U) by antipodes. I(H0)=H0
+certified, not a p-law. Walsh spanning OPEN.
+
 **15.607 PROVED** (not a leftover close): W is irreducible as a
 G_aff^□-module for every odd p. F_p^× ⊂ M preserves each W^H and
 transits the Φ_p-factors (fail: W^H simple as C_p-module at p=7).
