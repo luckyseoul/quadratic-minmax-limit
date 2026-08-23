@@ -1,0 +1,147 @@
+{
+  "prop": "15.613",
+  "title": "W1 named Max- in U; \u03b5-bit per p mod 4 not a p-law",
+  "proved": {
+    "named_z_in_U": true,
+    "eps_Dy_constant_on_U": true,
+    "eps_odd_krylov": true,
+    "W1_p_law": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "eigen_minus": true,
+        "in_U": true,
+        "z_inf": -1,
+        "z_0": 1,
+        "sig": 4
+      },
+      "5": {
+        "eigen_minus": true,
+        "in_U": true,
+        "z_inf": -1,
+        "z_0": 1,
+        "sig": 5
+      },
+      "7": {
+        "eigen_minus": true,
+        "in_U": true,
+        "z_inf": -1,
+        "z_0": 1,
+        "sig": 8
+      }
+    },
+    "theorem": "Named halfspace-anti z lies in Max- and in U.  Fail: z_0=\u22121."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "take": 8,
+        "constant": true,
+        "value": 1,
+        "expected_mod4": 1
+      },
+      "5": {
+        "take": 40,
+        "constant": true,
+        "value": 0,
+        "expected_mod4": 0
+      },
+      "7": {
+        "take": 40,
+        "constant": true,
+        "value": 1,
+        "expected_mod4": 1
+      }
+    },
+    "theorem": "\u03b5(y+Dy) is constant on U (affine).  Fail: both values at p=3."
+  },
+  "C": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "gamma_cyclic": true,
+        "odd_sum": 1,
+        "even_sum": 1,
+        "eps": 1,
+        "odd_equals_eps": true,
+        "even_equals_eps": true
+      },
+      "5": {
+        "gamma_cyclic": true,
+        "odd_sum": 0,
+        "even_sum": 0,
+        "eps": 0,
+        "odd_equals_eps": true,
+        "even_equals_eps": true
+      },
+      "7": {
+        "gamma_cyclic": true,
+        "odd_sum": 1,
+        "even_sum": 1,
+        "eps": 1,
+        "odd_equals_eps": true,
+        "even_equals_eps": true
+      }
+    },
+    "theorem": "\u03b5(w)=\u2211_{k odd} g_k for w=g(D)\u03b3, \u03b3=1_{H\u222a(1+H)}.  Fail: D-orbit of \u03b3 has rank <N; fail: odd-sum \u2260 \u03b5."
+  },
+  "D": {
+    "proved": false,
+    "W1_p_law": false,
+    "pattern_certified": true,
+    "rows": {
+      "3": {
+        "take": 8,
+        "constant": true,
+        "value": 1,
+        "expected_mod4": 1,
+        "W1_from_D": true,
+        "p_mod_4": 3
+      },
+      "5": {
+        "take": 40,
+        "constant": true,
+        "value": 0,
+        "expected_mod4": 0,
+        "W1_from_D": false,
+        "p_mod_4": 1,
+        "sig_pin": 5,
+        "T_stay": true,
+        "T_eps": 1,
+        "W1_from_T": true
+      },
+      "7": {
+        "take": 40,
+        "constant": true,
+        "value": 1,
+        "expected_mod4": 1,
+        "W1_from_D": true,
+        "p_mod_4": 3
+      }
+    },
+    "theorem": "\u03b5(y+Dy)=1 iff p\u22613 (mod 4) certified p=3,5,7; T_\u03b1 at p=5 gives \u03b5=1.  Not a p-law.  Fail: \u03b5(y+Dy)=1 at p=5."
+  },
+  "E": {
+    "proved": false,
+    "walsh_general_p": false,
+    "W1_p_law": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "W1 is one \u03b5-bit per p mod 4 on a named U-point.  Value of the bit stays open.  residual_ii stays False."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "serial F2; rref p=3,5,7; GPU unused",
+  "claude_referee": "deep_review BLOCK on \u03b5-value; construction/stay/constancy kept",
+  "seconds": 0.972
+}

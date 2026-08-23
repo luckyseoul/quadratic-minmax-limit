@@ -1,12 +1,24 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.612 Walsh ⇔ W1∧W2; CLASS p-law; **no flag flipped**)
+**Date:** 2026-08-23 (15.613 W1 named z; ε-bit not a p-law; **no flag flipped**)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.613 — W1 named Max- in U; one ε-bit per p mod 4 (split)
+
+`src/e1_gmin_m4_prop15613.py`. Paley halfspace-anti z (15.254 of ρ=1
+h) lies in U for every odd p. ε(y+Dy) is CONSTANT on U (affine:
+(D-I) kills ⟨1⟩ and W_0 maps into ker ε). Under W≅F2[M],
+γ=1_{H∪(1+H)} is 1_M, and ε(w)=∑_{k odd} g_k for w=g(D)γ.
+Census: that U-constant is 1 iff p≡3 (mod 4) (p=3,5,7,11).
+For p≡1, α=(p+1)/2 and σ with L(σ^{-1})=p-2 (exists, 15.604)
+gives T_α z∈U (stay is a p-law: −L(σ^{-1}α)=1∈S) and
+ε(z+T_α z)=1 at p=5,13. Fable xhigh: construction/stay/constancy
+PASS; ε-value BLOCK. W1/Walsh/residual_ii stay open.
 
 ## 15.612 — Walsh ⇔ W1 ∧ W2; CLASS of Aut-invariant ideals (proved split)
 

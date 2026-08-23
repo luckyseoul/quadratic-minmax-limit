@@ -1,5 +1,10 @@
 # Status (2026-08-23)
 
+**15.613 PROVED split** (not a leftover close): named halfspace-anti
+z∈U; ε(y+Dy) constant on U; ε=odd Krylov sum vs 1_M. The ε-bit
+(1 iff p≡3; T_α at p≡1) is certified not a p-law (Fable BLOCK).
+Walsh OPEN.
+
 **15.612 PROVED split** (not a leftover close): Walsh ⇔ W1 ∧ W2
 on Aut-invariant ideals of W_0. CLASS of maximal Aut-invariant
 ideals is a p-law (Fable PASS). W1 certified p=3,5,7, Fable BLOCK

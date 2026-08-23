@@ -59,7 +59,10 @@ Theorem E — OPEN.  Walsh for general p≥11 is not proved, so
   15.611: W ≅ F2[M] ≅ F2[X]/(X^N+1); W_0 unique D-invariant
   hyperplane; dim ker((D−I)^2)∩W_0=2 is a p-law.
   15.612: Walsh ⇔ W1 ∧ W2 on Aut-invariant ideals of W_0
-  (CLASS p-law). W1 not a p-law. V/⟨1⟩ stays OPEN.
+  (CLASS p-law). W1 not a p-law.
+  15.613: named halfspace-anti z∈U; ε(y+Dy) constant on U;
+  ε=odd Krylov coeffs vs 1_M. The ε-bit is not a p-law.
+  V/⟨1⟩ stays OPEN.
 
 ============================================================================
 Backend: Fraction identities + GF(2) rref on Max− caches
