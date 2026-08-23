@@ -63,8 +63,10 @@ Remaining estimate, minus-slice interior 4-level (and 5+ / unclassified):
   15.621: W1 for p≡5 (mod 8) via d=−1 (OpenAI PASS).
   15.622: W1 for p≡17 (mod 24) via d=−2. Named W2 at p=5.
   15.623: W1 for p≡73 or 97 (mod 120) via d=−3. W1 left:
-  p≡1 or 49 (mod 120). W2 p-law open (p=11 pole family empty).
-  leftover 2 still open.
+  p≡1 or 49 (mod 120). Fable: no more fixed-d tower; next is
+  quarter-interval + h(−4p).
+  15.624: W2 named at p=11 (m-pole). Disjunction covers
+  p=5,7,11,13. leftover 2 still open.
   Spanning of the xor-slice (Walsh ∀p) still open. That empties
   interior 4-level only; leftover-only / 5+ remain.
 

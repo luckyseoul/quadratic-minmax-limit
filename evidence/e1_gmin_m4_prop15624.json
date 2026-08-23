@@ -1,0 +1,69 @@
+{
+  "prop": "15.624",
+  "title": "Inversion misses U; named m-pole W2 at p=11",
+  "proved": {
+    "inversion_not_U": true,
+    "named_W2_p11": true,
+    "W2_p_law": false,
+    "W1_all_odd_p": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "eigen_minus": true,
+        "inU_y": false
+      },
+      "7": {
+        "eigen_minus": true,
+        "inU_y": false
+      }
+    },
+    "theorem": "Inversion \u22121/x is Max\u2212 and swaps {0,\u221e}, so y\u2209U.  Fail: y\u2208U at p=5."
+  },
+  "B": {
+    "proved": true,
+    "nuka": true,
+    "pgl_eigen": 220,
+    "pgl_inU": 90,
+    "pgl_W2": 12,
+    "first": [
+      1,
+      0,
+      5,
+      10
+    ],
+    "named": "pi(x)=x/(m(x+2)), m=(p-1)/2, C=m, D=p-1",
+    "W2_p11": true,
+    "W2_p_law": false,
+    "theorem": "PGL(2,11) has 12 W2 hits; named m-pole is one.  Fail: 0 PGL hits at p=11."
+  },
+  "C": {
+    "proved": false,
+    "W2_p_law": false,
+    "either_5_7_11_13": true,
+    "either_17_19_23": false,
+    "theorem": "x/(x-1) or x/(m(x+2)) covers p=5,7,11,13 not 17,19,23.  Fail: either at p=17."
+  },
+  "D": {
+    "proved": false,
+    "W1_all_odd_p": false,
+    "W2_p_law": false,
+    "walsh_general_p": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "fable": "W2 via full switching Aut; do not deepen W1 \u03c7-tower; next W1 is quarter-interval + h(-4p)"
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "nuka serial Krylov PGL(2,11)+named; local inversion p=5,7",
+  "claude_referee": "suggest_direction: W2 full switching Aut; inversion then PGL(2,11); no W1 Dirichlet tower",
+  "seconds": 0.022
+}

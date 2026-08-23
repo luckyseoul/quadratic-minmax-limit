@@ -1,7 +1,10 @@
 # Status (2026-08-23)
 
+**15.624 PROVED split**: inversion −1/x is Max− not in U. Named
+W2 at p=11: π=x/(m(x+2)). Two Auts cover p=5,7,11,13 not 17+.
+W2 p-law / W1 p≡1,49 (mod 120) OPEN.
+
 **15.623 PROVED split**: W1 for p≡73 or 97 (mod 120) via d=−3.
-W1 left: p≡1 or 49 (mod 120). W2 p-law still open (p=11).
 
 **15.622 PROVED split**: W1 for p≡17 (mod 24) via d=−2. Named
 W2 at p=5: switched x/(x−1) clears Φ3.

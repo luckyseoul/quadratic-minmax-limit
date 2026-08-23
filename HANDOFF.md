@@ -1,12 +1,21 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.623 W1 p≡73 or 97 mod 120)
+**Date:** 2026-08-23 (15.624 Fable W2: PGL(2,11) named m-pole)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.624 — Fable W2 strategy: inversion misses U; named W2 at p=11
+
+`src/e1_gmin_m4_prop15624.py`. Fable: close W2 via full switching Aut,
+not x/(x−τ); no more W1 χ-tower. Inversion −1/x is Max−, swaps {0,∞},
+never in U. nuka PGL(2,11): 12 W2 hits, first (1,0,5,10) =
+π(x)=x/(m(x+2)), m=(p−1)/2. Covers p=11. Disjunction with
+x/(x−1) covers p=5,7,11,13, not 17,19,23. W2 p-law OPEN. Next W1
+per Fable: quarter-interval + h(−4p), not another modulus.
 
 ## 15.623 — W1 for p≡73 or 97 (mod 120) via d=−3
 
