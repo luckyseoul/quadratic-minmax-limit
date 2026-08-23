@@ -164,6 +164,53 @@ That is the right language for leftover 1 / GLOBAL QVAR. It is **not** a 1933 ex
 
 ---
 
+## 7b. A blind-spot check (2026-08-23): searching the object, not Paata's reading list
+
+§§4–7 trace the problem through **Paata's own path** (SPbU analysis → Volberg
+Bellman/hypercube school → Littlewood/Blei/DMP/Talagrand). That search cannot
+find results Paata himself never read. This section is a deliberately
+*different* search: the exact matrix class \(G(n)\) (symmetric, zero
+diagonal, \(\pm1\) off-diagonal — a Seidel matrix) hunted across communities
+disconnected from that lineage: classical algebraic graph theory, TCS
+(Grothendieck/cut-norm), and statistical physics (worst-case spin glass).
+
+**Found, and not previously in this file:**
+
+> E. Spence, *Eigenvalues of a class of \((0,\pm1)\) symmetric matrices*,
+> Linear Algebra Appl. **166** (1992).
+
+Spence studies \(G(n)\) directly and defines
+\(g(n):=\min_{C\in G(n)}\lambda_{\max}(C^2)\), the minimum achievable squared
+spectral radius. When a conference matrix exists at that order (Cameron–
+Delsarte–Goethals' term for the orthogonal case), \(g(n)=n-1\) exactly —
+with \(n=p^2+1\) that is \(p^2\), matching this repo's \(Cy=py\) / \(\rho=1\)
+setup exactly. When none exists, \(g(n)=n+3\) (a near-miss, not a gap).
+
+**What this is:** independent confirmation, from a completely disconnected
+1990s classical-algebraic-graph-theory paper (not cited by, and almost
+certainly unknown to, anyone in Paata's analysis lineage), that
+\(\min_A(\text{spectral radius of }A)\sim\sqrt n\) holds at **essentially
+every** \(n\), not only Paley orders. Combined with the elementary bound
+\(\max_{x\in\{\pm1\}^n}|x^\top Ax|\le n\cdot(\text{spectral radius of }A)\),
+that reproduces the \(\limsup\le\tfrac12\) direction of the sandwich
+genuinely independently of the Paley/\(\rho=1\) route already in this repo.
+
+**What this is NOT:** a resolution of anything. It bounds only the
+*continuous* relaxation of the max; it says nothing about whether the
+spectral-radius-minimizing matrix's top eigenvector is achievable by a
+\(\pm1\) vector (exactly the \(\rho=1\) question this repo already tracks),
+and it does not touch E(1), any leftover, or existence of \(\lim\alpha_n\).
+Confirms and cross-validates one already-known bound from an independent
+source; does not advance the open content. **Do not reopen as progress on
+E(1) or the limit.**
+
+Method note for future passes: search the *object* (exact matrix class,
+exact quantity) across communities the problem-poser is unlikely to have
+read, rather than re-tracing citation lineage from a known starting point —
+that is the mechanism, not literature breadth per se.
+
+---
+
 ## 8. What is not in the older literature
 
 - No 1930s–1970s theorem that \(\lim n^{-3/2}\min_A\max_x|x^\top Ax|\) exists.
@@ -197,5 +244,6 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 18. G. Bowlin, *Maximum frustration of bipartite signed graphs*, Electron. J. Combin. **19** (2012), #P10 (Starr pointer; not an existence proof).
 19. A. Volberg, *Bellman function technique in Harmonic Analysis*, [arXiv:1106.3899](https://arxiv.org/abs/1106.3899) (2011).
 20. P. Ivanisvili, CV (Princeton, c. 2018), https://web.math.princeton.edu/~paatai/CV-Paata.pdf
+21. E. Spence, *Eigenvalues of a class of \((0,\pm1)\) symmetric matrices*, Linear Algebra Appl. **166** (1992), https://www.sciencedirect.com/science/article/pii/002437959290280N (§7b; found by blind object-search, cross-validates \(\limsup\le\tfrac12\) independently, does not advance the open content).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).
