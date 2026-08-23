@@ -1,0 +1,111 @@
+{
+  "prop": "15.616",
+  "title": "W2 via z+Dz; Walsh at p=11",
+  "proved": {
+    "fD_zDz_nonzero": true,
+    "walsh_p11": true,
+    "W2_p_law": false,
+    "walsh_general_p": false,
+    "W1_p_eq_1": false
+  },
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "n_factors": 1,
+        "all_fD_nonzero": true,
+        "hits": [
+          {
+            "deg": 2,
+            "fD_nonzero": true
+          }
+        ],
+        "wt": 12
+      },
+      "7": {
+        "n_factors": 1,
+        "all_fD_nonzero": true,
+        "hits": [
+          {
+            "deg": 2,
+            "fD_nonzero": true
+          }
+        ],
+        "wt": 24
+      },
+      "11": {
+        "n_factors": 4,
+        "all_fD_nonzero": true,
+        "hits": [
+          {
+            "deg": 2,
+            "fD_nonzero": true
+          },
+          {
+            "deg": 4,
+            "fD_nonzero": true
+          },
+          {
+            "deg": 4,
+            "fD_nonzero": true
+          },
+          {
+            "deg": 4,
+            "fD_nonzero": true
+          }
+        ],
+        "wt": 60
+      }
+    },
+    "theorem": "f(D)(z+Dz)\u22600 for every irred f of g.  Fail: \u03a63(D)(z+Dz)=0 at p=5."
+  },
+  "B": {
+    "proved": true,
+    "W1": true,
+    "W2": true,
+    "eps": 1,
+    "A11": {
+      "n_factors": 4,
+      "all_fD_nonzero": true,
+      "hits": [
+        {
+          "deg": 2,
+          "fD_nonzero": true
+        },
+        {
+          "deg": 4,
+          "fD_nonzero": true
+        },
+        {
+          "deg": 4,
+          "fD_nonzero": true
+        },
+        {
+          "deg": 4,
+          "fD_nonzero": true
+        }
+      ],
+      "wt": 60
+    },
+    "theorem": "p=11: W1 by 15.614 and W2 by A, so I_U=W_0 (15.612 CLASS).  Walsh at p=11.  Fail: some f(D)(z+Dz)=0 at p=11."
+  },
+  "C": {
+    "proved": false,
+    "W2_p_law": false,
+    "W1_p_eq_1": false,
+    "walsh_general_p": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "W2 as a p-law, W1 for p\u22611, Walsh \u2200p, leftover 2 remain open.  Fail: Walsh from p=11 census alone; fail: residual_ii from Walsh."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN (p=11 proved in this unit; not \u2200p)",
+  "backend": "serial F2 apply f(D); p=5,7,11; GPU unused",
+  "seconds": 1.027
+}

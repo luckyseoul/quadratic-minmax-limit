@@ -1,5 +1,9 @@
 # Status (2026-08-23)
 
+**15.616 PROVED** (not a leftover close): f(D)(z+Dz)≠0 for every
+irred of g at p=5,7,11. Walsh at p=11 (W1 from 15.614 + W2).
+Walsh ∀p / leftover 2 still OPEN.
+
 **15.615 PROVED kill** (not a leftover close): ε(two-fiber)=1 iff
 p≡1 is false (p=17). W2 named-pool misses g at p=11. leftover+splus
 at p=5 k=20 already empty (15.528). residual_ii / Walsh OPEN.

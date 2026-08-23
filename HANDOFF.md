@@ -1,12 +1,20 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.615 two-fiber W1-1 false at p=17; **no flag flipped**)
+**Date:** 2026-08-23 (15.616 Walsh at p=11; **no leftover flag flipped**)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.616 — W2 via z+Dz; Walsh at p=11 (proved)
+
+`src/e1_gmin_m4_prop15616.py`. The Krylov-gcd test that put z+Dz in
+ker g was wrong. Correct test: w∈(f)R iff f(D)w=0. For named z,
+f(D)(z+Dz)≠0 for every irred f of g at p=5,7,11. Fail: Φ3(D)(z+Dz)=0
+at p=5. At p=11 (≡3) W1 is 15.614 and W2 is this, so I_U=W_0 by
+15.612 CLASS: Walsh at p=11. Not ∀p. W1 for p≡1 and leftover 2 open.
 
 ## 15.615 — two-fiber W1-1 killed; W2 named-pool miss; L2 not closed
 

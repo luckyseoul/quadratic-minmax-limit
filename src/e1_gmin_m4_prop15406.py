@@ -63,8 +63,9 @@ Theorem E — OPEN.  Walsh for general p≥11 is not proved, so
   15.613: named halfspace-anti z∈U; ε(y+Dy) constant on U;
   ε=odd Krylov coeffs vs 1_M.
   15.614: W1 for p≡3 (ε(z+Dz)=p(p−1)/2 mod 2).
-  15.615: two-fiber W1-1 false at p=17; named pool misses W2
-  at p=11; leftover+splus p=5 k=20 already 15.528.
+  15.615: two-fiber W1-1 false at p=17.
+  15.616: f(D)(z+Dz)≠0 on every g-factor at p=5,7,11; Walsh at
+  p=11. Walsh ∀p still OPEN.
   V/⟨1⟩ stays OPEN.
 
 ============================================================================
