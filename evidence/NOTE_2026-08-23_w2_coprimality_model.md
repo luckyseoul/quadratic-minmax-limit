@@ -368,7 +368,7 @@ repository searches found general work on Baer sublines and character
 sums, but no theorem that gives the required parity/nonvanishing on this
 particular admissible interval.
 
-The complete `5<=p<=3500` sequence census covers 487 primes.  Its only
+The complete `5<=p<=5003` sequence census covers 668 primes.  Its only
 all-valid-bad case is the already exceptional `p=5`; every `p>5` has a
 nonzero valid Phi_3 residue.  For every tested `p == 5 (mod 12)`, the
 sequence is binary and obeys the striking exact count
@@ -376,7 +376,7 @@ sequence is binary and obeys the striking exact count
     #{a in F_p : c_a(zeta)=0} = (2p-7)/3,
     #{a in F_p : c_a(zeta)!=0} = (p+7)/3.
 
-All 123 tested primes in this congruence class obey the formula.  This is an
+All 170 tested primes in this congruence class obey the formula.  This is an
 observed law, not yet a theorem.  More importantly, even a proof
 of the global count would not finish the interval problem.  At `p=101`, 65
 of all 101 translations are zero and 39 of the 49 valid translations are

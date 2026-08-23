@@ -2,8 +2,8 @@
   "status": "computational evidence; W2 remains open",
   "family": "translated antipodal boundary pair u=(p-1)/2",
   "factor": "Phi_3=X^2+X+1",
-  "range": [5, 3500],
-  "n_primes": 487,
+  "range": [5, 5003],
+  "n_primes": 668,
   "algorithm": {
     "identity": "B_(a+1)+B_a = 1_(r=m-a)+1_(r=-1-a)",
     "pair_difference": "four affine-line pullbacks under the two antipodal poles",
@@ -21,11 +21,11 @@
     "minimum_attained_at": [7, 29],
     "maximum_first_good_representative_a": 15,
     "maximum_first_good_representative_prime": 1721,
-    "maximum_zero_fraction_all_translations": 0.665992487720312,
-    "maximum_zero_fraction_prime": 3461
+    "maximum_zero_fraction_all_translations": 0.6661974663181178,
+    "maximum_zero_fraction_prime": 4973
   },
   "p_mod_12_eq_5_observation": {
-    "n_primes": 123,
+    "n_primes": 170,
     "content_values_are_binary": true,
     "total_zero_formula": "(2p-7)/3",
     "total_good_formula": "(p+7)/3",
@@ -52,6 +52,11 @@
       "range": [2005, 3500],
       "path": "/mnt/storage/e1work/maxplus_p13/w2_translated_attack_2026-08-23/w2_phi3_sequence_summary_2005_3500.json",
       "sha256": "1d8bdb659891f6352be340fe8520a44b5f191144156a429a2c8add9a37adc842"
+    },
+    {
+      "range": [3501, 5003],
+      "path": "/mnt/storage/e1work/maxplus_p13/w2_translated_attack_2026-08-23/w2_phi3_sequence_summary_3501_5003.json",
+      "sha256": "6b86a6693ababf8da6cf49c5cf0645a5b93a3b547dcc7c81ce66c9bfd80ec800"
     }
   ]
 }
