@@ -39,8 +39,12 @@ Remaining estimate, minus-slice interior 4-level (and 5+ / unclassified):
   section of affine_span(Max−). Certified p=3,5,7 rref (15.406 C) and
   p=11 full ensemble (15.596). **15.598 proved:** square-direction
   affine lines cut Max− by \(\sum_S y=0\), so U is the xor cut of a
-  named affine-geometry space. Spanning (Walsh ∀p) still open. That
-  empties interior 4-level only; leftover-only / 5+ remain.
+  named affine-geometry space. 15.602: unique 1-dim G_aff^□-invariant
+  subspace of H0 is ⟨1⟩. 15.604: 1_QR ∈ H0 iff p≡1 (mod 4);
+  ker(D−I)∩H0 dim 2. 15.605: H0=⟨1⟩⊕W with W=span of extra
+  translates, Paley A²=A over F2. H0/⟨1⟩ irreducible (Max− spans H0) OPEN.
+  Spanning of the xor-slice (Walsh ∀p) still open. That empties
+  interior 4-level only; leftover-only / 5+ remain.
 
 ## Leftover 3 (`type_I_multilevel_bad_case_ND_closed`)
 

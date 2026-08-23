@@ -1024,7 +1024,9 @@ def theorem_P_pairing_positivity() -> dict:
             "gives S_□,Wick=8q².  Positivity of the Boolean remainder "
             "is OPEN: no SoS for F, Paley+ω is not a scheme at p≥11, "
             "CS on ⟨ρ,K⟩ overshoots, 1D lifts do not exhaust Max+ and "
-            "some Aut-orbits have S_□=0."
+            "some Aut-orbits have S_□=0.  Paley-field square/norm "
+            "F̂=|A|² is dead (e1_gmin_qvar_fhat_norm: odd valuation "
+            "at f=2 primes 13, 409)."
         ),
     }
 

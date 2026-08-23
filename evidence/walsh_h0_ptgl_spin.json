@@ -1,0 +1,481 @@
+{
+  "3": {
+    "p": 3,
+    "n": 10,
+    "dim_H0": 5,
+    "preserve": {
+      "t1": {
+        "colspan": true,
+        "ker": true
+      },
+      "tw": {
+        "colspan": true,
+        "ker": true
+      },
+      "dil": {
+        "colspan": true,
+        "ker": true
+      },
+      "inv": {
+        "colspan": true,
+        "ker": true
+      },
+      "frob": {
+        "colspan": true,
+        "ker": true
+      }
+    },
+    "preserve_all": true,
+    "action_residual": 0,
+    "cyclic_dims": [
+      1,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "all_full": false,
+    "min_dim": 1,
+    "max_dim": 5,
+    "cyclic_dim_of_1": 1,
+    "uniserial_hint": false
+  },
+  "5": {
+    "p": 5,
+    "n": 26,
+    "dim_H0": 13,
+    "preserve": {
+      "t1": {
+        "colspan": true,
+        "ker": true
+      },
+      "tw": {
+        "colspan": true,
+        "ker": true
+      },
+      "dil": {
+        "colspan": true,
+        "ker": true
+      },
+      "inv": {
+        "colspan": true,
+        "ker": true
+      },
+      "frob": {
+        "colspan": true,
+        "ker": true
+      }
+    },
+    "preserve_all": true,
+    "action_residual": 0,
+    "cyclic_dims": [
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13,
+      13
+    ],
+    "all_full": true,
+    "min_dim": 13,
+    "max_dim": 13,
+    "cyclic_dim_of_1": 1,
+    "uniserial_hint": true
+  },
+  "7": {
+    "p": 7,
+    "n": 50,
+    "dim_H0": 25,
+    "preserve": {
+      "t1": {
+        "colspan": true,
+        "ker": true
+      },
+      "tw": {
+        "colspan": true,
+        "ker": true
+      },
+      "dil": {
+        "colspan": true,
+        "ker": true
+      },
+      "inv": {
+        "colspan": true,
+        "ker": true
+      },
+      "frob": {
+        "colspan": true,
+        "ker": true
+      }
+    },
+    "preserve_all": true,
+    "action_residual": 0,
+    "cyclic_dims": [
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25
+    ],
+    "all_full": true,
+    "min_dim": 25,
+    "max_dim": 25,
+    "cyclic_dim_of_1": 1,
+    "uniserial_hint": true
+  },
+  "11": {
+    "p": 11,
+    "n": 122,
+    "dim_H0": 61,
+    "preserve": {
+      "t1": {
+        "colspan": true,
+        "ker": true
+      },
+      "tw": {
+        "colspan": true,
+        "ker": true
+      },
+      "dil": {
+        "colspan": true,
+        "ker": true
+      },
+      "inv": {
+        "colspan": true,
+        "ker": true
+      },
+      "frob": {
+        "colspan": true,
+        "ker": true
+      }
+    },
+    "preserve_all": true,
+    "action_residual": 0,
+    "cyclic_dims": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "all_full": true,
+    "min_dim": 61,
+    "max_dim": 61,
+    "cyclic_dim_of_1": 1,
+    "uniserial_hint": true
+  },
+  "13": {
+    "p": 13,
+    "n": 170,
+    "dim_H0": 85,
+    "preserve": {
+      "t1": {
+        "colspan": true,
+        "ker": true
+      },
+      "tw": {
+        "colspan": true,
+        "ker": true
+      },
+      "dil": {
+        "colspan": true,
+        "ker": true
+      },
+      "inv": {
+        "colspan": true,
+        "ker": true
+      },
+      "frob": {
+        "colspan": true,
+        "ker": true
+      }
+    },
+    "preserve_all": true,
+    "action_residual": 0,
+    "cyclic_dims": [
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85,
+      85
+    ],
+    "all_full": true,
+    "min_dim": 85,
+    "max_dim": 85,
+    "cyclic_dim_of_1": 1,
+    "uniserial_hint": true
+  },
+  "17": {
+    "p": 17,
+    "n": 290,
+    "dim_H0": 145,
+    "preserve": {
+      "t1": {
+        "colspan": true,
+        "ker": true
+      },
+      "tw": {
+        "colspan": true,
+        "ker": true
+      },
+      "dil": {
+        "colspan": true,
+        "ker": true
+      },
+      "inv": {
+        "colspan": true,
+        "ker": true
+      },
+      "frob": {
+        "colspan": true,
+        "ker": true
+      }
+    },
+    "preserve_all": true,
+    "action_residual": 0,
+    "cyclic_dims": [
+      145,
+      145,
+      145,
+      145,
+      145,
+      145,
+      145,
+      145,
+      145,
+      145,
+      145,
+      145
+    ],
+    "all_full": true,
+    "min_dim": 145,
+    "max_dim": 145,
+    "cyclic_dim_of_1": 1,
+    "uniserial_hint": true
+  },
+  "19": {
+    "p": 19,
+    "n": 362,
+    "dim_H0": 181,
+    "preserve": {
+      "t1": {
+        "colspan": true,
+        "ker": true
+      },
+      "tw": {
+        "colspan": true,
+        "ker": true
+      },
+      "dil": {
+        "colspan": true,
+        "ker": true
+      },
+      "inv": {
+        "colspan": true,
+        "ker": true
+      },
+      "frob": {
+        "colspan": true,
+        "ker": true
+      }
+    },
+    "preserve_all": true,
+    "action_residual": 0,
+    "cyclic_dims": [
+      181,
+      181,
+      181,
+      181,
+      181,
+      181,
+      181,
+      181,
+      181,
+      181,
+      181,
+      181
+    ],
+    "all_full": true,
+    "min_dim": 181,
+    "max_dim": 181,
+    "cyclic_dim_of_1": 1,
+    "uniserial_hint": true
+  },
+  "23": {
+    "p": 23,
+    "n": 530,
+    "dim_H0": 265,
+    "preserve": {
+      "t1": {
+        "colspan": true,
+        "ker": true
+      },
+      "tw": {
+        "colspan": true,
+        "ker": true
+      },
+      "dil": {
+        "colspan": true,
+        "ker": true
+      },
+      "inv": {
+        "colspan": true,
+        "ker": true
+      },
+      "frob": {
+        "colspan": true,
+        "ker": true
+      }
+    },
+    "preserve_all": true,
+    "action_residual": 0,
+    "cyclic_dims": [
+      265,
+      265,
+      265,
+      265,
+      265,
+      265,
+      265,
+      265,
+      265,
+      265,
+      265,
+      265
+    ],
+    "all_full": true,
+    "min_dim": 265,
+    "max_dim": 265,
+    "cyclic_dim_of_1": 1,
+    "uniserial_hint": true
+  },
+  "29": {
+    "p": 29,
+    "n": 842,
+    "dim_H0": 421,
+    "preserve": {
+      "t1": {
+        "colspan": true,
+        "ker": true
+      },
+      "tw": {
+        "colspan": true,
+        "ker": true
+      },
+      "dil": {
+        "colspan": true,
+        "ker": true
+      },
+      "inv": {
+        "colspan": true,
+        "ker": true
+      },
+      "frob": {
+        "colspan": true,
+        "ker": true
+      }
+    },
+    "preserve_all": true,
+    "action_residual": 0,
+    "cyclic_dims": [
+      421,
+      421,
+      421,
+      421,
+      421,
+      421,
+      421,
+      421,
+      421,
+      421,
+      421,
+      421
+    ],
+    "all_full": true,
+    "min_dim": 421,
+    "max_dim": 421,
+    "cyclic_dim_of_1": 1,
+    "uniserial_hint": true
+  },
+  "31": {
+    "p": 31,
+    "n": 962,
+    "dim_H0": 481,
+    "preserve": {
+      "t1": {
+        "colspan": true,
+        "ker": true
+      },
+      "tw": {
+        "colspan": true,
+        "ker": true
+      },
+      "dil": {
+        "colspan": true,
+        "ker": true
+      },
+      "inv": {
+        "colspan": true,
+        "ker": true
+      },
+      "frob": {
+        "colspan": true,
+        "ker": true
+      }
+    },
+    "preserve_all": true,
+    "action_residual": 0,
+    "cyclic_dims": [
+      481,
+      481,
+      481,
+      481,
+      481,
+      481,
+      481,
+      481,
+      481,
+      481,
+      481,
+      481
+    ],
+    "all_full": true,
+    "min_dim": 481,
+    "max_dim": 481,
+    "cyclic_dim_of_1": 1,
+    "uniserial_hint": true
+  }
+}

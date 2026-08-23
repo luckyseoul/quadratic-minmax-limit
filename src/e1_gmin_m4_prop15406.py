@@ -47,6 +47,10 @@ Theorem E — OPEN.  Walsh for general p≥11 is not proved, so
   phi_F not imported.  A proposed Aut_e single-orbit spanning
   proof is false at p=5 (dir ≤11 < 12); Aut_e-invariant extra
   duals are empty (15.601) but that is not Walsh.
+  15.602: unique 1-dim G_aff^□-invariant subspace of H0 is ⟨1⟩.
+  15.604: 1_QR ∈ H0 iff p≡1 (mod 4); ker(D−I)∩H0 has dim 2.
+  15.605: H0=⟨1⟩⊕W, W=translate-span of extra, Paley A²=A over F2.
+  H0/⟨1⟩ irreducible (hence Max− spans H0) stays OPEN.
 
 ============================================================================
 Backend: Fraction identities + GF(2) rref on Max− caches

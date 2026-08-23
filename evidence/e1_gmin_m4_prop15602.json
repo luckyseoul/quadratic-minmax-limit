@@ -1,0 +1,116 @@
+{
+  "prop": "15.602",
+  "title": "G_aff^\u25a1-module H0 has unique 1-dim invariant \u27e81\u27e9",
+  "proved": {
+    "affine_permutes_rows": true,
+    "unique_1dim_invariant": true,
+    "inversion_pencil": true,
+    "H0_quotient_irreducible": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "square_dil_permutes": true,
+        "trans_permutes": true,
+        "frob_permutes": true,
+        "nonsquare_image_is_row": false
+      },
+      "5": {
+        "square_dil_permutes": true,
+        "trans_permutes": true,
+        "frob_permutes": true,
+        "nonsquare_image_is_row": false
+      },
+      "7": {
+        "square_dil_permutes": true,
+        "trans_permutes": true,
+        "frob_permutes": true,
+        "nonsquare_image_is_row": false
+      },
+      "11": {
+        "square_dil_permutes": true,
+        "trans_permutes": true,
+        "frob_permutes": true,
+        "nonsquare_image_is_row": false
+      }
+    },
+    "theorem": "Translations, square dilations, and Frobenius permute the rows of S.  Fail: nonsquare dilation permutes rows."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "one_in_H0": true,
+        "dim_translation_invariants": 1
+      },
+      "5": {
+        "one_in_H0": true,
+        "dim_translation_invariants": 1
+      },
+      "7": {
+        "one_in_H0": true,
+        "dim_translation_invariants": 1
+      },
+      "11": {
+        "one_in_H0": true,
+        "dim_translation_invariants": 1
+      }
+    },
+    "theorem": "Unique 1-dim G_aff^\u25a1-invariant subspace of H0 is \u27e81\u27e9.  Fail: extra translation-invariant vector in H0."
+  },
+  "C": {
+    "proved": true,
+    "H0_invariance_p_law": false,
+    "rows": {
+      "3": {
+        "pencil_permutes": true,
+        "nonpencil_image_is_row": false,
+        "H0_preserved": true,
+        "n_pencil": 2,
+        "half": 2
+      },
+      "5": {
+        "pencil_permutes": true,
+        "nonpencil_image_is_row": false,
+        "H0_preserved": true,
+        "n_pencil": 3,
+        "half": 3
+      },
+      "7": {
+        "pencil_permutes": true,
+        "nonpencil_image_is_row": false,
+        "H0_preserved": true,
+        "n_pencil": 4,
+        "half": 4
+      },
+      "11": {
+        "pencil_permutes": true,
+        "nonpencil_image_is_row": false,
+        "H0_preserved": true,
+        "n_pencil": 6,
+        "half": 6
+      }
+    },
+    "theorem": "Inversion permutes the square-pencil through 0.  Fail: it permutes every row of S.  H0-invariance certified p=3,5,7,11, not a p-law."
+  },
+  "D": {
+    "proved": false,
+    "walsh_general_p": false,
+    "H0_quotient_irreducible": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "H0/\u27e81\u27e9 irreducible as G-module would give dir(affine_span(Max\u2212))=H0.  That is not Walsh.  15.406 E stays OPEN.  residual_ii stays False."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "serial F2 (inherently for identities); rref p=3,5,7,11; GPU unused",
+  "seconds": 1.186
+}

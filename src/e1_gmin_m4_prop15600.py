@@ -31,10 +31,11 @@ Theorem B — PROVED (linear algebra over F2; all odd p).
 
 Theorem C — CERTIFIED p=3,5,7 (PSL generators; not a p-law).
   Random cyclic PΓL-modules of K=H0 are the full n/2-space (8/8 at
-  each of p=3,5,7).  Aut_e remains reducible (15.599 F).  If the only
-  proper PΓL-submodule of H0 is ⟨1⟩, then dir(affine_span(Max−))=H0
-  (differences are a nonzero invariant subspace larger than ⟨1⟩).
-  Not proved for general p.  Walsh still needs U to span H∩{ℓ=c}.
+  each of p=3,5,7).  Aut_e remains reducible (15.599 F).  15.602 B:
+  unique 1-dim G_aff^□-invariant subspace is ⟨1⟩ (theorem).  If
+  H0/⟨1⟩ is irreducible then dir(affine_span(Max−))=H0.  That
+  quotient irreducibility is OPEN.  Walsh still needs U to span
+  H∩{ℓ=c}.
 
 Theorem D — OPEN.  Walsh (15.406 E) is affine_span(U)=H∩{ℓ=c} with
   H=affine_span(Max−) ⊂ H0, dim H0=n/2 now a theorem.  residual_ii

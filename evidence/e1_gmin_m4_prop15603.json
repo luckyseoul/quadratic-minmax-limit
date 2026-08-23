@@ -1,0 +1,126 @@
+{
+  "prop": "15.603",
+  "title": "H0 \u2229 H0' = \u27e81\u27e9 and H0 + H0' = even-weight",
+  "proved": {
+    "rank_Sprime": true,
+    "intersection_ones": true,
+    "sum_even_weight": true,
+    "H0_quotient_irreducible": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "rank_S": 5,
+        "rank_Sprime": 5,
+        "n_over_2": 5,
+        "one_in_ker": true,
+        "one_in_rowspan": true
+      },
+      "5": {
+        "rank_S": 13,
+        "rank_Sprime": 13,
+        "n_over_2": 13,
+        "one_in_ker": true,
+        "one_in_rowspan": true
+      },
+      "7": {
+        "rank_S": 25,
+        "rank_Sprime": 25,
+        "n_over_2": 25,
+        "one_in_ker": true,
+        "one_in_rowspan": true
+      },
+      "11": {
+        "rank_S": 61,
+        "rank_Sprime": 61,
+        "n_over_2": 61,
+        "one_in_ker": true,
+        "one_in_rowspan": true
+      },
+      "13": {
+        "rank_S": 85,
+        "rank_Sprime": 85,
+        "n_over_2": 85,
+        "one_in_ker": true,
+        "one_in_rowspan": true
+      }
+    },
+    "theorem": "rank(S')=n/2 by the same radical \u27e81\u27e9 as 15.600.  Fail: rank(S')=n/2\u22121."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "dim_H0": 5,
+        "dim_H0p": 5,
+        "dim_int": 1,
+        "rank_sum": 9
+      },
+      "5": {
+        "dim_H0": 13,
+        "dim_H0p": 13,
+        "dim_int": 1,
+        "rank_sum": 25
+      },
+      "7": {
+        "dim_H0": 25,
+        "dim_H0p": 25,
+        "dim_int": 1,
+        "rank_sum": 49
+      },
+      "11": {
+        "dim_H0": 61,
+        "dim_H0p": 61,
+        "dim_int": 1,
+        "rank_sum": 121
+      }
+    },
+    "theorem": "H0 \u2229 H0' = \u27e81\u27e9: all affine line sums equal \u21d2 f constant on AG(2,p).  Fail: a non-constant common kernel vector."
+  },
+  "C": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "dim_sum": 9,
+        "dim_even": 9,
+        "not_equal": true
+      },
+      "5": {
+        "dim_sum": 25,
+        "dim_even": 25,
+        "not_equal": true
+      },
+      "7": {
+        "dim_sum": 49,
+        "dim_even": 49,
+        "not_equal": true
+      },
+      "11": {
+        "dim_sum": 121,
+        "dim_even": 121,
+        "not_equal": true
+      }
+    },
+    "theorem": "H0+H0'=even-weight code.  Fail: H0=H0'.  The heart E/\u27e81\u27e9 = (H0/\u27e81\u27e9)\u2295(H0'/\u27e81\u27e9)."
+  },
+  "D": {
+    "proved": false,
+    "H0_quotient_irreducible": false,
+    "walsh_general_p": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "Irreducibility of H0/\u27e81\u27e9 would give Max\u2212 spanning of H0, not Walsh.  15.406 E and residual_ii stay OPEN/False."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "serial F2 identities; rref p=3,5,7,11; GPU unused",
+  "seconds": 0.237
+}

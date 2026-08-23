@@ -1,0 +1,167 @@
+{
+  "prop": "15.604",
+  "title": "1_QR \u2208 H0 iff p\u22611 (mod 4); ker(D\u2212I)\u2229H0 has dim 2",
+  "proved": {
+    "qr_qnr_in_H0": true,
+    "dilation_fixed_dim2": true,
+    "restriction_QR_surjective": false,
+    "H0_quotient_irreducible": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "p_mod_4": 3,
+        "qr_in_H0": false,
+        "qnr_in_H0": true,
+        "chi_Fp_one": true,
+        "thru0_L_cap_QR": 2,
+        "off0_L_cap_QR": 1,
+        "e0_einf_in_H0": false
+      },
+      "5": {
+        "p_mod_4": 1,
+        "qr_in_H0": true,
+        "qnr_in_H0": false,
+        "chi_Fp_one": true,
+        "thru0_L_cap_QR": 4,
+        "off0_L_cap_QR": 2,
+        "e0_einf_in_H0": false
+      },
+      "7": {
+        "p_mod_4": 3,
+        "qr_in_H0": false,
+        "qnr_in_H0": true,
+        "chi_Fp_one": true,
+        "thru0_L_cap_QR": 6,
+        "off0_L_cap_QR": 3,
+        "e0_einf_in_H0": false
+      },
+      "11": {
+        "p_mod_4": 3,
+        "qr_in_H0": false,
+        "qnr_in_H0": true,
+        "chi_Fp_one": true,
+        "thru0_L_cap_QR": 10,
+        "off0_L_cap_QR": 5,
+        "e0_einf_in_H0": false
+      },
+      "13": {
+        "p_mod_4": 1,
+        "qr_in_H0": true,
+        "qnr_in_H0": false,
+        "chi_Fp_one": true,
+        "thru0_L_cap_QR": 12,
+        "off0_L_cap_QR": 6,
+        "e0_einf_in_H0": false
+      }
+    },
+    "theorem": "1_QR \u2208 H0 iff p\u22611 (mod 4); 1_QNR \u2208 H0 iff p\u22613 (mod 4).  Fail: swap congruences; fail: 1_QR in H0 at p\u22613."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "N": 4,
+        "D_N_is_id": true,
+        "dim_ker_DminusI_cap_H0": 2,
+        "n_ambient_in_H0": 1,
+        "extra_in_H0": true,
+        "span_card": 4
+      },
+      "5": {
+        "N": 12,
+        "D_N_is_id": true,
+        "dim_ker_DminusI_cap_H0": 2,
+        "n_ambient_in_H0": 1,
+        "extra_in_H0": true,
+        "span_card": 4
+      },
+      "7": {
+        "N": 24,
+        "D_N_is_id": true,
+        "dim_ker_DminusI_cap_H0": 2,
+        "n_ambient_in_H0": 1,
+        "extra_in_H0": true,
+        "span_card": 4
+      },
+      "11": {
+        "N": 60,
+        "D_N_is_id": true,
+        "dim_ker_DminusI_cap_H0": 2,
+        "n_ambient_in_H0": 1,
+        "extra_in_H0": true,
+        "span_card": 4
+      },
+      "13": {
+        "N": 84,
+        "D_N_is_id": true,
+        "dim_ker_DminusI_cap_H0": 2,
+        "n_ambient_in_H0": 1,
+        "extra_in_H0": true,
+        "span_card": 4
+      }
+    },
+    "theorem": "ker(D\u2212I)\u2229H0 = \u27e81, 1_QR\u27e9 (p\u22611) or \u27e81, 1_QNR\u27e9 (p\u22613), dim 2.  D^N=I.  Fail: dim 1 or 4; fail: e_\u221e in H0."
+  },
+  "C": {
+    "proved": false,
+    "surjective_in_general": false,
+    "onto_at_listed_primes": false,
+    "rows": {
+      "3": {
+        "dim_H0": 5,
+        "n_QR": 4,
+        "rank_to_QR": 3,
+        "ker_to_QR": 2,
+        "rank_to_QNR": 4,
+        "ker_to_QNR": 1
+      },
+      "5": {
+        "dim_H0": 13,
+        "n_QR": 12,
+        "rank_to_QR": 10,
+        "ker_to_QR": 3,
+        "rank_to_QNR": 10,
+        "ker_to_QNR": 3
+      },
+      "7": {
+        "dim_H0": 25,
+        "n_QR": 24,
+        "rank_to_QR": 19,
+        "ker_to_QR": 6,
+        "rank_to_QNR": 24,
+        "ker_to_QNR": 1
+      },
+      "11": {
+        "dim_H0": 61,
+        "n_QR": 60,
+        "rank_to_QR": 49,
+        "ker_to_QR": 12,
+        "rank_to_QNR": 60,
+        "ker_to_QNR": 1
+      }
+    },
+    "note": "Restriction H0\u2192F2^{QR} is not a p-law and is not onto (ker 2,3,6,12 at p=3,5,7,11).  Do not use it to name minpoly(D)=X^N+1 by cycle projection."
+  },
+  "D": {
+    "proved": false,
+    "H0_quotient_irreducible": false,
+    "walsh_general_p": false,
+    "restriction_QR_surjective": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "15.604 A,B do not make H0/\u27e81\u27e9 irreducible.  Any G-submodule is an M-submodule; the unique trivial M-line is the extra fixed vector, which translations mix.  That mixing argument is not yet a proof of irreducibility.  Walsh 15.406 E still needs the xor-slice.  residual_ii stays False."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "serial F2 identities (inherently); line-count p=3..13; GPU unused",
+  "seconds": 0.128
+}

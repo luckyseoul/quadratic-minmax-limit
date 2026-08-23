@@ -493,6 +493,8 @@ F_q^×/{±1}, pairs {ψ,χψ}, dim F=(q−5)/4).  Identified constants:
 ψ∉{1,χ}, equivalently Gauss 4-distinct pairing of m₄ ≥0 (15.279 L),
 equivalently F̂(ψ)≥0 on squares (15.279 M).  That is the QVAR goal
 language, now required for **all** even characters, not just α²=χ.
+**2026-08-23:** Paley-field square/norm for F̂ is dead
+(`e1_gmin_qvar_fhat_norm`); odd v at f=2 primes 13 (p=5) and 409 (p=7).
 
 Measured ˆR_rest at the binding character (budget −2q²):
 

@@ -43,6 +43,10 @@ OPEN (blocks leftover 1)
      at p=41 k=7 (E=0, Cy=py) and pointwise at p=13 k=7; those are
      not p-laws.  V_sph>threshold is not a 4-design.  Floor iff
      F̂(ψ)≥0 / Gauss 4-dist pairing of m₄ (15.279 L).
+     Paley-field square/norm (Bochner F̂=|A|² with A in
+     Q(√p*)Q(ζ_{q−1})) is dead: every even-character F̂ at p=5,7
+     has odd valuation at a residue-degree-2 prime
+     (`e1_gmin_qvar_fhat_norm`).
   F. The moment bound (C) / R1, equivalently ||δ||²≤n/12 via the
      multiplicity floor (15.595).  Crude E[s⁴]≤2n³ is Θ(n³) vs Θ(n²).
      After A*, E∧F together are Φ_δ ⪰ −(2n+20)/(n−6) I.
