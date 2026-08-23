@@ -1,4 +1,4 @@
-# Fable query — W2 as a p-law (counting identity on the split-involution conic)
+# Fable query — is W2 a p-law? (open)
 
 ## Setup (self-contained)
 
@@ -20,68 +20,49 @@ f_O = ∏_{f∈O} f.  Hence Walsh (15.406 E, ⇒ leftover 2) ⟺ **W1 ∧ W2**:
 * **W2:** for every orbit O, some U-difference is nonzero mod f_O.
 
 W2 is vacuous at p=3, implied by W1 at p=5,7 (g = Φ_3 irreducible), and first
-live at p=11 (m=15; orbits {Φ_3}, {Φ_5}, {the two Φ_15-quartics}).
+live at p=11 (m=15; orbits {Φ_3}, {Φ_5}, {the two Φ_15-quartics}). W1 is a
+separate problem (tracked elsewhere) — this query is about W2 only.
 
 ## The question
 
-**Prove W2 for every odd prime p** (currently certified only at p = 5, 11, 17, 31).
+**Is W2 true for every odd prime p?** If so, what's the right proof
+mechanism? If not — or if it's not clear — what does the failure or
+uncertainty look like?
 
-## The specific attack we want evaluated
+We are NOT asking you to evaluate one particular proof strategy. We want
+your own read on the right way to attack this: a counting argument, a
+structural/algebraic argument about the ⟨I,Frob⟩-orbit action, an inductive
+or recursive construction of a witness, a reduction to something already
+known, a reason to doubt it's a p-law at all, or something we haven't
+thought of.
 
-Take the **switched split-involution class**
-`C_p = {±[[α,β],[γ,−α]] : α²+βγ = 1}` ⊂ PGL(2,q) — a conic, |C_p| = p(p+1)/2 —
-all of whose elements are Max− under switching.  Census:
+## Data available, for context (not a hint toward any particular method)
 
-| p | \|C_p\| | in U | W2 hits | rate |
-|---|---|---|---|---|
-| 17 | 153 | 49 | 17 | 11.1% |
-| 31 | 496 | 146 | 76 | 15.3% |
+W2 is certified (by direct computation) at p = 5, 7, 11, 17, 31.  At p=11
+the orbits are {Φ_3}, {Φ_5}, {the two Φ_15-quartics} and W2 holds for all of
+them.  One thing we noticed while exploring: the "switched split-involution"
+class `{±[[α,β],[γ,−α]] : α²+βγ=1}` ⊂ PGL(2,q) (all Max− under switching)
+has an increasing hit rate for W2-satisfying elements — 17/153 ≈ 11% at
+p=17, 76/496 ≈ 15% at p=31 — but we do not know whether this is the right
+object to look at, whether the trend continues, or whether it's even
+necessary that a witness come from this particular class. Take it or leave
+it.
 
-The hit rate is a growing positive fraction, so the natural completion is a
-**counting identity** rather than a clever named witness (15.627 B states the
-gap in exactly this form: "some conjugate is always coprime").
+## Already tried and failed — so you don't repeat them, not to redirect you
 
-Concretely, we want to know:
-
-1. Can the W2 condition — "the U-difference attached to π ∈ C_p is nonzero
-   mod f_O" — be written as the **non-vanishing of a polynomial of bounded
-   degree** in the conic coordinates (α,β,γ), with degree bounded
-   independently of p (or by deg f_O, itself bounded by the orbit structure
-   of ⟨I,Frob⟩ on the factors of g)?
-2. If so, does Weil / Lang–Weil on the conic give
-   `#{π ∈ C_p : W2 holds} = c·p² + O(p^{3/2})` with `c > 0` explicit,
-   hence W2 ≠ ∅ for all p above an explicit bound (small p by census)?
-3. If the degree is **not** p-bounded, is there a substitute — e.g. an
-   averaging/second-moment argument over C_p, or a Chebotarev/Frobenius
-   equidistribution statement over the factors of g — that still forces a
-   nonzero residue for at least one π ∈ C_p?
-4. Independent of the above: is there a **structural** reason some conjugate
-   must be coprime to f_O — e.g. the ⟨I,Frob⟩-orbit structure on the
-   factors of g forcing a non-degenerate pairing?
-
-## Already dead — do not propose these
-
-* **A single named W2 witness as a p-law.** t = −2 works at p=17 and fails at
-  p=31 (15.626).  x/(x−1) hits at p=31 (15.627 B).  PGL(2,q)·z is Φ_3-dead
-  and the χ_p-pullback misses Φ_3 (15.620).  The named-witness route has
-  repeatedly failed out of sample.
-* **Krylov / gcd shortcuts:** the claim that z+Dz ∈ ker g is false;
-  f(D)(z+Dz) ≠ 0 for every irreducible factor of g at p = 5,7,11 (15.616,
-  corrected in 15.617 — membership is `w ∈ (f)R` iff f divides the
-  γ-content, *not* iff f(D)w = 0).
-* **W1 side-quests.** W1 is proved for p ≡ 5 (mod 8), p ≡ 17 (mod 24),
-  p ≡ 73, 97 (mod 120), and all (2/p)₄ = −1.  Its residual class
-  (2/p)₄ = +1 has both the **linear box** in (a,b,i,k) killed over 61 primes
-  (15.627 A) and the **entire interval family** killed
-  (2026-08-23: ε(−(p−1)/4) ≡ 0 and ε(−(p−1)/8) ≡ 0 on the whole residual
-  class; ε(−(p−1)/16) exists only for p ≡ 1 (mod 16) and is mixed there).
-  W1 is a separate problem — please stay on W2.
+* **Named W2 witnesses as a uniform p-law.** t = −2 works at p=17, fails at
+  p=31. x/(x−1) hits at p=31 but isn't shown to generalize.
+  PGL(2,q)·z is Φ_3-dead; the χ_p-pullback misses Φ_3.
+* **A Krylov/gcd shortcut** claiming z+Dz ∈ ker g — this is FALSE;
+  f(D)(z+Dz) ≠ 0 for every irreducible factor of g at p=5,7,11. (The
+  correct membership test is: w ∈ (f)R iff f divides the γ-content of w,
+  not iff f(D)w = 0.)
 
 ## Ground rules
 
-Answer must be a proof sketch precise enough to code as a `True`/`False`
-predicate, or an explicit statement that the approach fails and why.  No
-soft-closing: if the argument only covers large p, say so and give the bound.
-Any numerical criterion must be fitted below p = 2000 and then **predict**
-p ∈ (2000, 10⁴) — a pre-asymptotic fit on ~8 primes has already burned this
-project once.
+Answer must be precise enough to eventually code as a `True`/`False`
+predicate, or an honest statement that you don't see how to close it and
+why. No soft-closing — if an argument only covers large p or a subfamily,
+say so explicitly and give the boundary. Any numerical pattern must be
+checked out of the fitting range before being trusted — we've been burned
+once already by a hypothesis that held for 3 primes and broke on the 4th.
