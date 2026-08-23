@@ -3,15 +3,11 @@
 MathOverflow [413935](https://mathoverflow.net/questions/413935) /
 [X challenge](https://x.com/PI010101/status/2081070728422752329):
 
-$$
-m_n
-=
-\min_{a_{ij}=\pm1}
-\max_{x_j=\pm1}
-\Bigl|\sum_{1\le i<j\le n}a_{ij}x_i x_j\Bigr|,
-\qquad
-\alpha_n=\frac{m_n}{n^{3/2}}.
-$$
+```
+m_n = min_{a_ij = ±1}  max_{x_j = ±1}  | Σ_{1≤i<j≤n} a_ij · x_i · x_j |
+
+α_n = m_n / n^(3/2)
+```
 
 ## About
 
@@ -23,32 +19,26 @@ banned by test (`tests/test_main_chain_docs.py`).
 
 ## Status
 
-**Goal:** settle the limit (see **`LONG_HORIZON_GOAL.md`**). Not done until $L$ is proved or disproved.
+**Goal:** settle the limit (see **`LONG_HORIZON_GOAL.md`**). Not done until L is proved or disproved.
 
-**Main claim:** $\displaystyle L=\lim_n\alpha_n$ is **OPEN** (2026-08-16).
+**Main claim:** L = lim_n α_n is **OPEN** (2026-08-16).
 
-Sandwich and Paley $\rho=1$ are proved. E(1) on $n=p^2+1$ is **not**.
-Four leftovers (`GOAL.md`): $\lambda_{\min}(\Phi)\ge6$; residual (ii) for
-even $k\ge4p$; Type I when Max− is multi-level; Lemma D (writeup exists,
+Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**.
+Four leftovers (`GOAL.md`): λ_min(Φ) ≥ 6; residual (ii) for
+even k ≥ 4p; Type I when Max− is multi-level; Lemma D (writeup exists,
 hostile check still due). Residual (ii) is closed only for the affine branch
-and even $k\le4p-2$ (15.179/236/237), not for the statement E(1) needs.
+and even k ≤ 4p−2 (15.179/236/237), not for the statement E(1) needs.
 Soft-close forbidden. Package: **`evidence/share/denseness_path_package.md`**.
 
 As of 2026-08-22 the three open leftovers reduce to **two independent roots** —
 see the **Discovery map** below.
 
 **Proved (sandwich):**
-$$
-\frac1\pi
-\;\le\;
-\liminf_n\alpha_n
-\;\le\;
-\limsup_n\alpha_n
-\;\le\;
-\tfrac12.
-$$
+```
+1/π  ≤  liminf_n α_n  ≤  limsup_n α_n  ≤  1/2
+```
 
-**Also proved:** $\rho=1$ for Paley conference matrices of order $n=p^2+1$.
+**Also proved:** ρ=1 for Paley conference matrices of order n=p²+1.
 
 See **`STATUS.md`**, `HANDOFF.md`, denseness package, `solution.md`.
 
@@ -185,7 +175,7 @@ moments to ~15 numbers paired against the explicit PSL(2,q) character table.
 | `src/e1_gmin_m4_prop15598.py` … `prop15601.py` | R2: square-direction lines, rank(S)=n/2, Walsh |
 | `evidence/PLAN_2026-08-22_class_function_route.md` | Live route: Γ as a class function on PSL(2,q) |
 | `scripts/frame_line_system.py` | Data-free frame-line solver (any p, no Max± ensemble) |
-| `src/minmax_quadratic.py` | Exact `m_n`, Paley, $\Phi$, bounds, $\rho=1$ evec |
+| `src/minmax_quadratic.py` | Exact `m_n`, Paley, Φ, bounds, ρ=1 evec |
 | `tests/test_prop15167.py` … `test_prop15171.py` | Load-bearing E(1)/L tests |
 | `x-cards/` | X summary + key-lemmas JPEGs |
 | `evidence/share/` | Paper PDF/TeX + share assets |
@@ -212,5 +202,5 @@ python3 -c "from src.minmax_quadratic import exact_m; print([exact_m(n) for n in
 | 9 | 12 | 0.444 |
 | 10 | 13 | 0.411 |
 
-At $n=10$, Paley (order $p^2+1$, $p=3$) has $\Phi=15>m_{10}$: conference is not exactly optimal.
+At n=10, Paley (order p²+1, p=3) has Φ=15 > m_10: conference is not exactly optimal.
 Exact optima first appear at Hamming distance 5 from Paley, and the only 5-edge undercutters are 144 perfect matchings — see `evidence/N10_STRUCTURE.md`. Those 144 form one PΓL(2,9)-orbit (maximizer-drop criterion) — see `evidence/N10_MATCHING_CLASSIFY.md`.
