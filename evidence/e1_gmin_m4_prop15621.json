@@ -1,0 +1,74 @@
+{
+  "prop": "15.621",
+  "title": "W1 for p\u22615 (mod 8); PGL orbit of z is \u03a63-dead",
+  "proved": {
+    "W1_p_eq_5_mod_8": true,
+    "W1_p_eq_1_mod_8": false,
+    "W1_all_odd_p": false,
+    "W2_p_law": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "W1_p_eq_5_mod_8": true,
+    "W1_p_eq_1_mod_8": false,
+    "W1_all_odd_p": false,
+    "rows": {
+      "5": {
+        "a": 3,
+        "lam": 3,
+        "d": 4,
+        "stay": true,
+        "eps": 1,
+        "inU": true
+      },
+      "13": {
+        "a": 11,
+        "lam": 7,
+        "d": 12,
+        "stay": true,
+        "eps": 1,
+        "inU": true
+      },
+      "17": {
+        "eps": 0,
+        "note": "p\u22611 mod 8, not claimed"
+      }
+    },
+    "theorem": "d=\u22121 gives \u03b5=1 iff p\u22615 (mod 8).  Fail: \u03b5=0 at p=5."
+  },
+  "B": {
+    "proved": false,
+    "d_minus_1_eps": 0,
+    "d": 16,
+    "theorem": "p\u22611 (mod 8): d=\u22121 has \u03b5=0.  Stay hits exist, no named d.  Fail: d=\u22121 works at p=17."
+  },
+  "C": {
+    "proved": true,
+    "W2_p_law": false,
+    "pgl2q_inU": 86400,
+    "pgl2q_W2": 0,
+    "z_xor_U_n": 155,
+    "z_xor_U_gcd1": 72,
+    "theorem": "PGL(2,q)\u00b7z xor z is \u03a63-dead at p=5; z xor ensemble is not.  W2 not a p-law.  Fail: a PGL hit at p=5."
+  },
+  "D": {
+    "proved": false,
+    "W1_all_odd_p": false,
+    "W2_p_law": false,
+    "walsh_general_p": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "serial \u03a6; ensemble Krylov p=5; GPU unused",
+  "openai_referee": "math_review PASS on A, confidence 0.99",
+  "seconds": 0.903
+}

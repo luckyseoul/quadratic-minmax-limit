@@ -1,8 +1,11 @@
 # Status (2026-08-23)
 
+**15.621 PROVED split**: W1 for every p≡5 (mod 8) via d=−1.
+W1 remaining: p≡1 (mod 8). PGL(2,q)·z is Φ3-dead at p=5; z xor
+other Max- still gives W2 there (not a p-law). Walsh ∀p OPEN.
+
 **15.620 PROVED kill/split**: s_N is not a W1 p-law (ε=0 at p=29).
 Stay translates still hit ε=1. χ_p-pullback misses Φ3 at p=5.
-W1 p≡1 / W2 / Walsh ∀p OPEN.
 
 **15.619 PROVED split**: odd_QNR(s_N)=0 for every p≡1 (biquadratic
 fiber count (p−1)/4 ± b/2).

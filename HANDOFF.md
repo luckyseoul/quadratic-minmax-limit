@@ -1,12 +1,22 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.620 s_N not W1 p-law; stay hits remain)
+**Date:** 2026-08-23 (15.621 W1 for p≡5 mod 8)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.621 — W1 for p≡5 (mod 8); PGL(2,q)·z is Φ3-dead
+
+`src/e1_gmin_m4_prop15621.py`. Named stay d=−1, a=−λ^{-1}:
+S Δ (S−1)={m,−1}, |QR∩Δ| odd iff χ(2)=−1 iff p≡5 (mod 8).
+OpenAI math_review PASS. W1 now: all p≡3 (15.614) and all p≡5
+(mod 8). Remaining W1: p≡1 (mod 8). W2: full PGL(2,q) orbit of
+named z, xor z, is Φ3-dead at p=5 (86400 in-U, 0 coprime); z xor
+ensemble still 72/155 gcd1, so the other endpoint is not a PGL
+image of z. leftover 2 open.
 
 ## 15.620 — s_N is not a W1 p-law; χ_p-pullback misses Φ3
 
