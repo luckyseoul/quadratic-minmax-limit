@@ -1,0 +1,82 @@
+{
+  "prop": "15.619",
+  "title": "odd_QNR(s_N)=0 p-law; B3 still open",
+  "proved": {
+    "odd_QNR_zero": true,
+    "sN_eps_p_law": false,
+    "W1_p_eq_1": false,
+    "W2_p_law": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "odd_QNR_sN_zero": true,
+    "rows": {
+      "5": {
+        "a": 1,
+        "b": 2,
+        "J_abs2": 5,
+        "n_odd_0": 2,
+        "n_odd_off": [
+          0,
+          2
+        ],
+        "pred": [
+          0,
+          2
+        ],
+        "all_even": true
+      },
+      "13": {
+        "a": 3,
+        "b": 2,
+        "J_abs2": 13,
+        "n_odd_0": 6,
+        "n_odd_off": [
+          2,
+          4
+        ],
+        "pred": [
+          2,
+          4
+        ],
+        "all_even": true
+      }
+    },
+    "theorem": "n_odd^{QNR}(t)=(p-1)/4 \u00b1 b/2 even.  odd_QNR(s_N)=0.  Fail: n_odd odd at p=5; fail: |J|^2\u2260p."
+  },
+  "B": {
+    "proved": false,
+    "f_dot_qr_certified": true,
+    "f_dot_qr_p_law": false,
+    "rows": {
+      "5": {
+        "f_dot_qr_odd": 1
+      },
+      "13": {
+        "f_dot_qr_odd": 1
+      }
+    },
+    "theorem": "f\u00b7n_odd^{QR}\u22611 certified p=5,13, not a p-law.  Fail: claim it for every p\u22611."
+  },
+  "C": {
+    "proved": false,
+    "W1_p_eq_1": false,
+    "W2_p_law": false,
+    "walsh_general_p": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "odd_QNR(s_N)=0.  \u03b5(s_N)=1 still needs B3. leftover 2 OPEN."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "serial Gauss; fiber census p=5,13; GPU unused",
+  "openai_referee": "quota until 2026-08-27; not routed to Fable",
+  "seconds": 0.347
+}

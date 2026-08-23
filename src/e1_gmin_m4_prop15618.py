@@ -38,7 +38,7 @@ Theorem B — PULLBACK p-law; orbit pattern CERTIFIED, not a p-law.
   A=nsq-stay, λ=L(σ^{−1}), S={0,…,(p−1)/2}.  p-law (Fable B1).
   Off-0 nsq line: |L∩QR|=(p+1)/2 odd, |L∩QNR|=(p−1)/2 even
   (p≡1).  0-fiber B2 is a p-law: F_p^× has half-index (p+1)/2
-  odd, so H\{0}⊂QNR splits (p−1)/2:(p−1)/2 between D-index
+  odd, so H except 0 is QNR and splits (p-1)/2:(p-1)/2 between D-index
   parities, both even.  Off-0 n_odd^{QNR} even, and
   f·n_odd^{QR}≡1, certified p=5,13,17 only.  Inversion x↦x^{−1}
   swaps QNR classes 1↔3 and fixes QR 0,2, but is not fiberwise.

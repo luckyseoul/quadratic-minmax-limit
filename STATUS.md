@@ -1,9 +1,11 @@
 # Status (2026-08-23)
 
+**15.619 PROVED split**: odd_QNR(s_N)=0 for every p≡1 (biquadratic
+fiber count (p−1)/4 ± b/2). f·n_odd^{QR}≡1 still not a p-law.
+W1 p≡1 / W2 / Walsh ∀p OPEN.
+
 **15.618 PROVED split**: Φ=ε on W_0 (odd D-index on QR xor QNR);
-scale Φ((D−I)γ)=2p−1≡1. s_N=f∘φ a p-law; ε(s_N)=1 still certified
-not a p-law (QNR fiber odd-index even at p=5,13,17). 1_M coprime
-to g. W2 / W1 p≡1 / Walsh ∀p OPEN.
+scale Φ((D−I)γ)=2p−1≡1. s_N=f∘φ a p-law. 1_M coprime to g.
 
 **15.617 PROVED split**: w∈(f)R iff f|content. 15.616 Walsh p=11
 withdrawn. s_N nsq-class stay-sum has ε=1 at p=5,13,17 (W1 p≡1

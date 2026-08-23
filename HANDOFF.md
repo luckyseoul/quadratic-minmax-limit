@@ -1,12 +1,21 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.618 Φ=ε; s_N φ-pullback; 1_M coprime to g)
+**Date:** 2026-08-23 (15.619 odd_QNR(s_N)=0; B3 still open)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.619 — odd_QNR(s_N)=0 is a p-law
+
+`src/e1_gmin_m4_prop15619.py`. Off-0 nsq fibers: n_ζ=(p−1)/4 ± b/2
+for p=a²+b², both even (Gauss |J|=√p + Z[i] UFD: Re ∈ {±a,±b}
+forced to ±b). 0-fiber already even. So odd_QNR of any φ-pullback
+vanishes, including s_N. f·n_odd^{QR}≡1 still certified only.
+W1 p≡1 / W2 / Walsh / leftover 2 open. OpenAI referee quota until
+2026-08-27 — not routed to Fable (Fable is deep consult/review only).
 
 ## 15.618 — Φ=ε p-law; s_N is a φ-pullback; 1_M coprime to g
 
