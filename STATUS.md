@@ -1,8 +1,10 @@
 # Status (2026-08-23)
 
+**15.625 PROVED split**: W1 for (2/p)_4=−1 via d=−(p−1)/8.
+Residual W1: p=a²+64c² (601…). CLASS exhaustive. W2 p-law OPEN.
+
 **15.624 PROVED split**: inversion −1/x is Max− not in U. Named
 W2 at p=11: π=x/(m(x+2)). Two Auts cover p=5,7,11,13 not 17+.
-W2 p-law / W1 p≡1,49 (mod 120) OPEN.
 
 **15.623 PROVED split**: W1 for p≡73 or 97 (mod 120) via d=−3.
 

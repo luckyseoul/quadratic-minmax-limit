@@ -66,7 +66,9 @@ Remaining estimate, minus-slice interior 4-level (and 5+ / unclassified):
   p≡1 or 49 (mod 120). Fable: no more fixed-d tower; next is
   quarter-interval + h(−4p).
   15.624: W2 named at p=11 (m-pole). Disjunction covers
-  p=5,7,11,13. leftover 2 still open.
+  p=5,7,11,13.
+  15.625: W1 d=−(p−1)/8 iff (2/p)_4=−1. Residual W1 is
+  p=a²+64c². CLASS exhaustive. leftover 2 still open.
   Spanning of the xor-slice (Walsh ∀p) still open. That empties
   interior 4-level only; leftover-only / 5+ remain.
 

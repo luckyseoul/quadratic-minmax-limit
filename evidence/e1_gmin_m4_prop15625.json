@@ -1,0 +1,118 @@
+{
+  "prop": "15.625",
+  "title": "W1 eighth-interval / quartic character of 2",
+  "proved": {
+    "W1_quartic2_minus": true,
+    "W1_quartic2_plus": false,
+    "W1_all_odd_p": false,
+    "CLASS_exhaustive": true,
+    "W2_p_law": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "W1_quartic2_minus": true,
+    "W1_quartic2_plus": false,
+    "W1_all_odd_p": false,
+    "rows": {
+      "17": {
+        "d": 15,
+        "upper": true,
+        "eps": 1,
+        "quartic2": -1,
+        "pred": 1,
+        "b_mod_8": 4
+      },
+      "41": {
+        "d": 36,
+        "upper": true,
+        "eps": 1,
+        "quartic2": -1,
+        "pred": 1,
+        "b_mod_8": 4
+      },
+      "73": {
+        "d": 64,
+        "upper": true,
+        "eps": 0,
+        "quartic2": 1,
+        "pred": 0,
+        "b_mod_8": 0
+      },
+      "89": {
+        "d": 78,
+        "upper": true,
+        "eps": 0,
+        "quartic2": 1,
+        "pred": 0,
+        "b_mod_8": 0
+      },
+      "97": {
+        "d": 85,
+        "upper": true,
+        "eps": 1,
+        "quartic2": -1,
+        "pred": 1,
+        "b_mod_8": 4
+      },
+      "241": {
+        "d": 211,
+        "upper": true,
+        "eps": 1,
+        "quartic2": -1,
+        "pred": 1,
+        "b_mod_8": 4
+      },
+      "409": {
+        "d": 358,
+        "upper": true,
+        "eps": 1,
+        "quartic2": -1,
+        "pred": 1,
+        "b_mod_8": 4
+      },
+      "601": {
+        "d": 526,
+        "upper": true,
+        "eps": 0,
+        "quartic2": 1,
+        "pred": 0,
+        "b_mod_8": 0
+      }
+    },
+    "theorem": "d=\u2212(p\u22121)/8 has \u03b5=1 iff (2/p)_4=\u22121.  Fail: \u03b5=0 at p=17; fail: \u03b5=1 at p=601."
+  },
+  "B": {
+    "proved": false,
+    "residual": "p=a^2+64c^2, first 601",
+    "p601_eps": 0,
+    "theorem": "W1 residual is (2/p)_4=+1.  Fail: d=\u2212(p\u22121)/8 at p=601."
+  },
+  "C": {
+    "proved": true,
+    "citation": "15.612 B: maximal Aut-invariant ideals are exactly (X+1)R and (f_O)R",
+    "Walsh_iff_W1_and_W2": true,
+    "generation_gap": false,
+    "theorem": "CLASS exhaustive + Artinian \u21d2 W1\u2227W2 \u21d2 I_U=W_0.  Fail: a third maximal Aut-invariant ideal."
+  },
+  "D": {
+    "proved": false,
+    "W1_all_odd_p": false,
+    "W2_p_law": false,
+    "walsh_general_p": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "fable": "eighth-interval W1; residual a^2+64c^2; W2 p-dependent cocycle (named Auts are conjugate split involutions)"
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "F_p character counts; GPU unused",
+  "claude_referee": "deep_review PASS-WITH-NOTE: d=-(p-1)/8; quarter-interval dead; CLASS exhaustive; W2 Auts conjugate",
+  "seconds": 0.003
+}

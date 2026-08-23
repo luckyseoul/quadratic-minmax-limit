@@ -1,12 +1,20 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.624 Fable W2: PGL(2,11) named m-pole)
+**Date:** 2026-08-23 (15.625 W1 eighth-interval / (2/p)_4)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.625 — Fable Walsh consult: d=−(p−1)/8 iff (2/p)_4=−1
+
+`src/e1_gmin_m4_prop15625.py`. Deep_review PASS-WITH-NOTE. Quarter
+d=−(p−1)/4 is identically ε=0 on p≡1 (mod 8). Eighth-interval:
+ε=1 iff (2/p)_4=−1 (Barrucand–Cohn). Hits 241,409; miss 601.
+CLASS exhaustive ⇒ W1∧W2=Walsh, no generation gap. Residual W1:
+p=a²+64c². W2: named Auts are conjugate split involutions.
 
 ## 15.624 — Fable W2 strategy: inversion misses U; named W2 at p=11
 
