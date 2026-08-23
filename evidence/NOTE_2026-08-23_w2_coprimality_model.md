@@ -331,15 +331,19 @@ Over F2 its consecutive difference is supported on exactly two levels:
 The switched-pole signs do not depend on `a`, while the two copies of the
 untransformed base vector cancel in the antipodal pair.  Consequently
 `w_(a+1)+w_a` is the xor of the pullbacks of these two affine lines under
-the two antipodal Mobius maps.  This identity was also checked bit-for-bit
-against directly reconstructed rows at representative small, medium, and
-delayed primes, including `p=29,59,1721`.
+the two antipodal Mobius maps.  If `F_t(r)` denotes one such line residue,
+the substitution `z=t*y` in `x=y/(t*y-1)` also gives the exact antipodal
+relation `F_(-t)(r)=F_t(-r)`: multiplication by `-1` has trivial Phi_3
+phase on both point-orbits.  Thus only one pole's two component tables need
+to be stored.  The support identity was checked bit-for-bit against directly
+reconstructed rows at representative small, medium, and delayed primes,
+including `p=29,59,1721`.
 
 At a root `zeta` of `Phi_3`, the named cyclic generator has exactly one
 nonzero square/nonsquare multiplicative Fourier component.  This follows
 from its exact two-component norm `1`: every nonzero GF(4) element has norm
 `1`, so precisely one of the two component norms contributes.  Hence one
-direct value of `w_0`, together with four tables of affine-line residues,
+direct value of `w_0`, together with the two component tables for one pole,
 recovers the complete sequence
 
     c_0(zeta), c_1(zeta), ..., c_(p-1)(zeta)

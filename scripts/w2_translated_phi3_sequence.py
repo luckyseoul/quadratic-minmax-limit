@@ -9,8 +9,9 @@ differ only on the two affine lines
 The switched-pole signs are independent of a, so w_{a+1}+w_a is exactly
 the xor of the pullbacks of those lines under the two antipodal poles.
 At Phi_3 one square/nonsquare Fourier component of the cyclic generator is
-zero and the other is nonzero.  One direct w_0 evaluation plus line-residue
-tables therefore recovers every content c_a mod Phi_3 in O(p^2) time.
+zero and the other is nonzero.  The two antipodal pole tables are related by
+level reversal, so one direct w_0 evaluation plus one pole's line-residue
+tables recovers every content c_a mod Phi_3 in O(p^2) time.
 """
 from __future__ import annotations
 
@@ -109,7 +110,11 @@ def record(p: int) -> dict:
     # Residue of each pullback 1_{ell(pi_t(x))=r}, split by the two
     # multiplicative point-orbits.  The possible infinity correction is an
     # all-ones vector, whose Phi_3 residue is zero because 3|ncoord.
-    line_residues = np.zeros((2, 2, p), dtype=np.uint8)
+    # If F_t(r) is the residue for pole t and level r, substituting z=t*y
+    # in x=y/(t*y-1) gives F_(-t)(r)=F_t(-r).  Multiplication by -1 has
+    # trivial Phi_3 phase on both point-orbits.  Thus only one antipodal
+    # pole's table is needed; the other is obtained by reversing levels.
+    line_residues = np.zeros((2, p), dtype=np.uint8)
     shifted = ell
     z0 = np.empty(q + 1, dtype=np.int8)
     z0[0] = -1
@@ -123,18 +128,21 @@ def record(p: int) -> dict:
         )
         _in_u, wfn = apply_pole(z0, bits0, perm, switch)
         pair0 = wfn.copy() if pair0 is None else pair0 ^ wfn
-        for component, orbit in enumerate((square, nonsquare)):
-            sources = perm[1 + orbit]
-            finite = sources != 0
-            levels = ell[sources[finite] - 1]
-            exponent_classes = np.arange(ncoord, dtype=np.int64)[finite] % 3
-            for exponent_class, value in enumerate(GF4_POWERS):
-                parity = np.bincount(
-                    levels[exponent_classes == exponent_class], minlength=p
-                ) & 1
-                line_residues[action_index, component] ^= (
-                    parity.astype(np.uint8) * value
+        if action_index == 0:
+            for component, orbit in enumerate((square, nonsquare)):
+                sources = perm[1 + orbit]
+                finite = sources != 0
+                levels = ell[sources[finite] - 1]
+                exponent_classes = (
+                    np.arange(ncoord, dtype=np.int64)[finite] % 3
                 )
+                for exponent_class, value in enumerate(GF4_POWERS):
+                    parity = np.bincount(
+                        levels[exponent_classes == exponent_class], minlength=p
+                    ) & 1
+                    line_residues[component] ^= (
+                        parity.astype(np.uint8) * value
+                    )
         del perm, switch, wfn
 
     initial_residues = [
@@ -153,14 +161,10 @@ def record(p: int) -> dict:
         r_enter = (half - a) % p
         r_leave = (p - 1 - a) % p
         for component in range(2):
-            delta = 0
-            for action_index in range(2):
-                delta ^= int(
-                    line_residues[action_index, component, r_enter]
-                )
-                delta ^= int(
-                    line_residues[action_index, component, r_leave]
-                )
+            delta = int(line_residues[component, r_enter])
+            delta ^= int(line_residues[component, r_leave])
+            delta ^= int(line_residues[component, (-r_enter) % p])
+            delta ^= int(line_residues[component, (-r_leave) % p])
             residues[component] ^= delta
 
     if residues != initial_residues:
