@@ -1,12 +1,22 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.613 W1 named z; ε-bit not a p-law; **no flag flipped**)
+**Date:** 2026-08-23 (15.614 W1 for p≡3; **no flag flipped**)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.614 — W1 for p≡3; named D-spans miss W2 (split)
+
+`src/e1_gmin_m4_prop15614.py`. Fable: ε((1+D)v)=g(1). Lift
+v=x+a e_0+b 1_QR of named z-bits into W (φ=L∘σ^{−1} nsq ker ⇒
+wt=(p−1)/2 on every square line). Then ε(z+Dz)=v_0=p(p−1)/2
+(mod 2)=1 iff p≡3. W1 is a p-law on that class. For p≡1 the
+two-fiber {φ=(p−1)/2}∪{φ=p−1} is in W_0; ε=1 certified, not
+proved. At p=11, g divides ann(z+Dz) and ann(two-fiber): these
+vectors miss every g-orbit. Walsh / residual_ii False.
 
 ## 15.613 — W1 named Max- in U; one ε-bit per p mod 4 (split)
 

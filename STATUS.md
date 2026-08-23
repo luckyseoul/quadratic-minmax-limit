@@ -1,5 +1,9 @@
 # Status (2026-08-23)
 
+**15.614 PROVED split** (not a leftover close): W1 for every p≡3
+(mod 4) via W-lift of z+Dz; ε=p(p−1)/2 (mod 2). W1 for p≡1 and
+W2 open (named vectors killed by g at p=11). Walsh OPEN.
+
 **15.613 PROVED split** (not a leftover close): named halfspace-anti
 z∈U; ε(y+Dy) constant on U; ε=odd Krylov sum vs 1_M. The ε-bit
 (1 iff p≡3; T_α at p≡1) is certified not a p-law (Fable BLOCK).

@@ -50,7 +50,8 @@ Remaining estimate, minus-slice interior 4-level (and 5+ / unclassified):
   V/⟨1⟩ still OPEN. 15.610: Aut({0,∞}) uniqueness DEAD.
   15.611: W ≅ F2[X]/(X^N+1); ker2 dim 2 is a p-law.
   15.612: Walsh ⇔ W1 ∧ W2; CLASS p-law, W1 not.
-  15.613: named z∈U; ε(y+Dy) constant on U; ε-bit not a p-law.
+  15.613: named z∈U; ε(y+Dy) constant on U.
+  15.614: W1 for p≡3; named D-spans miss g-orbits at p=11.
   Spanning of the xor-slice (Walsh ∀p) still open. That empties
   interior 4-level only; leftover-only / 5+ remain.
 
