@@ -316,15 +316,90 @@ Compact results and hashes are in
 `evidence/w2_translated_common_norm_5_2003.json`; full traces are archived at
 `/mnt/storage/e1work/maxplus_p13/w2_translated_attack_2026-08-23`.
 
+### Consecutive translations reduce Phi_3 to four affine lines
+
+The boundary family has a much sharper finite-difference description.  Put
+`m=(p-1)/2` and let
+
+    B_a(r) = 1_{(r+a mod p)>m}.
+
+Over F2 its consecutive difference is supported on exactly two levels:
+
+    B_(a+1)(r) + B_a(r)
+      = 1_{r=m-a} + 1_{r=-1-a}.
+
+The switched-pole signs do not depend on `a`, while the two copies of the
+untransformed base vector cancel in the antipodal pair.  Consequently
+`w_(a+1)+w_a` is the xor of the pullbacks of these two affine lines under
+the two antipodal Mobius maps.  This identity was also checked bit-for-bit
+against directly reconstructed rows at representative small, medium, and
+delayed primes, including `p=29,59,1721`.
+
+At a root `zeta` of `Phi_3`, the named cyclic generator has exactly one
+nonzero square/nonsquare multiplicative Fourier component.  This follows
+from its exact two-component norm `1`: every nonzero GF(4) element has norm
+`1`, so precisely one of the two component norms contributes.  Hence one
+direct value of `w_0`, together with four tables of affine-line residues,
+recovers the complete sequence
+
+    c_0(zeta), c_1(zeta), ..., c_(p-1)(zeta)
+
+in `O(p^2)` field operations.  The previous method rebuilt a vector of
+length `p^2` separately for every translation.  The implementation is
+`scripts/w2_translated_phi3_sequence.py`; it asserts closure of the
+recurrence, vanishing of the inactive component, and the exact reflection
+`c_(m-a)=c_a`.  Its output agrees with the direct boundary scanner through
+`p=101`, including every first-good representative.
+
+Parameterizing one affine line turns each table entry into a cubic
+multiplicative-character sum of the shape
+
+    sum_{x in F_p} eta((x+A)/(x+B)),
+
+with the pole and line level absorbed into `A,B`.  Equivalently, this is a
+cubic cyclotomic sum on a Baer subline of `P^1(F_(p^2))`.  This is the first
+reduction in the attack that replaces the translated `p^2`-point Boolean
+vectors by a one-dimensional finite-field object.  The literature and
+repository searches found general work on Baer sublines and character
+sums, but no theorem that gives the required parity/nonvanishing on this
+particular admissible interval.
+
+The complete `5<=p<=3500` sequence census covers 487 primes.  Its only
+all-valid-bad case is the already exceptional `p=5`; every `p>5` has a
+nonzero valid Phi_3 residue.  For every tested `p == 5 (mod 12)`, the
+sequence is binary and obeys the striking exact count
+
+    #{a in F_p : c_a(zeta)=0} = (2p-7)/3,
+    #{a in F_p : c_a(zeta)!=0} = (p+7)/3.
+
+All 123 tested primes in this congruence class obey the formula.  This is an
+observed law, not yet a theorem.  More importantly, even a proof
+of the global count would not finish the interval problem.  At `p=101`, 65
+of all 101 translations are zero and 39 of the 49 valid translations are
+zero.  Thus the false inequality "total bad < valid interval length" cannot
+be repaired into the desired conclusion.  The reflected sequence also has
+linear complexity `p-1` in the tested `p == 5 (mod 12)` cases, so the exact
+count is not coming from a bounded-order recurrence.  Apart from
+`a -> m-a`, searches found no affine symmetry that forces a valid bad point
+to pair with a good point.
+
+The durable proof target is therefore an *incomplete* cubic/Baer-subline
+sum: show that the zero set of this character-parity sequence cannot cover
+the valid interval `1<=a<m/2`.  A square-root discrepancy estimate of the
+right strength would suffice in the `p == 5 (mod 12)` class, and the census
+suggests such cancellation, but no proved estimate has yet been matched to
+the characteristic-two parity being measured here.
+
 ### Revised gap
 
-Derive the translated boundary `c_a mod f_O` as a finite-field
-multiplicative Fourier/Jacobi sum and show it is not identically zero as `a`
-runs over the valid half-edge.  Since `O` is handled separately, no
+For `Phi_3`, prove that the incomplete cubic/Baer-subline parity sequence
+just derived is nonzero somewhere on the valid half-edge.  For a general
+Aut factor-orbit `O`, derive the analogous translated boundary
+`c_a mod f_O` as a finite-field multiplicative Fourier/Jacobi sum and show
+it is not identically zero there.  Since `O` is handled separately, no
 factor-count or union-bound loss occurs.  The formal `a=0` antipodal pair is
-a unit, so a viable proof would propagate hypothetical vanishing on every
-valid translation back to `a=0`.  The growing Φ_3 prefixes show that this
-cannot be a bounded-row recurrence.  A unit-content witness remains a
+a unit, but the growing Φ_3 prefixes and maximal linear complexity rule out
+propagation by a bounded-row recurrence.  A unit-content witness remains a
 convenient computational certificate, but is no longer the proof target.
 
 W2 stays OPEN.  No proposition number or closure flag is claimed.

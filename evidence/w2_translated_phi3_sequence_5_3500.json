@@ -1,0 +1,57 @@
+{
+  "status": "computational evidence; W2 remains open",
+  "family": "translated antipodal boundary pair u=(p-1)/2",
+  "factor": "Phi_3=X^2+X+1",
+  "range": [5, 3500],
+  "n_primes": 487,
+  "algorithm": {
+    "identity": "B_(a+1)+B_a = 1_(r=m-a)+1_(r=-1-a)",
+    "pair_difference": "four affine-line pullbacks under the two antipodal poles",
+    "complexity": "O(p^2) per prime",
+    "assertions": [
+      "translation recurrence closes",
+      "inactive square/nonsquare Phi_3 component is zero",
+      "c_(m-a)=c_a"
+    ],
+    "direct_crosscheck": "all first-good representatives agree with the direct scanner for primes 5<=p<=101"
+  },
+  "results": {
+    "all_valid_bad": [5],
+    "minimum_good_valid_translations_for_p_gt_5": 2,
+    "minimum_attained_at": [7, 29],
+    "maximum_first_good_representative_a": 15,
+    "maximum_first_good_representative_prime": 1721,
+    "maximum_zero_fraction_all_translations": 0.665992487720312,
+    "maximum_zero_fraction_prime": 3461
+  },
+  "p_mod_12_eq_5_observation": {
+    "n_primes": 123,
+    "content_values_are_binary": true,
+    "total_zero_formula": "(2p-7)/3",
+    "total_good_formula": "(p+7)/3",
+    "formula_failures": [],
+    "proved": false
+  },
+  "falsified_shortcuts": {
+    "global_count_forces_valid_nonvanishing": {
+      "counterexample_p": 101,
+      "total_zeros": 65,
+      "valid_zeros": 39,
+      "valid_translations": 49
+    },
+    "bounded_linear_recurrence": "Berlekamp-Massey complexity p-1 in tested p mod 12 = 5 sequences",
+    "affine_good_bad_pairing": "only the reflection a -> m-a was found"
+  },
+  "raw_outputs": [
+    {
+      "range": [5, 2003],
+      "path": "/mnt/storage/e1work/maxplus_p13/w2_translated_attack_2026-08-23/w2_phi3_sequence_summary_5_2003.json",
+      "sha256": "1443254ca147a5c41da89c9e62fea218bdafe8562188b4216e1101aeb92cba02"
+    },
+    {
+      "range": [2005, 3500],
+      "path": "/mnt/storage/e1work/maxplus_p13/w2_translated_attack_2026-08-23/w2_phi3_sequence_summary_2005_3500.json",
+      "sha256": "1d8bdb659891f6352be340fe8520a44b5f191144156a429a2c8add9a37adc842"
+    }
+  ]
+}
