@@ -1,0 +1,754 @@
+{
+  "date": "2026-08-23",
+  "target": "factorization-free unit-content witnesses from translated antipodal U-pairs",
+  "proved": false,
+  "construction": {
+    "m": "(p-1)/2",
+    "boundary_edge": "u=m",
+    "translated_basepoint": "s=-a",
+    "valid_region": "1 <= a < u <= m and a+u > m",
+    "witness": "xor of two basepoint differences, hence a difference of two U-points"
+  },
+  "normalization": {
+    "identity": "gamma gamma^(-1)=e+G+N in F2[F_{p^2}^*]",
+    "consequence": "folded two-component norm of c(D)gamma is c(X)c(X^-1) modulo g",
+    "source": "Dukes--Ling, Relative difference sets partitioned by cosets, EJC 24(3) (2017), P3.64",
+    "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v24i3p64/pdf/"
+  },
+  "ranges": [
+    {
+      "range": [
+        5,
+        251
+      ],
+      "n_primes": 52,
+      "full_boundary_edge": true
+    },
+    {
+      "range": [
+        253,
+        401
+      ],
+      "n_primes": 25,
+      "initial_max_a": 16,
+      "widened_prime": 373,
+      "widened_first_unit_pair": [
+        29,
+        186
+      ]
+    }
+  ],
+  "n_primes": 77,
+  "translated_boundary_failures": [
+    5
+  ],
+  "p5_direct_normalized_unit_witness": true,
+  "all_primes_5_401_W2_certified": true,
+  "max_first_a_through_251": 9,
+  "max_first_a_257_401": 29,
+  "rows": [
+    {
+      "p": 5,
+      "first_unit_pair": null,
+      "boundary_u": 2,
+      "boundary_rows_scanned": 0
+    },
+    {
+      "p": 7,
+      "first_unit_pair": [
+        1,
+        3
+      ],
+      "boundary_u": 3,
+      "boundary_rows_scanned": 1
+    },
+    {
+      "p": 11,
+      "first_unit_pair": [
+        1,
+        5
+      ],
+      "boundary_u": 5,
+      "boundary_rows_scanned": 2
+    },
+    {
+      "p": 13,
+      "first_unit_pair": [
+        1,
+        6
+      ],
+      "boundary_u": 6,
+      "boundary_rows_scanned": 2
+    },
+    {
+      "p": 17,
+      "first_unit_pair": [
+        1,
+        8
+      ],
+      "boundary_u": 8,
+      "boundary_rows_scanned": 3
+    },
+    {
+      "p": 19,
+      "first_unit_pair": [
+        1,
+        9
+      ],
+      "boundary_u": 9,
+      "boundary_rows_scanned": 4
+    },
+    {
+      "p": 23,
+      "first_unit_pair": [
+        1,
+        11
+      ],
+      "boundary_u": 11,
+      "boundary_rows_scanned": 5
+    },
+    {
+      "p": 29,
+      "first_unit_pair": [
+        6,
+        14
+      ],
+      "boundary_u": 14,
+      "boundary_rows_scanned": 6
+    },
+    {
+      "p": 31,
+      "first_unit_pair": [
+        1,
+        15
+      ],
+      "boundary_u": 15,
+      "boundary_rows_scanned": 7
+    },
+    {
+      "p": 37,
+      "first_unit_pair": [
+        1,
+        18
+      ],
+      "boundary_u": 18,
+      "boundary_rows_scanned": 8
+    },
+    {
+      "p": 41,
+      "first_unit_pair": [
+        1,
+        20
+      ],
+      "boundary_u": 20,
+      "boundary_rows_scanned": 9
+    },
+    {
+      "p": 43,
+      "first_unit_pair": [
+        1,
+        21
+      ],
+      "boundary_u": 21,
+      "boundary_rows_scanned": 10
+    },
+    {
+      "p": 47,
+      "first_unit_pair": [
+        2,
+        23
+      ],
+      "boundary_u": 23,
+      "boundary_rows_scanned": 11
+    },
+    {
+      "p": 53,
+      "first_unit_pair": [
+        2,
+        26
+      ],
+      "boundary_u": 26,
+      "boundary_rows_scanned": 12
+    },
+    {
+      "p": 59,
+      "first_unit_pair": [
+        8,
+        29
+      ],
+      "boundary_u": 29,
+      "boundary_rows_scanned": 14
+    },
+    {
+      "p": 61,
+      "first_unit_pair": [
+        1,
+        30
+      ],
+      "boundary_u": 30,
+      "boundary_rows_scanned": 14
+    },
+    {
+      "p": 67,
+      "first_unit_pair": [
+        1,
+        33
+      ],
+      "boundary_u": 33,
+      "boundary_rows_scanned": 16
+    },
+    {
+      "p": 71,
+      "first_unit_pair": [
+        2,
+        35
+      ],
+      "boundary_u": 35,
+      "boundary_rows_scanned": 17
+    },
+    {
+      "p": 73,
+      "first_unit_pair": [
+        2,
+        36
+      ],
+      "boundary_u": 36,
+      "boundary_rows_scanned": 17
+    },
+    {
+      "p": 79,
+      "first_unit_pair": [
+        1,
+        39
+      ],
+      "boundary_u": 39,
+      "boundary_rows_scanned": 19
+    },
+    {
+      "p": 83,
+      "first_unit_pair": [
+        1,
+        41
+      ],
+      "boundary_u": 41,
+      "boundary_rows_scanned": 20
+    },
+    {
+      "p": 89,
+      "first_unit_pair": [
+        9,
+        44
+      ],
+      "boundary_u": 44,
+      "boundary_rows_scanned": 21
+    },
+    {
+      "p": 97,
+      "first_unit_pair": [
+        2,
+        48
+      ],
+      "boundary_u": 48,
+      "boundary_rows_scanned": 23
+    },
+    {
+      "p": 101,
+      "first_unit_pair": [
+        4,
+        50
+      ],
+      "boundary_u": 50,
+      "boundary_rows_scanned": 24
+    },
+    {
+      "p": 103,
+      "first_unit_pair": [
+        1,
+        51
+      ],
+      "boundary_u": 51,
+      "boundary_rows_scanned": 25
+    },
+    {
+      "p": 107,
+      "first_unit_pair": [
+        2,
+        53
+      ],
+      "boundary_u": 53,
+      "boundary_rows_scanned": 26
+    },
+    {
+      "p": 109,
+      "first_unit_pair": [
+        4,
+        54
+      ],
+      "boundary_u": 54,
+      "boundary_rows_scanned": 26
+    },
+    {
+      "p": 113,
+      "first_unit_pair": [
+        1,
+        56
+      ],
+      "boundary_u": 56,
+      "boundary_rows_scanned": 27
+    },
+    {
+      "p": 127,
+      "first_unit_pair": [
+        1,
+        63
+      ],
+      "boundary_u": 63,
+      "boundary_rows_scanned": 31
+    },
+    {
+      "p": 131,
+      "first_unit_pair": [
+        1,
+        65
+      ],
+      "boundary_u": 65,
+      "boundary_rows_scanned": 32
+    },
+    {
+      "p": 137,
+      "first_unit_pair": [
+        2,
+        68
+      ],
+      "boundary_u": 68,
+      "boundary_rows_scanned": 33
+    },
+    {
+      "p": 139,
+      "first_unit_pair": [
+        2,
+        69
+      ],
+      "boundary_u": 69,
+      "boundary_rows_scanned": 34
+    },
+    {
+      "p": 149,
+      "first_unit_pair": [
+        4,
+        74
+      ],
+      "boundary_u": 74,
+      "boundary_rows_scanned": 36
+    },
+    {
+      "p": 151,
+      "first_unit_pair": [
+        1,
+        75
+      ],
+      "boundary_u": 75,
+      "boundary_rows_scanned": 37
+    },
+    {
+      "p": 157,
+      "first_unit_pair": [
+        1,
+        78
+      ],
+      "boundary_u": 78,
+      "boundary_rows_scanned": 38
+    },
+    {
+      "p": 163,
+      "first_unit_pair": [
+        1,
+        81
+      ],
+      "boundary_u": 81,
+      "boundary_rows_scanned": 40
+    },
+    {
+      "p": 167,
+      "first_unit_pair": [
+        1,
+        83
+      ],
+      "boundary_u": 83,
+      "boundary_rows_scanned": 41
+    },
+    {
+      "p": 173,
+      "first_unit_pair": [
+        2,
+        86
+      ],
+      "boundary_u": 86,
+      "boundary_rows_scanned": 42
+    },
+    {
+      "p": 179,
+      "first_unit_pair": [
+        1,
+        89
+      ],
+      "boundary_u": 89,
+      "boundary_rows_scanned": 44
+    },
+    {
+      "p": 181,
+      "first_unit_pair": [
+        1,
+        90
+      ],
+      "boundary_u": 90,
+      "boundary_rows_scanned": 44
+    },
+    {
+      "p": 191,
+      "first_unit_pair": [
+        1,
+        95
+      ],
+      "boundary_u": 95,
+      "boundary_rows_scanned": 47
+    },
+    {
+      "p": 193,
+      "first_unit_pair": [
+        2,
+        96
+      ],
+      "boundary_u": 96,
+      "boundary_rows_scanned": 47
+    },
+    {
+      "p": 197,
+      "first_unit_pair": [
+        2,
+        98
+      ],
+      "boundary_u": 98,
+      "boundary_rows_scanned": 48
+    },
+    {
+      "p": 199,
+      "first_unit_pair": [
+        1,
+        99
+      ],
+      "boundary_u": 99,
+      "boundary_rows_scanned": 49
+    },
+    {
+      "p": 211,
+      "first_unit_pair": [
+        2,
+        105
+      ],
+      "boundary_u": 105,
+      "boundary_rows_scanned": 52
+    },
+    {
+      "p": 223,
+      "first_unit_pair": [
+        1,
+        111
+      ],
+      "boundary_u": 111,
+      "boundary_rows_scanned": 55
+    },
+    {
+      "p": 227,
+      "first_unit_pair": [
+        1,
+        113
+      ],
+      "boundary_u": 113,
+      "boundary_rows_scanned": 56
+    },
+    {
+      "p": 229,
+      "first_unit_pair": [
+        1,
+        114
+      ],
+      "boundary_u": 114,
+      "boundary_rows_scanned": 56
+    },
+    {
+      "p": 233,
+      "first_unit_pair": [
+        3,
+        116
+      ],
+      "boundary_u": 116,
+      "boundary_rows_scanned": 57
+    },
+    {
+      "p": 239,
+      "first_unit_pair": [
+        3,
+        119
+      ],
+      "boundary_u": 119,
+      "boundary_rows_scanned": 59
+    },
+    {
+      "p": 241,
+      "first_unit_pair": [
+        3,
+        120
+      ],
+      "boundary_u": 120,
+      "boundary_rows_scanned": 59
+    },
+    {
+      "p": 251,
+      "first_unit_pair": [
+        1,
+        125
+      ],
+      "boundary_u": 125,
+      "boundary_rows_scanned": 62
+    },
+    {
+      "p": 257,
+      "first_unit_pair": [
+        1,
+        128
+      ],
+      "boundary_u": 128,
+      "boundary_rows_scanned": 1
+    },
+    {
+      "p": 263,
+      "first_unit_pair": [
+        5,
+        131
+      ],
+      "boundary_u": 131,
+      "boundary_rows_scanned": 5
+    },
+    {
+      "p": 269,
+      "first_unit_pair": [
+        3,
+        134
+      ],
+      "boundary_u": 134,
+      "boundary_rows_scanned": 3
+    },
+    {
+      "p": 271,
+      "first_unit_pair": [
+        1,
+        135
+      ],
+      "boundary_u": 135,
+      "boundary_rows_scanned": 1
+    },
+    {
+      "p": 277,
+      "first_unit_pair": [
+        1,
+        138
+      ],
+      "boundary_u": 138,
+      "boundary_rows_scanned": 1
+    },
+    {
+      "p": 281,
+      "first_unit_pair": [
+        1,
+        140
+      ],
+      "boundary_u": 140,
+      "boundary_rows_scanned": 1
+    },
+    {
+      "p": 283,
+      "first_unit_pair": [
+        1,
+        141
+      ],
+      "boundary_u": 141,
+      "boundary_rows_scanned": 1
+    },
+    {
+      "p": 293,
+      "first_unit_pair": [
+        2,
+        146
+      ],
+      "boundary_u": 146,
+      "boundary_rows_scanned": 2
+    },
+    {
+      "p": 307,
+      "first_unit_pair": [
+        5,
+        153
+      ],
+      "boundary_u": 153,
+      "boundary_rows_scanned": 5
+    },
+    {
+      "p": 311,
+      "first_unit_pair": [
+        1,
+        155
+      ],
+      "boundary_u": 155,
+      "boundary_rows_scanned": 1
+    },
+    {
+      "p": 313,
+      "first_unit_pair": [
+        2,
+        156
+      ],
+      "boundary_u": 156,
+      "boundary_rows_scanned": 2
+    },
+    {
+      "p": 317,
+      "first_unit_pair": [
+        4,
+        158
+      ],
+      "boundary_u": 158,
+      "boundary_rows_scanned": 4
+    },
+    {
+      "p": 331,
+      "first_unit_pair": [
+        1,
+        165
+      ],
+      "boundary_u": 165,
+      "boundary_rows_scanned": 1
+    },
+    {
+      "p": 337,
+      "first_unit_pair": [
+        7,
+        168
+      ],
+      "boundary_u": 168,
+      "boundary_rows_scanned": 7
+    },
+    {
+      "p": 347,
+      "first_unit_pair": [
+        1,
+        173
+      ],
+      "boundary_u": 173,
+      "boundary_rows_scanned": 1
+    },
+    {
+      "p": 349,
+      "first_unit_pair": [
+        14,
+        174
+      ],
+      "boundary_u": 174,
+      "boundary_rows_scanned": 14
+    },
+    {
+      "p": 353,
+      "first_unit_pair": [
+        1,
+        176
+      ],
+      "boundary_u": 176,
+      "boundary_rows_scanned": 1
+    },
+    {
+      "p": 359,
+      "first_unit_pair": [
+        3,
+        179
+      ],
+      "boundary_u": 179,
+      "boundary_rows_scanned": 3
+    },
+    {
+      "p": 367,
+      "first_unit_pair": [
+        1,
+        183
+      ],
+      "boundary_u": 183,
+      "boundary_rows_scanned": 1
+    },
+    {
+      "p": 373,
+      "first_unit_pair": [
+        29,
+        186
+      ],
+      "boundary_u": 186,
+      "boundary_rows_scanned": 29
+    },
+    {
+      "p": 379,
+      "first_unit_pair": [
+        1,
+        189
+      ],
+      "boundary_u": 189,
+      "boundary_rows_scanned": 1
+    },
+    {
+      "p": 383,
+      "first_unit_pair": [
+        1,
+        191
+      ],
+      "boundary_u": 191,
+      "boundary_rows_scanned": 1
+    },
+    {
+      "p": 389,
+      "first_unit_pair": [
+        6,
+        194
+      ],
+      "boundary_u": 194,
+      "boundary_rows_scanned": 6
+    },
+    {
+      "p": 397,
+      "first_unit_pair": [
+        1,
+        198
+      ],
+      "boundary_u": 198,
+      "boundary_rows_scanned": 1
+    },
+    {
+      "p": 401,
+      "first_unit_pair": [
+        1,
+        200
+      ],
+      "boundary_u": 200,
+      "boundary_rows_scanned": 1
+    }
+  ],
+  "backend": "scripts/w2_translated_antipodal_norm_scan.py",
+  "exact_crosschecks": {
+    "vectorized_pole_vs_coordinate_backend": [
+      5,
+      7,
+      11,
+      13,
+      17,
+      29
+    ],
+    "packed_gcd_and_vectorized_fold_vs_list_backend": "bit-for-bit rows at every prime 5..101"
+  },
+  "status": "Finite computational certificate through p=401; uniform W2 proof remains open"
+}

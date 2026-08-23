@@ -1,0 +1,99 @@
+{
+  "date": "2026-08-23",
+  "target": "W2 factor-orbit nondivisibility in the normalized switched pole family",
+  "proved": false,
+  "tested_prime_range": "every prime from 5 through 137",
+  "all_tested_primes_collective_W2": true,
+  "half_bound": {
+    "holds_through_continuous_range": true,
+    "false_in_general": true,
+    "counterexample": {"p": 257, "orbit_degrees": [2], "bad": 65, "n_T": 128}
+  },
+  "rows": [
+    {"p": 5, "n_T": 2, "n_unit": 1, "n_single_aut_witness": 1, "max_orbit_bad": 1, "n_factor_orbits": 1},
+    {"p": 7, "n_T": 3, "n_unit": 2, "n_single_aut_witness": 2, "max_orbit_bad": 1, "n_factor_orbits": 1},
+    {"p": 11, "n_T": 5, "n_unit": 2, "n_single_aut_witness": 3, "max_orbit_bad": 2, "n_factor_orbits": 3},
+    {"p": 13, "n_T": 6, "n_unit": 4, "n_single_aut_witness": 4, "max_orbit_bad": 2, "n_factor_orbits": 3},
+    {"p": 17, "n_T": 8, "n_unit": 5, "n_single_aut_witness": 5, "max_orbit_bad": 3, "n_factor_orbits": 2},
+    {"p": 19, "n_T": 9, "n_unit": 5, "n_single_aut_witness": 7, "max_orbit_bad": 1, "n_factor_orbits": 5},
+    {"p": 23, "n_T": 11, "n_unit": 11, "n_single_aut_witness": 11, "max_orbit_bad": 0, "n_factor_orbits": 3},
+    {"p": 29, "n_T": 14, "n_unit": 4, "n_single_aut_witness": 7, "max_orbit_bad": 7, "n_factor_orbits": 7},
+    {"p": 31, "n_T": 15, "n_unit": 8, "n_single_aut_witness": 8, "max_orbit_bad": 5, "n_factor_orbits": 3},
+    {"p": 37, "n_T": 18, "n_unit": 11, "n_single_aut_witness": 11, "max_orbit_bad": 6, "n_factor_orbits": 7},
+    {"p": 41, "n_T": 20, "n_unit": 9, "n_single_aut_witness": 9, "max_orbit_bad": 9, "n_factor_orbits": 8},
+    {"p": 43, "n_T": 21, "n_unit": 10, "n_single_aut_witness": 12, "max_orbit_bad": 9, "n_factor_orbits": 7},
+    {"p": 47, "n_T": 23, "n_unit": 18, "n_single_aut_witness": 18, "max_orbit_bad": 5, "n_factor_orbits": 3},
+    {"p": 53, "n_T": 26, "n_unit": 12, "n_single_aut_witness": 12, "max_orbit_bad": 13, "n_factor_orbits": 11},
+    {"p": 59, "n_T": 29, "n_unit": 13, "n_single_aut_witness": 13, "max_orbit_bad": 14, "n_factor_orbits": 9},
+    {"p": 61, "n_T": 30, "n_unit": 17, "n_single_aut_witness": 17, "max_orbit_bad": 8, "n_factor_orbits": 15},
+    {"p": 67, "n_T": 33, "n_unit": 23, "n_single_aut_witness": 23, "max_orbit_bad": 8, "n_factor_orbits": 14},
+    {"p": 71, "n_T": 35, "n_unit": 15, "n_single_aut_witness": 19, "max_orbit_bad": 8, "n_factor_orbits": 15},
+    {"p": 73, "n_T": 36, "n_unit": 23, "n_single_aut_witness": 23, "max_orbit_bad": 10, "n_factor_orbits": 7},
+    {"p": 79, "n_T": 39, "n_unit": 24, "n_single_aut_witness": 30, "max_orbit_bad": 8, "n_factor_orbits": 9},
+    {"p": 83, "n_T": 41, "n_unit": 18, "n_single_aut_witness": 25, "max_orbit_bad": 15, "n_factor_orbits": 13},
+    {"p": 89, "n_T": 44, "n_unit": 17, "n_single_aut_witness": 17, "max_orbit_bad": 19, "n_factor_orbits": 11},
+    {"p": 97, "n_T": 48, "n_unit": 24, "n_single_aut_witness": 24, "max_orbit_bad": 18, "n_factor_orbits": 5},
+    {"p": 101, "n_T": 50, "n_unit": 15, "n_single_aut_witness": 25, "max_orbit_bad": 21, "n_factor_orbits": 25},
+    {"p": 103, "n_T": 51, "n_unit": 39, "n_single_aut_witness": 39, "max_orbit_bad": 11, "n_factor_orbits": 15},
+    {"p": 107, "n_T": 53, "n_unit": 37, "n_single_aut_witness": 37, "max_orbit_bad": 16, "n_factor_orbits": 7},
+    {"p": 109, "n_T": 54, "n_unit": 18, "n_single_aut_witness": 29, "max_orbit_bad": 16, "n_factor_orbits": 15},
+    {"p": 113, "n_T": 56, "n_unit": 18, "n_single_aut_witness": 27, "max_orbit_bad": 27, "n_factor_orbits": 15},
+    {"p": 127, "n_T": 63, "n_unit": 29, "n_single_aut_witness": 43, "max_orbit_bad": 17, "n_factor_orbits": 7},
+    {"p": 137, "n_T": 68, "n_unit": 36, "n_single_aut_witness": 36, "max_orbit_bad": 31, "n_factor_orbits": 13}
+  ],
+  "sparse_large_p_rows": [
+    {"p": 191, "n_T": 95, "n_unit": 57, "n_single_aut_witness": 67, "max_orbit_bad": 21, "n_factor_orbits": 7},
+    {"p": 193, "n_T": 96, "n_unit": 65, "n_single_aut_witness": 65, "max_orbit_bad": 30, "n_factor_orbits": 5},
+    {"p": 223, "n_T": 111, "n_unit": 66, "n_single_aut_witness": 84, "max_orbit_bad": 25, "n_factor_orbits": 11},
+    {"p": 257, "n_T": 128, "n_unit": 57, "n_single_aut_witness": 57, "max_orbit_bad": 65, "n_factor_orbits": 10}
+  ],
+  "two_endpoint_kill": {
+    "held_for_all_tested_factor_orbits_through_p": 103,
+    "fails_at_p": 107,
+    "u": [54, 55],
+    "t": [2, 72],
+    "common_bad_orbit_degrees": [2],
+    "common_bad_factor": "Phi_3"
+  },
+  "phi3_endpoint_prefix_scan": {
+    "range": [5, 1000],
+    "n_primes": 166,
+    "max_offsets_tested": 8,
+    "failures_within_eight": [],
+    "max_first_good_offset": 4,
+    "long_prefixes": [
+      {"p": 263, "bad_offsets": [0, 1, 2], "first_good_offset": 3},
+      {"p": 499, "bad_offsets": [0, 1, 2, 3], "first_good_offset": 4},
+      {"p": 599, "bad_offsets": [0, 1, 2, 3], "first_good_offset": 4},
+      {"p": 811, "bad_offsets": [0, 1, 2, 3], "first_good_offset": 4}
+    ],
+    "script": "scripts/w2_phi3_endpoint_scan.py"
+  },
+  "backends": {
+    "coordinate": "scripts/w2_ramanujan_mask_spectrum.py",
+    "multiplicative_fourier": "scripts/w2_pole_fourier_fast.py",
+    "translated_antipodal_norm": "scripts/w2_translated_antipodal_norm_scan.py",
+    "exact_mask_cross_checks": [29, 89],
+    "vectorized_pole_cross_checks": [5, 7, 11, 13, 17, 29],
+    "packed_gcd_fold_cross_check_range": [5, 101]
+  },
+  "bose_relative_difference_set_norm": {
+    "proved_identity": "gamma gamma^(-1)=e+G+N in F2[F_{p^2}^*]",
+    "consequence": "the folded square/nonsquare norm of c(D)gamma is c(X)c(X^-1) at every root of g",
+    "source": "Dukes--Ling, Relative difference sets partitioned by cosets, EJC 24(3) (2017), P3.64",
+    "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v24i3p64/pdf/"
+  },
+  "translated_antipodal_boundary": {
+    "valid_region": "1 <= a < u <= (p-1)/2 and a+u > (p-1)/2",
+    "boundary": "u=(p-1)/2",
+    "all_primes_7_401_have_unit_pair": true,
+    "p5_boundary_unit_pair": false,
+    "p5_direct_normalized_unit_witness": true,
+    "all_77_primes_5_401_W2_certified": true,
+    "max_first_a_through_251": 9,
+    "max_first_a_257_401": 29,
+    "exceptional_widening": {"p": 373, "first_unit_pair": [29, 186]},
+    "evidence": "evidence/w2_translated_antipodal_norm_5_401.json"
+  },
+  "status": "W2 remains open; no proposition number or closure flag"
+}

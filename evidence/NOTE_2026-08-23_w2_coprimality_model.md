@@ -1,4 +1,4 @@
-# W2: the coprimality model — fingerprint-confirmed in both directions
+# W2: unit-content heuristic and the corrected factor-orbit target
 
 Date: 2026-08-23.  Target: W2 (15.612), the odd-factor half of Walsh, which
 with W1 closes leftover 2's 15.406 E.  **No flag flipped; W2 stays open.**
@@ -7,11 +7,19 @@ with W1 closes leftover 2's 15.406 E.  **No flag flipped; W2 stays open.**
 
 R = F2[X]/h is a principal ideal ring, so I_U = (γ) for a unique monic
 γ | h, Aut-invariant: γ = (X+1)^i·∏_O f_O^{e_O}.  Walsh ⟺ γ=1;
-W1 ⟺ i=0; W2 ⟺ all e_O=0; deg γ = codim I_U.  Hence **one U-difference
-with content coprime to g settles every orbit at once** — the per-orbit
-structure of W2 is a red herring for the search; the object of study is
-the DENSITY of unit-content differences.  (`_switched`'s W2 test already
-checks exactly this: gcd(content, f)=1 for all f | g.)
+W1 ⟺ i=0; W2 ⟺ all e_O=0; deg γ = codim I_U.
+
+For an individual content c, the bad event for the maximal Aut-invariant
+ideal `(f_O)` is
+
+    c ∈ (f_O)  ⟺  f_O | c
+                 ⟺  every irreducible factor in O divides c.
+
+Thus a content coprime to g is a sufficient simultaneous witness for all
+orbits, but it is not necessary.  W2 only asks, separately for each O, for
+some c not divisible by the whole product f_O; the witness may depend on O.
+In particular `gcd(c,f_O)=1` is too strong whenever O has more than one
+irreducible factor.
 
 ## The model and the census
 
@@ -38,7 +46,7 @@ factorization of m.  Also uniform across all four primes: EVERY class
 element is Max− under switching (n_eigen = n_class), and the in-U fraction
 drifts slowly (0.320, 0.294, 0.275, 0.282).
 
-## The remaining gap (proof-shaped)
+## The strong unit-content gap (historical route)
 
 w_t mod f is NOT low-degree in the conic parameter t — the difference bits
 carry χ(γj+δ) switches, so the residue is a mixed character sum and the
@@ -47,13 +55,11 @@ estimate: for each irreducible f | g,
 
     |B_f| := #{t : f | w_t}  ≲  2^{−deg f}·|T|·(1+o(1)),
 
-via Σ_t |w_t(ζ_f)|² (Weil-class input).  Then Σ_f |B_f| < |T| leaves a
-surviving unit-content witness, closing W2 at that p (small p by census).
-Risk: Φ_3 (present for every p≠3) contributes the largest bad set and the
-factor count grows with ω(m), so the union bound needs genuinely tight
-constants, not O(·).
+via Σ_t |w_t(ζ_f)|² (Weil-class input).  A union bound could leave a
+unit-content witness, but that would prove a strictly stronger statement
+than W2.  The corrected per-orbit target below makes this route unnecessary.
 
-## Next steps
+## Superseded next steps from the unit-content route
 
 1. γ(p) exactly at p ≤ 41 (one gcd chain over a spanning set of
    U-differences).  If γ = (X+1)^c uniformly, W2 is subsumed by the named
@@ -65,69 +71,216 @@ constants, not O(·).
 
 ---
 
-## Per-factor breakdown (same day): the union-bound proof shape is DEAD
+## Logical correction: the old union-bound "kill" was an artefact
 
-`scripts/w2_perfactor_breakdown.py` records, for every in-U class element,
-which orbit-product f_O shares a factor with the content.  Two corrections
-to the section above, both against my own earlier reading.
+The earlier version of this note reversed the ideal-membership condition:
+it called an orbit bad when the content shared *some* irreducible factor
+with f_O.  That is the event `gcd(c,f_O) != 1`, not the W2 event `f_O | c`.
+Consequently its per-orbit table, summed bad rates, and claimed
+union-bound obstruction did not measure W2 and are retracted.  Those data
+remain relevant only to the stronger unit-content problem.
 
-**Correction 1 — model bug.**  The W2 test is `gcd(content, f_O) = 1`, i.e.
-the bad event is "divisible by SOME irreducible in O", with probability
-`1 − ∏_{f∈O}(1 − 2^{−deg f})` — not `2^{−deg f_O}` ("divisible by all"),
-which is what I first compared against.  Only matters where an orbit-product
-is reducible; the corrected table below uses the true irreducible content
-(p=41's deg-72 orbit is six deg-12 irreducibles; p=47's deg-66 is
-11,11,22,22).
+No union across O is required at all.  For each O independently it is
+enough to prove
 
-**Correction 2 — "prime-power localization" is dead.**  I had guessed the
-anomaly sat on Φ_{ℓ²}-type factors.  At p=41, m=105 = 3·5·7 is squarefree,
-yet the deg-6 and deg-12 factors are inflated 17–29×.  The inflation is not
-a prime-power effect.
+    B_O = {t ∈ T : f_O | c_t}  is a proper subset of T.
 
-| p | orbit (irred degs) | model | measured | ratio |
-|---|---|---|---|---|
-| 17 | [2] | 0.2500 | 0.6531 | 2.61 |
-| 17 | [6] | 0.0156 | 0.4694 | **30.0** |
-| 31 | [2] | 0.2500 | 0.3562 | 1.42 |
-| 31 | [4] ×3 | 0.0625 | 0.055–0.089 | 0.88–1.42 |
-| 41 | [2] | 0.2500 | 0.6414 | 2.57 |
-| 41 | [3] ×2 | 0.1250 | 0.3840 | 3.07 |
-| 41 | [4] ×3 | 0.0625 | 0.110–0.131 | 1.76–2.09 |
-| 41 | [6] ×2 | 0.0156 | 0.2700 | **17.3** |
-| 41 | [12]×6 | 0.0015 | 0.0422 | **28.8** |
+This is a much weaker and cleaner target.
 
-p=31 fits the independence model almost exactly (0.88–1.42); p=17 and p=41
-do not.  So "differences behave like random elements of R" is FALSE in
-general — it is a good aggregate predictor and a bad per-factor one.
+## Complete normalized pole family
 
-### The kill
+Take the split involutions
 
-Summing the **exact measured** bad-rates per orbit:
+    π_t(x) = x/(t x - 1),   t ∈ F_p^×,
 
-| p | Σ_O P[bad_O] | true union (miss rate) | union bound |
-|---|---|---|---|
-| 17 | 1.123 | 0.653 | **FAILS** |
-| 31 | 0.582 | 0.479 | ok |
-| 41 | 2.363 | 0.734 | **FAILS** |
+with the standard switching used by 15.622.  This is not the earlier
+one-parameter family `x/(x-τ)` dismissed in `HANDOFF.md`: after projective
+normalization its varying lower-left entry is essential.
 
-The bad events are **strongly positively correlated** — at p=41 the sum
-overshoots the true union by 3.2×.  Therefore the proof shape proposed in
-the consult ("bound each |B_f| by a second-moment/Weil estimate, sum, get
-< |T|") **cannot close W2 — not even given perfect per-factor bounds.**
-Any union-bound-over-orbits route is dead at p=17 already.
+For the named halfspace point z, y_0=+1 automatically.  If λ is the
+ω-coordinate of σ^{-1}, then y_∞=-1 exactly when
 
-### What survives, and the revised gap
+    u = λ/t ∈ {(p+1)/2, ..., p-1}.
 
-* Unit-content elements remain a healthy fraction at every censused prime:
-  0.347, 0.521, 0.266, 0.645 (p = 17, 31, 41, 47).  No drift toward 0.
-* The aggregate Euler product still tracks the *direction* of change
-  correctly (it called both reversals out of sample) because it is driven
-  by the factor-degree profile of m; it systematically **over**estimates
-  the unit-content rate (ratios 0.47, 0.84, 0.58, 0.86) precisely because
-  the bad events correlate positively.
-* **Revised gap:** a bound on the union / on the unit-content indicator
-  *directly* — e.g. a second moment on the count of unit-content witnesses
-  over the class — rather than factor-by-factor.  Inclusion–exclusion over
-  ~9 orbits with these correlation sizes is not obviously tractable either.
+Hence the admissible set T has exactly (p-1)/2 elements, with an explicit
+upper-half-interval parameter u.  `scripts/w2_ramanujan_mask_spectrum.py`
+factors g completely, constructs the factor orbits under X↦X^p and
+X↦X^{-1}, and tests the correct product-divisibility event.
 
-W2 stays OPEN.  No flag flipped.
+| p | |T| | unit c_t | one c_t clears every f_O | max_O |B_O|/|T| | #O |
+|---:|---:|---:|---:|---:|---:|
+| 5 | 2 | 1 | 1 | 1/2 | 1 |
+| 7 | 3 | 2 | 2 | 1/3 | 1 |
+| 11 | 5 | 2 | 3 | 2/5 | 3 |
+| 13 | 6 | 4 | 4 | 2/6 | 3 |
+| 17 | 8 | 5 | 5 | 3/8 | 2 |
+| 19 | 9 | 5 | 7 | 1/9 | 5 |
+| 23 | 11 | 11 | 11 | 0/11 | 3 |
+| 29 | 14 | 4 | 7 | 7/14 | 7 |
+| 31 | 15 | 8 | 8 | 5/15 | 3 |
+| 37 | 18 | 11 | 11 | 6/18 | 7 |
+| 41 | 20 | 9 | 9 | 9/20 | 8 |
+| 43 | 21 | 10 | 12 | 9/21 | 7 |
+| 47 | 23 | 18 | 18 | 5/23 | 3 |
+| 53 | 26 | 12 | 12 | 13/26 | 11 |
+| 59 | 29 | 13 | 13 | 14/29 | 9 |
+| 61 | 30 | 17 | 17 | 8/30 | 15 |
+| 67 | 33 | 23 | 23 | 8/33 | 14 |
+| 71 | 35 | 15 | 19 | 8/35 | 15 |
+| 73 | 36 | 23 | 23 | 10/36 | 7 |
+| 79 | 39 | 24 | 30 | 8/39 | 9 |
+| 83 | 41 | 18 | 25 | 15/41 | 13 |
+| 89 | 44 | 17 | 17 | 19/44 | 11 |
+| 97 | 48 | 24 | 24 | 18/48 | 5 |
+| 101 | 50 | 15 | 25 | 21/50 | 25 |
+| 103 | 51 | 39 | 39 | 11/51 | 15 |
+| 107 | 53 | 37 | 37 | 16/53 | 7 |
+| 109 | 54 | 18 | 29 | 16/54 | 15 |
+| 113 | 56 | 18 | 27 | 27/56 | 15 |
+| 127 | 63 | 29 | 43 | 17/63 | 7 |
+| 137 | 68 | 36 | 36 | 31/68 | 13 |
+
+Thus this family collectively certifies the W2 condition at every tested
+prime p=5,...,137 (30 primes, excluding p=3 where W2 is vacuous).  The
+stronger empirical statement
+
+    |B_O| ≤ |T|/2
+
+holds throughout this continuous range; equality occurs at p=29 and p=53.
+It is not a theorem and in fact fails in the sparse large-p check below.
+
+| p | |T| | unit c_t | one c_t clears every f_O | max_O |B_O|/|T| | #O |
+|---:|---:|---:|---:|---:|---:|
+| 191 | 95 | 57 | 67 | 21/95 | 7 |
+| 193 | 96 | 65 | 65 | 30/96 | 5 |
+| 223 | 111 | 66 | 84 | 25/111 | 11 |
+| 257 | 128 | 57 | 57 | **65/128** | 10 |
+
+At p=257 the Φ_3 singleton orbit has 65 bad parameters, killing the
+half-bound.  Collective W2 remains true (63 Φ_3-good parameters, and every
+other singleton factor has at most three bad parameters).  The viable
+general target is therefore only `B_O != T`, exactly what W2 needs.
+
+The p≤73 rows used the full cyclic coordinate solve.  The p≥79 extension
+uses `scripts/w2_pole_fourier_fast.py`.  If ζ is a root of an irreducible
+factor f and w=c(D)γ, then on either multiplicative point-orbit
+
+    Σ_j ζ^j w(g^j) = c(ζ) Σ_j ζ^j γ(g^j).
+
+For each f, cyclicity of γ makes the right generator projection nonzero on
+at least one of the square/nonsquare point-orbits.  On that orbit the left
+sum vanishes exactly when f|c.  This gives the same complete irreducible
+mask without constructing or inverting the N×N γ-orbit coordinate matrix.
+The fast and coordinate backends agree bit-for-bit at p=29 and p=89.
+
+### Exact normalization from the Bose affine relative difference set
+
+The norm identity used by the factor-free backend is a theorem, not an
+empirical normalization.  Put `G=F_{p^2}^*`, `N=F_p^*`, and let `L` be the
+nonzero F_p-linear functional whose kernel is the line `F_p b` used in the
+definition of the named cyclic generator.  Then
+
+    R = {x in G : L(x)=1}
+
+is the classical affine `(p+1,p-1,p,1)` relative difference set in `G`
+relative to `N`; see Dukes--Ling,
+[Relative difference sets partitioned by cosets](https://www.combinatorics.org/ojs/index.php/eljc/article/download/v24i3p64/pdf/),
+Section 2.  Its integral group-ring identity is
+
+    R R^(-1) = p e + (G-N).
+
+Let `H=ker(L)\{0}=bN`.  On `G`, the named generator is `gamma=R+H` over
+F2.  Also `RN=G-H`, so both cross-products `RH^(-1)` and `HR^(-1)` reduce
+to `G+N`, while `HH^(-1)=(p-1)N=0`.  Reducing the displayed relative
+difference-set identity modulo two therefore gives the exact identity
+
+    gamma gamma^(-1) = e + G + N       in F2[G].
+
+Project to the square subgroup `S=G^2`.  At every nonprincipal odd-order
+character of `S`, the `S`-sum vanishes.  The `N`-sum also vanishes: either
+the restricted character is nonprincipal, or it is principal and its sum
+is `|N|=p-1=0` in F2.  Hence the square/nonsquare two-component Fourier
+norm of gamma is exactly `1` at every root of g.  Consequently, for
+`w=c(D)gamma`, the folded autocorrelation computed by
+`scripts/w2_translated_antipodal_norm_scan.py` is exactly
+`c(X)c(X^-1)` modulo g.  Coprimality of that norm with g is therefore a
+factorization-free certificate that c is a unit modulo g.
+
+### Antipodal poles: the formal identity and a valid translated family
+
+For the original basepoint, pairing the formal pole parameters `u` and
+`-u` produces unit content for every pair at every prime `5<=p<=137` in
+the complete scan.  More strongly, its folded autocorrelation equals the
+gamma norm exactly, so its content satisfies
+
+    c(X)c(X^-1) = 1 mod g.
+
+This does **not** prove W2: when `u` is in the normalized upper interval,
+`-u` is not, so one endpoint is outside U.  Translating the halfspace
+basepoint changes the content, and the tempting fixed translation `s=-1`
+already fails at p=5,29,53.  Exact coordinate searches at
+p=5,7,11,13,17,29 also show that the formal pair is not in the span of all
+U-points obtained from the translated pole family.  Thus there is no
+hidden bridge from the formal identity to I_U inside this family.
+
+There is nevertheless a valid translated construction.  Write `s=-a` and
+`m=(p-1)/2`.  Both antipodal pole endpoints belong to U exactly when
+
+    1 <= a < u <= m,       a+u > m.
+
+The xor of their two basepoint differences is then a genuine difference
+of two U-points.  On the boundary edge `u=m`, the factorization-free scan
+finds at least one unit-content pair for **every prime 7<=p<=401**.  Through
+p=251 the first unit always occurs with `a<=9`.  In the range 257<=p<=401
+the first unit has `a<=14` except at p=373, where the first unit is
+`(a,u)=(29,186)`.  These small observed bounds are not claimed as p-laws.
+At p=5, whose translated boundary edge is the sole failure, the original
+normalized pole family already contains a direct unit-content U-difference.
+Hence W2 is computationally certified at all 77 primes `5<=p<=401`, while
+the uniform proof remains open.
+
+The edge scan is substantially stronger than a factorized orbit census:
+it verifies U-membership of both endpoints and proves `gcd(c,g)=1` from
+the norm alone, without factoring g or solving the full cyclic coordinate
+system.  The complete evidence is generated by
+`scripts/w2_translated_antipodal_norm_scan.py`; the mesh sweep is evidence,
+not a theorem.
+
+Literature cross-check: the Gleason–Prange theorem and Ding–Liu–Tonchev's
+classification of binary cyclic codes invariant under PSL(2,n)
+([arXiv:1704.01199](https://arxiv.org/abs/1704.01199)) are nearby but do not
+close this target.  Here I_U is forced invariant only by the {0,∞}-pair
+stabilizer used in 15.612, and its cyclic module has length
+N=(p²−1)/2 rather than the prime projective-line code length classified in
+that paper.  Importing full PSL invariance would assume the missing step.
+
+Several tempting finite shortcuts are already falsified.  Reflection of the
+upper interval does not pair bad with good.  For example the Φ_3 orbit has
+both members bad in reflected pairs at p=11,29,31,41,43,53,59.  The simple
+XOR of all admissible contents also fails some orbit-products.  The first
+two normalized endpoints u=(p+1)/2,(p+3)/2 clear every orbit through p=103,
+but fail together at p=107: λ=1 gives t=2 and t=2/3=72, and both contents
+are divisible by Φ_3 (and by no other factor of g).  Any proof must use the
+whole residue/character structure rather than a fixed two-map disjunction.
+
+`scripts/w2_phi3_endpoint_scan.py` removes factorization entirely and scans
+only the universal Φ_3 gate.  Over all 166 primes 5≤p≤997, with the first
+eight endpoints available, it finds no eight-endpoint failure but does kill
+the next finite repairs:
+
+* p=263 has bad-bad-bad-good at offsets 0,1,2,3;
+* p=499,599,811 have bad-bad-bad-bad-good at offsets 0,1,2,3,4.
+
+Thus the first three endpoints are not a p-law either, and the growing bad
+prefix makes a small fixed disjunction a poor proof target.  The scan's
+maximum first-good offset is 4; this is census evidence, not a uniform bound.
+
+### Revised gap
+
+Derive c_t mod f_O as a finite-field multiplicative Fourier/Jacobi sum and
+show it is not identically zero on the upper-half interval.  Since O is
+handled separately, no
+factor-count or union-bound loss occurs.  A unit-content witness remains a
+convenient computational certificate, but is no longer the proof target.
+
+W2 stays OPEN.  No proposition number or closure flag is claimed.
