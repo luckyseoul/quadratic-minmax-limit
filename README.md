@@ -13,6 +13,14 @@ m_n
 \alpha_n=\frac{m_n}{n^{3/2}}.
 \]
 
+## About
+
+Machine-assisted attack on a 2022 MathOverflow problem: the limiting constant
+of the min-max ±1 quadratic form. The limit **L is OPEN**. This repo is a
+fully-audited proof ledger — every claim is a Python predicate that returns
+`True`/`False`, ~600 propositions, no prose-only results, and soft-closing is
+banned by test (`tests/test_main_chain_docs.py`).
+
 ## Status
 
 **Goal:** settle the limit (see **`LONG_HORIZON_GOAL.md`**). Not done until \(L\) is proved or disproved.
@@ -43,14 +51,6 @@ see the **Discovery map** below.
 **Also proved:** \(\rho=1\) for Paley conference matrices of order \(n=p^2+1\).
 
 See **`STATUS.md`**, `HANDOFF.md`, denseness package, `solution.md`.
-
-## About
-
-Machine-assisted attack on a 2022 MathOverflow problem: the limiting constant
-of the min-max ±1 quadratic form. The limit **L is OPEN**. This repo is a
-fully-audited proof ledger — every claim is a Python predicate that returns
-`True`/`False`, ~600 propositions, no prose-only results, and soft-closing is
-banned by test (`tests/test_main_chain_docs.py`).
 
 ---
 
@@ -110,7 +110,6 @@ primes, clears at p=11 with 4.3× margin:
 p= 5  ██████████████████████████████████████████████  0.9089   (census)
 p= 7  ██████████▌                                     0.2085   (census)
 p=11  █                                               0.0194   ✓ 4.3× margin
-      ╎                                               
       └─ threshold ≈ 0.083
 ```
 
