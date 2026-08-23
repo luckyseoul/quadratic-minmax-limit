@@ -1,0 +1,157 @@
+{
+  "prop": "15.606",
+  "title": "W=\u2295 nsq W^H; M transits; irred if 2 primitive root mod p",
+  "proved": {
+    "square_pi_zero_nsq_rank": true,
+    "orthogonal_sum": true,
+    "M_transitive_nsq": true,
+    "W_irreducible_when_2_primitive_root": true,
+    "W_irreducible_all_odd_p": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "sq_ranks": [
+          0,
+          0
+        ],
+        "nsq_ranks": [
+          2,
+          2
+        ],
+        "p_minus_1": 2
+      },
+      "5": {
+        "sq_ranks": [
+          0,
+          0,
+          0
+        ],
+        "nsq_ranks": [
+          4,
+          4,
+          4
+        ],
+        "p_minus_1": 4
+      },
+      "7": {
+        "sq_ranks": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "nsq_ranks": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "p_minus_1": 6
+      }
+    },
+    "theorem": "Square \u03c0_H=0 on W; nsq \u03c0_H has rank p\u22121.  Fail: square rank p\u22121; fail: nsq rank 0."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "n_nsq": 2,
+        "orthogonal": true,
+        "sum_is_id": true
+      },
+      "5": {
+        "n_nsq": 3,
+        "orthogonal": true,
+        "sum_is_id": true
+      },
+      "7": {
+        "n_nsq": 4,
+        "orthogonal": true,
+        "sum_is_id": true
+      }
+    },
+    "theorem": "Nonsquare \u03c0_H are orthogonal and sum to I_W.  W=\u2295 W^H, dim each p\u22121."
+  },
+  "C": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "nsq_orbit": 2,
+        "sq_orbit": 2,
+        "half": 2,
+        "mixes_sq_nsq": false
+      },
+      "5": {
+        "nsq_orbit": 3,
+        "sq_orbit": 3,
+        "half": 3,
+        "mixes_sq_nsq": false
+      },
+      "7": {
+        "nsq_orbit": 4,
+        "sq_orbit": 4,
+        "half": 4,
+        "mixes_sq_nsq": false
+      },
+      "11": {
+        "nsq_orbit": 6,
+        "sq_orbit": 6,
+        "half": 6,
+        "mixes_sq_nsq": false
+      },
+      "13": {
+        "nsq_orbit": 7,
+        "sq_orbit": 7,
+        "half": 7,
+        "mixes_sq_nsq": false
+      }
+    },
+    "theorem": "M acts transitively on nsq directions.  Fail: it mixes square with nonsquare."
+  },
+  "D": {
+    "proved": false,
+    "proved_when_2_primitive_root": true,
+    "W_irreducible_all_odd_p": false,
+    "H0_quotient_irreducible_all_odd_p": false,
+    "primitive_root_2": {
+      "3": {
+        "ord_2": 2,
+        "primitive": true
+      },
+      "5": {
+        "ord_2": 4,
+        "primitive": true
+      },
+      "7": {
+        "ord_2": 3,
+        "primitive": false
+      },
+      "11": {
+        "ord_2": 10,
+        "primitive": true
+      },
+      "13": {
+        "ord_2": 12,
+        "primitive": true
+      }
+    },
+    "p7_certified_spin": true,
+    "walsh_general_p": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "If 2 is a primitive root mod p then each W^H is a simple C_p-module and G_aff^\u25a1-submodules of W are 0 or W.  Not a p-law at p=7 (\u03a6_7 splits); spin at p=7 still fills W.  Walsh 15.406 E stays OPEN."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "serial F2 identities; rref p=3,5,7; GPU unused",
+  "seconds": 0.151
+}

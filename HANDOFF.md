@@ -1,12 +1,26 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.605 Paley F2-projection / H0=⟨1⟩⊕W; **no flag flipped**)
+**Date:** 2026-08-23 (15.606 W=⊕ nsq W^H; **no flag flipped**)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.606 — nsq line averages split W; M transits (proved)
+
+`src/e1_gmin_m4_prop15606.py`. π_H=∑_{h∈H} T_h on an F_p-line through
+0. Square H: π_H=0 on W (sums on square affine lines). Nonsquare H:
+W^H = all even H-invariants, dim p−1 (a square line meets every
+H-coset once). The (p+1)/2 nsq projectors are orthogonal and sum
+to I_W, so W=⊕ W^H. M=(F_q^×)² acts transitively on nsq directions
+(Singer: F_q^×/F_p^× ≅ C_{p+1}, squares the index-2 subgroup).
+If 2 is a primitive root mod p, Φ_p is irreducible over F2, each
+W^H is a simple C_p-module, and every G_aff^□-submodule of W is
+0 or W. Not a p-law: p=7 has ord_7(2)=3; G_aff-spin of either
+cubic kernel still fills W (census). Walsh / residual_ii unchanged.
+Fail: square π_H of rank p−1; fail: M mixes square with nsq.
 
 ## 15.605 — Paley A²=A over F2; H0=⟨1⟩⊕W (proved)
 
@@ -851,6 +865,7 @@ deleted so the reversal is traceable.
 | `src/e1_gmin_m4_prop15603.py` | H0 ∩ H0'=⟨1⟩; H0+H0'=even-weight; heart splits |
 | `src/e1_gmin_m4_prop15604.py` | 1_QR ∈ H0 iff p≡1 (mod 4); ker(D−I)∩H0 dim 2 |
 | `src/e1_gmin_m4_prop15605.py` | Paley A²=A over F2; H0=⟨1⟩⊕ translate-span of extra |
+| `src/e1_gmin_m4_prop15606.py` | W=⊕ nsq W^H; M transits; irred if 2 primitive root mod p |
 | `evidence/SESSION_HANDOFF_2026-08-18_leftovers.md` | Named identities 15.550–15.585 |
 | `evidence/TECHNICAL_NOTES_2026-08-20_maxplus_p11.md` | p=11 enumeration, derivations, corrections (2026-08-20) |
 | `evidence/NOTE_2026-08-20_psl_and_stratum_floor_reduction.md` | Binding PSL decomposition, QVAR, low-stratum theorem, odd-coset route, and killed routes |

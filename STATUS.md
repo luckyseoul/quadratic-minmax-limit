@@ -1,5 +1,12 @@
 # Status (2026-08-23)
 
+**15.606 PROVED** (not a leftover close): square F_p-line averages
+vanish on W; nsq averages are orthogonal projectors of rank p−1
+summing to I, so W=⊕ W^H. Squares permute the nsq summands
+transitively. If 2 is a primitive root mod p, each W^H is simple
+and W is G_aff^□-irreducible. Not a p-law at p=7 (Φ_7 splits);
+spin still fills W. Walsh OPEN.
+
 **15.605 PROVED** (not a leftover close): Paley A of order p² satisfies
 A²=A over F2 (q≡1 (mod 8); fail Paley-13). H0=⟨1⟩⊕W with W the
 translate-span of the 15.604 extra vector, dim (q−1)/2. W is a

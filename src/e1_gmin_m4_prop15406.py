@@ -50,7 +50,8 @@ Theorem E — OPEN.  Walsh for general p≥11 is not proved, so
   15.602: unique 1-dim G_aff^□-invariant subspace of H0 is ⟨1⟩.
   15.604: 1_QR ∈ H0 iff p≡1 (mod 4); ker(D−I)∩H0 has dim 2.
   15.605: H0=⟨1⟩⊕W, W=translate-span of extra, Paley A²=A over F2.
-  H0/⟨1⟩ irreducible (hence Max− spans H0) stays OPEN.
+  15.606: W=⊕ nsq W^H and M transits; G_aff-irred when 2 is a
+  primitive root mod p, not a p-law at p=7. Walsh stays OPEN.
 
 ============================================================================
 Backend: Fraction identities + GF(2) rref on Max− caches
