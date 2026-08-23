@@ -1,5 +1,9 @@
 # Status (2026-08-23)
 
+**15.626 PROVED kill/split**: bounded box |u,v,w|≤4 |k|≤8 of
+ua+vb+wi+k is not W1 on p=a²+64c² (61 primes; not all of Z⁴).
+W2 t=-2 at p=17, not a p-law (p=31).
+
 **15.625 PROVED split**: W1 for (2/p)_4=−1 via d=−(p−1)/8.
 Residual W1: p=a²+64c² (601…). CLASS exhaustive. W2 p-law OPEN.
 

@@ -1,12 +1,23 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.625 W1 eighth-interval / (2/p)_4)
+**Date:** 2026-08-23 (15.626 W1 a,b,i kill / W2 t=-2 at p=17)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.626 — Fable a,b-windows empty; W2 t=-2 through p=17
+
+`src/e1_gmin_m4_prop15626.py`. Residual W1: the bounded box
+`ua+vb+wi+k` (|u,v,w|≤4, |k|≤8) is empty as an upper-half stay
+on 61 primes p=a²+64c² ≤19441 (not a reduction of all of Z⁴).
+Named ±a,±b,a/2,ib MIXED
+(ε(-a)=1 at 601, 0 at 1201). Split involution t=-2 is W2 at
+p=17 (and 7,23,41,47) but not a p-law: p=31 is in U with
+gcd(c,g)≠1. t=i is W2 at p=17, dead at p=41. W1 residual /
+W2 p-law / Walsh / leftover 2 OPEN.
 
 ## 15.625 — Fable Walsh consult: d=−(p−1)/8 iff (2/p)_4=−1
 
@@ -1069,6 +1080,7 @@ deleted so the reversal is traceable.
 | `src/e1_gmin_m4_prop15605.py` | Paley A²=A over F2; H0=⟨1⟩⊕ translate-span of extra |
 | `src/e1_gmin_m4_prop15606.py` | W=⊕ nsq W^H; M transits; irred if 2 primitive root mod p |
 | `src/e1_gmin_m4_prop15607.py` | W G_aff-irred all odd p (F_p^× mixes Φ_p); dir(Max−)=H0 |
+| `src/e1_gmin_m4_prop15626.py` | Bounded a,b,i stay box empty on residual W1; W2 t=-2 at p=17 not p-law |
 | `src/e1_gmin_m4_prop15608.py` | Two PSL-orbits of F_p-sublines; 1∈dir(U); I(H0) via 15.609 |
 | `src/e1_gmin_m4_prop15609.py` | Opposite-type never tangent; I(H0)=H0 for every odd p |
 | `src/e1_gmin_m4_prop15610.py` | Aut({0,∞}) uniqueness for Walsh DEAD; unipotent flag I-invariant |

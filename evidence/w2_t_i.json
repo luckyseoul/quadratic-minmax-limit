@@ -1,0 +1,254 @@
+[
+  {
+    "p": 5,
+    "ABCD": [
+      1,
+      0,
+      2,
+      4
+    ],
+    "eigen_minus": true,
+    "inU_y": true,
+    "W2": false,
+    "wt": 12,
+    "name": "p=5 t=i"
+  },
+  {
+    "p": 5,
+    "ABCD": [
+      1,
+      0,
+      3,
+      4
+    ],
+    "eigen_minus": true,
+    "inU_y": false,
+    "W2": null,
+    "wt": 6,
+    "name": "p=5 t=-i"
+  },
+  {
+    "p": 5,
+    "ABCD": [
+      1,
+      0,
+      3,
+      4
+    ],
+    "eigen_minus": true,
+    "inU_y": false,
+    "W2": null,
+    "wt": 6,
+    "name": "p=5 t=-2"
+  },
+  {
+    "p": 13,
+    "ABCD": [
+      1,
+      0,
+      11,
+      12
+    ],
+    "eigen_minus": true,
+    "inU_y": false,
+    "W2": null,
+    "wt": 66,
+    "name": "p=13 t=-2"
+  },
+  {
+    "p": 13,
+    "ABCD": [
+      1,
+      0,
+      5,
+      12
+    ],
+    "eigen_minus": true,
+    "inU_y": false,
+    "W2": null,
+    "wt": 88,
+    "name": "p=13 t=i"
+  },
+  {
+    "p": 13,
+    "ABCD": [
+      1,
+      0,
+      8,
+      12
+    ],
+    "eigen_minus": true,
+    "inU_y": true,
+    "W2": true,
+    "wt": 94,
+    "name": "p=13 t=-i"
+  },
+  {
+    "p": 17,
+    "ABCD": [
+      1,
+      0,
+      13,
+      16
+    ],
+    "eigen_minus": true,
+    "inU_y": false,
+    "W2": null,
+    "wt": 148,
+    "name": "p=17 t=-i"
+  },
+  {
+    "p": 17,
+    "ABCD": [
+      1,
+      0,
+      4,
+      16
+    ],
+    "eigen_minus": true,
+    "inU_y": true,
+    "W2": true,
+    "wt": 146,
+    "name": "p=17 t=i"
+  },
+  {
+    "p": 17,
+    "ABCD": [
+      1,
+      0,
+      15,
+      16
+    ],
+    "eigen_minus": true,
+    "inU_y": true,
+    "W2": true,
+    "wt": 116,
+    "name": "p=17 t=-2"
+  },
+  {
+    "p": 29,
+    "ABCD": [
+      1,
+      0,
+      27,
+      28
+    ],
+    "eigen_minus": true,
+    "inU_y": false,
+    "W2": null,
+    "wt": 330,
+    "name": "p=29 t=-2"
+  },
+  {
+    "p": 29,
+    "ABCD": [
+      1,
+      0,
+      17,
+      28
+    ],
+    "eigen_minus": true,
+    "inU_y": false,
+    "W2": null,
+    "wt": 402,
+    "name": "p=29 t=-i"
+  },
+  {
+    "p": 29,
+    "ABCD": [
+      1,
+      0,
+      12,
+      28
+    ],
+    "eigen_minus": true,
+    "inU_y": true,
+    "W2": false,
+    "wt": 416,
+    "name": "p=29 t=i"
+  },
+  {
+    "p": 37,
+    "ABCD": [
+      1,
+      0,
+      31,
+      36
+    ],
+    "eigen_minus": true,
+    "inU_y": false,
+    "W2": null,
+    "wt": 694,
+    "name": "p=37 t=-i"
+  },
+  {
+    "p": 37,
+    "ABCD": [
+      1,
+      0,
+      35,
+      36
+    ],
+    "eigen_minus": true,
+    "inU_y": false,
+    "W2": null,
+    "wt": 686,
+    "name": "p=37 t=-2"
+  },
+  {
+    "p": 37,
+    "ABCD": [
+      1,
+      0,
+      6,
+      36
+    ],
+    "eigen_minus": true,
+    "inU_y": true,
+    "W2": false,
+    "wt": 700,
+    "name": "p=37 t=i"
+  },
+  {
+    "p": 41,
+    "ABCD": [
+      1,
+      0,
+      32,
+      40
+    ],
+    "eigen_minus": true,
+    "inU_y": false,
+    "W2": null,
+    "wt": 834,
+    "name": "p=41 t=-i"
+  },
+  {
+    "p": 41,
+    "ABCD": [
+      1,
+      0,
+      9,
+      40
+    ],
+    "eigen_minus": true,
+    "inU_y": true,
+    "W2": false,
+    "wt": 832,
+    "name": "p=41 t=i"
+  },
+  {
+    "p": 41,
+    "ABCD": [
+      1,
+      0,
+      39,
+      40
+    ],
+    "eigen_minus": true,
+    "inU_y": true,
+    "W2": true,
+    "wt": 860,
+    "name": "p=41 t=-2"
+  }
+]

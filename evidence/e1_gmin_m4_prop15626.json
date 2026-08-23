@@ -1,0 +1,121 @@
+{
+  "prop": "15.626",
+  "title": "W1 residual bounded-box kill; W2 t=-2 at p=17",
+  "proved": {
+    "W1_bounded_box_empty": true,
+    "W1_residual": false,
+    "W1_all_odd_p": false,
+    "W2_t_minus_2_p17": true,
+    "W2_p_law": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "W1_residual": false,
+    "eps_minus_a_601": 1,
+    "eps_minus_a_1201": 0,
+    "eps_eighth_601": 0,
+    "n_residual_scanned": 61,
+    "always_named": [],
+    "global_linear": [],
+    "theorem": "Bounded box |u,v,w|<=4, |k|<=8 of ua+vb+wi+k is empty as a stay-W1 p-law on p=a^2+64c^2 (not all of Z^4).  Fail: \u03b5(-a)=0 at p=601; fail: \u03b5(-a)=1 at p=1201."
+  },
+  "B": {
+    "proved": false,
+    "certified": true,
+    "W2_p_law": false,
+    "p5": {
+      "eigen_minus": true,
+      "inU_y": false,
+      "inU_z": true,
+      "W2": null,
+      "ABCD": [
+        1,
+        0,
+        3,
+        4
+      ]
+    },
+    "p17": {
+      "eigen_minus": true,
+      "inU_y": true,
+      "inU_z": true,
+      "W2": true,
+      "ABCD": [
+        1,
+        0,
+        15,
+        16
+      ]
+    },
+    "p31": {
+      "p": 31,
+      "ABCD": [
+        1,
+        0,
+        29,
+        30
+      ],
+      "eigen_minus": true,
+      "inU_y": true,
+      "W2": false,
+      "wt": 464,
+      "name": "p=31 t=-2",
+      "p_mod_8": 7
+    },
+    "theorem": "t=-2 is W2 at p=17 (first through that gate) and not a p-law (p=31 in U, not coprime).  Fail: W2 at p=31."
+  },
+  "C": {
+    "proved": false,
+    "certified": true,
+    "W2_p_law": false,
+    "p17_i": 4,
+    "p17": {
+      "eigen_minus": true,
+      "inU_y": true,
+      "inU_z": true,
+      "W2": true,
+      "ABCD": [
+        1,
+        0,
+        4,
+        16
+      ]
+    },
+    "p41": {
+      "p": 41,
+      "ABCD": [
+        1,
+        0,
+        9,
+        40
+      ],
+      "eigen_minus": true,
+      "inU_y": true,
+      "W2": false,
+      "wt": 832,
+      "name": "p=41 t=i"
+    },
+    "theorem": "t=i is W2 at p=17, not a p-law (p=41 in U, not coprime).  Fail: W2 for t=i at p=41."
+  },
+  "D": {
+    "proved": false,
+    "W1_all_odd_p": false,
+    "W2_p_law": false,
+    "walsh_general_p": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "theorem": "W1 residual a^2+64c^2 and W2 p-law remain.  Fail: Walsh from this unit."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "W1 prefix ProcessPool 86; W2 Krylov ProcessPool; GPU unused",
+  "openai_referee": "math_review BLOCK on unrestricted Z^4; unit narrowed to the tested box. Re-review UNCERTAIN (wants the evidence jsons, which tests already load). No leftover flip.",
+  "seconds": 0.691
+}

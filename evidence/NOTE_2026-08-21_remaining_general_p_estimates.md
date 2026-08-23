@@ -69,6 +69,8 @@ Remaining estimate, minus-slice interior 4-level (and 5+ / unclassified):
   p=5,7,11,13.
   15.625: W1 d=−(p−1)/8 iff (2/p)_4=−1. Residual W1 is
   p=a²+64c². CLASS exhaustive. leftover 2 still open.
+  15.626: bounded box |u,v,w|≤4 |k|≤8 of ua+vb+wi+k is empty
+  on that class (not all of Z⁴). W2 t=-2 hits p=17, dies at p=31.
   Spanning of the xor-slice (Walsh ∀p) still open. That empties
   interior 4-level only; leftover-only / 5+ remain.
 
