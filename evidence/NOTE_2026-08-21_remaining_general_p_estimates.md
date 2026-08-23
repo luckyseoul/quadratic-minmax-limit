@@ -58,9 +58,11 @@ Remaining estimate, minus-slice interior 4-level (and 5+ / unclassified):
   W1 construction, ε certified.
   15.618: Φ=ε is a p-law (odd D-index QR xor QNR; scale
   (D−I)γ). s_N=f∘φ. 1_M coprime to g.
-  15.619: odd_QNR(s_N)=0 is a p-law. W1 p≡1 still needs
-  f·n_odd^{QR}≡1. W2 needs a U-difference coprime to g
-  (per-factor glue / AP Mattson–Solomon). leftover 2 still open.
+  15.619: odd_QNR(s_N)=0 is a p-law.
+  15.620: s_N is not a W1 p-law (ε=0 at p=29). Stay a with
+  ε(z+T_a z)=1 exists at tested p≡1; which a is open. W2:
+  z-span and χ_p-pullback are Φ3-dead at p=5; need Max-
+  outside the halfspace-anti module. leftover 2 still open.
   Spanning of the xor-slice (Walsh ∀p) still open. That empties
   interior 4-level only; leftover-only / 5+ remain.
 

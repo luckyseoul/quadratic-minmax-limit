@@ -1,0 +1,107 @@
+{
+  "prop": "15.620",
+  "title": "s_N not W1 p-law; \u03c7_p-pullback \u03a63-dead; stay hits remain",
+  "proved": {
+    "sN_eps_p_law": false,
+    "sN_killed_p29": true,
+    "chi_pullback_W2": false,
+    "W1_p_eq_1": false,
+    "W2_p_law": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "sN_eps_p_law": false,
+    "rows": {
+      "5": {
+        "n_nsq_stay": 1,
+        "phi": 1,
+        "QR_odd": 1,
+        "QNR_odd": 0
+      },
+      "29": {
+        "n_nsq_stay": 7,
+        "phi": 0,
+        "QR_odd": 0,
+        "QNR_odd": 0
+      }
+    },
+    "theorem": "\u03b5(s_N)=0 at p=29.  Not a W1 p-law.  Fail: \u03b5(s_N)=1 at p=29."
+  },
+  "B": {
+    "proved": false,
+    "certified": true,
+    "rows": {
+      "5": {
+        "ab": [
+          1,
+          2
+        ],
+        "off": [
+          1,
+          2
+        ],
+        "pred": [
+          1,
+          2
+        ],
+        "odd_iff_QR": true
+      },
+      "13": {
+        "ab": [
+          3,
+          2
+        ],
+        "off": [
+          2,
+          5
+        ],
+        "pred": [
+          2,
+          5
+        ],
+        "odd_iff_QR": true
+      }
+    },
+    "theorem": "n_odd^{QR} odd iff \u03c7_p=1 off 0, certified.  Fail: odd on a QNR fiber at p=5."
+  },
+  "C": {
+    "proved": true,
+    "W2_p_law": false,
+    "phi3_divides": true,
+    "eps": 0,
+    "theorem": "\u03c7_p-pullback has \u03a63|c at p=5.  Fail: gcd(c,\u03a63)=1."
+  },
+  "D": {
+    "proved": false,
+    "W1_p_eq_1": false,
+    "stay_hit_p5": [
+      3
+    ],
+    "stay_hit_p29": [
+      3,
+      9,
+      15,
+      21,
+      27
+    ],
+    "sN_xor_p5": 1,
+    "sN_xor_p29": 0,
+    "W2_p_law": false,
+    "walsh_general_p": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "Stay a with \u03b5=1 exists; which a is not a p-law."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "\u03a6-orbits O(N); Krylov p=5; GPU unused",
+  "claude_referee": "W2 deep_review PASS-WITH-NOTE: z-span \u03a63-dead; \u03c7_p-pullback predicted live, empirically \u03a63-dead",
+  "seconds": 3.743
+}

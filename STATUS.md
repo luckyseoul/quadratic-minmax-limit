@@ -1,8 +1,11 @@
 # Status (2026-08-23)
 
-**15.619 PROVED split**: odd_QNR(s_N)=0 for every p≡1 (biquadratic
-fiber count (p−1)/4 ± b/2). f·n_odd^{QR}≡1 still not a p-law.
+**15.620 PROVED kill/split**: s_N is not a W1 p-law (ε=0 at p=29).
+Stay translates still hit ε=1. χ_p-pullback misses Φ3 at p=5.
 W1 p≡1 / W2 / Walsh ∀p OPEN.
+
+**15.619 PROVED split**: odd_QNR(s_N)=0 for every p≡1 (biquadratic
+fiber count (p−1)/4 ± b/2).
 
 **15.618 PROVED split**: Φ=ε on W_0 (odd D-index on QR xor QNR);
 scale Φ((D−I)γ)=2p−1≡1. s_N=f∘φ a p-law. 1_M coprime to g.

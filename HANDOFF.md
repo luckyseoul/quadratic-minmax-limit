@@ -1,12 +1,22 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.619 odd_QNR(s_N)=0; B3 still open)
+**Date:** 2026-08-23 (15.620 s_N not W1 p-law; stay hits remain)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.620 — s_N is not a W1 p-law; χ_p-pullback misses Φ3
+
+`src/e1_gmin_m4_prop15620.py`. ε(s_N)=0 at p=29 (f·n_odd^{QR} even).
+Stay F_p-translates of z still have some a with ε=1 at p=5,13,17,29,37;
+which a is not a p-law (α=(p+1)/2 fails at p=17). n_odd^{QR} odd iff
+χ_p=1 off 0 (certified). Fable W2 deep_review: z-span Φ3-dead at p=5;
+χ_p-pullback was the live named candidate — empirically Φ3|c and ε=0.
+W2 needs a Max- object outside the halfspace-anti D-module. leftover 2
+open. OpenAI unused this unit; Fable one deep_review only.
 
 ## 15.619 — odd_QNR(s_N)=0 is a p-law
 
