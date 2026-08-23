@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.616 Walsh at p=11; **no leftover flag flipped**)
+**Date:** 2026-08-23 (15.617 s_N for p≡1; Walsh p=11 withdrawn)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -8,7 +8,18 @@
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
 
-## 15.616 — W2 via z+Dz; Walsh at p=11 (proved)
+## 15.617 — NSQ stay-sum; correct W2 test; Walsh p=11 withdrawn
+
+`src/e1_gmin_m4_prop15617.py`. Fable: f(D)w≠0 is not w∉(f)R;
+w∈(f)R iff f divides the γ-content. z+Dz has Φ3|c at p=5,7 and
+misses Φ5/Φ15 at p=11, so 15.616 Walsh-at-p=11 is withdrawn.
+W2 is generic (72/154 U-diffs at p=5). W1 for p≡1: s_N = F2-sum
+of z+T_a z over nsq a∈F_p^× that stay; ε(s_N)=1 at p=5,13,17
+(Zolotarev class). Construction is a p-law; ε-value not yet.
+Fable strategy: DFT/Mattson–Solomon for W2; Zolotarev class for
+W1 p≡1 (QR sum fails, nsq sum works). leftover 2 OPEN.
+
+## 15.616 — W2 via z+Dz; Walsh at p=11 (withdrawn by 15.617)
 
 `src/e1_gmin_m4_prop15616.py`. The Krylov-gcd test that put z+Dz in
 ker g was wrong. Correct test: w∈(f)R iff f(D)w=0. For named z,

@@ -1,0 +1,116 @@
+{
+  "prop": "15.617",
+  "title": "NSQ stay-sum W1 p\u22611; W2 content test; Walsh p=11 withdrawn",
+  "proved": {
+    "content_membership": true,
+    "walsh_p11": false,
+    "sN_construction": true,
+    "sN_eps_p_law": false,
+    "W1_p_eq_1": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "walsh_p11_withdrawn": true,
+    "rows": {
+      "5": {
+        "nfac": 1,
+        "factors": [
+          {
+            "deg": 2,
+            "gcd_is_1": false,
+            "f_divides_c": true
+          }
+        ]
+      },
+      "7": {
+        "nfac": 1,
+        "factors": [
+          {
+            "deg": 2,
+            "gcd_is_1": false,
+            "f_divides_c": true
+          }
+        ]
+      },
+      "11": {
+        "nfac": 4,
+        "factors": [
+          {
+            "deg": 2,
+            "gcd_is_1": true,
+            "f_divides_c": false
+          },
+          {
+            "deg": 4,
+            "gcd_is_1": false,
+            "f_divides_c": true
+          },
+          {
+            "deg": 4,
+            "gcd_is_1": false,
+            "f_divides_c": true
+          },
+          {
+            "deg": 4,
+            "gcd_is_1": false,
+            "f_divides_c": true
+          }
+        ]
+      }
+    },
+    "theorem": "w\u2208(f)R iff f|c.  z+Dz has \u03a63|c at p=5,7.  Fail: gcd(c,\u03a63)=1 at p=5."
+  },
+  "B": {
+    "proved": true,
+    "W2_p_law": false,
+    "rows": {
+      "5": {
+        "n_tested": 154,
+        "n_gcd1": 72
+      }
+    },
+    "theorem": "Generic U-diffs have gcd(c,g)=1 at p=5 (72-ish/156).  W2 not a p-law."
+  },
+  "C": {
+    "proved": false,
+    "construction_p_law": true,
+    "eps_p_law": false,
+    "eps_certified": true,
+    "rows": {
+      "5": {
+        "n_nsq_stay": 1,
+        "eps": 1,
+        "s0": 0,
+        "wt": 10
+      },
+      "13": {
+        "n_nsq_stay": 3,
+        "eps": 1,
+        "s0": 0,
+        "wt": 52
+      }
+    },
+    "theorem": "s_N \u2208 I_U and \u03b5(s_N)=1 at p=5,13,17.  W1 p\u22611 not yet a p-law.  Fail: \u03b5(s_N)=0 at p=5."
+  },
+  "D": {
+    "proved": false,
+    "walsh_general_p": false,
+    "walsh_p11": false,
+    "W1_p_eq_1": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "15.616 Walsh p=11 withdrawn. leftover 2 / Walsh \u2200p OPEN."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "serial F2; p=5,7,11,13; GPU unused",
+  "claude_referee": "strategy: DFT for W2, Zolotarev class for W1 p\u22611 (nsq works); deep_review BLOCK on f(D)w\u22600 as W2 test",
+  "seconds": 1.823
+}

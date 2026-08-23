@@ -53,8 +53,9 @@ Remaining estimate, minus-slice interior 4-level (and 5+ / unclassified):
   15.613: named z∈U; ε(y+Dy) constant on U.
   15.614: W1 for p≡3; named D-spans miss g-orbits at p=11.
   15.615: two-fiber ε=1 iff p≡1 is false (p=17).
-  15.616: z+Dz is outside every (f)R at p=5,7,11 (correct f(D)w
-  test). Walsh at p=11. Walsh ∀p and leftover 2 still open.
+  15.616–15.617: f(D)w≠0 is not the W2 test; gcd(content,f)=1
+  is. Walsh p=11 withdrawn. s_N (nsq F_p-stay sum) is the p≡1
+  W1 construction, ε certified. leftover 2 still open.
   Spanning of the xor-slice (Walsh ∀p) still open. That empties
   interior 4-level only; leftover-only / 5+ remain.
 

@@ -64,8 +64,9 @@ Theorem E — OPEN.  Walsh for general p≥11 is not proved, so
   ε=odd Krylov coeffs vs 1_M.
   15.614: W1 for p≡3 (ε(z+Dz)=p(p−1)/2 mod 2).
   15.615: two-fiber W1-1 false at p=17.
-  15.616: f(D)(z+Dz)≠0 on every g-factor at p=5,7,11; Walsh at
-  p=11. Walsh ∀p still OPEN.
+  15.616: f(D)(z+Dz)≠0 at p=5,7,11 (weak test).
+  15.617: correct test is gcd(content,f)=1; Walsh p=11 withdrawn.
+  s_N nsq stay-sum ε=1 at p=5,13,17. Walsh ∀p OPEN.
   V/⟨1⟩ stays OPEN.
 
 ============================================================================

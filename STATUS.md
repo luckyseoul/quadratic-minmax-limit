@@ -1,5 +1,9 @@
 # Status (2026-08-23)
 
+**15.617 PROVED split**: w∈(f)R iff f|content. 15.616 Walsh p=11
+withdrawn. s_N nsq-class stay-sum has ε=1 at p=5,13,17 (W1 p≡1
+construction; ε not a p-law). W2 generic at p=5,7. Walsh ∀p OPEN.
+
 **15.616 PROVED** (not a leftover close): f(D)(z+Dz)≠0 for every
 irred of g at p=5,7,11. Walsh at p=11 (W1 from 15.614 + W2).
 Walsh ∀p / leftover 2 still OPEN.
