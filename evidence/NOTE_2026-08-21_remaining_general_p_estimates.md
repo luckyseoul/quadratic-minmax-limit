@@ -47,7 +47,7 @@ Remaining estimate, minus-slice interior 4-level (and 5+ / unclassified):
   Φ_p-factors, so W is G_aff-irreducible for every odd p and
   dir(affine_span(Max−))=H0. 15.608: 1∈dir(U) by antipodes; two
   PSL-orbits of F_p-sublines. 15.609: I(H0)=H0. Walsh spanning of
-  V/⟨1⟩ still OPEN.
+  V/⟨1⟩ still OPEN. 15.610: Aut({0,∞}) uniqueness DEAD.
   Spanning of the xor-slice (Walsh ∀p) still open. That empties
   interior 4-level only; leftover-only / 5+ remain.
 

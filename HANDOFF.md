@@ -1,12 +1,24 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.609 I(H0)=H0 p-law; **no flag flipped**)
+**Date:** 2026-08-23 (15.610 pair-stab uniqueness DEAD; **no flag flipped**)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.610 — Aut({0,∞}) uniqueness for Walsh is DEAD (proved kill)
+
+`src/e1_gmin_m4_prop15610.py`. W_0={w∈W: w_0=0}=extra^⊥∩W.
+I D I^{−1}=D^{−1}; in char 2, D^{−1}−I=D^{−1}(D−I), so each
+ker((D−I)^k)∩W_0 is I-invariant. 4|N for odd p; ker((D−I)^2)∩W_0
+has dim 2 (certified p=3,5,7,11), a proper Aut({0,∞})-submodule
+strictly larger than ⟨extra⟩. Same role as Aut_e reducible at p=5:
+one U-difference outside ⟨extra⟩ does not force Walsh. Fable xhigh
+BLOCK on irreducibility of W_0/⟨extra⟩ (unipotent flag is a p-law
+shape; dim 2 certified). Walsh is now F2[D]-ideal generation by
+the full U-difference set. residual_ii False.
 
 ## 15.609 — I(H0)=H0 for every odd p (proved)
 
@@ -906,6 +918,7 @@ deleted so the reversal is traceable.
 | `src/e1_gmin_m4_prop15607.py` | W G_aff-irred all odd p (F_p^× mixes Φ_p); dir(Max−)=H0 |
 | `src/e1_gmin_m4_prop15608.py` | Two PSL-orbits of F_p-sublines; 1∈dir(U); I(H0) via 15.609 |
 | `src/e1_gmin_m4_prop15609.py` | Opposite-type never tangent; I(H0)=H0 for every odd p |
+| `src/e1_gmin_m4_prop15610.py` | Aut({0,∞}) uniqueness for Walsh DEAD; unipotent flag I-invariant |
 | `evidence/SESSION_HANDOFF_2026-08-18_leftovers.md` | Named identities 15.550–15.585 |
 | `evidence/TECHNICAL_NOTES_2026-08-20_maxplus_p11.md` | p=11 enumeration, derivations, corrections (2026-08-20) |
 | `evidence/NOTE_2026-08-20_psl_and_stratum_floor_reduction.md` | Binding PSL decomposition, QVAR, low-stratum theorem, odd-coset route, and killed routes |

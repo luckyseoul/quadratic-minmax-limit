@@ -55,6 +55,7 @@ Theorem E — OPEN.  Walsh for general p≥11 is not proved, so
   Φ_p-factors), so dir(affine_span(Max−))=H0.
   15.608: two PSL-orbits of F_p-sublines; 1∈dir(U) by antipodes.
   15.609: I(H0)=H0 (opposite-type circles never tangent).
+  15.610: Aut({0,∞}) uniqueness DEAD (ker((D−I)^2) dim 2, I-invariant).
   Walsh spanning of V/⟨1⟩ stays OPEN.
 
 ============================================================================

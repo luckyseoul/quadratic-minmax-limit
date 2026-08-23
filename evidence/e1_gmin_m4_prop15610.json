@@ -1,0 +1,101 @@
+{
+  "prop": "15.610",
+  "title": "Aut({0,\u221e}) uniqueness for Walsh is DEAD",
+  "proved": {
+    "W0_is_extra_perp": true,
+    "I_preserves_unipotent_flag": true,
+    "pair_stabilizer_uniqueness_dead": true,
+    "W0_quotient_irreducible": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "dot_equals_ev0": true,
+        "extra_at_0": 0,
+        "dim_W0": 3,
+        "N_minus_1": 3
+      },
+      "5": {
+        "dot_equals_ev0": true,
+        "extra_at_0": 0,
+        "dim_W0": 11,
+        "N_minus_1": 11
+      },
+      "7": {
+        "dot_equals_ev0": true,
+        "extra_at_0": 0,
+        "dim_W0": 23,
+        "N_minus_1": 23
+      }
+    },
+    "theorem": "W_0 = extra^\u22a5 \u2229 W.  Fail: extra\u00b7w = w_\u221e."
+  },
+  "B": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "I_fixes_extra": true,
+        "I_preserves_ker2": true,
+        "dim_ker1_W0": 1,
+        "dim_ker2_W0": 2
+      },
+      "5": {
+        "I_fixes_extra": true,
+        "I_preserves_ker2": true,
+        "dim_ker1_W0": 1,
+        "dim_ker2_W0": 2
+      },
+      "7": {
+        "I_fixes_extra": true,
+        "I_preserves_ker2": true,
+        "dim_ker1_W0": 1,
+        "dim_ker2_W0": 2
+      }
+    },
+    "theorem": "I preserves each ker((D\u2212I)^k)\u2229W_0 (char 2: D^{\u22121}\u2212I=D^{\u22121}(D\u2212I)).  Fail: I moves ker(D\u2212I) off extra."
+  },
+  "C": {
+    "proved": true,
+    "W0_quotient_irreducible": false,
+    "pair_stabilizer_uniqueness_dead": true,
+    "rows": {
+      "3": {
+        "N": 4,
+        "four_divides_N": true,
+        "ker2_proper": true
+      },
+      "5": {
+        "N": 12,
+        "four_divides_N": true,
+        "ker2_proper": true
+      },
+      "7": {
+        "N": 24,
+        "four_divides_N": true,
+        "ker2_proper": true
+      }
+    },
+    "theorem": "ker((D\u2212I)^2)\u2229W_0 has dim 2 (certified p=3,5,7) and is I-invariant, so Aut({0,\u221e}) uniqueness for Walsh is DEAD.  Fail: W_0/\u27e8extra\u27e9 irreducible."
+  },
+  "D": {
+    "proved": false,
+    "walsh_general_p": false,
+    "pair_stabilizer_uniqueness_dead": true,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "Walsh is F2[D]-ideal generation by all U-differences, not Aut({0,\u221e}) uniqueness.  residual_ii stays False."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "serial F2 identities; rref p=3,5,7; GPU unused",
+  "claude_referee": "deep_review BLOCK on W_0/extra irred; unipotent flag kept",
+  "seconds": 0.221
+}

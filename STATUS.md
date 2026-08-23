@@ -1,5 +1,10 @@
 # Status (2026-08-23)
 
+**15.610 PROVED** (not a leftover close; uniqueness KILL): W_0=extra^⊥∩W;
+ker((D−I)^k)∩W_0 is I-invariant (char 2). ker((D−I)^2) has dim 2
+(certified p=3,5,7,11), so Aut({0,∞}) uniqueness for Walsh is DEAD.
+Walsh spanning OPEN. Fable xhigh BLOCK on irreducibility.
+
 **15.609 PROVED** (not a leftover close): H0'=H0^⊥=rowspan(S);
 opposite-type circles are never tangent, so I(H0)=H0 for every
 odd p. Span of all square circles is rowspan(S). Walsh OPEN.
