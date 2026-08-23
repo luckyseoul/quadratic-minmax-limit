@@ -1,12 +1,19 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.622 W1 p≡17 mod 24; named W2 at p=5)
+**Date:** 2026-08-23 (15.623 W1 p≡73 or 97 mod 120)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.623 — W1 for p≡73 or 97 (mod 120) via d=−3
+
+`src/e1_gmin_m4_prop15623.py`. Six-point count: χ(5)=−1 ⇒ ε=1.
+OpenAI PASS. W1 remaining: p≡1 or 49 (mod 120). nuka: p=11
+π=x/(x−τ) over F_q has 1 eigen and 0 in U — pole family too thin
+for W2 at p=11. leftover 2 open.
 
 ## 15.622 — W1 for p≡17 (mod 24); named W2 through the p=5 Φ3-gate
 

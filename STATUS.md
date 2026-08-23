@@ -1,8 +1,10 @@
 # Status (2026-08-23)
 
-**15.622 PROVED split**: W1 for p≡17 (mod 24) via d=−2. W1 left:
-p≡1 (mod 24). Named W2 witness at p=5: switched Möbius x/(x−1)
-clears Φ3. W2 not a p-law (p=11 y∉U). Walsh ∀p OPEN.
+**15.623 PROVED split**: W1 for p≡73 or 97 (mod 120) via d=−3.
+W1 left: p≡1 or 49 (mod 120). W2 p-law still open (p=11).
+
+**15.622 PROVED split**: W1 for p≡17 (mod 24) via d=−2. Named
+W2 at p=5: switched x/(x−1) clears Φ3.
 
 **15.621 PROVED split**: W1 for every p≡5 (mod 8) via d=−1.
 

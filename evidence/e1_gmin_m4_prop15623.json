@@ -1,0 +1,69 @@
+{
+  "prop": "15.623",
+  "title": "W1 for p\u226173 or 97 (mod 120)",
+  "proved": {
+    "W1_p_eq_73_or_97_mod_120": true,
+    "W1_p_eq_1_or_49_mod_120": false,
+    "W1_all_odd_p": false,
+    "W2_p_law": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "W1_p_eq_73_or_97_mod_120": true,
+    "W1_p_eq_1_or_49_mod_120": false,
+    "W1_all_odd_p": false,
+    "rows": {
+      "73": {
+        "mod120": 73,
+        "chi5": -1,
+        "eps": 1
+      },
+      "97": {
+        "mod120": 97,
+        "chi5": -1,
+        "eps": 1
+      },
+      "193": {
+        "mod120": 73,
+        "chi5": -1,
+        "eps": 1
+      },
+      "337": {
+        "mod120": 97,
+        "chi5": -1,
+        "eps": 1
+      },
+      "241": {
+        "mod120": 1,
+        "eps": 0,
+        "note": "not claimed"
+      }
+    },
+    "theorem": "d=\u22123 gives \u03b5=1 for p\u226173 or 97 (mod 120).  Fail: \u03b5=0 at p=73."
+  },
+  "B": {
+    "proved": false,
+    "d_minus_3_eps_p241": 0,
+    "theorem": "p\u22611 (mod 120): d=\u22123 has \u03b5=0.  Fail: d=\u22123 at p=241."
+  },
+  "C": {
+    "proved": false,
+    "W1_all_odd_p": false,
+    "W2_p_law": false,
+    "walsh_general_p": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "6-point F_p character counts; GPU unused; serial-class",
+  "openai_referee": "math_review PASS on A, confidence 0.99",
+  "seconds": 0.003
+}
