@@ -1,0 +1,87 @@
+{
+  "prop": "15.622",
+  "title": "W1 p\u226117 (mod 24); named switched-M\u00f6bius W2 at p=5",
+  "proved": {
+    "W1_p_eq_17_mod_24": true,
+    "W1_p_eq_1_mod_24": false,
+    "W1_all_odd_p": false,
+    "named_W2_p5": true,
+    "W2_p_law": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "W1_p_eq_17_mod_24": true,
+    "W1_p_eq_1_mod_24": false,
+    "W1_all_odd_p": false,
+    "rows": {
+      "17": {
+        "a": 11,
+        "d": 15,
+        "stay": true,
+        "eps": 1,
+        "inU": true,
+        "chi3": 16,
+        "p_mod_24": 17
+      },
+      "41": {
+        "a": 35,
+        "d": 39,
+        "stay": true,
+        "eps": 1,
+        "inU": true,
+        "chi3": 40,
+        "p_mod_24": 17
+      },
+      "73": {
+        "eps": 0,
+        "note": "p\u22611 mod 24, not claimed"
+      }
+    },
+    "theorem": "d=\u22122 gives \u03b5=1 for p\u226117 (mod 24).  Fail: \u03b5=0 at p=17."
+  },
+  "B": {
+    "proved": false,
+    "d_minus_2_eps": 0,
+    "theorem": "p\u22611 (mod 24): d=\u22122 has \u03b5=0.  Fail: d=\u22122 at p=73."
+  },
+  "C": {
+    "proved": true,
+    "W2_p_law": false,
+    "phi3_gate_p5": true,
+    "rows": {
+      "5": {
+        "eigen_minus": true,
+        "inU_y": true,
+        "W2": true,
+        "wt": 10
+      },
+      "7": {
+        "eigen_minus": true,
+        "inU_y": true,
+        "W2": true,
+        "wt": 20
+      }
+    },
+    "theorem": "\u03c0(x)=x/(x\u22121) switched image of z is a U-diff with gcd(c,g)=1 at p=5,7.  Fail: \u03a63|c at p=5."
+  },
+  "D": {
+    "proved": false,
+    "W1_all_odd_p": false,
+    "W2_p_law": false,
+    "walsh_general_p": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "serial; Krylov p=5,7; GPU unused",
+  "openai_referee": "math_review PASS on A, confidence 0.99",
+  "seconds": 8.37
+}

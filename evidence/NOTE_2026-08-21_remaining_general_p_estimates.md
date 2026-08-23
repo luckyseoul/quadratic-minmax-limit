@@ -60,9 +60,10 @@ Remaining estimate, minus-slice interior 4-level (and 5+ / unclassified):
   (D−I)γ). s_N=f∘φ. 1_M coprime to g.
   15.619: odd_QNR(s_N)=0 is a p-law.
   15.620: s_N is not a W1 p-law (ε=0 at p=29).
-  15.621: W1 for p≡5 (mod 8) via d=−1 (OpenAI PASS). W1 left:
-  p≡1 (mod 8). W2: PGL(2,q)·z xor z is Φ3-dead at p=5; need a
-  named Max- not in that orbit. leftover 2 still open.
+  15.621: W1 for p≡5 (mod 8) via d=−1 (OpenAI PASS).
+  15.622: W1 for p≡17 (mod 24) via d=−2. W1 left: p≡1 (mod 24).
+  Named W2 at p=5: switched π(x)=x/(x−1) clears Φ3; not a p-law
+  (p=11 y∉U). leftover 2 still open.
   Spanning of the xor-slice (Walsh ∀p) still open. That empties
   interior 4-level only; leftover-only / 5+ remain.
 

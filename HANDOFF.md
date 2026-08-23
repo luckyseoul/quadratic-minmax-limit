@@ -1,12 +1,20 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.621 W1 for p≡5 mod 8)
+**Date:** 2026-08-23 (15.622 W1 p≡17 mod 24; named W2 at p=5)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.622 — W1 for p≡17 (mod 24); named W2 through the p=5 Φ3-gate
+
+`src/e1_gmin_m4_prop15622.py`. d=−2: four-point count, ε=1 iff
+χ(3)=−1 among p≡1 (mod 8), i.e. p≡17 (mod 24). OpenAI PASS.
+W1 remaining: p≡1 (mod 24). Named W2 at p=5: Paley Aut
+π(x)=x/(x−1) with switching y_k=χ(k−1) z(π k); Cy=−py, y∈U,
+gcd(c(z+y),Φ3)=1. Same at p=7,13; y∉U at p=11. leftover 2 open.
 
 ## 15.621 — W1 for p≡5 (mod 8); PGL(2,q)·z is Φ3-dead
 

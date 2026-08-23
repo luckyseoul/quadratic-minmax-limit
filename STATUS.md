@@ -1,8 +1,10 @@
 # Status (2026-08-23)
 
+**15.622 PROVED split**: W1 for p≡17 (mod 24) via d=−2. W1 left:
+p≡1 (mod 24). Named W2 witness at p=5: switched Möbius x/(x−1)
+clears Φ3. W2 not a p-law (p=11 y∉U). Walsh ∀p OPEN.
+
 **15.621 PROVED split**: W1 for every p≡5 (mod 8) via d=−1.
-W1 remaining: p≡1 (mod 8). PGL(2,q)·z is Φ3-dead at p=5; z xor
-other Max- still gives W2 there (not a p-law). Walsh ∀p OPEN.
 
 **15.620 PROVED kill/split**: s_N is not a W1 p-law (ε=0 at p=29).
 Stay translates still hit ε=1. χ_p-pullback misses Φ3 at p=5.
