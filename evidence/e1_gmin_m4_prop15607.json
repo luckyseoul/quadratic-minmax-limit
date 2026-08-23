@@ -1,0 +1,90 @@
+{
+  "prop": "15.607",
+  "title": "W irreducible as G_aff^\u25a1-module for every odd p",
+  "proved": {
+    "Fp_mixes_cyclotomic": true,
+    "W_irreducible_all_odd_p": true,
+    "H0_quotient_irreducible": true,
+    "dir_affine_span_Maxminus_is_H0": true,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "rows": {
+      "3": {
+        "Fp_preserves_WH": true,
+        "Fp_mixes_sq_nsq": false,
+        "WH_simple_Cp": true,
+        "p7_cubic_Fp_fills_WH": null,
+        "ord_2": 2
+      },
+      "5": {
+        "Fp_preserves_WH": true,
+        "Fp_mixes_sq_nsq": false,
+        "WH_simple_Cp": true,
+        "p7_cubic_Fp_fills_WH": null,
+        "ord_2": 4
+      },
+      "7": {
+        "Fp_preserves_WH": true,
+        "Fp_mixes_sq_nsq": false,
+        "WH_simple_Cp": false,
+        "p7_cubic_Fp_fills_WH": true,
+        "ord_2": 3
+      }
+    },
+    "theorem": "F_p^\u00d7 preserves each W^H and transits \u03a6_p-factors.  Fail: W^H simple as C_p-module at p=7; fail: F_p^\u00d7 sends nsq H to a square line."
+  },
+  "B": {
+    "proved": true,
+    "W_irreducible_all_odd_p": true,
+    "H0_quotient_irreducible": true,
+    "A": {
+      "3": {
+        "Fp_preserves_WH": true,
+        "Fp_mixes_sq_nsq": false,
+        "WH_simple_Cp": true,
+        "p7_cubic_Fp_fills_WH": null,
+        "ord_2": 2
+      },
+      "5": {
+        "Fp_preserves_WH": true,
+        "Fp_mixes_sq_nsq": false,
+        "WH_simple_Cp": true,
+        "p7_cubic_Fp_fills_WH": null,
+        "ord_2": 4
+      },
+      "7": {
+        "Fp_preserves_WH": true,
+        "Fp_mixes_sq_nsq": false,
+        "WH_simple_Cp": false,
+        "p7_cubic_Fp_fills_WH": true,
+        "ord_2": 3
+      }
+    },
+    "theorem": "W is irreducible as a G_aff^\u25a1-module for every odd p.  Fail: an F_p^\u00d7-invariant proper C_p-submodule of some W^H."
+  },
+  "C": {
+    "proved": true,
+    "dir_affine_span_Maxminus_is_H0": true,
+    "walsh_general_p": false,
+    "note": "Antipodes put 1 in dir(affine_span(Max\u2212)); G_aff^\u25a1 permutes Max\u2212, so the direction is a submodule containing \u27e81\u27e9, hence H0 by B.  Fail: L=W.  Walsh is still the xor-slice of H0."
+  },
+  "D": {
+    "proved": false,
+    "walsh_general_p": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "15.406 E is dir(U)=H0 \u2229 {\u2113=c}.  Spanning of H0 by Max\u2212 is not Walsh.  residual_ii stays False."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "serial F2 identities; p=7 cubic mixing rref; GPU unused",
+  "seconds": 0.369
+}

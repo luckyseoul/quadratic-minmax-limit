@@ -43,8 +43,9 @@ Remaining estimate, minus-slice interior 4-level (and 5+ / unclassified):
   subspace of H0 is ⟨1⟩. 15.604: 1_QR ∈ H0 iff p≡1 (mod 4);
   ker(D−I)∩H0 dim 2. 15.605: H0=⟨1⟩⊕W with W=span of extra
   translates, Paley A²=A over F2. 15.606: W=⊕ nsq W^H, M transits;
-  G_aff-irred if 2 is a primitive root mod p (not all odd p).
-  H0/⟨1⟩ irreducible for every odd p still OPEN.
+  G_aff-irred if 2 is a primitive root mod p. 15.607: F_p^× mixes
+  Φ_p-factors, so W is G_aff-irreducible for every odd p and
+  dir(affine_span(Max−))=H0. Walsh ∀p (xor-slice of H0) still OPEN.
   Spanning of the xor-slice (Walsh ∀p) still open. That empties
   interior 4-level only; leftover-only / 5+ remain.
 

@@ -6,7 +6,8 @@ a primitive root mod p.
 
 Does **not** flip residual_ii / multilevel_ND / phi_F / type_I / e1 / L.
 Does **not** close Walsh 15.406 E.  Irreducibility for every odd p
-(when 2 is not a primitive root) is OPEN; certified at p=7.
+is 15.607 (F_p^× transits Φ_p-factors).  This unit stops at the
+splitting and the primitive-root case.
 
 ============================================================================
 Setup.  15.605: H0=⟨1⟩⊕W, W=ker S_aff, dim N=(q−1)/2, translation-
@@ -50,9 +51,9 @@ Theorem D — PROVED when 2 is a primitive root mod p;
   irreducible over F2 iff 2 is a primitive root modulo p.  Then
   every T-submodule of W is a sum of some W^H, and D-transitivity
   forces a G_aff^□-submodule (translations + square dilations) to
-  be 0 or W.  At p=7, Φ_7 splits as two cubics but the G_aff-span
-  of either 3-dim kernel fills W.  Fail: claim W^H simple at p=7.
-  Walsh still needs the xor-slice; residual_ii stays False.
+  be 0 or W.  At p=7, Φ_7 splits as two cubics.  15.607: F_p^× transits those
+  factors, so W is G_aff-irreducible for every odd p.  Fail: claim
+  W^H simple at p=7.  Walsh still needs the xor-slice.
 
 ============================================================================
 Backend: identities serial; rref ranks p=3,5,7.  GPU unused.
@@ -308,9 +309,8 @@ def theorem_D_irred() -> dict:
         "phi_F_ge_6": bool(phi_F_ge_6_proved_general()),
         "note": (
             "If 2 is a primitive root mod p then each W^H is a simple "
-            "C_p-module and G_aff^□-submodules of W are 0 or W.  "
-            "Not a p-law at p=7 (Φ_7 splits); spin at p=7 still fills "
-            "W.  Walsh 15.406 E stays OPEN."
+            "C_p-module.  15.607 closes all odd p via F_p^× mixing.  "
+            "Walsh 15.406 E stays OPEN."
         ),
     }
 

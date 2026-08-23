@@ -1,5 +1,10 @@
 # Status (2026-08-23)
 
+**15.607 PROVED** (not a leftover close): W is irreducible as a
+G_aff^□-module for every odd p. F_p^× ⊂ M preserves each W^H and
+transits the Φ_p-factors (fail: W^H simple as C_p-module at p=7).
+Hence dir(affine_span(Max−))=H0. Walsh 15.406 E (xor-slice) OPEN.
+
 **15.606 PROVED** (not a leftover close): square F_p-line averages
 vanish on W; nsq averages are orthogonal projectors of rank p−1
 summing to I, so W=⊕ W^H. Squares permute the nsq summands

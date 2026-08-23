@@ -1,12 +1,25 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.606 W=⊕ nsq W^H; **no flag flipped**)
+**Date:** 2026-08-23 (15.607 W G_aff-irred all odd p; **no flag flipped**)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.607 — W irreducible as G_aff^□-module, all odd p (proved)
+
+`src/e1_gmin_m4_prop15607.py`. F_p^× ⊂ M (15.598 B) preserves every
+F_p-line through 0, hence each W^H. On F_q/H ≅ F_p it is Aut(C_p),
+which transits the irreducible factors of Φ_p (the orbits F_p^×/⟨2⟩).
+So W^H is irreducible for C_p ⋊ F_p^× even when 2 is not a primitive
+root. A G_aff-submodule meets some W^H in 0 or all of it, and M
+transits the summands, so W is irreducible. Antipodes put ⟨1⟩ in dir(affine_span(Max−)),
+and G_aff^□ permutes Max−, so that direction is H0. Fail: W^H
+simple as a C_p-module at p=7
+(two cubics; F_p^×-span of either kernel is all of W^H). Walsh is
+still the xor-slice; residual_ii stays False.
 
 ## 15.606 — nsq line averages split W; M transits (proved)
 
@@ -866,6 +879,7 @@ deleted so the reversal is traceable.
 | `src/e1_gmin_m4_prop15604.py` | 1_QR ∈ H0 iff p≡1 (mod 4); ker(D−I)∩H0 dim 2 |
 | `src/e1_gmin_m4_prop15605.py` | Paley A²=A over F2; H0=⟨1⟩⊕ translate-span of extra |
 | `src/e1_gmin_m4_prop15606.py` | W=⊕ nsq W^H; M transits; irred if 2 primitive root mod p |
+| `src/e1_gmin_m4_prop15607.py` | W G_aff-irred all odd p (F_p^× mixes Φ_p); dir(Max−)=H0 |
 | `evidence/SESSION_HANDOFF_2026-08-18_leftovers.md` | Named identities 15.550–15.585 |
 | `evidence/TECHNICAL_NOTES_2026-08-20_maxplus_p11.md` | p=11 enumeration, derivations, corrections (2026-08-20) |
 | `evidence/NOTE_2026-08-20_psl_and_stratum_floor_reduction.md` | Binding PSL decomposition, QVAR, low-stratum theorem, odd-coset route, and killed routes |
