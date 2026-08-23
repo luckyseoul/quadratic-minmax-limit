@@ -55,7 +55,12 @@ Remaining estimate, minus-slice interior 4-level (and 5+ / unclassified):
   15.615: two-fiber ε=1 iff p≡1 is false (p=17).
   15.616–15.617: f(D)w≠0 is not the W2 test; gcd(content,f)=1
   is. Walsh p=11 withdrawn. s_N (nsq F_p-stay sum) is the p≡1
-  W1 construction, ε certified. leftover 2 still open.
+  W1 construction, ε certified.
+  15.618: Φ=ε is a p-law (odd D-index QR xor QNR; scale
+  (D−I)γ). s_N=f∘φ. 1_M coprime to g. W1 p≡1 still needs
+  odd_QR(s_N)=1 and even QNR-fiber odd-index as p-laws
+  (cyclotomic). W2 needs a U-difference coprime to g
+  (per-factor glue / AP Mattson–Solomon). leftover 2 still open.
   Spanning of the xor-slice (Walsh ∀p) still open. That empties
   interior 4-level only; leftover-only / 5+ remain.
 

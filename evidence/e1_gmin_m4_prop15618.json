@@ -1,0 +1,129 @@
+{
+  "prop": "15.618",
+  "title": "\u03a6=\u03b5 p-law; s_N \u03c6-pullback; 1_M coprime to g",
+  "proved": {
+    "phi_eq_eps": true,
+    "sN_pullback": true,
+    "sN_eps_p_law": false,
+    "W1_p_eq_1": false,
+    "one_M_coprime_g": true,
+    "W2_p_law": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "rows": {
+      "5": {
+        "gamma_wt": 10,
+        "gamma_wt_is_2p": true,
+        "gamma_0": 1,
+        "phi_DI": 1,
+        "eps_DI": 1,
+        "QR_wt_DI": 0,
+        "QNR_wt_DI": 0,
+        "scale_1": true,
+        "zDz_match": true,
+        "zDz_eps": 0,
+        "zDz_phi": 0,
+        "sN_match": true,
+        "sN_eps": 1,
+        "sN_QR_odd": 1,
+        "sN_QNR_odd": 0
+      },
+      "7": {
+        "gamma_wt": 14,
+        "gamma_wt_is_2p": true,
+        "gamma_0": 1,
+        "phi_DI": 1,
+        "eps_DI": 1,
+        "QR_wt_DI": 0,
+        "QNR_wt_DI": 0,
+        "scale_1": true,
+        "zDz_match": true,
+        "zDz_eps": 1,
+        "zDz_phi": 1
+      }
+    },
+    "theorem": "\u03a6=\u03b5 on W_0.  Scale \u03a6((D\u2212I)\u03b3)=2p\u22121\u22611.  Fail: \u03a6((D\u2212I)\u03b3)=0."
+  },
+  "B": {
+    "proved": false,
+    "pullback_p_law": true,
+    "orbit_pattern_p_law": false,
+    "orbit_pattern_certified": true,
+    "eps_p_law": false,
+    "rows": {
+      "5": {
+        "mismatches": 0,
+        "nsq_stay": [
+          3
+        ],
+        "lam": 3,
+        "f": [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "qnr_odd_all_even": true,
+        "f_dot_qr_odd": 1
+      },
+      "13": {
+        "mismatches": 0,
+        "nsq_stay": [
+          5,
+          7,
+          11
+        ],
+        "lam": 7,
+        "f": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "qnr_odd_all_even": true,
+        "f_dot_qr_odd": 1
+      }
+    },
+    "theorem": "s_N=f\u2218\u03c6.  odd_QNR=0 and f\u00b7n_odd^QR=1 certified p=5,13,17, not a p-law.  Fail: mismatches>0; Fail (discriminator): \u03b5(s_N)=0 at p=5."
+  },
+  "C": {
+    "proved": true,
+    "W2_p_law": false,
+    "gcd_X1_g_is_1": true,
+    "nfac": 1,
+    "eps_DI": 1,
+    "theorem": "gcd(X+1,g)=1 so 1_M is coprime to g.  Not a U-diff.  W2 p-law OPEN.  Fail: g divides X+1."
+  },
+  "D": {
+    "proved": false,
+    "walsh_general_p": false,
+    "W1_p_eq_1": false,
+    "W2_p_law": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "15.618 \u03a6=\u03b5. leftover 2 / Walsh \u2200p OPEN."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "serial F2; rref p=5,7,13; GPU unused",
+  "claude_referee": "math_review PASS-WITH-NOTE Claim A, scale via (D-I)\u03b3=2p-1; suggest_direction: cyclotomic order 2 for B, per-factor idempotent glue for W2",
+  "seconds": 0.38
+}

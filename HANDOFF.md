@@ -1,12 +1,27 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.617 s_N for p≡1; Walsh p=11 withdrawn)
+**Date:** 2026-08-23 (15.618 Φ=ε; s_N φ-pullback; 1_M coprime to g)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.618 — Φ=ε p-law; s_N is a φ-pullback; 1_M coprime to g
+
+`src/e1_gmin_m4_prop15618.py`. Fable xhigh math_review PASS-WITH-NOTE
+on Claim A: ε(w)=odd_QR(w)+odd_QNR(w) on W_0 for every odd p. Scale
+is Φ((D−I)γ)=|supp γ ∩ (QR∪QNR)|=2p−1≡1 (not a p≡3 transfer from
+z+Dz). s_N=f∘φ is a p-law (halfspace symmetric differences on
+φ-fibers). odd_QNR=0 and f·n_odd^QR=1 certified p=5,13,17 (every
+QNR fiber has even odd-index count); not yet a p-law. 1_M has
+content X+1, gcd(X+1,g)=1, so the membership test is sound;
+(D−I)γ is not a U-difference. Named U-diffs miss the p=5 Φ3-gate.
+W1 for p≡1 / W2 / Walsh / leftover 2 stay open. Fable directions:
+cyclotomic numbers of order 2 for the s_N parities; per-factor
+W2 witnesses glued by primitive idempotents of g; AP-supported
+U-diff with geometric Mattson–Solomon.
 
 ## 15.617 — NSQ stay-sum; correct W2 test; Walsh p=11 withdrawn
 
