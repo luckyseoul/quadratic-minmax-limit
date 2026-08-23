@@ -142,7 +142,7 @@
     "walsh_general_p": false,
     "residual_ii_k_eq_4p_empty": false,
     "phi_F_ge_6": false,
-    "note": "If 2 is a primitive root mod p then each W^H is a simple C_p-module and G_aff^\u25a1-submodules of W are 0 or W.  Not a p-law at p=7 (\u03a6_7 splits); spin at p=7 still fills W.  Walsh 15.406 E stays OPEN."
+    "note": "If 2 is a primitive root mod p then each W^H is a simple C_p-module.  15.607 closes all odd p via F_p^\u00d7 mixing.  Walsh 15.406 E stays OPEN."
   },
   "flags_not_flipped": [
     "residual_ii_k_eq_4p_empty",
@@ -153,5 +153,5 @@
   "L_status": "OPEN",
   "walsh_15_406_E": "OPEN",
   "backend": "serial F2 identities; rref p=3,5,7; GPU unused",
-  "seconds": 0.151
+  "seconds": 0.15
 }
