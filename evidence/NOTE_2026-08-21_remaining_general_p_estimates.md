@@ -48,8 +48,8 @@ Remaining estimate, minus-slice interior 4-level (and 5+ / unclassified):
   dir(affine_span(Max−))=H0. 15.608: 1∈dir(U) by antipodes; two
   PSL-orbits of F_p-sublines. 15.609: I(H0)=H0. Walsh spanning of
   V/⟨1⟩ still OPEN. 15.610: Aut({0,∞}) uniqueness DEAD.
-  15.611: W ≅ F2[X]/(X^N+1); ker2 dim 2 is a p-law. Walsh is
-  F2[D]-ideal generation by all U-differences.
+  15.611: W ≅ F2[X]/(X^N+1); ker2 dim 2 is a p-law.
+  15.612: Walsh ⇔ W1 ∧ W2; CLASS p-law, W1 not.
   Spanning of the xor-slice (Walsh ∀p) still open. That empties
   interior 4-level only; leftover-only / 5+ remain.
 

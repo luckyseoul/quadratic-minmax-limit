@@ -1,0 +1,126 @@
+{
+  "prop": "15.612",
+  "title": "Walsh \u21d4 W1 \u2227 W2; CLASS of Aut-invariant ideals",
+  "proved": {
+    "dictionary_Walsh_iff_IU_unit": true,
+    "class_maximal_Aut_ideals": true,
+    "W1_p_law": false,
+    "W2_p_law": false,
+    "walsh_general_p": false
+  },
+  "A": {
+    "proved": true,
+    "walsh_iff_IU_unit": true,
+    "theorem": "dir(U) is D-invariant and 1\u2208dir(U), so I_U is an ideal of W_0 \u2245 R.  Walsh \u21d4 I_U=W_0.  Fail: dir(U) not D-invariant."
+  },
+  "B": {
+    "proved": true,
+    "Walsh_iff_W1_and_W2": true,
+    "rows": {
+      "3": {
+        "N": 4,
+        "v2_N": 2,
+        "m": 1,
+        "g_deg": 0,
+        "n_irred_factors_g": 0,
+        "factor_degs": [],
+        "n_g_orbits_live": 0
+      },
+      "5": {
+        "N": 12,
+        "v2_N": 2,
+        "m": 3,
+        "g_deg": 2,
+        "n_irred_factors_g": 1,
+        "factor_degs": [
+          2
+        ],
+        "n_g_orbits_live": 1
+      },
+      "7": {
+        "N": 24,
+        "v2_N": 3,
+        "m": 3,
+        "g_deg": 2,
+        "n_irred_factors_g": 1,
+        "factor_degs": [
+          2
+        ],
+        "n_g_orbits_live": 1
+      },
+      "11": {
+        "N": 60,
+        "v2_N": 2,
+        "m": 15,
+        "g_deg": 14,
+        "n_irred_factors_g": 4,
+        "factor_degs": [
+          2,
+          4,
+          4,
+          4
+        ],
+        "n_g_orbits_live": 3
+      }
+    },
+    "theorem": "Maximal Aut-invariant ideals of R are (X+1)R and (f_O)R.  Walsh \u21d4 W1 \u2227 W2.  Fail: Frob acts by X\u21a6X^2."
+  },
+  "C": {
+    "proved": false,
+    "W1_p_law": false,
+    "W1_certified_p357": true,
+    "rows": {
+      "3": {
+        "nU": 8,
+        "take": 8,
+        "n_pair_val0": 4,
+        "W1_certified": true,
+        "Frob_eps_odd": 8,
+        "Frob_eps_even": 0,
+        "Frob_eps_none": 0,
+        "Frob_one_point_is_p_law": false
+      },
+      "5": {
+        "nU": 156,
+        "take": 80,
+        "n_pair_val0": 18,
+        "W1_certified": true,
+        "Frob_eps_odd": 0,
+        "Frob_eps_even": 61,
+        "Frob_eps_none": 19,
+        "Frob_one_point_is_p_law": false
+      },
+      "7": {
+        "nU": 6544,
+        "take": 80,
+        "n_pair_val0": 39,
+        "W1_certified": true,
+        "Frob_eps_odd": 80,
+        "Frob_eps_even": 0,
+        "Frob_eps_none": 0,
+        "Frob_one_point_is_p_law": false
+      }
+    },
+    "theorem": "W1 certified p=3,5,7; not a p-law (Frob one-point fails at p=5; translation-stay fails at p=3).  Fail: W1 from Frob of one U-point."
+  },
+  "D": {
+    "proved": false,
+    "walsh_general_p": false,
+    "W1_p_law": false,
+    "W2_p_law": false,
+    "residual_ii_k_eq_4p_empty": false,
+    "phi_F_ge_6": false,
+    "note": "Walsh \u21d4 W1 \u2227 W2 on Aut-invariant ideals.  CLASS is a p-law; W1/W2/Walsh stay open.  residual_ii stays False."
+  },
+  "flags_not_flipped": [
+    "residual_ii_k_eq_4p_empty",
+    "phi_F_ge_6_proved_general",
+    "e1",
+    "L"
+  ],
+  "L_status": "OPEN",
+  "walsh_15_406_E": "OPEN",
+  "backend": "CLASS serial; W1 rref p=3,5,7; GPU unused",
+  "claude_referee": "deep_review BLOCK on W1 p-law; CLASS PASS (Walsh \u21d4 W1\u2227W2)",
+  "seconds": 0.968
+}

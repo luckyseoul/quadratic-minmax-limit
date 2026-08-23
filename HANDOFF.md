@@ -1,12 +1,26 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.611 W cyclic F2[M]; ker2 dim 2 p-law; **no flag flipped**)
+**Date:** 2026-08-23 (15.612 Walsh ⇔ W1∧W2; CLASS p-law; **no flag flipped**)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.612 — Walsh ⇔ W1 ∧ W2; CLASS of Aut-invariant ideals (proved split)
+
+`src/e1_gmin_m4_prop15612.py`. dir(U) is Aut({0,∞})-invariant, so
+I_U=dir(U)∩W_0 is an ideal of R=F2[X]/h. Walsh ⇔ I_U=W_0.
+Maximal proper Aut-invariant ideals are (X+1)R=(D−I)W_0 and
+(f_O)R for each ⟨I,Frob⟩-orbit of irred factors of g
+(Fable xhigh PASS on CLASS). Hence Walsh ⇔ W1 ∧ W2.
+W1 (some U-difference has (X+1)-valuation 0) is certified p=3,5,7
+and **not** a p-law (Fable BLOCK): Frob of one U-point has odd
+ε at p=3,7 and even at p=5; translation-stay fills W_0 at p=5,7
+but not p=3. W2 vacuous at p=3, implied by W1 at p=5,7, first
+live at p=11 (orbits {Φ_3},{Φ_5},{two Φ_15 quartics}).
+Walsh / residual_ii stay False.
 
 ## 15.611 — W ≅ F2[X]/(X^N+1); ker2 dim 2 is a p-law (proved)
 

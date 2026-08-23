@@ -1,5 +1,10 @@
 # Status (2026-08-23)
 
+**15.612 PROVED split** (not a leftover close): Walsh ⇔ W1 ∧ W2
+on Aut-invariant ideals of W_0. CLASS of maximal Aut-invariant
+ideals is a p-law (Fable PASS). W1 certified p=3,5,7, Fable BLOCK
+as p-law (Frob one-point fails at p=5). Walsh OPEN.
+
 **15.611 PROVED** (not a leftover close): W ≅ F2[M] ≅ F2[X]/(X^N+1)
 as D-modules (Ind of regular F_p^×). W_0 is the unique D-invariant
 hyperplane. dim ker((D−I)^2)∩W_0=2 is a p-law (a=v_2(N)≥2).
