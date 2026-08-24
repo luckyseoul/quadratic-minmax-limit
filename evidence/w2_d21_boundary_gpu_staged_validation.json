@@ -1,0 +1,48 @@
+{
+  "range": null,
+  "explicit_primes": [
+    73613,
+    133253,
+    172313
+  ],
+  "congruence_class": "p == 29 (mod 84)",
+  "criterion": "three nonsquare residues vanish at both reciprocal sextics",
+  "search_mode": "staged-counterexample",
+  "n_primes_requested": 3,
+  "n_primes_completed": 3,
+  "one_sided_zero_triples": [],
+  "counterexamples": [],
+  "rows": [
+    {
+      "p": 73613,
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 0.2590519559889799,
+      "global_zero_differences": [
+        false
+      ],
+      "differences_evaluated": 1
+    },
+    {
+      "p": 133253,
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 0.007749498006887734,
+      "global_zero_differences": [
+        true,
+        true,
+        false
+      ],
+      "differences_evaluated": 3
+    },
+    {
+      "p": 172313,
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 0.006062082000426017,
+      "global_zero_differences": [
+        true,
+        false
+      ],
+      "differences_evaluated": 2
+    }
+  ],
+  "elapsed_seconds": 0.27294131300004665
+}

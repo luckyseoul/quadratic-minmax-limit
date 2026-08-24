@@ -1419,13 +1419,74 @@ search at all 167 primes below 1000 and at `p=2141,73613`.  The exact
 `p=73613,d=21` runtime on soulkiller fell from roughly four to five seconds to
 about 1.05 seconds.
 
+### Boundary reconnaissance and exact GPU extension
+
+Retaining the selected-line exponent counts modulo four does not supply the
+missing local phase.  The native wide engine now has a
+`selected_line_counts_mod4` path, and its reduction modulo two agrees exactly
+with the established parity engine at `p=29,701,73613`.  On all global-zero
+and one-sided-flat diagnostic cases, the order-21 and order-42 decomposition
+norms coincide.  This is structural: the norm has even degree, so the sign
+distinguishing those two lifts is erased.  The two NUKA certificates are
+`evidence/w2_d21_mod4_global_zero_nuka.json` and
+`evidence/w2_d21_mod4_one_sided_nuka.json`.  Thus the bare mod-four norm route
+is closed, although the retained counts remain available for a less symmetric
+local construction.
+
+The complete exact signature census on `100001..300000` contains 693 eligible
+primes, all 63 observed support-mask pairs, five one-sided flat triples, and no
+simultaneous failure.  Prime `p=133253` is the first observed two-step global
+collapse: differences one and two vanish at both reciprocal sextics, while
+difference three survives.  The normalized affine scalar pairs pass every
+generator-division, square-reconstruction, and `F_8`-subfield check.  Among
+the 693 rows there are 691 distinct pairs.  The evaluation matrices of all
+nonconstant monomials of total degree at most `1,2,3,4,5` have respective
+ranks `6,27,83,209,461`, while adjoining the constant-one target raises every
+rank by one.  Therefore there is no affine relation of degree at most five
+that excludes the simultaneous zero.  The reproducible records are
+`evidence/w2_d21_signature_100001_300000_full.json`,
+`evidence/w2_d21_scalar_normalized_100001_300000.json`, and
+`evidence/w2_d21_affine_relation_degree5.json`.
+
+For a larger falsification attempt, the proved nonzero nonsquare generator
+allows the boundary test to retain only the nonsquare component.  The direct
+GPU kernel evaluates the order-42 character on the twelve selected affine
+lines without constructing an `F_(p^2)` orbit, a primitive-element table, or
+an inverse table.  It uses exact integer field arithmetic and atomic XOR
+folding.  Independent CPU and CUDA calculations agree factor-by-factor at
+`p=73613,133253,172313`; the same three zero patterns were reproduced through
+ROCm/HIP on NUKA's RX 9070 XT and CUDA on Orin.  Intel's OpenCL IGC on
+Jellyfin's Arc A380 instead crashes while compiling the nested exact 64-bit
+modular exponentiation, even with optimization disabled; this is a backend
+limitation, not a conflicting arithmetic result.
+
+The full CUDA/HIP search then evaluated every eligible prime in
+`1000001..5000000`: 11,293 new primes, 45 one-sided flat triples, and zero
+simultaneous failures.  The four complete certificates are
+`evidence/w2_d21_boundary_gpu_1000001_2000000.json` through
+`evidence/w2_d21_boundary_gpu_4000001_5000000.json`.  Direct OEIS searches for
+every exceptional prime found one unrelated occurrence: `2788829` is a term
+of [A075143](https://oeis.org/A075143), the numerators of generalized harmonic
+numbers.  No other exceptional prime has an OEIS hit, and no search exposed a
+matching boundary or character-sum construction.
+
+For pure counterexample hunting the kernel can stop after the first
+difference that is nonzero at either reciprocal sextic.  This staged test is
+logically equivalent to the simultaneous three-difference criterion and
+reproduces the exact stop depths `1,3,2` at
+`p=73613,133253,172313`.  Since only about two percent of census rows pass the
+first global gate, it reduces the typical twelve-line evaluation to four
+lines.  At `p` near five million the warm staged runtime is about `0.084`
+seconds on the V100 and `0.046` seconds on the RX 9070 XT.  Its validation
+certificate is `evidence/w2_d21_boundary_gpu_staged_validation.json`.
+
 ### Revised gap
 
 For `p == 5 (mod 12)`, prove for arbitrary `p` that the first three four-line
 differences have scalar common Aut-gcd one.  The exact all-order calculation
 establishes the statement for every eligible prime through 10000, and the
 bounded-order calculation establishes all `d<=4095` through 100000.  The
-targeted calculation additionally establishes `d=21` through 1000000, and
+targeted calculation additionally establishes `d=21` through 5000000, and
 the local Jacobi norm above proves its four-state `F_8` generator law
 uniformly.  The projective layer is already proved, but the remaining finite
 boundary calculations do not replace the missing uniform

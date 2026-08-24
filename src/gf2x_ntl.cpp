@@ -542,7 +542,7 @@ extern "C" int qml_selected_line_bins(
     return 0;
 }
 
-extern "C" int qml_selected_line_bins_wide(
+int selected_line_bins_wide_impl(
     std::uint32_t p,
     std::uint32_t ia,
     std::uint32_t ib,
@@ -557,7 +557,8 @@ extern "C" int qml_selected_line_bins_wide(
     long n_orders,
     long total_order,
     std::uint8_t* output,
-    long output_capacity) {
+    long output_capacity,
+    bool count_mod_four) {
     if (p < 3 || !levels || n_levels < 1 || !orders || !order_offsets ||
         n_orders < 1 || total_order < 1 || !output || output_capacity < 1) {
         return -1;
@@ -659,9 +660,58 @@ extern "C" int qml_selected_line_bins_wide(
                 const std::uint64_t output_index =
                     (component * n_levels + level_index) * total_order +
                     order_offsets[order_index] + found->second;
-                output[output_index] ^= 1U;
+                if (count_mod_four) {
+                    output[output_index] = static_cast<std::uint8_t>(
+                        (output[output_index] + 1U) & 3U);
+                } else {
+                    output[output_index] ^= 1U;
+                }
             }
         }
     }
     return 0;
+}
+
+extern "C" int qml_selected_line_bins_wide(
+    std::uint32_t p,
+    std::uint32_t ia,
+    std::uint32_t ib,
+    std::uint64_t generator,
+    std::uint64_t omega,
+    std::uint64_t sigma,
+    std::uint64_t pole_t,
+    const std::uint32_t* levels,
+    long n_levels,
+    const std::uint32_t* orders,
+    const std::uint32_t* order_offsets,
+    long n_orders,
+    long total_order,
+    std::uint8_t* output,
+    long output_capacity) {
+    return selected_line_bins_wide_impl(
+        p, ia, ib, generator, omega, sigma, pole_t, levels, n_levels,
+        orders, order_offsets, n_orders, total_order, output, output_capacity,
+        false);
+}
+
+extern "C" int qml_selected_line_counts_mod4_wide(
+    std::uint32_t p,
+    std::uint32_t ia,
+    std::uint32_t ib,
+    std::uint64_t generator,
+    std::uint64_t omega,
+    std::uint64_t sigma,
+    std::uint64_t pole_t,
+    const std::uint32_t* levels,
+    long n_levels,
+    const std::uint32_t* orders,
+    const std::uint32_t* order_offsets,
+    long n_orders,
+    long total_order,
+    std::uint8_t* output,
+    long output_capacity) {
+    return selected_line_bins_wide_impl(
+        p, ia, ib, generator, omega, sigma, pole_t, levels, n_levels,
+        orders, order_offsets, n_orders, total_order, output, output_capacity,
+        true);
 }

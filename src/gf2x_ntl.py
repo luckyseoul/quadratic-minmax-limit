@@ -126,6 +126,10 @@ def _load():
         ctypes.c_long,
     ]
     loaded.qml_selected_line_bins_wide.restype = ctypes.c_int
+    loaded.qml_selected_line_counts_mod4_wide.argtypes = (
+        loaded.qml_selected_line_bins_wide.argtypes
+    )
+    loaded.qml_selected_line_counts_mod4_wide.restype = ctypes.c_int
     _LIB = loaded
     return loaded
 
@@ -328,4 +332,49 @@ def selected_line_bins(
     )
     if status:
         raise RuntimeError(f"native selected-line folding failed with {status}")
+    return output, [int(value) for value in offsets]
+
+
+def selected_line_counts_mod4(
+    p: int,
+    ia: int,
+    ib: int,
+    generator: int,
+    omega: int,
+    sigma: int,
+    pole_t: int,
+    levels: list[int],
+    orders: list[int],
+) -> tuple[np.ndarray, list[int]]:
+    """Fold selected affine lines into exponent-class counts modulo four."""
+    if not levels or not orders:
+        raise ValueError("levels and orders must be nonempty")
+    offsets = np.cumsum([0, *orders[:-1]], dtype=np.uint32)
+    total_order = sum(orders)
+    level_array = np.ascontiguousarray(levels, dtype=np.uint32)
+    order_array = np.ascontiguousarray(orders, dtype=np.uint32)
+    output = np.zeros((2, len(levels), total_order), dtype=np.uint8)
+    u32_pointer = ctypes.POINTER(ctypes.c_uint32)
+    u8_pointer = ctypes.POINTER(ctypes.c_uint8)
+    status = _load().qml_selected_line_counts_mod4_wide(
+        p,
+        ia,
+        ib,
+        generator,
+        omega,
+        sigma,
+        pole_t,
+        level_array.ctypes.data_as(u32_pointer),
+        len(levels),
+        order_array.ctypes.data_as(u32_pointer),
+        offsets.ctypes.data_as(u32_pointer),
+        len(orders),
+        total_order,
+        output.ctypes.data_as(u8_pointer),
+        output.nbytes,
+    )
+    if status:
+        raise RuntimeError(
+            f"native selected-line mod-four folding failed with {status}"
+        )
     return output, [int(value) for value in offsets]

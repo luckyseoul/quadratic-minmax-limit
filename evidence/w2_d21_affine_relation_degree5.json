@@ -1,0 +1,47 @@
+{
+  "input": "evidence/w2_d21_scalar_normalized_100001_300000.json",
+  "field_modulus": "0x57",
+  "results": [
+    {
+      "degree": 1,
+      "rows": 693,
+      "features": 6,
+      "rank": 6,
+      "augmented_rank": 7,
+      "excludes_simultaneous_zero_candidate": false
+    },
+    {
+      "degree": 2,
+      "rows": 693,
+      "features": 27,
+      "rank": 27,
+      "augmented_rank": 28,
+      "excludes_simultaneous_zero_candidate": false
+    },
+    {
+      "degree": 3,
+      "rows": 693,
+      "features": 83,
+      "rank": 83,
+      "augmented_rank": 84,
+      "excludes_simultaneous_zero_candidate": false
+    },
+    {
+      "degree": 4,
+      "rows": 693,
+      "features": 209,
+      "rank": 209,
+      "augmented_rank": 210,
+      "excludes_simultaneous_zero_candidate": false
+    },
+    {
+      "degree": 5,
+      "rows": 693,
+      "features": 461,
+      "rank": 461,
+      "augmented_rank": 462,
+      "excludes_simultaneous_zero_candidate": false
+    }
+  ],
+  "warning": "candidate relations require disjoint validation and proof"
+}
