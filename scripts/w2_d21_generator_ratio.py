@@ -99,8 +99,12 @@ def generator_record(p: int) -> dict:
         raise AssertionError(f"p={p}: invalid order-21 root table")
 
     component_bits = [0, 0]
+    component_counts = [[0] * ORDER for _ in range(2)]
+    line_component_counts = [
+        [[0] * ORDER for _ in range(2)] for _ in range(2)
+    ]
 
-    def include(point: int) -> None:
+    def include(point: int, line_index: int) -> None:
         if point == 0:
             return
         a, b = point % p, point // p
@@ -109,12 +113,15 @@ def generator_record(p: int) -> dict:
         base = point if square else mul(omega_inverse, point)
         character = field_power(mul, base, orbit_length // ORDER)
         component = 0 if square else 1
-        component_bits[component] ^= 1 << root_log[character]
+        residue = root_log[character]
+        component_bits[component] ^= 1 << residue
+        component_counts[component][residue] += 1
+        line_component_counts[line_index][component][residue] += 1
 
     for t in range(p):
         line_point = mul(t, sigma)
-        include(line_point)
-        include(add(1, line_point))
+        include(line_point, 0)
+        include(add(1, line_point), 1)
 
     factor_rows = []
     for factor in FACTORS:
@@ -151,6 +158,8 @@ def generator_record(p: int) -> dict:
         "sigma": sigma,
         "primitive_element": omega,
         "component_polynomial_hex": [hex(value) for value in component_bits],
+        "component_class_counts": component_counts,
+        "line_component_class_counts": line_component_counts,
         "component_support": [
             [j for j in range(ORDER) if value >> j & 1]
             for value in component_bits

@@ -180,6 +180,69 @@ def solve_binary(matrix: list[list[int]], rhs: list[int]) -> list[int] | None:
     return solution
 
 
+def full_parity_word(square_mask: int, nonsquare_mask: int) -> list[int]:
+    """Expand the Frobenius support form to the 42 multiplicative cosets."""
+    word = [0] * 42
+    word[0] = 1
+    for exponent in range(7):
+        if square_mask & (1 << exponent):
+            for mod3 in (1, 2):
+                order21 = (15 * exponent + 7 * mod3) % 21
+                word[2 * order21] = 1
+        if nonsquare_mask & (1 << exponent):
+            for mod3 in (0, 2):
+                order21 = (15 * exponent + 7 * mod3) % 21
+                word[2 * order21 + 1] = 1
+    return word
+
+
+def mod4_relative_difference_set_lift(row: dict, k_parity: int) -> bool:
+    """Test the exact RDS autocorrelation and six class totals modulo four.
+
+    Write p=84k+29 and each integer cyclotomic count as v_i+2*y_i
+    modulo four.  The parity word v is fixed by S,Q; all remaining conditions
+    are linear in the 42 unknown bits y_i.
+    """
+    parity = full_parity_word(row["square_mask"], row["nonsquare_mask"])
+    matrix = []
+    rhs = []
+    # For this congruence class, |C_i|=(p^2-1)/42 and |C_i cap F_p^*|
+    # are both 0 mod 4.  R R^- therefore has autocorrelation 1 at shift
+    # zero and 0 at every nonzero shift modulo four.
+    if sum(parity) % 4 != 1:
+        return False
+    for shift in range(1, 42):
+        base = sum(
+            parity[index] * parity[(index + shift) % 42]
+            for index in range(42)
+        )
+        difference = (-base) % 4
+        if difference % 2:
+            return False
+        matrix.append(
+            [
+                parity[(index + shift) % 42]
+                ^ parity[(index - shift) % 42]
+                for index in range(42)
+            ]
+        )
+        rhs.append(difference // 2)
+
+    # The six index classes modulo six have totals N=(p+1)/6, except class
+    # three (the nonsquare Frobenius-fixed class), whose total is N-1.
+    n_mod4 = 1 if k_parity == 0 else 3
+    for residue in range(6):
+        indices = [index for index in range(42) if index % 6 == residue]
+        target = (n_mod4 - (residue == 3)) % 4
+        base = sum(parity[index] for index in indices)
+        difference = (target - base) % 4
+        if difference % 2:
+            return False
+        matrix.append([int(index in indices) for index in range(42)])
+        rhs.append(difference // 2)
+    return solve_binary(matrix, rhs) is not None
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path)
@@ -241,6 +304,22 @@ def main() -> None:
     support_trace_linear = solve_binary(
         support_matrix, [row["state_trace"] for row in solutions]
     )
+    mod4_lift_counts = {
+        k_parity: collections.Counter(
+            row["state_trace"]
+            for row in solutions
+            if mod4_relative_difference_set_lift(row, k_parity)
+        )
+        for k_parity in (0, 1)
+    }
+    mod4_lift_ratio_counts = {
+        k_parity: collections.Counter(
+            (row["ratio"], row["ratio_star"])
+            for row in solutions
+            if mod4_relative_difference_set_lift(row, k_parity)
+        )
+        for k_parity in (0, 1)
+    }
     generator_validation = None
     if args.generator_evidence:
         generator_rows = json.loads(args.generator_evidence.read_text())["rows"]
@@ -334,6 +413,22 @@ def main() -> None:
                 if coefficient
             ]
         ),
+        "mod4_rds_lift_counts_by_k_parity_and_trace": {
+            str(k_parity): {
+                str(trace_value): count
+                for trace_value, count in sorted(mod4_lift_counts[k_parity].items())
+            }
+            for k_parity in (0, 1)
+        },
+        "mod4_rds_lift_ratio_counts_by_k_parity": {
+            str(k_parity): {
+                f"{encoded_ratio(left)}|{encoded_ratio(right)}": count
+                for (left, right), count in sorted(
+                    mod4_lift_ratio_counts[k_parity].items(), key=str
+                )
+            }
+            for k_parity in (0, 1)
+        },
         "ratio_pair_counts_by_state_trace": {
             str(trace_value): {
                 f"{encoded_ratio(left)}|{encoded_ratio(right)}": count

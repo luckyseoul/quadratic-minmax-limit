@@ -1,0 +1,4973 @@
+{
+  "model": "42 multiplicative-coset counts modulo 16",
+  "solver": "/tmp/z3",
+  "bits": 4,
+  "k_period": 8,
+  "timeout_ms": 10000,
+  "f8_states": 56,
+  "systems": 448,
+  "counts_by_k_residue_trace_answer": {
+    "0": {
+      "trace=0,sat": 28,
+      "trace=1,sat": 28
+    },
+    "1": {
+      "trace=0,sat": 28,
+      "trace=1,sat": 28
+    },
+    "2": {
+      "trace=0,sat": 28,
+      "trace=1,sat": 28
+    },
+    "3": {
+      "trace=0,sat": 28,
+      "trace=1,sat": 28
+    },
+    "4": {
+      "trace=0,sat": 28,
+      "trace=1,sat": 28
+    },
+    "5": {
+      "trace=0,sat": 28,
+      "trace=1,sat": 28
+    },
+    "6": {
+      "trace=0,sat": 28,
+      "trace=1,sat": 28
+    },
+    "7": {
+      "trace=0,sat": 28,
+      "trace=1,sat": 28
+    }
+  },
+  "records": [
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x1",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x2",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x4",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x8",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x10",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x20",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x40",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x2",
+      "nonsquare_mask_hex": "0x19",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x4",
+      "nonsquare_mask_hex": "0x38",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x7",
+      "nonsquare_mask_hex": "0x32",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x8",
+      "nonsquare_mask_hex": "0x4a",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0xb",
+      "nonsquare_mask_hex": "0x70",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0xd",
+      "nonsquare_mask_hex": "0x64",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0xe",
+      "nonsquare_mask_hex": "0x7a",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x10",
+      "nonsquare_mask_hex": "0x29",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x13",
+      "nonsquare_mask_hex": "0x15",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x15",
+      "nonsquare_mask_hex": "0x61",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x19",
+      "nonsquare_mask_hex": "0x49",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x1a",
+      "nonsquare_mask_hex": "0x79",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x1f",
+      "nonsquare_mask_hex": "0x75",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x20",
+      "nonsquare_mask_hex": "0xe",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x23",
+      "nonsquare_mask_hex": "0x52",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x25",
+      "nonsquare_mask_hex": "0x2a",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x29",
+      "nonsquare_mask_hex": "0x43",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x2a",
+      "nonsquare_mask_hex": "0x5b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x2c",
+      "nonsquare_mask_hex": "0x6e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x31",
+      "nonsquare_mask_hex": "0x13",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x32",
+      "nonsquare_mask_hex": "0x1f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x34",
+      "nonsquare_mask_hex": "0x3b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x37",
+      "nonsquare_mask_hex": "0x73",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x3d",
+      "nonsquare_mask_hex": "0x6b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x3e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x40",
+      "nonsquare_mask_hex": "0x4c",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x43",
+      "nonsquare_mask_hex": "0x1c",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x45",
+      "nonsquare_mask_hex": "0x25",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x46",
+      "nonsquare_mask_hex": "0x3d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x49",
+      "nonsquare_mask_hex": "0x54",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x4c",
+      "nonsquare_mask_hex": "0x7c",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x51",
+      "nonsquare_mask_hex": "0x7",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x54",
+      "nonsquare_mask_hex": "0x6d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x57",
+      "nonsquare_mask_hex": "0x37",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x58",
+      "nonsquare_mask_hex": "0x4f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x5b",
+      "nonsquare_mask_hex": "0x5d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x5e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x61",
+      "nonsquare_mask_hex": "0x26",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x62",
+      "nonsquare_mask_hex": "0x5e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x67",
+      "nonsquare_mask_hex": "0x3e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x6b",
+      "nonsquare_mask_hex": "0x76",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x6d",
+      "nonsquare_mask_hex": "0x67",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x6e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x70",
+      "nonsquare_mask_hex": "0x2f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x76",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x79",
+      "nonsquare_mask_hex": "0x57",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x7a",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x7c",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 0,
+      "square_mask_hex": "0x7f",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x1",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x2",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x4",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x8",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x10",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x20",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x40",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x2",
+      "nonsquare_mask_hex": "0x19",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x4",
+      "nonsquare_mask_hex": "0x38",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x7",
+      "nonsquare_mask_hex": "0x32",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x8",
+      "nonsquare_mask_hex": "0x4a",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0xb",
+      "nonsquare_mask_hex": "0x70",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0xd",
+      "nonsquare_mask_hex": "0x64",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0xe",
+      "nonsquare_mask_hex": "0x7a",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x10",
+      "nonsquare_mask_hex": "0x29",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x13",
+      "nonsquare_mask_hex": "0x15",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x15",
+      "nonsquare_mask_hex": "0x61",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x19",
+      "nonsquare_mask_hex": "0x49",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x1a",
+      "nonsquare_mask_hex": "0x79",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x1f",
+      "nonsquare_mask_hex": "0x75",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x20",
+      "nonsquare_mask_hex": "0xe",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x23",
+      "nonsquare_mask_hex": "0x52",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x25",
+      "nonsquare_mask_hex": "0x2a",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x29",
+      "nonsquare_mask_hex": "0x43",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x2a",
+      "nonsquare_mask_hex": "0x5b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x2c",
+      "nonsquare_mask_hex": "0x6e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x31",
+      "nonsquare_mask_hex": "0x13",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x32",
+      "nonsquare_mask_hex": "0x1f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x34",
+      "nonsquare_mask_hex": "0x3b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x37",
+      "nonsquare_mask_hex": "0x73",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x3d",
+      "nonsquare_mask_hex": "0x6b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x3e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x40",
+      "nonsquare_mask_hex": "0x4c",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x43",
+      "nonsquare_mask_hex": "0x1c",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x45",
+      "nonsquare_mask_hex": "0x25",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x46",
+      "nonsquare_mask_hex": "0x3d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x49",
+      "nonsquare_mask_hex": "0x54",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x4c",
+      "nonsquare_mask_hex": "0x7c",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x51",
+      "nonsquare_mask_hex": "0x7",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x54",
+      "nonsquare_mask_hex": "0x6d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x57",
+      "nonsquare_mask_hex": "0x37",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x58",
+      "nonsquare_mask_hex": "0x4f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x5b",
+      "nonsquare_mask_hex": "0x5d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x5e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x61",
+      "nonsquare_mask_hex": "0x26",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x62",
+      "nonsquare_mask_hex": "0x5e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x67",
+      "nonsquare_mask_hex": "0x3e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x6b",
+      "nonsquare_mask_hex": "0x76",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x6d",
+      "nonsquare_mask_hex": "0x67",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x6e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x70",
+      "nonsquare_mask_hex": "0x2f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x76",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x79",
+      "nonsquare_mask_hex": "0x57",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x7a",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x7c",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 1,
+      "square_mask_hex": "0x7f",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x1",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x2",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x4",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x8",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x10",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x20",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x40",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x2",
+      "nonsquare_mask_hex": "0x19",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x4",
+      "nonsquare_mask_hex": "0x38",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x7",
+      "nonsquare_mask_hex": "0x32",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x8",
+      "nonsquare_mask_hex": "0x4a",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0xb",
+      "nonsquare_mask_hex": "0x70",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0xd",
+      "nonsquare_mask_hex": "0x64",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0xe",
+      "nonsquare_mask_hex": "0x7a",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x10",
+      "nonsquare_mask_hex": "0x29",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x13",
+      "nonsquare_mask_hex": "0x15",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x15",
+      "nonsquare_mask_hex": "0x61",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x19",
+      "nonsquare_mask_hex": "0x49",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x1a",
+      "nonsquare_mask_hex": "0x79",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x1f",
+      "nonsquare_mask_hex": "0x75",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x20",
+      "nonsquare_mask_hex": "0xe",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x23",
+      "nonsquare_mask_hex": "0x52",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x25",
+      "nonsquare_mask_hex": "0x2a",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x29",
+      "nonsquare_mask_hex": "0x43",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x2a",
+      "nonsquare_mask_hex": "0x5b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x2c",
+      "nonsquare_mask_hex": "0x6e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x31",
+      "nonsquare_mask_hex": "0x13",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x32",
+      "nonsquare_mask_hex": "0x1f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x34",
+      "nonsquare_mask_hex": "0x3b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x37",
+      "nonsquare_mask_hex": "0x73",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x3d",
+      "nonsquare_mask_hex": "0x6b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x3e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x40",
+      "nonsquare_mask_hex": "0x4c",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x43",
+      "nonsquare_mask_hex": "0x1c",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x45",
+      "nonsquare_mask_hex": "0x25",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x46",
+      "nonsquare_mask_hex": "0x3d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x49",
+      "nonsquare_mask_hex": "0x54",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x4c",
+      "nonsquare_mask_hex": "0x7c",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x51",
+      "nonsquare_mask_hex": "0x7",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x54",
+      "nonsquare_mask_hex": "0x6d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x57",
+      "nonsquare_mask_hex": "0x37",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x58",
+      "nonsquare_mask_hex": "0x4f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x5b",
+      "nonsquare_mask_hex": "0x5d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x5e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x61",
+      "nonsquare_mask_hex": "0x26",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x62",
+      "nonsquare_mask_hex": "0x5e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x67",
+      "nonsquare_mask_hex": "0x3e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x6b",
+      "nonsquare_mask_hex": "0x76",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x6d",
+      "nonsquare_mask_hex": "0x67",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x6e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x70",
+      "nonsquare_mask_hex": "0x2f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x76",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x79",
+      "nonsquare_mask_hex": "0x57",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x7a",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x7c",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 2,
+      "square_mask_hex": "0x7f",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x1",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x2",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x4",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x8",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x10",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x20",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x40",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x2",
+      "nonsquare_mask_hex": "0x19",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x4",
+      "nonsquare_mask_hex": "0x38",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x7",
+      "nonsquare_mask_hex": "0x32",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x8",
+      "nonsquare_mask_hex": "0x4a",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0xb",
+      "nonsquare_mask_hex": "0x70",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0xd",
+      "nonsquare_mask_hex": "0x64",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0xe",
+      "nonsquare_mask_hex": "0x7a",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x10",
+      "nonsquare_mask_hex": "0x29",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x13",
+      "nonsquare_mask_hex": "0x15",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x15",
+      "nonsquare_mask_hex": "0x61",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x19",
+      "nonsquare_mask_hex": "0x49",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x1a",
+      "nonsquare_mask_hex": "0x79",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x1f",
+      "nonsquare_mask_hex": "0x75",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x20",
+      "nonsquare_mask_hex": "0xe",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x23",
+      "nonsquare_mask_hex": "0x52",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x25",
+      "nonsquare_mask_hex": "0x2a",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x29",
+      "nonsquare_mask_hex": "0x43",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x2a",
+      "nonsquare_mask_hex": "0x5b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x2c",
+      "nonsquare_mask_hex": "0x6e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x31",
+      "nonsquare_mask_hex": "0x13",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x32",
+      "nonsquare_mask_hex": "0x1f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x34",
+      "nonsquare_mask_hex": "0x3b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x37",
+      "nonsquare_mask_hex": "0x73",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x3d",
+      "nonsquare_mask_hex": "0x6b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x3e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x40",
+      "nonsquare_mask_hex": "0x4c",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x43",
+      "nonsquare_mask_hex": "0x1c",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x45",
+      "nonsquare_mask_hex": "0x25",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x46",
+      "nonsquare_mask_hex": "0x3d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x49",
+      "nonsquare_mask_hex": "0x54",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x4c",
+      "nonsquare_mask_hex": "0x7c",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x51",
+      "nonsquare_mask_hex": "0x7",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x54",
+      "nonsquare_mask_hex": "0x6d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x57",
+      "nonsquare_mask_hex": "0x37",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x58",
+      "nonsquare_mask_hex": "0x4f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x5b",
+      "nonsquare_mask_hex": "0x5d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x5e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x61",
+      "nonsquare_mask_hex": "0x26",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x62",
+      "nonsquare_mask_hex": "0x5e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x67",
+      "nonsquare_mask_hex": "0x3e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x6b",
+      "nonsquare_mask_hex": "0x76",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x6d",
+      "nonsquare_mask_hex": "0x67",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x6e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x70",
+      "nonsquare_mask_hex": "0x2f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x76",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x79",
+      "nonsquare_mask_hex": "0x57",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x7a",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x7c",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 3,
+      "square_mask_hex": "0x7f",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x1",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x2",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x4",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x8",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x10",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x20",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x40",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x2",
+      "nonsquare_mask_hex": "0x19",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x4",
+      "nonsquare_mask_hex": "0x38",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x7",
+      "nonsquare_mask_hex": "0x32",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x8",
+      "nonsquare_mask_hex": "0x4a",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0xb",
+      "nonsquare_mask_hex": "0x70",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0xd",
+      "nonsquare_mask_hex": "0x64",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0xe",
+      "nonsquare_mask_hex": "0x7a",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x10",
+      "nonsquare_mask_hex": "0x29",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x13",
+      "nonsquare_mask_hex": "0x15",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x15",
+      "nonsquare_mask_hex": "0x61",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x19",
+      "nonsquare_mask_hex": "0x49",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x1a",
+      "nonsquare_mask_hex": "0x79",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x1f",
+      "nonsquare_mask_hex": "0x75",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x20",
+      "nonsquare_mask_hex": "0xe",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x23",
+      "nonsquare_mask_hex": "0x52",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x25",
+      "nonsquare_mask_hex": "0x2a",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x29",
+      "nonsquare_mask_hex": "0x43",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x2a",
+      "nonsquare_mask_hex": "0x5b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x2c",
+      "nonsquare_mask_hex": "0x6e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x31",
+      "nonsquare_mask_hex": "0x13",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x32",
+      "nonsquare_mask_hex": "0x1f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x34",
+      "nonsquare_mask_hex": "0x3b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x37",
+      "nonsquare_mask_hex": "0x73",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x3d",
+      "nonsquare_mask_hex": "0x6b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x3e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x40",
+      "nonsquare_mask_hex": "0x4c",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x43",
+      "nonsquare_mask_hex": "0x1c",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x45",
+      "nonsquare_mask_hex": "0x25",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x46",
+      "nonsquare_mask_hex": "0x3d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x49",
+      "nonsquare_mask_hex": "0x54",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x4c",
+      "nonsquare_mask_hex": "0x7c",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x51",
+      "nonsquare_mask_hex": "0x7",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x54",
+      "nonsquare_mask_hex": "0x6d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x57",
+      "nonsquare_mask_hex": "0x37",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x58",
+      "nonsquare_mask_hex": "0x4f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x5b",
+      "nonsquare_mask_hex": "0x5d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x5e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x61",
+      "nonsquare_mask_hex": "0x26",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x62",
+      "nonsquare_mask_hex": "0x5e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x67",
+      "nonsquare_mask_hex": "0x3e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x6b",
+      "nonsquare_mask_hex": "0x76",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x6d",
+      "nonsquare_mask_hex": "0x67",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x6e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x70",
+      "nonsquare_mask_hex": "0x2f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x76",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x79",
+      "nonsquare_mask_hex": "0x57",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x7a",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x7c",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 4,
+      "square_mask_hex": "0x7f",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x1",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x2",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x4",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x8",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x10",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x20",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x40",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x2",
+      "nonsquare_mask_hex": "0x19",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x4",
+      "nonsquare_mask_hex": "0x38",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x7",
+      "nonsquare_mask_hex": "0x32",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x8",
+      "nonsquare_mask_hex": "0x4a",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0xb",
+      "nonsquare_mask_hex": "0x70",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0xd",
+      "nonsquare_mask_hex": "0x64",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0xe",
+      "nonsquare_mask_hex": "0x7a",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x10",
+      "nonsquare_mask_hex": "0x29",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x13",
+      "nonsquare_mask_hex": "0x15",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x15",
+      "nonsquare_mask_hex": "0x61",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x19",
+      "nonsquare_mask_hex": "0x49",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x1a",
+      "nonsquare_mask_hex": "0x79",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x1f",
+      "nonsquare_mask_hex": "0x75",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x20",
+      "nonsquare_mask_hex": "0xe",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x23",
+      "nonsquare_mask_hex": "0x52",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x25",
+      "nonsquare_mask_hex": "0x2a",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x29",
+      "nonsquare_mask_hex": "0x43",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x2a",
+      "nonsquare_mask_hex": "0x5b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x2c",
+      "nonsquare_mask_hex": "0x6e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x31",
+      "nonsquare_mask_hex": "0x13",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x32",
+      "nonsquare_mask_hex": "0x1f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x34",
+      "nonsquare_mask_hex": "0x3b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x37",
+      "nonsquare_mask_hex": "0x73",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x3d",
+      "nonsquare_mask_hex": "0x6b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x3e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x40",
+      "nonsquare_mask_hex": "0x4c",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x43",
+      "nonsquare_mask_hex": "0x1c",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x45",
+      "nonsquare_mask_hex": "0x25",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x46",
+      "nonsquare_mask_hex": "0x3d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x49",
+      "nonsquare_mask_hex": "0x54",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x4c",
+      "nonsquare_mask_hex": "0x7c",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x51",
+      "nonsquare_mask_hex": "0x7",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x54",
+      "nonsquare_mask_hex": "0x6d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x57",
+      "nonsquare_mask_hex": "0x37",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x58",
+      "nonsquare_mask_hex": "0x4f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x5b",
+      "nonsquare_mask_hex": "0x5d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x5e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x61",
+      "nonsquare_mask_hex": "0x26",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x62",
+      "nonsquare_mask_hex": "0x5e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x67",
+      "nonsquare_mask_hex": "0x3e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x6b",
+      "nonsquare_mask_hex": "0x76",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x6d",
+      "nonsquare_mask_hex": "0x67",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x6e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x70",
+      "nonsquare_mask_hex": "0x2f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x76",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x79",
+      "nonsquare_mask_hex": "0x57",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x7a",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x7c",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 5,
+      "square_mask_hex": "0x7f",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x1",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x2",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x4",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x8",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x10",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x20",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x40",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x2",
+      "nonsquare_mask_hex": "0x19",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x4",
+      "nonsquare_mask_hex": "0x38",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x7",
+      "nonsquare_mask_hex": "0x32",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x8",
+      "nonsquare_mask_hex": "0x4a",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0xb",
+      "nonsquare_mask_hex": "0x70",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0xd",
+      "nonsquare_mask_hex": "0x64",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0xe",
+      "nonsquare_mask_hex": "0x7a",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x10",
+      "nonsquare_mask_hex": "0x29",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x13",
+      "nonsquare_mask_hex": "0x15",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x15",
+      "nonsquare_mask_hex": "0x61",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x19",
+      "nonsquare_mask_hex": "0x49",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x1a",
+      "nonsquare_mask_hex": "0x79",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x1f",
+      "nonsquare_mask_hex": "0x75",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x20",
+      "nonsquare_mask_hex": "0xe",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x23",
+      "nonsquare_mask_hex": "0x52",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x25",
+      "nonsquare_mask_hex": "0x2a",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x29",
+      "nonsquare_mask_hex": "0x43",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x2a",
+      "nonsquare_mask_hex": "0x5b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x2c",
+      "nonsquare_mask_hex": "0x6e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x31",
+      "nonsquare_mask_hex": "0x13",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x32",
+      "nonsquare_mask_hex": "0x1f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x34",
+      "nonsquare_mask_hex": "0x3b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x37",
+      "nonsquare_mask_hex": "0x73",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x3d",
+      "nonsquare_mask_hex": "0x6b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x3e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x40",
+      "nonsquare_mask_hex": "0x4c",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x43",
+      "nonsquare_mask_hex": "0x1c",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x45",
+      "nonsquare_mask_hex": "0x25",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x46",
+      "nonsquare_mask_hex": "0x3d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x49",
+      "nonsquare_mask_hex": "0x54",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x4c",
+      "nonsquare_mask_hex": "0x7c",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x51",
+      "nonsquare_mask_hex": "0x7",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x54",
+      "nonsquare_mask_hex": "0x6d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x57",
+      "nonsquare_mask_hex": "0x37",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x58",
+      "nonsquare_mask_hex": "0x4f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x5b",
+      "nonsquare_mask_hex": "0x5d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x5e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x61",
+      "nonsquare_mask_hex": "0x26",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x62",
+      "nonsquare_mask_hex": "0x5e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x67",
+      "nonsquare_mask_hex": "0x3e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x6b",
+      "nonsquare_mask_hex": "0x76",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x6d",
+      "nonsquare_mask_hex": "0x67",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x6e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x70",
+      "nonsquare_mask_hex": "0x2f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x76",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x79",
+      "nonsquare_mask_hex": "0x57",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x7a",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x7c",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 6,
+      "square_mask_hex": "0x7f",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x1",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x2",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x4",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x8",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x10",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x20",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x1",
+      "nonsquare_mask_hex": "0x40",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x0",
+        "0x0"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x2",
+      "nonsquare_mask_hex": "0x19",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x4",
+      "nonsquare_mask_hex": "0x38",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x7",
+      "nonsquare_mask_hex": "0x32",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x8",
+      "nonsquare_mask_hex": "0x4a",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0xb",
+      "nonsquare_mask_hex": "0x70",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0xd",
+      "nonsquare_mask_hex": "0x64",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0xe",
+      "nonsquare_mask_hex": "0x7a",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x10",
+      "nonsquare_mask_hex": "0x29",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x13",
+      "nonsquare_mask_hex": "0x15",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x15",
+      "nonsquare_mask_hex": "0x61",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x19",
+      "nonsquare_mask_hex": "0x49",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x1a",
+      "nonsquare_mask_hex": "0x79",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x1f",
+      "nonsquare_mask_hex": "0x75",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x20",
+      "nonsquare_mask_hex": "0xe",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x23",
+      "nonsquare_mask_hex": "0x52",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x25",
+      "nonsquare_mask_hex": "0x2a",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x29",
+      "nonsquare_mask_hex": "0x43",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x2a",
+      "nonsquare_mask_hex": "0x5b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x2c",
+      "nonsquare_mask_hex": "0x6e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x31",
+      "nonsquare_mask_hex": "0x13",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x32",
+      "nonsquare_mask_hex": "0x1f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x34",
+      "nonsquare_mask_hex": "0x3b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x37",
+      "nonsquare_mask_hex": "0x73",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x3d",
+      "nonsquare_mask_hex": "0x6b",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x3e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x40",
+      "nonsquare_mask_hex": "0x4c",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x43",
+      "nonsquare_mask_hex": "0x1c",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x45",
+      "nonsquare_mask_hex": "0x25",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x46",
+      "nonsquare_mask_hex": "0x3d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x49",
+      "nonsquare_mask_hex": "0x54",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x1",
+        "0x1f"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x4c",
+      "nonsquare_mask_hex": "0x7c",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x51",
+      "nonsquare_mask_hex": "0x7",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x17",
+        "0x8"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x54",
+      "nonsquare_mask_hex": "0x6d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x57",
+      "nonsquare_mask_hex": "0x37",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x58",
+      "nonsquare_mask_hex": "0x4f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x5b",
+      "nonsquare_mask_hex": "0x5d",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x5e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x61",
+      "nonsquare_mask_hex": "0x26",
+      "state_trace": 0,
+      "ratio_pair": [
+        "0x16",
+        "0x17"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x62",
+      "nonsquare_mask_hex": "0x5e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x67",
+      "nonsquare_mask_hex": "0x3e",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x6b",
+      "nonsquare_mask_hex": "0x76",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x8",
+        "0x1"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x6d",
+      "nonsquare_mask_hex": "0x67",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x9",
+        "0x1e"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x6e",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x70",
+      "nonsquare_mask_hex": "0x2f",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x76",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x79",
+      "nonsquare_mask_hex": "0x57",
+      "state_trace": 1,
+      "ratio_pair": [
+        "0x1f",
+        "0x9"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x7a",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x7c",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    },
+    {
+      "k_residue": 7,
+      "square_mask_hex": "0x7f",
+      "nonsquare_mask_hex": "0x7f",
+      "state_trace": 0,
+      "ratio_pair": [
+        "none",
+        "none"
+      ],
+      "answer": "sat"
+    }
+  ]
+}

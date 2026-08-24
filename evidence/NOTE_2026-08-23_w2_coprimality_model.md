@@ -1241,9 +1241,39 @@ The remaining generator lemma is now only the specialization
 
 for the actual affine line `1+t sigma`, equivalently `tau=1`.  It is verified
 above but not yet proved uniformly; no searched source supplied this exact
-mod-four cyclotomic parity.  Even after proving it, W2 still needs the boundary
-statement that the scalar `c_a` cannot vanish at both reciprocal sextics for
-all first three differences.
+mod-four cyclotomic parity.
+
+Lifting the parity bins to integer counts makes that target more concrete but
+also kills one tempting proof.  Let `q_0,...,q_6` count the points of
+`R={1+t sigma}` in the seven nonsquare classes with `j=0 (mod 3)`.  Projective
+transversality gives
+
+    sum q_i = (p+1)/6,
+
+and, more generally, the six square/cubic class totals of `R` are
+
+    (N,N,N,N-1,N,N),       N=(p+1)/6.
+
+The twenty direct generator records now retain all integer class counts and
+verify these formulas.  The missing trace statement is exactly
+
+    #{i : q_i is odd} == 1 (mod 4).
+
+The global relative-difference-set autocorrelation does not force it.  Writing
+`p=84k+29`, every one of the 56 parity states admits a lift of the 42
+multiplicative-coset counts modulo four for both parities of `k`.  A stronger
+bit-vector check imposes Frobenius symmetry, all six exact class totals, and
+every exact cyclic autocorrelation modulo 16.  All 448 systems (56 states for
+the eight classes `k mod 8`) are still satisfiable, including all 28 `tau=0`
+states.  Therefore any proof of the mod-four weight must use phase information
+specific to the affine line, not only the RDS parameters or their 2-adic lifts
+through modulus 16.  The reproducible negative is
+`scripts/w2_d21_rds_mod8_lift.py` with
+`evidence/w2_d21_rds_mod16_lift.json`.
+
+Even after proving the generator trace, W2 still needs the boundary statement
+that the scalar `c_a` cannot vanish at both reciprocal sextics for all first
+three differences.
 
 Projectivizing the three nonsquare scalar residues did not expose that last
 statement.  Through `100000`, each reciprocal side covers all 73 points of

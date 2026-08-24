@@ -29,6 +29,38 @@
     "1": 28
   },
   "state_trace_linear_in_support_bits": null,
+  "mod4_rds_lift_counts_by_k_parity_and_trace": {
+    "0": {
+      "0": 28,
+      "1": 28
+    },
+    "1": {
+      "0": 28,
+      "1": 28
+    }
+  },
+  "mod4_rds_lift_ratio_counts_by_k_parity": {
+    "0": {
+      "0x0|0x0": 7,
+      "0x1|0x1f": 7,
+      "0x16|0x17": 7,
+      "0x17|0x8": 7,
+      "0x1f|0x9": 7,
+      "0x8|0x1": 7,
+      "0x9|0x1e": 7,
+      "none|none": 7
+    },
+    "1": {
+      "0x0|0x0": 7,
+      "0x1|0x1f": 7,
+      "0x16|0x17": 7,
+      "0x17|0x8": 7,
+      "0x1f|0x9": 7,
+      "0x8|0x1": 7,
+      "0x9|0x1e": 7,
+      "none|none": 7
+    }
+  },
   "ratio_pair_counts_by_state_trace": {
     "0": {
       "0x1|0x1f": 7,
