@@ -128,10 +128,17 @@ def encode_counter(counter: collections.Counter) -> dict[str, int]:
     }
 
 
+def oddpart(value: int) -> int:
+    while value % 2 == 0:
+        value //= 2
+    return value
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--start", type=int, default=5)
     parser.add_argument("--stop", type=int, required=True)
+    parser.add_argument("--orders")
     parser.add_argument("--max-order", type=int, default=4095)
     parser.add_argument("--prefix", type=int, default=3)
     parser.add_argument("--workers", type=int, default=1)
@@ -139,14 +146,28 @@ def main() -> None:
     args = parser.parse_args()
     if args.prefix < 1 or args.workers < 1:
         raise ValueError("prefix and workers must be positive")
-    if args.max_order < 3 or args.max_order % 2 == 0:
+    if not args.orders and (args.max_order < 3 or args.max_order % 2 == 0):
         raise ValueError("max-order must be odd and at least three")
 
-    orders = list(range(3, args.max_order + 1, 2))
+    orders = (
+        sorted(set(map(int, args.orders.split(","))))
+        if args.orders
+        else list(range(3, args.max_order + 1, 2))
+    )
+    if any(order < 3 or order % 2 == 0 for order in orders):
+        raise ValueError("orders must be odd and at least three")
     primes = [
         p
         for p in range(max(5, args.start), args.stop + 1)
         if p % 12 == 5 and is_prime(p)
+        and (
+            not args.orders
+            or any(
+                ((p + 1) // 2 * oddpart(p - 1)) % order == 0
+                and ((p + 1) // 2) % order != 0
+                for order in orders
+            )
+        )
     ]
     started = time.perf_counter()
     rows = []
@@ -176,7 +197,8 @@ def main() -> None:
         "range": [args.start, args.stop],
         "congruence_class": "p == 5 (mod 12)",
         "prefix": args.prefix,
-        "max_requested_order": args.max_order,
+        "requested_orders": orders,
+        "max_requested_order": max(orders),
         "algorithm": "parallel direct lines; exact oriented gcd and reversible core",
         "n_primes": len(rows),
         "records": sum(row["records"] for row in rows),

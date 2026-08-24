@@ -1,0 +1,1413 @@
+{
+  "range": null,
+  "explicit_primes": [
+    73613,
+    129221,
+    133253,
+    172313,
+    202637,
+    222713,
+    310997,
+    457241,
+    472697,
+    639941
+  ],
+  "congruence_class": "p == 29 (mod 84)",
+  "order": 21,
+  "factor_hex": [
+    "0x57",
+    "0x75"
+  ],
+  "full_mask_hex": "0x3f",
+  "n_primes": 10,
+  "mask_pair_counts": {
+    "0x03,0x3f": 2,
+    "0x30,0x3f": 1,
+    "0x3f,0x00": 2,
+    "0x3f,0x0c": 2,
+    "0x3f,0x0f": 1,
+    "0x3f,0x1d": 1,
+    "0x3f,0x30": 1
+  },
+  "component_ratio_counts": [
+    {
+      "none": 7,
+      "0x9": 3
+    },
+    {
+      "none": 3,
+      "0x0": 1,
+      "0x1": 1,
+      "0x9": 1,
+      "0x35": 4
+    }
+  ],
+  "component_ratio_pair_counts": {
+    "none|0x0": 1,
+    "none|0x1": 1,
+    "none|0x9": 1,
+    "none|0x35": 4,
+    "0x9|none": 3
+  },
+  "nonsquare_zero_without_square_zero": [],
+  "multiple_component_ratios": [],
+  "subfield_violations": [],
+  "component_remainder_pair_counts": [
+    {
+      "0x00,0x00": 24,
+      "0x09,0x02": 2,
+      "0x17,0x3c": 2,
+      "0x1e,0x3e": 1,
+      "0x1f,0x10": 1
+    },
+    {
+      "0x00,0x00": 15,
+      "0x00,0x0d": 1,
+      "0x00,0x1d": 1,
+      "0x01,0x02": 1,
+      "0x08,0x0d": 1,
+      "0x08,0x1d": 2,
+      "0x09,0x10": 1,
+      "0x09,0x12": 1,
+      "0x34,0x0f": 1,
+      "0x34,0x12": 1,
+      "0x35,0x02": 1,
+      "0x35,0x1d": 1,
+      "0x3c,0x12": 2,
+      "0x3d,0x1f": 1
+    }
+  ],
+  "component_remainder_pair_counts_by_difference": [
+    [
+      {
+        "0x00,0x00": 9,
+        "0x17,0x3c": 1
+      },
+      {
+        "0x00,0x00": 7,
+        "0x09,0x02": 1,
+        "0x17,0x3c": 1,
+        "0x1f,0x10": 1
+      },
+      {
+        "0x00,0x00": 8,
+        "0x09,0x02": 1,
+        "0x1e,0x3e": 1
+      }
+    ],
+    [
+      {
+        "0x00,0x00": 4,
+        "0x00,0x1d": 1,
+        "0x08,0x0d": 1,
+        "0x09,0x10": 1,
+        "0x09,0x12": 1,
+        "0x34,0x0f": 1,
+        "0x3c,0x12": 1
+      },
+      {
+        "0x00,0x00": 7,
+        "0x08,0x1d": 1,
+        "0x35,0x1d": 1,
+        "0x3d,0x1f": 1
+      },
+      {
+        "0x00,0x00": 4,
+        "0x00,0x0d": 1,
+        "0x01,0x02": 1,
+        "0x08,0x1d": 1,
+        "0x34,0x12": 1,
+        "0x35,0x02": 1,
+        "0x3c,0x12": 1
+      }
+    ]
+  ],
+  "one_sided_full": [
+    {
+      "p": 73613,
+      "masks": [
+        63,
+        12
+      ],
+      "popcounts": [
+        6,
+        2
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            9,
+            16
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            53,
+            2
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [],
+        [
+          53
+        ]
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x3558e",
+          "0x109160"
+        ],
+        [
+          "0x91224",
+          "0x16db6d"
+        ],
+        [
+          "0x1f242c",
+          "0x2122c"
+        ]
+      ],
+      "elapsed_seconds": 1.0947054689895594
+    },
+    {
+      "p": 129221,
+      "masks": [
+        63,
+        12
+      ],
+      "popcounts": [
+        6,
+        2
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            9,
+            18
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [],
+        [
+          1
+        ]
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x8c2a0",
+          "0x12834c"
+        ],
+        [
+          "0xa1428",
+          "0x0"
+        ],
+        [
+          "0xe4cf0",
+          "0x2122c"
+        ]
+      ],
+      "elapsed_seconds": 1.7657762889866717
+    },
+    {
+      "p": 133253,
+      "masks": [
+        63,
+        15
+      ],
+      "popcounts": [
+        6,
+        4
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            8,
+            29
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [],
+        [
+          53
+        ]
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x0",
+          "0x0"
+        ],
+        [
+          "0x1b366c",
+          "0x0"
+        ],
+        [
+          "0x1014e",
+          "0x69928"
+        ]
+      ],
+      "elapsed_seconds": 2.178985959995771
+    },
+    {
+      "p": 172313,
+      "masks": [
+        3,
+        63
+      ],
+      "popcounts": [
+        2,
+        6
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            23,
+            60
+          ],
+          [
+            9,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [
+          9
+        ],
+        []
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0xf1e3c",
+          "0x16db6d"
+        ],
+        [
+          "0x19f2ac",
+          "0x41a24"
+        ],
+        [
+          "0xc4bbb",
+          "0x2932c"
+        ]
+      ],
+      "elapsed_seconds": 2.453656604993739
+    },
+    {
+      "p": 202637,
+      "masks": [
+        63,
+        0
+      ],
+      "popcounts": [
+        6,
+        0
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            8,
+            13
+          ],
+          [
+            53,
+            29
+          ],
+          [
+            52,
+            18
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [],
+        [
+          9
+        ]
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x20742",
+          "0x160848"
+        ],
+        [
+          "0x1ea72a",
+          "0x104245"
+        ],
+        [
+          "0x1764c4",
+          "0x45821"
+        ]
+      ],
+      "elapsed_seconds": 3.336712766002165
+    },
+    {
+      "p": 222713,
+      "masks": [
+        3,
+        63
+      ],
+      "popcounts": [
+        2,
+        6
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            30,
+            62
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [
+          9
+        ],
+        []
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x89122",
+          "0x16db6d"
+        ],
+        [
+          "0x9208",
+          "0x144841"
+        ],
+        [
+          "0x107280",
+          "0x68908"
+        ]
+      ],
+      "elapsed_seconds": 3.282341894999263
+    },
+    {
+      "p": 310997,
+      "masks": [
+        63,
+        29
+      ],
+      "popcounts": [
+        6,
+        4
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            29
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            13
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [],
+        [
+          0
+        ]
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x89122",
+          "0x104245"
+        ],
+        [
+          "0x122448",
+          "0x16db6d"
+        ],
+        [
+          "0x91224",
+          "0xd325"
+        ]
+      ],
+      "elapsed_seconds": 5.063570710000931
+    },
+    {
+      "p": 457241,
+      "masks": [
+        63,
+        48
+      ],
+      "popcounts": [
+        6,
+        2
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            52,
+            15
+          ],
+          [
+            61,
+            31
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [],
+        [
+          53
+        ]
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x40209",
+          "0x2c109"
+        ],
+        [
+          "0x90b3e",
+          "0x48b04"
+        ],
+        [
+          "0x0",
+          "0x16db6d"
+        ]
+      ],
+      "elapsed_seconds": 7.639689734001877
+    },
+    {
+      "p": 472697,
+      "masks": [
+        63,
+        0
+      ],
+      "popcounts": [
+        6,
+        0
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            60,
+            18
+          ],
+          [
+            8,
+            29
+          ],
+          [
+            60,
+            18
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [],
+        [
+          53
+        ]
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x953",
+          "0x45821"
+        ],
+        [
+          "0x132506",
+          "0x69928"
+        ],
+        [
+          "0x14e080",
+          "0x45821"
+        ]
+      ],
+      "elapsed_seconds": 8.067042258000583
+    },
+    {
+      "p": 639941,
+      "masks": [
+        48,
+        63
+      ],
+      "popcounts": [
+        2,
+        6
+      ],
+      "remainders": [
+        [
+          [
+            23,
+            60
+          ],
+          [
+            31,
+            16
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [
+          9
+        ],
+        []
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x16ec90",
+          "0x12c149"
+        ],
+        [
+          "0xe45eb",
+          "0x149960"
+        ],
+        [
+          "0x6cd9b",
+          "0x16db6d"
+        ]
+      ],
+      "elapsed_seconds": 8.917035145990667
+    }
+  ],
+  "reciprocal_pair_failures": [],
+  "retain_popcount": 0,
+  "retained": [
+    {
+      "p": 73613,
+      "masks": [
+        63,
+        12
+      ],
+      "popcounts": [
+        6,
+        2
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            9,
+            16
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            53,
+            2
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [],
+        [
+          53
+        ]
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x3558e",
+          "0x109160"
+        ],
+        [
+          "0x91224",
+          "0x16db6d"
+        ],
+        [
+          "0x1f242c",
+          "0x2122c"
+        ]
+      ],
+      "elapsed_seconds": 1.0947054689895594
+    },
+    {
+      "p": 129221,
+      "masks": [
+        63,
+        12
+      ],
+      "popcounts": [
+        6,
+        2
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            9,
+            18
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [],
+        [
+          1
+        ]
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x8c2a0",
+          "0x12834c"
+        ],
+        [
+          "0xa1428",
+          "0x0"
+        ],
+        [
+          "0xe4cf0",
+          "0x2122c"
+        ]
+      ],
+      "elapsed_seconds": 1.7657762889866717
+    },
+    {
+      "p": 133253,
+      "masks": [
+        63,
+        15
+      ],
+      "popcounts": [
+        6,
+        4
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            8,
+            29
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [],
+        [
+          53
+        ]
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x0",
+          "0x0"
+        ],
+        [
+          "0x1b366c",
+          "0x0"
+        ],
+        [
+          "0x1014e",
+          "0x69928"
+        ]
+      ],
+      "elapsed_seconds": 2.178985959995771
+    },
+    {
+      "p": 172313,
+      "masks": [
+        3,
+        63
+      ],
+      "popcounts": [
+        2,
+        6
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            23,
+            60
+          ],
+          [
+            9,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [
+          9
+        ],
+        []
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0xf1e3c",
+          "0x16db6d"
+        ],
+        [
+          "0x19f2ac",
+          "0x41a24"
+        ],
+        [
+          "0xc4bbb",
+          "0x2932c"
+        ]
+      ],
+      "elapsed_seconds": 2.453656604993739
+    },
+    {
+      "p": 202637,
+      "masks": [
+        63,
+        0
+      ],
+      "popcounts": [
+        6,
+        0
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            8,
+            13
+          ],
+          [
+            53,
+            29
+          ],
+          [
+            52,
+            18
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [],
+        [
+          9
+        ]
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x20742",
+          "0x160848"
+        ],
+        [
+          "0x1ea72a",
+          "0x104245"
+        ],
+        [
+          "0x1764c4",
+          "0x45821"
+        ]
+      ],
+      "elapsed_seconds": 3.336712766002165
+    },
+    {
+      "p": 222713,
+      "masks": [
+        3,
+        63
+      ],
+      "popcounts": [
+        2,
+        6
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            30,
+            62
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [
+          9
+        ],
+        []
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x89122",
+          "0x16db6d"
+        ],
+        [
+          "0x9208",
+          "0x144841"
+        ],
+        [
+          "0x107280",
+          "0x68908"
+        ]
+      ],
+      "elapsed_seconds": 3.282341894999263
+    },
+    {
+      "p": 310997,
+      "masks": [
+        63,
+        29
+      ],
+      "popcounts": [
+        6,
+        4
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            29
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            13
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [],
+        [
+          0
+        ]
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x89122",
+          "0x104245"
+        ],
+        [
+          "0x122448",
+          "0x16db6d"
+        ],
+        [
+          "0x91224",
+          "0xd325"
+        ]
+      ],
+      "elapsed_seconds": 5.063570710000931
+    },
+    {
+      "p": 457241,
+      "masks": [
+        63,
+        48
+      ],
+      "popcounts": [
+        6,
+        2
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            52,
+            15
+          ],
+          [
+            61,
+            31
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [],
+        [
+          53
+        ]
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x40209",
+          "0x2c109"
+        ],
+        [
+          "0x90b3e",
+          "0x48b04"
+        ],
+        [
+          "0x0",
+          "0x16db6d"
+        ]
+      ],
+      "elapsed_seconds": 7.639689734001877
+    },
+    {
+      "p": 472697,
+      "masks": [
+        63,
+        0
+      ],
+      "popcounts": [
+        6,
+        0
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            60,
+            18
+          ],
+          [
+            8,
+            29
+          ],
+          [
+            60,
+            18
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [],
+        [
+          53
+        ]
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x953",
+          "0x45821"
+        ],
+        [
+          "0x132506",
+          "0x69928"
+        ],
+        [
+          "0x14e080",
+          "0x45821"
+        ]
+      ],
+      "elapsed_seconds": 8.067042258000583
+    },
+    {
+      "p": 639941,
+      "masks": [
+        48,
+        63
+      ],
+      "popcounts": [
+        2,
+        6
+      ],
+      "remainders": [
+        [
+          [
+            23,
+            60
+          ],
+          [
+            31,
+            16
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [
+          9
+        ],
+        []
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x16ec90",
+          "0x12c149"
+        ],
+        [
+          "0xe45eb",
+          "0x149960"
+        ],
+        [
+          "0x6cd9b",
+          "0x16db6d"
+        ]
+      ],
+      "elapsed_seconds": 8.917035145990667
+    }
+  ],
+  "line_cpu_seconds": 43.79951683196123,
+  "elapsed_seconds": 9.364844021998579
+}

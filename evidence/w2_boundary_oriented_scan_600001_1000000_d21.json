@@ -1,0 +1,38 @@
+{
+  "range": [
+    600001,
+    1000000
+  ],
+  "congruence_class": "p == 5 (mod 12)",
+  "prefix": 3,
+  "requested_orders": [
+    21
+  ],
+  "max_requested_order": 21,
+  "algorithm": "parallel direct lines; exact oriented gcd and reversible core",
+  "n_primes": 1212,
+  "records": 1212,
+  "max_order_tested": 21,
+  "raw_clearance_counts": {
+    "1": 1194,
+    "2": 18
+  },
+  "oriented_gcd_degree_counts": {
+    "0": 1211,
+    "6": 1
+  },
+  "oriented_nonunits": [
+    {
+      "p": 639941,
+      "order": 21,
+      "oriented_gcd_hex": "0x75",
+      "oriented_gcd_degree": 6,
+      "reciprocal_hex": "0x57",
+      "reversible_core_hex": "0x1",
+      "reversible_core_degree": 0
+    }
+  ],
+  "reversible_exceptions": [],
+  "line_cpu_seconds": 18468.471580989004,
+  "elapsed_seconds": 471.84015991698834
+}

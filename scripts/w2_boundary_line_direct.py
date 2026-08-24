@@ -30,10 +30,9 @@ sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from e1_gmin_m4_prop15598 import field_ctx  # noqa: E402
-from e1_gmin_m4_prop15604 import _primitive  # noqa: E402
 from e1_gmin_m4_prop15613 import _finv  # noqa: E402
 from gf2x_ntl import available as ntl_available  # noqa: E402
-from gf2x_ntl import selected_line_bins  # noqa: E402
+from gf2x_ntl import field_primitive, selected_line_bins  # noqa: E402
 from io_atomic import write_json_atomic  # noqa: E402
 from w2_low_order_atomic_gpu import (  # noqa: E402
     cyclotomic_bits,
@@ -70,9 +69,18 @@ def record(
 ) -> dict:
     started = time.perf_counter()
     q, mul, _add, chi, _frob, _norm, ia, ib = field_ctx(p)
-    sigma = next(value for value in range(1, q) if chi(value) == -1)
+    # In the p == 1 (mod 4) class used by W2, the basis element omega
+    # (encoded as p) has norm -ib.  The model chooses ib nonsquare and -1
+    # is square, so omega is the first nonsquare after all p-1 nonzero base-
+    # field scalars.  Avoid testing those scalars one by one with an F_{p^2}
+    # exponentiation.
+    sigma = (
+        p
+        if p % 4 == 1
+        else next(value for value in range(1, q) if chi(value) == -1)
+    )
     sigma_inverse = _finv(mul, q, sigma)
-    omega = _primitive(mul, q)
+    omega = field_primitive(p, ia, ib)
     generator = mul(omega, omega)
     projective_order = (p + 1) // 2
     scalar_order = oddpart(p - 1)

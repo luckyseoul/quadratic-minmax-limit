@@ -72,6 +72,12 @@ def _load():
         ctypes.c_long,
     ]
     loaded.qml_gf2x_cyclic_star_product.restype = ctypes.c_long
+    loaded.qml_field_primitive.argtypes = [
+        ctypes.c_uint32,
+        ctypes.c_uint32,
+        ctypes.c_uint32,
+    ]
+    loaded.qml_field_primitive.restype = ctypes.c_uint64
     loaded.qml_field_orbits.argtypes = [
         ctypes.c_uint32,
         ctypes.c_uint32,
@@ -130,6 +136,14 @@ def available() -> bool:
     except (OSError, subprocess.SubprocessError):
         return False
     return True
+
+
+def field_primitive(p: int, ia: int, ib: int) -> int:
+    """Return the least encoded primitive element of F_(p^2)."""
+    value = int(_load().qml_field_primitive(p, ia, ib))
+    if value == 0:
+        raise RuntimeError(f"native primitive-element search failed for p={p}")
+    return value
 
 
 def gcd_bits(left: int, right: int) -> int:

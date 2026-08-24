@@ -132,7 +132,168 @@ inline std::uint64_t field_inverse_wide(
     return inverse_a + static_cast<std::uint64_t>(p) * inverse_b;
 }
 
+inline void prepare_prime_field_tables(
+    std::uint32_t p,
+    std::vector<std::uint32_t>& inverse,
+    std::vector<std::uint8_t>& square) {
+    inverse.assign(p, 0U);
+    square.assign(p, 0U);
+    inverse[1] = 1U;
+    for (std::uint32_t value = 2; value < p; ++value) {
+        inverse[value] = static_cast<std::uint32_t>(
+            p - (static_cast<std::uint64_t>(p / value) *
+                 inverse[p % value]) % p);
+    }
+    for (std::uint32_t value = 1; value <= (p - 1U) / 2U; ++value) {
+        square[(static_cast<std::uint64_t>(value) * value) % p] = 1U;
+    }
+}
+
+inline std::uint32_t field_inverse_from_table(
+    std::uint32_t value,
+    std::uint32_t p,
+    std::uint32_t ia,
+    std::uint32_t ib,
+    const std::vector<std::uint32_t>& inverse) {
+    const std::uint64_t a = value % p;
+    const std::uint64_t b = value / p;
+    const std::uint32_t norm = static_cast<std::uint32_t>(
+        (a * a + a * b * ia + p - (b * b * ib) % p) % p);
+    if (!norm) {
+        return 0;
+    }
+    const std::uint64_t inverse_norm = inverse[norm];
+    const std::uint32_t inverse_a = static_cast<std::uint32_t>(
+        ((a + b * ia) % p) * inverse_norm % p);
+    const std::uint32_t inverse_b = static_cast<std::uint32_t>(
+        ((p - b) % p) * inverse_norm % p);
+    return inverse_a + p * inverse_b;
+}
+
+inline std::uint64_t field_inverse_wide_from_table(
+    std::uint64_t value,
+    std::uint32_t p,
+    std::uint32_t ia,
+    std::uint32_t ib,
+    const std::vector<std::uint32_t>& inverse) {
+    const std::uint64_t a = value % p;
+    const std::uint64_t b = value / p;
+    const std::uint32_t norm = static_cast<std::uint32_t>(
+        (a * a + a * b * ia + p - (b * b * ib) % p) % p);
+    if (!norm) {
+        return 0;
+    }
+    const std::uint64_t inverse_norm = inverse[norm];
+    const std::uint64_t inverse_a =
+        ((a + b * ia) % p) * inverse_norm % p;
+    const std::uint64_t inverse_b = (p - b) * inverse_norm % p;
+    return inverse_a + static_cast<std::uint64_t>(p) * inverse_b;
+}
+
+inline std::uint32_t order21_character(
+    std::uint32_t base,
+    std::uint32_t p,
+    std::uint32_t ia,
+    std::uint32_t ib,
+    const std::vector<std::uint32_t>& inverse) {
+    const std::uint64_t a = base % p;
+    const std::uint64_t b = base / p;
+    const std::uint32_t norm = static_cast<std::uint32_t>(
+        (a * a + a * b * ia + p - (b * b * ib) % p) % p);
+    const std::uint32_t scalar =
+        prime_field_power(norm, (p - 1U) / 14U, p);
+    const std::uint64_t scalar2 =
+        static_cast<std::uint64_t>(scalar) * scalar % p;
+    const std::uint64_t scalar4 = scalar2 * scalar2 % p;
+    const std::uint32_t scalar5 = static_cast<std::uint32_t>(
+        scalar4 * scalar % p);
+
+    const std::uint32_t inverse_base = field_inverse_from_table(
+        base, p, ia, ib, inverse);
+    const std::uint32_t conjugate = static_cast<std::uint32_t>(
+        (a + b * ia) % p) + p * static_cast<std::uint32_t>(
+            b == 0 ? 0 : p - b);
+    const std::uint32_t torus = field_multiply(
+        conjugate, inverse_base, p, ia, ib);
+    const std::uint32_t projective = field_power(
+        torus, (p + 1U) / 6U, p, ia, ib);
+    return static_cast<std::uint32_t>(
+        (static_cast<std::uint64_t>(projective % p) * scalar5) % p) +
+        p * static_cast<std::uint32_t>(
+            (static_cast<std::uint64_t>(projective / p) * scalar5) % p);
+}
+
+inline std::uint64_t order21_character_wide(
+    std::uint64_t base,
+    std::uint32_t p,
+    std::uint32_t ia,
+    std::uint32_t ib,
+    const std::vector<std::uint32_t>& inverse) {
+    const std::uint64_t a = base % p;
+    const std::uint64_t b = base / p;
+    const std::uint32_t norm = static_cast<std::uint32_t>(
+        (a * a + a * b * ia + p - (b * b * ib) % p) % p);
+    const std::uint32_t scalar =
+        prime_field_power(norm, (p - 1U) / 14U, p);
+    const std::uint64_t scalar2 =
+        static_cast<std::uint64_t>(scalar) * scalar % p;
+    const std::uint64_t scalar4 = scalar2 * scalar2 % p;
+    const std::uint64_t scalar5 = scalar4 * scalar % p;
+
+    const std::uint64_t inverse_base = field_inverse_wide_from_table(
+        base, p, ia, ib, inverse);
+    const std::uint64_t conjugate = (a + b * ia) % p +
+        static_cast<std::uint64_t>(p) * (b == 0 ? 0 : p - b);
+    const std::uint64_t torus = field_multiply_wide(
+        conjugate, inverse_base, p, ia, ib);
+    const std::uint64_t projective = field_power_wide(
+        torus, (p + 1U) / 6U, p, ia, ib);
+    return (projective % p) * scalar5 % p +
+        static_cast<std::uint64_t>(p) *
+            ((projective / p) * scalar5 % p);
+}
+
 }  // namespace
+
+extern "C" std::uint64_t qml_field_primitive(
+    std::uint32_t p,
+    std::uint32_t ia,
+    std::uint32_t ib) {
+    if (p < 3 || p > 1000000U) {
+        return 0;
+    }
+    const std::uint64_t order = static_cast<std::uint64_t>(p) * p - 1U;
+    std::uint64_t remaining = order;
+    std::vector<std::uint64_t> prime_factors;
+    for (std::uint64_t divisor = 2; divisor * divisor <= remaining;
+         divisor += divisor == 2 ? 1 : 2) {
+        if (remaining % divisor != 0) {
+            continue;
+        }
+        prime_factors.push_back(divisor);
+        do {
+            remaining /= divisor;
+        } while (remaining % divisor == 0);
+    }
+    if (remaining > 1) {
+        prime_factors.push_back(remaining);
+    }
+    const std::uint64_t q = static_cast<std::uint64_t>(p) * p;
+    for (std::uint64_t value = 2; value < q; ++value) {
+        bool primitive = true;
+        for (const std::uint64_t factor : prime_factors) {
+            if (field_power_wide(
+                    value, order / factor, p, ia, ib) == 1) {
+                primitive = false;
+                break;
+            }
+        }
+        if (primitive) {
+            return value;
+        }
+    }
+    return 0;
+}
 
 extern "C" long qml_gf2x_gcd(
     const std::uint8_t* a,
@@ -294,6 +455,12 @@ extern "C" int qml_selected_line_bins(
     if (!omega_inverse) {
         return -3;
     }
+    // These buffers persist within each worker process.  One O(p) setup
+    // replaces norm inversion and Euler-criterion exponentiations on every
+    // point of every selected line.
+    static thread_local std::vector<std::uint32_t> prime_inverse;
+    static thread_local std::vector<std::uint8_t> quadratic_residue;
+    prepare_prime_field_tables(p, prime_inverse, quadratic_residue);
     std::vector<std::vector<std::pair<std::uint32_t, std::uint32_t>>> tables;
     tables.reserve(static_cast<std::size_t>(n_orders));
     for (long index = 0; index < n_orders; ++index) {
@@ -331,8 +498,8 @@ extern "C" int qml_selected_line_bins(
                 pole_t, image, p, ia, ib);
             denominator = (denominator % p + p - 1) % p +
                 p * (denominator / p);
-            const std::uint32_t denominator_inverse = field_inverse(
-                denominator, p, ia, ib);
+            const std::uint32_t denominator_inverse = field_inverse_from_table(
+                denominator, p, ia, ib, prime_inverse);
             if (!denominator_inverse) {
                 continue;
             }
@@ -345,15 +512,19 @@ extern "C" int qml_selected_line_bins(
             const std::uint64_t b = point / p;
             const std::uint32_t norm = static_cast<std::uint32_t>(
                 (a * a + a * b * ia + p - (b * b * ib) % p) % p);
-            const bool square = prime_field_power(norm, (p - 1) / 2, p) == 1;
+            const bool square = quadratic_residue[norm] != 0;
             const std::uint32_t base = square ? point : field_multiply(
                 omega_inverse, point, p, ia, ib);
             const std::uint64_t component = square ? 0 : 1;
 
             for (long order_index = 0; order_index < n_orders; ++order_index) {
                 const std::uint32_t order = orders[order_index];
-                const std::uint32_t value = field_power(
-                    base, orbit_length / order, p, ia, ib);
+                const std::uint32_t value =
+                    order == 21U && p % 84U == 29U
+                    ? order21_character(
+                          base, p, ia, ib, prime_inverse)
+                    : field_power(
+                          base, orbit_length / order, p, ia, ib);
                 const auto& table = tables[order_index];
                 const auto found = std::lower_bound(
                     table.begin(), table.end(),
@@ -408,6 +579,9 @@ extern "C" int qml_selected_line_bins_wide(
     if (!omega_inverse) {
         return -3;
     }
+    static thread_local std::vector<std::uint32_t> prime_inverse;
+    static thread_local std::vector<std::uint8_t> quadratic_residue;
+    prepare_prime_field_tables(p, prime_inverse, quadratic_residue);
     std::vector<std::vector<std::pair<std::uint64_t, std::uint32_t>>> tables;
     tables.reserve(static_cast<std::size_t>(n_orders));
     for (long index = 0; index < n_orders; ++index) {
@@ -448,7 +622,8 @@ extern "C" int qml_selected_line_bins_wide(
             denominator = (denominator % p + p - 1) % p +
                 static_cast<std::uint64_t>(p) * (denominator / p);
             const std::uint64_t denominator_inverse =
-                field_inverse_wide(denominator, p, ia, ib);
+                field_inverse_wide_from_table(
+                    denominator, p, ia, ib, prime_inverse);
             if (!denominator_inverse) {
                 continue;
             }
@@ -461,16 +636,19 @@ extern "C" int qml_selected_line_bins_wide(
             const std::uint64_t b = point / p;
             const std::uint32_t norm = static_cast<std::uint32_t>(
                 (a * a + a * b * ia + p - (b * b * ib) % p) % p);
-            const bool square =
-                prime_field_power(norm, (p - 1) / 2, p) == 1;
+            const bool square = quadratic_residue[norm] != 0;
             const std::uint64_t base = square ? point : field_multiply_wide(
                 omega_inverse, point, p, ia, ib);
             const std::uint64_t component = square ? 0 : 1;
 
             for (long order_index = 0; order_index < n_orders; ++order_index) {
                 const std::uint32_t order = orders[order_index];
-                const std::uint64_t value = field_power_wide(
-                    base, orbit_length / order, p, ia, ib);
+                const std::uint64_t value =
+                    order == 21U && p % 84U == 29U
+                    ? order21_character_wide(
+                          base, p, ia, ib, prime_inverse)
+                    : field_power_wide(
+                          base, orbit_length / order, p, ia, ib);
                 const auto& table = tables[order_index];
                 const auto found = std::lower_bound(
                     table.begin(), table.end(),

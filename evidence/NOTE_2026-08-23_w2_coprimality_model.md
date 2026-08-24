@@ -1072,14 +1072,144 @@ repeated.  Implementations are `scripts/w2_boundary_joint_norm.py`,
 `scripts/w2_boundary_oriented_scan.py`; compact outputs and the full
 `p=73613,d=21` trace are in the correspondingly named evidence files.
 
+### The order-21 one-sided family persists, but never reversibly, through one million
+
+The first one-sided counterexample is not sporadic.  For the mixed scalar
+order `d=21`, eligibility is exactly
+
+    p == 29 (mod 84).
+
+The oriented scanner now accepts an explicit order list and filters primes by
+the actual scalar/projective divisibility condition.  An exact targeted run at
+all 3,276 eligible primes `29<=p<=1000000` gives the reversible-clearance
+counts
+
+    difference 1: 3217,
+    difference 2:   58,
+    difference 3:    1.
+
+There is no nontrivial reversible core.  There are ten primes with a
+nontrivial *one-sided* common divisor:
+
+    73613, 129221, 133253, 172313, 202637,
+    222713, 310997, 457241, 472697, 639941.
+
+Their oriented factors, in the deterministic field/generator convention of
+the engine, are respectively
+
+    57, 57, 57, 75, 57, 75, 57, 57, 57, 75  (hex).
+
+In every case the reciprocal factor is absent from the common divisor.  The
+normalized indices `(p-29)/84` are
+
+    876, 1538, 1586, 2051, 2412, 2651, 3702, 5443, 5627, 7618.
+
+Exact OEIS API searches of the raw sequence, normalized sequence, eligible-
+prime positions, and their gaps returned no sequence.  Individual-term
+searches found only unrelated memberships, with no sequence shared by the raw
+hits.  The useful structural OEIS hit is
+[A014580](https://oeis.org/A014580): it enumerates irreducible binary
+polynomials by precisely the packed-integer convention used here and contains
+`0x57=87` and `0x75=117`; its binary-reversal observation is exactly the
+reciprocal pairing.  This OEIS work is retained as pattern reconnaissance, not
+as evidence for a theorem.
+
+The six compact interval outputs are
+`evidence/w2_boundary_oriented_scan_100001_200000_d21.json` through
+`evidence/w2_boundary_oriented_scan_600001_1000000_d21.json`.  The first
+`100000` primes and the ten exceptional full traces are recorded separately in
+`evidence/w2_d21_signature_29_100000.json` and
+`evidence/w2_d21_signature_one_sided_hits_through_1000000.json`.
+
+### A quotient-field four-state law exposes the `F_8` generator core
+
+The one-sided family motivated retaining more than the final gcd.  For each
+of the reciprocal sextics `f_+=0x57` and `f_-=0x75`, let `A_a` and `B_a` be
+the remainders modulo `f` of the square and nonsquare raw components at
+difference `a`.  The new signature census records the six-bit divisibility
+mask and the actual quotient-field remainders.
+
+Across all 404 eligible primes through `100000`, all three differences, and
+both factors, the following exact finite pattern holds:
+
+* `A_a` belongs to the unique `F_8` subfield of `F_64`;
+* `B_a/X` belongs to that same `F_8`;
+* `B_a=0` always implies `A_a=0`;
+* whenever `B_a` is nonzero, the ratio
+
+      rho_f = X A_a / B_a in F_8
+
+  is independent of `a` for that prime and factor.
+
+There are no violations or multiple-ratio records.  The only observed
+reciprocal ratio pairs and their prime counts are
+
+    (rho_57, rho_75) = (0x00,0x00):  99,
+                           (0x08,0x01):  93,
+                           (0x09,0x09): 101,
+                           (0x1f,0x35): 110,
+                           (none,0x35):   1.
+
+The last record is `p=73613`, where every boundary component on the `0x57`
+side is zero, so the generator ratio cannot be recovered from those products.
+The matching reciprocal value identifies the missing state as `0x1f` if the
+four-state law is established independently.
+
+Part of this structure is now conceptually explained.  Since `p=8 (mod 21)`,
+Frobenius on a primitive 21st root is the eighth-power map.  Frobenius
+stability of the selected lines therefore puts `A_a` in `F_8`; the nonsquare
+orbit acquires the single exponent shift accounting for `B_a/X in F_8`.
+Moreover the exact raw factorization
+
+    (A_a, B_a) = c_a (Gamma_sq, Gamma_ns)
+
+makes `rho_f=X Gamma_sq/Gamma_ns` independent of the boundary difference as
+soon as `Gamma_ns` is nonzero.  Thus the computational discovery reduces to a
+small generator lemma: prove `Gamma_ns!=0` and evaluate the reciprocal pair of
+ratios in the four states above.
+
+There is a close standard model but not yet a quoted theorem with our exact
+normalization.  Davis--Jedwab--Mowbray, [*New Families of Semi-Regular
+Relative Difference Sets*](https://shiftleft.com/mirrors/www.hpl.hp.com/techreports/96/HPL-96-34r1.pdf),
+identify `F_8^*` with `Z_7`, identify the seven projective hyperplanes with
+translates of the `(7,3,1)` Singer difference set, and compute the associated
+character values from the four-element affine hyperplanes.  That is exactly
+the four-state geometry visible above.  What remains is to specialize their
+character calculation to the present Bose square/nonsquare generator pair.
+Even after that specialization, W2 still needs the boundary statement that
+the scalar factor `c_a` cannot vanish at both reciprocal sextics for all first
+three differences.  The ratio law removes a redundant component; it does not
+by itself prove that final non-simultaneous vanishing.
+
+The targeted engine was also accelerated without changing its coefficients.
+It now finds the least primitive `F_(p^2)` element natively, uses the known
+first nonsquare basis element in the `p=1 (mod 4)` class, persists `O(p)`
+inverse/quadratic-residue tables across selected lines, and splits the order-21
+character into scalar order seven and projective order three.  If `base=g^j`,
+then
+
+    s = Norm(base)^((p-1)/14) = eta_7^j,
+    t = (base^(p-1))^((p+1)/6) = eta_3^j,
+    eta_21^j = s^5 t,
+
+because `3*5+7=22 == 1 (mod 21)`.  The new and old engines agree
+coefficient-for-coefficient at `p=701,73613,129221`, including both sides of
+the old 32-bit cutoff; the generic non-order-21 wide path also agrees at
+`p=65609,d=3,5`.  The native primitive search agrees with the previous Python
+search at all 167 primes below 1000 and at `p=2141,73613`.  The exact
+`p=73613,d=21` runtime on soulkiller fell from roughly four to five seconds to
+about 1.05 seconds.
+
 ### Revised gap
 
 For `p == 5 (mod 12)`, prove for arbitrary `p` that the first three four-line
 differences have scalar common Aut-gcd one.  The exact all-order calculation
 establishes the statement for every eligible prime through 10000, and the
 bounded-order calculation establishes all `d<=4095` through 100000.  The
-projective layer is already proved, but neither finite calculation replaces
-the missing uniform characteristic-two character-sum argument.  Equivalently,
+targeted calculation additionally establishes `d=21` through 1000000 and
+isolates its four-state `F_8` generator law.  The projective layer is already
+proved, but neither finite calculation replaces the missing uniform
+characteristic-two character-sum argument.  Equivalently,
 one must prove that no scalar irreducible `f` occurs with multiplicity two in
 all three unsplit four-line polynomials and their reciprocal closures.  A
 proof of the six consecutive Soto-Andrade-type component nonvanishings, or

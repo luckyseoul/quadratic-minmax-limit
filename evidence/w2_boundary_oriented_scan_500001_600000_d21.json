@@ -1,0 +1,27 @@
+{
+  "range": [
+    500001,
+    600000
+  ],
+  "congruence_class": "p == 5 (mod 12)",
+  "prefix": 3,
+  "requested_orders": [
+    21
+  ],
+  "max_requested_order": 21,
+  "algorithm": "parallel direct lines; exact oriented gcd and reversible core",
+  "n_primes": 324,
+  "records": 324,
+  "max_order_tested": 21,
+  "raw_clearance_counts": {
+    "1": 322,
+    "2": 2
+  },
+  "oriented_gcd_degree_counts": {
+    "0": 324
+  },
+  "oriented_nonunits": [],
+  "reversible_exceptions": [],
+  "line_cpu_seconds": 13633.91456865301,
+  "elapsed_seconds": 371.3618030279904
+}
