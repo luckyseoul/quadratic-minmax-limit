@@ -1,0 +1,173 @@
+{
+  "input": "evidence/w2_d21_boundary_mod4_gpu_first_gate_through_10000000.json",
+  "n_rows": 522,
+  "prefix_pattern_counts": {
+    "1,0,0": 494,
+    "1,0,1": 8,
+    "1,1,0": 20
+  },
+  "subfield_violations": [],
+  "first_half_states": 64,
+  "mixed_gate_two_states": 15,
+  "single_side_transitions": [
+    {
+      "input_states": 64,
+      "ambiguous_input_states": 64,
+      "maximum_outputs_per_state": 8,
+      "frobenius_linear_rank": 6,
+      "frobenius_linear_solution": null
+    },
+    {
+      "input_states": 64,
+      "ambiguous_input_states": 63,
+      "maximum_outputs_per_state": 8,
+      "frobenius_linear_rank": 6,
+      "frobenius_linear_solution": null
+    }
+  ],
+  "reciprocal_transition": {
+    "input_states": 477,
+    "ambiguous_input_states": 43,
+    "maximum_outputs_per_state": 3
+  },
+  "deep_prefix": {
+    "rows": 20,
+    "third_linear_rank_over_f2": 6,
+    "third_affine_rank_over_f2": 6
+  },
+  "support_bits": {
+    "discovery": {
+      "patterns": 27,
+      "polynomial_ranks": [
+        {
+          "degree": 1,
+          "features": 7,
+          "rank": 7,
+          "relation_dimension": 0,
+          "all_counterexample_supports_separable": false,
+          "counterexample_supports_separable": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "degree": 2,
+          "features": 22,
+          "rank": 21,
+          "relation_dimension": 1,
+          "all_counterexample_supports_separable": false,
+          "counterexample_supports_separable": [
+            true,
+            false,
+            true,
+            false
+          ]
+        },
+        {
+          "degree": 3,
+          "features": 42,
+          "rank": 27,
+          "relation_dimension": 15,
+          "all_counterexample_supports_separable": true,
+          "counterexample_supports_separable": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      ]
+    },
+    "holdout": {
+      "patterns": 26,
+      "polynomial_ranks": [
+        {
+          "degree": 1,
+          "features": 7,
+          "rank": 7,
+          "relation_dimension": 0,
+          "all_counterexample_supports_separable": false,
+          "counterexample_supports_separable": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "degree": 2,
+          "features": 22,
+          "rank": 22,
+          "relation_dimension": 0,
+          "all_counterexample_supports_separable": false,
+          "counterexample_supports_separable": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "degree": 3,
+          "features": 42,
+          "rank": 26,
+          "relation_dimension": 16,
+          "all_counterexample_supports_separable": true,
+          "counterexample_supports_separable": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      ]
+    },
+    "all": {
+      "patterns": 33,
+      "polynomial_ranks": [
+        {
+          "degree": 1,
+          "features": 7,
+          "rank": 7,
+          "relation_dimension": 0,
+          "all_counterexample_supports_separable": false,
+          "counterexample_supports_separable": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "degree": 2,
+          "features": 22,
+          "rank": 22,
+          "relation_dimension": 0,
+          "all_counterexample_supports_separable": false,
+          "counterexample_supports_separable": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "degree": 3,
+          "features": 42,
+          "rank": 33,
+          "relation_dimension": 9,
+          "all_counterexample_supports_separable": true,
+          "counterexample_supports_separable": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      ]
+    }
+  },
+  "conclusion": "mod-four half-lifts lie in F8, but neither first-state, paired-state, Frobenius-linear, affine-support, nor quadratic-support laws close gate three"
+}
