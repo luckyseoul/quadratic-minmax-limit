@@ -1,0 +1,99 @@
+{
+  "date": "2026-08-24",
+  "title": "W2 GQR eligible-circle span and Frobenius-pair completion reduction",
+  "status": {
+    "eligible_circle_span_all_odd_p": true,
+    "generic_named_orbit_all_odd_p": false,
+    "frobenius_pair_completion_all_odd_p": false,
+    "W2_closed": false
+  },
+  "theorem": {
+    "statement": "For every odd prime p, the binary incidence words of nonsquare Miquelian circles meeting {infinity,0} in 0 or 2 points span H0 intersect ker(e_infinity+e_0), of dimension (p^2-1)/2.",
+    "proof_route": [
+      "A same-type tangent pencil sums to the all-ones word.",
+      "A tangent pencil with exactly two edge-incompatible circles identifies their classes modulo the eligible-circle span.",
+      "The bipartite tangency graph is a Cayley graph on M=(F_{p^2}^*)^2 with connection set {(1+r sigma)^(-2): r in F_p}.",
+      "If the connection set failed to generate M, a nontrivial even character eta of F_(p^2)^* would equal one on an affine F_p-line.",
+      "Parameterising that line by the norm-one torus converts its character sum to Katz's t=-2 Soto-Andrade sum. The two exceptional character pairs both induce trivial eta, so the 2 sqrt(p) bound applies and contradicts a sum of p for p>=5; p=3 is direct.",
+      "All edge-incompatible circle generators therefore have one quotient class, which cancels in every edge-even codeword."
+    ],
+    "exact_rank_checks": {
+      "3": {"eligible_circles": 7, "rank": 4, "target": 4},
+      "5": {"eligible_circles": 41, "rank": 12, "target": 12},
+      "7": {"eligible_circles": 127, "rank": 24, "target": 24},
+      "11": {"eligible_circles": 551, "rank": 60, "target": 60}
+    }
+  },
+  "circle_completion": {
+    "criterion": "A Max-minus vector y can be flipped on a nonsquare circle S and remain Max-minus iff y restricted to S equals plus or minus the unique signed sparse -p eigenvector v_S.",
+    "rows": {
+      "5": {
+        "cache_rows": 260,
+        "standard_circle_completions": 52,
+        "inside_pair_distribution": {"52": 15},
+        "outside_pair_distribution": {"28": 60, "32": 60, "36": 60, "48": 10},
+        "minimum_outside_U_completions": 28,
+        "all_eligible_circles_realised_in_U": true
+      },
+      "7": {
+        "cache_rows": 11452,
+        "standard_circle_completions": 628,
+        "inside_pair_distribution": {"628": 28},
+        "outside_pair_distribution": {"320": 21, "336": 168, "340": 168, "352": 168, "396": 168, "420": 168},
+        "minimum_outside_U_completions": 320,
+        "all_eligible_circles_realised_in_U": true
+      },
+      "11": {
+        "cache": "/home/nick/e1work/maxplus_p11/maxplus_p11_eps1.npy on NUKA",
+        "cache_rows": 37457112,
+        "standard_circle_normalised_completions": 369302,
+        "inside_pair_distribution": {"369302": 66},
+        "outside_pair_distribution": {
+          "179760": 55,
+          "191280": 660,
+          "192184": 660,
+          "199774": 660,
+          "206310": 660,
+          "206632": 660,
+          "206750": 660,
+          "206944": 660,
+          "207054": 660,
+          "214602": 660
+        },
+        "minimum_outside_U_completions": 179760,
+        "all_eligible_circles_realised_in_U": true,
+        "seconds_on_nuka": 11.452
+      }
+    }
+  },
+  "p19_exact_lift": {
+    "state": "UNKNOWN",
+    "n": 362,
+    "independent_equations": 181,
+    "fixed_binary_signs": 22,
+    "free_binary_signs": 340,
+    "shortened_GQR_dimension": 161,
+    "mod2_pair_toggle_exists": true,
+    "named_halfspace_finite_circle_flips": 0,
+    "highs": {
+      "pair_sign_plus": "time limit 300 seconds",
+      "pair_sign_minus": "time limit 300 seconds"
+    },
+    "cp_sat_16_workers": {
+      "pair_sign_plus": {"status": "UNKNOWN", "seconds": 300.054, "conflicts": 2496, "branches": 19923},
+      "pair_sign_minus": {"status": "UNKNOWN", "seconds": 300.027, "conflicts": 0, "branches": 2292}
+    },
+    "proven_infeasible": false
+  },
+  "oeis_web": {
+    "queries": ["2,26,314", "4,52,628", "369302", "738604", "37457112", "260,11452"],
+    "relevant_identification_found": false,
+    "note": "Returned matches were unrelated numerical coincidences (for example semiprimes and linear sequences)."
+  },
+  "scripts": [
+    "scripts/w2_circle_completion_probe.py",
+    "scripts/w2_circle_completion_milp.py"
+  ],
+  "backend": "Small exact ranks and p=5,7 scans on soulkiller; full p=11 data-local scan plus p=19 HiGHS/CP-SAT on NUKA; no process left running.",
+  "note": "This proves the linear circle-code half and isolates a factor-degree-free nonlinear completion lemma. W2 remains OPEN."
+}

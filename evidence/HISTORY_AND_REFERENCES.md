@@ -211,6 +211,39 @@ that is the mechanism, not literature breadth per se.
 
 ---
 
+## 7c. GQR codes, inversive circles, and Soto--Andrade operators (2026-08-24)
+
+The W2 investigation exposed a second classical line that was absent from
+the original history: generalized quadratic-residue codes of length
+(p^2+1).
+
+J. H. van Lint's 1979 paper proves that the two PSL orbits of circles in the
+Miquelian inversive plane are exactly the minimum-weight supports in the two
+extended GQR codes (Theorem 4.4), and that each orbit spans its code.  In the
+repo's notation these are the square/nonsquare circle modules already
+identified as (H_0^perp) and (H_0).  This is not merely an analogy: it
+names the exact binary code containing all Max-minus differences.
+
+The new note `evidence/NOTE_2026-08-24_w2_gqr_circle_route.md` uses tangent
+pencils plus an explicit norm-one-torus reduction to Katz's `t=-2`
+Soto--Andrade character estimate to prove that nonsquare
+circles meeting the fixed edge ({0,infty}) evenly span
+(H_0capker(e_0+e_infty)) for every odd prime.  The remaining step is
+nonlinear: realise enough of those binary circle words as differences of
+actual Max-minus sign vectors in the edge slice.  A full (p=11) holdout
+passes; an exact (p=19) lift is currently solver-unknown.  **W2 remains
+open.**
+
+Katz's 1993 estimate gives the uniform (2sqrt p) control for degree-two
+Soto--Andrade sums (apart from two explicit exceptional cases).  Kable's
+2002 paper supplies the PGL harmonic-analysis and orthogonality dictionary.
+Imin Chen's modular-curve paper is a separate useful model: exact
+double-coset identities force nonvanishing of Legendre/Soto eigenvalues by
+an algebraic-integer ramification argument.  No direct W2 operator identity
+has yet been extracted from Chen, so do not cite it as a close.
+
+---
+
 ## 8. What is not in the older literature
 
 - No 1930s–1970s theorem that \(\lim n^{-3/2}\min_A\max_x|x^\top Ax|\) exists.
@@ -245,5 +278,9 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 19. A. Volberg, *Bellman function technique in Harmonic Analysis*, [arXiv:1106.3899](https://arxiv.org/abs/1106.3899) (2011).
 20. P. Ivanisvili, CV (Princeton, c. 2018), https://web.math.princeton.edu/~paatai/CV-Paata.pdf
 21. E. Spence, *Eigenvalues of a class of \((0,\pm1)\) symmetric matrices*, Linear Algebra Appl. **166** (1992), https://www.sciencedirect.com/science/article/pii/002437959290280N (§7b; found by blind object-search, cross-validates \(\limsup\le\tfrac12\) independently, does not advance the open content).
+22. J. H. van Lint, *Generalized Quadratic-Residue Codes*, IEEE Trans. Inform. Theory / Eindhoven report (1979), https://pure.tue.nl/ws/files/4233047/593589.pdf (Theorem 4.4: Miquelian circles are the minimum-word supports of the extended GQR codes).
+23. N. M. Katz, *Estimates for Soto-Andrade sums*, J. reine angew. Math. **438** (1993), 143--162, https://web.math.princeton.edu/~nmk/old/sotosums.pdf
+24. A. C. Kable, *Legendre sums, Soto-Andrade sums, and Kloosterman sums*, Pacific J. Math. **206** (2002), 139--157, https://msp.org/pjm/2002/206-1/pjm-v206-n1-p09-s.pdf
+25. I. Chen, *On relations between Jacobians of certain modular curves*, [arXiv:math/9809209](https://arxiv.org/abs/math/9809209) (double-coset/nonvanishing model only; not a W2 proof).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).
