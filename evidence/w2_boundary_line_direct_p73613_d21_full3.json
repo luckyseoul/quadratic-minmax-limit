@@ -1,0 +1,72 @@
+{
+  "range": [
+    73613,
+    73613
+  ],
+  "congruence_class": "p == 5 (mod 12)",
+  "requested_orders": [
+    21
+  ],
+  "prefix": 3,
+  "include_projective": false,
+  "trace_full_prefix": true,
+  "algorithm": "direct selected affine lines; O(p log p) per order",
+  "n_primes": 1,
+  "uncleared": [],
+  "rows": [
+    {
+      "p": 73613,
+      "ambient_oddpart": 677359221,
+      "projective_order": 36807,
+      "scalar_order": 18403,
+      "orders_tested": [
+        21
+      ],
+      "prefix": 3,
+      "trace_full_prefix": true,
+      "n_selected_levels": 12,
+      "pole_t": 73612,
+      "clearances": [
+        {
+          "order": 21,
+          "layer": "scalar",
+          "first_difference_a_clearing_order": 1,
+          "residual_degree": 0,
+          "residual_hex": "0x1",
+          "residual_trace": [
+            {
+              "a": 1,
+              "raw_component_hex": [
+                "0x3558e",
+                "0x109160"
+              ],
+              "repeated_root_hex": "0x57",
+              "running_aut_hex": "0x1"
+            },
+            {
+              "a": 2,
+              "raw_component_hex": [
+                "0x91224",
+                "0x16db6d"
+              ],
+              "repeated_root_hex": "0x1b5b",
+              "running_aut_hex": "0x1"
+            },
+            {
+              "a": 3,
+              "raw_component_hex": [
+                "0x1f242c",
+                "0x2122c"
+              ],
+              "repeated_root_hex": "0x57",
+              "running_aut_hex": "0x1"
+            }
+          ]
+        }
+      ],
+      "all_orders_cleared_by_differences": true,
+      "elapsed_seconds": 2.7157372660003603
+    }
+  ],
+  "elapsed_seconds": 2.71580772602465
+}

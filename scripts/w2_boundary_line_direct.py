@@ -66,6 +66,7 @@ def record(
     requested_orders: list[int],
     prefix: int,
     include_projective: bool,
+    trace_full_prefix: bool = False,
 ) -> dict:
     started = time.perf_counter()
     q, mul, _add, chi, _frob, _norm, ia, ib = field_ctx(p)
@@ -117,8 +118,9 @@ def record(
     traces = {order: [] for order in orders}
     for a, row in enumerate(rows, 1):
         for order, offset in zip(orders, offsets):
-            if common[order] == 1:
+            if common[order] == 1 and not trace_full_prefix:
                 continue
+            was_uncleared = common[order] != 1
             component_values = []
             component_polynomials = []
             for component in range(2):
@@ -162,9 +164,12 @@ def record(
                     "running_aut_hex": hex(common[order]),
                 }
             )
-            if common[order] == 1:
+            if was_uncleared and common[order] == 1:
                 clearance[order] = a
-        if all(value == 1 for value in common.values()):
+        if (
+            not trace_full_prefix
+            and all(value == 1 for value in common.values())
+        ):
             break
 
     clearances = [
@@ -187,6 +192,7 @@ def record(
         "scalar_order": scalar_order,
         "orders_tested": orders,
         "prefix": prefix,
+        "trace_full_prefix": trace_full_prefix,
         "n_selected_levels": len(levels),
         "pole_t": pole_t,
         "clearances": clearances,
@@ -206,6 +212,7 @@ def main() -> None:
     parser.add_argument("--prefix", type=int, default=3)
     parser.add_argument("--workers", type=int, default=1)
     parser.add_argument("--include-projective", action="store_true")
+    parser.add_argument("--trace-full-prefix", action="store_true")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     if args.prefix < 1 or args.workers < 1:
@@ -229,7 +236,13 @@ def main() -> None:
     rows = []
     if args.workers == 1:
         for index, p in enumerate(primes, 1):
-            row = record(p, requested_orders, args.prefix, args.include_projective)
+            row = record(
+                p,
+                requested_orders,
+                args.prefix,
+                args.include_projective,
+                args.trace_full_prefix,
+            )
             rows.append(row)
             print(
                 f"[{index}/{len(primes)}] p={p} "
@@ -246,6 +259,7 @@ def main() -> None:
                     requested_orders,
                     args.prefix,
                     args.include_projective,
+                    args.trace_full_prefix,
                 ): p
                 for p in primes
             }
@@ -265,6 +279,7 @@ def main() -> None:
         "requested_orders": requested_orders,
         "prefix": args.prefix,
         "include_projective": args.include_projective,
+        "trace_full_prefix": args.trace_full_prefix,
         "algorithm": "direct selected affine lines; O(p log p) per order",
         "n_primes": len(rows),
         "uncleared": [

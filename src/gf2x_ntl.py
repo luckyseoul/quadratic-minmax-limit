@@ -52,6 +52,26 @@ def _load():
         ctypes.c_long,
     ]
     loaded.qml_gf2x_gcd.restype = ctypes.c_long
+    loaded.qml_gf2x_cyclic_product.argtypes = [
+        ctypes.POINTER(ctypes.c_uint8),
+        ctypes.c_long,
+        ctypes.POINTER(ctypes.c_uint8),
+        ctypes.c_long,
+        ctypes.c_long,
+        ctypes.POINTER(ctypes.c_uint8),
+        ctypes.c_long,
+    ]
+    loaded.qml_gf2x_cyclic_product.restype = ctypes.c_long
+    loaded.qml_gf2x_cyclic_star_product.argtypes = [
+        ctypes.POINTER(ctypes.c_uint8),
+        ctypes.c_long,
+        ctypes.POINTER(ctypes.c_uint8),
+        ctypes.c_long,
+        ctypes.c_long,
+        ctypes.POINTER(ctypes.c_uint8),
+        ctypes.c_long,
+    ]
+    loaded.qml_gf2x_cyclic_star_product.restype = ctypes.c_long
     loaded.qml_field_orbits.argtypes = [
         ctypes.c_uint32,
         ctypes.c_uint32,
@@ -82,6 +102,24 @@ def _load():
         ctypes.c_long,
     ]
     loaded.qml_selected_line_bins.restype = ctypes.c_int
+    loaded.qml_selected_line_bins_wide.argtypes = [
+        ctypes.c_uint32,
+        ctypes.c_uint32,
+        ctypes.c_uint32,
+        ctypes.c_uint64,
+        ctypes.c_uint64,
+        ctypes.c_uint64,
+        ctypes.c_uint64,
+        ctypes.POINTER(ctypes.c_uint32),
+        ctypes.c_long,
+        ctypes.POINTER(ctypes.c_uint32),
+        ctypes.POINTER(ctypes.c_uint32),
+        ctypes.c_long,
+        ctypes.c_long,
+        ctypes.POINTER(ctypes.c_uint8),
+        ctypes.c_long,
+    ]
+    loaded.qml_selected_line_bins_wide.restype = ctypes.c_int
     _LIB = loaded
     return loaded
 
@@ -102,7 +140,9 @@ def gcd_bits(left: int, right: int) -> int:
     right_bytes = right.to_bytes(max(1, (right.bit_length() + 7) // 8), "little")
     left_buffer = (ctypes.c_uint8 * len(left_bytes)).from_buffer_copy(left_bytes)
     right_buffer = (ctypes.c_uint8 * len(right_bytes)).from_buffer_copy(right_bytes)
-    capacity = max(1, min(len(left_bytes), len(right_bytes)))
+    # Usually a gcd fits in the smaller nonzero operand.  If either operand
+    # is zero, however, gcd(f, 0) = f, so reserve the larger packed length.
+    capacity = max(1, max(len(left_bytes), len(right_bytes)))
     output = (ctypes.c_uint8 * capacity)()
     written = _load().qml_gf2x_gcd(
         left_buffer,
@@ -114,6 +154,54 @@ def gcd_bits(left: int, right: int) -> int:
     )
     if written < 0:
         raise RuntimeError(f"NTL gcd output needs {-written} bytes, had {capacity}")
+    return int.from_bytes(bytes(output[:written]), "little")
+
+
+def cyclic_product_bits(left: int, right: int, order: int) -> int:
+    """Multiply packed F2 polynomials modulo X^order+1."""
+    if left < 0 or right < 0 or order < 1:
+        raise ValueError("polynomials must be nonnegative and order positive")
+    left_bytes = left.to_bytes(max(1, (left.bit_length() + 7) // 8), "little")
+    right_bytes = right.to_bytes(max(1, (right.bit_length() + 7) // 8), "little")
+    left_buffer = (ctypes.c_uint8 * len(left_bytes)).from_buffer_copy(left_bytes)
+    right_buffer = (ctypes.c_uint8 * len(right_bytes)).from_buffer_copy(right_bytes)
+    capacity = (order + 7) // 8
+    output = (ctypes.c_uint8 * capacity)()
+    written = _load().qml_gf2x_cyclic_product(
+        left_buffer,
+        len(left_bytes),
+        right_buffer,
+        len(right_bytes),
+        order,
+        output,
+        capacity,
+    )
+    if written < 0:
+        raise RuntimeError(f"NTL cyclic product failed with {written}")
+    return int.from_bytes(bytes(output[:written]), "little")
+
+
+def cyclic_star_product_bits(left: int, right: int, order: int) -> int:
+    """Return left(X) * right(X^-1) modulo X^order+1 over F2."""
+    if left < 0 or right < 0 or order < 1:
+        raise ValueError("polynomials must be nonnegative and order positive")
+    left_bytes = left.to_bytes(max(1, (left.bit_length() + 7) // 8), "little")
+    right_bytes = right.to_bytes(max(1, (right.bit_length() + 7) // 8), "little")
+    left_buffer = (ctypes.c_uint8 * len(left_bytes)).from_buffer_copy(left_bytes)
+    right_buffer = (ctypes.c_uint8 * len(right_bytes)).from_buffer_copy(right_bytes)
+    capacity = (order + 7) // 8
+    output = (ctypes.c_uint8 * capacity)()
+    written = _load().qml_gf2x_cyclic_star_product(
+        left_buffer,
+        len(left_bytes),
+        right_buffer,
+        len(right_bytes),
+        order,
+        output,
+        capacity,
+    )
+    if written < 0:
+        raise RuntimeError(f"NTL cyclic star product failed with {written}")
     return int.from_bytes(bytes(output[:written]), "little")
 
 
@@ -190,6 +278,7 @@ def selected_line_bins(
     pole_t: int,
     levels: list[int],
     orders: list[int],
+    force_wide: bool = False,
 ) -> tuple[np.ndarray, list[int]]:
     """Fold selected affine-line pullbacks without traversing either orbit."""
     if not levels or not orders:
@@ -201,7 +290,12 @@ def selected_line_bins(
     output = np.zeros((2, len(levels), total_order), dtype=np.uint8)
     u32_pointer = ctypes.POINTER(ctypes.c_uint32)
     u8_pointer = ctypes.POINTER(ctypes.c_uint8)
-    status = _load().qml_selected_line_bins(
+    function = (
+        _load().qml_selected_line_bins_wide
+        if force_wide or p * p >= 1 << 32
+        else _load().qml_selected_line_bins
+    )
+    status = function(
         p,
         ia,
         ib,

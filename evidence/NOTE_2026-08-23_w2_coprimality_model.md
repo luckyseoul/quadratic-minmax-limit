@@ -993,12 +993,91 @@ right strength would suffice in the `p == 5 (mod 12)` class, and the census
 suggests such cancellation, but no proved estimate has yet been matched to
 the characteristic-two parity being measured here.
 
+### Hermitian norm and Gram shortcuts fail; the reversible core is exact
+
+The raw two-component factorization suggests a tempting Hermitian shortcut.
+In `F_2[X]/(X^d+1)` put
+
+    N_A = sum_(a<=A,c) Delta W_(a,c)(X) Delta W_(a,c)(X^-1).
+
+The Bose norm identity reduces the summand for a fixed `a` to
+`Delta c_a(X) Delta c_a(X^-1)`.  Hence a unit `N_A` is a sufficient
+certificate.  Exact native cyclic multiplication was checked against an
+independent bit-by-bit correlation in 520 randomized cases.  On the 12,481
+saved prime/order records through `p=65000,d<=4095`, the available truncated
+traces made `N_A` a unit in 12,317 cases.  Recomputing the other 164 pairs
+through all three differences raised this to 12,470, but left 11 genuine
+cancellations.  Keeping the three diagonal norms separate still left seven.
+Thus neither version is a uniform proof route.
+
+The full cross-norm matrix
+
+    H_(a,b) = sum_c Delta W_(a,c)(X) Delta W_(b,c)(X^-1)
+            = Delta c_a(X) Delta c_b(X^-1)
+
+cleared all 164 holdouts, but this too is stronger than W2.  A new direct-line
+scan found its first failure at
+
+    p=73613, d=21.
+
+Here the actual raw Aut-gcd clears after the first difference, whereas the
+three-by-three Gram gcd is
+
+    0x1b5b = 0x57 * 0x75,
+
+with reciprocal irreducible sextics `0x57` and `0x75`.  In all three
+differences both raw components have the oriented factor `0x57`; difference
+two also has `0x75`, but differences one and three do not.  The Gram matrix
+therefore vanishes on one orientation even though the required reciprocal
+pair is absent.  This explicitly falsifies the one-sided common-factor
+conjecture.
+
+The failed route exposes the exact minimal invariant.  Define
+
+    G_d = gcd(Phi_d,
+              Delta W_(1,sq), Delta W_(1,ns),
+              Delta W_(2,sq), Delta W_(2,ns),
+              Delta W_(3,sq), Delta W_(3,ns)).
+
+Because the Bose generator pair is unimodular on the odd layer, `G_d` is the
+one-sided common divisor of the underlying boundary words.  The true scalar
+Aut obstruction is exactly the reversible core
+
+    gcd(G_d, G_d^*) != 1.
+
+At `p=73613,d=21`, `G_d=0x57`, `G_d^*=0x75`, and the reversible core is one.
+This is the cyclic-code language familiar from reversible/LCD codes, but the
+standard self-reciprocal-generator criteria do not prove that these specific
+boundary words have trivial reversible core.
+
+The selected-line bridge now has a guarded 64-bit field encoding (with
+64-bit products safe through the current range), removing the old
+`p^2<2^32` cutoff.  Below that cutoff the wide and narrow paths are
+coefficient-identical at `p=41,2141`; above it the optimized wide path gives
+the exact full trace at `p=65609`.  The new bounded-order scan adds every
+eligible prime `65001<=p<=100000`:
+
+* 783 primes and 7,547 exact scalar prime/order tests through `d=4095`;
+* 7,472 clear after difference one, 69 after difference two, and six after
+  difference three;
+* no nontrivial reversible core and hence no W2 failure;
+* the only nontrivial one-sided `G_d` is the harmless `p=73613,d=21` factor
+  above.
+
+Together with the preceding direct scan, all 20,028 bounded-order tests for
+`10001<=p<=100000,d<=4095` clear.  The norm/Gram experiments and their
+counterexamples are retained to prevent this stronger false claim from being
+repeated.  Implementations are `scripts/w2_boundary_joint_norm.py`,
+`scripts/w2_boundary_gram_scan.py`, and
+`scripts/w2_boundary_oriented_scan.py`; compact outputs and the full
+`p=73613,d=21` trace are in the correspondingly named evidence files.
+
 ### Revised gap
 
 For `p == 5 (mod 12)`, prove for arbitrary `p` that the first three four-line
 differences have scalar common Aut-gcd one.  The exact all-order calculation
 establishes the statement for every eligible prime through 10000, and the
-bounded-order calculation establishes all `d<=4095` through 65000.  The
+bounded-order calculation establishes all `d<=4095` through 100000.  The
 projective layer is already proved, but neither finite calculation replaces
 the missing uniform characteristic-two character-sum argument.  Equivalently,
 one must prove that no scalar irreducible `f` occurs with multiplicity two in

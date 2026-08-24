@@ -1,0 +1,35 @@
+{
+  "range": [
+    70001,
+    80000
+  ],
+  "congruence_class": "p == 5 (mod 12)",
+  "prefix": 3,
+  "max_requested_order": 4095,
+  "algorithm": "parallel direct selected lines plus F2 cross-norm Gram",
+  "n_primes": 234,
+  "records": 2254,
+  "max_order_tested": 4095,
+  "raw_clearance_counts": {
+    "1": 2233,
+    "2": 21
+  },
+  "gram_clearance_counts": {
+    "1": 2210,
+    "2": 42,
+    "3": 1,
+    "None": 1
+  },
+  "raw_exceptions": [],
+  "gram_exceptions": [
+    {
+      "p": 73613,
+      "order": 21,
+      "raw_clearance": 1,
+      "gram_gcd_hex": "0x1b5b",
+      "gram_gcd_degree": 12
+    }
+  ],
+  "line_cpu_seconds": 3095.02504997114,
+  "elapsed_seconds": 113.57284589699702
+}
