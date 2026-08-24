@@ -1,0 +1,1793 @@
+{
+  "range": [
+    1501,
+    3000
+  ],
+  "congruence_class": "p == 5 (mod 12)",
+  "requested_orders": [
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25,
+    27,
+    29,
+    31,
+    33,
+    35,
+    37,
+    39,
+    41,
+    43,
+    45,
+    47,
+    49,
+    51,
+    53,
+    55,
+    57,
+    59,
+    61,
+    63
+  ],
+  "endpoint_offsets": [
+    0,
+    1
+  ],
+  "n_primes": 50,
+  "exceptions": [
+    {
+      "p": 1613,
+      "endpoint_offset": 1,
+      "order": 3,
+      "layer": "projective",
+      "aut_bad_degree": 2,
+      "aut_bad_hex": "0x7"
+    },
+    {
+      "p": 1613,
+      "endpoint_offset": 1,
+      "order": 31,
+      "layer": "nonprojective",
+      "aut_bad_degree": 10,
+      "aut_bad_hex": "0x6fb"
+    },
+    {
+      "p": 1637,
+      "endpoint_offset": 1,
+      "order": 3,
+      "layer": "projective",
+      "aut_bad_degree": 2,
+      "aut_bad_hex": "0x7"
+    },
+    {
+      "p": 1709,
+      "endpoint_offset": 1,
+      "order": 9,
+      "layer": "projective",
+      "aut_bad_degree": 6,
+      "aut_bad_hex": "0x49"
+    },
+    {
+      "p": 1877,
+      "endpoint_offset": 1,
+      "order": 3,
+      "layer": "projective",
+      "aut_bad_degree": 2,
+      "aut_bad_hex": "0x7"
+    },
+    {
+      "p": 1877,
+      "endpoint_offset": 0,
+      "order": 7,
+      "layer": "nonprojective",
+      "aut_bad_degree": 6,
+      "aut_bad_hex": "0x7f"
+    },
+    {
+      "p": 1973,
+      "endpoint_offset": 1,
+      "order": 3,
+      "layer": "projective",
+      "aut_bad_degree": 2,
+      "aut_bad_hex": "0x7"
+    },
+    {
+      "p": 1997,
+      "endpoint_offset": 1,
+      "order": 3,
+      "layer": "projective",
+      "aut_bad_degree": 2,
+      "aut_bad_hex": "0x7"
+    },
+    {
+      "p": 2069,
+      "endpoint_offset": 1,
+      "order": 3,
+      "layer": "projective",
+      "aut_bad_degree": 2,
+      "aut_bad_hex": "0x7"
+    },
+    {
+      "p": 2081,
+      "endpoint_offset": 0,
+      "order": 15,
+      "layer": "nonprojective",
+      "aut_bad_degree": 8,
+      "aut_bad_hex": "0x1bb"
+    },
+    {
+      "p": 2141,
+      "endpoint_offset": 1,
+      "order": 3,
+      "layer": "projective",
+      "aut_bad_degree": 2,
+      "aut_bad_hex": "0x7"
+    },
+    {
+      "p": 2213,
+      "endpoint_offset": 1,
+      "order": 3,
+      "layer": "projective",
+      "aut_bad_degree": 2,
+      "aut_bad_hex": "0x7"
+    },
+    {
+      "p": 2309,
+      "endpoint_offset": 1,
+      "order": 3,
+      "layer": "projective",
+      "aut_bad_degree": 2,
+      "aut_bad_hex": "0x7"
+    },
+    {
+      "p": 2333,
+      "endpoint_offset": 1,
+      "order": 3,
+      "layer": "projective",
+      "aut_bad_degree": 2,
+      "aut_bad_hex": "0x7"
+    },
+    {
+      "p": 2357,
+      "endpoint_offset": 1,
+      "order": 9,
+      "layer": "projective",
+      "aut_bad_degree": 6,
+      "aut_bad_hex": "0x49"
+    },
+    {
+      "p": 2381,
+      "endpoint_offset": 0,
+      "order": 5,
+      "layer": "nonprojective",
+      "aut_bad_degree": 4,
+      "aut_bad_hex": "0x1f"
+    },
+    {
+      "p": 2381,
+      "endpoint_offset": 0,
+      "order": 17,
+      "layer": "nonprojective",
+      "aut_bad_degree": 8,
+      "aut_bad_hex": "0x1d7"
+    },
+    {
+      "p": 2441,
+      "endpoint_offset": 0,
+      "order": 5,
+      "layer": "nonprojective",
+      "aut_bad_degree": 4,
+      "aut_bad_hex": "0x1f"
+    },
+    {
+      "p": 2549,
+      "endpoint_offset": 1,
+      "order": 3,
+      "layer": "projective",
+      "aut_bad_degree": 2,
+      "aut_bad_hex": "0x7"
+    },
+    {
+      "p": 2549,
+      "endpoint_offset": 0,
+      "order": 7,
+      "layer": "nonprojective",
+      "aut_bad_degree": 6,
+      "aut_bad_hex": "0x7f"
+    },
+    {
+      "p": 2621,
+      "endpoint_offset": 1,
+      "order": 3,
+      "layer": "projective",
+      "aut_bad_degree": 2,
+      "aut_bad_hex": "0x7"
+    },
+    {
+      "p": 2621,
+      "endpoint_offset": 0,
+      "order": 5,
+      "layer": "nonprojective",
+      "aut_bad_degree": 4,
+      "aut_bad_hex": "0x1f"
+    },
+    {
+      "p": 2741,
+      "endpoint_offset": 1,
+      "order": 3,
+      "layer": "projective",
+      "aut_bad_degree": 2,
+      "aut_bad_hex": "0x7"
+    },
+    {
+      "p": 2789,
+      "endpoint_offset": 1,
+      "order": 3,
+      "layer": "projective",
+      "aut_bad_degree": 2,
+      "aut_bad_hex": "0x7"
+    },
+    {
+      "p": 2789,
+      "endpoint_offset": 1,
+      "order": 15,
+      "layer": "projective",
+      "aut_bad_degree": 8,
+      "aut_bad_hex": "0x1bb"
+    },
+    {
+      "p": 2837,
+      "endpoint_offset": 1,
+      "order": 3,
+      "layer": "projective",
+      "aut_bad_degree": 2,
+      "aut_bad_hex": "0x7"
+    },
+    {
+      "p": 2861,
+      "endpoint_offset": 1,
+      "order": 3,
+      "layer": "projective",
+      "aut_bad_degree": 2,
+      "aut_bad_hex": "0x7"
+    },
+    {
+      "p": 2957,
+      "endpoint_offset": 1,
+      "order": 3,
+      "layer": "projective",
+      "aut_bad_degree": 2,
+      "aut_bad_hex": "0x7"
+    }
+  ],
+  "rows": [
+    {
+      "p": 1553,
+      "scalar_order": 97,
+      "projective_order": 777,
+      "ambient_order": 75369,
+      "orders_tested": [
+        3,
+        7,
+        21,
+        37
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.8621223490335979,
+        "gamma_residues": 0.024865060986485332,
+        "atomic_gpu": 2.073897954018321,
+        "classification": 0.1041351979947649,
+        "total": 3.0661344730178826
+      }
+    },
+    {
+      "p": 1601,
+      "scalar_order": 25,
+      "projective_order": 801,
+      "ambient_order": 20025,
+      "orders_tested": [
+        3,
+        5,
+        9,
+        15,
+        25,
+        45
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.057115436997264624,
+        "gamma_residues": 0.036468566046096385,
+        "atomic_gpu": 0.008610394026618451,
+        "classification": 0.005051163025200367,
+        "total": 0.10771191999083385
+      }
+    },
+    {
+      "p": 1613,
+      "scalar_order": 403,
+      "projective_order": 807,
+      "ambient_order": 325221,
+      "orders_tested": [
+        3,
+        13,
+        31,
+        39
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 3,
+          "layer": "projective",
+          "aut_bad_degree": 2,
+          "aut_bad_hex": "0x7"
+        },
+        {
+          "endpoint_offset": 1,
+          "order": 31,
+          "layer": "nonprojective",
+          "aut_bad_degree": 10,
+          "aut_bad_hex": "0x6fb"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.06089775904547423,
+        "gamma_residues": 0.02535347198136151,
+        "atomic_gpu": 0.008930592972319573,
+        "classification": 0.005600531992968172,
+        "total": 0.10123840603046119
+      }
+    },
+    {
+      "p": 1637,
+      "scalar_order": 409,
+      "projective_order": 819,
+      "ambient_order": 334971,
+      "orders_tested": [
+        3,
+        7,
+        9,
+        13,
+        21,
+        39,
+        63
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 3,
+          "layer": "projective",
+          "aut_bad_degree": 2,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.056748018017970026,
+        "gamma_residues": 0.04329934000270441,
+        "atomic_gpu": 0.008535703993402421,
+        "classification": 0.0056427629897370934,
+        "total": 0.11468076502205804
+      }
+    },
+    {
+      "p": 1697,
+      "scalar_order": 53,
+      "projective_order": 849,
+      "ambient_order": 44997,
+      "orders_tested": [
+        3,
+        53
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.060858718992676586,
+        "gamma_residues": 0.014739246980752796,
+        "atomic_gpu": 0.008506593003403395,
+        "classification": 0.004353391996119171,
+        "total": 0.08894991094712168
+      }
+    },
+    {
+      "p": 1709,
+      "scalar_order": 427,
+      "projective_order": 855,
+      "ambient_order": 365085,
+      "orders_tested": [
+        3,
+        5,
+        7,
+        9,
+        15,
+        19,
+        21,
+        35,
+        45,
+        57,
+        61,
+        63
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 9,
+          "layer": "projective",
+          "aut_bad_degree": 6,
+          "aut_bad_hex": "0x49"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.058302708028350025,
+        "gamma_residues": 0.07573726604459807,
+        "atomic_gpu": 0.0096428639953956,
+        "classification": 0.01588565798010677,
+        "total": 0.16008465603226796
+      }
+    },
+    {
+      "p": 1721,
+      "scalar_order": 215,
+      "projective_order": 861,
+      "ambient_order": 185115,
+      "orders_tested": [
+        3,
+        5,
+        7,
+        15,
+        21,
+        35,
+        41,
+        43
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.061179157986771315,
+        "gamma_residues": 0.05302605498582125,
+        "atomic_gpu": 0.008785434009041637,
+        "classification": 0.008689824026077986,
+        "total": 0.1321671709883958
+      }
+    },
+    {
+      "p": 1733,
+      "scalar_order": 433,
+      "projective_order": 867,
+      "ambient_order": 375411,
+      "orders_tested": [
+        3,
+        17,
+        51
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.062000459991395473,
+        "gamma_residues": 0.02123315999051556,
+        "atomic_gpu": 0.008912474033422768,
+        "classification": 0.004435621958691627,
+        "total": 0.0971002759761177
+      }
+    },
+    {
+      "p": 1877,
+      "scalar_order": 469,
+      "projective_order": 939,
+      "ambient_order": 440391,
+      "orders_tested": [
+        3,
+        7,
+        21
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 3,
+          "layer": "projective",
+          "aut_bad_degree": 2,
+          "aut_bad_hex": "0x7"
+        },
+        {
+          "endpoint_offset": 0,
+          "order": 7,
+          "layer": "nonprojective",
+          "aut_bad_degree": 6,
+          "aut_bad_hex": "0x7f"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.07158268400235102,
+        "gamma_residues": 0.022867218998726457,
+        "atomic_gpu": 0.00658773398026824,
+        "classification": 0.001358870998956263,
+        "total": 0.10291214799508452
+      }
+    },
+    {
+      "p": 1889,
+      "scalar_order": 59,
+      "projective_order": 945,
+      "ambient_order": 55755,
+      "orders_tested": [
+        3,
+        5,
+        7,
+        9,
+        15,
+        21,
+        27,
+        35,
+        45,
+        59,
+        63
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.06808058201568201,
+        "gamma_residues": 0.07712407497456297,
+        "atomic_gpu": 0.009376280009746552,
+        "classification": 0.010569100035354495,
+        "total": 0.1656744780484587
+      }
+    },
+    {
+      "p": 1901,
+      "scalar_order": 475,
+      "projective_order": 951,
+      "ambient_order": 451725,
+      "orders_tested": [
+        3,
+        5,
+        15,
+        19,
+        25,
+        57
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.0708826530026272,
+        "gamma_residues": 0.04351917002350092,
+        "atomic_gpu": 0.009252910036593676,
+        "classification": 0.004299296997487545,
+        "total": 0.12848017999203876
+      }
+    },
+    {
+      "p": 1913,
+      "scalar_order": 239,
+      "projective_order": 957,
+      "ambient_order": 228723,
+      "orders_tested": [
+        3,
+        11,
+        29,
+        33
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.07266479398822412,
+        "gamma_residues": 0.030201724031940103,
+        "atomic_gpu": 0.009315474017057568,
+        "classification": 0.0046868519857525826,
+        "total": 0.11741647403687239
+      }
+    },
+    {
+      "p": 1949,
+      "scalar_order": 487,
+      "projective_order": 975,
+      "ambient_order": 474825,
+      "orders_tested": [
+        3,
+        5,
+        13,
+        15,
+        25,
+        39
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.0751012249966152,
+        "gamma_residues": 0.04464427102357149,
+        "atomic_gpu": 0.00949929398484528,
+        "classification": 0.003472051990684122,
+        "total": 0.13327340298565105
+      }
+    },
+    {
+      "p": 1973,
+      "scalar_order": 493,
+      "projective_order": 987,
+      "ambient_order": 486591,
+      "orders_tested": [
+        3,
+        7,
+        17,
+        21,
+        29,
+        47,
+        51
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 3,
+          "layer": "projective",
+          "aut_bad_degree": 2,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.07720666698878631,
+        "gamma_residues": 0.0521152539877221,
+        "atomic_gpu": 0.009630823973566294,
+        "classification": 0.0075015840120613575,
+        "total": 0.14701448898995295
+      }
+    },
+    {
+      "p": 1997,
+      "scalar_order": 499,
+      "projective_order": 999,
+      "ambient_order": 498501,
+      "orders_tested": [
+        3,
+        9,
+        27,
+        37
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 3,
+          "layer": "projective",
+          "aut_bad_degree": 2,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.07642165600555018,
+        "gamma_residues": 0.03163545503048226,
+        "atomic_gpu": 0.009282684011850506,
+        "classification": 0.002614721015561372,
+        "total": 0.12049978598952293
+      }
+    },
+    {
+      "p": 2069,
+      "scalar_order": 517,
+      "projective_order": 1035,
+      "ambient_order": 535095,
+      "orders_tested": [
+        3,
+        5,
+        9,
+        11,
+        15,
+        23,
+        33,
+        45,
+        47,
+        55
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 3,
+          "layer": "projective",
+          "aut_bad_degree": 2,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.07824387704022229,
+        "gamma_residues": 0.07693188602570444,
+        "atomic_gpu": 0.010110358998645097,
+        "classification": 0.00979285896755755,
+        "total": 0.1756434820126742
+      }
+    },
+    {
+      "p": 2081,
+      "scalar_order": 65,
+      "projective_order": 1041,
+      "ambient_order": 67665,
+      "orders_tested": [
+        3,
+        5,
+        13,
+        15,
+        39
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 0,
+          "order": 15,
+          "layer": "nonprojective",
+          "aut_bad_degree": 8,
+          "aut_bad_hex": "0x1bb"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.08731946104671806,
+        "gamma_residues": 0.04038560000481084,
+        "atomic_gpu": 0.009792933997232467,
+        "classification": 0.0028750619967468083,
+        "total": 0.14097676699748263
+      }
+    },
+    {
+      "p": 2129,
+      "scalar_order": 133,
+      "projective_order": 1065,
+      "ambient_order": 141645,
+      "orders_tested": [
+        3,
+        5,
+        7,
+        15,
+        19,
+        21,
+        35,
+        57
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.08029055700171739,
+        "gamma_residues": 0.06391412997618318,
+        "atomic_gpu": 0.010034015052951872,
+        "classification": 0.005637052992824465,
+        "total": 0.16046514501795173
+      }
+    },
+    {
+      "p": 2141,
+      "scalar_order": 535,
+      "projective_order": 1071,
+      "ambient_order": 572985,
+      "orders_tested": [
+        3,
+        5,
+        7,
+        9,
+        15,
+        17,
+        21,
+        35,
+        45,
+        51,
+        63
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 3,
+          "layer": "projective",
+          "aut_bad_degree": 2,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.08556943899020553,
+        "gamma_residues": 0.08730911195743829,
+        "atomic_gpu": 0.010094147990457714,
+        "classification": 0.008299309003632516,
+        "total": 0.19185353897046298
+      }
+    },
+    {
+      "p": 2153,
+      "scalar_order": 269,
+      "projective_order": 1077,
+      "ambient_order": 289713,
+      "orders_tested": [
+        3
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.08324719895608723,
+        "gamma_residues": 0.010877305001486093,
+        "atomic_gpu": 0.010420545004308224,
+        "classification": 0.00031539000337943435,
+        "total": 0.10547249898081645
+      }
+    },
+    {
+      "p": 2213,
+      "scalar_order": 553,
+      "projective_order": 1107,
+      "ambient_order": 612171,
+      "orders_tested": [
+        3,
+        7,
+        9,
+        21,
+        27,
+        41,
+        63
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 3,
+          "layer": "projective",
+          "aut_bad_degree": 2,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.0909296220052056,
+        "gamma_residues": 0.058594347967300564,
+        "atomic_gpu": 0.010324985021725297,
+        "classification": 0.005375883018132299,
+        "total": 0.16587606800021604
+      }
+    },
+    {
+      "p": 2237,
+      "scalar_order": 559,
+      "projective_order": 1119,
+      "ambient_order": 625521,
+      "orders_tested": [
+        3,
+        13,
+        39,
+        43
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.08879574202001095,
+        "gamma_residues": 0.03523068496724591,
+        "atomic_gpu": 0.010020924964919686,
+        "classification": 0.0036144619807600975,
+        "total": 0.13828466401901096
+      }
+    },
+    {
+      "p": 2273,
+      "scalar_order": 71,
+      "projective_order": 1137,
+      "ambient_order": 80727,
+      "orders_tested": [
+        3
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.09357022400945425,
+        "gamma_residues": 0.011545115965418518,
+        "atomic_gpu": 0.01033763401210308,
+        "classification": 0.0003057100111618638,
+        "total": 0.11640892399009317
+      }
+    },
+    {
+      "p": 2297,
+      "scalar_order": 287,
+      "projective_order": 1149,
+      "ambient_order": 329763,
+      "orders_tested": [
+        3,
+        7,
+        21,
+        41
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.08606703102122992,
+        "gamma_residues": 0.03624471800867468,
+        "atomic_gpu": 0.010570433980319649,
+        "classification": 0.002799112000502646,
+        "total": 0.13630168500822037
+      }
+    },
+    {
+      "p": 2309,
+      "scalar_order": 577,
+      "projective_order": 1155,
+      "ambient_order": 666435,
+      "orders_tested": [
+        3,
+        5,
+        7,
+        11,
+        15,
+        21,
+        33,
+        35,
+        55
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 3,
+          "layer": "projective",
+          "aut_bad_degree": 2,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.09308222401887178,
+        "gamma_residues": 0.07776843599276617,
+        "atomic_gpu": 0.010670965013559908,
+        "classification": 0.00629529298748821,
+        "total": 0.18847235798602924
+      }
+    },
+    {
+      "p": 2333,
+      "scalar_order": 583,
+      "projective_order": 1167,
+      "ambient_order": 680361,
+      "orders_tested": [
+        3,
+        11,
+        33,
+        53
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 3,
+          "layer": "projective",
+          "aut_bad_degree": 2,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.093577963009011,
+        "gamma_residues": 0.0367706369725056,
+        "atomic_gpu": 0.01042523595970124,
+        "classification": 0.003544831008184701,
+        "total": 0.14498523698421195
+      }
+    },
+    {
+      "p": 2357,
+      "scalar_order": 589,
+      "projective_order": 1179,
+      "ambient_order": 694431,
+      "orders_tested": [
+        3,
+        9,
+        19,
+        31,
+        57
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 9,
+          "layer": "projective",
+          "aut_bad_degree": 6,
+          "aut_bad_hex": "0x49"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.0982026860001497,
+        "gamma_residues": 0.04538609099108726,
+        "atomic_gpu": 0.010609794990159571,
+        "classification": 0.004071571980603039,
+        "total": 0.1589313850272447
+      }
+    },
+    {
+      "p": 2381,
+      "scalar_order": 595,
+      "projective_order": 1191,
+      "ambient_order": 708645,
+      "orders_tested": [
+        3,
+        5,
+        7,
+        15,
+        17,
+        21,
+        35,
+        51
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 0,
+          "order": 5,
+          "layer": "nonprojective",
+          "aut_bad_degree": 4,
+          "aut_bad_hex": "0x1f"
+        },
+        {
+          "endpoint_offset": 0,
+          "order": 17,
+          "layer": "nonprojective",
+          "aut_bad_degree": 8,
+          "aut_bad_hex": "0x1d7"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.09337658301228657,
+        "gamma_residues": 0.07154091296251863,
+        "atomic_gpu": 0.01059677399462089,
+        "classification": 0.005432003003079444,
+        "total": 0.18161730404244736
+      }
+    },
+    {
+      "p": 2393,
+      "scalar_order": 299,
+      "projective_order": 1197,
+      "ambient_order": 357903,
+      "orders_tested": [
+        3,
+        7,
+        9,
+        13,
+        19,
+        21,
+        23,
+        39,
+        57,
+        63
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.10086574603337795,
+        "gamma_residues": 0.0889840520103462,
+        "atomic_gpu": 0.011003936000633985,
+        "classification": 0.008263742958661169,
+        "total": 0.20976924704154953
+      }
+    },
+    {
+      "p": 2417,
+      "scalar_order": 151,
+      "projective_order": 1209,
+      "ambient_order": 182559,
+      "orders_tested": [
+        3,
+        13,
+        31,
+        39
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.10932632099138573,
+        "gamma_residues": 0.03808971797116101,
+        "atomic_gpu": 0.01099884498398751,
+        "classification": 0.0030884710140526295,
+        "total": 0.16216015501413494
+      }
+    },
+    {
+      "p": 2441,
+      "scalar_order": 305,
+      "projective_order": 1221,
+      "ambient_order": 372405,
+      "orders_tested": [
+        3,
+        5,
+        11,
+        15,
+        33,
+        37,
+        55,
+        61
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 0,
+          "order": 5,
+          "layer": "nonprojective",
+          "aut_bad_degree": 4,
+          "aut_bad_hex": "0x1f"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.10450930899241939,
+        "gamma_residues": 0.07347869401564822,
+        "atomic_gpu": 0.010915365943219513,
+        "classification": 0.007451762037817389,
+        "total": 0.19702848099404946
+      }
+    },
+    {
+      "p": 2477,
+      "scalar_order": 619,
+      "projective_order": 1239,
+      "ambient_order": 766941,
+      "orders_tested": [
+        3,
+        7,
+        21,
+        59
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.10810550098540261,
+        "gamma_residues": 0.039422139001544565,
+        "atomic_gpu": 0.010682902997359633,
+        "classification": 0.0033093620440922678,
+        "total": 0.162200496008154
+      }
+    },
+    {
+      "p": 2549,
+      "scalar_order": 637,
+      "projective_order": 1275,
+      "ambient_order": 812175,
+      "orders_tested": [
+        3,
+        5,
+        7,
+        13,
+        15,
+        17,
+        21,
+        25,
+        35,
+        39,
+        49,
+        51
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 3,
+          "layer": "projective",
+          "aut_bad_degree": 2,
+          "aut_bad_hex": "0x7"
+        },
+        {
+          "endpoint_offset": 0,
+          "order": 7,
+          "layer": "nonprojective",
+          "aut_bad_degree": 6,
+          "aut_bad_hex": "0x7f"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.11017455201363191,
+        "gamma_residues": 0.11326489300699905,
+        "atomic_gpu": 0.012067805975675583,
+        "classification": 0.00935551495058462,
+        "total": 0.24559059599414468
+      }
+    },
+    {
+      "p": 2609,
+      "scalar_order": 163,
+      "projective_order": 1305,
+      "ambient_order": 212715,
+      "orders_tested": [
+        3,
+        5,
+        9,
+        15,
+        29,
+        45
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.11609160399530083,
+        "gamma_residues": 0.060148997989017516,
+        "atomic_gpu": 0.011999995971564204,
+        "classification": 0.003871311026159674,
+        "total": 0.19283260899828747
+      }
+    },
+    {
+      "p": 2621,
+      "scalar_order": 655,
+      "projective_order": 1311,
+      "ambient_order": 858705,
+      "orders_tested": [
+        3,
+        5,
+        15,
+        19,
+        23,
+        57
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 3,
+          "layer": "projective",
+          "aut_bad_degree": 2,
+          "aut_bad_hex": "0x7"
+        },
+        {
+          "endpoint_offset": 0,
+          "order": 5,
+          "layer": "nonprojective",
+          "aut_bad_degree": 4,
+          "aut_bad_hex": "0x1f"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.11341094400268048,
+        "gamma_residues": 0.060091297957114875,
+        "atomic_gpu": 0.011935746006201953,
+        "classification": 0.00445263204164803,
+        "total": 0.19061474996851757
+      }
+    },
+    {
+      "p": 2633,
+      "scalar_order": 329,
+      "projective_order": 1317,
+      "ambient_order": 433293,
+      "orders_tested": [
+        3,
+        7,
+        21,
+        47
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.11353977298131213,
+        "gamma_residues": 0.04168877995107323,
+        "atomic_gpu": 0.01127506495686248,
+        "classification": 0.0029390809941105545,
+        "total": 0.1701525989919901
+      }
+    },
+    {
+      "p": 2657,
+      "scalar_order": 83,
+      "projective_order": 1329,
+      "ambient_order": 110307,
+      "orders_tested": [
+        3
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.11681238596793264,
+        "gamma_residues": 0.013477266009431332,
+        "atomic_gpu": 0.011223976034671068,
+        "classification": 0.0003396900137886405,
+        "total": 0.1426017580088228
+      }
+    },
+    {
+      "p": 2693,
+      "scalar_order": 673,
+      "projective_order": 1347,
+      "ambient_order": 906531,
+      "orders_tested": [
+        3
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.1181877750204876,
+        "gamma_residues": 0.01366852701175958,
+        "atomic_gpu": 0.011165193980559707,
+        "classification": 0.00030571996467188,
+        "total": 0.14406918600434437
+      }
+    },
+    {
+      "p": 2729,
+      "scalar_order": 341,
+      "projective_order": 1365,
+      "ambient_order": 465465,
+      "orders_tested": [
+        3,
+        5,
+        7,
+        11,
+        13,
+        15,
+        21,
+        31,
+        33,
+        35,
+        39,
+        55
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.12128127802861854,
+        "gamma_residues": 0.12083630601409823,
+        "atomic_gpu": 0.012817387003451586,
+        "classification": 0.009017153992317617,
+        "total": 0.26469546504085883
+      }
+    },
+    {
+      "p": 2741,
+      "scalar_order": 685,
+      "projective_order": 1371,
+      "ambient_order": 939135,
+      "orders_tested": [
+        3,
+        5,
+        15
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 3,
+          "layer": "projective",
+          "aut_bad_degree": 2,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.12346986797638237,
+        "gamma_residues": 0.03343090502312407,
+        "atomic_gpu": 0.01012434100266546,
+        "classification": 0.001281814998947084,
+        "total": 0.16904532897751778
+      }
+    },
+    {
+      "p": 2753,
+      "scalar_order": 43,
+      "projective_order": 1377,
+      "ambient_order": 59211,
+      "orders_tested": [
+        3,
+        9,
+        17,
+        27,
+        43,
+        51
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.12158941698726267,
+        "gamma_residues": 0.0631326480070129,
+        "atomic_gpu": 0.01172612700611353,
+        "classification": 0.004920620995108038,
+        "total": 0.2021328840055503
+      }
+    },
+    {
+      "p": 2777,
+      "scalar_order": 347,
+      "projective_order": 1389,
+      "ambient_order": 481983,
+      "orders_tested": [
+        3
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.12792423000792041,
+        "gamma_residues": 0.014020237023942173,
+        "atomic_gpu": 0.011716445034835488,
+        "classification": 0.00036671000998467207,
+        "total": 0.15479547198629007
+      }
+    },
+    {
+      "p": 2789,
+      "scalar_order": 697,
+      "projective_order": 1395,
+      "ambient_order": 972315,
+      "orders_tested": [
+        3,
+        5,
+        9,
+        15,
+        17,
+        31,
+        41,
+        45,
+        51
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 3,
+          "layer": "projective",
+          "aut_bad_degree": 2,
+          "aut_bad_hex": "0x7"
+        },
+        {
+          "endpoint_offset": 1,
+          "order": 15,
+          "layer": "projective",
+          "aut_bad_degree": 8,
+          "aut_bad_hex": "0x1bb"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.12619599903700873,
+        "gamma_residues": 0.09376165398862213,
+        "atomic_gpu": 0.012511156033724546,
+        "classification": 0.00734317401656881,
+        "total": 0.24057514301966876
+      }
+    },
+    {
+      "p": 2801,
+      "scalar_order": 175,
+      "projective_order": 1401,
+      "ambient_order": 245175,
+      "orders_tested": [
+        3,
+        5,
+        7,
+        15,
+        21,
+        25,
+        35
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.1285831000423059,
+        "gamma_residues": 0.0746786730014719,
+        "atomic_gpu": 0.012061376008205116,
+        "classification": 0.004046640999149531,
+        "total": 0.22017063101520762
+      }
+    },
+    {
+      "p": 2837,
+      "scalar_order": 709,
+      "projective_order": 1419,
+      "ambient_order": 1006071,
+      "orders_tested": [
+        3,
+        11,
+        33,
+        43
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 3,
+          "layer": "projective",
+          "aut_bad_degree": 2,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.1360802529961802,
+        "gamma_residues": 0.04462292097741738,
+        "atomic_gpu": 0.009236094017978758,
+        "classification": 0.00330084195593372,
+        "total": 0.19402191997505724
+      }
+    },
+    {
+      "p": 2861,
+      "scalar_order": 715,
+      "projective_order": 1431,
+      "ambient_order": 1023165,
+      "orders_tested": [
+        3,
+        5,
+        9,
+        11,
+        13,
+        15,
+        27,
+        33,
+        39,
+        45,
+        53,
+        55
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 3,
+          "layer": "projective",
+          "aut_bad_degree": 2,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.13458812102908269,
+        "gamma_residues": 0.12709215801442042,
+        "atomic_gpu": 0.0129545169766061,
+        "classification": 0.009763073991052806,
+        "total": 0.28518086101394147
+      }
+    },
+    {
+      "p": 2897,
+      "scalar_order": 181,
+      "projective_order": 1449,
+      "ambient_order": 262269,
+      "orders_tested": [
+        3,
+        7,
+        9,
+        21,
+        23,
+        63
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.12700030900305137,
+        "gamma_residues": 0.06625707901548594,
+        "atomic_gpu": 0.012290326005313545,
+        "classification": 0.00404878199333325,
+        "total": 0.2103914570179768
+      }
+    },
+    {
+      "p": 2909,
+      "scalar_order": 727,
+      "projective_order": 1455,
+      "ambient_order": 1057785,
+      "orders_tested": [
+        3,
+        5,
+        15
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.13176974101224914,
+        "gamma_residues": 0.035473386000376195,
+        "atomic_gpu": 0.011994935979600996,
+        "classification": 0.0011711500119417906,
+        "total": 0.18121283303480595
+      }
+    },
+    {
+      "p": 2957,
+      "scalar_order": 739,
+      "projective_order": 1479,
+      "ambient_order": 1092981,
+      "orders_tested": [
+        3,
+        17,
+        29,
+        51
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [
+        {
+          "endpoint_offset": 1,
+          "order": 3,
+          "layer": "projective",
+          "aut_bad_degree": 2,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "timing_seconds": {
+        "orbit": 0.13965152500895783,
+        "gamma_residues": 0.04655072098830715,
+        "atomic_gpu": 0.012562067015096545,
+        "classification": 0.0034700609976425767,
+        "total": 0.20302355400053784
+      }
+    },
+    {
+      "p": 2969,
+      "scalar_order": 371,
+      "projective_order": 1485,
+      "ambient_order": 550935,
+      "orders_tested": [
+        3,
+        5,
+        7,
+        9,
+        11,
+        15,
+        21,
+        27,
+        33,
+        35,
+        45,
+        53,
+        55,
+        63
+      ],
+      "endpoint_offsets": [
+        0,
+        1
+      ],
+      "exceptions": [],
+      "timing_seconds": {
+        "orbit": 0.13259148999350145,
+        "gamma_residues": 0.15351310203550383,
+        "atomic_gpu": 0.013708204962313175,
+        "classification": 0.011594036011956632,
+        "total": 0.31221355398884043
+      }
+    }
+  ],
+  "elapsed_seconds": 11.256850710022263
+}

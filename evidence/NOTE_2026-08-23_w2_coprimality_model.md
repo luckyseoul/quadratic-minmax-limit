@@ -619,6 +619,70 @@ these primes.  Exact outputs are
 `evidence/w2_four_angle_gpu_2004_2500.json` and
 `evidence/w2_four_angle_gpu_2501_3000.json`.
 
+### Sparse atomic low-order census: the endpoint pair first fails at p=5237
+
+The dense spectral calculation spends most of its time constructing the full
+polynomials even when the question concerns a small root order.  For an odd
+order `d`, reduction modulo `X^d+1` needs only the parity of each endpoint
+orbit in exponent classes modulo `d`.  The Bose-generator components admit
+the same reduction.  Two cyclic cross-correlations of these tiny residue
+vectors recover the oriented content modulo `X^d+1`, after which
+
+    gcd(Phi_d, c(X), c(X^-1))
+
+is the exact primitive-order-`d` Aut obstruction.  No FFT, factorization, or
+probabilistic test is involved.
+
+`scripts/w2_low_order_atomic_gpu.py` implements this reduction with a
+CUDA/HIP grid-stride kernel.  Each block accumulates endpoint residue parities
+with shared-memory `atomicXor`, then atomically merges only the small residue
+table.  The multiplicative square/nonsquare orbits and inverse logarithm are
+generated in the compiled `src/gf2x_ntl.cpp` bridge, removing the former
+Python orbit loop.  The same source runs unchanged on the V100 and RX 9070 XT.
+
+`scripts/w2_low_order_atomic_validate.py` compares sparse records directly
+with dense exact endpoint gcds.  Through `p=3000`, every primitive odd order
+`3<=d<=63` matches coefficient-for-coefficient: 112 primes, 1,246
+endpoint/order comparisons, and all 60 exceptional records.  At `p=2381`,
+the sparse RX 9070 XT run takes 0.182 seconds end-to-end (0.011 seconds in the
+atomic kernel), versus 17.013 seconds for the earlier dense exact run.
+
+The extended scan tests every odd `d<=255` dividing the ambient odd order at
+all 197 eligible primes `3001<=p<=10000`.  It records 114 endpoint/order
+exceptions, 29 in the unresolved scalar layer.  New higher-order scalar
+examples include order 85 at `p=5441`, order 255 at `p=6869`, order 63 at
+`p=8513`, and orders 51 and 255 at `p=9929`.  Repository and history searches
+found no earlier W2 record of these cases.
+
+Most importantly, the first two normalized endpoints share an obstruction:
+
+    p=5237, endpoint 0: Phi_7 Phi_11,   aut_bad = 0x157d5, degree 16;
+    p=5237, endpoint 1: Phi_3 Phi_7,    aut_bad = 0x17d,   degree 8;
+    common pair gcd:    Phi_7,          aut_bad = 0x7f,    degree 6.
+
+Thus the exact two-endpoint statement that held through `p=3000` is false.
+An independent full-polynomial V100 run confirms both endpoint gcds and the
+common `Phi_7`; this is not an inference from the bounded-order scan.  The
+next endpoint repairs the failure completely: endpoint offset 2 has
+`aut_bad=1` and is itself a unit-content witness.  The exact prefix bad degrees
+are therefore `16,6,0` for one, two, and three endpoints.
+
+The order-63 hit at `p=8513` was also independently checked with the dense
+RX 9070 XT calculation.  Endpoint zero has exact scalar Aut-bad polynomial
+`0x13f9` of degree 12, while endpoint one is a unit-content witness and the
+pair succeeds.  The broad sparse census proves only the reported primitive
+orders through 255; it does not exclude additional higher-order factors or
+additional pair failures in `3001<=p<=10000`.  Accordingly these findings do
+not change W2's open status.
+
+Raw sparse outputs are
+`evidence/w2_low_order_atomic_gpu_5_1500_o63.json`,
+`evidence/w2_low_order_atomic_gpu_1501_3000_o63.json`,
+`evidence/w2_low_order_atomic_gpu_3001_8000_o255.json`, and
+`evidence/w2_low_order_atomic_gpu_8001_10000_o255.json`.  The two independent
+dense confirmations are `evidence/w2_endpoint_norm_gpu_p5237_triple.json` and
+`evidence/w2_endpoint_norm_gpu_p8513.json`.
+
 ### Collective boundary norms: a stronger factor-free reduction
 
 The unit-content boundary scan leaves useful information on the floor.  For

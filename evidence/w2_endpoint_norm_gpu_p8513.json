@@ -1,0 +1,113 @@
+{
+  "range": [
+    8513,
+    8513
+  ],
+  "congruence_class": "p == 5 (mod 12)",
+  "offsets": [
+    0,
+    1
+  ],
+  "backend": "gpu",
+  "precision": "double",
+  "gcd_backend": "ntl",
+  "n_primes": 1,
+  "prefix_failures": {
+    "1": [
+      8513
+    ],
+    "2": []
+  },
+  "unit_ideal_prefix_failures": {
+    "1": [
+      8513
+    ],
+    "2": []
+  },
+  "scalar_prefix_failures": {
+    "1": [
+      8513
+    ],
+    "2": []
+  },
+  "projective_prefix_failures": {
+    "1": [],
+    "2": []
+  },
+  "rows": [
+    {
+      "p": 8513,
+      "orbit_length": 36235584,
+      "ambient_oddpart": 566181,
+      "fold_factor": 64,
+      "projective_order": 4257,
+      "scalar_order": 133,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 4257,
+          "pole_t": 5676,
+          "aut_bad_degree": 12,
+          "norm_bad_degree": 24,
+          "content_gcd_degree": 18,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 12,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x13f9"
+        },
+        {
+          "offset": 1,
+          "u": 4258,
+          "pole_t": 1892,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 12,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 12,
+          "collective_w2_witness": false,
+          "common_norm_bad_degree": 24,
+          "collective_unit_ideal_witness": false,
+          "common_aut_bad_hex": "0x13f9"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 90.83776637597475,
+        "endpoints_and_fold": 13.920092398009729,
+        "batched_transform": 4.87016211100854,
+        "polynomial_gcd": 2.3654581240261905,
+        "total": 111.99348268896574
+      }
+    }
+  ],
+  "elapsed_seconds": 111.99356683896622
+}

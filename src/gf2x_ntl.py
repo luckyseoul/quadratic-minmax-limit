@@ -11,6 +11,8 @@ import subprocess
 import tempfile
 from pathlib import Path
 
+import numpy as np
+
 
 SOURCE = Path(__file__).with_suffix(".cpp")
 _LIB = None
@@ -50,6 +52,18 @@ def _load():
         ctypes.c_long,
     ]
     loaded.qml_gf2x_gcd.restype = ctypes.c_long
+    loaded.qml_field_orbits.argtypes = [
+        ctypes.c_uint32,
+        ctypes.c_uint32,
+        ctypes.c_uint32,
+        ctypes.c_uint32,
+        ctypes.c_uint32,
+        ctypes.POINTER(ctypes.c_uint32),
+        ctypes.POINTER(ctypes.c_uint32),
+        ctypes.POINTER(ctypes.c_uint32),
+        ctypes.c_long,
+    ]
+    loaded.qml_field_orbits.restype = ctypes.c_int
     _LIB = loaded
     return loaded
 
@@ -83,3 +97,35 @@ def gcd_bits(left: int, right: int) -> int:
     if written < 0:
         raise RuntimeError(f"NTL gcd output needs {-written} bytes, had {capacity}")
     return int.from_bytes(bytes(output[:written]), "little")
+
+
+def field_orbits(
+    p: int,
+    ia: int,
+    ib: int,
+    generator: int,
+    omega: int,
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """Generate both multiplicative point-orbits and an inverse log table."""
+    q = p * p
+    orbit_length = (q - 1) // 2
+    if orbit_length >= 1 << 31:
+        raise ValueError("native uint32 orbit encoding requires p < 65536")
+    square = np.empty(orbit_length, dtype=np.uint32)
+    nonsquare = np.empty(orbit_length, dtype=np.uint32)
+    logarithm = np.empty(q, dtype=np.uint32)
+    pointer = ctypes.POINTER(ctypes.c_uint32)
+    status = _load().qml_field_orbits(
+        p,
+        ia,
+        ib,
+        generator,
+        omega,
+        square.ctypes.data_as(pointer),
+        nonsquare.ctypes.data_as(pointer),
+        logarithm.ctypes.data_as(pointer),
+        orbit_length,
+    )
+    if status:
+        raise RuntimeError(f"native field orbit generation failed with {status}")
+    return square, nonsquare, logarithm
