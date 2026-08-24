@@ -1,0 +1,2948 @@
+{
+  "range": [
+    5,
+    2003
+  ],
+  "congruence_class": "p == 5 (mod 12)",
+  "n_primes": 77,
+  "failures": {
+    "named_z_frobenius": [],
+    "endpoint_frobenius": [],
+    "c0_equals_c2": [],
+    "c1_even": [],
+    "c0_odd": [],
+    "content_not_one": [],
+    "gamma_class_count_formula": []
+  },
+  "all_observed_c1_mod4_two": true,
+  "all_observed_nonsquare_weight_mod4_zero": true,
+  "rows": [
+    {
+      "p": 5,
+      "endpoint_u": 3,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        1,
+        4,
+        1
+      ],
+      "expected_gamma_class_counts": [
+        1,
+        4,
+        1
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        1,
+        2,
+        1
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.0015723705291748047
+    },
+    {
+      "p": 17,
+      "endpoint_u": 9,
+      "pole_t": 12,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        3,
+        18,
+        3
+      ],
+      "expected_gamma_class_counts": [
+        3,
+        18,
+        3
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        19,
+        22,
+        19
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.0034270286560058594
+    },
+    {
+      "p": 29,
+      "endpoint_u": 15,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        5,
+        32,
+        5
+      ],
+      "expected_gamma_class_counts": [
+        5,
+        32,
+        5
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        55,
+        54,
+        55
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.004560708999633789
+    },
+    {
+      "p": 41,
+      "endpoint_u": 21,
+      "pole_t": 28,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        7,
+        46,
+        7
+      ],
+      "expected_gamma_class_counts": [
+        7,
+        46,
+        7
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        139,
+        134,
+        139
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.006929636001586914
+    },
+    {
+      "p": 53,
+      "endpoint_u": 27,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        9,
+        60,
+        9
+      ],
+      "expected_gamma_class_counts": [
+        9,
+        60,
+        9
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        211,
+        218,
+        211
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.009523868560791016
+    },
+    {
+      "p": 89,
+      "endpoint_u": 45,
+      "pole_t": 60,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        15,
+        102,
+        15
+      ],
+      "expected_gamma_class_counts": [
+        15,
+        102,
+        15
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        623,
+        642,
+        623
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.02039623260498047
+    },
+    {
+      "p": 101,
+      "endpoint_u": 51,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        17,
+        116,
+        17
+      ],
+      "expected_gamma_class_counts": [
+        17,
+        116,
+        17
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        857,
+        846,
+        857
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.031653642654418945
+    },
+    {
+      "p": 113,
+      "endpoint_u": 57,
+      "pole_t": 76,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        19,
+        130,
+        19
+      ],
+      "expected_gamma_class_counts": [
+        19,
+        130,
+        19
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        1053,
+        1086,
+        1053
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.04346299171447754
+    },
+    {
+      "p": 137,
+      "endpoint_u": 69,
+      "pole_t": 92,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        23,
+        158,
+        23
+      ],
+      "expected_gamma_class_counts": [
+        23,
+        158,
+        23
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        1563,
+        1526,
+        1563
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.0455322265625
+    },
+    {
+      "p": 149,
+      "endpoint_u": 75,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        25,
+        172,
+        25
+      ],
+      "expected_gamma_class_counts": [
+        25,
+        172,
+        25
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        1843,
+        1794,
+        1843
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.08078265190124512
+    },
+    {
+      "p": 173,
+      "endpoint_u": 87,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        29,
+        200,
+        29
+      ],
+      "expected_gamma_class_counts": [
+        29,
+        200,
+        29
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        2383,
+        2518,
+        2383
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.07063865661621094
+    },
+    {
+      "p": 197,
+      "endpoint_u": 99,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        33,
+        228,
+        33
+      ],
+      "expected_gamma_class_counts": [
+        33,
+        228,
+        33
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        3233,
+        3226,
+        3233
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.08875393867492676
+    },
+    {
+      "p": 233,
+      "endpoint_u": 117,
+      "pole_t": 156,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        39,
+        270,
+        39
+      ],
+      "expected_gamma_class_counts": [
+        39,
+        270,
+        39
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        4479,
+        4562,
+        4479
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.12125658988952637
+    },
+    {
+      "p": 257,
+      "endpoint_u": 129,
+      "pole_t": 172,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        43,
+        298,
+        43
+      ],
+      "expected_gamma_class_counts": [
+        43,
+        298,
+        43
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        5467,
+        5426,
+        5467
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.1434943675994873
+    },
+    {
+      "p": 269,
+      "endpoint_u": 135,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        45,
+        312,
+        45
+      ],
+      "expected_gamma_class_counts": [
+        45,
+        312,
+        45
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        5953,
+        5890,
+        5953
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.17063593864440918
+    },
+    {
+      "p": 281,
+      "endpoint_u": 141,
+      "pole_t": 188,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        47,
+        326,
+        47
+      ],
+      "expected_gamma_class_counts": [
+        47,
+        326,
+        47
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        6567,
+        6506,
+        6567
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.21748089790344238
+    },
+    {
+      "p": 293,
+      "endpoint_u": 147,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        49,
+        340,
+        49
+      ],
+      "expected_gamma_class_counts": [
+        49,
+        340,
+        49
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        7051,
+        6942,
+        7051
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.19016528129577637
+    },
+    {
+      "p": 317,
+      "endpoint_u": 159,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        53,
+        368,
+        53
+      ],
+      "expected_gamma_class_counts": [
+        53,
+        368,
+        53
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        8241,
+        8446,
+        8241
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.22166991233825684
+    },
+    {
+      "p": 353,
+      "endpoint_u": 177,
+      "pole_t": 236,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        59,
+        410,
+        59
+      ],
+      "expected_gamma_class_counts": [
+        59,
+        410,
+        59
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        10423,
+        10226,
+        10423
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.4077637195587158
+    },
+    {
+      "p": 389,
+      "endpoint_u": 195,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        65,
+        452,
+        65
+      ],
+      "expected_gamma_class_counts": [
+        65,
+        452,
+        65
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        12451,
+        12474,
+        12451
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.33579373359680176
+    },
+    {
+      "p": 401,
+      "endpoint_u": 201,
+      "pole_t": 268,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        67,
+        466,
+        67
+      ],
+      "expected_gamma_class_counts": [
+        67,
+        466,
+        67
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        13385,
+        13266,
+        13385
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.3559751510620117
+    },
+    {
+      "p": 449,
+      "endpoint_u": 225,
+      "pole_t": 300,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        75,
+        522,
+        75
+      ],
+      "expected_gamma_class_counts": [
+        75,
+        522,
+        75
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        16709,
+        16842,
+        16709
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.44333982467651367
+    },
+    {
+      "p": 461,
+      "endpoint_u": 231,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        77,
+        536,
+        77
+      ],
+      "expected_gamma_class_counts": [
+        77,
+        536,
+        77
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        17577,
+        17650,
+        17577
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.4702796936035156
+    },
+    {
+      "p": 509,
+      "endpoint_u": 255,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        85,
+        592,
+        85
+      ],
+      "expected_gamma_class_counts": [
+        85,
+        592,
+        85
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        21521,
+        21538,
+        21521
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.574448823928833
+    },
+    {
+      "p": 521,
+      "endpoint_u": 261,
+      "pole_t": 348,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        87,
+        606,
+        87
+      ],
+      "expected_gamma_class_counts": [
+        87,
+        606,
+        87
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        22483,
+        22502,
+        22483
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.5978541374206543
+    },
+    {
+      "p": 557,
+      "endpoint_u": 279,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        93,
+        648,
+        93
+      ],
+      "expected_gamma_class_counts": [
+        93,
+        648,
+        93
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        26027,
+        25538,
+        26027
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.6945600509643555
+    },
+    {
+      "p": 569,
+      "endpoint_u": 285,
+      "pole_t": 380,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        95,
+        662,
+        95
+      ],
+      "expected_gamma_class_counts": [
+        95,
+        662,
+        95
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        26875,
+        26782,
+        26875
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.7178406715393066
+    },
+    {
+      "p": 593,
+      "endpoint_u": 297,
+      "pole_t": 396,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        99,
+        690,
+        99
+      ],
+      "expected_gamma_class_counts": [
+        99,
+        690,
+        99
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        29299,
+        29306,
+        29299
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.7782113552093506
+    },
+    {
+      "p": 617,
+      "endpoint_u": 309,
+      "pole_t": 412,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        103,
+        718,
+        103
+      ],
+      "expected_gamma_class_counts": [
+        103,
+        718,
+        103
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        31619,
+        31594,
+        31619
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.8494033813476562
+    },
+    {
+      "p": 641,
+      "endpoint_u": 321,
+      "pole_t": 428,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        107,
+        746,
+        107
+      ],
+      "expected_gamma_class_counts": [
+        107,
+        746,
+        107
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        33935,
+        34254,
+        33935
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.906261682510376
+    },
+    {
+      "p": 653,
+      "endpoint_u": 327,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        109,
+        760,
+        109
+      ],
+      "expected_gamma_class_counts": [
+        109,
+        760,
+        109
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        35525,
+        35450,
+        35525
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 0.9453368186950684
+    },
+    {
+      "p": 677,
+      "endpoint_u": 339,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        113,
+        788,
+        113
+      ],
+      "expected_gamma_class_counts": [
+        113,
+        788,
+        113
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        38233,
+        38094,
+        38233
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 1.018045425415039
+    },
+    {
+      "p": 701,
+      "endpoint_u": 351,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        117,
+        816,
+        117
+      ],
+      "expected_gamma_class_counts": [
+        117,
+        816,
+        117
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        40703,
+        40810,
+        40703
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 1.0979056358337402
+    },
+    {
+      "p": 761,
+      "endpoint_u": 381,
+      "pole_t": 508,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        127,
+        886,
+        127
+      ],
+      "expected_gamma_class_counts": [
+        127,
+        886,
+        127
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        48193,
+        48106,
+        48193
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 1.2603821754455566
+    },
+    {
+      "p": 773,
+      "endpoint_u": 387,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        129,
+        900,
+        129
+      ],
+      "expected_gamma_class_counts": [
+        129,
+        900,
+        129
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        49857,
+        49874,
+        49857
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 1.3042881488800049
+    },
+    {
+      "p": 797,
+      "endpoint_u": 399,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        133,
+        928,
+        133
+      ],
+      "expected_gamma_class_counts": [
+        133,
+        928,
+        133
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        53137,
+        52634,
+        53137
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 1.3928413391113281
+    },
+    {
+      "p": 809,
+      "endpoint_u": 405,
+      "pole_t": 540,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        135,
+        942,
+        135
+      ],
+      "expected_gamma_class_counts": [
+        135,
+        942,
+        135
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        54457,
+        54362,
+        54457
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 1.432654619216919
+    },
+    {
+      "p": 821,
+      "endpoint_u": 411,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        137,
+        956,
+        137
+      ],
+      "expected_gamma_class_counts": [
+        137,
+        956,
+        137
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        56061,
+        56038,
+        56061
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 1.4716854095458984
+    },
+    {
+      "p": 857,
+      "endpoint_u": 429,
+      "pole_t": 572,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        143,
+        998,
+        143
+      ],
+      "expected_gamma_class_counts": [
+        143,
+        998,
+        143
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        60721,
+        60986,
+        60721
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 1.604454517364502
+    },
+    {
+      "p": 881,
+      "endpoint_u": 441,
+      "pole_t": 588,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        147,
+        1026,
+        147
+      ],
+      "expected_gamma_class_counts": [
+        147,
+        1026,
+        147
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        64407,
+        64402,
+        64407
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 1.6991071701049805
+    },
+    {
+      "p": 929,
+      "endpoint_u": 465,
+      "pole_t": 620,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        155,
+        1082,
+        155
+      ],
+      "expected_gamma_class_counts": [
+        155,
+        1082,
+        155
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        71625,
+        71866,
+        71625
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 1.8811204433441162
+    },
+    {
+      "p": 941,
+      "endpoint_u": 471,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        157,
+        1096,
+        157
+      ],
+      "expected_gamma_class_counts": [
+        157,
+        1096,
+        157
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        73665,
+        74082,
+        73665
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 1.9296433925628662
+    },
+    {
+      "p": 953,
+      "endpoint_u": 477,
+      "pole_t": 636,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        159,
+        1110,
+        159
+      ],
+      "expected_gamma_class_counts": [
+        159,
+        1110,
+        159
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        75429,
+        75490,
+        75429
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 1.9829785823822021
+    },
+    {
+      "p": 977,
+      "endpoint_u": 489,
+      "pole_t": 652,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        163,
+        1138,
+        163
+      ],
+      "expected_gamma_class_counts": [
+        163,
+        1138,
+        163
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        79315,
+        79366,
+        79315
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 2.0695903301239014
+    },
+    {
+      "p": 1013,
+      "endpoint_u": 507,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        169,
+        1180,
+        169
+      ],
+      "expected_gamma_class_counts": [
+        169,
+        1180,
+        169
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        85639,
+        85198,
+        85639
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 2.2366855144500732
+    },
+    {
+      "p": 1049,
+      "endpoint_u": 525,
+      "pole_t": 700,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        175,
+        1222,
+        175
+      ],
+      "expected_gamma_class_counts": [
+        175,
+        1222,
+        175
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        91611,
+        91234,
+        91611
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 2.3833463191986084
+    },
+    {
+      "p": 1061,
+      "endpoint_u": 531,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        177,
+        1236,
+        177
+      ],
+      "expected_gamma_class_counts": [
+        177,
+        1236,
+        177
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        93711,
+        94254,
+        93711
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 2.467603921890259
+    },
+    {
+      "p": 1097,
+      "endpoint_u": 549,
+      "pole_t": 732,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        183,
+        1278,
+        183
+      ],
+      "expected_gamma_class_counts": [
+        183,
+        1278,
+        183
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        99819,
+        100370,
+        99819
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 2.6164097785949707
+    },
+    {
+      "p": 1109,
+      "endpoint_u": 555,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        185,
+        1292,
+        185
+      ],
+      "expected_gamma_class_counts": [
+        185,
+        1292,
+        185
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        102187,
+        102278,
+        102187
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 2.686056613922119
+    },
+    {
+      "p": 1181,
+      "endpoint_u": 591,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        197,
+        1376,
+        197
+      ],
+      "expected_gamma_class_counts": [
+        197,
+        1376,
+        197
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        115791,
+        116590,
+        115791
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 3.0279908180236816
+    },
+    {
+      "p": 1193,
+      "endpoint_u": 597,
+      "pole_t": 796,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        199,
+        1390,
+        199
+      ],
+      "expected_gamma_class_counts": [
+        199,
+        1390,
+        199
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        118835,
+        118410,
+        118835
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 3.082080602645874
+    },
+    {
+      "p": 1217,
+      "endpoint_u": 609,
+      "pole_t": 812,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        203,
+        1418,
+        203
+      ],
+      "expected_gamma_class_counts": [
+        203,
+        1418,
+        203
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        123311,
+        123138,
+        123311
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 3.2193844318389893
+    },
+    {
+      "p": 1229,
+      "endpoint_u": 615,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        205,
+        1432,
+        205
+      ],
+      "expected_gamma_class_counts": [
+        205,
+        1432,
+        205
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        125429,
+        125002,
+        125429
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 3.2748355865478516
+    },
+    {
+      "p": 1277,
+      "endpoint_u": 639,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        213,
+        1488,
+        213
+      ],
+      "expected_gamma_class_counts": [
+        213,
+        1488,
+        213
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        135669,
+        135334,
+        135669
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 3.537219285964966
+    },
+    {
+      "p": 1289,
+      "endpoint_u": 645,
+      "pole_t": 860,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        215,
+        1502,
+        215
+      ],
+      "expected_gamma_class_counts": [
+        215,
+        1502,
+        215
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        138381,
+        138158,
+        138381
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 3.604907989501953
+    },
+    {
+      "p": 1301,
+      "endpoint_u": 651,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        217,
+        1516,
+        217
+      ],
+      "expected_gamma_class_counts": [
+        217,
+        1516,
+        217
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        141389,
+        140874,
+        141389
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 3.6857168674468994
+    },
+    {
+      "p": 1361,
+      "endpoint_u": 681,
+      "pole_t": 908,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        227,
+        1586,
+        227
+      ],
+      "expected_gamma_class_counts": [
+        227,
+        1586,
+        227
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        153925,
+        153602,
+        153925
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 4.03186559677124
+    },
+    {
+      "p": 1373,
+      "endpoint_u": 687,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        229,
+        1600,
+        229
+      ],
+      "expected_gamma_class_counts": [
+        229,
+        1600,
+        229
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        156995,
+        156322,
+        156995
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 4.117537975311279
+    },
+    {
+      "p": 1409,
+      "endpoint_u": 705,
+      "pole_t": 940,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        235,
+        1642,
+        235
+      ],
+      "expected_gamma_class_counts": [
+        235,
+        1642,
+        235
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        164925,
+        165162,
+        164925
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 4.3119797706604
+    },
+    {
+      "p": 1433,
+      "endpoint_u": 717,
+      "pole_t": 956,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        239,
+        1670,
+        239
+      ],
+      "expected_gamma_class_counts": [
+        239,
+        1670,
+        239
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        170905,
+        171134,
+        170905
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 4.4786057472229
+    },
+    {
+      "p": 1481,
+      "endpoint_u": 741,
+      "pole_t": 988,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        247,
+        1726,
+        247
+      ],
+      "expected_gamma_class_counts": [
+        247,
+        1726,
+        247
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        182151,
+        182514,
+        182151
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 4.772809028625488
+    },
+    {
+      "p": 1493,
+      "endpoint_u": 747,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        249,
+        1740,
+        249
+      ],
+      "expected_gamma_class_counts": [
+        249,
+        1740,
+        249
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        185451,
+        185562,
+        185451
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 4.834942102432251
+    },
+    {
+      "p": 1553,
+      "endpoint_u": 777,
+      "pole_t": 1036,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        259,
+        1810,
+        259
+      ],
+      "expected_gamma_class_counts": [
+        259,
+        1810,
+        259
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        200903,
+        200322,
+        200903
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 5.262071132659912
+    },
+    {
+      "p": 1601,
+      "endpoint_u": 801,
+      "pole_t": 1068,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        267,
+        1866,
+        267
+      ],
+      "expected_gamma_class_counts": [
+        267,
+        1866,
+        267
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        213375,
+        213426,
+        213375
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 5.54761528968811
+    },
+    {
+      "p": 1613,
+      "endpoint_u": 807,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        269,
+        1880,
+        269
+      ],
+      "expected_gamma_class_counts": [
+        269,
+        1880,
+        269
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        216441,
+        217046,
+        216441
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 5.658480405807495
+    },
+    {
+      "p": 1637,
+      "endpoint_u": 819,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        273,
+        1908,
+        273
+      ],
+      "expected_gamma_class_counts": [
+        273,
+        1908,
+        273
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        222547,
+        224002,
+        222547
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 5.874409198760986
+    },
+    {
+      "p": 1697,
+      "endpoint_u": 849,
+      "pole_t": 1132,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        283,
+        1978,
+        283
+      ],
+      "expected_gamma_class_counts": [
+        283,
+        1978,
+        283
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        239245,
+        239410,
+        239245
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 6.23471212387085
+    },
+    {
+      "p": 1709,
+      "endpoint_u": 855,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        285,
+        1992,
+        285
+      ],
+      "expected_gamma_class_counts": [
+        285,
+        1992,
+        285
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        242773,
+        243118,
+        242773
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 6.371353626251221
+    },
+    {
+      "p": 1721,
+      "endpoint_u": 861,
+      "pole_t": 1148,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        287,
+        2006,
+        287
+      ],
+      "expected_gamma_class_counts": [
+        287,
+        2006,
+        287
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        246135,
+        246330,
+        246135
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 6.440642356872559
+    },
+    {
+      "p": 1733,
+      "endpoint_u": 867,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        289,
+        2020,
+        289
+      ],
+      "expected_gamma_class_counts": [
+        289,
+        2020,
+        289
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        249963,
+        250422,
+        249963
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 6.527108669281006
+    },
+    {
+      "p": 1877,
+      "endpoint_u": 939,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        313,
+        2188,
+        313
+      ],
+      "expected_gamma_class_counts": [
+        313,
+        2188,
+        313
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        293851,
+        292670,
+        293851
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 7.686181545257568
+    },
+    {
+      "p": 1889,
+      "endpoint_u": 945,
+      "pole_t": 1260,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        315,
+        2202,
+        315
+      ],
+      "expected_gamma_class_counts": [
+        315,
+        2202,
+        315
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        296575,
+        296954,
+        296575
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 7.76820707321167
+    },
+    {
+      "p": 1901,
+      "endpoint_u": 951,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        317,
+        2216,
+        317
+      ],
+      "expected_gamma_class_counts": [
+        317,
+        2216,
+        317
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        300513,
+        301294,
+        300513
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 7.852836608886719
+    },
+    {
+      "p": 1913,
+      "endpoint_u": 957,
+      "pole_t": 1276,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        319,
+        2230,
+        319
+      ],
+      "expected_gamma_class_counts": [
+        319,
+        2230,
+        319
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        304373,
+        304646,
+        304373
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 7.93920111656189
+    },
+    {
+      "p": 1949,
+      "endpoint_u": 975,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        325,
+        2272,
+        325
+      ],
+      "expected_gamma_class_counts": [
+        325,
+        2272,
+        325
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        316005,
+        316778,
+        316005
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 8.249300956726074
+    },
+    {
+      "p": 1973,
+      "endpoint_u": 987,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        329,
+        2300,
+        329
+      ],
+      "expected_gamma_class_counts": [
+        329,
+        2300,
+        329
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        323561,
+        324930,
+        323561
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 8.416718006134033
+    },
+    {
+      "p": 1997,
+      "endpoint_u": 999,
+      "pole_t": 1,
+      "named_z_frobenius_mismatches": 0,
+      "endpoint_frobenius_mismatches": 0,
+      "gamma_phi3_residues": [
+        0,
+        2
+      ],
+      "gamma_nonsquare_exponent_class_counts": [
+        333,
+        2328,
+        333
+      ],
+      "expected_gamma_class_counts": [
+        333,
+        2328,
+        333
+      ],
+      "gamma_class_count_formula": true,
+      "endpoint_phi3_residues": [
+        0,
+        2
+      ],
+      "normalized_content_value": 1,
+      "nonsquare_exponent_class_counts": [
+        332295,
+        332066,
+        332295
+      ],
+      "frobenius_c0_equals_c2": true,
+      "frobenius_c1_even": true,
+      "surviving_c0_odd": true,
+      "observed_c1_mod4": 2,
+      "observed_nonsquare_weight_mod4": 0,
+      "elapsed_seconds": 8.656722068786621
+    }
+  ],
+  "elapsed_seconds": 28.199161052703857
+}

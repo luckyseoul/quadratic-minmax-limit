@@ -275,6 +275,55 @@ Thus the first three endpoints are not a p-law either, and the growing bad
 prefix makes a small fixed disjunction a poor proof target.  The scan's
 maximum first-good offset is 4; this is census evidence, not a uniform bound.
 
+### A Frobenius reduction solves the observed Phi_3 endpoint gate at p=5 mod 12
+
+There is one clean congruence-class phenomenon hidden by the mixed-prime
+endpoint census.  Suppose `p == 5 (mod 12)` and choose the first normalized
+endpoint
+
+    u=(p+1)/2,        t=lambda/u=2 lambda in F_p.
+
+The named halfspace is invariant under `p`-Frobenius.  In the repository's
+quadratic basis `omega^2=d` with `d` a nonsquare, writing `x=a+b omega`
+shows that the level of `omega^-1 x` is `a/d`, unchanged when
+`x^p=a-b omega`.  Since `t` lies in `F_p`, both the pole involution and its
+quadratic switch commute with Frobenius.  The endpoint difference `w` is
+therefore Frobenius invariant.
+
+Write the nonsquare multiplicative orbit as `omega_0 g^j`, where `g` is the
+square generator, and let `C_j` be the number of support points with exponent
+class `j mod 3`.  Frobenius acts on the exponent by
+
+    j -> (p-1)/2 + p j = 2-j mod 3.
+
+Consequently `C_0=C_2`.  Class 1 is preserved, but the nonsquare orbit has no
+`F_p`-points, so `C_1` is even.  At a root `Z` of `Phi_3`, the endpoint
+residue is thus
+
+    C_0 + C_1 Z + C_2 Z^2 = (C_0 mod 2) Z.
+
+The named cyclic generator has the exact nonsquare class counts
+
+    ((p+1)/6, (7p-11)/6, (p+1)/6),
+
+and hence residue `Z`, since `(p+1)/6` is odd.  The normalized endpoint
+content is therefore exactly `1` if and only if `C_0` is odd.  This reduces
+the complete `Phi_3` endpoint question in this congruence class to one
+integer parity, with the Frobenius equalities proved before computation.
+
+`scripts/w2_phi3_endpoint_frobenius.py` checks the coordinate identities and
+counts directly.  Through `p=5003`, all 170 primes `p == 5 (mod 12)` have
+zero Frobenius mismatches, `C_0=C_2`, even `C_1`, odd `C_0`, and normalized
+content `1`.  It also observes the sharper congruences `C_1 == 2 (mod 4)`
+and `C_0+C_1+C_2 == 0 (mod 4)`.  Either of these together with the other
+would force the missing oddness, but no uniform proof of those halfspace
+congruences has yet been found.  Classical cubic Jacobi-sum evaluations over
+`F_(p^2)` control complete algebraic sums; they do not by themselves control
+this incomplete halfspace parity.  The reproducible in-repository result is
+`evidence/w2_phi3_endpoint_frobenius_5_2003.json`; the 5003 mesh extension is
+archived beside the translated sequences under
+`/mnt/storage/e1work/maxplus_p13/w2_translated_attack_2026-08-23`.
+
 ### Collective boundary norms: a stronger factor-free reduction
 
 The unit-content boundary scan leaves useful information on the floor.  For
