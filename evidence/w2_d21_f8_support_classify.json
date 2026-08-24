@@ -28,6 +28,11 @@
     "0": 28,
     "1": 28
   },
+  "jacobi_phase_trace_counts": {
+    "0": 28,
+    "1": 28
+  },
+  "jacobi_phase_equals_state_trace": true,
   "state_trace_linear_in_support_bits": null,
   "mod4_rds_lift_counts_by_k_parity_and_trace": {
     "0": {
@@ -114,7 +119,8 @@
       "ratio": null,
       "ratio_star": null,
       "state_parameter": 0,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     },
     {
       "square_mask": 94,
@@ -130,7 +136,8 @@
       "ratio": null,
       "ratio_star": null,
       "state_parameter": 0,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     },
     {
       "square_mask": 110,
@@ -146,7 +153,8 @@
       "ratio": null,
       "ratio_star": null,
       "state_parameter": 0,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     },
     {
       "square_mask": 118,
@@ -162,7 +170,8 @@
       "ratio": null,
       "ratio_star": null,
       "state_parameter": 0,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     },
     {
       "square_mask": 122,
@@ -178,7 +187,8 @@
       "ratio": null,
       "ratio_star": null,
       "state_parameter": 0,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     },
     {
       "square_mask": 124,
@@ -194,7 +204,8 @@
       "ratio": null,
       "ratio_star": null,
       "state_parameter": 0,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     },
     {
       "square_mask": 127,
@@ -210,7 +221,8 @@
       "ratio": null,
       "ratio_star": null,
       "state_parameter": 0,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     }
   ],
   "outside_observed_examples": [
@@ -228,7 +240,8 @@
       "ratio": 22,
       "ratio_star": 23,
       "state_parameter": 31,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     },
     {
       "square_mask": 4,
@@ -244,7 +257,8 @@
       "ratio": 23,
       "ratio_star": 8,
       "state_parameter": 23,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     },
     {
       "square_mask": 7,
@@ -260,7 +274,8 @@
       "ratio": 22,
       "ratio_star": 23,
       "state_parameter": 31,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     },
     {
       "square_mask": 8,
@@ -276,7 +291,8 @@
       "ratio": 1,
       "ratio_star": 31,
       "state_parameter": 8,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     },
     {
       "square_mask": 11,
@@ -292,7 +308,8 @@
       "ratio": 23,
       "ratio_star": 8,
       "state_parameter": 23,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     },
     {
       "square_mask": 13,
@@ -308,7 +325,8 @@
       "ratio": 22,
       "ratio_star": 23,
       "state_parameter": 31,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     },
     {
       "square_mask": 16,
@@ -324,7 +342,8 @@
       "ratio": 1,
       "ratio_star": 31,
       "state_parameter": 8,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     },
     {
       "square_mask": 19,
@@ -340,7 +359,8 @@
       "ratio": 1,
       "ratio_star": 31,
       "state_parameter": 8,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     },
     {
       "square_mask": 21,
@@ -356,7 +376,8 @@
       "ratio": 23,
       "ratio_star": 8,
       "state_parameter": 23,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     },
     {
       "square_mask": 25,
@@ -372,7 +393,8 @@
       "ratio": 22,
       "ratio_star": 23,
       "state_parameter": 31,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     },
     {
       "square_mask": 32,
@@ -388,7 +410,8 @@
       "ratio": 23,
       "ratio_star": 8,
       "state_parameter": 23,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     },
     {
       "square_mask": 35,
@@ -404,11 +427,12 @@
       "ratio": 1,
       "ratio_star": 31,
       "state_parameter": 8,
-      "state_trace": 0
+      "state_trace": 0,
+      "jacobi_phase_trace": 0
     }
   ],
   "generator_validation": {
-    "path": "/tmp/w2_d21_generator_ratio_20state_check.json",
+    "path": "evidence/w2_d21_generator_ratio_20state_check.json",
     "rows": 20,
     "failures": [],
     "records": [
@@ -422,6 +446,7 @@
         ],
         "state_parameter_hex": "0x1",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -429,7 +454,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -442,6 +468,7 @@
         ],
         "state_parameter_hex": "0x1",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -449,7 +476,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -462,6 +490,7 @@
         ],
         "state_parameter_hex": "0x1",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -469,7 +498,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -482,6 +512,7 @@
         ],
         "state_parameter_hex": "0x1",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -489,7 +520,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -502,6 +534,7 @@
         ],
         "state_parameter_hex": "0x1",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -509,7 +542,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -522,6 +556,7 @@
         ],
         "state_parameter_hex": "0x9",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -529,7 +564,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -542,6 +578,7 @@
         ],
         "state_parameter_hex": "0x9",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -549,7 +586,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -562,6 +600,7 @@
         ],
         "state_parameter_hex": "0x9",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -569,7 +608,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -582,6 +622,7 @@
         ],
         "state_parameter_hex": "0x9",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -589,7 +630,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -602,6 +644,7 @@
         ],
         "state_parameter_hex": "0x9",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -609,7 +652,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -622,6 +666,7 @@
         ],
         "state_parameter_hex": "0x1e",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -629,7 +674,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -642,6 +688,7 @@
         ],
         "state_parameter_hex": "0x1e",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -649,7 +696,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -662,6 +710,7 @@
         ],
         "state_parameter_hex": "0x1e",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -669,7 +718,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -682,6 +732,7 @@
         ],
         "state_parameter_hex": "0x1e",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -689,7 +740,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -702,6 +754,7 @@
         ],
         "state_parameter_hex": "0x1e",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -709,7 +762,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -722,6 +776,7 @@
         ],
         "state_parameter_hex": "0x16",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -729,7 +784,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -742,6 +798,7 @@
         ],
         "state_parameter_hex": "0x16",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -749,7 +806,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -762,6 +820,7 @@
         ],
         "state_parameter_hex": "0x16",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -769,7 +828,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -782,6 +842,7 @@
         ],
         "state_parameter_hex": "0x16",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -789,7 +850,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       },
       {
@@ -802,6 +864,7 @@
         ],
         "state_parameter_hex": "0x16",
         "state_trace": 1,
+        "jacobi_phase_trace": 1,
         "checks": {
           "frobenius_support_form": true,
           "odd_support_weights": true,
@@ -809,7 +872,8 @@
           "off_diagonal_norm": true,
           "left_ratio": true,
           "right_ratio": true,
-          "trace_one": true
+          "trace_one": true,
+          "jacobi_phase_trace_one": true
         }
       }
     ]

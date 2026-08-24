@@ -60,9 +60,65 @@ LAMBDA = power(ALPHA, 15)  # order 7, CRT class (1 mod 7, 0 mod 3)
 U = power(ALPHA, 3)  # order 7, and ALPHA = LAMBDA * ALPHA^7
 H = power(U, 4)  # unique square root of U in F_8; the forbidden finite ratio
 
+# Local factor X^3+X+1 of Phi_7 modulo two.  This second F_8 model is used
+# for the phase-sensitive order-14 Jacobi quotient.
+JACOBI_F8_MODULUS = 0xB
+JACOBI_F8_ROOT = 0x2
+
 
 def trace(value: int) -> int:
     return value ^ power(value, 2) ^ power(value, 4)
+
+
+def jacobi_f8_multiply(left: int, right: int) -> int:
+    result = 0
+    while right:
+        if right & 1:
+            result ^= left
+        right >>= 1
+        left <<= 1
+        if left >> 3:
+            left ^= JACOBI_F8_MODULUS
+    return result
+
+
+def jacobi_f8_power(value: int, exponent: int) -> int:
+    result = 1
+    while exponent:
+        if exponent & 1:
+            result = jacobi_f8_multiply(result, value)
+        value = jacobi_f8_multiply(value, value)
+        exponent >>= 1
+    return result
+
+
+def jacobi_f8_trace(value: int) -> int:
+    square = jacobi_f8_multiply(value, value)
+    fourth = jacobi_f8_multiply(square, square)
+    return value ^ square ^ fourth
+
+
+def jacobi_phase_trace(square_mask: int, nonsquare_mask: int) -> int:
+    """First 2-adic trace of the order-14/order-7 Jacobi quotient."""
+    word = [0] * 14
+    for exponent in range(7):
+        word[2 * exponent] = (
+            ((square_mask >> exponent) & 1) ^ int(exponent == 0)
+        )
+        word[2 * exponent + 1] = (nonsquare_mask >> exponent) & 1
+    collapsed = [word[index] ^ word[index + 7] for index in range(7)]
+    if sum(collapsed) != 1:
+        return -1
+    support = collapsed.index(1)
+    nonsquare_value = 0
+    for exponent in range(7):
+        if word[2 * exponent + 1]:
+            nonsquare_value ^= jacobi_f8_power(JACOBI_F8_ROOT, exponent)
+    shifted = jacobi_f8_multiply(
+        jacobi_f8_power(JACOBI_F8_ROOT, (4 - 4 * support) % 7),
+        nonsquare_value,
+    )
+    return jacobi_f8_trace(shifted)
 
 
 def subset_value(mask: int, inverse: bool = False) -> int:
@@ -137,6 +193,7 @@ def support_data(square_mask: int, nonsquare_mask: int) -> dict:
         "ratio_star": ratio_star,
         "state_parameter": state_parameter,
         "state_trace": trace(multiply(H, state_parameter)),
+        "jacobi_phase_trace": jacobi_phase_trace(square_mask, nonsquare_mask),
     }
 
 
@@ -255,6 +312,11 @@ def main() -> None:
         row = support_data(square_mask, nonsquare_mask)
         if row["diagonal"] == 1 and row["off_diagonal"] == 0:
             solutions.append(row)
+    jacobi_phase_equals_state_trace = all(
+        row["jacobi_phase_trace"] == row["state_trace"] for row in solutions
+    )
+    if not jacobi_phase_equals_state_trace:
+        raise AssertionError("Jacobi local trace and Mobius trace disagree")
 
     ratio_counts = collections.Counter(
         (row["ratio"], row["ratio_star"]) for row in solutions
@@ -284,6 +346,9 @@ def main() -> None:
         if (row["ratio"], row["ratio_star"]) not in observed_pairs
     ]
     trace_counts = collections.Counter(row["state_trace"] for row in solutions)
+    jacobi_phase_trace_counts = collections.Counter(
+        row["jacobi_phase_trace"] for row in solutions
+    )
     ratio_counts_by_trace = {
         trace_value: collections.Counter(
             (row["ratio"], row["ratio_star"])
@@ -361,6 +426,7 @@ def main() -> None:
                 "left_ratio": row["ratio"] == direct_left,
                 "right_ratio": row["ratio_star"] == direct_right,
                 "trace_one": row["state_trace"] == 1,
+                "jacobi_phase_trace_one": row["jacobi_phase_trace"] == 1,
             }
             validation_rows.append(
                 {
@@ -370,6 +436,7 @@ def main() -> None:
                     "ratio_pair_common_hex": [hex(direct_left), hex(direct_right)],
                     "state_parameter_hex": hex(row["state_parameter"]),
                     "state_trace": row["state_trace"],
+                    "jacobi_phase_trace": row["jacobi_phase_trace"],
                     "checks": checks,
                 }
             )
@@ -402,6 +469,10 @@ def main() -> None:
             for (left, right), count in sorted(ratio_counts.items(), key=str)
         },
         "state_trace_counts": dict(sorted(trace_counts.items())),
+        "jacobi_phase_trace_counts": dict(
+            sorted(jacobi_phase_trace_counts.items())
+        ),
+        "jacobi_phase_equals_state_trace": jacobi_phase_equals_state_trace,
         "state_trace_linear_in_support_bits": (
             None
             if support_trace_linear is None

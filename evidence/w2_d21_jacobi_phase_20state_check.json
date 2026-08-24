@@ -1,0 +1,2587 @@
+{
+  "description": "order-14 Jacobi phase and local 2-adic norm",
+  "proof_target": "d=21 generator state trace equals one",
+  "rows": [
+    {
+      "p": 29,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "primitive_element": 33,
+      "norm_primitive": 14,
+      "constant_4_over_27": 27,
+      "coefficient_counts_order_14": [
+        5,
+        4,
+        1,
+        3,
+        0,
+        1,
+        2,
+        1,
+        2,
+        1,
+        3,
+        2,
+        1,
+        1
+      ],
+      "coefficient_parities_order_14": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "order7_coefficient_counts": [
+        6,
+        6,
+        2,
+        6,
+        2,
+        2,
+        3
+      ],
+      "order14_difference_counts": [
+        4,
+        2,
+        0,
+        0,
+        -2,
+        0,
+        1
+      ],
+      "order14_zeta_coefficients": [
+        4,
+        0,
+        -2,
+        1,
+        -2,
+        0,
+        0
+      ],
+      "odd_coefficient_weight": 5,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 6,
+      "jacobi_quotient_mod_4": [
+        3,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "jacobi_first_digit_mod_2": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 129,
+        "sum_C_squared_expected": 129,
+        "sum_D_squared": 25,
+        "sum_D_squared_expected": 25,
+        "signed_cross": 11,
+        "signed_cross_mod_8_expected": 3,
+        "all_hold": true
+      },
+      "subgroup_class_size": 2
+    },
+    {
+      "p": 449,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "primitive_element": 455,
+      "norm_primitive": 33,
+      "constant_4_over_27": 366,
+      "coefficient_counts_order_14": [
+        31,
+        26,
+        35,
+        23,
+        36,
+        37,
+        24,
+        25,
+        30,
+        37,
+        33,
+        36,
+        35,
+        39
+      ],
+      "coefficient_parities_order_14": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "order7_coefficient_counts": [
+        56,
+        56,
+        72,
+        56,
+        72,
+        72,
+        63
+      ],
+      "order14_difference_counts": [
+        6,
+        -4,
+        -2,
+        -10,
+        0,
+        2,
+        -15
+      ],
+      "order14_zeta_coefficients": [
+        6,
+        -2,
+        0,
+        -15,
+        4,
+        10,
+        -2
+      ],
+      "odd_coefficient_weight": 5,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 6,
+      "jacobi_quotient_mod_4": [
+        3,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "jacobi_first_digit_mod_2": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 28929,
+        "sum_C_squared_expected": 28929,
+        "sum_D_squared": 385,
+        "sum_D_squared_expected": 385,
+        "signed_cross": -113,
+        "signed_cross_mod_8_expected": 7,
+        "all_hold": true
+      },
+      "subgroup_class_size": 32
+    },
+    {
+      "p": 617,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "primitive_element": 621,
+      "norm_primitive": 13,
+      "constant_4_over_27": 23,
+      "coefficient_counts_order_14": [
+        44,
+        45,
+        35,
+        52,
+        51,
+        55,
+        43,
+        34,
+        49,
+        43,
+        42,
+        43,
+        44,
+        35
+      ],
+      "coefficient_parities_order_14": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "order7_coefficient_counts": [
+        78,
+        94,
+        78,
+        94,
+        94,
+        99,
+        78
+      ],
+      "order14_difference_counts": [
+        10,
+        -4,
+        -8,
+        10,
+        8,
+        11,
+        8
+      ],
+      "order14_zeta_coefficients": [
+        10,
+        -8,
+        8,
+        8,
+        4,
+        -10,
+        -11
+      ],
+      "odd_coefficient_weight": 5,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 5,
+      "jacobi_quotient_mod_4": [
+        3,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "jacobi_first_digit_mod_2": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 54561,
+        "sum_C_squared_expected": 54561,
+        "sum_D_squared": 529,
+        "sum_D_squared_expected": 529,
+        "signed_cross": -121,
+        "signed_cross_mod_8_expected": 7,
+        "all_hold": true
+      },
+      "subgroup_class_size": 44
+    },
+    {
+      "p": 1709,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "primitive_element": 1713,
+      "norm_primitive": 14,
+      "constant_4_over_27": 823,
+      "coefficient_counts_order_14": [
+        116,
+        111,
+        146,
+        115,
+        106,
+        115,
+        111,
+        124,
+        129,
+        133,
+        121,
+        130,
+        125,
+        125
+      ],
+      "coefficient_parities_order_14": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "order7_coefficient_counts": [
+        240,
+        240,
+        279,
+        236,
+        236,
+        240,
+        236
+      ],
+      "order14_difference_counts": [
+        -8,
+        -18,
+        13,
+        -6,
+        -24,
+        -10,
+        -14
+      ],
+      "order14_zeta_coefficients": [
+        -8,
+        13,
+        -24,
+        -14,
+        18,
+        6,
+        10
+      ],
+      "odd_coefficient_weight": 5,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 2,
+      "jacobi_quotient_mod_4": [
+        3,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "jacobi_first_digit_mod_2": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 417729,
+        "sum_C_squared_expected": 417729,
+        "sum_D_squared": 1465,
+        "sum_D_squared_expected": 1465,
+        "signed_cross": 875,
+        "signed_cross_mod_8_expected": 3,
+        "all_hold": true
+      },
+      "subgroup_class_size": 122
+    },
+    {
+      "p": 1877,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "primitive_element": 1879,
+      "norm_primitive": 2,
+      "constant_4_over_27": 1321,
+      "coefficient_counts_order_14": [
+        130,
+        143,
+        126,
+        139,
+        140,
+        125,
+        129,
+        142,
+        129,
+        105,
+        137,
+        136,
+        147,
+        147
+      ],
+      "coefficient_parities_order_14": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "order7_coefficient_counts": [
+        272,
+        272,
+        231,
+        276,
+        276,
+        272,
+        276
+      ],
+      "order14_difference_counts": [
+        -12,
+        14,
+        21,
+        2,
+        4,
+        -22,
+        -18
+      ],
+      "order14_zeta_coefficients": [
+        -12,
+        21,
+        4,
+        -18,
+        -14,
+        -2,
+        22
+      ],
+      "odd_coefficient_weight": 5,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 2,
+      "jacobi_quotient_mod_4": [
+        3,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "jacobi_first_digit_mod_2": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 503841,
+        "sum_C_squared_expected": 503841,
+        "sum_D_squared": 1609,
+        "sum_D_squared_expected": 1609,
+        "signed_cross": -653,
+        "signed_cross_mod_8_expected": 3,
+        "all_hold": true
+      },
+      "subgroup_class_size": 134
+    },
+    {
+      "p": 113,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "primitive_element": 116,
+      "norm_primitive": 6,
+      "constant_4_over_27": 42,
+      "coefficient_counts_order_14": [
+        8,
+        6,
+        3,
+        11,
+        9,
+        11,
+        12,
+        7,
+        6,
+        9,
+        9,
+        3,
+        9,
+        8
+      ],
+      "coefficient_parities_order_14": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "order7_coefficient_counts": [
+        15,
+        12,
+        12,
+        20,
+        12,
+        20,
+        20
+      ],
+      "order14_difference_counts": [
+        1,
+        0,
+        -6,
+        2,
+        6,
+        2,
+        4
+      ],
+      "order14_zeta_coefficients": [
+        1,
+        -6,
+        6,
+        4,
+        0,
+        -2,
+        -2
+      ],
+      "odd_coefficient_weight": 5,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 0,
+      "jacobi_quotient_mod_4": [
+        1,
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      "jacobi_first_digit_mod_2": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 1857,
+        "sum_C_squared_expected": 1857,
+        "sum_D_squared": 97,
+        "sum_D_squared_expected": 97,
+        "signed_cross": 15,
+        "signed_cross_mod_8_expected": 7,
+        "all_hold": true
+      },
+      "subgroup_class_size": 8
+    },
+    {
+      "p": 953,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "primitive_element": 956,
+      "norm_primitive": 6,
+      "constant_4_over_27": 459,
+      "coefficient_counts_order_14": [
+        69,
+        67,
+        61,
+        72,
+        52,
+        62,
+        71,
+        67,
+        77,
+        75,
+        64,
+        59,
+        82,
+        73
+      ],
+      "coefficient_parities_order_14": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "order7_coefficient_counts": [
+        136,
+        144,
+        136,
+        136,
+        111,
+        144,
+        144
+      ],
+      "order14_difference_counts": [
+        2,
+        -10,
+        -14,
+        8,
+        -7,
+        -20,
+        -2
+      ],
+      "order14_zeta_coefficients": [
+        2,
+        -14,
+        -7,
+        -2,
+        10,
+        -8,
+        20
+      ],
+      "odd_coefficient_weight": 5,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 4,
+      "jacobi_quotient_mod_4": [
+        1,
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      "jacobi_first_digit_mod_2": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 130017,
+        "sum_C_squared_expected": 130017,
+        "sum_D_squared": 817,
+        "sum_D_squared_expected": 817,
+        "signed_cross": 535,
+        "signed_cross_mod_8_expected": 7,
+        "all_hold": true
+      },
+      "subgroup_class_size": 68
+    },
+    {
+      "p": 2297,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "primitive_element": 2304,
+      "norm_primitive": 46,
+      "constant_4_over_27": 2127,
+      "coefficient_counts_order_14": [
+        164,
+        157,
+        169,
+        177,
+        171,
+        172,
+        140,
+        178,
+        185,
+        157,
+        165,
+        155,
+        154,
+        151
+      ],
+      "coefficient_parities_order_14": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "order7_coefficient_counts": [
+        342,
+        342,
+        326,
+        342,
+        326,
+        326,
+        291
+      ],
+      "order14_difference_counts": [
+        -14,
+        -28,
+        12,
+        12,
+        16,
+        18,
+        -11
+      ],
+      "order14_zeta_coefficients": [
+        -14,
+        12,
+        16,
+        -11,
+        28,
+        -12,
+        -18
+      ],
+      "odd_coefficient_weight": 5,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 6,
+      "jacobi_quotient_mod_4": [
+        1,
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      "jacobi_first_digit_mod_2": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 754401,
+        "sum_C_squared_expected": 754401,
+        "sum_D_squared": 1969,
+        "sum_D_squared_expected": 1969,
+        "signed_cross": 743,
+        "signed_cross_mod_8_expected": 7,
+        "all_hold": true
+      },
+      "subgroup_class_size": 164
+    },
+    {
+      "p": 2381,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "primitive_element": 2388,
+      "norm_primitive": 47,
+      "constant_4_over_27": 882,
+      "coefficient_counts_order_14": [
+        167,
+        191,
+        161,
+        163,
+        172,
+        181,
+        162,
+        157,
+        153,
+        163,
+        181,
+        172,
+        194,
+        162
+      ],
+      "coefficient_parities_order_14": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "order7_coefficient_counts": [
+        324,
+        344,
+        324,
+        344,
+        344,
+        375,
+        324
+      ],
+      "order14_difference_counts": [
+        10,
+        38,
+        -2,
+        -18,
+        0,
+        -13,
+        0
+      ],
+      "order14_zeta_coefficients": [
+        10,
+        -2,
+        0,
+        0,
+        -38,
+        18,
+        13
+      ],
+      "odd_coefficient_weight": 5,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 5,
+      "jacobi_quotient_mod_4": [
+        1,
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      "jacobi_first_digit_mod_2": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 810561,
+        "sum_C_squared_expected": 810561,
+        "sum_D_squared": 2041,
+        "sum_D_squared_expected": 2041,
+        "signed_cross": 587,
+        "signed_cross_mod_8_expected": 3,
+        "all_hold": true
+      },
+      "subgroup_class_size": 170
+    },
+    {
+      "p": 2801,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "primitive_element": 2804,
+      "norm_primitive": 6,
+      "constant_4_over_27": 1660,
+      "coefficient_counts_order_14": [
+        193,
+        207,
+        189,
+        217,
+        194,
+        183,
+        192,
+        187,
+        213,
+        191,
+        203,
+        226,
+        216,
+        188
+      ],
+      "coefficient_parities_order_14": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "order7_coefficient_counts": [
+        380,
+        420,
+        380,
+        420,
+        420,
+        399,
+        380
+      ],
+      "order14_difference_counts": [
+        6,
+        -6,
+        -2,
+        14,
+        -32,
+        -33,
+        4
+      ],
+      "order14_zeta_coefficients": [
+        6,
+        -2,
+        -32,
+        4,
+        6,
+        -14,
+        33
+      ],
+      "odd_coefficient_weight": 5,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 5,
+      "jacobi_quotient_mod_4": [
+        1,
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      "jacobi_first_digit_mod_2": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 1121601,
+        "sum_C_squared_expected": 1121601,
+        "sum_D_squared": 2401,
+        "sum_D_squared_expected": 2401,
+        "signed_cross": -593,
+        "signed_cross_mod_8_expected": 7,
+        "all_hold": true
+      },
+      "subgroup_class_size": 200
+    },
+    {
+      "p": 197,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "primitive_element": 206,
+      "norm_primitive": 79,
+      "constant_4_over_27": 95,
+      "coefficient_counts_order_14": [
+        9,
+        15,
+        14,
+        12,
+        13,
+        13,
+        22,
+        19,
+        13,
+        10,
+        16,
+        11,
+        11,
+        17
+      ],
+      "coefficient_parities_order_14": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "order7_coefficient_counts": [
+        28,
+        28,
+        24,
+        28,
+        24,
+        24,
+        39
+      ],
+      "order14_difference_counts": [
+        -10,
+        2,
+        4,
+        -4,
+        2,
+        2,
+        5
+      ],
+      "order14_zeta_coefficients": [
+        -10,
+        4,
+        2,
+        5,
+        -2,
+        4,
+        -2
+      ],
+      "odd_coefficient_weight": 5,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 6,
+      "jacobi_quotient_mod_4": [
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      "jacobi_first_digit_mod_2": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 5601,
+        "sum_C_squared_expected": 5601,
+        "sum_D_squared": 169,
+        "sum_D_squared_expected": 169,
+        "signed_cross": 67,
+        "signed_cross_mod_8_expected": 3,
+        "all_hold": true
+      },
+      "subgroup_class_size": 14
+    },
+    {
+      "p": 281,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "primitive_element": 285,
+      "norm_primitive": 13,
+      "constant_4_over_27": 73,
+      "coefficient_counts_order_14": [
+        18,
+        25,
+        25,
+        23,
+        19,
+        21,
+        20,
+        16,
+        17,
+        17,
+        28,
+        15,
+        13,
+        22
+      ],
+      "coefficient_parities_order_14": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "order7_coefficient_counts": [
+        34,
+        42,
+        42,
+        51,
+        34,
+        34,
+        42
+      ],
+      "order14_difference_counts": [
+        2,
+        8,
+        8,
+        -5,
+        4,
+        8,
+        -2
+      ],
+      "order14_zeta_coefficients": [
+        2,
+        8,
+        4,
+        -2,
+        -8,
+        5,
+        -8
+      ],
+      "odd_coefficient_weight": 5,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 3,
+      "jacobi_quotient_mod_4": [
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      "jacobi_first_digit_mod_2": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 11361,
+        "sum_C_squared_expected": 11361,
+        "sum_D_squared": 241,
+        "sum_D_squared_expected": 241,
+        "signed_cross": 103,
+        "signed_cross_mod_8_expected": 7,
+        "all_hold": true
+      },
+      "subgroup_class_size": 20
+    },
+    {
+      "p": 2129,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "primitive_element": 2139,
+      "norm_primitive": 97,
+      "constant_4_over_27": 79,
+      "coefficient_counts_order_14": [
+        161,
+        163,
+        139,
+        149,
+        156,
+        160,
+        161,
+        145,
+        176,
+        151,
+        141,
+        150,
+        130,
+        145
+      ],
+      "coefficient_parities_order_14": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "order7_coefficient_counts": [
+        306,
+        339,
+        290,
+        290,
+        306,
+        290,
+        306
+      ],
+      "order14_difference_counts": [
+        16,
+        -13,
+        -12,
+        8,
+        6,
+        30,
+        16
+      ],
+      "order14_zeta_coefficients": [
+        16,
+        -12,
+        6,
+        16,
+        13,
+        -8,
+        -30
+      ],
+      "odd_coefficient_weight": 5,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 1,
+      "jacobi_quotient_mod_4": [
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      "jacobi_first_digit_mod_2": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 648129,
+        "sum_C_squared_expected": 648129,
+        "sum_D_squared": 1825,
+        "sum_D_squared_expected": 1825,
+        "signed_cross": 1535,
+        "signed_cross_mod_8_expected": 7,
+        "all_hold": true
+      },
+      "subgroup_class_size": 152
+    },
+    {
+      "p": 2213,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "primitive_element": 2215,
+      "norm_primitive": 2,
+      "constant_4_over_27": 328,
+      "coefficient_counts_order_14": [
+        152,
+        181,
+        175,
+        133,
+        149,
+        149,
+        162,
+        154,
+        153,
+        159,
+        158,
+        157,
+        157,
+        172
+      ],
+      "coefficient_parities_order_14": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "order7_coefficient_counts": [
+        306,
+        334,
+        334,
+        291,
+        306,
+        306,
+        334
+      ],
+      "order14_difference_counts": [
+        -2,
+        28,
+        16,
+        -25,
+        -8,
+        -8,
+        -10
+      ],
+      "order14_zeta_coefficients": [
+        -2,
+        16,
+        -8,
+        -10,
+        -28,
+        25,
+        8
+      ],
+      "odd_coefficient_weight": 5,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 3,
+      "jacobi_quotient_mod_4": [
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      "jacobi_first_digit_mod_2": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 700257,
+        "sum_C_squared_expected": 700257,
+        "sum_D_squared": 1897,
+        "sum_D_squared_expected": 1897,
+        "signed_cross": -685,
+        "signed_cross_mod_8_expected": 3,
+        "all_hold": true
+      },
+      "subgroup_class_size": 158
+    },
+    {
+      "p": 2969,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "primitive_element": 2972,
+      "norm_primitive": 6,
+      "constant_4_over_27": 440,
+      "coefficient_counts_order_14": [
+        203,
+        223,
+        225,
+        219,
+        220,
+        232,
+        191,
+        199,
+        212,
+        217,
+        223,
+        182,
+        210,
+        211
+      ],
+      "coefficient_parities_order_14": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "order7_coefficient_counts": [
+        402,
+        435,
+        442,
+        442,
+        402,
+        442,
+        402
+      ],
+      "order14_difference_counts": [
+        4,
+        11,
+        8,
+        -4,
+        38,
+        22,
+        -20
+      ],
+      "order14_zeta_coefficients": [
+        4,
+        8,
+        38,
+        -20,
+        -11,
+        4,
+        -22
+      ],
+      "odd_coefficient_weight": 5,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 1,
+      "jacobi_quotient_mod_4": [
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      "jacobi_first_digit_mod_2": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 1260129,
+        "sum_C_squared_expected": 1260129,
+        "sum_D_squared": 2545,
+        "sum_D_squared_expected": 2545,
+        "signed_cross": -361,
+        "signed_cross_mod_8_expected": 7,
+        "all_hold": true
+      },
+      "subgroup_class_size": 212
+    },
+    {
+      "p": 701,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "primitive_element": 703,
+      "norm_primitive": 2,
+      "constant_4_over_27": 104,
+      "coefficient_counts_order_14": [
+        44,
+        52,
+        54,
+        49,
+        38,
+        48,
+        64,
+        46,
+        58,
+        56,
+        50,
+        52,
+        42,
+        46
+      ],
+      "coefficient_parities_order_14": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "order7_coefficient_counts": [
+        90,
+        110,
+        110,
+        99,
+        90,
+        90,
+        110
+      ],
+      "order14_difference_counts": [
+        -2,
+        -6,
+        -2,
+        -1,
+        -14,
+        6,
+        18
+      ],
+      "order14_zeta_coefficients": [
+        -2,
+        -2,
+        -14,
+        18,
+        6,
+        1,
+        -6
+      ],
+      "odd_coefficient_weight": 1,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 3,
+      "jacobi_quotient_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "jacobi_first_digit_mod_2": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 70401,
+        "sum_C_squared_expected": 70401,
+        "sum_D_squared": 601,
+        "sum_D_squared_expected": 601,
+        "signed_cross": 539,
+        "signed_cross_mod_8_expected": 3,
+        "all_hold": true
+      },
+      "subgroup_class_size": 50
+    },
+    {
+      "p": 1289,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "primitive_element": 1293,
+      "norm_primitive": 13,
+      "constant_4_over_27": 764,
+      "coefficient_counts_order_14": [
+        96,
+        100,
+        106,
+        90,
+        76,
+        86,
+        86,
+        100,
+        80,
+        90,
+        106,
+        83,
+        94,
+        94
+      ],
+      "coefficient_parities_order_14": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "order7_coefficient_counts": [
+        196,
+        180,
+        196,
+        196,
+        159,
+        180,
+        180
+      ],
+      "order14_difference_counts": [
+        -4,
+        20,
+        16,
+        -16,
+        -7,
+        -8,
+        -8
+      ],
+      "order14_zeta_coefficients": [
+        -4,
+        16,
+        -7,
+        -8,
+        -20,
+        16,
+        8
+      ],
+      "odd_coefficient_weight": 1,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 4,
+      "jacobi_quotient_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "jacobi_first_digit_mod_2": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 237729,
+        "sum_C_squared_expected": 237729,
+        "sum_D_squared": 1105,
+        "sum_D_squared_expected": 1105,
+        "signed_cross": 775,
+        "signed_cross_mod_8_expected": 7,
+        "all_hold": true
+      },
+      "subgroup_class_size": 92
+    },
+    {
+      "p": 1373,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "primitive_element": 1385,
+      "norm_primitive": 142,
+      "constant_4_over_27": 51,
+      "coefficient_counts_order_14": [
+        98,
+        86,
+        90,
+        108,
+        78,
+        96,
+        108,
+        97,
+        96,
+        92,
+        102,
+        104,
+        114,
+        102
+      ],
+      "coefficient_parities_order_14": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "order7_coefficient_counts": [
+        195,
+        182,
+        182,
+        210,
+        182,
+        210,
+        210
+      ],
+      "order14_difference_counts": [
+        1,
+        -10,
+        -2,
+        6,
+        -26,
+        -18,
+        6
+      ],
+      "order14_zeta_coefficients": [
+        1,
+        -2,
+        -26,
+        6,
+        10,
+        -6,
+        18
+      ],
+      "odd_coefficient_weight": 1,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 0,
+      "jacobi_quotient_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "jacobi_first_digit_mod_2": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 269697,
+        "sum_C_squared_expected": 269697,
+        "sum_D_squared": 1177,
+        "sum_D_squared_expected": 1177,
+        "signed_cross": 699,
+        "signed_cross_mod_8_expected": 3,
+        "all_hold": true
+      },
+      "subgroup_class_size": 98
+    },
+    {
+      "p": 2549,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "primitive_element": 2551,
+      "norm_primitive": 2,
+      "constant_4_over_27": 661,
+      "coefficient_counts_order_14": [
+        184,
+        174,
+        186,
+        172,
+        194,
+        177,
+        186,
+        196,
+        186,
+        194,
+        188,
+        166,
+        150,
+        194
+      ],
+      "coefficient_parities_order_14": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "order7_coefficient_counts": [
+        380,
+        360,
+        380,
+        360,
+        360,
+        327,
+        380
+      ],
+      "order14_difference_counts": [
+        -12,
+        -12,
+        -8,
+        -16,
+        28,
+        27,
+        -8
+      ],
+      "order14_zeta_coefficients": [
+        -12,
+        -8,
+        28,
+        -8,
+        12,
+        16,
+        -27
+      ],
+      "odd_coefficient_weight": 1,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 5,
+      "jacobi_quotient_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "jacobi_first_digit_mod_2": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 928929,
+        "sum_C_squared_expected": 928929,
+        "sum_D_squared": 2185,
+        "sum_D_squared_expected": 2185,
+        "signed_cross": 691,
+        "signed_cross_mod_8_expected": 3,
+        "all_hold": true
+      },
+      "subgroup_class_size": 182
+    },
+    {
+      "p": 3557,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "primitive_element": 3559,
+      "norm_primitive": 2,
+      "constant_4_over_27": 2108,
+      "coefficient_counts_order_14": [
+        254,
+        238,
+        280,
+        262,
+        254,
+        258,
+        252,
+        274,
+        246,
+        248,
+        266,
+        265,
+        226,
+        232
+      ],
+      "coefficient_parities_order_14": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "order7_coefficient_counts": [
+        528,
+        484,
+        528,
+        528,
+        519,
+        484,
+        484
+      ],
+      "order14_difference_counts": [
+        -20,
+        -8,
+        32,
+        -4,
+        -11,
+        32,
+        20
+      ],
+      "order14_zeta_coefficients": [
+        -20,
+        32,
+        -11,
+        20,
+        8,
+        4,
+        -32
+      ],
+      "odd_coefficient_weight": 1,
+      "odd_weight_one_mod_four": true,
+      "line_bridge_all_classes": true,
+      "line_bridge_checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "order7_parity_is_monomial": true,
+      "order7_parity_support": 4,
+      "jacobi_quotient_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "jacobi_first_digit_mod_2": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_norm_mod_4": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "local_trace_by_factor": {
+        "0xb": 1,
+        "0xd": 1
+      },
+      "local_trace_one": true,
+      "norm_checks": {
+        "sum_C_squared": 1808481,
+        "sum_C_squared_expected": 1808481,
+        "sum_D_squared": 3049,
+        "sum_D_squared_expected": 3049,
+        "signed_cross": 803,
+        "signed_cross_mod_8_expected": 3,
+        "all_hold": true
+      },
+      "subgroup_class_size": 254
+    }
+  ],
+  "failures": []
+}

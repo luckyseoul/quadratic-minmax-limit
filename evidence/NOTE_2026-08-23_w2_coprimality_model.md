@@ -1235,13 +1235,13 @@ This is the exact finite geometry anticipated by Davis--Jedwab--Mowbray,
 affine hyperplanes.  The standard trace-zero construction of binary Singer
 difference sets is also stated explicitly in
 [The Electronic Journal of Combinatorics 20(1), P38](https://www.combinatorics.org/ojs/index.php/eljc/article/download/v20i1p38/pdf/).
-The remaining generator lemma is now only the specialization
+At this stage the remaining generator lemma was only the specialization
 
     |Q| == 1 (mod 4)
 
-for the actual affine line `1+t sigma`, equivalently `tau=1`.  It is verified
-above but not yet proved uniformly; no searched source supplied this exact
-mod-four cyclotomic parity.
+for the actual affine line `1+t sigma`, equivalently `tau=1`.  The next
+subsection proves it uniformly; no searched source supplied this exact
+mod-four specialization directly.
 
 Lifting the parity bins to integer counts makes that target more concrete but
 also kills one tempting proof.  Let `q_0,...,q_6` count the points of
@@ -1271,7 +1271,120 @@ through modulus 16.  The reproducible negative is
 `scripts/w2_d21_rds_mod8_lift.py` with
 `evidence/w2_d21_rds_mod16_lift.json`.
 
-Even after proving the generator trace, W2 still needs the boundary statement
+### A local 2-adic Jacobi norm proves the d=21 generator trace
+
+The phase information has an exact classical name.  Use the quadratic model
+`sigma^2=d`, put `n=Norm(1+t sigma)=1-dt^2`, and set
+
+    z=(1-t sigma)/(1+t sigma),       n=4z/(1+z)^2.
+
+The two roots `z,z^-1` have opposite nonzero cubic classes.  They are cubes
+precisely when
+
+    Y^3-3Y+2-4/n
+
+has a root over `F_p`: if `z=w^3`, take `Y=w+w^-1`.  Solving this cubic for
+`n` and making the Mobius substitution `x=(Y+2)/(Y-1)` gives
+
+    n = (4/27) (x-1)^3/x.
+
+Let `g=Norm(omega)` be the scalar primitive element, let `psi(g)=xi` have
+order fourteen, put `zeta=xi^2`, `theta=psi^2`, and define
+
+    b_e = #{x in F_p\{0,1}:
+            ind_g((4/27)(x-1)^3/x) == e (mod 14)}.
+
+Each scalar class has `(p-1)/14` elements, an even number.  Comparing the
+three factorization types of the displayed cubic therefore gives the exact
+parity bridge
+
+    b_(2a)   = 1_(a=0) + 1_(a in S)       (mod 2),
+    b_(2a+1) =             1_(a in Q)       (mod 2).
+
+In particular the odd coefficients are the seven `q_a` parities, up to the
+harmless scalar-generator permutation.
+
+Now form the two Jacobi sums represented by the same coefficient word,
+
+    H_7  = sum_e b_e zeta^e
+         = theta(4/27) J(theta^-1,theta^3),
+    H_14 = sum_e b_e xi^e
+         = psi(4/27) J(psi^-1,psi^3).
+
+Writing the even and odd coefficient polynomials as `E,O`, and using
+`xi=-zeta^4`, gives the integral identity
+
+    sigma_4(H_7)-H_14 = 2 zeta^4 O(zeta).                 (1)
+
+Thus `U=H_14/sigma_4(H_7)` is one modulo two at either prime over two.  Its
+first digit `(U-1)/2` is, up to a Singer shift, exactly the missing finite
+trace coordinate.
+
+The relative norm of `U` is forced.  Put
+
+    K=J(theta,theta),       L=J(theta^-1,theta^3).
+
+The quadratic Davenport--Hasse identity gives
+
+    J(psi^-1,psi^3)=theta(4)^-1 conjugate(K).
+
+The sum `L=J(theta^6,theta^3)` is fixed by the decomposition group
+`<2>={1,2,4}` because doubling permutes its exponent triple `{3,5,6}`.
+For the relative norm from `Q(zeta_7)` to `Q(sqrt(-7))`, Gauss-sum
+cancellation gives
+
+    N_<2>(conjugate(K))
+      = J(theta^6,theta^6)J(theta^5,theta^5)J(theta^3,theta^3)
+      = p L.
+
+The root-of-unity multiplier in `U` has relative norm `-1`: its quadratic
+part is `(4/27|p)=(3|p)=-1` because `p=5 (mod 12)`.  Consequently
+
+    N_<2>(U) = -p/L^2 = -conjugate(L)/L.                  (2)
+
+Here `L` is an algebraic integer in `Q(sqrt(-7))` of norm `p`.  Writing
+`L=a+b sqrt(-7)`, parity in `p=a^2+7b^2 == 1 (mod 4)` forces `a` odd and
+`b` even.  Hence `conjugate(L)/L == 1 (mod 4)` at both primes over two, and
+(2) becomes
+
+    N_<2>(U) == -1 (mod 4).
+
+For an unramified cubic 2-adic unit `U=1+2u`,
+
+    N(U) == 1+2 Tr_(F_8/F_2)(u) (mod 4),
+
+so the local trace is one.  The finite 56-state lemma now finishes the
+translation: reconstructing `b` from `(S,Q)` in all solutions of the already
+proved diagonal/off-diagonal identities shows
+
+    Tr(u)=tau,       tau=1 iff |Q| == 1 (mod 4).
+
+This is a bounded exact algebra lemma, not an empirical prime scan.  It is
+implemented in `scripts/w2_d21_f8_support_classify.py`; all 56 states split
+`28/28` and the Jacobi local trace agrees with the previous Mobius trace in
+every state.  The independent direct script
+`scripts/w2_d21_jacobi_phase.py` verifies (1), the affine-line bridge, both
+local factors, and the integer Jacobi norms.  A serialized NUKA run on the
+twenty representatives has no failures and always returns local norm
+`-1 mod 4`; its certificate is
+`evidence/w2_d21_jacobi_phase_20state_check.json`.
+
+The exact order-14 cyclotomic framework and coefficient conventions are in
+Acharya--Katre, [*Cyclotomic numbers of order 2l, l an odd
+prime*](https://matwbn.icm.edu.pl/ksiazki/aa/aa69/aa6915.pdf).  Exact searches
+for `J(-1,3)`, `J(3,-1)`, and order-14 parity found the general order-14
+formulae but no source stating the local mod-four consequence above.
+
+Therefore the generator side of the `d=21` obstruction is no longer open:
+
+    tau=1,  |Q| == 1 (mod 4),
+    Gamma_ns(alpha) != 0 and Gamma_ns(alpha^-1) != 0
+
+for every prime `p == 29 (mod 84)`.  The possible common-field ratio pairs
+are exactly the four observed pairs, and the denominator-zero `tau=0`
+states are excluded uniformly.
+
+After this generator trace proof, W2 still needs the boundary statement
 that the scalar `c_a` cannot vanish at both reciprocal sextics for all first
 three differences.
 
@@ -1312,9 +1425,10 @@ For `p == 5 (mod 12)`, prove for arbitrary `p` that the first three four-line
 differences have scalar common Aut-gcd one.  The exact all-order calculation
 establishes the statement for every eligible prime through 10000, and the
 bounded-order calculation establishes all `d<=4095` through 100000.  The
-targeted calculation additionally establishes `d=21` through 1000000 and
-isolates its four-state `F_8` generator law.  The projective layer is already
-proved, but neither finite calculation replaces the missing uniform
+targeted calculation additionally establishes `d=21` through 1000000, and
+the local Jacobi norm above proves its four-state `F_8` generator law
+uniformly.  The projective layer is already proved, but the remaining finite
+boundary calculations do not replace the missing uniform
 characteristic-two character-sum argument.  Equivalently,
 one must prove that no scalar irreducible `f` occurs with multiplicity two in
 all three unsplit four-line polynomials and their reciprocal closures.  A
