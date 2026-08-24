@@ -248,6 +248,43 @@ has yet been extracted from Chen, so do not cite it as a close.
 
 ---
 
+## 7d. The profile-glued eigenspace lattice (2026-08-24)
+
+Proposition 15.629 identifies the saturated integral lattice
+
+\[
+L=\ker_{\mathbb Z}(C-pI)
+\]
+
+as an odd-index overlattice of the square-circle lattice, with every glue
+coordinate supplied by the same polynomial coefficient kernels that control
+the Max+ profiles.  It proves
+
+\[
+[L:A]=p^{\binom{m-1}{2}},\quad
+\det L=2p^{m^2},\quad
+L^*=P\mathbb Z^n,\quad
+L^*/L\cong\mathbb Z/2\oplus(\mathbb Z/p)^{m^2},\quad
+\operatorname{level}(L)=4p.
+\]
+
+Böttcher et al.'s rational equiangular-tight-frame lattice is exactly the
+nearby dual object (P\mathbb Z^n=L^*).  Their work establishes the correct
+ETF/lattice setting but does not identify this integral kernel, its profile
+glue, or the odd-coset first-shell moment.  Chapman's conference-matrix
+lattices use a different skew-conference/unimodular construction.  Rains--
+Sloane shadow theory explains what a modular theta-series route would need,
+but it does not apply verbatim: the present even lattice has level (4p),
+growing with (p), and R1 concerns a coset shell rather than the ordinary
+minimum shell.
+
+OEIS searches of the exact index (25937424601=11^{10}) and the determinant/
+index formulas returned generic prime-power occurrences only.  No direct
+catalogue entry or prior profile-glue theorem was found.  This is a genuine
+structural advance toward R1, not a proof of R1 or of the global limit.
+
+---
+
 ## 8. What is not in the older literature
 
 - No 1930s–1970s theorem that \(\lim n^{-3/2}\min_A\max_x|x^\top Ax|\) exists.
@@ -286,5 +323,8 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 23. N. M. Katz, *Estimates for Soto-Andrade sums*, J. reine angew. Math. **438** (1993), 143--162, https://web.math.princeton.edu/~nmk/old/sotosums.pdf
 24. A. C. Kable, *Legendre sums, Soto-Andrade sums, and Kloosterman sums*, Pacific J. Math. **206** (2002), 139--157, https://msp.org/pjm/2002/206-1/pjm-v206-n1-p09-s.pdf
 25. I. Chen, *On relations between Jacobians of certain modular curves*, [arXiv:math/9809209](https://arxiv.org/abs/math/9809209) (double-coset/nonvanishing model only; not a W2 proof).
+26. A. Böttcher, L. Fukshansky, S. R. Garcia, H. Maharaj, D. Needell, *Lattices from tight equiangular frames*, Linear Algebra Appl. **510** (2016), 395--420, https://www1.cmc.edu/pages/faculty/lenny/papers/lattices_frames.pdf
+27. R. Chapman, *Conference matrices and unimodular lattices*, [arXiv:math/0007116](https://arxiv.org/abs/math/0007116) (nearby conference-lattice construction; not the integral (+p)-kernel here).
+28. E. M. Rains and N. J. A. Sloane, *The Shadow Theory of Modular and Unimodular Lattices*, J. Number Theory **73** (1998), 359--389, [arXiv:math/0207294](https://arxiv.org/abs/math/0207294) (methodological comparison; its strongly modular hypotheses do not close R1).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

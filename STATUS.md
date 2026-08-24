@@ -1,5 +1,13 @@
 # Status (2026-08-24)
 
+**15.629 PROVED structure, not R1**: for
+`L=ker_Z(C-pI)` and the square-circle lattice `A`, the profile coefficient
+kernels give `L/A = direct_sum_{d=1}^{m-2} ker(sum c_j t_j^d)`.  Hence
+`[L:A]=p^C(m-1,2)`, `det(L)=2p^(m^2)`, `L*=P Z^n`,
+`L*/L = Z/2 plus (Z/p)^(m^2)`, and `level(L)=4p` for every odd prime.
+This makes the R1 shell a precise level-`4p` coset-theta problem; it does not
+bound its degree-four harmonic coefficient.  R1 and global QVAR remain OPEN.
+
 **15.628 PROVED close**: eligible nonsquare GQR circles span the fixed-edge
 slice, and arbitrary affine halfspaces realise every eligible circle as a
 U-difference.  Thus `dir(U)=H_0 cap ker(e_0+e_infinity)` and W1, W2, and

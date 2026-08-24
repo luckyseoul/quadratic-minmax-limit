@@ -1,0 +1,42 @@
+{
+  "date": "2026-08-24",
+  "diagnostic_only": true,
+  "minimum_shell_projective_degrees": {
+    "p5": {"26": 260},
+    "p7": {"0": 2352, "22": 8400, "50": 700}
+  },
+  "real_slice_function_spaces": {
+    "p5": {
+      "edge_features": 325,
+      "full_score_function_rank": 66,
+      "constant_on_U_function_dim": 14,
+      "wedge_generator_function_rank": 13
+    },
+    "p7": {
+      "edge_features": 1225,
+      "full_score_function_rank": 276,
+      "constant_on_U_function_dim": 25,
+      "wedge_generator_function_rank": 25
+    }
+  },
+  "slice_max_far_milp": {
+    "p5": {"status": "Optimal", "n_far": 14},
+    "p7": {"status": "Optimal", "n_far": 18, "seconds": 403.88}
+  },
+  "official_p7_milp": {
+    "status": "Time limit reached",
+    "success": false,
+    "incumbent": false,
+    "seconds": 603.614,
+    "interpretation": "UNKNOWN; not an infeasibility certificate"
+  },
+  "official_p7_lp_relaxation": {
+    "status": "Optimal",
+    "success": true,
+    "seconds": 91.282,
+    "sum_x": 27.99999999999999,
+    "max_x": 0.30157495696302733,
+    "n_fractional": 538
+  },
+  "leftovers_flipped": []
+}
