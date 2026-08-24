@@ -867,6 +867,31 @@ sufficient norm test: the non-simultaneous vanishing of the two generator
 components makes it factor-by-factor equivalent to the oriented-content
 test.
 
+There is also an exact repeated-root interpretation of the two raw
+components.  Before splitting the multiplicative orbit, write the full
+binary exponent polynomial as
+
+    D_a(Z)=D_(a,sq)(Z^2)+Z D_(a,ns)(Z^2).
+
+Its formal derivative in characteristic two is
+
+    D_a'(Z)=D_(a,ns)(Z^2).
+
+Let `f` be an odd irreducible factor and let `beta` be one of its roots.
+Squaring permutes the roots of `f`, so `alpha=beta^2` is another root of the
+same factor.  It follows directly that
+
+    D_(a,sq)(alpha)=D_(a,ns)(alpha)=0
+      iff D_a(beta)=D_a'(beta)=0
+      iff f^2 divides D_a.
+
+Thus a simultaneous square/nonsquare obstruction is precisely a repeated
+root of the unsplit four-line incidence polynomial.  Reciprocal Aut closure
+asks for the same multiplicity at `beta^-1`.  This recasts the remaining W2
+target as a repeated-root exclusion problem in a binary cyclic incidence
+code; repository and literature searches found no earlier use of this
+reformulation for the present Bose affine relative difference set.
+
 `scripts/w2_boundary_scalar_prefix_gpu.py` implements this criterion.  It
 folds only the twelve selected line levels directly modulo the *complete*
 ambient odd order `H=Ms` and takes an NTL gcd with `R_s(X^M)`.  Therefore it
@@ -910,6 +935,33 @@ polynomial degree by about nine times relative to the largest `p<10000`
 case.  The NUKA 5700X3D/RX 9070 XT run took 1004.8 seconds; its certificate
 is `evidence/w2_boundary_scalar_prefix_gpu_p30029.json`.
 
+The repeated-root formulation also enables a much faster bounded-order
+scanner.  Rather than traverse both multiplicative orbits of total size
+`p^2-1`, `scripts/w2_boundary_line_direct.py` enumerates only the twelve
+selected affine lines.  A native small-character table recovers each point's
+square/nonsquare component and exponent class.  The cost is `O(p log p)` per
+tested order and requires no GPU or `p^2` inverse-log table.  At `p=2141`,
+all six raw component polynomials agree coefficient-for-coefficient with the
+independent orbit/GPU engine.  The clearance indices also agree in all 44
+overlapping scalar-order cases through `p=500`, while nested scans through
+65000 agree bit-for-bit on all 5,241 shared records of order at most 255.
+
+Using 40 independent workers on soulkiller's dual Xeons, the direct engine
+tested every scalar order `d<=4095` dividing the ambient odd order at all
+1,317 eligible primes `10001<=p<=65000`.  All 12,481 prime/order pairs clear
+within the first three differences: 12,394 after the first, 75 after the
+second, and 12 after the third.  The third-difference cases are
+
+    (14249,13), (19421,5), (32429,11), (34781,15),
+    (35081,5), (36161,5), (36761,15), (37997,63),
+    (40841,5), (46181,5), (50261,7), (54101,15).
+
+There are no failures.  The first-difference exceptional-order set enlarges
+to `{5,7,11,13,15,17,19,21,25,63}`, disproving the tempting finite pattern
+observed below 10000 while leaving the three-step statement intact.  The
+complete exact output is
+`evidence/w2_boundary_line_direct_10001_65000_o4095.json`.
+
 The field coordinates also identify the exact character-sum parameters.
 For the code's quadratic model `omega^2=d`, the boundary pole is `t=-2/d`
 and its pole is `delta=t^-1=d(p-1)/2`.  A level-`r` line is
@@ -946,13 +998,16 @@ the characteristic-two parity being measured here.
 For `p == 5 (mod 12)`, prove for arbitrary `p` that the first three four-line
 differences have scalar common Aut-gcd one.  The exact all-order calculation
 establishes the statement for every eligible prime through 10000, and the
-projective layer is already proved, but the finite calculation does not
-replace the missing uniform characteristic-two character-sum argument.  A
-proof of the six consecutive Soto-Andrade-type component nonvanishings would
-finish this congruence class.  If the three-step statement eventually fails,
-the fallback remains the full incomplete cubic/Baer-subline problem: for each
-Aut factor-orbit `O`, show that the translated boundary sequence is not
-identically zero on the valid
+bounded-order calculation establishes all `d<=4095` through 65000.  The
+projective layer is already proved, but neither finite calculation replaces
+the missing uniform characteristic-two character-sum argument.  Equivalently,
+one must prove that no scalar irreducible `f` occurs with multiplicity two in
+all three unsplit four-line polynomials and their reciprocal closures.  A
+proof of the six consecutive Soto-Andrade-type component nonvanishings, or
+this repeated-root exclusion, would finish this congruence class.  If the
+three-step statement eventually fails, the fallback remains the full
+incomplete cubic/Baer-subline problem: for each Aut factor-orbit `O`, show
+that the translated boundary sequence is not identically zero on the valid
 half-edge.  Since `O` is handled separately, no factor-count or union-bound
 loss occurs.  Other prime congruence classes still require their corresponding
 projective/scalar analysis.  A unit-content witness remains a convenient
