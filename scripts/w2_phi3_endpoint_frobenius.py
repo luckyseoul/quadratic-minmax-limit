@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Proof certificate for the normalized Phi_3 endpoint at p=5 mod 12.
+"""Projective-torus certificate for the normalized endpoint at p=5 mod 12.
 
 For the endpoint u=(p+1)/2, the pole parameter lies in F_p.  The named
 halfspace and its pole image are therefore Frobenius invariant.  On the
@@ -8,6 +8,9 @@ to 2-j.  Thus the endpoint Phi_3 residue is controlled by the parity of one
 class count C_0=C_2; class C_1 is automatically even.  Every finite
 nonsquare projective F_p-direction has odd endpoint-support parity.  Class 0
 contains an odd number (p+1)/6 of those directions, proving C_0 odd.
+More strongly, folding the nonsquare endpoint sequence over F_p^*-cosets
+gives the all-ones vector with only the F_p*omega direction removed.  Its
+Fourier value is therefore nonzero at every nontrivial ((p+1)/2)-th root.
 
 This scanner verifies the exact symmetries, the surviving parity, and the
 normalized content value without factoring the ambient polynomial g.
@@ -207,6 +210,49 @@ def record(p: int) -> dict:
             f"F_p*omega should be nonsquare cubic at p={p}: "
             f"classes={infinity_classes.tolist()}"
         )
+    # Let M=(p+1)/2.  The subgroup F_p^* of the square cycle is generated
+    # by gen^M, so reducing the nonsquare Fourier sequence modulo X^M+1
+    # xors exactly along projective F_p-directions.  Every finite direction
+    # has parity one and F_p*omega has parity zero.  Hence the quotient is
+    # R_M+X^r0, where R_M=1+X+...+X^(M-1).  At every nontrivial M-th root
+    # alpha this evaluates to alpha^r0, proving nonvanishing on the entire
+    # projective-torus factor layer R_M.
+    projective_order = (p + 1) // 2
+    if ncoord != (p - 1) * projective_order:
+        raise AssertionError("square-cycle/projective quotient sizes disagree")
+    projective_parities = np.bitwise_xor.reduce(
+        wfn[nonsquare].reshape(p - 1, projective_order), axis=0
+    )
+    pure_omega_indices = np.unique(infinity_indices % projective_order)
+    if len(pure_omega_indices) != 1:
+        raise AssertionError(
+            f"pure omega line has multiple quotient indices at p={p}: "
+            f"{pure_omega_indices.tolist()}"
+        )
+    pure_omega_index = int(pure_omega_indices[0])
+    expected_projective_parities = np.ones(projective_order, dtype=np.uint8)
+    expected_projective_parities[pure_omega_index] = 0
+    projective_quotient_mismatches = int(
+        np.count_nonzero(projective_parities != expected_projective_parities)
+    )
+    quotient_direction_mismatches = sum(
+        int(projective_parities[r])
+        != int(direction_support[ns_directions[r]] % 2)
+        for r in range(projective_order)
+    )
+    projective_zero_indices = np.flatnonzero(
+        projective_parities == 0
+    ).tolist()
+    ambient_oddpart = ncoord
+    while ambient_oddpart % 2 == 0:
+        ambient_oddpart //= 2
+    projective_factor_divides_g = ambient_oddpart % projective_order == 0
+    if not projective_factor_divides_g:
+        raise AssertionError(
+            f"projective factor does not divide ambient g at p={p}: "
+            f"M={projective_order}, oddpart={ambient_oddpart}"
+        )
+    p_minus_oddpart = ambient_oddpart // projective_order
     return {
         "p": p,
         "endpoint_u": u,
@@ -234,6 +280,22 @@ def record(p: int) -> dict:
         "class0_direction_parity_failures": c0_direction_parity_failures,
         "pure_omega_direction_exponent_class": int(infinity_classes[0]),
         "pure_omega_direction_support": int(direction_support[p]),
+        "projective_torus_order": projective_order,
+        "projective_torus_factor_degree": projective_order - 1,
+        "ambient_g_repetition_order": ambient_oddpart,
+        "projective_factor_divides_g": projective_factor_divides_g,
+        "p_minus_oddpart": p_minus_oddpart,
+        "remaining_p_minus_layer_degree": (
+            projective_order * (p_minus_oddpart - 1)
+        ),
+        "projective_layer_is_all_of_g": p_minus_oddpart == 1,
+        "pure_omega_quotient_index": pure_omega_index,
+        "projective_quotient_zero_indices": projective_zero_indices,
+        "projective_quotient_mismatches": projective_quotient_mismatches,
+        "quotient_direction_mismatches": quotient_direction_mismatches,
+        "projective_torus_nontrivial_fourier_nonzero": (
+            projective_quotient_mismatches == 0
+        ),
         "observed_c1_mod4": c1 % 4,
         "observed_nonsquare_weight_mod4": (c0 + c1 + c2) % 4,
         "elapsed_seconds": time.time() - t0,
@@ -295,6 +357,22 @@ def main() -> None:
             row["p"] for row in rows
             if row["n_class0_projective_directions"]
             != row["expected_class0_projective_directions"]
+        ],
+        "projective_quotient": [
+            row["p"] for row in rows
+            if row["projective_quotient_mismatches"]
+        ],
+        "quotient_direction": [
+            row["p"] for row in rows
+            if row["quotient_direction_mismatches"]
+        ],
+        "projective_torus_fourier": [
+            row["p"] for row in rows
+            if not row["projective_torus_nontrivial_fourier_nonzero"]
+        ],
+        "projective_factor_divides_g": [
+            row["p"] for row in rows
+            if not row["projective_factor_divides_g"]
         ],
         "content_not_one": [
             row["p"] for row in rows

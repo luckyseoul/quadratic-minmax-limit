@@ -15,6 +15,10 @@
     "finite_direction_parity": [],
     "class0_direction_parity": [],
     "class0_direction_count": [],
+    "projective_quotient": [],
+    "quotient_direction": [],
+    "projective_torus_fourier": [],
+    "projective_factor_divides_g": [],
     "content_not_one": [],
     "gamma_class_count_formula": []
   },
@@ -62,9 +66,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 2,
+      "projective_torus_order": 3,
+      "projective_torus_factor_degree": 2,
+      "ambient_g_repetition_order": 3,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 1,
+      "remaining_p_minus_layer_degree": 0,
+      "projective_layer_is_all_of_g": true,
+      "pure_omega_quotient_index": 1,
+      "projective_quotient_zero_indices": [
+        1
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.01514744758605957
+      "elapsed_seconds": 0.014423370361328125
     },
     {
       "p": 17,
@@ -107,9 +125,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 8,
+      "projective_torus_order": 9,
+      "projective_torus_factor_degree": 8,
+      "ambient_g_repetition_order": 9,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 1,
+      "remaining_p_minus_layer_degree": 0,
+      "projective_layer_is_all_of_g": true,
+      "pure_omega_quotient_index": 4,
+      "projective_quotient_zero_indices": [
+        4
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.015096426010131836
+      "elapsed_seconds": 0.014765739440917969
     },
     {
       "p": 29,
@@ -152,9 +184,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 14,
+      "projective_torus_order": 15,
+      "projective_torus_factor_degree": 14,
+      "ambient_g_repetition_order": 105,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 7,
+      "remaining_p_minus_layer_degree": 90,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 7,
+      "projective_quotient_zero_indices": [
+        7
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.015689373016357422
+      "elapsed_seconds": 0.01718449592590332
     },
     {
       "p": 41,
@@ -197,9 +243,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 20,
+      "projective_torus_order": 21,
+      "projective_torus_factor_degree": 20,
+      "ambient_g_repetition_order": 105,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 5,
+      "remaining_p_minus_layer_degree": 84,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 10,
+      "projective_quotient_zero_indices": [
+        10
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.021231889724731445
+      "elapsed_seconds": 0.019961118698120117
     },
     {
       "p": 53,
@@ -242,9 +302,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 26,
+      "projective_torus_order": 27,
+      "projective_torus_factor_degree": 26,
+      "ambient_g_repetition_order": 351,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 13,
+      "remaining_p_minus_layer_degree": 324,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 13,
+      "projective_quotient_zero_indices": [
+        13
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.024094104766845703
+      "elapsed_seconds": 0.021518945693969727
     },
     {
       "p": 89,
@@ -287,9 +361,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 44,
+      "projective_torus_order": 45,
+      "projective_torus_factor_degree": 44,
+      "ambient_g_repetition_order": 495,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 11,
+      "remaining_p_minus_layer_degree": 450,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 22,
+      "projective_quotient_zero_indices": [
+        22
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.038427114486694336
+      "elapsed_seconds": 0.03996562957763672
     },
     {
       "p": 101,
@@ -332,9 +420,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 50,
+      "projective_torus_order": 51,
+      "projective_torus_factor_degree": 50,
+      "ambient_g_repetition_order": 1275,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 25,
+      "remaining_p_minus_layer_degree": 1224,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 25,
+      "projective_quotient_zero_indices": [
+        25
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.04646563529968262
+      "elapsed_seconds": 0.04666590690612793
     },
     {
       "p": 113,
@@ -377,9 +479,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 56,
+      "projective_torus_order": 57,
+      "projective_torus_factor_degree": 56,
+      "ambient_g_repetition_order": 399,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 7,
+      "remaining_p_minus_layer_degree": 342,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 28,
+      "projective_quotient_zero_indices": [
+        28
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.04859805107116699
+      "elapsed_seconds": 0.04723811149597168
     },
     {
       "p": 137,
@@ -422,9 +538,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 68,
+      "projective_torus_order": 69,
+      "projective_torus_factor_degree": 68,
+      "ambient_g_repetition_order": 1173,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 17,
+      "remaining_p_minus_layer_degree": 1104,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 34,
+      "projective_quotient_zero_indices": [
+        34
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.039835453033447266
+      "elapsed_seconds": 0.04684567451477051
     },
     {
       "p": 149,
@@ -467,9 +597,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 74,
+      "projective_torus_order": 75,
+      "projective_torus_factor_degree": 74,
+      "ambient_g_repetition_order": 2775,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 37,
+      "remaining_p_minus_layer_degree": 2700,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 37,
+      "projective_quotient_zero_indices": [
+        37
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.04726409912109375
+      "elapsed_seconds": 0.05563688278198242
     },
     {
       "p": 173,
@@ -512,9 +656,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 86,
+      "projective_torus_order": 87,
+      "projective_torus_factor_degree": 86,
+      "ambient_g_repetition_order": 3741,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 43,
+      "remaining_p_minus_layer_degree": 3654,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 43,
+      "projective_quotient_zero_indices": [
+        43
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.0617525577545166
+      "elapsed_seconds": 0.0732121467590332
     },
     {
       "p": 197,
@@ -557,9 +715,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 98,
+      "projective_torus_order": 99,
+      "projective_torus_factor_degree": 98,
+      "ambient_g_repetition_order": 4851,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 49,
+      "remaining_p_minus_layer_degree": 4752,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 49,
+      "projective_quotient_zero_indices": [
+        49
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.08638501167297363
+      "elapsed_seconds": 0.09535336494445801
     },
     {
       "p": 233,
@@ -602,9 +774,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 116,
+      "projective_torus_order": 117,
+      "projective_torus_factor_degree": 116,
+      "ambient_g_repetition_order": 3393,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 29,
+      "remaining_p_minus_layer_degree": 3276,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 58,
+      "projective_quotient_zero_indices": [
+        58
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.12908315658569336
+      "elapsed_seconds": 0.12634968757629395
     },
     {
       "p": 257,
@@ -647,9 +833,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 128,
+      "projective_torus_order": 129,
+      "projective_torus_factor_degree": 128,
+      "ambient_g_repetition_order": 129,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 1,
+      "remaining_p_minus_layer_degree": 0,
+      "projective_layer_is_all_of_g": true,
+      "pure_omega_quotient_index": 64,
+      "projective_quotient_zero_indices": [
+        64
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.12972378730773926
+      "elapsed_seconds": 0.15074801445007324
     },
     {
       "p": 269,
@@ -692,9 +892,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 134,
+      "projective_torus_order": 135,
+      "projective_torus_factor_degree": 134,
+      "ambient_g_repetition_order": 9045,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 67,
+      "remaining_p_minus_layer_degree": 8910,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 67,
+      "projective_quotient_zero_indices": [
+        67
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.15703201293945312
+      "elapsed_seconds": 0.16648387908935547
     },
     {
       "p": 281,
@@ -737,9 +951,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 140,
+      "projective_torus_order": 141,
+      "projective_torus_factor_degree": 140,
+      "ambient_g_repetition_order": 4935,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 35,
+      "remaining_p_minus_layer_degree": 4794,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 70,
+      "projective_quotient_zero_indices": [
+        70
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.17132854461669922
+      "elapsed_seconds": 0.18183016777038574
     },
     {
       "p": 293,
@@ -782,9 +1010,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 146,
+      "projective_torus_order": 147,
+      "projective_torus_factor_degree": 146,
+      "ambient_g_repetition_order": 10731,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 73,
+      "remaining_p_minus_layer_degree": 10584,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 73,
+      "projective_quotient_zero_indices": [
+        73
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.16579508781433105
+      "elapsed_seconds": 0.19581937789916992
     },
     {
       "p": 317,
@@ -827,9 +1069,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 158,
+      "projective_torus_order": 159,
+      "projective_torus_factor_degree": 158,
+      "ambient_g_repetition_order": 12561,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 79,
+      "remaining_p_minus_layer_degree": 12402,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 79,
+      "projective_quotient_zero_indices": [
+        79
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.19543719291687012
+      "elapsed_seconds": 0.22700762748718262
     },
     {
       "p": 353,
@@ -872,9 +1128,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 176,
+      "projective_torus_order": 177,
+      "projective_torus_factor_degree": 176,
+      "ambient_g_repetition_order": 1947,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 11,
+      "remaining_p_minus_layer_degree": 1770,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 88,
+      "projective_quotient_zero_indices": [
+        88
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.24212288856506348
+      "elapsed_seconds": 0.28131628036499023
     },
     {
       "p": 389,
@@ -917,9 +1187,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 194,
+      "projective_torus_order": 195,
+      "projective_torus_factor_degree": 194,
+      "ambient_g_repetition_order": 18915,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 97,
+      "remaining_p_minus_layer_degree": 18720,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 97,
+      "projective_quotient_zero_indices": [
+        97
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.3294053077697754
+      "elapsed_seconds": 0.33818840980529785
     },
     {
       "p": 401,
@@ -962,9 +1246,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 200,
+      "projective_torus_order": 201,
+      "projective_torus_factor_degree": 200,
+      "ambient_g_repetition_order": 5025,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 25,
+      "remaining_p_minus_layer_degree": 4824,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 100,
+      "projective_quotient_zero_indices": [
+        100
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.357072114944458
+      "elapsed_seconds": 0.3547830581665039
     },
     {
       "p": 449,
@@ -1007,9 +1305,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 224,
+      "projective_torus_order": 225,
+      "projective_torus_factor_degree": 224,
+      "ambient_g_repetition_order": 1575,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 7,
+      "remaining_p_minus_layer_degree": 1350,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 112,
+      "projective_quotient_zero_indices": [
+        112
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.4085228443145752
+      "elapsed_seconds": 0.5028188228607178
     },
     {
       "p": 461,
@@ -1052,9 +1364,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 230,
+      "projective_torus_order": 231,
+      "projective_torus_factor_degree": 230,
+      "ambient_g_repetition_order": 26565,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 115,
+      "remaining_p_minus_layer_degree": 26334,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 115,
+      "projective_quotient_zero_indices": [
+        115
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.4747798442840576
+      "elapsed_seconds": 0.46605396270751953
     },
     {
       "p": 509,
@@ -1097,9 +1423,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 254,
+      "projective_torus_order": 255,
+      "projective_torus_factor_degree": 254,
+      "ambient_g_repetition_order": 32385,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 127,
+      "remaining_p_minus_layer_degree": 32130,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 127,
+      "projective_quotient_zero_indices": [
+        127
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.5213513374328613
+      "elapsed_seconds": 0.5692334175109863
     },
     {
       "p": 521,
@@ -1142,9 +1482,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 260,
+      "projective_torus_order": 261,
+      "projective_torus_factor_degree": 260,
+      "ambient_g_repetition_order": 16965,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 65,
+      "remaining_p_minus_layer_degree": 16704,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 130,
+      "projective_quotient_zero_indices": [
+        130
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.5983669757843018
+      "elapsed_seconds": 0.5937039852142334
     },
     {
       "p": 557,
@@ -1187,9 +1541,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 278,
+      "projective_torus_order": 279,
+      "projective_torus_factor_degree": 278,
+      "ambient_g_repetition_order": 38781,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 139,
+      "remaining_p_minus_layer_degree": 38502,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 139,
+      "projective_quotient_zero_indices": [
+        139
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.6319892406463623
+      "elapsed_seconds": 0.6818954944610596
     },
     {
       "p": 569,
@@ -1232,9 +1600,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 284,
+      "projective_torus_order": 285,
+      "projective_torus_factor_degree": 284,
+      "ambient_g_repetition_order": 20235,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 71,
+      "remaining_p_minus_layer_degree": 19950,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 142,
+      "projective_quotient_zero_indices": [
+        142
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.6561601161956787
+      "elapsed_seconds": 0.7034718990325928
     },
     {
       "p": 593,
@@ -1277,9 +1659,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 296,
+      "projective_torus_order": 297,
+      "projective_torus_factor_degree": 296,
+      "ambient_g_repetition_order": 10989,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 37,
+      "remaining_p_minus_layer_degree": 10692,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 148,
+      "projective_quotient_zero_indices": [
+        148
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.7693989276885986
+      "elapsed_seconds": 0.756434440612793
     },
     {
       "p": 617,
@@ -1322,9 +1718,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 308,
+      "projective_torus_order": 309,
+      "projective_torus_factor_degree": 308,
+      "ambient_g_repetition_order": 23793,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 77,
+      "remaining_p_minus_layer_degree": 23484,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 154,
+      "projective_quotient_zero_indices": [
+        154
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.8264369964599609
+      "elapsed_seconds": 0.8781681060791016
     },
     {
       "p": 641,
@@ -1367,9 +1777,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 320,
+      "projective_torus_order": 321,
+      "projective_torus_factor_degree": 320,
+      "ambient_g_repetition_order": 1605,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 5,
+      "remaining_p_minus_layer_degree": 1284,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 160,
+      "projective_quotient_zero_indices": [
+        160
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.7988717555999756
+      "elapsed_seconds": 0.8633804321289062
     },
     {
       "p": 653,
@@ -1412,9 +1836,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 326,
+      "projective_torus_order": 327,
+      "projective_torus_factor_degree": 326,
+      "ambient_g_repetition_order": 53301,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 163,
+      "remaining_p_minus_layer_degree": 52974,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 163,
+      "projective_quotient_zero_indices": [
+        163
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.9329264163970947
+      "elapsed_seconds": 0.864675760269165
     },
     {
       "p": 677,
@@ -1457,9 +1895,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 338,
+      "projective_torus_order": 339,
+      "projective_torus_factor_degree": 338,
+      "ambient_g_repetition_order": 57291,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 169,
+      "remaining_p_minus_layer_degree": 56952,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 169,
+      "projective_quotient_zero_indices": [
+        169
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.911754846572876
+      "elapsed_seconds": 0.9687838554382324
     },
     {
       "p": 701,
@@ -1502,9 +1954,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 350,
+      "projective_torus_order": 351,
+      "projective_torus_factor_degree": 350,
+      "ambient_g_repetition_order": 61425,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 175,
+      "remaining_p_minus_layer_degree": 61074,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 175,
+      "projective_quotient_zero_indices": [
+        175
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.0839626789093018
+      "elapsed_seconds": 1.0379970073699951
     },
     {
       "p": 761,
@@ -1547,9 +2013,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 380,
+      "projective_torus_order": 381,
+      "projective_torus_factor_degree": 380,
+      "ambient_g_repetition_order": 36195,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 95,
+      "remaining_p_minus_layer_degree": 35814,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 190,
+      "projective_quotient_zero_indices": [
+        190
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.1401393413543701
+      "elapsed_seconds": 1.1859221458435059
     },
     {
       "p": 773,
@@ -1592,9 +2072,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 386,
+      "projective_torus_order": 387,
+      "projective_torus_factor_degree": 386,
+      "ambient_g_repetition_order": 74691,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 193,
+      "remaining_p_minus_layer_degree": 74304,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 193,
+      "projective_quotient_zero_indices": [
+        193
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.1786153316497803
+      "elapsed_seconds": 1.3177709579467773
     },
     {
       "p": 797,
@@ -1637,9 +2131,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 398,
+      "projective_torus_order": 399,
+      "projective_torus_factor_degree": 398,
+      "ambient_g_repetition_order": 79401,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 199,
+      "remaining_p_minus_layer_degree": 79002,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 199,
+      "projective_quotient_zero_indices": [
+        199
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.3816487789154053
+      "elapsed_seconds": 1.296844244003296
     },
     {
       "p": 809,
@@ -1682,9 +2190,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 404,
+      "projective_torus_order": 405,
+      "projective_torus_factor_degree": 404,
+      "ambient_g_repetition_order": 40905,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 101,
+      "remaining_p_minus_layer_degree": 40500,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 202,
+      "projective_quotient_zero_indices": [
+        202
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.4267349243164062
+      "elapsed_seconds": 1.3867175579071045
     },
     {
       "p": 821,
@@ -1727,9 +2249,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 410,
+      "projective_torus_order": 411,
+      "projective_torus_factor_degree": 410,
+      "ambient_g_repetition_order": 84255,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 205,
+      "remaining_p_minus_layer_degree": 83844,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 205,
+      "projective_quotient_zero_indices": [
+        205
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.3437738418579102
+      "elapsed_seconds": 1.364328145980835
     },
     {
       "p": 857,
@@ -1772,9 +2308,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 428,
+      "projective_torus_order": 429,
+      "projective_torus_factor_degree": 428,
+      "ambient_g_repetition_order": 45903,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 107,
+      "remaining_p_minus_layer_degree": 45474,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 214,
+      "projective_quotient_zero_indices": [
+        214
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.589324951171875
+      "elapsed_seconds": 1.5491788387298584
     },
     {
       "p": 881,
@@ -1817,9 +2367,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 440,
+      "projective_torus_order": 441,
+      "projective_torus_factor_degree": 440,
+      "ambient_g_repetition_order": 24255,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 55,
+      "remaining_p_minus_layer_degree": 23814,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 220,
+      "projective_quotient_zero_indices": [
+        220
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.5098915100097656
+      "elapsed_seconds": 1.5696971416473389
     },
     {
       "p": 929,
@@ -1862,9 +2426,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 464,
+      "projective_torus_order": 465,
+      "projective_torus_factor_degree": 464,
+      "ambient_g_repetition_order": 13485,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 29,
+      "remaining_p_minus_layer_degree": 13020,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 232,
+      "projective_quotient_zero_indices": [
+        232
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.8718576431274414
+      "elapsed_seconds": 1.7495036125183105
     },
     {
       "p": 941,
@@ -1907,9 +2485,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 470,
+      "projective_torus_order": 471,
+      "projective_torus_factor_degree": 470,
+      "ambient_g_repetition_order": 110685,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 235,
+      "remaining_p_minus_layer_degree": 110214,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 235,
+      "projective_quotient_zero_indices": [
+        235
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.755436658859253
+      "elapsed_seconds": 1.785494089126587
     },
     {
       "p": 953,
@@ -1952,9 +2544,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 476,
+      "projective_torus_order": 477,
+      "projective_torus_factor_degree": 476,
+      "ambient_g_repetition_order": 56763,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 119,
+      "remaining_p_minus_layer_degree": 56286,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 238,
+      "projective_quotient_zero_indices": [
+        238
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.7928671836853027
+      "elapsed_seconds": 1.9107017517089844
     },
     {
       "p": 977,
@@ -1997,9 +2603,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 488,
+      "projective_torus_order": 489,
+      "projective_torus_factor_degree": 488,
+      "ambient_g_repetition_order": 29829,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 61,
+      "remaining_p_minus_layer_degree": 29340,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 244,
+      "projective_quotient_zero_indices": [
+        244
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 2.052129030227661
+      "elapsed_seconds": 1.9263653755187988
     },
     {
       "p": 1013,
@@ -2042,9 +2662,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 506,
+      "projective_torus_order": 507,
+      "projective_torus_factor_degree": 506,
+      "ambient_g_repetition_order": 128271,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 253,
+      "remaining_p_minus_layer_degree": 127764,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 253,
+      "projective_quotient_zero_indices": [
+        253
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 2.00860333442688
+      "elapsed_seconds": 2.1558837890625
     },
     {
       "p": 1049,
@@ -2087,9 +2721,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 524,
+      "projective_torus_order": 525,
+      "projective_torus_factor_degree": 524,
+      "ambient_g_repetition_order": 68775,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 131,
+      "remaining_p_minus_layer_degree": 68250,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 262,
+      "projective_quotient_zero_indices": [
+        262
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 2.3739795684814453
+      "elapsed_seconds": 2.2145490646362305
     },
     {
       "p": 1061,
@@ -2132,9 +2780,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 530,
+      "projective_torus_order": 531,
+      "projective_torus_factor_degree": 530,
+      "ambient_g_repetition_order": 140715,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 265,
+      "remaining_p_minus_layer_degree": 140184,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 265,
+      "projective_quotient_zero_indices": [
+        265
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 2.1943459510803223
+      "elapsed_seconds": 2.3733131885528564
     },
     {
       "p": 1097,
@@ -2177,9 +2839,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 548,
+      "projective_torus_order": 549,
+      "projective_torus_factor_degree": 548,
+      "ambient_g_repetition_order": 75213,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 137,
+      "remaining_p_minus_layer_degree": 74664,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 274,
+      "projective_quotient_zero_indices": [
+        274
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 2.6008951663970947
+      "elapsed_seconds": 2.424107789993286
     },
     {
       "p": 1109,
@@ -2222,9 +2898,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 554,
+      "projective_torus_order": 555,
+      "projective_torus_factor_degree": 554,
+      "ambient_g_repetition_order": 153735,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 277,
+      "remaining_p_minus_layer_degree": 153180,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 277,
+      "projective_quotient_zero_indices": [
+        277
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 2.662761688232422
+      "elapsed_seconds": 2.4918601512908936
     },
     {
       "p": 1181,
@@ -2267,9 +2957,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 590,
+      "projective_torus_order": 591,
+      "projective_torus_factor_degree": 590,
+      "ambient_g_repetition_order": 174345,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 295,
+      "remaining_p_minus_layer_degree": 173754,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 295,
+      "projective_quotient_zero_indices": [
+        295
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 2.758596420288086
+      "elapsed_seconds": 2.82171893119812
     },
     {
       "p": 1193,
@@ -2312,9 +3016,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 596,
+      "projective_torus_order": 597,
+      "projective_torus_factor_degree": 596,
+      "ambient_g_repetition_order": 88953,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 149,
+      "remaining_p_minus_layer_degree": 88356,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 298,
+      "projective_quotient_zero_indices": [
+        298
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 2.7989377975463867
+      "elapsed_seconds": 3.0188541412353516
     },
     {
       "p": 1217,
@@ -2357,9 +3075,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 608,
+      "projective_torus_order": 609,
+      "projective_torus_factor_degree": 608,
+      "ambient_g_repetition_order": 11571,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 19,
+      "remaining_p_minus_layer_degree": 10962,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 304,
+      "projective_quotient_zero_indices": [
+        304
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 3.2014670372009277
+      "elapsed_seconds": 3.0032758712768555
     },
     {
       "p": 1229,
@@ -2402,9 +3134,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 614,
+      "projective_torus_order": 615,
+      "projective_torus_factor_degree": 614,
+      "ambient_g_repetition_order": 188805,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 307,
+      "remaining_p_minus_layer_degree": 188190,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 307,
+      "projective_quotient_zero_indices": [
+        307
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 2.994720935821533
+      "elapsed_seconds": 3.176006317138672
     },
     {
       "p": 1277,
@@ -2447,9 +3193,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 638,
+      "projective_torus_order": 639,
+      "projective_torus_factor_degree": 638,
+      "ambient_g_repetition_order": 203841,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 319,
+      "remaining_p_minus_layer_degree": 203202,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 319,
+      "projective_quotient_zero_indices": [
+        319
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 3.529578924179077
+      "elapsed_seconds": 3.3096892833709717
     },
     {
       "p": 1289,
@@ -2492,9 +3252,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 644,
+      "projective_torus_order": 645,
+      "projective_torus_factor_degree": 644,
+      "ambient_g_repetition_order": 103845,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 161,
+      "remaining_p_minus_layer_degree": 103200,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 322,
+      "projective_quotient_zero_indices": [
+        322
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 3.2469942569732666
+      "elapsed_seconds": 3.4457736015319824
     },
     {
       "p": 1301,
@@ -2537,9 +3311,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 650,
+      "projective_torus_order": 651,
+      "projective_torus_factor_degree": 650,
+      "ambient_g_repetition_order": 211575,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 325,
+      "remaining_p_minus_layer_degree": 210924,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 325,
+      "projective_quotient_zero_indices": [
+        325
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 3.68550181388855
+      "elapsed_seconds": 3.407036066055298
     },
     {
       "p": 1361,
@@ -2582,9 +3370,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 680,
+      "projective_torus_order": 681,
+      "projective_torus_factor_degree": 680,
+      "ambient_g_repetition_order": 57885,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 85,
+      "remaining_p_minus_layer_degree": 57204,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 340,
+      "projective_quotient_zero_indices": [
+        340
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 4.012232542037964
+      "elapsed_seconds": 3.745196580886841
     },
     {
       "p": 1373,
@@ -2627,9 +3429,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 686,
+      "projective_torus_order": 687,
+      "projective_torus_factor_degree": 686,
+      "ambient_g_repetition_order": 235641,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 343,
+      "remaining_p_minus_layer_degree": 234954,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 343,
+      "projective_quotient_zero_indices": [
+        343
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 3.7389755249023438
+      "elapsed_seconds": 3.7959487438201904
     },
     {
       "p": 1409,
@@ -2672,9 +3488,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 704,
+      "projective_torus_order": 705,
+      "projective_torus_factor_degree": 704,
+      "ambient_g_repetition_order": 7755,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 11,
+      "remaining_p_minus_layer_degree": 7050,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 352,
+      "projective_quotient_zero_indices": [
+        352
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 3.910815954208374
+      "elapsed_seconds": 4.093008756637573
     },
     {
       "p": 1433,
@@ -2717,9 +3547,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 716,
+      "projective_torus_order": 717,
+      "projective_torus_factor_degree": 716,
+      "ambient_g_repetition_order": 128343,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 179,
+      "remaining_p_minus_layer_degree": 127626,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 358,
+      "projective_quotient_zero_indices": [
+        358
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 4.02527642250061
+      "elapsed_seconds": 4.135880708694458
     },
     {
       "p": 1481,
@@ -2762,9 +3606,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 740,
+      "projective_torus_order": 741,
+      "projective_torus_factor_degree": 740,
+      "ambient_g_repetition_order": 137085,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 185,
+      "remaining_p_minus_layer_degree": 136344,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 370,
+      "projective_quotient_zero_indices": [
+        370
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 4.760970115661621
+      "elapsed_seconds": 4.6689512729644775
     },
     {
       "p": 1493,
@@ -2807,9 +3665,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 746,
+      "projective_torus_order": 747,
+      "projective_torus_factor_degree": 746,
+      "ambient_g_repetition_order": 278631,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 373,
+      "remaining_p_minus_layer_degree": 277884,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 373,
+      "projective_quotient_zero_indices": [
+        373
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 4.368149280548096
+      "elapsed_seconds": 4.526535749435425
     },
     {
       "p": 1553,
@@ -2852,9 +3724,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 776,
+      "projective_torus_order": 777,
+      "projective_torus_factor_degree": 776,
+      "ambient_g_repetition_order": 75369,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 97,
+      "remaining_p_minus_layer_degree": 74592,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 388,
+      "projective_quotient_zero_indices": [
+        388
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 5.2251904010772705
+      "elapsed_seconds": 5.101899147033691
     },
     {
       "p": 1601,
@@ -2897,9 +3783,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 800,
+      "projective_torus_order": 801,
+      "projective_torus_factor_degree": 800,
+      "ambient_g_repetition_order": 20025,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 25,
+      "remaining_p_minus_layer_degree": 19224,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 400,
+      "projective_quotient_zero_indices": [
+        400
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 5.629254102706909
+      "elapsed_seconds": 5.2086639404296875
     },
     {
       "p": 1613,
@@ -2942,9 +3842,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 806,
+      "projective_torus_order": 807,
+      "projective_torus_factor_degree": 806,
+      "ambient_g_repetition_order": 325221,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 403,
+      "remaining_p_minus_layer_degree": 324414,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 403,
+      "projective_quotient_zero_indices": [
+        403
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 5.167600154876709
+      "elapsed_seconds": 5.32401704788208
     },
     {
       "p": 1637,
@@ -2987,9 +3901,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 818,
+      "projective_torus_order": 819,
+      "projective_torus_factor_degree": 818,
+      "ambient_g_repetition_order": 334971,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 409,
+      "remaining_p_minus_layer_degree": 334152,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 409,
+      "projective_quotient_zero_indices": [
+        409
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 5.855497598648071
+      "elapsed_seconds": 5.476259231567383
     },
     {
       "p": 1697,
@@ -3032,9 +3960,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 848,
+      "projective_torus_order": 849,
+      "projective_torus_factor_degree": 848,
+      "ambient_g_repetition_order": 44997,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 53,
+      "remaining_p_minus_layer_degree": 44148,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 424,
+      "projective_quotient_zero_indices": [
+        424
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 5.702266216278076
+      "elapsed_seconds": 6.114794015884399
     },
     {
       "p": 1709,
@@ -3077,9 +4019,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 854,
+      "projective_torus_order": 855,
+      "projective_torus_factor_degree": 854,
+      "ambient_g_repetition_order": 365085,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 427,
+      "remaining_p_minus_layer_degree": 364230,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 427,
+      "projective_quotient_zero_indices": [
+        427
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 5.794114589691162
+      "elapsed_seconds": 5.9698486328125
     },
     {
       "p": 1721,
@@ -3122,9 +4078,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 860,
+      "projective_torus_order": 861,
+      "projective_torus_factor_degree": 860,
+      "ambient_g_repetition_order": 185115,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 215,
+      "remaining_p_minus_layer_degree": 184254,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 430,
+      "projective_quotient_zero_indices": [
+        430
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 6.497848749160767
+      "elapsed_seconds": 6.218377351760864
     },
     {
       "p": 1733,
@@ -3167,9 +4137,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 866,
+      "projective_torus_order": 867,
+      "projective_torus_factor_degree": 866,
+      "ambient_g_repetition_order": 375411,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 433,
+      "remaining_p_minus_layer_degree": 374544,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 433,
+      "projective_quotient_zero_indices": [
+        433
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 5.908883810043335
+      "elapsed_seconds": 6.144179344177246
     },
     {
       "p": 1877,
@@ -3212,9 +4196,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 938,
+      "projective_torus_order": 939,
+      "projective_torus_factor_degree": 938,
+      "ambient_g_repetition_order": 440391,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 469,
+      "remaining_p_minus_layer_degree": 439452,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 469,
+      "projective_quotient_zero_indices": [
+        469
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 7.645365476608276
+      "elapsed_seconds": 7.484581708908081
     },
     {
       "p": 1889,
@@ -3257,9 +4255,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 944,
+      "projective_torus_order": 945,
+      "projective_torus_factor_degree": 944,
+      "ambient_g_repetition_order": 55755,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 59,
+      "remaining_p_minus_layer_degree": 54810,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 472,
+      "projective_quotient_zero_indices": [
+        472
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 7.709272384643555
+      "elapsed_seconds": 7.2266130447387695
     },
     {
       "p": 1901,
@@ -3302,9 +4314,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 950,
+      "projective_torus_order": 951,
+      "projective_torus_factor_degree": 950,
+      "ambient_g_repetition_order": 451725,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 475,
+      "remaining_p_minus_layer_degree": 450774,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 475,
+      "projective_quotient_zero_indices": [
+        475
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 7.1495020389556885
+      "elapsed_seconds": 7.314445734024048
     },
     {
       "p": 1913,
@@ -3347,9 +4373,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 956,
+      "projective_torus_order": 957,
+      "projective_torus_factor_degree": 956,
+      "ambient_g_repetition_order": 228723,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 239,
+      "remaining_p_minus_layer_degree": 227766,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 478,
+      "projective_quotient_zero_indices": [
+        478
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 7.750612735748291
+      "elapsed_seconds": 7.264226675033569
     },
     {
       "p": 1949,
@@ -3392,9 +4432,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 974,
+      "projective_torus_order": 975,
+      "projective_torus_factor_degree": 974,
+      "ambient_g_repetition_order": 474825,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 487,
+      "remaining_p_minus_layer_degree": 473850,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 487,
+      "projective_quotient_zero_indices": [
+        487
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 7.4404456615448
+      "elapsed_seconds": 8.001676559448242
     },
     {
       "p": 1973,
@@ -3437,9 +4491,23 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 986,
+      "projective_torus_order": 987,
+      "projective_torus_factor_degree": 986,
+      "ambient_g_repetition_order": 486591,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 493,
+      "remaining_p_minus_layer_degree": 485604,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 493,
+      "projective_quotient_zero_indices": [
+        493
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 7.502344608306885
+      "elapsed_seconds": 7.583562612533569
     },
     {
       "p": 1997,
@@ -3482,10 +4550,24 @@
       "class0_direction_parity_failures": [],
       "pure_omega_direction_exponent_class": 1,
       "pure_omega_direction_support": 998,
+      "projective_torus_order": 999,
+      "projective_torus_factor_degree": 998,
+      "ambient_g_repetition_order": 498501,
+      "projective_factor_divides_g": true,
+      "p_minus_oddpart": 499,
+      "remaining_p_minus_layer_degree": 497502,
+      "projective_layer_is_all_of_g": false,
+      "pure_omega_quotient_index": 499,
+      "projective_quotient_zero_indices": [
+        499
+      ],
+      "projective_quotient_mismatches": 0,
+      "quotient_direction_mismatches": 0,
+      "projective_torus_nontrivial_fourier_nonzero": true,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 7.519760608673096
+      "elapsed_seconds": 8.3487548828125
     }
   ],
-  "elapsed_seconds": 26.452732801437378
+  "elapsed_seconds": 27.38886308670044
 }
