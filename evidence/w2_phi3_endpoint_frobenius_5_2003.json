@@ -8,9 +8,13 @@
   "failures": {
     "named_z_frobenius": [],
     "endpoint_frobenius": [],
+    "coordinate_formula": [],
     "c0_equals_c2": [],
     "c1_even": [],
     "c0_odd": [],
+    "finite_direction_parity": [],
+    "class0_direction_parity": [],
+    "class0_direction_count": [],
     "content_not_one": [],
     "gamma_class_count_formula": []
   },
@@ -23,6 +27,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -51,9 +56,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 1,
+      "expected_class0_projective_directions": 1,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 2,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.0015723705291748047
+      "elapsed_seconds": 0.01514744758605957
     },
     {
       "p": 17,
@@ -61,6 +72,7 @@
       "pole_t": 12,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -89,9 +101,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 3,
+      "expected_class0_projective_directions": 3,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 8,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.0034270286560058594
+      "elapsed_seconds": 0.015096426010131836
     },
     {
       "p": 29,
@@ -99,6 +117,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -127,9 +146,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 5,
+      "expected_class0_projective_directions": 5,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 14,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.004560708999633789
+      "elapsed_seconds": 0.015689373016357422
     },
     {
       "p": 41,
@@ -137,6 +162,7 @@
       "pole_t": 28,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -165,9 +191,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 7,
+      "expected_class0_projective_directions": 7,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 20,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.006929636001586914
+      "elapsed_seconds": 0.021231889724731445
     },
     {
       "p": 53,
@@ -175,6 +207,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -203,9 +236,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 9,
+      "expected_class0_projective_directions": 9,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 26,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.009523868560791016
+      "elapsed_seconds": 0.024094104766845703
     },
     {
       "p": 89,
@@ -213,6 +252,7 @@
       "pole_t": 60,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -241,9 +281,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 15,
+      "expected_class0_projective_directions": 15,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 44,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.02039623260498047
+      "elapsed_seconds": 0.038427114486694336
     },
     {
       "p": 101,
@@ -251,6 +297,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -279,9 +326,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 17,
+      "expected_class0_projective_directions": 17,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 50,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.031653642654418945
+      "elapsed_seconds": 0.04646563529968262
     },
     {
       "p": 113,
@@ -289,6 +342,7 @@
       "pole_t": 76,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -317,9 +371,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 19,
+      "expected_class0_projective_directions": 19,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 56,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.04346299171447754
+      "elapsed_seconds": 0.04859805107116699
     },
     {
       "p": 137,
@@ -327,6 +387,7 @@
       "pole_t": 92,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -355,9 +416,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 23,
+      "expected_class0_projective_directions": 23,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 68,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.0455322265625
+      "elapsed_seconds": 0.039835453033447266
     },
     {
       "p": 149,
@@ -365,6 +432,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -393,9 +461,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 25,
+      "expected_class0_projective_directions": 25,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 74,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.08078265190124512
+      "elapsed_seconds": 0.04726409912109375
     },
     {
       "p": 173,
@@ -403,6 +477,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -431,9 +506,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 29,
+      "expected_class0_projective_directions": 29,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 86,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.07063865661621094
+      "elapsed_seconds": 0.0617525577545166
     },
     {
       "p": 197,
@@ -441,6 +522,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -469,9 +551,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 33,
+      "expected_class0_projective_directions": 33,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 98,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.08875393867492676
+      "elapsed_seconds": 0.08638501167297363
     },
     {
       "p": 233,
@@ -479,6 +567,7 @@
       "pole_t": 156,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -507,9 +596,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 39,
+      "expected_class0_projective_directions": 39,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 116,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.12125658988952637
+      "elapsed_seconds": 0.12908315658569336
     },
     {
       "p": 257,
@@ -517,6 +612,7 @@
       "pole_t": 172,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -545,9 +641,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 43,
+      "expected_class0_projective_directions": 43,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 128,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.1434943675994873
+      "elapsed_seconds": 0.12972378730773926
     },
     {
       "p": 269,
@@ -555,6 +657,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -583,9 +686,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 45,
+      "expected_class0_projective_directions": 45,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 134,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.17063593864440918
+      "elapsed_seconds": 0.15703201293945312
     },
     {
       "p": 281,
@@ -593,6 +702,7 @@
       "pole_t": 188,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -621,9 +731,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 47,
+      "expected_class0_projective_directions": 47,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 140,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.21748089790344238
+      "elapsed_seconds": 0.17132854461669922
     },
     {
       "p": 293,
@@ -631,6 +747,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -659,9 +776,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 49,
+      "expected_class0_projective_directions": 49,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 146,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.19016528129577637
+      "elapsed_seconds": 0.16579508781433105
     },
     {
       "p": 317,
@@ -669,6 +792,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -697,9 +821,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 53,
+      "expected_class0_projective_directions": 53,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 158,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.22166991233825684
+      "elapsed_seconds": 0.19543719291687012
     },
     {
       "p": 353,
@@ -707,6 +837,7 @@
       "pole_t": 236,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -735,9 +866,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 59,
+      "expected_class0_projective_directions": 59,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 176,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.4077637195587158
+      "elapsed_seconds": 0.24212288856506348
     },
     {
       "p": 389,
@@ -745,6 +882,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -773,9 +911,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 65,
+      "expected_class0_projective_directions": 65,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 194,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.33579373359680176
+      "elapsed_seconds": 0.3294053077697754
     },
     {
       "p": 401,
@@ -783,6 +927,7 @@
       "pole_t": 268,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -811,9 +956,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 67,
+      "expected_class0_projective_directions": 67,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 200,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.3559751510620117
+      "elapsed_seconds": 0.357072114944458
     },
     {
       "p": 449,
@@ -821,6 +972,7 @@
       "pole_t": 300,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -849,9 +1001,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 75,
+      "expected_class0_projective_directions": 75,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 224,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.44333982467651367
+      "elapsed_seconds": 0.4085228443145752
     },
     {
       "p": 461,
@@ -859,6 +1017,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -887,9 +1046,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 77,
+      "expected_class0_projective_directions": 77,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 230,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.4702796936035156
+      "elapsed_seconds": 0.4747798442840576
     },
     {
       "p": 509,
@@ -897,6 +1062,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -925,9 +1091,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 85,
+      "expected_class0_projective_directions": 85,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 254,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.574448823928833
+      "elapsed_seconds": 0.5213513374328613
     },
     {
       "p": 521,
@@ -935,6 +1107,7 @@
       "pole_t": 348,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -963,9 +1136,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 87,
+      "expected_class0_projective_directions": 87,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 260,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.5978541374206543
+      "elapsed_seconds": 0.5983669757843018
     },
     {
       "p": 557,
@@ -973,6 +1152,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1001,9 +1181,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 93,
+      "expected_class0_projective_directions": 93,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 278,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.6945600509643555
+      "elapsed_seconds": 0.6319892406463623
     },
     {
       "p": 569,
@@ -1011,6 +1197,7 @@
       "pole_t": 380,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1039,9 +1226,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 95,
+      "expected_class0_projective_directions": 95,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 284,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.7178406715393066
+      "elapsed_seconds": 0.6561601161956787
     },
     {
       "p": 593,
@@ -1049,6 +1242,7 @@
       "pole_t": 396,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1077,9 +1271,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 99,
+      "expected_class0_projective_directions": 99,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 296,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.7782113552093506
+      "elapsed_seconds": 0.7693989276885986
     },
     {
       "p": 617,
@@ -1087,6 +1287,7 @@
       "pole_t": 412,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1115,9 +1316,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 103,
+      "expected_class0_projective_directions": 103,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 308,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.8494033813476562
+      "elapsed_seconds": 0.8264369964599609
     },
     {
       "p": 641,
@@ -1125,6 +1332,7 @@
       "pole_t": 428,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1153,9 +1361,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 107,
+      "expected_class0_projective_directions": 107,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 320,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.906261682510376
+      "elapsed_seconds": 0.7988717555999756
     },
     {
       "p": 653,
@@ -1163,6 +1377,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1191,9 +1406,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 109,
+      "expected_class0_projective_directions": 109,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 326,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 0.9453368186950684
+      "elapsed_seconds": 0.9329264163970947
     },
     {
       "p": 677,
@@ -1201,6 +1422,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1229,9 +1451,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 113,
+      "expected_class0_projective_directions": 113,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 338,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.018045425415039
+      "elapsed_seconds": 0.911754846572876
     },
     {
       "p": 701,
@@ -1239,6 +1467,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1267,9 +1496,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 117,
+      "expected_class0_projective_directions": 117,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 350,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.0979056358337402
+      "elapsed_seconds": 1.0839626789093018
     },
     {
       "p": 761,
@@ -1277,6 +1512,7 @@
       "pole_t": 508,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1305,9 +1541,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 127,
+      "expected_class0_projective_directions": 127,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 380,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.2603821754455566
+      "elapsed_seconds": 1.1401393413543701
     },
     {
       "p": 773,
@@ -1315,6 +1557,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1343,9 +1586,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 129,
+      "expected_class0_projective_directions": 129,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 386,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.3042881488800049
+      "elapsed_seconds": 1.1786153316497803
     },
     {
       "p": 797,
@@ -1353,6 +1602,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1381,9 +1631,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 133,
+      "expected_class0_projective_directions": 133,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 398,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.3928413391113281
+      "elapsed_seconds": 1.3816487789154053
     },
     {
       "p": 809,
@@ -1391,6 +1647,7 @@
       "pole_t": 540,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1419,9 +1676,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 135,
+      "expected_class0_projective_directions": 135,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 404,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.432654619216919
+      "elapsed_seconds": 1.4267349243164062
     },
     {
       "p": 821,
@@ -1429,6 +1692,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1457,9 +1721,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 137,
+      "expected_class0_projective_directions": 137,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 410,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.4716854095458984
+      "elapsed_seconds": 1.3437738418579102
     },
     {
       "p": 857,
@@ -1467,6 +1737,7 @@
       "pole_t": 572,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1495,9 +1766,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 143,
+      "expected_class0_projective_directions": 143,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 428,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.604454517364502
+      "elapsed_seconds": 1.589324951171875
     },
     {
       "p": 881,
@@ -1505,6 +1782,7 @@
       "pole_t": 588,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1533,9 +1811,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 147,
+      "expected_class0_projective_directions": 147,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 440,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.6991071701049805
+      "elapsed_seconds": 1.5098915100097656
     },
     {
       "p": 929,
@@ -1543,6 +1827,7 @@
       "pole_t": 620,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1571,9 +1856,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 155,
+      "expected_class0_projective_directions": 155,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 464,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.8811204433441162
+      "elapsed_seconds": 1.8718576431274414
     },
     {
       "p": 941,
@@ -1581,6 +1872,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1609,9 +1901,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 157,
+      "expected_class0_projective_directions": 157,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 470,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.9296433925628662
+      "elapsed_seconds": 1.755436658859253
     },
     {
       "p": 953,
@@ -1619,6 +1917,7 @@
       "pole_t": 636,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1647,9 +1946,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 159,
+      "expected_class0_projective_directions": 159,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 476,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 1.9829785823822021
+      "elapsed_seconds": 1.7928671836853027
     },
     {
       "p": 977,
@@ -1657,6 +1962,7 @@
       "pole_t": 652,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1685,9 +1991,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 163,
+      "expected_class0_projective_directions": 163,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 488,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 2.0695903301239014
+      "elapsed_seconds": 2.052129030227661
     },
     {
       "p": 1013,
@@ -1695,6 +2007,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1723,9 +2036,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 169,
+      "expected_class0_projective_directions": 169,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 506,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 2.2366855144500732
+      "elapsed_seconds": 2.00860333442688
     },
     {
       "p": 1049,
@@ -1733,6 +2052,7 @@
       "pole_t": 700,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1761,9 +2081,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 175,
+      "expected_class0_projective_directions": 175,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 524,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 2.3833463191986084
+      "elapsed_seconds": 2.3739795684814453
     },
     {
       "p": 1061,
@@ -1771,6 +2097,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1799,9 +2126,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 177,
+      "expected_class0_projective_directions": 177,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 530,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 2.467603921890259
+      "elapsed_seconds": 2.1943459510803223
     },
     {
       "p": 1097,
@@ -1809,6 +2142,7 @@
       "pole_t": 732,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1837,9 +2171,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 183,
+      "expected_class0_projective_directions": 183,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 548,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 2.6164097785949707
+      "elapsed_seconds": 2.6008951663970947
     },
     {
       "p": 1109,
@@ -1847,6 +2187,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1875,9 +2216,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 185,
+      "expected_class0_projective_directions": 185,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 554,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 2.686056613922119
+      "elapsed_seconds": 2.662761688232422
     },
     {
       "p": 1181,
@@ -1885,6 +2232,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1913,9 +2261,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 197,
+      "expected_class0_projective_directions": 197,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 590,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 3.0279908180236816
+      "elapsed_seconds": 2.758596420288086
     },
     {
       "p": 1193,
@@ -1923,6 +2277,7 @@
       "pole_t": 796,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1951,9 +2306,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 199,
+      "expected_class0_projective_directions": 199,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 596,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 3.082080602645874
+      "elapsed_seconds": 2.7989377975463867
     },
     {
       "p": 1217,
@@ -1961,6 +2322,7 @@
       "pole_t": 812,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -1989,9 +2351,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 203,
+      "expected_class0_projective_directions": 203,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 608,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 3.2193844318389893
+      "elapsed_seconds": 3.2014670372009277
     },
     {
       "p": 1229,
@@ -1999,6 +2367,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2027,9 +2396,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 205,
+      "expected_class0_projective_directions": 205,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 614,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 3.2748355865478516
+      "elapsed_seconds": 2.994720935821533
     },
     {
       "p": 1277,
@@ -2037,6 +2412,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2065,9 +2441,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 213,
+      "expected_class0_projective_directions": 213,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 638,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 3.537219285964966
+      "elapsed_seconds": 3.529578924179077
     },
     {
       "p": 1289,
@@ -2075,6 +2457,7 @@
       "pole_t": 860,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2103,9 +2486,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 215,
+      "expected_class0_projective_directions": 215,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 644,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 3.604907989501953
+      "elapsed_seconds": 3.2469942569732666
     },
     {
       "p": 1301,
@@ -2113,6 +2502,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2141,9 +2531,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 217,
+      "expected_class0_projective_directions": 217,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 650,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 3.6857168674468994
+      "elapsed_seconds": 3.68550181388855
     },
     {
       "p": 1361,
@@ -2151,6 +2547,7 @@
       "pole_t": 908,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2179,9 +2576,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 227,
+      "expected_class0_projective_directions": 227,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 680,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 4.03186559677124
+      "elapsed_seconds": 4.012232542037964
     },
     {
       "p": 1373,
@@ -2189,6 +2592,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2217,9 +2621,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 229,
+      "expected_class0_projective_directions": 229,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 686,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 4.117537975311279
+      "elapsed_seconds": 3.7389755249023438
     },
     {
       "p": 1409,
@@ -2227,6 +2637,7 @@
       "pole_t": 940,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2255,9 +2666,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 235,
+      "expected_class0_projective_directions": 235,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 704,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 4.3119797706604
+      "elapsed_seconds": 3.910815954208374
     },
     {
       "p": 1433,
@@ -2265,6 +2682,7 @@
       "pole_t": 956,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2293,9 +2711,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 239,
+      "expected_class0_projective_directions": 239,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 716,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 4.4786057472229
+      "elapsed_seconds": 4.02527642250061
     },
     {
       "p": 1481,
@@ -2303,6 +2727,7 @@
       "pole_t": 988,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2331,9 +2756,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 247,
+      "expected_class0_projective_directions": 247,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 740,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 4.772809028625488
+      "elapsed_seconds": 4.760970115661621
     },
     {
       "p": 1493,
@@ -2341,6 +2772,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2369,9 +2801,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 249,
+      "expected_class0_projective_directions": 249,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 746,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 4.834942102432251
+      "elapsed_seconds": 4.368149280548096
     },
     {
       "p": 1553,
@@ -2379,6 +2817,7 @@
       "pole_t": 1036,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2407,9 +2846,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 259,
+      "expected_class0_projective_directions": 259,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 776,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 5.262071132659912
+      "elapsed_seconds": 5.2251904010772705
     },
     {
       "p": 1601,
@@ -2417,6 +2862,7 @@
       "pole_t": 1068,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2445,9 +2891,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 267,
+      "expected_class0_projective_directions": 267,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 800,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 5.54761528968811
+      "elapsed_seconds": 5.629254102706909
     },
     {
       "p": 1613,
@@ -2455,6 +2907,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2483,9 +2936,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 269,
+      "expected_class0_projective_directions": 269,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 806,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 5.658480405807495
+      "elapsed_seconds": 5.167600154876709
     },
     {
       "p": 1637,
@@ -2493,6 +2952,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2521,9 +2981,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 273,
+      "expected_class0_projective_directions": 273,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 818,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 5.874409198760986
+      "elapsed_seconds": 5.855497598648071
     },
     {
       "p": 1697,
@@ -2531,6 +2997,7 @@
       "pole_t": 1132,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2559,9 +3026,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 283,
+      "expected_class0_projective_directions": 283,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 848,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 6.23471212387085
+      "elapsed_seconds": 5.702266216278076
     },
     {
       "p": 1709,
@@ -2569,6 +3042,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2597,9 +3071,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 285,
+      "expected_class0_projective_directions": 285,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 854,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 6.371353626251221
+      "elapsed_seconds": 5.794114589691162
     },
     {
       "p": 1721,
@@ -2607,6 +3087,7 @@
       "pole_t": 1148,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2635,9 +3116,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 287,
+      "expected_class0_projective_directions": 287,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 860,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 6.440642356872559
+      "elapsed_seconds": 6.497848749160767
     },
     {
       "p": 1733,
@@ -2645,6 +3132,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2673,9 +3161,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 289,
+      "expected_class0_projective_directions": 289,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 866,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 6.527108669281006
+      "elapsed_seconds": 5.908883810043335
     },
     {
       "p": 1877,
@@ -2683,6 +3177,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2711,9 +3206,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 313,
+      "expected_class0_projective_directions": 313,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 938,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 7.686181545257568
+      "elapsed_seconds": 7.645365476608276
     },
     {
       "p": 1889,
@@ -2721,6 +3222,7 @@
       "pole_t": 1260,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2749,9 +3251,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 315,
+      "expected_class0_projective_directions": 315,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 944,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 7.76820707321167
+      "elapsed_seconds": 7.709272384643555
     },
     {
       "p": 1901,
@@ -2759,6 +3267,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2787,9 +3296,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 317,
+      "expected_class0_projective_directions": 317,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 950,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 7.852836608886719
+      "elapsed_seconds": 7.1495020389556885
     },
     {
       "p": 1913,
@@ -2797,6 +3312,7 @@
       "pole_t": 1276,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2825,9 +3341,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 319,
+      "expected_class0_projective_directions": 319,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 956,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 7.93920111656189
+      "elapsed_seconds": 7.750612735748291
     },
     {
       "p": 1949,
@@ -2835,6 +3357,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2863,9 +3386,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 325,
+      "expected_class0_projective_directions": 325,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 974,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 8.249300956726074
+      "elapsed_seconds": 7.4404456615448
     },
     {
       "p": 1973,
@@ -2873,6 +3402,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2901,9 +3431,15 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 329,
+      "expected_class0_projective_directions": 329,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 986,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 8.416718006134033
+      "elapsed_seconds": 7.502344608306885
     },
     {
       "p": 1997,
@@ -2911,6 +3447,7 @@
       "pole_t": 1,
       "named_z_frobenius_mismatches": 0,
       "endpoint_frobenius_mismatches": 0,
+      "coordinate_formula_mismatches": 0,
       "gamma_phi3_residues": [
         0,
         2
@@ -2939,10 +3476,16 @@
       "frobenius_c0_equals_c2": true,
       "frobenius_c1_even": true,
       "surviving_c0_odd": true,
+      "n_class0_projective_directions": 333,
+      "expected_class0_projective_directions": 333,
+      "finite_nonsquare_direction_parity_failures": [],
+      "class0_direction_parity_failures": [],
+      "pure_omega_direction_exponent_class": 1,
+      "pure_omega_direction_support": 998,
       "observed_c1_mod4": 2,
       "observed_nonsquare_weight_mod4": 0,
-      "elapsed_seconds": 8.656722068786621
+      "elapsed_seconds": 7.519760608673096
     }
   ],
-  "elapsed_seconds": 28.199161052703857
+  "elapsed_seconds": 26.452732801437378
 }

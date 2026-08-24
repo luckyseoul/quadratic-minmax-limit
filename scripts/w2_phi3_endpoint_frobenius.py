@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Frobenius reduction for the normalized Phi_3 endpoint at p=5 mod 12.
+"""Proof certificate for the normalized Phi_3 endpoint at p=5 mod 12.
 
 For the endpoint u=(p+1)/2, the pole parameter lies in F_p.  The named
 halfspace and its pole image are therefore Frobenius invariant.  On the
 nonsquare multiplicative orbit, Frobenius sends exponent class j modulo 3
 to 2-j.  Thus the endpoint Phi_3 residue is controlled by the parity of one
-class count C_0=C_2; class C_1 is automatically even.
+class count C_0=C_2; class C_1 is automatically even.  Every finite
+nonsquare projective F_p-direction has odd endpoint-support parity.  Class 0
+contains an odd number (p+1)/6 of those directions, proving C_0 odd.
 
 This scanner verifies the exact symmetries, the surviving parity, and the
 normalized content value without factoring the ambient polynomial g.
@@ -76,6 +78,41 @@ def record(p: int) -> dict:
     points = np.arange(q, dtype=np.int64)
     point_a = points % p
     point_b = points // p
+    # In the selected basis omega^2=d, with d nonsquare.  On a finite
+    # nonsquare projective direction x=c(1+k*omega), put n=1-d*k^2.
+    # The endpoint support is the xor of the base halfspace, the quadratic
+    # switch, and the pole-image halfspace.  These formulas are also used in
+    # the proof that every such projective direction has odd support.
+    if ia != 0:
+        raise AssertionError(f"expected omega^2=d basis at p={p}, ia={ia}")
+    d = ib
+    dinv = int(inv_fp[d])
+    if lam != dinv or pole_t != 2 * dinv % p:
+        raise AssertionError(
+            f"endpoint normalization disagrees at p={p}: "
+            f"lambda={lam}, d^-1={dinv}, t={pole_t}"
+        )
+    level = point_a * dinv % p
+    delta = (
+        (2 * point_a - d) ** 2 - 4 * d * point_b * point_b
+    ) % p
+    numerator = (
+        point_a * (2 * point_a - d) - 2 * d * point_b * point_b
+    ) % p
+    image_level = numerator * inv_fp[delta] % p
+    half = (p - 1) // 2
+    base_sign = np.where(level <= half, 1, -1).astype(np.int8)
+    image_sign = np.where(image_level <= half, 1, -1).astype(np.int8)
+    image_sign[delta == 0] = -1
+    switch_sign = legendre[delta].copy()
+    switch_sign[delta == 0] = 1
+    coordinate_wfn = (
+        base_sign != switch_sign * image_sign
+    ).astype(np.uint8)
+    coordinate_formula_mismatches = int(
+        np.count_nonzero(wfn != coordinate_wfn)
+    )
+
     # If omega^2=ia*omega+ib, then omega^p=ia-omega.
     conjugates = (
         (point_a + ia * point_b) % p + ((-point_b) % p) * p
@@ -134,12 +171,49 @@ def record(p: int) -> dict:
         int(wfn[nonsquare[j::3]].sum()) for j in range(3)
     ]
     c0, c1, c2 = class_counts
+    # F_p^* is contained in the sixth-power subgroup, so every projective
+    # F_p-direction lies in one sextic class.  Class 0 has (p+1)/6
+    # directions.  The coordinate proof gives odd support on every finite
+    # nonsquare direction.  The one infinite-slope direction F_p*omega is
+    # a nonsquare cube (class 1), so every class-0 direction is finite.
+    ns_a = nonsquare % p
+    ns_b = nonsquare // p
+    ns_directions = np.where(
+        ns_a == 0,
+        p,
+        ns_b * inv_fp[ns_a] % p,
+    )
+    direction_support = np.bincount(
+        ns_directions,
+        weights=wfn[nonsquare],
+        minlength=p + 1,
+    ).astype(np.int64)
+    finite_nonsquare_directions = np.unique(ns_directions[ns_directions != p])
+    finite_direction_parity_failures = [
+        int(direction)
+        for direction in finite_nonsquare_directions
+        if direction_support[direction] % 2 != 1
+    ]
+    c0_directions = np.unique(ns_directions[0::3])
+    c0_direction_parity_failures = [
+        int(direction)
+        for direction in c0_directions
+        if direction == p or direction_support[direction] % 2 != 1
+    ]
+    infinity_indices = np.flatnonzero(ns_directions == p)
+    infinity_classes = np.unique(infinity_indices % 3)
+    if infinity_classes.tolist() != [1]:
+        raise AssertionError(
+            f"F_p*omega should be nonsquare cubic at p={p}: "
+            f"classes={infinity_classes.tolist()}"
+        )
     return {
         "p": p,
         "endpoint_u": u,
         "pole_t": pole_t,
         "named_z_frobenius_mismatches": named_z_frobenius_mismatches,
         "endpoint_frobenius_mismatches": endpoint_frobenius_mismatches,
+        "coordinate_formula_mismatches": coordinate_formula_mismatches,
         "gamma_phi3_residues": gamma_residues,
         "gamma_nonsquare_exponent_class_counts": gamma_class_counts,
         "expected_gamma_class_counts": expected_gamma_class_counts,
@@ -152,6 +226,14 @@ def record(p: int) -> dict:
         "frobenius_c0_equals_c2": c0 == c2,
         "frobenius_c1_even": c1 % 2 == 0,
         "surviving_c0_odd": c0 % 2 == 1,
+        "n_class0_projective_directions": int(len(c0_directions)),
+        "expected_class0_projective_directions": (p + 1) // 6,
+        "finite_nonsquare_direction_parity_failures": (
+            finite_direction_parity_failures
+        ),
+        "class0_direction_parity_failures": c0_direction_parity_failures,
+        "pure_omega_direction_exponent_class": int(infinity_classes[0]),
+        "pure_omega_direction_support": int(direction_support[p]),
         "observed_c1_mod4": c1 % 4,
         "observed_nonsquare_weight_mod4": (c0 + c1 + c2) % 4,
         "elapsed_seconds": time.time() - t0,
@@ -187,6 +269,10 @@ def main() -> None:
             row["p"] for row in rows
             if row["endpoint_frobenius_mismatches"]
         ],
+        "coordinate_formula": [
+            row["p"] for row in rows
+            if row["coordinate_formula_mismatches"]
+        ],
         "c0_equals_c2": [
             row["p"] for row in rows
             if not row["frobenius_c0_equals_c2"]
@@ -196,6 +282,19 @@ def main() -> None:
         ],
         "c0_odd": [
             row["p"] for row in rows if not row["surviving_c0_odd"]
+        ],
+        "finite_direction_parity": [
+            row["p"] for row in rows
+            if row["finite_nonsquare_direction_parity_failures"]
+        ],
+        "class0_direction_parity": [
+            row["p"] for row in rows
+            if row["class0_direction_parity_failures"]
+        ],
+        "class0_direction_count": [
+            row["p"] for row in rows
+            if row["n_class0_projective_directions"]
+            != row["expected_class0_projective_directions"]
         ],
         "content_not_one": [
             row["p"] for row in rows

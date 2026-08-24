@@ -275,7 +275,7 @@ Thus the first three endpoints are not a p-law either, and the growing bad
 prefix makes a small fixed disjunction a poor proof target.  The scan's
 maximum first-good offset is 4; this is census evidence, not a uniform bound.
 
-### A Frobenius reduction solves the observed Phi_3 endpoint gate at p=5 mod 12
+### Frobenius and projective-line parity solve the Phi_3 gate at p=5 mod 12
 
 There is one clean congruence-class phenomenon hidden by the mixed-prime
 endpoint census.  Suppose `p == 5 (mod 12)` and choose the first normalized
@@ -311,15 +311,54 @@ content is therefore exactly `1` if and only if `C_0` is odd.  This reduces
 the complete `Phi_3` endpoint question in this congruence class to one
 integer parity, with the Frobenius equalities proved before computation.
 
-`scripts/w2_phi3_endpoint_frobenius.py` checks the coordinate identities and
-counts directly.  Through `p=5003`, all 170 primes `p == 5 (mod 12)` have
-zero Frobenius mismatches, `C_0=C_2`, even `C_1`, odd `C_0`, and normalized
-content `1`.  It also observes the sharper congruences `C_1 == 2 (mod 4)`
-and `C_0+C_1+C_2 == 0 (mod 4)`.  Either of these together with the other
-would force the missing oddness, but no uniform proof of those halfspace
-congruences has yet been found.  Classical cubic Jacobi-sum evaluations over
-`F_(p^2)` control complete algebraic sums; they do not by themselves control
-this incomplete halfspace parity.  The reproducible in-repository result is
+Projective-line parity closes the remaining lemma.  Since `6|(p+1)`, scalar
+multiplication by `F_p^*` preserves every sextic class in `F_(p^2)^*`.
+Class 0 therefore consists of `(p+1)/6` projective `F_p`-directions, an odd
+number.  Consider any finite nonsquare direction
+
+    x=c(1+k omega),   c in F_p^*,   n=1-d k^2 nonsquare.
+
+The base halfspace level is `c/d`, so its line parity is `(p-1)/2=0 mod 2`.
+For the endpoint pole, after clearing the square denominator `d^2`, the
+quadratic switch is controlled by
+
+    Delta(c)=4n c^2-4d c+d^2.
+
+Its discriminant `16d^3 k^2` is nonsquare.  The standard quadratic-character
+sum is therefore `sum_c chi(Delta(c))=-chi(4n)=1`, so exactly `(p-1)/2`
+switches occur, again even.  The pole-image halfspace level is
+
+    R(c)=(2n c^2-dc)/Delta(c).
+
+For a target level `r`, its fiber is
+
+    2n(2r-1)c^2+d(1-4r)c+r d^2=0.
+
+At the upper-half boundary `u=1/2=(p+1)/2`, this becomes a nonconstant
+linear equation and has exactly one solution.  Away from `u`, a quadratic
+fiber has odd cardinality only when its discriminant vanishes.  After the
+irrelevant square factor `d^2`, that discriminant is
+
+    Q(r)=1+8d k^2 r(2r-1).
+
+It obeys `Q(u-r)=Q(r)`.  Its roots have no fixed point under this involution,
+because `Q(u/2)=n!=0`; neither `0` nor `u` is a root.  The involution pairs
+roots within the lower half or within the upper half.  Hence the upper half
+contains an even number of branch values, while the unique linear fiber at
+`u` remains.  Every finite nonsquare projective direction therefore has odd
+endpoint-support parity.
+
+The omitted direction `F_p^* omega` is a nonsquare cube: `omega^(p-1)=-1`
+and `(p+1)/3` is even.  It lies in exponent class 1, not class 0.  Thus all
+`(p+1)/6` class-0 directions are finite and contribute odd parity.  Their
+number is odd, proving `C_0` odd.  Consequently the first normalized
+endpoint has `Phi_3` content exactly `1` for every prime
+`p == 5 (mod 12)`.
+
+`scripts/w2_phi3_endpoint_frobenius.py` checks the coordinate formula,
+Frobenius action, projective direction counts, and line parities directly.
+Through `p=5003`, all 170 primes in this congruence class have zero failures.
+The reproducible in-repository result is
 `evidence/w2_phi3_endpoint_frobenius_5_2003.json`; the 5003 mesh extension is
 archived beside the translated sequences under
 `/mnt/storage/e1work/maxplus_p13/w2_translated_attack_2026-08-23`.
