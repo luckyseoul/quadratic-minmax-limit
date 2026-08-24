@@ -1,0 +1,2395 @@
+{
+  "range": [
+    2501,
+    3000
+  ],
+  "congruence_class": "p == 5 (mod 12)",
+  "offsets": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "backend": "gpu",
+  "precision": "double",
+  "gcd_backend": "ntl",
+  "n_primes": 18,
+  "prefix_failures": {
+    "1": [
+      2549,
+      2621
+    ],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "unit_ideal_prefix_failures": {
+    "1": [
+      2549,
+      2621,
+      2729,
+      2969
+    ],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "scalar_prefix_failures": {
+    "1": [
+      2549,
+      2621
+    ],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "projective_prefix_failures": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": []
+  },
+  "rows": [
+    {
+      "p": 2549,
+      "orbit_length": 3248700,
+      "ambient_oddpart": 812175,
+      "fold_factor": 4,
+      "projective_order": 1275,
+      "scalar_order": 637,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 1275,
+          "pole_t": 1,
+          "aut_bad_degree": 6,
+          "norm_bad_degree": 6,
+          "content_gcd_degree": 6,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 6,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7f"
+        },
+        {
+          "offset": 1,
+          "u": 1276,
+          "pole_t": 850,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 2,
+          "content_gcd_degree": 2,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        },
+        {
+          "offset": 2,
+          "u": 1277,
+          "pole_t": 510,
+          "aut_bad_degree": 6,
+          "norm_bad_degree": 18,
+          "content_gcd_degree": 12,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 6,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7f"
+        },
+        {
+          "offset": 3,
+          "u": 1278,
+          "pole_t": 2185,
+          "aut_bad_degree": 10,
+          "norm_bad_degree": 22,
+          "content_gcd_degree": 16,
+          "projective_bad_degree": 10,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7af"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 6,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 6,
+          "collective_w2_witness": false,
+          "common_norm_bad_degree": 6,
+          "collective_unit_ideal_witness": false,
+          "common_aut_bad_hex": "0x7f"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 3,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 4,
+          "offsets": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 8.168063237972092,
+        "endpoints_and_fold": 1.7795737480046228,
+        "batched_transform": 2.957601125992369,
+        "polynomial_gcd": 11.402510031010024,
+        "total": 24.307750322972424
+      }
+    },
+    {
+      "p": 2609,
+      "orbit_length": 3403440,
+      "ambient_oddpart": 212715,
+      "fold_factor": 16,
+      "projective_order": 1305,
+      "scalar_order": 163,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 1305,
+          "pole_t": 1740,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 1,
+          "u": 1306,
+          "pole_t": 580,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 2,
+          "u": 1307,
+          "pole_t": 348,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 2,
+          "content_gcd_degree": 2,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        },
+        {
+          "offset": 3,
+          "u": 1308,
+          "pole_t": 994,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 2,
+          "content_gcd_degree": 2,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 3,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 4,
+          "offsets": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 8.517725977988448,
+        "endpoints_and_fold": 1.8703357060439885,
+        "batched_transform": 1.537119888002053,
+        "polynomial_gcd": 1.2315752469585277,
+        "total": 13.156759578967467
+      }
+    },
+    {
+      "p": 2621,
+      "orbit_length": 3434820,
+      "ambient_oddpart": 858705,
+      "fold_factor": 4,
+      "projective_order": 1311,
+      "scalar_order": 655,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 1311,
+          "pole_t": 1,
+          "aut_bad_degree": 4,
+          "norm_bad_degree": 4,
+          "content_gcd_degree": 4,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 4,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x1f"
+        },
+        {
+          "offset": 1,
+          "u": 1312,
+          "pole_t": 874,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 2,
+          "content_gcd_degree": 2,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        },
+        {
+          "offset": 2,
+          "u": 1313,
+          "pole_t": 2097,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 3,
+          "u": 1314,
+          "pole_t": 749,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 4,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 4,
+          "collective_w2_witness": false,
+          "common_norm_bad_degree": 4,
+          "collective_unit_ideal_witness": false,
+          "common_aut_bad_hex": "0x1f"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 3,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 4,
+          "offsets": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 8.55263171903789,
+        "endpoints_and_fold": 1.8916919630137272,
+        "batched_transform": 3.1288157099625096,
+        "polynomial_gcd": 8.408654188970104,
+        "total": 21.981794521037955
+      }
+    },
+    {
+      "p": 2633,
+      "orbit_length": 3466344,
+      "ambient_oddpart": 433293,
+      "fold_factor": 8,
+      "projective_order": 1317,
+      "scalar_order": 329,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 1317,
+          "pole_t": 1756,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 1,
+          "u": 1318,
+          "pole_t": 1463,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 2,
+          "u": 1319,
+          "pole_t": 1931,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 8,
+          "content_gcd_degree": 5,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        },
+        {
+          "offset": 3,
+          "u": 1320,
+          "pole_t": 627,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 2,
+          "content_gcd_degree": 2,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 3,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 4,
+          "offsets": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 8.631092895986512,
+        "endpoints_and_fold": 1.8938241829746403,
+        "batched_transform": 2.479038049990777,
+        "polynomial_gcd": 3.1893315400229767,
+        "total": 16.19328782899538
+      }
+    },
+    {
+      "p": 2657,
+      "orbit_length": 3529824,
+      "ambient_oddpart": 110307,
+      "fold_factor": 32,
+      "projective_order": 1329,
+      "scalar_order": 83,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 1329,
+          "pole_t": 1772,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 1,
+          "u": 1330,
+          "pole_t": 2362,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 2,
+          "u": 1331,
+          "pole_t": 2480,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 2,
+          "content_gcd_degree": 2,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        },
+        {
+          "offset": 3,
+          "u": 1332,
+          "pole_t": 2151,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 3,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 4,
+          "offsets": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 8.836718045989983,
+        "endpoints_and_fold": 1.9349723579944111,
+        "batched_transform": 2.306939670990687,
+        "polynomial_gcd": 0.3330322119873017,
+        "total": 13.411664307001047
+      }
+    },
+    {
+      "p": 2693,
+      "orbit_length": 3626124,
+      "ambient_oddpart": 906531,
+      "fold_factor": 4,
+      "projective_order": 1347,
+      "scalar_order": 673,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 1347,
+          "pole_t": 1,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 1,
+          "u": 1348,
+          "pole_t": 898,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 2,
+          "u": 1349,
+          "pole_t": 1616,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 3,
+          "u": 1350,
+          "pole_t": 1539,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 2,
+          "content_gcd_degree": 2,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 3,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 4,
+          "offsets": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 9.060410653008148,
+        "endpoints_and_fold": 2.057002903020475,
+        "batched_transform": 3.363164125010371,
+        "polynomial_gcd": 6.4455771099892445,
+        "total": 20.926155850989744
+      }
+    },
+    {
+      "p": 2729,
+      "orbit_length": 3723720,
+      "ambient_oddpart": 465465,
+      "fold_factor": 8,
+      "projective_order": 1365,
+      "scalar_order": 341,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 1365,
+          "pole_t": 1820,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 20,
+          "content_gcd_degree": 10,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 1,
+          "u": 1366,
+          "pole_t": 2426,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 2,
+          "u": 1367,
+          "pole_t": 364,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 2,
+          "content_gcd_degree": 2,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        },
+        {
+          "offset": 3,
+          "u": 1368,
+          "pole_t": 260,
+          "aut_bad_degree": 6,
+          "norm_bad_degree": 6,
+          "content_gcd_degree": 6,
+          "projective_bad_degree": 6,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x5d"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 20,
+          "collective_unit_ideal_witness": false,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 3,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 4,
+          "offsets": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 9.25249897298636,
+        "endpoints_and_fold": 2.0451549679855816,
+        "batched_transform": 3.0747716820333153,
+        "polynomial_gcd": 4.246672370005399,
+        "total": 18.619099462986924
+      }
+    },
+    {
+      "p": 2741,
+      "orbit_length": 3756540,
+      "ambient_oddpart": 939135,
+      "fold_factor": 4,
+      "projective_order": 1371,
+      "scalar_order": 685,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 1371,
+          "pole_t": 1,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 1,
+          "u": 1372,
+          "pole_t": 914,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 2,
+          "content_gcd_degree": 2,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        },
+        {
+          "offset": 2,
+          "u": 1373,
+          "pole_t": 2193,
+          "aut_bad_degree": 8,
+          "norm_bad_degree": 8,
+          "content_gcd_degree": 8,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 8,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x1bb"
+        },
+        {
+          "offset": 3,
+          "u": 1374,
+          "pole_t": 1958,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 3,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 4,
+          "offsets": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 9.353584001015406,
+        "endpoints_and_fold": 2.0826374709722586,
+        "batched_transform": 3.5113127910299227,
+        "polynomial_gcd": 8.922564076026902,
+        "total": 23.870099459018093
+      }
+    },
+    {
+      "p": 2753,
+      "orbit_length": 3789504,
+      "ambient_oddpart": 59211,
+      "fold_factor": 64,
+      "projective_order": 1377,
+      "scalar_order": 43,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 1377,
+          "pole_t": 1836,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 1,
+          "u": 1378,
+          "pole_t": 612,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 2,
+          "u": 1379,
+          "pole_t": 2019,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 2,
+          "content_gcd_degree": 2,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        },
+        {
+          "offset": 3,
+          "u": 1380,
+          "pole_t": 2622,
+          "aut_bad_degree": 6,
+          "norm_bad_degree": 6,
+          "content_gcd_degree": 6,
+          "projective_bad_degree": 6,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x49"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 3,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 4,
+          "offsets": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 9.426593946991488,
+        "endpoints_and_fold": 2.261544532957487,
+        "batched_transform": 2.757846540014725,
+        "polynomial_gcd": 0.16461191297275946,
+        "total": 14.610597953025717
+      }
+    },
+    {
+      "p": 2777,
+      "orbit_length": 3855864,
+      "ambient_oddpart": 481983,
+      "fold_factor": 8,
+      "projective_order": 1389,
+      "scalar_order": 347,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 1389,
+          "pole_t": 1852,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 1,
+          "u": 1390,
+          "pole_t": 1543,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 2,
+          "u": 1391,
+          "pole_t": 2592,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 3,
+          "u": 1392,
+          "pole_t": 1058,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 2,
+          "content_gcd_degree": 2,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 3,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 4,
+          "offsets": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 9.616858853027225,
+        "endpoints_and_fold": 2.204990711994469,
+        "batched_transform": 2.5435945549979806,
+        "polynomial_gcd": 2.6183365840115584,
+        "total": 16.983782003982924
+      }
+    },
+    {
+      "p": 2789,
+      "orbit_length": 3889260,
+      "ambient_oddpart": 972315,
+      "fold_factor": 4,
+      "projective_order": 1395,
+      "scalar_order": 697,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 1395,
+          "pole_t": 1,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 1,
+          "u": 1396,
+          "pole_t": 930,
+          "aut_bad_degree": 10,
+          "norm_bad_degree": 10,
+          "content_gcd_degree": 10,
+          "projective_bad_degree": 10,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x421"
+        },
+        {
+          "offset": 2,
+          "u": 1397,
+          "pole_t": 558,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 3,
+          "u": 1398,
+          "pole_t": 797,
+          "aut_bad_degree": 6,
+          "norm_bad_degree": 6,
+          "content_gcd_degree": 6,
+          "projective_bad_degree": 6,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x5d"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 3,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 4,
+          "offsets": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 9.691063529986423,
+        "endpoints_and_fold": 2.135828276979737,
+        "batched_transform": 3.3614307080279104,
+        "polynomial_gcd": 9.149662456999067,
+        "total": 24.337986211990938
+      }
+    },
+    {
+      "p": 2801,
+      "orbit_length": 3922800,
+      "ambient_oddpart": 245175,
+      "fold_factor": 16,
+      "projective_order": 1401,
+      "scalar_order": 175,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 1401,
+          "pole_t": 1868,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 1,
+          "u": 1402,
+          "pole_t": 2490,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 6,
+          "content_gcd_degree": 3,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 2,
+          "u": 1403,
+          "pole_t": 1494,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 14,
+          "content_gcd_degree": 8,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        },
+        {
+          "offset": 3,
+          "u": 1404,
+          "pole_t": 667,
+          "aut_bad_degree": 4,
+          "norm_bad_degree": 4,
+          "content_gcd_degree": 4,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 4,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x1f"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 3,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 4,
+          "offsets": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 9.762655931001063,
+        "endpoints_and_fold": 2.152539290022105,
+        "batched_transform": 2.9279640309978276,
+        "polynomial_gcd": 1.7313295410131104,
+        "total": 16.574490703002084
+      }
+    },
+    {
+      "p": 2837,
+      "orbit_length": 4024284,
+      "ambient_oddpart": 1006071,
+      "fold_factor": 4,
+      "projective_order": 1419,
+      "scalar_order": 709,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 1419,
+          "pole_t": 1,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 1,
+          "u": 1420,
+          "pole_t": 946,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 2,
+          "content_gcd_degree": 2,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        },
+        {
+          "offset": 2,
+          "u": 1421,
+          "pole_t": 1135,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 3,
+          "u": 1422,
+          "pole_t": 1216,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 2,
+          "content_gcd_degree": 2,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 3,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 4,
+          "offsets": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 10.57217047602171,
+        "endpoints_and_fold": 2.2092533360118978,
+        "batched_transform": 3.0611256060074084,
+        "polynomial_gcd": 9.529669676965568,
+        "total": 25.372220295015723
+      }
+    },
+    {
+      "p": 2861,
+      "orbit_length": 4092660,
+      "ambient_oddpart": 1023165,
+      "fold_factor": 4,
+      "projective_order": 1431,
+      "scalar_order": 715,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 1431,
+          "pole_t": 1,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 1,
+          "u": 1432,
+          "pole_t": 954,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 2,
+          "content_gcd_degree": 2,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        },
+        {
+          "offset": 2,
+          "u": 1433,
+          "pole_t": 2289,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 3,
+          "u": 1434,
+          "pole_t": 1635,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 3,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 4,
+          "offsets": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 10.482493114017416,
+        "endpoints_and_fold": 2.2553956740302965,
+        "batched_transform": 3.0806227390421554,
+        "polynomial_gcd": 6.924027486995328,
+        "total": 22.74254003399983
+      }
+    },
+    {
+      "p": 2897,
+      "orbit_length": 4196304,
+      "ambient_oddpart": 262269,
+      "fold_factor": 16,
+      "projective_order": 1449,
+      "scalar_order": 181,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 1449,
+          "pole_t": 1932,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 1,
+          "u": 1450,
+          "pole_t": 644,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 2,
+          "u": 1451,
+          "pole_t": 2704,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 2,
+          "content_gcd_degree": 2,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        },
+        {
+          "offset": 3,
+          "u": 1452,
+          "pole_t": 276,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 2,
+          "content_gcd_degree": 2,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 3,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 4,
+          "offsets": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 11.037598163005896,
+        "endpoints_and_fold": 2.410492544004228,
+        "batched_transform": 4.971204511006363,
+        "polynomial_gcd": 1.4206771139870398,
+        "total": 19.839973312045913
+      }
+    },
+    {
+      "p": 2909,
+      "orbit_length": 4231140,
+      "ambient_oddpart": 1057785,
+      "fold_factor": 4,
+      "projective_order": 1455,
+      "scalar_order": 727,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 1455,
+          "pole_t": 1,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 1,
+          "u": 1456,
+          "pole_t": 970,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 2,
+          "u": 1457,
+          "pole_t": 582,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 3,
+          "u": 1458,
+          "pole_t": 2078,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 2,
+          "content_gcd_degree": 2,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 3,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 4,
+          "offsets": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 10.609730540018063,
+        "endpoints_and_fold": 2.3241022860165685,
+        "batched_transform": 10.168033969996031,
+        "polynomial_gcd": 7.5868018550099805,
+        "total": 30.688670111005194
+      }
+    },
+    {
+      "p": 2957,
+      "orbit_length": 4371924,
+      "ambient_oddpart": 1092981,
+      "fold_factor": 4,
+      "projective_order": 1479,
+      "scalar_order": 739,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 1479,
+          "pole_t": 1,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 1,
+          "u": 1480,
+          "pole_t": 986,
+          "aut_bad_degree": 2,
+          "norm_bad_degree": 2,
+          "content_gcd_degree": 2,
+          "projective_bad_degree": 2,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x7"
+        },
+        {
+          "offset": 2,
+          "u": 1481,
+          "pole_t": 1183,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 3,
+          "u": 1482,
+          "pole_t": 845,
+          "aut_bad_degree": 58,
+          "norm_bad_degree": 58,
+          "content_gcd_degree": 58,
+          "projective_bad_degree": 58,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x400000020000001"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 3,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 4,
+          "offsets": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 10.893331787956413,
+        "endpoints_and_fold": 2.5614418190089054,
+        "batched_transform": 10.060927951999474,
+        "polynomial_gcd": 13.119634946982842,
+        "total": 36.63533751596697
+      }
+    },
+    {
+      "p": 2969,
+      "orbit_length": 4407480,
+      "ambient_oddpart": 550935,
+      "fold_factor": 8,
+      "projective_order": 1485,
+      "scalar_order": 371,
+      "gamma_norm_mismatches": 0,
+      "endpoints": [
+        {
+          "offset": 0,
+          "u": 1485,
+          "pole_t": 1980,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 24,
+          "content_gcd_degree": 12,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 1,
+          "u": 1486,
+          "pole_t": 660,
+          "aut_bad_degree": 0,
+          "norm_bad_degree": 0,
+          "content_gcd_degree": 0,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 0,
+          "endpoint_w2_witness": true,
+          "unit_content_witness": true,
+          "aut_bad_hex": "0x1"
+        },
+        {
+          "offset": 2,
+          "u": 1487,
+          "pole_t": 396,
+          "aut_bad_degree": 18,
+          "norm_bad_degree": 18,
+          "content_gcd_degree": 18,
+          "projective_bad_degree": 6,
+          "scalar_bad_degree": 12,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x61743"
+        },
+        {
+          "offset": 3,
+          "u": 1488,
+          "pole_t": 707,
+          "aut_bad_degree": 12,
+          "norm_bad_degree": 30,
+          "content_gcd_degree": 21,
+          "projective_bad_degree": 0,
+          "scalar_bad_degree": 12,
+          "endpoint_w2_witness": false,
+          "unit_content_witness": false,
+          "aut_bad_hex": "0x18e3"
+        }
+      ],
+      "prefixes": [
+        {
+          "n_endpoints": 1,
+          "offsets": [
+            0
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 24,
+          "collective_unit_ideal_witness": false,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 2,
+          "offsets": [
+            0,
+            1
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 3,
+          "offsets": [
+            0,
+            1,
+            2
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        },
+        {
+          "n_endpoints": 4,
+          "offsets": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "common_aut_bad_degree": 0,
+          "common_projective_bad_degree": 0,
+          "common_scalar_bad_degree": 0,
+          "collective_w2_witness": true,
+          "common_norm_bad_degree": 0,
+          "collective_unit_ideal_witness": true,
+          "common_aut_bad_hex": "0x1"
+        }
+      ],
+      "timing_seconds": {
+        "setup": 12.343933079973795,
+        "endpoints_and_fold": 3.047948218998499,
+        "batched_transform": 7.9260181519784965,
+        "polynomial_gcd": 5.4825008300249465,
+        "total": 28.80040129099507
+      }
+    }
+  ],
+  "elapsed_seconds": 389.07343725295505
+}

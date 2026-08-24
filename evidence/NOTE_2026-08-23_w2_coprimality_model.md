@@ -511,13 +511,14 @@ factor.  The split exact outputs are
 `evidence/w2_two_endpoint_oriented_content_5_1000.json` and
 `evidence/w2_two_endpoint_oriented_content_1001_2003.json`.
 
-The observed residual Aut-bad layers are very small.  Endpoint zero has only
-orders `5,7,15` in its five failures.  After removing the projective layer,
-endpoint one has residual misses only at `p=401` (the reciprocal `Phi_15`
-quartics), `p=953` (the reciprocal `Phi_7` cubics), and `p=1613` (the
-reciprocal order-31 quintics; its additional `Phi_3` factor is projective).
-No residual layer is shared by the two endpoints at the same prime.  This is
-census structure, not yet a proof that higher orders cannot appear.
+The residual Aut-bad layers in the `p<=2003` census are very small.  Endpoint
+zero has only orders `5,7,15` in its five failures there.  After removing the
+projective layer, endpoint one has residual misses only at `p=401` (the
+reciprocal `Phi_15` quartics), `p=953` (the reciprocal `Phi_7` cubics), and
+`p=1613` (the reciprocal order-31 quintics; its additional `Phi_3` factor is
+projective).  No residual layer is shared by the two endpoints at the same
+prime.  This is census structure, not yet a proof that higher orders cannot
+appear.
 
 ### The second endpoint's complete projective quotient
 
@@ -564,6 +565,59 @@ is `scripts/w2_second_endpoint_projective.py`.  Its independent scan of all
 symmetry, quotient, or bad-polynomial mismatch; the output is
 `evidence/w2_second_endpoint_projective_5_2003.json`.  The genuinely
 unresolved two-endpoint theorem is now confined to the scalar `p-1` layer.
+
+### GPU spectral census: order 17 appears
+
+The factor-free calculation admits a useful GPU form.  Fold each square and
+nonsquare orbit sequence modulo the odd order `H` *before* taking a Fourier
+transform.  This is the same calculation in `F_2[X]/(X^H+1)`, but removes the
+full 2-part of `(p^2-1)/2` from the transform length.  All requested endpoints,
+both point-orbits, and the two Bose-generator components can then be processed
+as one spectral batch.  The oriented products recover `c(X)`; the endpoint
+autocorrelations independently recover `c(X)c(X^-1)`.  Thus one run tests four
+different statements:
+
+1. exact collective W2 via the gcds `A(c)`;
+2. the stronger collective norm/unit-ideal condition;
+3. the projective factor layer;
+4. the residual scalar factor layer.
+
+This is implemented in `scripts/w2_endpoint_norm_gpu.py`.  It reuses the
+Wieferich engine's persistent-allocation principle, transfers endpoint batches
+rather than individual transforms, writes evidence atomically, and uses a tiny
+NTL bridge for compiled `GF(2)` polynomial gcds.  At `p=1997` on the RX 9070 XT,
+these changes reduced the four-endpoint job from `53.8s` to `11.7s`.  V100
+double precision and RX 9070 XT single/double precision give identical exact
+certificates on cross-checked cases; every run also asserts the exact Bose
+generator norm, so unsafe FFT rounding fails loudly.
+
+The independent GPU rerun exactly matches every endpoint degree and pair
+witness in the earlier 77-prime census through `p=2003`.  The new census adds
+all 35 eligible primes `2004<=p<=3000`.  The first two endpoints again certify
+W2 at every prime, so the exact pair now has no failures on all 112 eligible
+primes through `p=3000`.  Four endpoint norms generate the unit ideal throughout
+the new range as well.
+
+More importantly, the wider scan falsifies the tempting bounded-order pattern.
+Endpoint zero has five new failures:
+
+    p=2081: reciprocal order-15 quartics, degree 8;
+    p=2381: Phi_5 times a self-reciprocal order-17 factor, degree 12;
+    p=2441: Phi_5, degree 4;
+    p=2549: reciprocal order-7 cubics, degree 6;
+    p=2621: Phi_5, degree 4.
+
+At `p=2381`, the degree-eight factor is
+
+    X^8+X^7+X^6+X^4+X^2+X+1,
+
+whose roots have order 17.  This is the first endpoint-zero order outside
+`{5,7,15}`.  At `p=2549,2621`, endpoint one misses only the projective `Phi_3`
+while endpoint zero misses only the displayed scalar factor, making the layer
+complementarity explicit.  Repository searches found no prior W2 record of
+these primes.  Exact outputs are
+`evidence/w2_four_angle_gpu_2004_2500.json` and
+`evidence/w2_four_angle_gpu_2501_3000.json`.
 
 ### Collective boundary norms: a stronger factor-free reduction
 
