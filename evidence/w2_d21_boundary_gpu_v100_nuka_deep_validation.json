@@ -1,0 +1,313 @@
+{
+  "range": null,
+  "explicit_primes": [
+    7357589,
+    7995653,
+    8180201,
+    8427077,
+    8603729,
+    9055901,
+    9783173
+  ],
+  "congruence_class": "p == 29 (mod 84)",
+  "criterion": "three nonsquare residues vanish at both reciprocal sextics",
+  "search_mode": "full",
+  "n_primes_requested": 7,
+  "n_primes_completed": 7,
+  "retained_records": [
+    {
+      "p": 7357589,
+      "ib": 2,
+      "pole_t": 7357588,
+      "nonsquare_component_hex": [
+        "0x0",
+        "0x0",
+        "0x90936"
+      ],
+      "remainders": [
+        [
+          0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          60
+        ]
+      ],
+      "zero_triples": [
+        false,
+        false
+      ],
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 0.6207503589976113
+    },
+    {
+      "p": 7995653,
+      "ib": 2,
+      "pole_t": 7995652,
+      "nonsquare_component_hex": [
+        "0x1b6db6",
+        "0x1b6db6",
+        "0x1a2522"
+      ],
+      "remainders": [
+        [
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          0,
+          60
+        ]
+      ],
+      "zero_triples": [
+        false,
+        false
+      ],
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 0.3792251179984305
+    },
+    {
+      "p": 8180201,
+      "ib": 3,
+      "pole_t": 2726733,
+      "nonsquare_component_hex": [
+        "0x1b6db6",
+        "0x1b6db6",
+        "0xb45a6"
+      ],
+      "remainders": [
+        [
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "zero_triples": [
+        false,
+        false
+      ],
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 0.39532768800563645
+    },
+    {
+      "p": 8427077,
+      "ib": 2,
+      "pole_t": 8427076,
+      "nonsquare_component_hex": [
+        "0x1b6db6",
+        "0x1b6db6",
+        "0x4080"
+      ],
+      "remainders": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "zero_triples": [
+        false,
+        false
+      ],
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 0.38901458799955435
+    },
+    {
+      "p": 8603729,
+      "ib": 3,
+      "pole_t": 2867909,
+      "nonsquare_component_hex": [
+        "0x1b6db6",
+        "0x1b6db6",
+        "0x20400"
+      ],
+      "remainders": [
+        [
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          0,
+          8
+        ]
+      ],
+      "zero_triples": [
+        false,
+        false
+      ],
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 0.4166391559992917
+    },
+    {
+      "p": 9055901,
+      "ib": 2,
+      "pole_t": 9055900,
+      "nonsquare_component_hex": [
+        "0x0",
+        "0x0",
+        "0x116996"
+      ],
+      "remainders": [
+        [
+          0,
+          0,
+          22
+        ],
+        [
+          0,
+          0,
+          53
+        ]
+      ],
+      "zero_triples": [
+        false,
+        false
+      ],
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 0.4062517620041035
+    },
+    {
+      "p": 9783173,
+      "ib": 2,
+      "pole_t": 9783172,
+      "nonsquare_component_hex": [
+        "0x1b6db6",
+        "0x1b6db6",
+        "0xa4cb0"
+      ],
+      "remainders": [
+        [
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "zero_triples": [
+        false,
+        true
+      ],
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 0.4249380179971922
+    }
+  ],
+  "one_sided_zero_triples": [
+    {
+      "p": 9783173,
+      "ib": 2,
+      "pole_t": 9783172,
+      "nonsquare_component_hex": [
+        "0x1b6db6",
+        "0x1b6db6",
+        "0xa4cb0"
+      ],
+      "remainders": [
+        [
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "zero_triples": [
+        false,
+        true
+      ],
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 0.4249380179971922
+    }
+  ],
+  "deep_prefix_candidates": [],
+  "counterexamples": [],
+  "rows": [
+    {
+      "p": 7357589,
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 0.6207503589976113,
+      "zero_triples": [
+        false,
+        false
+      ]
+    },
+    {
+      "p": 7995653,
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 0.3792251179984305,
+      "zero_triples": [
+        false,
+        false
+      ]
+    },
+    {
+      "p": 8180201,
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 0.39532768800563645,
+      "zero_triples": [
+        false,
+        false
+      ]
+    },
+    {
+      "p": 8427077,
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 0.38901458799955435,
+      "zero_triples": [
+        false,
+        false
+      ]
+    },
+    {
+      "p": 8603729,
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 0.4166391559992917,
+      "zero_triples": [
+        false,
+        false
+      ]
+    },
+    {
+      "p": 9055901,
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 0.4062517620041035,
+      "zero_triples": [
+        false,
+        false
+      ]
+    },
+    {
+      "p": 9783173,
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 0.4249380179971922,
+      "zero_triples": [
+        false,
+        true
+      ]
+    }
+  ],
+  "elapsed_seconds": 3.032281909006997
+}

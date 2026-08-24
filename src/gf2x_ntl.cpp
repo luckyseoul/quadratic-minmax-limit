@@ -1,9 +1,12 @@
 #include <NTL/GF2X.h>
 
 #include <algorithm>
+#include <atomic>
 #include <cstddef>
 #include <cstdint>
+#include <cstdlib>
 #include <cstring>
+#include <limits>
 #include <utility>
 #include <vector>
 
@@ -259,7 +262,17 @@ extern "C" std::uint64_t qml_field_primitive(
     std::uint32_t p,
     std::uint32_t ia,
     std::uint32_t ib) {
-    if (p < 3 || p > 1000000U) {
+    const std::uint64_t p_minus_one = p ? p - 1U : 0U;
+    const std::uint64_t coefficient_bound = std::max<std::uint64_t>(
+        1ULL + ib, 2ULL + ia);
+    const bool multiplication_overflows =
+        p_minus_one &&
+        (p_minus_one >
+             std::numeric_limits<std::uint64_t>::max() / p_minus_one ||
+         p_minus_one * p_minus_one >
+             (std::numeric_limits<std::uint64_t>::max() - p) /
+                 coefficient_bound);
+    if (p < 3 || p > 20000000U || multiplication_overflows) {
         return 0;
     }
     const std::uint64_t order = static_cast<std::uint64_t>(p) * p - 1U;
@@ -567,9 +580,15 @@ int selected_line_bins_wide_impl(
     const std::uint64_t orbit_length = (q - 1) / 2;
     const std::uint64_t needed =
         2ULL * static_cast<std::uint64_t>(n_levels) * total_order;
-    // The wide formulas use products bounded by roughly p^3.  This guard is
-    // comfortably below the uint64 overflow threshold and above our scans.
-    if (p > 1000000U ||
+    const std::uint64_t p_minus_one = p - 1U;
+    const std::uint64_t coefficient_bound = std::max<std::uint64_t>(
+        1ULL + ib, 2ULL + ia);
+    const bool multiplication_overflows =
+        p_minus_one > std::numeric_limits<std::uint64_t>::max() / p_minus_one ||
+        p_minus_one * p_minus_one >
+            (std::numeric_limits<std::uint64_t>::max() - p) /
+                coefficient_bound;
+    if (p > 20000000U || multiplication_overflows ||
         needed > static_cast<std::uint64_t>(output_capacity)) {
         return -2;
     }
@@ -580,8 +599,8 @@ int selected_line_bins_wide_impl(
     if (!omega_inverse) {
         return -3;
     }
-    static thread_local std::vector<std::uint32_t> prime_inverse;
-    static thread_local std::vector<std::uint8_t> quadratic_residue;
+    std::vector<std::uint32_t> prime_inverse;
+    std::vector<std::uint8_t> quadratic_residue;
     prepare_prime_field_tables(p, prime_inverse, quadratic_residue);
     std::vector<std::vector<std::pair<std::uint64_t, std::uint32_t>>> tables;
     tables.reserve(static_cast<std::size_t>(n_orders));
@@ -609,10 +628,19 @@ int selected_line_bins_wide_impl(
     }
 
     for (long level_index = 0; level_index < n_levels; ++level_index) {
-        const std::uint32_t level = levels[level_index];
-        if (level >= p) {
+        if (levels[level_index] >= p) {
             return -6;
         }
+    }
+    int thread_count = 1;
+    if (const char* requested = std::getenv("QML_GF2X_OMP_THREADS")) {
+        thread_count = std::max(
+            1, std::min(static_cast<int>(n_levels), std::atoi(requested)));
+    }
+    std::atomic<int> parallel_error{0};
+#pragma omp parallel for schedule(static) num_threads(thread_count)
+    for (long level_index = 0; level_index < n_levels; ++level_index) {
+        const std::uint32_t level = levels[level_index];
         for (std::uint32_t z = 0; z < p; ++z) {
             const std::uint64_t line_coordinate =
                 z + static_cast<std::uint64_t>(p) * level;
@@ -655,7 +683,8 @@ int selected_line_bins_wide_impl(
                     table.begin(), table.end(),
                     std::make_pair(value, static_cast<std::uint32_t>(0)));
                 if (found == table.end() || found->first != value) {
-                    return -7;
+                    parallel_error.store(-7, std::memory_order_relaxed);
+                    continue;
                 }
                 const std::uint64_t output_index =
                     (component * n_levels + level_index) * total_order +
@@ -668,6 +697,9 @@ int selected_line_bins_wide_impl(
                 }
             }
         }
+    }
+    if (parallel_error.load(std::memory_order_relaxed)) {
+        return parallel_error.load(std::memory_order_relaxed);
     }
     return 0;
 }

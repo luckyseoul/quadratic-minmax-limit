@@ -366,7 +366,8 @@ def main() -> None:
     for index, p in enumerate(primes, 1):
         row = staged_record(p, kernel) if args.staged_counterexample else record(p, kernel)
         one_sided = (not args.staged_counterexample) and any(row["zero_triples"])
-        if args.retain or one_sided or row["simultaneous_zero_triples"]:
+        deep_prefix = args.staged_counterexample and row["differences_evaluated"] == 3
+        if args.retain or one_sided or deep_prefix or row["simultaneous_zero_triples"]:
             retained.append(row)
         rows.append(
             {
@@ -383,7 +384,7 @@ def main() -> None:
                 ),
             }
         )
-        noteworthy = row["simultaneous_zero_triples"] or (
+        noteworthy = row["simultaneous_zero_triples"] or deep_prefix or (
             not args.staged_counterexample and any(row["zero_triples"])
         )
         if noteworthy or index % 25 == 0 or index == len(primes):
@@ -408,10 +409,16 @@ def main() -> None:
         "search_mode": "staged-counterexample" if args.staged_counterexample else "full",
         "n_primes_requested": len(primes),
         "n_primes_completed": len(rows),
+        "retained_records": retained,
         "one_sided_zero_triples": [
             row
             for row in retained
             if not args.staged_counterexample and any(row["zero_triples"])
+        ],
+        "deep_prefix_candidates": [
+            row
+            for row in retained
+            if args.staged_counterexample and row["differences_evaluated"] == 3
         ],
         "counterexamples": [
             row for row in retained if row["simultaneous_zero_triples"]

@@ -32,6 +32,7 @@ def _load():
                 "-O3",
                 "-std=c++17",
                 "-fPIC",
+                "-fopenmp",
                 "-shared",
                 str(SOURCE),
                 "-lntl",

@@ -1,0 +1,183 @@
+{
+  "range": null,
+  "explicit_primes": [
+    8180201
+  ],
+  "congruence_class": "p == 29 (mod 84)",
+  "order": 21,
+  "factor_hex": [
+    "0x57",
+    "0x75"
+  ],
+  "full_mask_hex": "0x3f",
+  "n_primes": 1,
+  "mask_pair_counts": {
+    "0x0f,0x0f": 1
+  },
+  "component_ratio_counts": [
+    {
+      "0x1f": 1
+    },
+    {
+      "0x35": 1
+    }
+  ],
+  "component_ratio_pair_counts": {
+    "0x1f|0x35": 1
+  },
+  "component_ratio_rows": [
+    {
+      "p": 8180201,
+      "component_ratios": [
+        [
+          31
+        ],
+        [
+          53
+        ]
+      ]
+    }
+  ],
+  "nonsquare_projective_pair_counts": {
+    "0x0,0x0,0x1|0x0,0x0,0x1": 1
+  },
+  "nonsquare_projective_rows": [
+    {
+      "p": 8180201,
+      "vectors": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "nonsquare_zero_without_square_zero": [],
+  "multiple_component_ratios": [],
+  "subfield_violations": [],
+  "component_remainder_pair_counts": [
+    {
+      "0x00,0x00": 2,
+      "0x01,0x10": 1
+    },
+    {
+      "0x00,0x00": 2,
+      "0x08,0x1d": 1
+    }
+  ],
+  "component_remainder_pair_counts_by_difference": [
+    [
+      {
+        "0x00,0x00": 1
+      },
+      {
+        "0x00,0x00": 1
+      },
+      {
+        "0x01,0x10": 1
+      }
+    ],
+    [
+      {
+        "0x00,0x00": 1
+      },
+      {
+        "0x00,0x00": 1
+      },
+      {
+        "0x08,0x1d": 1
+      }
+    ]
+  ],
+  "one_sided_full": [],
+  "reciprocal_pair_failures": [],
+  "retain_popcount": 0,
+  "retained": [
+    {
+      "p": 8180201,
+      "masks": [
+        15,
+        15
+      ],
+      "popcounts": [
+        4,
+        4
+      ],
+      "remainders": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            16
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            8,
+            29
+          ]
+        ]
+      ],
+      "component_ratios": [
+        [
+          31
+        ],
+        [
+          53
+        ]
+      ],
+      "nonsquare_projective": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "nonsquare_zero_violations": [],
+      "subfield_violations": [],
+      "component_hex": [
+        [
+          "0x60c18",
+          "0x16db6d"
+        ],
+        [
+          "0x850a1",
+          "0x16db6d"
+        ],
+        [
+          "0x1e74a0",
+          "0x4db25"
+        ]
+      ],
+      "elapsed_seconds": 25.33553971699439
+    }
+  ],
+  "line_cpu_seconds": 25.33553971699439,
+  "elapsed_seconds": 25.33600446199125
+}

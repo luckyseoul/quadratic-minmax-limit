@@ -1480,13 +1480,56 @@ lines.  At `p` near five million the warm staged runtime is about `0.084`
 seconds on the V100 and `0.046` seconds on the RX 9070 XT.  Its validation
 certificate is `evidence/w2_d21_boundary_gpu_staged_validation.json`.
 
+The staged CUDA/HIP sweep was then extended through ten million.  Soulkiller's
+ECC V100 covered `5000001..7200000` and NUKA's RX 9070 XT covered
+`7200001..10000000` concurrently.  All 13,132 eligible primes completed in
+about 610 seconds of parallel wall time, with no simultaneous failure.  Eleven
+primes passed both first global gates and reached the decisive third gate:
+
+    5037509, 5993849, 6352361, 6825197,
+    7357589, 7995653, 8180201, 8427077,
+    8603729, 9055901, 9783173.
+
+Every one has exact prefix `[true,true,false]`.  Thus this sweep does more than
+raise a numerical endpoint: it supplies eleven direct adversarial tests in
+which the first two differences completely collapse at both reciprocal
+sextics and only difference three saves the boundary claim.  The complete
+certificates are
+`evidence/w2_d21_boundary_gpu_staged_5000001_7200000.json` and
+`evidence/w2_d21_boundary_gpu_staged_7200001_10000000.json`.
+
+NUKA has no ECC, and one live progress line displayed `8180209` instead of the
+actual prime `8180201`, an ASCII one-bit change.  The atomic JSON was audited
+against a fresh soulkiller SymPy list: all 7,336 stored integers match
+index-for-index, are prime, and are `29 mod 84`; its stored value is
+`8180201`.  All seven NUKA deep-prefix records were then replayed on the V100,
+whose ECC was enabled with zero corrected and uncorrected volatile memory
+errors.  The V100 reproduced every residue exactly.  Finally, the independent
+native CPU engine checked `p=8180201` using twelve selected-line threads on
+soulkiller's registered-ECC RAM.  Its character-generator labels differ, as
+expected, but it independently returns the same invariant prefix
+`[true,true,false]`, with no subfield or reciprocal violation.  The replay
+certificates are
+`evidence/w2_d21_boundary_gpu_v100_nuka_deep_validation.json`,
+`evidence/w2_d21_boundary_gpu_orin_deep_validation.json`, and
+`evidence/w2_d21_signature_cpu_ecc_p8180201.json`.
+
+The native wide CPU bridge now uses a coefficient-aware uint64 overflow guard
+through the present range and supports opt-in OpenMP line parallelism via
+`QML_GF2X_OMP_THREADS`; its default remains one thread so process-pool scans do
+not oversubscribe.  The ECC CPU check took 25.34 seconds with twelve threads.
+Individual OEIS and web searches on all eleven deep primes found only one
+irrelevant coincidence: `7995653` occurs in
+[A105012](https://oeis.org/A105012), primes formed from seven successive
+digits of `exp(Pi)`.
+
 ### Revised gap
 
 For `p == 5 (mod 12)`, prove for arbitrary `p` that the first three four-line
 differences have scalar common Aut-gcd one.  The exact all-order calculation
 establishes the statement for every eligible prime through 10000, and the
 bounded-order calculation establishes all `d<=4095` through 100000.  The
-targeted calculation additionally establishes `d=21` through 5000000, and
+targeted calculation additionally establishes `d=21` through 10000000, and
 the local Jacobi norm above proves its four-state `F_8` generator law
 uniformly.  The projective layer is already proved, but the remaining finite
 boundary calculations do not replace the missing uniform

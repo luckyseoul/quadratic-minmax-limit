@@ -1,0 +1,123 @@
+{
+  "range": null,
+  "explicit_primes": [
+    5037509,
+    7357589
+  ],
+  "congruence_class": "p == 29 (mod 84)",
+  "criterion": "three nonsquare residues vanish at both reciprocal sextics",
+  "search_mode": "full",
+  "n_primes_requested": 2,
+  "n_primes_completed": 2,
+  "retained_records": [
+    {
+      "p": 5037509,
+      "ib": 2,
+      "pole_t": 5037508,
+      "nonsquare_component_hex": [
+        "0x0",
+        "0x0",
+        "0x132c14"
+      ],
+      "remainders": [
+        [
+          0,
+          0,
+          22
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "zero_triples": [
+        false,
+        true
+      ],
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 3.0960017280012835
+    },
+    {
+      "p": 7357589,
+      "ib": 2,
+      "pole_t": 7357588,
+      "nonsquare_component_hex": [
+        "0x0",
+        "0x0",
+        "0x90936"
+      ],
+      "remainders": [
+        [
+          0,
+          0,
+          30
+        ],
+        [
+          0,
+          0,
+          60
+        ]
+      ],
+      "zero_triples": [
+        false,
+        false
+      ],
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 4.6587019830039935
+    }
+  ],
+  "one_sided_zero_triples": [
+    {
+      "p": 5037509,
+      "ib": 2,
+      "pole_t": 5037508,
+      "nonsquare_component_hex": [
+        "0x0",
+        "0x0",
+        "0x132c14"
+      ],
+      "remainders": [
+        [
+          0,
+          0,
+          22
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "zero_triples": [
+        false,
+        true
+      ],
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 3.0960017280012835
+    }
+  ],
+  "deep_prefix_candidates": [],
+  "counterexamples": [],
+  "rows": [
+    {
+      "p": 5037509,
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 3.0960017280012835,
+      "zero_triples": [
+        false,
+        true
+      ]
+    },
+    {
+      "p": 7357589,
+      "simultaneous_zero_triples": false,
+      "elapsed_seconds": 4.6587019830039935,
+      "zero_triples": [
+        false,
+        false
+      ]
+    }
+  ],
+  "elapsed_seconds": 7.754993766997359
+}
