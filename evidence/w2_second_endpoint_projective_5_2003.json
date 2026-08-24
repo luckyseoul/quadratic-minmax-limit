@@ -1,0 +1,1909 @@
+{
+  "range": [
+    5,
+    2003
+  ],
+  "congruence_class": "p == 5 (mod 12)",
+  "n_primes": 77,
+  "failures": {
+    "pure_omega_parity": [],
+    "finite_slope_formula": [],
+    "exception_symmetry": [],
+    "projective_quotient": [],
+    "projective_bad_polynomial": []
+  },
+  "rows": [
+    {
+      "p": 5,
+      "p_mod_24": 5,
+      "endpoint_u": 4,
+      "pole_t": 2,
+      "projective_order": 3,
+      "n_finite_nonsquare_directions": 2,
+      "pure_omega_index": 1,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        2,
+        3
+      ],
+      "predicted_even_finite_slopes": [
+        2,
+        3
+      ],
+      "exceptional_indices": [
+        2,
+        0
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.013160943984985352
+    },
+    {
+      "p": 17,
+      "p_mod_24": 17,
+      "endpoint_u": 10,
+      "pole_t": 4,
+      "projective_order": 9,
+      "n_finite_nonsquare_directions": 8,
+      "pure_omega_index": 4,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.013157367706298828
+    },
+    {
+      "p": 29,
+      "p_mod_24": 5,
+      "endpoint_u": 16,
+      "pole_t": 10,
+      "projective_order": 15,
+      "n_finite_nonsquare_directions": 14,
+      "pure_omega_index": 7,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        8,
+        21
+      ],
+      "predicted_even_finite_slopes": [
+        8,
+        21
+      ],
+      "exceptional_indices": [
+        13,
+        1
+      ],
+      "relative_exception_index": 6,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.013574838638305664
+    },
+    {
+      "p": 41,
+      "p_mod_24": 17,
+      "endpoint_u": 22,
+      "pole_t": 23,
+      "projective_order": 21,
+      "n_finite_nonsquare_directions": 20,
+      "pure_omega_index": 10,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.015110492706298828
+    },
+    {
+      "p": 53,
+      "p_mod_24": 5,
+      "endpoint_u": 28,
+      "pole_t": 18,
+      "projective_order": 27,
+      "n_finite_nonsquare_directions": 26,
+      "pure_omega_index": 13,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        14,
+        39
+      ],
+      "predicted_even_finite_slopes": [
+        14,
+        39
+      ],
+      "exceptional_indices": [
+        14,
+        12
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.01683950424194336
+    },
+    {
+      "p": 89,
+      "p_mod_24": 17,
+      "endpoint_u": 46,
+      "pole_t": 20,
+      "projective_order": 45,
+      "n_finite_nonsquare_directions": 44,
+      "pure_omega_index": 22,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.0242002010345459
+    },
+    {
+      "p": 101,
+      "p_mod_24": 5,
+      "endpoint_u": 52,
+      "pole_t": 34,
+      "projective_order": 51,
+      "n_finite_nonsquare_directions": 50,
+      "pure_omega_index": 25,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        26,
+        75
+      ],
+      "predicted_even_finite_slopes": [
+        26,
+        75
+      ],
+      "exceptional_indices": [
+        26,
+        24
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.02938222885131836
+    },
+    {
+      "p": 113,
+      "p_mod_24": 17,
+      "endpoint_u": 58,
+      "pole_t": 63,
+      "projective_order": 57,
+      "n_finite_nonsquare_directions": 56,
+      "pure_omega_index": 28,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.028903722763061523
+    },
+    {
+      "p": 137,
+      "p_mod_24": 17,
+      "endpoint_u": 70,
+      "pole_t": 122,
+      "projective_order": 69,
+      "n_finite_nonsquare_directions": 68,
+      "pure_omega_index": 34,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.029781341552734375
+    },
+    {
+      "p": 149,
+      "p_mod_24": 5,
+      "endpoint_u": 76,
+      "pole_t": 50,
+      "projective_order": 75,
+      "n_finite_nonsquare_directions": 74,
+      "pure_omega_index": 37,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        38,
+        111
+      ],
+      "predicted_even_finite_slopes": [
+        38,
+        111
+      ],
+      "exceptional_indices": [
+        38,
+        36
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.03521227836608887
+    },
+    {
+      "p": 173,
+      "p_mod_24": 5,
+      "endpoint_u": 88,
+      "pole_t": 58,
+      "projective_order": 87,
+      "n_finite_nonsquare_directions": 86,
+      "pure_omega_index": 43,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        44,
+        129
+      ],
+      "predicted_even_finite_slopes": [
+        44,
+        129
+      ],
+      "exceptional_indices": [
+        44,
+        42
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.04706239700317383
+    },
+    {
+      "p": 197,
+      "p_mod_24": 5,
+      "endpoint_u": 100,
+      "pole_t": 66,
+      "projective_order": 99,
+      "n_finite_nonsquare_directions": 98,
+      "pure_omega_index": 49,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        50,
+        147
+      ],
+      "predicted_even_finite_slopes": [
+        50,
+        147
+      ],
+      "exceptional_indices": [
+        60,
+        38
+      ],
+      "relative_exception_index": 11,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 22,
+      "predicted_projective_bad_degree": 22,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.059862613677978516
+    },
+    {
+      "p": 233,
+      "p_mod_24": 17,
+      "endpoint_u": 118,
+      "pole_t": 52,
+      "projective_order": 117,
+      "n_finite_nonsquare_directions": 116,
+      "pure_omega_index": 58,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.08282637596130371
+    },
+    {
+      "p": 257,
+      "p_mod_24": 17,
+      "endpoint_u": 130,
+      "pole_t": 143,
+      "projective_order": 129,
+      "n_finite_nonsquare_directions": 128,
+      "pure_omega_index": 64,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.07903504371643066
+    },
+    {
+      "p": 269,
+      "p_mod_24": 5,
+      "endpoint_u": 136,
+      "pole_t": 90,
+      "projective_order": 135,
+      "n_finite_nonsquare_directions": 134,
+      "pure_omega_index": 67,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        68,
+        201
+      ],
+      "predicted_even_finite_slopes": [
+        68,
+        201
+      ],
+      "exceptional_indices": [
+        31,
+        103
+      ],
+      "relative_exception_index": 99,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 18,
+      "predicted_projective_bad_degree": 18,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.08721327781677246
+    },
+    {
+      "p": 281,
+      "p_mod_24": 17,
+      "endpoint_u": 142,
+      "pole_t": 250,
+      "projective_order": 141,
+      "n_finite_nonsquare_directions": 140,
+      "pure_omega_index": 70,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.12046051025390625
+    },
+    {
+      "p": 293,
+      "p_mod_24": 5,
+      "endpoint_u": 148,
+      "pole_t": 98,
+      "projective_order": 147,
+      "n_finite_nonsquare_directions": 146,
+      "pure_omega_index": 73,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        74,
+        219
+      ],
+      "predicted_even_finite_slopes": [
+        74,
+        219
+      ],
+      "exceptional_indices": [
+        142,
+        4
+      ],
+      "relative_exception_index": 69,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.1315138339996338
+    },
+    {
+      "p": 317,
+      "p_mod_24": 5,
+      "endpoint_u": 160,
+      "pole_t": 106,
+      "projective_order": 159,
+      "n_finite_nonsquare_directions": 158,
+      "pure_omega_index": 79,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        80,
+        237
+      ],
+      "predicted_even_finite_slopes": [
+        80,
+        237
+      ],
+      "exceptional_indices": [
+        80,
+        78
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.15313148498535156
+    },
+    {
+      "p": 353,
+      "p_mod_24": 17,
+      "endpoint_u": 178,
+      "pole_t": 314,
+      "projective_order": 177,
+      "n_finite_nonsquare_directions": 176,
+      "pure_omega_index": 88,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.1909956932067871
+    },
+    {
+      "p": 389,
+      "p_mod_24": 5,
+      "endpoint_u": 196,
+      "pole_t": 130,
+      "projective_order": 195,
+      "n_finite_nonsquare_directions": 194,
+      "pure_omega_index": 97,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        98,
+        291
+      ],
+      "predicted_even_finite_slopes": [
+        98,
+        291
+      ],
+      "exceptional_indices": [
+        77,
+        117
+      ],
+      "relative_exception_index": 175,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 10,
+      "predicted_projective_bad_degree": 10,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.23172259330749512
+    },
+    {
+      "p": 401,
+      "p_mod_24": 17,
+      "endpoint_u": 202,
+      "pole_t": 223,
+      "projective_order": 201,
+      "n_finite_nonsquare_directions": 200,
+      "pure_omega_index": 100,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.245574951171875
+    },
+    {
+      "p": 449,
+      "p_mod_24": 17,
+      "endpoint_u": 226,
+      "pole_t": 100,
+      "projective_order": 225,
+      "n_finite_nonsquare_directions": 224,
+      "pure_omega_index": 112,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.2484416961669922
+    },
+    {
+      "p": 461,
+      "p_mod_24": 5,
+      "endpoint_u": 232,
+      "pole_t": 154,
+      "projective_order": 231,
+      "n_finite_nonsquare_directions": 230,
+      "pure_omega_index": 115,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        116,
+        345
+      ],
+      "predicted_even_finite_slopes": [
+        116,
+        345
+      ],
+      "exceptional_indices": [
+        116,
+        114
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.27059078216552734
+    },
+    {
+      "p": 509,
+      "p_mod_24": 5,
+      "endpoint_u": 256,
+      "pole_t": 170,
+      "projective_order": 255,
+      "n_finite_nonsquare_directions": 254,
+      "pure_omega_index": 127,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        128,
+        381
+      ],
+      "predicted_even_finite_slopes": [
+        128,
+        381
+      ],
+      "exceptional_indices": [
+        128,
+        126
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.40365004539489746
+    },
+    {
+      "p": 521,
+      "p_mod_24": 17,
+      "endpoint_u": 262,
+      "pole_t": 116,
+      "projective_order": 261,
+      "n_finite_nonsquare_directions": 260,
+      "pure_omega_index": 130,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.4172401428222656
+    },
+    {
+      "p": 557,
+      "p_mod_24": 5,
+      "endpoint_u": 280,
+      "pole_t": 186,
+      "projective_order": 279,
+      "n_finite_nonsquare_directions": 278,
+      "pure_omega_index": 139,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        140,
+        417
+      ],
+      "predicted_even_finite_slopes": [
+        140,
+        417
+      ],
+      "exceptional_indices": [
+        140,
+        138
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.4879467487335205
+    },
+    {
+      "p": 569,
+      "p_mod_24": 17,
+      "endpoint_u": 286,
+      "pole_t": 506,
+      "projective_order": 285,
+      "n_finite_nonsquare_directions": 284,
+      "pure_omega_index": 142,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.49568819999694824
+    },
+    {
+      "p": 593,
+      "p_mod_24": 17,
+      "endpoint_u": 298,
+      "pole_t": 132,
+      "projective_order": 297,
+      "n_finite_nonsquare_directions": 296,
+      "pure_omega_index": 148,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.5374469757080078
+    },
+    {
+      "p": 617,
+      "p_mod_24": 17,
+      "endpoint_u": 310,
+      "pole_t": 343,
+      "projective_order": 309,
+      "n_finite_nonsquare_directions": 308,
+      "pure_omega_index": 154,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.5787930488586426
+    },
+    {
+      "p": 641,
+      "p_mod_24": 17,
+      "endpoint_u": 322,
+      "pole_t": 570,
+      "projective_order": 321,
+      "n_finite_nonsquare_directions": 320,
+      "pure_omega_index": 160,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.5173859596252441
+    },
+    {
+      "p": 653,
+      "p_mod_24": 5,
+      "endpoint_u": 328,
+      "pole_t": 218,
+      "projective_order": 327,
+      "n_finite_nonsquare_directions": 326,
+      "pure_omega_index": 163,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        164,
+        489
+      ],
+      "predicted_even_finite_slopes": [
+        164,
+        489
+      ],
+      "exceptional_indices": [
+        164,
+        162
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.544175386428833
+    },
+    {
+      "p": 677,
+      "p_mod_24": 5,
+      "endpoint_u": 340,
+      "pole_t": 226,
+      "projective_order": 339,
+      "n_finite_nonsquare_directions": 338,
+      "pure_omega_index": 169,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        170,
+        507
+      ],
+      "predicted_even_finite_slopes": [
+        170,
+        507
+      ],
+      "exceptional_indices": [
+        154,
+        184
+      ],
+      "relative_exception_index": 324,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.6995306015014648
+    },
+    {
+      "p": 701,
+      "p_mod_24": 5,
+      "endpoint_u": 352,
+      "pole_t": 234,
+      "projective_order": 351,
+      "n_finite_nonsquare_directions": 350,
+      "pure_omega_index": 175,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        176,
+        525
+      ],
+      "predicted_even_finite_slopes": [
+        176,
+        525
+      ],
+      "exceptional_indices": [
+        176,
+        174
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.6881237030029297
+    },
+    {
+      "p": 761,
+      "p_mod_24": 17,
+      "endpoint_u": 382,
+      "pole_t": 423,
+      "projective_order": 381,
+      "n_finite_nonsquare_directions": 380,
+      "pure_omega_index": 190,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.8589367866516113
+    },
+    {
+      "p": 773,
+      "p_mod_24": 5,
+      "endpoint_u": 388,
+      "pole_t": 258,
+      "projective_order": 387,
+      "n_finite_nonsquare_directions": 386,
+      "pure_omega_index": 193,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        194,
+        579
+      ],
+      "predicted_even_finite_slopes": [
+        194,
+        579
+      ],
+      "exceptional_indices": [
+        385,
+        1
+      ],
+      "relative_exception_index": 192,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 6,
+      "predicted_projective_bad_degree": 6,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.8931577205657959
+    },
+    {
+      "p": 797,
+      "p_mod_24": 5,
+      "endpoint_u": 400,
+      "pole_t": 266,
+      "projective_order": 399,
+      "n_finite_nonsquare_directions": 398,
+      "pure_omega_index": 199,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        200,
+        597
+      ],
+      "predicted_even_finite_slopes": [
+        200,
+        597
+      ],
+      "exceptional_indices": [
+        200,
+        198
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.9467227458953857
+    },
+    {
+      "p": 809,
+      "p_mod_24": 17,
+      "endpoint_u": 406,
+      "pole_t": 180,
+      "projective_order": 405,
+      "n_finite_nonsquare_directions": 404,
+      "pure_omega_index": 202,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.8410415649414062
+    },
+    {
+      "p": 821,
+      "p_mod_24": 5,
+      "endpoint_u": 412,
+      "pole_t": 274,
+      "projective_order": 411,
+      "n_finite_nonsquare_directions": 410,
+      "pure_omega_index": 205,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        206,
+        615
+      ],
+      "predicted_even_finite_slopes": [
+        206,
+        615
+      ],
+      "exceptional_indices": [
+        271,
+        139
+      ],
+      "relative_exception_index": 66,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 1.0034265518188477
+    },
+    {
+      "p": 857,
+      "p_mod_24": 17,
+      "endpoint_u": 430,
+      "pole_t": 762,
+      "projective_order": 429,
+      "n_finite_nonsquare_directions": 428,
+      "pure_omega_index": 214,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 0.9367330074310303
+    },
+    {
+      "p": 881,
+      "p_mod_24": 17,
+      "endpoint_u": 442,
+      "pole_t": 196,
+      "projective_order": 441,
+      "n_finite_nonsquare_directions": 440,
+      "pure_omega_index": 220,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 1.1574902534484863
+    },
+    {
+      "p": 929,
+      "p_mod_24": 17,
+      "endpoint_u": 466,
+      "pole_t": 826,
+      "projective_order": 465,
+      "n_finite_nonsquare_directions": 464,
+      "pure_omega_index": 232,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 1.0977919101715088
+    },
+    {
+      "p": 941,
+      "p_mod_24": 5,
+      "endpoint_u": 472,
+      "pole_t": 314,
+      "projective_order": 471,
+      "n_finite_nonsquare_directions": 470,
+      "pure_omega_index": 235,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        236,
+        705
+      ],
+      "predicted_even_finite_slopes": [
+        236,
+        705
+      ],
+      "exceptional_indices": [
+        236,
+        234
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 1.312333583831787
+    },
+    {
+      "p": 953,
+      "p_mod_24": 17,
+      "endpoint_u": 478,
+      "pole_t": 212,
+      "projective_order": 477,
+      "n_finite_nonsquare_directions": 476,
+      "pure_omega_index": 238,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 1.338407278060913
+    },
+    {
+      "p": 977,
+      "p_mod_24": 17,
+      "endpoint_u": 490,
+      "pole_t": 543,
+      "projective_order": 489,
+      "n_finite_nonsquare_directions": 488,
+      "pure_omega_index": 244,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 1.214440107345581
+    },
+    {
+      "p": 1013,
+      "p_mod_24": 5,
+      "endpoint_u": 508,
+      "pole_t": 338,
+      "projective_order": 507,
+      "n_finite_nonsquare_directions": 506,
+      "pure_omega_index": 253,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        254,
+        759
+      ],
+      "predicted_even_finite_slopes": [
+        254,
+        759
+      ],
+      "exceptional_indices": [
+        91,
+        415
+      ],
+      "relative_exception_index": 345,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 1.5178380012512207
+    },
+    {
+      "p": 1049,
+      "p_mod_24": 17,
+      "endpoint_u": 526,
+      "pole_t": 583,
+      "projective_order": 525,
+      "n_finite_nonsquare_directions": 524,
+      "pure_omega_index": 262,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 1.3970434665679932
+    },
+    {
+      "p": 1061,
+      "p_mod_24": 5,
+      "endpoint_u": 532,
+      "pole_t": 354,
+      "projective_order": 531,
+      "n_finite_nonsquare_directions": 530,
+      "pure_omega_index": 265,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        266,
+        795
+      ],
+      "predicted_even_finite_slopes": [
+        266,
+        795
+      ],
+      "exceptional_indices": [
+        266,
+        264
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 1.6574437618255615
+    },
+    {
+      "p": 1097,
+      "p_mod_24": 17,
+      "endpoint_u": 550,
+      "pole_t": 244,
+      "projective_order": 549,
+      "n_finite_nonsquare_directions": 548,
+      "pure_omega_index": 274,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 1.5409910678863525
+    },
+    {
+      "p": 1109,
+      "p_mod_24": 5,
+      "endpoint_u": 556,
+      "pole_t": 370,
+      "projective_order": 555,
+      "n_finite_nonsquare_directions": 554,
+      "pure_omega_index": 277,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        278,
+        831
+      ],
+      "predicted_even_finite_slopes": [
+        278,
+        831
+      ],
+      "exceptional_indices": [
+        452,
+        102
+      ],
+      "relative_exception_index": 175,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 10,
+      "predicted_projective_bad_degree": 10,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 1.8077926635742188
+    },
+    {
+      "p": 1181,
+      "p_mod_24": 5,
+      "endpoint_u": 592,
+      "pole_t": 394,
+      "projective_order": 591,
+      "n_finite_nonsquare_directions": 590,
+      "pure_omega_index": 295,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        296,
+        885
+      ],
+      "predicted_even_finite_slopes": [
+        296,
+        885
+      ],
+      "exceptional_indices": [
+        383,
+        207
+      ],
+      "relative_exception_index": 88,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 2.0639493465423584
+    },
+    {
+      "p": 1193,
+      "p_mod_24": 17,
+      "endpoint_u": 598,
+      "pole_t": 663,
+      "projective_order": 597,
+      "n_finite_nonsquare_directions": 596,
+      "pure_omega_index": 298,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 1.8171977996826172
+    },
+    {
+      "p": 1217,
+      "p_mod_24": 17,
+      "endpoint_u": 610,
+      "pole_t": 1082,
+      "projective_order": 609,
+      "n_finite_nonsquare_directions": 608,
+      "pure_omega_index": 304,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 2.1770284175872803
+    },
+    {
+      "p": 1229,
+      "p_mod_24": 5,
+      "endpoint_u": 616,
+      "pole_t": 410,
+      "projective_order": 615,
+      "n_finite_nonsquare_directions": 614,
+      "pure_omega_index": 307,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        308,
+        921
+      ],
+      "predicted_even_finite_slopes": [
+        308,
+        921
+      ],
+      "exceptional_indices": [
+        308,
+        306
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 1.933953046798706
+    },
+    {
+      "p": 1277,
+      "p_mod_24": 5,
+      "endpoint_u": 640,
+      "pole_t": 426,
+      "projective_order": 639,
+      "n_finite_nonsquare_directions": 638,
+      "pure_omega_index": 319,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        320,
+        957
+      ],
+      "predicted_even_finite_slopes": [
+        320,
+        957
+      ],
+      "exceptional_indices": [
+        163,
+        475
+      ],
+      "relative_exception_index": 483,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 6,
+      "predicted_projective_bad_degree": 6,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 2.4040091037750244
+    },
+    {
+      "p": 1289,
+      "p_mod_24": 17,
+      "endpoint_u": 646,
+      "pole_t": 1146,
+      "projective_order": 645,
+      "n_finite_nonsquare_directions": 644,
+      "pure_omega_index": 322,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 2.4367241859436035
+    },
+    {
+      "p": 1301,
+      "p_mod_24": 5,
+      "endpoint_u": 652,
+      "pole_t": 434,
+      "projective_order": 651,
+      "n_finite_nonsquare_directions": 650,
+      "pure_omega_index": 325,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        326,
+        975
+      ],
+      "predicted_even_finite_slopes": [
+        326,
+        975
+      ],
+      "exceptional_indices": [
+        388,
+        262
+      ],
+      "relative_exception_index": 63,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 2.1703107357025146
+    },
+    {
+      "p": 1361,
+      "p_mod_24": 17,
+      "endpoint_u": 682,
+      "pole_t": 1210,
+      "projective_order": 681,
+      "n_finite_nonsquare_directions": 680,
+      "pure_omega_index": 340,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 2.7667922973632812
+    },
+    {
+      "p": 1373,
+      "p_mod_24": 5,
+      "endpoint_u": 688,
+      "pole_t": 458,
+      "projective_order": 687,
+      "n_finite_nonsquare_directions": 686,
+      "pure_omega_index": 343,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        344,
+        1029
+      ],
+      "predicted_even_finite_slopes": [
+        344,
+        1029
+      ],
+      "exceptional_indices": [
+        577,
+        109
+      ],
+      "relative_exception_index": 234,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 2.4105710983276367
+    },
+    {
+      "p": 1409,
+      "p_mod_24": 17,
+      "endpoint_u": 706,
+      "pole_t": 783,
+      "projective_order": 705,
+      "n_finite_nonsquare_directions": 704,
+      "pure_omega_index": 352,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 2.9522440433502197
+    },
+    {
+      "p": 1433,
+      "p_mod_24": 17,
+      "endpoint_u": 718,
+      "pole_t": 1274,
+      "projective_order": 717,
+      "n_finite_nonsquare_directions": 716,
+      "pure_omega_index": 358,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 3.0068814754486084
+    },
+    {
+      "p": 1481,
+      "p_mod_24": 17,
+      "endpoint_u": 742,
+      "pole_t": 823,
+      "projective_order": 741,
+      "n_finite_nonsquare_directions": 740,
+      "pure_omega_index": 370,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 2.7972753047943115
+    },
+    {
+      "p": 1493,
+      "p_mod_24": 5,
+      "endpoint_u": 748,
+      "pole_t": 498,
+      "projective_order": 747,
+      "n_finite_nonsquare_directions": 746,
+      "pure_omega_index": 373,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        374,
+        1119
+      ],
+      "predicted_even_finite_slopes": [
+        374,
+        1119
+      ],
+      "exceptional_indices": [
+        136,
+        610
+      ],
+      "relative_exception_index": 510,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 6,
+      "predicted_projective_bad_degree": 6,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 3.262331247329712
+    },
+    {
+      "p": 1553,
+      "p_mod_24": 17,
+      "endpoint_u": 778,
+      "pole_t": 863,
+      "projective_order": 777,
+      "n_finite_nonsquare_directions": 776,
+      "pure_omega_index": 388,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 3.521895170211792
+    },
+    {
+      "p": 1601,
+      "p_mod_24": 17,
+      "endpoint_u": 802,
+      "pole_t": 356,
+      "projective_order": 801,
+      "n_finite_nonsquare_directions": 800,
+      "pure_omega_index": 400,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 3.2544121742248535
+    },
+    {
+      "p": 1613,
+      "p_mod_24": 5,
+      "endpoint_u": 808,
+      "pole_t": 538,
+      "projective_order": 807,
+      "n_finite_nonsquare_directions": 806,
+      "pure_omega_index": 403,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        404,
+        1209
+      ],
+      "predicted_even_finite_slopes": [
+        404,
+        1209
+      ],
+      "exceptional_indices": [
+        392,
+        414
+      ],
+      "relative_exception_index": 796,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 3.829195499420166
+    },
+    {
+      "p": 1637,
+      "p_mod_24": 5,
+      "endpoint_u": 820,
+      "pole_t": 546,
+      "projective_order": 819,
+      "n_finite_nonsquare_directions": 818,
+      "pure_omega_index": 409,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        410,
+        1227
+      ],
+      "predicted_even_finite_slopes": [
+        410,
+        1227
+      ],
+      "exceptional_indices": [
+        410,
+        408
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 3.445049524307251
+    },
+    {
+      "p": 1697,
+      "p_mod_24": 17,
+      "endpoint_u": 850,
+      "pole_t": 943,
+      "projective_order": 849,
+      "n_finite_nonsquare_directions": 848,
+      "pure_omega_index": 424,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 4.266295671463013
+    },
+    {
+      "p": 1709,
+      "p_mod_24": 5,
+      "endpoint_u": 856,
+      "pole_t": 570,
+      "projective_order": 855,
+      "n_finite_nonsquare_directions": 854,
+      "pure_omega_index": 427,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        428,
+        1281
+      ],
+      "predicted_even_finite_slopes": [
+        428,
+        1281
+      ],
+      "exceptional_indices": [
+        163,
+        691
+      ],
+      "relative_exception_index": 591,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 6,
+      "predicted_projective_bad_degree": 6,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 3.7488584518432617
+    },
+    {
+      "p": 1721,
+      "p_mod_24": 17,
+      "endpoint_u": 862,
+      "pole_t": 1530,
+      "projective_order": 861,
+      "n_finite_nonsquare_directions": 860,
+      "pure_omega_index": 430,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 4.337718963623047
+    },
+    {
+      "p": 1733,
+      "p_mod_24": 5,
+      "endpoint_u": 868,
+      "pole_t": 578,
+      "projective_order": 867,
+      "n_finite_nonsquare_directions": 866,
+      "pure_omega_index": 433,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        434,
+        1299
+      ],
+      "predicted_even_finite_slopes": [
+        434,
+        1299
+      ],
+      "exceptional_indices": [
+        424,
+        442
+      ],
+      "relative_exception_index": 858,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 4.397715091705322
+    },
+    {
+      "p": 1877,
+      "p_mod_24": 5,
+      "endpoint_u": 940,
+      "pole_t": 626,
+      "projective_order": 939,
+      "n_finite_nonsquare_directions": 938,
+      "pure_omega_index": 469,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        470,
+        1407
+      ],
+      "predicted_even_finite_slopes": [
+        470,
+        1407
+      ],
+      "exceptional_indices": [
+        470,
+        468
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 4.527587890625
+    },
+    {
+      "p": 1889,
+      "p_mod_24": 17,
+      "endpoint_u": 946,
+      "pole_t": 420,
+      "projective_order": 945,
+      "n_finite_nonsquare_directions": 944,
+      "pure_omega_index": 472,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 5.170387506484985
+    },
+    {
+      "p": 1901,
+      "p_mod_24": 5,
+      "endpoint_u": 952,
+      "pole_t": 634,
+      "projective_order": 951,
+      "n_finite_nonsquare_directions": 950,
+      "pure_omega_index": 475,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        476,
+        1425
+      ],
+      "predicted_even_finite_slopes": [
+        476,
+        1425
+      ],
+      "exceptional_indices": [
+        25,
+        925
+      ],
+      "relative_exception_index": 501,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 4.578561305999756
+    },
+    {
+      "p": 1913,
+      "p_mod_24": 17,
+      "endpoint_u": 958,
+      "pole_t": 1063,
+      "projective_order": 957,
+      "n_finite_nonsquare_directions": 956,
+      "pure_omega_index": 478,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [],
+      "predicted_even_finite_slopes": [],
+      "exceptional_indices": [],
+      "relative_exception_index": null,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 5.214832782745361
+    },
+    {
+      "p": 1949,
+      "p_mod_24": 5,
+      "endpoint_u": 976,
+      "pole_t": 650,
+      "projective_order": 975,
+      "n_finite_nonsquare_directions": 974,
+      "pure_omega_index": 487,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        488,
+        1461
+      ],
+      "predicted_even_finite_slopes": [
+        488,
+        1461
+      ],
+      "exceptional_indices": [
+        697,
+        277
+      ],
+      "relative_exception_index": 210,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 0,
+      "predicted_projective_bad_degree": 0,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 4.737091779708862
+    },
+    {
+      "p": 1973,
+      "p_mod_24": 5,
+      "endpoint_u": 988,
+      "pole_t": 658,
+      "projective_order": 987,
+      "n_finite_nonsquare_directions": 986,
+      "pure_omega_index": 493,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        494,
+        1479
+      ],
+      "predicted_even_finite_slopes": [
+        494,
+        1479
+      ],
+      "exceptional_indices": [
+        494,
+        492
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 5.473215341567993
+    },
+    {
+      "p": 1997,
+      "p_mod_24": 5,
+      "endpoint_u": 1000,
+      "pole_t": 666,
+      "projective_order": 999,
+      "n_finite_nonsquare_directions": 998,
+      "pure_omega_index": 499,
+      "pure_omega_parity": 0,
+      "observed_even_finite_slopes": [
+        500,
+        1497
+      ],
+      "predicted_even_finite_slopes": [
+        500,
+        1497
+      ],
+      "exceptional_indices": [
+        500,
+        498
+      ],
+      "relative_exception_index": 1,
+      "exception_indices_symmetric": true,
+      "quotient_mismatches": 0,
+      "observed_projective_bad_degree": 2,
+      "predicted_projective_bad_degree": 2,
+      "projective_bad_polynomial_match": true,
+      "elapsed_seconds": 5.503590822219849
+    }
+  ],
+  "elapsed_seconds": 18.050194025039673
+}
