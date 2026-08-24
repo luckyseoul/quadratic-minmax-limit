@@ -228,11 +228,15 @@ The new note `evidence/NOTE_2026-08-24_w2_gqr_circle_route.md` uses tangent
 pencils plus an explicit norm-one-torus reduction to Katz's `t=-2`
 Soto--Andrade character estimate to prove that nonsquare
 circles meeting the fixed edge ({0,infty}) evenly span
-(H_0capker(e_0+e_infty)) for every odd prime.  The remaining step is
-nonlinear: realise enough of those binary circle words as differences of
-actual Max-minus sign vectors in the edge slice.  A full (p=11) holdout
-passes; an exact (p=19) lift is currently solver-unknown.  **W2 remains
-open.**
+(H_0capker(e_0+e_infty)) for every odd prime.  The nonlinear step also
+closes explicitly.  Every subset T of F_p of size (p+1)/2 gives an affine
+halfspace +p eigenvector; after nonsquare dilation, every T containing zero
+is a completion of one fixed nonsquare circle.  Membership of two transverse
+coordinates can be prescribed to put any outside edge in U.  Thus every
+eligible circle is a difference inside U, so W1, W2, and Walsh 15.406 E hold
+for every odd prime.  The explicit p=19 affine witness supersedes the earlier
+HiGHS/CP-SAT UNKNOWN result.  This closes the Walsh slice, not the unrelated
+5+-level or other E1 leftovers.
 
 Katz's 1993 estimate gives the uniform (2sqrt p) control for degree-two
 Soto--Andrade sums (apart from two explicit exceptional cases).  Kable's

@@ -1,9 +1,10 @@
-# W2 via the GQR circle code and a Frobenius-pair completion
+# W2 and Walsh via the GQR circle code and affine completions
 
 Date: 2026-08-24
 
-Status: one new all-prime linear theorem; nonlinear sign-completion lemma
-open.  W2 remains open.
+Status: proved for every odd prime.  The eligible-circle code spans the
+target slice, and every eligible circle is realised by an explicit affine
+halfspace completion.  Hence W2 and the full Walsh slice are closed.
 
 ## 1. Why the inversive-plane code is the right ambient object
 
@@ -168,11 +169,10 @@ If `S` is disjoint from `e`, one needs a completion with
 C_{\infty0}y_\infty y_0=-1.
 \]
 
-Thus the theorem in Section 2 would close the W2 slice if every eligible
-circle were realised by a flip inside `U` (or if a realised subset generated
-the eligible-circle code).
+Thus the theorem in Section 2 closes the W2 slice once every eligible circle
+is realised by a flip inside `U`.
 
-## 4. The nonlinear problem collapses to one exceptional pair orbit
+## 4. Every affine halfspace is an exact completion
 
 Fix the standard nonsquare circle
 
@@ -180,40 +180,135 @@ Fix the standard nonsquare circle
 S=\{\infty\}\cup\mathbb F_p\sigma.
 \]
 
-Its stabilizer is conjugate to `PGL(2,p)`.  On unordered pairs outside `S`
-there is one Frobenius-conjugate orbit of size `p(p-1)/2` and `p-2` generic
-orbits of size `p(p^2-1)/2`.
+Choose an `F_p`-linear functional `L:F_(p^2)->F_p` with square kernel
+`F_p`.  For any subset `T subset F_p` of size `(p+1)/2`, put
 
-The named halfspace Max-minus vector of Prop. 15.613 is a completion of this
-standard circle for every tested prime through `29`.  Exact orbit censuses at
-`p=3,5,7,11,13` show that its stabilizer orbit meets every generic
-outside-pair orbit.  On the Frobenius-conjugate orbit it has the correct `U`
-sign exactly in the tested `p == 1 (mod 4)` cases; for `p == 3 (mod 4)` a
-second completion is required.  This explains why the named-circle family by
-itself misses the odd W2 factors at `p=7,11`.  The generic-orbit coverage has
-an explicit cross-ratio/character formulation but is not yet recorded as an
-all-prime proof.
+\[
+s_T(b)=\begin{cases}+1&b\in T,\\-1&b\notin T,\end{cases}
+\qquad
+h_T(\infty)=1,
+\qquad
+h_T(u)=s_T(Lu).
+\]
 
-The remaining geometric target is therefore:
+**Affine-halfspace theorem.**  Every such `h_T` satisfies
 
-> **Frobenius-pair completion lemma.**  For every odd prime `p>=5`, the
-> standard nonsquare circle has a Max-minus sign completion with the `U`
-> sign on one (hence every, by its stabilizer) Frobenius-conjugate outside
-> pair.
+\[
+Ch_T=p h_T
+\]
 
-Together with Section 2 and an all-prime proof of the generic named-orbit
-coverage, this would be a scalable W2 route: it has no factor degree,
-prime-order, or boundary-prefix parameter.
+for every odd prime `p`.
 
-## 5. Exact computations and holdout
+Indeed, `sum_b s_T(b)=1`, so the infinity row is `p`.  At a finite point
+`u`, write `b=L(u)` and group the conference sum by `t=L(v-u)`.  The
+zero fibre contributes `(p-1)s_T(b)`, since every nonzero element of
+`F_p` is a square in `F_(p^2)`.  Every nonzero fibre is an affine square
+line not through zero and has quadratic-character sum `-1`.  Therefore
+
+\[
+(Ch_T)_u
+=1+(p-1)s_T(b)-\sum_{t\ne0}s_T(b+t)
+=p s_T(b).
+\]
+
+This upgrades the all-subset computations of Props. 15.139 and 15.142 to
+an all-prime proof.
+
+Let `sigma` be nonsquare and define
+
+\[
+z_T(\infty)=-1,
+\qquad
+z_T(\sigma u)=h_T(u).
+\]
+
+Nonsquare dilation reverses every finite conference sign, while the
+infinity sign was also reversed, so `Cz_T=-p z_T`.  If `0 in T`, then on
+the standard circle
+
+\[
+z_T(\infty)=-1,
+\qquad
+z_T(\sigma a)=+1\quad(a\in\mathbb F_p),
+\]
+
+which is exactly its sparse `-p` signing.  Thus flipping `z_T` on `S`
+produces a second Max-minus point whose binary difference is `1_S`.
+
+## 5. Prescribing every edge sign
+
+Pairs inside `S` already have the `U` sign: an infinity--finite pair has
+conference sign `+1` and vector-sign product `-1`, while two finite circle
+points have conference sign `-1` and vector-sign product `+1`.
+
+Now take any pair outside `S` and write it as
+
+\[
+x=\sigma u,\qquad y=\sigma v,
+\qquad b=L(u)\ne0,\quad d=L(v)\ne0.
+\]
+
+Since `chi(sigma)=-1`, its `U` condition is exactly
+
+\[
+s_T(b)s_T(d)=\chi(u-v). \tag{1}
+\]
+
+For `p>=5` one can always choose a set `T` of size `(p+1)/2` containing
+zero and satisfying (1).  If `b=d`, then `u-v` is a nonzero element of
+`F_p`, so the right side is `+1` and (1) is automatic.  If `b!=d`, include
+both `b,d` when the right side is `+1`, and include exactly one when it is
+`-1`; extend the prescribed membership to the required size.  The bounds
+
+\[
+3\le (p+1)/2\le p-1
+\]
+
+make the extension possible in every case.
+
+The PSL action is transitive on nonsquare circles and its signed monomial
+action preserves both Max-minus and the edge quantity `C_ij y_i y_j`.
+Hence the standard-circle construction transports to every eligible
+circle relative to the fixed edge.  Every eligible circle is therefore the
+difference of two points in `U`.
+
+Combining this with Section 2 gives
+
+\[
+\operatorname{dir}(U)=H_0\cap\ker(\ell_e)
+\]
+
+for every prime `p>=5`.  The `p=3` slice has exact direction rank `4`, equal
+to the target, and W2 is vacuous there.  Consequently Walsh 15.406 E, W1,
+and W2 hold for every odd prime.
+
+## 6. Exact computations and the superseded p=19 timeout
 
 The scripts are:
 
+- `scripts/w2_affine_circle_close.py`: the explicit all-subset completion,
+  exhaustive outside-pair prescription, and exact circle-flip witnesses;
 - `scripts/w2_circle_completion_probe.py`: exact sparse-eigenvector check,
   chunked ensemble scan, and pair-orbit completion counts;
 - `scripts/w2_circle_completion_milp.py`: exact binary linear feasibility
   formulation for the Frobenius-pair completion, with HiGHS and CP-SAT
   backends and exact integer validation.
+
+The close script exhausts all `10`, `35`, and `462` affine subsets at
+`p=5,7,11`, with no eigenvector failure.  It also constructs a valid subset
+for every outside pair at `p=5,7,11,19`: respectively `190`, `861`, `5,995`,
+and `58,311` pairs, with no failure.
+
+Most decisively, at `p=19` it gives an exact witness for the same
+Frobenius pair `[2,340]` used by the MILP.  The subset is
+
+\[
+T=\{0,1,2,3,4,5,6,7,8,18\}.
+\]
+
+Exact integer checks verify the affine `+19` eigenvector, its transported
+`-19` completion, the flipped `-19` eigenvector, the `U` sign before and
+after the flip, and circle-exact difference support.
 
 For `p=5` and `p=7`, every eligible circle occurs as a difference of two
 points in `U`; their ranks are respectively `12` and `24`.
@@ -225,16 +320,13 @@ pairs always have the `U` sign.  Every one of the 5,995 outside pairs has a
 `U` completion; the minimum count is `179,760`.  Independently, the 551
 eligible nonsquare circles have binary rank `60`, exactly the target.
 
-At `p=19`, the named halfspace vector has no finite flippable nonsquare
-circle and does not supply the exceptional orbit.  The exact feasibility
-problem has 181 independent equations and 340 free binary variables after
-fixing the standard circle and one Frobenius pair.  HiGHS and 16-worker
-CP-SAT each timed out at 300 seconds on both pair orientations.  This is
-`UNKNOWN`, not infeasible.  The shortened binary GQR code has dimension 161
-and can toggle the pair, so there is no mod-two obstruction; the unresolved
-step is the lift to an exact real `-p` eigenvector.
+The earlier generic `p=19` feasibility model had 181 independent equations
+and 340 free binary variables after fixing the same circle and pair.  HiGHS
+and 16-worker CP-SAT each timed out at 300 seconds on both orientations.
+Those `UNKNOWN` results are retained as an example of solver blindness; the
+explicit affine witness above supersedes them.
 
-## 6. Literature and sequence checks
+## 7. Literature and sequence checks
 
 The relevant literature is:
 
@@ -247,12 +339,18 @@ The relevant literature is:
 
 OEIS/web checks on the new completion counts (`52`, `628`, `369302`) and
 the full-ensemble counts found only unrelated numerical coincidences.  No
-catalogued code/design sequence was identified.
+catalogued code/design sequence was identified.  Post-close OEIS queries on
+the outside-pair counts (`190,861,5995,58311`) and affine-subset counts
+returned no exact sequence.  Crossref exact-object searches for Paley
+affine-halfspace eigenvectors and edge-even Miquelian-circle codes found no
+direct prior statement; this is not a claim of novelty.
 
-## 7. Status
+## 8. Status
 
 - Eligible-circle span theorem: **proved for every odd prime**.
-- Every eligible circle realised inside `U`: certified `p=5,7,11`, not a
-  p-law.
-- Frobenius-pair completion lemma: certified `p=5,7,11`; `p=19` unknown.
-- W2: **OPEN**.
+- Affine-halfspace completion theorem: **proved for every odd prime**.
+- Every eligible circle realised inside `U`: **proved for every `p>=5`**;
+  `p=3` is the exact rank-four exception.
+- W1 and W2: **PROVED for every odd prime**.
+- Walsh 15.406 E: **PROVED for every odd prime**.
+- Unrelated 5+-level and other E1 leftovers: **still open**.

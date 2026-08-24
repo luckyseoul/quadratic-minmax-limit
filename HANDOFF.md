@@ -1,12 +1,33 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-23 (15.627 octic box empty / W2 class at p=31)
+**Date:** 2026-08-24 (15.628 W2 and Walsh closed by affine circle completions)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.628 — eligible GQR circles + affine completions close W2 and Walsh
+
+`scripts/w2_affine_circle_close.py` and
+`evidence/NOTE_2026-08-24_w2_gqr_circle_route.md`.  Nonsquare circles
+meeting `{0,infinity}` evenly span `H_0 cap ker(e_0+e_infinity)` for every
+odd prime: tangent pencils reduce the quotient to a connected bipartite
+Cayley graph, and Katz's `t=-2` Soto--Andrade bound proves connectivity.
+For every `T subset F_p` with `|T|=(p+1)/2`, the affine sign vector
+`h_T(infinity)=1`, `h_T(a+b omega)=+1 iff b in T` satisfies `C h_T=p h_T`
+(square-line character sum `-1`).  Nonsquare dilation turns every
+`0 in T` into a completion of the standard nonsquare circle.  For an
+outside pair with transverse coordinates `b,d`, prescribe
+`s_T(b)s_T(d)=chi(u-v)`; this is always extendible for `p>=5`.  Hence every
+eligible circle is an actual U-difference and
+`dir(U)=H_0 cap ker(e_0+e_infinity)`.  The `p=3` slice is exact rank 4 and
+W2 is vacuous.  Therefore W1, W2, and Walsh 15.406 E hold for every odd
+prime.  Exact p=19 witness for the old MILP pair `[2,340]` uses
+`T={0,1,2,3,4,5,6,7,8,18}`; the solver UNKNOWN is superseded.  This closes
+the Walsh slice only; 5+-level / even-`k>4p` and other E1 leftovers remain
+open.
 
 ## 15.627 — octic linear box empty; split-involution class W2 at p=31
 

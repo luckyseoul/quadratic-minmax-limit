@@ -5203,3 +5203,91 @@ Aut-Schur is **false** (Jacquet \(\nRightarrow\) PSL-span of \(k=3\) \(F\); \(p=
 
 Evidence: `src/e1_gmin_m4_prop15272.py`, `src/e1_gmin_m4_prop15270.py`,
 `src/e1_gmin_m4_prop15249.py`, `tests/test_prop15272.py`.
+
+## Prop 15.628 (2026-08-24) — Eligible GQR circles close W1, W2, and Walsh
+
+Let \(C\) be the Paley conference matrix on
+\(P^1(\mathbb F_{p^2})\), let \(H_0\) be the binary direction code of
+Max\(_-\), fix \(e=\{\infty,0\}\), and let
+\(U=\{y\in\mathrm{Max}_-:C_{\infty0}y_\infty y_0=-1\}\).
+
+**Theorem A (eligible-circle span).** The nonsquare Miquelian circles that
+meet \(e\) in zero or two points span
+
+\[
+H_0\cap\ker(e_\infty+e_0)
+\]
+
+for every odd prime \(p\).  Tangent-pencil relations identify all circles
+meeting \(e\) oddly modulo the eligible span.  The relevant bipartite
+tangency graph is the Cayley graph on
+\(M=(\mathbb F_{p^2}^{\times})^2\) with connection set
+
+\[
+T=\{(1+r\sigma)^{-2}:r\in\mathbb F_p\}.
+\]
+
+If \(T\) did not generate \(M\), a nontrivial even character of
+\(\mathbb F_{p^2}^{\times}\) would equal one on an affine
+\(\mathbb F_p\)-line.  Parameterising that line by the norm-one torus turns
+its sum into Katz's \(t=-2\) Soto--Andrade sum.  The two exceptional
+character pairs induce the trivial extension-field character; otherwise
+the bound \(2\sqrt p<p\) applies.  Thus the graph is connected for
+\(p\ge5\); \(p=3\) is direct.
+
+**Theorem B (all affine halfspaces).** Let
+\(L:\mathbb F_{p^2}\to\mathbb F_p\) have square kernel \(\mathbb F_p\).
+For any \(T\subset\mathbb F_p\) of size \((p+1)/2\), define
+
+\[
+h_T(\infty)=1,
+\qquad
+h_T(u)=s_T(Lu),
+\qquad
+s_T(b)=2\mathbf1_T(b)-1.
+\]
+
+Then \(Ch_T=ph_T\).  Indeed, \(\sum_b s_T(b)=1\).  At a finite point
+with \(L(u)=b\), the zero fibre contributes \((p-1)s_T(b)\), while every
+nonzero affine square fibre has character sum \(-1\); hence
+
+\[
+(Ch_T)_u=1+(p-1)s_T(b)-\sum_{t\ne0}s_T(b+t)=p s_T(b).
+\]
+
+For nonsquare \(\sigma\), put
+\(z_T(\infty)=-1\) and \(z_T(\sigma u)=h_T(u)\).  Then
+\(Cz_T=-pz_T\).  If \(0\in T\), its restriction to
+\(S=\{\infty\}\cup\sigma\mathbb F_p\) is the sparse \(-p\) signing of
+that nonsquare circle, so flipping \(z_T\) on \(S\) gives another
+Max\(_-\) point with binary difference \(\mathbf1_S\).
+
+**Theorem C (every eligible circle is realised in \(U\)).** A pair inside
+\(S\) has the \(U\) sign automatically.  For a pair outside \(S\), write
+\(x=\sigma u\), \(y=\sigma v\), \(b=L(u)\ne0\), and \(d=L(v)\ne0\).
+The \(U\) condition is
+
+\[
+s_T(b)s_T(d)=\chi(u-v).
+\]
+
+If \(b=d\), the right side is \(+1\).  If \(b\ne d\), prescribe equal
+membership of \(b,d\) when the right side is \(+1\), and opposite
+membership when it is \(-1\); for \(p\ge5\) this prescription extends to a
+set \(T\) of size \((p+1)/2\) containing zero.  PSL transport now realises
+every eligible nonsquare circle as a difference of two points in \(U\).
+
+Combining A and C gives
+
+\[
+\operatorname{dir}(U)=H_0\cap\ker(e_\infty+e_0)
+\]
+
+for every \(p\ge5\).  At \(p=3\), the exact direction rank is \(4\), equal
+to the target, and W2 is vacuous.  Therefore W1, W2, and Walsh 15.406 E
+hold for every odd prime.  This closes the Walsh slice; it does not by
+itself close the unrelated 5+-level or other E1 leftovers.
+
+Evidence: `evidence/NOTE_2026-08-24_w2_gqr_circle_route.md`,
+`evidence/w2_gqr_circle_route_2026-08-24.json`,
+`scripts/w2_affine_circle_close.py`.

@@ -46,9 +46,9 @@ See **`STATUS.md`**, `HANDOFF.md`, denseness package, `solution.md`.
 
 ## Discovery map — what has moved
 
-The problem reduces to **E(1) on Paley conference matrices of order n = p²+1**,
-gated on four units. One is proved; three are open. As of 2026-08-22 the three
-open ones are no longer independent:
+The problem reduces to **E(1) on Paley conference matrices of order n = p²+1**.
+The map below records the 2026-08-22 collapse; R2 has since been closed by
+Prop. 15.628, while R1 and the non-Walsh parts of leftover 2 remain open:
 
 ```mermaid
 graph TD
@@ -60,15 +60,16 @@ graph TD
     L1 --> R1["<b>R1</b> ‖δ‖² ≤ n/12<br/>(one inequality)"]
     L3 --> R1
     RI["residual-(i) R≤2p"] --> R1
-    L2 --> R2["<b>R2</b> Walsh spanning<br/>of the xor-hyperplane"]
+    L2 --> R2["<b>R2</b> Walsh spanning<br/><b>CLOSED</b> (15.628)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style R1 fill:#fff4e6
-    style R2 fill:#fff4e6
+    style R2 fill:#e6ffe6
 ```
 
-**Two open roots, not three** — `R1` closes leftovers 1 *and* 3 (and
-residual-(i) with room to spare); `R2` is provably independent of it.
+`R1` closes leftovers 1 *and* 3 (and residual-(i) with room to spare).
+`R2` was independent and is now proved; this does not remove the separate
+5+-level / even-`k>4p` portions of leftover 2.
 
 ### The R1 collapse (props 15.590–15.597)
 
@@ -124,13 +125,16 @@ Unconditionally proved: `0 ≤ λ_min(Φ) ≤ λ̄` (lower since Φ is a Gram op
 upper since `tr Φ_δ = 0`). **The entire open content of leftover 1 is the
 window [0, 6)** — no argument short of a genuine δ bound reaches it.
 
-### R2 progress (leftover 2, props 15.598–15.601)
+### R2 close (leftover 2 Walsh slice, props 15.598–15.628)
 
 Independent root. Square-direction affine lines cut Max−, so `U` is the
 xor-hyperplane of `affine_span(Max−)`; `rank(S) = n/2` is now a **theorem for
-every odd prime** (15.600). Walsh containment is certified at p = 3, 5, 7, 11
-(the p=11 case exact over all 37,457,112 points). **Walsh spanning of that
-slice stays open.**
+every odd prime** (15.600).  Prop. 15.628 proves that edge-eligible
+nonsquare GQR circles span the target code and constructs every such circle
+as an actual `U`-difference using arbitrary affine halfspaces.  Therefore
+**Walsh spanning, W1, and W2 are proved for every odd prime**.  The p=11
+37,457,112-point scan remains an independent holdout; the explicit p=19
+affine witness supersedes the earlier generic-solver timeout.
 
 ### Route kills — do not re-tread
 
@@ -158,7 +162,8 @@ moments to ~15 numbers paired against the explicit PSL(2,q) character table.
 1. **R1** — `‖P_{E₄ₚ} m₄⁺‖² ≤ n/12`, given only the master equation and
    `|m₄⁺| ≤ 1`. Equivalently `κ₄(y·z) = O(n)`, or Γ_δ's Fourier coefficients
    bounded below. Closes leftovers 1 and 3 together.
-2. **R2** — Walsh spanning of the xor-hyperplane for all p (certified p ≤ 11).
+2. **Leftover 2 beyond Walsh** — the separate 5+-level / even-`k>4p`
+   multi-level cases.
 3. **lemma_D** — writeup exists; hostile check still due.
 
 ---
@@ -173,6 +178,7 @@ moments to ~15 numbers paired against the explicit PSL(2,q) character table.
 | `src/e1_gmin_m4_prop15167.py` … `prop15171.py` | Bi-tight + E(1) residual ND modules |
 | `src/e1_gmin_m4_prop15590.py` … `prop15597.py` | R1 collapse: ν → Es4 → Φ → δ (leftovers 1 & 3 unified) |
 | `src/e1_gmin_m4_prop15598.py` … `prop15601.py` | R2: square-direction lines, rank(S)=n/2, Walsh |
+| `src/e1_gmin_m4_prop15628.py`, `scripts/w2_affine_circle_close.py` | R2 close: eligible GQR circle span + explicit affine completions |
 | `evidence/PLAN_2026-08-22_class_function_route.md` | Live route: Γ as a class function on PSL(2,q) |
 | `scripts/frame_line_system.py` | Data-free frame-line solver (any p, no Max± ensemble) |
 | `src/minmax_quadratic.py` | Exact `m_n`, Paley, Φ, bounds, ρ=1 evec |

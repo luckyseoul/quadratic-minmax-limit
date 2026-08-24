@@ -1,0 +1,63 @@
+{
+  "prop": "15.628",
+  "title": "Eligible GQR circles + affine completions close W1/W2/Walsh",
+  "proved": {
+    "eligible_circle_span_all_odd_p": true,
+    "affine_completion_all_odd_p": true,
+    "every_eligible_circle_U_difference_p_ge_5": true,
+    "p3_slice_exact": true,
+    "W1_all_odd_p": true,
+    "W2_all_odd_p": true,
+    "Walsh_15_406_E_all_odd_p": true
+  },
+  "algebra": {
+    "eligible_span": "Tangent pencils and a connected Cayley tangency graph show that edge-even nonsquare circles span H0 intersect ker(e_infinity+e_0). Connectivity follows from Katz's t=-2 Soto-Andrade bound.",
+    "affine_eigenvector": "For every size-(p+1)/2 subset T of F_p, 1+(p-1)s_T(b)-sum_(t!=0)s_T(b+t)=p*s_T(b), so the square-kernel affine halfspace h_T satisfies C h_T=p h_T.",
+    "completion": "Nonsquare dilation transports h_T to a Max-minus completion of the standard nonsquare circle whenever 0 is in T.",
+    "pair_prescription": "For outside transverse coordinates b,d, prescribe s_T(b)s_T(d)=chi(u-v). Equal coordinates force target +1; distinct coordinates permit equal or opposite membership and extension to |T|=(p+1)/2 for p>=5.",
+    "consequence": "Every eligible circle is a U-difference, hence dir(U)=H0 intersect ker(e_infinity+e_0)."
+  },
+  "exact_checks": {
+    "3": {
+      "U_points": 8,
+      "direction_rank": 4,
+      "target_rank": 4,
+      "W2_vacuous": true
+    },
+    "5": {
+      "all_affine_subsets": 10,
+      "outside_pairs": 190,
+      "failures": 0
+    },
+    "7": {
+      "all_affine_subsets": 35,
+      "outside_pairs": 861,
+      "failures": 0
+    },
+    "11": {
+      "all_affine_subsets": 462,
+      "outside_pairs": 5995,
+      "failures": 0
+    },
+    "19": {
+      "outside_pairs": 58311,
+      "failures": 0,
+      "frobenius_pair": [2, 340],
+      "chosen_subset": [0, 1, 2, 3, 4, 5, 6, 7, 8, 18],
+      "affine_plus_exact": true,
+      "completion_minus_exact": true,
+      "circle_flip_minus_exact": true,
+      "pair_in_U_before_and_after": true,
+      "difference_support_is_circle": true,
+      "witness_bits_hex": "01fc07c0ff00fc0fc0ff00fc0fc0ff00fc0fc0ff00fc0fc0ff00f80f80ff00f80f80ff00f80f80ff00f80f80ff00"
+    }
+  },
+  "L_status": "OPEN",
+  "residual_ii_k_eq_4p_empty": false,
+  "not_closed": [
+    "5+-level and even-k>4p leftovers",
+    "other E1 leftovers",
+    "L"
+  ],
+  "backend": "Exact integer affine eigenvector/circle-flip checks and exhaustive outside-pair prescriptions on soulkiller; no process left running."
+}

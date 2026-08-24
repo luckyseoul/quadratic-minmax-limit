@@ -1,4 +1,11 @@
-# Status (2026-08-23)
+# Status (2026-08-24)
+
+**15.628 PROVED close**: eligible nonsquare GQR circles span the fixed-edge
+slice, and arbitrary affine halfspaces realise every eligible circle as a
+U-difference.  Thus `dir(U)=H_0 cap ker(e_0+e_infinity)` and W1, W2, and
+Walsh 15.406 E hold for every odd prime (p=3 direct rank 4).  The explicit
+p=19 witness supersedes the generic-solver UNKNOWN.  This does not close
+5+-level / even-`k>4p` or the other E1 leftovers; L remains OPEN.
 
 **15.627 PROVED kill/split**: octic+(a mod 8) does not rescue
 the linear stay box. Split-involution class is W2-nonempty at
@@ -425,4 +432,3 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 - **Proved Max+-free (scratch, see 08-14 session handoff):** no cuspidals in \(\mathcal W_{++}^0\); G-span(\(F\))=all; affine disks span \(F_{\mathrm{aff}}\); \(\hat z_{\mathrm{inv}}=0\) off \(\Omega\); separable formula \(\hat z(\omega t^2)=p1_{x=0}+p1_{y=0}+G_p[\chi_p(-2)J(2x^2)+\chi_p(-2\,\mathrm{ib})J(2\,\mathrm{ib}\,y^2)]\).
 - **Certified:** affine+inv-\(T\) spans \(F\) at \(7\le p\le23\); \(N\neq0\) on every even K-character at every prime \(7\le p\le79\).
 - **OPEN (blocks residual i):** prove \(N(\varphi)\neq0\) for all \(p\ge7\). Do not flip predicates on the census.
-
