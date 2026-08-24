@@ -1,0 +1,141 @@
+{
+  "order": 21,
+  "factor_hex": [
+    "0x57",
+    "0x75"
+  ],
+  "algorithm": "direct two-line order-character evaluation",
+  "rows": [
+    {
+      "p": 73613,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "sigma": 73613,
+      "primitive_element": 73615,
+      "component_polynomial_hex": [
+        "0x182831",
+        "0x2d32d"
+      ],
+      "component_support": [
+        [
+          0,
+          4,
+          5,
+          11,
+          13,
+          19,
+          20
+        ],
+        [
+          0,
+          2,
+          3,
+          5,
+          8,
+          9,
+          12,
+          14,
+          15,
+          17
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x17",
+          "nonsquare_remainder_hex": "0x2c",
+          "nonsquare_over_x_hex": "0x16",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x1f"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x3d",
+          "nonsquare_remainder_hex": "0x1f",
+          "nonsquare_over_x_hex": "0x35",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x35"
+        }
+      ],
+      "elapsed_seconds": 2.9325694710132666
+    }
+  ]
+}

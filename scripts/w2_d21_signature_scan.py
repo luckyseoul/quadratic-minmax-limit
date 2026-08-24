@@ -86,6 +86,7 @@ def prime_signature(p: int) -> dict:
                 if remainder == 0:
                     masks[factor_index] |= bit
     ratios = []
+    nonsquare_projective = []
     nonsquare_zero_violations = []
     subfield_violations = []
     for factor_index, factor in enumerate(FACTORS):
@@ -119,12 +120,25 @@ def prime_signature(p: int) -> dict:
                 )
             )
         ratios.append(sorted(factor_ratios))
+        normalized_vector = [
+            multiply_bits(nonsquare, inverse_x, factor)
+            for _square, nonsquare in remainders[factor_index]
+        ]
+        pivot = next((value for value in normalized_vector if value), None)
+        if pivot is not None:
+            pivot_inverse = power_bits(pivot, 62, factor)
+            normalized_vector = [
+                multiply_bits(value, pivot_inverse, factor)
+                for value in normalized_vector
+            ]
+        nonsquare_projective.append(normalized_vector)
     return {
         "p": p,
         "masks": masks,
         "popcounts": [mask.bit_count() for mask in masks],
         "remainders": remainders,
         "component_ratios": ratios,
+        "nonsquare_projective": nonsquare_projective,
         "nonsquare_zero_violations": nonsquare_zero_violations,
         "subfield_violations": subfield_violations,
         "component_hex": component_hex,
@@ -229,6 +243,32 @@ def main() -> None:
                 ).items()
             )
         },
+        "component_ratio_rows": [
+            {
+                "p": row["p"],
+                "component_ratios": row["component_ratios"],
+            }
+            for row in rows
+        ],
+        "nonsquare_projective_pair_counts": {
+            "|".join(
+                ",".join(hex(value) for value in vector)
+                for vector in pair
+            ): count
+            for pair, count in sorted(
+                collections.Counter(
+                    tuple(tuple(vector) for vector in row["nonsquare_projective"])
+                    for row in rows
+                ).items()
+            )
+        },
+        "nonsquare_projective_rows": [
+            {
+                "p": row["p"],
+                "vectors": row["nonsquare_projective"],
+            }
+            for row in rows
+        ],
         "nonsquare_zero_without_square_zero": [
             {
                 "p": row["p"],

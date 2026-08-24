@@ -1155,31 +1155,107 @@ side is zero, so the generator ratio cannot be recovered from those products.
 The matching reciprocal value identifies the missing state as `0x1f` if the
 four-state law is established independently.
 
-Part of this structure is now conceptually explained.  Since `p=8 (mod 21)`,
-Frobenius on a primitive 21st root is the eighth-power map.  Frobenius
-stability of the selected lines therefore puts `A_a` in `F_8`; the nonsquare
-orbit acquires the single exponent shift accounting for `B_a/X in F_8`.
-Moreover the exact raw factorization
+The field placement is now proved directly.  Since `p=8 (mod 21)`, Frobenius
+on a primitive 21st root is the eighth-power map.  On the square orbit it sends
+the exponent `j` to `8j`; on the nonsquare orbit it sends it to `8j+14`.
+Consequently `A_a in F_8` and `B_a/X in F_8`.  The exact raw factorization
 
     (A_a, B_a) = c_a (Gamma_sq, Gamma_ns)
 
-makes `rho_f=X Gamma_sq/Gamma_ns` independent of the boundary difference as
-soon as `Gamma_ns` is nonzero.  Thus the computational discovery reduces to a
-small generator lemma: prove `Gamma_ns!=0` and evaluate the reciprocal pair of
-ratios in the four states above.
+then makes `rho_f=X Gamma_sq/Gamma_ns` independent of the boundary difference
+whenever the nonsquare generator residue is nonzero.
 
-There is a close standard model but not yet a quoted theorem with our exact
-normalization.  Davis--Jedwab--Mowbray, [*New Families of Semi-Regular
-Relative Difference Sets*](https://shiftleft.com/mirrors/www.hpl.hp.com/techreports/96/HPL-96-34r1.pdf),
-identify `F_8^*` with `Z_7`, identify the seven projective hyperplanes with
-translates of the `(7,3,1)` Singer difference set, and compute the associated
-character values from the four-element affine hyperplanes.  That is exactly
-the four-state geometry visible above.  What remains is to specialize their
-character calculation to the present Bose square/nonsquare generator pair.
-Even after that specialization, W2 still needs the boundary statement that
-the scalar factor `c_a` cannot vanish at both reciprocal sextics for all first
-three differences.  The ratio law removes a redundant component; it does not
-by itself prove that final non-simultaneous vanishing.
+The generator itself has a sharper exact reduction.  Its two affine lines are
+`t sigma` and `1+t sigma`.  On the first line the scalar step is
+`(p+1)/2=15 (mod 21)`, so it visits seven exponent classes, each `(p-1)/7`
+times; this multiplicity is even.  The entire `t sigma` line therefore cancels
+modulo `Phi_21`, leaving only `1+t sigma`.
+
+Fix the `0x57` model, let `alpha=X`, `lambda=alpha^15`, `u=alpha^3`, and write
+
+    A = Gamma_sq(alpha),       T = Gamma_ns(alpha)/alpha.
+
+After transporting `0x75` by its root `beta -> alpha^-1`, write the reciprocal
+values as `A*`,`T*`.  Frobenius gives a complete support normal form over the
+CRT classes `(j mod 3,j mod 7)`: for subsets `S,Q` of `Z_7`,
+
+    square support by j mod 3:       ({0}, S, S),
+    nonsquare support by j mod 3:    (Q, empty, Q).
+
+The already established `Phi_3` generator value says `|S|` and `|Q|` are odd.
+There is also an off-diagonal identity hidden in the Bose group-ring norm.
+Splitting
+
+    Gamma Gamma^(-1) = e + G + N
+
+into square and nonsquare cosets and evaluating at `alpha` gives both
+
+    A A* + T T* = 1,
+    A T* + u T A* = 0.
+
+Thus, whenever the ratios are finite,
+
+    rho_75(common model) = rho_57 / u.
+
+This pointwise reciprocal law is stronger than the earlier observation that
+the two three-element ratio sets are Singer translates.
+
+An exhaustive *finite* `F_8` classification now isolates the only missing bit.
+Put `h=u^4=sqrt(u)=0x1e` and use the Mobius coordinate
+
+    s = T / (A + h T),       tau = Tr_(F_8/F_2)(h s).
+
+The diagonal identity makes the denominator nonzero; set `s=0` when `T=0`.
+Among all `64^2=4096` odd support pairs `(S,Q)`, exactly 56 satisfy the two
+group-ring identities.  They split evenly by `tau`.  In the common field the
+ratio states are
+
+    tau=1: (0,0), (8,1), (9,1e), (1f,9),
+    tau=0: (1,1f), (16,17), (17,8), (none,none),
+
+with seven support pairs per state.  In particular every possible vanishing
+nonsquare generator is in the `tau=0` half.  Equivalently,
+
+    tau=1  <=>  |Q| is 1 or 5  <=>  |Q| == 1 (mod 4),
+    tau=0  <=>  |Q| is 3 or 7  <=>  |Q| == 3 (mod 4).
+
+Twenty direct two-line generator evaluations, five from each observed state,
+have no support-form, norm, ratio, or trace failures.  A separate direct run at
+`p=73613` gives nonzero nonsquare residues and recovers the otherwise hidden
+`rho_57=0x1f`.  These computations are
+`scripts/w2_d21_generator_ratio.py` and
+`scripts/w2_d21_f8_support_classify.py`; certificates are
+`evidence/w2_d21_generator_ratio_20state_check.json`,
+`evidence/w2_d21_generator_ratio_p73613.json`, and
+`evidence/w2_d21_f8_support_classify.json`.
+
+This is the exact finite geometry anticipated by Davis--Jedwab--Mowbray,
+[*New Families of Semi-Regular Relative Difference Sets*](https://shiftleft.com/mirrors/www.hpl.hp.com/techreports/96/HPL-96-34r1.pdf):
+`F_8^*` is a Singer cycle and the two trace values select the complementary
+affine hyperplanes.  The standard trace-zero construction of binary Singer
+difference sets is also stated explicitly in
+[The Electronic Journal of Combinatorics 20(1), P38](https://www.combinatorics.org/ojs/index.php/eljc/article/download/v20i1p38/pdf/).
+The remaining generator lemma is now only the specialization
+
+    |Q| == 1 (mod 4)
+
+for the actual affine line `1+t sigma`, equivalently `tau=1`.  It is verified
+above but not yet proved uniformly; no searched source supplied this exact
+mod-four cyclotomic parity.  Even after proving it, W2 still needs the boundary
+statement that the scalar `c_a` cannot vanish at both reciprocal sextics for
+all first three differences.
+
+Projectivizing the three nonsquare scalar residues did not expose that last
+statement.  Through `100000`, each reciprocal side covers all 73 points of
+`PG(2,8)` (the `0x57` side also has the zero vector at `p=73613`).  Simple
+Frobenius-twisted pairings have at least 43 zeros.  Many nondegenerate conics
+can avoid the 404 discovery pairs by chance; the two sparsest candidates fail
+at seven and eight primes respectively in the disjoint range
+`100001..200000`.  The apparent seven-term cubic is exactly the projective
+normalization tautology `x+y+z+xy+xz+yz+xyz=1`, and fails at the zero vector.
+This negative diagnostic is retained in
+`evidence/w2_d21_projective_conic_holdout.json` to prevent curve-fitting from
+being mistaken for the missing invariant.
 
 The targeted engine was also accelerated without changing its coefficients.
 It now finds the least primitive `F_(p^2)` element natively, uses the known

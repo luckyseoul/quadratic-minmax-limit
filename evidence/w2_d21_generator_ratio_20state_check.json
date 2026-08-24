@@ -1,0 +1,2470 @@
+{
+  "order": 21,
+  "factor_hex": [
+    "0x57",
+    "0x75"
+  ],
+  "algorithm": "direct two-line order-character evaluation",
+  "rows": [
+    {
+      "p": 29,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "sigma": 29,
+      "primitive_element": 33,
+      "component_polynomial_hex": [
+        "0x182123",
+        "0x168b4c"
+      ],
+      "component_support": [
+        [
+          0,
+          1,
+          5,
+          8,
+          13,
+          19,
+          20
+        ],
+        [
+          2,
+          3,
+          6,
+          8,
+          9,
+          11,
+          15,
+          17,
+          18,
+          20
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x1",
+          "nonsquare_remainder_hex": "0x10",
+          "nonsquare_over_x_hex": "0x8",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x1f"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x35",
+          "nonsquare_remainder_hex": "0x2",
+          "nonsquare_over_x_hex": "0x1",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x35"
+        }
+      ],
+      "elapsed_seconds": 0.004287826013751328
+    },
+    {
+      "p": 449,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "sigma": 449,
+      "primitive_element": 455,
+      "component_polynomial_hex": [
+        "0x182123",
+        "0x168b4c"
+      ],
+      "component_support": [
+        [
+          0,
+          1,
+          5,
+          8,
+          13,
+          19,
+          20
+        ],
+        [
+          2,
+          3,
+          6,
+          8,
+          9,
+          11,
+          15,
+          17,
+          18,
+          20
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x1",
+          "nonsquare_remainder_hex": "0x10",
+          "nonsquare_over_x_hex": "0x8",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x1f"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x35",
+          "nonsquare_remainder_hex": "0x2",
+          "nonsquare_over_x_hex": "0x1",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x35"
+        }
+      ],
+      "elapsed_seconds": 0.006081063998863101
+    },
+    {
+      "p": 617,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "sigma": 617,
+      "primitive_element": 621,
+      "component_polynomial_hex": [
+        "0x34d97",
+        "0x145a65"
+      ],
+      "component_support": [
+        [
+          0,
+          1,
+          2,
+          4,
+          7,
+          8,
+          10,
+          11,
+          14,
+          16,
+          17
+        ],
+        [
+          0,
+          2,
+          5,
+          6,
+          9,
+          11,
+          12,
+          14,
+          18,
+          20
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x8",
+          "nonsquare_remainder_hex": "0x2e",
+          "nonsquare_over_x_hex": "0x17",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x1f"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x9",
+          "nonsquare_remainder_hex": "0x10",
+          "nonsquare_over_x_hex": "0x8",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x35"
+        }
+      ],
+      "elapsed_seconds": 0.0099087770213373
+    },
+    {
+      "p": 1709,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "sigma": 1709,
+      "primitive_element": 1713,
+      "component_polynomial_hex": [
+        "0x1a6cb1",
+        "0x14cb45"
+      ],
+      "component_support": [
+        [
+          0,
+          4,
+          5,
+          7,
+          10,
+          11,
+          13,
+          14,
+          17,
+          19,
+          20
+        ],
+        [
+          0,
+          2,
+          6,
+          8,
+          9,
+          11,
+          14,
+          15,
+          18,
+          20
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x1e",
+          "nonsquare_remainder_hex": "0x12",
+          "nonsquare_over_x_hex": "0x9",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x1f"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x34",
+          "nonsquare_remainder_hex": "0xf",
+          "nonsquare_over_x_hex": "0x3d",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x35"
+        }
+      ],
+      "elapsed_seconds": 0.032013459014706314
+    },
+    {
+      "p": 1877,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "sigma": 1877,
+      "primitive_element": 1879,
+      "component_polynomial_hex": [
+        "0x1a6cb1",
+        "0x14cb45"
+      ],
+      "component_support": [
+        [
+          0,
+          4,
+          5,
+          7,
+          10,
+          11,
+          13,
+          14,
+          17,
+          19,
+          20
+        ],
+        [
+          0,
+          2,
+          6,
+          8,
+          9,
+          11,
+          14,
+          15,
+          18,
+          20
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x1e",
+          "nonsquare_remainder_hex": "0x12",
+          "nonsquare_over_x_hex": "0x9",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x1f"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x34",
+          "nonsquare_remainder_hex": "0xf",
+          "nonsquare_over_x_hex": "0x3d",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x35"
+        }
+      ],
+      "elapsed_seconds": 0.03611426998395473
+    },
+    {
+      "p": 113,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "sigma": 113,
+      "primitive_element": 116,
+      "component_polynomial_hex": [
+        "0x1961a7",
+        "0x69b2c"
+      ],
+      "component_support": [
+        [
+          0,
+          1,
+          2,
+          5,
+          7,
+          8,
+          13,
+          14,
+          16,
+          19,
+          20
+        ],
+        [
+          2,
+          3,
+          5,
+          8,
+          9,
+          11,
+          12,
+          15,
+          17,
+          18
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x16",
+          "nonsquare_remainder_hex": "0x12",
+          "nonsquare_over_x_hex": "0x9",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x9"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x3d",
+          "nonsquare_remainder_hex": "0x10",
+          "nonsquare_over_x_hex": "0x8",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x9"
+        }
+      ],
+      "elapsed_seconds": 0.001124029979109764
+    },
+    {
+      "p": 953,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "sigma": 953,
+      "primitive_element": 956,
+      "component_polynomial_hex": [
+        "0x20d13",
+        "0x165869"
+      ],
+      "component_support": [
+        [
+          0,
+          1,
+          4,
+          8,
+          10,
+          11,
+          17
+        ],
+        [
+          0,
+          3,
+          5,
+          6,
+          11,
+          12,
+          14,
+          17,
+          18,
+          20
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x1f",
+          "nonsquare_remainder_hex": "0x10",
+          "nonsquare_over_x_hex": "0x8",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x9"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x1",
+          "nonsquare_remainder_hex": "0xf",
+          "nonsquare_over_x_hex": "0x3d",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x9"
+        }
+      ],
+      "elapsed_seconds": 0.01623651903355494
+    },
+    {
+      "p": 2297,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "sigma": 2297,
+      "primitive_element": 2304,
+      "component_polynomial_hex": [
+        "0x949b7",
+        "0x14d961"
+      ],
+      "component_support": [
+        [
+          0,
+          1,
+          2,
+          4,
+          5,
+          7,
+          8,
+          11,
+          14,
+          16,
+          19
+        ],
+        [
+          0,
+          5,
+          6,
+          8,
+          11,
+          12,
+          14,
+          15,
+          18,
+          20
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x1e",
+          "nonsquare_remainder_hex": "0x3e",
+          "nonsquare_over_x_hex": "0x1f",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x9"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x3c",
+          "nonsquare_remainder_hex": "0x1f",
+          "nonsquare_over_x_hex": "0x35",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x9"
+        }
+      ],
+      "elapsed_seconds": 0.045043947000522166
+    },
+    {
+      "p": 2381,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "sigma": 2381,
+      "primitive_element": 2388,
+      "component_polynomial_hex": [
+        "0x80933",
+        "0x6cb0d"
+      ],
+      "component_support": [
+        [
+          0,
+          1,
+          4,
+          5,
+          8,
+          11,
+          19
+        ],
+        [
+          0,
+          2,
+          3,
+          8,
+          9,
+          11,
+          14,
+          15,
+          17,
+          18
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x9",
+          "nonsquare_remainder_hex": "0x2",
+          "nonsquare_over_x_hex": "0x1",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x9"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x34",
+          "nonsquare_remainder_hex": "0x12",
+          "nonsquare_over_x_hex": "0x9",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x9"
+        }
+      ],
+      "elapsed_seconds": 0.044236236019060016
+    },
+    {
+      "p": 2801,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "sigma": 2801,
+      "primitive_element": 2804,
+      "component_polynomial_hex": [
+        "0x80933",
+        "0x6cb0d"
+      ],
+      "component_support": [
+        [
+          0,
+          1,
+          4,
+          5,
+          8,
+          11,
+          19
+        ],
+        [
+          0,
+          2,
+          3,
+          8,
+          9,
+          11,
+          14,
+          15,
+          17,
+          18
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x9",
+          "nonsquare_remainder_hex": "0x2",
+          "nonsquare_over_x_hex": "0x1",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x9"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x34",
+          "nonsquare_remainder_hex": "0x12",
+          "nonsquare_over_x_hex": "0x9",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x9"
+        }
+      ],
+      "elapsed_seconds": 0.05535507301101461
+    },
+    {
+      "p": 197,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "sigma": 197,
+      "primitive_element": 206,
+      "component_polynomial_hex": [
+        "0x112815",
+        "0x12526d"
+      ],
+      "component_support": [
+        [
+          0,
+          2,
+          4,
+          11,
+          13,
+          16,
+          20
+        ],
+        [
+          0,
+          2,
+          3,
+          5,
+          6,
+          9,
+          12,
+          14,
+          17,
+          20
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x1f",
+          "nonsquare_remainder_hex": "0x12",
+          "nonsquare_over_x_hex": "0x9",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x8"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x9",
+          "nonsquare_remainder_hex": "0x12",
+          "nonsquare_over_x_hex": "0x9",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x1"
+        }
+      ],
+      "elapsed_seconds": 0.002257721032947302
+    },
+    {
+      "p": 281,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "sigma": 281,
+      "primitive_element": 285,
+      "component_polynomial_hex": [
+        "0x116997",
+        "0x4db25"
+      ],
+      "component_support": [
+        [
+          0,
+          1,
+          2,
+          4,
+          7,
+          8,
+          11,
+          13,
+          14,
+          16,
+          20
+        ],
+        [
+          0,
+          2,
+          5,
+          8,
+          9,
+          11,
+          12,
+          14,
+          15,
+          18
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x17",
+          "nonsquare_remainder_hex": "0x10",
+          "nonsquare_over_x_hex": "0x8",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x8"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x34",
+          "nonsquare_remainder_hex": "0x1d",
+          "nonsquare_over_x_hex": "0x34",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x1"
+        }
+      ],
+      "elapsed_seconds": 0.0034798819688148797
+    },
+    {
+      "p": 2129,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "sigma": 2129,
+      "primitive_element": 2139,
+      "component_polynomial_hex": [
+        "0xa0523",
+        "0x16c949"
+      ],
+      "component_support": [
+        [
+          0,
+          1,
+          5,
+          8,
+          10,
+          17,
+          19
+        ],
+        [
+          0,
+          3,
+          6,
+          8,
+          11,
+          14,
+          15,
+          17,
+          18,
+          20
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x1e",
+          "nonsquare_remainder_hex": "0x2c",
+          "nonsquare_over_x_hex": "0x16",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x8"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x8",
+          "nonsquare_remainder_hex": "0x10",
+          "nonsquare_over_x_hex": "0x8",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x1"
+        }
+      ],
+      "elapsed_seconds": 0.03818009200040251
+    },
+    {
+      "p": 2213,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "sigma": 2213,
+      "primitive_element": 2215,
+      "component_polynomial_hex": [
+        "0x116997",
+        "0x4db25"
+      ],
+      "component_support": [
+        [
+          0,
+          1,
+          2,
+          4,
+          7,
+          8,
+          11,
+          13,
+          14,
+          16,
+          20
+        ],
+        [
+          0,
+          2,
+          5,
+          8,
+          9,
+          11,
+          12,
+          14,
+          15,
+          18
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x17",
+          "nonsquare_remainder_hex": "0x10",
+          "nonsquare_over_x_hex": "0x8",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x8"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x34",
+          "nonsquare_remainder_hex": "0x1d",
+          "nonsquare_over_x_hex": "0x34",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x1"
+        }
+      ],
+      "elapsed_seconds": 0.04451309604337439
+    },
+    {
+      "p": 2969,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "sigma": 2969,
+      "primitive_element": 2972,
+      "component_polynomial_hex": [
+        "0xa0523",
+        "0x16c949"
+      ],
+      "component_support": [
+        [
+          0,
+          1,
+          5,
+          8,
+          10,
+          17,
+          19
+        ],
+        [
+          0,
+          3,
+          6,
+          8,
+          11,
+          14,
+          15,
+          17,
+          18,
+          20
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            6
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x1e",
+          "nonsquare_remainder_hex": "0x2c",
+          "nonsquare_over_x_hex": "0x16",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x8"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x8",
+          "nonsquare_remainder_hex": "0x10",
+          "nonsquare_over_x_hex": "0x8",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x1"
+        }
+      ],
+      "elapsed_seconds": 0.06013914599316195
+    },
+    {
+      "p": 701,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "sigma": 701,
+      "primitive_element": 703,
+      "component_polynomial_hex": [
+        "0x4081",
+        "0x8100"
+      ],
+      "component_support": [
+        [
+          0,
+          7,
+          14
+        ],
+        [
+          8,
+          15
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x0",
+          "nonsquare_remainder_hex": "0x2",
+          "nonsquare_over_x_hex": "0x1",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x0"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x0",
+          "nonsquare_remainder_hex": "0x2",
+          "nonsquare_over_x_hex": "0x1",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x0"
+        }
+      ],
+      "elapsed_seconds": 0.011941156990360469
+    },
+    {
+      "p": 1289,
+      "field_polynomial": [
+        0,
+        3
+      ],
+      "sigma": 1289,
+      "primitive_element": 1293,
+      "component_polynomial_hex": [
+        "0x4081",
+        "0x1020"
+      ],
+      "component_support": [
+        [
+          0,
+          7,
+          14
+        ],
+        [
+          5,
+          12
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            5
+          ],
+          [
+            0,
+            5
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x0",
+          "nonsquare_remainder_hex": "0x3e",
+          "nonsquare_over_x_hex": "0x1f",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x0"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x0",
+          "nonsquare_remainder_hex": "0x1d",
+          "nonsquare_over_x_hex": "0x34",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x0"
+        }
+      ],
+      "elapsed_seconds": 0.021629101946018636
+    },
+    {
+      "p": 1373,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "sigma": 1373,
+      "primitive_element": 1385,
+      "component_polynomial_hex": [
+        "0x4081",
+        "0x20008"
+      ],
+      "component_support": [
+        [
+          0,
+          7,
+          14
+        ],
+        [
+          3,
+          17
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x0",
+          "nonsquare_remainder_hex": "0x2c",
+          "nonsquare_over_x_hex": "0x16",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x0"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x0",
+          "nonsquare_remainder_hex": "0x12",
+          "nonsquare_over_x_hex": "0x9",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x0"
+        }
+      ],
+      "elapsed_seconds": 0.025533145002555102
+    },
+    {
+      "p": 2549,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "sigma": 2549,
+      "primitive_element": 2551,
+      "component_polynomial_hex": [
+        "0x4081",
+        "0x204"
+      ],
+      "component_support": [
+        [
+          0,
+          7,
+          14
+        ],
+        [
+          2,
+          9
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x0",
+          "nonsquare_remainder_hex": "0x12",
+          "nonsquare_over_x_hex": "0x9",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x0"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x0",
+          "nonsquare_remainder_hex": "0xd",
+          "nonsquare_over_x_hex": "0x3c",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x0"
+        }
+      ],
+      "elapsed_seconds": 0.04898164002224803
+    },
+    {
+      "p": 3557,
+      "field_polynomial": [
+        0,
+        2
+      ],
+      "sigma": 3557,
+      "primitive_element": 3559,
+      "component_polynomial_hex": [
+        "0x4081",
+        "0x1020"
+      ],
+      "component_support": [
+        [
+          0,
+          7,
+          14
+        ],
+        [
+          5,
+          12
+        ]
+      ],
+      "component_support_mod_3_7": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            5
+          ],
+          [
+            0,
+            5
+          ]
+        ]
+      ],
+      "factors": [
+        {
+          "factor_hex": "0x57",
+          "square_remainder_hex": "0x0",
+          "nonsquare_remainder_hex": "0x3e",
+          "nonsquare_over_x_hex": "0x1f",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x0"
+        },
+        {
+          "factor_hex": "0x75",
+          "square_remainder_hex": "0x0",
+          "nonsquare_remainder_hex": "0x1d",
+          "nonsquare_over_x_hex": "0x34",
+          "square_in_f8": true,
+          "nonsquare_over_x_in_f8": true,
+          "ratio_hex": "0x0"
+        }
+      ],
+      "elapsed_seconds": 0.0728130720090121
+    }
+  ]
+}

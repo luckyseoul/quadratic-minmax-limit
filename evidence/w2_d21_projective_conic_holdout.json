@@ -1,0 +1,24 @@
+{
+  "field_model": "F_2[x]/(0x57), with 0x75 transported by beta -> alpha^-1",
+  "vector_coordinates": "three nonsquare boundary residues divided by X and projectively normalized",
+  "quadratic_coefficient_order": ["x^2", "y^2", "z^2", "xy", "xz", "yz"],
+  "discovery_range": [29, 100000],
+  "discovery_eligible_primes": 404,
+  "holdout_range": [100001, 200000],
+  "holdout_eligible_primes": 344,
+  "candidates": [
+    {
+      "coefficients_hex": ["0x0", "0x1", "0x1e", "0x1f", "0x0", "0x0"],
+      "projective_zeros": 9,
+      "discovery_joint_zeros": [],
+      "holdout_joint_zero_primes": [113933, 140057, 144173, 167777, 187181, 195161, 198941]
+    },
+    {
+      "coefficients_hex": ["0x1", "0x16", "0x0", "0x0", "0x0", "0x9"],
+      "projective_zeros": 9,
+      "discovery_joint_zeros": [],
+      "holdout_joint_zero_primes": [120737, 123677, 133253, 140813, 165089, 175757, 188861, 198017]
+    }
+  ],
+  "conclusion": "Both sparse nondegenerate conics are discovery-set fits, not invariant pair relations."
+}
