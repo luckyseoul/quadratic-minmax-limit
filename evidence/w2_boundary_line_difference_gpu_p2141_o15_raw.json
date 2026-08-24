@@ -1,0 +1,71 @@
+{
+  "range": [
+    2141,
+    2141
+  ],
+  "requested_orders": [
+    15
+  ],
+  "n_primes": 1,
+  "uncleared": [],
+  "rows": [
+    {
+      "p": 2141,
+      "orders_tested": [
+        15
+      ],
+      "boundary_u": 1070,
+      "pole_t": 2140,
+      "clearances": [
+        {
+          "order": 15,
+          "layer": "scalar",
+          "first_difference_a_clearing_order": 3,
+          "residual_degree": 0,
+          "residual_hex": "0x1",
+          "residual_trace": [
+            {
+              "a": 1,
+              "difference_degree": 14,
+              "difference_hex": "0x5294",
+              "reciprocal_hex": "0x294a",
+              "raw_component_hex": [
+                "0x5294",
+                "0x0"
+              ],
+              "degree": 8,
+              "hex": "0x1bb"
+            },
+            {
+              "a": 2,
+              "difference_degree": 11,
+              "difference_hex": "0xeae",
+              "reciprocal_hex": "0x7570",
+              "raw_component_hex": [
+                "0x6318",
+                "0x5b6d"
+              ],
+              "degree": 8,
+              "hex": "0x1bb"
+            },
+            {
+              "a": 3,
+              "difference_degree": 14,
+              "difference_hex": "0x77fc",
+              "reciprocal_hex": "0x3fee",
+              "raw_component_hex": [
+                "0x7358",
+                "0x0"
+              ],
+              "degree": 0,
+              "hex": "0x1"
+            }
+          ]
+        }
+      ],
+      "all_orders_cleared_by_differences": true,
+      "elapsed_seconds": 0.42818964199977927
+    }
+  ],
+  "elapsed_seconds": 0.4285781709913863
+}

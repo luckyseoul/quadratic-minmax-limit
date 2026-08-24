@@ -839,6 +839,101 @@ Evidence is
 exceptional trace
 `evidence/w2_boundary_line_difference_gpu_p2141_o15_trace.json`.
 
+### Raw line components remove both the Bose convolution and the order cutoff
+
+There is an exact stronger formulation of the preceding test.  On the two
+multiplicative point-orbits, write
+
+    Delta W_i(alpha) = Delta c(alpha) Gamma_i(alpha),  i in {sq,ns}.
+
+The Bose relative-difference-set norm proved above says that `Gamma_sq` and
+`Gamma_ns` cannot both vanish at any nonprincipal odd root.  Consequently,
+for every irreducible factor `f` of the odd repetition polynomial,
+
+    f | Delta c
+      iff f | Delta W_sq and f | Delta W_ns.
+
+The same equivalence at `alpha^-1` handles reciprocal closure.  Thus the
+running scalar Aut obstruction after `k` differences is *exactly*
+
+    gcd(R_s(X^M),
+        Delta W_(1,sq), Delta W_(1,ns),
+        Delta W_(1,sq)^*, Delta W_(1,ns)^*, ...,
+        Delta W_(k,sq), Delta W_(k,ns),
+        Delta W_(k,sq)^*, Delta W_(k,ns)^*).
+
+No correlation with the generator is needed.  This is not merely a
+sufficient norm test: the non-simultaneous vanishing of the two generator
+components makes it factor-by-factor equivalent to the oriented-content
+test.
+
+`scripts/w2_boundary_scalar_prefix_gpu.py` implements this criterion.  It
+folds only the twelve selected line levels directly modulo the *complete*
+ambient odd order `H=Ms` and takes an NTL gcd with `R_s(X^M)`.  Therefore it
+tests every scalar root order at once, with no cyclotomic factorization, FFT,
+floating point, or order cutoff.  A log-free native orbit generator also
+avoids allocating the `p^2` inverse-log table which the low-order scanner
+needs.
+
+The exact all-order run at every `p == 5 (mod 12)`, `5<=p<=10000`, has no
+three-difference failure.  Three primes have `s=1` and hence vacuous scalar
+layer.  Of the other 306 primes, 291 clear after the first difference, 14
+after the second, and only `p=2141` after the third.  The delayed primes are
+
+    701, 1481, 1721, 2141, 2213, 3389, 4421,
+    5021, 5441, 5981, 6221, 6581, 6917, 8501, 9461.
+
+Factoring the exact first-difference residuals shows that their root-order
+support is confined to
+
+    {5, 7, 13, 15, 17, 21, 63}.
+
+Thus the all-order computation found no hidden high-order first-difference
+residual through 10000.  This finite exceptional-order pattern is a possible
+route to a stronger one-difference theorem with finitely many explicit
+exceptions, but it is not yet proved uniformly in `p`.
+
+At `p=2141` the complete residual after each of the first two differences is
+`0x1bb = Phi_15`; the third leaves one.  The all-order clearance index agrees
+at every one of the 170 primes with the maximum scalar clearance from an
+independent scan of every divisor order through 4095 on the first 170 primes.
+The new runs strictly strengthen that comparison by excluding all larger
+orders as well.  Their outputs are
+`evidence/w2_boundary_scalar_prefix_gpu_5_5000.json` and
+`evidence/w2_boundary_scalar_prefix_gpu_5001_10000.json`.
+
+As a larger exact endpoint, `p=30029` has `M=15015`, prime scalar odd part
+`s=7507`, and complete ambient odd order `H=112717605`.  The first square-
+component four-line residue already has gcd one with `R_s(X^M)`, so the
+scalar layer clears after the first difference.  This raises the exact
+polynomial degree by about nine times relative to the largest `p<10000`
+case.  The NUKA 5700X3D/RX 9070 XT run took 1004.8 seconds; its certificate
+is `evidence/w2_boundary_scalar_prefix_gpu_p30029.json`.
+
+The field coordinates also identify the exact character-sum parameters.
+For the code's quadratic model `omega^2=d`, the boundary pole is `t=-2/d`
+and its pole is `delta=t^-1=d(p-1)/2`.  A level-`r` line is
+`y=dr+z*omega`.  After scaling by `delta`, the two entering/leaving levels in
+`Delta c_a` become the consecutive values
+
+    2a+1, 2a+2.
+
+Writing `u=x/x_bar` on the norm-one torus gives
+
+    x = 2k u/(u+1),
+    x/(x-1) = 2k u/((2k-1)u-1).
+
+Thus the three-step statement is a local non-simultaneous-vanishing theorem
+for the six explicit Soto--Andrade-type parameters `k=3,...,8`, with the
+square/nonsquare component restriction retained.  Soto--Andrade--Vargas give
+the relevant [twisted spherical-function
+framework](https://doi.org/10.1006/jabr.2001.9042), and Kable proves global
+[orthogonality and product identities for Legendre and Soto--Andrade
+sums](https://msp.org/pjm/2002/206-1/pjm-v206-n1-p09-s.pdf).  Those are
+complex/integral identities; neither supplies the required local
+characteristic-two parity nonvanishing.  In particular, an analytic
+Ramanujan or Weil bound cannot be reduced modulo two to close this lemma.
+
 The earlier durable proof target was an *incomplete* cubic/Baer-subline
 sum: show that the zero set of this character-parity sequence cannot cover
 the valid interval `1<=a<m/2`.  A square-root discrepancy estimate of the
@@ -848,12 +943,16 @@ the characteristic-two parity being measured here.
 
 ### Revised gap
 
-For `p == 5 (mod 12)`, prove or falsify beyond order 255 that the first three
-four-line differences have scalar common Aut-gcd one.  The projective layer
-is already proved, so this would finish this congruence class.  If the
-three-step statement fails at higher order, the fallback remains the full
-incomplete cubic/Baer-subline problem: for each Aut factor-orbit `O`, show
-that the translated boundary sequence is not identically zero on the valid
+For `p == 5 (mod 12)`, prove for arbitrary `p` that the first three four-line
+differences have scalar common Aut-gcd one.  The exact all-order calculation
+establishes the statement for every eligible prime through 10000, and the
+projective layer is already proved, but the finite calculation does not
+replace the missing uniform characteristic-two character-sum argument.  A
+proof of the six consecutive Soto-Andrade-type component nonvanishings would
+finish this congruence class.  If the three-step statement eventually fails,
+the fallback remains the full incomplete cubic/Baer-subline problem: for each
+Aut factor-orbit `O`, show that the translated boundary sequence is not
+identically zero on the valid
 half-edge.  Since `O` is handled separately, no factor-count or union-bound
 loss occurs.  Other prime congruence classes still require their corresponding
 projective/scalar analysis.  A unit-content witness remains a convenient

@@ -169,12 +169,14 @@ def record(p: int, requested_orders: list[int], kernel) -> dict:
             if common[d] == 1:
                 continue
             delta = np.zeros(d, dtype=np.uint8)
+            component_values = []
             for component in range(2):
                 line_delta = np.zeros(d, dtype=np.uint8)
                 for level in levels:
                     line_delta ^= line_bins[
                         component, level, offset : offset + d
                     ]
+                component_values.append(hex(polynomial_bits(line_delta)))
                 delta ^= cyclic_crosscorrelation(
                     line_delta, gamma[component, offset : offset + d]
                 )
@@ -184,6 +186,10 @@ def record(p: int, requested_orders: list[int], kernel) -> dict:
             residual_trace[d].append(
                 {
                     "a": a,
+                    "difference_degree": value.bit_length() - 1,
+                    "difference_hex": hex(value),
+                    "reciprocal_hex": hex(reciprocal_bits(delta)),
+                    "raw_component_hex": component_values,
                     "degree": common[d].bit_length() - 1,
                     "hex": hex(common[d]),
                 }

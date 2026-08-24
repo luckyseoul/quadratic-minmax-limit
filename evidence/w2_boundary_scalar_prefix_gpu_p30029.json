@@ -1,0 +1,39 @@
+{
+  "range": [
+    30029,
+    30029
+  ],
+  "congruence_class": "p == 5 (mod 12)",
+  "prefix": 3,
+  "order_scope": "all roots of R_s(X^M); no order cutoff",
+  "gcd_backend": "ntl",
+  "n_primes": 1,
+  "failures": [],
+  "rows": [
+    {
+      "p": 30029,
+      "ambient_oddpart": 112717605,
+      "projective_order": 15015,
+      "scalar_order": 7507,
+      "prefix": 3,
+      "n_selected_levels": 4,
+      "pole_t": 30028,
+      "scalar_layer_vacuous": false,
+      "first_difference_a_clearing_scalar_layer": 1,
+      "residual_scalar_degree": 0,
+      "residual_scalar_hex": "0x1",
+      "residual_trace": [
+        {
+          "a": 1,
+          "component_weights": [
+            60020
+          ],
+          "residual_scalar_degree": 0,
+          "residual_scalar_hex": "0x1"
+        }
+      ],
+      "elapsed_seconds": 1004.8412183140172
+    }
+  ],
+  "elapsed_seconds": 1004.8462603120133
+}

@@ -129,3 +129,34 @@ def field_orbits(
     if status:
         raise RuntimeError(f"native field orbit generation failed with {status}")
     return square, nonsquare, logarithm
+
+
+def field_two_orbits(
+    p: int,
+    ia: int,
+    ib: int,
+    generator: int,
+    omega: int,
+) -> tuple[np.ndarray, np.ndarray]:
+    """Generate the two point-orbits without allocating an inverse-log table."""
+    q = p * p
+    orbit_length = (q - 1) // 2
+    if orbit_length >= 1 << 31:
+        raise ValueError("native uint32 orbit encoding requires p < 65536")
+    square = np.empty(orbit_length, dtype=np.uint32)
+    nonsquare = np.empty(orbit_length, dtype=np.uint32)
+    pointer = ctypes.POINTER(ctypes.c_uint32)
+    status = _load().qml_field_orbits(
+        p,
+        ia,
+        ib,
+        generator,
+        omega,
+        square.ctypes.data_as(pointer),
+        nonsquare.ctypes.data_as(pointer),
+        None,
+        orbit_length,
+    )
+    if status:
+        raise RuntimeError(f"native field orbit generation failed with {status}")
+    return square, nonsquare
