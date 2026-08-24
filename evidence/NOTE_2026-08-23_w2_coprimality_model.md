@@ -795,7 +795,51 @@ count is not coming from a bounded-order recurrence.  Apart from
 `a -> m-a`, searches found no affine symmetry that forces a valid bad point
 to pair with a good point.
 
-The durable proof target is therefore an *incomplete* cubic/Baer-subline
+### General four-line differences isolate a three-step scalar target
+
+The four-line reduction is not special to `Phi_3`.  For every odd order `d`,
+fold each pullback line by exponent class modulo `d`, reconstruct the oriented
+content with the two Bose-generator correlations, and form the running gcd
+
+    gcd(Phi_d, Delta c_1, Delta c_1^*,
+                 Delta c_2, Delta c_2^*, ...),
+
+where `Delta c_a=c_(a+1)+c_a`.  If this gcd is one, no primitive-order-`d`
+Aut orbit can kill every genuine boundary row.  Unlike the original contents,
+the differences contain no interval halfspace at all: each is exactly four
+Baer-subline incidence vectors.
+
+`scripts/w2_boundary_line_difference_gpu.py` computes all line-level residue
+tables in one `O(p^2)` CUDA/HIP atomic pass and then runs the tiny exact gcd
+chain.  Its `Phi_3` result agrees with the independent full translation
+sequence at `p=17`, including the first nonzero difference `c_3+c_2`.
+
+Across all 309 primes `p == 5 (mod 12)`, `5<=p<=10000`, every odd order
+`d<=255` dividing the ambient odd order is cleared by valid four-line
+differences, except the degenerate `p=5` boundary with no consecutive valid
+rows (the known direct normalized witness handles it).  This comprises 2,663
+primitive orders.  The existing projective-line theorem already handles the
+1,393 projective orders.  Of the 1,270 genuinely scalar orders, 1,249 clear
+after `Delta c_1`, 20 after `Delta c_2`, and exactly one after `Delta c_3`:
+`p=2141,d=15`, whose residual chain is
+
+    Phi_15, Phi_15, 1.
+
+Thus the new finite theorem candidate in this congruence class is precise:
+prove that the first three explicit four-line differences have no common
+factor in the scalar layer `R_s(X^M)`.  This is materially different from the
+false fixed-endpoint conjectures: it is an algebraic incidence statement with
+the interval term cancelled before the gcd.  The census still tests only
+orders through 255 and is not a proof; higher scalar orders could falsify the
+three-step statement.
+
+Evidence is
+`evidence/w2_boundary_line_difference_gpu_5_5000_o255.json`,
+`evidence/w2_boundary_line_difference_gpu_5001_10000_o255.json`, and the
+exceptional trace
+`evidence/w2_boundary_line_difference_gpu_p2141_o15_trace.json`.
+
+The earlier durable proof target was an *incomplete* cubic/Baer-subline
 sum: show that the zero set of this character-parity sequence cannot cover
 the valid interval `1<=a<m/2`.  A square-root discrepancy estimate of the
 right strength would suffice in the `p == 5 (mod 12)` class, and the census
@@ -804,14 +848,15 @@ the characteristic-two parity being measured here.
 
 ### Revised gap
 
-For `Phi_3`, prove that the incomplete cubic/Baer-subline parity sequence
-just derived is nonzero somewhere on the valid half-edge.  For a general
-Aut factor-orbit `O`, derive the analogous translated boundary
-`c_a mod f_O` as a finite-field multiplicative Fourier/Jacobi sum and show
-it is not identically zero there.  Since `O` is handled separately, no
-factor-count or union-bound loss occurs.  The formal `a=0` antipodal pair is
-a unit, but the growing Φ_3 prefixes and maximal linear complexity rule out
-propagation by a bounded-row recurrence.  A unit-content witness remains a
-convenient computational certificate, but is no longer the proof target.
+For `p == 5 (mod 12)`, prove or falsify beyond order 255 that the first three
+four-line differences have scalar common Aut-gcd one.  The projective layer
+is already proved, so this would finish this congruence class.  If the
+three-step statement fails at higher order, the fallback remains the full
+incomplete cubic/Baer-subline problem: for each Aut factor-orbit `O`, show
+that the translated boundary sequence is not identically zero on the valid
+half-edge.  Since `O` is handled separately, no factor-count or union-bound
+loss occurs.  Other prime congruence classes still require their corresponding
+projective/scalar analysis.  A unit-content witness remains a convenient
+computational certificate, but is no longer the proof target.
 
 W2 stays OPEN.  No proposition number or closure flag is claimed.

@@ -227,7 +227,7 @@ def cyclotomic_bits(order: int) -> int:
 def record(
     p: int,
     requested_orders: list[int],
-    offsets_requested: list[int],
+    offsets_requested: list[int] | None,
     kernel,
 ) -> dict:
     import cupy as cp
@@ -265,11 +265,14 @@ def record(
             },
         }
 
-    endpoint_offsets = [
-        value
-        for value in offsets_requested
-        if projective_order + value < p
-    ]
+    if offsets_requested is None:
+        endpoint_offsets = list(range((p - 1) // 2))
+    else:
+        endpoint_offsets = [
+            value
+            for value in offsets_requested
+            if projective_order + value < p
+        ]
     inverse, legendre = inverse_and_legendre_tables(p)
     pole_parameters = []
     global_flips = []
@@ -303,50 +306,61 @@ def record(
         memory_pool.set_limit(fraction=0.75)
     d_inverse = cp.asarray(inverse)
     d_legendre = cp.asarray(legendre)
-    d_poles = cp.asarray(pole_parameters, dtype=cp.uint32)
-    d_flips = cp.asarray(global_flips, dtype=cp.uint8)
     d_orders = cp.asarray(orders, dtype=cp.uint32)
     d_offsets = cp.asarray(order_offsets, dtype=cp.uint32)
-    output = cp.zeros(
-        (2, len(endpoint_offsets), total_order), dtype=cp.uint32
+    endpoint_bins = np.empty(
+        (2, len(endpoint_offsets), total_order), dtype=np.uint8
     )
     threads = 256
     blocks = min(2048, (len(square) + threads - 1) // threads)
-    shared_bytes = len(endpoint_offsets) * total_order * 4
-    if shared_bytes > 48 * 1024:
+    max_batch = (48 * 1024) // (total_order * 4)
+    if max_batch == 0:
         raise RuntimeError(
-            f"shared residue bins need {shared_bytes} bytes; reduce --max-order"
+            f"one endpoint needs {total_order * 4} shared bytes; "
+            "reduce --max-order"
         )
     for component, points in enumerate((square, nonsquare)):
         d_points = cp.asarray(points)
-        kernel(
-            (blocks,),
-            (threads,),
-            (
-                d_points,
-                np.uint64(len(points)),
-                np.uint32(component),
-                np.uint32(p),
-                np.uint32(ia),
-                np.uint32(ib),
-                np.uint32(sinv_a),
-                np.uint32(sinv_b),
-                d_inverse,
-                d_legendre,
-                d_poles,
-                d_flips,
-                np.uint32(len(endpoint_offsets)),
-                d_orders,
-                d_offsets,
-                np.uint32(len(orders)),
-                np.uint32(total_order),
-                output,
-            ),
-            shared_mem=shared_bytes,
-        )
+        for batch_start in range(0, len(endpoint_offsets), max_batch):
+            batch_stop = min(batch_start + max_batch, len(endpoint_offsets))
+            batch_poles = pole_parameters[batch_start:batch_stop]
+            batch_flips = global_flips[batch_start:batch_stop]
+            d_poles = cp.asarray(batch_poles, dtype=cp.uint32)
+            d_flips = cp.asarray(batch_flips, dtype=cp.uint8)
+            output = cp.zeros(
+                (2, len(batch_poles), total_order), dtype=cp.uint32
+            )
+            shared_bytes = len(batch_poles) * total_order * 4
+            kernel(
+                (blocks,),
+                (threads,),
+                (
+                    d_points,
+                    np.uint64(len(points)),
+                    np.uint32(component),
+                    np.uint32(p),
+                    np.uint32(ia),
+                    np.uint32(ib),
+                    np.uint32(sinv_a),
+                    np.uint32(sinv_b),
+                    d_inverse,
+                    d_legendre,
+                    d_poles,
+                    d_flips,
+                    np.uint32(len(batch_poles)),
+                    d_orders,
+                    d_offsets,
+                    np.uint32(len(orders)),
+                    np.uint32(total_order),
+                    output,
+                ),
+                shared_mem=shared_bytes,
+            )
+            endpoint_bins[
+                component, batch_start:batch_stop
+            ] = (cp.asnumpy(output[component]) & 1).astype(np.uint8)
         del d_points
     cp.cuda.runtime.deviceSynchronize()
-    endpoint_bins = (cp.asnumpy(output) & 1).astype(np.uint8)
     gpu_seconds = time.perf_counter() - gpu_started
 
     classify_started = time.perf_counter()
@@ -412,7 +426,11 @@ def main() -> None:
     parser.add_argument("--max-order", type=int, default=63)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
-    endpoint_offsets = [int(value) for value in args.offsets.split(",")]
+    endpoint_offsets = (
+        None
+        if args.offsets == "all"
+        else [int(value) for value in args.offsets.split(",")]
+    )
     if args.orders:
         requested_orders = sorted(
             set(int(value) for value in args.orders.split(","))
@@ -448,7 +466,7 @@ def main() -> None:
         "range": [args.start, args.stop],
         "congruence_class": "p == 5 (mod 12)",
         "requested_orders": requested_orders,
-        "endpoint_offsets": endpoint_offsets,
+        "endpoint_offsets": "all" if endpoint_offsets is None else endpoint_offsets,
         "n_primes": len(rows),
         "exceptions": all_exceptions,
         "rows": rows,
