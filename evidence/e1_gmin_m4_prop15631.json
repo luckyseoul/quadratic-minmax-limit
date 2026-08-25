@@ -1,0 +1,114 @@
+{
+  "prop": "15.631",
+  "title": "Radial dual-shadow transform of the Max+ odd coset",
+  "proved": {
+    "odd_coset_dual_phase_is_norm_parity_all_odd_p": true,
+    "dual_first_gap_all_odd_p": true,
+    "minimum_dual_harmonic_shell_coefficient": true,
+    "R1": false,
+    "phi_F_ge_6_proved_general": false,
+    "global_QVAR": false
+  },
+  "theorem": {
+    "proved": true,
+    "phase_theorem": "For u=Pz in L* and odd y0 in L, <u,y0> congruent to 2p||u||^2 mod 2; the odd-coset Poisson phase is radial.",
+    "poisson_transform": "Theta_{y0+2L,H}(t)=t^(-d/2-4)/vol(2L) times the sum over u in L* of (-1)^(2p||u||^2)H(u/2)exp(-pi||u||^2/(4t)).",
+    "dual_gap": "The minimum shell is +-Pe_i at norm 1/2; every other nonzero dual vector has norm at least (p-1)/p.",
+    "rows": {
+      "3": {
+        "rank": 5,
+        "dual_first_norm": "1/2",
+        "dual_second_norm_lower": "2/3",
+        "scaled_norm_gap": [
+          3,
+          4
+        ],
+        "minimum_shell_phase": -1,
+        "minimum_harmonic_shell_sum_for_unit_W": "-2/7",
+        "phased_half_shell_contribution_for_unit_W": "1/56",
+        "checks": true
+      },
+      "5": {
+        "rank": 13,
+        "dual_first_norm": "1/2",
+        "dual_second_norm_lower": "4/5",
+        "scaled_norm_gap": [
+          5,
+          8
+        ],
+        "minimum_shell_phase": -1,
+        "minimum_harmonic_shell_sum_for_unit_W": "-2/15",
+        "phased_half_shell_contribution_for_unit_W": "1/120",
+        "checks": true
+      },
+      "7": {
+        "rank": 25,
+        "dual_first_norm": "1/2",
+        "dual_second_norm_lower": "6/7",
+        "scaled_norm_gap": [
+          7,
+          12
+        ],
+        "minimum_shell_phase": -1,
+        "minimum_harmonic_shell_sum_for_unit_W": "-2/27",
+        "phased_half_shell_contribution_for_unit_W": "1/216",
+        "checks": true
+      },
+      "11": {
+        "rank": 61,
+        "dual_first_norm": "1/2",
+        "dual_second_norm_lower": "10/11",
+        "scaled_norm_gap": [
+          11,
+          20
+        ],
+        "minimum_shell_phase": -1,
+        "minimum_harmonic_shell_sum_for_unit_W": "-2/63",
+        "phased_half_shell_contribution_for_unit_W": "1/504",
+        "checks": true
+      },
+      "13": {
+        "rank": 85,
+        "dual_first_norm": "1/2",
+        "dual_second_norm_lower": "12/13",
+        "scaled_norm_gap": [
+          13,
+          24
+        ],
+        "minimum_shell_phase": -1,
+        "minimum_harmonic_shell_sum_for_unit_W": "-2/87",
+        "phased_half_shell_contribution_for_unit_W": "1/696",
+        "checks": true
+      },
+      "17": {
+        "rank": 145,
+        "dual_first_norm": "1/2",
+        "dual_second_norm_lower": "16/17",
+        "scaled_norm_gap": [
+          17,
+          32
+        ],
+        "minimum_shell_phase": -1,
+        "minimum_harmonic_shell_sum_for_unit_W": "-2/147",
+        "phased_half_shell_contribution_for_unit_W": "1/1176",
+        "checks": true
+      },
+      "19": {
+        "rank": 181,
+        "dual_first_norm": "1/2",
+        "dual_second_norm_lower": "18/19",
+        "scaled_norm_gap": [
+          19,
+          36
+        ],
+        "minimum_shell_phase": -1,
+        "minimum_harmonic_shell_sum_for_unit_W": "-2/183",
+        "phased_half_shell_contribution_for_unit_W": "1/1464",
+        "checks": true
+      }
+    }
+  },
+  "consequence": "The unknown theta transform is no longer vector-valued at its phase: it is a scalar norm-parity twist with an explicit first dual shell and a gap to all remaining dual vectors.",
+  "remaining_obstruction": "Degree-four sums on the higher dual shells have no proved sign or majorant strong enough to isolate the first odd-coset shell.",
+  "L_status": "OPEN"
+}

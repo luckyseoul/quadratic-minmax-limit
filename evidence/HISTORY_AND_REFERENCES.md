@@ -316,6 +316,31 @@ first shell of the odd coset `y0+2L`, not the ordinary minimum shell of `L*`.
 
 ---
 
+## 7f. The odd coset has a radial dual phase (2026-08-25)
+
+Proposition 15.631 proves that for every Max+ odd vector `y0 in L` and every
+`u=Pz in L*`,
+
+\[
+ \langle u,y_0\rangle\equiv 2p\|u\|^2\pmod2.
+\]
+
+Consequently the degree-four Poisson transform of `y0+2L` has the scalar
+twist `(-1)^(2p||u||^2)`: it has no unidentified glue-class phase and is
+independent of the chosen Max+ vector.  Together with Proposition 15.630,
+this gives an exact first dual gap from `1/2` to at least `(p-1)/p` and an
+explicit positive phased first-shell coefficient
+`||W||_F^2/[8(d+2)]` for the R1 harmonic.
+
+This resembles the characteristic-vector/shadow machinery used by Elkies
+and by Rains--Sloane, but it is not an application of their unimodular or
+strongly modular theorems.  The Paley lattice is non-unimodular with growing
+level `4p`, and R1 asks for a degree-four harmonic coefficient of one odd
+coset.  Higher dual shells still have uncontrolled signed harmonic mass, so
+the result sharpens the exact R1 target without closing it.
+
+---
+
 ## 8. What is not in the older literature
 
 - No 1930s–1970s theorem that \(\lim n^{-3/2}\min_A\max_x|x^\top Ax|\) exists.
@@ -357,5 +382,7 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 26. A. Böttcher, L. Fukshansky, S. R. Garcia, H. Maharaj, D. Needell, *Lattices from tight equiangular frames*, Linear Algebra Appl. **510** (2016), 395--420, https://www1.cmc.edu/pages/faculty/lenny/papers/lattices_frames.pdf
 27. R. Chapman, *Conference matrices and unimodular lattices*, [arXiv:math/0007116](https://arxiv.org/abs/math/0007116) (nearby conference-lattice construction; not the integral (+p)-kernel here).
 28. E. M. Rains and N. J. A. Sloane, *The Shadow Theory of Modular and Unimodular Lattices*, J. Number Theory **73** (1998), 359--389, [arXiv:math/0207294](https://arxiv.org/abs/math/0207294) (methodological comparison; its strongly modular hypotheses do not close R1).
+29. N. D. Elkies, *A characterization of the `Z^n` lattice*, Math. Res. Lett. **2** (1995), 321--326, [arXiv:math/9906019](https://arxiv.org/abs/math/9906019) (characteristic-vector/shadow precedent for unimodular lattices; not directly applicable to the level-`4p` Paley lattice).
+30. N. D. Elkies, *Lattices and codes with long shadows*, Math. Res. Lett. **7** (2000), 151--164, [arXiv:math/9906086](https://arxiv.org/abs/math/9906086) (modular-form use of odd cosets in the unimodular setting; methodological comparison only).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

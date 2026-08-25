@@ -1,5 +1,15 @@
 # Status (2026-08-25)
 
+**15.631 PROVED structure, not R1**: for every Max+ odd vector `y0 in L`
+and every `u=Pz in L*`,
+`<u,y0> = 2p||u||^2 (mod 2)`.  Thus Poisson summation on `y0+2L` has
+the scalar radial phase `(-1)^(2p||u||^2)`, independent of the Max+ vector
+and of all other glue data.  The first dual shell is exactly `+-Pe_i` at
+norm `1/2`; every other nonzero dual vector has norm at least `(p-1)/p`.
+For the R1 degree-four harmonic, the phased first dual shell contributes
+`||W||_F^2/[8(d+2)]`.  Higher dual-shell harmonic sums remain uncontrolled,
+so R1 and global QVAR remain OPEN.
+
 **15.630 PROVED structure, not R1**: the adjacent ETF lattice
 `L*=P Z^n` has exact minimum `1/2`, with complete minimum shell
 `{+-P e_i}` and kissing number `2(p^2+1)` for every odd prime.  The proof
