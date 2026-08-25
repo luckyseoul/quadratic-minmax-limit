@@ -285,6 +285,37 @@ structural advance toward R1, not a proof of R1 or of the global limit.
 
 ---
 
+## 7e. The exact dual minimum shell (2026-08-25)
+
+Proposition 15.630 proves for every odd prime that
+
+\[
+\min(L^*)={1\over2},\qquad
+\operatorname{Min}(L^*)=\{\pm Pe_i\},\qquad
+|\operatorname{Min}(L^*)|=2(p^2+1).
+\]
+
+The proof is arithmetic rather than an extrapolated lattice census.  Circle
+pairings obey an exact Parseval identity.  A nonzero common profile sum is
+handled by sharp integer balancing.  At common sum zero, the profile-glue
+annihilator is a family of projective Reed--Solomon MDS moment codes; Newton
+identities turn their support constraints into the sharp positive-mass floor
+`(p-1)/2`.
+
+After scaling by `sqrt(2)`, this is the rational ETF lattice studied by
+Böttcher--Fukshansky--Garcia--Maharaj--Needell.  Their 2016 paper proved the
+exact signed-frame shell computationally for `(5,10)` and `(13,26)` and left
+the `(25,50)` shell as `?, ?` in Table 1.  Proposition 15.630 recovers those
+finite cases and settles the first (minimum-shell) question for the standard
+Paley family at all odd primes; it does not separately settle whether a
+minimal-vector subset is a lattice basis.  OEIS
+searches found no object entry for the resulting signed-minimum counts.
+
+This does not prove R1: the remaining harmonic coefficient belongs to the
+first shell of the odd coset `y0+2L`, not the ordinary minimum shell of `L*`.
+
+---
+
 ## 8. What is not in the older literature
 
 - No 1930s–1970s theorem that \(\lim n^{-3/2}\min_A\max_x|x^\top Ax|\) exists.

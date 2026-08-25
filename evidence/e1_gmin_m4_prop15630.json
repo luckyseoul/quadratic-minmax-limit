@@ -1,0 +1,169 @@
+{
+  "prop": "15.630",
+  "title": "Exact minimum shell of the dual Paley eigenspace lattice",
+  "proved": {
+    "dual_minimum_eq_one_half_all_odd_p": true,
+    "dual_minimal_vectors_exactly_signed_frame_all_odd_p": true,
+    "R1": false,
+    "phi_F_ge_6_proved_general": false,
+    "residual_ii_k_eq_4p_empty": false
+  },
+  "theorem": {
+    "proved": true,
+    "theorem": "For every odd prime p, min(L*)=1/2 and the complete minimum shell is {+-P e_i}; its cardinality is 2(p^2+1).",
+    "nonzero_sum_proof": "Integer balancing and the circle-frame identity give 2p||x||^2 >= (p+1)f_p(t)-t^2 >= p for t!=0.",
+    "zero_sum_proof": "The profile moments lie in projective Reed--Solomon MDS codes. MDS support plus Newton identities force positive mass at least (p-1)/2, hence profile energy at least p-1.",
+    "rows": {
+      "3": {
+        "directions": 2,
+        "minimum": "1/2",
+        "minimal_vectors": 20,
+        "zero_sum_energy_floor": 2,
+        "zero_sum_norm_floor": "2/3",
+        "mass_floors_by_active_profile_count": [
+          1,
+          2
+        ],
+        "checks": true
+      },
+      "5": {
+        "directions": 3,
+        "minimum": "1/2",
+        "minimal_vectors": 52,
+        "zero_sum_energy_floor": 4,
+        "zero_sum_norm_floor": "4/5",
+        "mass_floors_by_active_profile_count": [
+          2,
+          2,
+          3
+        ],
+        "checks": true
+      },
+      "7": {
+        "directions": 4,
+        "minimum": "1/2",
+        "minimal_vectors": 100,
+        "zero_sum_energy_floor": 6,
+        "zero_sum_norm_floor": "6/7",
+        "mass_floors_by_active_profile_count": [
+          3,
+          4,
+          3,
+          4
+        ],
+        "checks": true
+      },
+      "11": {
+        "directions": 6,
+        "minimum": "1/2",
+        "minimal_vectors": 244,
+        "zero_sum_energy_floor": 10,
+        "zero_sum_norm_floor": "10/11",
+        "mass_floors_by_active_profile_count": [
+          5,
+          8,
+          9,
+          8,
+          5,
+          6
+        ],
+        "checks": true
+      },
+      "13": {
+        "directions": 7,
+        "minimum": "1/2",
+        "minimal_vectors": 340,
+        "zero_sum_energy_floor": 12,
+        "zero_sum_norm_floor": "12/13",
+        "mass_floors_by_active_profile_count": [
+          6,
+          10,
+          12,
+          12,
+          10,
+          6,
+          7
+        ],
+        "checks": true
+      },
+      "17": {
+        "directions": 9,
+        "minimum": "1/2",
+        "minimal_vectors": 580,
+        "zero_sum_energy_floor": 16,
+        "zero_sum_norm_floor": "16/17",
+        "mass_floors_by_active_profile_count": [
+          8,
+          14,
+          18,
+          20,
+          20,
+          18,
+          14,
+          8,
+          9
+        ],
+        "checks": true
+      },
+      "19": {
+        "directions": 10,
+        "minimum": "1/2",
+        "minimal_vectors": 724,
+        "zero_sum_energy_floor": 18,
+        "zero_sum_norm_floor": "18/19",
+        "mass_floors_by_active_profile_count": [
+          9,
+          16,
+          21,
+          24,
+          25,
+          24,
+          21,
+          16,
+          9,
+          10
+        ],
+        "checks": true
+      }
+    }
+  },
+  "pari_certificate": {
+    "certified": true,
+    "backend": "PARI/GP matkerint + exact qfminim on 2p Gram(L*)",
+    "rows": {
+      "3": {
+        "scaled_min": 3,
+        "count": 20,
+        "checks": true
+      },
+      "5": {
+        "scaled_min": 5,
+        "count": 52,
+        "checks": true
+      },
+      "7": {
+        "scaled_min": 7,
+        "count": 100,
+        "checks": true
+      },
+      "11": {
+        "scaled_min": 11,
+        "count": 244,
+        "checks": true
+      },
+      "13": {
+        "scaled_min": 13,
+        "count": 340,
+        "checks": true
+      }
+    }
+  },
+  "consequence": "The adjacent rational-ETF lattice L*=P Z^n has no hidden short vectors: its ordinary minimum shell is exactly the Paley ETF frame and its negatives.",
+  "not_claimed": [
+    "R1 or lambda_min(Phi)>=6",
+    "a sign for the degree-four odd-coset harmonic coefficient",
+    "5+-level/even-k>4p residual-(ii)",
+    "L=1/2"
+  ],
+  "L_status": "OPEN"
+}

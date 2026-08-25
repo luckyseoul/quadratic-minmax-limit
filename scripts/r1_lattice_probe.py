@@ -105,13 +105,19 @@ def square_line_vectors(p: int) -> tuple[np.ndarray, np.ndarray]:
     return basis, all_circles
 
 
-def probe(p: int) -> dict:
+def probe(p: int, dual_min: bool = False) -> dict:
     C = paley_conference(p)
     A = C - p * np.eye(len(C), dtype=np.int64)
     V, Vall = square_line_vectors(p)
     if not np.array_equal(A @ V, np.zeros_like(V)):
         raise ArithmeticError("square-line columns are not +p eigenvectors")
+    dual_min_program = """
+DM=qfminim(2*P*Ginv,,100000);
+print("DUALMINCOUNT=",DM[1]);
+print("DUALMINSCALED=",DM[2]);
+""" if dual_min else ""
     program = f"""
+P={p};
 A={gp_matrix(A)};
 B=matkerint(A);
 G=B~*B;
@@ -130,40 +136,80 @@ print("SNF=",matsnf(G));
 print("CONTENT=",content(G));
 print("DUALDEN=",DUALDEN);
 print("LEVEL=",LEVEL);
+{dual_min_program}
 print("LINEDET=",matdet(GV));
 print("LINEINDEX=",sqrtint(matdet(GV)/matdet(G)));
 print("ALLCIRCLEINDEX=",abs(matdet(H)));
 quit;
 """
     proc = subprocess.run(
-        ["gp", "-q"],
+        ["gp", "-q", "-s", "512M"],
         input=program,
         text=True,
         capture_output=True,
         check=True,
     )
+    if "***" in proc.stderr:
+        raise RuntimeError(f"PARI/GP failed: {proc.stderr.strip()}")
     parsed: dict[str, object] = {"p": p, "n": p * p + 1}
+    expected_keys = {
+        "RANK",
+        "DET",
+        "SNF",
+        "CONTENT",
+        "DUALDEN",
+        "LEVEL",
+        "DUALMINCOUNT",
+        "DUALMINSCALED",
+        "LINEDET",
+        "LINEINDEX",
+        "ALLCIRCLEINDEX",
+    }
     for line in proc.stdout.splitlines():
-        key, value = line.split("=", 1)
+        if "=" not in line:
+            continue
+        raw_key, value = line.split("=", 1)
+        raw_key = raw_key.strip()
+        if raw_key not in expected_keys:
+            continue
+        key = raw_key.lower()
         key = key.strip().lower()
         value = value.strip()
         if key == "snf":
             parsed[key] = ast.literal_eval(value.replace("[", "[").replace("]", "]"))
         else:
-            parsed[key] = int(value)
+            try:
+                parsed[key] = int(value)
+            except ValueError as exc:
+                raise RuntimeError(
+                    f"PARI returned a nonintegral {raw_key} value {value!r}; "
+                    f"stderr was {proc.stderr.strip()!r}"
+                ) from exc
     return parsed
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("p", nargs="*", type=int, default=[3, 5, 7, 11])
+    parser.add_argument(
+        "--dual-min",
+        action="store_true",
+        help="enumerate the minimum of L* after scaling its Gram form by 2p",
+    )
     args = parser.parse_args()
     for p in args.p:
-        row = probe(p)
+        row = probe(p, dual_min=args.dual_min)
+        dual_min_text = ""
+        if args.dual_min:
+            dual_min_text = (
+                f" dual_min={row['dualminscaled']}/(2p)"
+                f" dual_min_count={row['dualmincount']}"
+            )
         print(
             f"p={p} n={row['n']} rank={row['rank']} det={row['det']} "
             f"content={row['content']} snf={row['snf']} "
             f"dual_den={row['dualden']} level={row['level']} "
+            f"{dual_min_text} "
             f"line_det={row['linedet']} line_index={row['lineindex']} "
             f"all_circle_index={row['allcircleindex']}"
         )

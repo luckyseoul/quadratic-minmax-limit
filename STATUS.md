@@ -1,4 +1,15 @@
-# Status (2026-08-24)
+# Status (2026-08-25)
+
+**15.630 PROVED structure, not R1**: the adjacent ETF lattice
+`L*=P Z^n` has exact minimum `1/2`, with complete minimum shell
+`{+-P e_i}` and kissing number `2(p^2+1)` for every odd prime.  The proof
+uses the circle-frame energy identity, integer balancing for nonzero common
+profile sum, and the Prop. 15.629 glue as a projective Reed--Solomon MDS code
+plus Newton identities at common sum zero.  This recovers the finite
+`(5,10)` and `(13,26)` ETF results of Böttcher et al. and settles the standard
+Paley `(25,50)` minimum-shell question (the first `?` in their table).  It
+does not separately assert a basis chosen from the minimal vectors.  It is the ordinary shell of
+`L*`, not the odd-coset shell of `y0+2L`; R1 and global QVAR remain OPEN.
 
 **15.629 PROVED structure, not R1**: for
 `L=ker_Z(C-pI)` and the square-circle lattice `A`, the profile coefficient
