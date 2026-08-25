@@ -1,0 +1,85 @@
+{
+  "prop": "15.649",
+  "title": "Balanced p=7 negative two-point exclusion",
+  "proved": true,
+  "theorem": {
+    "proved": true,
+    "balanced_p7_negative_two_point_closed": true,
+    "all_p7_negative_two_point_profiles_closed": true,
+    "p7_profile": {
+      "positive_negative_baselines": [
+        3,
+        3
+      ],
+      "exception_parallel_counts": [
+        4,
+        4
+      ],
+      "infinity_edges": 3,
+      "finite_edges": 26
+    },
+    "lift_classification": {
+      "histogram_counts": {
+        "2,2,2,2,2": 56,
+        "1,1,1,1,1,1,2,2": 280,
+        "1,1,1,1,1,1,1,1,2": 420,
+        "1,1,1,1,1,1,1,1,1,1": 1008
+      },
+      "possible_support_sizes": [
+        5,
+        8,
+        9,
+        10
+      ],
+      "maximum_value": 2,
+      "total_labelled_vectors": 1764,
+      "enumeration_complete": true
+    },
+    "fixed_star_certificate": {
+      "all_stars_per_pair": 18424,
+      "exception_pair_orbit_representatives": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "stabilizer_size_per_pair": 6,
+      "pairs": {
+        "0_1": {
+          "l1_filtered": 210,
+          "surviving_stars": 18214,
+          "orbit_count": 3038,
+          "main_infeasible": 3020,
+          "retried_infeasible": 18
+        },
+        "0_3": {
+          "l1_filtered": 210,
+          "surviving_stars": 18214,
+          "orbit_count": 3038,
+          "main_infeasible": 3029,
+          "retried_infeasible": 9
+        }
+      },
+      "total_orbits": 6076,
+      "main_infeasible": 6049,
+      "retried_infeasible": 27,
+      "final_unknown": 0,
+      "final_feasible": 0,
+      "complete": true
+    },
+    "certificate_archive": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-25-balanced-p7/balanced_p7_certificate_2026-08-25.tar.gz",
+    "certificate_archive_sha256": "3aaf86364daf20ff3727382d49e9a6600a1b1239c3e2b827ab4f249c1b4b3f62",
+    "raw_manifest_sha256": "2c269d29eba9434a05d5628b0055f0fa101a87b15fcb3bbd2c1deb28080f202d",
+    "remaining_negative_two_point_cases": [
+      "p=5"
+    ],
+    "closes_negative_product_infinity_point_branch_all_primes": false,
+    "closes_residual_ii": false,
+    "closes_R1": false,
+    "L_status": "OPEN"
+  }
+}
