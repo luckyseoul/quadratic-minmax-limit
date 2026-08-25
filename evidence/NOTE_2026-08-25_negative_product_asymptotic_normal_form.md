@@ -1,9 +1,10 @@
 # Asymptotic normal form of the negative infinity-point boundary
 
-Date: 2026-08-25. This is Proposition 15.644. It reduces, but does not
-exclude, the residual branch `D={infinity,v}`, `c_H=-1` for all sufficiently
-large odd primes. Small primes, other boundaries, residual (ii), Type I, R1,
-global QVAR, and the limit remain open.
+Date: 2026-08-25. This is Proposition 15.644. It reduces, but by itself does
+not exclude, the residual branch `D={infinity,v}`, `c_H=-1` for all
+sufficiently large odd primes. Proposition 15.646 subsequently excludes this
+normal form by a signed transverse-sum contradiction. Small primes, other
+boundaries, residual (ii), Type I, R1, global QVAR, and the limit remain open.
 
 ## 1. Exactly one exception of each type
 
@@ -147,7 +148,8 @@ parallel class in one fibre of size one and `p-1` fibres of size two. This
 is a geometric lead, not part of the proved classification. The next task is
 to derive that two-line structure from the complete inter-fibre `l1`
 constraints, then test whether its finite edge graph can satisfy all signed
-baseline identities.
+baseline identities. Proposition 15.646 later bypasses this proposed step:
+summing the signed baseline identities already contradicts (15).
 
 ## 6. Literature check
 

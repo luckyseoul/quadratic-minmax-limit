@@ -78,14 +78,16 @@ rigid, while the negative branch has at most three exceptional directions
 per quadratic type, uniformly in `p>=5`.
 Proposition 15.643 converts the positive-product rigidity into a complete
 branch exclusion for every odd `p>=17` using parallel-count divisibility and
-an exact inter-fibre `l1` budget. The four smaller primes and negative-product
-branch remain.
+an exact inter-fibre `l1` budget. Its four smaller positive-product cases
+remain.
 For the negative-product branch, Proposition 15.644 uses the asymptotic
 slice-distance theorem to force one exceptional direction of each type and
-reduces every sufficiently large prime to a unique near-two-line arithmetic
-profile.
-Proposition 15.645 further proves that every baseline fibre-intersection
-profile is the ideal `(1,2,...,2)` profile or differs by one unit transfer.
+reduces every sufficiently large prime to a unique arithmetic profile.
+Proposition 15.645 further proves exact baseline fibre rigidity. Proposition
+15.646 then sums the inter-fibre identities: every baseline transverse signed
+sum must be zero, while the exceptional split forces a signed sum `+4` or
+`-4` in one baseline type. Thus the complete negative-product branch is
+excluded for all sufficiently large primes.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -104,6 +106,7 @@ graph TD
     MULTI --> BUDGET["affine parity budget<br/>Eulerian boundary <b>CLOSED</b> (15.632)"]
     BUDGET --> RIGID["infinity + point boundary<br/>rigid / at most 3 exceptions per type (15.642)"]
     RIGID --> POSKILL["c_H=+1 branch<br/><b>CLOSED for p>=17</b> (15.643)"]
+    RIGID --> NEGKILL["c_H=-1 branch<br/><b>CLOSED for sufficiently large p</b> (15.646)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -114,6 +117,8 @@ graph TD
     style WALSH fill:#e6ffe6
     style MULTI fill:#fff4e6
     style BUDGET fill:#e6ffe6
+    style POSKILL fill:#e6ffe6
+    style NEGKILL fill:#e6ffe6
 ```
 
 The older “two roots, R1 and R2” shorthand now needs two qualifications.
@@ -212,9 +217,10 @@ square-direction affine-circle words.
 | 15.640 | circles through a point form an exact tight frame; the complete `3p-6` harmonic shell has one negative circle-kernel eigenvalue and two positive circle-image eigenvalues for every `p>=11` | the parity twist reverses these signs, but intervening and later shells remain uncontrolled |
 | 15.641 | at `p=11`, the justified modular shell/cusp constraints have rank 30 in the 66-dimensional Kohnen space; an exact 21-coordinate witness kills every known row and the second shell while giving target coefficient one | closes coefficient determination from the current linear modular data, not R1 or theta-positivity routes |
 | 15.642 | a nonzero nonnegative integer-valued quadratic lift has an exact stabilizer mass floor and slice-distance support floor; for `D={infinity,v}`, `c_H=+1` is pointwise baseline and `c_H=-1` has at most three exceptional directions per type | sharp rigidity/sparsity reduction, not exclusion of the boundary or residual (ii) |
-| 15.643 | additive inter-fibre matrices force parallel counts in multiples of `(p-1)/2`; their exact `l1` budget excludes `D={infinity,v}`, `c_H=+1` for every odd `p>=17` | `p=5,7,11,13`, `c_H=-1`, and other boundary profiles remain |
-| 15.644 | for all sufficiently large `p`, the negative-product infinity-plus-point branch has `2p-1` infinity edges, two parallel finite edges in every baseline direction, and exceptional counts `1,3` | asymptotic normal form, not exclusion; threshold is qualitative and near-two-line geometry remains |
-| 15.645 | in each baseline direction of 15.644, the infinity-neighbor fibre profile is ideal or one-transfer; every larger integral deviation exceeds the transverse-edge `l1` budget | simultaneous classification as two affine lines remains open |
+| 15.643 | additive inter-fibre matrices force parallel counts in multiples of `(p-1)/2`; their exact `l1` budget excludes `D={infinity,v}`, `c_H=+1` for every odd `p>=17` | positive-product cases `p=5,7,11,13` and other boundary profiles remain |
+| 15.644 | for all sufficiently large `p`, the negative-product infinity-plus-point branch has `2p-1` infinity edges, two parallel finite edges in every baseline direction, and exceptional counts `1,3` | asymptotic normal form; excluded by 15.646, but the threshold remains qualitative |
+| 15.645 | in each baseline direction of 15.644, the infinity-neighbor fibre profile is ideal or one-transfer; every larger integral deviation exceeds the transverse-edge `l1` budget | simultaneous two-line classification remains open but is bypassed by 15.646 |
+| 15.646 | summing the exact inter-fibre matrix forces every baseline transverse signed sum to vanish, but exceptional counts `(3,1)` or `(1,3)` force `+4` or `-4` in one baseline type | excludes the negative-product infinity-plus-point branch only for the qualitative sufficiently-large range supplied by 15.644 |
 
 These are general theorems for odd primes (with the stated `p=3` second-shell
 exception), including the standard Paley `(25,50)` adjacent-ETF case. They
@@ -334,6 +340,7 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15643.py` | Additive inter-fibre arithmetic excluding the positive-product infinity-plus-point boundary for `p>=17` |
 | `src/e1_gmin_m4_prop15644.py` | Asymptotic normal form of the negative-product infinity-plus-point boundary |
 | `src/e1_gmin_m4_prop15645.py` | Exact `l1` classification of baseline infinity-neighbor fibre profiles |
+| `src/e1_gmin_m4_prop15646.py` | Signed transverse-sum exclusion of the negative-product normal form |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |

@@ -2,7 +2,9 @@
 
 Date: 2026-08-25. This is Proposition 15.645. It is an exact geometric
 refinement inside Proposition 15.644's sufficiently-large-prime normal form.
-It does not exclude that branch or close any top-level gate.
+It does not itself exclude that branch or close any top-level gate;
+Proposition 15.646 subsequently bypasses the simultaneous geometry and
+excludes the normal form by summing the signed inter-fibre identities.
 
 Let `S` be the `2p-1` finite endpoints of the infinity edges. Fix one of the
 `p-1` baseline directions, let `n_s=|S intersect fibre_s|`, and let `j` be

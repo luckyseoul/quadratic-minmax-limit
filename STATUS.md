@@ -1,12 +1,24 @@
 # Status (2026-08-25)
 
-**15.645 PROVED fibre rigidity, not branch exclusion**: inside 15.644's
+**15.646 PROVED negative-product branch exclusion for sufficiently large
+primes, not residual (ii)**: in 15.644's normal form, summing the exact
+inter-fibre identity gives signed transverse-edge sum zero in every baseline
+direction. The exceptional splits `(U,V)=(3,1)` and `(1,3)` give global
+finite-edge signed sums `+2` and `-2`; after removing two parallel edges,
+a negative or positive baseline direction instead has transverse sum `+4`
+or `-4`. Both are contradictions. The threshold remains qualitative because
+15.644 uses an asymptotic slice-distance theorem. Small primes, the positive
+branch at `p=5,7,11,13`, other boundary profiles, residual (ii), Type I, R1,
+global QVAR, and L remain OPEN.
+
+**15.645 PROVED fibre rigidity, no longer needed for branch exclusion**: inside 15.644's
 large-prime negative normal form, every baseline direction meets the
 `2p-1` infinity-neighbor set in the ideal profile `(1,2,...,2)` relative to
 the boundary fibre, or in a profile obtained after one unit transfer. This
 follows from an exact integral `l1` minimization; two transferred units
 already exceed the `2p` transverse-edge budget for `p>=7`. Simultaneous
-classification as two affine lines remains open, as do all top-level gates.
+classification as two affine lines remains open but is bypassed by 15.646;
+all top-level gates remain open.
 
 **15.644 PROVED asymptotic normal form, not branch exclusion**: the
 near-optimal degree-two polynomial-distance theorem forces exactly one
@@ -15,8 +27,8 @@ nonbaseline direction of each quadratic type in the `D={infinity,v}`,
 divisibility, `l1`, boundary, and sign-product constraints then force
 `2p-1` infinity edges, `2p+2` finite edges, exactly two parallel finite
 edges in every baseline direction, and exceptional parallel counts `1,3`
-(the negative-type count is odd). The remaining near-two-line geometry is
-not yet excluded. Residual (ii), Type I, R1, global QVAR, and L remain OPEN.
+(the negative-type count is odd). Proposition 15.646 now excludes this normal
+form. Residual (ii), Type I, R1, global QVAR, and L remain OPEN.
 
 **15.643 PROVED branch exclusion for `p>=17`, not residual (ii)**: in the
 `D={infinity,v}`, `c_H=+1` branch, 15.642's pointwise baseline makes every
@@ -24,8 +36,9 @@ signed inter-fibre edge matrix additive. Divisibility forces each finite
 parallel count to be a multiple of `(p-1)/2`; its exact `l1` edge budget
 then excludes every populated direction for odd `p>=17`. The sole arithmetic
 endpoint is an all-infinity star, whose boundary is not two. The cases
-`p=5,7,11,13`, the negative-product branch, other boundary profiles, residual
-(ii), Type I, R1, global QVAR, and L remain OPEN.
+`p=5,7,11,13`, negative-product primes below the qualitative 15.644
+threshold, other boundary profiles, residual (ii), Type I, R1, global QVAR,
+and L remain OPEN.
 
 **15.642 PROVED rigidity/sparsity, not residual (ii)**: a nonzero
 nonnegative integer-valued quadratic on `J(p,(p+1)/2)` has an exact

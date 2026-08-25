@@ -1,12 +1,26 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-25 (15.645 baseline-fibre rigidity)
+**Date:** 2026-08-25 (15.646 negative two-point branch exclusion)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.646 — negative-product infinity-point boundary excluded asymptotically
+
+`src/e1_gmin_m4_prop15646.py` and
+`evidence/NOTE_2026-08-25_negative_product_boundary_exclusion.md`. In every
+baseline direction of the 15.644 normal form,
+`K_st=-eps_d(a_s+a_t)` with `sum_s a_s=0`, so the signed sum of all
+transverse finite edges is zero. The exceptional splits `(U,V)=(3,1)` and
+`(1,3)` make the global finite-edge signed sum `+2` and `-2`, respectively.
+Removing the two parallel edges in a negative baseline in the first case
+leaves `+4`; removing the two positive parallel edges in the second leaves
+`-4`. Both contradict zero. Hence `D={infinity,v}`, `c_H=-1` is empty for
+all sufficiently large odd primes. The threshold is qualitative, and other
+boundary profiles and all top-level gates remain open.
 
 ## 15.645 — baseline fibres are ideal or one-transfer
 
@@ -17,7 +31,8 @@ direction of 15.644, put `w_s=n_s+1_{s=j}` and `a_s=w_s-2`. Then
 mass of the integral vector `a`, an exact sign decomposition gives a lower
 bound exceeding `2p` whenever `A>=2` and `p>=7`. Hence `a=0` or `a` has one
 `+1`, one `-1`, and all other entries zero. This is the precise two-line
-fibre fingerprint; simultaneous finite-geometry classification remains.
+fibre fingerprint. Its simultaneous geometric classification remains open
+but is no longer needed for this branch because 15.646 bypasses it.
 
 ## 15.644 — asymptotic normal form of the negative two-point branch
 
@@ -35,9 +50,8 @@ P_d=2 in every baseline direction;
 exceptional parallel counts (positive,negative)=(1,3) or (3,1).
 ```
 
-This is not an exclusion. Its geometric fingerprint is a union of two
-nonparallel affine lines through `v`; deriving that classification from the
-complete fibre constraints is the next attack.
+This proposition alone is not an exclusion. Proposition 15.646 now excludes
+its complete normal form directly by signed transverse-sum bookkeeping.
 
 ## 15.643 — positive-product infinity-point boundary excluded for p>=17
 
@@ -56,7 +70,8 @@ The directional `l1` budget gives
 `abs(k0+p*kd-8)<=8-k0-kd`; a populated direction would satisfy
 `2*k0+(p+1)*kd<=16`, impossible for `p>=17`. The remaining all-infinity
 star has boundary size `4p+2`, not two. Thus this branch is empty for every
-odd `p>=17`. Small `p=5,7,11,13`, `c_H=-1`, and other profiles remain open.
+odd `p>=17`. Small positive-product cases, negative-product primes below the
+qualitative 15.644 threshold, and other profiles remain open.
 
 ## 15.642 — nonzero quadratic mass; two-vertex boundary rigidity
 
