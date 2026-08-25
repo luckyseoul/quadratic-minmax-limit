@@ -1,5 +1,15 @@
 # Status (2026-08-25)
 
+**15.642 PROVED rigidity/sparsity, not residual (ii)**: a nonzero
+nonnegative integer-valued quadratic on `J(p,(p+1)/2)` has an exact
+stabilizer mass floor; combining it with the all-parameter degree-two slice
+distance lemma gives support at least `(p^2-1)/(16p(p-2))`. For residual
+boundary `D={infinity,v}`, `c_H=+1` forces every affine slack pointwise to
+its parity baseline `x_s`. For `c_H=-1`, each quadratic direction type has
+at most three nonbaseline directions, uniformly in `p>=5` (two at `p=7`).
+This sharply reduces but does not exclude that boundary. Residual (ii),
+Type I, R1, global QVAR, and L remain OPEN.
+
 **15.641 PROVED route kill, not R1**: at `p=11`, the justified pre-second
 infinity rows and geometric cusp gaps have rank 29 in the 66-dimensional
 Kohnen space; the complete second-shell row raises this to 30, leaving a

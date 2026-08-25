@@ -1,12 +1,34 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-25 (15.641 exact modular-independence certificate)
+**Date:** 2026-08-25 (15.642 quadratic-lift rigidity/sparsity)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.642 — nonzero quadratic mass; two-vertex boundary rigidity
+
+`src/e1_gmin_m4_prop15642.py` and
+`evidence/NOTE_2026-08-25_quadratic_lift_mass.md`. A stabilizer moment
+certificate gives an exact elementary mass floor for any nonzero
+nonnegative integer-valued quadratic on the middle slice. The exact
+all-parameter degree-two distance lemma of Amireddy--Behera--Srinivasan--
+Sudan additionally gives
+
+```
+Pr(B != 0) >= C(p-4,m-2)/C(p,m) = (p^2-1)/(16p(p-2)).
+```
+
+For residual boundary `D={infinity,v}`, the positive edge-product branch
+has zero budget beyond parity, hence `A_d=x_{s_d(v)}` pointwise in every
+direction. In the negative edge-product branch, each quadratic type has at
+most three directions with a nonzero lift, uniformly for `p>=5` (two at
+`p=7`). This is a major reduction from a growing exceptional set, but not a
+boundary exclusion. The next live attack is the repeated additive-rank-two
+constraint on the signed inter-fibre edge matrices in all baseline
+directions. Exact p=5 CP-SAT probes remained `UNKNOWN` and are not evidence.
 
 ## 15.641 — current modular shell/cusp data do not determine R1
 
