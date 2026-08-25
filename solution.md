@@ -5291,3 +5291,124 @@ itself close the unrelated 5+-level or other E1 leftovers.
 Evidence: `evidence/NOTE_2026-08-24_w2_gqr_circle_route.md`,
 `evidence/w2_gqr_circle_route_2026-08-24.json`,
 `scripts/w2_affine_circle_close.py`.
+
+## Prop 15.632 (2026-08-25) — affine slack budget and quadratic parity lifts
+
+This proposition concerns the non-Walsh multi-level residual, independently
+of the Paley-lattice Props. 15.629--15.631.  It eliminates the
+Eulerian-boundary branch for every odd prime but does not close the residual.
+
+Let `H` be an odd set of signed Paley edges, `h=|H|`, and
+
+\[
+ S_H(y)=\sum_{e\in H}C_e y_e.
+\]
+
+For each projective \(\mathbb F_p\)-direction \(d\), let \(\epsilon_d\) be
+the quadratic type of its kernel.  Its affine halfspaces form a copy of the
+middle slice \(J(p,m)\), \(m=(p+1)/2\), inside the
+\(\epsilon_dp\)-eigenshell.  If `H` separates the affine shells with margin
+three, then
+
+\[
+ A_d(y)={\epsilon_dS_H(y)-3\over2}
+\]
+
+is a nonnegative integer-valued quadratic on this slice.  Put
+\(a_d=2p\mathbb E_dA_d\).
+
+For a fixed direction, the contributions to \(p\epsilon_d\mathbb E S_H\)
+of an infinity edge, a parallel finite edge, and a transverse finite edge
+are respectively
+
+\[
+ 1,\qquad p,\qquad-\epsilon_dC_e.                          \tag{15.632.1}
+\]
+
+Every contribution is odd modulo two, so every \(a_d\) is even.  There are
+\(m\) directions of each quadratic type.  An infinity edge contributes
+\(m\) in either type.  A finite edge of sign \(c\) contributes
+\(p-(m-1)=m\) in type \(c\), and \(m\) transverse `+1` terms in type
+\(-c\).  Therefore
+
+\[
+ \sum_{d:\epsilon_d=\tau}a_d
+   =m(h-3p),\qquad \tau=\pm1.                             \tag{15.632.2}
+\]
+
+Let \(D\) be the odd-degree boundary of `H` and
+\(c_H=\prod_{e\in H}C_e\).  The edge-product identity gives
+
+\[
+ (-1)^{A_d}
+ =\epsilon_d(-1)^{(h-3)/2}c_H\prod_{v\in D}y_v.           \tag{15.632.3}
+\]
+
+Let \(B_d\) be the affine fibres in direction \(d\) containing an odd
+number of finite points of \(D\).  For middle-slice membership bits \(x_s\),
+
+\[
+ \prod_{v\in D}y_v
+ =\epsilon_d^{\mathbf1_{\infty\in D}}
+  (-1)^{|B_d|+\sum_{s\in B_d}x_s}.
+\]
+
+Hence an explicit \(\eta_d\in\{0,1\}\) satisfies
+
+\[
+ A_d(x)\equiv\sum_{s\in B_d}x_s+\eta_d\pmod2.            \tag{15.632.4}
+\]
+
+Average under `Sym(B_d) x Sym(B_d^c)`.  The result is a quadratic
+\(q(t)\), \(t=|X\cap B_d|\), and its nonnegative integer inputs all have
+parity \(t+\eta_d\).  Thus
+
+\[
+ q(t)\ge(t+\eta_d\bmod2).
+\]
+
+Let \(M(p,b,\eta)\) be the minimum expectation of such a quadratic under
+the exact hypergeometric law
+
+\[
+ \Pr(t)={\binom bt\binom{p-b}{m-t}\over\binom pm}.
+\]
+
+This is a three-variable LP.  Its vertices are obtained by interpolating
+three active parity values (with the one- and two-point supports immediate),
+so `M` is computed exactly over rational numbers.  Since \(a_d\) is even,
+
+\[
+ a_d\ge2\lceil pM(p,|B_d|,\eta_d)\rceil.                 \tag{15.632.5}
+\]
+
+Combining (15.632.2) and (15.632.5) yields a separate necessary budget in
+each quadratic direction type.
+
+At residual size \(h=4p+1\), suppose \(D=\varnothing\).  Then every
+\(B_d\) is empty and one quadratic-type half has constant odd slack parity.
+Every one of its \(m\) directions costs \(2p\), for total \(p(p+1)\), while
+(15.632.2) permits only \((p+1)^2/2\).  The contradiction gap is
+
+\[
+ {p^2-1\over2}>0.
+\]
+
+Thus the Eulerian-boundary branch is empty for every odd prime.
+
+This is not the full close.  The corrected affine model at \(p=5\) has an
+integral twenty-edge `G` for which `H=G union {(0,1)}` has directional
+values
+
+\[
+ (a_d)=(12,4,0,6,10,4),
+\]
+
+all affine slacks are nonnegative pointwise, and the boundary is infinity
+plus one affine line.  Nonempty boundary profiles and the full non-affine
+shell remain open.
+
+Evidence: `src/e1_gmin_m4_prop15632.py`,
+`evidence/e1_gmin_m4_prop15632.json`,
+`evidence/NOTE_2026-08-25_affine_slack_parity_budget.md`, and
+`tests/test_prop15632.py`.

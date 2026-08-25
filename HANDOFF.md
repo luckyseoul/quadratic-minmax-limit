@@ -1,12 +1,39 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-24 (15.628 W2 and Walsh closed by affine circle completions)
+**Date:** 2026-08-25 (15.632 affine slack/parity budget; Eulerian branch killed)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.632 — type-split affine slack budget; Eulerian boundary empty
+
+`src/e1_gmin_m4_prop15632.py` and
+`evidence/NOTE_2026-08-25_affine_slack_parity_budget.md`.  For an odd
+separator `H`, every affine direction gives a nonnegative integer quadratic
+slack `A_d` on `J(p,(p+1)/2)`.  With `a_d=2p E A_d`, direct edge moments give
+
+```
+sum_{eps_d=tau} a_d = (p+1)(|H|-3p)/2,  tau=+-1,
+```
+
+and every `a_d` is even.  If `D` is the odd-degree boundary, its odd fibres
+give the exact parity `A_d(x)=sum_{B_d}x+eta_d (mod 2)`.  Averaging under
+`Sym(B_d)xSym(B_d^c)` reduces the sharp magnitude floor to an exact
+three-variable LP `M(p,b,eta)`, hence
+`a_d>=2 ceil(p M(p,b_d,eta_d))`, separately budgeted in each direction type.
+At residual `|H|=4p+1`, `D=empty` forces one type to cost `p(p+1)` against
+budget `(p+1)^2/2`, a gap `(p^2-1)/2`; the Eulerian branch is therefore
+impossible for every odd prime.
+
+Do not soft-close: the corrected p=5 affine model has an integral witness
+with `a=(12,4,0,6,10,4)`, all pointwise slacks nonnegative, and boundary
+infinity plus an affine line.  Nonempty profiles and the full shell remain
+open.  `evidence/NOTE_2026-08-25_pbss_cross_audit.md` records a read-only
+cross-audit: no PBSS theorem transfers directly; its useful R1 idea is an
+adversarial-cancellation test followed by a multi-Gaussian theta-window LP.
 
 ## 15.628 — eligible GQR circles + affine completions close W2 and Walsh
 

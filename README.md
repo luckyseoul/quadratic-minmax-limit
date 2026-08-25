@@ -29,7 +29,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; non-Walsh multi-level part open |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary and gives a type-split affine budget, but non-Walsh profiles remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -53,7 +53,9 @@ See **`STATUS.md`**, `HANDOFF.md`, denseness package, `solution.md`.
 
 The problem reduces to **E(1) on Paley conference matrices of order n = p²+1**.
 The map below records the current dependency structure. Prop. 15.628 closed
-Walsh, W1, and W2; it did not close the non-Walsh multi-level cases. The
+Walsh, W1, and W2; Prop. 15.632 then imposed an exact type-split integer-slack
+budget and eliminated the Eulerian boundary, but did not close the remaining
+non-Walsh multi-level cases. The
 principal R1 inequality also remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -69,6 +71,7 @@ graph TD
     E1 --> RES["residual (ii), even k≥4p<br/><b>OPEN</b>"]
     RES --> WALSH["Walsh / W1 / W2<br/><b>CLOSED</b> (15.628)"]
     RES --> MULTI["non-Walsh multi-level<br/><b>OPEN</b>"]
+    MULTI --> BUDGET["affine parity budget<br/>Eulerian boundary <b>CLOSED</b> (15.632)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -78,6 +81,7 @@ graph TD
     style RES fill:#fff4e6
     style WALSH fill:#e6ffe6
     style MULTI fill:#fff4e6
+    style BUDGET fill:#e6ffe6
 ```
 
 The older “two roots, R1 and R2” shorthand now needs two qualifications.
@@ -173,6 +177,30 @@ level-`4p` norm-parity-twisted harmonic theta problem with its first shell
 known exactly. They are a substantial structural advance, but they do not
 prove R1, global QVAR, E(1), or the limit.
 
+### Non-Walsh affine slack budget (prop 15.632)
+
+For an odd candidate separator `H`, each of the `p+1` affine directions
+produces a nonnegative integer quadratic slack on the middle Johnson slice.
+If `a_d=2p E[A_d]`, then the budget splits exactly by quadratic direction
+type:
+
+```
+sum_{eps_d=+1} a_d = sum_{eps_d=-1} a_d
+                    = (p+1)(|H|-3p)/2.
+```
+
+The odd-degree boundary of `H` fixes the slack parity on every slice.
+Symmetrizing by its odd fibres reduces the sharp degree-two lower bound to an
+exact three-variable hypergeometric LP, giving
+`a_d ≥ 2 ceil(p M(p,b_d,eta_d))`. At residual size `|H|=4p+1`, each
+quadratic-type half has only `(p+1)²/2` budget. This excludes every Eulerian
+boundary for all odd primes, with contradiction gap `(p²−1)/2`.
+
+The reduction is not a close: a corrected `p=5` affine model has a genuine
+integral solution with directional means `(12,4,0,6,10,4)` and boundary equal
+to infinity plus an affine line. Remaining nonempty boundary profiles and the
+full non-affine shell are open.
+
 ### Route kills — do not re-tread
 
 Recorded with counterexamples so they are not reopened:
@@ -203,8 +231,10 @@ shells, not the first shell or an unidentified glue-class phase.
    The lattice/shadow theorems identify the exact theta object but do not
    control its higher dual shells.
 2. **Non-Walsh multi-level Max−:** close residual (ii) for even `k≥4p`.
-   Walsh/W1/W2 are done; the 5+-level branch is not. The related Type-I
-   `3A+B>0` gate also remains false, although strong R1 would imply it.
+   Walsh/W1/W2 and the Eulerian-boundary branch are done; the remaining
+   nonempty affine-boundary profiles and full 5+-level branch are not. The
+   related Type-I `3A+B>0` gate also remains false, although strong R1 would
+   imply it.
 
 Lemma D is complete and is no longer on the work list.
 
@@ -224,10 +254,14 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15629.py` | Profile-glued integral Paley eigenspace lattice |
 | `src/e1_gmin_m4_prop15630.py` | Exact dual minimum shell and kissing number |
 | `src/e1_gmin_m4_prop15631.py` | Radial dual-shadow transform of the Max+ odd coset |
+| `src/e1_gmin_m4_prop15632.py` | Type-split affine slack/parity budget; Eulerian residual boundary excluded |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |
+| `evidence/NOTE_2026-08-25_affine_slack_parity_budget.md` | Exact directional budgets, parity-majorant LP, branch kill, and p=5 obstruction |
+| `evidence/NOTE_2026-08-25_pbss_cross_audit.md` | Perry--Beurling cross-audit and the viable multi-Gaussian R1 transplant |
 | `evidence/PLAN_2026-08-22_class_function_route.md` | PSL/Hecke route ledger and killed shortcuts |
+| `scripts/residual_affine_johnson_milp.py` | Corrected exact affine/full-shell residual feasibility model |
 | `scripts/frame_line_system.py` | Data-free frame-line solver (any p, no Max± ensemble) |
 | `src/minmax_quadratic.py` | Exact `m_n`, Paley, Φ, bounds, ρ=1 evec |
 | `tests/test_prop15167.py` … `test_prop15171.py` | Load-bearing E(1)/L tests |

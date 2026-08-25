@@ -1,5 +1,17 @@
 # Status (2026-08-25)
 
+**15.632 PROVED reduction + branch kill, not residual (ii)**: for every odd
+affine separator `H`, the scaled integer slacks satisfy the type-split identity
+`sum_{eps_d=tau} a_d=(p+1)(|H|-3p)/2`.  The odd-degree boundary fixes each
+slack's Johnson-slice parity; exact quadratic majorization gives
+`a_d >= 2 ceil(p M(p,b_d,eta_d))` and the corresponding separate budget in
+each quadratic direction type.  At `|H|=4p+1`, an empty/Eulerian boundary
+exceeds one type budget by `(p^2-1)/2`, so that branch is empty for every odd
+prime.  A direct corrected p=5 affine solution survives with
+`a=(12,4,0,6,10,4)` and boundary infinity plus one affine line, so nonempty
+boundary profiles, the full non-Walsh shell, residual (ii), Type I, R1, and L
+remain OPEN.
+
 **15.631 PROVED structure, not R1**: for every Max+ odd vector `y0 in L`
 and every `u=Pz in L*`,
 `<u,y0> = 2p||u||^2 (mod 2)`.  Thus Poisson summation on `y0+2L` has

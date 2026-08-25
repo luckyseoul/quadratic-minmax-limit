@@ -341,6 +341,30 @@ the result sharpens the exact R1 target without closing it.
 
 ---
 
+## 7g. Affine slack parity lifts and split budgets (2026-08-25)
+
+Proposition 15.632 attacks the non-Walsh residual rather than R1.  An odd
+candidate edge set produces, in every affine direction, a nonnegative
+integer quadratic on the middle Johnson slice.  Its odd-degree graph
+boundary fixes the pointwise parity of that quadratic.  Symmetrization over
+the odd and even fibres turns the minimum possible mean into an exact
+three-variable hypergeometric quadratic-majorant LP.
+
+The directional mean has an additional Paley split: square and nonsquare
+directions each receive exactly half of the total slack budget.  Combining
+that split with the parity majorant excludes an Eulerian residual boundary
+for every odd prime, with gap `(p^2-1)/2`.  A corrected p=5 affine witness
+with nonempty line boundary shows why this is a branch kill rather than a
+full residual close.
+
+The closest searched literature concerns low-degree functions on Johnson
+slices, nonnegative polynomials on finite Boolean sets, and finite-geometry
+incidence codes (references 31--33 below).  No searched source gave the
+combined edge-boundary parity lift and square/nonsquare budget.  This is a
+search record, not a claim of priority.
+
+---
+
 ## 8. What is not in the older literature
 
 - No 1930s–1970s theorem that \(\lim n^{-3/2}\min_A\max_x|x^\top Ax|\) exists.
@@ -384,5 +408,8 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 28. E. M. Rains and N. J. A. Sloane, *The Shadow Theory of Modular and Unimodular Lattices*, J. Number Theory **73** (1998), 359--389, [arXiv:math/0207294](https://arxiv.org/abs/math/0207294) (methodological comparison; its strongly modular hypotheses do not close R1).
 29. N. D. Elkies, *A characterization of the `Z^n` lattice*, Math. Res. Lett. **2** (1995), 321--326, [arXiv:math/9906019](https://arxiv.org/abs/math/9906019) (characteristic-vector/shadow precedent for unimodular lattices; not directly applicable to the level-`4p` Paley lattice).
 30. N. D. Elkies, *Lattices and codes with long shadows*, Math. Res. Lett. **7** (2000), 151--164, [arXiv:math/9906086](https://arxiv.org/abs/math/9906086) (modular-form use of odd cosets in the unimodular setting; methodological comparison only).
+31. Y. Filmus, G. Kindler, E. Mossel, and K. Wimmer, *Invariance principle on the slice*, [arXiv:1504.01689](https://arxiv.org/abs/1504.01689) (Johnson-slice low-degree framework; no parity-budget theorem).
+32. G. Blekherman, J. Gouveia, and J. Pfeiffer, *Sums of squares on the hypercube*, [arXiv:1402.4199](https://arxiv.org/abs/1402.4199) (nonnegative polynomial framework; adjacent, not the exact hypergeometric LP used here).
+33. P. Sin, J. Sorci, and Q. Xiang, *Linear representations of finite geometries and associated LDPC codes*, [arXiv:1908.06824](https://arxiv.org/abs/1908.06824) (finite incidence-code context).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

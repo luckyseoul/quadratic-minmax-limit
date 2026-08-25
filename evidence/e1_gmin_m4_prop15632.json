@@ -1,0 +1,1969 @@
+{
+  "prop": "15.632",
+  "title": "Affine slack budget and quadratic parity lifts",
+  "proved": {
+    "all_prime_directional_slack_sum": true,
+    "all_prime_boundary_parity_formula": true,
+    "all_prime_quadratic_majorant_budget": true,
+    "residual_ii_k_ge_4p": false,
+    "R1": false,
+    "L": false
+  },
+  "theorem": {
+    "proved": true,
+    "all_odd_primes": true,
+    "directional_sum": "sum a_d=(p+1)(|H|-3p)",
+    "quadratic_type_sum": "sum_{eps_d=tau} a_d=(p+1)(|H|-3p)/2 for tau=+-1",
+    "residual_k_eq_4p_type_sum": "(p+1)^2/2",
+    "residual_k_eq_4p_sum": "(p+1)^2",
+    "parity_budget": "sum_{eps_d=tau} 2 ceil(p M(p,b_d,eta_d)) <= (p+1)(|H|-3p)/2 for tau=+-1",
+    "majorant_exact_samples": true,
+    "complement_symmetry_samples": true,
+    "eulerian_residual_boundary_excluded": true,
+    "eulerian_residual_type_budget_gap": "(p^2-1)/2",
+    "affine_p5_feasible": {
+      "proved": true,
+      "a_by_direction": [
+        12,
+        4,
+        0,
+        6,
+        10,
+        4
+      ],
+      "a_by_quadratic_type": {
+        "-1": 18,
+        "1": 18
+      },
+      "slack_supports_by_direction": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "direct_affine_audit": {
+        "p": 5,
+        "rows": [
+          {
+            "direction": [
+              1,
+              0
+            ],
+            "eps": -1,
+            "slack_support": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "minimum_slack": 0,
+            "integer_slacks": true,
+            "boundary_parity_pointwise": true,
+            "a_from_enumeration": "12",
+            "a_from_moments": 12,
+            "mean_identity": true
+          },
+          {
+            "direction": [
+              1,
+              1
+            ],
+            "eps": 1,
+            "slack_support": [
+              0,
+              2
+            ],
+            "minimum_slack": 0,
+            "integer_slacks": true,
+            "boundary_parity_pointwise": true,
+            "a_from_enumeration": "4",
+            "a_from_moments": 4,
+            "mean_identity": true
+          },
+          {
+            "direction": [
+              1,
+              2
+            ],
+            "eps": -1,
+            "slack_support": [
+              0
+            ],
+            "minimum_slack": 0,
+            "integer_slacks": true,
+            "boundary_parity_pointwise": true,
+            "a_from_enumeration": "0",
+            "a_from_moments": 0,
+            "mean_identity": true
+          },
+          {
+            "direction": [
+              1,
+              3
+            ],
+            "eps": -1,
+            "slack_support": [
+              0,
+              2
+            ],
+            "minimum_slack": 0,
+            "integer_slacks": true,
+            "boundary_parity_pointwise": true,
+            "a_from_enumeration": "6",
+            "a_from_moments": 6,
+            "mean_identity": true
+          },
+          {
+            "direction": [
+              1,
+              4
+            ],
+            "eps": 1,
+            "slack_support": [
+              0,
+              2,
+              4
+            ],
+            "minimum_slack": 0,
+            "integer_slacks": true,
+            "boundary_parity_pointwise": true,
+            "a_from_enumeration": "10",
+            "a_from_moments": 10,
+            "mean_identity": true
+          },
+          {
+            "direction": [
+              0,
+              1
+            ],
+            "eps": 1,
+            "slack_support": [
+              0,
+              2
+            ],
+            "minimum_slack": 0,
+            "integer_slacks": true,
+            "boundary_parity_pointwise": true,
+            "a_from_enumeration": "4",
+            "a_from_moments": 4,
+            "mean_identity": true
+          }
+        ],
+        "all_slacks_nonnegative": true,
+        "all_slacks_integral": true,
+        "all_boundary_parities": true,
+        "all_mean_identities": true
+      },
+      "boundary": [
+        0,
+        2,
+        7,
+        12,
+        17,
+        22
+      ],
+      "boundary_is_infinity_plus_affine_line": true,
+      "not_full_shell_claim": true
+    },
+    "closes_residual_ii": false,
+    "closes_R1": false,
+    "L_status": "OPEN"
+  },
+  "majorant_tables": {
+    "5": {
+      "0": {
+        "0": {
+          "p": 5,
+          "b": 0,
+          "phase": 0,
+          "value": "0",
+          "coefficients": null,
+          "contacts": [
+            0
+          ],
+          "support": [
+            0
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 5,
+          "b": 0,
+          "phase": 1,
+          "value": "1",
+          "coefficients": null,
+          "contacts": [
+            0
+          ],
+          "support": [
+            0
+          ],
+          "proved": true
+        }
+      },
+      "1": {
+        "0": {
+          "p": 5,
+          "b": 1,
+          "phase": 0,
+          "value": "3/5",
+          "coefficients": null,
+          "contacts": [
+            0,
+            1
+          ],
+          "support": [
+            0,
+            1
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 5,
+          "b": 1,
+          "phase": 1,
+          "value": "2/5",
+          "coefficients": null,
+          "contacts": [
+            0,
+            1
+          ],
+          "support": [
+            0,
+            1
+          ],
+          "proved": true
+        }
+      },
+      "2": {
+        "0": {
+          "p": 5,
+          "b": 2,
+          "phase": 0,
+          "value": "3/5",
+          "coefficients": [
+            "-1",
+            "2",
+            "0"
+          ],
+          "contacts": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            0,
+            1,
+            2
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 5,
+          "b": 2,
+          "phase": 1,
+          "value": "2/5",
+          "coefficients": [
+            "1",
+            "-2",
+            "1"
+          ],
+          "contacts": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            0,
+            1,
+            2
+          ],
+          "proved": true
+        }
+      }
+    },
+    "7": {
+      "0": {
+        "0": {
+          "p": 7,
+          "b": 0,
+          "phase": 0,
+          "value": "0",
+          "coefficients": null,
+          "contacts": [
+            0
+          ],
+          "support": [
+            0
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 7,
+          "b": 0,
+          "phase": 1,
+          "value": "1",
+          "coefficients": null,
+          "contacts": [
+            0
+          ],
+          "support": [
+            0
+          ],
+          "proved": true
+        }
+      },
+      "1": {
+        "0": {
+          "p": 7,
+          "b": 1,
+          "phase": 0,
+          "value": "4/7",
+          "coefficients": null,
+          "contacts": [
+            0,
+            1
+          ],
+          "support": [
+            0,
+            1
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 7,
+          "b": 1,
+          "phase": 1,
+          "value": "3/7",
+          "coefficients": null,
+          "contacts": [
+            0,
+            1
+          ],
+          "support": [
+            0,
+            1
+          ],
+          "proved": true
+        }
+      },
+      "2": {
+        "0": {
+          "p": 7,
+          "b": 2,
+          "phase": 0,
+          "value": "4/7",
+          "coefficients": [
+            "-1",
+            "2",
+            "0"
+          ],
+          "contacts": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            0,
+            1,
+            2
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 7,
+          "b": 2,
+          "phase": 1,
+          "value": "3/7",
+          "coefficients": [
+            "1",
+            "-2",
+            "1"
+          ],
+          "contacts": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            0,
+            1,
+            2
+          ],
+          "proved": true
+        }
+      },
+      "3": {
+        "0": {
+          "p": 7,
+          "b": 3,
+          "phase": 0,
+          "value": "4/7",
+          "coefficients": [
+            "1",
+            "-4",
+            "4"
+          ],
+          "contacts": [
+            1,
+            2,
+            3
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 7,
+          "b": 3,
+          "phase": 1,
+          "value": "1",
+          "coefficients": [
+            "1",
+            "-2",
+            "1"
+          ],
+          "contacts": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "proved": true
+        }
+      }
+    },
+    "11": {
+      "0": {
+        "0": {
+          "p": 11,
+          "b": 0,
+          "phase": 0,
+          "value": "0",
+          "coefficients": null,
+          "contacts": [
+            0
+          ],
+          "support": [
+            0
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 11,
+          "b": 0,
+          "phase": 1,
+          "value": "1",
+          "coefficients": null,
+          "contacts": [
+            0
+          ],
+          "support": [
+            0
+          ],
+          "proved": true
+        }
+      },
+      "1": {
+        "0": {
+          "p": 11,
+          "b": 1,
+          "phase": 0,
+          "value": "6/11",
+          "coefficients": null,
+          "contacts": [
+            0,
+            1
+          ],
+          "support": [
+            0,
+            1
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 11,
+          "b": 1,
+          "phase": 1,
+          "value": "5/11",
+          "coefficients": null,
+          "contacts": [
+            0,
+            1
+          ],
+          "support": [
+            0,
+            1
+          ],
+          "proved": true
+        }
+      },
+      "2": {
+        "0": {
+          "p": 11,
+          "b": 2,
+          "phase": 0,
+          "value": "6/11",
+          "coefficients": [
+            "-1",
+            "2",
+            "0"
+          ],
+          "contacts": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            0,
+            1,
+            2
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 11,
+          "b": 2,
+          "phase": 1,
+          "value": "5/11",
+          "coefficients": [
+            "1",
+            "-2",
+            "1"
+          ],
+          "contacts": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            0,
+            1,
+            2
+          ],
+          "proved": true
+        }
+      },
+      "3": {
+        "0": {
+          "p": 11,
+          "b": 3,
+          "phase": 0,
+          "value": "8/11",
+          "coefficients": [
+            "1",
+            "-4",
+            "4"
+          ],
+          "contacts": [
+            1,
+            2,
+            3
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 11,
+          "b": 3,
+          "phase": 1,
+          "value": "1",
+          "coefficients": [
+            "1",
+            "-2",
+            "1"
+          ],
+          "contacts": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "proved": true
+        }
+      },
+      "4": {
+        "0": {
+          "p": 11,
+          "b": 4,
+          "phase": 0,
+          "value": "8/11",
+          "coefficients": [
+            "1",
+            "-4",
+            "4"
+          ],
+          "contacts": [
+            1,
+            2,
+            3
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 11,
+          "b": 4,
+          "phase": 1,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            0,
+            2,
+            4
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "proved": true
+        }
+      },
+      "5": {
+        "0": {
+          "p": 11,
+          "b": 5,
+          "phase": 0,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            1,
+            3,
+            5
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 11,
+          "b": 5,
+          "phase": 1,
+          "value": "9/11",
+          "coefficients": [
+            "1",
+            "-6",
+            "9"
+          ],
+          "contacts": [
+            2,
+            3,
+            4
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "proved": true
+        }
+      }
+    },
+    "13": {
+      "0": {
+        "0": {
+          "p": 13,
+          "b": 0,
+          "phase": 0,
+          "value": "0",
+          "coefficients": null,
+          "contacts": [
+            0
+          ],
+          "support": [
+            0
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 13,
+          "b": 0,
+          "phase": 1,
+          "value": "1",
+          "coefficients": null,
+          "contacts": [
+            0
+          ],
+          "support": [
+            0
+          ],
+          "proved": true
+        }
+      },
+      "1": {
+        "0": {
+          "p": 13,
+          "b": 1,
+          "phase": 0,
+          "value": "7/13",
+          "coefficients": null,
+          "contacts": [
+            0,
+            1
+          ],
+          "support": [
+            0,
+            1
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 13,
+          "b": 1,
+          "phase": 1,
+          "value": "6/13",
+          "coefficients": null,
+          "contacts": [
+            0,
+            1
+          ],
+          "support": [
+            0,
+            1
+          ],
+          "proved": true
+        }
+      },
+      "2": {
+        "0": {
+          "p": 13,
+          "b": 2,
+          "phase": 0,
+          "value": "7/13",
+          "coefficients": [
+            "-1",
+            "2",
+            "0"
+          ],
+          "contacts": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            0,
+            1,
+            2
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 13,
+          "b": 2,
+          "phase": 1,
+          "value": "6/13",
+          "coefficients": [
+            "1",
+            "-2",
+            "1"
+          ],
+          "contacts": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            0,
+            1,
+            2
+          ],
+          "proved": true
+        }
+      },
+      "3": {
+        "0": {
+          "p": 13,
+          "b": 3,
+          "phase": 0,
+          "value": "10/13",
+          "coefficients": [
+            "1",
+            "-4",
+            "4"
+          ],
+          "contacts": [
+            1,
+            2,
+            3
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 13,
+          "b": 3,
+          "phase": 1,
+          "value": "1",
+          "coefficients": [
+            "1",
+            "-2",
+            "1"
+          ],
+          "contacts": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "proved": true
+        }
+      },
+      "4": {
+        "0": {
+          "p": 13,
+          "b": 4,
+          "phase": 0,
+          "value": "10/13",
+          "coefficients": [
+            "1",
+            "-4",
+            "4"
+          ],
+          "contacts": [
+            1,
+            2,
+            3
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 13,
+          "b": 4,
+          "phase": 1,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            0,
+            2,
+            4
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "proved": true
+        }
+      },
+      "5": {
+        "0": {
+          "p": 13,
+          "b": 5,
+          "phase": 0,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            1,
+            3,
+            5
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 13,
+          "b": 5,
+          "phase": 1,
+          "value": "12/13",
+          "coefficients": [
+            "1",
+            "-6",
+            "9"
+          ],
+          "contacts": [
+            2,
+            3,
+            4
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "proved": true
+        }
+      },
+      "6": {
+        "0": {
+          "p": 13,
+          "b": 6,
+          "phase": 0,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            1,
+            3,
+            5
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 13,
+          "b": 6,
+          "phase": 1,
+          "value": "12/13",
+          "coefficients": [
+            "1",
+            "-6",
+            "9"
+          ],
+          "contacts": [
+            2,
+            3,
+            4
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "proved": true
+        }
+      }
+    },
+    "17": {
+      "0": {
+        "0": {
+          "p": 17,
+          "b": 0,
+          "phase": 0,
+          "value": "0",
+          "coefficients": null,
+          "contacts": [
+            0
+          ],
+          "support": [
+            0
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 17,
+          "b": 0,
+          "phase": 1,
+          "value": "1",
+          "coefficients": null,
+          "contacts": [
+            0
+          ],
+          "support": [
+            0
+          ],
+          "proved": true
+        }
+      },
+      "1": {
+        "0": {
+          "p": 17,
+          "b": 1,
+          "phase": 0,
+          "value": "9/17",
+          "coefficients": null,
+          "contacts": [
+            0,
+            1
+          ],
+          "support": [
+            0,
+            1
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 17,
+          "b": 1,
+          "phase": 1,
+          "value": "8/17",
+          "coefficients": null,
+          "contacts": [
+            0,
+            1
+          ],
+          "support": [
+            0,
+            1
+          ],
+          "proved": true
+        }
+      },
+      "2": {
+        "0": {
+          "p": 17,
+          "b": 2,
+          "phase": 0,
+          "value": "9/17",
+          "coefficients": [
+            "-1",
+            "2",
+            "0"
+          ],
+          "contacts": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            0,
+            1,
+            2
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 17,
+          "b": 2,
+          "phase": 1,
+          "value": "8/17",
+          "coefficients": [
+            "1",
+            "-2",
+            "1"
+          ],
+          "contacts": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            0,
+            1,
+            2
+          ],
+          "proved": true
+        }
+      },
+      "3": {
+        "0": {
+          "p": 17,
+          "b": 3,
+          "phase": 0,
+          "value": "14/17",
+          "coefficients": [
+            "1",
+            "-4",
+            "4"
+          ],
+          "contacts": [
+            1,
+            2,
+            3
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 17,
+          "b": 3,
+          "phase": 1,
+          "value": "1",
+          "coefficients": [
+            "1",
+            "-2",
+            "1"
+          ],
+          "contacts": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "proved": true
+        }
+      },
+      "4": {
+        "0": {
+          "p": 17,
+          "b": 4,
+          "phase": 0,
+          "value": "14/17",
+          "coefficients": [
+            "1",
+            "-4",
+            "4"
+          ],
+          "contacts": [
+            1,
+            2,
+            3
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 17,
+          "b": 4,
+          "phase": 1,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            0,
+            2,
+            4
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "proved": true
+        }
+      },
+      "5": {
+        "0": {
+          "p": 17,
+          "b": 5,
+          "phase": 0,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            1,
+            3,
+            5
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 17,
+          "b": 5,
+          "phase": 1,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            0,
+            2,
+            4
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "proved": true
+        }
+      },
+      "6": {
+        "0": {
+          "p": 17,
+          "b": 6,
+          "phase": 0,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            1,
+            3,
+            5
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 17,
+          "b": 6,
+          "phase": 1,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            0,
+            2,
+            4
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "proved": true
+        }
+      },
+      "7": {
+        "0": {
+          "p": 17,
+          "b": 7,
+          "phase": 0,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            1,
+            3,
+            5
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 17,
+          "b": 7,
+          "phase": 1,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            0,
+            2,
+            4
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "proved": true
+        }
+      },
+      "8": {
+        "0": {
+          "p": 17,
+          "b": 8,
+          "phase": 0,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            1,
+            3,
+            5
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 17,
+          "b": 8,
+          "phase": 1,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            0,
+            2,
+            4
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "proved": true
+        }
+      }
+    },
+    "19": {
+      "0": {
+        "0": {
+          "p": 19,
+          "b": 0,
+          "phase": 0,
+          "value": "0",
+          "coefficients": null,
+          "contacts": [
+            0
+          ],
+          "support": [
+            0
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 19,
+          "b": 0,
+          "phase": 1,
+          "value": "1",
+          "coefficients": null,
+          "contacts": [
+            0
+          ],
+          "support": [
+            0
+          ],
+          "proved": true
+        }
+      },
+      "1": {
+        "0": {
+          "p": 19,
+          "b": 1,
+          "phase": 0,
+          "value": "10/19",
+          "coefficients": null,
+          "contacts": [
+            0,
+            1
+          ],
+          "support": [
+            0,
+            1
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 19,
+          "b": 1,
+          "phase": 1,
+          "value": "9/19",
+          "coefficients": null,
+          "contacts": [
+            0,
+            1
+          ],
+          "support": [
+            0,
+            1
+          ],
+          "proved": true
+        }
+      },
+      "2": {
+        "0": {
+          "p": 19,
+          "b": 2,
+          "phase": 0,
+          "value": "10/19",
+          "coefficients": [
+            "-1",
+            "2",
+            "0"
+          ],
+          "contacts": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            0,
+            1,
+            2
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 19,
+          "b": 2,
+          "phase": 1,
+          "value": "9/19",
+          "coefficients": [
+            "1",
+            "-2",
+            "1"
+          ],
+          "contacts": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            0,
+            1,
+            2
+          ],
+          "proved": true
+        }
+      },
+      "3": {
+        "0": {
+          "p": 19,
+          "b": 3,
+          "phase": 0,
+          "value": "16/19",
+          "coefficients": [
+            "1",
+            "-4",
+            "4"
+          ],
+          "contacts": [
+            1,
+            2,
+            3
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 19,
+          "b": 3,
+          "phase": 1,
+          "value": "1",
+          "coefficients": [
+            "1",
+            "-2",
+            "1"
+          ],
+          "contacts": [
+            0,
+            1,
+            2
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "proved": true
+        }
+      },
+      "4": {
+        "0": {
+          "p": 19,
+          "b": 4,
+          "phase": 0,
+          "value": "16/19",
+          "coefficients": [
+            "1",
+            "-4",
+            "4"
+          ],
+          "contacts": [
+            1,
+            2,
+            3
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 19,
+          "b": 4,
+          "phase": 1,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            0,
+            2,
+            4
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "proved": true
+        }
+      },
+      "5": {
+        "0": {
+          "p": 19,
+          "b": 5,
+          "phase": 0,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            1,
+            3,
+            5
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 19,
+          "b": 5,
+          "phase": 1,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            0,
+            2,
+            4
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "proved": true
+        }
+      },
+      "6": {
+        "0": {
+          "p": 19,
+          "b": 6,
+          "phase": 0,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            1,
+            3,
+            5
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 19,
+          "b": 6,
+          "phase": 1,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            0,
+            2,
+            4
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "proved": true
+        }
+      },
+      "7": {
+        "0": {
+          "p": 19,
+          "b": 7,
+          "phase": 0,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            1,
+            3,
+            5
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 19,
+          "b": 7,
+          "phase": 1,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            0,
+            2,
+            4
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "proved": true
+        }
+      },
+      "8": {
+        "0": {
+          "p": 19,
+          "b": 8,
+          "phase": 0,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            1,
+            3,
+            5
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 19,
+          "b": 8,
+          "phase": 1,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            0,
+            2,
+            4
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "proved": true
+        }
+      },
+      "9": {
+        "0": {
+          "p": 19,
+          "b": 9,
+          "phase": 0,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            1,
+            3,
+            5
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "proved": true
+        },
+        "1": {
+          "p": 19,
+          "b": 9,
+          "phase": 1,
+          "value": "1",
+          "coefficients": [
+            "0",
+            "0",
+            "1"
+          ],
+          "contacts": [
+            0,
+            2,
+            4
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "proved": true
+        }
+      }
+    }
+  },
+  "L_status": "OPEN"
+}
