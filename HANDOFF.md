@@ -1,12 +1,32 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-25 (15.643 positive-product boundary exclusion)
+**Date:** 2026-08-25 (15.644 negative-product asymptotic normal form)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.644 — asymptotic normal form of the negative two-point branch
+
+`src/e1_gmin_m4_prop15644.py` and
+`evidence/NOTE_2026-08-25_negative_product_asymptotic_normal_form.md`.
+The near-optimal degree-two slice-distance theorem implies that, for all
+sufficiently large odd primes, the `D={infinity,v}`, `c_H=-1` branch has
+exactly one nonbaseline direction of each quadratic type. Combining the
+forced exceptional mean with baseline divisibility and signed `l1` bounds
+leaves the unique arithmetic profile
+
+```
+I=2p-1 infinity edges; E=2p+2 finite edges;
+P_d=2 in every baseline direction;
+exceptional parallel counts (positive,negative)=(1,3) or (3,1).
+```
+
+This is not an exclusion. Its geometric fingerprint is a union of two
+nonparallel affine lines through `v`; deriving that classification from the
+complete fibre constraints is the next attack.
 
 ## 15.643 — positive-product infinity-point boundary excluded for p>=17
 

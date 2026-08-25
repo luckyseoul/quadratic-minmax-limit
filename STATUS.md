@@ -1,5 +1,15 @@
 # Status (2026-08-25)
 
+**15.644 PROVED asymptotic normal form, not branch exclusion**: the
+near-optimal degree-two polynomial-distance theorem forces exactly one
+nonbaseline direction of each quadratic type in the `D={infinity,v}`,
+`c_H=-1` branch for all sufficiently large odd primes. Exact mean,
+divisibility, `l1`, boundary, and sign-product constraints then force
+`2p-1` infinity edges, `2p+2` finite edges, exactly two parallel finite
+edges in every baseline direction, and exceptional parallel counts `1,3`
+(the negative-type count is odd). The remaining near-two-line geometry is
+not yet excluded. Residual (ii), Type I, R1, global QVAR, and L remain OPEN.
+
 **15.643 PROVED branch exclusion for `p>=17`, not residual (ii)**: in the
 `D={infinity,v}`, `c_H=+1` branch, 15.642's pointwise baseline makes every
 signed inter-fibre edge matrix additive. Divisibility forces each finite

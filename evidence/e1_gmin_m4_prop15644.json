@@ -1,0 +1,195 @@
+{
+  "prop": "15.644",
+  "title": "Asymptotic normal form of the negative infinity-point boundary",
+  "proved": true,
+  "theorem": {
+    "proved": true,
+    "all_sufficiently_large_odd_primes": true,
+    "external_input": "Amireddy-Behera-Srinivasan-Sudan slice distance theorem, d=2",
+    "external_input_consequence": "exactly one exception per type",
+    "normal_form": {
+      "infinity_edges": "2p-1",
+      "finite_edges": "2p+2",
+      "baseline_parallel_count": 2,
+      "exceptional_parallel_counts": [
+        1,
+        3
+      ],
+      "negative_exception_parallel_count": "odd"
+    },
+    "samples": {
+      "31": {
+        "p": 31,
+        "q": 15,
+        "conditional_hypothesis": "exactly one nonbaseline direction per type",
+        "candidates": [
+          {
+            "residue": 2,
+            "k0": 4,
+            "infinity_edges": 61,
+            "finite_edges": 64,
+            "exceptional_parallel_sum": 4,
+            "exceptional_pairs_positive_negative": [
+              [
+                1,
+                3
+              ],
+              [
+                3,
+                1
+              ]
+            ]
+          }
+        ],
+        "unique_normal_form": true,
+        "normal_form": {
+          "residue": 2,
+          "k0": 4,
+          "infinity_edges": 61,
+          "finite_edges": 64,
+          "exceptional_parallel_sum": 4,
+          "exceptional_pairs_positive_negative": [
+            [
+              1,
+              3
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        }
+      },
+      "41": {
+        "p": 41,
+        "q": 20,
+        "conditional_hypothesis": "exactly one nonbaseline direction per type",
+        "candidates": [
+          {
+            "residue": 2,
+            "k0": 4,
+            "infinity_edges": 81,
+            "finite_edges": 84,
+            "exceptional_parallel_sum": 4,
+            "exceptional_pairs_positive_negative": [
+              [
+                1,
+                3
+              ],
+              [
+                3,
+                1
+              ]
+            ]
+          }
+        ],
+        "unique_normal_form": true,
+        "normal_form": {
+          "residue": 2,
+          "k0": 4,
+          "infinity_edges": 81,
+          "finite_edges": 84,
+          "exceptional_parallel_sum": 4,
+          "exceptional_pairs_positive_negative": [
+            [
+              1,
+              3
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        }
+      },
+      "101": {
+        "p": 101,
+        "q": 50,
+        "conditional_hypothesis": "exactly one nonbaseline direction per type",
+        "candidates": [
+          {
+            "residue": 2,
+            "k0": 4,
+            "infinity_edges": 201,
+            "finite_edges": 204,
+            "exceptional_parallel_sum": 4,
+            "exceptional_pairs_positive_negative": [
+              [
+                1,
+                3
+              ],
+              [
+                3,
+                1
+              ]
+            ]
+          }
+        ],
+        "unique_normal_form": true,
+        "normal_form": {
+          "residue": 2,
+          "k0": 4,
+          "infinity_edges": 201,
+          "finite_edges": 204,
+          "exceptional_parallel_sum": 4,
+          "exceptional_pairs_positive_negative": [
+            [
+              1,
+              3
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        }
+      },
+      "201": {
+        "p": 201,
+        "q": 100,
+        "conditional_hypothesis": "exactly one nonbaseline direction per type",
+        "candidates": [
+          {
+            "residue": 2,
+            "k0": 4,
+            "infinity_edges": 401,
+            "finite_edges": 404,
+            "exceptional_parallel_sum": 4,
+            "exceptional_pairs_positive_negative": [
+              [
+                1,
+                3
+              ],
+              [
+                3,
+                1
+              ]
+            ]
+          }
+        ],
+        "unique_normal_form": true,
+        "normal_form": {
+          "residue": 2,
+          "k0": 4,
+          "infinity_edges": 401,
+          "finite_edges": 404,
+          "exceptional_parallel_sum": 4,
+          "exceptional_pairs_positive_negative": [
+            [
+              1,
+              3
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    "closes_negative_product_branch": false,
+    "closes_residual_ii": false,
+    "closes_R1": false,
+    "L_status": "OPEN"
+  }
+}
