@@ -1,12 +1,52 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-25 (15.639 complete first nonminimal odd dual shell)
+**Date:** 2026-08-25 (15.640 exact harmonic saddle at scaled norm 3p-6)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.640 — exact quartic saddle at scaled norm 3p-6
+
+`src/e1_gmin_m4_prop15640.py` and
+`evidence/NOTE_2026-08-25_scaled_norm_3p_minus_6_harmonic_saddle.md`.
+The square-circle complement words through any point satisfy the new exact
+frame identity
+
+```
+sum_{S contains i} w_S w_S^T = p^2 (P - 2(Pe_i)(Pe_i)^T).
+```
+
+After moving `i` to infinity, this is just `(p+1)/2` mutually orthogonal
+parallel classes, each with Gram matrix `p(pI-J)` and frame eigenvalue
+`p^2`; their dimensions sum to `d-1`.
+
+For admissible `W`, `F=||W||_F^2`, the two complete families from 15.639
+have quartic sums
+
+```
+negative triples:  2(p-3)(p+1) F
+point--circles:     8(p-2) F + 2(p-5)/p^3 sum_S (w_S^T W w_S)^2.
+```
+
+Combining these with the radial terms in `H_W` and the 15.634 circle tensor
+spectrum gives three complete shell eigenvalues:
+
+```
+-(p^4+2p^3-69p^2+136p+26)/(p^2+5),
+ (p^4-14p^3+89p^2-196p+24)/(p^2+5),
+ (p^4-10p^3+69p^2-176p-76)/(p^2+5).
+```
+
+They have signs `(-,+,+)` for every `p>=11`; positive-coefficient
+expansions at `p=11` prove this uniformly. At `p=11` they are
+`-582/7, 258/7, 426/7` with multiplicities `1220,305,244`. The odd norm
+phase and evaluation at `x/2` multiply the spectrum by `-1/16`, giving
+shadow signs `(+,-,-)`. Thus this shell reinforces the circle kernel but
+cancels both circle-image channels. It is exact multi-scale R1 information,
+not a bound on intervening or later shells, so R1 and L remain open.
 
 ## 15.639 — complete shell at scaled norm 3p-6 for every p>=11
 
@@ -48,8 +88,8 @@ At `p=11`, exact NUKA `qfminim` through bound 28 returned `473,970` vectors
 and maximum norm 27. Subtracting the complete count `31,110` through the
 third shell leaves `442,860`, exactly the formula. This is the fourth shell
 only at `p=11,13`; for `p>=17`, unclassified even candidates can intervene.
-Its harmonic operator and the later theta tail remain open, so R1 and L are
-still open.
+Its harmonic operator is supplied by 15.640. The intervening and later theta
+tail remains open, so R1 and L are still open.
 
 ## 15.638 — the first post-third even candidate shell is empty
 

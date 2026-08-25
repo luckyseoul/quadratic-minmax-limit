@@ -6004,10 +6004,102 @@ Exact NUKA `qfminim` at \(p=11\) through scaled bound \(28\) returned
 
 For \(p=11,13\), this is the fourth nonempty shell. For \(p\ge17\), further
 even candidates can lie below (15.639.1), so no global ordinal-shell claim
-is made. The harmonic operator at scaled norm \(3p-6\) and the later theta
-tail remain open; R1 and global QVAR are not proved.
+is made. Proposition 15.640 supplies this shell's harmonic operator, but the
+intervening and later theta tail remains open; R1 and global QVAR are not
+proved.
 
 Evidence: src/e1_gmin_m4_prop15639.py,
 evidence/e1_gmin_m4_prop15639.json,
 evidence/NOTE_2026-08-25_first_nonminimal_odd_scaled_shell.md,
 evidence/r1_dual_shell_count_p11_28.json, and tests/test_prop15639.py.
+
+## Prop 15.640 (2026-08-25) — exact harmonic saddle at scaled norm 3p-6
+
+Let \(\mathcal X\) be the complete shell from Proposition 15.639 and let
+\(W\) be admissible, with \(F=\lVert W\rVert_F^2\). For every point \(i\),
+the square-circle complement words through it obey
+
+\[
+\sum_{S\ni i}w_Sw_S^T
+=p^2\left(P-2(Pe_i)(Pe_i)^T\right).              \tag{15.640.1}
+\]
+
+After signed Paley transport to infinity, the circles split into
+\((p+1)/2\) orthogonal parallel classes. Each class has Gram matrix
+\(p(pI-J)\), hence frame eigenvalue \(p^2\), and the class dimensions sum
+to \((p^2-1)/2=d-1\). This proves (15.640.1).
+
+For the negative signed triples, put \(B=C\circ W\). The row sums of \(B\)
+vanish because \(CW=pW\) and \(\operatorname{diag}W=0\). Expanding over
+triangles, the unweighted square sum is \((n-4)F/2\), while weighting by the
+conference triangle sign gives \(\operatorname{tr}(CW^2)=pF\). Including
+both signs yields
+
+\[
+\sum_{x\in\mathcal T}(x^TWx)^2=2(p-3)(p+1)F.     \tag{15.640.2}
+\]
+
+For an oriented circle word \(w\), write \(q_S=w^TWw\). Represent the
+point--circle vectors by
+\(\pm(Pe_i-w_iw/p)\), \(i\notin S\). Using (15.640.1) and
+\(\sum_Sw_Sw_S^T=p^2(p-1)P\) gives
+
+\[
+\sum_{S,i\notin S}(Ww_S)_i^2=p^2(p-2)F
+\]
+
+and therefore
+
+\[
+\sum_{x\in\mathcal O}(x^TWx)^2
+=8(p-2)F+{2(p-5)\over p^3}\sum_S(w_S^TWw_S)^2.  \tag{15.640.3}
+\]
+
+The complete shell has squared norm \(q=3(p-2)/(2p)\), signed size
+\(N=p^2(p-1)(p+7)(p^2+1)/6\), and second moment \((Nq/d)P\). The radial
+terms of \(H_W\) subtract
+
+\[
+{2Nq^2\over d(d+2)}F
+={3(p-1)(p+7)(p-2)^2\over p^2+5}F.               \tag{15.640.4}
+\]
+
+Combining (15.640.2)--(15.640.4) with Proposition 15.634's square-circle
+tensor eigenvalues \(0,p^3(p-1),p^3(p+1)\) gives
+
+\[
+\boxed{
+\begin{aligned}
+\lambda_0&=-{p^4+2p^3-69p^2+136p+26\over p^2+5},\\
+\lambda_-&={p^4-14p^3+89p^2-196p+24\over p^2+5},\\
+\lambda_+&={p^4-10p^3+69p^2-176p-76\over p^2+5}.
+\end{aligned}}                                   \tag{15.640.5}
+\]
+
+Writing \(x=p-11\), the numerators of
+\(-\lambda_0,\lambda_-,\lambda_+\) become respectively
+
+\[
+\begin{aligned}
+x^4+46x^3+723x^2+4668x+10476,\\
+x^4+30x^3+353x^2+2004x+4644,\\
+x^4+34x^3+465x^2+3036x+7668.
+\end{aligned}
+\]
+
+Thus the signs are \((- ,+,+)\) for every \(p\ge11\): the shell is a
+quartic saddle, not a spherical 4-design. At \(p=11\), the spectrum is
+
+\[
+(-582/7)^{1220},\qquad(258/7)^{305},\qquad(426/7)^{244}.     \tag{15.640.6}
+\]
+
+The norm-parity phase and \(H_W(x/2)=H_W(x)/16\) multiply these values by
+\(-1/16\), so the transformed shadow signs are \((+,-,-)\). This exact
+channel information does not control the intervening even candidates for
+\(p\ge17\) or the later theta tail. R1 and global QVAR remain open.
+
+Evidence: src/e1_gmin_m4_prop15640.py,
+evidence/e1_gmin_m4_prop15640.json,
+evidence/NOTE_2026-08-25_scaled_norm_3p_minus_6_harmonic_saddle.md, and
+tests/test_prop15640.py.

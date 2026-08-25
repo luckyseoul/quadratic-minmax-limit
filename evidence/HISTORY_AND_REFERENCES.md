@@ -519,6 +519,32 @@ for the bare polynomial sequence.
 
 ---
 
+## 7n. Through-point circle frame and quartic saddle (2026-08-25)
+
+Proposition 15.640 computes the complete degree-four harmonic operator of
+the shell classified in Proposition 15.639. The key new incidence identity
+is that signed square-circle complements through a fixed point form a tight
+frame for the codimension-one slice of the positive Paley eigenspace. It
+follows directly by splitting the circles through infinity into orthogonal
+parallel classes with Gram matrix \(p(pI-J)\).
+
+The negative-triangle family contributes a scalar fourth-moment operator.
+The point--circle family contributes another scalar plus the same
+square-circle tensor operator diagonalized in Proposition 15.634. Their
+complete harmonic sum is indefinite for every \(p\ge11\): one
+circle-kernel eigenvalue is negative and two circle-image eigenvalues are
+positive. The radial odd-coset phase reverses all three signs in the Poisson
+shadow.
+
+Exact searches for the three rational eigenvalue formulas, the \(p=11\)
+spectrum `-582/7,258/7,426/7`, and the through-point frame identity found no
+matching Paley-lattice theorem. Individual OEIS searches for larger raw
+numerators likewise returned no entries. General harmonic ETF and
+Miquelian-plane sources provide context, not this shell operator. This is a
+search record and does not assert unreviewed priority.
+
+---
+
 ## 8. What is not in the older literature
 
 - No 1930s–1970s theorem that \(\lim n^{-3/2}\min_A\max_x|x^\top Ax|\) exists.

@@ -1,0 +1,803 @@
+{
+  "prop": "15.640",
+  "title": "Quartic saddle on the complete scaled-norm 3p-6 shell",
+  "proved": {
+    "through_point_square_circle_frame_identity_all_p_ge_11": true,
+    "complete_scaled_norm_3p_minus_6_harmonic_operator": true,
+    "complete_scaled_norm_3p_minus_6_shell_is_quartic_saddle": true,
+    "R1": false,
+    "global_QVAR": false
+  },
+  "theorem": {
+    "proved": true,
+    "scope": "For every odd prime p>=11, the complete scaled-norm 3p-6 harmonic shell has one negative circle-kernel eigenvalue and two positive square-circle-image eigenvalues.",
+    "rows": {
+      "11": {
+        "scaled_norm": 27,
+        "squared_norm": "27/22",
+        "signed_shell_count": 442860,
+        "through_point_frame": {
+          "parallel_classes": 6,
+          "words_per_class": 11,
+          "within_class_gram": "p*(p*I-J)",
+          "within_class_nonzero_eigenvalue": 121,
+          "within_class_nonzero_multiplicity": 10,
+          "distinct_classes_orthogonal": true,
+          "span_dimension": 60,
+          "target_dimension": 60,
+          "frame_operator_eigenvalue": 121,
+          "frame_identity": "p^2*(P-2*(P e_i)*(P e_i)^T)",
+          "proved": true
+        },
+        "negative_triangle_quartic_scalar": 192,
+        "point_circle_quartic_scalar": 72,
+        "point_circle_evaluation_coefficient": "12/1331",
+        "complete_quartic_scalar": 264,
+        "radial_harmonic_correction": "2430/7",
+        "harmonic_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "circle_tensor_eigenvalue": 0,
+            "eigenvalue": "-582/7",
+            "closed_form": "-582/7",
+            "multiplicity": 1220
+          },
+          {
+            "channel": "circle-low",
+            "circle_tensor_eigenvalue": 13310,
+            "eigenvalue": "258/7",
+            "closed_form": "258/7",
+            "multiplicity": 305
+          },
+          {
+            "channel": "circle-high",
+            "circle_tensor_eigenvalue": 15972,
+            "eigenvalue": "426/7",
+            "closed_form": "426/7",
+            "multiplicity": 244
+          }
+        ],
+        "parity_twisted_half_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "circle_tensor_eigenvalue": 0,
+            "eigenvalue": "291/56",
+            "closed_form": "291/56",
+            "multiplicity": 1220,
+            "unphased_eigenvalue": "-582/7",
+            "unphased_closed_form": "-582/7"
+          },
+          {
+            "channel": "circle-low",
+            "circle_tensor_eigenvalue": 13310,
+            "eigenvalue": "-129/56",
+            "closed_form": "-129/56",
+            "multiplicity": 305,
+            "unphased_eigenvalue": "258/7",
+            "unphased_closed_form": "258/7"
+          },
+          {
+            "channel": "circle-high",
+            "circle_tensor_eigenvalue": 15972,
+            "eigenvalue": "-213/56",
+            "closed_form": "-213/56",
+            "multiplicity": 244,
+            "unphased_eigenvalue": "426/7",
+            "unphased_closed_form": "426/7"
+          }
+        ],
+        "sign_certificate": {
+          "p_minus_11": 0,
+          "positive_coefficient_expansions": {
+            "minus_kernel_numerator": [
+              10476,
+              4668,
+              723,
+              46,
+              1
+            ],
+            "circle_low_numerator": [
+              4644,
+              2004,
+              353,
+              30,
+              1
+            ],
+            "circle_high_numerator": [
+              7668,
+              3036,
+              465,
+              34,
+              1
+            ]
+          },
+          "kernel_positive_numerator": 10476,
+          "circle_low_positive_numerator": 4644,
+          "circle_high_positive_numerator": 7668,
+          "expansions_match": true,
+          "unphased_signs": [
+            "negative",
+            "positive",
+            "positive"
+          ],
+          "indefinite": true
+        },
+        "checks": true
+      },
+      "13": {
+        "scaled_norm": 33,
+        "squared_norm": "33/26",
+        "signed_shell_count": 1149200,
+        "through_point_frame": {
+          "parallel_classes": 7,
+          "words_per_class": 13,
+          "within_class_gram": "p*(p*I-J)",
+          "within_class_nonzero_eigenvalue": 169,
+          "within_class_nonzero_multiplicity": 12,
+          "distinct_classes_orthogonal": true,
+          "span_dimension": 84,
+          "target_dimension": 84,
+          "frame_operator_eigenvalue": 169,
+          "frame_identity": "p^2*(P-2*(P e_i)*(P e_i)^T)",
+          "proved": true
+        },
+        "negative_triangle_quartic_scalar": 280,
+        "point_circle_quartic_scalar": 88,
+        "point_circle_evaluation_coefficient": "16/2197",
+        "complete_quartic_scalar": 368,
+        "radial_harmonic_correction": "14520/29",
+        "harmonic_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "circle_tensor_eigenvalue": 0,
+            "eigenvalue": "-3848/29",
+            "closed_form": "-3848/29",
+            "multiplicity": 2550
+          },
+          {
+            "channel": "circle-low",
+            "circle_tensor_eigenvalue": 26364,
+            "eigenvalue": "1720/29",
+            "closed_form": "1720/29",
+            "multiplicity": 510
+          },
+          {
+            "channel": "circle-high",
+            "circle_tensor_eigenvalue": 30758,
+            "eigenvalue": "2648/29",
+            "closed_form": "2648/29",
+            "multiplicity": 425
+          }
+        ],
+        "parity_twisted_half_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "circle_tensor_eigenvalue": 0,
+            "eigenvalue": "481/58",
+            "closed_form": "481/58",
+            "multiplicity": 2550,
+            "unphased_eigenvalue": "-3848/29",
+            "unphased_closed_form": "-3848/29"
+          },
+          {
+            "channel": "circle-low",
+            "circle_tensor_eigenvalue": 26364,
+            "eigenvalue": "-215/58",
+            "closed_form": "-215/58",
+            "multiplicity": 510,
+            "unphased_eigenvalue": "1720/29",
+            "unphased_closed_form": "1720/29"
+          },
+          {
+            "channel": "circle-high",
+            "circle_tensor_eigenvalue": 30758,
+            "eigenvalue": "-331/58",
+            "closed_form": "-331/58",
+            "multiplicity": 425,
+            "unphased_eigenvalue": "2648/29",
+            "unphased_closed_form": "2648/29"
+          }
+        ],
+        "sign_certificate": {
+          "p_minus_11": 2,
+          "positive_coefficient_expansions": {
+            "minus_kernel_numerator": [
+              10476,
+              4668,
+              723,
+              46,
+              1
+            ],
+            "circle_low_numerator": [
+              4644,
+              2004,
+              353,
+              30,
+              1
+            ],
+            "circle_high_numerator": [
+              7668,
+              3036,
+              465,
+              34,
+              1
+            ]
+          },
+          "kernel_positive_numerator": 23088,
+          "circle_low_positive_numerator": 10320,
+          "circle_high_positive_numerator": 15888,
+          "expansions_match": true,
+          "unphased_signs": [
+            "negative",
+            "positive",
+            "positive"
+          ],
+          "indefinite": true
+        },
+        "checks": true
+      },
+      "17": {
+        "scaled_norm": 45,
+        "squared_norm": "45/34",
+        "signed_shell_count": 5363840,
+        "through_point_frame": {
+          "parallel_classes": 9,
+          "words_per_class": 17,
+          "within_class_gram": "p*(p*I-J)",
+          "within_class_nonzero_eigenvalue": 289,
+          "within_class_nonzero_multiplicity": 16,
+          "distinct_classes_orthogonal": true,
+          "span_dimension": 144,
+          "target_dimension": 144,
+          "frame_operator_eigenvalue": 289,
+          "frame_identity": "p^2*(P-2*(P e_i)*(P e_i)^T)",
+          "proved": true
+        },
+        "negative_triangle_quartic_scalar": 504,
+        "point_circle_quartic_scalar": 120,
+        "point_circle_evaluation_coefficient": "24/4913",
+        "complete_quartic_scalar": 624,
+        "radial_harmonic_correction": "43200/49",
+        "harmonic_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "circle_tensor_eigenvalue": 0,
+            "eigenvalue": "-12624/49",
+            "closed_form": "-12624/49",
+            "multiplicity": 8120
+          },
+          {
+            "channel": "circle-low",
+            "circle_tensor_eigenvalue": 78608,
+            "eigenvalue": "6192/49",
+            "closed_form": "6192/49",
+            "multiplicity": 1160
+          },
+          {
+            "channel": "circle-high",
+            "circle_tensor_eigenvalue": 88434,
+            "eigenvalue": "8544/49",
+            "closed_form": "8544/49",
+            "multiplicity": 1015
+          }
+        ],
+        "parity_twisted_half_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "circle_tensor_eigenvalue": 0,
+            "eigenvalue": "789/49",
+            "closed_form": "789/49",
+            "multiplicity": 8120,
+            "unphased_eigenvalue": "-12624/49",
+            "unphased_closed_form": "-12624/49"
+          },
+          {
+            "channel": "circle-low",
+            "circle_tensor_eigenvalue": 78608,
+            "eigenvalue": "-387/49",
+            "closed_form": "-387/49",
+            "multiplicity": 1160,
+            "unphased_eigenvalue": "6192/49",
+            "unphased_closed_form": "6192/49"
+          },
+          {
+            "channel": "circle-high",
+            "circle_tensor_eigenvalue": 88434,
+            "eigenvalue": "-534/49",
+            "closed_form": "-534/49",
+            "multiplicity": 1015,
+            "unphased_eigenvalue": "8544/49",
+            "unphased_closed_form": "8544/49"
+          }
+        ],
+        "sign_certificate": {
+          "p_minus_11": 6,
+          "positive_coefficient_expansions": {
+            "minus_kernel_numerator": [
+              10476,
+              4668,
+              723,
+              46,
+              1
+            ],
+            "circle_low_numerator": [
+              4644,
+              2004,
+              353,
+              30,
+              1
+            ],
+            "circle_high_numerator": [
+              7668,
+              3036,
+              465,
+              34,
+              1
+            ]
+          },
+          "kernel_positive_numerator": 75744,
+          "circle_low_positive_numerator": 37152,
+          "circle_high_positive_numerator": 51264,
+          "expansions_match": true,
+          "unphased_signs": [
+            "negative",
+            "positive",
+            "positive"
+          ],
+          "indefinite": true
+        },
+        "checks": true
+      },
+      "19": {
+        "scaled_norm": 51,
+        "squared_norm": "51/38",
+        "signed_shell_count": 10193196,
+        "through_point_frame": {
+          "parallel_classes": 10,
+          "words_per_class": 19,
+          "within_class_gram": "p*(p*I-J)",
+          "within_class_nonzero_eigenvalue": 361,
+          "within_class_nonzero_multiplicity": 18,
+          "distinct_classes_orthogonal": true,
+          "span_dimension": 180,
+          "target_dimension": 180,
+          "frame_operator_eigenvalue": 361,
+          "frame_identity": "p^2*(P-2*(P e_i)*(P e_i)^T)",
+          "proved": true
+        },
+        "negative_triangle_quartic_scalar": 640,
+        "point_circle_quartic_scalar": 136,
+        "point_circle_evaluation_coefficient": "28/6859",
+        "complete_quartic_scalar": 776,
+        "radial_harmonic_correction": "67626/61",
+        "harmonic_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "circle_tensor_eigenvalue": 0,
+            "eigenvalue": "-20290/61",
+            "closed_form": "-20290/61",
+            "multiplicity": 13032
+          },
+          {
+            "channel": "circle-low",
+            "circle_tensor_eigenvalue": 123462,
+            "eigenvalue": "10454/61",
+            "closed_form": "10454/61",
+            "multiplicity": 1629
+          },
+          {
+            "channel": "circle-high",
+            "circle_tensor_eigenvalue": 137180,
+            "eigenvalue": "13870/61",
+            "closed_form": "13870/61",
+            "multiplicity": 1448
+          }
+        ],
+        "parity_twisted_half_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "circle_tensor_eigenvalue": 0,
+            "eigenvalue": "10145/488",
+            "closed_form": "10145/488",
+            "multiplicity": 13032,
+            "unphased_eigenvalue": "-20290/61",
+            "unphased_closed_form": "-20290/61"
+          },
+          {
+            "channel": "circle-low",
+            "circle_tensor_eigenvalue": 123462,
+            "eigenvalue": "-5227/488",
+            "closed_form": "-5227/488",
+            "multiplicity": 1629,
+            "unphased_eigenvalue": "10454/61",
+            "unphased_closed_form": "10454/61"
+          },
+          {
+            "channel": "circle-high",
+            "circle_tensor_eigenvalue": 137180,
+            "eigenvalue": "-6935/488",
+            "closed_form": "-6935/488",
+            "multiplicity": 1448,
+            "unphased_eigenvalue": "13870/61",
+            "unphased_closed_form": "13870/61"
+          }
+        ],
+        "sign_certificate": {
+          "p_minus_11": 8,
+          "positive_coefficient_expansions": {
+            "minus_kernel_numerator": [
+              10476,
+              4668,
+              723,
+              46,
+              1
+            ],
+            "circle_low_numerator": [
+              4644,
+              2004,
+              353,
+              30,
+              1
+            ],
+            "circle_high_numerator": [
+              7668,
+              3036,
+              465,
+              34,
+              1
+            ]
+          },
+          "kernel_positive_numerator": 121740,
+          "circle_low_positive_numerator": 62724,
+          "circle_high_positive_numerator": 83220,
+          "expansions_match": true,
+          "unphased_signs": [
+            "negative",
+            "positive",
+            "positive"
+          ],
+          "indefinite": true
+        },
+        "checks": true
+      },
+      "23": {
+        "scaled_norm": 63,
+        "squared_norm": "63/46",
+        "signed_shell_count": 30840700,
+        "through_point_frame": {
+          "parallel_classes": 12,
+          "words_per_class": 23,
+          "within_class_gram": "p*(p*I-J)",
+          "within_class_nonzero_eigenvalue": 529,
+          "within_class_nonzero_multiplicity": 22,
+          "distinct_classes_orthogonal": true,
+          "span_dimension": 264,
+          "target_dimension": 264,
+          "frame_operator_eigenvalue": 529,
+          "frame_identity": "p^2*(P-2*(P e_i)*(P e_i)^T)",
+          "proved": true
+        },
+        "negative_triangle_quartic_scalar": 960,
+        "point_circle_quartic_scalar": 168,
+        "point_circle_evaluation_coefficient": "36/12167",
+        "complete_quartic_scalar": 1128,
+        "radial_harmonic_correction": "145530/89",
+        "harmonic_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "circle_tensor_eigenvalue": 0,
+            "eigenvalue": "-45138/89",
+            "closed_form": "-45138/89",
+            "multiplicity": 29150
+          },
+          {
+            "channel": "circle-low",
+            "circle_tensor_eigenvalue": 267674,
+            "eigenvalue": "25350/89",
+            "closed_form": "25350/89",
+            "multiplicity": 2915
+          },
+          {
+            "channel": "circle-high",
+            "circle_tensor_eigenvalue": 292008,
+            "eigenvalue": "31758/89",
+            "closed_form": "31758/89",
+            "multiplicity": 2650
+          }
+        ],
+        "parity_twisted_half_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "circle_tensor_eigenvalue": 0,
+            "eigenvalue": "22569/712",
+            "closed_form": "22569/712",
+            "multiplicity": 29150,
+            "unphased_eigenvalue": "-45138/89",
+            "unphased_closed_form": "-45138/89"
+          },
+          {
+            "channel": "circle-low",
+            "circle_tensor_eigenvalue": 267674,
+            "eigenvalue": "-12675/712",
+            "closed_form": "-12675/712",
+            "multiplicity": 2915,
+            "unphased_eigenvalue": "25350/89",
+            "unphased_closed_form": "25350/89"
+          },
+          {
+            "channel": "circle-high",
+            "circle_tensor_eigenvalue": 292008,
+            "eigenvalue": "-15879/712",
+            "closed_form": "-15879/712",
+            "multiplicity": 2650,
+            "unphased_eigenvalue": "31758/89",
+            "unphased_closed_form": "31758/89"
+          }
+        ],
+        "sign_certificate": {
+          "p_minus_11": 12,
+          "positive_coefficient_expansions": {
+            "minus_kernel_numerator": [
+              10476,
+              4668,
+              723,
+              46,
+              1
+            ],
+            "circle_low_numerator": [
+              4644,
+              2004,
+              353,
+              30,
+              1
+            ],
+            "circle_high_numerator": [
+              7668,
+              3036,
+              465,
+              34,
+              1
+            ]
+          },
+          "kernel_positive_numerator": 270828,
+          "circle_low_positive_numerator": 152100,
+          "circle_high_positive_numerator": 190548,
+          "expansions_match": true,
+          "unphased_signs": [
+            "negative",
+            "positive",
+            "positive"
+          ],
+          "indefinite": true
+        },
+        "checks": true
+      },
+      "29": {
+        "scaled_norm": 81,
+        "squared_norm": "81/58",
+        "signed_shell_count": 118964496,
+        "through_point_frame": {
+          "parallel_classes": 15,
+          "words_per_class": 29,
+          "within_class_gram": "p*(p*I-J)",
+          "within_class_nonzero_eigenvalue": 841,
+          "within_class_nonzero_multiplicity": 28,
+          "distinct_classes_orthogonal": true,
+          "span_dimension": 420,
+          "target_dimension": 420,
+          "frame_operator_eigenvalue": 841,
+          "frame_identity": "p^2*(P-2*(P e_i)*(P e_i)^T)",
+          "proved": true
+        },
+        "negative_triangle_quartic_scalar": 1560,
+        "point_circle_quartic_scalar": 216,
+        "point_circle_evaluation_coefficient": "48/24389",
+        "complete_quartic_scalar": 1776,
+        "radial_harmonic_correction": "122472/47",
+        "harmonic_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "circle_tensor_eigenvalue": 0,
+            "eigenvalue": "-39000/47",
+            "closed_form": "-39000/47",
+            "multiplicity": 76622
+          },
+          {
+            "channel": "circle-low",
+            "circle_tensor_eigenvalue": 682892,
+            "eigenvalue": "24168/47",
+            "closed_form": "24168/47",
+            "multiplicity": 5894
+          },
+          {
+            "channel": "circle-high",
+            "circle_tensor_eigenvalue": 731670,
+            "eigenvalue": "28680/47",
+            "closed_form": "28680/47",
+            "multiplicity": 5473
+          }
+        ],
+        "parity_twisted_half_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "circle_tensor_eigenvalue": 0,
+            "eigenvalue": "4875/94",
+            "closed_form": "4875/94",
+            "multiplicity": 76622,
+            "unphased_eigenvalue": "-39000/47",
+            "unphased_closed_form": "-39000/47"
+          },
+          {
+            "channel": "circle-low",
+            "circle_tensor_eigenvalue": 682892,
+            "eigenvalue": "-3021/94",
+            "closed_form": "-3021/94",
+            "multiplicity": 5894,
+            "unphased_eigenvalue": "24168/47",
+            "unphased_closed_form": "24168/47"
+          },
+          {
+            "channel": "circle-high",
+            "circle_tensor_eigenvalue": 731670,
+            "eigenvalue": "-3585/94",
+            "closed_form": "-3585/94",
+            "multiplicity": 5473,
+            "unphased_eigenvalue": "28680/47",
+            "unphased_closed_form": "28680/47"
+          }
+        ],
+        "sign_certificate": {
+          "p_minus_11": 18,
+          "positive_coefficient_expansions": {
+            "minus_kernel_numerator": [
+              10476,
+              4668,
+              723,
+              46,
+              1
+            ],
+            "circle_low_numerator": [
+              4644,
+              2004,
+              353,
+              30,
+              1
+            ],
+            "circle_high_numerator": [
+              7668,
+              3036,
+              465,
+              34,
+              1
+            ]
+          },
+          "kernel_positive_numerator": 702000,
+          "circle_low_positive_numerator": 435024,
+          "circle_high_positive_numerator": 516240,
+          "expansions_match": true,
+          "unphased_signs": [
+            "negative",
+            "positive",
+            "positive"
+          ],
+          "indefinite": true
+        },
+        "checks": true
+      },
+      "31": {
+        "scaled_norm": 87,
+        "squared_norm": "87/62",
+        "signed_shell_count": 175651580,
+        "through_point_frame": {
+          "parallel_classes": 16,
+          "words_per_class": 31,
+          "within_class_gram": "p*(p*I-J)",
+          "within_class_nonzero_eigenvalue": 961,
+          "within_class_nonzero_multiplicity": 30,
+          "distinct_classes_orthogonal": true,
+          "span_dimension": 480,
+          "target_dimension": 480,
+          "frame_operator_eigenvalue": 961,
+          "frame_identity": "p^2*(P-2*(P e_i)*(P e_i)^T)",
+          "proved": true
+        },
+        "negative_triangle_quartic_scalar": 1792,
+        "point_circle_quartic_scalar": 232,
+        "point_circle_evaluation_coefficient": "52/29791",
+        "complete_quartic_scalar": 2024,
+        "radial_harmonic_correction": "479370/161",
+        "harmonic_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "circle_tensor_eigenvalue": 0,
+            "eigenvalue": "-153506/161",
+            "closed_form": "-153506/161",
+            "multiplicity": 101010
+          },
+          {
+            "channel": "circle-low",
+            "circle_tensor_eigenvalue": 893730,
+            "eigenvalue": "97654/161",
+            "closed_form": "97654/161",
+            "multiplicity": 7215
+          },
+          {
+            "channel": "circle-high",
+            "circle_tensor_eigenvalue": 953312,
+            "eigenvalue": "114398/161",
+            "closed_form": "114398/161",
+            "multiplicity": 6734
+          }
+        ],
+        "parity_twisted_half_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "circle_tensor_eigenvalue": 0,
+            "eigenvalue": "76753/1288",
+            "closed_form": "76753/1288",
+            "multiplicity": 101010,
+            "unphased_eigenvalue": "-153506/161",
+            "unphased_closed_form": "-153506/161"
+          },
+          {
+            "channel": "circle-low",
+            "circle_tensor_eigenvalue": 893730,
+            "eigenvalue": "-48827/1288",
+            "closed_form": "-48827/1288",
+            "multiplicity": 7215,
+            "unphased_eigenvalue": "97654/161",
+            "unphased_closed_form": "97654/161"
+          },
+          {
+            "channel": "circle-high",
+            "circle_tensor_eigenvalue": 953312,
+            "eigenvalue": "-57199/1288",
+            "closed_form": "-57199/1288",
+            "multiplicity": 6734,
+            "unphased_eigenvalue": "114398/161",
+            "unphased_closed_form": "114398/161"
+          }
+        ],
+        "sign_certificate": {
+          "p_minus_11": 20,
+          "positive_coefficient_expansions": {
+            "minus_kernel_numerator": [
+              10476,
+              4668,
+              723,
+              46,
+              1
+            ],
+            "circle_low_numerator": [
+              4644,
+              2004,
+              353,
+              30,
+              1
+            ],
+            "circle_high_numerator": [
+              7668,
+              3036,
+              465,
+              34,
+              1
+            ]
+          },
+          "kernel_positive_numerator": 921036,
+          "circle_low_positive_numerator": 585924,
+          "circle_high_positive_numerator": 686388,
+          "expansions_match": true,
+          "unphased_signs": [
+            "negative",
+            "positive",
+            "positive"
+          ],
+          "indefinite": true
+        },
+        "checks": true
+      }
+    }
+  },
+  "remaining_obstruction": "The intervening even candidates for p>=17 and the complete later norm-parity-twisted harmonic theta tail remain uncontrolled.",
+  "L_status": "OPEN"
+}

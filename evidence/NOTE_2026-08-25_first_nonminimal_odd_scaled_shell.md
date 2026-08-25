@@ -300,10 +300,11 @@ exact residual is therefore \(473,970-31,110=442,860\), exactly (4), and
 there is no vector at the excluded bound \(28\). This computation is an
 audit, not an input to the uniform proof.
 
-The theorem classifies the full scaled-norm \(3p-6\) shell but does not yet
-compute its degree-four harmonic operator. It also does not exclude the additional
-even candidates below \(3p-6\) when \(p\ge17\). Those are real boundaries
-before any global R1 tail claim.
+The theorem classifies the full scaled-norm \(3p-6\) shell. Proposition
+15.640 subsequently computes its degree-four harmonic operator. Neither
+result excludes the additional even candidates below \(3p-6\) when
+\(p\ge17\); those and the later tail are real boundaries before any global
+R1 claim.
 
 Targeted literature and OEIS searches found no Paley-dual shell theorem or
 entry for the count formula (4). The bare negative-triangle half-count is
