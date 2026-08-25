@@ -21,17 +21,22 @@ banned by test (`tests/test_main_chain_docs.py`).
 
 **Goal:** settle the limit (see **`LONG_HORIZON_GOAL.md`**). Not done until L is proved or disproved.
 
-**Main claim:** L = lim_n α_n is **OPEN** (2026-08-16).
+**Main claim:** L = lim_n α_n is **OPEN** (2026-08-25).
 
-Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**.
-Four leftovers (`GOAL.md`): λ_min(Φ) ≥ 6; residual (ii) for
-even k ≥ 4p; Type I when Max− is multi-level; Lemma D (writeup exists,
-hostile check still due). Residual (ii) is closed only for the affine branch
-and even k ≤ 4p−2 (15.179/236/237), not for the statement E(1) needs.
-Soft-close forbidden. Package: **`evidence/share/denseness_path_package.md`**.
+Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
+`four_e1_units_closed()` ledger is:
 
-As of 2026-08-22 the three open leftovers reduce to **two independent roots** —
-see the **Discovery map** below.
+| GOAL unit | live predicate | status |
+|---|---|---|
+| spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; non-Walsh multi-level part open |
+| Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
+| Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
+
+Thus three top-level predicates are false, but the unfinished mathematics is
+organized into two fronts: the spectral/QVAR–R1 front and the non-Walsh
+multi-level Max− front. Soft-close is forbidden. The acceptance package is
+**`evidence/share/denseness_path_package.md`**.
 
 **Proved (sandwich):**
 ```
@@ -47,29 +52,39 @@ See **`STATUS.md`**, `HANDOFF.md`, denseness package, `solution.md`.
 ## Discovery map — what has moved
 
 The problem reduces to **E(1) on Paley conference matrices of order n = p²+1**.
-The map below records the 2026-08-22 collapse; R2 has since been closed by
-Prop. 15.628, while R1 and the non-Walsh parts of leftover 2 remain open:
+The map below records the current dependency structure. Prop. 15.628 closed
+Walsh, W1, and W2; it did not close the non-Walsh multi-level cases. The
+principal R1 inequality also remains open, and the current floor wiring
+requires the separate global-QVAR estimate:
 
 ```mermaid
 graph TD
     L["L = lim α_n<br/><b>OPEN</b>"] --> E1["E(1) on n = p²+1"]
     E1 --> D["lemma_D<br/><b>TRUE</b>"]
-    E1 --> L1["leftover 1<br/>λ_min(Φ) ≥ 6"]
-    E1 --> L2["leftover 2<br/>Max− multi-level ND"]
-    E1 --> L3["leftover 3<br/>3A+B > 0"]
-    L1 --> R1["<b>R1</b> ‖δ‖² ≤ n/12<br/>(one inequality)"]
-    L3 --> R1
-    RI["residual-(i) R≤2p"] --> R1
-    L2 --> R2["<b>R2</b> Walsh spanning<br/><b>CLOSED</b> (15.628)"]
+    E1 --> FLOOR["spectral floor<br/>φ_F ≥ 6<br/><b>OPEN</b>"]
+    FLOOR --> QVAR["global mixed-k QVAR<br/><b>OPEN</b>"]
+    FLOOR --> R1["principal <b>R1</b><br/>‖δ‖² ≤ n(λ̄−6)²/48<br/><b>OPEN</b>"]
+    E1 --> TYPEI["Type I multi-level<br/>3A+B > 0<br/><b>OPEN</b>"]
+    R1 -. sufficient .-> TYPEI
+    E1 --> RES["residual (ii), even k≥4p<br/><b>OPEN</b>"]
+    RES --> WALSH["Walsh / W1 / W2<br/><b>CLOSED</b> (15.628)"]
+    RES --> MULTI["non-Walsh multi-level<br/><b>OPEN</b>"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
+    style FLOOR fill:#fff4e6
+    style QVAR fill:#fff4e6
     style R1 fill:#fff4e6
-    style R2 fill:#e6ffe6
+    style TYPEI fill:#fff4e6
+    style RES fill:#fff4e6
+    style WALSH fill:#e6ffe6
+    style MULTI fill:#fff4e6
 ```
 
-`R1` closes leftovers 1 *and* 3 (and residual-(i) with room to spare).
-`R2` was independent and is now proved; this does not remove the separate
-5+-level / even-`k>4p` portions of leftover 2.
+The older “two roots, R1 and R2” shorthand now needs two qualifications.
+First, the live spectral-floor predicate is `global QVAR ∧ principal R1`, not
+R1 alone. Second, only the Walsh component of R2 is closed. A proof of the
+strong `n/12` R1 bound would also imply the weaker Type-I `3A+B` estimate,
+but no such bound has been proved.
 
 ### The R1 collapse (props 15.590–15.597)
 
@@ -83,14 +98,18 @@ A chain of exact identities, each verified as rationals, not numerics:
 | particular part | **`Φ_part = λ̄·I`** — the explicit half is spectrally flat | **proved ∀p** |
 | residual | `V := ‖Φ − λ̄I‖²_F = 24‖δ‖²` | exact |
 
-so **leftovers 1 and 3 are the same bound on the same scalar** `δ`, the
-master-equation residual that the repo has tracked since 15.217:
+so the principal spectral floor and the Type-I sufficient estimate are
+bounds on the same scalar `δ`, the master-equation residual tracked since
+15.217:
 
-| unit | needs ‖δ‖² ≤ | limit |
+| implication | needs ‖δ‖² ≤ | limit |
 |---|---|---|
-| leftover 1 | n(λ̄−6)²/48 | **n/12** ← binding |
-| leftover 3 | c₃(p)·n/24 | ~2.9n |
+| principal part of the spectral floor | n(λ̄−6)²/48 | **n/12** ← binding |
+| Type-I `3A+B>0` sufficient bound | c₃(p)·n/24 | ~2.9n |
 | residual-(i) | `delta_room_for_R` (15.217) | ~n²/8 |
+
+This hierarchy does **not** prove global QVAR, and it does not import any
+of the three false GOAL predicates.
 
 ### Measured vs. required
 
@@ -136,6 +155,24 @@ as an actual `U`-difference using arbitrary affine halfspaces.  Therefore
 37,457,112-point scan remains an independent holdout; the explicit p=19
 affine witness supersedes the earlier generic-solver timeout.
 
+### Exact Paley-lattice structure (props 15.629–15.631)
+
+The post-Walsh attack exposed a precise lattice behind R1. Let
+`L = ker_Z(C−pI)`, let `P=(I+C/p)/2`, and let `A` be generated by the
+square-direction affine-circle words.
+
+| proposition | proved result | boundary |
+|---|---|---|
+| 15.629 | the profile glue gives `[L:A]=p^((m−1)(m−2)/2)`, `det(L)=2p^(m²)`, `L*=P Z^n`, discriminant `Z/2 ⊕ (Z/p)^(m²)`, and level `4p` | identifies the exact lattice; no R1 bound |
+| 15.630 | `min(L*)=1/2`; the complete minimum shell is `{±Pe_i}` with kissing number `2(p²+1)`; every other nonzero dual vector has norm at least `(p−1)/p` | ordinary dual shell, not the odd Max+ coset shell |
+| 15.631 | the Max+ coset phase is radial: `<u,y₀> ≡ 2p‖u‖² (mod 2)`; the first transformed degree-four harmonic shell has a positive exact coefficient | higher dual-shell harmonic sums remain uncontrolled |
+
+These are general theorems for every odd prime, including the standard
+Paley `(25,50)` adjacent-ETF minimum-shell case. They convert R1 into a
+level-`4p` norm-parity-twisted harmonic theta problem with its first shell
+known exactly. They are a substantial structural advance, but they do not
+prove R1, global QVAR, E(1), or the limit.
+
 ### Route kills — do not re-tread
 
 Recorded with counterexamples so they are not reopened:
@@ -151,20 +188,25 @@ Recorded with counterexamples so they are not reopened:
 | linear 4-point and 6-point LPs | feasible-but-negative while true pairing is positive |
 | Γ_δ quantization | p=5 integrality was a single-orbit artifact; dies at p=7 |
 
-Every one is a *moment relaxation* — it replaces Max+ by a moment sequence.
-The live route (`evidence/PLAN_2026-08-22_class_function_route.md`) instead
-uses the group action: `Γ(g) = tr(Φ·π(g))` makes the eigenvalues λ_c exactly
-the Fourier coefficients of a **class function**, compressing ~n⁴ four-set
-moments to ~15 numbers paired against the explicit PSL(2,q) character table.
+The older class-function plan
+(`evidence/PLAN_2026-08-22_class_function_route.md`) remains a detailed
+record of the PSL/Hecke compression and its killed shortcuts. The current
+R1 structure is sharper: Props. 15.629–15.631 identify the integral glue,
+the exact dual minimum shell, and the radial Poisson phase. The missing step
+is now explicitly the signed degree-four contribution of the higher dual
+shells, not the first shell or an unidentified glue-class phase.
 
 ### What is left
 
-1. **R1** — `‖P_{E₄ₚ} m₄⁺‖² ≤ n/12`, given only the master equation and
-   `|m₄⁺| ≤ 1`. Equivalently `κ₄(y·z) = O(n)`, or Γ_δ's Fourier coefficients
-   bounded below. Closes leftovers 1 and 3 together.
-2. **Leftover 2 beyond Walsh** — the separate 5+-level / even-`k>4p`
-   multi-level cases.
-3. **lemma_D** — writeup exists; hostile check still due.
+1. **Spectral floor:** prove global mixed-`k` QVAR and the principal R1
+   bound `‖δ‖² ≤ n(λ̄−6)²/48` (the simpler `n/12` bound is sufficient).
+   The lattice/shadow theorems identify the exact theta object but do not
+   control its higher dual shells.
+2. **Non-Walsh multi-level Max−:** close residual (ii) for even `k≥4p`.
+   Walsh/W1/W2 are done; the 5+-level branch is not. The related Type-I
+   `3A+B>0` gate also remains false, although strong R1 would imply it.
+
+Lemma D is complete and is no longer on the work list.
 
 ---
 
@@ -176,10 +218,16 @@ moments to ~15 numbers paired against the explicit PSL(2,q) character table.
 | `evidence/HISTORY_AND_REFERENCES.md` | MO/X/Paata education and pre-internet sources (not a close) |
 | `solution.md` | Full mathematical writeup |
 | `src/e1_gmin_m4_prop15167.py` … `prop15171.py` | Bi-tight + E(1) residual ND modules |
-| `src/e1_gmin_m4_prop15590.py` … `prop15597.py` | R1 collapse: ν → Es4 → Φ → δ (leftovers 1 & 3 unified) |
+| `src/e1_gmin_m4_prop15590.py` … `prop15597.py` | R1 collapse: ν → Es4 → Φ → δ; principal/Type-I bound hierarchy |
 | `src/e1_gmin_m4_prop15598.py` … `prop15601.py` | R2: square-direction lines, rank(S)=n/2, Walsh |
 | `src/e1_gmin_m4_prop15628.py`, `scripts/w2_affine_circle_close.py` | R2 close: eligible GQR circle span + explicit affine completions |
-| `evidence/PLAN_2026-08-22_class_function_route.md` | Live route: Γ as a class function on PSL(2,q) |
+| `src/e1_gmin_m4_prop15629.py` | Profile-glued integral Paley eigenspace lattice |
+| `src/e1_gmin_m4_prop15630.py` | Exact dual minimum shell and kissing number |
+| `src/e1_gmin_m4_prop15631.py` | Radial dual-shadow transform of the Max+ odd coset |
+| `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
+| `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
+| `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |
+| `evidence/PLAN_2026-08-22_class_function_route.md` | PSL/Hecke route ledger and killed shortcuts |
 | `scripts/frame_line_system.py` | Data-free frame-line solver (any p, no Max± ensemble) |
 | `src/minmax_quadratic.py` | Exact `m_n`, Paley, Φ, bounds, ρ=1 evec |
 | `tests/test_prop15167.py` … `test_prop15171.py` | Load-bearing E(1)/L tests |
@@ -191,6 +239,7 @@ moments to ~15 numbers paired against the explicit PSL(2,q) character table.
 
 ```bash
 python3 -m pytest tests/test_minmax.py -v
+python3 -m pytest tests/test_prop15628.py tests/test_prop15629.py tests/test_prop15630.py tests/test_prop15631.py -q
 python3 -c "from src.minmax_quadratic import exact_m; print([exact_m(n) for n in range(2,9)])"
 ```
 
