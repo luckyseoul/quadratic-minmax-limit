@@ -1,12 +1,23 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-25 (15.644 negative-product asymptotic normal form)
+**Date:** 2026-08-25 (15.645 baseline-fibre rigidity)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.645 — baseline fibres are ideal or one-transfer
+
+`src/e1_gmin_m4_prop15645.py` and
+`evidence/NOTE_2026-08-25_baseline_fibre_profiles.md`. In every baseline
+direction of 15.644, put `w_s=n_s+1_{s=j}` and `a_s=w_s-2`. Then
+`sum a_s=0` and `sum_{s<t}|a_s+a_t|<=2p`. If `A` is the total positive
+mass of the integral vector `a`, an exact sign decomposition gives a lower
+bound exceeding `2p` whenever `A>=2` and `p>=7`. Hence `a=0` or `a` has one
+`+1`, one `-1`, and all other entries zero. This is the precise two-line
+fibre fingerprint; simultaneous finite-geometry classification remains.
 
 ## 15.644 — asymptotic normal form of the negative two-point branch
 

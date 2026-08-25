@@ -1,5 +1,13 @@
 # Status (2026-08-25)
 
+**15.645 PROVED fibre rigidity, not branch exclusion**: inside 15.644's
+large-prime negative normal form, every baseline direction meets the
+`2p-1` infinity-neighbor set in the ideal profile `(1,2,...,2)` relative to
+the boundary fibre, or in a profile obtained after one unit transfer. This
+follows from an exact integral `l1` minimization; two transferred units
+already exceed the `2p` transverse-edge budget for `p>=7`. Simultaneous
+classification as two affine lines remains open, as do all top-level gates.
+
 **15.644 PROVED asymptotic normal form, not branch exclusion**: the
 near-optimal degree-two polynomial-distance theorem forces exactly one
 nonbaseline direction of each quadratic type in the `D={infinity,v}`,
