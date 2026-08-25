@@ -1,12 +1,24 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-25 (15.647 all-prime negative two-point exclusion)
+**Date:** 2026-08-25 (15.648 finite negative two-point exclusions)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.648 — negative two-point remainder reduced to p=5 and one p=7 profile
+
+`src/e1_gmin_m4_prop15648.py` and
+`evidence/NOTE_2026-08-25_finite_negative_two_point_exclusions.md`. At
+`p=13`, the prescribed zero-baseline inter-fibre matrix has exact minimum
+`l1=48>44` transverse edges, closing both orientations algebraically. At
+`p=11`, both count orientations are CP-SAT infeasible on all three proven
+type-preserving exceptional-pair orbits. At `p=7`, all-pair sweeps exclude
+the four unbalanced profiles `(0,3),(0,6),(3,0),(6,0)`. Raw result hashes
+and the storage archive are recorded in the proposition evidence. Only
+`p=5` and balanced `p=7 (x,y)=(3,3)` remain in the negative two-point branch.
 
 ## 15.647 — both two-point product branches closed for p>=17
 

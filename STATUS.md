@@ -1,5 +1,16 @@
 # Status (2026-08-25)
 
+**15.648 PROVED/certified the `p=11,13` negative two-point cases and four
+`p=7` profiles, not residual (ii)**: at `p=13`, a zero-baseline direction
+has prescribed inter-fibre `l1` norm at least 48 but only 44 transverse
+edges, closing both orientations analytically. At `p=11`, exact CP-SAT
+infeasibility covers both count orientations and all three proven
+type-preserving exceptional-pair orbits. Direct all-pair certificates at
+`p=7` exclude `(x,y)=(0,3),(0,6),(3,0),(6,0)`. The negative two-point
+remainder is now only `p=5` and balanced `p=7 (3,3)`. Positive-product
+small primes, other boundaries, residual (ii), Type I, R1, global QVAR, and
+L remain OPEN.
+
 **15.647 PROVED negative-product branch exclusion for every odd `p>=17`,
 not residual (ii)**: the exact signed directional mean gives
 `a_d-a_e=(p+1)(P_d-P_e)` within each quadratic type. Proposition 15.642

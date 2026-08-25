@@ -42,12 +42,29 @@ def solve(
     seconds: float,
     workers: int,
     *,
+    positive_baseline: int | None = None,
+    negative_baseline: int | None = None,
+    exception_indices: tuple[int, int] | None = None,
     enforce_boundary: bool = True,
     enforce_product: bool = True,
     enforce_k: bool = True,
     k_parity_only: bool = False,
 ) -> dict:
     from ortools.sat.python import cp_model
+
+    if (positive_baseline is None) != (negative_baseline is None):
+        raise ValueError("both baseline counts must be supplied together")
+    effective_mode = positive_baseline is not None
+    if effective_mode:
+        assert positive_baseline is not None and negative_baseline is not None
+        m = (p + 1) // 2
+        finite_edge_count = m * (positive_baseline + negative_baseline) + 2
+        infinity_edge_count = 4 * p + 1 - finite_edge_count
+        count_splits = [(positive_baseline + 1, negative_baseline + 1)]
+    else:
+        finite_edge_count = 2 * p + 2
+        infinity_edge_count = 2 * p - 1
+        count_splits = [(3, 1), (1, 3)]
 
     q2 = p * p
     directions = projective_directions(p)
@@ -68,18 +85,30 @@ def solve(
         for a, b in itertools.combinations(range(p + 1), 2)
         if data[a][0] != data[b][0]
     ]
+    if exception_indices is not None:
+        normalized = tuple(sorted(exception_indices))
+        if normalized not in opposite_pairs:
+            raise ValueError("exception indices must be an opposite-type pair")
+        opposite_pairs = [normalized]
     rows = []
     for first, second in opposite_pairs:
         positive_exception = first if data[first][0] == 1 else second
         negative_exception = second if positive_exception == first else first
-        for positive_count, negative_count in ((3, 1), (1, 3)):
+        for positive_count, negative_count in count_splits:
             model = cp_model.CpModel()
             selected = [model.new_bool_var(f"edge_{u}_{v}") for u, v in edges]
             star = [model.new_bool_var(f"star_{u}") for u in range(q2)]
-            model.add(sum(selected) == 2 * p + 2)
-            model.add(sum(star) == 2 * p - 1)
+            model.add(sum(selected) == finite_edge_count)
+            model.add(sum(star) == infinity_edge_count)
 
-            required = {d: 2 for d in range(p + 1)}
+            required = {
+                d: (
+                    positive_baseline
+                    if data[d][0] == 1
+                    else negative_baseline
+                )
+                for d in range(p + 1)
+            } if effective_mode else {d: 2 for d in range(p + 1)}
             required[positive_exception] = positive_count
             required[negative_exception] = negative_count
             for d in range(p + 1):
@@ -97,25 +126,31 @@ def solve(
                         for e, (a, b) in enumerate(edges)
                         if a == u or b == u
                     ]
-                    half = model.new_int_var(0, p + 1, f"boundary_half_{u}")
-                    model.add(star[u] + sum(incident) - (1 if u == 0 else 0) == 2 * half)
+                    if u == 0:
+                        model.add_bool_xor([star[u], *incident])
+                    else:
+                        model.add_bool_xor([~star[u], *incident])
 
             # Infinity-edge signs are +1 in this normalization.  c_H=-1 says
             # that the number of selected negative finite edges is odd.
             if enforce_product:
                 negative_edges = [selected[e] for e, sign in enumerate(edge_sign) if sign == -1]
-                negative_half = model.new_int_var(0, p + 1, "negative_half")
-                model.add(sum(negative_edges) == 2 * negative_half + 1)
+                model.add_bool_xor(negative_edges)
 
             for d, (eps, labels) in enumerate(data):
                 if d in (first, second):
                     continue
                 special = labels[0]
+                parallel_count = required[d]
+                twice_c = 2 * (infinity_edge_count + parallel_count - 3) // (p - 1)
+                if 2 * (infinity_edge_count + parallel_count - 3) % (p - 1):
+                    raise AssertionError("baseline coefficient divisibility failed")
                 fibre_star = []
                 for s in range(p):
                     count = model.new_int_var(0, p, f"star_count_{d}_{s}")
                     model.add(count == sum(star[u] for u in range(q2) if labels[u] == s))
                     fibre_star.append(count)
+                k_absolute_values = []
                 if enforce_k:
                     for s, t in itertools.combinations(range(p), 2):
                         signed_cross = sum(
@@ -123,14 +158,25 @@ def solve(
                             for e, (u, v) in enumerate(edges)
                             if {labels[u], labels[v]} == {s, t}
                         )
-                        a_s = fibre_star[s] + (1 if s == special else 0) - 2
-                        a_t = fibre_star[t] + (1 if t == special else 0) - 2
-                        rhs = -eps * (a_s + a_t)
+                        rhs = eps * (
+                            twice_c
+                            - (1 if s == special else 0)
+                            - (1 if t == special else 0)
+                            - fibre_star[s]
+                            - fibre_star[t]
+                        )
+                        absolute = model.new_int_var(0, 2 * p, f"K_abs_{d}_{s}_{t}")
+                        model.add_abs_equality(absolute, rhs)
+                        k_absolute_values.append(absolute)
                         if k_parity_only:
                             half = model.new_int_var(-2 * p, 2 * p, f"K_half_{d}_{s}_{t}")
                             model.add(signed_cross - rhs == 2 * half)
                         else:
                             model.add(signed_cross == rhs)
+                    model.add(
+                        sum(k_absolute_values)
+                        <= finite_edge_count - parallel_count
+                    )
 
             solver = cp_model.CpSolver()
             solver.parameters.max_time_in_seconds = seconds
@@ -154,6 +200,10 @@ def solve(
                 return {
                     "experiment": "residual_negative_full_cpsat",
                     "status": "finite_full_normal_form_scout_only",
+                    "mode": "effective_all_prime" if effective_mode else "prop15644",
+                    "positive_negative_baselines": (
+                        [positive_baseline, negative_baseline] if effective_mode else None
+                    ),
                     "constraints": {
                         "boundary": enforce_boundary,
                         "product": enforce_product,
@@ -170,6 +220,10 @@ def solve(
     return {
         "experiment": "residual_negative_full_cpsat",
         "status": "finite_full_normal_form_scout_only",
+        "mode": "effective_all_prime" if effective_mode else "prop15644",
+        "positive_negative_baselines": (
+            [positive_baseline, negative_baseline] if effective_mode else None
+        ),
         "p": p,
         "constraints": {
             "boundary": enforce_boundary,
@@ -188,6 +242,9 @@ def main() -> None:
     parser.add_argument("--p", type=int, required=True)
     parser.add_argument("--seconds", type=float, default=30.0)
     parser.add_argument("--workers", type=int, default=1)
+    parser.add_argument("--positive-baseline", type=int)
+    parser.add_argument("--negative-baseline", type=int)
+    parser.add_argument("--exception-indices", type=int, nargs=2)
     parser.add_argument("--output", type=Path)
     parser.add_argument("--omit-boundary", action="store_true")
     parser.add_argument("--omit-product", action="store_true")
@@ -198,6 +255,11 @@ def main() -> None:
         args.p,
         args.seconds,
         args.workers,
+        positive_baseline=args.positive_baseline,
+        negative_baseline=args.negative_baseline,
+        exception_indices=(
+            tuple(args.exception_indices) if args.exception_indices is not None else None
+        ),
         enforce_boundary=not args.omit_boundary,
         enforce_product=not args.omit_product,
         enforce_k=not args.omit_k,
