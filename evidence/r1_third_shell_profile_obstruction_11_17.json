@@ -1,0 +1,30 @@
+{
+  "experiment": "r1_third_shell_profile_obstruction",
+  "status": "finite_exact_audit_not_uniform_proof",
+  "records": [
+    {
+      "p": 11,
+      "half_mass": 5,
+      "checked": 27720,
+      "complete": true,
+      "examples": [],
+      "seconds": 0.0676781390211545
+    },
+    {
+      "p": 13,
+      "half_mass": 6,
+      "checked": 180180,
+      "complete": true,
+      "examples": [],
+      "seconds": 0.5670594300027005
+    },
+    {
+      "p": 17,
+      "half_mass": 8,
+      "checked": 6126120,
+      "complete": true,
+      "examples": [],
+      "seconds": 29.0599321849877
+    }
+  ]
+}

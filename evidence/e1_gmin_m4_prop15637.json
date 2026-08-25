@@ -1,0 +1,551 @@
+{
+  "prop": "15.637",
+  "title": "Zero-common-sum gap at the first post-third-shell energy",
+  "proved": {
+    "one_profile_energy_p_plus_3_excluded_all_p_ge_11": true,
+    "zero_common_sum_energy_p_plus_3_excluded_all_p_ge_11": true,
+    "complete_fourth_shell": false,
+    "R1": false,
+    "global_QVAR": false
+  },
+  "theorem": {
+    "proved": true,
+    "scope": "At energy p+3, no zero-common-sum profile exists for odd p>=11.",
+    "rows": {
+      "11": {
+        "candidate_energy": 14,
+        "candidate_scaled_norm": 28,
+        "balancing_allowed_common_sum_magnitudes": [
+          0,
+          2,
+          10,
+          12
+        ],
+        "allowed_h_before": [
+          1,
+          5,
+          6
+        ],
+        "allowed_h_after_one_profile_kill": [
+          5,
+          6
+        ],
+        "allowed_h_after_dense_branch_kills": [],
+        "mass_patterns": [
+          {
+            "mass": 6,
+            "energy_defect": 2,
+            "magnitude_two_entries": 1,
+            "distinct_support": 11,
+            "root_polynomial_degree": 6,
+            "root_polynomial_difference_degree_at_most": 1
+          },
+          {
+            "mass": 5,
+            "energy_defect": 4,
+            "magnitude_two_entries": 2,
+            "distinct_support": 8,
+            "root_polynomial_degree": 5,
+            "root_polynomial_difference_degree_at_most": 0
+          }
+        ],
+        "ode_descent": {
+          "k": 5,
+          "known_zero_gap": [
+            6,
+            9
+          ],
+          "first_descent_j": 5,
+          "first_equation_degree": 8,
+          "highest_series_index_used": 9,
+          "gap_reaches_first_equation": true,
+          "nonzero_descent_multipliers": true,
+          "conclusion": "u_1=...=u_k=0, hence N=D"
+        },
+        "dense_branch_certificate": {
+          "full_h_R": {
+            "normal_pair_zeros": 5,
+            "relation_degree": 4,
+            "forced_identity": true,
+            "exception_defect_factor": "-12(a-c)(a-d)(b-c)(b-d)"
+          },
+          "near_full_h_R_minus_1_two_energy_four": {
+            "normal_plus_inactive_zeros": 4,
+            "relation_degree": 3,
+            "forced_identity": true
+          },
+          "near_full_h_R_minus_1_one_energy_six": {
+            "cubic_normal_plus_inactive_zeros": 5,
+            "quartic_normal_zeros": 4,
+            "relation_degree": 3,
+            "forced_cubic_identity": true,
+            "forced_quartic_identity": true,
+            "doubled_entry_defect_factor": "-12(a-b)^2(a-c)^2",
+            "six_unit_case": "four matched power sums give equality of two size-four multisets by Newton identities"
+          },
+          "nonzero_characteristic_factors": true,
+          "newton_degree_four_valid": true
+        },
+        "checks": true
+      },
+      "13": {
+        "candidate_energy": 16,
+        "candidate_scaled_norm": 32,
+        "balancing_allowed_common_sum_magnitudes": [
+          0,
+          2,
+          12,
+          14
+        ],
+        "allowed_h_before": [
+          1,
+          6,
+          7
+        ],
+        "allowed_h_after_one_profile_kill": [
+          6,
+          7
+        ],
+        "allowed_h_after_dense_branch_kills": [],
+        "mass_patterns": [
+          {
+            "mass": 7,
+            "energy_defect": 2,
+            "magnitude_two_entries": 1,
+            "distinct_support": 13,
+            "root_polynomial_degree": 7,
+            "root_polynomial_difference_degree_at_most": 1
+          },
+          {
+            "mass": 6,
+            "energy_defect": 4,
+            "magnitude_two_entries": 2,
+            "distinct_support": 10,
+            "root_polynomial_degree": 6,
+            "root_polynomial_difference_degree_at_most": 0
+          }
+        ],
+        "ode_descent": {
+          "k": 6,
+          "known_zero_gap": [
+            7,
+            11
+          ],
+          "first_descent_j": 6,
+          "first_equation_degree": 9,
+          "highest_series_index_used": 10,
+          "gap_reaches_first_equation": true,
+          "nonzero_descent_multipliers": true,
+          "conclusion": "u_1=...=u_k=0, hence N=D"
+        },
+        "dense_branch_certificate": {
+          "full_h_R": {
+            "normal_pair_zeros": 6,
+            "relation_degree": 4,
+            "forced_identity": true,
+            "exception_defect_factor": "-12(a-c)(a-d)(b-c)(b-d)"
+          },
+          "near_full_h_R_minus_1_two_energy_four": {
+            "normal_plus_inactive_zeros": 5,
+            "relation_degree": 3,
+            "forced_identity": true
+          },
+          "near_full_h_R_minus_1_one_energy_six": {
+            "cubic_normal_plus_inactive_zeros": 6,
+            "quartic_normal_zeros": 5,
+            "relation_degree": 3,
+            "forced_cubic_identity": true,
+            "forced_quartic_identity": true,
+            "doubled_entry_defect_factor": "-12(a-b)^2(a-c)^2",
+            "six_unit_case": "four matched power sums give equality of two size-four multisets by Newton identities"
+          },
+          "nonzero_characteristic_factors": true,
+          "newton_degree_four_valid": true
+        },
+        "checks": true
+      },
+      "17": {
+        "candidate_energy": 20,
+        "candidate_scaled_norm": 40,
+        "balancing_allowed_common_sum_magnitudes": [
+          0,
+          2,
+          16,
+          18
+        ],
+        "allowed_h_before": [
+          1,
+          8,
+          9
+        ],
+        "allowed_h_after_one_profile_kill": [
+          8,
+          9
+        ],
+        "allowed_h_after_dense_branch_kills": [],
+        "mass_patterns": [
+          {
+            "mass": 9,
+            "energy_defect": 2,
+            "magnitude_two_entries": 1,
+            "distinct_support": 17,
+            "root_polynomial_degree": 9,
+            "root_polynomial_difference_degree_at_most": 1
+          },
+          {
+            "mass": 8,
+            "energy_defect": 4,
+            "magnitude_two_entries": 2,
+            "distinct_support": 14,
+            "root_polynomial_degree": 8,
+            "root_polynomial_difference_degree_at_most": 0
+          }
+        ],
+        "ode_descent": {
+          "k": 8,
+          "known_zero_gap": [
+            9,
+            15
+          ],
+          "first_descent_j": 8,
+          "first_equation_degree": 11,
+          "highest_series_index_used": 12,
+          "gap_reaches_first_equation": true,
+          "nonzero_descent_multipliers": true,
+          "conclusion": "u_1=...=u_k=0, hence N=D"
+        },
+        "dense_branch_certificate": {
+          "full_h_R": {
+            "normal_pair_zeros": 8,
+            "relation_degree": 4,
+            "forced_identity": true,
+            "exception_defect_factor": "-12(a-c)(a-d)(b-c)(b-d)"
+          },
+          "near_full_h_R_minus_1_two_energy_four": {
+            "normal_plus_inactive_zeros": 7,
+            "relation_degree": 3,
+            "forced_identity": true
+          },
+          "near_full_h_R_minus_1_one_energy_six": {
+            "cubic_normal_plus_inactive_zeros": 8,
+            "quartic_normal_zeros": 7,
+            "relation_degree": 3,
+            "forced_cubic_identity": true,
+            "forced_quartic_identity": true,
+            "doubled_entry_defect_factor": "-12(a-b)^2(a-c)^2",
+            "six_unit_case": "four matched power sums give equality of two size-four multisets by Newton identities"
+          },
+          "nonzero_characteristic_factors": true,
+          "newton_degree_four_valid": true
+        },
+        "checks": true
+      },
+      "19": {
+        "candidate_energy": 22,
+        "candidate_scaled_norm": 44,
+        "balancing_allowed_common_sum_magnitudes": [
+          0,
+          2,
+          18,
+          20
+        ],
+        "allowed_h_before": [
+          1,
+          9,
+          10
+        ],
+        "allowed_h_after_one_profile_kill": [
+          9,
+          10
+        ],
+        "allowed_h_after_dense_branch_kills": [],
+        "mass_patterns": [
+          {
+            "mass": 10,
+            "energy_defect": 2,
+            "magnitude_two_entries": 1,
+            "distinct_support": 19,
+            "root_polynomial_degree": 10,
+            "root_polynomial_difference_degree_at_most": 1
+          },
+          {
+            "mass": 9,
+            "energy_defect": 4,
+            "magnitude_two_entries": 2,
+            "distinct_support": 16,
+            "root_polynomial_degree": 9,
+            "root_polynomial_difference_degree_at_most": 0
+          }
+        ],
+        "ode_descent": {
+          "k": 9,
+          "known_zero_gap": [
+            10,
+            17
+          ],
+          "first_descent_j": 9,
+          "first_equation_degree": 12,
+          "highest_series_index_used": 13,
+          "gap_reaches_first_equation": true,
+          "nonzero_descent_multipliers": true,
+          "conclusion": "u_1=...=u_k=0, hence N=D"
+        },
+        "dense_branch_certificate": {
+          "full_h_R": {
+            "normal_pair_zeros": 9,
+            "relation_degree": 4,
+            "forced_identity": true,
+            "exception_defect_factor": "-12(a-c)(a-d)(b-c)(b-d)"
+          },
+          "near_full_h_R_minus_1_two_energy_four": {
+            "normal_plus_inactive_zeros": 8,
+            "relation_degree": 3,
+            "forced_identity": true
+          },
+          "near_full_h_R_minus_1_one_energy_six": {
+            "cubic_normal_plus_inactive_zeros": 9,
+            "quartic_normal_zeros": 8,
+            "relation_degree": 3,
+            "forced_cubic_identity": true,
+            "forced_quartic_identity": true,
+            "doubled_entry_defect_factor": "-12(a-b)^2(a-c)^2",
+            "six_unit_case": "four matched power sums give equality of two size-four multisets by Newton identities"
+          },
+          "nonzero_characteristic_factors": true,
+          "newton_degree_four_valid": true
+        },
+        "checks": true
+      },
+      "23": {
+        "candidate_energy": 26,
+        "candidate_scaled_norm": 52,
+        "balancing_allowed_common_sum_magnitudes": [
+          0,
+          2,
+          22,
+          24
+        ],
+        "allowed_h_before": [
+          1,
+          11,
+          12
+        ],
+        "allowed_h_after_one_profile_kill": [
+          11,
+          12
+        ],
+        "allowed_h_after_dense_branch_kills": [],
+        "mass_patterns": [
+          {
+            "mass": 12,
+            "energy_defect": 2,
+            "magnitude_two_entries": 1,
+            "distinct_support": 23,
+            "root_polynomial_degree": 12,
+            "root_polynomial_difference_degree_at_most": 1
+          },
+          {
+            "mass": 11,
+            "energy_defect": 4,
+            "magnitude_two_entries": 2,
+            "distinct_support": 20,
+            "root_polynomial_degree": 11,
+            "root_polynomial_difference_degree_at_most": 0
+          }
+        ],
+        "ode_descent": {
+          "k": 11,
+          "known_zero_gap": [
+            12,
+            21
+          ],
+          "first_descent_j": 11,
+          "first_equation_degree": 14,
+          "highest_series_index_used": 15,
+          "gap_reaches_first_equation": true,
+          "nonzero_descent_multipliers": true,
+          "conclusion": "u_1=...=u_k=0, hence N=D"
+        },
+        "dense_branch_certificate": {
+          "full_h_R": {
+            "normal_pair_zeros": 11,
+            "relation_degree": 4,
+            "forced_identity": true,
+            "exception_defect_factor": "-12(a-c)(a-d)(b-c)(b-d)"
+          },
+          "near_full_h_R_minus_1_two_energy_four": {
+            "normal_plus_inactive_zeros": 10,
+            "relation_degree": 3,
+            "forced_identity": true
+          },
+          "near_full_h_R_minus_1_one_energy_six": {
+            "cubic_normal_plus_inactive_zeros": 11,
+            "quartic_normal_zeros": 10,
+            "relation_degree": 3,
+            "forced_cubic_identity": true,
+            "forced_quartic_identity": true,
+            "doubled_entry_defect_factor": "-12(a-b)^2(a-c)^2",
+            "six_unit_case": "four matched power sums give equality of two size-four multisets by Newton identities"
+          },
+          "nonzero_characteristic_factors": true,
+          "newton_degree_four_valid": true
+        },
+        "checks": true
+      },
+      "29": {
+        "candidate_energy": 32,
+        "candidate_scaled_norm": 64,
+        "balancing_allowed_common_sum_magnitudes": [
+          0,
+          2,
+          28,
+          30
+        ],
+        "allowed_h_before": [
+          1,
+          14,
+          15
+        ],
+        "allowed_h_after_one_profile_kill": [
+          14,
+          15
+        ],
+        "allowed_h_after_dense_branch_kills": [],
+        "mass_patterns": [
+          {
+            "mass": 15,
+            "energy_defect": 2,
+            "magnitude_two_entries": 1,
+            "distinct_support": 29,
+            "root_polynomial_degree": 15,
+            "root_polynomial_difference_degree_at_most": 1
+          },
+          {
+            "mass": 14,
+            "energy_defect": 4,
+            "magnitude_two_entries": 2,
+            "distinct_support": 26,
+            "root_polynomial_degree": 14,
+            "root_polynomial_difference_degree_at_most": 0
+          }
+        ],
+        "ode_descent": {
+          "k": 14,
+          "known_zero_gap": [
+            15,
+            27
+          ],
+          "first_descent_j": 14,
+          "first_equation_degree": 17,
+          "highest_series_index_used": 18,
+          "gap_reaches_first_equation": true,
+          "nonzero_descent_multipliers": true,
+          "conclusion": "u_1=...=u_k=0, hence N=D"
+        },
+        "dense_branch_certificate": {
+          "full_h_R": {
+            "normal_pair_zeros": 14,
+            "relation_degree": 4,
+            "forced_identity": true,
+            "exception_defect_factor": "-12(a-c)(a-d)(b-c)(b-d)"
+          },
+          "near_full_h_R_minus_1_two_energy_four": {
+            "normal_plus_inactive_zeros": 13,
+            "relation_degree": 3,
+            "forced_identity": true
+          },
+          "near_full_h_R_minus_1_one_energy_six": {
+            "cubic_normal_plus_inactive_zeros": 14,
+            "quartic_normal_zeros": 13,
+            "relation_degree": 3,
+            "forced_cubic_identity": true,
+            "forced_quartic_identity": true,
+            "doubled_entry_defect_factor": "-12(a-b)^2(a-c)^2",
+            "six_unit_case": "four matched power sums give equality of two size-four multisets by Newton identities"
+          },
+          "nonzero_characteristic_factors": true,
+          "newton_degree_four_valid": true
+        },
+        "checks": true
+      },
+      "31": {
+        "candidate_energy": 34,
+        "candidate_scaled_norm": 68,
+        "balancing_allowed_common_sum_magnitudes": [
+          0,
+          2,
+          30,
+          32
+        ],
+        "allowed_h_before": [
+          1,
+          15,
+          16
+        ],
+        "allowed_h_after_one_profile_kill": [
+          15,
+          16
+        ],
+        "allowed_h_after_dense_branch_kills": [],
+        "mass_patterns": [
+          {
+            "mass": 16,
+            "energy_defect": 2,
+            "magnitude_two_entries": 1,
+            "distinct_support": 31,
+            "root_polynomial_degree": 16,
+            "root_polynomial_difference_degree_at_most": 1
+          },
+          {
+            "mass": 15,
+            "energy_defect": 4,
+            "magnitude_two_entries": 2,
+            "distinct_support": 28,
+            "root_polynomial_degree": 15,
+            "root_polynomial_difference_degree_at_most": 0
+          }
+        ],
+        "ode_descent": {
+          "k": 15,
+          "known_zero_gap": [
+            16,
+            29
+          ],
+          "first_descent_j": 15,
+          "first_equation_degree": 18,
+          "highest_series_index_used": 19,
+          "gap_reaches_first_equation": true,
+          "nonzero_descent_multipliers": true,
+          "conclusion": "u_1=...=u_k=0, hence N=D"
+        },
+        "dense_branch_certificate": {
+          "full_h_R": {
+            "normal_pair_zeros": 15,
+            "relation_degree": 4,
+            "forced_identity": true,
+            "exception_defect_factor": "-12(a-c)(a-d)(b-c)(b-d)"
+          },
+          "near_full_h_R_minus_1_two_energy_four": {
+            "normal_plus_inactive_zeros": 14,
+            "relation_degree": 3,
+            "forced_identity": true
+          },
+          "near_full_h_R_minus_1_one_energy_six": {
+            "cubic_normal_plus_inactive_zeros": 15,
+            "quartic_normal_zeros": 14,
+            "relation_degree": 3,
+            "forced_cubic_identity": true,
+            "forced_quartic_identity": true,
+            "doubled_entry_defect_factor": "-12(a-b)^2(a-c)^2",
+            "six_unit_case": "four matched power sums give equality of two size-four multisets by Newton identities"
+          },
+          "nonzero_characteristic_factors": true,
+          "newton_degree_four_valid": true
+        },
+        "checks": true
+      }
+    }
+  },
+  "remaining_obstruction": "The nonzero common profile sums |t|=2,p-1,p+1 at scaled norm 2(p+3), and all later shells, remain unclassified.",
+  "L_status": "OPEN"
+}

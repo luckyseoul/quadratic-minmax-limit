@@ -5663,3 +5663,179 @@ Evidence: `src/e1_gmin_m4_prop15635.py`,
 `evidence/e1_gmin_m4_prop15635.json`,
 `evidence/NOTE_2026-08-25_third_dual_norm.md`, and
 `tests/test_prop15635.py`.
+
+## Prop 15.636 (2026-08-25) — complete third dual shell
+
+Proposition 15.635 leaves only one possible extra equality profile. Put
+(m=(p-1)/2). Its positive root multiset has size (m), with one repeated
+root, and its disjoint negative root set has size (m); their power sums
+agree through degree (m-1). If (A,B) are the monic root polynomials,
+Newton identities give (A-B=\mathrm{constant}). Their roots cover all but
+two elements (u,v\in\mathbb F_p), and the repeated root is (alpha), so
+
+\[
+ AB={(X^p-X)(X-\alpha)\over(X-u)(X-v)}.             \tag{15.636.1}
+\]
+
+Normalize (u=0,v=1,alpha=\lambda). Then (T=(A+B)/2) would satisfy
+
+\[
+ T(x)^2=x^{p-1}+a(x+\cdots+x^{p-2})+b,qquad
+ a=1-\lambda,\quad a(a-1)\ne0.                    \tag{15.636.2}
+\]
+
+Reverse (T), and put (c=a-1). Uniqueness of the formal square root at
+zero says that the coefficients in degrees (m+1,ldots,p-2) of
+
+\[
+ K(y)=(1+cy)^{m+1}(1-y)^m                         \tag{15.636.3}
+\]
+
+vanish. Hence (K=U+q y^{p-1}+r y^p), where (deg U\le m) and
+(q\ne0). For (1\le j\le m), the Hasse derivative of order (m+j)
+is therefore the monomial (q(-1)^{m+j}y^{m-j}). Evaluating it at the two
+roots (1,-1/c) of (15.636.3) and comparing local coefficients gives
+
+\[
+ c^{m-j}=-{1\over2j}.                              \tag{15.636.4}
+\]
+
+The choices (j=m-1,m-2) force (c=1/3) and (c^2=1/5), hence
+(1/9=1/5) and (p\mid4), impossible for (p\ge11). Thus the extra
+profile does not exist. The complete third shell for every odd prime
+(p\ge11) is exactly (15.635.4), with signed count (p^2(p^2+1)) and
+harmonic scalar (15.635.5). The fourth and later shells remain uncontrolled,
+so R1 remains open.
+
+Evidence: `src/e1_gmin_m4_prop15636.py`,
+`evidence/e1_gmin_m4_prop15636.json`,
+`evidence/NOTE_2026-08-25_complete_third_dual_shell.md`,
+`evidence/r1_third_shell_profile_obstruction_11_17.json`, and
+`tests/test_prop15636.py`.
+
+## Prop 15.637 (2026-08-25) — zero-common-sum gap at the next energy
+
+Put (k=(p-1)/2) and (R=k+1). At the first possible post-third even
+energy (E=p+3=2k+4), the profile MDS bound
+
+\[
+M\ge h(R-h),\qquad E\ge2M                       \tag{15.637.1}
+\]
+
+leaves only (h=1,R-1,R) for (p\ge11). Suppose (h=1). Then
+(M\ge k), and integer energy leaves two cases.
+
+If (M=k+1), there is one doubled profile entry and the two degree-(k+1)
+root polynomials (A,B) cover all of (mathbb F_p), with one repeated
+root (alpha). Their power sums agree through degree (k-1), so (A-B)
+is linear and
+
+\[
+AB=(X^p-X)(X-\alpha).                            \tag{15.637.2}
+\]
+
+Reversing the square identity for (T=(A+B)/2) forces
+(T=(X-\alpha)^{k+1}). Hence
+((A-B)^2/4=(X-\alpha)^2), making (A) and (B) share (alpha), a
+contradiction.
+
+If (M=k), there are two doubled entries and three omitted roots. Normalize
+the latter to \(0,1,\rho\), call the repeated roots \(\alpha,\beta\), and put
+
+\[
+N=(1-\alpha y)(1-\beta y),\qquad
+D=(1-y)(1-\rho y).
+\]
+
+The reversed degree-(k) square root agrees through degree (2k-1) with
+(S=\sqrt{N/D}=\sum u_jy^j), so
+(u_{k+1}=\cdots=u_{2k-1}=0). The differential equation
+
+\[
+2ND S'=(N'D-ND')S                              \tag{15.637.3}
+\]
+
+has leading multiplier (alpha\beta\rho\ne0). Its coefficient of degree
+(j+3) reduces, whenever the next four coefficients vanish, to
+(2\alpha\beta\rho j u_j=0). Since (k\ge5), descending from (j=k)
+gives (u_1=\cdots=u_k=0), hence (N=D). This identifies the repeated
+roots with omitted roots, the second contradiction.
+
+Therefore no one-active profile occurs at energy \(p+3\). It remains to
+exclude the two dense active counts.
+
+Let \(q_d\) denote the degree-\(d\) binary form whose values on the square
+directions are the \(d\)-th profile moments. Every signed pair
+\(\delta_a-\delta_b\) satisfies
+
+\[
+ 4q_1q_3-3q_2^2-q_1^4=0.                         \tag{15.637.4}
+\]
+
+For \(h=R\), the energy budget gives one energy-four profile and
+\(R-1=k\ge5\) ordinary signed pairs. The left side of (15.637.4) is a
+binary quartic, so its \(k\) ordinary zeros force it to vanish identically.
+On the exceptional profile
+\(\delta_a+\delta_b-\delta_c-\delta_d\), however, its value is
+
+\[
+ -12(a-c)(a-d)(b-c)(b-d)\ne0,                    \tag{15.637.5}
+\]
+
+a contradiction.
+
+Now let \(h=R-1=k\). The unique inactive direction is the root of
+\(q_1=L\), and \(q_2=LS\) for a linear form \(S\). At every ordinary
+pair,
+
+\[
+ 4q_3=L(3S^2+L^2).                               \tag{15.637.6}
+\]
+
+The excess energy is either carried by two energy-four profiles or by one
+energy-six profile. In the first case, the cubic difference in
+(15.637.6) vanishes at the \(k-2\) ordinary directions and at the inactive
+direction. These \(k-1\ge4\) zeros force an identity, contradicting
+(15.637.5) at an exception.
+
+In the second case, the same cubic has \(k\ge5\) zeros and is again an
+identity. The energy-six pattern
+\(2\delta_a-\delta_b-\delta_c\) is excluded because its defect in
+(15.637.4) is
+
+\[
+ -12(a-b)^2(a-c)^2\ne0.                          \tag{15.637.7}
+\]
+
+The sole remaining pattern has three distinct positive and three distinct
+negative roots. Since \(q_4\) also vanishes at the inactive direction,
+write \(q_4=LT\), with \(T\) cubic. Ordinary pairs satisfy
+
+\[
+ 2T=S(S^2+L^2).                                  \tag{15.637.8}
+\]
+
+This cubic relation has \(k-1\ge4\) ordinary zeros and is therefore an
+identity. At the exceptional direction, (15.637.6) and (15.637.8) say
+that its first four power-sum differences equal those of a signed pair
+\(\delta_u-\delta_v\). Moving \(u,v\) to opposite sides gives two
+four-element multisets with equal first four power sums. Newton identities
+make the multisets equal, impossible because the original six roots are
+distinct across the two signs.
+
+Thus, for every odd prime \(p\ge11\),
+
+\[
+ \boxed{\text{no zero-common-sum profile has energy }p+3.}  \tag{15.637.9}
+\]
+
+Balancing leaves only the nonzero common sums
+\(|t|\in\{2,p-1,p+1\}\) at scaled norm \(2(p+3)\). These three cases and
+the later theta tail remain open, so this is not a fourth-shell
+classification or an R1 proof.
+
+Evidence: `src/e1_gmin_m4_prop15637.py`,
+`evidence/e1_gmin_m4_prop15637.json`,
+`evidence/NOTE_2026-08-25_one_profile_next_energy_gap.md`,
+`evidence/r1_two_double_square_shift_11_127.jsonl`, and
+`tests/test_prop15637.py`.

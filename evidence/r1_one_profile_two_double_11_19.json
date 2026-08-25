@@ -1,0 +1,50 @@
+{
+  "experiment": "one_active_profile_at_energy_p_plus_3",
+  "finite_scout_only": true,
+  "rows": [
+    {
+      "p": 11,
+      "energy": 14,
+      "two_double_case": true,
+      "status": "INFEASIBLE",
+      "profile": null,
+      "wall_seconds": 0.037257200000000004,
+      "branches": 1263,
+      "conflicts": 648,
+      "checks": null
+    },
+    {
+      "p": 13,
+      "energy": 16,
+      "two_double_case": true,
+      "status": "INFEASIBLE",
+      "profile": null,
+      "wall_seconds": 0.122303648,
+      "branches": 3681,
+      "conflicts": 1323,
+      "checks": null
+    },
+    {
+      "p": 17,
+      "energy": 20,
+      "two_double_case": true,
+      "status": "INFEASIBLE",
+      "profile": null,
+      "wall_seconds": 20.693413523,
+      "branches": 368695,
+      "conflicts": 80873,
+      "checks": null
+    },
+    {
+      "p": 19,
+      "energy": 22,
+      "two_double_case": true,
+      "status": "INFEASIBLE",
+      "profile": null,
+      "wall_seconds": 39.09519426,
+      "branches": 438657,
+      "conflicts": 133481,
+      "checks": null
+    }
+  ]
+}

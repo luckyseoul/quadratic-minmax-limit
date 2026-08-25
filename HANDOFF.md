@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-25 (15.635 third dual norm; exact p=11 third shell)
+**Date:** 2026-08-25 (15.637 next-energy zero-common-sum channel excluded)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -8,7 +8,65 @@
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
 
-## 15.635 — third dual norm; exact p=11 third shell
+## 15.637 — first post-third zero-common-sum channel excluded
+
+`src/e1_gmin_m4_prop15637.py` and
+`evidence/NOTE_2026-08-25_one_profile_next_energy_gap.md`. At the first
+possible even energy after the third shell, `E=p+3`, the profile MDS mass
+bound initially leaves only active counts `h=1,R-1,R`. For `h=1`, integer
+energy permits exactly one doubled entry with full field support or two
+doubled entries with three omitted roots. The first case collapses to
+`T=(X-alpha)^((p+1)/2)` and makes the positive/negative root supports
+intersect. In the second case, the reverse formal square root
+`S=sqrt(N/D)` has a long zero coefficient block. The differential equation
+
+```
+2 N D S' = (N' D - N D') S
+```
+
+descends through that block and forces `S=1`, hence `N=D`; repeated roots
+would again be omitted roots. Therefore `h=1` is uniformly impossible for
+`p>=11`.
+
+The dense branches fall to low-degree moment recurrences. A signed pair's
+first three moments obey
+
+```
+4 q1 q3 - 3 q2^2 - q1^4 = 0.
+```
+
+For `h=R`, its `k>=5` ordinary-pair zeros force this binary quartic to be
+an identity, but the unique energy-four profile has nonzero factored
+defect. For `h=R-1`, divisibility by the inactive direction reduces the
+same relation to a cubic. The remaining six-unit energy-six case also uses
+the degree-four pair recurrence; four matched power sums and Newton
+identities would make two disjoint root multisets equal. Thus **no
+zero-common-sum profile** inhabits energy `p+3`. The nonzero common sums
+`2,p-1,p+1` remain, so this is not yet a fourth-shell classification or R1
+proof. Exact finite scouts independently agree through `p=127` for the
+one-profile branch.
+
+## 15.636 — complete third dual shell for every p>=11
+
+`src/e1_gmin_m4_prop15636.py` and
+`evidence/NOTE_2026-08-25_complete_third_dual_shell.md`. Proposition
+15.635 left one possible zero-profile equality case. Its two degree-`m`
+root polynomials differ by a constant and, after normalizing the two omitted
+field points to `0,1`, would make
+
+```
+x^(p-1) + a(x+...+x^(p-2)) + b
+```
+
+a square with `a(a-1)!=0`. Reversing the square root creates a coefficient
+gap in `(1+(a-1)y)^(m+1)(1-y)^m`. Comparing high Hasse derivatives at its
+two roots forces `a-1=1/3` and `(a-1)^2=1/5`, hence `p|4`, impossible.
+Therefore the complete third shell for every `p>=11` is exactly
+`+/-P(e_i+C_ij e_j)`, with signed count `p^2(p^2+1)` and negative scalar
+harmonic operator from 15.635. The first three dual shells are now complete;
+R1 still needs a uniform bound on the fourth-and-later tail.
+
+## 15.635 — third dual norm; p=11 audit
 
 `src/e1_gmin_m4_prop15635.py` and
 `evidence/NOTE_2026-08-25_third_dual_norm.md`.  With scaled dual norm
@@ -26,8 +84,9 @@ At `p=11`, exact saturated-dual `qfminim` through scaled norm 24 returned
 31,110 vectors.  Subtracting the proved first/second counts `244+16,104`
 leaves `14,762`, exactly the point-pair count, so the complete p=11 third
 shell is classified.  For `p>11`, the norm and pair orbit are proved but
-shell completeness is not claimed.  The bare count is OEIS A071253/A069187;
-the lattice interpretation is the content.  R1 and the limit remain open.
+shell completeness was not claimed in 15.635; it is now supplied by 15.636.
+The bare count is OEIS A071253/A069187; the lattice interpretation is the
+content. R1 and the limit remain open.
 
 ## 15.634 — square-circle spectrum; complete second R1 shell is negative
 

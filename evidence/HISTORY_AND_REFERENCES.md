@@ -416,6 +416,59 @@ bare integer formula.
 
 ---
 
+## 7j. Complete third shell via a finite-field coefficient gap (2026-08-25)
+
+Proposition 15.636 excludes the sole equality profile left by Proposition
+15.635. Its positive and negative root polynomials would differ by a
+constant and cover all but two field elements, with one repeated root.
+Affine normalization turns their product into a geometric-series polynomial.
+If that polynomial plus a constant were a square, the reversed square root
+would force a long coefficient gap in
+
+\[
+(1+cy)^{(p+1)/2}(1-y)^{(p-1)/2}.
+\]
+
+High Hasse derivatives evaluated at the two roots force simultaneously
+`c=1/3` and `c^2=1/5`, hence `p|4`. Thus the complete third shell is the
+signed projected point-pair orbit for every `p>=11`.
+
+This sits near ideal Prouhet--Tarry--Escott configurations, Rédei's theory
+of fully reducible lacunary polynomials, and Biró's theorem on low-degree
+polynomials taking two values on the multiplicative group. The searched
+statements do not directly contain the near-partition multiplicity pattern,
+the two Hasse equations, or the Paley-lattice shell result. This is a search
+record, not a claim that every underlying polynomial idea is new.
+
+---
+
+## 7k. Zero-common-sum gap at the next even energy (2026-08-25)
+
+Proposition 15.637 applies the same finite-field polynomial viewpoint one
+step beyond the complete third shell. At profile energy `p+3`, the MDS mass
+bound leaves three possible active-profile counts. The one-profile branch
+has only two integer multiplicity patterns. One reduces by Frobenius to two
+root polynomials sharing their repeated root. For the other, the reversed
+square root `S=sqrt(N/D)` has a coefficient gap of length `(p-3)/2`.
+Its first-order differential equation descends through that gap and forces
+`N=D`, again identifying repeated and omitted roots.
+
+The two dense active-count branches are then excluded by universal
+low-degree moment recurrences for a signed pair. Enough ordinary pair
+directions force the relevant binary quartic or cubic to vanish
+identically. Their factored defects exclude energy-four profiles and the
+doubled energy-six pattern; in the remaining six-unit pattern, four equal
+power sums and Newton identities contradict disjointness. Thus the entire
+zero-common-sum channel is absent at this candidate energy. Nonzero common
+sums remain.
+
+Rédei's coefficient-gap framework remains the closest historical setting.
+The specific square-root differential descent and moment-recurrence closure
+are elementary and are recorded here as the mechanisms used, without a
+broad novelty claim.
+
+---
+
 ## 8. What is not in the older literature
 
 - No 1930s–1970s theorem that \(\lim n^{-3/2}\min_A\max_x|x^\top Ax|\) exists.
@@ -462,5 +515,7 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 31. Y. Filmus, G. Kindler, E. Mossel, and K. Wimmer, *Invariance principle on the slice*, [arXiv:1504.01689](https://arxiv.org/abs/1504.01689) (Johnson-slice low-degree framework; no parity-budget theorem).
 32. G. Blekherman, J. Gouveia, and J. Pfeiffer, *Sums of squares on the hypercube*, [arXiv:1402.4199](https://arxiv.org/abs/1402.4199) (nonnegative polynomial framework; adjacent, not the exact hypergeometric LP used here).
 33. P. Sin, J. Sorci, and Q. Xiang, *Linear representations of finite geometries and associated LDPC codes*, [arXiv:1908.06824](https://arxiv.org/abs/1908.06824) (finite incidence-code context).
+34. L. Rédei, *Lacunary Polynomials over Finite Fields*, North-Holland, 1973 (fully reducible coefficient-gap framework; adjacent to 15.636).
+35. A. Biró, *On Polynomials over Prime Fields Taking Only Two Values on the Multiplicative Group*, Finite Fields Appl. **6** (2000), 302--308, https://www.renyi.hu/~biroand/pdfs/TwoValues.pdf (two-value degree bounds; adjacent, not a direct proof of 15.636).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).
