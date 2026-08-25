@@ -1,7 +1,19 @@
 # Status (2026-08-25)
 
+**15.647 PROVED negative-product branch exclusion for every odd `p>=17`,
+not residual (ii)**: the exact signed directional mean gives
+`a_d-a_e=(p+1)(P_d-P_e)` within each quadratic type. Proposition 15.642
+guarantees a baseline direction per type for all `p>=7`; since each type's
+total lift excess is `p+1`, this forces exactly one exception of excess
+`p+1` per type without the asymptotic slice theorem. Baseline coefficient
+divisibility then makes both baseline parallel counts multiples of
+`(p-1)/2`. For `p>=17` both must vanish, leaving a `4p-1` infinity star that
+two finite edges cannot repair. Together with 15.643, both product signs of
+`D={infinity,v}` are now closed for `p>=17`. The primes `5,7,11,13`, other
+boundaries, residual (ii), Type I, R1, global QVAR, and L remain OPEN.
+
 **15.646 PROVED negative-product branch exclusion for sufficiently large
-primes, not residual (ii)**: in 15.644's normal form, summing the exact
+primes; superseded by 15.647**: in 15.644's normal form, summing the exact
 inter-fibre identity gives signed transverse-edge sum zero in every baseline
 direction. The exceptional splits `(U,V)=(3,1)` and `(1,3)` give global
 finite-edge signed sums `+2` and `-2`; after removing two parallel edges,

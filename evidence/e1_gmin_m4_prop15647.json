@@ -1,0 +1,204 @@
+{
+  "prop": "15.647",
+  "title": "All-prime negative infinity-point exclusion for p>=17",
+  "proved": true,
+  "theorem": {
+    "proved": true,
+    "all_odd_primes_at_least_17": true,
+    "uses_asymptotic_distance_theorem": false,
+    "one_exception_per_type_all_odd_primes_at_least_7": true,
+    "remaining_two_point_negative_primes": [
+      5,
+      7,
+      11,
+      13
+    ],
+    "closes_negative_product_infinity_point_branch_p_ge_17": true,
+    "closes_all_infinity_point_boundaries_p_ge_17": false,
+    "closes_residual_ii": false,
+    "closes_R1": false,
+    "L_status": "OPEN",
+    "samples": {
+      "7": {
+        "lift": {
+          "p": 7,
+          "total_excess_per_type": 8,
+          "divisibility_quantum": 8,
+          "positive_partitions": [
+            [
+              8
+            ]
+          ],
+          "unique_exception": true,
+          "exception_a": 14
+        },
+        "candidates": [
+          {
+            "positive_baseline": 0,
+            "negative_baseline": 3,
+            "positive_exception": 1,
+            "negative_exception": 4,
+            "finite_edges": 14,
+            "infinity_edges": 15
+          },
+          {
+            "positive_baseline": 0,
+            "negative_baseline": 6,
+            "positive_exception": 1,
+            "negative_exception": 7,
+            "finite_edges": 26,
+            "infinity_edges": 3
+          },
+          {
+            "positive_baseline": 3,
+            "negative_baseline": 0,
+            "positive_exception": 4,
+            "negative_exception": 1,
+            "finite_edges": 14,
+            "infinity_edges": 15
+          },
+          {
+            "positive_baseline": 3,
+            "negative_baseline": 3,
+            "positive_exception": 4,
+            "negative_exception": 4,
+            "finite_edges": 26,
+            "infinity_edges": 3
+          },
+          {
+            "positive_baseline": 6,
+            "negative_baseline": 0,
+            "positive_exception": 7,
+            "negative_exception": 1,
+            "finite_edges": 26,
+            "infinity_edges": 3
+          }
+        ]
+      },
+      "11": {
+        "lift": {
+          "p": 11,
+          "total_excess_per_type": 12,
+          "divisibility_quantum": 12,
+          "positive_partitions": [
+            [
+              12
+            ]
+          ],
+          "unique_exception": true,
+          "exception_a": 22
+        },
+        "candidates": [
+          {
+            "positive_baseline": 0,
+            "negative_baseline": 5,
+            "positive_exception": 1,
+            "negative_exception": 6,
+            "finite_edges": 32,
+            "infinity_edges": 13
+          },
+          {
+            "positive_baseline": 5,
+            "negative_baseline": 0,
+            "positive_exception": 6,
+            "negative_exception": 1,
+            "finite_edges": 32,
+            "infinity_edges": 13
+          }
+        ]
+      },
+      "13": {
+        "lift": {
+          "p": 13,
+          "total_excess_per_type": 14,
+          "divisibility_quantum": 14,
+          "positive_partitions": [
+            [
+              14
+            ]
+          ],
+          "unique_exception": true,
+          "exception_a": 26
+        },
+        "candidates": [
+          {
+            "positive_baseline": 0,
+            "negative_baseline": 6,
+            "positive_exception": 1,
+            "negative_exception": 7,
+            "finite_edges": 44,
+            "infinity_edges": 9
+          },
+          {
+            "positive_baseline": 6,
+            "negative_baseline": 0,
+            "positive_exception": 7,
+            "negative_exception": 1,
+            "finite_edges": 44,
+            "infinity_edges": 9
+          }
+        ]
+      },
+      "17": {
+        "lift": {
+          "p": 17,
+          "total_excess_per_type": 18,
+          "divisibility_quantum": 18,
+          "positive_partitions": [
+            [
+              18
+            ]
+          ],
+          "unique_exception": true,
+          "exception_a": 34
+        },
+        "candidates": []
+      },
+      "19": {
+        "lift": {
+          "p": 19,
+          "total_excess_per_type": 20,
+          "divisibility_quantum": 20,
+          "positive_partitions": [
+            [
+              20
+            ]
+          ],
+          "unique_exception": true,
+          "exception_a": 38
+        },
+        "candidates": []
+      },
+      "31": {
+        "lift": {
+          "p": 31,
+          "total_excess_per_type": 32,
+          "divisibility_quantum": 32,
+          "positive_partitions": [
+            [
+              32
+            ]
+          ],
+          "unique_exception": true,
+          "exception_a": 62
+        },
+        "candidates": []
+      },
+      "101": {
+        "lift": {
+          "p": 101,
+          "total_excess_per_type": 102,
+          "divisibility_quantum": 102,
+          "positive_partitions": [
+            [
+              102
+            ]
+          ],
+          "unique_exception": true,
+          "exception_a": 202
+        },
+        "candidates": []
+      }
+    }
+  }
+}

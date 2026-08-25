@@ -7,6 +7,9 @@ does not give an explicit threshold, handle the positive branch at
 `p=5,7,11,13`, classify other boundaries, or close residual (ii), Type I,
 R1, global QVAR, or the limit.
 
+Proposition 15.647 subsequently removes the asymptotic input and proves the
+same branch empty for every odd prime `p>=17`.
+
 ## 1. Input normal form
 
 Proposition 15.644 proves that, for every sufficiently large odd prime,

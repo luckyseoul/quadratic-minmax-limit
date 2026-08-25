@@ -1,12 +1,27 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-25 (15.646 negative two-point branch exclusion)
+**Date:** 2026-08-25 (15.647 all-prime negative two-point exclusion)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.647 — both two-point product branches closed for p>=17
+
+`src/e1_gmin_m4_prop15647.py` and
+`evidence/NOTE_2026-08-25_all_prime_negative_product_exclusion.md`. In the
+negative branch, the exact signed mean gives
+`a_d-a_e=(p+1)(P_d-P_e)` for same-type directions. The all-prime sparsity
+bound leaves a baseline in each type for every `p>=7`, so every nonzero lift
+excess is a multiple of `p+1`. Its type total is exactly `p+1`; hence there
+is exactly one exception per type, with no asymptotic theorem. Baseline
+divisibility forces both baseline parallel counts to be multiples of
+`(p-1)/2`. For `p>=17`, edge counts make both zero, leaving `4p-1` infinity
+edges and only two finite edges, incompatible with boundary `{infinity,v}`.
+Thus `c_H=-1` is closed for all odd `p>=17`; 15.643 already closes `c_H=+1`
+there. The remaining two-point primes are `5,7,11,13`.
 
 ## 15.646 — negative-product infinity-point boundary excluded asymptotically
 
