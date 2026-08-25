@@ -1,12 +1,82 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-25 (15.632 affine slack/parity budget; Eulerian branch killed)
+**Date:** 2026-08-25 (15.635 third dual norm; exact p=11 third shell)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.635 — third dual norm; exact p=11 third shell
+
+`src/e1_gmin_m4_prop15635.py` and
+`evidence/NOTE_2026-08-25_third_dual_norm.md`.  With scaled dual norm
+`s=2p||u||^2`, the next norm after `p` and `2(p-1)` is `2(p+1)` for every
+`p>=11`.  The profile/MDS proof also gives the new odd-phase gap
+`s>=3p-6` outside the minimum shell.  The signed point-pair family
+`+/-P(e_i+C_ij e_j)` attains the third norm, has size `p^2(p^2+1)`, and
+its complete harmonic contribution is the negative scalar
+
+```
+-(p^2+4p-3)/(4(p^2+5)) ||W||_F^2.
+```
+
+At `p=11`, exact saturated-dual `qfminim` through scaled norm 24 returned
+31,110 vectors.  Subtracting the proved first/second counts `244+16,104`
+leaves `14,762`, exactly the point-pair count, so the complete p=11 third
+shell is classified.  For `p>11`, the norm and pair orbit are proved but
+shell completeness is not claimed.  The bare count is OEIS A071253/A069187;
+the lattice interpretation is the content.  R1 and the limit remain open.
+
+## 15.634 — square-circle spectrum; complete second R1 shell is negative
+
+`src/e1_gmin_m4_prop15634.py` and
+`evidence/NOTE_2026-08-25_square_circle_operator.md`.  For the square
+`F_p`-sublines, let `M` be point--circle incidence and let `A` join two
+circles meeting in two points.  The exact all-prime operator identity is
+
+```
+A^2+pA = (p^2-1) M M^T/8 + (p-1)^2(p+1) J/8.
+```
+
+It gives `Spec(A)={k_2, (p-1)^2/4, -p, 0}` with multiplicities
+`1,n-1,n(p-1)/4,n(p-3)/4`.  Projecting the signed-complement tensors
+`w_S w_S^T` to the admissible harmonic space gives Gram spectrum
+`0^n`, `[p^3(p-1)]^[n(p-1)/4]`, and
+`[p^3(p+1)]^[n(p-3)/4]`.  Therefore the complete signed norm-`(p-1)/p`
+harmonic shadow shell has the three explicit eigenvalues
+
+```
+-(p+2)(p^2-4p+1)/(4p(p^2+5)),
+-(p^3-3p^2-19p+9)/(8p(p^2+5)),
+-(p^3-5p^2-19p-1)/(8p(p^2+5)).
+```
+
+All are negative for every `p>=11`.  This is an exact cancellation channel,
+so first-shell-only positivity is dead.  The first-two-shell truncation can
+be positive only in an `O(1/log p)` Gaussian window; no tail estimate is yet
+proved.  Exact construction audits pass at `p=3,5,7,11,13`.  R1, global
+QVAR, and the final limit remain open.
+
+## 15.633 — complete second dual shell
+
+`src/e1_gmin_m4_prop15633.py` and
+`evidence/NOTE_2026-08-25_dual_second_shell.md`.  For every `p>=5`, every
+dual vector of norm `(p-1)/p` is, up to sign, exactly one of
+
+```
+P(e_i-C_ij e_j),                    i<j,
+w_S/p,                              S a square F_p-subline.
+```
+
+The union is disjoint and the signed shell count is
+`p(p+1)(p^2+1)`; at `p=3` the two descriptions overlap and the count is
+`30`.  The proof uses integral circle profiles, MDS/Newton equality cases,
+and a half-conic rigidity lemma.  Exact `qfminim` and CUDA numerator audits
+match at `p=3,5,7,11`; OEIS and literature searches found no duplicate of
+the formula-plus-lattice classification.  This classifies one complete
+shell, not the later dual tail.
 
 ## 15.632 — type-split affine slack budget; Eulerian boundary empty
 

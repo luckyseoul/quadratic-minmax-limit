@@ -365,6 +365,57 @@ search record, not a claim of priority.
 
 ---
 
+## 7h. Complete second dual shell and the square-circle operator (2026-08-25)
+
+Proposition 15.633 classifies every vector in the next Paley-dual shell.
+For `p>=5` it is exactly the disjoint union, with both signs, of projected
+signed point-pairs and the signed complements of square Miquelian circles.
+Its signed count is
+
+\[
+ p(p+1)(p^2+1),
+\]
+
+with the exceptional count `30` at `p=3`.  The proof combines the integral
+circle profiles from Props. 15.629--15.630, Newton/MDS equality cases, and a
+half-conic rigidity lemma whose anisotropic case is forced by Hasse's bound
+for a genus-one double cover.
+
+Proposition 15.634 then diagonalizes the associated square-circle
+two-secant graph and the projected signed-complement tensor Gram matrix.
+The resulting complete degree-four harmonic second shell has three explicit
+eigenvalues, all strictly negative for every `p>=11`.  Thus the previously
+positive first dual shell is not an anti-cancellation theorem: the very next
+shell cancels it in every channel, and a valid R1 proof must control the
+later tail or use a genuinely multi-scale theta identity.
+
+Exact OEIS searches for the values
+`780,2800,16104,30940,88740,137560,292560,732540` and the polynomial formula
+returned no matching sequence. Searches of conference-ETF lattices,
+Miquelian-circle designs, modular-lattice shadows, and related literature
+found adjacent ingredients but no duplicate of the shell classification or
+operator identity. This records the search performed; it is not an
+unqualified priority claim for the bare polynomial sequence.
+
+---
+
+## 7i. Third dual norm and exact p=11 shell (2026-08-25)
+
+Proposition 15.635 sharpens the shell gap without claiming an all-prime
+third-shell classification.  For every `p>=11`, the third dual norm is
+`(p+1)/p`; every nonminimal odd-phase vector has scaled norm at least
+`3p-6`.  The signed point-pair orbit at the third norm has a negative scalar
+degree-four harmonic operator.  Exact saturated-dual enumeration proves
+that this orbit is the complete third shell at `p=11`.
+
+The count `p^2(p^2+1)` is not a new sequence.  It is the elementary family
+OEIS A071253 and occurs in A069187; individual searches correctly returned
+`14762`, `28730`, and `83810`.  The mathematical content here is the Paley
+lattice norm gap, harmonic operator, and exact shell identification, not the
+bare integer formula.
+
+---
+
 ## 8. What is not in the older literature
 
 - No 1930s–1970s theorem that \(\lim n^{-3/2}\min_A\max_x|x^\top Ax|\) exists.

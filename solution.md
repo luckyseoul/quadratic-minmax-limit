@@ -5412,3 +5412,254 @@ Evidence: `src/e1_gmin_m4_prop15632.py`,
 `evidence/e1_gmin_m4_prop15632.json`,
 `evidence/NOTE_2026-08-25_affine_slack_parity_budget.md`, and
 `tests/test_prop15632.py`.
+
+## Prop 15.633 (2026-08-25) — the complete second Paley-dual shell
+
+Retain
+
+\[
+ L=\ker_{\mathbb Z}(C-pI),\qquad
+ P={1\over2}(I+C/p),\qquad L^*=P\mathbb Z^n,
+\]
+
+with \(n=p^2+1\).  For every odd prime \(p\ge5\), the complete shell of
+dual norm \((p-1)/p\) is the disjoint union
+
+\[
+ \boxed{
+ \{u\in L^*:\|u\|^2=(p-1)/p\}
+ =\{\pm P(e_i-C_{ij}e_j):i<j\}
+  \mathbin{\dot\cup}
+  \{\pm w_S/p:S\in\mathcal B_+\},}               \tag{15.633.1}
+\]
+
+where \(\mathcal B_+\) is the PSL orbit of square
+\(\mathbb F_p\)-sublines and \(w_S\) is their signed complement satisfying
+\(Cw_S=pw_S\).  Hence the signed shell size is
+
+\[
+ \boxed{N_2(p)=p(p+1)(p^2+1).}                    \tag{15.633.2}
+\]
+
+At \(p=3\), the two descriptions overlap and the signed count is \(30\).
+
+Here is the exhaustion argument.  Use the square-direction circle-word
+profiles \(a_{j,s}=\langle x,v_{j,s}\rangle\) and their common sum
+\(t=\sum_s a_{j,s}=2px_\infty\).  The tight-frame identity gives
+
+\[
+ \sum_{j,s}a_{j,s}^2=p\|x\|^2+{t^2\over2}.       \tag{15.633.3}
+\]
+
+For \(\|x\|^2=(p-1)/p\), balancing an integral length-\(p\) profile,
+together with the evenness of \(t\), leaves only
+
+\[
+ |t|\in\{0,2,p-1\}.                               \tag{15.633.4}
+\]
+
+Equality at \(t=p-1\) gives one zero in every profile; degree-one glue
+makes those zeros the evaluations of one linear form and yields
+\(P(e_\infty-e_u)\).  At \(t=0\), the MDS/Newton equality cases have either
+one active direction, whose profile is a translated quadratic character,
+or all but one direction active.  The first case gives the complements of
+square circles through infinity; degree-one and degree-two glue in the
+second case gives \(P(e_u-e_v)\).
+
+At \(t=2\), every profile is \(\delta_\alpha+\delta_\beta\).  Its sum and
+product glue to binary forms, so
+
+\[
+ (\alpha_j-\beta_j)^2=D(t_j)
+\]
+
+for one binary quadratic \(D\), nonzero and square on the selected
+quadratic-character half of \(\mathbb P^1(\mathbb F_p)\).  A split
+nondegenerate \(D\) has too few positive values.  A rank-one \(D\) gives
+\(P(e_u+e_v)\).  If \(D\) is anisotropic and not proportional to the norm
+form \(N\), then \(Y^2=DN\) is a smooth genus-one curve with either zero or
+\(2(p+1)\) rational points, contradicting Hasse for \(p\ge5\).  Thus
+\(D=cN\), which gives exactly the square-circle complements not containing
+infinity.  Counting these disjoint equality cases proves
+(15.633.1)--(15.633.2).
+
+For an admissible harmonic tensor \(W\), the point-pair part contributes
+
+\[
+ {1\over4}\left(1-{(p-1)^2\over d+2}\right)\|W\|_F^2,
+                                                               \tag{15.633.5}
+\]
+
+while the square-circle part contributes
+
+\[
+ {1\over8p^4}\sum_{S\in\mathcal B_+}(w_S^TWw_S)^2
+ -{(p-1)^2\over4p(d+2)}\|W\|_F^2.               \tag{15.633.6}
+\]
+
+This is an exact decomposition of the complete second shell; its operator
+spectrum is determined next.
+
+Evidence: `src/e1_gmin_m4_prop15633.py`,
+`evidence/e1_gmin_m4_prop15633.json`,
+`evidence/NOTE_2026-08-25_dual_second_shell.md`, and
+`tests/test_prop15633.py`.
+
+## Prop 15.634 (2026-08-25) — square-circle operator and second-shell sign
+
+Let \(M\) be point--circle incidence for \(\mathcal B_+\), and let \(A\)
+join two square circles when they meet in two points.  The design identity
+and the three intersection valencies are
+
+\[
+ M^TM={p^2-1\over2}I+{p+1\over2}J,
+\]
+
+\[
+ k_0={p(p-1)(p-3)\over4},\qquad k_1=p^2-1,\qquad
+ k_2={p(p^2-1)\over4}.                              \tag{15.634.1}
+\]
+
+A quadratic-character count of common two-secants gives, for distinct
+circles with intersection size \(j=0,1,2\), respectively
+
+\[
+ {(p-1)^2(p+1)\over8},\qquad {p(p^2-1)\over8},\qquad
+ {p^3+p^2-9p-1\over8}.
+\]
+
+Equivalently,
+
+\[
+ \boxed{A^2+pA={p^2-1\over8}MM^T
+              +{(p-1)^2(p+1)\over8}J.}             \tag{15.634.2}
+\]
+
+Together with
+
+\[
+ AM={p^2-1\over4}J+{(p-1)^2\over4}M,
+\]
+
+this yields
+
+\[
+ \operatorname{Spec}(A)=
+ \left\{k_2^1,
+ \left({(p-1)^2\over4}\right)^{n-1},
+ (-p)^{n(p-1)/4},0^{n(p-3)/4}\right\}.             \tag{15.634.3}
+\]
+
+Let \(b_S\) be the projection of \(w_Sw_S^T\) to the admissible tensor
+space \(Z=\{W:PWP=W,\operatorname{diag}W=0\}\).  The exact correlations
+\(|w_S^Tw_T|=2p,p,0\) according as \(|S\cap T|=0,1,2\), followed by
+orthogonal projection off the diagonal tensors, turns (15.634.2) into
+
+\[
+ \boxed{\operatorname{Spec}((\langle b_S,b_T\rangle))
+ =\{0^n,[p^3(p-1)]^{n(p-1)/4},
+          [p^3(p+1)]^{n(p-3)/4}\}.}                 \tag{15.634.4}
+\]
+
+Substituting (15.634.4) into (15.633.5)--(15.633.6) diagonalizes the
+complete signed norm-\((p-1)/p\) harmonic shadow shell.  Its eigenvalues
+are
+
+\[
+\begin{aligned}
+ \lambda_0&=-{(p+2)(p^2-4p+1)\over4p(p^2+5)},\\
+ \lambda_-&=-{p^3-3p^2-19p+9\over8p(p^2+5)},\\
+ \lambda_+&=-{p^3-5p^2-19p-1\over8p(p^2+5)},
+\end{aligned}                                      \tag{15.634.5}
+\]
+
+with multiplicities
+\(n(p-1)(p-3)/8,n(p-1)/4,n(p-3)/4\).  All three are strictly negative
+for every odd prime \(p\ge11\).  Thus the second shell is an exact
+cancellation channel against Prop. 15.631's positive first shell.
+
+Indeed, retaining only the first two shells is positive semidefinite only
+when
+
+\[
+ \exp\left(-{\pi(p-2)\over8pt}\right)
+ \le {p\over(p+2)(p^2-4p+1)},                       \tag{15.634.6}
+\]
+
+which forces \(t=O(1/\log p)\).  This kills a first-shell-only proof but is
+not a bound on the omitted shells.  R1, global QVAR, and the limit therefore
+remain open.
+
+Evidence: `src/e1_gmin_m4_prop15634.py`,
+`evidence/e1_gmin_m4_prop15634.json`,
+`evidence/NOTE_2026-08-25_square_circle_operator.md`, and
+`tests/test_prop15634.py`.
+
+## Prop 15.635 (2026-08-25) — third dual norm and exact p=11 shell
+
+Scale dual norms by \(s=2p\|x\|^2\).  For a common integral profile sum
+\(t\), balancing gives
+
+\[
+ g_p(t)=(p+1)f_p(t)-t^2
+       =pa^2+2ab+b(p+1-b),\qquad |t|=ap+b.          \tag{15.635.1}
+\]
+
+The first odd equality values \(|t|=1,p\) give \(s=p\).  For \(t=1\),
+subtract the minimum vector determined by the degree-one profile moment.
+If the resulting zero-sum profiles are active in \(h\) directions and have
+total positive mass \(M\), write \(s=p+4\Delta\).  Integer energy and the
+MDS/Newton floor give
+
+\[
+ \Delta\ge h,\qquad \Delta\ge M-h,
+ \qquad M\ge h(R-h),\quad R={p+1\over2}.
+\]
+
+Thus
+
+\[
+ \Delta\ge\max\{h,h(R-h-1)\}\ge R-2.
+\]
+
+The \(t=p\) equality case is at least as strong after subtracting
+\(Pe_\infty\).  All other odd values in (15.635.1) start at
+\(|t|=3,p-2\).  Hence every odd-phase vector outside the minimum shell has
+
+\[
+ \boxed{s\ge3p-6.}                                  \tag{15.635.2}
+\]
+
+For even \(t\), profile-energy parity makes every increase after the second
+norm \(2(p-1)\) a multiple of four, and (15.635.1) has no smaller new
+value.  Since \(3p-6>2(p+1)\) for \(p\ge11\), the third dual norm is
+
+\[
+ \boxed{s_3=2(p+1),\qquad\|x\|^2=(p+1)/p.}          \tag{15.635.3}
+\]
+
+The distinct signed vectors
+
+\[
+ \pm P(e_i+C_{ij}e_j),\qquad i<j,                  \tag{15.635.4}
+\]
+
+attain (15.635.3) and number \(p^2(p^2+1)\).  Their complete degree-four
+harmonic contribution is
+
+\[
+ \boxed{-{p^2+4p-3\over4(p^2+5)}\|W\|_F^2.}        \tag{15.635.5}
+\]
+
+At \(p=11\), exact `qfminim` enumeration of the saturated dual through
+\(s=24\) gives \(31{,}110\) signed vectors.  The first two proved shells
+contain \(244+16{,}104\), leaving \(14{,}762=11^2(11^2+1)\).  Therefore
+(15.635.4) is the complete third shell at \(p=11\).  For larger primes the
+third norm and pair orbit are uniform theorems, but completeness of the
+whole shell is not asserted.  This result does not control the remaining
+theta tail and does not prove R1.
+
+Evidence: `src/e1_gmin_m4_prop15635.py`,
+`evidence/e1_gmin_m4_prop15635.json`,
+`evidence/NOTE_2026-08-25_third_dual_norm.md`, and
+`tests/test_prop15635.py`.

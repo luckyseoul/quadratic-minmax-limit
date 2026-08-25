@@ -1,0 +1,218 @@
+{
+  "prop": "15.633",
+  "title": "Exact second Paley-dual shell and square-circle anisotropy",
+  "proved": {
+    "second_dual_shell_classified_all_p_ge_5": true,
+    "half_conic_rigidity": true,
+    "pair_orbit_harmonic_scalar": true,
+    "circle_orbit_harmonic_decomposition": true,
+    "finite_audits": true,
+    "R1": false,
+    "phi_F_ge_6_proved_general": false,
+    "global_QVAR": false
+  },
+  "theorem": {
+    "proved": true,
+    "scope": "all odd primes p>=5; p=3 handled separately",
+    "classification": "The norm-(p-1)/p shell is the disjoint union of the point-pair vectors +/-P(e_i-C_ij e_j) and the signed-complement vectors +/-w_S/p of square F_p-sublines S.",
+    "half_conic_lemma": "A binary quadratic square-valued on one norm-character half of P^1(F_p) is either ell^2 with its root in the other half, or cN with Legendre(c)=epsilon.",
+    "p3_exception": {
+      "candidate_orbits_coincide": true,
+      "second_shell_antipodal_count": 15,
+      "second_shell_signed_count": 30,
+      "checks": true
+    },
+    "rows": {
+      "5": {
+        "rank": 13,
+        "norm": "4/5",
+        "pair_antipodal_count": 325,
+        "square_circle_antipodal_count": 65,
+        "second_shell_antipodal_count": 390,
+        "second_shell_signed_count": 780,
+        "pari_half_count": 390,
+        "pair_shadow_harmonic_coefficient": "-1/60",
+        "circle_shadow_scalar_offset": "-4/75",
+        "circle_shadow_psd_scale": "1/5000",
+        "checks": true
+      },
+      "7": {
+        "rank": 25,
+        "norm": "6/7",
+        "pair_antipodal_count": 1225,
+        "square_circle_antipodal_count": 175,
+        "second_shell_antipodal_count": 1400,
+        "second_shell_signed_count": 2800,
+        "pari_half_count": 1400,
+        "pair_shadow_harmonic_coefficient": "-1/12",
+        "circle_shadow_scalar_offset": "-1/21",
+        "circle_shadow_psd_scale": "1/19208",
+        "checks": true
+      },
+      "11": {
+        "rank": 61,
+        "norm": "10/11",
+        "pair_antipodal_count": 7381,
+        "square_circle_antipodal_count": 671,
+        "second_shell_antipodal_count": 8052,
+        "second_shell_signed_count": 16104,
+        "pari_half_count": 8052,
+        "pair_shadow_harmonic_coefficient": "-37/252",
+        "circle_shadow_scalar_offset": "-25/693",
+        "circle_shadow_psd_scale": "1/117128",
+        "checks": true
+      },
+      "13": {
+        "rank": 85,
+        "norm": "12/13",
+        "pair_antipodal_count": 14365,
+        "square_circle_antipodal_count": 1105,
+        "second_shell_antipodal_count": 15470,
+        "second_shell_signed_count": 30940,
+        "pari_half_count": null,
+        "pair_shadow_harmonic_coefficient": "-19/116",
+        "circle_shadow_scalar_offset": "-12/377",
+        "circle_shadow_psd_scale": "1/228488",
+        "checks": true
+      },
+      "17": {
+        "rank": 145,
+        "norm": "16/17",
+        "pair_antipodal_count": 41905,
+        "square_circle_antipodal_count": 2465,
+        "second_shell_antipodal_count": 44370,
+        "second_shell_signed_count": 88740,
+        "pari_half_count": null,
+        "pair_shadow_harmonic_coefficient": "-109/588",
+        "circle_shadow_scalar_offset": "-64/2499",
+        "circle_shadow_psd_scale": "1/668168",
+        "checks": true
+      },
+      "19": {
+        "rank": 181,
+        "norm": "18/19",
+        "pair_antipodal_count": 65341,
+        "square_circle_antipodal_count": 3439,
+        "second_shell_antipodal_count": 68780,
+        "second_shell_signed_count": 137560,
+        "pari_half_count": null,
+        "pair_shadow_harmonic_coefficient": "-47/244",
+        "circle_shadow_scalar_offset": "-27/1159",
+        "circle_shadow_psd_scale": "1/1042568",
+        "checks": true
+      }
+    }
+  },
+  "half_conic_exhaustive_audits": {
+    "5": {
+      "1": {
+        "p": 5,
+        "direction_type": 1,
+        "selected_projective_points": 3,
+        "observed": {
+          "rank_one_squares": 6,
+          "anisotropic_norm_multiples": 2,
+          "split_nondegenerate": 0,
+          "total": 8
+        },
+        "expected": {
+          "rank_one_squares": 6,
+          "anisotropic_norm_multiples": 2,
+          "total": 8
+        },
+        "checks": true
+      },
+      "-1": {
+        "p": 5,
+        "direction_type": -1,
+        "selected_projective_points": 3,
+        "observed": {
+          "rank_one_squares": 6,
+          "anisotropic_norm_multiples": 2,
+          "split_nondegenerate": 0,
+          "total": 8
+        },
+        "expected": {
+          "rank_one_squares": 6,
+          "anisotropic_norm_multiples": 2,
+          "total": 8
+        },
+        "checks": true
+      }
+    },
+    "7": {
+      "1": {
+        "p": 7,
+        "direction_type": 1,
+        "selected_projective_points": 4,
+        "observed": {
+          "rank_one_squares": 12,
+          "anisotropic_norm_multiples": 3,
+          "split_nondegenerate": 0,
+          "total": 15
+        },
+        "expected": {
+          "rank_one_squares": 12,
+          "anisotropic_norm_multiples": 3,
+          "total": 15
+        },
+        "checks": true
+      },
+      "-1": {
+        "p": 7,
+        "direction_type": -1,
+        "selected_projective_points": 4,
+        "observed": {
+          "rank_one_squares": 12,
+          "anisotropic_norm_multiples": 3,
+          "split_nondegenerate": 0,
+          "total": 15
+        },
+        "expected": {
+          "rank_one_squares": 12,
+          "anisotropic_norm_multiples": 3,
+          "total": 15
+        },
+        "checks": true
+      }
+    },
+    "11": {
+      "1": {
+        "p": 11,
+        "direction_type": 1,
+        "selected_projective_points": 6,
+        "observed": {
+          "rank_one_squares": 30,
+          "anisotropic_norm_multiples": 5,
+          "split_nondegenerate": 0,
+          "total": 35
+        },
+        "expected": {
+          "rank_one_squares": 30,
+          "anisotropic_norm_multiples": 5,
+          "total": 35
+        },
+        "checks": true
+      },
+      "-1": {
+        "p": 11,
+        "direction_type": -1,
+        "selected_projective_points": 6,
+        "observed": {
+          "rank_one_squares": 30,
+          "anisotropic_norm_multiples": 5,
+          "split_nondegenerate": 0,
+          "total": 35
+        },
+        "expected": {
+          "rank_one_squares": 30,
+          "anisotropic_norm_multiples": 5,
+          "total": 35
+        },
+        "checks": true
+      }
+    }
+  },
+  "consequence": "The first uncontrolled dual norm is now exact.  Its only anisotropic term is the PSD square-circle evaluation operator; higher dual shells still require control for R1.",
+  "L_status": "OPEN"
+}

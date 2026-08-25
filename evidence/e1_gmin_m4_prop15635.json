@@ -1,0 +1,71 @@
+{
+  "prop": "15.635",
+  "title": "Third Paley-dual norm and exact p=11 third shell",
+  "proved": {
+    "third_dual_norm_all_p_ge_11": true,
+    "odd_nonminimum_gap_all_p_ge_11": true,
+    "third_pair_harmonic_scalar_all_p_ge_11": true,
+    "complete_p11_third_shell": true,
+    "complete_third_shell_all_p": false,
+    "R1": false,
+    "global_QVAR": false
+  },
+  "theorem": {
+    "proved": true,
+    "scope": "third norm and pair-orbit operator for all p>=11; complete third-shell classification additionally at p=11",
+    "rows": {
+      "11": {
+        "third_scaled_norm": 24,
+        "third_norm": "12/11",
+        "odd_nonminimum_scaled_floor": 27,
+        "pair_signed_count": 14762,
+        "pair_harmonic_coefficient": "-9/28",
+        "checks": true
+      },
+      "13": {
+        "third_scaled_norm": 28,
+        "third_norm": "14/13",
+        "odd_nonminimum_scaled_floor": 33,
+        "pair_signed_count": 28730,
+        "pair_harmonic_coefficient": "-109/348",
+        "checks": true
+      },
+      "17": {
+        "third_scaled_norm": 36,
+        "third_norm": "18/17",
+        "odd_nonminimum_scaled_floor": 45,
+        "pair_signed_count": 83810,
+        "pair_harmonic_coefficient": "-59/196",
+        "checks": true
+      },
+      "19": {
+        "third_scaled_norm": 40,
+        "third_norm": "20/19",
+        "odd_nonminimum_scaled_floor": 51,
+        "pair_signed_count": 130682,
+        "pair_harmonic_coefficient": "-217/732",
+        "checks": true
+      },
+      "23": {
+        "third_scaled_norm": 48,
+        "third_norm": "24/23",
+        "odd_nonminimum_scaled_floor": 63,
+        "pair_signed_count": 280370,
+        "pair_harmonic_coefficient": "-103/356",
+        "checks": true
+      }
+    },
+    "p11_exact_qfminim": {
+      "scaled_bound": 24,
+      "signed_cumulative_count": 31110,
+      "maximum_scaled_norm": 24,
+      "elapsed_ms": 215744,
+      "first_signed_count": 244,
+      "second_signed_count": 16104,
+      "third_shell_signed_count": 14762,
+      "predicted_pair_signed_count": 14762,
+      "complete_third_shell_is_pair_orbit": true
+    }
+  },
+  "L_status": "OPEN"
+}

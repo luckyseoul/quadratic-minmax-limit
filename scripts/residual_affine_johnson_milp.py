@@ -30,6 +30,11 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from e1_gmin_m4_prop15598 import field_ctx  # noqa: E402
+from e1_gmin_m4_prop15632 import (  # noqa: E402
+    field_direction_data,
+    projective_directions,
+    scaled_direction_floor,
+)
 from minmax_quadratic import paley_conference_prime_power  # noqa: E402
 
 
@@ -110,6 +115,93 @@ def add_score_rows(
             raise ValueError(shell)
 
 
+def add_boundary_budget_cuts(model, x, edges, C: np.ndarray, p: int) -> dict:
+    """Add Prop. 15.632's exact boundary/parity budget as redundant cuts.
+
+    The CP-SAT edge variables describe ``G`` with ``|G|=4p`` and omit the
+    distinguished edge ``e=(0,1)``.  Proposition 15.632 applies to
+    ``H=G union {e}``, so both its boundary and its Paley-sign product are
+    affine XORs of the edge variables.  The resulting type-split cost bounds
+    are logical consequences of the affine score rows already in the model,
+    but expose their global parity coupling directly to the solver.
+    """
+    n = C.shape[0]
+    edge_index = {edge: j for j, edge in enumerate(edges)}
+    ei = edge_index[(0, 1)]
+    if C.shape != (p * p + 1, p * p + 1):
+        raise ValueError("unexpected Paley order")
+
+    boundary = [model.new_bool_var(f"boundary_{v}") for v in range(n)]
+    for v in range(n):
+        incident = [x[j] for j, (a, b) in enumerate(edges) if a == v or b == v]
+        distinguished_incidence = 1 if v in (0, 1) else 0
+        model.add_modulo_equality(
+            boundary[v], sum(incident) + distinguished_incidence, 2
+        )
+    model.add(sum(boundary) <= min(n, 8 * p + 2))
+
+    # c_bit=1 iff c_H=-1.  The fixed distinguished edge contributes too.
+    negative_selected = [
+        x[j] for j, (a, b) in enumerate(edges) if j != ei and int(C[a, b]) == -1
+    ]
+    distinguished_negative = 1 if int(C[0, 1]) == -1 else 0
+    c_bit = model.new_bool_var("c_H_negative")
+    model.add_modulo_equality(
+        c_bit, sum(negative_selected) + distinguished_negative, 2
+    )
+
+    costs_by_type: dict[int, list] = {-1: [], 1: []}
+    direction_rows = []
+    for j, direction in enumerate(projective_directions(p)):
+        eps, labels = field_direction_data(p, direction)
+        fibre_parities = []
+        for s in range(p):
+            parity = model.new_bool_var(f"boundary_fibre_{j}_{s}")
+            vertices = [
+                boundary[1 + u] for u, label in enumerate(labels) if label == s
+            ]
+            model.add_modulo_equality(parity, sum(vertices), 2)
+            fibre_parities.append(parity)
+        b_value = model.new_int_var(0, p, f"boundary_odd_fibres_{j}")
+        model.add(b_value == sum(fibre_parities))
+        cost = model.new_int_var(0, 2 * p, f"boundary_floor_{j}")
+        table = []
+        for infinity_bit in (0, 1):
+            for c_negative in (0, 1):
+                c_h = -1 if c_negative else 1
+                for b in range(p + 1):
+                    # h=4p+1, hence (-1)^((h-3)/2)=-1.
+                    sign = -eps * c_h
+                    if infinity_bit:
+                        sign *= eps
+                    if b & 1:
+                        sign *= -1
+                    phase = 0 if sign == 1 else 1
+                    table.append(
+                        [
+                            infinity_bit,
+                            c_negative,
+                            b,
+                            scaled_direction_floor(p, b, phase),
+                        ]
+                    )
+        model.add_allowed_assignments(
+            [boundary[0], c_bit, b_value, cost], table
+        )
+        costs_by_type[eps].append(cost)
+        direction_rows.append((direction, eps))
+
+    budget = (p + 1) ** 2 // 2
+    for eps in (-1, 1):
+        model.add(sum(costs_by_type[eps]) <= budget)
+    return {
+        "enabled": True,
+        "budget_per_type": budget,
+        "directions": len(direction_rows),
+        "boundary_variables": n,
+    }
+
+
 def solve_cpsat(
     p: int,
     mode: str,
@@ -118,6 +210,7 @@ def solve_cpsat(
     C: np.ndarray,
     time_limit: float,
     workers: int,
+    boundary_cuts: bool = False,
 ) -> dict:
     """CP-SAT form using cardinality cuts instead of dense +/-1 rows."""
     from ortools.sat.python import cp_model
@@ -134,6 +227,11 @@ def solve_cpsat(
     x = [model.new_bool_var(f"e_{a}_{b}") for a, b in edges]
     model.add(sum(x) == k)
     model.add(x[ei] == 0)
+    boundary_metadata = (
+        add_boundary_budget_cuts(model, x, edges, C, p)
+        if boundary_cuts
+        else {"enabled": False}
+    )
 
     n_score_constraints = 0
     for F, shell in ((Fp, "plus"), (Fm, "minus")):
@@ -164,13 +262,14 @@ def solve_cpsat(
     out = {
         "p": p,
         "mode": mode,
-        "backend": "cp-sat",
+        "backend": "cp-sat-parity" if boundary_cuts else "cp-sat",
         "relaxation": False,
         "workers": workers,
         "n_plus_points": int(len(Yp)),
         "n_minus_points": int(len(Ym)),
         "n_variables": len(edges),
         "n_constraints": n_score_constraints + 2,
+        "boundary_budget_cuts": boundary_metadata,
         "status": int(status),
         "status_name": status_name,
         "success": status in (cp_model.OPTIMAL, cp_model.FEASIBLE),
@@ -437,10 +536,19 @@ def solve(
     else:
         raise ValueError(mode)
 
-    if backend == "cp-sat":
+    if backend in ("cp-sat", "cp-sat-parity"):
         if relax:
             raise ValueError("CP-SAT has no relaxation mode")
-        return solve_cpsat(p, mode, Yp, Ym, C, time_limit, workers)
+        return solve_cpsat(
+            p,
+            mode,
+            Yp,
+            Ym,
+            C,
+            time_limit,
+            workers,
+            boundary_cuts=backend == "cp-sat-parity",
+        )
     if backend == "cp-sat-cut":
         if relax:
             raise ValueError("CP-SAT has no relaxation mode")
@@ -558,7 +666,7 @@ def main() -> None:
     ap.add_argument("--relax", action="store_true")
     ap.add_argument(
         "--backend",
-        choices=("highs", "cp-sat", "cp-sat-cut", "scip"),
+        choices=("highs", "cp-sat", "cp-sat-parity", "cp-sat-cut", "scip"),
         default="highs",
     )
     ap.add_argument("--workers", type=int, default=1)

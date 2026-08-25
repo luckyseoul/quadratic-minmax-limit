@@ -1,0 +1,342 @@
+{
+  "prop": "15.634",
+  "title": "Square-circle operator spectrum and second-shell cancellation",
+  "proved": {
+    "square_circle_association_identity_all_p_ge_5": true,
+    "square_circle_tensor_gram_spectrum_all_p_ge_5": true,
+    "complete_second_shadow_negative_definite_p_ge_11": true,
+    "finite_exact_audits": true,
+    "R1": false,
+    "phi_F_ge_6_proved_general": false,
+    "global_QVAR": false
+  },
+  "theorem": {
+    "proved": true,
+    "scope": "all odd primes p>=5",
+    "adjacency_identity": "A^2+pA=(p^2-1)MM^T/8+(p-1)^2(p+1)J/8",
+    "circle_gram_spectrum": "0^n, [p^3(p-1)]^[n(p-1)/4], [p^3(p+1)]^[n(p-3)/4]",
+    "negative_second_shell": "The complete norm-(p-1)/p degree-four harmonic shadow operator is negative definite for every p>=11.",
+    "rows": {
+      "5": {
+        "circle_count": 65,
+        "Z_dimension": 65,
+        "circle_tensor_gram_spectrum": [
+          {
+            "eigenvalue": 0,
+            "multiplicity": 26
+          },
+          {
+            "eigenvalue": 500,
+            "multiplicity": 26
+          },
+          {
+            "eigenvalue": 750,
+            "multiplicity": 13
+          }
+        ],
+        "second_shadow_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "eigenvalue": "-7/100",
+            "closed_form": "-7*(5^2-4*5+1)/(4*5*(5^2+5))",
+            "multiplicity": 26
+          },
+          {
+            "channel": "circle-low",
+            "eigenvalue": "3/100",
+            "closed_form": "-(5^3-3*5^2-19*5+9)/(8*5*(5^2+5))",
+            "multiplicity": 26
+          },
+          {
+            "channel": "circle-high",
+            "eigenvalue": "2/25",
+            "closed_form": "-(5^3-5*5^2-19*5-1)/(8*5*(5^2+5))",
+            "multiplicity": 13
+          }
+        ],
+        "second_shadow_negative_definite": false,
+        "checks": true
+      },
+      "7": {
+        "circle_count": 175,
+        "Z_dimension": 275,
+        "circle_tensor_gram_spectrum": [
+          {
+            "eigenvalue": 0,
+            "multiplicity": 50
+          },
+          {
+            "eigenvalue": 2058,
+            "multiplicity": 75
+          },
+          {
+            "eigenvalue": 2744,
+            "multiplicity": 50
+          }
+        ],
+        "second_shadow_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "eigenvalue": "-11/84",
+            "closed_form": "-9*(7^2-4*7+1)/(4*7*(7^2+5))",
+            "multiplicity": 150
+          },
+          {
+            "channel": "circle-low",
+            "eigenvalue": "-1/42",
+            "closed_form": "-(7^3-3*7^2-19*7+9)/(8*7*(7^2+5))",
+            "multiplicity": 75
+          },
+          {
+            "channel": "circle-high",
+            "eigenvalue": "1/84",
+            "closed_form": "-(7^3-5*7^2-19*7-1)/(8*7*(7^2+5))",
+            "multiplicity": 50
+          }
+        ],
+        "second_shadow_negative_definite": false,
+        "checks": true
+      },
+      "11": {
+        "circle_count": 671,
+        "Z_dimension": 1769,
+        "circle_tensor_gram_spectrum": [
+          {
+            "eigenvalue": 0,
+            "multiplicity": 122
+          },
+          {
+            "eigenvalue": 13310,
+            "multiplicity": 305
+          },
+          {
+            "eigenvalue": 15972,
+            "multiplicity": 244
+          }
+        ],
+        "second_shadow_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "eigenvalue": "-169/924",
+            "closed_form": "-13*(11^2-4*11+1)/(4*11*(11^2+5))",
+            "multiplicity": 1220
+          },
+          {
+            "channel": "circle-low",
+            "eigenvalue": "-16/231",
+            "closed_form": "-(11^3-3*11^2-19*11+9)/(8*11*(11^2+5))",
+            "multiplicity": 305
+          },
+          {
+            "channel": "circle-high",
+            "eigenvalue": "-43/924",
+            "closed_form": "-(11^3-5*11^2-19*11-1)/(8*11*(11^2+5))",
+            "multiplicity": 244
+          }
+        ],
+        "second_shadow_negative_definite": true,
+        "checks": true
+      },
+      "13": {
+        "circle_count": 1105,
+        "Z_dimension": 3485,
+        "circle_tensor_gram_spectrum": [
+          {
+            "eigenvalue": 0,
+            "multiplicity": 170
+          },
+          {
+            "eigenvalue": 26364,
+            "multiplicity": 510
+          },
+          {
+            "eigenvalue": 30758,
+            "multiplicity": 425
+          }
+        ],
+        "second_shadow_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "eigenvalue": "-295/1508",
+            "closed_form": "-15*(13^2-4*13+1)/(4*13*(13^2+5))",
+            "multiplicity": 2550
+          },
+          {
+            "channel": "circle-low",
+            "eigenvalue": "-121/1508",
+            "closed_form": "-(13^3-3*13^2-19*13+9)/(8*13*(13^2+5))",
+            "multiplicity": 510
+          },
+          {
+            "channel": "circle-high",
+            "eigenvalue": "-23/377",
+            "closed_form": "-(13^3-5*13^2-19*13-1)/(8*13*(13^2+5))",
+            "multiplicity": 425
+          }
+        ],
+        "second_shadow_negative_definite": true,
+        "checks": true
+      },
+      "17": {
+        "circle_count": 2465,
+        "Z_dimension": 10295,
+        "circle_tensor_gram_spectrum": [
+          {
+            "eigenvalue": 0,
+            "multiplicity": 290
+          },
+          {
+            "eigenvalue": 78608,
+            "multiplicity": 1160
+          },
+          {
+            "eigenvalue": 88434,
+            "multiplicity": 1015
+          }
+        ],
+        "second_shadow_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "eigenvalue": "-703/3332",
+            "closed_form": "-19*(17^2-4*17+1)/(4*17*(17^2+5))",
+            "multiplicity": 8120
+          },
+          {
+            "channel": "circle-low",
+            "eigenvalue": "-311/3332",
+            "closed_form": "-(17^3-3*17^2-19*17+9)/(8*17*(17^2+5))",
+            "multiplicity": 1160
+          },
+          {
+            "channel": "circle-high",
+            "eigenvalue": "-131/1666",
+            "closed_form": "-(17^3-5*17^2-19*17-1)/(8*17*(17^2+5))",
+            "multiplicity": 1015
+          }
+        ],
+        "second_shadow_negative_definite": true,
+        "checks": true
+      },
+      "19": {
+        "circle_count": 3439,
+        "Z_dimension": 16109,
+        "circle_tensor_gram_spectrum": [
+          {
+            "eigenvalue": 0,
+            "multiplicity": 362
+          },
+          {
+            "eigenvalue": 123462,
+            "multiplicity": 1629
+          },
+          {
+            "eigenvalue": 137180,
+            "multiplicity": 1448
+          }
+        ],
+        "second_shadow_spectrum": [
+          {
+            "channel": "circle-kernel",
+            "eigenvalue": "-1001/4636",
+            "closed_form": "-21*(19^2-4*19+1)/(4*19*(19^2+5))",
+            "multiplicity": 13032
+          },
+          {
+            "channel": "circle-low",
+            "eigenvalue": "-113/1159",
+            "closed_form": "-(19^3-3*19^2-19*19+9)/(8*19*(19^2+5))",
+            "multiplicity": 1629
+          },
+          {
+            "channel": "circle-high",
+            "eigenvalue": "-391/4636",
+            "closed_form": "-(19^3-5*19^2-19*19-1)/(8*19*(19^2+5))",
+            "multiplicity": 1448
+          }
+        ],
+        "second_shadow_negative_definite": true,
+        "checks": true
+      }
+    }
+  },
+  "finite_exact_audits": {
+    "5": {
+      "p": 5,
+      "circle_count": 65,
+      "word_plus_eigenvectors": true,
+      "design_identity": true,
+      "intersection_valencies": {
+        "0": 10,
+        "1": 24,
+        "2": 30
+      },
+      "word_correlation_by_intersection": {
+        "0": 10,
+        "1": 5,
+        "2": 0,
+        "6": 20
+      },
+      "quadratic_adjacency_identity_max_error": 0,
+      "checks": true
+    },
+    "7": {
+      "p": 7,
+      "circle_count": 175,
+      "word_plus_eigenvectors": true,
+      "design_identity": true,
+      "intersection_valencies": {
+        "0": 42,
+        "1": 48,
+        "2": 84
+      },
+      "word_correlation_by_intersection": {
+        "0": 14,
+        "1": 7,
+        "2": 0,
+        "8": 42
+      },
+      "quadratic_adjacency_identity_max_error": 0,
+      "checks": true
+    },
+    "11": {
+      "p": 11,
+      "circle_count": 671,
+      "word_plus_eigenvectors": true,
+      "design_identity": true,
+      "intersection_valencies": {
+        "0": 220,
+        "1": 120,
+        "2": 330
+      },
+      "word_correlation_by_intersection": {
+        "0": 22,
+        "1": 11,
+        "2": 0,
+        "12": 110
+      },
+      "quadratic_adjacency_identity_max_error": 0,
+      "checks": true
+    },
+    "13": {
+      "p": 13,
+      "circle_count": 1105,
+      "word_plus_eigenvectors": true,
+      "design_identity": true,
+      "intersection_valencies": {
+        "0": 390,
+        "1": 168,
+        "2": 546
+      },
+      "word_correlation_by_intersection": {
+        "0": 26,
+        "1": 13,
+        "2": 0,
+        "14": 156
+      },
+      "quadratic_adjacency_identity_max_error": 0,
+      "checks": true
+    }
+  },
+  "consequence": "The first higher dual shell is now diagonalized exactly.  For p>=11 it cancels in every harmonic channel, so first-shell positivity alone cannot prove R1; later shells remain open.",
+  "L_status": "OPEN"
+}
