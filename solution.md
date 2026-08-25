@@ -5925,3 +5925,89 @@ evidence/NOTE_2026-08-25_empty_post_third_even_candidate_shell.md,
 scripts/r1_next_shell_half_conic_audit.py,
 evidence/r1_next_shell_half_conic_11_43.json, and
 tests/test_prop15638.py.
+
+## Prop 15.639 (2026-08-25) — complete first nonminimal odd dual shell
+
+For every odd prime \(p\ge11\), the first possible nonminimal odd scaled
+norm from Proposition 15.635 is
+
+\[
+ s=2p\lVert x\rVert^2=3p-6.                       \tag{15.639.1}
+\]
+
+Write \(r=2px=(pI+C)z\). Odd \(s\) makes every coordinate of \(r\) odd,
+while
+
+\[
+ \sum_i r_i^2=2ps=6p^2-12p<9(p^2+1).
+\]
+
+Thus some \(|r_i|=1\). Signed Paley transport moves it to the profile base,
+where the common sum is \(t=1\). Subtract the minimum vector encoded by the
+degree-one moment and let \(h\) be the number of active zero-sum profiles.
+Equality in the Proposition 15.635 bounds leaves only
+
+\[
+ h=1\quad\hbox{or}\quad h=(p+1)/2-2.              \tag{15.639.2}
+\]
+
+The one-profile case is the square-circle equality family; the sole other
+multiplicity pattern is the exceptional third-shell profile excluded by
+Proposition 15.636. In the dense case, active profiles are
+\(\delta_\alpha+\delta_\beta-\delta_\gamma\). With
+\(A=\alpha-\mu\), \(B=\beta-\mu\), their moment differences are
+
+\[
+ Q_2=-2AB,\qquad Q_3=-3AB(2\mu+A+B).              \tag{15.639.3}
+\]
+
+The two inactive directions are exactly the roots of \(Q_2\), so
+\(Q_2\mid Q_3\). The resulting linear quotient encodes a point \(v\).
+Adding \(Pe_v\) produces a common-sum-two vector whose scaled norm is
+
+\[
+ 2(p-1)+4r,\qquad r\in\{0,1,2\}.                 \tag{15.639.4}
+\]
+
+The cases \(r=1,2\) are excluded by the complete third shell and the empty
+shell of Proposition 15.638. Reducing \(r=0\) through the complete second
+shell proves
+
+\[
+\boxed{
+\{x\in L^*:2p\lVert x\rVert^2=3p-6\}
+=\mathcal T\mathbin{\dot\cup}\mathcal O,}
+\]
+
+where \(\mathcal T\) consists of projected unit signed triples whose three
+signed conference edges are negative, and
+
+\[
+ \mathcal O=\{\mathord\pm(Pe_i+w_S/p):(w_S)_i=-1\}.
+\]
+
+The scaled-coordinate signatures have respectively three and one entries
+of magnitude \(p-2\), proving disjointness and injectivity. Since
+\(\operatorname{tr}(C^3)=0\), exactly half of all coordinate triangles are
+negative. Counting circles and their off-circle points gives
+
+\[
+\boxed{
+N_{\rm odd}(p)=\binom{p^2+1}{3}+p^2(p-1)(p^2+1)
+=\frac{p^2(p-1)(p+7)(p^2+1)}6.}                 \tag{15.639.5}
+\]
+
+Exact NUKA `qfminim` at \(p=11\) through scaled bound \(28\) returned
+\(473,970\) signed vectors and maximum norm \(27\). Removing the
+\(31,110\) vectors through the third shell leaves \(442,860\), exactly
+(15.639.5). The computation audits but is not used by the uniform proof.
+
+For \(p=11,13\), this is the fourth nonempty shell. For \(p\ge17\), further
+even candidates can lie below (15.639.1), so no global ordinal-shell claim
+is made. The harmonic operator at scaled norm \(3p-6\) and the later theta
+tail remain open; R1 and global QVAR are not proved.
+
+Evidence: src/e1_gmin_m4_prop15639.py,
+evidence/e1_gmin_m4_prop15639.json,
+evidence/NOTE_2026-08-25_first_nonminimal_odd_scaled_shell.md,
+evidence/r1_dual_shell_count_p11_28.json, and tests/test_prop15639.py.

@@ -1,0 +1,14 @@
+{
+  "experiment": "r1_dual_shell_count",
+  "host": "NUKA",
+  "backend": "PARI/GP qfminim on the saturated scaled dual Gram form",
+  "p": 11,
+  "scaled_bound": 28,
+  "signed_cumulative_count": 473970,
+  "maximum_scaled_norm": 27,
+  "elapsed_ms": 2033141,
+  "signed_count_through_third_shell": 31110,
+  "scaled_norm_3p_minus_6_shell_signed_count": 442860,
+  "predicted_scaled_norm_3p_minus_6_shell_signed_count": 442860,
+  "matches_prop_15_639": true
+}

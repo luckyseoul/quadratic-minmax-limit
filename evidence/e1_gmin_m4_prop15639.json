@@ -1,0 +1,257 @@
+{
+  "prop": "15.639",
+  "title": "Complete shell at the first nonminimal odd scaled norm",
+  "proved": {
+    "complete_scaled_norm_3p_minus_6_shell_all_p_ge_11": true,
+    "fourth_norm_and_shell_p11_p13": true,
+    "fourth_norm_all_p_ge_11": false,
+    "scaled_norm_3p_minus_6_shell_signed_count": true,
+    "scaled_norm_3p_minus_6_harmonic_operator": false,
+    "R1": false,
+    "global_QVAR": false
+  },
+  "theorem": {
+    "proved": true,
+    "scope": "For every odd prime p>=11, the complete scaled-norm 3p-6 shell is the disjoint union of negative signed triples and incident point-circle vectors.",
+    "rows": {
+      "11": {
+        "scaled_norm": 27,
+        "norm": "27/22",
+        "scaled_coordinate_square_sum": 594,
+        "unit_coordinate_forced": true,
+        "equality_active_counts": [
+          1,
+          4
+        ],
+        "transformed_t2_scaled_norms": [
+          20,
+          24,
+          28
+        ],
+        "scaled_norm_3p_minus_6_is_fourth_norm": true,
+        "negative_triangle_signed_count": 295240,
+        "circle_point_signed_count": 147620,
+        "scaled_norm_3p_minus_6_shell_signed_count": 442860,
+        "coordinate_signatures": {
+          "large_magnitude": 9,
+          "negative_triangle_large_coordinates": 3,
+          "circle_point_large_coordinates": 1,
+          "other_coordinate_magnitudes_at_most": 3,
+          "separated": true
+        },
+        "dependencies": {
+          "complete_second_shell": true,
+          "complete_third_shell": true,
+          "empty_even_candidate_shell": true
+        },
+        "checks": true
+      },
+      "13": {
+        "scaled_norm": 33,
+        "norm": "33/26",
+        "scaled_coordinate_square_sum": 858,
+        "unit_coordinate_forced": true,
+        "equality_active_counts": [
+          1,
+          5
+        ],
+        "transformed_t2_scaled_norms": [
+          24,
+          28,
+          32
+        ],
+        "scaled_norm_3p_minus_6_is_fourth_norm": true,
+        "negative_triangle_signed_count": 804440,
+        "circle_point_signed_count": 344760,
+        "scaled_norm_3p_minus_6_shell_signed_count": 1149200,
+        "coordinate_signatures": {
+          "large_magnitude": 11,
+          "negative_triangle_large_coordinates": 3,
+          "circle_point_large_coordinates": 1,
+          "other_coordinate_magnitudes_at_most": 3,
+          "separated": true
+        },
+        "dependencies": {
+          "complete_second_shell": true,
+          "complete_third_shell": true,
+          "empty_even_candidate_shell": true
+        },
+        "checks": true
+      },
+      "17": {
+        "scaled_norm": 45,
+        "norm": "45/34",
+        "scaled_coordinate_square_sum": 1530,
+        "unit_coordinate_forced": true,
+        "equality_active_counts": [
+          1,
+          7
+        ],
+        "transformed_t2_scaled_norms": [
+          32,
+          36,
+          40
+        ],
+        "scaled_norm_3p_minus_6_is_fourth_norm": false,
+        "negative_triangle_signed_count": 4022880,
+        "circle_point_signed_count": 1340960,
+        "scaled_norm_3p_minus_6_shell_signed_count": 5363840,
+        "coordinate_signatures": {
+          "large_magnitude": 15,
+          "negative_triangle_large_coordinates": 3,
+          "circle_point_large_coordinates": 1,
+          "other_coordinate_magnitudes_at_most": 3,
+          "separated": true
+        },
+        "dependencies": {
+          "complete_second_shell": true,
+          "complete_third_shell": true,
+          "empty_even_candidate_shell": true
+        },
+        "checks": true
+      },
+      "19": {
+        "scaled_norm": 51,
+        "norm": "51/38",
+        "scaled_coordinate_square_sum": 1938,
+        "unit_coordinate_forced": true,
+        "equality_active_counts": [
+          1,
+          8
+        ],
+        "transformed_t2_scaled_norms": [
+          36,
+          40,
+          44
+        ],
+        "scaled_norm_3p_minus_6_is_fourth_norm": false,
+        "negative_triangle_signed_count": 7840920,
+        "circle_point_signed_count": 2352276,
+        "scaled_norm_3p_minus_6_shell_signed_count": 10193196,
+        "coordinate_signatures": {
+          "large_magnitude": 17,
+          "negative_triangle_large_coordinates": 3,
+          "circle_point_large_coordinates": 1,
+          "other_coordinate_magnitudes_at_most": 3,
+          "separated": true
+        },
+        "dependencies": {
+          "complete_second_shell": true,
+          "complete_third_shell": true,
+          "empty_even_candidate_shell": true
+        },
+        "checks": true
+      },
+      "23": {
+        "scaled_norm": 63,
+        "norm": "63/46",
+        "scaled_coordinate_square_sum": 2898,
+        "unit_coordinate_forced": true,
+        "equality_active_counts": [
+          1,
+          10
+        ],
+        "transformed_t2_scaled_norms": [
+          44,
+          48,
+          52
+        ],
+        "scaled_norm_3p_minus_6_is_fourth_norm": false,
+        "negative_triangle_signed_count": 24672560,
+        "circle_point_signed_count": 6168140,
+        "scaled_norm_3p_minus_6_shell_signed_count": 30840700,
+        "coordinate_signatures": {
+          "large_magnitude": 21,
+          "negative_triangle_large_coordinates": 3,
+          "circle_point_large_coordinates": 1,
+          "other_coordinate_magnitudes_at_most": 3,
+          "separated": true
+        },
+        "dependencies": {
+          "complete_second_shell": true,
+          "complete_third_shell": true,
+          "empty_even_candidate_shell": true
+        },
+        "checks": true
+      },
+      "29": {
+        "scaled_norm": 81,
+        "norm": "81/58",
+        "scaled_coordinate_square_sum": 4698,
+        "unit_coordinate_forced": true,
+        "equality_active_counts": [
+          1,
+          13
+        ],
+        "transformed_t2_scaled_norms": [
+          56,
+          60,
+          64
+        ],
+        "scaled_norm_3p_minus_6_is_fourth_norm": false,
+        "negative_triangle_signed_count": 99137080,
+        "circle_point_signed_count": 19827416,
+        "scaled_norm_3p_minus_6_shell_signed_count": 118964496,
+        "coordinate_signatures": {
+          "large_magnitude": 27,
+          "negative_triangle_large_coordinates": 3,
+          "circle_point_large_coordinates": 1,
+          "other_coordinate_magnitudes_at_most": 3,
+          "separated": true
+        },
+        "dependencies": {
+          "complete_second_shell": true,
+          "complete_third_shell": true,
+          "empty_even_candidate_shell": true
+        },
+        "checks": true
+      },
+      "31": {
+        "scaled_norm": 87,
+        "norm": "87/62",
+        "scaled_coordinate_square_sum": 5394,
+        "unit_coordinate_forced": true,
+        "equality_active_counts": [
+          1,
+          14
+        ],
+        "transformed_t2_scaled_norms": [
+          60,
+          64,
+          68
+        ],
+        "scaled_norm_3p_minus_6_is_fourth_norm": false,
+        "negative_triangle_signed_count": 147917120,
+        "circle_point_signed_count": 27734460,
+        "scaled_norm_3p_minus_6_shell_signed_count": 175651580,
+        "coordinate_signatures": {
+          "large_magnitude": 29,
+          "negative_triangle_large_coordinates": 3,
+          "circle_point_large_coordinates": 1,
+          "other_coordinate_magnitudes_at_most": 3,
+          "separated": true
+        },
+        "dependencies": {
+          "complete_second_shell": true,
+          "complete_third_shell": true,
+          "empty_even_candidate_shell": true
+        },
+        "checks": true
+      }
+    },
+    "p11_exact_qfminim": {
+      "scaled_bound": 28,
+      "signed_cumulative_count": 473970,
+      "maximum_scaled_norm": 27,
+      "elapsed_ms": 2033141,
+      "signed_count_through_third_shell": 31110,
+      "scaled_norm_3p_minus_6_shell_signed_count": 442860,
+      "predicted_two_family_signed_count": 442860,
+      "exact_count_matches_classification": true,
+      "backend": "PARI/GP qfminim on the saturated scaled dual Gram form",
+      "host": "NUKA"
+    }
+  },
+  "remaining_obstruction": "For p>=17, intervening even shells below 3p-6 remain possible. The harmonic operator at scaled norm 3p-6 and the later norm-parity-twisted theta tail remain uncontrolled.",
+  "L_status": "OPEN"
+}

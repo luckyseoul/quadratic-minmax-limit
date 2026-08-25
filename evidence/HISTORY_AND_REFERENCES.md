@@ -491,6 +491,34 @@ sequences; no integer-sequence novelty claim is made.
 
 ---
 
+## 7m. Complete first nonminimal odd Paley-dual shell (2026-08-25)
+
+Proposition 15.639 classifies the complete first possible nonminimal odd
+shell, at scaled norm \(3p-6\), for every prime \(p\ge11\). A parity and
+short-coordinate argument reduces every vector to equality in the
+common-sum-one profile bound. The sparse equality branch is the known
+square-circle family. In the dense branch, divisibility of the degree-three
+moment difference by its two-root degree-two difference adds one minimum
+vector and reduces the problem to the already complete second and third
+shells and the empty shell from Proposition 15.638.
+
+The result is a disjoint union of negative signed conference triangles and
+incident point--square-circle vectors, with signed count
+
+\[
+ \frac{p^2(p-1)(p+7)(p^2+1)}6.
+\]
+
+Exact saturated-dual enumeration at \(p=11\) independently returns the
+predicted \(442,860\) vectors at scaled norm \(27\). Targeted searches for
+the formula, its \(p=11\) value, and the Paley/conference geometric
+description found no matching shell theorem or OEIS entry. The elementary
+half-count of negative triangles follows immediately from
+\(\operatorname{tr}(C^3)=0\); novelty is not claimed for that identity or
+for the bare polynomial sequence.
+
+---
+
 ## 8. What is not in the older literature
 
 - No 1930s–1970s theorem that \(\lim n^{-3/2}\min_A\max_x|x^\top Ax|\) exists.

@@ -1,12 +1,55 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-25 (15.638 first post-third even candidate shell empty)
+**Date:** 2026-08-25 (15.639 complete first nonminimal odd dual shell)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.639 — complete shell at scaled norm 3p-6 for every p>=11
+
+`src/e1_gmin_m4_prop15639.py` and
+`evidence/NOTE_2026-08-25_first_nonminimal_odd_scaled_shell.md`. Every
+vector at the first possible nonminimal odd scaled norm `s=3p-6` has odd scaled
+coordinates `r=2px`; the identity `sum r_i^2=2ps<9(p^2+1)` forces a unit
+coordinate. Signed Paley transport makes its common profile sum `t=1`.
+Equality in the 15.635 profile bound leaves only one active profile or
+`R-2` active profiles.
+
+The one-profile branch is the square-circle equality case; its only other
+multiplicity pattern is exactly the exceptional profile killed in 15.636.
+In the dense branch, the degree-two and degree-three moment differences
+satisfy
+
+```
+Q2=-2AB,   Q3=-3AB(2mu+A+B).
+```
+
+Their two inactive roots force `Q2|Q3`. Adding the minimum vector encoded by
+the resulting linear quotient turns the vector into a common-sum-two vector
+on the complete second, third, or empty `2(p+3)` shell. Props. 15.633,
+15.636, and 15.638 leave exactly two families:
+
+```
+Pz,  z supported on a signed triangle with all three conference edges -1;
++/-(Pe_i+w_S/p),  (w_S)_i=-1.
+```
+
+They are disjoint by their scaled-coordinate signatures (three versus one
+coordinates of magnitude `p-2`). The complete signed count is
+
+```
+p^2 (p-1) (p+7) (p^2+1) / 6.
+```
+
+At `p=11`, exact NUKA `qfminim` through bound 28 returned `473,970` vectors
+and maximum norm 27. Subtracting the complete count `31,110` through the
+third shell leaves `442,860`, exactly the formula. This is the fourth shell
+only at `p=11,13`; for `p>=17`, unclassified even candidates can intervene.
+Its harmonic operator and the later theta tail remain open, so R1 and L are
+still open.
 
 ## 15.638 — the first post-third even candidate shell is empty
 
