@@ -62,7 +62,10 @@ The orbit computation is reproduced exactly in `e1_gmin_m4_prop15648.py`.
 At `p=11`, all three representatives are infeasible for each orientation
 `(x,y)=(0,5),(5,0)`, closing that prime. At `p=7`, direct all-pair sweeps
 exclude `(0,3),(0,6),(3,0),(6,0)`. The balanced `(3,3)` profile timed out
-and is not claimed empty.
+and is not claimed empty. A strengthened representative run adding all 70
+pointwise affine slack inequalities in the two exceptional directions also
+remained `UNKNOWN` at 180 seconds; this is a recorded hard corner, not an
+infeasibility result.
 
 ## 4. Evidence archive
 

@@ -45,6 +45,7 @@ def solve(
     positive_baseline: int | None = None,
     negative_baseline: int | None = None,
     exception_indices: tuple[int, int] | None = None,
+    enforce_exception_slack: bool = False,
     enforce_boundary: bool = True,
     enforce_product: bool = True,
     enforce_k: bool = True,
@@ -178,6 +179,20 @@ def solve(
                         <= finite_edge_count - parallel_count
                     )
 
+            if enforce_exception_slack:
+                middle_weight = (p + 1) // 2
+                for d in (first, second):
+                    eps, labels = data[d]
+                    for chosen in itertools.combinations(range(p), middle_weight):
+                        chosen_set = set(chosen)
+                        y = [1 if labels[u] in chosen_set else -1 for u in range(q2)]
+                        infinity_score = sum(eps * y[u] * star[u] for u in range(q2))
+                        finite_score = sum(
+                            edge_sign[e] * y[u] * y[v] * selected[e]
+                            for e, (u, v) in enumerate(edges)
+                        )
+                        model.add(eps * (infinity_score + finite_score) >= 3)
+
             solver = cp_model.CpSolver()
             solver.parameters.max_time_in_seconds = seconds
             solver.parameters.num_search_workers = workers
@@ -209,6 +224,7 @@ def solve(
                         "product": enforce_product,
                         "K": enforce_k,
                         "K_parity_only": k_parity_only,
+                        "exception_slack": enforce_exception_slack,
                     },
                     "p": p,
                     "rows": rows,
@@ -230,6 +246,7 @@ def solve(
             "product": enforce_product,
             "K": enforce_k,
             "K_parity_only": k_parity_only,
+            "exception_slack": enforce_exception_slack,
         },
         "rows": rows,
         "found_feasible": False,
@@ -250,6 +267,7 @@ def main() -> None:
     parser.add_argument("--omit-product", action="store_true")
     parser.add_argument("--omit-k", action="store_true")
     parser.add_argument("--k-parity-only", action="store_true")
+    parser.add_argument("--enforce-exception-slack", action="store_true")
     args = parser.parse_args()
     out = solve(
         args.p,
@@ -264,6 +282,7 @@ def main() -> None:
         enforce_product=not args.omit_product,
         enforce_k=not args.omit_k,
         k_parity_only=args.k_parity_only,
+        enforce_exception_slack=args.enforce_exception_slack,
     )
     rendered = json.dumps(out, indent=2)
     print(rendered, flush=True)
