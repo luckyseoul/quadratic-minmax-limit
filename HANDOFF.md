@@ -1,12 +1,35 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-25 (15.637 next-energy zero-common-sum channel excluded)
+**Date:** 2026-08-25 (15.638 first post-third even candidate shell empty)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.638 — the first post-third even candidate shell is empty
+
+`src/e1_gmin_m4_prop15638.py` and
+`evidence/NOTE_2026-08-25_empty_post_third_even_candidate_shell.md`. Proposition
+15.637 removed `t=0` at scaled norm `2(p+3)`. Balancing leaves only
+`|t|=2,p-1,p+1`, with total profile-energy excess respectively `4,4,2`.
+
+For `t=2`, unsigned-pair cubic and quartic moment recurrences eliminate
+all one-exception patterns by factored defects or Newton identities. With
+two exceptions, the cubic forces both to be doubled points. Then
+`D=2q2-q1^2` is square on the selected projective half and has two roots
+there. The character sum of `ND` would have magnitude `p-3`, while the
+smooth genus-one curve `Y^2=ND` gives at most `2sqrt(p)` by Hasse, impossible
+for `p>=11`. For `t=p-1` and `p+1`, subtracting the all-one profile reduces
+to common sum one; delta moment identities and Newton exclude every defect
+pattern. Hence no dual vector has scaled norm `2(p+3)` for any `p>=11`.
+
+This is a genuine uniform even-shell gap, but not the fourth norm or R1:
+the odd-phase floor remains separate (and is 27 at `p=11`), while the next
+nonempty shell and complete later harmonic theta tail remain unknown.
+Exhaustive local-pattern tests pass, and an independent
+finite-field audit finds no forbidden half-conic through `p=43`.
 
 ## 15.637 — first post-third zero-common-sum channel excluded
 
@@ -42,8 +65,8 @@ same relation to a cubic. The remaining six-unit energy-six case also uses
 the degree-four pair recurrence; four matched power sums and Newton
 identities would make two disjoint root multisets equal. Thus **no
 zero-common-sum profile** inhabits energy `p+3`. The nonzero common sums
-`2,p-1,p+1` remain, so this is not yet a fourth-shell classification or R1
-proof. Exact finite scouts independently agree through `p=127` for the
+`2,p-1,p+1` were the boundary of 15.637 and are closed by 15.638 above.
+Exact finite scouts independently agree through `p=127` for the
 one-profile branch.
 
 ## 15.636 — complete third dual shell for every p>=11

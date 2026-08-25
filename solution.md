@@ -5839,3 +5839,89 @@ Evidence: `src/e1_gmin_m4_prop15637.py`,
 `evidence/NOTE_2026-08-25_one_profile_next_energy_gap.md`,
 `evidence/r1_two_double_square_shift_11_127.jsonl`, and
 `tests/test_prop15637.py`.
+
+## Prop 15.638 (2026-08-25) — empty first post-third even candidate shell
+
+Continue with \(R=(p+1)/2\), the common profile sum \(t\), and scaled norm
+\(s=2p\lVert x\rVert^2\). At \(s=2(p+3)\), balancing and parity leave
+
+\[
+ |t|\in\{0,2,p-1,p+1\}.                           \tag{15.638.1}
+\]
+
+Proposition 15.637 excludes \(t=0\). Up to sign, the remaining values
+\(2,p-1,p+1\) have total profile-energy excess \(4,4,2\), respectively.
+The profile glue supplies binary moment forms \(q_d\) through degree four
+for every \(p\ge11\).
+
+For \(t=2\), ordinary profiles are unsigned pairs and satisfy
+
+\[
+\begin{aligned}
+2q_3-3q_1q_2+q_1^3&=0,\\
+2q_4-q_2^2-2q_1^2q_2+q_1^4&=0.                  \tag{15.638.2}
+\end{aligned}
+\]
+
+With one energy-six exception, the \(k=(p-1)/2\ge5\) ordinary directions
+force both identities. The doubled pattern has nonzero cubic defect
+\(6(a-c)^2(b-c)\). For the four-positive/two-negative pattern, (15.638.2)
+makes its first four moments those of a two-root multiset; moving the two
+negative roots and applying Newton identities to two four-element
+multisets contradicts disjointness.
+
+With two energy-four exceptions, the \(k-1\ge4\) ordinary directions force
+the cubic identity. Its defect on a three-positive/one-negative profile is
+
+\[
+6(a-d)(b-d)(c-d)\ne0,
+\]
+
+so both exceptions are doubled points. The quadratic
+\(D=2q_2-q_1^2\) is therefore a nonzero square on every ordinary point of
+the selected projective half \(T\), and has its two distinct roots in
+\(T\). If the half is defined by
+\(\eta(N)=\varepsilon\) for an anisotropic norm form \(N\), then
+
+\[
+\left|\sum_{\mathbb P^1(\mathbb F_p)}\eta(ND)\right|=p-3. \tag{15.638.3}
+\]
+
+Indeed, the projective character sum of split \(D\) is zero, while
+\(\sum_T\eta(D)=(p-3)/2\). But \(ND\) is squarefree and
+\(Y^2=ND\) is a smooth genus-one curve, so Hasse bounds the left side of
+(15.638.3) by \(2\sqrt p\). This contradicts
+\(p-3>2\sqrt p\) for \(p\ge11\).
+
+For \(t=p-1\), replace each profile by \(b=1-a\); for \(t=p+1\), use
+\(b=a-1\). The transformed profiles have common sum one, and ordinary
+profiles are deltas. Their moments obey \(q_d=q_1^d\). The only
+energy-three exception has quadratic defect
+
+\[
+-2(a-c)(b-c)\ne0,
+\]
+
+and the doubled energy-five exception has defect
+\(-2(a-b)^2\ne0\). The remaining three-positive/two-negative
+energy-five pattern would have the first three moments of one delta.
+Moving that delta to the negative side and applying Newton identities to
+two three-element multisets again contradicts disjointness. The ordinary
+direction counts exceed the degrees of all identities used.
+
+Consequently, for every odd prime \(p\ge11\),
+
+\[
+ \boxed{\{x\in L^*:2p\lVert x\rVert^2=2(p+3)\}=\varnothing.}
+                                                               \tag{15.638.4}
+\]
+
+This does not determine the next nonempty dual norm or bound the full
+fourth-and-later harmonic theta tail. R1 and global QVAR remain open.
+
+Evidence: src/e1_gmin_m4_prop15638.py,
+evidence/e1_gmin_m4_prop15638.json,
+evidence/NOTE_2026-08-25_empty_post_third_even_candidate_shell.md,
+scripts/r1_next_shell_half_conic_audit.py,
+evidence/r1_next_shell_half_conic_11_43.json, and
+tests/test_prop15638.py.

@@ -1,0 +1,86 @@
+{
+  "role": "finite audit only; the Hasse character-sum argument is proof",
+  "all_checks": true,
+  "rows": [
+    {
+      "p": 11,
+      "selected_directions": 6,
+      "quadratic_forms_checked": 1330,
+      "forbidden_two_root_nonnegative_forms": 0,
+      "examples": [],
+      "checks": true
+    },
+    {
+      "p": 13,
+      "selected_directions": 7,
+      "quadratic_forms_checked": 2196,
+      "forbidden_two_root_nonnegative_forms": 0,
+      "examples": [],
+      "checks": true
+    },
+    {
+      "p": 17,
+      "selected_directions": 9,
+      "quadratic_forms_checked": 4912,
+      "forbidden_two_root_nonnegative_forms": 0,
+      "examples": [],
+      "checks": true
+    },
+    {
+      "p": 19,
+      "selected_directions": 10,
+      "quadratic_forms_checked": 6858,
+      "forbidden_two_root_nonnegative_forms": 0,
+      "examples": [],
+      "checks": true
+    },
+    {
+      "p": 23,
+      "selected_directions": 12,
+      "quadratic_forms_checked": 12166,
+      "forbidden_two_root_nonnegative_forms": 0,
+      "examples": [],
+      "checks": true
+    },
+    {
+      "p": 29,
+      "selected_directions": 15,
+      "quadratic_forms_checked": 24388,
+      "forbidden_two_root_nonnegative_forms": 0,
+      "examples": [],
+      "checks": true
+    },
+    {
+      "p": 31,
+      "selected_directions": 16,
+      "quadratic_forms_checked": 29790,
+      "forbidden_two_root_nonnegative_forms": 0,
+      "examples": [],
+      "checks": true
+    },
+    {
+      "p": 37,
+      "selected_directions": 19,
+      "quadratic_forms_checked": 50652,
+      "forbidden_two_root_nonnegative_forms": 0,
+      "examples": [],
+      "checks": true
+    },
+    {
+      "p": 41,
+      "selected_directions": 21,
+      "quadratic_forms_checked": 68920,
+      "forbidden_two_root_nonnegative_forms": 0,
+      "examples": [],
+      "checks": true
+    },
+    {
+      "p": 43,
+      "selected_directions": 22,
+      "quadratic_forms_checked": 79506,
+      "forbidden_two_root_nonnegative_forms": 0,
+      "examples": [],
+      "checks": true
+    }
+  ]
+}

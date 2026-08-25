@@ -469,6 +469,28 @@ broad novelty claim.
 
 ---
 
+## 7l. Empty first post-third even candidate shell (2026-08-25)
+
+Proposition 15.638 closes the three nonzero common sums left by Proposition
+15.637. Their tiny profile-energy defects reduce every profile to one of a
+finite set of integer multiplicity patterns. Binary cubic and quartic
+moment recurrences exclude the nondegenerate exceptions, and Newton
+identities exclude the remaining unequal root multisets.
+
+The only residual configuration would make a binary quadratic square on
+one quadratic-character half of the projective line while having two roots
+in that same half. Multiplying by the anisotropic norm form produces a
+smooth genus-one character sum of absolute value \(p-3\), contradicting
+Hasse's \(2\sqrt p\) bound for \(p\ge11\). Therefore the complete scaled
+dual shell \(2(p+3)\) is empty.
+
+Searches located general conference-ETF lattice work and standard
+Hasse-bound applications, but not this Paley-dual shell gap. Searching the
+candidate values \(28,32,40,44,52,64,68,\ldots\) in OEIS returns unrelated
+sequences; no integer-sequence novelty claim is made.
+
+---
+
 ## 8. What is not in the older literature
 
 - No 1930s–1970s theorem that \(\lim n^{-3/2}\min_A\max_x|x^\top Ax|\) exists.

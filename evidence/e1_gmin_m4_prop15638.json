@@ -1,0 +1,207 @@
+{
+  "prop": "15.638",
+  "title": "Empty first post-third even candidate shell",
+  "proved": {
+    "scaled_norm_2p_plus_6_absent_all_p_ge_11": true,
+    "complete_fourth_shell": false,
+    "R1": false,
+    "global_QVAR": false
+  },
+  "theorem": {
+    "proved": true,
+    "scope": "For every odd prime p>=11, no vector in the Paley dual lattice has scaled norm 2(p+3).",
+    "rows": {
+      "11": {
+        "scaled_norm_excluded": 28,
+        "balancing_allowed_abs_t": [
+          0,
+          2,
+          10,
+          12
+        ],
+        "profile_excess": {
+          "t=2": 4,
+          "t=p-1": 4,
+          "t=p+1": 2
+        },
+        "zero_sum_dependency": true,
+        "t2_hasse": {
+          "selected_directions": 6,
+          "two_distinct_D_roots": 2,
+          "required_abs_character_sum": 8,
+          "hasse_upper_bound_squared": 44,
+          "required_value_squared": 64,
+          "contradiction": true
+        },
+        "t2_excluded": true,
+        "t_p_minus_1_excluded": true,
+        "t_p_plus_1_excluded": true,
+        "checks": true
+      },
+      "13": {
+        "scaled_norm_excluded": 32,
+        "balancing_allowed_abs_t": [
+          0,
+          2,
+          12,
+          14
+        ],
+        "profile_excess": {
+          "t=2": 4,
+          "t=p-1": 4,
+          "t=p+1": 2
+        },
+        "zero_sum_dependency": true,
+        "t2_hasse": {
+          "selected_directions": 7,
+          "two_distinct_D_roots": 2,
+          "required_abs_character_sum": 10,
+          "hasse_upper_bound_squared": 52,
+          "required_value_squared": 100,
+          "contradiction": true
+        },
+        "t2_excluded": true,
+        "t_p_minus_1_excluded": true,
+        "t_p_plus_1_excluded": true,
+        "checks": true
+      },
+      "17": {
+        "scaled_norm_excluded": 40,
+        "balancing_allowed_abs_t": [
+          0,
+          2,
+          16,
+          18
+        ],
+        "profile_excess": {
+          "t=2": 4,
+          "t=p-1": 4,
+          "t=p+1": 2
+        },
+        "zero_sum_dependency": true,
+        "t2_hasse": {
+          "selected_directions": 9,
+          "two_distinct_D_roots": 2,
+          "required_abs_character_sum": 14,
+          "hasse_upper_bound_squared": 68,
+          "required_value_squared": 196,
+          "contradiction": true
+        },
+        "t2_excluded": true,
+        "t_p_minus_1_excluded": true,
+        "t_p_plus_1_excluded": true,
+        "checks": true
+      },
+      "19": {
+        "scaled_norm_excluded": 44,
+        "balancing_allowed_abs_t": [
+          0,
+          2,
+          18,
+          20
+        ],
+        "profile_excess": {
+          "t=2": 4,
+          "t=p-1": 4,
+          "t=p+1": 2
+        },
+        "zero_sum_dependency": true,
+        "t2_hasse": {
+          "selected_directions": 10,
+          "two_distinct_D_roots": 2,
+          "required_abs_character_sum": 16,
+          "hasse_upper_bound_squared": 76,
+          "required_value_squared": 256,
+          "contradiction": true
+        },
+        "t2_excluded": true,
+        "t_p_minus_1_excluded": true,
+        "t_p_plus_1_excluded": true,
+        "checks": true
+      },
+      "23": {
+        "scaled_norm_excluded": 52,
+        "balancing_allowed_abs_t": [
+          0,
+          2,
+          22,
+          24
+        ],
+        "profile_excess": {
+          "t=2": 4,
+          "t=p-1": 4,
+          "t=p+1": 2
+        },
+        "zero_sum_dependency": true,
+        "t2_hasse": {
+          "selected_directions": 12,
+          "two_distinct_D_roots": 2,
+          "required_abs_character_sum": 20,
+          "hasse_upper_bound_squared": 92,
+          "required_value_squared": 400,
+          "contradiction": true
+        },
+        "t2_excluded": true,
+        "t_p_minus_1_excluded": true,
+        "t_p_plus_1_excluded": true,
+        "checks": true
+      },
+      "29": {
+        "scaled_norm_excluded": 64,
+        "balancing_allowed_abs_t": [
+          0,
+          2,
+          28,
+          30
+        ],
+        "profile_excess": {
+          "t=2": 4,
+          "t=p-1": 4,
+          "t=p+1": 2
+        },
+        "zero_sum_dependency": true,
+        "t2_hasse": {
+          "selected_directions": 15,
+          "two_distinct_D_roots": 2,
+          "required_abs_character_sum": 26,
+          "hasse_upper_bound_squared": 116,
+          "required_value_squared": 676,
+          "contradiction": true
+        },
+        "t2_excluded": true,
+        "t_p_minus_1_excluded": true,
+        "t_p_plus_1_excluded": true,
+        "checks": true
+      },
+      "31": {
+        "scaled_norm_excluded": 68,
+        "balancing_allowed_abs_t": [
+          0,
+          2,
+          30,
+          32
+        ],
+        "profile_excess": {
+          "t=2": 4,
+          "t=p-1": 4,
+          "t=p+1": 2
+        },
+        "zero_sum_dependency": true,
+        "t2_hasse": {
+          "selected_directions": 16,
+          "two_distinct_D_roots": 2,
+          "required_abs_character_sum": 28,
+          "hasse_upper_bound_squared": 124,
+          "required_value_squared": 784,
+          "contradiction": true
+        },
+        "t2_excluded": true,
+        "t_p_minus_1_excluded": true,
+        "t_p_plus_1_excluded": true,
+        "checks": true
+      }
+    }
+  },
+  "remaining_obstruction": "The next nonempty dual norm and the complete fourth-and-later harmonic theta tail remain unclassified.",
+  "L_status": "OPEN"
+}
