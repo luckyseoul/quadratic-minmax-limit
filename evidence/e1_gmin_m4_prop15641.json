@@ -1,0 +1,59 @@
+{
+  "prop": "15.641",
+  "title": "Known p=11 modular data do not determine the R1 target",
+  "theorem": {
+    "p": 11,
+    "level": 44,
+    "weight": "69/2",
+    "full_modular_dimension": 199,
+    "full_sturm_bound": 200,
+    "kohnen_dimension": 66,
+    "known_constraints": {
+      "infinity_pre_second": "coefficients 0..19",
+      "half_cusp_gap": "indices 0..14",
+      "zero_cusp_gap": "indices 0..5",
+      "quarter_cusp_gap": "indices 0..23",
+      "p_cusp_gap": "indices 0..4",
+      "complete_second_shell": "infinity coefficient 20"
+    },
+    "rank_without_second_shell": 29,
+    "rank_with_second_shell": 30,
+    "residual_dimension": 36,
+    "target_variation_rank": 1,
+    "second_variation_rank": 1,
+    "joint_second_target_rank": 2,
+    "target_after_second_rank": 1,
+    "target_second_proportional": false,
+    "exact_witness": {
+      "coordinates": 66,
+      "nonzero_coordinates": 21,
+      "known_constraints_zero": true,
+      "second_shell_zero": true,
+      "target": 1,
+      "max_numerator_exponent": 534,
+      "max_denominator_exponent": 499,
+      "artifact": "/mnt/storage/e1work/maxplus_p13/r1_modular_attack_2026-08-25/p11_modular_independence_witness.gpbin",
+      "sha256": "5bdf184e653079c361f6ee1a2178dd3f4e9b051d9da6625cc3a4910a93b441e7",
+      "artifact_present": true,
+      "artifact_hash": "5bdf184e653079c361f6ee1a2178dd3f4e9b051d9da6625cc3a4910a93b441e7",
+      "artifact_verified": true
+    },
+    "proved": true,
+    "conclusion": "The justified p=11 shell/cusp linear data, even including the complete second shell, do not determine the half-cusp R1 target.",
+    "does_not_refute_R1": true,
+    "closes_modular_coefficient_determination_route": true,
+    "closes_R1": false,
+    "closes_global_QVAR": false,
+    "closes_residual_ii": false,
+    "L_status": "OPEN"
+  },
+  "proved": {
+    "exact_modular_independence_witness": true,
+    "modular_coefficient_determination_route_closed": true,
+    "R1": false,
+    "global_QVAR": false,
+    "residual_ii": false,
+    "L": false
+  },
+  "L_status": "OPEN"
+}

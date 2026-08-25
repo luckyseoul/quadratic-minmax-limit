@@ -1,12 +1,34 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-25 (15.640 exact harmonic saddle at scaled norm 3p-6)
+**Date:** 2026-08-25 (15.641 exact modular-independence certificate)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.641 — current modular shell/cusp data do not determine R1
+
+`src/e1_gmin_m4_prop15641.py` and
+`evidence/NOTE_2026-08-25_p11_modular_independence.md`. At `p=11`, the
+relevant Kohnen space has dimension 66. The justified infinity coefficients
+`0..19` and geometric cusp gaps have rank 29; adding the complete second
+dual shell at coefficient 20 gives rank 30 and leaves a 36-dimensional
+kernel. The second-shell and target rows have joint rank two.
+
+An exact 21-coordinate rational vector gives the stronger certificate
+
+```
+A_known w = 0,   c_second w = 0,   c_target w = 1.
+```
+
+Its binary payload is backed up under
+`/mnt/storage/e1work/maxplus_p13/r1_modular_attack_2026-08-25/` with SHA-256
+`5bdf184e653079c361f6ee1a2178dd3f4e9b051d9da6625cc3a4910a93b441e7`.
+This closes coefficient determination from the current linear modular data,
+not R1: additional shells/cusp constraints or nonlinear positivity specific
+to lattice theta series remain possible.
 
 ## 15.640 — exact quartic saddle at scaled norm 3p-6
 

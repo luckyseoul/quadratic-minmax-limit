@@ -1,0 +1,38 @@
+{
+  "date": "2026-08-25",
+  "root": "/mnt/storage/e1work/maxplus_p13/r1_modular_attack_2026-08-25",
+  "files": {
+    "p11_cusp_p_exact_250.gpbin": {
+      "bytes": 7233,
+      "sha256": "d81b983f83d9ad92b37e741238ad1b7a918fb86c4c870cd26cd9945c0a9882db"
+    },
+    "p11_cusp_quarter_exact_250.gpbin": {
+      "bytes": 472193,
+      "sha256": "8df5f765c5c03cbde75c50f4f070e49a3c73ee2bc3f4cdf21077b2c368f76b84"
+    },
+    "p11_cusp_zero_exact_250.gpbin": {
+      "bytes": 436561,
+      "sha256": "c2a7be7ea612da8159ca30fef5f7a69ba7935a14594064592a0b3b4b19972ad6"
+    },
+    "p11_half_rational_250.gpbin": {
+      "bytes": 127705,
+      "sha256": "b8b066132255cb5f441536f8053441d6c74e511d6239db5178886ad75a5cd312"
+    },
+    "p11_half_reduced_col1_exact_250.gpbin": {
+      "bytes": 18537,
+      "sha256": "1357e36433bacf5564fbe6cfea07335296b6d4f60d14a7f799f2b449ed4bd153"
+    },
+    "p11_mf_k.gpbin": {
+      "bytes": 399449514,
+      "sha256": "2fb0e8a37b46a97a8cbc53b12489a81a58e5046c126d993e9c247f8e462f6950"
+    },
+    "p11_mf_k_reduced.gpbin": {
+      "bytes": 598746084,
+      "sha256": "ed33e71c66e10d61ad5f0dd90a37edcaa757d0a50ac5756d6c7e10287bc93d27"
+    },
+    "p11_modular_independence_witness.gpbin": {
+      "bytes": 1601530,
+      "sha256": "5bdf184e653079c361f6ee1a2178dd3f4e9b051d9da6625cc3a4910a93b441e7"
+    }
+  }
+}

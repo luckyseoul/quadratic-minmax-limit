@@ -1,0 +1,29 @@
+--- a/src/basemath/mftrace.c
++++ b/src/basemath/mftrace.c
+@@ -8269,12 +8269,26 @@ mf2gaexpansion(GEN mf2, GEN F, GEN ga, long n, long prec)
+       V = vecslice(V, 1, n + 1);
+     }
+     else
+     {
+-      long sh = -itos(gsh), i;
++      long sh = -itos(gsh), i, j, emax;
+       if (sh > ext) pari_err_BUG("mf2gaexpansion [incorrect sh]");
++      emax = gexpo(gel(V, sh + 1));
++      for (j = sh + 2; j < lg(V); j++)
++        emax = maxss(emax, gexpo(gel(V,j)));
+       for (i = 1; i <= sh; i++)
+-        if (!gequal0(gel(V,i))) pari_err_BUG("mf2gaexpansion [sh too large]");
++        if (!gequal0(gel(V,i)))
++        {
++          /* The shift forces these coefficients to vanish identically.  At
++           * high weight, mfgaexpansion can leave roundoff debris instead of
++           * a bit-for-bit zero.  Suppress it only when it is negligible
++           * relative to the computed expansion; retain the bug check when
++           * fewer than half of the requested precision bits survive. */
++          if (gexpo(gel(V,i)) > emax - (long)prec2nbits(prec) / 2)
++            pari_err_BUG("mf2gaexpansion [sh too large]");
++          gel(V,i) = gen_0;
++        }
+       V = vecslice(V, sh+1, n + sh+1);
+     }
+   }

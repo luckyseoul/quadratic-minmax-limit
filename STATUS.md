@@ -1,5 +1,14 @@
 # Status (2026-08-25)
 
+**15.641 PROVED route kill, not R1**: at `p=11`, the justified pre-second
+infinity rows and geometric cusp gaps have rank 29 in the 66-dimensional
+Kohnen space; the complete second-shell row raises this to 30, leaving a
+36-dimensional kernel. An exact 21-coordinate rational witness annihilates
+all of those rows and the second shell while its half-cusp R1 target is one.
+Thus the current linear modular shell/cusp data do not determine or sign the
+target. Additional exact data or nonlinear theta positivity could still
+prove R1. Global QVAR, R1, residual (ii), Type I, and L remain OPEN.
+
 **15.632 PROVED reduction + branch kill, not residual (ii)**: for every odd
 affine separator `H`, the scaled integer slacks satisfy the type-split identity
 `sum_{eps_d=tau} a_d=(p+1)(|H|-3p)/2`.  The odd-degree boundary fixes each
