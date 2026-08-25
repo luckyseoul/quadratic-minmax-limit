@@ -1,0 +1,904 @@
+{
+  "prop": "15.643",
+  "title": "Positive-product infinity-point boundary excluded for p>=17",
+  "proved": true,
+  "theorem": {
+    "proved": true,
+    "all_odd_p_at_least_17": true,
+    "boundary": "D={infinity,v}",
+    "edge_product": 1,
+    "small_arithmetic_survivors": {
+      "5": {
+        "p": 5,
+        "q": 2,
+        "rows": [
+          {
+            "k0": 0,
+            "infinity_edges": 5,
+            "sum_parallel_multiplicities": 8,
+            "allowed_positive_kd": [
+              1,
+              2
+            ]
+          },
+          {
+            "k0": 1,
+            "infinity_edges": 7,
+            "sum_parallel_multiplicities": 7,
+            "allowed_positive_kd": [
+              1,
+              2
+            ]
+          },
+          {
+            "k0": 2,
+            "infinity_edges": 9,
+            "sum_parallel_multiplicities": 6,
+            "allowed_positive_kd": [
+              1,
+              2
+            ]
+          },
+          {
+            "k0": 3,
+            "infinity_edges": 11,
+            "sum_parallel_multiplicities": 5,
+            "allowed_positive_kd": [
+              1
+            ]
+          },
+          {
+            "k0": 4,
+            "infinity_edges": 13,
+            "sum_parallel_multiplicities": 4,
+            "allowed_positive_kd": [
+              1
+            ]
+          },
+          {
+            "k0": 5,
+            "infinity_edges": 15,
+            "sum_parallel_multiplicities": 3,
+            "allowed_positive_kd": [
+              1
+            ]
+          },
+          {
+            "k0": 6,
+            "infinity_edges": 17,
+            "sum_parallel_multiplicities": 2,
+            "allowed_positive_kd": []
+          },
+          {
+            "k0": 7,
+            "infinity_edges": 19,
+            "sum_parallel_multiplicities": 1,
+            "allowed_positive_kd": []
+          },
+          {
+            "k0": 8,
+            "infinity_edges": 21,
+            "sum_parallel_multiplicities": 0,
+            "allowed_positive_kd": []
+          }
+        ],
+        "parallel_counts_are_q_multiples": true,
+        "no_populated_direction": false,
+        "only_arithmetic_endpoint": null,
+        "endpoint_is_all_infinity_star": true,
+        "endpoint_boundary_size": 22,
+        "positive_product_infinity_point_boundary_excluded": false
+      },
+      "7": {
+        "p": 7,
+        "q": 3,
+        "rows": [
+          {
+            "k0": 0,
+            "infinity_edges": 5,
+            "sum_parallel_multiplicities": 8,
+            "allowed_positive_kd": [
+              1,
+              2
+            ]
+          },
+          {
+            "k0": 1,
+            "infinity_edges": 8,
+            "sum_parallel_multiplicities": 7,
+            "allowed_positive_kd": [
+              1
+            ]
+          },
+          {
+            "k0": 2,
+            "infinity_edges": 11,
+            "sum_parallel_multiplicities": 6,
+            "allowed_positive_kd": [
+              1
+            ]
+          },
+          {
+            "k0": 3,
+            "infinity_edges": 14,
+            "sum_parallel_multiplicities": 5,
+            "allowed_positive_kd": [
+              1
+            ]
+          },
+          {
+            "k0": 4,
+            "infinity_edges": 17,
+            "sum_parallel_multiplicities": 4,
+            "allowed_positive_kd": [
+              1
+            ]
+          },
+          {
+            "k0": 5,
+            "infinity_edges": 20,
+            "sum_parallel_multiplicities": 3,
+            "allowed_positive_kd": []
+          },
+          {
+            "k0": 6,
+            "infinity_edges": 23,
+            "sum_parallel_multiplicities": 2,
+            "allowed_positive_kd": []
+          },
+          {
+            "k0": 7,
+            "infinity_edges": 26,
+            "sum_parallel_multiplicities": 1,
+            "allowed_positive_kd": []
+          },
+          {
+            "k0": 8,
+            "infinity_edges": 29,
+            "sum_parallel_multiplicities": 0,
+            "allowed_positive_kd": []
+          }
+        ],
+        "parallel_counts_are_q_multiples": true,
+        "no_populated_direction": false,
+        "only_arithmetic_endpoint": null,
+        "endpoint_is_all_infinity_star": true,
+        "endpoint_boundary_size": 30,
+        "positive_product_infinity_point_boundary_excluded": false
+      },
+      "11": {
+        "p": 11,
+        "q": 5,
+        "rows": [
+          {
+            "k0": 0,
+            "infinity_edges": 5,
+            "sum_parallel_multiplicities": 8,
+            "allowed_positive_kd": [
+              1
+            ]
+          },
+          {
+            "k0": 1,
+            "infinity_edges": 10,
+            "sum_parallel_multiplicities": 7,
+            "allowed_positive_kd": [
+              1
+            ]
+          },
+          {
+            "k0": 2,
+            "infinity_edges": 15,
+            "sum_parallel_multiplicities": 6,
+            "allowed_positive_kd": [
+              1
+            ]
+          },
+          {
+            "k0": 3,
+            "infinity_edges": 20,
+            "sum_parallel_multiplicities": 5,
+            "allowed_positive_kd": []
+          },
+          {
+            "k0": 4,
+            "infinity_edges": 25,
+            "sum_parallel_multiplicities": 4,
+            "allowed_positive_kd": []
+          },
+          {
+            "k0": 5,
+            "infinity_edges": 30,
+            "sum_parallel_multiplicities": 3,
+            "allowed_positive_kd": []
+          },
+          {
+            "k0": 6,
+            "infinity_edges": 35,
+            "sum_parallel_multiplicities": 2,
+            "allowed_positive_kd": []
+          },
+          {
+            "k0": 7,
+            "infinity_edges": 40,
+            "sum_parallel_multiplicities": 1,
+            "allowed_positive_kd": []
+          },
+          {
+            "k0": 8,
+            "infinity_edges": 45,
+            "sum_parallel_multiplicities": 0,
+            "allowed_positive_kd": []
+          }
+        ],
+        "parallel_counts_are_q_multiples": true,
+        "no_populated_direction": false,
+        "only_arithmetic_endpoint": null,
+        "endpoint_is_all_infinity_star": true,
+        "endpoint_boundary_size": 46,
+        "positive_product_infinity_point_boundary_excluded": false
+      },
+      "13": {
+        "p": 13,
+        "q": 6,
+        "rows": [
+          {
+            "k0": 0,
+            "infinity_edges": 5,
+            "sum_parallel_multiplicities": 8,
+            "allowed_positive_kd": [
+              1
+            ]
+          },
+          {
+            "k0": 1,
+            "infinity_edges": 11,
+            "sum_parallel_multiplicities": 7,
+            "allowed_positive_kd": [
+              1
+            ]
+          },
+          {
+            "k0": 2,
+            "infinity_edges": 17,
+            "sum_parallel_multiplicities": 6,
+            "allowed_positive_kd": []
+          },
+          {
+            "k0": 3,
+            "infinity_edges": 23,
+            "sum_parallel_multiplicities": 5,
+            "allowed_positive_kd": []
+          },
+          {
+            "k0": 4,
+            "infinity_edges": 29,
+            "sum_parallel_multiplicities": 4,
+            "allowed_positive_kd": []
+          },
+          {
+            "k0": 5,
+            "infinity_edges": 35,
+            "sum_parallel_multiplicities": 3,
+            "allowed_positive_kd": []
+          },
+          {
+            "k0": 6,
+            "infinity_edges": 41,
+            "sum_parallel_multiplicities": 2,
+            "allowed_positive_kd": []
+          },
+          {
+            "k0": 7,
+            "infinity_edges": 47,
+            "sum_parallel_multiplicities": 1,
+            "allowed_positive_kd": []
+          },
+          {
+            "k0": 8,
+            "infinity_edges": 53,
+            "sum_parallel_multiplicities": 0,
+            "allowed_positive_kd": []
+          }
+        ],
+        "parallel_counts_are_q_multiples": true,
+        "no_populated_direction": false,
+        "only_arithmetic_endpoint": null,
+        "endpoint_is_all_infinity_star": true,
+        "endpoint_boundary_size": 54,
+        "positive_product_infinity_point_boundary_excluded": false
+      }
+    },
+    "p_5_7_11_13_status": "OPEN",
+    "negative_product_status": "OPEN",
+    "closes_residual_ii": false,
+    "closes_R1": false,
+    "L_status": "OPEN"
+  },
+  "samples": {
+    "5": {
+      "p": 5,
+      "q": 2,
+      "rows": [
+        {
+          "k0": 0,
+          "infinity_edges": 5,
+          "sum_parallel_multiplicities": 8,
+          "allowed_positive_kd": [
+            1,
+            2
+          ]
+        },
+        {
+          "k0": 1,
+          "infinity_edges": 7,
+          "sum_parallel_multiplicities": 7,
+          "allowed_positive_kd": [
+            1,
+            2
+          ]
+        },
+        {
+          "k0": 2,
+          "infinity_edges": 9,
+          "sum_parallel_multiplicities": 6,
+          "allowed_positive_kd": [
+            1,
+            2
+          ]
+        },
+        {
+          "k0": 3,
+          "infinity_edges": 11,
+          "sum_parallel_multiplicities": 5,
+          "allowed_positive_kd": [
+            1
+          ]
+        },
+        {
+          "k0": 4,
+          "infinity_edges": 13,
+          "sum_parallel_multiplicities": 4,
+          "allowed_positive_kd": [
+            1
+          ]
+        },
+        {
+          "k0": 5,
+          "infinity_edges": 15,
+          "sum_parallel_multiplicities": 3,
+          "allowed_positive_kd": [
+            1
+          ]
+        },
+        {
+          "k0": 6,
+          "infinity_edges": 17,
+          "sum_parallel_multiplicities": 2,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 7,
+          "infinity_edges": 19,
+          "sum_parallel_multiplicities": 1,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 8,
+          "infinity_edges": 21,
+          "sum_parallel_multiplicities": 0,
+          "allowed_positive_kd": []
+        }
+      ],
+      "parallel_counts_are_q_multiples": true,
+      "no_populated_direction": false,
+      "only_arithmetic_endpoint": null,
+      "endpoint_is_all_infinity_star": true,
+      "endpoint_boundary_size": 22,
+      "positive_product_infinity_point_boundary_excluded": false
+    },
+    "7": {
+      "p": 7,
+      "q": 3,
+      "rows": [
+        {
+          "k0": 0,
+          "infinity_edges": 5,
+          "sum_parallel_multiplicities": 8,
+          "allowed_positive_kd": [
+            1,
+            2
+          ]
+        },
+        {
+          "k0": 1,
+          "infinity_edges": 8,
+          "sum_parallel_multiplicities": 7,
+          "allowed_positive_kd": [
+            1
+          ]
+        },
+        {
+          "k0": 2,
+          "infinity_edges": 11,
+          "sum_parallel_multiplicities": 6,
+          "allowed_positive_kd": [
+            1
+          ]
+        },
+        {
+          "k0": 3,
+          "infinity_edges": 14,
+          "sum_parallel_multiplicities": 5,
+          "allowed_positive_kd": [
+            1
+          ]
+        },
+        {
+          "k0": 4,
+          "infinity_edges": 17,
+          "sum_parallel_multiplicities": 4,
+          "allowed_positive_kd": [
+            1
+          ]
+        },
+        {
+          "k0": 5,
+          "infinity_edges": 20,
+          "sum_parallel_multiplicities": 3,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 6,
+          "infinity_edges": 23,
+          "sum_parallel_multiplicities": 2,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 7,
+          "infinity_edges": 26,
+          "sum_parallel_multiplicities": 1,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 8,
+          "infinity_edges": 29,
+          "sum_parallel_multiplicities": 0,
+          "allowed_positive_kd": []
+        }
+      ],
+      "parallel_counts_are_q_multiples": true,
+      "no_populated_direction": false,
+      "only_arithmetic_endpoint": null,
+      "endpoint_is_all_infinity_star": true,
+      "endpoint_boundary_size": 30,
+      "positive_product_infinity_point_boundary_excluded": false
+    },
+    "11": {
+      "p": 11,
+      "q": 5,
+      "rows": [
+        {
+          "k0": 0,
+          "infinity_edges": 5,
+          "sum_parallel_multiplicities": 8,
+          "allowed_positive_kd": [
+            1
+          ]
+        },
+        {
+          "k0": 1,
+          "infinity_edges": 10,
+          "sum_parallel_multiplicities": 7,
+          "allowed_positive_kd": [
+            1
+          ]
+        },
+        {
+          "k0": 2,
+          "infinity_edges": 15,
+          "sum_parallel_multiplicities": 6,
+          "allowed_positive_kd": [
+            1
+          ]
+        },
+        {
+          "k0": 3,
+          "infinity_edges": 20,
+          "sum_parallel_multiplicities": 5,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 4,
+          "infinity_edges": 25,
+          "sum_parallel_multiplicities": 4,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 5,
+          "infinity_edges": 30,
+          "sum_parallel_multiplicities": 3,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 6,
+          "infinity_edges": 35,
+          "sum_parallel_multiplicities": 2,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 7,
+          "infinity_edges": 40,
+          "sum_parallel_multiplicities": 1,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 8,
+          "infinity_edges": 45,
+          "sum_parallel_multiplicities": 0,
+          "allowed_positive_kd": []
+        }
+      ],
+      "parallel_counts_are_q_multiples": true,
+      "no_populated_direction": false,
+      "only_arithmetic_endpoint": null,
+      "endpoint_is_all_infinity_star": true,
+      "endpoint_boundary_size": 46,
+      "positive_product_infinity_point_boundary_excluded": false
+    },
+    "13": {
+      "p": 13,
+      "q": 6,
+      "rows": [
+        {
+          "k0": 0,
+          "infinity_edges": 5,
+          "sum_parallel_multiplicities": 8,
+          "allowed_positive_kd": [
+            1
+          ]
+        },
+        {
+          "k0": 1,
+          "infinity_edges": 11,
+          "sum_parallel_multiplicities": 7,
+          "allowed_positive_kd": [
+            1
+          ]
+        },
+        {
+          "k0": 2,
+          "infinity_edges": 17,
+          "sum_parallel_multiplicities": 6,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 3,
+          "infinity_edges": 23,
+          "sum_parallel_multiplicities": 5,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 4,
+          "infinity_edges": 29,
+          "sum_parallel_multiplicities": 4,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 5,
+          "infinity_edges": 35,
+          "sum_parallel_multiplicities": 3,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 6,
+          "infinity_edges": 41,
+          "sum_parallel_multiplicities": 2,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 7,
+          "infinity_edges": 47,
+          "sum_parallel_multiplicities": 1,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 8,
+          "infinity_edges": 53,
+          "sum_parallel_multiplicities": 0,
+          "allowed_positive_kd": []
+        }
+      ],
+      "parallel_counts_are_q_multiples": true,
+      "no_populated_direction": false,
+      "only_arithmetic_endpoint": null,
+      "endpoint_is_all_infinity_star": true,
+      "endpoint_boundary_size": 54,
+      "positive_product_infinity_point_boundary_excluded": false
+    },
+    "17": {
+      "p": 17,
+      "q": 8,
+      "rows": [
+        {
+          "k0": 0,
+          "infinity_edges": 5,
+          "sum_parallel_multiplicities": 8,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 1,
+          "infinity_edges": 13,
+          "sum_parallel_multiplicities": 7,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 2,
+          "infinity_edges": 21,
+          "sum_parallel_multiplicities": 6,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 3,
+          "infinity_edges": 29,
+          "sum_parallel_multiplicities": 5,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 4,
+          "infinity_edges": 37,
+          "sum_parallel_multiplicities": 4,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 5,
+          "infinity_edges": 45,
+          "sum_parallel_multiplicities": 3,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 6,
+          "infinity_edges": 53,
+          "sum_parallel_multiplicities": 2,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 7,
+          "infinity_edges": 61,
+          "sum_parallel_multiplicities": 1,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 8,
+          "infinity_edges": 69,
+          "sum_parallel_multiplicities": 0,
+          "allowed_positive_kd": []
+        }
+      ],
+      "parallel_counts_are_q_multiples": true,
+      "no_populated_direction": true,
+      "only_arithmetic_endpoint": {
+        "k0": 8,
+        "infinity_edges": 69,
+        "sum_parallel_multiplicities": 0,
+        "allowed_positive_kd": []
+      },
+      "endpoint_is_all_infinity_star": true,
+      "endpoint_boundary_size": 70,
+      "positive_product_infinity_point_boundary_excluded": true
+    },
+    "19": {
+      "p": 19,
+      "q": 9,
+      "rows": [
+        {
+          "k0": 0,
+          "infinity_edges": 5,
+          "sum_parallel_multiplicities": 8,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 1,
+          "infinity_edges": 14,
+          "sum_parallel_multiplicities": 7,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 2,
+          "infinity_edges": 23,
+          "sum_parallel_multiplicities": 6,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 3,
+          "infinity_edges": 32,
+          "sum_parallel_multiplicities": 5,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 4,
+          "infinity_edges": 41,
+          "sum_parallel_multiplicities": 4,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 5,
+          "infinity_edges": 50,
+          "sum_parallel_multiplicities": 3,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 6,
+          "infinity_edges": 59,
+          "sum_parallel_multiplicities": 2,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 7,
+          "infinity_edges": 68,
+          "sum_parallel_multiplicities": 1,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 8,
+          "infinity_edges": 77,
+          "sum_parallel_multiplicities": 0,
+          "allowed_positive_kd": []
+        }
+      ],
+      "parallel_counts_are_q_multiples": true,
+      "no_populated_direction": true,
+      "only_arithmetic_endpoint": {
+        "k0": 8,
+        "infinity_edges": 77,
+        "sum_parallel_multiplicities": 0,
+        "allowed_positive_kd": []
+      },
+      "endpoint_is_all_infinity_star": true,
+      "endpoint_boundary_size": 78,
+      "positive_product_infinity_point_boundary_excluded": true
+    },
+    "23": {
+      "p": 23,
+      "q": 11,
+      "rows": [
+        {
+          "k0": 0,
+          "infinity_edges": 5,
+          "sum_parallel_multiplicities": 8,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 1,
+          "infinity_edges": 16,
+          "sum_parallel_multiplicities": 7,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 2,
+          "infinity_edges": 27,
+          "sum_parallel_multiplicities": 6,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 3,
+          "infinity_edges": 38,
+          "sum_parallel_multiplicities": 5,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 4,
+          "infinity_edges": 49,
+          "sum_parallel_multiplicities": 4,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 5,
+          "infinity_edges": 60,
+          "sum_parallel_multiplicities": 3,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 6,
+          "infinity_edges": 71,
+          "sum_parallel_multiplicities": 2,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 7,
+          "infinity_edges": 82,
+          "sum_parallel_multiplicities": 1,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 8,
+          "infinity_edges": 93,
+          "sum_parallel_multiplicities": 0,
+          "allowed_positive_kd": []
+        }
+      ],
+      "parallel_counts_are_q_multiples": true,
+      "no_populated_direction": true,
+      "only_arithmetic_endpoint": {
+        "k0": 8,
+        "infinity_edges": 93,
+        "sum_parallel_multiplicities": 0,
+        "allowed_positive_kd": []
+      },
+      "endpoint_is_all_infinity_star": true,
+      "endpoint_boundary_size": 94,
+      "positive_product_infinity_point_boundary_excluded": true
+    },
+    "101": {
+      "p": 101,
+      "q": 50,
+      "rows": [
+        {
+          "k0": 0,
+          "infinity_edges": 5,
+          "sum_parallel_multiplicities": 8,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 1,
+          "infinity_edges": 55,
+          "sum_parallel_multiplicities": 7,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 2,
+          "infinity_edges": 105,
+          "sum_parallel_multiplicities": 6,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 3,
+          "infinity_edges": 155,
+          "sum_parallel_multiplicities": 5,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 4,
+          "infinity_edges": 205,
+          "sum_parallel_multiplicities": 4,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 5,
+          "infinity_edges": 255,
+          "sum_parallel_multiplicities": 3,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 6,
+          "infinity_edges": 305,
+          "sum_parallel_multiplicities": 2,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 7,
+          "infinity_edges": 355,
+          "sum_parallel_multiplicities": 1,
+          "allowed_positive_kd": []
+        },
+        {
+          "k0": 8,
+          "infinity_edges": 405,
+          "sum_parallel_multiplicities": 0,
+          "allowed_positive_kd": []
+        }
+      ],
+      "parallel_counts_are_q_multiples": true,
+      "no_populated_direction": true,
+      "only_arithmetic_endpoint": {
+        "k0": 8,
+        "infinity_edges": 405,
+        "sum_parallel_multiplicities": 0,
+        "allowed_positive_kd": []
+      },
+      "endpoint_is_all_infinity_star": true,
+      "endpoint_boundary_size": 406,
+      "positive_product_infinity_point_boundary_excluded": true
+    }
+  }
+}

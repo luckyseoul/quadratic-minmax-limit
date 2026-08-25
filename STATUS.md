@@ -1,5 +1,14 @@
 # Status (2026-08-25)
 
+**15.643 PROVED branch exclusion for `p>=17`, not residual (ii)**: in the
+`D={infinity,v}`, `c_H=+1` branch, 15.642's pointwise baseline makes every
+signed inter-fibre edge matrix additive. Divisibility forces each finite
+parallel count to be a multiple of `(p-1)/2`; its exact `l1` edge budget
+then excludes every populated direction for odd `p>=17`. The sole arithmetic
+endpoint is an all-infinity star, whose boundary is not two. The cases
+`p=5,7,11,13`, the negative-product branch, other boundary profiles, residual
+(ii), Type I, R1, global QVAR, and L remain OPEN.
+
 **15.642 PROVED rigidity/sparsity, not residual (ii)**: a nonzero
 nonnegative integer-valued quadratic on `J(p,(p+1)/2)` has an exact
 stabilizer mass floor; combining it with the all-parameter degree-two slice

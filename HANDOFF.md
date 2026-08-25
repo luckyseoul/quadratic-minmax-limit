@@ -1,12 +1,31 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-25 (15.642 quadratic-lift rigidity/sparsity)
+**Date:** 2026-08-25 (15.643 positive-product boundary exclusion)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.643 — positive-product infinity-point boundary excluded for p>=17
+
+`src/e1_gmin_m4_prop15643.py` and
+`evidence/NOTE_2026-08-25_positive_product_boundary_exclusion.md`. In the
+`D={infinity,v}`, `c_H=+1` branch, every directional slack is pointwise
+baseline by 15.642. The signed inter-fibre edge matrix is therefore additive.
+If `I` counts infinity edges and `P_d` finite edges parallel to direction
+`d`, exact divisibility and the global edge count give
+
+```
+q=(p-1)/2,  I=5+q*k0,  P_d=q*kd,  sum_d kd=8-k0.
+```
+
+The directional `l1` budget gives
+`abs(k0+p*kd-8)<=8-k0-kd`; a populated direction would satisfy
+`2*k0+(p+1)*kd<=16`, impossible for `p>=17`. The remaining all-infinity
+star has boundary size `4p+2`, not two. Thus this branch is empty for every
+odd `p>=17`. Small `p=5,7,11,13`, `c_H=-1`, and other profiles remain open.
 
 ## 15.642 — nonzero quadratic mass; two-vertex boundary rigidity
 
