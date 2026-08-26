@@ -1,0 +1,29 @@
+{
+  "prop": "15.658",
+  "title": "p=7 positive infinity-plus-five boundary exclusion",
+  "proved": true,
+  "scope": "p=7, c_H=+1, six-point boundary containing infinity",
+  "same_type_scaled_slack_congruence_modulus": 8,
+  "unique_scaled_mean": 8,
+  "finite_boundaries": 1906884,
+  "equations": 282,
+  "edge_variables": 1225,
+  "rank_mod_7": 147,
+  "left_dependency_dimension": 135,
+  "v100_survivors": 0,
+  "nuka_cpu_survivors": 0,
+  "direction_mask_size_histogram": {
+    "1": 2923536,
+    "3": 9507960,
+    "5": 2823576
+  },
+  "v100_sha256": "7d3a828732a35192188a76958e5b9844c14668695cff455f3c61f8ffc5948b07",
+  "nuka_sha256": "05b622ffcb827e5b54411b27cfac91575f2efd44800775864f6fe76210875ffa",
+  "sweep_script_sha256": "d0e54d2749a1fcd2841674134301fef241acbed2abdc5777aedfc5c36e87330a",
+  "archive": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-26-p7-size-six-positive-infinity/",
+  "independent_cpu_reproduction": true,
+  "closes_all_p7_size_six": false,
+  "closes_residual_ii": false,
+  "closes_R1": false,
+  "L_status": "OPEN"
+}

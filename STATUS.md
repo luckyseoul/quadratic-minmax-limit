@@ -1,5 +1,17 @@
 # Status (2026-08-26)
 
+**15.658 PROVED/certified the positive-product `p=7`
+infinity-plus-five boundary exclusion, not all size-six boundaries**:
+all eight directions have phase zero and scaled mean eight. The complete
+`J(7,4)` classification is unique for odd-fibre sizes 1, 3, and 5, so each
+of the `C(49,5)=1,906,884` finite boundaries fixes all 280 affine score
+right sides. The 135 left-null dependencies of the common `282 x 1225`
+system over `F_7` reject every boundary. An exact V100 integer sweep and
+an independent NUKA/NumPy sweep agree on the full direction-mask histogram
+and zero survivors. The negative-product infinity branch, six finite
+points at `p=7`, every `p=5` size-six case, boundaries of size at least
+eight, residual (ii), Type I, R1, global QVAR, and L remain OPEN.
+
 **15.657 PROVED every six-point boundary for odd `p>=11`, not residual
 (ii)**: exact positive quadrature extends the 15.652 floor table through
 six odd fibres. If `s` finite boundary points have `b_d` odd fibres in

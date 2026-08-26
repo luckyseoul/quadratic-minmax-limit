@@ -29,7 +29,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657 closes every six-point boundary for `p>=11`; the `p=5,7` six-point cases and boundaries of size at least eight remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657 closes every six-point boundary for `p>=11`; 15.658 closes the positive-product `p=7` infinity-plus-five branch; the other `p=5,7` size-six cases and boundaries of size at least eight remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -135,6 +135,13 @@ budget only 30 without infinity and 20 with infinity; these are too small
 for the exact affine slack budget for every `p>=11`, including a separate
 type-split contradiction at `p=11`. Thus size six remains only at `p=5,7`,
 while the first open boundary size for `p>=11` is at least eight.
+Proposition 15.658 handles one exceptional `p=7` branch. In the
+positive-product infinity-plus-five case, all directions have the unique
+scaled-mean-eight `J(7,4)` slack. The 135 mod-seven dependencies of the
+common affine score system reject all `C(49,5)=1,906,884` finite
+boundaries; independent V100 and NUKA implementations both return zero
+survivors. The negative-product infinity branch and six-finite `p=7`
+branch remain open, as do the `p=5` size-six cases.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -169,7 +176,8 @@ graph TD
     P7MOD --> ALL4
     P5FULL --> ALL4
     BUDGET --> SIX["every six-point boundary<br/><b>CLOSED for p>=11</b> (15.657)"]
-    SIX --> P57SIX["p=5,7 six-point boundary<br/><b>OPEN</b>"]
+    SIX --> P57SIX["p=5,7 six-point boundary<br/>remaining branches <b>OPEN</b>"]
+    P57SIX --> P7POSINF["p=7 positive infinity + five<br/>mod-7 full sweep <b>CLOSED</b> (15.658)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -182,6 +190,7 @@ graph TD
     style BUDGET fill:#e6ffe6
     style SIX fill:#e6ffe6
     style P57SIX fill:#fff4e6
+    style P7POSINF fill:#e6ffe6
     style P7BAL fill:#e6ffe6
     style P5NEG fill:#e6ffe6
     style POSFINITE fill:#e6ffe6
@@ -343,8 +352,10 @@ The affine reduction alone is not a close: a corrected `p=5` affine model has a 
 integral solution with directional means `(12,4,0,6,10,4)` and boundary equal
 to infinity plus an affine line. Proposition 15.656 closes the size-four
 profiles using the full shell. Proposition 15.657 excludes every size-six
-profile for `p>=11`, but this `p=5` size-six affine witness, the other
-exceptional `p=5,7` size-six cases, and larger boundary profiles remain open.
+profile for `p>=11`. Proposition 15.658 also closes the positive-product
+`p=7` infinity-plus-five branch, but this `p=5` size-six affine witness, the
+other exceptional `p=5,7` size-six cases, and larger boundary profiles
+remain open.
 
 Proposition 15.642 sharpens one minimal nonempty profile. If
 `D={infinity,v}`, then `c_H=+1` forces `A_d=x_{s_d(v)}` pointwise in every
@@ -382,7 +393,10 @@ size-four boundary is therefore closed for odd `p>=5`. Proposition 15.657
 next uses the pair-deficit inequality
 `sum_d(s-b_d) <= s(s-1)` and exact floors through `b=6` to close every
 six-point boundary for odd `p>=11`. The exceptional `p=5,7` size-six cases
-and boundaries of size at least eight remain.
+are reduced further by Proposition 15.658, whose independent V100 and CPU
+mod-seven sweeps close the positive-product `p=7` infinity-plus-five branch.
+The other exceptional size-six branches and boundaries of size at least
+eight remain.
 
 ### Route kills — do not re-tread
 

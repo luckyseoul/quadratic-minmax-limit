@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-26 (15.656 closes every size-four boundary for odd p>=5)
+**Date:** 2026-08-26 (15.658 closes the positive p=7 infinity size-six branch)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -13,9 +13,26 @@ points is closed at `p=7`. The doubly saturated four-finite profiles at
 unsaturated boundaries (518 orbits) per sign. Thus every `p=7` size-four
 case is closed. Proposition 15.656 closes all 1,202 floor-surviving `p=5`
 orbit/sign cases by complete-shell modular syndromes and sign transfer.
-Every size-four boundary is now closed for odd `p>=5`; boundary size at
-least six remains. p=13 orbits / mesh k=6 are not a close. cpu44
+Every size-four boundary is now closed for odd `p>=5`; 15.657 closes size
+six for `p>=11`, and 15.658 additionally closes the `p=7`, `c_H=+1`
+infinity-plus-five branch. The other `p=5,7` size-six branches and larger
+boundaries remain. p=13 orbits / mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.658 — positive p=7 infinity-plus-five branch closed modulo seven
+
+`src/e1_gmin_m4_prop15658.py` and
+`evidence/NOTE_2026-08-26_p7_size_six_positive_infinity_mod7.md`. Phase
+zero and the exact type budget force scaled mean eight in every direction.
+The unique `J(7,4)` slacks for `b=1,3,5` determine all 280 affine score
+right sides from the finite five-set. The common `282 x 1225` edge system
+has rank 147 over `F_7`, hence 135 dependency checks. A raw V100 integer
+kernel rejected all `C(49,5)=1,906,884` boundaries in 2.83 seconds; an
+independent NUKA/NumPy sweep reproduced the same mask histogram and zero
+survivors in 4.47 seconds. Raw records and implementation are archived at
+`/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-26-p7-size-six-positive-infinity/`.
+The negative infinity sign, six finite points at `p=7`, and every `p=5`
+size-six branch remain open.
 
 ## 15.656 — every p=5 four-point boundary closed by full-shell syndromes
 
