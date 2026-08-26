@@ -66,3 +66,19 @@ it is relevant finite-field coding context but does not contain the
 sides, or the 2,408-case exclusion. Direct OEIS searches for `1716742440`,
 `3939012`, `1372,294,112,294,336`, and `282,1225,147,135` returned no
 results. No sequence submission or broad priority claim is proposed.
+
+## 2026-08-26 post-finding check: Proposition 15.656
+
+Searches for `132 x 325`, ranks `67/65`, the combined tuple
+`262,325,113,149`, and a Paley full-eigenshell bounded-syndrome theorem found
+no matching result. Ghinelli--Key's ordinary Paley incidence codes are
+nearby finite-field coding context but use different matrices. Individual
+OEIS searches locate `26450`, `15525`, and `10925` in unrelated partition
+sequences; no relevant match was found for the structural rank or coverage
+tuples. This is a duplication check, not a sequence-submission project.
+
+The requested paper arXiv:2305.03523 was read. It constructs minimal locally
+concave Bellman functions on planar domains formed as a difference of
+unbounded convex domains. That mechanism may suggest a two-moment envelope
+for R1/global QVAR, but the paper has no finite-Paley theorem and does not
+contribute to the 15.656 proof.

@@ -4,10 +4,10 @@ Proposition 15.654 closes the `p=7` boundary profiles consisting of four
 finite points whose two Proposition 15.632 type costs are both 32.  It
 closes both Paley edge-product signs.
 
-This is a genuine reduction of the remaining `p=7` four-finite branch, but
-not its completion.  Exactly 23,520 unsaturated surviving boundaries, or
-518 square-semilinear orbits, remain for each sign.  The `p=5` size-four
-cases, larger boundaries, residual (ii), R1, and the limit also remain open.
+At Proposition 15.654 this was a reduction, not completion: exactly 23,520
+unsaturated boundaries, or 518 square-semilinear orbits, remained per sign.
+They are subsequently closed by 15.655, and `p=5` size four by 15.656.
+Larger boundaries, residual (ii), R1, and the limit remain open.
 
 ## 1. Boundary and slack classification
 

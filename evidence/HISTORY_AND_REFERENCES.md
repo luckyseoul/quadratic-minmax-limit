@@ -569,6 +569,36 @@ These are duplicate/context checks, not an integer-sequence novelty claim.
 
 ---
 
+## 7p. Full-shell closure of the p=5 four-point branch (2026-08-26)
+
+Proposition 15.656 uses the complete `p=5` eigenshell rather than only its
+affine subfamily. After antipodal quotient there are 130 score rows, each
+normalized edge column sums to 26, and every putative 21-edge graph has
+total shell slack 78. Boundary/product parity reduces each slack to a fixed
+bit plus twice a bounded lift. The resulting `132 x 325` shell matrix has
+rank 67 over both `F_5` and `F_7` and 65 left dependencies.
+
+Complete finite scans close 712 orbit cases modulo five. The sole timeout is
+independently infeasible modulo seven. An exact nonsquare anti-isometry and
+a fresh 489-orbit bijection transfer the no-infinity negative-sign result to
+the positive sign. Thus all 1,202 floor-surviving orbit/sign cases, covering
+26,450 boundary/sign cases, are excluded. With Proposition 15.632 this
+closes every `p=5` size-four boundary; with 15.652--15.655, every size-four
+boundary is closed for every odd `p>=5`. Boundary size at least six remains.
+
+Targeted searches found ordinary Paley incidence-code ranks and Johnson
+scheme methods, but not this full-eigenshell matrix or bounded-syndrome
+exclusion. Individual counts occur in unrelated OEIS sequences; the rank
+and coverage tuples did not match a relevant entry. No sequence novelty
+claim is made.
+
+The requested read of Ivanisvili--Stolyarov--Vasyunin--Zatitskii,
+arXiv:2305.03523, found a potentially useful Bellman-function analogy for
+compressing R1/QVAR to two moments, but no theorem directly applicable to
+the finite Paley residual system. It did not enter Proposition 15.656.
+
+---
+
 ## 8. What is not in the older literature
 
 - No 1930s–1970s theorem that \(\lim n^{-3/2}\min_A\max_x|x^\top Ax|\) exists.
@@ -618,5 +648,6 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 34. L. Rédei, *Lacunary Polynomials over Finite Fields*, North-Holland, 1973 (fully reducible coefficient-gap framework; adjacent to 15.636).
 35. A. Biró, *On Polynomials over Prime Fields Taking Only Two Values on the Multiplicative Group*, Finite Fields Appl. **6** (2000), 302--308, https://www.renyi.hu/~biroand/pdfs/TwoValues.pdf (two-value degree bounds; adjacent, not a direct proof of 15.636).
 36. D. Ghinelli and J. D. Key, *Codes from incidence matrices and line graphs of Paley graphs*, Adv. Math. Commun. **5** (2011), 93--108, https://doi.org/10.3934/amc.2011.5.93 (Paley incidence-code ranks; nearby finite-field coding context, not the 15.655 affine-score system).
+37. P. Ivanisvili, D. Stolyarov, V. Vasyunin, P. Zatitskii, *Bellman functions on simple non-convex domains in the plane*, [arXiv:2305.03523](https://arxiv.org/abs/2305.03523) (minimal locally concave Bellman construction; possible R1/QVAR analogy, not a Paley residual theorem).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

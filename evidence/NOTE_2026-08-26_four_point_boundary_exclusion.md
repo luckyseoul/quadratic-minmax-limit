@@ -141,7 +141,8 @@ Both product signs are therefore impossible with infinity in `D` for
 - all size-four boundaries: closed for every odd prime `p>=11`;
 - infinity plus three finite points with `c_H=-1`: also closed at `p=7`;
 - `p=7`, infinity present, `c_H=+1`: still open in this proposition;
-- other `p=5,7` size-four shapes: still open;
+- other `p=5,7` size-four shapes: open at Proposition 15.652 and
+  subsequently closed by Propositions 15.653--15.656;
 - size six and larger, residual (ii), R1, global QVAR, and `L`: open.
 
 Reproduce the machine companion with

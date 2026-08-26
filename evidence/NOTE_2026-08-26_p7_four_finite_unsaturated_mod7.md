@@ -5,9 +5,9 @@ boundary branch.  Combined with Proposition 15.654, every four-finite
 boundary at `p=7` is excluded for both Paley edge-product signs.  Combined
 also with Proposition 15.653, every size-four boundary at `p=7` is closed.
 
-This does **not** close residual (ii): every `p=5` size-four shape and
-boundaries of size at least six remain open.  R1, global QVAR, Type I, and
-the limit remain open.
+This does **not** close residual (ii). Proposition 15.656 subsequently
+closes every `p=5` size-four shape, but boundaries of size at least six
+remain open. R1, global QVAR, Type I, and the limit remain open.
 
 ## 1. The common exact linear system
 

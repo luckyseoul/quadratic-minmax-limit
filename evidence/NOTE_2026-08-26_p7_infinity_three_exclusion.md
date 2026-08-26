@@ -6,8 +6,9 @@ negative edge-product sign.  The positive sign is reduced to a unique
 minimum-mean directional slack model and 416 exact boundary-orbit
 certificates.
 
-This does **not** close four finite points at `p=7`, the `p=5` size-four
-cases, larger boundaries, residual (ii), R1, or the limit.
+At Proposition 15.653, four finite points at `p=7` and all `p=5` size-four
+cases remained; they are subsequently closed by 15.654--15.656. Larger
+boundaries, residual (ii), R1, and the limit remain open.
 
 ## 1. Every direction saturates
 

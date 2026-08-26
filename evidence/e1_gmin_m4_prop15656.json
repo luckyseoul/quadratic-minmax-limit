@@ -1,0 +1,79 @@
+{
+  "prop": "15.656",
+  "title": "p=5 full-shell four-point exclusion",
+  "proved": true,
+  "theorem": {
+    "proved": true,
+    "p5_all_size_four_boundaries_with_prop15632": "CLOSED",
+    "all_size_four_boundaries_for_every_odd_prime_p_at_least_5_with_props15652_to_15655": "CLOSED",
+    "certificate": {
+      "total_size_four_boundary_product_sign_cases": 29900,
+      "floor_excluded_boundary_product_sign_cases": 3450,
+      "floor_surviving_boundary_product_sign_cases": 26450,
+      "floor_surviving_orbit_product_sign_cases": 1202,
+      "shell_antipodal_representatives": 130,
+      "shell_normalized_column_sum": 26,
+      "shell_slack_mass": 78,
+      "edge_variables": 325,
+      "shell_equations": 132,
+      "shell_rank_mod_5": 67,
+      "shell_left_dependencies_mod_5": 65,
+      "combined_equations": 262,
+      "combined_rank_mod_5": 113,
+      "combined_left_dependencies_mod_5": 149,
+      "direct_orbit_cases": 713,
+      "direct_mod5_infeasible_orbits": 712,
+      "direct_mod7_infeasible_orbits": 1,
+      "direct_boundaries_excluded": 15525,
+      "transferred_no_infinity_orbits": 489,
+      "transferred_no_infinity_boundaries": 10925,
+      "all_floor_surviving_orbits_excluded": 1202,
+      "all_floor_surviving_boundaries_excluded": 26450,
+      "unknown": 0,
+      "feasible": 0,
+      "fresh_orbit_reclassification_matches": true,
+      "full_shell_parity_mass_reconstruction_matches": true,
+      "left_nullspace_audits": true,
+      "nonsquare_orbit_bijection_audited": true,
+      "structural_audit": true
+    },
+    "nonsquare_anti_isometry": {
+      "nonsquare_multiplier": 5,
+      "fixes_infinity": true,
+      "fixes_finite_zero": true,
+      "fixes_distinguished_edge": true,
+      "signed_conference_anti_isometry": true
+    },
+    "sign_transfer": {
+      "signed_conference_anti_isometry": true,
+      "fixes_distinguished_edge": true,
+      "edge_count_21_is_odd": true,
+      "four_finite_boundary_forces_even_infinity_degree": true,
+      "paley_product_sign_flips": true,
+      "eigenshell_sign_swaps": true,
+      "normalized_scores_are_preserved": true,
+      "no_infinity_orbit_bijection_audited": true
+    },
+    "first_open_boundary_size_for_p_at_least_5": 6,
+    "closes_all_p5_size_four": true,
+    "closes_all_size_four_for_p_at_least_5": true,
+    "closes_residual_ii": false,
+    "closes_R1": false,
+    "L_status": "OPEN"
+  },
+  "certificate_archive": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-26-p5-four-point/p5_size_four_full_shell_certificate_2026-08-26.tar.gz",
+  "certificate_archive_sha256": "d5db5e82389ebb0bfcb23e80da5e2322b1d65e74aa8f3804d25275793b7380da",
+  "certificate_audit_sha256": "5cafab9272510dc6871818fbfc395c8f3386ca6615f7a1b1e36f4785cf1d7e4f",
+  "mod7_exception_sha256": "2b91f83aeb543a29b0b4398243115f25189d233c50d41e16f8fd14b121c61b06",
+  "mod5_batch_sha256": {
+    "c_minus_no_infinity": "0ebee7b3f684168c91993d213b4772f64c8ae462f90e23f28f53ce07273628d1",
+    "c_minus_with_infinity": "73c09f0b717275c2d2f41b259d9b075259e0a94d1939da3823bab1f1c15b23ec",
+    "c_plus_with_infinity": "a032b8c7131c0b1180d8f316c8a01251595b1c20b1a27034b2949adbcd174073"
+  },
+  "orbit_source_sha256": {
+    "c_minus_no_infinity": "fbd7a6f06fcd1b872b46313588b0a6b3db582b19f9ea0387ff4a525dbc2f5097",
+    "c_minus_with_infinity": "8a23cac1a8d2c3e99c5675153366c719d201a511db1f01ce16dbcf4bef6fe74e",
+    "c_plus_no_infinity": "2b0a166875382b4b36bbf3c0b376ddff4b81ed447c20d85d029e438b1dccaa09",
+    "c_plus_with_infinity": "1ecefcd79348f677712c832a8e221e7dd5fda83814f213a649e40058e0539d88"
+  }
+}

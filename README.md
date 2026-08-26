@@ -29,7 +29,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652 kills every four-point boundary for `p>=11`; 15.653--15.655 close every `p=7` four-point boundary; `p=5` size four and larger boundaries remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; boundaries of size at least six remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -122,7 +122,14 @@ the 282 exact edge-count/affine-score equations have rank 147 over
 `F_7`, and their 135 left-null dependencies reject all 1,716,742,440
 complete catalog tuples across 2,408 elevation cases. An independent
 coefficient-based audit reproduces zero survivors. Thus every `p=7`
-size-four boundary is closed; every `p=5` size-four shape remains open.
+size-four boundary is closed. Proposition 15.656 closes the exceptional
+`p=5` branch using the complete eigenshell: each antipodal shell gives a
+`132 x 325` score system of rank 67 modulo five. Exact bounded lift
+syndromes exclude 712 orbit cases; the sole mod-five timeout is infeasible
+modulo seven. A nonsquare anti-isometry transfers the remaining
+no-infinity sign, and an independent structural audit covers all 1,202
+floor-surviving orbit/sign cases. Hence every size-four boundary is closed
+for every odd prime `p>=5`; the first open boundary size is six.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -152,6 +159,10 @@ graph TD
     FOUR --> P7INF["p=7 infinity + three points<br/>both signs <b>CLOSED</b> (15.653)"]
     FOUR --> P7SAT["p=7 four finite, saturated<br/>both signs <b>CLOSED</b> (15.654)"]
     FOUR --> P7MOD["p=7 four finite, unsaturated<br/>mod-7 catalog syndromes<br/>both signs <b>CLOSED</b> (15.655)"]
+    FOUR --> P5FULL["p=5 complete eigenshell<br/>mod-5 + one mod-7 exception<br/><b>CLOSED</b> (15.656)"]
+    FOUR --> ALL4["every four-point boundary<br/><b>CLOSED for p>=5</b>"]
+    P7MOD --> ALL4
+    P5FULL --> ALL4
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -169,6 +180,8 @@ graph TD
     style P7INF fill:#e6ffe6
     style P7SAT fill:#e6ffe6
     style P7MOD fill:#e6ffe6
+    style P5FULL fill:#e6ffe6
+    style ALL4 fill:#e6ffe6
     style TWOPT fill:#e6ffe6
     style POSKILL fill:#e6ffe6
     style NEGKILL fill:#e6ffe6
@@ -283,7 +296,8 @@ square-direction affine-circle words.
 | 15.652 | exact positive quadrature gives all parity floors for at most four odd fibres; six pair-directions for four finite points and three for infinity plus three points contradict the split type budget | closes every four-point boundary for every odd prime `p>=11`; `p=5,7`, size at least six, residual (ii), and R1 remain open |
 | 15.653 | type-budget saturation uniquely determines every `p=7,c_H=+1` infinity-plus-three directional slack; 18,424 triples reduce to 416 square-semilinear orbits, all exactly infeasible | with 15.652's negative-sign argument, closes infinity plus three finite boundary points at `p=7`; the four-finite remainder is subsequently closed by 15.654--15.655 |
 | 15.654 | exact Johnson-space catalogs give one phase-zero and 36 phase-one saturated `b=4` slacks; 58,800 four-finite boundaries reduce to 1,225 exactly infeasible orbits, and a nonsquare anti-isometry exchanges product signs | closes the doubly saturated `p=7` four-finite profiles for both signs; its 23,520-boundary unsaturated complement is subsequently closed by 15.655 |
-| 15.655 | the common 282-by-1225 exact score system has rank 147 over `F_7`; 135 left-null syndromes reject all 1,716,742,440 complete catalog tuples in 2,408 cases, with an independent reconstruction audit | closes the unsaturated `p=7` four-finite profiles for both signs; with 15.653--15.654 every `p=7` size-four boundary is closed, while `p=5` and larger boundaries remain |
+| 15.655 | the common 282-by-1225 exact score system has rank 147 over `F_7`; 135 left-null syndromes reject all 1,716,742,440 complete catalog tuples in 2,408 cases, with an independent reconstruction audit | closes the unsaturated `p=7` four-finite profiles for both signs; with 15.653--15.654 every `p=7` size-four boundary is closed; `p=5` is subsequently closed by 15.656 |
+| 15.656 | each antipodal `p=5` eigenshell gives a 132-by-325 exact score system of rank 67 over `F_5`; bounded lift syndromes exclude 712 orbit cases, one mod-seven exception closes the only timeout, and a nonsquare anti-isometry transfers the remaining sign | closes every `p=5` size-four boundary; with 15.652--15.655 every size-four boundary is closed for every odd `p>=5`, while size at least six remains |
 
 These are general theorems for odd primes (with the stated `p=3` second-shell
 exception), including the standard Paley `(25,50)` adjacent-ETF case. They
@@ -315,10 +329,11 @@ exact three-variable hypergeometric LP, giving
 quadratic-type half has only `(p+1)²/2` budget. This excludes every Eulerian
 boundary for all odd primes, with contradiction gap `(p²−1)/2`.
 
-The reduction is not a close: a corrected `p=5` affine model has a genuine
+The affine reduction alone is not a close: a corrected `p=5` affine model has a genuine
 integral solution with directional means `(12,4,0,6,10,4)` and boundary equal
-to infinity plus an affine line. Remaining nonempty boundary profiles and the
-full non-affine shell are open.
+to infinity plus an affine line. Proposition 15.656 closes the size-four
+profiles using the full shell, but this size-six affine witness and larger
+boundary profiles remain open.
 
 Proposition 15.642 sharpens one minimal nonempty profile. If
 `D={infinity,v}`, then `c_H=+1` forces `A_d=x_{s_d(v)}` pointwise in every
@@ -336,8 +351,8 @@ odd `p>=5`. Proposition 15.652 next closes every boundary of size four for
 odd `p>=11`: four finite points supply only six pair-collision directions,
 and infinity plus three finite points supply only three, too few to meet the
 exact type-split parity budget. Thus the first open boundary size is at
-least six for `p>=11`; exceptional `p=5,7` size-four cases and larger
-nonempty boundary shapes remain open. Proposition 15.653 further closes
+least six for `p>=11`; exceptional `p=5,7` size-four cases initially
+remain. Proposition 15.653 further closes
 both signs of infinity plus three finite points at `p=7`: saturation gives
 one exact degree-two slack model, and all 416 boundary orbits are finitely
 infeasible. Proposition 15.654 closes the doubly saturated part of the
@@ -349,8 +364,11 @@ exact affine score equations plus edge count and the distinguished edge
 have 135 left-null dependencies; exact one- and two-catalog syndrome joins
 reject every catalog tuple in all 2,408 elevation cases. The independent
 audit rebuilds both the matrix and catalog right sides and again finds zero
-survivors. Hence every `p=7` size-four case is closed. All `p=5` size-four
-cases and larger nonempty boundaries remain.
+survivors. Hence every `p=7` size-four case is closed. Proposition 15.656
+then closes every `p=5` size-four case by complete-shell modular syndromes,
+one exact mod-seven exception, and a nonsquare sign transfer. Every
+size-four boundary is therefore closed for odd `p>=5`; larger nonempty
+boundaries remain.
 
 ### Route kills — do not re-tread
 
@@ -431,6 +449,7 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15649.py` | Complete exceptional-lift classification and finite exclusion of balanced `p=7` negative two-point profile |
 | `src/e1_gmin_m4_prop15650.py` | Complete `p=5` finite exclusion and all-prime closure of the negative-product infinity-plus-point branch |
 | `src/e1_gmin_m4_prop15651.py` | Complete finite positive-product exclusion and closure of both infinity-plus-point product signs for all `p>=5` |
+| `src/e1_gmin_m4_prop15656.py` | Complete `p=5` full-shell exclusion and closure of all size-four boundaries for odd `p>=5` |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |
@@ -447,6 +466,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-25_quadratic_lift_mass.md` | Stabilizer moment certificate, exact slice-distance reinforcement, and uniform three-exception reduction |
 | `evidence/NOTE_2026-08-25_positive_product_boundary_exclusion.md` | Parallel-count divisibility and exact `l1` proof of the `p>=17` branch exclusion |
 | `evidence/NOTE_2026-08-26_complete_positive_two_point.md` | Exact coefficient, type-capacity, star-orbit, and finite-certificate closure of the four small positive cases |
+| `evidence/NOTE_2026-08-26_p5_four_point_full_shell.md` | Complete shell-slack system, modular orbit exhaustion, sign transfer, and permanent archive for 15.656 |
 | `evidence/NOTE_2026-08-25_negative_product_asymptotic_normal_form.md` | Slice-distance, mean, divisibility, and boundary proof of the unique large-prime negative profile |
 | `evidence/NOTE_2026-08-25_baseline_fibre_profiles.md` | Integral `l1` proof that every baseline fibre profile is ideal or one-transfer |
 | `evidence/NOTE_2026-08-25_pbss_cross_audit.md` | Perry--Beurling cross-audit and the viable multi-Gaussian R1 transplant |

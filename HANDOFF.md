@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-26 (15.655 closes every p=7 size-four boundary)
+**Date:** 2026-08-26 (15.656 closes every size-four boundary for odd p>=5)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -11,9 +11,30 @@ boundary is additionally closed for `p>=11`, and infinity plus three finite
 points is closed at `p=7`. The doubly saturated four-finite profiles at
 `p=7` are also closed for both signs, and 15.655 closes all 23,520
 unsaturated boundaries (518 orbits) per sign. Thus every `p=7` size-four
-case is closed. Every `p=5` size-four case and larger
-non-Walsh boundaries remain. p=13 orbits / mesh k=6 are not a close. cpu44
+case is closed. Proposition 15.656 closes all 1,202 floor-surviving `p=5`
+orbit/sign cases by complete-shell modular syndromes and sign transfer.
+Every size-four boundary is now closed for odd `p>=5`; boundary size at
+least six remains. p=13 orbits / mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.656 — every p=5 four-point boundary closed by full-shell syndromes
+
+`src/e1_gmin_m4_prop15656.py` and
+`evidence/NOTE_2026-08-26_p5_four_point_full_shell.md`. Each complete `p=5`
+eigenshell has 130 antipodal score rows, normalized edge-column sum 26, and
+total slack 78. Edge count, the distinguished edge, and all bad-edge counts
+give a `132 x 325` matrix of rank 67 over `F_5`, hence 65 exact left-null
+dependencies. Bounded lift systems exclude 712 direct orbit cases modulo
+five. The only timeout, no-infinity negative orbit 164 with representative
+`[2,3,12,13]`, is independently infeasible modulo seven. A signed
+nonsquare Paley anti-isometry transfers the 489 no-infinity negative orbits
+to the positive sign. A fresh structural audit reconstructs all four orbit
+sources, both shell ranks, every parity/lift mass, and the sign-transfer
+bijection. All 1,202 floor-surviving orbit/sign cases and 26,450
+boundary/sign cases are closed, with zero unknown. The archive is
+`/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-26-p5-four-point/`
+and has SHA256
+`d5db5e82389ebb0bfcb23e80da5e2322b1d65e74aa8f3804d25275793b7380da`.
 
 ## 15.655 — unsaturated p=7 four-finite profiles closed modulo seven
 
@@ -59,7 +80,8 @@ equations then reduce all 18,424 finite triples to 416 square-semilinear
 orbits. All 416 fixed-boundary models are infeasible; a fresh orbit
 reclassification and independent audit report zero missing, malformed,
 unknown, or feasible case. Four finite points at `p=7` are subsequently
-closed by 15.654--15.655; all `p=5` size-four cases remain open.
+closed by 15.654--15.655; all `p=5` size-four cases are subsequently closed
+by 15.656.
 
 ## 15.652 — every four-point boundary closed for p>=11
 
@@ -73,7 +95,7 @@ with the empty and two-point exclusions, the first open boundary size there
 is at least six. At `p=7`, 15.653 subsequently closes the
 infinity-present positive-product case as well. The unsaturated four-finite
 profiles are subsequently closed by 15.655. The exceptional `p=5`
-size-four shapes remain open.
+size-four shapes are subsequently closed by 15.656.
 
 ## 15.651 — positive two-point remainder closed for p=5,7,11,13
 

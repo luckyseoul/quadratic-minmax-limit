@@ -6103,3 +6103,96 @@ Evidence: src/e1_gmin_m4_prop15640.py,
 evidence/e1_gmin_m4_prop15640.json,
 evidence/NOTE_2026-08-25_scaled_norm_3p_minus_6_harmonic_saddle.md, and
 tests/test_prop15640.py.
+
+## Prop 15.656 (2026-08-26) — every p=5 four-point boundary is excluded
+
+For (p=5), let (H) be a putative 21-edge residual graph, containing the
+distinguished edge, whose odd-degree boundary (D) has size four. Fix an
+eigenshell sign (arepsilon). Quotienting the complete shell by
+(ysim-y) leaves 130 distinct edge-sign rows
+
+\[
+ f_y(ab)=\varepsilon y_a y_b C_{ab}\in\{\pm1\}.
+\]
+
+Every normalized edge column sums to 26. Writing each required score as
+
+\[
+ \sum_{e\in H} f_y(e)=3+2A(y),\qquad A(y)\ge0,
+\]
+
+and summing over the shell gives
+
+\[
+ \sum_y A(y)={21\cdot26-130\cdot3\over2}=78.       \tag{15.656.1}
+\]
+
+The boundary and Paley edge-product sign (c_H) prescribe
+
+\[
+ (-1)^{A(y)}=-\varepsilon c_H\prod_{v\in D}y_v.    \tag{15.656.2}
+\]
+
+Thus (A=P+2L), where (P\in\{0,1\}^{130}), (0\le L_y\le4), and
+
+\[
+ \sum_yL_y={78-|P|\over2}.                         \tag{15.656.3}
+\]
+
+The edge-count equation, distinguished-edge equation, and 130 equations
+for the number of bad edges form a common (132\times325) zero-one matrix
+(M_\varepsilon). Exact elimination gives
+
+\[
+ \operatorname{rank}_{\mathbb F_5}M_\varepsilon=67,
+ \qquad \dim\ker(M_\varepsilon^T)=65.              \tag{15.656.4}
+\]
+
+Substitution of the right sides (9-P_y-2L_y) into the 65 left-null
+relations yields a bounded congruence system in the lift variables. A
+complete square-semilinear orbit scan applies this necessary condition to
+all boundary profiles surviving Proposition 15.632. It excludes 712 direct
+orbit cases modulo five. The sole timeout has
+
+\[
+ c_H=-1,\quad D=\{2,3,12,13\},\quad |P|=56,
+ \quad\sum L=11.
+\]
+
+An independent reconstruction over (mathbb F_7) again has rank 67 and
+65 left dependencies, and its bounded lift system is exactly infeasible.
+Hence all 713 directly scanned orbit cases are excluded.
+
+It remains to transfer the negative no-infinity cases. If (alpha) is a
+nonsquare in (mathbb F_{25}), multiplication by (alpha), together with
+switching only infinity, defines a signed permutation satisfying
+
+\[
+ S C[\pi,\pi]S=-C.                                 \tag{15.656.5}
+\]
+
+It fixes the distinguished edge, exchanges eigenshells, and preserves
+normalized scores. Since (|H|=21) is odd and (D) omits infinity,
+(deg_H(\infty)) is even, so the Paley edge product changes sign. This is
+an exact bijection between the 489 negative and 489 positive no-infinity
+orbits, covering 10,925 boundaries on either side.
+
+The direct scans and transfer therefore exclude all 1,202
+floor-surviving orbit/sign cases, representing 26,450 boundary/sign cases.
+Proposition 15.632 excludes the other 3,450 cases. Consequently
+
+\[
+ \boxed{\text{every size-four residual boundary at }p=5\text{ is impossible}.}
+                                                               \tag{15.656.6}
+\]
+
+Together with Propositions 15.652--15.655, every size-four boundary is
+excluded for every odd prime (p\ge5). Boundary size at least six,
+residual (ii), R1, global QVAR, Type I, and the limit remain open.
+
+Evidence: src/e1_gmin_m4_prop15656.py,
+evidence/e1_gmin_m4_prop15656.json,
+evidence/NOTE_2026-08-26_p5_four_point_full_shell.md,
+scripts/p5_size_four_full_shell_mod5_batch.py,
+scripts/p5_size_four_full_shell_mod7_exception.py,
+scripts/p5_size_four_full_shell_audit.py, and tests/test_prop15656.py.
