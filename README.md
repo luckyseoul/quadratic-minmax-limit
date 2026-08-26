@@ -21,7 +21,7 @@ banned by test (`tests/test_main_chain_docs.py`).
 
 **Goal:** settle the limit (see **`LONG_HORIZON_GOAL.md`**). Not done until L is proved or disproved.
 
-**Main claim:** L = lim_n α_n is **OPEN** (2026-08-25).
+**Main claim:** L = lim_n α_n is **OPEN** (2026-08-26).
 
 Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 `four_e1_units_closed()` ledger is:
@@ -29,7 +29,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643 kills the positive-product infinity-plus-point branch for `p>=17`, but other non-Walsh profiles remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`, but other non-Walsh profiles remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -78,8 +78,7 @@ rigid, while the negative branch has at most three exceptional directions
 per quadratic type, uniformly in `p>=5`.
 Proposition 15.643 converts the positive-product rigidity into a complete
 branch exclusion for every odd `p>=17` using parallel-count divisibility and
-an exact inter-fibre `l1` budget. Its four smaller positive-product cases
-remain.
+an exact inter-fibre `l1` budget.
 For the negative-product branch, Proposition 15.644 uses the asymptotic
 slice-distance theorem to force one exceptional direction of each type and
 reduces every sufficiently large prime to a unique arithmetic profile.
@@ -99,7 +98,13 @@ only `p=5` in that branch. Proposition 15.650 finishes it: exact lift
 quantization leaves two type profiles and 24 arithmetic candidates, whose
 33 square-semilinear placement orbits are all finitely certified infeasible.
 The negative-product infinity-plus-point branch is therefore closed for
-every odd prime `p>=5`.
+every odd prime `p>=5`. Proposition 15.651 returns to the four finite
+positive-product primes. Exact additive coefficient equations close all
+seven `p=5` arithmetic cases; strengthened fibrewise `l1` profiles and a
+type-capacity argument close `p=11,13`; and a complete `p=7` exhaustion
+certifies 112 rigid star orbits plus three normalized all-one cases
+infeasible. Thus both product signs of the infinity-plus-point boundary are
+closed for every odd prime `p>=5`.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -118,10 +123,13 @@ graph TD
     MULTI --> BUDGET["affine parity budget<br/>Eulerian boundary <b>CLOSED</b> (15.632)"]
     BUDGET --> RIGID["infinity + point boundary<br/>rigid / at most 3 exceptions per type (15.642)"]
     RIGID --> POSKILL["c_H=+1 branch<br/><b>CLOSED for p>=17</b> (15.643)"]
+    POSKILL --> POSFINITE["finite c_H=+1 remainder<br/><b>CLOSED</b> (15.651)"]
     RIGID --> NEGKILL["c_H=-1 branch<br/><b>CLOSED for p>=17</b> (15.647)"]
     NEGKILL --> NEGFINITE["finite c_H=-1 remainder<br/>p=11,13 + four p=7 profiles <b>CLOSED</b> (15.648)"]
     NEGFINITE --> P7BAL["balanced p=7 profile<br/><b>CLOSED</b> (15.649)"]
     P7BAL --> P5NEG["negative two-point p=5<br/><b>CLOSED</b> (15.650)"]
+    POSFINITE --> TWOPT["infinity + point boundary<br/>both signs <b>CLOSED for p>=5</b>"]
+    P5NEG --> TWOPT
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -134,6 +142,8 @@ graph TD
     style BUDGET fill:#e6ffe6
     style P7BAL fill:#e6ffe6
     style P5NEG fill:#e6ffe6
+    style POSFINITE fill:#e6ffe6
+    style TWOPT fill:#e6ffe6
     style POSKILL fill:#e6ffe6
     style NEGKILL fill:#e6ffe6
     style NEGFINITE fill:#e6ffe6
@@ -235,14 +245,15 @@ square-direction affine-circle words.
 | 15.640 | circles through a point form an exact tight frame; the complete `3p-6` harmonic shell has one negative circle-kernel eigenvalue and two positive circle-image eigenvalues for every `p>=11` | the parity twist reverses these signs, but intervening and later shells remain uncontrolled |
 | 15.641 | at `p=11`, the justified modular shell/cusp constraints have rank 30 in the 66-dimensional Kohnen space; an exact 21-coordinate witness kills every known row and the second shell while giving target coefficient one | closes coefficient determination from the current linear modular data, not R1 or theta-positivity routes |
 | 15.642 | a nonzero nonnegative integer-valued quadratic lift has an exact stabilizer mass floor and slice-distance support floor; for `D={infinity,v}`, `c_H=+1` is pointwise baseline and `c_H=-1` has at most three exceptional directions per type | sharp rigidity/sparsity reduction, not exclusion of the boundary or residual (ii) |
-| 15.643 | additive inter-fibre matrices force parallel counts in multiples of `(p-1)/2`; their exact `l1` budget excludes `D={infinity,v}`, `c_H=+1` for every odd `p>=17` | positive-product cases `p=5,7,11,13` and other boundary profiles remain |
+| 15.643 | additive inter-fibre matrices force parallel counts in multiples of `(p-1)/2`; their exact `l1` budget excludes `D={infinity,v}`, `c_H=+1` for every odd `p>=17` | left `p=5,7,11,13`, subsequently closed by 15.651; other boundary profiles remain |
 | 15.644 | for all sufficiently large `p`, the negative-product infinity-plus-point branch has `2p-1` infinity edges, two parallel finite edges in every baseline direction, and exceptional counts `1,3` | asymptotic normal form; excluded by 15.646, but the threshold remains qualitative |
 | 15.645 | in each baseline direction of 15.644, the infinity-neighbor fibre profile is ideal or one-transfer; every larger integral deviation exceeds the transverse-edge `l1` budget | simultaneous two-line classification remains open but is bypassed by 15.646 |
 | 15.646 | summing the exact inter-fibre matrix forces every baseline transverse signed sum to vanish, but exceptional counts `(3,1)` or `(1,3)` force `+4` or `-4` in one baseline type | asymptotic exclusion; superseded by the all-prime `p>=17` result 15.647 |
 | 15.647 | same-type signed means quantize every lift excess in units of `p+1`, forcing one exception per type for all `p>=7`; baseline divisibility then excludes `c_H=-1`, `D={infinity,v}` for every odd `p>=17` | leaves `p=5,7,11,13` and other boundary profiles |
 | 15.648 | an exact `l1` bound closes both `p=13` profiles; symmetry-complete CP-SAT certificates close `p=11` and four unbalanced `p=7` profiles | leaves negative-product `p=5` and balanced `p=7 (x,y)=(3,3)` |
 | 15.649 | the exceptional mass-ten quadratic lifts on `J(7,4)` have exactly 1764 labelled vectors; an `l1` filter, square-semilinear orbit reduction, and exact fixed-star certificates exclude all 6076 balanced-profile orbit representatives | closes every negative-product two-point profile at `p=7`; leaves `p=5` and other boundary profiles |
-| 15.650 | mod-six lift quantization leaves two `p=5` type profiles and 24 arithmetic candidates; square-semilinear symmetry reduces them to 33 placement orbits, all exactly CP-SAT infeasible | closes the negative-product infinity-plus-point branch for every odd prime `p>=5`; positive-product finite cases and other boundaries remain |
+| 15.650 | mod-six lift quantization leaves two `p=5` type profiles and 24 arithmetic candidates; square-semilinear symmetry reduces them to 33 placement orbits, all exactly CP-SAT infeasible | closes the negative-product infinity-plus-point branch for every odd prime `p>=5`; positive finite cases are subsequently closed by 15.651 |
+| 15.651 | exact additive coefficients and fibrewise `l1` profiles close the finite positive-product cases; at `p=7`, 112 rigid star orbits and three normalized all-one cases are all finitely infeasible | closes the positive-product branch for every odd prime `p>=5`; with 15.650, the entire infinity-plus-point boundary is closed; other boundaries remain |
 
 These are general theorems for odd primes (with the stated `p=3` second-shell
 exception), including the standard Paley `(25,50)` adjacent-ETF case. They
@@ -284,10 +295,14 @@ Proposition 15.642 sharpens one minimal nonempty profile. If
 direction. If `c_H=-1`, the exact degree-two slice-distance bound implies
 that each quadratic type has at most three nonbaseline directions, uniformly
 for every `p>=5` (two at `p=7`). The repeated all-direction identities are
-still to be converted into a contradiction or a classified survivor.
+converted into complete branch exclusions by Propositions 15.647--15.651.
 For the positive edge-product branch, Proposition 15.643 completes that
 conversion for every odd `p>=17`: no populated parallel direction can meet
 the exact `l1` budget, and the all-infinity endpoint has the wrong boundary.
+Proposition 15.651 closes `p=5,7,11,13` by exact coefficient models,
+fibrewise `l1` rigidity, type capacity, and symmetry-complete finite
+certificates. Both product signs of this boundary are now closed for every
+odd `p>=5`; other nonempty boundary shapes remain open.
 
 ### Route kills — do not re-tread
 
@@ -367,6 +382,7 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15648.py` | Exact/finitely certified negative two-point exclusions at `p=7,11,13` |
 | `src/e1_gmin_m4_prop15649.py` | Complete exceptional-lift classification and finite exclusion of balanced `p=7` negative two-point profile |
 | `src/e1_gmin_m4_prop15650.py` | Complete `p=5` finite exclusion and all-prime closure of the negative-product infinity-plus-point branch |
+| `src/e1_gmin_m4_prop15651.py` | Complete finite positive-product exclusion and closure of both infinity-plus-point product signs for all `p>=5` |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |
@@ -382,6 +398,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-25_p11_modular_independence.md` | Exact rank/nullspace certificate closing the current modular coefficient-determination route |
 | `evidence/NOTE_2026-08-25_quadratic_lift_mass.md` | Stabilizer moment certificate, exact slice-distance reinforcement, and uniform three-exception reduction |
 | `evidence/NOTE_2026-08-25_positive_product_boundary_exclusion.md` | Parallel-count divisibility and exact `l1` proof of the `p>=17` branch exclusion |
+| `evidence/NOTE_2026-08-26_complete_positive_two_point.md` | Exact coefficient, type-capacity, star-orbit, and finite-certificate closure of the four small positive cases |
 | `evidence/NOTE_2026-08-25_negative_product_asymptotic_normal_form.md` | Slice-distance, mean, divisibility, and boundary proof of the unique large-prime negative profile |
 | `evidence/NOTE_2026-08-25_baseline_fibre_profiles.md` | Integral `l1` proof that every baseline fibre profile is ideal or one-transfer |
 | `evidence/NOTE_2026-08-25_pbss_cross_audit.md` | Perry--Beurling cross-audit and the viable multi-Gaussian R1 transplant |

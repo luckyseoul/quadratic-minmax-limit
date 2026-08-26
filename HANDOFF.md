@@ -1,12 +1,36 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-25 (15.648 finite negative two-point exclusions)
+**Date:** 2026-08-26 (15.651 closes both signs of infinity-plus-point)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
-wiring. p=13 orbits / mesh k=6 are not a close. cpu44 stays hard-closed.
+wiring. The full infinity-plus-point boundary is closed, but other non-Walsh
+boundary shapes remain. p=13 orbits / mesh k=6 are not a close. cpu44 stays
+hard-closed.
+
+## 15.651 — positive two-point remainder closed for p=5,7,11,13
+
+`src/e1_gmin_m4_prop15651.py` and
+`evidence/NOTE_2026-08-26_complete_positive_two_point.md`. Exact additive
+coefficient equations and fibrewise `l1` profiles close all seven `p=5`
+arithmetic cases and the nonzero-`k0` finite cases. At `k0=0`, one empty
+direction forces a uniform finite-edge type, excluding `p=11,13` by type
+capacity. At `p=7`, the remaining type split has 2250 five-stars and 56
+square-semilinear orbits per populated type; all 112 exact fixed-star models
+are infeasible. The alternative all-eight-`kd=1` profile has three exhaustive
+normalizations, also all infeasible. With 15.643 this closes `c_H=+1` for
+every odd `p>=5`; with 15.650, both product signs of `D={infinity,v}` are
+closed. Other boundary shapes, residual (ii), R1, and L remain open.
+
+## 15.649--15.650 — negative two-point remainder completely closed
+
+Proposition 15.649 classifies all 1764 balanced `p=7` exceptional lifts and
+certifies all 6076 star-orbit representatives infeasible. Proposition 15.650
+then reduces `p=5` to 24 arithmetic profiles and 33 placement orbits, all
+infeasible. Together with 15.647--15.648, `c_H=-1`,
+`D={infinity,v}` is closed for every odd `p>=5`.
 
 ## 15.648 — negative two-point remainder reduced to p=5 and one p=7 profile
 
@@ -97,8 +121,8 @@ The directional `l1` budget gives
 `abs(k0+p*kd-8)<=8-k0-kd`; a populated direction would satisfy
 `2*k0+(p+1)*kd<=16`, impossible for `p>=17`. The remaining all-infinity
 star has boundary size `4p+2`, not two. Thus this branch is empty for every
-odd `p>=17`. Small positive-product cases, negative-product primes below the
-qualitative 15.644 threshold, and other profiles remain open.
+odd `p>=17`. At the time this left four small positive-product cases; they
+are now closed by 15.651. Other boundary profiles remain open.
 
 ## 15.642 — nonzero quadratic mass; two-vertex boundary rigidity
 

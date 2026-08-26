@@ -1,4 +1,23 @@
-# Status (2026-08-25)
+# Status (2026-08-26)
+
+**15.651 PROVED/certified the complete positive-product
+infinity-plus-point exclusion, not residual (ii)**: exact additive
+coefficient equations close all seven `p=5` arithmetic cases. Fibrewise
+`l1` profiles and a uniform-edge-type capacity argument close `p=11,13`.
+At `p=7`, the rigid type split has 2250 surviving five-stars and 56
+square-semilinear orbits per populated type; all 112 fixed-star models are
+infeasible. The alternative all-eight-`kd=1` profile has three exhaustive
+normalizations, also infeasible. With 15.643, `c_H=+1` is closed for every
+odd `p>=5`; with 15.650, both signs of `D={infinity,v}` are closed. Other
+boundary shapes, residual (ii), Type I, R1, global QVAR, and L remain OPEN.
+
+**15.649--15.650 PROVED/certified the complete negative-product
+infinity-plus-point exclusion, not residual (ii)**: 15.649 classifies all
+1764 balanced `p=7` exceptional lifts and excludes all 6076 star-orbit
+representatives. 15.650 reduces `p=5` to 24 arithmetic profiles and 33
+placement orbits, all infeasible. Together with 15.647--15.648, `c_H=-1`
+is closed for every odd `p>=5`. Other boundary shapes and all top-level
+gates remain open.
 
 **15.648 PROVED/certified the `p=11,13` negative two-point cases and four
 `p=7` profiles, not residual (ii)**: at `p=13`, a zero-baseline direction
