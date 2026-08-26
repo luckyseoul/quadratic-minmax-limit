@@ -1,0 +1,51 @@
+{
+  "prop": "15.654",
+  "title": "p=7 saturated four-finite boundary exclusion",
+  "proved": true,
+  "theorem": {
+    "proved": true,
+    "p7_four_finite_doubly_saturated_both_product_signs": "CLOSED",
+    "certificate": {
+      "surviving_boundaries_per_product_sign": 82320,
+      "surviving_orbits_per_product_sign": 1743,
+      "saturated_boundaries_per_product_sign": 58800,
+      "saturated_orbits_per_product_sign": 1225,
+      "remaining_unsaturated_boundaries_per_product_sign": 23520,
+      "remaining_unsaturated_orbits_per_product_sign": 518,
+      "phase_zero_b4_slacks": 1,
+      "phase_one_b4_slacks": 36,
+      "coefficient_equalities_per_orbit": 176,
+      "fixed_boundary_infeasible": 1225,
+      "unknown": 0,
+      "feasible": 0,
+      "fresh_boundary_and_orbit_reclassification_matches": true,
+      "independent_audit": true
+    },
+    "nonsquare_anti_isometry": {
+      "nonsquare_multiplier": 8,
+      "fixes_infinity": true,
+      "fixes_finite_zero": true,
+      "fixes_distinguished_edge": true,
+      "signed_conference_anti_isometry": true
+    },
+    "sign_transfer": {
+      "edge_count_29_is_odd": true,
+      "four_finite_boundary_forces_even_infinity_degree": true,
+      "paley_product_sign_flips": true,
+      "eigenshell_sign_swaps": true,
+      "raw_affine_score_sign_flips": true,
+      "normalized_eigensign_times_score_is_preserved": true
+    },
+    "p7_four_finite_unsaturated": "OPEN",
+    "p7_all_four_finite_points": "OPEN",
+    "p5_size_four": "OPEN",
+    "closes_all_p7_size_four": false,
+    "closes_residual_ii": false,
+    "closes_R1": false,
+    "L_status": "OPEN"
+  },
+  "certificate_archive": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-26-p7-four-point/p7_no_infinity_saturated_certificate_2026-08-26.tar.gz",
+  "certificate_archive_sha256": "5234f60d246c50dcdb7f5feb51b23185e8eecbffac431f04c279c1cc02153612",
+  "certificate_audit_sha256": "4d8fbbba46a0f7b19fc2f2241e4a710bf81fc581b5acb893f834ee65c1f547ea",
+  "orbit_source_sha256": "7f7d3cc26077bb40ac096b638c6fc20ddf1a8fe6ddee60641f2fb568bacfd077"
+}

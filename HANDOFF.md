@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-26 (15.653 closes p=7 infinity plus three points)
+**Date:** 2026-08-26 (15.654 closes saturated p=7 four-finite profiles)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -8,9 +8,26 @@
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. The full infinity-plus-point boundary is closed. Every four-point
 boundary is additionally closed for `p>=11`, and infinity plus three finite
-points is closed at `p=7`. Four finite points at `p=7`, every `p=5`
-size-four case, and larger non-Walsh boundaries remain. p=13 orbits / mesh
-k=6 are not a close. cpu44 stays hard-closed.
+points is closed at `p=7`. The doubly saturated four-finite profiles at
+`p=7` are also closed for both signs; 23,520 unsaturated boundaries (518
+orbits) per sign remain there. Every `p=5` size-four case and larger
+non-Walsh boundaries remain. p=13 orbits / mesh k=6 are not a close. cpu44
+stays hard-closed.
+
+## 15.654 — saturated p=7 four-finite profiles closed
+
+`src/e1_gmin_m4_prop15654.py` and
+`evidence/NOTE_2026-08-26_p7_four_finite_saturated_exclusion.md`. Exact
+Johnson evaluation gives one phase-zero and 36 phase-one saturated `b=4`
+slacks. Of 82,320 boundary-only survivors per sign, exactly 58,800 have
+both type costs equal to 32; they form 1,225 square-semilinear orbits. All
+1,225 exact fixed-boundary coefficient models are infeasible. Multiplication
+by a nonsquare, with switching at infinity, is an exact Paley anti-isometry
+that fixes the distinguished edge, swaps eigenshells, preserves normalized
+scores, and flips the product sign, so the sweep covers both signs. An
+independent re-enumeration/audit passes every coverage and model-scope
+check. The remaining 23,520 unsaturated boundaries (518 orbits) per sign
+are open.
 
 ## 15.653 — p=7 infinity plus three finite points closed
 
@@ -35,9 +52,9 @@ quadrature proves the small-fibre floor table `(0,2p)`, `(p+1,p-1)`, and
 infinity plus three finite points has only three. Those counts contradict
 the separate direction-type budgets for every odd prime `p>=11`. Combined
 with the empty and two-point exclusions, the first open boundary size there
-is at least six. At `p=7`, the infinity-present negative-product case is
-also closed, while the positive-product case and the other exceptional
-`p=5,7` size-four shapes remain open.
+is at least six. At `p=7`, 15.653 subsequently closes the
+infinity-present positive-product case as well. The unsaturated four-finite
+profiles and the other exceptional `p=5` size-four shapes remain open.
 
 ## 15.651 — positive two-point remainder closed for p=5,7,11,13
 

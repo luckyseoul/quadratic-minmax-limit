@@ -1,5 +1,18 @@
 # Status (2026-08-26)
 
+**15.654 PROVED/certified the doubly saturated `p=7` four-finite
+exclusion, not every four-finite boundary**: complete Johnson-space
+classification leaves one phase-zero and 36 phase-one saturated `b=4`
+slacks. Exactly 58,800 boundaries per product sign have both type costs 32;
+they form 1,225 square-semilinear orbits, whose exact coefficient models are
+all infeasible with zero unknown and zero feasible case. A signed nonsquare
+Paley anti-isometry fixes the distinguished edge, exchanges eigenshells,
+preserves normalized scores, and flips the product sign, so one orbit sweep
+covers both signs. The remaining `p=7` four-finite branch has 23,520
+unsaturated boundaries (518 orbits) per sign. Those, every `p=5` size-four
+shape, larger boundaries, residual (ii), Type I, R1, global QVAR, and L
+remain OPEN.
+
 **15.653 PROVED/certified the `p=7` infinity-plus-three-finite exclusion,
 not all size-four boundaries**: 15.652 already closes `c_H=-1`. For
 `c_H=+1`, every direction saturates its type budget. An exact rank-21
