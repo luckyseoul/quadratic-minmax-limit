@@ -37,6 +37,13 @@ def test_solution_does_not_assert_limit_theorem():
     assert "blocked**\nby residual **(i)** only" not in readme
     assert "L=\\lim_n\\alpha_n$ is **OPEN**" in readme or "is **OPEN**" in readme
 
+    long_goal = (
+        Path(__file__).resolve().parents[1] / "LONG_HORIZON_GOAL.md"
+    ).read_text(encoding="utf-8", errors="replace")
+    assert "Residual **(ii)** is **CLOSED**" not in long_goal
+    assert "**Residual (ii), even \\(k\\ge4p\\):** OPEN" in long_goal
+    assert "residual (i) is the only leftover" in long_goal
+
 
 def test_soft_close_detector_flags_bare_L_CLOSED():
     """Unit-level: detector pattern must catch bare '**L CLOSED.**' style."""

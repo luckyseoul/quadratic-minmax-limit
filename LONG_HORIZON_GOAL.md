@@ -30,13 +30,30 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
 - 15.167 majorization algebra: bi-tight empty **if** \(\lambda_{\min}(\Phi)\ge6\). The floor is **not** proved (\(G_{u,\mathrm{disj}}\) is not a Gram).
 - Exact Paley optimality is **false** (\(m_{10}=13<15\)). E(1) is asymptotic.
 
-Therefore the remaining theorem is **E(1)** on \(n=p^2+1\). Residual **(ii)** is **CLOSED** (affine 15.179 + (ii-b) 15.236 + (ii-a) 15.237). \(\nu=0\) on every \(|\kappa|=1\) four-set is **proved** (15.268), so \(m_4^+=m_4^-=\mu=\mu_{\mathrm{part}}+2\delta_+\) there. The only leftover:
+Therefore the remaining theorem is **E(1)** on \(n=p^2+1\). The live
+acceptance gate is the four-unit dictionary returned by
+`src/e1_main_chain_status.py`; as of 2026-08-26 it reads:
 
-1. Residual **(i)** — Type I freeness-fail \(k=3p-2\): control the **even** \(\delta\in E_{\pm4p}\) so \(|\mu_4|\le 1/(2p)\) on every \(|\kappa|=1\) four-set (or envelope / reflection / \(\|m_4\|_2^2\le n(n-2)/4\) / \(K_4\le\mathrm{Wick}_{hi}\) / \(\ker=\mathrm{sc}\) + free-\(e\), or Gsum\(\ge-1/p\), dual-eq empty). Particular majorant is already under the threshold. Local 4–5 point Grams only give \(|\mu|\le1-2/p\) (dead).
+1. **Spectral floor:** OPEN. The current route requires both global mixed-
+   \(k\) QVAR and principal R1.
+2. **Residual (ii), even \(k\ge4p\):** OPEN. The Walsh slice, Eulerian
+   boundary, every two-point boundary, and every four-point boundary are
+   closed; non-Walsh boundaries of size at least six remain.
+3. **Type I, multi-level Max−:** OPEN. The general \(3A+B>0\) estimate is
+   not proved.
+4. **Lemma D:** TRUE.
+
+The older statement that residual (ii) was closed by 15.179/15.236/15.237
+covered an earlier, narrower split and is not the live multi-level predicate.
+Likewise, “residual (i) is the only leftover” is retired shorthand. The
+authoritative functions are `residual_ii_k_ge_4p_ND_closed()`,
+`type_I_multilevel_bad_case_ND_closed()`, and
+`phi_F_ge_6_proved_general()`.
 
 Path-C / 16N / 15.193 exhaustiveness is **not** required.
 
-Closing residual (i) is **necessary progress**. It is **not** goal completion. Goal completion is a terminal state in the table above.
+Closing any one open unit is **necessary progress**. It is **not** goal
+completion. Goal completion is a terminal state in the table above.
 
 ## Forbidden translations (these are the small-failure mode)
 
@@ -56,8 +73,10 @@ If a proof attempt fails, **stop**. Record the failed mechanism in one paragraph
 
 A session may end only if one of these happened:
 
-- Residual (i) **actually closed** (predicate True via real import), or
-- Residual (i) was **killed as a path** by a general counter-mechanism (not a small-\(p\) census), and the writeup names the replacement leftover, or
+- one of the three open E(1) units **actually closed** (predicate True via a
+  real import), or
+- a live route was **killed as a path** by a general counter-mechanism (not a
+  small-\(p\) census), and the writeup names the replacement route, or
 - A terminal state in the table was reached, or
 - The human redirected the goal.
 
