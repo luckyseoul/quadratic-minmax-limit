@@ -29,7 +29,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`, but other non-Walsh profiles remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652 kills every four-point boundary for `p>=11`, but larger and exceptional-prime profiles remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -104,7 +104,12 @@ seven `p=5` arithmetic cases; strengthened fibrewise `l1` profiles and a
 type-capacity argument close `p=11,13`; and a complete `p=7` exhaustion
 certifies 112 rigid star orbits plus three normalized all-one cases
 infeasible. Thus both product signs of the infinity-plus-point boundary are
-closed for every odd prime `p>=5`.
+closed for every odd prime `p>=5`. Proposition 15.652 then evaluates the
+exact parity floors for zero through four odd fibres by positive
+degree-two quadrature. Four finite boundary points have only six
+pair-directions, and infinity plus three finite points has only three;
+the type-split budget therefore excludes every four-point boundary for all
+odd primes `p>=11`. The first open boundary size there is at least six.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -130,6 +135,7 @@ graph TD
     P7BAL --> P5NEG["negative two-point p=5<br/><b>CLOSED</b> (15.650)"]
     POSFINITE --> TWOPT["infinity + point boundary<br/>both signs <b>CLOSED for p>=5</b>"]
     P5NEG --> TWOPT
+    BUDGET --> FOUR["every four-point boundary<br/><b>CLOSED for p>=11</b> (15.652)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -143,6 +149,7 @@ graph TD
     style P7BAL fill:#e6ffe6
     style P5NEG fill:#e6ffe6
     style POSFINITE fill:#e6ffe6
+    style FOUR fill:#e6ffe6
     style TWOPT fill:#e6ffe6
     style POSKILL fill:#e6ffe6
     style NEGKILL fill:#e6ffe6
@@ -254,6 +261,7 @@ square-direction affine-circle words.
 | 15.649 | the exceptional mass-ten quadratic lifts on `J(7,4)` have exactly 1764 labelled vectors; an `l1` filter, square-semilinear orbit reduction, and exact fixed-star certificates exclude all 6076 balanced-profile orbit representatives | closes every negative-product two-point profile at `p=7`; leaves `p=5` and other boundary profiles |
 | 15.650 | mod-six lift quantization leaves two `p=5` type profiles and 24 arithmetic candidates; square-semilinear symmetry reduces them to 33 placement orbits, all exactly CP-SAT infeasible | closes the negative-product infinity-plus-point branch for every odd prime `p>=5`; positive finite cases are subsequently closed by 15.651 |
 | 15.651 | exact additive coefficients and fibrewise `l1` profiles close the finite positive-product cases; at `p=7`, 112 rigid star orbits and three normalized all-one cases are all finitely infeasible | closes the positive-product branch for every odd prime `p>=5`; with 15.650, the entire infinity-plus-point boundary is closed; other boundaries remain |
+| 15.652 | exact positive quadrature gives all parity floors for at most four odd fibres; six pair-directions for four finite points and three for infinity plus three points contradict the split type budget | closes every four-point boundary for every odd prime `p>=11`; `p=5,7`, size at least six, residual (ii), and R1 remain open |
 
 These are general theorems for odd primes (with the stated `p=3` second-shell
 exception), including the standard Paley `(25,50)` adjacent-ETF case. They
@@ -302,7 +310,12 @@ the exact `l1` budget, and the all-infinity endpoint has the wrong boundary.
 Proposition 15.651 closes `p=5,7,11,13` by exact coefficient models,
 fibrewise `l1` rigidity, type capacity, and symmetry-complete finite
 certificates. Both product signs of this boundary are now closed for every
-odd `p>=5`; other nonempty boundary shapes remain open.
+odd `p>=5`. Proposition 15.652 next closes every boundary of size four for
+odd `p>=11`: four finite points supply only six pair-collision directions,
+and infinity plus three finite points supply only three, too few to meet the
+exact type-split parity budget. Thus the first open boundary size is at
+least six for `p>=11`; exceptional `p=5,7` size-four cases and larger
+nonempty boundary shapes remain open.
 
 ### Route kills — do not re-tread
 

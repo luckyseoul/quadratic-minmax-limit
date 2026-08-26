@@ -1,0 +1,782 @@
+{
+  "prop": "15.652",
+  "title": "Four-point residual boundary exclusion for p>=11",
+  "proved": true,
+  "theorem": {
+    "proved": true,
+    "exact_floor_formulas_all_odd_p_at_least_7": true,
+    "four_point_boundary_all_odd_primes_p_at_least_11": "CLOSED",
+    "infinity_plus_three_finite_c_H_minus_all_odd_p_at_least_7": "CLOSED",
+    "first_open_boundary_size_for_p_at_least_11": 6,
+    "depends_on_empty_boundary_prop": "15.632",
+    "depends_on_two_point_boundary_props": "15.650--15.651",
+    "p5_size_four": "OPEN",
+    "p7_size_four": "OPEN (the infinity-present c_H=-1 subbranch alone is closed)",
+    "closes_larger_boundary_shapes": false,
+    "closes_residual_ii": false,
+    "closes_R1": false,
+    "L_status": "OPEN"
+  },
+  "floor_certificates": {
+    "7": {
+      "b=0,phase=0": {
+        "p": 7,
+        "b": 0,
+        "phase": 0,
+        "coefficients": [
+          "0",
+          "0",
+          "0"
+        ],
+        "quadrature_nodes": [
+          0
+        ],
+        "quadrature_weights": [
+          "1"
+        ],
+        "expectation": "0",
+        "scaled_floor": 0,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=0,phase=1": {
+        "p": 7,
+        "b": 0,
+        "phase": 1,
+        "coefficients": [
+          "0",
+          "0",
+          "1"
+        ],
+        "quadrature_nodes": [
+          0
+        ],
+        "quadrature_weights": [
+          "1"
+        ],
+        "expectation": "1",
+        "scaled_floor": 14,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=1,phase=0": {
+        "p": 7,
+        "b": 1,
+        "phase": 0,
+        "coefficients": [
+          "0",
+          "1",
+          "0"
+        ],
+        "quadrature_nodes": [
+          0,
+          1
+        ],
+        "quadrature_weights": [
+          "3/7",
+          "4/7"
+        ],
+        "expectation": "4/7",
+        "scaled_floor": 8,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=1,phase=1": {
+        "p": 7,
+        "b": 1,
+        "phase": 1,
+        "coefficients": [
+          "0",
+          "-1",
+          "1"
+        ],
+        "quadrature_nodes": [
+          0,
+          1
+        ],
+        "quadrature_weights": [
+          "3/7",
+          "4/7"
+        ],
+        "expectation": "3/7",
+        "scaled_floor": 6,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=2,phase=0": {
+        "p": 7,
+        "b": 2,
+        "phase": 0,
+        "coefficients": [
+          "-1",
+          "2",
+          "0"
+        ],
+        "quadrature_nodes": [
+          0,
+          1,
+          2
+        ],
+        "quadrature_weights": [
+          "1/7",
+          "4/7",
+          "2/7"
+        ],
+        "expectation": "4/7",
+        "scaled_floor": 8,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=2,phase=1": {
+        "p": 7,
+        "b": 2,
+        "phase": 1,
+        "coefficients": [
+          "1",
+          "-2",
+          "1"
+        ],
+        "quadrature_nodes": [
+          0,
+          1,
+          2
+        ],
+        "quadrature_weights": [
+          "1/7",
+          "4/7",
+          "2/7"
+        ],
+        "expectation": "3/7",
+        "scaled_floor": 6,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=3,phase=0": {
+        "p": 7,
+        "b": 3,
+        "phase": 0,
+        "coefficients": [
+          "1",
+          "-4",
+          "4"
+        ],
+        "quadrature_nodes": [
+          1,
+          2,
+          3
+        ],
+        "quadrature_weights": [
+          "3/7",
+          "3/7",
+          "1/7"
+        ],
+        "expectation": "4/7",
+        "scaled_floor": 8,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=3,phase=1": {
+        "p": 7,
+        "b": 3,
+        "phase": 1,
+        "coefficients": [
+          "1",
+          "-2",
+          "1"
+        ],
+        "quadrature_nodes": [
+          0,
+          1,
+          2
+        ],
+        "quadrature_weights": [
+          "1/7",
+          "0",
+          "6/7"
+        ],
+        "expectation": "1",
+        "scaled_floor": 14,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=4,phase=0": {
+        "p": 7,
+        "b": 4,
+        "phase": 0,
+        "coefficients": [
+          "1",
+          "-4",
+          "4"
+        ],
+        "quadrature_nodes": [
+          1,
+          2,
+          3
+        ],
+        "quadrature_weights": [
+          "1/7",
+          "3/7",
+          "3/7"
+        ],
+        "expectation": "4/7",
+        "scaled_floor": 8,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=4,phase=1": {
+        "p": 7,
+        "b": 4,
+        "phase": 1,
+        "coefficients": [
+          "0",
+          "0",
+          "1"
+        ],
+        "quadrature_nodes": [
+          0,
+          2,
+          4
+        ],
+        "quadrature_weights": [
+          "0",
+          "6/7",
+          "1/7"
+        ],
+        "expectation": "1",
+        "scaled_floor": 14,
+        "exact_positive_quadrature_certificate": true
+      }
+    },
+    "11": {
+      "b=0,phase=0": {
+        "p": 11,
+        "b": 0,
+        "phase": 0,
+        "coefficients": [
+          "0",
+          "0",
+          "0"
+        ],
+        "quadrature_nodes": [
+          0
+        ],
+        "quadrature_weights": [
+          "1"
+        ],
+        "expectation": "0",
+        "scaled_floor": 0,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=0,phase=1": {
+        "p": 11,
+        "b": 0,
+        "phase": 1,
+        "coefficients": [
+          "0",
+          "0",
+          "1"
+        ],
+        "quadrature_nodes": [
+          0
+        ],
+        "quadrature_weights": [
+          "1"
+        ],
+        "expectation": "1",
+        "scaled_floor": 22,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=1,phase=0": {
+        "p": 11,
+        "b": 1,
+        "phase": 0,
+        "coefficients": [
+          "0",
+          "1",
+          "0"
+        ],
+        "quadrature_nodes": [
+          0,
+          1
+        ],
+        "quadrature_weights": [
+          "5/11",
+          "6/11"
+        ],
+        "expectation": "6/11",
+        "scaled_floor": 12,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=1,phase=1": {
+        "p": 11,
+        "b": 1,
+        "phase": 1,
+        "coefficients": [
+          "0",
+          "-1",
+          "1"
+        ],
+        "quadrature_nodes": [
+          0,
+          1
+        ],
+        "quadrature_weights": [
+          "5/11",
+          "6/11"
+        ],
+        "expectation": "5/11",
+        "scaled_floor": 10,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=2,phase=0": {
+        "p": 11,
+        "b": 2,
+        "phase": 0,
+        "coefficients": [
+          "-1",
+          "2",
+          "0"
+        ],
+        "quadrature_nodes": [
+          0,
+          1,
+          2
+        ],
+        "quadrature_weights": [
+          "2/11",
+          "6/11",
+          "3/11"
+        ],
+        "expectation": "6/11",
+        "scaled_floor": 12,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=2,phase=1": {
+        "p": 11,
+        "b": 2,
+        "phase": 1,
+        "coefficients": [
+          "1",
+          "-2",
+          "1"
+        ],
+        "quadrature_nodes": [
+          0,
+          1,
+          2
+        ],
+        "quadrature_weights": [
+          "2/11",
+          "6/11",
+          "3/11"
+        ],
+        "expectation": "5/11",
+        "scaled_floor": 10,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=3,phase=0": {
+        "p": 11,
+        "b": 3,
+        "phase": 0,
+        "coefficients": [
+          "1",
+          "-4",
+          "4"
+        ],
+        "quadrature_nodes": [
+          1,
+          2,
+          3
+        ],
+        "quadrature_weights": [
+          "6/11",
+          "3/11",
+          "2/11"
+        ],
+        "expectation": "8/11",
+        "scaled_floor": 16,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=3,phase=1": {
+        "p": 11,
+        "b": 3,
+        "phase": 1,
+        "coefficients": [
+          "1",
+          "-2",
+          "1"
+        ],
+        "quadrature_nodes": [
+          0,
+          1,
+          2
+        ],
+        "quadrature_weights": [
+          "2/11",
+          "0",
+          "9/11"
+        ],
+        "expectation": "1",
+        "scaled_floor": 22,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=4,phase=0": {
+        "p": 11,
+        "b": 4,
+        "phase": 0,
+        "coefficients": [
+          "1",
+          "-4",
+          "4"
+        ],
+        "quadrature_nodes": [
+          1,
+          2,
+          3
+        ],
+        "quadrature_weights": [
+          "3/11",
+          "3/11",
+          "5/11"
+        ],
+        "expectation": "8/11",
+        "scaled_floor": 16,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=4,phase=1": {
+        "p": 11,
+        "b": 4,
+        "phase": 1,
+        "coefficients": [
+          "0",
+          "0",
+          "1"
+        ],
+        "quadrature_nodes": [
+          0,
+          2,
+          4
+        ],
+        "quadrature_weights": [
+          "1/22",
+          "9/11",
+          "3/22"
+        ],
+        "expectation": "1",
+        "scaled_floor": 22,
+        "exact_positive_quadrature_certificate": true
+      }
+    },
+    "13": {
+      "b=0,phase=0": {
+        "p": 13,
+        "b": 0,
+        "phase": 0,
+        "coefficients": [
+          "0",
+          "0",
+          "0"
+        ],
+        "quadrature_nodes": [
+          0
+        ],
+        "quadrature_weights": [
+          "1"
+        ],
+        "expectation": "0",
+        "scaled_floor": 0,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=0,phase=1": {
+        "p": 13,
+        "b": 0,
+        "phase": 1,
+        "coefficients": [
+          "0",
+          "0",
+          "1"
+        ],
+        "quadrature_nodes": [
+          0
+        ],
+        "quadrature_weights": [
+          "1"
+        ],
+        "expectation": "1",
+        "scaled_floor": 26,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=1,phase=0": {
+        "p": 13,
+        "b": 1,
+        "phase": 0,
+        "coefficients": [
+          "0",
+          "1",
+          "0"
+        ],
+        "quadrature_nodes": [
+          0,
+          1
+        ],
+        "quadrature_weights": [
+          "6/13",
+          "7/13"
+        ],
+        "expectation": "7/13",
+        "scaled_floor": 14,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=1,phase=1": {
+        "p": 13,
+        "b": 1,
+        "phase": 1,
+        "coefficients": [
+          "0",
+          "-1",
+          "1"
+        ],
+        "quadrature_nodes": [
+          0,
+          1
+        ],
+        "quadrature_weights": [
+          "6/13",
+          "7/13"
+        ],
+        "expectation": "6/13",
+        "scaled_floor": 12,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=2,phase=0": {
+        "p": 13,
+        "b": 2,
+        "phase": 0,
+        "coefficients": [
+          "-1",
+          "2",
+          "0"
+        ],
+        "quadrature_nodes": [
+          0,
+          1,
+          2
+        ],
+        "quadrature_weights": [
+          "5/26",
+          "7/13",
+          "7/26"
+        ],
+        "expectation": "7/13",
+        "scaled_floor": 14,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=2,phase=1": {
+        "p": 13,
+        "b": 2,
+        "phase": 1,
+        "coefficients": [
+          "1",
+          "-2",
+          "1"
+        ],
+        "quadrature_nodes": [
+          0,
+          1,
+          2
+        ],
+        "quadrature_weights": [
+          "5/26",
+          "7/13",
+          "7/26"
+        ],
+        "expectation": "6/13",
+        "scaled_floor": 12,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=3,phase=0": {
+        "p": 13,
+        "b": 3,
+        "phase": 0,
+        "coefficients": [
+          "1",
+          "-4",
+          "4"
+        ],
+        "quadrature_nodes": [
+          1,
+          2,
+          3
+        ],
+        "quadrature_weights": [
+          "15/26",
+          "3/13",
+          "5/26"
+        ],
+        "expectation": "10/13",
+        "scaled_floor": 20,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=3,phase=1": {
+        "p": 13,
+        "b": 3,
+        "phase": 1,
+        "coefficients": [
+          "1",
+          "-2",
+          "1"
+        ],
+        "quadrature_nodes": [
+          0,
+          1,
+          2
+        ],
+        "quadrature_weights": [
+          "5/26",
+          "0",
+          "21/26"
+        ],
+        "expectation": "1",
+        "scaled_floor": 26,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=4,phase=0": {
+        "p": 13,
+        "b": 4,
+        "phase": 0,
+        "coefficients": [
+          "1",
+          "-4",
+          "4"
+        ],
+        "quadrature_nodes": [
+          1,
+          2,
+          3
+        ],
+        "quadrature_weights": [
+          "4/13",
+          "3/13",
+          "6/13"
+        ],
+        "expectation": "10/13",
+        "scaled_floor": 20,
+        "exact_positive_quadrature_certificate": true
+      },
+      "b=4,phase=1": {
+        "p": 13,
+        "b": 4,
+        "phase": 1,
+        "coefficients": [
+          "0",
+          "0",
+          "1"
+        ],
+        "quadrature_nodes": [
+          0,
+          2,
+          4
+        ],
+        "quadrature_weights": [
+          "3/52",
+          "21/26",
+          "7/52"
+        ],
+        "expectation": "1",
+        "scaled_floor": 26,
+        "exact_positive_quadrature_certificate": true
+      }
+    }
+  },
+  "no_infinity_cases": {
+    "11": {
+      "p": 11,
+      "infinity_in_boundary": false,
+      "total_pair_collisions": 6,
+      "required_bad_type_b2_directions": 5,
+      "reason": "at_most_one_good_collision_then_good_type_exceeds_budget",
+      "contradiction_gap": 20,
+      "excluded": true
+    },
+    "13": {
+      "p": 13,
+      "infinity_in_boundary": false,
+      "total_pair_collisions": 6,
+      "required_bad_type_b2_directions": 6,
+      "reason": "all_pairs_consumed_then_good_type_exceeds_budget",
+      "contradiction_gap": 42,
+      "excluded": true
+    },
+    "17": {
+      "p": 17,
+      "infinity_in_boundary": false,
+      "total_pair_collisions": 6,
+      "required_bad_type_b2_directions": 8,
+      "reason": "required_b2_directions_exceed_six_pair_directions",
+      "contradiction_gap": 2,
+      "excluded": true
+    }
+  },
+  "with_infinity_cases": {
+    "p=7,c_H=-1": {
+      "p": 7,
+      "c_H": -1,
+      "phase": 1,
+      "total_pair_collisions": 3,
+      "required_b1_directions": 6,
+      "actual_b1_upper_bound": 3,
+      "contradiction_gap": 3,
+      "excluded": true
+    },
+    "p=7,c_H=1": {
+      "p": 7,
+      "c_H": 1,
+      "phase": 0,
+      "total_pair_collisions": 3,
+      "required_b1_directions": null,
+      "actual_b1_upper_bound": 3,
+      "strict_b3_surcharge": 0,
+      "contradiction_gap": null,
+      "excluded": false,
+      "p7_exception_remains": true,
+      "type_budget": 32
+    },
+    "p=11,c_H=-1": {
+      "p": 11,
+      "c_H": -1,
+      "phase": 1,
+      "total_pair_collisions": 3,
+      "required_b1_directions": 10,
+      "actual_b1_upper_bound": 3,
+      "contradiction_gap": 7,
+      "excluded": true
+    },
+    "p=11,c_H=1": {
+      "p": 11,
+      "c_H": 1,
+      "phase": 0,
+      "total_pair_collisions": 3,
+      "required_b1_directions": 12,
+      "actual_b1_upper_bound": 3,
+      "strict_b3_surcharge": 4,
+      "contradiction_gap": 9,
+      "excluded": true,
+      "p7_exception_remains": false,
+      "type_budget": 72
+    },
+    "p=13,c_H=-1": {
+      "p": 13,
+      "c_H": -1,
+      "phase": 1,
+      "total_pair_collisions": 3,
+      "required_b1_directions": 12,
+      "actual_b1_upper_bound": 3,
+      "contradiction_gap": 9,
+      "excluded": true
+    },
+    "p=13,c_H=1": {
+      "p": 13,
+      "c_H": 1,
+      "phase": 0,
+      "total_pair_collisions": 3,
+      "required_b1_directions": 14,
+      "actual_b1_upper_bound": 3,
+      "strict_b3_surcharge": 6,
+      "contradiction_gap": 11,
+      "excluded": true,
+      "p7_exception_remains": false,
+      "type_budget": 98
+    }
+  }
+}

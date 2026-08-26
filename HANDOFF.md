@@ -1,14 +1,28 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-26 (15.651 closes both signs of infinity-plus-point)
+**Date:** 2026-08-26 (15.652 closes every four-point boundary for p>=11)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
-wiring. The full infinity-plus-point boundary is closed, but other non-Walsh
-boundary shapes remain. p=13 orbits / mesh k=6 are not a close. cpu44 stays
-hard-closed.
+wiring. The full infinity-plus-point boundary is closed. Every four-point
+boundary is additionally closed for `p>=11`, but the exceptional `p=5,7`
+cases and larger non-Walsh boundary shapes remain. p=13 orbits / mesh k=6
+are not a close. cpu44 stays hard-closed.
+
+## 15.652 — every four-point boundary closed for p>=11
+
+`src/e1_gmin_m4_prop15652.py` and
+`evidence/NOTE_2026-08-26_four_point_boundary_exclusion.md`. Exact positive
+quadrature proves the small-fibre floor table `(0,2p)`, `(p+1,p-1)`, and
+`(2p-6,2p)`. Four finite points have only six pair-collision directions;
+infinity plus three finite points has only three. Those counts contradict
+the separate direction-type budgets for every odd prime `p>=11`. Combined
+with the empty and two-point exclusions, the first open boundary size there
+is at least six. At `p=7`, the infinity-present negative-product case is
+also closed, while the positive-product case and the other exceptional
+`p=5,7` size-four shapes remain open.
 
 ## 15.651 — positive two-point remainder closed for p=5,7,11,13
 

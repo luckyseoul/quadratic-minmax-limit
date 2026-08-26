@@ -1,5 +1,15 @@
 # Status (2026-08-26)
 
+**15.652 PROVED the complete four-point boundary exclusion for every odd
+prime `p>=11`, not residual (ii)**: exact positive quadrature gives the
+parity floors for zero through four odd affine fibres. Four finite boundary
+points create only six pair-collision directions; infinity plus three finite
+points creates only three. In either case the separate quadratic-type
+budgets cannot be met for `p>=11`. With 15.632 and 15.650--15.651, the first
+still-open boundary size there is at least six. The exceptional `p=5,7`
+size-four cases, larger boundaries, residual (ii), Type I, R1, global QVAR,
+and L remain OPEN.
+
 **15.651 PROVED/certified the complete positive-product
 infinity-plus-point exclusion, not residual (ii)**: exact additive
 coefficient equations close all seven `p=5` arithmetic cases. Fibrewise
