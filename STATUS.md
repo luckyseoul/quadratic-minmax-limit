@@ -1,5 +1,17 @@
 # Status (2026-08-26)
 
+**15.657 PROVED every six-point boundary for odd `p>=11`, not residual
+(ii)**: exact positive quadrature extends the 15.652 floor table through
+six odd fibres. If `s` finite boundary points have `b_d` odd fibres in
+direction `d`, unique pair directions give
+`sum_d(s-b_d) <= s(s-1)`. The resulting floor cost exceeds the total
+affine slack budget by `p^2-9p+10` for infinity plus five points from
+`p=11`, and by `p^2-12p+7` for six finite points from `p=13`. At `p=11`,
+the separate quadratic-type budgets require deficits 20 and 18, exceeding
+the geometric budget 30. Thus size six is closed for `p>=11`. The `p=5,7`
+size-six cases, boundaries of size at least eight, residual (ii), Type I,
+R1, global QVAR, and L remain OPEN.
+
 **15.656 PROVED/certified every `p=5` size-four boundary, not residual
 (ii)**: quotienting either complete eigenshell by antipodes gives 130 score
 rows with normalized edge-column sum 26 and total slack 78. Edge count, the
@@ -12,8 +24,8 @@ four boundary classifications, shell ranks, parity/lift masses, and the
 489-orbit sign-transfer bijection. Thus all 1,202 floor-surviving orbit/sign
 cases, covering 26,450 boundary/sign cases, are excluded. With 15.632 this
 closes `p=5`; with 15.652--15.655 every size-four boundary is closed for
-every odd `p>=5`. Boundary size at least six, residual (ii), Type I, R1,
-global QVAR, and L remain OPEN.
+every odd `p>=5`. Proposition 15.657 subsequently closes size six for
+`p>=11`. The `p=5,7` size-six cases and larger boundaries remain OPEN.
 
 **15.655 PROVED/certified the complete unsaturated `p=7` four-finite
 exclusion, not residual (ii)**: the 280 exact affine score equations plus

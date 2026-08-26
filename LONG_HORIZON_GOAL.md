@@ -38,7 +38,9 @@ acceptance gate is the four-unit dictionary returned by
    \(k\) QVAR and principal R1.
 2. **Residual (ii), even \(k\ge4p\):** OPEN. The Walsh slice, Eulerian
    boundary, every two-point boundary, and every four-point boundary are
-   closed; non-Walsh boundaries of size at least six remain.
+   closed; every six-point boundary is also closed for `p>=11`. The
+   exceptional `p=5,7` size-six cases and boundaries of size at least eight
+   remain.
 3. **Type I, multi-level Max−:** OPEN. The general \(3A+B>0\) estimate is
    not proved.
 4. **Lemma D:** TRUE.

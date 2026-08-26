@@ -83,6 +83,18 @@ unknown, or feasible case. Four finite points at `p=7` are subsequently
 closed by 15.654--15.655; all `p=5` size-four cases are subsequently closed
 by 15.656.
 
+## 15.657 — every six-point boundary closed for p>=11
+
+`src/e1_gmin_m4_prop15657.py` and
+`evidence/NOTE_2026-08-26_size_six_boundary_exclusion.md`. Exact positive
+quadrature extends the parity floors through `b=6`. For `s` finite boundary
+points, unique pair directions give the global deficit inequality
+`sum_d(s-b_d)<=s(s-1)`. Combining its budgets 30 and 20 with the affine
+slack floors excludes infinity plus five finite points for every `p>=11`
+and six finite points for every `p>=13`; a separate exact type-profile
+argument closes `p=11`. The `p=5,7` size-six cases and boundaries of size at
+least eight remain open.
+
 ## 15.652 — every four-point boundary closed for p>=11
 
 `src/e1_gmin_m4_prop15652.py` and
@@ -92,7 +104,7 @@ quadrature proves the small-fibre floor table `(0,2p)`, `(p+1,p-1)`, and
 infinity plus three finite points has only three. Those counts contradict
 the separate direction-type budgets for every odd prime `p>=11`. Combined
 with the empty and two-point exclusions, the first open boundary size there
-is at least six. At `p=7`, 15.653 subsequently closes the
+was six; 15.657 subsequently closes size six for `p>=11`. At `p=7`, 15.653 subsequently closes the
 infinity-present positive-product case as well. The unsaturated four-finite
 profiles are subsequently closed by 15.655. The exceptional `p=5`
 size-four shapes are subsequently closed by 15.656.

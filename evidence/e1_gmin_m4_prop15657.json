@@ -1,0 +1,883 @@
+{
+  "prop": "15.657",
+  "title": "Six-point residual boundary exclusion for p>=11",
+  "proved": true,
+  "theorem": {
+    "proved": true,
+    "exact_floor_formulas_through_six_odd_fibres": true,
+    "pair_deficit_inequality": "sum_d(s-b_d)<=s(s-1)",
+    "p11_no_infinity_type_split_closed": true,
+    "pge13_no_infinity_gap": "p^2-12p+7>0",
+    "pge11_with_infinity_gap": "p^2-9p+10>0",
+    "six_point_boundary_all_odd_primes_p_at_least_11": "CLOSED",
+    "depends_on_affine_budget_prop": "15.632",
+    "depends_on_small_floor_prop": "15.652",
+    "p5_size_six": "OPEN",
+    "p7_size_six": "OPEN",
+    "larger_boundary_sizes": "OPEN",
+    "closes_residual_ii": false,
+    "closes_R1": false,
+    "L_status": "OPEN"
+  },
+  "large_floor_certificates": {
+    "p=11,b=5,phase=0": {
+      "p": 11,
+      "b": 5,
+      "phase": 0,
+      "coefficients": [
+        "0",
+        "0",
+        "1"
+      ],
+      "quadrature_nodes": [
+        1,
+        3,
+        5
+      ],
+      "quadrature_weights": [
+        "15/88",
+        "35/44",
+        "3/88"
+      ],
+      "expectation": "1",
+      "scaled_floor": 22,
+      "exact_positive_quadrature_certificate": true
+    },
+    "p=11,b=5,phase=1": {
+      "p": 11,
+      "b": 5,
+      "phase": 1,
+      "coefficients": [
+        "1",
+        "-6",
+        "9"
+      ],
+      "quadrature_nodes": [
+        2,
+        3,
+        4
+      ],
+      "quadrature_weights": [
+        "6/11",
+        "2/11",
+        "3/11"
+      ],
+      "expectation": "9/11",
+      "scaled_floor": 18,
+      "exact_positive_quadrature_certificate": true
+    },
+    "p=11,b=6,phase=0": {
+      "p": 11,
+      "b": 6,
+      "phase": 0,
+      "coefficients": [
+        "0",
+        "0",
+        "1"
+      ],
+      "quadrature_nodes": [
+        1,
+        3,
+        5
+      ],
+      "quadrature_weights": [
+        "3/88",
+        "35/44",
+        "15/88"
+      ],
+      "expectation": "1",
+      "scaled_floor": 22,
+      "exact_positive_quadrature_certificate": true
+    },
+    "p=11,b=6,phase=1": {
+      "p": 11,
+      "b": 6,
+      "phase": 1,
+      "coefficients": [
+        "1",
+        "-6",
+        "9"
+      ],
+      "quadrature_nodes": [
+        2,
+        3,
+        4
+      ],
+      "quadrature_weights": [
+        "3/11",
+        "2/11",
+        "6/11"
+      ],
+      "expectation": "9/11",
+      "scaled_floor": 18,
+      "exact_positive_quadrature_certificate": true
+    },
+    "p=13,b=5,phase=0": {
+      "p": 13,
+      "b": 5,
+      "phase": 0,
+      "coefficients": [
+        "0",
+        "0",
+        "1"
+      ],
+      "quadrature_nodes": [
+        1,
+        3,
+        5
+      ],
+      "quadrature_weights": [
+        "5/26",
+        "10/13",
+        "1/26"
+      ],
+      "expectation": "1",
+      "scaled_floor": 26,
+      "exact_positive_quadrature_certificate": true
+    },
+    "p=13,b=5,phase=1": {
+      "p": 13,
+      "b": 5,
+      "phase": 1,
+      "coefficients": [
+        "1",
+        "-6",
+        "9"
+      ],
+      "quadrature_nodes": [
+        2,
+        3,
+        4
+      ],
+      "quadrature_weights": [
+        "8/13",
+        "1/13",
+        "4/13"
+      ],
+      "expectation": "12/13",
+      "scaled_floor": 24,
+      "exact_positive_quadrature_certificate": true
+    },
+    "p=13,b=6,phase=0": {
+      "p": 13,
+      "b": 6,
+      "phase": 0,
+      "coefficients": [
+        "0",
+        "0",
+        "1"
+      ],
+      "quadrature_nodes": [
+        1,
+        3,
+        5
+      ],
+      "quadrature_weights": [
+        "3/52",
+        "10/13",
+        "9/52"
+      ],
+      "expectation": "1",
+      "scaled_floor": 26,
+      "exact_positive_quadrature_certificate": true
+    },
+    "p=13,b=6,phase=1": {
+      "p": 13,
+      "b": 6,
+      "phase": 1,
+      "coefficients": [
+        "1",
+        "-6",
+        "9"
+      ],
+      "quadrature_nodes": [
+        2,
+        3,
+        4
+      ],
+      "quadrature_weights": [
+        "9/26",
+        "1/13",
+        "15/26"
+      ],
+      "expectation": "12/13",
+      "scaled_floor": 24,
+      "exact_positive_quadrature_certificate": true
+    },
+    "p=17,b=5,phase=0": {
+      "p": 17,
+      "b": 5,
+      "phase": 0,
+      "coefficients": [
+        "0",
+        "0",
+        "1"
+      ],
+      "quadrature_nodes": [
+        1,
+        3,
+        5
+      ],
+      "quadrature_weights": [
+        "15/68",
+        "25/34",
+        "3/68"
+      ],
+      "expectation": "1",
+      "scaled_floor": 34,
+      "exact_positive_quadrature_certificate": true
+    },
+    "p=17,b=5,phase=1": {
+      "p": 17,
+      "b": 5,
+      "phase": 1,
+      "coefficients": [
+        "0",
+        "0",
+        "1"
+      ],
+      "quadrature_nodes": [
+        0,
+        2,
+        4
+      ],
+      "quadrature_weights": [
+        "1/136",
+        "45/68",
+        "45/136"
+      ],
+      "expectation": "1",
+      "scaled_floor": 34,
+      "exact_positive_quadrature_certificate": true
+    },
+    "p=17,b=6,phase=0": {
+      "p": 17,
+      "b": 6,
+      "phase": 0,
+      "coefficients": [
+        "0",
+        "0",
+        "1"
+      ],
+      "quadrature_nodes": [
+        1,
+        3,
+        5
+      ],
+      "quadrature_weights": [
+        "3/34",
+        "25/34",
+        "3/17"
+      ],
+      "expectation": "1",
+      "scaled_floor": 34,
+      "exact_positive_quadrature_certificate": true
+    },
+    "p=17,b=6,phase=1": {
+      "p": 17,
+      "b": 6,
+      "phase": 1,
+      "coefficients": [
+        "0",
+        "0",
+        "1"
+      ],
+      "quadrature_nodes": [
+        0,
+        2,
+        4
+      ],
+      "quadrature_weights": [
+        "1/136",
+        "27/68",
+        "81/136"
+      ],
+      "expectation": "1",
+      "scaled_floor": 34,
+      "exact_positive_quadrature_certificate": true
+    }
+  },
+  "partition_rows": {
+    "5": [
+      {
+        "partition": [
+          5
+        ],
+        "b": 1,
+        "deficit": 4,
+        "pair_collisions": 10,
+        "local_bound": 20,
+        "inequality_verified": true
+      },
+      {
+        "partition": [
+          4,
+          1
+        ],
+        "b": 1,
+        "deficit": 4,
+        "pair_collisions": 6,
+        "local_bound": 12,
+        "inequality_verified": true
+      },
+      {
+        "partition": [
+          3,
+          2
+        ],
+        "b": 1,
+        "deficit": 4,
+        "pair_collisions": 4,
+        "local_bound": 8,
+        "inequality_verified": true
+      },
+      {
+        "partition": [
+          3,
+          1,
+          1
+        ],
+        "b": 3,
+        "deficit": 2,
+        "pair_collisions": 3,
+        "local_bound": 6,
+        "inequality_verified": true
+      },
+      {
+        "partition": [
+          2,
+          2,
+          1
+        ],
+        "b": 1,
+        "deficit": 4,
+        "pair_collisions": 2,
+        "local_bound": 4,
+        "inequality_verified": true
+      },
+      {
+        "partition": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "b": 3,
+        "deficit": 2,
+        "pair_collisions": 1,
+        "local_bound": 2,
+        "inequality_verified": true
+      },
+      {
+        "partition": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "b": 5,
+        "deficit": 0,
+        "pair_collisions": 0,
+        "local_bound": 0,
+        "inequality_verified": true
+      }
+    ],
+    "6": [
+      {
+        "partition": [
+          6
+        ],
+        "b": 0,
+        "deficit": 6,
+        "pair_collisions": 15,
+        "local_bound": 30,
+        "inequality_verified": true
+      },
+      {
+        "partition": [
+          5,
+          1
+        ],
+        "b": 2,
+        "deficit": 4,
+        "pair_collisions": 10,
+        "local_bound": 20,
+        "inequality_verified": true
+      },
+      {
+        "partition": [
+          4,
+          2
+        ],
+        "b": 0,
+        "deficit": 6,
+        "pair_collisions": 7,
+        "local_bound": 14,
+        "inequality_verified": true
+      },
+      {
+        "partition": [
+          4,
+          1,
+          1
+        ],
+        "b": 2,
+        "deficit": 4,
+        "pair_collisions": 6,
+        "local_bound": 12,
+        "inequality_verified": true
+      },
+      {
+        "partition": [
+          3,
+          3
+        ],
+        "b": 2,
+        "deficit": 4,
+        "pair_collisions": 6,
+        "local_bound": 12,
+        "inequality_verified": true
+      },
+      {
+        "partition": [
+          3,
+          2,
+          1
+        ],
+        "b": 2,
+        "deficit": 4,
+        "pair_collisions": 4,
+        "local_bound": 8,
+        "inequality_verified": true
+      },
+      {
+        "partition": [
+          3,
+          1,
+          1,
+          1
+        ],
+        "b": 4,
+        "deficit": 2,
+        "pair_collisions": 3,
+        "local_bound": 6,
+        "inequality_verified": true
+      },
+      {
+        "partition": [
+          2,
+          2,
+          2
+        ],
+        "b": 0,
+        "deficit": 6,
+        "pair_collisions": 3,
+        "local_bound": 6,
+        "inequality_verified": true
+      },
+      {
+        "partition": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "b": 2,
+        "deficit": 4,
+        "pair_collisions": 2,
+        "local_bound": 4,
+        "inequality_verified": true
+      },
+      {
+        "partition": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "b": 4,
+        "deficit": 2,
+        "pair_collisions": 1,
+        "local_bound": 2,
+        "inequality_verified": true
+      },
+      {
+        "partition": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "b": 6,
+        "deficit": 0,
+        "pair_collisions": 0,
+        "local_bound": 0,
+        "inequality_verified": true
+      }
+    ]
+  },
+  "p11_type_profiles": {
+    "s=5,phase=0": {
+      "p": 11,
+      "phase": 0,
+      "finite_boundary_points": 5,
+      "direction_count": 6,
+      "type_budget": 72,
+      "allowed_odd_fibre_counts": [
+        1,
+        3,
+        5
+      ],
+      "feasible_count_profiles": 1,
+      "minimum_deficit": 24,
+      "minimizers": [
+        {
+          "deficit": 24,
+          "cost": 72,
+          "counts": {
+            "1": 6,
+            "3": 0,
+            "5": 0
+          }
+        }
+      ]
+    },
+    "s=5,phase=1": {
+      "p": 11,
+      "phase": 1,
+      "finite_boundary_points": 5,
+      "direction_count": 6,
+      "type_budget": 72,
+      "allowed_odd_fibre_counts": [
+        1,
+        3,
+        5
+      ],
+      "feasible_count_profiles": 3,
+      "minimum_deficit": 20,
+      "minimizers": [
+        {
+          "deficit": 20,
+          "cost": 68,
+          "counts": {
+            "1": 5,
+            "3": 0,
+            "5": 1
+          }
+        }
+      ]
+    },
+    "s=6,phase=0": {
+      "p": 11,
+      "phase": 0,
+      "finite_boundary_points": 6,
+      "direction_count": 6,
+      "type_budget": 72,
+      "allowed_odd_fibre_counts": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "feasible_count_profiles": 37,
+      "minimum_deficit": 18,
+      "minimizers": [
+        {
+          "deficit": 18,
+          "cost": 70,
+          "counts": {
+            "0": 2,
+            "2": 0,
+            "4": 3,
+            "6": 1
+          }
+        },
+        {
+          "deficit": 18,
+          "cost": 72,
+          "counts": {
+            "0": 2,
+            "2": 1,
+            "4": 1,
+            "6": 2
+          }
+        },
+        {
+          "deficit": 18,
+          "cost": 66,
+          "counts": {
+            "0": 3,
+            "2": 0,
+            "4": 0,
+            "6": 3
+          }
+        }
+      ]
+    },
+    "s=6,phase=1": {
+      "p": 11,
+      "phase": 1,
+      "finite_boundary_points": 6,
+      "direction_count": 6,
+      "type_budget": 72,
+      "allowed_odd_fibre_counts": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "feasible_count_profiles": 4,
+      "minimum_deficit": 20,
+      "minimizers": [
+        {
+          "deficit": 20,
+          "cost": 68,
+          "counts": {
+            "0": 0,
+            "2": 5,
+            "4": 0,
+            "6": 1
+          }
+        }
+      ]
+    }
+  },
+  "no_infinity_cases": {
+    "p=11,c_H=-1": {
+      "p": 11,
+      "c_H": -1,
+      "infinity_in_boundary": false,
+      "phase_rule": "phase=1 iff eps_d*c_H=+1",
+      "phase_zero_minimum_type_deficit": 18,
+      "phase_one_minimum_type_deficit": 20,
+      "required_total_deficit": 38,
+      "pair_deficit_budget": 30,
+      "contradiction_gap": 8,
+      "excluded": true
+    },
+    "p=11,c_H=1": {
+      "p": 11,
+      "c_H": 1,
+      "infinity_in_boundary": false,
+      "phase_rule": "phase=1 iff eps_d*c_H=+1",
+      "phase_zero_minimum_type_deficit": 18,
+      "phase_one_minimum_type_deficit": 20,
+      "required_total_deficit": 38,
+      "pair_deficit_budget": 30,
+      "contradiction_gap": 8,
+      "excluded": true
+    },
+    "p=13,c_H=-1": {
+      "p": 13,
+      "c_H": -1,
+      "infinity_in_boundary": false,
+      "minimum_floor_bounds": {
+        "0": 0,
+        "2": 12,
+        "4": 20,
+        "6": 24
+      },
+      "pair_deficit_budget": 30,
+      "baseline_cost": 336,
+      "maximum_pair_deficit_saving": 120,
+      "total_cost_lower_bound": 216,
+      "total_budget": 196,
+      "contradiction_gap": 20,
+      "gap_polynomial": "p^2-12p+7",
+      "gap_increases_by": "4p-20 when p is replaced by p+2",
+      "excluded": true
+    },
+    "p=13,c_H=1": {
+      "p": 13,
+      "c_H": 1,
+      "infinity_in_boundary": false,
+      "minimum_floor_bounds": {
+        "0": 0,
+        "2": 12,
+        "4": 20,
+        "6": 24
+      },
+      "pair_deficit_budget": 30,
+      "baseline_cost": 336,
+      "maximum_pair_deficit_saving": 120,
+      "total_cost_lower_bound": 216,
+      "total_budget": 196,
+      "contradiction_gap": 20,
+      "gap_polynomial": "p^2-12p+7",
+      "gap_increases_by": "4p-20 when p is replaced by p+2",
+      "excluded": true
+    },
+    "p=17,c_H=-1": {
+      "p": 17,
+      "c_H": -1,
+      "infinity_in_boundary": false,
+      "minimum_floor_bounds": {
+        "0": 0,
+        "2": 16,
+        "4": 28,
+        "6": 32
+      },
+      "pair_deficit_budget": 30,
+      "baseline_cost": 576,
+      "maximum_pair_deficit_saving": 160,
+      "total_cost_lower_bound": 416,
+      "total_budget": 324,
+      "contradiction_gap": 92,
+      "gap_polynomial": "p^2-12p+7",
+      "gap_increases_by": "4p-20 when p is replaced by p+2",
+      "excluded": true
+    },
+    "p=17,c_H=1": {
+      "p": 17,
+      "c_H": 1,
+      "infinity_in_boundary": false,
+      "minimum_floor_bounds": {
+        "0": 0,
+        "2": 16,
+        "4": 28,
+        "6": 32
+      },
+      "pair_deficit_budget": 30,
+      "baseline_cost": 576,
+      "maximum_pair_deficit_saving": 160,
+      "total_cost_lower_bound": 416,
+      "total_budget": 324,
+      "contradiction_gap": 92,
+      "gap_polynomial": "p^2-12p+7",
+      "gap_increases_by": "4p-20 when p is replaced by p+2",
+      "excluded": true
+    }
+  },
+  "with_infinity_cases": {
+    "p=11,c_H=-1": {
+      "p": 11,
+      "c_H": -1,
+      "infinity_in_boundary": true,
+      "phase": 1,
+      "phase_independent_of_direction_type": true,
+      "minimum_floor_bounds": {
+        "1": 10,
+        "3": 16,
+        "5": 18
+      },
+      "pair_deficit_budget": 20,
+      "baseline_cost": 216,
+      "maximum_pair_deficit_saving": 40,
+      "total_cost_lower_bound": 176,
+      "total_budget": 144,
+      "contradiction_gap": 32,
+      "gap_polynomial": "p^2-9p+10",
+      "gap_increases_by": "4p-14 when p is replaced by p+2",
+      "excluded": true
+    },
+    "p=11,c_H=1": {
+      "p": 11,
+      "c_H": 1,
+      "infinity_in_boundary": true,
+      "phase": 0,
+      "phase_independent_of_direction_type": true,
+      "minimum_floor_bounds": {
+        "1": 10,
+        "3": 16,
+        "5": 18
+      },
+      "pair_deficit_budget": 20,
+      "baseline_cost": 216,
+      "maximum_pair_deficit_saving": 40,
+      "total_cost_lower_bound": 176,
+      "total_budget": 144,
+      "contradiction_gap": 32,
+      "gap_polynomial": "p^2-9p+10",
+      "gap_increases_by": "4p-14 when p is replaced by p+2",
+      "excluded": true
+    },
+    "p=13,c_H=-1": {
+      "p": 13,
+      "c_H": -1,
+      "infinity_in_boundary": true,
+      "phase": 1,
+      "phase_independent_of_direction_type": true,
+      "minimum_floor_bounds": {
+        "1": 12,
+        "3": 20,
+        "5": 22
+      },
+      "pair_deficit_budget": 20,
+      "baseline_cost": 308,
+      "maximum_pair_deficit_saving": 50,
+      "total_cost_lower_bound": 258,
+      "total_budget": 196,
+      "contradiction_gap": 62,
+      "gap_polynomial": "p^2-9p+10",
+      "gap_increases_by": "4p-14 when p is replaced by p+2",
+      "excluded": true
+    },
+    "p=13,c_H=1": {
+      "p": 13,
+      "c_H": 1,
+      "infinity_in_boundary": true,
+      "phase": 0,
+      "phase_independent_of_direction_type": true,
+      "minimum_floor_bounds": {
+        "1": 12,
+        "3": 20,
+        "5": 22
+      },
+      "pair_deficit_budget": 20,
+      "baseline_cost": 308,
+      "maximum_pair_deficit_saving": 50,
+      "total_cost_lower_bound": 258,
+      "total_budget": 196,
+      "contradiction_gap": 62,
+      "gap_polynomial": "p^2-9p+10",
+      "gap_increases_by": "4p-14 when p is replaced by p+2",
+      "excluded": true
+    },
+    "p=17,c_H=-1": {
+      "p": 17,
+      "c_H": -1,
+      "infinity_in_boundary": true,
+      "phase": 1,
+      "phase_independent_of_direction_type": true,
+      "minimum_floor_bounds": {
+        "1": 16,
+        "3": 28,
+        "5": 30
+      },
+      "pair_deficit_budget": 20,
+      "baseline_cost": 540,
+      "maximum_pair_deficit_saving": 70,
+      "total_cost_lower_bound": 470,
+      "total_budget": 324,
+      "contradiction_gap": 146,
+      "gap_polynomial": "p^2-9p+10",
+      "gap_increases_by": "4p-14 when p is replaced by p+2",
+      "excluded": true
+    },
+    "p=17,c_H=1": {
+      "p": 17,
+      "c_H": 1,
+      "infinity_in_boundary": true,
+      "phase": 0,
+      "phase_independent_of_direction_type": true,
+      "minimum_floor_bounds": {
+        "1": 16,
+        "3": 28,
+        "5": 30
+      },
+      "pair_deficit_budget": 20,
+      "baseline_cost": 540,
+      "maximum_pair_deficit_saving": 70,
+      "total_cost_lower_bound": 470,
+      "total_budget": 324,
+      "contradiction_gap": 146,
+      "gap_polynomial": "p^2-9p+10",
+      "gap_increases_by": "4p-14 when p is replaced by p+2",
+      "excluded": true
+    }
+  }
+}

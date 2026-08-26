@@ -29,7 +29,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; boundaries of size at least six remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657 closes every six-point boundary for `p>=11`; the `p=5,7` six-point cases and boundaries of size at least eight remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -109,7 +109,7 @@ exact parity floors for zero through four odd fibres by positive
 degree-two quadrature. Four finite boundary points have only six
 pair-directions, and infinity plus three finite points has only three;
 the type-split budget therefore excludes every four-point boundary for all
-odd primes `p>=11`. The first open boundary size there is at least six.
+odd primes `p>=11`.
 Proposition 15.653 handles the remaining infinity-containing shape at
 `p=7`: exact Johnson-space saturation leaves one slack formula, 18,424
 finite triples reduce to 416 square-semilinear orbits, and all 416 exact
@@ -129,7 +129,12 @@ syndromes exclude 712 orbit cases; the sole mod-five timeout is infeasible
 modulo seven. A nonsquare anti-isometry transfers the remaining
 no-infinity sign, and an independent structural audit covers all 1,202
 floor-surviving orbit/sign cases. Hence every size-four boundary is closed
-for every odd prime `p>=5`; the first open boundary size is six.
+for every odd prime `p>=5`. Proposition 15.657 then extends the positive
+quadrature through six odd fibres. A six-point boundary has pair-deficit
+budget only 30 without infinity and 20 with infinity; these are too small
+for the exact affine slack budget for every `p>=11`, including a separate
+type-split contradiction at `p=11`. Thus size six remains only at `p=5,7`,
+while the first open boundary size for `p>=11` is at least eight.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -163,6 +168,8 @@ graph TD
     FOUR --> ALL4["every four-point boundary<br/><b>CLOSED for p>=5</b>"]
     P7MOD --> ALL4
     P5FULL --> ALL4
+    BUDGET --> SIX["every six-point boundary<br/><b>CLOSED for p>=11</b> (15.657)"]
+    SIX --> P57SIX["p=5,7 six-point boundary<br/><b>OPEN</b>"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -173,6 +180,8 @@ graph TD
     style WALSH fill:#e6ffe6
     style MULTI fill:#fff4e6
     style BUDGET fill:#e6ffe6
+    style SIX fill:#e6ffe6
+    style P57SIX fill:#fff4e6
     style P7BAL fill:#e6ffe6
     style P5NEG fill:#e6ffe6
     style POSFINITE fill:#e6ffe6
@@ -298,6 +307,7 @@ square-direction affine-circle words.
 | 15.654 | exact Johnson-space catalogs give one phase-zero and 36 phase-one saturated `b=4` slacks; 58,800 four-finite boundaries reduce to 1,225 exactly infeasible orbits, and a nonsquare anti-isometry exchanges product signs | closes the doubly saturated `p=7` four-finite profiles for both signs; its 23,520-boundary unsaturated complement is subsequently closed by 15.655 |
 | 15.655 | the common 282-by-1225 exact score system has rank 147 over `F_7`; 135 left-null syndromes reject all 1,716,742,440 complete catalog tuples in 2,408 cases, with an independent reconstruction audit | closes the unsaturated `p=7` four-finite profiles for both signs; with 15.653--15.654 every `p=7` size-four boundary is closed; `p=5` is subsequently closed by 15.656 |
 | 15.656 | each antipodal `p=5` eigenshell gives a 132-by-325 exact score system of rank 67 over `F_5`; bounded lift syndromes exclude 712 orbit cases, one mod-seven exception closes the only timeout, and a nonsquare anti-isometry transfers the remaining sign | closes every `p=5` size-four boundary; with 15.652--15.655 every size-four boundary is closed for every odd `p>=5`, while size at least six remains |
+| 15.657 | exact positive quadrature extends the parity floors through six odd fibres; unique pair directions bound `sum_d(s-b_d)` by `s(s-1)`, and the resulting cost exceeds the affine slack budget | closes every six-point boundary for every odd prime `p>=11`; `p=5,7` size six, size at least eight, residual (ii), and R1 remain open |
 
 These are general theorems for odd primes (with the stated `p=3` second-shell
 exception), including the standard Paley `(25,50)` adjacent-ETF case. They
@@ -332,8 +342,9 @@ boundary for all odd primes, with contradiction gap `(p²−1)/2`.
 The affine reduction alone is not a close: a corrected `p=5` affine model has a genuine
 integral solution with directional means `(12,4,0,6,10,4)` and boundary equal
 to infinity plus an affine line. Proposition 15.656 closes the size-four
-profiles using the full shell, but this size-six affine witness and larger
-boundary profiles remain open.
+profiles using the full shell. Proposition 15.657 excludes every size-six
+profile for `p>=11`, but this `p=5` size-six affine witness, the other
+exceptional `p=5,7` size-six cases, and larger boundary profiles remain open.
 
 Proposition 15.642 sharpens one minimal nonempty profile. If
 `D={infinity,v}`, then `c_H=+1` forces `A_d=x_{s_d(v)}` pointwise in every
@@ -367,8 +378,11 @@ audit rebuilds both the matrix and catalog right sides and again finds zero
 survivors. Hence every `p=7` size-four case is closed. Proposition 15.656
 then closes every `p=5` size-four case by complete-shell modular syndromes,
 one exact mod-seven exception, and a nonsquare sign transfer. Every
-size-four boundary is therefore closed for odd `p>=5`; larger nonempty
-boundaries remain.
+size-four boundary is therefore closed for odd `p>=5`. Proposition 15.657
+next uses the pair-deficit inequality
+`sum_d(s-b_d) <= s(s-1)` and exact floors through `b=6` to close every
+six-point boundary for odd `p>=11`. The exceptional `p=5,7` size-six cases
+and boundaries of size at least eight remain.
 
 ### Route kills — do not re-tread
 

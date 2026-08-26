@@ -599,6 +599,34 @@ the finite Paley residual system. It did not enter Proposition 15.656.
 
 ---
 
+## 7q. Pair-deficit closure of every six-point boundary for `p>=11` (2026-08-26)
+
+Proposition 15.657 extends the exact positive quadrature of Proposition
+15.652 through six odd fibres. If a projective direction has finite
+boundary-fibre multiplicities `n_i` and `b_d` odd fibres, then
+`s-b_d <= 2 sum_i binom(n_i,2)`. Every finite pair belongs to exactly one
+projective direction, so `sum_d(s-b_d) <= s(s-1)`: the deficit budget is 30
+for six finite points and 20 for infinity plus five finite points.
+
+For infinity plus five points, the resulting phase-independent floor bound
+exceeds the total affine slack budget by `p^2-9p+10`, positive from `p=11`.
+For six finite points and `p>=13`, the excess is `p^2-12p+7`, positive from
+`p=13`. At `p=11`, the two quadratic types have opposite phases and their
+separate budgets require deficits at least 20 and 18, contradicting 30.
+Thus every six-point boundary is closed for every odd prime `p>=11`; only
+the exceptional `p=5,7` size-six cases and boundaries of size at least eight
+remain on this boundary ladder.
+
+Targeted searches of Johnson-slice, finite-incidence, and Paley
+degree-parity sources found adjacent methods but no duplicate of the
+directional slack/pair-deficit/type-budget argument. Li--Zhou studies
+parity-uniform induced Paley subgraphs and MDS-code applications, not the
+edge-set boundaries or affine slack system here. The result proposes no new
+integer sequence, so no OEIS submission search was made. This is a
+duplicate/context search record, not an unqualified priority claim.
+
+---
+
 ## 8. What is not in the older literature
 
 - No 1930s–1970s theorem that \(\lim n^{-3/2}\min_A\max_x|x^\top Ax|\) exists.
@@ -649,5 +677,6 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 35. A. Biró, *On Polynomials over Prime Fields Taking Only Two Values on the Multiplicative Group*, Finite Fields Appl. **6** (2000), 302--308, https://www.renyi.hu/~biroand/pdfs/TwoValues.pdf (two-value degree bounds; adjacent, not a direct proof of 15.636).
 36. D. Ghinelli and J. D. Key, *Codes from incidence matrices and line graphs of Paley graphs*, Adv. Math. Commun. **5** (2011), 93--108, https://doi.org/10.3934/amc.2011.5.93 (Paley incidence-code ranks; nearby finite-field coding context, not the 15.655 affine-score system).
 37. P. Ivanisvili, D. Stolyarov, V. Vasyunin, P. Zatitskii, *Bellman functions on simple non-convex domains in the plane*, [arXiv:2305.03523](https://arxiv.org/abs/2305.03523) (minimal locally concave Bellman construction; possible R1/QVAR analogy, not a Paley residual theorem).
+38. Q. Li and Y. Zhou, *On induced subgraphs with degree parity conditions in Paley graphs and Paley tournaments*, [arXiv:2512.19312](https://arxiv.org/abs/2512.19312) (degree-parity context for induced Paley subgraphs and MDS codes; not the directional affine-slack boundary problem of 15.657).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

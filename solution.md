@@ -6196,3 +6196,73 @@ evidence/NOTE_2026-08-26_p5_four_point_full_shell.md,
 scripts/p5_size_four_full_shell_mod5_batch.py,
 scripts/p5_size_four_full_shell_mod7_exception.py,
 scripts/p5_size_four_full_shell_audit.py, and tests/test_prop15656.py.
+
+### Proposition 15.657 — every six-point boundary is impossible for `p>=11`
+
+Let `D` be a six-vertex odd-degree boundary at residual size
+`|H|=4p+1`, and let `s` be its number of finite points. In projective
+direction `d`, write the finite fibre multiplicities as `n_i` and let
+`b_d` count the odd multiplicities. Then
+
+\[
+ s-b_d=2\sum_i\lfloor n_i/2\rfloor
+       \le 2\sum_i\binom{n_i}{2}.                 \tag{15.657.1}
+\]
+
+Every finite pair collides in exactly one projective direction. Therefore
+
+\[
+ \sum_d(s-b_d)\le s(s-1).                         \tag{15.657.2}
+\]
+
+The deficit budget is 30 for six finite boundary points and 20 for infinity
+plus five finite points. Exact positive quadrature extends Proposition
+15.652's parity floors through `b=6`. For odd `p>=11`, the phase-zero floor
+at `b=5,6` is `2p`; the phase-one floor is `2p-4` at `p=11`, `2p-2` at
+`p=13`, and `2p` for primes `p>=17`. The dual quadratures are supported on
+`1,3,5`, on `2,3,4` for `p<=15`, and on `0,2,4` for `p>=15`, respectively.
+
+If infinity lies in `D`, use the phase-independent bounds
+
+\[
+ f(1)\ge p-1,\qquad f(3)\ge2p-6,\qquad f(5)\ge2p-4.
+\]
+
+Starting with cost `(p+1)(2p-4)`, the deficit budget can save at most
+`5(p-3)`. The remaining excess over the total budget `(p+1)^2` is
+
+\[
+ p^2-9p+10>0\qquad(p\ge11).                       \tag{15.657.3}
+\]
+
+If all six points are finite and `p>=13`, use
+
+\[
+ f(0)\ge0,\quad f(2)\ge p-1,\quad
+ f(4)\ge2p-6,\quad f(6)\ge2p-2.
+\]
+
+Starting with `(p+1)(2p-2)`, deficit 30 can save at most `10(p-1)`,
+leaving excess
+
+\[
+ p^2-12p+7>0\qquad(p\ge13).                       \tag{15.657.4}
+\]
+
+At `p=11`, the two quadratic direction types have opposite phases and
+budget 72 each. The phase-one type requires pair deficit at least 20; the
+phase-zero type requires at least 18. Their total 38 contradicts
+(15.657.2). Consequently
+
+\[
+ \boxed{\text{every six-point residual boundary is impossible for every
+ odd prime }p\ge11.}                              \tag{15.657.5}
+\]
+
+The exceptional `p=5,7` size-six cases, boundaries of size at least eight,
+residual (ii), R1, global QVAR, Type I, and the limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15657.py`,
+`evidence/e1_gmin_m4_prop15657.json`,
+`evidence/NOTE_2026-08-26_size_six_boundary_exclusion.md`, and
+`tests/test_prop15657.py`.
