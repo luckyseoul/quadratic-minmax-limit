@@ -1,0 +1,49 @@
+{
+  "prop": "15.650",
+  "title": "Complete p=5 negative two-point exclusion",
+  "proved": true,
+  "theorem": {
+    "proved": true,
+    "p5_negative_two_point_closed": true,
+    "type_excess_profiles": {
+      "unique": [
+        0,
+        0,
+        6
+      ],
+      "distributed": [
+        2,
+        2,
+        2
+      ]
+    },
+    "orbit_count": {
+      "arithmetic_profiles": 24,
+      "profiles_by_type_pair": {
+        "unique_unique": 9,
+        "unique_distributed": 5,
+        "distributed_unique": 5,
+        "distributed_distributed": 5
+      },
+      "opposite_type_pair_orbits": 2,
+      "single_direction_orbits_per_type": 1,
+      "placement_orbits": 33
+    },
+    "finite_certificate": {
+      "infeasible": 33,
+      "unknown": 0,
+      "feasible": 0,
+      "all_exact_affine_score_rows": 60,
+      "certificate_sha256": "2352ca1040a7989d5850730fafcad311adf1275dd06383578fb9e187698be69e",
+      "archive": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-26-negative-p5/p5_negative_two_point_certificate_2026-08-26.tar.gz",
+      "archive_sha256": "c19ed8a0d50ffad3f7386d3d6100ce25213c3ba4d1e7cc49acea0275d3796a41"
+    },
+    "negative_product_infinity_point_branch_all_odd_primes_p_ge_5": "CLOSED",
+    "remaining_negative_two_point_cases": [],
+    "closes_negative_product_infinity_point_branch_all_primes": true,
+    "closes_all_infinity_point_boundaries": false,
+    "closes_residual_ii": false,
+    "closes_R1": false,
+    "L_status": "OPEN"
+  }
+}

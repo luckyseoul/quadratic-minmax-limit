@@ -95,7 +95,11 @@ odd `p>=17`. Proposition 15.648 then closes `p=11,13` and four unbalanced
 quadratic lifts at balanced `p=7`, reduces the 18424 infinity stars to 3038
 orbits for each exceptional-pair orbit, and finitely certifies every orbit
 infeasible. Thus every `p=7` negative two-point profile is closed, leaving
-only `p=5` in that branch.
+only `p=5` in that branch. Proposition 15.650 finishes it: exact lift
+quantization leaves two type profiles and 24 arithmetic candidates, whose
+33 square-semilinear placement orbits are all finitely certified infeasible.
+The negative-product infinity-plus-point branch is therefore closed for
+every odd prime `p>=5`.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -117,7 +121,7 @@ graph TD
     RIGID --> NEGKILL["c_H=-1 branch<br/><b>CLOSED for p>=17</b> (15.647)"]
     NEGKILL --> NEGFINITE["finite c_H=-1 remainder<br/>p=11,13 + four p=7 profiles <b>CLOSED</b> (15.648)"]
     NEGFINITE --> P7BAL["balanced p=7 profile<br/><b>CLOSED</b> (15.649)"]
-    P7BAL --> P5NEG["negative two-point p=5<br/><b>OPEN</b>"]
+    P7BAL --> P5NEG["negative two-point p=5<br/><b>CLOSED</b> (15.650)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -129,7 +133,7 @@ graph TD
     style MULTI fill:#fff4e6
     style BUDGET fill:#e6ffe6
     style P7BAL fill:#e6ffe6
-    style P5NEG fill:#fff4e6
+    style P5NEG fill:#e6ffe6
     style POSKILL fill:#e6ffe6
     style NEGKILL fill:#e6ffe6
     style NEGFINITE fill:#e6ffe6
@@ -238,6 +242,7 @@ square-direction affine-circle words.
 | 15.647 | same-type signed means quantize every lift excess in units of `p+1`, forcing one exception per type for all `p>=7`; baseline divisibility then excludes `c_H=-1`, `D={infinity,v}` for every odd `p>=17` | leaves `p=5,7,11,13` and other boundary profiles |
 | 15.648 | an exact `l1` bound closes both `p=13` profiles; symmetry-complete CP-SAT certificates close `p=11` and four unbalanced `p=7` profiles | leaves negative-product `p=5` and balanced `p=7 (x,y)=(3,3)` |
 | 15.649 | the exceptional mass-ten quadratic lifts on `J(7,4)` have exactly 1764 labelled vectors; an `l1` filter, square-semilinear orbit reduction, and exact fixed-star certificates exclude all 6076 balanced-profile orbit representatives | closes every negative-product two-point profile at `p=7`; leaves `p=5` and other boundary profiles |
+| 15.650 | mod-six lift quantization leaves two `p=5` type profiles and 24 arithmetic candidates; square-semilinear symmetry reduces them to 33 placement orbits, all exactly CP-SAT infeasible | closes the negative-product infinity-plus-point branch for every odd prime `p>=5`; positive-product finite cases and other boundaries remain |
 
 These are general theorems for odd primes (with the stated `p=3` second-shell
 exception), including the standard Paley `(25,50)` adjacent-ETF case. They
@@ -361,6 +366,7 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15647.py` | Exact all-prime negative-product infinity-point exclusion for `p>=17` |
 | `src/e1_gmin_m4_prop15648.py` | Exact/finitely certified negative two-point exclusions at `p=7,11,13` |
 | `src/e1_gmin_m4_prop15649.py` | Complete exceptional-lift classification and finite exclusion of balanced `p=7` negative two-point profile |
+| `src/e1_gmin_m4_prop15650.py` | Complete `p=5` finite exclusion and all-prime closure of the negative-product infinity-plus-point branch |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |
