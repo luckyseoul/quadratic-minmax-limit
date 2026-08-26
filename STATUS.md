@@ -1,5 +1,15 @@
 # Status (2026-08-26)
 
+**15.653 PROVED/certified the `p=7` infinity-plus-three-finite exclusion,
+not all size-four boundaries**: 15.652 already closes `c_H=-1`. For
+`c_H=+1`, every direction saturates its type budget. An exact rank-21
+Johnson-space calculation leaves one three-odd-fibre slack among 630 sparse
+corrections. The resulting coefficient model reduces all 18,424 finite
+triples to 416 square-semilinear boundary orbits, all infeasible with zero
+unknown and zero feasible case. Four finite points at `p=7`, every `p=5`
+size-four shape, larger boundaries, residual (ii), Type I, R1, global QVAR,
+and L remain OPEN.
+
 **15.652 PROVED the complete four-point boundary exclusion for every odd
 prime `p>=11`, not residual (ii)**: exact positive quadrature gives the
 parity floors for zero through four odd affine fibres. Four finite boundary

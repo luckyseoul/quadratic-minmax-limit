@@ -29,7 +29,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652 kills every four-point boundary for `p>=11`, but larger and exceptional-prime profiles remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652 kills every four-point boundary for `p>=11`; 15.653 also kills infinity plus three points at `p=7`, but larger and exceptional-prime profiles remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -110,6 +110,11 @@ degree-two quadrature. Four finite boundary points have only six
 pair-directions, and infinity plus three finite points has only three;
 the type-split budget therefore excludes every four-point boundary for all
 odd primes `p>=11`. The first open boundary size there is at least six.
+Proposition 15.653 handles the remaining infinity-containing shape at
+`p=7`: exact Johnson-space saturation leaves one slack formula, 18,424
+finite triples reduce to 416 square-semilinear orbits, and all 416 exact
+coefficient models are infeasible. Four finite points at `p=7` and every
+`p=5` size-four shape remain open.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -136,6 +141,7 @@ graph TD
     POSFINITE --> TWOPT["infinity + point boundary<br/>both signs <b>CLOSED for p>=5</b>"]
     P5NEG --> TWOPT
     BUDGET --> FOUR["every four-point boundary<br/><b>CLOSED for p>=11</b> (15.652)"]
+    FOUR --> P7INF["p=7 infinity + three points<br/>both signs <b>CLOSED</b> (15.653)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -150,6 +156,7 @@ graph TD
     style P5NEG fill:#e6ffe6
     style POSFINITE fill:#e6ffe6
     style FOUR fill:#e6ffe6
+    style P7INF fill:#e6ffe6
     style TWOPT fill:#e6ffe6
     style POSKILL fill:#e6ffe6
     style NEGKILL fill:#e6ffe6
@@ -262,6 +269,7 @@ square-direction affine-circle words.
 | 15.650 | mod-six lift quantization leaves two `p=5` type profiles and 24 arithmetic candidates; square-semilinear symmetry reduces them to 33 placement orbits, all exactly CP-SAT infeasible | closes the negative-product infinity-plus-point branch for every odd prime `p>=5`; positive finite cases are subsequently closed by 15.651 |
 | 15.651 | exact additive coefficients and fibrewise `l1` profiles close the finite positive-product cases; at `p=7`, 112 rigid star orbits and three normalized all-one cases are all finitely infeasible | closes the positive-product branch for every odd prime `p>=5`; with 15.650, the entire infinity-plus-point boundary is closed; other boundaries remain |
 | 15.652 | exact positive quadrature gives all parity floors for at most four odd fibres; six pair-directions for four finite points and three for infinity plus three points contradict the split type budget | closes every four-point boundary for every odd prime `p>=11`; `p=5,7`, size at least six, residual (ii), and R1 remain open |
+| 15.653 | type-budget saturation uniquely determines every `p=7,c_H=+1` infinity-plus-three directional slack; 18,424 triples reduce to 416 square-semilinear orbits, all exactly infeasible | with 15.652's negative-sign argument, closes infinity plus three finite boundary points at `p=7`; four finite points at `p=7` and all `p=5` size-four cases remain |
 
 These are general theorems for odd primes (with the stated `p=3` second-shell
 exception), including the standard Paley `(25,50)` adjacent-ETF case. They
@@ -315,7 +323,10 @@ odd `p>=11`: four finite points supply only six pair-collision directions,
 and infinity plus three finite points supply only three, too few to meet the
 exact type-split parity budget. Thus the first open boundary size is at
 least six for `p>=11`; exceptional `p=5,7` size-four cases and larger
-nonempty boundary shapes remain open.
+nonempty boundary shapes remain open. Proposition 15.653 further closes
+both signs of infinity plus three finite points at `p=7`: saturation gives
+one exact degree-two slack model, and all 416 boundary orbits are finitely
+infeasible. The `p=7` four-finite and all `p=5` size-four cases remain.
 
 ### Route kills — do not re-tread
 

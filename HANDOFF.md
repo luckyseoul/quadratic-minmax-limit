@@ -1,15 +1,30 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-26 (15.652 closes every four-point boundary for p>=11)
+**Date:** 2026-08-26 (15.653 closes p=7 infinity plus three points)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. The full infinity-plus-point boundary is closed. Every four-point
-boundary is additionally closed for `p>=11`, but the exceptional `p=5,7`
-cases and larger non-Walsh boundary shapes remain. p=13 orbits / mesh k=6
-are not a close. cpu44 stays hard-closed.
+boundary is additionally closed for `p>=11`, and infinity plus three finite
+points is closed at `p=7`. Four finite points at `p=7`, every `p=5`
+size-four case, and larger non-Walsh boundaries remain. p=13 orbits / mesh
+k=6 are not a close. cpu44 stays hard-closed.
+
+## 15.653 — p=7 infinity plus three finite points closed
+
+`src/e1_gmin_m4_prop15653.py` and
+`evidence/NOTE_2026-08-26_p7_infinity_three_exclusion.md`. The negative
+product sign is already impossible by 15.652. In the positive sign, every
+direction has scaled mean eight. The three-odd-fibre parity pattern has 630
+possible mass-four corrections inside the 35-point Johnson slice; exact
+rank-21 evaluation leaves uniquely `A=(|X cap B|-2)^2`. Sparse coefficient
+equations then reduce all 18,424 finite triples to 416 square-semilinear
+orbits. All 416 fixed-boundary models are infeasible; a fresh orbit
+reclassification and independent audit report zero missing, malformed,
+unknown, or feasible case. Four finite points at `p=7` and all `p=5`
+size-four cases remain open.
 
 ## 15.652 — every four-point boundary closed for p>=11
 

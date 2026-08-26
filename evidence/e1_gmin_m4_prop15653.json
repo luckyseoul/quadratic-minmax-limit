@@ -1,0 +1,57 @@
+{
+  "prop": "15.653",
+  "title": "p=7 infinity-plus-three-finite boundary exclusion",
+  "proved": true,
+  "theorem": {
+    "proved": true,
+    "p7_infinity_plus_three_finite_both_product_signs": "CLOSED",
+    "negative_product_source": "Proposition 15.652",
+    "positive_product_slacks": {
+      "johnson_slice": "J(7,4)",
+      "slice_points": 35,
+      "degree_at_most_two_rank": 21,
+      "left_kernel_dimension": 14,
+      "b1": {
+        "scaled_mean": 8,
+        "unique_slack": "A(X)=x_j"
+      },
+      "b3": {
+        "scaled_mean": 8,
+        "total_slack_mass": 20,
+        "mandatory_parity_mass": 16,
+        "sparse_correction_candidates": 630,
+        "survivors": 1,
+        "unique_slack": "A(X)=(|X cap B|-2)^2"
+      }
+    },
+    "positive_product_finite_certificate": {
+      "candidate_finite_triples": 18424,
+      "square_semilinear_stabilizer_size": 48,
+      "boundary_orbits": 416,
+      "orbit_size_sum": 18424,
+      "fixed_boundary_infeasible": 416,
+      "unknown": 0,
+      "feasible": 0,
+      "coefficient_equalities_per_orbit": 177,
+      "allowed_infinity_edge_counts": [
+        5,
+        11,
+        17,
+        23,
+        29
+      ],
+      "fresh_orbit_reclassification_matches": true,
+      "independent_audit": true
+    },
+    "p7_four_finite_points": "OPEN",
+    "p5_size_four": "OPEN",
+    "closes_all_p7_size_four": false,
+    "closes_residual_ii": false,
+    "closes_R1": false,
+    "L_status": "OPEN"
+  },
+  "certificate_archive": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-26-p7-four-point/p7_infinity_three_certificate_2026-08-26.tar.gz",
+  "certificate_archive_sha256": "f9a125a18d287eef63e579b8416022e0c4d91dee0a82334fabb1167cc9356c17",
+  "certificate_audit_sha256": "d974d27274aacf8987b954a42500d7390bb9f9b895f8b813b3c7faff323264c5",
+  "orbit_source_sha256": "0b3a928e98e11838eac051c768a3b4aa0f3d5e5d32dd17fde8f8021016eae941"
+}
