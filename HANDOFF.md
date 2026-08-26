@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-26 (15.658 closes the positive p=7 infinity size-six branch)
+**Date:** 2026-08-26 (15.658--15.659 close both p=7 infinity size-six signs)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -14,10 +14,27 @@ unsaturated boundaries (518 orbits) per sign. Thus every `p=7` size-four
 case is closed. Proposition 15.656 closes all 1,202 floor-surviving `p=5`
 orbit/sign cases by complete-shell modular syndromes and sign transfer.
 Every size-four boundary is now closed for odd `p>=5`; 15.657 closes size
-six for `p>=11`, and 15.658 additionally closes the `p=7`, `c_H=+1`
-infinity-plus-five branch. The other `p=5,7` size-six branches and larger
-boundaries remain. p=13 orbits / mesh k=6 are not a close. cpu44
+six for `p>=11`, and 15.658--15.659 additionally close both `p=7`
+infinity-plus-five signs. The six-finite `p=7` branch, all `p=5` size-six
+branches, and larger boundaries remain. p=13 orbits / mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.659 — negative p=7 infinity-plus-five branch closed modulo seven
+
+`src/e1_gmin_m4_prop15659.py` and
+`evidence/NOTE_2026-08-26_p7_size_six_negative_infinity_mod7.md`. Phase one,
+the exact type budget, and congruence modulo eight force exactly one
+scaled-mean-14 direction per quadratic type. Independent V100 and
+Soulkiller floor sweeps agree on 83,496 survivors among all 1,906,884
+boundaries. A serial NUKA enumeration and a GPU-seeded quotient agree on
+1,750 square-semilinear orbits. Affine-span filtering rejects 2,205 of
+2,230 elevation cases; exact comparison of 32,400 catalog pairs in the 25
+remaining cases leaves zero survivors. NUKA and Soulkiller independently
+reproduce both modular stages. Raw records and implementation are archived
+at `/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-26-p7-size-six-negative-infinity/`.
+Together with 15.658 this closes both infinity-plus-five signs at `p=7`.
+Six finite points at `p=7`, every `p=5` size-six branch, and larger
+boundaries remain open.
 
 ## 15.658 — positive p=7 infinity-plus-five branch closed modulo seven
 
@@ -31,8 +48,8 @@ kernel rejected all `C(49,5)=1,906,884` boundaries in 2.83 seconds; an
 independent NUKA/NumPy sweep reproduced the same mask histogram and zero
 survivors in 4.47 seconds. Raw records and implementation are archived at
 `/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-26-p7-size-six-positive-infinity/`.
-The negative infinity sign, six finite points at `p=7`, and every `p=5`
-size-six branch remain open.
+Proposition 15.659 subsequently closes the negative infinity sign. Six
+finite points at `p=7` and every `p=5` size-six branch remain open.
 
 ## 15.656 — every p=5 four-point boundary closed by full-shell syndromes
 

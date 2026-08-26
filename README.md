@@ -29,7 +29,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657 closes every six-point boundary for `p>=11`; 15.658 closes the positive-product `p=7` infinity-plus-five branch; the other `p=5,7` size-six cases and boundaries of size at least eight remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657 closes every six-point boundary for `p>=11`; 15.658--15.659 close both `p=7` infinity-plus-five signs; the six-finite `p=7` branch, all `p=5` size-six cases, and boundaries of size at least eight remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -135,13 +135,17 @@ budget only 30 without infinity and 20 with infinity; these are too small
 for the exact affine slack budget for every `p>=11`, including a separate
 type-split contradiction at `p=11`. Thus size six remains only at `p=5,7`,
 while the first open boundary size for `p>=11` is at least eight.
-Proposition 15.658 handles one exceptional `p=7` branch. In the
+Propositions 15.658--15.659 handle both exceptional `p=7`
+infinity-plus-five signs. In the
 positive-product infinity-plus-five case, all directions have the unique
 scaled-mean-eight `J(7,4)` slack. The 135 mod-seven dependencies of the
 common affine score system reject all `C(49,5)=1,906,884` finite
 boundaries; independent V100 and NUKA implementations both return zero
-survivors. The negative-product infinity branch and six-finite `p=7`
-branch remain open, as do the `p=5` size-six cases.
+survivors. In the negative-product case, exact floors leave 83,496
+boundaries and 1,750 square-semilinear orbits; affine-span filtering plus
+32,400 exact catalog-pair checks reject every case, independently
+reproduced on NUKA and Soulkiller. The six-finite `p=7` branch remains
+open, as do the `p=5` size-six cases.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -178,6 +182,7 @@ graph TD
     BUDGET --> SIX["every six-point boundary<br/><b>CLOSED for p>=11</b> (15.657)"]
     SIX --> P57SIX["p=5,7 six-point boundary<br/>remaining branches <b>OPEN</b>"]
     P57SIX --> P7POSINF["p=7 positive infinity + five<br/>mod-7 full sweep <b>CLOSED</b> (15.658)"]
+    P57SIX --> P7NEGINF["p=7 negative infinity + five<br/>mod-7 catalog exhaustion <b>CLOSED</b> (15.659)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -317,6 +322,8 @@ square-direction affine-circle words.
 | 15.655 | the common 282-by-1225 exact score system has rank 147 over `F_7`; 135 left-null syndromes reject all 1,716,742,440 complete catalog tuples in 2,408 cases, with an independent reconstruction audit | closes the unsaturated `p=7` four-finite profiles for both signs; with 15.653--15.654 every `p=7` size-four boundary is closed; `p=5` is subsequently closed by 15.656 |
 | 15.656 | each antipodal `p=5` eigenshell gives a 132-by-325 exact score system of rank 67 over `F_5`; bounded lift syndromes exclude 712 orbit cases, one mod-seven exception closes the only timeout, and a nonsquare anti-isometry transfers the remaining sign | closes every `p=5` size-four boundary; with 15.652--15.655 every size-four boundary is closed for every odd `p>=5`, while size at least six remains |
 | 15.657 | exact positive quadrature extends the parity floors through six odd fibres; unique pair directions bound `sum_d(s-b_d)` by `s(s-1)`, and the resulting cost exceeds the affine slack budget | closes every six-point boundary for every odd prime `p>=11`; `p=5,7` size six, size at least eight, residual (ii), and R1 remain open |
+| 15.658 | phase zero and the exact type budget force the unique scaled-mean-eight `J(7,4)` slack in every direction; 135 mod-seven dependencies reject all `C(49,5)` finite boundaries in independent V100 and CPU sweeps | closes the positive-product `p=7` infinity-plus-five branch; the opposite sign is subsequently closed by 15.659 |
+| 15.659 | phase-one floor rigidity leaves 83,496 boundaries and 1,750 square-semilinear orbits; affine-span filtering rejects 2,205 of 2,230 elevation cases and exact comparison rejects all 32,400 catalog pairs in the remainder, independently reproduced on NUKA and Soulkiller | closes the negative-product `p=7` infinity-plus-five branch; with 15.658 both infinity signs are closed, while six finite points at `p=7`, all `p=5` size-six cases, and larger boundaries remain open |
 
 These are general theorems for odd primes (with the stated `p=3` second-shell
 exception), including the standard Paley `(25,50)` adjacent-ETF case. They
@@ -352,10 +359,10 @@ The affine reduction alone is not a close: a corrected `p=5` affine model has a 
 integral solution with directional means `(12,4,0,6,10,4)` and boundary equal
 to infinity plus an affine line. Proposition 15.656 closes the size-four
 profiles using the full shell. Proposition 15.657 excludes every size-six
-profile for `p>=11`. Proposition 15.658 also closes the positive-product
-`p=7` infinity-plus-five branch, but this `p=5` size-six affine witness, the
-other exceptional `p=5,7` size-six cases, and larger boundary profiles
-remain open.
+profile for `p>=11`. Propositions 15.658--15.659 also close both `p=7`
+infinity-plus-five signs, but this `p=5` size-six affine witness, the
+six-finite `p=7` branch, the other `p=5` size-six cases, and larger boundary
+profiles remain open.
 
 Proposition 15.642 sharpens one minimal nonempty profile. If
 `D={infinity,v}`, then `c_H=+1` forces `A_d=x_{s_d(v)}` pointwise in every
@@ -393,10 +400,11 @@ size-four boundary is therefore closed for odd `p>=5`. Proposition 15.657
 next uses the pair-deficit inequality
 `sum_d(s-b_d) <= s(s-1)` and exact floors through `b=6` to close every
 six-point boundary for odd `p>=11`. The exceptional `p=5,7` size-six cases
-are reduced further by Proposition 15.658, whose independent V100 and CPU
-mod-seven sweeps close the positive-product `p=7` infinity-plus-five branch.
-The other exceptional size-six branches and boundaries of size at least
-eight remain.
+are reduced further by Propositions 15.658--15.659. Independent V100 and
+CPU mod-seven sweeps close the positive-product `p=7` infinity-plus-five
+branch; exact orbit and catalog exhaustion closes the negative-product
+branch. The six-finite `p=7` branch, all `p=5` size-six cases, and
+boundaries of size at least eight remain.
 
 ### Route kills — do not re-tread
 
@@ -478,6 +486,8 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15650.py` | Complete `p=5` finite exclusion and all-prime closure of the negative-product infinity-plus-point branch |
 | `src/e1_gmin_m4_prop15651.py` | Complete finite positive-product exclusion and closure of both infinity-plus-point product signs for all `p>=5` |
 | `src/e1_gmin_m4_prop15656.py` | Complete `p=5` full-shell exclusion and closure of all size-four boundaries for odd `p>=5` |
+| `src/e1_gmin_m4_prop15658.py` | Complete mod-seven exclusion of the positive-product `p=7` infinity-plus-five branch |
+| `src/e1_gmin_m4_prop15659.py` | Floor, orbit, affine-span, and exact-catalog exclusion of the negative-product `p=7` infinity-plus-five branch |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |
@@ -495,6 +505,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-25_positive_product_boundary_exclusion.md` | Parallel-count divisibility and exact `l1` proof of the `p>=17` branch exclusion |
 | `evidence/NOTE_2026-08-26_complete_positive_two_point.md` | Exact coefficient, type-capacity, star-orbit, and finite-certificate closure of the four small positive cases |
 | `evidence/NOTE_2026-08-26_p5_four_point_full_shell.md` | Complete shell-slack system, modular orbit exhaustion, sign transfer, and permanent archive for 15.656 |
+| `evidence/NOTE_2026-08-26_p7_size_six_negative_infinity_mod7.md` | Complete independent modular exhaustion and permanent archive for 15.659 |
 | `evidence/NOTE_2026-08-25_negative_product_asymptotic_normal_form.md` | Slice-distance, mean, divisibility, and boundary proof of the unique large-prime negative profile |
 | `evidence/NOTE_2026-08-25_baseline_fibre_profiles.md` | Integral `l1` proof that every baseline fibre profile is ideal or one-transfer |
 | `evidence/NOTE_2026-08-25_pbss_cross_audit.md` | Perry--Beurling cross-audit and the viable multi-Gaussian R1 transplant |

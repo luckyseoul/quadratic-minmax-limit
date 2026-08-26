@@ -134,8 +134,8 @@ def enumerate_catalog(
 ) -> dict:
     from ortools.sat.python import cp_model
 
-    if odd_fibres not in (0, 2, 4) or phase not in (0, 1):
-        raise ValueError("need b in {0,2,4} and phase in {0,1}")
+    if not 0 <= odd_fibres <= 7 or phase not in (0, 1):
+        raise ValueError("need b in 0..7 and phase in {0,1}")
     if scaled_mean < 0 or scaled_mean % 2:
         raise ValueError("scaled mean must be a nonnegative even integer")
     points, _monomials, evaluation, _left_kernel = johnson_space()
@@ -230,8 +230,8 @@ def exact_slack_catalog_values(
     with the ``b=0, phase=0, mean=8`` excess catalog and explains the repeated
     count ``1764=36*7^2``.
     """
-    if odd_fibres not in (0, 2, 4) or phase not in (0, 1):
-        raise ValueError("need b in {0,2,4} and phase in {0,1}")
+    if not 0 <= odd_fibres <= 7 or phase not in (0, 1):
+        raise ValueError("need b in 0..7 and phase in {0,1}")
     points, _monomials, _evaluation, _left_kernel = johnson_space()
     B = set(range(odd_fibres))
     parity = tuple(
@@ -243,9 +243,11 @@ def exact_slack_catalog_values(
         unique_floor = (0,) * len(points)
     elif odd_fibres == 0 and phase == 1 and scaled_mean == 14:
         unique_floor = (1,) * len(points)
-    elif odd_fibres == 2 and scaled_mean == (8 if phase == 0 else 6):
+    elif odd_fibres in (1, 2, 5, 6) and scaled_mean == (
+        8 if phase == 0 else 6
+    ):
         unique_floor = parity
-    elif odd_fibres == 4 and phase == 0 and scaled_mean == 8:
+    elif odd_fibres in (3, 4) and phase == 0 and scaled_mean == 8:
         unique_floor = tuple(
             (sum(index in point for index in B) - 2) ** 2 for point in points
         )
@@ -256,8 +258,8 @@ def exact_slack_catalog_values(
     # by two because the parity baseline is identically zero.
     if (odd_fibres, phase, scaled_mean) in {
         (0, 0, 8),
-        (2, 0, 16),
-        (2, 1, 14),
+        *((b, 0, 16) for b in (1, 2, 5, 6)),
+        *((b, 1, 14) for b in (1, 2, 5, 6)),
     }:
         excess = enumerate_catalog(0, 0, 8, include_values=True)
         if not excess["complete"] or excess["unique_solution_count"] != 1764:

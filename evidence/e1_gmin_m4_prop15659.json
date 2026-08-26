@@ -1,0 +1,35 @@
+{
+  "prop": "15.659",
+  "title": "p=7 negative infinity-plus-five boundary exclusion",
+  "proved": true,
+  "scope": "p=7, c_H=-1, six-point boundary containing infinity",
+  "same_type_scaled_slack_congruence_modulus": 8,
+  "scaled_floors": {
+    "1": 6,
+    "3": 14,
+    "5": 6
+  },
+  "exactly_one_mean_14_direction_per_type": true,
+  "finite_boundaries": 1906884,
+  "floor_survivors": 83496,
+  "stabilizer_orbits": 1750,
+  "elevation_cases": 2230,
+  "affine_span_rejected_cases": 2205,
+  "exact_catalog_cases": 25,
+  "checked_exact_catalog_pairs": 32400,
+  "surviving_catalog_pairs": 0,
+  "floor_survivor_sha256": "06d2a7d1ba850347d6c876d551cf3822d01c2e6fc52f839833db8b448c329cd0",
+  "audit_sha256": "0e36fe35505b932cf3aa86444e90008d2701e8f37a9e532f895c91f7ae7149dd",
+  "archive": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-26-p7-size-six-negative-infinity/",
+  "independent_reproductions": {
+    "cuda_numpy_floor_lists_identical": true,
+    "serial_gpu_seeded_orbit_catalogs_identical": true,
+    "nuka_soulkiller_affine_results_identical": true,
+    "nuka_soulkiller_exact_results_identical": true
+  },
+  "complete_branch_mod7_infeasible": true,
+  "closes_all_p7_size_six": false,
+  "closes_residual_ii": false,
+  "closes_R1": false,
+  "L_status": "OPEN"
+}

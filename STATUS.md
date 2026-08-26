@@ -1,5 +1,18 @@
 # Status (2026-08-26)
 
+**15.659 PROVED/certified the negative-product `p=7`
+infinity-plus-five boundary exclusion, not all size-six boundaries**:
+phase one and the exact type budget force exactly one scaled-mean-14
+direction in each quadratic type. Independent V100 and Soulkiller floor
+sweeps agree on 83,496 survivors among all `C(49,5)=1,906,884` boundaries,
+and serial and GPU-seeded quotients agree on 1,750 square-semilinear orbits.
+Left-kernel affine spans reject 2,205 of 2,230 elevation cases; exact testing
+of all 32,400 catalog pairs in the remaining 25 cases leaves zero survivors.
+NUKA and Soulkiller independently reproduce both modular stages. Together
+with 15.658 this closes both `p=7` infinity-plus-five signs. Six finite
+points at `p=7`, every `p=5` size-six case, boundaries of size at least
+eight, residual (ii), Type I, R1, global QVAR, and L remain OPEN.
+
 **15.658 PROVED/certified the positive-product `p=7`
 infinity-plus-five boundary exclusion, not all size-six boundaries**:
 all eight directions have phase zero and scaled mean eight. The complete
@@ -8,8 +21,8 @@ of the `C(49,5)=1,906,884` finite boundaries fixes all 280 affine score
 right sides. The 135 left-null dependencies of the common `282 x 1225`
 system over `F_7` reject every boundary. An exact V100 integer sweep and
 an independent NUKA/NumPy sweep agree on the full direction-mask histogram
-and zero survivors. The negative-product infinity branch, six finite
-points at `p=7`, every `p=5` size-six case, boundaries of size at least
+and zero survivors. Proposition 15.659 subsequently closes the
+negative-product infinity branch. Six finite points at `p=7`, every `p=5` size-six case, boundaries of size at least
 eight, residual (ii), Type I, R1, global QVAR, and L remain OPEN.
 
 **15.657 PROVED every six-point boundary for odd `p>=11`, not residual

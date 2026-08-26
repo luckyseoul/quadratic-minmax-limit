@@ -1,0 +1,66 @@
+{
+  "experiment": "p7_size6_negative_infinity_audit",
+  "status": "independent_floor_orbit_affine_and_exact_mod7_audit",
+  "proved": true,
+  "scope": {
+    "p": 7,
+    "c_H": -1,
+    "boundary_size": 6,
+    "infinity_value": 1
+  },
+  "all_boundaries": 1906884,
+  "floor_survivors": 83496,
+  "stabilizer_orbits": 1750,
+  "elevation_cases": 2230,
+  "affine_rejected_cases": 2205,
+  "exact_catalog_cases": 25,
+  "checked_exact_catalog_pairs": 32400,
+  "surviving_catalog_pairs": 0,
+  "cuda_numpy_survivor_lists_identical": true,
+  "serial_and_gpu_seeded_orbit_catalogs_identical": true,
+  "nuka_and_soulkiller_affine_results_identical": true,
+  "nuka_and_soulkiller_exact_results_identical": true,
+  "complete_branch_mod7_infeasible": true,
+  "artifacts": [
+    {
+      "file": "p7_size6_negative_infinity_floor_v100.json",
+      "sha256": "a21b3e91344ab1c96afcb788f999ec93656481e810d339204712931457c6a2f5",
+      "bytes": 5092471
+    },
+    {
+      "file": "p7_size6_negative_infinity_floor_numpy_soulkiller.json",
+      "sha256": "3c5764aaf190929290f917fd1ca07f19a2e2b442b2451f486b4de257fe6ae528",
+      "bytes": 5092459
+    },
+    {
+      "file": "p7_size6_boundary_orbits_c-1_i1.json",
+      "sha256": "5a6f0341c4978e683753fbb05bdcd0d354720b37424410bdeec6ae5125f6ae7d",
+      "bytes": 1804308
+    },
+    {
+      "file": "p7_size6_boundary_orbits_c-1_i1_gpu_seeded.json",
+      "sha256": "c9dd8bca5f61300a55af922b5ccaa049ffccdc2f78f78c4711e40d447608ec24",
+      "bytes": 1804632
+    },
+    {
+      "file": "p7_size6_negative_infinity_affine_canonical_nuka.json",
+      "sha256": "4dac7e340dfd7185b9a74704e2c0b157771ed01eea4674d8e3aef41f63b8ddda",
+      "bytes": 12792
+    },
+    {
+      "file": "p7_size6_negative_infinity_affine_canonical_soulkiller.json",
+      "sha256": "db053066610ac26f8cdcb80a2781c496089616adfd8f0547584a0d546edc3b05",
+      "bytes": 12791
+    },
+    {
+      "file": "p7_size6_negative_infinity_mod7_exact_canonical_nuka.json",
+      "sha256": "c6fd65fac528cdc7ad6afced17d46e5cacd7f6669f92686e0cb3ec35a1253dc8",
+      "bytes": 9063
+    },
+    {
+      "file": "p7_size6_negative_infinity_mod7_exact_canonical_soulkiller.json",
+      "sha256": "76d7af1812cb54ba489977445fd9c353ddab337b928bbefc14ca7dee2d37359d",
+      "bytes": 9070
+    }
+  ]
+}

@@ -26,6 +26,21 @@ def test_unsaturated_catalog_counts_are_complete():
         assert len(targets) == len(set(targets)) == count
 
 
+def test_negative_infinity_odd_fibre_catalog_counts_are_complete():
+    expected = {
+        (1, 1, 6): 1,
+        (5, 1, 6): 1,
+        (1, 1, 14): 1764,
+        (5, 1, 14): 1764,
+        (3, 1, 14): 36,
+    }
+    for key, count in expected.items():
+        slacks = exact_slack_catalog_values(*key)
+        targets = exact_target_catalog_rows(*key)
+        assert len(slacks) == len(set(slacks)) == count
+        assert len(targets) == len(set(targets)) == count
+
+
 def test_three_1764_catalogs_are_universal_excess_translates():
     points = tuple(itertools.combinations(range(7), 4))
     excess = set(exact_slack_catalog_values(0, 0, 8))
