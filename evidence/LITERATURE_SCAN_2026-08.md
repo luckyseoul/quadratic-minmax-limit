@@ -54,3 +54,15 @@ Viable pivots if continuing:
 ## Audit
 - MO page, author site, arXiv author list (68 papers), X prize thread, targeted web/S2 (S2 rate-limited).
 - Date: 2026-08 (session).
+
+## 2026-08-26 post-finding check: Proposition 15.655
+
+After the mod-seven catalog-syndrome exclusion was found, targeted searches
+for its exact dimensions/rank and Paley--Johnson description found no
+matching theorem. Ghinelli--Key (2011), DOI `10.3934/amc.2011.5.93`, studies
+`p`-ary codes from ordinary Paley graph and line-graph incidence matrices;
+it is relevant finite-field coding context but does not contain the
+`282 x 1225` affine-score matrix, rank 147 over `F_7`, Johnson slack right
+sides, or the 2,408-case exclusion. Direct OEIS searches for `1716742440`,
+`3939012`, `1372,294,112,294,336`, and `282,1225,147,135` returned no
+results. No sequence submission or broad priority claim is proposed.

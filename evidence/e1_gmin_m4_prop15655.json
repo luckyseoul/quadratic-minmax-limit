@@ -1,0 +1,58 @@
+{
+  "prop": "15.655",
+  "title": "p=7 unsaturated four-finite mod-seven exclusion",
+  "proved": true,
+  "theorem": {
+    "proved": true,
+    "p7_four_finite_unsaturated_both_product_signs": "CLOSED",
+    "p7_all_four_finite_points_with_prop15654": "CLOSED",
+    "p7_all_size_four_with_prop15653": "CLOSED",
+    "certificate": {
+      "scope": "unsaturated p=7 four-finite boundaries for c_H=-1",
+      "edge_variables": 1225,
+      "exact_linear_equations": 282,
+      "affine_score_equations": 280,
+      "modulus": 7,
+      "rank": 147,
+      "left_dependency_dimension": 135,
+      "unsaturated_boundaries": 23520,
+      "unsaturated_orbits": 518,
+      "fixed_elevation_cases": 2408,
+      "catalog_pattern_counts": {
+        "1764": 1372,
+        "1764x36": 294,
+        "1764x1764": 112,
+        "2233x36": 294,
+        "2233x1764": 336
+      },
+      "catalog_tuples_excluded": 1716742440,
+      "mod7_infeasible_cases": 2408,
+      "surviving_cases": 0,
+      "missing_cases": 0,
+      "duplicate_cases": 0,
+      "independent_rank": 147,
+      "independent_dependency_dimension": 135,
+      "independent_recomputed_nonzero_cases": 0,
+      "independent_audit": true
+    },
+    "sign_transfer": {
+      "signed_conference_anti_isometry": true,
+      "fixes_distinguished_edge": true,
+      "edge_count_29_is_odd": true,
+      "four_finite_boundary_forces_even_infinity_degree": true,
+      "paley_product_sign_flips": true,
+      "normalized_scores_are_preserved": true
+    },
+    "p5_size_four": "OPEN",
+    "first_open_boundary_size_for_p_ge_7": 6,
+    "closes_all_p7_size_four": true,
+    "closes_residual_ii": false,
+    "closes_R1": false,
+    "L_status": "OPEN"
+  },
+  "certificate_archive": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-26-p7-four-point/p7_no_infinity_unsaturated_mod7_certificate_2026-08-26.tar.gz",
+  "certificate_archive_sha256": "ad4efb2c1f3eb53f2ebd089c8b5b6ce959945bf7ce1298c7dfa694eaeda8965d",
+  "certificate_batch_sha256": "64a87c509f92144e1dd1956c92145abc3b42deebb7fdb610405963b30d80c50f",
+  "certificate_audit_sha256": "3348579efe686302ba5eb9e654d8121f8445e9ffece19047d581413964581350",
+  "orbit_source_sha256": "7f7d3cc26077bb40ac096b638c6fc20ddf1a8fe6ddee60641f2fb568bacfd077"
+}

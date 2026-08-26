@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-26 (15.654 closes saturated p=7 four-finite profiles)
+**Date:** 2026-08-26 (15.655 closes every p=7 size-four boundary)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -9,10 +9,28 @@ Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. The full infinity-plus-point boundary is closed. Every four-point
 boundary is additionally closed for `p>=11`, and infinity plus three finite
 points is closed at `p=7`. The doubly saturated four-finite profiles at
-`p=7` are also closed for both signs; 23,520 unsaturated boundaries (518
-orbits) per sign remain there. Every `p=5` size-four case and larger
+`p=7` are also closed for both signs, and 15.655 closes all 23,520
+unsaturated boundaries (518 orbits) per sign. Thus every `p=7` size-four
+case is closed. Every `p=5` size-four case and larger
 non-Walsh boundaries remain. p=13 orbits / mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.655 — unsaturated p=7 four-finite profiles closed modulo seven
+
+`src/e1_gmin_m4_prop15655.py` and
+`evidence/NOTE_2026-08-26_p7_four_finite_unsaturated_mod7.md`.  For a fixed
+boundary/elevation case, the 280 exact affine bad-edge counts, total edge
+count, and distinguished edge give a `282 x 1225` integer system. Its rank
+over `F_7` is 147, so every catalog right side must satisfy 135 left-null
+dependencies. Exact complementary-syndrome joins cover all one- and
+two-catalog patterns: 1,716,742,440 tuples across 2,408 cases, with zero
+compatible tuple. Those cases cover all 518 unsaturated orbits and 23,520
+boundaries for `c_H=-1`. An independent implementation rebuilds the matrix
+from sign products, dependencies by incremental span reduction, catalogs
+from interpolated target coefficients, and all coverage keys; it again finds
+zero survivors. The 15.654 nonsquare anti-isometry transfers the result to
+`c_H=+1`. The raw certificate, audit, and orbit source are archived under
+`/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-26-p7-four-point/`.
 
 ## 15.654 — saturated p=7 four-finite profiles closed
 
@@ -27,7 +45,7 @@ that fixes the distinguished edge, swaps eigenshells, preserves normalized
 scores, and flips the product sign, so the sweep covers both signs. An
 independent re-enumeration/audit passes every coverage and model-scope
 check. The remaining 23,520 unsaturated boundaries (518 orbits) per sign
-are open.
+are subsequently closed by 15.655.
 
 ## 15.653 — p=7 infinity plus three finite points closed
 
@@ -40,8 +58,8 @@ rank-21 evaluation leaves uniquely `A=(|X cap B|-2)^2`. Sparse coefficient
 equations then reduce all 18,424 finite triples to 416 square-semilinear
 orbits. All 416 fixed-boundary models are infeasible; a fresh orbit
 reclassification and independent audit report zero missing, malformed,
-unknown, or feasible case. Four finite points at `p=7` and all `p=5`
-size-four cases remain open.
+unknown, or feasible case. Four finite points at `p=7` are subsequently
+closed by 15.654--15.655; all `p=5` size-four cases remain open.
 
 ## 15.652 — every four-point boundary closed for p>=11
 
@@ -54,7 +72,8 @@ the separate direction-type budgets for every odd prime `p>=11`. Combined
 with the empty and two-point exclusions, the first open boundary size there
 is at least six. At `p=7`, 15.653 subsequently closes the
 infinity-present positive-product case as well. The unsaturated four-finite
-profiles and the other exceptional `p=5` size-four shapes remain open.
+profiles are subsequently closed by 15.655. The exceptional `p=5`
+size-four shapes remain open.
 
 ## 15.651 — positive two-point remainder closed for p=5,7,11,13
 

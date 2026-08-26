@@ -1,17 +1,29 @@
 # Status (2026-08-26)
 
+**15.655 PROVED/certified the complete unsaturated `p=7` four-finite
+exclusion, not residual (ii)**: the 280 exact affine score equations plus
+edge count and the distinguished edge form a common `282 x 1225` integer
+system. Its rank over `F_7` is 147, giving 135 exact left-null dependencies.
+Complete syndrome joins reject all 1,716,742,440 catalog tuples in all 2,408
+cases covering 23,520 boundaries and 518 orbits. An independent
+implementation rebuilds the matrix, dependencies, catalog right sides, and
+coverage and again finds zero survivors. The 15.654 nonsquare anti-isometry
+transfers the result between product signs. Thus 15.653--15.655 close every
+`p=7` size-four boundary. Every `p=5` size-four shape, larger boundaries,
+residual (ii), Type I, R1, global QVAR, and L remain OPEN.
+
 **15.654 PROVED/certified the doubly saturated `p=7` four-finite
-exclusion, not every four-finite boundary**: complete Johnson-space
+exclusion; 15.655 subsequently closes the unsaturated remainder**: complete
+Johnson-space
 classification leaves one phase-zero and 36 phase-one saturated `b=4`
 slacks. Exactly 58,800 boundaries per product sign have both type costs 32;
 they form 1,225 square-semilinear orbits, whose exact coefficient models are
 all infeasible with zero unknown and zero feasible case. A signed nonsquare
 Paley anti-isometry fixes the distinguished edge, exchanges eigenshells,
 preserves normalized scores, and flips the product sign, so one orbit sweep
-covers both signs. The remaining `p=7` four-finite branch has 23,520
-unsaturated boundaries (518 orbits) per sign. Those, every `p=5` size-four
-shape, larger boundaries, residual (ii), Type I, R1, global QVAR, and L
-remain OPEN.
+covers both signs. Its 23,520-boundary unsaturated complement is now closed
+by 15.655. Every `p=5` size-four shape, larger boundaries, residual (ii),
+Type I, R1, global QVAR, and L remain OPEN.
 
 **15.653 PROVED/certified the `p=7` infinity-plus-three-finite exclusion,
 not all size-four boundaries**: 15.652 already closes `c_H=-1`. For
@@ -19,9 +31,9 @@ not all size-four boundaries**: 15.652 already closes `c_H=-1`. For
 Johnson-space calculation leaves one three-odd-fibre slack among 630 sparse
 corrections. The resulting coefficient model reduces all 18,424 finite
 triples to 416 square-semilinear boundary orbits, all infeasible with zero
-unknown and zero feasible case. Four finite points at `p=7`, every `p=5`
-size-four shape, larger boundaries, residual (ii), Type I, R1, global QVAR,
-and L remain OPEN.
+unknown and zero feasible case. Four finite points at `p=7` are now closed
+by 15.654--15.655. Every `p=5` size-four shape, larger boundaries, residual
+(ii), Type I, R1, global QVAR, and L remain OPEN.
 
 **15.652 PROVED the complete four-point boundary exclusion for every odd
 prime `p>=11`, not residual (ii)**: exact positive quadrature gives the
@@ -29,7 +41,8 @@ parity floors for zero through four odd affine fibres. Four finite boundary
 points create only six pair-collision directions; infinity plus three finite
 points creates only three. In either case the separate quadratic-type
 budgets cannot be met for `p>=11`. With 15.632 and 15.650--15.651, the first
-still-open boundary size there is at least six. The exceptional `p=5,7`
+still-open boundary size there is at least six. Propositions 15.653--15.655
+subsequently close the exceptional `p=7` size-four cases. The `p=5`
 size-four cases, larger boundaries, residual (ii), Type I, R1, global QVAR,
 and L remain OPEN.
 

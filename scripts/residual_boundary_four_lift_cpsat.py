@@ -146,6 +146,23 @@ def verify_witness(
         ]
         for eps in (-1, 1)
     }
+    valid = bool(
+        len(chosen) == 4 * p + 1
+        and (0, 1) in chosen
+        and len(boundary) == 4
+        and product == c_h
+        and (requested_infinity is None or int(0 in boundary) == requested_infinity)
+        and (fixed_boundary is None or boundary == fixed_boundary)
+        and min(scores["1"]) >= 3
+        and max(scores["-1"]) <= -3
+    )
+    return {
+        "valid": valid,
+        "boundary": list(boundary),
+        "c_H": product,
+        "plus_score_support": sorted(set(scores["1"])),
+        "minus_score_support": sorted(set(scores["-1"])),
+    }
 
 
 def add_p7_saturated_fixed_boundary_equalities(
@@ -220,23 +237,6 @@ def add_p7_saturated_fixed_boundary_equalities(
             )
             count += 1
     return count
-    valid = bool(
-        len(chosen) == 4 * p + 1
-        and (0, 1) in chosen
-        and len(boundary) == 4
-        and product == c_h
-        and (requested_infinity is None or int(0 in boundary) == requested_infinity)
-        and (fixed_boundary is None or boundary == fixed_boundary)
-        and min(scores["1"]) >= 3
-        and max(scores["-1"]) <= -3
-    )
-    return {
-        "valid": valid,
-        "boundary": list(boundary),
-        "c_H": product,
-        "plus_score_support": sorted(set(scores["1"])),
-        "minus_score_support": sorted(set(scores["-1"])),
-    }
 
 
 def solve_case(
