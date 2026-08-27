@@ -1,5 +1,19 @@
 # Status (2026-08-27)
 
+**15.663 PROVED/certified the forced-floor `p=7` size-eight stratum for
+both product signs, not the full size-eight case or residual (ii)**: exact
+profile reconstruction selects 2,016 ordered profiles and 83,770,008
+nonconic boundaries per sign whose two quadratic type floors are `(32,32)`.
+The exact type mean sums force every directional mean to its floor, leaving
+at most one 36-row catalog. An exhaustive V100 scan checks all 450,978,066
+boundaries, leaves 526 candidates under an eight-row mod-seven projection,
+and rejects all 526 with the complete 135 dependencies. NUKA independently
+rebuilds the `282 x 1225` score matrix, rank-147 row space, dependencies,
+catalogs, and all candidate failures. A nonsquare anti-isometry bijects the
+stratum between signs. With 15.662, the open size-eight floor scope falls
+from 108,754,569 to 24,983,238 boundaries per sign. Full size eight,
+residual (ii), Type I, R1, global QVAR, and L remain OPEN.
+
 **15.662 PROVED/certified the minimum-eight-odd-secant/conic `p=7`
 size-eight subbranch for both product signs, not the full size-eight case or
 residual (ii)**: complete CUDA censuses check all 450,978,066 finite
@@ -12,9 +26,9 @@ The seven exceptional orbits have 1,260 allocations, split into 172 initial
 exclusions, 662 ordinary projected V100 joins, and 426 high-direction-
 eliminating joins. Independent audits leave zero allocations. A nonsquare
 Paley anti-isometry maps all 1,323 survivors bijectively to `c_H=+1` and
-transfers the exclusion. The complete floor census nevertheless has
-108,754,569 survivors per sign, so 108,753,246 nonconic survivors remain.
-Full size eight, residual (ii), Type I, R1, global QVAR, and L remain OPEN.
+transfers the exclusion. Its 108,753,246-case nonconic remainder is
+subsequently reduced by 15.663 to 24,983,238 floor survivors per sign. Full
+size eight, residual (ii), Type I, R1, global QVAR, and L remain OPEN.
 
 **15.661 PROVED/certified the `p=7` six-finite branch and therefore every
 size-six boundary for odd `p>=5`, not residual (ii)**: exact floors leave
@@ -27,8 +41,8 @@ survivor hash; NUKA reproduces the ordered orbit catalog and ordinary
 exhaustion. A nonsquare anti-isometry transfers the opposite product sign.
 With 15.657--15.660, every size-six boundary is closed. Proposition 15.662
 subsequently closes the `p=7` minimum-eight-odd-secant/conic subbranch for
-both signs, while the nonconic size-eight remainder, residual (ii), Type I,
-R1, global QVAR, and L remain OPEN.
+both signs, and 15.663 reduces the size-eight floor remainder to 24,983,238
+per sign. Residual (ii), Type I, R1, global QVAR, and L remain OPEN.
 
 **15.660 PROVED/certified every `p=5` size-six boundary, not residual
 (ii)**: four exact catalogs are rebuilt from definitions for both product

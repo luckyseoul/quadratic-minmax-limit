@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-27 (15.662 closes the p=7 size-eight conic subbranch)
+**Date:** 2026-08-27 (15.663 closes the p=7 size-eight forced-floor stratum)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -19,10 +19,31 @@ signs, 15.660 closes every `p=5` size-six boundary, and 15.661 closes the
 six-finite `p=7` branch. Every size-six boundary is now closed for odd
 `p>=5`. Proposition 15.662 additionally closes both signs of the finite
 `p=7` size-eight minimum-odd-secant/conic subbranch: all 32 floor-surviving
-conic orbits are excluded. This is not all of size eight; 108,753,246
-nonconic floor survivors remain per sign. p=13 orbits / mesh k=6 are not a
-close. cpu44
+conic orbits are excluded. Proposition 15.663 next excludes the disjoint
+83,770,008-boundary forced-floor nonconic stratum for both signs. This is not
+all of size eight; 24,983,238 floor survivors remain per sign. p=13 orbits /
+mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.663 — p=7 size-eight forced-floor stratum closed for both signs
+
+`src/e1_gmin_m4_prop15663.py` and
+`evidence/NOTE_2026-08-27_p7_size_eight_forced_floor_exclusion.md`. The two
+complete floor files contain 2,016 ordered profiles and 83,770,008 nonconic
+boundaries per sign with exact type-floor sums `(32,32)`. Exact type means
+force every direction to its floor, so at most one complete catalog has more
+than one row (36 rows). A direct-rank V100 pass exhausts all 450,978,066
+boundaries: 526 pass its eight-row dependency projection and zero pass all
+135 mod-seven dependencies. NUKA independently rebuilds the `282 x 1225`
+score matrix, its rank-147 row space, all catalogs, and all 526 failures. The
+nonsquare anti-isometry explicitly permutes the directions and fibres and
+transfers the exclusion to `c_H=+1`. The GPU result SHA-256 is
+`6143d4eb269861b3d380c53262b534e0a54a9645c9bbe7c29d9327200ae30535`;
+the independent audit SHA-256 is
+`7adaa5e76bf4f5e128c82ec219650b390c8c087d3aed2a44857f9da7939a9c53`.
+Together with 15.662, this leaves exactly 24,983,238 open size-eight floor
+survivors per sign. Raw records are archived under
+`/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-27-p7-size-eight-forced-floor/`.
 
 ## 15.662 — p=7 size-eight conic subbranch closed for both signs
 
@@ -40,8 +61,9 @@ nonsquare anti-isometry maps the full conic survivor set bijectively to
 `c_H=+1`, closing both signs. The aggregate audit SHA-256 is
 `85f927f41b3ffc9afe1a101584e95ed852709ca6e861b439d8da1715008640a9`.
 The full floor census has 108,754,569 survivors per sign, so the next target
-is the 108,753,246 nonconic remainder—not another conic orbit. Raw records
-are archived under
+was the 108,753,246 nonconic remainder—not another conic orbit. Proposition
+15.663 subsequently removes 83,770,008 of those and leaves 24,983,238 per
+sign. Raw conic records are archived under
 `/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-27-p7-size-eight-conic/`.
 
 ## 15.661 — p=7 six-finite and all size-six boundaries closed

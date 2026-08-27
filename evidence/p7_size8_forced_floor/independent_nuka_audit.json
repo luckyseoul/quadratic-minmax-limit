@@ -1,0 +1,153 @@
+{
+  "experiment": "p7_size8_forced_floor_audit",
+  "status": "passed_independent_complete_forced_floor_audit",
+  "p": 7,
+  "finite_boundary_size": 8,
+  "gpu_result": "evidence/p7_size8_forced_floor/forced_floor_cminus1_v100.json",
+  "gpu_result_sha256": "6143d4eb269861b3d380c53262b534e0a54a9645c9bbe7c29d9327200ae30535",
+  "floor_sources": {
+    "c_H=-1": "evidence/p7_size8_cminus1/floor_profiles_cminus1.json",
+    "c_H=+1": "evidence/p7_size8_cminus1/floor_profiles_cplus1.json"
+  },
+  "floor_source_sha256": {
+    "c_H=-1": "47e7db3512fd0419df8d1fc30d886ffd6d6db1c3c09145c085ed3d80a285b218",
+    "c_H=+1": "b5e61256d34e7713db60beaf8e5e24c36958e6e1725229c9450349e4c3050b51"
+  },
+  "source_scope_each_sign": {
+    "ordered_profile_count": 2016,
+    "boundary_count": 83770008,
+    "odd_secant_histogram": {
+      "16": 254016,
+      "20": 8396640,
+      "24": 32673984,
+      "28": 30465456,
+      "32": 10459344,
+      "36": 1467648,
+      "40": 52920
+    }
+  },
+  "all_boundaries_checked_by_cuda": 450978066,
+  "forced_floor_boundaries_each_sign": 83770008,
+  "full_linear_system_shape": [
+    282,
+    1225
+  ],
+  "full_linear_system_rank_mod7": 147,
+  "full_dependency_shape": [
+    135,
+    282
+  ],
+  "full_dependency_sha256": "33f13cc757a528c64f9beb12004838cd4ea63f36a1af4e42daabc8590d26cdb1",
+  "projected_dependency_rank_mod7": 8,
+  "projected_survivors_reconstructed": 526,
+  "projected_candidate_audit_sha256": "22a85d4e22f66e2c3069c138ddcbea7fb2bc92fb36e3cd20ea9db11633608798",
+  "candidate_catalog_size_histogram": {
+    "1": 3683,
+    "36": 525
+  },
+  "full_135_dependency_survivors": 0,
+  "all_cminus_forced_floor_boundaries_excluded": true,
+  "nonsquare_anti_isometry": {
+    "nonsquare_multiplier": 8,
+    "fixes_distinguished_edge": true,
+    "signed_conference_anti_isometry": true
+  },
+  "sign_transfer": {
+    "direction_map": [
+      4,
+      7,
+      1,
+      0,
+      2,
+      3,
+      5,
+      6
+    ],
+    "fibre_label_permutations": [
+      [
+        0,
+        5,
+        3,
+        1,
+        6,
+        4,
+        2
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        0,
+        2,
+        4,
+        6,
+        1,
+        3,
+        5
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        0,
+        3,
+        6,
+        2,
+        5,
+        1,
+        4
+      ],
+      [
+        0,
+        4,
+        1,
+        5,
+        2,
+        6,
+        3
+      ],
+      [
+        0,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      [
+        0,
+        2,
+        4,
+        6,
+        1,
+        3,
+        5
+      ]
+    ],
+    "direction_map_is_bijective": true,
+    "quadratic_types_reverse": true,
+    "odd_fibre_counts_are_preserved": true,
+    "phase_int_eps_equals_cH_is_preserved_when_cH_flips": true,
+    "type_floor_sums_swap": true,
+    "forced_floor_32_32_stratum_is_bijective": true
+  },
+  "all_cplus_forced_floor_boundaries_excluded": true,
+  "all_forced_floor_boundaries_both_signs_excluded": true,
+  "closes_all_nonconic_size_eight": false,
+  "closes_all_p7_size_eight": false,
+  "closes_residual_ii": false,
+  "elapsed_seconds": 10.541244506835938
+}

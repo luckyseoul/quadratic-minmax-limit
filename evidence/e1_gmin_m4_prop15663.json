@@ -1,0 +1,62 @@
+{
+  "prop": "15.663",
+  "title": "p=7 size-eight forced-floor modular exclusion",
+  "proved": true,
+  "theorem": {
+    "proved": true,
+    "certificate": {
+      "all_size_eight_boundaries_per_sign": 450978066,
+      "floor_surviving_boundaries_before_15662_15663_per_sign": 108754569,
+      "conic_floor_survivors_excluded_by_15662_per_sign": 1323,
+      "nonconic_floor_survivors_before_15663_per_sign": 108753246,
+      "forced_floor_ordered_profiles_per_sign": 2016,
+      "forced_floor_boundaries_per_sign": 83770008,
+      "forced_floor_odd_secant_histogram_per_sign": {
+        "16": 254016,
+        "20": 8396640,
+        "24": 32673984,
+        "28": 30465456,
+        "32": 10459344,
+        "36": 1467648,
+        "40": 52920
+      },
+      "type_floor_sums": [
+        32,
+        32
+      ],
+      "exact_type_mean_sums": [
+        32,
+        32
+      ],
+      "all_directional_means_forced_to_floor": true,
+      "maximum_variable_catalogs_per_boundary": 1,
+      "sole_variable_catalog_rows": 36,
+      "common_score_system_shape": [
+        282,
+        1225
+      ],
+      "common_score_system_rank_mod7": 147,
+      "full_left_dependency_dimension_mod7": 135,
+      "gpu_projection_dimension": 8,
+      "gpu_projected_survivors": 526,
+      "full_dependency_survivors": 0,
+      "independent_nuka_recheck": true,
+      "nonsquare_sign_transfer": true,
+      "remaining_nonconic_floor_survivors_per_sign": 24983238,
+      "gpu_result_sha256": "6143d4eb269861b3d380c53262b534e0a54a9645c9bbe7c29d9327200ae30535",
+      "independent_audit_sha256": "7adaa5e76bf4f5e128c82ec219650b390c8c087d3aed2a44857f9da7939a9c53",
+      "floor_cminus1_sha256": "47e7db3512fd0419df8d1fc30d886ffd6d6db1c3c09145c085ed3d80a285b218",
+      "floor_cplus1_sha256": "b5e61256d34e7713db60beaf8e5e24c36958e6e1725229c9450349e4c3050b51",
+      "archive_root": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-27-p7-size-eight-forced-floor/",
+      "proved": true
+    },
+    "p7_size_eight_forced_floor_stratum_both_signs": "CLOSED",
+    "p7_size_eight_remaining_floor_survivors_per_sign": 24983238,
+    "full_p7_size_eight": "OPEN",
+    "closes_all_nonconic_size_eight": false,
+    "closes_all_p7_size_eight": false,
+    "closes_residual_ii": false,
+    "closes_R1": false,
+    "L_status": "OPEN"
+  }
+}
