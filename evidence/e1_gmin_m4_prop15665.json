@@ -1,0 +1,273 @@
+{
+  "prop": "15.665",
+  "title": "Conserved positive quartic mass on every R1 dual shell",
+  "proved": {
+    "raw_shell_operator_positive_semidefinite": true,
+    "harmonic_shell_is_raw_minus_radial_scalar": true,
+    "multiplicity_weighted_raw_mass_is_conserved": true,
+    "channel_upper_bound_tau_over_dimension": true,
+    "closed_trace_harmonic_polynomial": true,
+    "R1": false,
+    "phi_F_ge_6_proved_general": false,
+    "global_QVAR": false
+  },
+  "formulas": {
+    "Z_dimension": "n(n-6)/8",
+    "raw_radial_shift": "2*N*r^2/[d(d+2)] where r=||x||^2",
+    "projected_rank_one_norm": "r^2 - 4p^2/(p^2-1)*sum_i x_i^4 + 2r^2/(p^2-1)",
+    "channel_bound": "0 <= q_(s,c) <= tau_s/dim(c)",
+    "trace_zonal_theta_factor": "-4p^2(p^2+1)/(p^2-1)"
+  },
+  "partition_checks": {
+    "5": {
+      "Z_dimension": 65,
+      "constituents": [
+        {
+          "channel": "circle-kernel",
+          "kind": "principal",
+          "dimension": 26,
+          "count": 1
+        },
+        {
+          "channel": "circle-low",
+          "kind": "principal",
+          "dimension": 26,
+          "count": 1
+        },
+        {
+          "channel": "circle-high",
+          "kind": "Weil",
+          "dimension": 13,
+          "count": 1
+        }
+      ],
+      "broad_channel_dimensions": {
+        "circle-kernel": 26,
+        "circle-low": 26,
+        "circle-high": 13
+      }
+    },
+    "7": {
+      "Z_dimension": 275,
+      "constituents": [
+        {
+          "channel": "circle-kernel",
+          "kind": "principal",
+          "dimension": 50,
+          "count": 3
+        },
+        {
+          "channel": "circle-low",
+          "kind": "Weil",
+          "dimension": 25,
+          "count": 1
+        },
+        {
+          "channel": "circle-low",
+          "kind": "principal",
+          "dimension": 50,
+          "count": 1
+        },
+        {
+          "channel": "circle-high",
+          "kind": "principal",
+          "dimension": 50,
+          "count": 1
+        }
+      ],
+      "broad_channel_dimensions": {
+        "circle-kernel": 150,
+        "circle-low": 75,
+        "circle-high": 50
+      }
+    },
+    "11": {
+      "Z_dimension": 1769,
+      "constituents": [
+        {
+          "channel": "circle-kernel",
+          "kind": "principal",
+          "dimension": 122,
+          "count": 10
+        },
+        {
+          "channel": "circle-low",
+          "kind": "Weil",
+          "dimension": 61,
+          "count": 1
+        },
+        {
+          "channel": "circle-low",
+          "kind": "principal",
+          "dimension": 122,
+          "count": 2
+        },
+        {
+          "channel": "circle-high",
+          "kind": "principal",
+          "dimension": 122,
+          "count": 2
+        }
+      ],
+      "broad_channel_dimensions": {
+        "circle-kernel": 1220,
+        "circle-low": 305,
+        "circle-high": 244
+      }
+    },
+    "13": {
+      "Z_dimension": 3485,
+      "constituents": [
+        {
+          "channel": "circle-kernel",
+          "kind": "principal",
+          "dimension": 170,
+          "count": 15
+        },
+        {
+          "channel": "circle-low",
+          "kind": "principal",
+          "dimension": 170,
+          "count": 3
+        },
+        {
+          "channel": "circle-high",
+          "kind": "Weil",
+          "dimension": 85,
+          "count": 1
+        },
+        {
+          "channel": "circle-high",
+          "kind": "principal",
+          "dimension": 170,
+          "count": 2
+        }
+      ],
+      "broad_channel_dimensions": {
+        "circle-kernel": 2550,
+        "circle-low": 510,
+        "circle-high": 425
+      }
+    },
+    "17": {
+      "Z_dimension": 10295,
+      "constituents": [
+        {
+          "channel": "circle-kernel",
+          "kind": "principal",
+          "dimension": 290,
+          "count": 28
+        },
+        {
+          "channel": "circle-low",
+          "kind": "principal",
+          "dimension": 290,
+          "count": 4
+        },
+        {
+          "channel": "circle-high",
+          "kind": "Weil",
+          "dimension": 145,
+          "count": 1
+        },
+        {
+          "channel": "circle-high",
+          "kind": "principal",
+          "dimension": 290,
+          "count": 3
+        }
+      ],
+      "broad_channel_dimensions": {
+        "circle-kernel": 8120,
+        "circle-low": 1160,
+        "circle-high": 1015
+      }
+    },
+    "19": {
+      "Z_dimension": 16109,
+      "constituents": [
+        {
+          "channel": "circle-kernel",
+          "kind": "principal",
+          "dimension": 362,
+          "count": 36
+        },
+        {
+          "channel": "circle-low",
+          "kind": "Weil",
+          "dimension": 181,
+          "count": 1
+        },
+        {
+          "channel": "circle-low",
+          "kind": "principal",
+          "dimension": 362,
+          "count": 4
+        },
+        {
+          "channel": "circle-high",
+          "kind": "principal",
+          "dimension": 362,
+          "count": 4
+        }
+      ],
+      "broad_channel_dimensions": {
+        "circle-kernel": 13032,
+        "circle-low": 1629,
+        "circle-high": 1448
+      }
+    }
+  },
+  "p11_early_shell_audit": [
+    {
+      "scaled_norm": 11,
+      "shell_count": 244,
+      "harmonic_trace": "-3538/63",
+      "radial_shift": "2/63",
+      "raw_trace_mass": "0",
+      "raw_channel_eigenvalues": {
+        "circle-kernel": "0",
+        "circle-low": "0",
+        "circle-high": "0"
+      }
+    },
+    {
+      "scaled_norm": 20,
+      "shell_count": 16104,
+      "harmonic_trace": "-5368/21",
+      "radial_shift": "1600/231",
+      "raw_trace_mass": "923784/77",
+      "raw_channel_eigenvalues": {
+        "circle-kernel": "2077/308",
+        "circle-low": "48/7",
+        "circle-high": "2119/308"
+      }
+    },
+    {
+      "scaled_norm": 24,
+      "shell_count": 14762,
+      "harmonic_trace": "-15921/28",
+      "radial_shift": "64/7",
+      "raw_trace_mass": "436943/28",
+      "raw_channel_eigenvalues": {
+        "circle-kernel": "247/28",
+        "circle-low": "247/28",
+        "circle-high": "247/28"
+      }
+    },
+    {
+      "scaled_norm": 27,
+      "shell_count": 442860,
+      "harmonic_trace": "-527406/7",
+      "radial_shift": "2430/7",
+      "raw_trace_mass": "538752",
+      "raw_channel_eigenvalues": {
+        "circle-kernel": "264",
+        "circle-low": "384",
+        "circle-high": "408"
+      }
+    }
+  ],
+  "remaining_obstruction": "A certified modular or multi-scale theta inequality must still transport these shellwise positive masses to the odd-coset target.",
+  "L_status": "OPEN"
+}

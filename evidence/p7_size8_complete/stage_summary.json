@@ -1,0 +1,120 @@
+{
+  "experiment": "p7_size8_complete_post_15664_chain",
+  "status": "complete_exact_finite_both_sign_size_eight_exclusion",
+  "p": 7,
+  "finite_boundary_size": 8,
+  "primary_sign": -1,
+  "opposite_sign_transfer": "the nonsquare Paley anti-isometry already audited in Propositions 15.662--15.664",
+  "scope_per_sign": {
+    "remaining_boundaries_after_15664": 1419432,
+    "remaining_allocation_leaves": 23892792,
+    "boundary_count_by_allocation_count": {
+      "11": 154056,
+      "16": 1194816,
+      "24": 1176,
+      "44": 69384
+    },
+    "leaf_count_by_allocation_count": {
+      "11": 1694616,
+      "16": 19117056,
+      "24": 28224,
+      "44": 3052896
+    }
+  },
+  "exact_chain": {
+    "mod7_omission": {
+      "checked_boundaries": 450978066,
+      "checked_leaves": 23892792,
+      "survivor_leaves": 458822,
+      "survivors_by_stratum": [150528, 14294, 5880, 288120],
+      "cpu_gpu_prefix": 100000,
+      "cpu_gpu_exact_match": true
+    },
+    "mod3_omission": {
+      "checked_boundaries": 450978066,
+      "checked_leaves": 23892792,
+      "survivor_leaves": 2671872,
+      "survivors_by_stratum": [363384, 1906296, 0, 402192],
+      "cpu_gpu_prefix": 100000,
+      "cpu_gpu_exact_match": true
+    },
+    "same_leaf_characteristic_intersection": {
+      "survivor_leaves": 181104,
+      "survivors_by_stratum": [77616, 0, 0, 103488]
+    },
+    "local_subset_joins_mod7_22_rows": {
+      "input_leaves": 181104,
+      "survivor_leaves": 124745,
+      "survivors_by_stratum": [50374, 0, 0, 74371],
+      "cpu_gpu_prefix": 256,
+      "cpu_gpu_exact_match": true
+    },
+    "all_triple_joins_mod7_22_rows": {
+      "input_leaves": 124745,
+      "survivor_leaves": 78126,
+      "survivors_by_stratum": [21139, 0, 0, 56987],
+      "cpu_gpu_prefix": 32,
+      "cpu_gpu_exact_match": true
+    },
+    "four_positive_catalog_join_mod7_22_rows": {
+      "input_leaves": 78126,
+      "survivor_leaves": 62892,
+      "survivors_by_stratum": [17148, 0, 0, 45744],
+      "cpu_gpu_prefix": 64,
+      "cpu_gpu_exact_match": true
+    },
+    "single_filtered_full_catalog_join_mod7_22_rows": {
+      "input_leaves": 62892,
+      "empty_single_filter": 3777,
+      "hash_partition_capacity_rejections": 0,
+      "full_join_rejections": 59115,
+      "survivor_leaves": 0,
+      "survivors_by_stratum": [0, 0, 0, 0],
+      "signature_pairs": 1439451,
+      "maximum_hash_build_product": 1764,
+      "maximum_probe_product": 2744,
+      "cpu_gpu_prefix": 512,
+      "cpu_gpu_exact_match": true
+    }
+  },
+  "independent_legacy_full_join_spot_checks": [
+    {
+      "rank_stratum_leaf": [50000, 0, 10],
+      "catalog_sizes": [62, 56, 36, 56, 56],
+      "consistent_mod3_mod7_tuples": 0
+    },
+    {
+      "rank_stratum_leaf": [194556, 3, 26],
+      "catalog_sizes": [2233, 2233, 1764],
+      "consistent_mod3_mod7_tuples": 0
+    },
+    {
+      "rank_stratum_leaf": [38728, 3, 10],
+      "catalog_sizes": [56, 1764, 62, 62, 56],
+      "consistent_mod3_mod7_tuples": 0
+    }
+  ],
+  "raw_archive": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-27-p7-size-eight-complete/",
+  "raw_sha256": {
+    "p7_size8_remaining_allocation_structure_20260827.json": "7cfd2b4497cbbc473ac9336a0ebbb3d6865da1add579896e5566fb77b4e2bf41",
+    "p7_size8_multi_elevation_tables_20260827.npz": "2799a9b442fad56b9b54efd92626a651ddc2851eace11f4024e033fc553a520f",
+    "p7_size8_multi_elevation_tables_20260827.json": "3d98121eb942f9f1d3b5280371caabe1fe1ccd0b0882ef32cd14c1e74ff0f26f",
+    "p7_size8_multi_elevation_tables_mod3_20260827.npz": "6fb4c55e0d45ffaf8089e3d2f5380859da21a130aa979b19c703200fed030684",
+    "p7_size8_multi_elevation_tables_mod3_20260827.json": "28c36a217ba4999bde04e4dfe2e85cae0ca37c3a133898534ce0e8b78efd248a",
+    "p7_size8_remaining_cminus1_v100_20260827.json": "7f50350d990d686d885f90b05a32e767e5c29a7410dfb89c857abdd82677feb5",
+    "p7_size8_remaining_cminus1_mod3_v100_20260827.json": "f54821999b6ef1d40f0eae4fce324bf3e3358215e32a572d69cf01dc0a508386",
+    "p7_size8_subset_catalog22_v100_20260827.json": "e6a3632adb7a437c532451871638ad0ae47f33938b77db1669b0be4411fb215b",
+    "p7_size8_subset_catalog_triple22_debug.json": "d83eb359eb9c2f8a2d8ebcda20c986fe37abdad80772660e738a12d112ea4d71",
+    "p7_size8_subset_catalog_quad22_v100_20260827.json": "aac92b2ca5408659059d67e117530f5713df995c7ecbba401b1e827db7673dfd",
+    "p7_size8_full_catalog_filtered22_capacity_audit512_v100_20260827.json": "428b9604e21738d9b063f0edee8a42b31d471ecd56800e4366af8ed1d7a49eaa"
+  },
+  "conclusion": {
+    "remaining_floor_survivors_per_sign": 0,
+    "all_finite_p7_size_eight_boundaries_both_signs_excluded": true,
+    "closes_residual_ii": false,
+    "closes_type_I": false,
+    "closes_R1": false,
+    "closes_global_QVAR": false,
+    "closes_limit": false
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "experiment": "p7_size8_remaining_allocation_structure",
+  "status": "complete_exact_post_15664_structure",
+  "source": "evidence/p7_size8_cminus1/floor_profiles_cminus1.json",
+  "source_sha256": "47e7db3512fd0419df8d1fc30d886ffd6d6db1c3c09145c085ed3d80a285b218",
+  "p": 7,
+  "c_H": -1,
+  "remaining_boundaries_per_sign": 1419432,
+  "remaining_allocation_leaves_per_sign": 23892792,
+  "conditioned_mod7_dependency_dimensions_by_omitted_support": {
+    "1": {
+      "(0, 1)": {
+        "112": 4
+      },
+      "(1, 0)": {
+        "112": 4
+      }
+    },
+    "2": {
+      "(0, 2)": {
+        "92": 6
+      },
+      "(1, 1)": {
+        "91": 16
+      },
+      "(2, 0)": {
+        "92": 6
+      }
+    },
+    "3": {
+      "(0, 3)": {
+        "74": 4
+      },
+      "(1, 2)": {
+        "73": 24
+      },
+      "(2, 1)": {
+        "73": 24
+      },
+      "(3, 0)": {
+        "74": 4
+      }
+    },
+    "4": {
+      "(0, 4)": {
+        "58": 1
+      },
+      "(1, 3)": {
+        "57": 16
+      },
+      "(2, 2)": {
+        "57": 36
+      },
+      "(3, 1)": {
+        "57": 16
+      },
+      "(4, 0)": {
+        "58": 1
+      }
+    },
+    "5": {
+      "(1, 4)": {
+        "42": 4
+      },
+      "(2, 3)": {
+        "42": 24
+      },
+      "(3, 2)": {
+        "42": 24
+      },
+      "(4, 1)": {
+        "42": 4
+      }
+    }
+  },
+  "strata": {
+    "11": {
+      "ordered_profiles": 248,
+      "boundaries_per_sign": 154056,
+      "allocation_leaves_per_sign": 1694616,
+      "floor_pairs_by_boundary": {
+        "(32, 16)": 154056
+      },
+      "odd_secants_by_boundary": {
+        "16": 67032,
+        "20": 51744,
+        "24": 25872,
+        "28": 9408
+      },
+      "raised_support_by_leaf": {
+        "1": 616224,
+        "2": 924336,
+        "4": 154056
+      },
+      "raised_amounts_by_leaf": {
+        "(16,)": 616224,
+        "(4, 4, 4, 4)": 154056,
+        "(8, 8)": 924336
+      },
+      "raised_type_support_by_leaf": {
+        "(0, 1)": 616224,
+        "(0, 2)": 924336,
+        "(0, 4)": 154056
+      },
+      "remaining_36row_floor_catalogs_by_leaf": {
+        "0": 38808,
+        "1": 1655808
+      },
+      "distinct_profile_signature_sets": 1,
+      "profile_signature_set_histogram": {
+        "(((1, (16,), (0, 1)), 4), ((2, (8, 8), (0, 2)), 6), ((4, (4, 4, 4, 4), (0, 4)), 1))": 248
+      }
+    },
+    "16": {
+      "ordered_profiles": 516,
+      "boundaries_per_sign": 1194816,
+      "allocation_leaves_per_sign": 19117056,
+      "floor_pairs_by_boundary": {
+        "(24, 24)": 1194816
+      },
+      "odd_secants_by_boundary": {
+        "16": 190512,
+        "20": 479808,
+        "24": 326928,
+        "28": 134064,
+        "32": 59976,
+        "40": 3528
+      },
+      "raised_support_by_leaf": {
+        "2": 19117056
+      },
+      "raised_amounts_by_leaf": {
+        "(8, 8)": 19117056
+      },
+      "raised_type_support_by_leaf": {
+        "(1, 1)": 19117056
+      },
+      "remaining_36row_floor_catalogs_by_leaf": {
+        "0": 19117056
+      },
+      "distinct_profile_signature_sets": 1,
+      "profile_signature_set_histogram": {
+        "(((2, (8, 8), (1, 1)), 16),)": 516
+      }
+    },
+    "24": {
+      "ordered_profiles": 8,
+      "boundaries_per_sign": 1176,
+      "allocation_leaves_per_sign": 28224,
+      "floor_pairs_by_boundary": {
+        "(32, 8)": 1176
+      },
+      "odd_secants_by_boundary": {
+        "16": 1176
+      },
+      "raised_support_by_leaf": {
+        "1": 4704,
+        "2": 14112,
+        "3": 4704,
+        "4": 4704
+      },
+      "raised_amounts_by_leaf": {
+        "(24,)": 4704,
+        "(4, 4, 4, 12)": 4704,
+        "(8, 16)": 14112,
+        "(8, 8, 8)": 4704
+      },
+      "raised_type_support_by_leaf": {
+        "(0, 1)": 4704,
+        "(0, 2)": 14112,
+        "(0, 3)": 4704,
+        "(0, 4)": 4704
+      },
+      "remaining_36row_floor_catalogs_by_leaf": {
+        "1": 28224
+      },
+      "distinct_profile_signature_sets": 1,
+      "profile_signature_set_histogram": {
+        "(((1, (24,), (0, 1)), 4), ((2, (8, 16), (0, 2)), 12), ((3, (8, 8, 8), (0, 3)), 4), ((4, (4, 4, 4, 12), (0, 4)), 4))": 8
+      }
+    },
+    "44": {
+      "ordered_profiles": 110,
+      "boundaries_per_sign": 69384,
+      "allocation_leaves_per_sign": 3052896,
+      "floor_pairs_by_boundary": {
+        "(24, 16)": 69384
+      },
+      "odd_secants_by_boundary": {
+        "16": 19404,
+        "20": 41160,
+        "24": 6468,
+        "28": 2352
+      },
+      "raised_support_by_leaf": {
+        "2": 1110144,
+        "3": 1665216,
+        "5": 277536
+      },
+      "raised_amounts_by_leaf": {
+        "(4, 4, 4, 4, 8)": 277536,
+        "(8, 16)": 1110144,
+        "(8, 8, 8)": 1665216
+      },
+      "raised_type_support_by_leaf": {
+        "(1, 1)": 1110144,
+        "(1, 2)": 1665216,
+        "(1, 4)": 277536
+      },
+      "remaining_36row_floor_catalogs_by_leaf": {
+        "0": 3052896
+      },
+      "distinct_profile_signature_sets": 1,
+      "profile_signature_set_histogram": {
+        "(((2, (8, 16), (1, 1)), 16), ((3, (8, 8, 8), (1, 2)), 24), ((5, (4, 4, 4, 4, 8), (1, 4)), 4))": 110
+      }
+    }
+  }
+}

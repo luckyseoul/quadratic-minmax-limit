@@ -1,5 +1,19 @@
 # Status (2026-08-27)
 
+**15.666 PROVED/certified every finite `p=7` size-eight boundary for both
+product signs, not the separate infinity-plus-seven profile or residual
+(ii)**: the 1,419,432 finite floor survivors per sign left by 15.664 have
+23,892,792 exact mean-allocation leaves. Conditioned mod-seven and mod-three
+omission scans intersect in 181,104 leaves. Exact 22-row local, all-triple,
+and four-positive joins reduce these to 124,745, 78,126, and 62,892. A
+single-catalog filter rejects 3,777, and the complete lossless base-seven
+meet-in-the-middle join rejects the other 59,115, leaving zero. CPU/CUDA
+prefixes agree at every stage, and three older full multi-characteristic
+joins independently reject representative residual classes. The nonsquare
+anti-isometry transfers the result to `c_H=+1`. Thus the complete finite
+`C(49,8)` census is closed for both signs. Infinity plus seven, residual
+(ii), Type I, R1, global QVAR, and L remain OPEN.
+
 **15.664 PROVED/certified the four-allocation `p=7` size-eight stratum for
 both product signs, not the full size-eight case or residual (ii)**: exact
 allocation reconstruction partitions the 24,983,238 survivors left by
@@ -14,9 +28,10 @@ independently rebuilds the matrix, kernels, catalogs, and candidates. The
 1,176 survivors are exactly the `4*7*42` affine-line-plus-off-line-point
 family. Every member has two mod-seven and 756 mod-three catalog rows, with
 empty intersection, so zero exact catalog choices remain. The nonsquare
-anti-isometry transfers the exclusion to `c_H=+1`. Exactly 1,419,432
-size-eight floor survivors per sign remain. Full size eight, residual (ii),
-Type I, R1, global QVAR, and L remain OPEN.
+anti-isometry transfers the exclusion to `c_H=+1`. Exactly 1,419,432 finite
+size-eight floor survivors per sign remained at this stage; Proposition
+15.666 subsequently closes all of them. The infinity-plus-seven profile,
+residual (ii), Type I, R1, global QVAR, and L remain OPEN.
 
 **15.663 PROVED/certified the forced-floor `p=7` size-eight stratum for
 both product signs, not the full size-eight case or residual (ii)**: exact
@@ -30,8 +45,9 @@ rebuilds the `282 x 1225` score matrix, rank-147 row space, dependencies,
 catalogs, and all candidate failures. A nonsquare anti-isometry bijects the
 stratum between signs. With 15.662, the open size-eight floor scope falls
 from 108,754,569 to 24,983,238 boundaries per sign; Proposition 15.664
-subsequently reduces that remainder to 1,419,432. Full size eight,
-residual (ii), Type I, R1, global QVAR, and L remain OPEN.
+subsequently reduces that remainder to 1,419,432 and 15.666 closes it. The
+infinity-plus-seven profile, residual (ii), Type I, R1, global QVAR, and L
+remain OPEN.
 
 **15.662 PROVED/certified the minimum-eight-odd-secant/conic `p=7`
 size-eight subbranch for both product signs, not the full size-eight case or
@@ -45,9 +61,10 @@ The seven exceptional orbits have 1,260 allocations, split into 172 initial
 exclusions, 662 ordinary projected V100 joins, and 426 high-direction-
 eliminating joins. Independent audits leave zero allocations. A nonsquare
 Paley anti-isometry maps all 1,323 survivors bijectively to `c_H=+1` and
-transfers the exclusion. Its 108,753,246-case nonconic remainder is
-subsequently reduced by 15.663--15.664 to 1,419,432 floor survivors per sign. Full
-size eight, residual (ii), Type I, R1, global QVAR, and L remain OPEN.
+transfers the exclusion. Its 108,753,246-case nonconic remainder is reduced
+by 15.663--15.664 to 1,419,432 finite floor survivors per sign and closed by
+15.666. The infinity-plus-seven profile, residual (ii), Type I, R1, global
+QVAR, and L remain OPEN.
 
 **15.661 PROVED/certified the `p=7` six-finite branch and therefore every
 size-six boundary for odd `p>=5`, not residual (ii)**: exact floors leave
@@ -60,8 +77,9 @@ survivor hash; NUKA reproduces the ordered orbit catalog and ordinary
 exhaustion. A nonsquare anti-isometry transfers the opposite product sign.
 With 15.657--15.660, every size-six boundary is closed. Proposition 15.662
 subsequently closes the `p=7` minimum-eight-odd-secant/conic subbranch for
-both signs, and 15.663--15.664 reduce the size-eight floor remainder to 1,419,432
-per sign. Residual (ii), Type I, R1, global QVAR, and L remain OPEN.
+both signs, 15.663--15.664 reduce the finite size-eight floor remainder to
+1,419,432 per sign, and 15.666 closes it. Residual (ii), Type I, R1, global
+QVAR, and L remain OPEN.
 
 **15.660 PROVED/certified every `p=5` size-six boundary, not residual
 (ii)**: four exact catalogs are rebuilt from definitions for both product

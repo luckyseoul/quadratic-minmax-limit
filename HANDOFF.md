@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-27 (15.664 closes the p=7 size-eight four-allocation stratum)
+**Date:** 2026-08-27 (15.666 closes finite `p=7` size eight; no top-level flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -22,10 +22,68 @@ six-finite `p=7` branch. Every size-six boundary is now closed for odd
 conic orbits are excluded. Proposition 15.663 next excludes the disjoint
 83,770,008-boundary forced-floor nonconic stratum for both signs. Proposition
 15.664 excludes another 23,563,806 boundaries per sign having exactly four
-mean allocations. This is not all of size eight; 1,419,432 floor survivors
-remain per sign. p=13 orbits /
+mean allocations. Proposition 15.666 excludes every one of the last
+1,419,432 finite boundaries per sign. Thus finite `p=7` size eight is closed
+for both signs. This is not all of the projective size-eight case: the
+separate infinity-plus-seven profile remains open. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.666 — every finite p=7 size-eight boundary closed for both signs
+
+`src/e1_gmin_m4_prop15666.py` and
+`evidence/NOTE_2026-08-27_p7_size_eight_complete_exclusion.md`. The exact
+post-15.664 partition contains 1,419,432 finite boundaries and 23,892,792
+mean-allocation leaves per sign, in allocation-count strata 11, 16, 24, and
+44. Conditioned omission scans leave 458,822 leaves modulo seven and
+2,671,872 modulo three; intersecting the same leaf triples leaves 181,104.
+Exact 22-row local, all-triple, and four-positive catalog joins reduce these
+to 124,745, 78,126, and 62,892. A single-catalog filter rejects 3,777 of the
+last leaves, and a complete meet-in-the-middle join rejects the other 59,115,
+leaving zero.
+
+The 22 base-seven digits are packed losslessly because `7^22 < 2^64`; the
+join uses exact key equality, not a probabilistic hash. CPU and CUDA prefixes
+agree at every stage, including 512 leaves in the final join, and three
+representative cases independently fail the older full multi-characteristic
+engine. A separate counter confirms zero hash-partition capacity rejections.
+The final audit SHA-256 is
+`428b9604e21738d9b063f0edee8a42b31d471ecd56800e4366af8ed1d7a49eaa`.
+The nonsquare anti-isometry from 15.662--15.664 transfers the zero result to
+the other product sign. Raw records are archived under
+`/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-27-p7-size-eight-complete/`.
+
+Scope is finite boundaries only. Infinity plus seven, residual (ii), Type I,
+R1, global QVAR, and L remain open.
+
+## 15.665 — conserved positive quartic mass on every R1 dual shell
+
+`src/e1_gmin_m4_prop15665.py` and
+`evidence/NOTE_2026-08-27_r1_conserved_quartic_shell_mass.md`. For a complete
+dual shell `X_s`, put `b_x=Pi_Z(xx^T)` and
+`R_s=sum_x b_x tensor b_x`. Then `R_s` is positive semidefinite and its
+degree-four harmonic operator is exactly
+
+```text
+A_s = R_s - rho_s I,   rho_s = 2 N_s r_s^2/[d(d+2)].
+```
+
+The diagonal-map Gram inverse is closed, so one scalar trace-harmonic theta
+series gives `tau_s=tr(R_s)`. On every multiplicity-free PSL constituent,
+
+```text
+q_(s,c) >= 0,   sum_c dim(c) q_(s,c) = tau_s,
+q_(s,c) <= tau_s/dim(c).
+```
+
+The trace polynomial is also the coordinate-transitive orbit of one zonal
+quartic, reducing its exact PARI computation from 122 coordinate fourth
+powers to one. Exact `p=11` checks reproduce the four proved shell operators.
+This supplies the nonlinear coupling absent from 15.641, but is not an R1
+close. The active computation uses exact ordinary and trace coefficients
+through exponent 132, followed by independently verified QSopt_ex rational
+certificates; an all-prime transport inequality remains necessary even if
+the `p=11` cone closes.
 
 ## 15.664 — p=7 size-eight four-allocation stratum closed for both signs
 
@@ -50,8 +108,9 @@ SHA-256 is
 `96cfe751a6c0f6bbcd86a1ef799c25847653f8db907414c7b85da576e02efe47`;
 the independent audit SHA-256 is
 `8129b608ec2e09967e10a7da7b38a8e20584450772ac7aab6c1c8a984a370e67`.
-Exactly 1,419,432 size-eight floor survivors per sign remain. Raw records are
-archived under
+Exactly 1,419,432 finite size-eight floor survivors per sign remained at
+this stage; Proposition 15.666 subsequently closes all of them. Raw records
+are archived under
 `/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-27-p7-size-eight-four-allocation/`.
 
 ## 15.663 — p=7 size-eight forced-floor stratum closed for both signs
@@ -70,8 +129,9 @@ transfers the exclusion to `c_H=+1`. The GPU result SHA-256 is
 `6143d4eb269861b3d380c53262b534e0a54a9645c9bbe7c29d9327200ae30535`;
 the independent audit SHA-256 is
 `7adaa5e76bf4f5e128c82ec219650b390c8c087d3aed2a44857f9da7939a9c53`.
-Together with 15.662, this left exactly 24,983,238 size-eight floor survivors
-per sign; Proposition 15.664 subsequently reduces them to 1,419,432. Raw records are archived under
+Together with 15.662, this left exactly 24,983,238 finite size-eight floor
+survivors per sign; Proposition 15.664 reduces them to 1,419,432 and 15.666
+subsequently closes the remainder. Raw records are archived under
 `/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-27-p7-size-eight-forced-floor/`.
 
 ## 15.662 — p=7 size-eight conic subbranch closed for both signs
@@ -91,8 +151,9 @@ nonsquare anti-isometry maps the full conic survivor set bijectively to
 `85f927f41b3ffc9afe1a101584e95ed852709ca6e861b439d8da1715008640a9`.
 The full floor census has 108,754,569 survivors per sign, so the next target
 was the 108,753,246 nonconic remainder—not another conic orbit. Proposition
-15.663 subsequently removes 83,770,008 of those, and 15.664 removes another
-23,563,806, leaving 1,419,432 per sign. Raw conic records are archived under
+15.663 subsequently removes 83,770,008 of those, 15.664 removes another
+23,563,806, and 15.666 closes the last 1,419,432 per sign. Raw conic records
+are archived under
 `/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-27-p7-size-eight-conic/`.
 
 ## 15.661 — p=7 six-finite and all size-six boundaries closed

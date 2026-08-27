@@ -6104,11 +6104,240 @@ evidence/e1_gmin_m4_prop15640.json,
 evidence/NOTE_2026-08-25_scaled_norm_3p_minus_6_harmonic_saddle.md, and
 tests/test_prop15640.py.
 
+## Prop 15.641 (2026-08-25) — current linear modular data do not determine R1
+
+At \(p=11\), the relevant Kohnen subspace of
+\(M_{69/2}(\Gamma_0(44),\chi_{44})\) has dimension 66.  Impose the
+currently justified linear information: the infinity coefficients before
+the complete second dual shell, the forced gaps at the half, zero, quarter,
+and \(1/11\) cusps, and the complete second-shell coefficient.  Exact
+rational row reduction gives
+
+\[
+ \operatorname{rank}A_{\rm gaps}=29,
+ \qquad
+ \operatorname{rank}\binom{A_{\rm gaps}}{c_{20}}=30.       \tag{15.641.1}
+\]
+
+Thus these data leave a 36-dimensional kernel.  The second-shell row
+\(c_{20}\) and the first odd-coset half-cusp target row \(c_*\) have joint
+rank two modulo the gap rows.  More explicitly, exact elimination produces
+a 66-coordinate rational vector \(w\), with only 21 nonzero coordinates,
+such that
+
+\[
+ A_{\rm gaps}w=0,
+ \qquad c_{20}w=0,
+ \qquad c_*w=1.                                  \tag{15.641.2}
+\]
+
+Consequently the known shell coefficients and geometric cusp gaps do not
+determine, or even sign-determine, the R1 target.  This is a negative result
+about the linear coefficient-determination route, not a counterexample to
+R1: positivity of complete shell operators and further shell coupling are
+not imposed in (15.641.1).
+
+Evidence: src/e1_gmin_m4_prop15641.py,
+evidence/e1_gmin_m4_prop15641.json,
+evidence/NOTE_2026-08-25_p11_modular_independence.md, and the exact witness
+identified there by SHA-256.
+
+## Prop 15.665 (2026-08-27) — conserved positive quartic mass on every R1 dual shell
+
+Let \(X_s\) be a complete dual shell of signed size \(N_s\) and common
+squared radius \(r_s\).  Put
+
+\[
+ \mathcal Z=\{W=W^T:PWP=W,\ \operatorname{diag}W=0\},
+ \qquad z=\dim\mathcal Z={n(n-6)\over8},
+\]
+
+and, for \(x\in\operatorname{range}P\), let
+\(b_x=\Pi_{\mathcal Z}(xx^T)\).  The unphased quartic shell operator
+
+\[
+ R_s=\sum_{x\in X_s}b_x\otimes b_x                    \tag{15.665.1}
+\]
+
+is positive semidefinite.  Since the shell is a tight frame in the
+irreducible \(d=n/2\) dimensional conference eigenspace,
+
+\[
+ \sum_{x\in X_s}xx^T={N_sr_s\over d}P.
+\]
+
+Substitution in the degree-four harmonic polynomial of Proposition 15.631
+therefore gives the exact operator identity
+
+\[
+ \boxed{A_s=R_s-\rho_s I_{\mathcal Z}},
+ \qquad
+ \boxed{\rho_s={2N_sr_s^2\over d(d+2)}}.             \tag{15.665.2}
+\]
+
+It remains to compute the trace of \(R_s\) without constructing a basis of
+the \(z\)-dimensional space.  The Gram matrix of the diagonal map on
+\(\operatorname{Sym}^2(\operatorname{range}P)\) is
+
+\[
+ K=P\circ P={(p^2-1)I+J\over4p^2},
+ \qquad
+ K^{-1}={4p^2\over p^2-1}I-{2\over p^2-1}J.          \tag{15.665.3}
+\]
+
+Writing \(r=\lVert x\rVert^2\), orthogonal projection onto the kernel of
+the diagonal map yields
+
+\[
+ \boxed{
+ \lVert b_x\rVert_F^2
+ =r^2-{4p^2\over p^2-1}\sum_i x_i^4
+       +{2\over p^2-1}r^2.}                         \tag{15.665.4}
+\]
+
+If \(\{W_\alpha\}\) is an orthonormal basis of \(\mathcal Z\),
+equivariance and trace give
+\(\sum_\alpha W_\alpha^2=(z/d)P\).  Hence the scalar harmonic polynomial
+
+\[
+ H_{\rm tr}(x)=\lVert b_x\rVert_F^2
+ -{4z\over d(d+4)}r^2
+ +{2z\over(d+2)(d+4)}r^2                         \tag{15.665.5}
+\]
+
+has shell coefficient \(h_s=\operatorname{tr}A_s\).  The complete raw
+quartic mass is consequently
+
+\[
+ \boxed{\tau_s=\operatorname{tr}R_s=h_s+z\rho_s}.    \tag{15.665.6}
+\]
+
+The real PSL decomposition of \(\mathcal Z\) used above is
+multiplicity-free.  If constituent \(c\) has dimension \(m_c\), Schur's
+lemma makes \(R_s\) scalar there; call the scalar \(q_{s,c}\).  Equations
+(15.665.1) and (15.665.6) prove the conserved inequalities
+
+\[
+ \boxed{
+ q_{s,c}\ge0,
+ \qquad \sum_c m_cq_{s,c}=\tau_s,
+ \qquad q_{s,c}\le{\tau_s\over m_c}.}              \tag{15.665.7}
+\]
+
+Equivalently, every signed harmonic eigenvalue satisfies
+\(a_{s,c}=q_{s,c}-\rho_s\).  The smallest constituent has dimension
+\(d=(p^2+1)/2\), so (15.665.7) improves the uncoupled rank-one shell bound
+by a factor of order \(p^2\) and couples all channels through one scalar
+theta coefficient.
+
+At \(p=11\), the channel dimensions are \(1220,305,244\).  On the four
+proved nonempty shells \(s=11,20,24,27\), exact evaluation gives
+
+\[
+\begin{array}{c|c|c|c|c}
+s&N_s&h_s&\rho_s&\tau_s\\ \hline
+11&244&-3538/63&2/63&0\\
+20&16104&-5368/21&1600/231&923784/77\\
+24&14762&-15921/28&64/7&436943/28\\
+27&442860&-527406/7&2430/7&538752
+\end{array}                                           \tag{15.665.8}
+\]
+
+and the channel-weighted nonnegative \(q_{s,c}\) reproduce every listed
+\(\tau_s\).  This supplies the nonlinear shell positivity absent from
+Proposition 15.641.  It does not alone prove R1: a modular or multiscale
+theta inequality must still transport these conserved masses to the
+odd-coset target, uniformly in \(p\).
+
+Evidence: src/e1_gmin_m4_prop15665.py,
+evidence/e1_gmin_m4_prop15665.json,
+evidence/NOTE_2026-08-27_r1_conserved_quartic_shell_mass.md, and
+tests/test_prop15665.py.
+
+## Prop 15.666 (2026-08-27) — every finite p=7 size-eight boundary is excluded
+
+After Propositions 15.662--15.664, the complete finite floor census leaves
+
+\[
+154056+1194816+1176+69384=1419432                 \tag{15.666.1}
+\]
+
+boundaries per product sign, according as they have \((11,16,24,44)\) exact
+directional-mean allocations.  The corresponding number of allocation
+leaves is
+
+\[
+1694616+19117056+28224+3052896=23892792.          \tag{15.666.2}
+\]
+
+The common score system has shape \(282\times1225\), with ranks
+\((162,147)\) and left-kernel dimensions \((120,135)\) in characteristics
+\((3,7)\).
+Conditioning those dependencies to vanish on every raised direction block
+and selecting forty independent equations gives complete necessary V100
+scans.  Their mod-seven and mod-three survivor counts are respectively
+458,822 and 2,671,872; intersecting the same
+boundary/stratum/allocation triples leaves
+
+\[
+ (77616,0,0,103488),\qquad 181104\text{ leaves}.  \tag{15.666.3}
+\]
+
+For variable support \(V\) and a restored subset \(T\), dependencies
+vanishing on \(V\setminus T\) give an exact necessary catalog join.  Local,
+all-triple, and four-positive joins on twenty-two independent mod-seven rows
+reduce (15.666.3) through
+
+\[
+181104\longrightarrow124745\longrightarrow78126\longrightarrow62892.
+                                                               \tag{15.666.4}
+\]
+
+The twenty-two digits are stored losslessly because
+\(7^{22}=3909821048582088049<2^{64}\); no probabilistic hash is used.
+
+For each of the last 62,892 leaves and each variable direction \(d\), now
+condition on all blocks \(V\setminus\{d\}\).  This filters the exact rows of
+catalog \(d\), while retaining each row's signature under one common
+twenty-two-row full projection.  An exact shared-memory meet-in-the-middle
+join then restores all three or five variable catalogs simultaneously.
+There are 1,439,451 distinct isolate/full signature pairs.  Exactly 3,777
+leaves have an empty isolated catalog, and the complete join rejects the
+other 59,115:
+
+\[
+ \boxed{3777+59115=62892,\qquad N_{\rm survivor}=0.}              \tag{15.666.5}
+\]
+
+The largest hash-build and probe products are 1,764 and 2,744; the exact
+table has 4,096 slots, and the separately instrumented capacity-rejection
+counter is zero.  Independent CPU/CUDA prefixes agree at every stage,
+including 512 leaves for (15.666.5), and the older full
+multi-characteristic engine independently returns zero on representatives
+of all three residual catalog classes.
+
+The nonsquare conference anti-isometry audited in Propositions
+15.662--15.664 bijects the complete finite floor sets and exchanges the two
+product signs.  Hence (15.666.5) proves
+
+\[
+ \boxed{\text{every finite (p=7) size-eight boundary is impossible for
+ both product signs}.}                                      \tag{15.666.6}
+\]
+
+The separate infinity-plus-seven profile, residual (ii), Type I, R1,
+global QVAR, and the limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15666.py`,
+`evidence/e1_gmin_m4_prop15666.json`,
+`evidence/NOTE_2026-08-27_p7_size_eight_complete_exclusion.md`,
+`evidence/p7_size8_complete/`, and `tests/test_prop15666.py`.
+
 ## Prop 15.656 (2026-08-26) — every p=5 four-point boundary is excluded
 
 For (p=5), let (H) be a putative 21-edge residual graph, containing the
 distinguished edge, whose odd-degree boundary (D) has size four. Fix an
-eigenshell sign (arepsilon). Quotienting the complete shell by
+eigenshell sign (\varepsilon). Quotienting the complete shell by
 (ysim-y) leaves 130 distinct edge-sign rows
 
 \[

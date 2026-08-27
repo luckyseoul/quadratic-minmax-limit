@@ -1,0 +1,86 @@
+{
+  "prop": "15.666",
+  "title": "complete finite p=7 size-eight catalog exclusion",
+  "proved": true,
+  "theorem": {
+    "proved": true,
+    "certificate": {
+      "p": 7,
+      "finite_boundary_size": 8,
+      "all_finite_boundaries_per_sign": 450978066,
+      "remaining_boundaries_after_15664_per_sign": 1419432,
+      "remaining_boundary_count_by_allocation_count_per_sign": {
+        "11": 154056,
+        "16": 1194816,
+        "24": 1176,
+        "44": 69384
+      },
+      "remaining_allocation_leaves_per_sign": 23892792,
+      "remaining_leaf_count_by_allocation_count_per_sign": {
+        "11": 1694616,
+        "16": 19117056,
+        "24": 28224,
+        "44": 3052896
+      },
+      "common_score_system_shape": [
+        282,
+        1225
+      ],
+      "common_score_system_rank_mod3": 162,
+      "full_left_dependency_dimension_mod3": 120,
+      "common_score_system_rank_mod7": 147,
+      "full_left_dependency_dimension_mod7": 135,
+      "omission_projection_rows": 40,
+      "mod7_omission_survivor_leaves": 458822,
+      "mod3_omission_survivor_leaves": 2671872,
+      "same_leaf_mod3_mod7_intersection": 181104,
+      "same_leaf_intersection_by_stratum": [
+        77616,
+        0,
+        0,
+        103488
+      ],
+      "local_subset_survivors_22_rows": 124745,
+      "all_triple_survivors_22_rows": 78126,
+      "four_positive_survivors_22_rows": 62892,
+      "full_join_projection_rows": 22,
+      "single_filter_empty_leaves": 3777,
+      "hash_partition_capacity_rejections": 0,
+      "full_join_rejected_leaves": 59115,
+      "full_join_survivor_leaves": 0,
+      "full_join_signature_pairs": 1439451,
+      "maximum_hash_build_product": 1764,
+      "maximum_probe_product": 2744,
+      "cpu_gpu_prefix_audits": {
+        "mod7_omission": 100000,
+        "mod3_omission": 100000,
+        "local_subset": 256,
+        "all_triple": 32,
+        "four_positive": 64,
+        "filtered_full_join": 512
+      },
+      "all_cpu_gpu_prefixes_match": true,
+      "legacy_full_join_spot_checks": 3,
+      "legacy_full_join_spot_check_survivors": 0,
+      "nonsquare_sign_transfer_from_15662_through_15664": true,
+      "remaining_finite_floor_survivors_per_sign": 0,
+      "stage_summary_sha256": "1f81fc78df5a1d178909382e7c8a0fb2ca356ca0584c780d0b30c07f5f704859",
+      "allocation_structure_sha256": "7cfd2b4497cbbc473ac9336a0ebbb3d6865da1add579896e5566fb77b4e2bf41",
+      "omission_tables_mod7_sha256": "3d98121eb942f9f1d3b5280371caabe1fe1ccd0b0882ef32cd14c1e74ff0f26f",
+      "omission_tables_mod3_sha256": "28c36a217ba4999bde04e4dfe2e85cae0ca37c3a133898534ce0e8b78efd248a",
+      "full_join_audit_sha256": "428b9604e21738d9b063f0edee8a42b31d471ecd56800e4366af8ed1d7a49eaa",
+      "archive_root": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-27-p7-size-eight-complete/",
+      "proved": true
+    },
+    "finite_p7_size_eight_both_signs": "CLOSED",
+    "finite_p7_size_eight_remaining_floor_survivors_per_sign": 0,
+    "full_p7_size_eight_including_infinity_plus_seven": "OPEN",
+    "closes_all_finite_p7_size_eight": true,
+    "closes_all_p7_size_eight": false,
+    "closes_residual_ii": false,
+    "closes_type_I": false,
+    "closes_R1": false,
+    "closes_global_QVAR": false,
+    "L_status": "OPEN"
+  }
+}

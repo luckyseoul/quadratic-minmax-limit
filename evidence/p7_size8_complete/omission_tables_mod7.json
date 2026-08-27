@@ -1,0 +1,1492 @@
+{
+  "experiment": "p7_size8_multi_elevation_tables",
+  "status": "complete_exact_post_15664_omission_tables",
+  "p": 7,
+  "c_H": -1,
+  "modulus": 7,
+  "projection_rows": 40,
+  "valid_support_count": 59,
+  "minimum_conditioned_dimension": 42,
+  "maximum_conditioned_dimension": 112,
+  "linear_system": [
+    {
+      "modulus": 7,
+      "rank": 147,
+      "left_dependency_dimension": 135,
+      "left_null_audit": true
+    }
+  ],
+  "projection_records": [
+    {
+      "support_mask": 1,
+      "directions": [
+        0
+      ],
+      "type_support": [
+        0,
+        1
+      ],
+      "conditioned_dimension": 112,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        10,
+        10,
+        10,
+        10,
+        10,
+        11,
+        11
+      ]
+    },
+    {
+      "support_mask": 3,
+      "directions": [
+        0,
+        1
+      ],
+      "type_support": [
+        1,
+        1
+      ],
+      "conditioned_dimension": 91,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        0,
+        9,
+        9,
+        10,
+        9,
+        10,
+        10
+      ]
+    },
+    {
+      "support_mask": 4,
+      "directions": [
+        2
+      ],
+      "type_support": [
+        0,
+        1
+      ],
+      "conditioned_dimension": 112,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        10,
+        0,
+        10,
+        10,
+        10,
+        11,
+        11
+      ]
+    },
+    {
+      "support_mask": 5,
+      "directions": [
+        0,
+        2
+      ],
+      "type_support": [
+        0,
+        2
+      ],
+      "conditioned_dimension": 92,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        10,
+        0,
+        10,
+        10,
+        10,
+        10,
+        10
+      ]
+    },
+    {
+      "support_mask": 6,
+      "directions": [
+        1,
+        2
+      ],
+      "type_support": [
+        1,
+        1
+      ],
+      "conditioned_dimension": 91,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        9,
+        0,
+        0,
+        9,
+        10,
+        9,
+        10,
+        10
+      ]
+    },
+    {
+      "support_mask": 7,
+      "directions": [
+        0,
+        1,
+        2
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        0,
+        0,
+        9,
+        10,
+        9,
+        9,
+        10
+      ]
+    },
+    {
+      "support_mask": 9,
+      "directions": [
+        0,
+        3
+      ],
+      "type_support": [
+        1,
+        1
+      ],
+      "conditioned_dimension": 91,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        9,
+        9,
+        0,
+        10,
+        9,
+        10,
+        10
+      ]
+    },
+    {
+      "support_mask": 12,
+      "directions": [
+        2,
+        3
+      ],
+      "type_support": [
+        1,
+        1
+      ],
+      "conditioned_dimension": 91,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        9,
+        9,
+        0,
+        0,
+        10,
+        9,
+        10,
+        10
+      ]
+    },
+    {
+      "support_mask": 13,
+      "directions": [
+        0,
+        2,
+        3
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        9,
+        0,
+        0,
+        10,
+        9,
+        9,
+        10
+      ]
+    },
+    {
+      "support_mask": 17,
+      "directions": [
+        0,
+        4
+      ],
+      "type_support": [
+        1,
+        1
+      ],
+      "conditioned_dimension": 91,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        10,
+        9,
+        9,
+        0,
+        9,
+        10,
+        10
+      ]
+    },
+    {
+      "support_mask": 20,
+      "directions": [
+        2,
+        4
+      ],
+      "type_support": [
+        1,
+        1
+      ],
+      "conditioned_dimension": 91,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        9,
+        0,
+        9,
+        0,
+        9,
+        10,
+        10
+      ]
+    },
+    {
+      "support_mask": 21,
+      "directions": [
+        0,
+        2,
+        4
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        9,
+        0,
+        10,
+        0,
+        9,
+        9,
+        10
+      ]
+    },
+    {
+      "support_mask": 32,
+      "directions": [
+        5
+      ],
+      "type_support": [
+        0,
+        1
+      ],
+      "conditioned_dimension": 112,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        0,
+        11,
+        11
+      ]
+    },
+    {
+      "support_mask": 33,
+      "directions": [
+        0,
+        5
+      ],
+      "type_support": [
+        0,
+        2
+      ],
+      "conditioned_dimension": 92,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        10,
+        10,
+        10,
+        10,
+        0,
+        10,
+        10
+      ]
+    },
+    {
+      "support_mask": 34,
+      "directions": [
+        1,
+        5
+      ],
+      "type_support": [
+        1,
+        1
+      ],
+      "conditioned_dimension": 91,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        9,
+        0,
+        9,
+        9,
+        10,
+        0,
+        10,
+        10
+      ]
+    },
+    {
+      "support_mask": 35,
+      "directions": [
+        0,
+        1,
+        5
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        0,
+        10,
+        9,
+        9,
+        0,
+        9,
+        10
+      ]
+    },
+    {
+      "support_mask": 36,
+      "directions": [
+        2,
+        5
+      ],
+      "type_support": [
+        0,
+        2
+      ],
+      "conditioned_dimension": 92,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        10,
+        0,
+        10,
+        10,
+        0,
+        10,
+        10
+      ]
+    },
+    {
+      "support_mask": 37,
+      "directions": [
+        0,
+        2,
+        5
+      ],
+      "type_support": [
+        0,
+        3
+      ],
+      "conditioned_dimension": 74,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        10,
+        0,
+        10,
+        10,
+        0,
+        10,
+        10
+      ]
+    },
+    {
+      "support_mask": 38,
+      "directions": [
+        1,
+        2,
+        5
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        0,
+        0,
+        9,
+        9,
+        0,
+        9,
+        10
+      ]
+    },
+    {
+      "support_mask": 40,
+      "directions": [
+        3,
+        5
+      ],
+      "type_support": [
+        1,
+        1
+      ],
+      "conditioned_dimension": 91,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        9,
+        9,
+        9,
+        0,
+        10,
+        0,
+        10,
+        10
+      ]
+    },
+    {
+      "support_mask": 41,
+      "directions": [
+        0,
+        3,
+        5
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        9,
+        10,
+        0,
+        9,
+        0,
+        9,
+        10
+      ]
+    },
+    {
+      "support_mask": 44,
+      "directions": [
+        2,
+        3,
+        5
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        9,
+        0,
+        0,
+        9,
+        0,
+        9,
+        10
+      ]
+    },
+    {
+      "support_mask": 48,
+      "directions": [
+        4,
+        5
+      ],
+      "type_support": [
+        1,
+        1
+      ],
+      "conditioned_dimension": 91,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        9,
+        9,
+        9,
+        0,
+        0,
+        10,
+        10
+      ]
+    },
+    {
+      "support_mask": 49,
+      "directions": [
+        0,
+        4,
+        5
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        9,
+        10,
+        9,
+        0,
+        0,
+        9,
+        10
+      ]
+    },
+    {
+      "support_mask": 52,
+      "directions": [
+        2,
+        4,
+        5
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        9,
+        0,
+        9,
+        0,
+        0,
+        9,
+        10
+      ]
+    },
+    {
+      "support_mask": 65,
+      "directions": [
+        0,
+        6
+      ],
+      "type_support": [
+        1,
+        1
+      ],
+      "conditioned_dimension": 91,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        9,
+        9,
+        9,
+        10,
+        10,
+        0,
+        10
+      ]
+    },
+    {
+      "support_mask": 68,
+      "directions": [
+        2,
+        6
+      ],
+      "type_support": [
+        1,
+        1
+      ],
+      "conditioned_dimension": 91,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        9,
+        9,
+        0,
+        9,
+        10,
+        10,
+        0,
+        10
+      ]
+    },
+    {
+      "support_mask": 69,
+      "directions": [
+        0,
+        2,
+        6
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        9,
+        0,
+        9,
+        10,
+        9,
+        0,
+        10
+      ]
+    },
+    {
+      "support_mask": 96,
+      "directions": [
+        5,
+        6
+      ],
+      "type_support": [
+        1,
+        1
+      ],
+      "conditioned_dimension": 91,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        9,
+        9,
+        9,
+        10,
+        0,
+        0,
+        10
+      ]
+    },
+    {
+      "support_mask": 97,
+      "directions": [
+        0,
+        5,
+        6
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        9,
+        10,
+        9,
+        9,
+        0,
+        0,
+        10
+      ]
+    },
+    {
+      "support_mask": 100,
+      "directions": [
+        2,
+        5,
+        6
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        9,
+        0,
+        9,
+        9,
+        0,
+        0,
+        10
+      ]
+    },
+    {
+      "support_mask": 128,
+      "directions": [
+        7
+      ],
+      "type_support": [
+        0,
+        1
+      ],
+      "conditioned_dimension": 112,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        11,
+        11,
+        0
+      ]
+    },
+    {
+      "support_mask": 129,
+      "directions": [
+        0,
+        7
+      ],
+      "type_support": [
+        0,
+        2
+      ],
+      "conditioned_dimension": 92,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        0
+      ]
+    },
+    {
+      "support_mask": 130,
+      "directions": [
+        1,
+        7
+      ],
+      "type_support": [
+        1,
+        1
+      ],
+      "conditioned_dimension": 91,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        9,
+        0,
+        9,
+        9,
+        10,
+        10,
+        10,
+        0
+      ]
+    },
+    {
+      "support_mask": 131,
+      "directions": [
+        0,
+        1,
+        7
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        0,
+        10,
+        9,
+        9,
+        9,
+        10,
+        0
+      ]
+    },
+    {
+      "support_mask": 132,
+      "directions": [
+        2,
+        7
+      ],
+      "type_support": [
+        0,
+        2
+      ],
+      "conditioned_dimension": 92,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        10,
+        0,
+        10,
+        10,
+        10,
+        10,
+        0
+      ]
+    },
+    {
+      "support_mask": 133,
+      "directions": [
+        0,
+        2,
+        7
+      ],
+      "type_support": [
+        0,
+        3
+      ],
+      "conditioned_dimension": 74,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        10,
+        0,
+        10,
+        10,
+        10,
+        10,
+        0
+      ]
+    },
+    {
+      "support_mask": 134,
+      "directions": [
+        1,
+        2,
+        7
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        0,
+        0,
+        9,
+        9,
+        9,
+        10,
+        0
+      ]
+    },
+    {
+      "support_mask": 136,
+      "directions": [
+        3,
+        7
+      ],
+      "type_support": [
+        1,
+        1
+      ],
+      "conditioned_dimension": 91,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        9,
+        9,
+        9,
+        0,
+        10,
+        10,
+        10,
+        0
+      ]
+    },
+    {
+      "support_mask": 137,
+      "directions": [
+        0,
+        3,
+        7
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        9,
+        10,
+        0,
+        9,
+        9,
+        10,
+        0
+      ]
+    },
+    {
+      "support_mask": 140,
+      "directions": [
+        2,
+        3,
+        7
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        9,
+        0,
+        0,
+        9,
+        9,
+        10,
+        0
+      ]
+    },
+    {
+      "support_mask": 144,
+      "directions": [
+        4,
+        7
+      ],
+      "type_support": [
+        1,
+        1
+      ],
+      "conditioned_dimension": 91,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        9,
+        9,
+        9,
+        0,
+        10,
+        10,
+        0
+      ]
+    },
+    {
+      "support_mask": 145,
+      "directions": [
+        0,
+        4,
+        7
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        9,
+        10,
+        9,
+        0,
+        9,
+        10,
+        0
+      ]
+    },
+    {
+      "support_mask": 148,
+      "directions": [
+        2,
+        4,
+        7
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        9,
+        0,
+        9,
+        0,
+        9,
+        10,
+        0
+      ]
+    },
+    {
+      "support_mask": 160,
+      "directions": [
+        5,
+        7
+      ],
+      "type_support": [
+        0,
+        2
+      ],
+      "conditioned_dimension": 92,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        0,
+        10,
+        0
+      ]
+    },
+    {
+      "support_mask": 161,
+      "directions": [
+        0,
+        5,
+        7
+      ],
+      "type_support": [
+        0,
+        3
+      ],
+      "conditioned_dimension": 74,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        10,
+        10,
+        10,
+        10,
+        0,
+        10,
+        0
+      ]
+    },
+    {
+      "support_mask": 162,
+      "directions": [
+        1,
+        5,
+        7
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        0,
+        9,
+        9,
+        9,
+        0,
+        10,
+        0
+      ]
+    },
+    {
+      "support_mask": 164,
+      "directions": [
+        2,
+        5,
+        7
+      ],
+      "type_support": [
+        0,
+        3
+      ],
+      "conditioned_dimension": 74,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        10,
+        0,
+        10,
+        10,
+        0,
+        10,
+        0
+      ]
+    },
+    {
+      "support_mask": 165,
+      "directions": [
+        0,
+        2,
+        5,
+        7
+      ],
+      "type_support": [
+        0,
+        4
+      ],
+      "conditioned_dimension": 58,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        12,
+        0,
+        11,
+        12,
+        0,
+        11,
+        0
+      ]
+    },
+    {
+      "support_mask": 167,
+      "directions": [
+        0,
+        1,
+        2,
+        5,
+        7
+      ],
+      "type_support": [
+        1,
+        4
+      ],
+      "conditioned_dimension": 42,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        0,
+        0,
+        13,
+        14,
+        0,
+        13,
+        0
+      ]
+    },
+    {
+      "support_mask": 168,
+      "directions": [
+        3,
+        5,
+        7
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        9,
+        9,
+        0,
+        9,
+        0,
+        10,
+        0
+      ]
+    },
+    {
+      "support_mask": 173,
+      "directions": [
+        0,
+        2,
+        3,
+        5,
+        7
+      ],
+      "type_support": [
+        1,
+        4
+      ],
+      "conditioned_dimension": 42,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        13,
+        0,
+        0,
+        14,
+        0,
+        13,
+        0
+      ]
+    },
+    {
+      "support_mask": 176,
+      "directions": [
+        4,
+        5,
+        7
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        9,
+        9,
+        9,
+        0,
+        0,
+        10,
+        0
+      ]
+    },
+    {
+      "support_mask": 181,
+      "directions": [
+        0,
+        2,
+        4,
+        5,
+        7
+      ],
+      "type_support": [
+        1,
+        4
+      ],
+      "conditioned_dimension": 42,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        14,
+        0,
+        13,
+        0,
+        0,
+        13,
+        0
+      ]
+    },
+    {
+      "support_mask": 192,
+      "directions": [
+        6,
+        7
+      ],
+      "type_support": [
+        1,
+        1
+      ],
+      "conditioned_dimension": 91,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        9,
+        9,
+        9,
+        10,
+        10,
+        0,
+        0
+      ]
+    },
+    {
+      "support_mask": 193,
+      "directions": [
+        0,
+        6,
+        7
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        9,
+        10,
+        9,
+        9,
+        10,
+        0,
+        0
+      ]
+    },
+    {
+      "support_mask": 196,
+      "directions": [
+        2,
+        6,
+        7
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        9,
+        0,
+        9,
+        9,
+        10,
+        0,
+        0
+      ]
+    },
+    {
+      "support_mask": 224,
+      "directions": [
+        5,
+        6,
+        7
+      ],
+      "type_support": [
+        1,
+        2
+      ],
+      "conditioned_dimension": 73,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        10,
+        9,
+        9,
+        9,
+        10,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "support_mask": 229,
+      "directions": [
+        0,
+        2,
+        5,
+        6,
+        7
+      ],
+      "type_support": [
+        1,
+        4
+      ],
+      "conditioned_dimension": 42,
+      "selected_rank": 40,
+      "selected_direction_block_ranks": [
+        0,
+        13,
+        0,
+        13,
+        14,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "catalog_count_histogram": {
+    "1": 13504,
+    "36": 6720
+  },
+  "array_shapes": {
+    "labels": [
+      8,
+      49
+    ],
+    "epsilons": [
+      8
+    ],
+    "dependency": [
+      135,
+      282
+    ],
+    "support_masks": [
+      59
+    ],
+    "support_index": [
+      256
+    ],
+    "conditioned_dimensions": [
+      59
+    ],
+    "selected_coefficients": [
+      59,
+      40,
+      135
+    ],
+    "projected_dependencies": [
+      59,
+      40,
+      282
+    ],
+    "base": [
+      59,
+      40
+    ],
+    "singleton": [
+      59,
+      8,
+      128,
+      40
+    ],
+    "variable": [
+      59,
+      8,
+      128,
+      36,
+      40
+    ],
+    "variable_count": [
+      59,
+      8,
+      128
+    ]
+  },
+  "array_sha256": {
+    "labels": "d7b550694e8d071dd677653dd51428422c4b59a3b8fb62b75f294130b4295bbf",
+    "epsilons": "a71e5bf6a9f0ea29944e99ec7a721144096416ced212c5f534c2f4a633d48fd5",
+    "dependency": "33f13cc757a528c64f9beb12004838cd4ea63f36a1af4e42daabc8590d26cdb1",
+    "support_masks": "748a5428bac38b95f5f356729a574fd70cc5dc2475155fcaf3d1726e541afc90",
+    "support_index": "e9adb3a787e716889fbfb7d54653e37bf25e7686b4e075e86f9dd6d8a9fd41ae",
+    "conditioned_dimensions": "23b655cdfcb340fac1f7d7f21ad57f45cc19df68c6f37f619a678749e8f028a0",
+    "selected_coefficients": "ea24a38d0f78334d06dc04ae3b8d6d4eab87bd3cee6973e89ae07d3822cf6b5a",
+    "projected_dependencies": "ef9df50a9ea5b7685043b0a1c90f3e27193f41dacff97cccf0a0fd4b6152ecec",
+    "base": "4913c1f7cc43f9ac931c2151e32869eda30a9082724ada9fc32c1377506454ad",
+    "singleton": "683dae2185357a61ba2dee8ef4425e92251b8e8a09087fb673f508c90fc70a76",
+    "variable": "184ca79622d33d6539da6046939b7b28291c77ce995c2fb7606f678c2c47e149",
+    "variable_count": "ec5ef033314a1a2dfb8a9836939de5b7b4a4db32cdedc466885536dcad6e647a"
+  },
+  "output": "/tmp/p7_size8_multi_elevation_tables_20260827.npz",
+  "output_sha256": "2799a9b442fad56b9b54efd92626a651ddc2851eace11f4024e033fc553a520f",
+  "output_bytes": 1704174,
+  "elapsed_seconds": 18.7664577960968
+}

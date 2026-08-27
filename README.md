@@ -29,7 +29,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662 closes the `p=7` conic size-eight subbranch, 15.663 excludes 83,770,008 forced-floor boundaries per sign, and 15.664 excludes another 23,563,806 four-allocation boundaries per sign, leaving 1,419,432 size-eight floor survivors per sign |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary for both signs, while the separate infinity-plus-seven profile and other larger/other-prime profiles remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -71,6 +71,12 @@ Proposition 15.641 then gives an exact p=11 modular nullspace certificate:
 all justified shell/cusp rows, including the complete second shell, leave the
 half-cusp R1 target free. Thus those linear modular data cannot close R1;
 additional shells, cusp data, or nonlinear theta positivity are required.
+Proposition 15.665 supplies the missing nonlinear shell coupling: before the
+parity phase, every complete shell is a positive quartic operator, its
+harmonic operator is an explicit scalar shift, and its nonnegative PSL-channel
+eigenvalues have an exactly conserved trace. This converts the p=11 modular
+kernel into a finite exact rational positivity problem, while an all-prime
+R1 bound still requires a uniform dual certificate.
 On the non-Walsh front, Proposition 15.642 combines an exact stabilizer
 moment certificate with the degree-two polynomial-distance lemma on slices.
 For boundary `D={infinity,v}`, the positive edge-product branch is pointwise
@@ -186,8 +192,17 @@ projected candidates and 1,176 full mod-seven survivors, exactly the
 affine-line-plus-off-line-point family. NUKA independently reconstructs all
 candidates: each geometric survivor has two mod-seven and 756 mod-three
 catalog rows, but their row sets are disjoint. Thus all four-allocation
-boundaries are excluded for both signs, leaving exactly 1,419,432
-size-eight floor survivors per sign open.
+boundaries are excluded for both signs. Proposition 15.666 partitions the
+remaining 1,419,432 finite boundaries into 23,892,792 exact mean-allocation
+leaves. Conditioned mod-seven and mod-three omission scans leave 181,104
+common leaves; exact local, triple, and four-positive joins leave 62,892.
+A single-catalog filter plus a complete 22-row mod-seven meet-in-the-middle
+join rejects all 62,892, with exact CPU/CUDA prefix agreement and three
+independent older full-join spot checks. The nonsquare anti-isometry again
+transfers the result between product signs. Thus every finite `p=7`
+size-eight boundary is closed for both signs. The distinct
+infinity-plus-seven profile is not part of the finite `C(49,8)` census and
+remains open.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -227,13 +242,14 @@ graph TD
     P57SIX --> P7NEGINF["p=7 negative infinity + five<br/>mod-7 catalog exhaustion <b>CLOSED</b> (15.659)"]
     P57SIX --> P5SIX["every p=5 size-six boundary<br/>six-class exact audit <b>CLOSED</b> (15.660)"]
     P57SIX --> P7FINITE["p=7 six finite<br/>multi-prime catalog audit <b>CLOSED</b> (15.661)"]
-    BUDGET --> EIGHT["p=7 size eight<br/>108,754,569 floor survivors per sign"]
+    BUDGET --> EIGHT["p=7 finite size eight<br/>108,754,569 floor survivors per sign"]
     EIGHT --> EIGHTCONIC["minimum-eight-odd-secant conics<br/>1,323 floor survivors / 32 orbits<br/><b>CLOSED both signs</b> (15.662)"]
     EIGHTCONIC --> EIGHTSAT["25 saturated orbits / 600 allocations<br/><b>CLOSED</b>"]
     EIGHTCONIC --> EIGHTEX["7 exceptional orbits / 1,260 allocations<br/>172 + 662 + 426 excluded<br/><b>CLOSED</b>"]
     EIGHT --> EIGHTFORCED["type-floor sums (32,32)<br/>83,770,008 nonconic boundaries per sign<br/><b>CLOSED both signs</b> (15.663)"]
     EIGHT --> EIGHTFOUR["exactly four mean allocations<br/>23,563,806 boundaries / 94,255,224 leaves per sign<br/><b>CLOSED both signs</b> (15.664)"]
-    EIGHT --> EIGHTREST["1,419,432 floor survivors per sign<br/><b>OPEN</b>"]
+    EIGHT --> EIGHTREST["last 1,419,432 boundaries / 23,892,792 leaves per sign<br/><b>CLOSED both signs</b> (15.666)"]
+    BUDGET --> EIGHTINF["p=7 infinity + seven profile<br/><b>OPEN</b>"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -241,6 +257,7 @@ graph TD
     style R1 fill:#fff4e6
     style TYPEI fill:#fff4e6
     style RES fill:#fff4e6
+    style EIGHTINF fill:#fff4e6
     style WALSH fill:#e6ffe6
     style MULTI fill:#fff4e6
     style BUDGET fill:#e6ffe6
@@ -344,7 +361,7 @@ as an actual `U`-difference using arbitrary affine halfspaces.  Therefore
 37,457,112-point scan remains an independent holdout; the explicit p=19
 affine witness supersedes the earlier generic-solver timeout.
 
-### Exact Paley-lattice structure (props 15.629–15.641)
+### Exact Paley-lattice structure (props 15.629–15.641, 15.665)
 
 The post-Walsh attack exposed a precise lattice behind R1. Let
 `L = ker_Z(C−pI)`, let `P=(I+C/p)/2`, and let `A` be generated by the
@@ -364,6 +381,7 @@ square-direction affine-circle words.
 | 15.639 | the complete shell at the first nonminimal odd scaled norm `3p-6` is the disjoint union of negative signed triples and point--square-circle vectors; its signed count is `p²(p−1)(p+7)(p²+1)/6` | it is the fourth shell only at `p=11,13`; intervening even candidates remain for `p>=17`; its operator is supplied by 15.640 |
 | 15.640 | circles through a point form an exact tight frame; the complete `3p-6` harmonic shell has one negative circle-kernel eigenvalue and two positive circle-image eigenvalues for every `p>=11` | the parity twist reverses these signs, but intervening and later shells remain uncontrolled |
 | 15.641 | at `p=11`, the justified modular shell/cusp constraints have rank 30 in the 66-dimensional Kohnen space; an exact 21-coordinate witness kills every known row and the second shell while giving target coefficient one | closes coefficient determination from the current linear modular data, not R1 or theta-positivity routes |
+| 15.665 | every complete dual shell satisfies `A_s=R_s-rho_s I` with `R_s` positive semidefinite; one trace-harmonic theta series gives `tau_s=tr(R_s)`, so each multiplicity-free channel obeys `0<=q_(s,c)<=tau_s/dim(c)` and their weighted masses sum to `tau_s` | supplies nonlinear shell positivity and conservation; the resulting p=11 rational LP and an all-prime transport inequality still require certification |
 | 15.642 | a nonzero nonnegative integer-valued quadratic lift has an exact stabilizer mass floor and slice-distance support floor; for `D={infinity,v}`, `c_H=+1` is pointwise baseline and `c_H=-1` has at most three exceptional directions per type | sharp rigidity/sparsity reduction, not exclusion of the boundary or residual (ii) |
 | 15.643 | additive inter-fibre matrices force parallel counts in multiples of `(p-1)/2`; their exact `l1` budget excludes `D={infinity,v}`, `c_H=+1` for every odd `p>=17` | left `p=5,7,11,13`, subsequently closed by 15.651; other boundary profiles remain |
 | 15.644 | for all sufficiently large `p`, the negative-product infinity-plus-point branch has `2p-1` infinity edges, two parallel finite edges in every baseline direction, and exceptional counts `1,3` | asymptotic normal form; excluded by 15.646, but the threshold remains qualitative |
@@ -384,20 +402,24 @@ square-direction affine-circle words.
 | 15.659 | phase-one floor rigidity leaves 83,496 boundaries and 1,750 square-semilinear orbits; affine-span filtering rejects 2,205 of 2,230 elevation cases and exact comparison rejects all 32,400 catalog pairs in the remainder, independently reproduced on NUKA and Soulkiller | closes the negative-product `p=7` infinity-plus-five branch; `p=5` size six is subsequently closed by 15.660 and six finite points at `p=7` by 15.661 |
 | 15.660 | four exact `p=5` catalogs, signed symmetry, and complete coarse SCIP batches leave six residual classes; independent layered audits reconstruct every quotient and close all six | closes every `p=5` size-six boundary; the last size-six branch is subsequently closed by 15.661 |
 | 15.661 | exact floors reduce `C(49,6)` to 3,856,300 boundaries and 80,704 orbits; joined mod-three/mod-seven catalogs close 80,519 ordinary orbits, while compact high-mean models, 930 mean leaves, and 120 final catalog joins close the other 185 | closes both signs of six finite points at `p=7`; with 15.657--15.660 every size-six boundary is closed for odd `p>=5`, while size at least eight remains open |
-| 15.662 | complete floor censuses find 6,174 minimum-eight-odd-secant conics and 1,323 floor survivors; 32 orbits split into 600 saturated and 1,260 exceptional mean allocations, all excluded by exact CP-SAT and projected catalog certificates; a nonsquare anti-isometry transfers the other sign | closes the conic subbranch of finite size eight at `p=7` for both signs; its 108,753,246-case nonconic remainder is subsequently reduced by 15.663--15.664 |
-| 15.663 | exact type-floor sums `(32,32)` force all directional means on 83,770,008 nonconic boundaries per sign; an exhaustive V100 projection leaves 526 candidates and the full 135 mod-seven dependencies reject all of them, independently replayed on NUKA | closes the forced-floor `p=7` size-eight stratum for both signs; its 24,983,238-case remainder is subsequently reduced by 15.664 |
-| 15.664 | 23,563,806 boundaries per sign have exactly four mean allocations; raised-direction omission tests all 94,255,224 leaves, leaving 1,176 mod-seven line-plus-point survivors whose two mod-seven catalog rows are disjoint from all 756 mod-three rows, independently replayed on NUKA | closes the four-allocation `p=7` size-eight stratum for both signs; 1,419,432 floor survivors per sign and the full case remain open |
+| 15.662 | complete floor censuses find 6,174 minimum-eight-odd-secant conics and 1,323 floor survivors; 32 orbits split into 600 saturated and 1,260 exceptional mean allocations, all excluded by exact CP-SAT and projected catalog certificates; a nonsquare anti-isometry transfers the other sign | closes the conic subbranch of finite size eight at `p=7` for both signs; its nonconic remainder is subsequently closed by 15.663--15.666 |
+| 15.663 | exact type-floor sums `(32,32)` force all directional means on 83,770,008 nonconic boundaries per sign; an exhaustive V100 projection leaves 526 candidates and the full 135 mod-seven dependencies reject all of them, independently replayed on NUKA | closes the forced-floor `p=7` size-eight stratum for both signs; the finite remainder is subsequently closed by 15.664 and 15.666 |
+| 15.664 | 23,563,806 boundaries per sign have exactly four mean allocations; raised-direction omission tests all 94,255,224 leaves, leaving 1,176 mod-seven line-plus-point survivors whose two mod-seven catalog rows are disjoint from all 756 mod-three rows, independently replayed on NUKA | closes the four-allocation `p=7` size-eight stratum for both signs; the last 1,419,432 finite floor survivors per sign are subsequently closed by 15.666 |
+| 15.666 | the last 1,419,432 finite boundaries per sign give 23,892,792 allocation leaves; two-characteristic omission, exact subset joins, and a lossless 22-digit base-seven full-catalog join reduce `23,892,792 -> 181,104 -> 124,745 -> 78,126 -> 62,892 -> 0`, with CPU/CUDA prefixes and older full-join spot checks agreeing | closes every finite `p=7` size-eight boundary for both signs; the separate infinity-plus-seven profile, residual (ii), Type I, R1, global QVAR, and the limit remain open |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
 product signs: 4,851 fail the floor and all 1,323 floor survivors are
 excluded. It does not identify every size-eight floor survivor as a conic.
-The complete census has 108,754,569 survivors per sign, of which 108,753,246
-are nonconic. Proposition 15.663 excludes the disjoint 83,770,008-boundary
-forced-floor stratum for both signs. Proposition 15.664 excludes the next
-23,563,806 boundaries, those with exactly four mean allocations, leaving
-exactly 1,419,432 survivors per sign. All three proposition records retain
-`closes_all_p7_size8=false` and `closes_residual_ii=false`.
+The complete finite census has 108,754,569 survivors per sign, of which
+108,753,246 are nonconic. Proposition 15.663 excludes the disjoint
+83,770,008-boundary forced-floor stratum for both signs. Proposition 15.664
+excludes the next 23,563,806 boundaries, those with exactly four mean
+allocations. Proposition 15.666 excludes every one of the last 1,419,432,
+so the finite census now has zero survivors for either sign. Its record sets
+`closes_all_finite_p7_size8=true` but deliberately retains
+`closes_all_p7_size8=false` and `closes_residual_ii=false`, because the
+infinity-plus-seven profile is separate from the finite `C(49,8)` census.
 
 These are general theorems for odd primes (with the stated `p=3` second-shell
 exception), including the standard Paley `(25,50)` adjacent-ETF case. They
@@ -406,7 +428,9 @@ its first three complete dual shells for `p>=11`, a proved empty candidate
 shell, and the complete first possible nonminimal odd shell with its exact
 quartic spectrum. The second shell cancels the first in every channel, the
 complete third shell is another negative channel, and the first later odd
-shell is an exact saddle. These are a
+shell is an exact saddle. Proposition 15.665 further replaces uncoupled
+signed tail coefficients by nonnegative raw channel masses with one conserved
+trace on every complete shell. These are a
 substantial structural advance, but they do not prove R1, global QVAR,
 E(1), or the limit.
 
@@ -493,8 +517,12 @@ mod-seven dependencies in both the V100 result and an independent NUKA
 reconstruction. Proposition 15.664 next closes 23,563,806 four-allocation
 boundaries per sign. Its V100 omission sieve tests 94,255,224 allocation
 leaves and its independent NUKA replay separates the 1,176 exact mod-seven
-line-plus-point survivors modulo three. The full size-eight case remains
-open on 1,419,432 floor survivors per sign.
+line-plus-point survivors modulo three. Proposition 15.666 then exhausts the
+remaining 1,419,432 finite boundaries and 23,892,792 allocation leaves per
+sign. Two-characteristic omission and exact subset joins leave 62,892;
+the complete lossless 22-row catalog join leaves zero. Hence finite size
+eight at `p=7` is closed for both signs. The separate infinity-plus-seven
+profile and residual (ii) remain open.
 
 ### Route kills — do not re-tread
 
@@ -511,19 +539,19 @@ Recorded with counterexamples so they are not reopened:
 | linear 4-point and 6-point LPs | feasible-but-negative while true pairing is positive |
 | Γ_δ quantization | p=5 integrality was a single-orbit artifact; dies at p=7 |
 | first-dual-shell positivity by itself | the complete second harmonic shell is negative definite for every `p>=11` (15.634) |
-| current modular shell/cusp coefficients determine R1 | **falsified exactly** at `p=11`: a 36-dimensional kernel remains and a normalized nullspace witness has second-shell coefficient 0 but target coefficient 1 (15.641) |
+| current modular shell/cusp coefficients determine R1 | **falsified exactly** at `p=11`: a 36-dimensional kernel remains and a normalized nullspace witness has second-shell coefficient 0 but target coefficient 1 (15.641); 15.665 adds nonlinear positivity rather than reviving coefficient determination |
 
 The older class-function plan
 (`evidence/PLAN_2026-08-22_class_function_route.md`) remains a detailed
 record of the PSL/Hecke compression and its killed shortcuts. The current
-R1 structure is sharper: Props. 15.629–15.641 identify the integral glue,
+R1 structure is sharper: Props. 15.629–15.641 and 15.665 identify the integral glue,
 the first three complete dual shells, the radial Poisson phase, and their
 exact harmonic operators, prove that the first possible shell after them is
-empty, and show that the current linear modular data do not determine the
-target. The missing step is now explicitly a certified tail or multi-scale
-theta inequality, additional exact modular data, or nonlinear positivity
-specific to the theta series—not an unidentified glue-class phase or any
-classified low shell.
+empty, show that the current linear modular data do not determine the target,
+and impose positive conserved raw mass on every later shell. The missing step
+is now explicitly a certified modular or multi-scale transport inequality
+using that cone—not an unidentified glue-class phase or any classified low
+shell.
 
 ### What is left
 
@@ -532,14 +560,12 @@ classified low shell.
    The lattice/shadow theorems identify the exact theta object but do not
    control its higher dual shells.
 2. **Non-Walsh multi-level Max−:** close residual (ii) for even `k≥4p`.
-   Walsh/W1/W2 and the Eulerian-boundary branch are done. Proposition 15.662
-   closes both signs of the `p=7` size-eight conic subbranch, 15.663
-   excludes 83,770,008 additional forced-floor nonconic boundaries per sign,
-   and 15.664 excludes another 23,563,806 four-allocation boundaries per sign.
-   The remaining 1,419,432 size-eight floor survivors per sign, other
-   nonempty affine-boundary profiles, and the full 5+-level branch are not
-   closed. The related Type-I `3A+B>0` gate also remains false, although
-   strong R1 would imply it.
+   Walsh/W1/W2 and the Eulerian-boundary branch are done. Propositions
+   15.662--15.666 close every finite `p=7` size-eight boundary for both
+   signs. The separate infinity-plus-seven profile, other nonempty
+   affine-boundary profiles at larger sizes or other primes, and the full
+   5+-level branch are not closed. The related Type-I `3A+B>0` gate also
+   remains false, although strong R1 would imply it.
 
 Lemma D is complete and is no longer on the work list.
 
@@ -569,6 +595,7 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15639.py` | Complete first nonminimal odd shell `3p-6`, two-family classification, and signed count |
 | `src/e1_gmin_m4_prop15640.py` | Through-point square-circle frame and complete `3p-6` harmonic saddle spectrum |
 | `src/e1_gmin_m4_prop15641.py` | Exact p=11 modular nullspace witness showing the known shell/cusp data do not determine R1 |
+| `src/e1_gmin_m4_prop15665.py` | Positive raw quartic shell operator, exact radial shift, conserved trace series, and channel mass bounds |
 | `src/e1_gmin_m4_prop15642.py` | Exact quadratic-lift mass/support floor and infinity-plus-point boundary rigidity/sparsity |
 | `src/e1_gmin_m4_prop15643.py` | Additive inter-fibre arithmetic excluding the positive-product infinity-plus-point boundary for `p>=17` |
 | `src/e1_gmin_m4_prop15644.py` | Asymptotic normal form of the negative-product infinity-plus-point boundary |
@@ -586,6 +613,8 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15661.py` | Complete multi-prime exclusion of the `p=7` six-finite branch and all size-six boundaries |
 | `src/e1_gmin_m4_prop15662.py` | Complete both-sign exclusion of the minimum-eight-odd-secant/conic `p=7` size-eight subbranch |
 | `src/e1_gmin_m4_prop15663.py` | Complete both-sign modular exclusion of the 83,770,008-boundary forced-floor `p=7` size-eight stratum |
+| `src/e1_gmin_m4_prop15664.py` | Complete both-sign exclusion of the 23,563,806-boundary four-allocation `p=7` size-eight stratum |
+| `src/e1_gmin_m4_prop15666.py` | Complete both-sign exclusion of every remaining finite `p=7` size-eight boundary |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |
@@ -599,6 +628,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-25_first_nonminimal_odd_scaled_shell.md` | Complete proof and exact NUKA audit of the `3p-6` shell |
 | `evidence/NOTE_2026-08-25_scaled_norm_3p_minus_6_harmonic_saddle.md` | Exact fourth-moment decomposition, spectrum, and parity-twisted signs |
 | `evidence/NOTE_2026-08-25_p11_modular_independence.md` | Exact rank/nullspace certificate closing the current modular coefficient-determination route |
+| `evidence/NOTE_2026-08-27_r1_conserved_quartic_shell_mass.md` | Raw-shell positivity, trace conservation, one-zonal theta reduction, and exact p=11 early-shell audit |
 | `evidence/NOTE_2026-08-25_quadratic_lift_mass.md` | Stabilizer moment certificate, exact slice-distance reinforcement, and uniform three-exception reduction |
 | `evidence/NOTE_2026-08-25_positive_product_boundary_exclusion.md` | Parallel-count divisibility and exact `l1` proof of the `p>=17` branch exclusion |
 | `evidence/NOTE_2026-08-26_complete_positive_two_point.md` | Exact coefficient, type-capacity, star-orbit, and finite-certificate closure of the four small positive cases |
@@ -609,6 +639,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-27_p7_size_eight_conic_exclusion.md` | Floor census, 32-orbit allocation exhaustion, high-direction omission, sign transfer, and exact remaining scope for 15.662 |
 | `evidence/NOTE_2026-08-27_p7_size_eight_forced_floor_exclusion.md` | Forced-mean reduction, complete V100 sweep, independent NUKA replay, sign transfer, and exact remaining scope for 15.663 |
 | `evidence/NOTE_2026-08-27_p7_size_eight_four_allocation_exclusion.md` | Four-allocation reduction, raised-direction omission, two-modulus line-plus-point closure, sign transfer, and exact remaining scope for 15.664 |
+| `evidence/NOTE_2026-08-27_p7_size_eight_complete_exclusion.md` | Two-characteristic omission, exact full-catalog closure, sign transfer, literature/OEIS context, and archive for 15.666 |
 | `evidence/NOTE_2026-08-25_negative_product_asymptotic_normal_form.md` | Slice-distance, mean, divisibility, and boundary proof of the unique large-prime negative profile |
 | `evidence/NOTE_2026-08-25_baseline_fibre_profiles.md` | Integral `l1` proof that every baseline fibre profile is ideal or one-transfer |
 | `evidence/NOTE_2026-08-25_pbss_cross_audit.md` | Perry--Beurling cross-audit and the viable multi-Gaussian R1 transplant |
@@ -623,9 +654,12 @@ Lemma D is complete and is no longer on the work list.
 | `scripts/p7_size8_conic_global_audit.py` | Reconstructs the full conic subbranch, both component partitions, and the nonsquare sign-transfer bijection |
 | `scripts/p7_size8_forced_floor_gpu.py`, `scripts/p7_size8_forced_floor_audit.py` | Exhaustive projected V100 exclusion and independent full-dependency NUKA replay of the size-eight forced-floor stratum |
 | `scripts/p7_size8_one_elevation_tables.py`, `scripts/p7_size8_one_elevation_gpu.py`, `scripts/p7_size8_one_elevation_audit.py` | Conditioned raised-direction tables, exhaustive four-allocation V100 sieve, and independent mod-three/mod-seven NUKA closure |
+| `scripts/p7_size8_remaining_allocation_structure.py`, `scripts/p7_size8_multi_elevation_tables.py`, `scripts/p7_size8_remaining_gpu.py` | Reconstruct and exhaust all post-15.664 finite boundary allocations in characteristics three and seven |
+| `scripts/p7_size8_subset_catalog_gpu.py`, `scripts/p7_size8_full_catalog_filtered_gpu.py` | Exact lossless subset and complete-catalog CUDA joins closing the final 62,892 finite leaves |
 | `evidence/p7_exceptional_mod7triple_all/`, `evidence/p7_exceptional_high_direction_omission/` | Per-leaf certificates, projection hashes, and independent ordinary/high exceptional audits |
 | `evidence/p7_size8_forced_floor/` | Complete GPU certificate and independent audit for all 83,770,008 forced-floor boundaries per sign |
 | `evidence/p7_size8_four_allocation/` | Conditioned tables, complete V100 candidate record, and independent two-modulus audit for all 23,563,806 four-allocation boundaries per sign |
+| `evidence/p7_size8_complete/` | Compact pinned stage records for the complete finite `p=7` size-eight exclusion |
 | `scripts/r1_dual_shell_count.py`, `scripts/r1_dual_shell_export.py` | Reproducible exact PARI short-vector counts and shell archives |
 | `scripts/r1_sparse_dual_norm_gpu.py` | CUDA sparse dual-norm reconnaissance with collision bound |
 | `scripts/frame_line_system.py` | Data-free frame-line solver (any p, no Max± ensemble) |
