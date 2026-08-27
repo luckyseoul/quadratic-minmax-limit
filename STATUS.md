@@ -1,14 +1,26 @@
 # Status (2026-08-27)
 
+**15.661 PROVED/certified the `p=7` six-finite branch and therefore every
+size-six boundary for odd `p>=5`, not residual (ii)**: exact floors leave
+3,856,300 of `C(49,6)=13,983,816` boundaries and 80,704 square-semilinear
+orbits. Simultaneous mod-three/mod-seven catalog joins reject all 160,745
+elevation cases in 80,519 ordinary orbits. Compact exact high-mean models,
+930 complete mean allocations, and 120 final low-catalog joins reject the
+remaining 185 orbits. Independent NUKA and V100 floor sweeps have the same
+survivor hash; NUKA reproduces the ordered orbit catalog and ordinary
+exhaustion. A nonsquare anti-isometry transfers the opposite product sign.
+With 15.657--15.660, every size-six boundary is closed. Boundaries of size
+at least eight, residual (ii), Type I, R1, global QVAR, and L remain OPEN.
+
 **15.660 PROVED/certified every `p=5` size-six boundary, not residual
 (ii)**: four exact catalogs are rebuilt from definitions for both product
 signs and both infinity bits. Signed symmetry and complete coarse SCIP
 batches reduce all survivors to six classes. Independent layered audits
 close classes 0, 881, 2529, 3032, 4731, and 4939 while reconstructing every
 finite quotient; all six have zero unresolved or feasible leaves. Together
-with 15.657--15.659, size six now remains only for six finite points at
-`p=7`. Boundaries of size at least eight, residual (ii), Type I, R1, global
-QVAR, and L remain OPEN.
+with 15.657--15.659, size six then remained only for six finite points at
+`p=7`; Proposition 15.661 subsequently closes that branch. Boundaries of
+size at least eight, residual (ii), Type I, R1, global QVAR, and L remain OPEN.
 
 **15.659 PROVED/certified the negative-product `p=7`
 infinity-plus-five boundary exclusion, not all size-six boundaries**:
@@ -20,9 +32,9 @@ Left-kernel affine spans reject 2,205 of 2,230 elevation cases; exact testing
 of all 32,400 catalog pairs in the remaining 25 cases leaves zero survivors.
 NUKA and Soulkiller independently reproduce both modular stages. Together
 with 15.658 this closes both `p=7` infinity-plus-five signs. Proposition
-15.660 subsequently closes every `p=5` size-six case. Six finite points at
-`p=7` and boundaries of size at least
-eight, residual (ii), Type I, R1, global QVAR, and L remain OPEN.
+15.660 subsequently closes every `p=5` size-six case, and 15.661 closes six
+finite points at `p=7`. Boundaries of size at least eight, residual (ii),
+Type I, R1, global QVAR, and L remain OPEN.
 
 **15.658 PROVED/certified the positive-product `p=7`
 infinity-plus-five boundary exclusion, not all size-six boundaries**:
@@ -33,8 +45,8 @@ right sides. The 135 left-null dependencies of the common `282 x 1225`
 system over `F_7` reject every boundary. An exact V100 integer sweep and
 an independent NUKA/NumPy sweep agree on the full direction-mask histogram
 and zero survivors. Proposition 15.659 subsequently closes the
-negative-product infinity branch, and 15.660 closes every `p=5` size-six
-case. Six finite points at `p=7` and boundaries of size at least
+negative-product infinity branch, 15.660 closes every `p=5` size-six case,
+and 15.661 closes six finite points at `p=7`. Boundaries of size at least
 eight, residual (ii), Type I, R1, global QVAR, and L remain OPEN.
 
 **15.657 PROVED every six-point boundary for odd `p>=11`, not residual
@@ -45,9 +57,9 @@ direction `d`, unique pair directions give
 affine slack budget by `p^2-9p+10` for infinity plus five points from
 `p=11`, and by `p^2-12p+7` for six finite points from `p=13`. At `p=11`,
 the separate quadratic-type budgets require deficits 20 and 18, exceeding
-the geometric budget 30. Thus size six is closed for `p>=11`. The `p=5,7`
-size-six cases, boundaries of size at least eight, residual (ii), Type I,
-R1, global QVAR, and L remain OPEN.
+the geometric budget 30. Thus size six is closed for `p>=11`; Propositions
+15.658--15.661 subsequently close `p=5,7`. Boundaries of size at least
+eight, residual (ii), Type I, R1, global QVAR, and L remain OPEN.
 
 **15.656 PROVED/certified every `p=5` size-four boundary, not residual
 (ii)**: quotienting either complete eigenshell by antipodes gives 130 score
@@ -62,8 +74,8 @@ four boundary classifications, shell ranks, parity/lift masses, and the
 cases, covering 26,450 boundary/sign cases, are excluded. With 15.632 this
 closes `p=5`; with 15.652--15.655 every size-four boundary is closed for
 every odd `p>=5`. Proposition 15.657 subsequently closes size six for
-`p>=11`. Proposition 15.660 subsequently closes `p=5`; the six-finite
-`p=7` branch and larger boundaries remain OPEN.
+`p>=11`. Proposition 15.660 subsequently closes `p=5`, and 15.661 closes
+the six-finite `p=7` branch. Larger boundaries remain OPEN.
 
 **15.655 PROVED/certified the complete unsaturated `p=7` four-finite
 exclusion, not residual (ii)**: the 280 exact affine score equations plus

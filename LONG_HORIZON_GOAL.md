@@ -32,15 +32,16 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
 
 Therefore the remaining theorem is **E(1)** on \(n=p^2+1\). The live
 acceptance gate is the four-unit dictionary returned by
-`src/e1_main_chain_status.py`; as of 2026-08-26 it reads:
+`src/e1_main_chain_status.py`; as of 2026-08-27 it reads:
 
 1. **Spectral floor:** OPEN. The current route requires both global mixed-
    \(k\) QVAR and principal R1.
 2. **Residual (ii), even \(k\ge4p\):** OPEN. The Walsh slice, Eulerian
    boundary, every two-point boundary, and every four-point boundary are
-   closed; every six-point boundary is also closed for `p>=11`, and both
-   `p=7` infinity-plus-five signs are closed by 15.658--15.659, and every
-   `p=5` size-six case is closed by 15.660. The six-finite `p=7` branch and
+   closed; every six-point boundary is closed for `p>=11`, both `p=7`
+   infinity-plus-five signs are closed by 15.658--15.659, every `p=5`
+   size-six case is closed by 15.660, and the `p=7` six-finite branch is
+   closed by 15.661. Thus every size-six boundary is closed for odd `p>=5`;
    boundaries of size at least eight remain.
 3. **Type I, multi-level Max−:** OPEN. The general \(3A+B>0\) estimate is
    not proved.

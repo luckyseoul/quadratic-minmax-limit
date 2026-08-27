@@ -614,8 +614,8 @@ For six finite points and `p>=13`, the excess is `p^2-12p+7`, positive from
 `p=13`. At `p=11`, the two quadratic types have opposite phases and their
 separate budgets require deficits at least 20 and 18, contradicting 30.
 Thus every six-point boundary is closed for every odd prime `p>=11`;
-Propositions 15.658--15.660 subsequently close both infinity-present signs
-at `p=7` and every `p=5` size-six case.
+Propositions 15.658--15.661 subsequently close both infinity-present signs
+and six finite points at `p=7`, as well as every `p=5` size-six case.
 
 Targeted searches of Johnson-slice, finite-incidence, and Paley
 degree-parity sources found adjacent methods but no duplicate of the
@@ -641,13 +641,46 @@ Independent layered audits close classes `0`, `881`, `2529`, `3032`,
 crossing-edge quotient and verify every recorded SCIP infeasibility status.
 The from-definitions global audit is true, and all 97 class-881 artifact
 hashes were rechecked in the permanent `/mnt/storage/` archive. Thus every
-`p=5` size-six boundary is excluded. At size six only the six-finite `p=7`
-branch remains; larger boundaries and the top-level theorem remain open.
+`p=5` size-six boundary is excluded. Proposition 15.661 subsequently closes
+the six-finite `p=7` branch; larger boundaries and the top-level theorem
+remain open.
 
 Targeted arXiv searches found no duplicate Paley residual classification.
 The count 159,050 occurs in OEIS A063533 for an unrelated construction from
 twin-prime Pythagorean triples, so the match is coincidental and supplies no
 structural input or sequence claim.
+
+---
+
+## 7s. Complete `p=7` six-finite exclusion (2026-08-27)
+
+Proposition 15.661 evaluates the exact six-finite floor budget on all
+`C(49,6)=13,983,816` boundaries. It leaves 3,856,300 boundaries and 80,704
+square-semilinear orbits. For 80,519 ordinary orbits, every type-floor sum
+is 24 or 32, so at most one non-singleton catalog occurs per type.
+Simultaneously joined left-null signatures over `F_3` and `F_7` reject all
+160,745 exact elevation cases.
+
+The other 185 orbits require larger mean allocations. Compact exact models
+retain all 35 slack values per direction, their parity, the 14 primitive
+integer degree-two relations, the exact type means, and both modular edge
+systems. They close 92 orbits immediately. The 93 timeouts split into all
+930 exact mean allocations: 810 close directly, and the remaining 120
+low-catalog leaves close by exact two- or three-table signature joins.
+
+An independent NUKA NumPy sweep reproduces the V100 survivor hash and full
+histogram. Its serial quotient reproduces the ordered orbit catalog and
+profile histogram canonically, and its serial ordinary sweep reproduces all
+160,745 rejections. A nonsquare signed anti-isometry transfers the opposite
+product sign. Together with Propositions 15.657--15.660, every size-six
+boundary is therefore closed for every odd prime `p>=5`. Boundaries of size
+at least eight and the top-level analytic remainders remain open.
+
+Targeted literature searches found adjacent generalized-Paley and
+Johnson-slice methods, but no duplicate of this finite residual
+classification. Exact OEIS searches find 80,704 in A060716, A133751, and
+A133756, and 160,745 in A254067, all for unrelated constructions;
+3,856,300 has no exact hit. No sequence claim is made from these counts.
 
 ---
 

@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-27 (15.660 closes every p=5 size-six boundary)
+**Date:** 2026-08-27 (15.661 closes every size-six boundary for odd p>=5)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -15,10 +15,28 @@ case is closed. Proposition 15.656 closes all 1,202 floor-surviving `p=5`
 orbit/sign cases by complete-shell modular syndromes and sign transfer.
 Every size-four boundary is now closed for odd `p>=5`; 15.657 closes size
 six for `p>=11`, 15.658--15.659 close both `p=7` infinity-plus-five
-signs, and 15.660 closes every `p=5` size-six boundary. Only the six-finite
-`p=7` branch remains at size six; larger boundaries remain. p=13 orbits /
-mesh k=6 are not a close. cpu44
+signs, 15.660 closes every `p=5` size-six boundary, and 15.661 closes the
+six-finite `p=7` branch. Every size-six boundary is now closed for odd
+`p>=5`; boundaries of size at least eight remain. p=13 orbits / mesh k=6
+are not a close. cpu44
 stays hard-closed.
+
+## 15.661 — p=7 six-finite and all size-six boundaries closed
+
+`src/e1_gmin_m4_prop15661.py` and
+`evidence/NOTE_2026-08-27_p7_six_finite_exclusion.md`. Exact floors leave
+3,856,300 boundaries and 80,704 square-semilinear orbits. Simultaneous
+mod-three/mod-seven catalog signatures reject all 160,745 elevation cases
+in 80,519 ordinary orbits. Of 185 deep orbits, compact exact high-mean
+models close 92; the 93 timeouts split into 930 exact mean allocations, of
+which 810 close directly and the last 120 close by complete low-catalog
+hash joins. NUKA independently reproduces the V100 survivor hash, ordered
+orbit catalog, profile histogram, and ordinary exhaustion. The global audit
+is true, and a nonsquare anti-isometry transfers the other product sign.
+Raw records are archived under
+`/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-27-p7-six-finite/`.
+With 15.657--15.660, every size-six boundary is closed for odd `p>=5`.
+Larger boundaries and the top-level predicates remain open.
 
 ## 15.660 — every p=5 size-six boundary closed
 
@@ -33,8 +51,9 @@ The from-definitions global audit has SHA-256
 Raw class records are archived under
 `/mnt/storage/e1work/maxplus_p13/p5_size6_circle_attack_2026-08-26/`; all
 97 class-881 artifact hashes were rechecked after transfer. With
-15.657--15.659, only six finite points at `p=7` remain at boundary size six.
-Larger boundaries and the top-level predicates remain open.
+15.657--15.659, only six finite points at `p=7` then remained at boundary
+size six; Proposition 15.661 subsequently closes that branch. Larger
+boundaries and the top-level predicates remain open.
 
 ## 15.659 — negative p=7 infinity-plus-five branch closed modulo seven
 
@@ -50,8 +69,8 @@ remaining cases leaves zero survivors. NUKA and Soulkiller independently
 reproduce both modular stages. Raw records and implementation are archived
 at `/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-26-p7-size-six-negative-infinity/`.
 Together with 15.658 this closes both infinity-plus-five signs at `p=7`.
-Six finite points at `p=7` and larger boundaries remain open; Proposition
-15.660 subsequently closes every `p=5` size-six branch.
+Proposition 15.660 subsequently closes every `p=5` size-six branch, and
+15.661 closes six finite points at `p=7`; larger boundaries remain open.
 
 ## 15.658 — positive p=7 infinity-plus-five branch closed modulo seven
 
@@ -144,8 +163,9 @@ points, unique pair directions give the global deficit inequality
 `sum_d(s-b_d)<=s(s-1)`. Combining its budgets 30 and 20 with the affine
 slack floors excludes infinity plus five finite points for every `p>=11`
 and six finite points for every `p>=13`; a separate exact type-profile
-argument closes `p=11`. Proposition 15.660 subsequently closes `p=5`; the
-six-finite `p=7` case and boundaries of size at least eight remain open.
+argument closes `p=11`. Proposition 15.660 subsequently closes `p=5`, and
+15.661 closes the six-finite `p=7` case. Boundaries of size at least eight
+remain open.
 
 ## 15.652 — every four-point boundary closed for p>=11
 

@@ -1,0 +1,46 @@
+{
+  "prop": "15.661",
+  "title": "complete p=7 six-finite and all size-six boundary exclusion",
+  "proved": true,
+  "theorem": {
+    "proved": true,
+    "certificate": {
+      "all_boundaries": 13983816,
+      "floor_survivors": 3856300,
+      "square_semilinear_orbits": 80704,
+      "ordinary_orbits": 80519,
+      "ordinary_elevation_cases": 160745,
+      "ordinary_survivors": 0,
+      "deep_orbits": 185,
+      "deep_initial_infeasible_orbits": 92,
+      "deep_initial_unknown_orbits": 93,
+      "deep_allocation_leaves": 930,
+      "deep_allocation_infeasible_leaves": 810,
+      "deep_low_catalog_join_leaves": 120,
+      "deep_low_catalog_join_survivors": 0,
+      "moduli": [
+        3,
+        7
+      ],
+      "mod3_rank": 162,
+      "mod3_left_dependency_dimension": 120,
+      "mod7_rank": 147,
+      "mod7_left_dependency_dimension": 135,
+      "nuka_independent_floor_orbit_and_ordinary_replay": true,
+      "nonsquare_sign_transfer": true,
+      "global_audit_sha256": "d0e4de3041fc875090012f4091b0b57a75d0399c2d10550636089138ba50f6cb",
+      "nuka_summary_sha256": "4da7448143b1a497cb54ec7b8e54c26584ef70b038f8da36a3b85d3276b2fe2c",
+      "archive_root": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-27-p7-six-finite/",
+      "proved": true
+    },
+    "p7_six_finite_both_product_signs": "CLOSED",
+    "p7_infinity_plus_five_both_product_signs": "CLOSED_BY_15.658_AND_15.659",
+    "p5_size_six": "CLOSED_BY_15.660",
+    "p_ge_11_size_six": "CLOSED_BY_15.657",
+    "all_size_six_boundaries_for_odd_p_ge_5": "CLOSED",
+    "boundaries_size_at_least_eight": "OPEN",
+    "closes_residual_ii": false,
+    "closes_R1": false,
+    "L_status": "OPEN"
+  }
+}

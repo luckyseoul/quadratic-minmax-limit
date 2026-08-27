@@ -1,0 +1,54 @@
+{
+  "experiment": "p7_size6_finite_global_audit",
+  "status": "complete_independent_coverage_audit",
+  "proved": true,
+  "source": "p7_size6_boundary_orbits_c-1_i0.json",
+  "source_sha256": "4649147ce998e66e233693922f88e6d396057abc30cf7afb6b0cd9fa0915877d",
+  "source_floor_survivors": 3856300,
+  "source_orbits": 80704,
+  "nuka_independent_reproduction": {
+    "proved": true,
+    "summary_sha256": "4da7448143b1a497cb54ec7b8e54c26584ef70b038f8da36a3b85d3276b2fe2c"
+  },
+  "ordinary": {
+    "proved": true,
+    "orbits": 80519,
+    "elevation_cases": 160745,
+    "rejected_cases": 160745,
+    "surviving_cases": 0,
+    "floor_pair_counts": {
+      "24,24": 1460,
+      "24,32": 12919,
+      "32,24": 6523,
+      "32,32": 59617
+    },
+    "catalog_pattern_counts": {
+      "singleton": 3229,
+      "36": 56388,
+      "1764": 51774,
+      "1764x36": 16433,
+      "1764x1764": 13128,
+      "2233": 294,
+      "2233x36": 9267,
+      "2233x1764": 10232
+    }
+  },
+  "deep": {
+    "proved": true,
+    "orbits": 185,
+    "initial_infeasible_orbits": 92,
+    "initial_unknown_orbits": 93,
+    "allocation_leaves": 930,
+    "allocation_infeasible_leaves": 810,
+    "allocation_unknown_leaves": 120,
+    "low_catalog_join_leaves": 120,
+    "low_catalog_join_survivors": 0
+  },
+  "sign_transfer": {
+    "proved": true,
+    "nonsquare_multiplier": 8,
+    "fixes_distinguished_edge": true,
+    "signed_conference_anti_isometry": true
+  },
+  "p7_six_finite_both_product_signs_closed": true
+}

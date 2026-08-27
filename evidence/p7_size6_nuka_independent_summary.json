@@ -1,0 +1,56 @@
+{
+  "experiment": "p7_size6_independent_summary",
+  "status": "complete_compact_hash_summary",
+  "host": "NUKA",
+  "floor": {
+    "path": "/tmp/p7_size6_finite_floor_numpy_cm.json",
+    "file_sha256": "89c17cfc245252dfc24f49f92d925900e94013a2e016d0ac6791cdd78138afa0",
+    "backend": "numpy",
+    "device": "CPU/NumPy",
+    "checked_boundaries": 13983816,
+    "floor_surviving_boundaries": 3856300,
+    "floor_rejected_boundaries": 10127516,
+    "direction_odd_fibre_histogram": {
+      "0": 2840432,
+      "2": 46642512,
+      "4": 55799240,
+      "6": 6588344
+    },
+    "survivor_sha256": "59ac1fe7f90c7a328d119786a26e0037196f14c2d2c8988d4a3a77238d52c46c"
+  },
+  "orbits": {
+    "path": "/tmp/p7_size6_boundary_orbits_numpy_cm.json",
+    "file_sha256": "cfb58957906e4111b81fc4739506800ec76799bd642be629a5d0fcec1d2d5f60",
+    "candidate_boundaries": 3856300,
+    "orbit_count": 80704,
+    "orbit_size_sum": 3856300,
+    "ordered_orbits_canonical_sha256": "eb05607c9604468ae0521c1e7b634a967888712457ea2ea61c417b4db20e731e",
+    "profile_histogram_canonical_sha256": "5d39faa0c7e86e5a9a244233db9970e3afd27bae35a4b15c2069bc18966be66f"
+  },
+  "ordinary": {
+    "path": "/tmp/p7_size6_ordinary_mod3x7_nuka_serial.json",
+    "file_sha256": "42fdf48294fcf0ae5921847dc8523347981cce5a1b19cdca1eca5d97b3a42657",
+    "ordinary_orbits_in_source": 80519,
+    "deep_deficit_orbits_in_source": 185,
+    "processed_ordinary_orbits": 80519,
+    "elevation_cases": 160745,
+    "modular_infeasible_cases": 160745,
+    "surviving_cases": 0,
+    "floor_pair_counts": {
+      "24,24": 1460,
+      "24,32": 12919,
+      "32,24": 6523,
+      "32,32": 59617
+    },
+    "catalog_pattern_counts": {
+      "singleton": 3229,
+      "36": 56388,
+      "1764": 51774,
+      "1764x36": 16433,
+      "1764x1764": 13128,
+      "2233": 294,
+      "2233x36": 9267,
+      "2233x1764": 10232
+    }
+  }
+}
