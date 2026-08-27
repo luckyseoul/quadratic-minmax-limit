@@ -1,0 +1,282 @@
+{
+  "experiment": "p7_size8_one_elevation_audit",
+  "status": "passed_independent_complete_four_allocation_exclusion_audit",
+  "p": 7,
+  "finite_boundary_size": 8,
+  "gpu_result": "results/p7_size8_one_elevation_v100.json",
+  "gpu_result_sha256": "96cfe751a6c0f6bbcd86a1ef799c25847653f8db907414c7b85da576e02efe47",
+  "conditioned_tables": "results/p7_size8_one_elevation_tables.npz",
+  "conditioned_tables_sha256": "8427e4db27fd165dd8e21535434c81fe2f20349ee5e7c1878c63a187c01d040b",
+  "conditioned_table_summary": "results/p7_size8_one_elevation_tables.json",
+  "conditioned_table_summary_sha256": "7c990b5200ec1dbc1a82c5fe263cee85ef60e74fe0929ff4eb8f8fc71fab8692",
+  "floor_sources": {
+    "c_H=-1": "results/floor_profiles_cminus1.json",
+    "c_H=+1": "results/floor_profiles_cplus1.json"
+  },
+  "floor_source_sha256": {
+    "c_H=-1": "47e7db3512fd0419df8d1fc30d886ffd6d6db1c3c09145c085ed3d80a285b218",
+    "c_H=+1": "b5e61256d34e7713db60beaf8e5e24c36958e6e1725229c9450349e4c3050b51"
+  },
+  "source_scope_by_sign": {
+    "c_H=-1": {
+      "allocation_count_boundary_histogram": {
+        "4": 23563806,
+        "11": 154056,
+        "16": 1194816,
+        "24": 1176,
+        "44": 69384
+      },
+      "allocation_count_ordered_profile_histogram": {
+        "4": 2245,
+        "11": 248,
+        "16": 516,
+        "24": 8,
+        "44": 110
+      },
+      "four_allocation_boundaries": 23563806,
+      "four_allocation_leaves": 94255224,
+      "four_allocation_floor_pair_histogram": [
+        {
+          "type_floor_sums": [
+            24,
+            32
+          ],
+          "boundaries": 17298078
+        },
+        {
+          "type_floor_sums": [
+            32,
+            24
+          ],
+          "boundaries": 6265728
+        }
+      ],
+      "four_allocation_odd_secant_histogram": {
+        "16": 691488,
+        "20": 5603640,
+        "24": 9190146,
+        "28": 5990544,
+        "32": 1846908,
+        "36": 232848,
+        "40": 5880,
+        "44": 2352
+      }
+    },
+    "c_H=+1": {
+      "allocation_count_boundary_histogram": {
+        "4": 23563806,
+        "11": 154056,
+        "16": 1194816,
+        "24": 1176,
+        "44": 69384
+      },
+      "allocation_count_ordered_profile_histogram": {
+        "4": 2245,
+        "11": 248,
+        "16": 516,
+        "24": 8,
+        "44": 110
+      },
+      "four_allocation_boundaries": 23563806,
+      "four_allocation_leaves": 94255224,
+      "four_allocation_floor_pair_histogram": [
+        {
+          "type_floor_sums": [
+            24,
+            32
+          ],
+          "boundaries": 6265728
+        },
+        {
+          "type_floor_sums": [
+            32,
+            24
+          ],
+          "boundaries": 17298078
+        }
+      ],
+      "four_allocation_odd_secant_histogram": {
+        "16": 691488,
+        "20": 5603640,
+        "24": 9190146,
+        "28": 5990544,
+        "32": 1846908,
+        "36": 232848,
+        "40": 5880,
+        "44": 2352
+      }
+    }
+  },
+  "all_boundaries_checked_by_cuda": 450978066,
+  "four_allocation_boundaries_each_sign": 23563806,
+  "four_allocation_leaves_each_sign": 94255224,
+  "full_linear_system_shape": [
+    282,
+    1225
+  ],
+  "full_linear_system_ranks": {
+    "3": 162,
+    "7": 147
+  },
+  "full_dependency_shapes": {
+    "3": [
+      120,
+      282
+    ],
+    "7": [
+      135,
+      282
+    ]
+  },
+  "full_dependency_sha256": {
+    "3": "1db08cdae9b2f36dfca2fa4fccc8c9616c5d72d4b0a6a201a45e5fbea24ad4d7",
+    "7": "33f13cc757a528c64f9beb12004838cd4ea63f36a1af4e42daabc8590d26cdb1"
+  },
+  "projected_survivor_leaves_reconstructed": 1191,
+  "projected_survivor_boundaries_reconstructed": 1177,
+  "candidate_audit_sha256": "b9aa6d828a443aac53908f48485f71df433ead073a88e893426503cb3c366967",
+  "variable_catalog_shape_histogram": [
+    {
+      "catalog_rows": [
+        1764
+      ],
+      "candidates": 1190
+    },
+    {
+      "catalog_rows": [
+        1764,
+        36
+      ],
+      "candidates": 1
+    }
+  ],
+  "mod3_match_count_histogram": {
+    "0": 15,
+    "756": 1176
+  },
+  "mod7_match_count_histogram": {
+    "0": 15,
+    "2": 1176
+  },
+  "joint_mod3_mod7_match_count_histogram": {
+    "0": 1191
+  },
+  "mod7_survivor_leaves": 1176,
+  "mod7_survivor_geometry": {
+    "description": "one affine line plus one point off that line",
+    "line_direction_type_for_cminus1": -1,
+    "direction_families": 4,
+    "parallel_lines_per_direction": 7,
+    "off_line_points_per_line": 42,
+    "count": 1176,
+    "all_have_odd_fibre_profile": "2 in the line-normal direction and 6 in each other direction",
+    "all_have_two_mod7_catalog_rows": true
+  },
+  "joint_mod3_mod7_survivor_leaves": 0,
+  "all_cminus_four_allocation_leaves_excluded": true,
+  "nonsquare_anti_isometry": {
+    "nonsquare_multiplier": 8,
+    "fixes_distinguished_edge": true,
+    "signed_conference_anti_isometry": true
+  },
+  "sign_transfer": {
+    "direction_map": [
+      4,
+      7,
+      1,
+      0,
+      2,
+      3,
+      5,
+      6
+    ],
+    "fibre_label_permutations": [
+      [
+        0,
+        5,
+        3,
+        1,
+        6,
+        4,
+        2
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        0,
+        2,
+        4,
+        6,
+        1,
+        3,
+        5
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        0,
+        3,
+        6,
+        2,
+        5,
+        1,
+        4
+      ],
+      [
+        0,
+        4,
+        1,
+        5,
+        2,
+        6,
+        3
+      ],
+      [
+        0,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      [
+        0,
+        2,
+        4,
+        6,
+        1,
+        3,
+        5
+      ]
+    ],
+    "direction_map_is_bijective": true,
+    "quadratic_types_reverse": true,
+    "odd_fibre_counts_are_preserved": true,
+    "phase_int_eps_equals_cH_is_preserved_when_cH_flips": true,
+    "type_floor_sums_swap": true,
+    "four_allocation_stratum_is_bijective": true
+  },
+  "line_plus_point_family_transfers_bijectively": true,
+  "all_cplus_four_allocation_leaves_excluded": true,
+  "all_four_allocation_boundaries_both_signs_excluded": true,
+  "remaining_nonconic_floor_survivors_each_sign": 1419432,
+  "closes_all_nonconic_size_eight": false,
+  "closes_all_p7_size_eight": false,
+  "closes_residual_ii": false,
+  "elapsed_seconds": 22.827908515930176
+}

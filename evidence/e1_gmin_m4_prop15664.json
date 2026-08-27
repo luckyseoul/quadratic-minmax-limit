@@ -1,0 +1,89 @@
+{
+  "prop": "15.664",
+  "title": "p=7 size-eight four-allocation two-modulus exclusion",
+  "proved": true,
+  "theorem": {
+    "proved": true,
+    "certificate": {
+      "all_size_eight_boundaries_per_sign": 450978066,
+      "floor_survivors_before_15664_per_sign": 24983238,
+      "remaining_allocation_count_boundary_histogram_per_sign": {
+        "4": 23563806,
+        "11": 154056,
+        "16": 1194816,
+        "24": 1176,
+        "44": 69384
+      },
+      "remaining_allocation_count_profile_histogram_per_sign": {
+        "4": 2245,
+        "11": 248,
+        "16": 516,
+        "24": 8,
+        "44": 110
+      },
+      "four_allocation_ordered_profiles_per_sign": 2245,
+      "four_allocation_boundaries_per_sign": 23563806,
+      "four_allocation_leaves_per_sign": 94255224,
+      "four_allocation_floor_pair_histogram_cminus1": {
+        "24,32": 17298078,
+        "32,24": 6265728
+      },
+      "four_allocation_odd_secant_histogram_per_sign": {
+        "16": 691488,
+        "20": 5603640,
+        "24": 9190146,
+        "28": 5990544,
+        "32": 1846908,
+        "36": 232848,
+        "40": 5880,
+        "44": 2352
+      },
+      "deficient_type_floor_sum": 24,
+      "saturated_type_floor_sum": 32,
+      "exact_type_mean_sums": [
+        32,
+        32
+      ],
+      "allocations_per_boundary": 4,
+      "each_allocation_raises_one_deficient_direction_by": 8,
+      "common_score_system_shape": [
+        282,
+        1225
+      ],
+      "common_score_system_rank_mod3": 162,
+      "full_left_dependency_dimension_mod3": 120,
+      "common_score_system_rank_mod7": 147,
+      "full_left_dependency_dimension_mod7": 135,
+      "conditioned_dependency_dimension_mod7": 112,
+      "gpu_projection_dimension_per_raised_direction": 22,
+      "gpu_projected_survivor_leaves": 1191,
+      "gpu_projected_survivor_boundaries": 1177,
+      "full_mod7_survivor_leaves": 1176,
+      "full_mod7_survivor_boundaries": 1176,
+      "mod7_survivor_geometry": "affine line plus one off-line point",
+      "mod7_survivor_geometry_count": 1176,
+      "mod7_catalog_rows_per_geometric_survivor": 2,
+      "mod3_catalog_rows_per_geometric_survivor": 756,
+      "joint_mod3_mod7_catalog_rows": 0,
+      "independent_nuka_recheck": true,
+      "nonsquare_sign_transfer": true,
+      "remaining_nonconic_floor_survivors_per_sign": 1419432,
+      "gpu_result_sha256": "96cfe751a6c0f6bbcd86a1ef799c25847653f8db907414c7b85da576e02efe47",
+      "table_cache_sha256": "8427e4db27fd165dd8e21535434c81fe2f20349ee5e7c1878c63a187c01d040b",
+      "table_summary_sha256": "7c990b5200ec1dbc1a82c5fe263cee85ef60e74fe0929ff4eb8f8fc71fab8692",
+      "independent_audit_sha256": "8129b608ec2e09967e10a7da7b38a8e20584450772ac7aab6c1c8a984a370e67",
+      "floor_cminus1_sha256": "47e7db3512fd0419df8d1fc30d886ffd6d6db1c3c09145c085ed3d80a285b218",
+      "floor_cplus1_sha256": "b5e61256d34e7713db60beaf8e5e24c36958e6e1725229c9450349e4c3050b51",
+      "archive_root": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-27-p7-size-eight-four-allocation/",
+      "proved": true
+    },
+    "p7_size_eight_four_allocation_stratum_both_signs": "CLOSED",
+    "p7_size_eight_remaining_floor_survivors_per_sign": 1419432,
+    "full_p7_size_eight": "OPEN",
+    "closes_all_nonconic_size_eight": false,
+    "closes_all_p7_size_eight": false,
+    "closes_residual_ii": false,
+    "closes_R1": false,
+    "L_status": "OPEN"
+  }
+}

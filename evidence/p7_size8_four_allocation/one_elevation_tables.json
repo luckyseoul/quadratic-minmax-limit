@@ -1,0 +1,423 @@
+{
+  "experiment": "p7_size8_one_elevation_tables",
+  "status": "complete_exact_elevated_direction_omission_tables",
+  "p": 7,
+  "c_H": -1,
+  "modulus": 7,
+  "projection_rows": 22,
+  "linear_system": [
+    {
+      "modulus": 7,
+      "rank": 147,
+      "left_dependency_dimension": 135,
+      "left_null_audit": true
+    }
+  ],
+  "dependency_shape": [
+    135,
+    282
+  ],
+  "dependency_sha256": "33f13cc757a528c64f9beb12004838cd4ea63f36a1af4e42daabc8590d26cdb1",
+  "projection_rows_by_omitted_direction": [
+    {
+      "omitted_direction": 0,
+      "omitted_block_rank": 23,
+      "conditioned_dependency_dimension": 112,
+      "selected_conditioned_basis_rows": [
+        106,
+        103,
+        107,
+        78,
+        111,
+        81,
+        100,
+        79,
+        46,
+        104,
+        70,
+        48,
+        105,
+        75,
+        47,
+        60,
+        59,
+        110,
+        69,
+        49,
+        61,
+        11
+      ],
+      "selected_rank_mod7": 22,
+      "direction_block_ranks_mod7": [
+        0,
+        8,
+        7,
+        8,
+        7,
+        8,
+        8,
+        8
+      ],
+      "selected_coefficients_sha256": "f6ab18b03a626f35b42c41a6ec024dba1abaf0648a114333f411a7ea8d3e3362",
+      "selected_dependencies_sha256": "0450224cf5acc6ce61717e66b9c4891621786289cbb9c6dec86e783930f886fc"
+    },
+    {
+      "omitted_direction": 1,
+      "omitted_block_rank": 23,
+      "conditioned_dependency_dimension": 112,
+      "selected_conditioned_basis_rows": [
+        109,
+        99,
+        111,
+        74,
+        108,
+        71,
+        103,
+        75,
+        106,
+        77,
+        44,
+        58,
+        98,
+        76,
+        46,
+        59,
+        20,
+        100,
+        70,
+        45,
+        55,
+        21
+      ],
+      "selected_rank_mod7": 22,
+      "direction_block_ranks_mod7": [
+        7,
+        0,
+        7,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "selected_coefficients_sha256": "04f9f30e815b1b592e6d4b972c8c03c2eada6ba73204f04fcf97126634e8c7fa",
+      "selected_dependencies_sha256": "831565e70f86ef0b19787cdf9acca90c3210d265102c68673aa7e2335382731b"
+    },
+    {
+      "omitted_direction": 2,
+      "omitted_block_rank": 23,
+      "conditioned_dependency_dimension": 112,
+      "selected_conditioned_basis_rows": [
+        100,
+        103,
+        111,
+        83,
+        104,
+        85,
+        107,
+        84,
+        51,
+        106,
+        80,
+        53,
+        99,
+        79,
+        52,
+        65,
+        88,
+        105,
+        75,
+        54,
+        66,
+        13
+      ],
+      "selected_rank_mod7": 22,
+      "direction_block_ranks_mod7": [
+        7,
+        8,
+        0,
+        8,
+        7,
+        8,
+        8,
+        8
+      ],
+      "selected_coefficients_sha256": "7f1a00210e0c460960850e66934d7cbee35846a48297682df2963e5ab7d63f43",
+      "selected_dependencies_sha256": "aa1c6209b3c9f3807d0362e4c1535e331ba674ac3afd4bb39f5f16de838ca3da"
+    },
+    {
+      "omitted_direction": 3,
+      "omitted_block_rank": 23,
+      "conditioned_dependency_dimension": 112,
+      "selected_conditioned_basis_rows": [
+        105,
+        100,
+        103,
+        77,
+        101,
+        80,
+        109,
+        78,
+        99,
+        74,
+        57,
+        23,
+        106,
+        79,
+        53,
+        24,
+        13,
+        98,
+        81,
+        55,
+        22,
+        15
+      ],
+      "selected_rank_mod7": 22,
+      "direction_block_ranks_mod7": [
+        7,
+        8,
+        7,
+        0,
+        8,
+        8,
+        8,
+        8
+      ],
+      "selected_coefficients_sha256": "e1e8ef87e14a79fe18426b79f0eb3a80fff0e398a4dcf804d601627fc3f6e503",
+      "selected_dependencies_sha256": "f784c65338f73f7ff741d63d338d54a3a82f48076e7f09532ab89b241d4e31d7"
+    },
+    {
+      "omitted_direction": 4,
+      "omitted_block_rank": 23,
+      "conditioned_dependency_dimension": 112,
+      "selected_conditioned_basis_rows": [
+        110,
+        100,
+        107,
+        74,
+        109,
+        71,
+        103,
+        75,
+        99,
+        76,
+        42,
+        58,
+        106,
+        77,
+        44,
+        59,
+        10,
+        104,
+        78,
+        43,
+        55,
+        12
+      ],
+      "selected_rank_mod7": 22,
+      "direction_block_ranks_mod7": [
+        7,
+        8,
+        7,
+        8,
+        0,
+        8,
+        8,
+        8
+      ],
+      "selected_coefficients_sha256": "2b59f87b68f1d0317e78d622e03a5dc0d7a2b0d5f4981516d4127b436d3cec7d",
+      "selected_dependencies_sha256": "3757ac82011f29fbc9dd5a5700827a5bf56fe95901ef707e3f0f93fe858bec7a"
+    },
+    {
+      "omitted_direction": 5,
+      "omitted_block_rank": 23,
+      "conditioned_dependency_dimension": 112,
+      "selected_conditioned_basis_rows": [
+        100,
+        102,
+        111,
+        67,
+        104,
+        76,
+        107,
+        75,
+        101,
+        77,
+        29,
+        105,
+        71,
+        25,
+        58,
+        85,
+        57,
+        99,
+        68,
+        27,
+        59,
+        15
+      ],
+      "selected_rank_mod7": 22,
+      "direction_block_ranks_mod7": [
+        7,
+        8,
+        7,
+        8,
+        8,
+        0,
+        8,
+        8
+      ],
+      "selected_coefficients_sha256": "3d5504344e8fd7becd9e2e0803639fcc87195e2e62fb43ae04139ddaef099230",
+      "selected_dependencies_sha256": "461406d9680f3a5d79f5895daad1e221ff4b66d9f4a014d56cccd54543f68fc4"
+    },
+    {
+      "omitted_direction": 6,
+      "omitted_block_rank": 23,
+      "conditioned_dependency_dimension": 112,
+      "selected_conditioned_basis_rows": [
+        110,
+        101,
+        99,
+        108,
+        57,
+        109,
+        60,
+        29,
+        98,
+        61,
+        25,
+        76,
+        103,
+        56,
+        27,
+        77,
+        15,
+        100,
+        58,
+        23,
+        73,
+        17
+      ],
+      "selected_rank_mod7": 22,
+      "direction_block_ranks_mod7": [
+        7,
+        8,
+        7,
+        8,
+        8,
+        8,
+        0,
+        8
+      ],
+      "selected_coefficients_sha256": "d4e01d9ac541250a00e6dab1f4d7c91faea7de921c166f27b728cb108db6f7e2",
+      "selected_dependencies_sha256": "9da543e57e2352ecfeeb54b6a116dc2d4f1d7f9aca8f867a605d792332e322f0"
+    },
+    {
+      "omitted_direction": 7,
+      "omitted_block_rank": 23,
+      "conditioned_dependency_dimension": 112,
+      "selected_conditioned_basis_rows": [
+        89,
+        87,
+        86,
+        57,
+        91,
+        60,
+        98,
+        61,
+        88,
+        56,
+        29,
+        97,
+        58,
+        25,
+        76,
+        105,
+        75,
+        94,
+        62,
+        27,
+        77,
+        15
+      ],
+      "selected_rank_mod7": 22,
+      "direction_block_ranks_mod7": [
+        7,
+        8,
+        7,
+        8,
+        8,
+        8,
+        8,
+        0
+      ],
+      "selected_coefficients_sha256": "6d9299e176f9c7a34ef119bf93b1efb81381f19219bbe476e67be00f84c90e00",
+      "selected_dependencies_sha256": "e8c6431495a27af1e19209db09cc9a82973bd3c80e1e644a842abb79ab5f1022"
+    }
+  ],
+  "catalog_count_histogram": {
+    "1": 2976,
+    "36": 1120
+  },
+  "array_shapes": {
+    "labels": [
+      8,
+      49
+    ],
+    "epsilons": [
+      8
+    ],
+    "dependency": [
+      135,
+      282
+    ],
+    "selected_coefficients": [
+      8,
+      22,
+      135
+    ],
+    "projected_dependencies": [
+      8,
+      22,
+      282
+    ],
+    "base": [
+      8,
+      22
+    ],
+    "singleton": [
+      8,
+      8,
+      128,
+      22
+    ],
+    "variable": [
+      8,
+      8,
+      128,
+      36,
+      22
+    ],
+    "variable_count": [
+      8,
+      8,
+      128
+    ]
+  },
+  "array_sha256": {
+    "labels": "d7b550694e8d071dd677653dd51428422c4b59a3b8fb62b75f294130b4295bbf",
+    "epsilons": "a71e5bf6a9f0ea29944e99ec7a721144096416ced212c5f534c2f4a633d48fd5",
+    "dependency": "33f13cc757a528c64f9beb12004838cd4ea63f36a1af4e42daabc8590d26cdb1",
+    "selected_coefficients": "5e932c845945cb8a3703729722a9ed3841f9ce227d87ba03f9f9dc380bc7989e",
+    "projected_dependencies": "cfd94b2bb26d4b3fc71739ff19f17642115cc00c6d411f4d66faf40445ed783c",
+    "base": "13b7f6724cd33ffe6b09bfd8269c92ab48f66734f782ee8caeca8a51afcf0ff5",
+    "singleton": "df6eb9d05c7d984cc59cfcdcee33166ea03716553e1e76c7403aec86c5025e9c",
+    "variable": "a899dbb426025aa7c89c37897ec054419697168af99a2e0af7750183e78c242f",
+    "variable_count": "c6a4043facb5c4a75dadabf64436414eddfef397fd47f508f3a7327f75fa2a6a"
+  },
+  "output": "results/p7_size8_one_elevation_tables.npz",
+  "output_sha256": "8427e4db27fd165dd8e21535434c81fe2f20349ee5e7c1878c63a187c01d040b",
+  "output_bytes": 334683,
+  "elapsed_seconds": 6.069306135177612
+}

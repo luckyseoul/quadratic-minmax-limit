@@ -1,5 +1,23 @@
 # Status (2026-08-27)
 
+**15.664 PROVED/certified the four-allocation `p=7` size-eight stratum for
+both product signs, not the full size-eight case or residual (ii)**: exact
+allocation reconstruction partitions the 24,983,238 survivors left by
+15.663. The dominant class contains 2,245 ordered profiles, 23,563,806
+boundaries, and exactly four mean allocations per boundary, for 94,255,224
+leaves. One quadratic type has floor sum 24, and each leaf raises one of its
+four directions by eight. For every raised direction, 112 exact mod-seven
+dependencies vanish on its complete 35-column score block. A 22-row
+conditioned V100 sweep checks all 450,978,066 ranks and leaves 1,191
+allocation leaves; all 135 mod-seven dependencies leave 1,176. NUKA
+independently rebuilds the matrix, kernels, catalogs, and candidates. The
+1,176 survivors are exactly the `4*7*42` affine-line-plus-off-line-point
+family. Every member has two mod-seven and 756 mod-three catalog rows, with
+empty intersection, so zero exact catalog choices remain. The nonsquare
+anti-isometry transfers the exclusion to `c_H=+1`. Exactly 1,419,432
+size-eight floor survivors per sign remain. Full size eight, residual (ii),
+Type I, R1, global QVAR, and L remain OPEN.
+
 **15.663 PROVED/certified the forced-floor `p=7` size-eight stratum for
 both product signs, not the full size-eight case or residual (ii)**: exact
 profile reconstruction selects 2,016 ordered profiles and 83,770,008
@@ -11,7 +29,8 @@ and rejects all 526 with the complete 135 dependencies. NUKA independently
 rebuilds the `282 x 1225` score matrix, rank-147 row space, dependencies,
 catalogs, and all candidate failures. A nonsquare anti-isometry bijects the
 stratum between signs. With 15.662, the open size-eight floor scope falls
-from 108,754,569 to 24,983,238 boundaries per sign. Full size eight,
+from 108,754,569 to 24,983,238 boundaries per sign; Proposition 15.664
+subsequently reduces that remainder to 1,419,432. Full size eight,
 residual (ii), Type I, R1, global QVAR, and L remain OPEN.
 
 **15.662 PROVED/certified the minimum-eight-odd-secant/conic `p=7`
@@ -27,7 +46,7 @@ exclusions, 662 ordinary projected V100 joins, and 426 high-direction-
 eliminating joins. Independent audits leave zero allocations. A nonsquare
 Paley anti-isometry maps all 1,323 survivors bijectively to `c_H=+1` and
 transfers the exclusion. Its 108,753,246-case nonconic remainder is
-subsequently reduced by 15.663 to 24,983,238 floor survivors per sign. Full
+subsequently reduced by 15.663--15.664 to 1,419,432 floor survivors per sign. Full
 size eight, residual (ii), Type I, R1, global QVAR, and L remain OPEN.
 
 **15.661 PROVED/certified the `p=7` six-finite branch and therefore every
@@ -41,7 +60,7 @@ survivor hash; NUKA reproduces the ordered orbit catalog and ordinary
 exhaustion. A nonsquare anti-isometry transfers the opposite product sign.
 With 15.657--15.660, every size-six boundary is closed. Proposition 15.662
 subsequently closes the `p=7` minimum-eight-odd-secant/conic subbranch for
-both signs, and 15.663 reduces the size-eight floor remainder to 24,983,238
+both signs, and 15.663--15.664 reduce the size-eight floor remainder to 1,419,432
 per sign. Residual (ii), Type I, R1, global QVAR, and L remain OPEN.
 
 **15.660 PROVED/certified every `p=5` size-six boundary, not residual

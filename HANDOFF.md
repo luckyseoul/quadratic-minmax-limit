@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-27 (15.663 closes the p=7 size-eight forced-floor stratum)
+**Date:** 2026-08-27 (15.664 closes the p=7 size-eight four-allocation stratum)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -20,10 +20,39 @@ six-finite `p=7` branch. Every size-six boundary is now closed for odd
 `p>=5`. Proposition 15.662 additionally closes both signs of the finite
 `p=7` size-eight minimum-odd-secant/conic subbranch: all 32 floor-surviving
 conic orbits are excluded. Proposition 15.663 next excludes the disjoint
-83,770,008-boundary forced-floor nonconic stratum for both signs. This is not
-all of size eight; 24,983,238 floor survivors remain per sign. p=13 orbits /
+83,770,008-boundary forced-floor nonconic stratum for both signs. Proposition
+15.664 excludes another 23,563,806 boundaries per sign having exactly four
+mean allocations. This is not all of size eight; 1,419,432 floor survivors
+remain per sign. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.664 — p=7 size-eight four-allocation stratum closed for both signs
+
+`src/e1_gmin_m4_prop15664.py` and
+`evidence/NOTE_2026-08-27_p7_size_eight_four_allocation_exclusion.md`.
+The 24,983,238-case remainder after 15.663 splits by exact mean-allocation
+count as `4:23,563,806`, `11:154,056`, `16:1,194,816`, `24:1,176`, and
+`44:69,384` boundaries per sign. Every four-allocation boundary has one
+type-floor sum 24 and one 32; its four leaves each raise one deficient-type
+direction by eight. For each raised direction, a 112-dimensional exact
+mod-seven dependency subspace vanishes on its full 35-column score block.
+NUKA materializes 22 conditioned rows per direction, and the V100 directly
+checks all 450,978,066 boundary ranks and 94,255,224 selected leaves. It
+leaves 1,191 projected leaves and 1,176 full mod-seven survivors. Those are
+exactly all `4*7*42=1,176` boundaries formed by one affine line of the
+deficient direction type plus one point off the line. NUKA independently
+rebuilds all candidates and both complete left kernels: each geometric
+survivor has two mod-seven and 756 mod-three catalog rows, with empty
+intersection. Thus zero exact catalog choices survive, and the nonsquare
+anti-isometry transfers the exclusion to the other sign. The V100 result
+SHA-256 is
+`96cfe751a6c0f6bbcd86a1ef799c25847653f8db907414c7b85da576e02efe47`;
+the independent audit SHA-256 is
+`8129b608ec2e09967e10a7da7b38a8e20584450772ac7aab6c1c8a984a370e67`.
+Exactly 1,419,432 size-eight floor survivors per sign remain. Raw records are
+archived under
+`/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-27-p7-size-eight-four-allocation/`.
 
 ## 15.663 — p=7 size-eight forced-floor stratum closed for both signs
 
@@ -41,8 +70,8 @@ transfers the exclusion to `c_H=+1`. The GPU result SHA-256 is
 `6143d4eb269861b3d380c53262b534e0a54a9645c9bbe7c29d9327200ae30535`;
 the independent audit SHA-256 is
 `7adaa5e76bf4f5e128c82ec219650b390c8c087d3aed2a44857f9da7939a9c53`.
-Together with 15.662, this leaves exactly 24,983,238 open size-eight floor
-survivors per sign. Raw records are archived under
+Together with 15.662, this left exactly 24,983,238 size-eight floor survivors
+per sign; Proposition 15.664 subsequently reduces them to 1,419,432. Raw records are archived under
 `/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-27-p7-size-eight-forced-floor/`.
 
 ## 15.662 — p=7 size-eight conic subbranch closed for both signs
@@ -62,8 +91,8 @@ nonsquare anti-isometry maps the full conic survivor set bijectively to
 `85f927f41b3ffc9afe1a101584e95ed852709ca6e861b439d8da1715008640a9`.
 The full floor census has 108,754,569 survivors per sign, so the next target
 was the 108,753,246 nonconic remainder—not another conic orbit. Proposition
-15.663 subsequently removes 83,770,008 of those and leaves 24,983,238 per
-sign. Raw conic records are archived under
+15.663 subsequently removes 83,770,008 of those, and 15.664 removes another
+23,563,806, leaving 1,419,432 per sign. Raw conic records are archived under
 `/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-27-p7-size-eight-conic/`.
 
 ## 15.661 — p=7 six-finite and all size-six boundaries closed
