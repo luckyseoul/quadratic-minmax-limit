@@ -1,0 +1,581 @@
+{
+  "experiment": "p5_size6_global_circle_coverage_audit",
+  "status": "exact_global_catalog_and_layered_class_audit",
+  "proved": true,
+  "selection_reduction_proved": true,
+  "catalogs_rebuilt_from_definitions": true,
+  "scope": {
+    "p": 5,
+    "boundary_size": 6,
+    "distinguished_edge": [
+      0,
+      1
+    ],
+    "signs": [
+      -1,
+      1
+    ],
+    "infinity_bits": [
+      0,
+      1
+    ]
+  },
+  "catalog_artifacts": [
+    {
+      "file": "p5_size6_boundary_orbits_c-1_i0.json",
+      "sha256": "56f5831fa96cb71fb9793a1ce141d5e06df77cbfe7d72d95fc3b7b73b0d22f2d",
+      "bytes": 5932802
+    },
+    {
+      "file": "p5_size6_boundary_orbits_c1_i0.json",
+      "sha256": "853bd26240de5983d33513bf535881e28f3e17a58e8bbd45fb6623c7c04a7156",
+      "bytes": 5932991
+    },
+    {
+      "file": "p5_size6_boundary_orbits_c-1_i1.json",
+      "sha256": "3a559439f7e7a6febfc76b8f8dee0a7933b5fdaacead75b0ff902157c70798c6",
+      "bytes": 1994510
+    },
+    {
+      "file": "p5_size6_boundary_orbits_c1_i1.json",
+      "sha256": "f7e42af15df5a64fabce04dd774b543c0ad1a628608ff9425edbcd12c2aaf4df",
+      "bytes": 1567158
+    },
+    {
+      "file": "p5_size6_full_multiplier_c-1_i1.json",
+      "sha256": "a3ec787dbbb6ad08213573088274a744e086b64cb5998cea3a3ed77dd5040834",
+      "bytes": 1078665
+    },
+    {
+      "file": "p5_size6_full_multiplier_c1_i1.json",
+      "sha256": "8cc272be34d8ed629c290c7c8ef6d54b89e690f6097081712e69971336eedb2b",
+      "bytes": 846296
+    }
+  ],
+  "noinf_sign_transfer": {
+    "global_conference_factor": -1,
+    "complete_shell_map": {
+      "-1": 1,
+      "1": -1
+    },
+    "fixes_distinguished_edge_setwise": true,
+    "source_orbits": 6766,
+    "target_orbits": 6766,
+    "mapped_survivors": 159050,
+    "paley_product_factor": -1,
+    "c_H_action": "+1 to -1",
+    "orbit_transfer_is_bijective": true,
+    "orbit_transfer_sha256": "398ce44c061c24305a292a14ea80abcec3062e800fa518b72aad0c28b53d06c5",
+    "nonsquare_multiplier": 5
+  },
+  "infinity_1144_transfer": {
+    "global_conference_factor": -1,
+    "complete_shell_map": {
+      "-1": 1,
+      "1": -1
+    },
+    "fixes_distinguished_edge_setwise": true,
+    "alpha": 5,
+    "chi_alpha": -1,
+    "source_kind": "c_H=-1, infinity present",
+    "source_orbit_index": 1144,
+    "source_boundary": [
+      0,
+      2,
+      6,
+      15,
+      19,
+      23
+    ],
+    "image_boundary": [
+      1,
+      2,
+      6,
+      7,
+      18,
+      20
+    ],
+    "target_kind": "c_H=-1, no infinity",
+    "target_orbit_index": 881,
+    "paley_product_factor": 1,
+    "c_H_is_preserved": true
+  },
+  "coarse_exact_batches": {
+    "noinf_c_minus": {
+      "catalog": {
+        "file": "p5_size6_boundary_orbits_c-1_i0.json",
+        "sha256": "56f5831fa96cb71fb9793a1ce141d5e06df77cbfe7d72d95fc3b7b73b0d22f2d",
+        "bytes": 5932802
+      },
+      "catalog_orbits": 6766,
+      "covered_orbits": 6766,
+      "infeasible": 6761,
+      "unknown": 5,
+      "unknown_orbit_indices": [
+        881,
+        2529,
+        3032,
+        4731,
+        4939
+      ],
+      "batch_count": 23,
+      "batches": [
+        {
+          "file": "p5_size6_exact_noinf_0_250.json",
+          "sha256": "b29ad60ec37ca7ecb64ec2856b0e2ad8eccdc51399fc899f594cf1ffbc3d60c7",
+          "bytes": 445512,
+          "start_orbit": 0,
+          "stop_orbit": 250,
+          "infeasible": 250,
+          "unknown": 0
+        },
+        {
+          "file": "p5_size6_exact_noinf_250_500.json",
+          "sha256": "2f2142b9e44b5bb97f47f1fd760afc3c7c0abeabd6b4d73467b15b8400f185fb",
+          "bytes": 447000,
+          "start_orbit": 250,
+          "stop_orbit": 500,
+          "infeasible": 250,
+          "unknown": 0
+        },
+        {
+          "file": "p5_size6_exact_noinf_500_750.json",
+          "sha256": "e4dc5591a877988e31d87b5dca5e10721805bcbe7838c72238fb3dbcc2607862",
+          "bytes": 445597,
+          "start_orbit": 500,
+          "stop_orbit": 750,
+          "infeasible": 250,
+          "unknown": 0
+        },
+        {
+          "file": "p5_size6_exact_noinf_750_1000.json",
+          "sha256": "1dd2b60b9efe23beae7cbd696f8f5a0319d864f77025f3dfcb78cb063bbdd14f",
+          "bytes": 447479,
+          "start_orbit": 750,
+          "stop_orbit": 1000,
+          "infeasible": 249,
+          "unknown": 1
+        },
+        {
+          "file": "p5_size6_exact_noinf_1000_1250.json",
+          "sha256": "9f729ff758c0bdc8f0f4fcebb798d7848109feb4ec7ffeee7428e4a711c6c578",
+          "bytes": 446089,
+          "start_orbit": 1000,
+          "stop_orbit": 1250,
+          "infeasible": 250,
+          "unknown": 0
+        },
+        {
+          "file": "p5_size6_exact_noinf_1250_1500.json",
+          "sha256": "83f4384f8d2410a806abee7a24ded109466bdd782c8edc21775b07287bb15a69",
+          "bytes": 447088,
+          "start_orbit": 1250,
+          "stop_orbit": 1500,
+          "infeasible": 250,
+          "unknown": 0
+        },
+        {
+          "file": "p5_size6_exact_noinf_1500_1750.json",
+          "sha256": "7b6fce0dc04143eca00a45a91390f678963874e16f0126c47e7ebf4a1e17090b",
+          "bytes": 446095,
+          "start_orbit": 1500,
+          "stop_orbit": 1750,
+          "infeasible": 250,
+          "unknown": 0
+        },
+        {
+          "file": "p5_size6_exact_noinf_1750_2000.json",
+          "sha256": "0135f1112884436b8afd17d0b28207b23a20291590807b04be9b818b929285f0",
+          "bytes": 448513,
+          "start_orbit": 1750,
+          "stop_orbit": 2000,
+          "infeasible": 250,
+          "unknown": 0
+        },
+        {
+          "file": "p5_size6_exact_noinf_2000_2250.json",
+          "sha256": "508cf4d3b0387ccc6d1a3d56f974efc0ace7592a14e9774268e77f4de99fc7ae",
+          "bytes": 444866,
+          "start_orbit": 2000,
+          "stop_orbit": 2250,
+          "infeasible": 250,
+          "unknown": 0
+        },
+        {
+          "file": "p5_size6_exact_noinf_2250_2500.json",
+          "sha256": "a7dad418d71ce40f31935c99ee8019724240c2196f85068ce29a26e2dd7d85db",
+          "bytes": 446344,
+          "start_orbit": 2250,
+          "stop_orbit": 2500,
+          "infeasible": 250,
+          "unknown": 0
+        },
+        {
+          "file": "p5_size6_exact_noinf_2500_2750.json",
+          "sha256": "00a2d90baa8bb51aa6e94240f5a22d4c3cf307cbd557fe52816c7a8a86a2bb8b",
+          "bytes": 448897,
+          "start_orbit": 2500,
+          "stop_orbit": 2750,
+          "infeasible": 249,
+          "unknown": 1
+        },
+        {
+          "file": "p5_size6_exact_noinf_2750_3000.json",
+          "sha256": "354517d2009866c65820d5a6e9fcc9c7feb3b654af4a0b17ad123483bbe1ab9b",
+          "bytes": 448183,
+          "start_orbit": 2750,
+          "stop_orbit": 3000,
+          "infeasible": 250,
+          "unknown": 0
+        },
+        {
+          "file": "p5_size6_exact_noinf_3000_3250.json",
+          "sha256": "4319fc6b8b893e75aa47b570aa1725487ee8eda90de64f2b6da7f79fe6d1e25b",
+          "bytes": 446397,
+          "start_orbit": 3000,
+          "stop_orbit": 3250,
+          "infeasible": 249,
+          "unknown": 1
+        },
+        {
+          "file": "p5_size6_exact_noinf_3250_3500.json",
+          "sha256": "6b0317740ca10072b4f9bf0028b48ecdba7ad31151b846503e6ef3c5f553cb1e",
+          "bytes": 446245,
+          "start_orbit": 3250,
+          "stop_orbit": 3500,
+          "infeasible": 250,
+          "unknown": 0
+        },
+        {
+          "file": "p5_size6_exact_noinf_3500_3750.json",
+          "sha256": "9e43bed83cca2139e22fa24b145e0f72cd79e59b7744b463e14258b5ef8b4d12",
+          "bytes": 447312,
+          "start_orbit": 3500,
+          "stop_orbit": 3750,
+          "infeasible": 250,
+          "unknown": 0
+        },
+        {
+          "file": "p5_size6_exact_noinf_3750_4000.json",
+          "sha256": "999b273241a92a502176cd2a34772de5b09bcac7750c25d91fa54a2f942d20d1",
+          "bytes": 448265,
+          "start_orbit": 3750,
+          "stop_orbit": 4000,
+          "infeasible": 250,
+          "unknown": 0
+        },
+        {
+          "file": "p5_size6_exact_noinf_4000_4250.json",
+          "sha256": "848c55fb122126488b135ade0b48f24fe58e9bb0462c5956147bd7d8ec2f88cb",
+          "bytes": 448220,
+          "start_orbit": 4000,
+          "stop_orbit": 4250,
+          "infeasible": 250,
+          "unknown": 0
+        },
+        {
+          "file": "p5_size6_exact_noinf_4250_4500.json",
+          "sha256": "040a5e74e3c1b12e987fae92b90717daaa5102927f9b9b6c90c4b37b4ec6de57",
+          "bytes": 444370,
+          "start_orbit": 4250,
+          "stop_orbit": 4500,
+          "infeasible": 250,
+          "unknown": 0
+        },
+        {
+          "file": "p5_size6_exact_noinf_4500_4750.json",
+          "sha256": "1d4930bccdc7b36195046a9846d08506d0f643bbef2c6fa3ffdfbe1f9f4e2be1",
+          "bytes": 447827,
+          "start_orbit": 4500,
+          "stop_orbit": 4750,
+          "infeasible": 249,
+          "unknown": 1
+        },
+        {
+          "file": "p5_size6_exact_noinf_4750_5000.json",
+          "sha256": "e74fd437e9c84c13d93b4a0a1aa7945c56764d067c2a068ceffe417e36b0a351",
+          "bytes": 445524,
+          "start_orbit": 4750,
+          "stop_orbit": 5000,
+          "infeasible": 249,
+          "unknown": 1
+        },
+        {
+          "file": "p5_size6_exact_noinf_5000_5250.json",
+          "sha256": "f91e94169bda330bbaeaa6ad9d97042d9bcc152342a3358ea88156d569405b98",
+          "bytes": 447667,
+          "start_orbit": 5000,
+          "stop_orbit": 5250,
+          "infeasible": 250,
+          "unknown": 0
+        },
+        {
+          "file": "p5_size6_exact_noinf_5250_5500.json",
+          "sha256": "65803f07ed3a86191e0d0656fa852a8edfae680b1d645ec8fe4e1dbc21d92651",
+          "bytes": 444377,
+          "start_orbit": 5250,
+          "stop_orbit": 5500,
+          "infeasible": 250,
+          "unknown": 0
+        },
+        {
+          "file": "p5_size6_exact_noinf_5500_6766.json",
+          "sha256": "6c834e398533c24c20a0fc5b756cca2c241ada877d63adfbb8255aa5ae079c35",
+          "bytes": 2261229,
+          "start_orbit": 5500,
+          "stop_orbit": 6766,
+          "infeasible": 1266,
+          "unknown": 0
+        }
+      ]
+    },
+    "plusinf_c_plus": {
+      "catalog": {
+        "file": "p5_size6_full_multiplier_c1_i1.json",
+        "sha256": "8cc272be34d8ed629c290c7c8ef6d54b89e690f6097081712e69971336eedb2b",
+        "bytes": 846296
+      },
+      "catalog_orbits": 905,
+      "covered_orbits": 905,
+      "infeasible": 905,
+      "unknown": 0,
+      "unknown_orbit_indices": [],
+      "batch_count": 2,
+      "batches": [
+        {
+          "file": "p5_size6_exact_plusinf_0_450.json",
+          "sha256": "e84b5fb1c9d2928327146c826977add8cd6ef72f2230c27e84466b21b9d67dde",
+          "bytes": 803348,
+          "start_orbit": 0,
+          "stop_orbit": 450,
+          "infeasible": 450,
+          "unknown": 0
+        },
+        {
+          "file": "p5_size6_exact_plusinf_450_905.json",
+          "sha256": "10457209138a60dbfb29d4a3111a32d8b17a168800e1d41fe8f0939664255337",
+          "bytes": 813104,
+          "start_orbit": 450,
+          "stop_orbit": 905,
+          "infeasible": 455,
+          "unknown": 0
+        }
+      ]
+    },
+    "minusinf_c_minus": {
+      "catalog": {
+        "file": "p5_size6_full_multiplier_c-1_i1.json",
+        "sha256": "a3ec787dbbb6ad08213573088274a744e086b64cb5998cea3a3ed77dd5040834",
+        "bytes": 1078665
+      },
+      "catalog_orbits": 1150,
+      "covered_orbits": 1150,
+      "infeasible": 1148,
+      "unknown": 2,
+      "unknown_orbit_indices": [
+        0,
+        1144
+      ],
+      "batch_count": 1,
+      "batches": [
+        {
+          "file": "p5_size6_exact_minusinf_0_1150.json",
+          "sha256": "e0b300ffad5cdfa71e9b820dfd8d1768554a35aa4bb816a93a139b99908f926c",
+          "bytes": 2037510,
+          "start_orbit": 0,
+          "stop_orbit": 1150,
+          "infeasible": 1148,
+          "unknown": 2
+        }
+      ]
+    }
+  },
+  "coarse_residual_count_before_cross_infinity_symmetry": 7,
+  "residual_class_count": 6,
+  "residual_classes": [
+    {
+      "source": "p5_size6_full_multiplier_c-1_i1.json",
+      "source_sha256": "a3ec787dbbb6ad08213573088274a744e086b64cb5998cea3a3ed77dd5040834",
+      "orbit_index": 0,
+      "boundary": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "source": "p5_size6_boundary_orbits_c-1_i0.json",
+      "source_sha256": "56f5831fa96cb71fb9793a1ce141d5e06df77cbfe7d72d95fc3b7b73b0d22f2d",
+      "orbit_index": 881,
+      "boundary": [
+        1,
+        2,
+        6,
+        7,
+        18,
+        20
+      ]
+    },
+    {
+      "source": "p5_size6_boundary_orbits_c-1_i0.json",
+      "source_sha256": "56f5831fa96cb71fb9793a1ce141d5e06df77cbfe7d72d95fc3b7b73b0d22f2d",
+      "orbit_index": 2529,
+      "boundary": [
+        2,
+        3,
+        6,
+        9,
+        21,
+        24
+      ]
+    },
+    {
+      "source": "p5_size6_boundary_orbits_c-1_i0.json",
+      "source_sha256": "56f5831fa96cb71fb9793a1ce141d5e06df77cbfe7d72d95fc3b7b73b0d22f2d",
+      "orbit_index": 3032,
+      "boundary": [
+        2,
+        3,
+        7,
+        8,
+        16,
+        19
+      ]
+    },
+    {
+      "source": "p5_size6_boundary_orbits_c-1_i0.json",
+      "source_sha256": "56f5831fa96cb71fb9793a1ce141d5e06df77cbfe7d72d95fc3b7b73b0d22f2d",
+      "orbit_index": 4731,
+      "boundary": [
+        2,
+        5,
+        8,
+        9,
+        12,
+        15
+      ]
+    },
+    {
+      "source": "p5_size6_boundary_orbits_c-1_i0.json",
+      "source_sha256": "56f5831fa96cb71fb9793a1ce141d5e06df77cbfe7d72d95fc3b7b73b0d22f2d",
+      "orbit_index": 4939,
+      "boundary": [
+        2,
+        5,
+        13,
+        14,
+        18,
+        19
+      ]
+    }
+  ],
+  "class_closures": {
+    "expected_class_count": 6,
+    "proved_class_count": 6,
+    "all_residual_classes_closed": true,
+    "missing": [],
+    "audits": [
+      {
+        "file": "p5_size6_general_circle_scip_audit_i881.json",
+        "sha256": "a4f320fc46039ab1009e47190c10fc5884645df2776492d2598ffeef8297f0ff",
+        "bytes": 23450,
+        "source_sha256": "56f5831fa96cb71fb9793a1ce141d5e06df77cbfe7d72d95fc3b7b73b0d22f2d",
+        "orbit_index": 881,
+        "boundary": [
+          1,
+          2,
+          6,
+          7,
+          18,
+          20
+        ],
+        "used_artifact_count": 97
+      },
+      {
+        "file": "p5_size6_general_circle_scip_audit_i2529.json",
+        "sha256": "51149e286878ea92859e70f931e2984d888eca2c6b5e81476c48c133d8e6af0e",
+        "bytes": 23569,
+        "source_sha256": "56f5831fa96cb71fb9793a1ce141d5e06df77cbfe7d72d95fc3b7b73b0d22f2d",
+        "orbit_index": 2529,
+        "boundary": [
+          2,
+          3,
+          6,
+          9,
+          21,
+          24
+        ],
+        "used_artifact_count": 97
+      },
+      {
+        "file": "p5_size6_general_circle_scip_audit_i3032.json",
+        "sha256": "85cd90c192916c93da2bf9cf54e58bff898b103c731e21307930c6feffa1424b",
+        "bytes": 21644,
+        "source_sha256": "56f5831fa96cb71fb9793a1ce141d5e06df77cbfe7d72d95fc3b7b73b0d22f2d",
+        "orbit_index": 3032,
+        "boundary": [
+          2,
+          3,
+          7,
+          8,
+          16,
+          19
+        ],
+        "used_artifact_count": 90
+      },
+      {
+        "file": "p5_size6_general_circle_scip_audit_i4731.json",
+        "sha256": "787829034632e188897fe971635395d369781fe9bdf17d11f87b3778cec12e1f",
+        "bytes": 21432,
+        "source_sha256": "56f5831fa96cb71fb9793a1ce141d5e06df77cbfe7d72d95fc3b7b73b0d22f2d",
+        "orbit_index": 4731,
+        "boundary": [
+          2,
+          5,
+          8,
+          9,
+          12,
+          15
+        ],
+        "used_artifact_count": 93
+      },
+      {
+        "file": "p5_size6_general_circle_scip_audit_i4939.json",
+        "sha256": "d7ea05e882c07a3949c741a531b783f0f411b71efce2b36a6f0f414c13af913b",
+        "bytes": 13677,
+        "source_sha256": "56f5831fa96cb71fb9793a1ce141d5e06df77cbfe7d72d95fc3b7b73b0d22f2d",
+        "orbit_index": 4939,
+        "boundary": [
+          2,
+          5,
+          13,
+          14,
+          18,
+          19
+        ],
+        "used_artifact_count": 61
+      },
+      {
+        "file": "p5_size6_circle_scip_audit_i0.json",
+        "sha256": "5d13771fd85b75df98bf486f996728f885b243e25fa2a1c37657f199cb6656ad",
+        "bytes": 459473,
+        "source_sha256": "a3ec787dbbb6ad08213573088274a744e086b64cb5998cea3a3ed77dd5040834",
+        "orbit_index": 0,
+        "boundary": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "used_artifact_count": 867
+      }
+    ]
+  },
+  "solver_claim_limit": "Batch and layered audits verify finite coverage and recorded exact-solver infeasibility statuses; they are not independently checkable SCIP proof logs.",
+  "elapsed_seconds": 209.45787167549133
+}

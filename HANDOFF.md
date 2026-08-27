@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-26 (15.658--15.659 close both p=7 infinity size-six signs)
+**Date:** 2026-08-27 (15.660 closes every p=5 size-six boundary)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -14,10 +14,27 @@ unsaturated boundaries (518 orbits) per sign. Thus every `p=7` size-four
 case is closed. Proposition 15.656 closes all 1,202 floor-surviving `p=5`
 orbit/sign cases by complete-shell modular syndromes and sign transfer.
 Every size-four boundary is now closed for odd `p>=5`; 15.657 closes size
-six for `p>=11`, and 15.658--15.659 additionally close both `p=7`
-infinity-plus-five signs. The six-finite `p=7` branch, all `p=5` size-six
-branches, and larger boundaries remain. p=13 orbits / mesh k=6 are not a close. cpu44
+six for `p>=11`, 15.658--15.659 close both `p=7` infinity-plus-five
+signs, and 15.660 closes every `p=5` size-six boundary. Only the six-finite
+`p=7` branch remains at size six; larger boundaries remain. p=13 orbits /
+mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.660 — every p=5 size-six boundary closed
+
+`src/e1_gmin_m4_prop15660.py` and
+`evidence/NOTE_2026-08-26_p5_size_six_global_exclusion.md`. Four exact
+catalogs are rebuilt from definitions for both signs and infinity bits.
+Signed symmetry and complete coarse SCIP batches leave six classes:
+`0,881,2529,3032,4731,4939`. Independent layered audits reconstruct every
+finite quotient and close all six with zero unresolved or feasible leaves.
+The from-definitions global audit has SHA-256
+`d6650a9f71043dce2902e157b56f988305470b911eaccb130522dd2f55b3bbd8`.
+Raw class records are archived under
+`/mnt/storage/e1work/maxplus_p13/p5_size6_circle_attack_2026-08-26/`; all
+97 class-881 artifact hashes were rechecked after transfer. With
+15.657--15.659, only six finite points at `p=7` remain at boundary size six.
+Larger boundaries and the top-level predicates remain open.
 
 ## 15.659 — negative p=7 infinity-plus-five branch closed modulo seven
 
@@ -33,8 +50,8 @@ remaining cases leaves zero survivors. NUKA and Soulkiller independently
 reproduce both modular stages. Raw records and implementation are archived
 at `/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-26-p7-size-six-negative-infinity/`.
 Together with 15.658 this closes both infinity-plus-five signs at `p=7`.
-Six finite points at `p=7`, every `p=5` size-six branch, and larger
-boundaries remain open.
+Six finite points at `p=7` and larger boundaries remain open; Proposition
+15.660 subsequently closes every `p=5` size-six branch.
 
 ## 15.658 — positive p=7 infinity-plus-five branch closed modulo seven
 
@@ -49,7 +66,8 @@ independent NUKA/NumPy sweep reproduced the same mask histogram and zero
 survivors in 4.47 seconds. Raw records and implementation are archived at
 `/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-26-p7-size-six-positive-infinity/`.
 Proposition 15.659 subsequently closes the negative infinity sign. Six
-finite points at `p=7` and every `p=5` size-six branch remain open.
+finite points at `p=7` remain open; Proposition 15.660 subsequently closes
+every `p=5` size-six branch.
 
 ## 15.656 — every p=5 four-point boundary closed by full-shell syndromes
 
@@ -126,8 +144,8 @@ points, unique pair directions give the global deficit inequality
 `sum_d(s-b_d)<=s(s-1)`. Combining its budgets 30 and 20 with the affine
 slack floors excludes infinity plus five finite points for every `p>=11`
 and six finite points for every `p>=13`; a separate exact type-profile
-argument closes `p=11`. The `p=5,7` size-six cases and boundaries of size at
-least eight remain open.
+argument closes `p=11`. Proposition 15.660 subsequently closes `p=5`; the
+six-finite `p=7` case and boundaries of size at least eight remain open.
 
 ## 15.652 — every four-point boundary closed for p>=11
 

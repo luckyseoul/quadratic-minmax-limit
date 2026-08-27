@@ -1,0 +1,32 @@
+{
+  "experiment": "p5_size6_circle_layer_manifest",
+  "source_sha256": "56f5831fa96cb71fb9793a1ce141d5e06df77cbfe7d72d95fc3b7b73b0d22f2d",
+  "orbit_index": 3032,
+  "chains": {
+    "0": [
+      "p5_scip_crossresplit_noinf_i3032_a0.json",
+      "p5_scip_branch_retry_noinf_i3032_a0.json",
+      "p5_scip_crossrecursive_noinf_i3032_a0_d3.json",
+      "p5_scip_branch_retry_noinf_i3032_a0_d3.json",
+      "p5_scip_crossrecursive_noinf_i3032_a0_d4.json",
+      "p5_scip_branch_retry_noinf_i3032_a0_d4.json",
+      "p5_scip_crossrecursive_noinf_i3032_a0_d5.json",
+      "p5_scip_branch_retry_noinf_i3032_a0_d5.json"
+    ],
+    "1": [
+      "p5_scip_branch_retry_noinf_i3032_a1_presplit.json",
+      "p5_scip_crossrecursive_noinf_i3032_a1_d2.json",
+      "p5_scip_branch_retry_noinf_i3032_a1_d2.json",
+      "p5_scip_crossrecursive_noinf_i3032_a1_d3.json",
+      "p5_scip_branch_retry_noinf_i3032_a1_d3.json",
+      "p5_scip_crossrecursive_noinf_i3032_a1_d4.json"
+    ],
+    "2": [
+      "p5_scip_branch_retry_noinf_i3032_a2_presplit.json",
+      "p5_scip_crossrecursive_noinf_i3032_a2_d2.json",
+      "p5_scip_branch_retry_noinf_i3032_a2_d2.json",
+      "p5_scip_branch_retry_noinf_i3032_a2_d2_final.json"
+    ],
+    "3": []
+  }
+}

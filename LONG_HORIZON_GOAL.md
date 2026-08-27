@@ -39,9 +39,9 @@ acceptance gate is the four-unit dictionary returned by
 2. **Residual (ii), even \(k\ge4p\):** OPEN. The Walsh slice, Eulerian
    boundary, every two-point boundary, and every four-point boundary are
    closed; every six-point boundary is also closed for `p>=11`, and both
-   `p=7` infinity-plus-five signs are closed by 15.658--15.659. The
-   six-finite `p=7` branch, all `p=5` size-six cases, and boundaries of size
-   at least eight remain.
+   `p=7` infinity-plus-five signs are closed by 15.658--15.659, and every
+   `p=5` size-six case is closed by 15.660. The six-finite `p=7` branch and
+   boundaries of size at least eight remain.
 3. **Type I, multi-level Max−:** OPEN. The general \(3A+B>0\) estimate is
    not proved.
 4. **Lemma D:** TRUE.

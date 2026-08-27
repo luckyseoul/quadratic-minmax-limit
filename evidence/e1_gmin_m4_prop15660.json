@@ -1,0 +1,117 @@
+{
+  "prop": "15.660",
+  "title": "complete p=5 size-six boundary exclusion",
+  "proved": true,
+  "theorem": {
+    "proved": true,
+    "global_reduction": {
+      "catalogs_rebuilt_from_definitions": true,
+      "signs": [
+        -1,
+        1
+      ],
+      "infinity_bits": [
+        0,
+        1
+      ],
+      "no_infinity_survivors_per_sign": 159050,
+      "no_infinity_orbits_per_sign": 6766,
+      "coarse_residual_classes_before_cross_infinity_symmetry": 7,
+      "residual_classes_after_symmetry": 6,
+      "no_infinity_sign_transfer_bijective": true,
+      "infinity_orbit_1144_transfers_to_no_infinity_orbit_881": true,
+      "selection_reduction_proved": true
+    },
+    "class_certificates": {
+      "proved": true,
+      "class_count": 6,
+      "closed_class_count": 6,
+      "classes": {
+        "0": {
+          "boundary": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "artifacts": 867
+        },
+        "881": {
+          "boundary": [
+            1,
+            2,
+            6,
+            7,
+            18,
+            20
+          ],
+          "artifacts": 97
+        },
+        "2529": {
+          "boundary": [
+            2,
+            3,
+            6,
+            9,
+            21,
+            24
+          ],
+          "artifacts": 97
+        },
+        "3032": {
+          "boundary": [
+            2,
+            3,
+            7,
+            8,
+            16,
+            19
+          ],
+          "artifacts": 90
+        },
+        "4731": {
+          "boundary": [
+            2,
+            5,
+            8,
+            9,
+            12,
+            15
+          ],
+          "artifacts": 93
+        },
+        "4939": {
+          "boundary": [
+            2,
+            5,
+            13,
+            14,
+            18,
+            19
+          ],
+          "artifacts": 61
+        }
+      },
+      "audit_sha256": {
+        "0": "5d13771fd85b75df98bf486f996728f885b243e25fa2a1c37657f199cb6656ad",
+        "881": "a4f320fc46039ab1009e47190c10fc5884645df2776492d2598ffeef8297f0ff",
+        "2529": "51149e286878ea92859e70f931e2984d888eca2c6b5e81476c48c133d8e6af0e",
+        "3032": "85cd90c192916c93da2bf9cf54e58bff898b103c731e21307930c6feffa1424b",
+        "4731": "787829034632e188897fe971635395d369781fe9bdf17d11f87b3778cec12e1f",
+        "4939": "d7ea05e882c07a3949c741a531b783f0f411b71efce2b36a6f0f414c13af913b"
+      }
+    },
+    "global_audit_sha256": "d6650a9f71043dce2902e157b56f988305470b911eaccb130522dd2f55b3bbd8",
+    "archive_root": "/mnt/storage/e1work/maxplus_p13/p5_size6_circle_attack_2026-08-26/",
+    "p5_size_six": "CLOSED",
+    "p7_infinity_plus_five": "CLOSED_BY_15.658_AND_15.659",
+    "p7_six_finite": "OPEN",
+    "boundaries_size_at_least_eight": "OPEN",
+    "closes_all_size_six": false,
+    "closes_residual_ii": false,
+    "closes_R1": false,
+    "L_status": "OPEN"
+  }
+}

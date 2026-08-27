@@ -613,9 +613,9 @@ exceeds the total affine slack budget by `p^2-9p+10`, positive from `p=11`.
 For six finite points and `p>=13`, the excess is `p^2-12p+7`, positive from
 `p=13`. At `p=11`, the two quadratic types have opposite phases and their
 separate budgets require deficits at least 20 and 18, contradicting 30.
-Thus every six-point boundary is closed for every odd prime `p>=11`; only
-the exceptional `p=5,7` size-six cases and boundaries of size at least eight
-remain on this boundary ladder.
+Thus every six-point boundary is closed for every odd prime `p>=11`;
+Propositions 15.658--15.660 subsequently close both infinity-present signs
+at `p=7` and every `p=5` size-six case.
 
 Targeted searches of Johnson-slice, finite-incidence, and Paley
 degree-parity sources found adjacent methods but no duplicate of the
@@ -624,6 +624,30 @@ parity-uniform induced Paley subgraphs and MDS-code applications, not the
 edge-set boundaries or affine slack system here. The result proposes no new
 integer sequence, so no OEIS submission search was made. This is a
 duplicate/context search record, not an unqualified priority claim.
+
+---
+
+## 7r. Complete `p=5` size-six exclusion (2026-08-27)
+
+Proposition 15.660 rebuilds the four exact `p=5` size-six boundary catalogs
+for both product signs and infinity bits. The no-infinity catalogs contain
+159,050 survivors and 6,766 square-semilinear orbits per sign, exchanged by
+a nonsquare multiplier. Complete coarse full-shell SCIP batches leave seven
+classes before cross-infinity symmetry; infinity orbit 1144 maps to
+no-infinity orbit 881, leaving exactly six signed-symmetry classes.
+
+Independent layered audits close classes `0`, `881`, `2529`, `3032`,
+`4731`, and `4939`. They reconstruct every pattern, degree, and recursive
+crossing-edge quotient and verify every recorded SCIP infeasibility status.
+The from-definitions global audit is true, and all 97 class-881 artifact
+hashes were rechecked in the permanent `/mnt/storage/` archive. Thus every
+`p=5` size-six boundary is excluded. At size six only the six-finite `p=7`
+branch remains; larger boundaries and the top-level theorem remain open.
+
+Targeted arXiv searches found no duplicate Paley residual classification.
+The count 159,050 occurs in OEIS A063533 for an unrelated construction from
+twin-prime Pythagorean triples, so the match is coincidental and supplies no
+structural input or sequence claim.
 
 ---
 
