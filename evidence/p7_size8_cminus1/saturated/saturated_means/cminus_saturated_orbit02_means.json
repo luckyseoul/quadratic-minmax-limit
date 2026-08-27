@@ -1,0 +1,679 @@
+{
+  "experiment": "p7_fixed_boundary_mean_allocation_batch",
+  "status": "complete_exact_mean_allocation_exhaustion",
+  "p": 7,
+  "c_H": -1,
+  "fixed_boundary": [
+    1,
+    2,
+    8,
+    12,
+    30,
+    34,
+    40,
+    41
+  ],
+  "boundary_size": 8,
+  "moduli": [
+    3,
+    5,
+    7,
+    11
+  ],
+  "direction_rows": [
+    {
+      "direction": [
+        1,
+        0
+      ],
+      "eps": 1,
+      "B": [],
+      "b": 0,
+      "phase": 0,
+      "floor": 0,
+      "parity_mass": 0,
+      "allowed_scaled_means": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32
+      ]
+    },
+    {
+      "direction": [
+        1,
+        1
+      ],
+      "eps": -1,
+      "B": [
+        0,
+        3
+      ],
+      "b": 2,
+      "phase": 1,
+      "floor": 6,
+      "parity_mass": 15,
+      "allowed_scaled_means": [
+        6,
+        10,
+        14,
+        18,
+        22,
+        26,
+        30
+      ]
+    },
+    {
+      "direction": [
+        1,
+        2
+      ],
+      "eps": 1,
+      "B": [],
+      "b": 0,
+      "phase": 0,
+      "floor": 0,
+      "parity_mass": 0,
+      "allowed_scaled_means": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32
+      ]
+    },
+    {
+      "direction": [
+        1,
+        3
+      ],
+      "eps": -1,
+      "B": [
+        1,
+        5
+      ],
+      "b": 2,
+      "phase": 1,
+      "floor": 6,
+      "parity_mass": 15,
+      "allowed_scaled_means": [
+        6,
+        10,
+        14,
+        18,
+        22,
+        26,
+        30
+      ]
+    },
+    {
+      "direction": [
+        1,
+        4
+      ],
+      "eps": -1,
+      "B": [],
+      "b": 0,
+      "phase": 1,
+      "floor": 14,
+      "parity_mass": 35,
+      "allowed_scaled_means": [
+        14,
+        18,
+        22,
+        26,
+        30
+      ]
+    },
+    {
+      "direction": [
+        1,
+        5
+      ],
+      "eps": 1,
+      "B": [
+        4,
+        5
+      ],
+      "b": 2,
+      "phase": 0,
+      "floor": 8,
+      "parity_mass": 20,
+      "allowed_scaled_means": [
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32
+      ]
+    },
+    {
+      "direction": [
+        1,
+        6
+      ],
+      "eps": -1,
+      "B": [
+        3,
+        4
+      ],
+      "b": 2,
+      "phase": 1,
+      "floor": 6,
+      "parity_mass": 15,
+      "allowed_scaled_means": [
+        6,
+        10,
+        14,
+        18,
+        22,
+        26,
+        30
+      ]
+    },
+    {
+      "direction": [
+        0,
+        1
+      ],
+      "eps": 1,
+      "B": [],
+      "b": 0,
+      "phase": 0,
+      "floor": 0,
+      "parity_mass": 0,
+      "allowed_scaled_means": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32
+      ]
+    }
+  ],
+  "allocation_count": 24,
+  "allocations_pairwise_distinct": true,
+  "all_allocations_meet_type_sums": true,
+  "infeasible_allocations": 16,
+  "feasible_modular_allocations": 0,
+  "unknown_allocations": 8,
+  "all_allocations_modularly_infeasible": false,
+  "finite_fixed_boundary_exclusion": false,
+  "seconds_per_leaf": 3.0,
+  "workers": 16,
+  "seed": 15708001,
+  "elapsed_seconds": 39.016693115234375,
+  "leaves": [
+    {
+      "leaf_index": 0,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        6,
+        14,
+        8,
+        6,
+        24
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 0,
+      "branches": 0,
+      "wall_time_seconds": 0.008997434
+    },
+    {
+      "leaf_index": 1,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        6,
+        14,
+        16,
+        6,
+        16
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 0,
+      "branches": 0,
+      "wall_time_seconds": 0.007916463
+    },
+    {
+      "leaf_index": 2,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        6,
+        14,
+        24,
+        6,
+        8
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 0,
+      "branches": 0,
+      "wall_time_seconds": 0.007901463000000001
+    },
+    {
+      "leaf_index": 3,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        6,
+        14,
+        32,
+        6,
+        0
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 0,
+      "branches": 0,
+      "wall_time_seconds": 0.007894864
+    },
+    {
+      "leaf_index": 4,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        8,
+        6,
+        14,
+        8,
+        6,
+        16
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 684,
+      "branches": 1820,
+      "wall_time_seconds": 0.8160476080000001
+    },
+    {
+      "leaf_index": 5,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        8,
+        6,
+        14,
+        16,
+        6,
+        8
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 734,
+      "branches": 3684,
+      "wall_time_seconds": 1.573856959
+    },
+    {
+      "leaf_index": 6,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        8,
+        6,
+        14,
+        24,
+        6,
+        0
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 4737,
+      "branches": 7689,
+      "wall_time_seconds": 0.9896735280000001
+    },
+    {
+      "leaf_index": 7,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        16,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 2161,
+      "branches": 10409,
+      "wall_time_seconds": 2.561669229
+    },
+    {
+      "leaf_index": 8,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        16,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2948,
+      "branches": 10927,
+      "wall_time_seconds": 3.007246637
+    },
+    {
+      "leaf_index": 9,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        24,
+        6,
+        14,
+        8,
+        6,
+        0
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 0,
+      "branches": 3,
+      "wall_time_seconds": 0.07049092900000001
+    },
+    {
+      "leaf_index": 10,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        4,
+        6,
+        14,
+        12,
+        6,
+        12
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 3778,
+      "branches": 5744,
+      "wall_time_seconds": 1.257536862
+    },
+    {
+      "leaf_index": 11,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        4,
+        6,
+        14,
+        20,
+        6,
+        4
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 2483,
+      "branches": 7486,
+      "wall_time_seconds": 1.1497655530000002
+    },
+    {
+      "leaf_index": 12,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        12,
+        6,
+        14,
+        12,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1450,
+      "branches": 6888,
+      "wall_time_seconds": 3.0060032480000003
+    },
+    {
+      "leaf_index": 13,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        0,
+        6,
+        14,
+        8,
+        6,
+        16
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 4985,
+      "branches": 8202,
+      "wall_time_seconds": 0.911523289
+    },
+    {
+      "leaf_index": 14,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        0,
+        6,
+        14,
+        16,
+        6,
+        8
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 5315,
+      "branches": 8747,
+      "wall_time_seconds": 1.249108063
+    },
+    {
+      "leaf_index": 15,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        0,
+        6,
+        14,
+        24,
+        6,
+        0
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 1393,
+      "branches": 3945,
+      "wall_time_seconds": 0.9570846970000001
+    },
+    {
+      "leaf_index": 16,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 10352,
+      "branches": 28015,
+      "wall_time_seconds": 3.007883066
+    },
+    {
+      "leaf_index": 17,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1912,
+      "branches": 12282,
+      "wall_time_seconds": 3.007042343
+    },
+    {
+      "leaf_index": 18,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        16,
+        6,
+        14,
+        8,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 3435,
+      "branches": 16010,
+      "wall_time_seconds": 3.007884778
+    },
+    {
+      "leaf_index": 19,
+      "scaled_means_direction_order": [
+        12,
+        6,
+        4,
+        6,
+        14,
+        12,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1772,
+      "branches": 8991,
+      "wall_time_seconds": 3.00767715
+    },
+    {
+      "leaf_index": 20,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        0,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2759,
+      "branches": 14537,
+      "wall_time_seconds": 3.0057663100000003
+    },
+    {
+      "leaf_index": 21,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        0,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 15,
+      "branches": 60,
+      "wall_time_seconds": 0.342406822
+    },
+    {
+      "leaf_index": 22,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        8,
+        6,
+        14,
+        8,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 3523,
+      "branches": 15354,
+      "wall_time_seconds": 3.0069032520000003
+    },
+    {
+      "leaf_index": 23,
+      "scaled_means_direction_order": [
+        24,
+        6,
+        0,
+        6,
+        14,
+        8,
+        6,
+        0
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 0,
+      "branches": 3,
+      "wall_time_seconds": 0.05510580700000001
+    }
+  ]
+}

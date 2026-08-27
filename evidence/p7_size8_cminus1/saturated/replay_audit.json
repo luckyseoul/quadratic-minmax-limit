@@ -1,0 +1,4571 @@
+{
+  "experiment": "p7_size8_saturated_join_batch",
+  "status": "complete_exact_unknown_leaf_catalog_joins",
+  "p": 7,
+  "c_H": -1,
+  "source": "evidence/p7_size8_cminus1/conic_orbits_cminus1.json",
+  "saturated_orbit_count": 25,
+  "total_exact_allocations": 600,
+  "cp_sat_infeasible_allocations": 355,
+  "extra_cp_sat_infeasible_allocations": 6,
+  "catalog_join_allocations": 239,
+  "catalog_join_infeasible_allocations": 239,
+  "remaining_modularly_consistent_allocations": 0,
+  "deferred_high_catalog_allocations": 0,
+  "all_saturated_orbits_excluded": true,
+  "workers": 1,
+  "elapsed_seconds": 0.08582305908203125,
+  "unresolved": [],
+  "deferred": [],
+  "extra_cp_sources": [
+    "evidence/p7_size8_cminus1/saturated/saturated_high_mean/cminus_orbit10_leaf23.json",
+    "evidence/p7_size8_cminus1/saturated/saturated_high_mean/cminus_orbit12_leaf23.json",
+    "evidence/p7_size8_cminus1/saturated/saturated_high_mean/cminus_orbit14_leaf23.json",
+    "evidence/p7_size8_cminus1/saturated/saturated_high_mean/cminus_orbit15_leaf23.json",
+    "evidence/p7_size8_cminus1/saturated/saturated_high_mean/cminus_orbit17_leaf9.json",
+    "evidence/p7_size8_cminus1/saturated/saturated_high_mean/cminus_orbit7_leaf9.json"
+  ],
+  "joins": [
+    {
+      "orbit_index": 1,
+      "leaf_index": 7,
+      "fixed_scaled_means": [
+        0,
+        6,
+        24,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit01_leaf07.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.673929452896118
+    },
+    {
+      "orbit_index": 1,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        4,
+        6,
+        20,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit01_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 78.26490306854248
+    },
+    {
+      "orbit_index": 1,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit01_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.229650259017944
+    },
+    {
+      "orbit_index": 1,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit01_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 9.98489236831665
+    },
+    {
+      "orbit_index": 1,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        8,
+        6,
+        24,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit01_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 18.416865587234497
+    },
+    {
+      "orbit_index": 1,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        12,
+        6,
+        12,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit01_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 83.60242915153503
+    },
+    {
+      "orbit_index": 1,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit01_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.40615701675415
+    },
+    {
+      "orbit_index": 1,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit01_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.390290975570679
+    },
+    {
+      "orbit_index": 1,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        16,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit01_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 12.696470499038696
+    },
+    {
+      "orbit_index": 2,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        0,
+        6,
+        16,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit02_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.859031438827515
+    },
+    {
+      "orbit_index": 2,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        4,
+        6,
+        12,
+        6,
+        14,
+        12,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit02_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 77.5613431930542
+    },
+    {
+      "orbit_index": 2,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit02_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 6.655185222625732
+    },
+    {
+      "orbit_index": 2,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit02_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 6.865379810333252
+    },
+    {
+      "orbit_index": 2,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        14,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit02_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 17.72138023376465
+    },
+    {
+      "orbit_index": 2,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        12,
+        6,
+        4,
+        6,
+        14,
+        12,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit02_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 82.27395415306091
+    },
+    {
+      "orbit_index": 2,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        16,
+        6,
+        0,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit02_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.431612730026245
+    },
+    {
+      "orbit_index": 2,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        14,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit02_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.695636749267578
+    },
+    {
+      "orbit_index": 3,
+      "leaf_index": 7,
+      "fixed_scaled_means": [
+        0,
+        6,
+        24,
+        14,
+        6,
+        0,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit03_leaf07.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 12.405731439590454
+    },
+    {
+      "orbit_index": 3,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        0,
+        6,
+        24,
+        14,
+        6,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit03_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.036100387573242
+    },
+    {
+      "orbit_index": 3,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        4,
+        6,
+        20,
+        14,
+        6,
+        4,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit03_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 79.90399217605591
+    },
+    {
+      "orbit_index": 3,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        14,
+        6,
+        0,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit03_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 9.199551582336426
+    },
+    {
+      "orbit_index": 3,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        14,
+        6,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit03_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.286375284194946
+    },
+    {
+      "orbit_index": 3,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        8,
+        6,
+        24,
+        14,
+        6,
+        0,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit03_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 19.50118064880371
+    },
+    {
+      "orbit_index": 3,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        12,
+        6,
+        12,
+        14,
+        6,
+        4,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit03_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 82.77709555625916
+    },
+    {
+      "orbit_index": 3,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        14,
+        6,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit03_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.398685932159424
+    },
+    {
+      "orbit_index": 3,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        16,
+        6,
+        16,
+        14,
+        6,
+        0,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit03_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.133017778396606
+    },
+    {
+      "orbit_index": 4,
+      "leaf_index": 7,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit04_leaf07.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.54550290107727
+    },
+    {
+      "orbit_index": 4,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit04_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.486361026763916
+    },
+    {
+      "orbit_index": 4,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        12,
+        6,
+        12,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit04_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.9649477005004883
+    },
+    {
+      "orbit_index": 4,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit04_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 8.533632278442383
+    },
+    {
+      "orbit_index": 4,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit04_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 9.383755445480347
+    },
+    {
+      "orbit_index": 4,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        16,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit04_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 21.397711038589478
+    },
+    {
+      "orbit_index": 4,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        20,
+        6,
+        4,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit04_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 77.98513078689575
+    },
+    {
+      "orbit_index": 4,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        24,
+        6,
+        0,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit04_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.28108525276184
+    },
+    {
+      "orbit_index": 4,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        24,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit04_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.555729389190674
+    },
+    {
+      "orbit_index": 6,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        0,
+        6,
+        16,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit06_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.471520185470581
+    },
+    {
+      "orbit_index": 6,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        4,
+        6,
+        12,
+        6,
+        14,
+        12,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit06_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.5665152072906494
+    },
+    {
+      "orbit_index": 6,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit06_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.621182918548584
+    },
+    {
+      "orbit_index": 6,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit06_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.479922771453857
+    },
+    {
+      "orbit_index": 6,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        14,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit06_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 17.248806476593018
+    },
+    {
+      "orbit_index": 6,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        12,
+        6,
+        4,
+        6,
+        14,
+        12,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit06_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.953346014022827
+    },
+    {
+      "orbit_index": 6,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        16,
+        6,
+        0,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit06_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.42223310470581
+    },
+    {
+      "orbit_index": 6,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        14,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit06_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.429514646530151
+    },
+    {
+      "orbit_index": 7,
+      "leaf_index": 6,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        6,
+        6,
+        16,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit07_leaf06.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 16.037148475646973
+    },
+    {
+      "orbit_index": 7,
+      "leaf_index": 7,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit07_leaf07.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.85735034942627
+    },
+    {
+      "orbit_index": 7,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit07_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.113428115844727
+    },
+    {
+      "orbit_index": 7,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        12,
+        6,
+        12,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit07_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.3630714416503906
+    },
+    {
+      "orbit_index": 7,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit07_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.668390274047852
+    },
+    {
+      "orbit_index": 7,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit07_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 8.462677955627441
+    },
+    {
+      "orbit_index": 7,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        16,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit07_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.670224905014038
+    },
+    {
+      "orbit_index": 7,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        20,
+        6,
+        4,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit07_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.9877936840057373
+    },
+    {
+      "orbit_index": 7,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        24,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit07_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.09253716468811
+    },
+    {
+      "orbit_index": 9,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        0,
+        6,
+        24,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit09_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 12.151121854782104
+    },
+    {
+      "orbit_index": 9,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        4,
+        6,
+        20,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit09_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 2.888061046600342
+    },
+    {
+      "orbit_index": 9,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit09_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.202712297439575
+    },
+    {
+      "orbit_index": 9,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit09_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 9.285895824432373
+    },
+    {
+      "orbit_index": 9,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        8,
+        6,
+        24,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit09_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 16.873618364334106
+    },
+    {
+      "orbit_index": 9,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        12,
+        6,
+        12,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit09_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 5.202147006988525
+    },
+    {
+      "orbit_index": 9,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit09_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.415833234786987
+    },
+    {
+      "orbit_index": 9,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit09_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 12.098317861557007
+    },
+    {
+      "orbit_index": 9,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        16,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit09_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 12.48323106765747
+    },
+    {
+      "orbit_index": 10,
+      "leaf_index": 7,
+      "fixed_scaled_means": [
+        0,
+        6,
+        16,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit10_leaf07.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 12.187102317810059
+    },
+    {
+      "orbit_index": 10,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        0,
+        6,
+        16,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit10_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.830488681793213
+    },
+    {
+      "orbit_index": 10,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        4,
+        6,
+        12,
+        6,
+        14,
+        12,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit10_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 2.7937183380126953
+    },
+    {
+      "orbit_index": 10,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit10_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 6.817755937576294
+    },
+    {
+      "orbit_index": 10,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit10_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.992612838745117
+    },
+    {
+      "orbit_index": 10,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        14,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit10_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 20.500560998916626
+    },
+    {
+      "orbit_index": 10,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        12,
+        6,
+        4,
+        6,
+        14,
+        12,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit10_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 4.689990043640137
+    },
+    {
+      "orbit_index": 10,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        16,
+        6,
+        0,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit10_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.45714545249939
+    },
+    {
+      "orbit_index": 10,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        16,
+        6,
+        0,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit10_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.772459030151367
+    },
+    {
+      "orbit_index": 10,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        14,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit10_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.05697774887085
+    },
+    {
+      "orbit_index": 11,
+      "leaf_index": 7,
+      "fixed_scaled_means": [
+        8,
+        14,
+        16,
+        6,
+        6,
+        0,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit11_leaf07.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.979708671569824
+    },
+    {
+      "orbit_index": 11,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        8,
+        14,
+        16,
+        6,
+        6,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit11_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.183375597000122
+    },
+    {
+      "orbit_index": 11,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        12,
+        14,
+        12,
+        6,
+        6,
+        4,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit11_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.075908660888672
+    },
+    {
+      "orbit_index": 11,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        16,
+        14,
+        8,
+        6,
+        6,
+        0,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit11_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 6.965284109115601
+    },
+    {
+      "orbit_index": 11,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        16,
+        14,
+        8,
+        6,
+        6,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit11_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.910936594009399
+    },
+    {
+      "orbit_index": 11,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        16,
+        14,
+        16,
+        6,
+        6,
+        0,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit11_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 19.690051317214966
+    },
+    {
+      "orbit_index": 11,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        20,
+        14,
+        4,
+        6,
+        6,
+        4,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit11_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 81.54350447654724
+    },
+    {
+      "orbit_index": 11,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        24,
+        14,
+        0,
+        6,
+        6,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit11_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.397568464279175
+    },
+    {
+      "orbit_index": 11,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        24,
+        14,
+        8,
+        6,
+        6,
+        0,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit11_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 12.609841346740723
+    },
+    {
+      "orbit_index": 12,
+      "leaf_index": 7,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit12_leaf07.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 16.006919384002686
+    },
+    {
+      "orbit_index": 12,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit12_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.042710542678833
+    },
+    {
+      "orbit_index": 12,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        12,
+        6,
+        12,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit12_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.179920196533203
+    },
+    {
+      "orbit_index": 12,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit12_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.130995273590088
+    },
+    {
+      "orbit_index": 12,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit12_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.835259914398193
+    },
+    {
+      "orbit_index": 12,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        16,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit12_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 16.897319078445435
+    },
+    {
+      "orbit_index": 12,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        20,
+        6,
+        4,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit12_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.9052391052246094
+    },
+    {
+      "orbit_index": 12,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        24,
+        6,
+        0,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit12_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 12.038997411727905
+    },
+    {
+      "orbit_index": 12,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        24,
+        6,
+        0,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit12_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.893410921096802
+    },
+    {
+      "orbit_index": 12,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        24,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit12_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 12.71195912361145
+    },
+    {
+      "orbit_index": 13,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        0,
+        6,
+        16,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit13_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 12.124505758285522
+    },
+    {
+      "orbit_index": 13,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        4,
+        6,
+        12,
+        6,
+        14,
+        12,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit13_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.208223342895508
+    },
+    {
+      "orbit_index": 13,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit13_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.291588068008423
+    },
+    {
+      "orbit_index": 13,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit13_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.793322324752808
+    },
+    {
+      "orbit_index": 13,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        14,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit13_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 18.815288305282593
+    },
+    {
+      "orbit_index": 13,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        12,
+        6,
+        4,
+        6,
+        14,
+        12,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit13_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.9506537914276123
+    },
+    {
+      "orbit_index": 13,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        16,
+        6,
+        0,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit13_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.57272720336914
+    },
+    {
+      "orbit_index": 13,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        16,
+        6,
+        0,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit13_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.392584562301636
+    },
+    {
+      "orbit_index": 13,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        14,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit13_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.456723928451538
+    },
+    {
+      "orbit_index": 14,
+      "leaf_index": 5,
+      "fixed_scaled_means": [
+        0,
+        14,
+        8,
+        6,
+        6,
+        16,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit14_leaf05.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.743072271347046
+    },
+    {
+      "orbit_index": 14,
+      "leaf_index": 6,
+      "fixed_scaled_means": [
+        0,
+        14,
+        8,
+        6,
+        6,
+        24,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit14_leaf06.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 19.949020862579346
+    },
+    {
+      "orbit_index": 14,
+      "leaf_index": 7,
+      "fixed_scaled_means": [
+        0,
+        14,
+        16,
+        6,
+        6,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit14_leaf07.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.65250039100647
+    },
+    {
+      "orbit_index": 14,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        0,
+        14,
+        16,
+        6,
+        6,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit14_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.955842971801758
+    },
+    {
+      "orbit_index": 14,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        4,
+        14,
+        12,
+        6,
+        6,
+        12,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit14_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.5452752113342285
+    },
+    {
+      "orbit_index": 14,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        8,
+        14,
+        8,
+        6,
+        6,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit14_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 8.080448389053345
+    },
+    {
+      "orbit_index": 14,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        8,
+        14,
+        8,
+        6,
+        6,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit14_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 8.355371952056885
+    },
+    {
+      "orbit_index": 14,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        8,
+        14,
+        16,
+        6,
+        6,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit14_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 21.23046040534973
+    },
+    {
+      "orbit_index": 14,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        12,
+        14,
+        4,
+        6,
+        6,
+        12,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit14_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 4.5366435050964355
+    },
+    {
+      "orbit_index": 14,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        16,
+        14,
+        0,
+        6,
+        6,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit14_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 12.626811504364014
+    },
+    {
+      "orbit_index": 14,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        16,
+        14,
+        0,
+        6,
+        6,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit14_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.91873049736023
+    },
+    {
+      "orbit_index": 14,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        16,
+        14,
+        8,
+        6,
+        6,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit14_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.900274515151978
+    },
+    {
+      "orbit_index": 15,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        0,
+        6,
+        16,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit15_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 12.419625282287598
+    },
+    {
+      "orbit_index": 15,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        4,
+        6,
+        12,
+        6,
+        14,
+        4,
+        6,
+        12
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit15_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.563286304473877
+    },
+    {
+      "orbit_index": 15,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        0,
+        6,
+        16
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit15_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.756207227706909
+    },
+    {
+      "orbit_index": 15,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit15_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 6.753142595291138
+    },
+    {
+      "orbit_index": 15,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        14,
+        0,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit15_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 17.633659839630127
+    },
+    {
+      "orbit_index": 15,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        12,
+        6,
+        4,
+        6,
+        14,
+        4,
+        6,
+        12
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit15_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.9215643405914307
+    },
+    {
+      "orbit_index": 15,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        16,
+        6,
+        0,
+        6,
+        14,
+        0,
+        6,
+        16
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit15_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.471024751663208
+    },
+    {
+      "orbit_index": 15,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        16,
+        6,
+        0,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit15_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.597934484481812
+    },
+    {
+      "orbit_index": 15,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        14,
+        0,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit15_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.63943886756897
+    },
+    {
+      "orbit_index": 16,
+      "leaf_index": 7,
+      "fixed_scaled_means": [
+        0,
+        6,
+        16,
+        14,
+        6,
+        0,
+        6,
+        16
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit16_leaf07.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.181474685668945
+    },
+    {
+      "orbit_index": 16,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        0,
+        6,
+        16,
+        14,
+        6,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit16_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.113837003707886
+    },
+    {
+      "orbit_index": 16,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        4,
+        6,
+        12,
+        14,
+        6,
+        4,
+        6,
+        12
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit16_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.5830371379852295
+    },
+    {
+      "orbit_index": 16,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        14,
+        6,
+        0,
+        6,
+        16
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit16_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.532068490982056
+    },
+    {
+      "orbit_index": 16,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        14,
+        6,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit16_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.196186780929565
+    },
+    {
+      "orbit_index": 16,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        14,
+        6,
+        0,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit16_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 20.266642093658447
+    },
+    {
+      "orbit_index": 16,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        12,
+        6,
+        4,
+        14,
+        6,
+        4,
+        6,
+        12
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit16_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 4.547772407531738
+    },
+    {
+      "orbit_index": 16,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        16,
+        6,
+        0,
+        14,
+        6,
+        0,
+        6,
+        16
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit16_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.188550472259521
+    },
+    {
+      "orbit_index": 16,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        16,
+        6,
+        0,
+        14,
+        6,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit16_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.365236520767212
+    },
+    {
+      "orbit_index": 16,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        14,
+        6,
+        0,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit16_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.309977531433105
+    },
+    {
+      "orbit_index": 17,
+      "leaf_index": 7,
+      "fixed_scaled_means": [
+        0,
+        6,
+        16,
+        14,
+        6,
+        0,
+        6,
+        16
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit17_leaf07.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.243546962738037
+    },
+    {
+      "orbit_index": 17,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        0,
+        6,
+        16,
+        14,
+        6,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit17_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.143616676330566
+    },
+    {
+      "orbit_index": 17,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        4,
+        6,
+        12,
+        14,
+        6,
+        4,
+        6,
+        12
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit17_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 5.004067659378052
+    },
+    {
+      "orbit_index": 17,
+      "leaf_index": 14,
+      "fixed_scaled_means": [
+        8,
+        6,
+        0,
+        14,
+        6,
+        8,
+        6,
+        16
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit17_leaf14.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 9.349451541900635
+    },
+    {
+      "orbit_index": 17,
+      "leaf_index": 15,
+      "fixed_scaled_means": [
+        8,
+        6,
+        0,
+        14,
+        6,
+        16,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit17_leaf15.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 20.64584231376648
+    },
+    {
+      "orbit_index": 17,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        14,
+        6,
+        0,
+        6,
+        16
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit17_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 8.745874643325806
+    },
+    {
+      "orbit_index": 17,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        14,
+        6,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit17_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 8.377275228500366
+    },
+    {
+      "orbit_index": 17,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        14,
+        6,
+        0,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit17_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 19.085801124572754
+    },
+    {
+      "orbit_index": 17,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        12,
+        6,
+        4,
+        14,
+        6,
+        4,
+        6,
+        12
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit17_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.94158673286438
+    },
+    {
+      "orbit_index": 17,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        16,
+        6,
+        0,
+        14,
+        6,
+        0,
+        6,
+        16
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit17_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.18563461303711
+    },
+    {
+      "orbit_index": 17,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        16,
+        6,
+        0,
+        14,
+        6,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit17_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.116308212280273
+    },
+    {
+      "orbit_index": 17,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        14,
+        6,
+        0,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit17_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.987591028213501
+    },
+    {
+      "orbit_index": 18,
+      "leaf_index": 7,
+      "fixed_scaled_means": [
+        0,
+        6,
+        24,
+        14,
+        6,
+        0,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit18_leaf07.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 16.713703632354736
+    },
+    {
+      "orbit_index": 18,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        0,
+        6,
+        24,
+        14,
+        6,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit18_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.5011727809906
+    },
+    {
+      "orbit_index": 18,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        4,
+        6,
+        20,
+        14,
+        6,
+        4,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit18_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 2.7794272899627686
+    },
+    {
+      "orbit_index": 18,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        14,
+        6,
+        0,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit18_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.2161853313446045
+    },
+    {
+      "orbit_index": 18,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        14,
+        6,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit18_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.560046911239624
+    },
+    {
+      "orbit_index": 18,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        8,
+        6,
+        24,
+        14,
+        6,
+        0,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit18_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 20.084622383117676
+    },
+    {
+      "orbit_index": 18,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        12,
+        6,
+        12,
+        14,
+        6,
+        4,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit18_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 5.828083276748657
+    },
+    {
+      "orbit_index": 18,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        14,
+        6,
+        0,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit18_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.072325944900513
+    },
+    {
+      "orbit_index": 18,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        14,
+        6,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit18_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.998277425765991
+    },
+    {
+      "orbit_index": 18,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        16,
+        6,
+        16,
+        14,
+        6,
+        0,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit18_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.649643182754517
+    },
+    {
+      "orbit_index": 19,
+      "leaf_index": 7,
+      "fixed_scaled_means": [
+        0,
+        6,
+        24,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit19_leaf07.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.85114574432373
+    },
+    {
+      "orbit_index": 19,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        0,
+        6,
+        24,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit19_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.441245555877686
+    },
+    {
+      "orbit_index": 19,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        4,
+        6,
+        20,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit19_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.8974506855010986
+    },
+    {
+      "orbit_index": 19,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit19_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 9.268694400787354
+    },
+    {
+      "orbit_index": 19,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit19_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.5903778076171875
+    },
+    {
+      "orbit_index": 19,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        8,
+        6,
+        24,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit19_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 17.341724634170532
+    },
+    {
+      "orbit_index": 19,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        12,
+        6,
+        12,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit19_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 4.590188980102539
+    },
+    {
+      "orbit_index": 19,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit19_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.113888502120972
+    },
+    {
+      "orbit_index": 19,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit19_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.662111282348633
+    },
+    {
+      "orbit_index": 19,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        16,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit19_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.532072067260742
+    },
+    {
+      "orbit_index": 20,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit20_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.181735515594482
+    },
+    {
+      "orbit_index": 20,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        12,
+        6,
+        12,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit20_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 4.247048854827881
+    },
+    {
+      "orbit_index": 20,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit20_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.450783967971802
+    },
+    {
+      "orbit_index": 20,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit20_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.6480712890625
+    },
+    {
+      "orbit_index": 20,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        16,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit20_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 17.166529893875122
+    },
+    {
+      "orbit_index": 20,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        20,
+        6,
+        4,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit20_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 4.3362720012664795
+    },
+    {
+      "orbit_index": 20,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        24,
+        6,
+        0,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit20_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 13.029764175415039
+    },
+    {
+      "orbit_index": 20,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        24,
+        6,
+        0,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit20_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.68729853630066
+    },
+    {
+      "orbit_index": 20,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        24,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit20_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.450461149215698
+    },
+    {
+      "orbit_index": 21,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit21_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 14.226783752441406
+    },
+    {
+      "orbit_index": 21,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        12,
+        6,
+        12,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit21_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.736393451690674
+    },
+    {
+      "orbit_index": 21,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit21_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 8.553335189819336
+    },
+    {
+      "orbit_index": 21,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit21_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 7.966995477676392
+    },
+    {
+      "orbit_index": 21,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        16,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit21_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.510840892791748
+    },
+    {
+      "orbit_index": 21,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        20,
+        6,
+        4,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit21_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 64.49524211883545
+    },
+    {
+      "orbit_index": 21,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        24,
+        6,
+        0,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit21_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.22077465057373
+    },
+    {
+      "orbit_index": 21,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        24,
+        6,
+        0,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit21_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.472425937652588
+    },
+    {
+      "orbit_index": 21,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        24,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit21_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.138053178787231
+    },
+    {
+      "orbit_index": 22,
+      "leaf_index": 7,
+      "fixed_scaled_means": [
+        0,
+        6,
+        16,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit22_leaf07.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.575655460357666
+    },
+    {
+      "orbit_index": 22,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        0,
+        6,
+        16,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit22_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 10.865814447402954
+    },
+    {
+      "orbit_index": 22,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        4,
+        6,
+        12,
+        6,
+        14,
+        12,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit22_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 63.81055498123169
+    },
+    {
+      "orbit_index": 22,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit22_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 6.4777867794036865
+    },
+    {
+      "orbit_index": 22,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit22_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 6.492816209793091
+    },
+    {
+      "orbit_index": 22,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        14,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit22_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.541116714477539
+    },
+    {
+      "orbit_index": 22,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        12,
+        6,
+        4,
+        6,
+        14,
+        12,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit22_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.671705722808838
+    },
+    {
+      "orbit_index": 22,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        16,
+        6,
+        0,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit22_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.255908727645874
+    },
+    {
+      "orbit_index": 22,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        16,
+        6,
+        0,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit22_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.084837198257446
+    },
+    {
+      "orbit_index": 22,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        14,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit22_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.468864679336548
+    },
+    {
+      "orbit_index": 23,
+      "leaf_index": 7,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit23_leaf07.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.020941019058228
+    },
+    {
+      "orbit_index": 23,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit23_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.044970512390137
+    },
+    {
+      "orbit_index": 23,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        12,
+        6,
+        12,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit23_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 2.7013862133026123
+    },
+    {
+      "orbit_index": 23,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit23_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 6.388811826705933
+    },
+    {
+      "orbit_index": 23,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit23_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 6.399942636489868
+    },
+    {
+      "orbit_index": 23,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        16,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit23_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.610100507736206
+    },
+    {
+      "orbit_index": 23,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        20,
+        6,
+        4,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit23_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 65.0106794834137
+    },
+    {
+      "orbit_index": 23,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        24,
+        6,
+        0,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit23_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.206567287445068
+    },
+    {
+      "orbit_index": 23,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        24,
+        6,
+        0,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit23_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.4807870388031
+    },
+    {
+      "orbit_index": 23,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        24,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit23_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.159626007080078
+    },
+    {
+      "orbit_index": 24,
+      "leaf_index": 7,
+      "fixed_scaled_means": [
+        0,
+        14,
+        16,
+        6,
+        6,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit24_leaf07.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.501586675643921
+    },
+    {
+      "orbit_index": 24,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        0,
+        14,
+        16,
+        6,
+        6,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit24_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.417211532592773
+    },
+    {
+      "orbit_index": 24,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        4,
+        14,
+        12,
+        6,
+        6,
+        12,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit24_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 2.6574270725250244
+    },
+    {
+      "orbit_index": 24,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        8,
+        14,
+        8,
+        6,
+        6,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit24_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 6.378475189208984
+    },
+    {
+      "orbit_index": 24,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        8,
+        14,
+        8,
+        6,
+        6,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit24_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 6.387045383453369
+    },
+    {
+      "orbit_index": 24,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        8,
+        14,
+        16,
+        6,
+        6,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit24_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.4537353515625
+    },
+    {
+      "orbit_index": 24,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        12,
+        14,
+        4,
+        6,
+        6,
+        12,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit24_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.759233236312866
+    },
+    {
+      "orbit_index": 24,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        16,
+        14,
+        0,
+        6,
+        6,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit24_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 10.95807433128357
+    },
+    {
+      "orbit_index": 24,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        16,
+        14,
+        0,
+        6,
+        6,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit24_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.491075038909912
+    },
+    {
+      "orbit_index": 24,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        16,
+        14,
+        8,
+        6,
+        6,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit24_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.11281681060791
+    },
+    {
+      "orbit_index": 27,
+      "leaf_index": 7,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit27_leaf07.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 10.93035626411438
+    },
+    {
+      "orbit_index": 27,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit27_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.281319379806519
+    },
+    {
+      "orbit_index": 27,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        12,
+        6,
+        12,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit27_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 2.7065751552581787
+    },
+    {
+      "orbit_index": 27,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit27_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 6.408036231994629
+    },
+    {
+      "orbit_index": 27,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit27_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 6.382294178009033
+    },
+    {
+      "orbit_index": 27,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        16,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit27_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.353619813919067
+    },
+    {
+      "orbit_index": 27,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        20,
+        6,
+        4,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit27_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.72721791267395
+    },
+    {
+      "orbit_index": 27,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        24,
+        6,
+        0,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit27_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.286986827850342
+    },
+    {
+      "orbit_index": 27,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        24,
+        6,
+        0,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit27_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 10.745364665985107
+    },
+    {
+      "orbit_index": 27,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        24,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit27_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.5220627784729
+    },
+    {
+      "orbit_index": 28,
+      "leaf_index": 7,
+      "fixed_scaled_means": [
+        0,
+        14,
+        16,
+        6,
+        6,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit28_leaf07.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.203529357910156
+    },
+    {
+      "orbit_index": 28,
+      "leaf_index": 8,
+      "fixed_scaled_means": [
+        0,
+        14,
+        16,
+        6,
+        6,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit28_leaf08.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 10.762471675872803
+    },
+    {
+      "orbit_index": 28,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        4,
+        14,
+        12,
+        6,
+        6,
+        12,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit28_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 2.6527578830718994
+    },
+    {
+      "orbit_index": 28,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        8,
+        14,
+        8,
+        6,
+        6,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit28_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 6.401579856872559
+    },
+    {
+      "orbit_index": 28,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        8,
+        14,
+        8,
+        6,
+        6,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit28_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 6.396672248840332
+    },
+    {
+      "orbit_index": 28,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        8,
+        14,
+        16,
+        6,
+        6,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit28_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.378650903701782
+    },
+    {
+      "orbit_index": 28,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        12,
+        14,
+        4,
+        6,
+        6,
+        12,
+        6,
+        4
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit28_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.75089168548584
+    },
+    {
+      "orbit_index": 28,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        16,
+        14,
+        0,
+        6,
+        6,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit28_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 10.97794771194458
+    },
+    {
+      "orbit_index": 28,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        16,
+        14,
+        0,
+        6,
+        6,
+        16,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit28_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.331531047821045
+    },
+    {
+      "orbit_index": 28,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        16,
+        14,
+        8,
+        6,
+        6,
+        8,
+        6,
+        0
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit28_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.343454360961914
+    },
+    {
+      "orbit_index": 29,
+      "leaf_index": 7,
+      "fixed_scaled_means": [
+        0,
+        6,
+        16,
+        6,
+        14,
+        0,
+        6,
+        16
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit29_leaf07.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 10.779418706893921
+    },
+    {
+      "orbit_index": 29,
+      "leaf_index": 12,
+      "fixed_scaled_means": [
+        4,
+        6,
+        12,
+        6,
+        14,
+        4,
+        6,
+        12
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit29_leaf12.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 2.704490900039673
+    },
+    {
+      "orbit_index": 29,
+      "leaf_index": 16,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        0,
+        6,
+        16
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit29_leaf16.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 6.400057315826416
+    },
+    {
+      "orbit_index": 29,
+      "leaf_index": 17,
+      "fixed_scaled_means": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit29_leaf17.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 6.394799470901489
+    },
+    {
+      "orbit_index": 29,
+      "leaf_index": 18,
+      "fixed_scaled_means": [
+        8,
+        6,
+        16,
+        6,
+        14,
+        0,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit29_leaf18.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 15.381579160690308
+    },
+    {
+      "orbit_index": 29,
+      "leaf_index": 19,
+      "fixed_scaled_means": [
+        12,
+        6,
+        4,
+        6,
+        14,
+        4,
+        6,
+        12
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit29_leaf19.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 3.722684383392334
+    },
+    {
+      "orbit_index": 29,
+      "leaf_index": 20,
+      "fixed_scaled_means": [
+        16,
+        6,
+        0,
+        6,
+        14,
+        0,
+        6,
+        16
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit29_leaf20.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.27201509475708
+    },
+    {
+      "orbit_index": 29,
+      "leaf_index": 21,
+      "fixed_scaled_means": [
+        16,
+        6,
+        0,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit29_leaf21.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.034637928009033
+    },
+    {
+      "orbit_index": 29,
+      "leaf_index": 22,
+      "fixed_scaled_means": [
+        16,
+        6,
+        8,
+        6,
+        14,
+        0,
+        6,
+        8
+      ],
+      "path": "evidence/p7_size8_cminus1/saturated/saturated_joins/cminus_saturated_orbit29_leaf22.json",
+      "reused": true,
+      "consistent_catalog_tuples": 0,
+      "modularly_infeasible": true,
+      "elapsed_seconds": 11.12105417251587
+    }
+  ]
+}

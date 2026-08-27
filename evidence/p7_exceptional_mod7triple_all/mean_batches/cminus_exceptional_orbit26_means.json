@@ -1,0 +1,3647 @@
+{
+  "experiment": "p7_fixed_boundary_mean_allocation_batch",
+  "status": "complete_exact_mean_allocation_exhaustion",
+  "p": 7,
+  "c_H": -1,
+  "fixed_boundary": [
+    2,
+    4,
+    15,
+    19,
+    22,
+    26,
+    37,
+    39
+  ],
+  "boundary_size": 8,
+  "moduli": [
+    3,
+    5,
+    7,
+    11
+  ],
+  "direction_rows": [
+    {
+      "direction": [
+        1,
+        0
+      ],
+      "eps": 1,
+      "B": [],
+      "b": 0,
+      "phase": 0,
+      "floor": 0,
+      "parity_mass": 0,
+      "allowed_scaled_means": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32
+      ]
+    },
+    {
+      "direction": [
+        1,
+        1
+      ],
+      "eps": -1,
+      "B": [
+        0,
+        2
+      ],
+      "b": 2,
+      "phase": 1,
+      "floor": 6,
+      "parity_mass": 15,
+      "allowed_scaled_means": [
+        6,
+        10,
+        14,
+        18,
+        22,
+        26,
+        30
+      ]
+    },
+    {
+      "direction": [
+        1,
+        2
+      ],
+      "eps": 1,
+      "B": [],
+      "b": 0,
+      "phase": 0,
+      "floor": 0,
+      "parity_mass": 0,
+      "allowed_scaled_means": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32
+      ]
+    },
+    {
+      "direction": [
+        1,
+        3
+      ],
+      "eps": -1,
+      "B": [
+        1,
+        4
+      ],
+      "b": 2,
+      "phase": 1,
+      "floor": 6,
+      "parity_mass": 15,
+      "allowed_scaled_means": [
+        6,
+        10,
+        14,
+        18,
+        22,
+        26,
+        30
+      ]
+    },
+    {
+      "direction": [
+        1,
+        4
+      ],
+      "eps": -1,
+      "B": [
+        0,
+        3
+      ],
+      "b": 2,
+      "phase": 1,
+      "floor": 6,
+      "parity_mass": 15,
+      "allowed_scaled_means": [
+        6,
+        10,
+        14,
+        18,
+        22,
+        26,
+        30
+      ]
+    },
+    {
+      "direction": [
+        1,
+        5
+      ],
+      "eps": 1,
+      "B": [],
+      "b": 0,
+      "phase": 0,
+      "floor": 0,
+      "parity_mass": 0,
+      "allowed_scaled_means": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32
+      ]
+    },
+    {
+      "direction": [
+        1,
+        6
+      ],
+      "eps": -1,
+      "B": [
+        2,
+        4
+      ],
+      "b": 2,
+      "phase": 1,
+      "floor": 6,
+      "parity_mass": 15,
+      "allowed_scaled_means": [
+        6,
+        10,
+        14,
+        18,
+        22,
+        26,
+        30
+      ]
+    },
+    {
+      "direction": [
+        0,
+        1
+      ],
+      "eps": 1,
+      "B": [],
+      "b": 0,
+      "phase": 0,
+      "floor": 0,
+      "parity_mass": 0,
+      "allowed_scaled_means": [
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28,
+        32
+      ]
+    }
+  ],
+  "allocation_count": 180,
+  "allocations_pairwise_distinct": true,
+  "all_allocations_meet_type_sums": true,
+  "infeasible_allocations": 26,
+  "feasible_modular_allocations": 0,
+  "unknown_allocations": 154,
+  "all_allocations_modularly_infeasible": false,
+  "finite_fixed_boundary_exclusion": false,
+  "seconds_per_leaf": 2.0,
+  "workers": 4,
+  "seed": 15734201,
+  "elapsed_seconds": 345.21828532218933,
+  "leaves": [
+    {
+      "leaf_index": 0,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        6,
+        6,
+        0,
+        14,
+        32
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 0,
+      "branches": 0,
+      "wall_time_seconds": 0.007950624
+    },
+    {
+      "leaf_index": 1,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        6,
+        6,
+        8,
+        14,
+        24
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 0,
+      "branches": 0,
+      "wall_time_seconds": 0.007819963000000001
+    },
+    {
+      "leaf_index": 2,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        6,
+        6,
+        16,
+        14,
+        16
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 0,
+      "branches": 0,
+      "wall_time_seconds": 0.013758536
+    },
+    {
+      "leaf_index": 3,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        6,
+        6,
+        24,
+        14,
+        8
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 0,
+      "branches": 0,
+      "wall_time_seconds": 0.013606775000000002
+    },
+    {
+      "leaf_index": 4,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        6,
+        6,
+        32,
+        14,
+        0
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 0,
+      "branches": 0,
+      "wall_time_seconds": 0.013745655
+    },
+    {
+      "leaf_index": 5,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        6,
+        14,
+        0,
+        6,
+        32
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 7,
+      "branches": 14,
+      "wall_time_seconds": 0.09281471100000001
+    },
+    {
+      "leaf_index": 6,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        6,
+        14,
+        8,
+        6,
+        24
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 930,
+      "branches": 10397,
+      "wall_time_seconds": 1.9972020240000001
+    },
+    {
+      "leaf_index": 7,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        6,
+        14,
+        16,
+        6,
+        16
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 1269,
+      "branches": 9559,
+      "wall_time_seconds": 1.927850384
+    },
+    {
+      "leaf_index": 8,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        6,
+        14,
+        24,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1492,
+      "branches": 9941,
+      "wall_time_seconds": 2.0019035720000002
+    },
+    {
+      "leaf_index": 9,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        6,
+        14,
+        32,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1969,
+      "branches": 15559,
+      "wall_time_seconds": 2.0023796060000003
+    },
+    {
+      "leaf_index": 10,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        14,
+        6,
+        0,
+        6,
+        32
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 18,
+      "branches": 27,
+      "wall_time_seconds": 0.07053195500000001
+    },
+    {
+      "leaf_index": 11,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        14,
+        6,
+        8,
+        6,
+        24
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 364,
+      "branches": 1197,
+      "wall_time_seconds": 0.393215543
+    },
+    {
+      "leaf_index": 12,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        14,
+        6,
+        16,
+        6,
+        16
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 33,
+      "branches": 38,
+      "wall_time_seconds": 0.10704901100000001
+    },
+    {
+      "leaf_index": 13,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        14,
+        6,
+        24,
+        6,
+        8
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 26,
+      "branches": 92,
+      "wall_time_seconds": 0.139808818
+    },
+    {
+      "leaf_index": 14,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        0,
+        14,
+        6,
+        32,
+        6,
+        0
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 0,
+      "branches": 0,
+      "wall_time_seconds": 0.058318073000000005
+    },
+    {
+      "leaf_index": 15,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        24
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 5117,
+      "branches": 8758,
+      "wall_time_seconds": 1.3759074150000001
+    },
+    {
+      "leaf_index": 16,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        8,
+        6,
+        6,
+        8,
+        14,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 995,
+      "branches": 6409,
+      "wall_time_seconds": 2.001856954
+    },
+    {
+      "leaf_index": 17,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        8,
+        6,
+        6,
+        16,
+        14,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1134,
+      "branches": 6284,
+      "wall_time_seconds": 2.002523114
+    },
+    {
+      "leaf_index": 18,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        8,
+        6,
+        6,
+        24,
+        14,
+        0
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 607,
+      "branches": 2275,
+      "wall_time_seconds": 1.0430613990000002
+    },
+    {
+      "leaf_index": 19,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        8,
+        6,
+        14,
+        0,
+        6,
+        24
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1939,
+      "branches": 10141,
+      "wall_time_seconds": 2.002607024
+    },
+    {
+      "leaf_index": 20,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        8,
+        6,
+        14,
+        8,
+        6,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1369,
+      "branches": 5672,
+      "wall_time_seconds": 2.000994448
+    },
+    {
+      "leaf_index": 21,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        8,
+        6,
+        14,
+        16,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1428,
+      "branches": 5884,
+      "wall_time_seconds": 2.000993138
+    },
+    {
+      "leaf_index": 22,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        8,
+        6,
+        14,
+        24,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5729,
+      "branches": 10547,
+      "wall_time_seconds": 2.002442602
+    },
+    {
+      "leaf_index": 23,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        8,
+        14,
+        6,
+        0,
+        6,
+        24
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1193,
+      "branches": 8403,
+      "wall_time_seconds": 2.003092424
+    },
+    {
+      "leaf_index": 24,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        8,
+        14,
+        6,
+        8,
+        6,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1327,
+      "branches": 5691,
+      "wall_time_seconds": 2.003247233
+    },
+    {
+      "leaf_index": 25,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        8,
+        14,
+        6,
+        16,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 4774,
+      "branches": 10731,
+      "wall_time_seconds": 2.003659609
+    },
+    {
+      "leaf_index": 26,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        8,
+        14,
+        6,
+        24,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 8424,
+      "branches": 14890,
+      "wall_time_seconds": 2.002314514
+    },
+    {
+      "leaf_index": 27,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1742,
+      "branches": 5157,
+      "wall_time_seconds": 2.001885602
+    },
+    {
+      "leaf_index": 28,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        16,
+        6,
+        6,
+        8,
+        14,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 6118,
+      "branches": 11729,
+      "wall_time_seconds": 2.000618573
+    },
+    {
+      "leaf_index": 29,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        16,
+        6,
+        6,
+        16,
+        14,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5067,
+      "branches": 10696,
+      "wall_time_seconds": 2.0028196780000003
+    },
+    {
+      "leaf_index": 30,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        16,
+        6,
+        14,
+        0,
+        6,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 8274,
+      "branches": 15949,
+      "wall_time_seconds": 2.00299409
+    },
+    {
+      "leaf_index": 31,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        16,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1248,
+      "branches": 6539,
+      "wall_time_seconds": 2.003510683
+    },
+    {
+      "leaf_index": 32,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        16,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 7596,
+      "branches": 16552,
+      "wall_time_seconds": 2.00199987
+    },
+    {
+      "leaf_index": 33,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        16,
+        14,
+        6,
+        0,
+        6,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 6310,
+      "branches": 14449,
+      "wall_time_seconds": 2.002299265
+    },
+    {
+      "leaf_index": 34,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        16,
+        14,
+        6,
+        8,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1538,
+      "branches": 7390,
+      "wall_time_seconds": 2.003209523
+    },
+    {
+      "leaf_index": 35,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        16,
+        14,
+        6,
+        16,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1720,
+      "branches": 9335,
+      "wall_time_seconds": 2.002540948
+    },
+    {
+      "leaf_index": 36,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        24,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 6483,
+      "branches": 13357,
+      "wall_time_seconds": 2.002828117
+    },
+    {
+      "leaf_index": 37,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        24,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 1230,
+      "branches": 2587,
+      "wall_time_seconds": 0.9676477600000001
+    },
+    {
+      "leaf_index": 38,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        24,
+        6,
+        14,
+        0,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 7785,
+      "branches": 14118,
+      "wall_time_seconds": 2.0035406730000003
+    },
+    {
+      "leaf_index": 39,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        24,
+        6,
+        14,
+        8,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2275,
+      "branches": 8347,
+      "wall_time_seconds": 2.0019636220000003
+    },
+    {
+      "leaf_index": 40,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        24,
+        14,
+        6,
+        0,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1592,
+      "branches": 9490,
+      "wall_time_seconds": 2.0020838750000003
+    },
+    {
+      "leaf_index": 41,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        24,
+        14,
+        6,
+        8,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 6695,
+      "branches": 15436,
+      "wall_time_seconds": 2.003954174
+    },
+    {
+      "leaf_index": 42,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        32,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2923,
+      "branches": 7910,
+      "wall_time_seconds": 2.002615812
+    },
+    {
+      "leaf_index": 43,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        32,
+        6,
+        14,
+        0,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2327,
+      "branches": 17190,
+      "wall_time_seconds": 2.004660592
+    },
+    {
+      "leaf_index": 44,
+      "scaled_means_direction_order": [
+        0,
+        6,
+        32,
+        14,
+        6,
+        0,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2192,
+      "branches": 11909,
+      "wall_time_seconds": 2.0017322770000003
+    },
+    {
+      "leaf_index": 45,
+      "scaled_means_direction_order": [
+        0,
+        14,
+        0,
+        6,
+        6,
+        0,
+        6,
+        32
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 55,
+      "branches": 129,
+      "wall_time_seconds": 0.12285499700000001
+    },
+    {
+      "leaf_index": 46,
+      "scaled_means_direction_order": [
+        0,
+        14,
+        0,
+        6,
+        6,
+        8,
+        6,
+        24
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 4824,
+      "branches": 7751,
+      "wall_time_seconds": 1.266083107
+    },
+    {
+      "leaf_index": 47,
+      "scaled_means_direction_order": [
+        0,
+        14,
+        0,
+        6,
+        6,
+        16,
+        6,
+        16
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 4593,
+      "branches": 8099,
+      "wall_time_seconds": 1.307351423
+    },
+    {
+      "leaf_index": 48,
+      "scaled_means_direction_order": [
+        0,
+        14,
+        0,
+        6,
+        6,
+        24,
+        6,
+        8
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 4410,
+      "branches": 7240,
+      "wall_time_seconds": 1.11878133
+    },
+    {
+      "leaf_index": 49,
+      "scaled_means_direction_order": [
+        0,
+        14,
+        0,
+        6,
+        6,
+        32,
+        6,
+        0
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 4965,
+      "branches": 9020,
+      "wall_time_seconds": 1.1777561520000002
+    },
+    {
+      "leaf_index": 50,
+      "scaled_means_direction_order": [
+        0,
+        14,
+        8,
+        6,
+        6,
+        0,
+        6,
+        24
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1118,
+      "branches": 7313,
+      "wall_time_seconds": 2.004716019
+    },
+    {
+      "leaf_index": 51,
+      "scaled_means_direction_order": [
+        0,
+        14,
+        8,
+        6,
+        6,
+        8,
+        6,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 8461,
+      "branches": 12783,
+      "wall_time_seconds": 2.003554528
+    },
+    {
+      "leaf_index": 52,
+      "scaled_means_direction_order": [
+        0,
+        14,
+        8,
+        6,
+        6,
+        16,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 6015,
+      "branches": 11554,
+      "wall_time_seconds": 2.00109634
+    },
+    {
+      "leaf_index": 53,
+      "scaled_means_direction_order": [
+        0,
+        14,
+        8,
+        6,
+        6,
+        24,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1377,
+      "branches": 7771,
+      "wall_time_seconds": 2.00142092
+    },
+    {
+      "leaf_index": 54,
+      "scaled_means_direction_order": [
+        0,
+        14,
+        16,
+        6,
+        6,
+        0,
+        6,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 7010,
+      "branches": 14725,
+      "wall_time_seconds": 2.0015572020000003
+    },
+    {
+      "leaf_index": 55,
+      "scaled_means_direction_order": [
+        0,
+        14,
+        16,
+        6,
+        6,
+        8,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5648,
+      "branches": 11577,
+      "wall_time_seconds": 2.0023353960000003
+    },
+    {
+      "leaf_index": 56,
+      "scaled_means_direction_order": [
+        0,
+        14,
+        16,
+        6,
+        6,
+        16,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1721,
+      "branches": 8222,
+      "wall_time_seconds": 2.0032942730000003
+    },
+    {
+      "leaf_index": 57,
+      "scaled_means_direction_order": [
+        0,
+        14,
+        24,
+        6,
+        6,
+        0,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2734,
+      "branches": 8209,
+      "wall_time_seconds": 2.000925263
+    },
+    {
+      "leaf_index": 58,
+      "scaled_means_direction_order": [
+        0,
+        14,
+        24,
+        6,
+        6,
+        8,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1963,
+      "branches": 8660,
+      "wall_time_seconds": 2.0012209160000003
+    },
+    {
+      "leaf_index": 59,
+      "scaled_means_direction_order": [
+        0,
+        14,
+        32,
+        6,
+        6,
+        0,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2704,
+      "branches": 11586,
+      "wall_time_seconds": 2.00506624
+    },
+    {
+      "leaf_index": 60,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        4,
+        6,
+        6,
+        4,
+        14,
+        20
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5339,
+      "branches": 9809,
+      "wall_time_seconds": 2.00376316
+    },
+    {
+      "leaf_index": 61,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        4,
+        6,
+        6,
+        12,
+        14,
+        12
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5846,
+      "branches": 10053,
+      "wall_time_seconds": 2.002990666
+    },
+    {
+      "leaf_index": 62,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        4,
+        6,
+        6,
+        20,
+        14,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 674,
+      "branches": 4838,
+      "wall_time_seconds": 2.0029569890000003
+    },
+    {
+      "leaf_index": 63,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        4,
+        6,
+        14,
+        4,
+        6,
+        20
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1093,
+      "branches": 6365,
+      "wall_time_seconds": 2.002049507
+    },
+    {
+      "leaf_index": 64,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        4,
+        6,
+        14,
+        12,
+        6,
+        12
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 7640,
+      "branches": 11861,
+      "wall_time_seconds": 2.004149258
+    },
+    {
+      "leaf_index": 65,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        4,
+        6,
+        14,
+        20,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 788,
+      "branches": 5199,
+      "wall_time_seconds": 2.002735603
+    },
+    {
+      "leaf_index": 66,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        4,
+        14,
+        6,
+        4,
+        6,
+        20
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1027,
+      "branches": 5687,
+      "wall_time_seconds": 2.003258863
+    },
+    {
+      "leaf_index": 67,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        4,
+        14,
+        6,
+        12,
+        6,
+        12
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 990,
+      "branches": 5359,
+      "wall_time_seconds": 2.0027837930000003
+    },
+    {
+      "leaf_index": 68,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        4,
+        14,
+        6,
+        20,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 468,
+      "branches": 4588,
+      "wall_time_seconds": 2.003021682
+    },
+    {
+      "leaf_index": 69,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        12,
+        6,
+        6,
+        4,
+        14,
+        12
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5088,
+      "branches": 10169,
+      "wall_time_seconds": 2.0033806110000003
+    },
+    {
+      "leaf_index": 70,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        12,
+        6,
+        6,
+        12,
+        14,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1050,
+      "branches": 4414,
+      "wall_time_seconds": 2.0021637990000003
+    },
+    {
+      "leaf_index": 71,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        12,
+        6,
+        14,
+        4,
+        6,
+        12
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5509,
+      "branches": 10194,
+      "wall_time_seconds": 2.0029364320000003
+    },
+    {
+      "leaf_index": 72,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        12,
+        6,
+        14,
+        12,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 4956,
+      "branches": 8599,
+      "wall_time_seconds": 2.003171242
+    },
+    {
+      "leaf_index": 73,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        12,
+        14,
+        6,
+        4,
+        6,
+        12
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 894,
+      "branches": 5096,
+      "wall_time_seconds": 2.002598884
+    },
+    {
+      "leaf_index": 74,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        12,
+        14,
+        6,
+        12,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 6460,
+      "branches": 11629,
+      "wall_time_seconds": 2.001576296
+    },
+    {
+      "leaf_index": 75,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        20,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 4354,
+      "branches": 8666,
+      "wall_time_seconds": 2.0027378220000003
+    },
+    {
+      "leaf_index": 76,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        20,
+        6,
+        14,
+        4,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 6499,
+      "branches": 13660,
+      "wall_time_seconds": 2.003601915
+    },
+    {
+      "leaf_index": 77,
+      "scaled_means_direction_order": [
+        4,
+        6,
+        20,
+        14,
+        6,
+        4,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1109,
+      "branches": 8121,
+      "wall_time_seconds": 2.006970501
+    },
+    {
+      "leaf_index": 78,
+      "scaled_means_direction_order": [
+        4,
+        14,
+        4,
+        6,
+        6,
+        4,
+        6,
+        20
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5943,
+      "branches": 10440,
+      "wall_time_seconds": 2.002609457
+    },
+    {
+      "leaf_index": 79,
+      "scaled_means_direction_order": [
+        4,
+        14,
+        4,
+        6,
+        6,
+        12,
+        6,
+        12
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 881,
+      "branches": 5353,
+      "wall_time_seconds": 2.005732962
+    },
+    {
+      "leaf_index": 80,
+      "scaled_means_direction_order": [
+        4,
+        14,
+        4,
+        6,
+        6,
+        20,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5060,
+      "branches": 8218,
+      "wall_time_seconds": 2.002400122
+    },
+    {
+      "leaf_index": 81,
+      "scaled_means_direction_order": [
+        4,
+        14,
+        12,
+        6,
+        6,
+        4,
+        6,
+        12
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5472,
+      "branches": 9738,
+      "wall_time_seconds": 2.004699021
+    },
+    {
+      "leaf_index": 82,
+      "scaled_means_direction_order": [
+        4,
+        14,
+        12,
+        6,
+        6,
+        12,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5251,
+      "branches": 8597,
+      "wall_time_seconds": 2.00272652
+    },
+    {
+      "leaf_index": 83,
+      "scaled_means_direction_order": [
+        4,
+        14,
+        20,
+        6,
+        6,
+        4,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1230,
+      "branches": 5270,
+      "wall_time_seconds": 2.0044692410000002
+    },
+    {
+      "leaf_index": 84,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        0,
+        6,
+        6,
+        0,
+        14,
+        24
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 9019,
+      "branches": 15817,
+      "wall_time_seconds": 2.002663055
+    },
+    {
+      "leaf_index": 85,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        0,
+        6,
+        6,
+        8,
+        14,
+        16
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 7106,
+      "branches": 12216,
+      "wall_time_seconds": 1.9629560600000002
+    },
+    {
+      "leaf_index": 86,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        0,
+        6,
+        6,
+        16,
+        14,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 9407,
+      "branches": 14921,
+      "wall_time_seconds": 2.0028350550000003
+    },
+    {
+      "leaf_index": 87,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        0,
+        6,
+        6,
+        24,
+        14,
+        0
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 1781,
+      "branches": 7481,
+      "wall_time_seconds": 1.968170766
+    },
+    {
+      "leaf_index": 88,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        0,
+        6,
+        14,
+        0,
+        6,
+        24
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 7440,
+      "branches": 12069,
+      "wall_time_seconds": 1.7049245380000002
+    },
+    {
+      "leaf_index": 89,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        0,
+        6,
+        14,
+        8,
+        6,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1565,
+      "branches": 5511,
+      "wall_time_seconds": 2.0013496020000003
+    },
+    {
+      "leaf_index": 90,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        0,
+        6,
+        14,
+        16,
+        6,
+        8
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 7452,
+      "branches": 13110,
+      "wall_time_seconds": 1.9676116780000001
+    },
+    {
+      "leaf_index": 91,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        0,
+        6,
+        14,
+        24,
+        6,
+        0
+      ],
+      "solver_status": "INFEASIBLE",
+      "finite_infeasibility_certificate": true,
+      "feasible": false,
+      "conflicts": 1992,
+      "branches": 7639,
+      "wall_time_seconds": 1.8542648910000001
+    },
+    {
+      "leaf_index": 92,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        0,
+        14,
+        6,
+        0,
+        6,
+        24
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1093,
+      "branches": 7131,
+      "wall_time_seconds": 2.001734497
+    },
+    {
+      "leaf_index": 93,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        0,
+        14,
+        6,
+        8,
+        6,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 7604,
+      "branches": 14278,
+      "wall_time_seconds": 2.002472291
+    },
+    {
+      "leaf_index": 94,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        0,
+        14,
+        6,
+        16,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1162,
+      "branches": 6204,
+      "wall_time_seconds": 2.0024483170000003
+    },
+    {
+      "leaf_index": 95,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        0,
+        14,
+        6,
+        24,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1339,
+      "branches": 7716,
+      "wall_time_seconds": 2.0016896340000003
+    },
+    {
+      "leaf_index": 96,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1676,
+      "branches": 5938,
+      "wall_time_seconds": 2.003272526
+    },
+    {
+      "leaf_index": 97,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        8,
+        6,
+        6,
+        8,
+        14,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5455,
+      "branches": 11638,
+      "wall_time_seconds": 2.002522206
+    },
+    {
+      "leaf_index": 98,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        8,
+        6,
+        6,
+        16,
+        14,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1628,
+      "branches": 6269,
+      "wall_time_seconds": 2.0015267050000003
+    },
+    {
+      "leaf_index": 99,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        0,
+        6,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 7269,
+      "branches": 13570,
+      "wall_time_seconds": 2.004092982
+    },
+    {
+      "leaf_index": 100,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 855,
+      "branches": 6053,
+      "wall_time_seconds": 2.003465015
+    },
+    {
+      "leaf_index": 101,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        8,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5127,
+      "branches": 15740,
+      "wall_time_seconds": 2.002610868
+    },
+    {
+      "leaf_index": 102,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        8,
+        14,
+        6,
+        0,
+        6,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 7405,
+      "branches": 14374,
+      "wall_time_seconds": 2.002952256
+    },
+    {
+      "leaf_index": 103,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        8,
+        14,
+        6,
+        8,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1037,
+      "branches": 6478,
+      "wall_time_seconds": 2.002362193
+    },
+    {
+      "leaf_index": 104,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        8,
+        14,
+        6,
+        16,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1203,
+      "branches": 8392,
+      "wall_time_seconds": 2.0017421470000003
+    },
+    {
+      "leaf_index": 105,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5914,
+      "branches": 11605,
+      "wall_time_seconds": 2.003987638
+    },
+    {
+      "leaf_index": 106,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        16,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1270,
+      "branches": 9601,
+      "wall_time_seconds": 2.000781163
+    },
+    {
+      "leaf_index": 107,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        16,
+        6,
+        14,
+        0,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 964,
+      "branches": 9098,
+      "wall_time_seconds": 2.001007045
+    },
+    {
+      "leaf_index": 108,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        16,
+        6,
+        14,
+        8,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 6364,
+      "branches": 12736,
+      "wall_time_seconds": 2.003650055
+    },
+    {
+      "leaf_index": 109,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        16,
+        14,
+        6,
+        0,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1029,
+      "branches": 11503,
+      "wall_time_seconds": 2.001676243
+    },
+    {
+      "leaf_index": 110,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        16,
+        14,
+        6,
+        8,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2417,
+      "branches": 7988,
+      "wall_time_seconds": 2.004467404
+    },
+    {
+      "leaf_index": 111,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        24,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2552,
+      "branches": 8332,
+      "wall_time_seconds": 2.004592048
+    },
+    {
+      "leaf_index": 112,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        24,
+        6,
+        14,
+        0,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5132,
+      "branches": 12663,
+      "wall_time_seconds": 2.004549045
+    },
+    {
+      "leaf_index": 113,
+      "scaled_means_direction_order": [
+        8,
+        6,
+        24,
+        14,
+        6,
+        0,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 8479,
+      "branches": 15504,
+      "wall_time_seconds": 2.003780827
+    },
+    {
+      "leaf_index": 114,
+      "scaled_means_direction_order": [
+        8,
+        14,
+        0,
+        6,
+        6,
+        0,
+        6,
+        24
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1853,
+      "branches": 7681,
+      "wall_time_seconds": 2.002002204
+    },
+    {
+      "leaf_index": 115,
+      "scaled_means_direction_order": [
+        8,
+        14,
+        0,
+        6,
+        6,
+        8,
+        6,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1299,
+      "branches": 7444,
+      "wall_time_seconds": 2.0051821750000003
+    },
+    {
+      "leaf_index": 116,
+      "scaled_means_direction_order": [
+        8,
+        14,
+        0,
+        6,
+        6,
+        16,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1508,
+      "branches": 6307,
+      "wall_time_seconds": 2.003092924
+    },
+    {
+      "leaf_index": 117,
+      "scaled_means_direction_order": [
+        8,
+        14,
+        0,
+        6,
+        6,
+        24,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1393,
+      "branches": 8593,
+      "wall_time_seconds": 2.002945316
+    },
+    {
+      "leaf_index": 118,
+      "scaled_means_direction_order": [
+        8,
+        14,
+        8,
+        6,
+        6,
+        0,
+        6,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 6434,
+      "branches": 14013,
+      "wall_time_seconds": 2.001394943
+    },
+    {
+      "leaf_index": 119,
+      "scaled_means_direction_order": [
+        8,
+        14,
+        8,
+        6,
+        6,
+        8,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5263,
+      "branches": 9508,
+      "wall_time_seconds": 2.003923889
+    },
+    {
+      "leaf_index": 120,
+      "scaled_means_direction_order": [
+        8,
+        14,
+        8,
+        6,
+        6,
+        16,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5039,
+      "branches": 13013,
+      "wall_time_seconds": 2.003571478
+    },
+    {
+      "leaf_index": 121,
+      "scaled_means_direction_order": [
+        8,
+        14,
+        16,
+        6,
+        6,
+        0,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 6263,
+      "branches": 12480,
+      "wall_time_seconds": 2.003348519
+    },
+    {
+      "leaf_index": 122,
+      "scaled_means_direction_order": [
+        8,
+        14,
+        16,
+        6,
+        6,
+        8,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 6671,
+      "branches": 9533,
+      "wall_time_seconds": 2.003973533
+    },
+    {
+      "leaf_index": 123,
+      "scaled_means_direction_order": [
+        8,
+        14,
+        24,
+        6,
+        6,
+        0,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 10134,
+      "branches": 13939,
+      "wall_time_seconds": 2.001730127
+    },
+    {
+      "leaf_index": 124,
+      "scaled_means_direction_order": [
+        12,
+        6,
+        4,
+        6,
+        6,
+        4,
+        14,
+        12
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5008,
+      "branches": 9892,
+      "wall_time_seconds": 2.001805746
+    },
+    {
+      "leaf_index": 125,
+      "scaled_means_direction_order": [
+        12,
+        6,
+        4,
+        6,
+        6,
+        12,
+        14,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1066,
+      "branches": 4958,
+      "wall_time_seconds": 2.001961886
+    },
+    {
+      "leaf_index": 126,
+      "scaled_means_direction_order": [
+        12,
+        6,
+        4,
+        6,
+        14,
+        4,
+        6,
+        12
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5114,
+      "branches": 11614,
+      "wall_time_seconds": 2.002488705
+    },
+    {
+      "leaf_index": 127,
+      "scaled_means_direction_order": [
+        12,
+        6,
+        4,
+        6,
+        14,
+        12,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 872,
+      "branches": 7312,
+      "wall_time_seconds": 2.003282311
+    },
+    {
+      "leaf_index": 128,
+      "scaled_means_direction_order": [
+        12,
+        6,
+        4,
+        14,
+        6,
+        4,
+        6,
+        12
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 997,
+      "branches": 6895,
+      "wall_time_seconds": 2.002229702
+    },
+    {
+      "leaf_index": 129,
+      "scaled_means_direction_order": [
+        12,
+        6,
+        4,
+        14,
+        6,
+        12,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1233,
+      "branches": 6492,
+      "wall_time_seconds": 2.0028846220000003
+    },
+    {
+      "leaf_index": 130,
+      "scaled_means_direction_order": [
+        12,
+        6,
+        12,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1165,
+      "branches": 6185,
+      "wall_time_seconds": 2.001929193
+    },
+    {
+      "leaf_index": 131,
+      "scaled_means_direction_order": [
+        12,
+        6,
+        12,
+        6,
+        14,
+        4,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 3912,
+      "branches": 10145,
+      "wall_time_seconds": 2.002314208
+    },
+    {
+      "leaf_index": 132,
+      "scaled_means_direction_order": [
+        12,
+        6,
+        12,
+        14,
+        6,
+        4,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 855,
+      "branches": 6589,
+      "wall_time_seconds": 2.001285771
+    },
+    {
+      "leaf_index": 133,
+      "scaled_means_direction_order": [
+        12,
+        14,
+        4,
+        6,
+        6,
+        4,
+        6,
+        12
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 4989,
+      "branches": 9857,
+      "wall_time_seconds": 2.004097531
+    },
+    {
+      "leaf_index": 134,
+      "scaled_means_direction_order": [
+        12,
+        14,
+        4,
+        6,
+        6,
+        12,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 6816,
+      "branches": 10933,
+      "wall_time_seconds": 2.003558571
+    },
+    {
+      "leaf_index": 135,
+      "scaled_means_direction_order": [
+        12,
+        14,
+        12,
+        6,
+        6,
+        4,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1028,
+      "branches": 7618,
+      "wall_time_seconds": 2.003248379
+    },
+    {
+      "leaf_index": 136,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        0,
+        6,
+        6,
+        0,
+        14,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2740,
+      "branches": 7267,
+      "wall_time_seconds": 2.001462258
+    },
+    {
+      "leaf_index": 137,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        0,
+        6,
+        6,
+        8,
+        14,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2410,
+      "branches": 6050,
+      "wall_time_seconds": 2.001450572
+    },
+    {
+      "leaf_index": 138,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        0,
+        6,
+        6,
+        16,
+        14,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2973,
+      "branches": 7640,
+      "wall_time_seconds": 2.001918133
+    },
+    {
+      "leaf_index": 139,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        0,
+        6,
+        14,
+        0,
+        6,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1261,
+      "branches": 11543,
+      "wall_time_seconds": 2.002785069
+    },
+    {
+      "leaf_index": 140,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        0,
+        6,
+        14,
+        8,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1698,
+      "branches": 8232,
+      "wall_time_seconds": 2.0018426910000002
+    },
+    {
+      "leaf_index": 141,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        0,
+        6,
+        14,
+        16,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 7611,
+      "branches": 15198,
+      "wall_time_seconds": 2.001875547
+    },
+    {
+      "leaf_index": 142,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        0,
+        14,
+        6,
+        0,
+        6,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1283,
+      "branches": 9224,
+      "wall_time_seconds": 2.002914091
+    },
+    {
+      "leaf_index": 143,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        0,
+        14,
+        6,
+        8,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1726,
+      "branches": 8579,
+      "wall_time_seconds": 2.003652582
+    },
+    {
+      "leaf_index": 144,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        0,
+        14,
+        6,
+        16,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 7226,
+      "branches": 12129,
+      "wall_time_seconds": 2.001967831
+    },
+    {
+      "leaf_index": 145,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5965,
+      "branches": 12216,
+      "wall_time_seconds": 2.001487961
+    },
+    {
+      "leaf_index": 146,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        8,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2071,
+      "branches": 8367,
+      "wall_time_seconds": 2.002908526
+    },
+    {
+      "leaf_index": 147,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        8,
+        6,
+        14,
+        0,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5783,
+      "branches": 14525,
+      "wall_time_seconds": 2.001713204
+    },
+    {
+      "leaf_index": 148,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        8,
+        6,
+        14,
+        8,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 6015,
+      "branches": 12529,
+      "wall_time_seconds": 2.002077366
+    },
+    {
+      "leaf_index": 149,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        8,
+        14,
+        6,
+        0,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1327,
+      "branches": 6958,
+      "wall_time_seconds": 2.0023299100000003
+    },
+    {
+      "leaf_index": 150,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        8,
+        14,
+        6,
+        8,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5018,
+      "branches": 11896,
+      "wall_time_seconds": 2.004402228
+    },
+    {
+      "leaf_index": 151,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        16,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2144,
+      "branches": 9349,
+      "wall_time_seconds": 2.0041723
+    },
+    {
+      "leaf_index": 152,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        16,
+        6,
+        14,
+        0,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1275,
+      "branches": 10716,
+      "wall_time_seconds": 2.0023070410000003
+    },
+    {
+      "leaf_index": 153,
+      "scaled_means_direction_order": [
+        16,
+        6,
+        16,
+        14,
+        6,
+        0,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1069,
+      "branches": 11409,
+      "wall_time_seconds": 2.002549917
+    },
+    {
+      "leaf_index": 154,
+      "scaled_means_direction_order": [
+        16,
+        14,
+        0,
+        6,
+        6,
+        0,
+        6,
+        16
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 7832,
+      "branches": 14376,
+      "wall_time_seconds": 2.0034483140000003
+    },
+    {
+      "leaf_index": 155,
+      "scaled_means_direction_order": [
+        16,
+        14,
+        0,
+        6,
+        6,
+        8,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1522,
+      "branches": 8007,
+      "wall_time_seconds": 2.004437728
+    },
+    {
+      "leaf_index": 156,
+      "scaled_means_direction_order": [
+        16,
+        14,
+        0,
+        6,
+        6,
+        16,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2483,
+      "branches": 8728,
+      "wall_time_seconds": 2.002652646
+    },
+    {
+      "leaf_index": 157,
+      "scaled_means_direction_order": [
+        16,
+        14,
+        8,
+        6,
+        6,
+        0,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 6544,
+      "branches": 13498,
+      "wall_time_seconds": 2.003710653
+    },
+    {
+      "leaf_index": 158,
+      "scaled_means_direction_order": [
+        16,
+        14,
+        8,
+        6,
+        6,
+        8,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 6805,
+      "branches": 11215,
+      "wall_time_seconds": 2.004173198
+    },
+    {
+      "leaf_index": 159,
+      "scaled_means_direction_order": [
+        16,
+        14,
+        16,
+        6,
+        6,
+        0,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1626,
+      "branches": 10395,
+      "wall_time_seconds": 2.002262984
+    },
+    {
+      "leaf_index": 160,
+      "scaled_means_direction_order": [
+        20,
+        6,
+        4,
+        6,
+        6,
+        4,
+        14,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 4057,
+      "branches": 7530,
+      "wall_time_seconds": 2.003260831
+    },
+    {
+      "leaf_index": 161,
+      "scaled_means_direction_order": [
+        20,
+        6,
+        4,
+        6,
+        14,
+        4,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 822,
+      "branches": 6738,
+      "wall_time_seconds": 2.0033914090000002
+    },
+    {
+      "leaf_index": 162,
+      "scaled_means_direction_order": [
+        20,
+        6,
+        4,
+        14,
+        6,
+        4,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1040,
+      "branches": 7005,
+      "wall_time_seconds": 2.0018799300000003
+    },
+    {
+      "leaf_index": 163,
+      "scaled_means_direction_order": [
+        20,
+        14,
+        4,
+        6,
+        6,
+        4,
+        6,
+        4
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 5667,
+      "branches": 10296,
+      "wall_time_seconds": 2.003842481
+    },
+    {
+      "leaf_index": 164,
+      "scaled_means_direction_order": [
+        24,
+        6,
+        0,
+        6,
+        6,
+        0,
+        14,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 7739,
+      "branches": 13783,
+      "wall_time_seconds": 2.003822059
+    },
+    {
+      "leaf_index": 165,
+      "scaled_means_direction_order": [
+        24,
+        6,
+        0,
+        6,
+        6,
+        8,
+        14,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2752,
+      "branches": 6805,
+      "wall_time_seconds": 2.001786967
+    },
+    {
+      "leaf_index": 166,
+      "scaled_means_direction_order": [
+        24,
+        6,
+        0,
+        6,
+        14,
+        0,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1353,
+      "branches": 11398,
+      "wall_time_seconds": 2.00207426
+    },
+    {
+      "leaf_index": 167,
+      "scaled_means_direction_order": [
+        24,
+        6,
+        0,
+        6,
+        14,
+        8,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 7131,
+      "branches": 15259,
+      "wall_time_seconds": 2.0036327480000002
+    },
+    {
+      "leaf_index": 168,
+      "scaled_means_direction_order": [
+        24,
+        6,
+        0,
+        14,
+        6,
+        0,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 8666,
+      "branches": 20181,
+      "wall_time_seconds": 2.001084988
+    },
+    {
+      "leaf_index": 169,
+      "scaled_means_direction_order": [
+        24,
+        6,
+        0,
+        14,
+        6,
+        8,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1508,
+      "branches": 9525,
+      "wall_time_seconds": 2.005605123
+    },
+    {
+      "leaf_index": 170,
+      "scaled_means_direction_order": [
+        24,
+        6,
+        8,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 6651,
+      "branches": 11103,
+      "wall_time_seconds": 2.003129676
+    },
+    {
+      "leaf_index": 171,
+      "scaled_means_direction_order": [
+        24,
+        6,
+        8,
+        6,
+        14,
+        0,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2511,
+      "branches": 8305,
+      "wall_time_seconds": 2.0044896260000002
+    },
+    {
+      "leaf_index": 172,
+      "scaled_means_direction_order": [
+        24,
+        6,
+        8,
+        14,
+        6,
+        0,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 6675,
+      "branches": 12494,
+      "wall_time_seconds": 2.0026967890000003
+    },
+    {
+      "leaf_index": 173,
+      "scaled_means_direction_order": [
+        24,
+        14,
+        0,
+        6,
+        6,
+        0,
+        6,
+        8
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 2336,
+      "branches": 9908,
+      "wall_time_seconds": 2.007640347
+    },
+    {
+      "leaf_index": 174,
+      "scaled_means_direction_order": [
+        24,
+        14,
+        0,
+        6,
+        6,
+        8,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1789,
+      "branches": 8892,
+      "wall_time_seconds": 2.00283569
+    },
+    {
+      "leaf_index": 175,
+      "scaled_means_direction_order": [
+        24,
+        14,
+        8,
+        6,
+        6,
+        0,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1916,
+      "branches": 10922,
+      "wall_time_seconds": 2.001427151
+    },
+    {
+      "leaf_index": 176,
+      "scaled_means_direction_order": [
+        32,
+        6,
+        0,
+        6,
+        6,
+        0,
+        14,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 8094,
+      "branches": 14590,
+      "wall_time_seconds": 2.004240809
+    },
+    {
+      "leaf_index": 177,
+      "scaled_means_direction_order": [
+        32,
+        6,
+        0,
+        6,
+        14,
+        0,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 1915,
+      "branches": 17957,
+      "wall_time_seconds": 2.0025593390000003
+    },
+    {
+      "leaf_index": 178,
+      "scaled_means_direction_order": [
+        32,
+        6,
+        0,
+        14,
+        6,
+        0,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 7401,
+      "branches": 15656,
+      "wall_time_seconds": 2.003679489
+    },
+    {
+      "leaf_index": 179,
+      "scaled_means_direction_order": [
+        32,
+        14,
+        0,
+        6,
+        6,
+        0,
+        6,
+        0
+      ],
+      "solver_status": "UNKNOWN",
+      "finite_infeasibility_certificate": false,
+      "feasible": false,
+      "conflicts": 3040,
+      "branches": 10402,
+      "wall_time_seconds": 2.00251389
+    }
+  ]
+}

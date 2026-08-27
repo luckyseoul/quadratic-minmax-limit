@@ -1,5 +1,21 @@
 # Status (2026-08-27)
 
+**15.662 PROVED/certified the minimum-eight-odd-secant/conic `p=7`
+size-eight subbranch for both product signs, not the full size-eight case or
+residual (ii)**: complete CUDA censuses check all 450,978,066 finite
+eight-point boundaries per sign. Exactly 6,174 attain eight odd secants and
+are affine conics by Segre's theorem; 4,851 fail the exact floor. The 1,323
+floor survivors form 32 stabilizer orbits. On `c_H=-1`, the 25 saturated
+orbits have 600 exact mean allocations, split into 355 initial CP-SAT
+exclusions, six long CP-SAT exclusions, and 239 multi-prime catalog joins.
+The seven exceptional orbits have 1,260 allocations, split into 172 initial
+exclusions, 662 ordinary projected V100 joins, and 426 high-direction-
+eliminating joins. Independent audits leave zero allocations. A nonsquare
+Paley anti-isometry maps all 1,323 survivors bijectively to `c_H=+1` and
+transfers the exclusion. The complete floor census nevertheless has
+108,754,569 survivors per sign, so 108,753,246 nonconic survivors remain.
+Full size eight, residual (ii), Type I, R1, global QVAR, and L remain OPEN.
+
 **15.661 PROVED/certified the `p=7` six-finite branch and therefore every
 size-six boundary for odd `p>=5`, not residual (ii)**: exact floors leave
 3,856,300 of `C(49,6)=13,983,816` boundaries and 80,704 square-semilinear
@@ -9,8 +25,10 @@ elevation cases in 80,519 ordinary orbits. Compact exact high-mean models,
 remaining 185 orbits. Independent NUKA and V100 floor sweeps have the same
 survivor hash; NUKA reproduces the ordered orbit catalog and ordinary
 exhaustion. A nonsquare anti-isometry transfers the opposite product sign.
-With 15.657--15.660, every size-six boundary is closed. Boundaries of size
-at least eight, residual (ii), Type I, R1, global QVAR, and L remain OPEN.
+With 15.657--15.660, every size-six boundary is closed. Proposition 15.662
+subsequently closes the `p=7` minimum-eight-odd-secant/conic subbranch for
+both signs, while the nonconic size-eight remainder, residual (ii), Type I,
+R1, global QVAR, and L remain OPEN.
 
 **15.660 PROVED/certified every `p=5` size-six boundary, not residual
 (ii)**: four exact catalogs are rebuilt from definitions for both product

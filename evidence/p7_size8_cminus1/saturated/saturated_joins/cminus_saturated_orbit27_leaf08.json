@@ -1,0 +1,143 @@
+{
+  "experiment": "p7_fixed_boundary_catalog_join",
+  "status": "complete_exact_multimodular_catalog_join",
+  "p": 7,
+  "c_H": -1,
+  "fixed_boundary": [
+    2,
+    7,
+    8,
+    11,
+    38,
+    42,
+    44,
+    46
+  ],
+  "fixed_scaled_means": [
+    8,
+    6,
+    16,
+    6,
+    6,
+    8,
+    14,
+    0
+  ],
+  "moduli": [
+    3,
+    7
+  ],
+  "direction_catalogs": [
+    {
+      "direction_index": 0,
+      "eps": 1,
+      "b": 2,
+      "phase": 0,
+      "scaled_mean": 8,
+      "catalog_rows_with_pointwise_bound": 1
+    },
+    {
+      "direction_index": 1,
+      "eps": -1,
+      "b": 2,
+      "phase": 1,
+      "scaled_mean": 6,
+      "catalog_rows_with_pointwise_bound": 1
+    },
+    {
+      "direction_index": 2,
+      "eps": 1,
+      "b": 0,
+      "phase": 0,
+      "scaled_mean": 16,
+      "catalog_rows_with_pointwise_bound": 575407
+    },
+    {
+      "direction_index": 3,
+      "eps": -1,
+      "b": 2,
+      "phase": 1,
+      "scaled_mean": 6,
+      "catalog_rows_with_pointwise_bound": 1
+    },
+    {
+      "direction_index": 4,
+      "eps": -1,
+      "b": 2,
+      "phase": 1,
+      "scaled_mean": 6,
+      "catalog_rows_with_pointwise_bound": 1
+    },
+    {
+      "direction_index": 5,
+      "eps": 1,
+      "b": 0,
+      "phase": 0,
+      "scaled_mean": 8,
+      "catalog_rows_with_pointwise_bound": 1764
+    },
+    {
+      "direction_index": 6,
+      "eps": -1,
+      "b": 0,
+      "phase": 1,
+      "scaled_mean": 14,
+      "catalog_rows_with_pointwise_bound": 1
+    },
+    {
+      "direction_index": 7,
+      "eps": 1,
+      "b": 0,
+      "phase": 0,
+      "scaled_mean": 0,
+      "catalog_rows_with_pointwise_bound": 1
+    }
+  ],
+  "variable_catalog_count": 2,
+  "join": {
+    "partition": [
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ],
+    "catalog_sizes": [
+      575407,
+      1764
+    ],
+    "enumerated_signatures": [
+      575407,
+      1764
+    ],
+    "distinct_first_signatures": 492126
+  },
+  "consistent_catalog_tuples": 0,
+  "modularly_infeasible": true,
+  "finite_mean_allocation_exclusion": true,
+  "linear_system": [
+    {
+      "modulus": 3,
+      "rank": 162,
+      "left_dependency_dimension": 120,
+      "left_null_audit": true
+    },
+    {
+      "modulus": 7,
+      "rank": 147,
+      "left_dependency_dimension": 135,
+      "left_null_audit": true
+    }
+  ],
+  "edge_equation_matrix_shape": [
+    282,
+    1225
+  ],
+  "catalog_cache": {
+    "path": "/tmp/p7_slack_catalog_b0_phase0_mean16.npy",
+    "summary": "results/p7_slack_catalog_b0m16_hash16_shards.json",
+    "sha256": "78874943f492ea6a041d516aaf90a04c0ccc30701416d877e6458d8ffdeaa00e"
+  },
+  "elapsed_seconds": 11.281319379806519
+}

@@ -1,0 +1,187 @@
+{
+  "experiment": "p7_exceptional_omit_high_audit",
+  "status": "passed_independent_high_mean_and_full_exceptional_audit",
+  "p": 7,
+  "c_H": -1,
+  "exceptional_orbit_count": 7,
+  "total_exact_allocations": 1260,
+  "initial_cp_infeasible_allocations": 172,
+  "ordinary_gpu_excluded_allocations": 662,
+  "high_mean_gpu_excluded_allocations": 426,
+  "remaining_allocations": 0,
+  "all_seven_exceptional_orbits_excluded_cminus1": true,
+  "dependency_family_audits": [
+    {
+      "omitted_direction": 0,
+      "conditioned_dependency_rows": 112,
+      "selected_dependency_rows": 66,
+      "selected_block_ranks": [
+        0,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14
+      ],
+      "selected_family_sha256": "3b6ce2416c792c49c053ec3f4920c21840e2b94b80f59db5736087ac23299a1c"
+    },
+    {
+      "omitted_direction": 2,
+      "conditioned_dependency_rows": 112,
+      "selected_dependency_rows": 66,
+      "selected_block_ranks": [
+        14,
+        14,
+        0,
+        14,
+        14,
+        14,
+        14,
+        14
+      ],
+      "selected_family_sha256": "e87bfd3a25c60255f2e23ae642d3516ec459b2b86143e00c7bbc516ab9000a60"
+    },
+    {
+      "omitted_direction": 5,
+      "conditioned_dependency_rows": 112,
+      "selected_dependency_rows": 66,
+      "selected_block_ranks": [
+        14,
+        14,
+        14,
+        14,
+        14,
+        0,
+        14,
+        14
+      ],
+      "selected_family_sha256": "7465e2c26534eeff4387e57056123b7cdcdd6a16690785f2a5fef4e20d27a880"
+    },
+    {
+      "omitted_direction": 7,
+      "conditioned_dependency_rows": 112,
+      "selected_dependency_rows": 66,
+      "selected_block_ranks": [
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        14,
+        0
+      ],
+      "selected_family_sha256": "8b836593ac7323f5342883c47213ab2c8963714339e21abe01bf7b18f892ba0d"
+    }
+  ],
+  "orbit_rows": [
+    {
+      "orbit_index": 0,
+      "fixed_boundary": [
+        1,
+        2,
+        8,
+        9,
+        18,
+        20,
+        46,
+        48
+      ],
+      "high_mean_leaves": 59,
+      "gpu_excluded_leaves": 59
+    },
+    {
+      "orbit_index": 5,
+      "fixed_boundary": [
+        2,
+        3,
+        8,
+        11,
+        29,
+        32,
+        37,
+        38
+      ],
+      "high_mean_leaves": 66,
+      "gpu_excluded_leaves": 66
+    },
+    {
+      "orbit_index": 8,
+      "fixed_boundary": [
+        2,
+        3,
+        9,
+        10,
+        19,
+        21,
+        47,
+        49
+      ],
+      "high_mean_leaves": 59,
+      "gpu_excluded_leaves": 59
+    },
+    {
+      "orbit_index": 25,
+      "fixed_boundary": [
+        2,
+        4,
+        13,
+        14,
+        20,
+        21,
+        23,
+        25
+      ],
+      "high_mean_leaves": 61,
+      "gpu_excluded_leaves": 61
+    },
+    {
+      "orbit_index": 26,
+      "fixed_boundary": [
+        2,
+        4,
+        15,
+        19,
+        22,
+        26,
+        37,
+        39
+      ],
+      "high_mean_leaves": 60,
+      "gpu_excluded_leaves": 60
+    },
+    {
+      "orbit_index": 30,
+      "fixed_boundary": [
+        2,
+        7,
+        16,
+        21,
+        31,
+        34,
+        38,
+        41
+      ],
+      "high_mean_leaves": 60,
+      "gpu_excluded_leaves": 60
+    },
+    {
+      "orbit_index": 31,
+      "fixed_boundary": [
+        9,
+        14,
+        24,
+        27,
+        31,
+        34,
+        44,
+        49
+      ],
+      "high_mean_leaves": 61,
+      "gpu_excluded_leaves": 61
+    }
+  ],
+  "elapsed_seconds": 5.902711629867554
+}

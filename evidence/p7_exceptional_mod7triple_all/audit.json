@@ -1,0 +1,143 @@
+{
+  "experiment": "p7_exceptional_mod7_tuple_audit",
+  "status": "passed_independent_all_orbit_coverage_audit",
+  "p": 7,
+  "c_H": -1,
+  "exceptional_orbit_count": 7,
+  "total_mean_allocations": 1260,
+  "initial_infeasible_leaves": 172,
+  "initial_unknown_leaves": 1088,
+  "gpu_supported_unknown_leaves": 662,
+  "gpu_excluded_leaves": 662,
+  "gpu_unresolved_leaves": 0,
+  "high_mean_unknown_leaves_not_claimed": 426,
+  "selected_dependency_rows_pairwise_disjoint": true,
+  "orbit_rows": [
+    {
+      "orbit_index": 0,
+      "fixed_boundary": [
+        1,
+        2,
+        8,
+        9,
+        18,
+        20,
+        46,
+        48
+      ],
+      "initial_infeasible_leaves": 25,
+      "initial_unknown_leaves": 155,
+      "gpu_supported_unknown_leaves": 96,
+      "gpu_excluded_leaves": 96,
+      "high_mean_unknown_leaves": 59
+    },
+    {
+      "orbit_index": 5,
+      "fixed_boundary": [
+        2,
+        3,
+        8,
+        11,
+        29,
+        32,
+        37,
+        38
+      ],
+      "initial_infeasible_leaves": 18,
+      "initial_unknown_leaves": 162,
+      "gpu_supported_unknown_leaves": 96,
+      "gpu_excluded_leaves": 96,
+      "high_mean_unknown_leaves": 66
+    },
+    {
+      "orbit_index": 8,
+      "fixed_boundary": [
+        2,
+        3,
+        9,
+        10,
+        19,
+        21,
+        47,
+        49
+      ],
+      "initial_infeasible_leaves": 26,
+      "initial_unknown_leaves": 154,
+      "gpu_supported_unknown_leaves": 95,
+      "gpu_excluded_leaves": 95,
+      "high_mean_unknown_leaves": 59
+    },
+    {
+      "orbit_index": 25,
+      "fixed_boundary": [
+        2,
+        4,
+        13,
+        14,
+        20,
+        21,
+        23,
+        25
+      ],
+      "initial_infeasible_leaves": 24,
+      "initial_unknown_leaves": 156,
+      "gpu_supported_unknown_leaves": 95,
+      "gpu_excluded_leaves": 95,
+      "high_mean_unknown_leaves": 61
+    },
+    {
+      "orbit_index": 26,
+      "fixed_boundary": [
+        2,
+        4,
+        15,
+        19,
+        22,
+        26,
+        37,
+        39
+      ],
+      "initial_infeasible_leaves": 26,
+      "initial_unknown_leaves": 154,
+      "gpu_supported_unknown_leaves": 94,
+      "gpu_excluded_leaves": 94,
+      "high_mean_unknown_leaves": 60
+    },
+    {
+      "orbit_index": 30,
+      "fixed_boundary": [
+        2,
+        7,
+        16,
+        21,
+        31,
+        34,
+        38,
+        41
+      ],
+      "initial_infeasible_leaves": 26,
+      "initial_unknown_leaves": 154,
+      "gpu_supported_unknown_leaves": 94,
+      "gpu_excluded_leaves": 94,
+      "high_mean_unknown_leaves": 60
+    },
+    {
+      "orbit_index": 31,
+      "fixed_boundary": [
+        9,
+        14,
+        24,
+        27,
+        31,
+        34,
+        44,
+        49
+      ],
+      "initial_infeasible_leaves": 27,
+      "initial_unknown_leaves": 153,
+      "gpu_supported_unknown_leaves": 92,
+      "gpu_excluded_leaves": 92,
+      "high_mean_unknown_leaves": 61
+    }
+  ]
+}

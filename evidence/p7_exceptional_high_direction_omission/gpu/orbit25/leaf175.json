@@ -1,0 +1,154 @@
+{
+  "experiment": "p7_exceptional_projected_join_gpu",
+  "status": "complete_exact_selected_dependency_gpu_join",
+  "projection_mode": "injective_disjoint_mod7_22x3_omitted_high_direction",
+  "p": 7,
+  "c_H": -1,
+  "fixed_boundary": [
+    2,
+    4,
+    13,
+    14,
+    20,
+    21,
+    23,
+    25
+  ],
+  "leaf_index": 175,
+  "fixed_scaled_means": [
+    24,
+    14,
+    8,
+    6,
+    6,
+    0,
+    6,
+    0
+  ],
+  "projection_summaries": [
+    "/tmp/p7_exceptional_omit_high/p7_exceptional_omitd0_p0_all.json",
+    "/tmp/p7_exceptional_omit_high/p7_exceptional_omitd0_p1_all.json",
+    "/tmp/p7_exceptional_omit_high/p7_exceptional_omitd0_p2_all.json"
+  ],
+  "projection_summary_sha256": [
+    "23a0fcfd868a984281bac00af33e6271f029910f3dd972f63c1273baba9f0a05",
+    "7b8059eec2de283e3f99cd56fceef2b8b58326ff3e3c92f8ee6d441e88d35c4d",
+    "a02a45695657b1e3bde780ed16691617f392044d1223e00985e2791a24081698"
+  ],
+  "projection_catalogs": [
+    "/tmp/p7_exceptional_omit_high/cminus_exceptional_omitd0_p0_orbit25.npz",
+    "/tmp/p7_exceptional_omit_high/cminus_exceptional_omitd0_p1_orbit25.npz",
+    "/tmp/p7_exceptional_omit_high/cminus_exceptional_omitd0_p2_orbit25.npz"
+  ],
+  "projection_catalog_sha256": [
+    "5de23d70506611b0a8e4fad1608a96ad57583a32a68622cabb4402d0334ebef5",
+    "dd87e94f2b2130feaf52f4f9ab1c550bf9036634fad6bdb14f4b3f16daa0f1db",
+    "f15b8f92cd13a2594dfa1085018dc5cacf6c4fb4356e5ec53259be35680ad1a7"
+  ],
+  "selected_conditioned_basis_rows": [
+    [
+      106,
+      103,
+      107,
+      78,
+      111,
+      81,
+      100,
+      79,
+      46,
+      104,
+      70,
+      48,
+      105,
+      75,
+      47,
+      60,
+      59,
+      110,
+      69,
+      49,
+      61,
+      11
+    ],
+    [
+      22,
+      82,
+      99,
+      71,
+      44,
+      58,
+      23,
+      13,
+      88,
+      108,
+      74,
+      50,
+      90,
+      14,
+      10,
+      25,
+      109,
+      77,
+      43,
+      68,
+      12,
+      19
+    ],
+    [
+      84,
+      102,
+      80,
+      42,
+      2,
+      20,
+      31,
+      85,
+      101,
+      72,
+      45,
+      21,
+      28,
+      89,
+      0,
+      76,
+      96,
+      36,
+      1,
+      3,
+      4,
+      5
+    ]
+  ],
+  "omitted_high_mean_direction": 0,
+  "projection_group_order": 59768263894155949306790119265585619217025149412430681649,
+  "direction_catalog_sizes": [
+    1,
+    1764,
+    1764,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "variable_catalog_sizes": [
+    1764,
+    1764
+  ],
+  "partition": [
+    [
+      0
+    ],
+    [
+      1
+    ]
+  ],
+  "build_signatures": 1764,
+  "probe_signatures": 1764,
+  "exact_join_method": "lexicographic_uint64_3tuple_full_probe_binary_search",
+  "exact_projected_matches": 0,
+  "projected_modularly_infeasible": true,
+  "finite_mean_allocation_exclusion": true,
+  "gpu": "Tesla V100-SXM2-16GB",
+  "elapsed_seconds": 0.015255212783813477
+}

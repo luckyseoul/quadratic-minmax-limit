@@ -29,7 +29,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; boundaries of size at least eight remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662 closes both signs of the minimum-eight-odd-secant/conic subbranch at `p=7`, but 108,753,246 nonconic size-eight floor survivors remain per sign |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -151,6 +151,24 @@ batches to six classes, and closes all six by independently reconstructed
 layered certificates. Proposition 15.661 then closes the six-finite `p=7`
 branch using 80,704 orbit certificates and simultaneous mod-three/mod-seven
 catalog joins. Thus every size-six boundary is closed for odd `p>=5`.
+Proposition 15.662 next exhausts the minimum-eight-odd-secant branch of the
+`p=7` size-eight case. A complete CUDA census checks all
+`C(49,8)=450,978,066` finite boundaries per product sign. Exactly 6,174
+attain eight odd secants; Segre's theorem identifies all of them as affine
+conics. The exact directional floor rejects 4,851 and leaves 1,323, which
+form 32 stabilizer orbits. For `c_H=-1`, all 600 exact mean allocations on
+the 25 saturated orbits (1,176 boundaries) are excluded: 355 by the first
+CP-SAT pass, six by longer exact certificates, and 239 by multi-prime
+catalog joins. The seven exceptional orbits contain 147 boundaries and
+1,260 allocations. The first pass rejects 172, the ordinary V100 projected
+join rejects 662, and a high-direction-eliminating dependency basis rejects
+the remaining 426 without enumerating their giant catalogs. An independent
+aggregate audit reconstructs the orbit and allocation partitions and finds
+zero remaining leaves. The nonsquare Paley anti-isometry maps all 1,323
+negative-sign floor survivors bijectively onto the positive-sign survivors,
+so the entire conic subbranch is closed for both signs. This is not a full
+size-eight closure: the floor census contains 108,754,569 survivors per sign,
+of which 108,753,246 are nonconic and remain open.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -190,6 +208,11 @@ graph TD
     P57SIX --> P7NEGINF["p=7 negative infinity + five<br/>mod-7 catalog exhaustion <b>CLOSED</b> (15.659)"]
     P57SIX --> P5SIX["every p=5 size-six boundary<br/>six-class exact audit <b>CLOSED</b> (15.660)"]
     P57SIX --> P7FINITE["p=7 six finite<br/>multi-prime catalog audit <b>CLOSED</b> (15.661)"]
+    BUDGET --> EIGHT["p=7 size eight<br/>108,754,569 floor survivors per sign"]
+    EIGHT --> EIGHTCONIC["minimum-eight-odd-secant conics<br/>1,323 floor survivors / 32 orbits<br/><b>CLOSED both signs</b> (15.662)"]
+    EIGHTCONIC --> EIGHTSAT["25 saturated orbits / 600 allocations<br/><b>CLOSED</b>"]
+    EIGHTCONIC --> EIGHTEX["7 exceptional orbits / 1,260 allocations<br/>172 + 662 + 426 excluded<br/><b>CLOSED</b>"]
+    EIGHT --> EIGHTREST["108,753,246 nonconic floor survivors per sign<br/><b>OPEN</b>"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -213,6 +236,11 @@ graph TD
     style P5FULL fill:#e6ffe6
     style ALL4 fill:#e6ffe6
     style TWOPT fill:#e6ffe6
+    style EIGHT fill:#fff4e6
+    style EIGHTCONIC fill:#e6ffe6
+    style EIGHTSAT fill:#e6ffe6
+    style EIGHTEX fill:#e6ffe6
+    style EIGHTREST fill:#fff4e6
     style POSKILL fill:#e6ffe6
     style NEGKILL fill:#e6ffe6
     style NEGFINITE fill:#e6ffe6
@@ -333,6 +361,15 @@ square-direction affine-circle words.
 | 15.659 | phase-one floor rigidity leaves 83,496 boundaries and 1,750 square-semilinear orbits; affine-span filtering rejects 2,205 of 2,230 elevation cases and exact comparison rejects all 32,400 catalog pairs in the remainder, independently reproduced on NUKA and Soulkiller | closes the negative-product `p=7` infinity-plus-five branch; `p=5` size six is subsequently closed by 15.660 and six finite points at `p=7` by 15.661 |
 | 15.660 | four exact `p=5` catalogs, signed symmetry, and complete coarse SCIP batches leave six residual classes; independent layered audits reconstruct every quotient and close all six | closes every `p=5` size-six boundary; the last size-six branch is subsequently closed by 15.661 |
 | 15.661 | exact floors reduce `C(49,6)` to 3,856,300 boundaries and 80,704 orbits; joined mod-three/mod-seven catalogs close 80,519 ordinary orbits, while compact high-mean models, 930 mean leaves, and 120 final catalog joins close the other 185 | closes both signs of six finite points at `p=7`; with 15.657--15.660 every size-six boundary is closed for odd `p>=5`, while size at least eight remains open |
+| 15.662 | complete floor censuses find 6,174 minimum-eight-odd-secant conics and 1,323 floor survivors; 32 orbits split into 600 saturated and 1,260 exceptional mean allocations, all excluded by exact CP-SAT and projected catalog certificates; a nonsquare anti-isometry transfers the other sign | closes the conic subbranch of finite size eight at `p=7` for both signs; the full case remains open on 108,753,246 nonconic floor survivors per sign |
+
+The size-eight scope is deliberately split. Proposition 15.662 closes all
+6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
+product signs: 4,851 fail the floor and all 1,323 floor survivors are
+excluded. It does not identify every size-eight floor survivor as a conic.
+The complete census has 108,754,569 survivors per sign, leaving exactly
+108,753,246 nonconic survivors for the next stage. The global audit records
+`closes_all_p7_size8=false` and `closes_residual_ii=false`.
 
 These are general theorems for odd primes (with the stated `p=3` second-shell
 exception), including the standard Paley `(25,50)` adjacent-ETF case. They
@@ -418,7 +455,11 @@ branch. Proposition 15.660 closes every `p=5` size-six case by a
 from-definitions global catalog audit and six independently reconstructed
 class certificates. Proposition 15.661 closes the six-finite `p=7` branch
 by complete multi-prime catalog exhaustion. Thus every size-six boundary is
-closed for odd `p>=5`; boundaries of size at least eight remain.
+closed for odd `p>=5`. Proposition 15.662 then closes the complete
+minimum-eight-odd-secant/conic subbranch of finite size eight at `p=7` for
+both signs. Of 6,174 conics per sign, 4,851 fail the exact floor and 1,323
+survivors form 32 excluded orbits. The full size-eight case remains open on
+108,753,246 nonconic floor survivors per sign.
 
 ### Route kills — do not re-tread
 
@@ -456,10 +497,12 @@ classified low shell.
    The lattice/shadow theorems identify the exact theta object but do not
    control its higher dual shells.
 2. **Non-Walsh multi-level Max−:** close residual (ii) for even `k≥4p`.
-   Walsh/W1/W2 and the Eulerian-boundary branch are done; the remaining
-   nonempty affine-boundary profiles and full 5+-level branch are not. The
-   related Type-I `3A+B>0` gate also remains false, although strong R1 would
-   imply it.
+   Walsh/W1/W2 and the Eulerian-boundary branch are done. Proposition 15.662
+   closes both signs of the `p=7` size-eight conic subbranch, including all
+   426 formerly open high-mean leaves. The 108,753,246 nonconic floor
+   survivors per sign, other nonempty affine-boundary profiles, and the full
+   5+-level branch are not closed. The related Type-I `3A+B>0` gate also
+   remains false, although strong R1 would imply it.
 
 Lemma D is complete and is no longer on the work list.
 
@@ -504,6 +547,7 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15659.py` | Floor, orbit, affine-span, and exact-catalog exclusion of the negative-product `p=7` infinity-plus-five branch |
 | `src/e1_gmin_m4_prop15660.py` | Complete signed-catalog and six-class exclusion of every `p=5` size-six boundary |
 | `src/e1_gmin_m4_prop15661.py` | Complete multi-prime exclusion of the `p=7` six-finite branch and all size-six boundaries |
+| `src/e1_gmin_m4_prop15662.py` | Complete both-sign exclusion of the minimum-eight-odd-secant/conic `p=7` size-eight subbranch |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |
@@ -524,6 +568,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-26_p7_size_six_negative_infinity_mod7.md` | Complete independent modular exhaustion and permanent archive for 15.659 |
 | `evidence/NOTE_2026-08-26_p5_size_six_global_exclusion.md` | Global catalog reduction, six independent class audits, and permanent archives for 15.660 |
 | `evidence/NOTE_2026-08-27_p7_six_finite_exclusion.md` | Floor quotient, ordinary/deep catalog exhaustion, sign transfer, and archive for 15.661 |
+| `evidence/NOTE_2026-08-27_p7_size_eight_conic_exclusion.md` | Floor census, 32-orbit allocation exhaustion, high-direction omission, sign transfer, and exact remaining scope for 15.662 |
 | `evidence/NOTE_2026-08-25_negative_product_asymptotic_normal_form.md` | Slice-distance, mean, divisibility, and boundary proof of the unique large-prime negative profile |
 | `evidence/NOTE_2026-08-25_baseline_fibre_profiles.md` | Integral `l1` proof that every baseline fibre profile is ideal or one-transfer |
 | `evidence/NOTE_2026-08-25_pbss_cross_audit.md` | Perry--Beurling cross-audit and the viable multi-Gaussian R1 transplant |
@@ -531,6 +576,12 @@ Lemma D is complete and is no longer on the work list.
 | `scripts/residual_affine_johnson_milp.py` | Corrected exact affine/full-shell residual feasibility model |
 | `scripts/p5_size6_global_circle_coverage_audit.py` | Rebuilds all `p=5` size-six catalogs, symmetry transfers, coarse batches, and six-class closure |
 | `scripts/p7_size6_finite_global_audit.py` | Reconstructs all ordinary/deep `p=7` six-finite coverage and both-sign transfer |
+| `scripts/p7_size8_floor_profile_gpu.py`, `scripts/p7_size8_conic_orbits.py` | Complete CUDA floor census and exact conic-orbit reduction for the `p=7` size-eight branch |
+| `scripts/p7_size8_saturated_mean_batch.py`, `scripts/p7_size8_saturated_join_batch.py` | Exact 600-allocation closure of the 25 saturated `p=7,c_H=-1` conic orbits |
+| `scripts/p7_exceptional_mod7_tuple_gpu_batch.py`, `scripts/p7_exceptional_mod7_tuple_audit.py` | Exact V100 three-key joins and independent 662-leaf/seven-orbit exceptional coverage audit |
+| `scripts/p7_exceptional_omit_high_catalogs.py`, `scripts/p7_exceptional_omit_high_gpu_batch.py`, `scripts/p7_exceptional_omit_high_audit.py` | Eliminate one giant high direction algebraically and independently exclude the final 426 exceptional leaves |
+| `scripts/p7_size8_conic_global_audit.py` | Reconstructs the full conic subbranch, both component partitions, and the nonsquare sign-transfer bijection |
+| `evidence/p7_exceptional_mod7triple_all/`, `evidence/p7_exceptional_high_direction_omission/` | Per-leaf certificates, projection hashes, and independent ordinary/high exceptional audits |
 | `scripts/r1_dual_shell_count.py`, `scripts/r1_dual_shell_export.py` | Reproducible exact PARI short-vector counts and shell archives |
 | `scripts/r1_sparse_dual_norm_gpu.py` | CUDA sparse dual-norm reconnaissance with collision bound |
 | `scripts/frame_line_system.py` | Data-free frame-line solver (any p, no Max± ensemble) |

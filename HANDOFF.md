@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-27 (15.661 closes every size-six boundary for odd p>=5)
+**Date:** 2026-08-27 (15.662 closes the p=7 size-eight conic subbranch)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -17,9 +17,32 @@ Every size-four boundary is now closed for odd `p>=5`; 15.657 closes size
 six for `p>=11`, 15.658--15.659 close both `p=7` infinity-plus-five
 signs, 15.660 closes every `p=5` size-six boundary, and 15.661 closes the
 six-finite `p=7` branch. Every size-six boundary is now closed for odd
-`p>=5`; boundaries of size at least eight remain. p=13 orbits / mesh k=6
-are not a close. cpu44
+`p>=5`. Proposition 15.662 additionally closes both signs of the finite
+`p=7` size-eight minimum-odd-secant/conic subbranch: all 32 floor-surviving
+conic orbits are excluded. This is not all of size eight; 108,753,246
+nonconic floor survivors remain per sign. p=13 orbits / mesh k=6 are not a
+close. cpu44
 stays hard-closed.
+
+## 15.662 — p=7 size-eight conic subbranch closed for both signs
+
+`src/e1_gmin_m4_prop15662.py` and
+`evidence/NOTE_2026-08-27_p7_size_eight_conic_exclusion.md`. Complete CUDA
+floor censuses check all 450,978,066 finite eight-point boundaries per sign.
+The 6,174 minimum-eight-odd-secant boundaries are affine conics; 4,851 fail
+the floor and 1,323 survivors reduce to 32 stabilizer orbits. For
+`c_H=-1`, 25 saturated orbits contribute 600 exact allocations, excluded as
+355 initial CP-SAT, six long CP-SAT, and 239 catalog-join certificates. The
+seven exceptional orbits contribute 1,260 allocations, excluded as 172
+initial, 662 ordinary projected, and 426 high-direction-omission
+certificates. Independent aggregate and component audits leave zero. The
+nonsquare anti-isometry maps the full conic survivor set bijectively to
+`c_H=+1`, closing both signs. The aggregate audit SHA-256 is
+`85f927f41b3ffc9afe1a101584e95ed852709ca6e861b439d8da1715008640a9`.
+The full floor census has 108,754,569 survivors per sign, so the next target
+is the 108,753,246 nonconic remainder—not another conic orbit. Raw records
+are archived under
+`/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-27-p7-size-eight-conic/`.
 
 ## 15.661 — p=7 six-finite and all size-six boundaries closed
 
