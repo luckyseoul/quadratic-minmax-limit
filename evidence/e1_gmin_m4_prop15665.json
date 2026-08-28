@@ -18,6 +18,12 @@
     "channel_bound": "0 <= q_(s,c) <= tau_s/dim(c)",
     "trace_zonal_theta_factor": "-4p^2(p^2+1)/(p^2-1)"
   },
+  "erratum_2026_08_28": {
+    "scope": "p=11 early-shell audit rows at scaled norms 20 and 24",
+    "cause": "shadow-normalized quartics H(u/2) were combined with the unscaled H(u) radial correction",
+    "correction_factor": 16,
+    "general_shell_operator_theorem_unchanged": true
+  },
   "partition_checks": {
     "5": {
       "Z_dimension": 65,
@@ -234,25 +240,25 @@
     {
       "scaled_norm": 20,
       "shell_count": 16104,
-      "harmonic_trace": "-5368/21",
+      "harmonic_trace": "-85888/21",
       "radial_shift": "1600/231",
-      "raw_trace_mass": "923784/77",
+      "raw_trace_mass": "89792/11",
       "raw_channel_eigenvalues": {
-        "circle-kernel": "2077/308",
-        "circle-low": "48/7",
-        "circle-high": "2119/308"
+        "circle-kernel": "4",
+        "circle-low": "64/11",
+        "circle-high": "68/11"
       }
     },
     {
       "scaled_norm": 24,
       "shell_count": 14762,
-      "harmonic_trace": "-15921/28",
+      "harmonic_trace": "-63684/7",
       "radial_shift": "64/7",
-      "raw_trace_mass": "436943/28",
+      "raw_trace_mass": "7076",
       "raw_channel_eigenvalues": {
-        "circle-kernel": "247/28",
-        "circle-low": "247/28",
-        "circle-high": "247/28"
+        "circle-kernel": "4",
+        "circle-low": "4",
+        "circle-high": "4"
       }
     },
     {

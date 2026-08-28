@@ -1,0 +1,234 @@
+{
+  "prop": "15.667",
+  "title": "Exact p=11 profile and quartic-trace theta reconstruction",
+  "proved": {
+    "complete_p11_glue_dual_profile_orbit_count": true,
+    "exact_scalar_and_common_moments_through_exponent_120": true,
+    "scalar_modular_form_unique_from_prefix_through_88": true,
+    "quartic_trace_modular_form_unique_from_prefix_through_92": true,
+    "scalar_and_trace_coefficients_reconstructed_through_800": true,
+    "all_eight_endpoint_bounds_exact_primal_dual_certified": true,
+    "prop15665_early_shell_normalization_corrected": true,
+    "aggregate_trace_conservation_closes_R1": false,
+    "R1": false,
+    "phi_F_ge_6_proved_general": false,
+    "global_QVAR": false,
+    "type_I_multilevel": false,
+    "limit_exists": false
+  },
+  "finite_profile": {
+    "p": 11,
+    "glue_dual_codewords": 25937424601,
+    "translation_scalar_representatives": 21437340,
+    "weighted_histogram_tuples": 2558543,
+    "quartic_value_distribution_types": 604,
+    "affine_output_types": 13,
+    "profile_exponent_through": 120,
+    "nonempty_tight_frame_checks": 51,
+    "crt_moduli": [
+      1999999871,
+      1999999321,
+      1999999013,
+      1999998947,
+      1999997957
+    ],
+    "crt_product": 31999921744068749461247094447450713426945936557,
+    "unrestricted_bounds": {
+      "count": 3035822103388904867185472590558138,
+      "second_moment": 65693200149015553751998674995898480,
+      "fourth_moment": 4129286721131182422173790859253254080
+    },
+    "crt_product_exceeds_every_bound": true,
+    "early_shell_audit": [
+      {
+        "scaled_norm": 11,
+        "shell_count": 244,
+        "common_sum_second_moment": 484,
+        "common_sum_fourth_moment": 29524,
+        "harmonic_trace": "-3538/63",
+        "raw_trace_mass": "0",
+        "tight_frame_identity": true
+      },
+      {
+        "scaled_norm": 20,
+        "shell_count": 16104,
+        "common_sum_second_moment": 58080,
+        "common_sum_fourth_moment": 2555520,
+        "harmonic_trace": "-85888/21",
+        "raw_trace_mass": "89792/11",
+        "tight_frame_identity": true
+      },
+      {
+        "scaled_norm": 24,
+        "shell_count": 14762,
+        "common_sum_second_moment": 63888,
+        "common_sum_fourth_moment": 5134272,
+        "harmonic_trace": "-63684/7",
+        "raw_trace_mass": "7076",
+        "tight_frame_identity": true
+      },
+      {
+        "scaled_norm": 27,
+        "shell_count": 442860,
+        "common_sum_second_moment": 2156220,
+        "common_sum_fourth_moment": 66363660,
+        "harmonic_trace": "-527406/7",
+        "raw_trace_mass": "538752",
+        "tight_frame_identity": true
+      }
+    ]
+  },
+  "modular_reconstruction": {
+    "scalar_space_dimension": 41,
+    "scalar_prefix_fixed_through": 88,
+    "scalar_prefix_rank": 41,
+    "scalar_held_out_coefficients_matched": 32,
+    "trace_affine_dimension": 32,
+    "trace_prefix_fixed_through": 92,
+    "trace_prefix_rank": 32,
+    "trace_pivot_exponents": [
+      31,
+      32,
+      35,
+      36,
+      39,
+      40,
+      43,
+      44,
+      47,
+      48,
+      51,
+      52,
+      55,
+      56,
+      59,
+      60,
+      63,
+      64,
+      67,
+      68,
+      71,
+      72,
+      75,
+      76,
+      79,
+      80,
+      83,
+      84,
+      87,
+      88,
+      91,
+      92
+    ],
+    "trace_held_out_coefficients_matched": 28,
+    "reconstructed_through": 800,
+    "ordinary_coefficients_nonnegative_integers": true,
+    "raw_trace_coefficients_nonnegative": true,
+    "trace_half_cusp_target": "-4428472046531859136727844588716/11389083011948997399715094836557"
+  },
+  "exact_trace_conservation_lp": {
+    "coefficient_through": 800,
+    "cases": 4,
+    "endpoints": 8,
+    "all_status": "exact_qsopt_primal_dual_certified",
+    "endpoint_comparison": {
+      "equal_endpoint_count": 7,
+      "total_endpoint_count": 8,
+      "sole_late_contraction": "circle-low-Weil maximum",
+      "comparisons": {
+        "circle-kernel-principal": {
+          "minimum": {
+            "same_at_120_and_800": true,
+            "endpoint_e120": "-2751803996323451587329052771199994539993892877054760858530912214576768076471274058/4224741065864693244061199213126065064106173761682290876205710767162447036127347",
+            "endpoint_e800": "-2751803996323451587329052771199994539993892877054760858530912214576768076471274058/4224741065864693244061199213126065064106173761682290876205710767162447036127347",
+            "endpoint_e800_decimal": -651.3544743742135
+          },
+          "maximum": {
+            "same_at_120_and_800": true,
+            "endpoint_e120": "175201398362216838969786767534411637099523929508898994632505363995073138706814/285120822770373085338845667893551955096665216709259200544265414730801662767",
+            "endpoint_e800": "175201398362216838969786767534411637099523929508898994632505363995073138706814/285120822770373085338845667893551955096665216709259200544265414730801662767",
+            "endpoint_e800_decimal": 614.4812457395238
+          }
+        },
+        "circle-low-Weil": {
+          "minimum": {
+            "same_at_120_and_800": true,
+            "endpoint_e120": "-26129495401234283572272889747754128085166429980809833084888606330393261580116016705065964/29411252932472017632661963776019203957333339642642391241334399069469481534412025254927",
+            "endpoint_e800": "-26129495401234283572272889747754128085166429980809833084888606330393261580116016705065964/29411252932472017632661963776019203957333339642642391241334399069469481534412025254927",
+            "endpoint_e800_decimal": -888.4183023833558
+          },
+          "maximum": {
+            "same_at_120_and_800": false,
+            "endpoint_e120": "4267954100270165124246655504687421769646745237168777151646734811739333530950904/4849923573730053968367039199240477197164470210985094737040921535545285299823",
+            "endpoint_e800": "65083138953068735632403758391021967485130693524822164103725166552235240871994506088/74387512469496681039575094244174529261299333938155375806078329744466803340169151",
+            "endpoint_e800_decimal": 874.9202223929279
+          }
+        },
+        "circle-low-principal": {
+          "minimum": {
+            "same_at_120_and_800": true,
+            "endpoint_e120": "-8254486670769270717731792421373443286505127882725247691267429797809580035660184914/12674223197594079732183597639378195192318521285046872628617132301487341108382041",
+            "endpoint_e800": "-8254486670769270717731792421373443286505127882725247691267429797809580035660184914/12674223197594079732183597639378195192318521285046872628617132301487341108382041",
+            "endpoint_e800_decimal": -651.2814664914692
+          },
+          "maximum": {
+            "same_at_120_and_800": true,
+            "endpoint_e120": "175220699302337080257472900991943793381806574122738537942636583764271640605514/285120822770373085338845667893551955096665216709259200544265414730801662767",
+            "endpoint_e800": "175220699302337080257472900991943793381806574122738537942636583764271640605514/285120822770373085338845667893551955096665216709259200544265414730801662767",
+            "endpoint_e800_decimal": 614.5489396383163
+          }
+        },
+        "circle-high-principal": {
+          "minimum": {
+            "same_at_120_and_800": true,
+            "endpoint_e120": "-2751433869043017969626906414309378406603272577679146904800789476208478398969819154/4224741065864693244061199213126065064106173761682290876205710767162447036127347",
+            "endpoint_e800": "-2751433869043017969626906414309378406603272577679146904800789476208478398969819154/4224741065864693244061199213126065064106173761682290876205710767162447036127347",
+            "endpoint_e800_decimal": -651.2668649149203
+          },
+          "maximum": {
+            "same_at_120_and_800": true,
+            "endpoint_e120": "175224559490361128515010127683450224638263103045506446604662827718111340985254/285120822770373085338845667893551955096665216709259200544265414730801662767",
+            "endpoint_e800": "175224559490361128515010127683450224638263103045506446604662827718111340985254/285120822770373085338845667893551955096665216709259200544265414730801662767",
+            "endpoint_e800_decimal": 614.5624784180748
+          }
+        }
+      }
+    },
+    "conclusion": "strictly stronger than the prior uncoupled positivity cone, but still far too wide to certify R1"
+  },
+  "normalization_erratum": {
+    "affected_scaled_norms": [
+      20,
+      24
+    ],
+    "cause": "H(u/2) anchors were used as H(u)",
+    "quartic_correction_factor": 16,
+    "corrected_raw_traces": {
+      "20": "89792/11",
+      "24": "7076"
+    },
+    "general_prop15665_theorem_unchanged": true
+  },
+  "artifact_sha256": {
+    "profile_orbit_report": "cec16194297818aa3753e7ce5dc37d4c1647f71d7bce13f83ac6d10e43b4c8fe",
+    "profile_tuple_report": "cd2c59874359d195517e3e19ae74d4241f4c6b3b92f6fb3863530623d162300f",
+    "profile_tuple_npz": "3c27864c6b4d9a7106aa46a8eb8d7b6afd2062b86d0f7dd54bdd8d2a410fa45c",
+    "profile_table_report": "b8f25d06a0892e810bf2fe034f77f795f10037c40a6b00160f76f2aca162c4bd",
+    "profile_table_npz": "35a950245ef6391b4ce4699bbd2ec63f75300b5e0ae986404156991ca6c0cf4f",
+    "profile_moment_report_e120": "06debd6476b2236624684f10b3845d87f09f513a880da5f869e84c7853956181",
+    "scalar_reconstruction_e800": "fbb99d589b3c24df335d5ada78e872b775f33ffeb688a5e01f961bb117accac8",
+    "scalar_qrows_e800": "08d8eed940c23cc489d908e9b1ff779b0f70b739213f6b0fa4f51439bb5d9cd9",
+    "scalar_half_target_e800": "820e8585fdaff2e0ce1ee9cc978dde5fca2d552942bf7d8c1d662201d4bccab0",
+    "channel_reduction_unscaled": "7f10326190b11228e62c5b3b03c26332f286d92e4d18a992e580de529c465c21",
+    "circle_kernel_qrows_e800": "f16e2d54d52a51e5b38ef94c02181dcc431dca03b97b5ef9fcf2930ddd7d0531",
+    "circle_low_qrows_e800": "6db984eb2495e79e09b05a92778a5e4f2cff0169a43d9d9e28da449a8a7935d3",
+    "circle_high_qrows_e800": "e876cd2a76b9577bae716e734f42fd7539ddecdd59dbfd8cdbe1db1e2056db50",
+    "trace_reconstruction_e800": "e2e3875e64da7b71e9fca687a48adca5b2b00fe455065467cc4fc465a1c5bde9",
+    "trace_endpoint_report_e120": "1a8f4fdad87f178ae0e1b5ef7ce38b77bd58ed6ef52841166925e4ba30100e48",
+    "trace_endpoint_report_e800": "872c21284ed9c17d751926a5ab6137778f6af9f74e1a2053da1bf319527f8568",
+    "permanent_archive_manifest": "b92262530b3f853b67814aeb0ec9d07e834f833b8d507a230a64a66fb9e8fc23"
+  },
+  "archive_root": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-28-r1/",
+  "remaining_obstruction": "Scalar shellwise mass does not identify its distribution among PSL constituents.  The next attack must add channel-resolved moments (or a stronger multi-scale transport inequality).",
+  "L_status": "OPEN"
+}

@@ -4,6 +4,14 @@ Date: 2026-08-27. This is Proposition 15.665. It supplies the nonlinear
 shell coupling absent from Proposition 15.641's linear modular constraints.
 It does not, by itself, prove R1.
 
+**Erratum, 2026-08-28.** The original p=11 table below mixed the
+shadow-normalized quartics `H(u/2)` from Propositions 15.633--15.635 with
+the unscaled radial correction for `H(u)` at scaled norms 20 and 24.
+Quartic homogeneity gives `H(u)=16H(u/2)`. The table and committed JSON are
+corrected below. Equations (1)--(8), positivity, and trace conservation are
+unchanged; only those two numerical audit rows and the affine anchors built
+from them were affected.
+
 ## Setup
 
 Let
@@ -163,8 +171,8 @@ four proved nonempty shells, equations (1), (2), and (7) give:
 | scaled norm | `N_s` | `tr(A_s)` | `rho_s` | `tau_s` |
 |---:|---:|---:|---:|---:|
 | 11 | 244 | `-3538/63` | `2/63` | `0` |
-| 20 | 16,104 | `-5368/21` | `1600/231` | `923784/77` |
-| 24 | 14,762 | `-15921/28` | `64/7` | `436943/28` |
+| 20 | 16,104 | `-85888/21` | `1600/231` | `89792/11` |
+| 24 | 14,762 | `-63684/7` | `64/7` | `7076` |
 | 27 | 442,860 | `-527406/7` | `2430/7` | `538752` |
 
 The channel-weighted raw eigenvalues reproduce each `tau_s` exactly and
@@ -181,11 +189,18 @@ coefficient produces a rational LP for the half-cusp target. This is a
 strict strengthening of the falsified coefficient-determination route:
 the old nullspace witness need not satisfy raw-shell positivity.
 
+Proposition 15.667 carries out that computation after correcting the two
+anchors. Exact profile moments determine the scalar and trace series through
+exponent 800, and rational QSopt_ex primal/dual certificates solve all four
+component endpoint problems. The intervals remain broad and two-sided, so
+aggregate trace conservation is now a certified insufficient p=11 route.
+Channel-resolved moments remain live.
+
 The LP is still an outer relaxation of actual channel theta series, and a
-`p=11` certificate is not an all-prime theorem. Closing R1 requires either
-a uniform version of the resulting dual certificate or a multi-scale theta
-inequality that transports (8) to the odd-coset target. No R1, global-QVAR,
-Type-I, or final-limit flag is flipped by Proposition 15.665 alone.
+`p=11` calculation is not an all-prime theorem. Closing R1 requires stronger
+channel information or a multi-scale theta inequality that transports (8)
+to the odd-coset target. No R1, global-QVAR, Type-I, or final-limit flag is
+flipped by Propositions 15.665 or 15.667.
 
 The mechanism is compatible with the weighted harmonic-theta and lattice
 shadow framework already discussed in `HISTORY_AND_REFERENCES.md`, especially

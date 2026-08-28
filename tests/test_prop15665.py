@@ -44,9 +44,15 @@ def test_trace_radial_correction_and_p11_shell_conservation():
     assert [row["scaled_norm"] for row in rows] == [11, 20, 24, 27]
     assert [row["raw_trace_mass"] for row in rows] == [
         "0",
-        "923784/77",
-        "436943/28",
+        "89792/11",
+        "7076",
         "538752",
+    ]
+    assert [row["harmonic_trace"] for row in rows] == [
+        "-3538/63",
+        "-85888/21",
+        "-63684/7",
+        "-527406/7",
     ]
 
 

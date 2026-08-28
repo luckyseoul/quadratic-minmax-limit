@@ -19,6 +19,12 @@ q_{X,c} is the scalar of R_X on a constituent of dimension m_c, then
 The trace tau_X is the coefficient of one explicit scalar weighted theta
 series.  This is new nonlinear channel coupling, but it does not by itself
 prove R1; the transformed target still needs a certified theta inequality.
+
+Erratum (2026-08-28): the first version of the p=11 early-shell audit used
+the shadow-normalized values H(u/2) from Props. 15.633--15.635 at scaled
+norms 20 and 24, but combined them with the radial shift for H(u).  Quartic
+homogeneity requires multiplying those two harmonic spectra by 16.  The
+general identities and positivity theorem are unchanged.
 """
 from __future__ import annotations
 
@@ -180,14 +186,21 @@ def p11_early_shell_audit() -> list[dict[str, object]]:
         2 * (p + 1): p * p * n,
         3 * p - 6: p * p * (p - 1) * (p + 7) * n // 6,
     }
+    # Props. 15.633--15.635 evaluate the two early even-shell operators at
+    # u/2 for the Poisson shadow.  This audit concerns the unscaled shell
+    # operator R_X=sum_x b_x tensor b_x, hence H(u)=16 H(u/2).
+    shadow_to_unscaled = Fraction(16)
     spectra = {
         p: {channel: harmonic_min_shell_sum(p) for channel in CHANNELS},
         2 * (p - 1): {
-            str(row["channel"]): Fraction(row["eigenvalue"])
+            str(row["channel"]): shadow_to_unscaled
+            * Fraction(row["eigenvalue"])
             for row in second_shadow_spectrum(p)
         },
         2 * (p + 1): {
-            channel: third_pair_harmonic_coefficient(p) for channel in CHANNELS
+            channel: shadow_to_unscaled
+            * third_pair_harmonic_coefficient(p)
+            for channel in CHANNELS
         },
         3 * p - 6: {
             str(row["channel"]): Fraction(row["eigenvalue"])
@@ -196,8 +209,8 @@ def p11_early_shell_audit() -> list[dict[str, object]]:
     }
     expected_tau = {
         11: Fraction(0),
-        20: Fraction(923784, 77),
-        24: Fraction(436943, 28),
+        20: Fraction(89792, 11),
+        24: Fraction(7076),
         27: Fraction(538752),
     }
     rows = []
@@ -268,6 +281,15 @@ def theorem_record() -> dict[str, object]:
             ),
             "channel_bound": "0 <= q_(s,c) <= tau_s/dim(c)",
             "trace_zonal_theta_factor": "-4p^2(p^2+1)/(p^2-1)",
+        },
+        "erratum_2026_08_28": {
+            "scope": "p=11 early-shell audit rows at scaled norms 20 and 24",
+            "cause": (
+                "shadow-normalized quartics H(u/2) were combined with the "
+                "unscaled H(u) radial correction"
+            ),
+            "correction_factor": 16,
+            "general_shell_operator_theorem_unchanged": True,
         },
         "partition_checks": partition_checks,
         "p11_early_shell_audit": p11_early_shell_audit(),

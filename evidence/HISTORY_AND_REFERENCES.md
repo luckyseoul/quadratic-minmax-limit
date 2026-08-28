@@ -684,6 +684,53 @@ A133756, and 160,745 in A254067, all for unrelated constructions;
 
 ---
 
+## 7t. Exact p=11 profile and quartic-trace reconstruction (2026-08-28)
+
+Proposition 15.667 reduces all \(11^{10}\) words of the p=11 glue-dual code
+to 21,437,340 translation/scalar representatives and 2,558,543 weighted
+six-profile tuples. Exact one-profile dynamic programs collapse 604 quartic
+value distributions to 13 affine types. Five 31-bit prime moduli admitting
+primitive eleventh roots have product
+larger than unrestricted integer bounds for the ordinary coefficient and
+the common-sum second and fourth moments through scaled norm 120, so CRT
+recovers all three sequences exactly. Every one of the 51 nonempty shells
+passes the independent tight-frame second-moment identity.
+
+The common-sum fourth moment gives the trace of the positive raw quartic
+shell operator directly. This exposed a normalization error in the first
+version of Proposition 15.665: the scaled-norm 20 and 24 rows used
+\(H(u/2)\) from the Poisson-shadow calculations as though it were \(H(u)\).
+Multiplication by the required quartic factor 16 changes their raw traces to
+\(89792/11\) and \(7076\). The general positive-operator and conservation
+theorem is unchanged.
+
+The exact ordinary prefix through exponent 88 has full rank 41 and uniquely
+determines its scalar modular form. The exact quartic-trace prefix first has
+full affine rank 32 at exponent 92. The resulting reconstructions through
+800 predict all 32 and 28 held-out profile coefficients through 120,
+respectively, and every reconstructed ordinary coefficient and raw trace has
+the required nonnegative integrality or rational positivity.
+
+Exact QSopt_ex primal/dual certificates then impose the reconstructed raw
+trace as a conserved mass at every shell through 800. Seven of eight
+component target endpoints are already identical at truncations 120 and
+800; the circle-low-Weil maximum contracts from about 880.0044 to 874.9202.
+All four final intervals remain broad and two-sided. Thus scalar
+trace-conservation is a genuine tightening but does not close R1. The next
+live refinement is to compute channel-resolved moments
+\(\operatorname{tr}(R_sO)\) and \(\operatorname{tr}(R_sO^2)\) for the
+square-circle tensor operator, or finer PSL-twisted traces.
+
+Targeted searches for the corrected rational traces, the exact half-cusp
+trace numerator, profile/common-coordinate fourth-moment terminology, and
+Paley quartic theta combinations found only adjacent weighted-theta,
+shell-design, and complete-weight-enumerator literature. Individual OEIS
+searches of five large reconstructed coefficients returned no entries. This
+is a duplicate/context check and makes no sequence or unreviewed priority
+claim.
+
+---
+
 ## 8. What is not in the older literature
 
 - No 1930s–1970s theorem that \(\lim n^{-3/2}\min_A\max_x|x^\top Ax|\) exists.
