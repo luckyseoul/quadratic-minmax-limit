@@ -1,0 +1,565 @@
+{
+  "prop": "15.680",
+  "title": "The p=37 next all-finite endpoint is impossible",
+  "proved": true,
+  "theorem": {
+    "p": 37,
+    "boundary_size": 30,
+    "statement": "the second even all-finite boundary above 3(p-1)/4 is impossible",
+    "remaining_smaller_endpoints": [
+      17,
+      19,
+      23,
+      29,
+      31,
+      41
+    ],
+    "remaining_smaller_endpoints_status": "OPEN_AT_THIS_BOUNDARY_SIZE",
+    "later_all_finite_sizes": "OPEN",
+    "infinity_present_remainder": "OPEN",
+    "general_residual_ii": false,
+    "R1": false,
+    "global_QVAR": false,
+    "type_I": false,
+    "limit_exists": false
+  },
+  "paired_cube_boolean_quadratic_lemma": {
+    "p": 37,
+    "middle_weight": 19,
+    "cube_dimension": 18,
+    "rho": "1/38",
+    "transition_on_one": "T(1)=1",
+    "transition_on_coordinate": "T(x_i)=1/2+rho*x_i",
+    "transition_on_pair": "T(x_i*x_j)=1/4+rho*x_i*x_j",
+    "degree_two_operator": "T(f)=rho*f+(1-rho)*E[f]",
+    "cube_distance_floor": "1/4",
+    "boolean_quadratic_density_floor": "17/74",
+    "proved": true
+  },
+  "p37_pair_and_lift_ledger": {
+    "p": 37,
+    "s": 30,
+    "phase_one": [
+      {
+        "u": 18,
+        "quotient_sum": 1,
+        "minimum_deficit": 504,
+        "profile": {
+          "2": 18,
+          "30": 1
+        }
+      }
+    ],
+    "phase_zero": [
+      {
+        "u": 0,
+        "quotient_sum": 19,
+        "minimum_deficit": 388,
+        "profile": {
+          "0": 12,
+          "2": 1,
+          "30": 6
+        }
+      },
+      {
+        "u": 2,
+        "quotient_sum": 17,
+        "minimum_deficit": 328,
+        "profile": {
+          "0": 10,
+          "2": 1,
+          "30": 8
+        }
+      },
+      {
+        "u": 3,
+        "quotient_sum": 16,
+        "minimum_deficit": 330,
+        "profile": {
+          "0": 11,
+          "30": 8
+        }
+      },
+      {
+        "u": 4,
+        "quotient_sum": 15,
+        "minimum_deficit": 358,
+        "profile": {
+          "0": 11,
+          "2": 1,
+          "30": 7
+        }
+      },
+      {
+        "u": 5,
+        "quotient_sum": 14,
+        "minimum_deficit": 360,
+        "profile": {
+          "0": 12,
+          "30": 7
+        }
+      },
+      {
+        "u": 6,
+        "quotient_sum": 13,
+        "minimum_deficit": 388,
+        "profile": {
+          "0": 12,
+          "2": 1,
+          "30": 6
+        }
+      },
+      {
+        "u": 7,
+        "quotient_sum": 12,
+        "minimum_deficit": 390,
+        "profile": {
+          "0": 13,
+          "30": 6
+        }
+      },
+      {
+        "u": 8,
+        "quotient_sum": 11,
+        "minimum_deficit": 418,
+        "profile": {
+          "0": 13,
+          "2": 1,
+          "30": 5
+        }
+      },
+      {
+        "u": 9,
+        "quotient_sum": 10,
+        "minimum_deficit": 420,
+        "profile": {
+          "0": 14,
+          "30": 5
+        }
+      },
+      {
+        "u": 10,
+        "quotient_sum": 9,
+        "minimum_deficit": 448,
+        "profile": {
+          "0": 14,
+          "2": 1,
+          "30": 4
+        }
+      },
+      {
+        "u": 11,
+        "quotient_sum": 8,
+        "minimum_deficit": 450,
+        "profile": {
+          "0": 15,
+          "30": 4
+        }
+      },
+      {
+        "u": 12,
+        "quotient_sum": 7,
+        "minimum_deficit": 478,
+        "profile": {
+          "0": 15,
+          "2": 1,
+          "30": 3
+        }
+      },
+      {
+        "u": 13,
+        "quotient_sum": 6,
+        "minimum_deficit": 480,
+        "profile": {
+          "0": 16,
+          "30": 3
+        }
+      },
+      {
+        "u": 14,
+        "quotient_sum": 5,
+        "minimum_deficit": 508,
+        "profile": {
+          "0": 16,
+          "2": 1,
+          "30": 2
+        }
+      },
+      {
+        "u": 15,
+        "quotient_sum": 4,
+        "minimum_deficit": 510,
+        "profile": {
+          "0": 17,
+          "30": 2
+        }
+      },
+      {
+        "u": 16,
+        "quotient_sum": 3,
+        "minimum_deficit": 538,
+        "profile": {
+          "0": 17,
+          "2": 1,
+          "30": 1
+        }
+      },
+      {
+        "u": 17,
+        "quotient_sum": 2,
+        "minimum_deficit": 540,
+        "profile": {
+          "0": 18,
+          "30": 1
+        }
+      },
+      {
+        "u": 18,
+        "quotient_sum": 1,
+        "minimum_deficit": 540,
+        "profile": {
+          "0": 18,
+          "30": 1
+        }
+      }
+    ],
+    "pair_budget": 870,
+    "pair_rows": [
+      {
+        "u": 0,
+        "quotient_sum": 19,
+        "minimum_deficit": 388,
+        "profile": {
+          "0": 12,
+          "2": 1,
+          "30": 6
+        },
+        "required_total_deficit": 892,
+        "pair_budget": 870,
+        "pair_slack": -22,
+        "survives_pair_budget": false
+      },
+      {
+        "u": 2,
+        "quotient_sum": 17,
+        "minimum_deficit": 328,
+        "profile": {
+          "0": 10,
+          "2": 1,
+          "30": 8
+        },
+        "required_total_deficit": 832,
+        "pair_budget": 870,
+        "pair_slack": 38,
+        "survives_pair_budget": true
+      },
+      {
+        "u": 3,
+        "quotient_sum": 16,
+        "minimum_deficit": 330,
+        "profile": {
+          "0": 11,
+          "30": 8
+        },
+        "required_total_deficit": 834,
+        "pair_budget": 870,
+        "pair_slack": 36,
+        "survives_pair_budget": true
+      },
+      {
+        "u": 4,
+        "quotient_sum": 15,
+        "minimum_deficit": 358,
+        "profile": {
+          "0": 11,
+          "2": 1,
+          "30": 7
+        },
+        "required_total_deficit": 862,
+        "pair_budget": 870,
+        "pair_slack": 8,
+        "survives_pair_budget": true
+      },
+      {
+        "u": 5,
+        "quotient_sum": 14,
+        "minimum_deficit": 360,
+        "profile": {
+          "0": 12,
+          "30": 7
+        },
+        "required_total_deficit": 864,
+        "pair_budget": 870,
+        "pair_slack": 6,
+        "survives_pair_budget": true
+      },
+      {
+        "u": 6,
+        "quotient_sum": 13,
+        "minimum_deficit": 388,
+        "profile": {
+          "0": 12,
+          "2": 1,
+          "30": 6
+        },
+        "required_total_deficit": 892,
+        "pair_budget": 870,
+        "pair_slack": -22,
+        "survives_pair_budget": false
+      },
+      {
+        "u": 7,
+        "quotient_sum": 12,
+        "minimum_deficit": 390,
+        "profile": {
+          "0": 13,
+          "30": 6
+        },
+        "required_total_deficit": 894,
+        "pair_budget": 870,
+        "pair_slack": -24,
+        "survives_pair_budget": false
+      },
+      {
+        "u": 8,
+        "quotient_sum": 11,
+        "minimum_deficit": 418,
+        "profile": {
+          "0": 13,
+          "2": 1,
+          "30": 5
+        },
+        "required_total_deficit": 922,
+        "pair_budget": 870,
+        "pair_slack": -52,
+        "survives_pair_budget": false
+      },
+      {
+        "u": 9,
+        "quotient_sum": 10,
+        "minimum_deficit": 420,
+        "profile": {
+          "0": 14,
+          "30": 5
+        },
+        "required_total_deficit": 924,
+        "pair_budget": 870,
+        "pair_slack": -54,
+        "survives_pair_budget": false
+      },
+      {
+        "u": 10,
+        "quotient_sum": 9,
+        "minimum_deficit": 448,
+        "profile": {
+          "0": 14,
+          "2": 1,
+          "30": 4
+        },
+        "required_total_deficit": 952,
+        "pair_budget": 870,
+        "pair_slack": -82,
+        "survives_pair_budget": false
+      },
+      {
+        "u": 11,
+        "quotient_sum": 8,
+        "minimum_deficit": 450,
+        "profile": {
+          "0": 15,
+          "30": 4
+        },
+        "required_total_deficit": 954,
+        "pair_budget": 870,
+        "pair_slack": -84,
+        "survives_pair_budget": false
+      },
+      {
+        "u": 12,
+        "quotient_sum": 7,
+        "minimum_deficit": 478,
+        "profile": {
+          "0": 15,
+          "2": 1,
+          "30": 3
+        },
+        "required_total_deficit": 982,
+        "pair_budget": 870,
+        "pair_slack": -112,
+        "survives_pair_budget": false
+      },
+      {
+        "u": 13,
+        "quotient_sum": 6,
+        "minimum_deficit": 480,
+        "profile": {
+          "0": 16,
+          "30": 3
+        },
+        "required_total_deficit": 984,
+        "pair_budget": 870,
+        "pair_slack": -114,
+        "survives_pair_budget": false
+      },
+      {
+        "u": 14,
+        "quotient_sum": 5,
+        "minimum_deficit": 508,
+        "profile": {
+          "0": 16,
+          "2": 1,
+          "30": 2
+        },
+        "required_total_deficit": 1012,
+        "pair_budget": 870,
+        "pair_slack": -142,
+        "survives_pair_budget": false
+      },
+      {
+        "u": 15,
+        "quotient_sum": 4,
+        "minimum_deficit": 510,
+        "profile": {
+          "0": 17,
+          "30": 2
+        },
+        "required_total_deficit": 1014,
+        "pair_budget": 870,
+        "pair_slack": -144,
+        "survives_pair_budget": false
+      },
+      {
+        "u": 16,
+        "quotient_sum": 3,
+        "minimum_deficit": 538,
+        "profile": {
+          "0": 17,
+          "2": 1,
+          "30": 1
+        },
+        "required_total_deficit": 1042,
+        "pair_budget": 870,
+        "pair_slack": -172,
+        "survives_pair_budget": false
+      },
+      {
+        "u": 17,
+        "quotient_sum": 2,
+        "minimum_deficit": 540,
+        "profile": {
+          "0": 18,
+          "30": 1
+        },
+        "required_total_deficit": 1044,
+        "pair_budget": 870,
+        "pair_slack": -174,
+        "survives_pair_budget": false
+      },
+      {
+        "u": 18,
+        "quotient_sum": 1,
+        "minimum_deficit": 540,
+        "profile": {
+          "0": 18,
+          "30": 1
+        },
+        "required_total_deficit": 1044,
+        "pair_budget": 870,
+        "pair_slack": -174,
+        "survives_pair_budget": false
+      }
+    ],
+    "surviving_residues": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "old_nonzero_lift_floor": 10,
+    "lift_rows": [
+      {
+        "u": 2,
+        "quotient_sum": 17,
+        "forces_quotient_zero": true,
+        "scaled_mean_in_zero_quotient_direction": 4,
+        "minimum_positive_b_floor": 38,
+        "therefore_b_zero": true,
+        "lift_form": "A=2B with B nonzero nonnegative integral quadratic",
+        "excluded_by": "Proposition 15.642",
+        "excluded": true
+      },
+      {
+        "u": 3,
+        "quotient_sum": 16,
+        "forces_quotient_zero": true,
+        "scaled_mean_in_zero_quotient_direction": 6,
+        "minimum_positive_b_floor": 38,
+        "therefore_b_zero": true,
+        "lift_form": "A=2B with B nonzero nonnegative integral quadratic",
+        "excluded_by": "Proposition 15.642",
+        "excluded": true
+      },
+      {
+        "u": 4,
+        "quotient_sum": 15,
+        "forces_quotient_zero": true,
+        "scaled_mean_in_zero_quotient_direction": 8,
+        "minimum_positive_b_floor": 38,
+        "therefore_b_zero": true,
+        "lift_form": "A=2B with B nonzero nonnegative integral quadratic",
+        "excluded_by": "Proposition 15.642",
+        "excluded": true
+      },
+      {
+        "u": 5,
+        "quotient_sum": 14,
+        "forces_quotient_zero": true,
+        "scaled_mean_in_zero_quotient_direction": 10,
+        "minimum_positive_b_floor": 38,
+        "therefore_b_zero": true,
+        "lift_form": "A=2B with B nonzero nonnegative integral quadratic",
+        "excluded_by": "mass-ten paired-cube argument",
+        "excluded": true
+      }
+    ],
+    "mass_ten_exclusion": {
+      "p": 37,
+      "middle_weight": 19,
+      "scaled_mass": 10,
+      "target_mean": "5/74",
+      "stabilizer_endpoint_weight": "9/370",
+      "maximum_point_value": 2,
+      "value_range": [
+        0,
+        1,
+        2
+      ],
+      "degree_two_support_floor": "171/2590",
+      "value_two_density_upper": "2/1295",
+      "degree_four_support_floor_for_B_times_B_minus_1": "1938/441595",
+      "degree_four_gap": "1256/441595",
+      "value_two_excluded": true,
+      "therefore_B_is_boolean": true,
+      "paired_cube_boolean_floor": "17/74",
+      "boolean_gap": "6/37",
+      "mass_ten_excluded": true,
+      "paired_cube_certificate": {
+        "p": 37,
+        "middle_weight": 19,
+        "cube_dimension": 18,
+        "rho": "1/38",
+        "transition_on_one": "T(1)=1",
+        "transition_on_coordinate": "T(x_i)=1/2+rho*x_i",
+        "transition_on_pair": "T(x_i*x_j)=1/4+rho*x_i*x_j",
+        "degree_two_operator": "T(f)=rho*f+(1-rho)*E[f]",
+        "cube_distance_floor": "1/4",
+        "boolean_quadratic_density_floor": "17/74",
+        "proved": true
+      },
+      "proved": true
+    },
+    "endpoint_excluded": true,
+    "proved": true
+  },
+  "L_status": "OPEN"
+}

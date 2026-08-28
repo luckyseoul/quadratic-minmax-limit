@@ -7484,10 +7484,98 @@ The right side exceeds 14 for (p\ge59). At the only smaller in-scope
 primes (43,47,53), exact pair ledgers leave maximum residues (4,6,5), while
 the exact lift floors are (12,14,14), respectively. Thus all rows are
 impossible, and the second all-finite boundary is excluded for every prime
-(p\ge43). The same boundary at (p=17,19,23,29,31,37,41) remains open, as
-do later sizes and general residual (ii).
+(p\ge43). This proposition leaves the same boundary at
+(p=17,19,23,29,31,37,41) open; Proposition 15.680 next closes (p=37).
+The other six endpoints, later sizes, and general residual (ii) remain open.
 
 Evidence: `src/e1_gmin_m4_prop15679.py`,
 `evidence/e1_gmin_m4_prop15679.json`,
 `evidence/NOTE_2026-08-28_next_all_finite_boundary_p43.md`, and
 `tests/test_prop15679.py`.
+
+## Proposition 15.680 — the p=37 next all-finite endpoint is impossible
+
+At (p=37), the second even all-finite size above (3(p-1)/4) is (s=30).
+Phase one has its unique profile
+
+\[
+ u_1=18,\qquad D_1=504,
+\]
+
+and the exact phase-zero quotient/floor replay leaves only
+
+\[
+\begin{array}{c|rrrr}
+u_0&2&3&4&5\\ \hline
+D_0&328&330&358&360\\
+\hbox{pair slack}&38&36&8&6.
+\end{array}                                             \tag{15.680.1}
+\]
+
+Every retained row has quotient sum (19-u_0<19), so some direction has
+quotient zero. Its scaled mean is (2u_0\le10), below the least positive
+fibre floor (38), and hence its fibre count is zero. The pointwise slack is
+
+\[
+ A=2B,\qquad 2u_0=4p\,\mathbb E B,                      \tag{15.680.2}
+\]
+
+for a nonzero nonnegative integer-valued quadratic (B) on (J(37,19)).
+Proposition 15.642 excludes (u_0=2,3,4). It remains to rule out the sharp
+case
+
+\[
+ \mathbb E B={5\over74}.                               \tag{15.680.3}
+\]
+
+First, a general paired-cube lemma says that every nonzero Boolean
+quadratic (f) on (J(p,(p+1)/2)) satisfies
+
+\[
+ \mathbb E f\ge {p-3\over4p}.                          \tag{15.680.4}
+\]
+
+Indeed, write (p=2m-1). Through a fixed middle set (X), leave one point of
+(X) unpaired, biject the other (m-1) points with the complement, and choose
+one endpoint of every pair. These choices form a Boolean ((m-1))-cube. If
+(T) averages over this construction and (\rho=1/(2m)=1/(p+1)), direct
+calculation on (1,x_i,x_ix_j) gives
+
+\[
+ T f=\rho f+(1-\rho)\mathbb E f                         \tag{15.680.5}
+\]
+
+for every quadratic. If Boolean (f(X)=1), every cube restriction is a
+nonzero degree-two cube polynomial and therefore has support density at
+least (1/4). Thus (\rho+(1-\rho)\mathbb E f\ge1/4), which is (15.680.4).
+
+Now apply the stabilizer identity of 15.642 at every point where (B=h).
+Its endpoint weight at (p=37) is (9/370), so (15.680.3) forces (h\le2).
+The degree-two slice-distance floor gives
+
+\[
+ \Pr(B\ne0)\ge {171\over2590},
+ \qquad
+ \Pr(B=2)\le {5\over74}-{171\over2590}={2\over1295}.
+                                                               \tag{15.680.6}
+\]
+
+If (B=2) anywhere, then (B(B-1)) is a nonzero degree-four polynomial
+supported exactly there. The same exact slice-distance lemma gives
+
+\[
+ \Pr(B=2)\ge {\binom{29}{15}\over\binom{37}{19}}
+ ={1938\over441595}>{2\over1295},                      \tag{15.680.7}
+\]
+
+a contradiction. Hence (B) is Boolean. Equation (15.680.4) now gives
+(\mathbb E B\ge17/74>5/74), the final contradiction. Therefore every row
+in (15.680.1) is impossible and the (p=37,s=30) boundary is closed. The
+same boundary at (p=17,19,23,29,31,41), later all-finite sizes, strict
+infinity-plus-(p), residual (ii), R1, global QVAR, Type I, and the limit
+remain open.
+
+Evidence: `src/e1_gmin_m4_prop15680.py`,
+`evidence/e1_gmin_m4_prop15680.json`,
+`evidence/NOTE_2026-08-28_p37_next_all_finite_endpoint.md`, and
+`tests/test_prop15680.py`.

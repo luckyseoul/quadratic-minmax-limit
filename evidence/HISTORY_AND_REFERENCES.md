@@ -1035,12 +1035,44 @@ form `A=2B`. The degree-two slice-distance floor [47] exceeds 14 from
 `p=59`; exact pair/lift ledgers close the only smaller in-scope primes
 `43,47,53`.
 
-Thus this boundary is impossible for every prime `p>=43`. The same size at
-`p=17,19,23,29,31,37,41` remains open. Ball--Csajbók [42] is adjacent
+Thus this boundary is impossible for every prime `p>=43`. This proposition
+leaves the same size at `p=17,19,23,29,31,37,41` open; Proposition 15.680
+subsequently closes `p=37`. Ball--Csajbók [42] is adjacent
 odd-secant literature but has a different `q+2`-point scope. The newly
 posted low-degree testing paper [50] concerns robust testing rather than an
 exact support floor or affine type budget. Exact OEIS searches for
 `11130,7176,3922` and `21756,14016,7696` returned no result; no sequence or
+priority claim is made.
+
+## 7ag. The `p=37,s=30` next-boundary endpoint closes (2026-08-28)
+
+Proposition 15.680 resolves the only row where Proposition 15.642's
+degree-two lift floor was attained exactly. The exact pair ledger at
+`p=37,s=30` leaves `u=2,3,4,5`; all force a quotient-zero `b=0`
+direction. The old lift floor excludes the first three.
+
+At `u=5`, the lift has mean `5/74`. Stabilizer averaging forces its values
+into `{0,1,2}`. The degree-two distance floor bounds the density of value
+two by `2/1295`, while applying the degree-four instance of [47] to
+`B(B-1)` requires at least `1938/441595`; hence the lift is Boolean. A new
+paired-cube restriction identity gives the explicit all-prime bound
+
+```text
+nonzero Boolean quadratic on J(p,(p+1)/2): density >= (p-3)/(4p).
+```
+
+Its proof averages over Boolean cubes obtained by leaving one middle-set
+point fixed and pairing every other point with the complement. On all
+quadratics the transition is `Tf=rho*f+(1-rho)E[f]`, with
+`rho=1/(p+1)`; the elementary cube distance `1/4` gives the formula. At
+`p=37`, `17/74>5/74`, closing the endpoint.
+
+Filmus's exact slice-junta threshold [51] and the paired Boolean
+constructions of Kiermaier--Mannaert--Wassermann [52] are adjacent context,
+not inputs to the proof. Targeted searches found no prior statement of the
+paired-cube transition bound or this mass-ten use. OEIS API searches for
+`171,175,1938,1256`, `328,330,358,360,504`, and the individual large
+values `441595` and `1194096750` all returned `null`; no sequence or
 priority claim is made.
 
 ---
@@ -1108,5 +1140,7 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 48. H. Sticker, *Classification of Arcs in Small Desarguesian Projective Planes*, PhD thesis, Ghent University, 2012, [PDF](https://cage.ugent.be/geometry/Theses/57/PhDHeideSticker.pdf) (Section 5.3 gives the exhaustive PGL class counts for arcs not necessarily complete; the unique 16-arc class in `PG(2,17)` is used in 15.678).
 49. G. Keri, *Types of superregular matrices and the number of n-arcs and complete n-arcs in PG(r,q)*, J. Combin. Des. **14** (2006), 363--390, [doi:10.1002/jcd.20091](https://doi.org/10.1002/jcd.20091) (earlier MDS/superregular classification in the same small-field range; contextual independent cross-check for [48]).
 50. P. Amireddy, A. R. Behera, S. Srinivasan, M. Sudan, and S. V. Willumsgaard, *Low-Degree Testing Over Boolean Slices*, [arXiv:2608.21730](https://arxiv.org/abs/2608.21730) (robust low-degree testing on slices; not an exact distance-floor or Paley affine-boundary theorem).
+51. Y. Filmus, *Junta threshold for low degree Boolean functions on the slice*, [arXiv:2203.04760](https://arxiv.org/abs/2203.04760) (proves the sharp `k>=2d` threshold for bounded-size juntas; adjacent context, not the explicit paired-cube density bound in 15.680).
+52. M. Kiermaier, J. Mannaert, and A. Wassermann, *The paired construction for Boolean functions on the slice*, [arXiv:2510.02804](https://arxiv.org/abs/2510.02804) (small-support constructions and exact degrees; does not classify all Boolean quadratics or imply the mass-ten exclusion in 15.680).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

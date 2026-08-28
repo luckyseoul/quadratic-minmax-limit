@@ -1,14 +1,25 @@
 # Status (2026-08-28)
 
+**15.680 PROVED the `p=37,s=30` next all-finite endpoint is impossible,
+not residual (ii)**: the exact pair ledger leaves only phase-zero residues
+`u=2,3,4,5`, each forcing a quotient-zero `b=0` quadratic lift of scaled
+mass at most ten. Proposition 15.642 excludes the first three. At mass ten,
+stabilizer averaging makes the lift `{0,1,2}`-valued; the exact degree-four
+slice-distance floor excludes value two. A self-contained paired-cube
+restriction gives density at least `17/74` for a nonzero Boolean quadratic
+on `J(37,19)`, contradicting the required `5/74`. The same boundary at
+`p=17,19,23,29,31,41`, later sizes, and the infinity-present remainder
+remain OPEN.
+
 **15.679 PROVED the next all-finite boundary is impossible for every prime
 `p>=43`, not residual (ii)**: at the second even size above `3(p-1)/4`,
 phase one is rigid and exact phase-zero quotient arithmetic leaves only
 common residues `2<=u<=7`. Every such row forces a quotient-zero `b=0`
 direction of scaled mean at most 14. The degree-two slice-distance floor is
 strictly larger than 14 from `p=59`; exact pair/lift ledgers close the only
-smaller in-scope primes `43,47,53`. The same boundary at
-`p=17,19,23,29,31,37,41`, later sizes, and the infinity-present remainder
-remain OPEN.
+smaller in-scope primes `43,47,53`. Proposition 15.680 separately closes
+`p=37`; the six endpoints `p=17,19,23,29,31,41`, later sizes, and the
+infinity-present remainder remain OPEN.
 
 **15.678 PROVED the exceptional `p=17,s=14` first all-finite survivor is
 impossible, completing this boundary size for every prime `p>=17`, not
@@ -24,9 +35,10 @@ classification is an explicit external dependency.
 15.675 closes `p=3,5 mod 8` by positive pair gaps and 15.677 closes the outer
 classes from `p=23` by the zero-quotient lift contradiction. Proposition
 15.678 supplies the formerly exceptional residue-zero endpoint. Proposition
-15.679 closes the next size from `p=43`; its smaller endpoints, subsequent
-all-finite sizes, infinity-present remainder, residual (ii), Type I, R1,
-global QVAR, and L remain OPEN.
+15.679 closes the next size from `p=43`, and 15.680 closes its `p=37`
+endpoint; six smaller endpoints, subsequent all-finite sizes,
+infinity-present remainder, residual (ii), Type I, R1, global QVAR, and L
+remain OPEN.
 
 **15.674 PROVED the entire infinity-plus-`(p-2)` boundary shell is
 impossible for both signs and every prime `p>=17`, not residual (ii)**:

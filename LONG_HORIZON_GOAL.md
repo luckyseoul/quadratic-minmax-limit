@@ -49,8 +49,9 @@ acceptance gate is the four-unit dictionary returned by
    intermediate odd-fibre profile. Propositions 15.675, 15.677, and 15.678
    close the first all-finite survivor above `3(p-1)/4` for every prime
    `p>=17`. Proposition 15.679 closes the next all-finite size for every
-   prime `p>=43`. Its seven smaller endpoints, the strict-deficit part of
-   the infinity-plus-`p` shell, larger all-finite profiles, and full graph
+   prime `p>=43`, and Proposition 15.680 closes its `p=37` endpoint. The six
+   smaller endpoints `p=17,19,23,29,31,41`, the strict-deficit part of the
+   infinity-plus-`p` shell, larger all-finite profiles, and full graph
    constraints remain open.
 3. **Type I, multi-level Max−:** OPEN. The general \(3A+B>0\) estimate is
    not proved.
