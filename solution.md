@@ -7656,3 +7656,49 @@ Evidence: `src/e1_gmin_m4_prop15681.py`,
 `evidence/e1_gmin_m4_prop15681.json`,
 `evidence/NOTE_2026-08-28_p29_next_all_finite_endpoint.md`, and
 `tests/test_prop15681.py`.
+
+## Proposition 15.682 — the p=31 next all-finite endpoint is impossible
+
+At (p=31,s=26), Proposition 15.681's scaled lift floor is (16). The exact
+pair ledger leaves phase-zero residues (u_0=0,2,3,4,5,6). Every positive
+row forces a quotient-zero (b=0) lift of scaled mass (2u_0\le12), so only
+(u_0=0) remains.
+
+The residue-zero type minima are
+
+\[
+10[b=0]+[b=2]+5[b=26],\quad D_0=284,
+\qquad
+15[b=2]+[b=26],\quad D_1=360,                         \tag{15.682.1}
+\]
+
+against pair budget (26\cdot25=650). Exact enumeration through the six
+available deficit units leaves fourteen phase-labelled profiles. Since
+pair slack is a nonnegative multiple of four, every profile has slack zero
+or four. The eleven slack-zero profiles are 26-arcs with at least three
+undetermined directions. In each of the three slack-four profiles there is
+exactly one 3-secant, every other line has occupancy at most two, and at
+least five directions are undetermined. Deleting one point of the unique
+triple gives a 25-arc preserving those directions.
+
+Coolsaet's exhaustive classification of complete arcs in
+(\mathrm{PG}(2,31)) has no complete arc of size (23) through (31). Every
+finite arc extends greedily to a complete arc, so every 27- or 28-arc must
+extend to a complete 32-arc. Segre's odd-order theorem identifies that arc
+as a nondegenerate conic; hence every 27- and 28-arc is conic-contained.
+
+For a slack-zero profile, adjoining two undetermined infinity points gives
+a 28-arc. For a slack-four profile, perform the one deletion and then
+adjoin two such points to get a 27-arc. Choose three undetermined infinity
+points (D_1,D_2,D_3). The conics supplied by the extensions through
+({D_1,D_2}) and ({D_1,D_3}) share at least 25 affine points and therefore
+coincide. One nondegenerate conic would contain three collinear infinity
+points, a contradiction. Thus (p=31,s=26) is excluded. This boundary
+remains open at (p=17,19,23,41), with (p=41) reduced to residue zero;
+later all-finite sizes, strict infinity-plus-(p), residual (ii), R1, global
+QVAR, Type I, and the limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15682.py`,
+`evidence/e1_gmin_m4_prop15682.json`,
+`evidence/NOTE_2026-08-28_p31_next_all_finite_endpoint.md`, and
+`tests/test_prop15682.py`.

@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-28 (15.681 additionally closes the `p=29,s=24` next all-finite endpoint; no general flag flipped)
+**Date:** 2026-08-28 (15.682 additionally closes the `p=31,s=26` next all-finite endpoint; no general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -50,6 +50,28 @@ an intermediate count only as the unique high direction of its type, which
 leaves the same four arithmetic rows. The next infinity-present shell has
 `p` finite points.
 
+## 15.682 — `p=31,s=26` next all-finite endpoint closed
+
+`src/e1_gmin_m4_prop15682.py` and
+`evidence/NOTE_2026-08-28_p31_next_all_finite_endpoint.md`. Proposition
+15.681's scaled lift floor 16 removes every positive phase-zero residue.
+The exact residue-zero enumeration leaves fourteen phase-labelled profiles:
+eleven 26-arcs with at least three undetermined directions, and three sets
+with exactly one 3-secant and at least five. Deleting one point of the
+unique triple gives a 25-arc.
+
+Coolsaet's exhaustive classification has no complete arc in `PG(2,31)` of
+size 23 through 31. Every 27-/28-arc therefore extends to a complete
+32-arc, which is a conic by Segre. Adjoining pairs from three undetermined
+infinity points to either the 26-arc or deleted 25-arc forces two conics to
+share at least 25 affine points and hence coincide. That conic would contain
+three collinear infinity points, impossible.
+
+Thus `p=31,s=26` is impossible. The same boundary remains open at
+`p=17,19,23,41`; `p=41` has only residue zero. Later all-finite sizes,
+strict infinity-plus-`p`, residual (ii), R1, QVAR, Type I, and the limit
+remain open.
+
 ## 15.681 — integral paired-cube lift and `p=29,s=24` closed
 
 `src/e1_gmin_m4_prop15681.py` and
@@ -69,10 +91,10 @@ case gives a 23-arc. Coolsaet--Sticker classify all 25-/26-arcs in
 three undetermined infinity points force one conic through three collinear
 points, a contradiction.
 
-Thus `p=29,s=24` is impossible. The same boundary remains open at
-`p=17,19,23,31,41`; `p=31,41` now have only residue zero. Later all-finite
-sizes, strict infinity-plus-`p`, residual (ii), R1, QVAR, Type I, and the
-limit remain open.
+Thus `p=29,s=24` is impossible. Proposition 15.682 subsequently closes
+`p=31`. The same boundary remains open at `p=17,19,23,41`; `p=41` has only
+residue zero. Later all-finite sizes, strict infinity-plus-`p`, residual
+(ii), R1, QVAR, Type I, and the limit remain open.
 
 ## 15.680 — `p=37,s=30` next all-finite endpoint closed
 
@@ -90,9 +112,9 @@ restriction proves every nonzero Boolean quadratic on
 `J(p,(p+1)/2)` has density at least `(p-3)/(4p)`; at `p=37`, this is
 `17/74`, contradicting the required `5/74`.
 
-Thus `p=37,s=30` is impossible. Proposition 15.681 subsequently closes
-`p=29`; the same boundary at `p=17,19,23,31,41`, later all-finite sizes,
-strict infinity-plus-`p`,
+Thus `p=37,s=30` is impossible. Propositions 15.681--15.682 subsequently
+close `p=29,31`; the same boundary at `p=17,19,23,41`, later all-finite
+sizes, strict infinity-plus-`p`,
 residual (ii), R1, QVAR, Type I, and the limit remain open.
 
 ## 15.679 — next all-finite boundary closed from `p=43`
@@ -107,8 +129,8 @@ most 14. Proposition 15.642's degree-two slice-distance floor exceeds 14
 for `p>=59`; exact pair ledgers plus lift floors close `p=43,47,53`.
 
 Thus this entire next boundary is impossible for every prime `p>=43`.
-Propositions 15.680--15.681 separately close `p=37,29`; the smaller endpoints
-`17,19,23,31,41`, later all-finite sizes, strict infinity-plus-`p`,
+Propositions 15.680--15.682 separately close `p=37,29,31`; the smaller
+endpoints `17,19,23,41`, later all-finite sizes, strict infinity-plus-`p`,
 residual (ii), R1, QVAR, Type I, and the limit remain open.
 
 ## 15.678 — exceptional `p=17` first all-finite survivor closed
@@ -145,10 +167,10 @@ Together with 15.675, this excludes the first even all-finite size above
 `3(p-1)/4` for every prime `p>=19`. This proposition does not claim the
 smaller `p=17` endpoint because it has an additional `u_0=0` residue row;
 Proposition 15.678 now closes that endpoint separately. Proposition 15.679
-closes the next size from `p=43`, 15.680 closes its `p=37` endpoint, and
-15.681 closes `p=29`; five smaller endpoints, subsequent sizes, strict deficit in
-infinity-plus-`p`, residual (ii), R1, QVAR, Type I, and the limit remain
-open.
+closes the next size from `p=43`, 15.680 closes its `p=37` endpoint, 15.681
+closes `p=29`, and 15.682 closes `p=31`; four smaller endpoints, subsequent
+sizes, strict deficit in infinity-plus-`p`, residual (ii), R1, QVAR, Type I,
+and the limit remain open.
 
 ## 15.675 — first all-finite survivor closed in two modulo-eight classes
 

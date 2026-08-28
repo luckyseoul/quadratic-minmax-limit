@@ -1036,8 +1036,8 @@ form `A=2B`. The degree-two slice-distance floor [47] exceeds 14 from
 `43,47,53`.
 
 Thus this boundary is impossible for every prime `p>=43`. This proposition
-leaves the same size at `p=17,19,23,29,31,37,41` open; Proposition 15.680
-subsequently closes `p=37`. Ball--Csajbók [42] is adjacent
+leaves the same size at `p=17,19,23,29,31,37,41` open; Propositions
+15.680--15.682 subsequently close `p=37,29,31`. Ball--Csajbók [42] is adjacent
 odd-secant literature but has a different `q+2`-point scope. The newly
 posted low-degree testing paper [50] concerns robust testing rather than an
 exact support floor or affine type budget. Exact OEIS searches for
@@ -1110,6 +1110,32 @@ binomial tables. Searches for the endpoint deficit block, arc-class tail,
 and PGL orbit-size block found no relevant sequence. No sequence or
 priority claim is made.
 
+## 7ai. The `p=31,s=26` next-boundary endpoint closes (2026-08-28)
+
+Proposition 15.682 applies 15.681's scaled lift floor 16 to remove every
+positive phase-zero residue at `p=31`. Exact enumeration of the residue-zero
+row leaves fourteen phase-labelled profiles. Eleven are 26-arcs with at
+least three undetermined directions. The other three have exactly one
+3-secant and at least five undetermined directions; deleting a point of the
+triple gives a 25-arc.
+
+Coolsaet's exhaustive classification [55] has no complete arc in
+`PG(2,31)` of size 23 through 31. Since every finite arc extends greedily to
+a complete arc, every 27- and 28-arc extends to a complete 32-arc and hence,
+by Segre's theorem [44], lies on a nondegenerate conic. Adjoin two
+undetermined infinity points to a 26-arc, or delete the triple point and
+adjoin two to the resulting 25-arc. Repeating with two pairs chosen from
+three undetermined infinity points gives conics sharing at least 25 affine
+points, so they coincide and would contain three collinear infinity points.
+This contradiction closes `p=31,s=26`.
+
+OEIS A000509 records the equivalent complete-arc parameter `m'(31)=22` and
+explicitly notes the absence of complete sizes 23 through 31; it was a
+useful pointer to [55], not a new-sequence claim. Searches for the endpoint
+deficit block `284,286,288,290,360,362,364,366` and the seven global secant
+profiles found no additional relevant sequence. The same boundary remains
+open at `p=17,19,23,41`, with only residue zero left at `p=41`.
+
 ---
 
 ## 8. What is not in the older literature
@@ -1179,5 +1205,6 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 52. M. Kiermaier, J. Mannaert, and A. Wassermann, *The paired construction for Boolean functions on the slice*, [arXiv:2510.02804](https://arxiv.org/abs/2510.02804) (small-support constructions and exact degrees; does not classify all Boolean quadratics or imply the mass-ten exclusion in 15.680).
 53. K. Coolsaet and H. Sticker, *The complete k-arcs of PG(2,27) and PG(2,29)*, J. Combin. Des. **19** (2011), 111--130, [doi:10.1002/jcd.20261](https://doi.org/10.1002/jcd.20261), [open PDF](https://backoffice.biblio.ugent.be/download/1247338/1247417) (Table 5 gives the exhaustive projective class counts 10 and 5 for all 25- and 26-arcs in `PG(2,29)`, used in 15.681).
 54. J. M. Chao and H. Kaneta, *Classical arcs in PG(r,q) for 23 <= q <= 29*, Discrete Math. **226** (2001), 377--385 (records maximum nonclassical plane-arc size 24 at `q=29`; independent prior confirmation of 15.681's classification consequence).
+55. K. Coolsaet, *The Complete Arcs of PG(2,31)*, J. Combin. Des. **23** (2015), 522--533, [doi:10.1002/jcd.21410](https://doi.org/10.1002/jcd.21410) (exhaustive complete-arc classification used in 15.682; in particular, there are no complete arcs of sizes 23 through 31).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

@@ -1,0 +1,990 @@
+{
+  "prop": "15.682",
+  "title": "The p=31 next all-finite endpoint is impossible",
+  "proved": true,
+  "theorem": {
+    "p31_s26_next_all_finite_endpoint": "EXCLUDED",
+    "remaining_smaller_endpoints": [
+      17,
+      19,
+      23,
+      41
+    ],
+    "p41_status": "ONLY_RESIDUE_ZERO_REMAINS",
+    "later_all_finite_sizes": "OPEN",
+    "infinity_present_remainder": "OPEN",
+    "general_residual_ii": false,
+    "R1": false,
+    "global_QVAR": false,
+    "type_I": false,
+    "limit_exists": false
+  },
+  "p31_residue_ledger": {
+    "p": 31,
+    "s": 26,
+    "pair_deficit_budget": 650,
+    "phase_zero_rows": [
+      {
+        "u": 0,
+        "quotient_sum": 16,
+        "minimum_deficit": 284,
+        "profile": {
+          "0": 10,
+          "2": 1,
+          "26": 5
+        }
+      },
+      {
+        "u": 2,
+        "quotient_sum": 14,
+        "minimum_deficit": 234,
+        "profile": {
+          "0": 9,
+          "26": 7
+        }
+      },
+      {
+        "u": 3,
+        "quotient_sum": 13,
+        "minimum_deficit": 258,
+        "profile": {
+          "0": 9,
+          "2": 1,
+          "26": 6
+        }
+      },
+      {
+        "u": 4,
+        "quotient_sum": 12,
+        "minimum_deficit": 260,
+        "profile": {
+          "0": 10,
+          "26": 6
+        }
+      },
+      {
+        "u": 5,
+        "quotient_sum": 11,
+        "minimum_deficit": 284,
+        "profile": {
+          "0": 10,
+          "2": 1,
+          "26": 5
+        }
+      },
+      {
+        "u": 6,
+        "quotient_sum": 10,
+        "minimum_deficit": 286,
+        "profile": {
+          "0": 11,
+          "26": 5
+        }
+      },
+      {
+        "u": 7,
+        "quotient_sum": 9,
+        "minimum_deficit": 310,
+        "profile": {
+          "0": 11,
+          "2": 1,
+          "26": 4
+        }
+      },
+      {
+        "u": 8,
+        "quotient_sum": 8,
+        "minimum_deficit": 312,
+        "profile": {
+          "0": 12,
+          "26": 4
+        }
+      },
+      {
+        "u": 9,
+        "quotient_sum": 7,
+        "minimum_deficit": 336,
+        "profile": {
+          "0": 12,
+          "2": 1,
+          "26": 3
+        }
+      },
+      {
+        "u": 10,
+        "quotient_sum": 6,
+        "minimum_deficit": 338,
+        "profile": {
+          "0": 13,
+          "26": 3
+        }
+      },
+      {
+        "u": 11,
+        "quotient_sum": 5,
+        "minimum_deficit": 362,
+        "profile": {
+          "0": 13,
+          "2": 1,
+          "26": 2
+        }
+      },
+      {
+        "u": 12,
+        "quotient_sum": 4,
+        "minimum_deficit": 364,
+        "profile": {
+          "0": 14,
+          "26": 2
+        }
+      },
+      {
+        "u": 13,
+        "quotient_sum": 3,
+        "minimum_deficit": 388,
+        "profile": {
+          "0": 14,
+          "2": 1,
+          "26": 1
+        }
+      },
+      {
+        "u": 14,
+        "quotient_sum": 2,
+        "minimum_deficit": 390,
+        "profile": {
+          "0": 15,
+          "26": 1
+        }
+      },
+      {
+        "u": 15,
+        "quotient_sum": 1,
+        "minimum_deficit": 390,
+        "profile": {
+          "0": 15,
+          "26": 1
+        }
+      }
+    ],
+    "phase_one_rows": [
+      {
+        "u": 15,
+        "quotient_sum": 1,
+        "minimum_deficit": 360,
+        "profile": {
+          "2": 15,
+          "26": 1
+        }
+      }
+    ],
+    "pair_survivors": [
+      {
+        "u0": 0,
+        "u1": 15,
+        "phase_zero_minimum_deficit": 284,
+        "phase_one_minimum_deficit": 360,
+        "pair_slack": 6,
+        "phase_zero_profile": {
+          "0": 10,
+          "2": 1,
+          "26": 5
+        },
+        "phase_one_profile": {
+          "2": 15,
+          "26": 1
+        }
+      },
+      {
+        "u0": 2,
+        "u1": 15,
+        "phase_zero_minimum_deficit": 234,
+        "phase_one_minimum_deficit": 360,
+        "pair_slack": 56,
+        "phase_zero_profile": {
+          "0": 9,
+          "26": 7
+        },
+        "phase_one_profile": {
+          "2": 15,
+          "26": 1
+        }
+      },
+      {
+        "u0": 3,
+        "u1": 15,
+        "phase_zero_minimum_deficit": 258,
+        "phase_one_minimum_deficit": 360,
+        "pair_slack": 32,
+        "phase_zero_profile": {
+          "0": 9,
+          "2": 1,
+          "26": 6
+        },
+        "phase_one_profile": {
+          "2": 15,
+          "26": 1
+        }
+      },
+      {
+        "u0": 4,
+        "u1": 15,
+        "phase_zero_minimum_deficit": 260,
+        "phase_one_minimum_deficit": 360,
+        "pair_slack": 30,
+        "phase_zero_profile": {
+          "0": 10,
+          "26": 6
+        },
+        "phase_one_profile": {
+          "2": 15,
+          "26": 1
+        }
+      },
+      {
+        "u0": 5,
+        "u1": 15,
+        "phase_zero_minimum_deficit": 284,
+        "phase_one_minimum_deficit": 360,
+        "pair_slack": 6,
+        "phase_zero_profile": {
+          "0": 10,
+          "2": 1,
+          "26": 5
+        },
+        "phase_one_profile": {
+          "2": 15,
+          "26": 1
+        }
+      },
+      {
+        "u0": 6,
+        "u1": 15,
+        "phase_zero_minimum_deficit": 286,
+        "phase_one_minimum_deficit": 360,
+        "pair_slack": 4,
+        "phase_zero_profile": {
+          "0": 11,
+          "26": 5
+        },
+        "phase_one_profile": {
+          "2": 15,
+          "26": 1
+        }
+      }
+    ],
+    "positive_residue_rows": [
+      {
+        "u0": 2,
+        "quotient_sum": 14,
+        "forces_quotient_zero": true,
+        "zero_quotient_scaled_mean": 4,
+        "least_positive_b_floor": 32,
+        "therefore_b_zero": true,
+        "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+        "new_scaled_lift_floor": "16",
+        "excluded": true
+      },
+      {
+        "u0": 3,
+        "quotient_sum": 13,
+        "forces_quotient_zero": true,
+        "zero_quotient_scaled_mean": 6,
+        "least_positive_b_floor": 32,
+        "therefore_b_zero": true,
+        "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+        "new_scaled_lift_floor": "16",
+        "excluded": true
+      },
+      {
+        "u0": 4,
+        "quotient_sum": 12,
+        "forces_quotient_zero": true,
+        "zero_quotient_scaled_mean": 8,
+        "least_positive_b_floor": 32,
+        "therefore_b_zero": true,
+        "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+        "new_scaled_lift_floor": "16",
+        "excluded": true
+      },
+      {
+        "u0": 5,
+        "quotient_sum": 11,
+        "forces_quotient_zero": true,
+        "zero_quotient_scaled_mean": 10,
+        "least_positive_b_floor": 32,
+        "therefore_b_zero": true,
+        "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+        "new_scaled_lift_floor": "16",
+        "excluded": true
+      },
+      {
+        "u0": 6,
+        "quotient_sum": 10,
+        "forces_quotient_zero": true,
+        "zero_quotient_scaled_mean": 12,
+        "least_positive_b_floor": 32,
+        "therefore_b_zero": true,
+        "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+        "new_scaled_lift_floor": "16",
+        "excluded": true
+      }
+    ],
+    "positive_residues_all_excluded": true,
+    "residue_zero_rows": [
+      {
+        "u0": 0,
+        "u1": 15,
+        "phase_zero_minimum_deficit": 284,
+        "phase_one_minimum_deficit": 360,
+        "pair_slack": 6,
+        "phase_zero_profile": {
+          "0": 10,
+          "2": 1,
+          "26": 5
+        },
+        "phase_one_profile": {
+          "2": 15,
+          "26": 1
+        }
+      }
+    ],
+    "residue_zero_remains": true,
+    "new_lift": {
+      "p": 31,
+      "middle_weight": 16,
+      "rho": "1/32",
+      "degree_two_operator": "T(B)=rho*B+(1-rho)*E[B]",
+      "cube_support_floor": "1/4",
+      "cube_average_floor": "1/4",
+      "point_value": "h=B(X)>=1",
+      "paired_cube_scaled_inequality": "4p*E[B] >= p+1-4h",
+      "stabilizer_scaled_coefficient_of_h": "4",
+      "convex_weight_on_stabilizer_inequality": "1/2",
+      "universal_scaled_mass_floor": "16",
+      "universal_mass_floor": "4/31",
+      "closed_form": "(p+1)/2 for p=3 mod 4; (p-1)/2 for p=1 mod 4",
+      "proved": true
+    }
+  },
+  "p31_profiles": {
+    "p": 31,
+    "s": 26,
+    "pair_deficit_budget": 650,
+    "phase_zero_rows_within_cap": [
+      {
+        "deficit": 284,
+        "profile": {
+          "0": 10,
+          "2": 1,
+          "26": 5
+        }
+      },
+      {
+        "deficit": 286,
+        "profile": {
+          "0": 11,
+          "26": 5
+        }
+      },
+      {
+        "deficit": 286,
+        "profile": {
+          "0": 10,
+          "2": 1,
+          "24": 1,
+          "26": 4
+        }
+      },
+      {
+        "deficit": 288,
+        "profile": {
+          "0": 11,
+          "24": 1,
+          "26": 4
+        }
+      },
+      {
+        "deficit": 288,
+        "profile": {
+          "0": 10,
+          "2": 1,
+          "22": 1,
+          "26": 4
+        }
+      },
+      {
+        "deficit": 288,
+        "profile": {
+          "0": 10,
+          "2": 1,
+          "24": 2,
+          "26": 3
+        }
+      },
+      {
+        "deficit": 290,
+        "profile": {
+          "0": 11,
+          "22": 1,
+          "26": 4
+        }
+      },
+      {
+        "deficit": 290,
+        "profile": {
+          "0": 11,
+          "24": 2,
+          "26": 3
+        }
+      },
+      {
+        "deficit": 290,
+        "profile": {
+          "0": 10,
+          "2": 1,
+          "20": 1,
+          "26": 4
+        }
+      },
+      {
+        "deficit": 290,
+        "profile": {
+          "0": 10,
+          "2": 1,
+          "22": 1,
+          "24": 1,
+          "26": 3
+        }
+      },
+      {
+        "deficit": 290,
+        "profile": {
+          "0": 10,
+          "2": 1,
+          "24": 3,
+          "26": 2
+        }
+      }
+    ],
+    "phase_one_rows_within_cap": [
+      {
+        "deficit": 360,
+        "profile": {
+          "2": 15,
+          "26": 1
+        }
+      },
+      {
+        "deficit": 362,
+        "profile": {
+          "2": 15,
+          "24": 1
+        }
+      },
+      {
+        "deficit": 364,
+        "profile": {
+          "2": 15,
+          "22": 1
+        }
+      },
+      {
+        "deficit": 366,
+        "profile": {
+          "2": 15,
+          "20": 1
+        }
+      }
+    ],
+    "pair_slack_divisibility": {
+      "line_contribution": "2*(C(n,2)-floor(n/2))",
+      "n=2r": "4*r*(r-1)",
+      "n=2r+1": "4*r*r",
+      "global_slack_modulus": 4,
+      "slack_zero_iff": "every affine line has occupancy at most two",
+      "slack_four_iff": "exactly one affine line has occupancy three and all others at most two",
+      "proved": true
+    },
+    "profiles": [
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 10,
+            "2": 1,
+            "26": 5
+          },
+          "1": {
+            "2": 15,
+            "24": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 284,
+          "1": 362
+        },
+        "total_deficit": 646,
+        "pair_slack": 4,
+        "arc": false,
+        "global_secant_distribution": {
+          "0": 5,
+          "1": 1,
+          "12": 16,
+          "13": 10
+        },
+        "undetermined_directions": 5
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 10,
+            "2": 1,
+            "26": 5
+          },
+          "1": {
+            "2": 15,
+            "20": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 284,
+          "1": 366
+        },
+        "total_deficit": 650,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 5,
+          "3": 1,
+          "12": 16,
+          "13": 10
+        },
+        "undetermined_directions": 5
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 11,
+            "26": 5
+          },
+          "1": {
+            "2": 15,
+            "26": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 286,
+          "1": 360
+        },
+        "total_deficit": 646,
+        "pair_slack": 4,
+        "arc": false,
+        "global_secant_distribution": {
+          "0": 6,
+          "12": 15,
+          "13": 11
+        },
+        "undetermined_directions": 6
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 11,
+            "26": 5
+          },
+          "1": {
+            "2": 15,
+            "22": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 286,
+          "1": 364
+        },
+        "total_deficit": 650,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 5,
+          "2": 1,
+          "12": 15,
+          "13": 11
+        },
+        "undetermined_directions": 5
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 10,
+            "2": 1,
+            "24": 1,
+            "26": 4
+          },
+          "1": {
+            "2": 15,
+            "26": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 286,
+          "1": 360
+        },
+        "total_deficit": 646,
+        "pair_slack": 4,
+        "arc": false,
+        "global_secant_distribution": {
+          "0": 5,
+          "1": 1,
+          "12": 16,
+          "13": 10
+        },
+        "undetermined_directions": 5
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 10,
+            "2": 1,
+            "24": 1,
+            "26": 4
+          },
+          "1": {
+            "2": 15,
+            "22": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 286,
+          "1": 364
+        },
+        "total_deficit": 650,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 4,
+          "1": 1,
+          "2": 1,
+          "12": 16,
+          "13": 10
+        },
+        "undetermined_directions": 4
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 11,
+            "24": 1,
+            "26": 4
+          },
+          "1": {
+            "2": 15,
+            "24": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 288,
+          "1": 362
+        },
+        "total_deficit": 650,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 4,
+          "1": 2,
+          "12": 15,
+          "13": 11
+        },
+        "undetermined_directions": 4
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 10,
+            "2": 1,
+            "22": 1,
+            "26": 4
+          },
+          "1": {
+            "2": 15,
+            "24": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 288,
+          "1": 362
+        },
+        "total_deficit": 650,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 4,
+          "1": 1,
+          "2": 1,
+          "12": 16,
+          "13": 10
+        },
+        "undetermined_directions": 4
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 10,
+            "2": 1,
+            "24": 2,
+            "26": 3
+          },
+          "1": {
+            "2": 15,
+            "24": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 288,
+          "1": 362
+        },
+        "total_deficit": 650,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 3,
+          "1": 3,
+          "12": 16,
+          "13": 10
+        },
+        "undetermined_directions": 3
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 11,
+            "22": 1,
+            "26": 4
+          },
+          "1": {
+            "2": 15,
+            "26": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 290,
+          "1": 360
+        },
+        "total_deficit": 650,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 5,
+          "2": 1,
+          "12": 15,
+          "13": 11
+        },
+        "undetermined_directions": 5
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 11,
+            "24": 2,
+            "26": 3
+          },
+          "1": {
+            "2": 15,
+            "26": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 290,
+          "1": 360
+        },
+        "total_deficit": 650,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 4,
+          "1": 2,
+          "12": 15,
+          "13": 11
+        },
+        "undetermined_directions": 4
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 10,
+            "2": 1,
+            "20": 1,
+            "26": 4
+          },
+          "1": {
+            "2": 15,
+            "26": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 290,
+          "1": 360
+        },
+        "total_deficit": 650,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 5,
+          "3": 1,
+          "12": 16,
+          "13": 10
+        },
+        "undetermined_directions": 5
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 10,
+            "2": 1,
+            "22": 1,
+            "24": 1,
+            "26": 3
+          },
+          "1": {
+            "2": 15,
+            "26": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 290,
+          "1": 360
+        },
+        "total_deficit": 650,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 4,
+          "1": 1,
+          "2": 1,
+          "12": 16,
+          "13": 10
+        },
+        "undetermined_directions": 4
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 10,
+            "2": 1,
+            "24": 3,
+            "26": 2
+          },
+          "1": {
+            "2": 15,
+            "26": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 290,
+          "1": 360
+        },
+        "total_deficit": 650,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 3,
+          "1": 3,
+          "12": 16,
+          "13": 10
+        },
+        "undetermined_directions": 3
+      }
+    ],
+    "distinct_global_shapes": [
+      {
+        "0": 3,
+        "1": 3,
+        "12": 16,
+        "13": 10
+      },
+      {
+        "0": 4,
+        "1": 1,
+        "12": 16,
+        "13": 10,
+        "2": 1
+      },
+      {
+        "0": 4,
+        "1": 2,
+        "12": 15,
+        "13": 11
+      },
+      {
+        "0": 5,
+        "1": 1,
+        "12": 16,
+        "13": 10
+      },
+      {
+        "0": 5,
+        "12": 15,
+        "13": 11,
+        "2": 1
+      },
+      {
+        "0": 5,
+        "12": 16,
+        "13": 10,
+        "3": 1
+      },
+      {
+        "0": 6,
+        "12": 15,
+        "13": 11
+      }
+    ],
+    "near_arc_profile_count": 3,
+    "near_arc_geometry": "exactly one affine line has occupancy three, every other line has occupancy at most two, and five directions are undetermined",
+    "near_arc_delete_one_triple_point": "a 25-arc preserving all five undetermined directions",
+    "arc_profile_count": 11,
+    "arc_minimum_undetermined_directions": 3,
+    "proved": true
+  },
+  "p31_geometric_exclusion": {
+    "arc_case": {
+      "starting_size": 26,
+      "minimum_undetermined_infinity_points": 3,
+      "adjoin_two_size": 28,
+      "classification_consequence": "contained in a conic"
+    },
+    "near_arc_case": {
+      "starting_size": 26,
+      "unique_3_secant": true,
+      "delete_one_point_from_triple_size": 25,
+      "result_is_arc": true,
+      "undetermined_infinity_points_preserved": 5,
+      "adjoin_two_size": 27,
+      "classification_consequence": "contained in a conic"
+    },
+    "common_contradiction": "choose three undetermined infinity points; conics through two extensions share at least 25 affine arc points and coincide, forcing one nondegenerate conic through three collinear points",
+    "classification": {
+      "external_dependency": true,
+      "source": "K. Coolsaet, The Complete Arcs of PG(2,31), J. Combin. Des. 23 (2015), 522-533",
+      "doi": "10.1002/jcd.21410",
+      "classification_scope": "all complete arcs in PG(2,31)",
+      "no_complete_arc_sizes": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "largest_nonconic_complete_arc_size": 22,
+      "complete_32_arcs": "nondegenerate conics by Segre's odd-order theorem",
+      "finite_extension_argument": "greedily extending any 27- or 28-arc must terminate at a complete arc; the classification forces size 32",
+      "consequence": "every 27- and 28-arc in PG(2,31) is conic-contained",
+      "proved_conditional_on_external_classification": true
+    },
+    "excluded": true
+  },
+  "L_status": "OPEN"
+}
