@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-28 (15.670 excludes every finite p=11 size-eight boundary; no general flag flipped)
+**Date:** 2026-08-28 (15.673 excludes the endpoint-only infinity-plus-`(p-2)` branch for `p>=17`; no general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -38,6 +38,35 @@ relaxation and are not actual graphs. Proposition 15.670 additionally closes
 every finite `p=11` size-eight boundary by a losslessly normalized exact
 census. Residual (ii) therefore remains open; the first `p=11` profiles are
 now infinity plus nine and finite size at least ten.
+
+Propositions 15.671--15.672 close both signs of the collinear
+infinity-plus-`(p-2)` geometry. Proposition 15.673 closes every realization
+whose directional odd-fibre counts all lie in `{1,p-2}`, for both signs and
+all primes `p>=17`. Same-type mean residues leave four arithmetic rows;
+Segre's `p`-arc theorem kills pair-deficit equality, and the unique `p=17`
+endpoint has exact inter-fibre norm `75>57`. Profiles with intermediate
+odd-fibre counts remain open.
+
+## 15.673 — every endpoint-only near-line boundary is impossible
+
+`src/e1_gmin_m4_prop15673.py` and
+`evidence/NOTE_2026-08-28_endpoint_near_line_complete.md`. With
+`q=(p-1)/2,m=q+1`, all same-type directional means share an even residue
+modulo `p+1`. The endpoint floors and Proposition 15.642's four-unit lift
+cost leave baseline counts `x,y`, at most one exception per type, and
+`x+y<=7`. The four phase/residue rows give
+
+```text
+q|y,x-1;   q|x,y-1;   q|y,x+1;   q|x,y+1.
+```
+
+The first two rows violate the boundary support inequality at their unique
+candidates, the third has none, and the fourth has none above `q=8`. At
+`p=17,q=8`, the sole candidate has `I=5,E=64,P_d=7`; its complementary
+baseline matrix has exact `l1` minimum 75 and transverse capacity 57.
+The geometric equality case uses the classical odd-order `p`-arc conic
+theorem, as detailed in the note. This is a uniform endpoint subbranch
+close, not general residual (ii).
 
 ## 15.670 — every finite p=11 size-eight boundary is impossible
 

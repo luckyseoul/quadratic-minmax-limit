@@ -6885,3 +6885,253 @@ Evidence: `src/e1_gmin_m4_prop15670.py`,
 `evidence/p11_size8_normalized_floor_rx9070xt.json`,
 `evidence/NOTE_2026-08-28_p11_size_eight_boundary_exclusion.md`, and
 `tests/test_prop15670.py`.
+
+## Proposition 15.671 — rigid-sign collinear near-line exclusion
+
+Suppose the boundary is infinity together with (p-2) finite points on one
+affine line. The line direction has (b=1), while each transverse direction
+has (b=p-2). In the rigid product-sign branch, the exact endpoint floors
+use the full budget of each quadratic direction type. When
+(p\equiv1\pmod4), the line type has apparent surplus two, but Proposition
+15.642 makes every nonzero lift cost at least four for (p\ge13). Thus every
+direction is at its parity baseline.
+
+Put (q=(p-1)/2), let (I) be the infinity-edge count, and let (P_d) be
+the finite parallel-edge count. With (\sigma=(-1)^\eta), the special and
+transverse targets are
+
+\[
+ \epsilon_0S_H=4+\sigma z_j,
+ \qquad \epsilon_dS_H=4-z_az_b.
+\]
+
+The additive inter-fibre coefficient identity gives
+
+\[
+ P_0\equiv4+\sigma-I\pmod q,
+ \qquad P_d\equiv4-I\pmod q,                         \tag{15.671.1}
+\]
+
+and
+
+\[
+ 2I+(p+1)P_0\le8p+1+\sigma,
+ \qquad2I+(p+1)P_d\le8p+2.                          \tag{15.671.2}
+\]
+
+Summing (15.671.1) over all directions and using
+(\sum_dP_d=4p+1-I) gives
+
+\[
+ I\equiv3+\sigma\pmod q.                            \tag{15.671.3}
+\]
+
+If (p\equiv1\pmod4), then (q) is even and (\sigma=-1), so
+(15.671.3) makes (I) even, contrary to infinity being in the odd-degree
+boundary. If (p\equiv3\pmod4), write
+
+\[
+ I=4+qk_0,qquad P_0=1+qa_0,qquad P_d=qa_d.
+\]
+
+The edge count gives (k_0+a_0+\sum a_d=8), while (15.671.2) gives
+
+\[
+ k_0+(q+1)a_0\le7,qquad k_0+(q+1)a_d\le8.
+\]
+
+For (p\ge19), (q\ge9), so every (a) vanishes and the edge count forces
+(k_0=8). But (I) odd requires (k_0) odd. Hence the rigid-sign
+collinear branch is impossible for (p\equiv1\pmod4,p\ge13) and for
+(p\equiv3\pmod4,p\ge19).
+
+Evidence: `src/e1_gmin_m4_prop15671.py`,
+`evidence/NOTE_2026-08-28_near_line_rigid_sign.md`, and
+`tests/test_prop15671.py`.
+
+## Proposition 15.672 — complete collinear near-line exclusion
+
+Take the opposite product sign on the same collinear boundary. The
+transverse (b=p-2) baseline is the xnor of the two omitted fibres and has
+scaled mean (p-1). Four nonzero lifts cost at least
+
+\[
+ {p^2-1\over p-2}>p+1,
+\]
+
+more than either type surplus, so each type retains a transverse baseline.
+For a direction of type (\epsilon_d), the exact mean is
+
+\[
+ a_d=I+(p+1)P_d-\epsilon_dT-3p.                    \tag{15.672.1}
+\]
+
+Same-type means therefore differ by multiples of (p+1). The split budget
+leaves exactly one exception per type, each with mean (2p) and parallel
+count one above its type baseline. If (x,y) are the two baseline counts
+and (m=(p+1)/2), then
+
+\[
+ E=m(x+y)+2,qquad I=4p-1-m(x+y),qquad x+y\le7.     \tag{15.672.2}
+\]
+
+Every type has a transverse xnor baseline, whose coefficient equation gives
+
+\[
+ q\mid I+x-4,qquad q\mid I+y-4.
+\]
+
+Substituting (15.672.2), (p=2q+1), and (m=q+1) gives
+
+\[
+ q\mid y+1,qquad q\mid x+1.
+\]
+
+Thus (x+y\ge2q-2\ge8), contradicting (15.672.2). Combined with
+Proposition 15.671, both product signs of every collinear
+infinity-plus-((p-2)) boundary are excluded for every prime (p\ge13).
+
+Evidence: `src/e1_gmin_m4_prop15672.py`,
+`evidence/NOTE_2026-08-28_near_line_complete.md`, and
+`tests/test_prop15672.py`.
+
+## Proposition 15.673 — complete endpoint-only near-line exclusion
+
+Retain infinity and (s=p-2) finite boundary points, but assume only that
+
+\[
+ b_d\in\{1,p-2\}\quad\hbox{for every direction }d. \tag{15.673.1}
+\]
+
+Equation (15.672.1) implies that the (m=(p+1)/2) means of one quadratic
+type have the form
+
+\[
+ a_d=r+(p+1)k_d,qquad r=2u,qquad\sum_dk_d=m-u.     \tag{15.673.2}
+\]
+
+The two endpoint floors are
+
+\[
+\begin{array}{c|c|cc}
+p\bmod4&\eta&b=1&b=p-2\\ \hline
+3&0&p+1&p+1\\
+1&1&p-1&p+1\\
+3&1&p-1&p-1\\
+1&0&p+1&p-1.
+\end{array}                                        \tag{15.673.3}
+\]
+
+A nonzero lift costs at least four, so a value only two above its baseline
+is impossible. Equations (15.673.2)--(15.673.3) consequently leave only
+pure baseline types and, in the nonsaturated rows, one (p+1)-unit mean
+jump per relevant type.
+
+The endpoint geometry removes the degenerate combinations. Let (R) count
+directions with (b_d=1). The pair-deficit inequality gives (R\le s).
+If equality holds, every affine line contains at most two boundary points,
+so the finite boundary is a ((p-2))-arc and the other three directions are
+undetermined. Adjoin any two of their points at infinity. This gives a
+(p)-arc in (\mathrm{PG}(2,p)), hence lies on a conic by Segre's
+odd-order (p)-arc theorem. Two choices give conics sharing the
+(p-2\ge5) finite points, so they coincide and contain all three collinear
+infinity points, impossible. If at most two directions are determined, the
+finite set is collinear and Propositions 15.671--15.672 apply.
+
+It remains that \(3\le R\le p-3=2m-4\). The same-type residue equation
+has the following exhaustive forms, where \(B\) denotes a type whose
+baseline directions have \(b=1\), and \(C\) one whose baseline directions
+have \(b=p-2\):
+
+\[
+\begin{array}{c|cc|c}
+(p\bmod4,\eta)&B\text{-type }R&C\text{-type }R&
+ \text{type edge offsets}\\ \hline
+(3,0)&m&0&(0,0)\\
+(1,1)&m-1\text{ or }m&0&(1,0)\\
+(3,1)&m-1\text{ or }m&0\text{ or }1&(1,1)\\
+(1,0)&m&0\text{ or }1&(0,1).
+\end{array}                                           \tag{15.673.4}
+\]
+
+For the equal-floor rows, baseline directions of both endpoint kinds
+cannot occur in one type: equal means force equal \(P_d\), while their
+coefficient congruences differ by one modulo \(q\). For the unequal-floor
+rows, the table follows directly from (15.673.2): a type is either at the
+saturated endpoint baseline, or has \(m-1\) low baselines and one value one
+period higher. Two \(B\) types violate \(R\le2m-4\), while two \(C\) types
+violate \(R\ge3\). Hence every branch has one type of each kind, with total
+edge offsets \(0,1,2,1\).
+
+Let (x) and (y) denote the baseline parallel counts in the (b=1) and
+(b=p-2) types. Comparing the baseline coefficients and substituting the
+global edge count gives
+
+\[
+\begin{array}{c|c|c}
+(p\bmod4,\eta)&E&\text{congruences}\\ \hline
+(3,0)&m(x+y)&q\mid y,\ q\mid x-1\\
+(1,1)&m(x+y)+1&q\mid x,\ q\mid y-1\\
+(3,1)&m(x+y)+2&q\mid y,\ q\mid x+1\\
+(1,0)&m(x+y)+1&q\mid x,\ q\mid y+1,
+\end{array}                                        \tag{15.673.5}
+\]
+
+where (q=(p-1)/2), (I=4p+1-E\ge1), and hence (x+y\le7). For
+(p\equiv3\pmod4), (q\ge9): phase zero forces ((x,y)=(1,0)), but then
+
+\[
+ I=7q+4>4q+1=s+2E,
+\]
+
+while phase one has no congruence solution. For (p\equiv1\pmod4), phase
+one forces ((x,y)=(0,1)), but
+
+\[
+ I=7q+3>4q+3=s+2E.
+\]
+
+Phase zero has no solution for (q>8). Here (I\le s+2E) is elementary:
+the (I) infinity edges toggle (I) finite vertices, the (E) finite
+edges toggle at most (2E), and their symmetric difference is the
+(s)-point finite boundary.
+
+It remains to treat (p=17,q=8), where (15.673.5) has the sole candidate
+
+\[
+ (x,y)=(0,7),\qquad E=64,\qquad I=5.                \tag{15.673.6}
+\]
+
+For a complementary baseline direction, let (n_s\ge0) be its infinity
+star counts. Then (\sum n_s=5), (P_d=7), and its signed inter-fibre
+matrix is
+
+\[
+ L_{st}=1-n_s-n_t+\mathbf1_{st=ab}.                 \tag{15.673.7}
+\]
+
+If (u) of the 17 counts are positive and (z=17-u), the norm before the
+distinguished correction is
+
+\[
+ \binom z2+z(5-u)+5(u-1)-\binom u2.
+\]
+
+The correction lowers it by at most one. For (u=1,\ldots,5), the lower
+bounds are (183,153,125,99,75); the last is attained by five unit counts
+including (a,b). Thus the exact (\ell_1) minimum is 75. Only
+(E-P_d=57) transverse selected edges are available, contradicting
+(15.673.7). Therefore
+
+\[
+ \boxed{\text{every endpoint-only infinity-plus-}(p-2)\text{ boundary is
+ impossible for both signs and every prime }p\ge17.}
+\]
+
+Intermediate odd-fibre counts and the large all-finite range remain open,
+so residual (ii), R1, global QVAR, Type I, and the limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15673.py`,
+`evidence/e1_gmin_m4_prop15673.json`,
+`evidence/NOTE_2026-08-28_endpoint_near_line_complete.md`, and
+`tests/test_prop15673.py`.

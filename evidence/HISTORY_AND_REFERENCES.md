@@ -901,6 +901,27 @@ according to the residue class. Combined with Proposition 15.671, both signs
 of every collinear infinity-plus-`(p-2)` boundary are excluded for every
 prime `p>=13`. Noncollinear boundaries remain open.
 
+## 7z. Complete endpoint-only near-line exclusion (2026-08-28)
+
+Proposition 15.673 removes collinearity while retaining the endpoint
+hypothesis `b_d in {1,p-2}`. Exact same-type means are congruent modulo
+`p+1`; together with the four-unit minimum lift cost, this leaves only two
+baseline parallel counts and at most one exception per type. The endpoint
+pair-deficit equality case is an arc with exactly three undetermined
+directions. Adjoining any two gives a `p`-arc, and Segre's odd-order `p`-arc
+theorem [44] puts it on a conic. Two choices force one conic through all
+three collinear infinity points, a contradiction.
+
+The remaining coefficient arithmetic splits into four residue/phase rows.
+Three are excluded by `(p-1)/2` divisibility and the boundary support bound
+`I<=p-2+2E`. The only endpoint is `p=17,(x,y)=(0,7)`, where a complementary
+baseline direction prescribes an inter-fibre matrix of exact `l1` norm at
+least 75 but has only 57 transverse edges. Thus every endpoint-only
+infinity-plus-`(p-2)` boundary is excluded for both signs and every prime
+`p>=17`. Non-endpoint profiles remain open. Literature and OEIS searches
+found no duplicate of the combined Paley mean/coefficient argument and no
+relevant integer-sequence interpretation.
+
 ---
 
 ## 8. What is not in the older literature
@@ -959,5 +980,6 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 41. P.-A. Bernard, N. Crampé, and L. Vinet, *A bivariate Q-polynomial structure for the non-binary Johnson scheme*, J. Combin. Theory Ser. A **202** (2024), 105829, [arXiv:2306.01882](https://arxiv.org/abs/2306.01882) (adjacent Johnson-scheme machinery; not the parity-majorant or affine pair-deficit theorem of 15.669).
 42. S. Ball and B. Csajbók, *On sets of points with few odd secants*, [arXiv:1711.10876](https://arxiv.org/abs/1711.10876) (odd-secant bounds for \(q+2\)-point projective sets; not the eight-point split-type census of 15.670).
 43. M. Kiermaier and S. Kurz, *Maximal integral point sets in affine planes over finite fields*, [arXiv:1401.2825](https://arxiv.org/abs/1401.2825) (prescribed directions and Paley-clique context; not the boundary parity-floor budget of 15.670).
+44. S. Ball and M. Lavrauw, *Planar arcs*, [arXiv:1705.10940](https://arxiv.org/abs/1705.10940) (modern primary restatement of Segre's classification of odd-order arcs of sizes `q` and `q+1`; the `q`-arc conic theorem is used in 15.673's endpoint equality case).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

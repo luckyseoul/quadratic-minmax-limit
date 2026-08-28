@@ -29,7 +29,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; larger survivor ranges and `p=7` infinity-plus-seven remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.673 close the endpoint-only infinity-plus-`(p-2)` branch for `p>=17`; non-endpoint survivor ranges and `p=7` infinity-plus-seven remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -230,6 +230,17 @@ cost-pair histograms agree, there are no survivors under the exact type budget
 72, and the minimum larger type cost is 76. Thus every finite `p=11`
 size-eight boundary is impossible. Infinity plus nine and finite size at
 least ten remain at that prime.
+Propositions 15.671--15.672 next close the collinear realization of the first
+general infinity-present survivor. Proposition 15.673 removes collinearity
+under the complete endpoint condition `b_d in {1,p-2}`. Same-type means are
+quantized modulo `p+1`, and the four-unit lift floor reduces both signs to
+four two-count congruence rows. The pair-deficit equality case is an arc;
+Segre's odd-order `p`-arc theorem makes its three undetermined infinity
+directions impossible. Three arithmetic rows then fail divisibility or the
+boundary support inequality. The sole remaining row is
+`p=17,(x,y)=(0,7)`, where the prescribed inter-fibre `l1` minimum is
+`75>57`. Hence every endpoint-only infinity-plus-`(p-2)` boundary is closed
+for both signs and every prime `p>=17`; non-endpoint profiles remain open.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -281,6 +292,7 @@ graph TD
     BUDGET --> RANGE["uniform parity-floor range<br/>p>=17 finite s<=3(p-1)/4;<br/>infinity finite s<=p-4 <b>CLOSED</b> (15.669)"]
     RANGE --> SMALLRANGE["p=11 infinity+7;<br/>p=13 finite 8 / infinity+7,+9<br/><b>CLOSED</b> (15.669)"]
     SMALLRANGE --> P11EIGHT["p=11 finite size eight<br/>exact normalized census <b>CLOSED</b> (15.670)"]
+    RANGE --> ENDPOINT["infinity + (p-2), all b_d in {1,p-2}<br/>both signs <b>CLOSED for p>=17</b> (15.671--15.673)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -291,6 +303,7 @@ graph TD
     style RES fill:#fff4e6
     style EIGHTINF fill:#fff4e6
     style P11EIGHT fill:#e6ffe6
+    style ENDPOINT fill:#e6ffe6
     style WALSH fill:#e6ffe6
     style MULTI fill:#fff4e6
     style BUDGET fill:#e6ffe6
@@ -447,6 +460,7 @@ square-direction affine-circle words.
 | 15.670 | affine similarity reduces every finite `p=11` eight-set to one of `C(119,6)` normalized sets; complete V100/CUDA and RX 9070 XT/HIP cost-pair histograms agree, with zero survivors and exact minimum larger type cost `76>72` | closes every finite `p=11` size-eight boundary; infinity plus nine, finite size at least ten, residual (ii), and every top-level gate remain open |
 | 15.671 | equality in the `b=1` / complementary `b=p-2` parity floors fixes every directional quadratic in one product-sign branch of a collinear infinity-plus-`(p-2)` boundary; coefficient congruences and inter-fibre `l1` bounds then contradict the global parallel-edge count | excludes `c_H=-1` for `p=1 mod 4,p>=13` and `c_H=+1` for `p=3 mod 4,p>=19` on this actual first-survivor geometry; the opposite sign, noncollinear boundaries, residual (ii), and every top-level gate remain open |
 | 15.672 | exact directional means quantize same-type excesses in units of `p+1`, leaving one exception per type in the opposite-sign collinear infinity-plus-`(p-2)` branch; transverse xnor coefficients give `q|(x+1),(y+1)` against `x+y<=7` | closes the opposite sign from `p=11` or `p=13`; with 15.671, both signs of every collinear infinity-plus-`(p-2)` boundary are excluded for every prime `p>=13`, while noncollinear boundaries and all top-level gates remain open |
+| 15.673 | same-type mean residues and the four-unit lift floor reduce all endpoint-only `b_d in {1,p-2}` profiles to four two-count congruence rows; Segre's `p`-arc theorem excludes pair-deficit equality, and the sole `p=17` arithmetic endpoint has exact inter-fibre norm `75>57` | closes both signs of every endpoint-only infinity-plus-`(p-2)` boundary for every prime `p>=17`; non-endpoint profiles, residual (ii), and all top-level gates remain open |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -489,6 +503,18 @@ coefficient comparison gives `(p-1)/2 | x+1,y+1`, while the global edge count
 forces `x+y<=7`. This is impossible in the applicable range. Consequently
 both signs of the collinear infinity-plus-`(p-2)` geometry are closed for
 every prime `p>=13`; noncollinear realizations remain open.
+
+Proposition 15.673 closes the full endpoint-only extension of that geometry.
+The exact same-type residue modulo `p+1` and the minimum cost of a nonzero
+quadratic lift leave four baseline normal forms. Pair-deficit equality would
+give a `(p-2)`-arc with exactly three undetermined directions; adjoining two
+at a time and applying Segre's odd-order `p`-arc theorem forces one conic
+through three collinear infinity points. The remaining coefficient
+congruences have no candidate or violate `I<=p-2+2E`, except at `p=17`.
+There the complementary baseline matrix has exact `l1` minimum 75 against
+57 transverse edges. Thus both signs are excluded for all endpoint-only
+profiles from `p=17`; profiles containing an intermediate odd-fibre count
+remain open.
 
 These are general theorems for odd primes (with the stated `p=3` second-shell
 exception), including the standard Paley `(25,50)` adjacent-ETF case. They
@@ -605,8 +631,10 @@ It also excludes `p=11` infinity plus seven and the `p=13` finite-eight,
 infinity-plus-seven, and infinity-plus-nine cases. The first larger
 floor-plus-pair profiles survive this relaxation. Proposition 15.670 then
 uses exact affine incidence to close every finite `p=11` size-eight boundary.
-Residual (ii) remains open and the next step must use incidence or
-higher-moment information on the remaining profiles.
+Propositions 15.671--15.673 additionally close the endpoint-only
+infinity-plus-`(p-2)` profile for both signs from `p=17`. Residual (ii)
+remains open and the next step must control intermediate odd-fibre counts or
+the all-finite large-boundary range.
 
 ### Route kills — do not re-tread
 
@@ -744,6 +772,9 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-27_p7_size_eight_complete_exclusion.md` | Two-characteristic omission, exact full-catalog closure, sign transfer, literature/OEIS context, and archive for 15.666 |
 | `evidence/NOTE_2026-08-28_uniform_boundary_range_exclusion.md` | Proof of the full middle floors, saving/deficit range theorem, endpoint exception, and exact small-prime extensions |
 | `evidence/NOTE_2026-08-28_p11_size_eight_boundary_exclusion.md` | Exact normalized census, affine type-transfer proof, independent GPU histograms, literature/OEIS context, and archive for 15.670 |
+| `evidence/NOTE_2026-08-28_near_line_rigid_sign.md` | Rigid-sign coefficient and parallel-count exclusion for the collinear endpoint geometry (15.671) |
+| `evidence/NOTE_2026-08-28_near_line_complete.md` | Opposite-sign mean quantization and complete collinear endpoint closure (15.672) |
+| `evidence/NOTE_2026-08-28_endpoint_near_line_complete.md` | Segre arc equality exit, four endpoint arithmetic rows, and exact `p=17` `l1` close (15.673) |
 | `evidence/p11_size8_boundary_SHA256SUMS` | Seven-file permanent-archive manifest for Proposition 15.670 |
 | `evidence/NOTE_2026-08-25_negative_product_asymptotic_normal_form.md` | Slice-distance, mean, divisibility, and boundary proof of the unique large-prime negative profile |
 | `evidence/NOTE_2026-08-25_baseline_fibre_profiles.md` | Integral `l1` proof that every baseline fibre profile is ideal or one-transfer |
@@ -762,6 +793,7 @@ Lemma D is complete and is no longer on the work list.
 | `scripts/p7_size8_remaining_allocation_structure.py`, `scripts/p7_size8_multi_elevation_tables.py`, `scripts/p7_size8_remaining_gpu.py` | Reconstruct and exhaust all post-15.664 finite boundary allocations in characteristics three and seven |
 | `scripts/p7_size8_subset_catalog_gpu.py`, `scripts/p7_size8_full_catalog_filtered_gpu.py` | Exact lossless subset and complete-catalog CUDA joins closing the final 62,892 finite leaves |
 | `scripts/p11_size8_normalized_floor_gpu.py` | Direct-rank CUDA/HIP census of every normalized finite `p=11` size-eight boundary for both signs |
+| `scripts/nonwalsh_endpoint_boundary_cpsat.py`, `scripts/nonwalsh_endpoint_boundary_cryptominisat.py` | Non-load-bearing finite diagnostics for noncollinear endpoint-only boundaries; native-XOR replay proves finite infeasibility at `p=7,11` |
 | `evidence/p7_exceptional_mod7triple_all/`, `evidence/p7_exceptional_high_direction_omission/` | Per-leaf certificates, projection hashes, and independent ordinary/high exceptional audits |
 | `evidence/p7_size8_forced_floor/` | Complete GPU certificate and independent audit for all 83,770,008 forced-floor boundaries per sign |
 | `evidence/p7_size8_four_allocation/` | Conditioned tables, complete V100 candidate record, and independent two-modulus audit for all 23,563,806 four-allocation boundaries per sign |
@@ -783,7 +815,7 @@ Lemma D is complete and is no longer on the work list.
 
 ```bash
 python3 -m pytest tests/test_minmax.py -v
-python3 -m pytest tests/test_prop15628.py tests/test_prop15629.py tests/test_prop15630.py tests/test_prop15631.py tests/test_prop15632.py tests/test_prop15633.py tests/test_prop15634.py tests/test_prop15635.py tests/test_prop15665.py tests/test_prop15667.py tests/test_prop15668.py tests/test_prop15669.py tests/test_prop15670.py -q
+python3 -m pytest tests/test_prop15628.py tests/test_prop15629.py tests/test_prop15630.py tests/test_prop15631.py tests/test_prop15632.py tests/test_prop15633.py tests/test_prop15634.py tests/test_prop15635.py tests/test_prop15665.py tests/test_prop15667.py tests/test_prop15668.py tests/test_prop15669.py tests/test_prop15670.py tests/test_prop15671.py tests/test_prop15672.py tests/test_prop15673.py -q
 python3 -c "from src.minmax_quadratic import exact_m; print([exact_m(n) for n in range(2,9)])"
 ```
 

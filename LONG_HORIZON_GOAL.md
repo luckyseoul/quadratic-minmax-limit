@@ -44,8 +44,9 @@ acceptance gate is the four-unit dictionary returned by
    closed by 15.661. Thus every size-six boundary is closed for odd `p>=5`;
    15.662--15.666 close finite `p=7` size eight, 15.669 closes uniform
    ranges and exact small-prime profiles, and 15.670 closes finite `p=11`
-   size eight. The remaining larger boundary profiles and full graph
-   constraints are open.
+   size eight. Propositions 15.671--15.673 close the endpoint-only
+   infinity-plus-`(p-2)` branch for both signs from `p=17`. The remaining
+   non-endpoint larger boundary profiles and full graph constraints are open.
 3. **Type I, multi-level Max−:** OPEN. The general \(3A+B>0\) estimate is
    not proved.
 4. **Lemma D:** TRUE.

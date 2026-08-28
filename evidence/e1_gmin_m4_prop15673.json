@@ -1,0 +1,2015 @@
+{
+  "prop": "15.673",
+  "title": "Complete endpoint-only infinity-plus-(p-2) boundary exclusion",
+  "proved": true,
+  "theorem": {
+    "endpoint_hypothesis": "b_d in {1,p-2} for every direction",
+    "all_odd_primes_p_at_least_17": "EXCLUDED_FOR_BOTH_PRODUCT_SIGNS",
+    "collinear_dependency": "Propositions 15.671--15.672",
+    "nonendpoint_directional_profiles": "OPEN",
+    "all_finite_large_boundaries": "OPEN",
+    "general_residual_ii": false,
+    "R1": false,
+    "global_QVAR": false,
+    "type_I": false,
+    "limit_exists": false
+  },
+  "symbolic_range_ledger": {
+    "p3_phase0": {
+      "range": "q>=9",
+      "forced_candidate": [
+        1,
+        0
+      ],
+      "boundary_gap": "3q+3>0",
+      "excluded": true
+    },
+    "p1_phase1": {
+      "range": "q>=8",
+      "forced_candidate": [
+        0,
+        1
+      ],
+      "boundary_gap": "3q>0",
+      "excluded": true
+    },
+    "p3_phase1": {
+      "range": "q>=9",
+      "reason": "0<=x+1<=8<q contradicts q|(x+1)",
+      "excluded": true
+    },
+    "p1_phase0": {
+      "range": "q>8",
+      "reason": "0<=x<=7 forces x=0, while 1<=y+1<=8<q",
+      "endpoint_q_eq_8": "p=17, (x,y)=(0,7), l1 75>57",
+      "excluded": true
+    },
+    "covers_every_odd_p_at_least_17": true
+  },
+  "p17_l1_ledger": {
+    "p": 17,
+    "candidate": {
+      "x": 0,
+      "y": 7,
+      "E": 64,
+      "I": 5
+    },
+    "baseline_complement_parallel_count": 7,
+    "coefficient_scalar_2c": 1,
+    "matrix": "L_st=1-n_s-n_t+1_{st=ab}, sum n_s=5",
+    "positive_fibre_ledger": {
+      "1": {
+        "base_l1": 184,
+        "after_distinguished_pair_lower_bound": 183
+      },
+      "2": {
+        "base_l1": 154,
+        "after_distinguished_pair_lower_bound": 153
+      },
+      "3": {
+        "base_l1": 126,
+        "after_distinguished_pair_lower_bound": 125
+      },
+      "4": {
+        "base_l1": 100,
+        "after_distinguished_pair_lower_bound": 99
+      },
+      "5": {
+        "base_l1": 76,
+        "after_distinguished_pair_lower_bound": 75
+      }
+    },
+    "lower_bound": 75,
+    "achieved_by_five_unit_counts_including_a_b": 75,
+    "exact_minimum": 75,
+    "transverse_edge_budget": 57,
+    "contradiction": true
+  },
+  "samples": {
+    "17": {
+      "0": {
+        "p": 17,
+        "phase": 0,
+        "c_H": 1,
+        "applicable": true,
+        "excluded": true,
+        "method": "exact inter-fibre l1 minimum",
+        "floor_ledger": {
+          "p": 17,
+          "q": 8,
+          "m": 9,
+          "period": 18,
+          "phase": 0,
+          "b1_floor": 18,
+          "b_p_minus_2_floor": 16,
+          "minimum_nonzero_lift_scaled_cost": 6,
+          "lift_cost_at_least_four": true,
+          "type_budget": 162
+        },
+        "normal_form": {
+          "branch": "p1_phase0",
+          "same_type_mean": "a_d=r+(p+1)k_d",
+          "residue": "r=2u, 0<=u<m",
+          "quotient_sum": "sum_d k_d=m-u",
+          "forbidden_two_unit_lift": true,
+          "endpoint_pair_deficit": "number of b=1 directions is at most p-2",
+          "equality_case": "equality forces a (p-2)-arc with exactly three undetermined directions; adjoining any two gives a p-arc, so Segre's odd-order p-arc theorem puts each extension on a conic; two extensions share p-2>=5 points and hence the same conic, which would contain three collinear points at infinity",
+          "noncollinear_direction_minimum": 3,
+          "collinear_case": "CLOSED_BY_15.671_AND_15.672",
+          "type_form_ledger": {
+            "p": 17,
+            "q": 8,
+            "m": 9,
+            "period": 18,
+            "branch": "p1_phase0",
+            "same_type_residue_classification": "a_d=2u+(p+1)k_d, sum k_d=m-u, and no floor+2 lift",
+            "equal_floor_mixed_baseline_obstruction": "equal baseline means force equal P_d, while the b=1 and b=p-2 coefficient congruences differ by one modulo q",
+            "geometry_after_exits": "3<=R<=14",
+            "type_forms": [
+              {
+                "baseline_kind": "b=1",
+                "b1_count_options": [
+                  9
+                ],
+                "exceptions": 0,
+                "type_finite_edge_offset": 0
+              },
+              {
+                "baseline_kind": "b=p-2",
+                "b1_count_options": [
+                  0,
+                  1
+                ],
+                "exceptions": 1,
+                "type_finite_edge_offset": 1
+              }
+            ],
+            "admissible_type_pairs": [
+              {
+                "baseline_kinds": [
+                  "b=1",
+                  "b=p-2"
+                ],
+                "R_values": [
+                  9,
+                  10
+                ],
+                "finite_edge_offset": 1
+              }
+            ],
+            "forced_opposite_baseline_kinds": true,
+            "finite_edge_offset": 1,
+            "proved": true
+          },
+          "directions_per_type": 9,
+          "period": 18,
+          "allowed_type_forms": [
+            "all b=1 baselines, residue 0",
+            "m-1 b=p-2 baselines plus one p+1 mean jump, residue p-1"
+          ],
+          "exceptions_per_type": "0 or 1",
+          "finite_edge_offset": 1,
+          "geometry_forces_mixed_forms": true,
+          "proved": true
+        },
+        "coefficient_ledger": {
+          "q": 8,
+          "b1_target": "4 + z_j",
+          "b1_divisibility": "q divides I+P_d-5",
+          "complement_target": "4 + z_a*z_b",
+          "complement_divisibility": "q divides I+P_d-4",
+          "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+          "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 17,
+          "phase": 0,
+          "branch": "p1_phase0",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y+1"
+          ],
+          "candidates": [
+            {
+              "x": 0,
+              "y": 7,
+              "E": 64,
+              "I": 5,
+              "I_boundary_upper": 143,
+              "boundary_contradiction": false
+            }
+          ]
+        },
+        "p17_l1": {
+          "p": 17,
+          "candidate": {
+            "x": 0,
+            "y": 7,
+            "E": 64,
+            "I": 5
+          },
+          "baseline_complement_parallel_count": 7,
+          "coefficient_scalar_2c": 1,
+          "matrix": "L_st=1-n_s-n_t+1_{st=ab}, sum n_s=5",
+          "positive_fibre_ledger": {
+            "1": {
+              "base_l1": 184,
+              "after_distinguished_pair_lower_bound": 183
+            },
+            "2": {
+              "base_l1": 154,
+              "after_distinguished_pair_lower_bound": 153
+            },
+            "3": {
+              "base_l1": 126,
+              "after_distinguished_pair_lower_bound": 125
+            },
+            "4": {
+              "base_l1": 100,
+              "after_distinguished_pair_lower_bound": 99
+            },
+            "5": {
+              "base_l1": 76,
+              "after_distinguished_pair_lower_bound": 75
+            }
+          },
+          "lower_bound": 75,
+          "achieved_by_five_unit_counts_including_a_b": 75,
+          "exact_minimum": 75,
+          "transverse_edge_budget": 57,
+          "contradiction": true
+        }
+      },
+      "1": {
+        "p": 17,
+        "phase": 1,
+        "c_H": -1,
+        "applicable": true,
+        "excluded": true,
+        "method": "I<=|S|+2E boundary support inequality",
+        "floor_ledger": {
+          "p": 17,
+          "q": 8,
+          "m": 9,
+          "period": 18,
+          "phase": 1,
+          "b1_floor": 16,
+          "b_p_minus_2_floor": 18,
+          "minimum_nonzero_lift_scaled_cost": 6,
+          "lift_cost_at_least_four": true,
+          "type_budget": 162
+        },
+        "normal_form": {
+          "branch": "p1_phase1",
+          "same_type_mean": "a_d=r+(p+1)k_d",
+          "residue": "r=2u, 0<=u<m",
+          "quotient_sum": "sum_d k_d=m-u",
+          "forbidden_two_unit_lift": true,
+          "endpoint_pair_deficit": "number of b=1 directions is at most p-2",
+          "equality_case": "equality forces a (p-2)-arc with exactly three undetermined directions; adjoining any two gives a p-arc, so Segre's odd-order p-arc theorem puts each extension on a conic; two extensions share p-2>=5 points and hence the same conic, which would contain three collinear points at infinity",
+          "noncollinear_direction_minimum": 3,
+          "collinear_case": "CLOSED_BY_15.671_AND_15.672",
+          "type_form_ledger": {
+            "p": 17,
+            "q": 8,
+            "m": 9,
+            "period": 18,
+            "branch": "p1_phase1",
+            "same_type_residue_classification": "a_d=2u+(p+1)k_d, sum k_d=m-u, and no floor+2 lift",
+            "equal_floor_mixed_baseline_obstruction": "equal baseline means force equal P_d, while the b=1 and b=p-2 coefficient congruences differ by one modulo q",
+            "geometry_after_exits": "3<=R<=14",
+            "type_forms": [
+              {
+                "baseline_kind": "b=1",
+                "b1_count_options": [
+                  8,
+                  9
+                ],
+                "exceptions": 1,
+                "type_finite_edge_offset": 1
+              },
+              {
+                "baseline_kind": "b=p-2",
+                "b1_count_options": [
+                  0
+                ],
+                "exceptions": 0,
+                "type_finite_edge_offset": 0
+              }
+            ],
+            "admissible_type_pairs": [
+              {
+                "baseline_kinds": [
+                  "b=1",
+                  "b=p-2"
+                ],
+                "R_values": [
+                  8,
+                  9
+                ],
+                "finite_edge_offset": 1
+              }
+            ],
+            "forced_opposite_baseline_kinds": true,
+            "finite_edge_offset": 1,
+            "proved": true
+          },
+          "directions_per_type": 9,
+          "period": 18,
+          "allowed_type_forms": [
+            "all b=p-2 baselines, residue 0",
+            "m-1 b=1 baselines plus one p+1 mean jump, residue p-1"
+          ],
+          "exceptions_per_type": "0 or 1",
+          "finite_edge_offset": 1,
+          "geometry_forces_mixed_forms": true,
+          "proved": true
+        },
+        "coefficient_ledger": {
+          "q": 8,
+          "b1_target": "4 - z_j",
+          "b1_divisibility": "q divides I+P_d-3",
+          "complement_target": "4 - z_a*z_b",
+          "complement_divisibility": "q divides I+P_d-4",
+          "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+          "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 17,
+          "phase": 1,
+          "branch": "p1_phase1",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y-1"
+          ],
+          "candidates": [
+            {
+              "x": 0,
+              "y": 1,
+              "E": 10,
+              "I": 59,
+              "I_boundary_upper": 35,
+              "boundary_contradiction": true
+            }
+          ]
+        },
+        "p17_l1": null
+      }
+    },
+    "19": {
+      "0": {
+        "p": 19,
+        "phase": 0,
+        "c_H": 1,
+        "applicable": true,
+        "excluded": true,
+        "method": "I<=|S|+2E boundary support inequality",
+        "floor_ledger": {
+          "p": 19,
+          "q": 9,
+          "m": 10,
+          "period": 20,
+          "phase": 0,
+          "b1_floor": 20,
+          "b_p_minus_2_floor": 20,
+          "minimum_nonzero_lift_scaled_cost": 6,
+          "lift_cost_at_least_four": true,
+          "type_budget": 200
+        },
+        "normal_form": {
+          "branch": "p3_phase0",
+          "same_type_mean": "a_d=r+(p+1)k_d",
+          "residue": "r=2u, 0<=u<m",
+          "quotient_sum": "sum_d k_d=m-u",
+          "forbidden_two_unit_lift": true,
+          "endpoint_pair_deficit": "number of b=1 directions is at most p-2",
+          "equality_case": "equality forces a (p-2)-arc with exactly three undetermined directions; adjoining any two gives a p-arc, so Segre's odd-order p-arc theorem puts each extension on a conic; two extensions share p-2>=5 points and hence the same conic, which would contain three collinear points at infinity",
+          "noncollinear_direction_minimum": 3,
+          "collinear_case": "CLOSED_BY_15.671_AND_15.672",
+          "type_form_ledger": {
+            "p": 19,
+            "q": 9,
+            "m": 10,
+            "period": 20,
+            "branch": "p3_phase0",
+            "same_type_residue_classification": "a_d=2u+(p+1)k_d, sum k_d=m-u, and no floor+2 lift",
+            "equal_floor_mixed_baseline_obstruction": "equal baseline means force equal P_d, while the b=1 and b=p-2 coefficient congruences differ by one modulo q",
+            "geometry_after_exits": "3<=R<=16",
+            "type_forms": [
+              {
+                "baseline_kind": "b=1",
+                "b1_count_options": [
+                  10
+                ],
+                "exceptions": 0,
+                "type_finite_edge_offset": 0
+              },
+              {
+                "baseline_kind": "b=p-2",
+                "b1_count_options": [
+                  0
+                ],
+                "exceptions": 0,
+                "type_finite_edge_offset": 0
+              }
+            ],
+            "admissible_type_pairs": [
+              {
+                "baseline_kinds": [
+                  "b=1",
+                  "b=p-2"
+                ],
+                "R_values": [
+                  10
+                ],
+                "finite_edge_offset": 0
+              }
+            ],
+            "forced_opposite_baseline_kinds": true,
+            "finite_edge_offset": 0,
+            "proved": true
+          },
+          "directions_per_type": 10,
+          "period": 20,
+          "allowed_type_forms": [
+            "all b=1 baselines at mean p+1",
+            "all b=p-2 baselines at mean p+1"
+          ],
+          "exceptions_per_type": 0,
+          "finite_edge_offset": 0,
+          "geometry_forces_mixed_forms": true,
+          "proved": true
+        },
+        "coefficient_ledger": {
+          "q": 9,
+          "b1_target": "4 + z_j",
+          "b1_divisibility": "q divides I+P_d-5",
+          "complement_target": "4 - z_a*z_b",
+          "complement_divisibility": "q divides I+P_d-4",
+          "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+          "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 19,
+          "phase": 0,
+          "branch": "p3_phase0",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+0",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides y",
+            "q divides x-1"
+          ],
+          "candidates": [
+            {
+              "x": 1,
+              "y": 0,
+              "E": 10,
+              "I": 67,
+              "I_boundary_upper": 37,
+              "boundary_contradiction": true
+            }
+          ]
+        },
+        "p17_l1": null
+      },
+      "1": {
+        "p": 19,
+        "phase": 1,
+        "c_H": -1,
+        "applicable": true,
+        "excluded": true,
+        "method": "no congruence candidate",
+        "floor_ledger": {
+          "p": 19,
+          "q": 9,
+          "m": 10,
+          "period": 20,
+          "phase": 1,
+          "b1_floor": 18,
+          "b_p_minus_2_floor": 18,
+          "minimum_nonzero_lift_scaled_cost": 6,
+          "lift_cost_at_least_four": true,
+          "type_budget": 200
+        },
+        "normal_form": {
+          "branch": "p3_phase1",
+          "same_type_mean": "a_d=r+(p+1)k_d",
+          "residue": "r=2u, 0<=u<m",
+          "quotient_sum": "sum_d k_d=m-u",
+          "forbidden_two_unit_lift": true,
+          "endpoint_pair_deficit": "number of b=1 directions is at most p-2",
+          "equality_case": "equality forces a (p-2)-arc with exactly three undetermined directions; adjoining any two gives a p-arc, so Segre's odd-order p-arc theorem puts each extension on a conic; two extensions share p-2>=5 points and hence the same conic, which would contain three collinear points at infinity",
+          "noncollinear_direction_minimum": 3,
+          "collinear_case": "CLOSED_BY_15.671_AND_15.672",
+          "type_form_ledger": {
+            "p": 19,
+            "q": 9,
+            "m": 10,
+            "period": 20,
+            "branch": "p3_phase1",
+            "same_type_residue_classification": "a_d=2u+(p+1)k_d, sum k_d=m-u, and no floor+2 lift",
+            "equal_floor_mixed_baseline_obstruction": "equal baseline means force equal P_d, while the b=1 and b=p-2 coefficient congruences differ by one modulo q",
+            "geometry_after_exits": "3<=R<=16",
+            "type_forms": [
+              {
+                "baseline_kind": "b=1",
+                "b1_count_options": [
+                  9,
+                  10
+                ],
+                "exceptions": 1,
+                "type_finite_edge_offset": 1
+              },
+              {
+                "baseline_kind": "b=p-2",
+                "b1_count_options": [
+                  0,
+                  1
+                ],
+                "exceptions": 1,
+                "type_finite_edge_offset": 1
+              }
+            ],
+            "admissible_type_pairs": [
+              {
+                "baseline_kinds": [
+                  "b=1",
+                  "b=p-2"
+                ],
+                "R_values": [
+                  9,
+                  10,
+                  11
+                ],
+                "finite_edge_offset": 2
+              }
+            ],
+            "forced_opposite_baseline_kinds": true,
+            "finite_edge_offset": 2,
+            "proved": true
+          },
+          "directions_per_type": 10,
+          "period": 20,
+          "allowed_type_forms": [
+            "m-1 baselines of one endpoint kind plus one p+1 mean jump"
+          ],
+          "exceptions_per_type": 1,
+          "finite_edge_offset": 2,
+          "geometry_forces_opposite_baseline_kinds": true,
+          "proved": true
+        },
+        "coefficient_ledger": {
+          "q": 9,
+          "b1_target": "4 - z_j",
+          "b1_divisibility": "q divides I+P_d-3",
+          "complement_target": "4 + z_a*z_b",
+          "complement_divisibility": "q divides I+P_d-4",
+          "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+          "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 19,
+          "phase": 1,
+          "branch": "p3_phase1",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+2",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides y",
+            "q divides x+1"
+          ],
+          "candidates": []
+        },
+        "p17_l1": null
+      }
+    },
+    "23": {
+      "0": {
+        "p": 23,
+        "phase": 0,
+        "c_H": 1,
+        "applicable": true,
+        "excluded": true,
+        "method": "I<=|S|+2E boundary support inequality",
+        "floor_ledger": {
+          "p": 23,
+          "q": 11,
+          "m": 12,
+          "period": 24,
+          "phase": 0,
+          "b1_floor": 24,
+          "b_p_minus_2_floor": 24,
+          "minimum_nonzero_lift_scaled_cost": 8,
+          "lift_cost_at_least_four": true,
+          "type_budget": 288
+        },
+        "normal_form": {
+          "branch": "p3_phase0",
+          "same_type_mean": "a_d=r+(p+1)k_d",
+          "residue": "r=2u, 0<=u<m",
+          "quotient_sum": "sum_d k_d=m-u",
+          "forbidden_two_unit_lift": true,
+          "endpoint_pair_deficit": "number of b=1 directions is at most p-2",
+          "equality_case": "equality forces a (p-2)-arc with exactly three undetermined directions; adjoining any two gives a p-arc, so Segre's odd-order p-arc theorem puts each extension on a conic; two extensions share p-2>=5 points and hence the same conic, which would contain three collinear points at infinity",
+          "noncollinear_direction_minimum": 3,
+          "collinear_case": "CLOSED_BY_15.671_AND_15.672",
+          "type_form_ledger": {
+            "p": 23,
+            "q": 11,
+            "m": 12,
+            "period": 24,
+            "branch": "p3_phase0",
+            "same_type_residue_classification": "a_d=2u+(p+1)k_d, sum k_d=m-u, and no floor+2 lift",
+            "equal_floor_mixed_baseline_obstruction": "equal baseline means force equal P_d, while the b=1 and b=p-2 coefficient congruences differ by one modulo q",
+            "geometry_after_exits": "3<=R<=20",
+            "type_forms": [
+              {
+                "baseline_kind": "b=1",
+                "b1_count_options": [
+                  12
+                ],
+                "exceptions": 0,
+                "type_finite_edge_offset": 0
+              },
+              {
+                "baseline_kind": "b=p-2",
+                "b1_count_options": [
+                  0
+                ],
+                "exceptions": 0,
+                "type_finite_edge_offset": 0
+              }
+            ],
+            "admissible_type_pairs": [
+              {
+                "baseline_kinds": [
+                  "b=1",
+                  "b=p-2"
+                ],
+                "R_values": [
+                  12
+                ],
+                "finite_edge_offset": 0
+              }
+            ],
+            "forced_opposite_baseline_kinds": true,
+            "finite_edge_offset": 0,
+            "proved": true
+          },
+          "directions_per_type": 12,
+          "period": 24,
+          "allowed_type_forms": [
+            "all b=1 baselines at mean p+1",
+            "all b=p-2 baselines at mean p+1"
+          ],
+          "exceptions_per_type": 0,
+          "finite_edge_offset": 0,
+          "geometry_forces_mixed_forms": true,
+          "proved": true
+        },
+        "coefficient_ledger": {
+          "q": 11,
+          "b1_target": "4 + z_j",
+          "b1_divisibility": "q divides I+P_d-5",
+          "complement_target": "4 - z_a*z_b",
+          "complement_divisibility": "q divides I+P_d-4",
+          "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+          "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 23,
+          "phase": 0,
+          "branch": "p3_phase0",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+0",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides y",
+            "q divides x-1"
+          ],
+          "candidates": [
+            {
+              "x": 1,
+              "y": 0,
+              "E": 12,
+              "I": 81,
+              "I_boundary_upper": 45,
+              "boundary_contradiction": true
+            }
+          ]
+        },
+        "p17_l1": null
+      },
+      "1": {
+        "p": 23,
+        "phase": 1,
+        "c_H": -1,
+        "applicable": true,
+        "excluded": true,
+        "method": "no congruence candidate",
+        "floor_ledger": {
+          "p": 23,
+          "q": 11,
+          "m": 12,
+          "period": 24,
+          "phase": 1,
+          "b1_floor": 22,
+          "b_p_minus_2_floor": 22,
+          "minimum_nonzero_lift_scaled_cost": 8,
+          "lift_cost_at_least_four": true,
+          "type_budget": 288
+        },
+        "normal_form": {
+          "branch": "p3_phase1",
+          "same_type_mean": "a_d=r+(p+1)k_d",
+          "residue": "r=2u, 0<=u<m",
+          "quotient_sum": "sum_d k_d=m-u",
+          "forbidden_two_unit_lift": true,
+          "endpoint_pair_deficit": "number of b=1 directions is at most p-2",
+          "equality_case": "equality forces a (p-2)-arc with exactly three undetermined directions; adjoining any two gives a p-arc, so Segre's odd-order p-arc theorem puts each extension on a conic; two extensions share p-2>=5 points and hence the same conic, which would contain three collinear points at infinity",
+          "noncollinear_direction_minimum": 3,
+          "collinear_case": "CLOSED_BY_15.671_AND_15.672",
+          "type_form_ledger": {
+            "p": 23,
+            "q": 11,
+            "m": 12,
+            "period": 24,
+            "branch": "p3_phase1",
+            "same_type_residue_classification": "a_d=2u+(p+1)k_d, sum k_d=m-u, and no floor+2 lift",
+            "equal_floor_mixed_baseline_obstruction": "equal baseline means force equal P_d, while the b=1 and b=p-2 coefficient congruences differ by one modulo q",
+            "geometry_after_exits": "3<=R<=20",
+            "type_forms": [
+              {
+                "baseline_kind": "b=1",
+                "b1_count_options": [
+                  11,
+                  12
+                ],
+                "exceptions": 1,
+                "type_finite_edge_offset": 1
+              },
+              {
+                "baseline_kind": "b=p-2",
+                "b1_count_options": [
+                  0,
+                  1
+                ],
+                "exceptions": 1,
+                "type_finite_edge_offset": 1
+              }
+            ],
+            "admissible_type_pairs": [
+              {
+                "baseline_kinds": [
+                  "b=1",
+                  "b=p-2"
+                ],
+                "R_values": [
+                  11,
+                  12,
+                  13
+                ],
+                "finite_edge_offset": 2
+              }
+            ],
+            "forced_opposite_baseline_kinds": true,
+            "finite_edge_offset": 2,
+            "proved": true
+          },
+          "directions_per_type": 12,
+          "period": 24,
+          "allowed_type_forms": [
+            "m-1 baselines of one endpoint kind plus one p+1 mean jump"
+          ],
+          "exceptions_per_type": 1,
+          "finite_edge_offset": 2,
+          "geometry_forces_opposite_baseline_kinds": true,
+          "proved": true
+        },
+        "coefficient_ledger": {
+          "q": 11,
+          "b1_target": "4 - z_j",
+          "b1_divisibility": "q divides I+P_d-3",
+          "complement_target": "4 + z_a*z_b",
+          "complement_divisibility": "q divides I+P_d-4",
+          "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+          "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 23,
+          "phase": 1,
+          "branch": "p3_phase1",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+2",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides y",
+            "q divides x+1"
+          ],
+          "candidates": []
+        },
+        "p17_l1": null
+      }
+    },
+    "29": {
+      "0": {
+        "p": 29,
+        "phase": 0,
+        "c_H": 1,
+        "applicable": true,
+        "excluded": true,
+        "method": "no congruence candidate",
+        "floor_ledger": {
+          "p": 29,
+          "q": 14,
+          "m": 15,
+          "period": 30,
+          "phase": 0,
+          "b1_floor": 30,
+          "b_p_minus_2_floor": 28,
+          "minimum_nonzero_lift_scaled_cost": 8,
+          "lift_cost_at_least_four": true,
+          "type_budget": 450
+        },
+        "normal_form": {
+          "branch": "p1_phase0",
+          "same_type_mean": "a_d=r+(p+1)k_d",
+          "residue": "r=2u, 0<=u<m",
+          "quotient_sum": "sum_d k_d=m-u",
+          "forbidden_two_unit_lift": true,
+          "endpoint_pair_deficit": "number of b=1 directions is at most p-2",
+          "equality_case": "equality forces a (p-2)-arc with exactly three undetermined directions; adjoining any two gives a p-arc, so Segre's odd-order p-arc theorem puts each extension on a conic; two extensions share p-2>=5 points and hence the same conic, which would contain three collinear points at infinity",
+          "noncollinear_direction_minimum": 3,
+          "collinear_case": "CLOSED_BY_15.671_AND_15.672",
+          "type_form_ledger": {
+            "p": 29,
+            "q": 14,
+            "m": 15,
+            "period": 30,
+            "branch": "p1_phase0",
+            "same_type_residue_classification": "a_d=2u+(p+1)k_d, sum k_d=m-u, and no floor+2 lift",
+            "equal_floor_mixed_baseline_obstruction": "equal baseline means force equal P_d, while the b=1 and b=p-2 coefficient congruences differ by one modulo q",
+            "geometry_after_exits": "3<=R<=26",
+            "type_forms": [
+              {
+                "baseline_kind": "b=1",
+                "b1_count_options": [
+                  15
+                ],
+                "exceptions": 0,
+                "type_finite_edge_offset": 0
+              },
+              {
+                "baseline_kind": "b=p-2",
+                "b1_count_options": [
+                  0,
+                  1
+                ],
+                "exceptions": 1,
+                "type_finite_edge_offset": 1
+              }
+            ],
+            "admissible_type_pairs": [
+              {
+                "baseline_kinds": [
+                  "b=1",
+                  "b=p-2"
+                ],
+                "R_values": [
+                  15,
+                  16
+                ],
+                "finite_edge_offset": 1
+              }
+            ],
+            "forced_opposite_baseline_kinds": true,
+            "finite_edge_offset": 1,
+            "proved": true
+          },
+          "directions_per_type": 15,
+          "period": 30,
+          "allowed_type_forms": [
+            "all b=1 baselines, residue 0",
+            "m-1 b=p-2 baselines plus one p+1 mean jump, residue p-1"
+          ],
+          "exceptions_per_type": "0 or 1",
+          "finite_edge_offset": 1,
+          "geometry_forces_mixed_forms": true,
+          "proved": true
+        },
+        "coefficient_ledger": {
+          "q": 14,
+          "b1_target": "4 + z_j",
+          "b1_divisibility": "q divides I+P_d-5",
+          "complement_target": "4 + z_a*z_b",
+          "complement_divisibility": "q divides I+P_d-4",
+          "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+          "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 29,
+          "phase": 0,
+          "branch": "p1_phase0",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y+1"
+          ],
+          "candidates": []
+        },
+        "p17_l1": null
+      },
+      "1": {
+        "p": 29,
+        "phase": 1,
+        "c_H": -1,
+        "applicable": true,
+        "excluded": true,
+        "method": "I<=|S|+2E boundary support inequality",
+        "floor_ledger": {
+          "p": 29,
+          "q": 14,
+          "m": 15,
+          "period": 30,
+          "phase": 1,
+          "b1_floor": 28,
+          "b_p_minus_2_floor": 30,
+          "minimum_nonzero_lift_scaled_cost": 8,
+          "lift_cost_at_least_four": true,
+          "type_budget": 450
+        },
+        "normal_form": {
+          "branch": "p1_phase1",
+          "same_type_mean": "a_d=r+(p+1)k_d",
+          "residue": "r=2u, 0<=u<m",
+          "quotient_sum": "sum_d k_d=m-u",
+          "forbidden_two_unit_lift": true,
+          "endpoint_pair_deficit": "number of b=1 directions is at most p-2",
+          "equality_case": "equality forces a (p-2)-arc with exactly three undetermined directions; adjoining any two gives a p-arc, so Segre's odd-order p-arc theorem puts each extension on a conic; two extensions share p-2>=5 points and hence the same conic, which would contain three collinear points at infinity",
+          "noncollinear_direction_minimum": 3,
+          "collinear_case": "CLOSED_BY_15.671_AND_15.672",
+          "type_form_ledger": {
+            "p": 29,
+            "q": 14,
+            "m": 15,
+            "period": 30,
+            "branch": "p1_phase1",
+            "same_type_residue_classification": "a_d=2u+(p+1)k_d, sum k_d=m-u, and no floor+2 lift",
+            "equal_floor_mixed_baseline_obstruction": "equal baseline means force equal P_d, while the b=1 and b=p-2 coefficient congruences differ by one modulo q",
+            "geometry_after_exits": "3<=R<=26",
+            "type_forms": [
+              {
+                "baseline_kind": "b=1",
+                "b1_count_options": [
+                  14,
+                  15
+                ],
+                "exceptions": 1,
+                "type_finite_edge_offset": 1
+              },
+              {
+                "baseline_kind": "b=p-2",
+                "b1_count_options": [
+                  0
+                ],
+                "exceptions": 0,
+                "type_finite_edge_offset": 0
+              }
+            ],
+            "admissible_type_pairs": [
+              {
+                "baseline_kinds": [
+                  "b=1",
+                  "b=p-2"
+                ],
+                "R_values": [
+                  14,
+                  15
+                ],
+                "finite_edge_offset": 1
+              }
+            ],
+            "forced_opposite_baseline_kinds": true,
+            "finite_edge_offset": 1,
+            "proved": true
+          },
+          "directions_per_type": 15,
+          "period": 30,
+          "allowed_type_forms": [
+            "all b=p-2 baselines, residue 0",
+            "m-1 b=1 baselines plus one p+1 mean jump, residue p-1"
+          ],
+          "exceptions_per_type": "0 or 1",
+          "finite_edge_offset": 1,
+          "geometry_forces_mixed_forms": true,
+          "proved": true
+        },
+        "coefficient_ledger": {
+          "q": 14,
+          "b1_target": "4 - z_j",
+          "b1_divisibility": "q divides I+P_d-3",
+          "complement_target": "4 - z_a*z_b",
+          "complement_divisibility": "q divides I+P_d-4",
+          "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+          "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 29,
+          "phase": 1,
+          "branch": "p1_phase1",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y-1"
+          ],
+          "candidates": [
+            {
+              "x": 0,
+              "y": 1,
+              "E": 16,
+              "I": 101,
+              "I_boundary_upper": 59,
+              "boundary_contradiction": true
+            }
+          ]
+        },
+        "p17_l1": null
+      }
+    },
+    "31": {
+      "0": {
+        "p": 31,
+        "phase": 0,
+        "c_H": 1,
+        "applicable": true,
+        "excluded": true,
+        "method": "I<=|S|+2E boundary support inequality",
+        "floor_ledger": {
+          "p": 31,
+          "q": 15,
+          "m": 16,
+          "period": 32,
+          "phase": 0,
+          "b1_floor": 32,
+          "b_p_minus_2_floor": 32,
+          "minimum_nonzero_lift_scaled_cost": 10,
+          "lift_cost_at_least_four": true,
+          "type_budget": 512
+        },
+        "normal_form": {
+          "branch": "p3_phase0",
+          "same_type_mean": "a_d=r+(p+1)k_d",
+          "residue": "r=2u, 0<=u<m",
+          "quotient_sum": "sum_d k_d=m-u",
+          "forbidden_two_unit_lift": true,
+          "endpoint_pair_deficit": "number of b=1 directions is at most p-2",
+          "equality_case": "equality forces a (p-2)-arc with exactly three undetermined directions; adjoining any two gives a p-arc, so Segre's odd-order p-arc theorem puts each extension on a conic; two extensions share p-2>=5 points and hence the same conic, which would contain three collinear points at infinity",
+          "noncollinear_direction_minimum": 3,
+          "collinear_case": "CLOSED_BY_15.671_AND_15.672",
+          "type_form_ledger": {
+            "p": 31,
+            "q": 15,
+            "m": 16,
+            "period": 32,
+            "branch": "p3_phase0",
+            "same_type_residue_classification": "a_d=2u+(p+1)k_d, sum k_d=m-u, and no floor+2 lift",
+            "equal_floor_mixed_baseline_obstruction": "equal baseline means force equal P_d, while the b=1 and b=p-2 coefficient congruences differ by one modulo q",
+            "geometry_after_exits": "3<=R<=28",
+            "type_forms": [
+              {
+                "baseline_kind": "b=1",
+                "b1_count_options": [
+                  16
+                ],
+                "exceptions": 0,
+                "type_finite_edge_offset": 0
+              },
+              {
+                "baseline_kind": "b=p-2",
+                "b1_count_options": [
+                  0
+                ],
+                "exceptions": 0,
+                "type_finite_edge_offset": 0
+              }
+            ],
+            "admissible_type_pairs": [
+              {
+                "baseline_kinds": [
+                  "b=1",
+                  "b=p-2"
+                ],
+                "R_values": [
+                  16
+                ],
+                "finite_edge_offset": 0
+              }
+            ],
+            "forced_opposite_baseline_kinds": true,
+            "finite_edge_offset": 0,
+            "proved": true
+          },
+          "directions_per_type": 16,
+          "period": 32,
+          "allowed_type_forms": [
+            "all b=1 baselines at mean p+1",
+            "all b=p-2 baselines at mean p+1"
+          ],
+          "exceptions_per_type": 0,
+          "finite_edge_offset": 0,
+          "geometry_forces_mixed_forms": true,
+          "proved": true
+        },
+        "coefficient_ledger": {
+          "q": 15,
+          "b1_target": "4 + z_j",
+          "b1_divisibility": "q divides I+P_d-5",
+          "complement_target": "4 - z_a*z_b",
+          "complement_divisibility": "q divides I+P_d-4",
+          "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+          "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 31,
+          "phase": 0,
+          "branch": "p3_phase0",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+0",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides y",
+            "q divides x-1"
+          ],
+          "candidates": [
+            {
+              "x": 1,
+              "y": 0,
+              "E": 16,
+              "I": 109,
+              "I_boundary_upper": 61,
+              "boundary_contradiction": true
+            }
+          ]
+        },
+        "p17_l1": null
+      },
+      "1": {
+        "p": 31,
+        "phase": 1,
+        "c_H": -1,
+        "applicable": true,
+        "excluded": true,
+        "method": "no congruence candidate",
+        "floor_ledger": {
+          "p": 31,
+          "q": 15,
+          "m": 16,
+          "period": 32,
+          "phase": 1,
+          "b1_floor": 30,
+          "b_p_minus_2_floor": 30,
+          "minimum_nonzero_lift_scaled_cost": 10,
+          "lift_cost_at_least_four": true,
+          "type_budget": 512
+        },
+        "normal_form": {
+          "branch": "p3_phase1",
+          "same_type_mean": "a_d=r+(p+1)k_d",
+          "residue": "r=2u, 0<=u<m",
+          "quotient_sum": "sum_d k_d=m-u",
+          "forbidden_two_unit_lift": true,
+          "endpoint_pair_deficit": "number of b=1 directions is at most p-2",
+          "equality_case": "equality forces a (p-2)-arc with exactly three undetermined directions; adjoining any two gives a p-arc, so Segre's odd-order p-arc theorem puts each extension on a conic; two extensions share p-2>=5 points and hence the same conic, which would contain three collinear points at infinity",
+          "noncollinear_direction_minimum": 3,
+          "collinear_case": "CLOSED_BY_15.671_AND_15.672",
+          "type_form_ledger": {
+            "p": 31,
+            "q": 15,
+            "m": 16,
+            "period": 32,
+            "branch": "p3_phase1",
+            "same_type_residue_classification": "a_d=2u+(p+1)k_d, sum k_d=m-u, and no floor+2 lift",
+            "equal_floor_mixed_baseline_obstruction": "equal baseline means force equal P_d, while the b=1 and b=p-2 coefficient congruences differ by one modulo q",
+            "geometry_after_exits": "3<=R<=28",
+            "type_forms": [
+              {
+                "baseline_kind": "b=1",
+                "b1_count_options": [
+                  15,
+                  16
+                ],
+                "exceptions": 1,
+                "type_finite_edge_offset": 1
+              },
+              {
+                "baseline_kind": "b=p-2",
+                "b1_count_options": [
+                  0,
+                  1
+                ],
+                "exceptions": 1,
+                "type_finite_edge_offset": 1
+              }
+            ],
+            "admissible_type_pairs": [
+              {
+                "baseline_kinds": [
+                  "b=1",
+                  "b=p-2"
+                ],
+                "R_values": [
+                  15,
+                  16,
+                  17
+                ],
+                "finite_edge_offset": 2
+              }
+            ],
+            "forced_opposite_baseline_kinds": true,
+            "finite_edge_offset": 2,
+            "proved": true
+          },
+          "directions_per_type": 16,
+          "period": 32,
+          "allowed_type_forms": [
+            "m-1 baselines of one endpoint kind plus one p+1 mean jump"
+          ],
+          "exceptions_per_type": 1,
+          "finite_edge_offset": 2,
+          "geometry_forces_opposite_baseline_kinds": true,
+          "proved": true
+        },
+        "coefficient_ledger": {
+          "q": 15,
+          "b1_target": "4 - z_j",
+          "b1_divisibility": "q divides I+P_d-3",
+          "complement_target": "4 + z_a*z_b",
+          "complement_divisibility": "q divides I+P_d-4",
+          "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+          "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 31,
+          "phase": 1,
+          "branch": "p3_phase1",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+2",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides y",
+            "q divides x+1"
+          ],
+          "candidates": []
+        },
+        "p17_l1": null
+      }
+    },
+    "37": {
+      "0": {
+        "p": 37,
+        "phase": 0,
+        "c_H": 1,
+        "applicable": true,
+        "excluded": true,
+        "method": "no congruence candidate",
+        "floor_ledger": {
+          "p": 37,
+          "q": 18,
+          "m": 19,
+          "period": 38,
+          "phase": 0,
+          "b1_floor": 38,
+          "b_p_minus_2_floor": 36,
+          "minimum_nonzero_lift_scaled_cost": 10,
+          "lift_cost_at_least_four": true,
+          "type_budget": 722
+        },
+        "normal_form": {
+          "branch": "p1_phase0",
+          "same_type_mean": "a_d=r+(p+1)k_d",
+          "residue": "r=2u, 0<=u<m",
+          "quotient_sum": "sum_d k_d=m-u",
+          "forbidden_two_unit_lift": true,
+          "endpoint_pair_deficit": "number of b=1 directions is at most p-2",
+          "equality_case": "equality forces a (p-2)-arc with exactly three undetermined directions; adjoining any two gives a p-arc, so Segre's odd-order p-arc theorem puts each extension on a conic; two extensions share p-2>=5 points and hence the same conic, which would contain three collinear points at infinity",
+          "noncollinear_direction_minimum": 3,
+          "collinear_case": "CLOSED_BY_15.671_AND_15.672",
+          "type_form_ledger": {
+            "p": 37,
+            "q": 18,
+            "m": 19,
+            "period": 38,
+            "branch": "p1_phase0",
+            "same_type_residue_classification": "a_d=2u+(p+1)k_d, sum k_d=m-u, and no floor+2 lift",
+            "equal_floor_mixed_baseline_obstruction": "equal baseline means force equal P_d, while the b=1 and b=p-2 coefficient congruences differ by one modulo q",
+            "geometry_after_exits": "3<=R<=34",
+            "type_forms": [
+              {
+                "baseline_kind": "b=1",
+                "b1_count_options": [
+                  19
+                ],
+                "exceptions": 0,
+                "type_finite_edge_offset": 0
+              },
+              {
+                "baseline_kind": "b=p-2",
+                "b1_count_options": [
+                  0,
+                  1
+                ],
+                "exceptions": 1,
+                "type_finite_edge_offset": 1
+              }
+            ],
+            "admissible_type_pairs": [
+              {
+                "baseline_kinds": [
+                  "b=1",
+                  "b=p-2"
+                ],
+                "R_values": [
+                  19,
+                  20
+                ],
+                "finite_edge_offset": 1
+              }
+            ],
+            "forced_opposite_baseline_kinds": true,
+            "finite_edge_offset": 1,
+            "proved": true
+          },
+          "directions_per_type": 19,
+          "period": 38,
+          "allowed_type_forms": [
+            "all b=1 baselines, residue 0",
+            "m-1 b=p-2 baselines plus one p+1 mean jump, residue p-1"
+          ],
+          "exceptions_per_type": "0 or 1",
+          "finite_edge_offset": 1,
+          "geometry_forces_mixed_forms": true,
+          "proved": true
+        },
+        "coefficient_ledger": {
+          "q": 18,
+          "b1_target": "4 + z_j",
+          "b1_divisibility": "q divides I+P_d-5",
+          "complement_target": "4 + z_a*z_b",
+          "complement_divisibility": "q divides I+P_d-4",
+          "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+          "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 37,
+          "phase": 0,
+          "branch": "p1_phase0",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y+1"
+          ],
+          "candidates": []
+        },
+        "p17_l1": null
+      },
+      "1": {
+        "p": 37,
+        "phase": 1,
+        "c_H": -1,
+        "applicable": true,
+        "excluded": true,
+        "method": "I<=|S|+2E boundary support inequality",
+        "floor_ledger": {
+          "p": 37,
+          "q": 18,
+          "m": 19,
+          "period": 38,
+          "phase": 1,
+          "b1_floor": 36,
+          "b_p_minus_2_floor": 38,
+          "minimum_nonzero_lift_scaled_cost": 10,
+          "lift_cost_at_least_four": true,
+          "type_budget": 722
+        },
+        "normal_form": {
+          "branch": "p1_phase1",
+          "same_type_mean": "a_d=r+(p+1)k_d",
+          "residue": "r=2u, 0<=u<m",
+          "quotient_sum": "sum_d k_d=m-u",
+          "forbidden_two_unit_lift": true,
+          "endpoint_pair_deficit": "number of b=1 directions is at most p-2",
+          "equality_case": "equality forces a (p-2)-arc with exactly three undetermined directions; adjoining any two gives a p-arc, so Segre's odd-order p-arc theorem puts each extension on a conic; two extensions share p-2>=5 points and hence the same conic, which would contain three collinear points at infinity",
+          "noncollinear_direction_minimum": 3,
+          "collinear_case": "CLOSED_BY_15.671_AND_15.672",
+          "type_form_ledger": {
+            "p": 37,
+            "q": 18,
+            "m": 19,
+            "period": 38,
+            "branch": "p1_phase1",
+            "same_type_residue_classification": "a_d=2u+(p+1)k_d, sum k_d=m-u, and no floor+2 lift",
+            "equal_floor_mixed_baseline_obstruction": "equal baseline means force equal P_d, while the b=1 and b=p-2 coefficient congruences differ by one modulo q",
+            "geometry_after_exits": "3<=R<=34",
+            "type_forms": [
+              {
+                "baseline_kind": "b=1",
+                "b1_count_options": [
+                  18,
+                  19
+                ],
+                "exceptions": 1,
+                "type_finite_edge_offset": 1
+              },
+              {
+                "baseline_kind": "b=p-2",
+                "b1_count_options": [
+                  0
+                ],
+                "exceptions": 0,
+                "type_finite_edge_offset": 0
+              }
+            ],
+            "admissible_type_pairs": [
+              {
+                "baseline_kinds": [
+                  "b=1",
+                  "b=p-2"
+                ],
+                "R_values": [
+                  18,
+                  19
+                ],
+                "finite_edge_offset": 1
+              }
+            ],
+            "forced_opposite_baseline_kinds": true,
+            "finite_edge_offset": 1,
+            "proved": true
+          },
+          "directions_per_type": 19,
+          "period": 38,
+          "allowed_type_forms": [
+            "all b=p-2 baselines, residue 0",
+            "m-1 b=1 baselines plus one p+1 mean jump, residue p-1"
+          ],
+          "exceptions_per_type": "0 or 1",
+          "finite_edge_offset": 1,
+          "geometry_forces_mixed_forms": true,
+          "proved": true
+        },
+        "coefficient_ledger": {
+          "q": 18,
+          "b1_target": "4 - z_j",
+          "b1_divisibility": "q divides I+P_d-3",
+          "complement_target": "4 - z_a*z_b",
+          "complement_divisibility": "q divides I+P_d-4",
+          "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+          "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 37,
+          "phase": 1,
+          "branch": "p1_phase1",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y-1"
+          ],
+          "candidates": [
+            {
+              "x": 0,
+              "y": 1,
+              "E": 20,
+              "I": 129,
+              "I_boundary_upper": 75,
+              "boundary_contradiction": true
+            }
+          ]
+        },
+        "p17_l1": null
+      }
+    },
+    "41": {
+      "0": {
+        "p": 41,
+        "phase": 0,
+        "c_H": 1,
+        "applicable": true,
+        "excluded": true,
+        "method": "no congruence candidate",
+        "floor_ledger": {
+          "p": 41,
+          "q": 20,
+          "m": 21,
+          "period": 42,
+          "phase": 0,
+          "b1_floor": 42,
+          "b_p_minus_2_floor": 40,
+          "minimum_nonzero_lift_scaled_cost": 12,
+          "lift_cost_at_least_four": true,
+          "type_budget": 882
+        },
+        "normal_form": {
+          "branch": "p1_phase0",
+          "same_type_mean": "a_d=r+(p+1)k_d",
+          "residue": "r=2u, 0<=u<m",
+          "quotient_sum": "sum_d k_d=m-u",
+          "forbidden_two_unit_lift": true,
+          "endpoint_pair_deficit": "number of b=1 directions is at most p-2",
+          "equality_case": "equality forces a (p-2)-arc with exactly three undetermined directions; adjoining any two gives a p-arc, so Segre's odd-order p-arc theorem puts each extension on a conic; two extensions share p-2>=5 points and hence the same conic, which would contain three collinear points at infinity",
+          "noncollinear_direction_minimum": 3,
+          "collinear_case": "CLOSED_BY_15.671_AND_15.672",
+          "type_form_ledger": {
+            "p": 41,
+            "q": 20,
+            "m": 21,
+            "period": 42,
+            "branch": "p1_phase0",
+            "same_type_residue_classification": "a_d=2u+(p+1)k_d, sum k_d=m-u, and no floor+2 lift",
+            "equal_floor_mixed_baseline_obstruction": "equal baseline means force equal P_d, while the b=1 and b=p-2 coefficient congruences differ by one modulo q",
+            "geometry_after_exits": "3<=R<=38",
+            "type_forms": [
+              {
+                "baseline_kind": "b=1",
+                "b1_count_options": [
+                  21
+                ],
+                "exceptions": 0,
+                "type_finite_edge_offset": 0
+              },
+              {
+                "baseline_kind": "b=p-2",
+                "b1_count_options": [
+                  0,
+                  1
+                ],
+                "exceptions": 1,
+                "type_finite_edge_offset": 1
+              }
+            ],
+            "admissible_type_pairs": [
+              {
+                "baseline_kinds": [
+                  "b=1",
+                  "b=p-2"
+                ],
+                "R_values": [
+                  21,
+                  22
+                ],
+                "finite_edge_offset": 1
+              }
+            ],
+            "forced_opposite_baseline_kinds": true,
+            "finite_edge_offset": 1,
+            "proved": true
+          },
+          "directions_per_type": 21,
+          "period": 42,
+          "allowed_type_forms": [
+            "all b=1 baselines, residue 0",
+            "m-1 b=p-2 baselines plus one p+1 mean jump, residue p-1"
+          ],
+          "exceptions_per_type": "0 or 1",
+          "finite_edge_offset": 1,
+          "geometry_forces_mixed_forms": true,
+          "proved": true
+        },
+        "coefficient_ledger": {
+          "q": 20,
+          "b1_target": "4 + z_j",
+          "b1_divisibility": "q divides I+P_d-5",
+          "complement_target": "4 + z_a*z_b",
+          "complement_divisibility": "q divides I+P_d-4",
+          "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+          "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 41,
+          "phase": 0,
+          "branch": "p1_phase0",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y+1"
+          ],
+          "candidates": []
+        },
+        "p17_l1": null
+      },
+      "1": {
+        "p": 41,
+        "phase": 1,
+        "c_H": -1,
+        "applicable": true,
+        "excluded": true,
+        "method": "I<=|S|+2E boundary support inequality",
+        "floor_ledger": {
+          "p": 41,
+          "q": 20,
+          "m": 21,
+          "period": 42,
+          "phase": 1,
+          "b1_floor": 40,
+          "b_p_minus_2_floor": 42,
+          "minimum_nonzero_lift_scaled_cost": 12,
+          "lift_cost_at_least_four": true,
+          "type_budget": 882
+        },
+        "normal_form": {
+          "branch": "p1_phase1",
+          "same_type_mean": "a_d=r+(p+1)k_d",
+          "residue": "r=2u, 0<=u<m",
+          "quotient_sum": "sum_d k_d=m-u",
+          "forbidden_two_unit_lift": true,
+          "endpoint_pair_deficit": "number of b=1 directions is at most p-2",
+          "equality_case": "equality forces a (p-2)-arc with exactly three undetermined directions; adjoining any two gives a p-arc, so Segre's odd-order p-arc theorem puts each extension on a conic; two extensions share p-2>=5 points and hence the same conic, which would contain three collinear points at infinity",
+          "noncollinear_direction_minimum": 3,
+          "collinear_case": "CLOSED_BY_15.671_AND_15.672",
+          "type_form_ledger": {
+            "p": 41,
+            "q": 20,
+            "m": 21,
+            "period": 42,
+            "branch": "p1_phase1",
+            "same_type_residue_classification": "a_d=2u+(p+1)k_d, sum k_d=m-u, and no floor+2 lift",
+            "equal_floor_mixed_baseline_obstruction": "equal baseline means force equal P_d, while the b=1 and b=p-2 coefficient congruences differ by one modulo q",
+            "geometry_after_exits": "3<=R<=38",
+            "type_forms": [
+              {
+                "baseline_kind": "b=1",
+                "b1_count_options": [
+                  20,
+                  21
+                ],
+                "exceptions": 1,
+                "type_finite_edge_offset": 1
+              },
+              {
+                "baseline_kind": "b=p-2",
+                "b1_count_options": [
+                  0
+                ],
+                "exceptions": 0,
+                "type_finite_edge_offset": 0
+              }
+            ],
+            "admissible_type_pairs": [
+              {
+                "baseline_kinds": [
+                  "b=1",
+                  "b=p-2"
+                ],
+                "R_values": [
+                  20,
+                  21
+                ],
+                "finite_edge_offset": 1
+              }
+            ],
+            "forced_opposite_baseline_kinds": true,
+            "finite_edge_offset": 1,
+            "proved": true
+          },
+          "directions_per_type": 21,
+          "period": 42,
+          "allowed_type_forms": [
+            "all b=p-2 baselines, residue 0",
+            "m-1 b=1 baselines plus one p+1 mean jump, residue p-1"
+          ],
+          "exceptions_per_type": "0 or 1",
+          "finite_edge_offset": 1,
+          "geometry_forces_mixed_forms": true,
+          "proved": true
+        },
+        "coefficient_ledger": {
+          "q": 20,
+          "b1_target": "4 - z_j",
+          "b1_divisibility": "q divides I+P_d-3",
+          "complement_target": "4 - z_a*z_b",
+          "complement_divisibility": "q divides I+P_d-4",
+          "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+          "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 41,
+          "phase": 1,
+          "branch": "p1_phase1",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y-1"
+          ],
+          "candidates": [
+            {
+              "x": 0,
+              "y": 1,
+              "E": 22,
+              "I": 143,
+              "I_boundary_upper": 83,
+              "boundary_contradiction": true
+            }
+          ]
+        },
+        "p17_l1": null
+      }
+    },
+    "101": {
+      "0": {
+        "p": 101,
+        "phase": 0,
+        "c_H": 1,
+        "applicable": true,
+        "excluded": true,
+        "method": "no congruence candidate",
+        "floor_ledger": {
+          "p": 101,
+          "q": 50,
+          "m": 51,
+          "period": 102,
+          "phase": 0,
+          "b1_floor": 102,
+          "b_p_minus_2_floor": 100,
+          "minimum_nonzero_lift_scaled_cost": 26,
+          "lift_cost_at_least_four": true,
+          "type_budget": 5202
+        },
+        "normal_form": {
+          "branch": "p1_phase0",
+          "same_type_mean": "a_d=r+(p+1)k_d",
+          "residue": "r=2u, 0<=u<m",
+          "quotient_sum": "sum_d k_d=m-u",
+          "forbidden_two_unit_lift": true,
+          "endpoint_pair_deficit": "number of b=1 directions is at most p-2",
+          "equality_case": "equality forces a (p-2)-arc with exactly three undetermined directions; adjoining any two gives a p-arc, so Segre's odd-order p-arc theorem puts each extension on a conic; two extensions share p-2>=5 points and hence the same conic, which would contain three collinear points at infinity",
+          "noncollinear_direction_minimum": 3,
+          "collinear_case": "CLOSED_BY_15.671_AND_15.672",
+          "type_form_ledger": {
+            "p": 101,
+            "q": 50,
+            "m": 51,
+            "period": 102,
+            "branch": "p1_phase0",
+            "same_type_residue_classification": "a_d=2u+(p+1)k_d, sum k_d=m-u, and no floor+2 lift",
+            "equal_floor_mixed_baseline_obstruction": "equal baseline means force equal P_d, while the b=1 and b=p-2 coefficient congruences differ by one modulo q",
+            "geometry_after_exits": "3<=R<=98",
+            "type_forms": [
+              {
+                "baseline_kind": "b=1",
+                "b1_count_options": [
+                  51
+                ],
+                "exceptions": 0,
+                "type_finite_edge_offset": 0
+              },
+              {
+                "baseline_kind": "b=p-2",
+                "b1_count_options": [
+                  0,
+                  1
+                ],
+                "exceptions": 1,
+                "type_finite_edge_offset": 1
+              }
+            ],
+            "admissible_type_pairs": [
+              {
+                "baseline_kinds": [
+                  "b=1",
+                  "b=p-2"
+                ],
+                "R_values": [
+                  51,
+                  52
+                ],
+                "finite_edge_offset": 1
+              }
+            ],
+            "forced_opposite_baseline_kinds": true,
+            "finite_edge_offset": 1,
+            "proved": true
+          },
+          "directions_per_type": 51,
+          "period": 102,
+          "allowed_type_forms": [
+            "all b=1 baselines, residue 0",
+            "m-1 b=p-2 baselines plus one p+1 mean jump, residue p-1"
+          ],
+          "exceptions_per_type": "0 or 1",
+          "finite_edge_offset": 1,
+          "geometry_forces_mixed_forms": true,
+          "proved": true
+        },
+        "coefficient_ledger": {
+          "q": 50,
+          "b1_target": "4 + z_j",
+          "b1_divisibility": "q divides I+P_d-5",
+          "complement_target": "4 + z_a*z_b",
+          "complement_divisibility": "q divides I+P_d-4",
+          "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+          "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 101,
+          "phase": 0,
+          "branch": "p1_phase0",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y+1"
+          ],
+          "candidates": []
+        },
+        "p17_l1": null
+      },
+      "1": {
+        "p": 101,
+        "phase": 1,
+        "c_H": -1,
+        "applicable": true,
+        "excluded": true,
+        "method": "I<=|S|+2E boundary support inequality",
+        "floor_ledger": {
+          "p": 101,
+          "q": 50,
+          "m": 51,
+          "period": 102,
+          "phase": 1,
+          "b1_floor": 100,
+          "b_p_minus_2_floor": 102,
+          "minimum_nonzero_lift_scaled_cost": 26,
+          "lift_cost_at_least_four": true,
+          "type_budget": 5202
+        },
+        "normal_form": {
+          "branch": "p1_phase1",
+          "same_type_mean": "a_d=r+(p+1)k_d",
+          "residue": "r=2u, 0<=u<m",
+          "quotient_sum": "sum_d k_d=m-u",
+          "forbidden_two_unit_lift": true,
+          "endpoint_pair_deficit": "number of b=1 directions is at most p-2",
+          "equality_case": "equality forces a (p-2)-arc with exactly three undetermined directions; adjoining any two gives a p-arc, so Segre's odd-order p-arc theorem puts each extension on a conic; two extensions share p-2>=5 points and hence the same conic, which would contain three collinear points at infinity",
+          "noncollinear_direction_minimum": 3,
+          "collinear_case": "CLOSED_BY_15.671_AND_15.672",
+          "type_form_ledger": {
+            "p": 101,
+            "q": 50,
+            "m": 51,
+            "period": 102,
+            "branch": "p1_phase1",
+            "same_type_residue_classification": "a_d=2u+(p+1)k_d, sum k_d=m-u, and no floor+2 lift",
+            "equal_floor_mixed_baseline_obstruction": "equal baseline means force equal P_d, while the b=1 and b=p-2 coefficient congruences differ by one modulo q",
+            "geometry_after_exits": "3<=R<=98",
+            "type_forms": [
+              {
+                "baseline_kind": "b=1",
+                "b1_count_options": [
+                  50,
+                  51
+                ],
+                "exceptions": 1,
+                "type_finite_edge_offset": 1
+              },
+              {
+                "baseline_kind": "b=p-2",
+                "b1_count_options": [
+                  0
+                ],
+                "exceptions": 0,
+                "type_finite_edge_offset": 0
+              }
+            ],
+            "admissible_type_pairs": [
+              {
+                "baseline_kinds": [
+                  "b=1",
+                  "b=p-2"
+                ],
+                "R_values": [
+                  50,
+                  51
+                ],
+                "finite_edge_offset": 1
+              }
+            ],
+            "forced_opposite_baseline_kinds": true,
+            "finite_edge_offset": 1,
+            "proved": true
+          },
+          "directions_per_type": 51,
+          "period": 102,
+          "allowed_type_forms": [
+            "all b=p-2 baselines, residue 0",
+            "m-1 b=1 baselines plus one p+1 mean jump, residue p-1"
+          ],
+          "exceptions_per_type": "0 or 1",
+          "finite_edge_offset": 1,
+          "geometry_forces_mixed_forms": true,
+          "proved": true
+        },
+        "coefficient_ledger": {
+          "q": 50,
+          "b1_target": "4 - z_j",
+          "b1_divisibility": "q divides I+P_d-3",
+          "complement_target": "4 - z_a*z_b",
+          "complement_divisibility": "q divides I+P_d-4",
+          "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+          "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 101,
+          "phase": 1,
+          "branch": "p1_phase1",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y-1"
+          ],
+          "candidates": [
+            {
+              "x": 0,
+              "y": 1,
+              "E": 52,
+              "I": 353,
+              "I_boundary_upper": 203,
+              "boundary_contradiction": true
+            }
+          ]
+        },
+        "p17_l1": null
+      }
+    }
+  },
+  "L_status": "OPEN"
+}

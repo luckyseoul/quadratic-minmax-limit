@@ -1,5 +1,17 @@
 # Status (2026-08-28)
 
+**15.673 PROVED every endpoint-only infinity-plus-`(p-2)` boundary is
+impossible for both signs and every prime `p>=17`, not residual (ii)**:
+Propositions 15.671--15.672 close the collinear case. For arbitrary endpoint
+profiles `b_d in {1,p-2}`, same-type mean quantization and the four-unit
+minimum lift cost leave four two-count arithmetic rows. Pair-deficit equality
+would be a `(p-2)`-arc with three undetermined directions; Segre's odd-order
+`p`-arc theorem forces those three collinear infinity points onto one conic.
+Divisibility and `I<=p-2+2E` close three rows. The sole remaining endpoint is
+`p=17,(x,y)=(0,7)`, where the exact inter-fibre `l1` minimum is 75 but only 57
+transverse edges exist. Intermediate odd-fibre counts, all-finite large
+boundaries, residual (ii), Type I, R1, global QVAR, and L remain OPEN.
+
 **15.670 PROVED/certified every finite `p=11` size-eight boundary is
 impossible, not residual (ii)**: affine similarity reduces every finite
 eight-set to one of `C(119,6)=3,470,108,187` sets containing field points
