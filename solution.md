@@ -8080,3 +8080,67 @@ Evidence: `src/e1_gmin_m4_prop15686.py`,
 `evidence/e1_gmin_m4_prop15686.json`,
 `evidence/NOTE_2026-08-28_p23_slack16_complete17_exclusion.md`, and
 `tests/test_prop15686.py`.
+
+## Proposition 15.687 — every p=23 slack-twenty profile is impossible
+
+The 68 exact profiles of pair slack twenty have undetermined-direction
+histogram
+
+\[
+ \{t_0=2:2,\quad t_0=3:36,\quad t_0=4:30\}.       \tag{15.687.1}
+\]
+
+Repair deletes at most five points. We first extend the conic-core estimate
+from 15.684 through this fifth point. If (h) of the original twenty points
+lie off a conic, each off-conic point has at least eleven full conic
+secants. The retained (20-h) conic points omit (4+h), so at least (7-h)
+secants retain both endpoints. Hence
+
+\[
+ \operatorname{slack}(S)\ge4h(7-h).                \tag{15.687.2}
+\]
+
+For (1\le h\le5), the right side has values (24,40,48,48,40). Thus a
+positive-slack conic-core set cannot have slack twenty.
+
+For the 66 profiles with at least three undetermined directions, adjoining
+three infinity points to the repaired arc gives size at least
+(20-5+3=18). The complete-arc classification forces a conic core, contrary
+to (15.687.2).
+
+It remains to consider the two profiles with exactly two undetermined
+directions. If repair deletes at most four points, adjoining both infinity
+points again gives an arc of size at least 18. In the five-deletion branch,
+write (S=A\mathbin{\dot\cup}D), with (|A|=15), (|D|=5), and adjoin both
+infinity points to obtain a 17-arc (K). It must be complete, since otherwise
+an 18-arc extension gives the conic contradiction.
+
+No secant of (K) through a deleted point can use either infinity point:
+both directions are undetermined for (S). Therefore
+(\mu_A(d)=\mu_K(d)\ge1) for all (d\in D). The line-slack inequality
+then gives
+
+\[
+20\ge4\sum_{d\in D}\mu_A(d)\ge20,               \tag{15.687.3}
+\]
+
+so all five deleted points have multiplicity one outside (K). The exhaustive
+rows (15.685.4) show that a complete 17-arc has at most one such point.
+This contradiction excludes the final two profiles.
+
+All 68 slack-twenty profiles are impossible. The exact (p=23) remainder is
+133 profiles, all of slack at least 24:
+
+\[
+\{24:49,28:35,32:21,36:13,40:7,
+44:4,48:1,52:1,56:1,60:1\}.                        \tag{15.687.4}
+\]
+
+The endpoint, the primes (p=17,19), later all-finite sizes, strict
+infinity-plus-(p), residual (ii), R1, global QVAR, Type I, and the limit
+remain open.
+
+Evidence: `src/e1_gmin_m4_prop15687.py`,
+`evidence/e1_gmin_m4_prop15687.json`,
+`evidence/NOTE_2026-08-28_p23_slack20_complete17_exclusion.md`, and
+`tests/test_prop15687.py`.

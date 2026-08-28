@@ -1234,6 +1234,25 @@ Targeted literature and OEIS searches found no previous statement matching
 this four-point repair obstruction or the exact remaining histogram. No
 novelty or sequence-submission claim is made.
 
+## 7an. All 68 `p=23` slack-20 profiles close (2026-08-28)
+
+Proposition 15.687 extends the conic-core count through five deleted points:
+for `1<=h<=5` off-conic points, the slack floor `4h(7-h)` has minimum
+24. The 68 exact rows have two, three, or four undetermined directions with
+counts `2,36,30`. The 66 rows with at least three directions therefore
+extend their repaired arcs to size 18 and contradict the conic-core floor.
+
+For either two-direction row, the only hard branch uses all five repair
+deletions. Adjoining both infinity points gives a complete 17-arc, and the
+line-slack equality forces all five deleted points to have secant
+multiplicity one. The exhaustive five-class certificate permits at most
+one. Thus the full block closes, leaving 133 `p=23` profiles of slack at
+least 24.
+
+Targeted literature and OEIS searches found no matching statement or
+sequence for the exact obstruction or remainder. No novelty or
+sequence-submission claim is made.
+
 ---
 
 ## 8. What is not in the older literature
