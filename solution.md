@@ -7327,3 +7327,105 @@ Evidence: `src/e1_gmin_m4_prop15675.py`,
 `evidence/e1_gmin_m4_prop15675.json`,
 `evidence/NOTE_2026-08-28_first_all_finite_survivor_half_close.md`, and
 `tests/test_prop15675.py`.
+
+## Proposition 15.676 — infinity-plus-p pair equality is impossible
+
+Let the odd boundary contain infinity and (p) finite points, with
+(p\ge17). Pair-deficit equality makes every affine line contain at most two
+finite boundary points, hence those points form a (p)-arc. Segre's odd-order
+(p)-arc theorem puts the arc on a conic.
+
+The line at infinity cannot be secant, because then only (p-1) conic points
+are affine. If it is tangent, the affine odd-fibre profile is
+
+\[
+ p\text{ copies of }b=1,\qquad 1\text{ copy of }b=p.
+\]
+
+If it is external, deleting one of the (p+1) affine conic points gives
+
+\[
+ m+1\text{ copies of }b=1,\qquad m-1\text{ copies of }b=3,
+ \qquad m=(p+1)/2.
+\]
+
+In phase zero, one (b=3) direction already exceeds a type budget; in phase
+one each type contains at most one, while the profile has (m-1\ge8)
+globally. Thus the external case is impossible. In the tangent case, exact
+same-type residues retain a baseline (b=1) direction in each type. The
+baseline coefficient congruences force both parallel counts to vanish,
+leaving zero or two finite edges and violating boundary support. Therefore
+pair-deficit equality is impossible for both signs and every prime
+(p\ge17). Strict pair deficit remains open.
+
+Evidence: `src/e1_gmin_m4_prop15676.py`,
+`evidence/e1_gmin_m4_prop15676.json`,
+`evidence/NOTE_2026-08-28_infinity_plus_p_arc_close.md`, and
+`tests/test_prop15676.py`.
+
+## Proposition 15.677 — first all-finite survivor closed from p=19
+
+For the two modulo-eight classes left by Proposition 15.675, exact quotient
+arithmetic from (p\ge23) leaves phase-zero residue (u_0=2), and additionally
+(u_0=3) when (p\equiv1\pmod8). In either case
+
+\[
+ \sum_d k_d=m-u_0<m,
+\]
+
+so one phase-zero direction has quotient zero. Its scaled mean is four or
+six, below the phase-zero floor at every nonzero even fibre count, and hence
+its odd-fibre count is zero. Pointwise its nonnegative slack factors as
+(A_d=2B_d), with (B_d) a nonzero nonnegative integer-valued quadratic.
+Proposition 15.642 gives
+
+\[
+ 4p\,\mathbb E[B_d]\ge8,
+\]
+
+contradicting the mean four or six. Combined with 15.675, this excludes the
+first even all-finite boundary size above (3(p-1)/4) for every prime
+(p\ge19). The additional (p=17,u_0=0) row is handled separately by 15.678.
+
+Evidence: `src/e1_gmin_m4_prop15677.py`,
+`evidence/e1_gmin_m4_prop15677.json`,
+`evidence/NOTE_2026-08-28_first_all_finite_survivor_complete_from_p19.md`,
+and `tests/test_prop15677.py`.
+
+## Proposition 15.678 — exceptional p=17 first survivor is impossible
+
+At (p=17,s=14), exact same-type floor/mean enumeration leaves only phase-one
+residue (u_1=8). In phase zero, the six-unit lift floor excludes (u_0=2),
+the coefficient (\ell_1) bound excludes (u_0=3), and every residue at least
+four exceeds the pair budget. For (u_0=0), pair-budget slack is divisible by
+four because a line of occupancy (n) contributes
+
+\[
+ 2\left({n\choose2}-\lfloor n/2\rfloor\right).
+\]
+
+Exactly two profiles remain. Both attain pair equality, so the fourteen
+affine points form an arc, and both have global secant distribution
+
+\[
+ t=7:6,\qquad t=6:8,\qquad t=1:1,\qquad t=0:3.
+\]
+
+Let (D_1,D_2,D_3) be the three undetermined points on the line at infinity.
+Adjoining any two to the 14-arc gives a 16-arc in (PG(2,17)). Sticker's
+exhaustive classification has exactly one PGL class of 16-arcs. Deleting two
+points from a conic gives a representative, so every 16-arc is contained in
+a conic (C). Thus (D_1,D_2\in C), while (D_3\notin C), and (C) has four
+points outside the original 14-arc.
+
+An external point lies on eight conic secants and an internal point on nine.
+Deleting four conic points destroys at most four secants through a fixed
+point. Hence (D_3) lies on at least four secants of the 14-arc, contradicting
+that it is undetermined. This closes the exceptional endpoint and, with
+15.675/15.677, the first survivor for every prime (p\ge17). Later
+all-finite sizes remain open.
+
+Evidence: `src/e1_gmin_m4_prop15678.py`,
+`evidence/e1_gmin_m4_prop15678.json`,
+`evidence/NOTE_2026-08-28_p17_first_all_finite_survivor_exclusion.md`, and
+`tests/test_prop15678.py`.

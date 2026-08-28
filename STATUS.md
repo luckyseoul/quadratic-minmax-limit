@@ -1,14 +1,21 @@
 # Status (2026-08-28)
 
-**15.675 PROVED the first all-finite survivor above `3(p-1)/4` is
-impossible for every prime `p>=19` with `p=3,5 mod 8`, not residual (ii)**:
-the exact same-type congruence omitted by the floor-only range proof makes
-phase one rigid and forces phase zero to residue four. The resulting pair
-gaps for `p=1,3,5,7 mod 8` are respectively
-`-(p-1)/4,(p+1)/2,(p-1)/2,-(p-7)/4`. NUKA independently reproduced the
-symbolic/DP sample gaps. The `1,7 mod 8` rows, later all-finite sizes,
-infinity-present remainder, residual (ii), Type I, R1, global QVAR, and L
-remain OPEN.
+**15.678 PROVED the exceptional `p=17,s=14` first all-finite survivor is
+impossible, completing this boundary size for every prime `p>=17`, not
+residual (ii)**: exact residue arithmetic leaves two pair-equality 14-arc
+profiles with common secant distribution `{7:6,6:8,1:1,0:3}`. Adjoining
+two of their three undetermined infinity points gives a 16-arc. Sticker's
+exhaustive `PG(2,17)` classification has a unique 16-arc class, represented
+by conic-minus-two; the third infinity point is off that conic and must lie
+on at least four surviving secants, a contradiction. The finite
+classification is an explicit external dependency.
+
+**15.675/15.677 PROVED the same first survivor for every prime `p>=19`**:
+15.675 closes `p=3,5 mod 8` by positive pair gaps and 15.677 closes the outer
+classes from `p=23` by the zero-quotient lift contradiction. Proposition
+15.678 supplies the formerly exceptional residue-zero endpoint. Later
+all-finite sizes, infinity-present remainder, residual (ii), Type I, R1,
+global QVAR, and L remain OPEN.
 
 **15.674 PROVED the entire infinity-plus-`(p-2)` boundary shell is
 impossible for both signs and every prime `p>=17`, not residual (ii)**:

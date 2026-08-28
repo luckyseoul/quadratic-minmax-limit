@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-28 (15.675/15.677 close the first all-finite survivor for every prime `p>=19`; no general flag flipped)
+**Date:** 2026-08-28 (15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; no general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -50,6 +50,25 @@ an intermediate count only as the unique high direction of its type, which
 leaves the same four arithmetic rows. The next infinity-present shell has
 `p` finite points.
 
+## 15.678 — exceptional `p=17` first all-finite survivor closed
+
+`src/e1_gmin_m4_prop15678.py` and
+`evidence/NOTE_2026-08-28_p17_first_all_finite_survivor_exclusion.md`.
+At `p=17,s=14`, phase one has only residue eight. The six-unit lift floor
+excludes phase-zero `u_0=2`, the coefficient `l1` ledger excludes `u_0=3`,
+and all residues at least four exceed the pair budget. For `u_0=0`, pair
+slack is divisible by four and leaves exactly two profiles. Both attain pair
+equality and are 14-arcs with secant distribution
+`{7:6,6:8,1:1,0:3}`.
+
+Adjoining any two of the three undetermined infinity points gives a 16-arc.
+Sticker's exhaustive classification has one PGL class of 16-arcs in
+`PG(2,17)`; conic-minus-two is a representative, so every 16-arc lies on a
+conic. The third infinity point is off that conic, but after deleting four
+conic points every off-conic point still lies on at least four secants of the
+14-set. Contradiction. Together with 15.675/15.677, the first all-finite
+survivor is closed for every prime `p>=17`. Later sizes remain open.
+
 ## 15.677 — first all-finite survivor closed from `p=19`
 
 `src/e1_gmin_m4_prop15677.py` and
@@ -62,8 +81,9 @@ count, so it has `b=0` and factors pointwise as `A_d=2B_d` with `B_d`
 nonzero. Proposition 15.642 gives `4p E[B_d]>=8`, a contradiction.
 
 Together with 15.675, this excludes the first even all-finite size above
-`3(p-1)/4` for every prime `p>=19`. The smaller `p=17` endpoint is explicitly
-not claimed: it has an additional `u_0=0` residue row. Later all-finite
+`3(p-1)/4` for every prime `p>=19`. This proposition does not claim the
+smaller `p=17` endpoint because it has an additional `u_0=0` residue row;
+Proposition 15.678 now closes that endpoint separately. Later all-finite
 sizes, strict deficit in infinity-plus-`p`, residual (ii), R1, QVAR, Type I,
 and the limit remain open.
 

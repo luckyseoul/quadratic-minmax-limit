@@ -46,11 +46,10 @@ acceptance gate is the four-unit dictionary returned by
    ranges and exact small-prime profiles, and 15.670 closes finite `p=11`
    size eight. Propositions 15.671--15.674 close the entire
    infinity-plus-`(p-2)` shell for both signs from `p=17`, including every
-   intermediate odd-fibre profile. Propositions 15.675 and 15.677 close the
-   first all-finite survivor above `3(p-1)/4` for every prime `p>=19`. The
-   exceptional `p=17` endpoint, the strict-deficit part of the
-   infinity-plus-`p` shell, larger all-finite profiles, and full graph
-   constraints remain open.
+   intermediate odd-fibre profile. Propositions 15.675, 15.677, and 15.678
+   close the first all-finite survivor above `3(p-1)/4` for every prime
+   `p>=17`. The strict-deficit part of the infinity-plus-`p` shell, larger
+   all-finite profiles, and full graph constraints remain open.
 3. **Type I, multi-level Max−:** OPEN. The general \(3A+B>0\) estimate is
    not proved.
 4. **Lemma D:** TRUE.

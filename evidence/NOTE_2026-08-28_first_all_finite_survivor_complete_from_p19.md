@@ -6,6 +6,9 @@ Date: 2026-08-28. This is Proposition 15.677. Together with Proposition
 smaller endpoint `p=17`, the next even boundary size, general residual (ii),
 R1, global QVAR, Type I, or the limit.
 
+Proposition 15.678 subsequently closes the separate `p=17` endpoint; the
+scope statement above records what is proved by 15.677 itself.
+
 ## 1. The two residue classes left by 15.675
 
 Put

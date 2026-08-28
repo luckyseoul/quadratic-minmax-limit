@@ -1000,6 +1000,31 @@ Sudan [47] supplies the degree-two slice-distance lemma already certified in
 same-type residue and zero-quotient argument. OEIS searches for the lift-cost
 samples returned unrelated entries, and no sequence claim is made.
 
+## 7ae. Exceptional `p=17` first-survivor close (2026-08-28)
+
+Proposition 15.678 resolves the additional `u_0=0` row left explicitly by
+15.677. The exact `p=17,s=14` ledger first excludes `u_0=2` by the six-unit
+lift floor and `u_0=3` by the coefficient `l1` bound. Pair-slack
+divisibility then leaves two `u_0=0` profiles. Both attain pair equality and
+are 14-arcs with six seven-secants, eight six-secants, one one-secant, and
+three undetermined directions.
+
+Adjoining two undetermined infinity points gives a 16-arc. Sticker's full
+classification [48] records exactly one PGL-equivalence class of 16-arcs in
+`PG(2,17)`. Since conic-minus-two is one such arc, every 16-arc is
+conic-contained. The third undetermined infinity point is off that conic;
+an external conic point has eight conic secants and an internal point nine,
+so deleting the four points outside the original 14-set leaves at least four
+secants through it. This contradiction closes the endpoint. Keri [49]
+provides the earlier MDS/superregular classification in the same small-field
+range; Sticker reports agreement.
+
+Together with 15.675/15.677, the first all-finite survivor is now excluded
+for every prime `p>=17`. Later all-finite sizes remain open. An exact OEIS
+search for `17633,21064,6814,629`, the distinctive larger block of the
+`PG(2,17)` arc-class row, returned no result; this is a duplicate/context
+check, not a sequence or priority claim.
+
 ---
 
 ## 8. What is not in the older literature
@@ -1062,5 +1087,7 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 45. V. F. Lev, *Point distribution and perfect directions in* \(F_p^2\), [arXiv:1903.01518](https://arxiv.org/abs/1903.01518) (Rédei-type direction bounds adjacent to, but not implying, the determined-direction/type-budget argument of 15.674).
 46. G. Van de Voorde, *On sets without tangents and exterior sets of a conic*, [arXiv:1201.0484](https://arxiv.org/abs/1201.0484) (adjacent external-conic and determined-direction geometry; not the Paley phase-budget exclusion of 15.676).
 47. P. Amireddy, S. Behera, S. Srinivasan, and M. Sudan, *A Near-Optimal Polynomial Distance Lemma over Boolean Slices*, ICALP 2025, [doi:10.4230/LIPIcs.ICALP.2025.11](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2025.11) (Lemma 2 supplies the exact finite degree-two support floor used in 15.642 and 15.677).
+48. H. Sticker, *Classification of Arcs in Small Desarguesian Projective Planes*, PhD thesis, Ghent University, 2012, [PDF](https://cage.ugent.be/geometry/Theses/57/PhDHeideSticker.pdf) (Section 5.3 gives the exhaustive PGL class counts for arcs not necessarily complete; the unique 16-arc class in `PG(2,17)` is used in 15.678).
+49. G. Keri, *Types of superregular matrices and the number of n-arcs and complete n-arcs in PG(r,q)*, J. Combin. Des. **14** (2006), 363--390, [doi:10.1002/jcd.20091](https://doi.org/10.1002/jcd.20091) (earlier MDS/superregular classification in the same small-field range; contextual independent cross-check for [48]).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).
