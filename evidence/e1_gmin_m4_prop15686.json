@@ -1,0 +1,706 @@
+{
+  "all_remaining_profiles_have_pair_slack_at_least": 20,
+  "boundary_size": 20,
+  "classification_certificate": {
+    "classification_source": {
+      "complete_arc_counts": {
+        "10": 1,
+        "12": 112449,
+        "13": 4341514,
+        "14": 1828196,
+        "15": 58361,
+        "16": 564,
+        "17": 5,
+        "24": 1
+      },
+      "complete_arc_sizes_pg2_23": [
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        24
+      ],
+      "doi": "10.1002/jcd.20211",
+      "external_dependency": true,
+      "finite_extension_consequence": "every arc of size at least 18 extends to the unique-size class 24 and is contained in a nondegenerate conic",
+      "independent_thesis_table": "H. Sticker, Classification of Arcs in Small Desarguesian Projective Planes, Ghent PhD thesis (2012), Section 5.1",
+      "no_complete_arc_sizes": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "proved_conditional_on_external_classification": true,
+      "source": "K. Coolsaet and H. Sticker, A full classification of the complete k-arcs of PG(2,23) and PG(2,25), Journal of Combinatorial Designs 17 (2009), 459-477",
+      "unique_24_arc": "a nondegenerate conic"
+    },
+    "classified_projective_class_count": 5,
+    "inequivalence_invariant": "the full outside-point secant-multiplicity histogram is preserved by projective equivalence",
+    "maximum_one_secant_point_count": 1,
+    "one_secant_point_counts_by_class": [
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "pairwise_distinct_invariants": true,
+    "proved": true,
+    "representatives": [
+      {
+        "coordinates": [
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            17
+          ],
+          [
+            1,
+            5,
+            14
+          ],
+          [
+            1,
+            7,
+            14
+          ],
+          [
+            1,
+            8,
+            3
+          ],
+          [
+            1,
+            8,
+            4
+          ],
+          [
+            1,
+            10,
+            8
+          ],
+          [
+            1,
+            11,
+            8
+          ],
+          [
+            1,
+            13,
+            15
+          ],
+          [
+            1,
+            13,
+            22
+          ],
+          [
+            1,
+            15,
+            15
+          ],
+          [
+            1,
+            17,
+            0
+          ],
+          [
+            1,
+            17,
+            13
+          ],
+          [
+            1,
+            21,
+            18
+          ],
+          [
+            1,
+            21,
+            19
+          ],
+          [
+            1,
+            22,
+            0
+          ],
+          [
+            1,
+            22,
+            17
+          ]
+        ],
+        "is_arc": true,
+        "is_complete": true,
+        "maximum_outside_secant_multiplicity": 8,
+        "minimum_outside_secant_multiplicity": 2,
+        "one_secant_point_count": 0,
+        "outside_point_count": 536,
+        "point_count": 17,
+        "secant_line_count": 136,
+        "secant_multiplicity_histogram": {
+          "2": 2,
+          "3": 6,
+          "4": 68,
+          "5": 172,
+          "6": 190,
+          "7": 86,
+          "8": 12
+        },
+        "secant_outside_incidence_count": 2992
+      },
+      {
+        "coordinates": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            9
+          ],
+          [
+            1,
+            0,
+            5
+          ],
+          [
+            1,
+            1,
+            15
+          ],
+          [
+            1,
+            5,
+            12
+          ],
+          [
+            1,
+            5,
+            20
+          ],
+          [
+            1,
+            8,
+            21
+          ],
+          [
+            1,
+            11,
+            21
+          ],
+          [
+            1,
+            12,
+            5
+          ],
+          [
+            1,
+            14,
+            18
+          ],
+          [
+            1,
+            17,
+            19
+          ],
+          [
+            1,
+            19,
+            2
+          ],
+          [
+            1,
+            19,
+            19
+          ],
+          [
+            1,
+            20,
+            6
+          ],
+          [
+            1,
+            20,
+            16
+          ],
+          [
+            1,
+            22,
+            7
+          ],
+          [
+            1,
+            22,
+            16
+          ]
+        ],
+        "is_arc": true,
+        "is_complete": true,
+        "maximum_outside_secant_multiplicity": 8,
+        "minimum_outside_secant_multiplicity": 2,
+        "one_secant_point_count": 0,
+        "outside_point_count": 536,
+        "point_count": 17,
+        "secant_line_count": 136,
+        "secant_multiplicity_histogram": {
+          "2": 1,
+          "3": 15,
+          "4": 59,
+          "5": 159,
+          "6": 208,
+          "7": 86,
+          "8": 8
+        },
+        "secant_outside_incidence_count": 2992
+      },
+      {
+        "coordinates": [
+          [
+            1,
+            2,
+            9
+          ],
+          [
+            1,
+            4,
+            13
+          ],
+          [
+            1,
+            5,
+            7
+          ],
+          [
+            1,
+            5,
+            21
+          ],
+          [
+            1,
+            6,
+            15
+          ],
+          [
+            1,
+            6,
+            20
+          ],
+          [
+            1,
+            7,
+            7
+          ],
+          [
+            1,
+            10,
+            22
+          ],
+          [
+            1,
+            13,
+            3
+          ],
+          [
+            1,
+            13,
+            4
+          ],
+          [
+            1,
+            16,
+            18
+          ],
+          [
+            1,
+            16,
+            20
+          ],
+          [
+            1,
+            19,
+            17
+          ],
+          [
+            1,
+            20,
+            2
+          ],
+          [
+            1,
+            20,
+            17
+          ],
+          [
+            1,
+            21,
+            18
+          ],
+          [
+            1,
+            22,
+            22
+          ]
+        ],
+        "is_arc": true,
+        "is_complete": true,
+        "maximum_outside_secant_multiplicity": 8,
+        "minimum_outside_secant_multiplicity": 1,
+        "one_secant_point_count": 1,
+        "outside_point_count": 536,
+        "point_count": 17,
+        "secant_line_count": 136,
+        "secant_multiplicity_histogram": {
+          "1": 1,
+          "3": 6,
+          "4": 69,
+          "5": 171,
+          "6": 196,
+          "7": 78,
+          "8": 15
+        },
+        "secant_outside_incidence_count": 2992
+      },
+      {
+        "coordinates": [
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            1,
+            2,
+            7
+          ],
+          [
+            1,
+            4,
+            18
+          ],
+          [
+            1,
+            4,
+            22
+          ],
+          [
+            1,
+            6,
+            10
+          ],
+          [
+            1,
+            10,
+            1
+          ],
+          [
+            1,
+            11,
+            11
+          ],
+          [
+            1,
+            11,
+            12
+          ],
+          [
+            1,
+            12,
+            1
+          ],
+          [
+            1,
+            12,
+            6
+          ],
+          [
+            1,
+            13,
+            12
+          ],
+          [
+            1,
+            13,
+            18
+          ],
+          [
+            1,
+            15,
+            16
+          ],
+          [
+            1,
+            15,
+            22
+          ],
+          [
+            1,
+            20,
+            6
+          ],
+          [
+            1,
+            22,
+            3
+          ],
+          [
+            1,
+            22,
+            17
+          ]
+        ],
+        "is_arc": true,
+        "is_complete": true,
+        "maximum_outside_secant_multiplicity": 8,
+        "minimum_outside_secant_multiplicity": 3,
+        "one_secant_point_count": 0,
+        "outside_point_count": 536,
+        "point_count": 17,
+        "secant_line_count": 136,
+        "secant_multiplicity_histogram": {
+          "3": 14,
+          "4": 58,
+          "5": 170,
+          "6": 206,
+          "7": 72,
+          "8": 16
+        },
+        "secant_outside_incidence_count": 2992
+      },
+      {
+        "coordinates": [
+          [
+            1,
+            1,
+            3
+          ],
+          [
+            1,
+            2,
+            9
+          ],
+          [
+            1,
+            2,
+            11
+          ],
+          [
+            1,
+            3,
+            13
+          ],
+          [
+            1,
+            3,
+            21
+          ],
+          [
+            1,
+            6,
+            16
+          ],
+          [
+            1,
+            7,
+            8
+          ],
+          [
+            1,
+            7,
+            18
+          ],
+          [
+            1,
+            11,
+            8
+          ],
+          [
+            1,
+            11,
+            13
+          ],
+          [
+            1,
+            12,
+            21
+          ],
+          [
+            1,
+            13,
+            5
+          ],
+          [
+            1,
+            13,
+            20
+          ],
+          [
+            1,
+            14,
+            4
+          ],
+          [
+            1,
+            14,
+            20
+          ],
+          [
+            1,
+            16,
+            11
+          ],
+          [
+            1,
+            21,
+            4
+          ]
+        ],
+        "is_arc": true,
+        "is_complete": true,
+        "maximum_outside_secant_multiplicity": 8,
+        "minimum_outside_secant_multiplicity": 2,
+        "one_secant_point_count": 0,
+        "outside_point_count": 536,
+        "point_count": 17,
+        "secant_line_count": 136,
+        "secant_multiplicity_histogram": {
+          "2": 1,
+          "3": 8,
+          "4": 63,
+          "5": 185,
+          "6": 176,
+          "7": 91,
+          "8": 12
+        },
+        "secant_outside_incidence_count": 2992
+      }
+    ],
+    "therefore_exhaustive": true,
+    "verified_representative_count": 5
+  },
+  "excluded_pair_slack": 16,
+  "external_dependencies": [
+    {
+      "authors": "K. Coolsaet and H. Sticker",
+      "doi": "10.1002/jcd.20211",
+      "input_used": "there are exactly five projective classes of complete 17-arcs in PG(2,23)",
+      "journal": "Journal of Combinatorial Designs 17 (2009), 459--477",
+      "title": "A full classification of the complete k-arcs of PG(2,23) and PG(2,25)"
+    }
+  ],
+  "maximum_available_in_any_complete_17_arc_class": 1,
+  "p": 23,
+  "p23_profile_count_after": 201,
+  "p23_profile_count_before": 202,
+  "p23_profiles_excluded_here": 1,
+  "p23_second_all_finite_endpoint_closed": false,
+  "proposition": "15.686",
+  "proved": true,
+  "remaining_pair_slack_histogram": {
+    "20": 68,
+    "24": 49,
+    "28": 35,
+    "32": 21,
+    "36": 13,
+    "40": 7,
+    "44": 4,
+    "48": 1,
+    "52": 1,
+    "56": 1,
+    "60": 1
+  },
+  "remaining_same_boundary_primes": [
+    17,
+    19,
+    23
+  ],
+  "repair_certificate": {
+    "at_most_three_deletions": "adjoin the undetermined infinity point to obtain an arc of size at least 18; conic containment contradicts positive slack 16<24",
+    "completeness_floor": "mu_A(d)=mu_K(d)>=1",
+    "equality_forced_by_slack_sixteen": "four deleted points and slack 16 force mu_K(d)=1 for all four",
+    "four_deletion_branch": {
+      "adjoined_undetermined_infinity_points": 1,
+      "if_resulting_arc_incomplete": "extend to an 18-arc and apply the conic-core contradiction",
+      "repaired_arc_size": 16,
+      "resulting_arc_size": 17,
+      "therefore_resulting_arc_complete": true
+    },
+    "global_incidence_bound": "slack(S)>=4*sum_{d in D} mu_A(d)",
+    "proved": true,
+    "repair_deletion_bound": 4,
+    "required_one_secant_points": 4,
+    "secant_line_slack_rows": [
+      {
+        "bound_holds": true,
+        "deleted_points_on_arc_secant": 1,
+        "final_line_occupancy": 3,
+        "four_per_incidence_floor": 4,
+        "line_pair_slack": 4
+      },
+      {
+        "bound_holds": true,
+        "deleted_points_on_arc_secant": 2,
+        "final_line_occupancy": 4,
+        "four_per_incidence_floor": 8,
+        "line_pair_slack": 8
+      },
+      {
+        "bound_holds": true,
+        "deleted_points_on_arc_secant": 3,
+        "final_line_occupancy": 5,
+        "four_per_incidence_floor": 12,
+        "line_pair_slack": 16
+      },
+      {
+        "bound_holds": true,
+        "deleted_points_on_arc_secant": 4,
+        "final_line_occupancy": 6,
+        "four_per_incidence_floor": 16,
+        "line_pair_slack": 24
+      }
+    ],
+    "undetermined_direction_consequence": "for each deleted d, line Ud contains no point of A; hence every secant of K=A union {U} through d is a secant of A",
+    "undetermined_direction_count": 1,
+    "unique_profile": {
+      "global_floor_secant_distribution": {
+        "0": 1,
+        "1": 4,
+        "10": 7,
+        "9": 12
+      },
+      "pair_slack": 16,
+      "phase_deficits": {
+        "0": 164,
+        "1": 200
+      },
+      "phase_profiles_b": {
+        "0": {
+          "0": 7,
+          "18": 3,
+          "2": 1,
+          "20": 1
+        },
+        "1": {
+          "18": 1,
+          "2": 11
+        }
+      },
+      "undetermined_directions": 1
+    }
+  },
+  "required_one_secant_points": 4,
+  "slack_sixteen_profile_excluded": true,
+  "top_level_gates_changed": false
+}

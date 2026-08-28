@@ -1216,6 +1216,24 @@ found no prior table of these five exact histograms. OEIS searches for the
 high-count blocks `68,172,190,86` and `69,171,196,78` found no relevant
 sequence. No novelty or sequence-submission claim is made.
 
+## 7am. The unique `p=23` slack-16 profile closes (2026-08-28)
+
+Proposition 15.686 reuses the complete-17-arc certificate with the unique
+undetermined direction in the slack-sixteen row. At most three repair
+deletions, followed by adjoining that infinity point, produce an 18-arc and
+the conic-core contradiction. In the four-deletion branch, the repaired
+16-arc plus the infinity point is a 17-arc and must be complete.
+
+The undetermined direction ensures that no secant through a deleted point
+uses the added infinity point. Completeness and the exact line-slack
+inequality force all four deleted points to have secant multiplicity one.
+The five classified classes have at most one such point. This excludes the
+row and leaves exactly 201 `p=23` profiles, all of slack at least 20.
+
+Targeted literature and OEIS searches found no previous statement matching
+this four-point repair obstruction or the exact remaining histogram. No
+novelty or sequence-submission claim is made.
+
 ---
 
 ## 8. What is not in the older literature

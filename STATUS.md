@@ -1,5 +1,16 @@
 # Status (2026-08-28)
 
+**15.686 PROVED the unique pair-slack-16 `p=23,s=20` profile is
+impossible, not residual (ii)**: it has one undetermined direction. Fewer
+than four repair deletions give an 18-arc after adjoining that infinity
+point and hence the conic-core contradiction. In the four-deletion branch,
+the repaired 16-arc plus the infinity point must be a complete 17-arc.
+No deleted point can use the infinity point on a secant, and slack equality
+forces all four to have secant multiplicity one. Proposition 15.685's
+exhaustive five-class certificate shows that the maximum is one. Thus 201
+exact arithmetic profiles remain at `p=23`, all of slack at least 20; the
+endpoint remains OPEN.
+
 **15.685 PROVED the unique pair-slack-12 `p=23,s=20` profile is
 impossible, not residual (ii)**: the repair lemma produces an arc after at
 most three deletions. A repaired arc of size at least 18, or an incomplete

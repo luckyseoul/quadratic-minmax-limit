@@ -8016,3 +8016,67 @@ Evidence: `src/e1_gmin_m4_prop15685.py`,
 `evidence/e1_gmin_m4_prop15685.json`,
 `evidence/NOTE_2026-08-28_p23_slack12_complete17_exclusion.md`, and
 `tests/test_prop15685.py`.
+
+## Proposition 15.686 — the unique p=23 slack-sixteen profile is impossible
+
+The unique slack-sixteen row left by 15.684--15.685 is
+
+\[
+7[b=0]+[b=2]+3[b=18]+[b=20],\quad D_0=164,
+\qquad
+11[b=2]+[b=18],\quad D_1=200.                       \tag{15.686.1}
+\]
+
+Its global floor-secant distribution is
+(\{t_0:1,t_1:4,t_9:12,t_{10}:7\}), so it has one undetermined
+direction. Let (U) be the corresponding infinity point.
+
+Repair deletes at most four points from a hypothetical realization (S).
+If at most three are deleted, the repaired arc together with (U) has size
+at least 18. It is conic-contained, and (15.684.6) contradicts slack
+(16<24).
+
+Thus (S=A\mathbin{\dot\cup}D), where (|A|=16) and (|D|=4). The set
+
+\[
+ K=A\cup\{U\}
+\]
+
+is a 17-arc. If it were incomplete, extending it to an 18-arc would give
+the same conic-core contradiction, so (K) is complete.
+
+For every (d\in D), the line (Ud) contains no second point of (S), since
+(U) is undetermined. Therefore no secant of (K) through (d) uses (U), and
+
+\[
+ \mu_A(d)=\mu_K(d)\ge1.                            \tag{15.686.2}
+\]
+
+Applying the secant-line slack inequality (15.685.2) to the four deleted
+points gives
+
+\[
+16=\operatorname{slack}(S)
+ \ge4\sum_{d\in D}\mu_A(d)\ge16.                \tag{15.686.3}
+\]
+
+Equality forces (\mu_K(d)=1) for all four points. But the exhaustive five
+complete-17-arc rows (15.685.4) have respectively (0,0,1,0,0) outside
+points of multiplicity one. No class supplies four, a contradiction.
+
+The slack-sixteen profile is impossible. Exactly 201 (p=23) arithmetic
+profiles remain, all of slack at least 20:
+
+\[
+\{20:68,24:49,28:35,32:21,36:13,40:7,
+44:4,48:1,52:1,56:1,60:1\}.                        \tag{15.686.4}
+\]
+
+The endpoint, the primes (p=17,19), later all-finite sizes, strict
+infinity-plus-(p), residual (ii), R1, global QVAR, Type I, and the limit
+remain open.
+
+Evidence: `src/e1_gmin_m4_prop15686.py`,
+`evidence/e1_gmin_m4_prop15686.json`,
+`evidence/NOTE_2026-08-28_p23_slack16_complete17_exclusion.md`, and
+`tests/test_prop15686.py`.

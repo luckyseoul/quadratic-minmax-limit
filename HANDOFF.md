@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-28 (15.685 removes the unique `p=23` slack-12 row and leaves 202 exact arithmetic profiles; no general flag flipped)
+**Date:** 2026-08-28 (15.686 removes the unique `p=23` slack-16 row and leaves 201 exact arithmetic profiles, all of slack at least 20; no general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -49,6 +49,26 @@ odd-fibre counts are then closed by Proposition 15.674: exact type sums allow
 an intermediate count only as the unique high direction of its type, which
 leaves the same four arithmetic rows. The next infinity-present shell has
 `p` finite points.
+
+## 15.686 — unique `p=23` slack-16 profile excluded
+
+`src/e1_gmin_m4_prop15686.py` and
+`evidence/NOTE_2026-08-28_p23_slack16_complete17_exclusion.md`. This row
+has one undetermined direction. If repair deletes at most three points,
+adjoining its infinity point gives an arc of size at least 18 and the
+conic-core contradiction. In the only hard branch, four deletions leave a
+16-arc `A`; adjoining the infinity point gives a 17-arc `K`, which must
+be complete or it again extends to an 18-point conic core.
+
+For every deleted point `d`, the undetermined direction ensures that no
+secant of `K` through `d` uses the added infinity point. Completeness and
+the slack inequality therefore force all four deleted points to have
+secant multiplicity one outside `K`. Proposition 15.685's exhaustive five
+complete-17-arc representatives show that every class has at most one.
+
+The unique slack-16 profile is impossible. Exactly 201 arithmetic profiles
+remain at `p=23`, all of slack at least 20. The endpoint and all top-level
+gates remain open.
 
 ## 15.685 — unique `p=23` slack-12 profile excluded
 
