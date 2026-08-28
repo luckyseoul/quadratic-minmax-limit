@@ -8103,10 +8103,19 @@ secants retain both endpoints. Hence
 For (1\le h\le5), the right side has values (24,40,48,48,40). Thus a
 positive-slack conic-core set cannot have slack twenty.
 
-For the 66 profiles with at least three undetermined directions, adjoining
-three infinity points to the repaired arc gives size at least
-(20-5+3=18). The complete-arc classification forces a conic core, contrary
-to (15.687.2).
+For the 66 profiles with at least three undetermined directions, choose
+three infinity points (U_1,U_2,U_3) and use the overlapping pairs
+(\{U_1,U_2\}) and (\{U_1,U_3\}); the three collinear points are never
+adjoined simultaneously. If repair deletes at most four points, each pair
+gives an arc of size at least 18. Their conics share the repaired arc of
+size at least 16, hence coincide, and would contain all three collinear
+infinity points.
+
+If all five deletions are needed, each pair gives a 17-arc. Were either
+complete, the argument below would force all five deleted points to have
+multiplicity one, contrary to (15.685.4). Thus both pair arcs are
+incomplete and extend to 18-arcs. Their conics share the repaired 15-arc,
+again coincide, and contain (U_1,U_2,U_3), a contradiction.
 
 It remains to consider the two profiles with exactly two undetermined
 directions. If repair deletes at most four points, adjoining both infinity

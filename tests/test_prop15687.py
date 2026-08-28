@@ -28,7 +28,16 @@ def test_prop15687_excludes_all_sixty_eight_without_closing_endpoint():
     row = p23_slack_twenty_exclusion()
     assert row["profile_count_excluded"] == 68
     assert row["at_least_three_direction_branch"]["profile_count"] == 66
-    assert row["at_least_three_direction_branch"]["minimum_extended_arc_size"] == 18
+    assert "never adjoined simultaneously" in row[
+        "at_least_three_direction_branch"
+    ]["pairwise_extension"]
+    assert (
+        row["at_least_three_direction_branch"][
+            "required_one_secant_points_if_pair_arc_complete"
+        ]
+        == 5
+    )
+    assert row["at_least_three_direction_branch"]["excluded"] is True
     assert row["two_direction_branch"]["profile_count"] == 2
     assert row["two_direction_branch"]["resulting_arc_size"] == 17
     assert row["two_direction_branch"]["required_one_secant_points"] == 5

@@ -1239,8 +1239,10 @@ novelty or sequence-submission claim is made.
 Proposition 15.687 extends the conic-core count through five deleted points:
 for `1<=h<=5` off-conic points, the slack floor `4h(7-h)` has minimum
 24. The 68 exact rows have two, three, or four undetermined directions with
-counts `2,36,30`. The 66 rows with at least three directions therefore
-extend their repaired arcs to size 18 and contradict the conic-core floor.
+counts `2,36,30`. For the 66 rows with at least three directions, two
+overlapping infinity-point pairs either extend to the same conic, forcing
+three collinear conic points, or produce a complete 17-arc that would need
+five multiplicity-one outside points.
 
 For either two-direction row, the only hard branch uses all five repair
 deletions. Adjoining both infinity points gives a complete 17-arc, and the

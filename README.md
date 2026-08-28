@@ -306,10 +306,12 @@ open at this size. Proposition 15.686 applies the same complete-17-arc
 certificate to the unique slack-16 row: its undetermined direction and four
 repair points would require four multiplicity-one outside points. This
 leaves exactly 201 profiles, all of slack at least 20.
-Proposition 15.687 excludes all 68 slack-20 rows: 66 extend to an
-18-point conic core, while the two remaining rows would require five
-multiplicity-one points outside a complete 17-arc. Exactly 133 profiles
-remain, all of slack at least 24.
+Proposition 15.687 excludes all 68 slack-20 rows. For 66 rows, overlapping
+pairs of at least three undetermined infinity points either produce the
+same impossible conic or a complete 17-arc requiring five
+multiplicity-one points; the two remaining rows use the latter obstruction
+or the five-point conic-core floor. Exactly 133 profiles remain, all of
+slack at least 24.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -548,7 +550,7 @@ square-direction affine-circle words.
 | 15.684 | at `p=23,s=20`, paired-cube value floors and a shell-kernel factorization exclude scaled masses 12 and 16, hence every positive residue; the exact residue-zero census has 1,247 profiles, of which the tangent envelope, complete-arc classification, and a conic-core repair lemma exclude 1,044 | strictly reduces `p=23` to 203 exact arithmetic profiles but does not close it; `p=17,19,23`, later sizes, residual (ii), and all top-level gates remain open |
 | 15.685 | a slack-12 realization repairs to a complete 17-arc plus three outside points, each forced to lie on exactly one arc secant; five explicit invariant-distinct representatives exhaust the classified complete-17-arc classes, whose counts of such points are `0,0,1,0,0` | excludes the unique slack-12 row and reduces `p=23` from 203 to 202 exact arithmetic profiles; the endpoint and all top-level gates remain open |
 | 15.686 | the unique slack-16 row has one undetermined direction; after four-point repair it completes the 16-arc to a complete 17-arc, while slack equality forces all four deleted points to have secant multiplicity one | the classified maximum is one, so the row is impossible; exactly 201 `p=23` profiles remain, all of slack at least 20, and the endpoint stays open |
-| 15.687 | all 68 slack-20 rows have two to four undetermined directions; 66 reach an 18-point conic core after repair, and the two hard rows repair to a complete 17-arc plus five points forced to have secant multiplicity one | excludes the full slack-20 block and reduces `p=23` from 201 to 133 profiles, all of slack at least 24; the endpoint and top-level gates remain open |
+| 15.687 | all 68 slack-20 rows have two to four undetermined directions; overlapping infinity-point pairs in the 66 three-/four-direction rows force either a complete 17-arc with five multiplicity-one points or one conic through three collinear infinity points, while the two-direction rows use the same class certificate/conic-core split | excludes the full slack-20 block and reduces `p=23` from 201 to 133 profiles, all of slack at least 24; the endpoint and top-level gates remain open |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both

@@ -1,9 +1,13 @@
 {
   "all_remaining_profiles_have_pair_slack_at_least": 24,
   "at_least_three_direction_branch": {
-    "excluded_by_conic_core": true,
-    "minimum_extended_arc_size": 18,
-    "profile_count": 66
+    "at_most_four_deletions": "both pair arcs have size at least 18, so their conics coincide on A and contain three collinear infinity points",
+    "excluded": true,
+    "five_deletions": "each pair arc has size 17; completeness would require five multiplicity-one outside points, so both are incomplete and extend to the same impossible conic",
+    "maximum_available_in_any_complete_17_arc_class": 1,
+    "pairwise_extension": "choose U1,U2,U3 and compare A+{U1,U2} with A+{U1,U3}; three infinity points are never adjoined simultaneously",
+    "profile_count": 66,
+    "required_one_secant_points_if_pair_arc_complete": 5
   },
   "boundary_size": 20,
   "classification_certificate": {

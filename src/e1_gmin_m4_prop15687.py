@@ -4,10 +4,14 @@
 Every slack-20 profile has at least two undetermined directions. Repair
 deletes at most five points.
 
-With at least three undetermined directions, adjoining them to the repaired
-arc gives size at least 18, even in the five-deletion case. Conic containment
-then contradicts slack 20: the off-conic count from Proposition 15.684
-extends through five points and still has minimum slack 24.
+With at least three undetermined directions, use two overlapping pairs of
+their infinity points. If repair uses at most four deletions, each pair gives
+an arc of size at least 18 and hence a conic; the two conics share the
+repaired arc and coincide, forcing three collinear infinity points onto one
+conic. If all five deletions are needed, each pair gives a 17-arc. A complete
+one would force five multiplicity-one outside points, impossible by the
+five-class certificate. Therefore both pair arcs extend to conics, and the
+same common-conic contradiction applies.
 
 The only hard arithmetic rows have exactly two undetermined directions.
 Fewer than five deletions again reach an 18-arc. With five deletions, the
@@ -116,10 +120,22 @@ def p23_slack_twenty_exclusion() -> dict[str, object]:
             "profile_count": int(
                 profiles["profiles_with_at_least_three_undetermined_directions"]
             ),
-            "minimum_extended_arc_size": (
-                BOUNDARY_SIZE - REPAIR_DELETION_BOUND + 3
+            "pairwise_extension": (
+                "choose U1,U2,U3 and compare A+{U1,U2} with A+{U1,U3}; "
+                "three infinity points are never adjoined simultaneously"
             ),
-            "excluded_by_conic_core": True,
+            "at_most_four_deletions": (
+                "both pair arcs have size at least 18, so their conics "
+                "coincide on A and contain three collinear infinity points"
+            ),
+            "five_deletions": (
+                "each pair arc has size 17; completeness would require five "
+                "multiplicity-one outside points, so both are incomplete "
+                "and extend to the same impossible conic"
+            ),
+            "required_one_secant_points_if_pair_arc_complete": required,
+            "maximum_available_in_any_complete_17_arc_class": available,
+            "excluded": True,
         },
         "two_direction_branch": {
             "profile_count": int(profiles["hard_two_direction_profiles"]),

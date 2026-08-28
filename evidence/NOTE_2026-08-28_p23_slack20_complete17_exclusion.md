@@ -41,10 +41,20 @@ Thus a positive-slack conic-core set cannot have slack 20.
 
 ## 3. The 66 profiles with at least three undetermined directions
 
-Even if all five permitted repair deletions are needed, the repaired arc
-has size 15. Adjoining three undetermined infinity points gives an arc of
-size 18. The complete-arc classification forces it onto a conic, and the
-preceding count contradicts slack 20.
+Choose three undetermined infinity points `U1,U2,U3`, but adjoin them only
+in the overlapping pairs `{U1,U2}` and `{U1,U3}`.
+
+If repair uses at most four deletions, each pair gives an arc of size at
+least 18 and hence lies on a conic. The two conics share the repaired arc,
+which has at least 16 points, so they coincide. That conic would contain
+the three collinear infinity points, impossible.
+
+If all five deletions are needed, each pair gives a 17-arc. If either pair
+arc were complete, the slack argument in the next section would force all
+five deleted points to have secant multiplicity one, contradicting the
+classified maximum one. Thus both pair arcs are incomplete and extend to
+18-arcs on conics. Those conics again share the repaired 15-arc, coincide,
+and contain all three collinear infinity points.
 
 This excludes all
 
@@ -65,13 +75,13 @@ In the hard branch, repair uses five deletions:
 S=A union D,  |A|=15, |D|=5.
 ```
 
-Adjoin the two undetermined infinity points to obtain a 17-arc `K). If
+Adjoin the two undetermined infinity points to obtain a 17-arc `K`. If
 `K` were incomplete, it would extend to an 18-arc and give the same
 conic-core contradiction. Thus `K` is complete.
 
 No secant of `K` through a deleted point can use either infinity point:
 that would contradict the corresponding direction being undetermined for
-`S`. Hence every deleted point has at least one secant already in `A).
+`S`. Hence every deleted point has at least one secant already in `A`.
 The exact secant-line inequality gives
 
 ```text

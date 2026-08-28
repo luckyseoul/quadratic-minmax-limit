@@ -55,15 +55,17 @@ leaves the same four arithmetic rows. The next infinity-present shell has
 `src/e1_gmin_m4_prop15687.py` and
 `evidence/NOTE_2026-08-28_p23_slack20_complete17_exclusion.md`. The exact
 undetermined-direction split is `2^2,3^36,4^30`. Repair deletes at most
-five points. The off-conic secant count from 15.684 extends through five
-points and still forces slack at least 24.
+five points. For the 66 rows with at least three undetermined directions,
+use two overlapping infinity-point pairs. With at most four deletions their
+conics coincide and contain three collinear infinity points. With five
+deletions, either pair is a 17-arc; completeness would force five deleted
+points of secant multiplicity one, so both pair arcs instead extend to the
+same impossible conic.
 
-The 66 rows with at least three undetermined directions therefore extend
-the repaired arc to size 18 and contradict the conic-core floor. In either
-two-direction row, fewer than five deletions do the same. The hard
-five-deletion branch gives a 15-arc; adjoining both infinity points gives
-a complete 17-arc, while slack equality forces all five deleted points to
-have secant multiplicity one. The five-class certificate has maximum one.
+For either two-direction row, fewer than five deletions give an 18-arc and
+the five-point conic-core floor 24. The hard five-deletion branch gives a
+complete 17-arc, again requiring five multiplicity-one points. The
+five-class certificate has maximum one.
 
 All 68 rows are impossible. Exactly 133 arithmetic profiles remain at
 `p=23`, all of slack at least 24. The endpoint and all top-level gates

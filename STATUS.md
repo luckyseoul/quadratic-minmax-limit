@@ -2,12 +2,12 @@
 
 **15.687 PROVED all 68 pair-slack-20 `p=23,s=20` profiles are
 impossible, not residual (ii)**: their undetermined-direction counts are
-`2^2,3^36,4^30`. The off-conic slack count extends through five repair
-points and still has minimum 24. Thus the 66 rows with at least three
-undetermined directions reach an impossible 18-point conic core. In each
-two-direction row, the hard five-deletion branch gives a complete 17-arc
-plus five points forced by slack equality to have secant multiplicity one;
-the classified maximum is one. Exactly 133 arithmetic profiles remain at
+`2^2,3^36,4^30`. In the 66 rows with at least three directions,
+overlapping infinity-point pairs either extend to the same conic, forcing
+three collinear conic points, or give a complete 17-arc with five deleted
+points of secant multiplicity one. The classified maximum is one. The two
+two-direction rows close by the same complete-arc obstruction or the
+five-point conic-core floor 24. Exactly 133 arithmetic profiles remain at
 `p=23`, all of slack at least 24. The endpoint remains OPEN.
 
 **15.686 PROVED the unique pair-slack-16 `p=23,s=20` profile is
