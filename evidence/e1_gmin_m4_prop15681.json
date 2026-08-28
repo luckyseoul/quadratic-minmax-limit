@@ -1,0 +1,1815 @@
+{
+  "prop": "15.681",
+  "title": "Paired-cube integral lift and the p=29 next endpoint",
+  "proved": true,
+  "theorem": {
+    "all_odd_p_at_least_5": "every nonzero nonnegative integer-valued quadratic B on J(p,(p+1)/2) has 4p E[B] >= (p+1)/2 for p=3 mod 4 and >=(p-1)/2 for p=1 mod 4",
+    "p29_s24_next_all_finite_endpoint": "EXCLUDED",
+    "p31_p41_same_boundary": "ONLY_RESIDUE_ZERO_REMAINS",
+    "p37_same_boundary": "ALREADY_CLOSED_BY_15.680_AND_REPROVED",
+    "remaining_smaller_endpoints": [
+      17,
+      19,
+      23,
+      31,
+      41
+    ],
+    "later_all_finite_sizes": "OPEN",
+    "infinity_present_remainder": "OPEN",
+    "general_residual_ii": false,
+    "R1": false,
+    "global_QVAR": false,
+    "type_I": false,
+    "limit_exists": false
+  },
+  "paired_cube_integral_lift_samples": {
+    "5": {
+      "p": 5,
+      "middle_weight": 3,
+      "rho": "1/6",
+      "degree_two_operator": "T(B)=rho*B+(1-rho)*E[B]",
+      "cube_support_floor": "1/4",
+      "cube_average_floor": "1/4",
+      "point_value": "h=B(X)>=1",
+      "paired_cube_scaled_inequality": "4p*E[B] >= p+1-4h",
+      "stabilizer_scaled_coefficient_of_h": "2",
+      "convex_weight_on_stabilizer_inequality": "2/3",
+      "universal_scaled_mass_floor": "2",
+      "universal_mass_floor": "1/10",
+      "closed_form": "(p+1)/2 for p=3 mod 4; (p-1)/2 for p=1 mod 4",
+      "proved": true
+    },
+    "7": {
+      "p": 7,
+      "middle_weight": 4,
+      "rho": "1/8",
+      "degree_two_operator": "T(B)=rho*B+(1-rho)*E[B]",
+      "cube_support_floor": "1/4",
+      "cube_average_floor": "1/4",
+      "point_value": "h=B(X)>=1",
+      "paired_cube_scaled_inequality": "4p*E[B] >= p+1-4h",
+      "stabilizer_scaled_coefficient_of_h": "4",
+      "convex_weight_on_stabilizer_inequality": "1/2",
+      "universal_scaled_mass_floor": "4",
+      "universal_mass_floor": "1/7",
+      "closed_form": "(p+1)/2 for p=3 mod 4; (p-1)/2 for p=1 mod 4",
+      "proved": true
+    },
+    "11": {
+      "p": 11,
+      "middle_weight": 6,
+      "rho": "1/12",
+      "degree_two_operator": "T(B)=rho*B+(1-rho)*E[B]",
+      "cube_support_floor": "1/4",
+      "cube_average_floor": "1/4",
+      "point_value": "h=B(X)>=1",
+      "paired_cube_scaled_inequality": "4p*E[B] >= p+1-4h",
+      "stabilizer_scaled_coefficient_of_h": "4",
+      "convex_weight_on_stabilizer_inequality": "1/2",
+      "universal_scaled_mass_floor": "6",
+      "universal_mass_floor": "3/22",
+      "closed_form": "(p+1)/2 for p=3 mod 4; (p-1)/2 for p=1 mod 4",
+      "proved": true
+    },
+    "17": {
+      "p": 17,
+      "middle_weight": 9,
+      "rho": "1/18",
+      "degree_two_operator": "T(B)=rho*B+(1-rho)*E[B]",
+      "cube_support_floor": "1/4",
+      "cube_average_floor": "1/4",
+      "point_value": "h=B(X)>=1",
+      "paired_cube_scaled_inequality": "4p*E[B] >= p+1-4h",
+      "stabilizer_scaled_coefficient_of_h": "16/5",
+      "convex_weight_on_stabilizer_inequality": "5/9",
+      "universal_scaled_mass_floor": "8",
+      "universal_mass_floor": "2/17",
+      "closed_form": "(p+1)/2 for p=3 mod 4; (p-1)/2 for p=1 mod 4",
+      "proved": true
+    },
+    "29": {
+      "p": 29,
+      "middle_weight": 15,
+      "rho": "1/30",
+      "degree_two_operator": "T(B)=rho*B+(1-rho)*E[B]",
+      "cube_support_floor": "1/4",
+      "cube_average_floor": "1/4",
+      "point_value": "h=B(X)>=1",
+      "paired_cube_scaled_inequality": "4p*E[B] >= p+1-4h",
+      "stabilizer_scaled_coefficient_of_h": "7/2",
+      "convex_weight_on_stabilizer_inequality": "8/15",
+      "universal_scaled_mass_floor": "14",
+      "universal_mass_floor": "7/58",
+      "closed_form": "(p+1)/2 for p=3 mod 4; (p-1)/2 for p=1 mod 4",
+      "proved": true
+    },
+    "31": {
+      "p": 31,
+      "middle_weight": 16,
+      "rho": "1/32",
+      "degree_two_operator": "T(B)=rho*B+(1-rho)*E[B]",
+      "cube_support_floor": "1/4",
+      "cube_average_floor": "1/4",
+      "point_value": "h=B(X)>=1",
+      "paired_cube_scaled_inequality": "4p*E[B] >= p+1-4h",
+      "stabilizer_scaled_coefficient_of_h": "4",
+      "convex_weight_on_stabilizer_inequality": "1/2",
+      "universal_scaled_mass_floor": "16",
+      "universal_mass_floor": "4/31",
+      "closed_form": "(p+1)/2 for p=3 mod 4; (p-1)/2 for p=1 mod 4",
+      "proved": true
+    },
+    "37": {
+      "p": 37,
+      "middle_weight": 19,
+      "rho": "1/38",
+      "degree_two_operator": "T(B)=rho*B+(1-rho)*E[B]",
+      "cube_support_floor": "1/4",
+      "cube_average_floor": "1/4",
+      "point_value": "h=B(X)>=1",
+      "paired_cube_scaled_inequality": "4p*E[B] >= p+1-4h",
+      "stabilizer_scaled_coefficient_of_h": "18/5",
+      "convex_weight_on_stabilizer_inequality": "10/19",
+      "universal_scaled_mass_floor": "18",
+      "universal_mass_floor": "9/74",
+      "closed_form": "(p+1)/2 for p=3 mod 4; (p-1)/2 for p=1 mod 4",
+      "proved": true
+    },
+    "41": {
+      "p": 41,
+      "middle_weight": 21,
+      "rho": "1/42",
+      "degree_two_operator": "T(B)=rho*B+(1-rho)*E[B]",
+      "cube_support_floor": "1/4",
+      "cube_average_floor": "1/4",
+      "point_value": "h=B(X)>=1",
+      "paired_cube_scaled_inequality": "4p*E[B] >= p+1-4h",
+      "stabilizer_scaled_coefficient_of_h": "40/11",
+      "convex_weight_on_stabilizer_inequality": "11/21",
+      "universal_scaled_mass_floor": "20",
+      "universal_mass_floor": "5/41",
+      "closed_form": "(p+1)/2 for p=3 mod 4; (p-1)/2 for p=1 mod 4",
+      "proved": true
+    },
+    "101": {
+      "p": 101,
+      "middle_weight": 51,
+      "rho": "1/102",
+      "degree_two_operator": "T(B)=rho*B+(1-rho)*E[B]",
+      "cube_support_floor": "1/4",
+      "cube_average_floor": "1/4",
+      "point_value": "h=B(X)>=1",
+      "paired_cube_scaled_inequality": "4p*E[B] >= p+1-4h",
+      "stabilizer_scaled_coefficient_of_h": "50/13",
+      "convex_weight_on_stabilizer_inequality": "26/51",
+      "universal_scaled_mass_floor": "50",
+      "universal_mass_floor": "25/202",
+      "closed_form": "(p+1)/2 for p=3 mod 4; (p-1)/2 for p=1 mod 4",
+      "proved": true
+    }
+  },
+  "endpoint_ledgers": {
+    "29": {
+      "p": 29,
+      "s": 24,
+      "pair_deficit_budget": 552,
+      "phase_zero_rows": [
+        {
+          "u": 0,
+          "quotient_sum": 15,
+          "minimum_deficit": 240,
+          "profile": {
+            "0": 10,
+            "24": 5
+          }
+        },
+        {
+          "u": 2,
+          "quotient_sum": 13,
+          "minimum_deficit": 214,
+          "profile": {
+            "0": 8,
+            "2": 1,
+            "24": 6
+          }
+        },
+        {
+          "u": 3,
+          "quotient_sum": 12,
+          "minimum_deficit": 216,
+          "profile": {
+            "0": 9,
+            "24": 6
+          }
+        },
+        {
+          "u": 4,
+          "quotient_sum": 11,
+          "minimum_deficit": 238,
+          "profile": {
+            "0": 9,
+            "2": 1,
+            "24": 5
+          }
+        },
+        {
+          "u": 5,
+          "quotient_sum": 10,
+          "minimum_deficit": 240,
+          "profile": {
+            "0": 10,
+            "24": 5
+          }
+        },
+        {
+          "u": 6,
+          "quotient_sum": 9,
+          "minimum_deficit": 262,
+          "profile": {
+            "0": 10,
+            "2": 1,
+            "24": 4
+          }
+        },
+        {
+          "u": 7,
+          "quotient_sum": 8,
+          "minimum_deficit": 264,
+          "profile": {
+            "0": 11,
+            "24": 4
+          }
+        },
+        {
+          "u": 8,
+          "quotient_sum": 7,
+          "minimum_deficit": 286,
+          "profile": {
+            "0": 11,
+            "2": 1,
+            "24": 3
+          }
+        },
+        {
+          "u": 9,
+          "quotient_sum": 6,
+          "minimum_deficit": 288,
+          "profile": {
+            "0": 12,
+            "24": 3
+          }
+        },
+        {
+          "u": 10,
+          "quotient_sum": 5,
+          "minimum_deficit": 310,
+          "profile": {
+            "0": 12,
+            "2": 1,
+            "24": 2
+          }
+        },
+        {
+          "u": 11,
+          "quotient_sum": 4,
+          "minimum_deficit": 312,
+          "profile": {
+            "0": 13,
+            "24": 2
+          }
+        },
+        {
+          "u": 12,
+          "quotient_sum": 3,
+          "minimum_deficit": 334,
+          "profile": {
+            "0": 13,
+            "2": 1,
+            "24": 1
+          }
+        },
+        {
+          "u": 13,
+          "quotient_sum": 2,
+          "minimum_deficit": 336,
+          "profile": {
+            "0": 14,
+            "24": 1
+          }
+        },
+        {
+          "u": 14,
+          "quotient_sum": 1,
+          "minimum_deficit": 336,
+          "profile": {
+            "0": 14,
+            "24": 1
+          }
+        }
+      ],
+      "phase_one_rows": [
+        {
+          "u": 14,
+          "quotient_sum": 1,
+          "minimum_deficit": 308,
+          "profile": {
+            "2": 14,
+            "24": 1
+          }
+        }
+      ],
+      "pair_survivors": [
+        {
+          "u0": 0,
+          "u1": 14,
+          "phase_zero_minimum_deficit": 240,
+          "phase_one_minimum_deficit": 308,
+          "pair_slack": 4,
+          "phase_zero_profile": {
+            "0": 10,
+            "24": 5
+          },
+          "phase_one_profile": {
+            "2": 14,
+            "24": 1
+          }
+        },
+        {
+          "u0": 2,
+          "u1": 14,
+          "phase_zero_minimum_deficit": 214,
+          "phase_one_minimum_deficit": 308,
+          "pair_slack": 30,
+          "phase_zero_profile": {
+            "0": 8,
+            "2": 1,
+            "24": 6
+          },
+          "phase_one_profile": {
+            "2": 14,
+            "24": 1
+          }
+        },
+        {
+          "u0": 3,
+          "u1": 14,
+          "phase_zero_minimum_deficit": 216,
+          "phase_one_minimum_deficit": 308,
+          "pair_slack": 28,
+          "phase_zero_profile": {
+            "0": 9,
+            "24": 6
+          },
+          "phase_one_profile": {
+            "2": 14,
+            "24": 1
+          }
+        },
+        {
+          "u0": 4,
+          "u1": 14,
+          "phase_zero_minimum_deficit": 238,
+          "phase_one_minimum_deficit": 308,
+          "pair_slack": 6,
+          "phase_zero_profile": {
+            "0": 9,
+            "2": 1,
+            "24": 5
+          },
+          "phase_one_profile": {
+            "2": 14,
+            "24": 1
+          }
+        },
+        {
+          "u0": 5,
+          "u1": 14,
+          "phase_zero_minimum_deficit": 240,
+          "phase_one_minimum_deficit": 308,
+          "pair_slack": 4,
+          "phase_zero_profile": {
+            "0": 10,
+            "24": 5
+          },
+          "phase_one_profile": {
+            "2": 14,
+            "24": 1
+          }
+        }
+      ],
+      "positive_residue_rows": [
+        {
+          "u0": 2,
+          "quotient_sum": 13,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 4,
+          "least_positive_b_floor": 30,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "14",
+          "excluded": true
+        },
+        {
+          "u0": 3,
+          "quotient_sum": 12,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 6,
+          "least_positive_b_floor": 30,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "14",
+          "excluded": true
+        },
+        {
+          "u0": 4,
+          "quotient_sum": 11,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 8,
+          "least_positive_b_floor": 30,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "14",
+          "excluded": true
+        },
+        {
+          "u0": 5,
+          "quotient_sum": 10,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 10,
+          "least_positive_b_floor": 30,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "14",
+          "excluded": true
+        }
+      ],
+      "positive_residues_all_excluded": true,
+      "residue_zero_rows": [
+        {
+          "u0": 0,
+          "u1": 14,
+          "phase_zero_minimum_deficit": 240,
+          "phase_one_minimum_deficit": 308,
+          "pair_slack": 4,
+          "phase_zero_profile": {
+            "0": 10,
+            "24": 5
+          },
+          "phase_one_profile": {
+            "2": 14,
+            "24": 1
+          }
+        }
+      ],
+      "residue_zero_remains": true,
+      "new_lift": {
+        "p": 29,
+        "middle_weight": 15,
+        "rho": "1/30",
+        "degree_two_operator": "T(B)=rho*B+(1-rho)*E[B]",
+        "cube_support_floor": "1/4",
+        "cube_average_floor": "1/4",
+        "point_value": "h=B(X)>=1",
+        "paired_cube_scaled_inequality": "4p*E[B] >= p+1-4h",
+        "stabilizer_scaled_coefficient_of_h": "7/2",
+        "convex_weight_on_stabilizer_inequality": "8/15",
+        "universal_scaled_mass_floor": "14",
+        "universal_mass_floor": "7/58",
+        "closed_form": "(p+1)/2 for p=3 mod 4; (p-1)/2 for p=1 mod 4",
+        "proved": true
+      }
+    },
+    "31": {
+      "p": 31,
+      "s": 26,
+      "pair_deficit_budget": 650,
+      "phase_zero_rows": [
+        {
+          "u": 0,
+          "quotient_sum": 16,
+          "minimum_deficit": 284,
+          "profile": {
+            "0": 10,
+            "2": 1,
+            "26": 5
+          }
+        },
+        {
+          "u": 2,
+          "quotient_sum": 14,
+          "minimum_deficit": 234,
+          "profile": {
+            "0": 9,
+            "26": 7
+          }
+        },
+        {
+          "u": 3,
+          "quotient_sum": 13,
+          "minimum_deficit": 258,
+          "profile": {
+            "0": 9,
+            "2": 1,
+            "26": 6
+          }
+        },
+        {
+          "u": 4,
+          "quotient_sum": 12,
+          "minimum_deficit": 260,
+          "profile": {
+            "0": 10,
+            "26": 6
+          }
+        },
+        {
+          "u": 5,
+          "quotient_sum": 11,
+          "minimum_deficit": 284,
+          "profile": {
+            "0": 10,
+            "2": 1,
+            "26": 5
+          }
+        },
+        {
+          "u": 6,
+          "quotient_sum": 10,
+          "minimum_deficit": 286,
+          "profile": {
+            "0": 11,
+            "26": 5
+          }
+        },
+        {
+          "u": 7,
+          "quotient_sum": 9,
+          "minimum_deficit": 310,
+          "profile": {
+            "0": 11,
+            "2": 1,
+            "26": 4
+          }
+        },
+        {
+          "u": 8,
+          "quotient_sum": 8,
+          "minimum_deficit": 312,
+          "profile": {
+            "0": 12,
+            "26": 4
+          }
+        },
+        {
+          "u": 9,
+          "quotient_sum": 7,
+          "minimum_deficit": 336,
+          "profile": {
+            "0": 12,
+            "2": 1,
+            "26": 3
+          }
+        },
+        {
+          "u": 10,
+          "quotient_sum": 6,
+          "minimum_deficit": 338,
+          "profile": {
+            "0": 13,
+            "26": 3
+          }
+        },
+        {
+          "u": 11,
+          "quotient_sum": 5,
+          "minimum_deficit": 362,
+          "profile": {
+            "0": 13,
+            "2": 1,
+            "26": 2
+          }
+        },
+        {
+          "u": 12,
+          "quotient_sum": 4,
+          "minimum_deficit": 364,
+          "profile": {
+            "0": 14,
+            "26": 2
+          }
+        },
+        {
+          "u": 13,
+          "quotient_sum": 3,
+          "minimum_deficit": 388,
+          "profile": {
+            "0": 14,
+            "2": 1,
+            "26": 1
+          }
+        },
+        {
+          "u": 14,
+          "quotient_sum": 2,
+          "minimum_deficit": 390,
+          "profile": {
+            "0": 15,
+            "26": 1
+          }
+        },
+        {
+          "u": 15,
+          "quotient_sum": 1,
+          "minimum_deficit": 390,
+          "profile": {
+            "0": 15,
+            "26": 1
+          }
+        }
+      ],
+      "phase_one_rows": [
+        {
+          "u": 15,
+          "quotient_sum": 1,
+          "minimum_deficit": 360,
+          "profile": {
+            "2": 15,
+            "26": 1
+          }
+        }
+      ],
+      "pair_survivors": [
+        {
+          "u0": 0,
+          "u1": 15,
+          "phase_zero_minimum_deficit": 284,
+          "phase_one_minimum_deficit": 360,
+          "pair_slack": 6,
+          "phase_zero_profile": {
+            "0": 10,
+            "2": 1,
+            "26": 5
+          },
+          "phase_one_profile": {
+            "2": 15,
+            "26": 1
+          }
+        },
+        {
+          "u0": 2,
+          "u1": 15,
+          "phase_zero_minimum_deficit": 234,
+          "phase_one_minimum_deficit": 360,
+          "pair_slack": 56,
+          "phase_zero_profile": {
+            "0": 9,
+            "26": 7
+          },
+          "phase_one_profile": {
+            "2": 15,
+            "26": 1
+          }
+        },
+        {
+          "u0": 3,
+          "u1": 15,
+          "phase_zero_minimum_deficit": 258,
+          "phase_one_minimum_deficit": 360,
+          "pair_slack": 32,
+          "phase_zero_profile": {
+            "0": 9,
+            "2": 1,
+            "26": 6
+          },
+          "phase_one_profile": {
+            "2": 15,
+            "26": 1
+          }
+        },
+        {
+          "u0": 4,
+          "u1": 15,
+          "phase_zero_minimum_deficit": 260,
+          "phase_one_minimum_deficit": 360,
+          "pair_slack": 30,
+          "phase_zero_profile": {
+            "0": 10,
+            "26": 6
+          },
+          "phase_one_profile": {
+            "2": 15,
+            "26": 1
+          }
+        },
+        {
+          "u0": 5,
+          "u1": 15,
+          "phase_zero_minimum_deficit": 284,
+          "phase_one_minimum_deficit": 360,
+          "pair_slack": 6,
+          "phase_zero_profile": {
+            "0": 10,
+            "2": 1,
+            "26": 5
+          },
+          "phase_one_profile": {
+            "2": 15,
+            "26": 1
+          }
+        },
+        {
+          "u0": 6,
+          "u1": 15,
+          "phase_zero_minimum_deficit": 286,
+          "phase_one_minimum_deficit": 360,
+          "pair_slack": 4,
+          "phase_zero_profile": {
+            "0": 11,
+            "26": 5
+          },
+          "phase_one_profile": {
+            "2": 15,
+            "26": 1
+          }
+        }
+      ],
+      "positive_residue_rows": [
+        {
+          "u0": 2,
+          "quotient_sum": 14,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 4,
+          "least_positive_b_floor": 32,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "16",
+          "excluded": true
+        },
+        {
+          "u0": 3,
+          "quotient_sum": 13,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 6,
+          "least_positive_b_floor": 32,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "16",
+          "excluded": true
+        },
+        {
+          "u0": 4,
+          "quotient_sum": 12,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 8,
+          "least_positive_b_floor": 32,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "16",
+          "excluded": true
+        },
+        {
+          "u0": 5,
+          "quotient_sum": 11,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 10,
+          "least_positive_b_floor": 32,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "16",
+          "excluded": true
+        },
+        {
+          "u0": 6,
+          "quotient_sum": 10,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 12,
+          "least_positive_b_floor": 32,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "16",
+          "excluded": true
+        }
+      ],
+      "positive_residues_all_excluded": true,
+      "residue_zero_rows": [
+        {
+          "u0": 0,
+          "u1": 15,
+          "phase_zero_minimum_deficit": 284,
+          "phase_one_minimum_deficit": 360,
+          "pair_slack": 6,
+          "phase_zero_profile": {
+            "0": 10,
+            "2": 1,
+            "26": 5
+          },
+          "phase_one_profile": {
+            "2": 15,
+            "26": 1
+          }
+        }
+      ],
+      "residue_zero_remains": true,
+      "new_lift": {
+        "p": 31,
+        "middle_weight": 16,
+        "rho": "1/32",
+        "degree_two_operator": "T(B)=rho*B+(1-rho)*E[B]",
+        "cube_support_floor": "1/4",
+        "cube_average_floor": "1/4",
+        "point_value": "h=B(X)>=1",
+        "paired_cube_scaled_inequality": "4p*E[B] >= p+1-4h",
+        "stabilizer_scaled_coefficient_of_h": "4",
+        "convex_weight_on_stabilizer_inequality": "1/2",
+        "universal_scaled_mass_floor": "16",
+        "universal_mass_floor": "4/31",
+        "closed_form": "(p+1)/2 for p=3 mod 4; (p-1)/2 for p=1 mod 4",
+        "proved": true
+      }
+    },
+    "37": {
+      "p": 37,
+      "s": 30,
+      "pair_deficit_budget": 870,
+      "phase_zero_rows": [
+        {
+          "u": 0,
+          "quotient_sum": 19,
+          "minimum_deficit": 388,
+          "profile": {
+            "0": 12,
+            "2": 1,
+            "30": 6
+          }
+        },
+        {
+          "u": 2,
+          "quotient_sum": 17,
+          "minimum_deficit": 328,
+          "profile": {
+            "0": 10,
+            "2": 1,
+            "30": 8
+          }
+        },
+        {
+          "u": 3,
+          "quotient_sum": 16,
+          "minimum_deficit": 330,
+          "profile": {
+            "0": 11,
+            "30": 8
+          }
+        },
+        {
+          "u": 4,
+          "quotient_sum": 15,
+          "minimum_deficit": 358,
+          "profile": {
+            "0": 11,
+            "2": 1,
+            "30": 7
+          }
+        },
+        {
+          "u": 5,
+          "quotient_sum": 14,
+          "minimum_deficit": 360,
+          "profile": {
+            "0": 12,
+            "30": 7
+          }
+        },
+        {
+          "u": 6,
+          "quotient_sum": 13,
+          "minimum_deficit": 388,
+          "profile": {
+            "0": 12,
+            "2": 1,
+            "30": 6
+          }
+        },
+        {
+          "u": 7,
+          "quotient_sum": 12,
+          "minimum_deficit": 390,
+          "profile": {
+            "0": 13,
+            "30": 6
+          }
+        },
+        {
+          "u": 8,
+          "quotient_sum": 11,
+          "minimum_deficit": 418,
+          "profile": {
+            "0": 13,
+            "2": 1,
+            "30": 5
+          }
+        },
+        {
+          "u": 9,
+          "quotient_sum": 10,
+          "minimum_deficit": 420,
+          "profile": {
+            "0": 14,
+            "30": 5
+          }
+        },
+        {
+          "u": 10,
+          "quotient_sum": 9,
+          "minimum_deficit": 448,
+          "profile": {
+            "0": 14,
+            "2": 1,
+            "30": 4
+          }
+        },
+        {
+          "u": 11,
+          "quotient_sum": 8,
+          "minimum_deficit": 450,
+          "profile": {
+            "0": 15,
+            "30": 4
+          }
+        },
+        {
+          "u": 12,
+          "quotient_sum": 7,
+          "minimum_deficit": 478,
+          "profile": {
+            "0": 15,
+            "2": 1,
+            "30": 3
+          }
+        },
+        {
+          "u": 13,
+          "quotient_sum": 6,
+          "minimum_deficit": 480,
+          "profile": {
+            "0": 16,
+            "30": 3
+          }
+        },
+        {
+          "u": 14,
+          "quotient_sum": 5,
+          "minimum_deficit": 508,
+          "profile": {
+            "0": 16,
+            "2": 1,
+            "30": 2
+          }
+        },
+        {
+          "u": 15,
+          "quotient_sum": 4,
+          "minimum_deficit": 510,
+          "profile": {
+            "0": 17,
+            "30": 2
+          }
+        },
+        {
+          "u": 16,
+          "quotient_sum": 3,
+          "minimum_deficit": 538,
+          "profile": {
+            "0": 17,
+            "2": 1,
+            "30": 1
+          }
+        },
+        {
+          "u": 17,
+          "quotient_sum": 2,
+          "minimum_deficit": 540,
+          "profile": {
+            "0": 18,
+            "30": 1
+          }
+        },
+        {
+          "u": 18,
+          "quotient_sum": 1,
+          "minimum_deficit": 540,
+          "profile": {
+            "0": 18,
+            "30": 1
+          }
+        }
+      ],
+      "phase_one_rows": [
+        {
+          "u": 18,
+          "quotient_sum": 1,
+          "minimum_deficit": 504,
+          "profile": {
+            "2": 18,
+            "30": 1
+          }
+        }
+      ],
+      "pair_survivors": [
+        {
+          "u0": 2,
+          "u1": 18,
+          "phase_zero_minimum_deficit": 328,
+          "phase_one_minimum_deficit": 504,
+          "pair_slack": 38,
+          "phase_zero_profile": {
+            "0": 10,
+            "2": 1,
+            "30": 8
+          },
+          "phase_one_profile": {
+            "2": 18,
+            "30": 1
+          }
+        },
+        {
+          "u0": 3,
+          "u1": 18,
+          "phase_zero_minimum_deficit": 330,
+          "phase_one_minimum_deficit": 504,
+          "pair_slack": 36,
+          "phase_zero_profile": {
+            "0": 11,
+            "30": 8
+          },
+          "phase_one_profile": {
+            "2": 18,
+            "30": 1
+          }
+        },
+        {
+          "u0": 4,
+          "u1": 18,
+          "phase_zero_minimum_deficit": 358,
+          "phase_one_minimum_deficit": 504,
+          "pair_slack": 8,
+          "phase_zero_profile": {
+            "0": 11,
+            "2": 1,
+            "30": 7
+          },
+          "phase_one_profile": {
+            "2": 18,
+            "30": 1
+          }
+        },
+        {
+          "u0": 5,
+          "u1": 18,
+          "phase_zero_minimum_deficit": 360,
+          "phase_one_minimum_deficit": 504,
+          "pair_slack": 6,
+          "phase_zero_profile": {
+            "0": 12,
+            "30": 7
+          },
+          "phase_one_profile": {
+            "2": 18,
+            "30": 1
+          }
+        }
+      ],
+      "positive_residue_rows": [
+        {
+          "u0": 2,
+          "quotient_sum": 17,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 4,
+          "least_positive_b_floor": 38,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "18",
+          "excluded": true
+        },
+        {
+          "u0": 3,
+          "quotient_sum": 16,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 6,
+          "least_positive_b_floor": 38,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "18",
+          "excluded": true
+        },
+        {
+          "u0": 4,
+          "quotient_sum": 15,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 8,
+          "least_positive_b_floor": 38,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "18",
+          "excluded": true
+        },
+        {
+          "u0": 5,
+          "quotient_sum": 14,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 10,
+          "least_positive_b_floor": 38,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "18",
+          "excluded": true
+        }
+      ],
+      "positive_residues_all_excluded": true,
+      "residue_zero_rows": [],
+      "residue_zero_remains": false,
+      "new_lift": {
+        "p": 37,
+        "middle_weight": 19,
+        "rho": "1/38",
+        "degree_two_operator": "T(B)=rho*B+(1-rho)*E[B]",
+        "cube_support_floor": "1/4",
+        "cube_average_floor": "1/4",
+        "point_value": "h=B(X)>=1",
+        "paired_cube_scaled_inequality": "4p*E[B] >= p+1-4h",
+        "stabilizer_scaled_coefficient_of_h": "18/5",
+        "convex_weight_on_stabilizer_inequality": "10/19",
+        "universal_scaled_mass_floor": "18",
+        "universal_mass_floor": "9/74",
+        "closed_form": "(p+1)/2 for p=3 mod 4; (p-1)/2 for p=1 mod 4",
+        "proved": true
+      }
+    },
+    "41": {
+      "p": 41,
+      "s": 34,
+      "pair_deficit_budget": 1122,
+      "phase_zero_rows": [
+        {
+          "u": 0,
+          "quotient_sum": 21,
+          "minimum_deficit": 476,
+          "profile": {
+            "0": 14,
+            "34": 7
+          }
+        },
+        {
+          "u": 2,
+          "quotient_sum": 19,
+          "minimum_deficit": 406,
+          "profile": {
+            "0": 11,
+            "2": 1,
+            "34": 9
+          }
+        },
+        {
+          "u": 3,
+          "quotient_sum": 18,
+          "minimum_deficit": 408,
+          "profile": {
+            "0": 12,
+            "34": 9
+          }
+        },
+        {
+          "u": 4,
+          "quotient_sum": 17,
+          "minimum_deficit": 440,
+          "profile": {
+            "0": 12,
+            "2": 1,
+            "34": 8
+          }
+        },
+        {
+          "u": 5,
+          "quotient_sum": 16,
+          "minimum_deficit": 442,
+          "profile": {
+            "0": 13,
+            "34": 8
+          }
+        },
+        {
+          "u": 6,
+          "quotient_sum": 15,
+          "minimum_deficit": 474,
+          "profile": {
+            "0": 13,
+            "2": 1,
+            "34": 7
+          }
+        },
+        {
+          "u": 7,
+          "quotient_sum": 14,
+          "minimum_deficit": 476,
+          "profile": {
+            "0": 14,
+            "34": 7
+          }
+        },
+        {
+          "u": 8,
+          "quotient_sum": 13,
+          "minimum_deficit": 508,
+          "profile": {
+            "0": 14,
+            "2": 1,
+            "34": 6
+          }
+        },
+        {
+          "u": 9,
+          "quotient_sum": 12,
+          "minimum_deficit": 510,
+          "profile": {
+            "0": 15,
+            "34": 6
+          }
+        },
+        {
+          "u": 10,
+          "quotient_sum": 11,
+          "minimum_deficit": 542,
+          "profile": {
+            "0": 15,
+            "2": 1,
+            "34": 5
+          }
+        },
+        {
+          "u": 11,
+          "quotient_sum": 10,
+          "minimum_deficit": 544,
+          "profile": {
+            "0": 16,
+            "34": 5
+          }
+        },
+        {
+          "u": 12,
+          "quotient_sum": 9,
+          "minimum_deficit": 576,
+          "profile": {
+            "0": 16,
+            "2": 1,
+            "34": 4
+          }
+        },
+        {
+          "u": 13,
+          "quotient_sum": 8,
+          "minimum_deficit": 578,
+          "profile": {
+            "0": 17,
+            "34": 4
+          }
+        },
+        {
+          "u": 14,
+          "quotient_sum": 7,
+          "minimum_deficit": 610,
+          "profile": {
+            "0": 17,
+            "2": 1,
+            "34": 3
+          }
+        },
+        {
+          "u": 15,
+          "quotient_sum": 6,
+          "minimum_deficit": 612,
+          "profile": {
+            "0": 18,
+            "34": 3
+          }
+        },
+        {
+          "u": 16,
+          "quotient_sum": 5,
+          "minimum_deficit": 644,
+          "profile": {
+            "0": 18,
+            "2": 1,
+            "34": 2
+          }
+        },
+        {
+          "u": 17,
+          "quotient_sum": 4,
+          "minimum_deficit": 646,
+          "profile": {
+            "0": 19,
+            "34": 2
+          }
+        },
+        {
+          "u": 18,
+          "quotient_sum": 3,
+          "minimum_deficit": 678,
+          "profile": {
+            "0": 19,
+            "2": 1,
+            "34": 1
+          }
+        },
+        {
+          "u": 19,
+          "quotient_sum": 2,
+          "minimum_deficit": 680,
+          "profile": {
+            "0": 20,
+            "34": 1
+          }
+        },
+        {
+          "u": 20,
+          "quotient_sum": 1,
+          "minimum_deficit": 680,
+          "profile": {
+            "0": 20,
+            "34": 1
+          }
+        }
+      ],
+      "phase_one_rows": [
+        {
+          "u": 20,
+          "quotient_sum": 1,
+          "minimum_deficit": 640,
+          "profile": {
+            "2": 20,
+            "34": 1
+          }
+        }
+      ],
+      "pair_survivors": [
+        {
+          "u0": 0,
+          "u1": 20,
+          "phase_zero_minimum_deficit": 476,
+          "phase_one_minimum_deficit": 640,
+          "pair_slack": 6,
+          "phase_zero_profile": {
+            "0": 14,
+            "34": 7
+          },
+          "phase_one_profile": {
+            "2": 20,
+            "34": 1
+          }
+        },
+        {
+          "u0": 2,
+          "u1": 20,
+          "phase_zero_minimum_deficit": 406,
+          "phase_one_minimum_deficit": 640,
+          "pair_slack": 76,
+          "phase_zero_profile": {
+            "0": 11,
+            "2": 1,
+            "34": 9
+          },
+          "phase_one_profile": {
+            "2": 20,
+            "34": 1
+          }
+        },
+        {
+          "u0": 3,
+          "u1": 20,
+          "phase_zero_minimum_deficit": 408,
+          "phase_one_minimum_deficit": 640,
+          "pair_slack": 74,
+          "phase_zero_profile": {
+            "0": 12,
+            "34": 9
+          },
+          "phase_one_profile": {
+            "2": 20,
+            "34": 1
+          }
+        },
+        {
+          "u0": 4,
+          "u1": 20,
+          "phase_zero_minimum_deficit": 440,
+          "phase_one_minimum_deficit": 640,
+          "pair_slack": 42,
+          "phase_zero_profile": {
+            "0": 12,
+            "2": 1,
+            "34": 8
+          },
+          "phase_one_profile": {
+            "2": 20,
+            "34": 1
+          }
+        },
+        {
+          "u0": 5,
+          "u1": 20,
+          "phase_zero_minimum_deficit": 442,
+          "phase_one_minimum_deficit": 640,
+          "pair_slack": 40,
+          "phase_zero_profile": {
+            "0": 13,
+            "34": 8
+          },
+          "phase_one_profile": {
+            "2": 20,
+            "34": 1
+          }
+        },
+        {
+          "u0": 6,
+          "u1": 20,
+          "phase_zero_minimum_deficit": 474,
+          "phase_one_minimum_deficit": 640,
+          "pair_slack": 8,
+          "phase_zero_profile": {
+            "0": 13,
+            "2": 1,
+            "34": 7
+          },
+          "phase_one_profile": {
+            "2": 20,
+            "34": 1
+          }
+        },
+        {
+          "u0": 7,
+          "u1": 20,
+          "phase_zero_minimum_deficit": 476,
+          "phase_one_minimum_deficit": 640,
+          "pair_slack": 6,
+          "phase_zero_profile": {
+            "0": 14,
+            "34": 7
+          },
+          "phase_one_profile": {
+            "2": 20,
+            "34": 1
+          }
+        }
+      ],
+      "positive_residue_rows": [
+        {
+          "u0": 2,
+          "quotient_sum": 19,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 4,
+          "least_positive_b_floor": 42,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "20",
+          "excluded": true
+        },
+        {
+          "u0": 3,
+          "quotient_sum": 18,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 6,
+          "least_positive_b_floor": 42,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "20",
+          "excluded": true
+        },
+        {
+          "u0": 4,
+          "quotient_sum": 17,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 8,
+          "least_positive_b_floor": 42,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "20",
+          "excluded": true
+        },
+        {
+          "u0": 5,
+          "quotient_sum": 16,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 10,
+          "least_positive_b_floor": 42,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "20",
+          "excluded": true
+        },
+        {
+          "u0": 6,
+          "quotient_sum": 15,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 12,
+          "least_positive_b_floor": 42,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "20",
+          "excluded": true
+        },
+        {
+          "u0": 7,
+          "quotient_sum": 14,
+          "forces_quotient_zero": true,
+          "zero_quotient_scaled_mean": 14,
+          "least_positive_b_floor": 42,
+          "therefore_b_zero": true,
+          "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+          "new_scaled_lift_floor": "20",
+          "excluded": true
+        }
+      ],
+      "positive_residues_all_excluded": true,
+      "residue_zero_rows": [
+        {
+          "u0": 0,
+          "u1": 20,
+          "phase_zero_minimum_deficit": 476,
+          "phase_one_minimum_deficit": 640,
+          "pair_slack": 6,
+          "phase_zero_profile": {
+            "0": 14,
+            "34": 7
+          },
+          "phase_one_profile": {
+            "2": 20,
+            "34": 1
+          }
+        }
+      ],
+      "residue_zero_remains": true,
+      "new_lift": {
+        "p": 41,
+        "middle_weight": 21,
+        "rho": "1/42",
+        "degree_two_operator": "T(B)=rho*B+(1-rho)*E[B]",
+        "cube_support_floor": "1/4",
+        "cube_average_floor": "1/4",
+        "point_value": "h=B(X)>=1",
+        "paired_cube_scaled_inequality": "4p*E[B] >= p+1-4h",
+        "stabilizer_scaled_coefficient_of_h": "40/11",
+        "convex_weight_on_stabilizer_inequality": "11/21",
+        "universal_scaled_mass_floor": "20",
+        "universal_mass_floor": "5/41",
+        "closed_form": "(p+1)/2 for p=3 mod 4; (p-1)/2 for p=1 mod 4",
+        "proved": true
+      }
+    }
+  },
+  "p29_profiles": {
+    "p": 29,
+    "s": 24,
+    "pair_deficit_budget": 552,
+    "pair_slack_divisibility": {
+      "line_contribution": "2*(C(n,2)-floor(n/2))",
+      "n=2r": "4*r*(r-1)",
+      "n=2r+1": "4*r*r",
+      "global_slack_modulus": 4,
+      "slack_zero_iff": "every affine line has occupancy at most two",
+      "slack_four_iff": "exactly one affine line has occupancy three and all others at most two",
+      "proved": true
+    },
+    "profiles": [
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 10,
+            "24": 5
+          },
+          "1": {
+            "2": 14,
+            "24": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 240,
+          "1": 308
+        },
+        "total_deficit": 548,
+        "pair_slack": 4,
+        "arc": false,
+        "global_secant_distribution": {
+          "0": 6,
+          "11": 14,
+          "12": 10
+        },
+        "undetermined_directions": 6
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 10,
+            "24": 5
+          },
+          "1": {
+            "2": 14,
+            "20": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 240,
+          "1": 312
+        },
+        "total_deficit": 552,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 5,
+          "2": 1,
+          "11": 14,
+          "12": 10
+        },
+        "undetermined_directions": 5
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 10,
+            "22": 1,
+            "24": 4
+          },
+          "1": {
+            "2": 14,
+            "22": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 242,
+          "1": 310
+        },
+        "total_deficit": 552,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 4,
+          "1": 2,
+          "11": 14,
+          "12": 10
+        },
+        "undetermined_directions": 4
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 10,
+            "20": 1,
+            "24": 4
+          },
+          "1": {
+            "2": 14,
+            "24": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 244,
+          "1": 308
+        },
+        "total_deficit": 552,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 5,
+          "2": 1,
+          "11": 14,
+          "12": 10
+        },
+        "undetermined_directions": 5
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 10,
+            "22": 2,
+            "24": 3
+          },
+          "1": {
+            "2": 14,
+            "24": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 244,
+          "1": 308
+        },
+        "total_deficit": 552,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 4,
+          "1": 2,
+          "11": 14,
+          "12": 10
+        },
+        "undetermined_directions": 4
+      }
+    ],
+    "distinct_global_shapes": [
+      {
+        "0": 4,
+        "1": 2,
+        "11": 14,
+        "12": 10
+      },
+      {
+        "0": 5,
+        "11": 14,
+        "12": 10,
+        "2": 1
+      },
+      {
+        "0": 6,
+        "11": 14,
+        "12": 10
+      }
+    ],
+    "near_arc_profile_count": 1,
+    "near_arc_geometry": "one 3-secant, all other lines of occupancy at most two, and six undetermined directions",
+    "arc_profile_count": 4,
+    "arc_minimum_undetermined_directions": 4,
+    "proved": true
+  },
+  "p29_geometric_exclusion": {
+    "arc_case": {
+      "starting_size": 24,
+      "minimum_undetermined_infinity_points": 4,
+      "adjoin_two_size": 26,
+      "classification_consequence": "contained in a conic"
+    },
+    "near_arc_case": {
+      "starting_size": 24,
+      "unique_3_secant": true,
+      "delete_one_point_from_triple_size": 23,
+      "result_is_arc": true,
+      "undetermined_infinity_points_preserved": 6,
+      "adjoin_two_size": 25,
+      "classification_consequence": "contained in a conic"
+    },
+    "common_contradiction": "choose three undetermined infinity points; the conics through the two corresponding extensions share at least 23 arc points and hence coincide, forcing one nondegenerate conic to contain three collinear points",
+    "classification": {
+      "external_dependency": true,
+      "source": "K. Coolsaet and H. Sticker, The complete k-arcs of PG(2,27) and PG(2,29), J. Combin. Des. 19 (2011), 111-130",
+      "doi": "10.1002/jcd.20261",
+      "open_pdf": "https://backoffice.biblio.ugent.be/download/1247338/1247417",
+      "location": "Table 5 (arcs not necessarily complete)",
+      "PGL_equals_PGammaL": "true because 29 is prime",
+      "classified_projective_arc_classes": {
+        "25": 10,
+        "26": 5
+      },
+      "conic_complement_PGL2_orbits": {
+        "25": {
+          "p": 29,
+          "projective_line_size": 30,
+          "subset_size": 5,
+          "PGL2_order": 24360,
+          "subset_count": 142506,
+          "orbit_count": 10,
+          "orbit_sizes": [
+            2436,
+            6090,
+            12180,
+            12180,
+            12180,
+            12180,
+            12180,
+            24360,
+            24360,
+            24360
+          ],
+          "proved": true
+        },
+        "26": {
+          "p": 29,
+          "projective_line_size": 30,
+          "subset_size": 4,
+          "PGL2_order": 24360,
+          "subset_count": 27405,
+          "orbit_count": 5,
+          "orbit_sizes": [
+            3045,
+            6090,
+            6090,
+            6090,
+            6090
+          ],
+          "proved": true
+        }
+      },
+      "uniqueness_of_containing_conic": "five arc points determine a unique nondegenerate conic; hence PGL3 classes of conic subsets equal PGL2 complement orbits",
+      "all_25_and_26_arcs_conic_contained": true,
+      "proved_conditional_on_external_classification": true
+    },
+    "excluded": true
+  },
+  "L_status": "OPEN"
+}

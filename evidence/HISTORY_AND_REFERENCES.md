@@ -1075,6 +1075,41 @@ paired-cube transition bound or this mass-ten use. OEIS API searches for
 values `441595` and `1194096750` all returned `null`; no sequence or
 priority claim is made.
 
+## 7ah. Integral paired cubes and the `p=29` endpoint (2026-08-28)
+
+Proposition 15.681 observes that 15.680's paired-cube argument applies
+before Booleanization. If a nonzero nonnegative integral quadratic has
+value `h` at one middle-slice point and scaled mass `c=4p E[B]`, cube
+distance gives `c>=p+1-4h`. Combining this with 15.642's stabilizer
+inequality eliminates `h` and gives
+
+```text
+c >= (p+1)/2 for p=3 mod 4,
+c >= (p-1)/2 for p=1 mod 4.
+```
+
+The floors `14,16,18,20` remove every positive-residue row at the
+`p=29,31,37,41` second all-finite endpoints. At `p=29,s=24`, the sole
+residue-zero row has five exact phase-labelled profiles. Globally they are
+either 24-arcs with at least four undetermined directions or one-triple
+near-arcs with six. In the latter case one deletion gives a 23-arc.
+
+Coolsaet--Sticker [53, Table 5] classify all 25- and 26-arcs in
+`PG(2,29)` into 10 and 5 projective classes. Exact `PGL(2,29)` enumeration
+gives the same 10 and 5 orbit counts for five- and four-point complements
+on a conic, proving that all classified arcs of those sizes are
+conic-contained. This agrees with Chao--Kaneta's earlier maximum
+nonclassical size 24 [54]. Extending through three undetermined infinity
+directions would force one conic through three collinear points, closing
+`p=29`. The geometry/classification facts are prior work; the new step is
+their use with the Paley endpoint ledger and the integral paired-cube
+bound.
+
+OEIS searches identified `27405=C(30,4)` and `142506=C(30,5)` in standard
+binomial tables. Searches for the endpoint deficit block, arc-class tail,
+and PGL orbit-size block found no relevant sequence. No sequence or
+priority claim is made.
+
 ---
 
 ## 8. What is not in the older literature
@@ -1142,5 +1177,7 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 50. P. Amireddy, A. R. Behera, S. Srinivasan, M. Sudan, and S. V. Willumsgaard, *Low-Degree Testing Over Boolean Slices*, [arXiv:2608.21730](https://arxiv.org/abs/2608.21730) (robust low-degree testing on slices; not an exact distance-floor or Paley affine-boundary theorem).
 51. Y. Filmus, *Junta threshold for low degree Boolean functions on the slice*, [arXiv:2203.04760](https://arxiv.org/abs/2203.04760) (proves the sharp `k>=2d` threshold for bounded-size juntas; adjacent context, not the explicit paired-cube density bound in 15.680).
 52. M. Kiermaier, J. Mannaert, and A. Wassermann, *The paired construction for Boolean functions on the slice*, [arXiv:2510.02804](https://arxiv.org/abs/2510.02804) (small-support constructions and exact degrees; does not classify all Boolean quadratics or imply the mass-ten exclusion in 15.680).
+53. K. Coolsaet and H. Sticker, *The complete k-arcs of PG(2,27) and PG(2,29)*, J. Combin. Des. **19** (2011), 111--130, [doi:10.1002/jcd.20261](https://doi.org/10.1002/jcd.20261), [open PDF](https://backoffice.biblio.ugent.be/download/1247338/1247417) (Table 5 gives the exhaustive projective class counts 10 and 5 for all 25- and 26-arcs in `PG(2,29)`, used in 15.681).
+54. J. M. Chao and H. Kaneta, *Classical arcs in PG(r,q) for 23 <= q <= 29*, Discrete Math. **226** (2001), 377--385 (records maximum nonclassical plane-arc size 24 at `q=29`; independent prior confirmation of 15.681's classification consequence).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

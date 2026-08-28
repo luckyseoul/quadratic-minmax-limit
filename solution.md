@@ -7579,3 +7579,80 @@ Evidence: `src/e1_gmin_m4_prop15680.py`,
 `evidence/e1_gmin_m4_prop15680.json`,
 `evidence/NOTE_2026-08-28_p37_next_all_finite_endpoint.md`, and
 `tests/test_prop15680.py`.
+
+## Proposition 15.681 — an integral paired-cube lift closes the p=29 endpoint
+
+Let (B) be a nonzero nonnegative integer-valued quadratic on
+(J(p,(p+1)/2)), and put (c=4p\mathbb E B). Choose (X) with (B(X)=h\ge1).
+The paired-cube operator from 15.680 does not require (B) to be Boolean:
+the restriction to every cube through (X) is nonzero of degree at most two,
+so its support has density at least (1/4), and integrality makes its average
+at least (1/4). Since (\rho=1/(p+1)),
+
+\[
+ \rho h+(1-\rho)\mathbb E B\ge {1\over4},
+ \qquad c\ge p+1-4h.                                  \tag{15.681.1}
+\]
+
+At the same point, the stabilizer identity of 15.642 gives
+
+\[
+ c\ge4h\quad(p\equiv3\pmod4),\qquad
+ c\ge {4r\over r+1}h\quad(p=4r+1).                   \tag{15.681.2}
+\]
+
+A convex combination cancelling (h) between (15.681.1)--(15.681.2) yields
+
+\[
+ 4p\mathbb E B\ge
+ \begin{cases}(p+1)/2,&p\equiv3\pmod4,\\
+               (p-1)/2,&p\equiv1\pmod4.
+ \end{cases}                                          \tag{15.681.3}
+\]
+
+The resulting scaled floors at (p=29,31,37,41) are (14,16,18,20).
+Exact second-boundary ledgers leave phase-zero residues
+
+\[
+\begin{array}{c|c}
+p&u_0\\ \hline
+29&0,2,3,4,5\\
+31&0,2,3,4,5,6\\
+37&2,3,4,5\\
+41&0,2,3,4,5,6,7.
+\end{array}                                           \tag{15.681.4}
+\]
+
+Every positive row forces a quotient-zero (b=0) direction with
+(c=2u_0), and (15.681.3) excludes it. Thus (p=37) is reproved and only
+residue zero remains at (p=29,31,41).
+
+For (p=29,s=24), the exact residue-zero minima have profiles
+(10[b=0]+5[b=24]) and (14[b=2]+[b=24]), with deficits (240) and (308)
+against budget (552). Pair slack is a multiple of four. Exhausting the four
+available units leaves either a 24-arc with at least four undetermined
+directions, or a set with exactly one 3-secant, all other line occupancies
+at most two, and six undetermined directions. In the latter case deleting
+one triple point gives a 23-arc and preserves all six directions.
+
+Coolsaet--Sticker's exhaustive (\mathrm{PG}(2,29)) classification has ten
+classes of 25-arcs and five classes of 26-arcs. Independently,
+(\mathrm{PGL}(2,29)) has ten orbits on five-point subsets and five on
+four-point subsets of the 30-point projective line. These are exactly the
+classes obtained by deleting five or four points from a conic; uniqueness
+of the conic through five arc points shows that the orbit counts do not
+merge. Hence every 25- and 26-arc is conic-contained.
+
+Adjoin two undetermined infinity points to a 24-arc to obtain a 26-arc, or
+to the 23-arc in the one-triple case to obtain a 25-arc. Taking two such
+extensions through three distinct undetermined points gives conics sharing
+at least 23 affine points, hence the same conic. It would contain three
+collinear points at infinity, impossible. Therefore the (p=29,s=24)
+boundary is excluded. At this boundary (p=31,41) retain only residue zero;
+(p=17,19,23), later all-finite sizes, strict infinity-plus-(p), residual
+(ii), R1, global QVAR, Type I, and the limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15681.py`,
+`evidence/e1_gmin_m4_prop15681.json`,
+`evidence/NOTE_2026-08-28_p29_next_all_finite_endpoint.md`, and
+`tests/test_prop15681.py`.

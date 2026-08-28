@@ -1,5 +1,18 @@
 # Status (2026-08-28)
 
+**15.681 PROVED the `p=29,s=24` next all-finite endpoint is impossible,
+not residual (ii)**: paired-cube averaging applies directly to every
+nonzero nonnegative integer-valued quadratic and gives scaled mass at least
+`(p+1)/2` or `(p-1)/2` according to `p mod 4`. The floors
+`14,16,18,20` remove every positive-residue row at `p=29,31,37,41`. At
+`p=29`, pair-slack divisibility leaves 24-arcs with at least four
+undetermined directions or a one-triple near-arc with six. Exact
+`PGL(2,29)` complement-orbit counts match Coolsaet--Sticker's exhaustive
+10 and 5 classes of 25- and 26-arcs, so all are conic-contained; three
+undetermined infinity points then give a contradiction. The five endpoints
+`p=17,19,23,31,41` remain open at this boundary, with `p=31,41` reduced to
+residue zero. Later sizes and the infinity-present remainder remain OPEN.
+
 **15.680 PROVED the `p=37,s=30` next all-finite endpoint is impossible,
 not residual (ii)**: the exact pair ledger leaves only phase-zero residues
 `u=2,3,4,5`, each forcing a quotient-zero `b=0` quadratic lift of scaled
@@ -7,9 +20,9 @@ mass at most ten. Proposition 15.642 excludes the first three. At mass ten,
 stabilizer averaging makes the lift `{0,1,2}`-valued; the exact degree-four
 slice-distance floor excludes value two. A self-contained paired-cube
 restriction gives density at least `17/74` for a nonzero Boolean quadratic
-on `J(37,19)`, contradicting the required `5/74`. The same boundary at
-`p=17,19,23,29,31,41`, later sizes, and the infinity-present remainder
-remain OPEN.
+on `J(37,19)`, contradicting the required `5/74`. Proposition 15.681
+subsequently closes `p=29`; the same boundary at `p=17,19,23,31,41`, later
+sizes, and the infinity-present remainder remain OPEN.
 
 **15.679 PROVED the next all-finite boundary is impossible for every prime
 `p>=43`, not residual (ii)**: at the second even size above `3(p-1)/4`,
@@ -17,9 +30,9 @@ phase one is rigid and exact phase-zero quotient arithmetic leaves only
 common residues `2<=u<=7`. Every such row forces a quotient-zero `b=0`
 direction of scaled mean at most 14. The degree-two slice-distance floor is
 strictly larger than 14 from `p=59`; exact pair/lift ledgers close the only
-smaller in-scope primes `43,47,53`. Proposition 15.680 separately closes
-`p=37`; the six endpoints `p=17,19,23,29,31,41`, later sizes, and the
-infinity-present remainder remain OPEN.
+smaller in-scope primes `43,47,53`. Propositions 15.680--15.681 separately
+close `p=37,29`; the five endpoints `p=17,19,23,31,41`, later sizes, and
+the infinity-present remainder remain OPEN.
 
 **15.678 PROVED the exceptional `p=17,s=14` first all-finite survivor is
 impossible, completing this boundary size for every prime `p>=17`, not
@@ -35,8 +48,8 @@ classification is an explicit external dependency.
 15.675 closes `p=3,5 mod 8` by positive pair gaps and 15.677 closes the outer
 classes from `p=23` by the zero-quotient lift contradiction. Proposition
 15.678 supplies the formerly exceptional residue-zero endpoint. Proposition
-15.679 closes the next size from `p=43`, and 15.680 closes its `p=37`
-endpoint; six smaller endpoints, subsequent all-finite sizes,
+15.679 closes the next size from `p=43`, 15.680 closes its `p=37` endpoint,
+and 15.681 closes `p=29`; five smaller endpoints, subsequent all-finite sizes,
 infinity-present remainder, residual (ii), Type I, R1, global QVAR, and L
 remain OPEN.
 
