@@ -7429,3 +7429,65 @@ Evidence: `src/e1_gmin_m4_prop15678.py`,
 `evidence/e1_gmin_m4_prop15678.json`,
 `evidence/NOTE_2026-08-28_p17_first_all_finite_survivor_exclusion.md`, and
 `tests/test_prop15678.py`.
+
+## Proposition 15.679 — next all-finite boundary closed from p=43
+
+Let (p\ge43), put (P=p+1=2m), and let (s) be the second even integer
+strictly above (3(p-1)/4). In the four classes modulo eight,
+
+\[
+s={3p+13\over4},\ {3p+7\over4},\ {3p+9\over4},\ {3p+11\over4},
+\]
+
+respectively, and always (s\le p-5). Phase one has only residue
+(u_1=m-1), with exact deficit
+
+\[
+D_1=(m-1)(s-2).                                      \tag{15.679.1}
+\]
+
+For phase zero and (2\le u\le m-5), put (t=m-u),
+(x=\lfloor t/2\rfloor), (y=t\bmod2), and (z=m-x-y). The exact minimum is
+
+\[
+D_0(u)=zs+y(s-2),                                    \tag{15.679.2}
+\]
+
+using (x) quotient-two directions at (b=s), (y) quotient-one directions
+at (b=2), and (z) quotient-zero directions at (b=0). These minima increase
+strictly with (u). Residue zero has minimum
+
+\[
+D_0(0)=(m-\lfloor m/3\rfloor)s-2(m\bmod3),            \tag{15.679.3}
+\]
+
+and is over the pair budget; residue one is infeasible. Substitution at
+(u=8) gives positive gaps
+
+\[
+{p+11\over2},\ {5p+25\over4},\ {5p+23\over4},\ {p+13\over2}
+\]
+
+in the four modulo-eight classes. The final four residues have deficit at
+least ((m-4)s), also over budget. Hence only (2\le u\le7) remain.
+
+For each such row, (\sum k_d=m-u<m), so one phase-zero direction has
+quotient zero and mean (2u\le14). Its fibre count is (b=0), and its
+nonnegative slack is (A_d=2B_d) for a nonzero nonnegative integer-valued
+quadratic on the middle slice. Therefore
+
+\[
+2u=4p\,\mathbb E B_d\ge {p^2-1\over4(p-2)}.           \tag{15.679.4}
+\]
+
+The right side exceeds 14 for (p\ge59). At the only smaller in-scope
+primes (43,47,53), exact pair ledgers leave maximum residues (4,6,5), while
+the exact lift floors are (12,14,14), respectively. Thus all rows are
+impossible, and the second all-finite boundary is excluded for every prime
+(p\ge43). The same boundary at (p=17,19,23,29,31,37,41) remains open, as
+do later sizes and general residual (ii).
+
+Evidence: `src/e1_gmin_m4_prop15679.py`,
+`evidence/e1_gmin_m4_prop15679.json`,
+`evidence/NOTE_2026-08-28_next_all_finite_boundary_p43.md`, and
+`tests/test_prop15679.py`.

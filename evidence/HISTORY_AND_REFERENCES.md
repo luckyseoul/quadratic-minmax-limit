@@ -1025,6 +1025,24 @@ search for `17633,21064,6814,629`, the distinctive larger block of the
 `PG(2,17)` arc-class row, returned no result; this is a duplicate/context
 check, not a sequence or priority claim.
 
+## 7af. Next all-finite boundary closed from `p=43` (2026-08-28)
+
+Proposition 15.679 advances one full size beyond the first survivor. At the
+second even size above `3(p-1)/4`, phase one is rigid and exact phase-zero
+quotient arithmetic leaves only residues `2<=u<=7`. Every retained row
+forces a quotient-zero `b=0` direction with mean at most 14 and pointwise
+form `A=2B`. The degree-two slice-distance floor [47] exceeds 14 from
+`p=59`; exact pair/lift ledgers close the only smaller in-scope primes
+`43,47,53`.
+
+Thus this boundary is impossible for every prime `p>=43`. The same size at
+`p=17,19,23,29,31,37,41` remains open. Ball--Csajbók [42] is adjacent
+odd-secant literature but has a different `q+2`-point scope. The newly
+posted low-degree testing paper [50] concerns robust testing rather than an
+exact support floor or affine type budget. Exact OEIS searches for
+`11130,7176,3922` and `21756,14016,7696` returned no result; no sequence or
+priority claim is made.
+
 ---
 
 ## 8. What is not in the older literature
@@ -1089,5 +1107,6 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 47. P. Amireddy, S. Behera, S. Srinivasan, and M. Sudan, *A Near-Optimal Polynomial Distance Lemma over Boolean Slices*, ICALP 2025, [doi:10.4230/LIPIcs.ICALP.2025.11](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2025.11) (Lemma 2 supplies the exact finite degree-two support floor used in 15.642 and 15.677).
 48. H. Sticker, *Classification of Arcs in Small Desarguesian Projective Planes*, PhD thesis, Ghent University, 2012, [PDF](https://cage.ugent.be/geometry/Theses/57/PhDHeideSticker.pdf) (Section 5.3 gives the exhaustive PGL class counts for arcs not necessarily complete; the unique 16-arc class in `PG(2,17)` is used in 15.678).
 49. G. Keri, *Types of superregular matrices and the number of n-arcs and complete n-arcs in PG(r,q)*, J. Combin. Des. **14** (2006), 363--390, [doi:10.1002/jcd.20091](https://doi.org/10.1002/jcd.20091) (earlier MDS/superregular classification in the same small-field range; contextual independent cross-check for [48]).
+50. P. Amireddy, A. R. Behera, S. Srinivasan, M. Sudan, and S. V. Willumsgaard, *Low-Degree Testing Over Boolean Slices*, [arXiv:2608.21730](https://arxiv.org/abs/2608.21730) (robust low-degree testing on slices; not an exact distance-floor or Paley affine-boundary theorem).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

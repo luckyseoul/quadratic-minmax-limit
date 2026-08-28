@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-28 (15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; no general flag flipped)
+**Date:** 2026-08-28 (15.679 closes the next all-finite boundary from `p=43`; no general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -50,6 +50,22 @@ an intermediate count only as the unique high direction of its type, which
 leaves the same four arithmetic rows. The next infinity-present shell has
 `p` finite points.
 
+## 15.679 — next all-finite boundary closed from `p=43`
+
+`src/e1_gmin_m4_prop15679.py` and
+`evidence/NOTE_2026-08-28_next_all_finite_boundary_p43.md`. At the second
+even all-finite size above `3(p-1)/4`, phase one has its unique residue
+`u_1=m-1`. Exact phase-zero quotient arithmetic excludes `u_0=0,1`, every
+interior residue at least eight, and the final four residues, leaving only
+`2<=u_0<=7`. Each forces a quotient-zero `b=0` direction with scaled mean at
+most 14. Proposition 15.642's degree-two slice-distance floor exceeds 14
+for `p>=59`; exact pair ledgers plus lift floors close `p=43,47,53`.
+
+Thus this entire next boundary is impossible for every prime `p>=43`.
+The smaller endpoints `17,19,23,29,31,37,41`, later all-finite sizes,
+strict infinity-plus-`p`, residual (ii), R1, QVAR, Type I, and the limit
+remain open.
+
 ## 15.678 — exceptional `p=17` first all-finite survivor closed
 
 `src/e1_gmin_m4_prop15678.py` and
@@ -83,9 +99,10 @@ nonzero. Proposition 15.642 gives `4p E[B_d]>=8`, a contradiction.
 Together with 15.675, this excludes the first even all-finite size above
 `3(p-1)/4` for every prime `p>=19`. This proposition does not claim the
 smaller `p=17` endpoint because it has an additional `u_0=0` residue row;
-Proposition 15.678 now closes that endpoint separately. Later all-finite
-sizes, strict deficit in infinity-plus-`p`, residual (ii), R1, QVAR, Type I,
-and the limit remain open.
+Proposition 15.678 now closes that endpoint separately. Proposition 15.679
+closes the next size from `p=43`; its smaller endpoints, subsequent sizes,
+strict deficit in infinity-plus-`p`, residual (ii), R1, QVAR, Type I, and the
+limit remain open.
 
 ## 15.675 — first all-finite survivor closed in two modulo-eight classes
 

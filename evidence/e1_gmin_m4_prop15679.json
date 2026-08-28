@@ -1,0 +1,2506 @@
+{
+  "prop": "15.679",
+  "title": "Uniform exclusion of the next all-finite boundary",
+  "proved": true,
+  "theorem": {
+    "all_odd_primes_p_at_least_43": "the second even all-finite size above 3(p-1)/4 is excluded",
+    "smaller_endpoints": [
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41
+    ],
+    "smaller_endpoints_status": "OPEN_AT_THIS_BOUNDARY_SIZE",
+    "later_all_finite_sizes": "OPEN",
+    "infinity_present_remainder": "OPEN",
+    "general_residual_ii": false,
+    "R1": false,
+    "global_QVAR": false,
+    "type_I": false,
+    "limit_exists": false
+  },
+  "symbolic_residue_reduction": {
+    "scope": "odd p>=43",
+    "next_boundary": {
+      "p=1 mod 8": "s=(3p+13)/4",
+      "p=3 mod 8": "s=(3p+7)/4",
+      "p=5 mod 8": "s=(3p+9)/4",
+      "p=7 mod 8": "s=(3p+11)/4"
+    },
+    "middle_floor_range": "s<=p-5",
+    "u0": {
+      "exact_deficit": "(m-floor(m/3))s-2(m mod 3)",
+      "p>=47_gap_lower_bound": "(3p^2-128p-347)/48>0",
+      "p=43_exact_gap": 58,
+      "excluded": true
+    },
+    "u1": {
+      "reason": "every direction needs k>=1 but sum k=m-1",
+      "excluded": true
+    },
+    "interior": {
+      "exact_profile": "x=floor((m-u)/2) at b=s, y=(m-u) mod 2 at b=2, m-x-y at b=0",
+      "strictly_increasing_from_u=2": true,
+      "u8_pair_gap_by_class": {
+        "p=1 mod 8": "2s-p-1=(p+11)/2",
+        "p=3 mod 8": "3s-p+1=(5p+25)/4",
+        "p=5 mod 8": "3s-p-1=(5p+23)/4",
+        "p=7 mod 8": "2s-p+1=(p+13)/2"
+      },
+      "all_u_at_least_8_excluded": true
+    },
+    "last_four_residues": {
+      "deficit_lower_bound": "(m-4)s",
+      "pair_gap_lower_bound": "(3p^2-84p-159)/16>0",
+      "excluded": true
+    },
+    "only_residues_requiring_lift": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "proved": true
+  },
+  "large_prime_lift": {
+    "scope": "odd p>=59",
+    "scaled_support_floor": "(p^2-1)/(4(p-2))",
+    "comparison_to_14": "p^2-56p+111>0",
+    "value_at_59": "290/19",
+    "derivative_after_59": "2p-56>0",
+    "all_candidate_means_at_most": 14,
+    "excluded": true
+  },
+  "small_prime_ledgers": {
+    "43": {
+      "p": 43,
+      "s": 34,
+      "pair_rows": [
+        {
+          "u": 2,
+          "phase_zero_deficit": 408,
+          "phase_one_deficit": 672,
+          "required_total_deficit": 1080,
+          "pair_deficit_budget": 1122,
+          "pair_slack": 42,
+          "survives_pair_budget": true
+        },
+        {
+          "u": 3,
+          "phase_zero_deficit": 440,
+          "phase_one_deficit": 672,
+          "required_total_deficit": 1112,
+          "pair_deficit_budget": 1122,
+          "pair_slack": 10,
+          "survives_pair_budget": true
+        },
+        {
+          "u": 4,
+          "phase_zero_deficit": 442,
+          "phase_one_deficit": 672,
+          "required_total_deficit": 1114,
+          "pair_deficit_budget": 1122,
+          "pair_slack": 8,
+          "survives_pair_budget": true
+        },
+        {
+          "u": 5,
+          "phase_zero_deficit": 474,
+          "phase_one_deficit": 672,
+          "required_total_deficit": 1146,
+          "pair_deficit_budget": 1122,
+          "pair_slack": -24,
+          "survives_pair_budget": false
+        },
+        {
+          "u": 6,
+          "phase_zero_deficit": 476,
+          "phase_one_deficit": 672,
+          "required_total_deficit": 1148,
+          "pair_deficit_budget": 1122,
+          "pair_slack": -26,
+          "survives_pair_budget": false
+        },
+        {
+          "u": 7,
+          "phase_zero_deficit": 508,
+          "phase_one_deficit": 672,
+          "required_total_deficit": 1180,
+          "pair_deficit_budget": 1122,
+          "pair_slack": -58,
+          "survives_pair_budget": false
+        }
+      ],
+      "surviving_residues": [
+        2,
+        3,
+        4
+      ],
+      "maximum_scaled_mean": 8,
+      "nonzero_quadratic_lift_floor": 12,
+      "excluded": true
+    },
+    "47": {
+      "p": 47,
+      "s": 38,
+      "pair_rows": [
+        {
+          "u": 2,
+          "phase_zero_deficit": 494,
+          "phase_one_deficit": 828,
+          "required_total_deficit": 1322,
+          "pair_deficit_budget": 1406,
+          "pair_slack": 84,
+          "survives_pair_budget": true
+        },
+        {
+          "u": 3,
+          "phase_zero_deficit": 530,
+          "phase_one_deficit": 828,
+          "required_total_deficit": 1358,
+          "pair_deficit_budget": 1406,
+          "pair_slack": 48,
+          "survives_pair_budget": true
+        },
+        {
+          "u": 4,
+          "phase_zero_deficit": 532,
+          "phase_one_deficit": 828,
+          "required_total_deficit": 1360,
+          "pair_deficit_budget": 1406,
+          "pair_slack": 46,
+          "survives_pair_budget": true
+        },
+        {
+          "u": 5,
+          "phase_zero_deficit": 568,
+          "phase_one_deficit": 828,
+          "required_total_deficit": 1396,
+          "pair_deficit_budget": 1406,
+          "pair_slack": 10,
+          "survives_pair_budget": true
+        },
+        {
+          "u": 6,
+          "phase_zero_deficit": 570,
+          "phase_one_deficit": 828,
+          "required_total_deficit": 1398,
+          "pair_deficit_budget": 1406,
+          "pair_slack": 8,
+          "survives_pair_budget": true
+        },
+        {
+          "u": 7,
+          "phase_zero_deficit": 606,
+          "phase_one_deficit": 828,
+          "required_total_deficit": 1434,
+          "pair_deficit_budget": 1406,
+          "pair_slack": -28,
+          "survives_pair_budget": false
+        }
+      ],
+      "surviving_residues": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "maximum_scaled_mean": 12,
+      "nonzero_quadratic_lift_floor": 14,
+      "excluded": true
+    },
+    "53": {
+      "p": 53,
+      "s": 42,
+      "pair_rows": [
+        {
+          "u": 2,
+          "phase_zero_deficit": 628,
+          "phase_one_deficit": 1040,
+          "required_total_deficit": 1668,
+          "pair_deficit_budget": 1722,
+          "pair_slack": 54,
+          "survives_pair_budget": true
+        },
+        {
+          "u": 3,
+          "phase_zero_deficit": 630,
+          "phase_one_deficit": 1040,
+          "required_total_deficit": 1670,
+          "pair_deficit_budget": 1722,
+          "pair_slack": 52,
+          "survives_pair_budget": true
+        },
+        {
+          "u": 4,
+          "phase_zero_deficit": 670,
+          "phase_one_deficit": 1040,
+          "required_total_deficit": 1710,
+          "pair_deficit_budget": 1722,
+          "pair_slack": 12,
+          "survives_pair_budget": true
+        },
+        {
+          "u": 5,
+          "phase_zero_deficit": 672,
+          "phase_one_deficit": 1040,
+          "required_total_deficit": 1712,
+          "pair_deficit_budget": 1722,
+          "pair_slack": 10,
+          "survives_pair_budget": true
+        },
+        {
+          "u": 6,
+          "phase_zero_deficit": 712,
+          "phase_one_deficit": 1040,
+          "required_total_deficit": 1752,
+          "pair_deficit_budget": 1722,
+          "pair_slack": -30,
+          "survives_pair_budget": false
+        },
+        {
+          "u": 7,
+          "phase_zero_deficit": 714,
+          "phase_one_deficit": 1040,
+          "required_total_deficit": 1754,
+          "pair_deficit_budget": 1722,
+          "pair_slack": -32,
+          "survives_pair_budget": false
+        }
+      ],
+      "surviving_residues": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "maximum_scaled_mean": 10,
+      "nonzero_quadratic_lift_floor": 14,
+      "excluded": true
+    }
+  },
+  "samples": {
+    "43": {
+      "p": 43,
+      "s": 34,
+      "residue_reduction": {
+        "scope": "odd p>=43",
+        "next_boundary": {
+          "p=1 mod 8": "s=(3p+13)/4",
+          "p=3 mod 8": "s=(3p+7)/4",
+          "p=5 mod 8": "s=(3p+9)/4",
+          "p=7 mod 8": "s=(3p+11)/4"
+        },
+        "middle_floor_range": "s<=p-5",
+        "u0": {
+          "exact_deficit": "(m-floor(m/3))s-2(m mod 3)",
+          "p>=47_gap_lower_bound": "(3p^2-128p-347)/48>0",
+          "p=43_exact_gap": 58,
+          "excluded": true
+        },
+        "u1": {
+          "reason": "every direction needs k>=1 but sum k=m-1",
+          "excluded": true
+        },
+        "interior": {
+          "exact_profile": "x=floor((m-u)/2) at b=s, y=(m-u) mod 2 at b=2, m-x-y at b=0",
+          "strictly_increasing_from_u=2": true,
+          "u8_pair_gap_by_class": {
+            "p=1 mod 8": "2s-p-1=(p+11)/2",
+            "p=3 mod 8": "3s-p+1=(5p+25)/4",
+            "p=5 mod 8": "3s-p-1=(5p+23)/4",
+            "p=7 mod 8": "2s-p+1=(p+13)/2"
+          },
+          "all_u_at_least_8_excluded": true
+        },
+        "last_four_residues": {
+          "deficit_lower_bound": "(m-4)s",
+          "pair_gap_lower_bound": "(3p^2-84p-159)/16>0",
+          "excluded": true
+        },
+        "only_residues_requiring_lift": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "proved": true
+      },
+      "lift_ledger": {
+        "p": 43,
+        "s": 34,
+        "pair_rows": [
+          {
+            "u": 2,
+            "phase_zero_deficit": 408,
+            "phase_one_deficit": 672,
+            "required_total_deficit": 1080,
+            "pair_deficit_budget": 1122,
+            "pair_slack": 42,
+            "survives_pair_budget": true
+          },
+          {
+            "u": 3,
+            "phase_zero_deficit": 440,
+            "phase_one_deficit": 672,
+            "required_total_deficit": 1112,
+            "pair_deficit_budget": 1122,
+            "pair_slack": 10,
+            "survives_pair_budget": true
+          },
+          {
+            "u": 4,
+            "phase_zero_deficit": 442,
+            "phase_one_deficit": 672,
+            "required_total_deficit": 1114,
+            "pair_deficit_budget": 1122,
+            "pair_slack": 8,
+            "survives_pair_budget": true
+          },
+          {
+            "u": 5,
+            "phase_zero_deficit": 474,
+            "phase_one_deficit": 672,
+            "required_total_deficit": 1146,
+            "pair_deficit_budget": 1122,
+            "pair_slack": -24,
+            "survives_pair_budget": false
+          },
+          {
+            "u": 6,
+            "phase_zero_deficit": 476,
+            "phase_one_deficit": 672,
+            "required_total_deficit": 1148,
+            "pair_deficit_budget": 1122,
+            "pair_slack": -26,
+            "survives_pair_budget": false
+          },
+          {
+            "u": 7,
+            "phase_zero_deficit": 508,
+            "phase_one_deficit": 672,
+            "required_total_deficit": 1180,
+            "pair_deficit_budget": 1122,
+            "pair_slack": -58,
+            "survives_pair_budget": false
+          }
+        ],
+        "surviving_residues": [
+          2,
+          3,
+          4
+        ],
+        "maximum_scaled_mean": 8,
+        "nonzero_quadratic_lift_floor": 12,
+        "excluded": true
+      },
+      "method": "exact pair ledger plus Proposition 15.642 lift floor",
+      "excluded": true
+    },
+    "47": {
+      "p": 47,
+      "s": 38,
+      "residue_reduction": {
+        "scope": "odd p>=43",
+        "next_boundary": {
+          "p=1 mod 8": "s=(3p+13)/4",
+          "p=3 mod 8": "s=(3p+7)/4",
+          "p=5 mod 8": "s=(3p+9)/4",
+          "p=7 mod 8": "s=(3p+11)/4"
+        },
+        "middle_floor_range": "s<=p-5",
+        "u0": {
+          "exact_deficit": "(m-floor(m/3))s-2(m mod 3)",
+          "p>=47_gap_lower_bound": "(3p^2-128p-347)/48>0",
+          "p=43_exact_gap": 58,
+          "excluded": true
+        },
+        "u1": {
+          "reason": "every direction needs k>=1 but sum k=m-1",
+          "excluded": true
+        },
+        "interior": {
+          "exact_profile": "x=floor((m-u)/2) at b=s, y=(m-u) mod 2 at b=2, m-x-y at b=0",
+          "strictly_increasing_from_u=2": true,
+          "u8_pair_gap_by_class": {
+            "p=1 mod 8": "2s-p-1=(p+11)/2",
+            "p=3 mod 8": "3s-p+1=(5p+25)/4",
+            "p=5 mod 8": "3s-p-1=(5p+23)/4",
+            "p=7 mod 8": "2s-p+1=(p+13)/2"
+          },
+          "all_u_at_least_8_excluded": true
+        },
+        "last_four_residues": {
+          "deficit_lower_bound": "(m-4)s",
+          "pair_gap_lower_bound": "(3p^2-84p-159)/16>0",
+          "excluded": true
+        },
+        "only_residues_requiring_lift": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "proved": true
+      },
+      "lift_ledger": {
+        "p": 47,
+        "s": 38,
+        "pair_rows": [
+          {
+            "u": 2,
+            "phase_zero_deficit": 494,
+            "phase_one_deficit": 828,
+            "required_total_deficit": 1322,
+            "pair_deficit_budget": 1406,
+            "pair_slack": 84,
+            "survives_pair_budget": true
+          },
+          {
+            "u": 3,
+            "phase_zero_deficit": 530,
+            "phase_one_deficit": 828,
+            "required_total_deficit": 1358,
+            "pair_deficit_budget": 1406,
+            "pair_slack": 48,
+            "survives_pair_budget": true
+          },
+          {
+            "u": 4,
+            "phase_zero_deficit": 532,
+            "phase_one_deficit": 828,
+            "required_total_deficit": 1360,
+            "pair_deficit_budget": 1406,
+            "pair_slack": 46,
+            "survives_pair_budget": true
+          },
+          {
+            "u": 5,
+            "phase_zero_deficit": 568,
+            "phase_one_deficit": 828,
+            "required_total_deficit": 1396,
+            "pair_deficit_budget": 1406,
+            "pair_slack": 10,
+            "survives_pair_budget": true
+          },
+          {
+            "u": 6,
+            "phase_zero_deficit": 570,
+            "phase_one_deficit": 828,
+            "required_total_deficit": 1398,
+            "pair_deficit_budget": 1406,
+            "pair_slack": 8,
+            "survives_pair_budget": true
+          },
+          {
+            "u": 7,
+            "phase_zero_deficit": 606,
+            "phase_one_deficit": 828,
+            "required_total_deficit": 1434,
+            "pair_deficit_budget": 1406,
+            "pair_slack": -28,
+            "survives_pair_budget": false
+          }
+        ],
+        "surviving_residues": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "maximum_scaled_mean": 12,
+        "nonzero_quadratic_lift_floor": 14,
+        "excluded": true
+      },
+      "method": "exact pair ledger plus Proposition 15.642 lift floor",
+      "excluded": true
+    },
+    "53": {
+      "p": 53,
+      "s": 42,
+      "residue_reduction": {
+        "scope": "odd p>=43",
+        "next_boundary": {
+          "p=1 mod 8": "s=(3p+13)/4",
+          "p=3 mod 8": "s=(3p+7)/4",
+          "p=5 mod 8": "s=(3p+9)/4",
+          "p=7 mod 8": "s=(3p+11)/4"
+        },
+        "middle_floor_range": "s<=p-5",
+        "u0": {
+          "exact_deficit": "(m-floor(m/3))s-2(m mod 3)",
+          "p>=47_gap_lower_bound": "(3p^2-128p-347)/48>0",
+          "p=43_exact_gap": 58,
+          "excluded": true
+        },
+        "u1": {
+          "reason": "every direction needs k>=1 but sum k=m-1",
+          "excluded": true
+        },
+        "interior": {
+          "exact_profile": "x=floor((m-u)/2) at b=s, y=(m-u) mod 2 at b=2, m-x-y at b=0",
+          "strictly_increasing_from_u=2": true,
+          "u8_pair_gap_by_class": {
+            "p=1 mod 8": "2s-p-1=(p+11)/2",
+            "p=3 mod 8": "3s-p+1=(5p+25)/4",
+            "p=5 mod 8": "3s-p-1=(5p+23)/4",
+            "p=7 mod 8": "2s-p+1=(p+13)/2"
+          },
+          "all_u_at_least_8_excluded": true
+        },
+        "last_four_residues": {
+          "deficit_lower_bound": "(m-4)s",
+          "pair_gap_lower_bound": "(3p^2-84p-159)/16>0",
+          "excluded": true
+        },
+        "only_residues_requiring_lift": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "proved": true
+      },
+      "lift_ledger": {
+        "p": 53,
+        "s": 42,
+        "pair_rows": [
+          {
+            "u": 2,
+            "phase_zero_deficit": 628,
+            "phase_one_deficit": 1040,
+            "required_total_deficit": 1668,
+            "pair_deficit_budget": 1722,
+            "pair_slack": 54,
+            "survives_pair_budget": true
+          },
+          {
+            "u": 3,
+            "phase_zero_deficit": 630,
+            "phase_one_deficit": 1040,
+            "required_total_deficit": 1670,
+            "pair_deficit_budget": 1722,
+            "pair_slack": 52,
+            "survives_pair_budget": true
+          },
+          {
+            "u": 4,
+            "phase_zero_deficit": 670,
+            "phase_one_deficit": 1040,
+            "required_total_deficit": 1710,
+            "pair_deficit_budget": 1722,
+            "pair_slack": 12,
+            "survives_pair_budget": true
+          },
+          {
+            "u": 5,
+            "phase_zero_deficit": 672,
+            "phase_one_deficit": 1040,
+            "required_total_deficit": 1712,
+            "pair_deficit_budget": 1722,
+            "pair_slack": 10,
+            "survives_pair_budget": true
+          },
+          {
+            "u": 6,
+            "phase_zero_deficit": 712,
+            "phase_one_deficit": 1040,
+            "required_total_deficit": 1752,
+            "pair_deficit_budget": 1722,
+            "pair_slack": -30,
+            "survives_pair_budget": false
+          },
+          {
+            "u": 7,
+            "phase_zero_deficit": 714,
+            "phase_one_deficit": 1040,
+            "required_total_deficit": 1754,
+            "pair_deficit_budget": 1722,
+            "pair_slack": -32,
+            "survives_pair_budget": false
+          }
+        ],
+        "surviving_residues": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "maximum_scaled_mean": 10,
+        "nonzero_quadratic_lift_floor": 14,
+        "excluded": true
+      },
+      "method": "exact pair ledger plus Proposition 15.642 lift floor",
+      "excluded": true
+    },
+    "59": {
+      "p": 59,
+      "s": 46,
+      "residue_reduction": {
+        "scope": "odd p>=43",
+        "next_boundary": {
+          "p=1 mod 8": "s=(3p+13)/4",
+          "p=3 mod 8": "s=(3p+7)/4",
+          "p=5 mod 8": "s=(3p+9)/4",
+          "p=7 mod 8": "s=(3p+11)/4"
+        },
+        "middle_floor_range": "s<=p-5",
+        "u0": {
+          "exact_deficit": "(m-floor(m/3))s-2(m mod 3)",
+          "p>=47_gap_lower_bound": "(3p^2-128p-347)/48>0",
+          "p=43_exact_gap": 58,
+          "excluded": true
+        },
+        "u1": {
+          "reason": "every direction needs k>=1 but sum k=m-1",
+          "excluded": true
+        },
+        "interior": {
+          "exact_profile": "x=floor((m-u)/2) at b=s, y=(m-u) mod 2 at b=2, m-x-y at b=0",
+          "strictly_increasing_from_u=2": true,
+          "u8_pair_gap_by_class": {
+            "p=1 mod 8": "2s-p-1=(p+11)/2",
+            "p=3 mod 8": "3s-p+1=(5p+25)/4",
+            "p=5 mod 8": "3s-p-1=(5p+23)/4",
+            "p=7 mod 8": "2s-p+1=(p+13)/2"
+          },
+          "all_u_at_least_8_excluded": true
+        },
+        "last_four_residues": {
+          "deficit_lower_bound": "(m-4)s",
+          "pair_gap_lower_bound": "(3p^2-84p-159)/16>0",
+          "excluded": true
+        },
+        "only_residues_requiring_lift": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "proved": true
+      },
+      "lift_ledger": {
+        "scope": "odd p>=59",
+        "scaled_support_floor": "(p^2-1)/(4(p-2))",
+        "comparison_to_14": "p^2-56p+111>0",
+        "value_at_59": "290/19",
+        "derivative_after_59": "2p-56>0",
+        "all_candidate_means_at_most": 14,
+        "excluded": true
+      },
+      "method": "uniform Proposition 15.642 polynomial-distance floor",
+      "excluded": true
+    },
+    "61": {
+      "p": 61,
+      "s": 48,
+      "residue_reduction": {
+        "scope": "odd p>=43",
+        "next_boundary": {
+          "p=1 mod 8": "s=(3p+13)/4",
+          "p=3 mod 8": "s=(3p+7)/4",
+          "p=5 mod 8": "s=(3p+9)/4",
+          "p=7 mod 8": "s=(3p+11)/4"
+        },
+        "middle_floor_range": "s<=p-5",
+        "u0": {
+          "exact_deficit": "(m-floor(m/3))s-2(m mod 3)",
+          "p>=47_gap_lower_bound": "(3p^2-128p-347)/48>0",
+          "p=43_exact_gap": 58,
+          "excluded": true
+        },
+        "u1": {
+          "reason": "every direction needs k>=1 but sum k=m-1",
+          "excluded": true
+        },
+        "interior": {
+          "exact_profile": "x=floor((m-u)/2) at b=s, y=(m-u) mod 2 at b=2, m-x-y at b=0",
+          "strictly_increasing_from_u=2": true,
+          "u8_pair_gap_by_class": {
+            "p=1 mod 8": "2s-p-1=(p+11)/2",
+            "p=3 mod 8": "3s-p+1=(5p+25)/4",
+            "p=5 mod 8": "3s-p-1=(5p+23)/4",
+            "p=7 mod 8": "2s-p+1=(p+13)/2"
+          },
+          "all_u_at_least_8_excluded": true
+        },
+        "last_four_residues": {
+          "deficit_lower_bound": "(m-4)s",
+          "pair_gap_lower_bound": "(3p^2-84p-159)/16>0",
+          "excluded": true
+        },
+        "only_residues_requiring_lift": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "proved": true
+      },
+      "lift_ledger": {
+        "scope": "odd p>=59",
+        "scaled_support_floor": "(p^2-1)/(4(p-2))",
+        "comparison_to_14": "p^2-56p+111>0",
+        "value_at_59": "290/19",
+        "derivative_after_59": "2p-56>0",
+        "all_candidate_means_at_most": 14,
+        "excluded": true
+      },
+      "method": "uniform Proposition 15.642 polynomial-distance floor",
+      "excluded": true
+    },
+    "67": {
+      "p": 67,
+      "s": 52,
+      "residue_reduction": {
+        "scope": "odd p>=43",
+        "next_boundary": {
+          "p=1 mod 8": "s=(3p+13)/4",
+          "p=3 mod 8": "s=(3p+7)/4",
+          "p=5 mod 8": "s=(3p+9)/4",
+          "p=7 mod 8": "s=(3p+11)/4"
+        },
+        "middle_floor_range": "s<=p-5",
+        "u0": {
+          "exact_deficit": "(m-floor(m/3))s-2(m mod 3)",
+          "p>=47_gap_lower_bound": "(3p^2-128p-347)/48>0",
+          "p=43_exact_gap": 58,
+          "excluded": true
+        },
+        "u1": {
+          "reason": "every direction needs k>=1 but sum k=m-1",
+          "excluded": true
+        },
+        "interior": {
+          "exact_profile": "x=floor((m-u)/2) at b=s, y=(m-u) mod 2 at b=2, m-x-y at b=0",
+          "strictly_increasing_from_u=2": true,
+          "u8_pair_gap_by_class": {
+            "p=1 mod 8": "2s-p-1=(p+11)/2",
+            "p=3 mod 8": "3s-p+1=(5p+25)/4",
+            "p=5 mod 8": "3s-p-1=(5p+23)/4",
+            "p=7 mod 8": "2s-p+1=(p+13)/2"
+          },
+          "all_u_at_least_8_excluded": true
+        },
+        "last_four_residues": {
+          "deficit_lower_bound": "(m-4)s",
+          "pair_gap_lower_bound": "(3p^2-84p-159)/16>0",
+          "excluded": true
+        },
+        "only_residues_requiring_lift": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "proved": true
+      },
+      "lift_ledger": {
+        "scope": "odd p>=59",
+        "scaled_support_floor": "(p^2-1)/(4(p-2))",
+        "comparison_to_14": "p^2-56p+111>0",
+        "value_at_59": "290/19",
+        "derivative_after_59": "2p-56>0",
+        "all_candidate_means_at_most": 14,
+        "excluded": true
+      },
+      "method": "uniform Proposition 15.642 polynomial-distance floor",
+      "excluded": true
+    },
+    "71": {
+      "p": 71,
+      "s": 56,
+      "residue_reduction": {
+        "scope": "odd p>=43",
+        "next_boundary": {
+          "p=1 mod 8": "s=(3p+13)/4",
+          "p=3 mod 8": "s=(3p+7)/4",
+          "p=5 mod 8": "s=(3p+9)/4",
+          "p=7 mod 8": "s=(3p+11)/4"
+        },
+        "middle_floor_range": "s<=p-5",
+        "u0": {
+          "exact_deficit": "(m-floor(m/3))s-2(m mod 3)",
+          "p>=47_gap_lower_bound": "(3p^2-128p-347)/48>0",
+          "p=43_exact_gap": 58,
+          "excluded": true
+        },
+        "u1": {
+          "reason": "every direction needs k>=1 but sum k=m-1",
+          "excluded": true
+        },
+        "interior": {
+          "exact_profile": "x=floor((m-u)/2) at b=s, y=(m-u) mod 2 at b=2, m-x-y at b=0",
+          "strictly_increasing_from_u=2": true,
+          "u8_pair_gap_by_class": {
+            "p=1 mod 8": "2s-p-1=(p+11)/2",
+            "p=3 mod 8": "3s-p+1=(5p+25)/4",
+            "p=5 mod 8": "3s-p-1=(5p+23)/4",
+            "p=7 mod 8": "2s-p+1=(p+13)/2"
+          },
+          "all_u_at_least_8_excluded": true
+        },
+        "last_four_residues": {
+          "deficit_lower_bound": "(m-4)s",
+          "pair_gap_lower_bound": "(3p^2-84p-159)/16>0",
+          "excluded": true
+        },
+        "only_residues_requiring_lift": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "proved": true
+      },
+      "lift_ledger": {
+        "scope": "odd p>=59",
+        "scaled_support_floor": "(p^2-1)/(4(p-2))",
+        "comparison_to_14": "p^2-56p+111>0",
+        "value_at_59": "290/19",
+        "derivative_after_59": "2p-56>0",
+        "all_candidate_means_at_most": 14,
+        "excluded": true
+      },
+      "method": "uniform Proposition 15.642 polynomial-distance floor",
+      "excluded": true
+    },
+    "73": {
+      "p": 73,
+      "s": 58,
+      "residue_reduction": {
+        "scope": "odd p>=43",
+        "next_boundary": {
+          "p=1 mod 8": "s=(3p+13)/4",
+          "p=3 mod 8": "s=(3p+7)/4",
+          "p=5 mod 8": "s=(3p+9)/4",
+          "p=7 mod 8": "s=(3p+11)/4"
+        },
+        "middle_floor_range": "s<=p-5",
+        "u0": {
+          "exact_deficit": "(m-floor(m/3))s-2(m mod 3)",
+          "p>=47_gap_lower_bound": "(3p^2-128p-347)/48>0",
+          "p=43_exact_gap": 58,
+          "excluded": true
+        },
+        "u1": {
+          "reason": "every direction needs k>=1 but sum k=m-1",
+          "excluded": true
+        },
+        "interior": {
+          "exact_profile": "x=floor((m-u)/2) at b=s, y=(m-u) mod 2 at b=2, m-x-y at b=0",
+          "strictly_increasing_from_u=2": true,
+          "u8_pair_gap_by_class": {
+            "p=1 mod 8": "2s-p-1=(p+11)/2",
+            "p=3 mod 8": "3s-p+1=(5p+25)/4",
+            "p=5 mod 8": "3s-p-1=(5p+23)/4",
+            "p=7 mod 8": "2s-p+1=(p+13)/2"
+          },
+          "all_u_at_least_8_excluded": true
+        },
+        "last_four_residues": {
+          "deficit_lower_bound": "(m-4)s",
+          "pair_gap_lower_bound": "(3p^2-84p-159)/16>0",
+          "excluded": true
+        },
+        "only_residues_requiring_lift": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "proved": true
+      },
+      "lift_ledger": {
+        "scope": "odd p>=59",
+        "scaled_support_floor": "(p^2-1)/(4(p-2))",
+        "comparison_to_14": "p^2-56p+111>0",
+        "value_at_59": "290/19",
+        "derivative_after_59": "2p-56>0",
+        "all_candidate_means_at_most": 14,
+        "excluded": true
+      },
+      "method": "uniform Proposition 15.642 polynomial-distance floor",
+      "excluded": true
+    },
+    "79": {
+      "p": 79,
+      "s": 62,
+      "residue_reduction": {
+        "scope": "odd p>=43",
+        "next_boundary": {
+          "p=1 mod 8": "s=(3p+13)/4",
+          "p=3 mod 8": "s=(3p+7)/4",
+          "p=5 mod 8": "s=(3p+9)/4",
+          "p=7 mod 8": "s=(3p+11)/4"
+        },
+        "middle_floor_range": "s<=p-5",
+        "u0": {
+          "exact_deficit": "(m-floor(m/3))s-2(m mod 3)",
+          "p>=47_gap_lower_bound": "(3p^2-128p-347)/48>0",
+          "p=43_exact_gap": 58,
+          "excluded": true
+        },
+        "u1": {
+          "reason": "every direction needs k>=1 but sum k=m-1",
+          "excluded": true
+        },
+        "interior": {
+          "exact_profile": "x=floor((m-u)/2) at b=s, y=(m-u) mod 2 at b=2, m-x-y at b=0",
+          "strictly_increasing_from_u=2": true,
+          "u8_pair_gap_by_class": {
+            "p=1 mod 8": "2s-p-1=(p+11)/2",
+            "p=3 mod 8": "3s-p+1=(5p+25)/4",
+            "p=5 mod 8": "3s-p-1=(5p+23)/4",
+            "p=7 mod 8": "2s-p+1=(p+13)/2"
+          },
+          "all_u_at_least_8_excluded": true
+        },
+        "last_four_residues": {
+          "deficit_lower_bound": "(m-4)s",
+          "pair_gap_lower_bound": "(3p^2-84p-159)/16>0",
+          "excluded": true
+        },
+        "only_residues_requiring_lift": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "proved": true
+      },
+      "lift_ledger": {
+        "scope": "odd p>=59",
+        "scaled_support_floor": "(p^2-1)/(4(p-2))",
+        "comparison_to_14": "p^2-56p+111>0",
+        "value_at_59": "290/19",
+        "derivative_after_59": "2p-56>0",
+        "all_candidate_means_at_most": 14,
+        "excluded": true
+      },
+      "method": "uniform Proposition 15.642 polynomial-distance floor",
+      "excluded": true
+    },
+    "83": {
+      "p": 83,
+      "s": 64,
+      "residue_reduction": {
+        "scope": "odd p>=43",
+        "next_boundary": {
+          "p=1 mod 8": "s=(3p+13)/4",
+          "p=3 mod 8": "s=(3p+7)/4",
+          "p=5 mod 8": "s=(3p+9)/4",
+          "p=7 mod 8": "s=(3p+11)/4"
+        },
+        "middle_floor_range": "s<=p-5",
+        "u0": {
+          "exact_deficit": "(m-floor(m/3))s-2(m mod 3)",
+          "p>=47_gap_lower_bound": "(3p^2-128p-347)/48>0",
+          "p=43_exact_gap": 58,
+          "excluded": true
+        },
+        "u1": {
+          "reason": "every direction needs k>=1 but sum k=m-1",
+          "excluded": true
+        },
+        "interior": {
+          "exact_profile": "x=floor((m-u)/2) at b=s, y=(m-u) mod 2 at b=2, m-x-y at b=0",
+          "strictly_increasing_from_u=2": true,
+          "u8_pair_gap_by_class": {
+            "p=1 mod 8": "2s-p-1=(p+11)/2",
+            "p=3 mod 8": "3s-p+1=(5p+25)/4",
+            "p=5 mod 8": "3s-p-1=(5p+23)/4",
+            "p=7 mod 8": "2s-p+1=(p+13)/2"
+          },
+          "all_u_at_least_8_excluded": true
+        },
+        "last_four_residues": {
+          "deficit_lower_bound": "(m-4)s",
+          "pair_gap_lower_bound": "(3p^2-84p-159)/16>0",
+          "excluded": true
+        },
+        "only_residues_requiring_lift": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "proved": true
+      },
+      "lift_ledger": {
+        "scope": "odd p>=59",
+        "scaled_support_floor": "(p^2-1)/(4(p-2))",
+        "comparison_to_14": "p^2-56p+111>0",
+        "value_at_59": "290/19",
+        "derivative_after_59": "2p-56>0",
+        "all_candidate_means_at_most": 14,
+        "excluded": true
+      },
+      "method": "uniform Proposition 15.642 polynomial-distance floor",
+      "excluded": true
+    },
+    "89": {
+      "p": 89,
+      "s": 70,
+      "residue_reduction": {
+        "scope": "odd p>=43",
+        "next_boundary": {
+          "p=1 mod 8": "s=(3p+13)/4",
+          "p=3 mod 8": "s=(3p+7)/4",
+          "p=5 mod 8": "s=(3p+9)/4",
+          "p=7 mod 8": "s=(3p+11)/4"
+        },
+        "middle_floor_range": "s<=p-5",
+        "u0": {
+          "exact_deficit": "(m-floor(m/3))s-2(m mod 3)",
+          "p>=47_gap_lower_bound": "(3p^2-128p-347)/48>0",
+          "p=43_exact_gap": 58,
+          "excluded": true
+        },
+        "u1": {
+          "reason": "every direction needs k>=1 but sum k=m-1",
+          "excluded": true
+        },
+        "interior": {
+          "exact_profile": "x=floor((m-u)/2) at b=s, y=(m-u) mod 2 at b=2, m-x-y at b=0",
+          "strictly_increasing_from_u=2": true,
+          "u8_pair_gap_by_class": {
+            "p=1 mod 8": "2s-p-1=(p+11)/2",
+            "p=3 mod 8": "3s-p+1=(5p+25)/4",
+            "p=5 mod 8": "3s-p-1=(5p+23)/4",
+            "p=7 mod 8": "2s-p+1=(p+13)/2"
+          },
+          "all_u_at_least_8_excluded": true
+        },
+        "last_four_residues": {
+          "deficit_lower_bound": "(m-4)s",
+          "pair_gap_lower_bound": "(3p^2-84p-159)/16>0",
+          "excluded": true
+        },
+        "only_residues_requiring_lift": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "proved": true
+      },
+      "lift_ledger": {
+        "scope": "odd p>=59",
+        "scaled_support_floor": "(p^2-1)/(4(p-2))",
+        "comparison_to_14": "p^2-56p+111>0",
+        "value_at_59": "290/19",
+        "derivative_after_59": "2p-56>0",
+        "all_candidate_means_at_most": 14,
+        "excluded": true
+      },
+      "method": "uniform Proposition 15.642 polynomial-distance floor",
+      "excluded": true
+    },
+    "97": {
+      "p": 97,
+      "s": 76,
+      "residue_reduction": {
+        "scope": "odd p>=43",
+        "next_boundary": {
+          "p=1 mod 8": "s=(3p+13)/4",
+          "p=3 mod 8": "s=(3p+7)/4",
+          "p=5 mod 8": "s=(3p+9)/4",
+          "p=7 mod 8": "s=(3p+11)/4"
+        },
+        "middle_floor_range": "s<=p-5",
+        "u0": {
+          "exact_deficit": "(m-floor(m/3))s-2(m mod 3)",
+          "p>=47_gap_lower_bound": "(3p^2-128p-347)/48>0",
+          "p=43_exact_gap": 58,
+          "excluded": true
+        },
+        "u1": {
+          "reason": "every direction needs k>=1 but sum k=m-1",
+          "excluded": true
+        },
+        "interior": {
+          "exact_profile": "x=floor((m-u)/2) at b=s, y=(m-u) mod 2 at b=2, m-x-y at b=0",
+          "strictly_increasing_from_u=2": true,
+          "u8_pair_gap_by_class": {
+            "p=1 mod 8": "2s-p-1=(p+11)/2",
+            "p=3 mod 8": "3s-p+1=(5p+25)/4",
+            "p=5 mod 8": "3s-p-1=(5p+23)/4",
+            "p=7 mod 8": "2s-p+1=(p+13)/2"
+          },
+          "all_u_at_least_8_excluded": true
+        },
+        "last_four_residues": {
+          "deficit_lower_bound": "(m-4)s",
+          "pair_gap_lower_bound": "(3p^2-84p-159)/16>0",
+          "excluded": true
+        },
+        "only_residues_requiring_lift": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "proved": true
+      },
+      "lift_ledger": {
+        "scope": "odd p>=59",
+        "scaled_support_floor": "(p^2-1)/(4(p-2))",
+        "comparison_to_14": "p^2-56p+111>0",
+        "value_at_59": "290/19",
+        "derivative_after_59": "2p-56>0",
+        "all_candidate_means_at_most": 14,
+        "excluded": true
+      },
+      "method": "uniform Proposition 15.642 polynomial-distance floor",
+      "excluded": true
+    },
+    "101": {
+      "p": 101,
+      "s": 78,
+      "residue_reduction": {
+        "scope": "odd p>=43",
+        "next_boundary": {
+          "p=1 mod 8": "s=(3p+13)/4",
+          "p=3 mod 8": "s=(3p+7)/4",
+          "p=5 mod 8": "s=(3p+9)/4",
+          "p=7 mod 8": "s=(3p+11)/4"
+        },
+        "middle_floor_range": "s<=p-5",
+        "u0": {
+          "exact_deficit": "(m-floor(m/3))s-2(m mod 3)",
+          "p>=47_gap_lower_bound": "(3p^2-128p-347)/48>0",
+          "p=43_exact_gap": 58,
+          "excluded": true
+        },
+        "u1": {
+          "reason": "every direction needs k>=1 but sum k=m-1",
+          "excluded": true
+        },
+        "interior": {
+          "exact_profile": "x=floor((m-u)/2) at b=s, y=(m-u) mod 2 at b=2, m-x-y at b=0",
+          "strictly_increasing_from_u=2": true,
+          "u8_pair_gap_by_class": {
+            "p=1 mod 8": "2s-p-1=(p+11)/2",
+            "p=3 mod 8": "3s-p+1=(5p+25)/4",
+            "p=5 mod 8": "3s-p-1=(5p+23)/4",
+            "p=7 mod 8": "2s-p+1=(p+13)/2"
+          },
+          "all_u_at_least_8_excluded": true
+        },
+        "last_four_residues": {
+          "deficit_lower_bound": "(m-4)s",
+          "pair_gap_lower_bound": "(3p^2-84p-159)/16>0",
+          "excluded": true
+        },
+        "only_residues_requiring_lift": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "proved": true
+      },
+      "lift_ledger": {
+        "scope": "odd p>=59",
+        "scaled_support_floor": "(p^2-1)/(4(p-2))",
+        "comparison_to_14": "p^2-56p+111>0",
+        "value_at_59": "290/19",
+        "derivative_after_59": "2p-56>0",
+        "all_candidate_means_at_most": 14,
+        "excluded": true
+      },
+      "method": "uniform Proposition 15.642 polynomial-distance floor",
+      "excluded": true
+    }
+  },
+  "independent_relaxed_dp_samples": {
+    "43": {
+      "0": {
+        "p": 43,
+        "phase": 0,
+        "rows": [
+          {
+            "u": 0,
+            "minimum_deficit": 508,
+            "profile": {
+              "0": 14,
+              "2": 1,
+              "34": 7
+            }
+          },
+          {
+            "u": 2,
+            "minimum_deficit": 408,
+            "profile": {
+              "0": 12,
+              "34": 10
+            }
+          },
+          {
+            "u": 3,
+            "minimum_deficit": 440,
+            "profile": {
+              "0": 12,
+              "2": 1,
+              "34": 9
+            }
+          },
+          {
+            "u": 4,
+            "minimum_deficit": 442,
+            "profile": {
+              "0": 13,
+              "34": 9
+            }
+          },
+          {
+            "u": 5,
+            "minimum_deficit": 474,
+            "profile": {
+              "0": 13,
+              "2": 1,
+              "34": 8
+            }
+          },
+          {
+            "u": 6,
+            "minimum_deficit": 476,
+            "profile": {
+              "0": 14,
+              "34": 8
+            }
+          },
+          {
+            "u": 7,
+            "minimum_deficit": 508,
+            "profile": {
+              "0": 14,
+              "2": 1,
+              "34": 7
+            }
+          },
+          {
+            "u": 8,
+            "minimum_deficit": 510,
+            "profile": {
+              "0": 15,
+              "34": 7
+            }
+          },
+          {
+            "u": 9,
+            "minimum_deficit": 542,
+            "profile": {
+              "0": 15,
+              "2": 1,
+              "34": 6
+            }
+          },
+          {
+            "u": 10,
+            "minimum_deficit": 544,
+            "profile": {
+              "0": 16,
+              "34": 6
+            }
+          },
+          {
+            "u": 11,
+            "minimum_deficit": 576,
+            "profile": {
+              "0": 16,
+              "2": 1,
+              "34": 5
+            }
+          },
+          {
+            "u": 12,
+            "minimum_deficit": 578,
+            "profile": {
+              "0": 17,
+              "34": 5
+            }
+          },
+          {
+            "u": 13,
+            "minimum_deficit": 610,
+            "profile": {
+              "0": 17,
+              "2": 1,
+              "34": 4
+            }
+          },
+          {
+            "u": 14,
+            "minimum_deficit": 612,
+            "profile": {
+              "0": 18,
+              "34": 4
+            }
+          },
+          {
+            "u": 15,
+            "minimum_deficit": 644,
+            "profile": {
+              "0": 18,
+              "2": 1,
+              "34": 3
+            }
+          },
+          {
+            "u": 16,
+            "minimum_deficit": 646,
+            "profile": {
+              "0": 19,
+              "34": 3
+            }
+          },
+          {
+            "u": 17,
+            "minimum_deficit": 678,
+            "profile": {
+              "0": 19,
+              "2": 1,
+              "34": 2
+            }
+          },
+          {
+            "u": 18,
+            "minimum_deficit": 680,
+            "profile": {
+              "0": 20,
+              "34": 2
+            }
+          },
+          {
+            "u": 19,
+            "minimum_deficit": 712,
+            "profile": {
+              "0": 20,
+              "2": 1,
+              "34": 1
+            }
+          },
+          {
+            "u": 20,
+            "minimum_deficit": 714,
+            "profile": {
+              "0": 21,
+              "34": 1
+            }
+          },
+          {
+            "u": 21,
+            "minimum_deficit": 714,
+            "profile": {
+              "0": 21,
+              "34": 1
+            }
+          }
+        ]
+      },
+      "1": {
+        "p": 43,
+        "phase": 1,
+        "rows": [
+          {
+            "u": 21,
+            "minimum_deficit": 672,
+            "profile": {
+              "2": 21,
+              "34": 1
+            }
+          }
+        ]
+      }
+    },
+    "47": {
+      "0": {
+        "p": 47,
+        "phase": 0,
+        "rows": [
+          {
+            "u": 0,
+            "minimum_deficit": 608,
+            "profile": {
+              "0": 16,
+              "38": 8
+            }
+          },
+          {
+            "u": 2,
+            "minimum_deficit": 494,
+            "profile": {
+              "0": 13,
+              "38": 11
+            }
+          },
+          {
+            "u": 3,
+            "minimum_deficit": 530,
+            "profile": {
+              "0": 13,
+              "2": 1,
+              "38": 10
+            }
+          },
+          {
+            "u": 4,
+            "minimum_deficit": 532,
+            "profile": {
+              "0": 14,
+              "38": 10
+            }
+          },
+          {
+            "u": 5,
+            "minimum_deficit": 568,
+            "profile": {
+              "0": 14,
+              "2": 1,
+              "38": 9
+            }
+          },
+          {
+            "u": 6,
+            "minimum_deficit": 570,
+            "profile": {
+              "0": 15,
+              "38": 9
+            }
+          },
+          {
+            "u": 7,
+            "minimum_deficit": 606,
+            "profile": {
+              "0": 15,
+              "2": 1,
+              "38": 8
+            }
+          },
+          {
+            "u": 8,
+            "minimum_deficit": 608,
+            "profile": {
+              "0": 16,
+              "38": 8
+            }
+          },
+          {
+            "u": 9,
+            "minimum_deficit": 644,
+            "profile": {
+              "0": 16,
+              "2": 1,
+              "38": 7
+            }
+          },
+          {
+            "u": 10,
+            "minimum_deficit": 646,
+            "profile": {
+              "0": 17,
+              "38": 7
+            }
+          },
+          {
+            "u": 11,
+            "minimum_deficit": 682,
+            "profile": {
+              "0": 17,
+              "2": 1,
+              "38": 6
+            }
+          },
+          {
+            "u": 12,
+            "minimum_deficit": 684,
+            "profile": {
+              "0": 18,
+              "38": 6
+            }
+          },
+          {
+            "u": 13,
+            "minimum_deficit": 720,
+            "profile": {
+              "0": 18,
+              "2": 1,
+              "38": 5
+            }
+          },
+          {
+            "u": 14,
+            "minimum_deficit": 722,
+            "profile": {
+              "0": 19,
+              "38": 5
+            }
+          },
+          {
+            "u": 15,
+            "minimum_deficit": 758,
+            "profile": {
+              "0": 19,
+              "2": 1,
+              "38": 4
+            }
+          },
+          {
+            "u": 16,
+            "minimum_deficit": 760,
+            "profile": {
+              "0": 20,
+              "38": 4
+            }
+          },
+          {
+            "u": 17,
+            "minimum_deficit": 796,
+            "profile": {
+              "0": 20,
+              "2": 1,
+              "38": 3
+            }
+          },
+          {
+            "u": 18,
+            "minimum_deficit": 798,
+            "profile": {
+              "0": 21,
+              "38": 3
+            }
+          },
+          {
+            "u": 19,
+            "minimum_deficit": 834,
+            "profile": {
+              "0": 21,
+              "2": 1,
+              "38": 2
+            }
+          },
+          {
+            "u": 20,
+            "minimum_deficit": 836,
+            "profile": {
+              "0": 22,
+              "38": 2
+            }
+          },
+          {
+            "u": 21,
+            "minimum_deficit": 872,
+            "profile": {
+              "0": 22,
+              "2": 1,
+              "38": 1
+            }
+          },
+          {
+            "u": 22,
+            "minimum_deficit": 874,
+            "profile": {
+              "0": 23,
+              "38": 1
+            }
+          },
+          {
+            "u": 23,
+            "minimum_deficit": 874,
+            "profile": {
+              "0": 23,
+              "38": 1
+            }
+          }
+        ]
+      },
+      "1": {
+        "p": 47,
+        "phase": 1,
+        "rows": [
+          {
+            "u": 23,
+            "minimum_deficit": 828,
+            "profile": {
+              "2": 23,
+              "38": 1
+            }
+          }
+        ]
+      }
+    },
+    "53": {
+      "0": {
+        "p": 53,
+        "phase": 0,
+        "rows": [
+          {
+            "u": 0,
+            "minimum_deficit": 756,
+            "profile": {
+              "0": 18,
+              "42": 9
+            }
+          },
+          {
+            "u": 2,
+            "minimum_deficit": 628,
+            "profile": {
+              "0": 14,
+              "2": 1,
+              "42": 12
+            }
+          },
+          {
+            "u": 3,
+            "minimum_deficit": 630,
+            "profile": {
+              "0": 15,
+              "42": 12
+            }
+          },
+          {
+            "u": 4,
+            "minimum_deficit": 670,
+            "profile": {
+              "0": 15,
+              "2": 1,
+              "42": 11
+            }
+          },
+          {
+            "u": 5,
+            "minimum_deficit": 672,
+            "profile": {
+              "0": 16,
+              "42": 11
+            }
+          },
+          {
+            "u": 6,
+            "minimum_deficit": 712,
+            "profile": {
+              "0": 16,
+              "2": 1,
+              "42": 10
+            }
+          },
+          {
+            "u": 7,
+            "minimum_deficit": 714,
+            "profile": {
+              "0": 17,
+              "42": 10
+            }
+          },
+          {
+            "u": 8,
+            "minimum_deficit": 754,
+            "profile": {
+              "0": 17,
+              "2": 1,
+              "42": 9
+            }
+          },
+          {
+            "u": 9,
+            "minimum_deficit": 756,
+            "profile": {
+              "0": 18,
+              "42": 9
+            }
+          },
+          {
+            "u": 10,
+            "minimum_deficit": 796,
+            "profile": {
+              "0": 18,
+              "2": 1,
+              "42": 8
+            }
+          },
+          {
+            "u": 11,
+            "minimum_deficit": 798,
+            "profile": {
+              "0": 19,
+              "42": 8
+            }
+          },
+          {
+            "u": 12,
+            "minimum_deficit": 838,
+            "profile": {
+              "0": 19,
+              "2": 1,
+              "42": 7
+            }
+          },
+          {
+            "u": 13,
+            "minimum_deficit": 840,
+            "profile": {
+              "0": 20,
+              "42": 7
+            }
+          },
+          {
+            "u": 14,
+            "minimum_deficit": 880,
+            "profile": {
+              "0": 20,
+              "2": 1,
+              "42": 6
+            }
+          },
+          {
+            "u": 15,
+            "minimum_deficit": 882,
+            "profile": {
+              "0": 21,
+              "42": 6
+            }
+          },
+          {
+            "u": 16,
+            "minimum_deficit": 922,
+            "profile": {
+              "0": 21,
+              "2": 1,
+              "42": 5
+            }
+          },
+          {
+            "u": 17,
+            "minimum_deficit": 924,
+            "profile": {
+              "0": 22,
+              "42": 5
+            }
+          },
+          {
+            "u": 18,
+            "minimum_deficit": 964,
+            "profile": {
+              "0": 22,
+              "2": 1,
+              "42": 4
+            }
+          },
+          {
+            "u": 19,
+            "minimum_deficit": 966,
+            "profile": {
+              "0": 23,
+              "42": 4
+            }
+          },
+          {
+            "u": 20,
+            "minimum_deficit": 1006,
+            "profile": {
+              "0": 23,
+              "2": 1,
+              "42": 3
+            }
+          },
+          {
+            "u": 21,
+            "minimum_deficit": 1008,
+            "profile": {
+              "0": 24,
+              "42": 3
+            }
+          },
+          {
+            "u": 22,
+            "minimum_deficit": 1048,
+            "profile": {
+              "0": 24,
+              "2": 1,
+              "42": 2
+            }
+          },
+          {
+            "u": 23,
+            "minimum_deficit": 1050,
+            "profile": {
+              "0": 25,
+              "42": 2
+            }
+          },
+          {
+            "u": 24,
+            "minimum_deficit": 1090,
+            "profile": {
+              "0": 25,
+              "2": 1,
+              "42": 1
+            }
+          },
+          {
+            "u": 25,
+            "minimum_deficit": 1092,
+            "profile": {
+              "0": 26,
+              "42": 1
+            }
+          },
+          {
+            "u": 26,
+            "minimum_deficit": 1092,
+            "profile": {
+              "0": 26,
+              "42": 1
+            }
+          }
+        ]
+      },
+      "1": {
+        "p": 53,
+        "phase": 1,
+        "rows": [
+          {
+            "u": 26,
+            "minimum_deficit": 1040,
+            "profile": {
+              "2": 26,
+              "42": 1
+            }
+          }
+        ]
+      }
+    },
+    "59": {
+      "0": {
+        "p": 59,
+        "phase": 0,
+        "rows": [
+          {
+            "u": 0,
+            "minimum_deficit": 920,
+            "profile": {
+              "0": 20,
+              "46": 10
+            }
+          },
+          {
+            "u": 2,
+            "minimum_deficit": 736,
+            "profile": {
+              "0": 16,
+              "46": 14
+            }
+          },
+          {
+            "u": 3,
+            "minimum_deficit": 780,
+            "profile": {
+              "0": 16,
+              "2": 1,
+              "46": 13
+            }
+          },
+          {
+            "u": 4,
+            "minimum_deficit": 782,
+            "profile": {
+              "0": 17,
+              "46": 13
+            }
+          },
+          {
+            "u": 5,
+            "minimum_deficit": 826,
+            "profile": {
+              "0": 17,
+              "2": 1,
+              "46": 12
+            }
+          },
+          {
+            "u": 6,
+            "minimum_deficit": 828,
+            "profile": {
+              "0": 18,
+              "46": 12
+            }
+          },
+          {
+            "u": 7,
+            "minimum_deficit": 872,
+            "profile": {
+              "0": 18,
+              "2": 1,
+              "46": 11
+            }
+          },
+          {
+            "u": 8,
+            "minimum_deficit": 874,
+            "profile": {
+              "0": 19,
+              "46": 11
+            }
+          },
+          {
+            "u": 9,
+            "minimum_deficit": 918,
+            "profile": {
+              "0": 19,
+              "2": 1,
+              "46": 10
+            }
+          },
+          {
+            "u": 10,
+            "minimum_deficit": 920,
+            "profile": {
+              "0": 20,
+              "46": 10
+            }
+          },
+          {
+            "u": 11,
+            "minimum_deficit": 964,
+            "profile": {
+              "0": 20,
+              "2": 1,
+              "46": 9
+            }
+          },
+          {
+            "u": 12,
+            "minimum_deficit": 966,
+            "profile": {
+              "0": 21,
+              "46": 9
+            }
+          },
+          {
+            "u": 13,
+            "minimum_deficit": 1010,
+            "profile": {
+              "0": 21,
+              "2": 1,
+              "46": 8
+            }
+          },
+          {
+            "u": 14,
+            "minimum_deficit": 1012,
+            "profile": {
+              "0": 22,
+              "46": 8
+            }
+          },
+          {
+            "u": 15,
+            "minimum_deficit": 1056,
+            "profile": {
+              "0": 22,
+              "2": 1,
+              "46": 7
+            }
+          },
+          {
+            "u": 16,
+            "minimum_deficit": 1058,
+            "profile": {
+              "0": 23,
+              "46": 7
+            }
+          },
+          {
+            "u": 17,
+            "minimum_deficit": 1102,
+            "profile": {
+              "0": 23,
+              "2": 1,
+              "46": 6
+            }
+          },
+          {
+            "u": 18,
+            "minimum_deficit": 1104,
+            "profile": {
+              "0": 24,
+              "46": 6
+            }
+          },
+          {
+            "u": 19,
+            "minimum_deficit": 1148,
+            "profile": {
+              "0": 24,
+              "2": 1,
+              "46": 5
+            }
+          },
+          {
+            "u": 20,
+            "minimum_deficit": 1150,
+            "profile": {
+              "0": 25,
+              "46": 5
+            }
+          },
+          {
+            "u": 21,
+            "minimum_deficit": 1194,
+            "profile": {
+              "0": 25,
+              "2": 1,
+              "46": 4
+            }
+          },
+          {
+            "u": 22,
+            "minimum_deficit": 1196,
+            "profile": {
+              "0": 26,
+              "46": 4
+            }
+          },
+          {
+            "u": 23,
+            "minimum_deficit": 1240,
+            "profile": {
+              "0": 26,
+              "2": 1,
+              "46": 3
+            }
+          },
+          {
+            "u": 24,
+            "minimum_deficit": 1242,
+            "profile": {
+              "0": 27,
+              "46": 3
+            }
+          },
+          {
+            "u": 25,
+            "minimum_deficit": 1286,
+            "profile": {
+              "0": 27,
+              "2": 1,
+              "46": 2
+            }
+          },
+          {
+            "u": 26,
+            "minimum_deficit": 1288,
+            "profile": {
+              "0": 28,
+              "46": 2
+            }
+          },
+          {
+            "u": 27,
+            "minimum_deficit": 1332,
+            "profile": {
+              "0": 28,
+              "2": 1,
+              "46": 1
+            }
+          },
+          {
+            "u": 28,
+            "minimum_deficit": 1334,
+            "profile": {
+              "0": 29,
+              "46": 1
+            }
+          },
+          {
+            "u": 29,
+            "minimum_deficit": 1334,
+            "profile": {
+              "0": 29,
+              "46": 1
+            }
+          }
+        ]
+      },
+      "1": {
+        "p": 59,
+        "phase": 1,
+        "rows": [
+          {
+            "u": 29,
+            "minimum_deficit": 1276,
+            "profile": {
+              "2": 29,
+              "46": 1
+            }
+          }
+        ]
+      }
+    },
+    "73": {
+      "0": {
+        "p": 73,
+        "phase": 0,
+        "rows": [
+          {
+            "u": 0,
+            "minimum_deficit": 1448,
+            "profile": {
+              "0": 24,
+              "2": 1,
+              "58": 12
+            }
+          },
+          {
+            "u": 2,
+            "minimum_deficit": 1158,
+            "profile": {
+              "0": 19,
+              "2": 1,
+              "58": 17
+            }
+          },
+          {
+            "u": 3,
+            "minimum_deficit": 1160,
+            "profile": {
+              "0": 20,
+              "58": 17
+            }
+          },
+          {
+            "u": 4,
+            "minimum_deficit": 1216,
+            "profile": {
+              "0": 20,
+              "2": 1,
+              "58": 16
+            }
+          },
+          {
+            "u": 5,
+            "minimum_deficit": 1218,
+            "profile": {
+              "0": 21,
+              "58": 16
+            }
+          },
+          {
+            "u": 6,
+            "minimum_deficit": 1274,
+            "profile": {
+              "0": 21,
+              "2": 1,
+              "58": 15
+            }
+          },
+          {
+            "u": 7,
+            "minimum_deficit": 1276,
+            "profile": {
+              "0": 22,
+              "58": 15
+            }
+          },
+          {
+            "u": 8,
+            "minimum_deficit": 1332,
+            "profile": {
+              "0": 22,
+              "2": 1,
+              "58": 14
+            }
+          },
+          {
+            "u": 9,
+            "minimum_deficit": 1334,
+            "profile": {
+              "0": 23,
+              "58": 14
+            }
+          },
+          {
+            "u": 10,
+            "minimum_deficit": 1390,
+            "profile": {
+              "0": 23,
+              "2": 1,
+              "58": 13
+            }
+          },
+          {
+            "u": 11,
+            "minimum_deficit": 1392,
+            "profile": {
+              "0": 24,
+              "58": 13
+            }
+          },
+          {
+            "u": 12,
+            "minimum_deficit": 1448,
+            "profile": {
+              "0": 24,
+              "2": 1,
+              "58": 12
+            }
+          },
+          {
+            "u": 13,
+            "minimum_deficit": 1450,
+            "profile": {
+              "0": 25,
+              "58": 12
+            }
+          },
+          {
+            "u": 14,
+            "minimum_deficit": 1506,
+            "profile": {
+              "0": 25,
+              "2": 1,
+              "58": 11
+            }
+          },
+          {
+            "u": 15,
+            "minimum_deficit": 1508,
+            "profile": {
+              "0": 26,
+              "58": 11
+            }
+          },
+          {
+            "u": 16,
+            "minimum_deficit": 1564,
+            "profile": {
+              "0": 26,
+              "2": 1,
+              "58": 10
+            }
+          },
+          {
+            "u": 17,
+            "minimum_deficit": 1566,
+            "profile": {
+              "0": 27,
+              "58": 10
+            }
+          },
+          {
+            "u": 18,
+            "minimum_deficit": 1622,
+            "profile": {
+              "0": 27,
+              "2": 1,
+              "58": 9
+            }
+          },
+          {
+            "u": 19,
+            "minimum_deficit": 1624,
+            "profile": {
+              "0": 28,
+              "58": 9
+            }
+          },
+          {
+            "u": 20,
+            "minimum_deficit": 1680,
+            "profile": {
+              "0": 28,
+              "2": 1,
+              "58": 8
+            }
+          },
+          {
+            "u": 21,
+            "minimum_deficit": 1682,
+            "profile": {
+              "0": 29,
+              "58": 8
+            }
+          },
+          {
+            "u": 22,
+            "minimum_deficit": 1738,
+            "profile": {
+              "0": 29,
+              "2": 1,
+              "58": 7
+            }
+          },
+          {
+            "u": 23,
+            "minimum_deficit": 1740,
+            "profile": {
+              "0": 30,
+              "58": 7
+            }
+          },
+          {
+            "u": 24,
+            "minimum_deficit": 1796,
+            "profile": {
+              "0": 30,
+              "2": 1,
+              "58": 6
+            }
+          },
+          {
+            "u": 25,
+            "minimum_deficit": 1798,
+            "profile": {
+              "0": 31,
+              "58": 6
+            }
+          },
+          {
+            "u": 26,
+            "minimum_deficit": 1854,
+            "profile": {
+              "0": 31,
+              "2": 1,
+              "58": 5
+            }
+          },
+          {
+            "u": 27,
+            "minimum_deficit": 1856,
+            "profile": {
+              "0": 32,
+              "58": 5
+            }
+          },
+          {
+            "u": 28,
+            "minimum_deficit": 1912,
+            "profile": {
+              "0": 32,
+              "2": 1,
+              "58": 4
+            }
+          },
+          {
+            "u": 29,
+            "minimum_deficit": 1914,
+            "profile": {
+              "0": 33,
+              "58": 4
+            }
+          },
+          {
+            "u": 30,
+            "minimum_deficit": 1970,
+            "profile": {
+              "0": 33,
+              "2": 1,
+              "58": 3
+            }
+          },
+          {
+            "u": 31,
+            "minimum_deficit": 1972,
+            "profile": {
+              "0": 34,
+              "58": 3
+            }
+          },
+          {
+            "u": 32,
+            "minimum_deficit": 2028,
+            "profile": {
+              "0": 34,
+              "2": 1,
+              "58": 2
+            }
+          },
+          {
+            "u": 33,
+            "minimum_deficit": 2030,
+            "profile": {
+              "0": 35,
+              "58": 2
+            }
+          },
+          {
+            "u": 34,
+            "minimum_deficit": 2086,
+            "profile": {
+              "0": 35,
+              "2": 1,
+              "58": 1
+            }
+          },
+          {
+            "u": 35,
+            "minimum_deficit": 2088,
+            "profile": {
+              "0": 36,
+              "58": 1
+            }
+          },
+          {
+            "u": 36,
+            "minimum_deficit": 2088,
+            "profile": {
+              "0": 36,
+              "58": 1
+            }
+          }
+        ]
+      },
+      "1": {
+        "p": 73,
+        "phase": 1,
+        "rows": [
+          {
+            "u": 36,
+            "minimum_deficit": 2016,
+            "profile": {
+              "2": 36,
+              "58": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "L_status": "OPEN"
+}
