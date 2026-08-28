@@ -29,7 +29,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675 closes the first all-finite survivor for `p=3,5 mod 8`; the other residue classes, larger ranges, and `p=7` infinity-plus-seven remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675 closes the first all-finite survivor for `p=3,5 mod 8`; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the other all-finite residue classes, larger ranges, and `p=7` infinity-plus-seven remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -257,6 +257,12 @@ zero has unique minimizing residue four. The exact pair-deficit gaps by
 floor-plus-pair survivor is excluded for every prime `p>=19` congruent to
 `3` or `5 mod 8`; the other two classes remain genuinely open to this
 relaxation.
+Proposition 15.676 advances the next infinity shell. Pair-deficit equality
+makes its `p` finite points a `p`-arc and hence a conic subset. The tangent
+and external-line conic cases have profiles `p*b=1+b=p` and
+`(m+1)*b=1+(m-1)*b=3`; exact type floors and baseline coefficient
+congruences exclude both profiles in both phases. The strict-deficit branch
+of infinity-plus-`p` remains open.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -310,6 +316,7 @@ graph TD
     SMALLRANGE --> P11EIGHT["p=11 finite size eight<br/>exact normalized census <b>CLOSED</b> (15.670)"]
     RANGE --> ENDPOINT["infinity + (p-2), every odd-fibre profile<br/>both signs <b>CLOSED for p>=17</b> (15.671--15.674)"]
     RANGE --> FIRSTHALF["first all-finite s above 3(p-1)/4<br/><b>CLOSED for p=3,5 mod 8</b> (15.675)"]
+    RANGE --> PARC["infinity + p, pair-deficit equality / p-arcs<br/>both signs <b>CLOSED for p>=17</b> (15.676)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -481,6 +488,7 @@ square-direction affine-circle words.
 | 15.673 | same-type mean residues and the four-unit lift floor reduce all endpoint-only `b_d in {1,p-2}` profiles to four two-count congruence rows; Segre's `p`-arc theorem excludes pair-deficit equality, and the sole `p=17` arithmetic endpoint has exact inter-fibre norm `75>57` | closes both signs of every endpoint-only infinity-plus-`(p-2)` boundary for every prime `p>=17`; non-endpoint profiles, residual (ii), and all top-level gates remain open |
 | 15.674 | every intermediate odd-fibre floor lies strictly between `p+1` and `2p`; exact same-type residues force such a direction to be the unique mean-`2p` exception, and incidence forces opposite endpoint baseline types | closes both signs of the entire infinity-plus-`(p-2)` shell for every prime `p>=17`, with no endpoint hypothesis; larger shells, residual (ii), and all top-level gates remain open |
 | 15.675 | at the first even all-finite size above `3(p-1)/4`, exact same-type residues force phase-one profile `(m-1)·b=2+b=s` and the phase-zero residue-four profile; the pair gaps are explicit modulo eight | excludes that first survivor for every prime `p>=19` with `p=3,5 mod 8`; `p=1,7 mod 8`, later sizes, residual (ii), and all top-level gates remain open |
+| 15.676 | pair-deficit equality makes the `p` finite points of an infinity-plus-`p` boundary a `p`-arc; Segre reduces it to tangent or external-line affine conic profiles, which fail the exact type budgets or coefficient/support arithmetic | closes the equality branch for both signs and every prime `p>=17`; strict pair deficit, the full shell, residual (ii), and all top-level gates remain open |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -662,8 +670,10 @@ floor-plus-pair profiles survive this relaxation. Proposition 15.670 then
 uses exact affine incidence to close every finite `p=11` size-eight boundary.
 Propositions 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for
 both signs from `p=17`, including all intermediate odd-fibre profiles.
-Residual (ii) remains open and the next step must control the
-infinity-plus-`p` shell or the all-finite large-boundary range.
+Proposition 15.676 closes the pair-deficit-equality, hence `p`-arc/conic,
+branch of the next infinity-plus-`p` shell. Residual (ii) remains open and
+the next step must control strict pair deficit there or the all-finite
+large-boundary range.
 At the first all-finite size beyond 15.669, Proposition 15.675 improves this:
 same-type quantization closes the `p=3,5 mod 8` classes with exact positive
 gaps `(p+1)/2,(p-1)/2`. The `p=1,7 mod 8` gaps are negative, so no broader
@@ -776,7 +786,7 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15666.py` | Complete both-sign exclusion of every remaining finite `p=7` size-eight boundary |
 | `src/e1_gmin_m4_prop15669.py` | Full-middle parity quadrature, uniform boundary-range exclusion, and exact `p=11,13` extensions |
 | `src/e1_gmin_m4_prop15670.py` | Lossless affine normalization and dual-GPU audit excluding finite `p=11` size-eight boundaries |
-| `src/e1_gmin_m4_prop15671.py` … `prop15675.py` | Complete infinity-plus-`(p-2)` shell exclusion and quantized half-close of the first all-finite survivor |
+| `src/e1_gmin_m4_prop15671.py` … `prop15676.py` | Complete infinity-plus-`(p-2)` shell exclusion, quantized half-close of the first all-finite survivor, and the infinity-plus-`p` arc-equality close |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |
@@ -811,6 +821,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-28_endpoint_near_line_complete.md` | Segre arc equality exit, four endpoint arithmetic rows, and exact `p=17` `l1` close (15.673) |
 | `evidence/NOTE_2026-08-28_full_near_line_shell_complete.md` | Two-residue type classification and complete infinity-plus-`(p-2)` shell closure (15.674) |
 | `evidence/NOTE_2026-08-28_first_all_finite_survivor_half_close.md` | Exact type-residue minima and modulo-eight first-survivor gaps (15.675) |
+| `evidence/NOTE_2026-08-28_infinity_plus_p_arc_close.md` | Segre reduction, exact affine-conic profiles, and both-phase equality-branch exclusion (15.676) |
 | `evidence/p11_size8_boundary_SHA256SUMS` | Seven-file permanent-archive manifest for Proposition 15.670 |
 | `evidence/NOTE_2026-08-25_negative_product_asymptotic_normal_form.md` | Slice-distance, mean, divisibility, and boundary proof of the unique large-prime negative profile |
 | `evidence/NOTE_2026-08-25_baseline_fibre_profiles.md` | Integral `l1` proof that every baseline fibre profile is ideal or one-transfer |

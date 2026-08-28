@@ -960,6 +960,26 @@ ledgers. Ball--Csajbók [42] is adjacent odd-secant literature but does not
 state this Paley type-residue optimization. OEIS searches returned unrelated
 matches to the linear gap values and no sequence interpretation is claimed.
 
+## 7ac. Infinity-plus-`p` arc-equality close (2026-08-28)
+
+Proposition 15.676 treats the pair-deficit equality branch of the next
+infinity-present shell. Equality makes the `p` finite points a `p`-arc, so
+Segre's theorem [44] puts them on a conic. Classifying the line at infinity
+leaves two affine profiles: a tangent conic has `p` directions with `b=1`
+and one with `b=p`; an external conic with one point deleted has `m+1`
+directions with `b=1` and `m-1` with `b=3`.
+
+The external profile exceeds the exact Paley type-floor capacity in both
+phases. For the tangent profile, same-type mean quantization retains a
+baseline `b=1` direction in each type; its coefficient congruence forces
+both baseline parallel counts to vanish, leaving zero or two finite edges
+and violating boundary support. Thus pair-deficit equality is closed for
+both signs and all primes `p>=17`. Strict deficit and the full shell remain
+open. Van de Voorde [46] is adjacent external-conic/determined-direction
+literature but does not supply the Paley floor or coefficient argument.
+Targeted literature and OEIS checks found no duplicate or relevant sequence
+interpretation.
+
 ---
 
 ## 8. What is not in the older literature
@@ -1020,5 +1040,6 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 43. M. Kiermaier and S. Kurz, *Maximal integral point sets in affine planes over finite fields*, [arXiv:1401.2825](https://arxiv.org/abs/1401.2825) (prescribed directions and Paley-clique context; not the boundary parity-floor budget of 15.670).
 44. S. Ball and M. Lavrauw, *Planar arcs*, [arXiv:1705.10940](https://arxiv.org/abs/1705.10940) (modern primary restatement of Segre's classification of odd-order arcs of sizes `q` and `q+1`; the `q`-arc conic theorem is used in 15.673's endpoint equality case).
 45. V. F. Lev, *Point distribution and perfect directions in* \(F_p^2\), [arXiv:1903.01518](https://arxiv.org/abs/1903.01518) (Rédei-type direction bounds adjacent to, but not implying, the determined-direction/type-budget argument of 15.674).
+46. G. Van de Voorde, *On sets without tangents and exterior sets of a conic*, [arXiv:1201.0484](https://arxiv.org/abs/1201.0484) (adjacent external-conic and determined-direction geometry; not the Paley phase-budget exclusion of 15.676).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

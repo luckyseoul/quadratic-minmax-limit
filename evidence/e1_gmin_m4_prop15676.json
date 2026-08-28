@@ -1,0 +1,1501 @@
+{
+  "prop": "15.676",
+  "title": "Pair-deficit equality exclusion in infinity plus p",
+  "proved": true,
+  "theorem": {
+    "boundary": "infinity plus p finite points",
+    "pair_deficit_equality": "EXCLUDED_FOR_BOTH_PRODUCT_SIGNS",
+    "all_odd_primes_p_at_least_17": true,
+    "strict_pair_deficit_branch": "OPEN",
+    "whole_infinity_plus_p_shell": "OPEN",
+    "general_residual_ii": false,
+    "R1": false,
+    "global_QVAR": false,
+    "type_I": false,
+    "limit_exists": false
+  },
+  "classification": {
+    "pair_deficit_equality": "every affine fibre has size at most two, so the p finite points form a p-arc",
+    "Segre": "every odd-order p-arc is contained in a conic",
+    "secant_infinity": "only p-1 affine conic points; impossible",
+    "tangent_infinity": {
+      "affine_points": "p, hence the boundary is the full affine conic",
+      "profile": "p copies of b=1 and one copy of b=p"
+    },
+    "external_infinity": {
+      "affine_points": "p+1, hence the boundary deletes one point",
+      "direction_types": "the external infinity line has m internal and m external points; deletion leaves m+1 copies of b=1 and m-1 of b=3",
+      "character_sum_check": "in x^2-nu*y^2=z^2, sum_r chi(r^2-nu)=-1 and the infinity direction contributes +1, so the two direction classes split m,m"
+    },
+    "exhaustive": true
+  },
+  "canonical_profile_samples": {
+    "17": {
+      "p": 17,
+      "m": 9,
+      "pair_deficit_budget": 272,
+      "tangent_line_at_infinity": {
+        "profile": {
+          "1": 17,
+          "17": 1
+        },
+        "pair_deficit": 272,
+        "maximum_fibre_size": 2
+      },
+      "external_line_at_infinity": {
+        "nonsquare": 3,
+        "full_affine_conic_size": 18,
+        "deleted_point": [
+          1,
+          0
+        ],
+        "profile": {
+          "1": 10,
+          "3": 8
+        },
+        "pair_deficit": 272,
+        "maximum_fibre_size": 2
+      },
+      "proved_for_representatives": true
+    },
+    "19": {
+      "p": 19,
+      "m": 10,
+      "pair_deficit_budget": 342,
+      "tangent_line_at_infinity": {
+        "profile": {
+          "1": 19,
+          "19": 1
+        },
+        "pair_deficit": 342,
+        "maximum_fibre_size": 2
+      },
+      "external_line_at_infinity": {
+        "nonsquare": 2,
+        "full_affine_conic_size": 20,
+        "deleted_point": [
+          1,
+          0
+        ],
+        "profile": {
+          "1": 11,
+          "3": 9
+        },
+        "pair_deficit": 342,
+        "maximum_fibre_size": 2
+      },
+      "proved_for_representatives": true
+    },
+    "23": {
+      "p": 23,
+      "m": 12,
+      "pair_deficit_budget": 506,
+      "tangent_line_at_infinity": {
+        "profile": {
+          "1": 23,
+          "23": 1
+        },
+        "pair_deficit": 506,
+        "maximum_fibre_size": 2
+      },
+      "external_line_at_infinity": {
+        "nonsquare": 5,
+        "full_affine_conic_size": 24,
+        "deleted_point": [
+          1,
+          0
+        ],
+        "profile": {
+          "1": 13,
+          "3": 11
+        },
+        "pair_deficit": 506,
+        "maximum_fibre_size": 2
+      },
+      "proved_for_representatives": true
+    },
+    "29": {
+      "p": 29,
+      "m": 15,
+      "pair_deficit_budget": 812,
+      "tangent_line_at_infinity": {
+        "profile": {
+          "1": 29,
+          "29": 1
+        },
+        "pair_deficit": 812,
+        "maximum_fibre_size": 2
+      },
+      "external_line_at_infinity": {
+        "nonsquare": 2,
+        "full_affine_conic_size": 30,
+        "deleted_point": [
+          1,
+          0
+        ],
+        "profile": {
+          "1": 16,
+          "3": 14
+        },
+        "pair_deficit": 812,
+        "maximum_fibre_size": 2
+      },
+      "proved_for_representatives": true
+    },
+    "31": {
+      "p": 31,
+      "m": 16,
+      "pair_deficit_budget": 930,
+      "tangent_line_at_infinity": {
+        "profile": {
+          "1": 31,
+          "31": 1
+        },
+        "pair_deficit": 930,
+        "maximum_fibre_size": 2
+      },
+      "external_line_at_infinity": {
+        "nonsquare": 3,
+        "full_affine_conic_size": 32,
+        "deleted_point": [
+          1,
+          0
+        ],
+        "profile": {
+          "1": 17,
+          "3": 15
+        },
+        "pair_deficit": 930,
+        "maximum_fibre_size": 2
+      },
+      "proved_for_representatives": true
+    },
+    "37": {
+      "p": 37,
+      "m": 19,
+      "pair_deficit_budget": 1332,
+      "tangent_line_at_infinity": {
+        "profile": {
+          "1": 37,
+          "37": 1
+        },
+        "pair_deficit": 1332,
+        "maximum_fibre_size": 2
+      },
+      "external_line_at_infinity": {
+        "nonsquare": 2,
+        "full_affine_conic_size": 38,
+        "deleted_point": [
+          1,
+          0
+        ],
+        "profile": {
+          "1": 20,
+          "3": 18
+        },
+        "pair_deficit": 1332,
+        "maximum_fibre_size": 2
+      },
+      "proved_for_representatives": true
+    },
+    "41": {
+      "p": 41,
+      "m": 21,
+      "pair_deficit_budget": 1640,
+      "tangent_line_at_infinity": {
+        "profile": {
+          "1": 41,
+          "41": 1
+        },
+        "pair_deficit": 1640,
+        "maximum_fibre_size": 2
+      },
+      "external_line_at_infinity": {
+        "nonsquare": 3,
+        "full_affine_conic_size": 42,
+        "deleted_point": [
+          1,
+          0
+        ],
+        "profile": {
+          "1": 22,
+          "3": 20
+        },
+        "pair_deficit": 1640,
+        "maximum_fibre_size": 2
+      },
+      "proved_for_representatives": true
+    }
+  },
+  "branch_samples": {
+    "17": {
+      "0": {
+        "tangent": {
+          "p": 17,
+          "phase": 0,
+          "branch": "p=1 mod 4, phase zero",
+          "floors": {
+            "b=1": 18,
+            "b=p": 34
+          },
+          "type_containing_b=p_floor_sum": 178,
+          "type_budget": 162,
+          "ordinary_type_residue_audit": {
+            "p": 17,
+            "phase": 0,
+            "contains_b=p": false,
+            "profile": {
+              "b=1": 9,
+              "b=p": 0
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 0,
+                "residue": 0,
+                "minimum_b1_baselines": 9,
+                "maximum_b1_baselines": 9
+              }
+            ],
+            "minimum_b1_baselines": 9,
+            "aggregate_parallel_offset_from_baseline": 0
+          },
+          "exceptional_type_residue_audit": {
+            "p": 17,
+            "phase": 0,
+            "contains_b=p": true,
+            "profile": {
+              "b=1": 8,
+              "b=p": 1
+            },
+            "feasible_residue_rows": [],
+            "minimum_b1_baselines": null,
+            "aggregate_parallel_offset_from_baseline": null
+          },
+          "excluded": true,
+          "method": "type floor exceeds budget"
+        },
+        "external": {
+          "p": 17,
+          "phase": 0,
+          "P": 18,
+          "m": 9,
+          "floors": {
+            "b=1": 18,
+            "b=3": 28
+          },
+          "type_floor_formula": "mP+t(P-8), so t=0",
+          "global_b3_directions": 8,
+          "maximum_b3_per_type": 0,
+          "two_type_capacity": 0,
+          "excluded": true
+        }
+      },
+      "1": {
+        "tangent": {
+          "p": 17,
+          "phase": 1,
+          "branch": "p=1 mod 4, phase 1",
+          "floors": {
+            "b=1": 16,
+            "b=p": 0
+          },
+          "same_type_residue_ledger": {
+            "baseline_mean": 16,
+            "baseline_b1_directions_per_type_at_least": 7,
+            "parallel_count_offset_per_type": 1,
+            "finite_edge_formula": "E=m(x+y)+2",
+            "proof": "the common-residue equation and forbidden two-unit lift leave u=0 in phase zero or u=m-1 in phase one; the exact mean sum then fixes the aggregate P_d offset"
+          },
+          "ordinary_type_residue_audit": {
+            "p": 17,
+            "phase": 1,
+            "contains_b=p": false,
+            "profile": {
+              "b=1": 9,
+              "b=p": 0
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 8,
+                "residue": 16,
+                "minimum_b1_baselines": 8,
+                "maximum_b1_baselines": 8
+              }
+            ],
+            "minimum_b1_baselines": 8,
+            "aggregate_parallel_offset_from_baseline": 1
+          },
+          "exceptional_type_residue_audit": {
+            "p": 17,
+            "phase": 1,
+            "contains_b=p": true,
+            "profile": {
+              "b=1": 8,
+              "b=p": 1
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 8,
+                "residue": 16,
+                "minimum_b1_baselines": 7,
+                "maximum_b1_baselines": 8
+              }
+            ],
+            "minimum_b1_baselines": 7,
+            "aggregate_parallel_offset_from_baseline": 1
+          },
+          "baseline_congruence": "q divides I+P_d-(4+sigma)",
+          "substituted_congruences": "q divides x and q divides y",
+          "x_plus_y_upper_bound": 7,
+          "candidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "E": 2,
+              "I": 67,
+              "support_upper": 21,
+              "support_contradiction": true
+            }
+          ],
+          "excluded": true,
+          "method": "coefficient divisibility plus I<=p+2E"
+        },
+        "external": {
+          "p": 17,
+          "phase": 1,
+          "P": 18,
+          "m": 9,
+          "floors": {
+            "b=1": 16,
+            "b=3": 34
+          },
+          "type_floor_formula": "mP+(t-1)P, so t<=1",
+          "global_b3_directions": 8,
+          "maximum_b3_per_type": 1,
+          "two_type_capacity": 2,
+          "excluded": true
+        }
+      }
+    },
+    "19": {
+      "0": {
+        "tangent": {
+          "p": 19,
+          "phase": 0,
+          "branch": "p=3 mod 4, phase 0",
+          "floors": {
+            "b=1": 20,
+            "b=p": 0
+          },
+          "same_type_residue_ledger": {
+            "baseline_mean": 20,
+            "baseline_b1_directions_per_type_at_least": 8,
+            "parallel_count_offset_per_type": 0,
+            "finite_edge_formula": "E=m(x+y)+0",
+            "proof": "the common-residue equation and forbidden two-unit lift leave u=0 in phase zero or u=m-1 in phase one; the exact mean sum then fixes the aggregate P_d offset"
+          },
+          "ordinary_type_residue_audit": {
+            "p": 19,
+            "phase": 0,
+            "contains_b=p": false,
+            "profile": {
+              "b=1": 10,
+              "b=p": 0
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 0,
+                "residue": 0,
+                "minimum_b1_baselines": 10,
+                "maximum_b1_baselines": 10
+              }
+            ],
+            "minimum_b1_baselines": 10,
+            "aggregate_parallel_offset_from_baseline": 0
+          },
+          "exceptional_type_residue_audit": {
+            "p": 19,
+            "phase": 0,
+            "contains_b=p": true,
+            "profile": {
+              "b=1": 9,
+              "b=p": 1
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 0,
+                "residue": 0,
+                "minimum_b1_baselines": 8,
+                "maximum_b1_baselines": 9
+              }
+            ],
+            "minimum_b1_baselines": 8,
+            "aggregate_parallel_offset_from_baseline": 0
+          },
+          "baseline_congruence": "q divides I+P_d-(4+sigma)",
+          "substituted_congruences": "q divides x and q divides y",
+          "x_plus_y_upper_bound": 7,
+          "candidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "E": 0,
+              "I": 77,
+              "support_upper": 19,
+              "support_contradiction": true
+            }
+          ],
+          "excluded": true,
+          "method": "coefficient divisibility plus I<=p+2E"
+        },
+        "external": {
+          "p": 19,
+          "phase": 0,
+          "P": 20,
+          "m": 10,
+          "floors": {
+            "b=1": 20,
+            "b=3": 32
+          },
+          "type_floor_formula": "mP+t(P-8), so t=0",
+          "global_b3_directions": 9,
+          "maximum_b3_per_type": 0,
+          "two_type_capacity": 0,
+          "excluded": true
+        }
+      },
+      "1": {
+        "tangent": {
+          "p": 19,
+          "phase": 1,
+          "branch": "p=3 mod 4, phase 1",
+          "floors": {
+            "b=1": 18,
+            "b=p": 38
+          },
+          "same_type_residue_ledger": {
+            "baseline_mean": 18,
+            "baseline_b1_directions_per_type_at_least": 8,
+            "parallel_count_offset_per_type": 1,
+            "finite_edge_formula": "E=m(x+y)+2",
+            "proof": "the common-residue equation and forbidden two-unit lift leave u=0 in phase zero or u=m-1 in phase one; the exact mean sum then fixes the aggregate P_d offset"
+          },
+          "ordinary_type_residue_audit": {
+            "p": 19,
+            "phase": 1,
+            "contains_b=p": false,
+            "profile": {
+              "b=1": 10,
+              "b=p": 0
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 9,
+                "residue": 18,
+                "minimum_b1_baselines": 9,
+                "maximum_b1_baselines": 9
+              }
+            ],
+            "minimum_b1_baselines": 9,
+            "aggregate_parallel_offset_from_baseline": 1
+          },
+          "exceptional_type_residue_audit": {
+            "p": 19,
+            "phase": 1,
+            "contains_b=p": true,
+            "profile": {
+              "b=1": 9,
+              "b=p": 1
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 9,
+                "residue": 18,
+                "minimum_b1_baselines": 9,
+                "maximum_b1_baselines": 9
+              }
+            ],
+            "minimum_b1_baselines": 9,
+            "aggregate_parallel_offset_from_baseline": 1
+          },
+          "baseline_congruence": "q divides I+P_d-(4+sigma)",
+          "substituted_congruences": "q divides x and q divides y",
+          "x_plus_y_upper_bound": 7,
+          "candidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "E": 2,
+              "I": 75,
+              "support_upper": 23,
+              "support_contradiction": true
+            }
+          ],
+          "excluded": true,
+          "method": "coefficient divisibility plus I<=p+2E"
+        },
+        "external": {
+          "p": 19,
+          "phase": 1,
+          "P": 20,
+          "m": 10,
+          "floors": {
+            "b=1": 18,
+            "b=3": 38
+          },
+          "type_floor_formula": "mP+(t-1)P, so t<=1",
+          "global_b3_directions": 9,
+          "maximum_b3_per_type": 1,
+          "two_type_capacity": 2,
+          "excluded": true
+        }
+      }
+    },
+    "23": {
+      "0": {
+        "tangent": {
+          "p": 23,
+          "phase": 0,
+          "branch": "p=3 mod 4, phase 0",
+          "floors": {
+            "b=1": 24,
+            "b=p": 0
+          },
+          "same_type_residue_ledger": {
+            "baseline_mean": 24,
+            "baseline_b1_directions_per_type_at_least": 10,
+            "parallel_count_offset_per_type": 0,
+            "finite_edge_formula": "E=m(x+y)+0",
+            "proof": "the common-residue equation and forbidden two-unit lift leave u=0 in phase zero or u=m-1 in phase one; the exact mean sum then fixes the aggregate P_d offset"
+          },
+          "ordinary_type_residue_audit": {
+            "p": 23,
+            "phase": 0,
+            "contains_b=p": false,
+            "profile": {
+              "b=1": 12,
+              "b=p": 0
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 0,
+                "residue": 0,
+                "minimum_b1_baselines": 12,
+                "maximum_b1_baselines": 12
+              }
+            ],
+            "minimum_b1_baselines": 12,
+            "aggregate_parallel_offset_from_baseline": 0
+          },
+          "exceptional_type_residue_audit": {
+            "p": 23,
+            "phase": 0,
+            "contains_b=p": true,
+            "profile": {
+              "b=1": 11,
+              "b=p": 1
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 0,
+                "residue": 0,
+                "minimum_b1_baselines": 10,
+                "maximum_b1_baselines": 11
+              }
+            ],
+            "minimum_b1_baselines": 10,
+            "aggregate_parallel_offset_from_baseline": 0
+          },
+          "baseline_congruence": "q divides I+P_d-(4+sigma)",
+          "substituted_congruences": "q divides x and q divides y",
+          "x_plus_y_upper_bound": 7,
+          "candidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "E": 0,
+              "I": 93,
+              "support_upper": 23,
+              "support_contradiction": true
+            }
+          ],
+          "excluded": true,
+          "method": "coefficient divisibility plus I<=p+2E"
+        },
+        "external": {
+          "p": 23,
+          "phase": 0,
+          "P": 24,
+          "m": 12,
+          "floors": {
+            "b=1": 24,
+            "b=3": 40
+          },
+          "type_floor_formula": "mP+t(P-8), so t=0",
+          "global_b3_directions": 11,
+          "maximum_b3_per_type": 0,
+          "two_type_capacity": 0,
+          "excluded": true
+        }
+      },
+      "1": {
+        "tangent": {
+          "p": 23,
+          "phase": 1,
+          "branch": "p=3 mod 4, phase 1",
+          "floors": {
+            "b=1": 22,
+            "b=p": 46
+          },
+          "same_type_residue_ledger": {
+            "baseline_mean": 22,
+            "baseline_b1_directions_per_type_at_least": 10,
+            "parallel_count_offset_per_type": 1,
+            "finite_edge_formula": "E=m(x+y)+2",
+            "proof": "the common-residue equation and forbidden two-unit lift leave u=0 in phase zero or u=m-1 in phase one; the exact mean sum then fixes the aggregate P_d offset"
+          },
+          "ordinary_type_residue_audit": {
+            "p": 23,
+            "phase": 1,
+            "contains_b=p": false,
+            "profile": {
+              "b=1": 12,
+              "b=p": 0
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 11,
+                "residue": 22,
+                "minimum_b1_baselines": 11,
+                "maximum_b1_baselines": 11
+              }
+            ],
+            "minimum_b1_baselines": 11,
+            "aggregate_parallel_offset_from_baseline": 1
+          },
+          "exceptional_type_residue_audit": {
+            "p": 23,
+            "phase": 1,
+            "contains_b=p": true,
+            "profile": {
+              "b=1": 11,
+              "b=p": 1
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 11,
+                "residue": 22,
+                "minimum_b1_baselines": 11,
+                "maximum_b1_baselines": 11
+              }
+            ],
+            "minimum_b1_baselines": 11,
+            "aggregate_parallel_offset_from_baseline": 1
+          },
+          "baseline_congruence": "q divides I+P_d-(4+sigma)",
+          "substituted_congruences": "q divides x and q divides y",
+          "x_plus_y_upper_bound": 7,
+          "candidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "E": 2,
+              "I": 91,
+              "support_upper": 27,
+              "support_contradiction": true
+            }
+          ],
+          "excluded": true,
+          "method": "coefficient divisibility plus I<=p+2E"
+        },
+        "external": {
+          "p": 23,
+          "phase": 1,
+          "P": 24,
+          "m": 12,
+          "floors": {
+            "b=1": 22,
+            "b=3": 46
+          },
+          "type_floor_formula": "mP+(t-1)P, so t<=1",
+          "global_b3_directions": 11,
+          "maximum_b3_per_type": 1,
+          "two_type_capacity": 2,
+          "excluded": true
+        }
+      }
+    },
+    "29": {
+      "0": {
+        "tangent": {
+          "p": 29,
+          "phase": 0,
+          "branch": "p=1 mod 4, phase zero",
+          "floors": {
+            "b=1": 30,
+            "b=p": 58
+          },
+          "type_containing_b=p_floor_sum": 478,
+          "type_budget": 450,
+          "ordinary_type_residue_audit": {
+            "p": 29,
+            "phase": 0,
+            "contains_b=p": false,
+            "profile": {
+              "b=1": 15,
+              "b=p": 0
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 0,
+                "residue": 0,
+                "minimum_b1_baselines": 15,
+                "maximum_b1_baselines": 15
+              }
+            ],
+            "minimum_b1_baselines": 15,
+            "aggregate_parallel_offset_from_baseline": 0
+          },
+          "exceptional_type_residue_audit": {
+            "p": 29,
+            "phase": 0,
+            "contains_b=p": true,
+            "profile": {
+              "b=1": 14,
+              "b=p": 1
+            },
+            "feasible_residue_rows": [],
+            "minimum_b1_baselines": null,
+            "aggregate_parallel_offset_from_baseline": null
+          },
+          "excluded": true,
+          "method": "type floor exceeds budget"
+        },
+        "external": {
+          "p": 29,
+          "phase": 0,
+          "P": 30,
+          "m": 15,
+          "floors": {
+            "b=1": 30,
+            "b=3": 52
+          },
+          "type_floor_formula": "mP+t(P-8), so t=0",
+          "global_b3_directions": 14,
+          "maximum_b3_per_type": 0,
+          "two_type_capacity": 0,
+          "excluded": true
+        }
+      },
+      "1": {
+        "tangent": {
+          "p": 29,
+          "phase": 1,
+          "branch": "p=1 mod 4, phase 1",
+          "floors": {
+            "b=1": 28,
+            "b=p": 0
+          },
+          "same_type_residue_ledger": {
+            "baseline_mean": 28,
+            "baseline_b1_directions_per_type_at_least": 13,
+            "parallel_count_offset_per_type": 1,
+            "finite_edge_formula": "E=m(x+y)+2",
+            "proof": "the common-residue equation and forbidden two-unit lift leave u=0 in phase zero or u=m-1 in phase one; the exact mean sum then fixes the aggregate P_d offset"
+          },
+          "ordinary_type_residue_audit": {
+            "p": 29,
+            "phase": 1,
+            "contains_b=p": false,
+            "profile": {
+              "b=1": 15,
+              "b=p": 0
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 14,
+                "residue": 28,
+                "minimum_b1_baselines": 14,
+                "maximum_b1_baselines": 14
+              }
+            ],
+            "minimum_b1_baselines": 14,
+            "aggregate_parallel_offset_from_baseline": 1
+          },
+          "exceptional_type_residue_audit": {
+            "p": 29,
+            "phase": 1,
+            "contains_b=p": true,
+            "profile": {
+              "b=1": 14,
+              "b=p": 1
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 14,
+                "residue": 28,
+                "minimum_b1_baselines": 13,
+                "maximum_b1_baselines": 14
+              }
+            ],
+            "minimum_b1_baselines": 13,
+            "aggregate_parallel_offset_from_baseline": 1
+          },
+          "baseline_congruence": "q divides I+P_d-(4+sigma)",
+          "substituted_congruences": "q divides x and q divides y",
+          "x_plus_y_upper_bound": 7,
+          "candidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "E": 2,
+              "I": 115,
+              "support_upper": 33,
+              "support_contradiction": true
+            }
+          ],
+          "excluded": true,
+          "method": "coefficient divisibility plus I<=p+2E"
+        },
+        "external": {
+          "p": 29,
+          "phase": 1,
+          "P": 30,
+          "m": 15,
+          "floors": {
+            "b=1": 28,
+            "b=3": 58
+          },
+          "type_floor_formula": "mP+(t-1)P, so t<=1",
+          "global_b3_directions": 14,
+          "maximum_b3_per_type": 1,
+          "two_type_capacity": 2,
+          "excluded": true
+        }
+      }
+    },
+    "31": {
+      "0": {
+        "tangent": {
+          "p": 31,
+          "phase": 0,
+          "branch": "p=3 mod 4, phase 0",
+          "floors": {
+            "b=1": 32,
+            "b=p": 0
+          },
+          "same_type_residue_ledger": {
+            "baseline_mean": 32,
+            "baseline_b1_directions_per_type_at_least": 14,
+            "parallel_count_offset_per_type": 0,
+            "finite_edge_formula": "E=m(x+y)+0",
+            "proof": "the common-residue equation and forbidden two-unit lift leave u=0 in phase zero or u=m-1 in phase one; the exact mean sum then fixes the aggregate P_d offset"
+          },
+          "ordinary_type_residue_audit": {
+            "p": 31,
+            "phase": 0,
+            "contains_b=p": false,
+            "profile": {
+              "b=1": 16,
+              "b=p": 0
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 0,
+                "residue": 0,
+                "minimum_b1_baselines": 16,
+                "maximum_b1_baselines": 16
+              }
+            ],
+            "minimum_b1_baselines": 16,
+            "aggregate_parallel_offset_from_baseline": 0
+          },
+          "exceptional_type_residue_audit": {
+            "p": 31,
+            "phase": 0,
+            "contains_b=p": true,
+            "profile": {
+              "b=1": 15,
+              "b=p": 1
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 0,
+                "residue": 0,
+                "minimum_b1_baselines": 14,
+                "maximum_b1_baselines": 15
+              }
+            ],
+            "minimum_b1_baselines": 14,
+            "aggregate_parallel_offset_from_baseline": 0
+          },
+          "baseline_congruence": "q divides I+P_d-(4+sigma)",
+          "substituted_congruences": "q divides x and q divides y",
+          "x_plus_y_upper_bound": 7,
+          "candidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "E": 0,
+              "I": 125,
+              "support_upper": 31,
+              "support_contradiction": true
+            }
+          ],
+          "excluded": true,
+          "method": "coefficient divisibility plus I<=p+2E"
+        },
+        "external": {
+          "p": 31,
+          "phase": 0,
+          "P": 32,
+          "m": 16,
+          "floors": {
+            "b=1": 32,
+            "b=3": 56
+          },
+          "type_floor_formula": "mP+t(P-8), so t=0",
+          "global_b3_directions": 15,
+          "maximum_b3_per_type": 0,
+          "two_type_capacity": 0,
+          "excluded": true
+        }
+      },
+      "1": {
+        "tangent": {
+          "p": 31,
+          "phase": 1,
+          "branch": "p=3 mod 4, phase 1",
+          "floors": {
+            "b=1": 30,
+            "b=p": 62
+          },
+          "same_type_residue_ledger": {
+            "baseline_mean": 30,
+            "baseline_b1_directions_per_type_at_least": 14,
+            "parallel_count_offset_per_type": 1,
+            "finite_edge_formula": "E=m(x+y)+2",
+            "proof": "the common-residue equation and forbidden two-unit lift leave u=0 in phase zero or u=m-1 in phase one; the exact mean sum then fixes the aggregate P_d offset"
+          },
+          "ordinary_type_residue_audit": {
+            "p": 31,
+            "phase": 1,
+            "contains_b=p": false,
+            "profile": {
+              "b=1": 16,
+              "b=p": 0
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 15,
+                "residue": 30,
+                "minimum_b1_baselines": 15,
+                "maximum_b1_baselines": 15
+              }
+            ],
+            "minimum_b1_baselines": 15,
+            "aggregate_parallel_offset_from_baseline": 1
+          },
+          "exceptional_type_residue_audit": {
+            "p": 31,
+            "phase": 1,
+            "contains_b=p": true,
+            "profile": {
+              "b=1": 15,
+              "b=p": 1
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 15,
+                "residue": 30,
+                "minimum_b1_baselines": 15,
+                "maximum_b1_baselines": 15
+              }
+            ],
+            "minimum_b1_baselines": 15,
+            "aggregate_parallel_offset_from_baseline": 1
+          },
+          "baseline_congruence": "q divides I+P_d-(4+sigma)",
+          "substituted_congruences": "q divides x and q divides y",
+          "x_plus_y_upper_bound": 7,
+          "candidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "E": 2,
+              "I": 123,
+              "support_upper": 35,
+              "support_contradiction": true
+            }
+          ],
+          "excluded": true,
+          "method": "coefficient divisibility plus I<=p+2E"
+        },
+        "external": {
+          "p": 31,
+          "phase": 1,
+          "P": 32,
+          "m": 16,
+          "floors": {
+            "b=1": 30,
+            "b=3": 62
+          },
+          "type_floor_formula": "mP+(t-1)P, so t<=1",
+          "global_b3_directions": 15,
+          "maximum_b3_per_type": 1,
+          "two_type_capacity": 2,
+          "excluded": true
+        }
+      }
+    },
+    "37": {
+      "0": {
+        "tangent": {
+          "p": 37,
+          "phase": 0,
+          "branch": "p=1 mod 4, phase zero",
+          "floors": {
+            "b=1": 38,
+            "b=p": 74
+          },
+          "type_containing_b=p_floor_sum": 758,
+          "type_budget": 722,
+          "ordinary_type_residue_audit": {
+            "p": 37,
+            "phase": 0,
+            "contains_b=p": false,
+            "profile": {
+              "b=1": 19,
+              "b=p": 0
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 0,
+                "residue": 0,
+                "minimum_b1_baselines": 19,
+                "maximum_b1_baselines": 19
+              }
+            ],
+            "minimum_b1_baselines": 19,
+            "aggregate_parallel_offset_from_baseline": 0
+          },
+          "exceptional_type_residue_audit": {
+            "p": 37,
+            "phase": 0,
+            "contains_b=p": true,
+            "profile": {
+              "b=1": 18,
+              "b=p": 1
+            },
+            "feasible_residue_rows": [],
+            "minimum_b1_baselines": null,
+            "aggregate_parallel_offset_from_baseline": null
+          },
+          "excluded": true,
+          "method": "type floor exceeds budget"
+        },
+        "external": {
+          "p": 37,
+          "phase": 0,
+          "P": 38,
+          "m": 19,
+          "floors": {
+            "b=1": 38,
+            "b=3": 68
+          },
+          "type_floor_formula": "mP+t(P-8), so t=0",
+          "global_b3_directions": 18,
+          "maximum_b3_per_type": 0,
+          "two_type_capacity": 0,
+          "excluded": true
+        }
+      },
+      "1": {
+        "tangent": {
+          "p": 37,
+          "phase": 1,
+          "branch": "p=1 mod 4, phase 1",
+          "floors": {
+            "b=1": 36,
+            "b=p": 0
+          },
+          "same_type_residue_ledger": {
+            "baseline_mean": 36,
+            "baseline_b1_directions_per_type_at_least": 17,
+            "parallel_count_offset_per_type": 1,
+            "finite_edge_formula": "E=m(x+y)+2",
+            "proof": "the common-residue equation and forbidden two-unit lift leave u=0 in phase zero or u=m-1 in phase one; the exact mean sum then fixes the aggregate P_d offset"
+          },
+          "ordinary_type_residue_audit": {
+            "p": 37,
+            "phase": 1,
+            "contains_b=p": false,
+            "profile": {
+              "b=1": 19,
+              "b=p": 0
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 18,
+                "residue": 36,
+                "minimum_b1_baselines": 18,
+                "maximum_b1_baselines": 18
+              }
+            ],
+            "minimum_b1_baselines": 18,
+            "aggregate_parallel_offset_from_baseline": 1
+          },
+          "exceptional_type_residue_audit": {
+            "p": 37,
+            "phase": 1,
+            "contains_b=p": true,
+            "profile": {
+              "b=1": 18,
+              "b=p": 1
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 18,
+                "residue": 36,
+                "minimum_b1_baselines": 17,
+                "maximum_b1_baselines": 18
+              }
+            ],
+            "minimum_b1_baselines": 17,
+            "aggregate_parallel_offset_from_baseline": 1
+          },
+          "baseline_congruence": "q divides I+P_d-(4+sigma)",
+          "substituted_congruences": "q divides x and q divides y",
+          "x_plus_y_upper_bound": 7,
+          "candidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "E": 2,
+              "I": 147,
+              "support_upper": 41,
+              "support_contradiction": true
+            }
+          ],
+          "excluded": true,
+          "method": "coefficient divisibility plus I<=p+2E"
+        },
+        "external": {
+          "p": 37,
+          "phase": 1,
+          "P": 38,
+          "m": 19,
+          "floors": {
+            "b=1": 36,
+            "b=3": 74
+          },
+          "type_floor_formula": "mP+(t-1)P, so t<=1",
+          "global_b3_directions": 18,
+          "maximum_b3_per_type": 1,
+          "two_type_capacity": 2,
+          "excluded": true
+        }
+      }
+    },
+    "41": {
+      "0": {
+        "tangent": {
+          "p": 41,
+          "phase": 0,
+          "branch": "p=1 mod 4, phase zero",
+          "floors": {
+            "b=1": 42,
+            "b=p": 82
+          },
+          "type_containing_b=p_floor_sum": 922,
+          "type_budget": 882,
+          "ordinary_type_residue_audit": {
+            "p": 41,
+            "phase": 0,
+            "contains_b=p": false,
+            "profile": {
+              "b=1": 21,
+              "b=p": 0
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 0,
+                "residue": 0,
+                "minimum_b1_baselines": 21,
+                "maximum_b1_baselines": 21
+              }
+            ],
+            "minimum_b1_baselines": 21,
+            "aggregate_parallel_offset_from_baseline": 0
+          },
+          "exceptional_type_residue_audit": {
+            "p": 41,
+            "phase": 0,
+            "contains_b=p": true,
+            "profile": {
+              "b=1": 20,
+              "b=p": 1
+            },
+            "feasible_residue_rows": [],
+            "minimum_b1_baselines": null,
+            "aggregate_parallel_offset_from_baseline": null
+          },
+          "excluded": true,
+          "method": "type floor exceeds budget"
+        },
+        "external": {
+          "p": 41,
+          "phase": 0,
+          "P": 42,
+          "m": 21,
+          "floors": {
+            "b=1": 42,
+            "b=3": 76
+          },
+          "type_floor_formula": "mP+t(P-8), so t=0",
+          "global_b3_directions": 20,
+          "maximum_b3_per_type": 0,
+          "two_type_capacity": 0,
+          "excluded": true
+        }
+      },
+      "1": {
+        "tangent": {
+          "p": 41,
+          "phase": 1,
+          "branch": "p=1 mod 4, phase 1",
+          "floors": {
+            "b=1": 40,
+            "b=p": 0
+          },
+          "same_type_residue_ledger": {
+            "baseline_mean": 40,
+            "baseline_b1_directions_per_type_at_least": 19,
+            "parallel_count_offset_per_type": 1,
+            "finite_edge_formula": "E=m(x+y)+2",
+            "proof": "the common-residue equation and forbidden two-unit lift leave u=0 in phase zero or u=m-1 in phase one; the exact mean sum then fixes the aggregate P_d offset"
+          },
+          "ordinary_type_residue_audit": {
+            "p": 41,
+            "phase": 1,
+            "contains_b=p": false,
+            "profile": {
+              "b=1": 21,
+              "b=p": 0
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 20,
+                "residue": 40,
+                "minimum_b1_baselines": 20,
+                "maximum_b1_baselines": 20
+              }
+            ],
+            "minimum_b1_baselines": 20,
+            "aggregate_parallel_offset_from_baseline": 1
+          },
+          "exceptional_type_residue_audit": {
+            "p": 41,
+            "phase": 1,
+            "contains_b=p": true,
+            "profile": {
+              "b=1": 20,
+              "b=p": 1
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 20,
+                "residue": 40,
+                "minimum_b1_baselines": 19,
+                "maximum_b1_baselines": 20
+              }
+            ],
+            "minimum_b1_baselines": 19,
+            "aggregate_parallel_offset_from_baseline": 1
+          },
+          "baseline_congruence": "q divides I+P_d-(4+sigma)",
+          "substituted_congruences": "q divides x and q divides y",
+          "x_plus_y_upper_bound": 7,
+          "candidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "E": 2,
+              "I": 163,
+              "support_upper": 45,
+              "support_contradiction": true
+            }
+          ],
+          "excluded": true,
+          "method": "coefficient divisibility plus I<=p+2E"
+        },
+        "external": {
+          "p": 41,
+          "phase": 1,
+          "P": 42,
+          "m": 21,
+          "floors": {
+            "b=1": 40,
+            "b=3": 82
+          },
+          "type_floor_formula": "mP+(t-1)P, so t<=1",
+          "global_b3_directions": 20,
+          "maximum_b3_per_type": 1,
+          "two_type_capacity": 2,
+          "excluded": true
+        }
+      }
+    },
+    "101": {
+      "0": {
+        "tangent": {
+          "p": 101,
+          "phase": 0,
+          "branch": "p=1 mod 4, phase zero",
+          "floors": {
+            "b=1": 102,
+            "b=p": 202
+          },
+          "type_containing_b=p_floor_sum": 5302,
+          "type_budget": 5202,
+          "ordinary_type_residue_audit": {
+            "p": 101,
+            "phase": 0,
+            "contains_b=p": false,
+            "profile": {
+              "b=1": 51,
+              "b=p": 0
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 0,
+                "residue": 0,
+                "minimum_b1_baselines": 51,
+                "maximum_b1_baselines": 51
+              }
+            ],
+            "minimum_b1_baselines": 51,
+            "aggregate_parallel_offset_from_baseline": 0
+          },
+          "exceptional_type_residue_audit": {
+            "p": 101,
+            "phase": 0,
+            "contains_b=p": true,
+            "profile": {
+              "b=1": 50,
+              "b=p": 1
+            },
+            "feasible_residue_rows": [],
+            "minimum_b1_baselines": null,
+            "aggregate_parallel_offset_from_baseline": null
+          },
+          "excluded": true,
+          "method": "type floor exceeds budget"
+        },
+        "external": {
+          "p": 101,
+          "phase": 0,
+          "P": 102,
+          "m": 51,
+          "floors": {
+            "b=1": 102,
+            "b=3": 196
+          },
+          "type_floor_formula": "mP+t(P-8), so t=0",
+          "global_b3_directions": 50,
+          "maximum_b3_per_type": 0,
+          "two_type_capacity": 0,
+          "excluded": true
+        }
+      },
+      "1": {
+        "tangent": {
+          "p": 101,
+          "phase": 1,
+          "branch": "p=1 mod 4, phase 1",
+          "floors": {
+            "b=1": 100,
+            "b=p": 0
+          },
+          "same_type_residue_ledger": {
+            "baseline_mean": 100,
+            "baseline_b1_directions_per_type_at_least": 49,
+            "parallel_count_offset_per_type": 1,
+            "finite_edge_formula": "E=m(x+y)+2",
+            "proof": "the common-residue equation and forbidden two-unit lift leave u=0 in phase zero or u=m-1 in phase one; the exact mean sum then fixes the aggregate P_d offset"
+          },
+          "ordinary_type_residue_audit": {
+            "p": 101,
+            "phase": 1,
+            "contains_b=p": false,
+            "profile": {
+              "b=1": 51,
+              "b=p": 0
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 50,
+                "residue": 100,
+                "minimum_b1_baselines": 50,
+                "maximum_b1_baselines": 50
+              }
+            ],
+            "minimum_b1_baselines": 50,
+            "aggregate_parallel_offset_from_baseline": 1
+          },
+          "exceptional_type_residue_audit": {
+            "p": 101,
+            "phase": 1,
+            "contains_b=p": true,
+            "profile": {
+              "b=1": 50,
+              "b=p": 1
+            },
+            "feasible_residue_rows": [
+              {
+                "u": 50,
+                "residue": 100,
+                "minimum_b1_baselines": 49,
+                "maximum_b1_baselines": 50
+              }
+            ],
+            "minimum_b1_baselines": 49,
+            "aggregate_parallel_offset_from_baseline": 1
+          },
+          "baseline_congruence": "q divides I+P_d-(4+sigma)",
+          "substituted_congruences": "q divides x and q divides y",
+          "x_plus_y_upper_bound": 7,
+          "candidates": [
+            {
+              "x": 0,
+              "y": 0,
+              "E": 2,
+              "I": 403,
+              "support_upper": 105,
+              "support_contradiction": true
+            }
+          ],
+          "excluded": true,
+          "method": "coefficient divisibility plus I<=p+2E"
+        },
+        "external": {
+          "p": 101,
+          "phase": 1,
+          "P": 102,
+          "m": 51,
+          "floors": {
+            "b=1": 100,
+            "b=3": 202
+          },
+          "type_floor_formula": "mP+(t-1)P, so t<=1",
+          "global_b3_directions": 50,
+          "maximum_b3_per_type": 1,
+          "two_type_capacity": 2,
+          "excluded": true
+        }
+      }
+    }
+  },
+  "literature_scope": "Segre supplies conic containment; the affine profiles are derived directly, and no searched source combines them with the Paley budgets",
+  "L_status": "OPEN"
+}
