@@ -922,6 +922,25 @@ infinity-plus-`(p-2)` boundary is excluded for both signs and every prime
 found no duplicate of the combined Paley mean/coefficient argument and no
 relevant integer-sequence interpretation.
 
+## 7aa. Complete infinity-plus-`(p-2)` shell exclusion (2026-08-28)
+
+Proposition 15.674 removes 15.673's endpoint hypothesis. Across every odd
+fibre count, all directional floors are at least `p-1`, and every
+intermediate floor is strictly above `p+1`. The exact same-type sum then
+permits only residues zero and `p-1`: an intermediate count can occur only
+as the unique mean-`2p` exception of its type. Pair deficit excludes two
+`b=1` baseline types, while two complementary baseline types determine at
+most two directions and are collinear. The forced mixed pair has exactly
+15.673's four coefficient-congruence rows and exact `p=17` norm obstruction.
+Thus the full infinity-plus-`(p-2)` shell is excluded for both signs and all
+primes `p>=17`; the next shell has `p` finite points.
+
+The determined-direction step is elementary but adjacent to the Rédei
+direction literature, including Lev [45]. Targeted literature searches found
+no source combining those ideas with Paley type sums and parity-majorant
+floors. OEIS searches for the two arithmetic-candidate value lists and the
+pair `75,57` produced unrelated matches only; no sequence claim is made.
+
 ---
 
 ## 8. What is not in the older literature
@@ -981,5 +1000,6 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 42. S. Ball and B. Csajbók, *On sets of points with few odd secants*, [arXiv:1711.10876](https://arxiv.org/abs/1711.10876) (odd-secant bounds for \(q+2\)-point projective sets; not the eight-point split-type census of 15.670).
 43. M. Kiermaier and S. Kurz, *Maximal integral point sets in affine planes over finite fields*, [arXiv:1401.2825](https://arxiv.org/abs/1401.2825) (prescribed directions and Paley-clique context; not the boundary parity-floor budget of 15.670).
 44. S. Ball and M. Lavrauw, *Planar arcs*, [arXiv:1705.10940](https://arxiv.org/abs/1705.10940) (modern primary restatement of Segre's classification of odd-order arcs of sizes `q` and `q+1`; the `q`-arc conic theorem is used in 15.673's endpoint equality case).
+45. V. F. Lev, *Point distribution and perfect directions in* \(F_p^2\), [arXiv:1903.01518](https://arxiv.org/abs/1903.01518) (Rédei-type direction bounds adjacent to, but not implying, the determined-direction/type-budget argument of 15.674).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

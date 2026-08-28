@@ -7135,3 +7135,120 @@ Evidence: `src/e1_gmin_m4_prop15673.py`,
 `evidence/e1_gmin_m4_prop15673.json`,
 `evidence/NOTE_2026-08-28_endpoint_near_line_complete.md`, and
 `tests/test_prop15673.py`.
+
+## Proposition 15.674 — complete infinity-plus-\((p-2)\) shell exclusion
+
+Let the odd-degree boundary consist of infinity and (s=p-2) finite
+points, with no restriction on its directional odd-fibre counts. Put
+
+\[
+ P=p+1=2m,\qquad q={p-1\over2}.
+\]
+
+Every (b_d) is odd. Proposition 15.669's complete floor table gives
+
+\[
+\begin{array}{c|c|cc}
+p\bmod4&\eta&b=1&b=s\\ \hline
+3&0&P&P\\
+1&1&P-2&P\\
+3&1&P-2&P-2\\
+1&0&P&P-2.
+\end{array}                                           \tag{15.674.1}
+\]
+
+For every intermediate (3\le b\le p-4), the floor is either
+(2P-8) or (2P-2). Thus all floors are at least (P-2), and every
+intermediate floor is strictly larger than (P).
+
+Within one quadratic type, (15.672.1) and the exact type sum give
+
+\[
+ a_d=2u+Pk_d,qquad 0\le u<m,qquad \sum_d k_d=m-u.
+                                                            \tag{15.674.2}
+\]
+
+If (1\le u\le m-2), every (k_d\ge1), contradicting
+(sum k_d=m-u<m). If (u=0), every (k_d\ge1). A floor-((P-2))
+direction cannot take value (P), since that would be a forbidden
+two-unit lift, and an intermediate direction has floor larger than (P).
+Therefore every direction has floor and mean (P). If (u=m-1), then
+(sum k_d=1): exactly (m-1) directions have floor and mean (P-2),
+and the remaining arbitrary direction has mean (2P-2=2p). Consequently
+each type contains at most one intermediate odd-fibre count.
+
+When the two endpoint kinds share one baseline floor, they cannot both occur
+among the baseline directions of one type. Their equal means would force
+equal (P_d), whereas the coefficient identities give
+
+\[
+ q\mid I+P_d-(4+\sigma)\quad(b=1),\qquad
+ q\mid I+P_d-4\quad(b=s),                              \tag{15.674.3}
+\]
+
+which differ by one modulo (q). Hence every baseline type is homogeneous.
+
+Call the two possible baseline kinds (B) for (b=1) and (C) for
+(b=s). Two (B) types contain at least (2(m-1)=p-1>s) baseline
+directions. Their contribution to the pair deficit alone exceeds
+(s(s-1)), impossible. Two (C) types leave at most their two exceptional
+directions determined by pairs of finite boundary points. A noncollinear
+set determines at least three directions, so the finite boundary would be
+collinear; Propositions 15.671--15.672 exclude that case. Thus one type has
+each baseline kind.
+
+The four type pairs and their numbers of exceptional parallel edges are
+
+\[
+\begin{array}{c|cc|c}
+(p\bmod4,\eta)&B\text{ baselines/exceptions}&
+C\text{ baselines/exceptions}&\text{total offset}\\ \hline
+(3,0)&m/0&m/0&0\\
+(1,1)&(m-1)/1&m/0&1\\
+(3,1)&(m-1)/1&(m-1)/1&2\\
+(1,0)&m/0&(m-1)/1&1.
+\end{array}                                           \tag{15.674.4}
+\]
+
+Let (x,y) be the baseline parallel counts of the (B,C) types.
+Equations (15.674.3), the edge count, and (15.674.4) reproduce exactly
+
+\[
+\begin{array}{c|c|c}
+(p\bmod4,\eta)&E&\text{congruences}\\ \hline
+(3,0)&m(x+y)&q\mid y,\ q\mid x-1\\
+(1,1)&m(x+y)+1&q\mid x,\ q\mid y-1\\
+(3,1)&m(x+y)+2&q\mid y,\ q\mid x+1\\
+(1,0)&m(x+y)+1&q\mid x,\ q\mid y+1.
+\end{array}                                           \tag{15.674.5}
+\]
+
+Since (I=4p+1-E\ge1), (x+y\le7). As in Proposition 15.673, the
+first and second rows have only ((1,0)) and ((0,1)), respectively,
+and both violate (I\le s+2E); the third has no candidate; and the fourth
+has no candidate for (q>8).
+
+For (p=17,q=8), the last row leaves
+
+\[
+ (x,y)=(0,7),\qquad E=64,\qquad I=5.
+\]
+
+The (C) type has at least eight complementary baseline directions. For
+any one of them, Proposition 15.673's exact matrix calculation still gives
+entrywise norm at least (75), against only (E-P_d=57) transverse
+edges. It does not involve the exceptional direction's fibre count. Hence
+this final candidate is also impossible, and
+
+\[
+ \boxed{\text{every infinity-plus-}(p-2)\text{ boundary is impossible for
+ both signs and every odd prime }p\ge17.}
+\]
+
+The infinity-plus-(p) shell, the large all-finite range, general residual
+(ii), R1, global QVAR, Type I, and the limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15674.py`,
+`evidence/e1_gmin_m4_prop15674.json`,
+`evidence/NOTE_2026-08-28_full_near_line_shell_complete.md`, and
+`tests/test_prop15674.py`.

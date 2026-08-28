@@ -1,5 +1,17 @@
 # Status (2026-08-28)
 
+**15.674 PROVED the entire infinity-plus-`(p-2)` boundary shell is
+impossible for both signs and every prime `p>=17`, not residual (ii)**:
+all intermediate odd-fibre floors lie strictly above `p+1`. Exact type-sum
+residues leave only an all-`p+1` form or `m-1` mean-`p-1` baselines plus one
+mean-`2p` exception, so each type contains at most one intermediate
+direction. Pair deficit excludes two `b=1` baseline types, while two
+complementary baseline types determine at most two directions and are
+collinear. The forced mixed pair has exactly 15.673's four arithmetic rows;
+three close uniformly and the sole `p=17` endpoint again has `75>57`.
+The infinity-plus-`p` shell, large all-finite boundaries, residual (ii),
+Type I, R1, global QVAR, and L remain OPEN.
+
 **15.673 PROVED every endpoint-only infinity-plus-`(p-2)` boundary is
 impossible for both signs and every prime `p>=17`, not residual (ii)**:
 Propositions 15.671--15.672 close the collinear case. For arbitrary endpoint

@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-28 (15.673 excludes the endpoint-only infinity-plus-`(p-2)` branch for `p>=17`; no general flag flipped)
+**Date:** 2026-08-28 (15.674 excludes the full infinity-plus-`(p-2)` shell for `p>=17`; no general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -45,7 +45,30 @@ whose directional odd-fibre counts all lie in `{1,p-2}`, for both signs and
 all primes `p>=17`. Same-type mean residues leave four arithmetic rows;
 Segre's `p`-arc theorem kills pair-deficit equality, and the unique `p=17`
 endpoint has exact inter-fibre norm `75>57`. Profiles with intermediate
-odd-fibre counts remain open.
+odd-fibre counts are then closed by Proposition 15.674: exact type sums allow
+an intermediate count only as the unique high direction of its type, which
+leaves the same four arithmetic rows. The next infinity-present shell has
+`p` finite points.
+
+## 15.674 — the entire near-line shell is impossible
+
+`src/e1_gmin_m4_prop15674.py` and
+`evidence/NOTE_2026-08-28_full_near_line_shell_complete.md`. Every odd-fibre
+floor is at least `p-1`, while every intermediate floor is strictly above
+`p+1`. Writing same-type means as
+
+```text
+a_d=2u+(p+1)k_d,   sum k_d=m-u,
+```
+
+excludes all interior residues. Residue zero gives only all-`p+1`
+baselines; residue `p-1` gives `m-1` low baselines and one arbitrary
+mean-`2p` exception. Two `b=1` baseline types exceed the pair-deficit budget;
+two complementary baseline types determine at most two directions and are
+collinear. The forced mixed pair has 15.673's offsets `0,1,2,1`, coefficient
+congruences, support contradictions, and exact `p=17` norm close. Therefore
+all odd-fibre profiles on infinity plus `p-2` finite points are excluded for
+both signs and every prime `p>=17`. This is one full shell, not residual (ii).
 
 ## 15.673 — every endpoint-only near-line boundary is impossible
 

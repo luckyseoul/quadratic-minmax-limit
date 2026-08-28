@@ -1,0 +1,1277 @@
+{
+  "prop": "15.674",
+  "title": "Complete infinity-plus-(p-2) boundary-shell exclusion",
+  "proved": true,
+  "theorem": {
+    "boundary": "infinity plus p-2 finite points",
+    "all_directional_odd_fibre_profiles": true,
+    "all_odd_primes_p_at_least_17": "EXCLUDED_FOR_BOTH_PRODUCT_SIGNS",
+    "dependency": "15.671--15.673",
+    "larger_infinity_present_boundaries": "OPEN",
+    "all_finite_large_boundaries": "OPEN",
+    "general_residual_ii": false,
+    "R1": false,
+    "global_QVAR": false,
+    "type_I": false,
+    "limit_exists": false
+  },
+  "generic_residue_argument": "only residues 0 and p-1 survive; every intermediate direction is the unique mean-2p exception of its type",
+  "symbolic_arithmetic_ledger": {
+    "p3_phase0": {
+      "range": "q>=9",
+      "forced_candidate": [
+        1,
+        0
+      ],
+      "boundary_gap": "3q+3>0",
+      "excluded": true
+    },
+    "p1_phase1": {
+      "range": "q>=8",
+      "forced_candidate": [
+        0,
+        1
+      ],
+      "boundary_gap": "3q>0",
+      "excluded": true
+    },
+    "p3_phase1": {
+      "range": "q>=9",
+      "reason": "0<=x+1<=8<q contradicts q|(x+1)",
+      "excluded": true
+    },
+    "p1_phase0": {
+      "range": "q>8",
+      "reason": "0<=x<=7 forces x=0, while 1<=y+1<=8<q",
+      "endpoint_q_eq_8": "p=17, (x,y)=(0,7), l1 75>57",
+      "excluded": true
+    },
+    "covers_every_odd_p_at_least_17": true
+  },
+  "samples": {
+    "17": {
+      "0": {
+        "p": 17,
+        "phase": 0,
+        "c_H": 1,
+        "excluded": true,
+        "method": "exact complementary-baseline inter-fibre l1 minimum",
+        "full_profile_type_pair_ledger": {
+          "p": 17,
+          "phase": 0,
+          "branch": "p1_phase0",
+          "forms": {
+            "b1": {
+              "baseline_count": 9,
+              "exceptions": 0
+            },
+            "complement": {
+              "baseline_count": 8,
+              "exceptions": 1
+            }
+          },
+          "equal_floor_baseline_homogeneity": "equal means force equal P_d, but b=1 and b=p-2 baseline coefficient congruences differ by one modulo q",
+          "two_b1_types": {
+            "b1_baseline_directions": 18,
+            "required_deficit": 252,
+            "pair_budget": 210,
+            "contradiction": true
+          },
+          "two_complement_types": {
+            "maximum_determined_directions": 2,
+            "at_most_two_directions_implies_collinear": true,
+            "collinear_case_closed_by": "15.671--15.672",
+            "contradiction": true
+          },
+          "forced_pair": [
+            "b=1 baseline type",
+            "b=p-2 baseline type"
+          ],
+          "finite_edge_offset": 1,
+          "intermediate_directions_total_upper_bound": 1,
+          "coefficient_ledger": {
+            "q": 8,
+            "b1_target": "4 + z_j",
+            "b1_divisibility": "q divides I+P_d-5",
+            "complement_target": "4 + z_a*z_b",
+            "complement_divisibility": "q divides I+P_d-4",
+            "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+            "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+            "proved": true
+          },
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 17,
+          "phase": 0,
+          "branch": "p1_phase0",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y+1"
+          ],
+          "candidates": [
+            {
+              "x": 0,
+              "y": 7,
+              "E": 64,
+              "I": 5,
+              "I_boundary_upper": 143,
+              "boundary_contradiction": false
+            }
+          ]
+        },
+        "p17_l1": {
+          "p": 17,
+          "candidate": {
+            "x": 0,
+            "y": 7,
+            "E": 64,
+            "I": 5
+          },
+          "baseline_complement_parallel_count": 7,
+          "coefficient_scalar_2c": 1,
+          "matrix": "L_st=1-n_s-n_t+1_{st=ab}, sum n_s=5",
+          "positive_fibre_ledger": {
+            "1": {
+              "base_l1": 184,
+              "after_distinguished_pair_lower_bound": 183
+            },
+            "2": {
+              "base_l1": 154,
+              "after_distinguished_pair_lower_bound": 153
+            },
+            "3": {
+              "base_l1": 126,
+              "after_distinguished_pair_lower_bound": 125
+            },
+            "4": {
+              "base_l1": 100,
+              "after_distinguished_pair_lower_bound": 99
+            },
+            "5": {
+              "base_l1": 76,
+              "after_distinguished_pair_lower_bound": 75
+            }
+          },
+          "lower_bound": 75,
+          "achieved_by_five_unit_counts_including_a_b": 75,
+          "exact_minimum": 75,
+          "transverse_edge_budget": 57,
+          "contradiction": true
+        }
+      },
+      "1": {
+        "p": 17,
+        "phase": 1,
+        "c_H": -1,
+        "excluded": true,
+        "method": "I<=|S|+2E boundary support inequality",
+        "full_profile_type_pair_ledger": {
+          "p": 17,
+          "phase": 1,
+          "branch": "p1_phase1",
+          "forms": {
+            "b1": {
+              "baseline_count": 8,
+              "exceptions": 1
+            },
+            "complement": {
+              "baseline_count": 9,
+              "exceptions": 0
+            }
+          },
+          "equal_floor_baseline_homogeneity": "equal means force equal P_d, but b=1 and b=p-2 baseline coefficient congruences differ by one modulo q",
+          "two_b1_types": {
+            "b1_baseline_directions": 16,
+            "required_deficit": 224,
+            "pair_budget": 210,
+            "contradiction": true
+          },
+          "two_complement_types": {
+            "maximum_determined_directions": 0,
+            "at_most_two_directions_implies_collinear": true,
+            "collinear_case_closed_by": "15.671--15.672",
+            "contradiction": true
+          },
+          "forced_pair": [
+            "b=1 baseline type",
+            "b=p-2 baseline type"
+          ],
+          "finite_edge_offset": 1,
+          "intermediate_directions_total_upper_bound": 1,
+          "coefficient_ledger": {
+            "q": 8,
+            "b1_target": "4 - z_j",
+            "b1_divisibility": "q divides I+P_d-3",
+            "complement_target": "4 - z_a*z_b",
+            "complement_divisibility": "q divides I+P_d-4",
+            "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+            "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+            "proved": true
+          },
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 17,
+          "phase": 1,
+          "branch": "p1_phase1",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y-1"
+          ],
+          "candidates": [
+            {
+              "x": 0,
+              "y": 1,
+              "E": 10,
+              "I": 59,
+              "I_boundary_upper": 35,
+              "boundary_contradiction": true
+            }
+          ]
+        },
+        "p17_l1": null
+      }
+    },
+    "19": {
+      "0": {
+        "p": 19,
+        "phase": 0,
+        "c_H": 1,
+        "excluded": true,
+        "method": "I<=|S|+2E boundary support inequality",
+        "full_profile_type_pair_ledger": {
+          "p": 19,
+          "phase": 0,
+          "branch": "p3_phase0",
+          "forms": {
+            "b1": {
+              "baseline_count": 10,
+              "exceptions": 0
+            },
+            "complement": {
+              "baseline_count": 10,
+              "exceptions": 0
+            }
+          },
+          "equal_floor_baseline_homogeneity": "equal means force equal P_d, but b=1 and b=p-2 baseline coefficient congruences differ by one modulo q",
+          "two_b1_types": {
+            "b1_baseline_directions": 20,
+            "required_deficit": 320,
+            "pair_budget": 272,
+            "contradiction": true
+          },
+          "two_complement_types": {
+            "maximum_determined_directions": 0,
+            "at_most_two_directions_implies_collinear": true,
+            "collinear_case_closed_by": "15.671--15.672",
+            "contradiction": true
+          },
+          "forced_pair": [
+            "b=1 baseline type",
+            "b=p-2 baseline type"
+          ],
+          "finite_edge_offset": 0,
+          "intermediate_directions_total_upper_bound": 0,
+          "coefficient_ledger": {
+            "q": 9,
+            "b1_target": "4 + z_j",
+            "b1_divisibility": "q divides I+P_d-5",
+            "complement_target": "4 - z_a*z_b",
+            "complement_divisibility": "q divides I+P_d-4",
+            "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+            "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+            "proved": true
+          },
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 19,
+          "phase": 0,
+          "branch": "p3_phase0",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+0",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides y",
+            "q divides x-1"
+          ],
+          "candidates": [
+            {
+              "x": 1,
+              "y": 0,
+              "E": 10,
+              "I": 67,
+              "I_boundary_upper": 37,
+              "boundary_contradiction": true
+            }
+          ]
+        },
+        "p17_l1": null
+      },
+      "1": {
+        "p": 19,
+        "phase": 1,
+        "c_H": -1,
+        "excluded": true,
+        "method": "no congruence candidate",
+        "full_profile_type_pair_ledger": {
+          "p": 19,
+          "phase": 1,
+          "branch": "p3_phase1",
+          "forms": {
+            "b1": {
+              "baseline_count": 9,
+              "exceptions": 1
+            },
+            "complement": {
+              "baseline_count": 9,
+              "exceptions": 1
+            }
+          },
+          "equal_floor_baseline_homogeneity": "equal means force equal P_d, but b=1 and b=p-2 baseline coefficient congruences differ by one modulo q",
+          "two_b1_types": {
+            "b1_baseline_directions": 18,
+            "required_deficit": 288,
+            "pair_budget": 272,
+            "contradiction": true
+          },
+          "two_complement_types": {
+            "maximum_determined_directions": 2,
+            "at_most_two_directions_implies_collinear": true,
+            "collinear_case_closed_by": "15.671--15.672",
+            "contradiction": true
+          },
+          "forced_pair": [
+            "b=1 baseline type",
+            "b=p-2 baseline type"
+          ],
+          "finite_edge_offset": 2,
+          "intermediate_directions_total_upper_bound": 2,
+          "coefficient_ledger": {
+            "q": 9,
+            "b1_target": "4 - z_j",
+            "b1_divisibility": "q divides I+P_d-3",
+            "complement_target": "4 + z_a*z_b",
+            "complement_divisibility": "q divides I+P_d-4",
+            "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+            "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+            "proved": true
+          },
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 19,
+          "phase": 1,
+          "branch": "p3_phase1",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+2",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides y",
+            "q divides x+1"
+          ],
+          "candidates": []
+        },
+        "p17_l1": null
+      }
+    },
+    "23": {
+      "0": {
+        "p": 23,
+        "phase": 0,
+        "c_H": 1,
+        "excluded": true,
+        "method": "I<=|S|+2E boundary support inequality",
+        "full_profile_type_pair_ledger": {
+          "p": 23,
+          "phase": 0,
+          "branch": "p3_phase0",
+          "forms": {
+            "b1": {
+              "baseline_count": 12,
+              "exceptions": 0
+            },
+            "complement": {
+              "baseline_count": 12,
+              "exceptions": 0
+            }
+          },
+          "equal_floor_baseline_homogeneity": "equal means force equal P_d, but b=1 and b=p-2 baseline coefficient congruences differ by one modulo q",
+          "two_b1_types": {
+            "b1_baseline_directions": 24,
+            "required_deficit": 480,
+            "pair_budget": 420,
+            "contradiction": true
+          },
+          "two_complement_types": {
+            "maximum_determined_directions": 0,
+            "at_most_two_directions_implies_collinear": true,
+            "collinear_case_closed_by": "15.671--15.672",
+            "contradiction": true
+          },
+          "forced_pair": [
+            "b=1 baseline type",
+            "b=p-2 baseline type"
+          ],
+          "finite_edge_offset": 0,
+          "intermediate_directions_total_upper_bound": 0,
+          "coefficient_ledger": {
+            "q": 11,
+            "b1_target": "4 + z_j",
+            "b1_divisibility": "q divides I+P_d-5",
+            "complement_target": "4 - z_a*z_b",
+            "complement_divisibility": "q divides I+P_d-4",
+            "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+            "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+            "proved": true
+          },
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 23,
+          "phase": 0,
+          "branch": "p3_phase0",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+0",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides y",
+            "q divides x-1"
+          ],
+          "candidates": [
+            {
+              "x": 1,
+              "y": 0,
+              "E": 12,
+              "I": 81,
+              "I_boundary_upper": 45,
+              "boundary_contradiction": true
+            }
+          ]
+        },
+        "p17_l1": null
+      },
+      "1": {
+        "p": 23,
+        "phase": 1,
+        "c_H": -1,
+        "excluded": true,
+        "method": "no congruence candidate",
+        "full_profile_type_pair_ledger": {
+          "p": 23,
+          "phase": 1,
+          "branch": "p3_phase1",
+          "forms": {
+            "b1": {
+              "baseline_count": 11,
+              "exceptions": 1
+            },
+            "complement": {
+              "baseline_count": 11,
+              "exceptions": 1
+            }
+          },
+          "equal_floor_baseline_homogeneity": "equal means force equal P_d, but b=1 and b=p-2 baseline coefficient congruences differ by one modulo q",
+          "two_b1_types": {
+            "b1_baseline_directions": 22,
+            "required_deficit": 440,
+            "pair_budget": 420,
+            "contradiction": true
+          },
+          "two_complement_types": {
+            "maximum_determined_directions": 2,
+            "at_most_two_directions_implies_collinear": true,
+            "collinear_case_closed_by": "15.671--15.672",
+            "contradiction": true
+          },
+          "forced_pair": [
+            "b=1 baseline type",
+            "b=p-2 baseline type"
+          ],
+          "finite_edge_offset": 2,
+          "intermediate_directions_total_upper_bound": 2,
+          "coefficient_ledger": {
+            "q": 11,
+            "b1_target": "4 - z_j",
+            "b1_divisibility": "q divides I+P_d-3",
+            "complement_target": "4 + z_a*z_b",
+            "complement_divisibility": "q divides I+P_d-4",
+            "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+            "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+            "proved": true
+          },
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 23,
+          "phase": 1,
+          "branch": "p3_phase1",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+2",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides y",
+            "q divides x+1"
+          ],
+          "candidates": []
+        },
+        "p17_l1": null
+      }
+    },
+    "29": {
+      "0": {
+        "p": 29,
+        "phase": 0,
+        "c_H": 1,
+        "excluded": true,
+        "method": "no congruence candidate",
+        "full_profile_type_pair_ledger": {
+          "p": 29,
+          "phase": 0,
+          "branch": "p1_phase0",
+          "forms": {
+            "b1": {
+              "baseline_count": 15,
+              "exceptions": 0
+            },
+            "complement": {
+              "baseline_count": 14,
+              "exceptions": 1
+            }
+          },
+          "equal_floor_baseline_homogeneity": "equal means force equal P_d, but b=1 and b=p-2 baseline coefficient congruences differ by one modulo q",
+          "two_b1_types": {
+            "b1_baseline_directions": 30,
+            "required_deficit": 780,
+            "pair_budget": 702,
+            "contradiction": true
+          },
+          "two_complement_types": {
+            "maximum_determined_directions": 2,
+            "at_most_two_directions_implies_collinear": true,
+            "collinear_case_closed_by": "15.671--15.672",
+            "contradiction": true
+          },
+          "forced_pair": [
+            "b=1 baseline type",
+            "b=p-2 baseline type"
+          ],
+          "finite_edge_offset": 1,
+          "intermediate_directions_total_upper_bound": 1,
+          "coefficient_ledger": {
+            "q": 14,
+            "b1_target": "4 + z_j",
+            "b1_divisibility": "q divides I+P_d-5",
+            "complement_target": "4 + z_a*z_b",
+            "complement_divisibility": "q divides I+P_d-4",
+            "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+            "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+            "proved": true
+          },
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 29,
+          "phase": 0,
+          "branch": "p1_phase0",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y+1"
+          ],
+          "candidates": []
+        },
+        "p17_l1": null
+      },
+      "1": {
+        "p": 29,
+        "phase": 1,
+        "c_H": -1,
+        "excluded": true,
+        "method": "I<=|S|+2E boundary support inequality",
+        "full_profile_type_pair_ledger": {
+          "p": 29,
+          "phase": 1,
+          "branch": "p1_phase1",
+          "forms": {
+            "b1": {
+              "baseline_count": 14,
+              "exceptions": 1
+            },
+            "complement": {
+              "baseline_count": 15,
+              "exceptions": 0
+            }
+          },
+          "equal_floor_baseline_homogeneity": "equal means force equal P_d, but b=1 and b=p-2 baseline coefficient congruences differ by one modulo q",
+          "two_b1_types": {
+            "b1_baseline_directions": 28,
+            "required_deficit": 728,
+            "pair_budget": 702,
+            "contradiction": true
+          },
+          "two_complement_types": {
+            "maximum_determined_directions": 0,
+            "at_most_two_directions_implies_collinear": true,
+            "collinear_case_closed_by": "15.671--15.672",
+            "contradiction": true
+          },
+          "forced_pair": [
+            "b=1 baseline type",
+            "b=p-2 baseline type"
+          ],
+          "finite_edge_offset": 1,
+          "intermediate_directions_total_upper_bound": 1,
+          "coefficient_ledger": {
+            "q": 14,
+            "b1_target": "4 - z_j",
+            "b1_divisibility": "q divides I+P_d-3",
+            "complement_target": "4 - z_a*z_b",
+            "complement_divisibility": "q divides I+P_d-4",
+            "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+            "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+            "proved": true
+          },
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 29,
+          "phase": 1,
+          "branch": "p1_phase1",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y-1"
+          ],
+          "candidates": [
+            {
+              "x": 0,
+              "y": 1,
+              "E": 16,
+              "I": 101,
+              "I_boundary_upper": 59,
+              "boundary_contradiction": true
+            }
+          ]
+        },
+        "p17_l1": null
+      }
+    },
+    "31": {
+      "0": {
+        "p": 31,
+        "phase": 0,
+        "c_H": 1,
+        "excluded": true,
+        "method": "I<=|S|+2E boundary support inequality",
+        "full_profile_type_pair_ledger": {
+          "p": 31,
+          "phase": 0,
+          "branch": "p3_phase0",
+          "forms": {
+            "b1": {
+              "baseline_count": 16,
+              "exceptions": 0
+            },
+            "complement": {
+              "baseline_count": 16,
+              "exceptions": 0
+            }
+          },
+          "equal_floor_baseline_homogeneity": "equal means force equal P_d, but b=1 and b=p-2 baseline coefficient congruences differ by one modulo q",
+          "two_b1_types": {
+            "b1_baseline_directions": 32,
+            "required_deficit": 896,
+            "pair_budget": 812,
+            "contradiction": true
+          },
+          "two_complement_types": {
+            "maximum_determined_directions": 0,
+            "at_most_two_directions_implies_collinear": true,
+            "collinear_case_closed_by": "15.671--15.672",
+            "contradiction": true
+          },
+          "forced_pair": [
+            "b=1 baseline type",
+            "b=p-2 baseline type"
+          ],
+          "finite_edge_offset": 0,
+          "intermediate_directions_total_upper_bound": 0,
+          "coefficient_ledger": {
+            "q": 15,
+            "b1_target": "4 + z_j",
+            "b1_divisibility": "q divides I+P_d-5",
+            "complement_target": "4 - z_a*z_b",
+            "complement_divisibility": "q divides I+P_d-4",
+            "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+            "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+            "proved": true
+          },
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 31,
+          "phase": 0,
+          "branch": "p3_phase0",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+0",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides y",
+            "q divides x-1"
+          ],
+          "candidates": [
+            {
+              "x": 1,
+              "y": 0,
+              "E": 16,
+              "I": 109,
+              "I_boundary_upper": 61,
+              "boundary_contradiction": true
+            }
+          ]
+        },
+        "p17_l1": null
+      },
+      "1": {
+        "p": 31,
+        "phase": 1,
+        "c_H": -1,
+        "excluded": true,
+        "method": "no congruence candidate",
+        "full_profile_type_pair_ledger": {
+          "p": 31,
+          "phase": 1,
+          "branch": "p3_phase1",
+          "forms": {
+            "b1": {
+              "baseline_count": 15,
+              "exceptions": 1
+            },
+            "complement": {
+              "baseline_count": 15,
+              "exceptions": 1
+            }
+          },
+          "equal_floor_baseline_homogeneity": "equal means force equal P_d, but b=1 and b=p-2 baseline coefficient congruences differ by one modulo q",
+          "two_b1_types": {
+            "b1_baseline_directions": 30,
+            "required_deficit": 840,
+            "pair_budget": 812,
+            "contradiction": true
+          },
+          "two_complement_types": {
+            "maximum_determined_directions": 2,
+            "at_most_two_directions_implies_collinear": true,
+            "collinear_case_closed_by": "15.671--15.672",
+            "contradiction": true
+          },
+          "forced_pair": [
+            "b=1 baseline type",
+            "b=p-2 baseline type"
+          ],
+          "finite_edge_offset": 2,
+          "intermediate_directions_total_upper_bound": 2,
+          "coefficient_ledger": {
+            "q": 15,
+            "b1_target": "4 - z_j",
+            "b1_divisibility": "q divides I+P_d-3",
+            "complement_target": "4 + z_a*z_b",
+            "complement_divisibility": "q divides I+P_d-4",
+            "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+            "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+            "proved": true
+          },
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 31,
+          "phase": 1,
+          "branch": "p3_phase1",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+2",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides y",
+            "q divides x+1"
+          ],
+          "candidates": []
+        },
+        "p17_l1": null
+      }
+    },
+    "37": {
+      "0": {
+        "p": 37,
+        "phase": 0,
+        "c_H": 1,
+        "excluded": true,
+        "method": "no congruence candidate",
+        "full_profile_type_pair_ledger": {
+          "p": 37,
+          "phase": 0,
+          "branch": "p1_phase0",
+          "forms": {
+            "b1": {
+              "baseline_count": 19,
+              "exceptions": 0
+            },
+            "complement": {
+              "baseline_count": 18,
+              "exceptions": 1
+            }
+          },
+          "equal_floor_baseline_homogeneity": "equal means force equal P_d, but b=1 and b=p-2 baseline coefficient congruences differ by one modulo q",
+          "two_b1_types": {
+            "b1_baseline_directions": 38,
+            "required_deficit": 1292,
+            "pair_budget": 1190,
+            "contradiction": true
+          },
+          "two_complement_types": {
+            "maximum_determined_directions": 2,
+            "at_most_two_directions_implies_collinear": true,
+            "collinear_case_closed_by": "15.671--15.672",
+            "contradiction": true
+          },
+          "forced_pair": [
+            "b=1 baseline type",
+            "b=p-2 baseline type"
+          ],
+          "finite_edge_offset": 1,
+          "intermediate_directions_total_upper_bound": 1,
+          "coefficient_ledger": {
+            "q": 18,
+            "b1_target": "4 + z_j",
+            "b1_divisibility": "q divides I+P_d-5",
+            "complement_target": "4 + z_a*z_b",
+            "complement_divisibility": "q divides I+P_d-4",
+            "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+            "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+            "proved": true
+          },
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 37,
+          "phase": 0,
+          "branch": "p1_phase0",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y+1"
+          ],
+          "candidates": []
+        },
+        "p17_l1": null
+      },
+      "1": {
+        "p": 37,
+        "phase": 1,
+        "c_H": -1,
+        "excluded": true,
+        "method": "I<=|S|+2E boundary support inequality",
+        "full_profile_type_pair_ledger": {
+          "p": 37,
+          "phase": 1,
+          "branch": "p1_phase1",
+          "forms": {
+            "b1": {
+              "baseline_count": 18,
+              "exceptions": 1
+            },
+            "complement": {
+              "baseline_count": 19,
+              "exceptions": 0
+            }
+          },
+          "equal_floor_baseline_homogeneity": "equal means force equal P_d, but b=1 and b=p-2 baseline coefficient congruences differ by one modulo q",
+          "two_b1_types": {
+            "b1_baseline_directions": 36,
+            "required_deficit": 1224,
+            "pair_budget": 1190,
+            "contradiction": true
+          },
+          "two_complement_types": {
+            "maximum_determined_directions": 0,
+            "at_most_two_directions_implies_collinear": true,
+            "collinear_case_closed_by": "15.671--15.672",
+            "contradiction": true
+          },
+          "forced_pair": [
+            "b=1 baseline type",
+            "b=p-2 baseline type"
+          ],
+          "finite_edge_offset": 1,
+          "intermediate_directions_total_upper_bound": 1,
+          "coefficient_ledger": {
+            "q": 18,
+            "b1_target": "4 - z_j",
+            "b1_divisibility": "q divides I+P_d-3",
+            "complement_target": "4 - z_a*z_b",
+            "complement_divisibility": "q divides I+P_d-4",
+            "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+            "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+            "proved": true
+          },
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 37,
+          "phase": 1,
+          "branch": "p1_phase1",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y-1"
+          ],
+          "candidates": [
+            {
+              "x": 0,
+              "y": 1,
+              "E": 20,
+              "I": 129,
+              "I_boundary_upper": 75,
+              "boundary_contradiction": true
+            }
+          ]
+        },
+        "p17_l1": null
+      }
+    },
+    "41": {
+      "0": {
+        "p": 41,
+        "phase": 0,
+        "c_H": 1,
+        "excluded": true,
+        "method": "no congruence candidate",
+        "full_profile_type_pair_ledger": {
+          "p": 41,
+          "phase": 0,
+          "branch": "p1_phase0",
+          "forms": {
+            "b1": {
+              "baseline_count": 21,
+              "exceptions": 0
+            },
+            "complement": {
+              "baseline_count": 20,
+              "exceptions": 1
+            }
+          },
+          "equal_floor_baseline_homogeneity": "equal means force equal P_d, but b=1 and b=p-2 baseline coefficient congruences differ by one modulo q",
+          "two_b1_types": {
+            "b1_baseline_directions": 42,
+            "required_deficit": 1596,
+            "pair_budget": 1482,
+            "contradiction": true
+          },
+          "two_complement_types": {
+            "maximum_determined_directions": 2,
+            "at_most_two_directions_implies_collinear": true,
+            "collinear_case_closed_by": "15.671--15.672",
+            "contradiction": true
+          },
+          "forced_pair": [
+            "b=1 baseline type",
+            "b=p-2 baseline type"
+          ],
+          "finite_edge_offset": 1,
+          "intermediate_directions_total_upper_bound": 1,
+          "coefficient_ledger": {
+            "q": 20,
+            "b1_target": "4 + z_j",
+            "b1_divisibility": "q divides I+P_d-5",
+            "complement_target": "4 + z_a*z_b",
+            "complement_divisibility": "q divides I+P_d-4",
+            "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+            "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+            "proved": true
+          },
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 41,
+          "phase": 0,
+          "branch": "p1_phase0",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y+1"
+          ],
+          "candidates": []
+        },
+        "p17_l1": null
+      },
+      "1": {
+        "p": 41,
+        "phase": 1,
+        "c_H": -1,
+        "excluded": true,
+        "method": "I<=|S|+2E boundary support inequality",
+        "full_profile_type_pair_ledger": {
+          "p": 41,
+          "phase": 1,
+          "branch": "p1_phase1",
+          "forms": {
+            "b1": {
+              "baseline_count": 20,
+              "exceptions": 1
+            },
+            "complement": {
+              "baseline_count": 21,
+              "exceptions": 0
+            }
+          },
+          "equal_floor_baseline_homogeneity": "equal means force equal P_d, but b=1 and b=p-2 baseline coefficient congruences differ by one modulo q",
+          "two_b1_types": {
+            "b1_baseline_directions": 40,
+            "required_deficit": 1520,
+            "pair_budget": 1482,
+            "contradiction": true
+          },
+          "two_complement_types": {
+            "maximum_determined_directions": 0,
+            "at_most_two_directions_implies_collinear": true,
+            "collinear_case_closed_by": "15.671--15.672",
+            "contradiction": true
+          },
+          "forced_pair": [
+            "b=1 baseline type",
+            "b=p-2 baseline type"
+          ],
+          "finite_edge_offset": 1,
+          "intermediate_directions_total_upper_bound": 1,
+          "coefficient_ledger": {
+            "q": 20,
+            "b1_target": "4 - z_j",
+            "b1_divisibility": "q divides I+P_d-3",
+            "complement_target": "4 - z_a*z_b",
+            "complement_divisibility": "q divides I+P_d-4",
+            "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+            "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+            "proved": true
+          },
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 41,
+          "phase": 1,
+          "branch": "p1_phase1",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y-1"
+          ],
+          "candidates": [
+            {
+              "x": 0,
+              "y": 1,
+              "E": 22,
+              "I": 143,
+              "I_boundary_upper": 83,
+              "boundary_contradiction": true
+            }
+          ]
+        },
+        "p17_l1": null
+      }
+    },
+    "101": {
+      "0": {
+        "p": 101,
+        "phase": 0,
+        "c_H": 1,
+        "excluded": true,
+        "method": "no congruence candidate",
+        "full_profile_type_pair_ledger": {
+          "p": 101,
+          "phase": 0,
+          "branch": "p1_phase0",
+          "forms": {
+            "b1": {
+              "baseline_count": 51,
+              "exceptions": 0
+            },
+            "complement": {
+              "baseline_count": 50,
+              "exceptions": 1
+            }
+          },
+          "equal_floor_baseline_homogeneity": "equal means force equal P_d, but b=1 and b=p-2 baseline coefficient congruences differ by one modulo q",
+          "two_b1_types": {
+            "b1_baseline_directions": 102,
+            "required_deficit": 9996,
+            "pair_budget": 9702,
+            "contradiction": true
+          },
+          "two_complement_types": {
+            "maximum_determined_directions": 2,
+            "at_most_two_directions_implies_collinear": true,
+            "collinear_case_closed_by": "15.671--15.672",
+            "contradiction": true
+          },
+          "forced_pair": [
+            "b=1 baseline type",
+            "b=p-2 baseline type"
+          ],
+          "finite_edge_offset": 1,
+          "intermediate_directions_total_upper_bound": 1,
+          "coefficient_ledger": {
+            "q": 50,
+            "b1_target": "4 + z_j",
+            "b1_divisibility": "q divides I+P_d-5",
+            "complement_target": "4 + z_a*z_b",
+            "complement_divisibility": "q divides I+P_d-4",
+            "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+            "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+            "proved": true
+          },
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 101,
+          "phase": 0,
+          "branch": "p1_phase0",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y+1"
+          ],
+          "candidates": []
+        },
+        "p17_l1": null
+      },
+      "1": {
+        "p": 101,
+        "phase": 1,
+        "c_H": -1,
+        "excluded": true,
+        "method": "I<=|S|+2E boundary support inequality",
+        "full_profile_type_pair_ledger": {
+          "p": 101,
+          "phase": 1,
+          "branch": "p1_phase1",
+          "forms": {
+            "b1": {
+              "baseline_count": 50,
+              "exceptions": 1
+            },
+            "complement": {
+              "baseline_count": 51,
+              "exceptions": 0
+            }
+          },
+          "equal_floor_baseline_homogeneity": "equal means force equal P_d, but b=1 and b=p-2 baseline coefficient congruences differ by one modulo q",
+          "two_b1_types": {
+            "b1_baseline_directions": 100,
+            "required_deficit": 9800,
+            "pair_budget": 9702,
+            "contradiction": true
+          },
+          "two_complement_types": {
+            "maximum_determined_directions": 0,
+            "at_most_two_directions_implies_collinear": true,
+            "collinear_case_closed_by": "15.671--15.672",
+            "contradiction": true
+          },
+          "forced_pair": [
+            "b=1 baseline type",
+            "b=p-2 baseline type"
+          ],
+          "finite_edge_offset": 1,
+          "intermediate_directions_total_upper_bound": 1,
+          "coefficient_ledger": {
+            "q": 50,
+            "b1_target": "4 - z_j",
+            "b1_divisibility": "q divides I+P_d-3",
+            "complement_target": "4 - z_a*z_b",
+            "complement_divisibility": "q divides I+P_d-4",
+            "general_b1_matrix": "L_st=2c-n_s-n_t+sigma(1_{s=j}+1_{t=j}), (p-1)c=I+P_d-4-sigma",
+            "general_complement_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+            "proved": true
+          },
+          "proved": true
+        },
+        "arithmetic": {
+          "p": 101,
+          "phase": 1,
+          "branch": "p1_phase1",
+          "x": "baseline parallel count in the b=1 type",
+          "y": "baseline parallel count in the b=p-2 type",
+          "finite_edge_formula": "E=m(x+y)+1",
+          "infinity_edge_formula": "I=4p+1-E",
+          "quotient_box": "x>=0, y>=0, x+y<=7",
+          "congruences": [
+            "q divides x",
+            "q divides y-1"
+          ],
+          "candidates": [
+            {
+              "x": 0,
+              "y": 1,
+              "E": 52,
+              "I": 353,
+              "I_boundary_upper": 203,
+              "boundary_contradiction": true
+            }
+          ]
+        },
+        "p17_l1": null
+      }
+    }
+  },
+  "L_status": "OPEN"
+}
