@@ -980,6 +980,26 @@ literature but does not supply the Paley floor or coefficient argument.
 Targeted literature and OEIS checks found no duplicate or relevant sequence
 interpretation.
 
+## 7ad. First all-finite survivor closed from `p=19` (2026-08-28)
+
+Proposition 15.677 resolves the two modulo-eight classes left by 15.675.
+For `p=1,7 mod 8` from `p=23`, exact quotient/deficit arithmetic leaves
+phase-zero residue `u_0=2`, and additionally `u_0=3` in the first class.
+Because `sum k_d=m-u_0<m`, one phase-zero direction has quotient zero. Its
+mean is four or six, below the phase-zero floor at every nonzero even fibre
+count, so it has `b=0` and pointwise form `A_d=2B_d` with `B_d` a nonzero
+nonnegative integer-valued quadratic. Proposition 15.642's exact slice
+support bound gives `4p E[B_d]>=8`, contradicting that mean.
+
+Together with 15.675, this closes the first even all-finite size above
+`3(p-1)/4` for every prime `p>=19`. The exact audit caught and retains a
+smaller exception: at `p=17`, residue `u_0=0` also survives the uniform
+reduction, so that endpoint is not claimed. Amireddy--Behera--Srinivasan--
+Sudan [47] supplies the degree-two slice-distance lemma already certified in
+15.642; targeted searches found no source combining it with the Paley
+same-type residue and zero-quotient argument. OEIS searches for the lift-cost
+samples returned unrelated entries, and no sequence claim is made.
+
 ---
 
 ## 8. What is not in the older literature
@@ -1041,5 +1061,6 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 44. S. Ball and M. Lavrauw, *Planar arcs*, [arXiv:1705.10940](https://arxiv.org/abs/1705.10940) (modern primary restatement of Segre's classification of odd-order arcs of sizes `q` and `q+1`; the `q`-arc conic theorem is used in 15.673's endpoint equality case).
 45. V. F. Lev, *Point distribution and perfect directions in* \(F_p^2\), [arXiv:1903.01518](https://arxiv.org/abs/1903.01518) (Rédei-type direction bounds adjacent to, but not implying, the determined-direction/type-budget argument of 15.674).
 46. G. Van de Voorde, *On sets without tangents and exterior sets of a conic*, [arXiv:1201.0484](https://arxiv.org/abs/1201.0484) (adjacent external-conic and determined-direction geometry; not the Paley phase-budget exclusion of 15.676).
+47. P. Amireddy, S. Behera, S. Srinivasan, and M. Sudan, *A Near-Optimal Polynomial Distance Lemma over Boolean Slices*, ICALP 2025, [doi:10.4230/LIPIcs.ICALP.2025.11](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2025.11) (Lemma 2 supplies the exact finite degree-two support floor used in 15.642 and 15.677).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

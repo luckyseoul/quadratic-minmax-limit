@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-28 (15.675 closes the first all-finite survivor for `p=3,5 mod 8`; no general flag flipped)
+**Date:** 2026-08-28 (15.675/15.677 close the first all-finite survivor for every prime `p>=19`; no general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -49,6 +49,23 @@ odd-fibre counts are then closed by Proposition 15.674: exact type sums allow
 an intermediate count only as the unique high direction of its type, which
 leaves the same four arithmetic rows. The next infinity-present shell has
 `p` finite points.
+
+## 15.677 — first all-finite survivor closed from `p=19`
+
+`src/e1_gmin_m4_prop15677.py` and
+`evidence/NOTE_2026-08-28_first_all_finite_survivor_complete_from_p19.md`.
+For the `p=1,7 mod 8` classes from `p=23`, the exact type-mean quotient
+ledger leaves `u_0=2`, plus `u_0=3` in the first class. Since
+`sum k_d=m-u_0<m`, a phase-zero direction has quotient zero. Its mean is
+four or six, below the phase-zero floor `p+1` for every nonzero even fibre
+count, so it has `b=0` and factors pointwise as `A_d=2B_d` with `B_d`
+nonzero. Proposition 15.642 gives `4p E[B_d]>=8`, a contradiction.
+
+Together with 15.675, this excludes the first even all-finite size above
+`3(p-1)/4` for every prime `p>=19`. The smaller `p=17` endpoint is explicitly
+not claimed: it has an additional `u_0=0` residue row. Later all-finite
+sizes, strict deficit in infinity-plus-`p`, residual (ii), R1, QVAR, Type I,
+and the limit remain open.
 
 ## 15.675 — first all-finite survivor closed in two modulo-eight classes
 
