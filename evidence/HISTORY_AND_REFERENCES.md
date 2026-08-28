@@ -865,6 +865,26 @@ carry no sequence or priority claim.
 The permanent machine record is archived under
 `/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-28-p11-size-eight-boundary/`.
 
+## 7x. Rigid-sign near-line exclusion (2026-08-28)
+
+Proposition 15.671 attacks an actual realization of the first general
+infinity-present floor survivor: infinity together with `p-2` collinear
+finite points. In one product-sign branch, the `b=1` line floor and the
+complementary `b=p-2` transverse floors use the complete split budget and
+force every quadratic slack pointwise. The resulting targets are linear in
+the line direction and a single two-fibre xor in every transverse direction.
+
+Coefficient comparison gives parallel-count congruences whose sum is
+`I=3+sigma mod (p-1)/2`, where `I` is the infinity-edge count. For
+`p=1 mod 4,c_H=-1`, this contradicts the required odd parity of `I`. For
+`p=3 mod 4,c_H=+1`, the signed inter-fibre `l1` capacities and total edge
+count force an even quotient that must be odd, once `p>=19`. Thus one sign
+of every collinear infinity-plus-`(p-2)` branch is excluded uniformly. The
+opposite sign and noncollinear boundaries remain open. Post-result searches
+found no matching Paley odd-fibre/coefficient theorem; the prime lists are
+only the standard modulo-four prime sequences (OEIS A002144 and A045326),
+not a new sequence.
+
 ---
 
 ## 8. What is not in the older literature
