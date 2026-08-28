@@ -1,0 +1,643 @@
+{
+  "prop": "15.672",
+  "title": "Opposite-sign exclusion and complete collinear near-line closure",
+  "proved": true,
+  "theorem": {
+    "opposite_sign_p_eq_3_mod_4": "c_H=-1 excluded for every odd prime p=3 mod 4, p>=11",
+    "opposite_sign_p_eq_1_mod_4": "c_H=+1 excluded for every odd prime p=1 mod 4, p>=13",
+    "combined_with_15_671": "both product signs of every collinear infinity-plus-(p-2) boundary are excluded for every odd prime p>=13",
+    "noncollinear_boundary": "OPEN",
+    "general_residual_ii": false,
+    "R1": false,
+    "limit_exists": false
+  },
+  "opposite_sign_samples": {
+    "7": {
+      "p": 7,
+      "applicable": false,
+      "excluded": false,
+      "floor_ledger": {
+        "p": 7,
+        "p_mod_4": 3,
+        "c_H": -1,
+        "phase": 1,
+        "directions_per_type": 4,
+        "type_budget": 32,
+        "special_b": 1,
+        "transverse_b": 5,
+        "special_baseline": "1-x_j",
+        "transverse_baseline": "xnor(x_a,x_b)",
+        "special_scaled_cost": 6,
+        "transverse_scaled_cost": 6,
+        "line_type_floor_sum": 24,
+        "opposite_type_floor_sum": 24,
+        "line_type_surplus": 8,
+        "opposite_type_surplus": 8,
+        "applicable": false
+      }
+    },
+    "11": {
+      "p": 11,
+      "applicable": true,
+      "boundary": "infinity plus p-2 collinear finite points",
+      "c_H": -1,
+      "excluded": true,
+      "floor_ledger": {
+        "p": 11,
+        "p_mod_4": 3,
+        "c_H": -1,
+        "phase": 1,
+        "directions_per_type": 6,
+        "type_budget": 72,
+        "special_b": 1,
+        "transverse_b": 9,
+        "special_baseline": "1-x_j",
+        "transverse_baseline": "xnor(x_a,x_b)",
+        "special_scaled_cost": 10,
+        "transverse_scaled_cost": 10,
+        "line_type_floor_sum": 60,
+        "opposite_type_floor_sum": 60,
+        "line_type_surplus": 12,
+        "opposite_type_surplus": 12,
+        "applicable": true
+      },
+      "lift_count_ledger": {
+        "p": 11,
+        "nonzero_lift_mass_floor": "5/66",
+        "one_lift_scaled_lower_bound": "10/3",
+        "four_lift_scaled_lower_bound": "40/3",
+        "maximum_type_surplus": 12,
+        "four_lifts_exceed_surplus": true,
+        "maximum_nonbaseline_directions_per_type": 3
+      },
+      "arithmetic": {
+        "p": 11,
+        "q": 5,
+        "m": 6,
+        "finite_edges": "E=m(x+y)+2",
+        "infinity_edges": "I=4p-1-m(x+y)",
+        "maximum_x_plus_y_fraction": "7",
+        "maximum_x_plus_y": 7,
+        "transverse_baseline_congruences": [
+          "q divides I+x-4",
+          "q divides I+y-4"
+        ],
+        "substituted_congruences": [
+          "q divides y+1",
+          "q divides x+1"
+        ],
+        "congruence_lower_bound_on_x_plus_y": 8,
+        "contradiction": true,
+        "normal_form": {
+          "p": 11,
+          "exact_directional_mean": "a_d=I+(p+1)P_d-eps_d*T-3p",
+          "same_type_quantum": 12,
+          "transverse_baseline_exists_in_each_type": true,
+          "exceptions_per_type": 1,
+          "exception_a": 22,
+          "exception_parallel_increment": 1,
+          "line_type_exception": "one direction (line or transverse)",
+          "line_type_exception_excess_over_own_floor": 12,
+          "opposite_type_exception_excess": 12,
+          "normal_form_proved": true
+        }
+      }
+    },
+    "13": {
+      "p": 13,
+      "applicable": true,
+      "boundary": "infinity plus p-2 collinear finite points",
+      "c_H": 1,
+      "excluded": true,
+      "floor_ledger": {
+        "p": 13,
+        "p_mod_4": 1,
+        "c_H": 1,
+        "phase": 0,
+        "directions_per_type": 7,
+        "type_budget": 98,
+        "special_b": 1,
+        "transverse_b": 11,
+        "special_baseline": "x_j",
+        "transverse_baseline": "xnor(x_a,x_b)",
+        "special_scaled_cost": 14,
+        "transverse_scaled_cost": 12,
+        "line_type_floor_sum": 86,
+        "opposite_type_floor_sum": 84,
+        "line_type_surplus": 12,
+        "opposite_type_surplus": 14,
+        "applicable": true
+      },
+      "lift_count_ledger": {
+        "p": 13,
+        "nonzero_lift_mass_floor": "21/286",
+        "one_lift_scaled_lower_bound": "42/11",
+        "four_lift_scaled_lower_bound": "168/11",
+        "maximum_type_surplus": 14,
+        "four_lifts_exceed_surplus": true,
+        "maximum_nonbaseline_directions_per_type": 3
+      },
+      "arithmetic": {
+        "p": 13,
+        "q": 6,
+        "m": 7,
+        "finite_edges": "E=m(x+y)+2",
+        "infinity_edges": "I=4p-1-m(x+y)",
+        "maximum_x_plus_y_fraction": "50/7",
+        "maximum_x_plus_y": 7,
+        "transverse_baseline_congruences": [
+          "q divides I+x-4",
+          "q divides I+y-4"
+        ],
+        "substituted_congruences": [
+          "q divides y+1",
+          "q divides x+1"
+        ],
+        "congruence_lower_bound_on_x_plus_y": 10,
+        "contradiction": true,
+        "normal_form": {
+          "p": 13,
+          "exact_directional_mean": "a_d=I+(p+1)P_d-eps_d*T-3p",
+          "same_type_quantum": 14,
+          "transverse_baseline_exists_in_each_type": true,
+          "exceptions_per_type": 1,
+          "exception_a": 26,
+          "exception_parallel_increment": 1,
+          "line_type_exception": "the special line direction",
+          "line_type_exception_excess_over_own_floor": 12,
+          "opposite_type_exception_excess": 14,
+          "normal_form_proved": true
+        }
+      }
+    },
+    "17": {
+      "p": 17,
+      "applicable": true,
+      "boundary": "infinity plus p-2 collinear finite points",
+      "c_H": 1,
+      "excluded": true,
+      "floor_ledger": {
+        "p": 17,
+        "p_mod_4": 1,
+        "c_H": 1,
+        "phase": 0,
+        "directions_per_type": 9,
+        "type_budget": 162,
+        "special_b": 1,
+        "transverse_b": 15,
+        "special_baseline": "x_j",
+        "transverse_baseline": "xnor(x_a,x_b)",
+        "special_scaled_cost": 18,
+        "transverse_scaled_cost": 16,
+        "line_type_floor_sum": 146,
+        "opposite_type_floor_sum": 144,
+        "line_type_surplus": 16,
+        "opposite_type_surplus": 18,
+        "applicable": true
+      },
+      "lift_count_ledger": {
+        "p": 17,
+        "nonzero_lift_mass_floor": "6/85",
+        "one_lift_scaled_lower_bound": "24/5",
+        "four_lift_scaled_lower_bound": "96/5",
+        "maximum_type_surplus": 18,
+        "four_lifts_exceed_surplus": true,
+        "maximum_nonbaseline_directions_per_type": 3
+      },
+      "arithmetic": {
+        "p": 17,
+        "q": 8,
+        "m": 9,
+        "finite_edges": "E=m(x+y)+2",
+        "infinity_edges": "I=4p-1-m(x+y)",
+        "maximum_x_plus_y_fraction": "22/3",
+        "maximum_x_plus_y": 7,
+        "transverse_baseline_congruences": [
+          "q divides I+x-4",
+          "q divides I+y-4"
+        ],
+        "substituted_congruences": [
+          "q divides y+1",
+          "q divides x+1"
+        ],
+        "congruence_lower_bound_on_x_plus_y": 14,
+        "contradiction": true,
+        "normal_form": {
+          "p": 17,
+          "exact_directional_mean": "a_d=I+(p+1)P_d-eps_d*T-3p",
+          "same_type_quantum": 18,
+          "transverse_baseline_exists_in_each_type": true,
+          "exceptions_per_type": 1,
+          "exception_a": 34,
+          "exception_parallel_increment": 1,
+          "line_type_exception": "the special line direction",
+          "line_type_exception_excess_over_own_floor": 16,
+          "opposite_type_exception_excess": 18,
+          "normal_form_proved": true
+        }
+      }
+    },
+    "19": {
+      "p": 19,
+      "applicable": true,
+      "boundary": "infinity plus p-2 collinear finite points",
+      "c_H": -1,
+      "excluded": true,
+      "floor_ledger": {
+        "p": 19,
+        "p_mod_4": 3,
+        "c_H": -1,
+        "phase": 1,
+        "directions_per_type": 10,
+        "type_budget": 200,
+        "special_b": 1,
+        "transverse_b": 17,
+        "special_baseline": "1-x_j",
+        "transverse_baseline": "xnor(x_a,x_b)",
+        "special_scaled_cost": 18,
+        "transverse_scaled_cost": 18,
+        "line_type_floor_sum": 180,
+        "opposite_type_floor_sum": 180,
+        "line_type_surplus": 20,
+        "opposite_type_surplus": 20,
+        "applicable": true
+      },
+      "lift_count_ledger": {
+        "p": 19,
+        "nonzero_lift_mass_floor": "45/646",
+        "one_lift_scaled_lower_bound": "90/17",
+        "four_lift_scaled_lower_bound": "360/17",
+        "maximum_type_surplus": 20,
+        "four_lifts_exceed_surplus": true,
+        "maximum_nonbaseline_directions_per_type": 3
+      },
+      "arithmetic": {
+        "p": 19,
+        "q": 9,
+        "m": 10,
+        "finite_edges": "E=m(x+y)+2",
+        "infinity_edges": "I=4p-1-m(x+y)",
+        "maximum_x_plus_y_fraction": "37/5",
+        "maximum_x_plus_y": 7,
+        "transverse_baseline_congruences": [
+          "q divides I+x-4",
+          "q divides I+y-4"
+        ],
+        "substituted_congruences": [
+          "q divides y+1",
+          "q divides x+1"
+        ],
+        "congruence_lower_bound_on_x_plus_y": 16,
+        "contradiction": true,
+        "normal_form": {
+          "p": 19,
+          "exact_directional_mean": "a_d=I+(p+1)P_d-eps_d*T-3p",
+          "same_type_quantum": 20,
+          "transverse_baseline_exists_in_each_type": true,
+          "exceptions_per_type": 1,
+          "exception_a": 38,
+          "exception_parallel_increment": 1,
+          "line_type_exception": "one direction (line or transverse)",
+          "line_type_exception_excess_over_own_floor": 20,
+          "opposite_type_exception_excess": 20,
+          "normal_form_proved": true
+        }
+      }
+    },
+    "23": {
+      "p": 23,
+      "applicable": true,
+      "boundary": "infinity plus p-2 collinear finite points",
+      "c_H": -1,
+      "excluded": true,
+      "floor_ledger": {
+        "p": 23,
+        "p_mod_4": 3,
+        "c_H": -1,
+        "phase": 1,
+        "directions_per_type": 12,
+        "type_budget": 288,
+        "special_b": 1,
+        "transverse_b": 21,
+        "special_baseline": "1-x_j",
+        "transverse_baseline": "xnor(x_a,x_b)",
+        "special_scaled_cost": 22,
+        "transverse_scaled_cost": 22,
+        "line_type_floor_sum": 264,
+        "opposite_type_floor_sum": 264,
+        "line_type_surplus": 24,
+        "opposite_type_surplus": 24,
+        "applicable": true
+      },
+      "lift_count_ledger": {
+        "p": 23,
+        "nonzero_lift_mass_floor": "11/161",
+        "one_lift_scaled_lower_bound": "44/7",
+        "four_lift_scaled_lower_bound": "176/7",
+        "maximum_type_surplus": 24,
+        "four_lifts_exceed_surplus": true,
+        "maximum_nonbaseline_directions_per_type": 3
+      },
+      "arithmetic": {
+        "p": 23,
+        "q": 11,
+        "m": 12,
+        "finite_edges": "E=m(x+y)+2",
+        "infinity_edges": "I=4p-1-m(x+y)",
+        "maximum_x_plus_y_fraction": "15/2",
+        "maximum_x_plus_y": 7,
+        "transverse_baseline_congruences": [
+          "q divides I+x-4",
+          "q divides I+y-4"
+        ],
+        "substituted_congruences": [
+          "q divides y+1",
+          "q divides x+1"
+        ],
+        "congruence_lower_bound_on_x_plus_y": 20,
+        "contradiction": true,
+        "normal_form": {
+          "p": 23,
+          "exact_directional_mean": "a_d=I+(p+1)P_d-eps_d*T-3p",
+          "same_type_quantum": 24,
+          "transverse_baseline_exists_in_each_type": true,
+          "exceptions_per_type": 1,
+          "exception_a": 46,
+          "exception_parallel_increment": 1,
+          "line_type_exception": "one direction (line or transverse)",
+          "line_type_exception_excess_over_own_floor": 24,
+          "opposite_type_exception_excess": 24,
+          "normal_form_proved": true
+        }
+      }
+    },
+    "29": {
+      "p": 29,
+      "applicable": true,
+      "boundary": "infinity plus p-2 collinear finite points",
+      "c_H": 1,
+      "excluded": true,
+      "floor_ledger": {
+        "p": 29,
+        "p_mod_4": 1,
+        "c_H": 1,
+        "phase": 0,
+        "directions_per_type": 15,
+        "type_budget": 450,
+        "special_b": 1,
+        "transverse_b": 27,
+        "special_baseline": "x_j",
+        "transverse_baseline": "xnor(x_a,x_b)",
+        "special_scaled_cost": 30,
+        "transverse_scaled_cost": 28,
+        "line_type_floor_sum": 422,
+        "opposite_type_floor_sum": 420,
+        "line_type_surplus": 28,
+        "opposite_type_surplus": 30,
+        "applicable": true
+      },
+      "lift_count_ledger": {
+        "p": 29,
+        "nonzero_lift_mass_floor": "35/522",
+        "one_lift_scaled_lower_bound": "70/9",
+        "four_lift_scaled_lower_bound": "280/9",
+        "maximum_type_surplus": 30,
+        "four_lifts_exceed_surplus": true,
+        "maximum_nonbaseline_directions_per_type": 3
+      },
+      "arithmetic": {
+        "p": 29,
+        "q": 14,
+        "m": 15,
+        "finite_edges": "E=m(x+y)+2",
+        "infinity_edges": "I=4p-1-m(x+y)",
+        "maximum_x_plus_y_fraction": "38/5",
+        "maximum_x_plus_y": 7,
+        "transverse_baseline_congruences": [
+          "q divides I+x-4",
+          "q divides I+y-4"
+        ],
+        "substituted_congruences": [
+          "q divides y+1",
+          "q divides x+1"
+        ],
+        "congruence_lower_bound_on_x_plus_y": 26,
+        "contradiction": true,
+        "normal_form": {
+          "p": 29,
+          "exact_directional_mean": "a_d=I+(p+1)P_d-eps_d*T-3p",
+          "same_type_quantum": 30,
+          "transverse_baseline_exists_in_each_type": true,
+          "exceptions_per_type": 1,
+          "exception_a": 58,
+          "exception_parallel_increment": 1,
+          "line_type_exception": "the special line direction",
+          "line_type_exception_excess_over_own_floor": 28,
+          "opposite_type_exception_excess": 30,
+          "normal_form_proved": true
+        }
+      }
+    },
+    "31": {
+      "p": 31,
+      "applicable": true,
+      "boundary": "infinity plus p-2 collinear finite points",
+      "c_H": -1,
+      "excluded": true,
+      "floor_ledger": {
+        "p": 31,
+        "p_mod_4": 3,
+        "c_H": -1,
+        "phase": 1,
+        "directions_per_type": 16,
+        "type_budget": 512,
+        "special_b": 1,
+        "transverse_b": 29,
+        "special_baseline": "1-x_j",
+        "transverse_baseline": "xnor(x_a,x_b)",
+        "special_scaled_cost": 30,
+        "transverse_scaled_cost": 30,
+        "line_type_floor_sum": 480,
+        "opposite_type_floor_sum": 480,
+        "line_type_surplus": 32,
+        "opposite_type_surplus": 32,
+        "applicable": true
+      },
+      "lift_count_ledger": {
+        "p": 31,
+        "nonzero_lift_mass_floor": "60/899",
+        "one_lift_scaled_lower_bound": "240/29",
+        "four_lift_scaled_lower_bound": "960/29",
+        "maximum_type_surplus": 32,
+        "four_lifts_exceed_surplus": true,
+        "maximum_nonbaseline_directions_per_type": 3
+      },
+      "arithmetic": {
+        "p": 31,
+        "q": 15,
+        "m": 16,
+        "finite_edges": "E=m(x+y)+2",
+        "infinity_edges": "I=4p-1-m(x+y)",
+        "maximum_x_plus_y_fraction": "61/8",
+        "maximum_x_plus_y": 7,
+        "transverse_baseline_congruences": [
+          "q divides I+x-4",
+          "q divides I+y-4"
+        ],
+        "substituted_congruences": [
+          "q divides y+1",
+          "q divides x+1"
+        ],
+        "congruence_lower_bound_on_x_plus_y": 28,
+        "contradiction": true,
+        "normal_form": {
+          "p": 31,
+          "exact_directional_mean": "a_d=I+(p+1)P_d-eps_d*T-3p",
+          "same_type_quantum": 32,
+          "transverse_baseline_exists_in_each_type": true,
+          "exceptions_per_type": 1,
+          "exception_a": 62,
+          "exception_parallel_increment": 1,
+          "line_type_exception": "one direction (line or transverse)",
+          "line_type_exception_excess_over_own_floor": 32,
+          "opposite_type_exception_excess": 32,
+          "normal_form_proved": true
+        }
+      }
+    },
+    "101": {
+      "p": 101,
+      "applicable": true,
+      "boundary": "infinity plus p-2 collinear finite points",
+      "c_H": 1,
+      "excluded": true,
+      "floor_ledger": {
+        "p": 101,
+        "p_mod_4": 1,
+        "c_H": 1,
+        "phase": 0,
+        "directions_per_type": 51,
+        "type_budget": 5202,
+        "special_b": 1,
+        "transverse_b": 99,
+        "special_baseline": "x_j",
+        "transverse_baseline": "xnor(x_a,x_b)",
+        "special_scaled_cost": 102,
+        "transverse_scaled_cost": 100,
+        "line_type_floor_sum": 5102,
+        "opposite_type_floor_sum": 5100,
+        "line_type_surplus": 100,
+        "opposite_type_surplus": 102,
+        "applicable": true
+      },
+      "lift_count_ledger": {
+        "p": 101,
+        "nonzero_lift_mass_floor": "425/6666",
+        "one_lift_scaled_lower_bound": "850/33",
+        "four_lift_scaled_lower_bound": "3400/33",
+        "maximum_type_surplus": 102,
+        "four_lifts_exceed_surplus": true,
+        "maximum_nonbaseline_directions_per_type": 3
+      },
+      "arithmetic": {
+        "p": 101,
+        "q": 50,
+        "m": 51,
+        "finite_edges": "E=m(x+y)+2",
+        "infinity_edges": "I=4p-1-m(x+y)",
+        "maximum_x_plus_y_fraction": "134/17",
+        "maximum_x_plus_y": 7,
+        "transverse_baseline_congruences": [
+          "q divides I+x-4",
+          "q divides I+y-4"
+        ],
+        "substituted_congruences": [
+          "q divides y+1",
+          "q divides x+1"
+        ],
+        "congruence_lower_bound_on_x_plus_y": 98,
+        "contradiction": true,
+        "normal_form": {
+          "p": 101,
+          "exact_directional_mean": "a_d=I+(p+1)P_d-eps_d*T-3p",
+          "same_type_quantum": 102,
+          "transverse_baseline_exists_in_each_type": true,
+          "exceptions_per_type": 1,
+          "exception_a": 202,
+          "exception_parallel_increment": 1,
+          "line_type_exception": "the special line direction",
+          "line_type_exception_excess_over_own_floor": 100,
+          "opposite_type_exception_excess": 102,
+          "normal_form_proved": true
+        }
+      }
+    }
+  },
+  "combined_samples": {
+    "11": {
+      "p": 11,
+      "signs": {
+        "-1": true,
+        "1": false
+      },
+      "both_signs_excluded": false
+    },
+    "13": {
+      "p": 13,
+      "signs": {
+        "-1": true,
+        "1": true
+      },
+      "both_signs_excluded": true
+    },
+    "17": {
+      "p": 17,
+      "signs": {
+        "-1": true,
+        "1": true
+      },
+      "both_signs_excluded": true
+    },
+    "19": {
+      "p": 19,
+      "signs": {
+        "-1": true,
+        "1": true
+      },
+      "both_signs_excluded": true
+    },
+    "23": {
+      "p": 23,
+      "signs": {
+        "-1": true,
+        "1": true
+      },
+      "both_signs_excluded": true
+    },
+    "29": {
+      "p": 29,
+      "signs": {
+        "-1": true,
+        "1": true
+      },
+      "both_signs_excluded": true
+    },
+    "31": {
+      "p": 31,
+      "signs": {
+        "-1": true,
+        "1": true
+      },
+      "both_signs_excluded": true
+    },
+    "101": {
+      "p": 101,
+      "signs": {
+        "-1": true,
+        "1": true
+      },
+      "both_signs_excluded": true
+    }
+  },
+  "L_status": "OPEN"
+}

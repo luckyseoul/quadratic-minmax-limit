@@ -885,6 +885,22 @@ found no matching Paley odd-fibre/coefficient theorem; the prime lists are
 only the standard modulo-four prime sequences (OEIS A002144 and A045326),
 not a new sequence.
 
+## 7y. Complete collinear near-line exclusion (2026-08-28)
+
+Proposition 15.672 handles the sign opposite Proposition 15.671. The exact
+directional mean `a_d=I+(p+1)P_d-eps_d*T-3p` quantizes same-type excesses in
+units of `p+1`. The split budgets and the degree-two lift support floor leave
+exactly one exceptional direction per type. Writing `x,y` for the baseline
+parallel counts gives `I=4p-1-(p+1)(x+y)/2` and `x+y<=7`.
+
+Every type retains a transverse xnor baseline. Its coefficient congruence,
+after substituting the global edge count, says `(p-1)/2` divides both `x+1`
+and `y+1`. This forces `x+y>=p-3>=8` in the applicable range, a
+contradiction. The opposite sign is therefore empty from `p=11` or `p=13`
+according to the residue class. Combined with Proposition 15.671, both signs
+of every collinear infinity-plus-`(p-2)` boundary are excluded for every
+prime `p>=13`. Noncollinear boundaries remain open.
+
 ---
 
 ## 8. What is not in the older literature

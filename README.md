@@ -446,6 +446,7 @@ square-direction affine-circle words.
 | 15.669 | explicit positive quadrature gives the exact middle floor `2p` in both phases for `p>=17, 5<=b<=p-5`; a sharp saving/deficit knapsack and the pair budget exclude uniform boundary ranges, with exact small-prime count-profile extensions | closes all-finite `6<=s<=3(p-1)/4` and infinity-present `5<=s<=p-4` for `p>=17`, plus `p=11` infinity+7 and `p=13` finite 8 / infinity+7,+9; larger count-profile survivors, residual (ii), and every top-level gate remain open |
 | 15.670 | affine similarity reduces every finite `p=11` eight-set to one of `C(119,6)` normalized sets; complete V100/CUDA and RX 9070 XT/HIP cost-pair histograms agree, with zero survivors and exact minimum larger type cost `76>72` | closes every finite `p=11` size-eight boundary; infinity plus nine, finite size at least ten, residual (ii), and every top-level gate remain open |
 | 15.671 | equality in the `b=1` / complementary `b=p-2` parity floors fixes every directional quadratic in one product-sign branch of a collinear infinity-plus-`(p-2)` boundary; coefficient congruences and inter-fibre `l1` bounds then contradict the global parallel-edge count | excludes `c_H=-1` for `p=1 mod 4,p>=13` and `c_H=+1` for `p=3 mod 4,p>=19` on this actual first-survivor geometry; the opposite sign, noncollinear boundaries, residual (ii), and every top-level gate remain open |
+| 15.672 | exact directional means quantize same-type excesses in units of `p+1`, leaving one exception per type in the opposite-sign collinear infinity-plus-`(p-2)` branch; transverse xnor coefficients give `q|(x+1),(y+1)` against `x+y<=7` | closes the opposite sign from `p=11` or `p=13`; with 15.671, both signs of every collinear infinity-plus-`(p-2)` boundary are excluded for every prime `p>=13`, while noncollinear boundaries and all top-level gates remain open |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -479,6 +480,15 @@ edge coefficients gives `I=3+sigma mod (p-1)/2`; parity immediately excludes
 the `p=1 mod 4` class, while the inter-fibre `l1` bounds exclude the
 `p=3 mod 4` class from `p=19`. This removes one sign of the collinear branch,
 not the opposite sign or the complete infinity-present remainder.
+
+Proposition 15.672 closes that opposite sign without enumerating boundaries.
+The exact directional mean makes all same-type slack excesses multiples of
+`p+1`, so the split budget permits exactly one exceptional direction of each
+type. If `x,y` are the two baseline parallel-edge counts, transverse xnor
+coefficient comparison gives `(p-1)/2 | x+1,y+1`, while the global edge count
+forces `x+y<=7`. This is impossible in the applicable range. Consequently
+both signs of the collinear infinity-plus-`(p-2)` geometry are closed for
+every prime `p>=13`; noncollinear realizations remain open.
 
 These are general theorems for odd primes (with the stated `p=3` second-shell
 exception), including the standard Paley `(25,50)` adjacent-ETF case. They
