@@ -1037,7 +1037,7 @@ form `A=2B`. The degree-two slice-distance floor [47] exceeds 14 from
 
 Thus this boundary is impossible for every prime `p>=43`. This proposition
 leaves the same size at `p=17,19,23,29,31,37,41` open; Propositions
-15.680--15.682 subsequently close `p=37,29,31`. Ball--Csajbók [42] is adjacent
+15.680--15.683 subsequently close `p=37,29,31,41`. Ball--Csajbók [42] is adjacent
 odd-secant literature but has a different `q+2`-point scope. The newly
 posted low-degree testing paper [50] concerns robust testing rather than an
 exact support floor or affine type budget. Exact OEIS searches for
@@ -1133,8 +1133,38 @@ OEIS A000509 records the equivalent complete-arc parameter `m'(31)=22` and
 explicitly notes the absence of complete sizes 23 through 31; it was a
 useful pointer to [55], not a new-sequence claim. Searches for the endpoint
 deficit block `284,286,288,290,360,362,364,366` and the seven global secant
-profiles found no additional relevant sequence. The same boundary remains
-open at `p=17,19,23,41`, with only residue zero left at `p=41`.
+profiles found no additional relevant sequence. Proposition 15.683
+subsequently closes `p=41`; the same boundary remains open at
+`p=17,19,23`.
+
+## 7aj. The `p=41,s=34` next-boundary endpoint closes (2026-08-28)
+
+Proposition 15.683 applies 15.681's integral lift floor to remove every
+positive phase-zero residue. Exact completion-bounded enumeration of the
+residue-zero row leaves seven 34-arcs and two one-triple near-arcs. In every
+profile, fourteen directions are perfect matchings, twenty miss two points,
+and the remaining eight directions contain only three floor-secant units.
+
+For an arc profile, each exceptional direction has at least 28 tangents.
+Ball--Lavrauw's polynomial tangent envelope [44, Theorem 11] has degree 18
+and restricts to the square of the tangent polynomial on every point
+pencil. Root counting therefore makes all eight exceptional direction
+pencils double components, leaving a conic. The three exceptional secant
+edges touch at least three points; at each such point two remaining tangents
+force its point-pencil line into that conic, a degree contradiction.
+
+For a near-arc profile, delete a triple point while preserving the unique
+exceptional floor-secant as a pair. The resulting 33-arc has exceptional
+tangent counts `33^7,31`. Their eight double components leave a quartic
+from the degree-20 envelope. The surviving pair endpoints force two
+point-pencil factors; each of the other 31 points then forces its pencil
+into the residual conic. This again contradicts degree and closes
+`p=41,s=34`. Only `p=17,19,23` remain at this boundary.
+
+Targeted literature searches found no previous use of eight high-tangent
+direction pencils with these exact profiles. OEIS searches for
+`14,7,20,1`, `18,16,2`, and `34,41,561` returned unrelated results; no
+sequence or priority claim is made.
 
 ---
 
@@ -1194,7 +1224,7 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 41. P.-A. Bernard, N. Crampé, and L. Vinet, *A bivariate Q-polynomial structure for the non-binary Johnson scheme*, J. Combin. Theory Ser. A **202** (2024), 105829, [arXiv:2306.01882](https://arxiv.org/abs/2306.01882) (adjacent Johnson-scheme machinery; not the parity-majorant or affine pair-deficit theorem of 15.669).
 42. S. Ball and B. Csajbók, *On sets of points with few odd secants*, [arXiv:1711.10876](https://arxiv.org/abs/1711.10876) (odd-secant bounds for \(q+2\)-point projective sets; not the eight-point split-type census of 15.670).
 43. M. Kiermaier and S. Kurz, *Maximal integral point sets in affine planes over finite fields*, [arXiv:1401.2825](https://arxiv.org/abs/1401.2825) (prescribed directions and Paley-clique context; not the boundary parity-floor budget of 15.670).
-44. S. Ball and M. Lavrauw, *Planar arcs*, [arXiv:1705.10940](https://arxiv.org/abs/1705.10940) (modern primary restatement of Segre's classification of odd-order arcs of sizes `q` and `q+1`; the `q`-arc conic theorem is used in 15.673's endpoint equality case).
+44. S. Ball and M. Lavrauw, *Planar arcs*, J. Combin. Theory Ser. A **160** (2018), 261--287, [doi:10.1016/j.jcta.2018.06.015](https://doi.org/10.1016/j.jcta.2018.06.015), [arXiv:1705.10940](https://arxiv.org/abs/1705.10940) (modern primary restatement of Segre's odd-order arc theorems; the `q`-arc conic theorem is used in 15.673, and Theorem 11's polynomial tangent envelope is used in 15.683).
 45. V. F. Lev, *Point distribution and perfect directions in* \(F_p^2\), [arXiv:1903.01518](https://arxiv.org/abs/1903.01518) (Rédei-type direction bounds adjacent to, but not implying, the determined-direction/type-budget argument of 15.674).
 46. G. Van de Voorde, *On sets without tangents and exterior sets of a conic*, [arXiv:1201.0484](https://arxiv.org/abs/1201.0484) (adjacent external-conic and determined-direction geometry; not the Paley phase-budget exclusion of 15.676).
 47. P. Amireddy, S. Behera, S. Srinivasan, and M. Sudan, *A Near-Optimal Polynomial Distance Lemma over Boolean Slices*, ICALP 2025, [doi:10.4230/LIPIcs.ICALP.2025.11](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2025.11) (Lemma 2 supplies the exact finite degree-two support floor used in 15.642 and 15.677).

@@ -1,0 +1,428 @@
+{
+  "proposition": "15.683",
+  "title": "the p=41 next all-finite endpoint is impossible",
+  "tangent_envelope_input": {
+    "external_dependency": true,
+    "source": "S. Ball and M. Lavrauw, Planar arcs, Journal of Combinatorial Theory Series A 160 (2018), 261-287",
+    "doi": "10.1016/j.jcta.2018.06.015",
+    "arxiv": "1705.10940v4",
+    "theorem": 11,
+    "odd_order_statement": "if an arc A has size q+2-t and |A|>2t+2, a nonzero degree-2t dual polynomial restricts on every point-pencil to the square of that point's tangent polynomial",
+    "component_argument": "if a direction pencil contains b>2t tangents it divides the envelope; the double-root restriction then leaves b zeros on the degree-(2t-1) quotient, so b>2t-1 forces its square",
+    "proved": true
+  },
+  "residue_zero_profiles": {
+    "p": 41,
+    "s": 34,
+    "pair_deficit_budget": 1122,
+    "phase_zero_rows_within_cap": [
+      {
+        "deficit": 476,
+        "profile": {
+          "0": 14,
+          "34": 7
+        }
+      },
+      {
+        "deficit": 478,
+        "profile": {
+          "0": 14,
+          "32": 1,
+          "34": 6
+        }
+      },
+      {
+        "deficit": 480,
+        "profile": {
+          "0": 14,
+          "30": 1,
+          "34": 6
+        }
+      },
+      {
+        "deficit": 480,
+        "profile": {
+          "0": 14,
+          "32": 2,
+          "34": 5
+        }
+      },
+      {
+        "deficit": 482,
+        "profile": {
+          "0": 14,
+          "28": 1,
+          "34": 6
+        }
+      },
+      {
+        "deficit": 482,
+        "profile": {
+          "0": 14,
+          "30": 1,
+          "32": 1,
+          "34": 5
+        }
+      },
+      {
+        "deficit": 482,
+        "profile": {
+          "0": 14,
+          "32": 3,
+          "34": 4
+        }
+      }
+    ],
+    "phase_one_rows_within_cap": [
+      {
+        "deficit": 640,
+        "profile": {
+          "2": 20,
+          "34": 1
+        }
+      },
+      {
+        "deficit": 642,
+        "profile": {
+          "2": 20,
+          "32": 1
+        }
+      },
+      {
+        "deficit": 644,
+        "profile": {
+          "2": 20,
+          "30": 1
+        }
+      },
+      {
+        "deficit": 646,
+        "profile": {
+          "2": 20,
+          "28": 1
+        }
+      }
+    ],
+    "pair_slack_divisibility": {
+      "line_contribution": "2*(C(n,2)-floor(n/2))",
+      "n=2r": "4*r*(r-1)",
+      "n=2r+1": "4*r*r",
+      "global_slack_modulus": 4,
+      "slack_zero_iff": "every affine line has occupancy at most two",
+      "slack_four_iff": "exactly one affine line has occupancy three and all others at most two",
+      "proved": true
+    },
+    "profiles": [
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 14,
+            "34": 7
+          },
+          "1": {
+            "2": 20,
+            "32": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 476,
+          "1": 642
+        },
+        "total_deficit": 1118,
+        "pair_slack": 4,
+        "arc": false,
+        "global_secant_distribution": {
+          "0": 7,
+          "1": 1,
+          "16": 20,
+          "17": 14
+        },
+        "undetermined_directions": 7
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 14,
+            "34": 7
+          },
+          "1": {
+            "2": 20,
+            "28": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 476,
+          "1": 646
+        },
+        "total_deficit": 1122,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 7,
+          "3": 1,
+          "16": 20,
+          "17": 14
+        },
+        "undetermined_directions": 7
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 14,
+            "32": 1,
+            "34": 6
+          },
+          "1": {
+            "2": 20,
+            "34": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 478,
+          "1": 640
+        },
+        "total_deficit": 1118,
+        "pair_slack": 4,
+        "arc": false,
+        "global_secant_distribution": {
+          "0": 7,
+          "1": 1,
+          "16": 20,
+          "17": 14
+        },
+        "undetermined_directions": 7
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 14,
+            "32": 1,
+            "34": 6
+          },
+          "1": {
+            "2": 20,
+            "30": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 478,
+          "1": 644
+        },
+        "total_deficit": 1122,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 6,
+          "1": 1,
+          "2": 1,
+          "16": 20,
+          "17": 14
+        },
+        "undetermined_directions": 6
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 14,
+            "30": 1,
+            "34": 6
+          },
+          "1": {
+            "2": 20,
+            "32": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 480,
+          "1": 642
+        },
+        "total_deficit": 1122,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 6,
+          "1": 1,
+          "2": 1,
+          "16": 20,
+          "17": 14
+        },
+        "undetermined_directions": 6
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 14,
+            "32": 2,
+            "34": 5
+          },
+          "1": {
+            "2": 20,
+            "32": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 480,
+          "1": 642
+        },
+        "total_deficit": 1122,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 5,
+          "1": 3,
+          "16": 20,
+          "17": 14
+        },
+        "undetermined_directions": 5
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 14,
+            "28": 1,
+            "34": 6
+          },
+          "1": {
+            "2": 20,
+            "34": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 482,
+          "1": 640
+        },
+        "total_deficit": 1122,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 7,
+          "3": 1,
+          "16": 20,
+          "17": 14
+        },
+        "undetermined_directions": 7
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 14,
+            "30": 1,
+            "32": 1,
+            "34": 5
+          },
+          "1": {
+            "2": 20,
+            "34": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 482,
+          "1": 640
+        },
+        "total_deficit": 1122,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 6,
+          "1": 1,
+          "2": 1,
+          "16": 20,
+          "17": 14
+        },
+        "undetermined_directions": 6
+      },
+      {
+        "phase_profiles_b": {
+          "0": {
+            "0": 14,
+            "32": 3,
+            "34": 4
+          },
+          "1": {
+            "2": 20,
+            "34": 1
+          }
+        },
+        "phase_deficits": {
+          "0": 482,
+          "1": 640
+        },
+        "total_deficit": 1122,
+        "pair_slack": 0,
+        "arc": true,
+        "global_secant_distribution": {
+          "0": 5,
+          "1": 3,
+          "16": 20,
+          "17": 14
+        },
+        "undetermined_directions": 5
+      }
+    ],
+    "profile_count": 9,
+    "distinct_global_shape_count": 4,
+    "arc_profile_count": 7,
+    "near_arc_profile_count": 2,
+    "minimum_undetermined_directions": 5,
+    "slack_zero_geometry": "34-arc",
+    "slack_four_geometry": "exactly one 3-secant and every other line has occupancy at most two",
+    "proved": true
+  },
+  "arc_envelope_exclusion": {
+    "profile_count": 7,
+    "arc_size": 34,
+    "tangents_per_point": 9,
+    "envelope_degree": 18,
+    "exceptional_directions": 8,
+    "minimum_tangents_per_exceptional_direction": 28,
+    "forced_double_direction_component_degree": 16,
+    "residual_curve_degree": 2,
+    "exceptional_secant_edges": 3,
+    "minimum_incident_arc_points": 3,
+    "minimum_low_tangents_at_each_incident_point": 2,
+    "double_zero_multiplicity_on_point_pencil": 4,
+    "forced_point_pencil_components": 3,
+    "contradiction": "at least three distinct line components in a conic",
+    "proved": true
+  },
+  "near_arc_envelope_exclusion": {
+    "profile_count": 2,
+    "unique_triple_deletion": {
+      "deleted_points": 1,
+      "choice": "preserve the unique exceptional floor-secant: if it is the triple it becomes a pair; otherwise choose a triple point outside its ordinary pair",
+      "resulting_arc_size": 33,
+      "seven_no_secant_direction_tangents": 33,
+      "surviving_exceptional_pair_direction_tangents": 31
+    },
+    "tangents_per_point": 10,
+    "envelope_degree": 20,
+    "forced_double_direction_components": 8,
+    "forced_double_direction_component_degree": 16,
+    "residual_curve_degree": 4,
+    "surviving_high_pair_endpoints": 2,
+    "low_tangents_at_each_high_pair_endpoint": 3,
+    "first_forced_point_pencil_components": 2,
+    "residual_after_two_point_pencils": 2,
+    "other_arc_points": 31,
+    "low_tangents_at_each_other_point": 2,
+    "contradiction": "three ordinary point-pencil lines would divide the residual conic",
+    "proved": true
+  },
+  "theorem": {
+    "p": 41,
+    "s": 34,
+    "positive_residues_excluded_by_prop15681": true,
+    "residue_zero_profile_count": 9,
+    "arc_profiles_excluded": 7,
+    "near_arc_profiles_excluded": 2,
+    "second_all_finite_endpoint_closed": true,
+    "remaining_same_boundary_primes": [
+      17,
+      19,
+      23
+    ],
+    "later_boundaries_open": true,
+    "top_level_gates_changed": false,
+    "proved": true
+  }
+}

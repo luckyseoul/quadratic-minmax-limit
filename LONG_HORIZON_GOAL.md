@@ -50,10 +50,10 @@ acceptance gate is the four-unit dictionary returned by
    close the first all-finite survivor above `3(p-1)/4` for every prime
    `p>=17`. Proposition 15.679 closes the next all-finite size for every
    prime `p>=43`; Proposition 15.680 closes its `p=37` endpoint, 15.681
-   closes `p=29`, and 15.682 closes `p=31` while leaving `p=41` at residue
-   zero. The four smaller endpoints `p=17,19,23,41`, the strict-deficit part of the
-   infinity-plus-`p` shell, larger all-finite profiles, and full graph
-   constraints remain open.
+   closes `p=29`, 15.682 closes `p=31`, and 15.683 closes `p=41` by a
+   tangent-envelope argument. The three smaller endpoints `p=17,19,23`,
+   the strict-deficit part of the infinity-plus-`p` shell, larger all-finite
+   profiles, and full graph constraints remain open.
 3. **Type I, multi-level Max−:** OPEN. The general \(3A+B>0\) estimate is
    not proved.
 4. **Lemma D:** TRUE.

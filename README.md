@@ -29,7 +29,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680 closes `p=37`, 15.681 closes `p=29`, and 15.682 closes `p=31` while leaving only residue zero at `p=41`; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the four smaller next-boundary endpoints, later all-finite sizes, and `p=7` infinity-plus-seven remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, and 15.680--15.683 close `p=37,29,31,41`; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the three smaller next-boundary endpoints, later all-finite sizes, and `p=7` infinity-plus-seven remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -292,8 +292,10 @@ residue-zero profiles are 26-arcs or one-triple near-arcs with at least
 three undetermined directions. Coolsaet's complete `PG(2,31)`
 classification has no complete arc of size 23 through 31, so the required
 27-/28-arc extensions lie on a conic and again force three collinear
-infinity points onto it. The four endpoints `p=17,19,23,41` remain open at
-this size; `p=41` has only residue zero left.
+infinity points onto it. Proposition 15.683 closes `p=41`: eight
+high-tangent direction pencils divide Segre's tangent envelope twice, and
+the residual conic is forced to contain three point-pencil lines. Only the
+three endpoints `p=17,19,23` remain open at this size.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -347,7 +349,7 @@ graph TD
     SMALLRANGE --> P11EIGHT["p=11 finite size eight<br/>exact normalized census <b>CLOSED</b> (15.670)"]
     RANGE --> ENDPOINT["infinity + (p-2), every odd-fibre profile<br/>both signs <b>CLOSED for p>=17</b> (15.671--15.674)"]
     RANGE --> FIRSTHALF["first all-finite s above 3(p-1)/4<br/><b>CLOSED for every prime p>=17</b> (15.675, 15.677, 15.678)"]
-    FIRSTHALF --> SECONDFINITE["next all-finite even s<br/><b>CLOSED for p>=43 and p=37,31,29</b>;<br/>four smaller endpoints OPEN (15.679--15.682)"]
+    FIRSTHALF --> SECONDFINITE["next all-finite even s<br/><b>CLOSED for p>=43 and p=41,37,31,29</b>;<br/>three smaller endpoints OPEN (15.679--15.683)"]
     RANGE --> PARC["infinity + p, pair-deficit equality / p-arcs<br/>both signs <b>CLOSED for p>=17</b> (15.676)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
@@ -524,10 +526,11 @@ square-direction affine-circle words.
 | 15.676 | pair-deficit equality makes the `p` finite points of an infinity-plus-`p` boundary a `p`-arc; Segre reduces it to tangent or external-line affine conic profiles, which fail the exact type budgets or coefficient/support arithmetic | closes the equality branch for both signs and every prime `p>=17`; strict pair deficit, the full shell, residual (ii), and all top-level gates remain open |
 | 15.677 | in the two outer modulo-eight classes, exact quotient arithmetic leaves `u_0=2` and possibly `u_0=3`; a forced zero-quotient direction has `b=0`, so its positive mean is a nonzero even quadratic lift whose 15.642 cost is at least eight | with 15.675, closes the first all-finite survivor for every prime `p>=19`; `p=17` is not handled here and is subsequently closed by 15.678 |
 | 15.678 | at `p=17,s=14`, the six-unit lift floor and coefficient `l1` bound leave two pair-equality 14-arc profiles with three undetermined directions; adjoining two gives a 16-arc, and the unique `PG(2,17)` 16-arc class is conic-minus-two, where a third undetermined infinity point is impossible | with 15.675/15.677, closes the first all-finite survivor for every prime `p>=17`; later sizes, residual (ii), and all top-level gates remain open |
-| 15.679 | at the next even all-finite size, exact quotient arithmetic leaves only phase-zero residues `2<=u<=7`; each forces a quotient-zero `b=0` direction whose mean is below the degree-two slice-distance lift floor | closes this next boundary for every prime `p>=43`; 15.680--15.682 subsequently close `p=37,29,31`, while four smaller endpoints, later sizes, residual (ii), and all top-level gates remain open |
-| 15.680 | at `p=37,s=30`, exact arithmetic leaves `u=2,3,4,5`; the sharp mass-ten lift is `{0,1,2}`-valued, its value-two set violates the degree-four slice-distance floor, and a paired-cube restriction gives Boolean density at least `17/74>5/74` | closes the `p=37` endpoint of 15.679's boundary; 15.681--15.682 subsequently close `p=29,31`; four endpoints, later sizes, residual (ii), and all top-level gates remain open |
-| 15.681 | paired cubes give every nonzero nonnegative integral quadratic scaled mass at least `(p+1)/2` or `(p-1)/2`; at `p=29`, pair slack leaves only arcs/one-triple near-arcs, and exhaustive 25-/26-arc class counts match all conic-complement orbits | closes the `p=29,s=24` endpoint and removes every positive residue at `p=31,41`; 15.682 subsequently closes residue zero at `p=31`, while `p=41` residue zero, `p=17,19,23`, later sizes, residual (ii), and all top-level gates remain open |
-| 15.682 | at `p=31,s=26`, the integral lift kills every positive residue; the fourteen residue-zero profiles are 26-arcs or one-triple near-arcs with at least three undetermined directions, while the complete-arc classification forces their 27-/28-arc extensions onto conics | closes the `p=31,s=26` endpoint; `p=17,19,23,41`, later sizes, residual (ii), and all top-level gates remain open, with only residue zero left at `p=41` |
+| 15.679 | at the next even all-finite size, exact quotient arithmetic leaves only phase-zero residues `2<=u<=7`; each forces a quotient-zero `b=0` direction whose mean is below the degree-two slice-distance lift floor | closes this next boundary for every prime `p>=43`; 15.680--15.683 subsequently close `p=37,29,31,41`, while three smaller endpoints, later sizes, residual (ii), and all top-level gates remain open |
+| 15.680 | at `p=37,s=30`, exact arithmetic leaves `u=2,3,4,5`; the sharp mass-ten lift is `{0,1,2}`-valued, its value-two set violates the degree-four slice-distance floor, and a paired-cube restriction gives Boolean density at least `17/74>5/74` | closes the `p=37` endpoint of 15.679's boundary; 15.681--15.683 subsequently close `p=29,31,41`; three endpoints, later sizes, residual (ii), and all top-level gates remain open |
+| 15.681 | paired cubes give every nonzero nonnegative integral quadratic scaled mass at least `(p+1)/2` or `(p-1)/2`; at `p=29`, pair slack leaves only arcs/one-triple near-arcs, and exhaustive 25-/26-arc class counts match all conic-complement orbits | closes the `p=29,s=24` endpoint and removes every positive residue at `p=31,41`; 15.682--15.683 subsequently close the residue-zero rows at both primes; `p=17,19,23`, later sizes, residual (ii), and all top-level gates remain open |
+| 15.682 | at `p=31,s=26`, the integral lift kills every positive residue; the fourteen residue-zero profiles are 26-arcs or one-triple near-arcs with at least three undetermined directions, while the complete-arc classification forces their 27-/28-arc extensions onto conics | closes the `p=31,s=26` endpoint; 15.683 subsequently closes `p=41`, leaving `p=17,19,23`, later sizes, residual (ii), and all top-level gates open |
+| 15.683 | at `p=41,s=34`, exact arithmetic leaves seven 34-arc and two one-triple profiles; eight high-tangent directions become double components of Segre's degree-18 envelope (or degree-20 after deleting a triple point), leaving a conic that is forced to contain three point-pencil lines | closes the `p=41,s=34` endpoint; only `p=17,19,23` remain at this second boundary, while later sizes, residual (ii), and all top-level gates remain open |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -726,8 +729,9 @@ mass-ten/paired-cube argument. Proposition 15.681 strengthens the cube
 argument for integral lifts and closes `p=29` by the classified
 `PG(2,29)` arc extension. Proposition 15.682 closes `p=31` by an exact
 fourteen-profile ledger and Coolsaet's complete-arc classification in
-`PG(2,31)`. Its four smaller endpoints and every subsequent size remain
-open; `p=41` has only residue zero left.
+`PG(2,31)`. Proposition 15.683 then closes `p=41` by factoring eight
+high-tangent direction pencils twice from Segre's tangent envelope. Its
+three smaller endpoints and every subsequent size remain open.
 
 ### Route kills — do not re-tread
 
@@ -836,7 +840,7 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15666.py` | Complete both-sign exclusion of every remaining finite `p=7` size-eight boundary |
 | `src/e1_gmin_m4_prop15669.py` | Full-middle parity quadrature, uniform boundary-range exclusion, and exact `p=11,13` extensions |
 | `src/e1_gmin_m4_prop15670.py` | Lossless affine normalization and dual-GPU audit excluding finite `p=11` size-eight boundaries |
-| `src/e1_gmin_m4_prop15671.py` … `prop15678.py` | Complete infinity-plus-`(p-2)` shell exclusion, first all-finite survivor close from `p=17`, and the infinity-plus-`p` arc-equality close |
+| `src/e1_gmin_m4_prop15671.py` … `prop15683.py` | Complete infinity-plus-`(p-2)` shell exclusion, first all-finite survivor close from `p=17`, infinity-plus-`p` arc-equality close, and second-boundary closure for `p>=43` plus `p=41,37,31,29` |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |
@@ -878,6 +882,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-28_p37_next_all_finite_endpoint.md` | Exact `p=37,s=30` pair ledger, degree-four mass-ten exclusion, and paired-cube Boolean quadratic floor (15.680) |
 | `evidence/NOTE_2026-08-28_p29_next_all_finite_endpoint.md` | Integral paired-cube mass floor, exact `p=29` profiles, PGL complement-orbit audit, and classified arc-extension exclusion (15.681) |
 | `evidence/NOTE_2026-08-28_p31_next_all_finite_endpoint.md` | Exact fourteen-profile residue-zero ledger and complete-arc/conic extension exclusion at `p=31` (15.682) |
+| `evidence/NOTE_2026-08-28_p41_next_all_finite_endpoint.md` | Exact nine-profile residue-zero ledger and tangent-envelope component exclusion at `p=41` (15.683) |
 | `evidence/p11_size8_boundary_SHA256SUMS` | Seven-file permanent-archive manifest for Proposition 15.670 |
 | `evidence/NOTE_2026-08-25_negative_product_asymptotic_normal_form.md` | Slice-distance, mean, divisibility, and boundary proof of the unique large-prime negative profile |
 | `evidence/NOTE_2026-08-25_baseline_fibre_profiles.md` | Integral `l1` proof that every baseline fibre profile is ideal or one-transfer |
@@ -918,7 +923,7 @@ Lemma D is complete and is no longer on the work list.
 
 ```bash
 python3 -m pytest tests/test_minmax.py -v
-python3 -m pytest tests/test_prop15628.py tests/test_prop15629.py tests/test_prop15630.py tests/test_prop15631.py tests/test_prop15632.py tests/test_prop15633.py tests/test_prop15634.py tests/test_prop15635.py tests/test_prop15665.py tests/test_prop15667.py tests/test_prop15668.py tests/test_prop15669.py tests/test_prop15670.py tests/test_prop15671.py tests/test_prop15672.py tests/test_prop15673.py tests/test_prop15674.py tests/test_prop15675.py tests/test_prop15676.py tests/test_prop15677.py -q
+python3 -m pytest tests/test_prop15628.py tests/test_prop15629.py tests/test_prop15630.py tests/test_prop15631.py tests/test_prop15632.py tests/test_prop15633.py tests/test_prop15634.py tests/test_prop15635.py tests/test_prop15665.py tests/test_prop15667.py tests/test_prop15668.py tests/test_prop15669.py tests/test_prop15670.py tests/test_prop15671.py tests/test_prop15672.py tests/test_prop15673.py tests/test_prop15674.py tests/test_prop15675.py tests/test_prop15676.py tests/test_prop15677.py tests/test_prop15678.py tests/test_prop15679.py tests/test_prop15680.py tests/test_prop15681.py tests/test_prop15682.py tests/test_prop15683.py -q
 python3 -c "from src.minmax_quadratic import exact_m; print([exact_m(n) for n in range(2,9)])"
 ```
 

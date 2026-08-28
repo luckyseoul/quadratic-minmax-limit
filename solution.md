@@ -7648,7 +7648,8 @@ to the 23-arc in the one-triple case to obtain a 25-arc. Taking two such
 extensions through three distinct undetermined points gives conics sharing
 at least 23 affine points, hence the same conic. It would contain three
 collinear points at infinity, impossible. Therefore the (p=29,s=24)
-boundary is excluded. At this boundary (p=31,41) retain only residue zero;
+boundary is excluded. At this stage (p=31,41) retain only residue zero;
+Propositions 15.682--15.683 subsequently exclude both. The endpoints
 (p=17,19,23), later all-finite sizes, strict infinity-plus-(p), residual
 (ii), R1, global QVAR, Type I, and the limit remain open.
 
@@ -7693,12 +7694,111 @@ adjoin two such points to get a 27-arc. Choose three undetermined infinity
 points (D_1,D_2,D_3). The conics supplied by the extensions through
 ({D_1,D_2}) and ({D_1,D_3}) share at least 25 affine points and therefore
 coincide. One nondegenerate conic would contain three collinear infinity
-points, a contradiction. Thus (p=31,s=26) is excluded. This boundary
-remains open at (p=17,19,23,41), with (p=41) reduced to residue zero;
-later all-finite sizes, strict infinity-plus-(p), residual (ii), R1, global
-QVAR, Type I, and the limit remain open.
+points, a contradiction. Thus (p=31,s=26) is excluded. Proposition 15.683
+subsequently excludes the residue-zero (p=41) endpoint. This boundary
+remains open at (p=17,19,23); later all-finite sizes, strict
+infinity-plus-(p), residual (ii), R1, global QVAR, Type I, and the limit
+remain open.
 
 Evidence: `src/e1_gmin_m4_prop15682.py`,
 `evidence/e1_gmin_m4_prop15682.json`,
 `evidence/NOTE_2026-08-28_p31_next_all_finite_endpoint.md`, and
 `tests/test_prop15682.py`.
+
+## Proposition 15.683 — the p=41 next all-finite endpoint is impossible
+
+At (p=41,s=34), Proposition 15.681 excludes all positive phase-zero
+residues (u_0=2,ldots,7), leaving only (u_0=0,u_1=20). Its type minima
+are
+
+\[
+14[b=0]+7[b=34],\quad D_0=476,
+\qquad
+20[b=2]+[b=34],\quad D_1=640,                         \tag{15.683.1}
+\]
+
+against pair budget (34\cdot33=1122). Exact completion-bounded enumeration
+leaves nine phase-labelled profiles and four global floor-secant shapes:
+
+\[
+\begin{array}{c|l}
+\text{pair slack}&\{t:\text{number of directions}\},\quad t=(34-b)/2\\ \hline
+4&\{17:14,16:20,1:1,0:7\},\\
+0&\{17:14,16:20,3:1,0:7\},\\
+0&\{17:14,16:20,2:1,1:1,0:6\},\\
+0&\{17:14,16:20,1:3,0:5\}.
+\end{array}                                           \tag{15.683.2}
+\]
+
+There are seven slack-zero profiles, all 34-arcs, and two slack-four
+profiles, each with exactly one 3-secant and no other line of occupancy
+above two.
+
+We use Segre's tangent envelope in the polynomial form of
+Ball--Lavrauw, *Planar arcs*, Theorem 11. If an arc (A) in odd order has
+size (q+2-\tau) and (|A|>2\tau+2), there is a nonzero homogeneous dual
+polynomial (\Phi) of degree (2\tau) whose restriction to every point-pencil
+line (P^*) is the square of the tangent polynomial at (P). In particular,
+each tangent dual point is a double zero on (P^*).
+
+The following component observation will be used twice. Let (D^*) be the
+dual line parametrising one direction and suppose that direction contains
+(b_D) tangents. If (b_D>2\tau), root counting on (D^*) gives
+(D^*\mid\Phi). Write (\Phi=D^*\Psi). At each such tangent point, its
+point-pencil line meets (D^*) transversely, while the restriction of
+(\Phi) has a double zero. Hence (\Psi) vanishes at all (b_D) points. If
+(b_D>2\tau-1), root counting again gives
+
+\[
+ (D^*)^2\mid\Phi.                                    \tag{15.683.3}
+\]
+
+First take a slack-zero row. The fourteen (t=17) directions are perfect
+matchings, the twenty (t=16) directions miss two points each, and the
+remaining eight exceptional directions contain three secant edges in
+total. Every exceptional direction therefore has at least
+(34-2\cdot3=28) tangents. Here (\tau=41+2-34=9), so (\deg\Phi=18) and
+(34>20). Since (28>18>17), (15.683.3) makes all eight exceptional
+direction lines double components. Their degree is sixteen, leaving a
+residual conic (Q).
+
+If (e_P) exceptional secant edges meet an arc point (P), then exactly
+(8-e_P) exceptional directions are tangent there. Since (P) has nine
+tangents in all, it has (1+e_P) tangents in the remaining directions.
+The three exceptional edges are distinct and touch at least three points.
+At every touched point (Q|_{P^*}) therefore has at least two distinct
+double zeros. Since (4>\deg Q=2), (P^*) must divide (Q). This would give
+three distinct line components in a conic, impossible.
+
+Now take a slack-four row. Its exceptional directions have floor-secant
+counts (1,0,\ldots,0). Choose a point of the unique triple whose deletion
+preserves the exceptional floor-secant as a pair: if that floor-secant is
+the triple, any deletion works; otherwise its ordinary pair uses at most
+one triple point. The remaining 33 points form an arc. Seven exceptional
+directions now contain 33 tangents and the eighth contains 31. Here
+(\tau=10), (\deg\Phi=20), and (33>22), so their eight squares again divide
+(\Phi), leaving a quartic (Q).
+
+The two endpoints of the surviving exceptional pair have seven exceptional
+tangents and hence three other tangents. Each of their point-pencil lines
+contains three distinct double zeros of (Q); since (6>4), both lines divide
+(Q). Removing them leaves a conic (R). Each of the other 31 arc points has
+eight exceptional and two other tangents. Those tangent dual points lie on
+neither removed point-pencil line, since a tangent cannot contain a second
+arc point. Thus (R) has two distinct double zeros on each remaining
+point-pencil, forcing that line to divide (R). Three choices already
+contradict (\deg R=2).
+
+All nine residue-zero profiles are impossible, so (p=41,s=34) is excluded.
+This second all-finite boundary remains open only at (p=17,19,23); later
+all-finite sizes, strict infinity-plus-(p), residual (ii), R1, global QVAR,
+Type I, and the limit remain open.
+
+External input: S. Ball and M. Lavrauw, *Planar arcs*, J. Combin. Theory
+Ser. A **160** (2018), 261--287, Theorem 11,
+doi:10.1016/j.jcta.2018.06.015 (arXiv:1705.10940v4).
+
+Evidence: `src/e1_gmin_m4_prop15683.py`,
+`evidence/e1_gmin_m4_prop15683.json`,
+`evidence/NOTE_2026-08-28_p41_next_all_finite_endpoint.md`, and
+`tests/test_prop15683.py`.
