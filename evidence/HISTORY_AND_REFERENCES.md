@@ -788,6 +788,49 @@ and its manifest hash is
 
 ---
 
+## 7v. Uniform non-Walsh boundary-range exclusion (2026-08-28)
+
+Proposition 15.669 evaluates the exact hypergeometric parity-majorant floor
+through the entire middle range. For every odd \(p\ge17\), every
+\(5\le b\le p-5\), and either parity phase, the constant quadratic one is
+optimal. The dual certificate is constructive: complement to
+\(b\le(p-1)/2\), bracket the hypergeometric mean by adjacent parity-one
+contacts for the minimum variance, use the two endpoint contacts for the
+maximum variance, and mix the two rational measures to match the exact
+variance. The four upper and four lower envelope margins are positive by
+elementary factorizations and two concave-quadratic endpoint checks.
+
+At residual size \(4p+1\), combining these floors with the separate
+quadratic-type budgets and
+
+\[
+ \sum_d(s-b_d)\le s(s-1)
+\]
+
+gives a uniform geometric range theorem. Every all-finite even boundary with
+\(6\le s\le3(p-1)/4\) is impossible, because four times the deficit gap is
+\(s(3p+3-4s)-4p>0\). Every infinity-present boundary with odd finite
+\(5\le s\le p-4\) is also impossible. The infinity proof includes the
+complemented endpoint exception: in phase one and \(p\equiv1\pmod4\),
+\(b=p-4\) can save six units, but allowing two such non-\(b=1\) directions
+still misses the type saving target by \(p-11>0\).
+
+Exact rational count-profile programs extend the exclusion to infinity plus
+seven points at \(p=11\), and at \(p=13\) to eight finite points and infinity
+plus seven or nine. The first profiles beyond the proved ranges survive the
+floor-and-pair relaxation. They are not affine boundaries or residual graphs,
+so residual (ii), R1, global QVAR, Type I, and the limit remain open.
+
+Targeted duplicate searches found adjacent work on low-degree analysis of
+Johnson slices, nonnegative polynomials on the cube, finite incidence codes,
+and the non-binary Johnson scheme of Bernard--Crampé--Vinet [41], but no
+source stating the full-middle parity quadrature or its Paley type-budget
+consequence. Individual OEIS searches for larger endpoint values found only
+unrelated sequences (and no entry for 750002). This is context checking, not
+an unqualified priority or sequence claim.
+
+---
+
 ## 8. What is not in the older literature
 
 - No 1930s–1970s theorem that \(\lim n^{-3/2}\min_A\max_x|x^\top Ax|\) exists.
@@ -841,5 +884,6 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 38. Q. Li and Y. Zhou, *On induced subgraphs with degree parity conditions in Paley graphs and Paley tournaments*, [arXiv:2512.19312](https://arxiv.org/abs/2512.19312) (degree-parity context for induced Paley subgraphs and MDS codes; not the directional affine-slack boundary problem of 15.657).
 39. K. Tasaka, *Harmonic strength of shells of lattices and weighted theta series*, [arXiv:2308.14309](https://arxiv.org/abs/2308.14309) (survey of the shell-harmonic/modular-form bridge; no Paley channel inequality).
 40. M. Ozeki, *On the Siegel theta series of extremal lattices and their association schemes*, Kyushu J. Math. **68** (2014), 53--73, [doi:10.2206/kyushujm.68.053](https://doi.org/10.2206/kyushujm.68.053) (adjacent orbital/theta machinery; not a proof of R1).
+41. P.-A. Bernard, N. Crampé, and L. Vinet, *A bivariate Q-polynomial structure for the non-binary Johnson scheme*, J. Combin. Theory Ser. A **202** (2024), 105829, [arXiv:2306.01882](https://arxiv.org/abs/2306.01882) (adjacent Johnson-scheme machinery; not the parity-majorant or affine pair-deficit theorem of 15.669).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

@@ -29,7 +29,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary for both signs, while the separate infinity-plus-seven profile and other larger/other-prime profiles remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes all-finite `6<=s<=3(p-1)/4` and infinity-present `5<=s<=p-4` for `p>=17`, plus new `p=11,13` cases, while the larger survivor ranges and `p=7` infinity-plus-seven remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -212,6 +212,16 @@ transfers the result between product signs. Thus every finite `p=7`
 size-eight boundary is closed for both signs. The distinct
 infinity-plus-seven profile is not part of the finite `C(49,8)` census and
 remains open.
+Proposition 15.669 then evaluates the full middle parity-majorant floor:
+for every odd `p>=17`, both phases have scaled floor `2p` whenever
+`5<=b<=p-5`. Combining this positive-quadrature theorem with the split type
+budget and `sum_d(s-b_d)<=s(s-1)` excludes every all-finite even boundary
+with `6<=s<=3(p-1)/4` and every infinity-present boundary with an odd number
+`5<=s<=p-4` of finite points. Exact count-profile programs additionally
+exclude infinity plus seven points at `p=11`, and at `p=13` exclude eight
+finite points and infinity plus seven or nine. The first profiles beyond
+these ranges survive only the floor-and-pair relaxation; they are not actual
+residual graphs, so residual (ii) remains open.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -260,6 +270,8 @@ graph TD
     EIGHT --> EIGHTFOUR["exactly four mean allocations<br/>23,563,806 boundaries / 94,255,224 leaves per sign<br/><b>CLOSED both signs</b> (15.664)"]
     EIGHT --> EIGHTREST["last 1,419,432 boundaries / 23,892,792 leaves per sign<br/><b>CLOSED both signs</b> (15.666)"]
     BUDGET --> EIGHTINF["p=7 infinity + seven profile<br/><b>OPEN</b>"]
+    BUDGET --> RANGE["uniform parity-floor range<br/>p>=17 finite s<=3(p-1)/4;<br/>infinity finite s<=p-4 <b>CLOSED</b> (15.669)"]
+    RANGE --> SMALLRANGE["p=11 infinity+7;<br/>p=13 finite 8 / infinity+7,+9<br/><b>CLOSED</b> (15.669)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -292,6 +304,8 @@ graph TD
     style EIGHTFORCED fill:#e6ffe6
     style EIGHTFOUR fill:#e6ffe6
     style EIGHTREST fill:#fff4e6
+    style RANGE fill:#e6ffe6
+    style SMALLRANGE fill:#e6ffe6
     style POSKILL fill:#e6ffe6
     style NEGKILL fill:#e6ffe6
     style NEGFINITE fill:#e6ffe6
@@ -419,6 +433,7 @@ square-direction affine-circle words.
 | 15.663 | exact type-floor sums `(32,32)` force all directional means on 83,770,008 nonconic boundaries per sign; an exhaustive V100 projection leaves 526 candidates and the full 135 mod-seven dependencies reject all of them, independently replayed on NUKA | closes the forced-floor `p=7` size-eight stratum for both signs; the finite remainder is subsequently closed by 15.664 and 15.666 |
 | 15.664 | 23,563,806 boundaries per sign have exactly four mean allocations; raised-direction omission tests all 94,255,224 leaves, leaving 1,176 mod-seven line-plus-point survivors whose two mod-seven catalog rows are disjoint from all 756 mod-three rows, independently replayed on NUKA | closes the four-allocation `p=7` size-eight stratum for both signs; the last 1,419,432 finite floor survivors per sign are subsequently closed by 15.666 |
 | 15.666 | the last 1,419,432 finite boundaries per sign give 23,892,792 allocation leaves; two-characteristic omission, exact subset joins, and a lossless 22-digit base-seven full-catalog join reduce `23,892,792 -> 181,104 -> 124,745 -> 78,126 -> 62,892 -> 0`, with CPU/CUDA prefixes and older full-join spot checks agreeing | closes every finite `p=7` size-eight boundary for both signs; the separate infinity-plus-seven profile, residual (ii), Type I, R1, global QVAR, and the limit remain open |
+| 15.669 | explicit positive quadrature gives the exact middle floor `2p` in both phases for `p>=17, 5<=b<=p-5`; a sharp saving/deficit knapsack and the pair budget exclude uniform boundary ranges, with exact small-prime count-profile extensions | closes all-finite `6<=s<=3(p-1)/4` and infinity-present `5<=s<=p-4` for `p>=17`, plus `p=11` infinity+7 and `p=13` finite 8 / infinity+7,+9; larger count-profile survivors, residual (ii), and every top-level gate remain open |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -433,6 +448,13 @@ so the finite census now has zero survivors for either sign. Its record sets
 `closes_all_finite_p7_size8=true` but deliberately retains
 `closes_all_p7_size8=false` and `closes_residual_ii=false`, because the
 infinity-plus-seven profile is separate from the finite `C(49,8)` census.
+
+Proposition 15.669 is independent of that `p=7` census and applies uniformly
+to larger primes. Its exact floor-and-pair relaxation first survives at the
+first even `s>3(p-1)/4` without infinity and at `s=p-2` finite points with
+infinity. At the two smaller primes, the first surviving relaxed profiles are
+eight finite or infinity plus nine at `p=11`, and ten finite or infinity plus
+eleven at `p=13`. These are count profiles only, not constructions.
 
 These are general theorems for odd primes (with the stated `p=3` second-shell
 exception), including the standard Paley `(25,50)` adjacent-ETF case. They
@@ -542,7 +564,13 @@ remaining 1,419,432 finite boundaries and 23,892,792 allocation leaves per
 sign. Two-characteristic omission and exact subset joins leave 62,892;
 the complete lossless 22-row catalog join leaves zero. Hence finite size
 eight at `p=7` is closed for both signs. The separate infinity-plus-seven
-profile and residual (ii) remain open.
+profile remains open. Proposition 15.669 additionally closes the full
+middle boundary range uniformly: for `p>=17`, all-finite even
+`6<=s<=3(p-1)/4` and infinity-present odd finite `5<=s<=p-4` are impossible.
+It also excludes `p=11` infinity plus seven and the `p=13` finite-eight,
+infinity-plus-seven, and infinity-plus-nine cases. The first larger
+floor-plus-pair profiles survive this relaxation, so residual (ii) remains
+open and the next step must use incidence or higher-moment information.
 
 ### Route kills — do not re-tread
 
@@ -589,10 +617,14 @@ unidentified glue-class phase, unknown broad mass, or classified low shell.
 2. **Non-Walsh multi-level Max−:** close residual (ii) for even `k≥4p`.
    Walsh/W1/W2 and the Eulerian-boundary branch are done. Propositions
    15.662--15.666 close every finite `p=7` size-eight boundary for both
-   signs. The separate infinity-plus-seven profile, other nonempty
-   affine-boundary profiles at larger sizes or other primes, and the full
-   5+-level branch are not closed. The related Type-I `3A+B>0` gate also
-   remains false, although strong R1 would imply it.
+   signs. Proposition 15.669 closes the uniform middle ranges and several
+   small-prime extensions. What remains in this relaxation is now explicit:
+   `p=7` infinity plus seven; at `p=11`, eight finite or infinity plus nine
+   and larger; at `p=13`, ten finite or infinity plus eleven and larger; and
+   for `p>=17`, all-finite even `s>3(p-1)/4` or infinity-present `s>=p-2`
+   finite points. These floor-plus-pair survivors are not known graphs. The
+   full 5+-level branch and the related Type-I `3A+B>0` gate remain open,
+   although strong R1 would imply the latter.
 
 Lemma D is complete and is no longer on the work list.
 
@@ -644,6 +676,7 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15663.py` | Complete both-sign modular exclusion of the 83,770,008-boundary forced-floor `p=7` size-eight stratum |
 | `src/e1_gmin_m4_prop15664.py` | Complete both-sign exclusion of the 23,563,806-boundary four-allocation `p=7` size-eight stratum |
 | `src/e1_gmin_m4_prop15666.py` | Complete both-sign exclusion of every remaining finite `p=7` size-eight boundary |
+| `src/e1_gmin_m4_prop15669.py` | Full-middle parity quadrature, uniform boundary-range exclusion, and exact `p=11,13` extensions |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |
@@ -671,6 +704,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-27_p7_size_eight_forced_floor_exclusion.md` | Forced-mean reduction, complete V100 sweep, independent NUKA replay, sign transfer, and exact remaining scope for 15.663 |
 | `evidence/NOTE_2026-08-27_p7_size_eight_four_allocation_exclusion.md` | Four-allocation reduction, raised-direction omission, two-modulus line-plus-point closure, sign transfer, and exact remaining scope for 15.664 |
 | `evidence/NOTE_2026-08-27_p7_size_eight_complete_exclusion.md` | Two-characteristic omission, exact full-catalog closure, sign transfer, literature/OEIS context, and archive for 15.666 |
+| `evidence/NOTE_2026-08-28_uniform_boundary_range_exclusion.md` | Proof of the full middle floors, saving/deficit range theorem, endpoint exception, and exact small-prime extensions |
 | `evidence/NOTE_2026-08-25_negative_product_asymptotic_normal_form.md` | Slice-distance, mean, divisibility, and boundary proof of the unique large-prime negative profile |
 | `evidence/NOTE_2026-08-25_baseline_fibre_profiles.md` | Integral `l1` proof that every baseline fibre profile is ideal or one-transfer |
 | `evidence/NOTE_2026-08-25_pbss_cross_audit.md` | Perry--Beurling cross-audit and the viable multi-Gaussian R1 transplant |
@@ -708,7 +742,7 @@ Lemma D is complete and is no longer on the work list.
 
 ```bash
 python3 -m pytest tests/test_minmax.py -v
-python3 -m pytest tests/test_prop15628.py tests/test_prop15629.py tests/test_prop15630.py tests/test_prop15631.py tests/test_prop15632.py tests/test_prop15633.py tests/test_prop15634.py tests/test_prop15635.py tests/test_prop15665.py tests/test_prop15667.py tests/test_prop15668.py -q
+python3 -m pytest tests/test_prop15628.py tests/test_prop15629.py tests/test_prop15630.py tests/test_prop15631.py tests/test_prop15632.py tests/test_prop15633.py tests/test_prop15634.py tests/test_prop15635.py tests/test_prop15665.py tests/test_prop15667.py tests/test_prop15668.py tests/test_prop15669.py -q
 python3 -c "from src.minmax_quadratic import exact_m; print([exact_m(n) for n in range(2,9)])"
 ```
 

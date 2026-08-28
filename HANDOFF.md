@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-28 (15.668 proves finite `p=11` strong R1 and closes the broad-channel cone route; no general flag flipped)
+**Date:** 2026-08-28 (15.669 proves the uniform non-Walsh boundary-range exclusion; no general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -28,6 +28,46 @@ for both signs. This is not all of the projective size-eight case: the
 separate infinity-plus-seven profile remains open. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+Proposition 15.669 now excludes every all-finite even boundary with
+`6<=s<=3(p-1)/4` and every infinity-present boundary with odd finite
+`5<=s<=p-4` for every odd `p>=17`. It also closes `p=11` infinity plus seven
+and, at `p=13`, eight finite points and infinity plus seven or nine. The
+first profiles outside these ranges survive only the floor-and-pair
+relaxation and are not actual graphs. Residual (ii) therefore remains open.
+
+## 15.669 — uniform non-Walsh boundary-range exclusion
+
+`src/e1_gmin_m4_prop15669.py` and
+`evidence/NOTE_2026-08-28_uniform_boundary_range_exclusion.md`. For every odd
+`p>=17` and `5<=b<=p-5`, an explicit positive degree-two quadrature on the
+parity-one contact nodes matches the first two hypergeometric moments. Hence
+both parity-majorant values are exactly one and every scaled directional
+floor is `2p` throughout the full middle range.
+
+With no infinity, the two quadratic direction types have opposite phases.
+An exact saving/deficit knapsack forces total pair deficit at least
+
+```text
+(p+1)s/4 - 1 + (p-1)(s-2)/2.
+```
+
+Subtracting the geometric budget `s(s-1)` gives one quarter of
+`h_p(s)=s(3p+3-4s)-4p`, positive on the full interval
+`6<=s<=3(p-1)/4` by endpoint concavity. With infinity, phase zero forces all
+directions to have `b=1`; phase one forces at least `(p-1)/2` such directions
+per type. The latter proof explicitly handles the complemented `b=p-4`
+six-unit saving when `p=1 mod 4`. This excludes odd finite
+`5<=s<=p-4`.
+
+Exact rational floor/count-profile programs also give gaps 30 and 18 for
+`p=11` infinity plus seven, gap 4 for `p=13` eight finite, and phase gaps
+`(42,30)` and `(40,24)` for `p=13` infinity plus seven and nine. The first
+relaxed survivors are eight finite / infinity plus nine at `p=11`, ten
+finite / infinity plus eleven at `p=13`, the first even
+`s>3(p-1)/4` without infinity for `p>=17`, and `s=p-2` with infinity. A
+survivor is only a directional count profile; incidence realizability and
+the full residual graph constraints are still open.
 
 ## 15.668 — exact p=11 broad-channel theta and finite strong R1
 
@@ -1777,7 +1817,7 @@ overridden twice.
 | Item | Flag | Status |
 |---|---|---|
 | \(\lambda_{\min}(\Phi)\ge6\) on \(Z\) | `phi_F_ge_6_proved_general=False` | Open. Exceptional QVAR is closed through `k=6` and remains on `k>=7` from `p=13`; principal blocks retain the delta-variance target. |
-| Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open. Affine and even \(k\le4p-2\) are closed (15.179, 15.236, 15.237). |
+| Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open. Walsh and the boundary ranges of 15.669 are closed; the first larger floor-plus-pair profiles and the full graph constraints remain. |
 | Type I, Max− not two-level \(\{-1,-3\}\) | `type_I_multilevel_bad_case_ND_closed=False` | Open. Remainder is \(A_{\mathrm{full}}\). |
 | Lemma D | True | Closed. Do not unflip. |
 
@@ -1837,6 +1877,7 @@ Official class is leftover Max− together with \(s_+\ge2\). leftover-only (\(s_
 - leftover+\(s_+\) empty for all \(n_F\) at \(p=5\), \(k=20\) (15.528).
 - 15.585: leftover+\(s_+\) at \(k=4p\) forces \(\min_+=2\); \(\{2,4,6\}\) cannot have \(1_{S=2}\) a plus pair-slice.
 - 15.598: square-direction \(\infty\cup L\) forces \(\sum_S y=0\) on Max−. Walsh ∀p is spanning of the xor-slice of H.
+- 15.669: for `p>=17`, all-finite `6<=s<=3(p-1)/4` and infinity-present `5<=s<=p-4` are impossible; exact `p=11,13` extensions are listed at the top of this file. Larger count profiles survive only the current relaxation.
 - No identity that leftover+\(s_+\) is empty at every even \(k\ge4p\).
 
 ## Type I

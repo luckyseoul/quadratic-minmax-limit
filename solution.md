@@ -6580,3 +6580,225 @@ Evidence: `src/e1_gmin_m4_prop15668.py`,
 `evidence/NOTE_2026-08-28_p11_broad_channel_theta.md`,
 `tests/test_prop15668.py`, and the 33-file checked archive at
 `/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-28-r1-broad-channel/`.
+
+## Proposition 15.669 — uniform non-Walsh boundary-range exclusion
+
+Let \(p\ge17\) be odd and put \(m=(p+1)/2\). For a set
+\(B\subseteq\mathbb F_p\) of size \(b\), let \(X\) be uniform on
+\(J(p,m)\) and write \(t=|X\cap B|\). Then
+
+\[
+ \mu=\mathbb E t={b(p+1)\over2p},\qquad
+ \mathbb E t^2={b(b+1)(p+1)\over4p},
+\]
+
+\[
+ \sigma^2=\operatorname {Var}(t)
+ ={(p+1)b(p-b)\over4p^2}.                         \tag{15.669.1}
+\]
+
+For a parity phase \(\eta\in\{0,1\}\), recall that \(M(p,b,\eta)\) is the
+minimum hypergeometric expectation of a quadratic \(q\) satisfying
+
+\[
+ q(t)\ge (t+\eta\bmod2)
+\]
+
+at every point in the support. The constant \(q=1\) is feasible. We prove
+that it is optimal whenever \(5\le b\le p-5\).
+
+Complementing \(B\) replaces \(t\) by \(m-t\) and changes the phase by
+\(m\bmod2\), so it is enough to take \(5\le b\le(p-1)/2\). Put
+\(j=1-\eta\), let \(r=j\), and let \(R\le b\) be the largest integer
+congruent to \(j\pmod2\). These are the endpoint contact nodes. At mean
+\(\mu\), the largest variance of a measure on the contact nodes is
+
+\[
+ v_+=(\mu-r)(R-\mu).
+\]
+
+The smallest is \(v_-=(\mu-a)(a+2-\mu)\), where \(a,a+2\) are the adjacent
+contact nodes bracketing \(\mu\), with \(v_-=0\) when the mean itself is a
+contact. Direct substitution in (15.669.1) gives the following four possible
+upper margins after multiplication by \(4p\):
+
+\[
+\begin{split}
+4p(v_+-\sigma^2)\in\{&b(b-1)(p+1),\\
+ &b\{b(p+1)-3p+1\},\\
+ &b(b-3)(p+1),\\
+ &(b-1)\{b(p+1)-4p\}\}.
+\end{split}                                           \tag{15.669.2}
+\]
+
+All four are positive for \(b\ge5\). According to \(b\pmod4\) and \(j\),
+the lower margin is one of
+
+\[
+\begin{split}
+\sigma^2-v_-\in\{&{b(p-b-3)\over4p},
+ {b(p+1-b)-4p\over4p},\\
+ &{b(p-1-b)-3p\over4p},
+ {(p-b)(b-3)\over4p}\}.
+\end{split}                                           \tag{15.669.3}
+\]
+
+The first and fourth quantities are positive immediately on the reduced
+range. The second occurs only for even \(b\ge6\), and its numerator is a
+concave quadratic whose endpoint lower bounds on
+\([6,(p-1)/2]\) are
+
+\[
+ 2p-30,\qquad {p^2-14p-3\over4}.
+\]
+
+The third occurs only for odd \(b\ge5\), and its corresponding bounds are
+
+\[
+ 2p-30,\qquad {p^2-14p+1\over4}.
+\]
+
+All are positive at \(p=17\) and increase thereafter. Thus
+\(v_-\le\sigma^2\le v_+\). Mix the adjacent-contact two-point measure with
+the endpoint two-point measure in the unique rational proportion that gives
+variance \(\sigma^2\). The resulting positive measure is supported entirely
+where \(t+\eta\) is odd and matches the hypergeometric moments through degree
+two. Every feasible quadratic therefore has expectation at least one. Hence
+
+\[
+ \boxed{M(p,b,\eta)=1,
+ \qquad 2\lceil pM(p,b,\eta)\rceil=2p
+ \quad(5\le b\le p-5).}                            \tag{15.669.4}
+\]
+
+Now let \(D\) be a residual boundary and let \(s\) denote its number of
+finite points. For each projective direction \(d\), let \(b_d\) be the number
+of affine fibres meeting \(D\setminus\{\infty\}\) oddly. If the fibre
+multiplicities are \(n_i\), then
+
+\[
+ s-b_d=2\sum_i\lfloor n_i/2\rfloor
+ \le2\sum_i\binom{n_i}{2}.
+\]
+
+Every finite pair lies in exactly one projective direction, so
+
+\[
+ \sum_d(s-b_d)\le s(s-1).                          \tag{15.669.5}
+\]
+
+First suppose infinity is absent. Then \(s\) is even and the two quadratic
+direction types have opposite phases. Each type contains \(m\) directions,
+has exact budget \(m(p+1)\), and must save
+
+\[
+ R=2pm-m(p+1)={p^2-1\over2}                       \tag{15.669.6}
+\]
+
+from the middle-floor baseline. In phase zero, only the low values
+\(b=0,2,4\) can improve that baseline in the stated range; their
+(saving, deficit) pairs are
+
+\[
+ (2p,s),\qquad(p-1,s-2),\qquad(6,s-4).
+\]
+
+For \(p\ge17,s\ge6\),
+
+\[
+ s(p+1)>4p,\qquad s(p-7)>4(p-4),                  \tag{15.669.7}
+\]
+
+so \(b=0\) has the best saving per deficit and \(b=2\) dominates \(b=4\)
+afterward. Let \(a=\lfloor R/(2p)\rfloor\) and \(r=R-2pa\). If at least
+\(a+1\) zero-fibre directions occur, their deficit is at least
+\((a+1)s\). Otherwise the fractional relaxation using \(a\) such directions
+and then \(b=2\) gives at least
+
+\[
+ as+{r(s-2)\over p-1}.
+\]
+
+For \(p\equiv1\pmod4\),
+\(a=(p-1)/4,r=(p-1)/2\); for \(p\equiv3\pmod4\),
+\(a=(p-3)/4,r=(3p-1)/2\). Both branches imply
+
+\[
+ D_0\ge{(p+1)s\over4}-1.                          \tag{15.669.8}
+\]
+
+In phase one, only \(b=2\) saves from the middle baseline, by \(p+1\).
+Exactly \((p-1)/2\) such savings are needed in the relaxed problem, hence
+
+\[
+ D_1\ge{(p-1)(s-2)\over2}.                        \tag{15.669.9}
+\]
+
+Subtracting (15.669.5) from (15.669.8)--(15.669.9), four times the
+contradiction gap is
+
+\[
+ h_p(s)=s(3p+3-4s)-4p.                            \tag{15.669.10}
+\]
+
+This quadratic is concave. At the two endpoints of
+\([6,3(p-1)/4]\),
+
+\[
+ h_p(6)=14p-126>0,\qquad
+ h_p(3(p-1)/4)={p-9\over2}>0.
+\]
+
+Therefore
+
+\[
+ \boxed{\text{every all-finite even boundary with }
+ 6\le s\le3(p-1)/4\text{ is impossible}.}         \tag{15.669.11}
+\]
+
+Suppose instead that infinity lies in \(D\). Then \(s\) is odd and both
+quadratic types have the same phase. In phase zero, \(b=1\) saves \(p-1\)
+and every other allowed \(b\le p-4\) saves at most six. Since the target
+(15.669.6) is exactly \(m(p-1)\), every direction must have \(b=1\). The two
+types therefore require total deficit \((p+1)(s-1)\).
+
+In phase one, \(b=1\) saves \(p+1\), while every other allowed value saves at
+most six. This statement includes the endpoint exception
+\(b=p-4,p\equiv1\pmod4\), whose complemented \(b=4\) floor does save six.
+If at most \(m-2\) directions of one type had \(b=1\), even assigning saving
+six to each of the other two would give at most
+
+\[
+ (m-2)(p+1)+12,
+\]
+
+which is short of \(m(p-1)\) by \(p-11>0\). Thus each type has at least
+\(m-1=(p-1)/2\) directions with \(b=1\), for total deficit at least
+\((p-1)(s-1)\). If \(5\le s\le p-4\), both phase bounds strictly exceed
+\(s(s-1)\). Consequently
+
+\[
+ \boxed{\text{every infinity-present boundary with odd finite }
+ 5\le s\le p-4\text{ is impossible}.}             \tag{15.669.12}
+\]
+
+For \(p=11,13\), the verifier evaluates the original rational
+three-variable parity-majorant LP for every allowed \(b\), then performs an
+exact dynamic program over the \((p+1)/2\) directions of each type. Relative
+to (15.669.5), it gives phase gaps \(30,18\) for \(p=11\), infinity plus
+seven; opposite-phase gap \(4\) for \(p=13\), eight finite; and phase gaps
+\((42,30)\), \((40,24)\) for \(p=13\), infinity plus seven and nine. Every
+gap is positive, so all these cases are impossible.
+
+This proposition is a range theorem, not a closure of residual (ii). The
+first floor-plus-pair survivors are eight finite or infinity plus nine at
+\(p=11\), ten finite or infinity plus eleven at \(p=13\), the first even
+integer strictly above \(3(p-1)/4\) without infinity for \(p\ge17\), and
+\(p-2\) finite points with infinity. Such a survivor is only a directional
+count profile, not an affine boundary or residual graph. General residual
+(ii), R1, global QVAR, Type I, and the limit remain open.
+
+Evidence: src/e1_gmin_m4_prop15669.py,
+evidence/e1_gmin_m4_prop15669.json,
+evidence/NOTE_2026-08-28_uniform_boundary_range_exclusion.md, and
+tests/test_prop15669.py.
