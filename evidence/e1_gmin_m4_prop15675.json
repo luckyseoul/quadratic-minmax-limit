@@ -1,0 +1,739 @@
+{
+  "prop": "15.675",
+  "title": "Quantized close of the first all-finite survivor",
+  "proved": true,
+  "theorem": {
+    "all_odd_primes_p_at_least_19_p_mod_8_in_3_5": "the first even s>3(p-1)/4 is excluded",
+    "p_mod_8_in_1_7": "OPEN_AT_THIS_RELAXATION",
+    "next_even_boundary_size": "OPEN",
+    "general_residual_ii": false,
+    "R1": false,
+    "global_QVAR": false,
+    "type_I": false,
+    "limit_exists": false
+  },
+  "symbolic_mod8_ledger": {
+    "p=1 mod 8": {
+      "gap": "-(p-1)/4",
+      "closed": false
+    },
+    "p=3 mod 8": {
+      "gap": "(p+1)/2",
+      "closed": true
+    },
+    "p=5 mod 8": {
+      "gap": "(p-1)/2",
+      "closed": true
+    },
+    "p=7 mod 8": {
+      "gap": "-(p-7)/4",
+      "closed": false
+    },
+    "proof": "substitute the four formulas for the first even integer above 3(p-1)/4 into the two exact quantized deficits"
+  },
+  "independent_dp_agrees": true,
+  "samples": {
+    "19": {
+      "p": 19,
+      "p_mod_8": 3,
+      "s": 14,
+      "phase_zero": {
+        "p": 19,
+        "s": 14,
+        "m": 10,
+        "P": 20,
+        "winning_residue": 4,
+        "u": 2,
+        "quotient_sum": 8,
+        "profile": {
+          "b=0": 6,
+          "b=2": 0,
+          "b=s": 4
+        },
+        "minimum_deficit": 84,
+        "u_zero_minimum": 96,
+        "u_zero_strict_gap": 12,
+        "interior_residue_monotonicity": "D(u+1)-D(u) alternates between s-2 and 2 for u>=2",
+        "proved": true
+      },
+      "phase_one": {
+        "p": 19,
+        "s": 14,
+        "m": 10,
+        "P": 20,
+        "only_residue": 18,
+        "u": 9,
+        "quotient_sum": 1,
+        "profile": {
+          "b=2": 9,
+          "b=s": 1
+        },
+        "minimum_deficit": 108,
+        "proof": "for u<=m-2 every k_d>=1 but sum k_d=m-u<m; at u=0 the floor-P+2 prohibition raises every minimum further",
+        "proved": true
+      },
+      "required_total_deficit": 192,
+      "pair_deficit_budget": 182,
+      "gap": 10,
+      "closed": true
+    },
+    "23": {
+      "p": 23,
+      "p_mod_8": 7,
+      "s": 18,
+      "phase_zero": {
+        "p": 23,
+        "s": 18,
+        "m": 12,
+        "P": 24,
+        "winning_residue": 4,
+        "u": 2,
+        "quotient_sum": 10,
+        "profile": {
+          "b=0": 7,
+          "b=2": 0,
+          "b=s": 5
+        },
+        "minimum_deficit": 126,
+        "u_zero_minimum": 144,
+        "u_zero_strict_gap": 18,
+        "interior_residue_monotonicity": "D(u+1)-D(u) alternates between s-2 and 2 for u>=2",
+        "proved": true
+      },
+      "phase_one": {
+        "p": 23,
+        "s": 18,
+        "m": 12,
+        "P": 24,
+        "only_residue": 22,
+        "u": 11,
+        "quotient_sum": 1,
+        "profile": {
+          "b=2": 11,
+          "b=s": 1
+        },
+        "minimum_deficit": 176,
+        "proof": "for u<=m-2 every k_d>=1 but sum k_d=m-u<m; at u=0 the floor-P+2 prohibition raises every minimum further",
+        "proved": true
+      },
+      "required_total_deficit": 302,
+      "pair_deficit_budget": 306,
+      "gap": -4,
+      "closed": false
+    },
+    "29": {
+      "p": 29,
+      "p_mod_8": 5,
+      "s": 22,
+      "phase_zero": {
+        "p": 29,
+        "s": 22,
+        "m": 15,
+        "P": 30,
+        "winning_residue": 4,
+        "u": 2,
+        "quotient_sum": 13,
+        "profile": {
+          "b=0": 8,
+          "b=2": 1,
+          "b=s": 6
+        },
+        "minimum_deficit": 196,
+        "u_zero_minimum": 220,
+        "u_zero_strict_gap": 24,
+        "interior_residue_monotonicity": "D(u+1)-D(u) alternates between s-2 and 2 for u>=2",
+        "proved": true
+      },
+      "phase_one": {
+        "p": 29,
+        "s": 22,
+        "m": 15,
+        "P": 30,
+        "only_residue": 28,
+        "u": 14,
+        "quotient_sum": 1,
+        "profile": {
+          "b=2": 14,
+          "b=s": 1
+        },
+        "minimum_deficit": 280,
+        "proof": "for u<=m-2 every k_d>=1 but sum k_d=m-u<m; at u=0 the floor-P+2 prohibition raises every minimum further",
+        "proved": true
+      },
+      "required_total_deficit": 476,
+      "pair_deficit_budget": 462,
+      "gap": 14,
+      "closed": true
+    },
+    "31": {
+      "p": 31,
+      "p_mod_8": 7,
+      "s": 24,
+      "phase_zero": {
+        "p": 31,
+        "s": 24,
+        "m": 16,
+        "P": 32,
+        "winning_residue": 4,
+        "u": 2,
+        "quotient_sum": 14,
+        "profile": {
+          "b=0": 9,
+          "b=2": 0,
+          "b=s": 7
+        },
+        "minimum_deficit": 216,
+        "u_zero_minimum": 262,
+        "u_zero_strict_gap": 46,
+        "interior_residue_monotonicity": "D(u+1)-D(u) alternates between s-2 and 2 for u>=2",
+        "proved": true
+      },
+      "phase_one": {
+        "p": 31,
+        "s": 24,
+        "m": 16,
+        "P": 32,
+        "only_residue": 30,
+        "u": 15,
+        "quotient_sum": 1,
+        "profile": {
+          "b=2": 15,
+          "b=s": 1
+        },
+        "minimum_deficit": 330,
+        "proof": "for u<=m-2 every k_d>=1 but sum k_d=m-u<m; at u=0 the floor-P+2 prohibition raises every minimum further",
+        "proved": true
+      },
+      "required_total_deficit": 546,
+      "pair_deficit_budget": 552,
+      "gap": -6,
+      "closed": false
+    },
+    "37": {
+      "p": 37,
+      "p_mod_8": 5,
+      "s": 28,
+      "phase_zero": {
+        "p": 37,
+        "s": 28,
+        "m": 19,
+        "P": 38,
+        "winning_residue": 4,
+        "u": 2,
+        "quotient_sum": 17,
+        "profile": {
+          "b=0": 10,
+          "b=2": 1,
+          "b=s": 8
+        },
+        "minimum_deficit": 306,
+        "u_zero_minimum": 362,
+        "u_zero_strict_gap": 56,
+        "interior_residue_monotonicity": "D(u+1)-D(u) alternates between s-2 and 2 for u>=2",
+        "proved": true
+      },
+      "phase_one": {
+        "p": 37,
+        "s": 28,
+        "m": 19,
+        "P": 38,
+        "only_residue": 36,
+        "u": 18,
+        "quotient_sum": 1,
+        "profile": {
+          "b=2": 18,
+          "b=s": 1
+        },
+        "minimum_deficit": 468,
+        "proof": "for u<=m-2 every k_d>=1 but sum k_d=m-u<m; at u=0 the floor-P+2 prohibition raises every minimum further",
+        "proved": true
+      },
+      "required_total_deficit": 774,
+      "pair_deficit_budget": 756,
+      "gap": 18,
+      "closed": true
+    },
+    "41": {
+      "p": 41,
+      "p_mod_8": 1,
+      "s": 32,
+      "phase_zero": {
+        "p": 41,
+        "s": 32,
+        "m": 21,
+        "P": 42,
+        "winning_residue": 4,
+        "u": 2,
+        "quotient_sum": 19,
+        "profile": {
+          "b=0": 11,
+          "b=2": 1,
+          "b=s": 9
+        },
+        "minimum_deficit": 382,
+        "u_zero_minimum": 448,
+        "u_zero_strict_gap": 66,
+        "interior_residue_monotonicity": "D(u+1)-D(u) alternates between s-2 and 2 for u>=2",
+        "proved": true
+      },
+      "phase_one": {
+        "p": 41,
+        "s": 32,
+        "m": 21,
+        "P": 42,
+        "only_residue": 40,
+        "u": 20,
+        "quotient_sum": 1,
+        "profile": {
+          "b=2": 20,
+          "b=s": 1
+        },
+        "minimum_deficit": 600,
+        "proof": "for u<=m-2 every k_d>=1 but sum k_d=m-u<m; at u=0 the floor-P+2 prohibition raises every minimum further",
+        "proved": true
+      },
+      "required_total_deficit": 982,
+      "pair_deficit_budget": 992,
+      "gap": -10,
+      "closed": false
+    },
+    "43": {
+      "p": 43,
+      "p_mod_8": 3,
+      "s": 32,
+      "phase_zero": {
+        "p": 43,
+        "s": 32,
+        "m": 22,
+        "P": 44,
+        "winning_residue": 4,
+        "u": 2,
+        "quotient_sum": 20,
+        "profile": {
+          "b=0": 12,
+          "b=2": 0,
+          "b=s": 10
+        },
+        "minimum_deficit": 384,
+        "u_zero_minimum": 478,
+        "u_zero_strict_gap": 94,
+        "interior_residue_monotonicity": "D(u+1)-D(u) alternates between s-2 and 2 for u>=2",
+        "proved": true
+      },
+      "phase_one": {
+        "p": 43,
+        "s": 32,
+        "m": 22,
+        "P": 44,
+        "only_residue": 42,
+        "u": 21,
+        "quotient_sum": 1,
+        "profile": {
+          "b=2": 21,
+          "b=s": 1
+        },
+        "minimum_deficit": 630,
+        "proof": "for u<=m-2 every k_d>=1 but sum k_d=m-u<m; at u=0 the floor-P+2 prohibition raises every minimum further",
+        "proved": true
+      },
+      "required_total_deficit": 1014,
+      "pair_deficit_budget": 992,
+      "gap": 22,
+      "closed": true
+    },
+    "47": {
+      "p": 47,
+      "p_mod_8": 7,
+      "s": 36,
+      "phase_zero": {
+        "p": 47,
+        "s": 36,
+        "m": 24,
+        "P": 48,
+        "winning_residue": 4,
+        "u": 2,
+        "quotient_sum": 22,
+        "profile": {
+          "b=0": 13,
+          "b=2": 0,
+          "b=s": 11
+        },
+        "minimum_deficit": 468,
+        "u_zero_minimum": 576,
+        "u_zero_strict_gap": 108,
+        "interior_residue_monotonicity": "D(u+1)-D(u) alternates between s-2 and 2 for u>=2",
+        "proved": true
+      },
+      "phase_one": {
+        "p": 47,
+        "s": 36,
+        "m": 24,
+        "P": 48,
+        "only_residue": 46,
+        "u": 23,
+        "quotient_sum": 1,
+        "profile": {
+          "b=2": 23,
+          "b=s": 1
+        },
+        "minimum_deficit": 782,
+        "proof": "for u<=m-2 every k_d>=1 but sum k_d=m-u<m; at u=0 the floor-P+2 prohibition raises every minimum further",
+        "proved": true
+      },
+      "required_total_deficit": 1250,
+      "pair_deficit_budget": 1260,
+      "gap": -10,
+      "closed": false
+    },
+    "53": {
+      "p": 53,
+      "p_mod_8": 5,
+      "s": 40,
+      "phase_zero": {
+        "p": 53,
+        "s": 40,
+        "m": 27,
+        "P": 54,
+        "winning_residue": 4,
+        "u": 2,
+        "quotient_sum": 25,
+        "profile": {
+          "b=0": 14,
+          "b=2": 1,
+          "b=s": 12
+        },
+        "minimum_deficit": 598,
+        "u_zero_minimum": 720,
+        "u_zero_strict_gap": 122,
+        "interior_residue_monotonicity": "D(u+1)-D(u) alternates between s-2 and 2 for u>=2",
+        "proved": true
+      },
+      "phase_one": {
+        "p": 53,
+        "s": 40,
+        "m": 27,
+        "P": 54,
+        "only_residue": 52,
+        "u": 26,
+        "quotient_sum": 1,
+        "profile": {
+          "b=2": 26,
+          "b=s": 1
+        },
+        "minimum_deficit": 988,
+        "proof": "for u<=m-2 every k_d>=1 but sum k_d=m-u<m; at u=0 the floor-P+2 prohibition raises every minimum further",
+        "proved": true
+      },
+      "required_total_deficit": 1586,
+      "pair_deficit_budget": 1560,
+      "gap": 26,
+      "closed": true
+    },
+    "59": {
+      "p": 59,
+      "p_mod_8": 3,
+      "s": 44,
+      "phase_zero": {
+        "p": 59,
+        "s": 44,
+        "m": 30,
+        "P": 60,
+        "winning_residue": 4,
+        "u": 2,
+        "quotient_sum": 28,
+        "profile": {
+          "b=0": 16,
+          "b=2": 0,
+          "b=s": 14
+        },
+        "minimum_deficit": 704,
+        "u_zero_minimum": 880,
+        "u_zero_strict_gap": 176,
+        "interior_residue_monotonicity": "D(u+1)-D(u) alternates between s-2 and 2 for u>=2",
+        "proved": true
+      },
+      "phase_one": {
+        "p": 59,
+        "s": 44,
+        "m": 30,
+        "P": 60,
+        "only_residue": 58,
+        "u": 29,
+        "quotient_sum": 1,
+        "profile": {
+          "b=2": 29,
+          "b=s": 1
+        },
+        "minimum_deficit": 1218,
+        "proof": "for u<=m-2 every k_d>=1 but sum k_d=m-u<m; at u=0 the floor-P+2 prohibition raises every minimum further",
+        "proved": true
+      },
+      "required_total_deficit": 1922,
+      "pair_deficit_budget": 1892,
+      "gap": 30,
+      "closed": true
+    },
+    "61": {
+      "p": 61,
+      "p_mod_8": 5,
+      "s": 46,
+      "phase_zero": {
+        "p": 61,
+        "s": 46,
+        "m": 31,
+        "P": 62,
+        "winning_residue": 4,
+        "u": 2,
+        "quotient_sum": 29,
+        "profile": {
+          "b=0": 16,
+          "b=2": 1,
+          "b=s": 14
+        },
+        "minimum_deficit": 780,
+        "u_zero_minimum": 964,
+        "u_zero_strict_gap": 184,
+        "interior_residue_monotonicity": "D(u+1)-D(u) alternates between s-2 and 2 for u>=2",
+        "proved": true
+      },
+      "phase_one": {
+        "p": 61,
+        "s": 46,
+        "m": 31,
+        "P": 62,
+        "only_residue": 60,
+        "u": 30,
+        "quotient_sum": 1,
+        "profile": {
+          "b=2": 30,
+          "b=s": 1
+        },
+        "minimum_deficit": 1320,
+        "proof": "for u<=m-2 every k_d>=1 but sum k_d=m-u<m; at u=0 the floor-P+2 prohibition raises every minimum further",
+        "proved": true
+      },
+      "required_total_deficit": 2100,
+      "pair_deficit_budget": 2070,
+      "gap": 30,
+      "closed": true
+    },
+    "101": {
+      "p": 101,
+      "p_mod_8": 5,
+      "s": 76,
+      "phase_zero": {
+        "p": 101,
+        "s": 76,
+        "m": 51,
+        "P": 102,
+        "winning_residue": 4,
+        "u": 2,
+        "quotient_sum": 49,
+        "profile": {
+          "b=0": 26,
+          "b=2": 1,
+          "b=s": 24
+        },
+        "minimum_deficit": 2050,
+        "u_zero_minimum": 2584,
+        "u_zero_strict_gap": 534,
+        "interior_residue_monotonicity": "D(u+1)-D(u) alternates between s-2 and 2 for u>=2",
+        "proved": true
+      },
+      "phase_one": {
+        "p": 101,
+        "s": 76,
+        "m": 51,
+        "P": 102,
+        "only_residue": 100,
+        "u": 50,
+        "quotient_sum": 1,
+        "profile": {
+          "b=2": 50,
+          "b=s": 1
+        },
+        "minimum_deficit": 3700,
+        "proof": "for u<=m-2 every k_d>=1 but sum k_d=m-u<m; at u=0 the floor-P+2 prohibition raises every minimum further",
+        "proved": true
+      },
+      "required_total_deficit": 5750,
+      "pair_deficit_budget": 5700,
+      "gap": 50,
+      "closed": true
+    }
+  },
+  "dp_samples": {
+    "19": {
+      "0": {
+        "p": 19,
+        "s": 14,
+        "phase": 0,
+        "minimum_deficit": 84,
+        "winning_u": 2,
+        "profile": {
+          "0": 6,
+          "14": 4
+        }
+      },
+      "1": {
+        "p": 19,
+        "s": 14,
+        "phase": 1,
+        "minimum_deficit": 108,
+        "winning_u": 9,
+        "profile": {
+          "2": 9,
+          "14": 1
+        }
+      }
+    },
+    "23": {
+      "0": {
+        "p": 23,
+        "s": 18,
+        "phase": 0,
+        "minimum_deficit": 126,
+        "winning_u": 2,
+        "profile": {
+          "0": 7,
+          "18": 5
+        }
+      },
+      "1": {
+        "p": 23,
+        "s": 18,
+        "phase": 1,
+        "minimum_deficit": 176,
+        "winning_u": 11,
+        "profile": {
+          "2": 11,
+          "18": 1
+        }
+      }
+    },
+    "29": {
+      "0": {
+        "p": 29,
+        "s": 22,
+        "phase": 0,
+        "minimum_deficit": 196,
+        "winning_u": 2,
+        "profile": {
+          "0": 8,
+          "2": 1,
+          "22": 6
+        }
+      },
+      "1": {
+        "p": 29,
+        "s": 22,
+        "phase": 1,
+        "minimum_deficit": 280,
+        "winning_u": 14,
+        "profile": {
+          "2": 14,
+          "22": 1
+        }
+      }
+    },
+    "31": {
+      "0": {
+        "p": 31,
+        "s": 24,
+        "phase": 0,
+        "minimum_deficit": 216,
+        "winning_u": 2,
+        "profile": {
+          "0": 9,
+          "24": 7
+        }
+      },
+      "1": {
+        "p": 31,
+        "s": 24,
+        "phase": 1,
+        "minimum_deficit": 330,
+        "winning_u": 15,
+        "profile": {
+          "2": 15,
+          "24": 1
+        }
+      }
+    },
+    "37": {
+      "0": {
+        "p": 37,
+        "s": 28,
+        "phase": 0,
+        "minimum_deficit": 306,
+        "winning_u": 2,
+        "profile": {
+          "0": 10,
+          "2": 1,
+          "28": 8
+        }
+      },
+      "1": {
+        "p": 37,
+        "s": 28,
+        "phase": 1,
+        "minimum_deficit": 468,
+        "winning_u": 18,
+        "profile": {
+          "2": 18,
+          "28": 1
+        }
+      }
+    },
+    "41": {
+      "0": {
+        "p": 41,
+        "s": 32,
+        "phase": 0,
+        "minimum_deficit": 382,
+        "winning_u": 2,
+        "profile": {
+          "0": 11,
+          "2": 1,
+          "32": 9
+        }
+      },
+      "1": {
+        "p": 41,
+        "s": 32,
+        "phase": 1,
+        "minimum_deficit": 600,
+        "winning_u": 20,
+        "profile": {
+          "2": 20,
+          "32": 1
+        }
+      }
+    },
+    "43": {
+      "0": {
+        "p": 43,
+        "s": 32,
+        "phase": 0,
+        "minimum_deficit": 384,
+        "winning_u": 2,
+        "profile": {
+          "0": 12,
+          "32": 10
+        }
+      },
+      "1": {
+        "p": 43,
+        "s": 32,
+        "phase": 1,
+        "minimum_deficit": 630,
+        "winning_u": 21,
+        "profile": {
+          "2": 21,
+          "32": 1
+        }
+      }
+    }
+  },
+  "L_status": "OPEN"
+}

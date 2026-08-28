@@ -7252,3 +7252,78 @@ Evidence: `src/e1_gmin_m4_prop15674.py`,
 `evidence/e1_gmin_m4_prop15674.json`,
 `evidence/NOTE_2026-08-28_full_near_line_shell_complete.md`, and
 `tests/test_prop15674.py`.
+
+## Proposition 15.675 — first all-finite survivor in two residue classes
+
+Let (p\ge19), put (P=p+1=2m), and let (s) be the first even integer
+strictly above (3(p-1)/4). For one quadratic direction type, write
+
+\[
+ a_d=2u+Pk_d,qquad 0\le u<m,qquad \sum_d k_d=m-u.
+                                                            \tag{15.675.1}
+\]
+
+At this boundary size the phase-one floors are (P-2) at (b=2) and
+(2P-2) at (b=0,4), and throughout (6\le b\le s). If
+(u\le m-2), every (k_d\ge1), contrary to (15.675.1); at (u=0),
+the candidate values over both floor classes are additionally forbidden
+two-unit lifts. Hence (u=m-1), with (m-1) directions at (b=2) and
+one at (b=s). Its exact minimum deficit is
+
+\[
+ D_1=(m-1)(s-2).                                      \tag{15.675.2}
+\]
+
+In phase zero, for (u\ge2), the deficit-optimal quotient weights at
+(b=0,2,s) are (0,1,2). If (t\in\{0,1\}) is congruent to (m+u)
+modulo two, the minimum is
+
+\[
+ D_0(u)={s(m+u+t)\over2}-2t.                         \tag{15.675.3}
+\]
+
+The successive differences alternate between (s-2) and (2), so
+(u=2) is minimal. Therefore
+
+\[
+ D_0=\begin{cases}
+  s(m+2)/2,&m\text{ even},\\
+  s(m+3)/2-2,&m\text{ odd}.
+ \end{cases}                                         \tag{15.675.4}
+\]
+
+The residue (u=1) is impossible because value two over the zero floor is
+forbidden. At (u=0), quotient weights (0,1,2,3) occur at
+(b=0,2,4,s). Writing (m=3h+r), (0\le r\le2), its exact minimum is
+((m-h)s-2r), strictly larger than (15.675.4) for (m\ge10). Thus
+(15.675.2)--(15.675.4) are the exact minima of the relaxed type problem.
+
+The first survivor in the four classes is
+
+\[
+\begin{array}{c|cccc}
+p\bmod8&1&3&5&7\\ \hline
+s&(3p+5)/4&(3p-1)/4&(3p+1)/4&(3p+3)/4.
+\end{array}
+\]
+
+Subtracting the pair-deficit budget (s(s-1)) gives
+
+\[
+ D_0+D_1-s(s-1)=
+ \begin{cases}
+  -(p-1)/4,&p\equiv1\pmod8,\\
+  (p+1)/2,&p\equiv3\pmod8,\\
+  (p-1)/2,&p\equiv5\pmod8,\\
+  -(p-7)/4,&p\equiv7\pmod8.
+ \end{cases}                                         \tag{15.675.5}
+\]
+
+The positive middle rows contradict the pair budget. Hence the first even
+all-finite boundary size above (3(p-1)/4) is impossible for every prime
+(p\ge19) with (p\equiv3) or (5\pmod8). The outer rows remain open.
+
+Evidence: `src/e1_gmin_m4_prop15675.py`,
+`evidence/e1_gmin_m4_prop15675.json`,
+`evidence/NOTE_2026-08-28_first_all_finite_survivor_half_close.md`, and
+`tests/test_prop15675.py`.

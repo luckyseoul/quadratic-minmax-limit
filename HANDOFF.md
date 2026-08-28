@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-28 (15.674 excludes the full infinity-plus-`(p-2)` shell for `p>=17`; no general flag flipped)
+**Date:** 2026-08-28 (15.675 closes the first all-finite survivor for `p=3,5 mod 8`; no general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -49,6 +49,25 @@ odd-fibre counts are then closed by Proposition 15.674: exact type sums allow
 an intermediate count only as the unique high direction of its type, which
 leaves the same four arithmetic rows. The next infinity-present shell has
 `p` finite points.
+
+## 15.675 — first all-finite survivor closed in two modulo-eight classes
+
+`src/e1_gmin_m4_prop15675.py` and
+`evidence/NOTE_2026-08-28_first_all_finite_survivor_half_close.md`. At the
+first even `s>3(p-1)/4`, exact same-type mean residues sharpen 15.669's
+floor-only deficit minimization. Phase one uniquely has `m-1` directions at
+`b=2` and one at `b=s`; phase zero uniquely minimizes at residue four using
+quotient weights zero, one, and two at `b=0,2,s`. The total deficit minus
+the pair budget is
+
+```text
+p mod 8:       1          3          5          7
+gap:        -(p-1)/4   (p+1)/2   (p-1)/2   -(p-7)/4.
+```
+
+Therefore the first survivor is excluded for all primes `p>=19` in the
+middle two classes. The outer two classes are an exact negative-margin route
+boundary, not a graph witness. Local tests and an independent NUKA run agree.
 
 ## 15.674 — the entire near-line shell is impossible
 

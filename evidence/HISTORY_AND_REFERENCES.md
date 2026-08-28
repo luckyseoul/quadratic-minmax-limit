@@ -941,6 +941,25 @@ no source combining those ideas with Paley type sums and parity-majorant
 floors. OEIS searches for the two arithmetic-candidate value lists and the
 pair `75,57` produced unrelated matches only; no sequence claim is made.
 
+## 7ab. Quantized first all-finite survivor half-close (2026-08-28)
+
+Proposition 15.675 returns to the first even all-finite size above
+`3(p-1)/4` and adds the exact same-type mean residue omitted by 15.669's
+floor-only optimization. Phase one becomes rigid; phase zero has unique
+minimum residue four. The exact deficit gaps in the four classes
+`p=1,3,5,7 mod 8` are
+
+```text
+-(p-1)/4, (p+1)/2, (p-1)/2, -(p-7)/4.
+```
+
+The positive middle rows close the first survivor for every prime `p>=19`
+congruent to `3` or `5 mod 8`; the negative outer rows remain open. An
+independent NUKA replay agrees with the local symbolic and dynamic-program
+ledgers. Ball--Csajbók [42] is adjacent odd-secant literature but does not
+state this Paley type-residue optimization. OEIS searches returned unrelated
+matches to the linear gap values and no sequence interpretation is claimed.
+
 ---
 
 ## 8. What is not in the older literature
