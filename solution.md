@@ -6802,3 +6802,86 @@ Evidence: src/e1_gmin_m4_prop15669.py,
 evidence/e1_gmin_m4_prop15669.json,
 evidence/NOTE_2026-08-28_uniform_boundary_range_exclusion.md, and
 tests/test_prop15669.py.
+
+## Proposition 15.670 — every finite p=11 size-eight boundary is impossible
+
+Let \(D\subset\mathbb F_{11^2}\) have eight points. For each projective
+\(\mathbb F_{11}\)-direction \(d\), let \(b_d\) be the number of parallel
+fibres meeting \(D\) oddly, and let \(\epsilon_d\in\{-1,1\}\) be the
+quadratic type of the direction kernel. There are six directions of each
+type. At residual size \(4p+1=45\), Proposition 15.632 gives each type the
+exact budget
+
+\[
+ {(p+1)^2\over2}=72.                              \tag{15.670.1}
+\]
+
+For a finite even boundary the phase is
+\(\eta_d=\mathbf1_{\epsilon_d=c_H}\). The exact parity-majorant floors are
+
+\[
+\begin{array}{c|rrrrr}
+b&0&2&4&6&8\\ \hline
+f_0(b)&0&12&16&22&16\\
+f_1(b)&22&10&22&18&22.
+\end{array}                                        \tag{15.670.2}
+\]
+
+Choose an ordered pair \(x\ne y\) in \(D\). The unique affine similarity
+
+\[
+ z\longmapsto {z-x\over y-x}
+\]
+
+sends it to \(0,1\). It therefore suffices for exclusion to test the
+\(\binom{119}{6}=3,470,108,187\) eight-sets containing those two points.
+This normalization is lossless: multiplication by \(a\ne0\) sends every
+direction type to \(\chi(a)\epsilon_d\); transferring \(c_H\) to
+\(\chi(a)c_H\) preserves the phase, and the two type budgets are equal. The
+pointed-set identity
+
+\[
+ \binom{121}{8}\,8\cdot7
+ =\binom{119}{6}\,121\cdot120                     \tag{15.670.3}
+\]
+
+provides an independent exact coverage ledger.
+
+An exhaustive direct-rank census evaluates both \(c_H\) signs on every
+normalized set and accumulates the complete pair of type-cost histograms.
+For both signs there are zero pairs with both costs at most 72. More sharply,
+
+\[
+ \min_D\max\left\{
+  \sum_{\epsilon_d=-1}f_{\eta_d}(b_d),
+  \sum_{\epsilon_d=1}f_{\eta_d}(b_d)
+ \right\}=76.                                      \tag{15.670.4}
+\]
+
+The \(c_H=-1\) first minimizer has costs \((76,66)\), and the
+\(c_H=1\) first minimizer has costs \((64,76)\). Thus (15.670.1) is
+violated by at least four for every boundary, proving
+
+\[
+ \boxed{\text{every finite }p=11\text{ size-eight boundary is
+ impossible}.}                                    \tag{15.670.5}
+\]
+
+The complete scan was independently replayed on a Tesla V100 under CUDA and
+an RX 9070 XT under ROCm/HIP. Both full histograms agree bit for bit, and an
+independent CPU combinations traversal agrees on every entry in a 100,000-set
+prefix. The verifier additionally checks all 2,892 affine
+translation/scalar direction actions needed by the normalization and
+recomputes the minimizing costs with the generic rational floor routine.
+
+This closes only the finite-eight \(p=11\) branch. Infinity plus nine and
+larger \(p=11\) boundaries remain, as do general residual (ii), R1, global
+QVAR, Type I, and the limit.
+
+Evidence: `src/e1_gmin_m4_prop15670.py`,
+`scripts/p11_size8_normalized_floor_gpu.py`,
+`evidence/e1_gmin_m4_prop15670.json`,
+`evidence/p11_size8_normalized_floor_v100.json`,
+`evidence/p11_size8_normalized_floor_rx9070xt.json`,
+`evidence/NOTE_2026-08-28_p11_size_eight_boundary_exclusion.md`, and
+`tests/test_prop15670.py`.

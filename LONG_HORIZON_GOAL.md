@@ -32,7 +32,7 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
 
 Therefore the remaining theorem is **E(1)** on \(n=p^2+1\). The live
 acceptance gate is the four-unit dictionary returned by
-`src/e1_main_chain_status.py`; as of 2026-08-27 it reads:
+`src/e1_main_chain_status.py`; as of 2026-08-28 it reads:
 
 1. **Spectral floor:** OPEN. The current route requires both global mixed-
    \(k\) QVAR and principal R1.
@@ -42,7 +42,10 @@ acceptance gate is the four-unit dictionary returned by
    infinity-plus-five signs are closed by 15.658--15.659, every `p=5`
    size-six case is closed by 15.660, and the `p=7` six-finite branch is
    closed by 15.661. Thus every size-six boundary is closed for odd `p>=5`;
-   boundaries of size at least eight remain.
+   15.662--15.666 close finite `p=7` size eight, 15.669 closes uniform
+   ranges and exact small-prime profiles, and 15.670 closes finite `p=11`
+   size eight. The remaining larger boundary profiles and full graph
+   constraints are open.
 3. **Type I, multi-level Max−:** OPEN. The general \(3A+B>0\) estimate is
    not proved.
 4. **Lemma D:** TRUE.

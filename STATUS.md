@@ -1,4 +1,21 @@
-# Status (2026-08-27)
+# Status (2026-08-28)
+
+**15.670 PROVED/certified every finite `p=11` size-eight boundary is
+impossible, not residual (ii)**: affine similarity reduces every finite
+eight-set to one of `C(119,6)=3,470,108,187` sets containing field points
+zero and one. The verifier audits every scalar/translation direction action
+and both phase signs. Complete V100/CUDA and RX 9070 XT/HIP replays have
+identical cost-pair histograms, zero survivors, and exact minimum larger type
+cost 76 against budget 72; an independent CPU prefix agrees entry by entry.
+At `p=11`, infinity plus nine and finite size at least ten remain. Residual
+(ii), Type I, R1, global QVAR, and L remain OPEN.
+
+**15.669 PROVED uniform non-Walsh boundary ranges, not residual (ii)**: for
+every odd `p>=17`, all-finite `6<=s<=3(p-1)/4` and infinity-present odd
+finite `5<=s<=p-4` are impossible. Exact small-prime extensions close
+`p=11` infinity plus seven and `p=13` finite eight / infinity plus seven or
+nine. The larger floor-plus-pair profiles are only relaxed count profiles.
+Proposition 15.670 subsequently closes finite `p=11` size eight.
 
 **15.666 PROVED/certified every finite `p=7` size-eight boundary for both
 product signs, not the separate infinity-plus-seven profile or residual

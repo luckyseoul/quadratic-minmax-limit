@@ -1,0 +1,122 @@
+{
+  "prop": "15.670",
+  "title": "Finite p=11 size-eight boundary exclusion",
+  "proved": true,
+  "normalization": {
+    "all_finite_eight_sets": 899749479915,
+    "ordered_pairs_per_set": 56,
+    "normalized_sets_containing_0_and_1": 3470108187,
+    "affine_maps_x_to_a_x_plus_b": 14520,
+    "pointed_set_count_before_normalization": 50385970875240,
+    "pointed_set_count_after_normalization": 50385970875240,
+    "counting_identity": true,
+    "unique_map_for_ordered_pair": "z -> (z-x)/(y-x)",
+    "similarity_audit": {
+      "all_nonzero_scalars": 120,
+      "all_translations": 121,
+      "all_projective_directions": 12,
+      "similarity_direction_pairs_checked": 1440,
+      "translation_direction_pairs_checked": 1452,
+      "phase_transfer_cases_checked": 2880,
+      "direction_type_multiplies_by_scalar_character": true,
+      "finite_boundary_phase_is_preserved_after_c_H_transfer": true,
+      "valid": true
+    },
+    "nonsquare_scalar_swaps_direction_types": true,
+    "both_c_H_signs_cover_the_swap": true
+  },
+  "file_sha256": {
+    "v100": "3ba6bd0574b6dd48087647be9380fb5775c63b65380da3bf4ef3c7368b716a5a",
+    "rx9070xt": "9b2cef9f9558cef9f0612383fa6673aee56bd96e0f5303322f4e4e9a28fca16a"
+  },
+  "pinned_file_sha256_match": true,
+  "independent_gpu_core_fields_match": true,
+  "sign_audits": [
+    {
+      "c_H": -1,
+      "histogram_total": 3470108187,
+      "histogram_sha256": "106de27687d372ce083a3fcfb1adb3fcf50830f14cd314842eebacd9488fbf01",
+      "floor_survivors": 0,
+      "minimum_maximum_type_cost": 76,
+      "minimum_budget_excess": 4,
+      "representative_recomputed": {
+        "type_costs": {
+          "-1": 76,
+          "1": 66
+        },
+        "b_by_direction": [
+          6,
+          2,
+          6,
+          2,
+          8,
+          0,
+          0,
+          8,
+          2,
+          6,
+          2,
+          2
+        ],
+        "maximum_type_cost": 76
+      },
+      "valid": true
+    },
+    {
+      "c_H": 1,
+      "histogram_total": 3470108187,
+      "histogram_sha256": "8df9472aa3d7bb1c24db7240a967d4a861b6e63343e07ea48adf07a473958e39",
+      "floor_survivors": 0,
+      "minimum_maximum_type_cost": 76,
+      "minimum_budget_excess": 4,
+      "representative_recomputed": {
+        "type_costs": {
+          "-1": 64,
+          "1": 76
+        },
+        "b_by_direction": [
+          2,
+          4,
+          8,
+          0,
+          2,
+          6,
+          6,
+          2,
+          0,
+          8,
+          4,
+          2
+        ],
+        "maximum_type_cost": 76
+      },
+      "valid": true
+    }
+  ],
+  "benchmarks_not_used_as_proof": {
+    "v100": {
+      "device": "Tesla V100-SXM2-16GB",
+      "elapsed_seconds": 4.852481590991374,
+      "boundaries_per_second": 715120319.764273
+    },
+    "rx9070xt": {
+      "device": "AMD Radeon RX 9070 XT",
+      "elapsed_seconds": 1.2396264639683068,
+      "boundaries_per_second": 2799317607.250372
+    }
+  },
+  "theorem": {
+    "every_finite_p11_size8_boundary": "IMPOSSIBLE",
+    "exact_minimum_larger_type_cost": 76,
+    "exact_type_budget": 72,
+    "contradiction_gap": 4,
+    "p11_infinity_plus_9": "OPEN",
+    "larger_boundaries": "OPEN",
+    "general_residual_ii": false,
+    "R1": false,
+    "global_QVAR": false,
+    "type_I": false,
+    "limit_exists": false
+  },
+  "L_status": "OPEN"
+}

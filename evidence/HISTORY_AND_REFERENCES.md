@@ -831,6 +831,42 @@ an unqualified priority or sequence claim.
 
 ---
 
+## 7w. Finite p=11 size-eight boundary exclusion (2026-08-28)
+
+Proposition 15.670 closes the first finite survivor of Proposition 15.669.
+Every eight-point set in \(AG(2,11)\) has an affine-similarity image
+containing field points zero and one. The exact pointed-set identity
+
+\[
+ \binom{121}{8}\,8\cdot7
+ =\binom{119}{6}\,121\cdot120
+\]
+
+reduces exclusion to all \(3,470,108,187\) normalized sets. Multiplication
+by a nonsquare swaps the two quadratic direction types and simultaneously
+transfers the boundary phase sign; testing both signs is therefore lossless.
+The source checks this action on all scalars, translations, and directions.
+
+Exact direct-rank CUDA and HIP censuses independently test every normalized
+set for both signs. Both complete cost-pair histograms agree, both signs have
+zero survivors under the exact type budget 72, and the exact minimum larger
+type cost is 76. A separate CPU combinations traversal matches every
+histogram entry in a 100,000-set prefix. Thus every finite \(p=11\)
+size-eight boundary is impossible. Infinity plus nine and larger boundaries
+remain; residual (ii) is not closed.
+
+The adjacent literature found in the post-result search studies odd secants
+of \(q+2\)-point sets [42] and prescribed-direction integral point sets with
+Paley connections [43], not this eight-point split-floor exclusion. OEIS
+contains the two raw counts in unrelated binomial tables: 3,470,108,187 in
+A004379 and 899,749,479,915 in A126450. Those matches are context only and
+carry no sequence or priority claim.
+
+The permanent machine record is archived under
+`/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-28-p11-size-eight-boundary/`.
+
+---
+
 ## 8. What is not in the older literature
 
 - No 1930s–1970s theorem that \(\lim n^{-3/2}\min_A\max_x|x^\top Ax|\) exists.
@@ -885,5 +921,7 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 39. K. Tasaka, *Harmonic strength of shells of lattices and weighted theta series*, [arXiv:2308.14309](https://arxiv.org/abs/2308.14309) (survey of the shell-harmonic/modular-form bridge; no Paley channel inequality).
 40. M. Ozeki, *On the Siegel theta series of extremal lattices and their association schemes*, Kyushu J. Math. **68** (2014), 53--73, [doi:10.2206/kyushujm.68.053](https://doi.org/10.2206/kyushujm.68.053) (adjacent orbital/theta machinery; not a proof of R1).
 41. P.-A. Bernard, N. Crampé, and L. Vinet, *A bivariate Q-polynomial structure for the non-binary Johnson scheme*, J. Combin. Theory Ser. A **202** (2024), 105829, [arXiv:2306.01882](https://arxiv.org/abs/2306.01882) (adjacent Johnson-scheme machinery; not the parity-majorant or affine pair-deficit theorem of 15.669).
+42. S. Ball and B. Csajbók, *On sets of points with few odd secants*, [arXiv:1711.10876](https://arxiv.org/abs/1711.10876) (odd-secant bounds for \(q+2\)-point projective sets; not the eight-point split-type census of 15.670).
+43. M. Kiermaier and S. Kurz, *Maximal integral point sets in affine planes over finite fields*, [arXiv:1401.2825](https://arxiv.org/abs/1401.2825) (prescribed directions and Paley-clique context; not the boundary parity-floor budget of 15.670).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

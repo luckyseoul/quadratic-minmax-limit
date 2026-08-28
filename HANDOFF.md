@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-28 (15.669 proves the uniform non-Walsh boundary-range exclusion; no general flag flipped)
+**Date:** 2026-08-28 (15.670 excludes every finite p=11 size-eight boundary; no general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -34,7 +34,30 @@ Proposition 15.669 now excludes every all-finite even boundary with
 `5<=s<=p-4` for every odd `p>=17`. It also closes `p=11` infinity plus seven
 and, at `p=13`, eight finite points and infinity plus seven or nine. The
 first profiles outside these ranges survive only the floor-and-pair
-relaxation and are not actual graphs. Residual (ii) therefore remains open.
+relaxation and are not actual graphs. Proposition 15.670 additionally closes
+every finite `p=11` size-eight boundary by a losslessly normalized exact
+census. Residual (ii) therefore remains open; the first `p=11` profiles are
+now infinity plus nine and finite size at least ten.
+
+## 15.670 — every finite p=11 size-eight boundary is impossible
+
+`src/e1_gmin_m4_prop15670.py` and
+`evidence/NOTE_2026-08-28_p11_size_eight_boundary_exclusion.md`. Every finite
+eight-set has an affine-similarity image containing field points `0,1`.
+The exact pointed-set identity reduces exclusion from `C(121,8)` sets to all
+`C(119,6)=3,470,108,187` normalized sets. The verifier audits all nonzero
+scalars, translations, and projective directions, including the nonsquare
+type swap and corresponding `c_H` phase transfer.
+
+Complete V100/CUDA and RX 9070 XT/HIP replays test both signs on every
+normalized set. Both full cost-pair histograms agree exactly, both signs have
+zero survivors, and the minimum larger type cost is 76 against the exact
+budget 72. Independent CPU combinations code matches every histogram entry
+on a 100,000-set prefix. This closes finite `p=11` size eight only. The
+permanent archive is
+`/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-28-p11-size-eight-boundary/`;
+its manifest SHA-256 is
+`197616fc71490427822491afff651dfb32f7752627ebbcdc7b26ddc619de11de`.
 
 ## 15.669 — uniform non-Walsh boundary-range exclusion
 
@@ -63,8 +86,9 @@ six-unit saving when `p=1 mod 4`. This excludes odd finite
 Exact rational floor/count-profile programs also give gaps 30 and 18 for
 `p=11` infinity plus seven, gap 4 for `p=13` eight finite, and phase gaps
 `(42,30)` and `(40,24)` for `p=13` infinity plus seven and nine. The first
-relaxed survivors are eight finite / infinity plus nine at `p=11`, ten
-finite / infinity plus eleven at `p=13`, the first even
+relaxed survivors of 15.669 are eight finite / infinity plus nine at `p=11`,
+but 15.670 subsequently closes the finite-eight branch. At `p=13` they are
+ten finite / infinity plus eleven, followed by the first even
 `s>3(p-1)/4` without infinity for `p>=17`, and `s=p-2` with infinity. A
 survivor is only a directional count profile; incidence realizability and
 the full residual graph constraints are still open.
@@ -1817,7 +1841,7 @@ overridden twice.
 | Item | Flag | Status |
 |---|---|---|
 | \(\lambda_{\min}(\Phi)\ge6\) on \(Z\) | `phi_F_ge_6_proved_general=False` | Open. Exceptional QVAR is closed through `k=6` and remains on `k>=7` from `p=13`; principal blocks retain the delta-variance target. |
-| Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open. Walsh and the boundary ranges of 15.669 are closed; the first larger floor-plus-pair profiles and the full graph constraints remain. |
+| Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open. Walsh, the boundary ranges of 15.669, and finite p=11 size eight in 15.670 are closed; the first larger floor-plus-pair profiles and the full graph constraints remain. |
 | Type I, Max− not two-level \(\{-1,-3\}\) | `type_I_multilevel_bad_case_ND_closed=False` | Open. Remainder is \(A_{\mathrm{full}}\). |
 | Lemma D | True | Closed. Do not unflip. |
 
@@ -1877,7 +1901,7 @@ Official class is leftover Max− together with \(s_+\ge2\). leftover-only (\(s_
 - leftover+\(s_+\) empty for all \(n_F\) at \(p=5\), \(k=20\) (15.528).
 - 15.585: leftover+\(s_+\) at \(k=4p\) forces \(\min_+=2\); \(\{2,4,6\}\) cannot have \(1_{S=2}\) a plus pair-slice.
 - 15.598: square-direction \(\infty\cup L\) forces \(\sum_S y=0\) on Max−. Walsh ∀p is spanning of the xor-slice of H.
-- 15.669: for `p>=17`, all-finite `6<=s<=3(p-1)/4` and infinity-present `5<=s<=p-4` are impossible; exact `p=11,13` extensions are listed at the top of this file. Larger count profiles survive only the current relaxation.
+- 15.669: for `p>=17`, all-finite `6<=s<=3(p-1)/4` and infinity-present `5<=s<=p-4` are impossible; exact `p=11,13` extensions are listed at the top of this file. 15.670 additionally closes every finite `p=11` size-eight boundary. Larger count profiles survive only the current relaxation.
 - No identity that leftover+\(s_+\) is empty at every even \(k\ge4p\).
 
 ## Type I

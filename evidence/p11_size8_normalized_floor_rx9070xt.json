@@ -1,0 +1,4681 @@
+{
+  "experiment": "p11_size8_normalized_floor_gpu",
+  "status": "exact_normalized_boundary_census",
+  "p": 11,
+  "finite_boundary_size": 8,
+  "normalization": "contains field points 0 and 1",
+  "coverage": "every finite eight-set has an affine image containing 0 and 1; a nonsquare normalizing scalar swaps c_H, so both signs are tested",
+  "normalized_boundaries": 3470108187,
+  "checked_boundaries": 3470108187,
+  "type_budget": 72,
+  "signs": [
+    {
+      "c_H": -1,
+      "floor_survivors": 0,
+      "minimum_maximum_type_cost": 76,
+      "minimum_budget_excess": 4,
+      "first_minimum_rank": 108601023,
+      "first_minimum_boundary": [
+        0,
+        1,
+        2,
+        23,
+        37,
+        42,
+        47,
+        54
+      ],
+      "first_minimum_coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          10,
+          4
+        ]
+      ],
+      "first_minimum_type_costs": {
+        "-1": 76,
+        "1": 66
+      },
+      "first_minimum_b_by_direction": [
+        6,
+        2,
+        6,
+        2,
+        8,
+        0,
+        0,
+        8,
+        2,
+        6,
+        2,
+        2
+      ],
+      "cost_pair_histogram": [
+        {
+          "cost_minus": 68,
+          "cost_plus": 76,
+          "count": 20
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 76,
+          "count": 96
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 64,
+          "count": 24
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 66,
+          "count": 28
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 72,
+          "count": 308
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 76,
+          "count": 236
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 78,
+          "count": 364
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 80,
+          "count": 20
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 80,
+          "count": 48
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 80,
+          "count": 2400
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 70,
+          "count": 192
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 72,
+          "count": 104
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 76,
+          "count": 2140
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 78,
+          "count": 1692
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 82,
+          "count": 96
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 82,
+          "count": 6024
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 82,
+          "count": 52
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 84,
+          "count": 1344
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 84,
+          "count": 1752
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 84,
+          "count": 5456
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 56,
+          "count": 28
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 64,
+          "count": 256
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 66,
+          "count": 192
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 68,
+          "count": 800
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 72,
+          "count": 5760
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 74,
+          "count": 1640
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 76,
+          "count": 620
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 78,
+          "count": 32
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 80,
+          "count": 22712
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 82,
+          "count": 46080
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 84,
+          "count": 8280
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 86,
+          "count": 264
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 86,
+          "count": 17440
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 88,
+          "count": 120
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 88,
+          "count": 860
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 88,
+          "count": 96
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 88,
+          "count": 35040
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 88,
+          "count": 17364
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 88,
+          "count": 261532
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 60,
+          "count": 120
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 62,
+          "count": 196
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 68,
+          "count": 940
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 70,
+          "count": 1368
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 72,
+          "count": 832
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 76,
+          "count": 40580
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 78,
+          "count": 39684
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 80,
+          "count": 2436
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 82,
+          "count": 1424
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 84,
+          "count": 206400
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 86,
+          "count": 192756
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 88,
+          "count": 162496
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 90,
+          "count": 22100
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 90,
+          "count": 1372
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 90,
+          "count": 153824
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 90,
+          "count": 8452
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 92,
+          "count": 60
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 92,
+          "count": 944
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 92,
+          "count": 4036
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 92,
+          "count": 13176
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 92,
+          "count": 156200
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 92,
+          "count": 79064
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 92,
+          "count": 1514408
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 56,
+          "count": 316
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 58,
+          "count": 396
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 64,
+          "count": 1112
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 66,
+          "count": 2056
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 68,
+          "count": 96
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 72,
+          "count": 25532
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 74,
+          "count": 5616
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 76,
+          "count": 3708
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 78,
+          "count": 512
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 80,
+          "count": 117400
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 82,
+          "count": 258856
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 84,
+          "count": 67528
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 88,
+          "count": 1486116
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 90,
+          "count": 1048196
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 92,
+          "count": 464812
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 94,
+          "count": 400
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 94,
+          "count": 2888
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 94,
+          "count": 2856
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 94,
+          "count": 271312
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 94,
+          "count": 24728
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 94,
+          "count": 2552848
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 94,
+          "count": 139480
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 96,
+          "count": 176
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 96,
+          "count": 4232
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 96,
+          "count": 53744
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 96,
+          "count": 42472
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 96,
+          "count": 349036
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 96,
+          "count": 418908
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 96,
+          "count": 2003496
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 52,
+          "count": 144
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 60,
+          "count": 2046
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 62,
+          "count": 1360
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 68,
+          "count": 17000
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 70,
+          "count": 7950
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 72,
+          "count": 3684
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 76,
+          "count": 190998
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 78,
+          "count": 196040
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 80,
+          "count": 8544
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 82,
+          "count": 3324
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 84,
+          "count": 1047860
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 86,
+          "count": 873394
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 88,
+          "count": 630316
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 90,
+          "count": 34864
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 92,
+          "count": 6204598
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 94,
+          "count": 10726080
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 96,
+          "count": 1906424
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 98,
+          "count": 192
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 98,
+          "count": 22728
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 98,
+          "count": 1092
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 98,
+          "count": 287088
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 98,
+          "count": 24160
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 98,
+          "count": 1828408
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 98,
+          "count": 158172
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 98,
+          "count": 10333264
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 98,
+          "count": 547116
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 100,
+          "count": 10976
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 100,
+          "count": 52
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 100,
+          "count": 146464
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 100,
+          "count": 1524
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 100,
+          "count": 977424
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 100,
+          "count": 15112
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 100,
+          "count": 5266644
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 100,
+          "count": 40304
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 48,
+          "count": 108
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 56,
+          "count": 1140
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 58,
+          "count": 152
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 64,
+          "count": 6528
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 66,
+          "count": 8480
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 68,
+          "count": 880
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 72,
+          "count": 159324
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 74,
+          "count": 51744
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 76,
+          "count": 12748
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 78,
+          "count": 2496
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 80,
+          "count": 641420
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 82,
+          "count": 1078096
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 84,
+          "count": 295456
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 88,
+          "count": 6964408
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 90,
+          "count": 4733672
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 92,
+          "count": 1848616
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 94,
+          "count": 573288
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 96,
+          "count": 7993840
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 98,
+          "count": 42084272
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 100,
+          "count": 22207728
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 102,
+          "count": 672
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 102,
+          "count": 25768
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 102,
+          "count": 5320
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 102,
+          "count": 634772
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 102,
+          "count": 63288
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 102,
+          "count": 4688484
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 102,
+          "count": 178520
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 102,
+          "count": 16496890
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 102,
+          "count": 890760
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 104,
+          "count": 344
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 104,
+          "count": 43160
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 104,
+          "count": 3248
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 104,
+          "count": 1084648
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 104,
+          "count": 15192
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 104,
+          "count": 8201356
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 104,
+          "count": 102252
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 104,
+          "count": 28888132
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 104,
+          "count": 348104
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 52,
+          "count": 76
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 54,
+          "count": 192
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 60,
+          "count": 5172
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 62,
+          "count": 3732
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 68,
+          "count": 45508
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 70,
+          "count": 25212
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 72,
+          "count": 10640
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 76,
+          "count": 581676
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 78,
+          "count": 580760
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 80,
+          "count": 34116
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 82,
+          "count": 6964
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 84,
+          "count": 3117404
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 86,
+          "count": 2527558
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 88,
+          "count": 1716188
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 90,
+          "count": 92640
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 92,
+          "count": 17330630
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 94,
+          "count": 30001636
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 96,
+          "count": 5048032
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 98,
+          "count": 1500252
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 100,
+          "count": 144188
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 102,
+          "count": 44188326
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 104,
+          "count": 78592344
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 106,
+          "count": 7568
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 106,
+          "count": 185492
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 106,
+          "count": 1471832
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 106,
+          "count": 4888660
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 106,
+          "count": 13930184
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 108,
+          "count": 2036
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 108,
+          "count": 47124
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 108,
+          "count": 460600
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 108,
+          "count": 2581420
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 108,
+          "count": 14288996
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 108,
+          "count": 51057780
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 48,
+          "count": 166
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 56,
+          "count": 3386
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 58,
+          "count": 216
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 60,
+          "count": 32
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 64,
+          "count": 23204
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 66,
+          "count": 21132
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 68,
+          "count": 1664
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 72,
+          "count": 399180
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 74,
+          "count": 147296
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 76,
+          "count": 37196
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 78,
+          "count": 4276
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 80,
+          "count": 1607134
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 82,
+          "count": 2716548
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 84,
+          "count": 691824
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 88,
+          "count": 16739611
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 90,
+          "count": 11621560
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 92,
+          "count": 3877856
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 94,
+          "count": 1176600
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 96,
+          "count": 16599732
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 98,
+          "count": 88434812
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 100,
+          "count": 46263808
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 102,
+          "count": 1735308
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 104,
+          "count": 601872
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 108,
+          "count": 93758002
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 110,
+          "count": 924
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 110,
+          "count": 30480
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 110,
+          "count": 36
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 110,
+          "count": 334116
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 110,
+          "count": 908
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 110,
+          "count": 1742776
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 110,
+          "count": 5076
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 110,
+          "count": 10120936
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 110,
+          "count": 23676
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 110,
+          "count": 35846424
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 110,
+          "count": 60576
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 110,
+          "count": 67318044
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 112,
+          "count": 60
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 112,
+          "count": 1384
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 112,
+          "count": 32068
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 112,
+          "count": 62352
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 112,
+          "count": 479072
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 112,
+          "count": 1537660
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 112,
+          "count": 3020592
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 44,
+          "count": 148
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 52,
+          "count": 304
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 54,
+          "count": 212
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 60,
+          "count": 14504
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 62,
+          "count": 6176
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 68,
+          "count": 123572
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 70,
+          "count": 64798
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 72,
+          "count": 18372
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 76,
+          "count": 1360668
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 78,
+          "count": 1216712
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 80,
+          "count": 73628
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 82,
+          "count": 26012
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 84,
+          "count": 7142752
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 86,
+          "count": 5253226
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 88,
+          "count": 3772592
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 90,
+          "count": 215640
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 92,
+          "count": 36395616
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 94,
+          "count": 64144212
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 96,
+          "count": 11207780
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 98,
+          "count": 2855616
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 100,
+          "count": 265892
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 102,
+          "count": 87043012
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 104,
+          "count": 154969748
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 106,
+          "count": 27218892
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 110,
+          "count": 97316
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 114,
+          "count": 60900
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 114,
+          "count": 1143468
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 114,
+          "count": 6756372
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 114,
+          "count": 21041920
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 114,
+          "count": 55547356
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 114,
+          "count": 99391904
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 116,
+          "count": 13328
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 116,
+          "count": 310300
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 116,
+          "count": 1714540
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 116,
+          "count": 5683700
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 116,
+          "count": 14717604
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 116,
+          "count": 26896668
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 32,
+          "count": 20
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 48,
+          "count": 192
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 50,
+          "count": 176
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 56,
+          "count": 5004
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 58,
+          "count": 864
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 60,
+          "count": 568
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 64,
+          "count": 35172
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 66,
+          "count": 35512
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 68,
+          "count": 3160
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 72,
+          "count": 606388
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 74,
+          "count": 209584
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 76,
+          "count": 55696
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 78,
+          "count": 3904
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 80,
+          "count": 2317172
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 82,
+          "count": 3811708
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 84,
+          "count": 936184
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 88,
+          "count": 23750276
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 90,
+          "count": 16417136
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 92,
+          "count": 5332156
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 94,
+          "count": 1651240
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 96,
+          "count": 23299544
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 98,
+          "count": 122367908
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 100,
+          "count": 64962136
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 102,
+          "count": 2559320
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 104,
+          "count": 852856
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 108,
+          "count": 130657804
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 110,
+          "count": 93209776
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 112,
+          "count": 4077484
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 120,
+          "count": 1560
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 120,
+          "count": 25456
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 120,
+          "count": 194368
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 120,
+          "count": 1051728
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 120,
+          "count": 5603856
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 120,
+          "count": 17573728
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 120,
+          "count": 28310348
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 120,
+          "count": 40686024
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 44,
+          "count": 160
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 52,
+          "count": 948
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 54,
+          "count": 450
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 60,
+          "count": 19210
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 62,
+          "count": 6400
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 66,
+          "count": 68
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 68,
+          "count": 136474
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 70,
+          "count": 74290
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 72,
+          "count": 26644
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 76,
+          "count": 1483990
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 78,
+          "count": 1446790
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 80,
+          "count": 83364
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 82,
+          "count": 22406
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 84,
+          "count": 8096112
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 86,
+          "count": 5681184
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 88,
+          "count": 3708968
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 90,
+          "count": 216096
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 92,
+          "count": 36961348
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 94,
+          "count": 65471580
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 96,
+          "count": 11399816
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 98,
+          "count": 2687566
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 100,
+          "count": 228868
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 102,
+          "count": 80172382
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 104,
+          "count": 142324312
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 106,
+          "count": 25551800
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 110,
+          "count": 77284
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 114,
+          "count": 82913704
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 116,
+          "count": 22306580
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 122,
+          "count": 52
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 122,
+          "count": 2952
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 122,
+          "count": 9688
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 122,
+          "count": 81536
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 122,
+          "count": 409496
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 122,
+          "count": 1270624
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 122,
+          "count": 2020728
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 122,
+          "count": 2926680
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 40,
+          "count": 76
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 44,
+          "count": 18
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 48,
+          "count": 402
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 56,
+          "count": 5142
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 58,
+          "count": 348
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 60,
+          "count": 376
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 64,
+          "count": 25844
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 66,
+          "count": 40920
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 68,
+          "count": 2520
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 72,
+          "count": 594692
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 74,
+          "count": 187848
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 76,
+          "count": 60480
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 78,
+          "count": 5272
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 80,
+          "count": 2282786
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 82,
+          "count": 3447288
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 84,
+          "count": 932176
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 88,
+          "count": 22256420
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 90,
+          "count": 15597164
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 92,
+          "count": 4989436
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 94,
+          "count": 1474696
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 96,
+          "count": 20849280
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 98,
+          "count": 111274912
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 100,
+          "count": 59299256
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 102,
+          "count": 2317920
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 104,
+          "count": 758048
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 108,
+          "count": 110772922
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 110,
+          "count": 79517400
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 112,
+          "count": 3594036
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 120,
+          "count": 30777572
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 122,
+          "count": 2200088
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 126,
+          "count": 10792
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 126,
+          "count": 137748
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 126,
+          "count": 726560
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 126,
+          "count": 1883208
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 126,
+          "count": 5092528
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 126,
+          "count": 7902804
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 126,
+          "count": 6165888
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 52,
+          "count": 182
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 54,
+          "count": 498
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 56,
+          "count": 34
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 60,
+          "count": 9046
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 62,
+          "count": 3514
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 68,
+          "count": 57796
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 70,
+          "count": 23676
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 72,
+          "count": 14038
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 76,
+          "count": 668152
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 78,
+          "count": 681370
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 80,
+          "count": 35976
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 82,
+          "count": 14916
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 84,
+          "count": 3690840
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 86,
+          "count": 2942942
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 88,
+          "count": 1916484
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 90,
+          "count": 116580
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 92,
+          "count": 19609646
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 94,
+          "count": 33791212
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 96,
+          "count": 5933632
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 98,
+          "count": 1622570
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 100,
+          "count": 136384
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 102,
+          "count": 46925968
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 104,
+          "count": 83643604
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 106,
+          "count": 14887048
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 110,
+          "count": 53400
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 114,
+          "count": 54660552
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 116,
+          "count": 14677756
+        },
+        {
+          "cost_minus": 128,
+          "cost_plus": 126,
+          "count": 4422196
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 132,
+          "count": 172
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 132,
+          "count": 588
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 132,
+          "count": 5600
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 132,
+          "count": 26128
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 132,
+          "count": 117712
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 132,
+          "count": 308972
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 132,
+          "count": 433208
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 132,
+          "count": 643364
+        },
+        {
+          "cost_minus": 124,
+          "cost_plus": 132,
+          "count": 417248
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 40,
+          "count": 24
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 48,
+          "count": 60
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 56,
+          "count": 360
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 60,
+          "count": 52
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 64,
+          "count": 4336
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 66,
+          "count": 4232
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 68,
+          "count": 496
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 72,
+          "count": 65604
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 74,
+          "count": 18056
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 76,
+          "count": 4208
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 78,
+          "count": 904
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 80,
+          "count": 262612
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 82,
+          "count": 402180
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 84,
+          "count": 108736
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 88,
+          "count": 2524890
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 90,
+          "count": 1768684
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 92,
+          "count": 699956
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 94,
+          "count": 203676
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 96,
+          "count": 2848160
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 98,
+          "count": 15431732
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 100,
+          "count": 7998320
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 102,
+          "count": 307576
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 104,
+          "count": 124568
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 108,
+          "count": 18234400
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 110,
+          "count": 13012180
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 112,
+          "count": 579012
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 120,
+          "count": 6265852
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 122,
+          "count": 457808
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 132,
+          "count": 111252
+        }
+      ],
+      "histogram_sha256": "106de27687d372ce083a3fcfb1adb3fcf50830f14cd314842eebacd9488fbf01"
+    },
+    {
+      "c_H": 1,
+      "floor_survivors": 0,
+      "minimum_maximum_type_cost": 76,
+      "minimum_budget_excess": 4,
+      "first_minimum_rank": 135919443,
+      "first_minimum_boundary": [
+        0,
+        1,
+        2,
+        33,
+        35,
+        45,
+        60,
+        63
+      ],
+      "first_minimum_coordinates": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          8,
+          5
+        ]
+      ],
+      "first_minimum_type_costs": {
+        "-1": 64,
+        "1": 76
+      },
+      "first_minimum_b_by_direction": [
+        2,
+        4,
+        8,
+        0,
+        2,
+        6,
+        6,
+        2,
+        0,
+        8,
+        4,
+        2
+      ],
+      "cost_pair_histogram": [
+        {
+          "cost_minus": 64,
+          "cost_plus": 76,
+          "count": 32
+        },
+        {
+          "cost_minus": 66,
+          "cost_plus": 76,
+          "count": 28
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 76,
+          "count": 308
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 68,
+          "count": 36
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 72,
+          "count": 128
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 76,
+          "count": 268
+        },
+        {
+          "cost_minus": 78,
+          "cost_plus": 76,
+          "count": 364
+        },
+        {
+          "cost_minus": 70,
+          "cost_plus": 80,
+          "count": 256
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 80,
+          "count": 120
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 80,
+          "count": 2452
+        },
+        {
+          "cost_minus": 78,
+          "cost_plus": 80,
+          "count": 1780
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 60,
+          "count": 36
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 68,
+          "count": 64
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 76,
+          "count": 2752
+        },
+        {
+          "cost_minus": 82,
+          "cost_plus": 68,
+          "count": 128
+        },
+        {
+          "cost_minus": 82,
+          "cost_plus": 76,
+          "count": 7080
+        },
+        {
+          "cost_minus": 82,
+          "cost_plus": 80,
+          "count": 60
+        },
+        {
+          "cost_minus": 56,
+          "cost_plus": 84,
+          "count": 28
+        },
+        {
+          "cost_minus": 64,
+          "cost_plus": 84,
+          "count": 248
+        },
+        {
+          "cost_minus": 66,
+          "cost_plus": 84,
+          "count": 144
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 84,
+          "count": 600
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 84,
+          "count": 5104
+        },
+        {
+          "cost_minus": 74,
+          "cost_plus": 84,
+          "count": 1384
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 84,
+          "count": 556
+        },
+        {
+          "cost_minus": 78,
+          "cost_plus": 84,
+          "count": 24
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 84,
+          "count": 21304
+        },
+        {
+          "cost_minus": 82,
+          "cost_plus": 84,
+          "count": 42400
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 72,
+          "count": 1792
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 76,
+          "count": 1944
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 80,
+          "count": 5968
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 84,
+          "count": 7568
+        },
+        {
+          "cost_minus": 86,
+          "cost_plus": 72,
+          "count": 408
+        },
+        {
+          "cost_minus": 86,
+          "cost_plus": 80,
+          "count": 22432
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 88,
+          "count": 104
+        },
+        {
+          "cost_minus": 62,
+          "cost_plus": 88,
+          "count": 140
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 88,
+          "count": 740
+        },
+        {
+          "cost_minus": 70,
+          "cost_plus": 88,
+          "count": 1320
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 88,
+          "count": 736
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 88,
+          "count": 39052
+        },
+        {
+          "cost_minus": 78,
+          "cost_plus": 88,
+          "count": 36140
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 88,
+          "count": 1932
+        },
+        {
+          "cost_minus": 82,
+          "cost_plus": 88,
+          "count": 1488
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 88,
+          "count": 190752
+        },
+        {
+          "cost_minus": 86,
+          "cost_plus": 88,
+          "count": 196220
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 60,
+          "count": 216
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 68,
+          "count": 1212
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 72,
+          "count": 128
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 76,
+          "count": 39664
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 80,
+          "count": 21500
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 84,
+          "count": 254732
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 88,
+          "count": 166336
+        },
+        {
+          "cost_minus": 90,
+          "cost_plus": 76,
+          "count": 24996
+        },
+        {
+          "cost_minus": 90,
+          "cost_plus": 80,
+          "count": 1428
+        },
+        {
+          "cost_minus": 90,
+          "cost_plus": 84,
+          "count": 140288
+        },
+        {
+          "cost_minus": 90,
+          "cost_plus": 88,
+          "count": 8684
+        },
+        {
+          "cost_minus": 56,
+          "cost_plus": 92,
+          "count": 188
+        },
+        {
+          "cost_minus": 58,
+          "cost_plus": 92,
+          "count": 220
+        },
+        {
+          "cost_minus": 64,
+          "cost_plus": 92,
+          "count": 848
+        },
+        {
+          "cost_minus": 66,
+          "cost_plus": 92,
+          "count": 1528
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 92,
+          "count": 72
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 92,
+          "count": 19100
+        },
+        {
+          "cost_minus": 74,
+          "cost_plus": 92,
+          "count": 3904
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 92,
+          "count": 3292
+        },
+        {
+          "cost_minus": 78,
+          "cost_plus": 92,
+          "count": 496
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 92,
+          "count": 102400
+        },
+        {
+          "cost_minus": 82,
+          "cost_plus": 92,
+          "count": 242344
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 92,
+          "count": 58696
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 92,
+          "count": 1397324
+        },
+        {
+          "cost_minus": 90,
+          "cost_plus": 92,
+          "count": 938852
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 60,
+          "count": 108
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 68,
+          "count": 1408
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 72,
+          "count": 6380
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 76,
+          "count": 16168
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 80,
+          "count": 204888
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 84,
+          "count": 87928
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 88,
+          "count": 1634136
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 92,
+          "count": 489148
+        },
+        {
+          "cost_minus": 94,
+          "cost_plus": 68,
+          "count": 608
+        },
+        {
+          "cost_minus": 94,
+          "cost_plus": 72,
+          "count": 4280
+        },
+        {
+          "cost_minus": 94,
+          "cost_plus": 76,
+          "count": 3304
+        },
+        {
+          "cost_minus": 94,
+          "cost_plus": 80,
+          "count": 335952
+        },
+        {
+          "cost_minus": 94,
+          "cost_plus": 84,
+          "count": 26456
+        },
+        {
+          "cost_minus": 94,
+          "cost_plus": 88,
+          "count": 2654256
+        },
+        {
+          "cost_minus": 94,
+          "cost_plus": 92,
+          "count": 151160
+        },
+        {
+          "cost_minus": 52,
+          "cost_plus": 96,
+          "count": 80
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 96,
+          "count": 1482
+        },
+        {
+          "cost_minus": 62,
+          "cost_plus": 96,
+          "count": 880
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 96,
+          "count": 11672
+        },
+        {
+          "cost_minus": 70,
+          "cost_plus": 96,
+          "count": 5994
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 96,
+          "count": 2924
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 96,
+          "count": 152450
+        },
+        {
+          "cost_minus": 78,
+          "cost_plus": 96,
+          "count": 150488
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 96,
+          "count": 6688
+        },
+        {
+          "cost_minus": 82,
+          "cost_plus": 96,
+          "count": 3060
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 96,
+          "count": 820636
+        },
+        {
+          "cost_minus": 86,
+          "cost_plus": 96,
+          "count": 770374
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 96,
+          "count": 574916
+        },
+        {
+          "cost_minus": 90,
+          "cost_plus": 96,
+          "count": 30544
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 96,
+          "count": 5846658
+        },
+        {
+          "cost_minus": 94,
+          "cost_plus": 96,
+          "count": 9781344
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 60,
+          "count": 384
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 68,
+          "count": 6800
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 76,
+          "count": 70632
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 80,
+          "count": 49144
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 84,
+          "count": 410716
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 88,
+          "count": 419412
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 92,
+          "count": 2293720
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 96,
+          "count": 1680936
+        },
+        {
+          "cost_minus": 98,
+          "cost_plus": 60,
+          "count": 368
+        },
+        {
+          "cost_minus": 98,
+          "cost_plus": 68,
+          "count": 35064
+        },
+        {
+          "cost_minus": 98,
+          "cost_plus": 72,
+          "count": 1708
+        },
+        {
+          "cost_minus": 98,
+          "cost_plus": 76,
+          "count": 360048
+        },
+        {
+          "cost_minus": 98,
+          "cost_plus": 80,
+          "count": 33408
+        },
+        {
+          "cost_minus": 98,
+          "cost_plus": 84,
+          "count": 2071208
+        },
+        {
+          "cost_minus": 98,
+          "cost_plus": 88,
+          "count": 190260
+        },
+        {
+          "cost_minus": 98,
+          "cost_plus": 92,
+          "count": 11466080
+        },
+        {
+          "cost_minus": 98,
+          "cost_plus": 96,
+          "count": 589572
+        },
+        {
+          "cost_minus": 48,
+          "cost_plus": 100,
+          "count": 60
+        },
+        {
+          "cost_minus": 56,
+          "cost_plus": 100,
+          "count": 708
+        },
+        {
+          "cost_minus": 58,
+          "cost_plus": 100,
+          "count": 72
+        },
+        {
+          "cost_minus": 64,
+          "cost_plus": 100,
+          "count": 4700
+        },
+        {
+          "cost_minus": 66,
+          "cost_plus": 100,
+          "count": 6416
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 100,
+          "count": 632
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 100,
+          "count": 119164
+        },
+        {
+          "cost_minus": 74,
+          "cost_plus": 100,
+          "count": 36064
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 100,
+          "count": 11164
+        },
+        {
+          "cost_minus": 78,
+          "cost_plus": 100,
+          "count": 2264
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 100,
+          "count": 514588
+        },
+        {
+          "cost_minus": 82,
+          "cost_plus": 100,
+          "count": 924072
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 100,
+          "count": 250096
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 100,
+          "count": 6049936
+        },
+        {
+          "cost_minus": 90,
+          "cost_plus": 100,
+          "count": 3959152
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 100,
+          "count": 1825432
+        },
+        {
+          "cost_minus": 94,
+          "cost_plus": 100,
+          "count": 557688
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 100,
+          "count": 8267580
+        },
+        {
+          "cost_minus": 98,
+          "cost_plus": 100,
+          "count": 42415976
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 68,
+          "count": 16632
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 72,
+          "count": 60
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 76,
+          "count": 177440
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 80,
+          "count": 2172
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 84,
+          "count": 1064616
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 88,
+          "count": 17368
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 92,
+          "count": 5641652
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 96,
+          "count": 43920
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 100,
+          "count": 21755408
+        },
+        {
+          "cost_minus": 102,
+          "cost_plus": 68,
+          "count": 896
+        },
+        {
+          "cost_minus": 102,
+          "cost_plus": 72,
+          "count": 45016
+        },
+        {
+          "cost_minus": 102,
+          "cost_plus": 76,
+          "count": 6216
+        },
+        {
+          "cost_minus": 102,
+          "cost_plus": 80,
+          "count": 931996
+        },
+        {
+          "cost_minus": 102,
+          "cost_plus": 84,
+          "count": 64448
+        },
+        {
+          "cost_minus": 102,
+          "cost_plus": 88,
+          "count": 5814540
+        },
+        {
+          "cost_minus": 102,
+          "cost_plus": 92,
+          "count": 186600
+        },
+        {
+          "cost_minus": 102,
+          "cost_plus": 96,
+          "count": 18168398
+        },
+        {
+          "cost_minus": 102,
+          "cost_plus": 100,
+          "count": 846472
+        },
+        {
+          "cost_minus": 52,
+          "cost_plus": 104,
+          "count": 36
+        },
+        {
+          "cost_minus": 54,
+          "cost_plus": 104,
+          "count": 144
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 104,
+          "count": 3452
+        },
+        {
+          "cost_minus": 62,
+          "cost_plus": 104,
+          "count": 2204
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 104,
+          "count": 26956
+        },
+        {
+          "cost_minus": 70,
+          "cost_plus": 104,
+          "count": 18580
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 104,
+          "count": 7504
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 104,
+          "count": 436068
+        },
+        {
+          "cost_minus": 78,
+          "cost_plus": 104,
+          "count": 427464
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 104,
+          "count": 23340
+        },
+        {
+          "cost_minus": 82,
+          "cost_plus": 104,
+          "count": 6588
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 104,
+          "count": 2298804
+        },
+        {
+          "cost_minus": 86,
+          "cost_plus": 104,
+          "count": 2117922
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 104,
+          "count": 1500116
+        },
+        {
+          "cost_minus": 90,
+          "cost_plus": 104,
+          "count": 82976
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 104,
+          "count": 15657122
+        },
+        {
+          "cost_minus": 94,
+          "cost_plus": 104,
+          "count": 26279596
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 104,
+          "count": 4299040
+        },
+        {
+          "cost_minus": 98,
+          "cost_plus": 104,
+          "count": 1593300
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 104,
+          "count": 144660
+        },
+        {
+          "cost_minus": 102,
+          "cost_plus": 104,
+          "count": 47738418
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 68,
+          "count": 552
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 72,
+          "count": 71752
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 76,
+          "count": 4368
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 80,
+          "count": 1525624
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 84,
+          "count": 19920
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 88,
+          "count": 9853380
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 92,
+          "count": 128300
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 96,
+          "count": 31031756
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 100,
+          "count": 402576
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 104,
+          "count": 82669288
+        },
+        {
+          "cost_minus": 106,
+          "cost_plus": 72,
+          "count": 11696
+        },
+        {
+          "cost_minus": 106,
+          "cost_plus": 80,
+          "count": 251420
+        },
+        {
+          "cost_minus": 106,
+          "cost_plus": 88,
+          "count": 1714792
+        },
+        {
+          "cost_minus": 106,
+          "cost_plus": 96,
+          "count": 5125596
+        },
+        {
+          "cost_minus": 106,
+          "cost_plus": 104,
+          "count": 14238712
+        },
+        {
+          "cost_minus": 48,
+          "cost_plus": 108,
+          "count": 86
+        },
+        {
+          "cost_minus": 56,
+          "cost_plus": 108,
+          "count": 1962
+        },
+        {
+          "cost_minus": 58,
+          "cost_plus": 108,
+          "count": 120
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 108,
+          "count": 24
+        },
+        {
+          "cost_minus": 64,
+          "cost_plus": 108,
+          "count": 14120
+        },
+        {
+          "cost_minus": 66,
+          "cost_plus": 108,
+          "count": 13756
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 108,
+          "count": 1080
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 108,
+          "count": 263244
+        },
+        {
+          "cost_minus": 74,
+          "cost_plus": 108,
+          "count": 92720
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 108,
+          "count": 27820
+        },
+        {
+          "cost_minus": 78,
+          "cost_plus": 108,
+          "count": 2948
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 108,
+          "count": 1139750
+        },
+        {
+          "cost_minus": 82,
+          "cost_plus": 108,
+          "count": 2079852
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 108,
+          "count": 514528
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 108,
+          "count": 12879643
+        },
+        {
+          "cost_minus": 90,
+          "cost_plus": 108,
+          "count": 8684936
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 108,
+          "count": 3390888
+        },
+        {
+          "cost_minus": 94,
+          "cost_plus": 108,
+          "count": 1032936
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 108,
+          "count": 15320128
+        },
+        {
+          "cost_minus": 98,
+          "cost_plus": 108,
+          "count": 79674444
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 108,
+          "count": 40723904
+        },
+        {
+          "cost_minus": 102,
+          "cost_plus": 108,
+          "count": 1504572
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 108,
+          "count": 638416
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 60,
+          "count": 4404
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 68,
+          "count": 79716
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 76,
+          "count": 667912
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 84,
+          "count": 3476268
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 92,
+          "count": 18941124
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 100,
+          "count": 60755348
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 108,
+          "count": 101222490
+        },
+        {
+          "cost_minus": 110,
+          "cost_plus": 60,
+          "count": 1932
+        },
+        {
+          "cost_minus": 110,
+          "cost_plus": 68,
+          "count": 49488
+        },
+        {
+          "cost_minus": 110,
+          "cost_plus": 72,
+          "count": 76
+        },
+        {
+          "cost_minus": 110,
+          "cost_plus": 76,
+          "count": 468532
+        },
+        {
+          "cost_minus": 110,
+          "cost_plus": 80,
+          "count": 1444
+        },
+        {
+          "cost_minus": 110,
+          "cost_plus": 84,
+          "count": 2269960
+        },
+        {
+          "cost_minus": 110,
+          "cost_plus": 88,
+          "count": 6908
+        },
+        {
+          "cost_minus": 110,
+          "cost_plus": 92,
+          "count": 12984552
+        },
+        {
+          "cost_minus": 110,
+          "cost_plus": 96,
+          "count": 29524
+        },
+        {
+          "cost_minus": 110,
+          "cost_plus": 100,
+          "count": 41686304
+        },
+        {
+          "cost_minus": 110,
+          "cost_plus": 104,
+          "count": 76064
+        },
+        {
+          "cost_minus": 110,
+          "cost_plus": 108,
+          "count": 71120844
+        },
+        {
+          "cost_minus": 44,
+          "cost_plus": 112,
+          "count": 76
+        },
+        {
+          "cost_minus": 52,
+          "cost_plus": 112,
+          "count": 144
+        },
+        {
+          "cost_minus": 54,
+          "cost_plus": 112,
+          "count": 124
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 112,
+          "count": 9128
+        },
+        {
+          "cost_minus": 62,
+          "cost_plus": 112,
+          "count": 3680
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 112,
+          "count": 73436
+        },
+        {
+          "cost_minus": 70,
+          "cost_plus": 112,
+          "count": 45802
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 112,
+          "count": 13772
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 112,
+          "count": 975764
+        },
+        {
+          "cost_minus": 78,
+          "cost_plus": 112,
+          "count": 858424
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 112,
+          "count": 51476
+        },
+        {
+          "cost_minus": 82,
+          "cost_plus": 112,
+          "count": 20468
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 112,
+          "count": 5056064
+        },
+        {
+          "cost_minus": 86,
+          "cost_plus": 112,
+          "count": 4156062
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 112,
+          "count": 3124816
+        },
+        {
+          "cost_minus": 90,
+          "cost_plus": 112,
+          "count": 173672
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 112,
+          "count": 30972832
+        },
+        {
+          "cost_minus": 94,
+          "cost_plus": 112,
+          "count": 53179708
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 112,
+          "count": 9044844
+        },
+        {
+          "cost_minus": 98,
+          "cost_plus": 112,
+          "count": 2796576
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 112,
+          "count": 255020
+        },
+        {
+          "cost_minus": 102,
+          "cost_plus": 112,
+          "count": 87088540
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 112,
+          "count": 151813372
+        },
+        {
+          "cost_minus": 106,
+          "cost_plus": 112,
+          "count": 26125700
+        },
+        {
+          "cost_minus": 110,
+          "cost_plus": 112,
+          "count": 111116
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 60,
+          "count": 108
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 68,
+          "count": 2312
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 76,
+          "count": 44148
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 84,
+          "count": 81064
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 92,
+          "count": 590304
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 100,
+          "count": 1748476
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 108,
+          "count": 3112640
+        },
+        {
+          "cost_minus": 114,
+          "cost_plus": 72,
+          "count": 118412
+        },
+        {
+          "cost_minus": 114,
+          "cost_plus": 80,
+          "count": 1879076
+        },
+        {
+          "cost_minus": 114,
+          "cost_plus": 88,
+          "count": 9618140
+        },
+        {
+          "cost_minus": 114,
+          "cost_plus": 96,
+          "count": 27417120
+        },
+        {
+          "cost_minus": 114,
+          "cost_plus": 104,
+          "count": 71779956
+        },
+        {
+          "cost_minus": 114,
+          "cost_plus": 112,
+          "count": 117582336
+        },
+        {
+          "cost_minus": 32,
+          "cost_plus": 116,
+          "count": 8
+        },
+        {
+          "cost_minus": 48,
+          "cost_plus": 116,
+          "count": 88
+        },
+        {
+          "cost_minus": 50,
+          "cost_plus": 116,
+          "count": 104
+        },
+        {
+          "cost_minus": 56,
+          "cost_plus": 116,
+          "count": 2556
+        },
+        {
+          "cost_minus": 58,
+          "cost_plus": 116,
+          "count": 424
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 116,
+          "count": 384
+        },
+        {
+          "cost_minus": 64,
+          "cost_plus": 116,
+          "count": 20478
+        },
+        {
+          "cost_minus": 66,
+          "cost_plus": 116,
+          "count": 22112
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 116,
+          "count": 1880
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 116,
+          "count": 377812
+        },
+        {
+          "cost_minus": 74,
+          "cost_plus": 116,
+          "count": 126864
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 116,
+          "count": 42528
+        },
+        {
+          "cost_minus": 78,
+          "cost_plus": 116,
+          "count": 3040
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 116,
+          "count": 1568276
+        },
+        {
+          "cost_minus": 82,
+          "cost_plus": 116,
+          "count": 2848316
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 116,
+          "count": 679136
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 116,
+          "count": 17802172
+        },
+        {
+          "cost_minus": 90,
+          "cost_plus": 116,
+          "count": 11921608
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 116,
+          "count": 4632428
+        },
+        {
+          "cost_minus": 94,
+          "cost_plus": 116,
+          "count": 1443432
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 116,
+          "count": 21401336
+        },
+        {
+          "cost_minus": 98,
+          "cost_plus": 116,
+          "count": 109477748
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 116,
+          "count": 56573992
+        },
+        {
+          "cost_minus": 102,
+          "cost_plus": 116,
+          "count": 2173016
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 116,
+          "count": 910416
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 116,
+          "count": 142036492
+        },
+        {
+          "cost_minus": 110,
+          "cost_plus": 116,
+          "count": 99259760
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 116,
+          "count": 4249156
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 72,
+          "count": 24304
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 80,
+          "count": 492852
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 88,
+          "count": 2374244
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 96,
+          "count": 7209180
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 104,
+          "count": 18593996
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 112,
+          "count": 31175444
+        },
+        {
+          "cost_minus": 44,
+          "cost_plus": 120,
+          "count": 64
+        },
+        {
+          "cost_minus": 52,
+          "cost_plus": 120,
+          "count": 396
+        },
+        {
+          "cost_minus": 54,
+          "cost_plus": 120,
+          "count": 278
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 120,
+          "count": 10750
+        },
+        {
+          "cost_minus": 62,
+          "cost_plus": 120,
+          "count": 3568
+        },
+        {
+          "cost_minus": 66,
+          "cost_plus": 120,
+          "count": 44
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 120,
+          "count": 75486
+        },
+        {
+          "cost_minus": 70,
+          "cost_plus": 120,
+          "count": 47174
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 120,
+          "count": 17036
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 120,
+          "count": 967858
+        },
+        {
+          "cost_minus": 78,
+          "cost_plus": 120,
+          "count": 929122
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 120,
+          "count": 51372
+        },
+        {
+          "cost_minus": 82,
+          "cost_plus": 120,
+          "count": 17186
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 120,
+          "count": 5206128
+        },
+        {
+          "cost_minus": 86,
+          "cost_plus": 120,
+          "count": 4087120
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 120,
+          "count": 2810552
+        },
+        {
+          "cost_minus": 90,
+          "cost_plus": 120,
+          "count": 159328
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 120,
+          "count": 28609276
+        },
+        {
+          "cost_minus": 94,
+          "cost_plus": 120,
+          "count": 49488468
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 120,
+          "count": 8419704
+        },
+        {
+          "cost_minus": 98,
+          "cost_plus": 120,
+          "count": 2428202
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 120,
+          "count": 198636
+        },
+        {
+          "cost_minus": 102,
+          "cost_plus": 120,
+          "count": 73730906
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 120,
+          "count": 128197688
+        },
+        {
+          "cost_minus": 106,
+          "cost_plus": 120,
+          "count": 22535176
+        },
+        {
+          "cost_minus": 110,
+          "cost_plus": 120,
+          "count": 85228
+        },
+        {
+          "cost_minus": 114,
+          "cost_plus": 120,
+          "count": 91994568
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 120,
+          "count": 24323612
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 60,
+          "count": 3928
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 68,
+          "count": 48912
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 76,
+          "count": 323128
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 84,
+          "count": 1707112
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 92,
+          "count": 8868112
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 100,
+          "count": 25090936
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 108,
+          "count": 37485284
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 116,
+          "count": 54460664
+        },
+        {
+          "cost_minus": 122,
+          "cost_plus": 60,
+          "count": 116
+        },
+        {
+          "cost_minus": 122,
+          "cost_plus": 68,
+          "count": 5336
+        },
+        {
+          "cost_minus": 122,
+          "cost_plus": 76,
+          "count": 15512
+        },
+        {
+          "cost_minus": 122,
+          "cost_plus": 84,
+          "count": 129360
+        },
+        {
+          "cost_minus": 122,
+          "cost_plus": 92,
+          "count": 622808
+        },
+        {
+          "cost_minus": 122,
+          "cost_plus": 100,
+          "count": 1768552
+        },
+        {
+          "cost_minus": 122,
+          "cost_plus": 108,
+          "count": 2614280
+        },
+        {
+          "cost_minus": 122,
+          "cost_plus": 116,
+          "count": 3817848
+        },
+        {
+          "cost_minus": 40,
+          "cost_plus": 124,
+          "count": 36
+        },
+        {
+          "cost_minus": 44,
+          "cost_plus": 124,
+          "count": 10
+        },
+        {
+          "cost_minus": 48,
+          "cost_plus": 124,
+          "count": 186
+        },
+        {
+          "cost_minus": 56,
+          "cost_plus": 124,
+          "count": 2726
+        },
+        {
+          "cost_minus": 58,
+          "cost_plus": 124,
+          "count": 156
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 124,
+          "count": 240
+        },
+        {
+          "cost_minus": 64,
+          "cost_plus": 124,
+          "count": 14168
+        },
+        {
+          "cost_minus": 66,
+          "cost_plus": 124,
+          "count": 25832
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 124,
+          "count": 1624
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 124,
+          "count": 373716
+        },
+        {
+          "cost_minus": 74,
+          "cost_plus": 124,
+          "count": 115000
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 124,
+          "count": 43232
+        },
+        {
+          "cost_minus": 78,
+          "cost_plus": 124,
+          "count": 3688
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 124,
+          "count": 1531458
+        },
+        {
+          "cost_minus": 82,
+          "cost_plus": 124,
+          "count": 2509096
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 124,
+          "count": 660016
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 124,
+          "count": 16283900
+        },
+        {
+          "cost_minus": 90,
+          "cost_plus": 124,
+          "count": 11097308
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 124,
+          "count": 4131060
+        },
+        {
+          "cost_minus": 94,
+          "cost_plus": 124,
+          "count": 1235480
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 124,
+          "count": 18076404
+        },
+        {
+          "cost_minus": 98,
+          "cost_plus": 124,
+          "count": 94607968
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 124,
+          "count": 49425080
+        },
+        {
+          "cost_minus": 102,
+          "cost_plus": 124,
+          "count": 1897872
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 124,
+          "count": 749024
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 124,
+          "count": 111438354
+        },
+        {
+          "cost_minus": 110,
+          "cost_plus": 124,
+          "count": 78568584
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 124,
+          "count": 3475908
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 124,
+          "count": 37504684
+        },
+        {
+          "cost_minus": 122,
+          "cost_plus": 124,
+          "count": 2637528
+        },
+        {
+          "cost_minus": 126,
+          "cost_plus": 72,
+          "count": 23928
+        },
+        {
+          "cost_minus": 126,
+          "cost_plus": 80,
+          "count": 267132
+        },
+        {
+          "cost_minus": 126,
+          "cost_plus": 88,
+          "count": 1254048
+        },
+        {
+          "cost_minus": 126,
+          "cost_plus": 96,
+          "count": 3062040
+        },
+        {
+          "cost_minus": 126,
+          "cost_plus": 104,
+          "count": 8276688
+        },
+        {
+          "cost_minus": 126,
+          "cost_plus": 112,
+          "count": 11697756
+        },
+        {
+          "cost_minus": 126,
+          "cost_plus": 120,
+          "count": 8838080
+        },
+        {
+          "cost_minus": 52,
+          "cost_plus": 128,
+          "count": 98
+        },
+        {
+          "cost_minus": 54,
+          "cost_plus": 128,
+          "count": 230
+        },
+        {
+          "cost_minus": 56,
+          "cost_plus": 128,
+          "count": 22
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 128,
+          "count": 5682
+        },
+        {
+          "cost_minus": 62,
+          "cost_plus": 128,
+          "count": 2142
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 128,
+          "count": 34268
+        },
+        {
+          "cost_minus": 70,
+          "cost_plus": 128,
+          "count": 16756
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 128,
+          "count": 10322
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 128,
+          "count": 482648
+        },
+        {
+          "cost_minus": 78,
+          "cost_plus": 128,
+          "count": 483822
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 128,
+          "count": 24728
+        },
+        {
+          "cost_minus": 82,
+          "cost_plus": 128,
+          "count": 12300
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 128,
+          "count": 2637496
+        },
+        {
+          "cost_minus": 86,
+          "cost_plus": 128,
+          "count": 2342058
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 128,
+          "count": 1600428
+        },
+        {
+          "cost_minus": 90,
+          "cost_plus": 128,
+          "count": 95436
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 128,
+          "count": 16790186
+        },
+        {
+          "cost_minus": 94,
+          "cost_plus": 128,
+          "count": 28218484
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 128,
+          "count": 4808736
+        },
+        {
+          "cost_minus": 98,
+          "cost_plus": 128,
+          "count": 1596030
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 128,
+          "count": 131520
+        },
+        {
+          "cost_minus": 102,
+          "cost_plus": 128,
+          "count": 47231760
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 128,
+          "count": 82314300
+        },
+        {
+          "cost_minus": 106,
+          "cost_plus": 128,
+          "count": 14352120
+        },
+        {
+          "cost_minus": 110,
+          "cost_plus": 128,
+          "count": 63304
+        },
+        {
+          "cost_minus": 114,
+          "cost_plus": 128,
+          "count": 64947608
+        },
+        {
+          "cost_minus": 116,
+          "cost_plus": 128,
+          "count": 17072564
+        },
+        {
+          "cost_minus": 126,
+          "cost_plus": 128,
+          "count": 6557052
+        },
+        {
+          "cost_minus": 40,
+          "cost_plus": 132,
+          "count": 4
+        },
+        {
+          "cost_minus": 48,
+          "cost_plus": 132,
+          "count": 24
+        },
+        {
+          "cost_minus": 56,
+          "cost_plus": 132,
+          "count": 200
+        },
+        {
+          "cost_minus": 60,
+          "cost_plus": 132,
+          "count": 32
+        },
+        {
+          "cost_minus": 64,
+          "cost_plus": 132,
+          "count": 3140
+        },
+        {
+          "cost_minus": 66,
+          "cost_plus": 132,
+          "count": 2880
+        },
+        {
+          "cost_minus": 68,
+          "cost_plus": 132,
+          "count": 316
+        },
+        {
+          "cost_minus": 72,
+          "cost_plus": 132,
+          "count": 45248
+        },
+        {
+          "cost_minus": 74,
+          "cost_plus": 132,
+          "count": 11848
+        },
+        {
+          "cost_minus": 76,
+          "cost_plus": 132,
+          "count": 3632
+        },
+        {
+          "cost_minus": 78,
+          "cost_plus": 132,
+          "count": 664
+        },
+        {
+          "cost_minus": 80,
+          "cost_plus": 132,
+          "count": 204820
+        },
+        {
+          "cost_minus": 82,
+          "cost_plus": 132,
+          "count": 333940
+        },
+        {
+          "cost_minus": 84,
+          "cost_plus": 132,
+          "count": 87264
+        },
+        {
+          "cost_minus": 88,
+          "cost_plus": 132,
+          "count": 2099212
+        },
+        {
+          "cost_minus": 90,
+          "cost_plus": 132,
+          "count": 1422812
+        },
+        {
+          "cost_minus": 92,
+          "cost_plus": 132,
+          "count": 664736
+        },
+        {
+          "cost_minus": 94,
+          "cost_plus": 132,
+          "count": 193588
+        },
+        {
+          "cost_minus": 96,
+          "cost_plus": 132,
+          "count": 2868544
+        },
+        {
+          "cost_minus": 98,
+          "cost_plus": 132,
+          "count": 15081100
+        },
+        {
+          "cost_minus": 100,
+          "cost_plus": 132,
+          "count": 7610476
+        },
+        {
+          "cost_minus": 102,
+          "cost_plus": 132,
+          "count": 284792
+        },
+        {
+          "cost_minus": 104,
+          "cost_plus": 132,
+          "count": 142216
+        },
+        {
+          "cost_minus": 108,
+          "cost_plus": 132,
+          "count": 21304568
+        },
+        {
+          "cost_minus": 110,
+          "cost_plus": 132,
+          "count": 14817244
+        },
+        {
+          "cost_minus": 112,
+          "cost_plus": 132,
+          "count": 643132
+        },
+        {
+          "cost_minus": 120,
+          "cost_plus": 132,
+          "count": 8814724
+        },
+        {
+          "cost_minus": 122,
+          "cost_plus": 132,
+          "count": 632456
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 60,
+          "count": 556
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 68,
+          "count": 1372
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 76,
+          "count": 12208
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 84,
+          "count": 53168
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 92,
+          "count": 236992
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 100,
+          "count": 564124
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 108,
+          "count": 771016
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 116,
+          "count": 1150260
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 124,
+          "count": 685728
+        },
+        {
+          "cost_minus": 132,
+          "cost_plus": 132,
+          "count": 200836
+        }
+      ],
+      "histogram_sha256": "8df9472aa3d7bb1c24db7240a967d4a861b6e63343e07ea48adf07a473958e39"
+    }
+  ],
+  "prefix_verification": {
+    "checked": 100000,
+    "independent_itertools_all_histograms_match": true
+  },
+  "device": "AMD Radeon RX 9070 XT",
+  "launch": {
+    "blocks": 4096,
+    "threads": 256
+  },
+  "elapsed_seconds": 1.2396264639683068,
+  "boundaries_per_second": 2799317607.250372,
+  "all_p11_eight_finite_boundaries_excluded": true,
+  "closes_residual_ii": false,
+  "L_status": "OPEN"
+}
