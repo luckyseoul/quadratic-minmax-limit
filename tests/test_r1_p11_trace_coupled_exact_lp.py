@@ -6,6 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from r1_p11_trace_coupled_exact_lp import (
+    build_broad_channel_conserved_model,
     build_shellwise_conserved_model,
     component_cases,
     Constraint,
@@ -106,6 +107,63 @@ def test_shellwise_model_uses_exact_symmetry_quotient_and_mass_identity():
     assert mass.coefficients == (F(122), F(1098), F(61), F(244), F(244))
     assert mass.rhs == 0
     assert len([row for row in model.constraints if row.name.endswith("_positive")]) == 5
+    assert len(model.fixed_checks) == 29
+
+
+def test_broad_model_conserves_each_channel_and_transformed_target():
+    length = 30
+    base = [F()] * length
+    matrix = [(F(),)] * (length - 1) + [(F(1),)]
+    reduction = (base, matrix, F(), (F(1),))
+    reductions = {
+        "circle-kernel": reduction,
+        "circle-low": reduction,
+        "circle-high": reduction,
+    }
+    counts = [0] * length
+    broad_masses = {channel: [F()] * length for channel in reductions}
+    broad_targets = {channel: F() for channel in reductions}
+    cases = component_cases(11)
+    model, representatives = build_broad_channel_conserved_model(
+        reductions,
+        cases,
+        0,
+        counts,
+        broad_masses,
+        broad_targets,
+        11,
+    )
+
+    assert [row["multiplicity"] for row in representatives] == [1, 9, 1, 2, 2]
+    assert model.target == (F(1), F(), F(), F(), F())
+    shell_rows = {
+        row.name: row
+        for row in model.constraints
+        if row.name.startswith("s29_circle_") and row.name.endswith("_mass")
+    }
+    assert shell_rows["s29_circle_kernel_mass"].coefficients == (
+        F(122), F(1098), F(), F(), F()
+    )
+    assert shell_rows["s29_circle_low_mass"].coefficients == (
+        F(), F(), F(61), F(244), F()
+    )
+    assert shell_rows["s29_circle_high_mass"].coefficients == (
+        F(), F(), F(), F(), F(244)
+    )
+    target_rows = {
+        row.name: row
+        for row in model.constraints
+        if row.name.startswith("target_circle_")
+    }
+    assert target_rows["target_circle_kernel_mass"].coefficients == (
+        F(122), F(1098), F(), F(), F()
+    )
+    assert target_rows["target_circle_low_mass"].coefficients == (
+        F(), F(), F(61), F(244), F()
+    )
+    assert target_rows["target_circle_high_mass"].coefficients == (
+        F(), F(), F(), F(), F(244)
+    )
     assert len(model.fixed_checks) == 29
 
 

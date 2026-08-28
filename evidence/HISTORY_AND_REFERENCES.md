@@ -716,10 +716,11 @@ trace as a conserved mass at every shell through 800. Seven of eight
 component target endpoints are already identical at truncations 120 and
 800; the circle-low-Weil maximum contracts from about 880.0044 to 874.9202.
 All four final intervals remain broad and two-sided. Thus scalar
-trace-conservation is a genuine tightening but does not close R1. The next
-live refinement is to compute channel-resolved moments
-\(\operatorname{tr}(R_sO)\) and \(\operatorname{tr}(R_sO^2)\) for the
-square-circle tensor operator, or finer PSL-twisted traces.
+trace-conservation is a genuine tightening but does not close R1. Proposition
+15.668 subsequently computes the channel-resolved contractions
+\(\operatorname{tr}(R_sO)\) and \(\operatorname{tr}(R_sO^2)\); even that
+strict refinement does not close the cone, leaving finer PSL-twisted or
+uniform transport inequalities as the live route.
 
 Targeted searches for the corrected rational traces, the exact half-cusp
 trace numerator, profile/common-coordinate fourth-moment terminology, and
@@ -728,6 +729,62 @@ shell-design, and complete-weight-enumerator literature. Individual OEIS
 searches of five large reconstructed coefficients returned no entries. This
 is a duplicate/context check and makes no sequence or unreviewed priority
 claim.
+
+---
+
+## 7u. Exact p=11 broad-channel reconstruction and finite R1 (2026-08-28)
+
+Proposition 15.668 retains the marked Legendre-convolution statistic
+
+\[
+ U_4(a)=\sum_c\left(\sum_s\eta(s-c)a_s\right)^4
+\]
+
+in the quartic glue-profile census. Input-affine reduction leaves 1,007
+profile types and output-affine reduction leaves 20 canonical dynamic
+programs. The complete glue code reduces from \(11^{10}\) words to
+21,437,340 translation/nonzero-scalar representatives and 2,584,901 weighted
+rich-profile tuples. Five-modulus CRT is exact because its modulus product
+exceeds independent unrestricted bounds for every recovered integer through
+exponent 120.
+
+The scalar trace, \(z^Tz\), and \(z^TA_2z\) recover the raw shell mass on the
+square-circle kernel, low, and high spaces, of dimensions 1220, 305, and 244.
+All three affine modular spaces have rank 32 by exponent 92. Solving on that
+prefix and holding out exponents 93--120 reproduces all 28 withheld
+coefficients in each channel exactly. Their continuations through exponent
+800 are nonnegative, sum coefficientwise to the aggregate trace, and satisfy
+the exact dimension-weighted transformed-target identity.
+
+Eight separate QSopt_ex endpoint problems impose channelwise shell-mass and
+target conservation. Every rational primal constraint and dual stationarity
+equation was independently checked. The certified target intervals are much
+narrower than the aggregate intervals from 15.667, but each still contains a
+value mapping to \(\Phi<6\). Thus broad square-circle channel conservation is
+an exact failed proof route; it is not a counterexample to R1.
+
+The independent full \(p=11\) Max+ census gives
+
+\[
+ \|\delta\|^2={1382747375360\over583792784981}
+ < {61\over6}={n\over12}
+ < {22143\over1682},
+\]
+
+with strong margin
+\(27314875631681/3502756709886>0\). Strong R1, and hence R1, is therefore an
+exact finite theorem at \(p=11\). This does not supply an all-prime proof.
+General R1, global QVAR, the non-Walsh remainder, Type I, and the limit remain
+open.
+
+Tasaka's weighted-theta survey and Ozeki's association-scheme/Siegel-theta
+work confirm nearby standard machinery but contain no channel transport
+inequality for these Paley shells. Targeted searches of the large exact
+values and dimension triple found no relevant OEIS match; no novelty claim is
+drawn from that negative search. The complete 33-file archive is under
+`/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-28-r1-broad-channel/`
+and its manifest hash is
+`d1ef69b9af7007c0d2f09a3a5ea8a014cde62d9ed6109175cf4a6496d06b3f07`.
 
 ---
 
@@ -782,5 +839,7 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 36. D. Ghinelli and J. D. Key, *Codes from incidence matrices and line graphs of Paley graphs*, Adv. Math. Commun. **5** (2011), 93--108, https://doi.org/10.3934/amc.2011.5.93 (Paley incidence-code ranks; nearby finite-field coding context, not the 15.655 affine-score system).
 37. P. Ivanisvili, D. Stolyarov, V. Vasyunin, P. Zatitskii, *Bellman functions on simple non-convex domains in the plane*, [arXiv:2305.03523](https://arxiv.org/abs/2305.03523) (minimal locally concave Bellman construction; possible R1/QVAR analogy, not a Paley residual theorem).
 38. Q. Li and Y. Zhou, *On induced subgraphs with degree parity conditions in Paley graphs and Paley tournaments*, [arXiv:2512.19312](https://arxiv.org/abs/2512.19312) (degree-parity context for induced Paley subgraphs and MDS codes; not the directional affine-slack boundary problem of 15.657).
+39. K. Tasaka, *Harmonic strength of shells of lattices and weighted theta series*, [arXiv:2308.14309](https://arxiv.org/abs/2308.14309) (survey of the shell-harmonic/modular-form bridge; no Paley channel inequality).
+40. M. Ozeki, *On the Siegel theta series of extremal lattices and their association schemes*, Kyushu J. Math. **68** (2014), 53--73, [doi:10.2206/kyushujm.68.053](https://doi.org/10.2206/kyushujm.68.053) (adjacent orbital/theta machinery; not a proof of R1).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-27 (15.666 closes finite `p=7` size eight; no top-level flag flipped)
+**Date:** 2026-08-28 (15.668 proves finite `p=11` strong R1 and closes the broad-channel cone route; no general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -28,6 +28,37 @@ for both signs. This is not all of the projective size-eight case: the
 separate infinity-plus-seven profile remains open. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.668 — exact p=11 broad-channel theta and finite strong R1
+
+`src/e1_gmin_m4_prop15668.py` and
+`evidence/NOTE_2026-08-28_p11_broad_channel_theta.md`. A fourth marked
+Legendre-convolution statistic refines the complete p=11 glue-profile census
+into the kernel, low, and high eigenspaces of the square-circle operator.
+Five-modulus CRT recovers all three raw shell-mass prefixes exactly through
+exponent 120. Their common 32-dimensional affine modular spaces reach full
+rank at exponent 92; all 28 held-out coefficients per channel match, and the
+three forms reconstruct through exponent 800 with nonnegative masses and
+exact aggregate conservation.
+
+Eight channelwise QSopt_ex endpoints have independently checked exact
+rational primal and dual certificates. Every certified interval still
+contains a target mapping to `Phi<6`, so broad-channel conservation is now a
+proved-insufficient relaxation. It does not refute R1. Independently, the
+complete finite census gives
+
+```text
+||delta||^2 = 1382747375360/583792784981 < n/12 = 61/6,
+strong margin = 27314875631681/3502756709886 > 0.
+```
+
+Thus strong R1 is rigorously true at `p=11`, but general R1 remains open. The
+next R1 route must be finer character-resolved/PSL transport or a uniform
+Mellin--Parseval inequality, not another broad square-circle aggregate. The
+33-file permanent archive is
+`/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-28-r1-broad-channel/`;
+its manifest SHA-256 is
+`d1ef69b9af7007c0d2f09a3a5ea8a014cde62d9ed6109175cf4a6496d06b3f07`.
 
 ## 15.666 — every finite p=7 size-eight boundary closed for both signs
 
@@ -80,10 +111,9 @@ The trace polynomial is also the coordinate-transitive orbit of one zonal
 quartic, reducing its exact PARI computation from 122 coordinate fourth
 powers to one. Exact `p=11` checks reproduce the four proved shell operators.
 This supplies the nonlinear coupling absent from 15.641, but is not an R1
-close. The active computation uses exact ordinary and trace coefficients
-through exponent 132, followed by independently verified QSopt_ex rational
-certificates; an all-prime transport inequality remains necessary even if
-the `p=11` cone closes.
+close. Propositions 15.667--15.668 subsequently reconstruct the exact scalar
+and broad-channel series through exponent 800 and prove both resulting cones
+insufficient. An all-prime character/transport inequality remains necessary.
 
 ## 15.664 — p=7 size-eight four-allocation stratum closed for both signs
 

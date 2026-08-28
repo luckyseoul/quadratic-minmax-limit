@@ -6495,3 +6495,88 @@ Evidence: `src/e1_gmin_m4_prop15657.py`,
 `evidence/e1_gmin_m4_prop15657.json`,
 `evidence/NOTE_2026-08-26_size_six_boundary_exclusion.md`, and
 `tests/test_prop15657.py`.
+
+## Proposition 15.668 — exact p=11 broad-channel theta and finite R1
+
+For a quartic value profile \(a=(a_s)_{s\in\mathbb F_{11}}\), retain in
+addition to its scalar moments the marked contraction
+
+\[
+ U_4(a)=\sum_{c\in\mathbb F_{11}}
+ \left(\sum_s\eta(s-c)a_s\right)^4.              \tag{15.668.1}
+\]
+
+Input-affine canonicalization leaves 1,007 profile types, while
+output-affine transport reduces their dynamic programs to 20 canonical
+ones. The complete ten-dimensional glue code then reduces exactly as
+
+\[
+ 11^{10}\longrightarrow21,437,340
+ \longrightarrow2,584,901                                  \tag{15.668.2}
+\]
+
+translation/nonzero-scalar representatives and weighted rich-profile
+tuples. Their weights sum to \(11^{10}\). Five independent CRT moduli have
+product
+
+\[
+31999921744068749461247094447450713426945936557,
+\]
+
+which exceeds separate unrestricted bounds for every count, squared excess,
+and \(U_4\) coefficient through exponent 120. Hence all recovered integers
+are exact, rather than probabilistic modular fingerprints.
+
+For each raw positive shell operator \(R_e\), the scalar trace together with
+the two marked contractions \(z^Tz\) and \(z^TA_2z\) linearly recovers its
+mass on the square-circle kernel, low, and high eigenspaces. Their dimensions
+are
+
+\[
+ 1220,\qquad305,\qquad244,\qquad1220+305+244=1769. \tag{15.668.3}
+\]
+
+After subtracting the universal radial term, all three coefficient sequences
+lie in 32-dimensional affine modular spaces with common pivot exponents
+\(31,32,35,36,\ldots,91,92\). Thus the prefix through 92 determines every
+series uniquely. Exponents 93 through 120 are held out; all 28 coefficients
+match exactly in each channel. Evaluation through exponent 800 remains
+nonnegative, sums coefficientwise to the aggregate raw trace, and obeys the
+dimension-weighted transformed-target identity.
+
+Channelwise shell-mass and transformed-target conservation define eight
+rational endpoint LPs. Exact QSopt_ex primal and dual certificates give the
+harmonic-target intervals
+
+\[
+\begin{array}{c|c}
+\text{kernel principal}&[-522.933314,508.493608]\\
+\text{low Weil}&[-382.405131,392.954765]\\
+\text{low principal}&[-257.123541,268.631365]\\
+\text{high principal}&[-219.228926,219.228419].
+\end{array}                                                \tag{15.668.4}
+\]
+
+Every primal constraint and dual stationarity equation is independently
+recomputed over the rationals. Under the exact Poisson conversion, every
+interval still contains a target with \(\Phi<6\). Therefore this strict
+broad-channel cone does not prove R1. This is a certified limit of the
+relaxation, not a counterexample.
+
+Independently, the complete finite \(p=11\) Max+ census gives
+
+\[
+ \|\delta\|^2={1382747375360\over583792784981},\qquad
+ {n\over12}-\|\delta\|^2
+ ={27314875631681\over3502756709886}>0.             \tag{15.668.5}
+\]
+
+Consequently strong R1, and hence the exact R1 threshold
+\(22143/1682\), holds at \(p=11\). No uniform argument follows: general R1,
+global QVAR, residual (ii), Type I, and the limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15668.py`,
+`evidence/e1_gmin_m4_prop15668.json`,
+`evidence/NOTE_2026-08-28_p11_broad_channel_theta.md`,
+`tests/test_prop15668.py`, and the 33-file checked archive at
+`/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-28-r1-broad-channel/`.

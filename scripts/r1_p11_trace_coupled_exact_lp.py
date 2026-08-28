@@ -344,6 +344,263 @@ def build_shellwise_conserved_model(
     )
 
 
+def build_broad_channel_conserved_model(
+    reductions: dict[
+        str,
+        tuple[
+            list[Fraction],
+            list[tuple[Fraction, ...]],
+            Fraction,
+            tuple[Fraction, ...],
+        ],
+    ],
+    cases: list[dict[str, int | str]],
+    distinguished_index: int,
+    counts: list[int],
+    broad_masses: dict[str, list[Fraction]],
+    broad_targets: dict[str, Fraction],
+    p: int,
+) -> tuple[ExactModel, tuple[dict[str, int | str], ...]]:
+    """Couple constituents by exact mass conservation in every broad channel.
+
+    The square-circle operator splits ``Z`` into the three channels in
+    ``CHANNELS``.  ``broad_masses[channel][s]`` is the exact trace of the raw
+    positive shell operator on that whole eigenspace, while
+    ``broad_targets[channel]`` is its dimension-normalized harmonic half-cusp
+    trace.  Thus both the shell masses and transformed targets are conserved
+    separately in each channel.
+
+    As in :func:`build_shellwise_conserved_model`, constituents of one case
+    are interchangeable.  Keeping the distinguished constituent and the
+    average of its peers is an exact convex symmetry quotient for either
+    endpoint of its target functional.
+    """
+    if not 0 <= distinguished_index < len(cases):
+        raise IndexError(distinguished_index)
+    if set(reductions) != set(CHANNELS):
+        raise ValueError("affine reductions must contain exactly the broad channels")
+    if set(broad_masses) != set(CHANNELS):
+        raise ValueError("broad masses must contain exactly the broad channels")
+    if set(broad_targets) != set(CHANNELS):
+        raise ValueError("broad targets must contain exactly the broad channels")
+
+    n = p * p + 1
+    d = n // 2
+    zdim = n * (n - 6) // 8
+    fixed_through = 2 * (p + 3)
+    widths = {len(reduction[3]) for reduction in reductions.values()}
+    if len(widths) != 1:
+        raise ValueError("all affine reductions must have one common width")
+    block_width = widths.pop()
+    if block_width < 1:
+        raise ValueError("the common affine reduction has zero width")
+    if any(
+        len(row) != block_width
+        for _base, matrix, _target_base, _target in reductions.values()
+        for row in matrix
+    ):
+        raise ValueError("an affine coefficient row has the wrong width")
+
+    representatives: list[dict[str, int | str]] = []
+    for case_index, case in enumerate(cases):
+        count = int(case["component_count"])
+        if count < 1:
+            raise ValueError(f"case {case['name']} has no constituents")
+        if case_index == distinguished_index:
+            representatives.append(
+                {**case, "role": "distinguished", "multiplicity": 1}
+            )
+            if count > 1:
+                representatives.append(
+                    {**case, "role": "average", "multiplicity": count - 1}
+                )
+        else:
+            representatives.append(
+                {**case, "role": "average", "multiplicity": count}
+            )
+
+    total_width = block_width * len(representatives)
+    distinguished_rep = next(
+        index
+        for index, representative in enumerate(representatives)
+        if representative["role"] == "distinguished"
+    )
+    distinguished_channel = str(representatives[distinguished_rep]["channel"])
+    _base, _matrix, target_base, target = reductions[distinguished_channel]
+    objective = [Fraction()] * total_width
+    objective[
+        distinguished_rep * block_width : (distinguished_rep + 1) * block_width
+    ] = target
+
+    channel_dimensions = {
+        channel: sum(
+            int(case["component_count"])
+            * int(case["representation_dimension"])
+            for case in cases
+            if str(case["channel"]) == channel
+        )
+        for channel in CHANNELS
+    }
+    if sum(channel_dimensions.values()) != zdim:
+        raise ArithmeticError(
+            f"broad channel dimensions sum to {sum(channel_dimensions.values())}, "
+            f"not {zdim}"
+        )
+    represented_dimensions = {
+        channel: sum(
+            int(rep["multiplicity"]) * int(rep["representation_dimension"])
+            for rep in representatives
+            if str(rep["channel"]) == channel
+        )
+        for channel in CHANNELS
+    }
+    if represented_dimensions != channel_dimensions:
+        raise ArithmeticError("the symmetry quotient changed a broad dimension")
+
+    constraints: list[Constraint] = []
+    fixed_checks: list[dict[str, str | int]] = []
+
+    def extended_row(rep_index: int, row: tuple[Fraction, ...]) -> tuple[Fraction, ...]:
+        output = [Fraction()] * total_width
+        output[rep_index * block_width : (rep_index + 1) * block_width] = row
+        return tuple(output)
+
+    def add_constraint(
+        name: str, row: tuple[Fraction, ...], sense: str, rhs: Fraction
+    ) -> None:
+        if len(row) != total_width:
+            raise ValueError(f"wrong constraint width for {name}")
+        if all(value == 0 for value in row):
+            valid = (
+                (sense == "=" and rhs == 0)
+                or (sense == ">=" and 0 >= rhs)
+                or (sense == "<=" and 0 <= rhs)
+            )
+            if not valid:
+                raise ArithmeticError(
+                    f"constant infeasible constraint {name}: 0 {sense} {rhs}"
+                )
+            return
+        constraints.append(Constraint(name, row, sense, rhs))
+
+    row_limits = [len(reductions[str(rep["channel"])][0]) for rep in representatives]
+    limit = min(
+        len(counts),
+        *(len(broad_masses[channel]) for channel in CHANNELS),
+        *row_limits,
+    )
+    if limit < 1:
+        raise ValueError("no common broad-channel coefficient prefix")
+    if any(
+        mass < 0
+        for channel in CHANNELS
+        for mass in broad_masses[channel][:limit]
+    ):
+        raise ArithmeticError("a supplied broad raw mass is negative")
+
+    for exponent in range(limit):
+        count = counts[exponent]
+        radius_sq = Fraction(exponent, 2 * p)
+        radial = Fraction(2 * count, d * (d + 2)) * radius_sq**2
+        channel_rows = {
+            channel: [Fraction()] * total_width for channel in CHANNELS
+        }
+        channel_constants = {channel: Fraction() for channel in CHANNELS}
+        raw_constants: list[Fraction] = []
+
+        for rep_index, representative in enumerate(representatives):
+            channel = str(representative["channel"])
+            base, matrix, _target_base, _target = reductions[channel]
+            row = matrix[exponent]
+            raw_constant = base[exponent] + radial
+            raw_constants.append(raw_constant)
+            name = (
+                f"s{exponent}_{representative['name']}_{representative['role']}"
+            ).replace("-", "_")
+            add_constraint(
+                f"{name}_positive",
+                extended_row(rep_index, row),
+                ">=",
+                -raw_constant,
+            )
+            weight = int(representative["multiplicity"]) * int(
+                representative["representation_dimension"]
+            )
+            channel_constants[channel] += weight * raw_constant
+            offset = rep_index * block_width
+            for column, coefficient in enumerate(row):
+                channel_rows[channel][offset + column] += weight * coefficient
+
+        for channel in CHANNELS:
+            add_constraint(
+                f"s{exponent}_{channel.replace('-', '_')}_mass",
+                tuple(channel_rows[channel]),
+                "=",
+                broad_masses[channel][exponent] - channel_constants[channel],
+            )
+
+        if exponent <= fixed_through:
+            if any(
+                any(reductions[str(rep["channel"])][1][exponent])
+                for rep in representatives
+            ):
+                raise ArithmeticError(
+                    f"nonzero free row at fixed exponent {exponent}"
+                )
+            if any(value < 0 for value in raw_constants):
+                raise ArithmeticError(
+                    f"negative fixed raw value at exponent {exponent}"
+                )
+            for channel in CHANNELS:
+                if channel_constants[channel] != broad_masses[channel][exponent]:
+                    raise ArithmeticError(
+                        f"fixed {channel} mass fails at exponent {exponent}"
+                    )
+            fixed_checks.append(
+                {
+                    "exponent": exponent,
+                    **{
+                        f"{channel}_mass": str(broad_masses[channel][exponent])
+                        for channel in CHANNELS
+                    },
+                }
+            )
+
+    # This transformed-target identity is implied once the coefficient rows
+    # span the full affine space, but retaining it makes the conservation used
+    # in the endpoint proof explicit and independently checkable.
+    for channel in CHANNELS:
+        row = [Fraction()] * total_width
+        constant = Fraction()
+        for rep_index, representative in enumerate(representatives):
+            if str(representative["channel"]) != channel:
+                continue
+            _base, _matrix, rep_target_base, rep_target = reductions[channel]
+            weight = int(representative["multiplicity"]) * int(
+                representative["representation_dimension"]
+            )
+            constant += weight * rep_target_base
+            offset = rep_index * block_width
+            for column, coefficient in enumerate(rep_target):
+                row[offset + column] += weight * coefficient
+        add_constraint(
+            f"target_{channel.replace('-', '_')}_mass",
+            tuple(row),
+            "=",
+            channel_dimensions[channel] * broad_targets[channel] - constant,
+        )
+
+    return (
+        ExactModel(
+            target_base=target_base,
+            target=tuple(objective),
+            constraints=tuple(constraints),
+            fixed_checks=tuple(fixed_checks),
+        ),
+        tuple(representatives),
+    )
+
+
 def lp_number(value: Fraction) -> str:
     return str(value.numerator) if value.denominator == 1 else f"{value.numerator}/{value.denominator}"
 
