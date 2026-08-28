@@ -1191,6 +1191,31 @@ Exact OEIS searches for `363,264,189,136,94,68`, `1247,1044,203`, and
 `112449,4341514,1828196` returned no sequence. Individual terms occur in
 unrelated entries; no sequence or priority claim is made.
 
+## 7al. The unique `p=23` slack-12 profile closes (2026-08-28)
+
+Proposition 15.685 sharpens the conic-core repair from 15.684. A
+slack-twelve realization repairs after at most three deletions. Fewer than
+three, or an incomplete 17-arc after three, already gives an 18-point conic
+core and contradicts the slack-24 off-conic floor. The remaining branch is
+a complete 17-arc `A` plus three outside points.
+
+If `mu_A(x)` is the number of arc secants through an outside point, then
+the exact line-slack values at occupancies three, four, and five give
+`slack(S)>=4 sum mu_A(x)`. Completeness and total slack twelve force all
+three added points to have `mu_A=1`.
+
+Coolsaet--Sticker [56] classify exactly five complete-17-arc classes in
+`PG(2,23)`. Five explicit representatives were verified point by point.
+Their full outside-point secant-multiplicity histograms are pairwise
+distinct, so they are inequivalent and exhaust the five classes. Their
+numbers of multiplicity-one points are `0,0,1,0,0`, which excludes the
+profile and reduces the exact `p=23` remainder from 203 to 202.
+
+Secant index is standard arc terminology, but targeted literature searches
+found no prior table of these five exact histograms. OEIS searches for the
+high-count blocks `68,172,190,86` and `69,171,196,78` found no relevant
+sequence. No novelty or sequence-submission claim is made.
+
 ---
 
 ## 8. What is not in the older literature

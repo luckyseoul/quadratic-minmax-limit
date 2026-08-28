@@ -53,7 +53,8 @@ acceptance gate is the four-unit dictionary returned by
    closes `p=29`, 15.682 closes `p=31`, and 15.683 closes `p=41` by a
    tangent-envelope argument. Proposition 15.684 removes every positive
    residue at `p=23` and cuts its exact residue-zero ledger from 1,247
-   profiles to 203, without closing it. The three smaller endpoints
+   profiles to 203; Proposition 15.685 removes its unique slack-12 row,
+   leaving 202 without closing it. The three smaller endpoints
    `p=17,19,23`,
    the strict-deficit part of the infinity-plus-`p` shell, larger all-finite
    profiles, and full graph constraints remain open.

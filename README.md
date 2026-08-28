@@ -29,7 +29,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, and 15.684 cuts `p=23` to 203 exact residue-zero profiles; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the three smaller next-boundary endpoints, later all-finite sizes, and `p=7` infinity-plus-seven remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, and 15.684--15.685 cut `p=23` to 202 exact residue-zero profiles; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the three smaller next-boundary endpoints, later all-finite sizes, and `p=7` infinity-plus-seven remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -298,7 +298,11 @@ the residual conic is forced to contain three point-pencil lines.
 Proposition 15.684 then removes every positive residue at `p=23` and uses
 the complete-arc classification plus a conic-core repair lemma to exclude
 1,044 of its 1,247 residue-zero profiles. Exactly 203 arithmetic profiles
-remain; the three endpoints `p=17,19,23` are still open at this size.
+remain. Proposition 15.685 excludes the unique slack-12 profile: repairing
+it would require three points of secant multiplicity one outside a complete
+17-arc, while the five classified classes have counts `0,0,1,0,0`.
+Exactly 202 profiles remain; the three endpoints `p=17,19,23` are still
+open at this size.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -352,7 +356,7 @@ graph TD
     SMALLRANGE --> P11EIGHT["p=11 finite size eight<br/>exact normalized census <b>CLOSED</b> (15.670)"]
     RANGE --> ENDPOINT["infinity + (p-2), every odd-fibre profile<br/>both signs <b>CLOSED for p>=17</b> (15.671--15.674)"]
     RANGE --> FIRSTHALF["first all-finite s above 3(p-1)/4<br/><b>CLOSED for every prime p>=17</b> (15.675, 15.677, 15.678)"]
-    FIRSTHALF --> SECONDFINITE["next all-finite even s<br/><b>CLOSED for p>=43 and p=41,37,31,29</b>;<br/>p=23 reduced to 203 profiles; p=17,19,23 OPEN (15.679--15.684)"]
+    FIRSTHALF --> SECONDFINITE["next all-finite even s<br/><b>CLOSED for p>=43 and p=41,37,31,29</b>;<br/>p=23 reduced to 202 profiles; p=17,19,23 OPEN (15.679--15.685)"]
     RANGE --> PARC["infinity + p, pair-deficit equality / p-arcs<br/>both signs <b>CLOSED for p>=17</b> (15.676)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
@@ -535,6 +539,7 @@ square-direction affine-circle words.
 | 15.682 | at `p=31,s=26`, the integral lift kills every positive residue; the fourteen residue-zero profiles are 26-arcs or one-triple near-arcs with at least three undetermined directions, while the complete-arc classification forces their 27-/28-arc extensions onto conics | closes the `p=31,s=26` endpoint; 15.683 subsequently closes `p=41`, leaving `p=17,19,23`, later sizes, residual (ii), and all top-level gates open |
 | 15.683 | at `p=41,s=34`, exact arithmetic leaves seven 34-arc and two one-triple profiles; eight high-tangent directions become double components of Segre's degree-18 envelope (or degree-20 after deleting a triple point), leaving a conic that is forced to contain three point-pencil lines | closes the `p=41,s=34` endpoint; only `p=17,19,23` remain at this second boundary, while later sizes, residual (ii), and all top-level gates remain open |
 | 15.684 | at `p=23,s=20`, paired-cube value floors and a shell-kernel factorization exclude scaled masses 12 and 16, hence every positive residue; the exact residue-zero census has 1,247 profiles, of which the tangent envelope, complete-arc classification, and a conic-core repair lemma exclude 1,044 | strictly reduces `p=23` to 203 exact arithmetic profiles but does not close it; `p=17,19,23`, later sizes, residual (ii), and all top-level gates remain open |
+| 15.685 | a slack-12 realization repairs to a complete 17-arc plus three outside points, each forced to lie on exactly one arc secant; five explicit invariant-distinct representatives exhaust the classified complete-17-arc classes, whose counts of such points are `0,0,1,0,0` | excludes the unique slack-12 row and reduces `p=23` from 203 to 202 exact arithmetic profiles; the endpoint and all top-level gates remain open |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -737,8 +742,10 @@ fourteen-profile ledger and Coolsaet's complete-arc classification in
 high-tangent direction pencils twice from Segre's tangent envelope.
 Proposition 15.684 removes every positive `p=23` residue, enumerates 1,247
 residue-zero profiles, and excludes 1,044 by the tangent envelope and the
-complete-arc/conic-core argument. Its remaining 203 profiles, the `p=17,19`
-endpoints, and every subsequent size remain open.
+complete-arc/conic-core argument. Proposition 15.685 then excludes the
+unique slack-12 row by exhausting the five complete-17-arc secant-index
+histograms. Its remaining 202 profiles, the `p=17,19` endpoints, and every
+subsequent size remain open.
 
 ### Route kills — do not re-tread
 
@@ -891,6 +898,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-28_p31_next_all_finite_endpoint.md` | Exact fourteen-profile residue-zero ledger and complete-arc/conic extension exclusion at `p=31` (15.682) |
 | `evidence/NOTE_2026-08-28_p41_next_all_finite_endpoint.md` | Exact nine-profile residue-zero ledger and tangent-envelope component exclusion at `p=41` (15.683) |
 | `evidence/NOTE_2026-08-28_p23_low_mass_conic_reduction.md` | Low-mass shell-kernel exclusion, exact 1,247-profile ledger, tangent-envelope arc close, and conic-core reduction to 203 profiles at `p=23` (15.684) |
+| `evidence/NOTE_2026-08-28_p23_slack12_complete17_exclusion.md` | Three-point repair inequality, five complete-17-arc representatives, full secant-index histograms, and exclusion of the unique slack-12 profile (15.685) |
 | `evidence/p11_size8_boundary_SHA256SUMS` | Seven-file permanent-archive manifest for Proposition 15.670 |
 | `evidence/NOTE_2026-08-25_negative_product_asymptotic_normal_form.md` | Slice-distance, mean, divisibility, and boundary proof of the unique large-prime negative profile |
 | `evidence/NOTE_2026-08-25_baseline_fibre_profiles.md` | Integral `l1` proof that every baseline fibre profile is ideal or one-transfer |

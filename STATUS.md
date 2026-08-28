@@ -1,5 +1,18 @@
 # Status (2026-08-28)
 
+**15.685 PROVED the unique pair-slack-12 `p=23,s=20` profile is
+impossible, not residual (ii)**: the repair lemma produces an arc after at
+most three deletions. A repaired arc of size at least 18, or an incomplete
+17-arc, gives the conic-core contradiction from 15.684. Thus the hard branch
+is a complete 17-arc `A` plus three points. Secant-line slack gives
+`slack(S)>=4 sum mu_A(x)`; completeness and total slack 12 force all three
+points to have secant multiplicity one. Five explicit complete-arc
+representatives have pairwise-distinct projective-invariant multiplicity
+histograms and exhaust Coolsaet--Sticker's five classified classes. Their
+numbers of multiplicity-one points are `0,0,1,0,0`. The profile is
+impossible, reducing `p=23` from 203 to exactly 202 arithmetic profiles;
+the endpoint remains OPEN.
+
 **15.684 PROVED every positive residue at the `p=23,s=20` next all-finite
 endpoint is impossible and reduced residue zero from 1,247 exact profiles
 to 203, not residual (ii)**: paired-cube value floors exclude scaled mass

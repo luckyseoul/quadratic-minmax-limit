@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-28 (15.684 reduces the open `p=23,s=20` endpoint to 203 exact arithmetic profiles; no general flag flipped)
+**Date:** 2026-08-28 (15.685 removes the unique `p=23` slack-12 row and leaves 202 exact arithmetic profiles; no general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -49,6 +49,28 @@ odd-fibre counts are then closed by Proposition 15.674: exact type sums allow
 an intermediate count only as the unique high direction of its type, which
 leaves the same four arithmetic rows. The next infinity-present shell has
 `p` finite points.
+
+## 15.685 — unique `p=23` slack-12 profile excluded
+
+`src/e1_gmin_m4_prop15685.py` and
+`evidence/NOTE_2026-08-28_p23_slack12_complete17_exclusion.md`. The repair
+lemma deletes at most three points from a hypothetical slack-12 set to
+obtain an arc. Two deletions, or an incomplete 17-arc after three deletions,
+produce an 18-point conic core and contradict the slack-24 off-conic floor.
+Thus the hard branch is a complete 17-arc `A` plus three points `D`.
+
+Every arc secant containing `r` deleted points contributes at least `4r`
+slack, so `slack(S)>=4 sum_{x in D} mu_A(x)`. Completeness and total slack
+12 force all three deleted points to lie on exactly one secant of `A`.
+Coolsaet--Sticker classify exactly five complete-17-arc classes in
+`PG(2,23)`. Five explicit representatives are verified as complete and
+have pairwise-distinct projective-invariant secant-multiplicity histograms,
+so they exhaust the classes. Their counts of multiplicity-one outside
+points are `0,0,1,0,0`; none supplies three.
+
+The unique slack-12 profile is impossible. Exactly 202 arithmetic profiles
+remain at `p=23`; this endpoint, `p=17,19`, later sizes, residual (ii),
+R1, QVAR, Type I, and the limit remain open.
 
 ## 15.684 — `p=23,s=20` reduced to 203 exact profiles
 

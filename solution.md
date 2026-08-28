@@ -7930,3 +7930,89 @@ Evidence: `src/e1_gmin_m4_prop15684.py`,
 `evidence/e1_gmin_m4_prop15684.json`,
 `evidence/NOTE_2026-08-28_p23_low_mass_conic_reduction.md`, and
 `tests/test_prop15684.py`.
+
+## Proposition 15.685 — the unique p=23 slack-twelve profile is impossible
+
+Among the 203 profiles left by Proposition 15.684, the unique row of pair
+slack twelve is
+
+\[
+8[b=0]+4[b=18],\quad D_0=168,
+\qquad
+11[b=2]+[b=18],\quad D_1=200.                       \tag{15.685.1}
+\]
+
+Let (S) be a hypothetical realization. The repair lemma in 15.684 deletes
+at most three points to obtain an arc (A). If at most two points are
+deleted, then (|A|\ge18), so the complete-arc classification puts (A) on
+a conic. The off-conic estimate (15.684.6) contradicts the positive slack
+(12<24).
+
+Thus write (S=A\mathbin{\dot\cup}D), where (|A|=17) and (|D|=3).
+If (A) were incomplete, adjoining one point would give an 18-arc, again
+placing (A) on a conic and giving the same contradiction. Hence (A) is a
+complete 17-arc.
+
+For (x\notin A), let (\mu_A(x)) be the number of secants of (A) through
+(x). If one secant contains (r) points of (D), its occupancy in (S) is
+(2+r), and
+
+\[
+ \delta(2+r)\ge4r\qquad(r=1,2,3),                 \tag{15.685.2}
+\]
+
+with respective values (4,8,16). Summing (15.685.2) over the secants of
+(A) gives
+
+\[
+ 12=\operatorname{slack}(S)
+ \ge4\sum_{x\in D}\mu_A(x).                      \tag{15.685.3}
+\]
+
+Completeness gives (\mu_A(x)\ge1) for every outside point. Equality is
+therefore forced in (15.685.3), and all three points of (D) must satisfy
+(\mu_A(x)=1).
+
+Coolsaet--Sticker's exhaustive classification contains exactly five
+projective classes of complete 17-arcs in (PG(2,23)). Five explicit
+representatives in the evidence record are checked directly: each has 17
+points, 136 distinct secants, and all 536 outside points are secant-covered.
+Their outside-point secant-multiplicity histograms are
+
+\[
+\begin{array}{c|rrrrrrrr}
+ &\mu=1&2&3&4&5&6&7&8\\ \hline
+1&0&2&6&68&172&190&86&12\\
+2&0&1&15&59&159&208&86&8\\
+3&1&0&6&69&171&196&78&15\\
+4&0&0&14&58&170&206&72&16\\
+5&0&1&8&63&185&176&91&12.
+\end{array}                                         \tag{15.685.4}
+\]
+
+The full histogram is invariant under projective equivalence, and the five
+rows are distinct. Thus these representatives are inequivalent and,
+because the classification has exactly five classes, exhaustive. No class
+has more than one point with (\mu=1), contradicting the three required by
+(15.685.3).
+
+The slack-twelve profile is impossible. The exact (p=23) remainder decreases
+from 203 to 202 profiles:
+
+\[
+\{16:1,20:68,24:49,28:35,32:21,36:13,40:7,
+44:4,48:1,52:1,56:1,60:1\}.                        \tag{15.685.5}
+\]
+
+This does not close the endpoint. The primes (p=17,19,23), later
+all-finite sizes, strict infinity-plus-(p), residual (ii), R1, global QVAR,
+Type I, and the limit remain open.
+
+External input: K. Coolsaet and H. Sticker, *A full classification of the
+complete k-arcs of PG(2,23) and PG(2,25)*, J. Combin. Des. **17** (2009),
+459--477, doi:10.1002/jcd.20211.
+
+Evidence: `src/e1_gmin_m4_prop15685.py`,
+`evidence/e1_gmin_m4_prop15685.json`,
+`evidence/NOTE_2026-08-28_p23_slack12_complete17_exclusion.md`, and
+`tests/test_prop15685.py`.
