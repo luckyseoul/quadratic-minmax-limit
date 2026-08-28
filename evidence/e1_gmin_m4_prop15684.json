@@ -1,0 +1,1012 @@
+{
+  "prop": "15.684",
+  "title": "Low-mass and conic-core reduction at p=23",
+  "proved": true,
+  "positive_residues_excluded": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    8
+  ],
+  "only_residue_zero_remains": true,
+  "residue_zero_profile_count_before": 1247,
+  "residue_zero_profiles_excluded": 1044,
+  "residue_zero_profile_count_after": 203,
+  "remaining_pair_slack_histogram": {
+    "12": 1,
+    "16": 1,
+    "20": 68,
+    "24": 49,
+    "28": 35,
+    "32": 21,
+    "36": 13,
+    "40": 7,
+    "44": 4,
+    "48": 1,
+    "52": 1,
+    "56": 1,
+    "60": 1
+  },
+  "exceptional_low_slack_profiles": [
+    {
+      "phase_deficits": {
+        "0": 164,
+        "1": 200
+      },
+      "phase_profiles_b": {
+        "0": {
+          "0": 7,
+          "2": 1,
+          "18": 3,
+          "20": 1
+        },
+        "1": {
+          "2": 11,
+          "18": 1
+        }
+      },
+      "pair_slack": 16,
+      "global_floor_secant_distribution": {
+        "0": 1,
+        "1": 4,
+        "9": 12,
+        "10": 7
+      },
+      "undetermined_directions": 1
+    },
+    {
+      "phase_deficits": {
+        "0": 168,
+        "1": 200
+      },
+      "phase_profiles_b": {
+        "0": {
+          "0": 8,
+          "18": 4
+        },
+        "1": {
+          "2": 11,
+          "18": 1
+        }
+      },
+      "pair_slack": 12,
+      "global_floor_secant_distribution": {
+        "1": 5,
+        "9": 11,
+        "10": 8
+      },
+      "undetermined_directions": 0
+    }
+  ],
+  "p23_second_all_finite_endpoint_closed": false,
+  "remaining_same_boundary_primes": [
+    17,
+    19,
+    23
+  ],
+  "top_level_gates_changed": false,
+  "open_after_this_proposition": [
+    "the two exceptional p=23 profiles of slack 12 and 16",
+    "the 201 p=23 profiles of pair slack at least 20",
+    "the p=17 and p=19 second all-finite endpoints",
+    "later all-finite sizes",
+    "the infinity-present strict-deficit remainder",
+    "residual (ii)",
+    "R1",
+    "global QVAR",
+    "Type I",
+    "the quadratic min-max limit"
+  ],
+  "residue_ledger": {
+    "p": 23,
+    "s": 20,
+    "pair_deficit_budget": 380,
+    "phase_zero_rows": [
+      {
+        "u": 0,
+        "quotient_sum": 12,
+        "minimum_deficit": 120,
+        "profile": {
+          "0": 6,
+          "20": 6
+        }
+      },
+      {
+        "u": 2,
+        "quotient_sum": 10,
+        "minimum_deficit": 140,
+        "profile": {
+          "0": 7,
+          "20": 5
+        }
+      },
+      {
+        "u": 3,
+        "quotient_sum": 9,
+        "minimum_deficit": 158,
+        "profile": {
+          "0": 7,
+          "2": 1,
+          "20": 4
+        }
+      },
+      {
+        "u": 4,
+        "quotient_sum": 8,
+        "minimum_deficit": 160,
+        "profile": {
+          "0": 8,
+          "20": 4
+        }
+      },
+      {
+        "u": 5,
+        "quotient_sum": 7,
+        "minimum_deficit": 178,
+        "profile": {
+          "0": 8,
+          "2": 1,
+          "20": 3
+        }
+      },
+      {
+        "u": 6,
+        "quotient_sum": 6,
+        "minimum_deficit": 180,
+        "profile": {
+          "0": 9,
+          "20": 3
+        }
+      },
+      {
+        "u": 7,
+        "quotient_sum": 5,
+        "minimum_deficit": 198,
+        "profile": {
+          "0": 9,
+          "2": 1,
+          "20": 2
+        }
+      },
+      {
+        "u": 8,
+        "quotient_sum": 4,
+        "minimum_deficit": 160,
+        "profile": {
+          "0": 8,
+          "20": 4
+        }
+      },
+      {
+        "u": 9,
+        "quotient_sum": 3,
+        "minimum_deficit": 218,
+        "profile": {
+          "0": 10,
+          "2": 1,
+          "20": 1
+        }
+      },
+      {
+        "u": 10,
+        "quotient_sum": 2,
+        "minimum_deficit": 200,
+        "profile": {
+          "0": 10,
+          "20": 2
+        }
+      },
+      {
+        "u": 11,
+        "quotient_sum": 1,
+        "minimum_deficit": 220,
+        "profile": {
+          "0": 11,
+          "20": 1
+        }
+      }
+    ],
+    "phase_one_rows": [
+      {
+        "u": 11,
+        "quotient_sum": 1,
+        "minimum_deficit": 198,
+        "profile": {
+          "2": 11,
+          "20": 1
+        }
+      }
+    ],
+    "pair_survivors": [
+      {
+        "u0": 0,
+        "u1": 11,
+        "phase_zero_minimum_deficit": 120,
+        "phase_one_minimum_deficit": 198,
+        "relaxed_pair_slack": 62,
+        "phase_zero_profile": {
+          "0": 6,
+          "20": 6
+        },
+        "phase_one_profile": {
+          "2": 11,
+          "20": 1
+        }
+      },
+      {
+        "u0": 2,
+        "u1": 11,
+        "phase_zero_minimum_deficit": 140,
+        "phase_one_minimum_deficit": 198,
+        "relaxed_pair_slack": 42,
+        "phase_zero_profile": {
+          "0": 7,
+          "20": 5
+        },
+        "phase_one_profile": {
+          "2": 11,
+          "20": 1
+        }
+      },
+      {
+        "u0": 3,
+        "u1": 11,
+        "phase_zero_minimum_deficit": 158,
+        "phase_one_minimum_deficit": 198,
+        "relaxed_pair_slack": 24,
+        "phase_zero_profile": {
+          "0": 7,
+          "2": 1,
+          "20": 4
+        },
+        "phase_one_profile": {
+          "2": 11,
+          "20": 1
+        }
+      },
+      {
+        "u0": 4,
+        "u1": 11,
+        "phase_zero_minimum_deficit": 160,
+        "phase_one_minimum_deficit": 198,
+        "relaxed_pair_slack": 22,
+        "phase_zero_profile": {
+          "0": 8,
+          "20": 4
+        },
+        "phase_one_profile": {
+          "2": 11,
+          "20": 1
+        }
+      },
+      {
+        "u0": 5,
+        "u1": 11,
+        "phase_zero_minimum_deficit": 178,
+        "phase_one_minimum_deficit": 198,
+        "relaxed_pair_slack": 4,
+        "phase_zero_profile": {
+          "0": 8,
+          "2": 1,
+          "20": 3
+        },
+        "phase_one_profile": {
+          "2": 11,
+          "20": 1
+        }
+      },
+      {
+        "u0": 6,
+        "u1": 11,
+        "phase_zero_minimum_deficit": 180,
+        "phase_one_minimum_deficit": 198,
+        "relaxed_pair_slack": 2,
+        "phase_zero_profile": {
+          "0": 9,
+          "20": 3
+        },
+        "phase_one_profile": {
+          "2": 11,
+          "20": 1
+        }
+      },
+      {
+        "u0": 8,
+        "u1": 11,
+        "phase_zero_minimum_deficit": 160,
+        "phase_one_minimum_deficit": 198,
+        "relaxed_pair_slack": 22,
+        "phase_zero_profile": {
+          "0": 8,
+          "20": 4
+        },
+        "phase_one_profile": {
+          "2": 11,
+          "20": 1
+        }
+      }
+    ],
+    "positive_residue_rows": [
+      {
+        "u0": 2,
+        "quotient_sum": 10,
+        "forces_quotient_zero": true,
+        "least_positive_b_floor": 24,
+        "therefore_b_zero": true,
+        "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+        "scaled_mass_c": 4,
+        "exclusion_reason": "Proposition 15.681 universal integral quadratic floor",
+        "excluded": true
+      },
+      {
+        "u0": 3,
+        "quotient_sum": 9,
+        "forces_quotient_zero": true,
+        "least_positive_b_floor": 24,
+        "therefore_b_zero": true,
+        "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+        "scaled_mass_c": 6,
+        "exclusion_reason": "Proposition 15.681 universal integral quadratic floor",
+        "excluded": true
+      },
+      {
+        "u0": 4,
+        "quotient_sum": 8,
+        "forces_quotient_zero": true,
+        "least_positive_b_floor": 24,
+        "therefore_b_zero": true,
+        "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+        "scaled_mass_c": 8,
+        "exclusion_reason": "Proposition 15.681 universal integral quadratic floor",
+        "excluded": true
+      },
+      {
+        "u0": 5,
+        "quotient_sum": 7,
+        "forces_quotient_zero": true,
+        "least_positive_b_floor": 24,
+        "therefore_b_zero": true,
+        "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+        "scaled_mass_c": 10,
+        "exclusion_reason": "Proposition 15.681 universal integral quadratic floor",
+        "excluded": true
+      },
+      {
+        "u0": 6,
+        "quotient_sum": 6,
+        "forces_quotient_zero": true,
+        "least_positive_b_floor": 24,
+        "therefore_b_zero": true,
+        "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+        "scaled_mass_c": 12,
+        "exclusion_reason": "Proposition 15.684 low-value cube/shell exclusion",
+        "excluded": true
+      },
+      {
+        "u0": 8,
+        "quotient_sum": 4,
+        "forces_quotient_zero": true,
+        "least_positive_b_floor": 24,
+        "therefore_b_zero": true,
+        "factorization": "A=2B with B nonzero nonnegative integral quadratic",
+        "scaled_mass_c": 16,
+        "exclusion_reason": "Proposition 15.684 low-value cube/shell exclusion",
+        "excluded": true
+      }
+    ],
+    "positive_residues_all_excluded": true,
+    "residue_zero_remains": true,
+    "small_mass_exclusion": {
+      "p": 23,
+      "middle_weight": 12,
+      "scaled_mass_definition": "c=4p*E[B]",
+      "stabilizer_maximum_inequality": "c>=4H",
+      "paired_cube_dimension": 11,
+      "paired_cube_mean_at_maximum": "(H+c/4)/24",
+      "cube_certificate": {
+        "integer_mobius_coefficients": "an integer-valued Boolean-cube function has integer multilinear Mobius coefficients",
+        "nonzero_degree_two_mean_floor": {
+          "numerator": 1,
+          "denominator": 4,
+          "value": 0.25
+        },
+        "degree_two_equality_case": "mean 1/4 forces support density 1/4 and every nonzero value 1; therefore a value 2 is impossible",
+        "value_three_decomposition": "for f in {0,1,2,3}, f=(f mod 2)+2*(binom(f,2) mod 2)",
+        "first_bit_degree": 2,
+        "second_bit_degree": 4,
+        "first_bit_support_floor": {
+          "numerator": 1,
+          "denominator": 4,
+          "value": 0.25
+        },
+        "second_bit_support_floor": {
+          "numerator": 1,
+          "denominator": 16,
+          "value": 0.0625
+        },
+        "value_three_mean_floor": {
+          "numerator": 3,
+          "denominator": 8,
+          "value": 0.375
+        },
+        "proof_method": "Reed--Muller distance by induction on cube dimension",
+        "proved": true
+      },
+      "case_rows": [
+        {
+          "scaled_mass": 12,
+          "maximum_height": 1,
+          "paired_cube_mean": {
+            "numerator": 1,
+            "denominator": 6,
+            "value": 0.16666666666666666
+          },
+          "cube_lower_bound": {
+            "numerator": 1,
+            "denominator": 4,
+            "value": 0.25
+          },
+          "reason": "nonzero degree-two cube support",
+          "excluded_by_cube": true
+        },
+        {
+          "scaled_mass": 12,
+          "maximum_height": 2,
+          "paired_cube_mean": {
+            "numerator": 5,
+            "denominator": 24,
+            "value": 0.20833333333333334
+          },
+          "cube_lower_bound": {
+            "numerator": 1,
+            "denominator": 4,
+            "value": 0.25
+          },
+          "reason": "support floor, with equality impossible because the origin has value two",
+          "excluded_by_cube": true
+        },
+        {
+          "scaled_mass": 12,
+          "maximum_height": 3,
+          "paired_cube_mean": {
+            "numerator": 1,
+            "denominator": 4,
+            "value": 0.25
+          },
+          "cube_lower_bound": {
+            "numerator": 3,
+            "denominator": 8,
+            "value": 0.375
+          },
+          "reason": "two-bit Reed--Muller decomposition at a value three",
+          "excluded_by_cube": true
+        },
+        {
+          "scaled_mass": 16,
+          "maximum_height": 1,
+          "paired_cube_mean": {
+            "numerator": 5,
+            "denominator": 24,
+            "value": 0.20833333333333334
+          },
+          "cube_lower_bound": {
+            "numerator": 1,
+            "denominator": 4,
+            "value": 0.25
+          },
+          "reason": "nonzero degree-two cube support",
+          "excluded_by_cube": true
+        },
+        {
+          "scaled_mass": 16,
+          "maximum_height": 2,
+          "paired_cube_mean": {
+            "numerator": 1,
+            "denominator": 4,
+            "value": 0.25
+          },
+          "cube_lower_bound": {
+            "numerator": 1,
+            "denominator": 4,
+            "value": 0.25
+          },
+          "reason": "support floor, with equality impossible because the origin has value two",
+          "excluded_by_cube": true
+        },
+        {
+          "scaled_mass": 16,
+          "maximum_height": 3,
+          "paired_cube_mean": {
+            "numerator": 7,
+            "denominator": 24,
+            "value": 0.2916666666666667
+          },
+          "cube_lower_bound": {
+            "numerator": 3,
+            "denominator": 8,
+            "value": 0.375
+          },
+          "reason": "two-bit Reed--Muller decomposition at a value three",
+          "excluded_by_cube": true
+        },
+        {
+          "scaled_mass": 16,
+          "maximum_height": 4,
+          "paired_cube_mean": {
+            "numerator": 1,
+            "denominator": 3,
+            "value": 0.3333333333333333
+          },
+          "cube_lower_bound": null,
+          "reason": "handled by the shell-kernel factor argument",
+          "excluded_by_cube": false
+        }
+      ],
+      "height_four_shell_case": {
+        "scaled_mass": 16,
+        "maximum_height": 4,
+        "mean": {
+          "numerator": 4,
+          "denominator": 23,
+          "value": 0.17391304347826086
+        },
+        "stabilizer_identity": "E[B]=(22/23)q(6)+B(X)/23",
+        "forced_shell_average": 0,
+        "forced_vanishing_shell": "B(Y)=0 whenever |X cap Y|=6",
+        "domain_v2_dimension": 253,
+        "shell_product": "J(12,6) x J(11,6)",
+        "shell_filtered_harmonic_dimensions": {
+          "J(12,6)": [
+            1,
+            11,
+            54
+          ],
+          "J(11,6)": [
+            1,
+            10,
+            44
+          ]
+        },
+        "restriction_image_dimension": 230,
+        "restriction_kernel_dimension": 23,
+        "factor_subspace_dimension": 23,
+        "factorization": "B(Y)=(|X cap Y|-6)L(Y), with L affine",
+        "factor_map_injective": "an affine L vanishing on the t=5 and t=7 shells has equal coefficients in each block and then two roots as a linear function of t, hence L=0",
+        "maximum_value_identity": "L(X)=2/3",
+        "one_replacement_identity": "L(X-i+j)=B(X-i+j)/5",
+        "two_replacement_identity": "B(X-i1-i2+j1+j2)=4*(3*(b_i1j1+b_i2j2)-10)/15",
+        "integrality_obstruction": "15 cannot divide 4*(3n-10), since 3n-10 is nonzero modulo 3",
+        "proved": true
+      },
+      "excluded_scaled_masses": [
+        12,
+        16
+      ],
+      "proved": true
+    },
+    "proved": true
+  },
+  "profile_census": {
+    "p": 23,
+    "s": 20,
+    "pair_deficit_budget": 380,
+    "phase_zero_row_count": 426,
+    "phase_one_row_count": 11,
+    "profile_count": 1247,
+    "distinct_global_shape_count": 485,
+    "pair_slack_histogram": {
+      "0": 363,
+      "4": 264,
+      "8": 189,
+      "12": 136,
+      "16": 94,
+      "20": 68,
+      "24": 49,
+      "28": 35,
+      "32": 21,
+      "36": 13,
+      "40": 7,
+      "44": 4,
+      "48": 1,
+      "52": 1,
+      "56": 1,
+      "60": 1
+    },
+    "shape_count_by_slack": {
+      "0": 124,
+      "4": 95,
+      "8": 72,
+      "12": 54,
+      "16": 39,
+      "20": 30,
+      "24": 23,
+      "28": 17,
+      "32": 11,
+      "36": 8,
+      "40": 5,
+      "44": 3,
+      "48": 1,
+      "52": 1,
+      "56": 1,
+      "60": 1
+    },
+    "undetermined_direction_histogram_by_slack": {
+      "0": {
+        "0": 29,
+        "1": 100,
+        "2": 163,
+        "3": 71
+      },
+      "4": {
+        "0": 12,
+        "1": 48,
+        "2": 115,
+        "3": 86,
+        "4": 3
+      },
+      "8": {
+        "0": 4,
+        "1": 21,
+        "2": 65,
+        "3": 89,
+        "4": 10
+      },
+      "12": {
+        "0": 1,
+        "1": 7,
+        "2": 33,
+        "3": 74,
+        "4": 21
+      },
+      "16": {
+        "1": 1,
+        "2": 13,
+        "3": 55,
+        "4": 25
+      },
+      "20": {
+        "2": 2,
+        "3": 36,
+        "4": 30
+      },
+      "24": {
+        "3": 18,
+        "4": 28,
+        "5": 3
+      },
+      "28": {
+        "3": 9,
+        "4": 19,
+        "5": 7
+      },
+      "32": {
+        "3": 4,
+        "4": 11,
+        "5": 6
+      },
+      "36": {
+        "3": 1,
+        "4": 6,
+        "5": 6
+      },
+      "40": {
+        "4": 1,
+        "5": 6
+      },
+      "44": {
+        "5": 2,
+        "6": 2
+      },
+      "48": {
+        "6": 1
+      },
+      "52": {
+        "6": 1
+      },
+      "56": {
+        "6": 1
+      },
+      "60": {
+        "6": 1
+      }
+    },
+    "canonical_profile_sha256": "19ea72e792303d42863d327114eea6edde0abb3039a578b991387ead83fa5cc0",
+    "pair_slack_divisibility": {
+      "line_contribution": "2*(C(n,2)-floor(n/2))",
+      "n=2r": "4*r*(r-1)",
+      "n=2r+1": "4*r*r",
+      "global_slack_modulus": 4,
+      "slack_zero_iff": "every affine line has occupancy at most two",
+      "slack_four_iff": "exactly one affine line has occupancy three and all others at most two",
+      "proved": true
+    },
+    "proved": true
+  },
+  "arc_exclusion": {
+    "profile_count": 363,
+    "arc_size": 20,
+    "tau": 5,
+    "envelope_degree": 10,
+    "high_direction_definition": "a direction with at most four secants",
+    "minimum_high_direction_count": 3,
+    "signature_histogram": [
+      {
+        "high_directions": 3,
+        "high_edges": 0,
+        "profiles": 43
+      },
+      {
+        "high_directions": 3,
+        "high_edges": 1,
+        "profiles": 23
+      },
+      {
+        "high_directions": 3,
+        "high_edges": 2,
+        "profiles": 11
+      },
+      {
+        "high_directions": 3,
+        "high_edges": 3,
+        "profiles": 4
+      },
+      {
+        "high_directions": 4,
+        "high_edges": 1,
+        "profiles": 3
+      },
+      {
+        "high_directions": 4,
+        "high_edges": 2,
+        "profiles": 8
+      },
+      {
+        "high_directions": 4,
+        "high_edges": 3,
+        "profiles": 24
+      },
+      {
+        "high_directions": 4,
+        "high_edges": 4,
+        "profiles": 51
+      },
+      {
+        "high_directions": 4,
+        "high_edges": 5,
+        "profiles": 67
+      },
+      {
+        "high_directions": 4,
+        "high_edges": 6,
+        "profiles": 60
+      },
+      {
+        "high_directions": 4,
+        "high_edges": 7,
+        "profiles": 20
+      },
+      {
+        "high_directions": 4,
+        "high_edges": 8,
+        "profiles": 4
+      },
+      {
+        "high_directions": 5,
+        "high_edges": 11,
+        "profiles": 34
+      },
+      {
+        "high_directions": 5,
+        "high_edges": 12,
+        "profiles": 11
+      }
+    ],
+    "profiles_with_high_edge": 320,
+    "high_edge_component_argument": "d high direction squares leave degree r=10-2d.  At an endpoint of e>=1 high secants, the remaining 5-d+e tangents give r+2e>r zeros with multiplicity on its point-pencil, forcing that line.  After one point-pencil is removed, every other arc point has at least r surviving multiplicity on degree r-1, forcing more line components than the residual degree.",
+    "zero_high_edge_profiles": 43,
+    "zero_high_edge_structure": "exactly three high directions, all undetermined",
+    "zero_high_edge_conic_argument": "adjoin pairs from three undetermined infinity points.  Each 22-arc is conic-contained by the complete-arc classification; the two conics share the original 20-arc and coincide, forcing one conic through three collinear infinity points.",
+    "tangent_envelope": {
+      "external_dependency": true,
+      "source": "S. Ball and M. Lavrauw, Planar arcs, Journal of Combinatorial Theory Series A 160 (2018), 261-287",
+      "doi": "10.1016/j.jcta.2018.06.015",
+      "arxiv": "1705.10940v4",
+      "theorem": 11,
+      "odd_order_statement": "if an arc A has size q+2-t and |A|>2t+2, a nonzero degree-2t dual polynomial restricts on every point-pencil to the square of that point's tangent polynomial",
+      "component_argument": "if a direction pencil contains b>2t tangents it divides the envelope; the double-root restriction then leaves b zeros on the degree-(2t-1) quotient, so b>2t-1 forces its square",
+      "proved": true
+    },
+    "complete_arc_classification": {
+      "external_dependency": true,
+      "source": "K. Coolsaet and H. Sticker, A full classification of the complete k-arcs of PG(2,23) and PG(2,25), Journal of Combinatorial Designs 17 (2009), 459-477",
+      "doi": "10.1002/jcd.20211",
+      "independent_thesis_table": "H. Sticker, Classification of Arcs in Small Desarguesian Projective Planes, Ghent PhD thesis (2012), Section 5.1",
+      "complete_arc_sizes_pg2_23": [
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        24
+      ],
+      "complete_arc_counts": {
+        "10": 1,
+        "12": 112449,
+        "13": 4341514,
+        "14": 1828196,
+        "15": 58361,
+        "16": 564,
+        "17": 5,
+        "24": 1
+      },
+      "no_complete_arc_sizes": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "unique_24_arc": "a nondegenerate conic",
+      "finite_extension_consequence": "every arc of size at least 18 extends to the unique-size class 24 and is contained in a nondegenerate conic",
+      "proved_conditional_on_external_classification": true
+    },
+    "excluded": true,
+    "proved": true
+  },
+  "low_slack_conic_exclusion": {
+    "rows": [
+      {
+        "pair_slack": 4,
+        "profile_count": 264,
+        "delete_at_most": 1,
+        "repaired_arc_size_floor": 19,
+        "required_undetermined_directions": 0,
+        "adjoined_undetermined_infinity_points": 0,
+        "classified_arc_size_floor": 19,
+        "excluded_profile_count": 264,
+        "remaining_profile_count": 0
+      },
+      {
+        "pair_slack": 8,
+        "profile_count": 189,
+        "delete_at_most": 2,
+        "repaired_arc_size_floor": 18,
+        "required_undetermined_directions": 0,
+        "adjoined_undetermined_infinity_points": 0,
+        "classified_arc_size_floor": 18,
+        "excluded_profile_count": 189,
+        "remaining_profile_count": 0
+      },
+      {
+        "pair_slack": 12,
+        "profile_count": 136,
+        "delete_at_most": 3,
+        "repaired_arc_size_floor": 17,
+        "required_undetermined_directions": 1,
+        "adjoined_undetermined_infinity_points": 1,
+        "classified_arc_size_floor": 18,
+        "excluded_profile_count": 135,
+        "remaining_profile_count": 1
+      },
+      {
+        "pair_slack": 16,
+        "profile_count": 94,
+        "delete_at_most": 4,
+        "repaired_arc_size_floor": 16,
+        "required_undetermined_directions": 2,
+        "adjoined_undetermined_infinity_points": 2,
+        "classified_arc_size_floor": 18,
+        "excluded_profile_count": 93,
+        "remaining_profile_count": 1
+      }
+    ],
+    "repair_lemma": {
+      "bad_line_charge_rows": [
+        {
+          "occupancy": 3,
+          "pair_slack": 4,
+          "deletions_to_occupancy_two": 1
+        },
+        {
+          "occupancy": 4,
+          "pair_slack": 8,
+          "deletions_to_occupancy_two": 2
+        },
+        {
+          "occupancy": 5,
+          "pair_slack": 16,
+          "deletions_to_occupancy_two": 3
+        },
+        {
+          "occupancy": 6,
+          "pair_slack": 24,
+          "deletions_to_occupancy_two": 4
+        },
+        {
+          "occupancy": 7,
+          "pair_slack": 36,
+          "deletions_to_occupancy_two": 5
+        },
+        {
+          "occupancy": 8,
+          "pair_slack": 48,
+          "deletions_to_occupancy_two": 6
+        }
+      ],
+      "arc_repair_bound": "pair slack 4r permits deleting at most r points to obtain an arc; process every line of occupancy at least three and charge n-2 deletions to its line slack",
+      "classification_threshold": 18,
+      "conic_size": 24,
+      "off_conic_full_secant_minimum": 11,
+      "off_conic_count_rows": {
+        "1": {
+          "off_conic_points": 1,
+          "minimum_secant_incidence_count": 6,
+          "pair_slack_floor": 24
+        },
+        "2": {
+          "off_conic_points": 2,
+          "minimum_secant_incidence_count": 10,
+          "pair_slack_floor": 40
+        },
+        "3": {
+          "off_conic_points": 3,
+          "minimum_secant_incidence_count": 12,
+          "pair_slack_floor": 48
+        },
+        "4": {
+          "off_conic_points": 4,
+          "minimum_secant_incidence_count": 12,
+          "pair_slack_floor": 48
+        }
+      },
+      "counting_argument": "if h<=4 of the 20 original points are off a conic, each sees at least 11-(24-(20-h))=7-h secants whose two conic points remain. A line counted for r off-conic points has occupancy at least 2+r and contributes at least 4r pair slack.",
+      "consequence": "once an arc repaired from a profile of slack below 24 is shown conic-contained, the original 20-point set is impossible unless it is itself an arc",
+      "proved": true
+    },
+    "complete_arc_classification": {
+      "external_dependency": true,
+      "source": "K. Coolsaet and H. Sticker, A full classification of the complete k-arcs of PG(2,23) and PG(2,25), Journal of Combinatorial Designs 17 (2009), 459-477",
+      "doi": "10.1002/jcd.20211",
+      "independent_thesis_table": "H. Sticker, Classification of Arcs in Small Desarguesian Projective Planes, Ghent PhD thesis (2012), Section 5.1",
+      "complete_arc_sizes_pg2_23": [
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        24
+      ],
+      "complete_arc_counts": {
+        "10": 1,
+        "12": 112449,
+        "13": 4341514,
+        "14": 1828196,
+        "15": 58361,
+        "16": 564,
+        "17": 5,
+        "24": 1
+      },
+      "no_complete_arc_sizes": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "unique_24_arc": "a nondegenerate conic",
+      "finite_extension_consequence": "every arc of size at least 18 extends to the unique-size class 24 and is contained in a nondegenerate conic",
+      "proved_conditional_on_external_classification": true
+    },
+    "excluded_profile_count": 681,
+    "remaining_low_slack_profile_count": 2,
+    "proved": true
+  }
+}

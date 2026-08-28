@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-28 (15.683 additionally closes the `p=41,s=34` next all-finite endpoint; no general flag flipped)
+**Date:** 2026-08-28 (15.684 reduces the open `p=23,s=20` endpoint to 203 exact arithmetic profiles; no general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -49,6 +49,29 @@ odd-fibre counts are then closed by Proposition 15.674: exact type sums allow
 an intermediate count only as the unique high direction of its type, which
 leaves the same four arithmetic rows. The next infinity-present shell has
 `p` finite points.
+
+## 15.684 — `p=23,s=20` reduced to 203 exact profiles
+
+`src/e1_gmin_m4_prop15684.py` and
+`evidence/NOTE_2026-08-28_p23_low_mass_conic_reduction.md`. Exact quotient
+arithmetic leaves phase-zero residues `0,2,3,4,5,6,8`. Proposition 15.681
+kills `2,3,4,5`; paired-cube value floors kill scaled mass 12 and the first
+three heights at mass 16. In the last height-four case, stabilizer equality
+forces vanishing on `|X cap Y|=6`. The restriction kernel has dimension 23
+and equals `(t-6)V_1`; evaluating its affine factor at one and two
+replacements contradicts integrality. Thus only residue zero remains.
+
+Completion-bounded enumeration gives 1,247 phase-labelled residue-zero
+profiles. Segre's degree-10 tangent envelope excludes all 363 arc rows.
+Coolsaet--Sticker's complete-arc classification in `PG(2,23)`, a
+slack-to-arc repair lemma, and an off-conic secant count exclude all slack
+4 and 8 profiles and all but one each at slack 12 and 16. This removes
+1,044 profiles in total. Exactly 203 arithmetic profiles remain, including
+the two low-slack exceptions and every row of slack at least 20.
+
+This is a genuine strict reduction, not closure. The same boundary remains
+open at `p=17,19,23`; later all-finite sizes, strict infinity-plus-`p`,
+residual (ii), R1, QVAR, Type I, and the limit remain open.
 
 ## 15.683 — `p=41,s=34` next all-finite endpoint closed
 

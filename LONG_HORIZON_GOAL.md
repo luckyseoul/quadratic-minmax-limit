@@ -51,7 +51,10 @@ acceptance gate is the four-unit dictionary returned by
    `p>=17`. Proposition 15.679 closes the next all-finite size for every
    prime `p>=43`; Proposition 15.680 closes its `p=37` endpoint, 15.681
    closes `p=29`, 15.682 closes `p=31`, and 15.683 closes `p=41` by a
-   tangent-envelope argument. The three smaller endpoints `p=17,19,23`,
+   tangent-envelope argument. Proposition 15.684 removes every positive
+   residue at `p=23` and cuts its exact residue-zero ledger from 1,247
+   profiles to 203, without closing it. The three smaller endpoints
+   `p=17,19,23`,
    the strict-deficit part of the infinity-plus-`p` shell, larger all-finite
    profiles, and full graph constraints remain open.
 3. **Type I, multi-level Max−:** OPEN. The general \(3A+B>0\) estimate is

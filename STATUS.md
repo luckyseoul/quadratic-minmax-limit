@@ -1,5 +1,19 @@
 # Status (2026-08-28)
 
+**15.684 PROVED every positive residue at the `p=23,s=20` next all-finite
+endpoint is impossible and reduced residue zero from 1,247 exact profiles
+to 203, not residual (ii)**: paired-cube value floors exclude scaled mass
+12 and all height-at-most-three cases at mass 16. At height four, equality
+in the stabilizer identity forces vanishing on the middle shell; its exact
+23-dimensional restriction kernel factors as `(t-6)V_1`, and a
+two-replacement affine identity contradicts integrality. For residue zero,
+Segre's tangent envelope excludes all 363 arc profiles. The exhaustive
+complete-arc classification of `PG(2,23)`, a slack-to-arc repair bound, and
+an off-conic secant count exclude another 681 profiles. Exactly 203
+arithmetic profiles remain, so `p=23` is reduced but OPEN. The other
+endpoints `p=17,19`, later sizes, and the infinity-present remainder remain
+OPEN.
+
 **15.683 PROVED the `p=41,s=34` next all-finite endpoint is impossible,
 not residual (ii)**: Proposition 15.681 removes all positive residues and
 the exact residue-zero census leaves seven 34-arcs and two one-triple

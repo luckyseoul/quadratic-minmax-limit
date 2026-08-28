@@ -7802,3 +7802,131 @@ Evidence: `src/e1_gmin_m4_prop15683.py`,
 `evidence/e1_gmin_m4_prop15683.json`,
 `evidence/NOTE_2026-08-28_p41_next_all_finite_endpoint.md`, and
 `tests/test_prop15683.py`.
+
+## Proposition 15.684 — the p=23 next endpoint reduces to 203 exact profiles
+
+At (p=23,s=20), exact type arithmetic leaves only (u_1=11) in phase one
+and
+
+\[
+ u_0\in\{0,2,3,4,5,6,8\}                            \tag{15.684.1}
+\]
+
+in phase zero. A positive residue forces a quotient-zero direction and a
+nonzero nonnegative integer-valued quadratic (B) on (J(23,12)), with scaled
+mass (c=4p\mathbb E B=2u_0). Proposition 15.681 gives (c\ge12), excluding
+(u_0=2,3,4,5). We now exclude (c=12,16).
+
+Put (H=\max B) and choose a maximum point (X). Stabilizer averaging gives
+(c\ge4H), while the paired 11-cube through (X) has mean
+
+\[
+ \frac{H+c/4}{24}.                                  \tag{15.684.2}
+\]
+
+A nonzero nonnegative integral quadratic on a cube has mean at least
+(1/4). Equality cannot occur if a value is two. If its range is contained
+in (\{0,1,2,3\}) and it takes value three, then over (\mathbb F_2)
+
+\[
+ f=(f\bmod2)+2\left({f\choose2}\bmod2\right).
+\]
+
+The two nonzero bits have degrees at most two and four, so the elementary
+Reed--Muller distance bound gives (\mathbb E f\ge1/4+2/16=3/8). Comparing
+these floors with (15.684.2) excludes every height (H\le3) at (c=12,16).
+
+It remains to exclude (c=16,H=4). The exact stabilizer identity at (X) is
+
+\[
+ \mathbb E B=\frac{22}{23}q(6)+\frac{B(X)}{23}.
+\]
+
+Both sides apart from (q(6)) equal (4/23), so nonnegativity forces (B=0)
+on the shell (|X\cap Y|=6). Now (V_2(J(23,12))) has dimension 253, while
+its restriction to (J(12,6)\times J(11,6)) has filtered harmonic dimension
+
+\[
+ 1+11+10+54+44+11\cdot10=230.
+\]
+
+The 23-dimensional kernel is exactly ((|X\cap Y|-6)V_1): the displayed
+restriction is onto, and multiplication is injective because an affine
+factor vanishing on both neighbouring shells (t=5,7) is zero. Hence
+
+\[
+ B(Y)=(|X\cap Y|-6)L(Y)                              \tag{15.684.3}
+\]
+
+for affine (L). At (X), (L(X)=2/3). If
+(b_{ij}=B(X-i+j)), then (L(X-i+j)=b_{ij}/5), and the affine
+parallelogram identity at two replacements yields
+
+\[
+B(X-i_1-i_2+j_1+j_2)
+ =\frac{4\{3(b_{i_1j_1}+b_{i_2j_2})-10\}}{15}.       \tag{15.684.4}
+\]
+
+This cannot be an integer, already modulo three. Thus every positive
+residue in (15.684.1) is impossible.
+
+For (u_0=0), completion-bounded exact enumeration gives 426 phase-zero
+rows, 11 phase-one rows, 1,247 compatible phase-labelled profiles, and 485
+global shapes. Their pair-slack profile counts are
+
+\[
+\begin{array}{c|rrrrrrrrrrrrrrrr}
+\text{slack}&0&4&8&12&16&20&24&28&32&36&40&44&48&52&56&60\\ \hline
+\text{profiles}&363&264&189&136&94&68&49&35&21&13&7&4&1&1&1&1.
+\end{array}                                           \tag{15.684.5}
+\]
+
+All 363 slack-zero rows are 20-arcs. Segre's degree-10 tangent envelope
+has each direction with at most four secants as a double component. If any
+high direction contains an arc edge, the residual curve is forced to
+contain more point-pencil lines than its degree. Otherwise three high
+directions are undetermined; adjoining pairs of their infinity points gives
+22-arcs, and the complete-arc classification forces one conic through three
+collinear infinity points. Thus every arc row is impossible.
+
+For a line occupancy (n), define
+
+\[
+ \delta(n)=2\left({n\choose2}-\lfloor n/2\rfloor\right).
+\]
+
+Deleting (n-2\le\delta(n)/4) points repairs that line, so slack (4r)
+permits deleting at most (r) points to obtain an arc. Coolsaet--Sticker's
+complete classification of (PG(2,23)) has no complete arc of size 18
+through 23 and has a unique 24-arc, a conic. Hence every repaired arc of
+size at least 18 lies on a conic. If (1\le h\le4) original points lie off
+that conic, off-conic secant counting gives
+
+\[
+ \text{slack}\ge4h(7-h)\ge24.                       \tag{15.684.6}
+\]
+
+Consequently all 264 slack-four and 189 slack-eight profiles are excluded.
+One undetermined direction closes 135 of 136 slack-twelve profiles, and
+two close 93 of 94 slack-sixteen profiles. In total, 1,044 of the 1,247
+residue-zero profiles are impossible. Exactly 203 arithmetic profiles
+remain, with slack histogram
+
+\[
+\{12:1,16:1,20:68,24:49,28:35,32:21,36:13,40:7,
+44:4,48:1,52:1,56:1,60:1\}.                         \tag{15.684.7}
+\]
+
+This is a strict reduction, not a closure of (p=23,s=20). The endpoints
+(p=17,19,23), later all-finite sizes, strict infinity-plus-(p), residual
+(ii), R1, global QVAR, Type I, and the limit remain open.
+
+External inputs: K. Coolsaet and H. Sticker, *A full classification of the
+complete k-arcs of PG(2,23) and PG(2,25)*, J. Combin. Des. **17** (2009),
+459--477, doi:10.1002/jcd.20211; and Ball--Lavrauw, *Planar arcs*, Theorem
+11, doi:10.1016/j.jcta.2018.06.015.
+
+Evidence: `src/e1_gmin_m4_prop15684.py`,
+`evidence/e1_gmin_m4_prop15684.json`,
+`evidence/NOTE_2026-08-28_p23_low_mass_conic_reduction.md`, and
+`tests/test_prop15684.py`.

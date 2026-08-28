@@ -1166,6 +1166,31 @@ direction pencils with these exact profiles. OEIS searches for
 `14,7,20,1`, `18,16,2`, and `34,41,561` returned unrelated results; no
 sequence or priority claim is made.
 
+## 7ak. The `p=23,s=20` endpoint reduces to 203 profiles (2026-08-28)
+
+Proposition 15.684 first closes every positive phase-zero residue. The
+universal paired-cube floor from 15.681 removes residues 2 through 5. Sharp
+cube value floors remove scaled mass 12 and all but the height-four case at
+mass 16. In that final case, stabilizer equality makes the quadratic vanish
+on the middle shell of `J(23,12)`. The shell-restriction kernel has exact
+dimension 23 and is `(t-6)V_1`; one- and two-replacement evaluations of the
+affine factor give an immediate modulo-three integrality contradiction.
+
+The exact residue-zero ledger has 1,247 phase-labelled profiles and 485
+global shapes. Ball--Lavrauw's tangent envelope [44] excludes all 363 arc
+profiles. Coolsaet--Sticker's exhaustive complete-arc classification of
+`PG(2,23)` [56] says that complete arcs occur only at sizes
+`10,12,13,14,15,16,17,24`, with the unique 24-arc a conic. A line of
+occupancy `n` can be repaired by at most one quarter of its pair-slack
+contribution. Once this produces an arc of size at least 18, the
+classification gives a conic core; an off-conic point count then forces
+slack at least 24. This excludes 1,044 profiles in total and leaves exactly
+203, so the endpoint is reduced but not closed.
+
+Exact OEIS searches for `363,264,189,136,94,68`, `1247,1044,203`, and
+`112449,4341514,1828196` returned no sequence. Individual terms occur in
+unrelated entries; no sequence or priority claim is made.
+
 ---
 
 ## 8. What is not in the older literature
@@ -1236,5 +1261,6 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 53. K. Coolsaet and H. Sticker, *The complete k-arcs of PG(2,27) and PG(2,29)*, J. Combin. Des. **19** (2011), 111--130, [doi:10.1002/jcd.20261](https://doi.org/10.1002/jcd.20261), [open PDF](https://backoffice.biblio.ugent.be/download/1247338/1247417) (Table 5 gives the exhaustive projective class counts 10 and 5 for all 25- and 26-arcs in `PG(2,29)`, used in 15.681).
 54. J. M. Chao and H. Kaneta, *Classical arcs in PG(r,q) for 23 <= q <= 29*, Discrete Math. **226** (2001), 377--385 (records maximum nonclassical plane-arc size 24 at `q=29`; independent prior confirmation of 15.681's classification consequence).
 55. K. Coolsaet, *The Complete Arcs of PG(2,31)*, J. Combin. Des. **23** (2015), 522--533, [doi:10.1002/jcd.21410](https://doi.org/10.1002/jcd.21410) (exhaustive complete-arc classification used in 15.682; in particular, there are no complete arcs of sizes 23 through 31).
+56. K. Coolsaet and H. Sticker, *A full classification of the complete k-arcs of PG(2,23) and PG(2,25)*, J. Combin. Des. **17** (2009), 459--477, [doi:10.1002/jcd.20211](https://doi.org/10.1002/jcd.20211) (complete-arc spectrum and class counts in `PG(2,23)`, used in 15.684 to force every arc of size at least 18 onto a conic).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).
