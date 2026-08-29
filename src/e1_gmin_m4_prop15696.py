@@ -19,8 +19,10 @@ Coefficient comparison converts this and the nine rigid b=2 directions
 into exact linear identities for an affine edge lift.  Aggregate signed
 capacity and parallel-edge accounting leave ten possible infinity degrees.
 The checked-in CP-SAT model exhausts every edge subset in each shard; all
-twenty shape/degree shards are INFEASIBLE.  A nonsquare anti-isometry transfers c_H=-1 to
-c_H=1, so the computation excludes both signs.
+twenty corrected shape/degree shards are INFEASIBLE. Finite-field differences
+are formed componentwise in the fixed ``F_p`` basis and regression-tested
+against the canonical Paley conference matrix. A nonsquare anti-isometry
+transfers c_H=-1 to c_H=1, so the computation excludes both signs.
 """
 from __future__ import annotations
 
@@ -330,55 +332,83 @@ def p19_b16_solver_shard_certificate() -> dict[str, object]:
     shards = []
     for shape in ("022", "400"):
         for infinity_degree in expected:
-            suffix = (
-                f"p19_slack20_b16_400_i{infinity_degree}_retry.json"
-                if shape == "400" and infinity_degree == 28
-                else f"p19_slack20_b16_{shape}_i{infinity_degree}.json"
-            )
-            path = directory / suffix
-            raw = path.read_bytes()
-            payload = json.loads(raw)
-            required = {
-                "experiment": "p19_slack20_b16_lift_cpsat",
-                "status": "exact_affine_edge_lift_model",
-                "p": P,
-                "c_H": 1,
-                "fixed_infinity_degree": infinity_degree,
-                "phase_zero_profile": {"0": 5, "2": 1, "16": 4},
-                "phase_one_profile": {"2": 9, "16": 1},
-                "edge_variables": 65341,
-                "rigid_coefficient_identities": 1720,
-                "solver_status": "INFEASIBLE",
-                "feasible": False,
-                "finite_infeasibility_certificate": True,
-            }
-            for key, value in required.items():
-                if payload.get(key) != value:
-                    raise ArithmeticError(
-                        f"solver shard {shape}/{infinity_degree} failed {key}"
+            raw_shards = (
+                tuple(
+                    (
+                        f"p19_slack20_b16_022_i28_role{role}_correct.json",
+                        role,
                     )
-            if shape == "400" and payload.get("b16_shape") != shape:
-                raise ArithmeticError(f"solver shard {shape}/{infinity_degree} lost shape")
-            shards.append(
-                {
-                    "shape": shape,
-                    "infinity_degree": infinity_degree,
-                    "file": suffix,
-                    "sha256": hashlib.sha256(raw).hexdigest(),
-                    "solver_status": payload["solver_status"],
-                    "wall_time_seconds": payload["wall_time_seconds"],
-                    "branches": payload["branches"],
-                    "conflicts": payload["conflicts"],
-                }
+                    for role in (0, 2, 16)
+                )
+                if shape == "022" and infinity_degree == 28
+                else (
+                    (
+                        f"p19_slack20_b16_{shape}_i{infinity_degree}_correct.json",
+                        None,
+                    ),
+                )
             )
+            for suffix, elevated_role in raw_shards:
+                path = directory / suffix
+                raw = path.read_bytes()
+                payload = json.loads(raw)
+                required = {
+                    "experiment": "p19_slack20_b16_lift_cpsat",
+                    "status": "exact_affine_edge_lift_model",
+                    "p": P,
+                    "c_H": 1,
+                    "fixed_infinity_degree": infinity_degree,
+                    "phase_zero_profile": {"0": 5, "2": 1, "16": 4},
+                    "phase_one_profile": {"2": 9, "16": 1},
+                    "b16_shape": shape,
+                    "edge_variables": 65341,
+                    "rigid_coefficient_identities": 1720,
+                    "solver_status": "INFEASIBLE",
+                    "feasible": False,
+                    "finite_infeasibility_certificate": True,
+                }
+                if elevated_role is not None:
+                    required["fixed_phase_zero_elevated_role"] = elevated_role
+                for key, value in required.items():
+                    if payload.get(key) != value:
+                        raise ArithmeticError(
+                            f"solver shard {shape}/{infinity_degree} failed {key}"
+                        )
+                shards.append(
+                    {
+                        "shape": shape,
+                        "infinity_degree": infinity_degree,
+                        "phase_zero_elevated_role": elevated_role,
+                        "file": suffix,
+                        "sha256": hashlib.sha256(raw).hexdigest(),
+                        "solver_status": payload["solver_status"],
+                        "wall_time_seconds": payload["wall_time_seconds"],
+                        "branches": payload["branches"],
+                        "conflicts": payload["conflicts"],
+                    }
+                )
     return {
         "solver": "OR-Tools CP-SAT 9.15.6755",
-        "python": "3.14.4",
-        "machine": "nuka x86_64",
+        "python_runtime_recorded_in_raw_shards": False,
+        "machines": [
+            "soulkiller x86_64",
+            "jellyfin x86_64",
+        ],
         "model": "scripts/p19_slack20_b16_lift_cpsat.py",
+        "finite_field_sign_convention": (
+            "componentwise subtraction in the fixed F_p basis; full edge "
+            "tables regression-tested against paley_conference_prime_power"
+        ),
+        "supersedes_original_raw_shards": True,
         "normal_form_orbits": ["022", "400"],
         "shards_per_orbit": len(expected),
-        "shard_count": len(shards),
+        "shard_count": 2 * len(expected),
+        "raw_shard_count": len(shards),
+        "split_logical_shard": {
+            "shape": "022",
+            "infinity_degree": 28,
+            "exhaustive_phase_zero_elevated_roles": [0, 2, 16],
+        },
         "all_statuses": "INFEASIBLE",
         "shards": shards,
         "c_h_plus_one_excluded": True,

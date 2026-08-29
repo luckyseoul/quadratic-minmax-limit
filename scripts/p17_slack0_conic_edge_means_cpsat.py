@@ -101,9 +101,15 @@ def conference_data() -> tuple[list[tuple[int, int]], list[int]]:
     for left in range(N):
         for right in range(left + 1, N):
             edges.append((left, right))
-            signs.append(
-                1 if left == 0 else int(chi((left - 1) - (right - 1)))
-            )
+            if left == 0:
+                signs.append(1)
+            else:
+                a, b = left - 1, right - 1
+                difference = (
+                    ((a % P - b % P) % P)
+                    + ((a // P - b // P) % P) * P
+                )
+                signs.append(int(chi(difference)))
     return edges, signs
 
 
@@ -128,15 +134,30 @@ def boundary_directions(boundary: tuple[int, ...], c_h: int) -> list[dict[str, o
     return rows
 
 
-def solve(case: int, seconds: float, workers: int, seed: int) -> dict[str, object]:
+def solve(
+    case: int,
+    seconds: float,
+    workers: int,
+    seed: int,
+    branch: str | None = None,
+    boundary_override: tuple[int, ...] | None = None,
+    c_h_override: int | None = None,
+    linearization_level: int = 0,
+    fixed_infinity_degree: int | None = None,
+    fixed_infinity_neighbors: tuple[int, ...] | None = None,
+) -> dict[str, object]:
     from ortools.sat.python import cp_model
 
     started = time.time()
-    # These deterministic representatives realize the two labelled profiles
-    # in opposite product signs.  The nonsquare anti-isometry transfers the
-    # final exclusion between signs, but each fixed model uses its actual sign.
-    c_h = 1 if case == 0 else -1
-    boundary = canonical_boundary(case)
+    # The defaults are deterministic examples of the two labelled profiles.
+    # Overrides let an external complete affine-orbit census test every
+    # inequivalent embedding instead of assuming example transitivity.
+    c_h = (1 if case == 0 else -1) if c_h_override is None else c_h_override
+    boundary = canonical_boundary(case) if boundary_override is None else boundary_override
+    if c_h not in (-1, 1):
+        raise ValueError("c_h must be -1 or 1")
+    if len(boundary) != 16 or len(set(boundary)) != 16 or not all(0 <= x < Q for x in boundary):
+        raise ValueError("boundary must contain sixteen distinct affine points")
     boundary_set = set(boundary)
     direction_rows = boundary_directions(boundary, c_h)
     observed = {
@@ -177,10 +198,28 @@ def solve(case: int, seconds: float, workers: int, seed: int) -> dict[str, objec
     else:
         model.add_bool_xor([*negative, model.new_constant(1)])
 
+    infinity_degree = sum(
+        selected[edge_index[(0, vertex + 1)]] for vertex in range(Q)
+    )
+    if fixed_infinity_degree is not None:
+        model.add(infinity_degree == fixed_infinity_degree)
+    if fixed_infinity_neighbors is not None:
+        neighbor_set = set(fixed_infinity_neighbors)
+        if not all(0 <= vertex < Q for vertex in neighbor_set):
+            raise ValueError("infinity neighbors must lie in the affine plane")
+        for vertex in range(Q):
+            model.add(
+                selected[edge_index[(0, vertex + 1)]]
+                == int(vertex in neighbor_set)
+            )
+
     allocation_branch = model.new_bool_var("case_one_second_allocation") if case == 1 else None
     phase_one_elevated = []
     phase_zero_elevated = []
+    phase_one_elevated_by_direction = {}
+    phase_zero_elevated_by_direction = {}
     means_by_phase: dict[int, list[object]] = {0: [], 1: []}
+    parallel_counts = []
     rendered_rows = []
     rigid_coefficient_identities = 0
     for index, row in enumerate(direction_rows):
@@ -205,18 +244,27 @@ def solve(case: int, seconds: float, workers: int, seed: int) -> dict[str, objec
             for left in range(P)
             for right in range(left + 1, P)
         }
+        cross_selected: dict[tuple[int, int], list[object]] = {
+            pair: [] for pair in cross_terms
+        }
         terms = []
+        parallel_selected = []
         for edge_variable, (left, right), sign in zip(selected, edges, signs):
             if left == 0:
                 coefficient = 1
             elif labels[left - 1] == labels[right - 1]:
                 coefficient = P
+                parallel_selected.append(edge_variable)
             else:
                 coefficient = -eps * sign
                 first, second = labels[left - 1], labels[right - 1]
                 pair = (first, second) if first < second else (second, first)
                 cross_terms[pair].append(eps * sign * edge_variable)
+                cross_selected[pair].append(edge_variable)
             terms.append(coefficient * edge_variable)
+        parallel = model.new_int_var(0, H_SIZE, f"parallel_{index}")
+        model.add(parallel == sum(parallel_selected))
+        parallel_counts.append(parallel)
         mean = model.new_int_var(0, 4 * P, f"mean_{index}")
         model.add(mean == sum(terms) - 3 * P)
         means_by_phase[phase].append(mean)
@@ -234,6 +282,7 @@ def solve(case: int, seconds: float, workers: int, seed: int) -> dict[str, objec
             elevated = model.new_bool_var(f"phase_one_elevated_{index}")
             model.add(mean == 16 + 18 * elevated)
             phase_one_elevated.append(elevated)
+            phase_one_elevated_by_direction[index] = elevated
             role = "one_of_nine_elevated"
             rigid_target_sign = 1
             rigid_guard = ~elevated
@@ -253,12 +302,26 @@ def solve(case: int, seconds: float, workers: int, seed: int) -> dict[str, objec
             model.add(elevated + allocation_branch <= 1)
             model.add(mean == 18 + 18 * elevated)
             phase_zero_elevated.append(elevated)
+            phase_zero_elevated_by_direction[index] = elevated
             role = "one_elevated_unless_anchor_branch"
             rigid_target_sign = -1
             rigid_guard = ~elevated
 
         if rigid_target_sign is not None:
             gauge = model.new_int_var(-H_SIZE, H_SIZE, f"gauge_{index}")
+            target_sum = rigid_target_sign * (b * (b - 1) // 2)
+            # Sum the 136 cell identities explicitly.  This exposes the
+            # parallel-count/gauge arithmetic that otherwise remains hidden
+            # behind thousands of edge expressions during presolve.
+            aggregate_identity = model.add(
+                infinity_degree + P * parallel - 3 * P - mean
+                == target_sum
+                + (P * (P - 1) // 2) * gauge
+                - (P - 1) * infinity_degree
+            )
+            if rigid_guard is not None:
+                aggregate_identity.only_enforce_if(rigid_guard)
+            absolute_rhs = []
             for first in range(P):
                 for second in range(first + 1, P):
                     target = (
@@ -266,13 +329,36 @@ def solve(case: int, seconds: float, workers: int, seed: int) -> dict[str, objec
                         if first in odd_fibres and second in odd_fibres
                         else 0
                     )
+                    rhs = target + gauge - star[first] - star[second]
                     constraint = model.add(
                         sum(cross_terms[first, second])
-                        == target + gauge - star[first] - star[second]
+                        == rhs
                     )
+                    positive_cut = model.add(
+                        sum(cross_selected[first, second]) >= rhs
+                    )
+                    negative_cut = model.add(
+                        sum(cross_selected[first, second]) >= -rhs
+                    )
+                    absolute = model.new_int_var(
+                        0, H_SIZE, f"absolute_rhs_{index}_{first}_{second}"
+                    )
+                    absolute_positive = model.add(absolute >= rhs)
+                    absolute_negative = model.add(absolute >= -rhs)
+                    absolute_rhs.append(absolute)
+                    rigid_coefficient_identities += 1
                     if rigid_guard is not None:
                         constraint.only_enforce_if(rigid_guard)
-                    rigid_coefficient_identities += 1
+                        positive_cut.only_enforce_if(rigid_guard)
+                        negative_cut.only_enforce_if(rigid_guard)
+                        absolute_positive.only_enforce_if(rigid_guard)
+                        absolute_negative.only_enforce_if(rigid_guard)
+            aggregate_l1 = model.add(
+                sum(absolute_rhs)
+                <= H_SIZE - infinity_degree - sum(parallel_selected)
+            )
+            if rigid_guard is not None:
+                aggregate_l1.only_enforce_if(rigid_guard)
         rendered_rows.append(
             {
                 "direction": list(row["direction"]),
@@ -285,11 +371,27 @@ def solve(case: int, seconds: float, workers: int, seed: int) -> dict[str, objec
 
     if case == 0:
         model.add(sum(phase_one_elevated) == 1)
+        if branch is not None:
+            direction = int(branch)
+            if direction not in phase_one_elevated_by_direction:
+                raise ValueError("case-zero branch is not a phase-one b=2 direction")
+            model.add(phase_one_elevated_by_direction[direction] == 1)
     else:
         assert allocation_branch is not None
         model.add(sum(phase_zero_elevated) + allocation_branch == 1)
+        if branch == "anchor":
+            model.add(allocation_branch == 1)
+        elif branch is not None:
+            direction = int(branch)
+            if direction not in phase_zero_elevated_by_direction:
+                raise ValueError("case-one branch is not a phase-zero b=2 direction")
+            model.add(allocation_branch == 0)
+            model.add(phase_zero_elevated_by_direction[direction] == 1)
     for phase in (0, 1):
         model.add(sum(means_by_phase[phase]) == 162)
+    # Every finite affine edge is parallel to exactly one projective
+    # direction; infinity-star edges are parallel to none.
+    model.add(sum(parallel_counts) == H_SIZE - infinity_degree)
 
     solver = cp_model.CpSolver()
     solver.parameters.max_time_in_seconds = float(seconds)
@@ -297,7 +399,7 @@ def solve(case: int, seconds: float, workers: int, seed: int) -> dict[str, objec
     solver.parameters.random_seed = int(seed)
     solver.parameters.cp_model_presolve = True
     solver.parameters.symmetry_level = 3
-    solver.parameters.linearization_level = 0
+    solver.parameters.linearization_level = int(linearization_level)
     status = solver.solve(model)
     feasible = status in (cp_model.FEASIBLE, cp_model.OPTIMAL)
     result: dict[str, object] = {
@@ -309,6 +411,13 @@ def solve(case: int, seconds: float, workers: int, seed: int) -> dict[str, objec
         "p": P,
         "c_H": c_h,
         "case": case,
+        "fixed_allocation_branch": branch,
+        "fixed_infinity_degree": fixed_infinity_degree,
+        "fixed_infinity_neighbors": (
+            list(fixed_infinity_neighbors)
+            if fixed_infinity_neighbors is not None
+            else None
+        ),
         "fixed_boundary": list(boundary),
         "phase_profiles_b": observed,
         "direction_rows": rendered_rows,
@@ -318,6 +427,7 @@ def solve(case: int, seconds: float, workers: int, seed: int) -> dict[str, objec
         "feasible": feasible,
         "finite_infeasibility_certificate": status == cp_model.INFEASIBLE,
         "workers": workers,
+        "linearization_level": linearization_level,
         "seed": seed,
         "conflicts": solver.num_conflicts,
         "branches": solver.num_branches,
@@ -342,9 +452,41 @@ def main() -> None:
     parser.add_argument("--seconds", type=float, default=300.0)
     parser.add_argument("--workers", type=int, default=16)
     parser.add_argument("--seed", type=int, default=15700001)
+    parser.add_argument(
+        "--branch",
+        help="fix the nonrigid allocation: a direction index, or 'anchor' in case one",
+    )
+    parser.add_argument(
+        "--boundary",
+        help="comma-separated sixteen-point affine boundary override",
+    )
+    parser.add_argument("--c-h", type=int, choices=(-1, 1))
+    parser.add_argument("--linearization-level", type=int, choices=(0, 1, 2), default=0)
+    parser.add_argument("--infinity-degree", type=int)
+    parser.add_argument("--infinity-neighbors")
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
-    result = solve(args.case, args.seconds, args.workers, args.seed)
+    boundary = (
+        tuple(int(value) for value in args.boundary.split(","))
+        if args.boundary is not None
+        else None
+    )
+    result = solve(
+        args.case,
+        args.seconds,
+        args.workers,
+        args.seed,
+        args.branch,
+        boundary,
+        args.c_h,
+        args.linearization_level,
+        args.infinity_degree,
+        (
+            tuple(int(value) for value in args.infinity_neighbors.split(","))
+            if args.infinity_neighbors is not None
+            else None
+        ),
+    )
     if args.output is not None:
         atomic_write(args.output, result)
     rendered = dict(result)

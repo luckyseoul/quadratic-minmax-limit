@@ -161,7 +161,15 @@ def conference_data() -> tuple[list[tuple[int, int]], list[int]]:
     for a in range(N):
         for b in range(a + 1, N):
             edges.append((a, b))
-            signs.append(1 if a == 0 else int(chi((a - 1) - (b - 1))))
+            if a == 0:
+                signs.append(1)
+            else:
+                left, right = a - 1, b - 1
+                difference = (
+                    ((left % P - right % P) % P)
+                    + ((left // P - right // P) % P) * P
+                )
+                signs.append(int(chi(difference)))
     return edges, signs
 
 

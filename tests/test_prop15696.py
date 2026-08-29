@@ -34,8 +34,16 @@ def test_all_exact_edge_lift_shards_are_infeasible():
     assert row["normal_form_orbits"] == ["022", "400"]
     assert row["shards_per_orbit"] == 10
     assert row["shard_count"] == 20
+    assert row["raw_shard_count"] == 22
+    assert row["split_logical_shard"] == {
+        "shape": "022",
+        "infinity_degree": 28,
+        "exhaustive_phase_zero_elevated_roles": [0, 2, 16],
+    }
     assert row["all_statuses"] == "INFEASIBLE"
     assert all(shard["solver_status"] == "INFEASIBLE" for shard in row["shards"])
+    assert "componentwise subtraction" in row["finite_field_sign_convention"]
+    assert row["supersedes_original_raw_shards"] is True
     assert row["both_c_h_signs_excluded"] is True
 
 

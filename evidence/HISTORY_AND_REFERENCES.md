@@ -1397,9 +1397,15 @@ Proposition 15.695 excludes both rows whose exceptional phase-one direction
 has `b=14`: equality forces the directional quadratic to equal one on three
 intersection layers, and a fixed pair-inclusion minor has full rank 171
 modulo 101. Proposition 15.696 handles the mixed `b=16` row. Its equality
-layers have rank 169 and two integral kernel orbits; all twenty exact
-infinity-degree edge-lift shards are infeasible. The p=19 endpoint is thereby
-reduced to four profiles with slack histogram `{20:1,24:1,28:1,32:1}`.
+layers have rank 169 and two integral kernel orbits; all twenty corrected
+infinity-degree edge-lift shards are infeasible. A subsequent audit found and
+repaired integer subtraction on encoded `F_{19^2}` elements. Every logical
+shard was rerun with componentwise field subtraction and a full canonical
+conference-sign regression. The hard `022/I=28` shard was partitioned by all
+three possible elevated phase-zero roles, so the twenty logical shards have
+22 exact raw certificates. Only this corrected archive supports 15.696.
+The p=19 endpoint is thereby reduced to four profiles with slack histogram
+`{20:1,24:1,28:1,32:1}`.
 
 Proposition 15.697 gives a structural reduction of the all-`b=2` slack-20
 profile. Stabilizer equality and an exact rank-152 layer kernel reduce a
@@ -1567,6 +1573,55 @@ least twenty. The endpoint and every top-level gate remain open. Targeted
 literature and OEIS searches found no prior statement of the infinity-
 placement census or this 99-profile exclusion; isolated numerical matches
 are unrelated and are not evidence.
+
+## 7ba. The p17 slack-sixteen block closes (2026-08-29)
+
+Proposition 15.705 exhausts all 629 PGL classes of twelve-arcs in
+`PG(2,17)` and all 97,122 four-point extensions within the exact
+slack-sixteen core-secant charge. Only 47 extensions have an allowed line
+pattern. Across every affine chart and both phase labellings, all 6,345
+resulting cases miss the thirteen target profiles left by 15.704. Therefore
+all thirteen zero-direction slack-sixteen rows are impossible. The p17
+remainder drops from 654 to 641 profiles: two at slack zero and 639 of slack
+at least twenty. The endpoint and all top-level gates remain open.
+
+## 7bb. A global Paley-sign identity closes p17 slack zero (2026-08-29)
+
+Proposition 15.706 excludes the two slack-zero profiles left by 15.700.
+Every possible mean allocation retains a rigid `b=2` direction of each
+quadratic type. For such a direction, summing all 136 inter-fibre coefficient
+identities and comparing with its exact mean gives
+
+```text
+P_d = 4 + 8g_d - I.
+```
+
+Writing `S` for the signed sum of every selected finite edge gives a second
+expression for the same directional cross sum. Comparing one direction of
+each type eliminates `S` and forces
+
+```text
+17I = 4 + 72(g_+ + g_-).
+```
+
+Hence `I=68 (mod 72)`, and the full range `0<=I<=69` leaves only `I=68`.
+There is then one finite edge, so the affine odd boundary has size 66, 68,
+or 70 rather than 16. Both profiles are impossible without a solver or any
+new classification input. The exact p17 remainder is 639 profiles, all of
+pair slack at least twenty; the endpoint and every top-level gate remain
+open.
+
+Targeted GitHub code and MathOverflow searches for the distinctive
+`17I=4 (mod 72)` identity, the 639-profile p17 remainder, and global
+directional Paley-sign sums found no prior statement of this exclusion.
+
+The same audit found that three exploratory edge-lift scripts had subtracted
+encoded `F_{p^2}` integers instead of subtracting their two field components.
+The scripts now use componentwise subtraction and are checked against the
+canonical Paley conference matrix by a full-edge regression test. This
+invalidated the original raw CP-SAT archive used by Proposition 15.696; its
+corrected twenty-shard rerun is recorded separately rather than silently
+reusing the old files.
 
 ---
 

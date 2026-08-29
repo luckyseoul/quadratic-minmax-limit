@@ -71,7 +71,15 @@ def conference_data() -> tuple[list[tuple[int, int]], list[int]]:
     for a in range(N):
         for b in range(a + 1, N):
             edges.append((a, b))
-            signs.append(1 if a == 0 else int(chi((a - 1) - (b - 1))))
+            if a == 0:
+                signs.append(1)
+            else:
+                left, right = a - 1, b - 1
+                difference = (
+                    ((left % P - right % P) % P)
+                    + ((left // P - right // P) % P) * P
+                )
+                signs.append(int(chi(difference)))
     return edges, signs
 
 
@@ -88,6 +96,7 @@ def solve(
     seed: int,
     fixed_infinity_degree: int | None = None,
     b16_shape: str = "both",
+    fixed_phase_zero_elevated_role: int | None = None,
 ) -> dict:
     from ortools.sat.python import cp_model
 
@@ -132,6 +141,7 @@ def solve(
     phase_one_four_shape = []
     phase_zero_roles = {0: [], 2: [], 16: []}
     phase_zero_elevated = []
+    phase_zero_elevated_roles = {0: [], 2: [], 16: []}
     rigid_identities = 0
     direction_rows = []
     for direction_index, direction in enumerate(projective_directions(P)):
@@ -296,6 +306,14 @@ def solve(
             )
             for b, value in role_vars.items():
                 phase_zero_roles[b].append(value)
+                phase_zero_elevated_roles[b].append(
+                    and_var(
+                        model,
+                        elevated,
+                        value,
+                        f"phase_zero_b{b}_elevated_{direction_index}",
+                    )
+                )
             phase_zero_elevated.append(elevated)
             role = "phase_zero_0x5_2x1_16x4"
         direction_rows.append(
@@ -317,6 +335,12 @@ def solve(
     model.add(sum(phase_zero_roles[2]) == 1)
     model.add(sum(phase_zero_roles[16]) == 4)
     model.add(sum(phase_zero_elevated) == 1)
+    if fixed_phase_zero_elevated_role is not None:
+        if fixed_phase_zero_elevated_role not in phase_zero_elevated_roles:
+            raise ValueError("phase-zero elevated role must be 0, 2, or 16")
+        model.add(
+            sum(phase_zero_elevated_roles[fixed_phase_zero_elevated_role]) == 1
+        )
 
     solver = cp_model.CpSolver()
     solver.parameters.max_time_in_seconds = float(seconds)
@@ -336,6 +360,7 @@ def solve(
         "phase_zero_profile": {"0": 5, "2": 1, "16": 4},
         "phase_one_profile": {"2": 9, "16": 1},
         "b16_shape": b16_shape,
+        "fixed_phase_zero_elevated_role": fixed_phase_zero_elevated_role,
         "edge_variables": len(selected),
         "rigid_coefficient_identities": rigid_identities,
         "direction_rows": direction_rows,
@@ -365,6 +390,9 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=15696001)
     parser.add_argument("--infinity-degree", type=int)
     parser.add_argument("--b16-shape", choices=("both", "022", "400"), default="both")
+    parser.add_argument(
+        "--phase-zero-elevated-role", type=int, choices=(0, 2, 16)
+    )
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     out = solve(
@@ -374,6 +402,7 @@ def main() -> None:
         args.seed,
         args.infinity_degree,
         args.b16_shape,
+        args.phase_zero_elevated_role,
     )
     if args.output is not None:
         atomic_write(args.output, out)

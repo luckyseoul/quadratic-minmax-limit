@@ -43,9 +43,10 @@ banned by test (`tests/test_main_chain_docs.py`).
   close the slack-24, -28, and -32 rows. The final native-XOR certificates were
   completed independently on nuka, jellyfin, and soulkiller ECC; the complete
   `p=19` endpoint is closed.
-- **Non-Walsh endpoint at `p=17`.** Propositions 15.700--15.705 reduce the exact
-  ledger from 1,575 to 641 profiles: two slack-zero profiles and 639 profiles
-  of slack at least 20 remain.
+- **Non-Walsh endpoint at `p=17`.** Propositions 15.700--15.706 reduce the exact
+  ledger from 1,575 to 639 profiles, all of pair slack at least 20. Proposition
+  15.706 excludes both former slack-zero profiles by a solver-free global
+  Paley-sign identity.
 
 The full correction and supporting certificates are recorded in
 `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md`.
@@ -74,7 +75,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, 15.684--15.687 cut `p=23` to 133 exact residue-zero profiles, 15.688--15.699 close the `p=19` endpoint, and 15.700--15.705 cut the exact `p=17` ledger from 1,575 to 641 profiles; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the `p=17,23` next-boundary endpoints, later all-finite sizes, and `p=7` infinity-plus-seven remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, 15.684--15.687 cut `p=23` to 133 exact residue-zero profiles, 15.688--15.699 close the `p=19` endpoint, and 15.700--15.706 cut the exact `p=17` ledger from 1,575 to 639 profiles, all of slack at least 20; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the `p=17,23` next-boundary endpoints, later all-finite sizes, and `p=7` infinity-plus-seven remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -379,8 +380,13 @@ Proposition 15.696 treats the mixed `b=16` slack-20 row. Equality on its
 `t=7,8,10` layers has exact rank 169 and a two-dimensional kernel; integrality
 leaves the two `t=9` value orbits `{0,2,2}` and `{0,0,4}`. Exact coefficient
 comparison reduces each orbit to ten admissible infinity degrees. All twenty
-edge-lift shards are `INFEASIBLE`, excluding that row and leaving four profiles
-with histogram `{20:1,24:1,28:1,32:1}`.
+corrected edge-lift shards are `INFEASIBLE`. A later audit repaired
+componentwise subtraction in `F_{19^2}` and replaced the complete raw shard
+archive; a full-edge regression test now checks the signs against the
+canonical Paley conference matrix. The hard `022/I=28` logical shard is
+exhaustively split by elevated phase-zero role, giving 22 raw certificates
+for the 20 logical shards. This excludes that row and leaves four
+profiles with histogram `{20:1,24:1,28:1,32:1}`.
 Proposition 15.697 attacks the remaining all-`b=2` slack-20 row. Its unique
 elevated phase-one direction has `A=(t-1)^2+2B`, where `B` is a nonnegative
 integral quadratic of mean `5/19`. Stabilizer equality, a rank-152
@@ -443,6 +449,12 @@ four-point extension within the slack-sixteen secant charge. Only 47 of
 97,122 extensions have an allowed line pattern; all 6,345 affine charts miss
 the thirteen targets under both phase labellings. The p17 remainder is now
 641: two slack-zero rows and 639 rows of slack at least twenty.
+Proposition 15.706 excludes both slack-zero rows without a solver. Every
+allocation retains a rigid `b=2` direction of each quadratic type. Comparing
+their directional coefficient sums with the single global finite-edge Paley
+sign sum forces `17I=4 (mod 72)`, hence infinity degree `I=68`. The remaining
+one finite edge makes the affine odd boundary have size 66, 68, or 70, never
+16. Thus 639 exact p17 profiles remain, all of slack at least twenty.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -496,7 +508,7 @@ graph TD
     SMALLRANGE --> P11EIGHT["p=11 finite size eight<br/>exact normalized census <b>CLOSED</b> (15.670)"]
     RANGE --> ENDPOINT["infinity + (p-2), every odd-fibre profile<br/>both signs <b>CLOSED for p>=17</b> (15.671--15.674)"]
     RANGE --> FIRSTHALF["first all-finite s above 3(p-1)/4<br/><b>CLOSED for every prime p>=17</b> (15.675, 15.677, 15.678)"]
-    FIRSTHALF --> SECONDFINITE["next all-finite even s<br/><b>CLOSED for p>=43 and p=41,37,31,29,19</b>;<br/>p=23 reduced to 133 profiles;<br/>p=17 reduced to 654 profiles;<br/>p=17,23 OPEN (15.679--15.704)"]
+    FIRSTHALF --> SECONDFINITE["next all-finite even s<br/><b>CLOSED for p>=43 and p=41,37,31,29,19</b>;<br/>p=23 reduced to 133 profiles;<br/>p=17 reduced to 639 profiles, all slack>=20;<br/>p=17,23 OPEN (15.679--15.706)"]
     RANGE --> PARC["infinity + p, pair-deficit equality / p-arcs<br/>both signs <b>CLOSED for p>=17</b> (15.676)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
@@ -690,7 +702,7 @@ square-direction affine-circle words.
 | 15.693 | in the four-deletion slack-16 branch, the complete repaired 14-arc would have four deleted plus at least one unused infinity point of secant index one, while the exhaustive classification permits at most four | excludes all seven slack-16 profiles and reduces `p=19` to `{20:4,24:1,28:1,32:1}`; slack 20 now forces exactly five repair deletions |
 | 15.694 | equality in `slack(S)>=4 sum mu_A(x)` forces every slack-20 witness to split into an 11-arc and a 5-arc, with each deleted point on one core secant and only eight allowed per-line occupancy types | reduces the four slack-20 rows to three bad-line patterns and 13-arcs with `c1>=7` or `8`; the classified maximum is 9, so the endpoint remains open |
 | 15.695 | in each `b=14` slack-20 row, phase-one floors saturate the type budget; positive quadrature forces the directional slack to equal one on three intersection layers, whose fixed pair-inclusion minor has full rank 171 modulo 101 | excludes both `b=14` rows and reduces the `p=19` remainder from seven profiles to five `{20:2,24:1,28:1,32:1}`; the endpoint and top-level gates remain open |
-| 15.696 | the mixed `b=16` row has rank-169 equality layers and exactly two integral kernel orbits; coefficient comparison leaves ten infinity-degree shards per orbit, and all twenty exact affine edge-lift models are infeasible | excludes the final mixed slack-20 row and reduces the `p=19` remainder from five profiles to four `{20:1,24:1,28:1,32:1}`; the endpoint and top-level gates remain open |
+| 15.696 | the mixed `b=16` row has rank-169 equality layers and exactly two integral kernel orbits; coefficient comparison leaves twenty logical shards, all infeasible in a corrected 22-file archive after componentwise `F_{19^2}` subtraction, canonical-sign regression, and an exhaustive three-role split of the hard `022/I=28` shard | excludes the final mixed slack-20 row and reduces the `p=19` remainder from five profiles to four `{20:1,24:1,28:1,32:1}`; the endpoint and top-level gates remain open |
 | 15.697 | the all-`b=2` slack-20 row has a Boolean elevated lift by stabilizer equality, rank-152 layer factorization, and a complete `2^18` additive cross-difference certificate; exact phase-zero coefficient `l1` bounds reduce its infinity degree to `0,20,38` | strict structural reduction only: the profile count remains four, the slice-to-cube catalog is conditional, and every top-level gate remains open |
 | 15.698 | the exact affine-Radon inverse and forced five-deletion 11-arc repair give a 1,184,892-clause/741-XOR boundary model; completed nuka and soulkiller-ECC runs both return `UNSATISFIABLE` | closes the final p=19 slack-20 row and reduces the endpoint to three profiles `{24:1,28:1,32:1}`; the endpoint and top-level gates remain open |
 | 15.699 | the three remaining p=19 directional profiles are imposed directly in the exact affine-Radon inverse model; five completed native-XOR runs across nuka, jellyfin, and soulkiller ECC return `UNSATISFIABLE` | closes the p=19 second all-finite endpoint; p=17, p=23, later sizes, residual (ii), and all top-level gates remain open |
@@ -700,6 +712,7 @@ square-direction affine-circle words.
 | 15.703 | eight locally generated, pairwise inequivalent complete p17 13-arcs match the published eight-class count and stabilizer fingerprint; their index-one counts are `0,0,0,0,0,0,2,3`, while every incomplete-core candidate through the unique complete 14-arc has reconstructed slack at least sixteen | conditionally on the published class count, excludes all final 33 slack-twelve rows; 753 exact p17 rows remain and every top-level gate stays open |
 | 15.704 | the slack-sixteen rows split by free directions as `{0:13,1:47,2:47,3:5}`; complete-arc secant floors, overlapping-pair conics, and an exact 26-placement complete-14-minus-one audit leave no slack-sixteen realization with a genuinely undetermined direction | excludes 99 of 112 slack-sixteen rows; 654 exact p17 rows remain, including thirteen zero-direction slack-sixteen rows, and every top-level gate stays open |
 | 15.705 | all 629 PGL classes of p17 twelve-arcs give 97,122 four-point extensions within the slack-sixteen core-secant charge; only 47 have an allowed line pattern, and all 6,345 affine charts miss the thirteen target profiles under both phase labellings | excludes the final thirteen slack-sixteen rows; 641 exact p17 rows remain (two slack-zero and 639 of slack at least twenty), while the endpoint and every top-level gate remain open |
+| 15.706 | every allocation in either p17 slack-zero profile retains rigid `b=2` directions of both quadratic types; their directional sums and the global finite-edge Paley-sign sum force `17I=4+72(g_++g_-)`, hence `I=68`, whose one remaining finite edge gives odd-boundary size 66, 68, or 70 rather than 16 | excludes both slack-zero profiles without a solver; 639 exact p17 rows remain, all of slack at least twenty, while the endpoint and every top-level gate remain open |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -1026,6 +1039,7 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15703.py`, `scripts/p17_complete_arc_class_generator.py` | Complete-13-arc class generation and exact secant-index/triple certificate excluding all final p17 slack-twelve profiles |
 | `src/e1_gmin_m4_prop15704.py` | Free-direction split and complete-13/14-arc infinity-placement certificate excluding 99 p17 slack-sixteen profiles |
 | `src/e1_gmin_m4_prop15705.py`, `scripts/p17_slack16_orbiter_extension.py` | Complete 629-orbit extension census excluding the final thirteen p17 slack-sixteen profiles |
+| `src/e1_gmin_m4_prop15706.py` | Solver-free global Paley-sign identity excluding both p17 slack-zero profiles for every infinity degree |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |
@@ -1078,7 +1092,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-29_p19_slack16_complete14_exclusion.md` | Complete-14-arc secant-index contradiction excluding all seven slack-16 `p=19` profiles and forcing the slack-20 repair depth (15.693) |
 | `evidence/NOTE_2026-08-29_p19_slack20_equality_normal_form.md` | Exact 11-arc plus 5-arc equality normal form, three bad-line patterns, and filtered 13-arc secant indices for the four slack-20 profiles (15.694) |
 | `evidence/NOTE_2026-08-29_p19_slack20_b14_layer_rank_exclusion.md` | Positive-quadrature equality and exact three-layer rank certificate excluding both `b=14` slack-20 profiles (15.695) |
-| `evidence/NOTE_2026-08-29_p19_slack20_b16_edge_lift_exclusion.md` | Rank-169 equality kernel, two integral normal forms, and twenty-shard exact edge-lift exclusion of the mixed `b=16` slack-20 profile (15.696) |
+| `evidence/NOTE_2026-08-29_p19_slack20_b16_edge_lift_exclusion.md` | Rank-169 equality kernel, two integral normal forms, finite-field sign correction, and corrected twenty-shard exact edge-lift exclusion of the mixed `b=16` slack-20 profile (15.696) |
 | `evidence/NOTE_2026-08-29_p19_allb2_boolean_reduction.md` | Unconditional Booleanization and infinity-degree reduction of the all-`b=2` slack-20 profile, plus the explicitly conditional Boolean catalog (15.697) |
 | `evidence/NOTE_2026-08-29_p19_allb2_boundary_unsat.md` | Exact affine-Radon/repair model, two completed native-XOR UNSAT runs, sign transfer, and closure of every p=19 slack-20 profile (15.698) |
 | `evidence/NOTE_2026-08-29_p19_endpoint_boundary_unsat.md` | Five completed native-XOR UNSAT runs excluding the slack-24, -28, and -32 profiles and closing the p=19 endpoint (15.699) |
@@ -1088,6 +1102,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-29_p17_slack12_complete13_exclusion.md` | Eight complete-13-arc representatives and complete-14-minus-one triple census excluding all final slack-twelve rows (15.703) |
 | `evidence/NOTE_2026-08-29_p17_slack16_free_direction_exclusion.md` | Complete-arc/conic reduction and exact infinity-placement census excluding 99 slack-sixteen rows with a free direction (15.704) |
 | `evidence/NOTE_2026-08-29_p17_slack16_orbit_extension_exclusion.md` | Exhaustive 629-orbit extension and 6,345-chart census excluding the final thirteen p17 slack-sixteen rows (15.705) |
+| `evidence/NOTE_2026-08-29_p17_slack0_global_sign_exclusion.md` | Opposite-type rigid-direction comparison forcing the impossible infinity degree `I=68` and excluding both p17 slack-zero rows (15.706) |
 | `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md` | General local-stability counter-mechanism, closest-global hierarchy, Mathon barrier, and corrected signed-Eulerian target after the `c=2` no-go |
 | `evidence/NOTE_2026-08-29_dilation_energy_normalization_and_no_go.md` | Exact R1 dilation-energy identity and representation/PSD/autocorrelation route obstructions |
 | `evidence/STRATEGY_2026-08-29_COLD_REVIEW.md` | Cold reconstruction of the original problem, actual asymptotic gate, killed shortcuts, and bounded four-team Ultra attack |

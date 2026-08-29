@@ -1,6 +1,8 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-29 (through 15.694; `p=19,s=16` has seven profiles, with the four slack-20 rows in an exact 11+5 arc normal form; no general flag flipped)
+**Date:** 2026-08-29 (through 15.706; `p=19,s=16` is closed, and the exact
+`p=17,s=16` remainder is 639 profiles, all of pair slack at least 20; no
+general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -28,6 +30,31 @@ for both signs. This is not all of the projective size-eight case: the
 separate infinity-plus-seven profile remains open. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.706 — both p17 slack-zero profiles excluded analytically
+
+Every allocation in either profile left by 15.700 retains rigid `b=2`
+directions of both quadratic types. If `I` is the infinity degree, `P_d` the
+parallel finite-edge count, and `g_d` the coefficient gauge, summing the 136
+rigid cells gives `P_d=4+8g_d-I`. Comparing the two directional cross sums
+with the same global finite-edge Paley-sign sum forces
+
+```text
+17I = 4 + 72(g_+ + g_-).
+```
+
+Therefore `I=68` in `0<=I<=69`. The graph then has one finite edge and its
+affine odd boundary has size 66, 68, or 70, contradicting size 16. No solver
+or new classification input is used. The live p17 ledger is now 639 exact
+profiles, all of slack at least twenty. The p17 endpoint remains open.
+
+During this proof audit, three edge-lift scripts were found to subtract the
+integer encodings of `F_{p^2}` elements rather than their two components.
+They are corrected and guarded by a full canonical-conference regression
+test. The original 15.696 raw shards are invalid; use only the corrected
+archive: twenty logical shards in 22 raw files, with `022/I=28` partitioned
+over elevated phase-zero roles `0,2,16`. Regenerate proposition evidence from
+that archive only.
 
 Proposition 15.669 now excludes every all-finite even boundary with
 `6<=s<=3(p-1)/4` and every infinity-present boundary with odd finite

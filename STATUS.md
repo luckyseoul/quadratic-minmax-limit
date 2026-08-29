@@ -1,5 +1,22 @@
 # Status (2026-08-29)
 
+**15.706 PROVED both remaining pair-slack-zero `p=17,s=16` profiles are
+impossible, not the endpoint**: every mean allocation retains a rigid `b=2`
+direction of each quadratic type. Summing its 136 coefficient cells and
+comparing with the global finite-edge Paley-sign sum gives
+`17I=4+72(g_++g_-)`. Thus `I=68`; the one remaining finite edge makes the
+affine odd boundary have size 66, 68, or 70, never 16. This proof is
+solver-free. Exactly 639 p17 profiles remain, all of pair slack at least 20.
+The endpoint, residual (ii), R1, Type I, and the limit remain OPEN.
+
+**FINITE-FIELD SIGN AUDIT:** three exploratory edge-lift scripts used integer
+subtraction on encoded `F_{p^2}` elements. They now use componentwise field
+subtraction and a full-edge canonical-conference regression test. The old
+raw CP-SAT shards supporting 15.696 are invalid. The corrected archive closes
+all twenty logical shards with 22 exact `INFEASIBLE` files; the hard
+`022/I=28` case is partitioned over all three possible elevated phase-zero
+roles. No old shard or timeout is treated as evidence.
+
 **Cold theorem audit completed; L remains OPEN.** The actual asymptotic gate
 is only `Phi(C_p)-m_{p^2+1}=o(p^3)` on a ratio-dense Paley tail
 (Proposition 15.20e). The exact gap-2 four-unit gate is stronger. A general
