@@ -1,0 +1,209 @@
+{
+  "branches": 13824,
+  "c_H": 1,
+  "conflicts": 0,
+  "direction_rows": [
+    {
+      "direction": [
+        1,
+        0
+      ],
+      "eps": 1,
+      "phase": 1,
+      "role": "phase_one_b2_or_pointwise_b16"
+    },
+    {
+      "direction": [
+        1,
+        1
+      ],
+      "eps": -1,
+      "phase": 0,
+      "role": "phase_zero_0x5_2x1_16x4"
+    },
+    {
+      "direction": [
+        1,
+        2
+      ],
+      "eps": -1,
+      "phase": 0,
+      "role": "phase_zero_0x5_2x1_16x4"
+    },
+    {
+      "direction": [
+        1,
+        3
+      ],
+      "eps": 1,
+      "phase": 1,
+      "role": "phase_one_b2_or_pointwise_b16"
+    },
+    {
+      "direction": [
+        1,
+        4
+      ],
+      "eps": -1,
+      "phase": 0,
+      "role": "phase_zero_0x5_2x1_16x4"
+    },
+    {
+      "direction": [
+        1,
+        5
+      ],
+      "eps": 1,
+      "phase": 1,
+      "role": "phase_one_b2_or_pointwise_b16"
+    },
+    {
+      "direction": [
+        1,
+        6
+      ],
+      "eps": -1,
+      "phase": 0,
+      "role": "phase_zero_0x5_2x1_16x4"
+    },
+    {
+      "direction": [
+        1,
+        7
+      ],
+      "eps": 1,
+      "phase": 1,
+      "role": "phase_one_b2_or_pointwise_b16"
+    },
+    {
+      "direction": [
+        1,
+        8
+      ],
+      "eps": 1,
+      "phase": 1,
+      "role": "phase_one_b2_or_pointwise_b16"
+    },
+    {
+      "direction": [
+        1,
+        9
+      ],
+      "eps": -1,
+      "phase": 0,
+      "role": "phase_zero_0x5_2x1_16x4"
+    },
+    {
+      "direction": [
+        1,
+        10
+      ],
+      "eps": -1,
+      "phase": 0,
+      "role": "phase_zero_0x5_2x1_16x4"
+    },
+    {
+      "direction": [
+        1,
+        11
+      ],
+      "eps": 1,
+      "phase": 1,
+      "role": "phase_one_b2_or_pointwise_b16"
+    },
+    {
+      "direction": [
+        1,
+        12
+      ],
+      "eps": 1,
+      "phase": 1,
+      "role": "phase_one_b2_or_pointwise_b16"
+    },
+    {
+      "direction": [
+        1,
+        13
+      ],
+      "eps": -1,
+      "phase": 0,
+      "role": "phase_zero_0x5_2x1_16x4"
+    },
+    {
+      "direction": [
+        1,
+        14
+      ],
+      "eps": 1,
+      "phase": 1,
+      "role": "phase_one_b2_or_pointwise_b16"
+    },
+    {
+      "direction": [
+        1,
+        15
+      ],
+      "eps": -1,
+      "phase": 0,
+      "role": "phase_zero_0x5_2x1_16x4"
+    },
+    {
+      "direction": [
+        1,
+        16
+      ],
+      "eps": 1,
+      "phase": 1,
+      "role": "phase_one_b2_or_pointwise_b16"
+    },
+    {
+      "direction": [
+        1,
+        17
+      ],
+      "eps": -1,
+      "phase": 0,
+      "role": "phase_zero_0x5_2x1_16x4"
+    },
+    {
+      "direction": [
+        1,
+        18
+      ],
+      "eps": -1,
+      "phase": 0,
+      "role": "phase_zero_0x5_2x1_16x4"
+    },
+    {
+      "direction": [
+        0,
+        1
+      ],
+      "eps": 1,
+      "phase": 1,
+      "role": "phase_one_b2_or_pointwise_b16"
+    }
+  ],
+  "edge_variables": 65341,
+  "elapsed_seconds": 62.17492628097534,
+  "experiment": "p19_slack20_b16_lift_cpsat",
+  "feasible": false,
+  "finite_infeasibility_certificate": true,
+  "fixed_infinity_degree": 28,
+  "p": 19,
+  "phase_one_profile": {
+    "16": 1,
+    "2": 9
+  },
+  "phase_zero_profile": {
+    "0": 5,
+    "16": 4,
+    "2": 1
+  },
+  "rigid_coefficient_identities": 1720,
+  "seed": 15696001,
+  "solver_status": "INFEASIBLE",
+  "status": "exact_affine_edge_lift_model",
+  "wall_time_seconds": 53.218779783,
+  "workers": 16
+}

@@ -41,7 +41,10 @@ slack-16 block. Proposition 15.694 puts every slack-20 witness into an exact
 11-arc plus 5-arc equality normal form. Proposition 15.695 then uses exact
 phase-one floor equality and a full-rank three-layer Johnson certificate to
 exclude both `b=14` rows. Five profiles remain; parity-level linear
-compatibility, mod-four weight, and second moments alone do not close them. See
+compatibility, mod-four weight, and second moments alone do not close them.
+Proposition 15.696 then classifies both integral normal-form orbits of the
+remaining slack-20 `b=16` direction and excludes all twenty exact edge-lift
+shards. Four profiles remain. See
 `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md`.
 
 Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
@@ -50,7 +53,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, 15.684--15.687 cut `p=23` to 133 exact residue-zero profiles, and 15.688--15.695 cut `p=19` to five high-slack profiles; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the three smaller next-boundary endpoints, later all-finite sizes, and `p=7` infinity-plus-seven remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, 15.684--15.687 cut `p=23` to 133 exact residue-zero profiles, and 15.688--15.696 cut `p=19` to four high-slack profiles; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the three smaller next-boundary endpoints, later all-finite sizes, and `p=7` infinity-plus-seven remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -351,6 +354,12 @@ quadratic to equal one on the `t=6,8,10` intersection layers; a fixed
 every quadratic on `J(19,10)`. The resulting constant-one quadratic violates
 parity on `t=5`. Both rows are excluded, leaving five profiles with histogram
 `{20:2,24:1,28:1,32:1}`.
+Proposition 15.696 treats the mixed `b=16` slack-20 row. Equality on its
+`t=7,8,10` layers has exact rank 169 and a two-dimensional kernel; integrality
+leaves the two `t=9` value orbits `{0,2,2}` and `{0,0,4}`. Exact coefficient
+comparison reduces each orbit to ten admissible infinity degrees. All twenty
+edge-lift shards are `INFEASIBLE`, excluding that row and leaving four profiles
+with histogram `{20:1,24:1,28:1,32:1}`.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -404,7 +413,7 @@ graph TD
     SMALLRANGE --> P11EIGHT["p=11 finite size eight<br/>exact normalized census <b>CLOSED</b> (15.670)"]
     RANGE --> ENDPOINT["infinity + (p-2), every odd-fibre profile<br/>both signs <b>CLOSED for p>=17</b> (15.671--15.674)"]
     RANGE --> FIRSTHALF["first all-finite s above 3(p-1)/4<br/><b>CLOSED for every prime p>=17</b> (15.675, 15.677, 15.678)"]
-    FIRSTHALF --> SECONDFINITE["next all-finite even s<br/><b>CLOSED for p>=43 and p=41,37,31,29</b>;<br/>p=23 reduced to 133 profiles; p=19 to 7 profiles;<br/>p=17,19,23 OPEN (15.679--15.693)"]
+    FIRSTHALF --> SECONDFINITE["next all-finite even s<br/><b>CLOSED for p>=43 and p=41,37,31,29</b>;<br/>p=23 reduced to 133 profiles; p=19 to 4 profiles;<br/>p=17,19,23 OPEN (15.679--15.696)"]
     RANGE --> PARC["infinity + p, pair-deficit equality / p-arcs<br/>both signs <b>CLOSED for p>=17</b> (15.676)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
@@ -598,6 +607,7 @@ square-direction affine-circle words.
 | 15.693 | in the four-deletion slack-16 branch, the complete repaired 14-arc would have four deleted plus at least one unused infinity point of secant index one, while the exhaustive classification permits at most four | excludes all seven slack-16 profiles and reduces `p=19` to `{20:4,24:1,28:1,32:1}`; slack 20 now forces exactly five repair deletions |
 | 15.694 | equality in `slack(S)>=4 sum mu_A(x)` forces every slack-20 witness to split into an 11-arc and a 5-arc, with each deleted point on one core secant and only eight allowed per-line occupancy types | reduces the four slack-20 rows to three bad-line patterns and 13-arcs with `c1>=7` or `8`; the classified maximum is 9, so the endpoint remains open |
 | 15.695 | in each `b=14` slack-20 row, phase-one floors saturate the type budget; positive quadrature forces the directional slack to equal one on three intersection layers, whose fixed pair-inclusion minor has full rank 171 modulo 101 | excludes both `b=14` rows and reduces the `p=19` remainder from seven profiles to five `{20:2,24:1,28:1,32:1}`; the endpoint and top-level gates remain open |
+| 15.696 | the mixed `b=16` row has rank-169 equality layers and exactly two integral kernel orbits; coefficient comparison leaves ten infinity-degree shards per orbit, and all twenty exact affine edge-lift models are infeasible | excludes the final mixed slack-20 row and reduces the `p=19` remainder from five profiles to four `{20:1,24:1,28:1,32:1}`; the endpoint and top-level gates remain open |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -969,6 +979,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-29_p19_slack16_complete14_exclusion.md` | Complete-14-arc secant-index contradiction excluding all seven slack-16 `p=19` profiles and forcing the slack-20 repair depth (15.693) |
 | `evidence/NOTE_2026-08-29_p19_slack20_equality_normal_form.md` | Exact 11-arc plus 5-arc equality normal form, three bad-line patterns, and filtered 13-arc secant indices for the four slack-20 profiles (15.694) |
 | `evidence/NOTE_2026-08-29_p19_slack20_b14_layer_rank_exclusion.md` | Positive-quadrature equality and exact three-layer rank certificate excluding both `b=14` slack-20 profiles (15.695) |
+| `evidence/NOTE_2026-08-29_p19_slack20_b16_edge_lift_exclusion.md` | Rank-169 equality kernel, two integral normal forms, and twenty-shard exact edge-lift exclusion of the mixed `b=16` slack-20 profile (15.696) |
 | `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md` | General local-stability counter-mechanism, closest-global hierarchy, Mathon barrier, and corrected signed-Eulerian target after the `c=2` no-go |
 | `evidence/NOTE_2026-08-29_dilation_energy_normalization_and_no_go.md` | Exact R1 dilation-energy identity and representation/PSD/autocorrelation route obstructions |
 | `evidence/STRATEGY_2026-08-29_COLD_REVIEW.md` | Cold reconstruction of the original problem, actual asymptotic gate, killed shortcuts, and bounded four-team Ultra attack |

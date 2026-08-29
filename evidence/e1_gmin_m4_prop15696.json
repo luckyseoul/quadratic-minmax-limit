@@ -1,0 +1,570 @@
+{
+  "L_status": "OPEN",
+  "aggregate_degree_certificate": {
+    "admissible_infinity_degrees": [
+      2,
+      8,
+      10,
+      12,
+      18,
+      20,
+      28,
+      30,
+      38,
+      48
+    ],
+    "admissible_rows": [
+      [
+        2,
+        0,
+        2
+      ],
+      [
+        8,
+        1,
+        5
+      ],
+      [
+        10,
+        1,
+        3
+      ],
+      [
+        12,
+        1,
+        1
+      ],
+      [
+        18,
+        2,
+        4
+      ],
+      [
+        20,
+        2,
+        2
+      ],
+      [
+        28,
+        3,
+        3
+      ],
+      [
+        30,
+        3,
+        1
+      ],
+      [
+        38,
+        4,
+        2
+      ],
+      [
+        48,
+        5,
+        1
+      ]
+    ],
+    "infinity_outside_boundary": true,
+    "normalization": "infinity-zero edge selected",
+    "phase_one_parallel_identity": "P_d=4+9*g_d-I",
+    "phase_one_signed_sums": {
+      "b16": "-19+171*g_d-18*I",
+      "b2": "1+171*g_d-18*I"
+    },
+    "phase_zero_elevation_count": 1,
+    "phase_zero_profile": {
+      "0": 5,
+      "2": 1,
+      "16": 4
+    },
+    "proved": true
+  },
+  "boundary_size": 16,
+  "closes_R1": false,
+  "closes_residual_ii": false,
+  "closes_type_I": false,
+  "excluded_profile": {
+    "arc": false,
+    "global_b_profile": {
+      "0": 5,
+      "2": 10,
+      "16": 5
+    },
+    "pair_slack": 20,
+    "phase_deficits": {
+      "0": 94,
+      "1": 126
+    },
+    "phase_profiles_b": {
+      "0": {
+        "0": 5,
+        "2": 1,
+        "16": 4
+      },
+      "1": {
+        "2": 9,
+        "16": 1
+      }
+    },
+    "undetermined_directions": 5
+  },
+  "floor_kernel_certificate": {
+    "b": 16,
+    "canonical_pair_target_histograms": {
+      "022": {
+        "-1": 19,
+        "0": 152
+      },
+      "400": {
+        "-1": 35,
+        "0": 120,
+        "1": 16
+      },
+      "b2": {
+        "0": 170,
+        "1": 1
+      }
+    },
+    "canonical_pair_target_sums": {
+      "022": -19,
+      "400": -19,
+      "b2": 1
+    },
+    "explicit_rational_kernel_dimension": 2,
+    "floor_polynomial_coefficients": [
+      "-1/3",
+      "6",
+      "-77/3"
+    ],
+    "floor_polynomial_values": {
+      "7": "0",
+      "8": "1",
+      "9": "4/3",
+      "10": "1"
+    },
+    "forced_pointwise_layers": {
+      "7": 0,
+      "8": 1,
+      "10": 1
+    },
+    "kernel": "(alpha dot y_C)(2-|y_C|), sum(alpha)=0",
+    "normal_form_values_by_selected_empty_count": {
+      "022": {
+        "0": [
+          1
+        ],
+        "1": [
+          0,
+          2
+        ],
+        "2": [
+          1
+        ],
+        "3": [
+          0
+        ]
+      },
+      "400": {
+        "0": [
+          1
+        ],
+        "1": [
+          0,
+          4
+        ],
+        "2": [
+          1
+        ],
+        "3": [
+          0
+        ]
+      }
+    },
+    "normal_forms": {
+      "022": "A=1-z+u+v-2uv",
+      "400": "A=1+3z-u-v-2zu-2zv+2uv"
+    },
+    "p": 19,
+    "pair_monomial_dimension": 171,
+    "phase": 1,
+    "phase_profile": {
+      "2": 9,
+      "16": 1
+    },
+    "proved": true,
+    "rank_mod_two": 169,
+    "rank_witness_layer_histogram": {
+      "7": 16,
+      "8": 33,
+      "10": 120
+    },
+    "rank_witness_rows": 169,
+    "t9_nonnegative_even_value_triples": [
+      [
+        0,
+        0,
+        4
+      ],
+      [
+        0,
+        2,
+        2
+      ],
+      [
+        0,
+        4,
+        0
+      ],
+      [
+        2,
+        0,
+        2
+      ],
+      [
+        2,
+        2,
+        0
+      ],
+      [
+        4,
+        0,
+        0
+      ]
+    ],
+    "therefore_rational_rank": 169,
+    "type_budget": 200,
+    "type_floor_sum": 200
+  },
+  "p": 19,
+  "p19_profiles_after": 4,
+  "p19_profiles_before": 5,
+  "p19_second_all_finite_endpoint_closed": false,
+  "proposition": "15.696",
+  "proved_computationally": true,
+  "remaining_profiles": [
+    {
+      "arc": false,
+      "global_b_profile": {
+        "0": 5,
+        "2": 9,
+        "14": 1,
+        "16": 5
+      },
+      "pair_slack": 32,
+      "phase_deficits": {
+        "0": 80,
+        "1": 128
+      },
+      "phase_profiles_b": {
+        "0": {
+          "0": 5,
+          "16": 5
+        },
+        "1": {
+          "2": 9,
+          "14": 1
+        }
+      },
+      "undetermined_directions": 5
+    },
+    {
+      "arc": false,
+      "global_b_profile": {
+        "0": 5,
+        "2": 9,
+        "10": 1,
+        "16": 5
+      },
+      "pair_slack": 28,
+      "phase_deficits": {
+        "0": 80,
+        "1": 132
+      },
+      "phase_profiles_b": {
+        "0": {
+          "0": 5,
+          "16": 5
+        },
+        "1": {
+          "2": 9,
+          "10": 1
+        }
+      },
+      "undetermined_directions": 5
+    },
+    {
+      "arc": false,
+      "global_b_profile": {
+        "0": 5,
+        "2": 9,
+        "6": 1,
+        "16": 5
+      },
+      "pair_slack": 24,
+      "phase_deficits": {
+        "0": 80,
+        "1": 136
+      },
+      "phase_profiles_b": {
+        "0": {
+          "0": 5,
+          "16": 5
+        },
+        "1": {
+          "2": 9,
+          "6": 1
+        }
+      },
+      "undetermined_directions": 5
+    },
+    {
+      "arc": false,
+      "global_b_profile": {
+        "0": 5,
+        "2": 10,
+        "16": 5
+      },
+      "pair_slack": 20,
+      "phase_deficits": {
+        "0": 80,
+        "1": 140
+      },
+      "phase_profiles_b": {
+        "0": {
+          "0": 5,
+          "16": 5
+        },
+        "1": {
+          "2": 10
+        }
+      },
+      "undetermined_directions": 5
+    }
+  ],
+  "remaining_slack_histogram": {
+    "20": 1,
+    "24": 1,
+    "28": 1,
+    "32": 1
+  },
+  "solver_shard_certificate": {
+    "all_statuses": "INFEASIBLE",
+    "both_c_h_signs_excluded": true,
+    "c_h_minus_one_transfer": "multiplication by a nonsquare fixes infinity and zero, flips both direction type and c_H, and preserves every phase/profile",
+    "c_h_plus_one_excluded": true,
+    "machine": "nuka x86_64",
+    "model": "scripts/p19_slack20_b16_lift_cpsat.py",
+    "normal_form_orbits": [
+      "022",
+      "400"
+    ],
+    "proved_computationally": true,
+    "python": "3.14.4",
+    "shard_count": 20,
+    "shards": [
+      {
+        "branches": 0,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_022_i2.json",
+        "infinity_degree": 2,
+        "sha256": "d9a4dd26ec00847d1aa516dc3ebeab2e9cedb60c0118827b4e4e64274108bf27",
+        "shape": "022",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 16.766831062
+      },
+      {
+        "branches": 11338,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_022_i8.json",
+        "infinity_degree": 8,
+        "sha256": "3a03fffb8bb3610cc24363f3bc4cd6cfcb9e25a7d12e98e2fc51bd195ae62b97",
+        "shape": "022",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 24.791124783
+      },
+      {
+        "branches": 11850,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_022_i10.json",
+        "infinity_degree": 10,
+        "sha256": "4af9a4fad4f4c6df92732cd4ac887f1170d26c577a08f45beed6b4a7f289d096",
+        "shape": "022",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 24.062797178
+      },
+      {
+        "branches": 0,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_022_i12.json",
+        "infinity_degree": 12,
+        "sha256": "75131c0ae64ef849f426d548b6367b4f5ece43c166b515996f25a6c7e2265977",
+        "shape": "022",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 7.745437443
+      },
+      {
+        "branches": 16522,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_022_i18.json",
+        "infinity_degree": 18,
+        "sha256": "b8ae824771b0d484300956515e0dfffa971736923f661f4725dd80bea43f8db8",
+        "shape": "022",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 50.593831380000005
+      },
+      {
+        "branches": 16490,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_022_i20.json",
+        "infinity_degree": 20,
+        "sha256": "b7c7dedeee9017f38b246a604b52be5e8bb993707c3365e4cc8a8f3737ce902a",
+        "shape": "022",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 24.531391533
+      },
+      {
+        "branches": 13824,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_022_i28.json",
+        "infinity_degree": 28,
+        "sha256": "2ad9c6faab10b164beefc18cf8ba52bbf546893214cfe9d643cb5afc2c256dbb",
+        "shape": "022",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 53.218779783
+      },
+      {
+        "branches": 0,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_022_i30.json",
+        "infinity_degree": 30,
+        "sha256": "c1e4e05b0d11a288c4aad0b719b71fbcbdb6e40c77632e040b8bdebe6cac56f8",
+        "shape": "022",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 7.822691063000001
+      },
+      {
+        "branches": 14772,
+        "conflicts": 2388,
+        "file": "p19_slack20_b16_022_i38.json",
+        "infinity_degree": 38,
+        "sha256": "f792a43b1a323d2923d25e868b72a946155f40bc7b7a78bad3176a8239b7ca60",
+        "shape": "022",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 57.786527861
+      },
+      {
+        "branches": 0,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_022_i48.json",
+        "infinity_degree": 48,
+        "sha256": "63feaff4d74bfffb31afcbd3aec215020f6757ad78f626c753702100edf78afc",
+        "shape": "022",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 17.317382244
+      },
+      {
+        "branches": 0,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_400_i2.json",
+        "infinity_degree": 2,
+        "sha256": "3f69044a60ef1c5746c3f5ad145c6ab53aa6c9d9107f153b8a02490aee6ad582",
+        "shape": "400",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 15.307348632
+      },
+      {
+        "branches": 14492,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_400_i8.json",
+        "infinity_degree": 8,
+        "sha256": "4205360358bb7854ee98c51650e06a09e0531a6f042f3f70453f526b723cdc04",
+        "shape": "400",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 22.647269742000002
+      },
+      {
+        "branches": 14450,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_400_i10.json",
+        "infinity_degree": 10,
+        "sha256": "549a02e2fb257c36c0c2cea202394d5ef92cd7bf98ceaca8dc371233de21a106",
+        "shape": "400",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 22.642901239
+      },
+      {
+        "branches": 0,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_400_i12.json",
+        "infinity_degree": 12,
+        "sha256": "891b43193ca364bbb4f85ea11be25901f327083e4ce29473650d23aa7950715b",
+        "shape": "400",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 8.071561990000001
+      },
+      {
+        "branches": 15836,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_400_i18.json",
+        "infinity_degree": 18,
+        "sha256": "4b59e22ee783ba90130cb06b86e908df26937490d56549f889e9d3698ec0cae4",
+        "shape": "400",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 24.346839767000002
+      },
+      {
+        "branches": 15834,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_400_i20.json",
+        "infinity_degree": 20,
+        "sha256": "7c971e5af96406300c71ed4201b853824fd0949bf156356b4ff4ce618974f53c",
+        "shape": "400",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 23.612591665
+      },
+      {
+        "branches": 23512,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_400_i28_retry.json",
+        "infinity_degree": 28,
+        "sha256": "9e222f7dfc0e7eea6210b8d2628395176b88c228a54fbbe608ee22c958c118f3",
+        "shape": "400",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 25.417271318
+      },
+      {
+        "branches": 0,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_400_i30.json",
+        "infinity_degree": 30,
+        "sha256": "23d5867666f76a6213975dc9030ea051430e14f1144375cf2bf9cce173584d78",
+        "shape": "400",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 8.061200736
+      },
+      {
+        "branches": 13644,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_400_i38.json",
+        "infinity_degree": 38,
+        "sha256": "104210173e9e7c2d6ea2f03ca04cdeaa388197c2f072ab3009f1d03ad64efb04",
+        "shape": "400",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 22.434979701000003
+      },
+      {
+        "branches": 0,
+        "conflicts": 0,
+        "file": "p19_slack20_b16_400_i48.json",
+        "infinity_degree": 48,
+        "sha256": "4b6ff1977fb5befc06d12e27c3c7069f3fd569af36d1733f6d3afc58dcf341f8",
+        "shape": "400",
+        "solver_status": "INFEASIBLE",
+        "wall_time_seconds": 8.697058008
+      }
+    ],
+    "shards_per_orbit": 10,
+    "solver": "OR-Tools CP-SAT 9.15.6755"
+  }
+}
