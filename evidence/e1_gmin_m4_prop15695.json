@@ -1,0 +1,170 @@
+{
+  "L_status": "OPEN",
+  "boundary_size": 16,
+  "closes_R1": false,
+  "closes_residual_ii": false,
+  "closes_type_I": false,
+  "excluded_b14_profiles": 2,
+  "excluded_profiles": [
+    {
+      "arc": false,
+      "global_b_profile": {
+        "0": 5,
+        "2": 9,
+        "4": 1,
+        "14": 1,
+        "16": 4
+      },
+      "pair_slack": 20,
+      "phase_deficits": {
+        "0": 92,
+        "1": 128
+      },
+      "phase_profiles_b": {
+        "0": {
+          "0": 5,
+          "4": 1,
+          "16": 4
+        },
+        "1": {
+          "2": 9,
+          "14": 1
+        }
+      },
+      "undetermined_directions": 4
+    },
+    {
+      "arc": false,
+      "global_b_profile": {
+        "0": 4,
+        "2": 11,
+        "14": 1,
+        "16": 4
+      },
+      "pair_slack": 20,
+      "phase_deficits": {
+        "0": 92,
+        "1": 128
+      },
+      "phase_profiles_b": {
+        "0": {
+          "0": 4,
+          "2": 2,
+          "16": 4
+        },
+        "1": {
+          "2": 9,
+          "14": 1
+        }
+      },
+      "undetermined_directions": 4
+    }
+  ],
+  "floor_equality": {
+    "b": 14,
+    "b14_scaled_floor": 38,
+    "contradicting_even_parity_layer": 5,
+    "contradicting_layer_nonempty": true,
+    "forced_pointwise_one_layers": [
+      6,
+      8,
+      10
+    ],
+    "p": 19,
+    "phase": 1,
+    "phase_profile": {
+      "2": 9,
+      "14": 1
+    },
+    "positive_quadrature_weights": {
+      "6": "25/76",
+      "8": "25/38",
+      "10": "1/76"
+    },
+    "proved": true,
+    "symmetrized_minimizer": "q(t)=1",
+    "type_budget": 200,
+    "type_floor_sum": 200
+  },
+  "p": 19,
+  "p19_profiles_after": 5,
+  "p19_profiles_before": 7,
+  "p19_second_all_finite_endpoint_closed": false,
+  "proposition": "15.695",
+  "proved": true,
+  "quadratic_identity_contradiction": "A=1 on t=6,8,10 forces A=1 on J(19,10), but phase-one parity makes A even on nonempty t=5",
+  "remaining_slack_histogram": {
+    "20": 2,
+    "24": 1,
+    "28": 1,
+    "32": 1
+  },
+  "remaining_slack_twenty_profiles": [
+    {
+      "arc": false,
+      "global_b_profile": {
+        "0": 5,
+        "2": 10,
+        "16": 5
+      },
+      "pair_slack": 20,
+      "phase_deficits": {
+        "0": 80,
+        "1": 140
+      },
+      "phase_profiles_b": {
+        "0": {
+          "0": 5,
+          "16": 5
+        },
+        "1": {
+          "2": 10
+        }
+      },
+      "undetermined_directions": 5
+    },
+    {
+      "arc": false,
+      "global_b_profile": {
+        "0": 5,
+        "2": 10,
+        "16": 5
+      },
+      "pair_slack": 20,
+      "phase_deficits": {
+        "0": 94,
+        "1": 126
+      },
+      "phase_profiles_b": {
+        "0": {
+          "0": 5,
+          "2": 1,
+          "16": 4
+        },
+        "1": {
+          "2": 9,
+          "16": 1
+        }
+      },
+      "undetermined_directions": 5
+    }
+  ],
+  "slack_twenty_profiles_after": 2,
+  "slack_twenty_profiles_before": 4,
+  "three_layer_rank_certificate": {
+    "degree_at_most_two_dimension": 171,
+    "finite_field_modulus": 101,
+    "finite_field_rank": 171,
+    "pair_monomial_column_count": 171,
+    "pair_monomials_span_degree_at_most_two_on_slice": true,
+    "proved": true,
+    "slice": "J(19,10)",
+    "therefore_rational_rank": 171,
+    "witness_layer_histogram": {
+      "6": 5,
+      "8": 75,
+      "10": 91
+    },
+    "witness_row_count": 171
+  }
+}
