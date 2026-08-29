@@ -8234,18 +8234,147 @@ u_0\in\{0,2,3,4,6\}.                              \tag{15.688.5}
 Each positive residue forces a quotient-zero direction. Its scaled mean is
 \(2u_0\in\{4,6,8,12\}\), below the least positive fibre floor \(20\),
 so it has \(b=0\) and is a nonzero quadratic lift. This contradicts
-(15.688.1), whose scaled floor is \(16\). Hence only
+(15.688.1), whose scaled floor is \(16\). The deficit-minimizing pair is
 
 \[
-u_0=0,quad u_1=9,qquad
-5[b=0]+5[b=16],quad9[b=2]+[b=16]                 \tag{15.688.6}
+u_0=0,\quad u_1=9,\qquad
+5[b=0]+5[b=16],\quad9[b=2]+[b=16].               \tag{15.688.6}
 \]
 
-remains. Its two deficits are \(80,126\), leaving pair slack \(34\).
-The \(p=19\) endpoint, residual (ii), R1, global QVAR, Type I, and the limit
-remain open.
+Its putative slack is \(34\not\equiv0\pmod4\), so this minimum pair is not
+realizable. It is not, however, the complete residue-zero row.
+Completion-bounded exact enumeration gives 60 phase-zero rows and nine
+phase-one rows. Pair compatibility and the exact slack congruence leave
+143 phase-labelled profiles, 75 global shapes, with histogram
+\(\{0:54,4:37,8:25,12:13,16:7,20:4,24:1,28:1,32:1\}\).
 
-Evidence: `src/e1_gmin_m4_prop15688.py`,
+Thus 15.688 removes every positive residue but does not reduce residue zero
+to a single profile. The \(p=19\) endpoint, residual (ii), R1, global QVAR,
+Type I, and the limit remain open.
+
+Evidence for 15.688: `src/e1_gmin_m4_prop15688.py`,
 `evidence/e1_gmin_m4_prop15688.json`,
 `evidence/NOTE_2026-08-29_sharp_integral_lift_p19.md`, and
 `tests/test_prop15688.py`.
+
+## Proposition 15.689 — p=19 low-slack conic reduction
+
+Of the 143 exact residue-zero profiles in (15.688.7), every profile of pair
+slack at most twelve is impossible. Exactly fourteen profiles remain, with
+slack histogram `{16:7,20:4,24:1,28:1,32:1}`.
+
+The finite-geometric input is the complete-arc spectrum of
+`PG(2,19)`: complete arcs have sizes `10,11,12,13,14,20`, and the unique
+complete 20-arc is a conic. Consequently every arc of size at least fifteen
+is conic-contained.
+
+At slack zero the boundary `S` is a 16-arc. Three undetermined infinity
+points give two overlapping 18-arc extensions. Their conics share `S`, so
+coincide and contain three collinear points. With one or two undetermined
+directions, the containing conic is tangent or secant to the line at
+infinity. Every other direction retains at least six affine conic secants,
+so has `b<=4`; all 29 exact one-/two-direction profiles have a
+non-undetermined `b>=6`.
+
+For positive slack put
+
+\[
+\delta(n)=2\left\{\binom n2-\lfloor n/2\rfloor\right\}.
+\]
+
+Deleting at most `slack/4` points repairs the boundary to an arc. Slack
+four repairs to a conic-contained 15-arc; the deleted off-conic point has
+at least four retained conic secants, forcing slack at least sixteen. At
+slack eight or twelve, every profile has two undetermined directions.
+Adjoining them after repair gives an arc of size at least sixteen or
+fifteen and hence a conic. If `j` deleted boundary points lie off it,
+retained-secant counting and `delta(2+r)>=4r` give
+
+\[
+\operatorname{slack}(S)\ge4j(5-j).
+\]
+
+For `j=1,2,3` this is `16,24,24`, contradicting slack eight or twelve.
+Thus `54+37+25+13=129` profiles are excluded. This is a strict reduction,
+not closure of the endpoint.
+
+External input: G. Faina, S. Marcugini, A. Milani, and F. Pambianco,
+*The spectrum of values k for complete k-arcs in PG(2,q) for q<=23*,
+Ars Combinatoria **47** (1997), 3--11; independently tabulated in H.
+Sticker's complete-arc classification thesis.
+
+Evidence: `src/e1_gmin_m4_prop15689.py`,
+`evidence/e1_gmin_m4_prop15689.json`, and `tests/test_prop15689.py`.
+
+## Proposition 15.690 — exact dilation energy and its method barrier
+
+Let `H=(F_q^*)^2`, `K=H/{±1}`, and let `S_K` be the full-Max+ dilation
+energy in the cold strategy note. Exact square-torus character orthogonality
+and the affine autocorrelation identity give
+
+\[
+\bar L=\frac{q(q-1)(q+5)}{16},\qquad
+S_K=\frac{q-1}{2}\frac Vn
+=12(q-1)\frac{\|\delta\|^2}{n}.                 \tag{15.690.1}
+\]
+
+Consequently
+
+\[
+S_K\le q-1\quad\Longleftrightarrow\quad
+V\le2n\quad\Longleftrightarrow\quad
+\|\delta\|^2\le n/12.                           \tag{15.690.2}
+\]
+
+Thus the dilation inequality is exactly strong R1 in new coordinates, not
+an auxiliary estimate implied by representation theory. Moreover,
+positivity, equivariance, trace, fixed norms, Bochner positivity, and
+additive autocorrelation do not imply it. Explicit abstract invariant
+spectra and explicit PSD autocorrelations satisfy those relaxations while
+violating (15.690.2), the latter by a factor `Theta(q^2)`. These are not
+actual full-Max+ counterexamples. Any successful proof must use the Boolean
+rank-one identity and exact cancellation among all Max+ orbit types.
+
+Evidence: `evidence/NOTE_2026-08-29_dilation_energy_normalization_and_no_go.md`.
+
+## Proposition 15.691 — the c=2 signed-Eulerian target is false
+
+Let `N=binom(n,2)` and
+
+\[
+Y_a(\beta)=\mathbb E_x\cosh(\beta Q_a(x))
+=(\cosh\beta)^N P_a(\tanh\beta).
+\]
+
+For `0<theta<1`, averaging over independent edge signs gives
+
+\[
+\mathbb E_aY_a(\beta)^\theta
+\le2^{n(1-\theta)+1}\cosh(\theta\beta)^N.
+\]
+
+Hence some deterministic signing satisfies, for `beta=c/sqrt(n)`,
+
+\[
+\log P_a(\tanh(c/\sqrt n))
+\le-\left(\frac c2-\sqrt{\log2}\right)^2n+o(n). \tag{15.691.1}
+\]
+
+At `c=2`, this disproves the proposed uniform lower bound `log P_a>=-o(n)`
+by a linear margin. The corrected sufficient target is
+
+\[
+\inf_a\log P_a(\tanh(c/\sqrt n))
+\ge\left(\frac c2-\frac{c^2}{4}\right)n-o(n).    \tag{15.691.2}
+\]
+
+The fractional-moment construction rules out (15.691.2) for
+`c<2.0843108...`; the clean surviving choice is
+
+\[
+\inf_a\log P_a(\tanh(3/\sqrt n))\ge-3n/4-o(n).  \tag{15.691.3}
+\]
+
+No top-level gate is changed.
+
+Evidence: `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md`.

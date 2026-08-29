@@ -9,7 +9,7 @@ and the next multi-agent pass has three bounded targets
 For a signing \(a\) of the edges of \(K_n\),
 
 \[
-Q_a(x)=\sum_{i<j}a_{ij}x_ix_j,qquad
+Q_a(x)=\sum_{i<j}a_{ij}x_ix_j,\qquad
 m_n=\min_a\|Q_a\|_{L^\infty(\{\pm1\}^n)}.
 \]
 
@@ -69,20 +69,37 @@ Then exactly
 =(\cosh\beta)^{\binom n2}P_a(\tanh\beta).
 \]
 
-At the critical temperature \(\beta=2/\sqrt n\), the single estimate
+The initially proposed critical-temperature estimate
 
 \[
 \inf_a\log P_a(\tanh(2/\sqrt n))\ge-o(n)
 \tag{3}
 \]
 
-would prove \(m_n\ge(1/2-o(1))n^{3/2}\). This is the cleanest global form of
-the missing cancellation. Ordinary Delsarte support bounds and fixed
-\(L^q\)-moment norms provably lose the target scale because they discard the
-multiplicative signs among Eulerian shells.
+would prove \(m_n\ge(1/2-o(1))n^{3/2}\), but it is false. For every
+\(0<\theta<1\), a fractional-moment argument produces a deterministic
+signing with
+\[
+\log P_a(\tanh(c/\sqrt n))
+\le-\left(\frac c2-\sqrt{\log2}\right)^2n+o(n).
+\]
+At \(c=2\) this is a negative linear upper bound, contradicting (3).
+
+The corrected fixed-\(c\) sufficient target is
+\[
+\inf_a\log P_a(\tanh(c/\sqrt n))
+\ge\left(\frac c2-\frac{c^2}{4}\right)n-o(n).
+\tag{3'}
+\]
+The fractional-moment obstruction rules this out for
+\(c<\log2/(\sqrt{\log2}-1/2)=2.0843108\ldots\). The clean surviving choice
+is \(c=3\):
+\[
+\inf_a\log P_a(\tanh(3/\sqrt n))\ge-\frac34n-o(n).
+\]
 
 So the likely final solution is not a circle or a finite census. Its shape is
-either a global signed free-energy inequality such as (3), or a rigidity
+either a global signed free-energy inequality such as (3'), or a rigidity
 theorem saying that the only signings able to suppress that free energy are
 asymptotically conference-like in the relevant Boolean sense.
 
@@ -129,16 +146,18 @@ uses global/cardinality minimality. It survives the local no-go theorem.
 
 ### One character-energy lemma now controls two fronts
 
-Let \(q=p^2\), \(K=(\mathbb F_q^\times)^2/\{\pm1\}\), and let \(L(a)\) be
-the full-Max+ dilation correlation. After auditing the split-torus class
-sizes, the centered character energy is exactly
+Let \(q=p^2\), \(H=(\mathbb F_q^\times)^2\),
+\(K=H/\{\pm1\}\), and let \(L(a)\) be the full-Max+ dilation correlation.
+After auditing the split-torus class sizes, the centered character energy is
+exactly
 
 \[
 \frac{24\|\delta\|^2}{n}
-=\frac1{q-1}\sum_{t\in T\setminus\{1\}}|\gamma(t)|^2,
+=\frac1{q-1}\sum_{t\in H}|\gamma(t)|^2,
 \]
 
-with \(\gamma(-1)=0\), and the unresolved estimate is
+with \(\gamma(1)=\gamma(-1)=0\). Here
+\(\bar L=q(q-1)(q+5)/16\), and the unresolved estimate is
 
 \[
 \sum_{a\in K\setminus\{1\}}
@@ -147,11 +166,17 @@ with \(\gamma(-1)=0\), and the unresolved estimate is
 \right]^2\le q-1.                                  \tag{5}
 \]
 
-An eventual proof of (5) gives the strong principal R1 bound and closes the
-Type-I multi-level unit through Proposition 15.595. It still leaves global
-QVAR and residual (ii), but it attacks two live bottlenecks with one scalar
-energy theorem. Pointwise \(|\gamma|\le2\) is false at \(p=5,7\); (5), not
-that stronger false statement, is the correct target.
+If \(S_K\) denotes the left side, then exactly
+\[
+S_K=12(q-1)\frac{\|\delta\|^2}{n}.
+\]
+Thus (5) is the strong R1 target \(\|\delta\|^2\le n/12\) itself in
+dilation coordinates, not a new downstream lemma. Representation theory,
+positivity, equivariance, trace, fixed norms, and additive-autocorrelation
+PSD do not imply it: explicit abstract spectra and PSD autocorrelations
+violate the bound. A proof must use the Boolean rank-one identity
+\(B_y+2P_+=yy^\top\) and the exact uniform Max+ orbit mixture. Pointwise
+\(|\gamma|\le2\) is also false at \(p=5,7\).
 
 ### The residual front just shortened
 
@@ -162,16 +187,19 @@ Proposition 15.688 proves the sharp all-prime lift bound
 \]
 
 for every nonzero nonnegative integral quadratic on the middle slice. It
-deletes every positive-residue row at the live \(p=19,s=16\) endpoint. One
-row remains:
+deletes every positive-residue row at the live \(p=19,s=16\) endpoint. The
+deficit-minimizing pair is
 
 \[
 5[b=0]+5[b=16],\qquad9[b=2]+[b=16],qquad
-\text{pair slack }34.                              \tag{6}
+\text{putative pair slack }34.                     \tag{6}
 \]
 
-Thus the next residual task at \(p=19\) is one finite incidence lemma, not a
-new list of residue rows.
+The pair (6) is impossible modulo four, but it is not the complete row.
+Exact completion leaves 143 phase-labelled residue-zero profiles.
+Proposition 15.689 excludes all 129 profiles of slack at most twelve,
+leaving fourteen with histogram
+\(\{16:7,20:4,24:1,28:1,32:1\}\).
 
 ## 5. The bounded Ultra attack
 
@@ -181,9 +209,9 @@ allowed to widen its target.
 1. **Character team:** prove or decisively obstruct the eventual dilation
    energy inequality (5). This is the highest leverage target because it
    joins principal R1 and Type I.
-2. **Residual team:** attack only the single \(p=19\) incidence row (6), then
-   stop. If it closes, move to the existing \(p=17\) row; do not generate
-   later shells.
+2. **Residual front:** attack only the fourteen \(p=19\) profiles left by
+   15.689, then stop. If they close, move to the existing \(p=17\) row; do
+   not generate later shells.
 3. **Global team:** attack either the all-subsets hierarchy (4) or the
    signed-Eulerian free-energy inequality (3), with the acceptance condition
    being the actual asymptotic deficit (1), not exact gap two.

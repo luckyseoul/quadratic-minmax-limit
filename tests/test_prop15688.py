@@ -2,6 +2,7 @@ from fractions import Fraction
 
 from e1_gmin_m4_prop15688 import (
     p19_second_boundary_reduction,
+    p19_residue_zero_profiles,
     sharp_integral_quadratic_lift_floor,
     theorem_sharp_lift_and_p19,
 )
@@ -37,11 +38,43 @@ def test_p19_positive_residues_are_removed_and_zero_remains():
     ]
     assert all(r["therefore_b_zero"] for r in row["positive_residue_rows"])
     assert all(r["excluded"] for r in row["positive_residue_rows"])
-    assert row["residue_zero_profile"]["phase_zero_profile"] == {0: 5, 16: 5}
-    assert row["residue_zero_profile"]["phase_one_profile"] == {2: 9, 16: 1}
-    assert row["residue_zero_profile"]["pair_slack"] == 34
+    assert row["residue_zero_minimum_row"]["phase_zero_profile"] == {0: 5, 16: 5}
+    assert row["residue_zero_minimum_row"]["phase_one_profile"] == {2: 9, 16: 1}
+    assert row["residue_zero_minimum_pair_slack"] == 34
+    assert row["residue_zero_minimum_rejected_modulo_four"] is True
+    census = row["residue_zero_exact_census"]
+    assert census["phase_labelled_profile_count"] == 143
+    assert census["global_shape_count"] == 75
+    assert census["pair_slack_histogram"] == {
+        0: 54,
+        4: 37,
+        8: 25,
+        12: 13,
+        16: 7,
+        20: 4,
+        24: 1,
+        28: 1,
+        32: 1,
+    }
     assert row["p19_second_all_finite_endpoint_closed"] is False
     assert row["top_level_gates_changed"] is False
+
+
+def test_p19_residue_zero_profile_census_is_complete_and_structured():
+    census = p19_residue_zero_profiles()
+    assert census["phase_zero_row_count"] == 60
+    assert census["phase_one_row_count"] == 9
+    assert census["undetermined_direction_histogram_by_slack"][0] == {
+        1: 2,
+        2: 27,
+        3: 25,
+    }
+    assert census["undetermined_direction_histogram_by_slack"][12] == {
+        2: 1,
+        3: 6,
+        4: 6,
+    }
+    assert all(int(row["pair_slack"]) % 4 == 0 for row in census["profiles"])
 
 
 def test_prop15688_does_not_soft_close_any_top_level_gate():

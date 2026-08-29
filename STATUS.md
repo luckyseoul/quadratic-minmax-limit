@@ -6,18 +6,28 @@ is only `Phi(C_p)-m_{p^2+1}=o(p^3)` on a ratio-dense Paley tail
 random-plus-edge-descent construction kills local/product Paley stability:
 correct-scale edge-local minima can remain `Theta(n^2)` from the signed
 Paley orbit, and the product-frame second moments are signing-independent.
-The surviving replacements are closest-global all-subsets witnesses, a
-full-Max+ dilation-energy lemma, and the signed even-Eulerian free-energy
-bound. See `evidence/STRATEGY_2026-08-29_COLD_REVIEW.md`.
+The surviving replacements are closest-global all-subsets witnesses, the
+full-Max+ dilation-energy form of strong R1, and a signed even-Eulerian
+free-energy bound above the fractional-moment barrier. The original `c=2`
+free-energy target is false by a linear-margin fractional-moment
+construction; `c=3` remains viable. Character orthogonality normalizes the
+dilation energy exactly but cannot upper-bound it, and PSD/autocorrelation
+surrogates admit explicit violations. See
+`evidence/STRATEGY_2026-08-29_COLD_REVIEW.md`.
 
-**15.688 PROVED the sharp integral quadratic-lift floor and reduced the live
-`p=19,s=16` endpoint to one residue-zero row, not residual (ii)**:
+**15.688--15.689 PROVED the sharp integral quadratic-lift floor, completed
+the residue-zero census, and reduced the live `p=19,s=16` endpoint to 14
+high-slack profiles, not residual (ii)**:
 paired-cube quarter-integrality separates `H=1` from `H>=2`; combining the
 latter branch with the exact 15.642 stabilizer weights gives
 `4p E[B] >= p-3`, sharply attained by `(1-x_i)(1-x_j)`. At `p=19`, this
-excludes phase-zero residues `2,3,4,6`. Only
-`5[b=0]+5[b=16]` paired with `9[b=2]+1[b=16]` remains, with pair slack 34.
-The endpoint and all top-level gates remain OPEN.
+excludes phase-zero residues `2,3,4,6`. The minimum residue-zero profile
+pair has impossible slack 34 but is not the complete row. Exact completion
+leaves 143 phase-labelled profiles. The `PG(2,19)` complete-arc spectrum,
+repair, and retained-conic-secant bounds exclude all 129 profiles of slack
+at most twelve. Exactly 14 remain with histogram
+`{16:7,20:4,24:1,28:1,32:1}`. The endpoint and all top-level gates remain
+OPEN.
 
 **15.687 PROVED all 68 pair-slack-20 `p=23,s=20` profiles are
 impossible, not residual (ii)**: their undetermined-direction counts are

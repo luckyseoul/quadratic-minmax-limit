@@ -18,17 +18,22 @@ least ``p-1`` for ``p=1 mod 4``.  Hence, sharply,
 
 The Boolean quadratic ``(1-x_i)(1-x_j)`` attains equality.
 
-At the live p=19 second all-finite boundary, exact row arithmetic leaves
+At the live p=19 second all-finite boundary, minimum row arithmetic leaves
 phase-zero residues ``0,2,3,4,6`` paired with the unique phase-one residue
 9.  Every positive phase-zero residue forces a quotient-zero, b=0
 direction with scaled lift mass in ``{4,6,8,12}``, all below the new floor
-16.  Only the residue-zero row remains; the endpoint and top-level gates
-stay open.
+16.  In residue zero the minimum profiles have inadmissible pair slack 34,
+but they are not the whole exact row: completion-bounded enumeration and
+the slack congruence leave 143 phase-labelled profiles (75 global shapes),
+with slack histogram ``{0:54,4:37,8:25,12:13,16:7,20:4,24:1,28:1,32:1}``.
+The endpoint and top-level gates therefore stay open.
 """
 from __future__ import annotations
 
 import json
+from collections import Counter
 from fractions import Fraction
+from functools import lru_cache
 from pathlib import Path
 
 from e1_gmin_m4_prop15669 import full_symbolic_floor
@@ -37,6 +42,141 @@ from e1_gmin_m4_prop15681 import exact_type_rows, second_even_boundary
 
 ROOT = Path(__file__).resolve().parents[1]
 P = 19
+M = 10
+S = 16
+PERIOD = 20
+PAIR_DEFICIT_BUDGET = S * (S - 1)
+
+
+def _histogram(profile: tuple[int, ...]) -> dict[int, int]:
+    return dict(sorted(Counter(profile).items()))
+
+
+@lru_cache(maxsize=None)
+def _profile_rows(
+    phase: int, u: int, deficit_cap: int
+) -> tuple[tuple[int, tuple[int, ...]], ...]:
+    """Enumerate every exact p=19 profile within a deficit cap."""
+    if phase not in (0, 1) or not 0 <= u < M:
+        raise ValueError("phase must be 0/1 and 0<=u<10")
+    target = M - u
+    options: list[tuple[int, int, int]] = []
+    for b in range(0, S + 1, 2):
+        floor_value = full_symbolic_floor(P, b, phase)
+        for quotient in range(target + 1):
+            excess = 2 * u + PERIOD * quotient - floor_value
+            if excess >= 0 and excess != 2:
+                options.append((quotient, S - b, b))
+
+    infinity = deficit_cap + S * M + 1
+    completion = [[infinity] * (target + 1) for _ in range(M + 1)]
+    completion[0][0] = 0
+    for count in range(1, M + 1):
+        for quotient_sum in range(target + 1):
+            completion[count][quotient_sum] = min(
+                (
+                    added + completion[count - 1][quotient_sum - quotient]
+                    for quotient, added, _b in options
+                    if quotient <= quotient_sum
+                ),
+                default=infinity,
+            )
+
+    states: set[tuple[int, int, tuple[int, ...]]] = {(0, 0, ())}
+    for count in range(M):
+        next_states: set[tuple[int, int, tuple[int, ...]]] = set()
+        for used, deficit, profile in states:
+            for quotient, added, b in options:
+                new_used = used + quotient
+                new_deficit = deficit + added
+                remaining_count = M - count - 1
+                remaining_sum = target - new_used
+                if (
+                    new_used <= target
+                    and new_deficit <= deficit_cap
+                    and new_deficit
+                    + completion[remaining_count][remaining_sum]
+                    <= deficit_cap
+                ):
+                    next_states.add(
+                        (new_used, new_deficit, tuple(sorted(profile + (b,))))
+                    )
+        states = next_states
+    return tuple(
+        sorted(
+            (deficit, profile)
+            for used, deficit, profile in states
+            if used == target
+        )
+    )
+
+
+@lru_cache(maxsize=1)
+def p19_residue_zero_profiles() -> dict[str, object]:
+    """Complete arithmetic census after pair-slack divisibility."""
+    phase_zero = _profile_rows(0, 0, PAIR_DEFICIT_BUDGET - 126)
+    phase_one = _profile_rows(1, 9, PAIR_DEFICIT_BUDGET - 80)
+    candidates = []
+    for deficit_zero, profile_zero in phase_zero:
+        for deficit_one, profile_one in phase_one:
+            slack = PAIR_DEFICIT_BUDGET - deficit_zero - deficit_one
+            if slack < 0 or slack % 4:
+                continue
+            global_profile = Counter(profile_zero)
+            global_profile.update(profile_one)
+            candidates.append(
+                {
+                    "phase_profiles_b": {
+                        "0": _histogram(profile_zero),
+                        "1": _histogram(profile_one),
+                    },
+                    "phase_deficits": {
+                        "0": deficit_zero,
+                        "1": deficit_one,
+                    },
+                    "pair_slack": slack,
+                    "global_b_profile": dict(sorted(global_profile.items())),
+                    "undetermined_directions": global_profile[S],
+                    "arc": slack == 0,
+                }
+            )
+
+    slack_histogram = dict(sorted(Counter(row["pair_slack"] for row in candidates).items()))
+    undetermined_by_slack: dict[int, dict[int, int]] = {}
+    for slack in slack_histogram:
+        undetermined_by_slack[slack] = dict(
+            sorted(
+                Counter(
+                    int(row["undetermined_directions"])
+                    for row in candidates
+                    if int(row["pair_slack"]) == slack
+                ).items()
+            )
+        )
+    global_shapes = {
+        (int(row["pair_slack"]), tuple(row["global_b_profile"].items()))
+        for row in candidates
+    }
+    expected_slack = {0: 54, 4: 37, 8: 25, 12: 13, 16: 7, 20: 4, 24: 1, 28: 1, 32: 1}
+    if len(phase_zero) != 60 or len(phase_one) != 9:
+        raise ArithmeticError("p=19 exact profile row counts changed")
+    if len(candidates) != 143 or slack_histogram != expected_slack:
+        raise ArithmeticError("p=19 residue-zero census changed")
+    if len(global_shapes) != 75:
+        raise ArithmeticError("p=19 global shape count changed")
+    return {
+        "p": P,
+        "boundary_size": S,
+        "pair_deficit_budget": PAIR_DEFICIT_BUDGET,
+        "phase_zero_row_count": len(phase_zero),
+        "phase_one_row_count": len(phase_one),
+        "phase_labelled_profile_count": len(candidates),
+        "global_shape_count": len(global_shapes),
+        "pair_slack_histogram": slack_histogram,
+        "undetermined_direction_histogram_by_slack": undetermined_by_slack,
+        "profiles": candidates,
+        "proved": True,
+    }
 
 
 def sharp_integral_quadratic_lift_floor(p: int) -> dict[str, object]:
@@ -169,11 +309,12 @@ def p19_second_boundary_reduction() -> dict[str, object]:
             }
         )
 
-    residue_zero = [row for row in pair_survivors if int(row["u0"]) == 0]
-    if len(residue_zero) != 1:
-        raise ArithmeticError("p=19 residue-zero remainder changed")
+    residue_zero_minimum = [row for row in pair_survivors if int(row["u0"]) == 0]
+    if len(residue_zero_minimum) != 1:
+        raise ArithmeticError("p=19 residue-zero minimum changed")
     if not all(bool(row["excluded"]) for row in positive_rows):
         raise ArithmeticError("a positive p=19 residue survived")
+    census = p19_residue_zero_profiles()
 
     return {
         "proposition": "15.688",
@@ -183,8 +324,12 @@ def p19_second_boundary_reduction() -> dict[str, object]:
         "pair_survivors_before_new_floor": pair_survivors,
         "positive_residue_rows": positive_rows,
         "positive_residues_all_excluded": True,
-        "residue_zero_rows": residue_zero,
-        "residue_zero_profile": residue_zero[0],
+        "residue_zero_minimum_row": residue_zero_minimum[0],
+        "residue_zero_minimum_pair_slack": residue_zero_minimum[0]["pair_slack"],
+        "residue_zero_minimum_rejected_modulo_four": (
+            int(residue_zero_minimum[0]["pair_slack"]) % 4 != 0
+        ),
+        "residue_zero_exact_census": census,
         "p19_second_all_finite_endpoint_closed": False,
         "remaining_same_boundary_primes": [17, 19, 23],
         "top_level_gates_changed": False,
@@ -231,11 +376,11 @@ def main() -> None:
     target.write_text(
         json.dumps(_jsonable(theorem), indent=2, sort_keys=True) + "\n"
     )
-    remainder = theorem["p19_reduction"]["residue_zero_profile"]
+    remainder = theorem["p19_reduction"]["residue_zero_exact_census"]
     print(
         "Prop. 15.688: sharp lift floor 4p E[B]>=p-3; "
         "p=19 positive residues excluded; "
-        f"remaining row u0={remainder['u0']},u1={remainder['u1']}"
+        f"exact residue-zero profiles={remainder['phase_labelled_profile_count']}"
     )
     print(f"wrote {target}")
 

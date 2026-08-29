@@ -102,7 +102,7 @@ The exact quotient/floor recurrence of Proposition 15.681 leaves one
 phase-one row
 
 \[
-u_1=9,qquad D_1=126,qquad 9[b=2]+[b=16],
+u_1=9,\qquad D_1=126,\qquad 9[b=2]+[b=16],
 \]
 
 and the pair-surviving phase-zero residues
@@ -123,30 +123,41 @@ The least positive even fibre floor is \(20\), so that direction has
 nonnegative integer-valued quadratic. But (1) requires
 
 \[
-4p\mathbb E Bge p-3=16,
+4p\mathbb E B\ge p-3=16,
 \]
 
 excluding all four positive residues.
 
-The sole arithmetic survivor is therefore
+The common residue survivor is therefore `u0=0,u1=9`. Its
+deficit-minimizing profile pair is
 
 \[
 \boxed{
-u_0=0,quad u_1=9,quad
-5[b=0]+5[b=16],quad 9[b=2]+[b=16].}
+u_0=0,\quad u_1=9,\quad
+5[b=0]+5[b=16],\quad 9[b=2]+[b=16].}
 \tag{7}
 \]
 
-Its deficits are \(80\) and \(126\), leaving pair slack \(34\). The
-quadratic-lift theorem does not exclude (7), so the \(p=19\) endpoint and
-all top-level gates remain open.
+Its deficits are \(80\) and \(126\), giving putative pair slack \(34\).
+The global line-incidence slack is divisible by four, so this minimum pair
+is impossible. It is not the complete row: exact completion-bounded
+enumeration gives 60 phase-zero profiles, nine phase-one profiles, and 143
+compatible phase-labelled pairs after slack divisibility. Their 75 global
+shapes have slack histogram
+
+```text
+0:54, 4:37, 8:25, 12:13, 16:7, 20:4, 24:1, 28:1, 32:1.
+```
+
+Thus the sharp lift deletes every positive residue but leaves a 143-profile
+residue-zero finite-geometric problem. Proposition 15.689 subsequently
+excludes the first 129 profiles and leaves fourteen at slack at least 16.
 
 ## 3. Exact next lemma
 
-Close the residue-zero incidence configuration (7): prove that no 16-point
-finite boundary realizes those two directional profiles together with the
-exact type budgets of Proposition 15.632. This one finite-geometric lemma
-would close the entire \(p=19\) second endpoint.
+Close the fourteen profiles left by Proposition 15.689, with slack
+histogram `{16:7,20:4,24:1,28:1,32:1}`. The endpoint remains open until
+those actual high-slack profiles are excluded or one is shown realizable.
 
 ## Reproduction
 

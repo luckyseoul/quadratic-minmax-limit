@@ -1,0 +1,114 @@
+{
+  "boundary_size": 16,
+  "classification": {
+    "complete_arc_sizes": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      20
+    ],
+    "consequence": "every arc of size at least 15 is conic-contained",
+    "external_dependency": true,
+    "independent_full_classification": "H. Sticker, Classification of Arcs in Desarguesian Projective Planes, PhD thesis, Ghent University, Table for PG(2,19)",
+    "no_complete_arc_sizes": [
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "proved_conditional_on_external_classification": true,
+    "source": "G. Faina, S. Marcugini, A. Milani, and F. Pambianco, The spectrum of values k for complete k-arcs in PG(2,q) for q<=23, Ars Combinatoria 47 (1997), 3-11",
+    "unique_size_twenty_arc": "nondegenerate conic"
+  },
+  "excluded_pair_slacks": [
+    0,
+    4,
+    8,
+    12
+  ],
+  "p": 19,
+  "p19_second_all_finite_endpoint_closed": false,
+  "profile_count_after": 14,
+  "profile_count_before": 143,
+  "profile_count_excluded": 129,
+  "profile_ledger": {
+    "excluded_profile_count": 129,
+    "minimum_undetermined_directions": {
+      "8": 2,
+      "12": 2
+    },
+    "profile_counts_by_slack": {
+      "0": 54,
+      "4": 37,
+      "8": 25,
+      "12": 13
+    },
+    "proved": true,
+    "slack_zero_profiles_with_at_least_three_undetermined": 25,
+    "slack_zero_profiles_with_one_or_two_undetermined": 29,
+    "small_t_arc_minimum_high_nonundetermined_b": 10
+  },
+  "proposition": "15.689",
+  "proved_conditional_on_external_classification": true,
+  "remaining_pair_slack_histogram": {
+    "16": 7,
+    "20": 4,
+    "24": 1,
+    "28": 1,
+    "32": 1
+  },
+  "remaining_same_boundary_primes": [
+    17,
+    19,
+    23
+  ],
+  "repair_conic_core_rows": {
+    "4": {
+      "off_conic_points": [
+        1
+      ],
+      "pair_slack_floors": [
+        16
+      ],
+      "repair_deletion_bound": 1,
+      "repaired_arc_minimum_size": 15
+    },
+    "8": {
+      "adjoined_undetermined_infinity_points": 2,
+      "extended_arc_minimum_size": 16,
+      "off_conic_points": [
+        1,
+        2
+      ],
+      "pair_slack_floors": [
+        16,
+        24
+      ],
+      "repair_deletion_bound": 2
+    },
+    "12": {
+      "adjoined_undetermined_infinity_points": 2,
+      "extended_arc_minimum_size": 15,
+      "off_conic_points": [
+        1,
+        2,
+        3
+      ],
+      "pair_slack_floors": [
+        16,
+        24,
+        24
+      ],
+      "repair_deletion_bound": 3
+    }
+  },
+  "retained_secant_inequality": "with two adjoined infinity points and j off-conic boundary points, slack >= 4*j*(5-j)",
+  "slack_zero_exclusion": {
+    "at_least_three_undetermined": "two overlapping 18-arc extensions force one conic through three collinear infinity points",
+    "one_or_two_undetermined": "the containing tangent/secant conic forces every other direction to have b<=4; every exact profile has b>=6"
+  },
+  "top_level_gates_changed": false
+}

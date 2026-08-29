@@ -1,0 +1,21 @@
+{
+  "proposition": "15.691",
+  "adversarial_upper_rate": "-(c/2-sqrt(log 2))^2",
+  "sufficient_lower_rate": "c/2-c^2/4",
+  "c2": {
+    "upper_rate": -0.02803795824454982,
+    "required_rate": 0.0,
+    "old_target_false": true
+  },
+  "barrier_c": 2.0843108388933276,
+  "all_c_below_barrier_excluded": true,
+  "c3": {
+    "upper_rate": -0.4454833470868521,
+    "required_rate": -0.75,
+    "target": "log P_a(tanh(3/sqrt(n))) >= -3n/4-o(n)",
+    "excluded_by_fractional_moment": false
+  },
+  "closes_limit": false,
+  "L_status": "OPEN",
+  "proved": true
+}

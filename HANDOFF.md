@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-29 (cold theorem audit plus 15.688; `p=19,s=16` reduced to one residue-zero row of pair slack 34; no general flag flipped)
+**Date:** 2026-08-29 (cold theorem audit plus 15.688--15.689; `p=19,s=16` reduced to 14 high-slack profiles; no general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -50,7 +50,7 @@ an intermediate count only as the unique high direction of its type, which
 leaves the same four arithmetic rows. The next infinity-present shell has
 `p` finite points.
 
-## 15.688 — sharp lift floor; p=19 has one row left
+## 15.688--15.689 — sharp lift floor; p=19 has 14 profiles left
 
 `src/e1_gmin_m4_prop15688.py` and
 `evidence/NOTE_2026-08-29_sharp_integral_lift_p19.md`. For every odd
@@ -67,17 +67,27 @@ mean is at least `1/2`. Combining that branch with the exact 15.642
 stabilizer coefficient leaves the global minimum at `H=1`. The Boolean
 quadratic `(1-x_i)(1-x_j)` attains equality.
 
-At `p=19,s=16`, exact pair arithmetic had phase-zero residues
+At `p=19,s=16`, minimum pair arithmetic has phase-zero residues
 `0,2,3,4,6` and phase-one residue `9`. The four positive rows force scaled
 lift masses `4,6,8,12`, below the new floor 16, so all are impossible. The
-sole survivor is
+deficit-minimizing residue-zero pair is
 
 ```text
-5[b=0]+5[b=16],  9[b=2]+1[b=16],  pair slack 34.
+5[b=0]+5[b=16],  9[b=2]+1[b=16],  putative pair slack 34.
 ```
 
-Closing that one finite incidence row closes the `p=19` endpoint. It does
-not by itself close residual (ii).
+Slack 34 is impossible modulo four, but that minimum pair is not the full
+row. Completion-bounded enumeration gives 143 phase-labelled profiles and
+75 global shapes. Proposition 15.689 uses the complete-arc spectrum of
+`PG(2,19)`, repair, and retained-conic-secant bounds to exclude all 129
+profiles of slack at most twelve. Exactly fourteen remain:
+
+```text
+{16:7, 20:4, 24:1, 28:1, 32:1}.
+```
+
+Closing those fourteen profiles closes the `p=19` endpoint. It does not by
+itself close residual (ii).
 
 ## 2026-08-29 cold attack map
 
@@ -85,11 +95,14 @@ The theorem only needs an `o(p^3)` Paley deficit on a ratio-dense tail; the
 exact gap-2 architecture is stronger. Local/product Hamming stability has a
 general counter-mechanism and must not be retried. The bounded next pass is:
 
-1. full-Max+ dilation energy (one lemma attacks principal R1 and Type I);
-2. the single `p=19` incidence row above;
-3. closest-global all-subsets or signed-Eulerian free energy for the direct
-   asymptotic route;
-4. a red-team uniform-gap search in non-Paley conference families.
+1. full-Max+ dilation energy, now known to be exactly strong R1; any proof
+   must use Boolean rank-one/orbit-mixture structure, not character or PSD
+   positivity alone;
+2. the fourteen `p=19` high-slack profiles above;
+3. closest-global all-subsets or the corrected `c=3` signed-Eulerian target
+   for the direct asymptotic route (`c=2` is rigorously false);
+4. Mathon's ratio-dense conference family, where the genuine missing theorem
+   is switched-row variance `Omega(r^2)`, not irrationality or parity.
 
 Full statement: `evidence/STRATEGY_2026-08-29_COLD_REVIEW.md`.
 

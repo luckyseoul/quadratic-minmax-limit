@@ -1,0 +1,35 @@
+{
+  "proposition": "15.690",
+  "exact_identity": "S_K=(q-1)V/(2n)=12(q-1)||delta||^2/n",
+  "target_equivalence": "S_K<=q-1 iff V<=2n iff ||delta||^2<=n/12",
+  "sample_threshold": {
+    "q": 25,
+    "lambda_bar": "48/5",
+    "L_bar": "1125",
+    "V_over_n": "2",
+    "S_K": "24",
+    "S_K_formula": "12(q-1)||delta||^2/n",
+    "strong_R1_equivalence": true
+  },
+  "PSD_autocorrelation_obstruction": {
+    "p": 7,
+    "q": 49,
+    "N_values": {
+      "0": 28,
+      "quartic_residues": 21,
+      "other_nonzero": 14
+    },
+    "equation_5_energy": "1105920/11",
+    "target": 48,
+    "violation_factor": "23040/11",
+    "has_nonnegative_additive_Fourier_transform": true,
+    "is_actual_uniform_full_Max_plus_ensemble": false
+  },
+  "character_PSD_only_route_sufficient": false,
+  "actual_R1_counterexample": false,
+  "required_extra_input": "Boolean rank-one identity and exact uniform Max+ orbit mixture",
+  "closes_R1": false,
+  "closes_type_I": false,
+  "L_status": "OPEN",
+  "proved": true
+}

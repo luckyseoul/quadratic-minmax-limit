@@ -238,13 +238,36 @@ still needs a Boolean-radius or regularizability theorem.
 Mathon's construction supplies symmetric conference matrices of order
 \(5r^2+1\) for prime powers \(r\equiv3\pmod4\). Their eigenvalues
 \(\pm r\sqrt5\) are irrational, so they have no Boolean eigenvector and hence
-\(\rho<1\) at each order. Irrationality gives no uniform gap. If one could
-prove \(\rho\le1-\eta\) uniformly on a ratio-dense subfamily, that would be a
-direct permanent-gap construction and would refute \(L=1/2\).
+\(\rho<1\) at each order. Irrationality gives no uniform gap. More sharply,
+Momihara--Suda's maximum-excess bound gives, for odd
+\(k\le r\sqrt5<k+2\),
+\[
+\rho(C_r)\le
+\frac{k^2+2k+5r^2}{2(k+1)r\sqrt5},
+\qquad
+1-U_r=\frac{1-(k+1-r\sqrt5)^2}{2(k+1)r\sqrt5}.
+\]
+This upper bound itself approaches one, sometimes at the
+\(\Theta(r^{-3})=\Theta(n^{-3/2})\) scale along the Pell/Fibonacci
+approximants. Thus integrality, parity, irrationality, nonregularizability,
+and the general excess theorem cannot produce a fixed gap.
 
-Primary source: Rudolf Mathon, [*Symmetric Conference Matrices of Order
+Mathon's six-dimensional block quotient instead gives the lower bound
+\[
+\rho(C_r)\ge
+\frac{r(8r+2)}{(5r^2+1)\sqrt5}
+\longrightarrow\frac8{5\sqrt5}.
+\]
+The missing quantitative theorem is uniform anti-flatness of both full
+conference eigenspaces, equivalently switched-row variance
+\(\Omega(r^2)\) for every Boolean switching. If one could prove
+\(\rho\le1-\eta\) uniformly on the ratio-dense prime subfamily, that would
+be a direct permanent-gap construction and would refute \(L=1/2\).
+
+Primary sources: Rudolf Mathon, [*Symmetric Conference Matrices of Order
 \(pq^2+1\)*](https://doi.org/10.4153/CJM-1978-029-1), Canadian Journal of
-Mathematics 30 (1978), 321--331.
+Mathematics 30 (1978), 321--331; and Momihara--Suda, Proposition 1.1,
+arXiv:1611.01305.
 
 ## 5. Exact cut-code/free-energy bridge
 
@@ -279,7 +302,7 @@ high-temperature identity
 \]
 
 Since \(\mathbb E\cosh(\beta Q_a)\le e^{\beta\Phi(a)}\), (8) shows that the
-following single uniform estimate would settle the lower bound:
+following initially proposed estimate would settle the lower bound:
 
 \[
 \boxed{
@@ -287,13 +310,52 @@ following single uniform estimate would settle the lower bound:
 \tag{9}
 \]
 
-Indeed, with \(\beta=2/\sqrt n\),
+It is, however, false. For \(0<\theta<1\), concavity and
+\(\cosh(u)^\theta\le e^{\theta u}+e^{-\theta u}\) give
+\[
+\mathbb E_a\!\left[\mathbb E_x\cosh(\beta Q_a(x))\right]^\theta
+\le2^{n(1-\theta)+1}\cosh(\theta\beta)^N.
+\]
+Hence some deterministic signing satisfies
+\[
+\log P_a(\tanh\beta)
+\le\frac{[n(1-\theta)+1]\log2}{\theta}
++\frac N\theta\log\cosh(\theta\beta)-N\log\cosh\beta.
+\tag{10}
+\]
+For \(\beta=c/\sqrt n\), optimizing at
+\(\theta=2\sqrt{\log2}/c\) yields
+\[
+\inf_a\log P_a(\tanh(c/\sqrt n))
+\le-\left(\frac c2-\sqrt{\log2}\right)^2n+o(n).
+\tag{11}
+\]
+At \(c=2\), (11) contradicts (9) by a linear margin
+\((1-\sqrt{\log2})^2n\).
+
+The corrected fixed-\(c\) sufficient target is
+\[
+\boxed{
+\inf_a\log P_a(\tanh(c/\sqrt n))
+\ge\left(\frac c2-\frac{c^2}{4}\right)n-o(n).}
+\tag{12}
+\]
+Indeed,
 
 \[
 \Phi(a)\ge
-\frac{N\log\cosh(2/\sqrt n)+
-\log P_a(\tanh(2/\sqrt n))}{2/\sqrt n}
+\frac{N\log\cosh(c/\sqrt n)+
+\log P_a(\tanh(c/\sqrt n))}{c/\sqrt n}
 =\left(\frac12-o(1)\right)n^{3/2}.
+\]
+
+The fractional-moment construction rules out (12) for
+\[
+c<\frac{\log2}{\sqrt{\log2}-1/2}=2.0843108\ldots.
+\]
+The clean surviving target is \(c=3\):
+\[
+\inf_a\log P_a(\tanh(3/\sqrt n))\ge-\frac34n-o(n).
 \]
 
 Classical covering-radius information does not approach this scale. The dual
@@ -303,16 +365,16 @@ moment-norm lower bound see it:
 for each fixed \(q\), degree-two hypercontractivity gives
 \(\|Q_a\|_q=O_q(n)\), whereas the target is order \(n^{3/2}\). A useful
 cut-code attack therefore has to preserve the multiplicative phases among
-many Eulerian shells, exactly as (9) does; termwise absolute values destroy
-the critical cancellation.
+many Eulerian shells, at a temperature above the fractional-moment barrier;
+termwise absolute values destroy the critical cancellation.
 
 ## Consequence for the attack
 
 The old local/product route is closed as a path. The replacement choices are:
 
 1. exploit (6) using the exact global/cardinality-minimal quantifier;
-2. prove the signed-Eulerian free-energy bound (9), possibly through a
-   high-level character/SOS hierarchy;
+2. prove the corrected signed-Eulerian free-energy bound (12), for example
+   at \(c=3\), possibly through a high-level character/SOS hierarchy;
 3. prove an eventual Paley character-transport estimate strong enough for the
    actual \(o(p^3)\) deficit target; or
 4. on the adversarial side, establish a uniform Boolean-radius gap for a

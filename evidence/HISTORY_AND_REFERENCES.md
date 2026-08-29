@@ -1283,12 +1283,14 @@ even-Eulerian high-temperature identity
 =(\cosh\beta)^{\binom n2}P_a(\tanh\beta).
 \]
 
-At \(\beta=2/\sqrt n\), a uniform lower bound
-\(\log P_a\ge-o(n)\) would prove the target constant. Classical Delsarte
-external distance and fixed-\(L^q\) moment norms discard the phase
-consistency needed at this scale. Bryant--Horsley--Pettersson supplies the
-nearby complete-graph cycle-decomposition theorem; it confirms the breadth
-of the Eulerian dual support, not the required signed cancellation.
+The initially proposed \(\beta=2/\sqrt n\) lower bound
+\(\log P_a\ge-o(n)\) would prove the target constant, but a
+fractional-moment construction now disproves it by a linear margin. The
+corrected fixed-\(c\) target is
+\(\log P_a(\tanh(c/\sqrt n))\ge(c/2-c^2/4)n-o(n)\); the construction rules
+out every \(c<2.0843108\ldots\), while \(c=3\) remains a clean viable
+target. Classical Delsarte and fixed-\(L^q\) norms still discard the phase
+consistency needed at this scale.
 
 The conference-class audit corrected another shortcut. Spectral defect zero
 identifies all conference classes, not Paley. Craigen's Lemma 7 proves only
@@ -1297,6 +1299,10 @@ converse. Orders 2, 10, and 26 are regularizable, while order 50 is the first
 unresolved square case found in the classification literature. Separately,
 Mathon's order-\(5r^2+1\) family has irrational conference eigenvalues and
 hence \(\rho<1\) at each order, but no uniform gap is known.
+Momihara--Suda's excess bound can approach one at the
+\(\Theta(n^{-3/2})\) normalized scale, while Mathon's visible quotient only
+gives \(\liminf\rho\ge8/(5\sqrt5)\). The exact missing theorem is
+switched-row variance \(\Omega(r^2)\) for every Boolean switching.
 
 On the live residual front, Proposition 15.688 combines paired-cube
 quarter-integrality with Proposition 15.642's exact stabilizer weights to
@@ -1308,8 +1314,22 @@ prove the sharp theorem
 
 for every nonzero nonnegative integral quadratic on the middle slice. The
 Boolean quadratic \((1-x_i)(1-x_j)\) attains equality. At the \(p=19,s=16\)
-second boundary, this removes every positive residue and leaves one
-residue-zero profile pair of slack 34. The endpoint remains open.
+second boundary, this removes every positive residue. The minimum
+residue-zero pair has impossible slack 34 but is not the full row: exact
+completion leaves 143 profiles. Proposition 15.689 uses the complete-arc
+spectrum and conic-core counting to exclude all 129 profiles of slack at
+most twelve, leaving fourteen at slack 16--32. The endpoint remains open.
+
+The full-Max+ dilation energy was also normalized exactly. If \(S_K\) is
+the square-torus energy in the cold strategy, then
+\[
+S_K=12(q-1)\|\delta\|^2/n.
+\]
+Thus \(S_K\le q-1\) is precisely strong R1, not an auxiliary lemma.
+Representation/character data and additive-autocorrelation PSD do not imply
+it: explicit abstract spectra and PSD autocorrelations violate the target.
+Any proof must use the Boolean rank-one identity and exact cancellation
+among all Max+ orbit types.
 
 The degree-four truncated-moment import of
 Infusino--Kuna--Lebowitz--Speer and Prékopa was also evaluated. It proves
@@ -1399,5 +1419,7 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 60. M. Infusino, T. Kuna, J. L. Lebowitz, and E. R. Speer, *The truncated moment problem on \(\mathbb N_0\)*, J. Math. Anal. Appl. **452** (2017), 443--468, [arXiv:1504.02989](https://arxiv.org/abs/1504.02989) (degree-four contact-measure criterion used to audit quartic parity majorants).
 61. A. Prékopa, *The discrete moment problem and linear programming*, Discrete Appl. Math. **27** (1990), 235--254, [doi:10.1016/0166-218X(90)90068-N](https://doi.org/10.1016/0166-218X(90)90068-N) (finite-support moment LP and endpoint constraints).
 62. D. Bryant, D. Horsley, and W. Pettersson, *Cycle decompositions V: complete graphs into cycles of arbitrary lengths*, Proc. Lond. Math. Soc. **108** (2014), 1153--1192, [arXiv:1204.3709](https://arxiv.org/abs/1204.3709) (prescribed complete-graph cycle decompositions; contextual support for the broad Eulerian dual spectrum).
+63. G. Faina, S. Marcugini, A. Milani, and F. Pambianco, *The spectrum of values k for complete k-arcs in PG(2,q) for q<=23*, Ars Combinatoria **47** (1997), 3--11, [open article](https://combinatorialpress.com/ars-articles/volume-047-ars-articles/the-spectrum-of-values-k-for-complete-k-arcs-in-pg2q-for-q-leq-23/) (complete-arc spectrum of `PG(2,19)` used in 15.689).
+64. K. Momihara and S. Suda, *Conference matrices with maximum excess and two-intersection sets*, [arXiv:1611.01305](https://arxiv.org/abs/1611.01305) (Proposition 1.1 gives the arithmetic maximum-excess bound used to delimit the Mathon fixed-gap route).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).
