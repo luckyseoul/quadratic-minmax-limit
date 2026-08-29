@@ -1541,6 +1541,33 @@ The endpoint and every top-level gate remain open. Targeted literature and
 OEIS searches found no prior statement of the eight outside histograms, the
 index-one vector, or this profile exclusion.
 
+## 7az. Free directions exclude 99 p17 slack-sixteen rows (2026-08-29)
+
+Proposition 15.704 splits the 112 slack-sixteen profiles by undetermined
+directions as `{0:13,1:47,2:47,3:5}`. Repair takes at most four deletions.
+With two directions, their infinity points produce a 14-arc: the complete
+class forces slack at least 32 and the incomplete branch reaches a conic,
+whose positive off-conic slack floor is at least 20. With three directions,
+two overlapping infinity-point pairs must extend to the same conic, which
+cannot contain three collinear infinity points. This excludes 52 rows.
+
+For one direction and repair depth four, the repaired arc plus its infinity
+point is a 13-arc. A complete core would need four outside index-one points,
+but the eight complete classes have counts `0,0,0,0,0,0,2,3`. An incomplete
+core extends either to a conic or to the unique complete 14-arc. In the latter
+case, the 14 possible one-point deletions supply two index-one quadruples and
+26 raw infinity placements with slack histogram `{16:2,28:16,32:8}`. The two
+slack-sixteen placements fail the exact undetermined-direction condition;
+the eight valid placements all have slack 32. Thus all 47 one-direction rows
+also fail.
+
+The exact p17 remainder drops from 753 to 654: two slack-zero profiles,
+thirteen zero-direction slack-sixteen profiles, and 639 profiles of slack at
+least twenty. The endpoint and every top-level gate remain open. Targeted
+literature and OEIS searches found no prior statement of the infinity-
+placement census or this 99-profile exclusion; isolated numerical matches
+are unrelated and are not evidence.
+
 ---
 
 ## 8. What is not in the older literature
