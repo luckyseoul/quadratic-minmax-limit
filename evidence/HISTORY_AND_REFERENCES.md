@@ -1492,6 +1492,28 @@ count sequence; the isolated values 398, 932, and 1330 occur together in
 A137707 but its Secondary Wythoff Array construction has no identified
 connection and is not evidence.
 
+## 7ax. The unique complete p17 14-arc excludes 146 more rows (2026-08-29)
+
+Proposition 15.702 uses Sticker's complete-arc table [48], which has one
+complete 14-arc class in `PG(2,17)`. An explicit representative was checked
+over all 307 projective lines and points. Its line occupancy census is
+`{0:146,1:70,2:91}`, and its outside secant-index census is
+`{2:4,3:4,4:76,5:128,6:75,7:6}`. In particular, the unique class has no
+outside point of secant index one.
+
+Slack-eight equality would require a two-point repair to that complete arc
+with both deleted points of index one, so all remaining 67 slack-eight rows
+are impossible. For slack twelve, one undetermined direction extends the
+three-deletion repaired 13-arc to a 14-arc. If it is incomplete, the conic
+core argument applies; if complete, the undetermined direction ensures the
+three deleted points each retain secant index at least two, forcing slack at
+least 24. This excludes the 79 one-direction rows.
+
+The p17 remainder drops from 932 to 786 exact profiles: two at slack zero,
+33 at slack twelve, and 751 at slack at least sixteen. The endpoint remains
+open. Targeted literature and OEIS searches found no prior statement of the
+secant-index census/profile exclusion.
+
 ---
 
 ## 8. What is not in the older literature
