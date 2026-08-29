@@ -1,5 +1,15 @@
 # Status (2026-08-29)
 
+**15.708 PROVED all 54 pair-slack-twenty-four `p=17,s=16` profiles are
+impossible, not the endpoint**: all 45 `(u_0,u_1)=(0,8)` rows retain rigid
+phase-zero `b=0` and phase-one `b=2` directions; the global-sign identity
+forces `I=68`, `g_0+g_1=16`, but parallel nonnegativity requires
+`g_0>=9,g_1>=8`. The nine `(8,8)` rows instead force `I=4`. Every row retains
+at least two rigid phase-zero `b=16` directions, and summing the exact cells
+incident with the unique even fibre gives `N_j=delta_j-15z_j-I<=-3` for a
+nonnegative edge count. Exactly 507 p17 profiles remain, all of pair slack at
+least 28. The endpoint, residual (ii), R1, Type I, and the limit remain OPEN.
+
 **15.707 PROVED all 78 pair-slack-twenty `p=17,s=16` profiles are
 impossible, not the endpoint**: all 69 `(u_0,u_1)=(0,8)` rows retain at
 least three rigid phase-zero directions with `b=0` or `2`, while phase one

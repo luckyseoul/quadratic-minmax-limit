@@ -1653,6 +1653,36 @@ Targeted GitHub and MathOverflow searches found no prior statement of this
 OEIS search on the full reduction ledger found only isolated numerical
 matches in unrelated constructions; none supplies mathematical evidence.
 
+## 7bd. A unique-even-fibre identity closes p17 slack twenty-four (2026-08-29)
+
+Proposition 15.708 excludes all 54 slack-twenty-four profiles. The 45 rows
+with residue pair `(0,8)` retain rigid phase-zero `b=0` and phase-one `b=2`
+directions. Their global-sign comparison forces `I=68` and gauge sum 16,
+whereas nonnegative parallel counts require the two gauges to sum to at least
+17.
+
+The nine `(8,8)` rows retain rigid phase-zero `b=16` directions. Comparing
+with phase-one `b=2` forces `I=4`, phase-zero gauge one, 64 phase-zero finite
+edges, and one phase-one finite edge. For the unique even fibre `j` of the
+canonical floor `1-x_j`, summing the exact coefficient cells incident with
+`j` gives
+
+```text
+N_j-delta_j = -15z_j-I.
+```
+
+Here `N_j` is a nonnegative phase-zero crossing-edge count, `delta_j<=1`,
+and `z_j>=0`; hence `N_j<=-3`. This closes the block without a solver or a
+new arc classification. The p17 remainder falls from 561 to 507 profiles,
+all of pair slack at least twenty-eight. The endpoint and all top-level gates
+remain open.
+
+Targeted GitHub code and MathOverflow searches for the distinctive
+`17I=-4 (mod 72)`, `N_j-delta_j=-15z_j-I`, and unique-even-fibre Paley
+identities found no prior statement of this exclusion. OEIS searches on the
+reduction counts returned only unrelated isolated numerical matches and are
+not evidence.
+
 ---
 
 ## 8. What is not in the older literature

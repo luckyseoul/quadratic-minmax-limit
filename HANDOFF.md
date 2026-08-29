@@ -1,7 +1,7 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-29 (through 15.707; `p=19,s=16` is closed, and the exact
-`p=17,s=16` remainder is 561 profiles, all of pair slack at least 24; no
+**Date:** 2026-08-29 (through 15.708; `p=19,s=16` is closed, and the exact
+`p=17,s=16` remainder is 507 profiles, all of pair slack at least 28; no
 general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
@@ -30,6 +30,29 @@ for both signs. This is not all of the projective size-eight case: the
 separate infinity-plus-seven profile remains open. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.708 — the entire p17 slack-twenty-four block is excluded
+
+For the 45 `(u_0,u_1)=(0,8)` rows, quotient accounting retains between two
+and six rigid phase-zero `b=0` directions and at least eight rigid phase-one
+`b=2` directions. The global-sign identity forces `I=68` and
+`g_0+g_1=16`, while parallel-count nonnegativity forces `g_0>=9` and
+`g_1>=8`, a contradiction.
+
+The nine `(8,8)` rows retain two or three rigid phase-zero `b=16` directions
+and at least eight rigid phase-one `b=2` directions. Correct canonicalization
+of the `b=16` floor as `1-x_j` forces `I=4`, `g_16=1`, and leaves exactly 64
+phase-zero finite edges and one phase-one finite edge. Summing the rigid cell
+identities incident with the unique even fibre `j` gives
+
+```text
+N_j-delta_j = -15z_j-I,
+```
+
+where `N_j>=0`, `delta_j<=1`, and `z_j>=0`. Hence `N_j<=-3`, impossible.
+All 54 slack-twenty-four profiles are excluded analytically. The live p17
+ledger is 507, all of slack at least 28. No solver or new classification is
+used; the endpoint and all top-level gates remain open.
 
 ## 15.707 — the entire p17 slack-twenty block is excluded
 
