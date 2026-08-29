@@ -1,5 +1,15 @@
 # Status (2026-08-29)
 
+**15.710 PROVED 208 of the 227 remaining `p=17,s=16` profiles are
+impossible, not the endpoint**: every row has nine rigid phase-one `b=16`
+directions. A genuine floor-rigid phase-zero `b=0` anchor excludes 176 rows
+by forcing
+`I=60` and gauge sum 14 while parallel nonnegativity requires at least 15.
+Rigid `b=16` anchors in both phases exclude 32 more by forcing `I=68` and
+gauge sum 16 while nonnegativity requires at least 17. Exactly nineteen
+profiles remain, with residue split `(0,0):5,(7,0):9,(8,0):5`. The
+endpoint, residual (ii), R1, Type I, and the limit remain OPEN.
+
 **15.709 PROVED every remaining `p=17,s=16` profile with `u_1=8` is
 impossible, not the endpoint**: all 280 such rows retain at least eight rigid
 phase-one `b=2` directions. The 66 `(u_0,u_1)=(0,8)` rows retain rigid

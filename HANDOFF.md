@@ -1,8 +1,7 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-29 (through 15.709; `p=19,s=16` is closed, and the exact
-`p=17,s=16` remainder is 227 profiles, all with `u_1=0` and pair slack at
-least 96; no
+**Date:** 2026-08-29 (through 15.710; `p=19,s=16` is closed, and the exact
+`p=17,s=16` remainder is nineteen profiles; no
 general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
@@ -31,6 +30,22 @@ for both signs. This is not all of the projective size-eight case: the
 separate infinity-plus-seven profile remains open. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.710 — complementary global identities leave nineteen p17 profiles
+
+Every one of the 227 rows left by 15.709 has nine rigid phase-one `b=16`
+directions. Of these, 176 retain a genuine floor-rigid phase-zero `b=0`
+direction. Their
+global-sign comparison forces `I=60` and gauge sum 14, but nonnegative
+parallel counts require the two gauges to be at least 8 and 7. Thirty-two
+other
+rows retain rigid phase-zero `b=16`; comparison with phase one forces `I=68`
+and gauge sum 16, but the gauge minima are 9 and 8. All 208 are impossible.
+
+The nineteen survivors have residue split `(0,0):5`, `(7,0):9`, `(8,0):5`
+and slack histogram `{96:3,100:4,104:4,108:3,112:3,116:1,128:1}`. No
+solver or new classification is used. The endpoint and all top-level gates
+remain open.
 
 ## 15.709 — every remaining p17 `u_1=8` profile is excluded
 

@@ -1701,6 +1701,24 @@ the 280-row rigid-anchor sweep. OEIS searches on `507,280,227` and the
 surviving residue counts returned only unrelated isolated matches; they are
 not mathematical evidence.
 
+## 7bf. Complementary phase-one `b=16` identities leave nineteen p17 rows (2026-08-29)
+
+Proposition 15.710 uses the nine rigid phase-one `b=16` directions present in
+every row left by 15.709. For 176 rows, an actual floor-rigid phase-zero
+`b=0` anchor forces
+infinity degree 60 and gauge sum 14, while nonnegative parallel counts force
+gauge sum at least 15. Thirty-two rows have `b=16` anchors in both phases;
+their comparison forces infinity degree 68 and gauge sum 16, while
+nonnegativity forces at least 17.
+
+The p17 remainder falls from 227 to nineteen profiles, with residue split
+`(0,0):5,(7,0):9,(8,0):5`. The endpoint and all top-level gates remain open.
+
+Targeted GitHub code and MathOverflow searches found no prior statement of
+the complementary `17I=12 (mod 72)` gauge contradiction. OEIS returned only
+unrelated arithmetic sequences; those numerical matches have no bearing on
+the proof.
+
 ---
 
 ## 8. What is not in the older literature

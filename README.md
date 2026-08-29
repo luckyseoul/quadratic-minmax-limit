@@ -43,14 +43,16 @@ banned by test (`tests/test_main_chain_docs.py`).
   close the slack-24, -28, and -32 rows. The final native-XOR certificates were
   completed independently on nuka, jellyfin, and soulkiller ECC; the complete
   `p=19` endpoint is closed.
-- **Non-Walsh endpoint at `p=17`.** Propositions 15.700--15.709 reduce the exact
-  ledger from 1,575 to 227 profiles, all of pair slack at least 96. Proposition 15.706 excludes both former
+- **Non-Walsh endpoint at `p=17`.** Propositions 15.700--15.710 reduce the exact
+  ledger from 1,575 to nineteen profiles. Proposition 15.706 excludes both former
   slack-zero profiles by a solver-free global Paley-sign identity, and 15.707
   combines its quotient extension with the existing arc classifications to
   remove all 78 slack-20 rows. Proposition 15.708 extends the identity again
   and uses one unique-even-fibre cell sum to remove all 54 slack-24 rows.
   Proposition 15.709 applies those two identities uniformly to every remaining
   `u_1=8` row, excluding another 280 profiles.
+  Proposition 15.710 applies the complementary phase-one `b=16` identities
+  to exclude 208 of the remaining 227 profiles.
 
 The full correction and supporting certificates are recorded in
 `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md`.
@@ -79,7 +81,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, 15.684--15.687 cut `p=23` to 133 exact residue-zero profiles, 15.688--15.699 close the `p=19` endpoint, and 15.700--15.709 cut the exact `p=17` ledger from 1,575 to 227 profiles, all of slack at least 96; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the `p=17,23` next-boundary endpoints, later all-finite sizes, and `p=7` infinity-plus-seven remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, 15.684--15.687 cut `p=23` to 133 exact residue-zero profiles, 15.688--15.699 close the `p=19` endpoint, and 15.700--15.710 cut the exact `p=17` ledger from 1,575 to nineteen profiles; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the `p=17,23` next-boundary endpoints, later all-finite sizes, and `p=7` infinity-plus-seven remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -479,6 +481,12 @@ rigid anchors, not on the slack value. Every one of the 280 remaining
 phase-zero `b=0`, and 214 retain phase-zero `b=16`. The two 15.708 identities
 exclude both blocks. The exact remainder is 227 profiles, all with `u_1=0`
 and pair slack at least 96.
+Proposition 15.710 uses the complementary phase-one `b=16` core. A genuinely
+rigid phase-zero `b=0` anchor excludes 176 rows by forcing gauge sum 14 with
+minimum 15; rigid `b=16` anchors in both phases exclude 32 more by forcing
+gauge sum 16 with minimum 17. Nineteen profiles remain, with residue split
+`(0,0):5`, `(7,0):9`, `(8,0):5` and slack histogram
+`{96:3,100:4,104:4,108:3,112:3,116:1,128:1}`.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -532,7 +540,7 @@ graph TD
     SMALLRANGE --> P11EIGHT["p=11 finite size eight<br/>exact normalized census <b>CLOSED</b> (15.670)"]
     RANGE --> ENDPOINT["infinity + (p-2), every odd-fibre profile<br/>both signs <b>CLOSED for p>=17</b> (15.671--15.674)"]
     RANGE --> FIRSTHALF["first all-finite s above 3(p-1)/4<br/><b>CLOSED for every prime p>=17</b> (15.675, 15.677, 15.678)"]
-    FIRSTHALF --> SECONDFINITE["next all-finite even s<br/><b>CLOSED for p>=43 and p=41,37,31,29,19</b>;<br/>p=23 reduced to 133 profiles;<br/>p=17 reduced to 227 profiles, all slack>=96;<br/>p=17,23 OPEN (15.679--15.709)"]
+    FIRSTHALF --> SECONDFINITE["next all-finite even s<br/><b>CLOSED for p>=43 and p=41,37,31,29,19</b>;<br/>p=23 reduced to 133 profiles;<br/>p=17 reduced to 19 profiles;<br/>p=17,23 OPEN (15.679--15.710)"]
     RANGE --> PARC["infinity + p, pair-deficit equality / p-arcs<br/>both signs <b>CLOSED for p>=17</b> (15.676)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
@@ -740,6 +748,7 @@ square-direction affine-circle words.
 | 15.707 | all 69 `(u_0,u_1)=(0,8)` slack-20 rows retain rigid phase-zero `b=0` or `2` directions, so 15.706's global-sign contradiction applies; the nine `(8,8)` rows have at least two undetermined directions and fail the existing conic/complete-13/complete-14 repair bounds | excludes all 78 slack-20 profiles without a solver or new classification; 561 exact p17 rows remain, all of slack at least 24, while the endpoint and every top-level gate remain open |
 | 15.708 | all 45 `(0,8)` slack-24 rows retain rigid phase-zero `b=0` and phase-one `b=2` directions, forcing incompatible gauge bounds; the nine `(8,8)` rows force `I=4`, and a rigid `b=16` unique-even-fibre cell sum gives `N_j<=-3` for a nonnegative edge count | excludes all 54 slack-24 profiles analytically; 507 exact p17 rows remain, all of slack at least 28, while the endpoint and every top-level gate remain open |
 | 15.709 | every remaining `u_1=8` row retains eight rigid phase-one `b=2` directions; 66 `(0,8)` rows retain rigid `b=0`, while 214 `(8,8)` rows retain rigid `b=16`, so the two 15.708 contradictions apply independent of slack | excludes 280 profiles across slack 28 through 128 without a solver; 227 exact p17 rows remain, all with `u_1=0` and slack at least 96, while the endpoint and every top-level gate remain open |
+| 15.710 | all 227 rows have nine rigid phase-one `b=16` directions; 176 retain an actual phase-zero floor `b=0`, forcing gauge sum 14 with minimum 15, and 32 retain an actual phase-zero floor `b=16`, forcing gauge sum 16 with minimum 17 | excludes 208 profiles analytically; nineteen rows remain with residue split `(0,0):5,(7,0):9,(8,0):5`, while the endpoint and every top-level gate remain open |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -1070,6 +1079,7 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15707.py`, `scripts/p17_slack20_boundary_cryptominisat.py` | Exact quotient/global-sign exclusion of 69 p17 slack-twenty profiles plus two-direction arc-repair exclusion of the other nine; separate 78-to-69 exact boundary-signature audit model (not used as proof evidence) |
 | `src/e1_gmin_m4_prop15708.py` | Solver-free global-sign and unique-even-fibre cell identities excluding all 54 p17 slack-twenty-four profiles |
 | `src/e1_gmin_m4_prop15709.py` | Full-ledger rigid-anchor sweep excluding every remaining p17 profile with phase-one residue eight |
+| `src/e1_gmin_m4_prop15710.py` | Complementary phase-one-`b=16` global-sign sweep reducing the p17 endpoint from 227 profiles to nineteen |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |
@@ -1136,6 +1146,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-29_p17_slack20_rigid_b2_exclusion.md` | Rigid low-floor quotient census and two-direction arc-repair argument excluding all 78 p17 slack-twenty profiles (15.707) |
 | `evidence/NOTE_2026-08-29_p17_slack24_unique_even_fibre_exclusion.md` | Gauge contradiction for 45 rows and unique-even-fibre signed-cell contradiction for the other nine slack-twenty-four profiles (15.708) |
 | `evidence/NOTE_2026-08-29_p17_u1_eight_global_exclusion.md` | Uniform extension of the two rigid-anchor contradictions to all 280 remaining `u_1=8` profiles (15.709) |
+| `evidence/NOTE_2026-08-29_p17_phase1_b16_global_reduction.md` | Two complementary global-sign gauge contradictions excluding 208 profiles and leaving nineteen p17 rows (15.710) |
 | `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md` | General local-stability counter-mechanism, closest-global hierarchy, Mathon barrier, and corrected signed-Eulerian target after the `c=2` no-go |
 | `evidence/NOTE_2026-08-29_dilation_energy_normalization_and_no_go.md` | Exact R1 dilation-energy identity and representation/PSD/autocorrelation route obstructions |
 | `evidence/STRATEGY_2026-08-29_COLD_REVIEW.md` | Cold reconstruction of the original problem, actual asymptotic gate, killed shortcuts, and bounded four-team Ultra attack |
