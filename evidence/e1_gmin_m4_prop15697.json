@@ -1,0 +1,272 @@
+{
+  "L_status": "OPEN",
+  "boundary_size": 16,
+  "bounded_edge_lift_trials": "UNKNOWN results are diagnostics only and are not proposition evidence",
+  "closes_R1": false,
+  "closes_residual_ii": false,
+  "closes_type_I": false,
+  "conditional_boolean_form_catalog": {
+    "cube_degree_two_relevant_variable_bound": 4,
+    "essential_families": [
+      "positive_positive_conjunction",
+      "positive_negative_conjunction",
+      "nonconstant_antipodal_triple"
+    ],
+    "external_dependency": true,
+    "external_source": "Yuval Filmus publication page, short note with Antoine Vinciguerra linked under Junta threshold for low degree Boolean functions on the slice",
+    "four_variable_truth_tables_checked": 65536,
+    "p19_family_counts": {
+      "nonconstant_antipodal_triple": 2907,
+      "positive_negative_conjunction": 342,
+      "positive_positive_conjunction": 171
+    },
+    "p19_form_count": 3420,
+    "proved_conditional_on_external_restriction_theorem": true,
+    "restriction_theorem": "Filmus-Vinciguerra: for Boolean values the slice-to-cube restriction threshold equals 2d; apply d=2 to the complementary slice J(19,9)",
+    "target_density_truth_tables": 30
+  },
+  "elevated_lift_booleanization": {
+    "elevated_direction": {
+      "B_mean": "5/19",
+      "B_nonnegative_integer_quadratic": true,
+      "baseline": "A0=(t-1)^2",
+      "decomposition": "A=A0+2B",
+      "scaled_mass_4pEB": "20"
+    },
+    "maximum_five_excluded": true,
+    "maximum_five_integral_cross_difference_patterns": {
+      "admissible_labelled_matrices_including_odd": 21,
+      "all_patterns_excluded": true,
+      "even_additive_candidates_checked": 262144,
+      "even_admissible_labelled_matrices": 20,
+      "matrix_shape": [
+        10,
+        9
+      ],
+      "negative_layer_witnesses": {
+        "all_cross_differences_one": {
+          "B": -1,
+          "R": -2,
+          "added_columns": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "bad_layer": 6,
+          "removed_rows": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        "all_cross_differences_zero": {
+          "B": -1,
+          "R": 2,
+          "added_columns": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "bad_layer": 4,
+          "removed_rows": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "one_X_row_of_twos": {
+          "B": -1,
+          "R": 2,
+          "added_columns": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "bad_layer": 4,
+          "removed_rows": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        "one_Y_column_of_twos": {
+          "B": -1,
+          "R": 2,
+          "added_columns": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "bad_layer": 4,
+          "removed_rows": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      },
+      "orbit_counts": {
+        "all_cross_differences_one": 1,
+        "all_cross_differences_zero": 1,
+        "one_X_row_of_twos": 10,
+        "one_Y_column_of_twos": 9
+      },
+      "proved": true
+    },
+    "maximum_five_layer_kernel": {
+      "displayed_kernel": "B=(t-5)L, degree(L)<=1",
+      "displayed_kernel_dimension": 19,
+      "fixed_maximum_point_size": 10,
+      "kernel_dimension_upper_bound": 19,
+      "proved": true,
+      "quadratic_dimension": 171,
+      "rank_mod_two": 152,
+      "rank_witness_rows": 152,
+      "slice": "J(19,10)",
+      "therefore_exact_kernel": true,
+      "vanishing_intersection_layer": 5
+    },
+    "maximum_five_stabilizer_forced_layer_average": "0",
+    "possible_maxima_before_layer_argument": [
+      1,
+      5
+    ],
+    "proved": true,
+    "therefore_B_is_boolean": true,
+    "therefore_maximum_one": true
+  },
+  "infinity_degree_reduction": {
+    "exact_symmetric_l1_rows": [
+      {
+        "b0_cross_edge_capacity": 74,
+        "b0_gauge": 0,
+        "b0_parallel_edges": 3,
+        "excluded": false,
+        "infinity_degree": 0,
+        "minimizing_star_degree_histogram": {
+          "0": 19
+        },
+        "minimum_sum_abs_g_minus_hs_minus_ht": 0
+      },
+      {
+        "b0_cross_edge_capacity": 65,
+        "b0_gauge": 1,
+        "b0_parallel_edges": 2,
+        "excluded": true,
+        "infinity_degree": 10,
+        "minimizing_star_degree_histogram": {
+          "0": 9,
+          "1": 10
+        },
+        "minimum_sum_abs_g_minus_hs_minus_ht": 81
+      },
+      {
+        "b0_cross_edge_capacity": 56,
+        "b0_gauge": 2,
+        "b0_parallel_edges": 1,
+        "excluded": false,
+        "infinity_degree": 20,
+        "minimizing_star_degree_histogram": {
+          "1": 18,
+          "2": 1
+        },
+        "minimum_sum_abs_g_minus_hs_minus_ht": 18
+      },
+      {
+        "b0_cross_edge_capacity": 47,
+        "b0_gauge": 3,
+        "b0_parallel_edges": 2,
+        "excluded": true,
+        "infinity_degree": 28,
+        "minimizing_star_degree_histogram": {
+          "1": 10,
+          "2": 9
+        },
+        "minimum_sum_abs_g_minus_hs_minus_ht": 81
+      },
+      {
+        "b0_cross_edge_capacity": 38,
+        "b0_gauge": 4,
+        "b0_parallel_edges": 1,
+        "excluded": false,
+        "infinity_degree": 38,
+        "minimizing_star_degree_histogram": {
+          "2": 19
+        },
+        "minimum_sum_abs_g_minus_hs_minus_ht": 0
+      }
+    ],
+    "excluded_by_l1": [
+      10,
+      28
+    ],
+    "initial_aggregate_infinity_degrees": [
+      0,
+      10,
+      20,
+      28,
+      38
+    ],
+    "proved": true,
+    "remaining_infinity_degrees": [
+      0,
+      20,
+      38
+    ]
+  },
+  "p": 19,
+  "p19_profiles_after": 4,
+  "p19_profiles_before": 4,
+  "p19_second_all_finite_endpoint_closed": false,
+  "profile": {
+    "arc": false,
+    "global_b_profile": {
+      "0": 5,
+      "16": 5,
+      "2": 10
+    },
+    "pair_slack": 20,
+    "phase_deficits": {
+      "0": 80,
+      "1": 140
+    },
+    "phase_profiles_b": {
+      "0": {
+        "0": 5,
+        "16": 5
+      },
+      "1": {
+        "2": 10
+      }
+    },
+    "undetermined_directions": 5
+  },
+  "proposition": "15.697",
+  "proved": true,
+  "remaining_slack_histogram": {
+    "20": 1,
+    "24": 1,
+    "28": 1,
+    "32": 1
+  }
+}

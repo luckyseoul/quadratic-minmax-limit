@@ -1391,6 +1391,32 @@ seven or eight outside points of secant index one. Al-Zangana's exhaustive
 exclude the four profiles. Bounded exact SAT and CP-SAT trials returned
 UNKNOWN and were not promoted as evidence.
 
+## 7as. Three p=19 slack-twenty rows sharpen (2026-08-29)
+
+Proposition 15.695 excludes both rows whose exceptional phase-one direction
+has `b=14`: equality forces the directional quadratic to equal one on three
+intersection layers, and a fixed pair-inclusion minor has full rank 171
+modulo 101. Proposition 15.696 handles the mixed `b=16` row. Its equality
+layers have rank 169 and two integral kernel orbits; all twenty exact
+infinity-degree edge-lift shards are infeasible. The p=19 endpoint is thereby
+reduced to four profiles with slack histogram `{20:1,24:1,28:1,32:1}`.
+
+Proposition 15.697 gives a structural reduction of the all-`b=2` slack-20
+profile. Stabilizer equality and an exact rank-152 layer kernel reduce a
+hypothetical maximum-five lift to an additive ten-by-nine cross-difference
+matrix. Exhaustion of all `2^18` first-row/first-column assignments leaves
+21 labelled matrices in four symmetry types, each with an explicit negative
+layer; hence the elevated lift is Boolean. Exact coefficient `l1` bounds for
+the five phase-zero zero-lifts reduce the infinity degree to `0,20,38`.
+
+Filmus's publication page states that a short note with Antoine Vinciguerra
+proves the Boolean restriction threshold equals the sharp junta threshold
+`2d`. Conditional on that external statement, a four-variable cube audit
+classifies 3,420 possible Boolean lifts. The note's SharePoint PDF returned
+HTTP 403 during this audit, so the catalog is not used as unconditional
+evidence. Bounded edge-lift trials returned `UNKNOWN`; no profile or
+top-level gate closes in 15.697.
+
 ---
 
 ## 8. What is not in the older literature
@@ -1471,5 +1497,6 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 63. G. Faina, S. Marcugini, A. Milani, and F. Pambianco, *The spectrum of values k for complete k-arcs in PG(2,q) for q<=23*, Ars Combinatoria **47** (1997), 3--11, [open article](https://combinatorialpress.com/ars-articles/volume-047-ars-articles/the-spectrum-of-values-k-for-complete-k-arcs-in-pg2q-for-q-leq-23/) (complete-arc spectrum of `PG(2,19)` used in 15.689).
 64. K. Momihara and S. Suda, *Conference matrices with maximum excess and two-intersection sets*, [arXiv:1611.01305](https://arxiv.org/abs/1611.01305) (Proposition 1.1 gives the arithmetic maximum-excess bound used to delimit the Mathon fixed-gap route).
 65. E. B. Al-Zangana, *The Geometry of the Plane of Order Nineteen and its Application to Error-Correcting Codes*, PhD thesis, University of Sussex, 2011, Chapter 4, Section 4.22, p. 105 (exhaustive `PG(2,19)` 14-arc class counts and the `c1<=4` bound used in 15.693).
+66. Y. Filmus and A. Vinciguerra, short note on the restriction threshold for bounded-degree functions on slices, linked from [Filmus's publication page](https://yuvalfilmus.cs.technion.ac.il/publications/papers/) (the page states the arithmetic-progression, hence Boolean, restriction-threshold result; the linked PDF was inaccessible during the 15.697 audit, so the result is used only conditionally).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).
