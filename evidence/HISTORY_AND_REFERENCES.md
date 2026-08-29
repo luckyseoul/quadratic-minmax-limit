@@ -1773,6 +1773,21 @@ general theorem but no prior occurrence of this exact `p=7` application,
 histogram, or reduction. Numerical OEIS matches are unrelated and have no
 evidentiary role.
 
+## 7bj. Complete mod-seven exclusion of positive p7 infinity-seven z0 (2026-08-29)
+
+Proposition 15.714 uses the unique phase-zero mean-eight Johnson catalogs to
+turn each actual seven-point affine boundary with no undetermined direction
+into a fixed right side of the 282-by-1,225 edge system. Complete V100
+combinadic scans with two launch geometries test all 85,900,584 boundaries
+against the 135 audited mod-seven left dependencies. Exactly 79,447,032 have
+`z=0`, and none survives. The positive branch falls to 6,453,552 actual
+boundaries and a 792-profile projected outer envelope; it remains open.
+
+Targeted GitHub-code, MathOverflow, literature, and OEIS searches found no
+prior occurrence of the exact boundary census or mod-seven exclusion. The
+generic `C(49,7)` total is catalogued, but the histogram and zero-survivor
+result are not; numerical matches have no evidentiary role.
+
 ---
 
 ## 8. What is not in the older literature

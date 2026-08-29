@@ -1,5 +1,14 @@
 # Status (2026-08-29)
 
+**15.714 PROVED the positive `p=7` infinity-plus-seven `z=0` branch is
+CLOSED, not the endpoint**: all directions then have unique mean-eight
+slack catalogs. Two complete V100 launch geometries checked all
+`C(49,7)=85,900,584` boundaries against 135 exact mod-seven dependencies.
+Exactly 79,447,032 have no undetermined direction and zero survive. The
+positive actual-boundary scope falls to 6,453,552 and its projected
+`b`-profile envelope to 792. The other positive branches, negative branch,
+residual (ii), R1, Type I, and the limit remain OPEN.
+
 **15.713 PROVED a strict positive-branch `p=7` infinity-plus-seven
 reduction, not closure**: the exhaustive projected `b`-profile envelope has
 1,217 ordered pairs. A direction with `b_d=7` is undetermined by the

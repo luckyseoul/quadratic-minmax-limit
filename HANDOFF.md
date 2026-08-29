@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-29 (through 15.713; both `p=19,s=16` and `p=17,s=16`
+**Date:** 2026-08-29 (through 15.714; both `p=19,s=16` and `p=17,s=16`
 are closed; no
 general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
@@ -30,6 +30,20 @@ for both signs. This is not all of the projective size-eight case: the
 separate infinity-plus-seven profile remains open. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.714 — positive p7 infinity-plus-seven z0 branch closed
+
+When `z=0`, all eight directions have odd-fibre size `1,3,5`, phase zero,
+and forced mean eight. Their complete Johnson catalogs are unique, so each
+finite seven-set fixes the full affine edge-system right side. A V100 kernel
+unranked all `C(49,7)=85,900,584` sets and tested the 135 exact mod-seven
+left dependencies. Exactly 79,447,032 sets have `z=0`; none survives.
+
+A second full run with a different CUDA grid reproduces every count and
+hash. CPU prefixes of 100,000 and 200,000 boundaries also find zero
+survivors. The positive actual-boundary remainder is 6,453,552, with
+`z=1:6,324,528`, `z=2:123,480`, `z=3:5,488`, and `z=7:56`; its projected
+envelope has 792 profiles. The branch and all top-level gates remain open.
 
 ## 15.713 — positive p7 infinity-plus-seven direction reduction
 
