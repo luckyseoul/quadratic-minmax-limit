@@ -201,6 +201,11 @@ Proposition 15.689 excludes all 129 profiles of slack at most twelve,
 leaving fourteen with histogram
 \(\{16:7,20:4,24:1,28:1,32:1\}\).
 
+Proposition 15.693 subsequently excludes all seven slack-16 rows using the
+classified secant-index distribution of 14-arcs in `PG(2,19)`. Seven rows
+remain with histogram \(\{20:4,24:1,28:1,32:1\}\). In particular, each
+slack-20 row now requires all five repair deletions.
+
 ## 5. The bounded Ultra attack
 
 The next pass should use three proof teams and one red team, with no branch
@@ -209,9 +214,10 @@ allowed to widen its target.
 1. **Character team:** prove or decisively obstruct the eventual dilation
    energy inequality (5). This is the highest leverage target because it
    joins principal R1 and Type I.
-2. **Residual front:** attack only the fourteen \(p=19\) profiles left by
-   15.689, then stop. If they close, move to the existing \(p=17\) row; do
-   not generate later shells.
+2. **Residual front:** attack only the seven \(p=19\) profiles left by
+   15.693, starting with the four exact five-deletion slack-20 rows, then
+   stop. If they close, move to the existing \(p=17\) row; do not generate
+   later shells.
 3. **Global team:** attack either the all-subsets hierarchy (4) or the
    signed-Eulerian free-energy inequality (3), with the acceptance condition
    being the actual asymptotic deficit (1), not exact gap two.

@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-29 (through 15.692; `p=19,s=16` reduced to 14 nonlinear inverse-Radon weight instances; no general flag flipped)
+**Date:** 2026-08-29 (through 15.693; `p=19,s=16` reduced to seven profiles of slack 20--32; no general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -102,6 +102,30 @@ moments cannot close them. The next finite attack must use exact inverse
 weight or higher line concurrency, not another parity-rank or variance
 relaxation. See `evidence/NOTE_2026-08-29_p19_binary_radon_reduction.md`.
 
+## 15.693 — all seven p=19 slack-16 profiles excluded
+
+Every slack-16 survivor has three or four undetermined directions, and
+repair deletes at most four points. At deletion depth at most three, adding
+two undetermined infinity points gives an arc of size at least 15 and the
+conic contradiction. At depth four, a repaired 12-arc plus two such points
+is a 14-arc `K`. If `K` were incomplete it would extend across the complete-
+arc spectrum gap to the conic, contradicting the third undetermined
+direction, so `K` is complete.
+
+Slack 16 forces all four deleted points to have secant index one relative
+to `K`; each unused undetermined infinity point has the line at infinity as
+its unique `K`-secant. Thus `K` has at least `4+(t-2)>=5` outside points of
+index one. Al-Zangana's exhaustive `PG(2,19)` 14-arc classification gives
+`c1<=4`. All seven profiles are impossible. The exact remainder is
+
+```text
+{20:4, 24:1, 28:1, 32:1}.
+```
+
+The same bound forces five repair deletions in every slack-20 profile. This
+is a strict reduction, not endpoint closure. See
+`evidence/NOTE_2026-08-29_p19_slack16_complete14_exclusion.md`.
+
 ## 2026-08-29 cold attack map
 
 The theorem only needs an `o(p^3)` Paley deficit on a ratio-dense tail; the
@@ -111,7 +135,8 @@ general counter-mechanism and must not be retried. The bounded next pass is:
 1. full-Max+ dilation energy, now known to be exactly strong R1; any proof
    must use Boolean rank-one/orbit-mixture structure, not character or PSD
    positivity alone;
-2. the fourteen `p=19` high-slack profiles above;
+2. the seven `p=19` profiles left by 15.693, beginning with the four
+   slack-20 rows whose repair depth is now exactly five;
 3. closest-global all-subsets or the corrected `c=3` signed-Eulerian target
    for the direct asymptotic route (`c=2` is rigorously false);
 4. Mathon's ratio-dense conference family, where the genuine missing theorem

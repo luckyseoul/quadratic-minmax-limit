@@ -8417,3 +8417,52 @@ Residual (ii), R1, Type I, and the limit remain open.
 
 Evidence: `src/e1_gmin_m4_prop15692.py`,
 `evidence/e1_gmin_m4_prop15692.json`, and `tests/test_prop15692.py`.
+
+## Proposition 15.693 — the p=19 slack-sixteen block is impossible
+
+Each of the seven slack-sixteen profiles left by Proposition 15.689 has
+three or four undetermined directions. The repair lemma deletes at most
+four points. With at most three deletions, adjoining two undetermined
+infinity points gives an arc of size at least fifteen. The complete-arc
+spectrum forces this arc into the conic; the third undetermined infinity
+point then has only the line-at-infinity secant although retained-conic
+counting forces further secants, a contradiction.
+
+It remains to consider four deletions. Write \(S=A\cup D\), where \(A\) is
+a 12-arc and \(|D|=4\), and adjoin two undetermined infinity points:
+
+\[
+K=A\cup\{U_1,U_2\},\qquad |K|=14.                \tag{15.693.1}
+\]
+
+If \(K\) is incomplete, the gap in the complete-arc spectrum extends it to
+the 20-point conic. A third undetermined infinity point has exactly one
+\(K\)-secant, the line at infinity. An off-conic point has at least nine
+conic secants, while the six omitted conic points destroy at most six, so
+at least three \(K\)-secants remain. Hence \(K\) is complete.
+
+For every \(x\in D\), undeterminedness prevents a \(K\)-secant through
+\(x\) from using \(U_1\) or \(U_2\). Such a secant is already an
+\(A\)-secant and charges four units of slack. Completeness and total slack
+sixteen therefore force every point of \(D\) to have secant index one.
+Each unused undetermined infinity point also has index one, its unique
+\(K\)-secant being the line at infinity. Thus
+
+\[
+c_1(K)\ge4+(t-2)\ge5.                            \tag{15.693.2}
+\]
+
+Al-Zangana's exhaustive classification of all 83 projective 14-arc classes
+in `PG(2,19)` gives \(c_1\le4\) for every class. This contradiction removes
+all seven slack-sixteen profiles. The exact remainder is
+
+\[
+\{20:4,24:1,28:1,32:1\},
+\]
+
+seven profiles in total. The same classification forces every slack-twenty
+row to use exactly five repair deletions. The endpoint, residual (ii), R1,
+Type I, and the limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15693.py`,
+`evidence/e1_gmin_m4_prop15693.json`, and `tests/test_prop15693.py`.

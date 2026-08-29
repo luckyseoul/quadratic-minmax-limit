@@ -1,0 +1,125 @@
+{
+  "L_status": "OPEN",
+  "at_most_three_deletions": "two undetermined infinity points give an arc of size at least 15 and hence a conic; a third undetermined infinity point has only the infinity-line secant but retained-conic counting forces more",
+  "boundary_size": 16,
+  "classification": {
+    "class_count_cross_check": "H. Sticker, Classification of Arcs in Small Desarguesian Projective Planes, PhD thesis, Ghent University, 2012",
+    "complete_fourteen_arc_classes": 70,
+    "external_dependency": true,
+    "incomplete_fourteen_arc_classes": 13,
+    "maximum_c1_over_all_fourteen_arcs": 4,
+    "outside_secant_index_notation": "c_i is the number of outside points on exactly i arc secants",
+    "projective_fourteen_arc_classes": 83,
+    "proved_conditional_on_external_classification": true,
+    "source": "E. B. Al-Zangana, The Geometry of the Plane of Order Nineteen and its Application to Error-Correcting Codes, PhD thesis, University of Sussex, 2011, Chapter 4, Section 4.22, page 105",
+    "therefore_maximum_c1_over_complete_fourteen_arcs": 4
+  },
+  "closes_R1": false,
+  "closes_residual_ii": false,
+  "closes_type_I": false,
+  "excluded_pair_slack": 16,
+  "four_deletion_branch": {
+    "adjoined_infinity_points": 2,
+    "classified_maximum": 4,
+    "deleted_index_one_points": 4,
+    "excluded": true,
+    "minimum_total_index_one_points": 5,
+    "repaired_arc_size": 12,
+    "resulting_arc_must_be_complete": true,
+    "resulting_arc_size": 14,
+    "unused_undetermined_index_one_points": "t-2"
+  },
+  "p": 19,
+  "p19_second_all_finite_endpoint_closed": false,
+  "profile_count_after": 7,
+  "profile_count_before": 14,
+  "profile_count_excluded": 7,
+  "profile_ledger": {
+    "pair_slack": 16,
+    "profile_count": 7,
+    "proved": true,
+    "repair_deletion_bound": 4,
+    "undetermined_direction_histogram": {
+      "3": 1,
+      "4": 6
+    }
+  },
+  "proposition": "15.693",
+  "proved_conditional_on_external_classification": true,
+  "remaining_pair_slack_histogram": {
+    "20": 4,
+    "24": 1,
+    "28": 1,
+    "32": 1
+  },
+  "remaining_same_boundary_primes": [
+    17,
+    19,
+    23
+  ],
+  "repair_depth_reduction": {
+    "proved": true,
+    "rows": {
+      "16": {
+        "four_deletion_c1_floors": {
+          "3": 5,
+          "4": 6
+        },
+        "four_deletion_excluded_for_every_profile": true,
+        "minimum_repair_deletions_after_classification": null,
+        "profile_count": 7,
+        "undetermined_direction_histogram": {
+          "3": 1,
+          "4": 6
+        }
+      },
+      "20": {
+        "four_deletion_c1_floors": {
+          "4": 5,
+          "5": 6
+        },
+        "four_deletion_excluded_for_every_profile": true,
+        "minimum_repair_deletions_after_classification": 5,
+        "profile_count": 4,
+        "undetermined_direction_histogram": {
+          "4": 2,
+          "5": 2
+        }
+      },
+      "24": {
+        "four_deletion_c1_floors": {
+          "5": 5
+        },
+        "four_deletion_excluded_for_every_profile": true,
+        "minimum_repair_deletions_after_classification": 5,
+        "profile_count": 1,
+        "undetermined_direction_histogram": {
+          "5": 1
+        }
+      },
+      "28": {
+        "four_deletion_c1_floors": {
+          "5": 4
+        },
+        "four_deletion_excluded_for_every_profile": false,
+        "minimum_repair_deletions_after_classification": 4,
+        "profile_count": 1,
+        "undetermined_direction_histogram": {
+          "5": 1
+        }
+      },
+      "32": {
+        "four_deletion_c1_floors": {
+          "5": 3
+        },
+        "four_deletion_excluded_for_every_profile": false,
+        "minimum_repair_deletions_after_classification": 4,
+        "profile_count": 1,
+        "undetermined_direction_histogram": {
+          "5": 1
+        }
+      }
+    }
+  },
+  "slack_twenty_profiles_now_force_exactly_five_repair_deletions": true
+}

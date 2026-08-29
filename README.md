@@ -35,9 +35,10 @@ free-energy inequality above the fractional-moment barrier. The originally
 proposed `c=2` target is false; the clean surviving target is `c=3` with
 `log P_a(tanh(3/sqrt(n))) >= -3n/4-o(n)`. The full-Max+ dilation energy has
 also been normalized exactly: it is strong R1 itself, and character/PSD
-positivity alone cannot bound it. The fourteen surviving `p=19` profiles
-now have an exact binary affine-Radon normal form: their only remaining
-parity-level condition is `wt(A^T r)=16`; linear compatibility, mod-four
+positivity alone cannot bound it. The `p=19` profiles have an exact binary
+affine-Radon normal form, and 15.693 excludes the full seven-profile
+slack-16 block. The seven remaining profiles' only parity-level condition
+is `wt(A^T r)=16`; linear compatibility, mod-four
 weight, and second moments do not close them. See
 `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md`.
 
@@ -47,7 +48,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, 15.684--15.687 cut `p=23` to 133 exact residue-zero profiles, and 15.688--15.689 cut `p=19` to 14 high-slack profiles; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the three smaller next-boundary endpoints, later all-finite sizes, and `p=7` infinity-plus-seven remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, 15.684--15.687 cut `p=23` to 133 exact residue-zero profiles, and 15.688--15.693 cut `p=19` to seven high-slack profiles; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the three smaller next-boundary endpoints, later all-finite sizes, and `p=7` infinity-plus-seven remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -334,7 +335,10 @@ Proposition 15.688 sharpens every nonzero nonnegative integral quadratic
 lift to \(4p\mathbb E B\ge p-3\). At the `p=19` next boundary this deletes
 all four positive-residue rows. Exact completion leaves 143 residue-zero
 profiles; 15.689 excludes the 129 profiles of slack at most twelve, leaving
-14 with slack histogram `{16:7,20:4,24:1,28:1,32:1}`.
+14 with slack histogram `{16:7,20:4,24:1,28:1,32:1}`. Proposition 15.693
+uses the classified secant-index bound for complete 14-arcs to exclude all
+seven slack-16 profiles. Seven profiles remain:
+`{20:4,24:1,28:1,32:1}`.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -388,7 +392,7 @@ graph TD
     SMALLRANGE --> P11EIGHT["p=11 finite size eight<br/>exact normalized census <b>CLOSED</b> (15.670)"]
     RANGE --> ENDPOINT["infinity + (p-2), every odd-fibre profile<br/>both signs <b>CLOSED for p>=17</b> (15.671--15.674)"]
     RANGE --> FIRSTHALF["first all-finite s above 3(p-1)/4<br/><b>CLOSED for every prime p>=17</b> (15.675, 15.677, 15.678)"]
-    FIRSTHALF --> SECONDFINITE["next all-finite even s<br/><b>CLOSED for p>=43 and p=41,37,31,29</b>;<br/>p=23 reduced to 133 profiles; p=19 to 14 profiles;<br/>p=17,19,23 OPEN (15.679--15.689)"]
+    FIRSTHALF --> SECONDFINITE["next all-finite even s<br/><b>CLOSED for p>=43 and p=41,37,31,29</b>;<br/>p=23 reduced to 133 profiles; p=19 to 7 profiles;<br/>p=17,19,23 OPEN (15.679--15.693)"]
     RANGE --> PARC["infinity + p, pair-deficit equality / p-arcs<br/>both signs <b>CLOSED for p>=17</b> (15.676)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
@@ -579,6 +583,7 @@ square-direction affine-circle words.
 | 15.690 | exact square-torus character orthogonality and affine autocorrelation give `S_K=12(q-1)||delta||^2/n`; abstract equivariant spectra and PSD autocorrelations violate the desired bound | identifies the dilation inequality with strong R1 itself and proves character/PSD-only routes insufficient; R1 remains open |
 | 15.691 | a fractional-moment argument constructs signings with `log P_a(tanh(c/sqrt(n)))<=-(c/2-sqrt(log 2))^2 n+o(n)` | disproves the original signed-Eulerian `c=2` target; the corrected `c=3` target remains open and no top-level gate changes |
 | 15.692 | over `F_2`, affine incidence satisfies `A^T A=I+J`, making the even-point Radon map an isomorphism with inverse `x=A^T r`; exact even-support witnesses defeat every profile's first-two-moment relaxation | reduces the fourteen `p=19` survivors to nonlinear inverse-weight equations `wt(A^T r)=16`; no endpoint or top-level gate closes |
+| 15.693 | in the four-deletion slack-16 branch, the complete repaired 14-arc would have four deleted plus at least one unused infinity point of secant index one, while the exhaustive classification permits at most four | excludes all seven slack-16 profiles and reduces `p=19` to `{20:4,24:1,28:1,32:1}`; slack 20 now forces exactly five repair deletions |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -947,6 +952,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-29_sharp_integral_lift_p19.md` | Sharp all-prime integral quadratic-lift floor and exact 143-profile residue-zero census (15.688) |
 | `evidence/NOTE_2026-08-29_p19_low_slack_conic_reduction.md` | Complete-arc/conic-core exclusion of 129 low-slack `p=19` profiles, leaving 14 (15.689) |
 | `evidence/NOTE_2026-08-29_p19_binary_radon_reduction.md` | Binary affine-Radon isomorphism, exact inverse-weight normal form, and linear/mod-four/second-moment barriers for the fourteen `p=19` survivors (15.692) |
+| `evidence/NOTE_2026-08-29_p19_slack16_complete14_exclusion.md` | Complete-14-arc secant-index contradiction excluding all seven slack-16 `p=19` profiles and forcing the slack-20 repair depth (15.693) |
 | `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md` | General local-stability counter-mechanism, closest-global hierarchy, Mathon barrier, and corrected signed-Eulerian target after the `c=2` no-go |
 | `evidence/NOTE_2026-08-29_dilation_energy_normalization_and_no_go.md` | Exact R1 dilation-energy identity and representation/PSD/autocorrelation route obstructions |
 | `evidence/STRATEGY_2026-08-29_COLD_REVIEW.md` | Cold reconstruction of the original problem, actual asymptotic gate, killed shortcuts, and bounded four-team Ultra attack |

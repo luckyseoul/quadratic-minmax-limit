@@ -15,6 +15,18 @@ dilation energy exactly but cannot upper-bound it, and PSD/autocorrelation
 surrogates admit explicit violations. See
 `evidence/STRATEGY_2026-08-29_COLD_REVIEW.md`.
 
+**15.693 PROVED all seven pair-slack-16 `p=19,s=16` profiles are
+impossible, not residual (ii)**: repair deletes at most four points. With
+at most three deletions, two undetermined infinity points produce an arc of
+size at least 15 and hence a conic contradiction. With four deletions, the
+repaired 12-arc plus two infinity points is a complete 14-arc. Slack equality
+forces the four deleted points, and every unused undetermined infinity
+point, to have secant index one. This gives at least five such outside
+points, while Al-Zangana's exhaustive `PG(2,19)` classification gives at
+most four for every 14-arc. Exactly seven profiles remain, with pair-slack
+histogram `{20:4,24:1,28:1,32:1}`. The slack-20 rows now require exactly
+five repair deletions. The endpoint and every top-level gate remain OPEN.
+
 **15.692 PROVED the binary affine-Radon normal form for the fourteen
 remaining `p=19` profiles, not the endpoint**: over `F_2`, the affine
 line-point incidence matrix satisfies `A^T A=I+J`. On even point words it

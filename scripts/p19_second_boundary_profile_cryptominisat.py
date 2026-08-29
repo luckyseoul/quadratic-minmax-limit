@@ -9,7 +9,10 @@ It uses both affine Radon equations
 where the second identity follows from ``A^T A=I+J`` and ``|x|=16``.
 Direction weights and their phase histograms are imposed by guarded exact
 cardinality automata.  A pair in a phase-zero b=0 direction is normalized
-to field elements 0 and 1.
+to field elements 0 and 1.  The optional ``--anchor-second`` mode instead
+fixes two phase-zero b=16 directions, translates one selected point to
+zero, and uses scalar dilation to fix one missing nonzero fibre.  Sweeping
+the nine second-direction slots preserves the complete normalized search.
 
 UNSAT excludes the boundary profile itself.  SAT gives an audited affine
 boundary but does not by itself realize a residual edge lift.
@@ -50,7 +53,12 @@ def survivor_profiles() -> list[dict[str, object]]:
     return rows
 
 
-def solve(profile_index: int, seconds: float, threads: int) -> dict[str, object]:
+def solve(
+    profile_index: int,
+    seconds: float,
+    threads: int,
+    anchor_second: int | None = None,
+) -> dict[str, object]:
     from pycryptosat import Solver
 
     profiles = survivor_profiles()
@@ -152,7 +160,8 @@ def solve(profile_index: int, seconds: float, threads: int) -> dict[str, object]
 
     add_exact(point, SIZE)
     add_unit(point[0])
-    add_unit(point[1])
+    if anchor_second is None:
+        add_unit(point[1])
 
     incident_parities: list[list[int]] = [[] for _ in point]
     for index, (_direction, _eps, labels) in enumerate(records):
@@ -207,7 +216,49 @@ def solve(profile_index: int, seconds: float, threads: int) -> dict[str, object]
         for b, target in phase_profile.items():
             add_exact([selectors[i][b] for i in phase_indices], target)
 
-    add_unit(selectors[normalized_index][0])
+    if anchor_second is None:
+        add_unit(selectors[normalized_index][0])
+        normalization = {
+            "mode": "phase-zero-b0-pair",
+            "selected_points": [0, 1],
+            "direction": list(directions[normalized_index]),
+            "phase": 0,
+            "b": 0,
+            "c_H": -1,
+        }
+    else:
+        phase_zero_indices = [i for i, value in enumerate(phases) if value == 0]
+        if not 1 <= anchor_second < len(phase_zero_indices):
+            raise ValueError("anchor_second must be in 1..9")
+        first_index = phase_zero_indices[0]
+        second_index = phase_zero_indices[anchor_second]
+        if 16 not in selectors[first_index] or 16 not in selectors[second_index]:
+            raise ValueError("profile lacks two phase-zero undetermined directions")
+        add_unit(selectors[first_index][16])
+        add_unit(selectors[second_index][16])
+
+        # After translating a selected point to zero, F_p^* scales the
+        # quotient by the first undetermined direction transitively on its
+        # nonzero fibres.  Normalize one of the three missing fibres.
+        first_labels = records[first_index][2]
+        base_label = first_labels[0]
+        missing_label = next(label for label in first_labels if label != base_label)
+        fixed_missing_fibre = [
+            v for v, label in enumerate(first_labels) if label == missing_label
+        ]
+        for v in fixed_missing_fibre:
+            add_unit(-point[v])
+        normalization = {
+            "mode": "two-phase-zero-undetermined",
+            "selected_point": 0,
+            "first_direction": list(directions[first_index]),
+            "second_direction": list(directions[second_index]),
+            "second_phase_zero_slot": anchor_second,
+            "phase": 0,
+            "b": 16,
+            "fixed_missing_fibre_label": missing_label,
+            "c_H": -1,
+        }
 
     build_seconds = time.time() - started
     satisfiable, assignment = solver.solve(time_limit=float(seconds))
@@ -223,13 +274,7 @@ def solve(profile_index: int, seconds: float, threads: int) -> dict[str, object]
         "profile_index": profile_index,
         "pair_slack": int(profile["pair_slack"]),
         "phase_profiles_b": profile["phase_profiles_b"],
-        "normalization": {
-            "selected_points": [0, 1],
-            "direction": list(directions[normalized_index]),
-            "phase": 0,
-            "b": 0,
-            "c_H": -1,
-        },
+        "normalization": normalization,
         "solver": "cryptominisat-native-xor",
         "solver_status": status,
         "feasible_boundary_profile": satisfiable is True,
@@ -248,7 +293,9 @@ def solve(profile_index: int, seconds: float, threads: int) -> dict[str, object]
         chosen = [v for v, literal in enumerate(point) if assignment[literal]]
         observed = {0: {}, 1: {}}
         direction_rows = []
-        valid = len(chosen) == SIZE and {0, 1} <= set(chosen)
+        valid = len(chosen) == SIZE and 0 in chosen
+        if anchor_second is None:
+            valid = valid and 1 in chosen
         for index, (direction, eps, labels) in enumerate(records):
             counts = [0] * P
             for v in chosen:
@@ -281,6 +328,12 @@ def main() -> None:
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--profile", type=int)
     group.add_argument("--all", action="store_true")
+    parser.add_argument(
+        "--anchor-second",
+        type=int,
+        choices=range(1, 10),
+        help="use the two-undetermined normalization with this phase-zero slot",
+    )
     parser.add_argument("--seconds", type=float, default=300.0)
     parser.add_argument("--threads", type=int, default=8)
     parser.add_argument("--jobs", type=int, default=1)
@@ -288,14 +341,22 @@ def main() -> None:
     args = parser.parse_args()
     if args.all:
         worker = functools.partial(
-            solve, seconds=args.seconds, threads=args.threads
+            solve,
+            seconds=args.seconds,
+            threads=args.threads,
+            anchor_second=args.anchor_second,
         )
         with concurrent.futures.ThreadPoolExecutor(
             max_workers=max(1, int(args.jobs))
         ) as executor:
             result = list(executor.map(worker, range(14)))
     else:
-        result = solve(args.profile, args.seconds, args.threads)
+        result = solve(
+            args.profile,
+            args.seconds,
+            args.threads,
+            anchor_second=args.anchor_second,
+        )
     rendered = json.dumps(result, indent=2, sort_keys=True)
     print(rendered, flush=True)
     if args.output is not None:

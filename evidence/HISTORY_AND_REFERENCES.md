@@ -1360,6 +1360,22 @@ normal form, not endpoint closure. Searches on binary affine incidence
 codes, odd secants, and Rédei direction methods found adjacent literature
 but no theorem supplying the missing fixed-block inverse-weight bound.
 
+## 7aq. The p=19 slack-sixteen block closes (2026-08-29)
+
+Proposition 15.693 uses the classified secant-index distribution of
+14-arcs in `PG(2,19)`. Each of the seven slack-sixteen profiles has at least
+three undetermined directions and repair depth at most four. Depth at most
+three gives a conic contradiction after adjoining two infinity points. At
+depth four, the repaired 12-arc plus two infinity points is a complete
+14-arc `K`; otherwise the complete-arc spectrum again extends it to a conic.
+
+The four deleted points have secant index one with respect to `K`, and each
+unused undetermined infinity point contributes another index-one outside
+point. Thus `c1(K)>=5`. Al-Zangana's exhaustive list of all 83 projective
+14-arc classes gives `c1<=4`, a contradiction. The exact p=19 remainder
+drops from fourteen to seven profiles with slack histogram
+`{20:4,24:1,28:1,32:1}`. No top-level implication changes.
+
 ---
 
 ## 8. What is not in the older literature
@@ -1439,5 +1455,6 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 62. D. Bryant, D. Horsley, and W. Pettersson, *Cycle decompositions V: complete graphs into cycles of arbitrary lengths*, Proc. Lond. Math. Soc. **108** (2014), 1153--1192, [arXiv:1204.3709](https://arxiv.org/abs/1204.3709) (prescribed complete-graph cycle decompositions; contextual support for the broad Eulerian dual spectrum).
 63. G. Faina, S. Marcugini, A. Milani, and F. Pambianco, *The spectrum of values k for complete k-arcs in PG(2,q) for q<=23*, Ars Combinatoria **47** (1997), 3--11, [open article](https://combinatorialpress.com/ars-articles/volume-047-ars-articles/the-spectrum-of-values-k-for-complete-k-arcs-in-pg2q-for-q-leq-23/) (complete-arc spectrum of `PG(2,19)` used in 15.689).
 64. K. Momihara and S. Suda, *Conference matrices with maximum excess and two-intersection sets*, [arXiv:1611.01305](https://arxiv.org/abs/1611.01305) (Proposition 1.1 gives the arithmetic maximum-excess bound used to delimit the Mathon fixed-gap route).
+65. E. B. Al-Zangana, *The Geometry of the Plane of Order Nineteen and its Application to Error-Correcting Codes*, PhD thesis, University of Sussex, 2011, Chapter 4, Section 4.22, p. 105 (exhaustive `PG(2,19)` 14-arc class counts and the `c1<=4` bound used in 15.693).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).
