@@ -1,5 +1,16 @@
 # Status (2026-08-29)
 
+**15.707 PROVED all 78 pair-slack-twenty `p=17,s=16` profiles are
+impossible, not the endpoint**: all 69 `(u_0,u_1)=(0,8)` rows retain at
+least three rigid phase-zero directions with `b=0` or `2`, while phase one
+retains at least eight rigid `b=2` directions. The 15.706 global-sign
+comparison again forces `I=68`, contradicting boundary size 16. The nine
+`(8,8)` rows have two or three undetermined directions; repair plus the
+already-audited conic, complete-13, and complete-14 secant-index bounds
+exclude repair depths one through five. Exactly 561 p17 profiles remain, all
+of pair slack at least 24. The endpoint, residual (ii), R1, Type I, and the
+limit remain OPEN.
+
 **15.706 PROVED both remaining pair-slack-zero `p=17,s=16` profiles are
 impossible, not the endpoint**: every mean allocation retains a rigid `b=2`
 direction of each quadratic type. Summing its 136 coefficient cells and

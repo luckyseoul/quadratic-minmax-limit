@@ -1,7 +1,7 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-29 (through 15.706; `p=19,s=16` is closed, and the exact
-`p=17,s=16` remainder is 639 profiles, all of pair slack at least 20; no
+**Date:** 2026-08-29 (through 15.707; `p=19,s=16` is closed, and the exact
+`p=17,s=16` remainder is 561 profiles, all of pair slack at least 24; no
 general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
@@ -30,6 +30,28 @@ for both signs. This is not all of the projective size-eight case: the
 separate infinity-plus-seven profile remains open. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.707 — the entire p17 slack-twenty block is excluded
+
+For all 69 `(u_0,u_1)=(0,8)` rows, exact quotient accounting retains at
+least three rigid phase-zero directions with `b=0` or `2`; phase one retains
+at least eight rigid `b=2` directions. Both phase-zero floors give the same
+global-sign constant, so the 15.706 comparison again forces
+
+```text
+17I = 4 + 72(g_+ + g_-),
+```
+
+hence `I=68` and the impossible boundary sizes 66, 68, or 70.
+
+The nine `(8,8)` rows have undetermined-direction histogram `{2:5,3:4}`.
+Adjoin two infinity points after a minimum repair. Depth at most three gives
+a conic and the improved off-conic slack floor `4h(7-h)>=24`; depth four
+gives the unique complete 14-arc and slack at least 32; depth five needs five
+index-one outside points, while complete 13-arcs permit at most three and a
+complete-14-minus-one core at most four. Thus all 78 slack-twenty profiles
+are impossible. The live p17 ledger is 561, all of slack at least 24. No new
+classification or solver result is used.
 
 ## 15.706 — both p17 slack-zero profiles excluded analytically
 

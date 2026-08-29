@@ -1623,6 +1623,36 @@ invalidated the original raw CP-SAT archive used by Proposition 15.696; its
 corrected twenty-shard rerun is recorded separately rather than silently
 reusing the old files.
 
+## 7bc. The p17 slack-twenty block closes (2026-08-29)
+
+Proposition 15.707 first extends 15.706's global-sign argument to all 69
+slack-twenty profiles with residue pair `(u_0,u_1)=(0,8)`. Exact quotient
+minima force between three and seven rigid phase-zero directions with
+`b in {0,2}`, while phase one retains at least eight rigid `b=2` directions.
+The `b=0` floor `(M,T)=(0,0)` and `b=2` floor `(18,-1)` give the same
+phase-zero global-sign constant. Comparing with phase one again forces
+`I=68`, whose one finite edge cannot have affine odd boundary 16.
+
+The other nine profiles have residue pair `(8,8)` and two or three
+undetermined directions. Adjoining two infinity points after a minimum arc
+repair handles every depth. Depth at most three reaches a conic and gives
+the improved positive slack floor `4h(7-h)>=24`. Depth four reaches the
+unique complete 14-arc, whose minimum outside secant index two forces slack
+at least 32. At depth five, equality needs five index-one outside points;
+the eight complete 13-arcs permit at most three, and every 13-subarc of the
+unique complete 14-arc permits at most four. These are exactly the
+classification certificates already audited in 15.701--15.703.
+
+Thus all 78 slack-twenty profiles are impossible. The p17 remainder drops
+from 639 to 561 profiles, all of pair slack at least twenty-four. The endpoint
+and every top-level gate remain open. No new classification or solver is
+used.
+
+Targeted GitHub and MathOverflow searches found no prior statement of this
+69-plus-9 exclusion or the improved `4h(7-h)` undetermined-conic bound. An
+OEIS search on the full reduction ledger found only isolated numerical
+matches in unrelated constructions; none supplies mathematical evidence.
+
 ---
 
 ## 8. What is not in the older literature
