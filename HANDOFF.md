@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-29 (through 15.714; both `p=19,s=16` and `p=17,s=16`
+**Date:** 2026-08-29 (through 15.715; both `p=19,s=16` and `p=17,s=16`
 are closed; no
 general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
@@ -30,6 +30,19 @@ for both signs. This is not all of the projective size-eight case: the
 separate infinity-plus-seven profile remains open. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.715 — positive p7 infinity-plus-seven z1 branch closed
+
+Every `z=1` boundary has four exact mean allocations. A direction-specific
+23-dependency prefilter reduces all 6,324,528 actual boundaries to 1,326
+projected candidates. Host reconstruction tests every candidate, all four
+allocations, and the complete Johnson catalogs on all 135 mod-seven
+dependencies; none survives. A second complete V100 run with a different
+CUDA grid reproduces the exact projected-rank digest and zero full survivors.
+
+The positive actual-boundary remainder is now 129,024, with
+`z=2:123,480`, `z=3:5,488`, and `z=7:56`; its projected envelope has 492
+profiles. The branch and all top-level gates remain open.
 
 ## 15.714 — positive p7 infinity-plus-seven z0 branch closed
 

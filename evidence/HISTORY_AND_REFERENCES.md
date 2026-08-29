@@ -1788,6 +1788,22 @@ prior occurrence of the exact boundary census or mod-seven exclusion. The
 generic `C(49,7)` total is catalogued, but the histogram and zero-survivor
 result are not; numerical matches have no evidentiary role.
 
+## 7bk. Complete mod-seven exclusion of positive p7 infinity-seven z1 (2026-08-29)
+
+Proposition 15.715 observes that each actual positive `z=1` boundary has
+exactly four mean allocations.  For each variable direction, 23 exact
+mod-seven dependencies give a losslessly packed prefilter.  Complete V100
+scans with two launch geometries agree on all 6,324,528 `z=1` boundaries and
+the same 1,326 projected boundary candidates.  Host reconstruction tests all
+four allocations against the complete catalogs on all 135 dependencies;
+none survives.  The positive branch falls to 129,024 actual boundaries and
+a 492-profile projected outer envelope at `z=2,3,7`; it remains open.
+
+Targeted GitHub-code, MathOverflow, literature, and OEIS searches found only
+the surrounding finite-direction, Paley-49, and modular-incidence theory,
+not this exact census or exclusion.  Numerical matches have no evidentiary
+role.
+
 ---
 
 ## 8. What is not in the older literature

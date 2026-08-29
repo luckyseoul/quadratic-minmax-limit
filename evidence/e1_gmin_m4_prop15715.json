@@ -1,0 +1,32 @@
+{
+  "actual_boundary_count_after_z1_exclusion": 129024,
+  "actual_boundary_count_before": 6453552,
+  "boundary": "infinity plus seven finite points",
+  "full_mod7_survivors": 0,
+  "independent_grid_audit_evidence": "evidence/p7_infinity7_positive_z1_v100_audit.json",
+  "left_dependency_count": 135,
+  "mean_allocations_per_boundary": 4,
+  "modulus": 7,
+  "negative_p7_infinity_plus_seven_changed": false,
+  "p": 7,
+  "positive_p7_infinity_plus_seven_closed": false,
+  "positive_z1_branch_closed": true,
+  "product_sign": "positive",
+  "projected_b_profile_count_after": 492,
+  "projected_b_profile_count_before": 792,
+  "projected_b_profiles_excluded_here": 300,
+  "projected_dependency_count": 23,
+  "projected_mod7_boundary_candidates": 1326,
+  "proposition": "15.715",
+  "proved_by_complete_exact_finite_scan": true,
+  "remaining_projected_undetermined_direction_histogram": {
+    "2": 280,
+    "3": 210,
+    "7": 2
+  },
+  "scan_evidence": "evidence/p7_infinity7_positive_z1_v100.json",
+  "scan_script": "scripts/p7_infinity7_positive_z1_mod7_gpu.py",
+  "top_level_gates_changed": false,
+  "undetermined_direction_count_excluded": 1,
+  "z1_boundaries_excluded": 6324528
+}

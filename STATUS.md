@@ -1,5 +1,14 @@
 # Status (2026-08-29)
 
+**15.715 PROVED the positive `p=7` infinity-plus-seven `z=1` branch is
+CLOSED, not the endpoint**: every such boundary has four exact mean
+allocations. Two complete V100 launch geometries check all 6,324,528
+boundaries, agree on the same 1,326 projected candidates, and find zero
+survivors when the complete catalogs are tested on all 135 mod-seven
+dependencies. The positive actual-boundary scope falls to 129,024 and its
+projected `b`-profile envelope to 492 at `z=2,3,7`. Those positive branches,
+the negative branch, residual (ii), R1, Type I, and the limit remain OPEN.
+
 **15.714 PROVED the positive `p=7` infinity-plus-seven `z=0` branch is
 CLOSED, not the endpoint**: all directions then have unique mean-eight
 slack catalogs. Two complete V100 launch geometries checked all
