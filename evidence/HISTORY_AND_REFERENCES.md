@@ -1683,6 +1683,24 @@ identities found no prior statement of this exclusion. OEIS searches on the
 reduction counts returned only unrelated isolated numerical matches and are
 not evidence.
 
+## 7be. The rigid-anchor identities remove every p17 `u_1=8` row (2026-08-29)
+
+Proposition 15.709 applies 15.708 uniformly across the full live ledger. All
+280 profiles with phase-one residue eight retain a rigid phase-one `b=2`
+core. Of these, 66 have phase-zero residue zero and retain rigid `b=0`; the
+other 214 have phase-zero residue eight and retain rigid `b=16`. The global
+gauge and unique-even-fibre contradictions respectively exclude the two
+blocks without reference to their pair slack.
+
+The p17 remainder falls from 507 to 227 profiles, all with phase-one residue
+zero and pair slack at least 96. Their residue split is `(0,0):181`,
+`(7,0):9`, `(8,0):37`. The endpoint and all top-level gates remain open.
+
+Targeted GitHub code and MathOverflow searches found no prior statement of
+the 280-row rigid-anchor sweep. OEIS searches on `507,280,227` and the
+surviving residue counts returned only unrelated isolated matches; they are
+not mathematical evidence.
+
 ---
 
 ## 8. What is not in the older literature

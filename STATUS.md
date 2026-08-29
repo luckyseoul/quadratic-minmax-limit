@@ -1,5 +1,14 @@
 # Status (2026-08-29)
 
+**15.709 PROVED every remaining `p=17,s=16` profile with `u_1=8` is
+impossible, not the endpoint**: all 280 such rows retain at least eight rigid
+phase-one `b=2` directions. The 66 `(u_0,u_1)=(0,8)` rows retain rigid
+phase-zero `b=0` and fail the global gauge comparison. The 214 `(8,8)` rows
+retain rigid phase-zero `b=16` and fail the unique-even-fibre identity. The
+exact p17 ledger drops from 507 to 227 profiles; every survivor has `u_1=0`
+and pair slack at least 96. The endpoint, residual (ii), R1, Type I, and the
+limit remain OPEN.
+
 **15.708 PROVED all 54 pair-slack-twenty-four `p=17,s=16` profiles are
 impossible, not the endpoint**: all 45 `(u_0,u_1)=(0,8)` rows retain rigid
 phase-zero `b=0` and phase-one `b=2` directions; the global-sign identity
