@@ -1752,6 +1752,27 @@ collinear, but its resulting profile `{0:1,16:8}/{16:9}` is absent.
 All fourteen profiles are excluded and the `p=17,s=16` endpoint is closed.
 Residual (ii) and every top-level gate remain open.
 
+Targeted GitHub-code, MathOverflow, literature, and OEIS searches found the
+general theorem but no prior occurrence of the exact nine-undetermined-
+direction, phase-labelled `AG(2,17)` application. Numerical OEIS hits are
+unrelated and have no evidentiary role.
+
+## 7bi. Szőnyi cuts the positive p7 infinity-plus-seven envelope (2026-08-29)
+
+Proposition 15.713 projects the positive-product branch to the two labelled
+multisets of four odd-fibre counts. The phase-zero floors and pair-deficit
+budget leave 1,217 ordered projected `b`-profile pairs. If at least four of
+the eight directions have `b_d=7`, the seven-point affine boundary determines
+at most four directions, so Szőnyi's theorem forces it to be a complete
+affine line. Exactly two labelled line profiles survive. The other 208 pairs
+are excluded, leaving a 1,009-profile projected outer envelope. This does
+not count residue/quotient-labelled states and does not close the branch.
+
+Targeted GitHub-code, MathOverflow, literature, and OEIS searches found the
+general theorem but no prior occurrence of this exact `p=7` application,
+histogram, or reduction. Numerical OEIS matches are unrelated and have no
+evidentiary role.
+
 ---
 
 ## 8. What is not in the older literature
@@ -1833,7 +1854,7 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 64. K. Momihara and S. Suda, *Conference matrices with maximum excess and two-intersection sets*, [arXiv:1611.01305](https://arxiv.org/abs/1611.01305) (Proposition 1.1 gives the arithmetic maximum-excess bound used to delimit the Mathon fixed-gap route).
 65. E. B. Al-Zangana, *The Geometry of the Plane of Order Nineteen and its Application to Error-Correcting Codes*, PhD thesis, University of Sussex, 2011, Chapter 4, Section 4.22, p. 105 (exhaustive `PG(2,19)` 14-arc class counts and the `c1<=4` bound used in 15.693).
 66. Y. Filmus and A. Vinciguerra, short note on the restriction threshold for bounded-degree functions on slices, linked from [Filmus's publication page](https://yuvalfilmus.cs.technion.ac.il/publications/papers/) (the page states the arithmetic-progression, hence Boolean, restriction-threshold result; the linked PDF was inaccessible during the 15.697 audit, so the result is used only conditionally).
-67. T. Szőnyi, *On the number of directions determined by a set of points in an affine Galois plane*, J. Combin. Theory Ser. A **74** (1996), 141--146 (the `k<=p` direction bound used in 15.712).
+67. T. Szőnyi, *On the number of directions determined by a set of points in an affine Galois plane*, J. Combin. Theory Ser. A **74** (1996), 141--146, [doi:10.1006/jcta.1996.0042](https://doi.org/10.1006/jcta.1996.0042) (the `k<=p` direction bound used in 15.712).
 68. G. Somlai, *A new proof of Rédei's theorem on the number of directions*, Arch. Math. **122** (2024), 575--580, [doi:10.1007/s00013-024-01979-x](https://doi.org/10.1007/s00013-024-01979-x) (modern explicit restatement of Szőnyi's bound and proof context).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

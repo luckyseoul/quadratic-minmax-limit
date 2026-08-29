@@ -52,3 +52,10 @@ Arch. Math. 122 (2024), 575--580.
 The exact p17 ledger falls from fourteen profiles to zero. This closes the
 `p=17,s=16` second all-finite endpoint. It does not by itself close residual
 (ii), R1, Type I, or the limit. No solver or new classification is used.
+
+Targeted GitHub-code, MathOverflow, literature, and OEIS searches found the
+general Szőnyi theorem but no prior occurrence of this exact phase-labelled
+`AG(2,17)` application. OEIS matches on `16,9` are unrelated. This search is
+context for attribution, not mathematical evidence or a formal priority
+claim. The original paper DOI is
+[10.1006/jcta.1996.0042](https://doi.org/10.1006/jcta.1996.0042).

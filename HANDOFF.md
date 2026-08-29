@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-29 (through 15.712; both `p=19,s=16` and `p=17,s=16`
+**Date:** 2026-08-29 (through 15.713; both `p=19,s=16` and `p=17,s=16`
 are closed; no
 general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
@@ -30,6 +30,22 @@ for both signs. This is not all of the projective size-eight case: the
 separate infinity-plus-seven profile remains open. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.713 — positive p7 infinity-plus-seven direction reduction
+
+For the seven-point affine part of this boundary, `b_d=7` is exactly an
+undetermined direction. The positive-product phase-zero floors project to
+35 odd-fibre-count multisets per labelled type and 1,217 ordered pairs after
+the pair-deficit budget. Their undetermined-direction histogram is
+`{0:217,1:300,2:280,3:210,4:126,5:56,6:21,7:6,8:1}`.
+
+Szőnyi requires a noncollinear seven-set in `AG(2,7)` to determine at least
+five directions. Thus at least four undetermined directions force a line.
+Exactly two labelled line profiles survive among those 210 projected pairs,
+so 208 are excluded and the projected outer envelope falls from 1,217 to
+1,009. These are projected `b`-profiles, not residue/quotient-labelled state
+counts. The positive and negative branches, residual (ii), and all top-level
+gates remain open.
 
 ## 15.712 — the p17 second all-finite endpoint is closed
 

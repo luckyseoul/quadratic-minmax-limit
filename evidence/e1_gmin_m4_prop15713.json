@@ -1,0 +1,73 @@
+{
+  "boundary": "infinity plus seven finite points",
+  "common_phase": 0,
+  "counts_residue_quotient_labelled_states": false,
+  "directions_per_type": 4,
+  "excluded_undetermined_direction_histogram": {
+    "4": 126,
+    "5": 56,
+    "6": 21,
+    "7": 4,
+    "8": 1
+  },
+  "four_undetermined_directions_force_collinear": true,
+  "labelled_collinear_profiles": [
+    {
+      "type_one": {
+        "7": 4
+      },
+      "type_zero": {
+        "1": 1,
+        "7": 3
+      }
+    },
+    {
+      "type_one": {
+        "1": 1,
+        "7": 3
+      },
+      "type_zero": {
+        "7": 4
+      }
+    }
+  ],
+  "negative_p7_infinity_plus_seven_changed": false,
+  "one_type_profile_count": 35,
+  "ordered_profile_count_before_pair_budget": 1225,
+  "p": 7,
+  "phase_zero_floors": {
+    "1": 8,
+    "3": 8,
+    "5": 8,
+    "7": 0
+  },
+  "positive_p7_infinity_plus_seven_closed": false,
+  "product_sign": "positive",
+  "projected_b_profile_count_after": 1009,
+  "projected_b_profile_count_before": 1217,
+  "projected_b_profiles_excluded_here": 208,
+  "proposition": "15.713",
+  "proved_analytically": true,
+  "remaining_undetermined_direction_histogram": {
+    "0": 217,
+    "1": 300,
+    "2": 280,
+    "3": 210,
+    "7": 2
+  },
+  "szonyi_noncollinear_minimum_directions": 5,
+  "top_level_gates_changed": false,
+  "type_budget": 32,
+  "undetermined_direction_histogram_before": {
+    "0": 217,
+    "1": 300,
+    "2": 280,
+    "3": 210,
+    "4": 126,
+    "5": 56,
+    "6": 21,
+    "7": 6,
+    "8": 1
+  },
+  "uses_solver": false
+}

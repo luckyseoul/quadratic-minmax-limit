@@ -1,5 +1,13 @@
 # Status (2026-08-29)
 
+**15.713 PROVED a strict positive-branch `p=7` infinity-plus-seven
+reduction, not closure**: the exhaustive projected `b`-profile envelope has
+1,217 ordered pairs. A direction with `b_d=7` is undetermined by the
+seven-point affine boundary; Szőnyi's theorem forces every profile with at
+least four such directions to be collinear. Only two labelled line profiles
+survive, excluding 208 projected pairs and leaving 1,009. The negative
+branch, this endpoint, residual (ii), R1, Type I, and the limit remain OPEN.
+
 **15.712 PROVED the complete `p=17,s=16` endpoint is CLOSED**: every one
 of the fourteen rows left by 15.711 has phase-one profile `{16:9}`. Each
 `b=16` direction has sixteen singleton boundary fibres and is therefore not
