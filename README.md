@@ -23,39 +23,50 @@ banned by test (`tests/test_main_chain_docs.py`).
 
 **Main claim:** L = lim_n α_n is **OPEN** (2026-08-29).
 
-**2026-08-29 cold-audit correction.** The limit only needs a Paley-tail
-deficit \(\Phi(C_p)-m_{p^2+1}=o(p^3)\) on a ratio-dense tail; the current
-all-prime gap-2 four-unit gate is one strictly stronger sufficient route.
-The Hamming-stability alternative has also been narrowed: local edge
-optimality, switching-minimality, Max-Lipschitz, and all product second moments
-can coexist at distance \(\Theta(n^2)\) from Paley. Any such proof must use
-closest global/cardinality minimality (which gives an all-subsets witness
-hierarchy) or attack the augmented cut code through a signed-Eulerian
-free-energy inequality above the fractional-moment barrier. The originally
-proposed `c=2` target is false; the clean surviving target is `c=3` with
-`log P_a(tanh(3/sqrt(n))) >= -3n/4-o(n)`. The full-Max+ dilation energy has
-also been normalized exactly: it is strong R1 itself, and character/PSD
-positivity alone cannot bound it. The `p=19` profiles have an exact binary
-affine-Radon normal form, and 15.693 excludes the full seven-profile
-slack-16 block. Proposition 15.694 puts every slack-20 witness into an exact
-11-arc plus 5-arc equality normal form. Proposition 15.695 then uses exact
-phase-one floor equality and a full-rank three-layer Johnson certificate to
-exclude both `b=14` rows. Five profiles remain; parity-level linear
-compatibility, mod-four weight, and second moments alone do not close them.
-Proposition 15.696 then classifies both integral normal-form orbits of the
-remaining slack-20 `b=16` direction and excludes all twenty exact edge-lift
-shards. Proposition 15.697 treats the all-`b=2` slack-20 row: its elevated
-quadratic lift is unconditionally Boolean, and five rigid phase-zero
-directions reduce its infinity degree to `0,20,38`. A `2^18` additive-matrix
-exhaustion certifies the Booleanization; bounded edge-lift runs remain
-`UNKNOWN`, so 15.697 itself removes no profile. Proposition 15.698 then uses
-the exact affine-Radon inverse and forced five-deletion repair structure;
-independent completed native-XOR runs on nuka and soulkiller return `UNSAT`,
-closing the all-`b=2` row. Proposition 15.699 applies the exact affine-Radon
-profile model to the remaining slack-24, -28, and -32 rows; completed runs
-on nuka, jellyfin, and soulkiller ECC are all `UNSAT`, closing the entire
-p=19 endpoint. See
+### Current audit (2026-08-29)
+
+- **Required asymptotic target.** It is enough to prove the Paley-tail deficit
+  \(\Phi(C_p)-m_{p^2+1}=o(p^3)\) on a ratio-dense tail. The current all-prime,
+  gap-2, four-unit gate is a strictly stronger sufficient route.
+- **Hamming-stability route.** Local edge optimality, switching minimality,
+  Max-Lipschitz control, and all product second moments can coexist at distance
+  \(\Theta(n^2)\) from Paley. A successful proof must instead use closest
+  global/cardinality minimality (and its all-subsets witness hierarchy), or an
+  augmented-cut-code signed-Eulerian free-energy inequality above the
+  fractional-moment barrier. The proposed `c=2` target is false; the surviving
+  target is `c=3` with
+  `log P_a(tanh(3/sqrt(n))) >= -3n/4-o(n)`.
+- **Spectral/R1 route.** The full-Max+ dilation energy is exactly strong R1;
+  character and PSD positivity alone cannot bound it.
+- **Non-Walsh endpoint at `p=19`.** Propositions 15.693--15.699 give an exact
+  binary affine-Radon reduction, eliminate the slack-16 and slack-20 rows, and
+  close the slack-24, -28, and -32 rows. The final native-XOR certificates were
+  completed independently on nuka, jellyfin, and soulkiller ECC; the complete
+  `p=19` endpoint is closed.
+- **Non-Walsh endpoint at `p=17`.** Propositions 15.700--15.705 reduce the exact
+  ledger from 1,575 to 641 profiles: two slack-zero profiles and 639 profiles
+  of slack at least 20 remain.
+
+The full correction and supporting certificates are recorded in
 `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md`.
+
+## Expected solution architecture
+
+![Parametric CAD model of the expected proof architecture](evidence/share/expected-solution-structure.png)
+
+This is a deterministic CAD map of the proof architecture, not a claim that
+the limiting object is literally spherical:
+
+- the **blue hemisphere** is the spectral/QVAR--R1 front;
+- the **gold hemisphere** is the finite-incidence, conic, and secant structure
+  of the non-Walsh front;
+- the **white great-circle seam** is the implication chain joining the fronts;
+- the **top notch** is the still-open pair of gates preventing closure.
+
+The editable model is available as
+[`expected-solution-structure.step`](evidence/share/expected-solution-structure.step),
+and its parametric source is
+[`render_expected_solution_cad.py`](scripts/render_expected_solution_cad.py).
 
 Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 `four_e1_units_closed()` ledger is:
