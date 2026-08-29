@@ -1,5 +1,14 @@
 # Status (2026-08-29)
 
+**15.712 PROVED the complete `p=17,s=16` endpoint is CLOSED**: every one
+of the fourteen rows left by 15.711 has phase-one profile `{16:9}`. Each
+`b=16` direction has sixteen singleton boundary fibres and is therefore not
+determined by the boundary, so at most nine directions are determined.
+Szőnyi's theorem requires at least ten for a noncollinear sixteen-point set
+in `AG(2,17)`. The collinear alternative has phase-labelled profile
+`{0:1,16:8}/{16:9}`, absent from the ledger. All fourteen rows are
+impossible. Residual (ii), R1, Type I, and the limit remain OPEN.
+
 **15.711 PROVED all five remaining `(u_0,u_1)=(0,0)` `p=17,s=16`
 profiles are impossible, not the endpoint**: avoiding 15.710's rigid
 phase-zero `b=0` anchor spends every free quotient increment and forces mean

@@ -1,7 +1,7 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-29 (through 15.711; `p=19,s=16` is closed, and the exact
-`p=17,s=16` remainder is fourteen profiles; no
+**Date:** 2026-08-29 (through 15.712; both `p=19,s=16` and `p=17,s=16`
+are closed; no
 general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
@@ -30,6 +30,22 @@ for both signs. This is not all of the projective size-eight case: the
 separate infinity-plus-seven profile remains open. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.712 — the p17 second all-finite endpoint is closed
+
+Every one of the fourteen rows left by 15.711 has phase-one profile
+`{16:9}`. For a sixteen-point affine boundary, `b_d=16` means that sixteen
+fibres are singletons, so direction `d` is not determined by any boundary
+pair. The nine phase-one directions are therefore undetermined and the
+boundary determines at most nine directions.
+
+Szőnyi's sharp theorem gives at least `(16+3)/2`, hence ten, determined
+directions for a noncollinear sixteen-point subset of `AG(2,17)`. Thus the
+boundary would have to be collinear. A line minus one point has unique
+phase-labelled profile `{0:1,16:8}/{16:9}`, which is absent from the exact
+remainder. All fourteen profiles are impossible. This closes the
+`p=17,s=16` endpoint without a solver or new classification. Residual (ii)
+and all top-level gates remain open.
 
 ## 15.711 — the five p17 residue-zero profiles are excluded
 

@@ -1739,6 +1739,19 @@ character-sum, spectral, and equitable-partition literature contains no
 matching exclusion. OEIS matches for `6,24,42,60` and `2,19,36,53` are
 unrelated numerical coincidences and have no evidentiary role.
 
+## 7bh. Szőnyi's direction bound closes the p17 endpoint (2026-08-29)
+
+Proposition 15.712 observes that all fourteen rows left by 15.711 have
+phase-one profile `{16:9}`. For a sixteen-point affine set, `b_d=16` forces
+sixteen singleton fibres, so none of those nine directions is determined.
+The boundary therefore determines at most nine directions. Szőnyi's theorem
+requires a noncollinear `k<=p` subset of `AG(2,p)` to determine at least
+`(k+3)/2` directions, which is ten at `(k,p)=(16,17)`. The boundary must be
+collinear, but its resulting profile `{0:1,16:8}/{16:9}` is absent.
+
+All fourteen profiles are excluded and the `p=17,s=16` endpoint is closed.
+Residual (ii) and every top-level gate remain open.
+
 ---
 
 ## 8. What is not in the older literature
@@ -1820,5 +1833,7 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 64. K. Momihara and S. Suda, *Conference matrices with maximum excess and two-intersection sets*, [arXiv:1611.01305](https://arxiv.org/abs/1611.01305) (Proposition 1.1 gives the arithmetic maximum-excess bound used to delimit the Mathon fixed-gap route).
 65. E. B. Al-Zangana, *The Geometry of the Plane of Order Nineteen and its Application to Error-Correcting Codes*, PhD thesis, University of Sussex, 2011, Chapter 4, Section 4.22, p. 105 (exhaustive `PG(2,19)` 14-arc class counts and the `c1<=4` bound used in 15.693).
 66. Y. Filmus and A. Vinciguerra, short note on the restriction threshold for bounded-degree functions on slices, linked from [Filmus's publication page](https://yuvalfilmus.cs.technion.ac.il/publications/papers/) (the page states the arithmetic-progression, hence Boolean, restriction-threshold result; the linked PDF was inaccessible during the 15.697 audit, so the result is used only conditionally).
+67. T. Szőnyi, *On the number of directions determined by a set of points in an affine Galois plane*, J. Combin. Theory Ser. A **74** (1996), 141--146 (the `k<=p` direction bound used in 15.712).
+68. G. Somlai, *A new proof of Rédei's theorem on the number of directions*, Arch. Math. **122** (2024), 575--580, [doi:10.1007/s00013-024-01979-x](https://doi.org/10.1007/s00013-024-01979-x) (modern explicit restatement of Szőnyi's bound and proof context).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).
