@@ -23,6 +23,7 @@ import argparse
 import concurrent.futures
 import functools
 import json
+import os
 import sys
 import time
 from pathlib import Path
@@ -40,6 +41,12 @@ from e1_gmin_m4_prop15688 import p19_residue_zero_profiles  # noqa: E402
 
 P = 19
 SIZE = 16
+
+
+def atomic_write(path: Path, payload: object) -> None:
+    temporary = path.with_name(f".{path.name}.{os.getpid()}.{time.time_ns()}.tmp")
+    temporary.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
+    os.replace(temporary, path)
 
 
 def survivor_profiles() -> list[dict[str, object]]:
@@ -570,7 +577,7 @@ def main() -> None:
     rendered = json.dumps(result, indent=2, sort_keys=True)
     print(rendered, flush=True)
     if args.output is not None:
-        args.output.write_text(rendered + "\n")
+        atomic_write(args.output, result)
 
 
 if __name__ == "__main__":

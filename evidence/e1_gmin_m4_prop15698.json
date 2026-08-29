@@ -1,0 +1,91 @@
+{
+  "L_status": "OPEN",
+  "all_p19_slack_twenty_profiles_closed": true,
+  "certificate": {
+    "model": {
+      "affine_line_parity_variables": 380,
+      "all_completed_unsat": true,
+      "normalization": "choose a retained core point and its partner on any b=0 phase-zero line, then apply a square affine similarity to 0,1",
+      "point_variables": 361,
+      "radon_equations": "r=A*x and x=A^T*r over F_2",
+      "raw_runs": [
+        {
+          "file": "nuka.json",
+          "sha256": "cb38e482d3610e214c23364711937fdce8e969caec9242ba80bb38cbcac5e4c9",
+          "solve_seconds": 174.07677388191223,
+          "solver_status": "UNSATISFIABLE",
+          "threads": 8
+        },
+        {
+          "file": "soulkiller_ecc.json",
+          "sha256": "a580391837db13d890a46bf7cd0f55c677fd9e4f5e653dd120d6b9349fb21935",
+          "solve_seconds": 160.8922462463379,
+          "solver_status": "UNSATISFIABLE",
+          "threads": 16
+        }
+      ]
+    },
+    "profile": {
+      "arc": false,
+      "global_b_profile": {
+        "0": 5,
+        "2": 10,
+        "16": 5
+      },
+      "pair_slack": 20,
+      "phase_deficits": {
+        "0": 80,
+        "1": 140
+      },
+      "phase_profiles_b": {
+        "0": {
+          "0": 5,
+          "16": 5
+        },
+        "1": {
+          "2": 10
+        }
+      },
+      "undetermined_directions": 5
+    },
+    "profile_excluded": true,
+    "proved_computationally": true,
+    "repair_normal_form": {
+      "core_is_arc": true,
+      "core_size": 11,
+      "deleted_core_secant_multiplicities": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "deleted_is_arc": true,
+      "deleted_size": 5,
+      "global_slack_equality": "slack(S)=4*sum_{x in D} mu_A(x)=20"
+    },
+    "sign_transfer": {
+      "admissible_infinity_degrees": [
+        0,
+        20,
+        38
+      ],
+      "both_c_H_signs_excluded": true,
+      "finite_finite_edge_count_is_odd": true,
+      "nonsquare_dilation_flips_c_H_and_direction_type": true
+    }
+  },
+  "closes_R1": false,
+  "closes_residual_ii": false,
+  "closes_type_I": false,
+  "p19_profiles_after": 3,
+  "p19_profiles_before": 4,
+  "p19_second_all_finite_endpoint_closed": false,
+  "proposition": "15.698",
+  "proved": true,
+  "remaining_slack_histogram": {
+    "24": 1,
+    "28": 1,
+    "32": 1
+  }
+}

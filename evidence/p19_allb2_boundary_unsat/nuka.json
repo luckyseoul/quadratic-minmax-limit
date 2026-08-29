@@ -1,0 +1,43 @@
+{
+  "build_seconds": 0.37661099433898926,
+  "cardinality_constraints": 776,
+  "clauses": 1184892,
+  "elapsed_seconds": 174.453387260437,
+  "experiment": "p19_second_boundary_profile_cryptominisat",
+  "feasible_boundary_profile": false,
+  "finite_infeasibility_only": true,
+  "fixed_phase_zero_b16_slots": null,
+  "native_xor_constraints": 741,
+  "normalization": {
+    "b": 0,
+    "c_H": -1,
+    "direction": [
+      0,
+      1
+    ],
+    "mode": "phase-zero-b0-pair",
+    "phase": 0,
+    "selected_points": [
+      0,
+      1
+    ]
+  },
+  "pair_slack": 20,
+  "phase_profiles_b": {
+    "0": {
+      "0": 5,
+      "16": 5
+    },
+    "1": {
+      "2": 10
+    }
+  },
+  "profile_index": 3,
+  "repair_five_constraints": true,
+  "semantic_variables": 2253,
+  "solve_seconds": 174.07677388191223,
+  "solver": "cryptominisat-native-xor",
+  "solver_status": "UNSATISFIABLE",
+  "threads": 8,
+  "total_variables": 66822
+}

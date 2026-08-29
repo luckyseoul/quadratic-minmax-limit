@@ -1417,6 +1417,22 @@ HTTP 403 during this audit, so the catalog is not used as unconditional
 evidence. Bounded edge-lift trials returned `UNKNOWN`; no profile or
 top-level gate closes in 15.697.
 
+## 7at. The p=19 slack-twenty block closes (2026-08-29)
+
+Proposition 15.698 imports 15.694's forced 11-arc plus five-deletion repair
+into the exact binary affine-Radon model for the final all-`b=2` profile.
+The model has 1,184,892 clauses, 741 native XOR equations, and 776 exact
+cardinality constraints. CryptoMiniSat 5.11.21 returned `UNSATISFIABLE` on
+nuka and independently on soulkiller's registered-ECC CPU. The lossless
+normalization chooses a retained core point and its partner on a phase-zero
+`b=0` line and sends them to zero and one by a square affine similarity.
+
+Thus the boundary itself is impossible; this is not an edge-lift timeout.
+Nonsquare dilation transfers the two product signs. All p=19 slack-twenty
+profiles are closed, reducing the endpoint from four profiles to three with
+histogram `{24:1,28:1,32:1}`. The endpoint and every top-level gate remain
+open.
+
 ---
 
 ## 8. What is not in the older literature
