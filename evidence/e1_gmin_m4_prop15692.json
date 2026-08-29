@@ -1,0 +1,508 @@
+{
+  "L_status": "OPEN",
+  "additional_linear_compatibility_conditions": 0,
+  "all_profiles_pass_inverse_weight_mod_four": true,
+  "boundary_size": 16,
+  "closes_R1": false,
+  "closes_residual_ii": false,
+  "closes_type_I": false,
+  "exact_remaining_condition": "choose line-parity blocks with the prescribed phase weights and require wt(A^T r)=16",
+  "p": 19,
+  "p19_second_all_finite_endpoint_closed": false,
+  "pairwise_independence_or_second_moments_can_close": false,
+  "profile_count": 14,
+  "proposition": "15.692",
+  "proved": true,
+  "radon_theorem": {
+    "affine_line_count": 380,
+    "common_lines_for_distinct_points": 1,
+    "direction_count": 20,
+    "incidence_gram_over_F2": "A^T A = I + J",
+    "injective": true,
+    "inverse": "x = A^T r",
+    "line_size": 19,
+    "p": 19,
+    "point_count": 361,
+    "point_degree": 20,
+    "proved": true,
+    "restriction": "even-weight point space",
+    "source_dimension": 360,
+    "surjective_by_equal_dimension": true,
+    "target": "direct sum of even-weight line blocks by direction",
+    "target_dimension": 360
+  },
+  "rows": [
+    {
+      "all_even_second_moment_witness": {
+        "4": "87/361",
+        "6": "206/361",
+        "8": "68/361"
+      },
+      "cross_direction_line_intersections": 5516,
+      "global_b_profile": {
+        "0": 5,
+        "14": 1,
+        "16": 5,
+        "2": 9
+      },
+      "inverse_weight_mod_four": 0,
+      "mod_four_compatible": true,
+      "pair_slack": 32,
+      "phase_profiles_b": {
+        "0": {
+          "0": 5,
+          "16": 5
+        },
+        "1": {
+          "14": 1,
+          "2": 9
+        }
+      },
+      "profile_index": 0,
+      "second_moments_force_positive_odd_density": false,
+      "selected_affine_lines_in_radon_word": 112,
+      "stripe_count_first_moment": "112/19",
+      "stripe_count_second_factorial_moment": "11032/361",
+      "target_weight_mod_four": 0
+    },
+    {
+      "all_even_second_moment_witness": {
+        "4": "225/722",
+        "6": "193/361",
+        "8": "111/722"
+      },
+      "cross_direction_line_intersections": 5124,
+      "global_b_profile": {
+        "0": 5,
+        "10": 1,
+        "16": 5,
+        "2": 9
+      },
+      "inverse_weight_mod_four": 0,
+      "mod_four_compatible": true,
+      "pair_slack": 28,
+      "phase_profiles_b": {
+        "0": {
+          "0": 5,
+          "16": 5
+        },
+        "1": {
+          "10": 1,
+          "2": 9
+        }
+      },
+      "profile_index": 1,
+      "second_moments_force_positive_odd_density": false,
+      "selected_affine_lines_in_radon_word": 108,
+      "stripe_count_first_moment": "108/19",
+      "stripe_count_second_factorial_moment": "10248/361",
+      "target_weight_mod_four": 0
+    },
+    {
+      "all_even_second_moment_witness": {
+        "4": "138/361",
+        "6": "180/361",
+        "8": "43/361"
+      },
+      "cross_direction_line_intersections": 4732,
+      "global_b_profile": {
+        "0": 5,
+        "16": 5,
+        "2": 9,
+        "6": 1
+      },
+      "inverse_weight_mod_four": 0,
+      "mod_four_compatible": true,
+      "pair_slack": 24,
+      "phase_profiles_b": {
+        "0": {
+          "0": 5,
+          "16": 5
+        },
+        "1": {
+          "2": 9,
+          "6": 1
+        }
+      },
+      "profile_index": 2,
+      "second_moments_force_positive_odd_density": false,
+      "selected_affine_lines_in_radon_word": 104,
+      "stripe_count_first_moment": "104/19",
+      "stripe_count_second_factorial_moment": "9464/361",
+      "target_weight_mod_four": 0
+    },
+    {
+      "all_even_second_moment_witness": {
+        "4": "327/722",
+        "6": "167/361",
+        "8": "61/722"
+      },
+      "cross_direction_line_intersections": 4340,
+      "global_b_profile": {
+        "0": 5,
+        "16": 5,
+        "2": 10
+      },
+      "inverse_weight_mod_four": 0,
+      "mod_four_compatible": true,
+      "pair_slack": 20,
+      "phase_profiles_b": {
+        "0": {
+          "0": 5,
+          "16": 5
+        },
+        "1": {
+          "2": 10
+        }
+      },
+      "profile_index": 3,
+      "second_moments_force_positive_odd_density": false,
+      "selected_affine_lines_in_radon_word": 100,
+      "stripe_count_first_moment": "100/19",
+      "stripe_count_second_factorial_moment": "8680/361",
+      "target_weight_mod_four": 0
+    },
+    {
+      "all_even_second_moment_witness": {
+        "4": "339/722",
+        "6": "155/361",
+        "8": "73/722"
+      },
+      "cross_direction_line_intersections": 4364,
+      "global_b_profile": {
+        "0": 5,
+        "14": 1,
+        "16": 4,
+        "2": 9,
+        "4": 1
+      },
+      "inverse_weight_mod_four": 0,
+      "mod_four_compatible": true,
+      "pair_slack": 20,
+      "phase_profiles_b": {
+        "0": {
+          "0": 5,
+          "16": 4,
+          "4": 1
+        },
+        "1": {
+          "14": 1,
+          "2": 9
+        }
+      },
+      "profile_index": 4,
+      "second_moments_force_positive_odd_density": false,
+      "selected_affine_lines_in_radon_word": 100,
+      "stripe_count_first_moment": "100/19",
+      "stripe_count_second_factorial_moment": "8728/361",
+      "target_weight_mod_four": 0
+    },
+    {
+      "all_even_second_moment_witness": {
+        "4": "207/361",
+        "6": "118/361",
+        "8": "36/361"
+      },
+      "cross_direction_line_intersections": 4020,
+      "global_b_profile": {
+        "0": 5,
+        "10": 1,
+        "16": 4,
+        "2": 9,
+        "4": 1
+      },
+      "inverse_weight_mod_four": 0,
+      "mod_four_compatible": true,
+      "pair_slack": 16,
+      "phase_profiles_b": {
+        "0": {
+          "0": 5,
+          "16": 4,
+          "4": 1
+        },
+        "1": {
+          "10": 1,
+          "2": 9
+        }
+      },
+      "profile_index": 5,
+      "second_moments_force_positive_odd_density": false,
+      "selected_affine_lines_in_radon_word": 96,
+      "stripe_count_first_moment": "96/19",
+      "stripe_count_second_factorial_moment": "8040/361",
+      "target_weight_mod_four": 0
+    },
+    {
+      "all_even_second_moment_witness": {
+        "4": "341/722",
+        "6": "153/361",
+        "8": "75/722"
+      },
+      "cross_direction_line_intersections": 4368,
+      "global_b_profile": {
+        "0": 4,
+        "14": 1,
+        "16": 4,
+        "2": 11
+      },
+      "inverse_weight_mod_four": 0,
+      "mod_four_compatible": true,
+      "pair_slack": 20,
+      "phase_profiles_b": {
+        "0": {
+          "0": 4,
+          "16": 4,
+          "2": 2
+        },
+        "1": {
+          "14": 1,
+          "2": 9
+        }
+      },
+      "profile_index": 6,
+      "second_moments_force_positive_odd_density": false,
+      "selected_affine_lines_in_radon_word": 100,
+      "stripe_count_first_moment": "100/19",
+      "stripe_count_second_factorial_moment": "8736/361",
+      "target_weight_mod_four": 0
+    },
+    {
+      "all_even_second_moment_witness": {
+        "4": "208/361",
+        "6": "116/361",
+        "8": "37/361"
+      },
+      "cross_direction_line_intersections": 4024,
+      "global_b_profile": {
+        "0": 4,
+        "10": 1,
+        "16": 4,
+        "2": 11
+      },
+      "inverse_weight_mod_four": 0,
+      "mod_four_compatible": true,
+      "pair_slack": 16,
+      "phase_profiles_b": {
+        "0": {
+          "0": 4,
+          "16": 4,
+          "2": 2
+        },
+        "1": {
+          "10": 1,
+          "2": 9
+        }
+      },
+      "profile_index": 7,
+      "second_moments_force_positive_odd_density": false,
+      "selected_affine_lines_in_radon_word": 96,
+      "stripe_count_first_moment": "96/19",
+      "stripe_count_second_factorial_moment": "8048/361",
+      "target_weight_mod_four": 0
+    },
+    {
+      "all_even_second_moment_witness": {
+        "4": "327/722",
+        "6": "167/361",
+        "8": "61/722"
+      },
+      "cross_direction_line_intersections": 4340,
+      "global_b_profile": {
+        "0": 5,
+        "16": 5,
+        "2": 10
+      },
+      "inverse_weight_mod_four": 0,
+      "mod_four_compatible": true,
+      "pair_slack": 20,
+      "phase_profiles_b": {
+        "0": {
+          "0": 5,
+          "16": 4,
+          "2": 1
+        },
+        "1": {
+          "16": 1,
+          "2": 9
+        }
+      },
+      "profile_index": 8,
+      "second_moments_force_positive_odd_density": false,
+      "selected_affine_lines_in_radon_word": 100,
+      "stripe_count_first_moment": "100/19",
+      "stripe_count_second_factorial_moment": "8680/361",
+      "target_weight_mod_four": 0
+    },
+    {
+      "all_even_second_moment_witness": {
+        "4": "203/361",
+        "6": "126/361",
+        "8": "32/361"
+      },
+      "cross_direction_line_intersections": 4004,
+      "global_b_profile": {
+        "0": 5,
+        "12": 1,
+        "16": 4,
+        "2": 10
+      },
+      "inverse_weight_mod_four": 0,
+      "mod_four_compatible": true,
+      "pair_slack": 16,
+      "phase_profiles_b": {
+        "0": {
+          "0": 5,
+          "16": 4,
+          "2": 1
+        },
+        "1": {
+          "12": 1,
+          "2": 9
+        }
+      },
+      "profile_index": 9,
+      "second_moments_force_positive_odd_density": false,
+      "selected_affine_lines_in_radon_word": 96,
+      "stripe_count_first_moment": "96/19",
+      "stripe_count_second_factorial_moment": "8008/361",
+      "target_weight_mod_four": 0
+    },
+    {
+      "all_even_second_moment_witness": {
+        "4": "197/361",
+        "6": "138/361",
+        "8": "26/361"
+      },
+      "cross_direction_line_intersections": 3980,
+      "global_b_profile": {
+        "0": 6,
+        "14": 1,
+        "16": 4,
+        "2": 9
+      },
+      "inverse_weight_mod_four": 0,
+      "mod_four_compatible": true,
+      "pair_slack": 16,
+      "phase_profiles_b": {
+        "0": {
+          "0": 6,
+          "16": 4
+        },
+        "1": {
+          "14": 1,
+          "2": 9
+        }
+      },
+      "profile_index": 10,
+      "second_moments_force_positive_odd_density": false,
+      "selected_affine_lines_in_radon_word": 96,
+      "stripe_count_first_moment": "96/19",
+      "stripe_count_second_factorial_moment": "7960/361",
+      "target_weight_mod_four": 0
+    },
+    {
+      "all_even_second_moment_witness": {
+        "4": "204/361",
+        "6": "124/361",
+        "8": "33/361"
+      },
+      "cross_direction_line_intersections": 4008,
+      "global_b_profile": {
+        "0": 5,
+        "14": 2,
+        "16": 3,
+        "2": 10
+      },
+      "inverse_weight_mod_four": 0,
+      "mod_four_compatible": true,
+      "pair_slack": 16,
+      "phase_profiles_b": {
+        "0": {
+          "0": 5,
+          "14": 1,
+          "16": 3,
+          "2": 1
+        },
+        "1": {
+          "14": 1,
+          "2": 9
+        }
+      },
+      "profile_index": 11,
+      "second_moments_force_positive_odd_density": false,
+      "selected_affine_lines_in_radon_word": 96,
+      "stripe_count_first_moment": "96/19",
+      "stripe_count_second_factorial_moment": "8016/361",
+      "target_weight_mod_four": 0
+    },
+    {
+      "all_even_second_moment_witness": {
+        "4": "197/361",
+        "6": "138/361",
+        "8": "26/361"
+      },
+      "cross_direction_line_intersections": 3980,
+      "global_b_profile": {
+        "0": 6,
+        "14": 1,
+        "16": 4,
+        "2": 9
+      },
+      "inverse_weight_mod_four": 0,
+      "mod_four_compatible": true,
+      "pair_slack": 16,
+      "phase_profiles_b": {
+        "0": {
+          "0": 6,
+          "14": 1,
+          "16": 3
+        },
+        "1": {
+          "16": 1,
+          "2": 9
+        }
+      },
+      "profile_index": 12,
+      "second_moments_force_positive_odd_density": false,
+      "selected_affine_lines_in_radon_word": 96,
+      "stripe_count_first_moment": "96/19",
+      "stripe_count_second_factorial_moment": "7960/361",
+      "target_weight_mod_four": 0
+    },
+    {
+      "all_even_second_moment_witness": {
+        "4": "203/361",
+        "6": "126/361",
+        "8": "32/361"
+      },
+      "cross_direction_line_intersections": 4004,
+      "global_b_profile": {
+        "0": 5,
+        "12": 1,
+        "16": 4,
+        "2": 10
+      },
+      "inverse_weight_mod_four": 0,
+      "mod_four_compatible": true,
+      "pair_slack": 16,
+      "phase_profiles_b": {
+        "0": {
+          "0": 5,
+          "12": 1,
+          "16": 3,
+          "2": 1
+        },
+        "1": {
+          "16": 1,
+          "2": 9
+        }
+      },
+      "profile_index": 13,
+      "second_moments_force_positive_odd_density": false,
+      "selected_affine_lines_in_radon_word": 96,
+      "stripe_count_first_moment": "96/19",
+      "stripe_count_second_factorial_moment": "8008/361",
+      "target_weight_mod_four": 0
+    }
+  ]
+}

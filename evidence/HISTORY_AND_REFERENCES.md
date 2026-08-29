@@ -1342,6 +1342,24 @@ Full audit and attack map:
 `evidence/STRATEGY_2026-08-29_COLD_REVIEW.md` and
 `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md`.
 
+## 7ap. Binary affine-Radon normal form for p=19 (2026-08-29)
+
+Proposition 15.692 rewrites the fourteen profiles left by 15.689 without a
+solver relaxation. If `A` is the binary affine line-point incidence matrix,
+then `A^T A=I+J` for odd order. It follows by equal dimensions that `A` is
+an isomorphism from even point words to tuples of even directional line
+words, with inverse `x=A^T r`. Thus the p=19 parity-profile problem has no
+unseen linear compatibility condition: its exact remaining equation is
+`wt(A^T r)=16`.
+
+The inverse-weight congruence modulo four accepts every survivor. The fixed
+first two moments of the selected-stripe count also admit exact nonnegative
+distributions supported on the even values `4,6,8`, so pairwise moments
+cannot force positive odd density. This is a rigorous method barrier and
+normal form, not endpoint closure. Searches on binary affine incidence
+codes, odd secants, and Rédei direction methods found adjacent literature
+but no theorem supplying the missing fixed-block inverse-weight bound.
+
 ---
 
 ## 8. What is not in the older literature

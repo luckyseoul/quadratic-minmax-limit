@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-29 (cold theorem audit plus 15.688--15.689; `p=19,s=16` reduced to 14 high-slack profiles; no general flag flipped)
+**Date:** 2026-08-29 (through 15.692; `p=19,s=16` reduced to 14 nonlinear inverse-Radon weight instances; no general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -88,6 +88,19 @@ profiles of slack at most twelve. Exactly fourteen remain:
 
 Closing those fourteen profiles closes the `p=19` endpoint. It does not by
 itself close residual (ii).
+
+## 15.692 — exact binary Radon normal form for the fourteen p=19 profiles
+
+For the binary affine line-point incidence matrix `A`, odd `p` gives
+`A^T A=I+J`. Restricted to even point words, `A` is an isomorphism onto the
+direct sum of the even directional line blocks, with inverse `x=A^T r`.
+Thus a surviving `p=19` profile is realizable exactly when its prescribed
+line-parity block weights can be chosen so that `wt(A^T r)=16`; there are
+no additional linear compatibility equations. All fourteen pass mod four,
+and exact even-support `{4,6,8}` moment witnesses show that first and second
+moments cannot close them. The next finite attack must use exact inverse
+weight or higher line concurrency, not another parity-rank or variance
+relaxation. See `evidence/NOTE_2026-08-29_p19_binary_radon_reduction.md`.
 
 ## 2026-08-29 cold attack map
 

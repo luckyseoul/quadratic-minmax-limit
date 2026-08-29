@@ -8378,3 +8378,42 @@ The fractional-moment construction rules out (15.691.2) for
 No top-level gate is changed.
 
 Evidence: `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md`.
+
+## Proposition 15.692 — binary affine-Radon isomorphism at the p=19 endpoint
+
+Let (A) be the binary line-point incidence matrix of
+(operatorname{AG}(2,p)), with rows grouped by parallel class. For odd
+(p),
+
+\[
+A^{\mathsf T}A=I+J\pmod2.                         \tag{15.692.1}
+\]
+
+Thus (A^{\mathsf T}A=I) on the even-weight point space. The image has
+even weight in each directional block, and the source and target dimensions
+both equal
+
+\[
+p^2-1=(p+1)(p-1).
+\]
+
+Consequently the restricted Radon map is an isomorphism, with inverse
+
+\[
+x=A^{\mathsf T}r.                                \tag{15.692.2}
+\]
+
+For each of the fourteen profiles left by 15.689, the exact finite problem
+is therefore: choose line-parity blocks having the prescribed phase weights
+and impose (operatorname{wt}(A^{\mathsf T}r)=16). There are no further
+linear compatibility equations. All fourteen pass the resulting mod-four
+weight condition. Their fixed first two stripe-count moments also admit
+explicit nonnegative distributions supported entirely on multiplicities
+({4,6,8}), so pairwise independence and second moments cannot force a
+positive odd-parity density.
+
+This is an exact reduction and method barrier, not closure of the endpoint.
+Residual (ii), R1, Type I, and the limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15692.py`,
+`evidence/e1_gmin_m4_prop15692.json`, and `tests/test_prop15692.py`.

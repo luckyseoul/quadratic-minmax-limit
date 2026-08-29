@@ -15,6 +15,16 @@ dilation energy exactly but cannot upper-bound it, and PSD/autocorrelation
 surrogates admit explicit violations. See
 `evidence/STRATEGY_2026-08-29_COLD_REVIEW.md`.
 
+**15.692 PROVED the binary affine-Radon normal form for the fourteen
+remaining `p=19` profiles, not the endpoint**: over `F_2`, the affine
+line-point incidence matrix satisfies `A^T A=I+J`. On even point words it
+is an isomorphism onto the direct sum of the even directional blocks, with
+inverse `x=A^T r`. Hence there are no hidden linear compatibility equations:
+the exact remaining condition is `wt(A^T r)=16`. Every profile passes the
+mod-four inverse-weight test, and exact `{4,6,8}`-supported distributions
+show that its first two stripe-count moments cannot force positive odd
+density. The endpoint and every top-level gate remain OPEN.
+
 **15.688--15.689 PROVED the sharp integral quadratic-lift floor, completed
 the residue-zero census, and reduced the live `p=19,s=16` endpoint to 14
 high-slack profiles, not residual (ii)**:
