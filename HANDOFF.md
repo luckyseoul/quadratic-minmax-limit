@@ -1,7 +1,7 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-29 (through 15.710; `p=19,s=16` is closed, and the exact
-`p=17,s=16` remainder is nineteen profiles; no
+**Date:** 2026-08-29 (through 15.711; `p=19,s=16` is closed, and the exact
+`p=17,s=16` remainder is fourteen profiles; no
 general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
@@ -30,6 +30,24 @@ for both signs. This is not all of the projective size-eight case: the
 separate infinity-plus-seven profile remains open. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.711 — the five p17 residue-zero profiles are excluded
+
+The five `(u_0,u_1)=(0,0)` rows left by 15.710 have phase-one profile
+`{16:9}` and phase-zero profiles `{0:9-2r,2:2r}` for `0<=r<=4`. If a
+phase-zero `b=0` direction stays at quotient zero, 15.710 applies. Avoiding
+that anchor uses every free quotient increment and forces mean 18 in all
+eighteen directions.
+
+The global directional identities then give
+`69-I=9(P_++P_-)`. Since `I` is even, only `I=6,24,42,60` remain. A rigid
+phase-one `b=16` direction forces `P_-=0`, `P_+=7-2k`, and `g=1+2k`, so
+every finite edge is phase one. Nonnegativity of its exact cross-cell counts
+imposes `I<=g+1+15 floor(g/2)`, whose values `2,19,36,53` contradict the
+four candidates. Thus fourteen profiles remain, with residue split
+`(7,0):9,(8,0):5` and slack histogram
+`{96:2,100:3,104:3,108:2,112:2,116:1,128:1}`. No solver or new
+classification is used. The endpoint and all top-level gates remain open.
 
 ## 15.710 — complementary global identities leave nineteen p17 profiles
 

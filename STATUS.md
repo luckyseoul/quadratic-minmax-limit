@@ -1,5 +1,15 @@
 # Status (2026-08-29)
 
+**15.711 PROVED all five remaining `(u_0,u_1)=(0,0)` `p=17,s=16`
+profiles are impossible, not the endpoint**: avoiding 15.710's rigid
+phase-zero `b=0` anchor spends every free quotient increment and forces mean
+18 in every direction. The global directional identities leave only
+`I=6,24,42,60`; each candidate forces every finite edge into phase one, while
+the rigid phase-one `b=16` cells give
+`I<=g+1+15 floor(g/2)`, contradicting all four values. Exactly fourteen
+profiles remain, with residue split `(7,0):9,(8,0):5`. The endpoint,
+residual (ii), R1, Type I, and the limit remain OPEN.
+
 **15.710 PROVED 208 of the 227 remaining `p=17,s=16` profiles are
 impossible, not the endpoint**: every row has nine rigid phase-one `b=16`
 directions. A genuine floor-rigid phase-zero `b=0` anchor excludes 176 rows

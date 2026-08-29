@@ -1719,6 +1719,26 @@ the complementary `17I=12 (mod 72)` gauge contradiction. OEIS returned only
 unrelated arithmetic sequences; those numerical matches have no bearing on
 the proof.
 
+## 7bg. Uniform directional means exclude the five p17 residue-zero rows (2026-08-29)
+
+Proposition 15.711 handles the five `(u_0,u_1)=(0,0)` profiles left by
+15.710. Avoiding its rigid phase-zero `b=0` anchor consumes every free
+quotient increment, so every direction in both phases has mean 18. The two
+global mean identities reduce the infinity degree to `6,24,42,60`. In each
+case the rigid phase-one `b=16` identity forces all finite edges into phase
+one and fixes the gauge `g=1,3,5,7`. Nonnegative cross-cell counts then give
+`I<=g+1+15 floor(g/2)`, with respective upper bounds `2,19,36,53`, excluding
+all four candidates.
+
+The p17 remainder falls from nineteen to fourteen profiles, with residue
+split `(7,0):9,(8,0):5`. The endpoint and all top-level gates remain open.
+
+Targeted GitHub-code and MathOverflow searches found no prior occurrence of
+the exact uniform-mean or fibre-capacity identities. Related Paley graph,
+character-sum, spectral, and equitable-partition literature contains no
+matching exclusion. OEIS matches for `6,24,42,60` and `2,19,36,53` are
+unrelated numerical coincidences and have no evidentiary role.
+
 ---
 
 ## 8. What is not in the older literature
