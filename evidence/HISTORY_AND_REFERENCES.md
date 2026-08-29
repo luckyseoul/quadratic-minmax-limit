@@ -1469,6 +1469,29 @@ they have no evidentiary role. The p=17 endpoint and all top-level gates
 remain open. Targeted literature and OEIS searches found no prior listing of
 the 247-to-2 directional profile reduction.
 
+## 7aw. The p=17 low-positive-slack conic-core reduction (2026-08-29)
+
+Proposition 15.701 uses the same exhaustive p17 arc classification [48], now
+at size fifteen. There is one PGL class of 15-arcs, and conic-minus-three is
+a representative, so every 15-arc is conic-contained.
+
+Pair slack `4r` repairs to an arc after at most `r` deletions. The exact
+profile census shows that the repaired arc reaches size fifteen directly for
+all 227 slack-four profiles, after adjoining one undetermined infinity point
+for 128 of 195 slack-eight profiles, and after adjoining two for 43 of 155
+slack-twelve profiles. If `h<=3` original points lie off the resulting conic,
+retained conic secants force slack at least `4h(6-h)>=20`; if `h=0`, the
+original boundary is itself an arc. Thus all 398 qualifying profiles are
+impossible.
+
+The exact p17 remainder falls from 1,330 to 932 rows: two at slack zero, 67
+at slack eight, 112 at slack twelve, and 751 at slack at least sixteen. The
+endpoint and every top-level gate remain open. Targeted literature searches
+found no prior statement of this profile reduction. OEIS has no matching
+count sequence; the isolated values 398, 932, and 1330 occur together in
+A137707 but its Secondary Wythoff Array construction has no identified
+connection and is not evidence.
+
 ---
 
 ## 8. What is not in the older literature

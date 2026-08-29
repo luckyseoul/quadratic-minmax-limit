@@ -63,7 +63,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, 15.684--15.687 cut `p=23` to 133 exact residue-zero profiles, 15.688--15.699 close the `p=19` endpoint, and 15.700 cuts the exact `p=17` ledger from 1,575 to 1,330 profiles (slack zero 247 to 2); 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the `p=17,23` next-boundary endpoints, later all-finite sizes, and `p=7` infinity-plus-seven remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, 15.684--15.687 cut `p=23` to 133 exact residue-zero profiles, 15.688--15.699 close the `p=19` endpoint, and 15.700--15.701 cut the exact `p=17` ledger from 1,575 to 932 profiles; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the `p=17,23` next-boundary endpoints, later all-finite sizes, and `p=7` infinity-plus-seven remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -396,7 +396,15 @@ affine charts/deleted pairs gives 53 Paley-phase profiles, only two of which
 meet the arithmetic ledger. Both are tangent-at-infinity conic cases. Hence
 245 rows are excluded and the exact p=17 remainder is 1,330 profiles, with
 two zero-slack rows. Exact coefficient-lift runs on those two rows returned
-`UNKNOWN`, so the endpoint remains open.
+`UNKNOWN`, so they supply no evidence. Proposition 15.701 then uses the
+unique classified 15-arc class in `PG(2,17)`. Repair to an arc, followed by
+zero, one, or two undetermined infinity points, puts all 227 slack-four rows,
+128 of 195 slack-eight rows, and 43 of 155 slack-twelve rows on a conic core.
+If `h<=3` original points are off that conic, retained-secant counting forces
+pair slack at least `4h(6-h)>=20`, a contradiction. Another 398 rows are
+excluded, leaving 932 exact profiles: two at slack zero, 67 at slack eight,
+112 at slack twelve, and 751 at slack at least sixteen. The endpoint remains
+open.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -450,7 +458,7 @@ graph TD
     SMALLRANGE --> P11EIGHT["p=11 finite size eight<br/>exact normalized census <b>CLOSED</b> (15.670)"]
     RANGE --> ENDPOINT["infinity + (p-2), every odd-fibre profile<br/>both signs <b>CLOSED for p>=17</b> (15.671--15.674)"]
     RANGE --> FIRSTHALF["first all-finite s above 3(p-1)/4<br/><b>CLOSED for every prime p>=17</b> (15.675, 15.677, 15.678)"]
-    FIRSTHALF --> SECONDFINITE["next all-finite even s<br/><b>CLOSED for p>=43 and p=41,37,31,29,19</b>;<br/>p=23 reduced to 133 profiles;<br/>p=17 reduced to 1,330 profiles (slack zero: 2);<br/>p=17,23 OPEN (15.679--15.700)"]
+    FIRSTHALF --> SECONDFINITE["next all-finite even s<br/><b>CLOSED for p>=43 and p=41,37,31,29,19</b>;<br/>p=23 reduced to 133 profiles;<br/>p=17 reduced to 932 profiles;<br/>p=17,23 OPEN (15.679--15.701)"]
     RANGE --> PARC["infinity + p, pair-deficit equality / p-arcs<br/>both signs <b>CLOSED for p>=17</b> (15.676)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
@@ -649,6 +657,7 @@ square-direction affine-circle words.
 | 15.698 | the exact affine-Radon inverse and forced five-deletion 11-arc repair give a 1,184,892-clause/741-XOR boundary model; completed nuka and soulkiller-ECC runs both return `UNSATISFIABLE` | closes the final p=19 slack-20 row and reduces the endpoint to three profiles `{24:1,28:1,32:1}`; the endpoint and top-level gates remain open |
 | 15.699 | the three remaining p=19 directional profiles are imposed directly in the exact affine-Radon inverse model; five completed native-XOR runs across nuka, jellyfin, and soulkiller ECC return `UNSATISFIABLE` | closes the p=19 second all-finite endpoint; p=17, p=23, later sizes, residual (ii), and all top-level gates remain open |
 | 15.700 | exact p=17 quotient/lift arithmetic gives 1,575 profiles and 247 slack-zero rows; the unique classified 16-arc class is exhausted over 21,267 affine conic-minus-two cases, whose 53 labelled profiles meet the arithmetic ledger in only two tangent cases | excludes 245 p=17 profiles and reduces the endpoint to 1,330 exact rows, including two slack-zero tangent-conic profiles; the endpoint and all top-level gates remain open |
+| 15.701 | the unique p17 15-arc class is conic-derived; arc repair plus up to two undetermined infinity points reaches that class for 398 low-positive-slack rows, while any off-conic remainder forces slack `>=4h(6-h)>=20` | excludes all 227 slack-four rows, 128 slack-eight rows, and 43 slack-twelve rows; 932 exact p17 rows remain and every top-level gate stays open |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -970,6 +979,7 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15671.py` … `prop15683.py` | Complete infinity-plus-`(p-2)` shell exclusion, first all-finite survivor close from `p=17`, infinity-plus-`p` arc-equality close, and second-boundary closure for `p>=43` plus `p=41,37,31,29` |
 | `src/e1_gmin_m4_prop15684.py` … `prop15699.py` | Exact `p=23` and `p=19` next-boundary reductions, classified-arc exclusions, affine-Radon normal form, and complete p=19 endpoint closure |
 | `src/e1_gmin_m4_prop15700.py` | Exact `p=17,s=16` profile ledger and unique-16-arc affine conic census reducing slack zero from 247 profiles to two |
+| `src/e1_gmin_m4_prop15701.py` | Unique-15-arc conic-core reduction excluding 398 low-positive-slack `p=17,s=16` profiles |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |
@@ -1027,6 +1037,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-29_p19_allb2_boundary_unsat.md` | Exact affine-Radon/repair model, two completed native-XOR UNSAT runs, sign transfer, and closure of every p=19 slack-20 profile (15.698) |
 | `evidence/NOTE_2026-08-29_p19_endpoint_boundary_unsat.md` | Five completed native-XOR UNSAT runs excluding the slack-24, -28, and -32 profiles and closing the p=19 endpoint (15.699) |
 | `evidence/NOTE_2026-08-29_p17_second_boundary_slack0_reduction.md` | Exact 1,575-profile p=17 ledger, exhaustive 21,267-case conic-minus-two image, and slack-zero reduction from 247 rows to two (15.700) |
+| `evidence/NOTE_2026-08-29_p17_low_positive_slack_conic_reduction.md` | Unique-15-arc conic-core argument excluding 398 low-positive-slack p17 profiles and reducing the endpoint to 932 rows (15.701) |
 | `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md` | General local-stability counter-mechanism, closest-global hierarchy, Mathon barrier, and corrected signed-Eulerian target after the `c=2` no-go |
 | `evidence/NOTE_2026-08-29_dilation_energy_normalization_and_no_go.md` | Exact R1 dilation-energy identity and representation/PSD/autocorrelation route obstructions |
 | `evidence/STRATEGY_2026-08-29_COLD_REVIEW.md` | Cold reconstruction of the original problem, actual asymptotic gate, killed shortcuts, and bounded four-team Ultra attack |
