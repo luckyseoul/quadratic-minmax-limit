@@ -1,0 +1,24 @@
+{
+  "all_thirteen_profiles_excluded": true,
+  "complete_twelve_arc_orbits": 553,
+  "conditional_on_orbiter_exhaustive_pgl_orbit_census": true,
+  "disjoint_line_affine_chart_cases": 6345,
+  "distinct_core_secant_index_histograms": 351,
+  "distinct_unlabelled_phase_profiles": 317,
+  "experiment": "p17_slack16_orbiter_twelve_arc_extension_census",
+  "extendible_twelve_arc_orbits": 76,
+  "hits": [],
+  "occupancy_pattern_histogram": {
+    "n3=4,n4=0": 47
+  },
+  "occupancy_valid_extensions": 47,
+  "orbiter_build": 3361,
+  "p": 17,
+  "phase_labelled_target_hits": 0,
+  "raw_four_point_extensions_with_core_secant_charge_at_most_four": 97122,
+  "source": "evidence/p17_arcs_d2_reps_lvl_12.csv",
+  "source_sha256": "0a57481731e10d55eb16a24158d57ca738240a9b32d3f66b9a39d85a64f16e24",
+  "target_profile_count": 13,
+  "twelve_arc_orbits": 629,
+  "unique_boundary_rank_sets": 10
+}
