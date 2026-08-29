@@ -1433,6 +1433,20 @@ profiles are closed, reducing the endpoint from four profiles to three with
 histogram `{24:1,28:1,32:1}`. The endpoint and every top-level gate remain
 open.
 
+## 7au. The p=19 second all-finite endpoint closes (2026-08-29)
+
+Proposition 15.699 applies the exact affine-Radon inverse model directly to
+the three profiles left by 15.698. No edge-lift variables, floor relaxation,
+or repair hypothesis is used. Slack 24 is UNSAT on nuka and soulkiller ECC;
+slack 28 is UNSAT on soulkiller ECC; slack 32 is UNSAT on jellyfin and
+soulkiller ECC. Each model has 361 point variables, 380 affine line parity
+variables, 741 native XOR equations, and the exact directional cardinality
+histogram. Nonsquare dilation transfers the two signs.
+
+Consequently the p=19 second all-finite endpoint is closed. The remaining
+next-boundary endpoints are p=17 and p=23; later boundary sizes and all
+top-level gates remain open.
+
 ---
 
 ## 8. What is not in the older literature

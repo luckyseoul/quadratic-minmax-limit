@@ -1,0 +1,157 @@
+{
+  "L_status": "OPEN",
+  "certificate": {
+    "excluded_slacks": [
+      24,
+      28,
+      32
+    ],
+    "model": {
+      "all_completed_unsat": true,
+      "boundary_size": 16,
+      "normalization": "a pair on a phase-zero b=0 line is sent to 0,1 by a square affine similarity",
+      "point_variables": 361,
+      "radon_equations": "r=A*x and x=A^T*r over F_2",
+      "runs": [
+        {
+          "clauses": 119359,
+          "file": "slack24_nuka.json",
+          "pair_slack": 24,
+          "sha256": "154b94df1c192fa7770c715f5bbc4c0c99f529e13c7bc9faf54385eef8bea16e",
+          "solve_seconds": 101.79473996162415,
+          "solver_status": "UNSATISFIABLE",
+          "threads": 8
+        },
+        {
+          "clauses": 119359,
+          "file": "slack24_soulkiller_ecc.json",
+          "pair_slack": 24,
+          "sha256": "0adc5d01c140cedf0c3c5bc01ad9bf2134945cd711c6b61281cbe39daafc784c",
+          "solve_seconds": 121.8349940776825,
+          "solver_status": "UNSATISFIABLE",
+          "threads": 8
+        },
+        {
+          "clauses": 125899,
+          "file": "slack28_soulkiller.json",
+          "pair_slack": 28,
+          "sha256": "5dd0a19d449d74d158c625870a716f19dc2b235a5e6795176c950944c6d7b5d7",
+          "solve_seconds": 79.22770071029663,
+          "solver_status": "UNSATISFIABLE",
+          "threads": 16
+        },
+        {
+          "clauses": 117579,
+          "file": "slack32_jellyfin.json",
+          "pair_slack": 32,
+          "sha256": "b633d52c6edbdabbd7cc765de0f5bd81487621a0f34796014e7640f619936dc5",
+          "solve_seconds": 92.92123913764954,
+          "solver_status": "UNSATISFIABLE",
+          "threads": 8
+        },
+        {
+          "clauses": 117579,
+          "file": "slack32_soulkiller_ecc.json",
+          "pair_slack": 32,
+          "sha256": "b64d63404dcb4406d67077f8a5d02071b89b3b0e38ee32e6b541d1696a74d403",
+          "solve_seconds": 98.27604508399963,
+          "solver_status": "UNSATISFIABLE",
+          "threads": 8
+        }
+      ],
+      "uses_edge_lift_variables": false,
+      "uses_floor_relaxation": false
+    },
+    "profiles": [
+      {
+        "arc": false,
+        "global_b_profile": {
+          "0": 5,
+          "2": 9,
+          "6": 1,
+          "16": 5
+        },
+        "pair_slack": 24,
+        "phase_deficits": {
+          "0": 80,
+          "1": 136
+        },
+        "phase_profiles_b": {
+          "0": {
+            "0": 5,
+            "16": 5
+          },
+          "1": {
+            "2": 9,
+            "6": 1
+          }
+        },
+        "undetermined_directions": 5
+      },
+      {
+        "arc": false,
+        "global_b_profile": {
+          "0": 5,
+          "2": 9,
+          "10": 1,
+          "16": 5
+        },
+        "pair_slack": 28,
+        "phase_deficits": {
+          "0": 80,
+          "1": 132
+        },
+        "phase_profiles_b": {
+          "0": {
+            "0": 5,
+            "16": 5
+          },
+          "1": {
+            "2": 9,
+            "10": 1
+          }
+        },
+        "undetermined_directions": 5
+      },
+      {
+        "arc": false,
+        "global_b_profile": {
+          "0": 5,
+          "2": 9,
+          "14": 1,
+          "16": 5
+        },
+        "pair_slack": 32,
+        "phase_deficits": {
+          "0": 80,
+          "1": 128
+        },
+        "phase_profiles_b": {
+          "0": {
+            "0": 5,
+            "16": 5
+          },
+          "1": {
+            "2": 9,
+            "14": 1
+          }
+        },
+        "undetermined_directions": 5
+      }
+    ],
+    "proved_computationally": true,
+    "sign_transfer": {
+      "both_c_H_signs_excluded": true,
+      "nonsquare_dilation_flips_eps_and_c_H_together": true
+    }
+  },
+  "closes_R1": false,
+  "closes_residual_ii": false,
+  "closes_type_I": false,
+  "p19_profiles_after": 0,
+  "p19_profiles_before": 3,
+  "p19_second_all_finite_endpoint_closed": true,
+  "proposition": "15.699",
+  "proved": true,
+  "remaining_slack_histogram": {}
+}
