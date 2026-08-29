@@ -206,6 +206,12 @@ classified secant-index distribution of 14-arcs in `PG(2,19)`. Seven rows
 remain with histogram \(\{20:4,24:1,28:1,32:1\}\). In particular, each
 slack-20 row now requires all five repair deletions.
 
+Proposition 15.694 resolves the resulting equality case. Every slack-20
+witness is an 11-arc plus a 5-arc, each deleted point lies on one core
+secant, and only three bad-line patterns remain: `5x3`, `1x4+3x3`, or
+`2x4+1x3`. The associated 13-arcs satisfy `c1>=7` or `8`; the classified
+maximum 9 does not finish the exclusion.
+
 ## 5. The bounded Ultra attack
 
 The next pass should use three proof teams and one red team, with no branch
@@ -215,9 +221,9 @@ allowed to widen its target.
    energy inequality (5). This is the highest leverage target because it
    joins principal R1 and Type I.
 2. **Residual front:** attack only the seven \(p=19\) profiles left by
-   15.693, starting with the four exact five-deletion slack-20 rows, then
-   stop. If they close, move to the existing \(p=17\) row; do not generate
-   later shells.
+   15.693, starting with 15.694's three equality-case bad-line patterns,
+   then stop. If they close, move to the existing \(p=17\) row; do not
+   generate later shells.
 3. **Global team:** attack either the all-subsets hierarchy (4) or the
    signed-Eulerian free-energy inequality (3), with the acceptance condition
    being the actual asymptotic deficit (1), not exact gap two.

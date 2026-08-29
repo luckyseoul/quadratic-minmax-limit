@@ -15,6 +15,16 @@ dilation energy exactly but cannot upper-bound it, and PSD/autocorrelation
 surrogates admit explicit violations. See
 `evidence/STRATEGY_2026-08-29_COLD_REVIEW.md`.
 
+**15.694 PROVED the exact equality normal form for all four pair-slack-20
+`p=19,s=16` profiles, not their exclusion**: every witness must split as an
+11-arc `A` and a 5-arc `D`. Each deleted point lies on exactly one `A`-
+secant, and line equality permits only `(a,d)=(0,0..2),(1,0..1),(2,0..2)`.
+Thus the bad lines are either five triples, one quadruple plus three
+triples, or two quadruples plus one triple. Adding any two undetermined
+infinity points gives a 13-arc with `c1>=7` when `t=4` and `c1>=8` when
+`t=5`; the exhaustive classified maximum is 9. This is a strict search-
+space reduction but leaves all seven profiles and every top-level gate OPEN.
+
 **15.693 PROVED all seven pair-slack-16 `p=19,s=16` profiles are
 impossible, not residual (ii)**: repair deletes at most four points. With
 at most three deletions, two undetermined infinity points produce an arc of

@@ -1376,6 +1376,21 @@ point. Thus `c1(K)>=5`. Al-Zangana's exhaustive list of all 83 projective
 drops from fourteen to seven profiles with slack histogram
 `{20:4,24:1,28:1,32:1}`. No top-level implication changes.
 
+## 7ar. The p=19 slack-twenty equality case becomes rigid (2026-08-29)
+
+Proposition 15.694 combines the exact five-deletion depth from 15.693 with
+equality in the line-secant slack bound. A putative witness is the disjoint
+union of an 11-arc and a 5-arc; every deleted point lies on exactly one core
+secant. Only eight per-line `(core,deleted)` occupancy pairs survive, and
+the bad lines have one of three patterns: five triples, one quadruple plus
+three triples, or two quadruples plus one triple.
+
+Adding any two undetermined infinity points gives a 13-arc with at least
+seven or eight outside points of secant index one. Al-Zangana's exhaustive
+13-arc classification permits at most nine, so this filters but does not
+exclude the four profiles. Bounded exact SAT and CP-SAT trials returned
+UNKNOWN and were not promoted as evidence.
+
 ---
 
 ## 8. What is not in the older literature

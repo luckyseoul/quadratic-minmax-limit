@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-29 (through 15.693; `p=19,s=16` reduced to seven profiles of slack 20--32; no general flag flipped)
+**Date:** 2026-08-29 (through 15.694; `p=19,s=16` has seven profiles, with the four slack-20 rows in an exact 11+5 arc normal form; no general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -126,6 +126,18 @@ The same bound forces five repair deletions in every slack-20 profile. This
 is a strict reduction, not endpoint closure. See
 `evidence/NOTE_2026-08-29_p19_slack16_complete14_exclusion.md`.
 
+## 15.694 — exact equality normal form for p=19 slack 20
+
+Every slack-20 witness is `S=A disjoint_union D` with `A` an 11-arc and
+`D` a 5-arc. All five deleted points have exactly one `A`-secant. Per-line
+equality leaves only `(a,d)=(0,0..2),(1,0..1),(2,0..2)`, so the charged bad
+lines are one of `(five triples)`, `(one quadruple, three triples)`, or
+`(two quadruples, one triple)`. Any pair of undetermined infinity points
+extends `A` to a 13-arc with `c1>=7` or `8`; the classified maximum is 9.
+The four profiles remain open. Bounded SAT and CP-SAT runs were UNKNOWN and
+are not evidence. See
+`evidence/NOTE_2026-08-29_p19_slack20_equality_normal_form.md`.
+
 ## 2026-08-29 cold attack map
 
 The theorem only needs an `o(p^3)` Paley deficit on a ratio-dense tail; the
@@ -135,8 +147,8 @@ general counter-mechanism and must not be retried. The bounded next pass is:
 1. full-Max+ dilation energy, now known to be exactly strong R1; any proof
    must use Boolean rank-one/orbit-mixture structure, not character or PSD
    positivity alone;
-2. the seven `p=19` profiles left by 15.693, beginning with the four
-   slack-20 rows whose repair depth is now exactly five;
+2. the seven `p=19` profiles left by 15.693, beginning with 15.694's three
+   exact bad-line patterns for the four slack-20 rows;
 3. closest-global all-subsets or the corrected `c=3` signed-Eulerian target
    for the direct asymptotic route (`c=2` is rigorously false);
 4. Mathon's ratio-dense conference family, where the genuine missing theorem

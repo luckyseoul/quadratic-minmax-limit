@@ -8466,3 +8466,49 @@ Type I, and the limit remain open.
 
 Evidence: `src/e1_gmin_m4_prop15693.py`,
 `evidence/e1_gmin_m4_prop15693.json`, and `tests/test_prop15693.py`.
+
+## Proposition 15.694 — exact equality normal form at p=19 slack twenty
+
+Proposition 15.693 forces every slack-twenty witness to use exactly five
+repair deletions. Write \(S=A\mathbin{\dot\cup}D\), with \(|A|=11\) and
+\(|D|=5\), where \(A\) is an arc. If some \(x\in D\) lay on no secant of
+\(A\), then \(A\cup\{x\}\) would be a four-deletion repair, contrary to
+15.693. Therefore \(\mu_A(x)\ge1\) for every deleted point, and
+
+\[
+20=\operatorname{slack}(S)
+ \ge4\sum_{x\in D}\mu_A(x)\ge20.                \tag{15.694.1}
+\]
+
+All inequalities are equalities, so every deleted point has
+\(\mu_A(x)=1\). On a line \(\ell\), put
+\(a=|A\cap\ell|\) and \(d=|D\cap\ell|\). Since \(a\le2\), equality between
+the exact line slack and its charged contribution leaves precisely
+
+\[
+(a,d)\in\{(0,0),(0,1),(0,2),(1,0),(1,1),
+          (2,0),(2,1),(2,2)\}.                 \tag{15.694.2}
+\]
+
+Hence \(D\) is also an affine arc, no boundary line has more than four
+points, and a line through two deleted points contains zero or two core
+points. The five charged incidences have exactly three possible patterns:
+five 3-lines; one 4-line and three 3-lines; or two 4-lines and one 3-line.
+
+Adjoin any two of the \(t\) undetermined infinity points to \(A\), obtaining
+a 13-arc \(K\). Its five deleted points have secant index one, as do the
+other \(t-2\) undetermined infinity points. Thus
+
+\[
+c_1(K)\ge5+(t-2)=7\quad(t=4),\qquad
+c_1(K)\ge8\quad(t=5).                           \tag{15.694.3}
+\]
+
+Al-Zangana's exhaustive 2,733-class 13-arc classification gives
+\(c_1\le9\). This is a strict class and search-space filter, but not a
+contradiction. All four slack-twenty profiles and the seven-profile p=19
+remainder stay open. Bounded exact solver runs returned UNKNOWN and are not
+used as evidence.
+
+Evidence: `src/e1_gmin_m4_prop15694.py`,
+`evidence/e1_gmin_m4_prop15694.json`, and `tests/test_prop15694.py`.

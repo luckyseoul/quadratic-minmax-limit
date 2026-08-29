@@ -58,6 +58,8 @@ def solve(
     seconds: float,
     threads: int,
     anchor_second: int | None = None,
+    repair_five: bool = False,
+    fixed_phase_zero_b16_slots: tuple[int, ...] | None = None,
 ) -> dict[str, object]:
     from pycryptosat import Solver
 
@@ -97,6 +99,19 @@ def solve(
             normalized_index = index
     if normalized_index is None:
         raise ArithmeticError("normalized direction missing")
+
+    deleted = [new_var() for _ in point] if repair_five else []
+    core = [new_var() for _ in point] if repair_five else []
+    core_secant = (
+        [[new_var() for _ in range(P)] for _ in directions]
+        if repair_five
+        else []
+    )
+    core_occupied = (
+        [[new_var() for _ in range(P)] for _ in directions]
+        if repair_five
+        else []
+    )
     semantic_variables = next_id
 
     solver = Solver(verbose=0, threads=max(1, int(threads)))
@@ -216,6 +231,120 @@ def solve(
         for b, target in phase_profile.items():
             add_exact([selectors[i][b] for i in phase_indices], target)
 
+    phase_zero_indices = [i for i, value in enumerate(phases) if value == 0]
+    if fixed_phase_zero_b16_slots is not None:
+        slots = set(fixed_phase_zero_b16_slots)
+        target = int(profile["phase_profiles_b"]["0"].get(16, 0))
+        if (
+            len(slots) != len(fixed_phase_zero_b16_slots)
+            or len(slots) != target
+            or not slots <= set(range(len(phase_zero_indices)))
+        ):
+            raise ValueError(
+                "fixed phase-zero b16 slots must be distinct slots matching the profile"
+            )
+        for slot, index in enumerate(phase_zero_indices):
+            add_unit(
+                selectors[index][16]
+                if slot in slots
+                else -selectors[index][16]
+            )
+
+    if repair_five:
+        # Proposition 15.693 forces every slack-twenty witness to require
+        # exactly five repair deletions. If one deleted point had no core
+        # secant, restoring it would give a forbidden four-deletion repair.
+        # The total slack inequality then forces exactly one core secant
+        # through each of the five deleted points.
+        add_exact(deleted, 5)
+        # Translate a retained core point to zero before applying the
+        # direction and missing-fibre normalizations. This is lossless.
+        add_unit(core[0])
+        for v in range(len(point)):
+            add_clauses(
+                [
+                    [-deleted[v], point[v]],
+                    [-core[v], point[v]],
+                    [-core[v], -deleted[v]],
+                    [-point[v], core[v], deleted[v]],
+                ]
+            )
+
+        incident_core_secants: list[list[int]] = [[] for _ in point]
+        for index, (_direction, _eps, labels) in enumerate(records):
+            for fibre in range(P):
+                fibre_core = [
+                    core[v] for v, label in enumerate(labels) if label == fibre
+                ]
+                fibre_deleted = [
+                    deleted[v]
+                    for v, label in enumerate(labels)
+                    if label == fibre
+                ]
+                secant = core_secant[index][fibre]
+                occupied = core_occupied[index][fibre]
+
+                # The eleven retained points form an affine arc.
+                arc_clauses = []
+                for first in range(len(fibre_core)):
+                    for second in range(first):
+                        for third in range(second):
+                            arc_clauses.append(
+                                [
+                                    -fibre_core[first],
+                                    -fibre_core[second],
+                                    -fibre_core[third],
+                                ]
+                            )
+                add_clauses(arc_clauses)
+
+                # secant iff this affine line contains two core points.
+                add_exact(fibre_core, 2, guard=-secant)
+                pair_clauses = []
+                for first in range(len(fibre_core)):
+                    for second in range(first):
+                        pair_clauses.append(
+                            [-fibre_core[first], -fibre_core[second], secant]
+                        )
+                add_clauses(pair_clauses)
+
+                # Slack equality leaves no uncharged bad line. The deleted
+                # five-set is therefore an arc. If two deleted points share
+                # a line containing a core point, that line must contain two
+                # core points and hence be one of the charged core secants.
+                add_clauses([[-occupied, *fibre_core]])
+                add_clauses([[-literal, occupied] for literal in fibre_core])
+                deleted_arc_clauses = []
+                deleted_pair_clauses = []
+                for first in range(len(fibre_deleted)):
+                    for second in range(first):
+                        deleted_pair_clauses.append(
+                            [
+                                -fibre_deleted[first],
+                                -fibre_deleted[second],
+                                -occupied,
+                                secant,
+                            ]
+                        )
+                        for third in range(second):
+                            deleted_arc_clauses.append(
+                                [
+                                    -fibre_deleted[first],
+                                    -fibre_deleted[second],
+                                    -fibre_deleted[third],
+                                ]
+                            )
+                add_clauses(deleted_pair_clauses)
+                add_clauses(deleted_arc_clauses)
+
+            for v, label in enumerate(labels):
+                incident_core_secants[v].append(core_secant[index][label])
+
+        for v, rows in enumerate(incident_core_secants):
+            if len(rows) != P + 1:
+                raise ArithmeticError("affine core point degree changed")
+            add_exact(rows, 1, guard=-deleted[v])
+
     if anchor_second is None:
         add_unit(selectors[normalized_index][0])
         normalization = {
@@ -227,9 +356,16 @@ def solve(
             "c_H": -1,
         }
     else:
-        phase_zero_indices = [i for i, value in enumerate(phases) if value == 0]
         if not 1 <= anchor_second < len(phase_zero_indices):
             raise ValueError("anchor_second must be in 1..9")
+        if (
+            fixed_phase_zero_b16_slots is not None
+            and (
+                0 not in fixed_phase_zero_b16_slots
+                or anchor_second not in fixed_phase_zero_b16_slots
+            )
+        ):
+            raise ValueError("the two anchored directions must be fixed at b=16")
         first_index = phase_zero_indices[0]
         second_index = phase_zero_indices[anchor_second]
         if 16 not in selectors[first_index] or 16 not in selectors[second_index]:
@@ -275,6 +411,8 @@ def solve(
         "pair_slack": int(profile["pair_slack"]),
         "phase_profiles_b": profile["phase_profiles_b"],
         "normalization": normalization,
+        "fixed_phase_zero_b16_slots": fixed_phase_zero_b16_slots,
+        "repair_five_constraints": repair_five,
         "solver": "cryptominisat-native-xor",
         "solver_status": status,
         "feasible_boundary_profile": satisfiable is True,
@@ -314,11 +452,65 @@ def solve(
             for phase in (0, 1)
         }
         valid = valid and observed == expected
+        repair_witness = None
+        if repair_five:
+            chosen_deleted = [v for v in chosen if assignment[deleted[v]]]
+            chosen_core = [v for v in chosen if assignment[core[v]]]
+            core_line_counts = []
+            deleted_line_counts = []
+            for _direction, _eps, labels in records:
+                counts = [0] * P
+                deleted_counts = [0] * P
+                for v in chosen_core:
+                    counts[labels[v]] += 1
+                for v in chosen_deleted:
+                    deleted_counts[labels[v]] += 1
+                core_line_counts.append(counts)
+                deleted_line_counts.append(deleted_counts)
+            deleted_secant_counts = [
+                sum(
+                    core_line_counts[index][labels[v]] == 2
+                    for index, (_direction, _eps, labels) in enumerate(records)
+                )
+                for v in chosen_deleted
+            ]
+            core_set = set(chosen_core)
+            deleted_set = set(chosen_deleted)
+            core_is_arc = max(
+                max(counts) for counts in core_line_counts
+            ) <= 2
+            slack_equality_lines = all(
+                deleted_count <= 2
+                and not (deleted_count == 2 and core_count == 1)
+                for core_counts, deleted_counts in zip(
+                    core_line_counts, deleted_line_counts
+                )
+                for core_count, deleted_count in zip(
+                    core_counts, deleted_counts
+                )
+            )
+            valid = valid and (
+                len(chosen_deleted) == 5
+                and len(chosen_core) == 11
+                and core_set | deleted_set == set(chosen)
+                and not core_set & deleted_set
+                and core_is_arc
+                and slack_equality_lines
+                and deleted_secant_counts == [1] * 5
+            )
+            repair_witness = {
+                "deleted_points": chosen_deleted,
+                "core_points": chosen_core,
+                "deleted_core_secant_counts": deleted_secant_counts,
+                "core_is_arc": core_is_arc,
+                "line_slack_equality_structure": slack_equality_lines,
+            }
         if not valid:
             raise AssertionError("CryptoMiniSat p=19 witness failed audit")
         result["boundary"] = chosen
         result["boundary_coordinates"] = [[v % P, v // P] for v in chosen]
         result["direction_rows"] = direction_rows
+        result["repair_witness"] = repair_witness
         result["witness_audit_valid"] = True
     return result
 
@@ -334,17 +526,33 @@ def main() -> None:
         choices=range(1, 10),
         help="use the two-undetermined normalization with this phase-zero slot",
     )
+    parser.add_argument(
+        "--repair-five",
+        action="store_true",
+        help="encode the forced five-deletion 11-arc repair for slack twenty",
+    )
+    parser.add_argument(
+        "--phase-zero-b16-slots",
+        help="comma-separated exact phase-zero slots assigned b=16",
+    )
     parser.add_argument("--seconds", type=float, default=300.0)
     parser.add_argument("--threads", type=int, default=8)
     parser.add_argument("--jobs", type=int, default=1)
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
+    fixed_phase_zero_b16_slots = (
+        tuple(int(value) for value in args.phase_zero_b16_slots.split(","))
+        if args.phase_zero_b16_slots
+        else None
+    )
     if args.all:
         worker = functools.partial(
             solve,
             seconds=args.seconds,
             threads=args.threads,
             anchor_second=args.anchor_second,
+            repair_five=args.repair_five,
+            fixed_phase_zero_b16_slots=fixed_phase_zero_b16_slots,
         )
         with concurrent.futures.ThreadPoolExecutor(
             max_workers=max(1, int(args.jobs))
@@ -356,6 +564,8 @@ def main() -> None:
             args.seconds,
             args.threads,
             anchor_second=args.anchor_second,
+            repair_five=args.repair_five,
+            fixed_phase_zero_b16_slots=fixed_phase_zero_b16_slots,
         )
     rendered = json.dumps(result, indent=2, sort_keys=True)
     print(rendered, flush=True)

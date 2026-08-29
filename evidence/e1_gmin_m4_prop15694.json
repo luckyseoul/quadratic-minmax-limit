@@ -1,0 +1,374 @@
+{
+  "L_status": "OPEN",
+  "adjoin_any_two_undetermined_infinity_points": {
+    "c1_floors_by_t": {
+      "4": 7,
+      "5": 8
+    },
+    "classified_maximum_c1": 9,
+    "deleted_index_one_points": 5,
+    "resulting_arc_size": 13,
+    "strict_class_filter_but_not_contradiction": true,
+    "unused_undetermined_index_one_points": "t-2"
+  },
+  "bad_line_patterns": [
+    {
+      "charged_deleted_secant_incidences": 5,
+      "four_point_lines_core2_deleted2": 0,
+      "line_slack": 20,
+      "three_point_lines_core2_deleted1": 5
+    },
+    {
+      "charged_deleted_secant_incidences": 5,
+      "four_point_lines_core2_deleted2": 1,
+      "line_slack": 20,
+      "three_point_lines_core2_deleted1": 3
+    },
+    {
+      "charged_deleted_secant_incidences": 5,
+      "four_point_lines_core2_deleted2": 2,
+      "line_slack": 20,
+      "three_point_lines_core2_deleted1": 1
+    }
+  ],
+  "boundary_size": 16,
+  "bounded_sat_and_cpsat_trials": "UNKNOWN results are diagnostics only and are not proposition evidence",
+  "classification": {
+    "complete_class_count_cross_check": "H. Sticker, Classification of Arcs in Small Desarguesian Projective Planes, PhD thesis, Ghent University, 2012",
+    "complete_thirteen_arc_classes": 2232,
+    "external_dependency": true,
+    "incomplete_thirteen_arc_classes": 501,
+    "maximum_c1_over_all_thirteen_arcs": 9,
+    "minimum_c1_over_all_thirteen_arcs": 0,
+    "projective_thirteen_arc_classes": 2733,
+    "proved_conditional_on_external_classification": true,
+    "source": "E. B. Al-Zangana, The Geometry of the Plane of Order Nineteen and its Application to Error-Correcting Codes, PhD thesis, University of Sussex, 2011, Chapter 4, Section 4.21, pages 103-104"
+  },
+  "closes_R1": false,
+  "closes_residual_ii": false,
+  "closes_type_I": false,
+  "line_equality": {
+    "allowed_core_deleted_occupancies": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "deleted_set_is_arc": true,
+    "line_rows": [
+      {
+        "boundary_occupancy": 0,
+        "charged_secant_floor": 0,
+        "core_occupancy": 0,
+        "deleted_occupancy": 0,
+        "equality": true,
+        "exact_line_slack": 0
+      },
+      {
+        "boundary_occupancy": 1,
+        "charged_secant_floor": 0,
+        "core_occupancy": 0,
+        "deleted_occupancy": 1,
+        "equality": true,
+        "exact_line_slack": 0
+      },
+      {
+        "boundary_occupancy": 2,
+        "charged_secant_floor": 0,
+        "core_occupancy": 0,
+        "deleted_occupancy": 2,
+        "equality": true,
+        "exact_line_slack": 0
+      },
+      {
+        "boundary_occupancy": 3,
+        "charged_secant_floor": 0,
+        "core_occupancy": 0,
+        "deleted_occupancy": 3,
+        "equality": false,
+        "exact_line_slack": 4
+      },
+      {
+        "boundary_occupancy": 4,
+        "charged_secant_floor": 0,
+        "core_occupancy": 0,
+        "deleted_occupancy": 4,
+        "equality": false,
+        "exact_line_slack": 8
+      },
+      {
+        "boundary_occupancy": 5,
+        "charged_secant_floor": 0,
+        "core_occupancy": 0,
+        "deleted_occupancy": 5,
+        "equality": false,
+        "exact_line_slack": 16
+      },
+      {
+        "boundary_occupancy": 1,
+        "charged_secant_floor": 0,
+        "core_occupancy": 1,
+        "deleted_occupancy": 0,
+        "equality": true,
+        "exact_line_slack": 0
+      },
+      {
+        "boundary_occupancy": 2,
+        "charged_secant_floor": 0,
+        "core_occupancy": 1,
+        "deleted_occupancy": 1,
+        "equality": true,
+        "exact_line_slack": 0
+      },
+      {
+        "boundary_occupancy": 3,
+        "charged_secant_floor": 0,
+        "core_occupancy": 1,
+        "deleted_occupancy": 2,
+        "equality": false,
+        "exact_line_slack": 4
+      },
+      {
+        "boundary_occupancy": 4,
+        "charged_secant_floor": 0,
+        "core_occupancy": 1,
+        "deleted_occupancy": 3,
+        "equality": false,
+        "exact_line_slack": 8
+      },
+      {
+        "boundary_occupancy": 5,
+        "charged_secant_floor": 0,
+        "core_occupancy": 1,
+        "deleted_occupancy": 4,
+        "equality": false,
+        "exact_line_slack": 16
+      },
+      {
+        "boundary_occupancy": 6,
+        "charged_secant_floor": 0,
+        "core_occupancy": 1,
+        "deleted_occupancy": 5,
+        "equality": false,
+        "exact_line_slack": 24
+      },
+      {
+        "boundary_occupancy": 2,
+        "charged_secant_floor": 0,
+        "core_occupancy": 2,
+        "deleted_occupancy": 0,
+        "equality": true,
+        "exact_line_slack": 0
+      },
+      {
+        "boundary_occupancy": 3,
+        "charged_secant_floor": 4,
+        "core_occupancy": 2,
+        "deleted_occupancy": 1,
+        "equality": true,
+        "exact_line_slack": 4
+      },
+      {
+        "boundary_occupancy": 4,
+        "charged_secant_floor": 8,
+        "core_occupancy": 2,
+        "deleted_occupancy": 2,
+        "equality": true,
+        "exact_line_slack": 8
+      },
+      {
+        "boundary_occupancy": 5,
+        "charged_secant_floor": 12,
+        "core_occupancy": 2,
+        "deleted_occupancy": 3,
+        "equality": false,
+        "exact_line_slack": 16
+      },
+      {
+        "boundary_occupancy": 6,
+        "charged_secant_floor": 16,
+        "core_occupancy": 2,
+        "deleted_occupancy": 4,
+        "equality": false,
+        "exact_line_slack": 24
+      },
+      {
+        "boundary_occupancy": 7,
+        "charged_secant_floor": 20,
+        "core_occupancy": 2,
+        "deleted_occupancy": 5,
+        "equality": false,
+        "exact_line_slack": 36
+      }
+    ],
+    "maximum_boundary_line_occupancy": 4,
+    "proved": true,
+    "two_deleted_points_force_core_occupancy_zero_or_two": true
+  },
+  "p": 19,
+  "p19_second_all_finite_endpoint_closed": false,
+  "pair_slack": 20,
+  "profile_count_after": 7,
+  "profile_count_before": 7,
+  "profile_ledger": {
+    "core_size": 11,
+    "deleted_size": 5,
+    "pair_slack": 20,
+    "profile_count": 4,
+    "profiles": [
+      {
+        "arc": false,
+        "global_b_profile": {
+          "0": 5,
+          "2": 10,
+          "16": 5
+        },
+        "pair_slack": 20,
+        "phase_deficits": {
+          "0": 80,
+          "1": 140
+        },
+        "phase_profiles_b": {
+          "0": {
+            "0": 5,
+            "16": 5
+          },
+          "1": {
+            "2": 10
+          }
+        },
+        "undetermined_directions": 5
+      },
+      {
+        "arc": false,
+        "global_b_profile": {
+          "0": 5,
+          "2": 9,
+          "4": 1,
+          "14": 1,
+          "16": 4
+        },
+        "pair_slack": 20,
+        "phase_deficits": {
+          "0": 92,
+          "1": 128
+        },
+        "phase_profiles_b": {
+          "0": {
+            "0": 5,
+            "4": 1,
+            "16": 4
+          },
+          "1": {
+            "2": 9,
+            "14": 1
+          }
+        },
+        "undetermined_directions": 4
+      },
+      {
+        "arc": false,
+        "global_b_profile": {
+          "0": 4,
+          "2": 11,
+          "14": 1,
+          "16": 4
+        },
+        "pair_slack": 20,
+        "phase_deficits": {
+          "0": 92,
+          "1": 128
+        },
+        "phase_profiles_b": {
+          "0": {
+            "0": 4,
+            "2": 2,
+            "16": 4
+          },
+          "1": {
+            "2": 9,
+            "14": 1
+          }
+        },
+        "undetermined_directions": 4
+      },
+      {
+        "arc": false,
+        "global_b_profile": {
+          "0": 5,
+          "2": 10,
+          "16": 5
+        },
+        "pair_slack": 20,
+        "phase_deficits": {
+          "0": 94,
+          "1": 126
+        },
+        "phase_profiles_b": {
+          "0": {
+            "0": 5,
+            "2": 1,
+            "16": 4
+          },
+          "1": {
+            "2": 9,
+            "16": 1
+          }
+        },
+        "undetermined_directions": 5
+      }
+    ],
+    "proved": true,
+    "repair_deletion_lower_bound_from_15_693": 5,
+    "repair_deletion_upper_bound": 5,
+    "therefore_exact_repair_deletions": 5,
+    "undetermined_direction_histogram": {
+      "4": 2,
+      "5": 2
+    }
+  },
+  "proposition": "15.694",
+  "proved_conditional_on_external_classification": true,
+  "repair_normal_form": {
+    "core_is_arc": true,
+    "core_size": 11,
+    "deleted_core_secant_multiplicities": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "deleted_is_arc": true,
+    "deleted_size": 5,
+    "global_slack_equality": "slack(S)=4*sum_{x in D} mu_A(x)=20"
+  }
+}

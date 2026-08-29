@@ -37,8 +37,9 @@ proposed `c=2` target is false; the clean surviving target is `c=3` with
 also been normalized exactly: it is strong R1 itself, and character/PSD
 positivity alone cannot bound it. The `p=19` profiles have an exact binary
 affine-Radon normal form, and 15.693 excludes the full seven-profile
-slack-16 block. The seven remaining profiles' only parity-level condition
-is `wt(A^T r)=16`; linear compatibility, mod-four
+slack-16 block. Proposition 15.694 puts every slack-20 witness into an exact
+11-arc plus 5-arc equality normal form. The seven remaining profiles' only
+parity-level condition is `wt(A^T r)=16`; linear compatibility, mod-four
 weight, and second moments do not close them. See
 `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md`.
 
@@ -339,6 +340,10 @@ profiles; 15.689 excludes the 129 profiles of slack at most twelve, leaving
 uses the classified secant-index bound for complete 14-arcs to exclude all
 seven slack-16 profiles. Seven profiles remain:
 `{20:4,24:1,28:1,32:1}`.
+Proposition 15.694 further proves that each slack-20 witness must be an
+11-arc plus a 5-arc with all five deleted points on exactly one core secant;
+only three bad-line patterns remain. This is a strict structural reduction,
+not another profile exclusion.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -584,6 +589,7 @@ square-direction affine-circle words.
 | 15.691 | a fractional-moment argument constructs signings with `log P_a(tanh(c/sqrt(n)))<=-(c/2-sqrt(log 2))^2 n+o(n)` | disproves the original signed-Eulerian `c=2` target; the corrected `c=3` target remains open and no top-level gate changes |
 | 15.692 | over `F_2`, affine incidence satisfies `A^T A=I+J`, making the even-point Radon map an isomorphism with inverse `x=A^T r`; exact even-support witnesses defeat every profile's first-two-moment relaxation | reduces the fourteen `p=19` survivors to nonlinear inverse-weight equations `wt(A^T r)=16`; no endpoint or top-level gate closes |
 | 15.693 | in the four-deletion slack-16 branch, the complete repaired 14-arc would have four deleted plus at least one unused infinity point of secant index one, while the exhaustive classification permits at most four | excludes all seven slack-16 profiles and reduces `p=19` to `{20:4,24:1,28:1,32:1}`; slack 20 now forces exactly five repair deletions |
+| 15.694 | equality in `slack(S)>=4 sum mu_A(x)` forces every slack-20 witness to split into an 11-arc and a 5-arc, with each deleted point on one core secant and only eight allowed per-line occupancy types | reduces the four slack-20 rows to three bad-line patterns and 13-arcs with `c1>=7` or `8`; the classified maximum is 9, so the endpoint remains open |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -953,6 +959,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-29_p19_low_slack_conic_reduction.md` | Complete-arc/conic-core exclusion of 129 low-slack `p=19` profiles, leaving 14 (15.689) |
 | `evidence/NOTE_2026-08-29_p19_binary_radon_reduction.md` | Binary affine-Radon isomorphism, exact inverse-weight normal form, and linear/mod-four/second-moment barriers for the fourteen `p=19` survivors (15.692) |
 | `evidence/NOTE_2026-08-29_p19_slack16_complete14_exclusion.md` | Complete-14-arc secant-index contradiction excluding all seven slack-16 `p=19` profiles and forcing the slack-20 repair depth (15.693) |
+| `evidence/NOTE_2026-08-29_p19_slack20_equality_normal_form.md` | Exact 11-arc plus 5-arc equality normal form, three bad-line patterns, and filtered 13-arc secant indices for the four slack-20 profiles (15.694) |
 | `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md` | General local-stability counter-mechanism, closest-global hierarchy, Mathon barrier, and corrected signed-Eulerian target after the `c=2` no-go |
 | `evidence/NOTE_2026-08-29_dilation_energy_normalization_and_no_go.md` | Exact R1 dilation-energy identity and representation/PSD/autocorrelation route obstructions |
 | `evidence/STRATEGY_2026-08-29_COLD_REVIEW.md` | Cold reconstruction of the original problem, actual asymptotic gate, killed shortcuts, and bounded four-team Ultra attack |
