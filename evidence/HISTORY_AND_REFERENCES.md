@@ -1447,6 +1447,28 @@ Consequently the p=19 second all-finite endpoint is closed. The remaining
 next-boundary endpoints are p=17 and p=23; later boundary sizes and all
 top-level gates remain open.
 
+## 7av. The p=17 slack-zero block reduces to two conic profiles (2026-08-29)
+
+Proposition 15.700 derives the exceptional `p=17,s=16` arithmetic ledger
+directly. The sharp `p-3=14` integral-lift floor excludes phase-zero residues
+2 through 6; exact completion, the pair budget, and slack divisibility leave
+1,575 phase-labelled profiles. Exactly 247 have pair slack zero.
+
+Slack zero makes the boundary a 16-arc. Sticker's exhaustive classification
+[48] has one 16-arc class in `PG(2,17)`, represented by conic-minus-two.
+Fixing one conic and enumerating every line at infinity and eligible deleted
+pair gives 21,267 affine cases: 20,808 external, 306 tangent, and 153 secant.
+Their exact directional Paley census has 53 profiles after including the
+nonsquare phase swap. Only two occur in the arithmetic list, both tangent at
+infinity. Therefore 245 rows are excluded and the exact p=17 remainder falls
+to 1,330 profiles, including two zero-slack rows.
+
+The follow-up fixed-boundary model adds all coefficient identities forced by
+floor equality. Five-minute Soulkiller and Nuka runs returned `UNKNOWN`, so
+they have no evidentiary role. The p=17 endpoint and all top-level gates
+remain open. Targeted literature and OEIS searches found no prior listing of
+the 247-to-2 directional profile reduction.
+
 ---
 
 ## 8. What is not in the older literature
