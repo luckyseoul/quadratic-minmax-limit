@@ -1,0 +1,718 @@
+{
+  "arc_size": 13,
+  "class_count": 8,
+  "classification_basis": "inequivalent representatives match Sticker's published class count and stabilizer-order fingerprint",
+  "elapsed_seconds": 22.856156826019287,
+  "experiment": "p17_complete_arc_class_generator",
+  "final_status": "PUBLISHED_CLASS_COUNT_REACHED",
+  "normalization": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ]
+  ],
+  "p": 17,
+  "proved_by_local_terminal_infeasibility": false,
+  "proved_conditional_on_published_class_count": true,
+  "representatives": [
+    {
+      "inferred_pgl_stabilizer_order": 1,
+      "normalized_orbit_image_count": 17160,
+      "outside_secant_index_histogram": {
+        "2": 11,
+        "3": 41,
+        "4": 126,
+        "5": 97,
+        "6": 19
+      },
+      "representative": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          10
+        ],
+        [
+          1,
+          5,
+          13
+        ],
+        [
+          1,
+          7,
+          6
+        ],
+        [
+          1,
+          9,
+          12
+        ],
+        [
+          1,
+          12,
+          2
+        ],
+        [
+          1,
+          13,
+          14
+        ],
+        [
+          1,
+          14,
+          5
+        ],
+        [
+          1,
+          16,
+          15
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "inferred_pgl_stabilizer_order": 2,
+      "normalized_orbit_image_count": 8580,
+      "outside_secant_index_histogram": {
+        "1": 2,
+        "2": 7,
+        "3": 38,
+        "4": 139,
+        "5": 86,
+        "6": 22
+      },
+      "representative": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          6,
+          15
+        ],
+        [
+          1,
+          8,
+          2
+        ],
+        [
+          1,
+          9,
+          6
+        ],
+        [
+          1,
+          10,
+          14
+        ],
+        [
+          1,
+          12,
+          11
+        ],
+        [
+          1,
+          15,
+          7
+        ],
+        [
+          1,
+          16,
+          13
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "inferred_pgl_stabilizer_order": 2,
+      "normalized_orbit_image_count": 8580,
+      "outside_secant_index_histogram": {
+        "1": 3,
+        "2": 8,
+        "3": 36,
+        "4": 129,
+        "5": 103,
+        "6": 15
+      },
+      "representative": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          7
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          1,
+          4,
+          10
+        ],
+        [
+          1,
+          5,
+          2
+        ],
+        [
+          1,
+          8,
+          15
+        ],
+        [
+          1,
+          10,
+          14
+        ],
+        [
+          1,
+          11,
+          8
+        ],
+        [
+          1,
+          12,
+          11
+        ],
+        [
+          1,
+          14,
+          3
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "inferred_pgl_stabilizer_order": 3,
+      "normalized_orbit_image_count": 5720,
+      "outside_secant_index_histogram": {
+        "3": 66,
+        "4": 117,
+        "5": 84,
+        "6": 27
+      },
+      "representative": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          12
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          1,
+          7,
+          6
+        ],
+        [
+          1,
+          11,
+          14
+        ],
+        [
+          1,
+          12,
+          11
+        ],
+        [
+          1,
+          13,
+          4
+        ],
+        [
+          1,
+          14,
+          8
+        ],
+        [
+          1,
+          16,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "inferred_pgl_stabilizer_order": 2,
+      "normalized_orbit_image_count": 8580,
+      "outside_secant_index_histogram": {
+        "2": 10,
+        "3": 42,
+        "4": 129,
+        "5": 92,
+        "6": 21
+      },
+      "representative": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          4,
+          6
+        ],
+        [
+          1,
+          5,
+          7
+        ],
+        [
+          1,
+          6,
+          12
+        ],
+        [
+          1,
+          7,
+          16
+        ],
+        [
+          1,
+          8,
+          14
+        ],
+        [
+          1,
+          11,
+          2
+        ],
+        [
+          1,
+          12,
+          11
+        ],
+        [
+          1,
+          13,
+          5
+        ],
+        [
+          1,
+          15,
+          9
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "inferred_pgl_stabilizer_order": 2,
+      "normalized_orbit_image_count": 8580,
+      "outside_secant_index_histogram": {
+        "2": 13,
+        "3": 43,
+        "4": 108,
+        "5": 119,
+        "6": 11
+      },
+      "representative": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          3,
+          16
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          1,
+          5,
+          2
+        ],
+        [
+          1,
+          6,
+          5
+        ],
+        [
+          1,
+          8,
+          13
+        ],
+        [
+          1,
+          13,
+          15
+        ],
+        [
+          1,
+          15,
+          11
+        ],
+        [
+          1,
+          16,
+          7
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "inferred_pgl_stabilizer_order": 6,
+      "normalized_orbit_image_count": 2860,
+      "outside_secant_index_histogram": {
+        "2": 12,
+        "3": 39,
+        "4": 126,
+        "5": 99,
+        "6": 18
+      },
+      "representative": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          11
+        ],
+        [
+          1,
+          3,
+          9
+        ],
+        [
+          1,
+          5,
+          14
+        ],
+        [
+          1,
+          8,
+          4
+        ],
+        [
+          1,
+          10,
+          15
+        ],
+        [
+          1,
+          11,
+          2
+        ],
+        [
+          1,
+          12,
+          10
+        ],
+        [
+          1,
+          15,
+          13
+        ],
+        [
+          1,
+          16,
+          12
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "inferred_pgl_stabilizer_order": 4,
+      "normalized_orbit_image_count": 4290,
+      "outside_secant_index_histogram": {
+        "2": 8,
+        "3": 48,
+        "4": 123,
+        "5": 94,
+        "6": 21
+      },
+      "representative": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          3,
+          16
+        ],
+        [
+          1,
+          5,
+          8
+        ],
+        [
+          1,
+          6,
+          12
+        ],
+        [
+          1,
+          7,
+          10
+        ],
+        [
+          1,
+          8,
+          14
+        ],
+        [
+          1,
+          9,
+          4
+        ],
+        [
+          1,
+          11,
+          13
+        ],
+        [
+          1,
+          12,
+          6
+        ],
+        [
+          1,
+          13,
+          11
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "solve_rows": [
+    {
+      "branches": 12675,
+      "class_index": 0,
+      "conflicts": 1196,
+      "solver_status": "OPTIMAL",
+      "wall_time_seconds": 0.256499531
+    },
+    {
+      "branches": 1084,
+      "class_index": 1,
+      "conflicts": 0,
+      "solver_status": "OPTIMAL",
+      "wall_time_seconds": 1.003134996
+    },
+    {
+      "branches": 1104,
+      "class_index": 2,
+      "conflicts": 37,
+      "solver_status": "OPTIMAL",
+      "wall_time_seconds": 0.728264062
+    },
+    {
+      "branches": 25433,
+      "class_index": 3,
+      "conflicts": 4165,
+      "solver_status": "OPTIMAL",
+      "wall_time_seconds": 2.0517839220000003
+    },
+    {
+      "branches": 25629,
+      "class_index": 4,
+      "conflicts": 4274,
+      "solver_status": "OPTIMAL",
+      "wall_time_seconds": 2.3027821050000004
+    },
+    {
+      "branches": 34909,
+      "class_index": 5,
+      "conflicts": 5672,
+      "solver_status": "OPTIMAL",
+      "wall_time_seconds": 2.468156139
+    },
+    {
+      "branches": 24366,
+      "class_index": 6,
+      "conflicts": 3979,
+      "solver_status": "OPTIMAL",
+      "wall_time_seconds": 3.1704454760000003
+    },
+    {
+      "branches": 24492,
+      "class_index": 7,
+      "conflicts": 3980,
+      "solver_status": "OPTIMAL",
+      "wall_time_seconds": 2.7448535620000003
+    }
+  ]
+}

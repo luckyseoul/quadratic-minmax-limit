@@ -1514,6 +1514,33 @@ The p17 remainder drops from 932 to 786 exact profiles: two at slack zero,
 open. Targeted literature and OEIS searches found no prior statement of the
 secant-index census/profile exclusion.
 
+## 7ay. Complete p17 13-arcs close the slack-twelve block (2026-08-29)
+
+Proposition 15.703 treats the 33 remaining slack-twelve profiles, all with no
+undetermined direction. Equality repairs any realization by three deletions
+to a 13-arc. A normalized PGL generator fixes a quadrangle, enumerates and
+blocks each representative's complete projective orbit, and produces eight
+pairwise inequivalent complete 13-arcs. Their stabilizer-order fingerprint
+`1,2,2,2,2,3,4,6` matches Sticker's exhaustive table [48], whose published
+count of eight makes the generated list complete.
+
+The eight outside secant-index histograms have index-one-point counts
+`0,0,0,0,0,0,2,3`. Slack-twelve equality requires three such points. The
+only candidate triple reconstructs slack sixteen, so no complete-core case
+survives. If the repaired 13-arc is incomplete, extend it to a 14-arc. The
+conic branch was excluded by Proposition 15.701. Deleting each point from
+the unique complete 14-arc gives index-one-count histogram `{0:4,1:8,4:2}`;
+all eight candidate triples reconstruct slack twenty. If the original
+deleted set contains the extension point, the other two points each have
+complete-14-arc secant index at least two and force slack at least sixteen.
+
+Thus all 33 slack-twelve profiles are impossible, conditionally only on the
+published complete-class count. The p17 remainder is 753 exact profiles:
+two tangent-conic slack-zero rows and 751 rows of slack at least sixteen.
+The endpoint and every top-level gate remain open. Targeted literature and
+OEIS searches found no prior statement of the eight outside histograms, the
+index-one vector, or this profile exclusion.
+
 ---
 
 ## 8. What is not in the older literature
