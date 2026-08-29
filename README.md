@@ -63,7 +63,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, 15.684--15.687 cut `p=23` to 133 exact residue-zero profiles, 15.688--15.699 close the `p=19` endpoint, and 15.700--15.704 cut the exact `p=17` ledger from 1,575 to 654 profiles; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the `p=17,23` next-boundary endpoints, later all-finite sizes, and `p=7` infinity-plus-seven remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, 15.684--15.687 cut `p=23` to 133 exact residue-zero profiles, 15.688--15.699 close the `p=19` endpoint, and 15.700--15.705 cut the exact `p=17` ledger from 1,575 to 641 profiles; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the `p=17,23` next-boundary endpoints, later all-finite sizes, and `p=7` infinity-plus-seven remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -427,6 +427,11 @@ index-one points; the complete-14-minus-one branch has eight genuinely
 undetermined infinity placements and all reconstruct slack 32. Thus another
 99 rows are excluded. The p17 remainder is 654: two slack-zero rows, thirteen
 zero-direction slack-sixteen rows, and 639 rows of slack at least twenty.
+Proposition 15.705 exhausts all 629 PGL classes of twelve-arcs and every
+four-point extension within the slack-sixteen secant charge. Only 47 of
+97,122 extensions have an allowed line pattern; all 6,345 affine charts miss
+the thirteen targets under both phase labellings. The p17 remainder is now
+641: two slack-zero rows and 639 rows of slack at least twenty.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -1009,6 +1014,7 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15702.py` | Unique-complete-14-arc secant-index certificate excluding another 146 low-slack p17 profiles |
 | `src/e1_gmin_m4_prop15703.py`, `scripts/p17_complete_arc_class_generator.py` | Complete-13-arc class generation and exact secant-index/triple certificate excluding all final p17 slack-twelve profiles |
 | `src/e1_gmin_m4_prop15704.py` | Free-direction split and complete-13/14-arc infinity-placement certificate excluding 99 p17 slack-sixteen profiles |
+| `src/e1_gmin_m4_prop15705.py`, `scripts/p17_slack16_orbiter_extension.py` | Complete 629-orbit extension census excluding the final thirteen p17 slack-sixteen profiles |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |
