@@ -1,19 +1,47 @@
-# E(1) rigidity attack: \(k_\star=o(n^{3/2})\)
+# E(1) rigidity attack: Max-Lipschitz threshold \(k_\star=o(n^2)\)
 
 **Date:** 2026-07-27  
 **Status:** Partial — criterion sharpened; full rigidity **not proved**. Existence of \(\lim\alpha_n\) remains **OPEN**.
 
-## Criterion (Prop 15.20b)
+## Criterion (Props 15.20b and 15.27)
 
 On \(n=p^2+1\) with Paley \(C\) (\(\rho=1\)):
 \[
-m_n\ge\Phi(C)-2k_\star,
+m_n\ge\Phi(C)-\frac{2k_\star}{p},
 \qquad
 k_\star
 =\min\bigl\{\text{best switching Hamming distance to }C
 \text{ among }\Phi\text{-minimisers}\bigr\}.
 \]
-**E(1)** holds if \(k_\star=o(n^{3/2})\).
+**E(1)** holds if \(k_\star=o(n^2)\). The older edge-only bound needs
+\(k_\star=o(n^{3/2})\).
+
+## 2026-08-29 route kill and surviving invariant
+
+The exact identities
+
+\[
+d_\pm(A,C)=\frac{\binom n2-\Phi(A\circ C)}2,
+\qquad
+\mathbb E_{y\in\mathrm{Max}_+}Q_A(xy)=\frac{Q_{A\circ C}(x)}p
+\]
+
+do not by themselves provide stability. Their complete second moments are
+independent of \(A\). More strongly, for every fixed \(C\) there exist
+edge-local minima with both relevant cube norms \(O(n^{3/2})\) and
+\(d_\pm(A,C)=\binom n2/2-O(n^{3/2})\). Thus local optimality, switching-cut
+minimality, and product second moments cannot force \(k_\star=o(n^2)\).
+
+Closest **global** minimality does add an all-subsets hierarchy: if
+\(A=C\oplus F\) is a global minimizer of minimum signed switching distance,
+then every nonempty \(H\subseteq F\) has a signed-cut witness \(z\) satisfying
+
+\[
+\sum_{e\in H}C_ez_e\ge1+\frac{m_n-\langle A,z\rangle}{2}.
+\]
+
+This is the surviving stability object. Full proof and consequences:
+`NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md`.
 
 ## Certified facts
 
@@ -37,7 +65,7 @@ Campaign: `src/e1_rigidity_k_threshold.py` / `{SCRATCH}/campaign_rigidity_k.log`
 | 3 | 10 | 12 (exact) | 32 |
 | 5 | 26 | ~\(10^2\) (2M sample) | 133 |
 
-Aut upper bound \(\lvert\mathrm{PGL}(2,p^2)\rvert\cdot2\sim n^3\) is **larger** than \(n^{3/2}\), so \(\lvert\mathrm{Max}\rvert\le\lvert\mathrm{Aut}\rvert\) alone does **not** give \(k_\star=o(n^{3/2})\).
+Aut upper bound \(\lvert\mathrm{PGL}(2,p^2)\rvert\cdot2\sim n^3\) is larger even than \(n^2\), so \(\lvert\mathrm{Max}\rvert\le\lvert\mathrm{Aut}\rvert\) alone gives neither the edge-Lipschitz nor the Max-Lipschitz threshold.
 
 ### Necessary covering
 
@@ -45,7 +73,7 @@ Any undercutter (\(\Phi(A)<\Phi(C)\)) must satisfy \(S_F(y)\ge1\) for every posi
 
 ## What would finish rigidity
 
-1. Prove \(k_\star=O(n)\) (or any \(o(n^{3/2})\)) for all large \(n=p^2+1\): e.g. every closest undercutter is a matching / bounded-degree flip of Paley.  
+1. Prove any \(k_\star=o(n^2)\) bound for all large \(n=p^2+1\); the stronger \(O(n)\) matching/bounded-degree picture is one possible mechanism.
 2. Or prove the matching dichotomy: \(m_n=\min\bigl(\Phi(C),\min_M\Phi(C\oplus M)\bigr)\) over perfect matchings \(M\) — then degree lip gives gap \(\le n\).  
 3. Or permanent relative gap / non-existence pair.
 
@@ -59,7 +87,9 @@ Any undercutter (\(\Phi(A)<\Phi(C)\)) must satisfy \(S_F(y)\ge1\) for every posi
 \[
 m_n\ge\Phi(C)-2k_\star\ge\tfrac12 np-2n,
 \]
-so \(\alpha_n\ge\tfrac12\sqrt{1-1/n}-2n^{-1/2}\to\tfrac12\). Combined with \(\limsup\alpha_n\le\tfrac12\) and denseness Prop 6.1–6.2 along \(n_k=p_k^2+1\),
+so \(\alpha_n\ge\tfrac12\sqrt{1-1/n}-2n^{-1/2}\to\tfrac12\). Combined with
+\(\limsup\alpha_n\le\tfrac12\), the consecutive-prime ratio
+\(p_{k+1}/p_k\to1\), and Proposition 6.1 along \(n_k=p_k^2+1\),
 \[
 \lim_{n\to\infty}\alpha_n=\tfrac12.
 \]
@@ -84,7 +114,7 @@ Maximizers of any \(\rho=1\) conference are exactly the boolean \(\pm p\)-eigenv
 
 Matching flips of \(\rho=1\) conferences keep boolean \(+p\)-evecs as **coordinate-local maximisers** of \(x^\top Ax\) (\(y_i(Ay)_i\ge p-2\)). At \(n=10\) this upgrades to a global identity \(\Phi(C\oplus M)=\max_{\mathrm{Max}}|Q|\) for every perfect matching. Star-reduction does **not** preserve sparsity (\(d_H(B,C')=12\) for all matching undercutters). See `E1_STAR_REDUCTION_PROBE.md`.
 
-**Prop 15.27:** \(\mathbb E_{\mathrm{Max}_{+}}[yy^\top]=I+C/p\). Fractional Max-cover number \(=p\); Max-Lipschitz \(\Phi\ge\Phi(C)-2k/p\). E(1) \(\Leftrightarrow k_\star=o(n^2)\) (was \(o(n^{3/2})\) under edge lip) — still open.
+**Prop 15.27:** \(\mathbb E_{\mathrm{Max}_{+}}[yy^\top]=I+C/p\). Fractional Max-cover number \(=p\); Max-Lipschitz \(\Phi\ge\Phi(C)-2k/p\). The one-way condition \(k_\star=o(n^2)\) is sufficient for E(1) (the older edge lip needs \(o(n^{3/2})\)); it is not known to be necessary.
 
 **Still missing for E(1):** (i) \(k_\star=o(n^2)\) for minimisers (or matching dichotomy); (ii) direct gap \(\Phi-m_n=o(n^{3/2})\).
 
@@ -102,7 +132,7 @@ Matching flips of \(\rho=1\) conferences keep boolean \(+p\)-evecs as **coordina
 
 ## Not established
 
-- \(k_\star=o(n^{3/2})\) in general  
+- \(k_\star=o(n^2)\) in general
 - matching dichotomy for all \(p\)  
 - \(\lim\alpha_n\) exists  
 

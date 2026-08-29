@@ -1,4 +1,23 @@
-# Status (2026-08-28)
+# Status (2026-08-29)
+
+**Cold theorem audit completed; L remains OPEN.** The actual asymptotic gate
+is only `Phi(C_p)-m_{p^2+1}=o(p^3)` on a ratio-dense Paley tail
+(Proposition 15.20e). The exact gap-2 four-unit gate is stronger. A general
+random-plus-edge-descent construction kills local/product Paley stability:
+correct-scale edge-local minima can remain `Theta(n^2)` from the signed
+Paley orbit, and the product-frame second moments are signing-independent.
+The surviving replacements are closest-global all-subsets witnesses, a
+full-Max+ dilation-energy lemma, and the signed even-Eulerian free-energy
+bound. See `evidence/STRATEGY_2026-08-29_COLD_REVIEW.md`.
+
+**15.688 PROVED the sharp integral quadratic-lift floor and reduced the live
+`p=19,s=16` endpoint to one residue-zero row, not residual (ii)**:
+paired-cube quarter-integrality separates `H=1` from `H>=2`; combining the
+latter branch with the exact 15.642 stabilizer weights gives
+`4p E[B] >= p-3`, sharply attained by `(1-x_i)(1-x_j)`. At `p=19`, this
+excludes phase-zero residues `2,3,4,6`. Only
+`5[b=0]+5[b=16]` paired with `9[b=2]+1[b=16]` remains, with pair slack 34.
+The endpoint and all top-level gates remain OPEN.
 
 **15.687 PROVED all 68 pair-slack-20 `p=23,s=20` profiles are
 impossible, not residual (ii)**: their undetermined-direction counts are

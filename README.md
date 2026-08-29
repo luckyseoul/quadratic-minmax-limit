@@ -21,7 +21,18 @@ banned by test (`tests/test_main_chain_docs.py`).
 
 **Goal:** settle the limit (see **`LONG_HORIZON_GOAL.md`**). Not done until L is proved or disproved.
 
-**Main claim:** L = lim_n α_n is **OPEN** (2026-08-28).
+**Main claim:** L = lim_n α_n is **OPEN** (2026-08-29).
+
+**2026-08-29 cold-audit correction.** The limit only needs a Paley-tail
+deficit \(\Phi(C_p)-m_{p^2+1}=o(p^3)\) on a ratio-dense tail; the current
+all-prime gap-2 four-unit gate is one strictly stronger sufficient route.
+The Hamming-stability alternative has also been narrowed: local edge
+optimality, switching-minimality, Max-Lipschitz, and all product second moments
+can coexist at distance \(\Theta(n^2)\) from Paley. Any such proof must use
+closest global/cardinality minimality (which gives an all-subsets witness
+hierarchy) or attack the augmented cut code through its exact signed-Eulerian
+free-energy inequality. See
+`evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md`.
 
 Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 `four_e1_units_closed()` ledger is:
@@ -29,7 +40,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, and 15.684--15.687 cut `p=23` to 133 exact residue-zero profiles, all of slack at least 24; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the three smaller next-boundary endpoints, later all-finite sizes, and `p=7` infinity-plus-seven remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, 15.684--15.687 cut `p=23` to 133 exact residue-zero profiles, and 15.688 removes every positive residue at `p=19`, leaving one residue-zero row of pair slack 34; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the three smaller next-boundary endpoints, later all-finite sizes, and `p=7` infinity-plus-seven remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -312,6 +323,10 @@ same impossible conic or a complete 17-arc requiring five
 multiplicity-one points; the two remaining rows use the latter obstruction
 or the five-point conic-core floor. Exactly 133 profiles remain, all of
 slack at least 24.
+Proposition 15.688 sharpens every nonzero nonnegative integral quadratic
+lift to \(4p\mathbb E B\ge p-3\). At the `p=19` next boundary this deletes
+all four positive-residue rows and leaves the single residue-zero profile
+pair `5[b=0]+5[b=16]`, `9[b=2]+[b=16]`, with pair slack 34.
 The principal R1 inequality remains open, and the current floor wiring
 requires the separate global-QVAR estimate:
 
@@ -365,7 +380,7 @@ graph TD
     SMALLRANGE --> P11EIGHT["p=11 finite size eight<br/>exact normalized census <b>CLOSED</b> (15.670)"]
     RANGE --> ENDPOINT["infinity + (p-2), every odd-fibre profile<br/>both signs <b>CLOSED for p>=17</b> (15.671--15.674)"]
     RANGE --> FIRSTHALF["first all-finite s above 3(p-1)/4<br/><b>CLOSED for every prime p>=17</b> (15.675, 15.677, 15.678)"]
-    FIRSTHALF --> SECONDFINITE["next all-finite even s<br/><b>CLOSED for p>=43 and p=41,37,31,29</b>;<br/>p=23 reduced to 133 profiles; p=17,19,23 OPEN (15.679--15.687)"]
+    FIRSTHALF --> SECONDFINITE["next all-finite even s<br/><b>CLOSED for p>=43 and p=41,37,31,29</b>;<br/>p=23 reduced to 133 profiles; p=19 to one residue-zero row;<br/>p=17,19,23 OPEN (15.679--15.688)"]
     RANGE --> PARC["infinity + p, pair-deficit equality / p-arcs<br/>both signs <b>CLOSED for p>=17</b> (15.676)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
@@ -551,6 +566,7 @@ square-direction affine-circle words.
 | 15.685 | a slack-12 realization repairs to a complete 17-arc plus three outside points, each forced to lie on exactly one arc secant; five explicit invariant-distinct representatives exhaust the classified complete-17-arc classes, whose counts of such points are `0,0,1,0,0` | excludes the unique slack-12 row and reduces `p=23` from 203 to 202 exact arithmetic profiles; the endpoint and all top-level gates remain open |
 | 15.686 | the unique slack-16 row has one undetermined direction; after four-point repair it completes the 16-arc to a complete 17-arc, while slack equality forces all four deleted points to have secant multiplicity one | the classified maximum is one, so the row is impossible; exactly 201 `p=23` profiles remain, all of slack at least 20, and the endpoint stays open |
 | 15.687 | all 68 slack-20 rows have two to four undetermined directions; overlapping infinity-point pairs in the 66 three-/four-direction rows force either a complete 17-arc with five multiplicity-one points or one conic through three collinear infinity points, while the two-direction rows use the same class certificate/conic-core split | excludes the full slack-20 block and reduces `p=23` from 201 to 133 profiles, all of slack at least 24; the endpoint and top-level gates remain open |
+| 15.688 | paired-cube quarter-integrality separates the `H=1` and `H>=2` branches and combines with the exact stabilizer weights to give the sharp lift floor `4p E[B]>=p-3` | removes every positive-residue row at the `p=19,s=16` second boundary, leaving one residue-zero row of pair slack 34; the endpoint and top-level gates remain open |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -916,6 +932,9 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-28_p23_slack12_complete17_exclusion.md` | Three-point repair inequality, five complete-17-arc representatives, full secant-index histograms, and exclusion of the unique slack-12 profile (15.685) |
 | `evidence/NOTE_2026-08-28_p23_slack16_complete17_exclusion.md` | Undetermined-direction completion, four-point repair inequality, and exclusion of the unique slack-16 profile using the same five complete-17-arc classes (15.686) |
 | `evidence/NOTE_2026-08-28_p23_slack20_complete17_exclusion.md` | Five-point conic-core extension, exact undetermined-direction split, and exclusion of all 68 slack-20 profiles (15.687) |
+| `evidence/NOTE_2026-08-29_sharp_integral_lift_p19.md` | Sharp all-prime integral quadratic-lift floor and reduction of the `p=19,s=16` endpoint to one residue-zero row (15.688) |
+| `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md` | General local-stability counter-mechanism, closest-global all-subsets hierarchy, conference-class warning, and signed-Eulerian free-energy target |
+| `evidence/STRATEGY_2026-08-29_COLD_REVIEW.md` | Cold reconstruction of the original problem, actual asymptotic gate, killed shortcuts, and bounded four-team Ultra attack |
 | `evidence/p11_size8_boundary_SHA256SUMS` | Seven-file permanent-archive manifest for Proposition 15.670 |
 | `evidence/NOTE_2026-08-25_negative_product_asymptotic_normal_form.md` | Slice-distance, mean, divisibility, and boundary proof of the unique large-prime negative profile |
 | `evidence/NOTE_2026-08-25_baseline_fibre_profiles.md` | Integral `l1` proof that every baseline fibre profile is ideal or one-transfer |

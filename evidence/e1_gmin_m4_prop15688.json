@@ -1,0 +1,367 @@
+{
+  "L_status": "OPEN",
+  "closes_R1": false,
+  "closes_p19_endpoint": false,
+  "closes_residual_ii": false,
+  "closes_type_I": false,
+  "p19_reduction": {
+    "boundary_size": 16,
+    "p": 19,
+    "p19_second_all_finite_endpoint_closed": false,
+    "pair_deficit_budget": 240,
+    "pair_survivors_before_new_floor": [
+      {
+        "pair_slack": 34,
+        "phase_one_minimum_deficit": 126,
+        "phase_one_profile": {
+          "16": 1,
+          "2": 9
+        },
+        "phase_zero_minimum_deficit": 80,
+        "phase_zero_profile": {
+          "0": 5,
+          "16": 5
+        },
+        "u0": 0,
+        "u1": 9
+      },
+      {
+        "pair_slack": 18,
+        "phase_one_minimum_deficit": 126,
+        "phase_one_profile": {
+          "16": 1,
+          "2": 9
+        },
+        "phase_zero_minimum_deficit": 96,
+        "phase_zero_profile": {
+          "0": 6,
+          "16": 4
+        },
+        "u0": 2,
+        "u1": 9
+      },
+      {
+        "pair_slack": 4,
+        "phase_one_minimum_deficit": 126,
+        "phase_one_profile": {
+          "16": 1,
+          "2": 9
+        },
+        "phase_zero_minimum_deficit": 110,
+        "phase_zero_profile": {
+          "0": 6,
+          "16": 3,
+          "2": 1
+        },
+        "u0": 3,
+        "u1": 9
+      },
+      {
+        "pair_slack": 2,
+        "phase_one_minimum_deficit": 126,
+        "phase_one_profile": {
+          "16": 1,
+          "2": 9
+        },
+        "phase_zero_minimum_deficit": 112,
+        "phase_zero_profile": {
+          "0": 7,
+          "16": 3
+        },
+        "u0": 4,
+        "u1": 9
+      },
+      {
+        "pair_slack": 18,
+        "phase_one_minimum_deficit": 126,
+        "phase_one_profile": {
+          "16": 1,
+          "2": 9
+        },
+        "phase_zero_minimum_deficit": 96,
+        "phase_zero_profile": {
+          "0": 6,
+          "16": 4
+        },
+        "u0": 6,
+        "u1": 9
+      }
+    ],
+    "positive_residue_rows": [
+      {
+        "excluded": true,
+        "forces_quotient_zero": true,
+        "least_positive_b_floor": 20,
+        "quotient_sum": 8,
+        "sharp_scaled_lift_floor": 16,
+        "therefore_b_zero": true,
+        "u0": 2,
+        "zero_quotient_scaled_mean": 4
+      },
+      {
+        "excluded": true,
+        "forces_quotient_zero": true,
+        "least_positive_b_floor": 20,
+        "quotient_sum": 7,
+        "sharp_scaled_lift_floor": 16,
+        "therefore_b_zero": true,
+        "u0": 3,
+        "zero_quotient_scaled_mean": 6
+      },
+      {
+        "excluded": true,
+        "forces_quotient_zero": true,
+        "least_positive_b_floor": 20,
+        "quotient_sum": 6,
+        "sharp_scaled_lift_floor": 16,
+        "therefore_b_zero": true,
+        "u0": 4,
+        "zero_quotient_scaled_mean": 8
+      },
+      {
+        "excluded": true,
+        "forces_quotient_zero": true,
+        "least_positive_b_floor": 20,
+        "quotient_sum": 4,
+        "sharp_scaled_lift_floor": 16,
+        "therefore_b_zero": true,
+        "u0": 6,
+        "zero_quotient_scaled_mean": 12
+      }
+    ],
+    "positive_residues_all_excluded": true,
+    "proposition": "15.688",
+    "proved": true,
+    "remaining_same_boundary_primes": [
+      17,
+      19,
+      23
+    ],
+    "residue_zero_profile": {
+      "pair_slack": 34,
+      "phase_one_minimum_deficit": 126,
+      "phase_one_profile": {
+        "16": 1,
+        "2": 9
+      },
+      "phase_zero_minimum_deficit": 80,
+      "phase_zero_profile": {
+        "0": 5,
+        "16": 5
+      },
+      "u0": 0,
+      "u1": 9
+    },
+    "residue_zero_rows": [
+      {
+        "pair_slack": 34,
+        "phase_one_minimum_deficit": 126,
+        "phase_one_profile": {
+          "16": 1,
+          "2": 9
+        },
+        "phase_zero_minimum_deficit": 80,
+        "phase_zero_profile": {
+          "0": 5,
+          "16": 5
+        },
+        "u0": 0,
+        "u1": 9
+      }
+    ],
+    "top_level_gates_changed": false
+  },
+  "proposition": "15.688",
+  "proved": true,
+  "sample_floors": {
+    "101": {
+      "H_at_least_two_intersection": "26",
+      "H_at_least_two_paired_floor": "2(p+1)-4H",
+      "H_at_least_two_scaled_floor": 100,
+      "H_at_least_two_stabilizer_coefficient": "50/13",
+      "H_equals_one_scaled_floor": 98,
+      "cube_degree_two_support_floor": "1/4",
+      "equality_example": "B=(1-x_i)(1-x_j)",
+      "equality_example_scaled_mass": "98",
+      "equality_rigidity": "B is Boolean and every paired cube through a support point has minimum degree-two support 1/4",
+      "integer_quadratic_cube_mean_lattice": "(1/4) Z",
+      "p": 101,
+      "paired_cube_identity": "T B(X)=(B(X)+p E[B])/(p+1)",
+      "proved": true,
+      "sharp_mass_floor": "49/202",
+      "sharp_scaled_floor": 98
+    },
+    "11": {
+      "H_at_least_two_intersection": "3",
+      "H_at_least_two_paired_floor": "2(p+1)-4H",
+      "H_at_least_two_scaled_floor": 12,
+      "H_at_least_two_stabilizer_coefficient": "4",
+      "H_equals_one_scaled_floor": 8,
+      "cube_degree_two_support_floor": "1/4",
+      "equality_example": "B=(1-x_i)(1-x_j)",
+      "equality_example_scaled_mass": "8",
+      "equality_rigidity": "B is Boolean and every paired cube through a support point has minimum degree-two support 1/4",
+      "integer_quadratic_cube_mean_lattice": "(1/4) Z",
+      "p": 11,
+      "paired_cube_identity": "T B(X)=(B(X)+p E[B])/(p+1)",
+      "proved": true,
+      "sharp_mass_floor": "2/11",
+      "sharp_scaled_floor": 8
+    },
+    "13": {
+      "H_at_least_two_intersection": "4",
+      "H_at_least_two_paired_floor": "2(p+1)-4H",
+      "H_at_least_two_scaled_floor": 12,
+      "H_at_least_two_stabilizer_coefficient": "3",
+      "H_equals_one_scaled_floor": 10,
+      "cube_degree_two_support_floor": "1/4",
+      "equality_example": "B=(1-x_i)(1-x_j)",
+      "equality_example_scaled_mass": "10",
+      "equality_rigidity": "B is Boolean and every paired cube through a support point has minimum degree-two support 1/4",
+      "integer_quadratic_cube_mean_lattice": "(1/4) Z",
+      "p": 13,
+      "paired_cube_identity": "T B(X)=(B(X)+p E[B])/(p+1)",
+      "proved": true,
+      "sharp_mass_floor": "5/26",
+      "sharp_scaled_floor": 10
+    },
+    "17": {
+      "H_at_least_two_intersection": "5",
+      "H_at_least_two_paired_floor": "2(p+1)-4H",
+      "H_at_least_two_scaled_floor": 16,
+      "H_at_least_two_stabilizer_coefficient": "16/5",
+      "H_equals_one_scaled_floor": 14,
+      "cube_degree_two_support_floor": "1/4",
+      "equality_example": "B=(1-x_i)(1-x_j)",
+      "equality_example_scaled_mass": "14",
+      "equality_rigidity": "B is Boolean and every paired cube through a support point has minimum degree-two support 1/4",
+      "integer_quadratic_cube_mean_lattice": "(1/4) Z",
+      "p": 17,
+      "paired_cube_identity": "T B(X)=(B(X)+p E[B])/(p+1)",
+      "proved": true,
+      "sharp_mass_floor": "7/34",
+      "sharp_scaled_floor": 14
+    },
+    "19": {
+      "H_at_least_two_intersection": "5",
+      "H_at_least_two_paired_floor": "2(p+1)-4H",
+      "H_at_least_two_scaled_floor": 20,
+      "H_at_least_two_stabilizer_coefficient": "4",
+      "H_equals_one_scaled_floor": 16,
+      "cube_degree_two_support_floor": "1/4",
+      "equality_example": "B=(1-x_i)(1-x_j)",
+      "equality_example_scaled_mass": "16",
+      "equality_rigidity": "B is Boolean and every paired cube through a support point has minimum degree-two support 1/4",
+      "integer_quadratic_cube_mean_lattice": "(1/4) Z",
+      "p": 19,
+      "paired_cube_identity": "T B(X)=(B(X)+p E[B])/(p+1)",
+      "proved": true,
+      "sharp_mass_floor": "4/19",
+      "sharp_scaled_floor": 16
+    },
+    "23": {
+      "H_at_least_two_intersection": "6",
+      "H_at_least_two_paired_floor": "2(p+1)-4H",
+      "H_at_least_two_scaled_floor": 24,
+      "H_at_least_two_stabilizer_coefficient": "4",
+      "H_equals_one_scaled_floor": 20,
+      "cube_degree_two_support_floor": "1/4",
+      "equality_example": "B=(1-x_i)(1-x_j)",
+      "equality_example_scaled_mass": "20",
+      "equality_rigidity": "B is Boolean and every paired cube through a support point has minimum degree-two support 1/4",
+      "integer_quadratic_cube_mean_lattice": "(1/4) Z",
+      "p": 23,
+      "paired_cube_identity": "T B(X)=(B(X)+p E[B])/(p+1)",
+      "proved": true,
+      "sharp_mass_floor": "5/23",
+      "sharp_scaled_floor": 20
+    },
+    "29": {
+      "H_at_least_two_intersection": "8",
+      "H_at_least_two_paired_floor": "2(p+1)-4H",
+      "H_at_least_two_scaled_floor": 28,
+      "H_at_least_two_stabilizer_coefficient": "7/2",
+      "H_equals_one_scaled_floor": 26,
+      "cube_degree_two_support_floor": "1/4",
+      "equality_example": "B=(1-x_i)(1-x_j)",
+      "equality_example_scaled_mass": "26",
+      "equality_rigidity": "B is Boolean and every paired cube through a support point has minimum degree-two support 1/4",
+      "integer_quadratic_cube_mean_lattice": "(1/4) Z",
+      "p": 29,
+      "paired_cube_identity": "T B(X)=(B(X)+p E[B])/(p+1)",
+      "proved": true,
+      "sharp_mass_floor": "13/58",
+      "sharp_scaled_floor": 26
+    },
+    "31": {
+      "H_at_least_two_intersection": "8",
+      "H_at_least_two_paired_floor": "2(p+1)-4H",
+      "H_at_least_two_scaled_floor": 32,
+      "H_at_least_two_stabilizer_coefficient": "4",
+      "H_equals_one_scaled_floor": 28,
+      "cube_degree_two_support_floor": "1/4",
+      "equality_example": "B=(1-x_i)(1-x_j)",
+      "equality_example_scaled_mass": "28",
+      "equality_rigidity": "B is Boolean and every paired cube through a support point has minimum degree-two support 1/4",
+      "integer_quadratic_cube_mean_lattice": "(1/4) Z",
+      "p": 31,
+      "paired_cube_identity": "T B(X)=(B(X)+p E[B])/(p+1)",
+      "proved": true,
+      "sharp_mass_floor": "7/31",
+      "sharp_scaled_floor": 28
+    },
+    "41": {
+      "H_at_least_two_intersection": "11",
+      "H_at_least_two_paired_floor": "2(p+1)-4H",
+      "H_at_least_two_scaled_floor": 40,
+      "H_at_least_two_stabilizer_coefficient": "40/11",
+      "H_equals_one_scaled_floor": 38,
+      "cube_degree_two_support_floor": "1/4",
+      "equality_example": "B=(1-x_i)(1-x_j)",
+      "equality_example_scaled_mass": "38",
+      "equality_rigidity": "B is Boolean and every paired cube through a support point has minimum degree-two support 1/4",
+      "integer_quadratic_cube_mean_lattice": "(1/4) Z",
+      "p": 41,
+      "paired_cube_identity": "T B(X)=(B(X)+p E[B])/(p+1)",
+      "proved": true,
+      "sharp_mass_floor": "19/82",
+      "sharp_scaled_floor": 38
+    },
+    "5": {
+      "H_at_least_two_intersection": "2",
+      "H_at_least_two_paired_floor": "2(p+1)-4H",
+      "H_at_least_two_scaled_floor": 4,
+      "H_at_least_two_stabilizer_coefficient": "2",
+      "H_equals_one_scaled_floor": 2,
+      "cube_degree_two_support_floor": "1/4",
+      "equality_example": "B=(1-x_i)(1-x_j)",
+      "equality_example_scaled_mass": "2",
+      "equality_rigidity": "B is Boolean and every paired cube through a support point has minimum degree-two support 1/4",
+      "integer_quadratic_cube_mean_lattice": "(1/4) Z",
+      "p": 5,
+      "paired_cube_identity": "T B(X)=(B(X)+p E[B])/(p+1)",
+      "proved": true,
+      "sharp_mass_floor": "1/10",
+      "sharp_scaled_floor": 2
+    },
+    "7": {
+      "H_at_least_two_intersection": "2",
+      "H_at_least_two_paired_floor": "2(p+1)-4H",
+      "H_at_least_two_scaled_floor": 8,
+      "H_at_least_two_stabilizer_coefficient": "4",
+      "H_equals_one_scaled_floor": 4,
+      "cube_degree_two_support_floor": "1/4",
+      "equality_example": "B=(1-x_i)(1-x_j)",
+      "equality_example_scaled_mass": "4",
+      "equality_rigidity": "B is Boolean and every paired cube through a support point has minimum degree-two support 1/4",
+      "integer_quadratic_cube_mean_lattice": "(1/4) Z",
+      "p": 7,
+      "paired_cube_identity": "T B(X)=(B(X)+p E[B])/(p+1)",
+      "proved": true,
+      "sharp_mass_floor": "1/7",
+      "sharp_scaled_floor": 4
+    }
+  },
+  "sharp_floor": "4p E[B] >= p-3",
+  "sharp_floor_all_odd_p_at_least_five": true
+}

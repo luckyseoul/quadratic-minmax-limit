@@ -46,9 +46,12 @@ Relative gap at \(n=10\): \(2/n^{3/2}\approx0.063\). Any sequence with \(k_\star
 
 ## What remains for settlement
 
-Prove \(k_\star=o(n^{3/2})\) for \(\Phi\)-minimisers on all large \(n=p^2+1\)
-(equivalently: every near-minimiser of \(\Phi\) is Hamming-close, after switching, to the
-Paley/conference class at scale \(o(n^{3/2})\)).
+One sufficient route is to prove \(k_\star=o(n^{3/2})\) for a closest exact
+\(\Phi\)-minimiser on all large \(n=p^2+1\) (or the weaker
+\(k_\star=o(n^2)\) using Max-Lipschitz). This is **not equivalent** to saying
+that every near-minimiser is Hamming-close: far exact minimisers already occur
+at \(n=10\), and general far edge-local minima are proved in
+`NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md`.
 
 This is **not** proved. SA+exact at \(n=14,18,26\) found no undercut of Paley \(\Phi\)
 (so those runs are consistent with \(k_\star=0\)), but absence of a search hit is not a proof.

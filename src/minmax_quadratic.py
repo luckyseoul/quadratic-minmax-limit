@@ -368,8 +368,8 @@ def phi_edge_lipschitz_lower(phi_ref: float, k: int) -> float:
     Prop 15.20b (edge-counting Lipschitz): if A and C differ in k edges then
     Phi(A) >= Phi(C) - 2k.
 
-    Sharper than Frobenius Lipschitz (Prop 15.20: gap <= n sqrt(k)) whenever
-    2k < n sqrt(k), i.e. k < n^2/4 (the sparse-disagreement regime).
+    Sharper than Frobenius Lipschitz (Prop 15.20: gap <= n sqrt(2k)) whenever
+    2k < n sqrt(2k), i.e. k < n^2/2 (the sparse-disagreement regime).
     Consequence for E(1): if a Phi-minimiser is within k = o(n^{3/2}) edges of a
     rho=1 conference matrix (after switching), then m_n = Phi(C) - o(n^{3/2}).
     """

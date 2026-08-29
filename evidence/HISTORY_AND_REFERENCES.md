@@ -1255,6 +1255,73 @@ Targeted literature and OEIS searches found no matching statement or
 sequence for the exact obstruction or remainder. No novelty or
 sequence-submission claim is made.
 
+## 7ao. Cold theorem audit, global route kill, and sharp p=19 lift (2026-08-29)
+
+The original limit was reread independently of the accumulated exact gate.
+The weakest sufficient statement is only the ratio-dense Paley-tail deficit
+
+\[
+\Phi(C_p)-m_{p^2+1}=o(p^3),
+\]
+
+now recorded as Proposition 15.20e. The every-prime exact gap-two four-unit
+architecture is strictly stronger.
+
+A general probabilistic counter-mechanism kills local Paley stability:
+random signings can be chosen with both \(\Phi(A)\) and
+\(\Phi(A\circ C)\) of order \(n^{3/2}\), and greedy edge descent preserves
+distance \(\binom n2/2-O(n^{3/2})\) from the signed Paley orbit. The product
+frame's complete second moments are also independent of \(A\). The surviving
+stability input is instead the all-subsets witness hierarchy supplied by a
+closest **global** minimizer.
+
+The augmented cut-code formulation was reduced exactly to the signed
+even-Eulerian high-temperature identity
+
+\[
+\mathbb E\cosh(\beta Q_a)
+=(\cosh\beta)^{\binom n2}P_a(\tanh\beta).
+\]
+
+At \(\beta=2/\sqrt n\), a uniform lower bound
+\(\log P_a\ge-o(n)\) would prove the target constant. Classical Delsarte
+external distance and fixed-\(L^q\) moment norms discard the phase
+consistency needed at this scale. Bryant--Horsley--Pettersson supplies the
+nearby complete-graph cycle-decomposition theorem; it confirms the breadth
+of the Eulerian dual support, not the required signed cancellation.
+
+The conference-class audit corrected another shortcut. Spectral defect zero
+identifies all conference classes, not Paley. Craigen's Lemma 7 proves only
+that a regular conference matrix has square \(n-1\); it does not prove the
+converse. Orders 2, 10, and 26 are regularizable, while order 50 is the first
+unresolved square case found in the classification literature. Separately,
+Mathon's order-\(5r^2+1\) family has irrational conference eigenvalues and
+hence \(\rho<1\) at each order, but no uniform gap is known.
+
+On the live residual front, Proposition 15.688 combines paired-cube
+quarter-integrality with Proposition 15.642's exact stabilizer weights to
+prove the sharp theorem
+
+\[
+4p\mathbb E B\ge p-3
+\]
+
+for every nonzero nonnegative integral quadratic on the middle slice. The
+Boolean quadratic \((1-x_i)(1-x_j)\) attains equality. At the \(p=19,s=16\)
+second boundary, this removes every positive residue and leaves one
+residue-zero profile pair of slack 34. The endpoint remains open.
+
+The degree-four truncated-moment import of
+Infusino--Kuna--Lebowitz--Speer and Prékopa was also evaluated. It proves
+that the constant quartic majorant is already optimal in the large-prime
+bulk, so quartics cannot improve the existing \(2p\) floor there. At
+\((p,b,\eta)=(19,9,0)\), an explicit negative quartic expectation prevents
+blind extension to the small endpoint.
+
+Full audit and attack map:
+`evidence/STRATEGY_2026-08-29_COLD_REVIEW.md` and
+`evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md`.
+
 ---
 
 ## 8. What is not in the older literature
@@ -1326,5 +1393,11 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 54. J. M. Chao and H. Kaneta, *Classical arcs in PG(r,q) for 23 <= q <= 29*, Discrete Math. **226** (2001), 377--385 (records maximum nonclassical plane-arc size 24 at `q=29`; independent prior confirmation of 15.681's classification consequence).
 55. K. Coolsaet, *The Complete Arcs of PG(2,31)*, J. Combin. Des. **23** (2015), 522--533, [doi:10.1002/jcd.21410](https://doi.org/10.1002/jcd.21410) (exhaustive complete-arc classification used in 15.682; in particular, there are no complete arcs of sizes 23 through 31).
 56. K. Coolsaet and H. Sticker, *A full classification of the complete k-arcs of PG(2,23) and PG(2,25)*, J. Combin. Des. **17** (2009), 459--477, [doi:10.1002/jcd.20211](https://doi.org/10.1002/jcd.20211) (complete-arc spectrum and class counts in `PG(2,23)`, used in 15.684 to force every arc of size at least 18 onto a conic).
+57. R. Mathon, *Symmetric conference matrices of order \(pq^2+1\)*, Canad. J. Math. **30** (1978), 321--331, [doi:10.4153/CJM-1978-029-1](https://doi.org/10.4153/CJM-1978-029-1) (ratio-dense non-square-eigenvalue conference family; a uniform Boolean-radius gap is not known).
+58. R. Craigen, *Trace, Symmetry and Orthogonality*, Canad. Math. Bull. **37** (1994), 461--467, [doi:10.4153/CMB-1994-067-1](https://doi.org/10.4153/CMB-1994-067-1) (Lemma 7 proves regular conference \(\Rightarrow n=k^2+1\), not the converse).
+59. A. J. L. Paulus, *Conference matrices and graphs of order 26*, Eindhoven report, 1973, [PDF](https://pure.tue.nl/ws/files/4424819/252855.pdf) (the four order-26 conference classes have regular representatives).
+60. M. Infusino, T. Kuna, J. L. Lebowitz, and E. R. Speer, *The truncated moment problem on \(\mathbb N_0\)*, J. Math. Anal. Appl. **452** (2017), 443--468, [arXiv:1504.02989](https://arxiv.org/abs/1504.02989) (degree-four contact-measure criterion used to audit quartic parity majorants).
+61. A. Prékopa, *The discrete moment problem and linear programming*, Discrete Appl. Math. **27** (1990), 235--254, [doi:10.1016/0166-218X(90)90068-N](https://doi.org/10.1016/0166-218X(90)90068-N) (finite-support moment LP and endpoint constraints).
+62. D. Bryant, D. Horsley, and W. Pettersson, *Cycle decompositions V: complete graphs into cycles of arbitrary lengths*, Proc. Lond. Math. Soc. **108** (2014), 1153--1192, [arXiv:1204.3709](https://arxiv.org/abs/1204.3709) (prescribed complete-graph cycle decompositions; contextual support for the broad Eulerian dual spectrum).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

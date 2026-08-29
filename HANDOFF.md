@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-28 (15.687 removes all 68 `p=23` slack-20 rows and leaves 133 exact arithmetic profiles, all of slack at least 24; no general flag flipped)
+**Date:** 2026-08-29 (cold theorem audit plus 15.688; `p=19,s=16` reduced to one residue-zero row of pair slack 34; no general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -49,6 +49,49 @@ odd-fibre counts are then closed by Proposition 15.674: exact type sums allow
 an intermediate count only as the unique high direction of its type, which
 leaves the same four arithmetic rows. The next infinity-present shell has
 `p` finite points.
+
+## 15.688 — sharp lift floor; p=19 has one row left
+
+`src/e1_gmin_m4_prop15688.py` and
+`evidence/NOTE_2026-08-29_sharp_integral_lift_p19.md`. For every odd
+`p>=5` and every nonzero nonnegative integral quadratic `B` on the middle
+slice,
+
+```text
+4p E[B] >= p-3.
+```
+
+The proof uses the paired-cube identity. Integer-valued quadratics have cube
+mean in `(1/4)Z`; when `H=max B>=2`, mean `1/4` is impossible, so the cube
+mean is at least `1/2`. Combining that branch with the exact 15.642
+stabilizer coefficient leaves the global minimum at `H=1`. The Boolean
+quadratic `(1-x_i)(1-x_j)` attains equality.
+
+At `p=19,s=16`, exact pair arithmetic had phase-zero residues
+`0,2,3,4,6` and phase-one residue `9`. The four positive rows force scaled
+lift masses `4,6,8,12`, below the new floor 16, so all are impossible. The
+sole survivor is
+
+```text
+5[b=0]+5[b=16],  9[b=2]+1[b=16],  pair slack 34.
+```
+
+Closing that one finite incidence row closes the `p=19` endpoint. It does
+not by itself close residual (ii).
+
+## 2026-08-29 cold attack map
+
+The theorem only needs an `o(p^3)` Paley deficit on a ratio-dense tail; the
+exact gap-2 architecture is stronger. Local/product Hamming stability has a
+general counter-mechanism and must not be retried. The bounded next pass is:
+
+1. full-Max+ dilation energy (one lemma attacks principal R1 and Type I);
+2. the single `p=19` incidence row above;
+3. closest-global all-subsets or signed-Eulerian free energy for the direct
+   asymptotic route;
+4. a red-team uniform-gap search in non-Paley conference families.
+
+Full statement: `evidence/STRATEGY_2026-08-29_COLD_REVIEW.md`.
 
 ## 15.687 — all 68 `p=23` slack-20 profiles excluded
 

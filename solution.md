@@ -729,8 +729,13 @@ Write \(\delta(A):=\mathrm{tr}(A^4)-n(n-1)^2\ge0\). If \(A\in\mathcal S_n\) sati
 \end{equation}
 Consequently: if every non-conference Seidel matrix of order \(n\) obeys \(\delta(A)>\Delta_*/3\), then every \(A\) with \(\Phi(A)\le\Phi_*\) is a conference matrix, and therefore
 \[
-m_n=\Phi_*.
+m_n=\min\{\Phi(D):D\text{ is a conference matrix of order }n\}\le\Phi_*.
 \]
+In particular, \(m_n=\Phi_*\) if the chosen \(C\) minimizes \(\Phi\) among
+all conference classes of order \(n\) (for example, if there is only one
+conference switching class).  That extra hypothesis cannot be dropped:
+different conference switching classes have the same spectral defect
+\(\delta=0\) but need not a priori have the same Boolean cube maximum.
 
 *Proof.* From \(\mathbb E[Q^4]\le(\max|Q|)^2\mathbb E[Q^2]\) and Prop 15.13,
 \[
@@ -741,7 +746,7 @@ m_n=\Phi_*.
 =\mathbb E_C[Q^4]+\Delta_*
 =3e^2-n(n-1)(3n-5)+\Delta_*.
 \]
-Cancel to get \(3\delta(A)\le\Delta_*\). If the spectral gap of every non-conference matrix exceeds \(\Delta_*/3\), then \(\delta(A)=0\), so \(A\) is conference (Prop 15.11) and \(\Phi(A)=\Phi_*\) along the switching class (Prop 15.4). \(\square\)
+Cancel to get \(3\delta(A)\le\Delta_*\). If the spectral gap of every non-conference matrix exceeds \(\Delta_*/3\), then \(\delta(A)=0\), so \(A\) is a conference matrix (Prop 15.11).  Proposition 15.4 makes \(\Phi\) constant only inside each switching class; minimizing over all conference classes gives the displayed conclusion. \(\square\)
 
 **Corollary 15.15 (exact optimality at \(n=6\)).** For \(n=6\), the Paley conference matrix satisfies \(\Phi_*=5\), \(\Delta_*=90\), and \(\Delta_*/3=30\). Exhaustive enumeration of all \(2^{10}=1024\) vertex-folded Seidel matrices of order 6 yields \(\min\delta(A)=64>30\) over non-conference matrices (and exactly 12 conference matrices in the switching class, all with \(\Phi=5\)). Therefore \(m_6=5=\Phi(C)\).
 
@@ -813,13 +818,13 @@ hence
 \;\le\;
 \frac n2\,\|A-B\|_F.
 \end{equation}
-In particular, if \(A\) differs from a conference matrix \(C\) in exactly \(k\) undirected edges, then \(\|A-C\|_F=2\sqrt k\) and
+In particular, if \(A\) differs from a conference matrix \(C\) in exactly \(k\) undirected edges, then \(\|A-C\|_F=2\sqrt{2k}\) and
 \[
-\Phi(A)\;\ge\;\Phi(C)-n\sqrt k.
+\Phi(A)\;\ge\;\Phi(C)-n\sqrt{2k}.
 \]
 Relative to the \(n^{3/2}\) scale this is an \(O(\sqrt{k/n})\) relative error: any \(A\) within \(k=o(n)\) edge flips of a conference matrix satisfies \(\Phi(A)\ge\Phi(C)-o(n^{3/2})\).
 
-*Proof.* Cauchy–Schwarz: \(|x^\top Mx|\le\|M\|_F\|x\|_2^2=n\|M\|_F\) for \(M=A-B\) and \(\|x\|_2=\sqrt n\). Taking \(\Phi=\max|Q|=\tfrac12\max|x^\top(\,\cdot\,)x|\) yields \eqref{eq:phi-lip}. Each flipped edge changes two off-diagonal entries by \(2\) in absolute value, contributing \(4\) to \(\|A-C\|_F^2\) per edge. \(\square\)
+*Proof.* Cauchy–Schwarz: \(|x^\top Mx|\le\|M\|_F\|x\|_2^2=n\|M\|_F\) for \(M=A-B\) and \(\|x\|_2=\sqrt n\). Taking \(\Phi=\max|Q|=\tfrac12\max|x^\top(\,\cdot\,)x|\) yields \eqref{eq:phi-lip}. Each flipped undirected edge changes two symmetric off-diagonal entries by \(2\) in absolute value, contributing \(4+4=8\) to \(\|A-C\|_F^2\). \(\square\)
 
 **Proposition 15.20b (edge-counting Lipschitz — sharp sparse form).** Let \(A,C\in\mathcal S_n\) differ in exactly \(k\) undirected edges. Then for every \(x\in\{\pm1\}^n\),
 \[
@@ -866,11 +871,34 @@ and \(\lvert Q_A(x)-Q_C(x)\rvert\le 2\lvert F\rvert=2k\). Hence \(\lvert Q_A(x)\
 \frac{2k_\star}p=O(n),\qquad
 \alpha_{n_k}\ge\tfrac12\sqrt{1-1/n_k}-O(n_k^{-1/2})\to\tfrac12.
 \]
-Combined with the universal limsup \(\limsup\alpha_n\le\tfrac12\) (Prop 4.1) and denseness Prop 6.1–6.2 along \(n_k\), one has \(\lim\alpha_n=\tfrac12\). \(\square\)
+Here \(p_k\) are consecutive primes, so \(p_{k+1}/p_k\to1\) and hence
+\(n_{k+1}/n_k\to1\). Combined with the universal limsup
+\(\limsup\alpha_n\le\tfrac12\) (Prop 4.1), Proposition 6.1 gives
+\(\lim\alpha_n=\tfrac12\). \(\square\)
 
 *(Weaker edge-only form.)* Prop 15.20b alone needs the stronger hypothesis \(k_\star=O(n)\) for the same conclusion (gap \(2k_\star=O(n)\)). Max-Lipschitz saves a factor \(p=\sqrt{n-1}\).
 
 *Status of the hypothesis.* At \(n=10\), \(k_\star=5=O(n)\subset O(n^{3/2})\) (N10-S/C6). At \(n=26\), exact MITM sparse/SA census found no undercut of \(\Phi=65\) (consistent with \(k_\star=0\)). **The general bound \(k_\star=O(n^{3/2})\) on all \(n=p^2+1\) is not proved.** Existence of \(\lim\alpha_n\) remains **OPEN**.
+
+**Proposition 15.20e (minimal asymptotic Paley-tail gate).** Let
+\(p_1<p_2<\cdots\) be odd primes with \(p_{k+1}/p_k\to1\), put
+\(n_k=p_k^2+1\), and let \(C_{p_k}\) be the \(\rho=1\) Paley conference
+matrix of that order. Then
+\[
+\lim_{n\to\infty}\alpha_n=\frac12
+\quad\Longleftrightarrow\quad
+\Phi(C_{p_k})-m_{n_k}=o(p_k^3).
+\]
+Thus an eventual bound on any such ratio-dense Paley tail is enough; the
+current all-prime exact gap-2 architecture is a strictly stronger sufficient
+gate.
+
+*Proof.* Since \(n_k^{3/2}\sim p_k^3\) and
+\(\Phi(C_{p_k})/n_k^{3/2}=\tfrac12\sqrt{1-1/n_k}\to\tfrac12\), the deficit
+condition is equivalent to \(\alpha_{n_k}\to\tfrac12\). Moreover
+\(n_{k+1}/n_k\to1\), so Proposition 6.1 transfers that limit to the full
+sequence. The reverse implication follows by restriction to \(n_k\) and the
+same displayed asymptotic. \(\square\)
 
 **Proposition 15.21 (single-edge local optimality under maximizer balance).** Let \(C\in\mathcal S_n\) be a conference matrix, \(M=\Phi(C)\), and \((p,r)\) an unordered edge. Write \(\varepsilon(x):=C_{pr}x_px_r\in\{\pm1\}\). Suppose there exists \(x^*\in\{\pm1\}^n\) with \(|Q_C(x^*)|=M\) and
 \[
@@ -1024,7 +1052,7 @@ m_n\ge\Phi(C)-\frac{2k_\star}p,
 \qquad
 \alpha_n\ge\tfrac12\sqrt{1-1/n}-\frac{2k_\star}{p\,n^{3/2}}.
 \]
-Hence **\(k_\star=O(n^{3/2})\) already forces \(\alpha_n\to\tfrac12\)** along the \(\rho=1\) family (gap \(O(n)=o(n^{3/2})\)), and \(k_\star=o(n^2)\) is the absolute threshold for a vanishing relative gap. This improves Prop 15.20d (which needed \(k_\star=O(n)\) via edge lipschitz). The remaining gap to a free proof is a factor \(\sqrt n\): dual-Gaussian on \(W=A\circ C\) only gives \(k_\star\le\binom n2/2-\Omega(n^{3/2})=\Theta(n^2)\) for arbitrary \(A\). Closing E(1) needs \(k_\star=O(n^{3/2})\) (or better) for \(\Phi\)-minimisers — e.g. via \(\Delta(F)=O(\sqrt n)\) after best switch, the matching dichotomy, or spectral rigidity. Integral Max-covers of size \(p\) exist (LP support) but are stars and spike to \(\Phi>\Phi(C)\). **Existence of \(\lim\alpha_n\) remains OPEN.**
+Hence **\(k_\star=O(n^{3/2})\) already forces \(\alpha_n\to\tfrac12\)** along the \(\rho=1\) family (gap \(O(n)=o(n^{3/2})\)), and more generally \(k_\star=o(n^2)\) is sufficient for a vanishing relative gap. The latter is the sharp threshold supplied by this inequality, not a necessary condition for E(1). Dual-Gaussian on \(W=A\circ C\) gives only \(k_\star\le\binom n2/2-\Omega(n^{3/2})=\Theta(n^2)\) for an arbitrary \(A\); the remaining stability task is to obtain any \(o(n^2)\) bound for a closest **global** \(\Phi\)-minimiser, or to bypass Hamming stability. Integral Max-covers of size \(p\) exist (LP support) but are stars and spike to \(\Phi>\Phi(C)\). **Existence of \(\lim\alpha_n\) remains OPEN.**
 
 **Proposition 15.28 (size-\(p\) Max-covers: tight cover and spike; 2026-07-27).** Let \(C\) be a \(\rho=1\) conference of order \(n=p^2+1\) with the Max\(\pm\) frame identities of Prop~15.27 (so \(\mathbb E_{\pm}[C_{ij}y_iy_j]=\pm1/p\), and \(\mathbb E_{\mathrm{Max}_{-}}[yy^\top]=I-C/p\)). Write \(S_F(x)=\sum_{\{i,j\}\in F}C_{ij}x_ix_j\).
 
@@ -1248,7 +1276,7 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 3. **No-descent lemma (OPEN in general).** If \(\Phi(A_F)=\Phi(C)-2\), then for every \(e\notin F\), \(\Phi(A_F\oplus e)\ge\Phi(C)-2\).
 
-4. **Conditional settlement.** If the no-descent lemma holds for all flip sets on the \(\rho=1\) Paley family \(n=p^2+1\), then by induction on Hamming distance every Seidel matrix \(A\) of those orders satisfies \(\Phi(A)\ge\Phi(C)-2\). Thus \(m_n\ge\Phi(C)-2\), the gap is \(O(1)=o(n^{3/2})\), E(1) holds, and \(L=\tfrac12\) by denseness (Prop 6.2). **F13:** this must not be claimed from Prop 15.40 alone; no-descent is an independent lemma about \(\Phi\), not abstract 2-Lipschitz calculus.
+4. **Conditional settlement.** If the no-descent lemma holds for all flip sets on the \(\rho=1\) Paley family \(n=p^2+1\), then by induction on Hamming distance every Seidel matrix \(A\) of those orders satisfies \(\Phi(A)\ge\Phi(C)-2\). Thus \(m_n\ge\Phi(C)-2\), the gap is \(O(1)=o(n^{3/2})\), E(1) holds, and \(L=\tfrac12\) by Proposition 6.1 along the consecutive-prime-square orders. **F13:** this must not be claimed from Prop 15.40 alone; no-descent is an independent lemma about \(\Phi\), not abstract 2-Lipschitz calculus.
 
 5. **Certified at \(n=10\) (matching undercutters; not a general proof).** For all **144** perfect-matching undercutters of Paley \(C_{10}\) (\(\Phi=13=\Phi-2\)):
    - number of dangerous external edges: **0**;
@@ -1321,7 +1349,7 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
    - Type I gap-2 undercutters at counting equality for general \(p\) (parts 3–4 handle \(p=3\); need \(\Phi\ge\Phi-2\) for all tight \(S\equiv2\) covers, or freeness of the \(k=3p-2\) boundary);
    - deep non-tight gap-2 undercutters with \(s_+\ge2\), \(k>2p\).
 
-   If those hold, then \(m_n\ge\Phi-2=o(n^{3/2})\) on the dense \(\rho=1\) family, E(1) follows, and \(L=\tfrac12\) by Prop 6.2. **Existence of \(\lim\alpha_n\) remains OPEN.**
+   If those hold, then \(m_n\ge\Phi-2=o(n^{3/2})\) on the dense \(\rho=1\) family, E(1) follows, and \(L=\tfrac12\) by Proposition 6.1 along the consecutive-prime-square orders. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
 **Proposition 15.44 (master lemma for tight covers; bi-tight residual; 2026-07-28).** Let \(C\) be \(\rho=1\) Paley of order \(n=p^2+1\), \(\Phi=\Phi(C)\).
 
@@ -3308,7 +3336,7 @@ In all three orders \(\rho_{\min}(n)>2/\pi\approx0.6366\). At \(n=6\), \(\rho_{\
 - Grothendieck / Kashin–Szarek / AMMN block naïve spherical transfer for general (non-Seidel) forms.
 - Prop 15.16 kills the global super-linear-\(\min\delta\) repair of Prop 15.14.
 - Prop 15.19 kills the *conditional* shell path for large \(n\) (shell \(=\) all of \(\mathcal S_n\) once \(n\gtrsim38\)).
-- **Remaining gap for Theorem E(1):** prove \(\rho(A)\|A\|_{\mathrm{op}}\ge\bigl(\rho(C)-o(1)\bigr)\sqrt{n-1}\) for all \(A\in\mathcal S_n\) along Paley orders (product form of Prop 15.9), by a method that does **not** pass through \(\mathbb E[Q^4]\). Natural programme: (i) universal lower bound \(\rho(A)\ge2/\pi-o(1)\) via Nesterov rounding; (ii) rigidity of near-minimal-op Seidel matrices toward the conference switching class; (iii) continuity of cube-max under Frobenius perturbation.
+- **Remaining gap for Theorem E(1):** prove \(\rho(A)\|A\|_{\mathrm{op}}\ge\bigl(\rho(C)-o(1)\bigr)\sqrt{n-1}\) for all \(A\in\mathcal S_n\) along Paley orders (product form of Prop 15.9), by a method that does **not** pass through \(\mathbb E[Q^4]\). Natural programme: (i) universal lower bound \(\rho(A)\ge2/\pi-o(1)\) via Nesterov rounding; (ii) rigidity of near-minimal-op Seidel matrices toward a conference class; (iii) prove that the resulting class has \(\rho=1-o(1)\), or compare its cube maximum directly with Paley; and (iv) continuity of cube-max under Frobenius perturbation. Spectral defect alone cannot identify the Paley switching class among inequivalent conference matrices.
 - **Remaining gap for Theorem E(2):** prove convergence of the cube-imbalance of \(P_+\) (Prop 15.18). Exact \(\rho(C_n)\) is strictly increasing on \(\{6,14,18,30,38\}\); a monotonicity or Cauchy argument would close E(2).
 
 **Invariant needed for \(L=\rho_*/2\):** asymptotic optimality (Prop 15.9) plus \(\rho(C_k)\to\rho_*\) (Theorem E).
@@ -3353,7 +3381,7 @@ Propositions 15.4–15.23:
 - \(L^2\)-universality \(\mathbb E[Q^2]=\binom{n}{2}\) for every Seidel \(A\);
 - \(\mathrm{tr}(A^4)\ge n(n-1)^2\) with equality iff conference;
 - **exact fourth-moment formula** \eqref{eq:Q4}: \(\mathbb E[Q^4]\) is an affine function of \(\mathrm{tr}(A^4)\) and is uniquely minimised at conference matrices;
-- **exact optimality criterion** \eqref{eq:delta-bound}: \(\Phi(A)\le\Phi(C)\Rightarrow\delta(A)\le\Delta_*/3\); when the spectral gap of every non-conference matrix exceeds \(\Delta_*/3\), one has \(m_n=\Phi(C)\);
+- **exact optimality criterion** \eqref{eq:delta-bound}: \(\Phi(A)\le\Phi(C)\Rightarrow\delta(A)\le\Delta_*/3\); when the spectral gap of every non-conference matrix exceeds \(\Delta_*/3\), every possible beater is a conference matrix, so \(m_n\) is the minimum cube maximum over all conference classes (equal to \(\Phi(C)\) only when the chosen class attains that minimum);
 - **\(m_6=\Phi(C)=5\)** by exhaustive verification of the gap criterion (Cor 15.15);
 - asymptotic optimality \(\Leftrightarrow\) conference minimises \(r(A)=\max|x^\top Ax|/(n\sqrt{n-1})\);
 - Prop 15.16: global \(\min\delta=\Theta(n)\) (edge flip), so super-linear gap repair is impossible;
@@ -8153,3 +8181,71 @@ Evidence: `src/e1_gmin_m4_prop15687.py`,
 `evidence/e1_gmin_m4_prop15687.json`,
 `evidence/NOTE_2026-08-28_p23_slack20_complete17_exclusion.md`, and
 `tests/test_prop15687.py`.
+
+## Proposition 15.688 — sharp integral lift; p=19 reduced to residue zero
+
+Let \(p\ge5\) be odd and let \(B\not\equiv0\) be a nonnegative,
+integer-valued quadratic on \(J(p,(p+1)/2)\). Then, sharply,
+
+\[
+4p\,\mathbb E B\ge p-3.                         \tag{15.688.1}
+\]
+
+Choose \(X\) with \(B(X)=H=\max B\). The paired-cube operator of
+15.680--15.681 satisfies
+
+\[
+TB(X)=\frac{H+p\mathbb E B}{p+1}.                \tag{15.688.2}
+\]
+
+The cube restriction is a nonzero degree-two polynomial, hence has support
+density at least \(1/4\). Because it is integer-valued, its multilinear
+coefficients are integers and its cube mean lies in \(\frac14\mathbb Z\).
+If \(H=1\), (15.688.2) gives (15.688.1). If \(H\ge2\), mean \(1/4\)
+would force value one on a support of density exactly \(1/4\), contradicting
+the value at \(X\); the mean is therefore at least \(1/2\), so
+
+\[
+4p\mathbb E B\ge2(p+1)-4H.                       \tag{15.688.3}
+\]
+
+At the same point, the exact stabilizer identities of 15.642 give
+
+\[
+4p\mathbb E B\ge
+\begin{cases}
+4H,&p\equiv3\pmod4,\\
+\dfrac{4r}{r+1}H,&p=4r+1.
+\end{cases}                                      \tag{15.688.4}
+\]
+
+For \(H\ge2\), the maximum of (15.688.3) and (15.688.4) is at least
+\(p+1\) in the first branch and \(p-1\) in the second. Thus the global
+minimum occurs at \(H=1\), proving (15.688.1). Equality is attained by
+\(B=(1-x_i)(1-x_j)\), whose mean is \((p-3)/(4p)\).
+
+At the live \(p=19\) second all-finite boundary \(s=16\), exact pair
+arithmetic leaves the unique phase-one row \(u_1=9\) and phase-zero residues
+
+\[
+u_0\in\{0,2,3,4,6\}.                              \tag{15.688.5}
+\]
+
+Each positive residue forces a quotient-zero direction. Its scaled mean is
+\(2u_0\in\{4,6,8,12\}\), below the least positive fibre floor \(20\),
+so it has \(b=0\) and is a nonzero quadratic lift. This contradicts
+(15.688.1), whose scaled floor is \(16\). Hence only
+
+\[
+u_0=0,quad u_1=9,qquad
+5[b=0]+5[b=16],quad9[b=2]+[b=16]                 \tag{15.688.6}
+\]
+
+remains. Its two deficits are \(80,126\), leaving pair slack \(34\).
+The \(p=19\) endpoint, residual (ii), R1, global QVAR, Type I, and the limit
+remain open.
+
+Evidence: `src/e1_gmin_m4_prop15688.py`,
+`evidence/e1_gmin_m4_prop15688.json`,
+`evidence/NOTE_2026-08-29_sharp_integral_lift_p19.md`, and
+`tests/test_prop15688.py`.
