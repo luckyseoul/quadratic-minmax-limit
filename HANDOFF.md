@@ -1,8 +1,7 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-30 (through 15.719; both `p=19,s=16` and `p=17,s=16`
-are closed; no
-general flag flipped)
+**Date:** 2026-08-30 (through 15.720; both `p=19,s=16` and `p=17,s=16`
+are closed; required bi-tight levels 2 and 3 are closed)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
@@ -12,9 +11,12 @@ solver, projection, shell, channel, orbit, or timeout. It accounts for every
 assigned proposition through 15.719 and maps current untracked scripts to
 closed, dead, necessary-only, or live routes.
 
-**No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
-Gsum / pairing False. `e1_closed_general` True only by the old incomplete
-wiring. The full infinity-plus-point boundary is closed. Every four-point
+**Corrected gate:** the required bi-tight levels 2 and 3 are TRUE by 15.720.
+The old spectral-floor/15.167 arrow is retracted, and QVAR/R1 are no longer
+acceptance units. The two genuine leftovers—multi-level Type I and non-Walsh
+residual (ii)—remain False, so L is OPEN. Aut-Schur / Gsum / pairing remain
+False. `e1_closed_general` True is old incomplete wiring. The full
+infinity-plus-point boundary is closed. Every four-point
 boundary is additionally closed for `p>=11`, and infinity plus three finite
 points is closed at `p=7`. The doubly saturated four-finite profiles at
 `p=7` are also closed for both signs, and 15.655 closes all 23,520
@@ -39,6 +41,29 @@ excluding any of its 56 actual line boundaries in two orbits. The positive
 `z=7` remainder stays open. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.720 — degree-congruence close of required bi-tight levels
+
+Proposition 15.55 incorrectly asserted
+`ker(G-(n/2)P1)=span{1}` when the top eigenvalue is simple. Proposition
+15.56 itself supplies `n-2` star differences in `ker G`, so 15.167's final
+spectral implication is retracted.
+
+The replacement uses the already-proved 15.272/15.207 identity
+`ker(Gsum)=scheme+cross`. If `H` is bi-tight of level `s`, its centered
+indicator lies in this kernel. Commuting projection against the conference
+matrix gives
+
+`d_i+d_j = 2ps (mod (p^2-1)/2)`
+
+for every pair of vertices, so all degrees have a common residue. The
+handshake identity excludes `s=2` for all `p>=5` and `s=3` for all `p>=7`;
+the sole exceptional comparison `p=5,s=3` is excluded modulo 12. No
+finite-prime solver or census was rerun. The same congruence also excludes
+*bi-tight* level 4: the tail is regular from `p>=11`, while `p=5,7` fail by
+residue arithmetic. But residual (ii) uses one-sided Max+/-tight level 4,
+which is not thereby excluded. Thus 15.720 closes exactly the two required
+bi-tight alternatives, not generic tight covers or the residual level-4 case.
 
 ## 15.719 — finite projected-semigroup stabilization, not z7 closure
 

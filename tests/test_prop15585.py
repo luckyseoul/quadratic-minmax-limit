@@ -1,4 +1,4 @@
-"""Tests for Prop 15.585 — leftover+splus at k=4p: min_+=2."""
+"""Tests for corrected Prop 15.585: the former min_+=2 step is retracted."""
 from __future__ import annotations
 
 from fractions import Fraction
@@ -16,9 +16,12 @@ from e1_gmin_m4_prop15585 import (
 )
 
 
-def test_min_plus_eq_2():
+def test_min_plus_eq_2_claim_is_retracted():
     A = prove_A()
-    assert A["proved"] is True
+    assert A["reduction_to_S4_proved"] is True
+    assert A["one_sided_S4_empty"] is False
+    assert A["proved"] is False
+    assert A["retracted"] is True
     for p in (5, 7, 11, 13):
         assert Fraction(4 * p, p) == 4
 
@@ -57,7 +60,7 @@ def test_flags_untouched():
 def test_main():
     out = main()
     assert out["prop"] == "15.585"
-    assert out["proved"]["leftover_splus_k4p_min_eq_2"] is True
+    assert out["proved"]["leftover_splus_k4p_min_eq_2"] is False
     assert out["proved"]["three_level_246_not_plus_slice"] is True
     assert out["proved"]["residual_ii_k_eq_4p_empty"] is False
     assert out["L_status"] == "OPEN"

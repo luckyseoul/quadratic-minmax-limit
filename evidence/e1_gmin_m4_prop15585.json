@@ -1,140 +1,144 @@
 {
   "prop": "15.585",
-  "title": "leftover+splus at k=4p forces min_+=2; {2,4,6} not plus-slice",
+  "title": "former min_+=2 step retracted; {2,4,6} not plus-slice",
   "series": "15.x leftover campaign (OPEN)",
   "proved": {
-    "leftover_splus_k4p_min_eq_2": true,
+    "leftover_splus_k4p_min_eq_2": false,
     "three_level_246_not_plus_slice": true,
     "residual_ii_k_eq_4p_empty": false,
     "phi_F_ge_6_proved_general": false
   },
   "algebra": {
     "A": {
-      "proved": true,
+      "reduction_to_S4_proved": true,
+      "one_sided_S4_empty": false,
+      "twovalue_classification": true,
+      "proved": false,
+      "retracted": true,
       "n_primes": 20,
       "rows": {
         "5": {
           "k": 20,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "7": {
           "k": 28,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "11": {
           "k": 44,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "13": {
           "k": 52,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "17": {
           "k": 68,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "19": {
           "k": 76,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "23": {
           "k": 92,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "29": {
           "k": 116,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "31": {
           "k": 124,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "37": {
           "k": 148,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "41": {
           "k": 164,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "43": {
           "k": 172,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "47": {
           "k": 188,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "53": {
           "k": 212,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "59": {
           "k": 236,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "61": {
           "k": 244,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "67": {
           "k": 268,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "71": {
           "k": 284,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "73": {
           "k": 292,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         },
         "79": {
           "k": 316,
           "mean": "4",
           "min_ge_4_forces_S4": true,
-          "S4_empty": true
+          "S4_empty": false
         }
       },
-      "theorem": "leftover+splus at k=4p: S\u22652, E=4 \u21d2 min_+=2 (min\u22654 \u21d2 S\u22614 empty). Fail: s\u208a\u22654 leftover+splus."
+      "theorem": "leftover+splus at k=4p: S\u22652 and E=4 show only that min\u22654 forces S\u22614. One-sided Max+-tight level 4 is not known empty, so min_+=2 remains open."
     },
     "B": {
       "proved": true,
@@ -311,7 +315,7 @@
       "leftover_only_exists": true,
       "leftover_splus_general_p_open": true,
       "unclassified_1_S2_open": true,
-      "note": "leftover+splus at k=4p is 3+ level Max+ with min=2 and leftover 4+ level Max\u2212. leftover-only exists (p=5 L8). residual_ii_k_eq_4p_empty stays False."
+      "note": "The former min_+=2 reduction is retracted: min_+\u22654 gives a one-sided S\u22614 tight cover whose emptiness is open. leftover-only exists (p=5 L8), and residual_ii_k_eq_4p_empty stays False."
     }
   },
   "L_status": "OPEN",

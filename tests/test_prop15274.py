@@ -211,7 +211,10 @@ def test_k4p_does_not_force_every_cover_constant():
 def test_tight_and_scheme_scores():
     for p in (5, 7, 11, 13, 17, 19):
         t = lemma_tight_S_const_empty(p, 4)
-        assert t["proved"] is True
+        assert t["proved"] is False
+        assert t["bitight_empty"] is True
+        assert t["bi_tight_hypothesis_established"] is False
+        assert t["one_sided_tight_empty"] is False
         assert t["g_perp_vanishes"] is True
         assert lemma_Gminus_allones_eigen(p)["proved"] is True
         assert lemma_Q_signs_k_4p(p)["proved"] is True
@@ -221,8 +224,10 @@ def test_tight_and_scheme_scores():
         assert all_edges_score(p) == Fraction(p * (p * p + 1), 2)
         assert plus_colour_score(p) != 4
         assert p != 4
-        assert lemma_k_4p_max_minus_ge_minus_2(p)["proved"] is True
-        assert lemma_dual_bad_at_k_4p_is_S_const_minus_4(p)["proved"] is True
+        assert lemma_k_4p_max_minus_ge_minus_2(p)["proved"] is False
+        dual = lemma_dual_bad_at_k_4p_is_S_const_minus_4(p)
+        assert dual["forces_one_sided_tight"] is True
+        assert dual["proved"] is False
         assert lemma_two_value_26_not_classified(p)["proved"] is True
         assert U_mass(p, 4 * p) == Fraction(p + 1, 2 * p)
         assert U_mass(p, 4 * p - 2) == Fraction(p - 1, 2 * p)
@@ -242,9 +247,9 @@ def test_named_lemma_and_theorems():
     assert lemma_dual_bad_slope_obstructs_k_not_div_p() is True
     assert residual_ii_k_not_div_p_dual_bad_empty() is True
     assert residual_ii_twolevel_k_ge_4p_empty() is True
-    assert residual_ii_S_equiv_4_k_4p_empty() is True
+    assert residual_ii_S_equiv_4_k_4p_empty() is False
     assert theorem_A_twolevel_empty([5, 7, 11])["proved"] is True
-    assert theorem_B_dual_bad_mass([5, 7, 11])["proved"] is True
+    assert theorem_B_dual_bad_mass([5, 7, 11])["proved"] is False
     C = theorem_C_slope_k_not_div_p([5, 7, 11, 13])
     assert C["proved"] is True
     assert C["n_no_obstruction"] > 0
@@ -270,7 +275,7 @@ def test_one_minus_inv_m_never_classified():
 
 
 def test_twovalue_k_4p_empty_by_classification():
-    """Two-value through ±2 at k=4p is empty; {2,4} is the tight constant."""
+    """Actual two-value leftovers are empty; m=1 has zero extreme mass."""
     for p in (5, 7, 11, 13, 17, 19):
         assert two_value_lo_mass(2, 4, Fraction(4)) == 0
         assert two_value_lo_mass(-4, -2, Fraction(-4)) == 1
@@ -278,7 +283,8 @@ def test_twovalue_k_4p_empty_by_classification():
         assert two_value_lo_mass(-6, -2, Fraction(-4)) == Fraction(1, 2)
         tv = lemma_two_value_k_4p_empty(p)
         assert tv["proved"] is True
-        assert tv["constants_are_tight"] is True
+        assert tv["zero_extreme_mass_collapses"] is True
+        assert tv["one_sided_tight_empty_used"] is False
         for m, s_ext in ((2, 2), (2, -2), (3, -2), (5, 2), (8, -2)):
             r = lemma_two_value_k_4p_mass(p, s_ext, m)
             assert r["proved"] is True
@@ -314,7 +320,8 @@ def test_lipschitz_and_k4p_split():
     assert lemma_lipschitz_ND_from_Phi_G()["lipschitz"] == 2
     for p in (5, 7, 11, 13, 17):
         r = lemma_k_4p_ND_or_dual_bad_multilevel(p)
-        assert r["proved"] is True
+        assert r["proved"] is False
+        assert r["max_ge_minus_2"] is False
         assert r["leftover_is_multilevel_dual_bad"] is True
 
 
@@ -442,8 +449,11 @@ def test_section_L_rigidity_and_SH_slice():
         assert sh["also_3eq_plus"] is (p == 5)
         assert lemma_SH_slice_g_equals_e(p)["proved"] is True
         assert lemma_SH_slice_g_equals_e(p)["s_plus"] == 4
-        assert lemma_SH_slice_g_in_G_tight(p)["proved"] is True
-        assert lemma_SH_slice_g_in_G_tight(p)["swap_size"] == 4 * p
+        swap = lemma_SH_slice_g_in_G_tight(p)
+        assert swap["swap_identity_proved"] is True
+        assert swap["proved"] is False
+        assert swap["tight_empty"] is False
+        assert swap["swap_size"] == 4 * p
         gn = lemma_SH_slice_g_not_in_G_not_closed(p)
         assert gn["proved"] is True
         assert gn["closes"] is False
@@ -457,7 +467,7 @@ def test_section_L_rigidity_and_SH_slice():
     assert leftover_SH_twolevel_mass(5) == Fraction(2, 5)
     assert leftover_SH_twolevel_mass(5) == Fraction(5 + 3, 4 * 5)
     assert leftover_SH_twolevel_mass(7) != Fraction(7 + 3, 4 * 7)
-    assert theorem_L_rigidity_and_SH_slice([5, 7, 11])["proved"] is True
+    assert theorem_L_rigidity_and_SH_slice([5, 7, 11])["proved"] is False
     assert theorem_L_rigidity_and_SH_slice([5, 7])["closes_multilevel"] is False
     assert theorem_L_rigidity_and_SH_slice([5, 7])["closes_01"] is False
 
@@ -467,7 +477,10 @@ def test_named_twovalue_and_lipschitz_lemmas():
     assert residual_ii_twovalue_unclassified_empty() is True
     assert residual_ii_sminus_ge_0_ND() is True
     assert theorem_F_twovalue_empty([5, 7, 11])["proved"] is True
-    assert theorem_G_lipschitz_and_k4p_split([5, 7, 11])["proved"] is True
+    G = theorem_G_lipschitz_and_k4p_split([5, 7, 11])
+    assert G["sminus_ge_0_ND_proved"] is True
+    assert G["k4p_split_proved"] is False
+    assert G["proved"] is False
     assert theorem_H_leftover_identities([5, 7, 11])["proved"] is True
     assert theorem_H_leftover_identities([5, 7])["closes_multilevel"] is False
     assert theorem_I_leftover_identities([5, 7, 11])["proved"] is True
@@ -483,10 +496,10 @@ def test_named_twovalue_and_lipschitz_lemmas():
     assert residual_ii_pure_pair_dstar_p_3mod4_empty() is True
     assert residual_ii_SH_twolevel_mass() is True
     assert residual_ii_SH_slice_g_eq_e_not_res_ii() is True
-    assert residual_ii_SH_slice_g_in_G_tight_empty() is True
+    assert residual_ii_SH_slice_g_in_G_tight_empty() is False
     assert residual_ii_aut_e_rigidity() is True
     assert residual_ii_no_full_star_k_4p() is True
-    assert theorem_L_rigidity_and_SH_slice([5, 7, 11])["proved"] is True
+    assert theorem_L_rigidity_and_SH_slice([5, 7, 11])["proved"] is False
     assert theorem_L_rigidity_and_SH_slice([5, 7])["closes_multilevel"] is False
     assert theorem_L_rigidity_and_SH_slice([5, 7])["closes_01"] is False
 
@@ -496,9 +509,11 @@ def test_full_flags_honest():
     assert residual_ii_k_eq_4p_empty() is False
     assert multilevel_ND_k_ge_4p_proved() is False
     assert residual_ii_k_ge_4p_ND_closed() is False
-    # new empty-subcase flags are True; they must not silently close ND
+    # Valid subcase flags stay true; one-sided tight-dependent flags stay false.
     assert residual_ii_twovalue_k_4p_empty() is True
     assert residual_ii_sminus_ge_0_ND() is True
+    assert residual_ii_S_equiv_4_k_4p_empty() is False
+    assert residual_ii_SH_slice_g_in_G_tight_empty() is False
     assert residual_ii_plus_slice_leftover_empty() is True
     assert residual_ii_minus_slice_three_level_empty() is True
     assert residual_ii_three_weight_athr_mu_far_neg() is True
@@ -536,10 +551,10 @@ def test_main_writes_honest_json():
     assert pr["leftover_identities"] is True
     assert pr["leftover_identities_I"] is True
     assert pr["leftover_identities_J"] is True
-    assert pr["leftover_identities_L"] is True
+    assert pr["leftover_identities_L"] is False
     assert pr["residual_ii_SH_twolevel_mass"] is True
     assert pr["residual_ii_SH_slice_g_eq_e_not_res_ii"] is True
-    assert pr["residual_ii_SH_slice_g_in_G_tight_empty"] is True
+    assert pr["residual_ii_SH_slice_g_in_G_tight_empty"] is False
     assert pr["residual_ii_aut_e_rigidity"] is True
     assert pr["residual_ii_no_full_star_k_4p"] is True
     assert pr["residual_ii_plus_slice_leftover_empty"] is True

@@ -12,6 +12,28 @@ or finite-prime rerun from being mistaken for a new mathematical attack
 
 The duplication concern was correct.
 
+### Post-audit correction (15.720)
+
+This audit itself missed a semantic dependency failure: it grouped routes by
+proposition and formula, but accepted Proposition 15.55's final kernel claim.
+That claim is false. If `R=G-(n/2)P1`, then
+`ker R=span{1}+ker G`, and Proposition 15.56 already exhibits `n-2`
+star-difference vectors in `ker G`. Therefore the spectral floor cannot close
+bi-tight through 15.167, and GLOBAL QVAR/R1 are not E(1) acceptance gates.
+
+Proposition 15.720 supplies the valid replacement without a new small-prime
+run: `ker(Gsum)=scheme+cross` forces a bi-tight degree congruence modulo
+`(p^2-1)/2`, excluding the required levels 2 and 3 for every prime `p>=5`.
+After this correction, exactly two mathematical gates remain: multi-level
+Type I and non-Walsh residual (ii).
+
+A second semantic check caught a nearby downstream misuse before commit:
+15.274/15.585 invoked the bi-tight result on one-sided `S≡±4` tight covers.
+That implication is invalid. Bi-tight level 4 is indeed excluded by 15.720,
+but one-sided Max+/-tight level 4 remains part of residual (ii). The former
+15.274 E dichotomy and 15.585 A `min_+=2` conclusion are retracted. Parameter
+or solver searches based on either conclusion are not authorized gates.
+
 1. The final 300-second positive-`p=7,z=7` CP-SAT run repeated an existing
    exact full-torsion model for the same case.  Only the timeout changed.
 2. Several long proposition blocks are different coordinates for the same
@@ -22,9 +44,9 @@ The duplication concern was correct.
 3. Old `e1_closed_general()` wiring and several historical prose blocks still
    say `True`/`CLOSED` for a smaller, obsolete acceptance problem.  They do not
    close the current four-unit gate.
-4. The shortened attack plan accidentally omitted **GLOBAL QVAR**.  This is
-   not a new conjecture or wider scope: it has always been one conjunct of the
-   original spectral-floor acceptance unit.
+4. The first audit restored **GLOBAL QVAR** to what it then treated as a
+   spectral-floor acceptance unit. The 15.720 correction above supersedes
+   that conclusion: the whole spectral unit is no longer load-bearing.
 
 No new computation should be launched from an attractive formula or script
 name until this file is checked first.
@@ -46,21 +68,16 @@ name until this file is checked first.
 The public theorem is gated by `four_e1_units_closed()`, not by the legacy
 `e1_closed_general()` value.
 
-| unit | exact live content | status after 15.719 |
+| unit | exact live content | status after 15.720 |
 |---|---|---|
-| spectral floor | **GLOBAL mixed-`k` QVAR** and principal R1 | **OPEN** |
+| required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
 | residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** |
 | Type I | the multi-level `3A+B>0` bad case | **OPEN** |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
-The spectral-floor unit is a conjunction.  Strong R1
-`||delta||^2 <= n/12` would also imply the weaker Type-I estimate, but it
-does **not** prove GLOBAL QVAR and cannot close residual (ii).  Consequently
-the shortest honest work map is:
-
-1. spectral front: GLOBAL mixed-`k` QVAR plus strong R1;
-2. residual front: the general non-Walsh multi-level remainder;
-3. final implication audit.
+The spectral floor remains an interesting optional problem, but it has no
+valid downstream role in the current E(1) proof. The shortest honest work map
+is now the two multi-level remainders followed by the final implication audit.
 
 The positive `p=7,z=7` catalog is one finite residual subbranch, not a fourth
 top-level front.
@@ -78,7 +95,7 @@ top-level front.
 | **15.321--15.400** | increasingly refined `Q_tau`, class-function, occupancy, Jacobi, circle, LP, PSD, and floor models | Every floor statement remains open.  Two-point fits, low-degree names, occupancy LPs, Cauchy--Schwarz, PSD, and pointwise floor arguments are already recorded as insufficient or false. |
 | **15.401--15.480** | further `Q_tau`/nonlinear-orbit names and finite `p=5,7` Type-I diagnostics | Almost all claims are finite-prime identities or killed extrapolations.  Aut-orbit-size guesses, Gauss/Jacobi/CM interpolation, type-count extrapolation, and character kernels do not name the full mixture. |
 | **15.481--15.560** | more `A_full/Q_tau` reductions plus finite `p=5` residual slices | The finite `nF` exclusions do not close general residual (ii) or Type I.  Type-index Gram, one-dimensional Johnson, Max-minus Fourier support, and Aut-e inversion are insufficient or dead. |
-| **15.561--15.589** | final class-function no-gos, exact profile classification, and the QVAR decomposition | 15.589 closes QVAR only for `k=1,...,6`.  Per-stratum `k>=7` is false and is **not** the leftover.  GLOBAL QVAR must retain the full mixed-`k`, unsplit ensemble; profile-by-profile, stratum-by-stratum, or leading-class proofs cannot establish it. |
+| **15.561--15.589** | final class-function no-gos, exact profile classification, and the QVAR decomposition | 15.589 closes QVAR only for `k=1,...,6`. Per-stratum `k>=7` is false and is **not** the leftover. GLOBAL QVAR is now optional. Separately, 15.585 A relied on one-sided level-4 tight emptiness and is retracted; only its `{2,4,6}` mass calculation survives. |
 | **15.590--15.628** | degree-four SoS countermechanism, exact R1/`delta` hierarchy, Walsh/W1/W2 investigation | Degree-four SoS cannot force Type I (15.590).  Character/PSD-only and fixed-channel R1 routes are insufficient.  **15.628 closes Walsh, W1, and W2 for all odd primes**, but explicitly leaves the non-Walsh 5+-level/even-`k>=4p` branch. |
 | **15.629--15.668** | complete low R1 shells, modular-data no-go, nonlinear shell positivity, finite boundary closures, and exact `p=11` theta/channel work | Strong R1 is true at `p=11` by full census.  Scalar trace and broad square-circle conserved-mass cones through exponent 800 still admit sub-six targets and cannot prove general R1.  Props. 15.643--15.666 close the two-point, size-four, size-six, and finite `p=7` size-eight residual branches; rerunning their old solvers is duplication. |
 | **15.669--15.712** | uniform residual ranges and exact endpoint closures | Props. 15.693--15.699 close the `p=19` endpoint; 15.700--15.712 close the `p=17` endpoint.  Remaining scope includes strict infinity-plus-`p`, the `p=23` next-boundary endpoint, later all-finite sizes, and the `p=7` infinity-plus-seven remainder.  Do not regenerate the closed `p=17/19` rows. |
@@ -118,9 +135,10 @@ is absent from the cited proposition chain.
   (15.589 and the explicit counterexamples);
 - another small-prime Jacobi/Gauss/CM interpolation of `Q_tau`.
 
-A live R1 proof must use information absent from the abstract spectra: the
-Boolean rank-one identity and the exact full Max-plus orbit mixture.  A live
-QVAR proof must couple the mixed-`k` ensemble.
+Any future optional R1 proof must use information absent from the abstract
+spectra: the Boolean rank-one identity and the exact full Max-plus orbit
+mixture. Any optional QVAR proof must couple the mixed-`k` ensemble. Neither
+is a current E(1) gate.
 
 ### Type I and residual
 

@@ -1,6 +1,6 @@
 {
-  "title": "Prop 15.168 E(1) structure after 15.167\u2013171 (E1 CLOSED)",
-  "L_status": "CLOSED",
+  "title": "Prop 15.168 E(1) structure after corrected 15.720 bi-tight gate (E1 OPEN)",
+  "L_status": "OPEN",
   "proved": {
     "tight_cover_obstruction_when_bitight_empty": true,
     "deep_tight_empty_p_ge_5": true,
@@ -10,9 +10,9 @@
     "deep_auto_freeness_k_le_3p_minus_2": true,
     "deep_fail_eq_k_3p_minus_1_impossible": true,
     "deep_all_ND_closed": true,
-    "E1_closed_general": true,
-    "m_n_ge_Phi_minus_2": true,
-    "L_closed": true,
+    "E1_closed_general": false,
+    "m_n_ge_Phi_minus_2": false,
+    "L_closed": false,
     "bi_tight_empty_for_all_p_ge_5": true,
     "residual_closed_general": false,
     "sixteen_N_for_all_p": false
@@ -20,7 +20,9 @@
   "algebra": {
     "A": {
       "proved": true,
-      "theorem": "For every prime p\u22655: bi-tight empty (15.167) \u21d2 no Max+-tight level-s cover of size s p (G_\u22a5 isotropy). Identity g_\u22a5 quad=0 for tight S\u2261s checked; obstruction_fires from bitight_from_majorization.",
+      "level_4_bitight_corollary": true,
+      "level_4_one_sided_tight_closed": false,
+      "theorem": "For every prime p\u22655 the required level-2 and level-3 bi-tight alternatives are empty by 15.720. Bi-tight level 4 is a corollary; no generic one-sided tight-cover emptiness is claimed.",
       "n_checked": 15,
       "by_p_sample": {
         "5": {
@@ -29,11 +31,14 @@
           "size": 10,
           "E_edges": 325,
           "size_lt_E": true,
-          "bitight_empty_15167": true,
+          "required_level": true,
+          "level_4_bitight_corollary": false,
+          "bitight_empty_15720": true,
           "g_perp_quad_for_tight": "0",
           "g_perp_vanishes": true,
+          "generic_tight_cover_empty": false,
           "obstruction_fires": true,
-          "theorem": "Tight S\u2261s cover of size s p has v\u1d40G_\u22a5v=0; if \u03bb_max(G)=n/2 simple then G_\u22a5\u227d0 ker=span{1} \u21d2 v\u22251 impossible for |H|<E (15.55.4 gen.)."
+          "theorem": "If the relevant alternative is bi-tight at level 2 or 3, 15.720 excludes it by the degree congruence. The same arithmetic excludes bi-tight level 4, but not a generic one-sided tight cover."
         },
         "7": {
           "p": 7,
@@ -41,11 +46,14 @@
           "size": 14,
           "E_edges": 1225,
           "size_lt_E": true,
-          "bitight_empty_15167": true,
+          "required_level": true,
+          "level_4_bitight_corollary": false,
+          "bitight_empty_15720": true,
           "g_perp_quad_for_tight": "0",
           "g_perp_vanishes": true,
+          "generic_tight_cover_empty": false,
           "obstruction_fires": true,
-          "theorem": "Tight S\u2261s cover of size s p has v\u1d40G_\u22a5v=0; if \u03bb_max(G)=n/2 simple then G_\u22a5\u227d0 ker=span{1} \u21d2 v\u22251 impossible for |H|<E (15.55.4 gen.)."
+          "theorem": "If the relevant alternative is bi-tight at level 2 or 3, 15.720 excludes it by the degree congruence. The same arithmetic excludes bi-tight level 4, but not a generic one-sided tight cover."
         },
         "11": {
           "p": 11,
@@ -53,11 +61,14 @@
           "size": 22,
           "E_edges": 7381,
           "size_lt_E": true,
-          "bitight_empty_15167": true,
+          "required_level": true,
+          "level_4_bitight_corollary": false,
+          "bitight_empty_15720": true,
           "g_perp_quad_for_tight": "0",
           "g_perp_vanishes": true,
+          "generic_tight_cover_empty": false,
           "obstruction_fires": true,
-          "theorem": "Tight S\u2261s cover of size s p has v\u1d40G_\u22a5v=0; if \u03bb_max(G)=n/2 simple then G_\u22a5\u227d0 ker=span{1} \u21d2 v\u22251 impossible for |H|<E (15.55.4 gen.)."
+          "theorem": "If the relevant alternative is bi-tight at level 2 or 3, 15.720 excludes it by the degree congruence. The same arithmetic excludes bi-tight level 4, but not a generic one-sided tight cover."
         },
         "13": {
           "p": 13,
@@ -65,11 +76,14 @@
           "size": 26,
           "E_edges": 14365,
           "size_lt_E": true,
-          "bitight_empty_15167": true,
+          "required_level": true,
+          "level_4_bitight_corollary": false,
+          "bitight_empty_15720": true,
           "g_perp_quad_for_tight": "0",
           "g_perp_vanishes": true,
+          "generic_tight_cover_empty": false,
           "obstruction_fires": true,
-          "theorem": "Tight S\u2261s cover of size s p has v\u1d40G_\u22a5v=0; if \u03bb_max(G)=n/2 simple then G_\u22a5\u227d0 ker=span{1} \u21d2 v\u22251 impossible for |H|<E (15.55.4 gen.)."
+          "theorem": "If the relevant alternative is bi-tight at level 2 or 3, 15.720 excludes it by the degree congruence. The same arithmetic excludes bi-tight level 4, but not a generic one-sided tight cover."
         },
         "17": {
           "p": 17,
@@ -77,17 +91,20 @@
           "size": 34,
           "E_edges": 41905,
           "size_lt_E": true,
-          "bitight_empty_15167": true,
+          "required_level": true,
+          "level_4_bitight_corollary": false,
+          "bitight_empty_15720": true,
           "g_perp_quad_for_tight": "0",
           "g_perp_vanishes": true,
+          "generic_tight_cover_empty": false,
           "obstruction_fires": true,
-          "theorem": "Tight S\u2261s cover of size s p has v\u1d40G_\u22a5v=0; if \u03bb_max(G)=n/2 simple then G_\u22a5\u227d0 ker=span{1} \u21d2 v\u22251 impossible for |H|<E (15.55.4 gen.)."
+          "theorem": "If the relevant alternative is bi-tight at level 2 or 3, 15.720 excludes it by the degree congruence. The same arithmetic excludes bi-tight level 4, but not a generic one-sided tight cover."
         }
       }
     },
     "B": {
       "proved": true,
-      "theorem": "Deep tight \u21d2 bi-tight level 2 (15.44.3) \u21d2 empty when 15.167 holds.",
+      "theorem": "Deep tight \u21d2 bi-tight level 2 (15.44.3) \u21d2 empty by 15.720.",
       "by_p_sample": {
         "5": {
           "p": 5,
@@ -127,7 +144,7 @@
       "proved_k_2p_minus_1_fail_ND": true,
       "k_3p_minus_2_boundary_open": false,
       "type_I_all_classes_closed": true,
-      "theorem": "Type I freeness ND = 15.43.1 (prior). Type I fail k=2p\u22121 ND when bi-tight empty (15.43.3+15.44+15.167). k=3p\u22122 closed by 15.170 Gsum Farkas (s_\u2212\u2264\u22121 impossible under freeness-fail).",
+      "theorem": "Type I freeness ND = 15.43.1 (prior). Type I fail k=2p\u22121 ND when the level-2 bi-tight alternative is empty (15.43.3+15.44+15.720). k=3p\u22122 closed by 15.170 Gsum Farkas (s_\u2212\u2264\u22121 impossible under freeness-fail).",
       "by_p_sample": {
         "5": {
           "p": 5,
@@ -177,7 +194,7 @@
       "proved_fail_eq_k_3p_minus_1_impossible": true,
       "deep_freeness_fail_k_ge_3p_open": false,
       "deep_all_ND_closed": true,
-      "theorem": "Auto-freeness for s\u208a=2, k\u22643p\u22122 (Fraction). Fail-eq k=3p\u22121 \u21d2 tight L3 empty under 15.167. Freeness\u21d2ND prior. k\u22653p affine dual two-level freeness-fail closed by 15.179 freeze; full residual (ii) open until 15.193 exhaustiveness (multi-level / non-affine).",
+      "theorem": "Auto-freeness for s\u208a=2, k\u22643p\u22122 (Fraction). Fail-eq k=3p\u22121 \u21d2 tight L3 has its bi-tight level-3 alternative empty under 15.720. Freeness\u21d2ND prior. k\u22653p affine dual two-level freeness-fail closed by 15.179 freeze; full residual (ii) open until 15.193 exhaustiveness (multi-level / non-affine).",
       "by_p_sample": {
         "5": {
           "auto_at_3p_minus_2": {
@@ -201,7 +218,9 @@
             "k_equality": 14,
             "H_size_if_S_in_2_4": 15,
             "tight_L3_obstruction": true,
-            "impossible_when_bitight_empty": true
+            "bi_tight_alternative_impossible": true,
+            "impossible_when_bitight_empty": true,
+            "generic_tight_cover_impossible": false
           }
         },
         "7": {
@@ -226,7 +245,9 @@
             "k_equality": 20,
             "H_size_if_S_in_2_4": 21,
             "tight_L3_obstruction": true,
-            "impossible_when_bitight_empty": true
+            "bi_tight_alternative_impossible": true,
+            "impossible_when_bitight_empty": true,
+            "generic_tight_cover_impossible": false
           }
         },
         "11": {
@@ -251,7 +272,9 @@
             "k_equality": 32,
             "H_size_if_S_in_2_4": 33,
             "tight_L3_obstruction": true,
-            "impossible_when_bitight_empty": true
+            "bi_tight_alternative_impossible": true,
+            "impossible_when_bitight_empty": true,
+            "generic_tight_cover_impossible": false
           }
         },
         "13": {
@@ -276,7 +299,9 @@
             "k_equality": 38,
             "H_size_if_S_in_2_4": 39,
             "tight_L3_obstruction": true,
-            "impossible_when_bitight_empty": true
+            "bi_tight_alternative_impossible": true,
+            "impossible_when_bitight_empty": true,
+            "generic_tight_cover_impossible": false
           }
         }
       },
@@ -284,22 +309,28 @@
     },
     "status": {
       "bi_tight_empty_for_all_p_ge_5": true,
-      "E1_closed_general": true,
-      "m_n_ge_Phi_minus_2_all_p": true,
-      "L_status": "CLOSED",
+      "E1_closed_general": false,
+      "m_n_ge_Phi_minus_2_all_p": false,
+      "L_status": "OPEN",
       "residual_closed_general": false,
-      "open_residuals": [],
-      "note": "15.167 bi-tight; residual (i) OPEN (15.170/176\u2013192); residual (ii) affine CLOSED (15.179), full OPEN (15.193 exhaustiveness); E1/L from real predicates; residual/16N still open."
+      "open_residuals": [
+        "non-Walsh residual (ii), even k\u22654p",
+        "Type I multi-level Max\u2212 bad case"
+      ],
+      "note": "15.720 closes required bi-tight levels; residual (i) and residual (ii) affine CLOSED (15.179), full OPEN (15.193 exhaustiveness); E1/L from real predicates; residual/16N still open."
     }
   },
   "L_wire": {
     "bi_tight": true,
-    "E1": true,
-    "L_closed": true,
-    "L_status": "CLOSED",
+    "E1": false,
+    "L_closed": false,
+    "L_status": "OPEN",
     "rule": "L closed iff bi-tight \u2227 E(1); denseness Prop 6.2"
   },
-  "open_residual": [],
+  "open_residual": [
+    "non-Walsh residual (ii), even k\u22654p",
+    "Type I multi-level Max\u2212 bad case"
+  ],
   "F3": "E1/L only from real bi-tight \u2227 residual(i) \u2227 residual(ii)",
   "F13": "15.168\u2013171 E1 ND structure; residual/16N still open"
 }

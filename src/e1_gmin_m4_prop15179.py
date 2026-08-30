@@ -52,7 +52,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from e1_gmin_m4_prop15167 import bitight_from_majorization  # noqa: E402
+from e1_gmin_m4_prop15720 import (  # noqa: E402
+    required_bitight_levels_empty_all_primes,
+)
 from e1_gmin_m4_prop15170 import (  # noqa: E402
     e1_closed_general,
     gsum_disj_lb_proved_general,
@@ -153,7 +155,7 @@ def residual_ii_dual_twolevel_affine_closed() -> bool:
     """
     th = theorem_freeze_all_primes()
     # fail-eq uses bi-tight
-    bt = bitight_from_majorization(5)["bitight_empty"]
+    bt = required_bitight_levels_empty_all_primes()
     return bool(th["proved"] and bt)
 
 

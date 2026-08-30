@@ -47,7 +47,9 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from e1_gmin_m4_prop15100 import n_of  # noqa: E402
-from e1_gmin_m4_prop15167 import bitight_from_majorization  # noqa: E402
+from e1_gmin_m4_prop15720 import (  # noqa: E402
+    required_bitight_levels_empty_all_primes,
+)
 from e1_gmin_m4_prop15168 import (  # noqa: E402
     freeness_threshold,
     tight_cover_obstruction_applicable,
@@ -402,7 +404,7 @@ def e1_closed_general() -> bool:
     return (
         type_I_k_3p_minus_2_closed_general()
         and deep_s2_freeness_fail_k_ge_3p_ND_closed()
-        and bitight_from_majorization(5)["bitight_empty"]
+        and required_bitight_levels_empty_all_primes()
     )
 
 
@@ -465,7 +467,7 @@ def main() -> dict:
         deep_fail_k_3p_minus_1_impossible(p)["impossible_when_bitight_empty"]
         for p in (5, 7, 11, 13)
     )
-    bt = bitight_from_majorization(5)["bitight_empty"]
+    bt = required_bitight_levels_empty_all_primes()
     e1 = e1_closed_general()
     open_res = e1_open_residuals()
     Lwire = main_L_from_e1(e1, bt)

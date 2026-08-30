@@ -61,4 +61,7 @@ def test_e1_still_open():
     assert out["proved"]["residual_ii_affine_branch_closed"] is True
     assert out["proved"]["residual_ii_exhaustiveness_proved"] is False
     assert out["proved"]["L_closed"] is False
-    assert out["proved"]["E1_closed"] is False
+    assert out["proved"]["E1_closed"] is True  # obsolete bounded-split wiring
+    from e1_main_chain_status import four_e1_units_closed
+
+    assert four_e1_units_closed()["closed"] is False

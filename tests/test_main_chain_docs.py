@@ -16,9 +16,9 @@ def test_main_chain_L_open_and_docs_ok():
     assert docs["HANDOFF_shows_L_OPEN"] is True
     assert docs["docs_ok"] is True
     assert docs["scanned_denseness_package_full"] is True
-    assert docs["e1_closed_general"] is True  # legacy wiring, not acceptance
+    assert docs["e1_closed_general"] is False
     units = docs["four_e1_units"]
-    assert units["phi_F_ge_6"] is False
+    assert units["bitight_levels_2_3"] is True
     assert units["residual_ii_k_ge_4p"] is False
     assert units["type_I_multilevel"] is False
     assert units["closed"] is False
@@ -44,7 +44,8 @@ def test_solution_does_not_assert_limit_theorem():
     ).read_text(encoding="utf-8", errors="replace")
     assert "Residual **(ii)** is **CLOSED**" not in long_goal
     assert "**Residual (ii), even \\(k\\ge4p\\):** OPEN" in long_goal
-    assert "residual (i) is the only leftover" in long_goal
+    assert "required_bitight_levels_empty_all_primes" in long_goal
+    assert "no longer acceptance gates" in long_goal
 
 
 def test_soft_close_detector_flags_bare_L_CLOSED():
@@ -93,6 +94,7 @@ def test_denseness_package_does_not_soft_close_the_theorem():
         / "share"
         / "denseness_path_package.md"
     ).read_text(encoding="utf-8", errors="replace")
-    assert "Therefore this package\ndoes **not** prove E(1)" in package
+    assert "does **not** prove E(1)" in package
+    assert "## Lemma K (required bi-tight levels)." in package
     assert "Hence E(1) on the whole Paley family" not in package
     assert "Historical remarks “\\(L\\) OPEN”" not in package

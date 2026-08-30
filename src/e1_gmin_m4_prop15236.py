@@ -439,7 +439,7 @@ def main() -> dict:
     C = theorem_C_all(primes)
     D = theorem_D_dual_bad_empty(primes)
     iib = residual_ii_b_ND_closed()
-    from e1_gmin_m4_prop15167 import bitight_from_majorization  # noqa: E402
+    from e1_gmin_m4_prop15720 import required_bitight_levels_empty_all_primes  # noqa: E402
     from e1_gmin_m4_prop15170 import (  # noqa: E402
         e1_closed_general,
         gsum_disj_lb_proved_general,
@@ -461,7 +461,7 @@ def main() -> dict:
             "gsum_disj_lb_proved_general": gsum_disj_lb_proved_general(),
             "E1_closed": e1_closed_general(),
             "L_closed": False,
-            "bi_tight_empty": bitight_from_majorization(5)["bitight_empty"],
+            "bi_tight_empty": required_bitight_levels_empty_all_primes(),
         },
         "algebra": {
             "A": A,

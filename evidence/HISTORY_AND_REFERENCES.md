@@ -1,6 +1,6 @@
 # History of the problem, and older references
 
-**Date:** 2026-08-30 (through Proposition 15.719)
+**Date:** 2026-08-30 (through Proposition 15.720)
 
 **Sources:** live fetches (MathOverflow API, X thread, Paata’s 2019 blog and CV, arXiv, Goethals–Seidel PDF, Wikipedia/Paley construction).  
 **Not a close:** nothing here proves that \(\lim\alpha_n\) exists. Do not treat sandwich, Paley \(\rho=1\), or conference matrices as settlement.
@@ -1911,6 +1911,32 @@ The compact certificate is
 All 56 positive `z=7` source boundaries in two orbits, the positive endpoint,
 the non-Walsh multi-level remainder, R1, and the quadratic-minmax-limit
 theorem remain open.
+
+## 7bp. Retraction of the spectral bi-tight arrow and its discrete replacement (2026-08-30)
+
+A cold implication audit found that Proposition 15.55 used the false kernel
+identity `ker(G-(n/2)P1)=span{1}`. Proposition 15.56 already supplies `n-2`
+star differences in `ker G`, so the correct kernel also contains `ker G`.
+Consequently Proposition 15.167's majorization calculation, even conditional
+on its spectral floor, does not exclude a tight or bi-tight indicator.
+
+Proposition 15.720 replaces that arrow without computation. The 15.272/15.207
+kernel theorem puts every centered bi-tight indicator in `scheme+cross`.
+Commuting projection with the conference matrix then forces
+
+`d_i+d_j = 2ps (mod (p^2-1)/2)`.
+
+All degrees therefore have one common residue. Degree bounds and the
+handshake identity exclude level 2 for every `p>=5` and level 3 for every
+`p>=7`; the exceptional comparison `p=5,s=3` is excluded modulo 12. This
+closes exactly the two bi-tight levels used by the no-descent chain. The same
+arithmetic excludes bi-tight level 4, but a second semantic audit caught that
+15.274 and 15.585 had applied it to merely one-sided `S≡±4` tight covers.
+Those uses are invalid: the 15.274 k=4p dichotomy and 15.585 min-plus claim
+are retracted, and one-sided level 4 stays inside residual (ii). The spectral
+floor, global QVAR, and principal R1 remain mathematically open but are no
+longer E(1) acceptance gates. Two gates remain: multi-level Type I and
+non-Walsh residual (ii).
 
 ---
 

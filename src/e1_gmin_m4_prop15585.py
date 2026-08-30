@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Prop 15.585 — leftover+splus at k=4p forces min_+=2, and
+Prop 15.585 — corrected audit of the former min_+=2 claim, and
 three-level Max+ {2,4,6} cannot have 1_{S=2} a plus pair-slice.
 leftover-only exists (15.528 A), so residual_ii_k_eq_4p_empty
 stays False.  Max+-free.  No MIP.  Not a leftover-only census.
@@ -17,10 +17,10 @@ L8 exists.  Two-value Max+ empty (15.274 A/F).  Official leftover
 3-level Max− empty (15.274 I).
 
 ============================================================================
-Theorem A — PROVED Max+-free (first moment).
+Theorem A — RETRACTED after the 15.55/15.167 correction.
   leftover+splus S≥2 and E[S]=4.  If min_+≥4 then even scores
-  force S≡4, empty (15.168 / 15.274 A).  Hence min_+=2.
-  Fail: leftover+splus with s₊≥4 at k=4p.  ∎
+  force S≡4, but this is only one-sided Max+-tightness. Its emptiness
+  is not proved by 15.720, so min_+=2 does not follow.
 
 Theorem B — PROVED Max+-free ({2,4,6} masses).
   Three-level {2,4,6} has a=P(S=2)≤1/2 (a=d, b=1−2a).  Plus
@@ -80,8 +80,9 @@ def three_level_246_box(a: Fraction) -> dict:
 def lemma_A_min_eq_2(primes: list[int] | None = None) -> dict:
     if primes is None:
         primes = [q for q in range(5, 80) if is_prime(q)]
-    ok = bool(residual_ii_S_equiv_4_k_4p_empty())
-    ok = ok and bool(residual_ii_twovalue_unclassified_empty())
+    one_sided_closed = bool(residual_ii_S_equiv_4_k_4p_empty())
+    classification_ok = bool(residual_ii_twovalue_unclassified_empty())
+    reduction_ok = True
     rows = {}
     for p in primes:
         k = 4 * p
@@ -90,18 +91,23 @@ def lemma_A_min_eq_2(primes: list[int] | None = None) -> dict:
             "k": k,
             "mean": str(mean),
             "min_ge_4_forces_S4": mean == 4,
-            "S4_empty": True,
+            "S4_empty": one_sided_closed,
         }
         if mean != 4:
-            ok = False
+            reduction_ok = False
         rows[str(p)] = rec
     return {
-        "proved": bool(ok),
+        "reduction_to_S4_proved": reduction_ok,
+        "one_sided_S4_empty": one_sided_closed,
+        "twovalue_classification": classification_ok,
+        "proved": False,
+        "retracted": True,
         "n_primes": len(primes),
         "rows": rows,
         "theorem": (
-            "leftover+splus at k=4p: S≥2, E=4 ⇒ min_+=2 "
-            "(min≥4 ⇒ S≡4 empty). Fail: s₊≥4 leftover+splus."
+            "leftover+splus at k=4p: S≥2 and E=4 show only that min≥4 "
+            "forces S≡4. One-sided Max+-tight level 4 is not known empty, "
+            "so min_+=2 remains open."
         ),
     }
 
@@ -162,15 +168,15 @@ def prove_open() -> dict:
         "leftover_splus_general_p_open": True,
         "unclassified_1_S2_open": True,
         "note": (
-            "leftover+splus at k=4p is 3+ level Max+ with min=2 and "
-            "leftover 4+ level Max−. leftover-only exists (p=5 L8). "
-            "residual_ii_k_eq_4p_empty stays False."
+            "The former min_+=2 reduction is retracted: min_+≥4 gives a "
+            "one-sided S≡4 tight cover whose emptiness is open. leftover-only "
+            "exists (p=5 L8), and residual_ii_k_eq_4p_empty stays False."
         ),
     }
 
 
 def main() -> dict:
-    print("Prop 15.585  leftover+splus at k=4p: min_+=2, {2,4,6} not plus-slice", flush=True)
+    print("Prop 15.585 corrected: min_+=2 retracted; {2,4,6} not plus-slice", flush=True)
     A = prove_A()
     print(f"  A min_+=2: {A['proved']}", flush=True)
     B = prove_B()
@@ -179,7 +185,7 @@ def main() -> dict:
     print(f"  C open: resii={C['residual_ii_k_eq_4p_empty']}", flush=True)
     out = {
         "prop": "15.585",
-        "title": "leftover+splus at k=4p forces min_+=2; {2,4,6} not plus-slice",
+        "title": "former min_+=2 step retracted; {2,4,6} not plus-slice",
         "series": "15.x leftover campaign (OPEN)",
         "proved": {
             "leftover_splus_k4p_min_eq_2": A["proved"],

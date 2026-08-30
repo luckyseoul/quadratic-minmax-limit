@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from fractions import Fraction
 
-from e1_gmin_m4_prop15167 import bitight_from_majorization
+from e1_gmin_m4_prop15720 import required_bitight_levels_empty_all_primes
 from e1_gmin_m4_prop15168 import freeness_threshold, k_max_auto_freeness_s2
 from e1_gmin_m4_prop15170 import type_I_k_3p_minus_2_closed_general, gsum_pairwise_lower_bound
 from e1_gmin_m4_prop15171 import (
@@ -123,7 +123,7 @@ def test_e1_and_L_wire_honest_open():
     """E1/L open: residual (i) open (full residual (ii) closed by 15.237)."""
     assert type_I_k_3p_minus_2_closed_general() is True
     assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
-    bt = bitight_from_majorization(5)["bitight_empty"]
+    bt = required_bitight_levels_empty_all_primes()
     assert bt is True
     assert e1_closed_general() is True
     opens = e1_open_residuals()

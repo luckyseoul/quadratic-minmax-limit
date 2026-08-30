@@ -1,4 +1,4 @@
-"""Tests for Prop 15.167: bi-tight via majorization (no residual)."""
+"""Tests for corrected Prop 15.167: valid algebra, retracted implication."""
 from __future__ import annotations
 
 from fractions import Fraction
@@ -38,11 +38,12 @@ def test_L_star_lt_2d_algebra():
         assert L_star_closed(p) < 2 * d_of(p)
 
 
-def test_bitight_predicate_drives_shipped_function():
-    """bitight_from_majorization is the real entry point (not hard-coded True)."""
+def test_majorization_predicate_records_retracted_arrow():
     for p in (5, 7, 11, 13, 17):
         r = bitight_from_majorization(p)
-        assert r["bitight_empty"] is True
+        assert r["bitight_empty"] is False
+        assert r["retracted"] is True
+        assert r["spectral_gap_conditional_on_floor"] is True
         assert r["L_star_lt_2d"] is True
         assert r["lambda_cycle_ub_lt_d"] is True
         # cycle UB strictly below d from L_*/2
@@ -57,21 +58,21 @@ def test_p3_outside_claim():
     assert r["bitight_empty"] is False
 
 
-def test_all_primes_ge_5_bitight():
+def test_all_primes_ge_5_old_bitight_claim_is_false():
     bt = bitight_empty_for_all_primes_ge_5()
-    assert bt["proved"] is True
-    assert bt["all_bitight_empty"] is True
+    assert bt["proved"] is False
+    assert bt["all_bitight_empty"] is False
     assert bt["n_checked"] >= 40
 
 
 def test_theorems_proved():
     assert prove_theorem_A()["proved"]
     assert prove_theorem_B()["proved"]
-    assert prove_theorem_C()["proved"]
+    assert prove_theorem_C()["proved"] is False
+    assert prove_theorem_C()["retracted"] is True
 
 
-def test_census_actual_spectrum_below_L_star():
-    """Actual Φ spectrum at p=5,7 sits under L_* (drives shipped L_star)."""
+def test_census_actual_spectrum_below_L_star_but_no_cover_conclusion():
     for p, spec in ((5, SPECTRUM_P5), (7, SPECTRUM_P7)):
         lam = max(spec)
         assert lam <= L_star_closed(p)
@@ -80,11 +81,11 @@ def test_census_actual_spectrum_below_L_star():
         assert spec[lam] >= d_of(p) - 1
 
 
-def test_main_bi_tight_closed_L_open():
+def test_main_retracts_bi_tight_and_keeps_L_open():
     out = main()
-    assert out["proved"]["bitight_empty_for_all_p_ge_5"] is True
+    assert out["proved"]["bitight_empty_for_all_p_ge_5"] is False
     assert out["proved"]["residual_closed_general"] is False
     assert out["proved"]["sixteen_N_for_all_p"] is False
     assert out["proved"]["E1_closed"] is False
     assert out["L_status"] == "OPEN"
-    assert out["proved"]["census_spectrum_p5_p7"] is True
+    assert out["proved"]["census_spectral_conditions_p5_p7"] is True

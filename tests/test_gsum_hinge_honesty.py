@@ -4,7 +4,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from e1_gmin_m4_prop15167 import bitight_from_majorization
+from e1_gmin_m4_prop15720 import required_bitight_levels_empty_all_primes
 from e1_gmin_m4_prop15170 import (
     e1_closed_general,
     gsum_disj_lb_proved_general,
@@ -51,12 +51,16 @@ def test_e1_and_L_open_honest():
     from e1_gmin_m4_prop15179 import residual_ii_dual_twolevel_affine_closed
 
     assert gsum_disj_lb_proved_general() is False  # Farkas path unused
-    assert residual_i_dual_eq_empty_proved_general() is False  # 15.216 R gap
-    assert type_I_k_3p_minus_2_closed_general() is False  # residual (i) open
+    assert residual_i_dual_eq_empty_proved_general() is True  # 15.272/15.249 two-level slice
+    assert type_I_k_3p_minus_2_closed_general() is True
     assert residual_ii_dual_twolevel_affine_closed() is True  # 15.179 freeze branch
     assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True  # 15.179+236+237
-    assert e1_closed_general() is False
-    bt = bitight_from_majorization(5)["bitight_empty"]
+    # Historical 15.170 AND closes only the obsolete two-level/bounded split.
+    assert e1_closed_general() is True
+    from e1_main_chain_status import four_e1_units_closed
+
+    assert four_e1_units_closed()["closed"] is False
+    bt = required_bitight_levels_empty_all_primes()
     assert bt is True
     w = main_L_from_e1(e1=False, bitight=bt)
     assert w["L_closed"] is False

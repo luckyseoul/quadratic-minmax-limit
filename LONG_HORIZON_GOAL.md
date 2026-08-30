@@ -27,15 +27,15 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
 - Sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le 1/2\).
 - Denseness: the limit exists globally iff it exists along Paley orders \(n_k=p_k^2+1\).
 - \(\rho=1\) on that Paley family, so \(\Phi(C_n)=\frac12 n\sqrt{n-1}\) and \(\alpha_{n_k}\to 1/2\) **if** E(1) holds there.
-- 15.167 majorization algebra: bi-tight empty **if** \(\lambda_{\min}(\Phi)\ge6\). The floor is **not** proved (\(G_{u,\mathrm{disj}}\) is not a Gram).
+- 15.167's majorization algebra is conditionally valid, but its final bi-tight implication is **retracted** because `ker(G-(n/2)P1)` contains `ker G`. Proposition 15.720 instead excludes the required bi-tight levels 2 and 3 for every prime `p>=5` by a degree congruence. Its bi-tight level-4 corollary does not exclude one-sided tight level 4.
 - Exact Paley optimality is **false** (\(m_{10}=13<15\)). E(1) is asymptotic.
 
 Therefore the remaining theorem is **E(1)** on \(n=p^2+1\). The live
-acceptance gate is the four-unit dictionary returned by
-`src/e1_main_chain_status.py`; as of 2026-08-28 it reads:
+acceptance gate is the corrected dictionary returned by
+`src/e1_main_chain_status.py`; as of 2026-08-30 it reads:
 
-1. **Spectral floor:** OPEN. The current route requires both global mixed-
-   \(k\) QVAR and principal R1.
+1. **Required bi-tight levels 2 and 3:** TRUE by 15.720. The spectral floor,
+   global mixed-\(k\) QVAR, and principal R1 are no longer acceptance gates.
 2. **Residual (ii), even \(k\ge4p\):** OPEN. The Walsh slice, Eulerian
    boundary, every two-point boundary, and every four-point boundary are
    closed; every six-point boundary is closed for `p>=11`, both `p=7`
@@ -67,13 +67,13 @@ acceptance gate is the four-unit dictionary returned by
 The older statement that residual (ii) was closed by 15.179/15.236/15.237
 covered an earlier, narrower split and is not the live multi-level predicate.
 Likewise, “residual (i) is the only leftover” is retired shorthand. The
-authoritative functions are `residual_ii_k_ge_4p_ND_closed()`,
-`type_I_multilevel_bad_case_ND_closed()`, and
-`phi_F_ge_6_proved_general()`.
+authoritative open functions are `residual_ii_k_ge_4p_ND_closed()` and
+`type_I_multilevel_bad_case_ND_closed()`. The valid bi-tight predicate is
+`required_bitight_levels_empty_all_primes()`.
 
 Path-C / 16N / 15.193 exhaustiveness is **not** required.
 
-Closing any one open unit is **necessary progress**. It is **not** goal
+Closing either open unit is **necessary progress**. It is **not** goal
 completion. Goal completion is a terminal state in the table above.
 
 ## Forbidden translations (these are the small-failure mode)
@@ -94,7 +94,7 @@ If a proof attempt fails, **stop**. Record the failed mechanism in one paragraph
 
 A session may end only if one of these happened:
 
-- one of the three open E(1) units **actually closed** (predicate True via a
+- one of the two open E(1) units **actually closed** (predicate True via a
   real import), or
 - a live route was **killed as a path** by a general counter-mechanism (not a
   small-\(p\) census), and the writeup names the replacement route, or

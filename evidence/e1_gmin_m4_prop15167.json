@@ -1,11 +1,11 @@
 {
-  "title": "Prop 15.167 bi-tight empty for all primes p\u22655 via mult\u2265d\u22121 + \u03bb_min\u22656 majorization (no residual)",
+  "title": "Prop 15.167 spectral majorization algebra; bi-tight conclusion retracted",
   "L_status": "OPEN",
   "proved": {
     "L_star_closed_form": true,
     "L_star_lt_2d_for_p_ge_5": true,
-    "bitight_empty_for_all_p_ge_5": true,
-    "census_spectrum_p5_p7": true,
+    "bitight_empty_for_all_p_ge_5": false,
+    "census_spectral_conditions_p5_p7": true,
     "residual_closed_general": false,
     "sixteen_N_for_all_p": false,
     "E1_closed": false
@@ -77,10 +77,11 @@
       "n_checked": 44
     },
     "C": {
-      "proved": true,
-      "theorem": "For every prime p\u22655: \u03bb_max(\u03a6)\u2264L_*<2d \u21d2 \u03bb_cycle<d=n/2 \u21d2 \u03bb_max(G)=n/2 simple \u21d2 bi-tight empty (15.55). No residual / Es4_* / 16N used.",
+      "proved": false,
+      "retracted": true,
+      "theorem": "The old arrow \u03bb_cycle<d \u21d2 bi-tight empty is invalid: ker(G-(n/2)P1)=span{1}+ker G, and ker G is nontrivial.",
       "bitight_check": {
-        "proved": true,
+        "proved": false,
         "n_checked": 44,
         "by_p_sample": {
           "5": {
@@ -93,8 +94,10 @@
             "lambda_cycle_ub": "51/4",
             "d": 13,
             "lambda_cycle_ub_lt_d": true,
-            "bitight_empty": true,
-            "theorem": "15.167.C mult\u2265d\u22121 + \u03bb_min\u22656 \u21d2 bi-tight empty (no residual)"
+            "spectral_gap_conditional_on_floor": true,
+            "bitight_empty": false,
+            "retracted": true,
+            "theorem": "15.167 A-B: conditional spectral gap arithmetic is valid; bi-tight does not follow because ker(G-(n/2)P1) contains ker G."
           },
           "7": {
             "p": 7,
@@ -106,8 +109,10 @@
             "lambda_cycle_ub": "149/8",
             "d": 25,
             "lambda_cycle_ub_lt_d": true,
-            "bitight_empty": true,
-            "theorem": "15.167.C mult\u2265d\u22121 + \u03bb_min\u22656 \u21d2 bi-tight empty (no residual)"
+            "spectral_gap_conditional_on_floor": true,
+            "bitight_empty": false,
+            "retracted": true,
+            "theorem": "15.167 A-B: conditional spectral gap arithmetic is valid; bi-tight does not follow because ker(G-(n/2)P1) contains ker G."
           },
           "11": {
             "p": 11,
@@ -119,8 +124,10 @@
             "lambda_cycle_ub": "731/20",
             "d": 61,
             "lambda_cycle_ub_lt_d": true,
-            "bitight_empty": true,
-            "theorem": "15.167.C mult\u2265d\u22121 + \u03bb_min\u22656 \u21d2 bi-tight empty (no residual)"
+            "spectral_gap_conditional_on_floor": true,
+            "bitight_empty": false,
+            "retracted": true,
+            "theorem": "15.167 A-B: conditional spectral gap arithmetic is valid; bi-tight does not follow because ker(G-(n/2)P1) contains ker G."
           },
           "13": {
             "p": 13,
@@ -132,8 +139,10 @@
             "lambda_cycle_ub": "1359/28",
             "d": 85,
             "lambda_cycle_ub_lt_d": true,
-            "bitight_empty": true,
-            "theorem": "15.167.C mult\u2265d\u22121 + \u03bb_min\u22656 \u21d2 bi-tight empty (no residual)"
+            "spectral_gap_conditional_on_floor": true,
+            "bitight_empty": false,
+            "retracted": true,
+            "theorem": "15.167 A-B: conditional spectral gap arithmetic is valid; bi-tight does not follow because ker(G-(n/2)P1) contains ker G."
           },
           "17": {
             "p": 17,
@@ -145,8 +154,10 @@
             "lambda_cycle_ub": "3769/48",
             "d": 145,
             "lambda_cycle_ub_lt_d": true,
-            "bitight_empty": true,
-            "theorem": "15.167.C mult\u2265d\u22121 + \u03bb_min\u22656 \u21d2 bi-tight empty (no residual)"
+            "spectral_gap_conditional_on_floor": true,
+            "bitight_empty": false,
+            "retracted": true,
+            "theorem": "15.167 A-B: conditional spectral gap arithmetic is valid; bi-tight does not follow because ker(G-(n/2)P1) contains ker G."
           },
           "19": {
             "p": 19,
@@ -158,25 +169,28 @@
             "lambda_cycle_ub": "5791/60",
             "d": 181,
             "lambda_cycle_ub_lt_d": true,
-            "bitight_empty": true,
-            "theorem": "15.167.C mult\u2265d\u22121 + \u03bb_min\u22656 \u21d2 bi-tight empty (no residual)"
+            "spectral_gap_conditional_on_floor": true,
+            "bitight_empty": false,
+            "retracted": true,
+            "theorem": "15.167 A-B: conditional spectral gap arithmetic is valid; bi-tight does not follow because ker(G-(n/2)P1) contains ker G."
           }
         },
-        "all_bitight_empty": true
+        "all_bitight_empty": false
       }
     },
     "open": {
-      "bi_tight_empty_for_all_p_ge_5": true,
+      "bi_tight_empty_for_all_p_ge_5": false,
       "residual_closed_general": false,
       "sixteen_N_for_all_p": false,
       "Es4_star_for_all_p": false,
       "E1_closed": false,
       "L_status": "OPEN",
-      "note": "Bi-tight closed by majorization. Residual/16N still open (optional). E(1)+L closed in Prop 15.168 + denseness Prop 6.2."
+      "note": "15.167 bi-tight implication retracted. Required levels 2 and 3 are instead closed by the discrete degree congruence in 15.720."
     }
   },
   "census": {
-    "certified": true,
+    "certified_spectral_conditions": true,
+    "certified": false,
     "by_p": {
       "5": {
         "lambda_max_Phi": "176/13",
@@ -190,7 +204,8 @@
         "lambda_cycle": "88/13",
         "d": 13,
         "lambda_cycle_lt_d": true,
-        "bitight_empty": true
+        "spectral_conditions": true,
+        "bitight_empty": false
       },
       "7": {
         "lambda_max_Phi": "4320/409",
@@ -204,7 +219,8 @@
         "lambda_cycle": "2160/409",
         "d": 25,
         "lambda_cycle_lt_d": true,
-        "bitight_empty": true
+        "spectral_conditions": true,
+        "bitight_empty": false
       }
     }
   },
@@ -218,8 +234,10 @@
     "lambda_cycle_ub": "51/4",
     "d": 13,
     "lambda_cycle_ub_lt_d": true,
-    "bitight_empty": true,
-    "theorem": "15.167.C mult\u2265d\u22121 + \u03bb_min\u22656 \u21d2 bi-tight empty (no residual)"
+    "spectral_gap_conditional_on_floor": true,
+    "bitight_empty": false,
+    "retracted": true,
+    "theorem": "15.167 A-B: conditional spectral gap arithmetic is valid; bi-tight does not follow because ker(G-(n/2)P1) contains ker G."
   },
   "F3": "no soft-close of L (E(1)/Main still open)",
   "F19": "no class_key thrash",

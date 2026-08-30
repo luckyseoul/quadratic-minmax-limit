@@ -2,19 +2,20 @@
   "title": "Prop 15.274 residual (ii) even k\u22654p: slope obstruction extends off p|k; two-value leftover empty; multi-level open",
   "proved": {
     "twolevel_empty_k_ge_4p": true,
-    "dual_bad_mass_empty_k_gt_4p": true,
+    "dual_bad_mass_empty_k_gt_4p": false,
     "slope_obstructs_k_not_div_p": true,
     "pairspan_extends": true,
-    "k_4p_max_minus_ge_minus_2": true,
+    "k_4p_max_minus_ge_minus_2": false,
     "twovalue_empty": true,
     "lipschitz_sminus_ge_0": true,
+    "k4p_split": false,
     "leftover_identities": true,
     "leftover_identities_I": true,
     "leftover_identities_J": true,
-    "leftover_identities_L": true,
+    "leftover_identities_L": false,
     "residual_ii_SH_twolevel_mass": true,
     "residual_ii_SH_slice_g_eq_e_not_res_ii": true,
-    "residual_ii_SH_slice_g_in_G_tight_empty": true,
+    "residual_ii_SH_slice_g_in_G_tight_empty": false,
     "residual_ii_aut_e_rigidity": true,
     "residual_ii_no_full_star_k_4p": true,
     "residual_ii_plus_slice_leftover_empty": true,
@@ -27,7 +28,7 @@
     "lemma_dual_bad_slope_obstructs_k_not_div_p": true,
     "residual_ii_k_not_div_p_dual_bad_empty": true,
     "residual_ii_twolevel_k_ge_4p_empty": true,
-    "residual_ii_S_equiv_4_k_4p_empty": true,
+    "residual_ii_S_equiv_4_k_4p_empty": false,
     "residual_ii_twovalue_k_4p_empty": true,
     "residual_ii_twovalue_unclassified_empty": true,
     "residual_ii_sminus_ge_0_ND": true,
@@ -46,7 +47,7 @@
       "n_pairs": 1592
     },
     "B": {
-      "proved": true,
+      "proved": false,
       "n_pairs": 1572
     },
     "C": {
@@ -59,15 +60,15 @@
       "proved": true
     },
     "E": {
-      "proved": true,
-      "leftover": "max=\u22122, f_e\u2261\u22121 on U_{\u22122}, some S\u2264\u22126; Max+ s\u208a=2 multi-level."
+      "proved": false,
+      "leftover": "One-sided S\u2261\u22124 plus the previously identified max=\u22122 multi-level cases; the former dichotomy is unavailable."
     },
     "F": {
       "proved": true,
       "n_unclassified": 163190
     },
     "G": {
-      "proved": true
+      "proved": false
     },
     "H": {
       "proved": true,
@@ -83,7 +84,7 @@
       "n_pure_pair_empty": 11
     },
     "L": {
-      "proved": true,
+      "proved": false,
       "closes_multilevel": false,
       "closes_01": false
     },
@@ -401,7 +402,7 @@
     "pure_pair_dstar_p_3mod4": "EMPTY",
     "SH_twolevel_mass": "mass (p\u22121)/(2p)",
     "SH_slice_g_eq_e": "S\u22614",
-    "SH_slice_g_in_G": "tight empty",
+    "SH_slice_g_in_G": "OPEN",
     "aut_e_rigidity": "tight average \u21d2 tight on orbit",
     "no_full_star_k_4p": "p\u00b2\u22121>4p",
     "k_eq_4p_full": "OPEN \u2014 multi-level leftover",
@@ -410,7 +411,7 @@
     "psl_span_F_eq_Wpp0": false,
     "same_line_pairing": false,
     "e1_closed_general": true,
-    "open": "Multi-level Max\u2212 (3+ even scores) with no S_H=\u22121 witness: k=4p max=\u22122 and f_e\u2261\u22121 on U_{\u22122}; even k>4p with max\u2264\u22124 (tight constants empty only when k=2mp). Two-value through \u00b12 at k=4p is empty; s_{-}\u22650 is Lipschitz ND. Plus-slice and minus-slice three-level are empty; minus-slice needs S\u2264\u22128; 3-equal e-on-T has \u03b5_e=\u22121; pure-pair double-star empty for p\u22613 (mod 4). Two-level S_H pair-slice g=e / g\u2208G empty; Aut_e rigidity holds; no full star in a 4p-set. 1_{S=\u22122} is not a pair-span in general; 3-weight minus-slice is 1-parametric, not empty. 0-1 two-sided leftover is not emptied: Aut_e-fractional leftover is feasible and g\u2209G / non-tight averages remain."
+    "open": "Multi-level Max\u2212 (3+ even scores) with no S_H=\u22121 witness: k=4p is not reduced to max=\u22122 because one-sided S\u2261\u22124 is open; even k>4p with max\u2264\u22124 also remains. Actual two-value laws through \u00b12 at k=4p is empty; s_{-}\u22650 is Lipschitz ND. Plus-slice and minus-slice three-level are empty; minus-slice needs S\u2264\u22128; 3-equal e-on-T has \u03b5_e=\u22121; pure-pair double-star empty for p\u22613 (mod 4). The S_H pair-slice g=e is outside residual; the g\u2208G one-sided tight branch is open. Aut_e rigidity holds; no full star in a 4p-set. 1_{S=\u22122} is not a pair-span in general; 3-weight minus-slice is 1-parametric, not empty. 0-1 two-sided leftover is not emptied: Aut_e-fractional leftover is feasible and g\u2209G / non-tight averages remain."
   },
-  "F3": "Do not claim residual (ii) k\u22654p ND CLOSED: multi-level leftover. Two-value through \u00b12 at k=4p is empty; 3+ level is not. J identities (minus-slice S\u2264\u22128, 3-equal \u03b5_e, pure-pair p\u22613 (mod 4)) do not close ND. L (Aut_e rigidity, S_H slice g=e / g\u2208G) does not empty 0-1 leftover. Slope obstruction is only for k\u22620 (mod p). Do not flip e1 AND."
+  "F3": "Do not claim residual (ii) k\u22654p ND CLOSED: one-sided level-4 tightness and multi-level cases remain. Two-value through \u00b12 at k=4p is empty; 3+ level is not. J identities (minus-slice S\u2264\u22128, 3-equal \u03b5_e, pure-pair p\u22613 (mod 4)) do not close ND. L (Aut_e rigidity; g=e outside residual; g\u2208G one-sided tight) does not empty the 0-1 leftover. Slope is only for k\u22620 (mod p). Do not flip e1 AND."
 }

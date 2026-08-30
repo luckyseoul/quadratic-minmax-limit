@@ -1,57 +1,20 @@
 #!/usr/bin/env python3
-"""
-Prop 15.167 — Bi-tight empty for all primes p≥5 via mult≥d−1 + λ_min≥6
-majorization (no residual / 16N required).
+"""Prop 15.167 — spectral majorization algebra; bi-tight conclusion retracted.
 
-Bypasses Path-C residual for the bi-tight link. Residual / 16N / E[s⁴]≤Es4_*
-remain OPEN (honest). L OPEN until E(1)/deep ND + Main.
+The Fraction identities in Theorems A--B are valid: conditional on a spectral
+floor lambda_min(Phi)>=6, majorization gives L_*<2d and hence the cycle
+spectrum lies below d.  The old final arrow through Proposition 15.55 was
+false.  If R=G-(n/2)P_1, then
 
-============================================================================
-Setup. Φ on Z = zero-diag traceless forms on V₊, dim m=d(d−3)/2,
-d=n/2, n=p²+1.  tr(Φ)=n(n−2).  λ_min(Φ)≥6 (15.160.D / residual_h_close
-Thm D: Q₄≥0).  mult(λ_max(Φ))≥d−1 (15.162.B / 15.98: PSL min irrep).
+    ker R = span{1} + ker G,
 
-From 15.61: λ_cycle = λ_max(Φ)/2  (same Rayleigh: Q_max = N λ_max(Φ)‖B‖²,
-λ_cycle = 2 d²/N · λ₂(W), and λ₂(W)=N λ_max(Φ)/(4 d²)).
-
-From 15.55–15.56: λ_max(G)=max(n/2, λ_cycle) and
-  λ_max(G)=n/2  ⇔  λ₂(P⊙P) ≤ d/(2N)  ⇔  λ_cycle ≤ d.
-When λ_cycle < n/2 the n/2-eigenspace is simple (star differences in ker G;
-cycle space strictly below), so bi-tight covers empty (15.55).
-
-============================================================================
-Theorem A (majorization UB on λ_max) — PROVED Fraction.
-  Let T=n(n−2), k=d−1, m=d(d−3)/2, ℓ=6.  Any spectrum with sum T,
-  at least k coordinates equal to the top value L, and all coordinates ≥ℓ,
-  satisfies
-      L ≤ L_*(p) := (T − ℓ(m−k))/k
-  with equality only for the two-level spectrum (k copies of L, rest =ℓ).
-  Closed form:
-      L_*(p) = (p⁴ + 24 p² − 1) / (2(p² − 1)).
-  Certified identity for primes p=5..97.  ∎
-
-Theorem B (L_* < 2d for primes p≥5) — PROVED Fraction.
-  2d − L_* = (p⁴ − 24 p² − 1)/(2(p²−1)).
-  Numerator p⁴−24p²−1 at p=5 equals 24>0; derivative of f(x)=x²−24x−1
-  (x=p²) is 2x−24>0 for x≥25, so f(p²)>0 for all primes p≥5.
-  Hence L_*(p) < 2d for all primes p≥5.  ∎
-
-Theorem C (bi-tight empty for all primes p≥5) — PROVED.
-  mult≥d−1 + λ_min≥6 + tr=T ⇒ λ_max(Φ) ≤ L_*(p) < 2d.
-  Therefore λ_cycle = λ_max(Φ)/2 < d = n/2.
-  Hence λ₂(P⊙P) < d/(2N), λ_max(G)=n/2 simple, bi-tight empty (15.55).
-  **Does not use residual, Es4_*, or 16N.**  ∎
-
-Theorem D (status, honest).
-  bi_tight_empty_for_all_p_ge_5 = True (this prop).
-  residual_closed_general = False (16N / Es4_* / H still open; not needed for bi-tight).
-  E(1)_closed = False; Main / L OPEN until deep ND + denseness wiring.
-  Census: λ_max(Φ) ≤ L_* and λ_cycle < d at p=5,7 (spectrum Fraction).  ∎
-
-============================================================================
-Shipped API: L_star_bulk6, two_d_minus_L_star, bitight_from_majorization,
-bitight_empty_for_all_primes_ge_5.
-Writes evidence/e1_gmin_m4_prop15167.json
+not merely span{1}; Proposition 15.56 itself supplies n-2 star-difference
+vectors in ker G.  Thus a tight centered indicator can lie in ker G even
+when the top eigenvalue n/2 is simple.  This module now records the valid
+conditional spectral algebra and returns False for the retracted bi-tight
+claim. Proposition 15.720 supplies the valid discrete replacement for the
+required levels 2 and 3; bi-tight level 4 is only a corollary and does not
+exclude one-sided tightness.
 """
 from __future__ import annotations
 
@@ -107,15 +70,14 @@ def lambda_cycle_ub_from_L(L: Fraction | float) -> Fraction:
 
 def bitight_from_majorization(p: int) -> dict:
     """
-    Predicate: prime p≥5 ⇒ bi-tight empty via L_* < 2d.
-    Pure Fraction; no Max+ census required.
+    Record the valid arithmetic and the retracted final implication.
     """
     ok_p = p >= 5 and is_prime(p)
     L = L_star_closed(p)
     gap = two_d_minus_L_star(p)
     d = d_of(p)
     cycle_ub = lambda_cycle_ub_from_L(L)
-    bitight = bool(ok_p and gap > 0 and cycle_ub < d)
+    spectral_gap_conditional = bool(ok_p and gap > 0 and cycle_ub < d)
     return {
         "p": p,
         "prime_ge_5": ok_p,
@@ -126,8 +88,13 @@ def bitight_from_majorization(p: int) -> dict:
         "lambda_cycle_ub": str(cycle_ub),
         "d": d,
         "lambda_cycle_ub_lt_d": cycle_ub < d,
-        "bitight_empty": bitight,
-        "theorem": "15.167.C mult≥d−1 + λ_min≥6 ⇒ bi-tight empty (no residual)",
+        "spectral_gap_conditional_on_floor": spectral_gap_conditional,
+        "bitight_empty": False,
+        "retracted": True,
+        "theorem": (
+            "15.167 A-B: conditional spectral gap arithmetic is valid; "
+            "bi-tight does not follow because ker(G-(n/2)P1) contains ker G."
+        ),
     }
 
 
@@ -135,7 +102,7 @@ def bitight_empty_for_all_primes_ge_5(primes: list[int] | None = None) -> dict:
     if primes is None:
         primes = [p for p in range(5, 200) if is_prime(p)]
     rows = {str(p): bitight_from_majorization(p) for p in primes}
-    ok = all(r["bitight_empty"] for r in rows.values())
+    ok = False
     return {
         "proved": ok,
         "n_checked": len(primes),
@@ -203,11 +170,11 @@ def prove_theorem_B(primes: list[int] | None = None) -> dict:
 def prove_theorem_C() -> dict:
     bt = bitight_empty_for_all_primes_ge_5()
     return {
-        "proved": bt["proved"],
+        "proved": False,
+        "retracted": True,
         "theorem": (
-            "For every prime p≥5: λ_max(Φ)≤L_*<2d ⇒ λ_cycle<d=n/2 "
-            "⇒ λ_max(G)=n/2 simple ⇒ bi-tight empty (15.55). "
-            "No residual / Es4_* / 16N used."
+            "The old arrow λ_cycle<d ⇒ bi-tight empty is invalid: "
+            "ker(G-(n/2)P1)=span{1}+ker G, and ker G is nontrivial."
         ),
         "bitight_check": bt,
     }
@@ -234,25 +201,27 @@ def certify_census_spectrum() -> dict:
             "lambda_cycle": str(cycle),
             "d": d,
             "lambda_cycle_lt_d": cycle < d,
-            "bitight_empty": cycle < d and mult >= d - 1 and min(spec) >= 6,
+            "spectral_conditions": cycle < d and mult >= d - 1 and min(spec) >= 6,
+            "bitight_empty": False,
         }
     return {
-        "certified": all(r["bitight_empty"] for r in out.values()),
+        "certified_spectral_conditions": all(r["spectral_conditions"] for r in out.values()),
+        "certified": False,
         "by_p": out,
     }
 
 
 def prove_open() -> dict:
     return {
-        "bi_tight_empty_for_all_p_ge_5": True,
+        "bi_tight_empty_for_all_p_ge_5": False,
         "residual_closed_general": False,
         "sixteen_N_for_all_p": False,
         "Es4_star_for_all_p": False,
         "E1_closed": False,  # E(1) is Prop 15.168, not this module
         "L_status": "OPEN",  # this module alone does not close L; see 15.168
         "note": (
-            "Bi-tight closed by majorization. Residual/16N still open (optional). "
-            "E(1)+L closed in Prop 15.168 + denseness Prop 6.2."
+            "15.167 bi-tight implication retracted. Required levels 2 and 3 "
+            "are instead closed by the discrete degree congruence in 15.720."
         ),
     }
 
@@ -265,15 +234,14 @@ def main() -> dict:
     open_ = prove_open()
     out = {
         "title": (
-            "Prop 15.167 bi-tight empty for all primes p≥5 via "
-            "mult≥d−1 + λ_min≥6 majorization (no residual)"
+            "Prop 15.167 spectral majorization algebra; bi-tight conclusion retracted"
         ),
         "L_status": "OPEN",
         "proved": {
             "L_star_closed_form": A["proved"],
             "L_star_lt_2d_for_p_ge_5": B["proved"],
             "bitight_empty_for_all_p_ge_5": C["proved"],
-            "census_spectrum_p5_p7": cert["certified"],
+            "census_spectral_conditions_p5_p7": cert["certified_spectral_conditions"],
             "residual_closed_general": False,
             "sixteen_N_for_all_p": False,
             "E1_closed": False,
@@ -287,11 +255,11 @@ def main() -> dict:
     }
     path = ROOT / "evidence" / "e1_gmin_m4_prop15167.json"
     path.write_text(json.dumps(out, indent=2, default=str))
-    print("Prop 15.167 bi-tight via majorization (no residual)")
+    print("Prop 15.167 spectral algebra (bi-tight implication retracted)")
     print(f"  A L_* closed form: {A['proved']}")
     print(f"  B L_* < 2d for p≥5: {B['proved']}")
-    print(f"  C bi-tight empty all p≥5: {C['proved']}")
-    print(f"  census p=5,7: {cert['certified']}")
+    print(f"  C bi-tight empty all p≥5: {C['proved']} (retracted)")
+    print(f"  census p=5,7 spectral conditions: {cert['certified_spectral_conditions']}")
     for p, r in cert["by_p"].items():
         print(
             f"    p={p} λmax={r['lambda_max_Phi']} ≤ L_*={r['L_star']} "

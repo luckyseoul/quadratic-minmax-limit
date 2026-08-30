@@ -1,4 +1,15 @@
-# Status (2026-08-30; through Proposition 15.719)
+# Status (2026-08-30; through Proposition 15.720)
+
+**15.720 PROVES the required level-2 and level-3 bi-tight alternatives are
+empty for every prime `p>=5`.** The proof uses
+`ker(Gsum)=scheme+cross` from 15.272/15.207 and derives
+`d_i+d_j = 2ps mod (p^2-1)/2`; the handshake identity finishes. This
+replaces the invalid 15.55/15.167 spectral implication. Global QVAR,
+principal R1, and the spectral floor are no longer acceptance gates. The two
+remaining theorem gates are multi-level Type I and non-Walsh residual (ii),
+so `L` remains OPEN. The same congruence excludes bi-tight level 4, but does
+not exclude one-sided Max+/-tight level 4; that distinction remains inside
+the open residual-(ii) gate.
 
 **15.719 PROVED exact finite projected-semigroup stabilization for the
 positive `p=7,z=7` high catalogs, not boundary closure**: the Hilbert basis

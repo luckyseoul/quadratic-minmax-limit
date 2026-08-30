@@ -65,7 +65,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from e1_gmin_m4_prop15167 import bitight_from_majorization  # noqa: E402
+from e1_gmin_m4_prop15720 import (  # noqa: E402
+    required_bitight_levels_empty_all_primes,
+)
 from e1_gmin_m4_prop15168 import freeness_threshold, deep_s2_freeness_lb  # noqa: E402
 from e1_gmin_m4_prop15170 import (  # noqa: E402
     e1_closed_general,
@@ -372,7 +374,7 @@ def main() -> dict:
     affine = residual_ii_affine_branch_closed()
     exhaust = residual_ii_exhaustiveness_proved()
     full = residual_ii_full_closed()
-    bt = bitight_from_majorization(5)["bitight_empty"]
+    bt = required_bitight_levels_empty_all_primes()
     out = {
         "title": (
             "Prop 15.193 residual (ii) exhaustiveness audit: affine branch "

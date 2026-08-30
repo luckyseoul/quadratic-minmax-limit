@@ -37,14 +37,15 @@ on \(n=p^2+1\)) + E(1) on that family would give
 \label{eq:limit}
 L=\lim_{n\to\infty}\alpha_n=\tfrac12.
 \end{equation}
-E(1) is **not proved** for all primes \(p\ge5\). Three mathematical
+E(1) is **not proved** for all primes \(p\ge5\). Two mathematical
 obligations remain (`GOAL.md`;
 `evidence/share/denseness_path_package.md` § Caveats):
-(1) the spectral floor, whose current decomposition requires global
-mixed-\(k\) QVAR and principal R1 (\(G_{u,\mathrm{disj}}\) is not a Gram);
-(2) residual (ii) for even \(k\ge4p\); and (3) Type I when Max− is not
-two-level. Lemma D existence / 2-plane is complete in `A3_PROOF.md` and
-15.276. Aut-Schur is **false**. Gsum unused.
+(1) residual (ii) for even \(k\ge4p\); and (2) Type I when Max− is not
+two-level. Proposition 15.720 closes the required bi-tight levels 2 and 3
+directly, so the spectral floor, global QVAR, and principal R1 are no longer
+acceptance gates. Its bi-tight level-4 corollary does not close the one-sided
+tight level-4 branch of residual (ii). Lemma D existence / 2-plane is complete in `A3_PROOF.md`
+and 15.276. Aut-Schur is **false**. Gsum unused.
 
 **Optional still open:** Path-C residual / \(16N\) (independent).
 
@@ -55,8 +56,8 @@ matrix of order \(n=p^2+1\) (over \(\mathbb F_{p^2}\)) admits a halfspace boolea
 **If** \(m_n\ge\Phi(C)-2\) (E(1)) this would force \(L=\tfrac12\). E(1) is open.
 
 **What is complete.** Dual-Gaussian lower bound; denseness; \(\rho=1\) on \(n=p^2+1\);
-15.167 majorization algebra (the floor \(\lambda_{\min}(\Phi)\ge6\) is **not**
-proved); residual (ii) affine + even \(k\le 4p-2\) (15.179/236/237), **not**
+15.720 degree-congruence exclusion of required bi-tight levels 2 and 3;
+residual (ii) affine + even \(k\le 4p-2\) (15.179/236/237), **not**
 even \(k\ge4p\); residual (i) two-level Type I via 15.272
 \(k=1\cup k=3\Rightarrow G_+\succ0\Rightarrow\ker=\mathrm{sc}\) (15.207)
 \(\Rightarrow\) dual-eq empty (15.249/15.216). Aut-Schur remains false. Gsum
@@ -68,7 +69,7 @@ remaining `z=7` pointed systems and identify their projected high-catalog
 semigroups through grade six, but exclude no source boundary.  All 56 actual
 `z=7` line boundaries in two orbits remain open.
 
-The intended Type I close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-08-30; through Proposition 15.719).** \(L\) is OPEN. Details: `evidence/share/denseness_path_package.md` § Caveats.
+The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-08-30; through Proposition 15.720).** \(L\) is OPEN. Details: `evidence/share/denseness_path_package.md` § Caveats.
 
 > **Reader note.** Soft-close of \(L=\tfrac12\) via scheme-min Gsum was **retracted** 2026-08-06. Aut-Schur remains false. Historical “\(L\) OPEN” remarks in Props 15.20–15.171 refer to those older routes.
 
@@ -1671,11 +1672,15 @@ so the continuous bound \(\tfrac m2\lambda_{\max}\ge p(m-1)\) holds for **all** 
 
 3. **Tight cover forces \(G_\perp\)-isotropy (proved).** If \(H\) is Max\(_{+}\)-tight of level \(2\) (\(|H|=2p\), \(S_H\equiv2\) on \(\mathrm{Max}_{+}\)), then \(v:=\mathbf1_H\) satisfies \(v^\top Gv=\mathbb E[S_H^2]=4\). Writing \(G=\tfrac n2 P_{\mathbf1}+G_\perp\) with \(P_{\mathbf1}=\mathbf1\mathbf1^\top/E\), part 2 yields \(v^\top G_\perp v=0\).
 
-4. **Obstruction when \(\lambda_{\max}(G)=n/2\) is simple (proved).** Assume \(G\succeq0\) (true: \(G=\mathbb E[ff^\top]\)) and \(\lambda_{\max}(G)=n/2\) with multiplicity one. Then \(G_\perp\succeq0\) and \(\ker G_\perp=\mathrm{span}\{\mathbf1\}\). From part 3, \(v^\top G_\perp v=0\Rightarrow G_\perp v=0\Rightarrow v\parallel\mathbf1\), impossible for \(|H|=2p<E\). **Therefore no Max\(_{+}\)-tight level-\(2\) cover of size \(2p\) exists** — in particular bi-tight level \(2\) is empty, and Type I freeness-failure (Prop 15.44) cannot produce a bi-tight cover.
+4. **Retraction of the claimed obstruction.** Assume \(G\succeq0\) and \(\lambda_{\max}(G)=n/2\) with multiplicity one, and put \(G_\perp=G-(n/2)P_{\mathbf1}\). Although \(G_\perp\succeq0\), the former assertion \(\ker G_\perp=\mathrm{span}\{\mathbf1\}\) is false. In fact
+   \[
+   \ker G_\perp=\mathrm{span}\{\mathbf1\}\oplus(\ker G\cap\mathbf1^\perp),
+   \]
+   and Proposition 15.56.1 immediately supplies the \((n-2)\)-dimensional star-difference subspace in \(\ker G\cap\mathbf1^\perp\). Thus \(v^\top G_\perp v=0\) only places the centered indicator in \(\ker G\); it does not make \(v\) constant and does not exclude a tight cover. The former conclusion of this part, and every downstream use of it in 15.167--15.168, is retracted. Proposition 15.720 gives a valid discrete obstruction for the required bi-tight levels. \(\square\)
 
 5. **Certified spectrum.** At \(p=5,7\): \(\lambda_{\max}(G)=n/2\) is simple (next eigenvalues \(\approx6.77,5.28\ll n/2\)). At \(p=3\): \(\lambda_{\max}(G)=8>n/2=5\) (multiplicity \(5\)), so the obstruction does **not** apply — consistent with bi-tight \(C_6\). Evidence: `e1_gmin_tight_obstruction.json`.
 
-6. **Residual (OPEN).** Prove \(\lambda_{\max}(G)=n/2\) (simple) for **all primes \(p\ge5\)**. Then bi-tight / Type I residual of Path C closes without a uniform \(g_{\min}\) bound. Deep non-tight gap-\(2\) residual remains. **Existence of \(\lim\alpha_n\) remains OPEN.**
+6. **Corrected status.** Proving \(\lambda_{\max}(G)=n/2\) simple does not by itself exclude tight or bi-tight covers. The spectral route is therefore not an E(1) gate. The required level-2 and level-3 bi-tight alternatives are handled instead by Proposition 15.720. **Existence of \(\lim\alpha_n\) remains OPEN.**
 
 **Proposition 15.56 (star/cycle decomposition and Schur-square reduction; 2026-07-30).** Continue Prop 15.55. Write \(E=\binom{n}{2}\), \(d=n/2\), \(N=|\mathrm{Max}_{+}|\), and let \(Y\) be the \(N\times n\) matrix of Max+ vectors.
 
@@ -5071,37 +5076,35 @@ Continues 15.164–15.165. Does **not** soft-close L.
 Evidence: `src/e1_gmin_m4_prop15166.py`, `evidence/e1_gmin_m4_prop15166.json`,
 `tests/test_prop15166.py`.
 
-## Prop 15.167 (2026-08-05) — Bi-tight empty for all primes \(p\ge5\) via majorization (no residual)
+## Prop 15.167 (2026-08-05; corrected 2026-08-30) — spectral majorization algebra; bi-tight conclusion retracted
 
-Bypasses Path-C residual for the bi-tight link. residual/16N/Es4\(_*\) remain OPEN (honest). L OPEN until E(1)/Main.
-
-**Proved (Fraction, all primes \(p\ge5\)):**
+**Valid Fraction algebra (conditional on the unproved floor):**
 
 1. **Majorization UB.** mult\((\lambda_{\max})\ge d-1\) (15.162) + \(\lambda_{\min}(\Phi)\ge6\) + \(\mathrm{tr}(\Phi)=n(n-2)\) \(\Rightarrow\)
    \[
    \lambda_{\max}(\Phi)\le L_*(p)=\frac{p^4+24p^2-1}{2(p^2-1)}.
    \]
 2. **\(L_*<2d\).** \(2d-L_*=(p^4-24p^2-1)/(2(p^2-1))\); numerator \(=24\) at \(p=5\) and \(f(x)=x^2-24x-1\) increasing on \(x=p^2\ge25\).
-3. **Bi-tight empty.** \(\lambda_{\max}\le L_*<2d\Rightarrow\lambda_{\mathrm{cycle}}=\lambda_{\max}/2<d=n/2\Rightarrow\lambda_{\max}(G)=n/2\) simple \(\Rightarrow\) bi-tight empty (15.55). **Does not use residual / Es4\(_*\) / 16N.**
-4. **Census.** Actual \(\lambda_{\max}\le L_*\) and \(\lambda_{\mathrm{cycle}}<d\) at \(p=5,7\).
+3. **Retracted final arrow.** The implication from a simple top eigenvalue to tight-cover emptiness used the false identity \(\ker(G-(n/2)P_{\mathbf1})=\mathrm{span}\{\mathbf1\}\). The correct kernel also contains \(\ker G\), including all star differences from 15.56. Thus the majorization gap does not prove bi-tight emptiness.
+4. **Census.** The spectral inequalities at \(p=5,7\) remain valid, but they have no discrete-cover conclusion by themselves.
 
-**OPEN:** residual/16N general \(p\); E(1)/Main; L. residual_closed_general=false.
+The required bi-tight levels are instead closed by Proposition 15.720.
 
 Evidence: `src/e1_gmin_m4_prop15167.py`, `evidence/e1_gmin_m4_prop15167.json`,
 `tests/test_prop15167.py`, `src/e1_bitight_chain.py`.
 
-## Prop 15.168 (2026-08-05) — E(1) structure after 15.167 (honest partial)
+## Prop 15.168 (2026-08-05; corrected 2026-08-30) — E(1) structure with the 15.720 bi-tight gate
 
 Continues 15.167. Does **not** soft-close E(1) or L.
 
 **Proved / checkable predicates (Fraction + prior props):**
 
-1. **Tight level-\(s\) obstruction.** Bi-tight empty (15.167) \(\Rightarrow\) no Max\(_+\)-tight level-\(s\) cover of size \(sp\) (\(G_\perp\) isotropy; 15.55 gen.).
-2. **Deep tight empty** for \(p\ge5\) (15.44.3 + 15.167).
+1. **Required bi-tight alternatives.** Levels 2 and 3 are empty for every \(p\ge5\) by 15.720. Generic Max\(_+\)-tight covers are not claimed empty.
+2. **Deep tight empty** for \(p\ge5\) (15.44.3 + level-2 case of 15.720).
 3. **Type I freeness ND** (prior 15.43.1).
-4. **Type I freeness-fail \(k=2p-1\)** \(\to\) tight size \(2p\) \(\to\) ND when bi-tight empty (15.43.3 + 15.44 + 15.167).
+4. **Type I freeness-fail \(k=2p-1\)** \(\to\) tight size \(2p\); the master lemma gives no-descent or a level-2 bi-tight alternative, and 15.720 excludes the latter.
 5. **Deep auto-freeness** for \(s_+=2\), \(k\le3p-2\): \(N_2/N\) lb \(=2-k/(2p)>(p+1)/(2p)\).
-6. **Deep fail-eq \(k=3p-1\)** \(\Rightarrow\) tight \(S\equiv3\) size \(3p\) \(\Rightarrow\) empty under Thm A for \(s=3\).
+6. **Deep fail-eq \(k=3p-1\)** \(\Rightarrow\) tight \(S\equiv3\) size \(3p\); the level-3 bi-tight alternative is excluded by 15.720.
 
 **OPEN residuals (honest — no soft-close):**
 
@@ -8652,3 +8655,110 @@ and the quadratic-minmax-limit theorem remain open.
 Evidence: `src/e1_gmin_m4_prop15719.py`,
 `evidence/p7_infinity7_positive_z7_projected_stabilization_summary.json`, and
 `evidence/NOTE_2026-08-30_p7_infinity7_positive_z7_global_semigroup.md`.
+
+## Proposition 15.720 — degree-congruence obstruction for bi-tight levels 2 and 3
+
+Let \(q=p^2\), \(n=q+1\), and let \(C\) be the symmetric conference
+matrix with \(C^2=qI\). Let \(H\) have indicator \(h\), size
+\(|H|=sp\), degrees \(d_i\), and density
+
+\[
+a=\frac{|H|}{\binom n2}=\frac{2s}{np}.
+\]
+
+Suppose \(H\) is bi-tight of level \(s\). Since the full-edge score is
+\(pn/2\) on \(\operatorname{Max}_+\) and \(-pn/2\) on
+\(\operatorname{Max}_-\), the centered indicator
+\(\kappa=h-a\mathbf1\) has zero score on both sets. Thus
+\(\kappa\in\ker(G_++G_-)\). Propositions 15.272 and 15.207 give
+
+\[
+\ker(G_++G_-)=\mathrm{scheme}\oplus\mathrm{cross}.
+\]
+
+Put \(A=C\odot\kappa\) and \(B=C\odot h=A+aC\). Membership in
+`scheme+cross` means
+
+\[
+A=D_fC+CD_f+X,\qquad \sum_i f_i=0,\qquad CX+XC=0.
+\]
+
+The matrix \(XC\) is skew-symmetric, hence has zero diagonal. Comparing the
+diagonal of \(AC\) gives
+
+\[
+f_i=\frac{d_i-aq}{q-1}.
+\]
+
+After absorbing \(aC\), write \(B=D_gC+CD_g+X\), where
+
+\[
+g_i=f_i+\frac a2=\frac{d_i-s/p}{q-1}.
+\]
+
+The commuting projection
+
+\[
+\operatorname{Comm}(M)=\frac12\left(M+\frac1q CMC\right)
+\]
+
+kills \(X\) and fixes \(D_gC+CD_g\). Therefore, for \(i\ne j\),
+
+\[
+h_{ij}+\frac{C_{ij}(CBC)_{ij}}q=2(g_i+g_j).
+\]
+
+The quantity \(C_{ij}(CBC)_{ij}\) is an integer. Clearing denominators and
+reducing modulo \(q-1\) therefore gives
+
+\[
+q-1\mid2(d_i+d_j)-4ps,
+\]
+
+or equivalently
+
+\[
+\boxed{d_i+d_j\equiv2ps\pmod{(p^2-1)/2}}. \tag{15.720.1}
+\]
+
+Subtracting two equations with one common vertex shows that all degrees have
+one common residue modulo \(M=(p^2-1)/2\).
+
+For \(s=2\), \(M>2p\) for every \(p\ge5\), so all degrees are equal. The
+handshake identity would then give
+
+\[
+d=\frac{4p}{p^2+1}\in(0,1),
+\]
+
+which is impossible for an integer degree. For \(s=3\) and \(p\ge7\),
+\(M>3p\), and the same argument gives the impossible degree
+\(6p/(p^2+1)\in(0,1)\). At \(p=5\), \(M=12\), \(n=26\), and
+\(\sum_i d_i=30\). Writing \(d_i=r+12m_i\) forces \(r\in\{0,1\}\),
+but neither \(30-26\cdot0\) nor \(30-26\cdot1\) is divisible by \(12\).
+Hence
+
+\[
+\mathscr C_{2p}\cap(\mathrm{scheme}\oplus\mathrm{cross})=\varnothing,
+\qquad
+\mathscr C_{3p}\cap(\mathrm{scheme}\oplus\mathrm{cross})=\varnothing
+\]
+
+for every prime \(p\ge5\). The required level-2 and level-3 bi-tight
+alternatives are therefore empty.
+
+The same argument also excludes bi-tight level 4. For \(p\ge11\),
+\(M>4p\), so regularity would force the impossible degree
+\(8p/(p^2+1)\). At \(p=5\), total degree \(40\) leaves residues \(4\) and
+\(2\) modulo \(12\) for \(r=0,1\); at \(p=7\), total degree \(56\) leaves
+residues \(8\) and \(6\) modulo \(24\). This is only a bi-tight corollary:
+it does not exclude a generic one-sided Max+- or Max−-tight level-4 cover.
+
+Thus Proposition 15.720 repairs the Type-I \(2p\) and deep \(3p\)
+no-descent branches without the spectral floor, QVAR, or R1. The one-sided
+level-4 branch remains inside residual (ii), and the two live E(1) gates are
+the multi-level Type-I bad case and non-Walsh residual (ii). \(\square\)
+
+Evidence: `src/e1_gmin_m4_prop15720.py`,
+`tests/test_prop15720.py`, and
+`evidence/NOTE_2026-08-30_bitight_degree_congruence.md`.

@@ -1,15 +1,10 @@
 #!/usr/bin/env python3
-"""
-Tight size-2p cover obstruction via λ_max(G)=n/2.
+"""Historical spectrum census for the retracted Prop 15.55 obstruction.
 
-If G 1 = (n/2) 1 and λ_max(G)=n/2 is simple, then no Max+-tight
-S≡2 cover of size 2p exists (kills bi-tight level 2 and Type I freeness
-equality cases).
-
-Certified: λ_max(G)=n/2 simple at p=5,7; at p=3, λ_max=8 > n/2=5
-(consistent with bi-tight C6).
-
-Writes evidence/e1_gmin_tight_obstruction.json
+The numerical spectra remain valid. The former discrete conclusion is false:
+ker(G-(n/2)P1) also contains ker G, including star differences. Proposition
+15.720 is the valid replacement for required bi-tight levels 2 and 3.
+Its bi-tight level-4 corollary does not exclude one-sided tightness.
 """
 from __future__ import annotations
 
@@ -71,7 +66,7 @@ def analyze(p: int) -> dict:
     Pcoef = (n / 2.0) / E
     quad_allones = float(Pcoef * (v.sum() ** 2))
     # For a true tight cover, v^T G v = E[S^2] = 4, hence v^T G_perp v = 0
-    # If G_perp ≽ 0 and ker=span{1}, then v ∥ 1, impossible.
+    # The old next step was invalid: ker(G_perp) also contains ker(G).
 
     return {
         "p": int(p),
@@ -90,11 +85,13 @@ def analyze(p: int) -> dict:
         "allones_quad_for_size_2p": quad_allones,
         "allones_quad_is_4": bool(abs(quad_allones - 4.0) < 1e-9),
         "top_eigs": [float(x) for x in pos[-6:][::-1]],
-        "tight_size_2p_impossible_if_simple_max": bool(simple),
+        "tight_size_2p_impossible_if_simple_max": False,
+        "spectral_hypothesis_holds": bool(simple),
+        "retracted": True,
         "note": (
-            "If λ_max(G)=n/2 simple and G≽0, then any v with v^T G v = 4 and "
-            "sum(v)=2p has v^T G_perp v=0 ⇒ G_perp v=0 ⇒ v∥1, impossible. "
-            "Hence no Max+-tight S≡2 cover of size 2p (no bi-tight level 2)."
+            "The spectrum can be simple at n/2 while G_perp has ker(G) in "
+            "its kernel. Tightness only puts the centered indicator in ker(G); "
+            "it does not make the indicator constant."
         ),
     }
 
@@ -111,14 +108,9 @@ def main() -> None:
             flush=True,
         )
     out["theorem_sketch"] = (
-        "Prop 15.55: Assume G1=(n/2)1 and λ_max(G)=n/2 is simple. "
-        "For |H|=2p with S_H≡2 on Max+, E[S^2]=4=1_H^T G 1_H. "
-        "Write G=(n/2)P_1 + G_perp with P_1=11^T/E. Then "
-        "1_H^T (n/2)P_1 1_H=4, so 1_H^T G_perp 1_H=0. "
-        "G≽0 ⇒ G_perp≽0 on 1^⊥ and ker G_perp=span{1}. "
-        "Hence G_perp 1_H=0 ⇒ 1_H∥1, contradiction. "
-        "Therefore no Max+-tight level-2 cover exists. "
-        "Certified hypothesis λ_max=n/2 simple at p=5,7; FAILS at p=3 (λ_max=8>5)."
+        "Retraction: ker(G_perp)=span{1}+(ker G intersect 1-perp), not "
+        "span{1}. The p=5,7 spectral hypothesis is certified but has no "
+        "tight-cover conclusion. Use Prop 15.720 for required bi-tight levels."
     )
     ok57 = all(
         r["n_over_2_is_simple_max"] and r["allones_quad_is_4"]
@@ -127,11 +119,10 @@ def main() -> None:
     )
     p3_fails = not out["results"][0]["n_over_2_is_simple_max"]
     out["status"] = (
-        "p=5,7: λ_max(G)=n/2 simple ⇒ tight size-2p Max+ covers impossible "
-        "(bi-tight level 2 empty; Type I freeness-failure blocked). "
+        "p=5,7: λ_max(G)=n/2 simple is certified, but the former "
+        "tight-cover implication is retracted. "
         "p=3: λ_max=8>n/2 (bi-tight possible). "
-        "OPEN: prove λ_max(G)=n/2 for all primes p≥5 (then bi-tight residual closes). "
-        "Deep non-tight residual independent. L OPEN."
+        "Required bi-tight levels are handled by Prop 15.720. L OPEN."
         if ok57 and p3_fails
         else "CERT FAILURE"
     )

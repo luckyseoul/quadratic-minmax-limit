@@ -573,7 +573,7 @@ def main() -> dict:
     D = theorem_D_U_empty()
     Ind = theorem_independence()
     iia = residual_ii_a_ND_closed()
-    from e1_gmin_m4_prop15167 import bitight_from_majorization
+    from e1_gmin_m4_prop15720 import required_bitight_levels_empty_all_primes
     from e1_gmin_m4_prop15170 import e1_closed_general, gsum_disj_lb_proved_general
 
     out = {
@@ -591,7 +591,7 @@ def main() -> dict:
             "gsum_disj_lb_proved_general": gsum_disj_lb_proved_general(),
             "E1_closed": e1_closed_general(),
             "L_closed": False,
-            "bi_tight_empty": bitight_from_majorization(5)["bitight_empty"],
+            "bi_tight_empty": required_bitight_levels_empty_all_primes(),
         },
         "algebra": {
             "A": A,

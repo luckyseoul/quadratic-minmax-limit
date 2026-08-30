@@ -45,7 +45,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from e1_gmin_m4_prop15167 import bitight_from_majorization  # noqa: E402
+from e1_gmin_m4_prop15720 import (  # noqa: E402
+    required_bitight_levels_empty_all_primes,
+)
 from e1_gmin_m4_prop15168 import freeness_threshold  # noqa: E402
 from e1_gmin_m4_prop15169 import (  # noqa: E402
     phi_two_lipschitz_edge_flip,
@@ -362,7 +364,7 @@ def e1_closed_general() -> bool:
     return (
         type_I_k_3p_minus_2_closed_general()
         and deep_s2_freeness_fail_k_ge_3p_ND_closed()
-        and bitight_from_majorization(5)["bitight_empty"]
+        and required_bitight_levels_empty_all_primes()
     )
 
 
@@ -408,7 +410,7 @@ def prove_residual_i(primes: list[int] | None = None) -> dict:
 
 def main() -> dict:
     RI = prove_residual_i()
-    bt = bitight_from_majorization(5)["bitight_empty"]
+    bt = required_bitight_levels_empty_all_primes()
     e1 = e1_closed_general()
     open_res = e1_open_residuals()
     Lwire = main_L_from_e1(e1, bt)

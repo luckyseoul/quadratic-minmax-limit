@@ -8,9 +8,10 @@
 
 **15.272** writes a Max+-free spanning argument that \(k=1\cup k=3\) fills \(\mathcal W_{++}^0\) (Lemmas B–G), hence \(G_+\succ0\), hence dual-eq is empty on \(\mathrm{sc}\) (H–I). Aut-Schur is **false**. Gsum is unused.
 
-Independent review found three load-bearing holes **outside** the 15.272
-span. The former Lemma D writeup holes were closed by 15.276 and
-`A3_PROOF.md`. They are listed under **Caveats**. Legacy code may still report
+Independent review found two remaining load-bearing holes **outside** the
+15.272 span. The former Lemma D writeup holes were closed by 15.276 and
+`A3_PROOF.md`; the former spectral/bi-tight hole is closed directly by the
+15.720 degree congruence. They are listed under **Caveats**. Legacy code may still report
 `e1_closed_general=True`; that is obsolete incomplete wiring, not a
 substitute for the current four-unit gate.
 
@@ -19,7 +20,7 @@ substitute for the current four-unit gate.
 | Sandwich \(1/\pi\le\liminf\le\limsup\le\tfrac12\) | **Proved** (`solution.md` §4–5) |
 | \(\rho=1\) on Paley \(n=p^2+1\) | **Proved** (`evidence/PROOF_rho_eq_1.md`) |
 | Denseness (Prop 6.1) | **Proved** (below) |
-| Bi-tight empty, all \(p\ge5\) (15.167) | **Not proved** — majorization needs \(\lambda_{\min}(\Phi)\ge6\); \(G_{u,\mathrm{disj}}\) is not a Gram |
+| Required bi-tight levels 2 and 3, all \(p\ge5\) | **Proved** (15.720; degree congruence + 15.272/15.207 kernel) |
 | Residual (ii), affine + even \(k\le4p-2\) | **Proved** (15.179+236+237) |
 | Residual (ii), even \(k\ge4p\) | **Open** |
 | Residual (i) Type I, two-level Max− | **Proved** (15.272 → 15.207 → 15.249 → 15.216) |
@@ -52,7 +53,7 @@ E(1) on this family means \(m_n\ge\Phi(C)-2\) with \(\Phi(C)=\tfrac12 n\sqrt{n-1
 
 **\(\rho=1\).** On Paley \(n=p^2+1\), the halfspace boolean vector \(x_\infty=1\), \(x_u=\sigma(L(u))\) for an \(F_p\)-form \(L\) and \(S\subset F_p\) of size \(m\) satisfies \(Cx=px\) (`evidence/PROOF_rho_eq_1.md`: fibre character sums \(p-1\) on \(\ker L\) and \(-1\) off). Thus \(\rho(C)=1\) and \(\Phi(C)=\tfrac12 n\sqrt{n-1}\).
 
-**Bi-tight algebra, conditional on the floor.** \(\mathrm{mult}(\lambda_{\max}(\Phi))\ge d-1\) (PSL min irrep). **If** \(\lambda_{\min}(\Phi)\ge6\), majorization gives \(\lambda_{\max}\le L_*=(p^4+24p^2-1)/(2(p^2-1))\), and \(2d-L_*>0\) for \(p\ge5\). The step “\(Q_4\) is a Gram of \(G_{u,\mathrm{disj}}\)” is **false** (\(G_{u,\mathrm{disj}}\) has negative eigenvalues). Floor certified at \(p=5,7\) only. See Caveat 1.
+**Bi-tight correction.** The 15.167 majorization arithmetic is conditional, but its final use of 15.55 is invalid: `ker(G-(n/2)P1)=span{1}+ker G`, not `span{1}`. Proposition 15.720 supplies the valid replacement. A centered level-\(s\) bi-tight indicator lies in `scheme+cross`; its degrees satisfy \(d_i+d_j\equiv2ps\pmod{(p^2-1)/2}\). The resulting common degree residue contradicts the handshake identity for required levels \(s=2,3\) at every prime \(p\ge5\). It also excludes bi-tight level 4, but not one-sided tight level 4. See Lemma K below.
 
 **Residual (ii), proved range.** Affine two-level branch empty (15.179: forces \(k=3p-1\), impossible for \(k\ge3p\)). Even \(k\le4p-2\) Max− dichotomy (15.236). Dual-bad pair-span \(\{S=-4,f_e=-1\}\) cannot be a star, pair-slice, or triangle (15.237). Even \(k\ge4p\) is **not** in those ND lemmas (Caveat 2). Exhaustiveness that freeness-fail forces \(S\in\{2,4\}\) is not claimed.
 
@@ -229,12 +230,35 @@ slice. It does not close the multi-level Type-I bad case.
 
 Residual (ii) is proved only for the affine branch and even
 \(k\le4p-2\) by 15.179 and 15.236--15.237. The non-Walsh multi-level
-range at even \(k\ge4p\) remains open. Proposition 15.167's bi-tight
-majorization is conditional on \(\lambda_{\min}(\Phi)\ge6\); the old
-claim that this follows from \(Q_4\ge0\) is false because the disjoint
-Kneser mask is not a Gram. The current spectral-floor decomposition also
-requires global mixed-\(k\) QVAR and principal R1. Therefore this package
-does **not** prove E(1) or \(L=\tfrac12\).
+range at even \(k\ge4p\) remains open. The required bi-tight levels are
+closed by Lemma K, so the spectral floor, global mixed-\(k\) QVAR, and
+principal R1 are not needed by this implication chain. This package still
+does **not** prove E(1) or \(L=\tfrac12\) until the two multi-level remainders
+close.
+
+---
+
+## Lemma K (required bi-tight levels).
+
+Let `H` be bi-tight of level `s`, `|H|=sp`, with degree sequence `d_i`, and
+let `kappa=1_H-2s/(np) 1`. Tightness on Max+ and Max− gives
+`kappa in ker(Gsum)`. Lemmas G--H identify this kernel with
+`scheme+cross`. Writing `B=C odot 1_H`, projecting `B` onto matrices
+commuting with `C`, and comparing an off-diagonal entry gives
+
+\[
+d_i+d_j\equiv2ps\pmod{(p^2-1)/2}\qquad(i\ne j).
+\]
+
+Hence all degrees have one common residue modulo `M=(p^2-1)/2`. For `s=2`,
+`M>2p` for every `p>=5`, so all degrees are equal, but the handshake identity
+would give the noninteger `4p/(p^2+1)`. For `s=3`, the same argument works for
+`p>=7`; at `p=5`, `M=12`, `n=26`, and total degree `30`, so a common residue
+`r` must be `0` or `1`, and neither `30-26r` is divisible by `12`. Thus the
+level-2 and level-3 bi-tight alternatives are empty for every prime `p>=5`.
+The same residue calculation excludes bi-tight level 4, but this does not
+assert generic Max+- or Max−-tight-cover emptiness. In particular it does not
+close the one-sided level-4 branch in residual (ii), nor all bi-tight levels.
 
 ---
 
@@ -256,9 +280,9 @@ The current claim is \(L\) **OPEN**.
 
 A hostile review for public scrutiny found the following. **None of these is Aut-Schur or Gsum.**
 
-1. **\(\lambda_{\min}(\Phi)\ge6\) is not proved for all \(p\).** 15.167 majorization needs this floor. \(G_{u,\mathrm{disj}}\) is **not** a Gram (Kneser mask; min eig \(\approx-30\) at \(p=3\), \(\approx-635\) at \(p=5\)). On unit \(B\in Z\): \(E[q^2]=6+8\langle m_4,\kappa_B\rangle=(8+4/p^2)+8\langle\rho,\kappa_B\rangle\), so \(\lambda_{\min}\ge6\iff\langle m_4,\kappa_B\rangle\ge0\iff\langle\rho,\kappa_B\rangle\ge-1/4-1/(2p^2)\). Boolean identity \(q^2=4\|By\|^2-2\|B\|^2+8\sum\kappa_B\prod y\) holds pointwise; the 4-set sum is **not** pointwise nonnegative. Candidate \(\lambda_*=8(n-6)/n>6\) for every prime \(p\ge5\) (equality with \(\lambda_{\min}\) at \(p=5\)). Threshold \(\ell>4(p^4-1)/(p^4-8p^2-1)\) (\(\approx5.887\) at \(p=5\), \(\to4\)). Certified \(\lambda_{\min}(\Phi)\ge6\) at \(p=5,7\) only. CS/Weil on all 4-sets miss the budget by \(\Theta(p^2)\). Max+-free: \(\langle\mathrm{star},\kappa_B\rangle=-p\|B\|^2\) (15.111 E′) and \(\langle\varphi,\kappa_B\rangle=-n/4\|B\|^2\) (E″), so \(\beta_b=6/p\) and \(\beta_{Tb}=6(3p^2+5)/p^2\) (E‴). \(\rho_{\min}\) is Schur with closed \(\alpha_\rho\). If Aut·F=Z then \(\lambda_{\min}(\Phi)=\lambda_{\min}(\Phi|_F)\) (15.278 A); Aut·F=Z is certified at \(p=5,7\) (rank \(65,275\)) not yet for all \(p\). Hinge is Aut·F=Z for all \(p\ge5\) and \(\lambda_{\min}(\Phi|_F)\ge6\), equivalently \(D\succeq I\) / \(\langle\delta,\kappa_B\rangle\).
+1. **Spectral floor (not an acceptance caveat).** \(\lambda_{\min}(\Phi)\ge6\) remains open for all \(p\), and the old Kneser-mask proof is false. Proposition 15.720 bypasses this entirely for E(1), so QVAR/R1 work cannot be counted as closing a remaining gate.
 
-2. **Residual (ii) ND is written for even \(k\in[3p+1,4p-2]\)** (15.236/237). Affine two-level is dead for all \(k\ge3p\) (15.179). At **\(k\ge4p\)**: two-level \(\{2,4\}\) / \(\{-2,-4\}\) and \(S\equiv\pm4\) are empty (15.274 A–B); dual-bad is empty when \(k\not\equiv0\pmod p\) (C); every two-value leftover through \(\pm2\) at \(k=4p\) has unclassified pair-span mass (F). Leftover is **multi-level** Max− (3+ even scores) at \(k=4p\) with \(\max=-2\), \(f_e\equiv-1\) on \(U_{-2}\).
+2. **Residual (ii) ND is written for even \(k\in[3p+1,4p-2]\)** (15.236/237). Affine two-level is dead for all \(k\ge3p\) (15.179). At **\(k\ge4p\)**: Max+ two-level \(\{2,4\}\) is impossible for \(k>4p\) and lies outside the \(s_+=2\) residual at \(k=4p\); actual two-value leftovers through \(\pm2\) have unclassified pair-span mass (15.274 F); and the slope obstruction handles the stated nonmultiple-of-\(p\) dual-bad slice. However, the former claim that \(S\equiv\pm4\) is empty used the retracted one-sided-tight implication. Thus one-sided level-4 tight covers and the multi-level branches remain. In particular, one cannot yet reduce every \(k=4p\) case to \(\max=-2\), \(f_e\equiv-1\) on \(U_{-2}\).
 
 3. **Type I dual-eq is the two-level Max− law \(S\in\{-1,-3\}\).** The 15.169 bad case \(f_e\equiv-1\) on \(\{S=-1\}\) only gives \(\Phi(H)\ge\Phi-4\) if Max− is multi-level. 15.275 writes the mass \(2a+c(3+\mu_c)=2/p\), the pairing min \(E[Sf_e]\ge3/p-2\), \(E[R^2]=E[S^2]-5+4E[Sf]\), integrality \(n_{-1}=M+n_c+t\), the unique 2-orbit Aut\(_e\) collapse \(\mu_{\mathrm{far}}=-2(2p-3)/(p(p^2-1))<0\), and the 3-weight Max− identity \(F_-|_{f=+1}=-(p+1)/(p-1)+\mu_{\mathrm{far}}p(p+1)\). Paley Aut\(_e\) has **two** star orbits (\(\sigma_\square=(p-1)(1+f_e)\), \(\sigma_\boxtimes=(p+1)(1-f_e)\)) and several far orbits. The 3-weight slices \(\mu_\square=\mu_\boxtimes\) and \(\mu_\boxtimes=0\) are empty (negative weight). The slice \(\mu_{\mathrm{far}}=0\) stays a \([0,1]\) solution of \(F_+\bar x=3-2f_e\), but it (and the whole \(\mu_{\mathrm{far}}\ge0\) 3-weight family) **cannot realise the bad case**: \(F_-|_{f=+1}\ge-(p+1)/(p-1)>-2\), while a gap-2 undercutter with \(f_e\equiv-1\) on \(\{S=-1\}\) needs \(S\le-3\) on \(\{f=+1\}\). Star-supported 0-1 Type I graphs Aut\(_e\)-average to that point (\(n_\square=(p+1)/2\), \(n_\boxtimes=5(p-1)/2\)). Dual-eq empty kills only the two-level / pairing-min slice. **Leftover:** split far Aut\(_e\) classes (unequal 4-set interpolants) do not reduce to the collapsed-far bound; \(F_-\le-3\) on \(\{f=+1\}\) is infeasible at \(p=5,7\) (census) but not proved for all \(p\). `type_I_multilevel_bad_case_ND_closed` stays False.
 
@@ -266,7 +290,7 @@ A hostile review for public scrutiny found the following. **None of these is Aut
 
 5. **Lemma E Johnson** (same-line hyperplane) was expanded independently and has **no algebraic GAP** relative to 15.269 B + the \(WW^\top\) identity. See `evidence/share/lemma_E_johnson.md`.
 
-Until (1)–(3) are closed, \(L=\tfrac12\) is not established. Caveat (4)
+Until (2)–(3) are closed, \(L=\tfrac12\) is not established. Caveat (4)
 is already discharged by `A3_PROOF.md` + 15.276; finite rank-2 remains an
 independent check of that proof.
 

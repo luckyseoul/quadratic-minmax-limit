@@ -42,7 +42,10 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from e1_gmin_m4_prop15100 import n_of  # noqa: E402
-from e1_gmin_m4_prop15167 import bitight_from_majorization  # noqa: E402
+from e1_gmin_m4_prop15720 import (  # noqa: E402
+    bitight_level_obstruction,
+    required_bitight_levels_empty_all_primes,
+)
 from e1_gmin_m4_prop15168 import (  # noqa: E402
     freeness_threshold,
     deep_s2_freeness_lb,
@@ -146,7 +149,7 @@ def deep_fail_eq_k_3p_minus_1_empty(p: int) -> dict:
     return {
         "p": p,
         "impossible": r["impossible_when_bitight_empty"],
-        "bitight_empty": bitight_from_majorization(p)["bitight_empty"],
+        "bitight_empty": bitight_level_obstruction(p, 3)["bi_tight_empty"],
         "proved": r["impossible_when_bitight_empty"],
     }
 
@@ -303,7 +306,7 @@ def deep_s2_freeness_fail_k_ge_3p_ND(p: int) -> dict:
     """
     Full residual-(ii) check at prime p.
     """
-    bt = bitight_from_majorization(p)["bitight_empty"]
+    bt = required_bitight_levels_empty_all_primes()
     auto_boundary = deep_auto_freeness_implies_ND(p, k_max_auto_freeness_s2(p))
     fail_eq = deep_fail_eq_k_3p_minus_1_empty(p)
     parity = deep_s2_parity_forces_even_k(p, 3 * p)  # illustrative
@@ -368,7 +371,7 @@ def residual_ii_affine_branch_pieces_ok() -> bool:
         return False
     primes = [p for p in range(5, 60) if is_prime(p)]
     for p in primes:
-        bt = bitight_from_majorization(p)["bitight_empty"]
+        bt = required_bitight_levels_empty_all_primes()
         auto_boundary = deep_auto_freeness_implies_ND(p, k_max_auto_freeness_s2(p))
         fail_eq = deep_fail_eq_k_3p_minus_1_empty(p)
         gap_class = deep_gap2_undercutter_forces_s_minus_le_minus_2(p)
@@ -417,7 +420,7 @@ def e1_closed_general() -> bool:
     return (
         type_I_k_3p_minus_2_closed_general()
         and deep_s2_freeness_fail_k_ge_3p_ND_closed()
-        and bitight_from_majorization(5)["bitight_empty"]
+        and required_bitight_levels_empty_all_primes()
     )
 
 
@@ -468,7 +471,7 @@ def prove_residual_ii(primes: list[int] | None = None) -> dict:
 
 def main() -> dict:
     RII = prove_residual_ii()
-    bt = bitight_from_majorization(5)["bitight_empty"]
+    bt = required_bitight_levels_empty_all_primes()
     e1 = e1_closed_general()
     open_res = e1_open_residuals()
     Lwire = main_L_from_e1(e1, bt)

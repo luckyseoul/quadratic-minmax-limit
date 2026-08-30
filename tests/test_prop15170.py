@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from fractions import Fraction
 
-from e1_gmin_m4_prop15167 import bitight_from_majorization
+from e1_gmin_m4_prop15720 import required_bitight_levels_empty_all_primes
 from e1_gmin_m4_prop15170 import (
     ES2_freeness_fail,
     bad_case_forces_dual_equality_params,
@@ -115,12 +115,12 @@ def test_e1_closed_after_residual_i():
     assert type_I_k_3p_minus_2_closed_general() is True
     assert residual_ii_dual_twolevel_affine_closed() is True
     assert d171() is True
-    assert bitight_from_majorization(5)["bitight_empty"] is True
+    assert required_bitight_levels_empty_all_primes() is True
     assert e1_closed_general() is True
     assert e1_open_residuals() == []
     L = main_L_from_e1(True, True)
     assert L["L_closed"] is True
-    bt = bitight_from_majorization(5)["bitight_empty"]
+    bt = required_bitight_levels_empty_all_primes()
     assert bt is True
     w = main_L_from_e1(e1=False, bitight=True)
     assert w["L_status"] == "OPEN"

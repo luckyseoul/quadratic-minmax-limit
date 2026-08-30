@@ -5,8 +5,11 @@ from fractions import Fraction
 
 from e1_gmin_m4_prop15167 import (
     L_star_closed,
-    bitight_from_majorization,
     two_d_minus_L_star,
+)
+from e1_gmin_m4_prop15720 import (
+    bitight_level_obstruction,
+    required_bitight_levels_empty_all_primes,
 )
 from e1_gmin_m4_prop15168 import (
     deep_fail_k_3p_minus_1_impossible,
@@ -53,36 +56,33 @@ def test_deep_s2_lb_formula_and_auto_freeness_boundary():
         assert deep_s2_freeness_lb(p, 3 * p - 1) == thr
 
 
-def test_tight_cover_g_perp_identity_and_obstruction():
-    """g_⊥ quad vanishes for tight covers; obstruction tracks 15.167 bi-tight."""
+def test_required_bitight_alternatives_use_15720():
     for p in (5, 7, 11, 13):
-        for s in (1, 2, 3, 4):
+        for s in (2, 3, 4):
             r = tight_cover_obstruction_applicable(p, s)
-            assert r["g_perp_vanishes"] is True
-            assert Fraction(r["g_perp_quad_for_tight"]) == 0
             assert r["size"] == s * p
-            # obstruction_fires must equal bitight_empty from 15.167
-            bt = bitight_from_majorization(p)
-            assert r["obstruction_fires"] == bt["bitight_empty"]
-            assert r["bitight_empty_15167"] == bt["bitight_empty"]
+            bt = bitight_level_obstruction(p, s)
+            assert r["obstruction_fires"] == bt["bi_tight_empty"]
+            assert r["bitight_empty_15720"] == bt["bi_tight_empty"]
+            assert r["generic_tight_cover_empty"] is False
 
 
 def test_type_I_fail_k_2p_minus_1_ND_tracks_bitight():
     """ND for this class is bitight_empty ∧ tight-2p obstruction — real path."""
     for p in (5, 7, 11, 13, 17):
         r = type_I_fail_k_2p_minus_1_ND(p)
-        bt = bitight_from_majorization(p)
+        bt = bitight_level_obstruction(p, 2)
         assert r["k"] == 2 * p - 1
-        assert r["bitight_empty"] is bt["bitight_empty"]
+        assert r["bitight_empty"] is bt["bi_tight_empty"]
         assert r["ND_for_this_class"] is (
-            bt["bitight_empty"] and r["tight_2p_obstruction"]
+            bt["bi_tight_empty"] and r["tight_2p_obstruction"]
         )
 
 
 def test_deep_tight_empty_tracks_bitight():
     for p in (5, 7, 11, 13):
         r = deep_tight_empty(p)
-        assert r["empty"] is bitight_from_majorization(p)["bitight_empty"]
+        assert r["empty"] is bitight_level_obstruction(p, 2)["bi_tight_empty"]
 
 
 def test_deep_fail_k_3p_minus_1_tracks_s3_obstruction():
@@ -92,6 +92,7 @@ def test_deep_fail_k_3p_minus_1_tracks_s3_obstruction():
         assert r["H_size_if_S_in_2_4"] == 3 * p
         obs = tight_cover_obstruction_applicable(p, 3)
         assert r["impossible_when_bitight_empty"] is obs["obstruction_fires"]
+        assert r["generic_tight_cover_impossible"] is False
 
 
 def test_phi_and_L_star_still_consistent_with_15167():
@@ -103,14 +104,17 @@ def test_phi_and_L_star_still_consistent_with_15167():
         assert L_star_closed(p) < 2 * ((p * p + 1) // 2)
 
 
-def test_e1_open_until_gsum_hinge():
-    """E1 closed via 15.272 dual-eq; Gsum LB unused."""
-    assert e1_closed_general() is True
+def test_e1_open_on_large_k_residual():
+    """Two-level Type I is closed, but the full multi-level chain is open."""
+    assert e1_closed_general() is False
     open_ = e1_open_residuals()
-    assert open_ == []
+    assert open_ == [
+        "non-Walsh residual (ii), even k≥4p",
+        "Type I multi-level Max− bad case",
+    ]
     ro = e1_residual_open()
-    assert ro["E1_closed"] is True
-    assert ro["open"] == []
+    assert ro["E1_closed"] is False
+    assert ro["open"] == open_
 
 
 def test_L_wire_requires_both():
@@ -130,6 +134,7 @@ def test_theorems_partial_e1_structure():
     CD = prove_theorem_C_D_type_I()
     EFG = prove_theorem_E_F_G_deep()
     assert A["proved"] is True
+    assert required_bitight_levels_empty_all_primes() is True
     assert B["proved"] is True
     assert CD["proved_k_2p_minus_1_fail_ND"] is True
     assert CD["type_I_all_classes_closed"] is True
@@ -142,9 +147,9 @@ def test_main_honest_e1_open():
     out = main()
     assert out["proved"]["bi_tight_empty_for_all_p_ge_5"] is True
     assert out["proved"]["type_I_fail_k_2p_minus_1_ND"] is True
-    assert out["proved"]["E1_closed_general"] is True
-    assert out["proved"]["L_closed"] is True
-    assert out["L_status"] == "CLOSED"
-    assert out["open_residual"] == []
+    assert out["proved"]["E1_closed_general"] is False
+    assert out["proved"]["L_closed"] is False
+    assert out["L_status"] == "OPEN"
+    assert out["open_residual"] != []
     # 15.168 stores 16N/old residual as a separate unused False
     assert out["proved"]["residual_closed_general"] is False

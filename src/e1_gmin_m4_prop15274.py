@@ -14,12 +14,12 @@ SETUP
 PROVED
   A. Two-level Max+ S∈{2,4}: N₂/N=2−k/(2p)≤0 for k≥4p. Strictly negative
      for k>4p (impossible). At k=4p, N₂=0 so S≡4 and s₊=4≠2 (out of
-     residual (ii)). Independently, S≡4 is Max+-tight level 4, empty by
-     15.168 (G_⊥ isotropy + 15.167). Scheme colour/star scores ≠4.
+     residual (ii)). No one-sided Max+-tight level-4 emptiness is known;
+     the old 15.168 claim used the retracted 15.55/15.167 implication.
   B. Dual-bad Max− two-level {−2,−4} needs E_−[S]≥−4, i.e. k≤4p. For
      k>4p the mass 2−k/(2p) is negative. At k=4p it forces b=P(S=−2)=0,
-     i.e. S≡−4, Max−-tight level 4: G−1=(n/2)1 and the same G_⊥ identity,
-     empty by 15.168.
+     i.e. S≡−4, a one-sided Max−-tight level-4 cover. Its emptiness is
+     OPEN: 15.720 excludes bi-tight level 4, not one-sided tightness.
   C. Slope identity (15.236.D / 15.50 interpolants) does not use k≤4p−2:
         p[…] = 2(k−4p)(p−1) M₊ M₋,   N±=p M±, p∤M±.
      4p≡0 (mod p) so k−4p≡k (mod p). p∤2, p∤(p−1). Hence p|RHS iff p|k.
@@ -29,16 +29,17 @@ PROVED
      (k−3p+1)/(2p) lies in (0,1) only for k∈(3p−1,5p−1). Two-value
      S∈{2,6} (resp. {−2,−6}) at k=4p makes 1_{S=2} a 0-1 pair-span of
      mass 1/2, which is not a constant / pair-slice / 3-equal.
-  E. At k=4p: S≡−4 empty ⇒ even scores + mean −4 ⇒ max_Max−≥−2.
-     Dichotomy: ND witness, or max=−2 with f_e≡−1 on U_{−2} and (by B)
-     Max− multi-level (some S≤−6).
+  E. The former k=4p dichotomy depended on one-sided S≡−4 emptiness and
+     is RETRACTED. Even scores and mean −4 alone do not force max_Max−≥−2.
   F. Two-value even support is a 0-1 pair-span. 15.237 C: those functions
      are constants, pair-slices (mass (p±1)/(2p)), or triangle 3-equals
      (mass (p±3)/(4p)). At k=4p, any two-value law containing the extreme
      ±2 has lo-mass 1−1/m (other level ±2±2m, m≥2), and 1−1/m lies in
      none of those six rationals for every prime p≥5 and integer m≥2
-     (divisor identities). Constants are the tight S≡±4 already empty.
-     Hence every two-value leftover at k=4p is empty. Same classification
+     (divisor identities). The m=1 collapse has zero mass at the required
+     extreme ±2, so it is not an actual residual/leftover case; no tight-cover
+     emptiness is needed. Hence every actual two-value leftover at k=4p is
+     empty. Same classification
      empties two-value laws at general even k≥4p whenever the first-moment
      mass is unclassified.
   G. If s_{-}≥0 then Φ(G)≥Φ (15.42 / 15.171.B) and the 2-Lipschitz edge
@@ -87,8 +88,9 @@ PROVED
      Then 1_{S_H=3}=(5−S_H)/2 is a 0-1 pair-span of minus-evaluation mass,
      so (15.237 C) 1_{S_H=3}=(1−f_g)/2 and S=4+f_g−f_e, except at p=5
      where the mass is also a 3-equal. Cases: g=e ⇒ S≡4 (not residual (ii));
-     g∈G, g≠e ⇒ S_{G∖{g}∪{e}}≡4, tight empty (15.168). The g∉G branch
-     is Max+-feasible as 0-1 (not emptied here). Aut_e-average x̄ of any
+     g∈G, g≠e ⇒ S_{G∖{g}∪{e}}≡4, a one-sided tight cover whose
+     emptiness is open. The g∉G branch is Max+-feasible as 0-1 (not emptied
+     here). Aut_e-average x̄ of any
      leftover 0-1 G is leftover-feasible. Fluctuation Δ=S−S̄ is mean-zero
      on every Aut_e-orbit of Max±. Hence S̄(y)=2 and S≥2 on Aut_e·y force
      S≡2 on that orbit (Δ≥0 and sum 0); dually S̄=−2 forces S≡−2.
@@ -109,7 +111,7 @@ PREDICATES
   lemma_dual_bad_slope_obstructs_k_not_div_p() = True
   residual_ii_k_not_div_p_dual_bad_empty()     = True   (named lemma)
   residual_ii_twolevel_k_ge_4p_empty()         = True
-  residual_ii_S_equiv_4_k_4p_empty()           = True
+  residual_ii_S_equiv_4_k_4p_empty()           = False (one-sided tight open)
   residual_ii_twovalue_k_4p_empty()            = True
   residual_ii_twovalue_unclassified_empty()    = True
   residual_ii_sminus_ge_0_ND()                 = True
@@ -123,7 +125,7 @@ PREDICATES
   residual_ii_pure_pair_dstar_p_3mod4_empty()  = True
   residual_ii_SH_twolevel_mass()               = True
   residual_ii_SH_slice_g_eq_e_not_res_ii()     = True
-  residual_ii_SH_slice_g_in_G_tight_empty()    = True
+  residual_ii_SH_slice_g_in_G_tight_empty()    = False (one-sided tight open)
   residual_ii_aut_e_rigidity()                 = True
   residual_ii_no_full_star_k_4p()              = True
   residual_ii_k_ge_4p_ND_closed()              = False  until (K)
@@ -140,7 +142,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from e1_gmin_m4_prop15167 import bitight_from_majorization  # noqa: E402
+from e1_gmin_m4_prop15720 import bitight_level_obstruction  # noqa: E402
 from e1_gmin_m4_prop15168 import tight_cover_obstruction_applicable  # noqa: E402
 from e1_gmin_m4_prop15170 import is_prime  # noqa: E402
 from e1_gmin_m4_prop15169 import phi_two_lipschitz_edge_flip  # noqa: E402
@@ -291,20 +293,23 @@ def lemma_scheme_scores_not_4(p: int) -> dict:
 
 
 def lemma_tight_S_const_empty(p: int, s: int) -> dict:
-    """Max±-tight S≡±s, size s p, empty when 15.167/15.168 fire."""
+    """Honesty guard: one-sided S≡±s tightness is not bi-tightness."""
     obs = tight_cover_obstruction_applicable(p, s)
-    bt = bitight_from_majorization(p)["bitight_empty"]
+    bt = bitight_level_obstruction(p, s)["bi_tight_empty"]
     return {
         "p": p,
         "s": s,
         "size": s * p,
         "g_perp_vanishes": obs["g_perp_vanishes"],
         "bitight_empty": bt,
-        "obstruction_fires": obs["obstruction_fires"],
-        "proved": bool(obs["obstruction_fires"] and obs["g_perp_vanishes"] and bt),
+        "bi_tight_hypothesis_established": False,
+        "one_sided_tight_empty": False,
+        "obstruction_fires": False,
+        "proved": False,
         "theorem": (
-            "Tight S≡s cover of size s p has vᵀG_⊥v=0. λ_max(G±)=n/2 "
-            "simple (15.167) ⇒ v∥1, impossible for size < binom(n,2)."
+            "15.720 excludes a bi-tight level-s indicator, but S≡s on Max+ "
+            "or S≡−s on Max− alone does not put the centered indicator in "
+            "ker(G_++G_-). The one-sided tight claim remains open."
         ),
     }
 
@@ -331,8 +336,6 @@ def theorem_A_twolevel_empty(primes: list[int] | None = None) -> dict:
     ok = True
     n = 0
     for p in primes:
-        if not lemma_tight_S_const_empty(p, 4)["proved"]:
-            ok = False
         if not lemma_scheme_scores_not_4(p)["proved"]:
             ok = False
         if not lemma_twolevel_at_k_4p_is_S_const_4(p)["proved"]:
@@ -349,7 +352,8 @@ def theorem_A_twolevel_empty(primes: list[int] | None = None) -> dict:
         "n_pairs": n,
         "theorem": (
             "Two-level S∈{2,4} empty for residual-(ii) s₊=2 at k≥4p: "
-            "mass <0 if k>4p; S≡4 (s₊=4) and tight-empty if k=4p."
+            "mass <0 if k>4p; at k=4p it has S≡4 and therefore s₊=4, "
+            "so it is outside residual (ii). No one-sided tight close is used."
         ),
     }
 
@@ -387,10 +391,12 @@ def lemma_dual_bad_at_k_4p_is_S_const_minus_4(p: int) -> dict:
         "b_eq_0": a == 0,
         "tight_empty": tight["proved"],
         "Gminus_n_over_2": gminus["proved"],
-        "proved": a == 0 and tight["proved"] and gminus["proved"],
+        "forces_one_sided_tight": a == 0 and gminus["proved"],
+        "proved": False,
         "theorem": (
             "At k=4p, two-level {−2,−4} forces b=0, i.e. S≡−4. "
-            "Max−-tight level 4 is empty (15.168 + G−1=n/2)."
+            "This is one-sided Max−-tightness. Its emptiness is not proved by "
+            "15.720 and remains open."
         ),
     }
 
@@ -661,7 +667,7 @@ def lemma_Q_signs_k_4p(p: int) -> dict:
 
 
 def lemma_k_4p_max_minus_ge_minus_2(p: int) -> dict:
-    """S≡−4 empty + even scores + mean −4 ⇒ max≥−2."""
+    """Retracted: the missing one-sided S≡−4 exclusion is essential."""
     tight = lemma_tight_S_const_empty(p, 4)
     gminus = lemma_Gminus_allones_eigen(p)
     qsgn = lemma_Q_signs_k_4p(p)
@@ -670,11 +676,12 @@ def lemma_k_4p_max_minus_ge_minus_2(p: int) -> dict:
         "mean": "-4",
         "constant_minus_4_empty": tight["proved"] and gminus["proved"],
         "Q_signs": qsgn["proved"],
-        "max_ge_minus_2": bool(tight["proved"] and gminus["proved"]),
-        "proved": bool(tight["proved"] and gminus["proved"] and qsgn["proved"]),
+        "max_ge_minus_2": False,
+        "proved": False,
         "theorem": (
             "k=4p even ⇒ even scores, E_−[S]=−4. All S≤−4 forces S≡−4, "
-            "empty by tightness. Hence max_Max−≥−2."
+            "but one-sided Max−-tight S≡−4 has not been excluded. Hence "
+            "max_Max−≥−2 does not follow."
         ),
     }
 
@@ -686,12 +693,14 @@ def theorem_E_k4p_dichotomy(primes: list[int] | None = None) -> dict:
     return {
         "proved": ok,
         "n_primes": len(primes),
+        "retracted": True,
         "theorem": (
-            "At k=4p: max_Max−≥−2. Then ND, or max=−2 with f_e≡−1 on "
-            "U_{−2} and Max− multi-level (two-level would need b=0)."
+            "The former k=4p dichotomy is unavailable until one-sided "
+            "Max−-tight level 4 is excluded by a valid argument."
         ),
         "leftover": (
-            "max=−2, f_e≡−1 on U_{−2}, some S≤−6; Max+ s₊=2 multi-level."
+            "One-sided S≡−4 plus the previously identified max=−2 multi-level "
+            "cases; the former dichotomy is unavailable."
         ),
     }
 
@@ -881,22 +890,23 @@ def lemma_two_value_k_4p_empty(p: int) -> dict:
             rows.append(r)
             if not r["proved"]:
                 ok = False
-    # two-value {2,4} / {−4,−2} collapse to the constants S≡±4 (mass 0 or 1)
+    # For {2,4} / {−4,−2}, the required extreme ±2 has zero mass.
+    # Those collapses are not actual s_+=2 / max_-=−2 cases, so no one-sided
+    # tight-cover emptiness is needed.
     a24 = two_value_lo_mass(2, 4, Fraction(4))
     a42 = two_value_lo_mass(-4, -2, Fraction(-4))
     constants = a24 in (0, 1) and a42 in (0, 1)
     ok = ok and constants
-    tight = lemma_tight_S_const_empty(p, 4)
-    ok = ok and tight["proved"]
     return {
         "p": p,
         "n_pairs": len(rows),
-        "constants_are_tight": constants,
-        "tight_empty": tight["proved"],
+        "zero_extreme_mass_collapses": constants,
+        "one_sided_tight_empty_used": False,
         "proved": ok,
         "theorem": (
-            "k=4p two-value through ±2: either S≡±4 (tight, empty by "
-            "15.168) or extreme-mass 1−1/m unclassified (15.237 C)."
+            "At k=4p, m=1 gives zero mass at the required extreme ±2 and "
+            "is not an actual residual/leftover case. For m≥2, extreme mass "
+            "1−1/m is unclassified by 15.237 C."
         ),
     }
 
@@ -1028,9 +1038,14 @@ def theorem_G_lipschitz_and_k4p_split(primes: list[int] | None = None) -> dict:
     return {
         "proved": ok,
         "n_primes": len(primes),
+        "sminus_ge_0_ND_proved": bool(
+            lemma_sminus_ge_0_implies_Phi_G_ge_Phi()["proved"]
+            and lemma_lipschitz_ND_from_Phi_G()["proved"]
+        ),
+        "k4p_split_proved": False,
         "theorem": (
-            "s_{-}≥0 gives weak ND by Lipschitz. At k=4p the only residual "
-            "(ii) hole is dual-bad multi-level max=−2."
+            "s_{−}≥0 gives weak ND by Lipschitz. The former full k=4p split "
+            "is retracted because one-sided S≡−4 tightness is open."
         ),
     }
 
@@ -2136,25 +2151,23 @@ def lemma_SH_slice_g_equals_e(p: int) -> dict:
     for f in (1, -1):
         if 4 + f - f != 4:
             ok = False
-    tight = lemma_tight_S_const_empty(p, 4)
-    ok = ok and tight["proved"]
     ok = ok and leftover_SH_twolevel_mass(p) == Fraction(p - 1, 2 * p)
     return {
         "p": p,
         "S_const_4": True,
         "s_plus": 4,
         "not_residual_ii": True,
-        "tight_empty": tight["proved"],
+        "one_sided_tight_empty_used": False,
         "proved": ok,
         "theorem": (
             "Two-level S_H pair-slice with g=e gives S=4+f_e−f_e≡4, "
-            "so s₊=4 (tight, empty by 15.168), not residual (ii)."
+            "so s₊=4 and it is not residual (ii)."
         ),
     }
 
 
 def lemma_SH_slice_g_in_G_tight(p: int) -> dict:
-    """S=4+f_g−f_e, g∈G, e∉G ⇒ S_{G∖{g}∪{e}}≡4, size 4p, tight empty."""
+    """The swap identity is valid; one-sided tight-cover emptiness is open."""
     k = 4 * p
     k_swap = k - 1 + 1
     ok = k_swap == 4 * p
@@ -2163,19 +2176,19 @@ def lemma_SH_slice_g_in_G_tight(p: int) -> dict:
         S = 4 + fg - fe
         if S - fg + fe != 4:
             ok = False
-    tight = lemma_tight_S_const_empty(p, 4)
-    ok = ok and tight["proved"]
     # e is the distinguished leftover edge, not in G
     ok = ok and k == 4 * p
     return {
         "p": p,
         "swap_size": k_swap,
         "S_swap": 4,
-        "tight_empty": tight["proved"],
-        "proved": ok,
+        "swap_identity_proved": ok,
+        "tight_empty": False,
+        "proved": False,
         "theorem": (
             "If 1_{S_H=3}=(1−f_g)/2 and g∈G, e∉G, then "
-            "S_{G∖{g}∪{e}}≡4 at size 4p, empty by 15.168."
+            "S_{G∖{g}∪{e}}≡4 at size 4p. This is only one-sided "
+            "Max+-tightness, so the branch remains open."
         ),
     }
 
@@ -2226,8 +2239,8 @@ def theorem_L_rigidity_and_SH_slice(primes: list[int] | None = None) -> dict:
         "closes_01": False,
         "theorem": (
             "Aut_e rigidity (tight average ⇒ tight on the orbit) and "
-            "two-level S_H pair-slice cases g=e / g∈G empty. Do not "
-            "close 0-1 leftover: g∉G and non-tight Aut_e-averages remain."
+            "the g=e two-level S_H slice is outside residual (ii). The g∈G "
+            "and g∉G slices remain open; do not close the 0-1 leftover."
         ),
     }
 
@@ -2237,8 +2250,8 @@ def residual_ii_twolevel_k_ge_4p_empty() -> bool:
 
 
 def residual_ii_S_equiv_4_k_4p_empty() -> bool:
-    primes = [p for p in range(5, 80) if is_prime(p)]
-    return all(lemma_tight_S_const_empty(p, 4)["proved"] for p in primes)
+    """One-sided Max+-tight S≡4 is not excluded by 15.720."""
+    return False
 
 
 def residual_ii_k_eq_4p_empty() -> bool:
@@ -2258,7 +2271,10 @@ def residual_ii_twovalue_unclassified_empty() -> bool:
 
 def residual_ii_sminus_ge_0_ND() -> bool:
     """Named lemma: s_{-}≥0 ⇒ Φ(G)≥Φ ⇒ Lipschitz Φ(H)≥Φ−2."""
-    return bool(theorem_G_lipschitz_and_k4p_split()["proved"])
+    return bool(
+        lemma_sminus_ge_0_implies_Phi_G_ge_Phi()["proved"]
+        and lemma_lipschitz_ND_from_Phi_G()["proved"]
+    )
 
 
 def residual_ii_plus_slice_leftover_empty() -> bool:
@@ -2324,9 +2340,8 @@ def residual_ii_SH_slice_g_eq_e_not_res_ii() -> bool:
 
 
 def residual_ii_SH_slice_g_in_G_tight_empty() -> bool:
-    """Named lemma: two-level S_H with g∈G swaps to a tight S≡4 cover."""
-    primes = [p for p in range(5, 80) if is_prime(p)]
-    return all(lemma_SH_slice_g_in_G_tight(p)["proved"] for p in primes)
+    """The swap is tight, but its one-sided tight-cover emptiness is open."""
+    return False
 
 
 def residual_ii_aut_e_rigidity() -> bool:
@@ -2334,7 +2349,6 @@ def residual_ii_aut_e_rigidity() -> bool:
     return bool(
         lemma_fluctuation_orbit_mean_zero()["proved"]
         and lemma_rigidity_nonneg_mean_zero()["proved"]
-        and theorem_L_rigidity_and_SH_slice()["proved"]
     )
 
 
@@ -2461,13 +2475,14 @@ def hinge_status_274() -> dict:
         "e1_closed_general": e1_closed_general(),
         "open": (
             "Multi-level Max− (3+ even scores) with no S_H=−1 witness: "
-            "k=4p max=−2 and f_e≡−1 on U_{−2}; even k>4p with max≤−4 "
-            "(tight constants empty only when k=2mp). Two-value through "
+            "k=4p is not reduced to max=−2 because one-sided S≡−4 is open; "
+            "even k>4p with max≤−4 also remains. Actual two-value laws through "
             "±2 at k=4p is empty; s_{-}≥0 is Lipschitz ND. Plus-slice "
             "and minus-slice three-level are empty; minus-slice needs "
             "S≤−8; 3-equal e-on-T has ε_e=−1; pure-pair double-star "
-            "empty for p≡3 (mod 4). Two-level S_H pair-slice g=e / g∈G "
-            "empty; Aut_e rigidity holds; no full star in a 4p-set. "
+            "empty for p≡3 (mod 4). The S_H pair-slice g=e is outside residual; "
+            "the g∈G one-sided tight branch is open. Aut_e rigidity holds; "
+            "no full star in a 4p-set. "
             "1_{S=−2} is not a pair-span in general; 3-weight minus-slice "
             "is 1-parametric, not empty. 0-1 two-sided leftover is not "
             "emptied: Aut_e-fractional leftover is feasible and g∉G / "
@@ -2508,7 +2523,8 @@ def main() -> dict:
             "pairspan_extends": D["proved"],
             "k_4p_max_minus_ge_minus_2": E["proved"],
             "twovalue_empty": F["proved"],
-            "lipschitz_sminus_ge_0": G["proved"],
+            "lipschitz_sminus_ge_0": G["sminus_ge_0_ND_proved"],
+            "k4p_split": G["k4p_split_proved"],
             "leftover_identities": H["proved"],
             "leftover_identities_I": Iid["proved"],
             "leftover_identities_J": Jid["proved"],
@@ -2617,11 +2633,12 @@ def main() -> dict:
         },
         "hinge": hinge_status_274(),
         "F3": (
-            "Do not claim residual (ii) k≥4p ND CLOSED: multi-level leftover. "
+            "Do not claim residual (ii) k≥4p ND CLOSED: one-sided level-4 "
+            "tightness and multi-level cases remain. "
             "Two-value through ±2 at k=4p is empty; 3+ level is not. "
             "J identities (minus-slice S≤−8, 3-equal ε_e, pure-pair p≡3 "
-            "(mod 4)) do not close ND. L (Aut_e rigidity, S_H slice g=e / "
-            "g∈G) does not empty 0-1 leftover. Slope obstruction is only "
+            "(mod 4)) do not close ND. L (Aut_e rigidity; g=e outside residual; "
+            "g∈G one-sided tight) does not empty the 0-1 leftover. Slope is only "
             "for k≢0 (mod p). Do not flip e1 AND."
         ),
     }
