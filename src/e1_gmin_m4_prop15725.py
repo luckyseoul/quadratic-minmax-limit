@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
-"""Prop. 15.725 -- parabola-plus-internal boundary family exclusion.
+"""Prop. 15.725 -- retracted parabola-plus-internal family close.
 
-This proposition closes one explicit strict-deficit family in the first open
+The original version of this proposition claimed an all-prime exclusion.
+An independent audit found two missing proof obligations: the character-curve
+bounds used for ``p>=53`` were asserted rather than derived (including an
+admissible singular discriminant locus), and only one of the two product-sign
+orientations was checked.  The unconditional exclusion is therefore OPEN.
+
+The intended target was one explicit strict-deficit family in the first open
 ``|D|=p+1`` boundary shell.  In trace-zero coordinates
 
     F_(p^2) = F_p(omega),             omega^2 = nu, chi_p(nu) = -1,
@@ -39,14 +45,13 @@ The exact Proposition 15.669 phase-zero floor is summed separately over the
 ``(p+1)/2`` directions of each type and compared with the exact type budget
 ``(p+1)^2/2``.
 
-There are two disjoint proof branches.
+The file retains two useful but insufficient branches.
 
-1. The symbolic character-curve bounds prove the family impossible for every
-   prime ``p>=53``.  This module records the exact inequalities and their
-   monotone integer threshold checks; it does not replace them by a finite
-   prime scan.
+1. Four threshold polynomials show that the *claimed* character-curve bounds
+   would imply the desired floor gap for ``p>=53``.  The required bounds
+   themselves are not proved here.
 
-2. The remaining primes
+2. For the phase-zero transported orientation, the primes
 
        17,19,23,29,31,37,41,43,47
 
@@ -67,8 +72,9 @@ characters and preserves fibre occupancies after the explicit scalar
 permutation of their labels.  Direct enumeration is nevertheless retained for
 every ``nu``; the reduction is an independent consistency check.
 
-Only this explicit boundary family is closed.  The whole ``p+1`` shell,
-residual (ii), Type I, and the limit remain open.
+This is exact finite data, not a boundary-family theorem.  The opposite
+orientation, every prime ``p>=53``, the whole ``p+1`` shell, residual (ii),
+Type I, and the limit remain open.
 """
 from __future__ import annotations
 
@@ -552,7 +558,7 @@ def audit_prime(p: int) -> dict[str, object]:
 
 
 def large_prime_symbolic_branch() -> dict[str, object]:
-    """Record the separate all-``p>=53`` character-bound proof.
+    """Record the conditional threshold arithmetic and the missing proof.
 
     The four radical inequalities are converted to integer polynomial checks
     at the threshold.  Their forward differences are positive from 53 onward.
@@ -586,10 +592,12 @@ def large_prime_symbolic_branch() -> dict[str, object]:
         "c_zero_lower_gt_1": "2p-25",
         "c_zero_upper_lt_p_minus_2": "2p-53",
     }
-    proved = all(value > 0 for value in checks.values()) and all(
+    threshold_arithmetic_verified = all(
+        value > 0 for value in checks.values()
+    ) and all(
         value > 0 for value in forward_differences_at_53.values()
     )
-    if not proved:
+    if not threshold_arithmetic_verified:
         raise ArithmeticError("large-prime threshold ledger failed")
     return {
         "scope": "every prime p>=53",
@@ -631,7 +639,20 @@ def large_prime_symbolic_branch() -> dict[str, object]:
         "threshold_squared_polynomial_values": checks,
         "forward_difference_formulas": forward_difference_formulas,
         "forward_differences_at_53": forward_differences_at_53,
-        "proved": proved,
+        "threshold_arithmetic_verified": threshold_arithmetic_verified,
+        "character_curve_bounds_status": "UNPROVED",
+        "missing_character_sums": [
+            "sum_t chi(Delta_c(t))",
+            "sum_t rho_c(t)",
+            "sum_t chi(Delta_c(t))*rho_c(t)",
+        ],
+        "missing_geometry": (
+            "explicit curve equations, irreducibility, genera, singular "
+            "fibres, points at infinity, and the t=0 fibre"
+        ),
+        "admissible_degenerate_locus": "4*a*nu+1=0",
+        "conditional_only": True,
+        "proved": False,
     }
 
 
@@ -666,15 +687,17 @@ def finite_exact_certificate() -> dict[str, object]:
 
 @lru_cache(maxsize=1)
 def theorem_parabola_internal_family() -> dict[str, object]:
-    """Combine the disjoint large-prime proof and finite certificates."""
+    """Package the exact finite audit and the retracted all-prime claim."""
     large = large_prime_symbolic_branch()
     finite = finite_exact_certificate()
-    proved = bool(large["proved"] and finite["proved"])
     return {
         "prop": "15.725",
-        "title": "Parabola-plus-internal boundary family exclusion",
-        "proved": proved,
-        "scope": "every odd prime p>=17",
+        "title": "Parabola-plus-internal finite audit and retracted close",
+        "proved": False,
+        "scope": (
+            "exact finite audit for p=17,...,47 in one transported "
+            "orientation; unconditional family exclusion remains open"
+        ),
         "boundary_family": (
             "{x+x^2*omega:x in F_p} union {a*omega}, "
             "omega^2=nu nonsquare, chi(-a)=-1"
@@ -682,14 +705,20 @@ def theorem_parabola_internal_family() -> dict[str, object]:
         "orientation": "exceptional original vertical direction has phase one",
         "normalization": "send a*omega to infinity by u -> 1/(u-a*omega)",
         "transported_common_phase": 0,
+        "opposite_product_sign_checked": False,
         "large_prime_branch": large,
         "finite_exact_branch": finite,
         "theorem": {
-            "parabola_plus_internal_family": "EXCLUDED",
+            "parabola_plus_internal_family": "OPEN",
             "whole_p_plus_one_shell": "OPEN",
             "residual_ii": False,
             "type_I": False,
             "limit_exists": False,
+        },
+        "retraction": {
+            "all_prime_character_bounds": "UNPROVED",
+            "opposite_product_sign": "UNCHECKED",
+            "finite_phase_zero_census": "EXACT",
         },
         "L_status": "OPEN",
     }
@@ -697,11 +726,10 @@ def theorem_parabola_internal_family() -> dict[str, object]:
 
 def main() -> dict[str, object]:
     theorem = theorem_parabola_internal_family()
-    if theorem["proved"] is not True:
-        raise ArithmeticError("Proposition 15.725 audit failed")
     finite = theorem["finite_exact_branch"]
     assert isinstance(finite, dict)
-    print("Prop 15.725 parabola-plus-internal family: excluded for p>=17")
+    print("Prop 15.725 all-prime family close: RETRACTED")
+    print("  exact finite phase-zero audit retained; family remains OPEN")
     print(
         "  finite exact cases="
         f"{finite['parameter_case_count']} "

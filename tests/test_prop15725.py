@@ -135,7 +135,7 @@ def test_nonsquare_symmetry_includes_direction_and_fibre_label_normalization():
     assert normalized_fibre_label_scale(17, 8, (0, 1)) == 1
 
 
-def test_symbolic_phase_and_all_p_at_least_53_branch_are_not_finite_scans():
+def test_symbolic_phase_and_unproved_p_at_least_53_threshold_arithmetic():
     phase = symbolic_phase_transport()
     assert phase["involution_identity"] == "h(iota(x))=(-a/x^2)h(x)"
     assert phase["fixed_point_equation"] == "x^2=-a"
@@ -174,7 +174,11 @@ def test_symbolic_phase_and_all_p_at_least_53_branch_are_not_finite_scans():
     }
     assert branch["type_minus_exact_lower_gap"] == "m(p-7)>0"
     assert branch["type_plus_exact_lower_gap"] == "(m-1)(p-7)>0"
-    assert branch["proved"] is True
+    assert branch["threshold_arithmetic_verified"] is True
+    assert branch["character_curve_bounds_status"] == "UNPROVED"
+    assert branch["admissible_degenerate_locus"] == "4*a*nu+1=0"
+    assert branch["conditional_only"] is True
+    assert branch["proved"] is False
 
 
 def test_all_nine_primes_are_exhausted_with_exact_typed_budget_certificates():
@@ -230,11 +234,17 @@ def test_all_nine_primes_are_exhausted_with_exact_typed_budget_certificates():
     assert certificate["proved"] is True
 
 
-def test_theorem_closes_only_the_explicit_family():
+def test_theorem_honestly_retracts_the_explicit_family_close():
     theorem = theorem_parabola_internal_family()
-    assert theorem["proved"] is True
-    assert theorem["scope"] == "every odd prime p>=17"
-    assert theorem["theorem"]["parabola_plus_internal_family"] == "EXCLUDED"
+    assert theorem["proved"] is False
+    assert "unconditional family exclusion remains open" in theorem["scope"]
+    assert theorem["theorem"]["parabola_plus_internal_family"] == "OPEN"
+    assert theorem["opposite_product_sign_checked"] is False
+    assert theorem["retraction"] == {
+        "all_prime_character_bounds": "UNPROVED",
+        "opposite_product_sign": "UNCHECKED",
+        "finite_phase_zero_census": "EXACT",
+    }
     assert theorem["theorem"]["whole_p_plus_one_shell"] == "OPEN"
     assert theorem["theorem"]["residual_ii"] is False
     assert theorem["theorem"]["type_I"] is False
