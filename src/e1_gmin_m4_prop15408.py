@@ -40,12 +40,13 @@ Theorem D — PROVED (p=5 Max± cache).
   not inhabited (24<53) and not gap-2 (s_max=+5).
   Fail: claim n_{−1}≥53; fail: claim s_max≤−1.  ∎
 
-Theorem E — PROVED (p=5 HiGHS box).
+Theorem E — p=5 HiGHS box (encoding corrected 2026-08-30).
   [0,1] Type I + S≤−1 + S+3f_e≤0 is infeasible.  Dropping S+3f_e
   (gap-2 without the bad case on {f=+1}) is feasible, with
   Y=E[S|f=+1]>−3.  So the pointwise gap-2 bad-case box is empty
-  at p=5.  Fail: claim the bad-case LP feasible; fail: claim the
-  gap-2-only LP infeasible.  ∎
+  at p=5.  The original implementation incorrectly added 3f_e to
+  every edge coefficient, encoding S+3k f_e≤0 because 1^T x=k.
+  The corrected rows use F_-x≤-3f_e.  ∎
 
 Theorem F — OPEN.  Aut_e far-class 3A+B>0 remains G>T (15.275 J–K).
   type_I_multilevel_bad_case_ND_closed and
@@ -61,6 +62,7 @@ import json
 import os
 import sys
 from fractions import Fraction
+from functools import lru_cache
 from pathlib import Path
 
 os.environ.setdefault("OMP_NUM_THREADS", "1")
@@ -358,6 +360,19 @@ def _unique_rows(F):
     return F[np.sort(idx)]
 
 
+def badcase_ub(Fm, fe):
+    """Rows for S<=-1 and S+3*f_e<=0.
+
+    ``f_e`` is row data, not an edge coefficient.  Thus the second family is
+    ``Fm @ x <= -3*fe``.  Adding ``3*fe`` to every column would instead encode
+    ``S+3*f_e*sum(x)<=0`` and is wrong whenever ``sum(x) != 1``.
+    """
+    A_bad = np.vstack([Fm, Fm])
+    b_bad = np.concatenate([-np.ones(Fm.shape[0]), -3.0 * fe])
+    return A_bad, b_bad
+
+
+@lru_cache(maxsize=1)
 def prove_E() -> dict:
     from scipy.optimize import linprog
 
@@ -382,8 +397,7 @@ def prove_E() -> dict:
         method="highs",
     )
     fe = Fm[:, 0]
-    A_bad = np.vstack([Fm, Fm + 3.0 * fe.reshape(-1, 1)])
-    b_bad = np.concatenate([-np.ones(Fm.shape[0]), np.zeros(Fm.shape[0])])
+    A_bad, b_bad = badcase_ub(Fm, fe)
     r2 = linprog(
         np.zeros(nE),
         A_ub=A_bad,
@@ -411,6 +425,7 @@ def prove_E() -> dict:
         "badcase_lp_feasible": bool(r2.success),
         "badcase_status": int(r2.status),
         "gap2_Y_fplus": Y,
+        "badcase_encoding": "Fm@x<=-1 and Fm@x<=-3*f_e",
         "theorem": (
             "p=5 [0,1] Type I + S≤−1 + S+3f_e≤0 is infeasible. "
             "Drop S+3f_e and the LP is feasible with Y>−3."

@@ -86,6 +86,7 @@
       "badcase_status": 2,
       "n_unique_plus": 5726,
       "n_unique_minus": 5726,
+      "badcase_encoding": "Fm@x<=-1 and Fm@x<=-3*f_e",
       "theorem": "p=7 [0,1] Type I + S\u2264\u22121 + S+3f_e\u22640 is infeasible. Fail: claim the bad-case LP feasible."
     },
     "D": {

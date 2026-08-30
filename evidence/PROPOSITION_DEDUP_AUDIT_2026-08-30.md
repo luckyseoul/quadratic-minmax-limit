@@ -41,6 +41,16 @@ The only live level-4 target is a one-sided tight cover that also has
 15.274 E dichotomy and 15.585 A `min_+=2` conclusion are retracted. Parameter
 or solver searches based on either conclusion are not authorized gates.
 
+A third semantic check found that the finite Type-I LP implementation in
+15.408 E and 15.410 C did not encode its displayed inequality.  The old row
+`Fm + 3*f_e[:,None]` evaluates to `S+3k f_e` because `1^T x=k`; the intended
+bad-case inequality is `S+3f_e<=0`, equivalently `Fm x<=-3f_e`.  The shared
+row builder and tests now check that equality algebraically.  One corrected
+run from the existing eigenshell caches remains infeasible at both `p=5` and
+`p=7`, so the finite conclusions survive, but the old solver statuses were
+not evidence for them.  These runs do not create a general route and must not
+be extended to another prime.
+
 1. The final 300-second positive-`p=7,z=7` CP-SAT run repeated an existing
    exact full-torsion model for the same case.  Only the timeout changed.
 2. Several long proposition blocks are different coordinates for the same

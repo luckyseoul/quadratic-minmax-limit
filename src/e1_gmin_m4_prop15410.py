@@ -26,8 +26,10 @@ Theorem B — PROVED (p=5,7 Max± caches).
   Fail: drop the square-star weight (then plus support leaves {1,5}
   at p=5).  ∎
 
-Theorem C — PROVED (p=7 HiGHS).
+Theorem C — p=7 HiGHS (encoding corrected 2026-08-30).
   [0,1] Type I + S≤−1 + S+3f_e≤0 is infeasible (status 2).
+  The original implementation encoded S+3k f_e≤0 by adding 3f_e to
+  every edge coefficient.  The corrected rows use F_-x≤-3f_e.
   Fail: claim the bad-case LP feasible.  ∎
 
 Theorem D — OPEN.  Aut_e far-class 3A+B>0 remains G>T.
@@ -43,6 +45,7 @@ import json
 import os
 import sys
 from fractions import Fraction
+from functools import lru_cache
 from pathlib import Path
 
 os.environ.setdefault("OMP_NUM_THREADS", "1")
@@ -62,6 +65,7 @@ from e1_gmin_m4_prop15275 import (
     type_I_multilevel_bad_case_ND_closed,
 )
 from e1_gmin_m4_prop15278 import phi_F_ge_6_proved_general
+from e1_gmin_m4_prop15408 import badcase_ub
 from minmax_quadratic import paley_conference_prime_power
 
 CAT = ROOT / "evidence" / "e1_gmin_m4_prop15410_catalog.json"
@@ -230,6 +234,7 @@ def prove_B() -> dict:
     }
 
 
+@lru_cache(maxsize=1)
 def prove_C() -> dict:
     from scipy.optimize import linprog
 
@@ -246,8 +251,7 @@ def prove_C() -> dict:
     ub[0] = 0.0
     bounds = list(zip(lb, ub))
     fe = Fm_u[:, 0]
-    A_bad = np.vstack([Fm_u, Fm_u + 3.0 * fe.reshape(-1, 1)])
-    b_bad = np.concatenate([-np.ones(Fm_u.shape[0]), np.zeros(Fm_u.shape[0])])
+    A_bad, b_bad = badcase_ub(Fm_u, fe)
     r2 = linprog(
         np.zeros(nE),
         A_ub=A_bad,
@@ -266,6 +270,7 @@ def prove_C() -> dict:
         "badcase_status": int(r2.status),
         "n_unique_plus": int(Fu.shape[0]),
         "n_unique_minus": int(Fm_u.shape[0]),
+        "badcase_encoding": "Fm@x<=-1 and Fm@x<=-3*f_e",
         "theorem": (
             "p=7 [0,1] Type I + S≤−1 + S+3f_e≤0 is infeasible. "
             "Fail: claim the bad-case LP feasible."

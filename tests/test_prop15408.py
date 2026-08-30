@@ -3,6 +3,8 @@ from __future__ import annotations
 
 from fractions import Fraction
 
+import numpy as np
+
 from e1_gmin_m4_prop15170 import e1_closed_general, gsum_disj_lb_proved_general
 from e1_gmin_m4_prop15274 import residual_ii_k_eq_4p_empty
 from e1_gmin_m4_prop15275 import (
@@ -14,6 +16,7 @@ from e1_gmin_m4_prop15408 import (
     BAD_WIT,
     S_H_mean_minus,
     WIT,
+    badcase_ub,
     main,
     n_box_zerofar_maxplus,
     n_box_zerofar_pairmin,
@@ -79,6 +82,19 @@ def test_p5_gap2_badcase_box_empty():
     assert E["gap2_lp_feasible"] is True
     assert E["badcase_lp_feasible"] is False
     assert E["gap2_Y_fplus"] > -3
+
+
+def test_badcase_rows_encode_S_plus_3fe_not_S_plus_3kfe():
+    Fm = np.array([[1.0, -1.0, 1.0], [-1.0, 1.0, 1.0]])
+    fe = np.array([1.0, -1.0])
+    x = np.array([1.0, 1.0, 0.0])
+    A, b = badcase_ub(Fm, fe)
+    S = Fm @ x
+    np.testing.assert_allclose(A[:2] @ x - b[:2], S + 1.0)
+    np.testing.assert_allclose(A[2:] @ x - b[2:], S + 3.0 * fe)
+    # The old buggy rows would contain the extra factor sum(x)=2.
+    old_residual = (Fm + 3.0 * fe[:, None]) @ x
+    assert not np.allclose(old_residual, S + 3.0 * fe)
 
 
 def test_type_I_flags_still_open():

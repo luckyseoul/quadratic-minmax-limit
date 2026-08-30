@@ -3,6 +3,8 @@ from __future__ import annotations
 
 from fractions import Fraction
 
+import numpy as np
+
 from e1_gmin_m4_prop15170 import e1_closed_general, gsum_disj_lb_proved_general
 from e1_gmin_m4_prop15274 import residual_ii_k_eq_4p_empty
 from e1_gmin_m4_prop15275 import (
@@ -20,6 +22,7 @@ from e1_gmin_m4_prop15410 import (
     prove_B,
     prove_open,
 )
+from e1_gmin_m4_prop15408 import badcase_ub
 
 
 def test_zerofar_named_not_badcase():
@@ -33,6 +36,14 @@ def test_zerofar_named_not_badcase():
     assert Y_plus_zerofar(7) < -1
     assert mu_box(7) == Fraction(1, 12)
     assert mu_boxt(7) == Fraction(5, 16)
+
+
+def test_p7_uses_shared_correct_badcase_encoding():
+    Fm = np.array([[1.0, -1.0], [-1.0, -1.0]])
+    fe = np.array([1.0, -1.0])
+    x = np.array([1.0, 1.0])
+    A, b = badcase_ub(Fm, fe)
+    np.testing.assert_allclose(A[2:] @ x - b[2:], Fm @ x + 3.0 * fe)
 
 
 def test_zerofar_cache_typeI():

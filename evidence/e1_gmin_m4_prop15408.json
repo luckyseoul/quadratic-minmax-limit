@@ -194,6 +194,7 @@
       "badcase_lp_feasible": false,
       "badcase_status": 2,
       "gap2_Y_fplus": -1.489367705152682,
+      "badcase_encoding": "Fm@x<=-1 and Fm@x<=-3*f_e",
       "theorem": "p=5 [0,1] Type I + S\u2264\u22121 + S+3f_e\u22640 is infeasible. Drop S+3f_e and the LP is feasible with Y>\u22123."
     },
     "F": {
