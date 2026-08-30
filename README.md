@@ -21,9 +21,9 @@ banned by test (`tests/test_main_chain_docs.py`).
 
 **Goal:** settle the limit (see **`LONG_HORIZON_GOAL.md`**). Not done until L is proved or disproved.
 
-**Main claim:** L = lim_n α_n is **OPEN** (2026-08-29).
+**Main claim:** L = lim_n α_n is **OPEN** (2026-08-30).
 
-### Current audit (2026-08-29)
+### Current audit (2026-08-30; through Proposition 15.719)
 
 - **Required asymptotic target.** It is enough to prove the Paley-tail deficit
   \(\Phi(C_p)-m_{p^2+1}=o(p^3)\) on a ratio-dense tail. The current all-prime,
@@ -58,6 +58,25 @@ banned by test (`tests/test_main_chain_docs.py`).
   Proposition 15.712 observes that the nine phase-one `b=16` directions are
   undetermined by the sixteen-point boundary; Szőnyi's direction theorem
   forces collinearity, whose unique profile is absent. The endpoint is closed.
+- **Positive `p=7` infinity-plus-seven `z=7` remainder.** Propositions
+  15.713--15.717 close `z=0,1,2,3`. Proposition 15.718 then reduces the 4,320
+  pointed `z=7` cases to 1,296 affine survivors and 324 four-case
+  representatives; the exact global join rigorously rejects 87
+  representatives, while 159 survive only a necessary relaxation and 78 are
+  explicit budget skips. Its independent Johnson-semigroup certificate has
+  896 binary Hilbert generators in grades `1/2/3` with counts `56/168/672`
+  and exact uncapped layers through grade eight. Proposition 15.719 proves
+  finite projected stabilization for the complete `k=3` and `k=4` supports:
+  the subgroup descriptions are cap-exact through grade six, but grade eight
+  remains an outer support. Subsequent strategy runs add no theorem: all 51
+  grade-three-only representatives survive completed `k=5` prefix joins, an
+  even 26-case `k=6` shard also has no rejection, and a direct full-quotient
+  fixed-case model returns `UNKNOWN` after 300 seconds. The latter two do not
+  constitute complete `k=6` or feasibility results, and this
+  semigroup/quotient route is terminated. The 348 transferred pointed
+  rejections do not subtract source boundaries. All 56 actual `z=7` line
+  boundaries in two orbits, the positive endpoint, and the theorem remain
+  open.
 
 The full correction and supporting certificates are recorded in
 `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md`.
@@ -86,7 +105,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | spectral floor | `phi_F_ge_6` | **OPEN** — needs global QVAR and principal R1 |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, 15.684--15.687 cut `p=23` to 133 exact residue-zero profiles, 15.688--15.699 close the `p=19` endpoint, and 15.700--15.712 close the `p=17` endpoint; 15.713--15.717 close all actual positive `p=7` infinity-plus-seven branches with `z=0,1,2,3`, leaving only 56 line boundaries in two `z=7` orbits and two projected profiles; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the `p=23` next-boundary endpoint, later all-finite sizes, and `p=7` infinity-plus-seven remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, 15.684--15.687 cut `p=23` to 133 exact residue-zero profiles, 15.688--15.699 close the `p=19` endpoint, and 15.700--15.712 close the `p=17` endpoint; 15.713--15.717 close all actual positive `p=7` infinity-plus-seven branches with `z=0,1,2,3`; 15.718--15.719 rigorously reduce and structurally identify projected `z=7` catalog supports without subtracting any actual boundary, so all 56 line boundaries in two `z=7` orbits and two projected profiles remain; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the `p=23` next-boundary endpoint, later all-finite sizes, and `p=7` infinity-plus-seven remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -771,6 +790,8 @@ square-direction affine-circle words.
 | 15.715 | every positive `z=1` boundary has exactly four mean allocations; two complete V100 launch geometries reduce all 6,324,528 boundaries to the same 1,326 projected candidates, whose full 135-dependency catalog checks have zero survivors | closes the actual positive `z=1` branch and removes its 300 projected profiles, leaving 129,024 actual boundaries and a 492-profile envelope at `z=2,3,7`; the branch remains open |
 | 15.716 | pair-transversal enumeration reduces 123,480 positive `z=2` boundaries to 92 affine-semilinear orbits; the exact 1,232-leaf ledger includes 48 residue-four leaves, and 112-direction-annihilator or full 135-coordinate joins reject every leaf modulo seven | closes the actual positive `z=2` branch and removes its 280 projected profiles, leaving 5,544 actual boundaries in twelve orbits and a 212-profile envelope at `z=3,7`; the branch remains open |
 | 15.717 | the ten positive `z=3` boundary orbits have 400 corrected mean leaves; exact full-coordinate mod-seven joins reject 398, and the two survivors contain exactly eight catalog-row triples, all of whose identical integer right sides fail the complete mod-three dependency basis | closes all 5,488 actual positive `z=3` boundaries and removes 210 projected profiles, leaving only 56 line boundaries in two `z=7` orbits and two projected profiles; the branch remains open |
+| 15.718 | the exact parent affine-hull sieve sends 4,320 pointed `z=7` cases to 1,296 survivors, exact affine symmetry partitions them into 324 four-case classes, and a same-row mod-3/mod-7 global join rigorously rejects 87 representatives; independently, the Johnson semigroup has a complete 896-row binary Hilbert basis with grade histogram `56/168/672` and exact uncapped grade-0--8 layers `1; 56; 1,764; 37,856; 575,407; 6,496,938; 57,232,105; 410,200,367; 2,474,264,653` | transfers 87 representative rejections to 348 pointed cases, but subtracts no actual boundary: 159 necessary-only survivors and 78 budget skips remain, and all 56 actual `z=7` line boundaries in two orbits stay open |
+| 15.719 | four consecutive equal projected layers for a semigroup with maximum generator grade three imply permanent finite-group stabilization; the exact `k=3` and `k=4` raw and anchor-relative supports stabilize on grades 3--6 as generated subgroups | identifies every required grade-3--6 high-catalog projection exactly because the Hilbert generators are binary; grade eight is only an outer support, so all 56 `z=7` boundaries and the theorem remain open |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -1108,6 +1129,9 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15714.py` | Complete mod-seven CUDA exclusion of all positive p7 infinity-plus-seven boundaries with no undetermined direction |
 | `src/e1_gmin_m4_prop15715.py` | Complete projected-then-full mod-seven CUDA exclusion of all positive p7 infinity-plus-seven boundaries with one undetermined direction |
 | `src/e1_gmin_m4_prop15716.py` | Pair-transversal orbit census and complete translation-equivariant mod-seven catalog exclusion of positive p7 infinity-plus-seven with two undetermined directions |
+| `src/e1_gmin_m4_prop15717.py` | Complete same-tuple mod-seven/mod-three exclusion of positive p7 infinity-plus-seven with three undetermined directions |
+| `src/e1_gmin_m4_prop15718.py` | Exact positive-`z=7` affine sieve, four-case symmetry, global catalog-join reduction, and Johnson-semigroup Hilbert certificate |
+| `src/e1_gmin_m4_prop15719.py` | Exact finite projected-semigroup stabilization and subgroup certificate through grade six |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |
@@ -1182,6 +1206,9 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-29_p7_infinity7_positive_z1_close.md` | Four-allocation reduction and complete projected-then-full mod-seven exclusion of positive `z=1` (15.715) |
 | `evidence/NOTE_2026-08-29_p7_infinity7_positive_z2_close.md` | Audited 104-orbit remainder census and complete 1,232-leaf mod-seven exclusion of positive `z=2` (15.716) |
 | `evidence/NOTE_2026-08-30_p7_infinity7_positive_z3_close.md` | Complete 400-leaf mod-seven exhaustion and same-tuple mod-three exclusion of positive `z=3` (15.717) |
+| `evidence/NOTE_2026-08-30_p7_infinity7_positive_z7_global_semigroup.md` | Exact affine/global-join reduction, Johnson-semigroup audit, projected stabilization, and nonseparating strategy ledger for positive `z=7` (15.718--15.719) |
+| `evidence/p7_infinity7_positive_z7_global_semigroup_summary.json` | Compact hash-pinned affine/global-join and Hilbert-basis certificate for 15.718 |
+| `evidence/p7_infinity7_positive_z7_projected_stabilization_summary.json` | Compact hash-pinned finite projected-semigroup stabilization certificate for 15.719 |
 | `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md` | General local-stability counter-mechanism, closest-global hierarchy, Mathon barrier, and corrected signed-Eulerian target after the `c=2` no-go |
 | `evidence/NOTE_2026-08-29_dilation_energy_normalization_and_no_go.md` | Exact R1 dilation-energy identity and representation/PSD/autocorrelation route obstructions |
 | `evidence/STRATEGY_2026-08-29_COLD_REVIEW.md` | Cold reconstruction of the original problem, actual asymptotic gate, killed shortcuts, and bounded four-team Ultra attack |

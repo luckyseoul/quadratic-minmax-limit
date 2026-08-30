@@ -1,4 +1,43 @@
-# Status (2026-08-30)
+# Status (2026-08-30; through Proposition 15.719)
+
+**15.719 PROVED exact finite projected-semigroup stabilization for the
+positive `p=7,z=7` high catalogs, not boundary closure**: the Hilbert basis
+has maximum generator grade three, so equality of four consecutive finite
+projected layers makes the common set the generated subgroup forever.  The
+complete `k=3` and `k=4` certificates have equal raw and anchor-relative
+supports on grades 3--6 in all eight directions.  Their subgroup orders are
+`147/3/3` and `1,029/21/3` on direction blocks `0--4/5/6--7`, respectively.
+Binary Hilbert generators make these projections cap-exact through grade six;
+grade eight remains only an outer support because projection loses the
+coordinate cap `L_X<=6`.  Strategy context only, not theorem content: the
+`H0_S0_M7` torsion projections `k=2,...,6` were nonseparating, and bounded
+case joins over all 51 grade-three-only representatives under eight selected
+`k=3` projections plus completed one-projection `k=4` and `k=5` prefixes
+produced no rejection or skip.  The even 26-case `k=6` shard likewise
+produced no rejection or skip; the odd shard was cancelled, so no complete
+`k=6` result is claimed.  A final fixed-case model using the full
+`F_3^6 x F_7^21` quotient returned `UNKNOWN` after 300 seconds, which has no
+mathematical force.  This semigroup/quotient route is now terminated, not
+extended.  Target presence is necessary only.  All 56 actual `z=7` line
+boundaries in two orbits, the positive endpoint, residual (ii), R1, Type I,
+and the quadratic-minmax-limit theorem remain OPEN.
+
+**15.718 PROVED a rigorous global reduction and complete Johnson-semigroup
+certificate for positive `p=7,z=7`, not boundary closure**: the exact parent
+affine-hull sieve reduces 4,320 pointed cases to 1,296 survivors.  Exact
+affine symmetry partitions them into 324 four-case representatives.  The
+same-catalog-row mod-3/mod-7 global join rigorously rejects 87
+representatives; 159 are necessary-only survivors and 78 are explicit budget
+skips.  Symmetry transfers those decisions to 348 pointed rejections, 636
+necessary survivors, and 312 skips, but no actual source boundary is
+subtracted.  Independently, the Johnson semigroup has 896 binary Hilbert
+generators in grades `1/2/3` with counts `56/168/672`; its exact uncapped
+layer counts for grades `0,...,8` are
+`1, 56, 1,764, 37,856, 575,407, 6,496,938, 57,232,105, 410,200,367,
+2,474,264,653`.  This closes high-catalog structure, not case feasibility.
+All 56 actual `z=7` line boundaries in two orbits and both projected
+profiles, the positive endpoint, residual (ii), R1, Type I, and the
+quadratic-minmax-limit theorem remain OPEN.
 
 **15.717 PROVED the positive `p=7` infinity-plus-seven `z=3` branch is
 CLOSED, not the endpoint**: ten exact boundary orbits give 400 corrected mean

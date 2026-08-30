@@ -1,0 +1,174 @@
+{
+  "actual_boundary_status": {
+    "positive_p7_infinity_plus_seven_closed": false,
+    "remaining_actual_line_boundaries": 56,
+    "remaining_actual_line_orbits": 2,
+    "remaining_projected_profiles": 2,
+    "top_level_gates_changed": false
+  },
+  "c_H": 1,
+  "experiment": "p7_infinity7_positive_z7_global_semigroup_summary",
+  "four_case_symmetry": {
+    "affine_maps": [
+      "u -> 8u",
+      "u -> 32u + 24"
+    ],
+    "all_four_augmented_compact_row_spaces_identical": true,
+    "artifact_path": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-30-p7-z7/global-join/p7_z7_symmetry_global.json",
+    "artifact_sha256": "0df450d3be1b6897d2bf5e7ae55473ad8c53facffdab86256745d37d5e49cdf3",
+    "canonical_rref_sha256_by_modulus": {
+      "3": "4896adb1116b115941a784a3ae3bf5310f2dc73125a70b4a65f5e9e422197ba4",
+      "5": "f4ec7f92643c521afe188f77d247b9ae2970d7d398e6e07ae1192a46b3c58810",
+      "7": "10c0a4c13efbd4573bd75c2f24225a907eddeccbdbed37aead5ebbd3c174d609",
+      "11": "5c9ed22d7a49521cb7323e0b707ce70dc319d4fceb49b745564b8f5b82d853f8"
+    },
+    "complete_four_case_classes": 324,
+    "direction_permutation": [
+      4,
+      7,
+      1,
+      0,
+      2,
+      3,
+      5,
+      6
+    ],
+    "leaf_permutation_sha256_int64": "cc5af4ca13a2d16713a2b84e98f693c9825e20d7dba5844c87c05207e0642bae",
+    "partial_four_case_classes": 0,
+    "row_space_ranks_by_modulus": {
+      "3": 120,
+      "5": 114,
+      "7": 135,
+      "11": 114
+    },
+    "script": "scripts/p7_infinity7_positive_z7_compact_symmetry_audit.py",
+    "script_sha256": "42ce41934612e0cde03338744975f470ec1c507816b1ee29dea000d19d73950c",
+    "survivor_classes_partition_all_1296_cases": true,
+    "transfer_preserves_exact_same_row_mod3_mod7_catalog_join": true
+  },
+  "global_catalog_join": {
+    "artifact_path": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-30-p7-z7/global-join/p7_z7_global_join_full_explicit.json",
+    "artifact_sha256": "5d3bb1a3385fe848932f3405032eb45501741afc8a3aef36d76b126f5859b93a",
+    "budget_skips_representatives": 78,
+    "case_results_sha256": "c34cc913c27910e3876e1b78aed0e9c8c2f42cb2f4368f95054bcd6ead1db7a7",
+    "execution_side_state_cap": 6000000,
+    "exact_global_join_processed_representatives": 246,
+    "high_catalogs_relaxed_to_exact_affine_hulls": true,
+    "necessary_only_survivors_representatives": 159,
+    "rejection_certificates_sha256": "03ef66e6b4529d05c0351762dd8a190eb9b400e3b050852fafa8f2ea16d0da78",
+    "rigorously_rejected_representatives": 87,
+    "same_catalog_row_index_used_mod3_mod7": true,
+    "script": "scripts/p7_infinity7_positive_z7_global_catalog_join.py",
+    "script_sha256": "86ca9a8055ba20f129f284b6e9001478880a56f20185b701c708000577f34bd8",
+    "selected_representatives": 324,
+    "signature_hash_collision_assumption_used": false,
+    "skipped_cases_sha256": "8adc451b2befc8be933f6a40f363b55661b26ead0932a45b65be7d989961b784",
+    "survivor_witnesses_sha256": "b52fbafed16a04514ce7d403d562e39d12fde0ac6ba31845caf3e20b8c8a8dd0",
+    "transferred_case_decisions_sha256": "7b045433541f00e6b866e443ccd23187906550bfe77c1985ee512ad04a41f210",
+    "transferred_counts": {
+      "processed": 984,
+      "rejected": 348,
+      "skipped": 312,
+      "surviving": 636
+    },
+    "zero_join_is_a_rigorous_rejection": true,
+    "z7_branch_excluded": false
+  },
+  "hostile_independent_audit": {
+    "all_324_balanced_partitions_reoptimized": true,
+    "exact_sign_convention_rechecked": true,
+    "false_negative_path_found": false,
+    "randomized_bruteforce_join_checks": 250,
+    "verdict": "PASS"
+  },
+  "johnson_semigroup": {
+    "audit_artifact_path": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-30-p7-z7/semigroup/p7_johnson_semigroup_hilbert_audit.json",
+    "audit_artifact_sha256": "09c9ffaeace3eab5fa3bcca99a78d2d63496c6a23bf7f1b5f162769395798a24",
+    "complete_degree_three_rows": 37856,
+    "complete_semigroup_layer_counts_through_grade_eight": {
+      "0": 1,
+      "1": 56,
+      "2": 1764,
+      "3": 37856,
+      "4": 575407,
+      "5": 6496938,
+      "6": 57232105,
+      "7": 410200367,
+      "8": 2474264653
+    },
+    "coordinate_cap_automatic_through_grade_six": true,
+    "generator_file_path": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-30-p7-z7/semigroup/p7_johnson_semigroup.gen",
+    "generator_file_sha256": "3b582d6a0e7c83cb8ed41a421e4950be2645ce2d3aa18dab17432628b787b789",
+    "generator_grade_histogram": {
+      "1": 56,
+      "2": 168,
+      "3": 672
+    },
+    "grade_eight_requires_explicit_coordinate_cap": true,
+    "hilbert_basis_rows": 896,
+    "hilbert_series_output_sha256": "92e8a4f648b9cc13395e392164dd0d7e7632e0027cd2954cf7915622a3e31bdf",
+    "input_sha256": "14b670086a068da3f07c3bc1fb6c8ece339ae9dd78a6b1e412219a286cf45a5f",
+    "M1764_decomposition": {
+      "decomposable_S_plus_S_rows": 1596,
+      "primitive_grade_two_rows": 168,
+      "union_equals_complete_M1764": true
+    },
+    "maximum_generator_coordinate": 1,
+    "maximum_primitive_generator_grade": 3,
+    "new_primitive_grade_three_rows": 672,
+    "required_high_grades": [
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "S56_equals_complete_grade_one_layer": true,
+    "script": "scripts/p7_infinity7_positive_z7_johnson_semigroup_normaliz.py",
+    "script_sha256": "465ecf21bfd586379959a292493e717453a81c672e8f40d61e381ab8fb4ed0c5"
+  },
+  "logical_semantics": {
+    "global_join_survivor_is_binary_edge_feasibility": false,
+    "global_join_survivor_is_exact_high_catalog_feasibility": false,
+    "no_actual_line_boundary_count_subtracted_here": true,
+    "positive_z7_closed": false,
+    "semigroup_generation_closes_high_catalog_structure_not_case_feasibility": true
+  },
+  "mod5_mod11_no_go": {
+    "all_159_candidate_projected_bases_zero_mod5_mod11": true,
+    "all_complete_catalog_contributions_zero_mod5_mod11": true,
+    "artifact_path": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-30-p7-z7/global-join/p7_z7_global_join_fourmod_smoke.json",
+    "artifact_sha256": "e59f5609a74ee84ed2e020003ee912ad72b930c36c8d63d98621eeb29e965bcd",
+    "candidate_cases_preflighted": 159,
+    "four_prime_dedup_equals_mod3_mod7_dedup": true,
+    "new_active_candidate_count": 0,
+    "new_rigorous_rejections": 0,
+    "script": "scripts/p7_infinity7_positive_z7_global_catalog_join_fourmod.py",
+    "script_sha256": "a3bbb8b7dcc47d5acf89da888e214a468053b3f77ae61e68f66b88ff9cbabd3d",
+    "zero_mean_exact_liftable_hull_rank_all_primes": 20
+  },
+  "p": 7,
+  "parent_affine_hull_sieve": {
+    "all_case_results_sha256": "3f65e57cf2f09bc4c674711e3bda3a46503c49169ca54aee4728de5619976aaf",
+    "artifact_path": "/mnt/storage/e1work/quadratic-minmax-limit-finite/2026-08-30-p7-z7/p7_inf7_z7_affine_hull_multimod_full.json",
+    "artifact_sha256": "fa1f1e52d24389a9863274cfa6d2b251a4b06e5e9f2b05e624a0b2587ec65f79",
+    "processed_pointed_branch_cases": 4320,
+    "rejected_pointed_branch_cases": 3024,
+    "script": "scripts/p7_infinity7_positive_z7_pointed_affine_hull_multimod.py",
+    "script_sha256": "0ae46bf3a0ad64975b7e0ac55aea562c9efcdee43828cb205e4e7cabd196d8b8",
+    "surviving_pointed_branch_cases": 1296,
+    "survivor_case_keys_sha256": "f756e0128e12c78ad7a17f85dd621e4e9ff00f0be80c06ac60a71f74045fc784"
+  },
+  "phase": 0,
+  "remaining_representative_attack_order": {
+    "cap_sensitive_grade_eight": 8,
+    "grade_three_only": 51,
+    "H0_S0_M7_calibration": 4,
+    "maximum_grade_five": 24,
+    "maximum_grade_four": 137,
+    "maximum_grade_six": 13,
+    "total": 237
+  },
+  "status": "complete_rigorous_partial_z7_reduction_and_semigroup_certificate",
+  "z": 7
+}
