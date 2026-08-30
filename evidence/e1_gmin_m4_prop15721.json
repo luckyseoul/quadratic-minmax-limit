@@ -1,0 +1,202 @@
+{
+  "prop": "15.721",
+  "title": "Signed PSL boundary normalization and transported floor",
+  "proved": true,
+  "theorem": "For every prime p>=17, a residual flip set at |H|=4p+1 has no odd-degree boundary of total size |D|<=p-1.",
+  "first_boundary_size_not_excluded": "p+1",
+  "proof_partition": {
+    "0": "15.632",
+    "2": "15.643 and 15.647 after transport",
+    "4": "15.652 after transport",
+    "6_to_p_minus_3": "15.669 after transport",
+    "p_minus_1": "15.674 after transport"
+  },
+  "dependencies": {
+    "empty_boundary_15_632": true,
+    "two_point_positive_p_ge_17_15_643": true,
+    "two_point_negative_p_ge_17_15_647": true,
+    "four_point_p_ge_11_15_652": true,
+    "infinity_plus_p_minus_2_both_phases_15_674": true
+  },
+  "transport": {
+    "proved": true,
+    "signed_PSL_automorphism": {
+      "proved": true,
+      "theorem": "g\u2208PSL acts as a signed automorphism of Paley C via D_x=\u03c7(cx+d): \u03c7(g(x)\u2212g(y))=\u03c7(x\u2212y)\u03c7(cx+d)\u03c7(cy+d).",
+      "depends_on": [
+        "mobius_difference_formula",
+        "chi_of_squares"
+      ]
+    },
+    "matrix_identity": "If M=D*P and D*P^T*C*P*D=C, then D*P^T*(C hadamard R_H)*P*D = C hadamard (P^T*R_H*P).",
+    "diagonal_signs_cancel_from_relative_mask": true,
+    "flip_set_size_preserved": true,
+    "odd_degree_boundary_is_permuted": true,
+    "Max_plus_and_Max_minus_shells_preserved": true,
+    "both_separation_inequalities_preserved": true,
+    "product_phase_may_change": true,
+    "phase_change_is_harmless_when_both_phases_are_excluded": true
+  },
+  "handshake_parity": {
+    "proved": true,
+    "statement": "Every finite graph has an even number of odd-degree vertices.",
+    "consequence": "After p-1, the next possible boundary size is p+1."
+  },
+  "old_ladder": {
+    "proved": true,
+    "symbolic_tail": "The first old shell is at most 3(p-1)/4+2<=p-3 for p>=17. The second is at most 3(p-1)/4+4<=p-3 for p>=29; p=17,19,23 are the explicit rows.",
+    "rows": {
+      "17": {
+        "first_old_shell": 14,
+        "second_old_shell": 16,
+        "first_transport_excluded": true,
+        "second_transport_excluded": true
+      },
+      "19": {
+        "first_old_shell": 14,
+        "second_old_shell": 16,
+        "first_transport_excluded": true,
+        "second_transport_excluded": true
+      },
+      "23": {
+        "first_old_shell": 18,
+        "second_old_shell": 20,
+        "first_transport_excluded": true,
+        "second_transport_excluded": true
+      },
+      "29": {
+        "first_old_shell": 22,
+        "second_old_shell": 24,
+        "first_transport_excluded": true,
+        "second_transport_excluded": true
+      },
+      "31": {
+        "first_old_shell": 24,
+        "second_old_shell": 26,
+        "first_transport_excluded": true,
+        "second_transport_excluded": true
+      },
+      "37": {
+        "first_old_shell": 28,
+        "second_old_shell": 30,
+        "first_transport_excluded": true,
+        "second_transport_excluded": true
+      },
+      "41": {
+        "first_old_shell": 32,
+        "second_old_shell": 34,
+        "first_transport_excluded": true,
+        "second_transport_excluded": true
+      },
+      "43": {
+        "first_old_shell": 32,
+        "second_old_shell": 34,
+        "first_transport_excluded": true,
+        "second_transport_excluded": true
+      },
+      "101": {
+        "first_old_shell": 76,
+        "second_old_shell": 78,
+        "first_transport_excluded": true,
+        "second_transport_excluded": true
+      }
+    },
+    "superseded_as_boundary_gates": "all all-finite shell closures among 15.675--15.712",
+    "not_superseded": [
+      "15.676 pair-deficit equality at total boundary p+1",
+      "15.690--15.691 optional spectral/free-energy no-go results",
+      "reusable internal finite-geometry and integral-lift lemmas"
+    ]
+  },
+  "sample_regressions": {
+    "17": {
+      "checked_even_sizes": [
+        0,
+        16
+      ],
+      "number_of_sizes_checked": 9,
+      "all_excluded": true,
+      "first_unexcluded_size": 18
+    },
+    "19": {
+      "checked_even_sizes": [
+        0,
+        18
+      ],
+      "number_of_sizes_checked": 10,
+      "all_excluded": true,
+      "first_unexcluded_size": 20
+    },
+    "23": {
+      "checked_even_sizes": [
+        0,
+        22
+      ],
+      "number_of_sizes_checked": 12,
+      "all_excluded": true,
+      "first_unexcluded_size": 24
+    },
+    "29": {
+      "checked_even_sizes": [
+        0,
+        28
+      ],
+      "number_of_sizes_checked": 15,
+      "all_excluded": true,
+      "first_unexcluded_size": 30
+    },
+    "31": {
+      "checked_even_sizes": [
+        0,
+        30
+      ],
+      "number_of_sizes_checked": 16,
+      "all_excluded": true,
+      "first_unexcluded_size": 32
+    },
+    "37": {
+      "checked_even_sizes": [
+        0,
+        36
+      ],
+      "number_of_sizes_checked": 19,
+      "all_excluded": true,
+      "first_unexcluded_size": 38
+    },
+    "41": {
+      "checked_even_sizes": [
+        0,
+        40
+      ],
+      "number_of_sizes_checked": 21,
+      "all_excluded": true,
+      "first_unexcluded_size": 42
+    },
+    "43": {
+      "checked_even_sizes": [
+        0,
+        42
+      ],
+      "number_of_sizes_checked": 22,
+      "all_excluded": true,
+      "first_unexcluded_size": 44
+    },
+    "101": {
+      "checked_even_sizes": [
+        0,
+        100
+      ],
+      "number_of_sizes_checked": 51,
+      "all_excluded": true,
+      "first_unexcluded_size": 102
+    }
+  },
+  "remaining": {
+    "general_p_ge_17": "total boundary p+1, normalized to infinity plus p; strict pair deficit remains after 15.676",
+    "small_primes": "p=5,7,11,13 remainders remain as previously recorded",
+    "residual_ii": false,
+    "type_I": false,
+    "limit_exists": false
+  },
+  "L_status": "OPEN"
+}

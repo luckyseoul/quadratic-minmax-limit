@@ -44,7 +44,10 @@ obligations remain (`GOAL.md`;
 two-level. Proposition 15.720 closes the required bi-tight levels 2 and 3
 directly, so the spectral floor, global QVAR, and principal R1 are no longer
 acceptance gates. Its bi-tight level-4 corollary does not close the one-sided
-tight level-4 branch of residual (ii). Lemma D existence / 2-plane is complete in `A3_PROOF.md`
+tight level-4 branch of residual (ii). At the `k=4p` residual endpoint,
+Proposition 15.721 excludes every boundary of total size at most `p-1` for
+`p>=17`; the first general shell is `p+1`, where strict pair deficit remains.
+Lemma D existence / 2-plane is complete in `A3_PROOF.md`
 and 15.276. Aut-Schur is **false**. Gsum unused.
 
 **Optional still open:** Path-C residual / \(16N\) (independent).
@@ -69,7 +72,7 @@ remaining `z=7` pointed systems and identify their projected high-catalog
 semigroups through grade six, but exclude no source boundary.  All 56 actual
 `z=7` line boundaries in two orbits remain open.
 
-The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-08-30; through Proposition 15.720).** \(L\) is OPEN. Details: `evidence/share/denseness_path_package.md` § Caveats.
+The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-08-30; through Proposition 15.721).** \(L\) is OPEN. Details: `evidence/share/denseness_path_package.md` § Caveats.
 
 > **Reader note.** Soft-close of \(L=\tfrac12\) via scheme-min Gsum was **retracted** 2026-08-06. Aut-Schur remains false. Historical “\(L\) OPEN” remarks in Props 15.20–15.171 refer to those older routes.
 
@@ -8762,3 +8765,104 @@ the multi-level Type-I bad case and non-Walsh residual (ii). \(\square\)
 Evidence: `src/e1_gmin_m4_prop15720.py`,
 `tests/test_prop15720.py`, and
 `evidence/NOTE_2026-08-30_bitight_degree_congruence.md`.
+
+## Proposition 15.721 — signed boundary transport collapses the all-finite ladder
+
+Let \(R_H\) be the symmetric \(\{\pm1\}\)-mask which is \(-1\) on the
+edges of a residual flip set \(H\), so that the switched matrix is
+\(C\circ R_H\). Proposition 15.267 gives, for every
+\(g\in\operatorname{PSL}(2,p^2)\), a permutation matrix \(P\) and a
+diagonal sign matrix \(D_g\) satisfying
+
+\[
+ D_gP^TCPD_g=C.                                      \tag{15.721.1}
+\]
+
+Signed conjugation therefore acts on the relative flip mask by permutation
+alone:
+
+\[
+\begin{aligned}
+D_gP^T(C\circ R_H)PD_g
+  &=(D_gP^TCPD_g)\circ(P^TR_HP)\\
+  &=C\circ(P^TR_HP).                                \tag{15.721.2}
+\end{aligned}
+\]
+
+In particular, it preserves \(|H|\), bijects both Boolean eigenshells,
+preserves the two margin-three separation inequalities, and sends the
+odd-degree boundary \(D=\partial H\) to its image under the vertex
+permutation. The Paley edge-product phase may change, but no exact formula
+for that change is needed below because every imported exclusion holds in
+both phases.
+
+Choose any \(v\in D\). The fractional linear map
+
+\[
+ g_v(z)={1\over z-v},\qquad
+ \begin{pmatrix}0&1\\1&-v\end{pmatrix},             \tag{15.721.3}
+\]
+
+sends \(v\) to infinity and has determinant \(-1\). Since
+\(q=p^2\equiv1\pmod4\),
+
+\[
+ \chi_q(-1)=(-1)^{(q-1)/2}=1,                       \tag{15.721.4}
+\]
+
+so the projective class of (15.721.3) lies in
+\(\operatorname{PSL}(2,q)\). Thus every nonempty residual boundary may be
+normalized to contain infinity before any affine direction profile is
+analyzed.
+
+Now assume \(p\ge17\), and put \(d=|D|\). The handshake lemma makes \(d\)
+even. If
+
+\[
+ 6\le d\le p-3,
+\]
+
+transport one point of \(D\) to infinity. The transformed boundary consists
+of infinity and the odd number \(s=d-1\) of finite points, where
+
+\[
+ 5\le s\le p-4.
+\]
+
+This is exactly the complete infinity-present range excluded in both phases
+by Proposition 15.669. If \(d=p-1\), the same transport gives infinity plus
+\(p-2\) finite points, the complete two-phase shell excluded by Proposition
+15.674. The cases \(d=0,2,4\) were already excluded by Propositions 15.632,
+15.643/15.647, and 15.652, respectively. Consequently
+
+\[
+ \boxed{
+ \text{for every prime }p\ge17,
+ \quad |\partial H|\le p-1\quad\Longrightarrow\quad H
+ \text{ is not residual-compatible}.}              \tag{15.721.5}
+\]
+
+Because boundary size is even, the first size not excluded by (15.721.5) is
+
+\[
+ \boxed{|D|=p+1.}                                    \tag{15.721.6}
+\]
+
+This is a lower floor, not an existence assertion. After normalization it is
+the infinity-plus-\(p\) shell. Proposition 15.676 excludes its pair-deficit
+equality branch; strict pair deficit remains open.
+
+The boundary-close role of the all-finite ladder in Propositions
+15.675--15.712 is therefore redundant. More precisely, the first old shell
+is at most \(3(p-1)/4+2\le p-3\) for \(p\ge17\). The second is at most
+\(3(p-1)/4+4\le p-3\) for \(p\ge29\); the exceptional pairs are
+\((p,d)=(17,14),(17,16),(19,14),(19,16),(23,18),(23,20)\), all covered by
+(15.721.5). This does not invalidate their internal finite-geometry or
+integral-lift lemmas. Proposition 15.676 remains load-bearing at the new
+first shell, and Propositions 15.690--15.691 remain independent optional
+no-go results. Small-prime remainders, strict deficit at \(|D|=p+1\),
+residual (ii), multi-level Type I, and the limit remain open. \(\square\)
+
+Evidence: `src/e1_gmin_m4_prop15721.py`,
+`tests/test_prop15721.py`, and
+`evidence/e1_gmin_m4_prop15721.json`.

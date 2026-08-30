@@ -1,4 +1,18 @@
-# Status (2026-08-30; through Proposition 15.720)
+# Status (2026-08-30; through Proposition 15.721)
+
+**15.721 PROVES the first possible general odd-degree boundary at the
+`k=4p` residual endpoint has total size `p+1` for every prime `p>=17`.**
+The signed PSL automorphism from 15.267 merely permutes a relative Paley flip
+mask. Since `z -> 1/(z-v)` lies in PSL over `F_(p^2)`, any selected boundary
+point can be moved to infinity without changing `|H|` or either shell
+separation inequality. Proposition 15.669 then excludes every total boundary
+size `6<=|D|<=p-3`, and 15.674 excludes `|D|=p-1`; the prior `0/2/4`
+closures finish all `|D|<=p-1`. Handshake parity makes `p+1` next. This
+supersedes the first/second all-finite profile campaigns in 15.675--15.712 as
+active boundary gates, including the former open `p=23` ledger. Their
+internal lemmas remain valid. At `|D|=p+1`, 15.676 closes pair-deficit
+equality and strict deficit remains. The small-prime remainders, even
+`k>4p`, residual (ii), Type I, and `L` remain OPEN.
 
 **15.720 PROVES the required level-2 and level-3 bi-tight alternatives are
 empty for every prime `p>=5`.** The proof uses
@@ -10,8 +24,8 @@ remaining theorem gates are multi-level Type I and non-Walsh residual (ii),
 so `L` remains OPEN. The same congruence excludes bi-tight level 4, but not
 one-sided tightness. Such covers actually exist (15.402); the known
 four-parallel-line family is harmless because 15.272/15.588 supplies a
-Max+ score at most zero. What remains inside residual (ii) is only a
-one-sided level-4 cover compatible with the additional condition `s_+=2`.
+Max+ score at most zero. The level-4 issue left by 15.720 is specifically a
+one-sided tight cover compatible with the additional condition `s_+=2`.
 
 **15.719 PROVED exact finite projected-semigroup stabilization for the
 positive `p=7,z=7` high catalogs, not boundary closure**: the Hilbert basis

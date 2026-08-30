@@ -1,14 +1,15 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-30 (through 15.720; both `p=19,s=16` and `p=17,s=16`
-are closed; required bi-tight levels 2 and 3 are closed)
+**Date:** 2026-08-30 (through 15.721; required bi-tight levels 2 and 3 are
+closed, and signed boundary transport supersedes the all-finite endpoint
+ladder as an active gate)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
 **Mandatory preflight:** read
 `evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md` before launching another
 solver, projection, shell, channel, orbit, or timeout. It accounts for every
-assigned proposition through 15.719 and maps current untracked scripts to
+assigned proposition through 15.721 and maps current untracked scripts to
 closed, dead, necessary-only, or live routes.
 
 **Corrected gate:** the required bi-tight levels 2 and 3 are TRUE by 15.720.
@@ -41,6 +42,34 @@ excluding any of its 56 actual line boundaries in two orbits. The positive
 `z=7` remainder stays open. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.721 — signed boundary transport; first general shell is p+1
+
+This is the correction that prevents another all-finite profile campaign.
+For a residual flip set `H`, write its switched matrix as `C hadamard R_H`.
+If `D_g P^T C P D_g=C` is the signed PSL automorphism from 15.267, then
+
+`D_g P^T(C hadamard R_H)P D_g = C hadamard(P^T R_H P)`.
+
+The switching signs cancel from the relative mask. Thus `|H|`, both shell
+separation inequalities, and the boundary size are preserved, while the
+odd-degree boundary is only permuted. For any boundary point `v`, the map
+`z -> 1/(z-v)` has determinant `-1`, which is a square in `F_(p^2)`, so it
+lies in PSL and sends `v` to infinity.
+
+For every prime `p>=17`, transport converts a total boundary
+`6<=|D|<=p-3` into infinity plus `5..p-4` finite points, closed in both
+phases by 15.669. Total size `p-1` converts into infinity plus `p-2`, closed
+by 15.674. With the prior `0/2/4` closures, every `|D|<=p-1` is impossible.
+Handshake parity makes `|D|=p+1` the first unexcluded size. In normalized
+form this is infinity plus `p`; 15.676 closes pair-deficit equality and
+strict deficit remains.
+
+Therefore all first/second all-finite boundary campaigns in 15.675--15.712,
+including the former open `p=23` profile ledger, are superseded as active
+gates. Their internal lemmas and certificates remain valid. Do not rerun or
+extend those profile lists. Proposition 15.676 remains load-bearing, and the
+small-prime `p=7,z=7` remainder is unaffected.
 
 ## 15.720 — degree-congruence close of required bi-tight levels
 

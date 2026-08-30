@@ -23,7 +23,7 @@ banned by test (`tests/test_main_chain_docs.py`).
 
 **Main claim:** L = lim_n α_n is **OPEN** (2026-08-30).
 
-### Current audit (2026-08-30; through Proposition 15.720)
+### Current audit (2026-08-30; through Proposition 15.721)
 
 - **Required asymptotic target.** It is enough to prove the Paley-tail deficit
   \(\Phi(C_p)-m_{p^2+1}=o(p^3)\) on a ratio-dense tail. The current all-prime,
@@ -47,12 +47,25 @@ banned by test (`tests/test_main_chain_docs.py`).
   most zero by 15.272/15.588 and is outside residual; joint compatibility is
   the remaining question. Global QVAR,
   principal R1, and the spectral floor are no longer acceptance gates.
-- **Non-Walsh endpoint at `p=19`.** Propositions 15.693--15.699 give an exact
+- **Boundary-normalization correction.** Proposition 15.721 applies the
+  signed PSL automorphism already proved in 15.267 before doing affine
+  boundary profiles. Any nonempty odd-degree boundary can be moved to contain
+  infinity without changing the residual problem. Therefore, for every prime
+  `p>=17`, 15.669 excludes every total boundary size `6<=|D|<=p-3` and
+  15.674 excludes `|D|=p-1`; with the old `0/2/4` closures, the first
+  unresolved general shell is `|D|=p+1`. The first/second all-finite endpoint
+  campaigns in 15.675--15.712 were redundant as boundary gates. Their
+  internal lemmas remain valid; 15.676 still excludes pair-deficit equality
+  at `|D|=p+1`, leaving strict deficit.
+- **Historical endpoint certificate at `p=19`.** Propositions 15.693--15.699
+  give an exact
   binary affine-Radon reduction, eliminate the slack-16 and slack-20 rows, and
   close the slack-24, -28, and -32 rows. The final native-XOR certificates were
   completed independently on nuka, jellyfin, and soulkiller ECC; the complete
-  `p=19` endpoint is closed.
-- **Non-Walsh endpoint at `p=17`.** Propositions 15.700--15.712 close the exact
+  `p=19` endpoint is closed. Proposition 15.721 now subsumes this boundary
+  exclusion by signed transport.
+- **Historical endpoint certificate at `p=17`.** Propositions 15.700--15.712
+  close the exact
   1,575-profile ledger. Proposition 15.706 excludes both former
   slack-zero profiles by a solver-free global Paley-sign identity, and 15.707
   combines its quotient extension with the existing arc classifications to
@@ -66,7 +79,8 @@ banned by test (`tests/test_main_chain_docs.py`).
   phase-one fibre-capacity contradiction.
   Proposition 15.712 observes that the nine phase-one `b=16` directions are
   undetermined by the sixteen-point boundary; Szőnyi's direction theorem
-  forces collinearity, whose unique profile is absent. The endpoint is closed.
+  forces collinearity, whose unique profile is absent. The endpoint is closed;
+  Proposition 15.721 now subsumes this boundary exclusion as well.
 - **Positive `p=7` infinity-plus-seven `z=7` remainder.** Propositions
   15.713--15.717 close `z=0,1,2,3`. Proposition 15.718 then reduces the 4,320
   pointed `z=7` cases to 1,296 affine survivors and 324 four-case
@@ -121,7 +135,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | required bi-tight levels 2 and 3 | `bitight_levels_2_3` | **TRUE** — 15.720 degree congruence; bi-tight level 4 is a corollary, while generic one-sided covers exist and only joint residual compatibility remains open |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, 15.684--15.687 cut `p=23` to 133 exact residue-zero profiles, 15.688--15.699 close the `p=19` endpoint, and 15.700--15.712 close the `p=17` endpoint; 15.713--15.717 close all actual positive `p=7` infinity-plus-seven branches with `z=0,1,2,3`; 15.718--15.719 rigorously reduce and structurally identify projected `z=7` catalog supports without subtracting any actual boundary, so all 56 line boundaries in two `z=7` orbits and two projected profiles remain; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the `p=23` next-boundary endpoint, later all-finite sizes, and `p=7` infinity-plus-seven remain |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh is closed, as are boundaries of size `0/2/4/6`, finite `p=7` size eight, and finite `p=11` size eight. For every `p>=17`, 15.721 uses signed transport plus 15.669/15.674 to exclude every `|D|<=p-1`; this supersedes the old all-finite endpoint ladder. The first general shell is `|D|=p+1`, normalized to infinity plus `p`; 15.676 closes pair-deficit equality and strict deficit remains. The separate small-prime remainder includes the 56 positive `p=7,z=7` line boundaries left by 15.713--15.719. |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -589,9 +603,8 @@ graph TD
     RANGE --> SMALLRANGE["p=11 infinity+7;<br/>p=13 finite 8 / infinity+7,+9<br/><b>CLOSED</b> (15.669)"]
     SMALLRANGE --> P11EIGHT["p=11 finite size eight<br/>exact normalized census <b>CLOSED</b> (15.670)"]
     RANGE --> ENDPOINT["infinity + (p-2), every odd-fibre profile<br/>both signs <b>CLOSED for p>=17</b> (15.671--15.674)"]
-    RANGE --> FIRSTHALF["first all-finite s above 3(p-1)/4<br/><b>CLOSED for every prime p>=17</b> (15.675, 15.677, 15.678)"]
-    FIRSTHALF --> SECONDFINITE["next all-finite even s<br/><b>CLOSED for p>=43 and p=41,37,31,29,19,17</b>;<br/>p=23 reduced to 133 profiles;<br/>p=23 OPEN (15.679--15.712)"]
-    RANGE --> PARC["infinity + p, pair-deficit equality / p-arcs<br/>both signs <b>CLOSED for p>=17</b> (15.676)"]
+    ENDPOINT --> TRANSPORT["signed PSL boundary normalization<br/>every total |D|<=p-1 <b>CLOSED for p>=17</b> (15.721)"]
+    TRANSPORT --> PARC["first general shell |D|=p+1 = infinity+p<br/>pair-deficit equality <b>CLOSED</b>; strict deficit <b>OPEN</b> (15.676)"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -603,8 +616,7 @@ graph TD
     style EIGHTINF fill:#fff4e6
     style P11EIGHT fill:#e6ffe6
     style ENDPOINT fill:#e6ffe6
-    style SECONDFINITE fill:#fff4e6
-    style FIRSTHALF fill:#e6ffe6
+    style TRANSPORT fill:#e6ffe6
     style WALSH fill:#e6ffe6
     style MULTI fill:#fff4e6
     style BUDGET fill:#e6ffe6
@@ -716,6 +728,10 @@ The post-Walsh attack exposed a precise lattice behind R1. Let
 `L = ker_Z(C−pI)`, let `P=(I+C/p)/2`, and let `A` be generated by the
 square-direction affine-circle words.
 
+The `boundary` column records each proposition's scope when introduced.
+Proposition 15.721 supersedes the active all-finite shell statuses in
+15.675--15.712; their rows remain as a historical proof ledger.
+
 | proposition | proved result | boundary |
 |---|---|---|
 | 15.629 | the profile glue gives `[L:A]=p^((m−1)(m−2)/2)`, `det(L)=2p^(m²)`, `L*=P Z^n`, discriminant `Z/2 ⊕ (Z/p)^(m²)`, and level `4p` | identifies the exact lattice; no R1 bound |
@@ -809,6 +825,7 @@ square-direction affine-circle words.
 | 15.718 | the exact parent affine-hull sieve sends 4,320 pointed `z=7` cases to 1,296 survivors, exact affine symmetry partitions them into 324 four-case classes, and a same-row mod-3/mod-7 global join rigorously rejects 87 representatives; independently, the Johnson semigroup has a complete 896-row binary Hilbert basis with grade histogram `56/168/672` and exact uncapped grade-0--8 layers `1; 56; 1,764; 37,856; 575,407; 6,496,938; 57,232,105; 410,200,367; 2,474,264,653` | transfers 87 representative rejections to 348 pointed cases, but subtracts no actual boundary: 159 necessary-only survivors and 78 budget skips remain, and all 56 actual `z=7` line boundaries in two orbits stay open |
 | 15.719 | four consecutive equal projected layers for a semigroup with maximum generator grade three imply permanent finite-group stabilization; the exact `k=3` and `k=4` raw and anchor-relative supports stabilize on grades 3--6 as generated subgroups | identifies every required grade-3--6 high-catalog projection exactly because the Hilbert generators are binary; grade eight is only an outer support, so all 56 `z=7` boundaries and the theorem remain open |
 | 15.720 | a centered bi-tight indicator lies in `scheme+cross`, and commuting projection forces `d_i+d_j = 2ps mod (p^2-1)/2`; common degree residues contradict the handshake identity at required levels 2 and 3 (and bi-tight level 4 as a corollary) | retracts the invalid 15.55/15.167 spectral arrow and closes the required bi-tight levels for every `p>=5`; it does not close one-sided tight level 4 in residual (ii), and the spectral floor/QVAR/R1 front is no longer an acceptance gate |
+| 15.721 | a signed PSL conjugation permutes the relative flip mask, and `z -> 1/(z-v)` sends any chosen boundary point to infinity because `-1` is a square in `F_(p^2)` | combines 15.669 and 15.674 to exclude every total boundary size `|D|<=p-1` for `p>=17`; the first general shell is `|D|=p+1`, where 15.676 leaves strict pair deficit open; the former all-finite ladder is superseded as a gate |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -990,35 +1007,21 @@ floor-plus-pair profiles survive this relaxation. Proposition 15.670 then
 uses exact affine incidence to close every finite `p=11` size-eight boundary.
 Propositions 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for
 both signs from `p=17`, including all intermediate odd-fibre profiles.
-Proposition 15.676 closes the pair-deficit-equality, hence `p`-arc/conic,
-branch of the next infinity-plus-`p` shell. Residual (ii) remains open and
-the next step must control strict pair deficit there or the all-finite
-large-boundary range.
-At the first all-finite size beyond 15.669, Proposition 15.675 improves this:
-same-type quantization closes the `p=3,5 mod 8` classes with exact positive
-gaps `(p+1)/2,(p-1)/2`. Proposition 15.677 closes the remaining two classes
-from `p=23` by forcing a zero-quotient nonzero lift whose exact mass cost
-exceeds its mean. Therefore the first survivor is closed for every prime
-`p>=19`. Proposition 15.678 closes the exceptional `p=17` residue-zero
-endpoint through the exact two-profile arc reduction and the unique 16-arc
-class in `PG(2,17)`. Proposition 15.679 closes the next size for every prime
-`p>=43`, and Proposition 15.680 closes its `p=37` endpoint by the exact
-mass-ten/paired-cube argument. Proposition 15.681 strengthens the cube
-argument for integral lifts and closes `p=29` by the classified
-`PG(2,29)` arc extension. Proposition 15.682 closes `p=31` by an exact
-fourteen-profile ledger and Coolsaet's complete-arc classification in
-`PG(2,31)`. Proposition 15.683 then closes `p=41` by factoring eight
-high-tangent direction pencils twice from Segre's tangent envelope.
-Proposition 15.684 removes every positive `p=23` residue, enumerates 1,247
-residue-zero profiles, and excludes 1,044 by the tangent envelope and the
-complete-arc/conic-core argument. Proposition 15.685 then excludes the
-unique slack-12 row by exhausting the five complete-17-arc secant-index
-histograms. Its remaining 202 profiles, the `p=17,19` endpoints, and every
-subsequent size remain open. Proposition 15.686 similarly excludes the
-unique slack-16 row using its undetermined direction and four-point repair;
-the remaining 201 profiles all have slack at least 20. Proposition 15.687
-then excludes that entire 68-profile block by conic-core extension and the
-same complete-17-arc certificate, leaving 133 profiles of slack at least 24.
+Proposition 15.721 now applies signed PSL transport first. It moves any
+nonempty boundary point to infinity while merely permuting the relative flip
+set. Thus 15.669 excludes every total size `6<=|D|<=p-3`, and 15.674
+excludes `|D|=p-1`, for every `p>=17`. Together with the `0/2/4` cases,
+the first general shell is `|D|=p+1`, normalized to infinity plus `p` finite
+points. Proposition 15.676 closes its pair-deficit-equality (`p`-arc/conic)
+branch; strict pair deficit remains.
+
+Historically, Propositions 15.675--15.712 built exact first/second
+all-finite shell closures, including the `p=17/19` endpoints and a reduction
+of `p=23` to 133 profiles. Proposition 15.721 shows those shell campaigns
+were not needed as boundary gates: every one lies at total size at most
+`p-1`. Their finite-geometry, integral-lift, and solver certificates remain
+valid historical results and reusable lemmas, but none of those old profile
+lists is an active residual target.
 
 ### Route kills — do not re-tread
 
@@ -1055,26 +1058,20 @@ unidentified glue-class phase, unknown broad mass, or classified low shell.
 
 ### What is left
 
-1. **Spectral floor:** prove global mixed-`k` QVAR and the principal R1
-   bound `‖δ‖² ≤ n(λ̄−6)²/48` (the simpler `n/12` bound is sufficient).
-   At `p=11`, the ordinary, scalar quartic-trace, and three broad-channel theta
-   forms are known exactly through exponent 800; the independent full census
-   proves strong R1 there, while both conserved-mass relaxations are
-   insufficient. The next concrete attack is a character-resolved
-   Mellin/Parseval or finer PSL-twisted transport inequality uniform in `p`.
-2. **Non-Walsh multi-level Max−:** close residual (ii) for even `k≥4p`.
-   Walsh/W1/W2 and the Eulerian-boundary branch are done. Propositions
-   15.662--15.666 close every finite `p=7` size-eight boundary for both
-   signs. Proposition 15.669 closes the uniform middle ranges and several
-   small-prime extensions; 15.670 additionally closes every finite `p=11`
-   size-eight boundary. What remains in this relaxation is now explicit:
-   positive `p=7` infinity-plus-seven `z=7`; the strict-deficit
-   infinity-plus-`p` branch left by 15.676; the 133 exact residue-zero
-   `p=23` next-boundary profiles left by 15.684--15.687; and later
-   all-finite sizes beyond the `p=17/19` endpoints closed by 15.693--15.712.
-   These floor-plus-pair survivors are not known graphs. The full 5+-level
-   branch and the related Type-I `3A+B>0` gate remain open, although strong
-   R1 would imply the latter.
+1. **Non-Walsh multi-level Max−:** close residual (ii) for even `k≥4p`.
+   At the endpoint `k=4p`, Proposition 15.721 excludes every boundary of
+   size at most `p-1` for `p>=17`. The first general shell is `|D|=p+1`;
+   after normalization it is infinity plus `p`, and only strict pair deficit
+   survives Proposition 15.676. The separate small-prime remainder includes
+   the 56 positive `p=7,z=7` line boundaries. Even `k>4p` still requires the
+   full multi-level argument; 15.721 is not a claim about those larger edge
+   counts.
+2. **Type I, multi-level Max−:** prove the general `3A+B>0` bad-case
+   inequality or otherwise establish no descent.
+
+The spectral floor, global mixed-`k` QVAR, and principal R1 remain worthwhile
+optional problems, but Proposition 15.720 removed them from the acceptance
+chain. They are not a third active gate.
 
 Lemma D is complete and is no longer on the work list.
 
@@ -1151,6 +1148,8 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15717.py` | Complete same-tuple mod-seven/mod-three exclusion of positive p7 infinity-plus-seven with three undetermined directions |
 | `src/e1_gmin_m4_prop15718.py` | Exact positive-`z=7` affine sieve, four-case symmetry, global catalog-join reduction, and Johnson-semigroup Hilbert certificate |
 | `src/e1_gmin_m4_prop15719.py` | Exact finite projected-semigroup stabilization and subgroup certificate through grade six |
+| `src/e1_gmin_m4_prop15720.py` | Solver-free degree-congruence obstruction excluding the required bi-tight levels 2 and 3 |
+| `src/e1_gmin_m4_prop15721.py` | Signed PSL boundary transport proving the residual endpoint floor `|D|>=p+1` for `p>=17` |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |

@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-30
 
-**Scope:** every assigned proposition through Proposition 15.719, the live
+**Scope:** every assigned proposition through Proposition 15.721, the live
 predicate wiring, and the current untracked attack scripts
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
@@ -51,6 +51,20 @@ run from the existing eigenshell caches remains infeasible at both `p=5` and
 not evidence for them.  These runs do not create a general route and must not
 be extended to another prime.
 
+A fourth semantic check found the main source of the all-finite residual
+duplication. Proposition 15.267's signed PSL action can move any selected
+odd-boundary vertex to infinity while preserving the relative flip set up to
+permutation, its size, and both shell-separation inequalities. Applying that
+normalization before the existing infinity-present theorems gives Proposition
+15.721: for every prime `p>=17`, 15.669 excludes every total boundary size
+`6<=|D|<=p-3`, and 15.674 excludes `|D|=p-1`. Together with the old
+`0/2/4` closures, every `|D|<=p-1` is impossible. The first unresolved
+general shell is `|D|=p+1`, normalized to infinity plus `p` finite points.
+Accordingly, the boundary-close role of the first/second all-finite campaigns
+in 15.675--15.712 was redundant. Their internal lemmas remain available;
+15.676 is still load-bearing on pair-deficit equality at `|D|=p+1`, and
+15.690--15.691 are independent optional no-go results.
+
 1. The final 300-second positive-`p=7,z=7` CP-SAT run repeated an existing
    exact full-torsion model for the same case.  Only the timeout changed.
 2. Several long proposition blocks are different coordinates for the same
@@ -72,23 +86,23 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 634 source-backed proposition modules from 15.83 through 15.719.
+- There are 636 source-backed proposition modules from 15.83 through 15.721.
 - The labels 15.537, 15.583, and 15.584 have no proposition module.  They are
   unassigned labels, not unreviewed propositions; later source headers mention
   those numbers only as historical range/state markers.
-- Therefore every assigned proposition through 15.719 was included in this
+- Therefore every assigned proposition through 15.721 was included in this
   audit.  The grouped ledger below is by shared mathematical route rather than
-  a 716-row restatement of the writeup.
+  a 718-row restatement of the writeup.
 
 ## Authoritative acceptance chain
 
 The public theorem is gated by `four_e1_units_closed()`, not by the legacy
 `e1_closed_general()` value.
 
-| unit | exact live content | status after 15.720 |
+| unit | exact live content | status after 15.721 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
-| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** |
+| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — for `p>=17`, 15.721 moves the general boundary floor to `|D|=p+1`; only strict pair deficit survives there after 15.676 |
 | Type I | the multi-level `3A+B>0` bad case | **OPEN** |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
@@ -115,8 +129,9 @@ top-level front.
 | **15.561--15.589** | final class-function no-gos, exact profile classification, and the QVAR decomposition | 15.589 closes QVAR only for `k=1,...,6`. Per-stratum `k>=7` is false and is **not** the leftover. GLOBAL QVAR is now optional. Separately, 15.585 A relied on one-sided level-4 tight emptiness and is retracted; only its `{2,4,6}` mass calculation survives. |
 | **15.590--15.628** | degree-four SoS countermechanism, exact R1/`delta` hierarchy, Walsh/W1/W2 investigation | Degree-four SoS cannot force Type I (15.590).  Character/PSD-only and fixed-channel R1 routes are insufficient.  **15.628 closes Walsh, W1, and W2 for all odd primes**, but explicitly leaves the non-Walsh 5+-level/even-`k>=4p` branch. |
 | **15.629--15.668** | complete low R1 shells, modular-data no-go, nonlinear shell positivity, finite boundary closures, and exact `p=11` theta/channel work | Strong R1 is true at `p=11` by full census.  Scalar trace and broad square-circle conserved-mass cones through exponent 800 still admit sub-six targets and cannot prove general R1.  Props. 15.643--15.666 close the two-point, size-four, size-six, and finite `p=7` size-eight residual branches; rerunning their old solvers is duplication. |
-| **15.669--15.712** | uniform residual ranges and exact endpoint closures | Props. 15.693--15.699 close the `p=19` endpoint; 15.700--15.712 close the `p=17` endpoint.  Remaining scope includes strict infinity-plus-`p`, the `p=23` next-boundary endpoint, later all-finite sizes, and the `p=7` infinity-plus-seven remainder.  Do not regenerate the closed `p=17/19` rows. |
+| **15.669--15.712** | uniform residual ranges, infinity-plus-`(p-2)`, all-finite endpoint campaigns, and optional no-gos | After 15.721, the all-finite boundary-close role of 15.675--15.712 is superseded by signed transport into 15.669/15.674. Do not regenerate any first/second all-finite rows, including the former open `p=23` ledger. 15.676 remains load-bearing at total boundary `p+1`; 15.690--15.691 and reusable internal lemmas retain their independent content. |
 | **15.713--15.719** | positive `p=7` infinity-plus-seven reductions | 15.713--15.717 close `z=0,1,2,3`.  15.718--15.719 identify and stabilize projected `z=7` semigroup supports but remove no source boundary.  All 56 actual `z=7` line boundaries remain open, and the semigroup/quotient route is terminated. |
+| **15.720--15.721** | degree-congruence bi-tight close; signed boundary normalization | 15.720 closes the required bi-tight levels. 15.721 proves `|D|>=p+1` for every residual candidate at `p>=17` and identifies strict deficit in the normalized infinity-plus-`p` shell as the first general residual branch. Neither closes Type I or residual (ii). |
 
 ## Exact duplicated run
 
@@ -170,6 +185,8 @@ is a current E(1) gate.
 - Walsh/W1/W2 search after 15.628;
 - size-four, size-six, finite `p=7` size-eight, `p=17`, or `p=19` solver
   reruns after their exact closures;
+- any all-finite first/second-shell profile work from 15.675--15.712:
+  15.721 transports those sizes into the already-closed infinity ranges;
 - treating a projected/parity/semigroup survivor as a feasible graph;
 - trying to reach the general residual with an `L2` bound on `delta`
   (15.595 proves the scale loses from `p>=11`).
@@ -194,7 +211,7 @@ are retained as history/data but are removed from the active attack queue.
 | `scripts/p5_*size_four*`, `scripts/residual_size_four_*` | size-four branch closed by 15.652--15.656 |
 | `scripts/p5_*size_six*`, `scripts/p7_size6_*`, `scripts/residual_boundary_size_six_*` | size-six branches closed by 15.657--15.661 |
 | finite `p=7` size-eight/fixed-boundary scripts | finite branch closed by 15.662--15.666 |
-| `scripts/p17_*` and old `p19` endpoint diagnostics | endpoints closed by 15.699 and 15.712 |
+| `scripts/p17_*`, old `p19`, and `p23` all-finite endpoint diagnostics | superseded as boundary gates by 15.721 signed transport; retain only as historical certificates or reusable finite-geometry work |
 | `scripts/r1_p11_*`, broad theta/channel scripts | useful finite data, but the aggregate cones are certified insufficient and `p=11` itself is already R1-positive |
 | `scripts/p7_infinity7_positive_z7_*` and matching `/tmp` artifacts | terminal semigroup/quotient campaign; not active |
 | generic `residual_boundary_*` parity/projected models | necessary-condition diagnostics only; infeasibility can close a specified finite branch, feasibility cannot close or witness the graph problem |
@@ -246,11 +263,13 @@ Before spending mesh/GPU time:
 
 1. state which one of the two live fronts the attack can close;
 2. name the exact proposition whose limitation it overcomes;
-3. search tracked files, untracked scripts, `/tmp` artifact names and hashes,
+3. for a nonempty residual boundary, first use signed PSL transport to put a
+   boundary point at infinity; do not open an all-finite profile campaign;
+4. search tracked files, untracked scripts, `/tmp` artifact names and hashes,
    git history, GitHub, MathOverflow, literature notes, and OEIS when number
    patterns are involved;
-4. write the acceptance condition before launching;
-5. stop after the declared gate if the result is only `UNKNOWN`, a necessary
+5. write the acceptance condition before launching;
+6. stop after the declared gate if the result is only `UNKNOWN`, a necessary
    survivor, a finite-prime fit, or another equivalent relaxation.
 
 This preflight is the replacement for extending a finished line with one

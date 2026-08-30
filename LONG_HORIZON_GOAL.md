@@ -46,20 +46,15 @@ acceptance gate is the corrected dictionary returned by
    ranges and exact small-prime profiles, and 15.670 closes finite `p=11`
    size eight. Propositions 15.671--15.674 close the entire
    infinity-plus-`(p-2)` shell for both signs from `p=17`, including every
-   intermediate odd-fibre profile. Propositions 15.675, 15.677, and 15.678
-   close the first all-finite survivor above `3(p-1)/4` for every prime
-   `p>=17`. Proposition 15.679 closes the next all-finite size for every
-   prime `p>=43`; Proposition 15.680 closes its `p=37` endpoint, 15.681
-   closes `p=29`, 15.682 closes `p=31`, and 15.683 closes `p=41` by a
-   tangent-envelope argument. Proposition 15.684 removes every positive
-   residue at `p=23` and cuts its exact residue-zero ledger from 1,247
-   profiles to 203; Proposition 15.685 removes its unique slack-12 row,
-   and 15.686 removes its unique slack-16 row. Exactly 201 profiles, all of
-   slack at least 20, remain; 15.687 removes all 68 slack-20 rows, leaving
-   133 profiles of slack at least 24 without closing it. The three smaller endpoints
-   `p=17,19,23`,
-   the strict-deficit part of the infinity-plus-`p` shell, larger all-finite
-   profiles, and full graph constraints remain open.
+   intermediate odd-fibre profile. Proposition 15.721 then applies signed
+   PSL transport before profile analysis: every nonempty boundary can be
+   moved to contain infinity, so all total sizes `|D|<=p-1` are excluded for
+   `p>=17`. This supersedes the first/second all-finite endpoint campaigns in
+   15.675--15.712 as active gates, including the former 133-profile `p=23`
+   remainder. Their internal lemmas remain valid. The first general endpoint
+   shell is `|D|=p+1`, normalized to infinity plus `p`; Proposition 15.676
+   closes pair-deficit equality, while strict deficit remains. The separate
+   small-prime remainders and even `k>4p` also remain open.
 3. **Type I, multi-level Max−:** OPEN. The general \(3A+B>0\) estimate is
    not proved.
 4. **Lemma D:** TRUE.
