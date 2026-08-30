@@ -15,6 +15,8 @@ def test_main_chain_L_open_and_docs_ok():
     assert docs["overclaim_detected"] is False
     assert docs["HANDOFF_shows_L_OPEN"] is True
     assert docs["docs_ok"] is True
+    assert docs["scanned_denseness_package_full"] is True
+    assert docs["e1_closed_general"] is True  # legacy wiring, not acceptance
     units = docs["four_e1_units"]
     assert units["phi_F_ge_6"] is False
     assert units["residual_ii_k_ge_4p"] is False
@@ -79,3 +81,18 @@ def test_props_15170_171_body_not_soft_closed():
         assert not re.search(pat, tail), f"soft-close residue matched: {pat}"
     assert "L OPEN" in tail or "OPEN for general" in tail or "not complete" in text[:4000]
     assert "gsum_disj_lb_proved_general" in tail or "NOT proved for general" in tail
+
+
+def test_denseness_package_does_not_soft_close_the_theorem():
+    """The stand-alone package must agree with its caveats throughout."""
+    from pathlib import Path
+
+    package = (
+        Path(__file__).resolve().parents[1]
+        / "evidence"
+        / "share"
+        / "denseness_path_package.md"
+    ).read_text(encoding="utf-8", errors="replace")
+    assert "Therefore this package\ndoes **not** prove E(1)" in package
+    assert "Hence E(1) on the whole Paley family" not in package
+    assert "Historical remarks “\\(L\\) OPEN”" not in package

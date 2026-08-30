@@ -2,8 +2,8 @@
 """
 Public-doc honesty check for E(1) / L.
 
-Writeup may assert L=1/2 only after the four GOAL.md leftovers are
-actually imported (not the live e1_closed_general old AND, and not
+    Writeup may assert L=1/2 only after the four GOAL.md units are
+    actually imported (not the legacy e1_closed_general old AND, and not
 the retired Gsum hinge). Soft-close banned (F3).
 """
 from __future__ import annotations
@@ -63,7 +63,8 @@ def _props_15167_171_slice(solution: str) -> str:
 def check_docs_L_status() -> dict:
     """
     Docs OK iff status asserts L OPEN (or true L closed with proved hinge)
-    and no soft-close 'L CLOSED' / residual closed claims while E1 is open.
+    and no soft-close 'L CLOSED' / residual closed claims while the four-unit
+    acceptance gate is open.
     Scans HANDOFF head, STATUS, solution top, **and** Props 15.167–171 body.
     """
     handoff = (ROOT / "HANDOFF.md").read_text(encoding="utf-8", errors="replace")
@@ -84,9 +85,10 @@ def check_docs_L_status() -> dict:
         + "\n"
         + props_tail
         + "\n"
-        + package[:4000]
+        + package
     )
 
+    units = four_e1_units_closed()
     e1 = bool(e1_closed_general())
     # Fixed-width patterns only (variable-width look-behind is invalid in re).
     soft_patterns = [
@@ -111,7 +113,7 @@ def check_docs_L_status() -> dict:
     ]
     soft = False
     soft_hit = None
-    if not e1:
+    if not units.get("closed"):
         for pat in soft_patterns:
             m = re.search(pat, head, re.I | re.M)
             if m:
@@ -130,7 +132,6 @@ def check_docs_L_status() -> dict:
         )
     )
 
-    units = four_e1_units_closed()
     overclaim_patterns = [
         r"\*\*Main Theorem \(limit\)\.\*\*",
         r"E\(1\); \$L=\\tfrac12\$",
@@ -168,6 +169,7 @@ def check_docs_L_status() -> dict:
         "four_e1_units": units,
         "gsum_disj_lb_proved_general": gsum_disj_lb_proved_general(),
         "scanned_props_15167_171": True,
+        "scanned_denseness_package_full": True,
     }
 
 

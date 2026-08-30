@@ -2,13 +2,17 @@
 
 **Audience:** independent check of the denseness-path argument. Use **this file only**.  
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit  
-**Date:** 2026-08-16. The residual-(i) two-level hinge is 15.272, not Aut-Schur and not Gsum. \(L=\tfrac12\) is **not proved**.
+**Date:** 2026-08-30. The residual-(i) two-level hinge is 15.272, not Aut-Schur and not Gsum. \(L=\tfrac12\) is **not proved**.
 
 ## Verdict
 
 **15.272** writes a Max+-free spanning argument that \(k=1\cup k=3\) fills \(\mathcal W_{++}^0\) (Lemmas B–G), hence \(G_+\succ0\), hence dual-eq is empty on \(\mathrm{sc}\) (H–I). Aut-Schur is **false**. Gsum is unused.
 
-Independent review (2026-08-15) found three load-bearing holes **outside** the 15.272 span, plus two writeup holes **inside** Lemma D. They are listed under **Caveats**. Live code still gates E(1) as True; that is a wiring fact, not a substitute for those holes.
+Independent review found three load-bearing holes **outside** the 15.272
+span. The former Lemma D writeup holes were closed by 15.276 and
+`A3_PROOF.md`. They are listed under **Caveats**. Legacy code may still report
+`e1_closed_general=True`; that is obsolete incomplete wiring, not a
+substitute for the current four-unit gate.
 
 | Piece | Status |
 |-------|--------|
@@ -23,6 +27,7 @@ Independent review (2026-08-15) found three load-bearing holes **outside** the 1
 | Aut-Schur / Jacquet | **False** (\(p=5\) \(k=3\) rank \(61/65\); unused) |
 | Gsum disj LB | **False** / unused |
 | Pairing \(1^\top K^{-1}v\) | **Open** / unused |
+| Lemma D existence / two-plane | **Proved** (15.276; `A3_PROOF.md`) |
 | **E(1) / \(L=\tfrac12\)** | **Not settled** — see Caveats |
 
 ---
@@ -215,9 +220,21 @@ has positive denominator for \(p\ge3\). The numerator polynomial \(f(x)=x^4-3x^3
 
 ---
 
-## Lemma J (Type I / E(1) / \(L\)).
+## Lemma J (what the 15.272 hinge actually closes).
 
-Lemma H + I ⇒ free-\(e\) max on \(\mathrm{sc}\) is \(<2-\alpha\) ⇒ dual-eq empty for every prime \(p\ge5\) (15.216 via 15.249). That closes Type I (15.170 dual-eq path; Gsum unused). Residual (ii) is ND-closed for every \(p\ge5\). Bi-tight is empty for every \(p\ge5\) (15.167: \(\mathrm{mult}(\lambda_{\max})\ge d-1\), \(\lambda_{\min}(\Phi)\ge6\) from \(Q_4\ge0\), and \(L_*<2d\)). Hence E(1) on the whole Paley family \(n=p^2+1\), hence \(\alpha_{p_k^2+1}\to\tfrac12\), hence \(L=\tfrac12\) by Lemma A. The live `e1` gate samples bi-tight at \(p=5\); the algebra is the same \(L_*<2d\) for all \(p\ge5\).
+Lemma H + I imply that the free-\(e\) maximum on `sc` is
+\(<2-\alpha\), so dual equality is empty for every prime \(p\ge5\)
+(15.216 via 15.249). This closes the **two-level** Type-I/residual-(i)
+slice. It does not close the multi-level Type-I bad case.
+
+Residual (ii) is proved only for the affine branch and even
+\(k\le4p-2\) by 15.179 and 15.236--15.237. The non-Walsh multi-level
+range at even \(k\ge4p\) remains open. Proposition 15.167's bi-tight
+majorization is conditional on \(\lambda_{\min}(\Phi)\ge6\); the old
+claim that this follows from \(Q_4\ge0\) is false because the disjoint
+Kneser mask is not a Gram. The current spectral-floor decomposition also
+requires global mixed-\(k\) QVAR and principal R1. Therefore this package
+does **not** prove E(1) or \(L=\tfrac12\).
 
 ---
 
@@ -229,7 +246,9 @@ Lemma H + I ⇒ free-\(e\) max on \(\mathrm{sc}\) is \(<2-\alpha\) ⇒ dual-eq e
 - Envelope / reflection / \(K_4\le\mathrm{Wick}_{hi}\) / \(\lvert\mu\rvert\le2/n\) (counterexamples).
 - Path-C / \(16N\) (optional, independent).
 
-Historical remarks “\(L\) OPEN” in Props 15.20–15.171 refer to those older routes and are not the current claim.
+Historical `CLOSED` claims in Props. 15.167--15.171, the older 15.272
+writeup, and derived evidence use obsolete scope or the false floor premise.
+The current claim is \(L\) **OPEN**.
 
 ---
 
@@ -243,11 +262,13 @@ A hostile review for public scrutiny found the following. **None of these is Aut
 
 3. **Type I dual-eq is the two-level Max− law \(S\in\{-1,-3\}\).** The 15.169 bad case \(f_e\equiv-1\) on \(\{S=-1\}\) only gives \(\Phi(H)\ge\Phi-4\) if Max− is multi-level. 15.275 writes the mass \(2a+c(3+\mu_c)=2/p\), the pairing min \(E[Sf_e]\ge3/p-2\), \(E[R^2]=E[S^2]-5+4E[Sf]\), integrality \(n_{-1}=M+n_c+t\), the unique 2-orbit Aut\(_e\) collapse \(\mu_{\mathrm{far}}=-2(2p-3)/(p(p^2-1))<0\), and the 3-weight Max− identity \(F_-|_{f=+1}=-(p+1)/(p-1)+\mu_{\mathrm{far}}p(p+1)\). Paley Aut\(_e\) has **two** star orbits (\(\sigma_\square=(p-1)(1+f_e)\), \(\sigma_\boxtimes=(p+1)(1-f_e)\)) and several far orbits. The 3-weight slices \(\mu_\square=\mu_\boxtimes\) and \(\mu_\boxtimes=0\) are empty (negative weight). The slice \(\mu_{\mathrm{far}}=0\) stays a \([0,1]\) solution of \(F_+\bar x=3-2f_e\), but it (and the whole \(\mu_{\mathrm{far}}\ge0\) 3-weight family) **cannot realise the bad case**: \(F_-|_{f=+1}\ge-(p+1)/(p-1)>-2\), while a gap-2 undercutter with \(f_e\equiv-1\) on \(\{S=-1\}\) needs \(S\le-3\) on \(\{f=+1\}\). Star-supported 0-1 Type I graphs Aut\(_e\)-average to that point (\(n_\square=(p+1)/2\), \(n_\boxtimes=5(p-1)/2\)). Dual-eq empty kills only the two-level / pairing-min slice. **Leftover:** split far Aut\(_e\) classes (unequal 4-set interpolants) do not reduce to the collapsed-far bound; \(F_-\le-3\) on \(\{f=+1\}\) is infeasible at \(p=5,7\) (census) but not proved for all \(p\). `type_I_multilevel_bad_case_ND_closed` stays False.
 
-4. **Lemma D existence / 2-plane.** Written in `evidence/share/A3_PROOF.md` and checked live in 15.276: occupancy sumset \(\to\) sawtooth \(N(x)=1+(\lambda x+s)\bmod p\), majority \(z\), three-line support, \(\hat z(0)=p\), \(Cy=py\), phase lock \(s_0+s_1+s_2\equiv-2\). Amplitudes are the Fejer products \(F_{\lambda,s}(c)=2p\,\omega^{-c\lambda^{-1}s}/(\omega^{c\lambda^{-1}}-1)\), nonzero off \(0\), and the 3-vector is not \(\mathbb C\)-parallel as \((c_1,c_2,c_3)\) varies. \(M_3\) matching enum and rank-\(2\) at \(p=5,7,11\) remain checks.
+4. **Lemma D existence / 2-plane — closed.** Written in `evidence/share/A3_PROOF.md` and checked live in 15.276: occupancy sumset \(\to\) sawtooth \(N(x)=1+(\lambda x+s)\bmod p\), majority \(z\), three-line support, \(\hat z(0)=p\), \(Cy=py\), phase lock \(s_0+s_1+s_2\equiv-2\). Amplitudes are the Fejer products \(F_{\lambda,s}(c)=2p\,\omega^{-c\lambda^{-1}s}/(\omega^{c\lambda^{-1}}-1)\), nonzero off \(0\), and the 3-vector is not \(\mathbb C\)-parallel as \((c_1,c_2,c_3)\) varies. \(M_3\) matching enum and rank-\(2\) at \(p=5,7,11\) remain checks, not the proof. This item is no longer a blocker.
 
 5. **Lemma E Johnson** (same-line hyperplane) was expanded independently and has **no algebraic GAP** relative to 15.269 B + the \(WW^\top\) identity. See `evidence/share/lemma_E_johnson.md`.
 
-Until (1)–(3) are closed, \(L=\tfrac12\) is not established. Caveat (4) is the A3 / 2-plane writeup (now in `A3_PROOF.md` + 15.276); finite rank-2 remains a check of that writeup.
+Until (1)–(3) are closed, \(L=\tfrac12\) is not established. Caveat (4)
+is already discharged by `A3_PROOF.md` + 15.276; finite rank-2 remains an
+independent check of that proof.
 
 ---
 

@@ -71,7 +71,10 @@ banned by test (`tests/test_main_chain_docs.py`).
   remains an outer support. Subsequent strategy runs add no theorem: all 51
   grade-three-only representatives survive completed `k=5` prefix joins, an
   even 26-case `k=6` shard also has no rejection, and a direct full-quotient
-  fixed-case model returns `UNKNOWN` after 300 seconds. The latter two do not
+  fixed-case model returns `UNKNOWN` after 300 seconds. The exact same case,
+  target hash, 307-variable model, and 147 constraints had already returned
+  `UNKNOWN` in the earlier 0.2-second compact smoke; the 300-second run was a
+  timeout extension, not a new formulation. The latter two do not
   constitute complete `k=6` or feasibility results, and this
   semigroup/quotient route is terminated. The 348 transferred pointed
   rejections do not subtract source boundaries. All 56 actual `z=7` line
@@ -80,6 +83,8 @@ banned by test (`tests/test_main_chain_docs.py`).
 
 The full correction and supporting certificates are recorded in
 `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md`.
+The proposition-by-proposition route inventory and permanent de-duplication
+blacklist are in `evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md`.
 
 ## Expected solution architecture
 
@@ -1051,12 +1056,13 @@ unidentified glue-class phase, unknown broad mass, or classified low shell.
    signs. Proposition 15.669 closes the uniform middle ranges and several
    small-prime extensions; 15.670 additionally closes every finite `p=11`
    size-eight boundary. What remains in this relaxation is now explicit:
-   `p=7` infinity plus seven; at `p=11`, infinity plus nine or finite size at
-   least ten; at `p=13`, ten finite or infinity plus eleven and larger; and
-   for `p>=17`, all-finite even `s>3(p-1)/4` or infinity-present `s>=p-2`
-   finite points. These floor-plus-pair survivors are not known graphs. The
-   full 5+-level branch and the related Type-I `3A+B>0` gate remain open,
-   although strong R1 would imply the latter.
+   positive `p=7` infinity-plus-seven `z=7`; the strict-deficit
+   infinity-plus-`p` branch left by 15.676; the 133 exact residue-zero
+   `p=23` next-boundary profiles left by 15.684--15.687; and later
+   all-finite sizes beyond the `p=17/19` endpoints closed by 15.693--15.712.
+   These floor-plus-pair survivors are not known graphs. The full 5+-level
+   branch and the related Type-I `3A+B>0` gate remain open, although strong
+   R1 would imply the latter.
 
 Lemma D is complete and is no longer on the work list.
 
@@ -1067,6 +1073,7 @@ Lemma D is complete and is no longer on the work list.
 | Path | Role |
 |------|------|
 | `HANDOFF.md` | Research handoff / resume entry point |
+| `evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md` | Full proposition-range account, route blacklist, and duplicate-run audit |
 | `evidence/HISTORY_AND_REFERENCES.md` | MO/X/Paata education and pre-internet sources (not a close) |
 | `solution.md` | Full mathematical writeup |
 | `src/e1_gmin_m4_prop15167.py` … `prop15171.py` | Bi-tight + E(1) residual ND modules |

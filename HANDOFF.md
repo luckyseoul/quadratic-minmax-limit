@@ -6,6 +6,12 @@ general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
 
+**Mandatory preflight:** read
+`evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md` before launching another
+solver, projection, shell, channel, orbit, or timeout. It accounts for every
+assigned proposition through 15.719 and maps current untracked scripts to
+closed, dead, necessary-only, or live routes.
+
 **No leftover flag flipped.** Leftover 1/2/3 False. L OPEN. Aut-Schur /
 Gsum / pairing False. `e1_closed_general` True only by the old incomplete
 wiring. The full infinity-plus-point boundary is closed. Every four-point
@@ -58,10 +64,12 @@ nonseparating.  The bounded grade-three-only case-join runs processed all 51
 representatives under eight selected `k=3` projections and under the
 completed one-projection `k=4` and `k=5` prefixes; none rejected or skipped a
 representative.  One even 26-case `k=6` shard also retained every case; its
-odd mate was cancelled, so there is no complete `k=6` claim.  A single direct
+odd mate was cancelled, so there is no complete `k=6` claim. A direct
 full-quotient fixed-case CP-SAT gate returned `UNKNOWN` after 300 seconds and
-has no mathematical force.  The semigroup/quotient route is terminated with
-no new proposition or boundary reduction.  Those necessary-condition
+has no mathematical force. The same case, target hash, 307-variable model,
+and 147 constraints had already returned `UNKNOWN` in the 0.2-second compact
+smoke, so this was only a timeout extension. The semigroup/quotient route is
+terminated with no new proposition or boundary reduction. Those necessary-condition
 diagnostics are not part of Proposition 15.719 and are not feasibility
 evidence.  All 56 actual positive `z=7` line boundaries in two orbits, the
 positive endpoint, and every top-level gate remain open.

@@ -37,12 +37,14 @@ on \(n=p^2+1\)) + E(1) on that family would give
 \label{eq:limit}
 L=\lim_{n\to\infty}\alpha_n=\tfrac12.
 \end{equation}
-E(1) is **not proved** for all primes \(p\ge5\). Four obligations remain
-(`GOAL.md`; `evidence/share/denseness_path_package.md` § Caveats):
-(1) \(\lambda_{\min}(\Phi)\ge6\) Max+-free (\(G_{u,\mathrm{disj}}\) is not a
-Gram); (2) residual (ii) for even \(k\ge4p\); (3) Type I when Max− is not
-two-level; (4) Lemma D existence / 2-plane (writeup `A3_PROOF.md` + 15.276;
-still wants a hostile check). Aut-Schur is **false**. Gsum unused.
+E(1) is **not proved** for all primes \(p\ge5\). Three mathematical
+obligations remain (`GOAL.md`;
+`evidence/share/denseness_path_package.md` § Caveats):
+(1) the spectral floor, whose current decomposition requires global
+mixed-\(k\) QVAR and principal R1 (\(G_{u,\mathrm{disj}}\) is not a Gram);
+(2) residual (ii) for even \(k\ge4p\); and (3) Type I when Max− is not
+two-level. Lemma D existence / 2-plane is complete in `A3_PROOF.md` and
+15.276. Aut-Schur is **false**. Gsum unused.
 
 **Optional still open:** Path-C residual / \(16N\) (independent).
 
@@ -5218,7 +5220,7 @@ Evidence: `src/e1_gmin_m4_prop15171.py`, `evidence/e1_gmin_m4_prop15171.json`,
 
 ## Prop 15.272 (2026-08-15) — \(k=1\cup k=3\) spans \(\mathcal W_{++}^0\)
 
-**Statement.** For every prime \(p\ge5\), the \(k=1\) cylinders together with the \(k=3\) locked triples span \(\mathcal W_{++}^0\). Hence \(G_+\succ0\), \(\ker(\mathrm{Gsum})=\mathrm{sc}\), dual-eq is empty, Type I residual (i) is closed, and with residual (ii) and bi-tight at \(p=5\) one has E(1) and \(L=\tfrac12\).
+**Statement.** For every prime \(p\ge5\), the \(k=1\) cylinders together with the \(k=3\) locked triples span \(\mathcal W_{++}^0\). Hence \(G_+\succ0\), \(\ker(\mathrm{Gsum})=\mathrm{sc}\), dual-eq is empty, and the two-level Type I residual-(i) slice is closed. This does **not** close the multi-level Type-I gate, residual (ii) for even \(k\ge4p\), the spectral floor, E(1), or \(L\).
 
 Aut-Schur is **false** (Jacquet \(\nRightarrow\) PSL-span of \(k=3\) \(F\); \(p=5\) rank \(61/65\)). Gsum disj LB is unused. The pairing \(1^\top K^{-1}v\) is unused.
 
