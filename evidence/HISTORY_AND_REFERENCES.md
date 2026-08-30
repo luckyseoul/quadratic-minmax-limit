@@ -1804,6 +1804,25 @@ the surrounding finite-direction, Paley-49, and modular-incidence theory,
 not this exact census or exclusion.  Numerical matches have no evidentiary
 role.
 
+## 7bl. Pair-transversal and modular closure of positive p7 z2 (2026-08-29)
+
+Proposition 15.716 enumerates the 141,120 pair-transversal incidences of the
+positive infinity-plus-seven remainder and decomposes its 129,024 actual
+boundaries into 104 orbits.  The `z=2` branch has 123,480 boundaries in 92
+orbits.  Its complete mean ledger has 1,232 leaves: an independent audit
+caught 48 residue-four leaves omitted by the first residue-zero count.
+
+Using the unpointed 281-row translation-equivariant edge system, 112 exact
+dependencies annihilate each one-high catalog, while full 135-coordinate
+hash joins test every two- and four-catalog leaf.  Nuka rejects all 1,232
+leaves modulo seven.  The positive remainder falls to 5,544 actual
+boundaries in twelve orbits and a 212-profile projected envelope at `z=3,7`.
+
+Targeted GitHub-code, MathOverflow, literature, and OEIS searches found no
+prior occurrence of this orbit/catalog exclusion.  OEIS contains 123,480 in
+an unrelated injective-function triangle; that numerical match has no
+evidentiary role.
+
 ---
 
 ## 8. What is not in the older literature

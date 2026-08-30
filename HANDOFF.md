@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-29 (through 15.715; both `p=19,s=16` and `p=17,s=16`
+**Date:** 2026-08-29 (through 15.716; both `p=19,s=16` and `p=17,s=16`
 are closed; no
 general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
@@ -30,6 +30,21 @@ for both signs. This is not all of the projective size-eight case: the
 separate infinity-plus-seven profile remains open. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.716 — positive p7 infinity-plus-seven z2 branch closed
+
+Pair-transversal enumeration reduces the 123,480 actual `z=2` boundaries to
+92 orbits under the full 2,352-element square affine-semilinear group.  The
+exact mean ledger has 1,232 leaves: 192 one-high, 992 two-catalog, and 48
+residue-four four-catalog leaves.  The last family was caught by an
+independent coverage audit before the result was claimed.
+
+The unpointed orbit calculation uses the 281-row translation-equivariant
+edge system, not the incompatible distinguished-edge normalization.  Nuka
+rejects every leaf modulo seven using direction annihilation or exact full-
+dependency catalog joins.  The positive actual remainder is 5,544
+boundaries in twelve orbits: 5,488 at `z=3` and 56 at `z=7`.  The projected
+envelope has 212 profiles.  The branch and all top-level gates remain open.
 
 ## 15.715 — positive p7 infinity-plus-seven z1 branch closed
 

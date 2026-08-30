@@ -1,5 +1,15 @@
 # Status (2026-08-29)
 
+**15.716 PROVED the positive `p=7` infinity-plus-seven `z=2` branch is
+CLOSED, not the endpoint**: 123,480 actual boundaries reduce to 92 exact
+affine-semilinear orbits and 1,232 exact mean leaves, including 48
+residue-four leaves caught by a coverage audit.  In the 281-row
+translation-equivariant system, direction annihilation and complete
+mod-seven catalog joins reject every leaf.  The positive scope falls to
+5,544 actual boundaries in twelve orbits and a 212-profile envelope at
+`z=3,7`.  Those branches, the negative branch, residual (ii), R1, Type I,
+and the limit remain OPEN.
+
 **15.715 PROVED the positive `p=7` infinity-plus-seven `z=1` branch is
 CLOSED, not the endpoint**: every such boundary has four exact mean
 allocations. Two complete V100 launch geometries check all 6,324,528
