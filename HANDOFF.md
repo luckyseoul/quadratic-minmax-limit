@@ -1,6 +1,6 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-29 (through 15.716; both `p=19,s=16` and `p=17,s=16`
+**Date:** 2026-08-30 (through 15.717; both `p=19,s=16` and `p=17,s=16`
 are closed; no
 general flag flipped)
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
@@ -30,6 +30,20 @@ for both signs. This is not all of the projective size-eight case: the
 separate infinity-plus-seven profile remains open. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.717 — positive p7 infinity-plus-seven z3 branch closed
+
+The ten exact affine-semilinear `z=3` boundary orbits cover 5,488 actual
+boundaries.  Their corrected mean ledger has 400 leaves.  Full 135-coordinate
+mod-seven catalog joins reject 398; the two surviving leaves contain exactly
+four catalog-row triples each.  Reconstructing those eight same integer right
+sides and testing complete dependency bases modulo `3,5,7,11` rejects all
+eight modulo three.
+
+The positive actual remainder is now only 56 line boundaries in two `z=7`
+orbits, and the projected envelope has only the two labelled line profiles.
+The positive endpoint, negative branch, residual (ii), and all top-level gates
+remain open.
 
 ## 15.716 — positive p7 infinity-plus-seven z2 branch closed
 

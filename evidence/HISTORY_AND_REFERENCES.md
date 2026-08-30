@@ -1823,6 +1823,27 @@ prior occurrence of this orbit/catalog exclusion.  OEIS contains 123,480 in
 an unrelated injective-function triangle; that numerical match has no
 evidentiary role.
 
+## 7bm. Same-tuple multimodular closure of positive p7 z3 (2026-08-30)
+
+Proposition 15.717 reconstructs the ten exact affine-semilinear `z=3`
+boundary orbits, covering 5,488 actual boundaries, and all 400 corrected mean
+leaves.  Exact joins on the full 135-dimensional mod-seven dependency space
+reject 398 leaves.  The other two leaves have three complete 1,764-row
+catalogs and exactly four matching catalog-row triples apiece.
+
+The follow-up retains those exact row indices, rebuilds each 281-entry integer
+edge-system right side, and tests the same right side against complete
+left-nullspace bases modulo `3,5,7,11`.  All eight mod-seven tuples fail
+modulo three.  Therefore the full `z=3` branch is excluded.  The positive
+remainder is 56 line boundaries in two `z=7` orbits and two projected line
+profiles.
+
+Targeted GitHub-code, MathOverflow, literature, and OEIS searches found no
+prior occurrence of this exact orbit/catalog and same-tuple multimodular
+exclusion.  Searches on 5,488 and 225,792 produced unrelated neural-network,
+divisor, and OEIS matches; those numerical coincidences have no evidentiary
+role.
+
 ---
 
 ## 8. What is not in the older literature

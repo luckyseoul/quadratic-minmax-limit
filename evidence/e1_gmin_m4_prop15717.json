@@ -1,0 +1,43 @@
+{
+  "actual_boundary_count_after_z3_exclusion": 56,
+  "actual_boundary_count_before": 5544,
+  "boundary": "infinity plus seven finite points",
+  "exact_mean_leaves": 400,
+  "extracted_exact_mod7_catalog_tuples": 8,
+  "mean_leaves_rejected_mod7": 398,
+  "mod7_evidence": "evidence/p7_infinity7_positive_z3_mod7_join_nuka.json",
+  "mod7_script": "scripts/p7_infinity7_positive_z3_mod7_join.py",
+  "mod7_surviving_mean_leaves": 2,
+  "multimod_evidence": "evidence/p7_infinity7_positive_z3_multimod_nuka.json",
+  "multimod_script": "scripts/p7_infinity7_positive_z3_multimod_join.py",
+  "negative_p7_infinity_plus_seven_changed": false,
+  "p": 7,
+  "positive_p7_infinity_plus_seven_closed": false,
+  "positive_z3_branch_closed": true,
+  "product_sign": "positive",
+  "projected_b_profile_count_after": 2,
+  "projected_b_profile_count_before": 212,
+  "projected_b_profiles_excluded_here": 210,
+  "proposition": "15.717",
+  "proved_by_complete_exact_orbit_catalog_and_same_tuple_multimod_exhaustion": true,
+  "remaining_actual_boundary_orbits": {
+    "7": 2
+  },
+  "remaining_actual_undetermined_direction_histogram": {
+    "7": 56
+  },
+  "remaining_projected_undetermined_direction_histogram": {
+    "7": 2
+  },
+  "same_tuple_mod3_survivors": 0,
+  "tested_moduli": [
+    3,
+    5,
+    7,
+    11
+  ],
+  "top_level_gates_changed": false,
+  "undetermined_direction_count_excluded": 3,
+  "z3_boundaries_excluded": 5488,
+  "z3_boundary_orbits": 10
+}

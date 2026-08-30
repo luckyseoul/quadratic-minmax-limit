@@ -1,4 +1,13 @@
-# Status (2026-08-29)
+# Status (2026-08-30)
+
+**15.717 PROVED the positive `p=7` infinity-plus-seven `z=3` branch is
+CLOSED, not the endpoint**: ten exact boundary orbits give 400 corrected mean
+leaves.  Full mod-seven catalog joins reject 398; the two survivors contain
+exactly eight catalog-row triples.  The same eight integer right sides all
+fail the complete mod-three dependency basis.  The positive scope falls to
+56 actual line boundaries in two `z=7` orbits and two projected profiles.
+That branch, the negative branch, residual (ii), R1, Type I, and the limit
+remain OPEN.
 
 **15.716 PROVED the positive `p=7` infinity-plus-seven `z=2` branch is
 CLOSED, not the endpoint**: 123,480 actual boundaries reduce to 92 exact
