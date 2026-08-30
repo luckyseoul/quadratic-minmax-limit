@@ -280,7 +280,7 @@
     "phi_F_imported": false,
     "note": "Type-index Gram does not pin \u03b4. Catalog p-laws miss (3,20). Q_\u03c4 unnamed. phi_F not imported."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false,
   "flags_not_flipped": [

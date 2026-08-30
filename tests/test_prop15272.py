@@ -132,7 +132,7 @@ def test_live_flags_via_k13():
     assert gplus_pd_proved_general() is True
     assert psl_span_F_eq_Wpp0() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     h = hinge_status_272()
     assert h["bad_mu_span"] is True
     assert h["every_triple_occurs"] is True

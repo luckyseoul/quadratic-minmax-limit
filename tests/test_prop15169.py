@@ -11,6 +11,8 @@ from e1_gmin_m4_prop15169 import (
     deep_s_auto_freeness,
     deep_s_freeness_lb,
     deep_s2_freeness_fail_k_ge_3p_ND_closed,
+    deep_s2_freeness_fail_even_k_le_4p_minus_2_ND_closed,
+    e1_bounded_residual_split_closed,
     e1_closed_general,
     e1_open_residuals,
     k_max_auto_freeness_s,
@@ -98,20 +100,23 @@ def test_deep_multi_s_auto_freeness_boundaries():
 
 
 def test_deep_k_ge_3p_full_open_affine_closed():
-    """Full residual (ii) OPEN (15.193); affine branch closed by freeze (15.179)."""
+    """The bounded range is closed; the full k>=3p gate includes open k>=4p."""
     from e1_gmin_m4_prop15179 import residual_ii_dual_twolevel_affine_closed
 
     assert residual_ii_dual_twolevel_affine_closed() is True
-    assert deep_freeness_fail_k_ge_3p_open() is False  # 15.237 closed (ii-a)
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
+    assert deep_freeness_fail_k_ge_3p_open() is True
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
+    assert deep_s2_freeness_fail_even_k_le_4p_minus_2_ND_closed() is True
 
 
 def test_legacy_e1_and_is_only_the_old_narrow_scope():
     assert type_I_k_3p_minus_2_closed_general() is True
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
-    assert e1_closed_general() is True
+    assert deep_s2_freeness_fail_even_k_le_4p_minus_2_ND_closed() is True
+    assert e1_bounded_residual_split_closed() is True
+    assert e1_closed_general() is False
     open_res = e1_open_residuals()
-    assert open_res == []
+    assert any("k≥4p" in item for item in open_res)
+    assert any("multi-level" in item for item in open_res)
     from e1_main_chain_status import four_e1_units_closed
 
     assert four_e1_units_closed()["closed"] is False
@@ -128,7 +133,7 @@ def test_L_wire_follows_e1_and_bitight():
     assert w2["L_closed"] is True
     assert w2["L_status"] == "CLOSED"
     # Real path: E1 false ⇒ L OPEN
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
 
 
 def test_prove_and_main_honest():
@@ -138,15 +143,15 @@ def test_prove_and_main_honest():
     assert TI["ND_class_closed_general"] is True  # two-level 15.272 slice
     DP = prove_deep_multi_s()
     assert DP["multi_s_auto_freeness_ok"] is True
-    assert DP["deep_k_ge_3p_ND_closed"] is True  # 15.179+236+237
+    assert DP["deep_k_ge_3p_ND_closed"] is False
     out = main()
     assert out["proved"]["type_I_k_3p_minus_2_ND_class_closed"] is True
     assert out["proved"]["type_I_k_3p_minus_2_structure"] is True
     assert out["proved"]["deep_multi_s_auto_freeness"] is True
-    assert out["proved"]["E1_closed_general"] is True
-    assert out["proved"]["L_closed"] is True
-    assert out["L_status"] == "CLOSED"
-    assert out["open_residual"] == []
+    assert out["proved"]["E1_closed_general"] is False
+    assert out["proved"]["L_closed"] is False
+    assert out["L_status"] == "OPEN"
+    assert any("k≥4p" in item for item in out["open_residual"])
     from e1_main_chain_status import four_e1_units_closed
 
     assert four_e1_units_closed()["closed"] is False
@@ -160,9 +165,11 @@ def test_anti_soft_close_skeptic_patterns():
 
     assert type_I_k_3p_minus_2_closed_general() is True
     assert residual_ii_dual_twolevel_affine_closed() is True  # affine branch only
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True  # 15.179+236+237
-    assert e1_closed_general() is True
-    assert e1_open_residuals() == []
+    assert deep_s2_freeness_fail_even_k_le_4p_minus_2_ND_closed() is True
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
+    assert e1_bounded_residual_split_closed() is True
+    assert e1_closed_general() is False
+    assert len(e1_open_residuals()) == 2
     # L wire refuses soft-close without E1
     w2 = main_L_from_e1(False, True)
     assert w2["L_closed"] is False

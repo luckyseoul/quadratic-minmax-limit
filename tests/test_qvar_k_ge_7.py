@@ -560,5 +560,5 @@ def test_qvar_k_ge_7_wiring_no_handwritten_true():
         assert out["L_status"] == "OPEN"
     assert Q.live_L_status() == out["L_status"]
     assert L.live_L_status() == out["L_status"]
-    assert e1_closed_general() is True  # wiring, not a close
+    assert e1_closed_general() is False  # wiring, not a close
     # leftover 2/3 / Gsum stay their own units — not forced False here.

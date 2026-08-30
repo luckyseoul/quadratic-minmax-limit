@@ -1,17 +1,23 @@
 {
-  "title": "Main/E(1) chain status (four GOAL leftovers, not Gsum hinge)",
-  "bi_tight_empty_for_all_p_ge_5": true,
+  "title": "Main/E(1) chain status (corrected discrete bi-tight gate)",
+  "bi_tight_required_levels_empty_for_all_p_ge_5": true,
+  "bi_tight_all_levels_empty": false,
   "residual_closed_general": false,
   "bitight_bypass_residual": true,
   "gsum_disj_lb_proved_general": false,
-  "E1_closed": true,
-  "E1_open_residual": [],
+  "E1_closed": false,
+  "E1_open_residual": [
+    "non-Walsh residual (ii), even k\u22654p",
+    "Type I multi-level Max\u2212 bad case"
+  ],
   "E1_structure_15168": {
     "type_I_fail_k_2p_minus_1_ND": true,
-    "type_I_all_classes_closed": true,
+    "type_I_historical_two_level_classes_closed": true,
+    "type_I_all_classes_closed": false,
+    "type_I_multilevel_bad_case_closed": false,
     "deep_tight_empty": true,
     "deep_auto_freeness": true,
-    "deep_all_ND_closed": true
+    "deep_all_ND_closed": false
   },
   "Main_closed": false,
   "L_closed": false,
@@ -24,16 +30,17 @@
     "overclaim_detected": false,
     "overclaim_hit": null,
     "docs_ok": true,
-    "e1_closed_general": true,
+    "e1_closed_general": false,
     "four_e1_units": {
-      "phi_F_ge_6": false,
+      "bitight_levels_2_3": true,
       "residual_ii_k_ge_4p": false,
       "type_I_multilevel": false,
       "lemma_D": true,
       "closed": false
     },
     "gsum_disj_lb_proved_general": false,
-    "scanned_props_15167_171": true
+    "scanned_props_15167_171": true,
+    "scanned_denseness_package_full": true
   },
-  "rule": "Public writeup may assert L=1/2 only after four leftovers: phi_F_ge_6, residual_ii k\u22654p, multi-level Type I, Lemma D. Live e1_closed_general is a separate wiring fact. Soft-close banned (F3)."
+  "rule": "Public writeup may assert L=1/2 only after the valid gates: bi-tight levels 2/3, residual_ii k\u22654p, multi-level Type I, Lemma D. QVAR/R1 and the spectral floor are no longer acceptance units. Live e1_closed_general agrees with these open gates. Soft-close banned (F3)."
 }

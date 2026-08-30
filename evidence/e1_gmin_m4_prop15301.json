@@ -87,7 +87,7 @@
       "proved": false,
       "phi_F_ge_6": false,
       "rhat": false,
-      "e1": true,
+      "e1": false,
       "Q_tau_named_in_p": false,
       "S_k_named_in_p": false,
       "note": "The named-den formula 16\u221216(p\u2212Re J)/d is p=5-only. S_{k\u22600} still unnamed for general p. Floor OPEN."

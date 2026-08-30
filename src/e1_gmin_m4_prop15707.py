@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Prop. 15.707 -- exclude all 78 p=17 pair-slack-twenty profiles.
+"""Prop. 15.707 -- exclude all 193 p=17 pair-slack-twenty profiles.
 
 Proposition 15.706's contradiction needs only one rigid b=2 direction of
 each quadratic type, not pair slack zero. Every slack-twenty row has at least
-eight rigid phase-one b=2 directions. In all 69 rows with u_0=0, quotient
+eight rigid phase-one b=2 directions. In all 184 rows with u_0=0, quotient
 accounting retains at least three rigid phase-zero directions with b=0 or 2.
-Both b values give the same global-sign identity, so all 69 are impossible.
+Both b values give the same global-sign identity, so all 184 are impossible.
 The nine u_0=8 rows all have at least two undetermined directions; repair
 plus the already-audited complete 13-/14-arc data excludes those as well.
 """
@@ -27,6 +27,7 @@ from e1_gmin_m4_prop15706 import (
     p17_slack_zero_global_sign_certificate,
     p17_slack_zero_profile_exclusion,
 )
+from e1_gmin_m4_prop15723 import floor_excess_admissible
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -41,7 +42,7 @@ def _minimum_quotient(phase: int, residue: int, b: int) -> int:
     floor = full_symbolic_floor(P, b, phase)
     for quotient in range(M - residue + 1):
         excess = 2 * residue + PERIOD * quotient - floor
-        if excess >= 0 and excess != 2:
+        if floor_excess_admissible(P, b, phase, excess):
             return quotient
     raise ArithmeticError("profile direction has no admissible quotient")
 
@@ -121,28 +122,42 @@ def p17_slack_twenty_two_direction_geometric_certificate() -> dict[str, object]:
 def p17_slack_twenty_exclusion() -> dict[str, object]:
     previous = p17_slack_zero_profile_exclusion()
     global_sign = p17_slack_zero_global_sign_certificate()
+    census = p17_second_boundary_profile_census()
+    previous_indices = set(int(index) for index in previous["remaining_profile_indices"])
     profiles = [
-        row
-        for row in p17_second_boundary_profile_census()["profiles"]
-        if int(row["pair_slack"]) == PAIR_SLACK
+        (index, census["profiles"][index])
+        for index in sorted(previous_indices)
+        if int(census["profiles"][index]["pair_slack"]) == PAIR_SLACK
     ]
-    if len(profiles) != 78 or Counter((row["u0"], row["u1"]) for row in profiles) != {
-        (0, 8): 69,
+    if len(profiles) != 193 or Counter(
+        (row["u0"], row["u1"]) for _index, row in profiles
+    ) != {
+        (0, 8): 184,
         (8, 8): 9,
     }:
         raise ArithmeticError("p=17 slack-twenty residue ledger changed")
+    undetermined_histogram = Counter(
+        sum(
+            int(row["phase_profiles_b"][phase].get(16, 0))
+            for phase in ("0", "1")
+        )
+        for _index, row in profiles
+    )
+    if undetermined_histogram != {0: 59, 1: 74, 2: 50, 3: 10}:
+        raise ArithmeticError("p=17 slack-twenty direction histogram changed")
 
     rows = []
     global_sign_excluded = []
     geometric_excluded = []
     rigid_low_histogram: Counter[int] = Counter()
-    for index, profile in enumerate(profiles):
+    for local_index, (census_index, profile) in enumerate(profiles):
         phase_zero = _rigid_b2_lower_bound(profile, 0)
         phase_one = _rigid_b2_lower_bound(profile, 1)
         if phase_one["rigid_b2_lower_bound"] < 8:
             raise ArithmeticError("slack-twenty phase one lost its rigid b=2 core")
         row = {
-            "profile_index_within_slack_twenty": index,
+            "profile_index_within_slack_twenty": local_index,
+            "census_index": census_index,
             "u0": int(profile["u0"]),
             "u1": int(profile["u1"]),
             "phase_profiles_b": profile["phase_profiles_b"],
@@ -177,9 +192,9 @@ def p17_slack_twenty_exclusion() -> dict[str, object]:
                 geometric_excluded.append(row)
 
     if (
-        len(global_sign_excluded) != 69
+        len(global_sign_excluded) != 184
         or dict(sorted(rigid_low_histogram.items()))
-        != {3: 2, 4: 10, 5: 26, 6: 28, 7: 3}
+        != {3: 11, 4: 42, 5: 88, 6: 38, 7: 5}
         or Counter(row["undetermined_direction_count"] for row in geometric_excluded)
         != {2: 5, 3: 4}
     ):
@@ -188,15 +203,28 @@ def p17_slack_twenty_exclusion() -> dict[str, object]:
         raise ArithmeticError("15.706 global-sign contradiction changed")
 
     histogram = dict(previous["remaining_pair_slack_histogram"])
-    if int(previous["profile_count_after"]) != 639 or histogram.get(PAIR_SLACK) != 78:
+    if int(previous["profile_count_after"]) != 1213 or histogram.get(PAIR_SLACK) != 193:
         raise ArithmeticError("pre-15.707 p=17 ledger changed")
     geometry = p17_slack_twenty_two_direction_geometric_certificate()
-    excluded_count = len(global_sign_excluded) + len(geometric_excluded)
-    histogram[PAIR_SLACK] -= excluded_count
-    after = int(previous["profile_count_after"]) - excluded_count
-    if after != 561 or histogram.get(PAIR_SLACK) != 0 or sum(histogram.values()) != after:
+    excluded_indices = {
+        int(row["census_index"])
+        for row in global_sign_excluded + geometric_excluded
+    }
+    excluded_count = len(excluded_indices)
+    if excluded_count != len(global_sign_excluded) + len(geometric_excluded):
+        raise ArithmeticError("15.707 exclusion branches overlap")
+    remaining_indices = sorted(previous_indices - excluded_indices)
+    histogram = dict(
+        sorted(
+            Counter(
+                int(census["profiles"][index]["pair_slack"])
+                for index in remaining_indices
+            ).items()
+        )
+    )
+    after = len(remaining_indices)
+    if after != 1020 or PAIR_SLACK in histogram or sum(histogram.values()) != after:
         raise ArithmeticError("post-15.707 p=17 ledger changed")
-    del histogram[PAIR_SLACK]
 
     return {
         "proposition": "15.707",
@@ -205,8 +233,13 @@ def p17_slack_twenty_exclusion() -> dict[str, object]:
         "pair_slack_treated": PAIR_SLACK,
         "profile_count_before": int(previous["profile_count_after"]),
         "slack_twenty_profiles_before": len(profiles),
+        "undetermined_direction_histogram_before": dict(
+            sorted(undetermined_histogram.items())
+        ),
         "profiles_excluded_here": excluded_count,
         "profile_count_after": after,
+        "excluded_profile_indices_here": sorted(excluded_indices),
+        "remaining_profile_indices": remaining_indices,
         "slack_twenty_profiles_after": 0,
         "remaining_pair_slack_histogram": histogram,
         "phase_one_rigid_b2_lower_bound": 8,

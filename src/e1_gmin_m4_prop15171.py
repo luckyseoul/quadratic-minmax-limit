@@ -18,12 +18,13 @@ REAL checkable Fraction / prior-prop chain:
      with S∈{2,4} ⇒ S_H≡3 on Max+ ⇒ (k+1)/p=3 ⇒ k=3p−1 only.
      Hence **affine dual two-level** freeness-fail is impossible for k≥3p.
   J. **Prop 15.193 exhaustiveness (OPEN, not required):** freeness-fail does
-     **not** force S∈{2,4} and f_e=3−S. Full residual (ii) is CLOSED by ND:
-     (ii-a) 15.237 + (ii-b) 15.236 + affine 15.179.
+     **not** force S∈{2,4} and f_e=3−S.  Separate ND from (ii-a) 15.237,
+     (ii-b) 15.236, and affine 15.179 closes only the bounded even range
+     through 4p−2.  The multi-level even-k≥4p remainder is OPEN (15.274).
 
 Honest predicates:
   residual_ii_affine_branch_closed = True  (15.179)
-  residual_ii_full_closed = True           (affine ∧ ii-a ∧ ii-b; not exhaustiveness)
+  residual_ii_full_closed = False          (live even-k≥4p remainder open)
   deep_s2_freeness_fail_k_ge_3p_ND_closed wires to residual_ii_full_closed.
 
 E1_closed when residual (i) ∧ residual (ii) full ∧ bi-tight.
@@ -53,6 +54,8 @@ from e1_gmin_m4_prop15168 import (  # noqa: E402
     deep_s2_auto_freeness,
     deep_fail_k_3p_minus_1_impossible,
     tight_cover_obstruction_applicable,
+    e1_closed_general as e1_closed_15168,
+    e1_open_residuals as e1_open_residuals_15168,
 )
 from e1_gmin_m4_prop15170 import (  # noqa: E402
     type_I_k_3p_minus_2_closed_general,
@@ -389,17 +392,22 @@ def residual_ii_affine_branch_pieces_ok() -> bool:
 
 def deep_s2_freeness_fail_k_ge_3p_ND_closed() -> bool:
     """
-    Full residual (ii) closed for all p≥5?
+    Full residual (ii) closed for all p≥5 and all admissible even k?
 
-    Requires affine branch pieces (15.179 freeze + auto/fail-eq/weak ND)
-    **and** exhaustiveness (15.193): freeness-fail ⇒ S∈{2,4} and f_e=3−S.
-
-    Wires to residual_ii_full_closed (affine ∧ ii-a ∧ ii-b).
-    Exhaustiveness (15.193) remains False and is not required.
+    Wires to residual_ii_full_closed, which imports the live even-k>=4p
+    predicate.  The old affine + ii-a + ii-b conjunction covered only the
+    bounded even range through 4p-2.
     """
     from e1_gmin_m4_prop15193 import residual_ii_full_closed
 
     return residual_ii_full_closed()
+
+
+def deep_s2_freeness_fail_even_k_le_4p_minus_2_ND_closed() -> bool:
+    """Historical bounded result from 15.179 + 15.236 + 15.237."""
+    from e1_gmin_m4_prop15193 import residual_ii_bounded_even_k_le_4p_minus_2_closed
+
+    return residual_ii_bounded_even_k_le_4p_minus_2_closed()
 
 
 # ---------------------------------------------------------------------------
@@ -408,20 +416,22 @@ def deep_s2_freeness_fail_k_ge_3p_ND_closed() -> bool:
 
 
 def e1_open_residuals() -> list[str]:
-    open_: list[str] = []
-    if not type_I_k_3p_minus_2_closed_general():
-        open_.append("Type I freeness-fail k=3p−2 (15.170)")
-    if not deep_s2_freeness_fail_k_ge_3p_ND_closed():
-        open_.append("deep freeness-fail k≥3p (15.171)")
-    return open_
+    """Authoritative current residuals from Prop 15.168."""
+    return e1_open_residuals_15168()
+
+
+def e1_bounded_residual_split_closed() -> bool:
+    """Obsolete bounded split retained only for historical proposition replay."""
+    return bool(
+        type_I_k_3p_minus_2_closed_general()
+        and deep_s2_freeness_fail_even_k_le_4p_minus_2_ND_closed()
+        and required_bitight_levels_empty_all_primes()
+    )
 
 
 def e1_closed_general() -> bool:
-    return (
-        type_I_k_3p_minus_2_closed_general()
-        and deep_s2_freeness_fail_k_ge_3p_ND_closed()
-        and required_bitight_levels_empty_all_primes()
-    )
+    """Authoritative full E(1) gate; never the historical bounded split."""
+    return e1_closed_15168()
 
 
 def main_L_from_e1(e1: bool, bitight: bool) -> dict:
@@ -461,10 +471,9 @@ def prove_residual_ii(primes: list[int] | None = None) -> dict:
             "Prop 15.171 + 15.179: dual two-level freeness-fail **affine** freezes "
             "to S_H≡3 ⇒ k=3p−1 (impossible for k≥3p); fail-eq empty under "
             "bi-tight; auto-freeness k≤3p−2. Affine branch CLOSED. "
-            "Prop 15.193: exhaustiveness (freeness-fail ⇒ S∈{2,4} and f_e=3−S) "
-            "is NOT proved. Residual (ii) full still closes via affine (15.179) "
-            "∧ (ii-a) ND (15.237) ∧ (ii-b) ND (15.236). Residual (i) still "
-            "needs |μ|≤1/(2p) / Gsum."
+            "Prop 15.193: affine (15.179) + (ii-a) ND (15.237) + (ii-b) ND "
+            "(15.236) close only the bounded even range through 4p−2. The live "
+            "even-k≥4p multi-level remainder is still open."
         ),
     }
 
@@ -478,7 +487,7 @@ def main() -> dict:
     out = {
         "title": (
             "Prop 15.171 residual (ii) structure: affine branch CLOSED (15.179); "
-            "full residual (ii) OPEN (15.193 exhaustiveness); "
+            "full residual (ii) OPEN (multi-level even k≥4p); "
             + ("E1/L CLOSED" if e1 and bt else "E1/L follow bi-tight∧E1")
         ),
         "L_status": Lwire["L_status"],
@@ -510,7 +519,10 @@ def main() -> dict:
     print(f"  residual (ii) affine branch: {RII['residual_ii_affine_branch_closed']}")
     print(f"  exhaustiveness: {RII['residual_ii_exhaustiveness_proved']}")
     print(f"  open subcases: {RII.get('open_subcases')}")
-    print(f"  type I closed: {type_I_k_3p_minus_2_closed_general()}")
+    print(
+        "  historical Type-I k=3p-2/two-level slice closed: "
+        f"{type_I_k_3p_minus_2_closed_general()}"
+    )
     print(f"  bi-tight: {bt}")
     print(f"  E1_closed={e1}")
     print(f"  open: {open_res}")

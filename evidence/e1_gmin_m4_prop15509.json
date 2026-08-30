@@ -120,7 +120,7 @@
     "p13_predicted": 28697814,
     "note": "Involution class size and cycle type are field-named. Fix formula is a p=3,5,7 cache identity. Factorization and p\u226511 untested. |H+| / D / Q_\u03c4 unnamed. phi_F not imported."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false,
   "flags_not_flipped": [

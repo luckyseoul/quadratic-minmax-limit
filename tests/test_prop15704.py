@@ -8,8 +8,9 @@ from e1_gmin_m4_prop15704 import (
 
 def test_slack_sixteen_profile_ledger():
     ledger = slack_sixteen_profile_ledger()
-    assert ledger["undetermined_direction_histogram"] == {0: 13, 1: 47, 2: 47, 3: 5}
-    assert ledger["profiles_with_at_least_one_undetermined_direction"] == 99
+    assert ledger["undetermined_direction_histogram"] == {0: 87, 1: 88, 2: 47, 3: 5}
+    assert ledger["profiles_with_at_least_one_undetermined_direction"] == 140
+    assert ledger["remaining_zero_direction_profiles"] == 87
 
 
 def test_slack_sixteen_repair_lemma():
@@ -31,7 +32,8 @@ def test_one_direction_complete_arc_certificate():
 
 def test_prop15704_accounting():
     theorem = p17_slack_sixteen_free_direction_exclusion()
-    assert theorem["profile_count_before"] == 753
-    assert theorem["profiles_excluded_here"] == 99
-    assert theorem["profile_count_after"] == 654
-    assert theorem["remaining_slack_sixteen_profiles"] == 13
+    assert theorem["profile_count_before"] == 1368
+    assert theorem["profiles_excluded_here"] == 140
+    assert theorem["profile_count_after"] == 1228
+    assert theorem["remaining_slack_sixteen_profiles"] == 87
+    assert len(theorem["remaining_profile_indices"]) == 1228

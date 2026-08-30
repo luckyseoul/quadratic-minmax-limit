@@ -100,7 +100,7 @@
       "one_d_lb_p7": "336/409",
       "one_d_lb_p7_lt_6": true,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "Mix-aware table: two 1176-types sit below 6; 294 vanishes. Type-means unnamed in p. phi_F not imported."
     }

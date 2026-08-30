@@ -158,7 +158,7 @@
       },
       "phi_F_ge_6": false,
       "rhat": false,
-      "e1": true,
+      "e1": false,
       "Q_tau_named_in_p": false,
       "S_k_named_in_p": false,
       "note": "Square formula names the den as |U|=p+1 and proves \u03bb_j\u22650. The comparison to 6 is live at p=5,7 and unproved in general. phi_F not imported."

@@ -5,10 +5,10 @@ def test_complementary_global_sign_sweep_leaves_nineteen_profiles():
     row = p17_phase_one_b16_global_sign_reduction()
     assert row["proved_analytically"] is True
     assert row["uses_solver"] is False
-    assert row["profile_count_before"] == 227
-    assert row["profiles_excluded_by_b0_b16_comparison"] == 176
+    assert row["profile_count_before"] == 321
+    assert row["profiles_excluded_by_b0_b16_comparison"] == 270
     assert row["profiles_excluded_by_b16_b16_comparison"] == 32
-    assert row["profiles_excluded_here"] == 208
+    assert row["profiles_excluded_here"] == 302
     assert row["profile_count_after"] == 19
     assert row["remaining_pair_slack_histogram"] == {
         96: 3,
@@ -30,12 +30,12 @@ def test_complementary_global_sign_arithmetic_is_exact():
     row = p17_phase_one_b16_global_sign_reduction()
     assert row["rigid_phase_one_b16_lower_bound"] == 9
     assert row["rigid_phase_zero_b0_lower_bound_histogram"] == {
-        1: 8,
-        2: 26,
-        3: 32,
-        4: 56,
-        5: 38,
-        6: 16,
+        1: 16,
+        2: 40,
+        3: 69,
+        4: 90,
+        5: 51,
+        6: 4,
     }
     assert row["rigid_phase_zero_b16_lower_bound_histogram"] == {
         1: 4,
@@ -61,3 +61,4 @@ def test_complementary_global_sign_arithmetic_is_exact():
     }
     assert row["p17_second_all_finite_endpoint_closed"] is False
     assert row["top_level_gates_changed"] is False
+    assert len(row["remaining_profile_indices"]) == 19

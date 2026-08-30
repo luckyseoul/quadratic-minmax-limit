@@ -38,7 +38,7 @@
       "proved": false,
       "phi_F_ge_6": false,
       "rhat": false,
-      "e1": true,
+      "e1": false,
       "Q_tau_named_in_p": false,
       "note": "Wick does not name A.  4(q\u22121)/(q+1) does not name Q_++. N\u208a/(2p) stays unnamed. Floor OPEN."
     }

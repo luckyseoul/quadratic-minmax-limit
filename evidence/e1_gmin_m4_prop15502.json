@@ -66,7 +66,7 @@
     "Q_forms_on_S0_all_p1": false,
     "note": "Pairing is a corollary of the Q-forms. The forms miss S0 at p=13. Aut does not force one Q++ for p\u22611\u226513. phi_F not imported."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false
 }

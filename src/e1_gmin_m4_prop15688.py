@@ -18,11 +18,11 @@ least ``p-1`` for ``p=1 mod 4``.  Hence, sharply,
 
 The Boolean quadratic ``(1-x_i)(1-x_j)`` attains equality.
 
-At the live p=19 second all-finite boundary, minimum row arithmetic leaves
-phase-zero residues ``0,2,3,4,6`` paired with the unique phase-one residue
-9.  Every positive phase-zero residue forces a quotient-zero, b=0
-direction with scaled lift mass in ``{4,6,8,12}``, all below the new floor
-16.  In residue zero the minimum profiles have inadmissible pair slack 34,
+At the live p=19 second all-finite boundary, corrected minimum row arithmetic
+leaves phase-zero residues ``0,2,3,4,6,7`` paired with the unique phase-one
+residue 9.  Every positive phase-zero residue forces a quotient-zero, b=0
+direction with scaled lift mass in ``{4,6,8,12,14}``, all below the new
+floor 16.  In residue zero the minimum profiles have inadmissible pair slack 34,
 but they are not the whole exact row: completion-bounded enumeration and
 the slack congruence leave 143 phase-labelled profiles (75 global shapes),
 with slack histogram ``{0:54,4:37,8:25,12:13,16:7,20:4,24:1,28:1,32:1}``.
@@ -38,6 +38,7 @@ from pathlib import Path
 
 from e1_gmin_m4_prop15669 import full_symbolic_floor
 from e1_gmin_m4_prop15681 import exact_type_rows, second_even_boundary
+from e1_gmin_m4_prop15723 import floor_excess_admissible
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -65,7 +66,7 @@ def _profile_rows(
         floor_value = full_symbolic_floor(P, b, phase)
         for quotient in range(target + 1):
             excess = 2 * u + PERIOD * quotient - floor_value
-            if excess >= 0 and excess != 2:
+            if floor_excess_admissible(P, b, phase, excess):
                 options.append((quotient, S - b, b))
 
     infinity = deficit_cap + S * M + 1
@@ -270,7 +271,7 @@ def p19_second_boundary_reduction() -> dict[str, object]:
                     }
                 )
 
-    expected_residues = [0, 2, 3, 4, 6]
+    expected_residues = [0, 2, 3, 4, 6, 7]
     if [int(row["u0"]) for row in pair_survivors] != expected_residues:
         raise ArithmeticError("p=19 pair-surviving residues changed")
     if {int(row["u1"]) for row in pair_survivors} != {9}:
@@ -323,6 +324,7 @@ def p19_second_boundary_reduction() -> dict[str, object]:
         "pair_deficit_budget": pair_budget,
         "pair_survivors_before_new_floor": pair_survivors,
         "positive_residue_rows": positive_rows,
+        "newly_restored_residue": 7,
         "positive_residues_all_excluded": True,
         "residue_zero_minimum_row": residue_zero_minimum[0],
         "residue_zero_minimum_pair_slack": residue_zero_minimum[0]["pair_slack"],

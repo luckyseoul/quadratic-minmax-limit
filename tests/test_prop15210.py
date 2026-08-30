@@ -53,7 +53,7 @@ def test_predicates_honest_false():
     assert cost_D_bound_proved_general() is False
     assert residual_i_closed_via_210() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     h = hinge_status_210()
     assert h["residual_i_closed"] is False
     assert h["cost_D_le_8_over_p_general"] is False

@@ -37,7 +37,7 @@
     "C": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "Names \u0394\u00b2 on the triple-rainbow class only. Other complementary types and Q_\u03c4 unnamed. phi_F not imported."
     }

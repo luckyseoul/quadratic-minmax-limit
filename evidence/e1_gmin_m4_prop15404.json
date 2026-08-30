@@ -55,7 +55,7 @@
       "proved": false,
       "ensemble_in_S": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "S(p) names a constructor/type-mean set, not ensemble Q_\u03c4. phi_F not imported."
     }

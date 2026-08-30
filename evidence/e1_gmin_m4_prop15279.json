@@ -52,7 +52,7 @@
     "gsum_disj_lb": false,
     "aut_schur": false,
     "pairing": false,
-    "e1": true
+    "e1": false
   },
   "cert_p5": {
     "p": 5,

@@ -46,7 +46,7 @@
     "phi_F_imported": false,
     "note": "(p\u22123)\u00b2 is certified at p=3,5,7, not a bijection for p\u226511. Q_\u03c4 unnamed. phi_F not imported."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false,
   "flags_not_flipped": [

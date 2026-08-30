@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Prop. 15.684 -- low-mass and conic-core reduction at p=23.
+"""Prop. 15.684 -- retracted low-mass reduction at p=23.
 
-At the second all-finite endpoint ``p=23,s=20``, exact quotient arithmetic
-leaves phase-one residue ``u_1=11`` and phase-zero residues
-``u_0=0,2,3,4,5,6,8``.  Proposition 15.681's universal scaled mass floor
-removes ``u_0=2,3,4,5`` but is sharp at ``u_0=6`` and does not reach
-``u_0=8``.  This proposition removes both remaining positive residues.
+At the second all-finite endpoint ``p=23,s=20``, corrected quotient
+arithmetic leaves phase-one residue ``u_1=11`` and phase-zero residues
+``u_0=0,2,3,4,5,6,8,9``.  Proposition 15.681's universal scaled mass floor
+removes ``u_0=2,3,4,5``; the valid low-value argument below removes
+``u_0=6,8``.  The newly restored ``u_0=9`` row has scaled mass ``c=18`` and
+is not covered by either argument.
 
 If ``B`` is the resulting nonzero nonnegative integral quadratic on
 ``J(23,12)``, put ``c=4p E[B]`` and ``H=max B``.  The stabilizer identity
@@ -21,17 +22,16 @@ shell has dimension 23 and equals ``(|X cap Y|-6)V_1``.  Affine
 parallelograms at one and two replacements then make an integer value
 congruent to ``-40/15`` modulo ``4/5``, an impossibility.
 
-Only residue zero remains.  Exact completion-bounded enumeration gives
+Conditional on residue zero, exact completion-bounded enumeration gives
 1,247 phase-labelled profiles.  Segre's tangent envelope excludes all 363
 arc profiles.  Coolsaet--Sticker's complete-arc classification of
 ``PG(2,23)`` and an off-conic secant count exclude every profile of pair
 slack 4 and 8, all but one profile of slack 12, and all but one profile of
 slack 16.  Exactly 203 profiles remain, all explicitly accounted for.
 
-This is a strict reduction, not closure of the ``p=23`` endpoint.  The two
-low-slack exceptions and every profile of slack at least 20 remain open, as
-do the ``p=17,19`` endpoints, later all-finite sizes, the infinity-present
-remainder, residual (ii), R1, global QVAR, Type I, and the limit.
+The residue-zero sublemmas remain valid, but the claim that only residue
+zero remains is retracted.  The ``u_0=9`` row, the two low-slack exceptions,
+and every residue-zero profile of slack at least 20 remain open.
 """
 from __future__ import annotations
 
@@ -41,7 +41,6 @@ import math
 from collections import Counter
 from fractions import Fraction
 from functools import lru_cache
-from pathlib import Path
 
 from e1_gmin_m4_prop15642 import stabilizer_mass_certificate
 from e1_gmin_m4_prop15669 import full_symbolic_floor
@@ -51,9 +50,12 @@ from e1_gmin_m4_prop15681 import (
     pair_slack_divisibility,
 )
 from e1_gmin_m4_prop15683 import tangent_envelope_input
+from e1_gmin_m4_prop15723 import (
+    backward_floor_plus_two_cell,
+    floor_excess_admissible,
+)
 
 
-ROOT = Path(__file__).resolve().parents[1]
 P = 23
 M = 12
 S = 20
@@ -234,8 +236,75 @@ def p23_small_mass_exclusion() -> dict[str, object]:
     }
 
 
+def p23_u9_open_profile() -> dict[str, object]:
+    """Verify an exact slack-zero profile in the restored ``u0=9`` row."""
+    specifications = {
+        "0": (0, 9, ((0, 0, 9), (20, 1, 3))),
+        "1": (1, 11, ((2, 0, 11), (18, 1, 1))),
+    }
+    phases: dict[str, dict[str, object]] = {}
+    all_admissible = True
+    for key, (phase, u, entries) in specifications.items():
+        quotient_sum = 0
+        deficit = 0
+        direction_count = 0
+        rows = []
+        for b, quotient, multiplicity in entries:
+            floor_value = full_symbolic_floor(P, b, phase)
+            excess = 2 * u + PERIOD * quotient - floor_value
+            admissible = floor_excess_admissible(P, b, phase, excess)
+            all_admissible = all_admissible and admissible
+            rows.append(
+                {
+                    "b": b,
+                    "quotient": quotient,
+                    "multiplicity": multiplicity,
+                    "floor": floor_value,
+                    "excess": excess,
+                    "admissible": admissible,
+                }
+            )
+            quotient_sum += multiplicity * quotient
+            deficit += multiplicity * (S - b)
+            direction_count += multiplicity
+        phases[key] = {
+            "phase": phase,
+            "u": u,
+            "entries": rows,
+            "direction_count": direction_count,
+            "quotient_sum": quotient_sum,
+            "deficit": deficit,
+        }
+
+    zero = phases["0"]
+    one = phases["1"]
+    total_deficit = int(zero["deficit"]) + int(one["deficit"])
+    if (
+        zero["direction_count"] != M
+        or zero["quotient_sum"] != M - 9
+        or zero["deficit"] != 180
+        or one["direction_count"] != M
+        or one["quotient_sum"] != M - 11
+        or one["deficit"] != 200
+        or not all_admissible
+        or total_deficit != PAIR_DEFICIT_BUDGET
+    ):
+        raise ArithmeticError("p=23 u0=9 open profile changed")
+    return {
+        "u0": 9,
+        "u1": 11,
+        "scaled_mass_c": 18,
+        "phases": phases,
+        "total_deficit": total_deficit,
+        "pair_slack": PAIR_DEFICIT_BUDGET - total_deficit,
+        "restored_floor_plus_two_cell": backward_floor_plus_two_cell(P, 20, 0),
+        "excluded": False,
+        "proved_feasible_in_floor_relaxation": True,
+    }
+
+
 def p23_endpoint_residue_ledger() -> dict[str, object]:
-    """Exact type minima and the complete positive-residue exclusion."""
+    """Return the corrected exact type minima and positive-residue status."""
     phase_zero = exact_type_rows(P, 0)
     phase_one = exact_type_rows(P, 1)
     pair_rows = []
@@ -261,7 +330,7 @@ def p23_endpoint_residue_ledger() -> dict[str, object]:
                     }
                 )
     survivors = [int(row["u0"]) for row in pair_rows]
-    if survivors != [0, 2, 3, 4, 5, 6, 8]:
+    if survivors != [0, 2, 3, 4, 5, 6, 8, 9]:
         raise ArithmeticError("p=23 pair-surviving residue list changed")
     if len(phase_one) != 1 or int(phase_one[0]["u"]) != 11:
         raise ArithmeticError("p=23 phase-one residue changed")
@@ -299,8 +368,14 @@ def p23_endpoint_residue_ledger() -> dict[str, object]:
                 "excluded": reason != "not excluded",
             }
         )
-    if not all(bool(row["excluded"]) for row in positive):
-        raise ArithmeticError("a positive p=23 residue survived")
+    positive_residues_all_excluded = all(
+        bool(row["excluded"]) for row in positive
+    )
+    open_positive_residues = [
+        int(row["u0"]) for row in positive if not bool(row["excluded"])
+    ]
+    if open_positive_residues != [9]:
+        raise ArithmeticError("corrected p=23 open residue list changed")
     return {
         "p": P,
         "s": S,
@@ -309,7 +384,9 @@ def p23_endpoint_residue_ledger() -> dict[str, object]:
         "phase_one_rows": phase_one,
         "pair_survivors": pair_rows,
         "positive_residue_rows": positive,
-        "positive_residues_all_excluded": True,
+        "positive_residues_all_excluded": positive_residues_all_excluded,
+        "open_positive_residues": open_positive_residues,
+        "open_positive_residue_witness": p23_u9_open_profile(),
         "residue_zero_remains": True,
         "small_mass_exclusion": special,
         "proved": True,
@@ -329,7 +406,7 @@ def _profile_rows(
         floor_value = full_symbolic_floor(P, b, phase)
         for quotient in range(target + 1):
             excess = 2 * u + PERIOD * quotient - floor_value
-            if excess >= 0 and excess != 2:
+            if floor_excess_admissible(P, b, phase, excess):
                 options.append((quotient, S - b, b))
 
     infinity = deficit_cap + S * M + 1
@@ -743,7 +820,7 @@ def _exceptional_low_slack_profiles() -> list[dict[str, object]]:
 
 
 def p23_reduction_theorem() -> dict[str, object]:
-    """Assemble the exact strict reduction without claiming endpoint closure."""
+    """Record the retracted reduction and its still-valid sublemmas."""
     residue = p23_endpoint_residue_ledger()
     census = p23_residue_zero_profile_census()
     arcs = p23_arc_envelope_exclusion()
@@ -763,10 +840,18 @@ def p23_reduction_theorem() -> dict[str, object]:
         raise ArithmeticError("p=23 reduction accounting failed")
     return {
         "prop": "15.684",
-        "title": "Low-mass and conic-core reduction at p=23",
-        "proved": True,
+        "title": "Retracted low-mass and conic-core reduction at p=23",
+        "record_status": "OPEN_RETRACTED_REDUCTION",
+        "proved": False,
+        "former_only_residue_zero_claim_retracted": True,
+        "retraction_reason": (
+            "the corrected floor-plus-two ledger restores u0=9 with scaled "
+            "mass c=18, outside the c=12 and c=16 exclusions"
+        ),
         "positive_residues_excluded": [2, 3, 4, 5, 6, 8],
-        "only_residue_zero_remains": True,
+        "open_positive_residues": [9],
+        "only_residue_zero_remains": False,
+        "residue_zero_reduction_proved_conditionally": True,
         "residue_zero_profile_count_before": 1247,
         "residue_zero_profiles_excluded": excluded,
         "residue_zero_profile_count_after": remaining,
@@ -776,6 +861,7 @@ def p23_reduction_theorem() -> dict[str, object]:
         "remaining_same_boundary_primes": [17, 19, 23],
         "top_level_gates_changed": False,
         "open_after_this_proposition": [
+            "the restored p=23 phase-zero residue u0=9 (scaled mass c=18)",
             "the two exceptional p=23 profiles of slack 12 and 16",
             "the 201 p=23 profiles of pair slack at least 20",
             "the p=17 and p=19 second all-finite endpoints",
@@ -812,16 +898,14 @@ def build_evidence() -> dict[str, object]:
     return _jsonable(p23_reduction_theorem())
 
 
-def main() -> None:
-    output = ROOT / "evidence" / "e1_gmin_m4_prop15684.json"
-    output.write_text(json.dumps(build_evidence(), indent=2) + "\n")
+def main() -> dict[str, object]:
     theorem = p23_reduction_theorem()
     print(
-        "Prop. 15.684: p=23 positive residues excluded; "
-        f"residue-zero profiles {theorem['residue_zero_profile_count_before']} -> "
-        f"{theorem['residue_zero_profile_count_after']}"
+        "Prop. 15.684: OPEN (former only-residue-zero reduction retracted); "
+        "u0=9 survives"
     )
-    print(f"wrote {output}")
+    print("canonical evidence intentionally not regenerated")
+    return theorem
 
 
 if __name__ == "__main__":

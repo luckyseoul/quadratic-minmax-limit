@@ -92,7 +92,7 @@
     "nS_free_named": false,
     "note": "NL-central count and stab\u2286{\u00b11} certified p=5,7. n_T = 1_{p\u22613} p(p\u22121) + nS_free(p\u22121) still has nS_free unnamed. D unnamed."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false
 }

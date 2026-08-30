@@ -18,8 +18,10 @@ from e1_gmin_m4_prop15171 import (
     deep_k_ge_3p_dual_farkas_all,
     deep_s2_freeness_fail_k_ge_3p_ND,
     deep_s2_freeness_fail_k_ge_3p_ND_closed,
+    deep_s2_freeness_fail_even_k_le_4p_minus_2_ND_closed,
     deep_s2_parity_forces_even_k,
     e1_closed_general,
+    e1_bounded_residual_split_closed,
     e1_open_residuals,
     main,
     main_L_from_e1,
@@ -102,17 +104,18 @@ def test_dual_params_mass_formula():
             assert pr["can_freeness_fail"] == (a <= thr)
 
 
-def test_residual_ii_affine_closed_full_open():
-    """Affine branch closed via 15.179; full residual (ii) via 15.236+237."""
+def test_residual_ii_affine_and_bounded_closed_full_open():
+    """15.236+237 stop at 4p-2; the global gate includes open k>=4p."""
     assert residual_ii_dual_twolevel_affine_closed() is True
     assert residual_ii_affine_branch_pieces_ok() is True
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True  # 15.179+236+237
+    assert deep_s2_freeness_fail_even_k_le_4p_minus_2_ND_closed() is True
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
     for p in (5, 7, 11, 13, 17, 19, 23):
         r = deep_s2_freeness_fail_k_ge_3p_ND(p)
         assert r["fail_eq_k_3p_minus_1_empty"] is True
         assert r["auto_freeness_at_3p_minus_2"] is True
     RII = prove_residual_ii()
-    assert RII["residual_ii_closed"] is True  # affine ∧ (ii-a) ∧ (ii-b)
+    assert RII["residual_ii_closed"] is False
     assert RII["residual_ii_affine_branch_closed"] is True
     assert RII["residual_ii_exhaustiveness_proved"] is False
     assert RII["gsum_disj_lb_required_for_affine_branch"] is False
@@ -122,12 +125,15 @@ def test_residual_ii_affine_closed_full_open():
 def test_e1_and_L_wire_honest_open():
     """E1/L open: residual (i) open (full residual (ii) closed by 15.237)."""
     assert type_I_k_3p_minus_2_closed_general() is True
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
+    assert deep_s2_freeness_fail_even_k_le_4p_minus_2_ND_closed() is True
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
     bt = required_bitight_levels_empty_all_primes()
     assert bt is True
-    assert e1_closed_general() is True
+    assert e1_bounded_residual_split_closed() is True
+    assert e1_closed_general() is False
     opens = e1_open_residuals()
-    assert opens == []
+    assert any("k≥4p" in item for item in opens)
+    assert any("multi-level" in item for item in opens)
     w = main_L_from_e1(e1=False, bitight=True)
     assert w["L_closed"] is False
     assert w["L_status"] == "OPEN"
@@ -137,12 +143,12 @@ def test_e1_and_L_wire_honest_open():
 
 def test_main():
     out = main()
-    assert out["proved"]["deep_s2_freeness_fail_k_ge_3p_ND"] is True
+    assert out["proved"]["deep_s2_freeness_fail_k_ge_3p_ND"] is False
     assert out["proved"]["residual_ii_affine_branch_closed"] is True
     assert out["proved"]["residual_ii_exhaustiveness_proved"] is False
     assert out["proved"]["type_I_k_3p_minus_2_closed"] is True
-    assert out["proved"]["E1_closed_general"] is True
-    assert out["proved"]["L_closed"] is True
-    assert out["L_status"] == "CLOSED"
-    assert out["open_residual"] == []
+    assert out["proved"]["E1_closed_general"] is False
+    assert out["proved"]["L_closed"] is False
+    assert out["L_status"] == "OPEN"
+    assert any("k≥4p" in item for item in out["open_residual"])
     assert out["proved"]["residual_closed_general"] is False  # 16N optional

@@ -64,7 +64,7 @@ def test_predicates_open():
     assert K4_bound_proved_general() is False
     assert residual_i_closed_via_frame() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     h = hinge_status_199()
     assert h["frame_identity_K4"] is True
     assert h["lambda_max_path_dead_p5"] is True

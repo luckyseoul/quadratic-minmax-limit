@@ -57,7 +57,7 @@ def test_flags_untouched():
     assert mix_unmixed() == AMP_UNM7
     assert AMP_P5 != Fraction(7, 6)
     assert LIVE_QNL[5] > Q_1d_pp_named(5)
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     assert gsum_disj_lb_proved_general() is False
     assert phi_F_ge_6_proved_general() is False
     assert D_form_on_lattice_general() is False

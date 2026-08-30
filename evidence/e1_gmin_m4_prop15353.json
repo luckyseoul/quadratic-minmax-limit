@@ -34,7 +34,7 @@
     "C": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "rhat": false,
       "Q_tau_named_in_p": false,
       "note": "Mixture of named per-y values recovers the ensemble at p=5,7 but is not a Gauss/Jacobi formula in p.  phi_F not imported."

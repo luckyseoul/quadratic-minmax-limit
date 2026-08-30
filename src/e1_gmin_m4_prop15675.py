@@ -28,6 +28,7 @@ from collections import Counter
 from pathlib import Path
 
 from e1_gmin_m4_prop15669 import full_symbolic_floor
+from e1_gmin_m4_prop15723 import floor_excess_admissible
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -134,7 +135,7 @@ def quantized_type_minimum_dp(p: int, phase: int) -> dict[str, object]:
             floor = full_symbolic_floor(p, b, phase)
             for k in range(target + 1):
                 excess = residue + period * k - floor
-                if excess >= 0 and excess != 2:
+                if floor_excess_admissible(p, b, phase, excess):
                     options.append((k, s - b, b))
         states: dict[int, tuple[int, tuple[int, ...]]] = {0: (0, ())}
         for _ in range(m):

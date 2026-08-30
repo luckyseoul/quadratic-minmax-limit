@@ -9,8 +9,10 @@ in one quadratic direction type as
 
 Every directional floor is at least ``P-2``.  For ``1<=u<=m-2`` every
 ``k_d`` is at least one, contradicting ``sum k_d=m-u<m``.  At ``u=0`` the
-forbidden two-unit lift forces all ``m`` directions to have floor ``P`` and
-mean ``P``.  At ``u=m-1``, exactly ``m-1`` directions have floor and mean
+two genuine Proposition 15.723 floor-plus-two cells at ``p=17`` are retained;
+their quotient two still cannot fit the total quotient sum ``m``.  Thus all
+``m`` directions have floor ``P`` and mean ``P``.  At ``u=m-1``, exactly
+``m-1`` directions have floor and mean
 ``P-2`` and one arbitrary direction has mean ``2P-2``.  All intermediate
 odd-fibre counts have floors in ``(P,2P-2]``, so they can occur only as that
 single exceptional direction.
@@ -32,6 +34,7 @@ import json
 from pathlib import Path
 
 from e1_gmin_m4_prop15669 import full_symbolic_floor
+from e1_gmin_m4_prop15723 import floor_excess_admissible
 from e1_gmin_m4_prop15673 import (
     branch_arithmetic,
     branch_name,
@@ -103,16 +106,24 @@ def residue_classification_ledger(p: int, phase: int) -> dict[str, object]:
         residue = 2 * u
         quotient_sum = m - u
 
-        def minimum_k(direction_floor: int) -> int:
+        def minimum_k(b: int | None, direction_floor: int) -> int:
             k = max(0, (direction_floor - residue + period - 1) // period)
-            if residue + period * k - direction_floor == 2:
+            excess = residue + period * k - direction_floor
+            admissible = (
+                excess >= 0 and excess != 2
+                if b is None
+                else floor_excess_admissible(p, b, phase, excess)
+            )
+            if not admissible:
                 k += 1
             return k
 
-        low_k = minimum_k(period - 2)
-        high_k = minimum_k(period)
+        # The two 15.723 exceptions lie in the middle band, never at either
+        # endpoint baseline floor.
+        low_k = minimum_k(None, period - 2)
+        high_k = minimum_k(None, period)
         intermediate_k = min(
-            minimum_k(int(value))
+            minimum_k(int(b), int(value))
             for b, value in floor["floors"].items()
             if int(b) not in (1, p - 2)
         )
@@ -177,6 +188,17 @@ def residue_classification_ledger(p: int, phase: int) -> dict[str, object]:
             "direction has mean 2P-2"
         ),
         "intermediate_direction_limit_per_type": 1,
+        "floor_plus_two_cells_retained": sorted(
+            [int(b), phase]
+            for b, value in floor["floors"].items()
+            if int(b) not in (1, p - 2)
+            and floor_excess_admissible(
+                p,
+                int(b),
+                phase,
+                2,
+            )
+        ),
         "proved": True,
     }
 

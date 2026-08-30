@@ -39,6 +39,7 @@ from e1_gmin_m4_prop15681 import (
     endpoint_residue_ledger,
     pair_slack_divisibility,
 )
+from e1_gmin_m4_prop15723 import floor_excess_admissible
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -66,7 +67,7 @@ def _profile_rows(
         floor_value = full_symbolic_floor(P, b, phase)
         for quotient in range(target + 1):
             excess = 2 * u + PERIOD * quotient - floor_value
-            if excess >= 0 and excess != 2:
+            if floor_excess_admissible(P, b, phase, excess):
                 options.append((quotient, S - b, b))
 
     states: set[tuple[int, int, tuple[int, ...]]] = {(0, 0, ())}

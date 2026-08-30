@@ -48,6 +48,7 @@ from pathlib import Path
 from e1_gmin_m4_prop15669 import full_symbolic_floor
 from e1_gmin_m4_prop15675 import first_even_survivor
 from e1_gmin_m4_prop15681 import endpoint_residue_ledger, pair_slack_divisibility
+from e1_gmin_m4_prop15723 import floor_excess_admissible
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -75,7 +76,7 @@ def _profile_rows(
         floor_value = full_symbolic_floor(P, b, phase)
         for quotient in range(target + 1):
             excess = 2 * u + PERIOD * quotient - floor_value
-            if excess >= 0 and excess != 2:
+            if floor_excess_admissible(P, b, phase, excess):
                 options.append((quotient, S - b, b))
 
     infinity = deficit_cap + S * M + 1

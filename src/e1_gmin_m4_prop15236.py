@@ -35,7 +35,9 @@ NOT claimed
 PREDICATES
   residual_ii_b_ND_closed() = True
   residual_ii_a_ND_closed() = True (15.237)
-  residual_ii_full_closed wires affine ∧ (ii-a ND) ∧ (ii-b ND) in 15.193
+  residual_ii_bounded_even_k_le_4p_minus_2_closed wires those three bounded
+  pieces in 15.193; residual_ii_full_closed additionally includes the live
+  even-k>=4p gate and is False.
 
 Writes evidence/e1_gmin_m4_prop15236.json
 """

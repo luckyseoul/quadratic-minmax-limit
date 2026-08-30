@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """Prop. 15.709 -- exclude every remaining p=17 profile with u_1=8.
 
-After Proposition 15.708, 507 exact profiles remain.  Exactly 280 have
+After Proposition 15.708, 869 exact profiles remain.  Exactly 548 have
 phase-one residue eight, and every one retains at least eight rigid
-phase-one weight-two directions.  The 66 rows with phase-zero residue zero
+phase-one weight-two directions.  The 334 rows with phase-zero residue zero
 retain a rigid weight-zero direction and fail the global gauge comparison.
 The 214 rows with phase-zero residue eight retain a rigid weight-16
 direction and fail Proposition 15.708's unique-even-fibre cell identity.
 
-The exact remainder is therefore 227 profiles, all with phase-one residue
+The first branch includes all 74 corrected slack-sixteen rows left outside
+Proposition 15.705's historical Orbiter target set.  The exact remainder is
+therefore 321 profiles, all with phase-one residue
 zero and pair slack at least 96.
 """
 from __future__ import annotations
@@ -29,19 +31,19 @@ P = 17
 def p17_phase_one_residue_eight_exclusion() -> dict[str, object]:
     """Apply the two rigid-anchor contradictions to the full live ledger."""
     previous = p17_slack_twenty_four_exclusion()
-    previous_histogram = {
-        int(slack): int(count)
-        for slack, count in previous["remaining_pair_slack_histogram"].items()
-    }
     census = p17_second_boundary_profile_census()
     profiles = [
-        (census_index, row)
-        for census_index, row in enumerate(census["profiles"])
-        if int(row["pair_slack"]) in previous_histogram
+        (int(census_index), census["profiles"][int(census_index)])
+        for census_index in previous["remaining_profile_indices"]
     ]
-    if len(profiles) != 507 or Counter(
+    previous_histogram = Counter(
         int(row["pair_slack"]) for _index, row in profiles
-    ) != Counter(previous_histogram):
+    )
+    if len(profiles) != 869 or previous_histogram != Counter(
+        {int(k): int(v) for k, v in previous["remaining_pair_slack_histogram"].items()}
+    ) or Counter(
+        int(row["pair_slack"]) for _index, row in profiles
+    ) != previous_histogram:
         raise ArithmeticError("pre-15.709 p=17 profile ledger changed")
 
     b0_rows = []
@@ -91,12 +93,13 @@ def p17_phase_one_residue_eight_exclusion() -> dict[str, object]:
             survivor_slack_histogram[int(profile["pair_slack"])] += 1
 
     expected_excluded_slack = {
-        28: 35,
-        32: 26,
-        36: 20,
-        40: 15,
-        44: 13,
-        48: 11,
+        16: 74,
+        28: 113,
+        32: 84,
+        36: 54,
+        40: 32,
+        44: 19,
+        48: 12,
         52: 9,
         56: 9,
         60: 9,
@@ -126,16 +129,16 @@ def p17_phase_one_residue_eight_exclusion() -> dict[str, object]:
         112: 24,
         116: 28,
         120: 30,
-        124: 26,
-        128: 22,
-        132: 16,
-        136: 11,
-        140: 7,
-        144: 5,
-        148: 3,
-        152: 2,
-        156: 2,
-        160: 2,
+        124: 38,
+        128: 32,
+        132: 30,
+        136: 26,
+        140: 18,
+        144: 17,
+        148: 13,
+        152: 8,
+        156: 5,
+        160: 3,
         164: 1,
         168: 1,
         172: 1,
@@ -158,15 +161,15 @@ def p17_phase_one_residue_eight_exclusion() -> dict[str, object]:
         240: 1,
     }
     if (
-        len(b0_rows) != 66
-        or b0_anchor_histogram != {3: 10, 4: 27, 5: 29}
+        len(b0_rows) != 334
+        or b0_anchor_histogram != {2: 5, 3: 60, 4: 178, 5: 91}
         or len(b16_rows) != 214
         or b16_anchor_histogram != {2: 4, 3: 30, 4: 36, 5: 36, 6: 36, 7: 36, 8: 36}
         or dict(sorted(excluded_slack_histogram.items())) != expected_excluded_slack
-        or len(survivors) != 227
+        or len(survivors) != 321
         or dict(sorted(survivor_slack_histogram.items())) != expected_survivor_slack
         or Counter((row["u0"], row["u1"]) for row in survivors)
-        != {(0, 0): 181, (8, 0): 37, (7, 0): 9}
+        != {(0, 0): 275, (8, 0): 37, (7, 0): 9}
     ):
         raise ArithmeticError("p=17 full rigid-anchor sweep changed")
 
@@ -176,7 +179,13 @@ def p17_phase_one_residue_eight_exclusion() -> dict[str, object]:
         or int(hard_certificate["nonnegative_count_upper_bound"]) != -3
     ):
         raise ArithmeticError("15.708 unique-even-fibre lemma changed")
-    after = len(survivors)
+    excluded_indices = {
+        int(row["census_index"]) for row in b0_rows + b16_rows
+    }
+    remaining_indices = sorted(int(row["census_index"]) for row in survivors)
+    if excluded_indices & set(remaining_indices):
+        raise ArithmeticError("15.709 excluded and surviving profile sets overlap")
+    after = len(remaining_indices)
     if sum(expected_survivor_slack.values()) != after or min(expected_survivor_slack) != 96:
         raise ArithmeticError("post-15.709 p=17 accounting changed")
 
@@ -188,11 +197,20 @@ def p17_phase_one_residue_eight_exclusion() -> dict[str, object]:
         "profiles_excluded_here": len(b0_rows) + len(b16_rows),
         "profiles_excluded_by_global_gauge_identity": len(b0_rows),
         "profiles_excluded_by_unique_even_fibre_identity": len(b16_rows),
+        "historical_orbiter_uncovered_slack_sixteen_profiles_received": 74,
+        "historical_orbiter_uncovered_slack_sixteen_profiles_excluded_here": int(
+            excluded_slack_histogram[16]
+        ),
+        "slack_sixteen_block_closed_after_rigid_anchor_sweep": (
+            int(excluded_slack_histogram[16]) == 74
+        ),
         "profile_count_after": after,
+        "excluded_profile_indices_here": sorted(excluded_indices),
+        "remaining_profile_indices": remaining_indices,
         "minimum_remaining_pair_slack": min(expected_survivor_slack),
         "remaining_pair_slack_histogram": expected_survivor_slack,
         "remaining_residue_pair_histogram": {
-            "u0=0,u1=0": 181,
+            "u0=0,u1=0": 275,
             "u0=7,u1=0": 9,
             "u0=8,u1=0": 37,
         },

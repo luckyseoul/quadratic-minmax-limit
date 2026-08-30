@@ -52,11 +52,22 @@ acceptance gate is the corrected dictionary returned by
    `p>=17`. This supersedes the first/second all-finite endpoint campaigns in
    15.675--15.712 as active gates, including the former 133-profile `p=23`
    remainder. Their internal lemmas remain valid. The first general endpoint
-   shell is `|D|=p+1`, normalized to infinity plus `p`; Proposition 15.676
-   closes pair-deficit equality, while strict deficit remains. The separate
-   small-prime remainders and even `k>4p` also remain open.
-3. **Type I, multi-level Max−:** OPEN. The general \(3A+B>0\) estimate is
-   not proved.
+   shell is `|D|=p+1`, normalized to infinity plus `p`. Proposition 15.676
+   closes pair-deficit equality. Proposition 15.722 proves exact signed phase
+   transport, excludes outside pair slack one, and identifies slack zero with
+   an aligned Miquelian circle; Proposition 15.724 excludes that circle by an
+   isolated-vertex and sharp-lift contradiction. Proposition 15.723 also
+   repairs the middle floor-plus-two shortcut, retaining its two genuine
+   `p=17` exceptions. Proposition 15.722 further excludes every positive
+   outside slack through `max(3,floor(sqrt(p)-5/2))`; only larger slack
+   remains. The
+   attempted parabola-plus-internal close in 15.725 is retracted: its finite
+   phase-zero census is data only, with the all-prime character bounds and
+   opposite sign still open. Separate small-prime remainders and even
+   `k>4p` also remain open.
+3. **Type I, multi-level Max−:** OPEN. The `|κ|=1` condition is `G>T`;
+   `|κ|=3` independently requires the signed `(μ,ν)` inequality, whose
+   nonparticular δ remainder is not controlled.
 4. **Lemma D:** TRUE.
 
 The older statement that residual (ii) was closed by 15.179/15.236/15.237

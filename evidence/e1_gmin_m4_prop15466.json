@@ -68,7 +68,7 @@
     "C": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "Named L catalogs miss Q++. L_\u03c4 still unnamed. phi_F not imported."
     }

@@ -289,11 +289,15 @@
       "residual_i": true
     }
   },
-  "open_roots": [
-    "R1: ||P_{E_4p} m4+||^2 <= n/12  -> closes leftovers 1 and 3",
-    "R2: Max- minus-slice/Walsh       -> leftover 2 alone"
+  "historical_delta_route_roots": [
+    "R1 (retired): ||P_{E_4p} m4+||^2 <= n/12",
+    "R2 (still related to live residual ii): Max- minus-slice/Walsh"
   ],
-  "scope_note": "e1_closed_general()=True is a separate wiring fact (e1_main_chain_status); the gate is the four GOAL units, three of which are False.",
+  "current_open_gates": [
+    "non-Walsh residual (ii), even k>=4p",
+    "multi-level Type I"
+  ],
+  "scope_note": "e1_closed_general()=False and agrees with the current four-unit gate; the delta inequality is no longer an acceptance unit after 15.720.",
   "flags_not_flipped": [
     "type_I",
     "phi_F_ge_6",

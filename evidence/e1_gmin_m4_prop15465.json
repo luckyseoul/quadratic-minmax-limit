@@ -64,7 +64,7 @@
       "proved": false,
       "R13": "706/693",
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "R names the 409-free ratio at p=5,7 only. Q_\u03c4 unnamed for p\u226513. phi_F not imported."
     }

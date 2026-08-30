@@ -62,7 +62,7 @@ def test_Snl_not_2q_at_p7():
 def test_flags_untouched():
     D = prove_open()
     assert D["proved"] is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     assert gsum_disj_lb_proved_general() is False
     assert phi_F_ge_6_proved_general() is False
 

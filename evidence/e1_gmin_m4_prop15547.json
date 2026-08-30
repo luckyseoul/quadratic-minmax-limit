@@ -129,7 +129,7 @@
       "proved": false,
       "residual_ii_k_eq_4p_empty": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "nF_9_to_13_open": true,
       "k_gt_4p_far_open": true,
       "note": "leftover+splus empty at p=5 k=22 for nF=0,3-8,14 (and leftover-only-empty nF). nF=9..13 and other even k>4p stay open. residual_ii_k_eq_4p_empty stays False."

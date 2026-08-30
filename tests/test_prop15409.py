@@ -96,7 +96,7 @@ def test_u_window_pins_p5():
 def test_flags_untouched():
     F = prove_open()
     assert F["proved"] is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     assert gsum_disj_lb_proved_general() is False
     assert phi_F_ge_6_proved_general() is False
     assert residual_ii_k_eq_4p_empty() is False

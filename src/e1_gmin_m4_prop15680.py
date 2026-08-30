@@ -36,6 +36,7 @@ from e1_gmin_m4_prop15642 import (
     polynomial_distance_support_floor,
 )
 from e1_gmin_m4_prop15669 import full_symbolic_floor
+from e1_gmin_m4_prop15723 import floor_excess_admissible
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -169,7 +170,7 @@ def _exact_profile_dp(phase: int) -> list[dict[str, object]]:
             floor_value = full_symbolic_floor(P, b, phase)
             for quotient in range(quotient_sum + 1):
                 excess = 2 * u + PERIOD * quotient - floor_value
-                if excess < 0 or excess == 2:
+                if not floor_excess_admissible(P, b, phase, excess):
                     continue
                 candidate = (S - b, b)
                 old = best_by_quotient.get(quotient)

@@ -48,3 +48,4 @@ def test_uniform_mean_infinity_candidates_all_fail_the_fibre_bound():
     )
     assert row["p17_second_all_finite_endpoint_closed"] is False
     assert row["top_level_gates_changed"] is False
+    assert len(row["remaining_profile_indices"]) == 14

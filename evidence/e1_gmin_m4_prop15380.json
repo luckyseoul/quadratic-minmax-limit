@@ -80,7 +80,7 @@
     "D": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "rhat": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "Leftover G is not known to be regular. Almost-stars at p=5 have S-support {0,2,\u2026,10}, not 4-level. No general majorant. phi_F not imported."

@@ -57,7 +57,7 @@ def test_live_flags_open():
     assert gplus_pd_proved_general() is True
     assert psl_span_F_eq_Wpp0() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     h = hinge_status_271()
     assert h["fperp_injective_general"] is False
     assert h["residual_i_closed"] is False

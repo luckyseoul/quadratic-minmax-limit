@@ -177,7 +177,7 @@
     "multilevel_ND_k_ge_4p_proved": false,
     "type_I_multilevel_bad_case_ND_closed": false,
     "type_I_aut_e_3AB_positive_general": false,
-    "e1_closed_general": true,
+    "e1_closed_general": false,
     "gsum_disj_lb_proved_general": false,
     "qvar_k_ge_7_proved_general": false,
     "global_qvar_proved_general": false,

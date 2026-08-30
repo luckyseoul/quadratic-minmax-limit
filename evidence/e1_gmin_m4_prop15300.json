@@ -134,7 +134,7 @@
       "proved": false,
       "phi_F_ge_6": false,
       "rhat": false,
-      "e1": true,
+      "e1": false,
       "Q_tau_named_in_p": false,
       "note": "det J is not the Q-denominator (144\u226013, 2688\u2260409). S_{k\u22600} still N/(4p). Floor OPEN."
     }

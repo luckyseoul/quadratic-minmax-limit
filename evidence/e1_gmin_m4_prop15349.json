@@ -76,7 +76,7 @@
     "D": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "rhat": false,
       "Q_tau_named_in_p": false,
       "note": "Named NL family for p\u22611 is not the full ensemble (extra types at p\u22657).  phi_F not imported."

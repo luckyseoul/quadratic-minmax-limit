@@ -60,7 +60,7 @@
     "C": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "T\u2299NC empty at p=37,41 so first_nc c is not a general name. Ensemble D / Q_\u03c4 still unnamed. phi_F not imported."
     }

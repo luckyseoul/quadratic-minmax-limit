@@ -26,7 +26,7 @@
     "phi_F_imported": false,
     "note": "Q_R(r) is named for all-R Max+. At p=5 that is all NL and the mixture evaluates 48/13. p=7 NL is not all R. Ensemble Q_\u03c4 unnamed for p\u22657. phi_F not imported."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false
 }

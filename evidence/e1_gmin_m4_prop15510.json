@@ -69,7 +69,7 @@
     "phi_F_imported": false,
     "note": "Translation Fix is named off the identity. The b=0 term is |H_+|, so Burnside still does not name D. phi_F not imported."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false,
   "flags_not_flipped": [

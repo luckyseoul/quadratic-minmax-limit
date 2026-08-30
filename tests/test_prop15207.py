@@ -44,4 +44,4 @@ def test_ker_sc_via_gplus():
     assert free_e_bound_proved_general() is False
     assert residual_i_closed_via_207() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False

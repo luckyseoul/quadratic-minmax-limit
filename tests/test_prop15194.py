@@ -77,7 +77,7 @@ def test_predicates_honest_open():
     assert row_mass_lp_blocks_dual_eq_general() is False
     assert residual_i_closed_via_row_mass() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     h = hinge_status_194()
     assert h["row_negative_mass_sufficient_lemma"] is True
     assert h["pure_N_e_lt_thr_for_paley"] is False

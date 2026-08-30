@@ -106,7 +106,7 @@
     "E": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "L_NL on 15.448 slots is not a field GJ formula (essential 19). Ensemble L_\u03c4 still has w=n_1d/|H+|. Q_\u03c4 unnamed. phi_F not imported."
     }

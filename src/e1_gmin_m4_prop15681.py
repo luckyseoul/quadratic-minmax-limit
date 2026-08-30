@@ -45,6 +45,7 @@ from pathlib import Path
 from e1_gmin_m4_prop15642 import stabilizer_mass_certificate
 from e1_gmin_m4_prop15669 import full_symbolic_floor
 from e1_gmin_m4_prop15675 import first_even_survivor
+from e1_gmin_m4_prop15723 import floor_excess_admissible
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -145,7 +146,7 @@ def exact_type_rows(p: int, phase: int) -> list[dict[str, object]]:
             floor_value = full_symbolic_floor(p, b, phase)
             for quotient in range(target + 1):
                 excess = 2 * u + period * quotient - floor_value
-                if excess < 0 or excess == 2:
+                if not floor_excess_admissible(p, b, phase, excess):
                     continue
                 candidate = (s - b, b)
                 old = best_by_quotient.get(quotient)
@@ -269,7 +270,7 @@ def _p29_profile_rows(
         floor_value = full_symbolic_floor(P, b, phase)
         for quotient in range(target + 1):
             excess = 2 * u + PERIOD * quotient - floor_value
-            if excess >= 0 and excess != 2:
+            if floor_excess_admissible(P, b, phase, excess):
                 options.append((quotient, S - b, b))
 
     states: set[tuple[int, int, tuple[int, ...]]] = {(0, 0, ())}

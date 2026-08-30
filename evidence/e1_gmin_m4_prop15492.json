@@ -27,7 +27,7 @@
     "phi_F_imported": false,
     "note": "Per-D Var is not the 15.326 floor. Ensemble mean 33/13 still unnamed as a law. \u27e8\u03b4,\u03c8\u27e9\u22642 open."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false
 }

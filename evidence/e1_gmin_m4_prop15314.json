@@ -189,7 +189,7 @@
       "proved": false,
       "phi_F_ge_6": false,
       "rhat": false,
-      "e1": true,
+      "e1": false,
       "Q_tau_named_in_p": false,
       "lambda_ge_6": false,
       "note": "Type sizes and F_1(j) named for all odd primes. The three off Q values still carry den N_+/(2p). phi_F not imported."

@@ -95,7 +95,7 @@
       "type_I_aut_e_3AB_positive_general": false,
       "phi_F_ge_6": false,
       "residual_ii_k_eq_4p_empty": false,
-      "e1": true,
+      "e1": false,
       "gsum": false,
       "note": "Zero-far is never the bad case; p=7 pointwise box empty. 3A+B>0 on Aut_e far classes remains G>T. Flags unflipped."
     }

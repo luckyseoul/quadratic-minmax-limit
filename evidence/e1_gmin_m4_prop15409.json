@@ -136,7 +136,7 @@
       "proved": false,
       "D_form_on_lattice_general": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "type_I_aut_e_3AB_positive_general": false,
       "type_I_multilevel_bad_case_ND_closed": false,

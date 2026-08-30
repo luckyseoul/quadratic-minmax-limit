@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Prop. 15.701 -- p=17 low-positive-slack conic-core reduction.
 
-Proposition 15.700 leaves 1,330 phase-labelled profiles at the second
+Proposition 15.700 leaves 2,219 phase-labelled profiles at the second
 all-finite boundary ``p=17, s=16``: two of slack zero and every profile of
-positive pair slack.  The exact positive-slack counts begin with 227 rows of
-slack four, 195 of slack eight, and 155 of slack twelve.
+positive pair slack.  The exact positive-slack counts begin with 292 rows of
+slack four, 292 of slack eight, and 267 of slack twelve.
 
 Pair slack ``4r`` permits deleting at most ``r`` boundary points to obtain an
 arc.  Sticker's exhaustive classification has one PGL class of 15-arcs in
@@ -14,7 +14,7 @@ arc.  Sticker's exhaustive classification has one PGL class of 15-arcs in
 At slack four the repaired arc already has size at least 15.  At slack eight,
 one undetermined direction completes a worst-case 14-arc to a 15-arc.  At
 slack twelve, two undetermined directions complete a worst-case 13-arc to a
-15-arc.  The exact profile ledger therefore puts 227, 128, and 43 rows,
+15-arc.  The exact profile ledger therefore puts 292, 140, and 43 rows,
 respectively, on a conic core.
 
 If ``h`` of the original sixteen affine points lie off that conic, then
@@ -25,9 +25,9 @@ has occupancy at least ``2+a`` and charges at least ``4a`` pair slack.  Thus
 
     pair slack >= 4*h*(6-h) >= 20,
 
-contradicting slack four, eight, or twelve.  This excludes 398 rows and leaves
-932.  It is a strict reduction, not endpoint closure: two tangent-conic
-slack-zero rows and 930 positive-slack rows remain.
+contradicting slack four, eight, or twelve.  This excludes 475 rows and leaves
+1,744.  It is a strict reduction, not endpoint closure: two tangent-conic
+slack-zero rows and 1,742 positive-slack rows remain.
 """
 from __future__ import annotations
 
@@ -141,13 +141,22 @@ def p17_low_positive_slack_profile_ledger() -> dict[str, object]:
     }
     rows = []
     for slack, rule in rules.items():
-        profiles = [
-            row for row in census["profiles"] if int(row["pair_slack"]) == slack
+        indexed_profiles = [
+            (index, row)
+            for index, row in enumerate(census["profiles"])
+            if int(row["pair_slack"]) == slack
         ]
-        t_histogram = dict(sorted(Counter(_undetermined_directions(row) for row in profiles).items()))
+        t_histogram = dict(
+            sorted(
+                Counter(
+                    _undetermined_directions(row)
+                    for _index, row in indexed_profiles
+                ).items()
+            )
+        )
         qualifying = [
-            row
-            for row in profiles
+            (index, row)
+            for index, row in indexed_profiles
             if _undetermined_directions(row) >= int(rule["required_undetermined"])
         ]
         classified_size_floor = (
@@ -158,7 +167,7 @@ def p17_low_positive_slack_profile_ledger() -> dict[str, object]:
         rows.append(
             {
                 "pair_slack": slack,
-                "profile_count": len(profiles),
+                "profile_count": len(indexed_profiles),
                 "undetermined_direction_histogram": t_histogram,
                 "delete_at_most": int(rule["delete_at_most"]),
                 "required_undetermined_directions": int(
@@ -167,7 +176,8 @@ def p17_low_positive_slack_profile_ledger() -> dict[str, object]:
                 "adjoined_infinity_points_at_most": int(rule["adjoin"]),
                 "classified_arc_size_floor": classified_size_floor,
                 "excluded_profile_count": len(qualifying),
-                "remaining_profile_count": len(profiles) - len(qualifying),
+                "remaining_profile_count": len(indexed_profiles) - len(qualifying),
+                "excluded_profile_indices": [index for index, _row in qualifying],
             }
         )
     observed = {
@@ -180,15 +190,18 @@ def p17_low_positive_slack_profile_ledger() -> dict[str, object]:
         for row in rows
     }
     expected = {
-        4: (227, {0: 113, 1: 102, 2: 12}, 227, 0),
-        8: (195, {0: 67, 1: 104, 2: 24}, 128, 67),
-        12: (155, {0: 33, 1: 79, 2: 43}, 43, 112),
+        4: (292, {0: 178, 1: 102, 2: 12}, 292, 0),
+        8: (292, {0: 152, 1: 116, 2: 24}, 140, 152),
+        12: (267, {0: 113, 1: 111, 2: 43}, 43, 224),
     }
     if observed != expected:
         raise ArithmeticError("p=17 low-slack profile ledger changed")
     return {
         "rows": rows,
         "excluded_profile_count": sum(int(row["excluded_profile_count"]) for row in rows),
+        "excluded_profile_indices": sorted(
+            index for row in rows for index in row["excluded_profile_indices"]
+        ),
         "remaining_profile_count_in_handled_slacks": sum(
             int(row["remaining_profile_count"]) for row in rows
         ),
@@ -204,16 +217,32 @@ def p17_low_positive_slack_conic_reduction() -> dict[str, object]:
     lemma = p17_conic_core_slack_lemma()
     ledger = p17_low_positive_slack_profile_ledger()
 
-    before = int(previous["profile_count_after"])
-    excluded = int(ledger["excluded_profile_count"])
-    after = before - excluded
-    histogram = dict(census["pair_slack_histogram"])
-    histogram[0] = int(previous["slack_zero_profile_count_after"])
-    histogram.pop(4)
-    histogram[8] = 67
-    histogram[12] = 112
-    histogram = dict(sorted(histogram.items()))
-    if excluded != 398 or after != 932 or sum(histogram.values()) != after:
+    previous_indices = set(int(index) for index in previous["remaining_profile_indices"])
+    excluded_indices = set(int(index) for index in ledger["excluded_profile_indices"])
+    if not excluded_indices <= previous_indices:
+        raise ArithmeticError("15.701 tried to exclude an already absent profile")
+    remaining_indices = sorted(previous_indices - excluded_indices)
+    before = len(previous_indices)
+    excluded = len(excluded_indices)
+    after = len(remaining_indices)
+    histogram = dict(
+        sorted(
+            Counter(
+                int(census["profiles"][index]["pair_slack"])
+                for index in remaining_indices
+            ).items()
+        )
+    )
+    if (
+        before != 2219
+        or excluded != 475
+        or after != 1744
+        or histogram.get(0) != 2
+        or 4 in histogram
+        or histogram.get(8) != 152
+        or histogram.get(12) != 224
+        or sum(histogram.values()) != after
+    ):
         raise ArithmeticError("p=17 post-conic reduction accounting changed")
     return {
         "proposition": "15.701",
@@ -222,6 +251,8 @@ def p17_low_positive_slack_conic_reduction() -> dict[str, object]:
         "profile_count_before": before,
         "profiles_excluded_here": excluded,
         "profile_count_after": after,
+        "excluded_profile_indices_here": sorted(excluded_indices),
+        "remaining_profile_indices": remaining_indices,
         "remaining_pair_slack_histogram": histogram,
         "remaining_slack_zero_profiles": 2,
         "remaining_positive_slack_profiles": after - 2,

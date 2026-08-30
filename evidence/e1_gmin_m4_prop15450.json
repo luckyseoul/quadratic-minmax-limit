@@ -72,7 +72,7 @@
       "n_hits_7": 4,
       "n_hits_13": 92,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "B_NL_5": "128/3",
       "note": "c-window is named and 19-free. |c_window|\u22654 for p\u22657 so c is not pinned. Q_\u03c4 unnamed. phi_F not imported."

@@ -17,21 +17,21 @@ def test_exact_census_and_signature_deduplication():
     profiles = MODULE.slack20_profiles()
     manifest = MODULE.signature_manifest()
 
-    assert len(profiles) == 78
-    assert [row["census_index"] for row in profiles] == list(range(936, 1014))
+    assert len(profiles) == 193
+    assert [row["census_index"] for row in profiles] == list(range(1364, 1557))
     assert all(row["pair_slack"] == 20 for row in profiles)
     assert all(
         2 <= row["phase_profiles_b"]["0"].get(0, 0) <= 6
         for row in profiles
     )
-    assert manifest["profile_count"] == 78
-    assert manifest["signature_count"] == 69
-    assert manifest["multiplicity_histogram"] == {"1": 60, "2": 9}
+    assert manifest["profile_count"] == 193
+    assert manifest["signature_count"] == 184
+    assert manifest["multiplicity_histogram"] == {"1": 175, "2": 9}
     assert sorted(
         index
         for signature in manifest["signatures"]
         for index in signature["profile_indices"]
-    ) == list(range(78))
+    ) == list(range(193))
 
 
 def test_normalization_and_residual_reflection_accounting():
@@ -50,9 +50,9 @@ def test_normalization_and_residual_reflection_accounting():
     }
     assert reflection["phase_zero_fixed"] == [17]
     assert reflection["phase_one_fixed"] == [0]
-    assert reflection["raw_assignment_count"] == 511_588
-    assert reflection["orbit_count"] == 255_812
-    assert reflection["fixed_assignment_count"] == 36
+    assert reflection["raw_assignment_count"] == 1_971_382
+    assert reflection["orbit_count"] == 985_730
+    assert reflection["fixed_assignment_count"] == 78
     assert min(
         row["direction_assignment_count_after_normalization"]
         for row in manifest["signatures"]
@@ -60,7 +60,7 @@ def test_normalization_and_residual_reflection_accounting():
     assert max(
         row["direction_assignment_count_after_normalization"]
         for row in manifest["signatures"]
-    ) == 30_240
+    ) == 60_480
 
 
 def test_radon_geometry_has_expected_native_xor_dimensions():
@@ -92,17 +92,17 @@ def test_profile_and_signature_cli_resolve_to_same_case():
     with pytest.raises(ValueError):
         MODULE.resolve_signature(signature_index=0, profile_index=0)
     with pytest.raises(ValueError):
-        MODULE.resolve_signature(signature_index=69)
+        MODULE.resolve_signature(signature_index=184)
     with pytest.raises(ValueError):
-        MODULE.resolve_signature(profile_index=78)
+        MODULE.resolve_signature(profile_index=193)
 
 
 def test_atomic_json_output_and_manifest_cli(tmp_path):
     output = tmp_path / "nested" / "manifest.json"
     MODULE.main(["--list-signatures", "--output", str(output)])
     payload = json.loads(output.read_text())
-    assert payload["profile_count"] == 78
-    assert payload["signature_count"] == 69
+    assert payload["profile_count"] == 193
+    assert payload["signature_count"] == 184
     assert not list(output.parent.glob(".manifest.json.*.tmp"))
 
 

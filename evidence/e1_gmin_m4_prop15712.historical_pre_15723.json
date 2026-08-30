@@ -1,0 +1,43 @@
+{
+  "record_status": "HISTORICAL_PRE_15.723_PAYLOAD",
+  "warning": "Counts descend from the former blanket floor-plus-two filter; see the canonical summary for the corrected replay.",
+  "boundary_size": 16,
+  "collinear_phase_one_profile": {
+    "16": 9
+  },
+  "collinear_phase_zero_profile": {
+    "0": 1,
+    "16": 8
+  },
+  "collinear_profile_present_in_remainder": false,
+  "common_phase_one_profile": {
+    "16": 9
+  },
+  "direction_theorem_reference": {
+    "doi": "10.1007/s00013-024-01979-x",
+    "modern_statement": "G. Somlai, A new proof of R\u00e9dei's theorem on the number of directions, Arch. Math. 122 (2024), 575-580",
+    "original": "T. Sz\u0151nyi, On the number of directions determined by a set of points in an affine Galois plane, JCTA 74 (1996), 141-146"
+  },
+  "maximum_boundary_direction_count": 9,
+  "minimum_noncollinear_direction_count": 10,
+  "p": 17,
+  "p17_second_all_finite_endpoint_closed": true,
+  "phase_one_b16_directions_are_nondirections": true,
+  "phase_one_nondirection_count": 9,
+  "profile_count_after": 0,
+  "profile_count_before": 14,
+  "profiles_excluded_here": 14,
+  "proposition": "15.712",
+  "proved_analytically": true,
+  "remaining_pair_slack_histogram": {},
+  "remaining_residue_pair_histogram": {},
+  "szonyi_theorem_hypotheses": {
+    "noncollinear_direction_lower_bound": "(k+3)/2",
+    "point_count_at_most_prime": true,
+    "prime_affine_plane": true
+  },
+  "therefore_boundary_collinear": true,
+  "top_level_gates_changed": false,
+  "uses_new_arc_classification": false,
+  "uses_solver": false
+}

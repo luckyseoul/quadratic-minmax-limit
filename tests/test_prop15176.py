@@ -47,7 +47,7 @@ def test_compare_and_open_predicates():
     assert r["candidate_beats_star"] is True
     assert r["wrong_172_claims_minus_2_over_p_suffices"] is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     out = main()
     assert out["proved"]["minus_1_over_p_suffices_for_residual_i"] is True
     assert out["proved"]["minus_2_over_p_does_not_suffice"] is True

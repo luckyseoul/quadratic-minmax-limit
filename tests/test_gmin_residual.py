@@ -411,8 +411,8 @@ def test_prop_15_55_tight_obstruction_algebra():
         assert abs(val - 4.0) < 1e-12, (p, val)
 
 
-def test_prop_15_55_lambda_max_certified():
-    """Drive shipped tight-obstruction analyzer: λ_max=n/2 simple iff p≥5 in {3,5,7}."""
+def test_prop_15_55_spectral_hypothesis_does_not_imply_tight_obstruction():
+    """The simple top eigenvalue is real, but the old kernel implication is false."""
     import sys
 
     sys.path.insert(0, str(ROOT / "src"))
@@ -429,7 +429,10 @@ def test_prop_15_55_lambda_max_certified():
         assert r["row_sum_is_n_over_2"]
         assert r["allones_quad_is_4"]
         assert r["n_over_2_is_simple_max"]
-        assert r["tight_size_2p_impossible_if_simple_max"]
+        assert r["spectral_hypothesis_holds"] is True
+        assert r["tight_size_2p_impossible_if_simple_max"] is False
+        assert r["retracted"] is True
+        assert "ker(G)" in r["note"]
         assert abs(r["lambda_max"] - r["n_over_2"]) < 1e-8
 
 

@@ -27,22 +27,23 @@ def test_complete_fourteen_arc_has_no_index_zero_or_one_points():
     assert certificate["no_index_one_outside_points"]
 
 
-def test_complete_fourteen_arc_profile_ledger_excludes_146_rows():
+def test_complete_fourteen_arc_profile_ledger_excludes_263_rows():
     ledger = p17_complete_fourteen_arc_profile_ledger()
-    assert ledger["slack_eight"]["newly_excluded"] == 67
+    assert ledger["slack_eight"]["newly_excluded"] == 152
     assert ledger["slack_eight"]["remaining"] == 0
-    assert ledger["slack_twelve"]["newly_excluded"] == 79
-    assert ledger["slack_twelve"]["remaining_without_undetermined_direction"] == 33
-    assert ledger["newly_excluded_profile_count"] == 146
+    assert ledger["slack_twelve"]["newly_excluded"] == 111
+    assert ledger["slack_twelve"]["remaining_without_undetermined_direction"] == 113
+    assert ledger["newly_excluded_profile_count"] == 263
 
 
-def test_prop15702_reduces_p17_remainder_to_786():
+def test_prop15702_reduces_p17_remainder_to_1481():
     theorem = p17_complete_fourteen_arc_exclusion()
-    assert theorem["profile_count_before"] == 932
-    assert theorem["profiles_excluded_here"] == 146
-    assert theorem["profile_count_after"] == 786
+    assert theorem["profile_count_before"] == 1744
+    assert theorem["profiles_excluded_here"] == 263
+    assert theorem["profile_count_after"] == 1481
     assert 8 not in theorem["remaining_pair_slack_histogram"]
     assert theorem["remaining_pair_slack_histogram"][0] == 2
-    assert theorem["remaining_pair_slack_histogram"][12] == 33
-    assert theorem["remaining_profiles_of_slack_at_least_sixteen"] == 751
+    assert theorem["remaining_pair_slack_histogram"][12] == 113
+    assert theorem["remaining_profiles_of_slack_at_least_sixteen"] == 1366
+    assert len(theorem["remaining_profile_indices"]) == 1481
     assert not theorem["p17_second_all_finite_endpoint_closed"]

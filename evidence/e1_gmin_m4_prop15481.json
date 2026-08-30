@@ -59,7 +59,7 @@
     "D": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "W_c is the E-sum on y\u00b2=x\u00b3\u2212x, not a short rational in p. Q_\u03c4 unnamed as a formula in p. phi_F not imported."
     }

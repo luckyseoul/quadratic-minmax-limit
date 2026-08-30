@@ -89,7 +89,7 @@
     "D": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "rhat": false,
       "Q_tau_named_in_p": false,
       "named_extra": "T\u2299NC (and T\u2299NC\u00b2 at p=7)",

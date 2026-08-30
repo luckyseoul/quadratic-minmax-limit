@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Prop. 15.703 -- close the p=17 slack-twelve block.
 
-Proposition 15.702 leaves 33 slack-twelve profiles, all without an
+Proposition 15.702 leaves 113 slack-twelve profiles, all without an
 undetermined direction.  Any realization repairs by exactly three deletions
 to a 13-arc ``A``; shallower repair was excluded by the complete-14/conic
 argument.
@@ -23,9 +23,9 @@ candidate triples all produce slack twenty.  If the deleted set contains the
 extension point itself, the other two points each have complete-14-arc
 secant index at least two and already force slack at least sixteen.
 
-Thus no slack-twelve boundary exists.  All 33 rows are excluded and the p17
-remainder falls from 786 to 753: two slack-zero tangent-conic rows and 751
-rows of slack at least sixteen.  The endpoint remains open.
+Thus no slack-twelve boundary exists.  All 113 rows are excluded and the p17
+remainder falls from 1,481 to 1,368: two slack-zero tangent-conic rows and
+1,366 rows of slack at least sixteen.  The endpoint remains open.
 """
 from __future__ import annotations
 
@@ -228,15 +228,34 @@ def p17_slack_twelve_exclusion() -> dict[str, object]:
         )
         for row in profiles
     )
-    if dict(sorted(t_histogram.items())) != {0: 33, 1: 79, 2: 43}:
+    if dict(sorted(t_histogram.items())) != {0: 113, 1: 111, 2: 43}:
         raise ArithmeticError("p17 slack-twelve profile ledger changed")
 
-    before = int(previous["profile_count_after"])
-    excluded = int(previous["remaining_slack_twelve_profiles"])
-    after = before - excluded
-    histogram = dict(previous["remaining_pair_slack_histogram"])
-    histogram.pop(12)
-    if before != 786 or excluded != 33 or after != 753 or sum(histogram.values()) != after:
+    previous_indices = set(int(index) for index in previous["remaining_profile_indices"])
+    excluded_indices = {
+        index
+        for index in previous_indices
+        if int(census["profiles"][index]["pair_slack"]) == 12
+    }
+    remaining_indices = sorted(previous_indices - excluded_indices)
+    before = len(previous_indices)
+    excluded = len(excluded_indices)
+    after = len(remaining_indices)
+    histogram = dict(
+        sorted(
+            Counter(
+                int(census["profiles"][index]["pair_slack"])
+                for index in remaining_indices
+            ).items()
+        )
+    )
+    if (
+        before != 1481
+        or excluded != 113
+        or after != 1368
+        or 12 in histogram
+        or sum(histogram.values()) != after
+    ):
         raise ArithmeticError("p17 post-slack-twelve accounting changed")
     return {
         "proposition": "15.703",
@@ -245,6 +264,8 @@ def p17_slack_twelve_exclusion() -> dict[str, object]:
         "profile_count_before": before,
         "profiles_excluded_here": excluded,
         "profile_count_after": after,
+        "excluded_profile_indices_here": sorted(excluded_indices),
+        "remaining_profile_indices": remaining_indices,
         "remaining_pair_slack_histogram": histogram,
         "remaining_slack_zero_profiles": 2,
         "remaining_profiles_of_slack_at_least_sixteen": after - 2,

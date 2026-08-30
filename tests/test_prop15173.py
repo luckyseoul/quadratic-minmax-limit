@@ -64,7 +64,7 @@ def test_hinge_still_open_no_soft_close():
     assert h["bound_H_ge_minus_1_over_p_proved_general"] is False
     assert h["gsum_disj_lb_proved_general"] is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     assert "Prove H_ab" in h["open"]
 
 

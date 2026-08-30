@@ -38,7 +38,7 @@ def test_flags_and_open():
     assert B["Q_sub_closed_in_p"] is False
     assert B["mu_full_named_in_p"] is False
     assert B["phi_F_imported"] is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     assert gsum_disj_lb_proved_general() is False
     assert phi_F_ge_6_proved_general() is False
     out = main()

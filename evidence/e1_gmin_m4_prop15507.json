@@ -56,7 +56,7 @@
     "phi_F_imported": false,
     "note": "Pairing at p\u22611 is named in one mass. The J=2 bound is Q++\u2264Qpp_floor_ub, not proved Max+-free. phi_F not imported."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false,
   "flags_not_flipped": [

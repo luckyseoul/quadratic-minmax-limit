@@ -54,9 +54,9 @@ def test_e1_and_L_open_honest():
     assert residual_i_dual_eq_empty_proved_general() is True  # 15.272/15.249 two-level slice
     assert type_I_k_3p_minus_2_closed_general() is True
     assert residual_ii_dual_twolevel_affine_closed() is True  # 15.179 freeze branch
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True  # 15.179+236+237
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
     # Historical 15.170 AND closes only the obsolete two-level/bounded split.
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     from e1_main_chain_status import four_e1_units_closed
 
     assert four_e1_units_closed()["closed"] is False

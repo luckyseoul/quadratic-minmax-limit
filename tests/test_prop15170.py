@@ -10,6 +10,8 @@ from e1_gmin_m4_prop15170 import (
     dual_equality_correlation_need,
     dual_equality_gsum_obstruction,
     dual_equality_impossible_general,
+    deep_s2_freeness_fail_even_k_le_4p_minus_2_ND_closed,
+    e1_bounded_residual_split_closed,
     e1_closed_general,
     e1_open_residuals,
     es2_strictly_less_than_k,
@@ -107,17 +109,21 @@ def test_bad_case_min_equals_dual():
         assert b["min_equals_dual"] is True
 
 
-def test_e1_closed_after_residual_i():
-    """E(1) is Type I ∧ residual (ii) ∧ bi-tight(p=5)."""
+def test_e1_stays_open_after_bounded_residual_i_split():
+    """The historical bounded split is true, but the global E(1) gate is not."""
     from e1_gmin_m4_prop15171 import deep_s2_freeness_fail_k_ge_3p_ND_closed as d171
     from e1_gmin_m4_prop15179 import residual_ii_dual_twolevel_affine_closed
 
     assert type_I_k_3p_minus_2_closed_general() is True
     assert residual_ii_dual_twolevel_affine_closed() is True
-    assert d171() is True
+    assert d171() is False
+    assert deep_s2_freeness_fail_even_k_le_4p_minus_2_ND_closed() is True
+    assert e1_bounded_residual_split_closed() is True
     assert required_bitight_levels_empty_all_primes() is True
-    assert e1_closed_general() is True
-    assert e1_open_residuals() == []
+    assert e1_closed_general() is False
+    opens = e1_open_residuals()
+    assert any("k≥4p" in item for item in opens)
+    assert any("multi-level" in item for item in opens)
     L = main_L_from_e1(True, True)
     assert L["L_closed"] is True
     bt = required_bitight_levels_empty_all_primes()
@@ -132,5 +138,5 @@ def test_main_honest():
     assert out["proved"]["gsum_farkas_poly_positive"] is True
     assert out["proved"]["residual_closed_general"] is True
     assert out["proved"]["type_I_k_3p_minus_2_ND_class_closed"] is True
-    assert out["proved"]["E1_closed_general"] is True
-    assert out["L_status"] == "CLOSED"
+    assert out["proved"]["E1_closed_general"] is False
+    assert out["L_status"] == "OPEN"

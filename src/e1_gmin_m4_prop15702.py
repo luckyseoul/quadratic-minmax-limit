@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Prop. 15.702 -- complete-14-arc exclusion at p=17.
 
-Proposition 15.701 leaves 932 profiles at the second all-finite boundary
-``p=17,s=16``.  Its unresolved low-slack block consists of 67 slack-eight
-profiles with no undetermined direction and 112 slack-twelve profiles, 79 of
+Proposition 15.701 leaves 1,744 profiles at the second all-finite boundary
+``p=17,s=16``.  Its unresolved low-slack block consists of 152 slack-eight
+profiles with no undetermined direction and 224 slack-twelve profiles, 111 of
 which have one undetermined direction.
 
 Sticker's exhaustive complete-arc classification records one complete
@@ -29,8 +29,8 @@ from a deleted affine point to the adjoined infinity point contains a core
 point.  Consequently all complete-14-arc secants through each deleted point
 are already core secants, forcing slack at least ``4*3*2=24``.
 
-This excludes 67+79=146 additional profiles and leaves 786: two at slack
-zero, 33 at slack twelve, and 751 at slack at least sixteen.  The endpoint
+This excludes 152+111=263 additional profiles and leaves 1,481: two at slack
+zero, 113 at slack twelve, and 1,366 at slack at least sixteen.  The endpoint
 remains open.
 """
 from __future__ import annotations
@@ -139,17 +139,43 @@ def _undetermined_directions(row: dict[str, object]) -> int:
 
 
 def p17_complete_fourteen_arc_profile_ledger() -> dict[str, object]:
-    """Extract the 67+79 rows newly excluded by the certificate."""
+    """Extract the 152+111 rows newly excluded by the certificate."""
     profiles = p17_second_boundary_profile_census()["profiles"]
-    slack_eight = [row for row in profiles if int(row["pair_slack"]) == 8]
-    slack_twelve = [row for row in profiles if int(row["pair_slack"]) == 12]
-    t8 = dict(sorted(Counter(_undetermined_directions(row) for row in slack_eight).items()))
-    t12 = dict(sorted(Counter(_undetermined_directions(row) for row in slack_twelve).items()))
-    newly_eight = [row for row in slack_eight if _undetermined_directions(row) == 0]
-    newly_twelve = [row for row in slack_twelve if _undetermined_directions(row) == 1]
-    if t8 != {0: 67, 1: 104, 2: 24} or t12 != {0: 33, 1: 79, 2: 43}:
+    slack_eight = [
+        (index, row)
+        for index, row in enumerate(profiles)
+        if int(row["pair_slack"]) == 8
+    ]
+    slack_twelve = [
+        (index, row)
+        for index, row in enumerate(profiles)
+        if int(row["pair_slack"]) == 12
+    ]
+    t8 = dict(
+        sorted(
+            Counter(_undetermined_directions(row) for _index, row in slack_eight).items()
+        )
+    )
+    t12 = dict(
+        sorted(
+            Counter(
+                _undetermined_directions(row) for _index, row in slack_twelve
+            ).items()
+        )
+    )
+    newly_eight = [
+        (index, row)
+        for index, row in slack_eight
+        if _undetermined_directions(row) == 0
+    ]
+    newly_twelve = [
+        (index, row)
+        for index, row in slack_twelve
+        if _undetermined_directions(row) == 1
+    ]
+    if t8 != {0: 152, 1: 116, 2: 24} or t12 != {0: 113, 1: 111, 2: 43}:
         raise ArithmeticError("p=17 low-slack undetermined ledger changed")
-    if len(newly_eight) != 67 or len(newly_twelve) != 79:
+    if len(newly_eight) != 152 or len(newly_twelve) != 111:
         raise ArithmeticError("p=17 complete-14-arc exclusion count changed")
     return {
         "slack_eight": {
@@ -167,6 +193,10 @@ def p17_complete_fourteen_arc_profile_ledger() -> dict[str, object]:
             "remaining_without_undetermined_direction": t12[0],
         },
         "newly_excluded_profile_count": len(newly_eight) + len(newly_twelve),
+        "newly_excluded_profile_indices": sorted(
+            [index for index, _row in newly_eight]
+            + [index for index, _row in newly_twelve]
+        ),
         "proved": True,
     }
 
@@ -183,19 +213,34 @@ def p17_complete_fourteen_arc_exclusion() -> dict[str, object]:
     if int(certificate["minimum_outside_secant_index"]) != 2:
         raise ArithmeticError("p=17 complete-14-arc minimum index changed")
 
-    before = int(previous["profile_count_after"])
-    excluded = int(ledger["newly_excluded_profile_count"])
-    after = before - excluded
-    histogram = dict(previous["remaining_pair_slack_histogram"])
-    histogram.pop(8)
-    histogram[12] = 33
-    histogram = dict(sorted(histogram.items()))
-    high_slack_count = sum(count for slack, count in histogram.items() if int(slack) >= 16)
+    previous_indices = set(int(index) for index in previous["remaining_profile_indices"])
+    excluded_indices = set(
+        int(index) for index in ledger["newly_excluded_profile_indices"]
+    )
+    if not excluded_indices <= previous_indices:
+        raise ArithmeticError("15.702 tried to exclude an already absent profile")
+    remaining_indices = sorted(previous_indices - excluded_indices)
+    before = len(previous_indices)
+    excluded = len(excluded_indices)
+    after = len(remaining_indices)
+    histogram = dict(
+        sorted(
+            Counter(
+                int(census["profiles"][index]["pair_slack"])
+                for index in remaining_indices
+            ).items()
+        )
+    )
+    high_slack_count = sum(
+        count for slack, count in histogram.items() if int(slack) >= 16
+    )
     if (
-        before != 932
-        or excluded != 146
-        or after != 786
-        or high_slack_count != 751
+        before != 1744
+        or excluded != 263
+        or after != 1481
+        or 8 in histogram
+        or histogram.get(12) != 113
+        or high_slack_count != 1366
         or sum(histogram.values()) != after
     ):
         raise ArithmeticError("p=17 post-complete-14-arc accounting changed")
@@ -206,9 +251,11 @@ def p17_complete_fourteen_arc_exclusion() -> dict[str, object]:
         "profile_count_before": before,
         "profiles_excluded_here": excluded,
         "profile_count_after": after,
+        "excluded_profile_indices_here": sorted(excluded_indices),
+        "remaining_profile_indices": remaining_indices,
         "remaining_pair_slack_histogram": histogram,
         "remaining_slack_zero_profiles": 2,
-        "remaining_slack_twelve_profiles": 33,
+        "remaining_slack_twelve_profiles": 113,
         "remaining_profiles_of_slack_at_least_sixteen": high_slack_count,
         "slack_eight_exclusion": (
             "repair depth two gives a complete 14-arc whose two deleted "

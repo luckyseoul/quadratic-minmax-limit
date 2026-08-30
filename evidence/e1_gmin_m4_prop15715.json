@@ -2,8 +2,39 @@
   "actual_boundary_count_after_z1_exclusion": 129024,
   "actual_boundary_count_before": 6453552,
   "boundary": "infinity plus seven finite points",
+  "different_grid_rerun_evidence": "evidence/p7_infinity7_positive_z1_v100_audit.json",
+  "different_grid_rerun_validated": true,
+  "evidence_sha256": {
+    "different_grid_rerun": "edcfb01b515b2f0141f6ef652bf25624067bcefb7dbc49984ddaf5d2d97e4176",
+    "primary_scan": "a965cb6242118daba652dad2053dec06d4dccb59729d7ab83fb65a81fb487c12",
+    "projected_rank_certificate": "e44edb4c1689af9ca859f4410ae33f24a1f0613217580abe0781858aa3dc128d"
+  },
   "full_mod7_survivors": 0,
-  "independent_grid_audit_evidence": "evidence/p7_infinity7_positive_z1_v100_audit.json",
+  "independent_implementation_validated": false,
+  "input_integrity": {
+    "array_sha256": {
+      "base": "1bd5ca1015bbb735222fe100b1e8b41bb54b13df2aa8667480b11108ad4cea05",
+      "catalog_counts": "8a453446b3f6c7a85f19e4782f0b9add3dff1e242a255ea256f59abf65a719a6",
+      "catalog_keys": "6350a652f1d7fa725883171874813fd0a370ddcb894436ac7edf25371b2a88bf",
+      "catalog_tails": "c9cad7108ff2344cb681121314066b9fc5823cfa15aceb9ef81af915856f0b3c",
+      "direction_types": "a71e5bf6a9f0ea29944e99ec7a721144096416ced212c5f534c2f4a633d48fd5",
+      "equation_matrix": "32b378e8bd6c55deb9b6b546c73ee869b69a5e0d7037f0ed474be5ae882fbc1a",
+      "finite_labels": "96c23cbbee81215029c045ddc326ef7950db23fdc61036d4714f798d9db8e895",
+      "floor_tables": "2b66d3b0184b8bb3cc85452ebffa91a819aa26dcf83eac59cae2091c08277656",
+      "left_dependencies": "0405fad25d2295ed722bd8ee15ebd6592907d8abdf9d97ddfa866500816dbad2",
+      "selected_rows": "a3f3d4d6546d519e09bd0ff6f7b957b8b59327e90d9a2c7b8fd2d645d0325d09",
+      "zero_tables": "72642567c6d5dfe031174a2690df4f0be1501921e353d923c934ca7f10e07d79"
+    },
+    "recomputed_from_current_checkout": true,
+    "source_sha256": {
+      "scripts/p7_infinity7_positive_z0_mod7_gpu.py": "f748005d9be3286094cf7693941544d762f8bef3ae30a27c19b32fb781e7d951",
+      "scripts/p7_infinity7_positive_z1_mod7_gpu.py": "2e03ddbc8f27a0e00fef2ee603571c6fdd50a4a42e9785806c61f2237e082019",
+      "scripts/p7_size6_positive_infinity_mod7_gpu.py": "d0e54d2749a1fcd2841674134301fef241acbed2abdc5777aedfc5c36e87330a",
+      "scripts/p7_unsaturated_mod7_batch.py": "598c5012a080677df0bb6cde00d3beb256ad5cf9a7cdf36cb5dc46591e6a6f27",
+      "scripts/p7_unsaturated_modular_catalog_filter.py": "f9b2781984ab3e2336977d43b657fe337bb09b37baea600b6fdb1f94483d135a",
+      "src/e1_gmin_m4_prop15632.py": "eda17b867dfd9654eb69d5b9f8b6dbb1b9791dd4ef79acc3060ddbf980822e0c"
+    }
+  },
   "left_dependency_count": 135,
   "mean_allocations_per_boundary": 4,
   "modulus": 7,
@@ -16,7 +47,17 @@
   "projected_b_profile_count_before": 792,
   "projected_b_profiles_excluded_here": 300,
   "projected_dependency_count": 23,
+  "projected_mod7_boundary_candidate_ranks_stored": 1326,
   "projected_mod7_boundary_candidates": 1326,
+  "projected_rank_certificate_evidence": "evidence/p7_infinity7_positive_z1_projected_ranks.json",
+  "projected_rank_validation": {
+    "all_ranks_replayed_against_current_cpu_projection": true,
+    "independent_implementation_validated": false,
+    "preserved_primary_full_output_sha256": "75b37dcea1c7862677738f9f5e67d2b47f67c73b1e2b207064500dc891942464",
+    "rank_count": 1326,
+    "rank_sha256": "23de1f85d34f641d06279e8cdbc17fe6615fcd98198885e18f695d1812982b4c",
+    "recovery_status": "full_rank_list_recovered_from_preserved_primary_run_output"
+  },
   "proposition": "15.715",
   "proved_by_complete_exact_finite_scan": true,
   "remaining_projected_undetermined_direction_histogram": {
@@ -28,5 +69,6 @@
   "scan_script": "scripts/p7_infinity7_positive_z1_mod7_gpu.py",
   "top_level_gates_changed": false,
   "undetermined_direction_count_excluded": 1,
+  "validation_scope": "complete projected-then-host-exact CUDA scan plus a same-implementation different-grid rerun; all 1326 stored projected ranks replay the current CPU projection, but no independent implementation has validated absence of GPU projection false negatives",
   "z1_boundaries_excluded": 6324528
 }

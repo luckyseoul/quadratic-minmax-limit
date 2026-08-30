@@ -1,0 +1,3640 @@
+{
+  "prop": "15.722",
+  "title": "Exact phase cocycle and multi-chart p+1 reductions",
+  "proved": true,
+  "universal_certificate": {
+    "scope": "every odd prime p>=17",
+    "signed_phase_cocycle": {
+      "proved": true,
+      "signed_multiplier": {
+        "finite_nonpole": "delta_g(x)=chi(c*x+d)",
+        "c_nonzero_pole": "delta_g(r)=chi(c)",
+        "c_nonzero_infinity": "delta_g(infinity)=chi(c)",
+        "c_zero_no_pole": true,
+        "c_zero_finite_and_infinity": "delta_g(x)=delta_g(infinity)=chi(d)=chi(a)"
+      },
+      "edge_product_transport": "c_(gH)=c_H*product_{x in boundary(H)} delta_g(x)",
+      "reason": "each transported edge receives the two endpoint multipliers; even vertex degrees cancel and odd vertex degrees leave exactly the boundary product",
+      "relative_flip_mask_still_only_permuted": true
+    },
+    "chart_phase_specialization": {
+      "proved": true,
+      "boundary_polynomial": "f(X)=product_{x in D}(X-x), |D|=p+1",
+      "normalization": "g_r(z)=1/(z-r)",
+      "multiplier": "delta_r(x)=chi(x-r) for finite x!=r and delta_r(r)=delta_r(infinity)=1",
+      "boundary_point_r_in_D": "c_r=c_H*chi(f'(r))",
+      "outside_point_r_not_in_D": "c_r=c_H*chi(f(r))",
+      "no_untracked_determinant_sign": "det(g_r)=-1 is a square in F_(p^2), and rescaling an SL representative changes every multiplier by a square"
+    },
+    "pair_slack_identity": {
+      "proved": true,
+      "identity": "(sum_d b_d-P)/4=sum_{n_l=2r}r(r-1)+sum_{n_l=2r+1}r^2",
+      "inputs": [
+        "sum_d sum_l C(n_l,2)=C(P,2)",
+        "P-b_d=2*sum_l floor(n_l/2)"
+      ],
+      "sample_line_contributions": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 2,
+        "5": 4,
+        "6": 6,
+        "7": 9,
+        "8": 12
+      },
+      "R_zero": "every line has occupancy at most two; equivalently a P-arc",
+      "R_one": "exactly one 3-secant and every other line has occupancy at most two"
+    },
+    "R_two_structure": {
+      "p": 17,
+      "R": 2,
+      "positive_line_contributions": {
+        "3": 1,
+        "4": 2,
+        "5": 4,
+        "6": 6,
+        "7": 9
+      },
+      "partitions_of_two": [
+        [
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "rich_line_patterns": [
+        "one 4-secant and no other rich line",
+        "two 3-secants and no other rich line"
+      ],
+      "intersecting_trisecants": {
+        "meaning": "the two 3-secants share a boundary point",
+        "deletion": "delete their shared boundary point",
+        "remainder": "a p-arc",
+        "Segre_dependency": {
+          "field": "F_17",
+          "plane": "PG(2,17)",
+          "arc_size": 17,
+          "hypotheses": "Desarguesian plane, odd field order p>=5",
+          "conclusion": "every p-arc is contained in a nonsingular conic",
+          "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+          "all_hypotheses_met": true,
+          "proved_dependency": true,
+          "proved": true
+        },
+        "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+        "Miquelian_not_forced": true,
+        "minimum_surviving_conic_secants": 7,
+        "contradicts_total_R_two": true
+      },
+      "nonintersecting_or_four_secant": {
+        "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+        "remainder": "a (p-1)-arc",
+        "extension_dependency": {
+          "p": 17,
+          "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+          "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+          "p_minus_one_arc_is_incomplete": true,
+          "extension": "every (p-1)-arc extends to a p-arc",
+          "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+          "proved_dependency": true,
+          "proved": true
+        },
+        "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+        "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+        "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+        "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+        "minimum_surviving_conic_secants_through_either_replacement": 6,
+        "contradicts_total_R_two": true
+      },
+      "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+      "excluded": true,
+      "next_exact_target": "none at R=2; use the combined low-slack theorem",
+      "proved": true
+    },
+    "R_three_structure": {
+      "p": 17,
+      "R": 3,
+      "partitions_of_three": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "rich_line_patterns": [
+        "one 4-secant and one 3-secant",
+        "three 3-secants"
+      ],
+      "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+      "remainder": "a (p-2)-arc",
+      "extension_dependency": {
+        "p": 17,
+        "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+        "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+        "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+        "p_minus_one_dependency": {
+          "p": 17,
+          "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+          "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+          "p_minus_one_arc_is_incomplete": true,
+          "extension": "every (p-1)-arc extends to a p-arc",
+          "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+          "proved_dependency": true,
+          "proved": true
+        },
+        "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+        "proved_dependency": true,
+        "proved": true
+      },
+      "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+      "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+      "minimum_surviving_conic_secants_through_each_replacement": 5,
+      "maximum_rich_lines_allowed_by_R": 3,
+      "excluded": true,
+      "proved": true
+    },
+    "low_slack_conic_exclusion": {
+      "p": 17,
+      "minimal_deletion_lemma": {
+        "construction": "delete n_l-2 points from every rich line, take the union, then remove redundant deletions",
+        "size": "1<=t<=sum_l(n_l-2)<=R",
+        "even_occupancy_gap": "h(2r)-(2r-2)=(r-1)(r-2)>=0",
+        "odd_occupancy_gap": "h(2r+1)-(2r-1)=(r-1)^2>=0",
+        "minimality_witness": "each deleted z lies on a line with exactly two retained arc points"
+      },
+      "prime_arc_conic_dependency": "Ball--Lavrauw, Planar arcs, published Theorem 5 / arXiv v4 Theorem 3: a prime-field arc of size at least p-sqrt(p)+7/2 lies on a conic",
+      "generic_cutoff": 1,
+      "generic_cutoff_exact_condition": "(2R+5)^2<=4p",
+      "generic_minimum_surviving_secants_at_cutoff": 7,
+      "generic_secants_exceed_slack": true,
+      "uniform_near_arc_cutoff": 3,
+      "combined_excluded_positive_R_through": 3,
+      "first_open_R_at_least": 4,
+      "R_two_dependency": {
+        "p": 17,
+        "R": 2,
+        "positive_line_contributions": {
+          "3": 1,
+          "4": 2,
+          "5": 4,
+          "6": 6,
+          "7": 9
+        },
+        "partitions_of_two": [
+          [
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "rich_line_patterns": [
+          "one 4-secant and no other rich line",
+          "two 3-secants and no other rich line"
+        ],
+        "intersecting_trisecants": {
+          "meaning": "the two 3-secants share a boundary point",
+          "deletion": "delete their shared boundary point",
+          "remainder": "a p-arc",
+          "Segre_dependency": {
+            "field": "F_17",
+            "plane": "PG(2,17)",
+            "arc_size": 17,
+            "hypotheses": "Desarguesian plane, odd field order p>=5",
+            "conclusion": "every p-arc is contained in a nonsingular conic",
+            "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+            "all_hypotheses_met": true,
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+          "Miquelian_not_forced": true,
+          "minimum_surviving_conic_secants": 7,
+          "contradicts_total_R_two": true
+        },
+        "nonintersecting_or_four_secant": {
+          "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+          "remainder": "a (p-1)-arc",
+          "extension_dependency": {
+            "p": 17,
+            "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+            "p_minus_one_arc_is_incomplete": true,
+            "extension": "every (p-1)-arc extends to a p-arc",
+            "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+          "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+          "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+          "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+          "minimum_surviving_conic_secants_through_either_replacement": 6,
+          "contradicts_total_R_two": true
+        },
+        "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+        "excluded": true,
+        "next_exact_target": "none at R=2; use the combined low-slack theorem",
+        "proved": true
+      },
+      "R_three_dependency": {
+        "p": 17,
+        "R": 3,
+        "partitions_of_three": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "rich_line_patterns": [
+          "one 4-secant and one 3-secant",
+          "three 3-secants"
+        ],
+        "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+        "remainder": "a (p-2)-arc",
+        "extension_dependency": {
+          "p": 17,
+          "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+          "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+          "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+          "p_minus_one_dependency": {
+            "p": 17,
+            "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+            "p_minus_one_arc_is_incomplete": true,
+            "extension": "every (p-1)-arc extends to a p-arc",
+            "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+          "proved_dependency": true,
+          "proved": true
+        },
+        "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+        "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+        "minimum_surviving_conic_secants_through_each_replacement": 5,
+        "maximum_rich_lines_allowed_by_R": 3,
+        "excluded": true,
+        "proved": true
+      },
+      "proved": true
+    },
+    "low_slack_secant_bounds_are_increasing": true,
+    "R_one": {
+      "q_arc_dependency": {
+        "field": "F_17",
+        "plane": "PG(2,17)",
+        "arc_size": 17,
+        "hypotheses": "Desarguesian plane, odd field order p>=5",
+        "conclusion": "every p-arc is contained in a nonsingular conic",
+        "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+        "all_hypotheses_met": true,
+        "proved_dependency": true,
+        "proved": true
+      },
+      "minimum_surviving_secants_at_p17": 7,
+      "minimum_is_increasing": true
+    },
+    "R_zero": {
+      "smooth_curve_dependency": {
+        "forms": "nonsingular anisotropic binary quadratics Q and N over F_p",
+        "separable": "p is odd, so each nonsingular quadratic has two simple roots",
+        "disjoint_roots_if_nonproportional": "a shared root forces the shared Frobenius-conjugate root, hence proportionality",
+        "quartic": "Q*N is squarefree when Q and N are nonproportional",
+        "smooth_model": "Y^2=Q*N is a smooth double cover of P^1 of genus one",
+        "projective_character_sum": "sum_[u:v] chi(Q(u,v)N(u,v))=#C(F_p)-(p+1)",
+        "hasse_bound": "absolute character sum at most 2*sqrt(p)",
+        "forced_agreement_lower_bound": 14,
+        "squared_separation": "(p-3)^2=196>4p=68",
+        "strict_separation": true,
+        "proved": true
+      },
+      "hasse_gap_at_p17": 128,
+      "hasse_gap_odd_step_at_p17": 52,
+      "gap_is_increasing_for_p>=17": true
+    },
+    "one_point_replacement_dependency": {
+      "prop_15_676_proved": true,
+      "infinity_plus_p_pair_equality_excluded": true
+    },
+    "full_circle_phase_symbolic_identity": {
+      "boundary_multiplier": "(-1)^m*eps",
+      "outside_circle_b2_type": "eps",
+      "forced_c_H": "(-1)^m",
+      "prop_15_669_exact_floor_dependency": true,
+      "proved": true
+    },
+    "proved": true
+  },
+  "phase_transport": {
+    "proved": true,
+    "signed_multiplier": {
+      "finite_nonpole": "delta_g(x)=chi(c*x+d)",
+      "c_nonzero_pole": "delta_g(r)=chi(c)",
+      "c_nonzero_infinity": "delta_g(infinity)=chi(c)",
+      "c_zero_no_pole": true,
+      "c_zero_finite_and_infinity": "delta_g(x)=delta_g(infinity)=chi(d)=chi(a)"
+    },
+    "edge_product_transport": "c_(gH)=c_H*product_{x in boundary(H)} delta_g(x)",
+    "reason": "each transported edge receives the two endpoint multipliers; even vertex degrees cancel and odd vertex degrees leave exactly the boundary product",
+    "relative_flip_mask_still_only_permuted": true
+  },
+  "chart_specializations": {
+    "proved": true,
+    "boundary_polynomial": "f(X)=product_{x in D}(X-x), |D|=p+1",
+    "normalization": "g_r(z)=1/(z-r)",
+    "multiplier": "delta_r(x)=chi(x-r) for finite x!=r and delta_r(r)=delta_r(infinity)=1",
+    "boundary_point_r_in_D": "c_r=c_H*chi(f'(r))",
+    "outside_point_r_not_in_D": "c_r=c_H*chi(f(r))",
+    "no_untracked_determinant_sign": "det(g_r)=-1 is a square in F_(p^2), and rescaling an SL representative changes every multiplier by a square"
+  },
+  "outside_pair_slack": {
+    "proved": true,
+    "identity": "(sum_d b_d-P)/4=sum_{n_l=2r}r(r-1)+sum_{n_l=2r+1}r^2",
+    "inputs": [
+      "sum_d sum_l C(n_l,2)=C(P,2)",
+      "P-b_d=2*sum_l floor(n_l/2)"
+    ],
+    "sample_line_contributions": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 2,
+      "5": 4,
+      "6": 6,
+      "7": 9,
+      "8": 12
+    },
+    "R_zero": "every line has occupancy at most two; equivalently a P-arc",
+    "R_one": "exactly one 3-secant and every other line has occupancy at most two"
+  },
+  "outside_R_two_structure": {
+    "p": 17,
+    "R": 2,
+    "positive_line_contributions": {
+      "3": 1,
+      "4": 2,
+      "5": 4,
+      "6": 6,
+      "7": 9
+    },
+    "partitions_of_two": [
+      [
+        2
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "rich_line_patterns": [
+      "one 4-secant and no other rich line",
+      "two 3-secants and no other rich line"
+    ],
+    "intersecting_trisecants": {
+      "meaning": "the two 3-secants share a boundary point",
+      "deletion": "delete their shared boundary point",
+      "remainder": "a p-arc",
+      "Segre_dependency": {
+        "field": "F_17",
+        "plane": "PG(2,17)",
+        "arc_size": 17,
+        "hypotheses": "Desarguesian plane, odd field order p>=5",
+        "conclusion": "every p-arc is contained in a nonsingular conic",
+        "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+        "all_hypotheses_met": true,
+        "proved_dependency": true,
+        "proved": true
+      },
+      "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+      "Miquelian_not_forced": true,
+      "minimum_surviving_conic_secants": 7,
+      "contradicts_total_R_two": true
+    },
+    "nonintersecting_or_four_secant": {
+      "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+      "remainder": "a (p-1)-arc",
+      "extension_dependency": {
+        "p": 17,
+        "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+        "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+        "p_minus_one_arc_is_incomplete": true,
+        "extension": "every (p-1)-arc extends to a p-arc",
+        "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+        "proved_dependency": true,
+        "proved": true
+      },
+      "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+      "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+      "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+      "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+      "minimum_surviving_conic_secants_through_either_replacement": 6,
+      "contradicts_total_R_two": true
+    },
+    "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+    "excluded": true,
+    "next_exact_target": "none at R=2; use the combined low-slack theorem",
+    "proved": true
+  },
+  "outside_R_three_structure": {
+    "p": 17,
+    "R": 3,
+    "partitions_of_three": [
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "rich_line_patterns": [
+      "one 4-secant and one 3-secant",
+      "three 3-secants"
+    ],
+    "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+    "remainder": "a (p-2)-arc",
+    "extension_dependency": {
+      "p": 17,
+      "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+      "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+      "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+      "p_minus_one_dependency": {
+        "p": 17,
+        "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+        "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+        "p_minus_one_arc_is_incomplete": true,
+        "extension": "every (p-1)-arc extends to a p-arc",
+        "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+        "proved_dependency": true,
+        "proved": true
+      },
+      "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+      "proved_dependency": true,
+      "proved": true
+    },
+    "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+    "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+    "minimum_surviving_conic_secants_through_each_replacement": 5,
+    "maximum_rich_lines_allowed_by_R": 3,
+    "excluded": true,
+    "proved": true
+  },
+  "outside_low_slack_conic_exclusion": {
+    "p": 17,
+    "minimal_deletion_lemma": {
+      "construction": "delete n_l-2 points from every rich line, take the union, then remove redundant deletions",
+      "size": "1<=t<=sum_l(n_l-2)<=R",
+      "even_occupancy_gap": "h(2r)-(2r-2)=(r-1)(r-2)>=0",
+      "odd_occupancy_gap": "h(2r+1)-(2r-1)=(r-1)^2>=0",
+      "minimality_witness": "each deleted z lies on a line with exactly two retained arc points"
+    },
+    "prime_arc_conic_dependency": "Ball--Lavrauw, Planar arcs, published Theorem 5 / arXiv v4 Theorem 3: a prime-field arc of size at least p-sqrt(p)+7/2 lies on a conic",
+    "generic_cutoff": 1,
+    "generic_cutoff_exact_condition": "(2R+5)^2<=4p",
+    "generic_minimum_surviving_secants_at_cutoff": 7,
+    "generic_secants_exceed_slack": true,
+    "uniform_near_arc_cutoff": 3,
+    "combined_excluded_positive_R_through": 3,
+    "first_open_R_at_least": 4,
+    "R_two_dependency": {
+      "p": 17,
+      "R": 2,
+      "positive_line_contributions": {
+        "3": 1,
+        "4": 2,
+        "5": 4,
+        "6": 6,
+        "7": 9
+      },
+      "partitions_of_two": [
+        [
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "rich_line_patterns": [
+        "one 4-secant and no other rich line",
+        "two 3-secants and no other rich line"
+      ],
+      "intersecting_trisecants": {
+        "meaning": "the two 3-secants share a boundary point",
+        "deletion": "delete their shared boundary point",
+        "remainder": "a p-arc",
+        "Segre_dependency": {
+          "field": "F_17",
+          "plane": "PG(2,17)",
+          "arc_size": 17,
+          "hypotheses": "Desarguesian plane, odd field order p>=5",
+          "conclusion": "every p-arc is contained in a nonsingular conic",
+          "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+          "all_hypotheses_met": true,
+          "proved_dependency": true,
+          "proved": true
+        },
+        "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+        "Miquelian_not_forced": true,
+        "minimum_surviving_conic_secants": 7,
+        "contradicts_total_R_two": true
+      },
+      "nonintersecting_or_four_secant": {
+        "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+        "remainder": "a (p-1)-arc",
+        "extension_dependency": {
+          "p": 17,
+          "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+          "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+          "p_minus_one_arc_is_incomplete": true,
+          "extension": "every (p-1)-arc extends to a p-arc",
+          "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+          "proved_dependency": true,
+          "proved": true
+        },
+        "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+        "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+        "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+        "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+        "minimum_surviving_conic_secants_through_either_replacement": 6,
+        "contradicts_total_R_two": true
+      },
+      "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+      "excluded": true,
+      "next_exact_target": "none at R=2; use the combined low-slack theorem",
+      "proved": true
+    },
+    "R_three_dependency": {
+      "p": 17,
+      "R": 3,
+      "partitions_of_three": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "rich_line_patterns": [
+        "one 4-secant and one 3-secant",
+        "three 3-secants"
+      ],
+      "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+      "remainder": "a (p-2)-arc",
+      "extension_dependency": {
+        "p": 17,
+        "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+        "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+        "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+        "p_minus_one_dependency": {
+          "p": 17,
+          "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+          "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+          "p_minus_one_arc_is_incomplete": true,
+          "extension": "every (p-1)-arc extends to a p-arc",
+          "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+          "proved_dependency": true,
+          "proved": true
+        },
+        "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+        "proved_dependency": true,
+        "proved": true
+      },
+      "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+      "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+      "minimum_surviving_conic_secants_through_each_replacement": 5,
+      "maximum_rich_lines_allowed_by_R": 3,
+      "excluded": true,
+      "proved": true
+    },
+    "proved": true
+  },
+  "theorem": {
+    "boundary_chart_phases": "c_v=c_H*chi(f'(v)); their product is +1",
+    "outside_chart_phases": "c_w=c_H*chi(f(w))",
+    "outside_R_one": "IMPOSSIBLE",
+    "outside_R_two": "IMPOSSIBLE_BY_CONIC_EXTENSION_AND_SECANT_COUNT",
+    "outside_R_three": "IMPOSSIBLE_BY_CONIC_EXTENSION_AND_SECANT_COUNT",
+    "positive_outside_slack_excluded_through": "max(3,floor(sqrt(p)-5/2))",
+    "outside_R_zero": "FORCES_A_MIQUELIAN_CIRCLE_WITH_EXACT_TYPE_ALIGNMENT",
+    "one_point_Miquelian_circle_replacements": "EXCLUDED_BY_A_SECOND_CHART",
+    "full_circle_phase": "FORCED_TO_m_MOD_2_IN_EVERY_BOUNDARY_POINT_CHART",
+    "full_circle_profile": "one b=1 plus p copies of b=p; transverse floors zero",
+    "full_circle_boundary": "OPEN_AFTER_EXACT_ONE_PHASE_NORMAL_FORM",
+    "strict_outside_profiles_R_at_least_2": "R_EQUALS_2_AND_3_IMPOSSIBLE",
+    "strict_outside_profiles_R_at_least_4": "OPEN_AFTER_THE_PRIME_DEPENDENT_LOW_SLACK_CUTOFF",
+    "whole_p_plus_one_shell": "OPEN",
+    "residual_ii": false,
+    "type_I": false,
+    "limit_exists": false
+  },
+  "sample_ledgers_regression_only": {
+    "17": {
+      "derivative_phase_product": {
+        "p": 17,
+        "boundary_size": 18,
+        "identity": "product_{v in D} f'(v)=(-1)^(P(P-1)/2)*product_{i<j}(v_i-v_j)^2",
+        "sign_exponent": 153,
+        "chi_F_p2_minus_one": 1,
+        "product_of_derivative_characters": 1,
+        "product_of_transported_boundary_phases": 1,
+        "number_of_negative_boundary_phases_is_even": true,
+        "proved": true
+      },
+      "R_one": {
+        "p": 17,
+        "assumption": "one 3-secant and no other line of occupancy at least three",
+        "delete_one_triple_point": "a p-arc, hence contained in a conic",
+        "p_arc_conic_dependency": {
+          "field": "F_17",
+          "plane": "PG(2,17)",
+          "arc_size": 17,
+          "hypotheses": "Desarguesian plane, odd field order p>=5",
+          "conclusion": "every p-arc is contained in a nonsingular conic",
+          "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+          "all_hypotheses_met": true,
+          "proved_dependency": true,
+          "proved": true
+        },
+        "deleted_point_is_off_conic": "if it were on the conic, all p+1 points would be the conic and there would be no 3-secant",
+        "minimum_full_conic_secants_through_deleted_point": 8,
+        "maximum_destroyed_by_the_missing_conic_point": 1,
+        "minimum_surviving_secants": 7,
+        "contradicts_unique_trisecant": true,
+        "R_one_excluded": true,
+        "proved": true
+      },
+      "R_two": {
+        "p": 17,
+        "R": 2,
+        "positive_line_contributions": {
+          "3": 1,
+          "4": 2,
+          "5": 4,
+          "6": 6,
+          "7": 9
+        },
+        "partitions_of_two": [
+          [
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "rich_line_patterns": [
+          "one 4-secant and no other rich line",
+          "two 3-secants and no other rich line"
+        ],
+        "intersecting_trisecants": {
+          "meaning": "the two 3-secants share a boundary point",
+          "deletion": "delete their shared boundary point",
+          "remainder": "a p-arc",
+          "Segre_dependency": {
+            "field": "F_17",
+            "plane": "PG(2,17)",
+            "arc_size": 17,
+            "hypotheses": "Desarguesian plane, odd field order p>=5",
+            "conclusion": "every p-arc is contained in a nonsingular conic",
+            "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+            "all_hypotheses_met": true,
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+          "Miquelian_not_forced": true,
+          "minimum_surviving_conic_secants": 7,
+          "contradicts_total_R_two": true
+        },
+        "nonintersecting_or_four_secant": {
+          "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+          "remainder": "a (p-1)-arc",
+          "extension_dependency": {
+            "p": 17,
+            "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+            "p_minus_one_arc_is_incomplete": true,
+            "extension": "every (p-1)-arc extends to a p-arc",
+            "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+          "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+          "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+          "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+          "minimum_surviving_conic_secants_through_either_replacement": 6,
+          "contradicts_total_R_two": true
+        },
+        "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+        "excluded": true,
+        "next_exact_target": "none at R=2; use the combined low-slack theorem",
+        "proved": true
+      },
+      "R_three": {
+        "p": 17,
+        "R": 3,
+        "partitions_of_three": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "rich_line_patterns": [
+          "one 4-secant and one 3-secant",
+          "three 3-secants"
+        ],
+        "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+        "remainder": "a (p-2)-arc",
+        "extension_dependency": {
+          "p": 17,
+          "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+          "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+          "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+          "p_minus_one_dependency": {
+            "p": 17,
+            "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+            "p_minus_one_arc_is_incomplete": true,
+            "extension": "every (p-1)-arc extends to a p-arc",
+            "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+          "proved_dependency": true,
+          "proved": true
+        },
+        "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+        "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+        "minimum_surviving_conic_secants_through_each_replacement": 5,
+        "maximum_rich_lines_allowed_by_R": 3,
+        "excluded": true,
+        "proved": true
+      },
+      "low_slack": {
+        "p": 17,
+        "minimal_deletion_lemma": {
+          "construction": "delete n_l-2 points from every rich line, take the union, then remove redundant deletions",
+          "size": "1<=t<=sum_l(n_l-2)<=R",
+          "even_occupancy_gap": "h(2r)-(2r-2)=(r-1)(r-2)>=0",
+          "odd_occupancy_gap": "h(2r+1)-(2r-1)=(r-1)^2>=0",
+          "minimality_witness": "each deleted z lies on a line with exactly two retained arc points"
+        },
+        "prime_arc_conic_dependency": "Ball--Lavrauw, Planar arcs, published Theorem 5 / arXiv v4 Theorem 3: a prime-field arc of size at least p-sqrt(p)+7/2 lies on a conic",
+        "generic_cutoff": 1,
+        "generic_cutoff_exact_condition": "(2R+5)^2<=4p",
+        "generic_minimum_surviving_secants_at_cutoff": 7,
+        "generic_secants_exceed_slack": true,
+        "uniform_near_arc_cutoff": 3,
+        "combined_excluded_positive_R_through": 3,
+        "first_open_R_at_least": 4,
+        "R_two_dependency": {
+          "p": 17,
+          "R": 2,
+          "positive_line_contributions": {
+            "3": 1,
+            "4": 2,
+            "5": 4,
+            "6": 6,
+            "7": 9
+          },
+          "partitions_of_two": [
+            [
+              2
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "rich_line_patterns": [
+            "one 4-secant and no other rich line",
+            "two 3-secants and no other rich line"
+          ],
+          "intersecting_trisecants": {
+            "meaning": "the two 3-secants share a boundary point",
+            "deletion": "delete their shared boundary point",
+            "remainder": "a p-arc",
+            "Segre_dependency": {
+              "field": "F_17",
+              "plane": "PG(2,17)",
+              "arc_size": 17,
+              "hypotheses": "Desarguesian plane, odd field order p>=5",
+              "conclusion": "every p-arc is contained in a nonsingular conic",
+              "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+              "all_hypotheses_met": true,
+              "proved_dependency": true,
+              "proved": true
+            },
+            "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+            "Miquelian_not_forced": true,
+            "minimum_surviving_conic_secants": 7,
+            "contradicts_total_R_two": true
+          },
+          "nonintersecting_or_four_secant": {
+            "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+            "remainder": "a (p-1)-arc",
+            "extension_dependency": {
+              "p": 17,
+              "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+              "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+              "p_minus_one_arc_is_incomplete": true,
+              "extension": "every (p-1)-arc extends to a p-arc",
+              "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+              "proved_dependency": true,
+              "proved": true
+            },
+            "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+            "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+            "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+            "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+            "minimum_surviving_conic_secants_through_either_replacement": 6,
+            "contradicts_total_R_two": true
+          },
+          "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+          "excluded": true,
+          "next_exact_target": "none at R=2; use the combined low-slack theorem",
+          "proved": true
+        },
+        "R_three_dependency": {
+          "p": 17,
+          "R": 3,
+          "partitions_of_three": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "rich_line_patterns": [
+            "one 4-secant and one 3-secant",
+            "three 3-secants"
+          ],
+          "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+          "remainder": "a (p-2)-arc",
+          "extension_dependency": {
+            "p": 17,
+            "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+            "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+            "p_minus_one_dependency": {
+              "p": 17,
+              "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+              "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+              "p_minus_one_arc_is_incomplete": true,
+              "extension": "every (p-1)-arc extends to a p-arc",
+              "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+              "proved_dependency": true,
+              "proved": true
+            },
+            "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+          "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+          "minimum_surviving_conic_secants_through_each_replacement": 5,
+          "maximum_rich_lines_allowed_by_R": 3,
+          "excluded": true,
+          "proved": true
+        },
+        "proved": true
+      },
+      "outside_arc": {
+        "p": 17,
+        "P": 18,
+        "m": 9,
+        "P_arc_classification": "a conic with external line at infinity",
+        "global_profile": {
+          "b=0": 9,
+          "b=2": 9
+        },
+        "phase_one_floors": {
+          "b=0": 34,
+          "b=2": 16
+        },
+        "phase_one_type_floor_with_t_wrong": "m*P+(t-1)*P",
+        "type_budget": 162,
+        "maximum_b0_directions_in_phase_one_type": 1,
+        "maximum_partition_disagreements": 2,
+        "character_sum_if_not_aligned_at_least": 14,
+        "nonproportional_forms_curve": "Y^2=Q*N is a smooth genus-one curve",
+        "smooth_genus_one_certificate": {
+          "forms": "nonsingular anisotropic binary quadratics Q and N over F_p",
+          "separable": "p is odd, so each nonsingular quadratic has two simple roots",
+          "disjoint_roots_if_nonproportional": "a shared root forces the shared Frobenius-conjugate root, hence proportionality",
+          "quartic": "Q*N is squarefree when Q and N are nonproportional",
+          "smooth_model": "Y^2=Q*N is a smooth double cover of P^1 of genus one",
+          "projective_character_sum": "sum_[u:v] chi(Q(u,v)N(u,v))=#C(F_p)-(p+1)",
+          "hasse_bound": "absolute character sum at most 2*sqrt(p)",
+          "forced_agreement_lower_bound": 14,
+          "squared_separation": "(p-3)^2=196>4p=68",
+          "strict_separation": true,
+          "proved": true
+        },
+        "genus_one_character_bound_squared": 68,
+        "forced_sum_squared": 196,
+        "strict_Hasse_contradiction": true,
+        "quadratic_forms_proportional": true,
+        "direction_types_align_exactly": true,
+        "affine_conic_is_Miquelian_circle": true,
+        "proved": true
+      },
+      "one_point_circle_replacement": {
+        "p": 17,
+        "boundary_shape_in_one_outside_chart": "(C minus {r}) union {z}, z notin C",
+        "C": "a Miquelian F_p-subline/circle",
+        "second_normalization": "send the boundary point z to infinity",
+        "circle_transport": "Mobius maps preserve F_p-sublines; because z is not on C, the transported circle does not contain infinity",
+        "remaining_finite_boundary": "p points of an affine P-arc",
+        "pair_deficit_after_second_normalization": "equality",
+        "excluded_by": "Proposition 15.676",
+        "dependency": {
+          "prop_15_676_proved": true,
+          "infinity_plus_p_pair_equality_excluded": true
+        },
+        "includes_near_line_profile": true,
+        "does_not_cover_arbitrary_non_Miquelian_conic_repairs": true,
+        "excluded": true,
+        "proved": true
+      },
+      "full_circle_line_chart": {
+        "p": 17,
+        "P": 18,
+        "m": 9,
+        "normalized_boundary": "{infinity} union (a+b*F_p)",
+        "line_direction_type": "eps=chi_F_p2(b), either sign",
+        "outside_chart_boundary_multiplier": "(-1)^m*eps",
+        "proof_of_multiplier": "product_t(a+b*t-w)=b^p(u-u^p); nonzero trace-zero elements have character (-1)^m",
+        "outside_affine_circle_b2_type": "eps",
+        "outside_alignment_equation": "c_line*((-1)^m*eps)=eps",
+        "forced_line_chart_c_H": -1,
+        "common_phase": 1,
+        "profile": {
+          "b=1": 1,
+          "b=p": 17
+        },
+        "direction_type_split": "the special line direction lies in either type; its type has m-1 transverse directions and the other type has m",
+        "special_parity_baseline": "1-x_j",
+        "transverse_parity": "sum_s x_s + phase = m+phase = 0 mod 2",
+        "floors": {
+          "b=1": 16,
+          "b=p": 0
+        },
+        "special_mean_interval": [
+          16,
+          162
+        ],
+        "transverse_quadratics_are_even_nonnegative": true,
+        "both_PSL_circle_orbits_have_same_forced_phase": true,
+        "full_circle_excluded": false,
+        "proved": true
+      }
+    },
+    "19": {
+      "derivative_phase_product": {
+        "p": 19,
+        "boundary_size": 20,
+        "identity": "product_{v in D} f'(v)=(-1)^(P(P-1)/2)*product_{i<j}(v_i-v_j)^2",
+        "sign_exponent": 190,
+        "chi_F_p2_minus_one": 1,
+        "product_of_derivative_characters": 1,
+        "product_of_transported_boundary_phases": 1,
+        "number_of_negative_boundary_phases_is_even": true,
+        "proved": true
+      },
+      "R_one": {
+        "p": 19,
+        "assumption": "one 3-secant and no other line of occupancy at least three",
+        "delete_one_triple_point": "a p-arc, hence contained in a conic",
+        "p_arc_conic_dependency": {
+          "field": "F_19",
+          "plane": "PG(2,19)",
+          "arc_size": 19,
+          "hypotheses": "Desarguesian plane, odd field order p>=5",
+          "conclusion": "every p-arc is contained in a nonsingular conic",
+          "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+          "all_hypotheses_met": true,
+          "proved_dependency": true,
+          "proved": true
+        },
+        "deleted_point_is_off_conic": "if it were on the conic, all p+1 points would be the conic and there would be no 3-secant",
+        "minimum_full_conic_secants_through_deleted_point": 9,
+        "maximum_destroyed_by_the_missing_conic_point": 1,
+        "minimum_surviving_secants": 8,
+        "contradicts_unique_trisecant": true,
+        "R_one_excluded": true,
+        "proved": true
+      },
+      "R_two": {
+        "p": 19,
+        "R": 2,
+        "positive_line_contributions": {
+          "3": 1,
+          "4": 2,
+          "5": 4,
+          "6": 6,
+          "7": 9
+        },
+        "partitions_of_two": [
+          [
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "rich_line_patterns": [
+          "one 4-secant and no other rich line",
+          "two 3-secants and no other rich line"
+        ],
+        "intersecting_trisecants": {
+          "meaning": "the two 3-secants share a boundary point",
+          "deletion": "delete their shared boundary point",
+          "remainder": "a p-arc",
+          "Segre_dependency": {
+            "field": "F_19",
+            "plane": "PG(2,19)",
+            "arc_size": 19,
+            "hypotheses": "Desarguesian plane, odd field order p>=5",
+            "conclusion": "every p-arc is contained in a nonsingular conic",
+            "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+            "all_hypotheses_met": true,
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+          "Miquelian_not_forced": true,
+          "minimum_surviving_conic_secants": 8,
+          "contradicts_total_R_two": true
+        },
+        "nonintersecting_or_four_secant": {
+          "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+          "remainder": "a (p-1)-arc",
+          "extension_dependency": {
+            "p": 19,
+            "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+            "p_minus_one_arc_is_incomplete": true,
+            "extension": "every (p-1)-arc extends to a p-arc",
+            "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+          "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+          "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+          "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+          "minimum_surviving_conic_secants_through_either_replacement": 7,
+          "contradicts_total_R_two": true
+        },
+        "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+        "excluded": true,
+        "next_exact_target": "none at R=2; use the combined low-slack theorem",
+        "proved": true
+      },
+      "R_three": {
+        "p": 19,
+        "R": 3,
+        "partitions_of_three": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "rich_line_patterns": [
+          "one 4-secant and one 3-secant",
+          "three 3-secants"
+        ],
+        "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+        "remainder": "a (p-2)-arc",
+        "extension_dependency": {
+          "p": 19,
+          "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+          "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+          "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+          "p_minus_one_dependency": {
+            "p": 19,
+            "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+            "p_minus_one_arc_is_incomplete": true,
+            "extension": "every (p-1)-arc extends to a p-arc",
+            "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+          "proved_dependency": true,
+          "proved": true
+        },
+        "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+        "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+        "minimum_surviving_conic_secants_through_each_replacement": 6,
+        "maximum_rich_lines_allowed_by_R": 3,
+        "excluded": true,
+        "proved": true
+      },
+      "low_slack": {
+        "p": 19,
+        "minimal_deletion_lemma": {
+          "construction": "delete n_l-2 points from every rich line, take the union, then remove redundant deletions",
+          "size": "1<=t<=sum_l(n_l-2)<=R",
+          "even_occupancy_gap": "h(2r)-(2r-2)=(r-1)(r-2)>=0",
+          "odd_occupancy_gap": "h(2r+1)-(2r-1)=(r-1)^2>=0",
+          "minimality_witness": "each deleted z lies on a line with exactly two retained arc points"
+        },
+        "prime_arc_conic_dependency": "Ball--Lavrauw, Planar arcs, published Theorem 5 / arXiv v4 Theorem 3: a prime-field arc of size at least p-sqrt(p)+7/2 lies on a conic",
+        "generic_cutoff": 1,
+        "generic_cutoff_exact_condition": "(2R+5)^2<=4p",
+        "generic_minimum_surviving_secants_at_cutoff": 8,
+        "generic_secants_exceed_slack": true,
+        "uniform_near_arc_cutoff": 3,
+        "combined_excluded_positive_R_through": 3,
+        "first_open_R_at_least": 4,
+        "R_two_dependency": {
+          "p": 19,
+          "R": 2,
+          "positive_line_contributions": {
+            "3": 1,
+            "4": 2,
+            "5": 4,
+            "6": 6,
+            "7": 9
+          },
+          "partitions_of_two": [
+            [
+              2
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "rich_line_patterns": [
+            "one 4-secant and no other rich line",
+            "two 3-secants and no other rich line"
+          ],
+          "intersecting_trisecants": {
+            "meaning": "the two 3-secants share a boundary point",
+            "deletion": "delete their shared boundary point",
+            "remainder": "a p-arc",
+            "Segre_dependency": {
+              "field": "F_19",
+              "plane": "PG(2,19)",
+              "arc_size": 19,
+              "hypotheses": "Desarguesian plane, odd field order p>=5",
+              "conclusion": "every p-arc is contained in a nonsingular conic",
+              "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+              "all_hypotheses_met": true,
+              "proved_dependency": true,
+              "proved": true
+            },
+            "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+            "Miquelian_not_forced": true,
+            "minimum_surviving_conic_secants": 8,
+            "contradicts_total_R_two": true
+          },
+          "nonintersecting_or_four_secant": {
+            "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+            "remainder": "a (p-1)-arc",
+            "extension_dependency": {
+              "p": 19,
+              "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+              "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+              "p_minus_one_arc_is_incomplete": true,
+              "extension": "every (p-1)-arc extends to a p-arc",
+              "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+              "proved_dependency": true,
+              "proved": true
+            },
+            "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+            "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+            "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+            "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+            "minimum_surviving_conic_secants_through_either_replacement": 7,
+            "contradicts_total_R_two": true
+          },
+          "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+          "excluded": true,
+          "next_exact_target": "none at R=2; use the combined low-slack theorem",
+          "proved": true
+        },
+        "R_three_dependency": {
+          "p": 19,
+          "R": 3,
+          "partitions_of_three": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "rich_line_patterns": [
+            "one 4-secant and one 3-secant",
+            "three 3-secants"
+          ],
+          "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+          "remainder": "a (p-2)-arc",
+          "extension_dependency": {
+            "p": 19,
+            "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+            "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+            "p_minus_one_dependency": {
+              "p": 19,
+              "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+              "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+              "p_minus_one_arc_is_incomplete": true,
+              "extension": "every (p-1)-arc extends to a p-arc",
+              "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+              "proved_dependency": true,
+              "proved": true
+            },
+            "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+          "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+          "minimum_surviving_conic_secants_through_each_replacement": 6,
+          "maximum_rich_lines_allowed_by_R": 3,
+          "excluded": true,
+          "proved": true
+        },
+        "proved": true
+      },
+      "outside_arc": {
+        "p": 19,
+        "P": 20,
+        "m": 10,
+        "P_arc_classification": "a conic with external line at infinity",
+        "global_profile": {
+          "b=0": 10,
+          "b=2": 10
+        },
+        "phase_one_floors": {
+          "b=0": 38,
+          "b=2": 18
+        },
+        "phase_one_type_floor_with_t_wrong": "m*P+(t-1)*P",
+        "type_budget": 200,
+        "maximum_b0_directions_in_phase_one_type": 1,
+        "maximum_partition_disagreements": 2,
+        "character_sum_if_not_aligned_at_least": 16,
+        "nonproportional_forms_curve": "Y^2=Q*N is a smooth genus-one curve",
+        "smooth_genus_one_certificate": {
+          "forms": "nonsingular anisotropic binary quadratics Q and N over F_p",
+          "separable": "p is odd, so each nonsingular quadratic has two simple roots",
+          "disjoint_roots_if_nonproportional": "a shared root forces the shared Frobenius-conjugate root, hence proportionality",
+          "quartic": "Q*N is squarefree when Q and N are nonproportional",
+          "smooth_model": "Y^2=Q*N is a smooth double cover of P^1 of genus one",
+          "projective_character_sum": "sum_[u:v] chi(Q(u,v)N(u,v))=#C(F_p)-(p+1)",
+          "hasse_bound": "absolute character sum at most 2*sqrt(p)",
+          "forced_agreement_lower_bound": 16,
+          "squared_separation": "(p-3)^2=256>4p=76",
+          "strict_separation": true,
+          "proved": true
+        },
+        "genus_one_character_bound_squared": 76,
+        "forced_sum_squared": 256,
+        "strict_Hasse_contradiction": true,
+        "quadratic_forms_proportional": true,
+        "direction_types_align_exactly": true,
+        "affine_conic_is_Miquelian_circle": true,
+        "proved": true
+      },
+      "one_point_circle_replacement": {
+        "p": 19,
+        "boundary_shape_in_one_outside_chart": "(C minus {r}) union {z}, z notin C",
+        "C": "a Miquelian F_p-subline/circle",
+        "second_normalization": "send the boundary point z to infinity",
+        "circle_transport": "Mobius maps preserve F_p-sublines; because z is not on C, the transported circle does not contain infinity",
+        "remaining_finite_boundary": "p points of an affine P-arc",
+        "pair_deficit_after_second_normalization": "equality",
+        "excluded_by": "Proposition 15.676",
+        "dependency": {
+          "prop_15_676_proved": true,
+          "infinity_plus_p_pair_equality_excluded": true
+        },
+        "includes_near_line_profile": true,
+        "does_not_cover_arbitrary_non_Miquelian_conic_repairs": true,
+        "excluded": true,
+        "proved": true
+      },
+      "full_circle_line_chart": {
+        "p": 19,
+        "P": 20,
+        "m": 10,
+        "normalized_boundary": "{infinity} union (a+b*F_p)",
+        "line_direction_type": "eps=chi_F_p2(b), either sign",
+        "outside_chart_boundary_multiplier": "(-1)^m*eps",
+        "proof_of_multiplier": "product_t(a+b*t-w)=b^p(u-u^p); nonzero trace-zero elements have character (-1)^m",
+        "outside_affine_circle_b2_type": "eps",
+        "outside_alignment_equation": "c_line*((-1)^m*eps)=eps",
+        "forced_line_chart_c_H": 1,
+        "common_phase": 0,
+        "profile": {
+          "b=1": 1,
+          "b=p": 19
+        },
+        "direction_type_split": "the special line direction lies in either type; its type has m-1 transverse directions and the other type has m",
+        "special_parity_baseline": "x_j",
+        "transverse_parity": "sum_s x_s + phase = m+phase = 0 mod 2",
+        "floors": {
+          "b=1": 20,
+          "b=p": 0
+        },
+        "special_mean_interval": [
+          20,
+          200
+        ],
+        "transverse_quadratics_are_even_nonnegative": true,
+        "both_PSL_circle_orbits_have_same_forced_phase": true,
+        "full_circle_excluded": false,
+        "proved": true
+      }
+    },
+    "23": {
+      "derivative_phase_product": {
+        "p": 23,
+        "boundary_size": 24,
+        "identity": "product_{v in D} f'(v)=(-1)^(P(P-1)/2)*product_{i<j}(v_i-v_j)^2",
+        "sign_exponent": 276,
+        "chi_F_p2_minus_one": 1,
+        "product_of_derivative_characters": 1,
+        "product_of_transported_boundary_phases": 1,
+        "number_of_negative_boundary_phases_is_even": true,
+        "proved": true
+      },
+      "R_one": {
+        "p": 23,
+        "assumption": "one 3-secant and no other line of occupancy at least three",
+        "delete_one_triple_point": "a p-arc, hence contained in a conic",
+        "p_arc_conic_dependency": {
+          "field": "F_23",
+          "plane": "PG(2,23)",
+          "arc_size": 23,
+          "hypotheses": "Desarguesian plane, odd field order p>=5",
+          "conclusion": "every p-arc is contained in a nonsingular conic",
+          "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+          "all_hypotheses_met": true,
+          "proved_dependency": true,
+          "proved": true
+        },
+        "deleted_point_is_off_conic": "if it were on the conic, all p+1 points would be the conic and there would be no 3-secant",
+        "minimum_full_conic_secants_through_deleted_point": 11,
+        "maximum_destroyed_by_the_missing_conic_point": 1,
+        "minimum_surviving_secants": 10,
+        "contradicts_unique_trisecant": true,
+        "R_one_excluded": true,
+        "proved": true
+      },
+      "R_two": {
+        "p": 23,
+        "R": 2,
+        "positive_line_contributions": {
+          "3": 1,
+          "4": 2,
+          "5": 4,
+          "6": 6,
+          "7": 9
+        },
+        "partitions_of_two": [
+          [
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "rich_line_patterns": [
+          "one 4-secant and no other rich line",
+          "two 3-secants and no other rich line"
+        ],
+        "intersecting_trisecants": {
+          "meaning": "the two 3-secants share a boundary point",
+          "deletion": "delete their shared boundary point",
+          "remainder": "a p-arc",
+          "Segre_dependency": {
+            "field": "F_23",
+            "plane": "PG(2,23)",
+            "arc_size": 23,
+            "hypotheses": "Desarguesian plane, odd field order p>=5",
+            "conclusion": "every p-arc is contained in a nonsingular conic",
+            "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+            "all_hypotheses_met": true,
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+          "Miquelian_not_forced": true,
+          "minimum_surviving_conic_secants": 10,
+          "contradicts_total_R_two": true
+        },
+        "nonintersecting_or_four_secant": {
+          "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+          "remainder": "a (p-1)-arc",
+          "extension_dependency": {
+            "p": 23,
+            "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+            "p_minus_one_arc_is_incomplete": true,
+            "extension": "every (p-1)-arc extends to a p-arc",
+            "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+          "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+          "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+          "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+          "minimum_surviving_conic_secants_through_either_replacement": 9,
+          "contradicts_total_R_two": true
+        },
+        "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+        "excluded": true,
+        "next_exact_target": "none at R=2; use the combined low-slack theorem",
+        "proved": true
+      },
+      "R_three": {
+        "p": 23,
+        "R": 3,
+        "partitions_of_three": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "rich_line_patterns": [
+          "one 4-secant and one 3-secant",
+          "three 3-secants"
+        ],
+        "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+        "remainder": "a (p-2)-arc",
+        "extension_dependency": {
+          "p": 23,
+          "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+          "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+          "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+          "p_minus_one_dependency": {
+            "p": 23,
+            "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+            "p_minus_one_arc_is_incomplete": true,
+            "extension": "every (p-1)-arc extends to a p-arc",
+            "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+          "proved_dependency": true,
+          "proved": true
+        },
+        "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+        "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+        "minimum_surviving_conic_secants_through_each_replacement": 8,
+        "maximum_rich_lines_allowed_by_R": 3,
+        "excluded": true,
+        "proved": true
+      },
+      "low_slack": {
+        "p": 23,
+        "minimal_deletion_lemma": {
+          "construction": "delete n_l-2 points from every rich line, take the union, then remove redundant deletions",
+          "size": "1<=t<=sum_l(n_l-2)<=R",
+          "even_occupancy_gap": "h(2r)-(2r-2)=(r-1)(r-2)>=0",
+          "odd_occupancy_gap": "h(2r+1)-(2r-1)=(r-1)^2>=0",
+          "minimality_witness": "each deleted z lies on a line with exactly two retained arc points"
+        },
+        "prime_arc_conic_dependency": "Ball--Lavrauw, Planar arcs, published Theorem 5 / arXiv v4 Theorem 3: a prime-field arc of size at least p-sqrt(p)+7/2 lies on a conic",
+        "generic_cutoff": 2,
+        "generic_cutoff_exact_condition": "(2R+5)^2<=4p",
+        "generic_minimum_surviving_secants_at_cutoff": 9,
+        "generic_secants_exceed_slack": true,
+        "uniform_near_arc_cutoff": 3,
+        "combined_excluded_positive_R_through": 3,
+        "first_open_R_at_least": 4,
+        "R_two_dependency": {
+          "p": 23,
+          "R": 2,
+          "positive_line_contributions": {
+            "3": 1,
+            "4": 2,
+            "5": 4,
+            "6": 6,
+            "7": 9
+          },
+          "partitions_of_two": [
+            [
+              2
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "rich_line_patterns": [
+            "one 4-secant and no other rich line",
+            "two 3-secants and no other rich line"
+          ],
+          "intersecting_trisecants": {
+            "meaning": "the two 3-secants share a boundary point",
+            "deletion": "delete their shared boundary point",
+            "remainder": "a p-arc",
+            "Segre_dependency": {
+              "field": "F_23",
+              "plane": "PG(2,23)",
+              "arc_size": 23,
+              "hypotheses": "Desarguesian plane, odd field order p>=5",
+              "conclusion": "every p-arc is contained in a nonsingular conic",
+              "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+              "all_hypotheses_met": true,
+              "proved_dependency": true,
+              "proved": true
+            },
+            "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+            "Miquelian_not_forced": true,
+            "minimum_surviving_conic_secants": 10,
+            "contradicts_total_R_two": true
+          },
+          "nonintersecting_or_four_secant": {
+            "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+            "remainder": "a (p-1)-arc",
+            "extension_dependency": {
+              "p": 23,
+              "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+              "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+              "p_minus_one_arc_is_incomplete": true,
+              "extension": "every (p-1)-arc extends to a p-arc",
+              "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+              "proved_dependency": true,
+              "proved": true
+            },
+            "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+            "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+            "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+            "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+            "minimum_surviving_conic_secants_through_either_replacement": 9,
+            "contradicts_total_R_two": true
+          },
+          "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+          "excluded": true,
+          "next_exact_target": "none at R=2; use the combined low-slack theorem",
+          "proved": true
+        },
+        "R_three_dependency": {
+          "p": 23,
+          "R": 3,
+          "partitions_of_three": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "rich_line_patterns": [
+            "one 4-secant and one 3-secant",
+            "three 3-secants"
+          ],
+          "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+          "remainder": "a (p-2)-arc",
+          "extension_dependency": {
+            "p": 23,
+            "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+            "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+            "p_minus_one_dependency": {
+              "p": 23,
+              "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+              "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+              "p_minus_one_arc_is_incomplete": true,
+              "extension": "every (p-1)-arc extends to a p-arc",
+              "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+              "proved_dependency": true,
+              "proved": true
+            },
+            "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+          "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+          "minimum_surviving_conic_secants_through_each_replacement": 8,
+          "maximum_rich_lines_allowed_by_R": 3,
+          "excluded": true,
+          "proved": true
+        },
+        "proved": true
+      },
+      "outside_arc": {
+        "p": 23,
+        "P": 24,
+        "m": 12,
+        "P_arc_classification": "a conic with external line at infinity",
+        "global_profile": {
+          "b=0": 12,
+          "b=2": 12
+        },
+        "phase_one_floors": {
+          "b=0": 46,
+          "b=2": 22
+        },
+        "phase_one_type_floor_with_t_wrong": "m*P+(t-1)*P",
+        "type_budget": 288,
+        "maximum_b0_directions_in_phase_one_type": 1,
+        "maximum_partition_disagreements": 2,
+        "character_sum_if_not_aligned_at_least": 20,
+        "nonproportional_forms_curve": "Y^2=Q*N is a smooth genus-one curve",
+        "smooth_genus_one_certificate": {
+          "forms": "nonsingular anisotropic binary quadratics Q and N over F_p",
+          "separable": "p is odd, so each nonsingular quadratic has two simple roots",
+          "disjoint_roots_if_nonproportional": "a shared root forces the shared Frobenius-conjugate root, hence proportionality",
+          "quartic": "Q*N is squarefree when Q and N are nonproportional",
+          "smooth_model": "Y^2=Q*N is a smooth double cover of P^1 of genus one",
+          "projective_character_sum": "sum_[u:v] chi(Q(u,v)N(u,v))=#C(F_p)-(p+1)",
+          "hasse_bound": "absolute character sum at most 2*sqrt(p)",
+          "forced_agreement_lower_bound": 20,
+          "squared_separation": "(p-3)^2=400>4p=92",
+          "strict_separation": true,
+          "proved": true
+        },
+        "genus_one_character_bound_squared": 92,
+        "forced_sum_squared": 400,
+        "strict_Hasse_contradiction": true,
+        "quadratic_forms_proportional": true,
+        "direction_types_align_exactly": true,
+        "affine_conic_is_Miquelian_circle": true,
+        "proved": true
+      },
+      "one_point_circle_replacement": {
+        "p": 23,
+        "boundary_shape_in_one_outside_chart": "(C minus {r}) union {z}, z notin C",
+        "C": "a Miquelian F_p-subline/circle",
+        "second_normalization": "send the boundary point z to infinity",
+        "circle_transport": "Mobius maps preserve F_p-sublines; because z is not on C, the transported circle does not contain infinity",
+        "remaining_finite_boundary": "p points of an affine P-arc",
+        "pair_deficit_after_second_normalization": "equality",
+        "excluded_by": "Proposition 15.676",
+        "dependency": {
+          "prop_15_676_proved": true,
+          "infinity_plus_p_pair_equality_excluded": true
+        },
+        "includes_near_line_profile": true,
+        "does_not_cover_arbitrary_non_Miquelian_conic_repairs": true,
+        "excluded": true,
+        "proved": true
+      },
+      "full_circle_line_chart": {
+        "p": 23,
+        "P": 24,
+        "m": 12,
+        "normalized_boundary": "{infinity} union (a+b*F_p)",
+        "line_direction_type": "eps=chi_F_p2(b), either sign",
+        "outside_chart_boundary_multiplier": "(-1)^m*eps",
+        "proof_of_multiplier": "product_t(a+b*t-w)=b^p(u-u^p); nonzero trace-zero elements have character (-1)^m",
+        "outside_affine_circle_b2_type": "eps",
+        "outside_alignment_equation": "c_line*((-1)^m*eps)=eps",
+        "forced_line_chart_c_H": 1,
+        "common_phase": 0,
+        "profile": {
+          "b=1": 1,
+          "b=p": 23
+        },
+        "direction_type_split": "the special line direction lies in either type; its type has m-1 transverse directions and the other type has m",
+        "special_parity_baseline": "x_j",
+        "transverse_parity": "sum_s x_s + phase = m+phase = 0 mod 2",
+        "floors": {
+          "b=1": 24,
+          "b=p": 0
+        },
+        "special_mean_interval": [
+          24,
+          288
+        ],
+        "transverse_quadratics_are_even_nonnegative": true,
+        "both_PSL_circle_orbits_have_same_forced_phase": true,
+        "full_circle_excluded": false,
+        "proved": true
+      }
+    },
+    "29": {
+      "derivative_phase_product": {
+        "p": 29,
+        "boundary_size": 30,
+        "identity": "product_{v in D} f'(v)=(-1)^(P(P-1)/2)*product_{i<j}(v_i-v_j)^2",
+        "sign_exponent": 435,
+        "chi_F_p2_minus_one": 1,
+        "product_of_derivative_characters": 1,
+        "product_of_transported_boundary_phases": 1,
+        "number_of_negative_boundary_phases_is_even": true,
+        "proved": true
+      },
+      "R_one": {
+        "p": 29,
+        "assumption": "one 3-secant and no other line of occupancy at least three",
+        "delete_one_triple_point": "a p-arc, hence contained in a conic",
+        "p_arc_conic_dependency": {
+          "field": "F_29",
+          "plane": "PG(2,29)",
+          "arc_size": 29,
+          "hypotheses": "Desarguesian plane, odd field order p>=5",
+          "conclusion": "every p-arc is contained in a nonsingular conic",
+          "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+          "all_hypotheses_met": true,
+          "proved_dependency": true,
+          "proved": true
+        },
+        "deleted_point_is_off_conic": "if it were on the conic, all p+1 points would be the conic and there would be no 3-secant",
+        "minimum_full_conic_secants_through_deleted_point": 14,
+        "maximum_destroyed_by_the_missing_conic_point": 1,
+        "minimum_surviving_secants": 13,
+        "contradicts_unique_trisecant": true,
+        "R_one_excluded": true,
+        "proved": true
+      },
+      "R_two": {
+        "p": 29,
+        "R": 2,
+        "positive_line_contributions": {
+          "3": 1,
+          "4": 2,
+          "5": 4,
+          "6": 6,
+          "7": 9
+        },
+        "partitions_of_two": [
+          [
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "rich_line_patterns": [
+          "one 4-secant and no other rich line",
+          "two 3-secants and no other rich line"
+        ],
+        "intersecting_trisecants": {
+          "meaning": "the two 3-secants share a boundary point",
+          "deletion": "delete their shared boundary point",
+          "remainder": "a p-arc",
+          "Segre_dependency": {
+            "field": "F_29",
+            "plane": "PG(2,29)",
+            "arc_size": 29,
+            "hypotheses": "Desarguesian plane, odd field order p>=5",
+            "conclusion": "every p-arc is contained in a nonsingular conic",
+            "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+            "all_hypotheses_met": true,
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+          "Miquelian_not_forced": true,
+          "minimum_surviving_conic_secants": 13,
+          "contradicts_total_R_two": true
+        },
+        "nonintersecting_or_four_secant": {
+          "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+          "remainder": "a (p-1)-arc",
+          "extension_dependency": {
+            "p": 29,
+            "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+            "p_minus_one_arc_is_incomplete": true,
+            "extension": "every (p-1)-arc extends to a p-arc",
+            "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+          "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+          "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+          "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+          "minimum_surviving_conic_secants_through_either_replacement": 12,
+          "contradicts_total_R_two": true
+        },
+        "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+        "excluded": true,
+        "next_exact_target": "none at R=2; use the combined low-slack theorem",
+        "proved": true
+      },
+      "R_three": {
+        "p": 29,
+        "R": 3,
+        "partitions_of_three": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "rich_line_patterns": [
+          "one 4-secant and one 3-secant",
+          "three 3-secants"
+        ],
+        "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+        "remainder": "a (p-2)-arc",
+        "extension_dependency": {
+          "p": 29,
+          "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+          "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+          "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+          "p_minus_one_dependency": {
+            "p": 29,
+            "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+            "p_minus_one_arc_is_incomplete": true,
+            "extension": "every (p-1)-arc extends to a p-arc",
+            "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+          "proved_dependency": true,
+          "proved": true
+        },
+        "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+        "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+        "minimum_surviving_conic_secants_through_each_replacement": 11,
+        "maximum_rich_lines_allowed_by_R": 3,
+        "excluded": true,
+        "proved": true
+      },
+      "low_slack": {
+        "p": 29,
+        "minimal_deletion_lemma": {
+          "construction": "delete n_l-2 points from every rich line, take the union, then remove redundant deletions",
+          "size": "1<=t<=sum_l(n_l-2)<=R",
+          "even_occupancy_gap": "h(2r)-(2r-2)=(r-1)(r-2)>=0",
+          "odd_occupancy_gap": "h(2r+1)-(2r-1)=(r-1)^2>=0",
+          "minimality_witness": "each deleted z lies on a line with exactly two retained arc points"
+        },
+        "prime_arc_conic_dependency": "Ball--Lavrauw, Planar arcs, published Theorem 5 / arXiv v4 Theorem 3: a prime-field arc of size at least p-sqrt(p)+7/2 lies on a conic",
+        "generic_cutoff": 2,
+        "generic_cutoff_exact_condition": "(2R+5)^2<=4p",
+        "generic_minimum_surviving_secants_at_cutoff": 12,
+        "generic_secants_exceed_slack": true,
+        "uniform_near_arc_cutoff": 3,
+        "combined_excluded_positive_R_through": 3,
+        "first_open_R_at_least": 4,
+        "R_two_dependency": {
+          "p": 29,
+          "R": 2,
+          "positive_line_contributions": {
+            "3": 1,
+            "4": 2,
+            "5": 4,
+            "6": 6,
+            "7": 9
+          },
+          "partitions_of_two": [
+            [
+              2
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "rich_line_patterns": [
+            "one 4-secant and no other rich line",
+            "two 3-secants and no other rich line"
+          ],
+          "intersecting_trisecants": {
+            "meaning": "the two 3-secants share a boundary point",
+            "deletion": "delete their shared boundary point",
+            "remainder": "a p-arc",
+            "Segre_dependency": {
+              "field": "F_29",
+              "plane": "PG(2,29)",
+              "arc_size": 29,
+              "hypotheses": "Desarguesian plane, odd field order p>=5",
+              "conclusion": "every p-arc is contained in a nonsingular conic",
+              "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+              "all_hypotheses_met": true,
+              "proved_dependency": true,
+              "proved": true
+            },
+            "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+            "Miquelian_not_forced": true,
+            "minimum_surviving_conic_secants": 13,
+            "contradicts_total_R_two": true
+          },
+          "nonintersecting_or_four_secant": {
+            "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+            "remainder": "a (p-1)-arc",
+            "extension_dependency": {
+              "p": 29,
+              "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+              "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+              "p_minus_one_arc_is_incomplete": true,
+              "extension": "every (p-1)-arc extends to a p-arc",
+              "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+              "proved_dependency": true,
+              "proved": true
+            },
+            "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+            "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+            "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+            "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+            "minimum_surviving_conic_secants_through_either_replacement": 12,
+            "contradicts_total_R_two": true
+          },
+          "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+          "excluded": true,
+          "next_exact_target": "none at R=2; use the combined low-slack theorem",
+          "proved": true
+        },
+        "R_three_dependency": {
+          "p": 29,
+          "R": 3,
+          "partitions_of_three": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "rich_line_patterns": [
+            "one 4-secant and one 3-secant",
+            "three 3-secants"
+          ],
+          "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+          "remainder": "a (p-2)-arc",
+          "extension_dependency": {
+            "p": 29,
+            "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+            "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+            "p_minus_one_dependency": {
+              "p": 29,
+              "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+              "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+              "p_minus_one_arc_is_incomplete": true,
+              "extension": "every (p-1)-arc extends to a p-arc",
+              "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+              "proved_dependency": true,
+              "proved": true
+            },
+            "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+          "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+          "minimum_surviving_conic_secants_through_each_replacement": 11,
+          "maximum_rich_lines_allowed_by_R": 3,
+          "excluded": true,
+          "proved": true
+        },
+        "proved": true
+      },
+      "outside_arc": {
+        "p": 29,
+        "P": 30,
+        "m": 15,
+        "P_arc_classification": "a conic with external line at infinity",
+        "global_profile": {
+          "b=0": 15,
+          "b=2": 15
+        },
+        "phase_one_floors": {
+          "b=0": 58,
+          "b=2": 28
+        },
+        "phase_one_type_floor_with_t_wrong": "m*P+(t-1)*P",
+        "type_budget": 450,
+        "maximum_b0_directions_in_phase_one_type": 1,
+        "maximum_partition_disagreements": 2,
+        "character_sum_if_not_aligned_at_least": 26,
+        "nonproportional_forms_curve": "Y^2=Q*N is a smooth genus-one curve",
+        "smooth_genus_one_certificate": {
+          "forms": "nonsingular anisotropic binary quadratics Q and N over F_p",
+          "separable": "p is odd, so each nonsingular quadratic has two simple roots",
+          "disjoint_roots_if_nonproportional": "a shared root forces the shared Frobenius-conjugate root, hence proportionality",
+          "quartic": "Q*N is squarefree when Q and N are nonproportional",
+          "smooth_model": "Y^2=Q*N is a smooth double cover of P^1 of genus one",
+          "projective_character_sum": "sum_[u:v] chi(Q(u,v)N(u,v))=#C(F_p)-(p+1)",
+          "hasse_bound": "absolute character sum at most 2*sqrt(p)",
+          "forced_agreement_lower_bound": 26,
+          "squared_separation": "(p-3)^2=676>4p=116",
+          "strict_separation": true,
+          "proved": true
+        },
+        "genus_one_character_bound_squared": 116,
+        "forced_sum_squared": 676,
+        "strict_Hasse_contradiction": true,
+        "quadratic_forms_proportional": true,
+        "direction_types_align_exactly": true,
+        "affine_conic_is_Miquelian_circle": true,
+        "proved": true
+      },
+      "one_point_circle_replacement": {
+        "p": 29,
+        "boundary_shape_in_one_outside_chart": "(C minus {r}) union {z}, z notin C",
+        "C": "a Miquelian F_p-subline/circle",
+        "second_normalization": "send the boundary point z to infinity",
+        "circle_transport": "Mobius maps preserve F_p-sublines; because z is not on C, the transported circle does not contain infinity",
+        "remaining_finite_boundary": "p points of an affine P-arc",
+        "pair_deficit_after_second_normalization": "equality",
+        "excluded_by": "Proposition 15.676",
+        "dependency": {
+          "prop_15_676_proved": true,
+          "infinity_plus_p_pair_equality_excluded": true
+        },
+        "includes_near_line_profile": true,
+        "does_not_cover_arbitrary_non_Miquelian_conic_repairs": true,
+        "excluded": true,
+        "proved": true
+      },
+      "full_circle_line_chart": {
+        "p": 29,
+        "P": 30,
+        "m": 15,
+        "normalized_boundary": "{infinity} union (a+b*F_p)",
+        "line_direction_type": "eps=chi_F_p2(b), either sign",
+        "outside_chart_boundary_multiplier": "(-1)^m*eps",
+        "proof_of_multiplier": "product_t(a+b*t-w)=b^p(u-u^p); nonzero trace-zero elements have character (-1)^m",
+        "outside_affine_circle_b2_type": "eps",
+        "outside_alignment_equation": "c_line*((-1)^m*eps)=eps",
+        "forced_line_chart_c_H": -1,
+        "common_phase": 1,
+        "profile": {
+          "b=1": 1,
+          "b=p": 29
+        },
+        "direction_type_split": "the special line direction lies in either type; its type has m-1 transverse directions and the other type has m",
+        "special_parity_baseline": "1-x_j",
+        "transverse_parity": "sum_s x_s + phase = m+phase = 0 mod 2",
+        "floors": {
+          "b=1": 28,
+          "b=p": 0
+        },
+        "special_mean_interval": [
+          28,
+          450
+        ],
+        "transverse_quadratics_are_even_nonnegative": true,
+        "both_PSL_circle_orbits_have_same_forced_phase": true,
+        "full_circle_excluded": false,
+        "proved": true
+      }
+    },
+    "31": {
+      "derivative_phase_product": {
+        "p": 31,
+        "boundary_size": 32,
+        "identity": "product_{v in D} f'(v)=(-1)^(P(P-1)/2)*product_{i<j}(v_i-v_j)^2",
+        "sign_exponent": 496,
+        "chi_F_p2_minus_one": 1,
+        "product_of_derivative_characters": 1,
+        "product_of_transported_boundary_phases": 1,
+        "number_of_negative_boundary_phases_is_even": true,
+        "proved": true
+      },
+      "R_one": {
+        "p": 31,
+        "assumption": "one 3-secant and no other line of occupancy at least three",
+        "delete_one_triple_point": "a p-arc, hence contained in a conic",
+        "p_arc_conic_dependency": {
+          "field": "F_31",
+          "plane": "PG(2,31)",
+          "arc_size": 31,
+          "hypotheses": "Desarguesian plane, odd field order p>=5",
+          "conclusion": "every p-arc is contained in a nonsingular conic",
+          "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+          "all_hypotheses_met": true,
+          "proved_dependency": true,
+          "proved": true
+        },
+        "deleted_point_is_off_conic": "if it were on the conic, all p+1 points would be the conic and there would be no 3-secant",
+        "minimum_full_conic_secants_through_deleted_point": 15,
+        "maximum_destroyed_by_the_missing_conic_point": 1,
+        "minimum_surviving_secants": 14,
+        "contradicts_unique_trisecant": true,
+        "R_one_excluded": true,
+        "proved": true
+      },
+      "R_two": {
+        "p": 31,
+        "R": 2,
+        "positive_line_contributions": {
+          "3": 1,
+          "4": 2,
+          "5": 4,
+          "6": 6,
+          "7": 9
+        },
+        "partitions_of_two": [
+          [
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "rich_line_patterns": [
+          "one 4-secant and no other rich line",
+          "two 3-secants and no other rich line"
+        ],
+        "intersecting_trisecants": {
+          "meaning": "the two 3-secants share a boundary point",
+          "deletion": "delete their shared boundary point",
+          "remainder": "a p-arc",
+          "Segre_dependency": {
+            "field": "F_31",
+            "plane": "PG(2,31)",
+            "arc_size": 31,
+            "hypotheses": "Desarguesian plane, odd field order p>=5",
+            "conclusion": "every p-arc is contained in a nonsingular conic",
+            "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+            "all_hypotheses_met": true,
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+          "Miquelian_not_forced": true,
+          "minimum_surviving_conic_secants": 14,
+          "contradicts_total_R_two": true
+        },
+        "nonintersecting_or_four_secant": {
+          "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+          "remainder": "a (p-1)-arc",
+          "extension_dependency": {
+            "p": 31,
+            "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+            "p_minus_one_arc_is_incomplete": true,
+            "extension": "every (p-1)-arc extends to a p-arc",
+            "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+          "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+          "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+          "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+          "minimum_surviving_conic_secants_through_either_replacement": 13,
+          "contradicts_total_R_two": true
+        },
+        "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+        "excluded": true,
+        "next_exact_target": "none at R=2; use the combined low-slack theorem",
+        "proved": true
+      },
+      "R_three": {
+        "p": 31,
+        "R": 3,
+        "partitions_of_three": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "rich_line_patterns": [
+          "one 4-secant and one 3-secant",
+          "three 3-secants"
+        ],
+        "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+        "remainder": "a (p-2)-arc",
+        "extension_dependency": {
+          "p": 31,
+          "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+          "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+          "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+          "p_minus_one_dependency": {
+            "p": 31,
+            "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+            "p_minus_one_arc_is_incomplete": true,
+            "extension": "every (p-1)-arc extends to a p-arc",
+            "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+          "proved_dependency": true,
+          "proved": true
+        },
+        "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+        "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+        "minimum_surviving_conic_secants_through_each_replacement": 12,
+        "maximum_rich_lines_allowed_by_R": 3,
+        "excluded": true,
+        "proved": true
+      },
+      "low_slack": {
+        "p": 31,
+        "minimal_deletion_lemma": {
+          "construction": "delete n_l-2 points from every rich line, take the union, then remove redundant deletions",
+          "size": "1<=t<=sum_l(n_l-2)<=R",
+          "even_occupancy_gap": "h(2r)-(2r-2)=(r-1)(r-2)>=0",
+          "odd_occupancy_gap": "h(2r+1)-(2r-1)=(r-1)^2>=0",
+          "minimality_witness": "each deleted z lies on a line with exactly two retained arc points"
+        },
+        "prime_arc_conic_dependency": "Ball--Lavrauw, Planar arcs, published Theorem 5 / arXiv v4 Theorem 3: a prime-field arc of size at least p-sqrt(p)+7/2 lies on a conic",
+        "generic_cutoff": 3,
+        "generic_cutoff_exact_condition": "(2R+5)^2<=4p",
+        "generic_minimum_surviving_secants_at_cutoff": 12,
+        "generic_secants_exceed_slack": true,
+        "uniform_near_arc_cutoff": 3,
+        "combined_excluded_positive_R_through": 3,
+        "first_open_R_at_least": 4,
+        "R_two_dependency": {
+          "p": 31,
+          "R": 2,
+          "positive_line_contributions": {
+            "3": 1,
+            "4": 2,
+            "5": 4,
+            "6": 6,
+            "7": 9
+          },
+          "partitions_of_two": [
+            [
+              2
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "rich_line_patterns": [
+            "one 4-secant and no other rich line",
+            "two 3-secants and no other rich line"
+          ],
+          "intersecting_trisecants": {
+            "meaning": "the two 3-secants share a boundary point",
+            "deletion": "delete their shared boundary point",
+            "remainder": "a p-arc",
+            "Segre_dependency": {
+              "field": "F_31",
+              "plane": "PG(2,31)",
+              "arc_size": 31,
+              "hypotheses": "Desarguesian plane, odd field order p>=5",
+              "conclusion": "every p-arc is contained in a nonsingular conic",
+              "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+              "all_hypotheses_met": true,
+              "proved_dependency": true,
+              "proved": true
+            },
+            "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+            "Miquelian_not_forced": true,
+            "minimum_surviving_conic_secants": 14,
+            "contradicts_total_R_two": true
+          },
+          "nonintersecting_or_four_secant": {
+            "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+            "remainder": "a (p-1)-arc",
+            "extension_dependency": {
+              "p": 31,
+              "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+              "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+              "p_minus_one_arc_is_incomplete": true,
+              "extension": "every (p-1)-arc extends to a p-arc",
+              "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+              "proved_dependency": true,
+              "proved": true
+            },
+            "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+            "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+            "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+            "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+            "minimum_surviving_conic_secants_through_either_replacement": 13,
+            "contradicts_total_R_two": true
+          },
+          "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+          "excluded": true,
+          "next_exact_target": "none at R=2; use the combined low-slack theorem",
+          "proved": true
+        },
+        "R_three_dependency": {
+          "p": 31,
+          "R": 3,
+          "partitions_of_three": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "rich_line_patterns": [
+            "one 4-secant and one 3-secant",
+            "three 3-secants"
+          ],
+          "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+          "remainder": "a (p-2)-arc",
+          "extension_dependency": {
+            "p": 31,
+            "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+            "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+            "p_minus_one_dependency": {
+              "p": 31,
+              "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+              "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+              "p_minus_one_arc_is_incomplete": true,
+              "extension": "every (p-1)-arc extends to a p-arc",
+              "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+              "proved_dependency": true,
+              "proved": true
+            },
+            "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+          "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+          "minimum_surviving_conic_secants_through_each_replacement": 12,
+          "maximum_rich_lines_allowed_by_R": 3,
+          "excluded": true,
+          "proved": true
+        },
+        "proved": true
+      },
+      "outside_arc": {
+        "p": 31,
+        "P": 32,
+        "m": 16,
+        "P_arc_classification": "a conic with external line at infinity",
+        "global_profile": {
+          "b=0": 16,
+          "b=2": 16
+        },
+        "phase_one_floors": {
+          "b=0": 62,
+          "b=2": 30
+        },
+        "phase_one_type_floor_with_t_wrong": "m*P+(t-1)*P",
+        "type_budget": 512,
+        "maximum_b0_directions_in_phase_one_type": 1,
+        "maximum_partition_disagreements": 2,
+        "character_sum_if_not_aligned_at_least": 28,
+        "nonproportional_forms_curve": "Y^2=Q*N is a smooth genus-one curve",
+        "smooth_genus_one_certificate": {
+          "forms": "nonsingular anisotropic binary quadratics Q and N over F_p",
+          "separable": "p is odd, so each nonsingular quadratic has two simple roots",
+          "disjoint_roots_if_nonproportional": "a shared root forces the shared Frobenius-conjugate root, hence proportionality",
+          "quartic": "Q*N is squarefree when Q and N are nonproportional",
+          "smooth_model": "Y^2=Q*N is a smooth double cover of P^1 of genus one",
+          "projective_character_sum": "sum_[u:v] chi(Q(u,v)N(u,v))=#C(F_p)-(p+1)",
+          "hasse_bound": "absolute character sum at most 2*sqrt(p)",
+          "forced_agreement_lower_bound": 28,
+          "squared_separation": "(p-3)^2=784>4p=124",
+          "strict_separation": true,
+          "proved": true
+        },
+        "genus_one_character_bound_squared": 124,
+        "forced_sum_squared": 784,
+        "strict_Hasse_contradiction": true,
+        "quadratic_forms_proportional": true,
+        "direction_types_align_exactly": true,
+        "affine_conic_is_Miquelian_circle": true,
+        "proved": true
+      },
+      "one_point_circle_replacement": {
+        "p": 31,
+        "boundary_shape_in_one_outside_chart": "(C minus {r}) union {z}, z notin C",
+        "C": "a Miquelian F_p-subline/circle",
+        "second_normalization": "send the boundary point z to infinity",
+        "circle_transport": "Mobius maps preserve F_p-sublines; because z is not on C, the transported circle does not contain infinity",
+        "remaining_finite_boundary": "p points of an affine P-arc",
+        "pair_deficit_after_second_normalization": "equality",
+        "excluded_by": "Proposition 15.676",
+        "dependency": {
+          "prop_15_676_proved": true,
+          "infinity_plus_p_pair_equality_excluded": true
+        },
+        "includes_near_line_profile": true,
+        "does_not_cover_arbitrary_non_Miquelian_conic_repairs": true,
+        "excluded": true,
+        "proved": true
+      },
+      "full_circle_line_chart": {
+        "p": 31,
+        "P": 32,
+        "m": 16,
+        "normalized_boundary": "{infinity} union (a+b*F_p)",
+        "line_direction_type": "eps=chi_F_p2(b), either sign",
+        "outside_chart_boundary_multiplier": "(-1)^m*eps",
+        "proof_of_multiplier": "product_t(a+b*t-w)=b^p(u-u^p); nonzero trace-zero elements have character (-1)^m",
+        "outside_affine_circle_b2_type": "eps",
+        "outside_alignment_equation": "c_line*((-1)^m*eps)=eps",
+        "forced_line_chart_c_H": 1,
+        "common_phase": 0,
+        "profile": {
+          "b=1": 1,
+          "b=p": 31
+        },
+        "direction_type_split": "the special line direction lies in either type; its type has m-1 transverse directions and the other type has m",
+        "special_parity_baseline": "x_j",
+        "transverse_parity": "sum_s x_s + phase = m+phase = 0 mod 2",
+        "floors": {
+          "b=1": 32,
+          "b=p": 0
+        },
+        "special_mean_interval": [
+          32,
+          512
+        ],
+        "transverse_quadratics_are_even_nonnegative": true,
+        "both_PSL_circle_orbits_have_same_forced_phase": true,
+        "full_circle_excluded": false,
+        "proved": true
+      }
+    },
+    "37": {
+      "derivative_phase_product": {
+        "p": 37,
+        "boundary_size": 38,
+        "identity": "product_{v in D} f'(v)=(-1)^(P(P-1)/2)*product_{i<j}(v_i-v_j)^2",
+        "sign_exponent": 703,
+        "chi_F_p2_minus_one": 1,
+        "product_of_derivative_characters": 1,
+        "product_of_transported_boundary_phases": 1,
+        "number_of_negative_boundary_phases_is_even": true,
+        "proved": true
+      },
+      "R_one": {
+        "p": 37,
+        "assumption": "one 3-secant and no other line of occupancy at least three",
+        "delete_one_triple_point": "a p-arc, hence contained in a conic",
+        "p_arc_conic_dependency": {
+          "field": "F_37",
+          "plane": "PG(2,37)",
+          "arc_size": 37,
+          "hypotheses": "Desarguesian plane, odd field order p>=5",
+          "conclusion": "every p-arc is contained in a nonsingular conic",
+          "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+          "all_hypotheses_met": true,
+          "proved_dependency": true,
+          "proved": true
+        },
+        "deleted_point_is_off_conic": "if it were on the conic, all p+1 points would be the conic and there would be no 3-secant",
+        "minimum_full_conic_secants_through_deleted_point": 18,
+        "maximum_destroyed_by_the_missing_conic_point": 1,
+        "minimum_surviving_secants": 17,
+        "contradicts_unique_trisecant": true,
+        "R_one_excluded": true,
+        "proved": true
+      },
+      "R_two": {
+        "p": 37,
+        "R": 2,
+        "positive_line_contributions": {
+          "3": 1,
+          "4": 2,
+          "5": 4,
+          "6": 6,
+          "7": 9
+        },
+        "partitions_of_two": [
+          [
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "rich_line_patterns": [
+          "one 4-secant and no other rich line",
+          "two 3-secants and no other rich line"
+        ],
+        "intersecting_trisecants": {
+          "meaning": "the two 3-secants share a boundary point",
+          "deletion": "delete their shared boundary point",
+          "remainder": "a p-arc",
+          "Segre_dependency": {
+            "field": "F_37",
+            "plane": "PG(2,37)",
+            "arc_size": 37,
+            "hypotheses": "Desarguesian plane, odd field order p>=5",
+            "conclusion": "every p-arc is contained in a nonsingular conic",
+            "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+            "all_hypotheses_met": true,
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+          "Miquelian_not_forced": true,
+          "minimum_surviving_conic_secants": 17,
+          "contradicts_total_R_two": true
+        },
+        "nonintersecting_or_four_secant": {
+          "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+          "remainder": "a (p-1)-arc",
+          "extension_dependency": {
+            "p": 37,
+            "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+            "p_minus_one_arc_is_incomplete": true,
+            "extension": "every (p-1)-arc extends to a p-arc",
+            "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+          "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+          "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+          "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+          "minimum_surviving_conic_secants_through_either_replacement": 16,
+          "contradicts_total_R_two": true
+        },
+        "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+        "excluded": true,
+        "next_exact_target": "none at R=2; use the combined low-slack theorem",
+        "proved": true
+      },
+      "R_three": {
+        "p": 37,
+        "R": 3,
+        "partitions_of_three": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "rich_line_patterns": [
+          "one 4-secant and one 3-secant",
+          "three 3-secants"
+        ],
+        "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+        "remainder": "a (p-2)-arc",
+        "extension_dependency": {
+          "p": 37,
+          "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+          "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+          "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+          "p_minus_one_dependency": {
+            "p": 37,
+            "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+            "p_minus_one_arc_is_incomplete": true,
+            "extension": "every (p-1)-arc extends to a p-arc",
+            "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+          "proved_dependency": true,
+          "proved": true
+        },
+        "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+        "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+        "minimum_surviving_conic_secants_through_each_replacement": 15,
+        "maximum_rich_lines_allowed_by_R": 3,
+        "excluded": true,
+        "proved": true
+      },
+      "low_slack": {
+        "p": 37,
+        "minimal_deletion_lemma": {
+          "construction": "delete n_l-2 points from every rich line, take the union, then remove redundant deletions",
+          "size": "1<=t<=sum_l(n_l-2)<=R",
+          "even_occupancy_gap": "h(2r)-(2r-2)=(r-1)(r-2)>=0",
+          "odd_occupancy_gap": "h(2r+1)-(2r-1)=(r-1)^2>=0",
+          "minimality_witness": "each deleted z lies on a line with exactly two retained arc points"
+        },
+        "prime_arc_conic_dependency": "Ball--Lavrauw, Planar arcs, published Theorem 5 / arXiv v4 Theorem 3: a prime-field arc of size at least p-sqrt(p)+7/2 lies on a conic",
+        "generic_cutoff": 3,
+        "generic_cutoff_exact_condition": "(2R+5)^2<=4p",
+        "generic_minimum_surviving_secants_at_cutoff": 15,
+        "generic_secants_exceed_slack": true,
+        "uniform_near_arc_cutoff": 3,
+        "combined_excluded_positive_R_through": 3,
+        "first_open_R_at_least": 4,
+        "R_two_dependency": {
+          "p": 37,
+          "R": 2,
+          "positive_line_contributions": {
+            "3": 1,
+            "4": 2,
+            "5": 4,
+            "6": 6,
+            "7": 9
+          },
+          "partitions_of_two": [
+            [
+              2
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "rich_line_patterns": [
+            "one 4-secant and no other rich line",
+            "two 3-secants and no other rich line"
+          ],
+          "intersecting_trisecants": {
+            "meaning": "the two 3-secants share a boundary point",
+            "deletion": "delete their shared boundary point",
+            "remainder": "a p-arc",
+            "Segre_dependency": {
+              "field": "F_37",
+              "plane": "PG(2,37)",
+              "arc_size": 37,
+              "hypotheses": "Desarguesian plane, odd field order p>=5",
+              "conclusion": "every p-arc is contained in a nonsingular conic",
+              "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+              "all_hypotheses_met": true,
+              "proved_dependency": true,
+              "proved": true
+            },
+            "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+            "Miquelian_not_forced": true,
+            "minimum_surviving_conic_secants": 17,
+            "contradicts_total_R_two": true
+          },
+          "nonintersecting_or_four_secant": {
+            "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+            "remainder": "a (p-1)-arc",
+            "extension_dependency": {
+              "p": 37,
+              "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+              "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+              "p_minus_one_arc_is_incomplete": true,
+              "extension": "every (p-1)-arc extends to a p-arc",
+              "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+              "proved_dependency": true,
+              "proved": true
+            },
+            "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+            "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+            "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+            "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+            "minimum_surviving_conic_secants_through_either_replacement": 16,
+            "contradicts_total_R_two": true
+          },
+          "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+          "excluded": true,
+          "next_exact_target": "none at R=2; use the combined low-slack theorem",
+          "proved": true
+        },
+        "R_three_dependency": {
+          "p": 37,
+          "R": 3,
+          "partitions_of_three": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "rich_line_patterns": [
+            "one 4-secant and one 3-secant",
+            "three 3-secants"
+          ],
+          "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+          "remainder": "a (p-2)-arc",
+          "extension_dependency": {
+            "p": 37,
+            "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+            "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+            "p_minus_one_dependency": {
+              "p": 37,
+              "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+              "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+              "p_minus_one_arc_is_incomplete": true,
+              "extension": "every (p-1)-arc extends to a p-arc",
+              "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+              "proved_dependency": true,
+              "proved": true
+            },
+            "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+          "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+          "minimum_surviving_conic_secants_through_each_replacement": 15,
+          "maximum_rich_lines_allowed_by_R": 3,
+          "excluded": true,
+          "proved": true
+        },
+        "proved": true
+      },
+      "outside_arc": {
+        "p": 37,
+        "P": 38,
+        "m": 19,
+        "P_arc_classification": "a conic with external line at infinity",
+        "global_profile": {
+          "b=0": 19,
+          "b=2": 19
+        },
+        "phase_one_floors": {
+          "b=0": 74,
+          "b=2": 36
+        },
+        "phase_one_type_floor_with_t_wrong": "m*P+(t-1)*P",
+        "type_budget": 722,
+        "maximum_b0_directions_in_phase_one_type": 1,
+        "maximum_partition_disagreements": 2,
+        "character_sum_if_not_aligned_at_least": 34,
+        "nonproportional_forms_curve": "Y^2=Q*N is a smooth genus-one curve",
+        "smooth_genus_one_certificate": {
+          "forms": "nonsingular anisotropic binary quadratics Q and N over F_p",
+          "separable": "p is odd, so each nonsingular quadratic has two simple roots",
+          "disjoint_roots_if_nonproportional": "a shared root forces the shared Frobenius-conjugate root, hence proportionality",
+          "quartic": "Q*N is squarefree when Q and N are nonproportional",
+          "smooth_model": "Y^2=Q*N is a smooth double cover of P^1 of genus one",
+          "projective_character_sum": "sum_[u:v] chi(Q(u,v)N(u,v))=#C(F_p)-(p+1)",
+          "hasse_bound": "absolute character sum at most 2*sqrt(p)",
+          "forced_agreement_lower_bound": 34,
+          "squared_separation": "(p-3)^2=1156>4p=148",
+          "strict_separation": true,
+          "proved": true
+        },
+        "genus_one_character_bound_squared": 148,
+        "forced_sum_squared": 1156,
+        "strict_Hasse_contradiction": true,
+        "quadratic_forms_proportional": true,
+        "direction_types_align_exactly": true,
+        "affine_conic_is_Miquelian_circle": true,
+        "proved": true
+      },
+      "one_point_circle_replacement": {
+        "p": 37,
+        "boundary_shape_in_one_outside_chart": "(C minus {r}) union {z}, z notin C",
+        "C": "a Miquelian F_p-subline/circle",
+        "second_normalization": "send the boundary point z to infinity",
+        "circle_transport": "Mobius maps preserve F_p-sublines; because z is not on C, the transported circle does not contain infinity",
+        "remaining_finite_boundary": "p points of an affine P-arc",
+        "pair_deficit_after_second_normalization": "equality",
+        "excluded_by": "Proposition 15.676",
+        "dependency": {
+          "prop_15_676_proved": true,
+          "infinity_plus_p_pair_equality_excluded": true
+        },
+        "includes_near_line_profile": true,
+        "does_not_cover_arbitrary_non_Miquelian_conic_repairs": true,
+        "excluded": true,
+        "proved": true
+      },
+      "full_circle_line_chart": {
+        "p": 37,
+        "P": 38,
+        "m": 19,
+        "normalized_boundary": "{infinity} union (a+b*F_p)",
+        "line_direction_type": "eps=chi_F_p2(b), either sign",
+        "outside_chart_boundary_multiplier": "(-1)^m*eps",
+        "proof_of_multiplier": "product_t(a+b*t-w)=b^p(u-u^p); nonzero trace-zero elements have character (-1)^m",
+        "outside_affine_circle_b2_type": "eps",
+        "outside_alignment_equation": "c_line*((-1)^m*eps)=eps",
+        "forced_line_chart_c_H": -1,
+        "common_phase": 1,
+        "profile": {
+          "b=1": 1,
+          "b=p": 37
+        },
+        "direction_type_split": "the special line direction lies in either type; its type has m-1 transverse directions and the other type has m",
+        "special_parity_baseline": "1-x_j",
+        "transverse_parity": "sum_s x_s + phase = m+phase = 0 mod 2",
+        "floors": {
+          "b=1": 36,
+          "b=p": 0
+        },
+        "special_mean_interval": [
+          36,
+          722
+        ],
+        "transverse_quadratics_are_even_nonnegative": true,
+        "both_PSL_circle_orbits_have_same_forced_phase": true,
+        "full_circle_excluded": false,
+        "proved": true
+      }
+    },
+    "41": {
+      "derivative_phase_product": {
+        "p": 41,
+        "boundary_size": 42,
+        "identity": "product_{v in D} f'(v)=(-1)^(P(P-1)/2)*product_{i<j}(v_i-v_j)^2",
+        "sign_exponent": 861,
+        "chi_F_p2_minus_one": 1,
+        "product_of_derivative_characters": 1,
+        "product_of_transported_boundary_phases": 1,
+        "number_of_negative_boundary_phases_is_even": true,
+        "proved": true
+      },
+      "R_one": {
+        "p": 41,
+        "assumption": "one 3-secant and no other line of occupancy at least three",
+        "delete_one_triple_point": "a p-arc, hence contained in a conic",
+        "p_arc_conic_dependency": {
+          "field": "F_41",
+          "plane": "PG(2,41)",
+          "arc_size": 41,
+          "hypotheses": "Desarguesian plane, odd field order p>=5",
+          "conclusion": "every p-arc is contained in a nonsingular conic",
+          "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+          "all_hypotheses_met": true,
+          "proved_dependency": true,
+          "proved": true
+        },
+        "deleted_point_is_off_conic": "if it were on the conic, all p+1 points would be the conic and there would be no 3-secant",
+        "minimum_full_conic_secants_through_deleted_point": 20,
+        "maximum_destroyed_by_the_missing_conic_point": 1,
+        "minimum_surviving_secants": 19,
+        "contradicts_unique_trisecant": true,
+        "R_one_excluded": true,
+        "proved": true
+      },
+      "R_two": {
+        "p": 41,
+        "R": 2,
+        "positive_line_contributions": {
+          "3": 1,
+          "4": 2,
+          "5": 4,
+          "6": 6,
+          "7": 9
+        },
+        "partitions_of_two": [
+          [
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "rich_line_patterns": [
+          "one 4-secant and no other rich line",
+          "two 3-secants and no other rich line"
+        ],
+        "intersecting_trisecants": {
+          "meaning": "the two 3-secants share a boundary point",
+          "deletion": "delete their shared boundary point",
+          "remainder": "a p-arc",
+          "Segre_dependency": {
+            "field": "F_41",
+            "plane": "PG(2,41)",
+            "arc_size": 41,
+            "hypotheses": "Desarguesian plane, odd field order p>=5",
+            "conclusion": "every p-arc is contained in a nonsingular conic",
+            "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+            "all_hypotheses_met": true,
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+          "Miquelian_not_forced": true,
+          "minimum_surviving_conic_secants": 19,
+          "contradicts_total_R_two": true
+        },
+        "nonintersecting_or_four_secant": {
+          "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+          "remainder": "a (p-1)-arc",
+          "extension_dependency": {
+            "p": 41,
+            "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+            "p_minus_one_arc_is_incomplete": true,
+            "extension": "every (p-1)-arc extends to a p-arc",
+            "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+          "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+          "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+          "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+          "minimum_surviving_conic_secants_through_either_replacement": 18,
+          "contradicts_total_R_two": true
+        },
+        "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+        "excluded": true,
+        "next_exact_target": "none at R=2; use the combined low-slack theorem",
+        "proved": true
+      },
+      "R_three": {
+        "p": 41,
+        "R": 3,
+        "partitions_of_three": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "rich_line_patterns": [
+          "one 4-secant and one 3-secant",
+          "three 3-secants"
+        ],
+        "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+        "remainder": "a (p-2)-arc",
+        "extension_dependency": {
+          "p": 41,
+          "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+          "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+          "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+          "p_minus_one_dependency": {
+            "p": 41,
+            "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+            "p_minus_one_arc_is_incomplete": true,
+            "extension": "every (p-1)-arc extends to a p-arc",
+            "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+          "proved_dependency": true,
+          "proved": true
+        },
+        "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+        "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+        "minimum_surviving_conic_secants_through_each_replacement": 17,
+        "maximum_rich_lines_allowed_by_R": 3,
+        "excluded": true,
+        "proved": true
+      },
+      "low_slack": {
+        "p": 41,
+        "minimal_deletion_lemma": {
+          "construction": "delete n_l-2 points from every rich line, take the union, then remove redundant deletions",
+          "size": "1<=t<=sum_l(n_l-2)<=R",
+          "even_occupancy_gap": "h(2r)-(2r-2)=(r-1)(r-2)>=0",
+          "odd_occupancy_gap": "h(2r+1)-(2r-1)=(r-1)^2>=0",
+          "minimality_witness": "each deleted z lies on a line with exactly two retained arc points"
+        },
+        "prime_arc_conic_dependency": "Ball--Lavrauw, Planar arcs, published Theorem 5 / arXiv v4 Theorem 3: a prime-field arc of size at least p-sqrt(p)+7/2 lies on a conic",
+        "generic_cutoff": 3,
+        "generic_cutoff_exact_condition": "(2R+5)^2<=4p",
+        "generic_minimum_surviving_secants_at_cutoff": 17,
+        "generic_secants_exceed_slack": true,
+        "uniform_near_arc_cutoff": 3,
+        "combined_excluded_positive_R_through": 3,
+        "first_open_R_at_least": 4,
+        "R_two_dependency": {
+          "p": 41,
+          "R": 2,
+          "positive_line_contributions": {
+            "3": 1,
+            "4": 2,
+            "5": 4,
+            "6": 6,
+            "7": 9
+          },
+          "partitions_of_two": [
+            [
+              2
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "rich_line_patterns": [
+            "one 4-secant and no other rich line",
+            "two 3-secants and no other rich line"
+          ],
+          "intersecting_trisecants": {
+            "meaning": "the two 3-secants share a boundary point",
+            "deletion": "delete their shared boundary point",
+            "remainder": "a p-arc",
+            "Segre_dependency": {
+              "field": "F_41",
+              "plane": "PG(2,41)",
+              "arc_size": 41,
+              "hypotheses": "Desarguesian plane, odd field order p>=5",
+              "conclusion": "every p-arc is contained in a nonsingular conic",
+              "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+              "all_hypotheses_met": true,
+              "proved_dependency": true,
+              "proved": true
+            },
+            "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+            "Miquelian_not_forced": true,
+            "minimum_surviving_conic_secants": 19,
+            "contradicts_total_R_two": true
+          },
+          "nonintersecting_or_four_secant": {
+            "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+            "remainder": "a (p-1)-arc",
+            "extension_dependency": {
+              "p": 41,
+              "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+              "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+              "p_minus_one_arc_is_incomplete": true,
+              "extension": "every (p-1)-arc extends to a p-arc",
+              "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+              "proved_dependency": true,
+              "proved": true
+            },
+            "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+            "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+            "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+            "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+            "minimum_surviving_conic_secants_through_either_replacement": 18,
+            "contradicts_total_R_two": true
+          },
+          "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+          "excluded": true,
+          "next_exact_target": "none at R=2; use the combined low-slack theorem",
+          "proved": true
+        },
+        "R_three_dependency": {
+          "p": 41,
+          "R": 3,
+          "partitions_of_three": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "rich_line_patterns": [
+            "one 4-secant and one 3-secant",
+            "three 3-secants"
+          ],
+          "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+          "remainder": "a (p-2)-arc",
+          "extension_dependency": {
+            "p": 41,
+            "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+            "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+            "p_minus_one_dependency": {
+              "p": 41,
+              "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+              "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+              "p_minus_one_arc_is_incomplete": true,
+              "extension": "every (p-1)-arc extends to a p-arc",
+              "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+              "proved_dependency": true,
+              "proved": true
+            },
+            "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+          "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+          "minimum_surviving_conic_secants_through_each_replacement": 17,
+          "maximum_rich_lines_allowed_by_R": 3,
+          "excluded": true,
+          "proved": true
+        },
+        "proved": true
+      },
+      "outside_arc": {
+        "p": 41,
+        "P": 42,
+        "m": 21,
+        "P_arc_classification": "a conic with external line at infinity",
+        "global_profile": {
+          "b=0": 21,
+          "b=2": 21
+        },
+        "phase_one_floors": {
+          "b=0": 82,
+          "b=2": 40
+        },
+        "phase_one_type_floor_with_t_wrong": "m*P+(t-1)*P",
+        "type_budget": 882,
+        "maximum_b0_directions_in_phase_one_type": 1,
+        "maximum_partition_disagreements": 2,
+        "character_sum_if_not_aligned_at_least": 38,
+        "nonproportional_forms_curve": "Y^2=Q*N is a smooth genus-one curve",
+        "smooth_genus_one_certificate": {
+          "forms": "nonsingular anisotropic binary quadratics Q and N over F_p",
+          "separable": "p is odd, so each nonsingular quadratic has two simple roots",
+          "disjoint_roots_if_nonproportional": "a shared root forces the shared Frobenius-conjugate root, hence proportionality",
+          "quartic": "Q*N is squarefree when Q and N are nonproportional",
+          "smooth_model": "Y^2=Q*N is a smooth double cover of P^1 of genus one",
+          "projective_character_sum": "sum_[u:v] chi(Q(u,v)N(u,v))=#C(F_p)-(p+1)",
+          "hasse_bound": "absolute character sum at most 2*sqrt(p)",
+          "forced_agreement_lower_bound": 38,
+          "squared_separation": "(p-3)^2=1444>4p=164",
+          "strict_separation": true,
+          "proved": true
+        },
+        "genus_one_character_bound_squared": 164,
+        "forced_sum_squared": 1444,
+        "strict_Hasse_contradiction": true,
+        "quadratic_forms_proportional": true,
+        "direction_types_align_exactly": true,
+        "affine_conic_is_Miquelian_circle": true,
+        "proved": true
+      },
+      "one_point_circle_replacement": {
+        "p": 41,
+        "boundary_shape_in_one_outside_chart": "(C minus {r}) union {z}, z notin C",
+        "C": "a Miquelian F_p-subline/circle",
+        "second_normalization": "send the boundary point z to infinity",
+        "circle_transport": "Mobius maps preserve F_p-sublines; because z is not on C, the transported circle does not contain infinity",
+        "remaining_finite_boundary": "p points of an affine P-arc",
+        "pair_deficit_after_second_normalization": "equality",
+        "excluded_by": "Proposition 15.676",
+        "dependency": {
+          "prop_15_676_proved": true,
+          "infinity_plus_p_pair_equality_excluded": true
+        },
+        "includes_near_line_profile": true,
+        "does_not_cover_arbitrary_non_Miquelian_conic_repairs": true,
+        "excluded": true,
+        "proved": true
+      },
+      "full_circle_line_chart": {
+        "p": 41,
+        "P": 42,
+        "m": 21,
+        "normalized_boundary": "{infinity} union (a+b*F_p)",
+        "line_direction_type": "eps=chi_F_p2(b), either sign",
+        "outside_chart_boundary_multiplier": "(-1)^m*eps",
+        "proof_of_multiplier": "product_t(a+b*t-w)=b^p(u-u^p); nonzero trace-zero elements have character (-1)^m",
+        "outside_affine_circle_b2_type": "eps",
+        "outside_alignment_equation": "c_line*((-1)^m*eps)=eps",
+        "forced_line_chart_c_H": -1,
+        "common_phase": 1,
+        "profile": {
+          "b=1": 1,
+          "b=p": 41
+        },
+        "direction_type_split": "the special line direction lies in either type; its type has m-1 transverse directions and the other type has m",
+        "special_parity_baseline": "1-x_j",
+        "transverse_parity": "sum_s x_s + phase = m+phase = 0 mod 2",
+        "floors": {
+          "b=1": 40,
+          "b=p": 0
+        },
+        "special_mean_interval": [
+          40,
+          882
+        ],
+        "transverse_quadratics_are_even_nonnegative": true,
+        "both_PSL_circle_orbits_have_same_forced_phase": true,
+        "full_circle_excluded": false,
+        "proved": true
+      }
+    },
+    "101": {
+      "derivative_phase_product": {
+        "p": 101,
+        "boundary_size": 102,
+        "identity": "product_{v in D} f'(v)=(-1)^(P(P-1)/2)*product_{i<j}(v_i-v_j)^2",
+        "sign_exponent": 5151,
+        "chi_F_p2_minus_one": 1,
+        "product_of_derivative_characters": 1,
+        "product_of_transported_boundary_phases": 1,
+        "number_of_negative_boundary_phases_is_even": true,
+        "proved": true
+      },
+      "R_one": {
+        "p": 101,
+        "assumption": "one 3-secant and no other line of occupancy at least three",
+        "delete_one_triple_point": "a p-arc, hence contained in a conic",
+        "p_arc_conic_dependency": {
+          "field": "F_101",
+          "plane": "PG(2,101)",
+          "arc_size": 101,
+          "hypotheses": "Desarguesian plane, odd field order p>=5",
+          "conclusion": "every p-arc is contained in a nonsingular conic",
+          "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+          "all_hypotheses_met": true,
+          "proved_dependency": true,
+          "proved": true
+        },
+        "deleted_point_is_off_conic": "if it were on the conic, all p+1 points would be the conic and there would be no 3-secant",
+        "minimum_full_conic_secants_through_deleted_point": 50,
+        "maximum_destroyed_by_the_missing_conic_point": 1,
+        "minimum_surviving_secants": 49,
+        "contradicts_unique_trisecant": true,
+        "R_one_excluded": true,
+        "proved": true
+      },
+      "R_two": {
+        "p": 101,
+        "R": 2,
+        "positive_line_contributions": {
+          "3": 1,
+          "4": 2,
+          "5": 4,
+          "6": 6,
+          "7": 9
+        },
+        "partitions_of_two": [
+          [
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "rich_line_patterns": [
+          "one 4-secant and no other rich line",
+          "two 3-secants and no other rich line"
+        ],
+        "intersecting_trisecants": {
+          "meaning": "the two 3-secants share a boundary point",
+          "deletion": "delete their shared boundary point",
+          "remainder": "a p-arc",
+          "Segre_dependency": {
+            "field": "F_101",
+            "plane": "PG(2,101)",
+            "arc_size": 101,
+            "hypotheses": "Desarguesian plane, odd field order p>=5",
+            "conclusion": "every p-arc is contained in a nonsingular conic",
+            "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+            "all_hypotheses_met": true,
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+          "Miquelian_not_forced": true,
+          "minimum_surviving_conic_secants": 49,
+          "contradicts_total_R_two": true
+        },
+        "nonintersecting_or_four_secant": {
+          "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+          "remainder": "a (p-1)-arc",
+          "extension_dependency": {
+            "p": 101,
+            "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+            "p_minus_one_arc_is_incomplete": true,
+            "extension": "every (p-1)-arc extends to a p-arc",
+            "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+          "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+          "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+          "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+          "minimum_surviving_conic_secants_through_either_replacement": 48,
+          "contradicts_total_R_two": true
+        },
+        "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+        "excluded": true,
+        "next_exact_target": "none at R=2; use the combined low-slack theorem",
+        "proved": true
+      },
+      "R_three": {
+        "p": 101,
+        "R": 3,
+        "partitions_of_three": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "rich_line_patterns": [
+          "one 4-secant and one 3-secant",
+          "three 3-secants"
+        ],
+        "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+        "remainder": "a (p-2)-arc",
+        "extension_dependency": {
+          "p": 101,
+          "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+          "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+          "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+          "p_minus_one_dependency": {
+            "p": 101,
+            "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+            "p_minus_one_arc_is_incomplete": true,
+            "extension": "every (p-1)-arc extends to a p-arc",
+            "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+          "proved_dependency": true,
+          "proved": true
+        },
+        "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+        "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+        "minimum_surviving_conic_secants_through_each_replacement": 47,
+        "maximum_rich_lines_allowed_by_R": 3,
+        "excluded": true,
+        "proved": true
+      },
+      "low_slack": {
+        "p": 101,
+        "minimal_deletion_lemma": {
+          "construction": "delete n_l-2 points from every rich line, take the union, then remove redundant deletions",
+          "size": "1<=t<=sum_l(n_l-2)<=R",
+          "even_occupancy_gap": "h(2r)-(2r-2)=(r-1)(r-2)>=0",
+          "odd_occupancy_gap": "h(2r+1)-(2r-1)=(r-1)^2>=0",
+          "minimality_witness": "each deleted z lies on a line with exactly two retained arc points"
+        },
+        "prime_arc_conic_dependency": "Ball--Lavrauw, Planar arcs, published Theorem 5 / arXiv v4 Theorem 3: a prime-field arc of size at least p-sqrt(p)+7/2 lies on a conic",
+        "generic_cutoff": 7,
+        "generic_cutoff_exact_condition": "(2R+5)^2<=4p",
+        "generic_minimum_surviving_secants_at_cutoff": 43,
+        "generic_secants_exceed_slack": true,
+        "uniform_near_arc_cutoff": 3,
+        "combined_excluded_positive_R_through": 7,
+        "first_open_R_at_least": 8,
+        "R_two_dependency": {
+          "p": 101,
+          "R": 2,
+          "positive_line_contributions": {
+            "3": 1,
+            "4": 2,
+            "5": 4,
+            "6": 6,
+            "7": 9
+          },
+          "partitions_of_two": [
+            [
+              2
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "rich_line_patterns": [
+            "one 4-secant and no other rich line",
+            "two 3-secants and no other rich line"
+          ],
+          "intersecting_trisecants": {
+            "meaning": "the two 3-secants share a boundary point",
+            "deletion": "delete their shared boundary point",
+            "remainder": "a p-arc",
+            "Segre_dependency": {
+              "field": "F_101",
+              "plane": "PG(2,101)",
+              "arc_size": 101,
+              "hypotheses": "Desarguesian plane, odd field order p>=5",
+              "conclusion": "every p-arc is contained in a nonsingular conic",
+              "reference": "Segre q-arc theorem (corollary of the lemma of tangents)",
+              "all_hypotheses_met": true,
+              "proved_dependency": true,
+              "proved": true
+            },
+            "normal_form": "(a nonsingular conic minus one point) plus one off-conic point",
+            "Miquelian_not_forced": true,
+            "minimum_surviving_conic_secants": 49,
+            "contradicts_total_R_two": true
+          },
+          "nonintersecting_or_four_secant": {
+            "deletion": "delete one boundary point from each disjoint 3-secant, or two from the unique 4-secant",
+            "remainder": "a (p-1)-arc",
+            "extension_dependency": {
+              "p": 101,
+              "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+              "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+              "p_minus_one_arc_is_incomplete": true,
+              "extension": "every (p-1)-arc extends to a p-arc",
+              "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+              "proved_dependency": true,
+              "proved": true
+            },
+            "normal_form": "(a nonsingular conic minus two points) plus two off-conic points",
+            "deleted_points_are_off_conic": "each deleted point lies on a rich line whose two retained points already lie on the conic",
+            "one_4_secant": "both off-conic replacements lie on the same retained conic secant",
+            "two_disjoint_3_secants": "each off-conic replacement lies on its own retained conic secant",
+            "minimum_surviving_conic_secants_through_either_replacement": 48,
+            "contradicts_total_R_two": true
+          },
+          "secant_count_input": "an off-conic point lies on at least (p-1)/2 conic secants; each missing conic point destroys at most one",
+          "excluded": true,
+          "next_exact_target": "none at R=2; use the combined low-slack theorem",
+          "proved": true
+        },
+        "R_three_dependency": {
+          "p": 101,
+          "R": 3,
+          "partitions_of_three": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "rich_line_patterns": [
+            "one 4-secant and one 3-secant",
+            "three 3-secants"
+          ],
+          "private_deletion": "choose two points of the 4-secant off the 3-secant and one point of the 3-secant off the 4-secant; or choose one point of each 3-secant off the other two rich lines",
+          "remainder": "a (p-2)-arc",
+          "extension_dependency": {
+            "p": 101,
+            "classification": "complete (q-2)-arcs occur only for q=8,9,11",
+            "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 11 (Corollary 9 in arXiv v4)",
+            "extension_chain": "(p-2)-arc extends to (p-1)-arc, then to p-arc",
+            "p_minus_one_dependency": {
+              "p": 101,
+              "classification": "complete (q-1)-arcs occur only for q=7,9,11,13",
+              "reference": "Ball--Lavrauw, Planar arcs, JCTA 160 (2018), Corollary 10 (Corollary 8 in arXiv v4)",
+              "p_minus_one_arc_is_incomplete": true,
+              "extension": "every (p-1)-arc extends to a p-arc",
+              "conclusion": "every (p-1)-arc is contained in a nonsingular conic",
+              "proved_dependency": true,
+              "proved": true
+            },
+            "conclusion": "every (p-2)-arc is contained in a nonsingular conic",
+            "proved_dependency": true,
+            "proved": true
+          },
+          "normal_form": "a nonsingular conic minus three points, plus three off-conic points",
+          "deleted_points_are_off_conic": "each deleted point's rich line retains two conic points",
+          "minimum_surviving_conic_secants_through_each_replacement": 47,
+          "maximum_rich_lines_allowed_by_R": 3,
+          "excluded": true,
+          "proved": true
+        },
+        "proved": true
+      },
+      "outside_arc": {
+        "p": 101,
+        "P": 102,
+        "m": 51,
+        "P_arc_classification": "a conic with external line at infinity",
+        "global_profile": {
+          "b=0": 51,
+          "b=2": 51
+        },
+        "phase_one_floors": {
+          "b=0": 202,
+          "b=2": 100
+        },
+        "phase_one_type_floor_with_t_wrong": "m*P+(t-1)*P",
+        "type_budget": 5202,
+        "maximum_b0_directions_in_phase_one_type": 1,
+        "maximum_partition_disagreements": 2,
+        "character_sum_if_not_aligned_at_least": 98,
+        "nonproportional_forms_curve": "Y^2=Q*N is a smooth genus-one curve",
+        "smooth_genus_one_certificate": {
+          "forms": "nonsingular anisotropic binary quadratics Q and N over F_p",
+          "separable": "p is odd, so each nonsingular quadratic has two simple roots",
+          "disjoint_roots_if_nonproportional": "a shared root forces the shared Frobenius-conjugate root, hence proportionality",
+          "quartic": "Q*N is squarefree when Q and N are nonproportional",
+          "smooth_model": "Y^2=Q*N is a smooth double cover of P^1 of genus one",
+          "projective_character_sum": "sum_[u:v] chi(Q(u,v)N(u,v))=#C(F_p)-(p+1)",
+          "hasse_bound": "absolute character sum at most 2*sqrt(p)",
+          "forced_agreement_lower_bound": 98,
+          "squared_separation": "(p-3)^2=9604>4p=404",
+          "strict_separation": true,
+          "proved": true
+        },
+        "genus_one_character_bound_squared": 404,
+        "forced_sum_squared": 9604,
+        "strict_Hasse_contradiction": true,
+        "quadratic_forms_proportional": true,
+        "direction_types_align_exactly": true,
+        "affine_conic_is_Miquelian_circle": true,
+        "proved": true
+      },
+      "one_point_circle_replacement": {
+        "p": 101,
+        "boundary_shape_in_one_outside_chart": "(C minus {r}) union {z}, z notin C",
+        "C": "a Miquelian F_p-subline/circle",
+        "second_normalization": "send the boundary point z to infinity",
+        "circle_transport": "Mobius maps preserve F_p-sublines; because z is not on C, the transported circle does not contain infinity",
+        "remaining_finite_boundary": "p points of an affine P-arc",
+        "pair_deficit_after_second_normalization": "equality",
+        "excluded_by": "Proposition 15.676",
+        "dependency": {
+          "prop_15_676_proved": true,
+          "infinity_plus_p_pair_equality_excluded": true
+        },
+        "includes_near_line_profile": true,
+        "does_not_cover_arbitrary_non_Miquelian_conic_repairs": true,
+        "excluded": true,
+        "proved": true
+      },
+      "full_circle_line_chart": {
+        "p": 101,
+        "P": 102,
+        "m": 51,
+        "normalized_boundary": "{infinity} union (a+b*F_p)",
+        "line_direction_type": "eps=chi_F_p2(b), either sign",
+        "outside_chart_boundary_multiplier": "(-1)^m*eps",
+        "proof_of_multiplier": "product_t(a+b*t-w)=b^p(u-u^p); nonzero trace-zero elements have character (-1)^m",
+        "outside_affine_circle_b2_type": "eps",
+        "outside_alignment_equation": "c_line*((-1)^m*eps)=eps",
+        "forced_line_chart_c_H": -1,
+        "common_phase": 1,
+        "profile": {
+          "b=1": 1,
+          "b=p": 101
+        },
+        "direction_type_split": "the special line direction lies in either type; its type has m-1 transverse directions and the other type has m",
+        "special_parity_baseline": "1-x_j",
+        "transverse_parity": "sum_s x_s + phase = m+phase = 0 mod 2",
+        "floors": {
+          "b=1": 100,
+          "b=p": 0
+        },
+        "special_mean_interval": [
+          100,
+          5202
+        ],
+        "transverse_quadratics_are_even_nonnegative": true,
+        "both_PSL_circle_orbits_have_same_forced_phase": true,
+        "full_circle_excluded": false,
+        "proved": true
+      }
+    }
+  },
+  "L_status": "OPEN"
+}

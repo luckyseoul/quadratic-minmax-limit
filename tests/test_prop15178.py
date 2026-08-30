@@ -54,7 +54,7 @@ def test_census_and_open_predicates():
     assert c3["match"] is True
     assert c5["match"] is True
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     h = hinge_status_178()
     assert h["bound_proved_general"] is False
     assert h["proved_star_identity"] is True

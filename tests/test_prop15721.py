@@ -9,6 +9,7 @@ from e1_gmin_m4_prop15721 import (
     signed_relative_flip_transport,
     theorem_boundary_transport_floor,
     transported_boundary_exclusion,
+    universal_boundary_transport_certificate,
 )
 
 
@@ -58,7 +59,17 @@ def test_old_second_shells_are_transport_excluded_too():
 def test_theorem_stops_honestly_at_total_boundary_p_plus_one():
     out = theorem_boundary_transport_floor()
     assert out["proved"] is True
+    assert out["universal_certificate"]["proved"] is True
     assert out["first_boundary_size_not_excluded"] == "p+1"
     assert out["remaining"]["residual_ii"] is False
     assert out["remaining"]["type_I"] is False
     assert out["remaining"]["limit_exists"] is False
+
+
+def test_universal_scope_uses_the_exact_even_size_partition():
+    row = universal_boundary_transport_certificate()
+    assert row["scope"] == "every prime p>=17"
+    assert row["partition_disjoint_and_exhaustive"] is True
+    assert row["middle_range_matches_prop_15_669"] is True
+    assert row["endpoint_p_minus_1_maps_to_infinity_plus_p_minus_2"] is True
+    assert row["proved"] is True

@@ -91,7 +91,7 @@
     }
   },
   "L_status": "OPEN",
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "residual_ii_k_eq_4p_empty": false,
   "D_form_on_lattice_general": false,

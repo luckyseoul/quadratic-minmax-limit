@@ -48,7 +48,7 @@ def test_flags_untouched():
     O = prove_open()
     assert O["proved"] is False
     assert O["plane_identity"] is True
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     assert gsum_disj_lb_proved_general() is False
     assert phi_F_ge_6_proved_general() is False
 

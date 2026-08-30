@@ -58,4 +58,4 @@ def test_p5_ker_box_infeasible_census():
 
 def test_hinge_still_open():
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False

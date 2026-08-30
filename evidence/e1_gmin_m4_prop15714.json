@@ -9,7 +9,41 @@
   },
   "all_finite_boundaries": 85900584,
   "boundary": "infinity plus seven finite points",
-  "independent_grid_audit_evidence": "evidence/p7_infinity7_positive_z0_v100_audit.json",
+  "count_identity_audit": {
+    "all_boundaries": 85900584,
+    "audited_high_z_counts": {
+      "2": 123480,
+      "3": 5488,
+      "7": 56
+    },
+    "derived_z0_boundaries": 79447032,
+    "derived_z1_boundaries": 6324528,
+    "identity": "sum_z z*N_z = 8*7^7",
+    "undetermined_direction_incidences": 6588344
+  },
+  "different_grid_rerun_evidence": "evidence/p7_infinity7_positive_z0_v100_audit.json",
+  "different_grid_rerun_validated": true,
+  "evidence_sha256": {
+    "different_grid_rerun": "9653275f4f66358fb7a015ffe1d8b22e8fc794a7057b9cbaafd6f1376bfb9ebe",
+    "primary_scan": "ebedf805251bc418f0034e316d37b7d3101a94922d6d4532c06f867cdfa42a76"
+  },
+  "independent_implementation_validated": false,
+  "input_integrity": {
+    "array_sha256": {
+      "base": "1bd5ca1015bbb735222fe100b1e8b41bb54b13df2aa8667480b11108ad4cea05",
+      "equation_matrix": "32b378e8bd6c55deb9b6b546c73ee869b69a5e0d7037f0ed474be5ae882fbc1a",
+      "finite_labels": "96c23cbbee81215029c045ddc326ef7950db23fdc61036d4714f798d9db8e895",
+      "floor_tables": "2b66d3b0184b8bb3cc85452ebffa91a819aa26dcf83eac59cae2091c08277656",
+      "left_dependencies": "0405fad25d2295ed722bd8ee15ebd6592907d8abdf9d97ddfa866500816dbad2"
+    },
+    "recomputed_from_current_checkout": true,
+    "source_sha256": {
+      "scripts/p7_infinity7_positive_z0_mod7_gpu.py": "f748005d9be3286094cf7693941544d762f8bef3ae30a27c19b32fb781e7d951",
+      "scripts/p7_size6_positive_infinity_mod7_gpu.py": "d0e54d2749a1fcd2841674134301fef241acbed2abdc5777aedfc5c36e87330a",
+      "scripts/p7_unsaturated_modular_catalog_filter.py": "f9b2781984ab3e2336977d43b657fe337bb09b37baea600b6fdb1f94483d135a",
+      "src/e1_gmin_m4_prop15632.py": "eda17b867dfd9654eb69d5b9f8b6dbb1b9791dd4ef79acc3060ddbf980822e0c"
+    }
+  },
   "left_dependency_count": 135,
   "mod7_survivors": 0,
   "modulus": 7,
@@ -34,5 +68,6 @@
   "top_level_gates_changed": false,
   "undetermined_direction_count_excluded": 0,
   "unique_catalog_means": 8,
+  "validation_scope": "complete exact CUDA scan plus a same-implementation different-grid rerun; no independent implementation has validated the zero-survivor claim",
   "z0_boundaries_excluded": 79447032
 }

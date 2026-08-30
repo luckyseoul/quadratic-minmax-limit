@@ -3,8 +3,9 @@
 Public-doc honesty check for E(1) / L.
 
     Writeup may assert L=1/2 only after the corrected GOAL.md units are
-    actually imported (not the legacy e1_closed_general old AND, the retired
-    Gsum hinge, or the retracted 15.167 spectral arrow). Soft-close banned.
+    actually imported (not the retired Gsum hinge or the retracted 15.167
+    spectral arrow). ``e1_closed_general`` now agrees with the live open
+    gates, while this four-unit check remains authoritative. Soft-close banned.
 """
 from __future__ import annotations
 
@@ -195,8 +196,14 @@ def run_main_chain() -> dict:
             "type_I_fail_k_2p_minus_1_ND": p168["proved"].get(
                 "type_I_fail_k_2p_minus_1_ND"
             ),
+            "type_I_historical_two_level_classes_closed": p168["proved"].get(
+                "type_I_historical_two_level_classes_closed"
+            ),
             "type_I_all_classes_closed": p168["proved"].get(
                 "type_I_all_classes_closed"
+            ),
+            "type_I_multilevel_bad_case_closed": p168["proved"].get(
+                "type_I_multilevel_bad_case_closed"
             ),
             "deep_tight_empty": p168["proved"].get("deep_tight_empty_p_ge_5"),
             "deep_auto_freeness": p168["proved"].get(
@@ -213,7 +220,7 @@ def run_main_chain() -> dict:
             "Public writeup may assert L=1/2 only after the valid gates: "
             "bi-tight levels 2/3, residual_ii k≥4p, multi-level Type I, Lemma D. "
             "QVAR/R1 and the spectral floor are no longer acceptance units. "
-            "Live e1_closed_general is a separate wiring fact. Soft-close banned (F3)."
+            "Live e1_closed_general agrees with these open gates. Soft-close banned (F3)."
         ),
     }
     return out

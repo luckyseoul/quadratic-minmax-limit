@@ -1,5 +1,5 @@
 {
-  "title": "Prop 15.193 residual (ii) exhaustiveness audit: affine branch CLOSED (15.179); full residual (ii) OPEN (no exhaustiveness)",
+  "title": "Prop 15.193 residual (ii) exhaustiveness audit: affine branch CLOSED (15.179); full residual (ii) OPEN at even k\u22654p",
   "proved": {
     "freeness_fail_eq_f_e_plus_on_U2": true,
     "freeness_fail_kills_Max_plus_weak_ND_witness": true,
@@ -9,7 +9,7 @@
     "residual_ii_exhaustiveness_proved": false,
     "residual_ii_b_ND_closed": true,
     "residual_ii_a_ND_closed": true,
-    "residual_ii_full_closed": true,
+    "residual_ii_full_closed": false,
     "multi_level_ruled_out": false,
     "non_affine_two_level_ND_closed": true,
     "non_affine_two_level_exhaustiveness": false,
@@ -412,14 +412,16 @@
     "residual_ii_b_ND": "CLOSED by 15.236 (dichotomy + dual-bad-case empty)",
     "residual_ii_a_ND": "CLOSED",
     "residual_ii_exhaustiveness": "OPEN \u2014 freeness-fail does not force S\u2208{2,4} and f_e=3\u2212S",
-    "residual_ii_full": "CLOSED",
-    "residual_i_type_I_k_3p_minus_2": "OPEN \u2014 needs |\u03bc|\u22642/n or ker-box (15.176\u2013192)",
+    "residual_ii_full": "OPEN: bounded k\u22644p\u22122 is closed; multi-level even k\u22654p remains",
+    "type_I_multilevel": "OPEN \u2014 multi-level Max\u2212 bad case",
     "gsum_disj_lb_proved_general": false,
     "e1_closed_general": false,
     "bound_proved_general": false,
-    "open_subcases": [],
-    "open": "Prove exhaustiveness lemma (weak ND fail \u21d2 affine two-level), or close (ii-a)/(ii-b) by other ND; residual (i) still needs |\u03bc|\u22642/n or ker-box empty for all p\u22655."
+    "open_subcases": [
+      "non-Walsh residual (ii), even k\u22654p: multi-level leftover"
+    ],
+    "open": "Close the multi-level even-k\u22654p remainder (15.274). The bounded range through 4p\u22122 is already closed by 15.179/236/237."
   },
-  "F3": "Do not claim residual (ii) full CLOSED without exhaustiveness; affine branch alone is 15.179; residual (i)/E1/L still open.",
-  "audit_verdict": "Residual (ii): affine two-level branch closed; full closure not audit-complete."
+  "F3": "Do not claim residual (ii) full CLOSED from the bounded 15.179/236/237 split; even k\u22654p and E1/L remain open.",
+  "audit_verdict": "Residual (ii): affine and bounded even range closed; multi-level even k\u22654p remains open."
 }

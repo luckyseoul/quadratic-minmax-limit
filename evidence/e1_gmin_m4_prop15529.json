@@ -71,7 +71,7 @@
     "type_I_multilevel_bad_case_ND_closed": false,
     "type_I_aut_e_3AB_positive_general": false
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false,
   "flags_not_flipped": [

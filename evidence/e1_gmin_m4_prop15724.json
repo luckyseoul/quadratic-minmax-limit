@@ -1,0 +1,1937 @@
+{
+  "prop": "15.724",
+  "title": "Full Miquelian-circle boundary exclusion",
+  "proved": true,
+  "scope": "every odd prime p>=17",
+  "universal_certificate": {
+    "scope": "every odd prime p>=17",
+    "isolated_vertex_polynomial": "p^2-8p-1",
+    "isolated_vertex_base_value_at_17": 152,
+    "isolated_vertex_odd_step_is_increasing_from_17": true,
+    "residue_argument": "m>=9 and 0<=u<m with m|(u-4) force u=4",
+    "residue_base_check": true,
+    "xnor_lift_argument": {
+      "p": 17,
+      "xnor_polynomial": "X=1-x_i-x_j+2*x_i*x_j",
+      "xnor_truth_table": {
+        "00": 1,
+        "01": 0,
+        "10": 0,
+        "11": 1
+      },
+      "same_parity_as_b2_phase_one": true,
+      "lift": "B=(A-X)/2",
+      "pointwise_nonnegative_integer_proof": {
+        "X=0": "A is a nonnegative even integer, so A/2>=0",
+        "X=1": "A is a nonnegative odd integer, so (A-1)/2>=0"
+      },
+      "B_has_degree_at_most_two": true,
+      "B_nonzero": true,
+      "scaled_excess_2p_E_A_minus_X": 2,
+      "forced_4p_E_B": 2,
+      "prop_15_688_lower_bound": 14,
+      "excluded": true,
+      "proved": true
+    },
+    "xnor_congruence_argument": {
+      "p": 17,
+      "q": 8,
+      "current_baseline": "XNOR(x_i,x_j)=1-x_i-x_j+2*x_i*x_j",
+      "prior_two_sign_targets": "4+z_a*z_b and 4-z_a*z_b (XNOR/XOR in zero-one variables)",
+      "coefficient_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+      "sign_parameter": "tau in {+1,-1}; it drops out of the constant comparison",
+      "coefficient_comparison": "(p-1)c=I+P_d-4 with 2c integral",
+      "divisibility": "q divides I+P_d-4",
+      "applies_to_b2_phase_one_here": true,
+      "proved": true
+    },
+    "baseline_count_argument": "q>=8, 0<=x<=7, and q|(x-4) force x=4",
+    "baseline_count_base_check": true,
+    "final_lift_gap": "p-3-8=p-11>=6",
+    "proved": true
+  },
+  "dependencies": {
+    "15.722": "exact circle phase and outside-chart type alignment",
+    "15.722 low slack": "R<=max(3,floor(sqrt(p)-5/2)) conic/secant exclusions",
+    "15.672/15.673": "xnor baseline coefficient congruence",
+    "15.688": "sharp 4p E[B]>=p-3 lift floor"
+  },
+  "theorem": {
+    "full_Miquelian_circle_boundary": "EXCLUDED",
+    "outside_R_zero": "EXCLUDED",
+    "outside_R_two": "EXCLUDED_BY_15.722",
+    "outside_R_three": "EXCLUDED_BY_15.722",
+    "positive_outside_slack_excluded_through": "max(3,floor(sqrt(p)-5/2))",
+    "strict_outside_profiles_R_at_least_2": "R_EQUALS_2_AND_3_EXCLUDED",
+    "strict_outside_profiles_R_at_least_4": "OPEN_AFTER_THE_PRIME_DEPENDENT_LOW_SLACK_CUTOFF",
+    "whole_p_plus_one_shell": "OPEN",
+    "residual_ii": false,
+    "type_I": false,
+    "limit_exists": false
+  },
+  "sample_ledgers_regression_only": {
+    "17": {
+      "p": 17,
+      "boundary": "full Miquelian circle of size p+1",
+      "isolated_vertex": {
+        "p": 17,
+        "boundary_vertices": 18,
+        "outside_vertices": 272,
+        "edge_count": 69,
+        "maximum_nonisolated_vertices": 138,
+        "boundary_vertices_are_nonisolated": true,
+        "maximum_nonisolated_outside": 120,
+        "guaranteed_isolated_outside_vertices": 152,
+        "isolated_outside_vertex_exists": true,
+        "proved": true
+      },
+      "isolated_chart": {
+        "p": 17,
+        "P": 18,
+        "m": 9,
+        "source_line_chart_c_H": -1,
+        "outside_transport_multiplier": "(-1)^m*eps_line",
+        "transported_c_H": "eps_line",
+        "transported_infinity_degree_I": 0,
+        "phase_zero_type": {
+          "directions": 9,
+          "b": 0
+        },
+        "phase_one_type": {
+          "directions": 9,
+          "b": 2
+        },
+        "phase_one_floor": 16,
+        "type_alignment_exact": true,
+        "proved": true
+      },
+      "arithmetic": {
+        "p": 17,
+        "P": 18,
+        "m": 9,
+        "q": 8,
+        "I": 0,
+        "finite_edge_identity": "E=m(x+y+1)+1-u=8m-3",
+        "residue_equation": "m(x+y-7)=u-4",
+        "phase_zero_unique_u": 4,
+        "x_plus_y": 7,
+        "xnor_baseline_congruence": "q divides I+x-4",
+        "xnor_coefficient_congruence_certificate": {
+          "p": 17,
+          "q": 8,
+          "current_baseline": "XNOR(x_i,x_j)=1-x_i-x_j+2*x_i*x_j",
+          "prior_two_sign_targets": "4+z_a*z_b and 4-z_a*z_b (XNOR/XOR in zero-one variables)",
+          "coefficient_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "sign_parameter": "tau in {+1,-1}; it drops out of the constant comparison",
+          "coefficient_comparison": "(p-1)c=I+P_d-4 with 2c integral",
+          "divisibility": "q divides I+P_d-4",
+          "applies_to_b2_phase_one_here": true,
+          "proved": true
+        },
+        "xnor_baseline_count_x": 4,
+        "phase_zero_baseline_count_y": 3,
+        "phase_zero_quotient_sum": 5,
+        "phase_zero_zero_quotient_directions_at_least": 4,
+        "zero_quotient_scaled_mean": 8,
+        "phase_one_normal_form": {
+          "p": 17,
+          "P": 18,
+          "m": 9,
+          "b": 2,
+          "phase": 1,
+          "floor": 16,
+          "floor_plus_two_lift_floor_from_prop_15_688": 14,
+          "floor_plus_two_xnor_lift_certificate": {
+            "p": 17,
+            "xnor_polynomial": "X=1-x_i-x_j+2*x_i*x_j",
+            "xnor_truth_table": {
+              "00": 1,
+              "01": 0,
+              "10": 0,
+              "11": 1
+            },
+            "same_parity_as_b2_phase_one": true,
+            "lift": "B=(A-X)/2",
+            "pointwise_nonnegative_integer_proof": {
+              "X=0": "A is a nonnegative even integer, so A/2>=0",
+              "X=1": "A is a nonnegative odd integer, so (A-1)/2>=0"
+            },
+            "B_has_degree_at_most_two": true,
+            "B_nonzero": true,
+            "scaled_excess_2p_E_A_minus_X": 2,
+            "forced_4p_E_B": 2,
+            "prop_15_688_lower_bound": 14,
+            "excluded": true,
+            "proved": true
+          },
+          "residue_rows": [
+            {
+              "u": 0,
+              "quotient_sum": 9,
+              "feasible": false,
+              "reason": "all directions would be forbidden floor-plus-two lifts"
+            },
+            {
+              "u": 1,
+              "quotient_sum": 8,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 2,
+              "quotient_sum": 7,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 3,
+              "quotient_sum": 6,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 4,
+              "quotient_sum": 5,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 5,
+              "quotient_sum": 4,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 6,
+              "quotient_sum": 3,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 7,
+              "quotient_sum": 2,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 8,
+              "quotient_sum": 1,
+              "feasible": true,
+              "reason": "m-1 baseline means and one P-unit elevation"
+            }
+          ],
+          "unique_residue_u": 8,
+          "quotient_multiset": {
+            "0": 8,
+            "1": 1
+          },
+          "parallel_count_multiset": "m-1 copies of x and one copy of x+1",
+          "proved": true
+        },
+        "proved": true
+      },
+      "forced_direction": {
+        "b": 0,
+        "phase": 0,
+        "A_factorization": "A_d=2B_d",
+        "B_nonzero_nonnegative_integral_quadratic": true,
+        "forced_4p_E_B": 8
+      },
+      "prop_15_688_lower_bound": 14,
+      "contradiction_gap": 6,
+      "full_circle_excluded": true,
+      "proved": true
+    },
+    "19": {
+      "p": 19,
+      "boundary": "full Miquelian circle of size p+1",
+      "isolated_vertex": {
+        "p": 19,
+        "boundary_vertices": 20,
+        "outside_vertices": 342,
+        "edge_count": 77,
+        "maximum_nonisolated_vertices": 154,
+        "boundary_vertices_are_nonisolated": true,
+        "maximum_nonisolated_outside": 134,
+        "guaranteed_isolated_outside_vertices": 208,
+        "isolated_outside_vertex_exists": true,
+        "proved": true
+      },
+      "isolated_chart": {
+        "p": 19,
+        "P": 20,
+        "m": 10,
+        "source_line_chart_c_H": 1,
+        "outside_transport_multiplier": "(-1)^m*eps_line",
+        "transported_c_H": "eps_line",
+        "transported_infinity_degree_I": 0,
+        "phase_zero_type": {
+          "directions": 10,
+          "b": 0
+        },
+        "phase_one_type": {
+          "directions": 10,
+          "b": 2
+        },
+        "phase_one_floor": 18,
+        "type_alignment_exact": true,
+        "proved": true
+      },
+      "arithmetic": {
+        "p": 19,
+        "P": 20,
+        "m": 10,
+        "q": 9,
+        "I": 0,
+        "finite_edge_identity": "E=m(x+y+1)+1-u=8m-3",
+        "residue_equation": "m(x+y-7)=u-4",
+        "phase_zero_unique_u": 4,
+        "x_plus_y": 7,
+        "xnor_baseline_congruence": "q divides I+x-4",
+        "xnor_coefficient_congruence_certificate": {
+          "p": 19,
+          "q": 9,
+          "current_baseline": "XNOR(x_i,x_j)=1-x_i-x_j+2*x_i*x_j",
+          "prior_two_sign_targets": "4+z_a*z_b and 4-z_a*z_b (XNOR/XOR in zero-one variables)",
+          "coefficient_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "sign_parameter": "tau in {+1,-1}; it drops out of the constant comparison",
+          "coefficient_comparison": "(p-1)c=I+P_d-4 with 2c integral",
+          "divisibility": "q divides I+P_d-4",
+          "applies_to_b2_phase_one_here": true,
+          "proved": true
+        },
+        "xnor_baseline_count_x": 4,
+        "phase_zero_baseline_count_y": 3,
+        "phase_zero_quotient_sum": 6,
+        "phase_zero_zero_quotient_directions_at_least": 4,
+        "zero_quotient_scaled_mean": 8,
+        "phase_one_normal_form": {
+          "p": 19,
+          "P": 20,
+          "m": 10,
+          "b": 2,
+          "phase": 1,
+          "floor": 18,
+          "floor_plus_two_lift_floor_from_prop_15_688": 16,
+          "floor_plus_two_xnor_lift_certificate": {
+            "p": 19,
+            "xnor_polynomial": "X=1-x_i-x_j+2*x_i*x_j",
+            "xnor_truth_table": {
+              "00": 1,
+              "01": 0,
+              "10": 0,
+              "11": 1
+            },
+            "same_parity_as_b2_phase_one": true,
+            "lift": "B=(A-X)/2",
+            "pointwise_nonnegative_integer_proof": {
+              "X=0": "A is a nonnegative even integer, so A/2>=0",
+              "X=1": "A is a nonnegative odd integer, so (A-1)/2>=0"
+            },
+            "B_has_degree_at_most_two": true,
+            "B_nonzero": true,
+            "scaled_excess_2p_E_A_minus_X": 2,
+            "forced_4p_E_B": 2,
+            "prop_15_688_lower_bound": 16,
+            "excluded": true,
+            "proved": true
+          },
+          "residue_rows": [
+            {
+              "u": 0,
+              "quotient_sum": 10,
+              "feasible": false,
+              "reason": "all directions would be forbidden floor-plus-two lifts"
+            },
+            {
+              "u": 1,
+              "quotient_sum": 9,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 2,
+              "quotient_sum": 8,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 3,
+              "quotient_sum": 7,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 4,
+              "quotient_sum": 6,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 5,
+              "quotient_sum": 5,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 6,
+              "quotient_sum": 4,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 7,
+              "quotient_sum": 3,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 8,
+              "quotient_sum": 2,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 9,
+              "quotient_sum": 1,
+              "feasible": true,
+              "reason": "m-1 baseline means and one P-unit elevation"
+            }
+          ],
+          "unique_residue_u": 9,
+          "quotient_multiset": {
+            "0": 9,
+            "1": 1
+          },
+          "parallel_count_multiset": "m-1 copies of x and one copy of x+1",
+          "proved": true
+        },
+        "proved": true
+      },
+      "forced_direction": {
+        "b": 0,
+        "phase": 0,
+        "A_factorization": "A_d=2B_d",
+        "B_nonzero_nonnegative_integral_quadratic": true,
+        "forced_4p_E_B": 8
+      },
+      "prop_15_688_lower_bound": 16,
+      "contradiction_gap": 8,
+      "full_circle_excluded": true,
+      "proved": true
+    },
+    "23": {
+      "p": 23,
+      "boundary": "full Miquelian circle of size p+1",
+      "isolated_vertex": {
+        "p": 23,
+        "boundary_vertices": 24,
+        "outside_vertices": 506,
+        "edge_count": 93,
+        "maximum_nonisolated_vertices": 186,
+        "boundary_vertices_are_nonisolated": true,
+        "maximum_nonisolated_outside": 162,
+        "guaranteed_isolated_outside_vertices": 344,
+        "isolated_outside_vertex_exists": true,
+        "proved": true
+      },
+      "isolated_chart": {
+        "p": 23,
+        "P": 24,
+        "m": 12,
+        "source_line_chart_c_H": 1,
+        "outside_transport_multiplier": "(-1)^m*eps_line",
+        "transported_c_H": "eps_line",
+        "transported_infinity_degree_I": 0,
+        "phase_zero_type": {
+          "directions": 12,
+          "b": 0
+        },
+        "phase_one_type": {
+          "directions": 12,
+          "b": 2
+        },
+        "phase_one_floor": 22,
+        "type_alignment_exact": true,
+        "proved": true
+      },
+      "arithmetic": {
+        "p": 23,
+        "P": 24,
+        "m": 12,
+        "q": 11,
+        "I": 0,
+        "finite_edge_identity": "E=m(x+y+1)+1-u=8m-3",
+        "residue_equation": "m(x+y-7)=u-4",
+        "phase_zero_unique_u": 4,
+        "x_plus_y": 7,
+        "xnor_baseline_congruence": "q divides I+x-4",
+        "xnor_coefficient_congruence_certificate": {
+          "p": 23,
+          "q": 11,
+          "current_baseline": "XNOR(x_i,x_j)=1-x_i-x_j+2*x_i*x_j",
+          "prior_two_sign_targets": "4+z_a*z_b and 4-z_a*z_b (XNOR/XOR in zero-one variables)",
+          "coefficient_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "sign_parameter": "tau in {+1,-1}; it drops out of the constant comparison",
+          "coefficient_comparison": "(p-1)c=I+P_d-4 with 2c integral",
+          "divisibility": "q divides I+P_d-4",
+          "applies_to_b2_phase_one_here": true,
+          "proved": true
+        },
+        "xnor_baseline_count_x": 4,
+        "phase_zero_baseline_count_y": 3,
+        "phase_zero_quotient_sum": 8,
+        "phase_zero_zero_quotient_directions_at_least": 4,
+        "zero_quotient_scaled_mean": 8,
+        "phase_one_normal_form": {
+          "p": 23,
+          "P": 24,
+          "m": 12,
+          "b": 2,
+          "phase": 1,
+          "floor": 22,
+          "floor_plus_two_lift_floor_from_prop_15_688": 20,
+          "floor_plus_two_xnor_lift_certificate": {
+            "p": 23,
+            "xnor_polynomial": "X=1-x_i-x_j+2*x_i*x_j",
+            "xnor_truth_table": {
+              "00": 1,
+              "01": 0,
+              "10": 0,
+              "11": 1
+            },
+            "same_parity_as_b2_phase_one": true,
+            "lift": "B=(A-X)/2",
+            "pointwise_nonnegative_integer_proof": {
+              "X=0": "A is a nonnegative even integer, so A/2>=0",
+              "X=1": "A is a nonnegative odd integer, so (A-1)/2>=0"
+            },
+            "B_has_degree_at_most_two": true,
+            "B_nonzero": true,
+            "scaled_excess_2p_E_A_minus_X": 2,
+            "forced_4p_E_B": 2,
+            "prop_15_688_lower_bound": 20,
+            "excluded": true,
+            "proved": true
+          },
+          "residue_rows": [
+            {
+              "u": 0,
+              "quotient_sum": 12,
+              "feasible": false,
+              "reason": "all directions would be forbidden floor-plus-two lifts"
+            },
+            {
+              "u": 1,
+              "quotient_sum": 11,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 2,
+              "quotient_sum": 10,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 3,
+              "quotient_sum": 9,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 4,
+              "quotient_sum": 8,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 5,
+              "quotient_sum": 7,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 6,
+              "quotient_sum": 6,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 7,
+              "quotient_sum": 5,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 8,
+              "quotient_sum": 4,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 9,
+              "quotient_sum": 3,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 10,
+              "quotient_sum": 2,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 11,
+              "quotient_sum": 1,
+              "feasible": true,
+              "reason": "m-1 baseline means and one P-unit elevation"
+            }
+          ],
+          "unique_residue_u": 11,
+          "quotient_multiset": {
+            "0": 11,
+            "1": 1
+          },
+          "parallel_count_multiset": "m-1 copies of x and one copy of x+1",
+          "proved": true
+        },
+        "proved": true
+      },
+      "forced_direction": {
+        "b": 0,
+        "phase": 0,
+        "A_factorization": "A_d=2B_d",
+        "B_nonzero_nonnegative_integral_quadratic": true,
+        "forced_4p_E_B": 8
+      },
+      "prop_15_688_lower_bound": 20,
+      "contradiction_gap": 12,
+      "full_circle_excluded": true,
+      "proved": true
+    },
+    "29": {
+      "p": 29,
+      "boundary": "full Miquelian circle of size p+1",
+      "isolated_vertex": {
+        "p": 29,
+        "boundary_vertices": 30,
+        "outside_vertices": 812,
+        "edge_count": 117,
+        "maximum_nonisolated_vertices": 234,
+        "boundary_vertices_are_nonisolated": true,
+        "maximum_nonisolated_outside": 204,
+        "guaranteed_isolated_outside_vertices": 608,
+        "isolated_outside_vertex_exists": true,
+        "proved": true
+      },
+      "isolated_chart": {
+        "p": 29,
+        "P": 30,
+        "m": 15,
+        "source_line_chart_c_H": -1,
+        "outside_transport_multiplier": "(-1)^m*eps_line",
+        "transported_c_H": "eps_line",
+        "transported_infinity_degree_I": 0,
+        "phase_zero_type": {
+          "directions": 15,
+          "b": 0
+        },
+        "phase_one_type": {
+          "directions": 15,
+          "b": 2
+        },
+        "phase_one_floor": 28,
+        "type_alignment_exact": true,
+        "proved": true
+      },
+      "arithmetic": {
+        "p": 29,
+        "P": 30,
+        "m": 15,
+        "q": 14,
+        "I": 0,
+        "finite_edge_identity": "E=m(x+y+1)+1-u=8m-3",
+        "residue_equation": "m(x+y-7)=u-4",
+        "phase_zero_unique_u": 4,
+        "x_plus_y": 7,
+        "xnor_baseline_congruence": "q divides I+x-4",
+        "xnor_coefficient_congruence_certificate": {
+          "p": 29,
+          "q": 14,
+          "current_baseline": "XNOR(x_i,x_j)=1-x_i-x_j+2*x_i*x_j",
+          "prior_two_sign_targets": "4+z_a*z_b and 4-z_a*z_b (XNOR/XOR in zero-one variables)",
+          "coefficient_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "sign_parameter": "tau in {+1,-1}; it drops out of the constant comparison",
+          "coefficient_comparison": "(p-1)c=I+P_d-4 with 2c integral",
+          "divisibility": "q divides I+P_d-4",
+          "applies_to_b2_phase_one_here": true,
+          "proved": true
+        },
+        "xnor_baseline_count_x": 4,
+        "phase_zero_baseline_count_y": 3,
+        "phase_zero_quotient_sum": 11,
+        "phase_zero_zero_quotient_directions_at_least": 4,
+        "zero_quotient_scaled_mean": 8,
+        "phase_one_normal_form": {
+          "p": 29,
+          "P": 30,
+          "m": 15,
+          "b": 2,
+          "phase": 1,
+          "floor": 28,
+          "floor_plus_two_lift_floor_from_prop_15_688": 26,
+          "floor_plus_two_xnor_lift_certificate": {
+            "p": 29,
+            "xnor_polynomial": "X=1-x_i-x_j+2*x_i*x_j",
+            "xnor_truth_table": {
+              "00": 1,
+              "01": 0,
+              "10": 0,
+              "11": 1
+            },
+            "same_parity_as_b2_phase_one": true,
+            "lift": "B=(A-X)/2",
+            "pointwise_nonnegative_integer_proof": {
+              "X=0": "A is a nonnegative even integer, so A/2>=0",
+              "X=1": "A is a nonnegative odd integer, so (A-1)/2>=0"
+            },
+            "B_has_degree_at_most_two": true,
+            "B_nonzero": true,
+            "scaled_excess_2p_E_A_minus_X": 2,
+            "forced_4p_E_B": 2,
+            "prop_15_688_lower_bound": 26,
+            "excluded": true,
+            "proved": true
+          },
+          "residue_rows": [
+            {
+              "u": 0,
+              "quotient_sum": 15,
+              "feasible": false,
+              "reason": "all directions would be forbidden floor-plus-two lifts"
+            },
+            {
+              "u": 1,
+              "quotient_sum": 14,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 2,
+              "quotient_sum": 13,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 3,
+              "quotient_sum": 12,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 4,
+              "quotient_sum": 11,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 5,
+              "quotient_sum": 10,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 6,
+              "quotient_sum": 9,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 7,
+              "quotient_sum": 8,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 8,
+              "quotient_sum": 7,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 9,
+              "quotient_sum": 6,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 10,
+              "quotient_sum": 5,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 11,
+              "quotient_sum": 4,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 12,
+              "quotient_sum": 3,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 13,
+              "quotient_sum": 2,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 14,
+              "quotient_sum": 1,
+              "feasible": true,
+              "reason": "m-1 baseline means and one P-unit elevation"
+            }
+          ],
+          "unique_residue_u": 14,
+          "quotient_multiset": {
+            "0": 14,
+            "1": 1
+          },
+          "parallel_count_multiset": "m-1 copies of x and one copy of x+1",
+          "proved": true
+        },
+        "proved": true
+      },
+      "forced_direction": {
+        "b": 0,
+        "phase": 0,
+        "A_factorization": "A_d=2B_d",
+        "B_nonzero_nonnegative_integral_quadratic": true,
+        "forced_4p_E_B": 8
+      },
+      "prop_15_688_lower_bound": 26,
+      "contradiction_gap": 18,
+      "full_circle_excluded": true,
+      "proved": true
+    },
+    "31": {
+      "p": 31,
+      "boundary": "full Miquelian circle of size p+1",
+      "isolated_vertex": {
+        "p": 31,
+        "boundary_vertices": 32,
+        "outside_vertices": 930,
+        "edge_count": 125,
+        "maximum_nonisolated_vertices": 250,
+        "boundary_vertices_are_nonisolated": true,
+        "maximum_nonisolated_outside": 218,
+        "guaranteed_isolated_outside_vertices": 712,
+        "isolated_outside_vertex_exists": true,
+        "proved": true
+      },
+      "isolated_chart": {
+        "p": 31,
+        "P": 32,
+        "m": 16,
+        "source_line_chart_c_H": 1,
+        "outside_transport_multiplier": "(-1)^m*eps_line",
+        "transported_c_H": "eps_line",
+        "transported_infinity_degree_I": 0,
+        "phase_zero_type": {
+          "directions": 16,
+          "b": 0
+        },
+        "phase_one_type": {
+          "directions": 16,
+          "b": 2
+        },
+        "phase_one_floor": 30,
+        "type_alignment_exact": true,
+        "proved": true
+      },
+      "arithmetic": {
+        "p": 31,
+        "P": 32,
+        "m": 16,
+        "q": 15,
+        "I": 0,
+        "finite_edge_identity": "E=m(x+y+1)+1-u=8m-3",
+        "residue_equation": "m(x+y-7)=u-4",
+        "phase_zero_unique_u": 4,
+        "x_plus_y": 7,
+        "xnor_baseline_congruence": "q divides I+x-4",
+        "xnor_coefficient_congruence_certificate": {
+          "p": 31,
+          "q": 15,
+          "current_baseline": "XNOR(x_i,x_j)=1-x_i-x_j+2*x_i*x_j",
+          "prior_two_sign_targets": "4+z_a*z_b and 4-z_a*z_b (XNOR/XOR in zero-one variables)",
+          "coefficient_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "sign_parameter": "tau in {+1,-1}; it drops out of the constant comparison",
+          "coefficient_comparison": "(p-1)c=I+P_d-4 with 2c integral",
+          "divisibility": "q divides I+P_d-4",
+          "applies_to_b2_phase_one_here": true,
+          "proved": true
+        },
+        "xnor_baseline_count_x": 4,
+        "phase_zero_baseline_count_y": 3,
+        "phase_zero_quotient_sum": 12,
+        "phase_zero_zero_quotient_directions_at_least": 4,
+        "zero_quotient_scaled_mean": 8,
+        "phase_one_normal_form": {
+          "p": 31,
+          "P": 32,
+          "m": 16,
+          "b": 2,
+          "phase": 1,
+          "floor": 30,
+          "floor_plus_two_lift_floor_from_prop_15_688": 28,
+          "floor_plus_two_xnor_lift_certificate": {
+            "p": 31,
+            "xnor_polynomial": "X=1-x_i-x_j+2*x_i*x_j",
+            "xnor_truth_table": {
+              "00": 1,
+              "01": 0,
+              "10": 0,
+              "11": 1
+            },
+            "same_parity_as_b2_phase_one": true,
+            "lift": "B=(A-X)/2",
+            "pointwise_nonnegative_integer_proof": {
+              "X=0": "A is a nonnegative even integer, so A/2>=0",
+              "X=1": "A is a nonnegative odd integer, so (A-1)/2>=0"
+            },
+            "B_has_degree_at_most_two": true,
+            "B_nonzero": true,
+            "scaled_excess_2p_E_A_minus_X": 2,
+            "forced_4p_E_B": 2,
+            "prop_15_688_lower_bound": 28,
+            "excluded": true,
+            "proved": true
+          },
+          "residue_rows": [
+            {
+              "u": 0,
+              "quotient_sum": 16,
+              "feasible": false,
+              "reason": "all directions would be forbidden floor-plus-two lifts"
+            },
+            {
+              "u": 1,
+              "quotient_sum": 15,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 2,
+              "quotient_sum": 14,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 3,
+              "quotient_sum": 13,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 4,
+              "quotient_sum": 12,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 5,
+              "quotient_sum": 11,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 6,
+              "quotient_sum": 10,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 7,
+              "quotient_sum": 9,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 8,
+              "quotient_sum": 8,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 9,
+              "quotient_sum": 7,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 10,
+              "quotient_sum": 6,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 11,
+              "quotient_sum": 5,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 12,
+              "quotient_sum": 4,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 13,
+              "quotient_sum": 3,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 14,
+              "quotient_sum": 2,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 15,
+              "quotient_sum": 1,
+              "feasible": true,
+              "reason": "m-1 baseline means and one P-unit elevation"
+            }
+          ],
+          "unique_residue_u": 15,
+          "quotient_multiset": {
+            "0": 15,
+            "1": 1
+          },
+          "parallel_count_multiset": "m-1 copies of x and one copy of x+1",
+          "proved": true
+        },
+        "proved": true
+      },
+      "forced_direction": {
+        "b": 0,
+        "phase": 0,
+        "A_factorization": "A_d=2B_d",
+        "B_nonzero_nonnegative_integral_quadratic": true,
+        "forced_4p_E_B": 8
+      },
+      "prop_15_688_lower_bound": 28,
+      "contradiction_gap": 20,
+      "full_circle_excluded": true,
+      "proved": true
+    },
+    "37": {
+      "p": 37,
+      "boundary": "full Miquelian circle of size p+1",
+      "isolated_vertex": {
+        "p": 37,
+        "boundary_vertices": 38,
+        "outside_vertices": 1332,
+        "edge_count": 149,
+        "maximum_nonisolated_vertices": 298,
+        "boundary_vertices_are_nonisolated": true,
+        "maximum_nonisolated_outside": 260,
+        "guaranteed_isolated_outside_vertices": 1072,
+        "isolated_outside_vertex_exists": true,
+        "proved": true
+      },
+      "isolated_chart": {
+        "p": 37,
+        "P": 38,
+        "m": 19,
+        "source_line_chart_c_H": -1,
+        "outside_transport_multiplier": "(-1)^m*eps_line",
+        "transported_c_H": "eps_line",
+        "transported_infinity_degree_I": 0,
+        "phase_zero_type": {
+          "directions": 19,
+          "b": 0
+        },
+        "phase_one_type": {
+          "directions": 19,
+          "b": 2
+        },
+        "phase_one_floor": 36,
+        "type_alignment_exact": true,
+        "proved": true
+      },
+      "arithmetic": {
+        "p": 37,
+        "P": 38,
+        "m": 19,
+        "q": 18,
+        "I": 0,
+        "finite_edge_identity": "E=m(x+y+1)+1-u=8m-3",
+        "residue_equation": "m(x+y-7)=u-4",
+        "phase_zero_unique_u": 4,
+        "x_plus_y": 7,
+        "xnor_baseline_congruence": "q divides I+x-4",
+        "xnor_coefficient_congruence_certificate": {
+          "p": 37,
+          "q": 18,
+          "current_baseline": "XNOR(x_i,x_j)=1-x_i-x_j+2*x_i*x_j",
+          "prior_two_sign_targets": "4+z_a*z_b and 4-z_a*z_b (XNOR/XOR in zero-one variables)",
+          "coefficient_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "sign_parameter": "tau in {+1,-1}; it drops out of the constant comparison",
+          "coefficient_comparison": "(p-1)c=I+P_d-4 with 2c integral",
+          "divisibility": "q divides I+P_d-4",
+          "applies_to_b2_phase_one_here": true,
+          "proved": true
+        },
+        "xnor_baseline_count_x": 4,
+        "phase_zero_baseline_count_y": 3,
+        "phase_zero_quotient_sum": 15,
+        "phase_zero_zero_quotient_directions_at_least": 4,
+        "zero_quotient_scaled_mean": 8,
+        "phase_one_normal_form": {
+          "p": 37,
+          "P": 38,
+          "m": 19,
+          "b": 2,
+          "phase": 1,
+          "floor": 36,
+          "floor_plus_two_lift_floor_from_prop_15_688": 34,
+          "floor_plus_two_xnor_lift_certificate": {
+            "p": 37,
+            "xnor_polynomial": "X=1-x_i-x_j+2*x_i*x_j",
+            "xnor_truth_table": {
+              "00": 1,
+              "01": 0,
+              "10": 0,
+              "11": 1
+            },
+            "same_parity_as_b2_phase_one": true,
+            "lift": "B=(A-X)/2",
+            "pointwise_nonnegative_integer_proof": {
+              "X=0": "A is a nonnegative even integer, so A/2>=0",
+              "X=1": "A is a nonnegative odd integer, so (A-1)/2>=0"
+            },
+            "B_has_degree_at_most_two": true,
+            "B_nonzero": true,
+            "scaled_excess_2p_E_A_minus_X": 2,
+            "forced_4p_E_B": 2,
+            "prop_15_688_lower_bound": 34,
+            "excluded": true,
+            "proved": true
+          },
+          "residue_rows": [
+            {
+              "u": 0,
+              "quotient_sum": 19,
+              "feasible": false,
+              "reason": "all directions would be forbidden floor-plus-two lifts"
+            },
+            {
+              "u": 1,
+              "quotient_sum": 18,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 2,
+              "quotient_sum": 17,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 3,
+              "quotient_sum": 16,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 4,
+              "quotient_sum": 15,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 5,
+              "quotient_sum": 14,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 6,
+              "quotient_sum": 13,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 7,
+              "quotient_sum": 12,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 8,
+              "quotient_sum": 11,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 9,
+              "quotient_sum": 10,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 10,
+              "quotient_sum": 9,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 11,
+              "quotient_sum": 8,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 12,
+              "quotient_sum": 7,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 13,
+              "quotient_sum": 6,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 14,
+              "quotient_sum": 5,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 15,
+              "quotient_sum": 4,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 16,
+              "quotient_sum": 3,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 17,
+              "quotient_sum": 2,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 18,
+              "quotient_sum": 1,
+              "feasible": true,
+              "reason": "m-1 baseline means and one P-unit elevation"
+            }
+          ],
+          "unique_residue_u": 18,
+          "quotient_multiset": {
+            "0": 18,
+            "1": 1
+          },
+          "parallel_count_multiset": "m-1 copies of x and one copy of x+1",
+          "proved": true
+        },
+        "proved": true
+      },
+      "forced_direction": {
+        "b": 0,
+        "phase": 0,
+        "A_factorization": "A_d=2B_d",
+        "B_nonzero_nonnegative_integral_quadratic": true,
+        "forced_4p_E_B": 8
+      },
+      "prop_15_688_lower_bound": 34,
+      "contradiction_gap": 26,
+      "full_circle_excluded": true,
+      "proved": true
+    },
+    "41": {
+      "p": 41,
+      "boundary": "full Miquelian circle of size p+1",
+      "isolated_vertex": {
+        "p": 41,
+        "boundary_vertices": 42,
+        "outside_vertices": 1640,
+        "edge_count": 165,
+        "maximum_nonisolated_vertices": 330,
+        "boundary_vertices_are_nonisolated": true,
+        "maximum_nonisolated_outside": 288,
+        "guaranteed_isolated_outside_vertices": 1352,
+        "isolated_outside_vertex_exists": true,
+        "proved": true
+      },
+      "isolated_chart": {
+        "p": 41,
+        "P": 42,
+        "m": 21,
+        "source_line_chart_c_H": -1,
+        "outside_transport_multiplier": "(-1)^m*eps_line",
+        "transported_c_H": "eps_line",
+        "transported_infinity_degree_I": 0,
+        "phase_zero_type": {
+          "directions": 21,
+          "b": 0
+        },
+        "phase_one_type": {
+          "directions": 21,
+          "b": 2
+        },
+        "phase_one_floor": 40,
+        "type_alignment_exact": true,
+        "proved": true
+      },
+      "arithmetic": {
+        "p": 41,
+        "P": 42,
+        "m": 21,
+        "q": 20,
+        "I": 0,
+        "finite_edge_identity": "E=m(x+y+1)+1-u=8m-3",
+        "residue_equation": "m(x+y-7)=u-4",
+        "phase_zero_unique_u": 4,
+        "x_plus_y": 7,
+        "xnor_baseline_congruence": "q divides I+x-4",
+        "xnor_coefficient_congruence_certificate": {
+          "p": 41,
+          "q": 20,
+          "current_baseline": "XNOR(x_i,x_j)=1-x_i-x_j+2*x_i*x_j",
+          "prior_two_sign_targets": "4+z_a*z_b and 4-z_a*z_b (XNOR/XOR in zero-one variables)",
+          "coefficient_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "sign_parameter": "tau in {+1,-1}; it drops out of the constant comparison",
+          "coefficient_comparison": "(p-1)c=I+P_d-4 with 2c integral",
+          "divisibility": "q divides I+P_d-4",
+          "applies_to_b2_phase_one_here": true,
+          "proved": true
+        },
+        "xnor_baseline_count_x": 4,
+        "phase_zero_baseline_count_y": 3,
+        "phase_zero_quotient_sum": 17,
+        "phase_zero_zero_quotient_directions_at_least": 4,
+        "zero_quotient_scaled_mean": 8,
+        "phase_one_normal_form": {
+          "p": 41,
+          "P": 42,
+          "m": 21,
+          "b": 2,
+          "phase": 1,
+          "floor": 40,
+          "floor_plus_two_lift_floor_from_prop_15_688": 38,
+          "floor_plus_two_xnor_lift_certificate": {
+            "p": 41,
+            "xnor_polynomial": "X=1-x_i-x_j+2*x_i*x_j",
+            "xnor_truth_table": {
+              "00": 1,
+              "01": 0,
+              "10": 0,
+              "11": 1
+            },
+            "same_parity_as_b2_phase_one": true,
+            "lift": "B=(A-X)/2",
+            "pointwise_nonnegative_integer_proof": {
+              "X=0": "A is a nonnegative even integer, so A/2>=0",
+              "X=1": "A is a nonnegative odd integer, so (A-1)/2>=0"
+            },
+            "B_has_degree_at_most_two": true,
+            "B_nonzero": true,
+            "scaled_excess_2p_E_A_minus_X": 2,
+            "forced_4p_E_B": 2,
+            "prop_15_688_lower_bound": 38,
+            "excluded": true,
+            "proved": true
+          },
+          "residue_rows": [
+            {
+              "u": 0,
+              "quotient_sum": 21,
+              "feasible": false,
+              "reason": "all directions would be forbidden floor-plus-two lifts"
+            },
+            {
+              "u": 1,
+              "quotient_sum": 20,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 2,
+              "quotient_sum": 19,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 3,
+              "quotient_sum": 18,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 4,
+              "quotient_sum": 17,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 5,
+              "quotient_sum": 16,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 6,
+              "quotient_sum": 15,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 7,
+              "quotient_sum": 14,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 8,
+              "quotient_sum": 13,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 9,
+              "quotient_sum": 12,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 10,
+              "quotient_sum": 11,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 11,
+              "quotient_sum": 10,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 12,
+              "quotient_sum": 9,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 13,
+              "quotient_sum": 8,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 14,
+              "quotient_sum": 7,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 15,
+              "quotient_sum": 6,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 16,
+              "quotient_sum": 5,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 17,
+              "quotient_sum": 4,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 18,
+              "quotient_sum": 3,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 19,
+              "quotient_sum": 2,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 20,
+              "quotient_sum": 1,
+              "feasible": true,
+              "reason": "m-1 baseline means and one P-unit elevation"
+            }
+          ],
+          "unique_residue_u": 20,
+          "quotient_multiset": {
+            "0": 20,
+            "1": 1
+          },
+          "parallel_count_multiset": "m-1 copies of x and one copy of x+1",
+          "proved": true
+        },
+        "proved": true
+      },
+      "forced_direction": {
+        "b": 0,
+        "phase": 0,
+        "A_factorization": "A_d=2B_d",
+        "B_nonzero_nonnegative_integral_quadratic": true,
+        "forced_4p_E_B": 8
+      },
+      "prop_15_688_lower_bound": 38,
+      "contradiction_gap": 30,
+      "full_circle_excluded": true,
+      "proved": true
+    },
+    "101": {
+      "p": 101,
+      "boundary": "full Miquelian circle of size p+1",
+      "isolated_vertex": {
+        "p": 101,
+        "boundary_vertices": 102,
+        "outside_vertices": 10100,
+        "edge_count": 405,
+        "maximum_nonisolated_vertices": 810,
+        "boundary_vertices_are_nonisolated": true,
+        "maximum_nonisolated_outside": 708,
+        "guaranteed_isolated_outside_vertices": 9392,
+        "isolated_outside_vertex_exists": true,
+        "proved": true
+      },
+      "isolated_chart": {
+        "p": 101,
+        "P": 102,
+        "m": 51,
+        "source_line_chart_c_H": -1,
+        "outside_transport_multiplier": "(-1)^m*eps_line",
+        "transported_c_H": "eps_line",
+        "transported_infinity_degree_I": 0,
+        "phase_zero_type": {
+          "directions": 51,
+          "b": 0
+        },
+        "phase_one_type": {
+          "directions": 51,
+          "b": 2
+        },
+        "phase_one_floor": 100,
+        "type_alignment_exact": true,
+        "proved": true
+      },
+      "arithmetic": {
+        "p": 101,
+        "P": 102,
+        "m": 51,
+        "q": 50,
+        "I": 0,
+        "finite_edge_identity": "E=m(x+y+1)+1-u=8m-3",
+        "residue_equation": "m(x+y-7)=u-4",
+        "phase_zero_unique_u": 4,
+        "x_plus_y": 7,
+        "xnor_baseline_congruence": "q divides I+x-4",
+        "xnor_coefficient_congruence_certificate": {
+          "p": 101,
+          "q": 50,
+          "current_baseline": "XNOR(x_i,x_j)=1-x_i-x_j+2*x_i*x_j",
+          "prior_two_sign_targets": "4+z_a*z_b and 4-z_a*z_b (XNOR/XOR in zero-one variables)",
+          "coefficient_matrix": "L_st=2c-n_s-n_t+tau*1_{st=ab}, (p-1)c=I+P_d-4",
+          "sign_parameter": "tau in {+1,-1}; it drops out of the constant comparison",
+          "coefficient_comparison": "(p-1)c=I+P_d-4 with 2c integral",
+          "divisibility": "q divides I+P_d-4",
+          "applies_to_b2_phase_one_here": true,
+          "proved": true
+        },
+        "xnor_baseline_count_x": 4,
+        "phase_zero_baseline_count_y": 3,
+        "phase_zero_quotient_sum": 47,
+        "phase_zero_zero_quotient_directions_at_least": 4,
+        "zero_quotient_scaled_mean": 8,
+        "phase_one_normal_form": {
+          "p": 101,
+          "P": 102,
+          "m": 51,
+          "b": 2,
+          "phase": 1,
+          "floor": 100,
+          "floor_plus_two_lift_floor_from_prop_15_688": 98,
+          "floor_plus_two_xnor_lift_certificate": {
+            "p": 101,
+            "xnor_polynomial": "X=1-x_i-x_j+2*x_i*x_j",
+            "xnor_truth_table": {
+              "00": 1,
+              "01": 0,
+              "10": 0,
+              "11": 1
+            },
+            "same_parity_as_b2_phase_one": true,
+            "lift": "B=(A-X)/2",
+            "pointwise_nonnegative_integer_proof": {
+              "X=0": "A is a nonnegative even integer, so A/2>=0",
+              "X=1": "A is a nonnegative odd integer, so (A-1)/2>=0"
+            },
+            "B_has_degree_at_most_two": true,
+            "B_nonzero": true,
+            "scaled_excess_2p_E_A_minus_X": 2,
+            "forced_4p_E_B": 2,
+            "prop_15_688_lower_bound": 98,
+            "excluded": true,
+            "proved": true
+          },
+          "residue_rows": [
+            {
+              "u": 0,
+              "quotient_sum": 51,
+              "feasible": false,
+              "reason": "all directions would be forbidden floor-plus-two lifts"
+            },
+            {
+              "u": 1,
+              "quotient_sum": 50,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 2,
+              "quotient_sum": 49,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 3,
+              "quotient_sum": 48,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 4,
+              "quotient_sum": 47,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 5,
+              "quotient_sum": 46,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 6,
+              "quotient_sum": 45,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 7,
+              "quotient_sum": 44,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 8,
+              "quotient_sum": 43,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 9,
+              "quotient_sum": 42,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 10,
+              "quotient_sum": 41,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 11,
+              "quotient_sum": 40,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 12,
+              "quotient_sum": 39,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 13,
+              "quotient_sum": 38,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 14,
+              "quotient_sum": 37,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 15,
+              "quotient_sum": 36,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 16,
+              "quotient_sum": 35,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 17,
+              "quotient_sum": 34,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 18,
+              "quotient_sum": 33,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 19,
+              "quotient_sum": 32,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 20,
+              "quotient_sum": 31,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 21,
+              "quotient_sum": 30,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 22,
+              "quotient_sum": 29,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 23,
+              "quotient_sum": 28,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 24,
+              "quotient_sum": 27,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 25,
+              "quotient_sum": 26,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 26,
+              "quotient_sum": 25,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 27,
+              "quotient_sum": 24,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 28,
+              "quotient_sum": 23,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 29,
+              "quotient_sum": 22,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 30,
+              "quotient_sum": 21,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 31,
+              "quotient_sum": 20,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 32,
+              "quotient_sum": 19,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 33,
+              "quotient_sum": 18,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 34,
+              "quotient_sum": 17,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 35,
+              "quotient_sum": 16,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 36,
+              "quotient_sum": 15,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 37,
+              "quotient_sum": 14,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 38,
+              "quotient_sum": 13,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 39,
+              "quotient_sum": 12,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 40,
+              "quotient_sum": 11,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 41,
+              "quotient_sum": 10,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 42,
+              "quotient_sum": 9,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 43,
+              "quotient_sum": 8,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 44,
+              "quotient_sum": 7,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 45,
+              "quotient_sum": 6,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 46,
+              "quotient_sum": 5,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 47,
+              "quotient_sum": 4,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 48,
+              "quotient_sum": 3,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 49,
+              "quotient_sum": 2,
+              "feasible": false,
+              "reason": "every direction needs k>=1 but quotient sum is below m"
+            },
+            {
+              "u": 50,
+              "quotient_sum": 1,
+              "feasible": true,
+              "reason": "m-1 baseline means and one P-unit elevation"
+            }
+          ],
+          "unique_residue_u": 50,
+          "quotient_multiset": {
+            "0": 50,
+            "1": 1
+          },
+          "parallel_count_multiset": "m-1 copies of x and one copy of x+1",
+          "proved": true
+        },
+        "proved": true
+      },
+      "forced_direction": {
+        "b": 0,
+        "phase": 0,
+        "A_factorization": "A_d=2B_d",
+        "B_nonzero_nonnegative_integral_quadratic": true,
+        "forced_4p_E_B": 8
+      },
+      "prop_15_688_lower_bound": 98,
+      "contradiction_gap": 90,
+      "full_circle_excluded": true,
+      "proved": true
+    }
+  },
+  "L_status": "OPEN"
+}

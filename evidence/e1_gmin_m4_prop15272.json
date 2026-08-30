@@ -24,7 +24,7 @@
     "gplus_pd_proved_general": true,
     "residual_i_closed": true,
     "gsum_disj_lb_proved_general": false,
-    "e1_closed_general": true,
+    "e1_closed_general": false,
     "open": ""
   },
   "dims": {

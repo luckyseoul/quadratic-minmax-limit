@@ -88,7 +88,7 @@
       "proved": false,
       "phi_F_ge_6": false,
       "rhat": false,
-      "e1": true,
+      "e1": false,
       "Q_tau_named_in_p": false,
       "lambda_ge_6": false,
       "note": "E[n\u2074] on a square-direction line is not a named Gauss/Jacobi value. Q_{++} and the 15.304 square-mass bound stay open. phi_F not imported."

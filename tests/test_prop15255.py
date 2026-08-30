@@ -30,7 +30,7 @@ def test_reflection_sum_criterion():
 def test_predicates_open():
     assert residual_i_closed_via_255() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     h = hinge_status_255()
     assert h["vanishing_sum_general"] is False
     assert h["residual_i_closed"] is False

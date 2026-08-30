@@ -113,7 +113,7 @@
       "proved": false,
       "phi_F_ge_6": false,
       "rhat": false,
-      "e1": true,
+      "e1": false,
       "Q_tau_named_in_p": false,
       "residual_ii_k_eq_4p_empty": false,
       "type_I_ND": false,

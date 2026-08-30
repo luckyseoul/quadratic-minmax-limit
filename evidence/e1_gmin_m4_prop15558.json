@@ -145,7 +145,7 @@
     "Phi_free_pointwise_named": false,
     "phi_F_ge_6": false
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false,
   "L_status": "OPEN",

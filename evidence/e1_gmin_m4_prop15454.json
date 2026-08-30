@@ -73,7 +73,7 @@
       "den7": 409,
       "n4_bad": 4844,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "Total complementary M is named. Per-class M and N_r still have den 409. c not pinned. phi_F not imported."
     }

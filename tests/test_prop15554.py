@@ -64,7 +64,7 @@ def test_flags_untouched_bulk_open():
         assert rec["wick_fails"] is True
         assert abs(rec["Kall"] - want["Kall"]) < 1e-2
         assert abs(rec["WickOO"] - rec["bulk"]) > 1.0
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     assert gsum_disj_lb_proved_general() is False
     assert phi_F_ge_6_proved_general() is False
     out = main()

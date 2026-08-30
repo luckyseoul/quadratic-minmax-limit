@@ -27,7 +27,7 @@
     "phi_F_imported": false,
     "note": "p=5 sum is named and positive, but NL summands are negative, so this is not a nonnegative count. Not a p-law for Q++\u226426/7. phi_F not imported."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false,
   "flags_not_flipped": [

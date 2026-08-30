@@ -60,7 +60,7 @@
       "proved": false,
       "residual_ii_k_eq_4p_empty": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "k_gt_4p_far_open": true,
       "note": "leftover+splus empty for all nF at p=5 k=20. even k>4p with far stays open. residual_ii_k_eq_4p_empty stays False."
     }

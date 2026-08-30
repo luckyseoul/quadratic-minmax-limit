@@ -62,7 +62,7 @@ def test_k3_Q3_n3_piece_and_flags():
     assert E["Q3_double_named_in_p"] is False
     assert E["Q3_n3_named_in_p"] is False
     assert E["phi_F_imported"] is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     assert gsum_disj_lb_proved_general() is False
     assert phi_F_ge_6_proved_general() is False
     out = main()

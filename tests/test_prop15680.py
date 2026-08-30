@@ -63,6 +63,16 @@ def test_exact_p37_pair_ledger_has_only_four_residues():
     assert ledger["endpoint_excluded"] is True
 
 
+def test_corrected_reduced_size_four_high_residue_row():
+    repaired = {row["u"]: row for row in _exact_profile_dp(0)}[16]
+    assert repaired == {
+        "u": 16,
+        "quotient_sum": 3,
+        "minimum_deficit": 536,
+        "profile": {0: 17, 4: 1, 30: 1},
+    }
+
+
 def test_theorem_record_is_honestly_scoped():
     record = theorem_record()
     assert record["proved"] is True

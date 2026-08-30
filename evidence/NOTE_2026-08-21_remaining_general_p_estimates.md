@@ -78,7 +78,8 @@ Remaining estimate, minus-slice interior 4-level (and 5+ / unclassified):
 
 ## Leftover 3 (`type_I_multilevel_bad_case_ND_closed`)
 
-On |κ|=1, ν=0 (15.268). Then 3A+B>0 iff G>T. Sufficient:
+On |κ|=1, ν=0 (15.268). Then 3A+B>0 iff G>T. Sufficient for this
+half of the far-class reduction:
 
 ```
 |μ| ≤ |L| = (p-2)/(2p^2)
@@ -90,11 +91,21 @@ on every |κ|=1 four-set. |μ|≤|T| is not a close (G=T ⇒ 3A+B=0).
 
 p=5 is already a finite from-C theorem (15.275 L). For every prime
 p≥7, the 15.191 target `|μ|≤2/n` is strictly stronger than `|μ|≤L`
-(`2/n < L` ⇔ p≥7) and would close Type I. Census: p=7 109/2863 vs
+(`2/n < L` ⇔ p≥7) and would close the |κ|=1 half. Census: p=7 109/2863 vs
 2/50 (~5% slack, tight); p=11 17827/1560713 vs 2/122. Do **not**
 prove `|μ|≤|f4|` (false at p=7). Triangle `|R̄₄|+2|φ|` is too weak
 for `|μ|≤L` even at p=5. L2 conversion of 3A+B is rejected. Not
 imported.
+
+Full multi-level Type I also has the independent |κ|=3 condition
+
+```
+χ_d ((2p−1)μ + (p−2)ν) > −(p−2)/p.
+```
+
+The Wick and particular terms satisfy it, but the nonparticular even/odd δ
+remainder is open. No theorem here derives this |κ|=3 inequality from a
+bound stated only on |κ|=1, so `|μ|≤2/n` alone is not a Type-I close.
 
 Equivalent size-4 remainder (15.229 F):
 

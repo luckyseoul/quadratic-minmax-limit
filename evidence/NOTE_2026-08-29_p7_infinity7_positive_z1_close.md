@@ -22,8 +22,8 @@ losslessly.  This is only a prefilter.  Every projected boundary is
 reconstructed on the host, all four allocations are considered, and each
 complete catalog is compared on all 135 dependencies.
 
-Two complete V100 runs with 65,535 and 32,768 CUDA blocks independently scan
-all `C(49,7)=85,900,584` seven-point finite boundaries.  Both find
+Two complete same-implementation V100 runs with 65,535 and 32,768 CUDA blocks
+scan all `C(49,7)=85,900,584` seven-point finite boundaries.  Both find
 
 ```text
 actual z=1 boundaries:             6,324,528
@@ -31,8 +31,13 @@ boundaries passing the projection:     1,326
 survivors of all 135 dependencies:          0.
 ```
 
-The sorted 1,326-rank set agrees by SHA-256 between launch geometries.  Thus
-every positive `z=1` boundary is excluded before any edge solve.  Together
+The sorted 1,326-rank set agrees by SHA-256 between launch geometries.  The
+full list recovered from the preserved primary-run output is committed as a
+separate certificate, and every listed rank replays against the current CPU
+projection tables.  This checks the reported positive set, not the absence of
+GPU false negatives: the second scan is a different-grid rerun, not independent
+implementation validation.  Thus every positive `z=1` boundary is excluded
+before any edge solve.  Together
 with Proposition 15.714, the actual positive scope falls from 6,453,552 to
 129,024 boundaries, and the projected outer envelope falls from 792 to 492
 profiles with `z=2,3,7`.  Those branches, the entire negative branch,

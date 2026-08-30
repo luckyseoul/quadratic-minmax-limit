@@ -412,7 +412,7 @@
     "floor_p7": "3072/409",
     "floor_p11": "0",
     "gsum_disj_lb": false,
-    "e1": true,
+    "e1": false,
     "open_hinge": "PSD factor of G_{u,disj} on Im(Z), or Aut-isotypic spec(\u03a6)\u22656, or Weil+V\u208a contraction \u27e8\u03c1,\u03ba_B\u27e9\u2265\u22121/4\u22121/(2p\u00b2); alternatively a general \u2113\u22655 for all primes p\u22657 (plus p=5 spectrum)"
   },
   "F3": "no soft-close of L",

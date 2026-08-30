@@ -27,12 +27,16 @@ def test_complete_fourteen_minus_one_index_one_triples_fail():
     assert certificate["candidate_index_one_triple_slack_histogram"] == {20: 8}
 
 
-def test_prop15703_closes_slack_twelve_and_leaves_753():
+def test_prop15703_closes_slack_twelve_and_leaves_1368():
     theorem = p17_slack_twelve_exclusion()
-    assert theorem["profile_count_before"] == 786
-    assert theorem["profiles_excluded_here"] == 33
-    assert theorem["profile_count_after"] == 753
+    assert theorem["profile_count_before"] == 1481
+    assert theorem["profiles_excluded_here"] == 113
+    assert theorem["profile_count_after"] == 1368
     assert 12 not in theorem["remaining_pair_slack_histogram"]
     assert theorem["remaining_pair_slack_histogram"][0] == 2
-    assert theorem["remaining_profiles_of_slack_at_least_sixteen"] == 751
+    assert theorem["remaining_profiles_of_slack_at_least_sixteen"] == 1366
+    assert theorem[
+        "slack_twelve_profile_undetermined_histogram_before_15701_to_15703"
+    ] == {0: 113, 1: 111, 2: 43}
+    assert len(theorem["remaining_profile_indices"]) == 1368
     assert not theorem["p17_second_all_finite_endpoint_closed"]

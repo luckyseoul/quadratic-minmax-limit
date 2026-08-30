@@ -1,0 +1,182 @@
+{
+  "prop": "15.723",
+  "title": "Paired-cube obstruction to middle floor-plus-two lifts",
+  "proved": true,
+  "scope": "all odd p>=17, odd b from the infinity-plus-p boundary shell, 5<=min(b,p-b)<=m-1",
+  "cube_lemma": {
+    "active_at_least_3": "mean at least 1",
+    "active_at_least_5": "mean at least 3/2",
+    "sharp_at_5_and_6": true
+  },
+  "paired_cube_operator": "T A(X)=(A(X)+p*E[A])/(p+1)",
+  "paired_cube_operator_symbolic_proof": {
+    "basis": "1, x_i, and x_i*x_j for i<j",
+    "write_p_as": "p=2m-1 and p+1=2m",
+    "cube_probabilities": {
+      "constant": "1",
+      "coordinate_in_X": "(m+1)/(2m)",
+      "coordinate_outside_X": "1/2",
+      "pair_both_in_X": "(m+2)/(4m)",
+      "pair_not_both_in_X": "1/4"
+    },
+    "right_hand_side_checks": {
+      "coordinate_in_X": "(1+p*(m/p))/(p+1)=(m+1)/(2m)",
+      "coordinate_outside_X": "p*(m/p)/(p+1)=1/2",
+      "pair_both_in_X": "(1+p*(m(m-1)/(p(p-1))))/(p+1)=(m+2)/(4m)",
+      "pair_not_both_in_X": "p*(m(m-1)/(p(p-1)))/(p+1)=1/4"
+    },
+    "linearity_closes_all_degree_at_most_two_functions": true,
+    "proved": true
+  },
+  "universal_gap_and_quadrature_certificate": {
+    "parameterization": "d=p-(2k+1)>=0; d is even",
+    "phase_one_gap_factorizations": {
+      "k_mod_4=0": "(d+k-4)(d+2k+2), k>=8",
+      "k_mod_4=1": "(d+2k+2)(d(k-3)+k^2-8k+3); k=5 has equality only at d=6, k>=9 is strict",
+      "k_mod_4=2": "(d+2k+2)(d(k-4)+k^2-8k+4); k=6 has equality only at d=4, k>=10 is strict",
+      "k_mod_4=3": "(d+k-1)(d+2k+2), k>=7"
+    },
+    "phase_zero_large_gap_polynomials": {
+      "k_mod_4=0": "(k-4)d^2+(3k^2-14k-4)d+2k^2(k-7), k>=8",
+      "k_mod_4=1": "(k-3)d^2+(3k^2-8k-3)d+2k^3-6k^2-10k+6, k>=9",
+      "k_mod_4=2": "k d^2+(3k^2+6k)d+2k^3+10k^2+8, k>=10",
+      "k_mod_4=3": "(k-3)d^2+(3k^2-12k-3)d+2k^3-14k^2-2k+6; k=7,d>=2 and k>=11"
+    },
+    "phase_zero_small_monotonicity": {
+      "p_mod_4=1": "3(p-5)(p-9)-16, increasing from p=17",
+      "p_mod_4=3": "3(p-5)(p-11)-16, increasing from p=19"
+    },
+    "quadrature_weight_sign_proof": {
+      "phase_one": "write k=4s+r; the three weight numerators are positive for s>=2 after p>=2k+1, while (k,p)=(5,>=17),(6,>=17) are the two direct endpoint checks; the residue-three middle weight is zero and the other two are positive",
+      "phase_zero_large": "with the listed nodes, substitution p=2k+1+d gives positive weight numerators for k>=7; the minima are k=8,9,10 and (k,d)=(7,2) in the four residue classes",
+      "phase_zero_small": "nodes 1,3,5 have positive weights and combined endpoint weight 3(p-5)/(8p)",
+      "proved": true
+    },
+    "only_zero_gaps": [
+      [
+        17,
+        5,
+        1
+      ],
+      [
+        17,
+        6,
+        1
+      ]
+    ],
+    "proved": true
+  },
+  "scaled_mean": "2p*E[A]=2p+2",
+  "classification": {
+    "general_middle_cells": "EXCLUDED",
+    "exact_exceptions": [
+      [
+        17,
+        5,
+        1
+      ],
+      [
+        17,
+        11,
+        0
+      ]
+    ],
+    "exceptions_are_real_quadratics": true
+  },
+  "backward_ledger_classifier": {
+    "proved": true,
+    "endpoint_reduced_sizes": {
+      "sizes": [
+        0,
+        1,
+        2
+      ],
+      "status": "EXCLUDED_BY_BASELINE_OBSTRUCTION"
+    },
+    "uncovered_reduced_sizes": {
+      "sizes": [
+        3,
+        4
+      ],
+      "status": "ADMISSIBLE_IN_RELAXED_LEDGER"
+    },
+    "middle_reduced_sizes": "ROUTE_THROUGH_PROPOSITION_15_723",
+    "even_p17_exception_cells": [
+      [
+        12,
+        0
+      ],
+      [
+        6,
+        1
+      ]
+    ],
+    "normalized_odd_exception_cells": [
+      [
+        5,
+        1
+      ],
+      [
+        11,
+        0
+      ]
+    ]
+  },
+  "exception_witnesses": [
+    {
+      "p": 17,
+      "b": 5,
+      "phase": 1,
+      "smaller_side_size": 5,
+      "smaller_side_phase": 1,
+      "quadratic": "A(X)=(|X intersect C|-3)^2",
+      "E_t": "45/17",
+      "E_t_squared": "135/17",
+      "E_A": "18/17",
+      "scaled_mean": 36,
+      "required_parity": true,
+      "proved": true
+    },
+    {
+      "p": 17,
+      "b": 11,
+      "phase": 0,
+      "smaller_side_size": 6,
+      "smaller_side_phase": 1,
+      "quadratic": "A(X)=(|X intersect C|-3)^2",
+      "E_t": "54/17",
+      "E_t_squared": "189/17",
+      "E_A": "18/17",
+      "scaled_mean": 36,
+      "required_parity": true,
+      "proved": true
+    }
+  ],
+  "operator_audits": {
+    "5": {
+      "p": 5,
+      "m": 3,
+      "basis_monomials_checked": 15,
+      "cube_samples_with_multiplicity": 24,
+      "maximum_error": "0",
+      "identity": "T A(X)=(A(X)+p*E[A])/(p+1)",
+      "proved_for_degree_at_most_two": true
+    },
+    "7": {
+      "p": 7,
+      "m": 4,
+      "basis_monomials_checked": 28,
+      "cube_samples_with_multiplicity": 192,
+      "maximum_error": "0",
+      "identity": "T A(X)=(A(X)+p*E[A])/(p+1)",
+      "proved_for_degree_at_most_two": true
+    }
+  },
+  "formula_audit_range": "regression only: all odd parameters 17<=p<=203",
+  "formula_audit_cells": 9494,
+  "infinity_plus_p_shell_closed": false,
+  "residual_ii": false,
+  "type_I": false,
+  "limit_exists": false,
+  "L_status": "OPEN"
+}

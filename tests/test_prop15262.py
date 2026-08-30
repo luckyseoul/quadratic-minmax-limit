@@ -49,7 +49,7 @@ def test_mupart_ext_numerator():
 def test_predicates_open():
     assert residual_i_closed_via_262() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     h = hinge_status_262()
     assert h["nu_zero_general"] is False
     assert h["residual_i_closed"] is False

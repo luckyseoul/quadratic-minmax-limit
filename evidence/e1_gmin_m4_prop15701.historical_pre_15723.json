@@ -1,0 +1,245 @@
+{
+  "record_status": "HISTORICAL_PRE_15.723_PAYLOAD",
+  "warning": "Counts descend from the former blanket floor-plus-two filter; see the canonical summary for the corrected replay.",
+  "boundary_size": 16,
+  "external_classification": {
+    "consequence": "every arc of size at least 15 in PG(2,17) is conic-contained",
+    "extension_reason": "a 15-subarc lies on the unique conic-derived class; an additional off-conic point sees at least 8-3=5 retained conic secants and would create a 3-secant",
+    "external_dependency": true,
+    "known_representative": "a nondegenerate conic with three points deleted",
+    "location": "Section 5.3, printed page 119 (PDF page 129)",
+    "pgl_class_count_of_15_arcs": 1,
+    "proved_conditional_on_external_classification": true,
+    "source": "H. Sticker, Classification of Arcs in Small Desarguesian Projective Planes, PhD thesis, Ghent University, 2012",
+    "source_url": "https://cage.ugent.be/geometry/Theses/57/PhDHeideSticker.pdf"
+  },
+  "p": 17,
+  "p17_second_all_finite_endpoint_closed": false,
+  "profile_count_after": 932,
+  "profile_count_before": 1330,
+  "profile_ledger": {
+    "excluded_profile_count": 398,
+    "proved": true,
+    "remaining_profile_count_in_handled_slacks": 179,
+    "rows": [
+      {
+        "adjoined_infinity_points_at_most": 0,
+        "classified_arc_size_floor": 15,
+        "delete_at_most": 1,
+        "excluded_profile_count": 227,
+        "pair_slack": 4,
+        "profile_count": 227,
+        "remaining_profile_count": 0,
+        "required_undetermined_directions": 0,
+        "undetermined_direction_histogram": {
+          "0": 113,
+          "1": 102,
+          "2": 12
+        }
+      },
+      {
+        "adjoined_infinity_points_at_most": 1,
+        "classified_arc_size_floor": 15,
+        "delete_at_most": 2,
+        "excluded_profile_count": 128,
+        "pair_slack": 8,
+        "profile_count": 195,
+        "remaining_profile_count": 67,
+        "required_undetermined_directions": 1,
+        "undetermined_direction_histogram": {
+          "0": 67,
+          "1": 104,
+          "2": 24
+        }
+      },
+      {
+        "adjoined_infinity_points_at_most": 2,
+        "classified_arc_size_floor": 15,
+        "delete_at_most": 3,
+        "excluded_profile_count": 43,
+        "pair_slack": 12,
+        "profile_count": 155,
+        "remaining_profile_count": 112,
+        "required_undetermined_directions": 2,
+        "undetermined_direction_histogram": {
+          "0": 33,
+          "1": 79,
+          "2": 43
+        }
+      }
+    ]
+  },
+  "profiles_excluded_here": 398,
+  "proposition": "15.701",
+  "proved_conditional_on_external_classification": true,
+  "remaining_pair_slack_histogram": {
+    "0": 2,
+    "8": 67,
+    "12": 112,
+    "16": 112,
+    "20": 78,
+    "24": 54,
+    "28": 35,
+    "32": 26,
+    "36": 20,
+    "40": 15,
+    "44": 13,
+    "48": 11,
+    "52": 9,
+    "56": 9,
+    "60": 9,
+    "64": 9,
+    "68": 9,
+    "72": 9,
+    "76": 9,
+    "80": 9,
+    "84": 9,
+    "88": 9,
+    "92": 9,
+    "96": 12,
+    "100": 14,
+    "104": 17,
+    "108": 22,
+    "112": 33,
+    "116": 35,
+    "120": 35,
+    "124": 29,
+    "128": 23,
+    "132": 16,
+    "136": 11,
+    "140": 7,
+    "144": 5,
+    "148": 3,
+    "152": 2,
+    "156": 2,
+    "160": 2,
+    "164": 1,
+    "168": 1,
+    "172": 1,
+    "176": 1,
+    "180": 1,
+    "184": 1,
+    "188": 1,
+    "192": 1,
+    "196": 1,
+    "200": 1,
+    "204": 1,
+    "208": 1,
+    "212": 1,
+    "216": 1,
+    "220": 1,
+    "224": 1,
+    "228": 1,
+    "232": 1,
+    "236": 1,
+    "240": 1
+  },
+  "remaining_positive_slack_profiles": 930,
+  "remaining_slack_zero_profiles": 2,
+  "repair_and_off_conic_lemma": {
+    "arc_repair_bound": "pair slack 4r permits deleting at most r points to obtain an arc",
+    "counting_argument": "if h<=3 of the 16 original points are off a conic, each sees at least 8-(18-(16-h))=6-h secants whose two conic points remain; a line counted for a off-conic points has occupancy at least 2+a and contributes at least 4a pair slack",
+    "full_conic_secants_through_off_conic_point_at_least": 8,
+    "line_charge_rows": [
+      {
+        "deletions_to_occupancy_two": 1,
+        "occupancy": 3,
+        "pair_slack": 4
+      },
+      {
+        "deletions_to_occupancy_two": 2,
+        "occupancy": 4,
+        "pair_slack": 8
+      },
+      {
+        "deletions_to_occupancy_two": 3,
+        "occupancy": 5,
+        "pair_slack": 16
+      },
+      {
+        "deletions_to_occupancy_two": 4,
+        "occupancy": 6,
+        "pair_slack": 24
+      },
+      {
+        "deletions_to_occupancy_two": 5,
+        "occupancy": 7,
+        "pair_slack": 36
+      },
+      {
+        "deletions_to_occupancy_two": 6,
+        "occupancy": 8,
+        "pair_slack": 48
+      },
+      {
+        "deletions_to_occupancy_two": 7,
+        "occupancy": 9,
+        "pair_slack": 64
+      },
+      {
+        "deletions_to_occupancy_two": 8,
+        "occupancy": 10,
+        "pair_slack": 80
+      },
+      {
+        "deletions_to_occupancy_two": 9,
+        "occupancy": 11,
+        "pair_slack": 100
+      },
+      {
+        "deletions_to_occupancy_two": 10,
+        "occupancy": 12,
+        "pair_slack": 120
+      },
+      {
+        "deletions_to_occupancy_two": 11,
+        "occupancy": 13,
+        "pair_slack": 144
+      },
+      {
+        "deletions_to_occupancy_two": 12,
+        "occupancy": 14,
+        "pair_slack": 168
+      },
+      {
+        "deletions_to_occupancy_two": 13,
+        "occupancy": 15,
+        "pair_slack": 196
+      },
+      {
+        "deletions_to_occupancy_two": 14,
+        "occupancy": 16,
+        "pair_slack": 224
+      }
+    ],
+    "off_conic_count_rows": {
+      "1": {
+        "minimum_retained_secants_per_off_conic_point": 5,
+        "minimum_secant_incidence_count": 5,
+        "off_conic_points": 1,
+        "omitted_conic_points": 3,
+        "pair_slack_floor": 20,
+        "retained_conic_points": 15
+      },
+      "2": {
+        "minimum_retained_secants_per_off_conic_point": 4,
+        "minimum_secant_incidence_count": 8,
+        "off_conic_points": 2,
+        "omitted_conic_points": 4,
+        "pair_slack_floor": 32,
+        "retained_conic_points": 14
+      },
+      "3": {
+        "minimum_retained_secants_per_off_conic_point": 3,
+        "minimum_secant_incidence_count": 9,
+        "off_conic_points": 3,
+        "omitted_conic_points": 5,
+        "pair_slack_floor": 36,
+        "retained_conic_points": 13
+      }
+    },
+    "positive_slack_below_twenty_impossible_after_conic_core": true,
+    "proved": true
+  },
+  "top_level_gates_changed": false
+}

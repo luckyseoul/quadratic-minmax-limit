@@ -94,7 +94,7 @@
     "C": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "2-orbit majorant is not floor-sufficient for p\u22611\u226513. c(p) unnamed. phi_F not imported."
     }

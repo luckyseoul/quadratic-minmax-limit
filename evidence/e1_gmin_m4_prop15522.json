@@ -123,7 +123,7 @@
     "phi_F_imported": false,
     "note": "(a,b) still unnamed in p. 10p\u221246 hits a_++ at {5,7} and is not a law. Q_\u03c4 unnamed. phi_F not imported."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false,
   "flags_not_flipped": [

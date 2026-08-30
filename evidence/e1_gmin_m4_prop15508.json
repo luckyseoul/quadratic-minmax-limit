@@ -81,7 +81,7 @@
     "phi_F_imported": false,
     "note": "\u03c9-class Fix is named at p=5,7. n_orbits and |H+| / D / Q_\u03c4 stay unnamed. phi_F not imported."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false,
   "flags_not_flipped": [

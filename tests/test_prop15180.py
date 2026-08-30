@@ -34,7 +34,7 @@ def test_predicates_honest():
     from e1_gmin_m4_prop15179 import residual_ii_dual_twolevel_affine_closed
 
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     assert residual_ii_dual_twolevel_affine_closed() is True  # affine branch
     assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True  # 15.179+236+237
     h = hinge_status_180()

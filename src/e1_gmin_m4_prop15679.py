@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """Prop. 15.679 -- close the next all-finite boundary for p>=43.
 
-Propositions 15.675, 15.677, and 15.678 exclude the first even all-finite
-boundary size strictly above ``3(p-1)/4``.  Let ``s`` be the next even
-size.  For every prime ``p>=43`` this proposition excludes ``s`` as well.
+Let ``s`` be the second even all-finite boundary size strictly above
+``3(p-1)/4``.  For every prime ``p>=43`` this proposition independently
+excludes ``s``.  Its claim does not depend on the retracted ``p=17``
+endpoint assertion in Proposition 15.678.
 
 Put ``P=p+1`` and ``m=P/2``.  The phase-one type has only common residue
 ``u_1=m-1`` and therefore has ``m-1`` directions at ``b=2`` and one at
 ``b=s``.  Its exact pair deficit is ``(m-1)(s-2)``.  In phase zero, the
-forbidden two-unit lift and the exact quotient sum leave, before the pair
-budget, only residues ``2<=u_0<=7``:
+corrected parameter-aware floor-plus-two classification and the exact
+quotient sum leave only residues ``2<=u_0<=7`` after the pair budget:
 
 * ``u_0=0`` is already over budget;
 * ``u_0=1`` is infeasible;
@@ -47,6 +48,7 @@ from e1_gmin_m4_prop15642 import (
 )
 from e1_gmin_m4_prop15669 import full_symbolic_floor
 from e1_gmin_m4_prop15675 import first_even_survivor
+from e1_gmin_m4_prop15723 import floor_excess_admissible
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -213,7 +215,7 @@ def symbolic_residue_reduction() -> dict[str, object]:
 
 
 def _relaxed_minimum_dp(p: int, phase: int) -> dict[str, object]:
-    """Independent no-two-unit-lift DP for regression samples."""
+    """Independent parameter-aware floor-lift DP for regression samples."""
     s = next_even_boundary(p)
     m = (p + 1) // 2
     period = p + 1
@@ -225,7 +227,7 @@ def _relaxed_minimum_dp(p: int, phase: int) -> dict[str, object]:
             floor = full_symbolic_floor(p, b, phase)
             for k in range(target + 1):
                 excess = 2 * u + period * k - floor
-                if excess < 0 or excess == 2:
+                if not floor_excess_admissible(p, b, phase, excess):
                     continue
                 candidate = (s - b, b)
                 old = best_by_k.get(k)

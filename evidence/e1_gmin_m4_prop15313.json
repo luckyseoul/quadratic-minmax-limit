@@ -86,7 +86,7 @@
       "proved": false,
       "phi_F_ge_6": false,
       "rhat": false,
-      "e1": true,
+      "e1": false,
       "Q_tau_named_in_p": false,
       "lambda_ge_6": false,
       "note": "p=5 and p=7 Q_\u03c4 named by Fejer/Gauss/\u1e91\u22122\u0393 mixtures. No general-p NL type list (size-12 T is p=7-only; NC empty at p=13). phi_F not imported."

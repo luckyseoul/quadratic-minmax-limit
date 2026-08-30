@@ -138,7 +138,7 @@
       "proved": false,
       "phi_F_ge_6": false,
       "rhat": false,
-      "e1": true,
+      "e1": false,
       "Q_tau_named_in_p": false,
       "lambda_ge_6": false,
       "note": "K is Kloosterman. F_1(0) is a Kl-image of the W-gram. W-gram still unnamed in p. phi_F not imported."

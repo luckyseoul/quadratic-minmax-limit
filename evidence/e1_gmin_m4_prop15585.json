@@ -311,7 +311,7 @@
       "proved": false,
       "residual_ii_k_eq_4p_empty": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "leftover_only_exists": true,
       "leftover_splus_general_p_open": true,
       "unclassified_1_S2_open": true,

@@ -116,7 +116,7 @@
       "proved": false,
       "residual_ii_k_eq_4p_empty": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "rhat": false,
       "nf_ge_7_open": true,
       "note": "leftover+splus nF=0..6 empty at p=5 k=20. nF\u22657 and even k>4p with far stay open. 3600s JSON with S\u22612 on Max+ is not a leftover+splus certificate. residual_ii_k_eq_4p_empty stays False."

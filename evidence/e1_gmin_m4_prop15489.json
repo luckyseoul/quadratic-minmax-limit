@@ -19,7 +19,7 @@
     "phi_F_imported": false,
     "note": "F is named as a generating set; D=|H+|/(2p) is the ridge CSP, not a short Jacobi value. Floor OPEN."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false
 }

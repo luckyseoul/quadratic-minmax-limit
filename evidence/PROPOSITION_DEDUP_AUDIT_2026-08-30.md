@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-30
 
-**Scope:** every assigned proposition through Proposition 15.721, the live
+**Scope:** every assigned proposition through Proposition 15.725, the live
 predicate wiring, and the current untracked attack scripts
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
@@ -65,6 +65,79 @@ in 15.675--15.712 was redundant. Their internal lemmas remain available;
 15.676 is still load-bearing on pair-deficit equality at `|D|=p+1`, and
 15.690--15.691 are independent optional no-go results.
 
+A fifth semantic check resolved the first new `p+1` subbranch without a
+profile campaign. Proposition 15.722 tracks the signed phase cocycle across
+all charts. Outside pair slack one is impossible; slack zero forces a
+Miquelian circle with exact type alignment. Proposition 15.724 then reuses
+three existing inputs—isolated-vertex counting, the xnor congruence from
+15.672/15.673, and the sharp lift floor from 15.688—to exclude that full
+circle. Do not launch another full-circle, `R=0`, conic, or circle-orbit
+search at `|D|=p+1`. The same proposition now excludes every positive slack
+through `max(3,floor(sqrt(p)-5/2))`; the active branch lies beyond that
+cutoff.
+
+A sixth semantic check found that `excess != 2` is not a universal profile
+rule in the middle odd-fibre range. Proposition 15.723 proves the exclusion
+by paired cubes except at the genuine cells
+`(p,b,phase)=(17,5,1),(17,11,0)`, both realized by explicit integral
+quadratics. Any script that deletes those cells by a blanket condition is a
+relaxation bug until audited. Endpoint baseline uses may still be valid, but
+must cite their pointwise baseline factorization rather than the blanket.
+
+The tracked backward audit has the following verdicts:
+
+| prior use | verdict after 15.723 |
+|---|---|
+| 15.674 and `tests/test_prop15674.py` | This odd-profile use reaches `p=17`. The code now retains `(b,phase)=(5,1),(11,0)` explicitly. At residue zero either cell needs quotient two, while all other directions need at least one and the total quotient sum is only `m`; at interior residues all `m` directions still need at least one but the sum is below `m`. The theorem and its four arithmetic rows are unchanged. |
+| 15.676 | Its conic profiles use only `b=1,3,p`; neither exceptional cell occurs. |
+| 15.675 and 15.679--15.683 | Their stated conclusions survive a parameter-aware replay. Proposition 15.723 handles reduced parity rank at least five for `p>=19`; reduced ranks three and four must be retained, but they alter only over-budget rows in these propositions. Their exact historical row ledgers are being regenerated. |
+| 15.678 | **OPEN_RETRACTED_REDUCTION.** The corrected census has 108 compatible profiles spanning 47 arc profiles. The retained geometry excludes 14 arc profiles, leaving 94 compatible profiles uncovered. The old “exactly two profiles, both arcs” endpoint claim is false. Proposition 15.721 independently closes this all-finite boundary as a gate. |
+| 15.684 | **OPEN_RETRACTED_REDUCTION.** Restoring the admissible phase-zero residue `u_0=9` gives scaled mass 18 and an explicit slack-zero profile, so the old positive-residue exclusion and total `1,247 -> 203` endpoint reduction are false. The exact residue-zero census and its reductions remain useful, and Proposition 15.721 independently closes this boundary as a gate. |
+| 15.688 | The sharp lift theorem and its direct residue-zero census survive. The corrected generic ledger restores `u_0=7`, of scaled mass 14, but the sharp floor 16 excludes it before the residue-zero census; the final p=19 fourteen-profile block is unchanged. |
+| 15.700--15.712 | **Corrected replay completed.** Propagated census IDs give `2503 -> 2219 -> 1744 -> 1481 -> 1368 -> 1228 -> 1215 -> 1213 -> 1020 -> 869 -> 321 -> 19 -> 14 -> 0`. In detail, 15.700 excludes 284 and sends slack zero `286 -> 2`; 15.701--15.704 exclude `475,263,113,140`; 15.705 is **PARTIAL/OPEN** and removes only 13 historical Orbiter targets, leaving 74 slack-16 rows; 15.706--15.712 exclude `2,193,151,548,302,5,14`, with 15.709 absorbing all 74 leftover slack-16 rows. The final nineteen- and fourteen-profile blocks are unchanged, and 15.712 still closes the endpoint. The whole all-finite size-16 ladder is superseded as an active gate by 15.721. |
+| 15.724 | Its endpoint `b=2` use is the pointwise baseline factorization `A=2B` and the sharp 15.688 support floor, not the disputed middle shortcut. |
+
+The generic `scripts/infinity_plus_p_quantized_dp.py` now routes every
+two-unit excess through 15.723's parameter-aware
+`floor_excess_admissible()` classifier.  In particular it retains the two
+real `p=17` exception cells and the still-unproved reduced-size-three/four
+cells; the former blanket filter is retired.  This repair does not turn the
+script into a proof or reopen a live acceptance gate: 15.721 independently
+supersedes all of the affected all-finite boundary campaigns.
+
+A seventh semantic check retracted Proposition 15.725's attempted
+parabola-plus-internal family close. Its 2,381-case finite phase-zero census
+is exact, but the `p>=53` character-curve bounds are asserted rather than
+proved, the admissible singular locus `4*a*nu+1=0` is untreated, and the
+opposite product sign is unchecked. Do not cite 15.725 as an all-prime or
+two-orientation exclusion.
+
+An eighth adversarial check repaired four proof-certificate defects in the
+new 15.722--15.724 chain without changing its valid conclusion.  The signed
+Möbius cocycle now handles affine maps `c=0` separately instead of assigning
+the impossible multiplier `chi(0)` at infinity; all finite-field APIs reject
+odd composite moduli.  In 15.723 the far-contact active-coordinate minimum is
+correctly `k-1` for odd `k` and `k-3` for even `k`; both remain at least five
+in the stated range.  In 15.724 the imported two-coordinate baselines are
+honestly XOR/XNOR rather than both XNOR: the needed congruence survives
+because the sign parameter drops out of `(p-1)c=I+P_d-4`.  Independent
+symbolic checks of the paired-cube operator, quadrature weights, gap
+factorizations, and full-circle `(u,x,y)=(4,4,3)` arithmetic found no further
+closure-affecting gap.  A subsequent exact finite-geometry check strengthens
+the valid result: outside slack `R=0` is closed by 15.724, and 15.722 excludes
+every positive `R<=max(3,floor(sqrt(p)-5/2))`.  The `R=2,3` cases use the
+classified complete `(p-1)`/`(p-2)` arcs; the prime-dependent interval uses
+an inclusion-minimal deletion to an arc and off-conic secant counting. Only
+slack beyond that cutoff remains open.
+
+The same replay exposed one stale exact-boundary diagnostic:
+`p17_slack20_boundary_cryptominisat.py` still expected the 78 profiles and
+69 signatures produced by the retracted blanket filter.  It now consumes the
+corrected 193-profile block at census indices 1364--1556, deduplicates it to
+184 signatures, and recomputes the full reflection ledger.  Proposition
+15.707's algebraic exclusion already removes all 193 rows; the solver remains
+an optional independent audit, not a proof dependency.
+
 1. The final 300-second positive-`p=7,z=7` CP-SAT run repeated an existing
    exact full-torsion model for the same case.  Only the timeout changed.
 2. Several long proposition blocks are different coordinates for the same
@@ -72,9 +145,11 @@ in 15.675--15.712 was redundant. Their internal lemmas remain available;
    15.83--15.160 are the optional Path-C/Hypothesis-H residual in different
    forms, and much of 15.321--15.560 is the same unnamed `Q_tau`/class-function
    mixture under successive small-prime fits.
-3. Old `e1_closed_general()` wiring and several historical prose blocks still
-   say `True`/`CLOSED` for a smaller, obsolete acceptance problem.  They do not
-   close the current four-unit gate.
+3. The old bounded acceptance AND is now exposed only as
+   `e1_bounded_residual_split_closed()`. The corrected
+   `e1_closed_general()` is the global gate and returns `False`, matching the
+   still-open residual-(ii) and Type-I units. Historical prose that says the
+   old AND is `True` does not close the current gate.
 4. The first audit restored **GLOBAL QVAR** to what it then treated as a
    spectral-floor acceptance unit. The 15.720 correction above supersedes
    that conclusion: the whole spectral unit is no longer load-bearing.
@@ -86,24 +161,26 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 636 source-backed proposition modules from 15.83 through 15.721.
+- There are 640 source-backed proposition modules from 15.83 through 15.725.
 - The labels 15.537, 15.583, and 15.584 have no proposition module.  They are
   unassigned labels, not unreviewed propositions; later source headers mention
   those numbers only as historical range/state markers.
-- Therefore every assigned proposition through 15.721 was included in this
+- Therefore every assigned proposition through 15.725 was included in this
   audit.  The grouped ledger below is by shared mathematical route rather than
   a 718-row restatement of the writeup.
 
 ## Authoritative acceptance chain
 
-The public theorem is gated by `four_e1_units_closed()`, not by the legacy
-`e1_closed_general()` value.
+The public theorem is gated consistently by the corrected global
+`e1_closed_general()` Boolean and `four_e1_units_closed()["closed"]`; both are
+currently `False`. The historical bounded `True` is available only through
+`e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after 15.721 |
+| unit | exact live content | status after audit of 15.725 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
-| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — for `p>=17`, 15.721 moves the general boundary floor to `|D|=p+1`; only strict pair deficit survives there after 15.676 |
-| Type I | the multi-level `3A+B>0` bad case | **OPEN** |
+| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — for `p>=17`, 15.721 moves the general boundary floor to `|D|=p+1`; 15.676 and 15.722--15.724 close pair equality and slack zero, while 15.722 excludes positive outside slack through `max(3,floor(sqrt(p)-5/2))`; only larger slack remains |
+| Type I | the multi-level `3A+B>0` bad case | **OPEN** — `|κ|=1` needs `G>T` (for example `|μ|≤|L|`), while `|κ|=3` independently needs `χ_d((2p-1)μ+(p-2)ν)>-(p-2)/p`; the particular term is safe but the δ remainder is open |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
 The spectral floor remains an interesting optional problem, but it has no
@@ -132,6 +209,8 @@ top-level front.
 | **15.669--15.712** | uniform residual ranges, infinity-plus-`(p-2)`, all-finite endpoint campaigns, and optional no-gos | After 15.721, the all-finite boundary-close role of 15.675--15.712 is superseded by signed transport into 15.669/15.674. Do not regenerate any first/second all-finite rows, including the former open `p=23` ledger. 15.676 remains load-bearing at total boundary `p+1`; 15.690--15.691 and reusable internal lemmas retain their independent content. |
 | **15.713--15.719** | positive `p=7` infinity-plus-seven reductions | 15.713--15.717 close `z=0,1,2,3`.  15.718--15.719 identify and stabilize projected `z=7` semigroup supports but remove no source boundary.  All 56 actual `z=7` line boundaries remain open, and the semigroup/quotient route is terminated. |
 | **15.720--15.721** | degree-congruence bi-tight close; signed boundary normalization | 15.720 closes the required bi-tight levels. 15.721 proves `|D|>=p+1` for every residual candidate at `p>=17` and identifies strict deficit in the normalized infinity-plus-`p` shell as the first general residual branch. Neither closes Type I or residual (ii). |
+| **15.722--15.724** | exact phase cocycle; outside-pair slack; paired-cube floor-plus-two repair; full-circle exclusion | 15.722 identifies slack zero with an aligned Miquelian circle, excludes `R=1,2,3`, and more generally excludes `1<=R<=floor(sqrt(p)-5/2)` by minimal arc deletion plus the prime-field conic threshold. 15.724 excludes the circle, so the active `p+1` branch lies beyond `max(3,floor(sqrt(p)-5/2))`. 15.723 proves the middle floor-plus-two shortcut except for the explicit cells `(17,5,1)` and `(17,11,0)`, which every later profile audit must retain. |
+| **15.725** | finite parabola-plus-internal census and attempted all-prime character bound | **RETRACTED as a family close.** The finite phase-zero census is retained; the all-prime character sums and opposite orientation are open. It changes no gate. |
 
 ## Exact duplicated run
 
@@ -187,6 +266,8 @@ is a current E(1) gate.
   reruns after their exact closures;
 - any all-finite first/second-shell profile work from 15.675--15.712:
   15.721 transports those sizes into the already-closed infinity ranges;
+- any `|D|=p+1` full-circle, outside-`R=0`, or unique-trisecant campaign:
+  15.722--15.724 close those branches exactly;
 - treating a projected/parity/semigroup survivor as a feasible graph;
 - trying to reach the general residual with an `L2` bound on `delta`
   (15.595 proves the scale loses from `p>=11`).
@@ -215,6 +296,7 @@ are retained as history/data but are removed from the active attack queue.
 | `scripts/r1_p11_*`, broad theta/channel scripts | useful finite data, but the aggregate cones are certified insufficient and `p=11` itself is already R1-positive |
 | `scripts/p7_infinity7_positive_z7_*` and matching `/tmp` artifacts | terminal semigroup/quotient campaign; not active |
 | generic `residual_boundary_*` parity/projected models | necessary-condition diagnostics only; infeasibility can close a specified finite branch, feasibility cannot close or witness the graph problem |
+| `scripts/infinity_plus_p_quantized_dp.py` | diagnostic only until every `excess != 2` use retains the two Proposition 15.723 `p=17` equality cells |
 
 The pre-existing modified files
 `evidence/e1_gmin_m4_prop15626.json`,
@@ -224,11 +306,25 @@ The pre-existing modified files
 
 ## Stale or contradictory records
 
-Central live documentation is corrected alongside this audit, but historical
-artifacts are not rewritten en masse.  Treat the following as quarantined:
+Central live documentation and the canonical JSON summaries are corrected
+alongside this audit.  Former payloads are preserved under explicit
+`historical_retracted` / `historical_pre_15723` names rather than left at the
+canonical paths.  Treat the following as quarantined:
 
-- `e1_closed_general()` can be `True` while all three open acceptance
-  predicates are `False`; only `four_e1_units_closed()` is authoritative.
+- The former 15.678 and 15.684 payloads are preserved as
+  `e1_gmin_m4_prop15678.historical_retracted.json` and
+  `e1_gmin_m4_prop15684.historical_retracted.json`.  They record the false
+  endpoint closes and are not theorem evidence.
+- The former bulky 15.700--15.712 payloads are preserved as
+  `e1_gmin_m4_prop157NN.historical_pre_15723.json`.  Their counts descend from
+  the retracted blanket floor-plus-two filter.  The canonical JSON files now
+  carry the corrected replay summaries and point back to those historical
+  payloads.
+
+- `e1_closed_general()` is now the corrected global predicate and is `False`,
+  in parity with `four_e1_units_closed()["closed"]`. The old bounded `True`
+  survives only as `e1_bounded_residual_split_closed()`; never use that alias
+  as an E(1) or global residual-(ii) close.
 - Prop. 15.104's title claims a general `16N` proof, while its own final
   packaging retracts the proposed proof.  It has neither focused test nor
   evidence JSON.
@@ -265,11 +361,14 @@ Before spending mesh/GPU time:
 2. name the exact proposition whose limitation it overcomes;
 3. for a nonempty residual boundary, first use signed PSL transport to put a
    boundary point at infinity; do not open an all-finite profile campaign;
-4. search tracked files, untracked scripts, `/tmp` artifact names and hashes,
+4. at `|D|=p+1`, skip slack zero and every positive outside slack through
+   `max(3,floor(sqrt(p)-5/2))`; 15.722--15.724 already close them, and retain
+   both 15.723 floor-plus-two exceptions in any profile DP;
+5. search tracked files, untracked scripts, `/tmp` artifact names and hashes,
    git history, GitHub, MathOverflow, literature notes, and OEIS when number
    patterns are involved;
-5. write the acceptance condition before launching;
-6. stop after the declared gate if the result is only `UNKNOWN`, a necessary
+6. write the acceptance condition before launching;
+7. stop after the declared gate if the result is only `UNKNOWN`, a necessary
    survivor, a finite-prime fit, or another equivalent relaxation.
 
 This preflight is the replacement for extending a finished line with one

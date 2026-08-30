@@ -49,7 +49,7 @@
       "Q_NL_7": "632/171",
       "Q_NL_is_short_rational": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "D_form_on_lattice_general": false,
       "note": "p=5 parallelogram/L names die at p=7. Q_NL unnamed. phi_F not imported."

@@ -48,7 +48,7 @@
     "C": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "Cov++ isolated as 10/39, 2793/1636. Jac/edge6 pairings that cut Aut_\u221e ker still have den D. phi_F not imported."
     }

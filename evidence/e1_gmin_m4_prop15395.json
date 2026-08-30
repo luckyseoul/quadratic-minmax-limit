@@ -128,7 +128,7 @@
       "proved": false,
       "sbox_cs_ge_6": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "CS/Var(M)\u22650 and 3R+C / 1D endpoints miss the S0 window. phi_F not imported."
     }

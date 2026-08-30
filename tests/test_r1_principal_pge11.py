@@ -213,4 +213,4 @@ def test_leftover2_and_L_untouched():
 
     out = run_main_chain()
     assert out["L_status"] == "OPEN"
-    assert e1_closed_general() is True  # wiring fact, not a close
+    assert e1_closed_general() is False  # wiring fact, not a close

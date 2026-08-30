@@ -71,7 +71,7 @@
     "D": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "rhat": false,
       "box_is_a_bound": false,
       "Q_tau_named_in_p": false,

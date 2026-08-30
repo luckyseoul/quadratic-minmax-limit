@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Prop. 15.710 -- reduce the p=17 endpoint from 227 profiles to nineteen.
+"""Prop. 15.710 -- reduce the p=17 endpoint from 321 profiles to nineteen.
 
 Every profile left by Proposition 15.709 has nine rigid phase-one weight-16
-directions.  Of the 227 rows, 176 retain a rigid phase-zero weight-zero
+directions.  Of the 321 rows, 270 retain a rigid phase-zero weight-zero
 direction.  Comparing those two rigid floors forces infinity degree 60 and
 gauge sum 14, while parallel nonnegativity requires gauge sum at least 15.
 
@@ -42,21 +42,27 @@ def _rigid_floor_lower_bound(profile: dict[str, object], phase: int, b: int) -> 
 
 
 def p17_phase_one_b16_global_sign_reduction() -> dict[str, object]:
-    """Apply complementary b0/b16 global-sign comparisons to all 227 rows."""
+    """Apply complementary b0/b16 global-sign comparisons to all 321 rows."""
     previous = p17_phase_one_residue_eight_exclusion()
-    previous_histogram = {
-        int(slack): int(count)
-        for slack, count in previous["remaining_pair_slack_histogram"].items()
-    }
     census = p17_second_boundary_profile_census()
     profiles = [
-        (census_index, row)
-        for census_index, row in enumerate(census["profiles"])
-        if int(row["pair_slack"]) in previous_histogram and int(row["u1"]) == 0
+        (int(census_index), census["profiles"][int(census_index)])
+        for census_index in previous["remaining_profile_indices"]
     ]
-    if len(profiles) != 227 or Counter(
+    previous_histogram = Counter(
         int(row["pair_slack"]) for _index, row in profiles
-    ) != Counter(previous_histogram):
+    )
+    if (
+        len(profiles) != 321
+        or any(int(row["u1"]) != 0 for _index, row in profiles)
+        or previous_histogram
+        != Counter(
+            {
+                int(k): int(v)
+                for k, v in previous["remaining_pair_slack_histogram"].items()
+            }
+        )
+    ):
         raise ArithmeticError("pre-15.710 p=17 profile ledger changed")
 
     b0_rows = []
@@ -98,11 +104,11 @@ def p17_phase_one_b16_global_sign_reduction() -> dict[str, object]:
         (int(row["u0"]), int(row["u1"])) for row in survivors
     )
     if (
-        len(b0_rows) != 176
+        len(b0_rows) != 270
         or b0_anchor_histogram
-        != {1: 8, 2: 26, 3: 32, 4: 56, 5: 38, 6: 16}
+        != {1: 16, 2: 40, 3: 69, 4: 90, 5: 51, 6: 4}
         or Counter((row["u0"], row["u1"]) for row in b0_rows)
-        != {(0, 0): 176}
+        != {(0, 0): 270}
         or len(b16_rows) != 32
         or b16_anchor_histogram
         != {1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4, 7: 4, 8: 4}
@@ -147,6 +153,12 @@ def p17_phase_one_b16_global_sign_reduction() -> dict[str, object]:
     if any(count < 0 for count in excluded_histogram.values()):
         raise ArithmeticError("p=17 excluded-slack accounting changed")
     excluded_histogram = +excluded_histogram
+    excluded_indices = {
+        int(row["census_index"]) for row in b0_rows + b16_rows
+    }
+    remaining_indices = sorted(int(row["census_index"]) for row in survivors)
+    if excluded_indices & set(remaining_indices):
+        raise ArithmeticError("15.710 excluded and surviving profile sets overlap")
 
     return {
         "proposition": "15.710",
@@ -157,6 +169,8 @@ def p17_phase_one_b16_global_sign_reduction() -> dict[str, object]:
         "profiles_excluded_by_b0_b16_comparison": len(b0_rows),
         "profiles_excluded_by_b16_b16_comparison": len(b16_rows),
         "profile_count_after": len(survivors),
+        "excluded_profile_indices_here": sorted(excluded_indices),
+        "remaining_profile_indices": remaining_indices,
         "remaining_pair_slack_histogram": dict(sorted(survivor_histogram.items())),
         "excluded_pair_slack_histogram": dict(sorted(excluded_histogram.items())),
         "remaining_residue_pair_histogram": {

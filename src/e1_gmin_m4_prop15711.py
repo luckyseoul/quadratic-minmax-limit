@@ -147,6 +147,15 @@ def p17_residue_zero_uniform_mean_exclusion() -> dict[str, object]:
     )
     if survivor_residues != {(7, 0): 9, (8, 0): 5}:
         raise ArithmeticError("post-15.711 residue ledger changed")
+    previous_indices = set(int(index) for index in previous["remaining_profile_indices"])
+    excluded_indices = {int(row["census_index"]) for row in profiles}
+    remaining_indices = sorted(previous_indices - excluded_indices)
+    if (
+        len(previous_indices) != 19
+        or len(excluded_indices) != 5
+        or len(remaining_indices) != 14
+    ):
+        raise ArithmeticError("post-15.711 profile-index ledger changed")
 
     return {
         "proposition": "15.711",
@@ -155,6 +164,8 @@ def p17_residue_zero_uniform_mean_exclusion() -> dict[str, object]:
         "profile_count_before": int(previous["profile_count_after"]),
         "profiles_excluded_here": len(profiles),
         "profile_count_after": after,
+        "excluded_profile_indices_here": sorted(excluded_indices),
+        "remaining_profile_indices": remaining_indices,
         "remaining_pair_slack_histogram": histogram,
         "remaining_residue_pair_histogram": {"u0=7,u1=0": 9, "u0=8,u1=0": 5},
         "allocation_saturation_rows": allocation_rows,

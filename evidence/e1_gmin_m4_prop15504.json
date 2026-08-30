@@ -54,7 +54,7 @@
     "phi_F_imported": false,
     "note": "2-level C at p=5,7 is evenness plus |G/H|\u22643, not a name of the off value. p=13 1D kills the p-law. phi_F not imported."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false
 }

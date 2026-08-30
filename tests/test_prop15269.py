@@ -37,7 +37,7 @@ def test_wick_arithmetic():
 def test_predicates_open():
     assert residual_i_closed_via_269() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     h = hinge_status_269()
     assert h["fourier_support"] is True
     assert h["wick_le_half_p"] is True

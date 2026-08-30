@@ -34,7 +34,7 @@
     "c_eq_general": false,
     "note": "Numerators named on ++ and --N*. D is the ridge CSP / c_eq lattice, not a Gauss integer (15.330). p\u226511 open."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false,
   "LIVE_C": {

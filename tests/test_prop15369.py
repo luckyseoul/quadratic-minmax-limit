@@ -41,7 +41,7 @@ def test_floor_still_open():
 
 
 def test_flags_untouched():
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     assert gsum_disj_lb_proved_general() is False
     assert phi_F_ge_6_proved_general() is False
 

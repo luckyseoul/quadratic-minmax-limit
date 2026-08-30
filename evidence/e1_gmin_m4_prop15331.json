@@ -111,7 +111,7 @@
       "proved": false,
       "phi_F_ge_6": false,
       "rhat": false,
-      "e1": true,
+      "e1": false,
       "Hplus_named_in_p": false,
       "Q_tau_named_in_p": false,
       "den_Qpp_p7": 409,

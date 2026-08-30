@@ -55,7 +55,7 @@
       "Nr7": 5726,
       "den7": 409,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "N_r=|H+| at p=5,7 is a type-IFF, not a formula in p. c not pinned. Q_\u03c4 unnamed. phi_F not imported."
     }

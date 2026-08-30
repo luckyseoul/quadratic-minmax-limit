@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
-"""Prop. 15.708 -- exclude the p=17 pair-slack-twenty-four block.
+"""Prop. 15.708 -- exclude all 151 p=17 pair-slack-twenty-four profiles.
 
-The 54 profiles split into 45 rows with ``(u_0,u_1)=(0,8)`` and nine
+The 151 profiles split into 142 rows with ``(u_0,u_1)=(0,8)`` and nine
 rows with ``(u_0,u_1)=(8,8)``.  Quotient accounting retains a rigid
 phase-zero floor of weight zero in every row of the first block and
 at least eight rigid phase-one weight-two floors in every row.  The global
-Paley-sign identity of Proposition 15.706 therefore excludes all 45 rows.
+Paley-sign identity of Proposition 15.706 therefore excludes all 142 rows.
 
 For each of the remaining nine rows, comparing a rigid phase-zero weight-16
 floor with a rigid phase-one weight-two floor forces the infinity degree to
 be four.  The cell identities incident with the unique even fibre of that
 weight-16 direction then give a negative value for a nonnegative edge count.
-Thus all 54 rows are impossible without a solver or a new arc census.
+Thus all 151 rows are impossible without a solver or a new arc census.
 """
 from __future__ import annotations
 
@@ -33,20 +33,34 @@ PAIR_SLACK = 24
 
 def p17_slack_twenty_four_arithmetic_reduction() -> dict[str, object]:
     """Exclude 45 profiles and reduce the other nine to infinity degree four."""
+    census = p17_second_boundary_profile_census()
+    previous = p17_slack_twenty_exclusion()
+    previous_indices = set(int(index) for index in previous["remaining_profile_indices"])
     profiles = [
-        row
-        for row in p17_second_boundary_profile_census()["profiles"]
-        if int(row["pair_slack"]) == PAIR_SLACK
+        (index, census["profiles"][index])
+        for index in sorted(previous_indices)
+        if int(census["profiles"][index]["pair_slack"]) == PAIR_SLACK
     ]
-    residue_split = Counter((int(row["u0"]), int(row["u1"])) for row in profiles)
-    if len(profiles) != 54 or residue_split != {(0, 8): 45, (8, 8): 9}:
+    residue_split = Counter(
+        (int(row["u0"]), int(row["u1"])) for _index, row in profiles
+    )
+    if len(profiles) != 151 or residue_split != {(0, 8): 142, (8, 8): 9}:
         raise ArithmeticError("p=17 slack-twenty-four residue ledger changed")
+    undetermined_histogram = Counter(
+        sum(
+            int(row["phase_profiles_b"][phase].get(16, 0))
+            for phase in ("0", "1")
+        )
+        for _index, row in profiles
+    )
+    if undetermined_histogram != {0: 40, 1: 47, 2: 45, 3: 19}:
+        raise ArithmeticError("p=17 slack-twenty-four direction histogram changed")
 
     easy_rows = []
     hard_rows = []
     rigid_low_histogram: Counter[int] = Counter()
     hard_undetermined_histogram: Counter[int] = Counter()
-    for local_index, profile in enumerate(profiles):
+    for local_index, (census_index, profile) in enumerate(profiles):
         phase_zero = _rigid_b2_lower_bound(profile, 0)
         phase_one = _rigid_b2_lower_bound(profile, 1)
         if int(phase_one["rigid_b2_lower_bound"]) < 8:
@@ -57,6 +71,7 @@ def p17_slack_twenty_four_arithmetic_reduction() -> dict[str, object]:
         }
         row = {
             "profile_index_within_slack_twenty_four": local_index,
+            "census_index": census_index,
             "u0": int(profile["u0"]),
             "u1": int(profile["u1"]),
             "phase_profiles_b": profile["phase_profiles_b"],
@@ -87,9 +102,9 @@ def p17_slack_twenty_four_arithmetic_reduction() -> dict[str, object]:
             hard_rows.append(row)
 
     if (
-        len(easy_rows) != 45
+        len(easy_rows) != 142
         or dict(sorted(rigid_low_histogram.items()))
-        != {2: 2, 3: 6, 4: 18, 5: 17, 6: 2}
+        != {2: 3, 3: 40, 4: 59, 5: 40}
         or len(hard_rows) != 9
         or dict(sorted(hard_undetermined_histogram.items())) != {2: 3, 3: 6}
     ):
@@ -124,13 +139,21 @@ def p17_slack_twenty_four_arithmetic_reduction() -> dict[str, object]:
     ):
         raise ArithmeticError("p=17 slack-24 global-sign arithmetic changed")
 
-    previous = p17_slack_twenty_exclusion()
     histogram = dict(previous["remaining_pair_slack_histogram"])
-    if int(previous["profile_count_after"]) != 561 or histogram.get(PAIR_SLACK) != 54:
+    if int(previous["profile_count_after"]) != 1020 or histogram.get(PAIR_SLACK) != 151:
         raise ArithmeticError("pre-15.708 p=17 ledger changed")
-    histogram[PAIR_SLACK] = len(hard_rows)
-    after = int(previous["profile_count_after"]) - len(easy_rows)
-    if after != 516 or sum(histogram.values()) != after:
+    excluded_indices = {int(row["census_index"]) for row in easy_rows}
+    remaining_indices = sorted(previous_indices - excluded_indices)
+    histogram = dict(
+        sorted(
+            Counter(
+                int(census["profiles"][index]["pair_slack"])
+                for index in remaining_indices
+            ).items()
+        )
+    )
+    after = len(remaining_indices)
+    if after != 878 or histogram.get(PAIR_SLACK) != 9 or sum(histogram.values()) != after:
         raise ArithmeticError("post-arithmetic p=17 ledger changed")
 
     return {
@@ -140,11 +163,16 @@ def p17_slack_twenty_four_arithmetic_reduction() -> dict[str, object]:
         "pair_slack_treated": PAIR_SLACK,
         "profile_count_before": int(previous["profile_count_after"]),
         "slack_twenty_four_profiles_before": len(profiles),
+        "undetermined_direction_histogram_before": dict(
+            sorted(undetermined_histogram.items())
+        ),
         "profiles_excluded_by_global_sign_identity": len(easy_rows),
         "slack_twenty_four_profiles_after_arithmetic": len(hard_rows),
         "profile_count_after_arithmetic": after,
+        "excluded_profile_indices_by_global_sign": sorted(excluded_indices),
+        "remaining_profile_indices_after_arithmetic": remaining_indices,
         "remaining_pair_slack_histogram_after_arithmetic": histogram,
-        "residue_split": {"u0=0,u1=8": 45, "u0=8,u1=8": 9},
+        "residue_split": {"u0=0,u1=8": 142, "u0=8,u1=8": 9},
         "phase_one_rigid_b2_lower_bound": 8,
         "easy_rigid_b0_lower_bound_histogram": dict(
             sorted(rigid_low_histogram.items())
@@ -180,6 +208,7 @@ def p17_slack_twenty_four_arithmetic_reduction() -> dict[str, object]:
 def p17_slack_twenty_four_exclusion() -> dict[str, object]:
     """Exclude the nine I=4 rows by one rigid b=16 cross-cell identity."""
     reduction = p17_slack_twenty_four_arithmetic_reduction()
+    census = p17_second_boundary_profile_census()
     hard_rows = list(reduction["hard_rows"])
     rigid_b16_counts = []
     for row in hard_rows:
@@ -220,20 +249,31 @@ def p17_slack_twenty_four_exclusion() -> dict[str, object]:
     ):
         raise ArithmeticError("p=17 slack-24 exceptional-edge count changed")
 
-    previous_histogram = dict(
-        reduction["remaining_pair_slack_histogram_after_arithmetic"]
+    arithmetic_indices = set(
+        int(index) for index in reduction["remaining_profile_indices_after_arithmetic"]
     )
-    if previous_histogram.get(PAIR_SLACK) != 9:
+    hard_indices = {int(row["census_index"]) for row in hard_rows}
+    if not hard_indices <= arithmetic_indices or len(hard_indices) != 9:
+        raise ArithmeticError("p=17 slack-24 hard index ledger changed")
+    remaining_indices = sorted(arithmetic_indices - hard_indices)
+    remaining_histogram = dict(
+        sorted(
+            Counter(
+                int(census["profiles"][index]["pair_slack"])
+                for index in remaining_indices
+            ).items()
+        )
+    )
+    if PAIR_SLACK in remaining_histogram:
         raise ArithmeticError("p=17 slack-24 hard ledger changed")
-    del previous_histogram[PAIR_SLACK]
     before = int(reduction["profile_count_before"])
     excluded = int(reduction["slack_twenty_four_profiles_before"])
-    after = before - excluded
+    after = len(remaining_indices)
     if (
-        before != 561
-        or excluded != 54
-        or after != 507
-        or sum(previous_histogram.values()) != after
+        before != 1020
+        or excluded != 151
+        or after != 869
+        or sum(remaining_histogram.values()) != after
     ):
         raise ArithmeticError("post-15.708 p=17 ledger changed")
 
@@ -251,7 +291,12 @@ def p17_slack_twenty_four_exclusion() -> dict[str, object]:
         "profiles_excluded_here": excluded,
         "slack_twenty_four_profiles_after": 0,
         "profile_count_after": after,
-        "remaining_pair_slack_histogram": previous_histogram,
+        "excluded_profile_indices_here": sorted(
+            set(int(index) for index in reduction["excluded_profile_indices_by_global_sign"])
+            | hard_indices
+        ),
+        "remaining_profile_indices": remaining_indices,
+        "remaining_pair_slack_histogram": remaining_histogram,
         "arithmetic_reduction": reduction,
         "hard_rigid_phase_zero_b16_lower_bounds": rigid_b16_counts,
         "unique_even_fibre_certificate": {

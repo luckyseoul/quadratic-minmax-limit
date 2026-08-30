@@ -59,7 +59,8 @@ PROVED Max+-free Fraction (any conference with E_±[f_e]=±1/p, odd scores)
      (15.216 via 15.249 cost_D<2−α on sc=ker(Gsum), from 15.207 / 15.272).
      Imported, not re-proved.  ∎
 
-  G. Leftover (c>0, not the dual-eq slice) still writes Φ(H)≥Φ−2.
+  G. Leftover (c>0, not the dual-eq slice) is the unresolved obstruction to
+     writing Φ(H)≥Φ−2.
      After (C)(D)(F) the only remaining multi-level bad cases have either
         (i)  a=thr and E_−[R²]>0  (tail mean −5, not concentrated at −5), or
         (ii) 1/p < a < thr        (leftover f_e=−1 on S≤−3).
@@ -68,30 +69,21 @@ PROVED Max+-free Fraction (any conference with E_±[f_e]=±1/p, odd scores)
 
      Subcase (i).  {S=−1}={f_e=−1} is the pair-slice (1−f_e)/2.  The
      Aut_e-average x̄ of x=1_G lies in [0,1]^E, x̄_e=0, 1ᵀx̄=k, and
-     F_+ x̄=3−2f_e (RHS Aut_e-invariant).  Pairing minimum ⇒
-     E_−[S f_e]=3/p−2 ⇒ the Aut_e-invariant pair-span function F_− x̄,
-     which is a function of f_e alone (orbit sums of wedges / far classes
-     are Aut_e-invariant, hence functions of the two endpoints of e, hence
-     of {1,f_e} after odd moments vanish, 15.50 / 15.189), equals −3−2f_e.
-     Thus x̄ is a dual-eq box vector (15.182: κ_e=2−α, box, 1ᵀκ=0,
-     F_±κ=0).  Dual-eq empty (F) forbids it.  ∎
+     F_+ x̄=3−2f_e.  Pairing minimum fixes only the projection of
+     g:=F_−x̄ onto span{1,f_e}: since E_−[g]=−3+2/p and
+     E_−[g f_e]=−2+3/p,
+        g = −3−2f_e+h,   E_−[h]=E_−[h f_e]=0.
+     Aut_e-invariance does **not** force h=0: split star/far or cross-ratio
+     orbit sums give further invariant functions.  Dual-eq empty (F) kills
+     only h=0, not this whole subcase.
 
      Subcase (ii).  Leftover L=thr−a>0 sits on S≤−3.  The same Aut_e
-     average still satisfies F_+ x̄=3−2f_e, x̄∈[0,1]^E, x̄_e=0, 1ᵀx̄=k.
-     F_− x̄=α+β f_e with β=(p²γ−k)/(p²−1) and γ=E_−[S f_e]>3/p−2, so
-     β>−2.  The two evaluation identities (f_e=±1) plus the proved
-     pointwise star / far sums
-        ∑_{wedges of e} f = −2p−2f_e,   ∑_{far of e} f = −Φ+2p+f_e
-     (Max−; 15.51.3 twin) force the Aut_e-invariant weights (μ_star, μ_far)
-     of a *single* star orbit and a *single* far-orbit collapse to
-        μ_far = −2(2p−3)/(p(p²−1)) < 0   (p≥5).
-     An average of 0-1 indicators cannot have a negative orbit weight.
-     With several far orbits the same linear combination of orbit-sums
-     must still reproduce 3−2f_e on Max+ and α+β f_e on Max− with β>−2;
-     subtracting the Max+ identity (which *does* admit a unique 2-orbit
-     solution, and that solution already has μ_far<0) from the Max−
-     identity leaves a strictly positive multiple of (β+2) on the far
-     side, which makes the far weight *more* negative.  Impossible.  ∎
+     average satisfies F_+ x̄=3−2f_e, x̄∈[0,1]^E, x̄_e=0, 1ᵀx̄=k.
+     If γ=E_−[S f_e]>3/p−2, the projection of F_−x̄ is
+     α+βf_e with β=(p²γ−k)/(p²−1)>−2, but again there may
+     be an orthogonal Aut_e-invariant remainder h.  The negative far-weight
+     calculation below is therefore a valid exclusion only for the collapsed
+     two-orbit/coarse families; it is not an exclusion of all split-far h.
 
      The 2-orbit Aut_e collapse is empty (μ_far<0; one weight cannot
      realise two slopes).  Paley Aut_e has **two** star orbits (third
@@ -194,7 +186,7 @@ PROVED Max+-free Fraction (any conference with E_±[f_e]=±1/p, odd scores)
      p≥7, but not at p=5; even-δ = μ−μ_part is the 15.268 leftover.
      |μ|≤maj is FALSE at p=7: 144 of 864 |κ|=1 through-e 4-sets
      have |μ|>maj (worst μ=109/2863>17/539=maj at φ=−2(p−2)).
-     |μ|≤|L| is the sufficient μ-bound (L>T); |μ|≤|T| is *not*
+     |μ|≤|L| is the sufficient μ-bound on |κ|=1 (L>T); |μ|≤|T| is *not*
      (G=T ⇒ 3A+B=0).  Census |μ|≤|L| at p=5 (3/65<3/50) and
      p=7 (109/2863<5/98).  No Max+-free general proof; no
      counterexample to |μ|≤|L|.  p=5 finite (from C, Max±=±5
@@ -217,7 +209,8 @@ PREDICATES
   type_I_wick_six_type_3ab_positive() = True
   type_I_aut_e_3AB_sign_identities_ok() = True
   type_I_p5_through_e_3AB_positive() = True  (finite, from C)
-  type_I_aut_e_3AB_positive_general() = False  (g_min>T open; |μ|≤|L| open; |μ|≤maj false)
+  type_I_aut_e_3AB_positive_general() = False  (|κ|=1 g_min>T open;
+    |κ|=3 signed (μ,ν) remainder open; |μ|≤maj false)
   type_I_multilevel_bad_case_ND_closed() = False  (3A+B>0 open)
   gsum_disj_lb_proved_general stays False
   type_I_k_3p_minus_2_closed_general is *not* rewired here (15.170)
@@ -2951,10 +2944,12 @@ def type_I_aut_e_3AB_positive_general() -> bool:
     """
     3A+B>0 on every Aut_e far class, all primes p≥5.
 
-    False: equivalent to g_min>T on |κ|=1 through e (plus the |κ|=3
-    one-sided form).  |μ|≤|L| would close it (L>T) but is not proved
-    Max+-free for all p.  |μ|≤maj is false at p=7.  |μ|≤|T| is not a
-    closing bound (G=T ⇒ 3A+B=0).  p=5 is a finite from-C theorem.
+    False: this requires both g_min>T on |κ|=1 through e and the independent
+    |κ|=3 one-sided form.  |μ|≤|L| would close only the |κ|=1 part
+    (L>T); it is not proved Max+-free for all p.  The |κ|=3 particular/Wick
+    term is safe, but its even/odd δ remainder is open.  |μ|≤maj is false
+    at p=7.  |μ|≤|T| is not a closing bound (G=T ⇒ 3A+B=0).  p=5 is
+    a finite from-C theorem covering both classes.
     """
     return False
 
@@ -3110,7 +3105,7 @@ def theorem_G_leftover(primes: list[int] | None = None) -> dict:
         "hole": (
             "Y≤−3 and μ≥0 force a far Aut_e class with 3A+B≤0.  On "
             "|κ|=1 this is G>T (15.268 ν=0 + J).  |μ|≤|L| would "
-            "close it (L>T) but is not proved for all p; |μ|≤|T| is "
+            "close that half (L>T) but is not proved for all p; |μ|≤|T| is "
             "not a closing bound; |μ|≤maj is false at p=7 "
             "(109/2863>17/539).  Census |μ|≤|L| at p=5,7.  p=5 is a "
             "finite from-C theorem (276/276).  |κ|=3 particular/Wick "
@@ -3120,9 +3115,11 @@ def theorem_G_leftover(primes: list[int] | None = None) -> dict:
             "2-orbit / equal-star / μ_⊠=0 slices empty.  Whole μ_far≥0 "
             "3-weight family is bad-case empty (H).  Coarse 3-type "
             "collapses to H (I).  3A+B conversion / Wick 6-type / Q_χ "
-            "are Max+-free (J).  K reduces the Aut_e sign to g_min>T.  "
-            "|μ|≤|L| suffices and holds at p=5,7; |μ|≤|T| does not "
-            "close; |μ|≤maj false at p=7.  Sign stays open."
+            "are Max+-free (J).  K reduces the |κ|=1 sign to g_min>T and "
+            "the |κ|=3 sign to a separate signed (μ,ν) form.  |μ|≤|L| "
+            "suffices only for |κ|=1 and holds there at p=5,7; |μ|≤|T| "
+            "does not close; |μ|≤maj false at p=7.  The |κ|=3 δ remainder "
+            "and the general sign stay open."
         ),
     }
 
@@ -3177,10 +3174,13 @@ def type_I_multilevel_bad_case_ND_closed() -> bool:
     """
     Multi-level Type I bad case empty (hence Φ(H)≥Φ−2) for all primes p≥5.
 
-    False: 3A+B>0 is not proved for a general Aut_e far class
-    (⇔ G>T on |κ|=1 through e).  |μ|≤|L| would suffice but is
-    not proved for all p; |μ|≤|T| is not a closing μ-bound;
-    |μ|≤maj is false at p=7.  p=5 is a finite from-C theorem.
+    False: 3A+B>0 is not proved for a general Aut_e far class.  On
+    |κ|=1 this is G>T through e; |μ|≤|L| would close that half but is
+    not proved for all p.  On |κ|=3 an independent signed (μ,ν) form is
+    required; its particular/Wick term is safe but its δ remainder is open.
+    Thus no bound stated only on |κ|=1 closes Type I.  |μ|≤|T| is not a
+    closing μ-bound; |μ|≤maj is false at p=7.  p=5 is a finite from-C
+    theorem covering both classes.
     Wick particular, the conversion, through-e 15.260 moments,
     and the 4-point pairing *are* Max+-free (J, K).  The μ_far=0
     slice, the whole μ_far≥0 3-weight family, and the coarse

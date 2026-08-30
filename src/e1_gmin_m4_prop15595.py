@@ -5,13 +5,13 @@ and which it provably cannot.
 
 Does **not** flip type_I / phi_F_ge_6 / residual_ii / e1 / L. Soft-close forbidden.
 
-SCOPE NOTE (read first).  `e1_closed_general()` returns True, but the repo's
-own rule (e1_main_chain_status) records this as "a separate wiring fact":
-the public claim is gated on FOUR GOAL units —
-    phi_F_ge_6 (leftover 1) · residual_ii_k_ge_4p (leftover 2)
-    · type_I_multilevel (leftover 3) · lemma_D
-of which lemma_D is already True and the other three are False.  Nothing
-below changes any of that; this proposition only maps the dependencies.
+SCOPE NOTE (read first).  The corrected ``e1_closed_general()`` is False.
+The public claim is gated on four current GOAL units: required bi-tight
+levels 2/3 (True by 15.720), residual_ii_k_ge_4p (False),
+type_I_multilevel (False), and lemma_D (True).  The delta hierarchy below
+belongs to an older spectral route; 15.720 bypassed its ``leftover 1`` as an
+acceptance gate.  This proposition remains useful dependency information but
+does not identify the current theorem blockers.
 
 SETUP (15.594):  δ = m₄⁺ − m₄_part ∈ ker(4pI − T), V = 24‖δ‖².
 
@@ -45,12 +45,12 @@ PROVED (negative) — leftover 2 does NOT reduce to ‖δ‖²
      diverges.  **Do not attempt leftover 2 through an L² bound on δ.**
      Leftover 2 remains genuinely separate (Max−, Walsh/minus-slice route).
 
-CONSEQUENCE
-  D. Of the four GOAL units: lemma_D is True; leftovers 1 and 3 share one
-     open inequality; leftover 2 is independent of it.  The E(1) leftover
-     program therefore has exactly TWO open roots, not three:
-        (R1)  ‖P_{E_{4p}} m₄⁺‖² ≤ n/12      [closes leftovers 1 and 3]
-        (R2)  the Max− minus-slice/Walsh statement  [leftover 2 alone]
+HISTORICAL CONSEQUENCE
+  D. In the retired spectral formulation, leftovers 1 and 3 shared the
+     delta inequality while leftover 2 was independent.  That historical
+     route had two roots.  It is not the current acceptance ledger: after
+     15.720, the two live roots are the multi-level Type-I gate and the
+     non-Walsh residual-(ii) gate at even k>=4p.
 
 Writes evidence/e1_gmin_m4_prop15595.json
 """
@@ -144,19 +144,24 @@ def main():
     out["measured_delta_sq_per_n"] = {5: 0.9089, 7: 0.2085, 11: 0.01941}
     out["closes_with_n_over_12"] = {
         str(k): v for k, v in closes_with(Fraction(1, 12)).items()}
-    out["open_roots"] = [
-        "R1: ||P_{E_4p} m4+||^2 <= n/12  -> closes leftovers 1 and 3",
-        "R2: Max- minus-slice/Walsh       -> leftover 2 alone",
+    out["historical_delta_route_roots"] = [
+        "R1 (retired): ||P_{E_4p} m4+||^2 <= n/12",
+        "R2 (still related to live residual ii): Max- minus-slice/Walsh",
     ]
-    out["scope_note"] = ("e1_closed_general()=True is a separate wiring fact "
-                         "(e1_main_chain_status); the gate is the four GOAL "
-                         "units, three of which are False.")
+    out["current_open_gates"] = [
+        "non-Walsh residual (ii), even k>=4p",
+        "multi-level Type I",
+    ]
+    out["scope_note"] = (
+        "e1_closed_general()=False and agrees with the current four-unit gate; "
+        "the delta inequality is no longer an acceptance unit after 15.720."
+    )
     out["flags_not_flipped"] = ["type_I", "phi_F_ge_6", "residual_ii", "e1", "L"]
     out["L_status"] = "OPEN"
     out["seconds"] = round(time.time() - t0, 1)
     (ROOT / "evidence" / "e1_gmin_m4_prop15595.json").write_text(
         json.dumps(out, indent=2, default=str) + "\n")
-    print("Prop 15.595  delta-hierarchy; two open roots, not three")
+    print("Prop 15.595  historical delta hierarchy; current gates unchanged")
     print(f"  hierarchy r1 < r3 < residual_i at all primes 5..47: {ordered_all}")
     for p in (5, 11, 23, 47):
         h = out["hierarchy"][p]

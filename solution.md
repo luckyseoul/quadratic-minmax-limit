@@ -72,7 +72,7 @@ remaining `z=7` pointed systems and identify their projected high-catalog
 semigroups through grade six, but exclude no source boundary.  All 56 actual
 `z=7` line boundaries in two orbits remain open.
 
-The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-08-30; through Proposition 15.721).** \(L\) is OPEN. Details: `evidence/share/denseness_path_package.md` § Caveats.
+The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-08-30; through audit of Proposition 15.725).** \(L\) is OPEN. Details: `evidence/share/denseness_path_package.md` § Caveats.
 
 > **Reader note.** Soft-close of \(L=\tfrac12\) via scheme-min Gsum was **retracted** 2026-08-06. Aut-Schur remains false. Historical “\(L\) OPEN” remarks in Props 15.20–15.171 refer to those older routes.
 
@@ -5190,7 +5190,14 @@ Continues 15.169. **OPEN for general primes \(p\ge5\).** Structure and condition
 
 6. **Consequence (honest).** residual (i) **OPEN** until disj Gsum LB is proved Max+-free (or an alternate residual-(i) proof). `type_I_k_3p_minus_2_closed_general()=False`. Also \(\mathrm{ES}_2=(13p-12)/p<k\) (integrality seed, independent).
 
-**Addendum (2026-08-15).** The Gsum path above remains unused (`gsum_disj_lb_proved_general=False`). Type I is closed by the **dual-eq** path: 15.272 \(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\Rightarrow\ker=\mathrm{sc}\) (15.207) \(\Rightarrow\mathrm{cost}_D<2-\alpha\) (15.249) \(\Rightarrow\) dual-eq empty (15.216). See Prop 15.272 and `evidence/share/denseness_path_package.md`.
+**Addendum (corrected 2026-08-30).** The Gsum path above remains unused
+(`gsum_disj_lb_proved_general=False`). The **historical two-level Type-I
+residual-(i) slice** is closed by the dual-eq path: 15.272
+\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\Rightarrow\ker=\mathrm{sc}\)
+(15.207) \(\Rightarrow\mathrm{cost}_D<2-\alpha\) (15.249)
+\(\Rightarrow\) dual-eq empty (15.216). This does not close the current
+multi-level Type-I gate. See Prop 15.272 and
+`evidence/share/denseness_path_package.md`.
 
 Evidence: `src/e1_gmin_m4_prop15170.py`, `evidence/e1_gmin_m4_prop15170.json`,
 `tests/test_prop15170.py`, `evidence/share/denseness_path_package.md`.
@@ -5219,7 +5226,13 @@ Continues 15.168–170. **OPEN for general primes \(p\ge5\).** Structure (parity
 
 7. **Consequence (honest).** Residual (ii) **OPEN**. With residual (i) open and Gsum hinge open: **E1_closed_general=false**, **L OPEN** (no soft-close). Denseness cannot force \(L=\tfrac12\) without E(1).
 
-**Addendum (2026-08-13/15).** Residual (ii) later closed by ND (15.179 affine + 15.236 (ii-b) + 15.237 (ii-a)); exhaustiveness 15.193 stays False and is not required. Residual (i) / \(L\) close by 15.272, not Gsum. Path-C / \(16N\) remain optional open.
+**Addendum (corrected 2026-08-30).** Propositions 15.179, 15.236, and
+15.237 close only the bounded even range through \(4p-2\). They do not close
+global residual (ii): the non-Walsh multi-level range at even \(k\ge4p\)
+remains open, so `residual_ii_full_closed=False`. Proposition 15.272 later
+closes the historical two-level Type-I/residual-(i) slice, not multi-level
+Type I, E(1), or \(L\). The Gsum route remains unused; Path-C / \(16N\)
+remain optional open.
 
 Evidence: `src/e1_gmin_m4_prop15171.py`, `evidence/e1_gmin_m4_prop15171.json`,
 `tests/test_prop15171.py`, `evidence/share/denseness_path_package.md`.
@@ -7427,48 +7440,41 @@ Proposition 15.642 gives
 
 contradicting the mean four or six. Combined with 15.675, this excludes the
 first even all-finite boundary size above (3(p-1)/4) for every prime
-(p\ge19). The additional (p=17,u_0=0) row is handled separately by 15.678.
+(p\ge19). The attempted treatment of the additional (p=17,u_0=0) row in
+15.678 is retracted; Proposition 15.721 later excludes that boundary by an
+independent signed-transport argument.
 
 Evidence: `src/e1_gmin_m4_prop15677.py`,
 `evidence/e1_gmin_m4_prop15677.json`,
 `evidence/NOTE_2026-08-28_first_all_finite_survivor_complete_from_p19.md`,
 and `tests/test_prop15677.py`.
 
-## Proposition 15.678 — exceptional p=17 first survivor is impossible
+## Proposition 15.678 — OPEN_RETRACTED_REDUCTION at the exceptional p=17 row
 
-At (p=17,s=14), exact same-type floor/mean enumeration leaves only phase-one
-residue (u_1=8). In phase zero, the six-unit lift floor excludes (u_0=2),
-the coefficient (\ell_1) bound excludes (u_0=3), and every residue at least
-four exceeds the pair budget. For (u_0=0), pair-budget slack is divisible by
-four because a line of occupancy (n) contributes
-
-\[
- 2\left({n\choose2}-\lfloor n/2\rfloor\right).
-\]
-
-Exactly two profiles remain. Both attain pair equality, so the fourteen
-affine points form an arc, and both have global secant distribution
+The former statement that exactly two profiles survive at (p=17,s=14) is
+false. After retaining the genuine floor-plus-two equality cells, the exact
+census has 108 compatible profiles, including 47 arc profiles, with pair-slack
+histogram
 
 \[
- t=7:6,\qquad t=6:8,\qquad t=1:1,\qquad t=0:3.
+ \{0:47,\ 4:32,\ 8:18,\ 12:8,\ 16:3\}.
 \]
 
-Let (D_1,D_2,D_3) be the three undetermined points on the line at infinity.
-Adjoining any two to the 14-arc gives a 16-arc in (PG(2,17)). Sticker's
-exhaustive classification has exactly one PGL class of 16-arcs. Deleting two
-points from a conic gives a representative, so every 16-arc is contained in
-a conic (C). Thus (D_1,D_2\in C), while (D_3\notin C), and (C) has four
-points outside the original 14-arc.
+The local exclusions of (u_0=2), (u_0=3), and the later over-budget residues
+remain valid. The unique-16-arc/conic argument from the former proof also
+remains valid, but applies to only the fourteen arc profiles having the three
+required undetermined directions. It therefore excludes fourteen profiles
+and leaves 94 compatible profiles uncovered; it does not prove the historical
+endpoint theorem.
 
-An external point lies on eight conic secants and an internal point on nine.
-Deleting four conic points destroys at most four secants through a fixed
-point. Hence (D_3) lies on at least four secants of the 14-arc, contradicting
-that it is undetermined. This closes the exceptional endpoint and, with
-15.675/15.677, the first survivor for every prime (p\ge17). Later
-all-finite sizes remain open.
+Accordingly 15.678 has status **OPEN_RETRACTED_REDUCTION**. The failed
+two-profile payload is retained as historical evidence rather than used as a
+theorem certificate. Proposition 15.721 independently supersedes this
+all-finite boundary as a live gate and excludes it by signed transport.
 
 Evidence: `src/e1_gmin_m4_prop15678.py`,
 `evidence/e1_gmin_m4_prop15678.json`,
+`evidence/e1_gmin_m4_prop15678.historical_retracted.json`,
 `evidence/NOTE_2026-08-28_p17_first_all_finite_survivor_exclusion.md`, and
 `tests/test_prop15678.py`.
 
@@ -7845,19 +7851,19 @@ Evidence: `src/e1_gmin_m4_prop15683.py`,
 `evidence/NOTE_2026-08-28_p41_next_all_finite_endpoint.md`, and
 `tests/test_prop15683.py`.
 
-## Proposition 15.684 — the p=23 next endpoint reduces to 203 exact profiles
+## Proposition 15.684 — OPEN_RETRACTED_REDUCTION at the p=23 next endpoint
 
-At (p=23,s=20), exact type arithmetic leaves only (u_1=11) in phase one
-and
+At (p=23,s=20), the corrected type arithmetic leaves only (u_1=11) in phase
+one and
 
 \[
- u_0\in\{0,2,3,4,5,6,8\}                            \tag{15.684.1}
+ u_0\in\{0,2,3,4,5,6,8,9\}.                         \tag{15.684.1}
 \]
 
-in phase zero. A positive residue forces a quotient-zero direction and a
-nonzero nonnegative integer-valued quadratic (B) on (J(23,12)), with scaled
-mass (c=4p\mathbb E B=2u_0). Proposition 15.681 gives (c\ge12), excluding
-(u_0=2,3,4,5). We now exclude (c=12,16).
+For (u_0\in\{2,3,4,5,6,8\}), a positive residue forces a quotient-zero
+direction and a nonzero nonnegative integer-valued quadratic (B) on
+(J(23,12)), with scaled mass (c=4p\mathbb E B=2u_0). Proposition 15.681 gives
+(c\ge12), excluding (u_0=2,3,4,5). We now exclude (c=12,16).
 
 Put (H=\max B) and choose a maximum point (X). Stabilizer averaging gives
 (c\ge4H), while the paired 11-cube through (X) has mean
@@ -7909,10 +7915,14 @@ B(X-i_1-i_2+j_1+j_2)
  =\frac{4\{3(b_{i_1j_1}+b_{i_2j_2})-10\}}{15}.       \tag{15.684.4}
 \]
 
-This cannot be an integer, already modulo three. Thus every positive
-residue in (15.684.1) is impossible.
+This cannot be an integer, already modulo three. Thus the treated positive
+residues (u_0=2,3,4,5,6,8) are impossible. The corrected floor-plus-two
+classifier restores (u_0=9), of scaled mass (c=18), together with an explicit
+slack-zero profile. Neither the (c\ge12) bound nor the special (c=12,16)
+argument excludes this row. The old assertion that only residue zero remains
+is therefore false.
 
-For (u_0=0), completion-bounded exact enumeration gives 426 phase-zero
+Conditionally on (u_0=0), completion-bounded exact enumeration gives 426 phase-zero
 rows, 11 phase-one rows, 1,247 compatible phase-labelled profiles, and 485
 global shapes. Their pair-slack profile counts are
 
@@ -7951,17 +7961,20 @@ that conic, off-conic secant counting gives
 Consequently all 264 slack-four and 189 slack-eight profiles are excluded.
 One undetermined direction closes 135 of 136 slack-twelve profiles, and
 two close 93 of 94 slack-sixteen profiles. In total, 1,044 of the 1,247
-residue-zero profiles are impossible. Exactly 203 arithmetic profiles
-remain, with slack histogram
+residue-zero profiles are impossible. Exactly 203 arithmetic profiles remain
+inside this conditional residue-zero subledger, with slack histogram
 
 \[
 \{12:1,16:1,20:68,24:49,28:35,32:21,36:13,40:7,
 44:4,48:1,52:1,56:1,60:1\}.                         \tag{15.684.7}
 \]
 
-This is a strict reduction, not a closure of (p=23,s=20). The endpoints
-(p=17,19,23), later all-finite sizes, strict infinity-plus-(p), residual
-(ii), R1, global QVAR, Type I, and the limit remain open.
+Because the restored (u_0=9) branch is untouched, the claimed whole-endpoint
+reduction is retracted: 15.684 has status **OPEN_RETRACTED_REDUCTION**. Its
+residue-zero census and the displayed 1,247-to-203 reduction remain valid only
+as a conditional subledger. Proposition 15.721 independently supersedes and
+excludes this all-finite boundary as a live gate. Strict infinity-plus-(p),
+residual (ii), R1, global QVAR, Type I, and the limit remain open.
 
 External inputs: K. Coolsaet and H. Sticker, *A full classification of the
 complete k-arcs of PG(2,23) and PG(2,25)*, J. Combin. Des. **17** (2009),
@@ -7970,12 +7983,14 @@ complete k-arcs of PG(2,23) and PG(2,25)*, J. Combin. Des. **17** (2009),
 
 Evidence: `src/e1_gmin_m4_prop15684.py`,
 `evidence/e1_gmin_m4_prop15684.json`,
+`evidence/e1_gmin_m4_prop15684.historical_retracted.json`,
 `evidence/NOTE_2026-08-28_p23_low_mass_conic_reduction.md`, and
 `tests/test_prop15684.py`.
 
 ## Proposition 15.685 — the unique p=23 slack-twelve profile is impossible
 
-Among the 203 profiles left by Proposition 15.684, the unique row of pair
+Within the conditional 203-profile residue-zero subledger retained from
+Proposition 15.684, the unique row of pair
 slack twelve is
 
 \[
@@ -8038,17 +8053,18 @@ because the classification has exactly five classes, exhaustive. No class
 has more than one point with (\mu=1), contradicting the three required by
 (15.685.3).
 
-The slack-twelve profile is impossible. The exact (p=23) remainder decreases
-from 203 to 202 profiles:
+The slack-twelve profile is impossible. The conditional residue-zero
+remainder decreases from 203 to 202 profiles:
 
 \[
 \{16:1,20:68,24:49,28:35,32:21,36:13,40:7,
 44:4,48:1,52:1,56:1,60:1\}.                        \tag{15.685.5}
 \]
 
-This does not close the endpoint. The primes (p=17,19,23), later
-all-finite sizes, strict infinity-plus-(p), residual (ii), R1, global QVAR,
-Type I, and the limit remain open.
+This does not treat the restored (u_0=9) branch. Proposition 15.721, rather
+than this historical subledger, independently excludes the all-finite
+boundary as a live gate. Strict infinity-plus-(p), residual (ii), R1,
+global QVAR, Type I, and the limit remain open.
 
 External input: K. Coolsaet and H. Sticker, *A full classification of the
 complete k-arcs of PG(2,23) and PG(2,25)*, J. Combin. Des. **17** (2009),
@@ -8061,7 +8077,8 @@ Evidence: `src/e1_gmin_m4_prop15685.py`,
 
 ## Proposition 15.686 — the unique p=23 slack-sixteen profile is impossible
 
-The unique slack-sixteen row left by 15.684--15.685 is
+The unique slack-sixteen row left within the conditional residue-zero
+subledger of 15.684--15.685 is
 
 \[
 7[b=0]+[b=2]+3[b=18]+[b=20],\quad D_0=164,
@@ -8106,17 +8123,17 @@ Equality forces (\mu_K(d)=1) for all four points. But the exhaustive five
 complete-17-arc rows (15.685.4) have respectively (0,0,1,0,0) outside
 points of multiplicity one. No class supplies four, a contradiction.
 
-The slack-sixteen profile is impossible. Exactly 201 (p=23) arithmetic
-profiles remain, all of slack at least 20:
+The slack-sixteen profile is impossible. Exactly 201 conditional
+residue-zero arithmetic profiles remain, all of slack at least 20:
 
 \[
 \{20:68,24:49,28:35,32:21,36:13,40:7,
 44:4,48:1,52:1,56:1,60:1\}.                        \tag{15.686.4}
 \]
 
-The endpoint, the primes (p=17,19), later all-finite sizes, strict
-infinity-plus-(p), residual (ii), R1, global QVAR, Type I, and the limit
-remain open.
+The restored (u_0=9) branch is unaffected. Proposition 15.721 independently
+excludes the all-finite boundary as a live gate; strict infinity-plus-(p),
+residual (ii), R1, global QVAR, Type I, and the limit remain open.
 
 Evidence: `src/e1_gmin_m4_prop15686.py`,
 `evidence/e1_gmin_m4_prop15686.json`,
@@ -8125,7 +8142,8 @@ Evidence: `src/e1_gmin_m4_prop15686.py`,
 
 ## Proposition 15.687 — every p=23 slack-twenty profile is impossible
 
-The 68 exact profiles of pair slack twenty have undetermined-direction
+The 68 exact residue-zero profiles of pair slack twenty have
+undetermined-direction
 histogram
 
 \[
@@ -8179,17 +8197,17 @@ so all five deleted points have multiplicity one outside (K). The exhaustive
 rows (15.685.4) show that a complete 17-arc has at most one such point.
 This contradiction excludes the final two profiles.
 
-All 68 slack-twenty profiles are impossible. The exact (p=23) remainder is
-133 profiles, all of slack at least 24:
+All 68 slack-twenty profiles in this subledger are impossible. The
+conditional residue-zero remainder is 133 profiles, all of slack at least 24:
 
 \[
 \{24:49,28:35,32:21,36:13,40:7,
 44:4,48:1,52:1,56:1,60:1\}.                        \tag{15.687.4}
 \]
 
-The endpoint, the primes (p=17,19), later all-finite sizes, strict
-infinity-plus-(p), residual (ii), R1, global QVAR, Type I, and the limit
-remain open.
+The restored (u_0=9) branch is unaffected. Proposition 15.721 independently
+excludes the all-finite boundary as a live gate; strict infinity-plus-(p),
+residual (ii), R1, global QVAR, Type I, and the limit remain open.
 
 Evidence: `src/e1_gmin_m4_prop15687.py`,
 `evidence/e1_gmin_m4_prop15687.json`,
@@ -8857,12 +8875,466 @@ The boundary-close role of the all-finite ladder in Propositions
 is at most \(3(p-1)/4+2\le p-3\) for \(p\ge17\). The second is at most
 \(3(p-1)/4+4\le p-3\) for \(p\ge29\); the exceptional pairs are
 \((p,d)=(17,14),(17,16),(19,14),(19,16),(23,18),(23,20)\), all covered by
-(15.721.5). This does not invalidate their internal finite-geometry or
-integral-lift lemmas. Proposition 15.676 remains load-bearing at the new
-first shell, and Propositions 15.690--15.691 remain independent optional
+(15.721.5). It does not restore the retracted conclusions of 15.678 or
+15.684; only their explicitly retained sublemmas and conditional subledgers
+survive. The corrected 15.700--15.712 replay is
+
+\[
+2503\to2219\to1744\to1481\to1368\to1228\to1215\to1213
+\to1020\to869\to321\to19\to14\to0.
+\]
+
+Here 15.705 is partial: it excludes only thirteen historical Orbiter targets
+and leaves 74 slack-sixteen rows, all removed later by 15.709. Proposition
+15.676 remains load-bearing at the new first shell, and Propositions
+15.690--15.691 remain independent optional
 no-go results. Small-prime remainders, strict deficit at \(|D|=p+1\),
 residual (ii), multi-level Type I, and the limit remain open. \(\square\)
 
 Evidence: `src/e1_gmin_m4_prop15721.py`,
 `tests/test_prop15721.py`, and
 `evidence/e1_gmin_m4_prop15721.json`.
+
+## Proposition 15.722 — exact phase cocycle and multi-chart p+1 reduction
+
+Let (D=\partial H), (|D|=P=p+1), and let
+(g(z)=(az+b)/(cz+d)in\operatorname{PSL}(2,p^2)). The signed Paley
+multiplier is
+
+Away from the pole, the multiplier is
+
+\[
+ \delta_g(x)=\chi(cx+d).
+\]
+
+If \(c\ne0\), its value at the pole and at infinity is \(\chi(c)\).
+If \(c=0\), there is no pole and its value on every finite point and at
+infinity is \(\chi(d)=\chi(a)\); the last equality follows because
+\(ad\) is a square.  This affine case split is necessary: substituting
+\(c=0\) into \(\chi(c)\) would give zero rather than a switching sign.
+Every transported edge receives its two endpoint multipliers. Even vertex
+degrees cancel in their product and the odd degrees leave exactly (D), so
+
+\[
+ \boxed{c_{gH}=c_H\prod_{x\in D}\delta_g(x).}       \tag{15.722.1}
+\]
+
+If (D) is all finite and (f(X)=\prod_{x\in D}(X-x)), inversion about
+(r) gives
+
+\[
+ c_r=c_H\chi(f'(r))\quad(r\in D),\qquad
+ c_r=c_H\chi(f(r))\quad(r\notin D).                \tag{15.722.2}
+\]
+
+The Vandermonde identity and (chi_{p^2}(-1)=1) imply
+
+\[
+ \prod_{r\in D}\chi(f'(r))=1.                     \tag{15.722.3}
+\]
+
+Thus the boundary-chart phases are coupled and have an even number of
+negative transports.
+
+Now send an outside point to infinity and write (b_d) for the odd-fibre
+profile of the resulting (P) affine points. If a line has occupancy (n),
+the exact normalized pair slack is
+
+\[
+ R={\sum_d b_d-P\over4}
+ =\sum_{n=2r}r(r-1)+\sum_{n=2r+1}r^2.              \tag{15.722.4}
+\]
+
+Hence (R=0) is a (P)-arc. The case (R=1) would have exactly one
+trisecant and no other line of occupancy at least three. Delete one point
+of that trisecant. The remaining (p)-arc lies on a conic. The deleted
+point is off the conic and has at least ((p-1)/2) conic secants; the one
+missing conic point destroys at most one. For (p\ge17), more than one
+surviving trisecant remains, a contradiction. Thus
+
+\[
+ \boxed{R\ne1.}                                    \tag{15.722.5}
+\]
+
+Here the finite-geometry input is Segre's precise odd-order `q`-arc theorem:
+every `q`-arc in the Desarguesian plane `PG(2,q)`, `q` odd and `q>=5`, is
+contained in a nonsingular conic.  This is stronger than, and must not be
+replaced by, the statement only about `(q+1)`-arcs.
+
+The same incidence identity also excludes (R=2) and (R=3).  For (R=2),
+the positive contributions can only be (2) or (1+1), hence the rich lines
+are one 4-secant or two 3-secants.  If the latter share a boundary point,
+delete it.  The resulting (p)-arc is a conic minus one point, while the
+deleted point is off that conic; it retains at least
+((p-1)/2-1=(p-3)/2\ge7) conic secants, contradicting total slack two.  In
+the other cases delete two points, leaving a `(p-1)`-arc.  Ball--Lavrauw's
+classification of complete `(q-1)`-arcs says that for prime (p\ge17) it
+extends to a (p)-arc and hence lies on a conic.  Each deleted point is
+off-conic because its rich line retains two conic points, and it retains at
+least ((p-1)/2-2=(p-5)/2\ge6) conic secants.  This is again impossible.
+
+For (R=3), the only patterns are one 4-secant plus one 3-secant, or three
+3-secants.  Choose two private points from the 4-secant and one private
+point from the 3-secant, or one private point from each 3-secant.  The
+remaining `(p-2)` points form an arc.  The complete `(q-2)`-arc
+classification (whose only exceptions have (q=8,9,11)), followed by the
+`(q-1)` result and Segre, puts it on a conic.  Every deleted point is
+off-conic and retains at least
+((p-1)/2-3=(p-7)/2\ge5) conic secants, more rich lines than (R=3) permits.
+There is also a prime-dependent extension.  From every rich line of
+occupancy (n) delete (n-2) points, take the union, and make the deletion set
+(T) inclusion-minimal.  Then (A=D\setminus T) is an arc and, writing
+(t=|T|),
+
+\[
+ 1\le t\le\sum_\ell(n_\ell-2)\le R,
+\]
+
+because for (n=2r,2r+1) the two gaps are respectively
+((r-1)(r-2)) and ((r-1)^2).  Minimality says that every (z\in T) lies on a
+line retaining exactly two points of (A).  Ball--Lavrauw's prime-field conic
+threshold puts (A) on a conic whenever
+
+\[
+ R\le r_p:=\max\{r\in\mathbb Z_{\ge0}:(2r+5)^2\le4p\}
+       =\left\lfloor\sqrt p-\frac52\right\rfloor .
+\]
+
+Indeed, then (|A|=p+1-t\ge p-\sqrt p+7/2).  Every deleted (z) is off the
+conic, and after its (t) missing points it retains at least
+((p-1)/2-t) conic secants.  But (r_p<(p-1)/4), since
+(p-4\sqrt p+9=(\sqrt p-2)^2+5>0).  Hence these secants number more than
+(R), although each contributes at least one to (R), a contradiction.
+Combining this with the uniform near-complete-arc cases gives
+
+\[
+ \boxed{1\le R\le \max\{3,r_p\}\ \hbox{ is impossible};\quad
+ R>0\Longrightarrow R\ge\max\{4,r_p+1\}.}             \tag{15.722.5a}
+\]
+
+At (R=0), Segre puts the points on a conic with external infinity line,
+whose profile is (m[b=0]+m[b=2]). In phase one the two floors are
+(2p) and (p-1). If (t) phase-one directions have (b=0), their type
+floor is
+
+\[
+ t(2p)+(m-t)(p-1)=mP+(t-1)P,
+\]
+
+so (t\le1). The conic direction partition and the Paley norm-character
+partition therefore disagree at at most two projective directions. Their
+character correlation is at least (P-4=p-3). If the two anisotropic
+binary quadratic forms `Q,N` were not proportional, a shared root over the
+algebraic closure would force the shared Frobenius-conjugate root and hence
+proportionality. Thus `QN` is squarefree, (Y^2=QN) is a smooth genus-one
+curve, and its projective character sum has absolute value at most
+(2\sqrt p), contrary to (p-3>2\sqrt p). Hence the conic is a Miquelian
+circle and its direction types align exactly.
+
+A one-point replacement ((C\setminus\{r\})\cup\{z\}), (z\notin C), is
+also impossible: send (z) to infinity. Möbius transport leaves (p)
+finite points of an affine Miquelian circle, a pair-equality branch excluded
+by Proposition 15.676.
+
+Finally normalize a full circle as
+
+\[
+ D=\{\infty\}\cup(a+b\mathbb F_p),\qquad
+ \epsilon=\chi_{p^2}(b),\qquad m={p+1\over2}.
+\]
+
+For an outside point (w), put (u=(w-a)/b). The boundary multiplier is
+
+\[
+ \chi\!\left(\prod_{t\in\mathbb F_p}(a+bt-w)\right)
+ =\chi(b^p(u-u^p))=(-1)^m\epsilon,                 \tag{15.722.6}
+\]
+
+because every nonzero trace-zero element has character ((-1)^m). The
+transformed affine circle has tangent directions proportional to
+(-b^{-1}/(t-u)^2), so its (b=2) directions have type (epsilon).
+Exact outside-chart alignment forces
+
+\[
+ \boxed{c_H=(-1)^m.}                               \tag{15.722.7}
+\]
+
+Every circle-point chart therefore has common phase (m\bmod2), profile
+one (b=1) plus (p) copies of (b=p), special floor
+(P-2(m\bmod2)), and zero transverse floors. Proposition 15.724 closes
+this full-circle branch.
+
+Evidence: `src/e1_gmin_m4_prop15722.py`,
+`tests/test_prop15722.py`, and
+`evidence/e1_gmin_m4_prop15722.json`.
+The near-complete-arc inputs are S. Ball and M. Lavrauw, *Planar arcs*,
+J. Combin. Theory Ser. A **160** (2018), 261--287, published Corollaries
+10--11 (Corollaries 8--9 in the arXiv v4 numbering). The prime-field conic
+threshold is published Theorem 5 (Theorem 3 in arXiv v4),
+doi:10.1016/j.jcta.2018.06.015.
+
+## Proposition 15.723 — paired-cube obstruction to middle floor-plus-two lifts
+
+Put (p=2m-1\ge17). Let (A\ge0) be an integer-valued quadratic on
+(J(p,m)) with
+
+\[
+ A(X)\equiv |X\cap B|+\eta\pmod2,qquad b=|B|\ \hbox{odd},
+\]
+
+and suppose
+
+\[
+ 2p\,\mathbb EA=2p+2.                               \tag{15.723.1}
+\]
+
+First consider a nonnegative integral quadratic (g) on a Boolean cube
+with parity (1+\sum_{i\in R}z_i). Möbius inversion makes its multilinear
+coefficients integral and its mean half-integral. If (r=|R|\ge3), Fourier
+orthogonality gives
+
+\[
+ \mathbb E[g\chi_R]=0,
+\]
+
+while (g\ge1) on the (chi_R=1) half, so (mathbb Eg\ge1). If
+(r\ge5) and equality held, (h=g-1) would vanish on that half and satisfy
+(h\chi_R=-h). For every (|S|\le2),
+
+\[
+ \widehat h(S\mathbin\triangle R)=-\widehat h(S).
+\]
+
+The left side vanishes because (|S\mathbin\triangle R|\ge3), so every
+Fourier coefficient of (h) vanishes. This would make (g=1) on the
+opposite parity half, impossible. Half-integrality therefore sharpens the
+strict inequality to
+
+\[
+ \boxed{\mathbb Eg\ge{3\over2}\quad(r\ge5).}        \tag{15.723.2}
+\]
+
+The bound is sharp for (r=5,6), using
+((\sum_{i\in R}z_i-3)^2).
+
+The paired-cube operator through (X\in J(p,m)) leaves one point of (X)
+unpaired, bijects the other (m-1) points with (X^c), and averages the
+resulting cubes. On degree at most two,
+
+\[
+ TA(X)={A(X)+p\mathbb EA\over p+1}.
+\]
+
+Under (15.723.1),
+
+\[
+ TA(X)=1+{A(X)\over p+1}.                           \tag{15.723.3}
+\]
+
+Replace (B) by its complement on the slice when necessary and write
+
+\[
+ (k,e)=
+ \begin{cases}(b,\eta),&b\le m-1,\\
+ (p-b,\eta+m\bmod2),&b\ge m.
+ \end{cases}
+\]
+
+For (5\le k\le m-1), apply (15.723.2)--(15.723.3) at a contact layer and
+then match the first two hypergeometric moments by three positive contact
+nodes.  In phase (e=1) the nodes are exactly
+`0, 2 floor(k/4), 2 floor(k/4)+2`; the zero node has at least five active
+parity coordinates and is upgraded from its parity baseline to at least
+`m`.  The excess over (1+1/p) is
+((m-1)w_0-1/p), with
+
+\[
+ w_0=\begin{cases}
+ {p-k-3\over p(k+4)},&k\equiv0\pmod4,\\
+ {-k^2+kp-k-3p\over p(k-1)(k+3)},&k\equiv1\pmod4,\\
+ {-k^2+kp+k-4p\over p(k-2)(k+2)},&k\equiv2\pmod4,\\
+ {p-k\over p(k+1)},&k\equiv3\pmod4.
+ \end{cases}                                       \tag{15.723.4}
+\]
+
+To make the all-parameter sign step explicit, put `d=p-(2k+1)`, an even
+nonnegative integer.  After multiplication by the positive denominator,
+the four phase-one numerators for `k mod 4 = 0,1,2,3` factor as
+
+```
+(d+k-4)(d+2k+2)
+(d+2k+2)(d(k-3)+k^2-8k+3)
+(d+2k+2)(d(k-4)+k^2-8k+4)
+(d+k-1)(d+2k+2).
+```
+
+The only zeros in the allowed range are `(k,d)=(5,6)` and `(6,4)`, both
+at `p=17`.  In phase (e=0), (k\ge7), put `s=floor(k/4)`, take the first
+node `2s+1` when `k=3 mod 4` and `2s-1` otherwise, the second node two
+larger, and the far node `k` for odd `k` or `k-1` for even `k`.  At the
+far node every paired cube has at least `k-1` active coordinates for odd
+`k` and `k-3` for even `k`, hence at least five.  The four positive gap
+numerators become
+
+```
+(k-4)d^2+(3k^2-14k-4)d+2k^2(k-7)
+(k-3)d^2+(3k^2-8k-3)d+2k^3-6k^2-10k+6
+k d^2+(3k^2+6k)d+2k^3+10k^2+8
+(k-3)d^2+(3k^2-12k-3)d+2k^3-14k^2-2k+6.
+```
+
+Their residue-class minima are positive; the only negative-looking
+constant is the last polynomial at `k=7`, where `p>=17` gives `d>=2` and
+the value is 128.  For (k=5,6), nodes `1,3,5`, combined endpoint weight
+`3(p-5)/(8p)`, and the exact good-cube fraction `(m-5)/m` give numerator
+`3(p-5)(p-9)-16` for `p=1 mod 4` and
+`3(p-5)(p-11)-16` for `p=3 mod 4`, positive from `p=17` and `p=19`
+respectively.  Thus no finite scan supplies the universal quantifier.
+
+Because the original (b) is odd, the two zero-gap cells translate exactly
+to
+
+\[
+ \boxed{(p,b,\eta)=(17,5,1),\ (17,11,0).}           \tag{15.723.5}
+\]
+
+They are genuine. On the smaller parity side (C), set
+(t=|X\cap C|) and (A=(t-3)^2). For (k=5,6) at (p=17),
+
+\[
+ \mathbb EA={18\over17},\qquad2p\mathbb EA=36=2p+2.
+\]
+
+Thus every middle floor-plus-two cell is excluded except (15.723.5), and
+those two exceptions must remain in subsequent profile ledgers.
+
+Evidence: `src/e1_gmin_m4_prop15723.py`,
+`tests/test_prop15723.py`, and
+`evidence/e1_gmin_m4_prop15723.json`.
+
+## Proposition 15.724 — full Miquelian-circle boundary exclusion
+
+Assume (D=\partial H) is a full Miquelian circle, (|D|=P=p+1=2m), and
+(|H|=4p+1=8m-3). Normalize a boundary point as in Proposition 15.722.
+Every boundary vertex is nonisolated. Since (H) has at most (8p+2)
+nonisolated vertices, at most (7p+1) of the (p^2-p) vertices outside
+(D) are nonisolated. For (p\ge17), choose an isolated outside point
+(w).
+
+Send (w) to infinity. Equations (15.722.6)--(15.722.7) make the new
+product sign equal to the circle's (b=2) direction type. Hence the chart
+has
+
+\[
+ I=0,\qquad m\hbox{ phase-zero }b=0,qquad
+ m\hbox{ phase-one }b=2.                            \tag{15.724.1}
+\]
+
+For either type, write the exact directional means as
+
+\[
+ a_d=I+P P_d-\epsilon_dT-3p=2u+Pk_d,qquad
+ \sum_dk_d=m-u.                                    \tag{15.724.2}
+\]
+
+The phase-one (b=2) floor is (P-2). For (1\le u\le m-2), every
+direction would require (k_d\ge1) although their sum is below (m).
+For (u=0), every direction would be a forbidden floor-plus-two lift.
+Therefore (u=m-1), with parallel counts
+
+\[
+ x,\ldots,x,x+1.                                   \tag{15.724.3}
+\]
+
+For the phase-zero type write (P_d=y+k_d). Counting finite edges in
+(15.724.2), using (I=0), gives
+
+\[
+ 8m-3=m(x+y+1)+1-u,qquad
+ m(x+y-7)=u-4.                                     \tag{15.724.4}
+\]
+
+Since (0\le u<m), this forces (u=4) and (x+y=7). A phase-one xnor
+baseline has the exact coefficient congruence
+
+\[
+ q={p-1\over2}\mid I+x-4.                          \tag{15.724.5}
+\]
+
+This is the sign-independent two-coordinate congruence from Proposition
+15.673. That proposition treats both \(4+z_a z_b\) and \(4-z_a z_b\)
+(XNOR and XOR in zero-one variables); its symbolic sign \(\tau\) drops out
+of the coefficient comparison \((p-1)c=I+P_d-4\). Thus the present XNOR
+chart does not rely on identifying the two baselines.
+
+Now (q\ge8), (I=0), and (x,y\ge0), so
+
+\[
+ \boxed{(u,x,y)=(4,4,3).}                          \tag{15.724.6}
+\]
+
+The phase-zero quotient sum is (m-4). At least four of its (m)
+directions therefore have (k_d=0) and (a_d=8). For such a phase-zero
+(b=0) direction, parity gives (A_d=2B_d), where (B_d) is a nonzero
+nonnegative integer-valued quadratic. Thus
+
+\[
+ 4p\mathbb EB_d=8.
+\]
+
+Proposition 15.688 instead gives
+
+\[
+ 4p\mathbb EB_d\ge p-3\ge14,                       \tag{15.724.7}
+\]
+
+a contradiction. Therefore
+
+\[
+ \boxed{\text{no full Miquelian-circle boundary is residual-compatible
+ for }p\ge17.}
+\]
+
+Together with Proposition 15.722, this excludes the complete outside
+pair-slack-zero branch. Proposition 15.722 also excludes every positive
+outside slack through `max(3,floor(sqrt(p)-5/2))`. Slack beyond that cutoff,
+the whole (p+1) shell, residual (ii), multi-level Type I, and the limit remain
+open.
+
+Evidence: `src/e1_gmin_m4_prop15724.py`,
+`tests/test_prop15724.py`, and
+`evidence/e1_gmin_m4_prop15724.json`.
+
+## Proposition 15.725 — retracted parabola-plus-internal family close
+
+Consider the explicit boundary
+
+\[
+ D=\{x+x^2\omega:x\in\mathbf F_p\}\cup\{a\omega\},
+ \qquad \omega^2=\nu,\quad \chi(\nu)=\chi(-a)=-1.
+\]
+
+Sending (a\omega) to infinity gives exact coordinates
+
+\[
+ (A_x,B_x)=\left({x\over Q(x)},-{x^2-a\over Q(x)}\right),
+ \qquad Q(x)=x^2-\nu(x^2-a)^2.
+\]
+
+For one product-sign orientation, direct modular enumeration at
+(p=17,19,23,29,31,37,41,43,47) checks 2,381 parameter cases and 92,664
+typed directions; every typed floor sum exceeds its budget. This is exact
+finite evidence.
+
+The proposed all-prime continuation is not a proof. It assumes bounds for
+three quartic-fibre discriminant/resolvent character sums without deriving
+their curves, genera, singular fibres, or points at infinity. In particular,
+the admissible locus (4a\nu+1=0) is singular in the asserted generic
+discriminant model. The opposite product-sign orientation is also unchecked.
+Therefore
+
+\[
+ \boxed{\text{the parabola-plus-internal family remains OPEN}.}
+\]
+
+Proposition 15.725 has no downstream role.

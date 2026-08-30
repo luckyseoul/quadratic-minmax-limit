@@ -73,7 +73,7 @@
     "D": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "QR0\u2299NC survives p=37; T/AP NC do not. Ensemble D / Q_\u03c4 unnamed. phi_F not imported."
     }

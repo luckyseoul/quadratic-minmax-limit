@@ -51,7 +51,7 @@ def test_bound_weaker_than_thr():
 def test_predicates_open():
     assert residual_i_closed_via_261() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     h = hinge_status_261()
     assert h["nu_zero_general"] is False
     assert h["residual_i_closed"] is False

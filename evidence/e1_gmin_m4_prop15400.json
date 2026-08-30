@@ -51,7 +51,7 @@
       "psd_cone_forces_qn": false,
       "sbox_qn_and_four": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "Pointwise |inner|\u00b2 dies. 1D-weight LB is <1 at p=7. phi_F not imported."
     }

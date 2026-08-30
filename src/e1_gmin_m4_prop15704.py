@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Prop. 15.704 -- exclude p=17 slack-sixteen rows with a free direction.
 
-Proposition 15.703 leaves 112 pair-slack-sixteen profiles.  Their numbers of
-undetermined directions are ``{0:13,1:47,2:47,3:5}``.  Repairing a boundary
+Proposition 15.703 leaves 227 pair-slack-sixteen profiles.  Their numbers of
+undetermined directions are ``{0:87,1:88,2:47,3:5}``.  Repairing a boundary
 by at most four deletions gives an arc ``A``.
 
 For two undetermined directions, adjoining their infinity points gives a
@@ -24,9 +24,9 @@ outside ``K``.  An exact audit of all 14 deletions, candidate quadruples, and
 choices of ``U`` finds eight placements where ``U`` is genuinely
 undetermined; every one has reconstructed slack 32.
 
-Thus all 99 rows with at least one undetermined direction are impossible.
-The p17 remainder drops from 753 to 654: two slack-zero rows, thirteen
-slack-sixteen rows with no undetermined direction, and 639 rows of slack at
+Thus all 140 rows with at least one undetermined direction are impossible.
+The p17 remainder drops from 1,368 to 1,228: two slack-zero rows, 87
+slack-sixteen rows with no undetermined direction, and 1,139 rows of slack at
 least twenty.  The endpoint remains open.
 """
 from __future__ import annotations
@@ -83,23 +83,40 @@ def _line_pair_slack(occupancy: int) -> int:
 
 
 def slack_sixteen_profile_ledger() -> dict[str, object]:
-    """Split the exact 112-row block by undetermined-direction count."""
-    profiles = [
-        row
-        for row in p17_second_boundary_profile_census()["profiles"]
+    """Split the exact 227-row block by undetermined-direction count."""
+    profiles = p17_second_boundary_profile_census()["profiles"]
+    indexed_profiles = [
+        (index, row)
+        for index, row in enumerate(profiles)
         if int(row["pair_slack"]) == PAIR_SLACK
     ]
     histogram = dict(
-        sorted(Counter(_undetermined_directions(row) for row in profiles).items())
+        sorted(
+            Counter(
+                _undetermined_directions(row) for _index, row in indexed_profiles
+            ).items()
+        )
     )
-    if len(profiles) != 112 or histogram != {0: 13, 1: 47, 2: 47, 3: 5}:
+    excluded_indices = [
+        index
+        for index, row in indexed_profiles
+        if _undetermined_directions(row) >= 1
+    ]
+    remaining_indices = [
+        index
+        for index, row in indexed_profiles
+        if _undetermined_directions(row) == 0
+    ]
+    if len(indexed_profiles) != 227 or histogram != {0: 87, 1: 88, 2: 47, 3: 5}:
         raise ArithmeticError("p17 slack-sixteen profile ledger changed")
     return {
-        "profile_count": len(profiles),
+        "profile_count": len(indexed_profiles),
         "undetermined_direction_histogram": histogram,
-        "profiles_with_at_least_one_undetermined_direction": len(profiles)
+        "profiles_with_at_least_one_undetermined_direction": len(indexed_profiles)
         - histogram[0],
         "remaining_zero_direction_profiles": histogram[0],
+        "excluded_profile_indices": excluded_indices,
+        "remaining_zero_direction_profile_indices": remaining_indices,
         "proved": True,
     }
 
@@ -207,6 +224,7 @@ def one_direction_complete_arc_certificate() -> dict[str, object]:
 def p17_slack_sixteen_free_direction_exclusion() -> dict[str, object]:
     """Proposition 15.704."""
     previous = p17_slack_twelve_exclusion()
+    census = p17_second_boundary_profile_census()
     profiles = slack_sixteen_profile_ledger()
     repair = slack_sixteen_repair_lemma()
     arcs = one_direction_complete_arc_certificate()
@@ -217,12 +235,29 @@ def p17_slack_sixteen_free_direction_exclusion() -> dict[str, object]:
     ):
         raise ArithmeticError("p17 slack-sixteen obstruction changed")
 
-    before = int(previous["profile_count_after"])
-    excluded = int(profiles["profiles_with_at_least_one_undetermined_direction"])
-    after = before - excluded
-    histogram = dict(previous["remaining_pair_slack_histogram"])
-    histogram[PAIR_SLACK] = int(profiles["remaining_zero_direction_profiles"])
-    if before != 753 or excluded != 99 or after != 654 or sum(histogram.values()) != after:
+    previous_indices = set(int(index) for index in previous["remaining_profile_indices"])
+    excluded_indices = set(int(index) for index in profiles["excluded_profile_indices"])
+    if not excluded_indices <= previous_indices:
+        raise ArithmeticError("15.704 tried to exclude an already absent profile")
+    remaining_indices = sorted(previous_indices - excluded_indices)
+    before = len(previous_indices)
+    excluded = len(excluded_indices)
+    after = len(remaining_indices)
+    histogram = dict(
+        sorted(
+            Counter(
+                int(census["profiles"][index]["pair_slack"])
+                for index in remaining_indices
+            ).items()
+        )
+    )
+    if (
+        before != 1368
+        or excluded != 140
+        or after != 1228
+        or histogram.get(PAIR_SLACK) != 87
+        or sum(histogram.values()) != after
+    ):
         raise ArithmeticError("p17 post-slack-sixteen accounting changed")
     return {
         "proposition": "15.704",
@@ -231,9 +266,11 @@ def p17_slack_sixteen_free_direction_exclusion() -> dict[str, object]:
         "profile_count_before": before,
         "profiles_excluded_here": excluded,
         "profile_count_after": after,
+        "excluded_profile_indices_here": sorted(excluded_indices),
+        "remaining_profile_indices": remaining_indices,
         "remaining_pair_slack_histogram": histogram,
         "remaining_slack_zero_profiles": 2,
-        "remaining_slack_sixteen_profiles": 13,
+        "remaining_slack_sixteen_profiles": 87,
         "remaining_profiles_of_slack_at_least_twenty": after - 15,
         "two_direction_branch": (
             "the four-deletion pair arc has size 14; if complete its four "

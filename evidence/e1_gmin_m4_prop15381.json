@@ -183,7 +183,7 @@
     "F": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "rhat": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "Both 4-level J-corners empty for every p\u22655. Interior 4-level and 5+ levels stay open. residual_ii_k_eq_4p_empty stays False. phi_F not imported."

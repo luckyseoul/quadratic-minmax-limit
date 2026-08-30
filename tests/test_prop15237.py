@@ -3,7 +3,11 @@ from __future__ import annotations
 
 from e1_gmin_m4_prop15170 import e1_closed_general, gsum_disj_lb_proved_general
 from e1_gmin_m4_prop15171 import deep_s2_freeness_fail_k_ge_3p_ND_closed
-from e1_gmin_m4_prop15193 import residual_ii_full_closed, residual_ii_open_subcases
+from e1_gmin_m4_prop15193 import (
+    residual_ii_bounded_even_k_le_4p_minus_2_closed,
+    residual_ii_full_closed,
+    residual_ii_open_subcases,
+)
 from e1_gmin_m4_prop15236 import residual_ii_a_ND_closed as iia_236
 from e1_gmin_m4_prop15236 import residual_ii_b_ND_closed
 from e1_gmin_m4_prop15237 import (
@@ -64,8 +68,9 @@ def test_theorems_and_predicate():
     assert residual_ii_a_ND_closed() is True
     assert iia_236() is True  # lazy re-export
     assert residual_ii_b_ND_closed() is True
-    assert residual_ii_full_closed() is True
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
+    assert residual_ii_bounded_even_k_le_4p_minus_2_closed() is True
+    assert residual_ii_full_closed() is False
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
 
 
 def test_p5_k4_independence_anchor():
@@ -77,12 +82,13 @@ def test_p5_k4_independence_anchor():
 
 def test_does_not_soft_close_e1():
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     opens = residual_ii_open_subcases()
     assert not any("ii-a" in s for s in opens)
     assert not any("ii-b" in s for s in opens)
+    assert any("k≥4p" in s for s in opens)
     out = main()
     assert out["proved"]["residual_ii_a_ND_closed"] is True
-    assert out["proved"]["E1_closed"] is True
+    assert out["proved"]["E1_closed"] is False
     assert gsum_disj_lb_proved_general() is False
     assert residual_ii_a_ND_closed.__module__.endswith("prop15237")

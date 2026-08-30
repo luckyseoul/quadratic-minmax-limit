@@ -71,7 +71,7 @@ def test_slot_split_is_chi_not_tor():
 def test_flags_untouched():
     D = prove_open()
     assert D["proved"] is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     assert gsum_disj_lb_proved_general() is False
     assert phi_F_ge_6_proved_general() is False
 

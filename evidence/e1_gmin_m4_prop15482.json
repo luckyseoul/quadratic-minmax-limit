@@ -103,7 +103,7 @@
     "E": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "aE2_5": 4,
       "note": "W_c is real \u03a6(Tr,N), not \u03c7-homogeneous. Mean-field pairing is 4, not Q++. Q_\u03c4 unnamed in p. phi_F not imported."

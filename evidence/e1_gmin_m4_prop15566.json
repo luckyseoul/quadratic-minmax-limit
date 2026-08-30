@@ -410,7 +410,7 @@
       "proved": false,
       "residual_ii_k_eq_4p_empty": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "pair_slice_26_open": true,
       "p5_plus_slice_28_open": true,
       "nF_10_open": true,

@@ -41,7 +41,7 @@
       "Nr7": 5726,
       "Hplus7": 5726,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "4410=15u at p=7. 15 is p=7-only. N_r unnamed in p. c not pinned. phi_F not imported."
     }

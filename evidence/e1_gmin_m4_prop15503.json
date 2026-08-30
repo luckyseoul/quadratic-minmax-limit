@@ -48,7 +48,7 @@
     "phi_F_imported": false,
     "note": "Numerical flatness on sub at p=7, not an exact \u211a identity. No general reason; p\u226513 untested. phi_F not imported."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false
 }

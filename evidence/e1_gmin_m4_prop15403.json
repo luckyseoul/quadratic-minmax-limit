@@ -41,7 +41,7 @@
       "proved": false,
       "ensemble_Qpp_is_type_value": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "D-type Q++ named at p=7 as Q_AP-family + 4(p+1)/9 + Q_1d. Ensemble still den N+. phi_F not imported."
     }

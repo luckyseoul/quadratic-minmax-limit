@@ -69,7 +69,7 @@
       "proved": false,
       "n_eq_13": 67,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "c_eq leaves 67 lattice points at p=13. Half-net count unnamed for p\u22657. Q_\u03c4 unnamed. phi_F not imported."
     }

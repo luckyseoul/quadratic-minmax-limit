@@ -16,7 +16,7 @@
     "gsum_disj_lb_proved_general": false,
     "aut_schur": false,
     "pairing": false,
-    "E1_closed": true
+    "E1_closed": false
   },
   "algebra": {
     "pointwise": "q^2 = 4||By||^2 - 2||B||^2 + 8 four",
@@ -306,7 +306,7 @@
     "rho_beats_q4_budget": false,
     "census_p5_p7": true,
     "gsum_disj_lb": false,
-    "e1": true,
+    "e1": false,
     "gu_disj_is_gram": false,
     "aut_schur": false,
     "pairing": false,

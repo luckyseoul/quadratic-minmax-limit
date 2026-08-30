@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Exact native-XOR boundary solver for the p=17 slack-twenty block.
 
-Before Proposition 15.707, the p=17 ledger had 78 pair-slack-twenty profiles.
-Nine pairs of those arithmetic rows have identical
-phase-labelled odd-fibre histograms, so the finite boundary problem has 69
-distinct signatures.
+After the Proposition 15.723 replay, the corrected p=17 ledger has 193
+pair-slack-twenty profiles.  Nine pairs of those arithmetic rows have
+identical phase-labelled odd-fibre histograms, so the finite boundary problem
+has 184 distinct signatures.  The former 78/69 counts came from the retracted
+blanket floor-plus-two filter.
 
 Proposition 15.707 subsequently excludes the full block without a solver.
 This model remains an independent exact-boundary audit path; no solver result
@@ -60,10 +61,10 @@ P = 17
 SIZE = 16
 PHASE_SIZE = 9
 SLACK = 20
-EXPECTED_PROFILE_COUNT = 78
-EXPECTED_SIGNATURE_COUNT = 69
-EXPECTED_CENSUS_START = 936
-EXPECTED_CENSUS_STOP = 1014
+EXPECTED_PROFILE_COUNT = 193
+EXPECTED_SIGNATURE_COUNT = 184
+EXPECTED_CENSUS_START = 1364
+EXPECTED_CENSUS_STOP = 1557
 
 ProfileKey = tuple[
     tuple[tuple[int, int], ...],
@@ -100,7 +101,7 @@ def _histogram_from_key(key: ProfileKey) -> dict[str, dict[int, int]]:
 
 
 def slack20_profiles() -> list[dict[str, Any]]:
-    """Return the complete 78-row block with stable local/census indices."""
+    """Return the corrected 193-row block with stable local/census indices."""
     census = p17_second_boundary_profile_census()
     selected = [
         (census_index, row)
@@ -180,7 +181,7 @@ def _reflection_fixed_colourings(counts: Iterable[int], fixed_slots: int) -> int
 
 
 def signature_manifest() -> dict[str, Any]:
-    """Deduplicate 78 arithmetic profiles into 69 boundary signatures."""
+    """Deduplicate 193 arithmetic profiles into 184 boundary signatures."""
     profiles = slack20_profiles()
     grouped: dict[ProfileKey, list[dict[str, Any]]] = defaultdict(list)
     for profile in profiles:
@@ -223,22 +224,22 @@ def signature_manifest() -> dict[str, Any]:
     multiplicities = Counter(int(row["multiplicity"]) for row in signatures)
     if (
         len(signatures) != EXPECTED_SIGNATURE_COUNT
-        or multiplicities != Counter({1: 60, 2: 9})
+        or multiplicities != Counter({1: 175, 2: 9})
         or sum(
             int(row["direction_assignment_count_after_normalization"])
             for row in signatures
         )
-        != 511_588
+        != 1_971_382
         or sum(
             int(row["direction_assignment_orbits_under_residual_reflection"])
             for row in signatures
         )
-        != 255_812
+        != 985_730
         or sum(
             int(row["reflection_fixed_assignment_count"])
             for row in signatures
         )
-        != 36
+        != 78
     ):
         raise ArithmeticError("the p=17 slack-twenty signature ledger changed")
 
@@ -269,9 +270,9 @@ def signature_manifest() -> dict[str, Any]:
             "phase_zero_pairs": [[1, 16], [2, 15], [4, 13], [6, 11]],
             "phase_one_fixed": [0],
             "phase_one_pairs": [[3, 14], [5, 12], [7, 10], [8, 9]],
-            "raw_assignment_count": 511_588,
-            "orbit_count": 255_812,
-            "fixed_assignment_count": 36,
+            "raw_assignment_count": 1_971_382,
+            "orbit_count": 985_730,
+            "fixed_assignment_count": 78,
         },
         "signatures": signatures,
     }
@@ -634,7 +635,7 @@ def build_parser() -> argparse.ArgumentParser:
     group.add_argument(
         "--list-signatures",
         action="store_true",
-        help="emit the 78-to-69 manifest without invoking a solver",
+        help="emit the corrected 193-to-184 manifest without invoking a solver",
     )
     parser.add_argument("--seconds", type=float, default=300.0)
     parser.add_argument("--threads", type=int, default=8)

@@ -41,7 +41,7 @@
     "C": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "Complementary \u0394\u00b2 named as a type-function. Q_\u03c4 / u(p) unnamed. phi_F not imported."
     }

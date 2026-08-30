@@ -1,6 +1,6 @@
 {
   "title": "Prop 15.170 residual (i) close: Type I k=3p\u22122 s_\u2212\u2264\u22121 impossible (Gsum Farkas)",
-  "L_status": "CLOSED",
+  "L_status": "OPEN",
   "proved": {
     "type_I_k_3p_minus_2_s_minus_impossible": true,
     "type_I_k_3p_minus_2_ND_class_closed": true,
@@ -9,11 +9,11 @@
     "dual_equality_impossible": false,
     "dual_equality_farkas_algebra_if_lb": true,
     "gsum_disj_lb_proved_general": false,
-    "deep_k_ge_3p_ND_closed": true,
+    "deep_k_ge_3p_ND_closed": false,
     "bi_tight_empty_for_all_p_ge_5": true,
-    "E1_closed_general": true,
-    "m_n_ge_Phi_minus_2": true,
-    "L_closed": true,
+    "E1_closed_general": false,
+    "m_n_ge_Phi_minus_2": false,
+    "L_closed": false,
     "residual_closed_general": true,
     "residual_i_dual_eq_empty": true,
     "sixteen_N_for_all_p": false
@@ -129,12 +129,15 @@
   },
   "L_wire": {
     "bi_tight": true,
-    "E1": true,
-    "L_closed": true,
-    "L_status": "CLOSED",
+    "E1": false,
+    "L_closed": false,
+    "L_status": "OPEN",
     "rule": "L closed iff bi-tight \u2227 E(1); denseness Prop 6.2"
   },
-  "open_residual": [],
+  "open_residual": [
+    "non-Walsh residual (ii), even k\u22654p",
+    "Type I multi-level Max\u2212 bad case"
+  ],
   "F3": "E1/L only from real bi-tight \u2227 residual (i) \u2227 residual (ii) full",
   "F13": "15.170 residual (i); 15.171 residual (ii); 16N still open"
 }

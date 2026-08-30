@@ -101,7 +101,7 @@
     "phi_F_imported": false,
     "note": "J_{N*} named; pairing reduced to D. D=|H+|/(2p) unnamed. p\u22613 still has a --N1 term. phi_F not imported."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false
 }

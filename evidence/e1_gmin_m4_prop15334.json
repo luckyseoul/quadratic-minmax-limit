@@ -66,7 +66,7 @@
     "C": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "rhat": false,
       "Hplus_named_in_p": false,
       "Q_tau_named_in_p": false,

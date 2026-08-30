@@ -217,7 +217,7 @@
     "F_tau_named": false,
     "note": "\u00c3\u2208span{1, Re J(\u03c7,\u03c8), \u03c3} at p=5,7 names the Fourier of A_r, not A4=(slack) q G(\u03c8\u0304) and not the 4-distinct F=Q\u2212Coll on 15.290 types.  Coefs have den |H+|/(2p).  H-levels split A_r on ++ sub and do not split F.  \u27e8\u03b4,\u03c8\u27e9\u22642 stays OPEN."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false
 }

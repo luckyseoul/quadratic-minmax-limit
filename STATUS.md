@@ -1,4 +1,50 @@
-# Status (2026-08-30; through Proposition 15.721)
+# Status (2026-08-30; through audit of Proposition 15.725)
+
+**15.725's attempted parabola-plus-internal family close is RETRACTED.** Its
+finite phase-zero census is exact, but the all-prime character bounds and
+opposite product sign are unproved. It has no downstream role. The latest
+proved narrowing remains 15.724 below.
+
+**15.724 EXCLUDES the full Miquelian-circle boundary, and therefore the
+entire outside pair-slack-zero branch at `|D|=p+1`, for every `p>=17`.**
+Proposition 15.722 first fixes the signed phase in every circle chart. Since
+`H` has only `4p+1` edges, a circle has an isolated outside vertex. Sending
+that vertex to infinity gives `I=0`, `m` phase-zero `b=0` directions and
+`m` phase-one `b=2` directions. Exact quotient and coefficient arithmetic
+forces `(u,x,y)=(4,4,3)`, hence at least four nonzero even quadratic lifts
+with scaled mass eight. Proposition 15.688 requires mass at least
+`p-3>=14`, a contradiction. The first shell is not closed: 15.722 now
+excludes every positive outside slack
+`R<=max(3,floor(sqrt(p)-5/2))`, so the live branch starts beyond that cutoff
+(uniformly at `R>=4`). The small-prime remainders, even
+`k>4p`, residual (ii), Type I, and `L` remain OPEN.
+
+**15.723 PROVES the disputed middle floor-plus-two exclusion with exactly
+two genuine exceptions.** A paired-cube Fourier argument raises the cube
+mean from one to `3/2` once five parity coordinates are active; exact
+Johnson quadrature then excludes every middle odd-profile cell for odd
+`p>=17`, except `(p,b,phase)=(17,5,1),(17,11,0)`. Both exceptions are
+attained by `A=(t-3)^2` with scaled mean 36 and remain in the ledger. This
+repairs the blanket `excess != 2` assumption; it does not close the shell.
+
+**15.722 PROVES exact signed phase transport and the first multi-chart
+`p+1` reductions.** The cocycle is
+`c_(gH)=c_H product_(v in boundary(H)) delta_g(v)`. Outside pair slack one
+would give a unique trisecant and is impossible. At slack zero, Segre and a
+genus-one character bound force a Miquelian circle with exact Paley-type
+alignment; one-point Miquelian-circle replacements fail in a second chart.
+Every full-circle point chart has forced phase `m mod 2`. Proposition 15.724
+subsequently excludes the full circle. The same slack identity, the
+Ball--Lavrauw near-complete-arc classifications, and off-conic secant counts
+exclude `R=2,3`. More generally, an inclusion-minimal deletion to an arc has
+size at most `R`; the prime-field conic threshold then excludes every
+`1<=R<=floor(sqrt(p)-5/2)`. Thus positive slack is impossible through
+`max(3,floor(sqrt(p)-5/2))`; no finite search is involved.
+
+The cocycle's affine case is explicit: for `c=0` its infinity multiplier is
+`chi(d)=chi(a)`, not `chi(c)`.  The finite-field certificate APIs also reject
+odd composite moduli.  These repairs leave the inversion-based reduction
+unchanged.
 
 **15.721 PROVES the first possible general odd-degree boundary at the
 `k=4p` residual endpoint has total size `p+1` for every prime `p>=17`.**
@@ -11,7 +57,9 @@ closures finish all `|D|<=p-1`. Handshake parity makes `p+1` next. This
 supersedes the first/second all-finite profile campaigns in 15.675--15.712 as
 active boundary gates, including the former open `p=23` ledger. Their
 internal lemmas remain valid. At `|D|=p+1`, 15.676 closes pair-deficit
-equality and strict deficit remains. The small-prime remainders, even
+equality, 15.722 closes outside pair slack one, and 15.724 closes slack zero.
+Proposition 15.722 additionally excludes positive slack through
+`max(3,floor(sqrt(p)-5/2))`; only larger slack remains. The small-prime remainders, even
 `k>4p`, residual (ii), Type I, and `L` remain OPEN.
 
 **15.720 PROVES the required level-2 and level-3 bi-tight alternatives are
@@ -119,6 +167,10 @@ Szőnyi's theorem requires at least ten for a noncollinear sixteen-point set
 in `AG(2,17)`. The collinear alternative has phase-labelled profile
 `{0:1,16:8}/{16:9}`, absent from the ledger. All fourteen rows are
 impossible. Residual (ii), R1, Type I, and the limit remain OPEN.
+The corrected 15.700--15.712 replay is
+`2503 -> 2219 -> 1744 -> 1481 -> 1368 -> 1228 -> 1215 -> 1213 -> 1020 ->
+869 -> 321 -> 19 -> 14 -> 0`; 15.705 is partial and its 74 uncovered
+slack-sixteen rows are removed only at 15.709.
 
 **15.711 PROVED all five remaining `(u_0,u_1)=(0,0)` `p=17,s=16`
 profiles are impossible, not the endpoint**: avoiding 15.710's rigid
@@ -130,9 +182,9 @@ the rigid phase-one `b=16` cells give
 profiles remain, with residue split `(7,0):9,(8,0):5`. The endpoint,
 residual (ii), R1, Type I, and the limit remain OPEN.
 
-**15.710 PROVED 208 of the 227 remaining `p=17,s=16` profiles are
+**15.710 PROVED 302 of the 321 remaining `p=17,s=16` profiles are
 impossible, not the endpoint**: every row has nine rigid phase-one `b=16`
-directions. A genuine floor-rigid phase-zero `b=0` anchor excludes 176 rows
+directions. A genuine floor-rigid phase-zero `b=0` anchor excludes 270 rows
 by forcing
 `I=60` and gauge sum 14 while parallel nonnegativity requires at least 15.
 Rigid `b=16` anchors in both phases exclude 32 more by forcing `I=68` and
@@ -141,34 +193,34 @@ profiles remain, with residue split `(0,0):5,(7,0):9,(8,0):5`. The
 endpoint, residual (ii), R1, Type I, and the limit remain OPEN.
 
 **15.709 PROVED every remaining `p=17,s=16` profile with `u_1=8` is
-impossible, not the endpoint**: all 280 such rows retain at least eight rigid
-phase-one `b=2` directions. The 66 `(u_0,u_1)=(0,8)` rows retain rigid
+impossible, not the endpoint**: all 548 such rows retain at least eight rigid
+phase-one `b=2` directions. The 334 `(u_0,u_1)=(0,8)` rows retain rigid
 phase-zero `b=0` and fail the global gauge comparison. The 214 `(8,8)` rows
 retain rigid phase-zero `b=16` and fail the unique-even-fibre identity. The
-exact p17 ledger drops from 507 to 227 profiles; every survivor has `u_1=0`
-and pair slack at least 96. The endpoint, residual (ii), R1, Type I, and the
-limit remain OPEN.
+first block includes all 74 slack-sixteen rows left open by 15.705. The exact
+p17 ledger drops from 869 to 321 profiles; every survivor has `u_1=0` and
+pair slack at least 96. The endpoint, residual (ii), R1, Type I, and the limit
+remain OPEN.
 
-**15.708 PROVED all 54 pair-slack-twenty-four `p=17,s=16` profiles are
-impossible, not the endpoint**: all 45 `(u_0,u_1)=(0,8)` rows retain rigid
+**15.708 PROVED all 151 pair-slack-twenty-four `p=17,s=16` profiles are
+impossible, not the endpoint**: all 142 `(u_0,u_1)=(0,8)` rows retain rigid
 phase-zero `b=0` and phase-one `b=2` directions; the global-sign identity
 forces `I=68`, `g_0+g_1=16`, but parallel nonnegativity requires
-`g_0>=9,g_1>=8`. The nine `(8,8)` rows instead force `I=4`. Every row retains
-at least two rigid phase-zero `b=16` directions, and summing the exact cells
+`g_0>=9,g_1>=8`. The nine `(8,8)` rows instead force `I=4`. Each of those nine
+retains at least two rigid phase-zero `b=16` directions, and summing the exact cells
 incident with the unique even fibre gives `N_j=delta_j-15z_j-I<=-3` for a
-nonnegative edge count. Exactly 507 p17 profiles remain, all of pair slack at
-least 28. The endpoint, residual (ii), R1, Type I, and the limit remain OPEN.
+nonnegative edge count. Exactly 869 p17 profiles remain. The endpoint,
+residual (ii), R1, Type I, and the limit remain OPEN.
 
-**15.707 PROVED all 78 pair-slack-twenty `p=17,s=16` profiles are
-impossible, not the endpoint**: all 69 `(u_0,u_1)=(0,8)` rows retain at
+**15.707 PROVED all 193 pair-slack-twenty `p=17,s=16` profiles are
+impossible, not the endpoint**: all 184 `(u_0,u_1)=(0,8)` rows retain at
 least three rigid phase-zero directions with `b=0` or `2`, while phase one
 retains at least eight rigid `b=2` directions. The 15.706 global-sign
 comparison again forces `I=68`, contradicting boundary size 16. The nine
 `(8,8)` rows have two or three undetermined directions; repair plus the
 already-audited conic, complete-13, and complete-14 secant-index bounds
-exclude repair depths one through five. Exactly 561 p17 profiles remain, all
-of pair slack at least 24. The endpoint, residual (ii), R1, Type I, and the
-limit remain OPEN.
+exclude repair depths one through five. Exactly 1,020 p17 profiles remain.
+The endpoint, residual (ii), R1, Type I, and the limit remain OPEN.
 
 **15.706 PROVED both remaining pair-slack-zero `p=17,s=16` profiles are
 impossible, not the endpoint**: every mean allocation retains a rigid `b=2`
@@ -176,8 +228,13 @@ direction of each quadratic type. Summing its 136 coefficient cells and
 comparing with the global finite-edge Paley-sign sum gives
 `17I=4+72(g_++g_-)`. Thus `I=68`; the one remaining finite edge makes the
 affine odd boundary have size 66, 68, or 70, never 16. This proof is
-solver-free. Exactly 639 p17 profiles remain, all of pair slack at least 20.
-The endpoint, residual (ii), R1, Type I, and the limit remain OPEN.
+solver-free. The corrected prefix is
+`2503 -> 2219 -> 1744 -> 1481 -> 1368 -> 1228 -> 1215`: 15.700--15.704
+exclude `284,475,263,113,140`, while 15.705 is **PARTIAL/OPEN**, excludes
+only its thirteen historical Orbiter targets, and leaves 74 slack-sixteen
+rows. Proposition 15.706 then gives `1215 -> 1213`, retaining those 74 rows
+for the later 15.709 rigid-anchor sweep. The endpoint, residual (ii), R1,
+Type I, and the limit remain OPEN.
 
 **FINITE-FIELD SIGN AUDIT:** three exploratory edge-lift scripts used integer
 subtraction on encoded `F_{p^2}` elements. They now use componentwise field
@@ -248,29 +305,33 @@ at most twelve. Exactly 14 remain with histogram
 `{16:7,20:4,24:1,28:1,32:1}`. The endpoint and all top-level gates remain
 OPEN.
 
-**15.687 PROVED all 68 pair-slack-20 `p=23,s=20` profiles are
-impossible, not residual (ii)**: their undetermined-direction counts are
+**15.687 PROVED all 68 pair-slack-20 profiles in 15.684's conditional
+residue-zero subledger are impossible, not residual (ii)**: their
+undetermined-direction counts are
 `2^2,3^36,4^30`. In the 66 rows with at least three directions,
 overlapping infinity-point pairs either extend to the same conic, forcing
 three collinear conic points, or give a complete 17-arc with five deleted
 points of secant multiplicity one. The classified maximum is one. The two
 two-direction rows close by the same complete-arc obstruction or the
-five-point conic-core floor 24. Exactly 133 arithmetic profiles remain at
-`p=23`, all of slack at least 24. The endpoint remains OPEN.
+five-point conic-core floor 24. Exactly 133 profiles remain in that
+residue-zero subledger, all of slack at least 24. The restored `u_0=9` branch
+is outside it, so the endpoint remains OPEN.
 
-**15.686 PROVED the unique pair-slack-16 `p=23,s=20` profile is
-impossible, not residual (ii)**: it has one undetermined direction. Fewer
+**15.686 PROVED the unique pair-slack-16 profile in 15.684's conditional
+residue-zero subledger is impossible, not residual (ii)**: it has one
+undetermined direction. Fewer
 than four repair deletions give an 18-arc after adjoining that infinity
 point and hence the conic-core contradiction. In the four-deletion branch,
 the repaired 16-arc plus the infinity point must be a complete 17-arc.
 No deleted point can use the infinity point on a secant, and slack equality
 forces all four to have secant multiplicity one. Proposition 15.685's
 exhaustive five-class certificate shows that the maximum is one. Thus 201
-exact arithmetic profiles remain at `p=23`, all of slack at least 20; the
-endpoint remains OPEN.
+profiles remain in the residue-zero subledger, all of slack at least 20; this
+does not remove the restored `u_0=9` branch, and the endpoint remains OPEN.
 
-**15.685 PROVED the unique pair-slack-12 `p=23,s=20` profile is
-impossible, not residual (ii)**: the repair lemma produces an arc after at
+**15.685 PROVED the unique pair-slack-12 profile in 15.684's conditional
+residue-zero subledger is impossible, not residual (ii)**: the repair lemma
+produces an arc after at
 most three deletions. A repaired arc of size at least 18, or an incomplete
 17-arc, gives the conic-core contradiction from 15.684. Thus the hard branch
 is a complete 17-arc `A` plus three points. Secant-line slack gives
@@ -279,22 +340,23 @@ points to have secant multiplicity one. Five explicit complete-arc
 representatives have pairwise-distinct projective-invariant multiplicity
 histograms and exhaust Coolsaet--Sticker's five classified classes. Their
 numbers of multiplicity-one points are `0,0,1,0,0`. The profile is
-impossible, reducing `p=23` from 203 to exactly 202 arithmetic profiles;
-the endpoint remains OPEN.
+impossible, reducing that subledger from 203 to exactly 202 profiles; the
+restored `u_0=9` branch is unaffected and the endpoint remains OPEN.
 
-**15.684 PROVED every positive residue at the `p=23,s=20` next all-finite
-endpoint is impossible and reduced residue zero from 1,247 exact profiles
-to 203, not residual (ii)**: paired-cube value floors exclude scaled mass
-12 and all height-at-most-three cases at mass 16. At height four, equality
-in the stabilizer identity forces vanishing on the middle shell; its exact
-23-dimensional restriction kernel factors as `(t-6)V_1`, and a
-two-replacement affine identity contradicts integrality. For residue zero,
-Segre's tangent envelope excludes all 363 arc profiles. The exhaustive
-complete-arc classification of `PG(2,23)`, a slack-to-arc repair bound, and
-an off-conic secant count exclude another 681 profiles. Exactly 203
-arithmetic profiles remain, so `p=23` is reduced but OPEN. The other
-endpoints `p=17,19`, later sizes, and the infinity-present remainder remain
-OPEN.
+**15.684 is `OPEN_RETRACTED_REDUCTION`, not a positive-residue close.** The
+corrected floor-plus-two ledger restores the admissible phase-zero residue
+`u_0=9`, with scaled mass 18 and an explicit slack-zero profile. Therefore
+the former claims that every positive residue is impossible and that the
+whole endpoint reduces `1,247 -> 203` are false.
+
+The residue-zero subledger remains reusable conditionally: paired-cube value
+floors exclude scaled mass 12 and the treated height cases at mass 16; within
+`u_0=0`, Segre's tangent envelope and the complete-arc/conic-core arguments
+exclude 1,044 of 1,247 profiles and leave 203. Propositions 15.685--15.687
+continue only inside that conditional subledger. Proposition 15.721
+independently excludes this all-finite boundary as a live gate by signed
+transport, so the retraction does not reopen the current gate. Residual (ii),
+Type I, and the limit remain OPEN.
 
 **15.683 PROVED the `p=41,s=34` next all-finite endpoint is impossible,
 not residual (ii)**: Proposition 15.681 removes all positive residues and
@@ -360,21 +422,20 @@ smaller in-scope primes `43,47,53`. Propositions 15.680--15.683 separately
 close `p=37,29,31,41`; the three endpoints `p=17,19,23`, later sizes, and
 the infinity-present remainder remain OPEN.
 
-**15.678 PROVED the exceptional `p=17,s=14` first all-finite survivor is
-impossible, completing this boundary size for every prime `p>=17`, not
-residual (ii)**: exact residue arithmetic leaves two pair-equality 14-arc
-profiles with common secant distribution `{7:6,6:8,1:1,0:3}`. Adjoining
-two of their three undetermined infinity points gives a 16-arc. Sticker's
-exhaustive `PG(2,17)` classification has a unique 16-arc class, represented
-by conic-minus-two; the third infinity point is off that conic and must lie
-on at least four surviving secants, a contradiction. The finite
-classification is an explicit external dependency.
+**15.678 is `OPEN_RETRACTED_REDUCTION`, not a `p=17` endpoint close.** The
+corrected census has 108 compatible profiles spanning 47 arc profiles. The
+retained unique-16-arc/conic argument excludes 14 of those arc profiles, but
+94 compatible profiles are not covered. The former “exactly two profiles,
+both arcs” premise and its endpoint theorem are false. Proposition 15.721
+independently excludes this all-finite boundary as a live gate by signed
+transport; the failed 15.678 route is retained only as historical geometry.
 
 **15.675/15.677 PROVED the same first survivor for every prime `p>=19`**:
 15.675 closes `p=3,5 mod 8` by positive pair gaps and 15.677 closes the outer
-classes from `p=23` by the zero-quotient lift contradiction. Proposition
-15.678 supplies the formerly exceptional residue-zero endpoint. Proposition
-15.679 closes the next size from `p=43`, 15.680 closes its `p=37` endpoint,
+classes from `p=23` by the zero-quotient lift contradiction. The historical
+15.675--15.678 chain does not close `p=17`; 15.721 later supersedes the whole
+all-finite gate by signed transport. Proposition 15.679 closes the next size
+from `p=43`, 15.680 closes its `p=37` endpoint,
 15.681 closes `p=29`, 15.682 closes `p=31`, and 15.683 closes `p=41`; three
 smaller endpoints, subsequent all-finite sizes, infinity-present remainder,
 residual (ii), Type I, R1, global QVAR, and L remain OPEN.
@@ -884,7 +945,9 @@ k≥7) **and** principal ||δ||² / R1 are proved for all p≥5. Per-stratum
 k≥7 is false at (41,7). Fail-eqs: drop 16 in QVAR; 32↦16 in λ_exc; drop
 q+5 in V_sph; n-14↦n-6 in B_min. Uniform Paley E[S²]<20+12/p is false
 (p=5 leftover witness 25.17>22.4). Leftover 2/3 False. Gsum / pairing
-/ Aut-Schur False. L OPEN. Live `e1` is still the old AND.
+/ Aut-Schur False. L OPEN. Current API correction:
+`e1_closed_general()` is the global gate and is False; the historical bounded
+AND is named only by `e1_bounded_residual_split_closed()` and is True.
 
 **15.597 Theorem A* PROVED** (not a leftover close): Φ_part = λ̄ I on Z
 for every prime p≥5. Leftover 1 ⇔ Φ_δ ⪰ −(2n+20)/(n−6) I. Corollaries:
@@ -910,18 +973,23 @@ gives 1_QR ∈ rowspan(S) (p≡3) or rowspan(S)+span{ℓ} (p≡1). 15.406 E
 stays OPEN; single-orbit Aut_e spanning is false at p=5.
 
 `tr(Phi^2)=4||M||_F^2-3n^2+2n^2(n-1)/p^2` is a proved identity, not a
-bound (TECHNICAL_NOTES §4). Leftover 3 next target: p=5 finite from C;
-p≥7 `|μ|≤2/n` on |κ|=1 would close Type I (strictly stronger than L;
-census 109/2863 vs 2/50 at p=7). Not imported. `|μ|≤|f4|` false at p=7.
+bound (TECHNICAL_NOTES §4). Leftover 3 has two independent far-class
+targets. For p≥7, `|μ|≤2/n` on |κ|=1 would close the |κ|=1 half
+(strictly stronger than L; census 109/2863 vs 2/50 at p=7), but the
+|κ|=3 half additionally needs
+`χ_d((2p−1)μ+(p−2)ν)>−(p−2)/p` for the nonparticular δ remainder.
+p=5 is finite from C. Neither general target is imported. `|μ|≤|f4|`
+is false at p=7.
 
 Remaining Max+-free estimates isolated in
 `evidence/NOTE_2026-08-21_remaining_general_p_estimates.md` and HANDOFF
 2026-08-21: leftover 1 is QVAR k≥7 plus principal δ-room; leftover 2 is
 leftover+splus at k=4p (Walsh interior 4-level only; Paley ES2 majorant
-dead); leftover 3 is `|μ|≤L` or, for p≥7, `|μ|≤2/n`. p=13 orbits are
-not a close.
+dead); leftover 3 requires both the |κ|=1 bound `|μ|≤L` (or, for
+p≥7, `|μ|≤2/n`) and the separate |κ|=3 signed (μ,ν) inequality.
+p=13 orbits are not a close.
 
-HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Three leftovers remain (Lemma D is True). Ensemble \(Q_\tau\) and \(D=\lvert H_+\rvert/(2p)\) are unnamed in \(p\); \(\phi_F\) is not imported. 15.564: \(F=-2(3p^2+2)\). 15.573–15.575, 15.581–15.582: exclusive mix and named \(\mu_{1d}\), \(\mu_{k=3}\) give \(p=5\) \(Q_{++}/q^2=48/13<26/7\); the mix is not a general \(Q_\tau\). 15.578: \(2\chi\) fourth moment \(4p/(p-1)\); \(p=7\) occupancy mix is not a \(p\)-law. 15.585: leftover+\(s_+\) at \(k=4p\) forces \(\min_+=2\). 15.559 / 15.565 / 15.577 / 15.580: Aut\(_e\), Max± of \(C\), 1D Johnson, and Galois+\(F\) do not kill multi-level Type I. Pointwise \(Q^{++}\le4q^2\) fails on a positive fraction of Max+ at \(p=5,7\). Live `e1` is still the old AND. 15.558: \(J_{\mathrm{all}}=(1/8)\sum\chi_\Omega^{|\varepsilon|}S_\varepsilon\) and \(J_T\) via \(S_\Omega\); \(G_3=G_{02}+q^{-3}\sum_T Q_{3,T}J_T\); \(Q_{3,02}=-4N(2p^2+1)/p\) from \(F=-2(3p^2+2)\) certified \(p=5..23\). \(Q_{3,T}\) still live except generic. 15.559: Aut_e DEAD as a name of \(A_{\mathrm{full}}\) (inversion mixes full-Ω at p=7). 15.560: leftover+splus empty nF=0 at p=5 \(k=26,28,30\). 15.550: \(S(\lambda)=\mathrm{Kl}(1,\lambda^2/4)\) on every odd \(q\) (fail \(\pm G\), drop \(1/4\), \(\mathrm{Kl}(1,\lambda)\)). 15.553: Term0 of \(K_\lambda^{\mathrm{all}}\) is \(N(1+p^{-1}\sum_{\delta\neq0}\chi(\delta)e_{-\xi}(\delta)\mathrm{Kl}(1,r^2\xi^2\delta^2/16)^2)\); Term0/\(N=5,101,197,485\) at \(p=5,7,11,13\); fail drop \(\chi\); fail \(\mathrm{Kl}\mapsto G\); fail drop \(1/16\) at \(p\ge7\) (\(16=1\) in \(\mathbb F_5\)). Term0 is not the bulk (\(650\) vs \(249050\)). 15.551: \(\hat z\)-support is a Galois union of \(\Omega\)-lines; 1-line iff \(r\in\mathbb F_p\). 15.552: leftover+splus empty nF=9,11–13 at p=5 \(k=22\); nF=10 TLE. 15.549: \(K_\lambda=K_\lambda^{\mathrm{all}}-Nq(3q-5)\) with \(K_\lambda^{\mathrm{all}}\) the unrestricted Paley 4-linear (\(\chi(0)=0\)). Fail drop the Gauss collision; fail subtract only \(2Nq(q-2)\). \(K_\lambda^{\mathrm{all}}\) Ω-bulk not a p-law. 15.548: \(H_+\) 2-point \(G(a,b)=(N/p)\chi(b-a)\) on \(\mathbb F_q\); \(|\kappa|=3\) layer of the y-first 4-linear is \(K_3=(K_1+K_\lambda+K_{1-\lambda}+K_{\lambda(1-\lambda)})/4\). At p=5 \(K_3=83350\), \(K_\lambda=21550\), \(K_{1-\lambda}=K_{\lambda(1-\lambda)}=111550\). Fail \(G\equiv0\); fail drop the \(\lambda(1-\lambda)\) channel (\(55462.5\neq83350\)). The \(\chi(\lambda)\chi(1-\lambda)=+1\) bucket (100150) is not \(I_3\). \(K_\lambda\) unnamed in \(p\). \(16pA\) / \(Q_\tau\) still open. 15.547: leftover+splus at p=5 \(k=22\) (even \(>4p\)) is empty for nF=0,3,4,5,6,7,8,14 (HiGHS Infeasible, \(S\ge2\); nF=8 in 814s/119211 nodes). leftover-only official nF=3 exists (min\(_+=-8\)). leftover-only nF=1,2 and \(\ge15\) empty. nF=10 TLE and other even \(k>4p\) stay open. Fail: leftover-only empty. residual_ii_k_eq_4p_empty stays False. **Three leftovers remain** (Lemma D already True). 15.545: \(\mathrm{NUM\_SUM}=n_{1d}Q_{1d}^{++}+M_{\mathrm{NL}}\) and \(M_{\mathrm{NL}}=16pA-n_{1d}Q_{1d}^{++}\) hits live \(1280/3\), \(61936/3\). Fail drop 1D; fail drop \(3k\); fail \(Q_{1d}^{\mathrm{sub}}\). \(16pA\) still only live at p=5,7. 15.546: p=7 \(|\mu_{\mathrm{full}}|\le(4p+1)/(15p^2)=29/735\), \(|\mu_{\mathrm{part}}|\le(p-2)/(3p^2)=5/147\). Mix \(109/2863<|T|=5/91\), sharp. Fail: \(|\mu_{\mathrm{full}}|=1/p^2\); fail drop 15 in the full majorant (bound \(283/2863>|T|\)). Aut_e \(G>T\) on the p=7 ensemble. \(S(\rho)\) does not pin the three full magnitudes. Open for \(p\ge11\). 15.544: p=5 \(|\mu_{\mathrm{full}}|=1/p^2\) on all 1800 \(|\kappa|=1\) (sign not \(\kappa/p^2\)). Mix \(|\mu|\le3/65<|T|\). Fail: drop full-Ω (\(|\mu|=T\)). p=7 \(\mu_{\mathrm{full}}\in\{13,17,29\}/(15p^2)\), not a \(p\)-law. Aut_e \(p\ge11\) open. 15.543: Type+ 1D 3-point \(\mu_{1d}=\kappa/(p(p-2))\) on \(|\kappa|=1\). Fail \(\kappa/p^2\); fail \(T\) at p=7. \(|\mu_{1d}|\le|T|\) for \(p\ge5\), equality iff \(p=5\). Does not close Aut_e (free \(\mu\) unnamed). \(A_{\mathrm{full}}\) still not a \(p\)-law. 15.542: ns \(\mu\)-half-net count equals \(|H_+|\) at p=5 and p=7 (130, 5726; converse of 15.305 C, not p=5-only). Fail \(n_{\mathrm{hn}}=n_{1d}\); fail extra half-nets at p=7. Hence \(n_{\mathrm{free}}=(n_{\mathrm{hn}}-n_{1d})/q=c_{\mathrm{eq}}(p-1)\) live. Not a theorem for \(p\ge11\). 15.541: \(c_{\mathrm{eq}}=\lfloor(4Ap(p^2-5)-n_{1d}(p^2-9))/(p^2(p-1)(p^2-9))\rfloor\). Fail ceil; fail drop \(p^2-9\) at p=7 (\(20\neq19\)). Names the Hoffman endpoint, not live \(c\) for \(p\ge11\). 15.539: \(n_{\mathrm{free}}=c(p-1)\Leftrightarrow D=D_{\mathrm{lattice}}(c)\). Live pin \(c=c_{\mathrm{eq}}\) only at p=5,7. Fail \(u=c\); fail \(c_{\min}\) at p=7 (\(108\neq114\)). Not a theorem for \(p\ge11\). 15.507 is \(p\equiv1\) only. Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.535: twisted \(\sigma(x)=a\bar x+b\), \(a=\pm v^{1-p}\), \(N(a)=1\), \(b+a\bar b=0\), freely pairs \(T_{\mathrm{ns}}\)-orbits at p=7 (all 14) and at no p=5 (0/10; fix\(\in\{2,30\}\), inv\(\in\{2,6\}\)). Fail: \(a=+\) free at p=5. \(D=n_{\mathrm{orb}}/2\) is a free \(\langle T_{\mathrm{ns}},\sigma\rangle\) count only for \(p\equiv3\). 15.533: Aut\(_\infty\) involutions do not freely pair \(T_{\mathrm{ns}}\)-orbits. \(n_{\mathrm{inv}}(x\mapsto-x)=2\cdot3^{C((p-1)/2,2)}\) (15.509 Fix; 6,54). Frob \(n_{\mathrm{inv}}=2,218\); Frob\(\circ(-\mathrm{id})=22,218\). Fail \(n_{\mathrm{inv}}=0\); fail \(n_{\mathrm{inv}}=n_{1d}/p\) at p=7. \(D=n_{\mathrm{orb}}/2\) is not a named pairing. 15.532: \(T_v\) is free on \(H_+\) iff \(\chi_q(v)=-1\). \(\mathrm{Fix}(T_v)=\binom{p}{m}\) on square lines, 0 on nonsquare lines (Type− ⊄ \(H_+\), 15.451 C). Fail: \(T_1\) free. Hence \(|H_+|=p\,n_{\mathrm{orb}}(T_{\mathrm{ns}})\) and live \(n_{\mathrm{orb}}=2D\). The pairing that names \(D=n_{\mathrm{orb}}/2\) is still open. 15.531: 15.527 axis-only \(n_R\) is not translation-invariant (p=7: 16 on min-key vs 20 on any member). Lin-form affine occupancy is all of \(n_{\mathrm{free}}\) (4=4, 114=114) by 15.305 C; fail \(n_X^{\mathrm{lin}}=98\). Random \(k\)-subsets are lin-affine at rate \(0.183\)/\(0.012\), not 1. Occupancy splits cannot name \(n_{\mathrm{free}}\). 15.527: free \(H_+\) orbits split affine-R plus leftover, \(n_{\mathrm{free}}=n_R+n_X=(4,0)\) at p=5 and \((16,98)\) at p=7. Fail: \(n_R=p-1\) at p=7; fail \(n_X=0\) at p=7. \(n_R,n_X\) unnamed. 15.528: leftover+s₊=2 at p=5 \(k=20\) is empty for nF∈[7,20] (HiGHS Infeasible, \(S\ge2\), 1739s, 493277 nodes). leftover-only nF=8 exists. Combined with nF=0..6, leftover+splus is empty for all nF at p=5 \(k=20\). Fail: leftover-only empty. even \(k>4p\) with far stays open. 15.526: \(\mathbb F_q^+\) splits \(H_+\) into Type+ 1D (size \(n_{1d}\), size-\(p\) orbits) and free NL orbits (size \(q\), \(n_{\mathrm{free}}=4,114\)). Hence \(D=n_{1d}/(2p)+(p/2)n_{\mathrm{free}}\). Fail: \(n_{\mathrm{free}}=0\); fail \(n_{\mathrm{free}}=p-1\) at p=7; fail \(|H_+|=n_{1d}\). \(n_{\mathrm{free}}\) unnamed. 15.525: type-index even-character Gram \(G_{\tau\sigma}=((q-1)/2)(|\tau\cap\sigma|+|\tau\cap(-\sigma)|)-2|\tau||\sigma|\) is named (certified p=5..19). Live \(\delta\) is not an eigenvector (p=5 merged wedge \(17792\neq0\)). Catalog p-laws miss \(D=N(a+bi)\) at both p=5,7 (\((p-1)/2\) names \((2,3)\); nothing names \((3,20)\)). \(|J(\chi,\psi)|^2=q\neq D\). Fail: drop the minus intersection; claim the p=5 wedge vanishes; claim \(D=\dim V_+\). Ensemble \(Q_\tau\) unnamed. \(\phi_F\) not imported. 15.540: \(A_{1d}(r)=-4p^3/(p-2)\) on \(r\in\mathbb F_p\) (\(1+r\neq0\)), else 0. Fail: same value off \(\mathbb F_p\). \(A_{\mathrm{part}}(\mathbb F_p)=0\), \(A_{\mathrm{part}}(\mathrm{off})=-2p^3/3\) (p=7). \(A_{\mathrm{full,dbl}}=0\) at p=5, \(-4p^3/15\) at p=7 — not a \(p\)-law. \(A_{\mathrm{free,dbl}}=-4p^3/19\) at p=7 is D-free as a fraction but 19 is unnamed. Still den 13,409. 15.538: \(\sum_{\xi\in\Omega}\psi(\alpha\xi)=(-1+\chi_\Omega\chi(\alpha)G)/2\) (\(\alpha\neq0\)). Type+ 1D \(A_{\mathrm{dbl}}=-4p^3/(p-2)\) (Johnson \(E[\hat\varepsilon(1)^2\hat\varepsilon(-2)]=-2(p+1)/(p-2)\)). Fail: drop \(\chi(\alpha)\); \(-4p^3/(p+1)\). \(A_{\mathrm{free,dbl}}=0\) at p=5, \(-1372/19\) at p=7, so \(A\) is not 1D-only. Still den 13,409. 15.536: on \(\Omega\)-triples \(I=p\,S(r/(1+r))\). Doubles are CM: \(I_{\mathrm{dbl}}=p\,S(-1)=p(2p-a_p^2)\), equals \(2p^2\) iff \(p\equiv3\pmod4\). Fail: \(I=GS\) (p=5 dbl \(-30\neq30\)); \(I_{\mathrm{dbl}}=2p^2\) at p=5 (\(30\neq50\)). Generic \(S\) on distinct triples is not a \(p\)-law (\(-10\), \(-2\), split \(\{-10,6,22\}\) at p=11). \(\Delta_{\mathrm{conn}}\) still has den 13,409. 15.534: \(I(\eta,\theta)=G(\chi)\chi(\theta)S(-\eta/\theta)\) for \(\theta\neq0\); \(I(\eta,0)=-\chi(\eta)G\); \(S(0)=S(1)=-1\). Fail: drop \(\chi(\theta)\); \(G\equiv p\); \(I\) a single \(p\)-law (\((1,1)\) is \(-30\) at \(p=5\), \(98=2p^2\) at \(p=7\)). 3-\(\chi\) types do not pin \(S\) (p=5 type \((-1,-1,+1)\) has \(S\in\{-6,2\}\)). Live \(\Delta_{\mathrm{conn}}\) still has den 13,409. 15.529: \(\Delta_{\mathrm{conn}}=2G/((p^2-1)p^6)\sum_{\Omega}AI\) equals \(-328/65\), \(-1144/2863\). Fail: drop \(q^{-3}\). A still has den 13,409. 15.523: \(\sum_{x\neq y\neq0}\chi(x)\chi(y)\kappa\psi_\xi(x-y)=3p\,\chi_p(-1)\chi(\xi)\). Fail: drop one pairing. `type_I_multilevel_bad_case_ND_closed` stays False. 15.522: at p=5,7 every off-pm1 15.290 type has \((Q_\tau/q^2)\cdot D=a^2+2b^2\) in \(\mathbb Z[\sqrt{-2}]\). Fail: the same in \(\mathbb Z[i]\) (p=5 \(++\) gives 48, not a sum of two squares). \((a,b)\) unnamed (`10p-46` interpolates \(a_{++}\) at \{5,7\}). Ensemble \(Q_\tau\) still unnamed as a Gauss/Jacobi formula. \(\phi_F\) not imported. 15.528: leftover+s₊=2 at p=5 \(k=20\) is empty for nF∈[7,20] (HiGHS Infeasible, \(S\ge2\), 1739s, 493277 nodes). leftover-only nF=8 exists. Combined with nF=0..6, leftover+splus is empty for all nF at p=5 \(k=20\). Fail: leftover-only empty. The 0.4s \(S\equiv2\) harvest is not this certificate. even \(k>4p\) with far stays open. 15.524: nF=7 Infeasible. 15.521: nF=4,5,6 Infeasible. 15.520: p=11 leftover-\(2p\) Fejer equals \(904/45\) by Johnson partition + 15.519. Fail: \(832/45\) (integer-hat2 rounding); fail: leftover-\(2p\) at p=7; fail: same constant at p=19. Ensemble \(Q_\tau\) unnamed. \(\phi_F\) not imported. 15.519: QR0 \(Q=2(p+1)\) on \(\mathbb F_p^\times\) for \(p\equiv3\pmod4\). 15.518: p=11 affine leftover includes stab \(=2p\). 15.517: p=5 \(H_+\) \(W\)-hist is the two-orbit law \(\{20,24,36,40\}=15:50:50:15\), so \(\mathrm{Var}(W)=\mathrm{Var}_{2\mathrm{orb}}=660/13\). Fail: same 4-point support or \(\mathrm{Var}=\mathrm{Var}_{2\mathrm{orb}}\) at p=7. Does not prove \(\mathrm{Var}\le\mathrm{Var}_{2\mathrm{orb}}\) for \(p\equiv1\). 15.516: ensemble \(L_{\mathrm{ns\_mix}}=\mu_+\mu_-\). \(Q_\tau\) unnamed. \(\phi_F\) not imported. Live `e1` is still the old AND. \(L=\tfrac12\) is **not settled**.
+HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Three leftovers remain (Lemma D is True). Ensemble \(Q_\tau\) and \(D=\lvert H_+\rvert/(2p)\) are unnamed in \(p\); \(\phi_F\) is not imported. 15.564: \(F=-2(3p^2+2)\). 15.573–15.575, 15.581–15.582: exclusive mix and named \(\mu_{1d}\), \(\mu_{k=3}\) give \(p=5\) \(Q_{++}/q^2=48/13<26/7\); the mix is not a general \(Q_\tau\). 15.578: \(2\chi\) fourth moment \(4p/(p-1)\); \(p=7\) occupancy mix is not a \(p\)-law. 15.585: leftover+\(s_+\) at \(k=4p\) forces \(\min_+=2\). 15.559 / 15.565 / 15.577 / 15.580: Aut\(_e\), Max± of \(C\), 1D Johnson, and Galois+\(F\) do not kill multi-level Type I. Pointwise \(Q^{++}\le4q^2\) fails on a positive fraction of Max+ at \(p=5,7\). Current API: `e1_closed_general()` is the global False gate; only `e1_bounded_residual_split_closed()` records the bounded True. 15.558: \(J_{\mathrm{all}}=(1/8)\sum\chi_\Omega^{|\varepsilon|}S_\varepsilon\) and \(J_T\) via \(S_\Omega\); \(G_3=G_{02}+q^{-3}\sum_T Q_{3,T}J_T\); \(Q_{3,02}=-4N(2p^2+1)/p\) from \(F=-2(3p^2+2)\) certified \(p=5..23\). \(Q_{3,T}\) still live except generic. 15.559: Aut_e DEAD as a name of \(A_{\mathrm{full}}\) (inversion mixes full-Ω at p=7). 15.560: leftover+splus empty nF=0 at p=5 \(k=26,28,30\). 15.550: \(S(\lambda)=\mathrm{Kl}(1,\lambda^2/4)\) on every odd \(q\) (fail \(\pm G\), drop \(1/4\), \(\mathrm{Kl}(1,\lambda)\)). 15.553: Term0 of \(K_\lambda^{\mathrm{all}}\) is \(N(1+p^{-1}\sum_{\delta\neq0}\chi(\delta)e_{-\xi}(\delta)\mathrm{Kl}(1,r^2\xi^2\delta^2/16)^2)\); Term0/\(N=5,101,197,485\) at \(p=5,7,11,13\); fail drop \(\chi\); fail \(\mathrm{Kl}\mapsto G\); fail drop \(1/16\) at \(p\ge7\) (\(16=1\) in \(\mathbb F_5\)). Term0 is not the bulk (\(650\) vs \(249050\)). 15.551: \(\hat z\)-support is a Galois union of \(\Omega\)-lines; 1-line iff \(r\in\mathbb F_p\). 15.552: leftover+splus empty nF=9,11–13 at p=5 \(k=22\); nF=10 TLE. 15.549: \(K_\lambda=K_\lambda^{\mathrm{all}}-Nq(3q-5)\) with \(K_\lambda^{\mathrm{all}}\) the unrestricted Paley 4-linear (\(\chi(0)=0\)). Fail drop the Gauss collision; fail subtract only \(2Nq(q-2)\). \(K_\lambda^{\mathrm{all}}\) Ω-bulk not a p-law. 15.548: \(H_+\) 2-point \(G(a,b)=(N/p)\chi(b-a)\) on \(\mathbb F_q\); \(|\kappa|=3\) layer of the y-first 4-linear is \(K_3=(K_1+K_\lambda+K_{1-\lambda}+K_{\lambda(1-\lambda)})/4\). At p=5 \(K_3=83350\), \(K_\lambda=21550\), \(K_{1-\lambda}=K_{\lambda(1-\lambda)}=111550\). Fail \(G\equiv0\); fail drop the \(\lambda(1-\lambda)\) channel (\(55462.5\neq83350\)). The \(\chi(\lambda)\chi(1-\lambda)=+1\) bucket (100150) is not \(I_3\). \(K_\lambda\) unnamed in \(p\). \(16pA\) / \(Q_\tau\) still open. 15.547: leftover+splus at p=5 \(k=22\) (even \(>4p\)) is empty for nF=0,3,4,5,6,7,8,14 (HiGHS Infeasible, \(S\ge2\); nF=8 in 814s/119211 nodes). leftover-only official nF=3 exists (min\(_+=-8\)). leftover-only nF=1,2 and \(\ge15\) empty. nF=10 TLE and other even \(k>4p\) stay open. Fail: leftover-only empty. residual_ii_k_eq_4p_empty stays False. **Three leftovers remain** (Lemma D already True). 15.545: \(\mathrm{NUM\_SUM}=n_{1d}Q_{1d}^{++}+M_{\mathrm{NL}}\) and \(M_{\mathrm{NL}}=16pA-n_{1d}Q_{1d}^{++}\) hits live \(1280/3\), \(61936/3\). Fail drop 1D; fail drop \(3k\); fail \(Q_{1d}^{\mathrm{sub}}\). \(16pA\) still only live at p=5,7. 15.546: p=7 \(|\mu_{\mathrm{full}}|\le(4p+1)/(15p^2)=29/735\), \(|\mu_{\mathrm{part}}|\le(p-2)/(3p^2)=5/147\). Mix \(109/2863<|T|=5/91\), sharp. Fail: \(|\mu_{\mathrm{full}}|=1/p^2\); fail drop 15 in the full majorant (bound \(283/2863>|T|\)). Aut_e \(G>T\) on the p=7 ensemble. \(S(\rho)\) does not pin the three full magnitudes. Open for \(p\ge11\). 15.544: p=5 \(|\mu_{\mathrm{full}}|=1/p^2\) on all 1800 \(|\kappa|=1\) (sign not \(\kappa/p^2\)). Mix \(|\mu|\le3/65<|T|\). Fail: drop full-Ω (\(|\mu|=T\)). p=7 \(\mu_{\mathrm{full}}\in\{13,17,29\}/(15p^2)\), not a \(p\)-law. Aut_e \(p\ge11\) open. 15.543: Type+ 1D 3-point \(\mu_{1d}=\kappa/(p(p-2))\) on \(|\kappa|=1\). Fail \(\kappa/p^2\); fail \(T\) at p=7. \(|\mu_{1d}|\le|T|\) for \(p\ge5\), equality iff \(p=5\). Does not close Aut_e (free \(\mu\) unnamed). \(A_{\mathrm{full}}\) still not a \(p\)-law. 15.542: ns \(\mu\)-half-net count equals \(|H_+|\) at p=5 and p=7 (130, 5726; converse of 15.305 C, not p=5-only). Fail \(n_{\mathrm{hn}}=n_{1d}\); fail extra half-nets at p=7. Hence \(n_{\mathrm{free}}=(n_{\mathrm{hn}}-n_{1d})/q=c_{\mathrm{eq}}(p-1)\) live. Not a theorem for \(p\ge11\). 15.541: \(c_{\mathrm{eq}}=\lfloor(4Ap(p^2-5)-n_{1d}(p^2-9))/(p^2(p-1)(p^2-9))\rfloor\). Fail ceil; fail drop \(p^2-9\) at p=7 (\(20\neq19\)). Names the Hoffman endpoint, not live \(c\) for \(p\ge11\). 15.539: \(n_{\mathrm{free}}=c(p-1)\Leftrightarrow D=D_{\mathrm{lattice}}(c)\). Live pin \(c=c_{\mathrm{eq}}\) only at p=5,7. Fail \(u=c\); fail \(c_{\min}\) at p=7 (\(108\neq114\)). Not a theorem for \(p\ge11\). 15.507 is \(p\equiv1\) only. Floor / Type I multi-level / residual (ii) \(k\ge4p\) still **OPEN**. 15.535: twisted \(\sigma(x)=a\bar x+b\), \(a=\pm v^{1-p}\), \(N(a)=1\), \(b+a\bar b=0\), freely pairs \(T_{\mathrm{ns}}\)-orbits at p=7 (all 14) and at no p=5 (0/10; fix\(\in\{2,30\}\), inv\(\in\{2,6\}\)). Fail: \(a=+\) free at p=5. \(D=n_{\mathrm{orb}}/2\) is a free \(\langle T_{\mathrm{ns}},\sigma\rangle\) count only for \(p\equiv3\). 15.533: Aut\(_\infty\) involutions do not freely pair \(T_{\mathrm{ns}}\)-orbits. \(n_{\mathrm{inv}}(x\mapsto-x)=2\cdot3^{C((p-1)/2,2)}\) (15.509 Fix; 6,54). Frob \(n_{\mathrm{inv}}=2,218\); Frob\(\circ(-\mathrm{id})=22,218\). Fail \(n_{\mathrm{inv}}=0\); fail \(n_{\mathrm{inv}}=n_{1d}/p\) at p=7. \(D=n_{\mathrm{orb}}/2\) is not a named pairing. 15.532: \(T_v\) is free on \(H_+\) iff \(\chi_q(v)=-1\). \(\mathrm{Fix}(T_v)=\binom{p}{m}\) on square lines, 0 on nonsquare lines (Type− ⊄ \(H_+\), 15.451 C). Fail: \(T_1\) free. Hence \(|H_+|=p\,n_{\mathrm{orb}}(T_{\mathrm{ns}})\) and live \(n_{\mathrm{orb}}=2D\). The pairing that names \(D=n_{\mathrm{orb}}/2\) is still open. 15.531: 15.527 axis-only \(n_R\) is not translation-invariant (p=7: 16 on min-key vs 20 on any member). Lin-form affine occupancy is all of \(n_{\mathrm{free}}\) (4=4, 114=114) by 15.305 C; fail \(n_X^{\mathrm{lin}}=98\). Random \(k\)-subsets are lin-affine at rate \(0.183\)/\(0.012\), not 1. Occupancy splits cannot name \(n_{\mathrm{free}}\). 15.527: free \(H_+\) orbits split affine-R plus leftover, \(n_{\mathrm{free}}=n_R+n_X=(4,0)\) at p=5 and \((16,98)\) at p=7. Fail: \(n_R=p-1\) at p=7; fail \(n_X=0\) at p=7. \(n_R,n_X\) unnamed. 15.528: leftover+s₊=2 at p=5 \(k=20\) is empty for nF∈[7,20] (HiGHS Infeasible, \(S\ge2\), 1739s, 493277 nodes). leftover-only nF=8 exists. Combined with nF=0..6, leftover+splus is empty for all nF at p=5 \(k=20\). Fail: leftover-only empty. even \(k>4p\) with far stays open. 15.526: \(\mathbb F_q^+\) splits \(H_+\) into Type+ 1D (size \(n_{1d}\), size-\(p\) orbits) and free NL orbits (size \(q\), \(n_{\mathrm{free}}=4,114\)). Hence \(D=n_{1d}/(2p)+(p/2)n_{\mathrm{free}}\). Fail: \(n_{\mathrm{free}}=0\); fail \(n_{\mathrm{free}}=p-1\) at p=7; fail \(|H_+|=n_{1d}\). \(n_{\mathrm{free}}\) unnamed. 15.525: type-index even-character Gram \(G_{\tau\sigma}=((q-1)/2)(|\tau\cap\sigma|+|\tau\cap(-\sigma)|)-2|\tau||\sigma|\) is named (certified p=5..19). Live \(\delta\) is not an eigenvector (p=5 merged wedge \(17792\neq0\)). Catalog p-laws miss \(D=N(a+bi)\) at both p=5,7 (\((p-1)/2\) names \((2,3)\); nothing names \((3,20)\)). \(|J(\chi,\psi)|^2=q\neq D\). Fail: drop the minus intersection; claim the p=5 wedge vanishes; claim \(D=\dim V_+\). Ensemble \(Q_\tau\) unnamed. \(\phi_F\) not imported. 15.540: \(A_{1d}(r)=-4p^3/(p-2)\) on \(r\in\mathbb F_p\) (\(1+r\neq0\)), else 0. Fail: same value off \(\mathbb F_p\). \(A_{\mathrm{part}}(\mathbb F_p)=0\), \(A_{\mathrm{part}}(\mathrm{off})=-2p^3/3\) (p=7). \(A_{\mathrm{full,dbl}}=0\) at p=5, \(-4p^3/15\) at p=7 — not a \(p\)-law. \(A_{\mathrm{free,dbl}}=-4p^3/19\) at p=7 is D-free as a fraction but 19 is unnamed. Still den 13,409. 15.538: \(\sum_{\xi\in\Omega}\psi(\alpha\xi)=(-1+\chi_\Omega\chi(\alpha)G)/2\) (\(\alpha\neq0\)). Type+ 1D \(A_{\mathrm{dbl}}=-4p^3/(p-2)\) (Johnson \(E[\hat\varepsilon(1)^2\hat\varepsilon(-2)]=-2(p+1)/(p-2)\)). Fail: drop \(\chi(\alpha)\); \(-4p^3/(p+1)\). \(A_{\mathrm{free,dbl}}=0\) at p=5, \(-1372/19\) at p=7, so \(A\) is not 1D-only. Still den 13,409. 15.536: on \(\Omega\)-triples \(I=p\,S(r/(1+r))\). Doubles are CM: \(I_{\mathrm{dbl}}=p\,S(-1)=p(2p-a_p^2)\), equals \(2p^2\) iff \(p\equiv3\pmod4\). Fail: \(I=GS\) (p=5 dbl \(-30\neq30\)); \(I_{\mathrm{dbl}}=2p^2\) at p=5 (\(30\neq50\)). Generic \(S\) on distinct triples is not a \(p\)-law (\(-10\), \(-2\), split \(\{-10,6,22\}\) at p=11). \(\Delta_{\mathrm{conn}}\) still has den 13,409. 15.534: \(I(\eta,\theta)=G(\chi)\chi(\theta)S(-\eta/\theta)\) for \(\theta\neq0\); \(I(\eta,0)=-\chi(\eta)G\); \(S(0)=S(1)=-1\). Fail: drop \(\chi(\theta)\); \(G\equiv p\); \(I\) a single \(p\)-law (\((1,1)\) is \(-30\) at \(p=5\), \(98=2p^2\) at \(p=7\)). 3-\(\chi\) types do not pin \(S\) (p=5 type \((-1,-1,+1)\) has \(S\in\{-6,2\}\)). Live \(\Delta_{\mathrm{conn}}\) still has den 13,409. 15.529: \(\Delta_{\mathrm{conn}}=2G/((p^2-1)p^6)\sum_{\Omega}AI\) equals \(-328/65\), \(-1144/2863\). Fail: drop \(q^{-3}\). A still has den 13,409. 15.523: \(\sum_{x\neq y\neq0}\chi(x)\chi(y)\kappa\psi_\xi(x-y)=3p\,\chi_p(-1)\chi(\xi)\). Fail: drop one pairing. `type_I_multilevel_bad_case_ND_closed` stays False. 15.522: at p=5,7 every off-pm1 15.290 type has \((Q_\tau/q^2)\cdot D=a^2+2b^2\) in \(\mathbb Z[\sqrt{-2}]\). Fail: the same in \(\mathbb Z[i]\) (p=5 \(++\) gives 48, not a sum of two squares). \((a,b)\) unnamed (`10p-46` interpolates \(a_{++}\) at \{5,7\}). Ensemble \(Q_\tau\) still unnamed as a Gauss/Jacobi formula. \(\phi_F\) not imported. 15.528: leftover+s₊=2 at p=5 \(k=20\) is empty for nF∈[7,20] (HiGHS Infeasible, \(S\ge2\), 1739s, 493277 nodes). leftover-only nF=8 exists. Combined with nF=0..6, leftover+splus is empty for all nF at p=5 \(k=20\). Fail: leftover-only empty. The 0.4s \(S\equiv2\) harvest is not this certificate. even \(k>4p\) with far stays open. 15.524: nF=7 Infeasible. 15.521: nF=4,5,6 Infeasible. 15.520: p=11 leftover-\(2p\) Fejer equals \(904/45\) by Johnson partition + 15.519. Fail: \(832/45\) (integer-hat2 rounding); fail: leftover-\(2p\) at p=7; fail: same constant at p=19. Ensemble \(Q_\tau\) unnamed. \(\phi_F\) not imported. 15.519: QR0 \(Q=2(p+1)\) on \(\mathbb F_p^\times\) for \(p\equiv3\pmod4\). 15.518: p=11 affine leftover includes stab \(=2p\). 15.517: p=5 \(H_+\) \(W\)-hist is the two-orbit law \(\{20,24,36,40\}=15:50:50:15\), so \(\mathrm{Var}(W)=\mathrm{Var}_{2\mathrm{orb}}=660/13\). Fail: same 4-point support or \(\mathrm{Var}=\mathrm{Var}_{2\mathrm{orb}}\) at p=7. Does not prove \(\mathrm{Var}\le\mathrm{Var}_{2\mathrm{orb}}\) for \(p\equiv1\). 15.516: ensemble \(L_{\mathrm{ns\_mix}}=\mu_+\mu_-\). \(Q_\tau\) unnamed. \(\phi_F\) not imported. Current API: `e1_closed_general()` is the global False gate; only `e1_bounded_residual_split_closed()` records the bounded True. \(L=\tfrac12\) is **not settled**.
 
 | Claim | Status | Reference |
 |-------|--------|-----------|
@@ -982,7 +1050,7 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 - **15.234 signed k=1 (2026-08-12):** **Proved Max+-free** 18 survivors, |per|≤18; Laplace along the shared column per=∑_{x≠a} C_{xa} per_3(C[S\{x},new]); trilinear in the three new vertices. Unsigned |R^{(1)}|≤12(p²−3)(p²−4)(p²−5) exceeds B for all p≥5. No predicate flip. Evidence: `src/e1_gmin_m4_prop15234.py`.
 - **15.235 signed k=0 (2026-08-12):** **Proved Max+-free** full 24-perm permanent; S₄ cycle-type split 1+6+3+8+6; 4-cycle inverse pairing (P_4cyc even, |P_4cyc|≤6). Unsigned 24·C(n−4,4) still exceeds B for all p≥5 (n=p²+1). Layer types named; residual (i)/E1/L still **OPEN**. Evidence: `src/e1_gmin_m4_prop15235.py`.
 - **15.236 residual (ii-b) ND CLOSED (2026-08-13):** Even \(k\le4p-2\) ⇒ max_Max− \(S\ge-2\); dichotomy weak-ND or dual-bad two-level; dual-bad empty by 15.50 slopes + \(v_p(|Max_\pm|)=1\). `residual_ii_b_ND_closed=True`. Evidence: `src/e1_gmin_m4_prop15236.py`.
-- **15.237 residual (ii-a) ND CLOSED (2026-08-13):** Dual-bad \(U=\{S=-4,f_e=-1\}\) is a 0-1 pair-span; L²=L ⇒ star or triangle; constants / pair-slices / triangle 3-equals cannot be U. `residual_ii_a_ND_closed=True`. `residual_ii_full_closed` = affine ∧ (ii-a) ∧ (ii-b). Residual (i) / E1 / L still **OPEN**. Evidence: `src/e1_gmin_m4_prop15237.py`.  
+- **15.237 bounded residual (ii-a) ND CLOSED (2026-08-13):** Dual-bad \(U=\{S=-4,f_e=-1\}\) is a 0-1 pair-span; L²=L ⇒ star or triangle; constants / pair-slices / triangle 3-equals cannot be U. `residual_ii_a_ND_closed=True`. Together with 15.179 and 15.236 this proves only `residual_ii_bounded_even_k_le_4p_minus_2_closed=True`. The global `residual_ii_full_closed` also requires the live even-`k>=4p` predicate and is `False`; residual (ii), E1, and L remain **OPEN**. Evidence: `src/e1_gmin_m4_prop15237.py`.
 - **15.238 Per-eigenrelations ⇒ Per μ_part Cy-FE (2026-08-13):** **Proved Max+-free** coefficient identity: if Per κ=p⁴κ−6φ and Per φ=(2n+1)φ, then Per μ_part=p⁴μ_part+2φ. Superseded as unconditional by 15.239. Evidence: `src/e1_gmin_m4_prop15238.py`.  
 - **15.239 Per φ / Per κ Max+-free eigenforms (2026-08-13):** **Proved** for any symmetric conference: Per φ=(2n+1)φ and Per κ=(n−1)²κ−6φ on every 4-set (inj+IE / matching collision calculus + C²). Paley: (n−1)²=p⁴ ⇒ **Per μ_part=p⁴μ_part+2φ** unconditional; on |κ|=1 Cy-FE ⇒ Per δ=p⁴δ (structure). **OPEN:** |μ|≤1/(2p). No predicate flip. Evidence: `src/e1_gmin_m4_prop15239.py`.  
 - **15.240 maj≤2/n + envelope criterion (2026-08-13):** **Proved** maj≤2/n for all primes p≥5 (cubic p³−3p²−5p−9). **Proved** criterion: envelope |μ|≤max(|μ_part|,|f4|) on |κ|=1 ⇒ |μ|≤2/n≤1/(2p) ⇒ residual-(i) Farkas. Free-e_sc budget recall (needs ker=sc). **OPEN:** envelope hypothesis / ker=sc (λ_*) / M_cand. No predicate flip. Evidence: `src/e1_gmin_m4_prop15240.py`.  

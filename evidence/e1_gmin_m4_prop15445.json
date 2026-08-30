@@ -83,7 +83,7 @@
     "D": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "need_L_ratio_p5": "9/5",
       "note": "Q++\u2265Q_N* iff L++/LN*\u22659/5 at p=5. Unproved. Q_\u03c4 unnamed. phi_F not imported."

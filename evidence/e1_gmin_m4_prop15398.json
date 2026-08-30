@@ -83,7 +83,7 @@
       "Q_T_5": "64/15",
       "Q_T_gt_4": true,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "p\u22611 floor reduces to Q++\u2265Q_N* and Q++\u2264Q^{ub} (Q++\u22644 would serve for p\u226513). Neither is Max+-free. phi_F not imported."
     }

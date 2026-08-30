@@ -198,7 +198,7 @@
       "F1_maxplus_free": false,
       "Q_tau_named_in_p": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "rhat": false,
       "note": "Hasse |H|\u22642\u221ap holds.  C is named in (p,H).  A_\u25a1 remains a linear form in the ensemble F_c.  phi_F not imported.",
       "open_319": "A_\u25a1 is a named-Kl linear image of the U-form factors. C(s) for s\u22601 still carries the unnamed \u03c7-Kloosterman convolution.  Q_\u03c4 / phi_F stay OPEN."
@@ -207,7 +207,7 @@
       "proved": false,
       "phi_F_ge_6": false,
       "rhat": false,
-      "e1": true,
+      "e1": false,
       "A_square_named": false,
       "F1_maxplus_free": false,
       "Q_tau_named_in_p": false,

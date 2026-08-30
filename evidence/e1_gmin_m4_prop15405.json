@@ -40,7 +40,7 @@
       "proved": false,
       "catalog_mix_hits_live": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "N+-free mixes of S(p) miss ensemble Q++. Live mix still uses |O_\u03c4|/N+. phi_F not imported."
     }

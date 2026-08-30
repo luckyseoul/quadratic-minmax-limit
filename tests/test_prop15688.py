@@ -28,6 +28,7 @@ def test_p19_positive_residues_are_removed_and_zero_remains():
         3,
         4,
         6,
+        7,
     ]
     assert {r["u1"] for r in row["pair_survivors_before_new_floor"]} == {9}
     assert [r["zero_quotient_scaled_mean"] for r in row["positive_residue_rows"]] == [
@@ -35,9 +36,11 @@ def test_p19_positive_residues_are_removed_and_zero_remains():
         6,
         8,
         12,
+        14,
     ]
     assert all(r["therefore_b_zero"] for r in row["positive_residue_rows"])
     assert all(r["excluded"] for r in row["positive_residue_rows"])
+    assert row["newly_restored_residue"] == 7
     assert row["residue_zero_minimum_row"]["phase_zero_profile"] == {0: 5, 16: 5}
     assert row["residue_zero_minimum_row"]["phase_one_profile"] == {2: 9, 16: 1}
     assert row["residue_zero_minimum_pair_slack"] == 34

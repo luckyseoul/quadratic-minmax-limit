@@ -7,7 +7,7 @@
     "minus_2_over_p_does_not_suffice": true,
     "candidate_beats_star_sample": true,
     "gsum_disj_lb_proved_general": false,
-    "E1_closed": true,
+    "E1_closed": false,
     "L_closed": false
   },
   "algebra": {
@@ -115,7 +115,7 @@
   },
   "hinge": {
     "gsum_disj_lb_proved_general": false,
-    "e1_closed_general": true,
+    "e1_closed_general": false,
     "correct_mu_star": "(6/p-4)/k = (6-4p)/(p(3p-2))",
     "sufficient_targets": [
       "disj Gsum \u2265 -1/p (Fraction-sufficient for residual i Farkas)",

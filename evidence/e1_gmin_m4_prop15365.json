@@ -86,7 +86,7 @@
     "E": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "rhat": false,
       "Q_tau_named_in_p": false,
       "note": "Neighbours that hit p=5 die at p=7, so they do not imply <delta,psi> <= 2.  phi_F not imported."

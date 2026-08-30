@@ -4,22 +4,22 @@
 The second even all-finite size at p=17 is s=16.  Exact same-type
 quotient arithmetic and Proposition 15.688's sharp integral lift floor leave
 phase-zero residues 0,7,8 and phase-one residues 0,8.  Completion-bounded
-profile enumeration, the pair budget, and slack divisibility give 1,575
-phase-labelled rows, including 247 rows of pair slack zero.
+profile enumeration, the pair budget, and slack divisibility give 2,503
+phase-labelled rows, including 286 rows of pair slack zero.
 
 Slack zero makes the sixteen affine boundary points a projective 16-arc.
 Sticker's exhaustive PG(2,17) classification has one 16-arc class, represented
 by a conic with two points deleted.  Fixing one conic and enumerating every
 line at infinity and every eligible deleted pair gives 21,267 affine cases.
 Their exact Paley-phase directional census has 53 labelled profiles (including
-the nonsquare phase swap).  Only two of the 247 arithmetic profiles occur;
+the nonsquare phase swap).  Only two of the 286 arithmetic profiles occur;
 both are tangent-at-infinity conic-minus-two cases:
 
     phase 0 {0:1,2:7,16:1}, phase 1 {2:9};
     phase 0 {0:1,2:8},      phase 1 {2:8,16:1}.
 
-Thus 245 profiles are excluded and the exact p=17 remainder drops from 1,575
-to 1,330.  This is a strict reduction, not endpoint closure: the two conic
+Thus 284 profiles are excluded and the exact p=17 remainder drops from 2,503
+to 2,219.  This is a strict reduction, not endpoint closure: the two conic
 profiles and every positive-slack profile remain.
 """
 from __future__ import annotations
@@ -36,6 +36,7 @@ from e1_gmin_m4_prop15632 import field_direction_data, projective_directions
 from e1_gmin_m4_prop15669 import full_symbolic_floor
 from e1_gmin_m4_prop15678 import p17_arc_classification_ledger
 from e1_gmin_m4_prop15688 import sharp_integral_quadratic_lift_floor
+from e1_gmin_m4_prop15723 import floor_excess_admissible
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -65,7 +66,7 @@ def _profile_rows(
         floor = full_symbolic_floor(P, b, phase)
         for quotient in range(target + 1):
             excess = 2 * u + PERIOD * quotient - floor
-            if excess >= 0 and excess != 2:
+            if floor_excess_admissible(P, b, phase, excess):
                 options.append((quotient, S - b, b))
 
     infinity = deficit_cap + S * M + 1
@@ -130,7 +131,7 @@ def residue_and_lift_ledger() -> dict[str, object]:
         "1": {0: 0, 8: 112},
     }
     expected_counts = {
-        "0": {0: 375, 2: 540, 3: 300, 4: 144, 5: 100, 6: 28, 7: 15, 8: 73},
+        "0": {0: 565, 2: 540, 3: 300, 4: 144, 5: 100, 6: 40, 7: 15, 8: 73},
         "1": {0: 1, 8: 9},
     }
     if minima != expected_minima or row_counts != expected_counts:
@@ -223,15 +224,40 @@ def p17_second_boundary_profile_census() -> dict[str, object]:
     slack_zero_residues = dict(
         sorted(Counter((int(row["u0"]), int(row["u1"])) for row in slack_zero).items())
     )
+    expected_slack_prefix = {
+        0: 286,
+        4: 292,
+        8: 292,
+        12: 267,
+        16: 227,
+        20: 193,
+        24: 151,
+    }
     if (
-        len(candidates) != 1575
-        or len(slack_zero) != 247
+        len(candidates) != 2503
+        or len(slack_zero) != 286
+        or {
+            slack: int(slack_histogram.get(slack, 0))
+            for slack in expected_slack_prefix
+        }
+        != expected_slack_prefix
         or residue_histogram
-        != {(0, 0): 181, (0, 8): 1062, (7, 0): 9, (7, 8): 9, (8, 0): 37, (8, 8): 277}
-        or slack_zero_residues != {(0, 8): 234, (7, 8): 4, (8, 8): 9}
+        != {
+            (0, 0): 275,
+            (0, 8): 1896,
+            (7, 0): 9,
+            (7, 8): 9,
+            (8, 0): 37,
+            (8, 8): 277,
+        }
+        or slack_zero_residues != {(0, 8): 273, (7, 8): 4, (8, 8): 9}
     ):
         raise ArithmeticError("p=17 second-boundary profile census changed")
     canonical = json.dumps(candidates, sort_keys=True, separators=(",", ":"))
+    canonical_sha256 = hashlib.sha256(canonical.encode()).hexdigest()
+    expected_sha256 = "48632c09fdf9ed38d4f8608aeb0251bd29af2ac7b5fb81d090657a8ed20793b9"
+    if canonical_sha256 != expected_sha256:
+        raise ArithmeticError("p=17 corrected profile hash changed")
     return {
         "p": P,
         "boundary_size": S,
@@ -241,7 +267,7 @@ def p17_second_boundary_profile_census() -> dict[str, object]:
         "residue_pair_histogram": residue_histogram,
         "slack_zero_profile_count": len(slack_zero),
         "slack_zero_residue_pair_histogram": slack_zero_residues,
-        "canonical_profile_sha256": hashlib.sha256(canonical.encode()).hexdigest(),
+        "canonical_profile_sha256": canonical_sha256,
         "profiles": candidates,
         "residue_and_lift_ledger": ledger,
         "proved": True,
@@ -370,11 +396,17 @@ def p17_slack_zero_conic_reduction() -> dict[str, object]:
     classification = p17_arc_classification_ledger()
     if int(classification["pgl_classes_in_pg2_17"]["16"]) != 1:
         raise ArithmeticError("p=17 16-arc classification changed")
-    slack_zero = [
-        row for row in arithmetic["profiles"] if int(row["pair_slack"]) == 0
+    indexed_slack_zero = [
+        (index, row)
+        for index, row in enumerate(arithmetic["profiles"])
+        if int(row["pair_slack"]) == 0
     ]
     geometric_keys = geometry["profiles"]
-    survivors = [row for row in slack_zero if _key_from_row(row) in geometric_keys]
+    survivors = [
+        (index, row)
+        for index, row in indexed_slack_zero
+        if _key_from_row(row) in geometric_keys
+    ]
     expected = [
         ({0: 1, 2: 7, 16: 1}, {2: 9}),
         ({0: 1, 2: 8}, {2: 8, 16: 1}),
@@ -384,31 +416,52 @@ def p17_slack_zero_conic_reduction() -> dict[str, object]:
             dict(row["phase_profiles_b"]["0"]),
             dict(row["phase_profiles_b"]["1"]),
         )
-        for row in survivors
+        for _index, row in survivors
     ]
-    if observed != expected or any((row["u0"], row["u1"]) != (0, 8) for row in survivors):
+    if observed != expected or any(
+        (row["u0"], row["u1"]) != (0, 8) for _index, row in survivors
+    ):
         raise ArithmeticError("p=17 conic/arithmetic intersection changed")
     survivor_records = []
-    for row in survivors:
+    for census_index, row in survivors:
         key = _key_from_row(row)
         example = geometry["examples"][key]
         if int(example["line_conic_intersection_size"]) != 1:
             raise ArithmeticError("surviving p=17 conic profile is not tangent")
-        survivor_records.append({**row, "conic_example": example})
+        survivor_records.append(
+            {**row, "census_index": census_index, "conic_example": example}
+        )
     before = int(arithmetic["phase_labelled_profile_count"])
-    excluded = len(slack_zero) - len(survivors)
+    survivor_indices = {index for index, _row in survivors}
+    excluded_indices = [
+        index for index, _row in indexed_slack_zero if index not in survivor_indices
+    ]
+    remaining_indices = [
+        index
+        for index, row in enumerate(arithmetic["profiles"])
+        if int(row["pair_slack"]) != 0 or index in survivor_indices
+    ]
+    excluded = len(excluded_indices)
     after = before - excluded
-    if before != 1575 or excluded != 245 or after != 1330:
+    if (
+        before != 2503
+        or len(indexed_slack_zero) != 286
+        or excluded != 284
+        or after != 2219
+        or len(remaining_indices) != after
+    ):
         raise ArithmeticError("p=17 reduction accounting changed")
     return {
         "proposition": "15.700",
         "p": P,
         "boundary_size": S,
         "profile_count_before": before,
-        "slack_zero_profile_count_before": len(slack_zero),
+        "slack_zero_profile_count_before": len(indexed_slack_zero),
         "slack_zero_profile_count_after": len(survivors),
         "profiles_excluded_here": excluded,
         "profile_count_after": after,
+        "excluded_profile_indices_here": excluded_indices,
+        "remaining_profile_indices": remaining_indices,
         "surviving_slack_zero_profiles": survivor_records,
         "survivor_geometry": "conic minus its tangent point at infinity and one affine point",
         "all_positive_slack_profiles_remain": True,
@@ -441,7 +494,7 @@ def main() -> None:
     print(
         "Prop. 15.700: p=17 second-boundary profiles "
         f"{theorem['profile_count_before']} -> {theorem['profile_count_after']}; "
-        "slack zero 247 -> 2"
+        "slack zero 286 -> 2"
     )
     print(f"wrote {target}")
 

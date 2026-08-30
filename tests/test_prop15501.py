@@ -50,7 +50,7 @@ def test_flags_untouched():
     assert D["proved"] is False
     assert D["phi_F_imported"] is False
     assert D["p1_floor_unconditional"] is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     assert gsum_disj_lb_proved_general() is False
     assert phi_F_ge_6_proved_general() is False
     out = main()

@@ -83,7 +83,7 @@
       "proved": false,
       "phi_F_ge_6": false,
       "rhat": false,
-      "e1": true,
+      "e1": false,
       "Q_tau_named_in_p": false,
       "lambda_ge_6": false,
       "p5_Qpp_live": 3.6923076923076934,

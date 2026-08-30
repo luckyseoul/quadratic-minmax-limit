@@ -32,7 +32,7 @@ def test_not_all_s2_are_TR():
 def test_flags_untouched():
     C = prove_open()
     assert C["proved"] is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     assert gsum_disj_lb_proved_general() is False
     assert phi_F_ge_6_proved_general() is False
 

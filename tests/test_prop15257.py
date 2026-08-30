@@ -22,7 +22,7 @@ def test_det_formula():
 def test_predicates_open():
     assert residual_i_closed_via_257() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     h = hinge_status_257()
     assert h["schur_average_identity"] is False
     assert h["residual_i_closed"] is False

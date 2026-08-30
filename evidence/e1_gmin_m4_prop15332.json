@@ -133,7 +133,7 @@
     "E": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "rhat": false,
       "stab_embeds_in_U_rtimes_Frob": true,
       "stab_divides_pplus1_general": false,

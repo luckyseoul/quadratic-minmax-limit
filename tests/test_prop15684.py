@@ -1,9 +1,12 @@
+import json
 from fractions import Fraction
+from pathlib import Path
 
 from e1_gmin_m4_prop15684 import (
     conic_core_repair_lemma,
     line_pair_slack,
     low_value_cube_certificate,
+    main as prop15684_main,
     p23_arc_envelope_exclusion,
     p23_complete_arc_classification,
     p23_endpoint_residue_ledger,
@@ -11,7 +14,11 @@ from e1_gmin_m4_prop15684 import (
     p23_reduction_theorem,
     p23_residue_zero_profile_census,
     p23_small_mass_exclusion,
+    p23_u9_open_profile,
 )
+
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_low_value_cube_certificate_has_the_needed_three_eighths_floor():
@@ -51,7 +58,7 @@ def test_scaled_masses_twelve_and_sixteen_are_both_excluded():
     assert shell["proved"] is True
 
 
-def test_exact_p23_residue_ledger_leaves_only_zero():
+def test_exact_p23_residue_ledger_restores_open_u9():
     row = p23_endpoint_residue_ledger()
     assert [item["u0"] for item in row["pair_survivors"]] == [
         0,
@@ -61,13 +68,22 @@ def test_exact_p23_residue_ledger_leaves_only_zero():
         5,
         6,
         8,
+        9,
     ]
     positive = {item["u0"]: item for item in row["positive_residue_rows"]}
     assert positive[6]["scaled_mass_c"] == 12
     assert positive[8]["scaled_mass_c"] == 16
-    assert all(item["excluded"] for item in positive.values())
-    assert row["positive_residues_all_excluded"] is True
+    assert all(positive[u]["excluded"] for u in (2, 3, 4, 5, 6, 8))
+    assert positive[9]["scaled_mass_c"] == 18
+    assert positive[9]["excluded"] is False
+    assert row["positive_residues_all_excluded"] is False
+    assert row["open_positive_residues"] == [9]
     assert row["residue_zero_remains"] is True
+    witness = p23_u9_open_profile()
+    assert witness["total_deficit"] == 380
+    assert witness["pair_slack"] == 0
+    assert witness["restored_floor_plus_two_cell"]["reduced_size"] == 3
+    assert witness["restored_floor_plus_two_cell"]["floor_plus_two_forbidden"] is False
 
 
 def test_exact_residue_zero_census_is_stable_and_fingerprinted():
@@ -167,10 +183,14 @@ def test_complete_arc_classification_and_low_slack_counts():
     assert row["remaining_low_slack_profile_count"] == 2
 
 
-def test_theorem_is_an_exact_reduction_not_a_false_endpoint_closure():
+def test_theorem_retracts_only_residue_zero_but_retains_conditional_reduction():
     row = p23_reduction_theorem()
     assert row["positive_residues_excluded"] == [2, 3, 4, 5, 6, 8]
-    assert row["only_residue_zero_remains"] is True
+    assert row["open_positive_residues"] == [9]
+    assert row["only_residue_zero_remains"] is False
+    assert row["record_status"] == "OPEN_RETRACTED_REDUCTION"
+    assert row["former_only_residue_zero_claim_retracted"] is True
+    assert row["residue_zero_reduction_proved_conditionally"] is True
     assert row["residue_zero_profile_count_before"] == 1247
     assert row["residue_zero_profiles_excluded"] == 1044
     assert row["residue_zero_profile_count_after"] == 203
@@ -193,4 +213,33 @@ def test_theorem_is_an_exact_reduction_not_a_false_endpoint_closure():
     assert row["p23_second_all_finite_endpoint_closed"] is False
     assert row["remaining_same_boundary_primes"] == [17, 19, 23]
     assert row["top_level_gates_changed"] is False
-    assert row["proved"] is True
+    assert row["proved"] is False
+
+
+def test_open_main_is_non_raising():
+    assert prop15684_main()["record_status"] == "OPEN_RETRACTED_REDUCTION"
+
+
+def test_canonical_evidence_matches_retracted_source_record():
+    source = p23_reduction_theorem()
+    canonical = json.loads(
+        (ROOT / "evidence/e1_gmin_m4_prop15684.json").read_text()
+    )
+    assert canonical["record_status"] == source["record_status"]
+    assert canonical["proved"] is source["proved"] is False
+    assert canonical["open_positive_residues"] == source["open_positive_residues"]
+    assert canonical["only_residue_zero_remains"] is False
+    assert canonical["residue_zero_subledger"] == {
+        "status": "CONDITIONAL_REUSABLE_REDUCTION",
+        "profile_count_before": source["residue_zero_profile_count_before"],
+        "profiles_excluded": source["residue_zero_profiles_excluded"],
+        "profile_count_after": source["residue_zero_profile_count_after"],
+    }
+    historical = ROOT / canonical["historical_payload"]
+    assert historical.exists()
+    assert json.loads(historical.read_text())["record_status"] == (
+        "HISTORICAL_RETRACTED_PAYLOAD"
+    )
+    assert canonical["theorem"]["boundary_gate_status"].startswith(
+        "SUPERSEDED_AND_EXCLUDED_BY_15.721"
+    )

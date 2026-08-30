@@ -137,7 +137,9 @@ def test_theorems_partial_e1_structure():
     assert required_bitight_levels_empty_all_primes() is True
     assert B["proved"] is True
     assert CD["proved_k_2p_minus_1_fail_ND"] is True
-    assert CD["type_I_all_classes_closed"] is True
+    assert CD["type_I_historical_two_level_classes_closed"] is True
+    assert CD["type_I_all_classes_closed"] is False
+    assert CD["type_I_multilevel_bad_case_closed"] is False
     assert CD.get("k_3p_minus_2_boundary_open") is False
     assert EFG["proved_auto_freeness_k_le_3p_minus_2"] is True
     assert EFG["proved_fail_eq_k_3p_minus_1_impossible"] is True

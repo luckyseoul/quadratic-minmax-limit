@@ -2,6 +2,7 @@ from fractions import Fraction
 
 from e1_gmin_m4_prop15681 import (
     endpoint_residue_ledger,
+    exact_type_rows,
     p29_arc_classification_ledger,
     p29_geometric_exclusion,
     p29_residue_zero_profiles,
@@ -37,6 +38,19 @@ def test_small_endpoint_positive_residues_are_all_removed():
         assert all(item["therefore_b_zero"] for item in row["positive_residue_rows"])
         assert all(item["excluded"] for item in row["positive_residue_rows"])
         assert row["residue_zero_remains"] is (0 in survivors)
+
+
+def test_generic_exact_ledger_retains_reduced_size_four_floor_plus_two_rows():
+    expected = {
+        29: (12, 332, {0: 13, 4: 1, 24: 1}),
+        31: (13, 386, {0: 14, 4: 1, 26: 1}),
+        37: (16, 536, {0: 17, 4: 1, 30: 1}),
+        41: (18, 676, {0: 19, 4: 1, 34: 1}),
+    }
+    for p, (u, deficit, profile) in expected.items():
+        row = {item["u"]: item for item in exact_type_rows(p, 0)}[u]
+        assert row["minimum_deficit"] == deficit
+        assert row["profile"] == profile
 
 
 def test_p29_pair_slack_leaves_only_arc_and_one_triple_shapes():

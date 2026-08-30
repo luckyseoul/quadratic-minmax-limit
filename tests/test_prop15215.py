@@ -91,7 +91,7 @@ def test_predicates_false():
     assert K4_bound_proved_general() is False
     assert residual_i_closed_via_215() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
 
 
 def test_hinge_status():

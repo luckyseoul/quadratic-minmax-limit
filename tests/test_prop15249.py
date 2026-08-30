@@ -93,7 +93,7 @@ def test_predicates_closed_via_gplus():
     assert residual_i_dual_eq_empty_proved_general() is True
     assert gsum_disj_lb_proved_general() is False
     assert type_I_k_3p_minus_2_closed_general() is True
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     h = hinge_status_249()
     assert h["residual_i_closed"] is True
     assert h["ker_eq_scheme_cross_general"] is True

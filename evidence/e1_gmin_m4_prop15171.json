@@ -1,39 +1,44 @@
 {
-  "title": "Prop 15.171 residual (ii) structure: affine branch CLOSED (15.179); full residual (ii) OPEN (15.193 exhaustiveness); E1/L CLOSED",
-  "L_status": "CLOSED",
+  "title": "Prop 15.171 residual (ii) structure: affine branch CLOSED (15.179); full residual (ii) OPEN (multi-level even k\u22654p); E1/L follow bi-tight\u2227E1",
+  "L_status": "OPEN",
   "proved": {
-    "deep_s2_freeness_fail_k_ge_3p_ND": true,
+    "deep_s2_freeness_fail_k_ge_3p_ND": false,
     "residual_ii_affine_branch_closed": true,
     "residual_ii_exhaustiveness_proved": false,
     "type_I_k_3p_minus_2_closed": true,
     "bi_tight_empty_for_all_p_ge_5": true,
-    "E1_closed_general": true,
-    "m_n_ge_Phi_minus_2": true,
-    "L_closed": true,
+    "E1_closed_general": false,
+    "m_n_ge_Phi_minus_2": false,
+    "L_closed": false,
     "residual_closed_general": false,
     "sixteen_N_for_all_p": false
   },
   "algebra": {
     "residual_ii": {
-      "residual_ii_closed": true,
+      "residual_ii_closed": false,
       "residual_ii_affine_branch_closed": true,
       "residual_ii_affine_pieces_ok": true,
       "residual_ii_exhaustiveness_proved": false,
       "gsum_disj_lb_required_for_affine_branch": false,
       "freeze_to_tight_15_179": true,
-      "open_subcases": [],
+      "open_subcases": [
+        "non-Walsh residual (ii), even k\u22654p: multi-level leftover"
+      ],
       "n_checked": 15,
-      "theorem": "Prop 15.171 + 15.179: dual two-level freeness-fail **affine** freezes to S_H\u22613 \u21d2 k=3p\u22121 (impossible for k\u22653p); fail-eq empty under bi-tight; auto-freeness k\u22643p\u22122. Affine branch CLOSED. Prop 15.193: exhaustiveness (freeness-fail \u21d2 S\u2208{2,4} and f_e=3\u2212S) is NOT proved. Residual (ii) full still closes via affine (15.179) \u2227 (ii-a) ND (15.237) \u2227 (ii-b) ND (15.236). Residual (i) still needs |\u03bc|\u22641/(2p) / Gsum."
+      "theorem": "Prop 15.171 + 15.179: dual two-level freeness-fail **affine** freezes to S_H\u22613 \u21d2 k=3p\u22121 (impossible for k\u22653p); fail-eq empty under bi-tight; auto-freeness k\u22643p\u22122. Affine branch CLOSED. Prop 15.193: affine (15.179) + (ii-a) ND (15.237) + (ii-b) ND (15.236) close only the bounded even range through 4p\u22122. The live even-k\u22654p multi-level remainder is still open."
     }
   },
   "L_wire": {
     "bi_tight": true,
-    "E1": true,
-    "L_closed": true,
-    "L_status": "CLOSED",
+    "E1": false,
+    "L_closed": false,
+    "L_status": "OPEN",
     "rule": "L closed iff bi-tight \u2227 E(1); denseness Prop 6.2"
   },
-  "open_residual": [],
+  "open_residual": [
+    "non-Walsh residual (ii), even k\u22654p",
+    "Type I multi-level Max\u2212 bad case"
+  ],
   "F3": "E1/L only from type_I\u2227deep_k\u22653p_full\u2227bi-tight real predicates",
   "F13": "15.171+15.179 affine branch closed; 15.193 full residual (ii) open; residual/16N still open optional"
 }

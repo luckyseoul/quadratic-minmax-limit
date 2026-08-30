@@ -41,6 +41,19 @@ def test_phase_minima_match_independent_relaxed_dp():
         )
 
 
+def test_reduced_size_four_floor_plus_two_row_is_retained_but_over_budget():
+    for p in (43, 47, 53):
+        m = (p + 1) // 2
+        s = next_even_boundary(p)
+        rows = {row["u"]: row for row in _relaxed_minimum_dp(p, 0)["rows"]}
+        repaired = rows[m - 3]
+        assert repaired["minimum_deficit"] == (m - 1) * s - 4
+        assert repaired["profile"] == {0: m - 2, 4: 1, s: 1}
+        assert repaired["minimum_deficit"] + phase_one_minimum(p)[
+            "minimum_deficit"
+        ] > s * (s - 1)
+
+
 def test_u0_and_u8_are_over_pair_budget():
     for p in (43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101):
         u0 = phase_zero_u0_minimum(p)

@@ -79,4 +79,4 @@ def test_dichotomy_p5():
 def test_hinge_still_open():
     """Actual Max± |μ₄| bound not proved ⇒ residual i / E1 stay open."""
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False

@@ -64,7 +64,7 @@
     "phi_F_imported": false,
     "note": "n_free is 4 at p=5 and 114 at p=7, not a named p-law. Q_\u03c4 unnamed. phi_F not imported."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false,
   "flags_not_flipped": [

@@ -68,7 +68,7 @@ def test_predicates_honest_false():
     assert Gplus_pd_proved_general() is False
     assert residual_i_closed_via_212() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     h = hinge_status_212()
     assert h["residual_i_closed"] is False
     assert h["veronese_criterion_proved"] is True

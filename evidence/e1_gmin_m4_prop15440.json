@@ -82,7 +82,7 @@
       "proved": false,
       "plane_identity": true,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "Lemma D 2-plane is Geo, not A5. Writeup leftover can import this unit. phi_F / residual (ii) / Type I unflipped."
     }

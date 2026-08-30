@@ -87,7 +87,7 @@
     "C": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "J(\u03c7,\u03c8_2) has no 0-parameter name from the p=5,7 pattern. C_\u03c4 is not type-constant. Q_\u03c4 unnamed. phi_F not imported."
     }

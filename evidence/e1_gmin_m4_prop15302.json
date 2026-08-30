@@ -234,7 +234,7 @@
       "proved": false,
       "phi_F_ge_6": false,
       "rhat": false,
-      "e1": true,
+      "e1": false,
       "Q_tau_named_in_p": false,
       "S_k_named_in_p": false,
       "note": "S_k = F_1(j)+\u03c3 F_* reduces the floor to min even eig of circ(Q|_U \u2212 Q|_{sU}), with F_* named in (Q_++,Q_N*). Q_\u03c4 still unnamed (den N/(4p)). Floor OPEN."

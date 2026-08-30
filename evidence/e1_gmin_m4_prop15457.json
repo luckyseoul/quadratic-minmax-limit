@@ -52,7 +52,7 @@
       "proved": false,
       "c_eq13": 617,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "c=c_eq is the named pin candidate (hits live; unique max of [c_min,c_eq]). Not proved for p\u226513. phi_F not imported."
     }

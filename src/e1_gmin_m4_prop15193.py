@@ -7,8 +7,9 @@ force both (1) S∈{2,4} on every Max+ vector and (2) f_e=3−S everywhere?
 
 VERDICT (this prop): **exhaustiveness is NOT proved.**
   Affine dual two-level branch is CLOSED by Prop 15.179 freeze-to-tight.
-  Full residual (ii) is CLOSED by separate ND: (ii-a) 15.237 + (ii-b) 15.236
-  + affine 15.179. Exhaustiveness is not required.
+  The bounded even range through 4p−2 is CLOSED by separate ND: (ii-a)
+  15.237 + (ii-b) 15.236 + affine 15.179.  The even-k≥4p multi-level
+  remainder is still OPEN (15.274).
 
 Does **not** soft-close residual (i) / E1 / L. Soft-close forbidden.
 
@@ -31,21 +32,23 @@ WHAT IS PROVED (score algebra, Max+-free Fraction):
   D. Affine dual two-level freeness-fail (S∈{2,4} and f_e=3−S):
      S_H≡3 ⇒ k=3p−1, impossible for k≥3p (15.179 freeze). Branch CLOSED.
 
-WHAT IS NOT PROVED (exhaustiveness still False; ND closed elsewhere):
+WHAT IS NOT PROVED (exhaustiveness still False; bounded ND closed elsewhere):
   E. Exhaustiveness. Freeness-fail does **not** by itself force
-     support(S)⊆{2,4} on Max+. Multi-level is closed by ND in 15.237, not
-     by forcing two-level.
+     support(S)⊆{2,4} on Max+. Multi-level in the bounded even range is
+     closed by ND in 15.237, not by forcing two-level; k≥4p remains open.
   F. Affine completion. Even under two-level S∈{2,4} and freeness-fail
      (f_e≡+1 on U₂), f_e need not be ≡−1 on U₄. Non-affine two-level is
-     closed by ND in 15.236, not by freeze.
+     closed by ND in 15.236 within its stated bounded range, not by freeze.
   G. Prop 15.171 dual two-level Gsum Farkas assumes affine f_e=3−S on
      both Max±; it is not needed after 15.236/15.237.
 
 PREDICATES
   residual_ii_affine_branch_closed()  = True   (15.179)
   residual_ii_exhaustiveness_proved() = False  (this prop)
-  residual_ii_full_closed()           = affine ∧ (ii-a) ∧ (ii-b)
-                                        (15.179 + 15.237 + 15.236; not exhaustiveness)
+  residual_ii_bounded_even_k_le_4p_minus_2_closed()
+                                      = affine ∧ (ii-a) ∧ (ii-b)
+                                        (15.179 + 15.237 + 15.236)
+  residual_ii_full_closed()           = bounded result ∧ live even-k≥4p gate
   deep_s2_freeness_fail_k_ge_3p_ND_closed() wires to residual_ii_full_closed
 
 Residual (ii) subcases for k≥3p freeness-fail:
@@ -291,16 +294,25 @@ def residual_ii_affine_branch_closed() -> bool:
     return residual_ii_dual_twolevel_affine_closed()
 
 
-def residual_ii_full_closed() -> bool:
+def residual_ii_bounded_even_k_le_4p_minus_2_closed() -> bool:
     """
-    Residual (ii) fully closed if affine branch AND ND for both (ii-a) and
-    (ii-b). Exhaustiveness (force affine two-level) is a separate path.
-    (ii-b) ND is 15.236; (ii-a) ND is 15.237.
+    Historical bounded split: affine branch plus ND for (ii-a) and (ii-b)
+    in the even range 3p+1 <= k <= 4p-2.
     """
     return bool(
         residual_ii_affine_branch_closed()
         and residual_ii_a_ND_closed()
         and residual_ii_b_ND_closed()
+    )
+
+
+def residual_ii_full_closed() -> bool:
+    """Full residual-(ii) gate, including the live even-k>=4p remainder."""
+    from e1_gmin_m4_prop15274 import residual_ii_k_ge_4p_ND_closed
+
+    return bool(
+        residual_ii_bounded_even_k_le_4p_minus_2_closed()
+        and residual_ii_k_ge_4p_ND_closed()
     )
 
 
@@ -318,10 +330,16 @@ def residual_ii_open_subcases() -> list[str]:
         )
     if not residual_ii_affine_branch_closed():
         out.append("(ii-c) dual two-level affine freeness-fail (should be closed by 15.179)")
+    from e1_gmin_m4_prop15274 import residual_ii_k_ge_4p_ND_closed
+
+    if not residual_ii_k_ge_4p_ND_closed():
+        out.append("non-Walsh residual (ii), even k≥4p: multi-level leftover")
     return out
 
 
 def hinge_status_193() -> dict:
+    from e1_gmin_m4_prop15275 import type_I_multilevel_bad_case_ND_closed
+
     return {
         "residual_ii_affine_branch_k_ge_3p": (
             "CLOSED by 15.179 freeze-to-tight first moment"
@@ -343,19 +361,20 @@ def hinge_status_193() -> dict:
         ),
         "residual_ii_full": (
             "CLOSED" if residual_ii_full_closed() else
-            "OPEN until (ii-a) ND (15.236 closed (ii-b); affine is 15.179)"
+            "OPEN: bounded k≤4p−2 is closed; multi-level even k≥4p remains"
         ),
-        "residual_i_type_I_k_3p_minus_2": (
-            "OPEN — needs |μ|≤2/n or ker-box (15.176–192)"
+        "type_I_multilevel": (
+            "CLOSED"
+            if type_I_multilevel_bad_case_ND_closed()
+            else "OPEN — multi-level Max− bad case"
         ),
         "gsum_disj_lb_proved_general": gsum_disj_lb_proved_general(),
         "e1_closed_general": e1_closed_general(),
         "bound_proved_general": False,
         "open_subcases": residual_ii_open_subcases(),
         "open": (
-            "Prove exhaustiveness lemma (weak ND fail ⇒ affine two-level), "
-            "or close (ii-a)/(ii-b) by other ND; residual (i) still needs "
-            "|μ|≤2/n or ker-box empty for all p≥5."
+            "Close the multi-level even-k≥4p remainder (15.274). The bounded "
+            "range through 4p−2 is already closed by 15.179/236/237."
         ),
     }
 
@@ -378,7 +397,7 @@ def main() -> dict:
     out = {
         "title": (
             "Prop 15.193 residual (ii) exhaustiveness audit: affine branch "
-            "CLOSED (15.179); full residual (ii) OPEN (no exhaustiveness)"
+            "CLOSED (15.179); full residual (ii) OPEN at even k≥4p"
         ),
         "proved": {
             "freeness_fail_eq_f_e_plus_on_U2": A["proved"],
@@ -410,12 +429,12 @@ def main() -> dict:
         },
         "hinge": hinge_status_193(),
         "F3": (
-            "Do not claim residual (ii) full CLOSED without exhaustiveness; "
-            "affine branch alone is 15.179; residual (i)/E1/L still open."
+            "Do not claim residual (ii) full CLOSED from the bounded 15.179/236/237 "
+            "split; even k≥4p and E1/L remain open."
         ),
         "audit_verdict": (
-            "Residual (ii): affine two-level branch closed; "
-            "full closure not audit-complete."
+            "Residual (ii): affine and bounded even range closed; "
+            "multi-level even k≥4p remains open."
         ),
     }
     path = ROOT / "evidence" / "e1_gmin_m4_prop15193.json"

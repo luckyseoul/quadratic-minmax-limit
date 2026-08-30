@@ -55,4 +55,4 @@ def test_failed_aut_schur_lift():
     assert residual_i_dual_eq_empty_proved_general() is True
     assert type_I_k_3p_minus_2_closed_general() is True
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False

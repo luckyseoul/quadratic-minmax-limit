@@ -41,7 +41,7 @@ def test_p7_buckets_and_mix_open():
     assert C["mu_full_le_muk3_Nstar_p7"] is False
     assert C["Q_tau_named_in_p"] is False
     assert C["phi_F_imported"] is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     assert gsum_disj_lb_proved_general() is False
     assert phi_F_ge_6_proved_general() is False
     out = main()

@@ -61,7 +61,7 @@
       "proved": false,
       "Q_NL_is_short_rational": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "D_form_on_lattice_general": false,
       "note": "Q_NL unnamed. Polynomial Hoffman-unit weights miss B_NL at p=11. phi_F not imported."

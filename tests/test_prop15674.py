@@ -8,6 +8,7 @@ from e1_gmin_m4_prop15674 import (
     residue_classification_ledger,
     theorem_record,
 )
+from e1_gmin_m4_prop15723 import floor_excess_admissible
 
 
 def test_full_odd_fibre_floor_bands():
@@ -72,7 +73,9 @@ def test_residue_classification_by_independent_relaxed_dp():
                             )
                             for k in range(target - total + 1):
                                 excess = residue + period * k - direction_floor
-                                if excess < 0 or excess == 2:
+                                if not floor_excess_admissible(
+                                    p, b, phase, excess
+                                ):
                                     continue
                                 next_states.add(
                                     (
@@ -96,6 +99,15 @@ def test_residue_classification_by_independent_relaxed_dp():
                         low >= m - 1 and intermediate <= 1
                         for _, low, _, intermediate in feasible
                     )
+
+
+def test_p17_floor_plus_two_exceptions_are_retained_but_add_no_residue():
+    for b, phase in ((5, 1), (11, 0)):
+        floor = full_profile_floor_ledger(17, phase)
+        assert 36 - floor["floors"][b] == 2
+        residue = residue_classification_ledger(17, phase)
+        assert [b, phase] in residue["floor_plus_two_cells_retained"]
+        assert residue["surviving_residues_in_this_branch"] == [0, 16]
 
 
 def test_geometry_forces_opposite_baseline_types_for_full_profiles():

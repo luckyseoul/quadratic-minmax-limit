@@ -27,11 +27,10 @@ REAL checkable Fraction / prior-prop chain:
 
 Also: ES2=(13p−12)/p < k=3p−2 for p≥5 (binary freeness-fail has xᵀx=k > ES2=xᵀGp x).
 
-type_I_k_3p_minus_2_closed_general = False until gsum_disj_lb_proved_general
-(Farkas poly is real; disj Gsum LB is not general — 15.158 kills scheme claim).
-E1 still requires full residual (ii) (15.193 exhaustiveness) + residual (i)
-proved Gsum LB / |μ|≤2/n. Affine residual-(ii) branch closed by 15.179.
-L OPEN until E1 ∧ bi-tight.
+The historical Type-I k=3p−2 slice is closed by the later 15.249/15.270
+dual route; that does not close multi-level Type I.  The bounded residual-(ii)
+range through 4p−2 is closed by 15.179/236/237, but even k≥4p remains open.
+L OPEN until the authoritative E1 gate and bi-tight gate are both closed.
 
 Writes evidence/e1_gmin_m4_prop15170.json
 """
@@ -48,7 +47,11 @@ sys.path.insert(0, str(ROOT / "src"))
 from e1_gmin_m4_prop15720 import (  # noqa: E402
     required_bitight_levels_empty_all_primes,
 )
-from e1_gmin_m4_prop15168 import freeness_threshold  # noqa: E402
+from e1_gmin_m4_prop15168 import (  # noqa: E402
+    e1_closed_general as e1_closed_15168,
+    e1_open_residuals as e1_open_residuals_15168,
+    freeness_threshold,
+)
 from e1_gmin_m4_prop15169 import (  # noqa: E402
     phi_two_lipschitz_edge_flip,
     type_I_gap2_forces_s_minus_eq_minus_1,
@@ -57,11 +60,23 @@ from e1_gmin_m4_prop15169 import (  # noqa: E402
 
 
 def deep_s2_freeness_fail_k_ge_3p_ND_closed() -> bool:
-    """Delegate to 15.171 when present."""
+    """Full k>=3p residual-(ii) gate, including the live k>=4p range."""
     try:
         from e1_gmin_m4_prop15171 import deep_s2_freeness_fail_k_ge_3p_ND_closed as _c
 
         return _c()
+    except Exception:
+        return False
+
+
+def deep_s2_freeness_fail_even_k_le_4p_minus_2_ND_closed() -> bool:
+    """Historical bounded result from 15.179 + 15.236 + 15.237."""
+    try:
+        from e1_gmin_m4_prop15193 import (
+            residual_ii_bounded_even_k_le_4p_minus_2_closed as _bounded,
+        )
+
+        return _bounded()
     except Exception:
         return False
 
@@ -346,26 +361,22 @@ def type_I_k_3p_minus_2_ND_class_closed() -> bool:
 
 
 def e1_open_residuals() -> list[str]:
-    open_: list[str] = []
-    if not type_I_k_3p_minus_2_closed_general():
-        open_.append(
-            "Type I freeness-fail k=3p−2: s_−≤−1 / bad case "
-            "(15.170 Gsum Farkas or 15.216 dual-eq K₄ thr)"
-        )
-    if not deep_s2_freeness_fail_k_ge_3p_ND_closed():
-        open_.append(
-            "deep freeness-fail k≥3p (s₊=2): multi-s auto-freeness shipped; "
-            "ND for freeness-fail large-k open"
-        )
-    return open_
+    """Authoritative current residuals from Prop 15.168."""
+    return e1_open_residuals_15168()
+
+
+def e1_bounded_residual_split_closed() -> bool:
+    """Obsolete bounded split retained only for historical proposition replay."""
+    return bool(
+        type_I_k_3p_minus_2_closed_general()
+        and deep_s2_freeness_fail_even_k_le_4p_minus_2_ND_closed()
+        and required_bitight_levels_empty_all_primes()
+    )
 
 
 def e1_closed_general() -> bool:
-    return (
-        type_I_k_3p_minus_2_closed_general()
-        and deep_s2_freeness_fail_k_ge_3p_ND_closed()
-        and required_bitight_levels_empty_all_primes()
-    )
+    """Authoritative full E(1) gate; never the historical bounded split."""
+    return e1_closed_15168()
 
 
 def main_L_from_e1(e1: bool, bitight: bool) -> dict:

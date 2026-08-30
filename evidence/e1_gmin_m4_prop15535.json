@@ -74,7 +74,7 @@
     "phi_F_imported": false,
     "note": "\u27e8T_ns,\u03c3\u27e9 is free only for p\u22613 in the named twisted family. p=5 has no free Aut_\u221e-normalizer of T_ns. D and Q_\u03c4 unnamed. phi_F not imported."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false,
   "flags_not_flipped": [

@@ -70,7 +70,7 @@ def test_predicates_open():
     assert free_e_bound_proved_general() is False
     assert residual_i_closed_via_201() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     h = hinge_status_201()
     assert h["alpha_n_minus_2_beats_need_p_ge_5"] is True
     assert h["free_e_max_le_alpha_n_minus_2_general"] is False

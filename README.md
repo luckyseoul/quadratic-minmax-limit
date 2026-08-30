@@ -23,7 +23,7 @@ banned by test (`tests/test_main_chain_docs.py`).
 
 **Main claim:** L = lim_n α_n is **OPEN** (2026-08-30).
 
-### Current audit (2026-08-30; through Proposition 15.721)
+### Current audit (2026-08-30; through Proposition 15.725)
 
 - **Required asymptotic target.** It is enough to prove the Paley-tail deficit
   \(\Phi(C_p)-m_{p^2+1}=o(p^3)\) on a ratio-dense tail. The current all-prime,
@@ -54,9 +54,28 @@ banned by test (`tests/test_main_chain_docs.py`).
   `p>=17`, 15.669 excludes every total boundary size `6<=|D|<=p-3` and
   15.674 excludes `|D|=p-1`; with the old `0/2/4` closures, the first
   unresolved general shell is `|D|=p+1`. The first/second all-finite endpoint
-  campaigns in 15.675--15.712 were redundant as boundary gates. Their
-  internal lemmas remain valid; 15.676 still excludes pair-deficit equality
-  at `|D|=p+1`, leaving strict deficit.
+  campaigns in 15.675--15.712 were redundant as boundary gates. The
+  retracted 15.678/15.684 conclusions do not survive; only their explicitly
+  retained sublemmas and conditional subledgers do. At `|D|=p+1`, Proposition
+  15.722 proves the
+  exact signed phase cocycle, rules out pair slack one, and reduces pair
+  slack zero to a full Miquelian circle with exact type alignment.
+  Proposition 15.724 then chooses an isolated outside point and combines the
+  zero-infinity-degree mean arithmetic with 15.688's sharp lift floor to
+  exclude that full-circle branch. The minimal arc-deletion/secant argument
+  in 15.722 also excludes every positive outside slack through
+  `max(3,floor(sqrt(p)-5/2))`. Only slack beyond that cutoff remains open.
+- **Floor-plus-two correction.** Proposition 15.723 replaces the blanket
+  `excess != 2` shortcut in the infinity-plus-`p` middle profile. A
+  paired-cube Fourier gap excludes every such middle cell for all odd
+  `p>=17`, except the two genuine integral-quadratic cells
+  `(p,b,phase)=(17,5,1),(17,11,0)`. Those exceptions are retained, not
+  silently discarded.
+- **Parabola-family retraction.** Proposition 15.725 retains an exact
+  2,381-case finite phase-zero census, but its claimed all-prime close is
+  retracted. The necessary discriminant/resolvent character sums were not
+  proved, an admissible singular locus was omitted, and the opposite product
+  sign was not checked. It changes no gate.
 - **Historical endpoint certificate at `p=19`.** Propositions 15.693--15.699
   give an exact
   binary affine-Radon reduction, eliminate the slack-16 and slack-20 rows, and
@@ -65,16 +84,17 @@ banned by test (`tests/test_main_chain_docs.py`).
   `p=19` endpoint is closed. Proposition 15.721 now subsumes this boundary
   exclusion by signed transport.
 - **Historical endpoint certificate at `p=17`.** Propositions 15.700--15.712
-  close the exact
-  1,575-profile ledger. Proposition 15.706 excludes both former
-  slack-zero profiles by a solver-free global Paley-sign identity, and 15.707
-  combines its quotient extension with the existing arc classifications to
-  remove all 78 slack-20 rows. Proposition 15.708 extends the identity again
-  and uses one unique-even-fibre cell sum to remove all 54 slack-24 rows.
-  Proposition 15.709 applies those two identities uniformly to every remaining
-  `u_1=8` row, excluding another 280 profiles.
+  close the corrected exact 2,503-profile ledger through the chain
+  `2503 -> 2219 -> 1744 -> 1481 -> 1368 -> 1228 -> 1215 -> 1213 -> 1020 ->
+  869 -> 321 -> 19 -> 14 -> 0`. Proposition 15.705 is only **PARTIAL**: it
+  removes thirteen historical Orbiter targets and leaves 74 slack-sixteen
+  rows, which 15.709 later removes. Proposition 15.706 excludes both former
+  slack-zero profiles by a solver-free global Paley-sign identity, 15.707
+  removes all 193 slack-20 rows, and 15.708 removes all 151 slack-24 rows.
+  Proposition 15.709 applies the rigid-anchor identities uniformly to all 548
+  remaining `u_1=8` rows.
   Proposition 15.710 applies the complementary phase-one `b=16` identities
-  to exclude 208 of the remaining 227 profiles.
+  to exclude 302 of the remaining 321 profiles.
   Proposition 15.711 excludes the five residue-zero rows by a uniform-mean
   phase-one fibre-capacity contradiction.
   Proposition 15.712 observes that the nine phase-one `b=16` directions are
@@ -135,8 +155,8 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | required bi-tight levels 2 and 3 | `bitight_levels_2_3` | **TRUE** — 15.720 degree congruence; bi-tight level 4 is a corollary, while generic one-sided covers exist and only joint residual compatibility remains open |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh is closed, as are boundaries of size `0/2/4/6`, finite `p=7` size eight, and finite `p=11` size eight. For every `p>=17`, 15.721 uses signed transport plus 15.669/15.674 to exclude every `|D|<=p-1`; this supersedes the old all-finite endpoint ladder. The first general shell is `|D|=p+1`, normalized to infinity plus `p`; 15.676 closes pair-deficit equality and strict deficit remains. The separate small-prime remainder includes the 56 positive `p=7,z=7` line boundaries left by 15.713--15.719. |
-| Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh is closed, as are boundaries of size `0/2/4/6`, finite `p=7` size eight, and finite `p=11` size eight. For every `p>=17`, 15.721 excludes every `|D|<=p-1`. At the first shell `|D|=p+1`, 15.676 closes pair-deficit equality, 15.724 closes outside slack zero, and 15.722 excludes every positive outside slack through `max(3,floor(sqrt(p)-5/2))`. Only larger slack remains. The separate small-prime remainder includes the 56 positive `p=7,z=7` line boundaries left by 15.713--15.719. |
+| Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — on `|κ|=1` the missing sign is `G>T`; on `|κ|=3` the separate signed `(μ,ν)` inequality still has an uncontrolled δ remainder |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
 Thus exactly two mathematical predicates remain false: residual (ii) and
@@ -375,12 +395,11 @@ residue `u_0=2`, plus `u_0=3` in the first class. Since the quotient sum is
 strictly below the direction count, one direction has quotient zero. Its
 mean is four or six, forcing `b=0` and a nonzero even quadratic lift, while
 15.642 gives lift cost at least eight. Together with 15.675 this closes the
-first all-finite survivor for every prime `p>=19`. Proposition 15.678 closes
-the separate `p=17` residue-zero endpoint. Pair-slack divisibility leaves two
-14-arc profiles, each with three undetermined directions; adjoining two gives
-a 16-arc. The unique 16-arc class in `PG(2,17)` is conic-minus-two, while an
-off-conic third infinity point must still lie on at least four secants. Thus
-the first survivor is closed for every prime `p>=17`. Proposition 15.679
+first all-finite survivor for every prime `p>=19`. Proposition 15.678's
+separate `p=17` close is retracted: the corrected census has 108 compatible
+profiles, while its retained conic geometry excludes only 14 arc profiles and
+leaves 94 compatible profiles uncovered. Proposition 15.721 later supersedes
+this all-finite gate and excludes it by signed transport. Proposition 15.679
 then treats the next even all-finite size. Pair arithmetic leaves only
 phase-zero residues `2<=u<=7`; a forced quotient-zero direction and the
 degree-two slice-distance floor close every prime `p>=43`. Proposition
@@ -401,23 +420,27 @@ classification has no complete arc of size 23 through 31, so the required
 infinity points onto it. Proposition 15.683 closes `p=41`: eight
 high-tangent direction pencils divide Segre's tangent envelope twice, and
 the residual conic is forced to contain three point-pencil lines.
-Proposition 15.684 then removes every positive residue at `p=23` and uses
-the complete-arc classification plus a conic-core repair lemma to exclude
-1,044 of its 1,247 residue-zero profiles. Exactly 203 arithmetic profiles
-remain. Proposition 15.685 excludes the unique slack-12 profile: repairing
+Proposition 15.684's claimed positive-residue close is also retracted: the
+corrected ledger restores `u_0=9`, scaled mass 18, with an explicit
+slack-zero profile. Its old residue-zero computation remains a conditional
+subledger: complete-arc and conic-core arguments exclude 1,044 of 1,247
+`u_0=0` profiles and leave 203 in that subledger. Proposition 15.685 excludes
+its unique slack-12 profile: repairing
 it would require three points of secant multiplicity one outside a complete
 17-arc, while the five classified classes have counts `0,0,1,0,0`.
-Exactly 202 profiles remain; the three endpoints `p=17,19,23` are still
-open at this size. Proposition 15.686 applies the same complete-17-arc
+Exactly 202 residue-zero profiles remain; the restored `u_0=9` branch and the
+three endpoints `p=17,19,23` are still open in this historical chain.
+Proposition 15.686 applies the same complete-17-arc
 certificate to the unique slack-16 row: its undetermined direction and four
 repair points would require four multiplicity-one outside points. This
-leaves exactly 201 profiles, all of slack at least 20.
+leaves exactly 201 profiles in the residue-zero subledger, all of slack at
+least 20. Proposition 15.721 independently supersedes this all-finite gate.
 Proposition 15.687 excludes all 68 slack-20 rows. For 66 rows, overlapping
 pairs of at least three undetermined infinity points either produce the
 same impossible conic or a complete 17-arc requiring five
 multiplicity-one points; the two remaining rows use the latter obstruction
-or the five-point conic-core floor. Exactly 133 profiles remain, all of
-slack at least 24.
+or the five-point conic-core floor. Exactly 133 profiles remain in the
+conditional residue-zero subledger, all of slack at least 24.
 Proposition 15.688 sharpens every nonzero nonnegative integral quadratic
 lift to \(4p\mathbb E B\ge p-3\). At the `p=19` next boundary this deletes
 all four positive-residue rows. Exact completion leaves 143 residue-zero
@@ -466,77 +489,80 @@ and the three remaining directional profiles. Native-XOR runs on nuka,
 jellyfin, and soulkiller ECC all return `UNSATISFIABLE`; no edge-lift or floor
 relaxation is used. Thus the full p=19 second all-finite endpoint is closed.
 Proposition 15.700 treats the exceptional `p=17,s=16` second boundary.
-The sharp integral lift floor and exact completion arithmetic leave 1,575
-phase-labelled profiles, 247 of pair slack zero. Slack zero gives a 16-arc;
+The sharp integral lift floor and exact completion arithmetic leave 2,503
+phase-labelled profiles, 286 of pair slack zero. Slack zero gives a 16-arc;
 the unique `PG(2,17)` 16-arc class is conic-minus-two. Exhausting all 21,267
 affine charts/deleted pairs gives 53 Paley-phase profiles, only two of which
 meet the arithmetic ledger. Both are tangent-at-infinity conic cases. Hence
-245 rows are excluded and the exact p=17 remainder is 1,330 profiles, with
+284 rows are excluded and the exact p=17 remainder is 2,219 profiles, with
 two zero-slack rows. Exact coefficient-lift runs on those two rows returned
 `UNKNOWN`, so they supply no evidence. Proposition 15.701 then uses the
 unique classified 15-arc class in `PG(2,17)`. Repair to an arc, followed by
-zero, one, or two undetermined infinity points, puts all 227 slack-four rows,
-128 of 195 slack-eight rows, and 43 of 155 slack-twelve rows on a conic core.
+zero, one, or two undetermined infinity points, puts all 292 slack-four rows,
+140 of 292 slack-eight rows, and 43 of 267 slack-twelve rows on a conic core.
 If `h<=3` original points are off that conic, retained-secant counting forces
-pair slack at least `4h(6-h)>=20`, a contradiction. Another 398 rows are
-excluded, leaving 932 exact profiles: two at slack zero, 67 at slack eight,
-112 at slack twelve, and 751 at slack at least sixteen. The endpoint remains
+pair slack at least `4h(6-h)>=20`, a contradiction. Another 475 rows are
+excluded, leaving 1,744 exact profiles: two at slack zero, 152 at slack eight,
+224 at slack twelve, and 1,366 at slack at least sixteen. The endpoint remains
 open. Proposition 15.702 uses the unique complete 14-arc class. Its exact
 outside secant-index histogram has minimum two and no index-one point. This
-excludes the remaining 67 slack-eight profiles and, after adjoining one
-undetermined infinity point, another 79 slack-twelve profiles. The p17
-remainder is 786: two rows of slack zero, 33 rows of slack twelve, and 751
-rows of slack at least sixteen. Proposition 15.703 closes those final 33
+excludes the remaining 152 slack-eight profiles and, after adjoining one
+undetermined infinity point, another 111 slack-twelve profiles. The p17
+remainder is 1,481: two rows of slack zero, 113 rows of slack twelve, and
+1,366 rows of slack at least sixteen. Proposition 15.703 closes those final 113
 slack-twelve rows. A normalized PGL generator produces eight pairwise
 inequivalent complete 13-arcs, matching Sticker's published class count and
 stabilizer-order fingerprint. Their index-one-point counts are
 `0,0,0,0,0,0,2,3`; the sole candidate triple reconstructs slack sixteen.
 For an incomplete repaired 13-arc, extension to the unique complete 14-arc
 leaves eight candidate triples, all of slack twenty; the conic extension is
-already excluded. Thus the exact p17 remainder is 753: the same two
-slack-zero rows and 751 rows of slack at least sixteen. Completeness of the
+already excluded. Thus the exact p17 remainder is 1,368: the same two
+slack-zero rows and 1,366 rows of slack at least sixteen. Completeness of the
 eight-class local census is conditional on the published class count.
-Proposition 15.704 next splits the 112 slack-sixteen rows by undetermined
-directions as `{0:13,1:47,2:47,3:5}`. Complete-14 secant floors and
+Proposition 15.704 next splits the 227 slack-sixteen rows by undetermined
+directions as `{0:87,1:88,2:47,3:5}`. Complete-14 secant floors and
 overlapping-pair conic extensions exclude the 52 rows with at least two such
 directions. For one direction, a complete 13-arc has at most three outside
 index-one points; the complete-14-minus-one branch has eight genuinely
-undetermined infinity placements and all reconstruct slack 32. Thus another
-99 rows are excluded. The p17 remainder is 654: two slack-zero rows, thirteen
-zero-direction slack-sixteen rows, and 639 rows of slack at least twenty.
+undetermined infinity placements and all reconstruct slack 32. Thus 140 rows
+are excluded. The p17 remainder is 1,228: two slack-zero rows, 87
+zero-direction slack-sixteen rows, and 1,139 rows of slack at least twenty.
 Proposition 15.705 exhausts all 629 PGL classes of twelve-arcs and every
 four-point extension within the slack-sixteen secant charge. Only 47 of
 97,122 extensions have an allowed line pattern; all 6,345 affine charts miss
-the thirteen targets under both phase labellings. The p17 remainder is now
-641: two slack-zero rows and 639 rows of slack at least twenty.
+the thirteen historical targets under both phase labellings. This certificate
+does not cover the other 74 zero-direction slack-sixteen rows: 15.705 is
+**PARTIAL/OPEN** and the p17 remainder is 1,215, consisting of two slack-zero
+rows, 74 slack-sixteen rows, and 1,139 rows of slack at least twenty.
 Proposition 15.706 excludes both slack-zero rows without a solver. Every
 allocation retains a rigid `b=2` direction of each quadratic type. Comparing
 their directional coefficient sums with the single global finite-edge Paley
 sign sum forces `17I=4 (mod 72)`, hence infinity degree `I=68`. The remaining
 one finite edge makes the affine odd boundary have size 66, 68, or 70, never
-16. Thus 639 exact p17 profiles remain, all of slack at least twenty.
+16. Thus 1,213 exact p17 profiles remain: the 74 slack-sixteen rows and 1,139
+rows of slack at least twenty.
 Proposition 15.707 observes that the same identity only needs rigid low-floor
 directions of both types. Every slack-20 row has at least eight rigid
-phase-one `b=2` directions. In all 69 rows with `u_0=0`, exact quotient
+phase-one `b=2` directions. In all 184 rows with `u_0=0`, exact quotient
 minima retain at least three rigid phase-zero directions with `b=0` or `2`,
 and the same global-sign congruence excludes them. The nine `(8,8)` rows all
 have at least two undetermined directions; repair and the already-audited
-complete 13-/14-arc secant-index bounds exclude every repair depth. Thus 561
-exact p17 profiles remain, all of slack at least 24.
-Proposition 15.708 closes all 54 slack-twenty-four rows. The 45 `(0,8)` rows
+complete 13-/14-arc secant-index bounds exclude every repair depth. Thus all
+193 slack-twenty rows are removed and 1,020 exact p17 profiles remain.
+Proposition 15.708 closes all 151 slack-twenty-four rows. The 142 `(0,8)` rows
 retain rigid phase-zero `b=0` directions, so global-sign comparison forces
 incompatible gauge lower bounds. The nine `(8,8)` rows force `I=4`; a rigid
 phase-zero `b=16` floor `1-x_j` then gives
-`N_j=delta_j-15z_j-I<=-3` for a nonnegative crossing-edge count. Thus 507
-exact p17 profiles remain, all of slack at least 28.
+`N_j=delta_j-15z_j-I<=-3` for a nonnegative crossing-edge count. Thus 869
+exact p17 profiles remain.
 Proposition 15.709 observes that these contradictions depend only on the
-rigid anchors, not on the slack value. Every one of the 280 remaining
-`u_1=8` rows retains eight rigid phase-one `b=2` directions: 66 also retain
+rigid anchors, not on the slack value. Every one of the 548 remaining
+`u_1=8` rows retains eight rigid phase-one `b=2` directions: 334 also retain
 phase-zero `b=0`, and 214 retain phase-zero `b=16`. The two 15.708 identities
-exclude both blocks. The exact remainder is 227 profiles, all with `u_1=0`
-and pair slack at least 96.
+exclude both blocks, including all 74 slack-sixteen rows left by 15.705. The
+exact remainder is 321 profiles, all with `u_1=0` and pair slack at least 96.
 Proposition 15.710 uses the complementary phase-one `b=16` core. A genuinely
-rigid phase-zero `b=0` anchor excludes 176 rows by forcing gauge sum 14 with
+rigid phase-zero `b=0` anchor excludes 270 rows by forcing gauge sum 14 with
 minimum 15; rigid `b=16` anchors in both phases exclude 32 more by forcing
 gauge sum 16 with minimum 17. Nineteen profiles remain, with residue split
 `(0,0):5`, `(7,0):9`, `(8,0):5` and slack histogram
@@ -604,7 +630,9 @@ graph TD
     SMALLRANGE --> P11EIGHT["p=11 finite size eight<br/>exact normalized census <b>CLOSED</b> (15.670)"]
     RANGE --> ENDPOINT["infinity + (p-2), every odd-fibre profile<br/>both signs <b>CLOSED for p>=17</b> (15.671--15.674)"]
     ENDPOINT --> TRANSPORT["signed PSL boundary normalization<br/>every total |D|<=p-1 <b>CLOSED for p>=17</b> (15.721)"]
-    TRANSPORT --> PARC["first general shell |D|=p+1 = infinity+p<br/>pair-deficit equality <b>CLOSED</b>; strict deficit <b>OPEN</b> (15.676)"]
+    TRANSPORT --> PARC["first general shell |D|=p+1 = infinity+p<br/>pair equality and outside slack one <b>CLOSED</b> (15.676, 15.722)"]
+    PARC --> CIRCLE["outside slack zero = aligned Miquelian circle<br/><b>CLOSED</b> by isolated-vertex lift contradiction (15.724)"]
+    CIRCLE --> STRICTP["outside R > max(3,floor(sqrt(p)-5/2))<br/><b>OPEN</b>"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -617,6 +645,9 @@ graph TD
     style P11EIGHT fill:#e6ffe6
     style ENDPOINT fill:#e6ffe6
     style TRANSPORT fill:#e6ffe6
+    style PARC fill:#e6ffe6
+    style CIRCLE fill:#e6ffe6
+    style STRICTP fill:#fff4e6
     style WALSH fill:#e6ffe6
     style MULTI fill:#fff4e6
     style BUDGET fill:#e6ffe6
@@ -781,17 +812,17 @@ Proposition 15.721 supersedes the active all-finite shell statuses in
 | 15.674 | every intermediate odd-fibre floor lies strictly between `p+1` and `2p`; exact same-type residues force such a direction to be the unique mean-`2p` exception, and incidence forces opposite endpoint baseline types | closes both signs of the entire infinity-plus-`(p-2)` shell for every prime `p>=17`, with no endpoint hypothesis; larger shells, residual (ii), and all top-level gates remain open |
 | 15.675 | at the first even all-finite size above `3(p-1)/4`, exact same-type residues force phase-one profile `(m-1)·b=2+b=s` and the phase-zero residue-four profile; the pair gaps are explicit modulo eight | excludes that first survivor for every prime `p>=19` with `p=3,5 mod 8`; `p=1,7 mod 8`, later sizes, residual (ii), and all top-level gates remain open |
 | 15.676 | pair-deficit equality makes the `p` finite points of an infinity-plus-`p` boundary a `p`-arc; Segre reduces it to tangent or external-line affine conic profiles, which fail the exact type budgets or coefficient/support arithmetic | closes the equality branch for both signs and every prime `p>=17`; strict pair deficit, the full shell, residual (ii), and all top-level gates remain open |
-| 15.677 | in the two outer modulo-eight classes, exact quotient arithmetic leaves `u_0=2` and possibly `u_0=3`; a forced zero-quotient direction has `b=0`, so its positive mean is a nonzero even quadratic lift whose 15.642 cost is at least eight | with 15.675, closes the first all-finite survivor for every prime `p>=19`; `p=17` is not handled here and is subsequently closed by 15.678 |
-| 15.678 | at `p=17,s=14`, the six-unit lift floor and coefficient `l1` bound leave two pair-equality 14-arc profiles with three undetermined directions; adjoining two gives a 16-arc, and the unique `PG(2,17)` 16-arc class is conic-minus-two, where a third undetermined infinity point is impossible | with 15.675/15.677, closes the first all-finite survivor for every prime `p>=17`; later sizes, residual (ii), and all top-level gates remain open |
+| 15.677 | in the two outer modulo-eight classes, exact quotient arithmetic leaves `u_0=2` and possibly `u_0=3`; a forced zero-quotient direction has `b=0`, so its positive mean is a nonzero even quadratic lift whose 15.642 cost is at least eight | with 15.675, closes the first all-finite survivor for every prime `p>=19`; `p=17` is not handled here and 15.678's attempted close is retracted |
+| 15.678 | **OPEN_RETRACTED_REDUCTION:** the corrected `p=17,s=14` census has 108 compatible profiles; the retained unique-16-arc geometry excludes 14 arc profiles but leaves 94 compatible profiles uncovered | does not close the historical `p=17` endpoint; 15.721 independently supersedes and excludes this all-finite boundary as a live gate |
 | 15.679 | at the next even all-finite size, exact quotient arithmetic leaves only phase-zero residues `2<=u<=7`; each forces a quotient-zero `b=0` direction whose mean is below the degree-two slice-distance lift floor | closes this next boundary for every prime `p>=43`; 15.680--15.683 subsequently close `p=37,29,31,41`, while three smaller endpoints, later sizes, residual (ii), and all top-level gates remain open |
 | 15.680 | at `p=37,s=30`, exact arithmetic leaves `u=2,3,4,5`; the sharp mass-ten lift is `{0,1,2}`-valued, its value-two set violates the degree-four slice-distance floor, and a paired-cube restriction gives Boolean density at least `17/74>5/74` | closes the `p=37` endpoint of 15.679's boundary; 15.681--15.683 subsequently close `p=29,31,41`; three endpoints, later sizes, residual (ii), and all top-level gates remain open |
 | 15.681 | paired cubes give every nonzero nonnegative integral quadratic scaled mass at least `(p+1)/2` or `(p-1)/2`; at `p=29`, pair slack leaves only arcs/one-triple near-arcs, and exhaustive 25-/26-arc class counts match all conic-complement orbits | closes the `p=29,s=24` endpoint and removes every positive residue at `p=31,41`; 15.682--15.683 subsequently close the residue-zero rows at both primes; `p=17,19,23`, later sizes, residual (ii), and all top-level gates remain open |
 | 15.682 | at `p=31,s=26`, the integral lift kills every positive residue; the fourteen residue-zero profiles are 26-arcs or one-triple near-arcs with at least three undetermined directions, while the complete-arc classification forces their 27-/28-arc extensions onto conics | closes the `p=31,s=26` endpoint; 15.683 subsequently closes `p=41`, leaving `p=17,19,23`, later sizes, residual (ii), and all top-level gates open |
 | 15.683 | at `p=41,s=34`, exact arithmetic leaves seven 34-arc and two one-triple profiles; eight high-tangent directions become double components of Segre's degree-18 envelope (or degree-20 after deleting a triple point), leaving a conic that is forced to contain three point-pencil lines | closes the `p=41,s=34` endpoint; only `p=17,19,23` remain at this second boundary, while later sizes, residual (ii), and all top-level gates remain open |
-| 15.684 | at `p=23,s=20`, paired-cube value floors and a shell-kernel factorization exclude scaled masses 12 and 16, hence every positive residue; the exact residue-zero census has 1,247 profiles, of which the tangent envelope, complete-arc classification, and a conic-core repair lemma exclude 1,044 | strictly reduces `p=23` to 203 exact arithmetic profiles but does not close it; `p=17,19,23`, later sizes, residual (ii), and all top-level gates remain open |
-| 15.685 | a slack-12 realization repairs to a complete 17-arc plus three outside points, each forced to lie on exactly one arc secant; five explicit invariant-distinct representatives exhaust the classified complete-17-arc classes, whose counts of such points are `0,0,1,0,0` | excludes the unique slack-12 row and reduces `p=23` from 203 to 202 exact arithmetic profiles; the endpoint and all top-level gates remain open |
-| 15.686 | the unique slack-16 row has one undetermined direction; after four-point repair it completes the 16-arc to a complete 17-arc, while slack equality forces all four deleted points to have secant multiplicity one | the classified maximum is one, so the row is impossible; exactly 201 `p=23` profiles remain, all of slack at least 20, and the endpoint stays open |
-| 15.687 | all 68 slack-20 rows have two to four undetermined directions; overlapping infinity-point pairs in the 66 three-/four-direction rows force either a complete 17-arc with five multiplicity-one points or one conic through three collinear infinity points, while the two-direction rows use the same class certificate/conic-core split | excludes the full slack-20 block and reduces `p=23` from 201 to 133 profiles, all of slack at least 24; the endpoint and top-level gates remain open |
+| 15.684 | **OPEN_RETRACTED_REDUCTION:** the corrected ledger restores `u_0=9`, scaled mass 18, with a slack-zero profile; only the `u_0=0` subledger retains the old `1,247 -> 203` conic-core reduction | does not prove a whole-endpoint reduction; 15.721 independently supersedes and excludes this all-finite boundary as a live gate |
+| 15.685 | a slack-12 realization in 15.684's conditional residue-zero subledger repairs to a complete 17-arc plus three outside points, each forced to lie on exactly one arc secant; five explicit invariant-distinct representatives exhaust the classified complete-17-arc classes | excludes the unique slack-12 row and reduces the residue-zero subledger from 203 to 202; the restored `u_0=9` branch and all top-level gates remain open |
+| 15.686 | the unique slack-16 row in the conditional residue-zero subledger has one undetermined direction; after four-point repair it completes the 16-arc to a complete 17-arc, while slack equality forces all four deleted points to have secant multiplicity one | the classified maximum is one, so the row is impossible; exactly 201 residue-zero profiles remain, while `u_0=9` is unaffected |
+| 15.687 | all 68 slack-20 rows in the conditional residue-zero subledger have two to four undetermined directions; the complete-arc/conic-core split excludes them | reduces that subledger from 201 to 133 profiles, all of slack at least 24; the restored `u_0=9` branch and top-level gates remain open |
 | 15.688 | paired-cube quarter-integrality separates the `H=1` and `H>=2` branches and combines with the exact stabilizer weights to give the sharp lift floor `4p E[B]>=p-3`; completion-bounded enumeration corrects the residue-zero minimum to a 143-profile census | removes every positive-residue row at the `p=19,s=16` second boundary; the endpoint and top-level gates remain open |
 | 15.689 | the published `PG(2,19)` complete-arc spectrum, undetermined infinity points, repair, and retained-conic-secant bounds exclude every residue-zero profile of slack at most twelve | reduces `p=19` from 143 to exactly 14 high-slack profiles `{16:7,20:4,24:1,28:1,32:1}`; the endpoint and top-level gates remain open |
 | 15.690 | exact square-torus character orthogonality and affine autocorrelation give `S_K=12(q-1)||delta||^2/n`; abstract equivariant spectra and PSD autocorrelations violate the desired bound | identifies the dilation inequality with strong R1 itself and proves character/PSD-only routes insufficient; R1 remains open |
@@ -804,17 +835,17 @@ Proposition 15.721 supersedes the active all-finite shell statuses in
 | 15.697 | the all-`b=2` slack-20 row has a Boolean elevated lift by stabilizer equality, rank-152 layer factorization, and a complete `2^18` additive cross-difference certificate; exact phase-zero coefficient `l1` bounds reduce its infinity degree to `0,20,38` | strict structural reduction only: the profile count remains four, the slice-to-cube catalog is conditional, and every top-level gate remains open |
 | 15.698 | the exact affine-Radon inverse and forced five-deletion 11-arc repair give a 1,184,892-clause/741-XOR boundary model; completed nuka and soulkiller-ECC runs both return `UNSATISFIABLE` | closes the final p=19 slack-20 row and reduces the endpoint to three profiles `{24:1,28:1,32:1}`; the endpoint and top-level gates remain open |
 | 15.699 | the three remaining p=19 directional profiles are imposed directly in the exact affine-Radon inverse model; five completed native-XOR runs across nuka, jellyfin, and soulkiller ECC return `UNSATISFIABLE` | closes the p=19 second all-finite endpoint; p=17, p=23, later sizes, residual (ii), and all top-level gates remain open |
-| 15.700 | exact p=17 quotient/lift arithmetic gives 1,575 profiles and 247 slack-zero rows; the unique classified 16-arc class is exhausted over 21,267 affine conic-minus-two cases, whose 53 labelled profiles meet the arithmetic ledger in only two tangent cases | excludes 245 p=17 profiles and reduces the endpoint to 1,330 exact rows, including two slack-zero tangent-conic profiles; the endpoint and all top-level gates remain open |
-| 15.701 | the unique p17 15-arc class is conic-derived; arc repair plus up to two undetermined infinity points reaches that class for 398 low-positive-slack rows, while any off-conic remainder forces slack `>=4h(6-h)>=20` | excludes all 227 slack-four rows, 128 slack-eight rows, and 43 slack-twelve rows; 932 exact p17 rows remain and every top-level gate stays open |
-| 15.702 | the unique complete p17 14-arc has outside secant-index histogram `{2:4,3:4,4:76,5:128,6:75,7:6}`; equality repair would require deleted points of index one | excludes the remaining 67 slack-eight rows and 79 one-undetermined-direction slack-twelve rows; 786 exact p17 rows remain and every top-level gate stays open |
-| 15.703 | eight locally generated, pairwise inequivalent complete p17 13-arcs match the published eight-class count and stabilizer fingerprint; their index-one counts are `0,0,0,0,0,0,2,3`, while every incomplete-core candidate through the unique complete 14-arc has reconstructed slack at least sixteen | conditionally on the published class count, excludes all final 33 slack-twelve rows; 753 exact p17 rows remain and every top-level gate stays open |
-| 15.704 | the slack-sixteen rows split by free directions as `{0:13,1:47,2:47,3:5}`; complete-arc secant floors, overlapping-pair conics, and an exact 26-placement complete-14-minus-one audit leave no slack-sixteen realization with a genuinely undetermined direction | excludes 99 of 112 slack-sixteen rows; 654 exact p17 rows remain, including thirteen zero-direction slack-sixteen rows, and every top-level gate stays open |
-| 15.705 | all 629 PGL classes of p17 twelve-arcs give 97,122 four-point extensions within the slack-sixteen core-secant charge; only 47 have an allowed line pattern, and all 6,345 affine charts miss the thirteen target profiles under both phase labellings | excludes the final thirteen slack-sixteen rows; 641 exact p17 rows remain (two slack-zero and 639 of slack at least twenty), while the endpoint and every top-level gate remain open |
-| 15.706 | every allocation in either p17 slack-zero profile retains rigid `b=2` directions of both quadratic types; their directional sums and the global finite-edge Paley-sign sum force `17I=4+72(g_++g_-)`, hence `I=68`, whose one remaining finite edge gives odd-boundary size 66, 68, or 70 rather than 16 | excludes both slack-zero profiles without a solver; 639 exact p17 rows remain, all of slack at least twenty, while the endpoint and every top-level gate remain open |
-| 15.707 | all 69 `(u_0,u_1)=(0,8)` slack-20 rows retain rigid phase-zero `b=0` or `2` directions, so 15.706's global-sign contradiction applies; the nine `(8,8)` rows have at least two undetermined directions and fail the existing conic/complete-13/complete-14 repair bounds | excludes all 78 slack-20 profiles without a solver or new classification; 561 exact p17 rows remain, all of slack at least 24, while the endpoint and every top-level gate remain open |
-| 15.708 | all 45 `(0,8)` slack-24 rows retain rigid phase-zero `b=0` and phase-one `b=2` directions, forcing incompatible gauge bounds; the nine `(8,8)` rows force `I=4`, and a rigid `b=16` unique-even-fibre cell sum gives `N_j<=-3` for a nonnegative edge count | excludes all 54 slack-24 profiles analytically; 507 exact p17 rows remain, all of slack at least 28, while the endpoint and every top-level gate remain open |
-| 15.709 | every remaining `u_1=8` row retains eight rigid phase-one `b=2` directions; 66 `(0,8)` rows retain rigid `b=0`, while 214 `(8,8)` rows retain rigid `b=16`, so the two 15.708 contradictions apply independent of slack | excludes 280 profiles across slack 28 through 128 without a solver; 227 exact p17 rows remain, all with `u_1=0` and slack at least 96, while the endpoint and every top-level gate remain open |
-| 15.710 | all 227 rows have nine rigid phase-one `b=16` directions; 176 retain an actual phase-zero floor `b=0`, forcing gauge sum 14 with minimum 15, and 32 retain an actual phase-zero floor `b=16`, forcing gauge sum 16 with minimum 17 | excludes 208 profiles analytically; nineteen rows remain with residue split `(0,0):5,(7,0):9,(8,0):5`, while the endpoint and every top-level gate remain open |
+| 15.700 | corrected p17 quotient/lift arithmetic gives 2,503 profiles and 286 slack-zero rows; the unique classified 16-arc class is exhausted over 21,267 affine conic-minus-two cases, whose 53 labelled profiles meet the arithmetic ledger in only two tangent cases | excludes 284 profiles and gives the corrected step `2503 -> 2219`, retaining two slack-zero profiles |
+| 15.701 | the unique p17 15-arc class is conic-derived; arc repair plus up to two undetermined infinity points reaches that class for 475 low-positive-slack rows, while any off-conic remainder forces slack `>=4h(6-h)>=20` | excludes `292` slack-four, `140` slack-eight, and `43` slack-twelve rows; corrected step `2219 -> 1744` |
+| 15.702 | the unique complete p17 14-arc has outside secant-index histogram `{2:4,3:4,4:76,5:128,6:75,7:6}`; equality repair would require deleted points of index one | excludes `152` slack-eight and `111` one-undetermined slack-twelve rows; corrected step `1744 -> 1481` |
+| 15.703 | eight locally generated, pairwise inequivalent complete p17 13-arcs match the published eight-class count and stabilizer fingerprint; the complete/incomplete-core split eliminates the residual slack-twelve block | conditionally on the published class count, excludes all `113` slack-twelve rows; corrected step `1481 -> 1368` |
+| 15.704 | the 227 slack-sixteen rows split by undetermined directions as `{0:87,1:88,2:47,3:5}`; complete-arc secant floors, overlapping-pair conics, and the complete-14-minus-one audit exclude every row with a free direction | excludes 140 rows; corrected step `1368 -> 1228`, retaining 87 zero-direction slack-sixteen rows |
+| 15.705 | the historical Orbiter certificate checks exactly thirteen target profiles against all 629 PGL classes of p17 twelve-arcs and 6,345 affine charts | **PARTIAL/OPEN:** excludes only those thirteen targets, gives `1228 -> 1215`, and leaves 74 slack-sixteen rows for 15.709 |
+| 15.706 | the two p17 slack-zero profiles retain rigid `b=2` directions of both types; the global finite-edge Paley-sign identity forces the impossible infinity degree `I=68` | excludes both without a solver; corrected step `1215 -> 1213`, retaining the 74 slack-sixteen rows |
+| 15.707 | all 184 `(u_0,u_1)=(0,8)` slack-20 rows fail the rigid global-sign identity; the nine `(8,8)` rows fail the existing arc-repair bounds | excludes all 193 slack-20 profiles; corrected step `1213 -> 1020` |
+| 15.708 | all 142 `(0,8)` slack-24 rows fail incompatible gauge bounds; the nine `(8,8)` rows force a negative nonnegative-edge count | excludes all 151 slack-24 profiles; corrected step `1020 -> 869` |
+| 15.709 | every remaining `u_1=8` row retains rigid phase-one `b=2`; 334 `(0,8)` rows retain rigid `b=0`, while 214 `(8,8)` rows retain rigid `b=16` | excludes all 548 rows, including the 74 left by 15.705; corrected step `869 -> 321` |
+| 15.710 | all 321 rows have nine rigid phase-one `b=16` directions; 270 retain a rigid phase-zero `b=0`, and 32 retain a rigid phase-zero `b=16` | excludes 302 profiles analytically; corrected step `321 -> 19` |
 | 15.711 | avoiding a rigid phase-zero `b=0` anchor in the five `(0,0)` rows forces mean 18 in every direction; parity leaves `I=6,24,42,60`, every finite edge is phase one, and nonnegative `b=16` cells force an upper bound smaller than each candidate | excludes all five residue-zero rows analytically; fourteen rows remain with residue split `(7,0):9,(8,0):5`, while the endpoint and every top-level gate remain open |
 | 15.712 | all fourteen rows have phase-one profile `{16:9}`, so the sixteen-point boundary determines at most nine directions; Szőnyi's theorem requires at least ten unless it is collinear, while the unique collinear profile `{0:1,16:8}/{16:9}` is absent | excludes all fourteen rows analytically and closes the `p=17,s=16` endpoint; residual (ii) and every top-level gate remain open |
 | 15.713 | in the positive `p=7` infinity-plus-seven branch, `b_d=7` is an undetermined direction; Szőnyi forces every projected profile with at least four such directions to be one of two labelled line profiles | excludes 208 projected `b`-profile pairs and reduces the exhaustive outer envelope from 1,217 to 1,009; the branch and every top-level gate remain open |
@@ -826,6 +857,10 @@ Proposition 15.721 supersedes the active all-finite shell statuses in
 | 15.719 | four consecutive equal projected layers for a semigroup with maximum generator grade three imply permanent finite-group stabilization; the exact `k=3` and `k=4` raw and anchor-relative supports stabilize on grades 3--6 as generated subgroups | identifies every required grade-3--6 high-catalog projection exactly because the Hilbert generators are binary; grade eight is only an outer support, so all 56 `z=7` boundaries and the theorem remain open |
 | 15.720 | a centered bi-tight indicator lies in `scheme+cross`, and commuting projection forces `d_i+d_j = 2ps mod (p^2-1)/2`; common degree residues contradict the handshake identity at required levels 2 and 3 (and bi-tight level 4 as a corollary) | retracts the invalid 15.55/15.167 spectral arrow and closes the required bi-tight levels for every `p>=5`; it does not close one-sided tight level 4 in residual (ii), and the spectral floor/QVAR/R1 front is no longer an acceptance gate |
 | 15.721 | a signed PSL conjugation permutes the relative flip mask, and `z -> 1/(z-v)` sends any chosen boundary point to infinity because `-1` is a square in `F_(p^2)` | combines 15.669 and 15.674 to exclude every total boundary size `|D|<=p-1` for `p>=17`; the first general shell is `|D|=p+1`, where 15.676 leaves strict pair deficit open; the former all-finite ladder is superseded as a gate |
+| 15.722 | the signed PSL multiplier gives `c_(gH)=c_H product_(v in D) delta_g(v)`; slack zero forces a Miquelian circle; near-complete-arc extension and a minimal deletion-to-an-arc lemma exclude every positive `R<=max(3,floor(sqrt(p)-5/2))` by off-conic secant counting | reduces the first `p+1` shell to slack beyond that cutoff or the full-circle branch; one-point Miquelian-circle repairs are excluded by a second chart |
+| 15.723 | paired cubes give mean at least `3/2` for a nonnegative integral quadratic with at least five active parity coordinates, and the Johnson paired-cube operator transfers that gap to the middle profile | proves the middle floor-plus-two shortcut for all odd `p>=17` except the real cells `(17,5,1)` and `(17,11,0)`, which have explicit quadratic witnesses and remain in every audit |
+| 15.724 | a full circle has an isolated outside vertex; transporting it to infinity forces `I=0`, aligned `m*b=0+m*b=2`, and exact arithmetic `(u,x,y)=(4,4,3)`; four phase-zero directions then contain a nonzero lift of scaled mass eight, contradicting `4p E[B]>=p-3` | excludes the full Miquelian-circle boundary and therefore the entire outside pair-slack-zero branch for every `p>=17`; only slack beyond 15.722's prime-dependent cutoff and the rest of the shell remain open |
+| 15.725 | exact inversion coordinates and a 2,381-case, 92,664-direction finite phase-zero census for a parabola plus one internal point | **RETRACTED as an all-prime family close:** the character-curve estimates and opposite sign are open; finite data only, no gate changes |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -1012,16 +1047,23 @@ nonempty boundary point to infinity while merely permuting the relative flip
 set. Thus 15.669 excludes every total size `6<=|D|<=p-3`, and 15.674
 excludes `|D|=p-1`, for every `p>=17`. Together with the `0/2/4` cases,
 the first general shell is `|D|=p+1`, normalized to infinity plus `p` finite
-points. Proposition 15.676 closes its pair-deficit-equality (`p`-arc/conic)
-branch; strict pair deficit remains.
+points. Proposition 15.676 closes pair-deficit equality. Proposition 15.722
+then tracks the product sign exactly: outside pair slack one is impossible,
+and slack zero is an aligned Miquelian circle. Proposition 15.724 excludes
+that circle using an isolated outside vertex and the sharp integral-lift
+floor. Therefore the active `p+1` remainder has outside pair slack at least
+two. Proposition 15.723 independently repairs the middle floor-plus-two
+quantization, retaining its two genuine `p=17` equality cells.
 
-Historically, Propositions 15.675--15.712 built exact first/second
-all-finite shell closures, including the `p=17/19` endpoints and a reduction
-of `p=23` to 133 profiles. Proposition 15.721 shows those shell campaigns
-were not needed as boundary gates: every one lies at total size at most
-`p-1`. Their finite-geometry, integral-lift, and solver certificates remain
-valid historical results and reusable lemmas, but none of those old profile
-lists is an active residual target.
+Historically, Propositions 15.675--15.712 pursued exact first/second
+all-finite shell closures. The corrected audit retracts 15.678's `p=17`
+first-shell close and 15.684's whole-endpoint `p=23` reduction; only their
+explicitly retained sublemmas and conditional subledgers remain valid. The
+corrected 15.700--15.712 replay still closes the `p=17` second-shell ledger,
+and the `p=19` second-shell chain is unchanged. Proposition 15.721 shows that
+none of these campaigns is needed as a boundary gate: every such shell lies
+at total size at most `p-1`, and none of the historical profile lists is an
+active residual target.
 
 ### Route kills — do not re-tread
 
@@ -1061,13 +1103,16 @@ unidentified glue-class phase, unknown broad mass, or classified low shell.
 1. **Non-Walsh multi-level Max−:** close residual (ii) for even `k≥4p`.
    At the endpoint `k=4p`, Proposition 15.721 excludes every boundary of
    size at most `p-1` for `p>=17`. The first general shell is `|D|=p+1`;
-   after normalization it is infinity plus `p`, and only strict pair deficit
-   survives Proposition 15.676. The separate small-prime remainder includes
+   15.676/15.722/15.724 exclude pair equality, slack zero, and every positive
+   outside slack through `max(3,floor(sqrt(p)-5/2))`. Only larger slack
+   survives. The separate small-prime remainder includes
    the 56 positive `p=7,z=7` line boundaries. Even `k>4p` still requires the
    full multi-level argument; 15.721 is not a claim about those larger edge
    counts.
-2. **Type I, multi-level Max−:** prove the general `3A+B>0` bad-case
-   inequality or otherwise establish no descent.
+2. **Type I, multi-level Max−:** prove both far-class signs: `G>T` on
+   `|κ|=1`, and `χ_d((2p-1)μ+(p-2)ν)>-(p-2)/p` on `|κ|=3`, or
+   otherwise establish no descent. A `|μ|` bound stated only on `|κ|=1`
+   does not close the second half.
 
 The spectral floor, global mixed-`k` QVAR, and principal R1 remain worthwhile
 optional problems, but Proposition 15.720 removed them from the acceptance
@@ -1126,19 +1171,19 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15666.py` | Complete both-sign exclusion of every remaining finite `p=7` size-eight boundary |
 | `src/e1_gmin_m4_prop15669.py` | Full-middle parity quadrature, uniform boundary-range exclusion, and exact `p=11,13` extensions |
 | `src/e1_gmin_m4_prop15670.py` | Lossless affine normalization and dual-GPU audit excluding finite `p=11` size-eight boundaries |
-| `src/e1_gmin_m4_prop15671.py` … `prop15683.py` | Complete infinity-plus-`(p-2)` shell exclusion, first all-finite survivor close from `p=17`, infinity-plus-`p` arc-equality close, and second-boundary closure for `p>=43` plus `p=41,37,31,29` |
-| `src/e1_gmin_m4_prop15684.py` … `prop15699.py` | Exact `p=23` and `p=19` next-boundary reductions, classified-arc exclusions, affine-Radon normal form, and complete p=19 endpoint closure |
-| `src/e1_gmin_m4_prop15700.py` | Exact `p=17,s=16` profile ledger and unique-16-arc affine conic census reducing slack zero from 247 profiles to two |
-| `src/e1_gmin_m4_prop15701.py` | Unique-15-arc conic-core reduction excluding 398 low-positive-slack `p=17,s=16` profiles |
-| `src/e1_gmin_m4_prop15702.py` | Unique-complete-14-arc secant-index certificate excluding another 146 low-slack p17 profiles |
-| `src/e1_gmin_m4_prop15703.py`, `scripts/p17_complete_arc_class_generator.py` | Complete-13-arc class generation and exact secant-index/triple certificate excluding all final p17 slack-twelve profiles |
-| `src/e1_gmin_m4_prop15704.py` | Free-direction split and complete-13/14-arc infinity-placement certificate excluding 99 p17 slack-sixteen profiles |
-| `src/e1_gmin_m4_prop15705.py`, `scripts/p17_slack16_orbiter_extension.py` | Complete 629-orbit extension census excluding the final thirteen p17 slack-sixteen profiles |
-| `src/e1_gmin_m4_prop15706.py` | Solver-free global Paley-sign identity excluding both p17 slack-zero profiles for every infinity degree |
-| `src/e1_gmin_m4_prop15707.py`, `scripts/p17_slack20_boundary_cryptominisat.py` | Exact quotient/global-sign exclusion of 69 p17 slack-twenty profiles plus two-direction arc-repair exclusion of the other nine; separate 78-to-69 exact boundary-signature audit model (not used as proof evidence) |
-| `src/e1_gmin_m4_prop15708.py` | Solver-free global-sign and unique-even-fibre cell identities excluding all 54 p17 slack-twenty-four profiles |
-| `src/e1_gmin_m4_prop15709.py` | Full-ledger rigid-anchor sweep excluding every remaining p17 profile with phase-one residue eight |
-| `src/e1_gmin_m4_prop15710.py` | Complementary phase-one-`b=16` global-sign sweep reducing the p17 endpoint from 227 profiles to nineteen |
+| `src/e1_gmin_m4_prop15671.py` … `prop15683.py` | Complete infinity-plus-`(p-2)` shell exclusion, infinity-plus-`p` arc-equality close, and second-boundary closure for `p>=43` plus `p=41,37,31,29`; 15.678's attempted `p=17` all-finite close is retracted |
+| `src/e1_gmin_m4_prop15684.py` … `prop15699.py` | Conditional `p=23` residue-zero reductions (15.684's whole-endpoint claim is retracted), classified-arc exclusions, affine-Radon normal form, and complete p19 endpoint closure |
+| `src/e1_gmin_m4_prop15700.py` | Corrected p17 replay step `2503 -> 2219`, excluding 284 profiles |
+| `src/e1_gmin_m4_prop15701.py` | Corrected p17 replay step `2219 -> 1744`, excluding 475 profiles |
+| `src/e1_gmin_m4_prop15702.py` | Corrected p17 replay step `1744 -> 1481`, excluding 263 profiles |
+| `src/e1_gmin_m4_prop15703.py`, `scripts/p17_complete_arc_class_generator.py` | Corrected p17 replay step `1481 -> 1368`, excluding 113 profiles |
+| `src/e1_gmin_m4_prop15704.py` | Corrected p17 replay step `1368 -> 1228`, excluding 140 profiles |
+| `src/e1_gmin_m4_prop15705.py`, `scripts/p17_slack16_orbiter_extension.py` | **PARTIAL** corrected step `1228 -> 1215`: excludes 13 historical Orbiter targets but retains 74 slack-sixteen rows for 15.709 |
+| `src/e1_gmin_m4_prop15706.py` | Corrected p17 replay step `1215 -> 1213`, excluding two profiles |
+| `src/e1_gmin_m4_prop15707.py`, `scripts/p17_slack20_boundary_cryptominisat.py` | Corrected p17 replay step `1213 -> 1020`, excluding 193 profiles |
+| `src/e1_gmin_m4_prop15708.py` | Corrected p17 replay step `1020 -> 869`, excluding 151 profiles |
+| `src/e1_gmin_m4_prop15709.py` | Corrected p17 replay step `869 -> 321`, excluding 548 profiles including all 74 rows retained by 15.705 |
+| `src/e1_gmin_m4_prop15710.py` | Corrected p17 replay step `321 -> 19`, excluding 302 profiles |
 | `src/e1_gmin_m4_prop15711.py` | Uniform-mean phase-one fibre-capacity contradiction excluding the five p17 residue-zero profiles |
 | `src/e1_gmin_m4_prop15712.py` | Rédei--Szőnyi direction-theorem exclusion closing the final fourteen p17 profiles |
 | `src/e1_gmin_m4_prop15713.py` | Szőnyi direction-theorem reduction of the positive p7 infinity-plus-seven projected profile envelope |
@@ -1186,13 +1231,13 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-28_first_all_finite_survivor_half_close.md` | Exact type-residue minima and modulo-eight first-survivor gaps (15.675) |
 | `evidence/NOTE_2026-08-28_infinity_plus_p_arc_close.md` | Segre reduction, exact affine-conic profiles, and both-phase equality-branch exclusion (15.676) |
 | `evidence/NOTE_2026-08-28_first_all_finite_survivor_complete_from_p19.md` | Zero-quotient lift contradiction and complete first-survivor close from `p=19` (15.677) |
-| `evidence/NOTE_2026-08-28_p17_first_all_finite_survivor_exclusion.md` | Exact endpoint profiles, unique 16-arc class, and complete `p=17` first-survivor exclusion (15.678) |
+| `evidence/NOTE_2026-08-28_p17_first_all_finite_survivor_exclusion.md` | Historical/retracted 15.678 route; its unique-16-arc geometry excludes 14 corrected arc profiles but does not cover the other 94 compatible profiles |
 | `evidence/NOTE_2026-08-28_next_all_finite_boundary_p43.md` | Symbolic residue reduction, slice-distance lift contradiction, and next-boundary exclusion for `p>=43` (15.679) |
 | `evidence/NOTE_2026-08-28_p37_next_all_finite_endpoint.md` | Exact `p=37,s=30` pair ledger, degree-four mass-ten exclusion, and paired-cube Boolean quadratic floor (15.680) |
 | `evidence/NOTE_2026-08-28_p29_next_all_finite_endpoint.md` | Integral paired-cube mass floor, exact `p=29` profiles, PGL complement-orbit audit, and classified arc-extension exclusion (15.681) |
 | `evidence/NOTE_2026-08-28_p31_next_all_finite_endpoint.md` | Exact fourteen-profile residue-zero ledger and complete-arc/conic extension exclusion at `p=31` (15.682) |
 | `evidence/NOTE_2026-08-28_p41_next_all_finite_endpoint.md` | Exact nine-profile residue-zero ledger and tangent-envelope component exclusion at `p=41` (15.683) |
-| `evidence/NOTE_2026-08-28_p23_low_mass_conic_reduction.md` | Low-mass shell-kernel exclusion, exact 1,247-profile ledger, tangent-envelope arc close, and conic-core reduction to 203 profiles at `p=23` (15.684) |
+| `evidence/NOTE_2026-08-28_p23_low_mass_conic_reduction.md` | Historical/retracted 15.684 whole-endpoint route; its `1,247 -> 203` reduction remains valid only inside the residue-zero subledger, while `u_0=9` is open |
 | `evidence/NOTE_2026-08-28_p23_slack12_complete17_exclusion.md` | Three-point repair inequality, five complete-17-arc representatives, full secant-index histograms, and exclusion of the unique slack-12 profile (15.685) |
 | `evidence/NOTE_2026-08-28_p23_slack16_complete17_exclusion.md` | Undetermined-direction completion, four-point repair inequality, and exclusion of the unique slack-16 profile using the same five complete-17-arc classes (15.686) |
 | `evidence/NOTE_2026-08-28_p23_slack20_complete17_exclusion.md` | Five-point conic-core extension, exact undetermined-direction split, and exclusion of all 68 slack-20 profiles (15.687) |
@@ -1206,17 +1251,17 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-29_p19_allb2_boolean_reduction.md` | Unconditional Booleanization and infinity-degree reduction of the all-`b=2` slack-20 profile, plus the explicitly conditional Boolean catalog (15.697) |
 | `evidence/NOTE_2026-08-29_p19_allb2_boundary_unsat.md` | Exact affine-Radon/repair model, two completed native-XOR UNSAT runs, sign transfer, and closure of every p=19 slack-20 profile (15.698) |
 | `evidence/NOTE_2026-08-29_p19_endpoint_boundary_unsat.md` | Five completed native-XOR UNSAT runs excluding the slack-24, -28, and -32 profiles and closing the p=19 endpoint (15.699) |
-| `evidence/NOTE_2026-08-29_p17_second_boundary_slack0_reduction.md` | Exact 1,575-profile p=17 ledger, exhaustive 21,267-case conic-minus-two image, and slack-zero reduction from 247 rows to two (15.700) |
-| `evidence/NOTE_2026-08-29_p17_low_positive_slack_conic_reduction.md` | Unique-15-arc conic-core argument excluding 398 low-positive-slack p17 profiles and reducing the endpoint to 932 rows (15.701) |
-| `evidence/NOTE_2026-08-29_p17_complete14_arc_exclusion.md` | Unique complete-14-arc secant-index census excluding the remaining slack-eight rows and 79 slack-twelve rows (15.702) |
-| `evidence/NOTE_2026-08-29_p17_slack12_complete13_exclusion.md` | Eight complete-13-arc representatives and complete-14-minus-one triple census excluding all final slack-twelve rows (15.703) |
-| `evidence/NOTE_2026-08-29_p17_slack16_free_direction_exclusion.md` | Complete-arc/conic reduction and exact infinity-placement census excluding 99 slack-sixteen rows with a free direction (15.704) |
-| `evidence/NOTE_2026-08-29_p17_slack16_orbit_extension_exclusion.md` | Exhaustive 629-orbit extension and 6,345-chart census excluding the final thirteen p17 slack-sixteen rows (15.705) |
-| `evidence/NOTE_2026-08-29_p17_slack0_global_sign_exclusion.md` | Opposite-type rigid-direction comparison forcing the impossible infinity degree `I=68` and excluding both p17 slack-zero rows (15.706) |
-| `evidence/NOTE_2026-08-29_p17_slack20_rigid_b2_exclusion.md` | Rigid low-floor quotient census and two-direction arc-repair argument excluding all 78 p17 slack-twenty profiles (15.707) |
-| `evidence/NOTE_2026-08-29_p17_slack24_unique_even_fibre_exclusion.md` | Gauge contradiction for 45 rows and unique-even-fibre signed-cell contradiction for the other nine slack-twenty-four profiles (15.708) |
-| `evidence/NOTE_2026-08-29_p17_u1_eight_global_exclusion.md` | Uniform extension of the two rigid-anchor contradictions to all 280 remaining `u_1=8` profiles (15.709) |
-| `evidence/NOTE_2026-08-29_p17_phase1_b16_global_reduction.md` | Two complementary global-sign gauge contradictions excluding 208 profiles and leaving nineteen p17 rows (15.710) |
+| `evidence/NOTE_2026-08-29_p17_second_boundary_slack0_reduction.md` | Historical pre-15.723 narrative; corrected 15.700 replay is `2503 -> 2219`, with slack zero `286 -> 2` |
+| `evidence/NOTE_2026-08-29_p17_low_positive_slack_conic_reduction.md` | Historical pre-15.723 narrative; corrected 15.701 replay excludes 475 and gives `2219 -> 1744` |
+| `evidence/NOTE_2026-08-29_p17_complete14_arc_exclusion.md` | Historical pre-15.723 narrative; corrected 15.702 replay excludes 263 and gives `1744 -> 1481` |
+| `evidence/NOTE_2026-08-29_p17_slack12_complete13_exclusion.md` | Historical pre-15.723 narrative; corrected 15.703 replay excludes 113 and gives `1481 -> 1368` |
+| `evidence/NOTE_2026-08-29_p17_slack16_free_direction_exclusion.md` | Historical pre-15.723 narrative; corrected 15.704 replay excludes 140 and gives `1368 -> 1228` |
+| `evidence/NOTE_2026-08-29_p17_slack16_orbit_extension_exclusion.md` | Historical target certificate retained only for thirteen rows; corrected 15.705 is **PARTIAL**, gives `1228 -> 1215`, and leaves 74 slack-sixteen rows |
+| `evidence/NOTE_2026-08-29_p17_slack0_global_sign_exclusion.md` | Retained analytic identity excludes two slack-zero rows; corrected 15.706 step is `1215 -> 1213` |
+| `evidence/NOTE_2026-08-29_p17_slack20_rigid_b2_exclusion.md` | Retained rigid-floor/repair argument excludes all 193 slack-twenty rows; corrected 15.707 step is `1213 -> 1020` |
+| `evidence/NOTE_2026-08-29_p17_slack24_unique_even_fibre_exclusion.md` | Retained gauge/cell arguments exclude all 151 slack-twenty-four rows; corrected 15.708 step is `1020 -> 869` |
+| `evidence/NOTE_2026-08-29_p17_u1_eight_global_exclusion.md` | Corrected rigid-anchor sweep excludes all 548 remaining `u_1=8` rows, including the 74 inherited from 15.705; step `869 -> 321` |
+| `evidence/NOTE_2026-08-29_p17_phase1_b16_global_reduction.md` | Two complementary global-sign contradictions exclude 302 profiles; corrected 15.710 step is `321 -> 19` |
 | `evidence/NOTE_2026-08-29_p17_residue0_uniform_mean_exclusion.md` | Four-candidate infinity-degree reduction and phase-one fibre-capacity contradiction excluding five p17 rows (15.711) |
 | `evidence/NOTE_2026-08-29_p17_redei_szonyi_endpoint_close.md` | Nine-undetermined-direction argument and Szőnyi bound closing the p17 endpoint (15.712) |
 | `evidence/NOTE_2026-08-29_p7_infinity7_szonyi_reduction.md` | Projected odd-fibre profile census and direction-theorem cut for positive p7 infinity plus seven (15.713) |
@@ -1226,6 +1271,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-30_p7_infinity7_positive_z3_close.md` | Complete 400-leaf mod-seven exhaustion and same-tuple mod-three exclusion of positive `z=3` (15.717) |
 | `evidence/NOTE_2026-08-30_p7_infinity7_positive_z7_global_semigroup.md` | Exact affine/global-join reduction, Johnson-semigroup audit, projected stabilization, and nonseparating strategy ledger for positive `z=7` (15.718--15.719) |
 | `evidence/NOTE_2026-08-30_bitight_degree_congruence.md` | Solver-free all-prime degree-congruence proof excluding the required bi-tight levels 2 and 3 (15.720) |
+| `evidence/NOTE_2026-08-30_p_plus_one_multichart_circle_close.md` | Exact signed phase cocycle, outside pair-slack `0/1` reductions, paired-cube floor-plus-two repair, and isolated-vertex full-circle exclusion (15.722--15.724) |
 | `evidence/p7_infinity7_positive_z7_global_semigroup_summary.json` | Compact hash-pinned affine/global-join and Hilbert-basis certificate for 15.718 |
 | `evidence/p7_infinity7_positive_z7_projected_stabilization_summary.json` | Compact hash-pinned finite projected-semigroup stabilization certificate for 15.719 |
 | `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md` | General local-stability counter-mechanism, closest-global hierarchy, Mathon barrier, and corrected signed-Eulerian target after the `c=2` no-go |
@@ -1272,7 +1318,7 @@ Lemma D is complete and is no longer on the work list.
 
 ```bash
 python3 -m pytest tests/test_minmax.py -v
-python3 -m pytest tests/test_prop15628.py tests/test_prop15629.py tests/test_prop15630.py tests/test_prop15631.py tests/test_prop15632.py tests/test_prop15633.py tests/test_prop15634.py tests/test_prop15635.py tests/test_prop15665.py tests/test_prop15667.py tests/test_prop15668.py tests/test_prop15669.py tests/test_prop15670.py tests/test_prop15671.py tests/test_prop15672.py tests/test_prop15673.py tests/test_prop15674.py tests/test_prop15675.py tests/test_prop15676.py tests/test_prop15677.py tests/test_prop15678.py tests/test_prop15679.py tests/test_prop15680.py tests/test_prop15681.py tests/test_prop15682.py tests/test_prop15683.py -q
+python3 -m pytest tests/test_prop15721.py tests/test_prop15722.py tests/test_prop15723.py tests/test_prop15724.py -q
 python3 -c "from src.minmax_quadratic import exact_m; print([exact_m(n) for n in range(2,9)])"
 ```
 

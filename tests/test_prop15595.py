@@ -26,10 +26,8 @@ def test_flags_untouched():
 
 
 def test_scope_e1_closed_general_is_not_a_close():
-    """e1_closed_general() is True but is a wiring fact; the GOAL gate is the
-    four units, three of which are False. This test pins that distinction so
-    nobody reads 15.595 as closing anything."""
-    assert e1_closed_general() is True
+    """The corrected global predicate and four-unit gate both remain open."""
+    assert e1_closed_general() is False
     assert phi_F_ge_6_proved_general() is False  # leftover 1 still open
     from e1_main_chain_status import run_main_chain
     out = run_main_chain()

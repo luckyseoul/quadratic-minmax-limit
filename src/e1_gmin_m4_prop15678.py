@@ -1,16 +1,36 @@
 #!/usr/bin/env python3
-"""Prop. 15.678 -- close the exceptional p=17 all-finite endpoint.
+"""Prop. 15.678 -- retracted p=17 endpoint reduction.
 
 At ``p=17`` the first even all-finite size above ``3(p-1)/4`` is
 ``s=14``.  Proposition 15.677 deliberately left this endpoint open because
 phase zero has an additional same-type residue ``u_0=0``.
 
-The exact floor/mean ledger leaves only ``u_1=8`` in phase one.  In phase
-zero, ``u_0=2`` is excluded by the six-unit quadratic-lift floor and
+The exact floor/mean ledger still leaves only ``u_1=8`` in phase one.  In
+phase zero, ``u_0=2`` is excluded by the six-unit quadratic-lift floor and
 ``u_0=3`` by the coefficient ``l1`` bound; all residues at least four exceed
-the pair budget.  For ``u_0=0``, the fact that pair slack is divisible by
-four leaves exactly two profiles.  In secant notation both have the same
-global distribution
+the pair budget.  The original proof claimed that pair-slack divisibility
+left exactly two ``u_0=0`` profiles.  That claim used a blanket rejection of
+every floor-plus-two cell.
+
+Proposition 15.723 shows that the blanket rejection is false.  After even
+``b`` is converted to its odd complement, the cells ``(b,phase)=(12,0)``
+and ``(6,1)`` are the two real ``p=17`` equality exceptions, while reduced
+sizes three and four are not covered by the middle-cell theorem.  The
+corrected relaxation has 108 pair-slack-compatible profiles, 47 of them
+arcs.  For example, the phase-zero profile
+
+    4*(b=0,q=0) + (b=2,q=1) + 4*(b=12,q=2)
+
+has deficit 76 and pairs with the phase-one profile
+
+    8*(b=2,q=0) + (b=12,q=1)
+
+of deficit 98, leaving pair slack 8.
+
+The former geometric argument remains valid for its two original arc
+profiles; in fact it excludes all 14 corrected arc profiles having three
+undetermined directions.  The original two have the same global secant
+distribution
 
     six directions with 7 secants,
     eight directions with 6 secants,
@@ -31,23 +51,20 @@ nine.  Deleting four conic points destroys at most four of these secants, so
 the third point lies on at least four secants of ``S`` -- a contradiction.
 
 The finite classification is an explicit external dependency, not a local
-re-enumeration.  This proposition closes only the exceptional first-survivor
-endpoint.  Later all-finite sizes, residual (ii), R1, global QVAR, Type I,
-and the limit remain open.
+re-enumeration.  It does not cover the additional corrected profiles, so the
+former endpoint exclusion is retracted and ``p=17,s=14`` is OPEN.
 """
 from __future__ import annotations
 
-import json
 from collections import Counter
 from functools import lru_cache
 from math import comb
-from pathlib import Path
 
 from e1_gmin_m4_prop15642 import nonbaseline_scaled_cost_floor
 from e1_gmin_m4_prop15669 import full_symbolic_floor
+from e1_gmin_m4_prop15723 import floor_excess_admissible
 
 
-ROOT = Path(__file__).resolve().parents[1]
 P = 17
 S = 14
 M = 9
@@ -65,9 +82,10 @@ def _profile_rows(
 ) -> tuple[tuple[int, tuple[int, ...]], ...]:
     """Enumerate the exact same-type floor relaxation at one residue.
 
-    Means are ``2u+18k`` and their quotient sum is ``9-u``.  The exclusion
-    of floor plus two is Proposition 15.642's nonzero-lift consequence.
-    Profiles are sorted tuples so duplicate allocations collapse exactly.
+    Means are ``2u+18k`` and their quotient sum is ``9-u``.  Floor-plus-two
+    cells are classified by Proposition 15.723 after complement/phase
+    normalization.  Profiles are sorted tuples so duplicate allocations
+    collapse exactly.
     """
     if phase not in (0, 1) or not 0 <= u < M:
         raise ValueError("phase must be 0/1 and 0<=u<9")
@@ -77,7 +95,7 @@ def _profile_rows(
         floor = full_symbolic_floor(P, b, phase)
         for quotient in range(target + 1):
             excess = 2 * u + PERIOD * quotient - floor
-            if excess >= 0 and excess != 2:
+            if floor_excess_admissible(P, b, phase, excess):
                 options.append((quotient, S - b, b))
 
     states: set[tuple[int, int, tuple[int, ...]]] = {(0, 0, ())}
@@ -123,12 +141,12 @@ def type_residue_ledger() -> dict[str, object]:
         rows[str(phase)] = phase_rows
 
     expected_zero = {
-        "0": 84,
+        "0": 68,
         "2": 82,
         "3": 84,
         "4": 96,
         "5": 98,
-        "6": 110,
+        "6": 108,
         "7": 112,
         "8": 112,
     }
@@ -281,10 +299,10 @@ def pair_slack_divisibility() -> dict[str, object]:
 
 
 def endpoint_profiles() -> dict[str, object]:
-    """Derive the exact two u0=0 profiles after pair slack divisibility."""
-    # Phase one costs at least 96 and phase zero u=0 costs at least 84.
+    """Enumerate the corrected u0=0 profiles after slack divisibility."""
+    # These caps use the corrected minima 96 (phase one) and 68 (phase zero).
     phase_zero = _profile_rows(0, 0, PAIR_DEFICIT_BUDGET - 96)
-    phase_one = _profile_rows(1, 8, PAIR_DEFICIT_BUDGET - 84)
+    phase_one = _profile_rows(1, 8, PAIR_DEFICIT_BUDGET - 68)
     candidates = []
     for deficit_zero, profile_zero in phase_zero:
         for deficit_one, profile_one in phase_one:
@@ -315,7 +333,7 @@ def endpoint_profiles() -> dict[str, object]:
                     "undetermined_directions": secants[0],
                 }
             )
-    expected = [
+    legacy_expected = [
         {
             "0": {"0": 6, "14": 3},
             "1": {"2": 8, "12": 1},
@@ -325,29 +343,74 @@ def endpoint_profiles() -> dict[str, object]:
             "1": {"2": 8, "14": 1},
         },
     ]
-    observed = [row["phase_profiles_b"] for row in candidates]
-    if observed != expected:
-        raise ArithmeticError("p=17 endpoint profile list changed")
+    legacy_profiles = []
+    for expected in legacy_expected:
+        matches = [
+            row for row in candidates if row["phase_profiles_b"] == expected
+        ]
+        if len(matches) != 1:
+            raise ArithmeticError("legacy p=17 endpoint profile changed")
+        legacy_profiles.append(matches[0])
+
+    slack_histogram = dict(
+        sorted(Counter(int(row["pair_slack"]) for row in candidates).items())
+    )
+    expected_slack_histogram = {0: 47, 4: 32, 8: 18, 12: 8, 16: 3}
+    if len(candidates) != 108 or slack_histogram != expected_slack_histogram:
+        raise ArithmeticError("corrected p=17 endpoint census changed")
+
+    geometry_covered = [
+        row
+        for row in candidates
+        if row["arc"] is True and int(row["undetermined_directions"]) >= 3
+    ]
+    if len(geometry_covered) != 14 or not all(
+        int(row["undetermined_directions"]) == 3 for row in geometry_covered
+    ):
+        raise ArithmeticError("p=17 three-undetermined arc count changed")
+
     expected_secants = {"0": 3, "1": 1, "6": 8, "7": 6}
     if not all(
         row["total_deficit"] == PAIR_DEFICIT_BUDGET
         and row["arc"] is True
         and row["global_secant_distribution"] == expected_secants
-        for row in candidates
+        for row in legacy_profiles
     ):
-        raise ArithmeticError("p=17 endpoint arc consequence changed")
+        raise ArithmeticError("legacy p=17 endpoint arc consequence changed")
+
+    open_example_profile = {
+        "0": {"0": 4, "2": 1, "12": 4},
+        "1": {"2": 8, "12": 1},
+    }
+    open_example_matches = [
+        row
+        for row in candidates
+        if row["phase_profiles_b"] == open_example_profile
+        and row["phase_deficits"] == {"0": 76, "1": 98}
+        and row["pair_slack"] == 8
+    ]
+    if len(open_example_matches) != 1:
+        raise ArithmeticError("p=17 floor-plus-two open example changed")
     return {
         "p": P,
         "s": S,
         "pair_deficit_budget": PAIR_DEFICIT_BUDGET,
         "pair_slack_divisibility": pair_slack_divisibility(),
-        "profiles": {
-            "A": candidates[0],
-            "B": candidates[1],
+        "phase_zero_profile_count_under_pair_cap": len(phase_zero),
+        "phase_one_profile_count_under_pair_cap": len(phase_one),
+        "candidate_count": len(candidates),
+        "pair_slack_histogram": slack_histogram,
+        "arc_profile_count": slack_histogram[0],
+        "three_undetermined_arc_profile_count": len(geometry_covered),
+        "profiles": candidates,
+        "legacy_arc_profiles": {
+            "A": legacy_profiles[0],
+            "B": legacy_profiles[1],
         },
-        "common_global_secant_distribution": expected_secants,
-        "common_undetermined_directions": 3,
-        "all_profiles_are_arcs": True,
+        "legacy_common_global_secant_distribution": expected_secants,
+        "legacy_common_undetermined_directions": 3,
+        "newly_admitted_floor_plus_two_example": open_example_matches[0],
+        "all_profiles_are_arcs": False,
         "proved": True,
     }
 
@@ -417,12 +480,12 @@ def conic_secant_survival_ledger() -> dict[str, object]:
 
 
 def three_undetermined_direction_contradiction() -> dict[str, object]:
-    """Close either endpoint profile using the unique 16-arc class."""
+    """Close every corrected arc profile with three undetermined directions."""
     profiles = endpoint_profiles()
     classification = p17_arc_classification_ledger()
     secants = conic_secant_survival_ledger()
     excluded = bool(
-        profiles["common_undetermined_directions"] == 3
+        profiles["three_undetermined_arc_profile_count"] == 14
         and classification["every_16_arc_is_conic_contained"] is True
         and secants["off_conic_point_is_never_undetermined"] is True
     )
@@ -430,6 +493,8 @@ def three_undetermined_direction_contradiction() -> dict[str, object]:
         raise ArithmeticError("three-direction conic contradiction changed")
     return {
         "initial_arc_size": 14,
+        "scope": "all 14 corrected arc profiles with three undetermined directions",
+        "corrected_arc_profiles_excluded": 14,
         "undetermined_points_on_line_at_infinity": 3,
         "extension": (
             "adjoin any two undetermined infinity points; the result is a 16-arc"
@@ -444,6 +509,7 @@ def three_undetermined_direction_contradiction() -> dict[str, object]:
             "the third point has at least four S-secants but was undetermined"
         ),
         "excluded": True,
+        "corrected_endpoint_ledger_excluded": False,
     }
 
 
@@ -459,20 +525,26 @@ def theorem_record() -> dict[str, object]:
         > PAIR_DEFICIT_BUDGET
         for u in range(4, M)
     )
-    proved = bool(
+    retained_sublemmas_proved = bool(
         u2["excluded"] is True
         and u3["excluded"] is True
         and later_residues_over_budget
-        and profiles["all_profiles_are_arcs"] is True
         and geometry["excluded"] is True
     )
     return {
         "prop": "15.678",
-        "title": "Exceptional p=17 first all-finite survivor exclusion",
-        "proved": proved,
+        "title": "Retracted p=17 first all-finite survivor exclusion",
+        "record_status": "OPEN_RETRACTED_REDUCTION",
+        "proved": False,
+        "former_claim_retracted": True,
+        "retraction_reason": (
+            "the corrected floor-plus-two classifier admits 108 compatible "
+            "u0=0 profiles, while the retained geometry treats only the 14 "
+            "arcs with three undetermined directions"
+        ),
         "theorem": {
-            "p17_first_all_finite_survivor": "EXCLUDED_HERE",
-            "all_odd_primes_p_at_least_17": "FIRST_SURVIVOR_EXCLUDED",
+            "p17_first_all_finite_survivor": "OPEN",
+            "all_odd_primes_p_at_least_17": "NOT_PROVED_BY_THIS_CHAIN",
             "later_all_finite_boundary_sizes": "OPEN",
             "general_residual_ii": False,
             "R1": False,
@@ -484,8 +556,13 @@ def theorem_record() -> dict[str, object]:
         "u2_lift_exclusion": u2,
         "u3_coefficient_exclusion": u3,
         "later_phase_zero_residues_over_pair_budget": later_residues_over_budget,
+        "retained_sublemmas_proved": retained_sublemmas_proved,
         "endpoint_profiles": profiles,
-        "geometry_exclusion": geometry,
+        "geometry_exclusion_of_three_undetermined_arcs": geometry,
+        "profiles_not_covered_by_retained_geometry": (
+            profiles["candidate_count"]
+            - profiles["three_undetermined_arc_profile_count"]
+        ),
         "external_dependency_is_explicit": True,
         "L_status": "OPEN",
     }
@@ -493,12 +570,8 @@ def theorem_record() -> dict[str, object]:
 
 def main() -> dict[str, object]:
     record = theorem_record()
-    if record["proved"] is not True:
-        raise ArithmeticError("Proposition 15.678 audit failed")
-    destination = ROOT / "evidence" / "e1_gmin_m4_prop15678.json"
-    destination.write_text(json.dumps(record, indent=2) + "\n")
-    print("Prop 15.678 p=17 first all-finite survivor: EXCLUDED")
-    print(f"  wrote {destination}")
+    print("Prop 15.678 p=17 first all-finite survivor: OPEN (claim retracted)")
+    print("  canonical evidence intentionally not regenerated")
     return record
 
 

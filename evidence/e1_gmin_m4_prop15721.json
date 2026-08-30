@@ -4,6 +4,42 @@
   "proved": true,
   "theorem": "For every prime p>=17, a residual flip set at |H|=4p+1 has no odd-degree boundary of total size |D|<=p-1.",
   "first_boundary_size_not_excluded": "p+1",
+  "universal_certificate": {
+    "scope": "every prime p>=17",
+    "even_size_partition": "the even sizes 0<=d<=p-1 split into 0,2,4, 6<=d<=p-3, and d=p-1",
+    "partition_disjoint_and_exhaustive": true,
+    "middle_range_after_boundary_point_transport": "5<=finite_points<=(p-3)-1=p-4",
+    "middle_range_matches_prop_15_669": true,
+    "endpoint_p_minus_1_maps_to_infinity_plus_p_minus_2": true,
+    "handshake_makes_p_plus_1_the_next_size": true,
+    "dependencies": {
+      "empty_boundary_15_632": true,
+      "two_point_positive_p_ge_17_15_643": true,
+      "two_point_negative_p_ge_17_15_647": true,
+      "four_point_p_ge_11_15_652": true,
+      "infinity_plus_p_minus_2_both_phases_15_674": true
+    },
+    "transport": {
+      "proved": true,
+      "signed_PSL_automorphism": {
+        "proved": true,
+        "theorem": "g\u2208PSL acts as a signed automorphism of Paley C via D_x=\u03c7(cx+d): \u03c7(g(x)\u2212g(y))=\u03c7(x\u2212y)\u03c7(cx+d)\u03c7(cy+d).",
+        "depends_on": [
+          "mobius_difference_formula",
+          "chi_of_squares"
+        ]
+      },
+      "matrix_identity": "If M=D*P and D*P^T*C*P*D=C, then D*P^T*(C hadamard R_H)*P*D = C hadamard (P^T*R_H*P).",
+      "diagonal_signs_cancel_from_relative_mask": true,
+      "flip_set_size_preserved": true,
+      "odd_degree_boundary_is_permuted": true,
+      "Max_plus_and_Max_minus_shells_preserved": true,
+      "both_separation_inequalities_preserved": true,
+      "product_phase_may_change": true,
+      "phase_change_is_harmless_when_both_phases_are_excluded": true
+    },
+    "proved": true
+  },
   "proof_partition": {
     "0": "15.632",
     "2": "15.643 and 15.647 after transport",

@@ -20,7 +20,7 @@
     "phi_F_imported": false,
     "note": "p=7 F has size 288, not named in p; GPU CSP N=5726 (scratch netcount_ridge). D=|H+|/(2p) still unnamed."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false
 }

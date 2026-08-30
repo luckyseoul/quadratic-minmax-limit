@@ -14,6 +14,7 @@ from e1_gmin_m4_prop15193 import (
     multi_level_not_ruled_out,
     non_affine_two_level_not_ruled_out,
     residual_ii_affine_branch_closed,
+    residual_ii_bounded_even_k_le_4p_minus_2_closed,
     residual_ii_exhaustiveness_proved,
     residual_ii_full_closed,
     residual_ii_open_subcases,
@@ -39,29 +40,59 @@ def test_exhaustiveness_not_proved():
     assert F["non_affine_S_H_not_const"] is True
 
 
-def test_affine_closed_full_closed():
-    """Affine (15.179) + (ii-b) 15.236 + (ii-a) 15.237 ⇒ residual (ii) full."""
+def test_affine_and_bounded_closed_full_open():
+    """Affine + 15.236 + 15.237 close only the range through 4p-2."""
     assert residual_ii_dual_twolevel_affine_closed() is True
     assert residual_ii_affine_branch_closed() is True
-    assert residual_ii_full_closed() is True
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
+    assert residual_ii_bounded_even_k_le_4p_minus_2_closed() is True
+    assert residual_ii_full_closed() is False
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
     opens = residual_ii_open_subcases()
     assert not any("ii-a" in s for s in opens)
     assert not any("ii-b" in s for s in opens)
+    assert any("k≥4p" in s for s in opens)
 
 
 def test_e1_still_open():
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     h = hinge_status_193()
     assert h["bound_proved_general"] is False
-    assert h["residual_ii_full"] == "CLOSED"
+    assert h["residual_ii_full"].startswith("OPEN")
+    assert h["type_I_multilevel"].startswith("OPEN")
     out = main()
-    assert out["proved"]["residual_ii_full_closed"] is True
+    assert out["proved"]["residual_ii_full_closed"] is False
     assert out["proved"]["residual_ii_affine_branch_closed"] is True
     assert out["proved"]["residual_ii_exhaustiveness_proved"] is False
     assert out["proved"]["L_closed"] is False
-    assert out["proved"]["E1_closed"] is True  # obsolete bounded-split wiring
+    assert out["proved"]["E1_closed"] is False
     from e1_main_chain_status import four_e1_units_closed
 
     assert four_e1_units_closed()["closed"] is False
+
+
+def test_global_close_names_follow_live_gate_not_bounded_history():
+    """Regression: the old bounded True must never recur under a global name."""
+    import e1_gmin_m4_prop15168 as p168
+    import e1_gmin_m4_prop15169 as p169
+    import e1_gmin_m4_prop15170 as p170
+    import e1_gmin_m4_prop15171 as p171
+    from e1_gmin_m4_prop15274 import residual_ii_k_ge_4p_ND_closed
+    from e1_main_chain_status import four_e1_units_closed
+
+    assert residual_ii_bounded_even_k_le_4p_minus_2_closed() is True
+    assert residual_ii_k_ge_4p_ND_closed() is False
+    assert residual_ii_full_closed() is False
+
+    current = p168.e1_closed_general()
+    assert current is False
+    assert p169.e1_bounded_residual_split_closed() is True
+    assert p170.e1_bounded_residual_split_closed() is True
+    assert p171.e1_bounded_residual_split_closed() is True
+    assert all(module.e1_closed_general() is current for module in (p169, p170, p171))
+    assert four_e1_units_closed()["closed"] is current
+
+    for module in (p168, p169, p170, p171):
+        opens = module.e1_open_residuals()
+        assert any("k≥4p" in item for item in opens)
+        assert any("multi-level" in item for item in opens)

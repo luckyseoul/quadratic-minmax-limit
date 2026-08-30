@@ -1,0 +1,127 @@
+{
+  "record_status": "HISTORICAL_PRE_15.723_PAYLOAD",
+  "warning": "Counts descend from the former blanket floor-plus-two filter; see the canonical summary for the corrected replay.",
+  "all_finite_edges_forced_to_phase_one": true,
+  "allocation_saturation_rows": [
+    {
+      "all_directional_means": 18,
+      "avoiding_rigid_b0_forces_every_phase_zero_quotient": 1,
+      "free_quotient_increments": 9,
+      "minimum_quotient_sum": 0,
+      "pair_slack": 96,
+      "phase_zero_b0_count": 9,
+      "phase_zero_b2_count": 0
+    },
+    {
+      "all_directional_means": 18,
+      "avoiding_rigid_b0_forces_every_phase_zero_quotient": 1,
+      "free_quotient_increments": 7,
+      "minimum_quotient_sum": 2,
+      "pair_slack": 100,
+      "phase_zero_b0_count": 7,
+      "phase_zero_b2_count": 2
+    },
+    {
+      "all_directional_means": 18,
+      "avoiding_rigid_b0_forces_every_phase_zero_quotient": 1,
+      "free_quotient_increments": 5,
+      "minimum_quotient_sum": 4,
+      "pair_slack": 104,
+      "phase_zero_b0_count": 5,
+      "phase_zero_b2_count": 4
+    },
+    {
+      "all_directional_means": 18,
+      "avoiding_rigid_b0_forces_every_phase_zero_quotient": 1,
+      "free_quotient_increments": 3,
+      "minimum_quotient_sum": 6,
+      "pair_slack": 108,
+      "phase_zero_b0_count": 3,
+      "phase_zero_b2_count": 6
+    },
+    {
+      "all_directional_means": 18,
+      "avoiding_rigid_b0_forces_every_phase_zero_quotient": 1,
+      "free_quotient_increments": 1,
+      "minimum_quotient_sum": 8,
+      "pair_slack": 112,
+      "phase_zero_b0_count": 1,
+      "phase_zero_b2_count": 8
+    }
+  ],
+  "boundary_size": 16,
+  "candidate_rows": [
+    {
+      "cell_upper_bound_on_infinity_degree": 2,
+      "contradiction_margin": 4,
+      "infinity_degree": 6,
+      "k": 0,
+      "parallel_count_sum": 7,
+      "phase_one_b16_gauge": 1,
+      "phase_one_parallel_count": 7,
+      "phase_zero_parallel_count": 0
+    },
+    {
+      "cell_upper_bound_on_infinity_degree": 19,
+      "contradiction_margin": 5,
+      "infinity_degree": 24,
+      "k": 1,
+      "parallel_count_sum": 5,
+      "phase_one_b16_gauge": 3,
+      "phase_one_parallel_count": 5,
+      "phase_zero_parallel_count": 0
+    },
+    {
+      "cell_upper_bound_on_infinity_degree": 36,
+      "contradiction_margin": 6,
+      "infinity_degree": 42,
+      "k": 2,
+      "parallel_count_sum": 3,
+      "phase_one_b16_gauge": 5,
+      "phase_one_parallel_count": 3,
+      "phase_zero_parallel_count": 0
+    },
+    {
+      "cell_upper_bound_on_infinity_degree": 53,
+      "contradiction_margin": 7,
+      "infinity_degree": 60,
+      "k": 3,
+      "parallel_count_sum": 1,
+      "phase_one_b16_gauge": 7,
+      "phase_one_parallel_count": 1,
+      "phase_zero_parallel_count": 0
+    }
+  ],
+  "directional_mean_identities": {
+    "phase_one": "18*P_+=69-I+Sbar",
+    "phase_zero": "18*P_-=69-I-Sbar",
+    "sum": "69-I=9*(P_++P_-)"
+  },
+  "fibre_capacity_bound": "I<=g+1+15*floor(g/2)",
+  "infinity_degree_even_because_infinity_not_in_odd_boundary": true,
+  "p": 17,
+  "p17_second_all_finite_endpoint_closed": false,
+  "phase_one_b16_cell_identity": "L_st=g-z_s-z_t+1_{j in {s,t}}",
+  "profile_count_after": 14,
+  "profile_count_before": 19,
+  "profiles_excluded_here": 5,
+  "proposition": "15.711",
+  "proved_analytically": true,
+  "remaining_pair_slack_histogram": {
+    "96": 2,
+    "100": 3,
+    "104": 3,
+    "108": 2,
+    "112": 2,
+    "116": 1,
+    "128": 1
+  },
+  "remaining_residue_pair_histogram": {
+    "u0=7,u1=0": 9,
+    "u0=8,u1=0": 5
+  },
+  "top_level_gates_changed": false,
+  "uniform_directional_mean": 18,
+  "uses_new_arc_classification": false,
+  "uses_solver": false
+}

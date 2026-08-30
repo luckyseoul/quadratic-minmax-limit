@@ -59,7 +59,7 @@
     "D": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "rhat": false,
       "Q_tau_named_in_p": false,
       "note": "Ensemble Q_\u03c4 still unnamed.  S^{(k)} not a single low-degree \u03c7 polynomial.  phi_F not imported."

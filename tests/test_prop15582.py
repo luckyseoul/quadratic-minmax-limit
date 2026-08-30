@@ -36,7 +36,7 @@ def test_qnstar_p5_and_open():
     assert C["Q_tau_named_in_p"] is False
     assert C["sixteen_p_minus_4_not_imported"] is True
     assert C["phi_F_imported"] is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     assert gsum_disj_lb_proved_general() is False
     assert phi_F_ge_6_proved_general() is False
     out = main()

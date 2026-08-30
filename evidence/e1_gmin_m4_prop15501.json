@@ -117,7 +117,7 @@
     "p1_floor_unconditional": false,
     "note": "Window \u21d2 D\u2265D_need is named for p\u22611. Q=8A/D and 15.497 pairing still not general. p\u22613 open. phi_F not imported."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false
 }

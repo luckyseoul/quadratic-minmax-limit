@@ -46,7 +46,7 @@
       "proved": false,
       "c_eq13": 617,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "k\u22643 undershoots; full restricted count overshoots; no n0/max_k slice hits the window. phi_F not imported."
     }

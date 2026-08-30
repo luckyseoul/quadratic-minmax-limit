@@ -23,3 +23,4 @@ def test_collinear_profile_is_absent_and_endpoint_is_closed():
     assert row["remaining_residue_pair_histogram"] == {}
     assert row["p17_second_all_finite_endpoint_closed"] is True
     assert row["top_level_gates_changed"] is False
+    assert row["remaining_profile_indices"] == []

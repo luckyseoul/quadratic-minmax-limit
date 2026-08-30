@@ -202,7 +202,7 @@
       "type_I_multilevel_bad_case_ND_closed": false,
       "type_I_aut_e_3AB_positive_general": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "gsum": false,
       "note": "3A+B>0 on Aut_e far classes remains G>T (15.275). Type I Max+ empties the p=5 pointwise gap-2 bad-case box but not unrestricted f_e\u2261\u22121. Flags unflipped."

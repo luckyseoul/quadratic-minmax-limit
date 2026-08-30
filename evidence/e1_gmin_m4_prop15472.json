@@ -70,7 +70,7 @@
     "C": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "Z_\u03c8 varies; named GJ atoms miss \u039b_1. Q_\u03c4 unnamed. phi_F not imported."
     }

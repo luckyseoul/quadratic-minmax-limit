@@ -95,7 +95,7 @@
       "proved": false,
       "residual_ii_k_eq_4p_empty": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "nF_10_open": true,
       "k_gt_4p_far_open": true,
       "k24_splus_not_claimed": true,

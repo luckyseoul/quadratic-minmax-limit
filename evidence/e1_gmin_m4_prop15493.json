@@ -157,7 +157,7 @@
     "E": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "rhat": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "leftover-G-empty is dead (15.406 D and 15.493 D). leftover\u21d2s\u208a\u22602 is dead at p=3.  Fractional leftover+s\u208a\u22652 is feasible, so LP Farkas dies.  0-1 leftover+s\u208a=2 at p\u22655 and even k>4p stay open.  residual_ii_k_eq_4p_empty stays False.  phi_F not imported."

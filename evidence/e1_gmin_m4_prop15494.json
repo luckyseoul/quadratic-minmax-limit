@@ -103,7 +103,7 @@
     "Q_tau_named": false,
     "note": "A_r=0 on \u03c7(r+1)=\u22121 is support of \u1e91, not a name of Q_\u03c4. At p=7 A_r spreads on ++ sub while Q++ is constant. \u27e8\u03b4,\u03c8\u27e9\u22642 stays OPEN."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false
 }

@@ -814,4 +814,4 @@ def test_structure_proved_floor_and_schur_untouched():
     assert theorem_1d_Nhat_closed()["exhausts_maxplus"] is False
     assert gsum_disj_lb_proved_general() is False
     assert aut_span_F_equals_Z_proved_general() is True
-    assert e1_closed_general() in (True, False)
+    assert e1_closed_general() is False

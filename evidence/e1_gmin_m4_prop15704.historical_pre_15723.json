@@ -1,0 +1,179 @@
+{
+  "record_status": "HISTORICAL_PRE_15.723_PAYLOAD",
+  "warning": "Counts descend from the former blanket floor-plus-two filter; see the canonical summary for the corrected replay.",
+  "boundary_size": 16,
+  "one_direction_branch": "a complete 13-arc has at most three index-one outside points; all eight valid complete-14-minus-one placements have slack 32",
+  "one_direction_complete_arc_certificate": {
+    "complete_13_class_count": 8,
+    "complete_13_index_one_point_counts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      3
+    ],
+    "complete_14_minus_one_index_one_count_histogram": {
+      "0": 4,
+      "1": 8,
+      "4": 2
+    },
+    "genuinely_undetermined_infinity_placement_slack_histogram": {
+      "32": 8
+    },
+    "genuinely_undetermined_slack_sixteen_placements": 0,
+    "maximum_complete_13_index_one_point_count": 3,
+    "proved_conditional_on_published_complete_arc_class_counts": true,
+    "raw_candidate_index_one_quadruples": 2,
+    "raw_candidate_infinity_placement_slack_histogram": {
+      "16": 2,
+      "28": 16,
+      "32": 8
+    }
+  },
+  "p": 17,
+  "p17_second_all_finite_endpoint_closed": false,
+  "profile_count_after": 654,
+  "profile_count_before": 753,
+  "profile_ledger": {
+    "profile_count": 112,
+    "profiles_with_at_least_one_undetermined_direction": 99,
+    "proved": true,
+    "remaining_zero_direction_profiles": 13,
+    "undetermined_direction_histogram": {
+      "0": 13,
+      "1": 47,
+      "2": 47,
+      "3": 5
+    }
+  },
+  "profiles_excluded_here": 99,
+  "proposition": "15.704",
+  "proved_conditional_on_external_classification": true,
+  "remaining_pair_slack_histogram": {
+    "0": 2,
+    "16": 13,
+    "20": 78,
+    "24": 54,
+    "28": 35,
+    "32": 26,
+    "36": 20,
+    "40": 15,
+    "44": 13,
+    "48": 11,
+    "52": 9,
+    "56": 9,
+    "60": 9,
+    "64": 9,
+    "68": 9,
+    "72": 9,
+    "76": 9,
+    "80": 9,
+    "84": 9,
+    "88": 9,
+    "92": 9,
+    "96": 12,
+    "100": 14,
+    "104": 17,
+    "108": 22,
+    "112": 33,
+    "116": 35,
+    "120": 35,
+    "124": 29,
+    "128": 23,
+    "132": 16,
+    "136": 11,
+    "140": 7,
+    "144": 5,
+    "148": 3,
+    "152": 2,
+    "156": 2,
+    "160": 2,
+    "164": 1,
+    "168": 1,
+    "172": 1,
+    "176": 1,
+    "180": 1,
+    "184": 1,
+    "188": 1,
+    "192": 1,
+    "196": 1,
+    "200": 1,
+    "204": 1,
+    "208": 1,
+    "212": 1,
+    "216": 1,
+    "220": 1,
+    "224": 1,
+    "228": 1,
+    "232": 1,
+    "236": 1,
+    "240": 1
+  },
+  "remaining_profiles_of_slack_at_least_twenty": 639,
+  "remaining_slack_sixteen_profiles": 13,
+  "remaining_slack_zero_profiles": 2,
+  "repair_lemma": {
+    "global_incidence_bound": "slack(S) >= 4 sum_{d in D} mu_A(d)",
+    "line_secant_incidence_rows": [
+      {
+        "bound_holds": true,
+        "deleted_points_on_core_secant": 1,
+        "four_per_incidence_floor": 4,
+        "line_occupancy": 3,
+        "line_pair_slack": 4
+      },
+      {
+        "bound_holds": true,
+        "deleted_points_on_core_secant": 2,
+        "four_per_incidence_floor": 8,
+        "line_occupancy": 4,
+        "line_pair_slack": 8
+      },
+      {
+        "bound_holds": true,
+        "deleted_points_on_core_secant": 3,
+        "four_per_incidence_floor": 12,
+        "line_occupancy": 5,
+        "line_pair_slack": 16
+      },
+      {
+        "bound_holds": true,
+        "deleted_points_on_core_secant": 4,
+        "four_per_incidence_floor": 16,
+        "line_occupancy": 6,
+        "line_pair_slack": 24
+      }
+    ],
+    "minimum_positive_conic_core_slack": 20,
+    "off_conic_rows": {
+      "1": {
+        "off_conic_points": 1,
+        "pair_slack_floor": 20,
+        "retained_conic_secants_per_off_conic_point": 5
+      },
+      "2": {
+        "off_conic_points": 2,
+        "pair_slack_floor": 32,
+        "retained_conic_secants_per_off_conic_point": 4
+      },
+      "3": {
+        "off_conic_points": 3,
+        "pair_slack_floor": 36,
+        "retained_conic_secants_per_off_conic_point": 3
+      },
+      "4": {
+        "off_conic_points": 4,
+        "pair_slack_floor": 32,
+        "retained_conic_secants_per_off_conic_point": 2
+      }
+    },
+    "proved": true,
+    "repair_deletion_bound": 4
+  },
+  "three_direction_branch": "two overlapping infinity-point pairs must extend to the same conic, which cannot contain three collinear infinity points",
+  "top_level_gates_changed": false,
+  "two_direction_branch": "the four-deletion pair arc has size 14; if complete its four deleted points force slack at least 32, and if incomplete its conic extension forces positive slack at least 20"
+}

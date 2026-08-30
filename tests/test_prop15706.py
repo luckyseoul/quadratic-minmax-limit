@@ -17,9 +17,11 @@ def test_opposite_quadratic_types_force_impossible_infinity_degree():
 def test_both_slack_zero_profiles_are_excluded():
     row = p17_slack_zero_profile_exclusion()
     assert row["proved_analytically"] is True
-    assert row["profile_count_before"] == 641
+    assert row["profile_count_before"] == 1215
     assert row["profiles_excluded_here"] == 2
-    assert row["profile_count_after"] == 639
+    assert row["profile_count_after"] == 1213
     assert row["remaining_slack_zero_profiles"] == 0
-    assert row["remaining_profiles_of_slack_at_least_twenty"] == 639
-    assert min(row["remaining_pair_slack_histogram"]) == 20
+    assert row["remaining_slack_sixteen_profiles"] == 74
+    assert row["remaining_profiles_of_slack_at_least_twenty"] == 1139
+    assert min(row["remaining_pair_slack_histogram"]) == 16
+    assert len(row["remaining_profile_indices"]) == 1213

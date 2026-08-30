@@ -64,7 +64,7 @@
         "rest7": 4410
       },
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "J2 names n_NL at p=5 only. (C,R_aff\u00b3) is 1176 of 5586 NL at p=7. N_r unnamed in p. phi_F not imported."
     }

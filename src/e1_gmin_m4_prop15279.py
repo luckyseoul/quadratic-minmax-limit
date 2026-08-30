@@ -3597,7 +3597,7 @@ def main() -> dict:
             "gsum_disj_lb": gsum_disj_lb_proved_general(),
             "aut_schur": False,
             "pairing": False,
-            "e1": e1_closed_general() in (True, False),
+            "e1": e1_closed_general(),
         },
         "cert_p5": cert,
         "dim_F_p5": dim_F(5),

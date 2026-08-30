@@ -95,7 +95,7 @@
       "c_CRRR13": 35,
       "c_eq13": 617,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "CRRR is named in p and undershoots the window. Remaining types unnamed. phi_F not imported."
     }

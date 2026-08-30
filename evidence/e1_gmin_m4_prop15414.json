@@ -60,7 +60,7 @@
       "L_spl_NL_7": "673/6",
       "Q_NL_is_short_rational": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "D_form_on_lattice_general": false,
       "note": "L_par^{1D} named. NL L_par=2113/19 and L_spl=673/6 unnamed in p. Full L table still needed for 15.298. C(p) interpolant not imported. phi_F not imported."

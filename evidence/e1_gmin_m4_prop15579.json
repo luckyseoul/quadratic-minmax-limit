@@ -347,7 +347,7 @@
       "proved": false,
       "residual_ii_k_eq_4p_empty": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "leftover_4plus_open": true,
       "leftover_splus_open": true,
       "nF_10_open": true,

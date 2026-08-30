@@ -37,7 +37,7 @@ def test_Ext_triangle_identity():
 def test_predicates_still_open():
     assert residual_i_closed_via_252() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     h = hinge_status_252()
     assert h["envelope_hyp_general"] is False
     assert h["residual_i_closed"] is False

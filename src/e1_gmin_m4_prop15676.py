@@ -36,6 +36,7 @@ from pathlib import Path
 
 from e1_gmin_m4_prop15632 import field_direction_data, projective_directions
 from e1_gmin_m4_prop15669 import full_symbolic_floor
+from e1_gmin_m4_prop15723 import floor_excess_admissible
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -232,7 +233,7 @@ def tangent_type_residue_audit(
             for k in range(quotient_sum + 1):
                 mean = residue + period * k
                 excess = mean - floor
-                if excess >= 0 and excess != 2:
+                if floor_excess_admissible(p, b, phase, excess):
                     options.append((k, int(b == 1 and mean == baseline_mean)))
             states = {
                 (used + k, baselines + is_baseline)

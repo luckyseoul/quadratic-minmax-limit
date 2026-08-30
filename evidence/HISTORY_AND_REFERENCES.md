@@ -1944,6 +1944,88 @@ floor, global QVAR, and principal R1 remain mathematically open but are no
 longer E(1) acceptance gates. Two gates remain: multi-level Type I and
 non-Walsh residual (ii).
 
+## 7bq. Exact phase transport and the p+1 outside-pair slack (2026-08-30)
+
+Proposition 15.722 replaces the former single-chart treatment of a
+`p+1`-point boundary by an exact signed phase cocycle.  If `g` is projective
+and `H` is a boundary, then
+
+`c_(gH) = c_H product_{x in boundary(H)} delta_g(x)`.
+
+For an all-finite boundary with root polynomial `f`, the affine charts are
+therefore `c_v=c_H chi(f'(v))` on the boundary and
+`c_w=c_H chi(f(w))` off it.  The product of the derivative characters is
+`+1`.  The outside pair-count slack has the exact nonnegative decomposition
+
+`R = sum_{n_d=2r} r(r-1) + sum_{n_d=2r+1} r^2`.
+
+The value `R=1` would give a unique trisecant and is impossible.  The value
+`R=0` forces an arc and hence a conic; its exact Paley type alignment then
+reduces the branch to a Miquelian circle.  A second chart excludes every
+one-point replacement of such a circle.  The full circle itself was left as
+the only `R=0` case at this stage.
+
+## 7br. Paired-cube floor-plus-two theorem and its exceptional cells (2026-08-30)
+
+Proposition 15.723 audits the recurrent shortcut that treated every scaled
+mean `P+2` cell as automatically impossible.  A nonnegative integral
+quadratic on a Boolean cube with parity `1+sum_{i in R} z_i` has mean at
+least `1` for `|R|>=3` and at least `3/2` for `|R|>=5`; the latter bound is
+sharp, for example at ranks five and six by `(sum_R z_i-3)^2`.  Applying the
+exact paired-cube operator shows that genuinely middle, odd-`b` cells of
+scaled mean `2p+2` are excluded for every odd `p>=17` except
+
+`(p,b,phase)=(17,5,1)` and `(17,11,0)`.
+
+Both exceptional cells have explicit sharp witnesses of mean `18/17`.
+They are exceptions to the generic shortcut, not witnesses for the original
+graph problem.  Older propositions using an undifferentiated
+`excess != 2` condition must consequently be read only after the semantic
+audit recorded in the proposition-dedup file.
+
+## 7bs. Isolated-chart exclusion of the full Miquelian circle (2026-08-30)
+
+Proposition 15.724 closes the circle left by 15.722.  A circle boundary has
+`P=p+1`, `4p+1` boundary edges, and at least `p^2-8p-1` isolated exterior
+vertices.  Sending such a vertex to infinity gives an exact two-level line
+profile.  In the phase-one chart, the only numerical possibility is the
+endpoint floor-plus-two case already excluded by the sharp lift theorem.
+In the phase-zero chart, edge counting forces `u=4` and `x+y=7`; the XNOR
+congruence then forces `(x,y)=(4,3)`.  At least four directions have zero
+parallel surplus, where the resulting Boolean quadratic would have scaled
+mean eight.  The sharp support floor instead requires at least `p-3>=14`.
+This contradiction excludes every full Miquelian circle for `p>=17`.
+
+Thus `R=0` is closed, and the minimal arc-deletion / off-conic secant
+argument excludes every positive
+`R<=max(3,floor(sqrt(p)-5/2))`.  The remaining `p+1` boundary problem lies
+beyond that cutoff; this is a real narrowing of the main residual, not a
+proof of the final limit.
+Targeted GitHub-code, MathOverflow, literature, and OEIS searches found
+standard surrounding material on Paley graphs, Miquelian inversive planes,
+Johnson slices, and Boolean quadratics, but no prior occurrence of this
+phase-cocycle/slack/floor synthesis.  No new OEIS sequence is claimed.
+
+## 7bt. Retracted parabola-plus-internal family close (2026-08-30)
+
+Proposition 15.725 attempted to exclude the explicit strict-slack family
+
+`{x+x^2 omega:x in F_p} union {a omega},  chi(-a)=-1`.
+
+The coordinate transport and a finite phase-zero audit are exact. For the
+nine primes from 17 through 47, all 2,381 parameter cases and 92,664 typed
+directions were checked; both type-floor sums exceed their budgets in every
+case. These numbers are retained as finite data only.
+
+An independent proof audit retracted the claimed all-prime theorem. The
+three character sums needed to control quartic-fibre parity were never
+derived, and the admissible locus `4*a*nu+1=0` makes the generic discriminant
+curve singular. The opposite product-sign orientation was also untested.
+Accordingly the explicit family remains open for the theorem, and 15.725 is
+not used downstream. Searches found only general Hasse--Weil material for
+rational functions, not this proposed Paley boundary argument. Individual
+OEIS matches for 2,381 and 92,664 are unrelated numerical coincidences.
+
 ---
 
 ## 8. What is not in the older literature
@@ -2002,7 +2084,7 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 41. P.-A. Bernard, N. Crampé, and L. Vinet, *A bivariate Q-polynomial structure for the non-binary Johnson scheme*, J. Combin. Theory Ser. A **202** (2024), 105829, [arXiv:2306.01882](https://arxiv.org/abs/2306.01882) (adjacent Johnson-scheme machinery; not the parity-majorant or affine pair-deficit theorem of 15.669).
 42. S. Ball and B. Csajbók, *On sets of points with few odd secants*, [arXiv:1711.10876](https://arxiv.org/abs/1711.10876) (odd-secant bounds for \(q+2\)-point projective sets; not the eight-point split-type census of 15.670).
 43. M. Kiermaier and S. Kurz, *Maximal integral point sets in affine planes over finite fields*, [arXiv:1401.2825](https://arxiv.org/abs/1401.2825) (prescribed directions and Paley-clique context; not the boundary parity-floor budget of 15.670).
-44. S. Ball and M. Lavrauw, *Planar arcs*, J. Combin. Theory Ser. A **160** (2018), 261--287, [doi:10.1016/j.jcta.2018.06.015](https://doi.org/10.1016/j.jcta.2018.06.015), [arXiv:1705.10940](https://arxiv.org/abs/1705.10940) (modern primary restatement of Segre's odd-order arc theorems; the `q`-arc conic theorem is used in 15.673, and Theorem 11's polynomial tangent envelope is used in 15.683).
+44. S. Ball and M. Lavrauw, *Planar arcs*, J. Combin. Theory Ser. A **160** (2018), 261--287, [doi:10.1016/j.jcta.2018.06.015](https://doi.org/10.1016/j.jcta.2018.06.015), [arXiv:1705.10940](https://arxiv.org/abs/1705.10940) (modern primary restatement of Segre's odd-order arc theorems; the `q`-arc conic theorem is used in 15.673, the complete `(q-1)`/`(q-2)` classifications and prime-field conic threshold are used for the low-slack exclusion in 15.722, and Theorem 11's polynomial tangent envelope is used in 15.683).
 45. V. F. Lev, *Point distribution and perfect directions in* \(F_p^2\), [arXiv:1903.01518](https://arxiv.org/abs/1903.01518) (Rédei-type direction bounds adjacent to, but not implying, the determined-direction/type-budget argument of 15.674).
 46. G. Van de Voorde, *On sets without tangents and exterior sets of a conic*, [arXiv:1201.0484](https://arxiv.org/abs/1201.0484) (adjacent external-conic and determined-direction geometry; not the Paley phase-budget exclusion of 15.676).
 47. P. Amireddy, S. Behera, S. Srinivasan, and M. Sudan, *A Near-Optimal Polynomial Distance Lemma over Boolean Slices*, ICALP 2025, [doi:10.4230/LIPIcs.ICALP.2025.11](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2025.11) (Lemma 2 supplies the exact finite degree-two support floor used in 15.642 and 15.677).
@@ -2027,5 +2109,6 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 66. Y. Filmus and A. Vinciguerra, short note on the restriction threshold for bounded-degree functions on slices, linked from [Filmus's publication page](https://yuvalfilmus.cs.technion.ac.il/publications/papers/) (the page states the arithmetic-progression, hence Boolean, restriction-threshold result; the linked PDF was inaccessible during the 15.697 audit, so the result is used only conditionally).
 67. T. Szőnyi, *On the number of directions determined by a set of points in an affine Galois plane*, J. Combin. Theory Ser. A **74** (1996), 141--146, [doi:10.1006/jcta.1996.0042](https://doi.org/10.1006/jcta.1996.0042) (the `k<=p` direction bound used in 15.712).
 68. G. Somlai, *A new proof of Rédei's theorem on the number of directions*, Arch. Math. **122** (2024), 575--580, [doi:10.1007/s00013-024-01979-x](https://doi.org/10.1007/s00013-024-01979-x) (modern explicit restatement of Szőnyi's bound and proof context).
+69. X.-d. Hou and A. Iezzi, *An Application of the Hasse-Weil Bound to Rational Functions over Finite Fields*, [arXiv:1906.09487](https://arxiv.org/abs/1906.09487) (general rational-function value-set context; it does not supply the missing discriminant/resolvent estimates in 15.725).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

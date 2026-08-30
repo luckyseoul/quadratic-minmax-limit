@@ -110,7 +110,7 @@ def test_type_I_closed_not_via_gsum():
 
 
 def test_e1_closed():
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
 
 
 def test_hinge_status():

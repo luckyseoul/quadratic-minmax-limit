@@ -181,7 +181,7 @@
     "phi_F_imported": false,
     "note": "QR0 Type+ Q is named for p\u22613. Ensemble mix still has NL and |H_+|. Q_\u03c4 unnamed. phi_F not imported."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false,
   "flags_not_flipped": [

@@ -29,11 +29,12 @@ z=7:         56.
 ```
 
 All 79,447,032 `z=0` boundaries violate at least one exact mod-seven
-dependency; zero survive. A 100,000-boundary CPU prefix independently
+dependency; zero survive. A 100,000-boundary CPU prefix separately
 reconstructs 88,715 `z=0` cases and also finds zero survivors.
-An independent-grid rerun with 32,768 rather than 65,535 CUDA blocks exactly
-reproduces every complete count and hash; its separate 200,000-boundary CPU
-prefix reconstructs 178,533 `z=0` cases and again finds zero survivors.
+A same-implementation different-grid rerun with 32,768 rather than 65,535
+CUDA blocks exactly reproduces every complete count and hash; its separate
+200,000-boundary CPU prefix reconstructs 178,533 `z=0` cases and again finds
+zero survivors. No independent implementation validation is claimed.
 
 Therefore the positive `z=0` branch is closed. The projected `b`-profile
 outer envelope falls from 1,009 to 792 and the actual positive-boundary scope

@@ -135,7 +135,7 @@
     "E": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "rhat": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "Interior empty at p=5,7 via Walsh rref. Walsh \u2200p\u226511 unproved. 5+ levels and even k>4p stay open. residual_ii_k_eq_4p_empty stays False. phi_F not imported."

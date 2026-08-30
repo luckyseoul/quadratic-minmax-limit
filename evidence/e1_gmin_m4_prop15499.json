@@ -76,7 +76,7 @@
     "phi_F_imported": false,
     "note": "T-orbits named in p\u00b2; n_T=c_eq(p\u22121) only as a p=5,7 cache identity. F_p^\u00d7 orbits are not all size p\u22121. D unnamed."
   },
-  "e1_closed_general": true,
+  "e1_closed_general": false,
   "gsum_disj_lb": false,
   "phi_F_ge_6": false
 }

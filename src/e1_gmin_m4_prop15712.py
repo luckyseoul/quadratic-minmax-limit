@@ -31,10 +31,11 @@ def p17_redei_szonyi_direction_endpoint_exclusion() -> dict[str, object]:
     """Exclude all fourteen rows using Szőnyi's sharp direction bound."""
     previous = p17_residue_zero_uniform_mean_exclusion()
     source = p17_phase_one_b16_global_sign_reduction()
+    by_index = {
+        int(row["census_index"]): row for row in source["surviving_profiles"]
+    }
     profiles = [
-        row
-        for row in source["surviving_profiles"]
-        if (int(row["u0"]), int(row["u1"])) != (0, 0)
+        by_index[int(index)] for index in previous["remaining_profile_indices"]
     ]
     if len(profiles) != 14 or int(previous["profile_count_after"]) != 14:
         raise ArithmeticError("pre-15.712 p17 ledger changed")
@@ -73,6 +74,10 @@ def p17_redei_szonyi_direction_endpoint_exclusion() -> dict[str, object]:
         "profile_count_before": len(profiles),
         "profiles_excluded_here": len(profiles),
         "profile_count_after": 0,
+        "excluded_profile_indices_here": sorted(
+            int(index) for index in previous["remaining_profile_indices"]
+        ),
+        "remaining_profile_indices": [],
         "common_phase_one_profile": {"16": 9},
         "phase_one_b16_directions_are_nondirections": True,
         "phase_one_nondirection_count": phase_one_nondirections,

@@ -51,7 +51,7 @@
     "C": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "rhat": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "V_hi is the named p\u22611 window, not a proved majorant. p\u22613 still needs Q_{--}. phi_F not imported."

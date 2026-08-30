@@ -149,7 +149,7 @@
     "D": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "residual_ii_k_eq_4p_empty": false,
       "note": "Single mixed + CRRR is dead as a name. Unnamed two-occupancy sums can land; no filter. phi_F not imported."
     }

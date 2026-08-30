@@ -748,8 +748,8 @@
           "kappa3_particular": true
         }
       },
-      "hole": "Y\u2264\u22123 and \u03bc\u22650 force a far Aut_e class with 3A+B\u22640.  On |\u03ba|=1 this is G>T (15.268 \u03bd=0 + J).  |\u03bc|\u2264|L| would close it (L>T) but is not proved for all p; |\u03bc|\u2264|T| is not a closing bound; |\u03bc|\u2264maj is false at p=7 (109/2863>17/539).  Census |\u03bc|\u2264|L| at p=5,7.  p=5 is a finite from-C theorem (276/276).  |\u03ba|=3 particular/Wick beat the linear form; leftover is even/odd \u03b4.",
-      "theorem": "2-orbit / equal-star / \u03bc_\u22a0=0 slices empty.  Whole \u03bc_far\u22650 3-weight family is bad-case empty (H).  Coarse 3-type collapses to H (I).  3A+B conversion / Wick 6-type / Q_\u03c7 are Max+-free (J).  K reduces the Aut_e sign to g_min>T.  |\u03bc|\u2264|L| suffices and holds at p=5,7; |\u03bc|\u2264|T| does not close; |\u03bc|\u2264maj false at p=7.  Sign stays open."
+      "hole": "Y\u2264\u22123 and \u03bc\u22650 force a far Aut_e class with 3A+B\u22640.  On |\u03ba|=1 this is G>T (15.268 \u03bd=0 + J).  |\u03bc|\u2264|L| would close that half (L>T) but is not proved for all p; |\u03bc|\u2264|T| is not a closing bound; |\u03bc|\u2264maj is false at p=7 (109/2863>17/539).  Census |\u03bc|\u2264|L| at p=5,7.  p=5 is a finite from-C theorem (276/276).  |\u03ba|=3 particular/Wick beat the linear form; leftover is even/odd \u03b4.",
+      "theorem": "2-orbit / equal-star / \u03bc_\u22a0=0 slices empty.  Whole \u03bc_far\u22650 3-weight family is bad-case empty (H).  Coarse 3-type collapses to H (I).  3A+B conversion / Wick 6-type / Q_\u03c7 are Max+-free (J).  K reduces the |\u03ba|=1 sign to g_min>T and the |\u03ba|=3 sign to a separate signed (\u03bc,\u03bd) form.  |\u03bc|\u2264|L| suffices only for |\u03ba|=1 and holds there at p=5,7; |\u03bc|\u2264|T| does not close; |\u03bc|\u2264maj false at p=7.  The |\u03ba|=3 \u03b4 remainder and the general sign stay open."
     },
     "two_level_H": {
       "note": "15.169 path; not this flag",
@@ -773,7 +773,7 @@
     "residual_i_dual_eq_empty": true,
     "gsum_disj_lb_proved_general": false,
     "two_level_is_a_different_path": true,
-    "e1_closed_general": true,
+    "e1_closed_general": false,
     "type_I_three_orbit_equal_star_empty": true,
     "type_I_three_orbit_plus_only_empty": true,
     "type_I_zero_far_bad_case_empty": true,

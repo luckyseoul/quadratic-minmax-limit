@@ -79,7 +79,7 @@
     "F": {
       "proved": false,
       "phi_F_ge_6": false,
-      "e1": true,
+      "e1": false,
       "rhat": false,
       "D_named_in_p": false,
       "Q_NL_named_in_p": false,

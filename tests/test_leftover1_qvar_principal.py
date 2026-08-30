@@ -110,5 +110,5 @@ def test_other_leftovers_are_live_units_not_baked_false():
     expect = "CLOSED" if units["closed"] else "OPEN"
     assert dump["L_status"] == expect
     assert out["L_status"] == expect
-    # live e1 AND is the old incomplete wiring — not this leftover close
-    assert e1_closed_general() is True
+    # The corrected live e1 gate remains open; this route does not flip it.
+    assert e1_closed_general() is False

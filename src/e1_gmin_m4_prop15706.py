@@ -14,9 +14,13 @@ infinity-star edges and one finite edge, whose affine odd boundary has size
 from __future__ import annotations
 
 import json
+from collections import Counter
 from pathlib import Path
 
-from e1_gmin_m4_prop15700 import p17_slack_zero_conic_reduction
+from e1_gmin_m4_prop15700 import (
+    p17_second_boundary_profile_census,
+    p17_slack_zero_conic_reduction,
+)
 from e1_gmin_m4_prop15705 import p17_slack_sixteen_orbit_exclusion
 
 
@@ -125,15 +129,33 @@ def p17_slack_zero_global_sign_certificate() -> dict[str, object]:
 
 def p17_slack_zero_profile_exclusion() -> dict[str, object]:
     previous = p17_slack_sixteen_orbit_exclusion()
+    profiles = p17_second_boundary_profile_census()["profiles"]
     certificate = p17_slack_zero_global_sign_certificate()
-    before = int(previous["profile_count_after"])
-    excluded = int(previous["remaining_slack_zero_profiles"])
-    histogram = dict(previous["remaining_pair_slack_histogram"])
-    if before != 641 or excluded != 2 or histogram.get(0) != 2:
+    previous_indices = set(int(index) for index in previous["remaining_profile_indices"])
+    excluded_indices = {
+        index
+        for index in previous_indices
+        if int(profiles[index]["pair_slack"]) == 0
+    }
+    remaining_indices = sorted(previous_indices - excluded_indices)
+    before = len(previous_indices)
+    excluded = len(excluded_indices)
+    if before != 1215 or excluded != 2:
         raise ArithmeticError("pre-15.706 p=17 ledger changed")
-    del histogram[0]
-    after = before - excluded
-    if after != 639 or sum(histogram.values()) != after or min(histogram) != 20:
+    histogram = dict(
+        sorted(
+            Counter(
+                int(profiles[index]["pair_slack"]) for index in remaining_indices
+            ).items()
+        )
+    )
+    after = len(remaining_indices)
+    if (
+        after != 1213
+        or sum(histogram.values()) != after
+        or min(histogram) != 16
+        or histogram.get(16) != 74
+    ):
         raise ArithmeticError("post-15.706 p=17 ledger changed")
     return {
         "proposition": "15.706",
@@ -142,9 +164,12 @@ def p17_slack_zero_profile_exclusion() -> dict[str, object]:
         "profile_count_before": before,
         "profiles_excluded_here": excluded,
         "profile_count_after": after,
+        "excluded_profile_indices_here": sorted(excluded_indices),
+        "remaining_profile_indices": remaining_indices,
         "remaining_pair_slack_histogram": histogram,
         "remaining_slack_zero_profiles": 0,
-        "remaining_profiles_of_slack_at_least_twenty": after,
+        "remaining_slack_sixteen_profiles": 74,
+        "remaining_profiles_of_slack_at_least_twenty": after - 74,
         "certificate": certificate,
         "p17_second_all_finite_endpoint_closed": False,
         "top_level_gates_changed": False,

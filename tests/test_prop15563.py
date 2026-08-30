@@ -32,7 +32,7 @@ def test_flags_untouched_A_full_open():
     assert C["Q3_double_named_in_p"] is False
     assert C["Q3_n3_named_in_p"] is False
     assert C["phi_F_imported"] is False
-    assert e1_closed_general() is True
+    assert e1_closed_general() is False
     assert gsum_disj_lb_proved_general() is False
     assert phi_F_ge_6_proved_general() is False
     out = main()
