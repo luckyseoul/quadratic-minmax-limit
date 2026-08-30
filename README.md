@@ -42,8 +42,10 @@ banned by test (`tests/test_main_chain_docs.py`).
   indicator lies in `scheme+cross` by 15.272/15.207; its degrees are all
   congruent modulo `(p^2-1)/2`, which contradicts the handshake identity at
   the required levels 2 and 3 for every prime `p>=5`. No new small-prime
-  search is used. Bi-tight level 4 is also excluded, but this does not exclude
-  the one-sided tight level-4 cases inside residual (ii). Global QVAR,
+  search is used. Bi-tight level 4 is also excluded. Generic one-sided
+  level-4 covers exist (15.402), but its four-line family has a Max+ score at
+  most zero by 15.272/15.588 and is outside residual; joint compatibility is
+  the remaining question. Global QVAR,
   principal R1, and the spectral floor are no longer acceptance gates.
 - **Non-Walsh endpoint at `p=19`.** Propositions 15.693--15.699 give an exact
   binary affine-Radon reduction, eliminate the slack-16 and slack-20 rows, and
@@ -118,7 +120,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 
 | GOAL unit | live predicate | status |
 |---|---|---|
-| required bi-tight levels 2 and 3 | `bitight_levels_2_3` | **TRUE** — 15.720 degree congruence; bi-tight level 4 is only a corollary, not a one-sided residual close |
+| required bi-tight levels 2 and 3 | `bitight_levels_2_3` | **TRUE** — 15.720 degree congruence; bi-tight level 4 is a corollary, while generic one-sided covers exist and only joint residual compatibility remains open |
 | residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh slice closed; 15.632 kills Eulerian boundary; 15.643/15.651 and 15.647--15.650 kill both signs of the infinity-plus-point boundary for all `p>=5`; 15.652--15.656 close every four-point boundary for every odd `p>=5`; 15.657--15.661 close every six-point boundary for every odd `p>=5`; 15.662--15.666 close every finite `p=7` size-eight boundary; 15.669 excludes uniform ranges and small-prime profiles; 15.670 closes every finite `p=11` size-eight boundary; 15.671--15.674 close the entire infinity-plus-`(p-2)` shell for `p>=17`; 15.675/15.677/15.678 close the first all-finite survivor for every prime `p>=17`; 15.679 closes the next all-finite boundary for `p>=43`, 15.680--15.683 close `p=37,29,31,41`, 15.684--15.687 cut `p=23` to 133 exact residue-zero profiles, 15.688--15.699 close the `p=19` endpoint, and 15.700--15.712 close the `p=17` endpoint; 15.713--15.717 close all actual positive `p=7` infinity-plus-seven branches with `z=0,1,2,3`; 15.718--15.719 rigorously reduce and structurally identify projected `z=7` catalog supports without subtracting any actual boundary, so all 56 line boundaries in two `z=7` orbits and two projected profiles remain; 15.676 closes pair-deficit equality in infinity-plus-`p`; strict deficit, the `p=23` next-boundary endpoint, later all-finite sizes, and `p=7` infinity-plus-seven remain |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — `3A+B>0` remains unproved in general |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |

@@ -4,6 +4,8 @@ Prop 15.402 — Square-direction ∞-stars are 1-level on Max−.
 An r-line union has S≡−r; 4p is the 1-level law S≡−4, not
 two-level {−1,−3}.  Type I k=3p−2 is never 1-level.  The
 bad slice f_e≡−1 is not empty as a Max−-only statement.
+The r=4 tight family is nevertheless outside residual (ii): a
+k=1 Max+ cylinder has score at most 0 on every such four-line union.
 3A+B>0 stays open.  type_I flags not imported.
 
 Does **not** flip type_I / phi_F / e1 / L / Aut-Schur / Gsum /
@@ -50,6 +52,19 @@ Theorem D — PROVED (vertex identity / C at r=p).
 Theorem E — PROVED (mean).
   Type I k=3p−2 has E_−[S]=−(3p−2)/p=−3+2/p∉ℤ, so S is
   not 1-level.  Fail: claim E[S]=−1 or S≡−1.  ∎
+
+Theorem G — PROVED (15.272 G / 15.588 E; all odd p≥5).
+  Fix r lines B in one square-direction parallel class.  A k=1
+  Max+ cylinder aligned with that class is constant on its lines,
+  with (p+1)/2 line values +1 and (p−1)/2 line values −1; every
+  choice of the negative lines occurs.  Put as many negative lines
+  as possible in B.  Its score on the corresponding ∞-star union is
+      p(r−2 min(r,(p−1)/2)).
+  For r=4 this is 0 at p=5, −2p at p=7, and −4p at p≥11.
+  Hence every four-parallel-line cover from Theorem C has
+  min_Max+ S≤0 and is not a residual-(ii) example (which needs
+  min_Max+ S=2).  One-sided tight covers exist; only their possible
+  compatibility with the other residual conditions remains open.  ∎
 
 Theorem F — OPEN.  3A+B>0 on Aut_e far classes is still
   the g_min>T hinge (15.275 J–K).  f_e≡−1 on a large
@@ -334,6 +349,49 @@ def prove_E() -> dict:
     }
 
 
+def maxplus_cylinder_witness_score(p: int, r: int) -> int:
+    """Smallest score supplied by an aligned k=1 Max+ cylinder.
+
+    Proposition 15.272 G says every choice of (p+1)/2 positive line
+    values (equivalently (p-1)/2 negative values) occurs.
+    """
+    if p < 5 or p % 2 == 0:
+        raise ValueError("p must be odd and at least 5")
+    if r < 0 or r > p:
+        raise ValueError("r must satisfy 0 <= r <= p")
+    negative_in_support = min(r, (p - 1) // 2)
+    return p * (r - 2 * negative_in_support)
+
+
+def prove_G() -> dict:
+    rows = {}
+    ok = True
+    for p in (5, 7, 11, 13, 17, 19, 23, 29, 31):
+        score = maxplus_cylinder_witness_score(p, 4)
+        named = 0 if p == 5 else (-2 * p if p == 7 else -4 * p)
+        outside_residual = score <= 0
+        ok = ok and score == named and outside_residual and score != 2
+        rows[str(p)] = {
+            "r4_witness_score": score,
+            "min_Maxplus_upper_bound": score,
+            "outside_residual_splus_2": outside_residual,
+        }
+    # The full parallel class is the vertex star and has Max+ score +p.
+    ok = ok and all(
+        maxplus_cylinder_witness_score(p, p) == p for p in (5, 7, 11, 13)
+    )
+    return {
+        "proved": bool(ok),
+        "rows": rows,
+        "theorem": (
+            "An aligned k=1 Max+ cylinder gives score "
+            "p(r-2 min(r,(p-1)/2)); for r=4 this is <=0, so the "
+            "15.402 one-sided-tight family is outside residual (ii)."
+        ),
+        "depends_on": ["15.272.G", "15.588.E"],
+    }
+
+
 def prove_open() -> dict:
     return {
         "proved": False,
@@ -368,6 +426,13 @@ def main() -> dict:
     print(f"  D full star: {D['proved']} {D['rows']}", flush=True)
     E = prove_E()
     print(f"  E Type I mean: {E['proved']} p5={E['rows']['5']}", flush=True)
+    G = prove_G()
+    print(
+        f"  G r=4 Max+ witness: {G['proved']} "
+        f"p5={G['rows']['5']['r4_witness_score']} "
+        f"p7={G['rows']['7']['r4_witness_score']}",
+        flush=True,
+    )
     F = prove_open()
     print(
         f"  F open: 3AB={F['type_I_aut_e_3AB_positive_general']} "
@@ -381,6 +446,7 @@ def main() -> dict:
                 "B": B["rows"],
                 "C": C.get("live", {}),
                 "E": {p: E["rows"][p]["mean"] for p in ("5", "7", "11")},
+                "G": G["rows"],
             },
             indent=2,
         )
@@ -399,6 +465,7 @@ def main() -> dict:
             "r_line_union_S_eq_minus_r": C["proved"],
             "vertex_star_S_eq_minus_p": D["proved"],
             "type_I_mean_not_integer": E["proved"],
+            "r4_line_union_outside_residual_ii": G["proved"],
             "type_I_multilevel_bad_case_ND_closed": F[
                 "type_I_multilevel_bad_case_ND_closed"
             ],
@@ -408,7 +475,15 @@ def main() -> dict:
             "phi_F_ge_6_proved_general": F["phi_F_ge_6"],
             "residual_ii_k_eq_4p_empty": F["residual_ii_k_eq_4p_empty"],
         },
-        "algebra": {"A": A, "B": B, "C": C, "D": D, "E": E, "F": F},
+        "algebra": {
+            "A": A,
+            "B": B,
+            "C": C,
+            "D": D,
+            "E": E,
+            "F": F,
+            "G": G,
+        },
         "L_status": "OPEN",
         "flags_not_flipped": [
             "type_I_multilevel_bad_case_ND_closed",

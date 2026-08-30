@@ -30,7 +30,14 @@ Type I and non-Walsh residual (ii).
 A second semantic check caught a nearby downstream misuse before commit:
 15.274/15.585 invoked the bi-tight result on one-sided `S≡±4` tight covers.
 That implication is invalid. Bi-tight level 4 is indeed excluded by 15.720,
-but one-sided Max+/-tight level 4 remains part of residual (ii). The former
+and Proposition 15.402 explicitly constructs one-sided Max-minus-tight
+level-4 covers: unions of four parallel square-direction lines. Combining
+15.402 with the already-proved k=1 cylinder classification in 15.272 G /
+15.588 E gives a Max-plus score at most `0` for every member of this family
+(`0` at `p=5`, `-2p` at `p=7`, and `-4p` from `p>=11`). Thus the family is
+not residual-compatible, but generic one-sided-tight emptiness is false.
+The only live level-4 target is a one-sided tight cover that also has
+`s_+=2`. The former
 15.274 E dichotomy and 15.585 A `min_+=2` conclusion are retracted. Parameter
 or solver searches based on either conclusion are not authorized gates.
 
@@ -146,6 +153,10 @@ is a current E(1) gate.
   pairing;
 - affine/two-level residual work already closed by 15.179, 15.236--15.237,
   and 15.272;
+- generic one-sided level-4 tight-cover emptiness: false by the explicit
+  four-line family in 15.402. The family itself is harmless by the 15.272 G /
+  15.588 E cylinder witness; only residual-compatible one-sided tightness is
+  a live target;
 - Walsh/W1/W2 search after 15.628;
 - size-four, size-six, finite `p=7` size-eight, `p=17`, or `p=19` solver
   reruns after their exact closures;

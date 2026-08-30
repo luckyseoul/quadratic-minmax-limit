@@ -18,7 +18,9 @@ p>=5 (the small size comparisons are two-line residue calculations).
 
 Only levels 2 and 3 are required by the E(1) bi-tight no-descent reductions.
 Level 4 is a valid bi-tight corollary, but it does *not* exclude the one-sided
-Max+/-tight level-4 covers occurring inside residual (ii).  No QVAR, R1, or
+Max+/-tight level-4 covers relevant to residual (ii). Such covers exist
+(15.402); its four-line family is outside residual by a 15.272/15.588 cylinder
+witness. The open issue is joint residual compatibility. No QVAR, R1, or
 spectral floor is used.
 """
 from __future__ import annotations
@@ -228,7 +230,8 @@ def theorem_required_bitight_levels() -> dict:
         "consequence": (
             "The required level-2 and level-3 bi-tight alternatives in the Type-I "
             "and deep-tight no-descent reductions are empty for every prime p>=5. "
-            "Bi-tight level 4 is also excluded, but one-sided tight level 4 is not."
+            "Bi-tight level 4 is also excluded. Generic one-sided level-4 "
+            "covers exist; their joint compatibility with residual (ii) is not closed."
         ),
     }
 

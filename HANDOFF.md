@@ -62,8 +62,12 @@ the sole exceptional comparison `p=5,s=3` is excluded modulo 12. No
 finite-prime solver or census was rerun. The same congruence also excludes
 *bi-tight* level 4: the tail is regular from `p>=11`, while `p=5,7` fail by
 residue arithmetic. But residual (ii) uses one-sided Max+/-tight level 4,
-which is not thereby excluded. Thus 15.720 closes exactly the two required
-bi-tight alternatives, not generic tight covers or the residual level-4 case.
+which is not thereby excluded. Generic emptiness is in fact false: 15.402
+constructs four-parallel-line Max-minus-tight covers. The 15.272 G / 15.588 E
+k=1 cylinder family gives those examples a Max-plus score at most zero, so
+they are not residual examples. Thus 15.720 closes exactly the two required
+bi-tight alternatives; the remaining level-4 question is only whether a
+one-sided tight cover can also satisfy `s_+=2`.
 
 ## 15.719 — finite projected-semigroup stabilization, not z7 closure
 

@@ -20,7 +20,9 @@ L8 exists.  Two-value Max+ empty (15.274 A/F).  Official leftover
 Theorem A — RETRACTED after the 15.55/15.167 correction.
   leftover+splus S≥2 and E[S]=4.  If min_+≥4 then even scores
   force S≡4, but this is only one-sided Max+-tightness. Its emptiness
-  is not proved by 15.720, so min_+=2 does not follow.
+  is not implied by 15.720 (and generic one-sided level-4 covers exist
+  by the sign-dual of 15.402), so min_+=2 does not follow. The useful
+  target is incompatibility with the simultaneous Max− leftover law.
 
 Theorem B — PROVED Max+-free ({2,4,6} masses).
   Three-level {2,4,6} has a=P(S=2)≤1/2 (a=d, b=1−2a).  Plus

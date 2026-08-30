@@ -1933,7 +1933,13 @@ closes exactly the two bi-tight levels used by the no-descent chain. The same
 arithmetic excludes bi-tight level 4, but a second semantic audit caught that
 15.274 and 15.585 had applied it to merely one-sided `S≡±4` tight covers.
 Those uses are invalid: the 15.274 k=4p dichotomy and 15.585 min-plus claim
-are retracted, and one-sided level 4 stays inside residual (ii). The spectral
+are retracted. Proposition 15.402 already proves that one-sided Max-minus
+level-4 covers exist: take four lines in a square-direction parallel class.
+The k=1 cylinder theorem of 15.272 G / 15.588 E also shows that every such
+four-line cover has a Max-plus score at most `0` (`0,-2p,-4p` in the ranges
+`p=5`, `p=7`, `p>=11`), so this explicit family is outside residual (ii).
+What stays open is residual-compatible one-sided level 4, specifically
+one-sided tightness together with `s_+=2`. The spectral
 floor, global QVAR, and principal R1 remain mathematically open but are no
 longer E(1) acceptance gates. Two gates remain: multi-level Type I and
 non-Walsh residual (ii).

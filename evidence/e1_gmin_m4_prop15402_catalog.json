@@ -126,5 +126,16 @@
     "5": "-13/5",
     "7": "-19/7",
     "11": "-31/11"
+  },
+  "G": {
+    "5": {"r4_witness_score": 0, "min_Maxplus_upper_bound": 0, "outside_residual_splus_2": true},
+    "7": {"r4_witness_score": -14, "min_Maxplus_upper_bound": -14, "outside_residual_splus_2": true},
+    "11": {"r4_witness_score": -44, "min_Maxplus_upper_bound": -44, "outside_residual_splus_2": true},
+    "13": {"r4_witness_score": -52, "min_Maxplus_upper_bound": -52, "outside_residual_splus_2": true},
+    "17": {"r4_witness_score": -68, "min_Maxplus_upper_bound": -68, "outside_residual_splus_2": true},
+    "19": {"r4_witness_score": -76, "min_Maxplus_upper_bound": -76, "outside_residual_splus_2": true},
+    "23": {"r4_witness_score": -92, "min_Maxplus_upper_bound": -92, "outside_residual_splus_2": true},
+    "29": {"r4_witness_score": -116, "min_Maxplus_upper_bound": -116, "outside_residual_splus_2": true},
+    "31": {"r4_witness_score": -124, "min_Maxplus_upper_bound": -124, "outside_residual_splus_2": true}
   }
 }

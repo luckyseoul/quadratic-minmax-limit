@@ -14,12 +14,14 @@ SETUP
 PROVED
   A. Two-level Max+ S∈{2,4}: N₂/N=2−k/(2p)≤0 for k≥4p. Strictly negative
      for k>4p (impossible). At k=4p, N₂=0 so S≡4 and s₊=4≠2 (out of
-     residual (ii)). No one-sided Max+-tight level-4 emptiness is known;
-     the old 15.168 claim used the retracted 15.55/15.167 implication.
+     residual (ii)). Generic one-sided level-4 emptiness is false: 15.402
+     gives four-parallel-line covers. The live question is compatibility
+     with the opposite-shell residual inequalities.
   B. Dual-bad Max− two-level {−2,−4} needs E_−[S]≥−4, i.e. k≤4p. For
      k>4p the mass 2−k/(2p) is negative. At k=4p it forces b=P(S=−2)=0,
-     i.e. S≡−4, a one-sided Max−-tight level-4 cover. Its emptiness is
-     OPEN: 15.720 excludes bi-tight level 4, not one-sided tightness.
+     i.e. S≡−4, a one-sided Max−-tight level-4 cover. Such covers exist
+     (15.402), but the known family has min_Max+≤0 by 15.272/15.588 and is
+     outside residual (ii). Joint compatibility with s₊≥2 is OPEN.
   C. Slope identity (15.236.D / 15.50 interpolants) does not use k≤4p−2:
         p[…] = 2(k−4p)(p−1) M₊ M₋,   N±=p M±, p∤M±.
      4p≡0 (mod p) so k−4p≡k (mod p). p∤2, p∤(p−1). Hence p|RHS iff p|k.
@@ -309,7 +311,9 @@ def lemma_tight_S_const_empty(p: int, s: int) -> dict:
         "theorem": (
             "15.720 excludes a bi-tight level-s indicator, but S≡s on Max+ "
             "or S≡−s on Max− alone does not put the centered indicator in "
-            "ker(G_++G_-). The one-sided tight claim remains open."
+            "ker(G_++G_-). At s=4 generic one-sided emptiness is false by "
+            "15.402; only compatibility with the opposite-shell residual "
+            "conditions remains open."
         ),
     }
 
@@ -395,8 +399,9 @@ def lemma_dual_bad_at_k_4p_is_S_const_minus_4(p: int) -> dict:
         "proved": False,
         "theorem": (
             "At k=4p, two-level {−2,−4} forces b=0, i.e. S≡−4. "
-            "This is one-sided Max−-tightness. Its emptiness is not proved by "
-            "15.720 and remains open."
+            "This is one-sided Max−-tightness. Such covers exist (15.402), "
+            "but the explicit line family has min_Max+≤0; compatibility with "
+            "the residual Max+ condition remains open."
         ),
     }
 
@@ -667,7 +672,7 @@ def lemma_Q_signs_k_4p(p: int) -> dict:
 
 
 def lemma_k_4p_max_minus_ge_minus_2(p: int) -> dict:
-    """Retracted: the missing one-sided S≡−4 exclusion is essential."""
+    """Refuted by 15.402: a four-line union has max_Max−=-4."""
     tight = lemma_tight_S_const_empty(p, 4)
     gminus = lemma_Gminus_allones_eigen(p)
     qsgn = lemma_Q_signs_k_4p(p)
@@ -680,8 +685,9 @@ def lemma_k_4p_max_minus_ge_minus_2(p: int) -> dict:
         "proved": False,
         "theorem": (
             "k=4p even ⇒ even scores, E_−[S]=−4. All S≤−4 forces S≡−4, "
-            "but one-sided Max−-tight S≡−4 has not been excluded. Hence "
-            "max_Max−≥−2 does not follow."
+            "and 15.402 supplies actual four-line examples. Hence the "
+            "unconditional claim max_Max−≥−2 is false. Those examples have "
+            "min_Max+≤0 and therefore do not refute the joint residual target."
         ),
     }
 
@@ -694,13 +700,15 @@ def theorem_E_k4p_dichotomy(primes: list[int] | None = None) -> dict:
         "proved": ok,
         "n_primes": len(primes),
         "retracted": True,
+        "counterexample": "15.402 four square-direction parallel lines",
         "theorem": (
-            "The former k=4p dichotomy is unavailable until one-sided "
-            "Max−-tight level 4 is excluded by a valid argument."
+            "The former unconditional k=4p dichotomy is false by 15.402. "
+            "The viable replacement must use the opposite-shell condition "
+            "min_Max+≥2, not one-sided tight-cover emptiness."
         ),
         "leftover": (
-            "One-sided S≡−4 plus the previously identified max=−2 multi-level "
-            "cases; the former dichotomy is unavailable."
+            "Residual-compatible one-sided S≡−4 plus the previously identified "
+            "max=−2 multi-level cases; generic four-line covers are harmless."
         ),
     }
 
@@ -2250,7 +2258,7 @@ def residual_ii_twolevel_k_ge_4p_empty() -> bool:
 
 
 def residual_ii_S_equiv_4_k_4p_empty() -> bool:
-    """One-sided Max+-tight S≡4 is not excluded by 15.720."""
+    """No joint residual exclusion follows from one-sided Max+ tightness."""
     return False
 
 

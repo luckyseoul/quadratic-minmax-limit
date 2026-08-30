@@ -17,11 +17,13 @@ from e1_gmin_m4_prop15402 import (
     ES2_pstar_square,
     chi_q_on_Fp,
     main,
+    maxplus_cylinder_witness_score,
     prove_A,
     prove_B,
     prove_C,
     prove_D,
     prove_E,
+    prove_G,
     prove_open,
     type_I_mean_is_integer,
 )
@@ -77,6 +79,17 @@ def test_type_I_mean_not_integer():
     assert type_I_mean_minus(5) != -3
 
 
+def test_four_line_tight_family_is_not_residual_ii():
+    G = prove_G()
+    assert G["proved"] is True
+    assert maxplus_cylinder_witness_score(5, 4) == 0
+    assert maxplus_cylinder_witness_score(7, 4) == -14
+    assert maxplus_cylinder_witness_score(11, 4) == -44
+    assert all(row["outside_residual_splus_2"] for row in G["rows"].values())
+    # At r=p the same formula recovers the full vertex-star score +p.
+    assert maxplus_cylinder_witness_score(7, 7) == 7
+
+
 def test_type_I_flags_still_open():
     F = prove_open()
     assert F["proved"] is False
@@ -104,6 +117,7 @@ def test_main():
     assert out["proved"]["r_line_union_S_eq_minus_r"] is True
     assert out["proved"]["vertex_star_S_eq_minus_p"] is True
     assert out["proved"]["type_I_mean_not_integer"] is True
+    assert out["proved"]["r4_line_union_outside_residual_ii"] is True
     assert out["proved"]["type_I_multilevel_bad_case_ND_closed"] is False
     assert out["proved"]["type_I_aut_e_3AB_positive_general"] is False
     assert out["L_status"] == "OPEN"

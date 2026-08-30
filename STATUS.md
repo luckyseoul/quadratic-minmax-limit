@@ -7,9 +7,11 @@ empty for every prime `p>=5`.** The proof uses
 replaces the invalid 15.55/15.167 spectral implication. Global QVAR,
 principal R1, and the spectral floor are no longer acceptance gates. The two
 remaining theorem gates are multi-level Type I and non-Walsh residual (ii),
-so `L` remains OPEN. The same congruence excludes bi-tight level 4, but does
-not exclude one-sided Max+/-tight level 4; that distinction remains inside
-the open residual-(ii) gate.
+so `L` remains OPEN. The same congruence excludes bi-tight level 4, but not
+one-sided tightness. Such covers actually exist (15.402); the known
+four-parallel-line family is harmless because 15.272/15.588 supplies a
+Max+ score at most zero. What remains inside residual (ii) is only a
+one-sided level-4 cover compatible with the additional condition `s_+=2`.
 
 **15.719 PROVED exact finite projected-semigroup stabilization for the
 positive `p=7,z=7` high catalogs, not boundary closure**: the Hilbert basis

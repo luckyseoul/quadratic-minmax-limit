@@ -8,6 +8,7 @@
     "r_line_union_S_eq_minus_r": true,
     "vertex_star_S_eq_minus_p": true,
     "type_I_mean_not_integer": true,
+    "r4_line_union_outside_residual_ii": true,
     "type_I_multilevel_bad_case_ND_closed": false,
     "type_I_aut_e_3AB_positive_general": false,
     "phi_F_ge_6_proved_general": false,
@@ -274,6 +275,22 @@
       "gsum": false,
       "rhat": false,
       "note": "3A+B>0 on Aut_e far classes remains G>T (15.275). f_e\u2261\u22121 on large {S=\u22121} exists off Type I Max+ at p=5, so Max\u2212-only emptiness is false. Flags unflipped."
+    },
+    "G": {
+      "proved": true,
+      "rows": {
+        "5": {"r4_witness_score": 0, "min_Maxplus_upper_bound": 0, "outside_residual_splus_2": true},
+        "7": {"r4_witness_score": -14, "min_Maxplus_upper_bound": -14, "outside_residual_splus_2": true},
+        "11": {"r4_witness_score": -44, "min_Maxplus_upper_bound": -44, "outside_residual_splus_2": true},
+        "13": {"r4_witness_score": -52, "min_Maxplus_upper_bound": -52, "outside_residual_splus_2": true},
+        "17": {"r4_witness_score": -68, "min_Maxplus_upper_bound": -68, "outside_residual_splus_2": true},
+        "19": {"r4_witness_score": -76, "min_Maxplus_upper_bound": -76, "outside_residual_splus_2": true},
+        "23": {"r4_witness_score": -92, "min_Maxplus_upper_bound": -92, "outside_residual_splus_2": true},
+        "29": {"r4_witness_score": -116, "min_Maxplus_upper_bound": -116, "outside_residual_splus_2": true},
+        "31": {"r4_witness_score": -124, "min_Maxplus_upper_bound": -124, "outside_residual_splus_2": true}
+      },
+      "theorem": "An aligned k=1 Max+ cylinder gives score p(r-2 min(r,(p-1)/2)); for r=4 this is <=0, so the 15.402 one-sided-tight family is outside residual (ii).",
+      "depends_on": ["15.272.G", "15.588.E"]
     }
   },
   "L_status": "OPEN",
