@@ -1,9 +1,26 @@
-# Status (2026-08-30; through audit of Proposition 15.725)
+# Status (2026-08-30; through Proposition 15.726)
+
+**15.726 EXCLUDES every positive outside slack**
+`1<=R<=floor((p-4)/3)` **at `|D|=p+1`, for every prime `p>=17`.**
+Delete an inclusion-minimal set `T` so that `A=D\T` is an arc and put
+`t=|T|<=R`. If `s_A(z)` counts the `A`-secants through `z in T`, the slack
+identity gives `sum_z s_A(z)<=R` line by line. Here
+`|A|=p+1-t=p+2-(t+1)`. Segre's degree-`2(t+1)` dual tangent envelope
+(in the Ball--Lavrauw form) applies because `p>=3t+4`. Restricting it to
+the dual line of `z` shows
+`s_A(z)>=(p-1-3t)/2`; otherwise its more than `2(t+1)` tangent zeros force
+that dual line as a component, contradicting the envelope's nonzero value
+at an `A`-secant through `z`. Hence
+`R>=t(p-1-3t)/2`. Concavity in `t`, evaluated at `1` and `R`, contradicts
+`3R<=p-4`. Thus any positive survivor must now satisfy
+`R>=floor((p-1)/3)`. This strictly strengthens 15.722's historical
+square-root cutoff, but does not close the `p+1` shell: larger slack,
+residual (ii), multi-level Type I, and `L` remain OPEN.
 
 **15.725's attempted parabola-plus-internal family close is RETRACTED.** Its
 finite phase-zero census is exact, but the all-prime character bounds and
 opposite product sign are unproved. It has no downstream role. The latest
-proved narrowing remains 15.724 below.
+proved narrowing is 15.726 above.
 
 **15.724 EXCLUDES the full Miquelian-circle boundary, and therefore the
 entire outside pair-slack-zero branch at `|D|=p+1`, for every `p>=17`.**
@@ -13,10 +30,11 @@ that vertex to infinity gives `I=0`, `m` phase-zero `b=0` directions and
 `m` phase-one `b=2` directions. Exact quotient and coefficient arithmetic
 forces `(u,x,y)=(4,4,3)`, hence at least four nonzero even quadratic lifts
 with scaled mass eight. Proposition 15.688 requires mass at least
-`p-3>=14`, a contradiction. The first shell is not closed: 15.722 now
-excludes every positive outside slack
-`R<=max(3,floor(sqrt(p)-5/2))`, so the live branch starts beyond that cutoff
-(uniformly at `R>=4`). The small-prime remainders, even
+`p-3>=14`, a contradiction. The first shell is not closed: 15.722's
+historical argument excludes every positive outside slack
+`R<=max(3,floor(sqrt(p)-5/2))`, and 15.726 strengthens the active cutoff to
+`R<=floor((p-4)/3)`, so any positive survivor must have
+`R>=floor((p-1)/3)`. The small-prime remainders, even
 `k>4p`, residual (ii), Type I, and `L` remain OPEN.
 
 **15.723 PROVES the disputed middle floor-plus-two exclusion with exactly
@@ -39,7 +57,9 @@ Ball--Lavrauw near-complete-arc classifications, and off-conic secant counts
 exclude `R=2,3`. More generally, an inclusion-minimal deletion to an arc has
 size at most `R`; the prime-field conic threshold then excludes every
 `1<=R<=floor(sqrt(p)-5/2)`. Thus positive slack is impossible through
-`max(3,floor(sqrt(p)-5/2))`; no finite search is involved.
+`max(3,floor(sqrt(p)-5/2))`; no finite search is involved. This remains the
+historical 15.722 result. Proposition 15.726 subsequently replaces its
+active cutoff by `floor((p-4)/3)` using the dual tangent envelope.
 
 The cocycle's affine case is explicit: for `c=0` its infinity multiplier is
 `chi(d)=chi(a)`, not `chi(c)`.  The finite-field certificate APIs also reject
@@ -59,7 +79,8 @@ active boundary gates, including the former open `p=23` ledger. Their
 internal lemmas remain valid. At `|D|=p+1`, 15.676 closes pair-deficit
 equality, 15.722 closes outside pair slack one, and 15.724 closes slack zero.
 Proposition 15.722 additionally excludes positive slack through
-`max(3,floor(sqrt(p)-5/2))`; only larger slack remains. The small-prime remainders, even
+`max(3,floor(sqrt(p)-5/2))`, and 15.726 strengthens this to
+`floor((p-4)/3)`; only slack `R>=floor((p-1)/3)` remains. The small-prime remainders, even
 `k>4p`, residual (ii), Type I, and `L` remain OPEN.
 
 **15.720 PROVES the required level-2 and level-3 bi-tight alternatives are

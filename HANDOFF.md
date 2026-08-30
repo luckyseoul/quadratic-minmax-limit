@@ -1,8 +1,9 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-30 (through audit of 15.725; required bi-tight levels 2 and 3 are
-closed, signed transport supersedes the old all-finite ladder, and the new
-first-shell outside pair-slack-zero circle branch is excluded)
+**Date:** 2026-08-30 (through 15.726; required bi-tight levels 2 and 3 are
+closed, signed transport supersedes the old all-finite ladder, the
+first-shell outside pair-slack-zero circle branch is excluded, and positive
+outside slack below `floor((p-1)/3)` is excluded)
 **The quadratic-minmax limit is still OPEN.**
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
@@ -46,6 +47,37 @@ excluding any of its 56 actual line boundaries in two orbits. The positive
 mesh k=6 are not a close. cpu44
 stays hard-closed.
 
+## 15.726 — linear low-slack exclusion
+
+At `|D|=p+1`, send an outside point to infinity and let `R>0` be the exact
+normalized pair slack from 15.722. Delete an inclusion-minimal set `T` so
+that `A=D\T` is an arc, and put `t=|T|<=R`. If `s_A(z)` is the number of
+`A`-secants through `z`, then linewise comparison with the occupancy term
+`h(n)` gives
+
+`sum_(z in T) s_A(z) <= R`.
+
+The arc has size `p+1-t=p+2-(t+1)`. Since
+`R<=floor((p-4)/3)` implies `p>=3t+4`, Segre's odd-order dual tangent
+envelope in Ball--Lavrauw (Theorem 11 in arXiv v4; Theorem 13 in the
+authors' current manuscript) applies with degree `2(t+1)`. A point
+`z in T` has `|A|-2s_A(z)` tangent lines. If this exceeded the envelope
+degree, the dual line `z*` would divide the envelope; evaluating at any
+`A`-secant through `z` contradicts the exact restriction
+`Phi(X cross P)=f_P(X)^2`. Therefore
+
+`s_A(z)>=(p-1-3t)/2`.
+
+It follows that `R>=t(p-1-3t)/2`. The right side is concave in `t`; at
+both endpoints `t=1,R` it is at least `3R/2>R`, a contradiction. Hence
+
+`1<=R<=floor((p-4)/3)` is impossible, and any positive outside slack obeys
+`R>=floor((p-1)/3)`.
+
+This supersedes 15.722's square-root cutoff as the active frontier without
+retracting it. The larger-slack `p+1` shell, residual (ii), multi-level
+Type I, and `L` remain OPEN.
+
 ## 15.725 — retracted parabola-family close
 
 The exact finite phase-zero census is retained (2,381 parameter cases and
@@ -87,8 +119,10 @@ phase-zero directions then have `A=2B` with `4p E[B]=8`, contradicting
 every `p>=17`. Proposition 15.722 also excludes every positive slack
 `R<=max(3,floor(sqrt(p)-5/2))`: `R=2,3` use the complete `(p-1)`/`(p-2)`
 arc classifications, and the general interval uses a minimal deletion set,
-the prime-field conic threshold, and off-conic secant counting. The first
-live positive slack is larger than that cutoff (uniformly `R>=4`).
+the prime-field conic threshold, and off-conic secant counting. That is the
+historical 15.722 cutoff; 15.726 strengthens the active result to
+`R<=floor((p-4)/3)`, so any positive survivor must have
+`R>=floor((p-1)/3)`.
 
 The coefficient congruence is sign-independent: 15.673's two-coordinate
 targets include both XOR and XNOR, but the sign drops out of
@@ -122,7 +156,9 @@ Handshake parity makes `|D|=p+1` the first unexcluded size. In normalized
 form this is infinity plus `p`; 15.676 closes pair-deficit equality, 15.722
 closes outside pair slack one, and 15.724 closes pair slack zero. Strict
 positive outside slack through `max(3,floor(sqrt(p)-5/2))` is also excluded
-by 15.722. Only slack beyond that cutoff remains.
+by 15.722. Proposition 15.726 strengthens this to
+`R<=floor((p-4)/3)`. Only slack `R>=floor((p-1)/3)` remains; the shell,
+residual (ii), multi-level Type I, and `L` are still OPEN.
 
 Therefore all first/second all-finite boundary campaigns in 15.675--15.712,
 including the former open `p=23` profile ledger, are superseded as active

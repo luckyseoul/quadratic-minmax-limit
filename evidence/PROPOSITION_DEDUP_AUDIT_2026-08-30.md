@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-30
 
-**Scope:** every assigned proposition through Proposition 15.725, the live
+**Scope:** every assigned proposition through Proposition 15.726, the live
 predicate wiring, and the current untracked attack scripts
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
@@ -74,7 +74,8 @@ three existing inputs—isolated-vertex counting, the xnor congruence from
 circle. Do not launch another full-circle, `R=0`, conic, or circle-orbit
 search at `|D|=p+1`. The same proposition now excludes every positive slack
 through `max(3,floor(sqrt(p)-5/2))`; the active branch lies beyond that
-cutoff.
+cutoff at this stage of the audit. Proposition 15.726 below supersedes that
+active cutoff without changing the historical 15.722 result.
 
 A sixth semantic check found that `excess != 2` is not a universal profile
 rule in the middle odd-fibre range. Proposition 15.723 proves the exclusion
@@ -128,7 +129,25 @@ the valid result: outside slack `R=0` is closed by 15.724, and 15.722 excludes
 every positive `R<=max(3,floor(sqrt(p)-5/2))`.  The `R=2,3` cases use the
 classified complete `(p-1)`/`(p-2)` arcs; the prime-dependent interval uses
 an inclusion-minimal deletion to an arc and off-conic secant counting. Only
-slack beyond that cutoff remains open.
+slack beyond that cutoff remained open at this stage.
+
+A ninth semantic check gives Proposition 15.726 and strictly advances that
+positive-slack gate without a finite-prime campaign.  For an outside
+`p+1`-point set of slack `R`, let `T` be an inclusion-minimal deletion to an
+arc `A` and put `t=|T|`.  The exact occupancy identity gives `1<=t<=R`,
+minimality gives every `z in T` an `A`-secant, and the total number of these
+deleted-point/secant incidences is at most `R`.  Hence each
+`s_A(z)<=R-t+1`.  The arc has size `p+1-t` and tangent parameter `t+1`.
+When `3R<=p-4`, Ball--Lavrauw's odd-order tangent envelope applies and has
+dual degree `2(t+1)`: its size hypothesis follows from
+`p+1-t-(2t+4)=p-3-3t>=p-3-3R>=1`.  Every deleted point lies on at least
+`p-1+t-2R>2(t+1)` tangents.  Its dual line would therefore be a component of
+the envelope, contradicting the nonzero tangent-polynomial value at an
+`A`-secant through that point.  Thus for every prime `p>=17`,
+`1<=R<=floor((p-4)/3)` is impossible.  Together with 15.724 at `R=0`, any
+positive survivor must have
+`R>=floor((p-1)/3)`.  This narrows but does not close the `p+1` shell:
+residual (ii), multi-level Type I, and `L` remain open.
 
 The same replay exposed one stale exact-boundary diagnostic:
 `p17_slack20_boundary_cryptominisat.py` still expected the 78 profiles and
@@ -161,13 +180,13 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 640 source-backed proposition modules from 15.83 through 15.725.
+- There are 641 source-backed proposition modules from 15.83 through 15.726.
 - The labels 15.537, 15.583, and 15.584 have no proposition module.  They are
   unassigned labels, not unreviewed propositions; later source headers mention
   those numbers only as historical range/state markers.
-- Therefore every assigned proposition through 15.725 was included in this
+- Therefore every assigned proposition through 15.726 was included in this
   audit.  The grouped ledger below is by shared mathematical route rather than
-  a 718-row restatement of the writeup.
+  a 719-row restatement of the writeup.
 
 ## Authoritative acceptance chain
 
@@ -176,10 +195,10 @@ The public theorem is gated consistently by the corrected global
 currently `False`. The historical bounded `True` is available only through
 `e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after audit of 15.725 |
+| unit | exact live content | status after audit of 15.726 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
-| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — for `p>=17`, 15.721 moves the general boundary floor to `|D|=p+1`; 15.676 and 15.722--15.724 close pair equality and slack zero, while 15.722 excludes positive outside slack through `max(3,floor(sqrt(p)-5/2))`; only larger slack remains |
+| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — for `p>=17`, 15.721 moves the general boundary floor to `|D|=p+1`; 15.676 and 15.722--15.724 close pair equality and slack zero, while 15.726 excludes every positive outside slack through `floor((p-4)/3)`; any positive survivor must have `R>=floor((p-1)/3)` |
 | Type I | the multi-level `3A+B>0` bad case | **OPEN** — `|κ|=1` needs `G>T` (for example `|μ|≤|L|`), while `|κ|=3` independently needs `χ_d((2p-1)μ+(p-2)ν)>-(p-2)/p`; the particular term is safe but the δ remainder is open |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
@@ -209,8 +228,9 @@ top-level front.
 | **15.669--15.712** | uniform residual ranges, infinity-plus-`(p-2)`, all-finite endpoint campaigns, and optional no-gos | After 15.721, the all-finite boundary-close role of 15.675--15.712 is superseded by signed transport into 15.669/15.674. Do not regenerate any first/second all-finite rows, including the former open `p=23` ledger. 15.676 remains load-bearing at total boundary `p+1`; 15.690--15.691 and reusable internal lemmas retain their independent content. |
 | **15.713--15.719** | positive `p=7` infinity-plus-seven reductions | 15.713--15.717 close `z=0,1,2,3`.  15.718--15.719 identify and stabilize projected `z=7` semigroup supports but remove no source boundary.  All 56 actual `z=7` line boundaries remain open, and the semigroup/quotient route is terminated. |
 | **15.720--15.721** | degree-congruence bi-tight close; signed boundary normalization | 15.720 closes the required bi-tight levels. 15.721 proves `|D|>=p+1` for every residual candidate at `p>=17` and identifies strict deficit in the normalized infinity-plus-`p` shell as the first general residual branch. Neither closes Type I or residual (ii). |
-| **15.722--15.724** | exact phase cocycle; outside-pair slack; paired-cube floor-plus-two repair; full-circle exclusion | 15.722 identifies slack zero with an aligned Miquelian circle, excludes `R=1,2,3`, and more generally excludes `1<=R<=floor(sqrt(p)-5/2)` by minimal arc deletion plus the prime-field conic threshold. 15.724 excludes the circle, so the active `p+1` branch lies beyond `max(3,floor(sqrt(p)-5/2))`. 15.723 proves the middle floor-plus-two shortcut except for the explicit cells `(17,5,1)` and `(17,11,0)`, which every later profile audit must retain. |
+| **15.722--15.724** | exact phase cocycle; outside-pair slack; paired-cube floor-plus-two repair; full-circle exclusion | 15.722 identifies slack zero with an aligned Miquelian circle, excludes `R=1,2,3`, and more generally excludes `1<=R<=floor(sqrt(p)-5/2)` by minimal arc deletion plus the prime-field conic threshold. 15.724 excludes the circle; at that stage the `p+1` branch lay beyond `max(3,floor(sqrt(p)-5/2))`. 15.723 proves the middle floor-plus-two shortcut except for the explicit cells `(17,5,1)` and `(17,11,0)`, which every later profile audit must retain. |
 | **15.725** | finite parabola-plus-internal census and attempted all-prime character bound | **RETRACTED as a family close.** The finite phase-zero census is retained; the all-prime character sums and opposite orientation are open. It changes no gate. |
+| **15.726** | minimal arc deletion plus the Ball--Lavrauw dual tangent envelope | **PROVED narrowing, not shell closure.** For every prime `p>=17`, it excludes `1<=R<=floor((p-4)/3)` at `|D|=p+1`; any positive survivor must have `R>=floor((p-1)/3)`. Residual (ii), Type I, and `L` remain open. |
 
 ## Exact duplicated run
 
@@ -266,8 +286,9 @@ is a current E(1) gate.
   reruns after their exact closures;
 - any all-finite first/second-shell profile work from 15.675--15.712:
   15.721 transports those sizes into the already-closed infinity ranges;
-- any `|D|=p+1` full-circle, outside-`R=0`, or unique-trisecant campaign:
-  15.722--15.724 close those branches exactly;
+- any `|D|=p+1` full-circle or outside-slack campaign with
+  `0<=R<=floor((p-4)/3)`: 15.722--15.724 close `R=0`, and 15.726 closes the
+  stated positive interval exactly;
 - treating a projected/parity/semigroup survivor as a feasible graph;
 - trying to reach the general residual with an `L2` bound on `delta`
   (15.595 proves the scale loses from `p>=11`).
@@ -362,7 +383,9 @@ Before spending mesh/GPU time:
 3. for a nonempty residual boundary, first use signed PSL transport to put a
    boundary point at infinity; do not open an all-finite profile campaign;
 4. at `|D|=p+1`, skip slack zero and every positive outside slack through
-   `max(3,floor(sqrt(p)-5/2))`; 15.722--15.724 already close them, and retain
+   `floor((p-4)/3)`; 15.722--15.724 close zero and 15.726 closes that positive
+   interval.  The first integer value not excluded is `floor((p-1)/3)`.
+   Retain
    both 15.723 floor-plus-two exceptions in any profile DP;
 5. search tracked files, untracked scripts, `/tmp` artifact names and hashes,
    git history, GitHub, MathOverflow, literature notes, and OEIS when number

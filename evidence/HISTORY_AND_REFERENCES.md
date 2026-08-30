@@ -2026,6 +2026,39 @@ not used downstream. Searches found only general Hasse--Weil material for
 rational functions, not this proposed Paley boundary argument. Individual
 OEIS matches for 2,381 and 92,664 are unrelated numerical coincidences.
 
+## 7bu. Tangent-envelope exclusion of the linear low-slack range (2026-08-30)
+
+Proposition 15.726 replaces the active square-root positive-slack cutoff by
+a linear one, without a finite-prime enumeration.  Let `P` be an affine
+`p+1`-point outside chart of pair slack `R`, and let `T` be an
+inclusion-minimal deletion for which `A=P\T` is an arc.  Put `t=|T|`.  The
+line-occupancy identity gives `1<=t<=R`.  Minimality makes every deleted
+point `z` lie on at least one secant of `A`, while the same occupancy identity
+gives
+
+`sum_{z in T} s_A(z) <= R`,
+
+so `s_A(z)<=R-t+1`.  The arc has size `p+1-t` and tangent parameter `t+1`.
+If `3R<=p-4`, Ball--Lavrauw's odd-order polynomial tangent envelope [44]
+applies and has dual degree `2(t+1)`; indeed its size condition follows from
+`p+1-t-(2t+4)=p-3-3t>=p-3-3R>=1`.  Every `z in T` lies on at least
+
+`|A|-2s_A(z) >= p-1+t-2R > 2(t+1)`
+
+tangents.  Their dual points all lie on the dual line `z*`, forcing that line
+to be a component of the envelope.  But a secant `ab` of `A` through `z`
+also represents a point of `z*`, whereas the envelope restricts there to
+`f_a(b)^2`, which is nonzero because `ab` is not tangent at `a`.  This is the
+required contradiction.
+
+Consequently every prime `p>=17` has no positive outside slack
+`1<=R<=floor((p-4)/3)`.  Together with Proposition 15.724 at `R=0`, any
+positive survivor must have `R>=floor((p-1)/3)`.  This is a proved narrowing,
+not a closure of the `p+1` shell.  Non-Walsh residual (ii), multi-level Type
+I, and the quadratic-minmax limit remain open.  The earlier
+`max(3,floor(sqrt(p)-5/2))` result remains the historical content of
+Proposition 15.722, but is no longer the active cutoff.
+
 ---
 
 ## 8. What is not in the older literature
@@ -2084,7 +2117,7 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 41. P.-A. Bernard, N. Crampé, and L. Vinet, *A bivariate Q-polynomial structure for the non-binary Johnson scheme*, J. Combin. Theory Ser. A **202** (2024), 105829, [arXiv:2306.01882](https://arxiv.org/abs/2306.01882) (adjacent Johnson-scheme machinery; not the parity-majorant or affine pair-deficit theorem of 15.669).
 42. S. Ball and B. Csajbók, *On sets of points with few odd secants*, [arXiv:1711.10876](https://arxiv.org/abs/1711.10876) (odd-secant bounds for \(q+2\)-point projective sets; not the eight-point split-type census of 15.670).
 43. M. Kiermaier and S. Kurz, *Maximal integral point sets in affine planes over finite fields*, [arXiv:1401.2825](https://arxiv.org/abs/1401.2825) (prescribed directions and Paley-clique context; not the boundary parity-floor budget of 15.670).
-44. S. Ball and M. Lavrauw, *Planar arcs*, J. Combin. Theory Ser. A **160** (2018), 261--287, [doi:10.1016/j.jcta.2018.06.015](https://doi.org/10.1016/j.jcta.2018.06.015), [arXiv:1705.10940](https://arxiv.org/abs/1705.10940) (modern primary restatement of Segre's odd-order arc theorems; the `q`-arc conic theorem is used in 15.673, the complete `(q-1)`/`(q-2)` classifications and prime-field conic threshold are used for the low-slack exclusion in 15.722, and Theorem 11's polynomial tangent envelope is used in 15.683).
+44. S. Ball and M. Lavrauw, *Planar arcs*, J. Combin. Theory Ser. A **160** (2018), 261--287, [doi:10.1016/j.jcta.2018.06.015](https://doi.org/10.1016/j.jcta.2018.06.015), [arXiv:1705.10940](https://arxiv.org/abs/1705.10940) (modern primary restatement of Segre's odd-order arc theorems; the `q`-arc conic theorem is used in 15.673, the complete `(q-1)`/`(q-2)` classifications and prime-field conic threshold are used for the low-slack exclusion in 15.722, and the polynomial tangent envelope is used in 15.683 and 15.726).
 45. V. F. Lev, *Point distribution and perfect directions in* \(F_p^2\), [arXiv:1903.01518](https://arxiv.org/abs/1903.01518) (Rédei-type direction bounds adjacent to, but not implying, the determined-direction/type-budget argument of 15.674).
 46. G. Van de Voorde, *On sets without tangents and exterior sets of a conic*, [arXiv:1201.0484](https://arxiv.org/abs/1201.0484) (adjacent external-conic and determined-direction geometry; not the Paley phase-budget exclusion of 15.676).
 47. P. Amireddy, S. Behera, S. Srinivasan, and M. Sudan, *A Near-Optimal Polynomial Distance Lemma over Boolean Slices*, ICALP 2025, [doi:10.4230/LIPIcs.ICALP.2025.11](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2025.11) (Lemma 2 supplies the exact finite degree-two support floor used in 15.642 and 15.677).

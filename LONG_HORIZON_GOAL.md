@@ -28,11 +28,17 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
 - Denseness: the limit exists globally iff it exists along Paley orders \(n_k=p_k^2+1\).
 - \(\rho=1\) on that Paley family, so \(\Phi(C_n)=\frac12 n\sqrt{n-1}\) and \(\alpha_{n_k}\to 1/2\) **if** E(1) holds there.
 - 15.167's majorization algebra is conditionally valid, but its final bi-tight implication is **retracted** because `ker(G-(n/2)P1)` contains `ker G`. Proposition 15.720 instead excludes the required bi-tight levels 2 and 3 for every prime `p>=5` by a degree congruence. Its bi-tight level-4 corollary does not exclude one-sided tight level 4.
+- At the first general residual-(ii) boundary `|D|=p+1`, Proposition 15.726
+  excludes every positive outside slack
+  `1<=R<=floor((p-4)/3)` for primes `p>=17`; consequently any positive
+  survivor must have `R>=floor((p-1)/3)`. This narrows but does not close the
+  shell or residual (ii).
 - Exact Paley optimality is **false** (\(m_{10}=13<15\)). E(1) is asymptotic.
 
 Therefore the remaining theorem is **E(1)** on \(n=p^2+1\). The live
 acceptance gate is the corrected dictionary returned by
-`src/e1_main_chain_status.py`; as of 2026-08-30 it reads:
+`src/e1_main_chain_status.py`; as of 2026-08-30 through Proposition 15.726 it
+reads:
 
 1. **Required bi-tight levels 2 and 3:** TRUE by 15.720. The spectral floor,
    global mixed-\(k\) QVAR, and principal R1 are no longer acceptance gates.
@@ -59,8 +65,11 @@ acceptance gate is the corrected dictionary returned by
    isolated-vertex and sharp-lift contradiction. Proposition 15.723 also
    repairs the middle floor-plus-two shortcut, retaining its two genuine
    `p=17` exceptions. Proposition 15.722 further excludes every positive
-   outside slack through `max(3,floor(sqrt(p)-5/2))`; only larger slack
-   remains. The
+   outside slack through `max(3,floor(sqrt(p)-5/2))`. Proposition 15.726
+   strictly strengthens that historical cutoff: every
+   `1<=R<=floor((p-4)/3)` is impossible, so any positive survivor must have
+   `R>=floor((p-1)/3)`. The larger-slack `p+1` shell remains OPEN.
+   The
    attempted parabola-plus-internal close in 15.725 is retracted: its finite
    phase-zero census is data only, with the all-prime character bounds and
    opposite sign still open. Separate small-prime remainders and even

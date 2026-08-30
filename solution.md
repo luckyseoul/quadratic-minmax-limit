@@ -47,6 +47,9 @@ acceptance gates. Its bi-tight level-4 corollary does not close the one-sided
 tight level-4 branch of residual (ii). At the `k=4p` residual endpoint,
 Proposition 15.721 excludes every boundary of total size at most `p-1` for
 `p>=17`; the first general shell is `p+1`, where strict pair deficit remains.
+Within that shell, 15.724 closes outside slack zero and 15.726 excludes every
+`1<=R<=floor((p-4)/3)`, so any positive survivor has
+`R>=floor((p-1)/3)`; the rest of the shell remains open.
 Lemma D existence / 2-plane is complete in `A3_PROOF.md`
 and 15.276. Aut-Schur is **false**. Gsum unused.
 
@@ -9338,3 +9341,147 @@ Therefore
 \]
 
 Proposition 15.725 has no downstream role.
+
+## Proposition 15.726 — tangent-envelope linear low-slack exclusion
+
+Continue in the normalized first shell of Proposition 15.722: (D) is a
+set of (p+1) affine points, where (p\ge17) is prime, and its outside
+pair slack is
+
+\[
+ R=\sum_\ell h(n_\ell),\qquad
+ h(2r)=r(r-1),\quad h(2r+1)=r^2.                 \tag{15.726.1}
+\]
+
+Suppose
+
+\[
+ 1\le R\le\left\lfloor{p-4\over3}\right\rfloor. \tag{15.726.2}
+\]
+
+Delete points until the remainder (A=D\setminus T) is an arc, and choose
+(T) inclusion-minimal with this property.  Put (t=|T|).  The deletion
+construction from Proposition 15.722 and the elementary bounds
+(h(n)\ge n-2) give
+
+\[
+ 1\le t\le R.                                     \tag{15.726.3}
+\]
+
+Minimality says that every (z\in T) lies on an (A)-secant.  Let (s_z)
+be the number of (A)-secants through (z), and put
+
+\[
+ I=\sum_{z\in T}s_z.
+\]
+
+For a line (ell), write
+(a_\ell=|A\cap\ell|\le2) and (u_\ell=|T\cap\ell|).  Only lines with
+(a_\ell=2) contribute to (I), and each such line contributes
+(u_\ell).  On the other hand,
+
+\[
+ h(2+u)-u=
+ \begin{cases}
+  r(r-1),&u=2r,\\
+  r^2,&u=2r+1,
+ \end{cases}
+ \quad\ge0.
+\]
+
+Consequently
+
+\[
+ I=\sum_{a_\ell=2}u_\ell
+   \le\sum_\ell h(a_\ell+u_\ell)=R.             \tag{15.726.4}
+\]
+
+Now
+
+\[
+ |A|=p+1-t=p+2-\tau,\qquad \tau=t+1.
+\]
+
+Since (3t\le3R\le p-4), one has
+
+\[
+ |A|>2\tau+2.                                     \tag{15.726.5}
+\]
+
+The odd-order tangent-envelope theorem of Ball--Lavrauw therefore supplies
+a nonzero homogeneous polynomial (Phi) in the dual plane, of degree
+(2\tau), such that
+
+\[
+ \Phi(X\mathbin\times P)=f_P(X)^2\qquad(P\in A), \tag{15.726.6}
+\]
+
+where (f_P) is the product of the (A)-tangent forms at (P).  This is Theorem
+11 in arXiv v4 and Theorem 13 in the authors' current manuscript.  Their
+common size hypothesis is (|A|\ge2\tau+2), which (15.726.5) satisfies with
+room to spare.
+
+Fix (z\in T).  There are exactly
+
+\[
+ |A|-2s_z
+\]
+
+(A)-tangents through (z).  If this number exceeded (2\tau), their
+distinct dual points would give more zeros than the degree of
+(Phi|_{z^*}), forcing that restriction to vanish identically.  But
+minimality supplies an (A)-secant (zPQ).  At its dual point,
+
+\[
+ \Phi(z\mathbin\times P)=f_P(z)^2\ne0,
+\]
+
+because (Pz=PQ) is a secant rather than a tangent at (P).  This is a
+contradiction.  Hence
+
+\[
+ |A|-2s_z\le2\tau,
+ \qquad
+ s_z\ge {p-1-3t\over2}.                           \tag{15.726.7}
+\]
+
+Summing (15.726.7) gives
+
+\[
+ I\ge F(t):={t(p-1-3t)\over2}.                    \tag{15.726.8}
+\]
+
+The quadratic (F) is concave, so its minimum on (1\le t\le R) occurs
+at an endpoint.  Using (3R\le p-4),
+
+\[
+ F(1)={p-4\over2}\ge{3R\over2}>R,
+ \qquad
+ F(R)={R(p-1-3R)\over2}\ge{3R\over2}>R.          \tag{15.726.9}
+\]
+
+Thus (I>R), contradicting (15.726.4).  Therefore
+
+\[
+ \boxed{1\le R\le\left\lfloor{p-4\over3}\right\rfloor
+ \text{ is impossible for every prime }p\ge17.}  \tag{15.726.10}
+\]
+
+Equivalently, after the already-closed (R=0) branch, every surviving
+positive slack must satisfy
+
+\[
+ \boxed{R\ge\left\lfloor{p-1\over3}\right\rfloor.} \tag{15.726.11}
+\]
+
+This strictly supersedes Proposition 15.722's square-root cutoff in the
+current frontier.  It does not close the rest of the (p+1) shell, larger
+boundary shells, residual (ii), multi-level Type I, or the limit.
+
+Evidence: `src/e1_gmin_m4_prop15726.py`,
+`tests/test_prop15726.py`,
+`evidence/e1_gmin_m4_prop15726.json`, and
+`evidence/NOTE_2026-08-30_tangent_envelope_linear_low_slack.md`.
+The finite-geometry input is S. Ball and M. Lavrauw, *Planar arcs*,
+J. Combin. Theory Ser. A **160** (2018), 261--287, Theorem 11 in arXiv v4,
+doi:10.1016/j.jcta.2018.06.015.
