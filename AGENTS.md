@@ -27,17 +27,24 @@ branches or turning completed computations into new work.
 - Prefer an argument that closes an infinite family over a wider finite
   census unless the finite census is the explicitly recorded gate.
 
-## Current p13 gate after Proposition 15.741
+## Current residual-(ii) gate after Proposition 15.742
 
-The remaining `p=13,t=3` partition is `1^4 2^3`.  Its active object is the
-layered common-graph gate from 15.741.  First exclude the 84-class **integral
-difference-Radon system** with `C<=11`, the exact rows, the full nonzero
-quartic value code, and the ten cut/parity lifts.  Only if that survives,
-lift it to the 14,196 binary midpoint variables and impose `T_3=0`,
-`U_4=lambda M_4`, simplicity, and the exact fibre-pair equations.  The
-independent cellwise scalar consequences through degree four, binary boundary
-Radon, and linear/Farkas averages of the bare direction-count, exact-row, and
-translated-cut relaxation have explicit barriers and are not new attacks.
+Do not reopen `p=13,k=58`.  Proposition 15.742 combines the `M_2=0`
+congruence with six multiplicative interval cuts and proves sharp elevated
+and opposite row energies 31 and 82.  Their total `667` contradicts the
+common-graph lower bound `707+26C`, so neither the 84-class quartic solve nor
+the binary midpoint lift remains live at that row.
+
+Residual (ii) is still open at critical `p=5,7`, at `p=11,k>=50`, at
+`p=13,k>=60`, and in the generic `p>=17` later layers.  The preferred next
+serious front is a structural cross-direction theorem for generic
+`p>=17,t=3`, where 15.739 already forces higher even moments, the opposite
+entry alphabet `{-1,0,1,2,3}`, and at p17 every cut into `[-26,-12]`.
+Another independent cell catalog, one-direction floor, halving heuristic,
+or longer complete-domain timeout does not advance that gate.  Before
+launching a finite p11/p13-later computation, identify the invariant that
+could extend beyond that one row or explain why the finite row is a genuine
+base obstruction.
 
 ## Result discipline
 

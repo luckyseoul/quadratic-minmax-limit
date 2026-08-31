@@ -10983,6 +10983,103 @@ Evidence: `src/e1_gmin_m4_prop15741.py`,
 `evidence/e1_gmin_m4_prop15741.json`, and
 `evidence/NOTE_2026-08-31_p13_common_graph_moment_transform.md`.
 
+## Proposition 15.742 — six-dilate energy closes the generic p=13 row
+
+Retain the six nonzero distance aggregates (q_L) from (15.741.5).  The
+degree-two identity in (15.741.3) gives, in every direction,
+
+\[
+ \sum_{a=1}^6 a^2q_L(a)=0\pmod {13}.              \tag{15.742.1}
+\]
+
+Use the interval seven-set and its six nonzero multiplicative dilates.  In
+the natural distance order their cut vectors are
+
+\[
+\begin{pmatrix}
+2&4&6&8&10&12\\
+12&2&10&4&8&6\\
+8&10&2&6&12&4\\
+6&12&8&2&4&10\\
+10&6&4&12&2&8\\
+4&8&12&10&6&2
+\end{pmatrix}.                                    \tag{15.742.2}
+\]
+
+These are six members of Proposition 15.740's exact 74-vector translated-cut
+catalog.  Hence every elevated nonexact row belongs to the integral
+relaxation
+
+\[
+ \sum_aq_a=11,\quad \lVert q\rVert_1\le53,\quad
+ \lVert q\rVert_2^2\le86,\quad (15.742.1),\quad C_6q\le91\mathbf1,
+                                                               \tag{15.742.3}
+\]
+
+and every opposite row belongs to
+
+\[
+ \sum_aq_a=-20,\quad \lVert q\rVert_1\le56,\quad
+ \lVert q\rVert_2^2\le106,\quad (15.742.1),\quad C_6q\le-130\mathbf1.
+                                                               \tag{15.742.4}
+\]
+
+The (\ell^1) bounds count the nonparallel edges, namely (59-6) and
+(59-3).  The energy bounds are the six-dilate spectral bounds of 15.741.
+They are safe derived bounds: if (r=C_6q), then (r) is even; the elevated
+slacks (91-r_i) are positive odd integers summing 84, while the opposite
+slacks (-130-r_i) are nonnegative even integers summing 60.  Thus the
+rational bounds are (4952/57) and (6050/57), whose integral floors are 86
+and 106.
+
+Now enumerate the integer six-tuples in (15.742.3)--(15.742.4).  Five
+coordinates determine the sixth.  The energy bounds already give
+(|q_a|\le9) and (|q_a|\le10), respectively, so the bounded enumeration is
+manifestly exhaustive.  Before applying (C_6), there are 5,844 elevated
+rows and 1,704 opposite rows.  Afterwards there are respectively 30 and 24,
+and their sharp energy maxima are
+
+\[
+ \boxed{\max_E\lVert q\rVert_2^2=31,\qquad
+        \max_O\lVert q\rVert_2^2=82.}             \tag{15.742.5}
+\]
+
+The six elevated maximizers are the multiplicative-distance images of
+((0,3,1,4,1,2)); the six opposite maximizers are the corresponding images of
+((-6,-1,-4,-2,-4,-3)).  Equivalently, they are cyclic after ordering the
+coordinates as ((1,2,4,5,3,6)).  Direct integer enumeration gives the
+complete-row hashes recorded in the evidence.  Independently encoded 19-variable exact
+CP-SAT models with the extra requirements (\lVert q\rVert_2^2\ge32) and
+(\ge83) both return `INFEASIBLE` with one worker, even after omitting the
+prior energy caps 86 and 106 from those audit models.
+
+There are three elevated and seven opposite rows.  Equation (15.742.5)
+therefore bounds their total energy by
+
+\[
+ 3\cdot31+7\cdot82=667.
+\]
+
+This contradicts the common-graph identity (15.741.8), whose right side is
+(707+26C\ge707).  Consequently the four-exact partition (1^4 2^3) is empty.
+Together with Proposition 15.739's exceptional close, this proves
+
+\[
+ \boxed{\text{the residual-(ii) row }p=13,k=58\text{ is empty}.}
+\]
+
+Proposition 15.742 is an **exhaustive finite certificate** at the six-bin
+aggregate level.  It does not classify local coefficient matrices: the
+contradiction uses their sharp necessary row-energy maxima only through the
+common-graph Parseval identity.  The quartic value code, the four-root orbit
+split, and the binary midpoint lift are unnecessary.  Residual (ii), Type I,
+and the quadratic-minmax limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15742.py`,
+`tests/test_prop15742.py`,
+`evidence/e1_gmin_m4_prop15742.json`, and
+`evidence/NOTE_2026-08-31_p13_six_dilate_energy_close.md`.
+
 ## Proposition 15.723 — paired-cube obstruction to middle floor-plus-two lifts
 
 Put (p=2m-1\ge17). Let (A\ge0) be an integer-valued quadratic on

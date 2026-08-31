@@ -14,7 +14,7 @@ m_n = min_{a_ij = ±1}  max_{x_j = ±1}  | Σ_{1≤i<j≤n} a_ij · x_i · x_j |
 Machine-assisted attack on a 2022 MathOverflow problem: the limiting constant
 of the min-max ±1 quadratic form. The limit **L is OPEN**. This repo is a
 fully-audited proof ledger — every claim is a Python predicate that returns
-`True`/`False`, 656 source-backed proposition modules through 15.741, no
+`True`/`False`, 657 source-backed proposition modules through 15.742, no
 prose-only results, and soft-closing is banned by test
 (`tests/test_main_chain_docs.py`).
 
@@ -24,7 +24,7 @@ prose-only results, and soft-closing is banned by test
 
 **Main claim:** L = lim_n α_n is **OPEN** (2026-08-31).
 
-### Current audit (2026-08-31; through Proposition 15.741)
+### Current audit (2026-08-31; through Proposition 15.742)
 
 - **Required asymptotic target.** It is enough to prove the Paley-tail deficit
   \(\Phi(C_p)-m_{p^2+1}=o(p^3)\) on a ratio-dense tail. The current all-prime,
@@ -64,7 +64,7 @@ prose-only results, and soft-closing is banned by test
   nonzero moment because `-3=8` is nonsquare modulo 11. Therefore
   `k in {4p,4p+2,4p+4}` is impossible for every prime `p>=11` and every
   boundary size. Residual (ii) remains open at critical `p=5,7`, at
-  `p=11,k>=50`, and at `p>=13,k>=4p+6`.
+  `p=11,k>=50`, at `p=13,k>=60`, and in the generic `p>=17` later layers.
 - **Exceptional fourth-shell branch close.** Proposition 15.738 gives an
   exhaustive `J(13,7)` certificate for the forced phase-zero mass-14 cells:
   height four is exactly infeasible at `Q=0,6`, and the 1,092 Boolean
@@ -74,15 +74,14 @@ prose-only results, and soft-closing is banned by test
   offset from five to two and uses the sign-safe quartic
   `G=2hM_4-M_2^2`: seven hard roots force `G=0`, while an opposite selected
   pair gives `-3(i-j)^4!=0` modulo 13. Thus the exceptional
-  `p=13,t=3,u=3` row is closed, but the generic `p=13,k=58` row and the
-  complete fourth shell remain open.
-- **Generic p13 split, then stop.** Proposition 15.740 uses five exact hard
+  `p=13,t=3,u=3` row is closed; Propositions 15.740--15.742 close its generic
+  complement below.  Later residual layers remain open.
+- **Generic p13 split.** Proposition 15.740 uses five exact hard
   stars to force `M_2=M_4=0`, aggregates an opposite cell into six cyclic
   distance variables, and applies nine translation-summed cut inequalities.
   They eliminate all 32,313 exact aggregate candidates, independently
   confirmed by a 14-variable CP-SAT model.  Thus only the hard quotient
-  partition `1^4 2^3` remains at `p=13,k=58`.  This is the end of the local
-  finite-catalog route: the next useful theorem must exclude the common
+  partition `1^4 2^3` remains at `p=13,k=58`.  This isolates the common
   59-edge realization of its four exact stars, three elevated hard cells,
   and seven opposite cells.
 - **Common-graph compression.** Proposition 15.741 attacks that single graph,
@@ -92,9 +91,15 @@ prose-only results, and soft-closing is banned by test
   `707+26C`; translated cuts give `C<=11`.  Matched `lambda=7` local cells
   show only that the independent cellwise scalar consequences do not exclude
   either cell type; they do not realize one global quartic.  A strict
-  fractional witness separately defeats the bare linear transform.  The
-  remaining p13 goal is the layered integer-difference, then binary-midpoint,
-  implication in 15.741.
+  fractional witness separately defeats the bare linear transform.
+- **Generic p13 close.** Proposition 15.742 combines `M_2=0` with the six
+  multiplicative interval cuts.  Exhaustive integer enumeration gives sharp
+  six-bin energies at most 31 for each of the three elevated rows and 82 for
+  each of the seven opposite rows.  Their total is therefore at most 667,
+  contradicting 15.741's exact common-graph energy `707+26C>=707`.
+  Independent 19-variable CP-SAT models verify both sharp row maxima.  Thus
+  the generic four-exact branch is empty and, with 15.739, `p=13,k=58` is
+  closed without the quartic orbit split or binary midpoint lift.
 - **First resonance.** The `t=3` (`k=4p+6`) ledger is an open reduction, not
   another closed shell. For generic `p>=17`, branch B can put every opposite
   direction at `Q=3`, scaled mean `p+7`. Exact hard stars force every even
@@ -104,10 +109,11 @@ prose-only results, and soft-closing is banned by test
   reducing the cell to a `{0,...,7}`-valued quadratic of total mass 8,580,
   but complete-domain models remain unresolved. At generic `p=13`, an explicit elevated
   local cell has normalized moments `S_2=0` and `S_4=5` (so global
-  `M_4=5h`); it is a counterexample to the local
-  method, not a residual graph. Any next proof must couple directions or use
-  a new global invariant; another one-direction floor or halving step cannot
-  close this layer.
+  `M_4=5h`); it is a counterexample to that local
+  method, not a residual graph. Proposition 15.742 subsequently closes the
+  p13 row by a global energy comparison.  For generic `p>=17`, any next proof
+  must couple directions or use a new global invariant; another
+  one-direction floor or halving step cannot close this layer.
 - **Floor-plus-two correction.** Proposition 15.723 replaces the blanket
   `excess != 2` shortcut in the infinity-plus-`p` middle profile. A
   paired-cube Fourier gap excludes every such middle cell for all odd
@@ -198,7 +204,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | required bi-tight levels 2 and 3 | `bitight_levels_2_3` | **TRUE** — 15.720 degree congruence; bi-tight level 4 is a corollary, while generic one-sided covers exist and only joint residual compatibility remains open |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Propositions 15.734--15.737 close `k in {4p,4p+2,4p+4}` for every prime `p>=11` and every boundary size. Propositions 15.738--15.739 close the exceptional `p=13,t=3,u=3` row, 15.740 leaves only the four-exact generic p13 partition, and 15.741 reduces its common graph to an integral difference-Radon/midpoint gate. Critical `p=5,7`, `p=11,k>=50`, that p13 gate, and the generic later branches remain; the positive `p=7,z=7` subbranch also persists. Hence the global predicate stays false. |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Propositions 15.734--15.737 close `k in {4p,4p+2,4p+4}` for every prime `p>=11` and every boundary size. Propositions 15.738--15.742 also close both the exceptional and generic branches at `p=13,k=58`, the latter by the sharp six-dilate/common-energy contradiction. Critical `p=5,7`, `p=11,k>=50`, `p=13,k>=60`, and the generic `p>=17` later branches remain; the positive `p=7,z=7` subbranch also persists. Hence the global predicate stays false. |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — on `|κ|=1` the missing sign is `G>T`; on `|κ|=3` the separate signed `(μ,ν)` inequality still has an uncontrolled δ remainder |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -683,7 +689,7 @@ graph TD
     K4END --> BAND3["same chart and surplus arithmetic<br/>k=4p+2,4p+4 <b>CLOSED for p>=13</b> (15.735)"]
     BAND3 --> P11CAT["J(11,6) rank 55/407 + 220 supports<br/><b>EXHAUSTIVE FINITE CERTIFICATE</b> (15.736)"]
     P11CAT --> P11MOM["binary quadratic moment<br/>k=44,46,48 <b>CLOSED</b> (15.737)"]
-    P11MOM --> STRICTP["p=5,7 critical; p=11 k>=50;<br/>p>=13 k>=4p+6 <b>OPEN</b>"]
+    P11MOM --> STRICTP["p=5,7 critical; p=11 k>=50; p=13 k>=60;<br/>p>=17 k>=4p+6 <b>OPEN</b>"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -931,9 +937,10 @@ Proposition 15.721 supersedes the active all-finite shell statuses in
 | 15.736 | on `J(11,6)`, verify quadratic-space rank 55 and a rank-407 third-difference annihilator, then exclude every support-84 Boolean vector outside 55 omitted-pair and 165 all-equal-triple supports | **exhaustive finite certificate:** the 220 sharp Boolean quadratics are complete; this kills the p11 hard-`b=2` catalog branch but leaves the simultaneous all-equal-triple branch for 15.737 |
 | 15.737 | convert hard `4-z_j` baselines to signed stars whose binary quadratic moment vanishes; at least three projective zeros force the moment form to be zero, while an opposite all-equal triangle has nonzero moment since `-3` is nonsquare in `F_11` | **proved theorem:** residual (ii) is empty at `p=11,k=44,46,48`; together with 15.735, the first three shells are closed for every prime `p>=11` |
 | 15.738 | on `J(13,7)`, exclude height-four mass-14 residual cells at `Q=0,6`, certify rank 78 and a rank-1638 third-difference annihilator, and exhaust all 1,092 support-462 Boolean quadratics | **exhaustive finite certificate:** offsets leave only `x_i*x_j`, with exact moments `(i-j)^2,(i-j)^4`; this is the local input to 15.739, not a residual theorem by itself |
-| 15.739 | correct the exceptional complement-triple offset to two, force a selected-pair opposite cell, and use seven roots of `G=2hM_4-M_2^2` against its nonzero value `-3(i-j)^4`; also force higher even moments, a five-value coefficient alphabet, and at p17 the cut range `[-26,-12]` | **proved branch theorem and open reduction:** the exceptional `p=13,t=3,u=3` row is empty; the p17 cell is a `{0,...,7}`-valued quadratic of total mass 8,580, but generic `p=13,k=58`, generic `p>=17,t=3`, residual (ii), and the limit remain open |
-| 15.740 | for the generic p13 row, force `M_2=M_4=0` from five exact stars, aggregate opposite coefficients over six cyclic distance classes, and apply nine translation-summed cut inequalities | **proved branch split with exhaustive finite certificate:** the five- and six-exact partitions are impossible; only `1^4 2^3` remains, requiring a common-59-edge structural theorem rather than another local census |
-| 15.741 | couple the four exact stars through cubic/quartic endpoint tensors and the 84-class difference-Radon transform of one common graph | **proved open reduction and method barrier:** `M_2=T_3=0`, `U_4=lambda M_4`, `M_4!=0`, and nonstar energy is `707+26C` with `C<=11`; local witnesses defeat only the cellwise scalar consequences and a fractional witness defeats only the bare linear transform. The next gate is the integral difference system, followed if necessary by its binary midpoint lift; the p13 row remains open |
+| 15.739 | correct the exceptional complement-triple offset to two, force a selected-pair opposite cell, and use seven roots of `G=2hM_4-M_2^2` against its nonzero value `-3(i-j)^4`; also force higher even moments, a five-value coefficient alphabet, and at p17 the cut range `[-26,-12]` | **proved branch theorem and open reduction:** the exceptional `p=13,t=3,u=3` row is empty; 15.742 later closes its generic p13 complement, while the p17 cell is a `{0,...,7}`-valued quadratic of total mass 8,580 and the generic `p>=17,t=3` range remains open |
+| 15.740 | for the generic p13 row, force `M_2=M_4=0` from five exact stars, aggregate opposite coefficients over six cyclic distance classes, and apply nine translation-summed cut inequalities | **proved branch split with exhaustive finite certificate:** the five- and six-exact partitions are impossible; only `1^4 2^3` remains, subsequently closed by the common-graph energy theorem in 15.742 |
+| 15.741 | couple the four exact stars through cubic/quartic endpoint tensors and the 84-class difference-Radon transform of one common graph | **proved open reduction and method barrier:** `M_2=T_3=0`, `U_4=lambda M_4`, `M_4!=0`, and nonstar energy is `707+26C` with `C<=11`; its `M_2` and exact energy identities are the inputs used by 15.742 |
+| 15.742 | combine `M_2=0` with the six multiplicative interval cuts, exhaust the resulting integral six-bin rows, and compare their sharp energies with the common-graph Parseval identity | **exhaustive finite certificate:** elevated energy is at most 31 and opposite energy at most 82, so `3*31+7*82=667<707<=707+26C`; the generic four-exact p13 branch and, with 15.739, all of `p=13,k=58` are closed |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -1162,8 +1169,9 @@ hard branch, and 15.739 closes that row with a sign-safe quartic moment.
 Proposition 15.740 then uses cyclic translation averages to eliminate the
 five- and six-exact generic p13 partitions, leaving only `1^4 2^3`.
 Proposition 15.741 compresses its common-graph structure to an exact integral
-difference-Radon inverse plus first and second midpoint moments; this is the
-next p13 gate, not another local catalog. For `p>=17`,
+difference-Radon inverse and the energy `707+26C`. Proposition 15.742 combines
+its `M_2=0` congruence with six interval-dilate cuts, bounds the ten nonexact
+rows by total energy 667, and closes `p=13,k=58` before the midpoint lift. For `p>=17`,
 higher even moments and conditioned cuts give the current exact reduction. The eleven-of-twelve
 complete-22-arc audit and the repair first-jet problem are therefore no
 longer live endpoint routes, while the `t=3` cross-direction coupling is.
@@ -1218,11 +1226,9 @@ unidentified glue-class phase, unknown broad mass, or classified low shell.
 1. **Non-Walsh multi-level Max−:** close residual (ii) for even `k≥4p`.
    Propositions 15.734--15.737 close the first three layers
    `k in {4p,4p+2,4p+4}`, for every boundary size, at every prime `p>=11`.
-   Propositions 15.738--15.739 close the exceptional `p=13,t=3,u=3` row,
-   15.740 leaves only the generic p13 partition `1^4 2^3`, and 15.741 gives
-   its exact integral difference-Radon/midpoint gate. The exact
-   remainder is critical `p=5,7`, `p=11,k>=50`, that p13 common-graph case,
-   and the generic later branches. The separate `p=7`
+   Propositions 15.738--15.742 additionally close both branches at
+   `p=13,k=58`. The exact remainder is critical `p=5,7`, `p=11,k>=50`,
+   `p=13,k>=60`, and the generic `p>=17` later branches. The separate `p=7`
    remainder includes the 56 positive
    `z=7` line boundaries. At generic `t=3`, the isolated-chart ledger has a
    resonant branch with every opposite direction at mean `p+7`; exact hard
@@ -1329,6 +1335,7 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15739.py` | Corrected exceptional `p=13,t=3,u=3` quartic close and generic higher-even-moment/cut reduction |
 | `src/e1_gmin_m4_prop15740.py` | Exact translation-average exclusion of the five- and six-exact generic p13 partitions |
 | `src/e1_gmin_m4_prop15741.py` | Common-graph cubic/quartic moments, difference-Radon inverse, collision bound, and sharp local/fractional barriers for the last p13 partition |
+| `src/e1_gmin_m4_prop15742.py` | Exact six-dilate/M2 row-energy certificate closing the generic four-exact p13 partition and `p=13,k=58` |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |
@@ -1421,7 +1428,8 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-31_p13_mass14_boolean_catalog.md` | Exact rank, height-four infeasibility, support-462 catalog, offsets, and selected-pair moments (15.738) |
 | `evidence/NOTE_2026-08-31_p13_exceptional_quartic_close.md` | Corrected exceptional ledger, sign-safe quartic close, and surviving generic moment/cut frontier (15.739) |
 | `evidence/NOTE_2026-08-31_p13_generic_translation_average.md` | Six-variable translation-average certificate leaving only the four-exact generic p13 partition (15.740) |
-| `evidence/NOTE_2026-08-31_p13_common_graph_moment_transform.md` | Common-graph moment tensors, 84-class difference-Radon gate, and exact barriers defining the next p13 implication (15.741) |
+| `evidence/NOTE_2026-08-31_p13_common_graph_moment_transform.md` | Common-graph moment tensors, 84-class difference-Radon gate, and exact inputs later completed by 15.742 |
+| `evidence/NOTE_2026-08-31_p13_six_dilate_energy_close.md` | Sharp integral six-bin energy maxima and the `667<707` common-graph contradiction closing the p13 row (15.742) |
 | `evidence/NOTE_2026-08-31_p31_public_11_of_12_arc_audit.md` | Exhaustive finite certificate for the eleven publicly sourced complete 22-arc classes at `p=31`; explicitly not a twelve-class close |
 | `scripts/p31_complete_22arc_public_audit.py` | Deterministic public-class audit producing `evidence/p31_complete_22arc_public_11_audit.json` |
 | `evidence/p7_infinity7_positive_z7_global_semigroup_summary.json` | Compact hash-pinned affine/global-join and Hilbert-basis certificate for 15.718 |

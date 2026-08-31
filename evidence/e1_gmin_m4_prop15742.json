@@ -1,0 +1,817 @@
+{
+  "binary_midpoint_lift_used": false,
+  "common_graph_exists": false,
+  "dependencies": {
+    "M2_dependency": {
+      "degree_2_four_roots_force_zero": true,
+      "exact_star_certificate": true
+    },
+    "collision_parameter_nonnegative": true,
+    "cut_bound_derivation": "sum_t cut_W(X+t)=c_X.q; multiply the cellwise bounds 7 and -10 by p=13",
+    "cut_bounds": {
+      "elevated": 91,
+      "opposite": -130
+    },
+    "cut_column_sums": [
+      42,
+      42,
+      42,
+      42,
+      42,
+      42
+    ],
+    "cut_image_is_even": true,
+    "four_exact_stars_force_global_M2_zero": true,
+    "imported_integer_energy_bounds": {
+      "elevated": 86,
+      "opposite": 106
+    },
+    "imported_nonstar_parseval": "707+26*C",
+    "l1_bounds": {
+      "elevated": 53,
+      "opposite": 56
+    },
+    "l1_derivation": "sum_a |q_L(a)| <= number of nonparallel edges = 59-P_L",
+    "p": 13,
+    "proved": true,
+    "row_parameters_equal_imported_live_values": true,
+    "row_sums": {
+      "elevated": 11,
+      "opposite": -20
+    },
+    "signed_total_T_over_h": 17,
+    "six_cut_set_matches_15_741": true,
+    "six_cuts_in_full_74_catalog": true,
+    "six_interval_dilate_cuts": [
+      [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      [
+        12,
+        2,
+        10,
+        4,
+        8,
+        6
+      ],
+      [
+        8,
+        10,
+        2,
+        6,
+        12,
+        4
+      ],
+      [
+        6,
+        12,
+        8,
+        2,
+        4,
+        10
+      ],
+      [
+        10,
+        6,
+        4,
+        12,
+        2,
+        8
+      ],
+      [
+        4,
+        8,
+        12,
+        10,
+        6,
+        2
+      ]
+    ],
+    "six_interval_dilate_subsets": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      [
+        0,
+        2,
+        3,
+        5,
+        6,
+        9,
+        12
+      ],
+      [
+        0,
+        3,
+        4,
+        7,
+        8,
+        11,
+        12
+      ],
+      [
+        0,
+        2,
+        4,
+        5,
+        7,
+        10,
+        12
+      ],
+      [
+        0,
+        4,
+        5,
+        6,
+        10,
+        11,
+        12
+      ]
+    ],
+    "slacks": {
+      "elevated": {
+        "definition": "y=91*1-Cq",
+        "parity_and_sign": "odd positive",
+        "sum": 84
+      },
+      "opposite": {
+        "definition": "y=-130*1-Cq",
+        "parity_and_sign": "even nonnegative",
+        "sum": 60
+      }
+    }
+  },
+  "dependency_chain": {
+    "15.739": "closes the exceptional p=13,t=3,u=3 branch",
+    "15.740": "leaves only the generic four-exact partition 1^4 2^3",
+    "15.741": "supplies M2=0, the six-cut row energy bounds, and exact nonstar Parseval energy 707+26*C"
+  },
+  "directional_coefficient_matrix_census_used": false,
+  "elevated_row_catalog": {
+    "catalog_scope": "exact catalog of the stated necessary six-bin relaxation; a superset of realizable directional rows",
+    "coordinate_range_from_sum_and_energy": [
+      -5,
+      9
+    ],
+    "independent_cpsat_exclusion": {
+      "M2_quotient_absolute_bound_from_l1": 147,
+      "M2_quotient_domain": [
+        -200,
+        200
+      ],
+      "constraints": 22,
+      "forbidden_energy_floor": 32,
+      "infeasible": true,
+      "model_proto_sha256": "557e700271596217961bf7f5a6db8107bc32dbdea718e2f62e0cbf4ad8765db3",
+      "model_validation": "",
+      "prior_energy_upper_constraint_used": false,
+      "proved": true,
+      "seed": 0,
+      "solver": "OR-Tools CP-SAT",
+      "solver_version": "9.15.6755",
+      "status": "INFEASIBLE",
+      "variables": 19,
+      "workers": 1
+    },
+    "kind": "elevated",
+    "maximizer_count": 6,
+    "maximizers": [
+      [
+        0,
+        3,
+        1,
+        4,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        3,
+        2,
+        0,
+        4
+      ],
+      [
+        1,
+        2,
+        4,
+        0,
+        3,
+        1
+      ],
+      [
+        2,
+        0,
+        1,
+        3,
+        4,
+        1
+      ],
+      [
+        3,
+        4,
+        2,
+        1,
+        1,
+        0
+      ],
+      [
+        4,
+        1,
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "pre_cut_row_count": 5844,
+    "prior_energy_cap_redundant_by_independent_cpsat": true,
+    "proved": true,
+    "sharp_energy_maximum": 31,
+    "surviving_row_count": 30,
+    "surviving_rows": [
+      [
+        0,
+        2,
+        4,
+        1,
+        2,
+        2
+      ],
+      [
+        0,
+        3,
+        1,
+        4,
+        1,
+        2
+      ],
+      [
+        0,
+        3,
+        2,
+        2,
+        1,
+        3
+      ],
+      [
+        1,
+        1,
+        2,
+        3,
+        3,
+        1
+      ],
+      [
+        1,
+        1,
+        3,
+        1,
+        3,
+        2
+      ],
+      [
+        1,
+        1,
+        3,
+        2,
+        0,
+        4
+      ],
+      [
+        1,
+        2,
+        0,
+        4,
+        2,
+        2
+      ],
+      [
+        1,
+        2,
+        1,
+        2,
+        2,
+        3
+      ],
+      [
+        1,
+        2,
+        3,
+        3,
+        0,
+        2
+      ],
+      [
+        1,
+        2,
+        4,
+        0,
+        3,
+        1
+      ],
+      [
+        1,
+        3,
+        1,
+        3,
+        2,
+        1
+      ],
+      [
+        1,
+        3,
+        2,
+        1,
+        2,
+        2
+      ],
+      [
+        2,
+        0,
+        1,
+        3,
+        4,
+        1
+      ],
+      [
+        2,
+        0,
+        2,
+        2,
+        1,
+        4
+      ],
+      [
+        2,
+        1,
+        0,
+        2,
+        3,
+        3
+      ],
+      [
+        2,
+        1,
+        2,
+        2,
+        4,
+        0
+      ],
+      [
+        2,
+        1,
+        2,
+        3,
+        1,
+        2
+      ],
+      [
+        2,
+        1,
+        3,
+        1,
+        1,
+        3
+      ],
+      [
+        2,
+        2,
+        1,
+        1,
+        3,
+        2
+      ],
+      [
+        2,
+        2,
+        3,
+        2,
+        1,
+        1
+      ],
+      [
+        2,
+        3,
+        2,
+        0,
+        3,
+        1
+      ],
+      [
+        2,
+        4,
+        2,
+        2,
+        0,
+        1
+      ],
+      [
+        3,
+        0,
+        1,
+        3,
+        2,
+        2
+      ],
+      [
+        3,
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      [
+        3,
+        2,
+        1,
+        1,
+        1,
+        3
+      ],
+      [
+        3,
+        2,
+        3,
+        1,
+        2,
+        0
+      ],
+      [
+        3,
+        3,
+        1,
+        2,
+        1,
+        1
+      ],
+      [
+        3,
+        4,
+        2,
+        1,
+        1,
+        0
+      ],
+      [
+        4,
+        1,
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        4,
+        2,
+        1,
+        0,
+        2,
+        2
+      ]
+    ],
+    "surviving_rows_sha256": "7bff1ebb77ac362b5089b46588f603be812ea4a96fdeaa2f2b52881803b486b5"
+  },
+  "generic_p_ge_17_t3_branch_closed": false,
+  "global_energy": {
+    "collision_parameter_lower_bound": 0,
+    "contradiction": true,
+    "exact_parseval": "707+26*C",
+    "gap": 40,
+    "nonstar_upper": 667,
+    "parseval_lower": 707,
+    "seven_opposite_upper": 574,
+    "three_elevated_upper": 93
+  },
+  "hard_sign_normalization_used": false,
+  "k_eq_4p_plus_6_shell_closed": false,
+  "layer_index_t": 3,
+  "model_scope": "six integer cyclic-distance bins per nonexact direction",
+  "multi_level_type_I_closed": false,
+  "opposite_row_catalog": {
+    "catalog_scope": "exact catalog of the stated necessary six-bin relaxation; a superset of realizable directional rows",
+    "coordinate_range_from_sum_and_energy": [
+      -9,
+      2
+    ],
+    "independent_cpsat_exclusion": {
+      "M2_quotient_absolute_bound_from_l1": 156,
+      "M2_quotient_domain": [
+        -200,
+        200
+      ],
+      "constraints": 22,
+      "forbidden_energy_floor": 83,
+      "infeasible": true,
+      "model_proto_sha256": "72df1b51c8f369bce8d4133491a74c1a290cb6b878031e014ec7c2b3fc3b0603",
+      "model_validation": "",
+      "prior_energy_upper_constraint_used": false,
+      "proved": true,
+      "seed": 0,
+      "solver": "OR-Tools CP-SAT",
+      "solver_version": "9.15.6755",
+      "status": "INFEASIBLE",
+      "variables": 19,
+      "workers": 1
+    },
+    "kind": "opposite",
+    "maximizer_count": 6,
+    "maximizers": [
+      [
+        -6,
+        -1,
+        -4,
+        -2,
+        -4,
+        -3
+      ],
+      [
+        -4,
+        -4,
+        -1,
+        -3,
+        -6,
+        -2
+      ],
+      [
+        -4,
+        -3,
+        -2,
+        -6,
+        -1,
+        -4
+      ],
+      [
+        -3,
+        -6,
+        -4,
+        -1,
+        -2,
+        -4
+      ],
+      [
+        -2,
+        -4,
+        -6,
+        -4,
+        -3,
+        -1
+      ],
+      [
+        -1,
+        -2,
+        -3,
+        -4,
+        -4,
+        -6
+      ]
+    ],
+    "pre_cut_row_count": 1704,
+    "prior_energy_cap_redundant_by_independent_cpsat": true,
+    "proved": true,
+    "sharp_energy_maximum": 82,
+    "surviving_row_count": 24,
+    "surviving_rows": [
+      [
+        -6,
+        -1,
+        -4,
+        -2,
+        -4,
+        -3
+      ],
+      [
+        -5,
+        -3,
+        -3,
+        -3,
+        -2,
+        -4
+      ],
+      [
+        -5,
+        -3,
+        -3,
+        -2,
+        -5,
+        -2
+      ],
+      [
+        -5,
+        -3,
+        -2,
+        -5,
+        -2,
+        -3
+      ],
+      [
+        -5,
+        -2,
+        -5,
+        -2,
+        -3,
+        -3
+      ],
+      [
+        -4,
+        -5,
+        -2,
+        -3,
+        -3,
+        -3
+      ],
+      [
+        -4,
+        -4,
+        -1,
+        -3,
+        -6,
+        -2
+      ],
+      [
+        -4,
+        -3,
+        -3,
+        -3,
+        -4,
+        -3
+      ],
+      [
+        -4,
+        -3,
+        -2,
+        -6,
+        -1,
+        -4
+      ],
+      [
+        -3,
+        -6,
+        -4,
+        -1,
+        -2,
+        -4
+      ],
+      [
+        -3,
+        -5,
+        -3,
+        -2,
+        -2,
+        -5
+      ],
+      [
+        -3,
+        -5,
+        -2,
+        -3,
+        -5,
+        -2
+      ],
+      [
+        -3,
+        -4,
+        -4,
+        -3,
+        -3,
+        -3
+      ],
+      [
+        -3,
+        -4,
+        -3,
+        -5,
+        -3,
+        -2
+      ],
+      [
+        -3,
+        -3,
+        -4,
+        -2,
+        -3,
+        -5
+      ],
+      [
+        -3,
+        -3,
+        -3,
+        -4,
+        -3,
+        -4
+      ],
+      [
+        -3,
+        -2,
+        -5,
+        -3,
+        -4,
+        -3
+      ],
+      [
+        -3,
+        -2,
+        -2,
+        -5,
+        -3,
+        -5
+      ],
+      [
+        -2,
+        -5,
+        -5,
+        -3,
+        -2,
+        -3
+      ],
+      [
+        -2,
+        -4,
+        -6,
+        -4,
+        -3,
+        -1
+      ],
+      [
+        -2,
+        -3,
+        -5,
+        -5,
+        -3,
+        -2
+      ],
+      [
+        -2,
+        -3,
+        -3,
+        -4,
+        -5,
+        -3
+      ],
+      [
+        -2,
+        -2,
+        -3,
+        -3,
+        -5,
+        -5
+      ],
+      [
+        -1,
+        -2,
+        -3,
+        -4,
+        -4,
+        -6
+      ]
+    ],
+    "surviving_rows_sha256": "5226c7ee0c44d3cf7e460db2a309a08368667686dfcb2cd45ec24ce932081c1a"
+  },
+  "original_k": 58,
+  "p": 13,
+  "p13_generic_four_exact_partition_closed": true,
+  "p13_generic_t3_branch_closed": true,
+  "p13_k_eq_58_closed": true,
+  "p13_t3_exceptional_u3_closed_by_15_739": true,
+  "prop": "15.742",
+  "proved": true,
+  "quadratic_minmax_limit_closed": false,
+  "quartic_code_used": false,
+  "remaining_hard_quotient_partition": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2
+  ],
+  "remaining_scope": "critical p=5,7; p=11 at k>=50; p=13 at k>=60; generic p>=17 fourth and later residual layers; multi-level Type I; and the limit",
+  "residual_ii_closed": false,
+  "result_status": "exhaustive finite certificate",
+  "root_quartet_case_split_used": false,
+  "title": "six-dilate energy close of the generic p=13 fourth shell",
+  "top_level_gates_changed": false
+}

@@ -1,7 +1,22 @@
-# Status (2026-08-31; through Proposition 15.741)
+# Status (2026-08-31; through Proposition 15.742)
 
-**15.741 PROVES a common-graph moment and difference-Radon reduction for the
-last generic `p=13,t=3` partition; the partition remains OPEN.**  Four exact
+**15.742 is an exhaustive finite certificate that CLOSES the last generic
+`p=13,t=3` partition and hence, with 15.739, all of `p=13,k=58`.**  For each
+nonexact six-bin difference row, combine the already-proved `M_2=0`
+congruence with the six multiplicative interval-cut inequalities.  Exact
+integer enumeration leaves 30 elevated rows with sharp energy at most 31
+and 24 opposite rows with sharp energy at most 82; independent 19-variable
+CP-SAT models exclude energies at least 32 and 83.  Thus the three elevated
+and seven opposite rows have total energy at most
+`3*31+7*82=667`, contradicting 15.741's common-graph identity
+`707+26C>=707`.  The quartic value code, root-quartet split, and binary
+midpoint lift are not needed.  Residual (ii), multi-level Type I, and the
+limit remain OPEN; the residual ranges still requiring serious work are
+critical `p=5,7`, `p=11,k>=50`, `p=13,k>=60`, and the generic `p>=17`
+later layers beginning at `k=4p+6`.
+
+**15.741 PROVES the common-graph moment and difference-Radon reduction used
+by 15.742.**  Four exact
 positive-star projections of the same 59-edge graph force the homogeneous
 forms `M_2=T_3=0`.  The two orientation-independent quartics have the same
 four roots, so `U_4=lambda M_4`; moreover `M_4` is nonzero, since otherwise
@@ -17,14 +32,11 @@ and the collision identity
 
 `sum_(three elevated + seven opposite) ||q_L||_2^2 = 707+26C`,
 
-where `C=sum_delta binom(m_delta,2)`.  Six translated cuts give `C<=11` but
-not a contradiction.  The inverse supplies 84 pointwise nonnegative-integer
-congruences.  The next serious p13 lemma is first to exclude this 84-class
-integer system with its full nonzero quartic value code and all ten cut/parity
-lifts.  If it survives, `T_3` and `U_4` supply the first and second midpoint
-constraints on a 14,196-variable binary lift.  Boundary Radon/handshake data,
-another local catalog, or another bare linear averaging pass cannot do that.  Generic
-`p=13,k=58`, residual (ii), multi-level Type I, and the limit remain OPEN.
+where `C=sum_delta binom(m_delta,2)`.  Its first spectral use of the six
+translated cuts gives `C<=11` but not by itself a contradiction.  Proposition
+15.742 adds the integral `M_2=0` row congruence to those same six cuts, obtains
+the sharp row-energy maxima, and closes the system before its inverse,
+quartic, or midpoint layers are needed.
 
 **15.740 PROVES that the generic `p=13,t=3` branch has only the hard
 quotient partition `(1,1,1,1,2,2,2)`.**  The other two partitions have five
@@ -35,13 +47,13 @@ inequality over translations gives 74 possible coefficient vectors; nine
 deterministically selected inequalities eliminate all 32,313 aggregate
 candidates, independently confirmed by a 14-variable exact CP-SAT model.
 This is a necessary-relaxation infeasibility certificate, so exclusion is
-sound.  It is deliberately the end of the finite census: the remaining
-four-exact partition requires a structural common-59-edge-graph theorem,
-not another local catalog.  Generic `p=13,k=58`, residual (ii), multi-level
-Type I, and the limit remain OPEN.
+sound.  It isolates the remaining four-exact partition as a structural
+common-59-edge-graph problem; 15.741 supplies its exact energy identity and
+15.742 closes it.  Residual (ii), multi-level Type I, and the limit remain
+OPEN.
 
 **15.739 PROVES that the exceptional `p=13,t=3,u=3` branch at
-`k=58` is empty; it does not close the generic fourth-shell branch.**  The
+`k=58` is empty; 15.742 later closes its generic complement.**  The
 correct signed target of the hard complement-triple cell has coefficient
 offset two, not the formerly recorded five.  Thus its common hard parallel
 count is `P=2` or `8`, and either ledger forces an opposite phase-zero cell
@@ -57,12 +69,13 @@ The remaining generic `t=3` branch has a new proved moment reduction.  For
 opposite signed coefficient into `{-1,0,1,2,3}`.  Strengthened full `p=17`
 conditional averages additionally force every cut into `[-26,-12]`, so the
 associated quadratic on `J(17,9)` has values in `{0,...,7}`, mean `6/17`,
-and total mass 8,580.  Full models are still unresolved.  At generic `p=13`, an explicit elevated
+and total mass 8,580.  Full p17 models are still unresolved.  At generic `p=13`, an explicit elevated
 `b=2,a=28` local cell has normalized `S_2=0` but `S_4=5` (hence global
 `M_4=5h` for its hard sign), so another one-direction
 floor/moment pass cannot close it.  This is a method counterexample, not a
-residual graph.  Critical `p=5,7`, `p=11,k>=50`, and the generic
-`p>=13,k>=4p+6` range remain OPEN.
+residual graph; 15.742 instead closes that row by common energy.  Critical
+`p=5,7`, `p=11,k>=50`, `p=13,k>=60`, and generic
+`p>=17,k>=4p+6` remain OPEN.
 
 **15.738 is an exhaustive finite residual-cell certificate on `J(13,7)`.**
 Proposition 15.688 reduces a relevant `b=0,a=14` lift to maximum one or
@@ -1283,7 +1296,7 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 | Bi-tight majorization algebra (15.167) | CANDIDATE | `prop15167.py` |
 | Type I freeness-fail ND (two-level Max−) | **CLOSED** (that slice) | 15.272 \(k=1\cup k=3\) \(\Rightarrow G_+\succ0\Rightarrow\) 15.249 dual-eq empty |
 | Residual (ii), affine + even \(k\le4p-2\) | **CLOSED** (that range) | 15.179 + 15.236 + 15.237 |
-| Residual (ii), even \(k\ge4p\) | **OPEN globally; first three layers CLOSED for \(p\ge11\)** | 15.734--15.735 and 15.737 close \(k\in\{4p,4p+2,4p+4\}\) for every boundary and every \(p\ge11\); 15.738--15.739 close the exceptional \(p=13,t=3,u=3\) row, 15.740 leaves only the four-exact generic p13 partition, and 15.741 gives its integral displacement--midpoint gate. Remaining: critical \(p=5,7\); \(p=11\) at \(k\ge50\); that p13 gate and the generic later branches. |
+| Residual (ii), even \(k\ge4p\) | **OPEN globally; first three layers CLOSED for \(p\ge11\), and \(p=13,k=58\) CLOSED** | 15.734--15.735 and 15.737 close \(k\in\{4p,4p+2,4p+4\}\) for every boundary and every \(p\ge11\); 15.738--15.739 close the exceptional \(p=13,t=3,u=3\) row, and 15.740--15.742 close its generic four-exact complement by the common-graph energy contradiction. Remaining: critical \(p=5,7\); \(p=11\) at \(k\ge50\); \(p=13\) at \(k\ge60\); and the generic \(p\ge17\) later branches. |
 | Type I, multi-level Max− | **OPEN** | 15.543 \(\mu_{1d}\); 15.544 p=5 mix; 15.546 p=7 mix \(109/2863<|T|\); 15.551 Galois line-union; 15.559 Aut_e DEAD as \(A_{\mathrm{full}}\) name; `type_I_multilevel_bad_case_ND_closed=False` |
 | \(\lambda_{\min}(\Phi)\ge6\) | **OPEN** | 15.279; 15.550–15.582: \(S=\mathrm{Kl}\), \(\mu_{1d}\), \(\mu_{k=3}\) named; \(p=5\) \(Q_{++}=48/13\); \(A_{\mathrm{full}}\) / \(D\) / ensemble \(Q_\tau\) unnamed; `phi_F_ge_6=False` |
 | E(1) / \(L=\tfrac12\) | **OPEN** | needs the four leftovers above |
@@ -1292,7 +1305,7 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 ### Fatal gaps (honest)
 
 1. Residual **(i)** two-level dual-eq: **CLOSED** by 15.272 (not Aut-Schur, not Gsum LB). Multi-level Type I is **OPEN**. `gsum_disj_lb` remains False and is unused.
-2. Residual **(ii)** for affine + even \(k\le4p-2\): **CLOSED** (15.179 + 15.236 + 15.237). For \(k\ge4p\), the first three layers are **CLOSED** for every \(p\ge11\) by 15.734--15.735 and 15.737; 15.738--15.739 close the exceptional `p=13,t=3,u=3` row, 15.740 leaves only its four-exact generic partition, and 15.741 gives its integral displacement--midpoint gate. Critical \(p=5,7\), \(p=11\) at \(k\ge50\), that p13 gate, and the generic later branches remain **OPEN**. Do not call residual (ii) globally closed.
+2. Residual **(ii)** for affine + even \(k\le4p-2\): **CLOSED** (15.179 + 15.236 + 15.237). For \(k\ge4p\), the first three layers are **CLOSED** for every \(p\ge11\) by 15.734--15.735 and 15.737; 15.738--15.742 additionally close all of `p=13,k=58`. Critical \(p=5,7\), \(p=11\) at \(k\ge50\), \(p=13\) at \(k\ge60\), and the generic \(p\ge17\) later branches remain **OPEN**. Do not call residual (ii) globally closed.
 
 ### Remainder progress (15.172–194)
 
