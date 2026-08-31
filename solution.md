@@ -9274,6 +9274,206 @@ Evidence: `src/e1_gmin_m4_prop15727.py`,
 `evidence/e1_gmin_m4_prop15727.json`, and
 `evidence/NOTE_2026-08-30_endpoint_rigidity_small_prime_close.md`.
 
+## Proposition 15.728 — Paley-hard rigidity at the `p=31` endpoint
+
+Specialize the still-open endpoint of Proposition 15.727 to (p=31), so
+(|D|=32), (R=10), and (|H|=4p+1=125).  The hypotheses here include the
+residual affine separator inequalities of Proposition 15.632; this is not a
+claim about an arbitrary 32-point set.  For a direction (d), let (b_d) be
+the number of its affine fibres that meet (D) oddly.  Since (|D|) is even,
+every (b_d) is even, and the exact pair identity gives
+
+\[
+ \boxed{\sum_d b_d=32+4R=72.}                       \tag{15.728.1}
+\]
+
+The directional parity sign of Proposition 15.632 is
+
+\[
+ \epsilon_d(-1)^{(|H|-3)/2}c_H(-1)^{b_d}
+   =-\epsilon_dc_H,                                  \tag{15.728.2}
+\]
+
+because ((|H|-3)/2=61) is odd.  Thus the sixteen directions with
+(\epsilon_d=c_H) all have phase one, and the other sixteen all have phase
+zero.  Both quadratic types have the exact scaled-mean budget
+
+\[
+ {32^2\over2}=512.                                   \tag{15.728.3}
+\]
+
+For even (b), the exact phase-one floors at (p=31) are
+
+\[
+ L_1(b)=
+ \begin{cases}
+  30,&b=2,30,\\
+  62,&b=0,4,6,\ldots,28.
+ \end{cases}                                         \tag{15.728.4}
+\]
+
+Within one quadratic type the exact means have a common residue modulo 32.
+Write
+
+\[
+ a_d=2u+32k_d,qquad 0\le u<16.
+\]
+
+Summing over the type and using (15.728.3) yields
+
+\[
+ \sum_d k_d=16-u.                                    \tag{15.728.5}
+\]
+
+For (1\le u\le14), every direction needs (k_d\ge1), already exceeding the
+right side of (15.728.5).  At (u=0), quotient one is possible only in the
+(b=2,30) cells and gives mean 32, two above their floor.  In either cell,
+the parity constraint has a pointwise Boolean baseline (q_0) of scaled mean
+30: (q_0=(1-x_i-x_j)^2) for (b=2), and after complementing the 30-set,
+(q_0=1-x_i) for (b=30).  A putative slack quadratic (A) of scaled mean 32
+would make
+
+\[
+ C={A-q_0\over2}\ge0,\qquad 4p\,\mathbb EC=2.
+\]
+
+This is a nonzero integral quadratic, whereas Proposition 15.688 gives the
+sharp bound (4p\,\mathbb EC\ge p-3=28).  Thus both floor-plus-two lifts are
+impossible.  Hence (u=15).  Equation (15.728.5) then has quotient
+sum one, and (15.728.4) forces
+
+\[
+ \boxed{\{a_d:\epsilon_d=c_H\}=\{30^{15},62^1\}.}   \tag{15.728.6}
+\]
+
+The other type is also arithmetically restricted.  If its common residue is
+(2u_0), the exact formula
+(a_d=I+32P_d-\epsilon_dT-93) gives, after adding the two type residues,
+
+\[
+ 30+2u_0\equiv2I+6\pmod {32}.
+\]
+
+Infinity is not in the boundary, so its degree (I) is even.  Hence
+(u_0\equiv I+4\pmod {16}) and
+
+\[
+ u_0\in\{0,2,4,6,8,10,12,14\}.                 \tag{15.728.6a}
+\]
+
+In particular, fifteen phase-one directions have (b_d\in\{2,30\}) at
+their mean-30 baseline; the single mean-62 direction may have any even
+(b_d), including an elevated (b_d=2) or (30).  There cannot be two
+(b_d=30) directions in this type: together with the other thirteen required
+baseline directions at (b_d=2), they would contribute
+
+\[
+ 2\cdot30+13\cdot2=86>72
+\]
+
+to (15.728.1).  Therefore
+
+\[
+ \boxed{\text{one Paley type has at least fourteen }b_d=2
+        \text{ directions}.}                       \tag{15.728.7}
+\]
+
+This also sharpens the disjoint-block geometry.  In a (b_d=2) direction,
+let (r_3,r_4) count the trisecants and 4-secants, and let (l_j) count the
+(j)-point fibres.  The point and parity identities give
+
+\[
+ l_0=14+r_3+r_4,\quad l_1=2-r_3,\quad
+ l_2=15-r_3-2r_4,\quad l_3=r_3,\quad l_4=r_4.
+                                                               \tag{15.728.8}
+\]
+
+If (y) is the total number of 4-secants, Proposition 15.727 has
+(x=10-2y), hence only (x+y=10-y) rich lines.  They occupy at most
+(10-y) directions.  Equations (15.728.7)--(15.728.8) therefore force at
+least
+
+\[
+ \boxed{4+y\text{ directions of one Paley type with profile }
+        (l_0,l_1,l_2,l_3,l_4)=(14,2,15,0,0).}        \tag{15.728.9}
+\]
+
+This is a proved necessary normal form, not an endpoint exclusion.  It uses
+no arc classification and no finite configuration search.  The next gate is
+to show that the disjoint 3/4-secant endpoint cannot support the same-Paley
+near-perfect pairing directions in (15.728.9), or that they force one of the
+already-closed circle/conic configurations.  The (p=31) endpoint, the rest
+of residual (ii), Type I, and the limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15728.py`,
+`tests/test_prop15728.py`,
+`evidence/e1_gmin_m4_prop15728.json`, and
+`evidence/NOTE_2026-08-31_p31_endpoint_paley_hard_profile.md`.
+
+## Proposition 15.729 — affine unique-trisecant endpoint reduction
+
+Continue the all-prime endpoint normal form of Proposition 15.727.  Thus
+(D) is an affine set of (p+1) points, (p=3R+c) with (c\in\{1,2\}), and its
+rich lines are pairwise (D)-disjoint: (x) trisecants and (y) 4-secants with
+
+\[
+ x+2y=R.                                             \tag{15.729.1}
+\]
+
+Choose one rich line.  Retain three points on it, two points on every other
+rich line, and every point outside the rich blocks.  Call the resulting set
+(U).  If the distinguished line is a trisecant, the number deleted is
+((x-1)+2y=R-1).  If it is a 4-secant, the number deleted is
+(1+x+2(y-1)=R-1).  Hence
+
+\[
+ |U|=p+2-R.                                         \tag{15.729.2}
+\]
+
+The set (U) is affine because (U\subset D).  Moreover, every line containing
+three points of (U) is already a rich line of (D).  The distinguished rich
+line retains three points and every other one retains two.  Therefore
+
+\[
+ \boxed{U\text{ is an affine }(p+2-R,3)\text{-arc with exactly one
+ trisecant}.}                                      \tag{15.729.3}
+\]
+
+Write that trisecant as (\{P,Q,Z\}) and put (B=U\setminus\{P,Q\}).  Then
+(B) is an affine arc of size (p-R).  Both (B\cup\{P\}) and (B\cup\{Q\})
+are arcs: otherwise the new trisecant would already be a second trisecant
+of (U).  The line (PQZ) meets (B) only in (Z), so it is a tangent of (B) at
+(Z).  Thus
+
+\[
+ \boxed{B\text{ has two distinct affine extension points }P,Q
+ \text{ on one tangent}.}                         \tag{15.729.4}
+\]
+
+Any of the three points on the unique trisecant may be chosen as the point
+left in (B).  The exact sizes in the two residues are
+
+\[
+\begin{array}{c|cc}
+ &|U|&|B|\\ \hline
+ p=3R+1&2R+3&2R+1\\
+ p=3R+2&2R+4&2R+2.
+\end{array}                                        \tag{15.729.5}
+\]
+
+This is a proved structural reduction, not an endpoint exclusion.  It uses
+no blocking-set theorem, finite configuration search, or new classification.
+The remaining implication is to exclude or classify these two families of
+large affine unique-trisecant 3-arcs, equivalently their large affine arc
+subsets with two co-tangent extensions, while preserving compatibility with
+the common disjoint-block completion (D).  The endpoint, the rest of
+residual (ii), Type I, and the limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15729.py`,
+`tests/test_prop15729.py`,
+`evidence/e1_gmin_m4_prop15729.json`, and
+`evidence/NOTE_2026-08-31_affine_unique_trisecant_reduction.md`.
+
 ## Proposition 15.723 — paired-cube obstruction to middle floor-plus-two lifts
 
 Put (p=2m-1\ge17). Let (A\ge0) be an integer-valued quadratic on

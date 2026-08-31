@@ -21,9 +21,9 @@ banned by test (`tests/test_main_chain_docs.py`).
 
 **Goal:** settle the limit (see **`LONG_HORIZON_GOAL.md`**). Not done until L is proved or disproved.
 
-**Main claim:** L = lim_n α_n is **OPEN** (2026-08-30).
+**Main claim:** L = lim_n α_n is **OPEN** (2026-08-31).
 
-### Current audit (2026-08-30; through Proposition 15.727)
+### Current audit (2026-08-31; through Proposition 15.729)
 
 - **Required asymptotic target.** It is enough to prove the Paley-tail deficit
   \(\Phi(C_p)-m_{p^2+1}=o(p^3)\) on a ratio-dense tail. The current all-prime,
@@ -69,7 +69,19 @@ banned by test (`tests/test_main_chain_docs.py`).
   the rich lines are disjoint trisecants/4-secants and the repaired arc has
   at least `R` index-one outside points. Exhaustive arc classifications
   exclude equality at `p=17,19,23,29`; from `p=31` it remains open in that
-  normal form, as does larger slack.
+  normal form. Proposition 15.728 adds a necessary `p=31` Paley-hard profile:
+  one Paley type has means `{30^15,62}`, at least fourteen `b=2` directions,
+  and at least `4+y` nonrich directions of fibre profile `(14,2,15,0,0)`.
+  Proposition 15.729 gives the all-prime geometric reduction: every remaining
+  equality case yields an affine `(p+2-R,3)`-arc with exactly one trisecant,
+  and then a `(p-R)`-arc with two extension points on one tangent. Both are
+  proved necessary reductions, **not endpoint closures**. The live endpoint
+  gate is exclusion/classification of this near-extremal affine
+  unique-trisecant configuration with its common disjoint-block completion.
+  At `p=31`, eleven of twelve classified complete 22-arc classes are audited
+  and excluded (`c_1<=2<10`), but the twelfth representative remains
+  unsourced; that audit is a finite side route only. Larger slack and the
+  broader residual-(ii) gate remain open.
 - **Floor-plus-two correction.** Proposition 15.723 replaces the blanket
   `excess != 2` shortcut in the infinity-plus-`p` middle profile. A
   paired-cube Fourier gap excludes every such middle cell for all odd
@@ -160,7 +172,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | required bi-tight levels 2 and 3 | `bitight_levels_2_3` | **TRUE** — 15.720 degree congruence; bi-tight level 4 is a corollary, while generic one-sided covers exist and only joint residual compatibility remains open |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh is closed, as are boundaries of size `0/2/4/6`, finite `p=7` size eight, and finite `p=11` size eight. For every `p>=17`, 15.721 excludes every `|D|<=p-1`. At the first shell `|D|=p+1`, 15.676 closes pair-deficit equality, 15.724 closes outside slack zero, and 15.726 excludes every positive outside slack `R<=floor((p-4)/3)`. Proposition 15.727 excludes the endpoint `R=floor((p-1)/3)` at `p=17,19,23,29` and gives a disjoint 3/4-secant normal form for the remaining endpoint cases. The separate small-prime remainder includes the 56 positive `p=7,z=7` line boundaries left by 15.713--15.719. |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Walsh is closed, as are boundaries of size `0/2/4/6`, finite `p=7` size eight, and finite `p=11` size eight. For every `p>=17`, 15.721 excludes every `|D|<=p-1`. At the first shell `|D|=p+1`, 15.676 closes pair-deficit equality, 15.724 closes outside slack zero, and 15.726 excludes every positive outside slack `R<=floor((p-4)/3)`, so survivors start at `R>=floor((p-1)/3)`. Proposition 15.727 excludes equality at `p=17,19,23,29`; 15.728--15.729 give necessary Paley-hard and affine unique-trisecant/common-completion reductions for the remaining cases but close none. The separate small-prime remainder includes the 56 positive `p=7,z=7` line boundaries left by 15.713--15.719. |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — on `|κ|=1` the missing sign is `G>T`; on `|κ|=3` the separate signed `(μ,ν)` inequality still has an uncontrolled δ remainder |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -639,7 +651,8 @@ graph TD
     PARC --> CIRCLE["outside slack zero = aligned Miquelian circle<br/><b>CLOSED</b> by isolated-vertex lift contradiction (15.724)"]
     CIRCLE --> LINEARR["outside 1≤R≤floor((p-4)/3)<br/><b>CLOSED</b> by tangent envelope (15.726)"]
     LINEARR --> ENDPR["endpoint R=floor((p-1)/3)<br/>rigid; <b>CLOSED p=17,19,23,29</b> (15.727)"]
-    ENDPR --> STRICTP["endpoint from p=31 and larger slack<br/><b>OPEN</b>"]
+    ENDPR --> UNIQUE["remaining endpoint<br/>Paley-hard at p=31; affine unique trisecant + common completion<br/><b>NECESSARY ONLY</b> (15.728--15.729)"]
+    UNIQUE --> STRICTP["endpoint from p=31 and larger slack<br/><b>OPEN</b>"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -654,6 +667,7 @@ graph TD
     style TRANSPORT fill:#e6ffe6
     style PARC fill:#e6ffe6
     style CIRCLE fill:#e6ffe6
+    style UNIQUE fill:#fff4e6
     style STRICTP fill:#fff4e6
     style WALSH fill:#e6ffe6
     style MULTI fill:#fff4e6
@@ -870,6 +884,8 @@ Proposition 15.721 supersedes the active all-finite shell statuses in
 | 15.725 | exact inversion coordinates and a 2,381-case, 92,664-direction finite phase-zero census for a parabola plus one internal point | **RETRACTED as an all-prime family close:** the character-curve estimates and opposite sign are open; finite data only, no gate changes |
 | 15.726 | a minimal deletion `T` leaves an arc `A`; linewise slack gives `sum_(z in T) s_A(z)<=R`, while the Ball--Lavrauw degree-`2(t+1)` tangent envelope forces `s_A(z)>=(p-1-3t)/2`; concavity makes both endpoint lower bounds exceed `R` | excludes every `1<=R<=floor((p-4)/3)` at the first `p+1` shell for every prime `p>=17`; any positive survivor must have `R>=floor((p-1)/3)`, while the shell and residual (ii) remain open |
 | 15.727 | at endpoint equality, minimum arc repair has size `R`, every deleted point has secant index one, and all rich lines are pairwise-disjoint trisecants/4-secants; published arc classes give `c_1` maxima `4,4,1,0` | excludes the endpoint at `p=17,19,23,29`, moving their first possible positive slacks to `6,7,8,10`; from `p=31` the rigid endpoint, larger slack, and residual (ii) remain open |
+| 15.728 | at `p=31,R=10`, exact odd-fibre sum, type budgets, common residues, and sharp lift floors force one Paley type to have means `{30^15,62}` and at least fourteen `b=2` directions; with `y` 4-secants, at least `4+y` of them are nonrich with fibre profile `(14,2,15,0,0)` | **proved necessary normal form, not endpoint closure**; sharpens only the open `p=31` equality case and changes no top-level gate |
+| 15.729 | retain three points on one rich block and two on every other block of the 15.727 completion; deleting `R-1` points gives an affine `(p+2-R,3)`-arc with one trisecant, whose deletion of two triple points gives a `(p-R)`-arc with two co-tangent extensions | **proved all-prime necessary reduction, not endpoint closure**; the live gate is exclusion/classification with the common disjoint-block completion, while first-shell survivors, larger slack, and residual (ii) remain open |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -1066,6 +1082,15 @@ deleted arc to exclude every `1<=R<=floor((p-4)/3)`. Therefore the active
 Proposition 15.727 forces the equality case into a disjoint trisecant/
 4-secant block form and excludes it at `p=17,19,23,29` by exhaustive arc
 classifications. The first unexcluded endpoint prime is `p=31`.
+Proposition 15.728 imposes its necessary Paley-hard direction profile there.
+Proposition 15.729 then reduces every remaining endpoint equality case to a
+near-extremal affine 3-arc with exactly one trisecant, or equivalently to an
+affine arc with two extension points on one tangent, compatible with the
+same disjoint-block completion. Neither proposition closes an endpoint.
+Excluding or classifying that common-completion configuration is the live
+general endpoint gate; the audit of eleven of twelve classified complete
+22-arc classes at `p=31` is only a finite side route because the twelfth
+representative is not yet sourced.
 Proposition 15.723 independently repairs the middle floor-plus-two
 quantization, retaining its two genuine `p=17` equality cells.
 
@@ -1120,9 +1145,13 @@ unidentified glue-class phase, unknown broad mass, or classified low shell.
    15.676/15.722/15.724 exclude pair equality and slack zero, while 15.726
    excludes every positive outside slack through `floor((p-4)/3)`. Proposition
    15.727 excludes equality at `p=17,19,23,29` and rigidifies every other
-   equality case; the first unexcluded endpoint is `p=31,R=10`. Larger slack
-   remains open. The separate small-prime remainder includes
-   the 56 positive `p=7,z=7` line boundaries. Even `k>4p` still requires the
+   equality case; the first unexcluded endpoint is `p=31,R=10`. Propositions
+   15.728--15.729 add necessary Paley-hard and affine unique-trisecant/
+   co-tangent reductions without excluding it. The live equality gate is
+   exclusion/classification with the common disjoint-block completion. The
+   eleven-of-twelve `p=31` complete-22-arc audit is a finite side route, not a
+   closure. Larger slack remains open. The separate small-prime remainder
+   includes the 56 positive `p=7,z=7` line boundaries. Even `k>4p` still requires the
    full multi-level argument; 15.721 is not a claim about those larger edge
    counts.
 2. **Type I, multi-level Max−:** prove both far-class signs: `G>T` on
@@ -1211,6 +1240,9 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15719.py` | Exact finite projected-semigroup stabilization and subgroup certificate through grade six |
 | `src/e1_gmin_m4_prop15720.py` | Solver-free degree-congruence obstruction excluding the required bi-tight levels 2 and 3 |
 | `src/e1_gmin_m4_prop15721.py` | Signed PSL boundary transport proving the residual endpoint floor `|D|>=p+1` for `p>=17` |
+| `src/e1_gmin_m4_prop15722.py` … `prop15727.py` | Signed first-shell phase transport, exact low-slack exclusions, tangent-envelope linear cutoff, endpoint block rigidity, and the four classification-assisted endpoint closes |
+| `src/e1_gmin_m4_prop15728.py` | Necessary Paley-hard direction profile at the open `p=31,R=10` endpoint; explicitly not endpoint closure |
+| `src/e1_gmin_m4_prop15729.py` | All-prime affine unique-trisecant and co-tangent-extension endpoint reduction; explicitly not endpoint closure |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
 | `evidence/NOTE_2026-08-25_dual_minimum_shell.md` | MDS/Newton proof of the exact dual shell |
 | `evidence/NOTE_2026-08-25_radial_dual_shadow.md` | Poisson phase, dual gap, and first harmonic shell |
@@ -1290,6 +1322,10 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-30_p_plus_one_multichart_circle_close.md` | Exact signed phase cocycle, outside pair-slack `0/1` reductions, paired-cube floor-plus-two repair, and isolated-vertex full-circle exclusion (15.722--15.724) |
 | `evidence/NOTE_2026-08-30_tangent_envelope_linear_low_slack.md` | Minimal arc deletion and tangent-envelope incidence contradiction excluding the linear low-slack interval (15.726) |
 | `evidence/NOTE_2026-08-30_endpoint_rigidity_small_prime_close.md` | Endpoint equality rigidity and classification-assisted exclusions at `p=17,19,23,29` (15.727) |
+| `evidence/NOTE_2026-08-31_p31_endpoint_paley_hard_profile.md` | Necessary Paley-hard direction profile at the still-open `p=31` endpoint (15.728) |
+| `evidence/NOTE_2026-08-31_affine_unique_trisecant_reduction.md` | All-prime unique-trisecant/co-tangent reduction and the live common-completion gate (15.729) |
+| `evidence/NOTE_2026-08-31_p31_public_11_of_12_arc_audit.md` | Exhaustive finite certificate for the eleven publicly sourced complete 22-arc classes at `p=31`; explicitly not a twelve-class close |
+| `scripts/p31_complete_22arc_public_audit.py` | Deterministic public-class audit producing `evidence/p31_complete_22arc_public_11_audit.json` |
 | `evidence/p7_infinity7_positive_z7_global_semigroup_summary.json` | Compact hash-pinned affine/global-join and Hilbert-basis certificate for 15.718 |
 | `evidence/p7_infinity7_positive_z7_projected_stabilization_summary.json` | Compact hash-pinned finite projected-semigroup stabilization certificate for 15.719 |
 | `evidence/NOTE_2026-08-29_global_minimality_and_local_stability_no_go.md` | General local-stability counter-mechanism, closest-global hierarchy, Mathon barrier, and corrected signed-Eulerian target after the `c=2` no-go |

@@ -1,8 +1,8 @@
 # Proposition and route de-duplication audit
 
-**Date:** 2026-08-30
+**Date:** 2026-08-31
 
-**Scope:** every assigned proposition through Proposition 15.727, the live
+**Scope:** every assigned proposition through Proposition 15.729, the live
 predicate wiring, and the attack scripts present during the audit
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
@@ -161,6 +161,39 @@ The first endpoint not excluded here is `p=31,R=10`; it remains in the
 disjoint rich-block normal form.  Larger slack and the top-level gates remain
 open.
 
+An eleventh semantic check gives Proposition 15.728. At `p=31,R=10`, the
+exact identity `sum_d b_d=72`, the two type budgets, common-residue
+quantization, and the sharp integral-lift floor force one Paley type to have
+scaled means `{30^15,62}`. At least fourteen of its directions have `b_d=2`.
+If `y` is the number of 4-secants in 15.727, at least `4+y` of those
+directions are nonrich and have fibre profile `(14,2,15,0,0)`. This is a
+**proved necessary normal form, not an endpoint exclusion**. It changes no
+acceptance predicate and does not authorize extrapolation from a `p=31`
+profile to all primes.
+
+A twelfth semantic check gives Proposition 15.729. In any remaining 15.727
+endpoint block decomposition, retain three points on one rich block and two
+on every other rich block. Exactly `R-1` points are deleted. The retained
+affine set is a `(p+2-R,3)`-arc with exactly one trisecant; deleting any two
+points of that trisecant leaves a `(p-R)`-arc whose deleted points are two
+distinct extensions on one tangent. For `p=3R+1` the two sizes are
+`2R+3,2R+1`; for `p=3R+2` they are `2R+4,2R+2`. This is a **proved
+all-prime necessary reduction, not endpoint closure**. The live implication
+is exclusion or classification of these near-extremal affine
+unique-trisecant configurations while retaining their common disjoint-block
+completion `D`.
+
+The independent `p=31` complete-22-arc check is a finite side route only.
+Eleven of the twelve classified classes have sourced representatives and
+exact audited `c_1<=2<10`; the twelfth representative remains unavailable.
+Therefore this audit is neither a `p=31` endpoint theorem nor the live
+all-prime gate. First-shell survivors still begin at
+`R>=floor((p-1)/3)`, and residual (ii), multi-level Type I, and `L` remain
+open. The exact replay is
+`scripts/p31_complete_22arc_public_audit.py`, with scope ledger
+`evidence/NOTE_2026-08-31_p31_public_11_of_12_arc_audit.md` and deterministic
+certificate `evidence/p31_complete_22arc_public_11_audit.json`.
+
 The same replay exposed one stale exact-boundary diagnostic:
 `p17_slack20_boundary_cryptominisat.py` still expected the 78 profiles and
 69 signatures produced by the retracted blanket filter.  It now consumes the
@@ -192,11 +225,11 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 642 source-backed proposition modules from 15.83 through 15.727.
+- There are 644 source-backed proposition modules from 15.83 through 15.729.
 - The labels 15.537, 15.583, and 15.584 have no proposition module.  They are
   unassigned labels, not unreviewed propositions; later source headers mention
   those numbers only as historical range/state markers.
-- Therefore every assigned proposition through 15.727 was included in this
+- Therefore every assigned proposition through 15.729 was included in this
   audit.  The grouped ledger below is by shared mathematical route rather than
   a 719-row restatement of the writeup.
 
@@ -207,10 +240,10 @@ The public theorem is gated consistently by the corrected global
 currently `False`. The historical bounded `True` is available only through
 `e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after audit of 15.727 |
+| unit | exact live content | status after audit of 15.729 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
-| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — for `p>=17`, 15.721 moves the general boundary floor to `|D|=p+1`; 15.676 and 15.722--15.724 close pair equality and slack zero, while 15.726 excludes every positive outside slack through `floor((p-4)/3)`; 15.727 excludes equality at `p=17,19,23,29` and rigidifies the other endpoint cases, beginning at `p=31,R=10` |
+| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — for `p>=17`, 15.721 moves the general boundary floor to `|D|=p+1`; 15.676 and 15.722--15.724 close pair equality and slack zero, while 15.726 excludes every positive outside slack through `floor((p-4)/3)`. Thus first-shell survivors have `R>=floor((p-1)/3)`. Proposition 15.727 excludes equality at `p=17,19,23,29`; 15.728--15.729 give necessary Paley-hard and affine unique-trisecant/common-completion reductions for the other endpoint cases, beginning at `p=31,R=10`, but exclude none of them. |
 | Type I | the multi-level `3A+B>0` bad case | **OPEN** — `|κ|=1` needs `G>T` (for example `|μ|≤|L|`), while `|κ|=3` independently needs `χ_d((2p-1)μ+(p-2)ν)>-(p-2)/p`; the particular term is safe but the δ remainder is open |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
@@ -244,6 +277,8 @@ top-level front.
 | **15.725** | finite parabola-plus-internal census and attempted all-prime character bound | **RETRACTED as a family close.** The finite phase-zero census is retained; the all-prime character sums and opposite orientation are open. It changes no gate. |
 | **15.726** | minimal arc deletion plus the Ball--Lavrauw dual tangent envelope | **PROVED narrowing, not shell closure.** For every prime `p>=17`, it excludes `1<=R<=floor((p-4)/3)` at `|D|=p+1`; any positive survivor must have `R>=floor((p-1)/3)`. Residual (ii), Type I, and `L` remain open. |
 | **15.727** | endpoint tangent-envelope equality, disjoint rich blocks, and published arc classifications | **PROVED narrowing, not shell closure.** Equality forces `R` index-one points outside an arc and disjoint trisecant/4-secant blocks. This excludes the endpoint at `p=17,19,23,29`; the first unexcluded endpoint is `p=31,R=10`. Residual (ii), Type I, and `L` remain open. |
+| **15.728** | exact `p=31` odd-fibre sum, Paley-type residue budget, and nonrich `b=2` directions | **PROVED necessary normal form, not endpoint closure.** One Paley type has means `{30^15,62}`, at least fourteen `b=2` directions, and at least `4+y` nonrich profiles `(14,2,15,0,0)`. The `p=31` endpoint and every top-level gate remain open. |
+| **15.729** | retain-three/retain-two block deletion and co-tangent extension reduction | **PROVED all-prime necessary reduction, not endpoint closure.** Every remaining endpoint gives an affine `(p+2-R,3)`-arc with exactly one trisecant and a `(p-R)`-arc with two extensions on one tangent. The live gate is exclusion/classification with the common 15.727 block completion; residual (ii), Type I, and `L` remain open. |
 
 ## Exact duplicated run
 
@@ -302,7 +337,12 @@ is a current E(1) gate.
 - any `|D|=p+1` full-circle or outside-slack campaign with
   `0<=R<=floor((p-4)/3)`: 15.722--15.724 close `R=0`, and 15.726 closes the
   stated positive interval exactly; 15.727 also closes the endpoint at
-  `p=17,19,23,29`, so do not rerun those finite endpoint classifications;
+  `p=17,19,23,29`, so do not rerun those finite endpoint classifications.
+  For every other equality case start from 15.729's affine
+  unique-trisecant/common-completion reduction, not from another unrestricted
+  census. At `p=31`, eleven of twelve classified complete 22-arc classes are
+  already audited; the missing twelfth representative is a finite side-route
+  issue, not authorization for an all-prime class campaign;
 - treating a projected/parity/semigroup survivor as a feasible graph;
 - trying to reach the general residual with an `L2` bound on `delta`
   (15.595 proves the scale loses from `p>=11`).
@@ -400,10 +440,13 @@ Before spending mesh/GPU time:
 4. at `|D|=p+1`, skip slack zero and every positive outside slack through
    `floor((p-4)/3)`; 15.722--15.724 close zero and 15.726 closes that positive
    interval.  At equality, 15.727 closes `p=17,19,23,29`; for the remaining
-   primes start from its disjoint trisecant/4-secant normal form.  The first
-   unexcluded endpoint is `p=31,R=10`.
-   Retain
-   both 15.723 floor-plus-two exceptions in any profile DP;
+   primes start from its disjoint trisecant/4-secant normal form and 15.729's
+   affine unique-trisecant/co-tangent consequence.  The live target must keep
+   the common completion `D`; unrestricted unique-trisecant classification is
+   weaker. The first unexcluded endpoint is `p=31,R=10`. Proposition 15.728
+   adds its Paley-hard profile there. The eleven-of-twelve complete-22-arc
+   audit is only finite evidence; the twelfth representative is unsourced.
+   Retain both 15.723 floor-plus-two exceptions in any profile DP;
 5. search tracked files, untracked scripts, `/tmp` artifact names and hashes,
    git history, GitHub, MathOverflow, literature notes, and OEIS when number
    patterns are involved;

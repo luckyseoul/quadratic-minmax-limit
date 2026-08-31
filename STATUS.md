@@ -1,4 +1,34 @@
-# Status (2026-08-30; through Proposition 15.727)
+# Status (2026-08-31; through Proposition 15.729)
+
+**15.729 PROVES an all-prime affine unique-trisecant reduction, not an
+endpoint exclusion.** Continue the 15.727 endpoint normal form with
+`p=3R+c`, `c in {1,2}`, and disjoint rich blocks counted by `x+2y=R`.
+Retain three points on one rich block, two on every other rich block, and
+all singleton points. Exactly `R-1` points are deleted, giving an affine
+`(p+2-R,3)`-arc `U` with exactly one trisecant. Removing any two points of
+that trisecant gives an affine `(p-R)`-arc `B`; the deleted points are two
+distinct extension points on the same tangent of `B`. The exact size pairs
+`(|U|,|B|)` are `(2R+3,2R+1)` for `p=3R+1` and `(2R+4,2R+2)` for
+`p=3R+2`. The live endpoint gate is to exclude or classify these
+near-extremal affine unique-trisecant configurations while preserving their
+common disjoint-block completion `D`. This is a necessary reduction only:
+first-shell survivors still begin at `R>=floor((p-1)/3)`, and the endpoint,
+larger slack, residual (ii), multi-level Type I, and `L` remain OPEN. The
+`p=31` audit excludes eleven of the twelve classified complete 22-arc
+classes (`c_1<=2<10`), but the twelfth representative remains unsourced;
+this is only a finite side route, not an endpoint theorem or the general
+gate.
+
+**15.728 PROVES a Paley-hard necessary normal form at `p=31,R=10`, not an
+endpoint exclusion.** The global odd-fibre identity is `sum_d b_d=72`.
+One sixteen-direction Paley type has exact scaled-mean multiset
+`{30^15,62^1}`; at least fourteen of those directions have `b_d=2`. If the
+15.727 block decomposition has `y` 4-secants, at least `4+y` of those
+directions contain no rich line and have fibre profile
+`(l_0,l_1,l_2,l_3,l_4)=(14,2,15,0,0)`. This uses the residual separator
+budgets and is not a statement about arbitrary 32-point sets. It neither
+excludes the `p=31` endpoint nor closes any top-level gate; 15.729 supplies
+the stronger all-prime geometric target above.
 
 **15.727 FORCES the first unexcluded slack into a disjoint rich-block
 normal form and EXCLUDES that endpoint at `p=17,19,23,29`.** Put
@@ -13,9 +43,11 @@ pairwise `D`-disjoint; if their counts are `x,y`, then `x+2y=R`. Thus the
 repaired arc must have `c_1(A)>=R`. Existing exhaustive arc classifications
 give maxima `4,4,1,0` instead of the required `5,6,7,9` for the resulting
 13-, 14-, 17-, and 21-arcs at `p=17,19,23,29`. Their first possible positive
-slacks are now at least `6,7,8,10`. No new solver run is used. From `p=31` onward the
-endpoint remains open in the disjoint 3/4-secant normal form, as do larger
-slack, residual (ii), multi-level Type I, and `L`.
+slacks are now at least `6,7,8,10`. No new solver run is used. From `p=31`
+onward the endpoint remains open in the disjoint 3/4-secant normal form.
+Propositions 15.728--15.729 add the necessary Paley-hard and affine
+unique-trisecant reductions above, without excluding the endpoint. Larger
+slack, residual (ii), multi-level Type I, and `L` remain OPEN.
 
 **15.726 EXCLUDES every positive outside slack**
 `1<=R<=floor((p-4)/3)` **at `|D|=p+1`, for every prime `p>=17`.**
@@ -38,7 +70,7 @@ residual (ii), multi-level Type I, and `L` remain OPEN.
 **15.725's attempted parabola-plus-internal family close is RETRACTED.** Its
 finite phase-zero census is exact, but the all-prime character bounds and
 opposite product sign are unproved. It has no downstream role. The latest
-proved narrowing is 15.727 above.
+proved narrowing is 15.729 above.
 
 **15.724 EXCLUDES the full Miquelian-circle boundary, and therefore the
 entire outside pair-slack-zero branch at `|D|=p+1`, for every `p>=17`.**

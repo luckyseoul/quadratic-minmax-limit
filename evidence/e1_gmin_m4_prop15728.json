@@ -1,0 +1,950 @@
+{
+  "arc_classification_used": false,
+  "conclusion": {
+    "mean_multiset": {
+      "30": 15,
+      "62": 1
+    },
+    "minimum_b2_directions": 14,
+    "minimum_nonrich_b2_directions": "4+y when y is the 4-secant count",
+    "nonrich_b2_profile": {
+      "0": 14,
+      "1": 2,
+      "2": 15,
+      "3": 0,
+      "4": 0
+    },
+    "one_paley_type": "eps_d=c_H",
+    "possible_phase_zero_half_residues": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ]
+  },
+  "endpoint_block_paley_rows": [
+    {
+      "endpoint_block": {
+        "R": 10,
+        "c": 1,
+        "four_secants_y": 0,
+        "line_moments_match": true,
+        "maximum_arc_choice_count": 59049,
+        "maximum_arc_size": 22,
+        "minimum_deletions": 10,
+        "mod_three_parity": "R is even",
+        "p": 31,
+        "points_on_rich_lines": 30,
+        "projective_line_occupancy_counts": {
+          "0": 455,
+          "1": 62,
+          "2": 466,
+          "3": 10,
+          "4": 0
+        },
+        "proved": true,
+        "regular_trisecant_core": {
+          "construction": "remove every singleton point and one point from each 4-secant",
+          "every_point_on_exactly_one_trisecant": true,
+          "point_count": 30,
+          "point_count_formula": "3(R-y)=p-c-3y",
+          "size_plus_tangents": 34,
+          "tangent_formula": "c+3+3y",
+          "tangents_per_point": 4,
+          "trisecant_count": 10
+        },
+        "rich_lines_pairwise_D_disjoint": true,
+        "singleton_formula": 2,
+        "singleton_points": 2,
+        "slack_check_x_plus_2y": 10,
+        "trisecants_x": 10
+      },
+      "four_secants_y": 0,
+      "maximum_rich_directions": 10,
+      "minimum_hard_type_b2_directions": 14,
+      "minimum_nonrich_formula": "4+y",
+      "minimum_nonrich_hard_type_b2_directions": 4,
+      "nonrich_b2_occupancy": {
+        "0": 14,
+        "1": 2,
+        "2": 15,
+        "3": 0,
+        "4": 0
+      },
+      "proved": true,
+      "rich_line_count": 10,
+      "trisecants_x": 10
+    },
+    {
+      "endpoint_block": {
+        "R": 10,
+        "c": 1,
+        "four_secants_y": 1,
+        "line_moments_match": true,
+        "maximum_arc_choice_count": 39366,
+        "maximum_arc_size": 22,
+        "minimum_deletions": 10,
+        "mod_three_parity": "R is even",
+        "p": 31,
+        "points_on_rich_lines": 28,
+        "projective_line_occupancy_counts": {
+          "0": 454,
+          "1": 64,
+          "2": 466,
+          "3": 8,
+          "4": 1
+        },
+        "proved": true,
+        "regular_trisecant_core": {
+          "construction": "remove every singleton point and one point from each 4-secant",
+          "every_point_on_exactly_one_trisecant": true,
+          "point_count": 27,
+          "point_count_formula": "3(R-y)=p-c-3y",
+          "size_plus_tangents": 34,
+          "tangent_formula": "c+3+3y",
+          "tangents_per_point": 7,
+          "trisecant_count": 9
+        },
+        "rich_lines_pairwise_D_disjoint": true,
+        "singleton_formula": 4,
+        "singleton_points": 4,
+        "slack_check_x_plus_2y": 10,
+        "trisecants_x": 8
+      },
+      "four_secants_y": 1,
+      "maximum_rich_directions": 9,
+      "minimum_hard_type_b2_directions": 14,
+      "minimum_nonrich_formula": "4+y",
+      "minimum_nonrich_hard_type_b2_directions": 5,
+      "nonrich_b2_occupancy": {
+        "0": 14,
+        "1": 2,
+        "2": 15,
+        "3": 0,
+        "4": 0
+      },
+      "proved": true,
+      "rich_line_count": 9,
+      "trisecants_x": 8
+    },
+    {
+      "endpoint_block": {
+        "R": 10,
+        "c": 1,
+        "four_secants_y": 2,
+        "line_moments_match": true,
+        "maximum_arc_choice_count": 26244,
+        "maximum_arc_size": 22,
+        "minimum_deletions": 10,
+        "mod_three_parity": "R is even",
+        "p": 31,
+        "points_on_rich_lines": 26,
+        "projective_line_occupancy_counts": {
+          "0": 453,
+          "1": 66,
+          "2": 466,
+          "3": 6,
+          "4": 2
+        },
+        "proved": true,
+        "regular_trisecant_core": {
+          "construction": "remove every singleton point and one point from each 4-secant",
+          "every_point_on_exactly_one_trisecant": true,
+          "point_count": 24,
+          "point_count_formula": "3(R-y)=p-c-3y",
+          "size_plus_tangents": 34,
+          "tangent_formula": "c+3+3y",
+          "tangents_per_point": 10,
+          "trisecant_count": 8
+        },
+        "rich_lines_pairwise_D_disjoint": true,
+        "singleton_formula": 6,
+        "singleton_points": 6,
+        "slack_check_x_plus_2y": 10,
+        "trisecants_x": 6
+      },
+      "four_secants_y": 2,
+      "maximum_rich_directions": 8,
+      "minimum_hard_type_b2_directions": 14,
+      "minimum_nonrich_formula": "4+y",
+      "minimum_nonrich_hard_type_b2_directions": 6,
+      "nonrich_b2_occupancy": {
+        "0": 14,
+        "1": 2,
+        "2": 15,
+        "3": 0,
+        "4": 0
+      },
+      "proved": true,
+      "rich_line_count": 8,
+      "trisecants_x": 6
+    },
+    {
+      "endpoint_block": {
+        "R": 10,
+        "c": 1,
+        "four_secants_y": 3,
+        "line_moments_match": true,
+        "maximum_arc_choice_count": 17496,
+        "maximum_arc_size": 22,
+        "minimum_deletions": 10,
+        "mod_three_parity": "R is even",
+        "p": 31,
+        "points_on_rich_lines": 24,
+        "projective_line_occupancy_counts": {
+          "0": 452,
+          "1": 68,
+          "2": 466,
+          "3": 4,
+          "4": 3
+        },
+        "proved": true,
+        "regular_trisecant_core": {
+          "construction": "remove every singleton point and one point from each 4-secant",
+          "every_point_on_exactly_one_trisecant": true,
+          "point_count": 21,
+          "point_count_formula": "3(R-y)=p-c-3y",
+          "size_plus_tangents": 34,
+          "tangent_formula": "c+3+3y",
+          "tangents_per_point": 13,
+          "trisecant_count": 7
+        },
+        "rich_lines_pairwise_D_disjoint": true,
+        "singleton_formula": 8,
+        "singleton_points": 8,
+        "slack_check_x_plus_2y": 10,
+        "trisecants_x": 4
+      },
+      "four_secants_y": 3,
+      "maximum_rich_directions": 7,
+      "minimum_hard_type_b2_directions": 14,
+      "minimum_nonrich_formula": "4+y",
+      "minimum_nonrich_hard_type_b2_directions": 7,
+      "nonrich_b2_occupancy": {
+        "0": 14,
+        "1": 2,
+        "2": 15,
+        "3": 0,
+        "4": 0
+      },
+      "proved": true,
+      "rich_line_count": 7,
+      "trisecants_x": 4
+    },
+    {
+      "endpoint_block": {
+        "R": 10,
+        "c": 1,
+        "four_secants_y": 4,
+        "line_moments_match": true,
+        "maximum_arc_choice_count": 11664,
+        "maximum_arc_size": 22,
+        "minimum_deletions": 10,
+        "mod_three_parity": "R is even",
+        "p": 31,
+        "points_on_rich_lines": 22,
+        "projective_line_occupancy_counts": {
+          "0": 451,
+          "1": 70,
+          "2": 466,
+          "3": 2,
+          "4": 4
+        },
+        "proved": true,
+        "regular_trisecant_core": {
+          "construction": "remove every singleton point and one point from each 4-secant",
+          "every_point_on_exactly_one_trisecant": true,
+          "point_count": 18,
+          "point_count_formula": "3(R-y)=p-c-3y",
+          "size_plus_tangents": 34,
+          "tangent_formula": "c+3+3y",
+          "tangents_per_point": 16,
+          "trisecant_count": 6
+        },
+        "rich_lines_pairwise_D_disjoint": true,
+        "singleton_formula": 10,
+        "singleton_points": 10,
+        "slack_check_x_plus_2y": 10,
+        "trisecants_x": 2
+      },
+      "four_secants_y": 4,
+      "maximum_rich_directions": 6,
+      "minimum_hard_type_b2_directions": 14,
+      "minimum_nonrich_formula": "4+y",
+      "minimum_nonrich_hard_type_b2_directions": 8,
+      "nonrich_b2_occupancy": {
+        "0": 14,
+        "1": 2,
+        "2": 15,
+        "3": 0,
+        "4": 0
+      },
+      "proved": true,
+      "rich_line_count": 6,
+      "trisecants_x": 2
+    },
+    {
+      "endpoint_block": {
+        "R": 10,
+        "c": 1,
+        "four_secants_y": 5,
+        "line_moments_match": true,
+        "maximum_arc_choice_count": 7776,
+        "maximum_arc_size": 22,
+        "minimum_deletions": 10,
+        "mod_three_parity": "R is even",
+        "p": 31,
+        "points_on_rich_lines": 20,
+        "projective_line_occupancy_counts": {
+          "0": 450,
+          "1": 72,
+          "2": 466,
+          "3": 0,
+          "4": 5
+        },
+        "proved": true,
+        "regular_trisecant_core": {
+          "construction": "remove every singleton point and one point from each 4-secant",
+          "every_point_on_exactly_one_trisecant": true,
+          "point_count": 15,
+          "point_count_formula": "3(R-y)=p-c-3y",
+          "size_plus_tangents": 34,
+          "tangent_formula": "c+3+3y",
+          "tangents_per_point": 19,
+          "trisecant_count": 5
+        },
+        "rich_lines_pairwise_D_disjoint": true,
+        "singleton_formula": 12,
+        "singleton_points": 12,
+        "slack_check_x_plus_2y": 10,
+        "trisecants_x": 0
+      },
+      "four_secants_y": 5,
+      "maximum_rich_directions": 5,
+      "minimum_hard_type_b2_directions": 14,
+      "minimum_nonrich_formula": "4+y",
+      "minimum_nonrich_hard_type_b2_directions": 9,
+      "nonrich_b2_occupancy": {
+        "0": 14,
+        "1": 2,
+        "2": 15,
+        "3": 0,
+        "4": 0
+      },
+      "proved": true,
+      "rich_line_count": 5,
+      "trisecants_x": 0
+    }
+  ],
+  "finite_configuration_search_used": false,
+  "floor_table": {
+    "even_b_values": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30
+    ],
+    "p": 31,
+    "phase_one_floors": {
+      "0": 62,
+      "2": 30,
+      "4": 62,
+      "6": 62,
+      "8": 62,
+      "10": 62,
+      "12": 62,
+      "14": 62,
+      "16": 62,
+      "18": 62,
+      "20": 62,
+      "22": 62,
+      "24": 62,
+      "26": 62,
+      "28": 62,
+      "30": 30
+    },
+    "phase_one_other_floor": 62,
+    "phase_one_special_b": [
+      2,
+      30
+    ],
+    "phase_one_special_floor": 30,
+    "phase_zero_floors": {
+      "0": 0,
+      "2": 32,
+      "4": 56,
+      "6": 62,
+      "8": 62,
+      "10": 62,
+      "12": 62,
+      "14": 62,
+      "16": 62,
+      "18": 62,
+      "20": 62,
+      "22": 62,
+      "24": 62,
+      "26": 62,
+      "28": 56,
+      "30": 32
+    },
+    "proved": true
+  },
+  "hard_type_b_split_cases": {
+    "at_most_one_hard_type_b30_direction": true,
+    "cases": [
+      {
+        "b30_location": "none",
+        "hard_type_sum_b": 30,
+        "high_b": 0,
+        "mean_30_profile": {
+          "2": 15,
+          "30": 0
+        },
+        "other_type_sum_b": 42
+      },
+      {
+        "b30_location": "none",
+        "hard_type_sum_b": 32,
+        "high_b": 2,
+        "mean_30_profile": {
+          "2": 15,
+          "30": 0
+        },
+        "other_type_sum_b": 40
+      },
+      {
+        "b30_location": "none",
+        "hard_type_sum_b": 34,
+        "high_b": 4,
+        "mean_30_profile": {
+          "2": 15,
+          "30": 0
+        },
+        "other_type_sum_b": 38
+      },
+      {
+        "b30_location": "none",
+        "hard_type_sum_b": 36,
+        "high_b": 6,
+        "mean_30_profile": {
+          "2": 15,
+          "30": 0
+        },
+        "other_type_sum_b": 36
+      },
+      {
+        "b30_location": "none",
+        "hard_type_sum_b": 38,
+        "high_b": 8,
+        "mean_30_profile": {
+          "2": 15,
+          "30": 0
+        },
+        "other_type_sum_b": 34
+      },
+      {
+        "b30_location": "none",
+        "hard_type_sum_b": 40,
+        "high_b": 10,
+        "mean_30_profile": {
+          "2": 15,
+          "30": 0
+        },
+        "other_type_sum_b": 32
+      },
+      {
+        "b30_location": "none",
+        "hard_type_sum_b": 42,
+        "high_b": 12,
+        "mean_30_profile": {
+          "2": 15,
+          "30": 0
+        },
+        "other_type_sum_b": 30
+      },
+      {
+        "b30_location": "none",
+        "hard_type_sum_b": 44,
+        "high_b": 14,
+        "mean_30_profile": {
+          "2": 15,
+          "30": 0
+        },
+        "other_type_sum_b": 28
+      },
+      {
+        "b30_location": "none",
+        "hard_type_sum_b": 46,
+        "high_b": 16,
+        "mean_30_profile": {
+          "2": 15,
+          "30": 0
+        },
+        "other_type_sum_b": 26
+      },
+      {
+        "b30_location": "none",
+        "hard_type_sum_b": 48,
+        "high_b": 18,
+        "mean_30_profile": {
+          "2": 15,
+          "30": 0
+        },
+        "other_type_sum_b": 24
+      },
+      {
+        "b30_location": "none",
+        "hard_type_sum_b": 50,
+        "high_b": 20,
+        "mean_30_profile": {
+          "2": 15,
+          "30": 0
+        },
+        "other_type_sum_b": 22
+      },
+      {
+        "b30_location": "none",
+        "hard_type_sum_b": 52,
+        "high_b": 22,
+        "mean_30_profile": {
+          "2": 15,
+          "30": 0
+        },
+        "other_type_sum_b": 20
+      },
+      {
+        "b30_location": "none",
+        "hard_type_sum_b": 54,
+        "high_b": 24,
+        "mean_30_profile": {
+          "2": 15,
+          "30": 0
+        },
+        "other_type_sum_b": 18
+      },
+      {
+        "b30_location": "none",
+        "hard_type_sum_b": 56,
+        "high_b": 26,
+        "mean_30_profile": {
+          "2": 15,
+          "30": 0
+        },
+        "other_type_sum_b": 16
+      },
+      {
+        "b30_location": "none",
+        "hard_type_sum_b": 58,
+        "high_b": 28,
+        "mean_30_profile": {
+          "2": 15,
+          "30": 0
+        },
+        "other_type_sum_b": 14
+      },
+      {
+        "b30_location": "mean_30_baseline",
+        "hard_type_sum_b": 58,
+        "high_b": 0,
+        "mean_30_profile": {
+          "2": 14,
+          "30": 1
+        },
+        "other_type_sum_b": 14
+      },
+      {
+        "b30_location": "mean_30_baseline",
+        "hard_type_sum_b": 60,
+        "high_b": 2,
+        "mean_30_profile": {
+          "2": 14,
+          "30": 1
+        },
+        "other_type_sum_b": 12
+      },
+      {
+        "b30_location": "mean_30_baseline",
+        "hard_type_sum_b": 62,
+        "high_b": 4,
+        "mean_30_profile": {
+          "2": 14,
+          "30": 1
+        },
+        "other_type_sum_b": 10
+      },
+      {
+        "b30_location": "mean_30_baseline",
+        "hard_type_sum_b": 64,
+        "high_b": 6,
+        "mean_30_profile": {
+          "2": 14,
+          "30": 1
+        },
+        "other_type_sum_b": 8
+      },
+      {
+        "b30_location": "mean_30_baseline",
+        "hard_type_sum_b": 66,
+        "high_b": 8,
+        "mean_30_profile": {
+          "2": 14,
+          "30": 1
+        },
+        "other_type_sum_b": 6
+      },
+      {
+        "b30_location": "mean_30_baseline",
+        "hard_type_sum_b": 68,
+        "high_b": 10,
+        "mean_30_profile": {
+          "2": 14,
+          "30": 1
+        },
+        "other_type_sum_b": 4
+      },
+      {
+        "b30_location": "mean_30_baseline",
+        "hard_type_sum_b": 70,
+        "high_b": 12,
+        "mean_30_profile": {
+          "2": 14,
+          "30": 1
+        },
+        "other_type_sum_b": 2
+      },
+      {
+        "b30_location": "mean_30_baseline",
+        "hard_type_sum_b": 72,
+        "high_b": 14,
+        "mean_30_profile": {
+          "2": 14,
+          "30": 1
+        },
+        "other_type_sum_b": 0
+      },
+      {
+        "b30_location": "mean_62_high_direction",
+        "hard_type_sum_b": 60,
+        "high_b": 30,
+        "mean_30_profile": {
+          "2": 15,
+          "30": 0
+        },
+        "other_type_sum_b": 12
+      }
+    ],
+    "global_sum_b": 72,
+    "minimum_hard_type_b2_directions": 14,
+    "necessary_case_count": 24,
+    "proved": true,
+    "reason": "two b=30 directions plus the other thirteen required special directions at b=2 would already contribute 86>72"
+  },
+  "hypotheses": {
+    "all_finite_boundary_size": 32,
+    "edge_count": 125,
+    "outside_pair_slack": 10,
+    "p": 31,
+    "prop_15_727_disjoint_block_normal_form": true,
+    "residual_affine_separator": true
+  },
+  "multi_level_type_I_closed": false,
+  "next_gate": "exclude a 32-point endpoint set having at least 4+y same-Paley nonrich directions of profile 14/2/15",
+  "non_walsh_residual_ii_closed": false,
+  "odd_fibre_ledger": {
+    "boundary_size": 32,
+    "direction_count": 32,
+    "endpoint_pair_slack_R": 10,
+    "every_b_even": true,
+    "p": 31,
+    "pair_slack_identity": "R=(sum_d b_d-(p+1))/4",
+    "possible_b_values": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30
+    ],
+    "proved": true,
+    "sum_b": 72
+  },
+  "p31_endpoint_excluded": false,
+  "p_plus_one_shell_closed": false,
+  "phase_one_residue_normal_form": {
+    "baseline_b_values": [
+      2,
+      30
+    ],
+    "baseline_direction_count": 15,
+    "common_residue": 30,
+    "directions": 16,
+    "floor_plus_two_cells": {
+      "b=2": {
+        "b": 2,
+        "baseline_scaled_mean_2p_E_q0": 30,
+        "floor_plus_two_forbidden": true,
+        "induced_scaled_lift_mass_4p_E_C": 2,
+        "lift": "C=(A-q_0)/2",
+        "lift_is_nonnegative_integral_quadratic": true,
+        "p": 31,
+        "parity_forces_A_at_least_q0": true,
+        "phase": 1,
+        "pointwise_boolean_baseline": "q_0=(1-x_i-x_j)^2",
+        "prop_15_688_scaled_lift_floor": 28,
+        "proposed_scaled_mean_2p_E_A": 32,
+        "proved": true
+      },
+      "b=30": {
+        "b": 30,
+        "baseline_scaled_mean_2p_E_q0": 30,
+        "floor_plus_two_forbidden": true,
+        "induced_scaled_lift_mass_4p_E_C": 2,
+        "lift": "C=(A-q_0)/2",
+        "lift_is_nonnegative_integral_quadratic": true,
+        "p": 31,
+        "parity_forces_A_at_least_q0": true,
+        "phase": 1,
+        "pointwise_boolean_baseline": "q_0=1-x_i after complementing the 30-set",
+        "prop_15_688_scaled_lift_floor": 28,
+        "proposed_scaled_mean_2p_E_A": 32,
+        "proved": true
+      }
+    },
+    "high_direction_b": "any even b; b=2 or 30 uses one 32-unit elevation",
+    "high_direction_mean": 62,
+    "mean_multiset": {
+      "30": 15,
+      "62": 1
+    },
+    "p": 31,
+    "period": 32,
+    "proved": true,
+    "quotient_identity": "sum_d k_d=16-u",
+    "residue_rows": [
+      {
+        "common_residue_2u": 0,
+        "feasible": false,
+        "minimum_quotient_per_direction": 2,
+        "minimum_quotient_sum": 32,
+        "quotient_sum": 16,
+        "reason": "k=1 is possible only at b=2,30 and is the forbidden floor-plus-two lift",
+        "u": 0
+      },
+      {
+        "common_residue_2u": 2,
+        "feasible": false,
+        "minimum_quotient_per_direction": 1,
+        "minimum_quotient_sum": 16,
+        "quotient_sum": 15,
+        "reason": "every direction needs k>=1 but sum k=16-u<16",
+        "u": 1
+      },
+      {
+        "common_residue_2u": 4,
+        "feasible": false,
+        "minimum_quotient_per_direction": 1,
+        "minimum_quotient_sum": 16,
+        "quotient_sum": 14,
+        "reason": "every direction needs k>=1 but sum k=16-u<16",
+        "u": 2
+      },
+      {
+        "common_residue_2u": 6,
+        "feasible": false,
+        "minimum_quotient_per_direction": 1,
+        "minimum_quotient_sum": 16,
+        "quotient_sum": 13,
+        "reason": "every direction needs k>=1 but sum k=16-u<16",
+        "u": 3
+      },
+      {
+        "common_residue_2u": 8,
+        "feasible": false,
+        "minimum_quotient_per_direction": 1,
+        "minimum_quotient_sum": 16,
+        "quotient_sum": 12,
+        "reason": "every direction needs k>=1 but sum k=16-u<16",
+        "u": 4
+      },
+      {
+        "common_residue_2u": 10,
+        "feasible": false,
+        "minimum_quotient_per_direction": 1,
+        "minimum_quotient_sum": 16,
+        "quotient_sum": 11,
+        "reason": "every direction needs k>=1 but sum k=16-u<16",
+        "u": 5
+      },
+      {
+        "common_residue_2u": 12,
+        "feasible": false,
+        "minimum_quotient_per_direction": 1,
+        "minimum_quotient_sum": 16,
+        "quotient_sum": 10,
+        "reason": "every direction needs k>=1 but sum k=16-u<16",
+        "u": 6
+      },
+      {
+        "common_residue_2u": 14,
+        "feasible": false,
+        "minimum_quotient_per_direction": 1,
+        "minimum_quotient_sum": 16,
+        "quotient_sum": 9,
+        "reason": "every direction needs k>=1 but sum k=16-u<16",
+        "u": 7
+      },
+      {
+        "common_residue_2u": 16,
+        "feasible": false,
+        "minimum_quotient_per_direction": 1,
+        "minimum_quotient_sum": 16,
+        "quotient_sum": 8,
+        "reason": "every direction needs k>=1 but sum k=16-u<16",
+        "u": 8
+      },
+      {
+        "common_residue_2u": 18,
+        "feasible": false,
+        "minimum_quotient_per_direction": 1,
+        "minimum_quotient_sum": 16,
+        "quotient_sum": 7,
+        "reason": "every direction needs k>=1 but sum k=16-u<16",
+        "u": 9
+      },
+      {
+        "common_residue_2u": 20,
+        "feasible": false,
+        "minimum_quotient_per_direction": 1,
+        "minimum_quotient_sum": 16,
+        "quotient_sum": 6,
+        "reason": "every direction needs k>=1 but sum k=16-u<16",
+        "u": 10
+      },
+      {
+        "common_residue_2u": 22,
+        "feasible": false,
+        "minimum_quotient_per_direction": 1,
+        "minimum_quotient_sum": 16,
+        "quotient_sum": 5,
+        "reason": "every direction needs k>=1 but sum k=16-u<16",
+        "u": 11
+      },
+      {
+        "common_residue_2u": 24,
+        "feasible": false,
+        "minimum_quotient_per_direction": 1,
+        "minimum_quotient_sum": 16,
+        "quotient_sum": 4,
+        "reason": "every direction needs k>=1 but sum k=16-u<16",
+        "u": 12
+      },
+      {
+        "common_residue_2u": 26,
+        "feasible": false,
+        "minimum_quotient_per_direction": 1,
+        "minimum_quotient_sum": 16,
+        "quotient_sum": 3,
+        "reason": "every direction needs k>=1 but sum k=16-u<16",
+        "u": 13
+      },
+      {
+        "common_residue_2u": 28,
+        "feasible": false,
+        "minimum_quotient_per_direction": 1,
+        "minimum_quotient_sum": 16,
+        "quotient_sum": 2,
+        "reason": "every direction needs k>=1 but sum k=16-u<16",
+        "u": 14
+      },
+      {
+        "common_residue_2u": 30,
+        "feasible": true,
+        "minimum_quotient_per_direction": 0,
+        "minimum_quotient_sum": 0,
+        "quotient_sum": 1,
+        "reason": "sum k=1: fifteen special directions have k=0 and the remaining direction has k=1",
+        "u": 15
+      }
+    ],
+    "same_type_mean_form": "a_d=2u+32*k_d",
+    "type_budget": 512,
+    "unique_u": 15
+  },
+  "phase_zero_residue_parity": {
+    "exact_directional_mean": "a_d=I+32*P_d-eps_d*T-93",
+    "halved_congruence": "u0=I+4 (mod 16)",
+    "infinity_degree_I_even": true,
+    "infinity_not_in_boundary": true,
+    "phase_one_residue": 30,
+    "phase_zero_residue": "2*u0",
+    "possible_phase_zero_residues": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28
+    ],
+    "possible_phase_zero_u0": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "proved": true,
+    "type_residue_sum": "30+2*u0=2*I+6 (mod 32)"
+  },
+  "prop": "15.728",
+  "proved": true,
+  "quadratic_minmax_limit_closed": false,
+  "result_status": "proved necessary normal form",
+  "title": "Paley-hard profile rigidity at the p=31 endpoint",
+  "top_level_gates_changed": false,
+  "type_phase_ledger": {
+    "all_b_even": true,
+    "both_type_budgets_are_exact": true,
+    "boundary_contains_infinity": false,
+    "budget_per_type": 512,
+    "directional_parity_sign": "-eps_d*c_H",
+    "directions_per_type": 16,
+    "edge_count": 125,
+    "p": 31,
+    "parity_exponent": 61,
+    "parity_exponent_is_odd": true,
+    "phase_one_type": "eps_d=c_H",
+    "phase_zero_type": "eps_d=-c_H",
+    "proved": true
+  }
+}

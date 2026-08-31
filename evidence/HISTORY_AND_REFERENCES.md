@@ -1,6 +1,6 @@
 # History of the problem, and older references
 
-**Date:** 2026-08-30 (through Proposition 15.727)
+**Date:** 2026-08-31 (through Proposition 15.729)
 
 **Sources:** live fetches (MathOverflow API, X thread, Paata’s 2019 blog and CV, arXiv, Goethals–Seidel PDF, Wikipedia/Paley construction).  
 **Not a close:** nothing here proves that \(\lim\alpha_n\) exists. Do not treat sandwich, Paley \(\rho=1\), or conference matrices as settlement.
@@ -2082,6 +2082,69 @@ unexcluded endpoint is `p=31,R=10`.  This is a classification-assisted
 narrowing, not a closure of residual (ii).  No new long solver or profile
 census is involved.
 
+## 7bw. Paley-hard direction rigidity at the p=31 endpoint (2026-08-31)
+
+Proposition 15.728 adds a necessary residual-specific condition to the open
+`p=31,R=10` block form. If `b_d` is the number of odd fibres in direction
+`d`, exact pair counting gives `sum_d b_d=72`. The sixteen directions of one
+Paley type have a common residue and total scaled-mean budget 512. Their
+phase-one floors are 30 at `b=2,30` and 62 otherwise. The two apparent
+mean-32 floor-plus-two lifts are ruled out by subtracting their explicit
+Boolean baselines and applying the sharp integral-quadratic lift floor.
+Consequently that type has exact mean multiset
+
+`{30^15,62}`.
+
+At most one of its fifteen low directions can have `b=30`, so at least
+fourteen have `b=2`. If the 15.727 completion has `y` 4-secants, it has only
+`10-y` rich lines. At least `4+y` of those `b=2` directions are therefore
+nonrich, with exact fibre profile `(14,2,15,0,0)`.
+
+This is a proved necessary normal form under the residual separator
+hypotheses, not an endpoint exclusion and not a theorem about arbitrary
+32-point sets. No finite configuration search or new classification enters
+the proposition.
+
+## 7bx. Affine unique-trisecant and co-tangent reduction (2026-08-31)
+
+Proposition 15.729 extracts the all-prime geometric core of every remaining
+15.727 endpoint. Write `p=3R+c`, `c in {1,2}`, and let the pairwise-disjoint
+rich blocks be `x` trisecants and `y` 4-secants with `x+2y=R`. Retain three
+points on one chosen rich block, two on every other rich block, and every
+singleton. The number deleted is `(x-1)+2y=R-1` if the chosen block is a
+trisecant and `1+x+2(y-1)=R-1` if it is a 4-secant.
+
+The retained affine set `U` has size `p+2-R`. Any line containing three
+points of `U` was already a rich line of the original set, so the chosen
+block is its unique trisecant. If that line is `{P,Q,Z}`, then
+`B=U\{P,Q}` is an affine arc of size `p-R`; both `P` and `Q` extend it, and
+their common line is tangent to `B` at `Z`. The exact residue-class sizes
+are
+
+| residue | `|U|` | `|B|` |
+|---|---:|---:|
+| `p=3R+1` | `2R+3` | `2R+1` |
+| `p=3R+2` | `2R+4` | `2R+2` |
+
+This is a proved necessary reduction, not endpoint closure. The live next
+gate is to exclude or classify these near-extremal affine
+unique-trisecant/co-tangent configurations while preserving their common
+15.727 disjoint-block completion. Dropping the completion data asks a weaker
+question.
+
+The separate `p=31` classification check is finite evidence only. The
+sourced Kéri [49] list supplies eleven complete 22-arc representatives; exact
+audits give index-one counts `0,2,0,0,0,0,0,2,2,0,0`, all below the endpoint
+requirement ten. Coolsaet's classification [55] has twelve classes, but the
+twelfth representative has not been sourced. Hence this cannot be cited as a
+`p=31` close and does not replace the all-prime common-completion gate.
+The reproducible scope ledger is
+`NOTE_2026-08-31_p31_public_11_of_12_arc_audit.md`; its script and JSON are
+`../scripts/p31_complete_22arc_public_audit.py` and
+`p31_complete_22arc_public_11_audit.json`.
+First-shell survivors still start at `R>=floor((p-1)/3)`, and non-Walsh
+residual (ii), multi-level Type I, and the limit remain open.
+
 ---
 
 ## 8. What is not in the older literature
@@ -2145,13 +2208,13 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 46. G. Van de Voorde, *On sets without tangents and exterior sets of a conic*, [arXiv:1201.0484](https://arxiv.org/abs/1201.0484) (adjacent external-conic and determined-direction geometry; not the Paley phase-budget exclusion of 15.676).
 47. P. Amireddy, S. Behera, S. Srinivasan, and M. Sudan, *A Near-Optimal Polynomial Distance Lemma over Boolean Slices*, ICALP 2025, [doi:10.4230/LIPIcs.ICALP.2025.11](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2025.11) (Lemma 2 supplies the exact finite degree-two support floor used in 15.642 and 15.677).
 48. H. Sticker, *Classification of Arcs in Small Desarguesian Projective Planes*, PhD thesis, Ghent University, 2012, [PDF](https://cage.ugent.be/geometry/Theses/57/PhDHeideSticker.pdf) (Section 5.3 gives the exhaustive PGL class counts for arcs not necessarily complete; the unique 16-arc class in `PG(2,17)` is used in 15.678).
-49. G. Keri, *Types of superregular matrices and the number of n-arcs and complete n-arcs in PG(r,q)*, J. Combin. Des. **14** (2006), 363--390, [doi:10.1002/jcd.20091](https://doi.org/10.1002/jcd.20091) (earlier MDS/superregular classification in the same small-field range; contextual independent cross-check for [48]).
+49. G. Keri, *Types of superregular matrices and the number of n-arcs and complete n-arcs in PG(r,q)*, J. Combin. Des. **14** (2006), 363--390, [doi:10.1002/jcd.20091](https://doi.org/10.1002/jcd.20091), [public `PG(2,31)` representatives](https://old.sztaki.hu/~keri/n-arcs/31q3x19.txt), [coordinate instructions](https://old.sztaki.hu/~keri/n-arcs/instructions.pdf), and [classification table](https://old.sztaki.hu/~keri/n-arcs/n-arcs_in_PG(2,31).pdf) (the public file supplies the eleven complete 22-arc representatives audited after 15.729; the later correction [55] has twelve classes).
 50. P. Amireddy, A. R. Behera, S. Srinivasan, M. Sudan, and S. V. Willumsgaard, *Low-Degree Testing Over Boolean Slices*, [arXiv:2608.21730](https://arxiv.org/abs/2608.21730) (robust low-degree testing on slices; not an exact distance-floor or Paley affine-boundary theorem).
 51. Y. Filmus, *Junta threshold for low degree Boolean functions on the slice*, [arXiv:2203.04760](https://arxiv.org/abs/2203.04760) (proves the sharp `k>=2d` threshold for bounded-size juntas; adjacent context, not the explicit paired-cube density bound in 15.680).
 52. M. Kiermaier, J. Mannaert, and A. Wassermann, *The paired construction for Boolean functions on the slice*, [arXiv:2510.02804](https://arxiv.org/abs/2510.02804) (small-support constructions and exact degrees; does not classify all Boolean quadratics or imply the mass-ten exclusion in 15.680).
 53. K. Coolsaet and H. Sticker, *The complete k-arcs of PG(2,27) and PG(2,29)*, J. Combin. Des. **19** (2011), 111--130, [doi:10.1002/jcd.20261](https://doi.org/10.1002/jcd.20261), [open PDF](https://backoffice.biblio.ugent.be/download/1247338/1247417) (Table 5 gives the exhaustive projective class counts 10 and 5 for all 25- and 26-arcs in `PG(2,29)`, used in 15.681; the complete-arc spectrum and explicit 21-/24-arc representatives are used in 15.727).
 54. J. M. Chao and H. Kaneta, *Classical arcs in PG(r,q) for 23 <= q <= 29*, Discrete Math. **226** (2001), 377--385 (records maximum nonclassical plane-arc size 24 at `q=29`; independent prior confirmation of 15.681's classification consequence).
-55. K. Coolsaet, *The Complete Arcs of PG(2,31)*, J. Combin. Des. **23** (2015), 522--533, [doi:10.1002/jcd.21410](https://doi.org/10.1002/jcd.21410) (exhaustive complete-arc classification used in 15.682; in particular, there are no complete arcs of sizes 23 through 31).
+55. K. Coolsaet, *The Complete Arcs of PG(2,31)*, J. Combin. Des. **23** (2015), 522--533, [publisher abstract](https://onlinelibrary.wiley.com/doi/abs/10.1002/jcd.21410), [UGent record](https://biblio.ugent.be/publication/7076091) (exhaustive complete-arc classification used in 15.682; it corrects the number of complete 22-arc classes to twelve, and there are no complete arcs of sizes 23 through 31).
 56. K. Coolsaet and H. Sticker, *A full classification of the complete k-arcs of PG(2,23) and PG(2,25)*, J. Combin. Des. **17** (2009), 459--477, [doi:10.1002/jcd.20211](https://doi.org/10.1002/jcd.20211) (complete-arc spectrum and class counts in `PG(2,23)`, used in 15.684 to force every arc of size at least 18 onto a conic).
 57. R. Mathon, *Symmetric conference matrices of order \(pq^2+1\)*, Canad. J. Math. **30** (1978), 321--331, [doi:10.4153/CJM-1978-029-1](https://doi.org/10.4153/CJM-1978-029-1) (ratio-dense non-square-eigenvalue conference family; a uniform Boolean-radius gap is not known).
 58. R. Craigen, *Trace, Symmetry and Orthogonality*, Canad. Math. Bull. **37** (1994), 461--467, [doi:10.4153/CMB-1994-067-1](https://doi.org/10.4153/CMB-1994-067-1) (Lemma 7 proves regular conference \(\Rightarrow n=k^2+1\), not the converse).
@@ -2166,5 +2229,6 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 67. T. Szőnyi, *On the number of directions determined by a set of points in an affine Galois plane*, J. Combin. Theory Ser. A **74** (1996), 141--146, [doi:10.1006/jcta.1996.0042](https://doi.org/10.1006/jcta.1996.0042) (the `k<=p` direction bound used in 15.712).
 68. G. Somlai, *A new proof of Rédei's theorem on the number of directions*, Arch. Math. **122** (2024), 575--580, [doi:10.1007/s00013-024-01979-x](https://doi.org/10.1007/s00013-024-01979-x) (modern explicit restatement of Szőnyi's bound and proof context).
 69. X.-d. Hou and A. Iezzi, *An Application of the Hasse-Weil Bound to Rational Functions over Finite Fields*, [arXiv:1906.09487](https://arxiv.org/abs/1906.09487) (general rational-function value-set context; it does not supply the missing discriminant/resolvent estimates in 15.725).
+70. D. Bartoli and L. Storme, *The second and the third smallest arrangements of hyperplanes in finite projective spaces*, Finite Fields Appl. **37** (2016), 225--239, [doi:10.1016/j.ffa.2015.10.001](https://doi.org/10.1016/j.ffa.2015.10.001), [UGent record](https://biblio.ugent.be/publication/6843804) (Corollary 2.7 gives the odd-order unique-trisecant 3-arc ceiling adjacent to the 15.729 endpoint sizes; Section 4 gives constructions but not the equality/one-defect classification needed here).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

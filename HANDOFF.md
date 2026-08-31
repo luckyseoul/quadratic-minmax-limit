@@ -1,10 +1,11 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-30 (through 15.727; required bi-tight levels 2 and 3 are
+**Date:** 2026-08-31 (through 15.729; required bi-tight levels 2 and 3 are
 closed, signed transport supersedes the old all-finite ladder, the
 first-shell outside pair-slack-zero circle branch is excluded, and positive
 outside slack below `floor((p-1)/3)` is excluded; equality is rigid and is
-also excluded at `p=17,19,23,29`)
+also excluded at `p=17,19,23,29`; every remaining equality case has the
+affine unique-trisecant/common-completion reduction)
 **The quadratic-minmax limit is still OPEN.**
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
@@ -12,7 +13,7 @@ also excluded at `p=17,19,23,29`)
 **Mandatory preflight:** read
 `evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md` before launching another
 solver, projection, shell, channel, orbit, or timeout. It accounts for every
-assigned proposition through 15.727 and maps the former scratch scripts to
+assigned proposition through 15.729 and maps the former scratch scripts to
 closed, dead, necessary-only, or live routes.  The 2026-08-31 worktree
 cleanup and remote archive are recorded in
 `evidence/NOTE_2026-08-31_DIRTY_WORKTREE_TRIAGE.md`.
@@ -49,6 +50,69 @@ excluding any of its 56 actual line boundaries in two orbits. The positive
 `z=7` remainder stays open. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.729 — all-prime affine unique-trisecant reduction
+
+Continue the 15.727 endpoint normal form. Write `p=3R+c`, `c in {1,2}`;
+the rich lines of the affine `(p+1)`-set `D` are pairwise `D`-disjoint, with
+`x` trisecants, `y` 4-secants, and `x+2y=R`. Choose one rich block, retain
+three points there, retain two on every other rich block, and retain every
+singleton. The deletion count is
+
+`(x-1)+2y=R-1` for a distinguished trisecant, and
+`1+x+2(y-1)=R-1` for a distinguished 4-secant.
+
+The retained affine set `U` has size `p+2-R`. Any `U`-trisecant was already
+a rich line of `D`; the chosen block retains three points and every other
+block retains two. Hence `U` is a `(p+2-R,3)`-arc with exactly one
+trisecant. If that trisecant is `{P,Q,Z}`, then
+`B=U\{P,Q}` is an affine `(p-R)`-arc. Both `P` and `Q` extend `B`, and their
+common line meets `B` only at `Z`, so they lie on one tangent of `B`.
+
+| residue | `|U|` | `|B|` |
+|---|---:|---:|
+| `p=3R+1` | `2R+3` | `2R+1` |
+| `p=3R+2` | `2R+4` | `2R+2` |
+
+This is a **proved necessary reduction, not endpoint closure**. The live
+endpoint implication is to exclude or classify these near-extremal affine
+unique-trisecant sets, equivalently the co-tangent extension arcs, while
+retaining compatibility with their common disjoint-block completion `D`.
+This target is numerically sharp: after removing one trisecant point, the
+arc `A` has size `2R+2` or `2R+3`, only two or one points below the usual
+odd-order tangent-form interpolation threshold `2R+4`.  Equivalently, the
+unique-trisecant set `U` is one below the Bartoli--Storme odd-order ceiling
+when `p=3R+1` and attains it when `p=3R+2`.  The preferred next lemma is the
+equality/one-defect stability statement with the common completion `D`, not
+an unrestricted `(k,3)`-arc census.
+First-shell survivors still start at `R>=floor((p-1)/3)`. At `p=31`, eleven
+of the twelve classified complete 22-arc classes have audited
+`c_1<=2<10`; the twelfth representative is not yet sourced. That is a
+finite side route only, not an endpoint theorem or a replacement for this
+all-prime gate. Larger slack, residual (ii), multi-level Type I, and `L`
+remain OPEN.
+
+## 15.728 — Paley-hard `p=31` necessary normal form
+
+At the first open endpoint prime `p=31,R=10`, let `b_d` count odd fibres in
+direction `d`. Exact pair counting gives `sum_d b_d=72`. The sixteen
+directions with `epsilon_d=c_H` form the phase-one Paley type. Their common
+residue and exact budget, together with the sharp lift floor in the two
+floor-plus-two cells, force the scaled-mean multiset
+
+`{30^15,62^1}`.
+
+The fifteen mean-30 directions have `b_d in {2,30}`. The global sum permits
+at most one `b_d=30`, so at least fourteen have `b_d=2`. If `y` is the
+number of 4-secants in 15.727, there are only `10-y` rich lines. Therefore
+at least `4+y` same-Paley directions are nonrich and have exact fibre profile
+
+`(l_0,l_1,l_2,l_3,l_4)=(14,2,15,0,0)`.
+
+This is a **proved necessary normal form, not endpoint closure**. It uses
+the residual separator hypotheses and says nothing about arbitrary
+32-point sets. Proposition 15.729 is the live all-prime geometric reduction;
+the `p=31` endpoint remains open.
 
 ## 15.727 — first-slack endpoint rigidity and four prime closes
 
@@ -97,9 +161,10 @@ or at least five. Consequently the endpoint is excluded at all four primes,
 and their first possible positive slacks are `6,7,8,10`.
 
 No new solver run enters the proof. The first prime whose endpoint remains
-open is `p=31`, `R=10`. For all other primes it is reduced to the disjoint
-3/4-secant normal form. Larger slack, the rest of residual (ii), multi-level
-Type I, and `L` remain OPEN.
+open is `p=31`, `R=10`. Every remaining endpoint is reduced to the disjoint
+3/4-secant normal form, then further to the necessary configurations in
+15.728--15.729. None of these reductions excludes it. Larger slack, the rest
+of residual (ii), multi-level Type I, and `L` remain OPEN.
 
 ## 15.726 — linear low-slack exclusion
 
@@ -2823,6 +2888,15 @@ Official class is leftover Max− together with \(s_+\ge2\). leftover-only (\(s_
 - 15.585: leftover+\(s_+\) at \(k=4p\) forces \(\min_+=2\); \(\{2,4,6\}\) cannot have \(1_{S=2}\) a plus pair-slice.
 - 15.598: square-direction \(\infty\cup L\) forces \(\sum_S y=0\) on Max−. Walsh ∀p is spanning of the xor-slice of H.
 - 15.669: for `p>=17`, all-finite `6<=s<=3(p-1)/4` and infinity-present `5<=s<=p-4` are impossible; exact `p=11,13` extensions are listed at the top of this file. 15.670 additionally closes every finite `p=11` size-eight boundary. Propositions 15.713--15.717 close the positive `p=7` infinity-plus-seven branches at `z=0,1,2,3`; 15.718--15.719 reduce `z=7` structurally but leave all 56 source boundaries open. Larger count profiles survive only the current relaxation.
+- 15.721--15.729: for `p>=17`, the first general shell is `|D|=p+1`.
+  Slack zero and every positive `R<=floor((p-4)/3)` are closed; hence a
+  first-shell survivor has `R>=floor((p-1)/3)`. Equality is excluded only at
+  `p=17,19,23,29`. Every other equality case has the 15.727 disjoint-block
+  completion, the 15.729 near-extremal affine unique-trisecant/co-tangent
+  reduction, and at `p=31` the additional 15.728 Paley-hard profile. The
+  live general gate is exclusion/classification with the common completion.
+  The audit of eleven of twelve classified `p=31` complete 22-arc classes
+  is only a finite side route; the twelfth representative remains unsourced.
 - No identity that leftover+\(s_+\) is empty at every even \(k\ge4p\).
 
 ## Type I
@@ -2844,6 +2918,12 @@ deleted so the reversal is traceable.
 | `STATUS.md` | Claim table |
 | `GOAL.md` | Acceptance for E(1) / \(L=1/2\) |
 | `solution.md` | Sandwich; Main Theorem (limit) stays OPEN |
+| `src/e1_gmin_m4_prop15728.py` | Necessary Paley-hard direction profile at the open `p=31,R=10` endpoint; no endpoint close |
+| `src/e1_gmin_m4_prop15729.py` | All-prime affine unique-trisecant and co-tangent-extension endpoint reduction; no endpoint close |
+| `evidence/NOTE_2026-08-31_p31_endpoint_paley_hard_profile.md` | Full proof ledger for 15.728 and its explicitly open scope |
+| `evidence/NOTE_2026-08-31_affine_unique_trisecant_reduction.md` | Full proof ledger for 15.729 and the live common-completion gate |
+| `evidence/NOTE_2026-08-31_p31_public_11_of_12_arc_audit.md` | Exhaustive finite certificate for the eleven public `p=31` complete 22-arc classes; the twelfth class and endpoint remain open |
+| `scripts/p31_complete_22arc_public_audit.py` | Deterministic replay of the public eleven-class `c_1` and unique-secant audit |
 | `src/e1_gmin_m4_prop15718.py` | Hash-pinned positive-`z=7` affine/global-join reduction and Johnson-semigroup certificate |
 | `src/e1_gmin_m4_prop15719.py` | Hash-pinned finite projected-semigroup stabilization certificate through grade six |
 | `evidence/NOTE_2026-08-30_p7_infinity7_positive_z7_global_semigroup.md` | Full 15.718--15.719 proof note, artifact manifest, and explicitly non-theorem strategy results |
