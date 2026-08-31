@@ -49,7 +49,9 @@ Proposition 15.721 excludes every boundary of total size at most `p-1` for
 `p>=17`; the first general shell is `p+1`, where strict pair deficit remains.
 Within that shell, 15.724 closes outside slack zero and 15.726 excludes every
 `1<=R<=floor((p-4)/3)`, so any positive survivor has
-`R>=floor((p-1)/3)`; the rest of the shell remains open.
+`R>=floor((p-1)/3)`. Proposition 15.727 excludes equality at
+`p=17,19,23,29` and rigidifies the remaining endpoint cases; the rest of the
+shell remains open.
 Lemma D existence / 2-plane is complete in `A3_PROOF.md`
 and 15.276. Aut-Schur is **false**. Gsum unused.
 
@@ -9075,6 +9077,202 @@ J. Combin. Theory Ser. A **160** (2018), 261--287, published Corollaries
 10--11 (Corollaries 8--9 in the arXiv v4 numbering). The prime-field conic
 threshold is published Theorem 5 (Theorem 3 in arXiv v4),
 doi:10.1016/j.jcta.2018.06.015.
+
+## Proposition 15.727 — endpoint rigidity and the first four prime closes
+
+Continue with the first integer not excluded by Proposition 15.726:
+
+\[
+ R=\left\lfloor{p-1\over3}\right\rfloor,
+ \qquad p=3R+c,\quad c\in\{1,2\}.                \tag{15.727.1}
+\]
+
+Choose (T) of **minimum cardinality** subject to (A=D\setminus T) being an
+arc, and put (t=|T|).  This is stronger than merely choosing (T)
+inclusion-minimal and will be used below.  The usual rich-line deletion
+still gives (1\le t\le R).
+
+Suppose first that (t<R).  At the worst value (t=R-1),
+
+\[
+ |A|-(2(t+1)+2)=p-3t-3=p-3R=c\ge1.              \tag{15.727.2}
+\]
+
+Thus the same Ball--Lavrauw tangent envelope used in Proposition 15.726
+applies for every (1\le t\le R-1).  Equations (15.726.4) and (15.726.8)
+give
+
+\[
+ I:=\sum_{z\in T}s_A(z)\le R,
+ \qquad I\ge F(t):={t(p-1-3t)\over2}.            \tag{15.727.3}
+\]
+
+The quadratic (F) is concave.  Its two endpoint margins on this shorter
+interval are
+
+\[
+\begin{array}{c|cc}
+ &F(1)-R&F(R-1)-R\\ \hline
+ p=3R+1&(R-3)/2&(R-3)/2\\
+ p=3R+2&(R-2)/2&R-2.
+\end{array}                                      \tag{15.727.4}
+\]
+
+They are positive for every prime (p\ge17).  Hence (t<R) contradicts
+(15.727.3), and
+
+\[
+ \boxed{t=R.}                                    \tag{15.727.5}
+\]
+
+Minimum cardinality implies inclusion-minimality, so every integer
+(s_A(z)\ge1).  Combining (15.727.3) and (15.727.5) forces equality
+throughout:
+
+\[
+ \boxed{I=R,\qquad s_A(z)=1\quad(z\in T).}       \tag{15.727.6}
+\]
+
+This also makes the linewise comparison rigid.  On a line containing
+(a\le2) points of (A) and (u) points of (T), the contribution to (I) is
+(u) when (a=2), and zero otherwise.  The slack contribution is
+(h(a+u)).  Equality in the global sum says that every line has equality
+locally.  If (a\le1), this forces (a+u\le2).  If (a=2), the formulas in
+Proposition 15.726 show that
+
+\[
+ h(2+u)=u\quad\Longleftrightarrow\quad u=0,1,2. \tag{15.727.7}
+\]
+
+Consequently every rich line of (D) is either a trisecant with composition
+((a,u)=(2,1)) or a 4-secant with composition ((2,2)).
+
+These rich lines are pairwise disjoint as subsets of (D).  Indeed, if two
+shared a point (v\in D), choose (v) in the deletion demand (n_\ell-2) for
+both lines, and choose arbitrary required points on every other rich line.
+Deleting the union makes every original rich line have occupancy at most
+two, and hence leaves an arc.  Its size is at most
+
+\[
+ \sum_{\ell\ {\rm rich}}(n_\ell-2)-1=R-1,
+\]
+
+contrary to (15.727.5).  Thus, if (x,y) count the trisecants and
+4-secants,
+
+\[
+ \boxed{x+2y=R,\qquad\hbox{all rich lines are }D\hbox{-disjoint}.}
+                                                               \tag{15.727.8}
+\]
+
+There are (c+1+2y) points outside the rich blocks.  The complete projective
+line census is
+
+\[
+\begin{aligned}
+ N_4&=y,&N_3&=R-2y,&N_2&={p(p+1)\over2}-3R,\\
+ N_1&=p+1+3R+2y,&N_0&={p(p-1)\over2}-R-y.        \tag{15.727.9}
+\end{aligned}
+\]
+
+Removing those (c+1+2y) singleton points and one point from every
+4-secant leaves a regular trisecant core of size (3(R-y)): every point lies
+on one trisecant and has exactly (c+3+3y) tangents.  This is a genuine
+all-prime reduction, not an endpoint exclusion by itself.
+
+For the first four primes, however, (15.727.6) contradicts the already
+audited exhaustive arc classifications.  In the standard notation
+
+\[
+ c_1(A)=|\{z\notin A:s_A(z)=1\}|,
+\]
+
+equation (15.727.6) requires (c_1(A)\ge R).  The four comparisons are
+
+\[
+\begin{array}{c|c|c|c}
+ p&|A|&\hbox{required }c_1(A)&\hbox{classified maximum}\\ \hline
+ 17&13&5&4\\
+ 19&14&6&4\\
+ 23&17&7&1\\
+ 29&21&9&0.
+\end{array}                                      \tag{15.727.10}
+\]
+
+Here is the complete branch check behind the table.
+
+For (p=17), Sticker's eight complete 13-arc classes have index-one counts
+(0,0,0,0,0,0,2,3).  If (A) is incomplete, extend it to a 14-arc (K).  If
+(K) is complete, it belongs to the unique complete-14 class; auditing all
+fourteen subarcs (K\setminus\{x\}) gives (c_1\le4).  If (K) is incomplete,
+extend it once more to a 15-arc.  The unique 15-arc class is contained in a
+conic.  Relative to a 13-subarc of that conic, a missing conic point has
+secant index zero, while an off-conic point retains at least
+((17-1)/2-5=3) secants.  Thus this last branch has (c_1=0).
+
+For (p=19), Al-Zangana's exhaustive classification of all 83 projective
+14-arc classes, including 13 incomplete and 70 complete classes, gives
+(c_1\le4) for every class.
+
+For (p=23), the five complete 17-arc classes have index-one counts
+(0,0,1,0,0).  An incomplete 17-arc extends to an 18-arc.  The
+Coolsaet--Sticker complete-arc spectrum has no complete size from 18 through
+23 and a unique size-24 class, the conic.  A missing conic point again has
+index zero, while an off-conic point retains at least
+((23-1)/2-7=4) secants.  Hence this branch has (c_1=0).
+
+For (p=29), Coolsaet--Sticker's exhaustive complete-arc classification has
+exactly two complete 21-arc classes.  Direct exact audits of their published
+representatives give outside secant-index histograms
+
+\[
+ \{4:18,5:75,6:190,7:312,8:189,9:63,10:3\}
+\]
+
+and
+
+\[
+ \{3:3,4:21,5:66,6:187,7:294,8:243,9:27,10:9\},
+\]
+
+so both have (c_1=0).  If (A) is incomplete, extend it until it is complete.
+Segre's odd-order bound caps an arc at (p+1=30), and the classified spectrum
+has no complete sizes 22, 23, or 25 through 29.  Thus the completion has size
+24 or 30.  The unique complete 24-arc is the Klein quartic
+
+\[
+ x^3y+y^3z+z^3x=0.
+\]
+
+Its exact outside secant-index histogram is
+
+\[
+ \{6:28,8:126,9:504,10:84,11:84,12:21\}.
+\]
+
+Thus for a 21-subarc, a missing Klein point has index zero and a point
+outside the Klein arc retains at least (6-3=3) secants.  The unique complete
+30-arc is a conic; a 21-subarc has index zero at a missing conic point, while
+an off-conic point retains at least ((29-1)/2-9=5) secants.  Every incomplete
+branch therefore also has (c_1=0).
+
+It follows that
+
+\[
+ \boxed{R=5,6,7,9\text{ is impossible at }p=17,19,23,29,
+ \text{ respectively}.}                          \tag{15.727.11}
+\]
+
+The current first possible positive slacks at these primes are therefore
+(6,7,8,10).  The first prime whose endpoint remains unexcluded here is
+(p=31), with (R=10).  No new solver run enters this proposition.  From
+(p=31) onward the endpoint is left in the disjoint 3/4-secant normal form;
+larger slack, the rest of residual (ii), Type I, and the limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15727.py`,
+`tests/test_prop15727.py`,
+`evidence/e1_gmin_m4_prop15727.json`, and
+`evidence/NOTE_2026-08-30_endpoint_rigidity_small_prime_close.md`.
 
 ## Proposition 15.723 — paired-cube obstruction to middle floor-plus-two lifts
 

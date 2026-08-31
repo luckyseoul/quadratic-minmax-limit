@@ -31,13 +31,14 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
 - At the first general residual-(ii) boundary `|D|=p+1`, Proposition 15.726
   excludes every positive outside slack
   `1<=R<=floor((p-4)/3)` for primes `p>=17`; consequently any positive
-  survivor must have `R>=floor((p-1)/3)`. This narrows but does not close the
-  shell or residual (ii).
+  survivor must have `R>=floor((p-1)/3)`. Proposition 15.727 rigidifies
+  equality and excludes it at `p=17,19,23,29`; the first unexcluded endpoint
+  is `p=31,R=10`. This narrows but does not close the shell or residual (ii).
 - Exact Paley optimality is **false** (\(m_{10}=13<15\)). E(1) is asymptotic.
 
 Therefore the remaining theorem is **E(1)** on \(n=p^2+1\). The live
 acceptance gate is the corrected dictionary returned by
-`src/e1_main_chain_status.py`; as of 2026-08-30 through Proposition 15.726 it
+`src/e1_main_chain_status.py`; as of 2026-08-30 through Proposition 15.727 it
 reads:
 
 1. **Required bi-tight levels 2 and 3:** TRUE by 15.720. The spectral floor,
@@ -68,7 +69,11 @@ reads:
    outside slack through `max(3,floor(sqrt(p)-5/2))`. Proposition 15.726
    strictly strengthens that historical cutoff: every
    `1<=R<=floor((p-4)/3)` is impossible, so any positive survivor must have
-   `R>=floor((p-1)/3)`. The larger-slack `p+1` shell remains OPEN.
+   `R>=floor((p-1)/3)`. Proposition 15.727 forces equality into disjoint
+   trisecant/4-secant blocks and excludes it at `p=17,19,23,29` using
+   exhaustive arc classifications; the first unexcluded endpoint is
+   `p=31,R=10`. The remaining endpoint cases and larger-slack `p+1` shell
+   remain OPEN.
    The
    attempted parabola-plus-internal close in 15.725 is retracted: its finite
    phase-zero census is data only, with the all-prime character bounds and

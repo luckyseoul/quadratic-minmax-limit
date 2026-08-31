@@ -1,9 +1,10 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-30 (through 15.726; required bi-tight levels 2 and 3 are
+**Date:** 2026-08-30 (through 15.727; required bi-tight levels 2 and 3 are
 closed, signed transport supersedes the old all-finite ladder, the
 first-shell outside pair-slack-zero circle branch is excluded, and positive
-outside slack below `floor((p-1)/3)` is excluded)
+outside slack below `floor((p-1)/3)` is excluded; equality is rigid and is
+also excluded at `p=17,19,23,29`)
 **The quadratic-minmax limit is still OPEN.**
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
@@ -11,7 +12,7 @@ outside slack below `floor((p-1)/3)` is excluded)
 **Mandatory preflight:** read
 `evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md` before launching another
 solver, projection, shell, channel, orbit, or timeout. It accounts for every
-assigned proposition through 15.725 and maps current untracked scripts to
+assigned proposition through 15.727 and maps current untracked scripts to
 closed, dead, necessary-only, or live routes.
 
 **Corrected gate:** the required bi-tight levels 2 and 3 are TRUE by 15.720.
@@ -47,6 +48,57 @@ excluding any of its 56 actual line boundaries in two orbits. The positive
 mesh k=6 are not a close. cpu44
 stays hard-closed.
 
+## 15.727 — first-slack endpoint rigidity and four prime closes
+
+At the first value left by 15.726, put
+`R=floor((p-1)/3)` and choose a **minimum-cardinality** deletion `T` such
+that `A=D\T` is an arc. For every `t=|T|<R`, the tangent envelope still
+meets its size hypothesis. Its incidence lower bound
+
+`I>=F(t)=t(p-1-3t)/2`
+
+is concave, and the endpoint values at `t=1,R-1` both exceed `R`. This
+contradicts the linewise upper bound `I<=R`. Hence `t=R`. Minimum-cardinality
+implies inclusion-minimality, so all `s_A(z)>=1`; equality now forces
+
+`I=R` and `s_A(z)=1` for every `z in T`.
+
+Equality line by line leaves only `(a,u)=(2,1),(2,2)` on a rich line: every
+rich line is a trisecant or 4-secant containing exactly two points of `A`.
+The rich lines are pairwise disjoint as subsets of `D`. Otherwise a shared
+point can satisfy one deletion demand on two rich lines, repairing `D` with
+at most `R-1` deletions. If `x,y` count the two block types, then
+
+`x+2y=R`.
+
+Thus the repaired arc must have at least `R` outside points of secant index
+one: `c_1(A)>=R`. Reusing the already-audited exhaustive arc
+classifications gives:
+
+| `p` | `R` | `|A|` | required `c_1` | maximum available |
+|---:|---:|---:|---:|---:|
+| 17 | 5 | 13 | 5 | 4 |
+| 19 | 6 | 14 | 6 | 4 |
+| 23 | 7 | 17 | 7 | 1 |
+| 29 | 9 | 21 | 9 | 0 |
+
+The incomplete `p=17` and `p=23` branches are exhaustive: extend once; a
+complete extension is covered by the audited complete-arc classes, while an
+incomplete extension reaches the classified conic range, where a subarc has
+no index-one outside point. At `p=29`, the two published complete 21-arcs
+both have `c_1=0`. An incomplete 21-arc extends, by the complete-size gaps,
+and Segre's size-30 cap, either to the unique 24-point Klein arc or to the
+30-point conic. The Klein arc has minimum outside secant index six, so
+deleting three of its points
+leaves indices zero or at least three; the conic branch leaves indices zero
+or at least five. Consequently the endpoint is excluded at all four primes,
+and their first possible positive slacks are `6,7,8,10`.
+
+No new solver run enters the proof. The first prime whose endpoint remains
+open is `p=31`, `R=10`. For all other primes it is reduced to the disjoint
+3/4-secant normal form. Larger slack, the rest of residual (ii), multi-level
+Type I, and `L` remain OPEN.
+
 ## 15.726 — linear low-slack exclusion
 
 At `|D|=p+1`, send an outside point to infinity and let `R>0` be the exact
@@ -74,9 +126,11 @@ both endpoints `t=1,R` it is at least `3R/2>R`, a contradiction. Hence
 `1<=R<=floor((p-4)/3)` is impossible, and any positive outside slack obeys
 `R>=floor((p-1)/3)`.
 
-This supersedes 15.722's square-root cutoff as the active frontier without
-retracting it. The larger-slack `p+1` shell, residual (ii), multi-level
-Type I, and `L` remain OPEN.
+This supersedes 15.722's square-root cutoff without retracting it.
+Proposition 15.727 subsequently treats equality: it excludes the endpoint at
+`p=17,19,23,29` and gives a disjoint rich-block normal form for the other
+primes. The larger-slack `p+1` shell, residual (ii), multi-level Type I, and
+`L` remain OPEN.
 
 ## 15.725 — retracted parabola-family close
 

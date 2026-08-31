@@ -1,6 +1,6 @@
 # History of the problem, and older references
 
-**Date:** 2026-08-30 (through Proposition 15.720)
+**Date:** 2026-08-30 (through Proposition 15.727)
 
 **Sources:** live fetches (MathOverflow API, X thread, Paata’s 2019 blog and CV, arXiv, Goethals–Seidel PDF, Wikipedia/Paley construction).  
 **Not a close:** nothing here proves that \(\lim\alpha_n\) exists. Do not treat sandwich, Paley \(\rho=1\), or conference matrices as settlement.
@@ -2059,6 +2059,29 @@ I, and the quadratic-minmax limit remain open.  The earlier
 `max(3,floor(sqrt(p)-5/2))` result remains the historical content of
 Proposition 15.722, but is no longer the active cutoff.
 
+## 7bv. Endpoint rigidity and four classified prime closes (2026-08-30)
+
+Proposition 15.727 treats equality in the 15.726 cutoff.  At
+`R=floor((p-1)/3)`, a minimum-cardinality deletion to an arc must have exactly
+`R` points.  Equality in both incidence bounds forces every deleted point to
+have secant index one and forces every rich line into a pairwise-disjoint
+trisecant/4-secant block.  Thus the repaired arc satisfies `c_1(A)>=R`.
+
+The already archived classifications contradict that requirement at
+`p=17,19,23`.  A further use of Coolsaet--Sticker [53] closes `p=29`: its two
+complete 21-arcs have exact audited index-one count zero.  Every incomplete
+21-arc extends, by the published complete-arc spectrum, either to the unique
+24-point Klein arc or, at Segre's odd-order size cap, to the 30-point conic.
+The Klein arc has minimum
+outside secant index six, so deleting three points leaves indices zero or at
+least three; the conic branch leaves indices zero or at least five.  Hence
+every 21-arc has `c_1=0`, contradicting the required nine.
+
+The endpoint is therefore excluded at `p=17,19,23,29`, and the first
+unexcluded endpoint is `p=31,R=10`.  This is a classification-assisted
+narrowing, not a closure of residual (ii).  No new long solver or profile
+census is involved.
+
 ---
 
 ## 8. What is not in the older literature
@@ -2117,7 +2140,7 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 41. P.-A. Bernard, N. Crampé, and L. Vinet, *A bivariate Q-polynomial structure for the non-binary Johnson scheme*, J. Combin. Theory Ser. A **202** (2024), 105829, [arXiv:2306.01882](https://arxiv.org/abs/2306.01882) (adjacent Johnson-scheme machinery; not the parity-majorant or affine pair-deficit theorem of 15.669).
 42. S. Ball and B. Csajbók, *On sets of points with few odd secants*, [arXiv:1711.10876](https://arxiv.org/abs/1711.10876) (odd-secant bounds for \(q+2\)-point projective sets; not the eight-point split-type census of 15.670).
 43. M. Kiermaier and S. Kurz, *Maximal integral point sets in affine planes over finite fields*, [arXiv:1401.2825](https://arxiv.org/abs/1401.2825) (prescribed directions and Paley-clique context; not the boundary parity-floor budget of 15.670).
-44. S. Ball and M. Lavrauw, *Planar arcs*, J. Combin. Theory Ser. A **160** (2018), 261--287, [doi:10.1016/j.jcta.2018.06.015](https://doi.org/10.1016/j.jcta.2018.06.015), [arXiv:1705.10940](https://arxiv.org/abs/1705.10940) (modern primary restatement of Segre's odd-order arc theorems; the `q`-arc conic theorem is used in 15.673, the complete `(q-1)`/`(q-2)` classifications and prime-field conic threshold are used for the low-slack exclusion in 15.722, and the polynomial tangent envelope is used in 15.683 and 15.726).
+44. S. Ball and M. Lavrauw, *Planar arcs*, J. Combin. Theory Ser. A **160** (2018), 261--287, [doi:10.1016/j.jcta.2018.06.015](https://doi.org/10.1016/j.jcta.2018.06.015), [arXiv:1705.10940](https://arxiv.org/abs/1705.10940) (modern primary restatement of Segre's odd-order arc theorems; the `q`-arc conic theorem is used in 15.673, the complete `(q-1)`/`(q-2)` classifications and prime-field conic threshold are used for the low-slack exclusion in 15.722, and the polynomial tangent envelope is used in 15.683, 15.726, and 15.727).
 45. V. F. Lev, *Point distribution and perfect directions in* \(F_p^2\), [arXiv:1903.01518](https://arxiv.org/abs/1903.01518) (Rédei-type direction bounds adjacent to, but not implying, the determined-direction/type-budget argument of 15.674).
 46. G. Van de Voorde, *On sets without tangents and exterior sets of a conic*, [arXiv:1201.0484](https://arxiv.org/abs/1201.0484) (adjacent external-conic and determined-direction geometry; not the Paley phase-budget exclusion of 15.676).
 47. P. Amireddy, S. Behera, S. Srinivasan, and M. Sudan, *A Near-Optimal Polynomial Distance Lemma over Boolean Slices*, ICALP 2025, [doi:10.4230/LIPIcs.ICALP.2025.11](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2025.11) (Lemma 2 supplies the exact finite degree-two support floor used in 15.642 and 15.677).
@@ -2126,7 +2149,7 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 50. P. Amireddy, A. R. Behera, S. Srinivasan, M. Sudan, and S. V. Willumsgaard, *Low-Degree Testing Over Boolean Slices*, [arXiv:2608.21730](https://arxiv.org/abs/2608.21730) (robust low-degree testing on slices; not an exact distance-floor or Paley affine-boundary theorem).
 51. Y. Filmus, *Junta threshold for low degree Boolean functions on the slice*, [arXiv:2203.04760](https://arxiv.org/abs/2203.04760) (proves the sharp `k>=2d` threshold for bounded-size juntas; adjacent context, not the explicit paired-cube density bound in 15.680).
 52. M. Kiermaier, J. Mannaert, and A. Wassermann, *The paired construction for Boolean functions on the slice*, [arXiv:2510.02804](https://arxiv.org/abs/2510.02804) (small-support constructions and exact degrees; does not classify all Boolean quadratics or imply the mass-ten exclusion in 15.680).
-53. K. Coolsaet and H. Sticker, *The complete k-arcs of PG(2,27) and PG(2,29)*, J. Combin. Des. **19** (2011), 111--130, [doi:10.1002/jcd.20261](https://doi.org/10.1002/jcd.20261), [open PDF](https://backoffice.biblio.ugent.be/download/1247338/1247417) (Table 5 gives the exhaustive projective class counts 10 and 5 for all 25- and 26-arcs in `PG(2,29)`, used in 15.681).
+53. K. Coolsaet and H. Sticker, *The complete k-arcs of PG(2,27) and PG(2,29)*, J. Combin. Des. **19** (2011), 111--130, [doi:10.1002/jcd.20261](https://doi.org/10.1002/jcd.20261), [open PDF](https://backoffice.biblio.ugent.be/download/1247338/1247417) (Table 5 gives the exhaustive projective class counts 10 and 5 for all 25- and 26-arcs in `PG(2,29)`, used in 15.681; the complete-arc spectrum and explicit 21-/24-arc representatives are used in 15.727).
 54. J. M. Chao and H. Kaneta, *Classical arcs in PG(r,q) for 23 <= q <= 29*, Discrete Math. **226** (2001), 377--385 (records maximum nonclassical plane-arc size 24 at `q=29`; independent prior confirmation of 15.681's classification consequence).
 55. K. Coolsaet, *The Complete Arcs of PG(2,31)*, J. Combin. Des. **23** (2015), 522--533, [doi:10.1002/jcd.21410](https://doi.org/10.1002/jcd.21410) (exhaustive complete-arc classification used in 15.682; in particular, there are no complete arcs of sizes 23 through 31).
 56. K. Coolsaet and H. Sticker, *A full classification of the complete k-arcs of PG(2,23) and PG(2,25)*, J. Combin. Des. **17** (2009), 459--477, [doi:10.1002/jcd.20211](https://doi.org/10.1002/jcd.20211) (complete-arc spectrum and class counts in `PG(2,23)`, used in 15.684 to force every arc of size at least 18 onto a conic).

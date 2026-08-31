@@ -1,4 +1,21 @@
-# Status (2026-08-30; through Proposition 15.726)
+# Status (2026-08-30; through Proposition 15.727)
+
+**15.727 FORCES the first unexcluded slack into a disjoint rich-block
+normal form and EXCLUDES that endpoint at `p=17,19,23,29`.** Put
+`R=floor((p-1)/3)` and choose a minimum-cardinality deletion `T` such that
+`A=D\T` is an arc. The 15.726 tangent envelope still applies whenever
+`t=|T|<R`; concavity at `t=1,R-1` makes its incidence lower bound exceed
+`R`. Hence `t=R`. The linewise upper bound and minimality then force
+`sum_(z in T)s_A(z)=R` and `s_A(z)=1` for every deleted point. Equality also
+forces every rich line of `D` to be a trisecant or 4-secant containing
+exactly two points of `A`. Minimum cardinality makes those rich lines
+pairwise `D`-disjoint; if their counts are `x,y`, then `x+2y=R`. Thus the
+repaired arc must have `c_1(A)>=R`. Existing exhaustive arc classifications
+give maxima `4,4,1,0` instead of the required `5,6,7,9` for the resulting
+13-, 14-, 17-, and 21-arcs at `p=17,19,23,29`. Their first possible positive
+slacks are now at least `6,7,8,10`. No new solver run is used. From `p=31` onward the
+endpoint remains open in the disjoint 3/4-secant normal form, as do larger
+slack, residual (ii), multi-level Type I, and `L`.
 
 **15.726 EXCLUDES every positive outside slack**
 `1<=R<=floor((p-4)/3)` **at `|D|=p+1`, for every prime `p>=17`.**
@@ -13,14 +30,15 @@ that dual line as a component, contradicting the envelope's nonzero value
 at an `A`-secant through `z`. Hence
 `R>=t(p-1-3t)/2`. Concavity in `t`, evaluated at `1` and `R`, contradicts
 `3R<=p-4`. Thus any positive survivor must now satisfy
-`R>=floor((p-1)/3)`. This strictly strengthens 15.722's historical
-square-root cutoff, but does not close the `p+1` shell: larger slack,
+`R>=floor((p-1)/3)`. Proposition 15.727 subsequently excludes equality at
+`p=17,19,23,29` and rigidifies equality for every other prime. This does not
+close the `p+1` shell: the endpoint from `p=31` onward, larger slack,
 residual (ii), multi-level Type I, and `L` remain OPEN.
 
 **15.725's attempted parabola-plus-internal family close is RETRACTED.** Its
 finite phase-zero census is exact, but the all-prime character bounds and
 opposite product sign are unproved. It has no downstream role. The latest
-proved narrowing is 15.726 above.
+proved narrowing is 15.727 above.
 
 **15.724 EXCLUDES the full Miquelian-circle boundary, and therefore the
 entire outside pair-slack-zero branch at `|D|=p+1`, for every `p>=17`.**
@@ -34,7 +52,8 @@ with scaled mass eight. Proposition 15.688 requires mass at least
 historical argument excludes every positive outside slack
 `R<=max(3,floor(sqrt(p)-5/2))`, and 15.726 strengthens the active cutoff to
 `R<=floor((p-4)/3)`, so any positive survivor must have
-`R>=floor((p-1)/3)`. The small-prime remainders, even
+`R>=floor((p-1)/3)`. Proposition 15.727 excludes equality at
+`p=17,19,23,29`. The endpoint from `p=31` onward, even
 `k>4p`, residual (ii), Type I, and `L` remain OPEN.
 
 **15.723 PROVES the disputed middle floor-plus-two exclusion with exactly
@@ -80,7 +99,9 @@ internal lemmas remain valid. At `|D|=p+1`, 15.676 closes pair-deficit
 equality, 15.722 closes outside pair slack one, and 15.724 closes slack zero.
 Proposition 15.722 additionally excludes positive slack through
 `max(3,floor(sqrt(p)-5/2))`, and 15.726 strengthens this to
-`floor((p-4)/3)`; only slack `R>=floor((p-1)/3)` remains. The small-prime remainders, even
+`floor((p-4)/3)`. Proposition 15.727 additionally excludes equality at
+`p=17,19,23,29`; the endpoint from `p=31` onward and larger slack remain. The
+small-prime remainders, even
 `k>4p`, residual (ii), Type I, and `L` remain OPEN.
 
 **15.720 PROVES the required level-2 and level-3 bi-tight alternatives are
