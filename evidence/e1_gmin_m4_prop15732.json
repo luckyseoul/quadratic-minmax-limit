@@ -1,0 +1,470 @@
+{
+  "all_prime_scope": "every conditional endpoint repair family of Proposition 15.730",
+  "cleared_transition_rows": [
+    {
+      "R": 10,
+      "c": 1,
+      "c1_gauge": {
+        "cycle_sum_still_a_coboundary": true,
+        "envelope_change": "Phi_A -> Phi_A+mu_A P_A",
+        "potential_change": "Theta_A -> Theta_A+mu_A P_A^3",
+        "quotient_change": "Q_(a,z) -> Q_(a,z)+mu_A' L_z^3-mu_A L_a^3"
+      },
+      "checks": {
+        "c1_gauge_is_a_vertex_coboundary": true,
+        "cleared_degrees_match": true,
+        "quotient_degree": true,
+        "repair_size": true
+      },
+      "cleared_edge_degree": 66,
+      "cleared_edge_identity": "Theta_A'-Theta_A=P_C^3 Q_(a,z)",
+      "cleared_vertex_potential": "Theta_A=P_A^2 Phi_A",
+      "closed_walk_reason": "the Theta terms telescope vertex by vertex",
+      "closed_walk_sum": "sum_edges P_C^3 Q_(a,z)=0",
+      "covered_linear_functionals": "evaluation, coefficient extraction, differentiation, and polarization",
+      "envelope_degree_d": 22,
+      "independent_linear_holonomy_obstruction": false,
+      "linear_functionals_preserve_zero": true,
+      "p": 31,
+      "proved": true,
+      "repair_size_k": 22,
+      "transition_quotient_degree": 3,
+      "vertex_line_product": "P_A=product_{u in A} L_u",
+      "vertex_potential_degree": 66
+    },
+    {
+      "R": 13,
+      "c": 2,
+      "c1_gauge": {
+        "cycle_sum_still_a_coboundary": true,
+        "envelope_change": "Phi_A -> Phi_A+mu_A P_A",
+        "potential_change": "Theta_A -> Theta_A+mu_A P_A^3",
+        "quotient_change": "Q_(a,z) -> Q_(a,z)+mu_A' L_z^3-mu_A L_a^3"
+      },
+      "checks": {
+        "c1_gauge_is_a_vertex_coboundary": true,
+        "cleared_degrees_match": true,
+        "quotient_degree": true,
+        "repair_size": true
+      },
+      "cleared_edge_degree": 86,
+      "cleared_edge_identity": "Theta_A'-Theta_A=P_C^3 Q_(a,z)",
+      "cleared_vertex_potential": "Theta_A=P_A^2 Phi_A",
+      "closed_walk_reason": "the Theta terms telescope vertex by vertex",
+      "closed_walk_sum": "sum_edges P_C^3 Q_(a,z)=0",
+      "covered_linear_functionals": "evaluation, coefficient extraction, differentiation, and polarization",
+      "envelope_degree_d": 28,
+      "independent_linear_holonomy_obstruction": false,
+      "linear_functionals_preserve_zero": true,
+      "p": 41,
+      "proved": true,
+      "repair_size_k": 29,
+      "transition_quotient_degree": 2,
+      "vertex_line_product": "P_A=product_{u in A} L_u",
+      "vertex_potential_degree": 86
+    }
+  ],
+  "direction_component_from_15_728_profiles_available": false,
+  "endpoint_excluded": false,
+  "finite_configuration_search_used": false,
+  "multi_level_type_I_closed": false,
+  "near_pairing_tangent_rows": [
+    {
+      "A_tangent_ceiling": 12,
+      "R": 10,
+      "c": 1,
+      "checks": {
+        "deletion_secant_floor_nonnegative": true,
+        "profile_uses_p_parallel_lines": true,
+        "profile_uses_p_plus_one_points": true,
+        "root_count_cannot_force_component": true,
+        "tangent_ceiling_is_R_plus_two": true
+      },
+      "deleted_point_count": 10,
+      "direction_component_forced_by_known_distinct_roots": false,
+      "envelope_degree": 22,
+      "intersection_multiplicity_used": false,
+      "known_tangent_dual_points_are_distinct": true,
+      "near_pairing_profile": {
+        "double_fibres": 15,
+        "empty_fibres": 14,
+        "singleton_fibres": 2
+      },
+      "p": 31,
+      "proved": true,
+      "repair_size_k": 22,
+      "root_deficit_at_least": 11,
+      "roots_needed_to_force_direction_component": 23,
+      "surviving_A_secant_floor": 5
+    },
+    {
+      "A_tangent_ceiling": 15,
+      "R": 13,
+      "c": 2,
+      "checks": {
+        "deletion_secant_floor_nonnegative": true,
+        "profile_uses_p_parallel_lines": true,
+        "profile_uses_p_plus_one_points": true,
+        "root_count_cannot_force_component": true,
+        "tangent_ceiling_is_R_plus_two": true
+      },
+      "deleted_point_count": 13,
+      "direction_component_forced_by_known_distinct_roots": false,
+      "envelope_degree": 28,
+      "intersection_multiplicity_used": false,
+      "known_tangent_dual_points_are_distinct": true,
+      "near_pairing_profile": {
+        "double_fibres": 20,
+        "empty_fibres": 19,
+        "singleton_fibres": 2
+      },
+      "p": 41,
+      "proved": true,
+      "repair_size_k": 29,
+      "root_deficit_at_least": 14,
+      "roots_needed_to_force_direction_component": 29,
+      "surviving_A_secant_floor": 7
+    }
+  ],
+  "next_gate": "historical at this stage: Proposition 15.733 used the simultaneous p31 baselines and Proposition 15.734 then closed every k=4p boundary for p>=13 without a first-jet bridge; the live residual front is p=11 sharp equality or even k>4p",
+  "non_walsh_residual_ii_closed": false,
+  "nontrivial_linear_cycle_obstruction_available": false,
+  "p31_Paley_hard_rows": [
+    {
+      "15_728_nonrich_Paley_hard_direction_floor": 4,
+      "R": 10,
+      "checks": {
+        "15_728_direction_floor_positive": true,
+        "endpoint_block_row": true,
+        "general_barrier": true,
+        "p31_envelope_degree": true,
+        "p31_tangent_ceiling": true
+      },
+      "component_forced_in_any_such_direction": false,
+      "envelope_degree": 22,
+      "four_secants_y": 0,
+      "p": 31,
+      "proved": true,
+      "tangents_per_such_direction_at_most": 12,
+      "trisecants_x": 10
+    },
+    {
+      "15_728_nonrich_Paley_hard_direction_floor": 5,
+      "R": 10,
+      "checks": {
+        "15_728_direction_floor_positive": true,
+        "endpoint_block_row": true,
+        "general_barrier": true,
+        "p31_envelope_degree": true,
+        "p31_tangent_ceiling": true
+      },
+      "component_forced_in_any_such_direction": false,
+      "envelope_degree": 22,
+      "four_secants_y": 1,
+      "p": 31,
+      "proved": true,
+      "tangents_per_such_direction_at_most": 12,
+      "trisecants_x": 8
+    },
+    {
+      "15_728_nonrich_Paley_hard_direction_floor": 6,
+      "R": 10,
+      "checks": {
+        "15_728_direction_floor_positive": true,
+        "endpoint_block_row": true,
+        "general_barrier": true,
+        "p31_envelope_degree": true,
+        "p31_tangent_ceiling": true
+      },
+      "component_forced_in_any_such_direction": false,
+      "envelope_degree": 22,
+      "four_secants_y": 2,
+      "p": 31,
+      "proved": true,
+      "tangents_per_such_direction_at_most": 12,
+      "trisecants_x": 6
+    },
+    {
+      "15_728_nonrich_Paley_hard_direction_floor": 7,
+      "R": 10,
+      "checks": {
+        "15_728_direction_floor_positive": true,
+        "endpoint_block_row": true,
+        "general_barrier": true,
+        "p31_envelope_degree": true,
+        "p31_tangent_ceiling": true
+      },
+      "component_forced_in_any_such_direction": false,
+      "envelope_degree": 22,
+      "four_secants_y": 3,
+      "p": 31,
+      "proved": true,
+      "tangents_per_such_direction_at_most": 12,
+      "trisecants_x": 4
+    },
+    {
+      "15_728_nonrich_Paley_hard_direction_floor": 8,
+      "R": 10,
+      "checks": {
+        "15_728_direction_floor_positive": true,
+        "endpoint_block_row": true,
+        "general_barrier": true,
+        "p31_envelope_degree": true,
+        "p31_tangent_ceiling": true
+      },
+      "component_forced_in_any_such_direction": false,
+      "envelope_degree": 22,
+      "four_secants_y": 4,
+      "p": 31,
+      "proved": true,
+      "tangents_per_such_direction_at_most": 12,
+      "trisecants_x": 2
+    },
+    {
+      "15_728_nonrich_Paley_hard_direction_floor": 9,
+      "R": 10,
+      "checks": {
+        "15_728_direction_floor_positive": true,
+        "endpoint_block_row": true,
+        "general_barrier": true,
+        "p31_envelope_degree": true,
+        "p31_tangent_ceiling": true
+      },
+      "component_forced_in_any_such_direction": false,
+      "envelope_degree": 22,
+      "four_secants_y": 5,
+      "p": 31,
+      "proved": true,
+      "tangents_per_such_direction_at_most": 12,
+      "trisecants_x": 0
+    }
+  ],
+  "p_plus_one_shell_closed": false,
+  "phase_bridge_proved": false,
+  "product_over_repairs_square_class_bridge_universally_available": false,
+  "prop": "15.732",
+  "proved": true,
+  "quadratic_minmax_limit_closed": false,
+  "result_status": "proved method barrier",
+  "rich_direction_first_jet_proved": true,
+  "rich_direction_first_jet_rows": [
+    {
+      "R": 10,
+      "c": 1,
+      "c1_first_jet_gauge_invariant": true,
+      "checks": {
+        "gauge_terms_vanish_to_order_three": true,
+        "parent_exactness": true,
+        "quotient_has_positive_degree": true
+      },
+      "edge_quotient_value": "Q_(a,z)(q)=0",
+      "first_jet_identity": "P_(C-{b})(q) L_b j_q^1(Q_(a,z)) = Phi_A'(q) L_z^2-Phi_A(q) L_a^2",
+      "first_jet_nonzero": true,
+      "first_jet_square_character": "chi_p(P_B(q))",
+      "gauge_reason": "the lift ambiguity changes Q only by cubes vanishing to order three at q",
+      "interpretation": "the first jet is the smallest local transition datum that a new signed residual-to-envelope bridge could constrain",
+      "nonzero_reason": "two nonproportional cotangent forms L_a,L_z cannot have nonzero scalar squares equal",
+      "normalized_first_jet_formula": "j_q^1 Q_i(j,k)=(K/P_B(q)) (l_k^2/Delta_(i,k)^2-l_j^2/Delta_(i,j)^2)/l_i",
+      "normalizing_scalar": "K=Phi_(i,j)(q) Delta_(i,j)^2 is independent of the selected pair",
+      "normalizing_scalar_is_nonzero_square": true,
+      "p": 31,
+      "phase_or_lift_formula_currently_proved": false,
+      "proved": true,
+      "residual_parity_mismatch": "P_B(q) is repair-coloured, while residual parity records the symmetric difference of the A- and T-tangent fibres",
+      "secant_values_nonzero": "Phi_A(q) and Phi_A'(q) are nonzero",
+      "setup": "A=C union {a}, A'=C union {z}; b is the retained point on the rich line and q is that line's dual point"
+    },
+    {
+      "R": 13,
+      "c": 2,
+      "c1_first_jet_gauge_invariant": true,
+      "checks": {
+        "gauge_terms_vanish_to_order_three": true,
+        "parent_exactness": true,
+        "quotient_has_positive_degree": true
+      },
+      "edge_quotient_value": "Q_(a,z)(q)=0",
+      "first_jet_identity": "P_(C-{b})(q) L_b j_q^1(Q_(a,z)) = Phi_A'(q) L_z^2-Phi_A(q) L_a^2",
+      "first_jet_nonzero": true,
+      "first_jet_square_character": "chi_p(P_B(q))",
+      "gauge_reason": "the lift ambiguity changes Q only by cubes vanishing to order three at q",
+      "interpretation": "the first jet is the smallest local transition datum that a new signed residual-to-envelope bridge could constrain",
+      "nonzero_reason": "two nonproportional cotangent forms L_a,L_z cannot have nonzero scalar squares equal",
+      "normalized_first_jet_formula": "j_q^1 Q_i(j,k)=(K/P_B(q)) (l_k^2/Delta_(i,k)^2-l_j^2/Delta_(i,j)^2)/l_i",
+      "normalizing_scalar": "K=Phi_(i,j)(q) Delta_(i,j)^2 is independent of the selected pair",
+      "normalizing_scalar_is_nonzero_square": true,
+      "p": 41,
+      "phase_or_lift_formula_currently_proved": false,
+      "proved": true,
+      "residual_parity_mismatch": "P_B(q) is repair-coloured, while residual parity records the symmetric difference of the A- and T-tangent fibres",
+      "secant_values_nonzero": "Phi_A(q) and Phi_A'(q) are nonzero",
+      "setup": "A=C union {a}, A'=C union {z}; b is the retained point on the rich line and q is that line's dual point"
+    }
+  ],
+  "square_class_product_rows": [
+    {
+      "R": 10,
+      "c": 1,
+      "checks": {
+        "c2_has_a_trisecant": true,
+        "endpoint_block_row": true,
+        "four_secant_full_mask_recoverable": true,
+        "trisecant_full_mask_missing": true
+      },
+      "four_secant_mask_span": {
+        "block_size": 4,
+        "full_block_mask": "1111",
+        "full_block_mask_in_span": true,
+        "generator_masks": [
+          "1100",
+          "1010",
+          "1001",
+          "0110",
+          "0101",
+          "0011"
+        ],
+        "proved": true,
+        "span_is_even_weight_subspace": true,
+        "span_rank": 3,
+        "span_size": 8
+      },
+      "four_secants_y": 3,
+      "full_product_on_a_trisecant_recoverable_modulo_squares": false,
+      "p": 31,
+      "product_bridge_blocked_for_every_rich_target": true,
+      "product_bridge_blocked_for_some_rich_target": true,
+      "proved": true,
+      "scope": "products and quotients of repair-selected contributions after passing to square classes; this is not a no-go for every possible nonlinear signed bridge",
+      "sole_trisecant_target_exception": false,
+      "trisecant_mask_span": {
+        "block_size": 3,
+        "full_block_mask": "111",
+        "full_block_mask_in_span": false,
+        "generator_masks": [
+          "110",
+          "101",
+          "011"
+        ],
+        "proved": true,
+        "span_is_even_weight_subspace": true,
+        "span_rank": 2,
+        "span_size": 4
+      },
+      "trisecants_x": 4
+    },
+    {
+      "R": 13,
+      "c": 2,
+      "checks": {
+        "c2_has_a_trisecant": true,
+        "endpoint_block_row": true,
+        "four_secant_full_mask_recoverable": true,
+        "trisecant_full_mask_missing": true
+      },
+      "four_secant_mask_span": {
+        "block_size": 4,
+        "full_block_mask": "1111",
+        "full_block_mask_in_span": true,
+        "generator_masks": [
+          "1100",
+          "1010",
+          "1001",
+          "0110",
+          "0101",
+          "0011"
+        ],
+        "proved": true,
+        "span_is_even_weight_subspace": true,
+        "span_rank": 3,
+        "span_size": 8
+      },
+      "four_secants_y": 3,
+      "full_product_on_a_trisecant_recoverable_modulo_squares": false,
+      "p": 41,
+      "product_bridge_blocked_for_every_rich_target": true,
+      "product_bridge_blocked_for_some_rich_target": true,
+      "proved": true,
+      "scope": "products and quotients of repair-selected contributions after passing to square classes; this is not a no-go for every possible nonlinear signed bridge",
+      "sole_trisecant_target_exception": false,
+      "trisecant_mask_span": {
+        "block_size": 3,
+        "full_block_mask": "111",
+        "full_block_mask_in_span": false,
+        "generator_masks": [
+          "110",
+          "101",
+          "011"
+        ],
+        "proved": true,
+        "span_is_even_weight_subspace": true,
+        "span_rank": 2,
+        "span_size": 4
+      },
+      "trisecants_x": 7
+    }
+  ],
+  "title": "Exact repair cycles and phase-bridge barriers",
+  "top_level_gates_changed": false,
+  "triangle_cycle_rows": [
+    {
+      "c": 1,
+      "checks": {
+        "all_terms_have_one_degree": true,
+        "parent_exactness": true,
+        "triangle_is_closed": true
+      },
+      "endpoint_contradiction_from_identity_alone": false,
+      "formal_walk": {
+        "closed": true,
+        "edge_count": 3,
+        "potential_coefficients_after_collection": {},
+        "proved": true,
+        "telescopes_to_zero": true,
+        "vertices": [
+          "A_ij",
+          "A_ik",
+          "A_jk",
+          "A_ij"
+        ]
+      },
+      "identity_after_common_factor_cancellation": "L_i^3 Q_(j,k)^i + L_k^3 Q_(i,j)^k + L_j^3 Q_(k,i)^j = 0",
+      "identity_degree": 6,
+      "identity_is_automatic_coboundary": true,
+      "orientation": "A_ij -> A_ik -> A_jk -> A_ij",
+      "p": 31,
+      "proved": true,
+      "quotient_degree": 3,
+      "support": "a K3 trisecant factor or any triangular face of a J(4,2) four-secant factor"
+    },
+    {
+      "c": 2,
+      "checks": {
+        "all_terms_have_one_degree": true,
+        "parent_exactness": true,
+        "triangle_is_closed": true
+      },
+      "endpoint_contradiction_from_identity_alone": false,
+      "formal_walk": {
+        "closed": true,
+        "edge_count": 3,
+        "potential_coefficients_after_collection": {},
+        "proved": true,
+        "telescopes_to_zero": true,
+        "vertices": [
+          "A_ij",
+          "A_ik",
+          "A_jk",
+          "A_ij"
+        ]
+      },
+      "identity_after_common_factor_cancellation": "L_i^3 Q_(j,k)^i + L_k^3 Q_(i,j)^k + L_j^3 Q_(k,i)^j = 0",
+      "identity_degree": 5,
+      "identity_is_automatic_coboundary": true,
+      "orientation": "A_ij -> A_ik -> A_jk -> A_ij",
+      "p": 41,
+      "proved": true,
+      "quotient_degree": 2,
+      "support": "a K3 trisecant factor or any triangular face of a J(4,2) four-secant factor"
+    }
+  ]
+}

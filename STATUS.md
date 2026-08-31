@@ -1,4 +1,94 @@
-# Status (2026-08-31; through Proposition 15.731)
+# Status (2026-08-31; through Proposition 15.737)
+
+**15.737 PROVES that residual (ii) is empty at `p=11` for
+`k=44,46,48`, for every boundary size.** For layer index `t=0,1,2`, the
+support bound leaves `32,28,24` isolated projective vertices, so signed PSL
+transport gives `I=0` and even directional odd-fibre counts. A direct p=11
+floor replay leaves at least `5-t` exact hard low baselines, all `b=2` or
+all `b=10`; their coefficient offsets 4 and 3 prevent mixing. Proposition
+15.736's exact sharp-Boolean catalog excludes the `b=2` branch. In the
+`b=10` branch, define
+`M_H(L)=sum_e chi(e)(L(u)-L(v))^2`. Each hard literal baseline makes one
+projective zero of this homogeneous binary quadratic, so the at least
+`5-t>=3` hard directions force `M_H` identically zero. But each surviving
+all-equal triple has moment
+`(i-j)^2+(i-k)^2+(j-k)^2`; after normalization this is
+`2(r^2-r+1)`, never zero because `-3=8` is nonsquare modulo 11. Thus the
+last p11 branch is impossible. The argument stops sharply at `t=3`: only
+two hard stars are forced and lift excess eight reaches equality.
+
+**15.736 is an exhaustive finite certificate, not a general classification
+theorem.** On `J(11,6)`, 407 independent third-difference identities have
+nullspace exactly the 55-dimensional quadratic evaluation space. Exact
+CP-SAT exclusion proves that the 55 omitted-pair and 165 all-equal-triple
+supports exhaust the Boolean quadratics of sharp support 84. Their coefficient
+offsets are 2 and 4. This kills the p11 hard-`b=2` branch and supplies the
+triple normal form used symbolically by 15.737. No external
+Filmus--Vinciguerra restriction theorem is used.
+
+**15.735 PROVES that the next two even residual layers
+`k=4p+2,4p+4` are empty for every prime `p>=13` and every boundary size.**
+The isolated-chart, common-residue, exact-baseline, and opposite small-mean
+argument of 15.734 persists for layer indices `t=1,2`; its forced means remain
+`8,6,8`, below both the nonzero-`b` and integral-lift floors. Together,
+15.734--15.735 and 15.737 close
+`k in {4p,4p+2,4p+4}` for **every prime `p>=11`**, with no boundary-size
+hypothesis. Critical `p=5,7`, `p=11` with `k>=50`, and `p>=13` with
+`k>=4p+6` remain open; therefore residual (ii), multi-level Type I, and `L`
+remain OPEN.
+
+**15.734 PROVES that critical residual (ii), `k=4p` (equivalently
+`|H|=4p+1`), is empty for every prime `p>=13`, with no boundary-size
+hypothesis.** At most `8p+2` projective vertices meet an edge of `H`, so an
+isolated vertex exists and signed PSL transport sends it to infinity. In that
+chart `I=0`, the boundary is all finite, and every directional odd-fibre count
+is even. Exact type budgets, parity floors, the positive-quadrature equality
+baselines from 15.652, and the two-unit lift obstruction from 15.688 leave
+three hard-type branches. Their coefficient offsets are respectively `4`,
+`5`, and `3`; with `I=0` these force `s=4,5,3`. Opposite-type edge accounting
+then forces a phase-zero direction of scaled mean `8,6,8`, respectively. A
+nonzero odd-fibre set costs at least `p-1`, while `b=0` is a nonzero integral
+quadratic lift of mass at least `p-3`; both exceed these means for `p>=13`.
+Thus the **entire critical layer is CLOSED for `p>=13`**, not merely the
+`|D|=p+1` endpoint. Propositions 15.735 and 15.737 subsequently extend the
+first-three-layer close as stated above.
+
+**15.733 PROVES that the historical `p=31,R=10`, `|D|=32` endpoint is
+impossible by simultaneous baseline coefficients.** The fifteen hard
+mean-30 directions are all exact `b=2` baselines: mixing the possible
+`b=2` and `b=30` baselines would require incompatible residues modulo 15.
+Writing `rho=(I+P-4)/15` and `s=rho+P`, opposite-type mass forces `s=8`;
+all opposite-type means are then 32. Their only floor-compatible nonzero
+baselines require `15|(I-4)` or `15|(I-5)`, both incompatible with
+`I=124-16P`, `1<=P<=7`. Hence every opposite direction has `b=0`, and the
+global odd-fibre sum would force the final hard direction to have `b=42>30`.
+Proposition 15.734 subsumes this endpoint close.
+
+Statements below that call the `p=31` endpoint, critical `p=11`, or any of
+the first three `p>=11` layers open are proposition-time history and are
+superseded by 15.733--15.737.
+
+**15.732 PROVES that the proposed linear repair-cycle attack is exact and
+cannot supply endpoint holonomy; it also isolates the first local datum a
+real phase bridge must control.** With `P_A=product_(u in A)L_u` and
+`Theta_A=P_A^2 Phi_A`, every coherently normalized adjacent transition is
+`Theta_A'-Theta_A=P_(A intersect A')^3 Q_(a,z)`. Hence every closed-walk
+sum telescopes identically, before evaluation, differentiation,
+polarization, or coefficient extraction. The `p=3R+1` envelope-pencil
+change adds another vertex coboundary, so it does not rescue the cycle.
+At the dual point of the swapped rich line, `Q` vanishes but has a nonzero,
+gauge-invariant first jet whose square character is the repair-coloured
+product `chi(P_B(q))`; the recorded residual parity data determine only the
+symmetric difference of the two repair colours, not this factor. Two other
+natural bridges are now ruled out: a nonrich `b=2` near-pairing direction
+has at most `R+2` repair tangents against envelope degree `2R+2` (12 against
+22 at `p=31`), so root counting cannot force a direction component; and
+pair-selection masks on a trisecant cannot recover its full product modulo
+squares. This is a **proved method barrier, not endpoint narrowing**. The
+live alternatives are a genuinely new signed-lift formula for the first jet
+or a direct attack on the simultaneous exact p=31 Paley-hard baseline
+identities. Endpoint equality, larger slack, residual (ii), multi-level
+Type I, and `L` remain OPEN.
 
 **15.731 PROVES tangent-envelope existence and exact uniqueness/pencil
 structure for every endpoint repair, plus a low-degree swap law; it does not
@@ -15,9 +105,10 @@ after aligning their Segre normalization,
 quadratic in the unique-envelope residue and is a cubic class modulo
 `span{L_a^3,L_z^3}` in the pencil residue. The exact unresolved implication
 is to exclude the 15.727/15.730 common completion under the residual
-direction, phase, and lift constraints. Deriving a nontrivial repair-graph
-cycle identity from these transition coordinates is the preferred next
-attack; no such identity or phase bridge is proved here. Endpoint equality,
+direction, phase, and lift constraints. Proposition 15.732 subsequently
+proves that the naturally cleared repair-graph circulation is an exact
+coboundary and isolates the nonzero rich-direction first jet left after that
+no-go. No phase bridge is proved. Endpoint equality,
 larger slack, residual (ii), multi-level Type I, and `L` remain OPEN.
 
 **15.730 PROVES that every surviving endpoint carries an exact
@@ -37,9 +128,9 @@ does not close the endpoint. The previously recorded Bartoli--Storme
 hypotheses, including `d>3+2sqrt(q)` and existence of the configuration, its
 threshold is an upper endpoint for a second-smallest hyperplane-arrangement
 classification, not a universal existence bound for unique-trisecant 3-arcs.
-Proposition 15.731 supplies the
-tangent envelopes directly and reduces one-block compatibility to
-quadratic/cubic transition data. First-shell survivors, larger slack,
+Propositions 15.731--15.732 supply the tangent envelopes directly, reduce
+one-block compatibility to quadratic/cubic transition data, and prove that
+their bare linear cycle circulation is exact. First-shell survivors, larger slack,
 residual (ii),
 multi-level Type I, and `L` remain OPEN.
 
@@ -52,8 +143,9 @@ all singleton points. Exactly `R-1` points are deleted, giving an affine
 that trisecant gives an affine `(p-R)`-arc `B`; the deleted points are two
 distinct extension points on the same tangent of `B`. The exact size pairs
 `(|U|,|B|)` are `(2R+3,2R+1)` for `p=3R+1` and `(2R+4,2R+2)` for
-`p=3R+2`. Propositions 15.730--15.731 sharpen this one-object consequence
-to the full repair ensemble and its tangent transitions. This is a necessary reduction only:
+`p=3R+2`. Propositions 15.730--15.732 sharpen this one-object consequence
+to the full repair ensemble, its tangent transitions, and the exact-cycle
+barrier. This is a necessary reduction only:
 first-shell survivors still begin at `R>=floor((p-1)/3)`, and the endpoint,
 larger slack, residual (ii), multi-level Type I, and `L` remain OPEN. The
 `p=31` audit excludes eleven of the twelve classified complete 22-arc
@@ -69,8 +161,8 @@ One sixteen-direction Paley type has exact scaled-mean multiset
 directions contain no rich line and have fibre profile
 `(l_0,l_1,l_2,l_3,l_4)=(14,2,15,0,0)`. This uses the residual separator
 budgets and is not a statement about arbitrary 32-point sets. It neither
-excludes the `p=31` endpoint nor closes any top-level gate; 15.731 supplies
-the latest all-prime algebraic refinement above.
+excludes the `p=31` endpoint nor closes any top-level gate; 15.731--15.732
+supply the latest all-prime algebraic refinements above.
 
 **15.727 FORCES the first unexcluded slack into a disjoint rich-block
 normal form and EXCLUDES that endpoint at `p=17,19,23,29`.** Put
@@ -87,8 +179,8 @@ give maxima `4,4,1,0` instead of the required `5,6,7,9` for the resulting
 13-, 14-, 17-, and 21-arcs at `p=17,19,23,29`. Their first possible positive
 slacks are now at least `6,7,8,10`. No new solver run is used. From `p=31`
 onward the endpoint remains open in the disjoint 3/4-secant normal form.
-Propositions 15.728--15.731 add the necessary Paley-hard, affine
-unique-trisecant, complementary-repair, and tangent-envelope reductions
+Propositions 15.728--15.732 add the necessary Paley-hard, affine
+unique-trisecant, complementary-repair, tangent-envelope, and exact-cycle reductions
 above, without
 excluding the endpoint. Larger
 slack, residual (ii), multi-level Type I, and `L` remain OPEN.
@@ -1117,7 +1209,7 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 | Bi-tight majorization algebra (15.167) | CANDIDATE | `prop15167.py` |
 | Type I freeness-fail ND (two-level Max−) | **CLOSED** (that slice) | 15.272 \(k=1\cup k=3\) \(\Rightarrow G_+\succ0\Rightarrow\) 15.249 dual-eq empty |
 | Residual (ii), affine + even \(k\le4p-2\) | **CLOSED** (that range) | 15.179 + 15.236 + 15.237 |
-| Residual (ii), even \(k\ge4p\) | **OPEN** | multi-level Max− leftover (15.274); p=5 \(k=20\) leftover+splus empty all nF (15.521/524/528); p=5 \(k=22\) leftover+splus empty nF=0,3–9,11–14 (15.547+15.552); nF=10 TLE; 15.560 nF=0 empty at \(k=26,28,30\) |
+| Residual (ii), even \(k\ge4p\) | **OPEN globally; first three layers CLOSED for \(p\ge11\)** | 15.734--15.735 and 15.737 close \(k\in\{4p,4p+2,4p+4\}\) for every boundary and every \(p\ge11\). Remaining: critical \(p=5,7\); \(p=11\) at \(k\ge50\); \(p\ge13\) at \(k\ge4p+6\). |
 | Type I, multi-level Max− | **OPEN** | 15.543 \(\mu_{1d}\); 15.544 p=5 mix; 15.546 p=7 mix \(109/2863<|T|\); 15.551 Galois line-union; 15.559 Aut_e DEAD as \(A_{\mathrm{full}}\) name; `type_I_multilevel_bad_case_ND_closed=False` |
 | \(\lambda_{\min}(\Phi)\ge6\) | **OPEN** | 15.279; 15.550–15.582: \(S=\mathrm{Kl}\), \(\mu_{1d}\), \(\mu_{k=3}\) named; \(p=5\) \(Q_{++}=48/13\); \(A_{\mathrm{full}}\) / \(D\) / ensemble \(Q_\tau\) unnamed; `phi_F_ge_6=False` |
 | E(1) / \(L=\tfrac12\) | **OPEN** | needs the four leftovers above |
@@ -1126,7 +1218,7 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 ### Fatal gaps (honest)
 
 1. Residual **(i)** two-level dual-eq: **CLOSED** by 15.272 (not Aut-Schur, not Gsum LB). Multi-level Type I is **OPEN**. `gsum_disj_lb` remains False and is unused.
-2. Residual **(ii)** for affine + even \(k\le4p-2\): **CLOSED** (15.179 + 15.236 + 15.237). Residual (ii) for even \(k\ge4p\): **OPEN**. Do not call residual (ii) globally closed.
+2. Residual **(ii)** for affine + even \(k\le4p-2\): **CLOSED** (15.179 + 15.236 + 15.237). For \(k\ge4p\), the first three layers are **CLOSED** for every \(p\ge11\) by 15.734--15.735 and 15.737; critical \(p=5,7\), \(p=11\) at \(k\ge50\), and \(p\ge13\) at \(k\ge4p+6\) remain **OPEN**. Do not call residual (ii) globally closed.
 
 ### Remainder progress (15.172–194)
 
@@ -1208,7 +1300,7 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 ### Required opens
 
 1. \(\lambda_{\min}(\Phi)\ge6\) without treating \(G_{u,\mathrm{disj}}\) as a Gram (it is not PSD).
-2. Residual (ii) for even \(k\ge4p\).
+2. Residual (ii): critical \(p=5,7\), \(p=11\) at \(k\ge50\), and \(p\ge13\) at \(k\ge4p+6\). The next exact front is the \(t=3\) resonance.
 3. Type I when Max− is not two-level.
 4. Lemma D: \(k=3\) existence and the 2-plane amplitude model.
 

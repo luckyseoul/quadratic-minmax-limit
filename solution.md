@@ -5786,7 +5786,7 @@ leaves only (h=1,R-1,R) for (p\ge11). Suppose (h=1). Then
 (M\ge k), and integer energy leaves two cases.
 
 If (M=k+1), there is one doubled profile entry and the two degree-(k+1)
-root polynomials (A,B) cover all of (mathbb F_p), with one repeated
+root polynomials (A,B) cover all of (\mathbb F_p), with one repeated
 root (alpha). Their power sums agree through degree (k-1), so (A-B)
 is linear and
 
@@ -6448,12 +6448,12 @@ orbit cases modulo five. The sole timeout has
  \quad\sum L=11.
 \]
 
-An independent reconstruction over (mathbb F_7) again has rank 67 and
+An independent reconstruction over (\mathbb F_7) again has rank 67 and
 65 left dependencies, and its bounded lift system is exactly infeasible.
 Hence all 713 directly scanned orbit cases are excluded.
 
 It remains to transfer the negative no-infinity cases. If (alpha) is a
-nonsquare in (mathbb F_{25}), multiplication by (alpha), together with
+nonsquare in (\mathbb F_{25}), multiplication by (alpha), together with
 switching only infinity, defines a signed permutation satisfying
 
 \[
@@ -9057,7 +9057,7 @@ For an outside point (w), put (u=(w-a)/b). The boundary multiplier is
 
 because every nonzero trace-zero element has character ((-1)^m). The
 transformed affine circle has tangent directions proportional to
-(-b^{-1}/(t-u)^2), so its (b=2) directions have type (epsilon).
+(-b^{-1}/(t-u)^2), so its (b=2) directions have type (\epsilon).
 Exact outside-chart alignment forces
 
 \[
@@ -9708,9 +9708,11 @@ This is a proved algebraic refinement, not endpoint closure.  The repair
 graph is the Cartesian product of a (K_3) for every trisecant and a
 (J(4,2)) for every 4-secant.  The exact open implication is exclusion of the
 common completion under the residual direction, phase, and lift constraints.
-Deriving a nontrivial cycle identity from the quadratic transitions in the
-unique-envelope residue, or from the cubic classes in the pencil residue, is
-the proposed next attack; no such identity or phase bridge is claimed.
+At this stage, deriving a nontrivial cycle identity from the quadratic
+transitions or cubic classes was the proposed next attack. Proposition
+15.732 below proves that the naturally cleared linear circulation is an
+exact coboundary and replaces that proposal by the local-jet / simultaneous
+baseline fronts; no phase bridge is claimed here.
 Endpoint equality, larger slack, residual (ii), Type I, and the limit remain
 open.
 
@@ -9718,6 +9720,763 @@ Evidence: `src/e1_gmin_m4_prop15731.py`,
 `tests/test_prop15731.py`,
 `evidence/e1_gmin_m4_prop15731.json`, and
 `evidence/NOTE_2026-08-31_endpoint_tangent_envelope_gluing.md`.
+
+## Proposition 15.732 — repair-cycle exactness and the surviving local jet
+
+Continue Propositions 15.730--15.731.  For every repair (A), put
+
+\[
+ P_A=\prod_{u\in A}L_u,\qquad
+ \Theta_A=P_A^2\Phi_A.                              \tag{15.732.1}
+\]
+
+Orient an adjacent swap from (A=C\cup\{a\}) to
+(A'=C\cup\{z\}).  The coherently normalized transition identity in
+15.731 is
+
+\[
+ L_z^2\Phi_{A'}-L_a^2\Phi_A=P_CQ_{a,z}.             \tag{15.732.2}
+\]
+
+Because (P_A=P_CL_a) and (P_{A'}=P_CL_z), multiplication by (P_C^2)
+gives the exact-potential identity
+
+\[
+ \boxed{\Theta_{A'}-\Theta_A=P_C^3Q_{a,z}.}          \tag{15.732.3}
+\]
+
+The degrees agree: if (p=3R+c), (c\in\{1,2\}), then
+(|A|=k=2R+c+1), (\deg\Phi_A=2R+2), and
+(\deg Q=4-c), so both sides of (15.732.3) have degree
+
+\[
+ (2R+2)+2k=3(k-1)+(4-c).                            \tag{15.732.4}
+\]
+
+It follows immediately that on every closed repair-graph walk
+
+\[
+ \sum_{A\longrightarrow A'}P_{A\cap A'}^3Q_{A,A'}=0.\tag{15.732.5}
+\]
+
+This is an identity of polynomials before any evaluation, coefficient
+extraction, derivative, or polarization is applied.  Hence every additive
+linear circulation obtained from the 15.731 edge laws is zero.  In the
+(c=1) residue the change (\Phi_A\mapsto\Phi_A+\mu_AP_A) changes
+(\Theta_A) by the vertex term (\mu_AP_A^3), and changes
+
+\[
+ Q_{a,z}\mapsto Q_{a,z}+\mu_{A'}L_z^3-\mu_AL_a^3.   \tag{15.732.6}
+\]
+
+Thus (15.732.5) remains an exact coboundary in the envelope-pencil residue;
+independently choosing a representative for every edge class would discard
+the vertex correlations rather than create holonomy.
+
+For example, let one rich block contain (i,j,k), and write
+(A_{ij}=B\cup\{i,j\}) with the outside-block choice (B) fixed.  The
+(K_3) cycle, and likewise every triangular face of a (J(4,2)) factor, gives
+
+\[
+ L_i^3Q_{j,k}^{,i}+L_k^3Q_{i,j}^{,k}
+       +L_j^3Q_{k,i}^{,j}=0.                       \tag{15.732.7}
+\]
+
+There are analogous cleared identities on the chordless squares of
+(J(4,2)); all of them are instances of (15.732.5), not independent cycle
+obstructions.
+
+One nonzero local datum does survive.  Let (q) be the dual point of the rich
+line containing the exchanged points (a,z) and the retained point (b).
+Write (P_C=P_{C\setminus\{b\}}L_b).  The rich line is a secant of both
+repairs, so (\Phi_A(q)) and (\Phi_{A'}(q)) are nonzero.  Taking the lowest
+homogeneous term of (15.732.2) at (q) gives
+
+\[
+ Q_{a,z}(q)=0,
+\]
+\[
+ P_{C\setminus\{b\}}(q)L_bj_q^1Q_{a,z}
+   =\Phi_{A'}(q)L_z^2-\Phi_A(q)L_a^2.               \tag{15.732.8}
+\]
+
+The first jet is nonzero, since (L_a,L_z) are nonproportional cotangent
+forms and the two displayed scalars are nonzero.  More explicitly, for the
+block notation above, let (l_r) be the class of (L_r) in
+(\mathfrak m_q/\mathfrak m_q^2), put
+(\Delta_{rs}=\det(l_r,l_s)), and set
+
+\[
+ K=\Phi_{ij}(q)\Delta_{ij}^2.
+\]
+
+The scaled tangent restrictions show that (K) is independent of the
+selected pair and is a nonzero square.  Then
+
+\[
+ j_q^1Q_i(j,k)=\frac{K}{P_B(q)}
+ \frac{l_k^2/\Delta_{ik}^2-l_j^2/\Delta_{ij}^2}{l_i}.
+                                                               \tag{15.732.9}
+\]
+
+The numerator in (15.732.9) is divisible by (l_i).  In the cubic residue,
+the ambiguity (15.732.6) vanishes to order three at (q), so this first jet
+is gauge invariant.  Its square character is the repair-coloured character
+(\chi_p(P_B(q))).  The residual parity set, however, records the symmetric
+difference of the (A)- and complementary-(T) tangent fibres, not either
+coloured product separately.  None of 15.688 or 15.722--15.724/15.728
+supplies the missing identification.
+
+Two natural attempts to bridge that gap can now be ruled out.  First,
+suppose a nonrich direction of (D) has the near-pairing profile
+
+\[
+ \frac{p-3}{2}\text{ empty fibres},\quad
+ 2\text{ singleton fibres},\quad
+ \frac{p-1}{2}\text{ double fibres}.               \tag{15.732.10}
+\]
+
+Deleting (R) points destroys at most (R) double fibres.  Hence every repair
+has at least ((p-1)/2-R) secants in this direction and at most
+
+\[
+ |A|-2\left(\frac{p-1}{2}-R\right)=R+2             \tag{15.732.11}
+\]
+
+tangents.  These are at most (R+2) distinct known zeros on the
+direction-pencil line in the dual plane.  Since the envelope degree is
+(2R+2), (15.732.11) is far below the
+(2R+3) roots required to force a direction component.  At (p=31,R=10),
+every one of 15.728's at least (4+y) nonrich Paley-hard directions gives at
+most 12 roots on a degree-22 restriction.
+
+Second, products and quotients of repair contributions reduce modulo
+squares to the span of the selected-pair masks on each block.  On a
+trisecant those masks are
+
+\[
+ 110,\quad101,\quad011.
+\]
+
+They span only the even-weight subspace of (\mathbb F_2^3), so the full
+block mask (111) cannot be recovered.  On a 4-secant the weight-two masks
+do contain (1111) in their span.  Therefore a repair-product character
+cannot reconstruct a factor which includes an unselected trisecant block.
+For the first jet on one rich block this obstruction applies whenever
+another trisecant is present; the sole-trisecant jet is the explicit
+exception to this mask argument, not a proved phase bridge.
+
+This is a proved method barrier, not endpoint exclusion.  The proposed bare
+cycle attack is now closed: a successful continuation must use information
+outside its linear circulation.  The exact next possibilities are to relate
+the nonzero, gauge-invariant jet (15.732.9) to the signed residual lift, or
+to exclude the common completion directly from the many exact Paley-hard
+near-pairing directions.  Endpoint equality, larger slack, residual (ii),
+Type I, and the limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15732.py`,
+`tests/test_prop15732.py`,
+`evidence/e1_gmin_m4_prop15732.json`, and
+`evidence/NOTE_2026-08-31_repair_cycle_exactness.md`.
+
+## Proposition 15.733 — the (p=31,R=10) endpoint is impossible
+
+Continue Proposition 15.728 with (p=31), (|H|=125), and an all-finite
+32-point boundary (D) at outside pair slack (R=10).  Let (I) be the number
+of selected infinity edges.  For a direction (d), let (P_d) be the number
+of selected finite edges parallel to (d).  The phase-one Paley type
+(\epsilon_d=c_H) has fifteen directions of mean 30 and one direction of
+mean 62.
+
+We first record the coefficient consequence of equality in a directional
+floor.  Put (z_s=2x_s-1), so that (\sum_sz_s=1) on the middle slice.  If a
+phase-one (b=2) direction has odd fibres (\{i,j\}), its exact baseline is
+
+\[
+ A_d=(1-x_i-x_j)^2,\qquad
+ \epsilon_dS_H=4+z_iz_j.                            \tag{15.733.1}
+\]
+
+Write (n_s) for the number of selected infinity edges ending in fibre (s)
+and (K_{st}) for the signed sum of selected finite edges between fibres
+(s,t).  Thus (\sum_sn_s=I), and
+
+\[
+ \epsilon_dS_H=P_d+\sum_sn_sz_s
+       +\epsilon_d\sum_{s<t}K_{st}z_sz_t.           \tag{15.733.2}
+\]
+
+Two multilinear quadratics agreeing on (\sum z_s=1) differ by
+((\sum z_s-1)(c+\sum_sa_sz_s)).  Comparing the constant and linear
+coefficients in (15.733.1)--(15.733.2) gives
+
+\[
+ I+P_d-4=30c.                                      \tag{15.733.3}
+\]
+
+Polarization of the integral coefficients makes (2c) integral.  Therefore
+
+\[
+ 15\mid I+P_d-4.                                   \tag{15.733.4}
+\]
+
+The same calculation for a target (4+\sigma z_j) gives
+
+\[
+ 15\mid I+P_d-(4+\sigma).                          \tag{15.733.5}
+\]
+
+All fifteen mean-30 directions have one common (P_d=P), because their
+directional mean formula is
+
+\[
+ a_d=I+32P_d-\epsilon_dT-93.                       \tag{15.733.6}
+\]
+
+Proposition 15.728 already gives at least fourteen (b=2) baselines.  A
+phase-one (b=30) baseline is (A_d=1-x_j), hence has target (4-z_j) and,
+by (15.733.5), would require (15\mid I+P-3).  This is incompatible with
+(15.733.4).  Consequently
+
+\[
+ \boxed{\text{all fifteen mean-30 hard directions have }b_d=2.}
+                                                               \tag{15.733.7}
+\]
+
+Put
+
+\[
+ \rho={I+P-4\over15},\qquad s=\rho+P.              \tag{15.733.8}
+\]
+
+The hard mean-62 direction has parallel count (P+1) by (15.733.6).  The
+number of finite selected edges of the opposite sign is therefore
+
+\[
+ E_{\rm opp}=125-I-(16P+1)=15(8-s).                 \tag{15.733.9}
+\]
+
+Here (\rho\ge0).  Infinity is outside (D), so (I) is even; from
+(I=15\rho+4-P), (s) is even.  Thus
+
+\[
+ s\in\{0,2,4,6,8\}.                                \tag{15.733.10}
+\]
+
+For an opposite-type direction with (Q_d) parallel selected edges,
+(15.733.6) and the mean-30 hard identity give
+
+\[
+ a_d=30s-208+32Q_d,qquad
+ \sum_{epsilon_d=-c_H}Q_d=15(8-s).                \tag{15.733.11}
+\]
+
+Suppose (s<8).  Nonnegativity of (a_d) forces (Q_d\ge7-s) in all sixteen
+opposite directions.  Their total excess above that lower bound is only
+
+\[
+ 15(8-s)-16(7-s)=8+s<16.                            \tag{15.733.12}
+\]
+
+Hence some direction has (Q_d=7-s) and
+
+\[
+ a_d=16-2s\in\{16,12,8,4\}.                        \tag{15.733.13}
+\]
+
+In phase zero every nonzero (b_d) has floor at least 32, so this direction
+has (b_d=0).  Its parity is even, hence (A_d=2C) for a nonzero nonnegative
+integral quadratic (C), and (a_d=4p\mathbb EC).  Proposition 15.688 gives
+(4p\mathbb EC\ge p-3=28), contradicting (15.733.13).  Therefore
+
+\[
+ s=8,qquad E_{\rm opp}=0,qquad I=124-16P.          \tag{15.733.14}
+\]
+
+Nonnegativity gives (0\le P\le7).  The case (P=0) would have (I=124) and
+only one finite selected edge.  If (U) is the set of endpoints of the
+infinity edges and (F) the finite edge set, then
+(D=U\mathbin\triangle\partial F), so
+
+\[
+ I\le |D|+2|F|=34,
+\]
+
+a contradiction.  Hence (1\le P\le7).  Equation (15.733.14) says every
+finite selected edge has the hard sign.  All sixteen opposite directions
+have (Q_d=0), and (15.733.11) gives mean 32 in each.
+
+The exact phase-zero floor table permits only (b_d=0,2,30) at mean 32.  The
+(b=2) equality is (A_d=(x_i-x_j)^2), with target (4-z_iz_j), so
+(15.733.4) would require
+
+\[
+ 15\mid I-4.                                       \tag{15.733.15}
+\]
+
+The (b=30) equality is (A_d=x_j), with target (4+z_j), so (15.733.5)
+would require
+
+\[
+ 15\mid I-5.                                       \tag{15.733.16}
+\]
+
+But (15.733.14) gives (I\equiv4-P\pmod {15}), and neither
+(15.733.15) nor (15.733.16) can hold for (1\le P\le7).  Thus all sixteen
+opposite directions have (b_d=0).
+
+Finally the exact global identity is (\sum_db_d=72).  The fifteen hard
+baselines in (15.733.7) contribute 30 and the opposite type contributes
+zero.  The single hard mean-62 direction would therefore need
+
+\[
+ b_d=72-30=42,
+\]
+
+impossible: among 31 fibres, (b_d) is even and at most 30.  We conclude
+
+\[
+ \boxed{\text{the residual }p=31,R=10\text{ endpoint does not exist}.}
+                                                               \tag{15.733.17}
+\]
+
+This is a symbolic coefficient exclusion, not a finite configuration
+search.  In particular, all fifteen baseline hard directions have (b=2),
+so before the contradiction at least (5+y) of them are nonrich in a block
+row with (y) 4-secants, improving 15.728's (4+y) count.  The stronger
+entrywise cell audit in the certificate also reduces the intermediate
+possibilities to
+
+\[
+ (I,P)=(28,6),(60,4),(92,2),
+\]
+
+but that refinement is unnecessary for the final contradiction.  The first
+unexcluded endpoint prime is now (p=37,R=12); at (p=31) only larger slack
+(R\ge11) remains.  The endpoint for all primes, the full (p+1) shell,
+residual (ii), Type I, and the limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15733.py`,
+`tests/test_prop15733.py`,
+`evidence/e1_gmin_m4_prop15733.json`, and
+`evidence/NOTE_2026-08-31_p31_simultaneous_baseline_close.md`.
+
+## Proposition 15.734 — the critical residual-(ii) layer is empty from p=13
+
+Let a critical residual-(ii) witness have original size (k=4p), and let
+(H=G\cup\{e\}), so
+
+\[
+ |H|=4p+1.                                             \tag{15.734.1}
+\]
+
+No hypothesis on the odd-degree boundary (D=\partial H) will be used.
+The graph (H) has at most (8p+2) incident vertices among the
+(p^2+1) projective vertices. For (p\ge13),
+
+\[
+ p^2+1-(8p+2)=p^2-8p-1>0.                            \tag{15.734.2}
+\]
+
+Choose an isolated vertex (w). Since (w\notin D), the signed PSL
+transport of Proposition 15.721 can send (w) to infinity while preserving
+(|H|) and both separator inequalities. In the transported chart,
+
+\[
+ \infty\notin D,\qquad I=\deg_H(\infty)=0.             \tag{15.734.3}
+\]
+
+The boundary is now all finite. Handshake makes (|D|) even, and hence
+every directional odd-fibre count (b_d\equiv |D|\pmod2) is even.
+
+Put (q=(p-1)/2) and (m=q+1). Proposition 15.632 gives the exact budget
+
+\[
+ \sum_{\epsilon_d=\tau}a_d=2m^2,qquad
+ a_d=2p\,\mathbb E A_d,                               \tag{15.734.4}
+\]
+
+for either quadratic direction type. Since
+((|H|-3)/2=2p-1) is odd, (15.632.3) and the evenness of (b_d) say that
+the type (\epsilon_d=c_H) has phase one. Its means have one common residue
+modulo (p+1=2m); write
+
+\[
+ a_d=2u+2mk_d,\qquad 0\le u<m,qquad
+ \sum_d k_d=m-u.                                      \tag{15.734.5}
+\]
+
+The exact phase-one floor is at least (p-1). Thus an interior residue
+(1\le u\le m-2) would require all (m) quotients (k_d\ge1), while
+their sum is below (m). At (u=0), every mean is (p+1). A (b=2)
+cell is a forbidden floor-plus-two lift by Proposition 15.688, so this row
+survives only when (p\equiv1\pmod4), with every direction in the exact
+(b=p-1) baseline. At (u=m-1), there are (q) low means (p-1) and
+one high mean (2p). The low cell is (b=2) when (p\equiv1\pmod4),
+and is (b=2) or (b=p-1) when (p\equiv3\pmod4). In the latter case
+equal means force one common parallel count, while the two coefficient
+offsets below differ by one, so the cells cannot mix.
+
+For (p\ge17) this is Proposition 15.669's exact even-(b) table. At
+(p=13), direct evaluation of Proposition 15.632's three-variable LP gives
+
+\[
+\begin{array}{c|rrrrrrr}
+b&0&2&4&6&8&10&12\\ \hline
+\text{phase }0&0&14&20&26&24&26&12\\
+\text{phase }1&26&12&26&24&26&20&14,
+\end{array}                                           \tag{15.734.6}
+\]
+
+so the same endpoint-relevant classification holds.
+
+The numerical LP values are not, by themselves, an equality
+classification. Proposition 15.652 supplies the needed rigidity: its
+positive quadrature has strictly positive weights at every (b=2)
+intersection value, so equality forces the pointwise XNOR polynomial
+((1-x_i-x_j)^2). Complementing a (b=p-1) set to its missing fibre and
+using the two positive (b=1) weights forces (x_j) when
+(p\equiv1\pmod4), and (1-x_j) when (p\equiv3\pmod4). Thus the exact
+baseline polynomials below are valid at (p=13) as well as in the range of
+Proposition 15.669.
+
+We now reuse the coefficient comparison of Proposition 15.733. With
+(z_s=2x_s-1) and (sum_s z_s=1), an exact target
+(4+\tau z_iz_j) gives
+
+\[
+ q\mid I+P-4,                                         \tag{15.734.7}
+\]
+
+while (4+\sigma z_j) gives
+
+\[
+ q\mid I+P-(4+\sigma).                               \tag{15.734.8}
+\]
+
+The three exhaustive hard branches are therefore
+
+\[
+\begin{array}{c|c|c|c}
+&A_d&\epsilon_dS_H&\text{offset}\\ \hline
+A&(1-x_i-x_j)^2&4+z_iz_j&4\\
+B\ (p\equiv1)&x_j&4+z_j&5\\
+C\ (p\equiv3)&1-x_j&4-z_j&3.
+\end{array}                                           \tag{15.734.9}
+\]
+
+Let (P) be the common hard parallel count, write
+(\rho=(I+P-C)/q) for the relevant offset (C), and put (s=P+\rho).
+Here (\rho\ge0): its numerator is divisible by (q) and is strictly
+larger than (-q). Exact finite-edge accounting gives (q(8-s)) opposite
+edges in A/B and (q(8-s)+1) in C. Hence (P\le s\le8). Since (I=0)
+and (q\ge6), (15.734.7)--(15.734.8) force
+
+\[
+ (P,\rho,s)=(4,0,4),\quad(5,0,5),\quad(3,0,3)          \tag{15.734.10}
+\]
+
+in A, B, and C respectively.
+
+For A/B, an opposite-type direction with parallel count (Q) has
+
+\[
+ a=(p-1)s+(p+1)Q+9-7p,qquad
+ \sum Q=q(8-s).                                       \tag{15.734.11}
+\]
+
+For C the identities are
+
+\[
+ a=(p-1)(s-7)+(p+1)Q,qquad
+ \sum Q=q(8-s)+1.                                     \tag{15.734.12}
+\]
+
+Nonnegativity forces (Q\ge3,2,4) in A, B, C. The surplus above those
+uniform minima is (q-3,q-2,q-3), each below the number (m=q+1) of
+opposite directions. Some direction therefore attains the minimum, with
+
+\[
+ a=8,\quad6,\quad8                                    \tag{15.734.13}
+\]
+
+respectively. That direction has phase zero. Every nonzero even (b_d)
+costs at least (p-1\ge12), so (b_d=0). Its parity is even and its mean
+is positive, hence (A_d=2B_d) for a nonzero nonnegative integer-valued
+quadratic (B_d). Proposition 15.688 gives
+
+\[
+ a_d=4p\,\mathbb E B_d\ge p-3\ge10,                   \tag{15.734.14}
+\]
+
+contradicting (15.734.13). Thus
+
+\[
+ \boxed{\text{residual (ii) at }k=4p\text{ is empty for every prime }
+ p\ge13,\text{ for every boundary size}.}             \tag{15.734.15}
+\]
+
+At (p=11), the same isolated chart and residue calculation force scaled
+mass eight, exactly the sharp value (p-3); no equality classification is
+claimed here. Even (k>4p), multi-level Type I, and the limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15734.py`,
+`tests/test_prop15734.py`,
+`evidence/e1_gmin_m4_prop15734.json`, and
+`evidence/NOTE_2026-08-31_isolated_chart_k_eq_4p_close.md`.
+
+## Proposition 15.735 — the next two residual-(ii) layers are empty from p=13
+
+Let
+
+\[
+ k=4p+2t,\qquad |H|=4p+2t+1,\qquad t\in\{1,2\}.
+                                                               \tag{15.735.1}
+\]
+
+As in Proposition 15.734, at most (2|H|) projective vertices are incident
+with an edge.  For (p\ge13),
+
+\[
+ p^2+1-2|H|=p^2-8p-4t-1\ge56>0.                \tag{15.735.2}
+\]
+
+Transporting an isolated vertex to infinity therefore gives (I=0), an
+all-finite even boundary, and even (b_d) in every direction.  Put
+(q=(p-1)/2) and (m=q+1).  Each quadratic direction type has exact budget
+
+\[
+ 2m(m+t).                                           \tag{15.735.3}
+\]
+
+The phase-one type is (\epsilon_d=(-1)^tc_H).  Its means have a common
+residue,
+
+\[
+ a_d=2u+2mk_d,\qquad \sum_d k_d=m+t-u.             \tag{15.735.4}
+\]
+
+If (t<u\le m-2), every direction would require (k_d\ge1), although the
+right side of (15.735.4) is below (m).  If (0\le u\le t), a direction
+with (k_d=1) has mean (p+1+2u).  The only even-(b) cells below that
+mean are the explicit (b=2) and (b=p-1) baselines.  Apart from
+(u=0, p\equiv1\pmod4, b=p-1), they are nonzero integral lifts of excess
+at most (2t+2\le6<p-3), contrary to Proposition 15.688.  Finally,
+(u=m-1) forces at least (m-(t+1)) directions of mean (p-1).
+Positive quadrature fixes their exact baselines, and offsets four and three
+prevent the two (p\equiv3\pmod4) baselines from mixing.
+
+Thus the same three hard branches as in Proposition 15.734 remain.  Their
+parallel counts and hard finite-edge totals are
+
+\[
+\begin{array}{c|c|c|c}
+ &P=s&\text{hard edges}&\text{opposite edges}\\ \hline
+A&4&mP+t+1&4q+t\\
+B&5&mP+t&3q+t\\
+C&3&mP+t+1&5q+t+1.
+\end{array}                                         \tag{15.735.5}
+\]
+
+Indeed the coefficient congruences are still
+(q\mid P-4,P-5,P-3); opposite-edge nonnegativity leaves only the displayed
+(\rho=0) rows.  Nonnegativity of an opposite mean gives respectively
+(Q\ge3,2,4).  The surplus above these uniform minima is
+
+\[
+ q+t-3,\qquad q+t-2,\qquad q+t-3.                  \tag{15.735.6}
+\]
+
+For (t\le2), each is below the (m=q+1) opposite directions.  Some
+direction attains the minimum and has scaled mean (8,6,8).  A nonzero
+even (b) costs at least (p-1); at (b=0), a nonzero integral lift costs
+at least (p-3).  Both bounds contradict those means for (p\ge13).  Hence
+
+\[
+ \boxed{k\in\{4p,4p+2,4p+4\}\text{ is impossible for every prime }
+ p\ge13,\text{ for every boundary size}.}           \tag{15.735.7}
+\]
+
+The argument stops honestly at (t=3).  In branch B the surplus in
+(15.735.6) equals (m), permitting every opposite direction to have
+(Q=3) and mean (p+7).  Nonnegative integral quadratic examples attain
+that local mass, and at (p=13) an additional exact (u=3,b=10) row
+survives.  These are necessary-condition witnesses, not residual graphs;
+they show that another one-direction floor or halving step cannot close
+(k=4p+6).
+
+Evidence: `src/e1_gmin_m4_prop15735.py`,
+`tests/test_prop15735.py`,
+`evidence/e1_gmin_m4_prop15735.json`, and
+`evidence/NOTE_2026-08-31_first_three_residual_shells.md`.
+
+## Proposition 15.736 — exact p=11 sharp Boolean-quadratic catalog
+
+Let (\Omega=J(11,6)), so (|\Omega|=462).  The 55 pair monomials span all
+degree-at-most-two functions on the slice, because
+
+\[
+ \sum_{j\ne i}x_ix_j=5x_i,\qquad
+ \sum_{i<j}x_ix_j=15.                              \tag{15.736.1}
+\]
+
+Their (462\times55) evaluation matrix has rank 55 modulo 101, hence rank
+55 over the reals.  Given a base 3-set and three disjoint swap pairs, take
+the alternating sum on the resulting eight 6-sets.  This third difference
+annihilates every quadratic.  Deterministic modular elimination examines
+8,321 such rows and retains 407 independent rows.  Since
+
+\[
+ 407=462-55,                                        \tag{15.736.2}
+\]
+
+their real nullspace is exactly the quadratic evaluation space.
+
+Proposition 15.688 supplies the equality bridge required by the residual
+problem.  At (p=11), sharp scaled mass is eight, whereas every nonnegative
+integral lift with maximum at least two has scaled mass at least twelve.
+Equality therefore forces maximum one: the lift is Boolean, has mean
+(2/11), and has support (84) on (\Omega).
+
+Now impose 462 Boolean variables (f_X), the 407 exact third-difference
+identities, and
+
+\[
+ \sum_{X\in\Omega}f_X=84.                          \tag{15.736.3}
+\]
+
+Exclude the 220 known supports, one at a time: the 55 omitted-pair forms
+
+\[
+ (1-x_i)(1-x_j),                                   \tag{15.736.4}
+\]
+
+and the 165 all-equal-triple forms
+
+\[
+ 1-x_i-x_j-x_k+x_ix_j+x_ix_k+x_jx_k.              \tag{15.736.5}
+\]
+
+The resulting exact 628-constraint CP-SAT model is infeasible.  Thus
+(15.736.4)--(15.736.5) exhaust all sharp Boolean quadratic evaluations on
+(J(11,6)).  This is an exhaustive finite certificate, with the linear
+space and every no-good independently reconstructed; it does not use the
+previously unavailable restriction-extension assertion.
+
+In signed (z_i=2x_i-1) coordinates, the two targets are
+
+\[
+ 4-z_i-z_j+z_iz_j\quad(\text{offset }2),\qquad
+ 4+z_iz_j+z_iz_k+z_jz_k\quad(\text{offset }4).      \tag{15.736.6}
+\]
+
+At (q=5), the hard-(b=2) residual branch forces a minimum opposite
+parallel count (Q=3); neither offset in (15.736.6) is congruent to three,
+so that branch is impossible.  The hard-(b=10) branch forces (Q=4): the
+omitted-pair form is impossible and only the all-equal triple remains.  The
+simultaneous incompatibility of those triple targets is supplied next.
+
+Evidence: `src/e1_gmin_m4_prop15736.py`,
+`tests/test_prop15736.py`,
+`evidence/e1_gmin_m4_prop15736.json`, and
+`evidence/NOTE_2026-08-31_p11_sharp_boolean_quadratic_catalog.md`.
+
+## Proposition 15.737 — a binary quadratic moment closes the first three p=11 layers
+
+Take (p=11), (t\in\{0,1,2\}), and
+
+\[
+ k=44+2t,\qquad |H|=45+2t.                         \tag{15.737.1}
+\]
+
+The isolated-vertex gaps are (32,28,24), so signed transport again gives
+(I=0) and even directional (b).  The phase-one type has budget
+(12(6+t)).  Writing (a_d=2u+12k_d) gives
+
+\[
+ \sum_d k_d=6+t-u.                                 \tag{15.737.2}
+\]
+
+The exact phase-one even-(b) floors are
+
+\[
+\begin{array}{c|rrrrrr}
+b&0&2&4&6&8&10\\ \hline
+f_1(b)&22&10&22&18&22&10.
+\end{array}                                         \tag{15.737.3}
+\]
+
+For (0\le u\le t), a forced low direction is a positive lift of excess
+at most six, below the sharp floor eight.  For (t<u<5), (15.737.2) has too
+few quotient units.  Hence (u=5), with at least (5-t\ge3) exact
+mean-ten directions.  Positive quadrature makes each either the (b=2)
+baseline (4+z_iz_j), or the (b=10) baseline (4-z_j); offsets four and
+three forbid mixing.  Proposition 15.736 excludes the first branch.  In the
+second, at least (4-t\ge2) opposite minimum directions have an all-equal
+triple target.
+
+For an (\mathbb F_{11})-linear fibre functional (L), define the
+homogeneous binary quadratic
+
+\[
+ M_H(L)=\sum_{\{u,v\}\in H}\chi(u-v)(L(u)-L(v))^2. \tag{15.737.4}
+\]
+
+If (K^L_{st}) is the signed selected-edge sum between fibres (s,t), then
+
+\[
+ M_H(L)=\sum_{s<t}K^L_{st}(s-t)^2.                 \tag{15.737.5}
+\]
+
+In a hard mean-ten (b=10) direction, (P=3) and
+(\epsilon_LS_H=4-z_j).  Exact coefficient comparison modulo
+(sum_sz_s=1) gives
+
+\[
+ \epsilon_LK^L_{st}=
+ \begin{cases}-1,&\text{exactly one of }s,t\text{ is }j,\\0,&\text{otherwise}.
+ \end{cases}                                        \tag{15.737.6}
+\]
+
+Therefore
+
+\[
+ M_H(L)=-\epsilon_L\sum_{t\ne j}(j-t)^2=0
+ \quad\text{in }\mathbb F_{11}.                    \tag{15.737.7}
+\]
+
+There are at least three distinct hard directions of this kind.  A nonzero
+homogeneous binary quadratic has at most two projective zeros, so
+(M_H\equiv0).
+
+For an opposite all-equal target, (P=4), and coefficient comparison gives
+(\epsilon_LK^L_{st}=1) on the triangle ({i,j,k}) and zero elsewhere.
+The identity (M_H\equiv0) would then require
+
+\[
+ (i-j)^2+(i-k)^2+(j-k)^2=0.                        \tag{15.737.8}
+\]
+
+For distinct fibres normalize ((i,j,k)=(0,1,r)).  The left side is
+(2(r^2-r+1)), whose discriminant is (-3=8).  Since 8 is a nonsquare
+modulo 11, (15.737.8) is impossible.  Thus even one triple target is
+forbidden, and
+
+\[
+ \boxed{p=11:\quad k=44,46,48\text{ are all impossible}.}   \tag{15.737.9}
+\]
+
+Together with Proposition 15.735, the first three even residual layers are
+therefore closed for every prime (p\ge11), independently of boundary
+size.  At (p=11,t=3), only two hard stars are forced and excess eight
+reaches the equality floor, so no (k\ge50) claim is made.  Critical
+(p=5,7), all later residual layers, multi-level Type I, and the limit remain
+open.
+
+Evidence: `src/e1_gmin_m4_prop15737.py`,
+`tests/test_prop15737.py`,
+`evidence/e1_gmin_m4_prop15737.json`, and
+`evidence/NOTE_2026-08-31_p11_binary_quadratic_moment_close.md`.
 
 ## Proposition 15.723 — paired-cube obstruction to middle floor-plus-two lifts
 
@@ -9743,7 +10502,7 @@ orthogonality gives
  \mathbb E[g\chi_R]=0,
 \]
 
-while (g\ge1) on the (chi_R=1) half, so (mathbb Eg\ge1). If
+while (g\ge1) on the (chi_R=1) half, so (\mathbb Eg\ge1). If
 (r\ge5) and equality held, (h=g-1) would vanish on that half and satisfy
 (h\chi_R=-h). For every (|S|\le2),
 

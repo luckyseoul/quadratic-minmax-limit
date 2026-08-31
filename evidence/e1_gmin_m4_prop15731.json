@@ -24,7 +24,7 @@
   "finite_configuration_search_used": false,
   "general_line_gluing_lemma": "compatible degree-d sections on distinct projective lines with no triple concurrence lift constructively to a degree-d plane form; the kernel is their line product times degree-(d-n) forms",
   "multi_level_type_I_closed": false,
-  "next_gate": "exclude the Proposition 15.727/15.730 common completion under the residual direction, phase, and lift constraints; deriving a nontrivial repair-cycle identity from these transition coordinates is the proposed next attack",
+  "next_gate": "historical at this stage: Proposition 15.732 later proved the linear transition circulation exact, Proposition 15.734 subsequently closed the k=4p layer for p>=13, and Proposition 15.737 closed the first three p=11 layers; the live residual front starts at p=11 k=50 and p>=13 k=4p+6",
   "non_walsh_residual_ii_closed": false,
   "p_plus_one_shell_closed": false,
   "phase_bridge_proved": false,

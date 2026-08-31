@@ -3,6 +3,10 @@
 **Date:** 2026-08-31
 **Status:** proved structural reduction, not endpoint exclusion.
 
+**Later status:** Proposition 15.734 closes every `k=4p` endpoint boundary
+for `p>=13`. The repair ensemble remains a valid conditional structure, but
+is superseded as a live residual gate.
+
 ## Hypothesis inherited from Proposition 15.727
 
 Let `p>=17` be prime, put
@@ -160,7 +164,7 @@ Summing (9) over the `p+1` directions recovers
 Unlike a one-object arc classification, (8)--(10) retain the directional
 data needed by the residual separator.
 
-## Correct live implication
+## Historical next implication
 
 This proposition does not exclude endpoint equality.  It replaces the
 incorrect Bartoli--Storme ceiling route recorded after 15.729 with a stronger
@@ -174,10 +178,12 @@ Proposition 15.731 shows directly that the envelopes nevertheless exist:
 they are unique in the first residue and form line-product pencils in the
 second. One-block swaps then have quadratic or cubic transition data. The
 exact open implication is exclusion of the common `D` under (8) and the
-phase-specific lift constraints. Deriving a nontrivial cycle identity for
-the transitions is the proposed next attack; no such identity or phase
-bridge is proved. No universal size ceiling for odd-order unique-trisecant
-3-arcs is available from [70].
+phase-specific lift constraints. Proposition 15.732 proves that the bare
+linear cycle circulation of the transitions is exact and identifies a
+nonzero rich-direction first jet, but no phase bridge. Proposition 15.734
+later bypasses this implication with an isolated-chart coefficient
+contradiction. No universal size
+ceiling for odd-order unique-trisecant 3-arcs is available from [70].
 
 ## Artifacts
 

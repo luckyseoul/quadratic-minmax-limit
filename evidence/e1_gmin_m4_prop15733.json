@@ -1,0 +1,830 @@
+{
+  "baseline_coefficient_rules": {
+    "hard_phase_one_b2": {
+      "A": "(1-x_i-x_j)^2",
+      "congruence": "15 divides I+P_d-4",
+      "eps_S_H": "4+z_i z_j",
+      "offset": 4
+    },
+    "hard_phase_one_b30": {
+      "A": "1-x_j after choosing the omitted fibre j",
+      "congruence": "15 divides I+P_d-3",
+      "eps_S_H": "4-z_j",
+      "offset": 3
+    },
+    "middle_slice_coordinates": "z_s=2x_s-1 and sum_s z_s=1",
+    "opposite_phase_zero_b2": {
+      "A": "(x_i-x_j)^2",
+      "congruence": "15 divides I+P_d-4",
+      "eps_S_H": "4-z_i z_j",
+      "offset": 4
+    },
+    "opposite_phase_zero_b30": {
+      "A": "x_j after choosing the omitted fibre j",
+      "congruence": "15 divides I+P_d-5",
+      "eps_S_H": "4+z_j",
+      "offset": 5
+    },
+    "proved": true
+  },
+  "block_direction_upgrades": [
+    {
+      "four_secants_y": 0,
+      "hard_b2_direction_count": 15,
+      "nonrich_floor_formula": "5+y",
+      "nonrich_hard_b2_direction_floor": 5,
+      "proved": true,
+      "rich_line_count": 10,
+      "trisecants_x": 10
+    },
+    {
+      "four_secants_y": 1,
+      "hard_b2_direction_count": 15,
+      "nonrich_floor_formula": "5+y",
+      "nonrich_hard_b2_direction_floor": 6,
+      "proved": true,
+      "rich_line_count": 9,
+      "trisecants_x": 8
+    },
+    {
+      "four_secants_y": 2,
+      "hard_b2_direction_count": 15,
+      "nonrich_floor_formula": "5+y",
+      "nonrich_hard_b2_direction_floor": 7,
+      "proved": true,
+      "rich_line_count": 8,
+      "trisecants_x": 6
+    },
+    {
+      "four_secants_y": 3,
+      "hard_b2_direction_count": 15,
+      "nonrich_floor_formula": "5+y",
+      "nonrich_hard_b2_direction_floor": 8,
+      "proved": true,
+      "rich_line_count": 7,
+      "trisecants_x": 4
+    },
+    {
+      "four_secants_y": 4,
+      "hard_b2_direction_count": 15,
+      "nonrich_floor_formula": "5+y",
+      "nonrich_hard_b2_direction_floor": 9,
+      "proved": true,
+      "rich_line_count": 6,
+      "trisecants_x": 2
+    },
+    {
+      "four_secants_y": 5,
+      "hard_b2_direction_count": 15,
+      "nonrich_floor_formula": "5+y",
+      "nonrich_hard_b2_direction_floor": 10,
+      "proved": true,
+      "rich_line_count": 5,
+      "trisecants_x": 0
+    }
+  ],
+  "canonical_short_final_rows": [
+    {
+      "I": 124,
+      "P": 0,
+      "all_opposite_directions_have_b0": false,
+      "b2_congruence_I_minus_4": true,
+      "b30_congruence_I_minus_5": false,
+      "boundary_support_excluded": true,
+      "boundary_support_upper_for_I": 34,
+      "contradiction": false,
+      "excluded": true,
+      "finite_edge_count": 1,
+      "maximum_possible_even_b": 30,
+      "opposite_direction_mean": 32,
+      "opposite_direction_parallel_count": 0,
+      "phase_zero_floor_compatible_b": [
+        0,
+        2,
+        30
+      ],
+      "required_high_hard_direction_b": 42
+    },
+    {
+      "I": 108,
+      "P": 1,
+      "all_opposite_directions_have_b0": false,
+      "b2_congruence_I_minus_4": false,
+      "b30_congruence_I_minus_5": false,
+      "boundary_support_excluded": true,
+      "boundary_support_upper_for_I": 66,
+      "contradiction": false,
+      "excluded": true,
+      "finite_edge_count": 17,
+      "maximum_possible_even_b": 30,
+      "opposite_direction_mean": 32,
+      "opposite_direction_parallel_count": 0,
+      "phase_zero_floor_compatible_b": [
+        0,
+        2,
+        30
+      ],
+      "required_high_hard_direction_b": 42
+    },
+    {
+      "I": 92,
+      "P": 2,
+      "all_opposite_directions_have_b0": true,
+      "b2_congruence_I_minus_4": false,
+      "b30_congruence_I_minus_5": false,
+      "boundary_support_excluded": false,
+      "boundary_support_upper_for_I": 98,
+      "contradiction": true,
+      "excluded": true,
+      "finite_edge_count": 33,
+      "maximum_possible_even_b": 30,
+      "opposite_direction_mean": 32,
+      "opposite_direction_parallel_count": 0,
+      "phase_zero_floor_compatible_b": [
+        0,
+        2,
+        30
+      ],
+      "required_high_hard_direction_b": 42
+    },
+    {
+      "I": 76,
+      "P": 3,
+      "all_opposite_directions_have_b0": true,
+      "b2_congruence_I_minus_4": false,
+      "b30_congruence_I_minus_5": false,
+      "boundary_support_excluded": false,
+      "boundary_support_upper_for_I": 130,
+      "contradiction": true,
+      "excluded": true,
+      "finite_edge_count": 49,
+      "maximum_possible_even_b": 30,
+      "opposite_direction_mean": 32,
+      "opposite_direction_parallel_count": 0,
+      "phase_zero_floor_compatible_b": [
+        0,
+        2,
+        30
+      ],
+      "required_high_hard_direction_b": 42
+    },
+    {
+      "I": 60,
+      "P": 4,
+      "all_opposite_directions_have_b0": true,
+      "b2_congruence_I_minus_4": false,
+      "b30_congruence_I_minus_5": false,
+      "boundary_support_excluded": false,
+      "boundary_support_upper_for_I": 162,
+      "contradiction": true,
+      "excluded": true,
+      "finite_edge_count": 65,
+      "maximum_possible_even_b": 30,
+      "opposite_direction_mean": 32,
+      "opposite_direction_parallel_count": 0,
+      "phase_zero_floor_compatible_b": [
+        0,
+        2,
+        30
+      ],
+      "required_high_hard_direction_b": 42
+    },
+    {
+      "I": 44,
+      "P": 5,
+      "all_opposite_directions_have_b0": true,
+      "b2_congruence_I_minus_4": false,
+      "b30_congruence_I_minus_5": false,
+      "boundary_support_excluded": false,
+      "boundary_support_upper_for_I": 194,
+      "contradiction": true,
+      "excluded": true,
+      "finite_edge_count": 81,
+      "maximum_possible_even_b": 30,
+      "opposite_direction_mean": 32,
+      "opposite_direction_parallel_count": 0,
+      "phase_zero_floor_compatible_b": [
+        0,
+        2,
+        30
+      ],
+      "required_high_hard_direction_b": 42
+    },
+    {
+      "I": 28,
+      "P": 6,
+      "all_opposite_directions_have_b0": true,
+      "b2_congruence_I_minus_4": false,
+      "b30_congruence_I_minus_5": false,
+      "boundary_support_excluded": false,
+      "boundary_support_upper_for_I": 226,
+      "contradiction": true,
+      "excluded": true,
+      "finite_edge_count": 97,
+      "maximum_possible_even_b": 30,
+      "opposite_direction_mean": 32,
+      "opposite_direction_parallel_count": 0,
+      "phase_zero_floor_compatible_b": [
+        0,
+        2,
+        30
+      ],
+      "required_high_hard_direction_b": 42
+    },
+    {
+      "I": 12,
+      "P": 7,
+      "all_opposite_directions_have_b0": true,
+      "b2_congruence_I_minus_4": false,
+      "b30_congruence_I_minus_5": false,
+      "boundary_support_excluded": false,
+      "boundary_support_upper_for_I": 258,
+      "contradiction": true,
+      "excluded": true,
+      "finite_edge_count": 113,
+      "maximum_possible_even_b": 30,
+      "opposite_direction_mean": 32,
+      "opposite_direction_parallel_count": 0,
+      "phase_zero_floor_compatible_b": [
+        0,
+        2,
+        30
+      ],
+      "required_high_hard_direction_b": 42
+    }
+  ],
+  "canonical_short_type_collapse": [
+    {
+      "a_minimum_direction_is_forced": true,
+      "excluded": true,
+      "minimum_direction_mean": 16,
+      "minimum_parallel_count_per_opposite_direction": 7,
+      "nonzero_integral_lift_floor": 28,
+      "opposite_parallel_count_sum": 120,
+      "opposite_sign_finite_edge_count": 120,
+      "reason": "one opposite direction has Q=7-s and mean 16-2s; nonzero b costs at least 32, while b=0 violates the lift floor 28",
+      "s": 0,
+      "total_parallel_excess_above_minimum": 8
+    },
+    {
+      "a_minimum_direction_is_forced": true,
+      "excluded": true,
+      "minimum_direction_mean": 12,
+      "minimum_parallel_count_per_opposite_direction": 5,
+      "nonzero_integral_lift_floor": 28,
+      "opposite_parallel_count_sum": 90,
+      "opposite_sign_finite_edge_count": 90,
+      "reason": "one opposite direction has Q=7-s and mean 16-2s; nonzero b costs at least 32, while b=0 violates the lift floor 28",
+      "s": 2,
+      "total_parallel_excess_above_minimum": 10
+    },
+    {
+      "a_minimum_direction_is_forced": true,
+      "excluded": true,
+      "minimum_direction_mean": 8,
+      "minimum_parallel_count_per_opposite_direction": 3,
+      "nonzero_integral_lift_floor": 28,
+      "opposite_parallel_count_sum": 60,
+      "opposite_sign_finite_edge_count": 60,
+      "reason": "one opposite direction has Q=7-s and mean 16-2s; nonzero b costs at least 32, while b=0 violates the lift floor 28",
+      "s": 4,
+      "total_parallel_excess_above_minimum": 12
+    },
+    {
+      "a_minimum_direction_is_forced": true,
+      "excluded": true,
+      "minimum_direction_mean": 4,
+      "minimum_parallel_count_per_opposite_direction": 1,
+      "nonzero_integral_lift_floor": 28,
+      "opposite_parallel_count_sum": 30,
+      "opposite_sign_finite_edge_count": 30,
+      "reason": "one opposite direction has Q=7-s and mean 16-2s; nonzero b costs at least 32, while b=0 violates the lift floor 28",
+      "s": 6,
+      "total_parallel_excess_above_minimum": 14
+    },
+    {
+      "a_minimum_direction_is_forced": true,
+      "excluded": false,
+      "minimum_direction_mean": 32,
+      "minimum_parallel_count_per_opposite_direction": 0,
+      "nonzero_integral_lift_floor": 28,
+      "opposite_parallel_count_sum": 0,
+      "opposite_sign_finite_edge_count": 0,
+      "reason": "all opposite-sign finite edges vanish",
+      "s": 8,
+      "total_parallel_excess_above_minimum": 0
+    }
+  ],
+  "endpoint_all_primes_closed": false,
+  "finite_configuration_search_used": false,
+  "first_unexcluded_endpoint_prime": 37,
+  "hard_mean30_upgrade": {
+    "all_mean_30_directions_have_b2": true,
+    "b2_congruence_offset": 4,
+    "b30_congruence_offset": 3,
+    "coexistence_contradiction": "the same I+P cannot be congruent to both 4 and 3 modulo 15",
+    "coexistence_possible": false,
+    "equal_means_force_equal_parallel_counts": true,
+    "hard_type_sign": "eps_d=c_H",
+    "mean_30_direction_count": 15,
+    "mean_formula": "a_d=I+32P_d-eps_d T-93",
+    "previous_b2_floor": 14,
+    "proved": true
+  },
+  "hypotheses": "the p=31,R=10 residual endpoint normal form and Paley-hard type of Proposition 15.728",
+  "multi_level_type_I_closed": false,
+  "next_gate": "historical at this stage: Proposition 15.734 subsequently closes every k=4p boundary for p>=13; the live residual front is p=11 sharp equality or even k>4p",
+  "non_walsh_residual_ii_closed": false,
+  "odd_g_obstruction": {
+    "a_s": "2n_s-g, a nonzero odd integer when g is odd",
+    "base_entrywise_norm_floor": 225,
+    "contradiction": true,
+    "corrected_entrywise_norm_floor": 224,
+    "g_must_be_even": true,
+    "maximum_zero_pair_reason": "positive_count times negative_count is at most floor(31^2/4)",
+    "maximum_zero_pairs": 240,
+    "odd_g_is_at_least": 1,
+    "one_special_cell_correction": -1,
+    "pair_count": 465,
+    "proved": true,
+    "transverse_capacity_ceiling": 106,
+    "zero_cell_condition": "a_s=-a_t"
+  },
+  "optional_infinity_star_profiles": [
+    {
+      "deficit_sum": 3,
+      "deficit_variables": "d_s=r-n_s>=0",
+      "infinity_endpoint_count_histograms": [
+        {
+          "0": 3,
+          "1": 28
+        }
+      ],
+      "negative_deficit_impossible": true,
+      "negative_deficit_reason": "one d_s=-h forces the other 30 deficits to sum at least 30h-1, so the total is at least 29h-1>=28>4-r",
+      "proved": true,
+      "r": 1,
+      "transverse_cell_count": "N_st=d_s+d_t+1_{st=B_d}"
+    },
+    {
+      "deficit_sum": 2,
+      "deficit_variables": "d_s=r-n_s>=0",
+      "infinity_endpoint_count_histograms": [
+        {
+          "0": 1,
+          "2": 30
+        },
+        {
+          "1": 2,
+          "2": 29
+        }
+      ],
+      "negative_deficit_impossible": true,
+      "negative_deficit_reason": "one d_s=-h forces the other 30 deficits to sum at least 30h-1, so the total is at least 29h-1>=28>4-r",
+      "proved": true,
+      "r": 2,
+      "transverse_cell_count": "N_st=d_s+d_t+1_{st=B_d}"
+    },
+    {
+      "deficit_sum": 1,
+      "deficit_variables": "d_s=r-n_s>=0",
+      "infinity_endpoint_count_histograms": [
+        {
+          "2": 1,
+          "3": 30
+        }
+      ],
+      "negative_deficit_impossible": true,
+      "negative_deficit_reason": "one d_s=-h forces the other 30 deficits to sum at least 30h-1, so the total is at least 29h-1>=28>4-r",
+      "proved": true,
+      "r": 3,
+      "transverse_cell_count": "N_st=d_s+d_t+1_{st=B_d}"
+    }
+  ],
+  "optional_three_row_final_checks": [
+    {
+      "I": 28,
+      "all_opposite_directions_have_b0": true,
+      "contradiction": true,
+      "global_sum_b": 72,
+      "hard_baseline_b_sum": 30,
+      "maximum_possible_even_b": 30,
+      "opposite_direction_count": 16,
+      "opposite_direction_mean": 32,
+      "phase_zero_b2_congruence": "15 divides I-4",
+      "phase_zero_b2_congruence_holds": false,
+      "phase_zero_b30_congruence": "15 divides I-5",
+      "phase_zero_b30_congruence_holds": false,
+      "phase_zero_floor_compatible_b": [
+        0,
+        2,
+        30
+      ],
+      "proved": true,
+      "required_high_hard_direction_b": 42
+    },
+    {
+      "I": 60,
+      "all_opposite_directions_have_b0": true,
+      "contradiction": true,
+      "global_sum_b": 72,
+      "hard_baseline_b_sum": 30,
+      "maximum_possible_even_b": 30,
+      "opposite_direction_count": 16,
+      "opposite_direction_mean": 32,
+      "phase_zero_b2_congruence": "15 divides I-4",
+      "phase_zero_b2_congruence_holds": false,
+      "phase_zero_b30_congruence": "15 divides I-5",
+      "phase_zero_b30_congruence_holds": false,
+      "phase_zero_floor_compatible_b": [
+        0,
+        2,
+        30
+      ],
+      "proved": true,
+      "required_high_hard_direction_b": 42
+    },
+    {
+      "I": 92,
+      "all_opposite_directions_have_b0": true,
+      "contradiction": true,
+      "global_sum_b": 72,
+      "hard_baseline_b_sum": 30,
+      "maximum_possible_even_b": 30,
+      "opposite_direction_count": 16,
+      "opposite_direction_mean": 32,
+      "phase_zero_b2_congruence": "15 divides I-4",
+      "phase_zero_b2_congruence_holds": false,
+      "phase_zero_b30_congruence": "15 divides I-5",
+      "phase_zero_b30_congruence_holds": false,
+      "phase_zero_floor_compatible_b": [
+        0,
+        2,
+        30
+      ],
+      "proved": true,
+      "required_high_hard_direction_b": 42
+    }
+  ],
+  "optional_three_row_strengthening": [
+    {
+      "I": 28,
+      "baseline_hard_parallel_count_P": 6,
+      "checks": {
+        "hard_high_parallel_increment": true,
+        "hard_parallel_counts_exhaust_finite_edges": true,
+        "opposite_mean": true,
+        "row_formula_I": true,
+        "row_formula_P": true
+      },
+      "every_finite_selected_edge_has_hard_sign": true,
+      "every_opposite_direction_mean": 32,
+      "every_opposite_direction_parallel_count": 0,
+      "finite_edge_count": 97,
+      "hard_parallel_total": 97,
+      "high_hard_parallel_count": 7,
+      "proved": true,
+      "r": 1
+    },
+    {
+      "I": 60,
+      "baseline_hard_parallel_count_P": 4,
+      "checks": {
+        "hard_high_parallel_increment": true,
+        "hard_parallel_counts_exhaust_finite_edges": true,
+        "opposite_mean": true,
+        "row_formula_I": true,
+        "row_formula_P": true
+      },
+      "every_finite_selected_edge_has_hard_sign": true,
+      "every_opposite_direction_mean": 32,
+      "every_opposite_direction_parallel_count": 0,
+      "finite_edge_count": 65,
+      "hard_parallel_total": 65,
+      "high_hard_parallel_count": 5,
+      "proved": true,
+      "r": 2
+    },
+    {
+      "I": 92,
+      "baseline_hard_parallel_count_P": 2,
+      "checks": {
+        "hard_high_parallel_increment": true,
+        "hard_parallel_counts_exhaust_finite_edges": true,
+        "opposite_mean": true,
+        "row_formula_I": true,
+        "row_formula_P": true
+      },
+      "every_finite_selected_edge_has_hard_sign": true,
+      "every_opposite_direction_mean": 32,
+      "every_opposite_direction_parallel_count": 0,
+      "finite_edge_count": 33,
+      "hard_parallel_total": 33,
+      "high_hard_parallel_count": 3,
+      "proved": true,
+      "r": 3
+    }
+  ],
+  "p31_R10_endpoint_excluded": true,
+  "p31_first_possible_positive_slack": 11,
+  "p_plus_one_shell_closed": false,
+  "phase_zero_filter": [
+    {
+      "B0": 0,
+      "I": 0,
+      "P": 4,
+      "excluded": true,
+      "forced_zero_quotient_direction_mean": 8,
+      "g": 0,
+      "nonzero_integral_lift_floor": 28,
+      "phase_zero_quotient_sum": 12,
+      "phase_zero_u0": 4,
+      "r": 0,
+      "reason": "some quotient k_d is zero; nonzero b costs at least 32, while b=0 gives A=2C and 4p E[C]>=28",
+      "signed_cell_aggregate": 1,
+      "transverse_capacity": 121
+    },
+    {
+      "B0": 2,
+      "I": 2,
+      "P": 2,
+      "excluded": true,
+      "forced_zero_quotient_direction_mean": 12,
+      "g": 0,
+      "nonzero_integral_lift_floor": 28,
+      "phase_zero_quotient_sum": 10,
+      "phase_zero_u0": 6,
+      "r": 0,
+      "reason": "some quotient k_d is zero; nonzero b costs at least 32, while b=0 gives A=2C and 4p E[C]>=28",
+      "signed_cell_aggregate": -59,
+      "transverse_capacity": 121
+    },
+    {
+      "B0": 4,
+      "I": 4,
+      "P": 0,
+      "excluded": true,
+      "forced_zero_quotient_direction_mean": 16,
+      "g": 0,
+      "nonzero_integral_lift_floor": 28,
+      "phase_zero_quotient_sum": 8,
+      "phase_zero_u0": 8,
+      "r": 0,
+      "reason": "some quotient k_d is zero; nonzero b costs at least 32, while b=0 gives A=2C and 4p E[C]>=28",
+      "signed_cell_aggregate": -119,
+      "transverse_capacity": 121
+    },
+    {
+      "B0": -3,
+      "I": 28,
+      "P": 6,
+      "excluded": false,
+      "forced_zero_quotient_direction_mean": null,
+      "g": 2,
+      "nonzero_integral_lift_floor": 28,
+      "phase_zero_quotient_sum": 16,
+      "phase_zero_u0": 0,
+      "r": 1,
+      "reason": "phase-zero residue is zero",
+      "signed_cell_aggregate": 91,
+      "transverse_capacity": 91
+    },
+    {
+      "B0": -1,
+      "I": 30,
+      "P": 4,
+      "excluded": true,
+      "forced_zero_quotient_direction_mean": 4,
+      "g": 2,
+      "nonzero_integral_lift_floor": 28,
+      "phase_zero_quotient_sum": 14,
+      "phase_zero_u0": 2,
+      "r": 1,
+      "reason": "some quotient k_d is zero; nonzero b costs at least 32, while b=0 gives A=2C and 4p E[C]>=28",
+      "signed_cell_aggregate": 31,
+      "transverse_capacity": 91
+    },
+    {
+      "B0": 1,
+      "I": 32,
+      "P": 2,
+      "excluded": true,
+      "forced_zero_quotient_direction_mean": 8,
+      "g": 2,
+      "nonzero_integral_lift_floor": 28,
+      "phase_zero_quotient_sum": 12,
+      "phase_zero_u0": 4,
+      "r": 1,
+      "reason": "some quotient k_d is zero; nonzero b costs at least 32, while b=0 gives A=2C and 4p E[C]>=28",
+      "signed_cell_aggregate": -29,
+      "transverse_capacity": 91
+    },
+    {
+      "B0": 3,
+      "I": 34,
+      "P": 0,
+      "excluded": true,
+      "forced_zero_quotient_direction_mean": 12,
+      "g": 2,
+      "nonzero_integral_lift_floor": 28,
+      "phase_zero_quotient_sum": 10,
+      "phase_zero_u0": 6,
+      "r": 1,
+      "reason": "some quotient k_d is zero; nonzero b costs at least 32, while b=0 gives A=2C and 4p E[C]>=28",
+      "signed_cell_aggregate": -89,
+      "transverse_capacity": 91
+    },
+    {
+      "B0": -2,
+      "I": 60,
+      "P": 4,
+      "excluded": false,
+      "forced_zero_quotient_direction_mean": null,
+      "g": 4,
+      "nonzero_integral_lift_floor": 28,
+      "phase_zero_quotient_sum": 16,
+      "phase_zero_u0": 0,
+      "r": 2,
+      "reason": "phase-zero residue is zero",
+      "signed_cell_aggregate": 61,
+      "transverse_capacity": 61
+    },
+    {
+      "B0": 0,
+      "I": 62,
+      "P": 2,
+      "excluded": true,
+      "forced_zero_quotient_direction_mean": 4,
+      "g": 4,
+      "nonzero_integral_lift_floor": 28,
+      "phase_zero_quotient_sum": 14,
+      "phase_zero_u0": 2,
+      "r": 2,
+      "reason": "some quotient k_d is zero; nonzero b costs at least 32, while b=0 gives A=2C and 4p E[C]>=28",
+      "signed_cell_aggregate": 1,
+      "transverse_capacity": 61
+    },
+    {
+      "B0": 2,
+      "I": 64,
+      "P": 0,
+      "excluded": true,
+      "forced_zero_quotient_direction_mean": 8,
+      "g": 4,
+      "nonzero_integral_lift_floor": 28,
+      "phase_zero_quotient_sum": 12,
+      "phase_zero_u0": 4,
+      "r": 2,
+      "reason": "some quotient k_d is zero; nonzero b costs at least 32, while b=0 gives A=2C and 4p E[C]>=28",
+      "signed_cell_aggregate": -59,
+      "transverse_capacity": 61
+    },
+    {
+      "B0": -1,
+      "I": 92,
+      "P": 2,
+      "excluded": false,
+      "forced_zero_quotient_direction_mean": null,
+      "g": 6,
+      "nonzero_integral_lift_floor": 28,
+      "phase_zero_quotient_sum": 16,
+      "phase_zero_u0": 0,
+      "r": 3,
+      "reason": "phase-zero residue is zero",
+      "signed_cell_aggregate": 31,
+      "transverse_capacity": 31
+    },
+    {
+      "B0": 1,
+      "I": 94,
+      "P": 0,
+      "excluded": true,
+      "forced_zero_quotient_direction_mean": 4,
+      "g": 6,
+      "nonzero_integral_lift_floor": 28,
+      "phase_zero_quotient_sum": 14,
+      "phase_zero_u0": 2,
+      "r": 3,
+      "reason": "some quotient k_d is zero; nonzero b costs at least 32, while b=0 gives A=2C and 4p E[C]>=28",
+      "signed_cell_aggregate": -29,
+      "transverse_capacity": 31
+    }
+  ],
+  "pre_phase_zero_candidates": [
+    {
+      "B0": 0,
+      "I": 0,
+      "P": 4,
+      "g": 0,
+      "r": 0,
+      "signed_cell_aggregate": 1,
+      "transverse_capacity": 121
+    },
+    {
+      "B0": 2,
+      "I": 2,
+      "P": 2,
+      "g": 0,
+      "r": 0,
+      "signed_cell_aggregate": -59,
+      "transverse_capacity": 121
+    },
+    {
+      "B0": 4,
+      "I": 4,
+      "P": 0,
+      "g": 0,
+      "r": 0,
+      "signed_cell_aggregate": -119,
+      "transverse_capacity": 121
+    },
+    {
+      "B0": -3,
+      "I": 28,
+      "P": 6,
+      "g": 2,
+      "r": 1,
+      "signed_cell_aggregate": 91,
+      "transverse_capacity": 91
+    },
+    {
+      "B0": -1,
+      "I": 30,
+      "P": 4,
+      "g": 2,
+      "r": 1,
+      "signed_cell_aggregate": 31,
+      "transverse_capacity": 91
+    },
+    {
+      "B0": 1,
+      "I": 32,
+      "P": 2,
+      "g": 2,
+      "r": 1,
+      "signed_cell_aggregate": -29,
+      "transverse_capacity": 91
+    },
+    {
+      "B0": 3,
+      "I": 34,
+      "P": 0,
+      "g": 2,
+      "r": 1,
+      "signed_cell_aggregate": -89,
+      "transverse_capacity": 91
+    },
+    {
+      "B0": -2,
+      "I": 60,
+      "P": 4,
+      "g": 4,
+      "r": 2,
+      "signed_cell_aggregate": 61,
+      "transverse_capacity": 61
+    },
+    {
+      "B0": 0,
+      "I": 62,
+      "P": 2,
+      "g": 4,
+      "r": 2,
+      "signed_cell_aggregate": 1,
+      "transverse_capacity": 61
+    },
+    {
+      "B0": 2,
+      "I": 64,
+      "P": 0,
+      "g": 4,
+      "r": 2,
+      "signed_cell_aggregate": -59,
+      "transverse_capacity": 61
+    },
+    {
+      "B0": -1,
+      "I": 92,
+      "P": 2,
+      "g": 6,
+      "r": 3,
+      "signed_cell_aggregate": 31,
+      "transverse_capacity": 31
+    },
+    {
+      "B0": 1,
+      "I": 94,
+      "P": 0,
+      "g": 6,
+      "r": 3,
+      "signed_cell_aggregate": -29,
+      "transverse_capacity": 31
+    }
+  ],
+  "prop": "15.733",
+  "proved": true,
+  "quadratic_minmax_limit_closed": false,
+  "result_status": "proved p=31 endpoint exclusion",
+  "superseded_as_live_endpoint_gate_by": "Proposition 15.734",
+  "title": "Simultaneous-baseline coefficient exclusion at p=31",
+  "top_level_gates_changed": false
+}

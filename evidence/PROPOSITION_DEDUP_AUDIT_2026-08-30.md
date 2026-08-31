@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-31
 
-**Scope:** every assigned proposition through Proposition 15.731, the live
+**Scope:** every assigned proposition through Proposition 15.737, the live
 predicate wiring, and the attack scripts present during the audit
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
@@ -157,9 +157,9 @@ arc-secant index one, and every rich line to be a pairwise `D`-disjoint
 trisecant or 4-secant.  Hence `c_1(A)>=R`.  Exhaustive published arc
 classifications and exact representative audits contradict this at
 `p=17,19,23,29`, moving their first possible positive slacks to `6,7,8,10`.
-The first endpoint not excluded here is `p=31,R=10`; it remains in the
-disjoint rich-block normal form.  Larger slack and the top-level gates remain
-open.
+At this stage the first endpoint not excluded was `p=31,R=10`, in the
+disjoint rich-block normal form. Propositions 15.733--15.734 later supersede
+that frontier.
 
 An eleventh semantic check gives Proposition 15.728. At `p=31,R=10`, the
 exact identity `sum_d b_d=72`, the two type budgets, common-residue
@@ -181,7 +181,7 @@ distinct extensions on one tangent. For `p=3R+1` the two sizes are
 all-prime necessary reduction, not endpoint closure**. At the 15.729 stage,
 the next implication was exclusion or classification of these near-extremal
 affine unique-trisecant configurations while retaining their common
-disjoint-block completion `D`; 15.730--15.731 supersede that formulation.
+disjoint-block completion `D`; 15.730--15.732 supersede that formulation.
 
 A thirteenth semantic check gives Proposition 15.730. Every maximum arc
 contained in the same endpoint completion retains all singleton points and
@@ -202,8 +202,87 @@ Adjacent repairs have a coherently normalized transition quotient of degree
 two or three, respectively. This is a **proved algebraic refinement, not
 endpoint closure**. The exact open implication is exclusion of the common
 completion under the residual direction, phase, and lift constraints. A
-nontrivial repair-cycle identity is the proposed next attack, not a proved
-condition.
+nontrivial repair-cycle identity was the proposed next attack at this stage.
+
+A fifteenth semantic check gives Proposition 15.732.  Put
+`P_A=product_(u in A)L_u` and `Theta_A=P_A^2 Phi_A`.  Every coherently
+normalized adjacent transition becomes the exact potential difference
+`Theta_A'-Theta_A=P_(A intersect A')^3Q_(a,z)`.  Thus every additive
+closed-walk circulation, and every linear functional of it, vanishes
+identically; the cubic-pencil gauge adds another vertex coboundary.  The
+edge quotient does have a nonzero gauge-invariant first jet at the rich-line
+dual point, but its square character is repair-coloured and is not determined
+by the recorded residual parity set.  A nonrich near-pairing direction has
+at most `R+2` repair tangents against envelope degree `2R+2`, and trisecant
+pair masks cannot recover the full block product modulo squares.  This is a
+**proved method barrier, not endpoint narrowing**. Bare cycle evaluations
+and tangent-component counts are duplicate/dead routes. Proposition 15.733
+subsequently uses the simultaneous p31 coefficients, and 15.734 supersedes
+the first-jet front at `k=4p`.
+
+A sixteenth semantic check gives Proposition 15.733. At `p=31,R=10`, the
+fifteen phase-one mean-30 directions have one common parallel count. The
+exact `b=2` and `b=30` baselines have incompatible coefficient offsets, so
+all fifteen have `b=2`. Finite-edge counting and the sharp lift floor force
+the opposite type to `b=0`; the one remaining hard direction would then need
+the impossible odd-fibre count `b=42>30`. This is a **proved symbolic
+endpoint exclusion**, not a configuration census.
+
+A seventeenth semantic check gives Proposition 15.734 and supersedes the
+whole boundary-shell campaign at the `k=4p` endpoint. A graph with
+`|H|=4p+1` has an isolated vertex for `p>=13`. Signed PSL transport sends it
+to infinity while preserving residual compatibility, leaving `I=0` and an
+all-finite even boundary of arbitrary size. Every directional `b_d` is
+therefore even. The exact hard-type budget and phase-one floors leave only
+three homogeneous baseline branches, with coefficient offsets `4,5,3`.
+They force `(P,s)=(4,4),(5,5),(3,3)` and an opposite phase-zero `b=0` lift
+of scaled mass `8,6,8`, all below `p-3`. Hence **every `k=4p`
+residual-(ii) candidate, at every boundary size, is impossible for every
+prime `p>=13`**. At `p=11` the same reduction lands at the sharp equality
+`8=p-3`, which was the exact small-prime frontier at this stage and is
+resolved in 15.736--15.737. Proposition 15.735 separately extends the
+uniform argument two layers; the global residual-(ii) predicate remains open.
+
+An eighteenth semantic check gives Proposition 15.735. For
+`k=4p+2t`, `t=1,2`, the same isolated chart exists and each type has exact
+budget `2m(m+t)`. The hard baseline offsets still force
+`(P,s)=(4,4),(5,5),(3,3)`. The opposite parallel-count surplus remains
+strictly below the `m` opposite directions, so one direction has scaled mean
+`8`, `6`, or `8`, below every admissible phase-zero lift at `p>=13`.
+Therefore **all boundary sizes at `k=4p,4p+2,4p+4` are impossible for every
+prime `p>=13`**. The proof stops honestly at `t=3`: branch B has surplus
+exactly `m`, all opposite directions may have `Q=3` and mean `p+7`, and a
+nonnegative integral quadratic realizes that local mean at `p=17`. At
+`p=13,t=3` an additional exact `b=10,a=20` hard branch survives. Extending
+the one-direction floor or halving calculation to another layer is therefore
+a duplicate dead route unless a simultaneous invariant is added.
+
+A nineteenth semantic check gives Proposition 15.736 and replaces the former
+external-classification premise at `p=11` by an **exhaustive finite
+certificate**. On all 462 points of `J(11,6)`, the pair-monomial evaluation
+space has rank 55 modulo 101. A deterministic family of eight-term third
+differences supplies 407 independent annihilators, so its real nullspace is
+exactly that quadratic space. An exact 462-variable CP-SAT model with support
+84 and no-goods for 55 omitted-pair plus 165 all-equal-triple supports is
+infeasible. Thus those 220 supports are exhaustive. Proposition 15.688 is
+checked explicitly at the interface: scaled mass eight is below the
+`H>=2` floor twelve, forcing a Boolean lift of support 84. This kills the
+hard-`b=2` branch but, by itself, leaves the simultaneous all-equal-triple
+branch open.
+
+A twentieth semantic check gives Proposition 15.737. In each of the first
+three `p=11` layers, at least three exact hard `4-z_j` baselines remain. Their
+signed edge coefficients are stars, so the homogeneous binary quadratic
+moment
+`M_H(L)=sum_e chi(e)(L(u)-L(v))^2` vanishes at at least three projective
+linear forms and hence vanishes identically. The only catalog survivor in an
+opposite minimum direction is an all-equal triple, whose signed coefficients
+form a triangle. Its moment is
+`2(r^2-r+1)`, never zero because its discriminant `-3=8` is nonsquare modulo
+11. Hence **`p=11,k=44,46,48` are impossible for every boundary size**.
+Together with 15.735, the first three residual shells are closed for every
+prime `p>=11`; critical `p=5,7`, `p=11,k>=50`, and
+`p>=13,k>=4p+6` remain open.
 
 The Bartoli--Storme ``unique-trisecant ceiling'' previously recorded after
 15.729 is **RETRACTED**. Under the corollary's other hypotheses, including
@@ -215,13 +294,13 @@ is used only for their explicit interpolation formula. Proposition 15.731's
 below-threshold envelope is derived from their scaled tangent lemma and the
 new line-gluing argument, not by applying that theorem outside its scope.
 
-The independent `p=31` complete-22-arc check is a finite side route only.
+The independent `p=31` complete-22-arc check is a finite historical side
+route only.
 Eleven of the twelve classified classes have sourced representatives and
 exact audited `c_1<=2<10`; the twelfth representative remains unavailable.
-Therefore this audit is neither a `p=31` endpoint theorem nor the live
-all-prime gate. First-shell survivors still begin at
-`R>=floor((p-1)/3)`, and residual (ii), multi-level Type I, and `L` remain
-open. The exact replay is
+Propositions 15.733--15.734 close the endpoint without that missing
+representative, so completing the class list cannot advance a live gate. The
+exact replay is
 `scripts/p31_complete_22arc_public_audit.py`, with scope ledger
 `evidence/NOTE_2026-08-31_p31_public_11_of_12_arc_audit.md` and deterministic
 certificate `evidence/p31_complete_22arc_public_11_audit.json`.
@@ -257,13 +336,13 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 646 source-backed proposition modules from 15.83 through 15.731.
+- There are 652 source-backed proposition modules from 15.83 through 15.737.
 - The labels 15.537, 15.583, and 15.584 have no proposition module.  They are
   unassigned labels, not unreviewed propositions; later source headers mention
   those numbers only as historical range/state markers.
-- Therefore every assigned proposition through 15.731 was included in this
+- Therefore every assigned proposition through 15.737 was included in this
   audit.  The grouped ledger below is by shared mathematical route rather than
-  a 719-row restatement of the writeup.
+  a 734-row restatement of the assigned propositions.
 
 ## Authoritative acceptance chain
 
@@ -272,10 +351,10 @@ The public theorem is gated consistently by the corrected global
 currently `False`. The historical bounded `True` is available only through
 `e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after audit of 15.731 |
+| unit | exact live content | status after audit of 15.737 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
-| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — for `p>=17`, 15.721 moves the general boundary floor to `|D|=p+1`; 15.676 and 15.722--15.724 close pair equality and slack zero, while 15.726 excludes every positive outside slack through `floor((p-4)/3)`. Thus first-shell survivors have `R>=floor((p-1)/3)`. Proposition 15.727 excludes equality at `p=17,19,23,29`; 15.728--15.731 give necessary Paley-hard, complementary-repair, and tangent-transition reductions for the other endpoint cases, beginning at `p=31,R=10`, but exclude none of them. |
+| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close `k in {4p,4p+2,4p+4}`, for every boundary size, at all primes `p>=11`. The exact remainder is critical `p=5,7`, `p=11,k>=50`, and `p>=13,k>=4p+6`; the separate positive `p=7,z=7` branch persists. The global predicate stays false. |
 | Type I | the multi-level `3A+B>0` bad case | **OPEN** — `|κ|=1` needs `G>T` (for example `|μ|≤|L|`), while `|κ|=3` independently needs `χ_d((2p-1)μ+(p-2)ν)>-(p-2)/p`; the particular term is safe but the δ remainder is open |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
@@ -307,12 +386,18 @@ top-level front.
 | **15.720--15.721** | degree-congruence bi-tight close; signed boundary normalization | 15.720 closes the required bi-tight levels. 15.721 proves `|D|>=p+1` for every residual candidate at `p>=17` and identifies strict deficit in the normalized infinity-plus-`p` shell as the first general residual branch. Neither closes Type I or residual (ii). |
 | **15.722--15.724** | exact phase cocycle; outside-pair slack; paired-cube floor-plus-two repair; full-circle exclusion | 15.722 identifies slack zero with an aligned Miquelian circle, excludes `R=1,2,3`, and more generally excludes `1<=R<=floor(sqrt(p)-5/2)` by minimal arc deletion plus the prime-field conic threshold. 15.724 excludes the circle; at that stage the `p+1` branch lay beyond `max(3,floor(sqrt(p)-5/2))`. 15.723 proves the middle floor-plus-two shortcut except for the explicit cells `(17,5,1)` and `(17,11,0)`, which every later profile audit must retain. |
 | **15.725** | finite parabola-plus-internal census and attempted all-prime character bound | **RETRACTED as a family close.** The finite phase-zero census is retained; the all-prime character sums and opposite orientation are open. It changes no gate. |
-| **15.726** | minimal arc deletion plus the Ball--Lavrauw dual tangent envelope | **PROVED narrowing, not shell closure.** For every prime `p>=17`, it excludes `1<=R<=floor((p-4)/3)` at `|D|=p+1`; any positive survivor must have `R>=floor((p-1)/3)`. Residual (ii), Type I, and `L` remain open. |
-| **15.727** | endpoint tangent-envelope equality, disjoint rich blocks, and published arc classifications | **PROVED narrowing, not shell closure.** Equality forces `R` index-one points outside an arc and disjoint trisecant/4-secant blocks. This excludes the endpoint at `p=17,19,23,29`; the first unexcluded endpoint is `p=31,R=10`. Residual (ii), Type I, and `L` remain open. |
-| **15.728** | exact `p=31` odd-fibre sum, Paley-type residue budget, and nonrich `b=2` directions | **PROVED necessary normal form, not endpoint closure.** One Paley type has means `{30^15,62}`, at least fourteen `b=2` directions, and at least `4+y` nonrich profiles `(14,2,15,0,0)`. The `p=31` endpoint and every top-level gate remain open. |
-| **15.729** | retain-three/retain-two block deletion and co-tangent extension reduction | **PROVED all-prime necessary reduction, not endpoint closure.** Every remaining endpoint gives an affine `(p+2-R,3)`-arc with exactly one trisecant and a `(p-R)`-arc with two extensions on one tangent; 15.730--15.731 subsequently sharpen this to the full repair ensemble and tangent transitions. |
-| **15.730** | all `3^x6^y` maximum repairs, complementary arcs, and exact two-colour projective/directional census | **PROVED simultaneous necessary normal form, not endpoint closure.** Every repair has an `R`-arc index-one complement; 4-secants give three displayed within-`D` co-tangent extensions. Residual (ii), Type I, and `L` remain open. |
-| **15.731** | direct tangent-envelope gluing and adjacent-repair transition quotient | **PROVED algebraic refinement, not endpoint closure.** The normalized envelope is unique for `p=3R+2` and a line-product pencil for `p=3R+1`; adjacent swaps carry quadratic or cubic transition data. Exclusion of the common completion under residual phase/lift constraints remains open; a nontrivial repair-cycle identity is the proposed next attack. |
+| **15.726** | minimal arc deletion plus the Ball--Lavrauw dual tangent envelope | **PROVED historical narrowing.** For every prime `p>=17`, it excludes `1<=R<=floor((p-4)/3)` at `|D|=p+1`; 15.734 now supersedes the whole shell as a live endpoint gate. |
+| **15.727** | endpoint tangent-envelope equality, disjoint rich blocks, and published arc classifications | **PROVED historical narrowing.** Equality forces disjoint trisecant/4-secant blocks and was excluded at `p=17,19,23,29`; 15.734 now supersedes every remaining endpoint case. |
+| **15.728** | exact `p=31` odd-fibre sum, Paley-type residue budget, and nonrich `b=2` directions | **PROVED necessary normal form.** It fed the direct 15.733 close and is superseded as a live gate by 15.734. |
+| **15.729** | retain-three/retain-two block deletion and co-tangent extension reduction | **PROVED all-prime necessary reduction, not endpoint closure.** Every remaining endpoint gives an affine `(p+2-R,3)`-arc with exactly one trisecant and a `(p-R)`-arc with two extensions on one tangent; 15.730--15.732 subsequently sharpen this to the full repair ensemble, tangent transitions, and exact-cycle barrier. |
+| **15.730** | all `3^x6^y` maximum repairs, complementary arcs, and exact two-colour projective/directional census | **PROVED historical endpoint structure.** Every repair has an `R`-arc index-one complement; 4-secants give three displayed co-tangent extensions. Superseded as a live gate by 15.734. |
+| **15.731** | direct tangent-envelope gluing and adjacent-repair transition quotient | **PROVED historical endpoint structure.** The normalized envelope is unique or a line-product pencil, with quadratic/cubic swap data. Superseded as a live gate by 15.734. |
+| **15.732** | exact cleared repair cycles, rich-direction first jet, and natural phase-bridge audit | **PROVED method barrier.** Every cleared circulation is a coboundary and the natural phase bridges fail. Its algebra remains valid, but 15.734 makes a phase bridge unnecessary at `k=4p`. |
+| **15.733** | simultaneous exact `p=31` baseline coefficients | **PROVED symbolic endpoint exclusion.** Closes `p=31,R=10` without a finite configuration census; subsumed by 15.734. |
+| **15.734** | isolated-chart hard-type baselines at `|H|=4p+1` | **PROVED endpoint theorem.** Every boundary size is impossible for every prime `p>=13`; its p11 sharp-equality frontier is subsequently resolved by 15.736--15.737, and its larger-layer limitation is extended by 15.735. |
+| **15.735** | isolated-chart type budgets and exact surplus arithmetic at `k=4p+2,4p+4` | **PROVED two-layer extension.** With 15.734, closes the first three residual shells for every `p>=13` and every boundary size. The `t=3` branch-B surplus equals `m`, so no later layer is claimed. |
+| **15.736** | exact `J(11,6)` quadratic evaluation space and sharp support-84 Boolean catalog | **EXHAUSTIVE FINITE CERTIFICATE.** Rank 55 plus 407 independent third-difference identities make the 220 omitted-pair/all-equal-triple supports exhaustive. The hard-`b=2` p11 branch closes; simultaneous all-equal triples remain for 15.737. |
+| **15.737** | signed star/triangle coefficient patterns and the binary quadratic moment over `F_11` | **PROVED p11 three-layer theorem.** Closes `k=44,46,48` for every boundary size. Together with 15.735, the first three shells are closed for every prime `p>=11`. |
 
 ## Exact duplicated run
 
@@ -368,15 +453,14 @@ is a current E(1) gate.
   reruns after their exact closures;
 - any all-finite first/second-shell profile work from 15.675--15.712:
   15.721 transports those sizes into the already-closed infinity ranges;
-- any `|D|=p+1` full-circle or outside-slack campaign with
-  `0<=R<=floor((p-4)/3)`: 15.722--15.724 close `R=0`, and 15.726 closes the
-  stated positive interval exactly; 15.727 also closes the endpoint at
-  `p=17,19,23,29`, so do not rerun those finite endpoint classifications.
-  For every other equality case start from 15.730's full complementary-repair
-  ensemble and 15.731's tangent-envelope swap transitions, not from another
-  unrestricted census. At `p=31`, eleven of twelve classified complete 22-arc classes are
-  already audited; the missing twelfth representative is a finite side-route
-  issue, not authorization for an all-prime class campaign;
+- any boundary-size, outside-slack, endpoint-repair, tangent-envelope, or
+  phase-bridge campaign in the first three residual shells for `p>=11`:
+  Propositions 15.734--15.737 close every boundary at
+  `k in {4p,4p+2,4p+4}`. The p31 class list, repair graph, tangent
+  transitions, p11 sharp catalog, and binary moment are completed inputs,
+  not new search invitations. At `t=3`, a changed premise must couple
+  directions or add a global invariant; the one-direction mean/floor route
+  is blocked by an explicit local lift;
 - treating a projected/parity/semigroup survivor as a feasible graph;
 - trying to reach the general residual with an `L2` bound on `delta`
   (15.595 proves the scale loses from `p>=11`).
@@ -401,7 +485,7 @@ are retained as history/data but are removed from the active attack queue.
 | `scripts/p5_*size_four*`, `scripts/residual_size_four_*` | size-four branch closed by 15.652--15.656 |
 | `scripts/p5_*size_six*`, `scripts/p7_size6_*`, `scripts/residual_boundary_size_six_*` | size-six branches closed by 15.657--15.661 |
 | finite `p=7` size-eight/fixed-boundary scripts | finite branch closed by 15.662--15.666 |
-| `scripts/p17_*`, old `p19`, and `p23` all-finite endpoint diagnostics | superseded as boundary gates by 15.721 signed transport; retain only as historical certificates or reusable finite-geometry work |
+| `scripts/p17_*`, old `p19`, `p23`, and `p31` endpoint diagnostics | superseded as first-three-shell boundary gates by 15.734--15.737; retain only as historical certificates or reusable finite-geometry work |
 | `scripts/r1_p11_*`, broad theta/channel scripts | useful finite data, but the aggregate cones are certified insufficient and `p=11` itself is already R1-positive |
 | `scripts/p7_infinity7_positive_z7_*` and matching `/tmp` artifacts | terminal semigroup/quotient campaign; not active |
 | generic `residual_boundary_*` parity/projected models | necessary-condition diagnostics only; infeasibility can close a specified finite branch, feasibility cannot close or witness the graph problem |
@@ -469,21 +553,15 @@ Before spending mesh/GPU time:
 
 1. state which one of the two live fronts the attack can close;
 2. name the exact proposition whose limitation it overcomes;
-3. for a nonempty residual boundary, first use signed PSL transport to put a
-   boundary point at infinity; do not open an all-finite profile campaign;
-4. at `|D|=p+1`, skip slack zero and every positive outside slack through
-   `floor((p-4)/3)`; 15.722--15.724 close zero and 15.726 closes that positive
-   interval.  At equality, 15.727 closes `p=17,19,23,29`; for the remaining
-   primes start from its disjoint trisecant/4-secant normal form, 15.730's
-   full repair ensemble, and 15.731's quadratic/cubic tangent transitions.
-   The live implication is exclusion of the common completion `D` under the
-   residual direction, phase, and lift constraints; unrestricted
-   unique-trisecant classification is weaker. A nontrivial repair-cycle
-   identity is the proposed next attack, not a proved condition.
-   The first unexcluded endpoint is `p=31,R=10`. Proposition 15.728
-   adds its Paley-hard profile there. The eleven-of-twelve complete-22-arc
-   audit is only finite evidence; the twelfth representative is unsourced.
-   Retain both 15.723 floor-plus-two exceptions in any profile DP;
+3. in any sparse layer, first audit the isolated-vertex count and transport an
+   isolated vertex to infinity; Propositions 15.734--15.737 already close
+   every boundary in the first three shells for `p>=11`;
+4. do not reopen `k in {4p,4p+2,4p+4}` for `p>=11`. The live residual ranges
+   are critical `p=5,7`, `p=11,k>=50`, and `p>=13,k>=4p+6`. At generic
+   `t=3`, the branch-B surplus resonance and explicit local mean witness rule
+   out another one-direction floor or halving proof; state the genuinely new
+   cross-direction/global invariant before computing. Retain both 15.723
+   floor-plus-two exceptions in any independent profile DP;
 5. search tracked files, untracked scripts, `/tmp` artifact names and hashes,
    git history, GitHub, MathOverflow, literature notes, and OEIS when number
    patterns are involved;

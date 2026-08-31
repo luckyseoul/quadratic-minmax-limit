@@ -1,0 +1,3928 @@
+{
+  "all_boundary_sizes_at_k_eq_4p_closed_p_ge_13": true,
+  "critical_residual_ii_k_eq_4p_empty_p_ge_13": true,
+  "even_k_greater_than_4p_closed": false,
+  "finite_configuration_search_used": false,
+  "multi_level_type_I_closed": false,
+  "p11_closed": false,
+  "p11_equality_obstruction": {
+    "branch_reductions": {
+      "hard_b2": {
+        "forced_P": 4,
+        "forced_s": 4,
+        "small_mean": 8
+      },
+      "p3_all_low_b_p_minus_1": {
+        "forced_P": 3,
+        "forced_s": 3,
+        "small_mean": 8
+      }
+    },
+    "equality_examples_not_classified_here": true,
+    "exact_even_floor_tables": {
+      "0": {
+        "0": 0,
+        "2": 12,
+        "4": 16,
+        "6": 22,
+        "8": 16,
+        "10": 12
+      },
+      "1": {
+        "0": 22,
+        "2": 10,
+        "4": 22,
+        "6": 18,
+        "8": 22,
+        "10": 10
+      }
+    },
+    "isolated_gap": 32,
+    "least_nonzero_phase_zero_floor": 12,
+    "one_equality_example": "C=(1-x_i)(1-x_j)",
+    "p": 11,
+    "p11_closed_here": false,
+    "proved_reduction": true,
+    "q": 5,
+    "result_status": "open reduction",
+    "sharp_nonzero_integral_lift_floor": 8,
+    "small_mean_equals_lift_floor": true
+  },
+  "prop": "15.734",
+  "proved": true,
+  "quadratic_minmax_limit_closed": false,
+  "remaining_scope": "critical residual (ii) at p=5,7,11; even k>4p; multi-level Type I; and the quadratic-minmax limit",
+  "representative_exact_ledgers": {
+    "13": {
+      "H_edge_count": 53,
+      "all_boundary_sizes_excluded": true,
+      "arithmetic": {
+        "H_edge_count": 53,
+        "ambient_vertex_count": 170,
+        "critical_original_k": 52,
+        "direction_count_per_type": 7,
+        "hard_phase": 1,
+        "hard_type": "eps_d=c_H",
+        "m": 7,
+        "opposite_phase": 0,
+        "p": 13,
+        "phase_exponent": 25,
+        "proved": true,
+        "q": 6,
+        "type_budget": 98,
+        "type_budget_identity": "sum_(eps_d=tau) a_d=(p+1)^2/2"
+      },
+      "boundary_size_hypothesis_used": false,
+      "branch_exclusions": {
+        "hard_b2": {
+          "P_upper_bound_reason": "rho>=0 and opposite-edge nonnegativity give P<=s<=8",
+          "a_minimum_direction_is_forced": true,
+          "b0_positive_lift_excluded": true,
+          "branch": "hard_b2",
+          "branch_baseline": {
+            "baseline": "A=(1-x_i-x_j)^2",
+            "congruence": "6 divides I+P-4",
+            "offset": 4,
+            "target": "eps*S_H=4+z_i*z_j"
+          },
+          "branch_excluded": true,
+          "coefficient_offset": 4,
+          "forced_P": 4,
+          "forced_rho": 0,
+          "forced_s": 4,
+          "hard_finite_edge_count_formula": "mP+1",
+          "least_nonzero_phase_zero_b_floor": 12,
+          "mean_one_parallel_step_below": -6,
+          "minimum_direction_mean": 8,
+          "minimum_parallel_count": 3,
+          "nonzero_b_excluded": true,
+          "nonzero_integral_lift_floor": 10,
+          "opposite_finite_edge_count": 24,
+          "opposite_mean_formula": "a=(p-1)s+(p+1)Q+9-7p",
+          "opposite_parallel_count_sum": 24,
+          "p": 13,
+          "parallel_surplus_above_minimum": 3,
+          "parameter_rows_P_0_through_8": [
+            {
+              "P": 0,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 1,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 2,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 3,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 4,
+              "coefficient_congruence_holds": true,
+              "coefficient_numerator_I_plus_P_minus_offset": 0,
+              "feasible": true,
+              "opposite_edge_nonnegative": true,
+              "opposite_finite_edge_count": 24,
+              "rho": 0,
+              "rho_nonnegative": true,
+              "s": 4
+            },
+            {
+              "P": 5,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 6,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 7,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 8,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            }
+          ],
+          "proved": true,
+          "rho_nonnegative_reason": "I+P-4>-q and is divisible by q",
+          "surplus_less_than_opposite_direction_count": true,
+          "transported_infinity_degree_I": 0
+        },
+        "p1_residue_zero_b_p_minus_1": {
+          "P_upper_bound_reason": "rho>=0 and opposite-edge nonnegativity give P<=s<=8",
+          "a_minimum_direction_is_forced": true,
+          "b0_positive_lift_excluded": true,
+          "branch": "p1_residue_zero_b_p_minus_1",
+          "branch_baseline": {
+            "applicable_p_mod_4": 1,
+            "baseline": "A=x_j",
+            "congruence": "6 divides I+P-5",
+            "offset": 5,
+            "target": "eps*S_H=4+z_j"
+          },
+          "branch_excluded": true,
+          "coefficient_offset": 5,
+          "forced_P": 5,
+          "forced_rho": 0,
+          "forced_s": 5,
+          "hard_finite_edge_count_formula": "mP",
+          "least_nonzero_phase_zero_b_floor": 12,
+          "mean_one_parallel_step_below": -8,
+          "minimum_direction_mean": 6,
+          "minimum_parallel_count": 2,
+          "nonzero_b_excluded": true,
+          "nonzero_integral_lift_floor": 10,
+          "opposite_finite_edge_count": 18,
+          "opposite_mean_formula": "a=(p-1)s+(p+1)Q+9-7p",
+          "opposite_parallel_count_sum": 18,
+          "p": 13,
+          "parallel_surplus_above_minimum": 4,
+          "parameter_rows_P_0_through_8": [
+            {
+              "P": 0,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -5,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 1,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 2,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 3,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 4,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 5,
+              "coefficient_congruence_holds": true,
+              "coefficient_numerator_I_plus_P_minus_offset": 0,
+              "feasible": true,
+              "opposite_edge_nonnegative": true,
+              "opposite_finite_edge_count": 18,
+              "rho": 0,
+              "rho_nonnegative": true,
+              "s": 5
+            },
+            {
+              "P": 6,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 7,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 8,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            }
+          ],
+          "proved": true,
+          "rho_nonnegative_reason": "I+P-5>-q and is divisible by q",
+          "surplus_less_than_opposite_direction_count": true,
+          "transported_infinity_degree_I": 0
+        }
+      },
+      "critical_original_k": 52,
+      "critical_residual_ii_k_eq_4p_excluded": true,
+      "even_k_greater_than_4p_excluded": false,
+      "finite_configuration_search_used": false,
+      "hard_residue_branches": {
+        "equal_mean_low_cells_cannot_mix": true,
+        "feasible_u": [
+          0,
+          6
+        ],
+        "high_direction_count": 1,
+        "high_mean": 26,
+        "low_direction_count": 6,
+        "low_mean": 12,
+        "low_phase_one_b_candidates": [
+          2
+        ],
+        "nonzero_integral_lift_floor": 10,
+        "p": 13,
+        "possible_branches": [
+          "hard_b2",
+          "p1_residue_zero_b_p_minus_1"
+        ],
+        "proved": true,
+        "quotient_identity": "sum_d k_d=m-u",
+        "residue_rows": [
+          {
+            "common_residue": 0,
+            "excluded": false,
+            "quotient_sum": 7,
+            "reason": "b=2 is lift-forbidden; exact b=p-1 remains",
+            "surviving_branch": "p1_residue_zero_b_p_minus_1",
+            "u": 0
+          },
+          {
+            "common_residue": 2,
+            "excluded": true,
+            "quotient_sum": 6,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 1
+          },
+          {
+            "common_residue": 4,
+            "excluded": true,
+            "quotient_sum": 5,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 2
+          },
+          {
+            "common_residue": 6,
+            "excluded": true,
+            "quotient_sum": 4,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 3
+          },
+          {
+            "common_residue": 8,
+            "excluded": true,
+            "quotient_sum": 3,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 4
+          },
+          {
+            "common_residue": 10,
+            "excluded": true,
+            "quotient_sum": 2,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 5
+          },
+          {
+            "common_residue": 12,
+            "excluded": false,
+            "quotient_sum": 1,
+            "reason": "q low means p-1 and one high mean 2p",
+            "surviving_branch": "u=m-1 low-baseline dichotomy",
+            "u": 6
+          }
+        ],
+        "same_type_mean_form": "a_d=2u+14*k_d"
+      },
+      "isolated_outside_chart": {
+        "ambient_vertex_count": 170,
+        "checks": {
+          "boundary_permuted": true,
+          "flip_size_preserved": true,
+          "isolated_count": true,
+          "isolated_gap_positive": true,
+          "separation_preserved": true,
+          "signed_transport": true,
+          "support_bound": true
+        },
+        "chosen_w_is_isolated": true,
+        "chosen_w_is_outside_D": true,
+        "every_transported_directional_b_is_even": true,
+        "guaranteed_isolated_vertices": 64,
+        "isolated_vertex_cannot_lie_in_odd_degree_boundary": true,
+        "maximum_nonisolated_vertices": 106,
+        "p": 13,
+        "proved": true,
+        "signed_PSL_sends_w_to_infinity": true,
+        "signed_transport_dependency": {
+          "Max_plus_and_Max_minus_shells_preserved": true,
+          "both_separation_inequalities_preserved": true,
+          "diagonal_signs_cancel_from_relative_mask": true,
+          "flip_set_size_preserved": true,
+          "matrix_identity": "If M=D*P and D*P^T*C*P*D=C, then D*P^T*(C hadamard R_H)*P*D = C hadamard (P^T*R_H*P).",
+          "odd_degree_boundary_is_permuted": true,
+          "phase_change_is_harmless_when_both_phases_are_excluded": true,
+          "product_phase_may_change": true,
+          "proved": true,
+          "signed_PSL_automorphism": {
+            "depends_on": [
+              "mobius_difference_formula",
+              "chi_of_squares"
+            ],
+            "proved": true,
+            "theorem": "g\u2208PSL acts as a signed automorphism of Paley C via D_x=\u03c7(cx+d): \u03c7(g(x)\u2212g(y))=\u03c7(x\u2212y)\u03c7(cx+d)\u03c7(cy+d)."
+          }
+        },
+        "transported_H_edge_count": 53,
+        "transported_boundary_is_all_finite": true,
+        "transported_boundary_size_is_even_by_handshake": true,
+        "transported_infinity_degree_I": 0,
+        "transported_separator_inequalities_preserved": true
+      },
+      "p": 13,
+      "proved": true,
+      "result_status": "proved theorem"
+    },
+    "17": {
+      "H_edge_count": 69,
+      "all_boundary_sizes_excluded": true,
+      "arithmetic": {
+        "H_edge_count": 69,
+        "ambient_vertex_count": 290,
+        "critical_original_k": 68,
+        "direction_count_per_type": 9,
+        "hard_phase": 1,
+        "hard_type": "eps_d=c_H",
+        "m": 9,
+        "opposite_phase": 0,
+        "p": 17,
+        "phase_exponent": 33,
+        "proved": true,
+        "q": 8,
+        "type_budget": 162,
+        "type_budget_identity": "sum_(eps_d=tau) a_d=(p+1)^2/2"
+      },
+      "boundary_size_hypothesis_used": false,
+      "branch_exclusions": {
+        "hard_b2": {
+          "P_upper_bound_reason": "rho>=0 and opposite-edge nonnegativity give P<=s<=8",
+          "a_minimum_direction_is_forced": true,
+          "b0_positive_lift_excluded": true,
+          "branch": "hard_b2",
+          "branch_baseline": {
+            "baseline": "A=(1-x_i-x_j)^2",
+            "congruence": "8 divides I+P-4",
+            "offset": 4,
+            "target": "eps*S_H=4+z_i*z_j"
+          },
+          "branch_excluded": true,
+          "coefficient_offset": 4,
+          "forced_P": 4,
+          "forced_rho": 0,
+          "forced_s": 4,
+          "hard_finite_edge_count_formula": "mP+1",
+          "least_nonzero_phase_zero_b_floor": 16,
+          "mean_one_parallel_step_below": -10,
+          "minimum_direction_mean": 8,
+          "minimum_parallel_count": 3,
+          "nonzero_b_excluded": true,
+          "nonzero_integral_lift_floor": 14,
+          "opposite_finite_edge_count": 32,
+          "opposite_mean_formula": "a=(p-1)s+(p+1)Q+9-7p",
+          "opposite_parallel_count_sum": 32,
+          "p": 17,
+          "parallel_surplus_above_minimum": 5,
+          "parameter_rows_P_0_through_8": [
+            {
+              "P": 0,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 1,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 2,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 3,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 4,
+              "coefficient_congruence_holds": true,
+              "coefficient_numerator_I_plus_P_minus_offset": 0,
+              "feasible": true,
+              "opposite_edge_nonnegative": true,
+              "opposite_finite_edge_count": 32,
+              "rho": 0,
+              "rho_nonnegative": true,
+              "s": 4
+            },
+            {
+              "P": 5,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 6,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 7,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 8,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            }
+          ],
+          "proved": true,
+          "rho_nonnegative_reason": "I+P-4>-q and is divisible by q",
+          "surplus_less_than_opposite_direction_count": true,
+          "transported_infinity_degree_I": 0
+        },
+        "p1_residue_zero_b_p_minus_1": {
+          "P_upper_bound_reason": "rho>=0 and opposite-edge nonnegativity give P<=s<=8",
+          "a_minimum_direction_is_forced": true,
+          "b0_positive_lift_excluded": true,
+          "branch": "p1_residue_zero_b_p_minus_1",
+          "branch_baseline": {
+            "applicable_p_mod_4": 1,
+            "baseline": "A=x_j",
+            "congruence": "8 divides I+P-5",
+            "offset": 5,
+            "target": "eps*S_H=4+z_j"
+          },
+          "branch_excluded": true,
+          "coefficient_offset": 5,
+          "forced_P": 5,
+          "forced_rho": 0,
+          "forced_s": 5,
+          "hard_finite_edge_count_formula": "mP",
+          "least_nonzero_phase_zero_b_floor": 16,
+          "mean_one_parallel_step_below": -12,
+          "minimum_direction_mean": 6,
+          "minimum_parallel_count": 2,
+          "nonzero_b_excluded": true,
+          "nonzero_integral_lift_floor": 14,
+          "opposite_finite_edge_count": 24,
+          "opposite_mean_formula": "a=(p-1)s+(p+1)Q+9-7p",
+          "opposite_parallel_count_sum": 24,
+          "p": 17,
+          "parallel_surplus_above_minimum": 6,
+          "parameter_rows_P_0_through_8": [
+            {
+              "P": 0,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -5,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 1,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 2,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 3,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 4,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 5,
+              "coefficient_congruence_holds": true,
+              "coefficient_numerator_I_plus_P_minus_offset": 0,
+              "feasible": true,
+              "opposite_edge_nonnegative": true,
+              "opposite_finite_edge_count": 24,
+              "rho": 0,
+              "rho_nonnegative": true,
+              "s": 5
+            },
+            {
+              "P": 6,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 7,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 8,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            }
+          ],
+          "proved": true,
+          "rho_nonnegative_reason": "I+P-5>-q and is divisible by q",
+          "surplus_less_than_opposite_direction_count": true,
+          "transported_infinity_degree_I": 0
+        }
+      },
+      "critical_original_k": 68,
+      "critical_residual_ii_k_eq_4p_excluded": true,
+      "even_k_greater_than_4p_excluded": false,
+      "finite_configuration_search_used": false,
+      "hard_residue_branches": {
+        "equal_mean_low_cells_cannot_mix": true,
+        "feasible_u": [
+          0,
+          8
+        ],
+        "high_direction_count": 1,
+        "high_mean": 34,
+        "low_direction_count": 8,
+        "low_mean": 16,
+        "low_phase_one_b_candidates": [
+          2
+        ],
+        "nonzero_integral_lift_floor": 14,
+        "p": 17,
+        "possible_branches": [
+          "hard_b2",
+          "p1_residue_zero_b_p_minus_1"
+        ],
+        "proved": true,
+        "quotient_identity": "sum_d k_d=m-u",
+        "residue_rows": [
+          {
+            "common_residue": 0,
+            "excluded": false,
+            "quotient_sum": 9,
+            "reason": "b=2 is lift-forbidden; exact b=p-1 remains",
+            "surviving_branch": "p1_residue_zero_b_p_minus_1",
+            "u": 0
+          },
+          {
+            "common_residue": 2,
+            "excluded": true,
+            "quotient_sum": 8,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 1
+          },
+          {
+            "common_residue": 4,
+            "excluded": true,
+            "quotient_sum": 7,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 2
+          },
+          {
+            "common_residue": 6,
+            "excluded": true,
+            "quotient_sum": 6,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 3
+          },
+          {
+            "common_residue": 8,
+            "excluded": true,
+            "quotient_sum": 5,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 4
+          },
+          {
+            "common_residue": 10,
+            "excluded": true,
+            "quotient_sum": 4,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 5
+          },
+          {
+            "common_residue": 12,
+            "excluded": true,
+            "quotient_sum": 3,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 6
+          },
+          {
+            "common_residue": 14,
+            "excluded": true,
+            "quotient_sum": 2,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 7
+          },
+          {
+            "common_residue": 16,
+            "excluded": false,
+            "quotient_sum": 1,
+            "reason": "q low means p-1 and one high mean 2p",
+            "surviving_branch": "u=m-1 low-baseline dichotomy",
+            "u": 8
+          }
+        ],
+        "same_type_mean_form": "a_d=2u+18*k_d"
+      },
+      "isolated_outside_chart": {
+        "ambient_vertex_count": 290,
+        "checks": {
+          "boundary_permuted": true,
+          "flip_size_preserved": true,
+          "isolated_count": true,
+          "isolated_gap_positive": true,
+          "separation_preserved": true,
+          "signed_transport": true,
+          "support_bound": true
+        },
+        "chosen_w_is_isolated": true,
+        "chosen_w_is_outside_D": true,
+        "every_transported_directional_b_is_even": true,
+        "guaranteed_isolated_vertices": 152,
+        "isolated_vertex_cannot_lie_in_odd_degree_boundary": true,
+        "maximum_nonisolated_vertices": 138,
+        "p": 17,
+        "proved": true,
+        "signed_PSL_sends_w_to_infinity": true,
+        "signed_transport_dependency": {
+          "Max_plus_and_Max_minus_shells_preserved": true,
+          "both_separation_inequalities_preserved": true,
+          "diagonal_signs_cancel_from_relative_mask": true,
+          "flip_set_size_preserved": true,
+          "matrix_identity": "If M=D*P and D*P^T*C*P*D=C, then D*P^T*(C hadamard R_H)*P*D = C hadamard (P^T*R_H*P).",
+          "odd_degree_boundary_is_permuted": true,
+          "phase_change_is_harmless_when_both_phases_are_excluded": true,
+          "product_phase_may_change": true,
+          "proved": true,
+          "signed_PSL_automorphism": {
+            "depends_on": [
+              "mobius_difference_formula",
+              "chi_of_squares"
+            ],
+            "proved": true,
+            "theorem": "g\u2208PSL acts as a signed automorphism of Paley C via D_x=\u03c7(cx+d): \u03c7(g(x)\u2212g(y))=\u03c7(x\u2212y)\u03c7(cx+d)\u03c7(cy+d)."
+          }
+        },
+        "transported_H_edge_count": 69,
+        "transported_boundary_is_all_finite": true,
+        "transported_boundary_size_is_even_by_handshake": true,
+        "transported_infinity_degree_I": 0,
+        "transported_separator_inequalities_preserved": true
+      },
+      "p": 17,
+      "proved": true,
+      "result_status": "proved theorem"
+    },
+    "19": {
+      "H_edge_count": 77,
+      "all_boundary_sizes_excluded": true,
+      "arithmetic": {
+        "H_edge_count": 77,
+        "ambient_vertex_count": 362,
+        "critical_original_k": 76,
+        "direction_count_per_type": 10,
+        "hard_phase": 1,
+        "hard_type": "eps_d=c_H",
+        "m": 10,
+        "opposite_phase": 0,
+        "p": 19,
+        "phase_exponent": 37,
+        "proved": true,
+        "q": 9,
+        "type_budget": 200,
+        "type_budget_identity": "sum_(eps_d=tau) a_d=(p+1)^2/2"
+      },
+      "boundary_size_hypothesis_used": false,
+      "branch_exclusions": {
+        "hard_b2": {
+          "P_upper_bound_reason": "rho>=0 and opposite-edge nonnegativity give P<=s<=8",
+          "a_minimum_direction_is_forced": true,
+          "b0_positive_lift_excluded": true,
+          "branch": "hard_b2",
+          "branch_baseline": {
+            "baseline": "A=(1-x_i-x_j)^2",
+            "congruence": "9 divides I+P-4",
+            "offset": 4,
+            "target": "eps*S_H=4+z_i*z_j"
+          },
+          "branch_excluded": true,
+          "coefficient_offset": 4,
+          "forced_P": 4,
+          "forced_rho": 0,
+          "forced_s": 4,
+          "hard_finite_edge_count_formula": "mP+1",
+          "least_nonzero_phase_zero_b_floor": 20,
+          "mean_one_parallel_step_below": -12,
+          "minimum_direction_mean": 8,
+          "minimum_parallel_count": 3,
+          "nonzero_b_excluded": true,
+          "nonzero_integral_lift_floor": 16,
+          "opposite_finite_edge_count": 36,
+          "opposite_mean_formula": "a=(p-1)s+(p+1)Q+9-7p",
+          "opposite_parallel_count_sum": 36,
+          "p": 19,
+          "parallel_surplus_above_minimum": 6,
+          "parameter_rows_P_0_through_8": [
+            {
+              "P": 0,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 1,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 2,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 3,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 4,
+              "coefficient_congruence_holds": true,
+              "coefficient_numerator_I_plus_P_minus_offset": 0,
+              "feasible": true,
+              "opposite_edge_nonnegative": true,
+              "opposite_finite_edge_count": 36,
+              "rho": 0,
+              "rho_nonnegative": true,
+              "s": 4
+            },
+            {
+              "P": 5,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 6,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 7,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 8,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            }
+          ],
+          "proved": true,
+          "rho_nonnegative_reason": "I+P-4>-q and is divisible by q",
+          "surplus_less_than_opposite_direction_count": true,
+          "transported_infinity_degree_I": 0
+        },
+        "p3_all_low_b_p_minus_1": {
+          "P_upper_bound_reason": "rho>=0 and opposite-edge nonnegativity give P<=s<=8",
+          "a_minimum_direction_is_forced": true,
+          "b0_positive_lift_excluded": true,
+          "branch": "p3_all_low_b_p_minus_1",
+          "branch_baseline": {
+            "applicable_p_mod_4": 3,
+            "baseline": "A=1-x_j",
+            "congruence": "9 divides I+P-3",
+            "offset": 3,
+            "target": "eps*S_H=4-z_j"
+          },
+          "branch_excluded": true,
+          "coefficient_offset": 3,
+          "forced_P": 3,
+          "forced_rho": 0,
+          "forced_s": 3,
+          "hard_finite_edge_count_formula": "mP+1",
+          "least_nonzero_phase_zero_b_floor": 20,
+          "mean_one_parallel_step_below": -12,
+          "minimum_direction_mean": 8,
+          "minimum_parallel_count": 4,
+          "nonzero_b_excluded": true,
+          "nonzero_integral_lift_floor": 16,
+          "opposite_finite_edge_count": 46,
+          "opposite_mean_formula": "a=(p-1)s+(p+1)Q+7-7p",
+          "opposite_parallel_count_sum": 46,
+          "p": 19,
+          "parallel_surplus_above_minimum": 6,
+          "parameter_rows_P_0_through_8": [
+            {
+              "P": 0,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 1,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 2,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 3,
+              "coefficient_congruence_holds": true,
+              "coefficient_numerator_I_plus_P_minus_offset": 0,
+              "feasible": true,
+              "opposite_edge_nonnegative": true,
+              "opposite_finite_edge_count": 46,
+              "rho": 0,
+              "rho_nonnegative": true,
+              "s": 3
+            },
+            {
+              "P": 4,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 5,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 6,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 7,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 8,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 5,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            }
+          ],
+          "proved": true,
+          "rho_nonnegative_reason": "I+P-3>-q and is divisible by q",
+          "surplus_less_than_opposite_direction_count": true,
+          "transported_infinity_degree_I": 0
+        }
+      },
+      "critical_original_k": 76,
+      "critical_residual_ii_k_eq_4p_excluded": true,
+      "even_k_greater_than_4p_excluded": false,
+      "finite_configuration_search_used": false,
+      "hard_residue_branches": {
+        "equal_mean_low_cells_cannot_mix": true,
+        "feasible_u": [
+          9
+        ],
+        "high_direction_count": 1,
+        "high_mean": 38,
+        "low_direction_count": 9,
+        "low_mean": 18,
+        "low_phase_one_b_candidates": [
+          2,
+          18
+        ],
+        "nonzero_integral_lift_floor": 16,
+        "p": 19,
+        "possible_branches": [
+          "hard_b2",
+          "p3_all_low_b_p_minus_1"
+        ],
+        "proved": true,
+        "quotient_identity": "sum_d k_d=m-u",
+        "residue_rows": [
+          {
+            "common_residue": 0,
+            "excluded": true,
+            "quotient_sum": 10,
+            "reason": "all mean-p+1 candidates are forbidden two-unit lifts",
+            "surviving_branch": null,
+            "u": 0
+          },
+          {
+            "common_residue": 2,
+            "excluded": true,
+            "quotient_sum": 9,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 1
+          },
+          {
+            "common_residue": 4,
+            "excluded": true,
+            "quotient_sum": 8,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 2
+          },
+          {
+            "common_residue": 6,
+            "excluded": true,
+            "quotient_sum": 7,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 3
+          },
+          {
+            "common_residue": 8,
+            "excluded": true,
+            "quotient_sum": 6,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 4
+          },
+          {
+            "common_residue": 10,
+            "excluded": true,
+            "quotient_sum": 5,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 5
+          },
+          {
+            "common_residue": 12,
+            "excluded": true,
+            "quotient_sum": 4,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 6
+          },
+          {
+            "common_residue": 14,
+            "excluded": true,
+            "quotient_sum": 3,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 7
+          },
+          {
+            "common_residue": 16,
+            "excluded": true,
+            "quotient_sum": 2,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 8
+          },
+          {
+            "common_residue": 18,
+            "excluded": false,
+            "quotient_sum": 1,
+            "reason": "q low means p-1 and one high mean 2p",
+            "surviving_branch": "u=m-1 low-baseline dichotomy",
+            "u": 9
+          }
+        ],
+        "same_type_mean_form": "a_d=2u+20*k_d"
+      },
+      "isolated_outside_chart": {
+        "ambient_vertex_count": 362,
+        "checks": {
+          "boundary_permuted": true,
+          "flip_size_preserved": true,
+          "isolated_count": true,
+          "isolated_gap_positive": true,
+          "separation_preserved": true,
+          "signed_transport": true,
+          "support_bound": true
+        },
+        "chosen_w_is_isolated": true,
+        "chosen_w_is_outside_D": true,
+        "every_transported_directional_b_is_even": true,
+        "guaranteed_isolated_vertices": 208,
+        "isolated_vertex_cannot_lie_in_odd_degree_boundary": true,
+        "maximum_nonisolated_vertices": 154,
+        "p": 19,
+        "proved": true,
+        "signed_PSL_sends_w_to_infinity": true,
+        "signed_transport_dependency": {
+          "Max_plus_and_Max_minus_shells_preserved": true,
+          "both_separation_inequalities_preserved": true,
+          "diagonal_signs_cancel_from_relative_mask": true,
+          "flip_set_size_preserved": true,
+          "matrix_identity": "If M=D*P and D*P^T*C*P*D=C, then D*P^T*(C hadamard R_H)*P*D = C hadamard (P^T*R_H*P).",
+          "odd_degree_boundary_is_permuted": true,
+          "phase_change_is_harmless_when_both_phases_are_excluded": true,
+          "product_phase_may_change": true,
+          "proved": true,
+          "signed_PSL_automorphism": {
+            "depends_on": [
+              "mobius_difference_formula",
+              "chi_of_squares"
+            ],
+            "proved": true,
+            "theorem": "g\u2208PSL acts as a signed automorphism of Paley C via D_x=\u03c7(cx+d): \u03c7(g(x)\u2212g(y))=\u03c7(x\u2212y)\u03c7(cx+d)\u03c7(cy+d)."
+          }
+        },
+        "transported_H_edge_count": 77,
+        "transported_boundary_is_all_finite": true,
+        "transported_boundary_size_is_even_by_handshake": true,
+        "transported_infinity_degree_I": 0,
+        "transported_separator_inequalities_preserved": true
+      },
+      "p": 19,
+      "proved": true,
+      "result_status": "proved theorem"
+    },
+    "23": {
+      "H_edge_count": 93,
+      "all_boundary_sizes_excluded": true,
+      "arithmetic": {
+        "H_edge_count": 93,
+        "ambient_vertex_count": 530,
+        "critical_original_k": 92,
+        "direction_count_per_type": 12,
+        "hard_phase": 1,
+        "hard_type": "eps_d=c_H",
+        "m": 12,
+        "opposite_phase": 0,
+        "p": 23,
+        "phase_exponent": 45,
+        "proved": true,
+        "q": 11,
+        "type_budget": 288,
+        "type_budget_identity": "sum_(eps_d=tau) a_d=(p+1)^2/2"
+      },
+      "boundary_size_hypothesis_used": false,
+      "branch_exclusions": {
+        "hard_b2": {
+          "P_upper_bound_reason": "rho>=0 and opposite-edge nonnegativity give P<=s<=8",
+          "a_minimum_direction_is_forced": true,
+          "b0_positive_lift_excluded": true,
+          "branch": "hard_b2",
+          "branch_baseline": {
+            "baseline": "A=(1-x_i-x_j)^2",
+            "congruence": "11 divides I+P-4",
+            "offset": 4,
+            "target": "eps*S_H=4+z_i*z_j"
+          },
+          "branch_excluded": true,
+          "coefficient_offset": 4,
+          "forced_P": 4,
+          "forced_rho": 0,
+          "forced_s": 4,
+          "hard_finite_edge_count_formula": "mP+1",
+          "least_nonzero_phase_zero_b_floor": 24,
+          "mean_one_parallel_step_below": -16,
+          "minimum_direction_mean": 8,
+          "minimum_parallel_count": 3,
+          "nonzero_b_excluded": true,
+          "nonzero_integral_lift_floor": 20,
+          "opposite_finite_edge_count": 44,
+          "opposite_mean_formula": "a=(p-1)s+(p+1)Q+9-7p",
+          "opposite_parallel_count_sum": 44,
+          "p": 23,
+          "parallel_surplus_above_minimum": 8,
+          "parameter_rows_P_0_through_8": [
+            {
+              "P": 0,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 1,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 2,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 3,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 4,
+              "coefficient_congruence_holds": true,
+              "coefficient_numerator_I_plus_P_minus_offset": 0,
+              "feasible": true,
+              "opposite_edge_nonnegative": true,
+              "opposite_finite_edge_count": 44,
+              "rho": 0,
+              "rho_nonnegative": true,
+              "s": 4
+            },
+            {
+              "P": 5,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 6,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 7,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 8,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            }
+          ],
+          "proved": true,
+          "rho_nonnegative_reason": "I+P-4>-q and is divisible by q",
+          "surplus_less_than_opposite_direction_count": true,
+          "transported_infinity_degree_I": 0
+        },
+        "p3_all_low_b_p_minus_1": {
+          "P_upper_bound_reason": "rho>=0 and opposite-edge nonnegativity give P<=s<=8",
+          "a_minimum_direction_is_forced": true,
+          "b0_positive_lift_excluded": true,
+          "branch": "p3_all_low_b_p_minus_1",
+          "branch_baseline": {
+            "applicable_p_mod_4": 3,
+            "baseline": "A=1-x_j",
+            "congruence": "11 divides I+P-3",
+            "offset": 3,
+            "target": "eps*S_H=4-z_j"
+          },
+          "branch_excluded": true,
+          "coefficient_offset": 3,
+          "forced_P": 3,
+          "forced_rho": 0,
+          "forced_s": 3,
+          "hard_finite_edge_count_formula": "mP+1",
+          "least_nonzero_phase_zero_b_floor": 24,
+          "mean_one_parallel_step_below": -16,
+          "minimum_direction_mean": 8,
+          "minimum_parallel_count": 4,
+          "nonzero_b_excluded": true,
+          "nonzero_integral_lift_floor": 20,
+          "opposite_finite_edge_count": 56,
+          "opposite_mean_formula": "a=(p-1)s+(p+1)Q+7-7p",
+          "opposite_parallel_count_sum": 56,
+          "p": 23,
+          "parallel_surplus_above_minimum": 8,
+          "parameter_rows_P_0_through_8": [
+            {
+              "P": 0,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 1,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 2,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 3,
+              "coefficient_congruence_holds": true,
+              "coefficient_numerator_I_plus_P_minus_offset": 0,
+              "feasible": true,
+              "opposite_edge_nonnegative": true,
+              "opposite_finite_edge_count": 56,
+              "rho": 0,
+              "rho_nonnegative": true,
+              "s": 3
+            },
+            {
+              "P": 4,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 5,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 6,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 7,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 8,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 5,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            }
+          ],
+          "proved": true,
+          "rho_nonnegative_reason": "I+P-3>-q and is divisible by q",
+          "surplus_less_than_opposite_direction_count": true,
+          "transported_infinity_degree_I": 0
+        }
+      },
+      "critical_original_k": 92,
+      "critical_residual_ii_k_eq_4p_excluded": true,
+      "even_k_greater_than_4p_excluded": false,
+      "finite_configuration_search_used": false,
+      "hard_residue_branches": {
+        "equal_mean_low_cells_cannot_mix": true,
+        "feasible_u": [
+          11
+        ],
+        "high_direction_count": 1,
+        "high_mean": 46,
+        "low_direction_count": 11,
+        "low_mean": 22,
+        "low_phase_one_b_candidates": [
+          2,
+          22
+        ],
+        "nonzero_integral_lift_floor": 20,
+        "p": 23,
+        "possible_branches": [
+          "hard_b2",
+          "p3_all_low_b_p_minus_1"
+        ],
+        "proved": true,
+        "quotient_identity": "sum_d k_d=m-u",
+        "residue_rows": [
+          {
+            "common_residue": 0,
+            "excluded": true,
+            "quotient_sum": 12,
+            "reason": "all mean-p+1 candidates are forbidden two-unit lifts",
+            "surviving_branch": null,
+            "u": 0
+          },
+          {
+            "common_residue": 2,
+            "excluded": true,
+            "quotient_sum": 11,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 1
+          },
+          {
+            "common_residue": 4,
+            "excluded": true,
+            "quotient_sum": 10,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 2
+          },
+          {
+            "common_residue": 6,
+            "excluded": true,
+            "quotient_sum": 9,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 3
+          },
+          {
+            "common_residue": 8,
+            "excluded": true,
+            "quotient_sum": 8,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 4
+          },
+          {
+            "common_residue": 10,
+            "excluded": true,
+            "quotient_sum": 7,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 5
+          },
+          {
+            "common_residue": 12,
+            "excluded": true,
+            "quotient_sum": 6,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 6
+          },
+          {
+            "common_residue": 14,
+            "excluded": true,
+            "quotient_sum": 5,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 7
+          },
+          {
+            "common_residue": 16,
+            "excluded": true,
+            "quotient_sum": 4,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 8
+          },
+          {
+            "common_residue": 18,
+            "excluded": true,
+            "quotient_sum": 3,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 9
+          },
+          {
+            "common_residue": 20,
+            "excluded": true,
+            "quotient_sum": 2,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 10
+          },
+          {
+            "common_residue": 22,
+            "excluded": false,
+            "quotient_sum": 1,
+            "reason": "q low means p-1 and one high mean 2p",
+            "surviving_branch": "u=m-1 low-baseline dichotomy",
+            "u": 11
+          }
+        ],
+        "same_type_mean_form": "a_d=2u+24*k_d"
+      },
+      "isolated_outside_chart": {
+        "ambient_vertex_count": 530,
+        "checks": {
+          "boundary_permuted": true,
+          "flip_size_preserved": true,
+          "isolated_count": true,
+          "isolated_gap_positive": true,
+          "separation_preserved": true,
+          "signed_transport": true,
+          "support_bound": true
+        },
+        "chosen_w_is_isolated": true,
+        "chosen_w_is_outside_D": true,
+        "every_transported_directional_b_is_even": true,
+        "guaranteed_isolated_vertices": 344,
+        "isolated_vertex_cannot_lie_in_odd_degree_boundary": true,
+        "maximum_nonisolated_vertices": 186,
+        "p": 23,
+        "proved": true,
+        "signed_PSL_sends_w_to_infinity": true,
+        "signed_transport_dependency": {
+          "Max_plus_and_Max_minus_shells_preserved": true,
+          "both_separation_inequalities_preserved": true,
+          "diagonal_signs_cancel_from_relative_mask": true,
+          "flip_set_size_preserved": true,
+          "matrix_identity": "If M=D*P and D*P^T*C*P*D=C, then D*P^T*(C hadamard R_H)*P*D = C hadamard (P^T*R_H*P).",
+          "odd_degree_boundary_is_permuted": true,
+          "phase_change_is_harmless_when_both_phases_are_excluded": true,
+          "product_phase_may_change": true,
+          "proved": true,
+          "signed_PSL_automorphism": {
+            "depends_on": [
+              "mobius_difference_formula",
+              "chi_of_squares"
+            ],
+            "proved": true,
+            "theorem": "g\u2208PSL acts as a signed automorphism of Paley C via D_x=\u03c7(cx+d): \u03c7(g(x)\u2212g(y))=\u03c7(x\u2212y)\u03c7(cx+d)\u03c7(cy+d)."
+          }
+        },
+        "transported_H_edge_count": 93,
+        "transported_boundary_is_all_finite": true,
+        "transported_boundary_size_is_even_by_handshake": true,
+        "transported_infinity_degree_I": 0,
+        "transported_separator_inequalities_preserved": true
+      },
+      "p": 23,
+      "proved": true,
+      "result_status": "proved theorem"
+    },
+    "29": {
+      "H_edge_count": 117,
+      "all_boundary_sizes_excluded": true,
+      "arithmetic": {
+        "H_edge_count": 117,
+        "ambient_vertex_count": 842,
+        "critical_original_k": 116,
+        "direction_count_per_type": 15,
+        "hard_phase": 1,
+        "hard_type": "eps_d=c_H",
+        "m": 15,
+        "opposite_phase": 0,
+        "p": 29,
+        "phase_exponent": 57,
+        "proved": true,
+        "q": 14,
+        "type_budget": 450,
+        "type_budget_identity": "sum_(eps_d=tau) a_d=(p+1)^2/2"
+      },
+      "boundary_size_hypothesis_used": false,
+      "branch_exclusions": {
+        "hard_b2": {
+          "P_upper_bound_reason": "rho>=0 and opposite-edge nonnegativity give P<=s<=8",
+          "a_minimum_direction_is_forced": true,
+          "b0_positive_lift_excluded": true,
+          "branch": "hard_b2",
+          "branch_baseline": {
+            "baseline": "A=(1-x_i-x_j)^2",
+            "congruence": "14 divides I+P-4",
+            "offset": 4,
+            "target": "eps*S_H=4+z_i*z_j"
+          },
+          "branch_excluded": true,
+          "coefficient_offset": 4,
+          "forced_P": 4,
+          "forced_rho": 0,
+          "forced_s": 4,
+          "hard_finite_edge_count_formula": "mP+1",
+          "least_nonzero_phase_zero_b_floor": 28,
+          "mean_one_parallel_step_below": -22,
+          "minimum_direction_mean": 8,
+          "minimum_parallel_count": 3,
+          "nonzero_b_excluded": true,
+          "nonzero_integral_lift_floor": 26,
+          "opposite_finite_edge_count": 56,
+          "opposite_mean_formula": "a=(p-1)s+(p+1)Q+9-7p",
+          "opposite_parallel_count_sum": 56,
+          "p": 29,
+          "parallel_surplus_above_minimum": 11,
+          "parameter_rows_P_0_through_8": [
+            {
+              "P": 0,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 1,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 2,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 3,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 4,
+              "coefficient_congruence_holds": true,
+              "coefficient_numerator_I_plus_P_minus_offset": 0,
+              "feasible": true,
+              "opposite_edge_nonnegative": true,
+              "opposite_finite_edge_count": 56,
+              "rho": 0,
+              "rho_nonnegative": true,
+              "s": 4
+            },
+            {
+              "P": 5,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 6,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 7,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 8,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            }
+          ],
+          "proved": true,
+          "rho_nonnegative_reason": "I+P-4>-q and is divisible by q",
+          "surplus_less_than_opposite_direction_count": true,
+          "transported_infinity_degree_I": 0
+        },
+        "p1_residue_zero_b_p_minus_1": {
+          "P_upper_bound_reason": "rho>=0 and opposite-edge nonnegativity give P<=s<=8",
+          "a_minimum_direction_is_forced": true,
+          "b0_positive_lift_excluded": true,
+          "branch": "p1_residue_zero_b_p_minus_1",
+          "branch_baseline": {
+            "applicable_p_mod_4": 1,
+            "baseline": "A=x_j",
+            "congruence": "14 divides I+P-5",
+            "offset": 5,
+            "target": "eps*S_H=4+z_j"
+          },
+          "branch_excluded": true,
+          "coefficient_offset": 5,
+          "forced_P": 5,
+          "forced_rho": 0,
+          "forced_s": 5,
+          "hard_finite_edge_count_formula": "mP",
+          "least_nonzero_phase_zero_b_floor": 28,
+          "mean_one_parallel_step_below": -24,
+          "minimum_direction_mean": 6,
+          "minimum_parallel_count": 2,
+          "nonzero_b_excluded": true,
+          "nonzero_integral_lift_floor": 26,
+          "opposite_finite_edge_count": 42,
+          "opposite_mean_formula": "a=(p-1)s+(p+1)Q+9-7p",
+          "opposite_parallel_count_sum": 42,
+          "p": 29,
+          "parallel_surplus_above_minimum": 12,
+          "parameter_rows_P_0_through_8": [
+            {
+              "P": 0,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -5,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 1,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 2,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 3,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 4,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 5,
+              "coefficient_congruence_holds": true,
+              "coefficient_numerator_I_plus_P_minus_offset": 0,
+              "feasible": true,
+              "opposite_edge_nonnegative": true,
+              "opposite_finite_edge_count": 42,
+              "rho": 0,
+              "rho_nonnegative": true,
+              "s": 5
+            },
+            {
+              "P": 6,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 7,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 8,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            }
+          ],
+          "proved": true,
+          "rho_nonnegative_reason": "I+P-5>-q and is divisible by q",
+          "surplus_less_than_opposite_direction_count": true,
+          "transported_infinity_degree_I": 0
+        }
+      },
+      "critical_original_k": 116,
+      "critical_residual_ii_k_eq_4p_excluded": true,
+      "even_k_greater_than_4p_excluded": false,
+      "finite_configuration_search_used": false,
+      "hard_residue_branches": {
+        "equal_mean_low_cells_cannot_mix": true,
+        "feasible_u": [
+          0,
+          14
+        ],
+        "high_direction_count": 1,
+        "high_mean": 58,
+        "low_direction_count": 14,
+        "low_mean": 28,
+        "low_phase_one_b_candidates": [
+          2
+        ],
+        "nonzero_integral_lift_floor": 26,
+        "p": 29,
+        "possible_branches": [
+          "hard_b2",
+          "p1_residue_zero_b_p_minus_1"
+        ],
+        "proved": true,
+        "quotient_identity": "sum_d k_d=m-u",
+        "residue_rows": [
+          {
+            "common_residue": 0,
+            "excluded": false,
+            "quotient_sum": 15,
+            "reason": "b=2 is lift-forbidden; exact b=p-1 remains",
+            "surviving_branch": "p1_residue_zero_b_p_minus_1",
+            "u": 0
+          },
+          {
+            "common_residue": 2,
+            "excluded": true,
+            "quotient_sum": 14,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 1
+          },
+          {
+            "common_residue": 4,
+            "excluded": true,
+            "quotient_sum": 13,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 2
+          },
+          {
+            "common_residue": 6,
+            "excluded": true,
+            "quotient_sum": 12,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 3
+          },
+          {
+            "common_residue": 8,
+            "excluded": true,
+            "quotient_sum": 11,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 4
+          },
+          {
+            "common_residue": 10,
+            "excluded": true,
+            "quotient_sum": 10,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 5
+          },
+          {
+            "common_residue": 12,
+            "excluded": true,
+            "quotient_sum": 9,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 6
+          },
+          {
+            "common_residue": 14,
+            "excluded": true,
+            "quotient_sum": 8,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 7
+          },
+          {
+            "common_residue": 16,
+            "excluded": true,
+            "quotient_sum": 7,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 8
+          },
+          {
+            "common_residue": 18,
+            "excluded": true,
+            "quotient_sum": 6,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 9
+          },
+          {
+            "common_residue": 20,
+            "excluded": true,
+            "quotient_sum": 5,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 10
+          },
+          {
+            "common_residue": 22,
+            "excluded": true,
+            "quotient_sum": 4,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 11
+          },
+          {
+            "common_residue": 24,
+            "excluded": true,
+            "quotient_sum": 3,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 12
+          },
+          {
+            "common_residue": 26,
+            "excluded": true,
+            "quotient_sum": 2,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 13
+          },
+          {
+            "common_residue": 28,
+            "excluded": false,
+            "quotient_sum": 1,
+            "reason": "q low means p-1 and one high mean 2p",
+            "surviving_branch": "u=m-1 low-baseline dichotomy",
+            "u": 14
+          }
+        ],
+        "same_type_mean_form": "a_d=2u+30*k_d"
+      },
+      "isolated_outside_chart": {
+        "ambient_vertex_count": 842,
+        "checks": {
+          "boundary_permuted": true,
+          "flip_size_preserved": true,
+          "isolated_count": true,
+          "isolated_gap_positive": true,
+          "separation_preserved": true,
+          "signed_transport": true,
+          "support_bound": true
+        },
+        "chosen_w_is_isolated": true,
+        "chosen_w_is_outside_D": true,
+        "every_transported_directional_b_is_even": true,
+        "guaranteed_isolated_vertices": 608,
+        "isolated_vertex_cannot_lie_in_odd_degree_boundary": true,
+        "maximum_nonisolated_vertices": 234,
+        "p": 29,
+        "proved": true,
+        "signed_PSL_sends_w_to_infinity": true,
+        "signed_transport_dependency": {
+          "Max_plus_and_Max_minus_shells_preserved": true,
+          "both_separation_inequalities_preserved": true,
+          "diagonal_signs_cancel_from_relative_mask": true,
+          "flip_set_size_preserved": true,
+          "matrix_identity": "If M=D*P and D*P^T*C*P*D=C, then D*P^T*(C hadamard R_H)*P*D = C hadamard (P^T*R_H*P).",
+          "odd_degree_boundary_is_permuted": true,
+          "phase_change_is_harmless_when_both_phases_are_excluded": true,
+          "product_phase_may_change": true,
+          "proved": true,
+          "signed_PSL_automorphism": {
+            "depends_on": [
+              "mobius_difference_formula",
+              "chi_of_squares"
+            ],
+            "proved": true,
+            "theorem": "g\u2208PSL acts as a signed automorphism of Paley C via D_x=\u03c7(cx+d): \u03c7(g(x)\u2212g(y))=\u03c7(x\u2212y)\u03c7(cx+d)\u03c7(cy+d)."
+          }
+        },
+        "transported_H_edge_count": 117,
+        "transported_boundary_is_all_finite": true,
+        "transported_boundary_size_is_even_by_handshake": true,
+        "transported_infinity_degree_I": 0,
+        "transported_separator_inequalities_preserved": true
+      },
+      "p": 29,
+      "proved": true,
+      "result_status": "proved theorem"
+    },
+    "31": {
+      "H_edge_count": 125,
+      "all_boundary_sizes_excluded": true,
+      "arithmetic": {
+        "H_edge_count": 125,
+        "ambient_vertex_count": 962,
+        "critical_original_k": 124,
+        "direction_count_per_type": 16,
+        "hard_phase": 1,
+        "hard_type": "eps_d=c_H",
+        "m": 16,
+        "opposite_phase": 0,
+        "p": 31,
+        "phase_exponent": 61,
+        "proved": true,
+        "q": 15,
+        "type_budget": 512,
+        "type_budget_identity": "sum_(eps_d=tau) a_d=(p+1)^2/2"
+      },
+      "boundary_size_hypothesis_used": false,
+      "branch_exclusions": {
+        "hard_b2": {
+          "P_upper_bound_reason": "rho>=0 and opposite-edge nonnegativity give P<=s<=8",
+          "a_minimum_direction_is_forced": true,
+          "b0_positive_lift_excluded": true,
+          "branch": "hard_b2",
+          "branch_baseline": {
+            "baseline": "A=(1-x_i-x_j)^2",
+            "congruence": "15 divides I+P-4",
+            "offset": 4,
+            "target": "eps*S_H=4+z_i*z_j"
+          },
+          "branch_excluded": true,
+          "coefficient_offset": 4,
+          "forced_P": 4,
+          "forced_rho": 0,
+          "forced_s": 4,
+          "hard_finite_edge_count_formula": "mP+1",
+          "least_nonzero_phase_zero_b_floor": 32,
+          "mean_one_parallel_step_below": -24,
+          "minimum_direction_mean": 8,
+          "minimum_parallel_count": 3,
+          "nonzero_b_excluded": true,
+          "nonzero_integral_lift_floor": 28,
+          "opposite_finite_edge_count": 60,
+          "opposite_mean_formula": "a=(p-1)s+(p+1)Q+9-7p",
+          "opposite_parallel_count_sum": 60,
+          "p": 31,
+          "parallel_surplus_above_minimum": 12,
+          "parameter_rows_P_0_through_8": [
+            {
+              "P": 0,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 1,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 2,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 3,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 4,
+              "coefficient_congruence_holds": true,
+              "coefficient_numerator_I_plus_P_minus_offset": 0,
+              "feasible": true,
+              "opposite_edge_nonnegative": true,
+              "opposite_finite_edge_count": 60,
+              "rho": 0,
+              "rho_nonnegative": true,
+              "s": 4
+            },
+            {
+              "P": 5,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 6,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 7,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 8,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            }
+          ],
+          "proved": true,
+          "rho_nonnegative_reason": "I+P-4>-q and is divisible by q",
+          "surplus_less_than_opposite_direction_count": true,
+          "transported_infinity_degree_I": 0
+        },
+        "p3_all_low_b_p_minus_1": {
+          "P_upper_bound_reason": "rho>=0 and opposite-edge nonnegativity give P<=s<=8",
+          "a_minimum_direction_is_forced": true,
+          "b0_positive_lift_excluded": true,
+          "branch": "p3_all_low_b_p_minus_1",
+          "branch_baseline": {
+            "applicable_p_mod_4": 3,
+            "baseline": "A=1-x_j",
+            "congruence": "15 divides I+P-3",
+            "offset": 3,
+            "target": "eps*S_H=4-z_j"
+          },
+          "branch_excluded": true,
+          "coefficient_offset": 3,
+          "forced_P": 3,
+          "forced_rho": 0,
+          "forced_s": 3,
+          "hard_finite_edge_count_formula": "mP+1",
+          "least_nonzero_phase_zero_b_floor": 32,
+          "mean_one_parallel_step_below": -24,
+          "minimum_direction_mean": 8,
+          "minimum_parallel_count": 4,
+          "nonzero_b_excluded": true,
+          "nonzero_integral_lift_floor": 28,
+          "opposite_finite_edge_count": 76,
+          "opposite_mean_formula": "a=(p-1)s+(p+1)Q+7-7p",
+          "opposite_parallel_count_sum": 76,
+          "p": 31,
+          "parallel_surplus_above_minimum": 12,
+          "parameter_rows_P_0_through_8": [
+            {
+              "P": 0,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 1,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 2,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 3,
+              "coefficient_congruence_holds": true,
+              "coefficient_numerator_I_plus_P_minus_offset": 0,
+              "feasible": true,
+              "opposite_edge_nonnegative": true,
+              "opposite_finite_edge_count": 76,
+              "rho": 0,
+              "rho_nonnegative": true,
+              "s": 3
+            },
+            {
+              "P": 4,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 5,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 6,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 7,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 8,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 5,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            }
+          ],
+          "proved": true,
+          "rho_nonnegative_reason": "I+P-3>-q and is divisible by q",
+          "surplus_less_than_opposite_direction_count": true,
+          "transported_infinity_degree_I": 0
+        }
+      },
+      "critical_original_k": 124,
+      "critical_residual_ii_k_eq_4p_excluded": true,
+      "even_k_greater_than_4p_excluded": false,
+      "finite_configuration_search_used": false,
+      "hard_residue_branches": {
+        "equal_mean_low_cells_cannot_mix": true,
+        "feasible_u": [
+          15
+        ],
+        "high_direction_count": 1,
+        "high_mean": 62,
+        "low_direction_count": 15,
+        "low_mean": 30,
+        "low_phase_one_b_candidates": [
+          2,
+          30
+        ],
+        "nonzero_integral_lift_floor": 28,
+        "p": 31,
+        "possible_branches": [
+          "hard_b2",
+          "p3_all_low_b_p_minus_1"
+        ],
+        "proved": true,
+        "quotient_identity": "sum_d k_d=m-u",
+        "residue_rows": [
+          {
+            "common_residue": 0,
+            "excluded": true,
+            "quotient_sum": 16,
+            "reason": "all mean-p+1 candidates are forbidden two-unit lifts",
+            "surviving_branch": null,
+            "u": 0
+          },
+          {
+            "common_residue": 2,
+            "excluded": true,
+            "quotient_sum": 15,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 1
+          },
+          {
+            "common_residue": 4,
+            "excluded": true,
+            "quotient_sum": 14,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 2
+          },
+          {
+            "common_residue": 6,
+            "excluded": true,
+            "quotient_sum": 13,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 3
+          },
+          {
+            "common_residue": 8,
+            "excluded": true,
+            "quotient_sum": 12,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 4
+          },
+          {
+            "common_residue": 10,
+            "excluded": true,
+            "quotient_sum": 11,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 5
+          },
+          {
+            "common_residue": 12,
+            "excluded": true,
+            "quotient_sum": 10,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 6
+          },
+          {
+            "common_residue": 14,
+            "excluded": true,
+            "quotient_sum": 9,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 7
+          },
+          {
+            "common_residue": 16,
+            "excluded": true,
+            "quotient_sum": 8,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 8
+          },
+          {
+            "common_residue": 18,
+            "excluded": true,
+            "quotient_sum": 7,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 9
+          },
+          {
+            "common_residue": 20,
+            "excluded": true,
+            "quotient_sum": 6,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 10
+          },
+          {
+            "common_residue": 22,
+            "excluded": true,
+            "quotient_sum": 5,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 11
+          },
+          {
+            "common_residue": 24,
+            "excluded": true,
+            "quotient_sum": 4,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 12
+          },
+          {
+            "common_residue": 26,
+            "excluded": true,
+            "quotient_sum": 3,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 13
+          },
+          {
+            "common_residue": 28,
+            "excluded": true,
+            "quotient_sum": 2,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 14
+          },
+          {
+            "common_residue": 30,
+            "excluded": false,
+            "quotient_sum": 1,
+            "reason": "q low means p-1 and one high mean 2p",
+            "surviving_branch": "u=m-1 low-baseline dichotomy",
+            "u": 15
+          }
+        ],
+        "same_type_mean_form": "a_d=2u+32*k_d"
+      },
+      "isolated_outside_chart": {
+        "ambient_vertex_count": 962,
+        "checks": {
+          "boundary_permuted": true,
+          "flip_size_preserved": true,
+          "isolated_count": true,
+          "isolated_gap_positive": true,
+          "separation_preserved": true,
+          "signed_transport": true,
+          "support_bound": true
+        },
+        "chosen_w_is_isolated": true,
+        "chosen_w_is_outside_D": true,
+        "every_transported_directional_b_is_even": true,
+        "guaranteed_isolated_vertices": 712,
+        "isolated_vertex_cannot_lie_in_odd_degree_boundary": true,
+        "maximum_nonisolated_vertices": 250,
+        "p": 31,
+        "proved": true,
+        "signed_PSL_sends_w_to_infinity": true,
+        "signed_transport_dependency": {
+          "Max_plus_and_Max_minus_shells_preserved": true,
+          "both_separation_inequalities_preserved": true,
+          "diagonal_signs_cancel_from_relative_mask": true,
+          "flip_set_size_preserved": true,
+          "matrix_identity": "If M=D*P and D*P^T*C*P*D=C, then D*P^T*(C hadamard R_H)*P*D = C hadamard (P^T*R_H*P).",
+          "odd_degree_boundary_is_permuted": true,
+          "phase_change_is_harmless_when_both_phases_are_excluded": true,
+          "product_phase_may_change": true,
+          "proved": true,
+          "signed_PSL_automorphism": {
+            "depends_on": [
+              "mobius_difference_formula",
+              "chi_of_squares"
+            ],
+            "proved": true,
+            "theorem": "g\u2208PSL acts as a signed automorphism of Paley C via D_x=\u03c7(cx+d): \u03c7(g(x)\u2212g(y))=\u03c7(x\u2212y)\u03c7(cx+d)\u03c7(cy+d)."
+          }
+        },
+        "transported_H_edge_count": 125,
+        "transported_boundary_is_all_finite": true,
+        "transported_boundary_size_is_even_by_handshake": true,
+        "transported_infinity_degree_I": 0,
+        "transported_separator_inequalities_preserved": true
+      },
+      "p": 31,
+      "proved": true,
+      "result_status": "proved theorem"
+    },
+    "37": {
+      "H_edge_count": 149,
+      "all_boundary_sizes_excluded": true,
+      "arithmetic": {
+        "H_edge_count": 149,
+        "ambient_vertex_count": 1370,
+        "critical_original_k": 148,
+        "direction_count_per_type": 19,
+        "hard_phase": 1,
+        "hard_type": "eps_d=c_H",
+        "m": 19,
+        "opposite_phase": 0,
+        "p": 37,
+        "phase_exponent": 73,
+        "proved": true,
+        "q": 18,
+        "type_budget": 722,
+        "type_budget_identity": "sum_(eps_d=tau) a_d=(p+1)^2/2"
+      },
+      "boundary_size_hypothesis_used": false,
+      "branch_exclusions": {
+        "hard_b2": {
+          "P_upper_bound_reason": "rho>=0 and opposite-edge nonnegativity give P<=s<=8",
+          "a_minimum_direction_is_forced": true,
+          "b0_positive_lift_excluded": true,
+          "branch": "hard_b2",
+          "branch_baseline": {
+            "baseline": "A=(1-x_i-x_j)^2",
+            "congruence": "18 divides I+P-4",
+            "offset": 4,
+            "target": "eps*S_H=4+z_i*z_j"
+          },
+          "branch_excluded": true,
+          "coefficient_offset": 4,
+          "forced_P": 4,
+          "forced_rho": 0,
+          "forced_s": 4,
+          "hard_finite_edge_count_formula": "mP+1",
+          "least_nonzero_phase_zero_b_floor": 36,
+          "mean_one_parallel_step_below": -30,
+          "minimum_direction_mean": 8,
+          "minimum_parallel_count": 3,
+          "nonzero_b_excluded": true,
+          "nonzero_integral_lift_floor": 34,
+          "opposite_finite_edge_count": 72,
+          "opposite_mean_formula": "a=(p-1)s+(p+1)Q+9-7p",
+          "opposite_parallel_count_sum": 72,
+          "p": 37,
+          "parallel_surplus_above_minimum": 15,
+          "parameter_rows_P_0_through_8": [
+            {
+              "P": 0,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 1,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 2,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 3,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 4,
+              "coefficient_congruence_holds": true,
+              "coefficient_numerator_I_plus_P_minus_offset": 0,
+              "feasible": true,
+              "opposite_edge_nonnegative": true,
+              "opposite_finite_edge_count": 72,
+              "rho": 0,
+              "rho_nonnegative": true,
+              "s": 4
+            },
+            {
+              "P": 5,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 6,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 7,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 8,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            }
+          ],
+          "proved": true,
+          "rho_nonnegative_reason": "I+P-4>-q and is divisible by q",
+          "surplus_less_than_opposite_direction_count": true,
+          "transported_infinity_degree_I": 0
+        },
+        "p1_residue_zero_b_p_minus_1": {
+          "P_upper_bound_reason": "rho>=0 and opposite-edge nonnegativity give P<=s<=8",
+          "a_minimum_direction_is_forced": true,
+          "b0_positive_lift_excluded": true,
+          "branch": "p1_residue_zero_b_p_minus_1",
+          "branch_baseline": {
+            "applicable_p_mod_4": 1,
+            "baseline": "A=x_j",
+            "congruence": "18 divides I+P-5",
+            "offset": 5,
+            "target": "eps*S_H=4+z_j"
+          },
+          "branch_excluded": true,
+          "coefficient_offset": 5,
+          "forced_P": 5,
+          "forced_rho": 0,
+          "forced_s": 5,
+          "hard_finite_edge_count_formula": "mP",
+          "least_nonzero_phase_zero_b_floor": 36,
+          "mean_one_parallel_step_below": -32,
+          "minimum_direction_mean": 6,
+          "minimum_parallel_count": 2,
+          "nonzero_b_excluded": true,
+          "nonzero_integral_lift_floor": 34,
+          "opposite_finite_edge_count": 54,
+          "opposite_mean_formula": "a=(p-1)s+(p+1)Q+9-7p",
+          "opposite_parallel_count_sum": 54,
+          "p": 37,
+          "parallel_surplus_above_minimum": 16,
+          "parameter_rows_P_0_through_8": [
+            {
+              "P": 0,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -5,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 1,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 2,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 3,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 4,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 5,
+              "coefficient_congruence_holds": true,
+              "coefficient_numerator_I_plus_P_minus_offset": 0,
+              "feasible": true,
+              "opposite_edge_nonnegative": true,
+              "opposite_finite_edge_count": 54,
+              "rho": 0,
+              "rho_nonnegative": true,
+              "s": 5
+            },
+            {
+              "P": 6,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 7,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 8,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            }
+          ],
+          "proved": true,
+          "rho_nonnegative_reason": "I+P-5>-q and is divisible by q",
+          "surplus_less_than_opposite_direction_count": true,
+          "transported_infinity_degree_I": 0
+        }
+      },
+      "critical_original_k": 148,
+      "critical_residual_ii_k_eq_4p_excluded": true,
+      "even_k_greater_than_4p_excluded": false,
+      "finite_configuration_search_used": false,
+      "hard_residue_branches": {
+        "equal_mean_low_cells_cannot_mix": true,
+        "feasible_u": [
+          0,
+          18
+        ],
+        "high_direction_count": 1,
+        "high_mean": 74,
+        "low_direction_count": 18,
+        "low_mean": 36,
+        "low_phase_one_b_candidates": [
+          2
+        ],
+        "nonzero_integral_lift_floor": 34,
+        "p": 37,
+        "possible_branches": [
+          "hard_b2",
+          "p1_residue_zero_b_p_minus_1"
+        ],
+        "proved": true,
+        "quotient_identity": "sum_d k_d=m-u",
+        "residue_rows": [
+          {
+            "common_residue": 0,
+            "excluded": false,
+            "quotient_sum": 19,
+            "reason": "b=2 is lift-forbidden; exact b=p-1 remains",
+            "surviving_branch": "p1_residue_zero_b_p_minus_1",
+            "u": 0
+          },
+          {
+            "common_residue": 2,
+            "excluded": true,
+            "quotient_sum": 18,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 1
+          },
+          {
+            "common_residue": 4,
+            "excluded": true,
+            "quotient_sum": 17,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 2
+          },
+          {
+            "common_residue": 6,
+            "excluded": true,
+            "quotient_sum": 16,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 3
+          },
+          {
+            "common_residue": 8,
+            "excluded": true,
+            "quotient_sum": 15,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 4
+          },
+          {
+            "common_residue": 10,
+            "excluded": true,
+            "quotient_sum": 14,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 5
+          },
+          {
+            "common_residue": 12,
+            "excluded": true,
+            "quotient_sum": 13,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 6
+          },
+          {
+            "common_residue": 14,
+            "excluded": true,
+            "quotient_sum": 12,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 7
+          },
+          {
+            "common_residue": 16,
+            "excluded": true,
+            "quotient_sum": 11,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 8
+          },
+          {
+            "common_residue": 18,
+            "excluded": true,
+            "quotient_sum": 10,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 9
+          },
+          {
+            "common_residue": 20,
+            "excluded": true,
+            "quotient_sum": 9,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 10
+          },
+          {
+            "common_residue": 22,
+            "excluded": true,
+            "quotient_sum": 8,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 11
+          },
+          {
+            "common_residue": 24,
+            "excluded": true,
+            "quotient_sum": 7,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 12
+          },
+          {
+            "common_residue": 26,
+            "excluded": true,
+            "quotient_sum": 6,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 13
+          },
+          {
+            "common_residue": 28,
+            "excluded": true,
+            "quotient_sum": 5,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 14
+          },
+          {
+            "common_residue": 30,
+            "excluded": true,
+            "quotient_sum": 4,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 15
+          },
+          {
+            "common_residue": 32,
+            "excluded": true,
+            "quotient_sum": 3,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 16
+          },
+          {
+            "common_residue": 34,
+            "excluded": true,
+            "quotient_sum": 2,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 17
+          },
+          {
+            "common_residue": 36,
+            "excluded": false,
+            "quotient_sum": 1,
+            "reason": "q low means p-1 and one high mean 2p",
+            "surviving_branch": "u=m-1 low-baseline dichotomy",
+            "u": 18
+          }
+        ],
+        "same_type_mean_form": "a_d=2u+38*k_d"
+      },
+      "isolated_outside_chart": {
+        "ambient_vertex_count": 1370,
+        "checks": {
+          "boundary_permuted": true,
+          "flip_size_preserved": true,
+          "isolated_count": true,
+          "isolated_gap_positive": true,
+          "separation_preserved": true,
+          "signed_transport": true,
+          "support_bound": true
+        },
+        "chosen_w_is_isolated": true,
+        "chosen_w_is_outside_D": true,
+        "every_transported_directional_b_is_even": true,
+        "guaranteed_isolated_vertices": 1072,
+        "isolated_vertex_cannot_lie_in_odd_degree_boundary": true,
+        "maximum_nonisolated_vertices": 298,
+        "p": 37,
+        "proved": true,
+        "signed_PSL_sends_w_to_infinity": true,
+        "signed_transport_dependency": {
+          "Max_plus_and_Max_minus_shells_preserved": true,
+          "both_separation_inequalities_preserved": true,
+          "diagonal_signs_cancel_from_relative_mask": true,
+          "flip_set_size_preserved": true,
+          "matrix_identity": "If M=D*P and D*P^T*C*P*D=C, then D*P^T*(C hadamard R_H)*P*D = C hadamard (P^T*R_H*P).",
+          "odd_degree_boundary_is_permuted": true,
+          "phase_change_is_harmless_when_both_phases_are_excluded": true,
+          "product_phase_may_change": true,
+          "proved": true,
+          "signed_PSL_automorphism": {
+            "depends_on": [
+              "mobius_difference_formula",
+              "chi_of_squares"
+            ],
+            "proved": true,
+            "theorem": "g\u2208PSL acts as a signed automorphism of Paley C via D_x=\u03c7(cx+d): \u03c7(g(x)\u2212g(y))=\u03c7(x\u2212y)\u03c7(cx+d)\u03c7(cy+d)."
+          }
+        },
+        "transported_H_edge_count": 149,
+        "transported_boundary_is_all_finite": true,
+        "transported_boundary_size_is_even_by_handshake": true,
+        "transported_infinity_degree_I": 0,
+        "transported_separator_inequalities_preserved": true
+      },
+      "p": 37,
+      "proved": true,
+      "result_status": "proved theorem"
+    },
+    "43": {
+      "H_edge_count": 173,
+      "all_boundary_sizes_excluded": true,
+      "arithmetic": {
+        "H_edge_count": 173,
+        "ambient_vertex_count": 1850,
+        "critical_original_k": 172,
+        "direction_count_per_type": 22,
+        "hard_phase": 1,
+        "hard_type": "eps_d=c_H",
+        "m": 22,
+        "opposite_phase": 0,
+        "p": 43,
+        "phase_exponent": 85,
+        "proved": true,
+        "q": 21,
+        "type_budget": 968,
+        "type_budget_identity": "sum_(eps_d=tau) a_d=(p+1)^2/2"
+      },
+      "boundary_size_hypothesis_used": false,
+      "branch_exclusions": {
+        "hard_b2": {
+          "P_upper_bound_reason": "rho>=0 and opposite-edge nonnegativity give P<=s<=8",
+          "a_minimum_direction_is_forced": true,
+          "b0_positive_lift_excluded": true,
+          "branch": "hard_b2",
+          "branch_baseline": {
+            "baseline": "A=(1-x_i-x_j)^2",
+            "congruence": "21 divides I+P-4",
+            "offset": 4,
+            "target": "eps*S_H=4+z_i*z_j"
+          },
+          "branch_excluded": true,
+          "coefficient_offset": 4,
+          "forced_P": 4,
+          "forced_rho": 0,
+          "forced_s": 4,
+          "hard_finite_edge_count_formula": "mP+1",
+          "least_nonzero_phase_zero_b_floor": 44,
+          "mean_one_parallel_step_below": -36,
+          "minimum_direction_mean": 8,
+          "minimum_parallel_count": 3,
+          "nonzero_b_excluded": true,
+          "nonzero_integral_lift_floor": 40,
+          "opposite_finite_edge_count": 84,
+          "opposite_mean_formula": "a=(p-1)s+(p+1)Q+9-7p",
+          "opposite_parallel_count_sum": 84,
+          "p": 43,
+          "parallel_surplus_above_minimum": 18,
+          "parameter_rows_P_0_through_8": [
+            {
+              "P": 0,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 1,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 2,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 3,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 4,
+              "coefficient_congruence_holds": true,
+              "coefficient_numerator_I_plus_P_minus_offset": 0,
+              "feasible": true,
+              "opposite_edge_nonnegative": true,
+              "opposite_finite_edge_count": 84,
+              "rho": 0,
+              "rho_nonnegative": true,
+              "s": 4
+            },
+            {
+              "P": 5,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 6,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 7,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 8,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            }
+          ],
+          "proved": true,
+          "rho_nonnegative_reason": "I+P-4>-q and is divisible by q",
+          "surplus_less_than_opposite_direction_count": true,
+          "transported_infinity_degree_I": 0
+        },
+        "p3_all_low_b_p_minus_1": {
+          "P_upper_bound_reason": "rho>=0 and opposite-edge nonnegativity give P<=s<=8",
+          "a_minimum_direction_is_forced": true,
+          "b0_positive_lift_excluded": true,
+          "branch": "p3_all_low_b_p_minus_1",
+          "branch_baseline": {
+            "applicable_p_mod_4": 3,
+            "baseline": "A=1-x_j",
+            "congruence": "21 divides I+P-3",
+            "offset": 3,
+            "target": "eps*S_H=4-z_j"
+          },
+          "branch_excluded": true,
+          "coefficient_offset": 3,
+          "forced_P": 3,
+          "forced_rho": 0,
+          "forced_s": 3,
+          "hard_finite_edge_count_formula": "mP+1",
+          "least_nonzero_phase_zero_b_floor": 44,
+          "mean_one_parallel_step_below": -36,
+          "minimum_direction_mean": 8,
+          "minimum_parallel_count": 4,
+          "nonzero_b_excluded": true,
+          "nonzero_integral_lift_floor": 40,
+          "opposite_finite_edge_count": 106,
+          "opposite_mean_formula": "a=(p-1)s+(p+1)Q+7-7p",
+          "opposite_parallel_count_sum": 106,
+          "p": 43,
+          "parallel_surplus_above_minimum": 18,
+          "parameter_rows_P_0_through_8": [
+            {
+              "P": 0,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 1,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 2,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": -1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 3,
+              "coefficient_congruence_holds": true,
+              "coefficient_numerator_I_plus_P_minus_offset": 0,
+              "feasible": true,
+              "opposite_edge_nonnegative": true,
+              "opposite_finite_edge_count": 106,
+              "rho": 0,
+              "rho_nonnegative": true,
+              "s": 3
+            },
+            {
+              "P": 4,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 1,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 5,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 2,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 6,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 3,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 7,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 4,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            },
+            {
+              "P": 8,
+              "coefficient_congruence_holds": false,
+              "coefficient_numerator_I_plus_P_minus_offset": 5,
+              "feasible": false,
+              "opposite_edge_nonnegative": false,
+              "opposite_finite_edge_count": null,
+              "rho": null,
+              "rho_nonnegative": false,
+              "s": null
+            }
+          ],
+          "proved": true,
+          "rho_nonnegative_reason": "I+P-3>-q and is divisible by q",
+          "surplus_less_than_opposite_direction_count": true,
+          "transported_infinity_degree_I": 0
+        }
+      },
+      "critical_original_k": 172,
+      "critical_residual_ii_k_eq_4p_excluded": true,
+      "even_k_greater_than_4p_excluded": false,
+      "finite_configuration_search_used": false,
+      "hard_residue_branches": {
+        "equal_mean_low_cells_cannot_mix": true,
+        "feasible_u": [
+          21
+        ],
+        "high_direction_count": 1,
+        "high_mean": 86,
+        "low_direction_count": 21,
+        "low_mean": 42,
+        "low_phase_one_b_candidates": [
+          2,
+          42
+        ],
+        "nonzero_integral_lift_floor": 40,
+        "p": 43,
+        "possible_branches": [
+          "hard_b2",
+          "p3_all_low_b_p_minus_1"
+        ],
+        "proved": true,
+        "quotient_identity": "sum_d k_d=m-u",
+        "residue_rows": [
+          {
+            "common_residue": 0,
+            "excluded": true,
+            "quotient_sum": 22,
+            "reason": "all mean-p+1 candidates are forbidden two-unit lifts",
+            "surviving_branch": null,
+            "u": 0
+          },
+          {
+            "common_residue": 2,
+            "excluded": true,
+            "quotient_sum": 21,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 1
+          },
+          {
+            "common_residue": 4,
+            "excluded": true,
+            "quotient_sum": 20,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 2
+          },
+          {
+            "common_residue": 6,
+            "excluded": true,
+            "quotient_sum": 19,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 3
+          },
+          {
+            "common_residue": 8,
+            "excluded": true,
+            "quotient_sum": 18,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 4
+          },
+          {
+            "common_residue": 10,
+            "excluded": true,
+            "quotient_sum": 17,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 5
+          },
+          {
+            "common_residue": 12,
+            "excluded": true,
+            "quotient_sum": 16,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 6
+          },
+          {
+            "common_residue": 14,
+            "excluded": true,
+            "quotient_sum": 15,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 7
+          },
+          {
+            "common_residue": 16,
+            "excluded": true,
+            "quotient_sum": 14,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 8
+          },
+          {
+            "common_residue": 18,
+            "excluded": true,
+            "quotient_sum": 13,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 9
+          },
+          {
+            "common_residue": 20,
+            "excluded": true,
+            "quotient_sum": 12,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 10
+          },
+          {
+            "common_residue": 22,
+            "excluded": true,
+            "quotient_sum": 11,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 11
+          },
+          {
+            "common_residue": 24,
+            "excluded": true,
+            "quotient_sum": 10,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 12
+          },
+          {
+            "common_residue": 26,
+            "excluded": true,
+            "quotient_sum": 9,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 13
+          },
+          {
+            "common_residue": 28,
+            "excluded": true,
+            "quotient_sum": 8,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 14
+          },
+          {
+            "common_residue": 30,
+            "excluded": true,
+            "quotient_sum": 7,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 15
+          },
+          {
+            "common_residue": 32,
+            "excluded": true,
+            "quotient_sum": 6,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 16
+          },
+          {
+            "common_residue": 34,
+            "excluded": true,
+            "quotient_sum": 5,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 17
+          },
+          {
+            "common_residue": 36,
+            "excluded": true,
+            "quotient_sum": 4,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 18
+          },
+          {
+            "common_residue": 38,
+            "excluded": true,
+            "quotient_sum": 3,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 19
+          },
+          {
+            "common_residue": 40,
+            "excluded": true,
+            "quotient_sum": 2,
+            "reason": "every direction needs k>=1 but sum k=m-u<m",
+            "surviving_branch": null,
+            "u": 20
+          },
+          {
+            "common_residue": 42,
+            "excluded": false,
+            "quotient_sum": 1,
+            "reason": "q low means p-1 and one high mean 2p",
+            "surviving_branch": "u=m-1 low-baseline dichotomy",
+            "u": 21
+          }
+        ],
+        "same_type_mean_form": "a_d=2u+44*k_d"
+      },
+      "isolated_outside_chart": {
+        "ambient_vertex_count": 1850,
+        "checks": {
+          "boundary_permuted": true,
+          "flip_size_preserved": true,
+          "isolated_count": true,
+          "isolated_gap_positive": true,
+          "separation_preserved": true,
+          "signed_transport": true,
+          "support_bound": true
+        },
+        "chosen_w_is_isolated": true,
+        "chosen_w_is_outside_D": true,
+        "every_transported_directional_b_is_even": true,
+        "guaranteed_isolated_vertices": 1504,
+        "isolated_vertex_cannot_lie_in_odd_degree_boundary": true,
+        "maximum_nonisolated_vertices": 346,
+        "p": 43,
+        "proved": true,
+        "signed_PSL_sends_w_to_infinity": true,
+        "signed_transport_dependency": {
+          "Max_plus_and_Max_minus_shells_preserved": true,
+          "both_separation_inequalities_preserved": true,
+          "diagonal_signs_cancel_from_relative_mask": true,
+          "flip_set_size_preserved": true,
+          "matrix_identity": "If M=D*P and D*P^T*C*P*D=C, then D*P^T*(C hadamard R_H)*P*D = C hadamard (P^T*R_H*P).",
+          "odd_degree_boundary_is_permuted": true,
+          "phase_change_is_harmless_when_both_phases_are_excluded": true,
+          "product_phase_may_change": true,
+          "proved": true,
+          "signed_PSL_automorphism": {
+            "depends_on": [
+              "mobius_difference_formula",
+              "chi_of_squares"
+            ],
+            "proved": true,
+            "theorem": "g\u2208PSL acts as a signed automorphism of Paley C via D_x=\u03c7(cx+d): \u03c7(g(x)\u2212g(y))=\u03c7(x\u2212y)\u03c7(cx+d)\u03c7(cy+d)."
+          }
+        },
+        "transported_H_edge_count": 173,
+        "transported_boundary_is_all_finite": true,
+        "transported_boundary_size_is_even_by_handshake": true,
+        "transported_infinity_degree_I": 0,
+        "transported_separator_inequalities_preserved": true
+      },
+      "p": 43,
+      "proved": true,
+      "result_status": "proved theorem"
+    }
+  },
+  "residual_ii_k_eq_4p_empty_all_primes": false,
+  "residual_ii_k_ge_4p_closed": false,
+  "result_status": "proved theorem",
+  "statement": "critical residual (ii) at k=4p is empty for every prime p>=13, independently of boundary size",
+  "title": "Isolated-chart critical residual exclusion",
+  "top_level_gates_changed": false,
+  "universal_proof_schema": {
+    "ambient_vertex_count": "p^2+1",
+    "coefficient_offsets": [
+      4,
+      5,
+      3
+    ],
+    "critical_H_size": "4p+1",
+    "critical_k": "4p",
+    "forced_s_values": [
+      4,
+      5,
+      3
+    ],
+    "forced_small_means": [
+      8,
+      6,
+      8
+    ],
+    "isolated_gap_at_13": 64,
+    "isolated_gap_strictly_increasing_for_p_at_least_13": true,
+    "isolated_vertex_gap": "p^2-8p-1",
+    "maximum_forced_small_mean": 8,
+    "minimum_nonzero_integral_lift_floor": 10,
+    "minimum_nonzero_phase_zero_b_floor": 12,
+    "minimum_q": 6,
+    "p13_floor_input": "direct exact Proposition 15.632 LP",
+    "p_at_least_17_floor_input": "Proposition 15.669",
+    "parallel_count_upper_bound": 8,
+    "prime_range": "odd primes p>=13",
+    "proved": true,
+    "symbolic_not_configuration_census": true
+  }
+}

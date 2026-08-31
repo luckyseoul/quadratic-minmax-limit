@@ -2,7 +2,7 @@
   "endpoint_excluded": false,
   "finite_configuration_search_used": false,
   "multi_level_type_I_closed": false,
-  "next_gate": "exclude the common completion under residual direction, phase, and lift constraints; a nontrivial repair-cycle identity from Proposition 15.731 is a proposed attack, not a proved condition",
+  "next_gate": "historical at this stage: Proposition 15.732 later proved the bare repair cycle exact, Proposition 15.734 subsequently closed the k=4p layer for p>=13, and Proposition 15.737 closed the first three p=11 layers; the live residual front starts at p=11 k=50 and p>=13 k=4p+6",
   "non_walsh_residual_ii_closed": false,
   "p_plus_one_shell_closed": false,
   "prop": "15.730",

@@ -574,9 +574,11 @@ def proposition_15730() -> dict[str, object]:
         "quadratic_minmax_limit_closed": False,
         "top_level_gates_changed": False,
         "next_gate": (
-            "exclude the common completion under residual direction, phase, "
-            "and lift constraints; a nontrivial repair-cycle identity from "
-            "Proposition 15.731 is a proposed attack, not a proved condition"
+            "historical at this stage: Proposition 15.732 later proved the "
+            "bare repair cycle exact, Proposition 15.734 subsequently closed "
+            "the k=4p layer for p>=13, and Proposition 15.737 closed the "
+            "first three p=11 layers; the live residual front starts at "
+            "p=11 k=50 and p>=13 k=4p+6"
         ),
         "proved": proved,
     }

@@ -548,10 +548,11 @@ def proposition_15731() -> dict[str, object]:
         "cycle_obstruction_proved": False,
         "phase_bridge_proved": False,
         "next_gate": (
-            "exclude the Proposition 15.727/15.730 common completion under "
-            "the residual direction, phase, and lift constraints; deriving "
-            "a nontrivial repair-cycle identity from these transition "
-            "coordinates is the proposed next attack"
+            "historical at this stage: Proposition 15.732 later proved the "
+            "linear transition circulation exact, Proposition 15.734 "
+            "subsequently closed the k=4p layer for p>=13, and Proposition "
+            "15.737 closed the first three p=11 layers; the live residual "
+            "front starts at p=11 k=50 and p>=13 k=4p+6"
         ),
         "proved": proved,
     }

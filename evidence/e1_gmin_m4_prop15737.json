@@ -1,0 +1,1361 @@
+{
+  "all_equal_triangle_nondegeneracy": {
+    "discriminant_is_nonsquare": true,
+    "distinct_triple_count": 165,
+    "every_all_equal_triangle_has_nonzero_moment": true,
+    "field": "F_11",
+    "moment_value_histogram": {
+      "1": 22,
+      "2": 11,
+      "3": 22,
+      "4": 22,
+      "5": 22,
+      "6": 11,
+      "7": 11,
+      "8": 11,
+      "9": 22,
+      "10": 11
+    },
+    "nonzero_quadratic_residues_mod_11": [
+      1,
+      3,
+      4,
+      5,
+      9
+    ],
+    "normal_form": "(i,j,k)=(0,1,r)",
+    "normalized_moment": "2*(r^2-r+1)",
+    "proved": true,
+    "quadratic_discriminant_mod_11": 8,
+    "zero_moment_triples": []
+  },
+  "binary_quadratic_projective_roots": {
+    "field": "F_11",
+    "maximum_projective_zero_count": 2,
+    "nonzero_binary_quadratic_count": 1330,
+    "projective_point_count": 12,
+    "proved": true,
+    "symbolic_reason": "dehomogenize away from infinity; if infinity is a root, the remaining polynomial has degree at most one",
+    "zero_count_histogram": {
+      "0": 550,
+      "1": 120,
+      "2": 660
+    }
+  },
+  "closed_even_k": [
+    44,
+    46,
+    48
+  ],
+  "closed_layer_indices_t": [
+    0,
+    1,
+    2
+  ],
+  "coefficient_patterns": {
+    "hard_low": {
+      "kernel_scalar": 0,
+      "normalized_pattern": "eps_L*K_st=-1 on the star at j, else 0",
+      "parallel_count": 3,
+      "proved": true,
+      "support_size": 10,
+      "target": "eps_L*S_H=4-z_j"
+    },
+    "opposite_minimum": {
+      "kernel_scalar": 0,
+      "normalized_pattern": "eps_L*K_st=1 on the triangle {i,j,k}, else 0",
+      "parallel_count": 4,
+      "proved": true,
+      "support_size": 3,
+      "target": "eps_L*S_H=4+z_i*z_j+z_i*z_k+z_j*z_k"
+    },
+    "proved": true,
+    "sign_convention": "K^L_st=sum chi(u-v) over selected edges between fibres; eps_L*S_H=P+eps_L*sum K^L_st*z_s*z_t"
+  },
+  "critical_p11_k_eq_44_closed": true,
+  "critical_p5_closed": false,
+  "critical_p7_closed": false,
+  "finite_certificate_dependency": {
+    "proposition": "15.736",
+    "result_status": "exhaustive finite certificate",
+    "sharp_boolean_catalog_certified": true
+  },
+  "hard_star_second_moment": {
+    "center_values": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "every_hard_star_moment_is_zero": true,
+    "field": "F_11",
+    "nonzero_square_sum_mod_11": 0,
+    "proved": true,
+    "raw_nonzero_square_sum": 385,
+    "translation_identity": "sum_(t!=j)(j-t)^2=sum_(u in F_11^*)u^2"
+  },
+  "multi_level_type_I_closed": false,
+  "p11_k_at_least_50_closed": false,
+  "p11_k_eq_46_closed": true,
+  "p11_k_eq_48_closed": true,
+  "p11_layer_exclusions": {
+    "0": {
+      "H_edge_count": 45,
+      "global_moment": "M_H(L)=sum_{e={u,v} in H}chi(u-v)*(L(u)-L(v))^2",
+      "global_moment_degree": 2,
+      "global_moment_forced_identically_zero": true,
+      "hard_b10_parallel_replay": {
+        "all_equal_triple_is_only_catalog_survivor": true,
+        "branch": "p3_all_low_b_p_minus_1",
+        "branch_excluded_by_catalog_offsets": false,
+        "catalog_forms_with_offset_congruent_to_Q": [
+          "all_equal_triple"
+        ],
+        "coefficient_offset": 3,
+        "directions_at_minimum_at_least": 4,
+        "forced_P": 3,
+        "forced_rho": 0,
+        "forced_s": 3,
+        "hard_finite_edge_count": 19,
+        "layer_index_t": 0,
+        "mean_at_Q_minus_1": -4,
+        "mean_at_minimum_Q": 8,
+        "minimum_opposite_Q": 4,
+        "opposite_parallel_count_sum": 26,
+        "p": 11,
+        "parallel_surplus_above_minimum": 2,
+        "parameter_rows_P_0_through_8": [
+          {
+            "P": 0,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 1,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 2,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 3,
+            "feasible": true,
+            "opposite_edges": 26,
+            "rho": 0,
+            "s": 3
+          },
+          {
+            "P": 4,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 5,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 6,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 7,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 8,
+            "feasible": false,
+            "opposite_edges": -4,
+            "rho": 1,
+            "s": 9
+          }
+        ],
+        "proved": true,
+        "sharp_catalog_offsets_mod_5": {
+          "all_equal_triple": 4,
+          "omitted_pair": 2
+        }
+      },
+      "hard_b2_branch_excluded_by_15_736": true,
+      "hard_b2_parallel_replay": {
+        "all_equal_triple_is_only_catalog_survivor": false,
+        "branch": "hard_b2",
+        "branch_excluded_by_catalog_offsets": true,
+        "catalog_forms_with_offset_congruent_to_Q": [],
+        "coefficient_offset": 4,
+        "directions_at_minimum_at_least": 4,
+        "forced_P": 4,
+        "forced_rho": 0,
+        "forced_s": 4,
+        "hard_finite_edge_count": 25,
+        "layer_index_t": 0,
+        "mean_at_Q_minus_1": -4,
+        "mean_at_minimum_Q": 8,
+        "minimum_opposite_Q": 3,
+        "opposite_parallel_count_sum": 20,
+        "p": 11,
+        "parallel_surplus_above_minimum": 2,
+        "parameter_rows_P_0_through_8": [
+          {
+            "P": 0,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 1,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 2,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 3,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 4,
+            "feasible": true,
+            "opposite_edges": 20,
+            "rho": 0,
+            "s": 4
+          },
+          {
+            "P": 5,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 6,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 7,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 8,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          }
+        ],
+        "proved": true,
+        "sharp_catalog_offsets_mod_5": {
+          "all_equal_triple": 4,
+          "omitted_pair": 2
+        }
+      },
+      "hard_b_p_minus_1_branch_excluded_by_binary_moment": true,
+      "hard_low_direction_count": 5,
+      "hard_low_projective_zeros": 5,
+      "isolated_chart": {
+        "H_edge_count": 45,
+        "ambient_vertex_count": 122,
+        "boundary_size_even_by_handshake": true,
+        "every_directional_odd_fibre_count_b_is_even": true,
+        "guaranteed_isolated_vertices": 32,
+        "isolated_vertex_is_outside_odd_degree_boundary": true,
+        "layer_index_t": 0,
+        "maximum_nonisolated_vertices": 90,
+        "original_k": 44,
+        "p": 11,
+        "proved": true,
+        "signed_PSL_transport_dependency": {
+          "Max_plus_and_Max_minus_shells_preserved": true,
+          "both_separation_inequalities_preserved": true,
+          "diagonal_signs_cancel_from_relative_mask": true,
+          "flip_set_size_preserved": true,
+          "matrix_identity": "If M=D*P and D*P^T*C*P*D=C, then D*P^T*(C hadamard R_H)*P*D = C hadamard (P^T*R_H*P).",
+          "odd_degree_boundary_is_permuted": true,
+          "phase_change_is_harmless_when_both_phases_are_excluded": true,
+          "product_phase_may_change": true,
+          "proved": true,
+          "signed_PSL_automorphism": {
+            "depends_on": [
+              "mobius_difference_formula",
+              "chi_of_squares"
+            ],
+            "proved": true,
+            "theorem": "g\u2208PSL acts as a signed automorphism of Paley C via D_x=\u03c7(cx+d): \u03c7(g(x)\u2212g(y))=\u03c7(x\u2212y)\u03c7(cx+d)\u03c7(cy+d)."
+          }
+        },
+        "transported_boundary_is_all_finite": true,
+        "transported_infinity_degree_I": 0
+      },
+      "layer_index_t": 0,
+      "minimum_all_equal_triple_direction_count": 4,
+      "nonzero_binary_quadratic_projective_root_bound": 2,
+      "one_triple_already_contradicts_zero_moment": true,
+      "original_k": 44,
+      "p": 11,
+      "p11_layer_excluded": true,
+      "phase_one_residue_replay": {
+        "H_edge_count": 45,
+        "b10_coefficient_offset": 3,
+        "b10_exact_baseline": "A=1-x_j; eps*S_H=4-z_j",
+        "b2_coefficient_offset": 4,
+        "b2_exact_baseline": "A=(1-x_i-x_j)^2; eps*S_H=4+z_i*z_j",
+        "endpoint_low_b_candidates": [
+          2,
+          10
+        ],
+        "endpoint_low_direction_count_at_least": 5,
+        "endpoint_low_mean": 10,
+        "endpoint_u": 5,
+        "equal_mean_forces_equal_parallel_count": true,
+        "exact_phase_one_even_floors": {
+          "0": 22,
+          "2": 10,
+          "4": 22,
+          "6": 18,
+          "8": 22,
+          "10": 10
+        },
+        "feasible_u": [
+          5
+        ],
+        "hard_type_budget": 72,
+        "hard_type_budget_formula": "2m(m+t)",
+        "layer_index_t": 0,
+        "nonzero_integral_lift_floor": 8,
+        "offsets_differ_modulo_q_so_baselines_cannot_mix": true,
+        "p": 11,
+        "phase_exponent": 21,
+        "phase_one_type": "eps_d=(-1)^t*c_H",
+        "positive_quadrature_dependency": {
+          "b2": {
+            "all_quadrature_weights_strictly_positive": true,
+            "b": 2,
+            "exact_positive_quadrature_certificate": true,
+            "p": 11,
+            "phase": 1,
+            "quadrature_nodes": [
+              0,
+              1,
+              2
+            ],
+            "quadrature_weights": [
+              "2/11",
+              "6/11",
+              "3/11"
+            ],
+            "scaled_floor": 10
+          },
+          "complementary_b1": {
+            "all_quadrature_weights_strictly_positive": true,
+            "b": 1,
+            "exact_positive_quadrature_certificate": true,
+            "p": 11,
+            "phase": 1,
+            "quadrature_nodes": [
+              0,
+              1
+            ],
+            "quadrature_weights": [
+              "5/11",
+              "6/11"
+            ],
+            "scaled_floor": 10
+          },
+          "proposition": "15.652"
+        },
+        "proved": true,
+        "quotient_identity": "sum_d k_d=6+t-u",
+        "residue_rows": [
+          {
+            "common_residue": 0,
+            "excess_above_floor": {
+              "2": 2,
+              "10": 2
+            },
+            "excluded": true,
+            "floor_compatible_even_b": [
+              2,
+              10
+            ],
+            "forced_low_direction_count": 6,
+            "forced_low_mean": 12,
+            "quotient_sum": 6,
+            "reason": "a k=1 direction is forced and every compatible cell is a nonzero lift of excess 2+2u below the sharp floor 8",
+            "u": 0
+          },
+          {
+            "common_residue": 2,
+            "excess_above_floor": {},
+            "excluded": true,
+            "floor_compatible_even_b": [],
+            "forced_low_direction_count": 0,
+            "forced_low_mean": 2,
+            "quotient_sum": 5,
+            "reason": "k=0 is below every floor, but sum k is less than six",
+            "u": 1
+          },
+          {
+            "common_residue": 4,
+            "excess_above_floor": {},
+            "excluded": true,
+            "floor_compatible_even_b": [],
+            "forced_low_direction_count": 0,
+            "forced_low_mean": 4,
+            "quotient_sum": 4,
+            "reason": "k=0 is below every floor, but sum k is less than six",
+            "u": 2
+          },
+          {
+            "common_residue": 6,
+            "excess_above_floor": {},
+            "excluded": true,
+            "floor_compatible_even_b": [],
+            "forced_low_direction_count": 0,
+            "forced_low_mean": 6,
+            "quotient_sum": 3,
+            "reason": "k=0 is below every floor, but sum k is less than six",
+            "u": 3
+          },
+          {
+            "common_residue": 8,
+            "excess_above_floor": {},
+            "excluded": true,
+            "floor_compatible_even_b": [],
+            "forced_low_direction_count": 0,
+            "forced_low_mean": 8,
+            "quotient_sum": 2,
+            "reason": "k=0 is below every floor, but sum k is less than six",
+            "u": 4
+          },
+          {
+            "common_residue": 10,
+            "excess_above_floor": {
+              "2": 0,
+              "10": 0
+            },
+            "excluded": false,
+            "floor_compatible_even_b": [
+              2,
+              10
+            ],
+            "forced_low_direction_count": 5,
+            "forced_low_mean": 10,
+            "quotient_sum": 1,
+            "reason": "sum k=t+1, so at least 5-t directions have k=0 and exact mean ten",
+            "u": 5
+          }
+        ],
+        "same_type_mean_form": "a_d=2u+12*k_d"
+      },
+      "proved": true,
+      "result_status": "proved theorem",
+      "sharp_equality_dependency": {
+        "boolean_catalog_dependency": {
+          "certified": true,
+          "proposition": "15.736",
+          "result_status": "exhaustive finite certificate"
+        },
+        "equality_forces_B_boolean": true,
+        "equality_rigidity": "B is Boolean and every paired cube through a support point has minimum degree-two support 1/4",
+        "least_nonzero_b_floor": 12,
+        "p": 11,
+        "phase_zero_even_floors": {
+          "0": 0,
+          "2": 12,
+          "4": 16,
+          "6": 22,
+          "8": 16,
+          "10": 12
+        },
+        "proved": true,
+        "sharp_b0_integral_lift_floor": 8
+      }
+    },
+    "1": {
+      "H_edge_count": 47,
+      "global_moment": "M_H(L)=sum_{e={u,v} in H}chi(u-v)*(L(u)-L(v))^2",
+      "global_moment_degree": 2,
+      "global_moment_forced_identically_zero": true,
+      "hard_b10_parallel_replay": {
+        "all_equal_triple_is_only_catalog_survivor": true,
+        "branch": "p3_all_low_b_p_minus_1",
+        "branch_excluded_by_catalog_offsets": false,
+        "catalog_forms_with_offset_congruent_to_Q": [
+          "all_equal_triple"
+        ],
+        "coefficient_offset": 3,
+        "directions_at_minimum_at_least": 3,
+        "forced_P": 3,
+        "forced_rho": 0,
+        "forced_s": 3,
+        "hard_finite_edge_count": 20,
+        "layer_index_t": 1,
+        "mean_at_Q_minus_1": -4,
+        "mean_at_minimum_Q": 8,
+        "minimum_opposite_Q": 4,
+        "opposite_parallel_count_sum": 27,
+        "p": 11,
+        "parallel_surplus_above_minimum": 3,
+        "parameter_rows_P_0_through_8": [
+          {
+            "P": 0,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 1,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 2,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 3,
+            "feasible": true,
+            "opposite_edges": 27,
+            "rho": 0,
+            "s": 3
+          },
+          {
+            "P": 4,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 5,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 6,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 7,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 8,
+            "feasible": false,
+            "opposite_edges": -3,
+            "rho": 1,
+            "s": 9
+          }
+        ],
+        "proved": true,
+        "sharp_catalog_offsets_mod_5": {
+          "all_equal_triple": 4,
+          "omitted_pair": 2
+        }
+      },
+      "hard_b2_branch_excluded_by_15_736": true,
+      "hard_b2_parallel_replay": {
+        "all_equal_triple_is_only_catalog_survivor": false,
+        "branch": "hard_b2",
+        "branch_excluded_by_catalog_offsets": true,
+        "catalog_forms_with_offset_congruent_to_Q": [],
+        "coefficient_offset": 4,
+        "directions_at_minimum_at_least": 3,
+        "forced_P": 4,
+        "forced_rho": 0,
+        "forced_s": 4,
+        "hard_finite_edge_count": 26,
+        "layer_index_t": 1,
+        "mean_at_Q_minus_1": -4,
+        "mean_at_minimum_Q": 8,
+        "minimum_opposite_Q": 3,
+        "opposite_parallel_count_sum": 21,
+        "p": 11,
+        "parallel_surplus_above_minimum": 3,
+        "parameter_rows_P_0_through_8": [
+          {
+            "P": 0,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 1,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 2,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 3,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 4,
+            "feasible": true,
+            "opposite_edges": 21,
+            "rho": 0,
+            "s": 4
+          },
+          {
+            "P": 5,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 6,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 7,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 8,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          }
+        ],
+        "proved": true,
+        "sharp_catalog_offsets_mod_5": {
+          "all_equal_triple": 4,
+          "omitted_pair": 2
+        }
+      },
+      "hard_b_p_minus_1_branch_excluded_by_binary_moment": true,
+      "hard_low_direction_count": 4,
+      "hard_low_projective_zeros": 4,
+      "isolated_chart": {
+        "H_edge_count": 47,
+        "ambient_vertex_count": 122,
+        "boundary_size_even_by_handshake": true,
+        "every_directional_odd_fibre_count_b_is_even": true,
+        "guaranteed_isolated_vertices": 28,
+        "isolated_vertex_is_outside_odd_degree_boundary": true,
+        "layer_index_t": 1,
+        "maximum_nonisolated_vertices": 94,
+        "original_k": 46,
+        "p": 11,
+        "proved": true,
+        "signed_PSL_transport_dependency": {
+          "Max_plus_and_Max_minus_shells_preserved": true,
+          "both_separation_inequalities_preserved": true,
+          "diagonal_signs_cancel_from_relative_mask": true,
+          "flip_set_size_preserved": true,
+          "matrix_identity": "If M=D*P and D*P^T*C*P*D=C, then D*P^T*(C hadamard R_H)*P*D = C hadamard (P^T*R_H*P).",
+          "odd_degree_boundary_is_permuted": true,
+          "phase_change_is_harmless_when_both_phases_are_excluded": true,
+          "product_phase_may_change": true,
+          "proved": true,
+          "signed_PSL_automorphism": {
+            "depends_on": [
+              "mobius_difference_formula",
+              "chi_of_squares"
+            ],
+            "proved": true,
+            "theorem": "g\u2208PSL acts as a signed automorphism of Paley C via D_x=\u03c7(cx+d): \u03c7(g(x)\u2212g(y))=\u03c7(x\u2212y)\u03c7(cx+d)\u03c7(cy+d)."
+          }
+        },
+        "transported_boundary_is_all_finite": true,
+        "transported_infinity_degree_I": 0
+      },
+      "layer_index_t": 1,
+      "minimum_all_equal_triple_direction_count": 3,
+      "nonzero_binary_quadratic_projective_root_bound": 2,
+      "one_triple_already_contradicts_zero_moment": true,
+      "original_k": 46,
+      "p": 11,
+      "p11_layer_excluded": true,
+      "phase_one_residue_replay": {
+        "H_edge_count": 47,
+        "b10_coefficient_offset": 3,
+        "b10_exact_baseline": "A=1-x_j; eps*S_H=4-z_j",
+        "b2_coefficient_offset": 4,
+        "b2_exact_baseline": "A=(1-x_i-x_j)^2; eps*S_H=4+z_i*z_j",
+        "endpoint_low_b_candidates": [
+          2,
+          10
+        ],
+        "endpoint_low_direction_count_at_least": 4,
+        "endpoint_low_mean": 10,
+        "endpoint_u": 5,
+        "equal_mean_forces_equal_parallel_count": true,
+        "exact_phase_one_even_floors": {
+          "0": 22,
+          "2": 10,
+          "4": 22,
+          "6": 18,
+          "8": 22,
+          "10": 10
+        },
+        "feasible_u": [
+          5
+        ],
+        "hard_type_budget": 84,
+        "hard_type_budget_formula": "2m(m+t)",
+        "layer_index_t": 1,
+        "nonzero_integral_lift_floor": 8,
+        "offsets_differ_modulo_q_so_baselines_cannot_mix": true,
+        "p": 11,
+        "phase_exponent": 22,
+        "phase_one_type": "eps_d=(-1)^t*c_H",
+        "positive_quadrature_dependency": {
+          "b2": {
+            "all_quadrature_weights_strictly_positive": true,
+            "b": 2,
+            "exact_positive_quadrature_certificate": true,
+            "p": 11,
+            "phase": 1,
+            "quadrature_nodes": [
+              0,
+              1,
+              2
+            ],
+            "quadrature_weights": [
+              "2/11",
+              "6/11",
+              "3/11"
+            ],
+            "scaled_floor": 10
+          },
+          "complementary_b1": {
+            "all_quadrature_weights_strictly_positive": true,
+            "b": 1,
+            "exact_positive_quadrature_certificate": true,
+            "p": 11,
+            "phase": 1,
+            "quadrature_nodes": [
+              0,
+              1
+            ],
+            "quadrature_weights": [
+              "5/11",
+              "6/11"
+            ],
+            "scaled_floor": 10
+          },
+          "proposition": "15.652"
+        },
+        "proved": true,
+        "quotient_identity": "sum_d k_d=6+t-u",
+        "residue_rows": [
+          {
+            "common_residue": 0,
+            "excess_above_floor": {
+              "2": 2,
+              "10": 2
+            },
+            "excluded": true,
+            "floor_compatible_even_b": [
+              2,
+              10
+            ],
+            "forced_low_direction_count": 5,
+            "forced_low_mean": 12,
+            "quotient_sum": 7,
+            "reason": "a k=1 direction is forced and every compatible cell is a nonzero lift of excess 2+2u below the sharp floor 8",
+            "u": 0
+          },
+          {
+            "common_residue": 2,
+            "excess_above_floor": {
+              "2": 4,
+              "10": 4
+            },
+            "excluded": true,
+            "floor_compatible_even_b": [
+              2,
+              10
+            ],
+            "forced_low_direction_count": 6,
+            "forced_low_mean": 14,
+            "quotient_sum": 6,
+            "reason": "a k=1 direction is forced and every compatible cell is a nonzero lift of excess 2+2u below the sharp floor 8",
+            "u": 1
+          },
+          {
+            "common_residue": 4,
+            "excess_above_floor": {},
+            "excluded": true,
+            "floor_compatible_even_b": [],
+            "forced_low_direction_count": 0,
+            "forced_low_mean": 4,
+            "quotient_sum": 5,
+            "reason": "k=0 is below every floor, but sum k is less than six",
+            "u": 2
+          },
+          {
+            "common_residue": 6,
+            "excess_above_floor": {},
+            "excluded": true,
+            "floor_compatible_even_b": [],
+            "forced_low_direction_count": 0,
+            "forced_low_mean": 6,
+            "quotient_sum": 4,
+            "reason": "k=0 is below every floor, but sum k is less than six",
+            "u": 3
+          },
+          {
+            "common_residue": 8,
+            "excess_above_floor": {},
+            "excluded": true,
+            "floor_compatible_even_b": [],
+            "forced_low_direction_count": 0,
+            "forced_low_mean": 8,
+            "quotient_sum": 3,
+            "reason": "k=0 is below every floor, but sum k is less than six",
+            "u": 4
+          },
+          {
+            "common_residue": 10,
+            "excess_above_floor": {
+              "2": 0,
+              "10": 0
+            },
+            "excluded": false,
+            "floor_compatible_even_b": [
+              2,
+              10
+            ],
+            "forced_low_direction_count": 4,
+            "forced_low_mean": 10,
+            "quotient_sum": 2,
+            "reason": "sum k=t+1, so at least 5-t directions have k=0 and exact mean ten",
+            "u": 5
+          }
+        ],
+        "same_type_mean_form": "a_d=2u+12*k_d"
+      },
+      "proved": true,
+      "result_status": "proved theorem",
+      "sharp_equality_dependency": {
+        "boolean_catalog_dependency": {
+          "certified": true,
+          "proposition": "15.736",
+          "result_status": "exhaustive finite certificate"
+        },
+        "equality_forces_B_boolean": true,
+        "equality_rigidity": "B is Boolean and every paired cube through a support point has minimum degree-two support 1/4",
+        "least_nonzero_b_floor": 12,
+        "p": 11,
+        "phase_zero_even_floors": {
+          "0": 0,
+          "2": 12,
+          "4": 16,
+          "6": 22,
+          "8": 16,
+          "10": 12
+        },
+        "proved": true,
+        "sharp_b0_integral_lift_floor": 8
+      }
+    },
+    "2": {
+      "H_edge_count": 49,
+      "global_moment": "M_H(L)=sum_{e={u,v} in H}chi(u-v)*(L(u)-L(v))^2",
+      "global_moment_degree": 2,
+      "global_moment_forced_identically_zero": true,
+      "hard_b10_parallel_replay": {
+        "all_equal_triple_is_only_catalog_survivor": true,
+        "branch": "p3_all_low_b_p_minus_1",
+        "branch_excluded_by_catalog_offsets": false,
+        "catalog_forms_with_offset_congruent_to_Q": [
+          "all_equal_triple"
+        ],
+        "coefficient_offset": 3,
+        "directions_at_minimum_at_least": 2,
+        "forced_P": 3,
+        "forced_rho": 0,
+        "forced_s": 3,
+        "hard_finite_edge_count": 21,
+        "layer_index_t": 2,
+        "mean_at_Q_minus_1": -4,
+        "mean_at_minimum_Q": 8,
+        "minimum_opposite_Q": 4,
+        "opposite_parallel_count_sum": 28,
+        "p": 11,
+        "parallel_surplus_above_minimum": 4,
+        "parameter_rows_P_0_through_8": [
+          {
+            "P": 0,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 1,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 2,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 3,
+            "feasible": true,
+            "opposite_edges": 28,
+            "rho": 0,
+            "s": 3
+          },
+          {
+            "P": 4,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 5,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 6,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 7,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 8,
+            "feasible": false,
+            "opposite_edges": -2,
+            "rho": 1,
+            "s": 9
+          }
+        ],
+        "proved": true,
+        "sharp_catalog_offsets_mod_5": {
+          "all_equal_triple": 4,
+          "omitted_pair": 2
+        }
+      },
+      "hard_b2_branch_excluded_by_15_736": true,
+      "hard_b2_parallel_replay": {
+        "all_equal_triple_is_only_catalog_survivor": false,
+        "branch": "hard_b2",
+        "branch_excluded_by_catalog_offsets": true,
+        "catalog_forms_with_offset_congruent_to_Q": [],
+        "coefficient_offset": 4,
+        "directions_at_minimum_at_least": 2,
+        "forced_P": 4,
+        "forced_rho": 0,
+        "forced_s": 4,
+        "hard_finite_edge_count": 27,
+        "layer_index_t": 2,
+        "mean_at_Q_minus_1": -4,
+        "mean_at_minimum_Q": 8,
+        "minimum_opposite_Q": 3,
+        "opposite_parallel_count_sum": 22,
+        "p": 11,
+        "parallel_surplus_above_minimum": 4,
+        "parameter_rows_P_0_through_8": [
+          {
+            "P": 0,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 1,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 2,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 3,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 4,
+            "feasible": true,
+            "opposite_edges": 22,
+            "rho": 0,
+            "s": 4
+          },
+          {
+            "P": 5,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 6,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 7,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          },
+          {
+            "P": 8,
+            "feasible": false,
+            "opposite_edges": null,
+            "rho": null,
+            "s": null
+          }
+        ],
+        "proved": true,
+        "sharp_catalog_offsets_mod_5": {
+          "all_equal_triple": 4,
+          "omitted_pair": 2
+        }
+      },
+      "hard_b_p_minus_1_branch_excluded_by_binary_moment": true,
+      "hard_low_direction_count": 3,
+      "hard_low_projective_zeros": 3,
+      "isolated_chart": {
+        "H_edge_count": 49,
+        "ambient_vertex_count": 122,
+        "boundary_size_even_by_handshake": true,
+        "every_directional_odd_fibre_count_b_is_even": true,
+        "guaranteed_isolated_vertices": 24,
+        "isolated_vertex_is_outside_odd_degree_boundary": true,
+        "layer_index_t": 2,
+        "maximum_nonisolated_vertices": 98,
+        "original_k": 48,
+        "p": 11,
+        "proved": true,
+        "signed_PSL_transport_dependency": {
+          "Max_plus_and_Max_minus_shells_preserved": true,
+          "both_separation_inequalities_preserved": true,
+          "diagonal_signs_cancel_from_relative_mask": true,
+          "flip_set_size_preserved": true,
+          "matrix_identity": "If M=D*P and D*P^T*C*P*D=C, then D*P^T*(C hadamard R_H)*P*D = C hadamard (P^T*R_H*P).",
+          "odd_degree_boundary_is_permuted": true,
+          "phase_change_is_harmless_when_both_phases_are_excluded": true,
+          "product_phase_may_change": true,
+          "proved": true,
+          "signed_PSL_automorphism": {
+            "depends_on": [
+              "mobius_difference_formula",
+              "chi_of_squares"
+            ],
+            "proved": true,
+            "theorem": "g\u2208PSL acts as a signed automorphism of Paley C via D_x=\u03c7(cx+d): \u03c7(g(x)\u2212g(y))=\u03c7(x\u2212y)\u03c7(cx+d)\u03c7(cy+d)."
+          }
+        },
+        "transported_boundary_is_all_finite": true,
+        "transported_infinity_degree_I": 0
+      },
+      "layer_index_t": 2,
+      "minimum_all_equal_triple_direction_count": 2,
+      "nonzero_binary_quadratic_projective_root_bound": 2,
+      "one_triple_already_contradicts_zero_moment": true,
+      "original_k": 48,
+      "p": 11,
+      "p11_layer_excluded": true,
+      "phase_one_residue_replay": {
+        "H_edge_count": 49,
+        "b10_coefficient_offset": 3,
+        "b10_exact_baseline": "A=1-x_j; eps*S_H=4-z_j",
+        "b2_coefficient_offset": 4,
+        "b2_exact_baseline": "A=(1-x_i-x_j)^2; eps*S_H=4+z_i*z_j",
+        "endpoint_low_b_candidates": [
+          2,
+          10
+        ],
+        "endpoint_low_direction_count_at_least": 3,
+        "endpoint_low_mean": 10,
+        "endpoint_u": 5,
+        "equal_mean_forces_equal_parallel_count": true,
+        "exact_phase_one_even_floors": {
+          "0": 22,
+          "2": 10,
+          "4": 22,
+          "6": 18,
+          "8": 22,
+          "10": 10
+        },
+        "feasible_u": [
+          5
+        ],
+        "hard_type_budget": 96,
+        "hard_type_budget_formula": "2m(m+t)",
+        "layer_index_t": 2,
+        "nonzero_integral_lift_floor": 8,
+        "offsets_differ_modulo_q_so_baselines_cannot_mix": true,
+        "p": 11,
+        "phase_exponent": 23,
+        "phase_one_type": "eps_d=(-1)^t*c_H",
+        "positive_quadrature_dependency": {
+          "b2": {
+            "all_quadrature_weights_strictly_positive": true,
+            "b": 2,
+            "exact_positive_quadrature_certificate": true,
+            "p": 11,
+            "phase": 1,
+            "quadrature_nodes": [
+              0,
+              1,
+              2
+            ],
+            "quadrature_weights": [
+              "2/11",
+              "6/11",
+              "3/11"
+            ],
+            "scaled_floor": 10
+          },
+          "complementary_b1": {
+            "all_quadrature_weights_strictly_positive": true,
+            "b": 1,
+            "exact_positive_quadrature_certificate": true,
+            "p": 11,
+            "phase": 1,
+            "quadrature_nodes": [
+              0,
+              1
+            ],
+            "quadrature_weights": [
+              "5/11",
+              "6/11"
+            ],
+            "scaled_floor": 10
+          },
+          "proposition": "15.652"
+        },
+        "proved": true,
+        "quotient_identity": "sum_d k_d=6+t-u",
+        "residue_rows": [
+          {
+            "common_residue": 0,
+            "excess_above_floor": {
+              "2": 2,
+              "10": 2
+            },
+            "excluded": true,
+            "floor_compatible_even_b": [
+              2,
+              10
+            ],
+            "forced_low_direction_count": 4,
+            "forced_low_mean": 12,
+            "quotient_sum": 8,
+            "reason": "a k=1 direction is forced and every compatible cell is a nonzero lift of excess 2+2u below the sharp floor 8",
+            "u": 0
+          },
+          {
+            "common_residue": 2,
+            "excess_above_floor": {
+              "2": 4,
+              "10": 4
+            },
+            "excluded": true,
+            "floor_compatible_even_b": [
+              2,
+              10
+            ],
+            "forced_low_direction_count": 5,
+            "forced_low_mean": 14,
+            "quotient_sum": 7,
+            "reason": "a k=1 direction is forced and every compatible cell is a nonzero lift of excess 2+2u below the sharp floor 8",
+            "u": 1
+          },
+          {
+            "common_residue": 4,
+            "excess_above_floor": {
+              "2": 6,
+              "10": 6
+            },
+            "excluded": true,
+            "floor_compatible_even_b": [
+              2,
+              10
+            ],
+            "forced_low_direction_count": 6,
+            "forced_low_mean": 16,
+            "quotient_sum": 6,
+            "reason": "a k=1 direction is forced and every compatible cell is a nonzero lift of excess 2+2u below the sharp floor 8",
+            "u": 2
+          },
+          {
+            "common_residue": 6,
+            "excess_above_floor": {},
+            "excluded": true,
+            "floor_compatible_even_b": [],
+            "forced_low_direction_count": 0,
+            "forced_low_mean": 6,
+            "quotient_sum": 5,
+            "reason": "k=0 is below every floor, but sum k is less than six",
+            "u": 3
+          },
+          {
+            "common_residue": 8,
+            "excess_above_floor": {},
+            "excluded": true,
+            "floor_compatible_even_b": [],
+            "forced_low_direction_count": 0,
+            "forced_low_mean": 8,
+            "quotient_sum": 4,
+            "reason": "k=0 is below every floor, but sum k is less than six",
+            "u": 4
+          },
+          {
+            "common_residue": 10,
+            "excess_above_floor": {
+              "2": 0,
+              "10": 0
+            },
+            "excluded": false,
+            "floor_compatible_even_b": [
+              2,
+              10
+            ],
+            "forced_low_direction_count": 3,
+            "forced_low_mean": 10,
+            "quotient_sum": 3,
+            "reason": "sum k=t+1, so at least 5-t directions have k=0 and exact mean ten",
+            "u": 5
+          }
+        ],
+        "same_type_mean_form": "a_d=2u+12*k_d"
+      },
+      "proved": true,
+      "result_status": "proved theorem",
+      "sharp_equality_dependency": {
+        "boolean_catalog_dependency": {
+          "certified": true,
+          "proposition": "15.736",
+          "result_status": "exhaustive finite certificate"
+        },
+        "equality_forces_B_boolean": true,
+        "equality_rigidity": "B is Boolean and every paired cube through a support point has minimum degree-two support 1/4",
+        "least_nonzero_b_floor": 12,
+        "p": 11,
+        "phase_zero_even_floors": {
+          "0": 0,
+          "2": 12,
+          "4": 16,
+          "6": 22,
+          "8": 16,
+          "10": 12
+        },
+        "proved": true,
+        "sharp_b0_integral_lift_floor": 8
+      }
+    }
+  },
+  "prop": "15.737",
+  "proved": true,
+  "quadratic_minmax_limit_closed": false,
+  "remaining_scope": "critical p=5,7; p=11 even k>=50; the later p>=13 shells not covered by 15.734-15.735; multi-level Type I; and the limit",
+  "residual_ii_closed": false,
+  "result_status": "proved theorem",
+  "statement": "residual (ii) at p=11 is empty for k=44,46,48; at least three hard star baselines force the global binary quadratic moment to vanish, contradicting every all-equal triple target",
+  "title": "Binary quadratic moment closes the first three p=11 layers",
+  "top_level_gates_changed": false
+}

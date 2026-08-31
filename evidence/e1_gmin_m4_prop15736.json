@@ -1,0 +1,271 @@
+{
+  "changed_premise": "self-contained 407-row third-difference rank certificate replaces the unavailable external restriction-extension input",
+  "degree_two_space": {
+    "constant_recovery_identity": "sum_(i<j) x_i*x_j=15",
+    "evaluation_matrix_shape": [
+      462,
+      55
+    ],
+    "exact_annihilator_dimension": 407,
+    "exact_real_dimension": 55,
+    "linear_recovery_identity": "sum_(j!=i) x_i*x_j=5*x_i",
+    "pair_monomial_count": 55,
+    "pair_monomials_span_degree_at_most_two": true,
+    "point_count": 462,
+    "proved": true,
+    "rank_mod_101": 55,
+    "rank_modulus": 101,
+    "real_rank_lower_bound_from_modular_minor": 55,
+    "slice": "J(11,6)"
+  },
+  "exact_boolean_classification": {
+    "all_equal_triple_support_count": 165,
+    "boolean_variable_count": 462,
+    "branches": 1846609,
+    "catalog_certificate": {
+      "all_equal_triple_signed_target_verified": true,
+      "all_equal_triple_support_count": 165,
+      "coefficient_offsets": {
+        "all_equal_triple": 4,
+        "omitted_pair": 2
+      },
+      "distinct_support_count": 220,
+      "every_catalog_support_satisfies_all_407_identities": true,
+      "known_support_catalog_sha256": "6f9b55283e78540ec389c2674ebd1b8a93f4b179bca8e42cfd1e6b5f8f1b7535",
+      "omitted_pair_signed_target_verified": true,
+      "omitted_pair_support_count": 55,
+      "proved": true,
+      "signed_target_normalization": "target=3+4*f",
+      "support_count": 220,
+      "support_size": 84
+    },
+    "catalog_exhaustive_at_support_84": true,
+    "conflicts": 105108,
+    "cp_model_presolve": true,
+    "integer_model_infeasible": true,
+    "interleave_search": false,
+    "known_support_catalog_sha256": "6f9b55283e78540ec389c2674ebd1b8a93f4b179bca8e42cfd1e6b5f8f1b7535",
+    "known_support_nogood_count": 220,
+    "linear_rank_certificate": {
+      "candidate_rows_examined": 8321,
+      "every_identity_annihilates_all_55_pair_monomials": true,
+      "exact_real_nullity": 55,
+      "exact_real_rank": 407,
+      "first_selected_cube": {
+        "base": [
+          6,
+          7,
+          8
+        ],
+        "pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "identity_family": "base 3-set plus three disjoint swap pairs",
+      "identity_term_count": 8,
+      "last_selected_cube": {
+        "base": [
+          3,
+          4,
+          5
+        ],
+        "pairs": [
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            10
+          ]
+        ]
+      },
+      "nullspace_equals_degree_at_most_two_evaluation_space": true,
+      "proved": true,
+      "rank_modulus": 101,
+      "real_rank_lower_bound_from_modular_minor": 407,
+      "real_rank_upper_bound_from_55_dimensional_nullspace": 407,
+      "selected_identity_count": 407,
+      "selected_identity_sha256": "6e17bd62f6ee15bf06065bdadfeeba9e4c4a8f79302c753214b7185ba9b47777",
+      "selected_rank_mod_101": 407
+    },
+    "model_constraint_count": 628,
+    "model_textproto_sha256": "0070bf67f0891acb502cd55446b7b4c7162188d2f219350a2dc00589fa5a8b04",
+    "omitted_pair_support_count": 55,
+    "orbit_anchor_used": false,
+    "proved": true,
+    "random_seed": 0,
+    "result_status": "exhaustive finite certificate",
+    "search_workers": 32,
+    "sharp_density": "84/462=2/11",
+    "sharp_support_size": 84,
+    "slice": "J(11,6)",
+    "solver": "OR-Tools CP-SAT",
+    "solver_status": "INFEASIBLE",
+    "solver_version": "9.15.6755",
+    "third_difference_equality_count": 407,
+    "wall_time_seconds": 8.877751187000001
+  },
+  "hard_b2_branch_excluded_p11": true,
+  "hard_b_p_minus_1_branch_excluded_p11": false,
+  "multi_level_type_I_closed": false,
+  "p11_closed": false,
+  "p11_integral_lift_equality_bridge": {
+    "H_at_least_two_excluded": true,
+    "H_at_least_two_scaled_floor": 12,
+    "dependency": "Proposition 15.688",
+    "enters_boolean_support_84_model": true,
+    "equality_scaled_mass_4pE_B": 8,
+    "forced_maximum_H": 1,
+    "forced_support_size": 84,
+    "input_class": "nonzero nonnegative integer-valued quadratic B",
+    "integer_values_between_zero_and_H_are_boolean": true,
+    "p": 11,
+    "proved": true,
+    "sharp_mass": "2/11",
+    "slice_point_count": 462
+  },
+  "prop": "15.736",
+  "proved": true,
+  "quadratic_minmax_limit_closed": false,
+  "remaining_scope": "simultaneous all-equal triple compatibility in the p=11 hard-b=p-1 branch, plus the other recorded residual and Type-I fronts",
+  "residual_ii_closed": false,
+  "residual_p11_consequence": {
+    "catalog_input": "exact_boolean_classification",
+    "coefficient_comparison_dependency": "Proposition 15.734 slice coefficient congruence",
+    "coefficient_offsets_mod_q": {
+      "all_equal_triple": 4,
+      "omitted_pair": 2
+    },
+    "hard_b2_branch": {
+      "catalog_forms_with_offset_congruent_to_Q": [],
+      "directions_at_minimum_at_least": 4,
+      "excluded": true,
+      "forced_s": 4,
+      "mean_at_Q_minus_1": -4,
+      "mean_at_minimum_Q": 8,
+      "minimum_Q": 3,
+      "opposite_direction_count": 6,
+      "opposite_parallel_count_sum": 20,
+      "surplus": 2
+    },
+    "hard_b_p_minus_1_branch": {
+      "all_equal_triple_survives": true,
+      "catalog_forms_with_offset_congruent_to_Q": [
+        "all_equal_triple"
+      ],
+      "directions_at_minimum_at_least": 4,
+      "excluded": false,
+      "forced_s": 3,
+      "mean_at_Q_minus_1": -4,
+      "mean_at_minimum_Q": 8,
+      "minimum_Q": 4,
+      "omitted_pair_excluded": true,
+      "opposite_direction_count": 6,
+      "opposite_parallel_count_sum": 26,
+      "surplus": 2
+    },
+    "integral_lift_to_boolean_bridge": {
+      "H_at_least_two_excluded": true,
+      "H_at_least_two_scaled_floor": 12,
+      "dependency": "Proposition 15.688",
+      "enters_boolean_support_84_model": true,
+      "equality_scaled_mass_4pE_B": 8,
+      "forced_maximum_H": 1,
+      "forced_support_size": 84,
+      "input_class": "nonzero nonnegative integer-valued quadratic B",
+      "integer_values_between_zero_and_H_are_boolean": true,
+      "p": 11,
+      "proved": true,
+      "sharp_mass": "2/11",
+      "slice_point_count": 462
+    },
+    "p": 11,
+    "p11_closed": false,
+    "prior_reduction_dependency": "Proposition 15.734",
+    "proved_reduction": true,
+    "q": 5,
+    "remaining_branch": "simultaneous compatibility of at least four all-equal triple targets in minimum opposite directions",
+    "residual_ii_closed": false,
+    "result_status": "open reduction"
+  },
+  "result_status": "exhaustive finite certificate",
+  "sharp_boolean_catalog_certified": true,
+  "simultaneous_all_equal_triple_branch_closed": false,
+  "statement": "the 55 omitted-pair and 165 all-equal-triple forms exhaust Boolean quadratics of support 84 on J(11,6)",
+  "third_difference_annihilator": {
+    "candidate_rows_examined": 8321,
+    "every_identity_annihilates_all_55_pair_monomials": true,
+    "exact_real_nullity": 55,
+    "exact_real_rank": 407,
+    "first_selected_cube": {
+      "base": [
+        6,
+        7,
+        8
+      ],
+      "pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ]
+    },
+    "identity_family": "base 3-set plus three disjoint swap pairs",
+    "identity_term_count": 8,
+    "last_selected_cube": {
+      "base": [
+        3,
+        4,
+        5
+      ],
+      "pairs": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          10
+        ]
+      ]
+    },
+    "nullspace_equals_degree_at_most_two_evaluation_space": true,
+    "proved": true,
+    "rank_modulus": 101,
+    "real_rank_lower_bound_from_modular_minor": 407,
+    "real_rank_upper_bound_from_55_dimensional_nullspace": 407,
+    "selected_identity_count": 407,
+    "selected_identity_sha256": "6e17bd62f6ee15bf06065bdadfeeba9e4c4a8f79302c753214b7185ba9b47777",
+    "selected_rank_mod_101": 407
+  },
+  "title": "Exact p=11 sharp Boolean-quadratic catalog",
+  "top_level_gates_changed": false
+}

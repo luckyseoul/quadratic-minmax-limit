@@ -3,6 +3,10 @@
 **Date:** 2026-08-31
 **Status:** proved structural reduction, not endpoint exclusion.
 
+**Later status:** Proposition 15.734 closes every `k=4p` endpoint boundary
+for `p>=13`. The envelope construction and swap law remain valid historical
+structure, but their phase bridge is no longer a live endpoint requirement.
+
 ## Setup
 
 Fix any maximum repair `A` from Proposition 15.730.  Write
@@ -139,15 +143,17 @@ unique envelope and quadratic transition on every vertex/edge in the
 vertex/edge in the `p=3R+1` case.
 
 The exact open implication is exclusion of the 15.727/15.730 common
-completion under the direction, phase, and lift constraints. Deriving a
-nontrivial cycle-compatibility identity from these degree-two or degree-three
-edge coordinates is the preferred next attack, but it is not itself a proved
-necessary condition yet. This is a more precise route than asking for a
-nonexistent unique-trisecant size ceiling or for missing tangent-envelope
-existence conditions.
+completion under the direction, phase, and lift constraints. At the 15.731
+stage a nontrivial cycle-compatibility identity was the preferred next
+attack. Proposition 15.732 subsequently proves that the naturally cleared
+linear circulation is an exact coboundary and isolates the rich-direction
+first jet instead. This is a more precise route than asking for a nonexistent
+unique-trisecant size ceiling or for missing tangent-envelope existence
+conditions.
 
-No such cycle contradiction is proved here.  Endpoint equality, larger
-slack, residual (ii), Type I, and the quadratic-minmax limit remain open.
+No cycle or phase contradiction is proved here. Proposition 15.734 later
+closes endpoint equality by a different route. Even `k>4p`, residual (ii),
+Type I, and the quadratic-minmax limit remain open.
 
 ## Artifacts
 

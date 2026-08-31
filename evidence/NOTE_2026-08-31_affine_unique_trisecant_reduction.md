@@ -3,6 +3,10 @@
 **Date:** 2026-08-31
 **Status:** proved structural reduction, not endpoint exclusion.
 
+**Later status:** Proposition 15.734 closes every `k=4p` endpoint boundary
+for `p>=13`. This affine reduction remains correct conditionally, but is
+superseded as a live endpoint route.
+
 ## Hypothesis inherited from Proposition 15.727
 
 Let `p>=17` be prime and write
@@ -128,11 +132,14 @@ normalization. Adjacent repair envelopes satisfy an exact transition law
 with a quadratic quotient in the first residue and a cubic class in the
 second.
 
-The exact open implication is exclusion of the common completion under the
-15.728/15.730 direction, phase, and lift constraints. Deriving a nontrivial
-cycle identity from the low-degree transitions is the proposed next attack,
-not a condition established here. It must not assume either a nonexistent
-unique-trisecant size ceiling or a failure of tangent-envelope existence.
+The exact open implication at this stage was exclusion of the common completion under the
+15.728/15.730 direction, phase, and lift constraints. Proposition 15.732
+subsequently proves that the naturally cleared linear transition cycle is
+an exact coboundary. Proposition 15.733 uses the simultaneous p31 coefficient
+system, and 15.734 later bypasses the whole endpoint route. No argument here
+may assume
+either a nonexistent unique-trisecant size ceiling or a failure of
+tangent-envelope existence.
 
 ## Artifacts
 

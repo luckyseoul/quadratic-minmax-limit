@@ -1,6 +1,6 @@
 # History of the problem, and older references
 
-**Date:** 2026-08-31 (through Proposition 15.731)
+**Date:** 2026-08-31 (through Proposition 15.737)
 
 **Sources:** live fetches (MathOverflow API, X thread, Paata’s 2019 blog and CV, arXiv, Goethals–Seidel PDF, Wikipedia/Paley construction).  
 **Not a close:** nothing here proves that \(\lim\alpha_n\) exists. Do not treat sandwich, Paley \(\rho=1\), or conference matrices as settlement.
@@ -1416,13 +1416,11 @@ matrix. Exhaustion of all `2^18` first-row/first-column assignments leaves
 layer; hence the elevated lift is Boolean. Exact coefficient `l1` bounds for
 the five phase-zero zero-lifts reduce the infinity degree to `0,20,38`.
 
-Filmus's publication page states that a short note with Antoine Vinciguerra
-proves the Boolean restriction threshold equals the sharp junta threshold
-`2d`. Conditional on that external statement, a four-variable cube audit
-classifies 3,420 possible Boolean lifts. The note's SharePoint PDF returned
-HTTP 403 during this audit, so the catalog is not used as unconditional
-evidence. Bounded edge-lift trials returned `UNKNOWN`; no profile or
-top-level gate closes in 15.697.
+An auxiliary four-variable cube audit listed 3,420 possible Boolean lifts,
+but its reduction step was not self-contained and the catalog was never
+promoted to theorem evidence. Bounded edge-lift trials returned `UNKNOWN`;
+no profile or top-level gate closes in 15.697. Proposition 15.698 subsequently
+closes the boundary directly, without this catalog.
 
 ## 7at. The p=19 slack-twenty block closes (2026-08-29)
 
@@ -2129,9 +2127,10 @@ are
 This is a proved necessary reduction, not endpoint closure. At the 15.729
 stage, the next implication was to exclude or classify these near-extremal
 affine unique-trisecant/co-tangent configurations while preserving their
-common 15.727 disjoint-block completion. Propositions 15.730--15.731
-supersede that formulation with the full repair ensemble and its transition
-coordinates. Dropping the completion data still asks a weaker question.
+common 15.727 disjoint-block completion. Propositions 15.730--15.732
+supersede that formulation with the full repair ensemble, its transition
+coordinates, and the exact-cycle barrier. Dropping the completion data still
+asks a weaker question.
 
 ## 7by. Complementary-arc repair ensemble and source correction (2026-08-31)
 
@@ -2203,10 +2202,9 @@ residue it is cubic, with a gauge ambiguity
 trisecants and `J(4,2)` factors for 4-secants; common singleton points allow
 coherent normalization around this graph. The exact open implication is
 exclusion of the common completion under the residual direction, phase, and
-lift constraints. A nontrivial cycle identity for the degree-two/three
-transition coordinates is the proposed next attack; neither such an identity
-nor a phase bridge is proved here. Endpoint equality and every top-level gate
-remain open.
+lift constraints. Proposition 15.732 determines the proposed linear cycle
+attack exactly; the result is recorded next. Endpoint equality and every
+top-level gate remain open.
 
 The separate `p=31` classification check is finite evidence only. The
 sourced Kéri [49] list supplies eleven complete 22-arc representatives; exact
@@ -2220,6 +2218,222 @@ The reproducible scope ledger is
 `p31_complete_22arc_public_11_audit.json`.
 First-shell survivors still start at `R>=floor((p-1)/3)`, and non-Walsh
 residual (ii), multi-level Type I, and the limit remain open.
+
+## 7ca. Exact repair cycles and phase-bridge barriers (2026-08-31)
+
+Proposition 15.732 closes the proposed bare cycle attack as a method. Define
+
+`P_A=product_(u in A)L_u`, `Theta_A=P_A^2 Phi_A`.
+
+For every coherently normalized adjacent edge
+`A=C union {a}` to `A'=C union {z}`, the transition law becomes
+
+`Theta_A'-Theta_A=P_C^3 Q_(a,z)`.
+
+Thus every naturally cleared edge is the difference of an explicit vertex
+potential. Its sum on a closed repair walk is identically zero before any
+evaluation, derivative, polarization, or coefficient extraction. In the
+`p=3R+1` residue, changing the envelope lift changes `Theta_A` by the vertex
+term `mu_A P_A^3`, so the cubic-pencil gauge does not produce holonomy.
+
+The edge quotient still has local content. At the dual point `q` of its rich
+block line, `Q(q)=0` and its first jet is nonzero and gauge invariant. After
+the Segre normalization, its square character is the repair-coloured
+character `chi_p(P_B(q))`. The recorded residual parity set determines the
+symmetric difference of the two repair colours and not this individual
+factor; selected-pair masks on a trisecant also span only the even-weight
+subspace and cannot reconstruct the full block product modulo squares.
+
+Proposition 15.732 additionally shows that the nonrich `b=2` directions in
+15.728 cannot force envelope components. Deleting `R` points from their
+near-pairing profile leaves at least `(p-1)/2-R` repair secants, hence at
+most `R+2` distinct known tangent roots on a direction-pencil restriction of
+degree `2R+2`. At `p=31` the comparison is 12 roots versus degree 22.
+
+This is a proved algebraic/geometric method barrier, not endpoint narrowing.
+At this stage the next grounded front was the simultaneous coefficient system
+behind the exact `p=31` identities `A_d=(1-x_s-x_t)^2`. Proposition 15.733
+executes that attack, and 15.734 then supersedes the whole endpoint route.
+
+## 7cb. The p31 simultaneous-baseline close (2026-08-31)
+
+Proposition 15.733 compares all fifteen phase-one mean-30 identities at
+`p=31,R=10`. On the middle slice `sum z_s=1`, equality with target
+`4+tau*z_i*z_j` gives
+
+`15 | I+P-4`,
+
+while a linear target `4+sigma*z_j` gives
+
+`15 | I+P-(4+sigma)`.
+
+All mean-30 directions have one common parallel count. Their exact `b=2`
+and `b=30` targets have offsets four and three, so they cannot mix; all
+fifteen have `b=2`. Writing `rho=(I+P-4)/15` and `s=rho+P`, finite-edge
+counting gives `E_opp=15(8-s)`. The sharp integral-lift floor forces `s=8`,
+and the opposite coefficient residues then force all sixteen opposite
+directions to `b=0`. The global odd-fibre identity would make the remaining
+hard direction have `b=42`, impossible among 31 fibres. Thus the
+`p=31,R=10` endpoint is excluded symbolically, without a configuration
+census.
+
+## 7cc. Isolated charts close the whole k=4p endpoint (2026-08-31)
+
+Proposition 15.734 removes the boundary-size hypothesis entirely. A graph
+with `4p+1` edges has at most `8p+2` nonisolated vertices in the
+`p^2+1`-point Paley projective line. For `p>=13`,
+
+`p^2+1-(8p+2)=p^2-8p-1>0`.
+
+Choose an isolated vertex and use the signed PSL action of 15.721 to send it
+to infinity. The relative flip set is merely permuted, so both margin-three
+inequalities are preserved. The new chart has `I=0`; its boundary is all
+finite and has even cardinality by the handshake lemma. Consequently every
+odd-fibre count `b_d` is even, and the type `eps_d=c_H` has phase one.
+
+Put `q=(p-1)/2`, `m=q+1`. Each type has exact budget `2m^2`. Writing the
+hard means as
+
+`a_d=2u+(p+1)k_d`, `sum k_d=m-u`,
+
+rules out `1<=u<=m-2`. At `u=0`, the two-unit lift obstruction leaves only
+the `p=1 mod 4` exact `b=p-1` branch. At `u=m-1`, there are `q` means
+`p-1` and one mean `2p`; the low directions are homogeneous because the
+exact `b=2` and `b=p-1` coefficient offsets differ by one modulo `q`.
+The three possible branches are therefore:
+
+| hard branch | target | offset | forced `(P,s)` at `I=0` | forced opposite `(Q,a)` |
+|---|---|---:|---:|---:|
+| `b=2` lows | `4+z_i z_j` | 4 | `(4,4)` | `(3,8)` |
+| `p=1 mod 4`, `u=0`, all `b=p-1` | `4+z_j` | 5 | `(5,5)` | `(2,6)` |
+| `p=3 mod 4`, `b=p-1` lows | `4-z_j` | 3 | `(3,3)` | `(4,8)` |
+
+In each row, nonnegativity gives the displayed lower bound on every opposite
+parallel count, while its total has less than one direction's excess; hence
+one direction attains the displayed value. It has phase zero and mean below
+every nonzero-`b` floor, so `A=2B` for a nonzero nonnegative integral
+quadratic `B`. Proposition 15.688 requires `4p E[B]>=p-3`, contradicting
+`8,6,8<p-3` for `p>=13`.
+
+The threshold is exact for this proof. At `p=13`, the phase-one even-`b`
+floors are
+
+`26,12,26,24,26,20,14` for `b=0,2,4,6,8,10,12`,
+
+and the phase-zero floors are
+
+`0,14,20,26,24,26,12`.
+
+Thus only the first two rows occur, and their masses eight and six are below
+the sharp floor ten. At `p=11`, the hard lows may be `b=2` or `b=10`; both
+homogeneous branches force an opposite phase-zero `b=0` lift of scaled mass
+eight. Here `8=p-3`, and the equality example
+`B=(1-x_i)(1-x_j)` shows that the lift bound cannot finish the argument.
+Classifying and coupling the sharp equality cases was the precise `p=11`
+frontier at this stage; Propositions 15.736--15.737 resolve it.
+
+Therefore the complete `k=4p` residual-(ii) endpoint is empty for every
+prime `p>=13` and every boundary size. Propositions 15.735--15.737 extend
+this result as recorded next.
+
+## 7cd. The first three residual shells close for p>=13 (2026-08-31)
+
+Proposition 15.735 keeps the isolated chart at
+
+`k=4p+2t`, `|H|=4p+2t+1`, `t=1,2`.
+
+For every `p>=13` the support bound still leaves an isolated nonboundary
+vertex, so signed PSL transport gives `I=0`, an all-finite even boundary, and
+even directional odd-fibre counts. Put `q=(p-1)/2`, `m=q+1`. Each type has
+exact budget `2m(m+t)`, and the phase-one common-residue identity becomes
+
+`a_d=2u+(p+1)k_d`, `sum k_d=m+t-u`.
+
+The exact floors and the sharp integral-lift cost leave the same three hard
+baseline families as at `t=0`. Their coefficient offsets `4,5,3` again force
+`(P,s)=(4,4),(5,5),(3,3)`. In the three branches the opposite
+parallel-count surpluses are respectively `q+t-3`, `q+t-2`, and `q+t-3`.
+For `t<=2` each is strictly below the `m` opposite directions, so some
+direction attains minimum `Q=3,2,4` and scaled mean `8,6,8`. Every nonzero
+phase-zero fibre set costs at least `p-1`; at `b=0`, a nonzero integral lift
+costs at least `p-3`. This excludes all three means.
+
+Thus `k in {4p,4p+2,4p+4}` is empty for every `p>=13` and every boundary
+size. The next layer is not a formal continuation. At `t=3`, branch B has
+surplus exactly `m`; all opposite directions may have `Q=3` and scaled mean
+`p+7`. The nonnegative integral quadratic
+
+`B(X)=binom(|X intersect R|,2)-2|X intersect R|+3`
+
+on `J(17,9)`, for a fixed four-set `R`, realizes that local mean. At
+`p=13,t=3`, an additional exact `b=10,a=20` hard branch survives. These are
+necessary-condition witnesses, not residual graphs, but they prove that
+another one-direction floor or mean-halving step cannot close `k=4p+6`.
+
+## 7ce. Self-contained p11 sharp Boolean catalog (2026-08-31)
+
+Proposition 15.736 is an **exhaustive finite certificate** on all 462 points
+of `J(11,6)`. Pair-monomial evaluations span the degree-at-most-two space and
+their `462 x 55` matrix has rank 55 modulo 101. Alternating third differences
+on a base three-set with three disjoint swap pairs annihilate every quadratic.
+A deterministic greedy elimination retains 407 independent eight-term rows;
+their real nullspace has dimension 55 and therefore equals the quadratic
+evaluation space.
+
+The residual equality object really enters the Boolean model. Proposition
+15.688 gives scaled mass eight at equality, while every nonnegative integral
+quadratic with maximum at least two has scaled mass at least twelve. Hence an
+equality lift has maximum one, is Boolean, and has support
+`(2/11)*462=84`.
+
+The exact CP-SAT model has 462 Boolean variables, the 407 identities,
+support 84, and 220 no-goods: 55 omitted-pair supports and 165 all-equal
+triple supports. It is infeasible, so these forms exhaust every sharp Boolean
+quadratic. Their signed targets and coefficient offsets are
+
+| family | target | offset modulo 5 |
+|---|---|---:|
+| omitted pair | `4-z_i-z_j+z_i z_j` | 2 |
+| all-equal triple | `4+z_i z_j+z_i z_k+z_j z_k` | 4 |
+
+The hard-`b=2` p11 branch forces opposite `Q=3`, so neither family survives.
+The hard-`b=10` branch forces `Q=4`; only all-equal triples remain. This is a
+strict, self-contained reduction, not yet the p11 theorem.
+
+## 7cf. Binary quadratic moments close the first three p11 layers (2026-08-31)
+
+Proposition 15.737 supplies the simultaneous obstruction. For a projective
+linear fibre functional `L`, define over `F_11`
+
+`M_H(L)=sum_({u,v} in H) chi(u-v)(L(u)-L(v))^2`.
+
+This is a homogeneous binary quadratic in the two coefficients of `L`. At
+`k=44+2t`, `t=0,1,2`, the hard-`b=10` branch has at least `5-t>=3` exact
+low targets `4-z_j`. Coefficient comparison makes the signed selected-edge
+matrix a negative star at `j`, and therefore
+
+`M_H(L)=-eps_L sum_(s != j)(j-s)^2=0`.
+
+The low directions are distinct projective forms. A nonzero homogeneous
+binary quadratic has at most two projective zeros, so these three or more
+zeros force `M_H` to vanish identically.
+
+An opposite all-equal target instead has a signed triangle on distinct
+fibres `i,j,k`. Its moment is
+
+`eps_L((i-j)^2+(i-k)^2+(j-k)^2)`.
+
+After translation and scaling, the unsigned factor is
+`2(r^2-r+1)`. Its discriminant is `-3=8`, a nonsquare modulo 11, so it never
+vanishes. This contradicts even one of the all-equal targets forced by the
+15.736 catalog.
+
+Therefore residual (ii) is empty at `p=11,k=44,46,48`, for every boundary
+size. Combining 15.735 and 15.737, the first three residual shells are closed
+for every prime `p>=11`. Residual (ii) as a whole remains open: the exact
+unresolved ranges are critical `p=5,7`, `p=11,k>=50`, and
+`p>=13,k>=4p+6`. Multi-level Type I and the quadratic-minmax limit also
+remain open.
 
 ---
 
@@ -2279,7 +2493,7 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 41. P.-A. Bernard, N. Crampé, and L. Vinet, *A bivariate Q-polynomial structure for the non-binary Johnson scheme*, J. Combin. Theory Ser. A **202** (2024), 105829, [arXiv:2306.01882](https://arxiv.org/abs/2306.01882) (adjacent Johnson-scheme machinery; not the parity-majorant or affine pair-deficit theorem of 15.669).
 42. S. Ball and B. Csajbók, *On sets of points with few odd secants*, [arXiv:1711.10876](https://arxiv.org/abs/1711.10876) (odd-secant bounds for \(q+2\)-point projective sets; not the eight-point split-type census of 15.670).
 43. M. Kiermaier and S. Kurz, *Maximal integral point sets in affine planes over finite fields*, [arXiv:1401.2825](https://arxiv.org/abs/1401.2825) (prescribed directions and Paley-clique context; not the boundary parity-floor budget of 15.670).
-44. S. Ball and M. Lavrauw, *Planar arcs*, J. Combin. Theory Ser. A **160** (2018), 261--287, [doi:10.1016/j.jcta.2018.06.015](https://doi.org/10.1016/j.jcta.2018.06.015), [arXiv:1705.10940](https://arxiv.org/abs/1705.10940) (modern primary restatement of Segre's odd-order arc theorems; the `q`-arc conic theorem is used in 15.673, the complete `(q-1)`/`(q-2)` classifications and prime-field conic threshold are used for the low-slack exclusion in 15.722, and the polynomial tangent envelope is used in 15.683, 15.726, and 15.727. Proposition 15.731 uses only the scaled tangent lemma, Lemma 10 in arXiv v4, then proves its own below-threshold dual-line gluing statement; it does not apply Theorem 11 outside its stated hypothesis).
+44. S. Ball and M. Lavrauw, *Planar arcs*, J. Combin. Theory Ser. A **160** (2018), 261--287, [doi:10.1016/j.jcta.2018.06.015](https://doi.org/10.1016/j.jcta.2018.06.015), [arXiv:1705.10940](https://arxiv.org/abs/1705.10940) (modern primary restatement of Segre's odd-order arc theorems; the `q`-arc conic theorem is used in 15.673, the complete `(q-1)`/`(q-2)` classifications and prime-field conic threshold are used for the low-slack exclusion in 15.722, and the polynomial tangent envelope is used in 15.683, 15.726, and 15.727. Proposition 15.731 uses only the scaled tangent lemma, Lemma 10 in arXiv v4, then proves its own below-threshold dual-line gluing statement; it does not apply Theorem 11 outside its stated hypothesis. Proposition 15.732 derives its cycle and local-jet consequences from that internally constructed envelope system).
 45. V. F. Lev, *Point distribution and perfect directions in* \(F_p^2\), [arXiv:1903.01518](https://arxiv.org/abs/1903.01518) (Rédei-type direction bounds adjacent to, but not implying, the determined-direction/type-budget argument of 15.674).
 46. G. Van de Voorde, *On sets without tangents and exterior sets of a conic*, [arXiv:1201.0484](https://arxiv.org/abs/1201.0484) (adjacent external-conic and determined-direction geometry; not the Paley phase-budget exclusion of 15.676).
 47. P. Amireddy, S. Behera, S. Srinivasan, and M. Sudan, *A Near-Optimal Polynomial Distance Lemma over Boolean Slices*, ICALP 2025, [doi:10.4230/LIPIcs.ICALP.2025.11](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2025.11) (Lemma 2 supplies the exact finite degree-two support floor used in 15.642 and 15.677).
@@ -2301,7 +2515,7 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 63. G. Faina, S. Marcugini, A. Milani, and F. Pambianco, *The spectrum of values k for complete k-arcs in PG(2,q) for q<=23*, Ars Combinatoria **47** (1997), 3--11, [open article](https://combinatorialpress.com/ars-articles/volume-047-ars-articles/the-spectrum-of-values-k-for-complete-k-arcs-in-pg2q-for-q-leq-23/) (complete-arc spectrum of `PG(2,19)` used in 15.689).
 64. K. Momihara and S. Suda, *Conference matrices with maximum excess and two-intersection sets*, [arXiv:1611.01305](https://arxiv.org/abs/1611.01305) (Proposition 1.1 gives the arithmetic maximum-excess bound used to delimit the Mathon fixed-gap route).
 65. E. B. Al-Zangana, *The Geometry of the Plane of Order Nineteen and its Application to Error-Correcting Codes*, PhD thesis, University of Sussex, 2011, Chapter 4, Section 4.22, p. 105 (exhaustive `PG(2,19)` 14-arc class counts and the `c1<=4` bound used in 15.693).
-66. Y. Filmus and A. Vinciguerra, short note on the restriction threshold for bounded-degree functions on slices, linked from [Filmus's publication page](https://yuvalfilmus.cs.technion.ac.il/publications/papers/) (the page states the arithmetic-progression, hence Boolean, restriction-threshold result; the linked PDF was inaccessible during the 15.697 audit, so the result is used only conditionally).
+66. **Retired reference slot.** No theorem depends on the removed auxiliary source; later numbers are retained to preserve cross-file citations.
 67. T. Szőnyi, *On the number of directions determined by a set of points in an affine Galois plane*, J. Combin. Theory Ser. A **74** (1996), 141--146, [doi:10.1006/jcta.1996.0042](https://doi.org/10.1006/jcta.1996.0042) (the `k<=p` direction bound used in 15.712).
 68. G. Somlai, *A new proof of Rédei's theorem on the number of directions*, Arch. Math. **122** (2024), 575--580, [doi:10.1007/s00013-024-01979-x](https://doi.org/10.1007/s00013-024-01979-x) (modern explicit restatement of Szőnyi's bound and proof context).
 69. X.-d. Hou and A. Iezzi, *An Application of the Hasse-Weil Bound to Rational Functions over Finite Fields*, [arXiv:1906.09487](https://arxiv.org/abs/1906.09487) (general rational-function value-set context; it does not supply the missing discriminant/resolvent estimates in 15.725).
