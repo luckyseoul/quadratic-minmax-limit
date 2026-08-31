@@ -27,7 +27,7 @@ branches or turning completed computations into new work.
 - Prefer an argument that closes an infinite family over a wider finite
   census unless the finite census is the explicitly recorded gate.
 
-## Current residual-(ii) gate after Proposition 15.746
+## Current residual-(ii) gate after Proposition 15.748
 
 Do not reopen `p=13,k=58` or `p=17,k=74`.  Proposition 15.742 combines the
 `M_2=0` congruence with six multiplicative interval cuts and closes the
@@ -83,20 +83,31 @@ every conceivable invariant.  Proposition 15.746 is an
 exhaustive finite equality classification and proved open reduction, not a
 close of `u=4`.
 
+Proposition 15.747 supersedes the mass-12 gate.  Its weighted-cut second
+moment excludes every Boolean mass-12 lift modulo seven, and exact
+one-worker necessary-relaxation models exclude height four at `Q=3,5`.
+Thus the omitted-pair `P=3` branch is closed and every minimum cell in the
+all-equal-triple `P=5` branch is a `Q=3,b=12` literal. Proposition 15.748
+uses the resulting common roots of `M2,M4,M6`: root count excludes `z>=5`,
+exact interpolation excludes `z=4,3`, and `z=2` leaves 336 moment-level
+survivors per hard sign. The only remaining opposite excess partition is
+`(1,1,1,1,1)`. These survivors are necessary moment data, not common graph
+realizations.
+
 Residual (ii) is still open at critical `p=5,7`, at `p=11,k>=50`, in the
 two `p=13,k=60` residues `u=4,6` and all later p13 layers, at `p=17,k>=76`,
 and in later layers for primes `p>=19`; within the branch-B fourth shell, the
-next prime is `p=29`.  Propositions 15.743--15.746 are finite certificates
+next prime is `p=29`.  Propositions 15.743--15.748 are finite certificates
 or open reductions,
 not an all-prime row theorem.  The preferred generic front is therefore a
 structural version of its common-energy/cut mechanism that survives when
 the number of distance bins grows.  Another independent coefficient-cell
 catalog, one-direction floor, halving heuristic, or longer complete-domain
-timeout does not advance that gate.  The next finite p13 implication is the
-single `P=3,Q=5,b=0` mass-12 cell under the proved `F6=0` constraint, split
-between height one/support 396 and height four.  Do not launch a broad
-support-396, mass-12, or directional-profile census, and do not reopen the
-already-closed `u=0,3` rows.  Before launching a finite p11/p13-later
+timeout does not advance that gate.  The next finite p13 implication is to
+couple the 336 `z=2` moment survivors per sign to the five excess-one `Q=4`
+cells and one common 61-edge graph. Do not reopen the closed `P=3` branch,
+launch a broad support-396 or mass-12 census, or reopen the already-closed
+`u=0,3` rows.  Before launching a finite p11/p13-later
 computation, identify the invariant that could extend beyond that one row or
 explain why the finite row is a genuine base obstruction.
 

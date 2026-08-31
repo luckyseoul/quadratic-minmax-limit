@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-31
 
-**Scope:** every assigned proposition through Proposition 15.746, the live
+**Scope:** every assigned proposition through Proposition 15.748, the live
 predicate wiring, and the attack scripts present during the audit
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
@@ -457,6 +457,23 @@ the wrong mixed-term sign.
 This is an exhaustive finite equality classification and proved open
 reduction, not a close; `u in {4,6}` remains exact.
 
+A thirtieth semantic check gives Proposition 15.747. For every integral
+parallel count, a Boolean mass-12 lift would satisfy
+`-7D2+84E2+182Q^2-1428Q+2598=0`; its residual is one modulo seven, so the
+Boolean case is impossible. Two exact 169-variable, 3,526-constraint
+necessary-relaxation models also exclude height four at `Q=3,5`. This closes
+the omitted-pair `P=3` branch and forces every minimum all-equal-triple
+`P=5,Q=3` cell to be the exact literal. The field sextic is not needed.
+
+A thirty-first semantic check gives Proposition 15.748. The forced literals
+are common roots of `M2,M4,M6`. Root count excludes at least five literals;
+exact interpolation against the 69-element hard moment alphabet excludes
+four and three for both hard signs. With two roots, 1,554 `(M2,M4)`
+candidates and 2,688 allowed `N6` vectors per sign leave exactly 336
+moment-level survivors per sign. Hence only excess partition `(1^5)`
+remains. These records are necessary moment data, not common 61-edge graph
+constructions, so `u=4` remains open.
+
 The Bartoli--Storme ``unique-trisecant ceiling'' previously recorded after
 15.729 is **RETRACTED**. Under the corollary's other hypotheses, including
 `d>3+2sqrt(q)` and existence of the configuration, its threshold is the upper
@@ -509,11 +526,11 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 661 source-backed proposition modules from 15.83 through 15.746.
+- There are 663 source-backed proposition modules from 15.83 through 15.748.
 - The labels 15.537, 15.583, and 15.584 have no proposition module.  They are
   unassigned labels, not unreviewed propositions; later source headers mention
   those numbers only as historical range/state markers.
-- Therefore every assigned proposition through 15.746 was included in this
+- Therefore every assigned proposition through 15.748 was included in this
   audit.  The grouped ledger below is by shared mathematical route rather than
   a 736-row restatement of the assigned propositions.
 
@@ -524,10 +541,10 @@ The public theorem is gated consistently by the corrected global
 currently `False`. The historical bounded `True` is available only through
 `e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after audit of 15.746 |
+| unit | exact live content | status after audit of 15.748 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
-| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close `k in {4p,4p+2,4p+4}`, for every boundary size, at all primes `p>=11`; 15.738--15.742 close `p=13,k=58`, 15.743 closes `p=17,k=74`, and 15.744--15.745 close `u=3,0` at `p=13,k=60`. Proposition 15.746 classifies the sharp support-330 `u=4` hard cells and proves its `P=3/P=5` mean-12 reduction without closing either branch. The exact remainder includes critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u in {4,6}` and later p13 layers, every `p>=17,t>=4` layer (beginning with `p=17,k>=76`), and branch-B `t=3` for `p=1 mod 4,p>=29`; the separate positive `p=7,z=7` branch persists. The global predicate stays false. |
+| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close `k in {4p,4p+2,4p+4}`, for every boundary size, at all primes `p>=11`; 15.738--15.742 close `p=13,k=58`, 15.743 closes `p=17,k=74`, and 15.744--15.745 close `u=3,0` at `p=13,k=60`. Propositions 15.746--15.748 close the `u=4` `P=3` branch and reduce `P=5` to excess partition `(1,1,1,1,1)` without closing the residue. The exact remainder includes critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u in {4,6}` and later p13 layers, every `p>=17,t>=4` layer (beginning with `p=17,k>=76`), and branch-B `t=3` for `p=1 mod 4,p>=29`; the separate positive `p=7,z=7` branch persists. The global predicate stays false. |
 | Type I | the multi-level `3A+B>0` bad case | **OPEN** — `|κ|=1` needs `G>T` (for example `|μ|≤|L|`), while `|κ|=3` independently needs `χ_d((2p-1)μ+(p-2)ν)>-(p-2)/p`; the particular term is safe but the δ remainder is open |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
@@ -580,6 +597,8 @@ top-level front.
 | **15.744** | full p13 t4 residue sieve, b10 contact-layer and punctured-lift certificates, changed H61 mass-14 models, and six-root quartic | **PROVED BRANCH THEOREM WITH EXHAUSTIVE LOCAL CERTIFICATES.** Rank 78 makes the exact b10 cell pointwise and the separate punctured model excludes its two-unit alternative; the H59 height-four result is not imported, and both H61 models are rebuilt and infeasible.  The selected-pair survivor contradicts the identically zero quartic, closing exactly `p=13,t=4,u=3`. |
 | **15.745** | full 74-cut p13 rows, exact Radon partition energies, and collision-one transverse sign audit | **EXHAUSTIVE FINITE AGGREGATE CERTIFICATE.** Three partitions die rowwise, one by `691<721+26C`, and the equality case of the last gives the sharpened `695<719` contradiction.  With 15.744, the exact `p=13,k=60` remainder is `u in {4,6}`. |
 | **15.746** | exact support-330 Boolean catalog, branchwise `u=4` edge ledger, and omitted-pair sextic | **EXHAUSTIVE FINITE EQUALITY CLASSIFICATION AND PROVED OPEN REDUCTION.** Exact infeasibility makes the 78 omitted pairs and 286 all-equal triples exhaustive.  Their offsets force uniform `P=3` or `P=5` and at least two opposite mean-12 cells; at `P=3,Q=5` the cell is a `b=0` mass-12 lift satisfying `F6=2hM6+hM2^3-3M2M4=0`.  Neither `u=4` family is closed, so `u in {4,6}` remains exact. |
+| **15.747** | general mass-12 Boolean cut second moment and exact height-four models at `Q=3,5` | **PROVED BRANCH EXCLUSION WITH EXHAUSTIVE FINITE CERTIFICATES.** The Boolean branch is impossible modulo seven and both height-four relaxations are infeasible. The `u=4` omitted-pair `P=3` branch is closed; minimum `P=5,Q=3` cells are forced literals. |
+| **15.748** | common literal-root interpolation against the 69-element hard moment alphabet | **EXHAUSTIVE FINITE INTERPOLATION CERTIFICATE AND PROVED OPEN REDUCTION.** Cases with at least three literals are empty for both hard signs. Exactly 336 moment-level two-root survivors per sign remain, forcing opposite excess partition `(1^5)` without constructing a common graph. |
 
 ## Exact duplicated run
 
@@ -756,11 +775,12 @@ Before spending mesh/GPU time:
    mass-14 catalog and quartic contradiction. Do not reopen the generic p13
    `t=3` aggregate: 15.740 leaves exactly `1^4 2^3`, 15.741 supplies its
    common-graph energy identity, and 15.742 proves the resulting integral
-   row system empty.  Proposition 15.746 completes the sharp mass-10
-   support-330 classification and proves the branchwise `u=4` reduction.
-   Do not rerun it.  The next finite p13 gate is one
-   `P=3,Q=5,b=0` mass-12 cell under `F6=0`, split by height one/support 396
-   versus height four, not a broad census or a rerun of `u=0,3`;
+   row system empty. Propositions 15.746--15.748 complete the sharp mass-10
+   support classification, close the `u=4` `P=3` branch, and reduce `P=5`
+   to excess partition `(1^5)`. Do not rerun them. The next finite p13 gate
+   is to couple the 336 moment survivors per sign to the five excess-one
+   `Q=4` cells and one common 61-edge graph, not a broad census or a rerun of
+   `u=0,3`;
 5. search tracked files, untracked scripts, `/tmp` artifact names and hashes,
    git history, GitHub, MathOverflow, literature notes, and OEIS when number
    patterns are involved;

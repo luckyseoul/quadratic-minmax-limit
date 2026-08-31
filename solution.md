@@ -11641,6 +11641,143 @@ Evidence: `src/e1_gmin_m4_prop15746.py`,
 `evidence/p13_support330_boolean_classifier.json`, and
 `evidence/NOTE_2026-08-31_p13_support330_u4_reduction.md`.
 
+## Proposition 15.747 — the mass-twelve cut obstruction closes the P=3 branch
+
+Continue in the two `u=4` branches isolated by Proposition 15.746.  For a
+phase-zero `b=0` cell write `A=2C`, and let `W` be its normalized integral
+coefficient graph.  At parallel count `Q`, averaging the coefficient identity
+gives
+
+\[
+ S:=\sum_eW_e=13(Q-3)-12=13Q-51,
+ \qquad \operatorname{cut}_W(X)=7Q-27-2C(X).       \tag{15.747.1}
+\]
+
+Suppose first that `C` has height one.  It is Boolean of support 396.  Take a
+uniform six-set, whose cut is the same as that of its complementary point of
+`J(13,7)`.  One edge is cut with probability `7/13`; two distinct adjacent
+edges are both cut with probability `7/26`, and two disjoint edges with
+probability `42/143`.  If
+
+\[
+ E_2=\sum_eW_e^2,\qquad
+ D_2=\sum_v\left(\sum_{e\ni v}W_e\right)^2,
+\]
+
+then exact expansion yields
+
+\[
+ \mathbb E[\operatorname{cut}_W^2]
+ ={ -7D_2+84E_2+84S^2\over286}.                  \tag{15.747.2}
+\]
+
+On the other hand, (15.747.1) has 396 occurrences of `7Q-29` and 1,320
+occurrences of `7Q-27`.  Equating the second moments gives
+
+\[
+ -7D_2+84E_2+182Q^2-1428Q+2598=0.               \tag{15.747.3}
+\]
+
+The last three terms are congruent to one modulo seven for every integral
+`Q`, while the first two are divisible by seven.  Thus no Boolean mass-twelve
+lift exists at any `Q`.  In particular, the required second moments at
+`Q=3,5` would be `552/13` and `748/13`, producing the impossible residuals
+`-48` and `8` in (15.747.3).  This argument needs neither the edge `l1`
+bound, row parity, third differences, nor the sextic.
+
+It remains to exclude height four at `Q=3,5`.  Here the field moments can be
+dropped, restoring the full `S_13` symmetry; a point where `C=4` may therefore
+be moved to the first seven-set.  The exact necessary models use 78 integral
+weights, 78 absolute values, and 13 row halves.  They impose
+
+\[
+ \sum W=-12, \sum|W|\le58, -14\le\operatorname{cut}_W\le-6
+ \quad(Q=3),                                      \tag{15.747.4}
+\]
+
+or
+
+\[
+ \sum W=14, \sum|W|\le56, 0\le\operatorname{cut}_W\le8
+ \quad(Q=5),                                      \tag{15.747.5}
+\]
+
+together with even coefficient rows and the appropriate anchored lower cut.
+Each projected model has 169 variables and 3,526 constraints.  Deterministic
+one-worker CP-SAT returns `INFEASIBLE` for both, with model hashes
+
+```text
+Q=3  e8404a5684e033b73750b1f36a338aa13038861d6dbfc614cc99b6f0666423d9
+Q=5  8f992368fac869f29c23e6ecd20400228c2c10d5bda4d1001b291242dd6e3941
+```
+
+Thus no `b=0` mass-twelve lift survives at either minimum count.  The
+omitted-pair `P=3` branch forces at least two `Q=5` cells and does not permit
+the literal, so it is empty.  In the all-equal-triple `P=5` branch, every
+minimum `Q=3` cell is consequently the exact `b=12` literal `A=1-x_j`.
+
+Proposition 15.747 is a **proved branch exclusion with two exhaustive finite
+necessary-relaxation certificates**.  It closes the `P=3` half of `u=4`, not
+the full residue.
+
+## Proposition 15.748 — literal-root interpolation leaves only excess 1^5
+
+Let `z` be the number of minimum `Q=3` opposite directions in the remaining
+`P=5` branch.  Proposition 15.747 makes all of them exact literals, hence
+common projective roots of the homogeneous binary forms `M_2,M_4,M_6`.
+The seven opposite excesses are nonnegative and sum to five, so `z>=2`.
+
+The complete local moment alphabet of a hard baseline pair plus an all-equal
+triple has 69 triples `(N_2,N_4,N_6)`.  Its fourth moment is never zero.  If
+`z>=5`, five roots force the binary quartic `M_4` to vanish identically, an
+immediate contradiction.  If `z>=3`, the quadratic `M_2` vanishes.  Writing
+`w` for the baseline-pair difference and `T_d` for the triangle moments,
+`N_2=w^2+T_2=0` and `2T_4=T_2^2` give
+
+\[
+ N_4=w^4+T_4={3\over2}w^4=8w^4
+ \in\{7,8,11\}.                                  \tag{15.748.1}
+\]
+
+For each of the two possible hard signs, exact interpolation now checks all
+choices of literal roots.  At `z=4`, `M_4` is a scalar times their four root
+factors; at `z=3`, it is their cubic root product times an arbitrary linear
+form.  Neither case has a value vector in the alphabet (zero survivors for
+both signs).
+
+At `z=2`, write the common quadratic root product as `R_2`.  The exhaustive
+parameterization is
+
+\[
+ M_2=cR_2,\qquad M_4=R_2Q_2,\qquad M_6=R_2Q_4.    \tag{15.748.2}
+\]
+
+After the first two moment filters, 1,554 `(M_2,M_4)` candidates remain per
+sign.  Exact degree-four evaluation-code membership checks 2,688 allowed
+`N_6` vectors per sign and leaves 336 distinct moment-level survivors per
+sign.  These are necessary moment data, not common 61-edge graphs.  The raw
+enumeration payload hash is
+`894c087d4acae7ff0722ba236b1fac494984b9b331431e6117b2edbde0afbbec`.
+
+Therefore `z=2`.  The other five opposite excesses are positive integers
+with sum five, so all are one:
+
+\[
+ \boxed{(e_L:e_L>0)=(1,1,1,1,1).}                \tag{15.748.3}
+\]
+
+Proposition 15.748 is an **exhaustive finite interpolation certificate and
+proved open reduction**.  The `P=5` branch and `u=4` remain open.  The narrow
+next gate is to couple the 336 moment survivors per sign to the five
+excess-one `Q=4` cells and one common 61-edge graph.
+
+Evidence: `src/e1_gmin_m4_prop15747.py`,
+`src/e1_gmin_m4_prop15748.py`, `scripts/p13_p5_literal_interpolation.py`,
+`tests/test_prop15747.py`, `tests/test_prop15748.py`,
+`evidence/e1_gmin_m4_prop15747.json`, and
+`evidence/e1_gmin_m4_prop15748.json`, with the combined derivation in
+`evidence/NOTE_2026-08-31_p13_u4_mass12_literal_interpolation.md`.
+
 ## Proposition 15.723 — paired-cube obstruction to middle floor-plus-two lifts
 
 Put (p=2m-1\ge17). Let (A\ge0) be an integer-valued quadratic on

@@ -1,0 +1,268 @@
+{
+  "prop": "15.748",
+  "title": "Exact literal-root interpolation in the p13 P=5 branch",
+  "result_status": "exhaustive finite interpolation certificate and proved open reduction",
+  "statement": "z>=3 minimum literal cells are impossible; z=2 has 336 moment-level survivors per hard sign, so only opposite excess partition 1^5 remains",
+  "prior_prop_15747_dependency": {
+    "P5_Q3_minimum_cells_forced_literal": true,
+    "proved": true
+  },
+  "literal_root_and_hard_alphabet": {
+    "field": "F_13",
+    "projective_direction_count": 14,
+    "literal_star_even_degrees": [
+      2,
+      4,
+      6
+    ],
+    "literal_star_power_sum_residue_sets": {
+      "2": [
+        0
+      ],
+      "4": [
+        0
+      ],
+      "6": [
+        0
+      ]
+    },
+    "every_exact_literal_direction_is_a_common_M2_M4_M6_root": true,
+    "hard_moment_alphabet_size": 69,
+    "hard_moment_alphabet_sha256": "5088c5d586f8b651b25c5b2c15df6b940a00f4631c5aed4f4669adac1a0a9b25",
+    "hard_fourth_moment_value_set": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "hard_fourth_moment_never_zero": true,
+    "hard_fourth_values_when_N2_zero": [
+      7,
+      8,
+      11
+    ],
+    "five_direction_subsets_checked": 2002,
+    "five_root_quartic_evaluation_rank_set": [
+      5
+    ],
+    "five_roots_force_M4_identically_zero": true,
+    "z_at_least_five_impossible": true,
+    "proved": true
+  },
+  "exact_literal_interpolation": {
+    "field": "F_13",
+    "runner": "scripts/p13_p5_literal_interpolation.py",
+    "hard_moment_alphabet_size": 69,
+    "fourth_moment_alphabet_under_M2_zero": [
+      7,
+      8,
+      11
+    ],
+    "raw_payload_sha256": "894c087d4acae7ff0722ba236b1fac494984b9b331431e6117b2edbde0afbbec",
+    "sign_rows": {
+      "-1": {
+        "hard_sign": -1,
+        "hard_direction_indices": [
+          0,
+          2,
+          3,
+          6,
+          7,
+          10,
+          11
+        ],
+        "opposite_direction_indices": [
+          1,
+          4,
+          5,
+          8,
+          9,
+          12,
+          13
+        ],
+        "z4_parameter_cases_before_alphabet_filter": 420,
+        "z4_survivor_count": 0,
+        "z3_parameter_cases_before_alphabet_filter": 5880,
+        "z3_survivor_count": 0,
+        "z2_M2_M4_candidate_count_after_alphabet_filter": 1554,
+        "z2_N6_vectors_checked": 2688,
+        "z2_survivor_count": 336,
+        "z2_unique_survivor_count": 336,
+        "z2_survivor_catalog_sha256": "71c92ddb3fab7fe6319665ad1b1c2343dd45b791b2ba3ed98c52ae05198c0de3",
+        "representative_z2_survivor": {
+          "M2_scalar": 1,
+          "M4_quotient_coefficients": [
+            12,
+            11,
+            3
+          ],
+          "hard_N2": [
+            4,
+            11,
+            11,
+            10,
+            5,
+            2,
+            5
+          ],
+          "hard_N4": [
+            9,
+            12,
+            12,
+            1,
+            10,
+            12,
+            10
+          ],
+          "hard_N6": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "roots": [
+            1,
+            4
+          ]
+        },
+        "every_z2_survivor_independently_replayed": true,
+        "proved": true
+      },
+      "1": {
+        "hard_sign": 1,
+        "hard_direction_indices": [
+          1,
+          4,
+          5,
+          8,
+          9,
+          12,
+          13
+        ],
+        "opposite_direction_indices": [
+          0,
+          2,
+          3,
+          6,
+          7,
+          10,
+          11
+        ],
+        "z4_parameter_cases_before_alphabet_filter": 420,
+        "z4_survivor_count": 0,
+        "z3_parameter_cases_before_alphabet_filter": 5880,
+        "z3_survivor_count": 0,
+        "z2_M2_M4_candidate_count_after_alphabet_filter": 1554,
+        "z2_N6_vectors_checked": 2688,
+        "z2_survivor_count": 336,
+        "z2_unique_survivor_count": 336,
+        "z2_survivor_catalog_sha256": "97706d838541e87a2d4dacfa8188627b8160e59fbd6aa83167db0e0b91dab585",
+        "representative_z2_survivor": {
+          "M2_scalar": 1,
+          "M4_quotient_coefficients": [
+            0,
+            7,
+            3
+          ],
+          "hard_N2": [
+            12,
+            8,
+            2,
+            9,
+            11,
+            3,
+            1
+          ],
+          "hard_N4": [
+            3,
+            10,
+            12,
+            9,
+            12,
+            1,
+            3
+          ],
+          "hard_N6": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "roots": [
+            0,
+            2
+          ]
+        },
+        "every_z2_survivor_independently_replayed": true,
+        "proved": true
+      }
+    },
+    "z4_empty_for_both_hard_signs": true,
+    "z3_empty_for_both_hard_signs": true,
+    "z2_survivors_per_hard_sign": 336,
+    "all_z2_z3_z4_cases_empty": false,
+    "raw_runner_proved_flag_is_false_because_z2_survives": true,
+    "result_status": "exhaustive finite interpolation certificate",
+    "proved": true
+  },
+  "P5_excess_partition_reduction": {
+    "p": 13,
+    "t": 4,
+    "k": 60,
+    "u": 4,
+    "hard_family": "all_equal_triple",
+    "hard_parallel_count_P": 5,
+    "minimum_opposite_parallel_count_Q": 3,
+    "z_definition": "number of minimum Q=3 exact-literal opposite directions",
+    "prior_prop_15747_forces_every_minimum_Q3_cell_literal": true,
+    "opposite_direction_count": 7,
+    "opposite_excess_sum": 5,
+    "prior_lower_bound_on_z": 2,
+    "z_at_least_5_excluded_by_M4_root_count": true,
+    "z4_excluded_by_exact_interpolation": true,
+    "z3_excluded_by_exact_interpolation": true,
+    "z2_moment_level_survivors_per_hard_sign": 336,
+    "forced_z": 2,
+    "positive_opposite_excess_count": 5,
+    "only_remaining_opposite_excess_partition": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "partition_identity": "five positive integers sum to five, hence 1^5",
+    "moment_level_survivors_are_not_common_graph_realizations": true,
+    "P5_branch_closed": false,
+    "result_status": "proved open reduction",
+    "proved": true
+  },
+  "p13_t4_u4_P5_branch_closed": false,
+  "p13_t4_u4_closed": false,
+  "p13_k_eq_60_closed": false,
+  "remaining_p13_t4_residues": [
+    4,
+    6
+  ],
+  "next_exact_gate": "couple the 336 z=2 moment-level survivors per sign to the five excess-one opposite cells and one common 61-edge graph",
+  "residual_ii_closed": false,
+  "multi_level_type_I_closed": false,
+  "quadratic_minmax_limit_closed": false,
+  "top_level_gates_changed": false,
+  "proved_means_exact_reduction_verified_not_all_cases_empty": true,
+  "proved": true
+}

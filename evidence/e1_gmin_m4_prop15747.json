@@ -1,0 +1,174 @@
+{
+  "prop": "15.747",
+  "title": "Mass-12 cut obstruction closes the P3 half of p13 u4",
+  "result_status": "proved branch exclusion with exact finite certificates",
+  "statement": "the p13,t4,u4 omitted-pair P=3 branch is empty; in the all-equal-triple P=5 branch every minimum Q=3 cell is b=12 literal",
+  "boolean_mass12_exclusion": {
+    "p": 13,
+    "uniform_cut_side_size": 6,
+    "same_cuts_as_slice": "six-sets are complements of J(13,7)",
+    "one_edge_cut_probability": "7/13",
+    "two_adjacent_edges_both_cut_probability": "7/26",
+    "two_disjoint_edges_both_cut_probability": "42/143",
+    "notation": {
+      "S": "sum_e W_e",
+      "E2": "sum_e W_e^2",
+      "D2": "sum_v (sum_(e incident v) W_e)^2"
+    },
+    "weighted_cut_second_moment_identity": "E[cut_W^2]=(-7*D2+84*E2+84*S^2)/286",
+    "coefficient_sum_formula": "S=13*(Q-3)-12=13Q-51",
+    "boolean_cut_formula": "cut_W=7Q-27-2C",
+    "boolean_support_size": 396,
+    "general_integer_energy_equation": "-7*D2+84*E2+182Q^2-1428Q+2598=0",
+    "general_residual_is_one_mod_7": true,
+    "parallel_rows": {
+      "3": {
+        "parallel_count_Q": 3,
+        "coefficient_sum_S": -12,
+        "cut_values": [
+          -8,
+          -6
+        ],
+        "low_cut_multiplicity": 396,
+        "high_cut_multiplicity": 1320,
+        "required_cut_second_moment": "552/13",
+        "integer_energy_equation": "-7*D2+84*E2-48=0",
+        "residual_mod_7": 1,
+        "impossible_mod_7": true
+      },
+      "5": {
+        "parallel_count_Q": 5,
+        "coefficient_sum_S": 14,
+        "cut_values": [
+          6,
+          8
+        ],
+        "low_cut_multiplicity": 396,
+        "high_cut_multiplicity": 1320,
+        "required_cut_second_moment": "748/13",
+        "integer_energy_equation": "-7*D2+84*E2+8=0",
+        "residual_mod_7": 1,
+        "impossible_mod_7": true
+      }
+    },
+    "l1_row_parity_third_differences_and_field_moments_needed": false,
+    "all_integral_Q_boolean_mass12_lifts_excluded": true,
+    "result_status": "proved theorem",
+    "proved": true
+  },
+  "height_four_exclusions": {
+    "3": {
+      "parallel_count_Q": 3,
+      "height_under_test": 4,
+      "arithmetic": {
+        "parallel_count_Q": 3,
+        "coefficient_sum": -12,
+        "coefficient_sum_formula": "sum W=13*(Q-3)-12",
+        "l1_budget": 58,
+        "l1_formula": "sum |W|<=61-Q",
+        "cut_identity": "4C(X)=-12-2*cut_W(X)",
+        "cut_lower_at_C4": -14,
+        "cut_upper_at_C0": -6,
+        "even_row_sums_make_every_cut_even": true,
+        "pair_separation_multiplicity": 924,
+        "derived_value_sum": 396,
+        "height_four_anchor_cut": -14,
+        "height_four_anchor_is_wlog_before_field_moments": true,
+        "anchor_symmetry": "S_13 transitive on J(13,7)",
+        "field_moment_constraint_used": false,
+        "proved": true
+      },
+      "model": {
+        "coefficient_variable_count": 78,
+        "absolute_value_variable_count": 78,
+        "row_half_variable_count": 13,
+        "integer_variable_count": 169,
+        "constraint_count": 3526,
+        "cut_lower_inequality_count": 1716,
+        "cut_upper_inequality_count": 1716,
+        "height_anchor_constraint_count": 1,
+        "model_validation": "",
+        "model_textproto_sha256": "e8404a5684e033b73750b1f36a338aa13038861d6dbfc614cc99b6f0666423d9",
+        "model_is_exact_projection_of_value_formulation": true
+      },
+      "solver": {
+        "name": "OR-Tools CP-SAT",
+        "version": "9.15.6755",
+        "status": "INFEASIBLE",
+        "status_code": 3,
+        "num_search_workers": 1,
+        "deterministic_one_worker_replay": true,
+        "no_timeout": true,
+        "branches": 14,
+        "conflicts": 9
+      },
+      "height_four_model_infeasible": true,
+      "field_moment_constraint_needed": false,
+      "result_status": "exhaustive finite necessary-relaxation certificate",
+      "proved": true
+    },
+    "5": {
+      "parallel_count_Q": 5,
+      "height_under_test": 4,
+      "arithmetic": {
+        "parallel_count_Q": 5,
+        "coefficient_sum": 14,
+        "coefficient_sum_formula": "sum W=13*(Q-3)-12",
+        "l1_budget": 56,
+        "l1_formula": "sum |W|<=61-Q",
+        "cut_identity": "4C(X)=16-2*cut_W(X)",
+        "cut_lower_at_C4": 0,
+        "cut_upper_at_C0": 8,
+        "even_row_sums_make_every_cut_even": true,
+        "pair_separation_multiplicity": 924,
+        "derived_value_sum": 396,
+        "height_four_anchor_cut": 0,
+        "height_four_anchor_is_wlog_before_field_moments": true,
+        "anchor_symmetry": "S_13 transitive on J(13,7)",
+        "field_moment_constraint_used": false,
+        "proved": true
+      },
+      "model": {
+        "coefficient_variable_count": 78,
+        "absolute_value_variable_count": 78,
+        "row_half_variable_count": 13,
+        "integer_variable_count": 169,
+        "constraint_count": 3526,
+        "cut_lower_inequality_count": 1716,
+        "cut_upper_inequality_count": 1716,
+        "height_anchor_constraint_count": 1,
+        "model_validation": "",
+        "model_textproto_sha256": "8f992368fac869f29c23e6ecd20400228c2c10d5bda4d1001b291242dd6e3941",
+        "model_is_exact_projection_of_value_formulation": true
+      },
+      "solver": {
+        "name": "OR-Tools CP-SAT",
+        "version": "9.15.6755",
+        "status": "INFEASIBLE",
+        "status_code": 3,
+        "num_search_workers": 1,
+        "deterministic_one_worker_replay": true,
+        "no_timeout": true,
+        "branches": 15,
+        "conflicts": 7
+      },
+      "height_four_model_infeasible": true,
+      "field_moment_constraint_needed": false,
+      "result_status": "exhaustive finite necessary-relaxation certificate",
+      "proved": true
+    }
+  },
+  "p13_t4_u4_P3_branch_closed": true,
+  "P5_Q3_minimum_cells_forced_literal": true,
+  "P5_minimum_literal_count_at_least": 2,
+  "p13_t4_u4_closed": false,
+  "remaining_u4_hard_family": "all_equal_triple P=5",
+  "remaining_p13_t4_residues": [
+    4,
+    6
+  ],
+  "next_exact_gate": "use the common projective roots supplied by the forced Q=3 literals against the P=5 hard moment alphabet",
+  "residual_ii_closed": false,
+  "quadratic_minmax_limit_closed": false,
+  "proved": true
+}
