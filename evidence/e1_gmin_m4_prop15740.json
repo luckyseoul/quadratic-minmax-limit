@@ -1,0 +1,1698 @@
+{
+  "excluded_hard_quotient_partitions": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      4
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      3
+    ]
+  ],
+  "generic_p_ge_17_t3_branch_closed": false,
+  "hard_partition_split": {
+    "at_least_five_exact_stars_force_M2_and_M4_zero": true,
+    "exact_star_power_sum_checks": {
+      "2": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 0,
+        "12": 0
+      },
+      "4": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 0,
+        "12": 0
+      }
+    },
+    "four_exact_stars_force_M2_but_not_M4_zero": true,
+    "hard_direction_count": 7,
+    "hard_excess_units": 3,
+    "hard_quotient_constraints": "k_L>=1 and sum_L k_L=10",
+    "homogeneous_binary_root_rule": "more than d distinct projective roots force a degree-d form to vanish identically",
+    "p": 13,
+    "partitions": [
+      {
+        "exact_hard_star_count": 6,
+        "excluded_by_translation_average": true,
+        "global_even_moments_forced_zero": [
+          2,
+          4
+        ],
+        "hard_quotient_partition": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "exact_hard_star_count": 5,
+        "excluded_by_translation_average": true,
+        "global_even_moments_forced_zero": [
+          2,
+          4
+        ],
+        "hard_quotient_partition": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "exact_hard_star_count": 4,
+        "excluded_by_translation_average": false,
+        "global_even_moments_forced_zero": [
+          2
+        ],
+        "hard_quotient_partition": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "proved": true
+  },
+  "independent_solver_check": {
+    "branches": 1129,
+    "conflicts": 380,
+    "cp_model_presolve": true,
+    "independent_check": "six-variable exact CP-SAT",
+    "infeasible": true,
+    "integer_variable_count": 14,
+    "model_constraint_count": 19,
+    "model_textproto_sha256": "3aca686a9aff08c5118c2a95280d0bd17d17a410365fc5117f428be82e879826",
+    "model_validation": "",
+    "proved": true,
+    "random_seed": 0,
+    "search_workers": 1,
+    "solver": "OR-Tools CP-SAT",
+    "solver_status": "INFEASIBLE",
+    "solver_version": "9.15.6755",
+    "solver_wall_time_seconds": 0.049524154
+  },
+  "k_eq_4p_plus_6_shell_closed": false,
+  "layer_index_t": 3,
+  "multi_level_type_I_closed": false,
+  "next_exact_gate": "exclude the common 59-edge completion of four exact P=5 stars, three elevated P=6 hard cells, and seven Q=3,b=0 opposite cells",
+  "nine_vector_certificate": {
+    "aggregate_bounds": [
+      -13,
+      18
+    ],
+    "aggregate_l1_bound": 56,
+    "aggregate_sum": -20,
+    "candidate_catalog_sha256": "a06fcc7e9b9d793babb49f480f261d02683be0bc4df5bcc706fe785a23076b6d",
+    "candidate_count_after_sum_l1_moments": 32313,
+    "deterministic_selection_rule": "from lexicographically sorted 74-vector catalog, repeatedly choose the first vector eliminating the most remaining rows",
+    "eliminated_at_each_step": [
+      14222,
+      9967,
+      6087,
+      1395,
+      417,
+      168,
+      45,
+      8,
+      4
+    ],
+    "full_74_vector_catalog_sha256": "bfec2077a81acf1a6719caf93b066313445c55b4e2951c189d357731b437a265",
+    "independent_meet_in_middle_candidate_count": 32313,
+    "moment_degrees": [
+      2,
+      4
+    ],
+    "proved": true,
+    "pure_integer_enumeration_infeasible": true,
+    "remaining_after_each_step": [
+      18091,
+      8124,
+      2037,
+      642,
+      225,
+      57,
+      12,
+      4,
+      0
+    ],
+    "remaining_after_nine_vectors": 0,
+    "representative_seven_sets": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        10
+      ],
+      [
+        0,
+        1,
+        2,
+        5,
+        6,
+        8,
+        10
+      ],
+      [
+        0,
+        1,
+        3,
+        5,
+        7,
+        9,
+        11
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        8,
+        9
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        7,
+        10
+      ],
+      [
+        0,
+        1,
+        2,
+        5,
+        6,
+        9,
+        10
+      ],
+      [
+        0,
+        1,
+        3,
+        5,
+        6,
+        8,
+        11
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        11
+      ]
+    ],
+    "selected_vector_count": 9,
+    "selected_vectors": [
+      [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      [
+        8,
+        8,
+        6,
+        8,
+        8,
+        4
+      ],
+      [
+        8,
+        8,
+        8,
+        6,
+        4,
+        8
+      ],
+      [
+        12,
+        2,
+        10,
+        4,
+        8,
+        6
+      ],
+      [
+        4,
+        8,
+        10,
+        8,
+        6,
+        6
+      ],
+      [
+        8,
+        8,
+        4,
+        8,
+        6,
+        8
+      ],
+      [
+        6,
+        12,
+        8,
+        2,
+        4,
+        10
+      ],
+      [
+        10,
+        6,
+        4,
+        12,
+        2,
+        8
+      ],
+      [
+        8,
+        8,
+        6,
+        6,
+        10,
+        4
+      ]
+    ],
+    "selected_vectors_sha256": "2932ffd7f49846c390df8076991141cc496226055dc6c0c1daa18399b28116bd"
+  },
+  "opposite_aggregate_reduction": {
+    "B_formula": "B(X)=-5-cut_W(X)/2",
+    "aggregate_definition": "n_a=sum W_ij over the 13 unordered pairs with i-j=+-a",
+    "aggregate_l1_bound": 56,
+    "aggregate_lower_bound": -13,
+    "aggregate_moment_congruences": [
+      "sum_(a=1)^6 a^2*n_a=0 mod 13",
+      "sum_(a=1)^6 a^4*n_a=0 mod 13"
+    ],
+    "aggregate_sum": -20,
+    "aggregate_upper_bound": 18,
+    "balanced_cut_upper_bound": -10,
+    "coefficient_sum": -20,
+    "distance_classes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "edges_per_distance_class": 13,
+    "entry_lower_bound": -1,
+    "l1_bound": 56,
+    "normalized_matrix": "W=epsilon_L*K^L",
+    "opposite_parallel_count_Q": 3,
+    "opposite_scaled_mean": 20,
+    "p": 13,
+    "pair_in_conditional_mean": "E[B|i,j in X]=(20+12*w_ij)/44",
+    "proved": true,
+    "relaxation_status": "necessary aggregate relaxation; feasibility would not imply a directional cell or common graph",
+    "row_sums_even": true,
+    "translated_cut_identity": "sum_(t in F_13) cut_W(X+t)=sum_(a=1)^6 |X triangle (X+a)|*n_a",
+    "translated_cut_upper_bound": -130
+  },
+  "original_k": 58,
+  "p": 13,
+  "p13_generic_four_exact_partition_closed": false,
+  "p13_generic_partitions_with_at_least_five_exact_stars_excluded": true,
+  "p13_generic_t3_branch_closed": false,
+  "p13_k_eq_58_closed": false,
+  "prop": "15.740",
+  "proved": true,
+  "quadratic_minmax_limit_closed": false,
+  "radon_dependency": {
+    "boundary_reconstruction": "1_D(x)=sum_(hard L) r_L(L(x)) because all seven opposite profiles vanish",
+    "dependency": "Proposition 15.692",
+    "exact_hard_profile": "r_L=1+delta_(j_L)",
+    "field": "F_2",
+    "new_radon_proposition_asserted": false,
+    "opposite_zero_profile_direction_count": 7,
+    "p": 13,
+    "proved": true,
+    "radon_isomorphism": {
+      "affine_line_count": 182,
+      "common_lines_for_distinct_points": 1,
+      "direction_count": 14,
+      "incidence_gram_over_F2": "A^T A = I + J",
+      "injective": true,
+      "inverse": "x = A^T r",
+      "line_size": 13,
+      "p": 13,
+      "point_count": 169,
+      "point_degree": 14,
+      "proved": true,
+      "restriction": "even-weight point space",
+      "source_dimension": 168,
+      "surjective_by_equal_dimension": true,
+      "target": "direct sum of even-weight line blocks by direction",
+      "target_dimension": 168
+    },
+    "remaining_hard_even_profile_dimension": 84
+  },
+  "remaining_hard_quotient_partitions": [
+    [
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2
+    ]
+  ],
+  "residual_ii_closed": false,
+  "result_status": "proved branch split with exhaustive finite certificate",
+  "title": "translation-average split of the generic p=13 fourth shell",
+  "top_level_gates_changed": false,
+  "translated_cut_vector_catalog": {
+    "catalog_sha256": "bfec2077a81acf1a6719caf93b066313445c55b4e2951c189d357731b437a265",
+    "distinct_translated_cut_vector_count": 74,
+    "p": 13,
+    "proved": true,
+    "representatives": {
+      "10,4,10,4,8,6": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "10,4,8,6,6,8": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        9,
+        11
+      ],
+      "10,4,8,6,8,6": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        8,
+        11
+      ],
+      "10,6,4,10,4,8": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        8,
+        11
+      ],
+      "10,6,4,12,2,8": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        8,
+        11
+      ],
+      "10,6,6,6,8,6": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        8,
+        10
+      ],
+      "10,6,6,8,4,8": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        8,
+        10
+      ],
+      "10,6,6,8,6,6": [
+        0,
+        1,
+        3,
+        5,
+        7,
+        8,
+        10
+      ],
+      "10,6,8,4,8,6": [
+        0,
+        1,
+        3,
+        5,
+        7,
+        9,
+        10
+      ],
+      "12,2,10,4,8,6": [
+        0,
+        1,
+        3,
+        5,
+        7,
+        9,
+        11
+      ],
+      "2,4,6,8,10,12": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "4,4,6,8,10,10": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "4,6,6,8,10,8": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "4,6,6,8,8,10": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8
+      ],
+      "4,6,8,6,8,10": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        9
+      ],
+      "4,6,8,8,8,8": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7
+      ],
+      "4,8,10,10,6,4": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        7,
+        8
+      ],
+      "4,8,10,8,6,6": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        8,
+        9
+      ],
+      "4,8,12,10,6,2": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8,
+        9
+      ],
+      "4,8,8,8,8,6": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        8
+      ],
+      "6,10,6,6,8,6": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        7,
+        10
+      ],
+      "6,10,8,4,4,10": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        9,
+        10
+      ],
+      "6,10,8,4,6,8": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        8,
+        9
+      ],
+      "6,10,8,6,4,8": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10
+      ],
+      "6,10,8,6,6,6": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        8,
+        9
+      ],
+      "6,12,8,2,4,10": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        9,
+        10
+      ],
+      "6,4,6,8,8,10": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        11
+      ],
+      "6,4,8,8,8,8": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "6,6,10,8,8,4": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        7,
+        8
+      ],
+      "6,6,6,10,6,8": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        8
+      ],
+      "6,6,6,6,10,8": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        10
+      ],
+      "6,6,6,8,6,10": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        11
+      ],
+      "6,6,6,8,8,8": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        9
+      ],
+      "6,6,8,10,6,6": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7,
+        8
+      ],
+      "6,6,8,6,8,8": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        8
+      ],
+      "6,6,8,8,8,6": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        9
+      ],
+      "6,8,10,6,6,6": [
+        0,
+        1,
+        2,
+        4,
+        8,
+        9,
+        10
+      ],
+      "6,8,10,8,6,4": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        9
+      ],
+      "6,8,4,8,10,6": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        10
+      ],
+      "6,8,6,6,6,10": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        10
+      ],
+      "6,8,6,6,8,8": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        9
+      ],
+      "6,8,6,8,8,6": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        7,
+        8
+      ],
+      "6,8,8,10,6,4": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        8,
+        9
+      ],
+      "6,8,8,4,6,10": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        9
+      ],
+      "6,8,8,6,6,8": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        9,
+        10
+      ],
+      "6,8,8,8,6,6": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        8,
+        9
+      ],
+      "6,8,8,8,8,4": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        7,
+        9
+      ],
+      "8,10,2,6,12,4": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        7,
+        10
+      ],
+      "8,10,4,6,10,4": [
+        0,
+        1,
+        3,
+        4,
+        7,
+        8,
+        10
+      ],
+      "8,10,4,6,8,6": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        9,
+        10
+      ],
+      "8,10,6,4,6,8": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        9,
+        10
+      ],
+      "8,4,10,6,8,6": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7,
+        9
+      ],
+      "8,4,8,6,8,8": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7,
+        11
+      ],
+      "8,6,10,6,6,6": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        8,
+        9
+      ],
+      "8,6,4,10,6,8": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        8,
+        11
+      ],
+      "8,6,6,10,4,8": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        8,
+        10
+      ],
+      "8,6,6,6,10,6": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        7,
+        11
+      ],
+      "8,6,6,8,6,8": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        7,
+        10
+      ],
+      "8,6,8,4,8,8": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        9,
+        11
+      ],
+      "8,6,8,6,6,8": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        7,
+        9
+      ],
+      "8,6,8,6,8,6": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        7,
+        11
+      ],
+      "8,6,8,8,6,6": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        8,
+        10
+      ],
+      "8,8,4,6,10,6": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        8,
+        11
+      ],
+      "8,8,4,8,6,8": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        7,
+        10
+      ],
+      "8,8,4,8,8,6": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        7,
+        9
+      ],
+      "8,8,6,10,4,6": [
+        0,
+        1,
+        2,
+        5,
+        7,
+        8,
+        10
+      ],
+      "8,8,6,6,10,4": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        11
+      ],
+      "8,8,6,6,6,8": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        8,
+        10
+      ],
+      "8,8,6,6,8,6": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        7,
+        10
+      ],
+      "8,8,6,8,4,8": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        8,
+        9
+      ],
+      "8,8,6,8,6,6": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        9,
+        10
+      ],
+      "8,8,6,8,8,4": [
+        0,
+        1,
+        2,
+        4,
+        7,
+        8,
+        10
+      ],
+      "8,8,8,4,6,8": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        9,
+        10
+      ],
+      "8,8,8,6,4,8": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        8,
+        10
+      ]
+    },
+    "seven_set_count": 1716,
+    "slice_size": 7,
+    "vectors": [
+      [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      [
+        4,
+        4,
+        6,
+        8,
+        10,
+        10
+      ],
+      [
+        4,
+        6,
+        6,
+        8,
+        8,
+        10
+      ],
+      [
+        4,
+        6,
+        6,
+        8,
+        10,
+        8
+      ],
+      [
+        4,
+        6,
+        8,
+        6,
+        8,
+        10
+      ],
+      [
+        4,
+        6,
+        8,
+        8,
+        8,
+        8
+      ],
+      [
+        4,
+        8,
+        8,
+        8,
+        8,
+        6
+      ],
+      [
+        4,
+        8,
+        10,
+        8,
+        6,
+        6
+      ],
+      [
+        4,
+        8,
+        10,
+        10,
+        6,
+        4
+      ],
+      [
+        4,
+        8,
+        12,
+        10,
+        6,
+        2
+      ],
+      [
+        6,
+        4,
+        6,
+        8,
+        8,
+        10
+      ],
+      [
+        6,
+        4,
+        8,
+        8,
+        8,
+        8
+      ],
+      [
+        6,
+        6,
+        6,
+        6,
+        10,
+        8
+      ],
+      [
+        6,
+        6,
+        6,
+        8,
+        6,
+        10
+      ],
+      [
+        6,
+        6,
+        6,
+        8,
+        8,
+        8
+      ],
+      [
+        6,
+        6,
+        6,
+        10,
+        6,
+        8
+      ],
+      [
+        6,
+        6,
+        8,
+        6,
+        8,
+        8
+      ],
+      [
+        6,
+        6,
+        8,
+        8,
+        8,
+        6
+      ],
+      [
+        6,
+        6,
+        8,
+        10,
+        6,
+        6
+      ],
+      [
+        6,
+        6,
+        10,
+        8,
+        8,
+        4
+      ],
+      [
+        6,
+        8,
+        4,
+        8,
+        10,
+        6
+      ],
+      [
+        6,
+        8,
+        6,
+        6,
+        6,
+        10
+      ],
+      [
+        6,
+        8,
+        6,
+        6,
+        8,
+        8
+      ],
+      [
+        6,
+        8,
+        6,
+        8,
+        8,
+        6
+      ],
+      [
+        6,
+        8,
+        8,
+        4,
+        6,
+        10
+      ],
+      [
+        6,
+        8,
+        8,
+        6,
+        6,
+        8
+      ],
+      [
+        6,
+        8,
+        8,
+        8,
+        6,
+        6
+      ],
+      [
+        6,
+        8,
+        8,
+        8,
+        8,
+        4
+      ],
+      [
+        6,
+        8,
+        8,
+        10,
+        6,
+        4
+      ],
+      [
+        6,
+        8,
+        10,
+        6,
+        6,
+        6
+      ],
+      [
+        6,
+        8,
+        10,
+        8,
+        6,
+        4
+      ],
+      [
+        6,
+        10,
+        6,
+        6,
+        8,
+        6
+      ],
+      [
+        6,
+        10,
+        8,
+        4,
+        4,
+        10
+      ],
+      [
+        6,
+        10,
+        8,
+        4,
+        6,
+        8
+      ],
+      [
+        6,
+        10,
+        8,
+        6,
+        4,
+        8
+      ],
+      [
+        6,
+        10,
+        8,
+        6,
+        6,
+        6
+      ],
+      [
+        6,
+        12,
+        8,
+        2,
+        4,
+        10
+      ],
+      [
+        8,
+        4,
+        8,
+        6,
+        8,
+        8
+      ],
+      [
+        8,
+        4,
+        10,
+        6,
+        8,
+        6
+      ],
+      [
+        8,
+        6,
+        4,
+        10,
+        6,
+        8
+      ],
+      [
+        8,
+        6,
+        6,
+        6,
+        10,
+        6
+      ],
+      [
+        8,
+        6,
+        6,
+        8,
+        6,
+        8
+      ],
+      [
+        8,
+        6,
+        6,
+        10,
+        4,
+        8
+      ],
+      [
+        8,
+        6,
+        8,
+        4,
+        8,
+        8
+      ],
+      [
+        8,
+        6,
+        8,
+        6,
+        6,
+        8
+      ],
+      [
+        8,
+        6,
+        8,
+        6,
+        8,
+        6
+      ],
+      [
+        8,
+        6,
+        8,
+        8,
+        6,
+        6
+      ],
+      [
+        8,
+        6,
+        10,
+        6,
+        6,
+        6
+      ],
+      [
+        8,
+        8,
+        4,
+        6,
+        10,
+        6
+      ],
+      [
+        8,
+        8,
+        4,
+        8,
+        6,
+        8
+      ],
+      [
+        8,
+        8,
+        4,
+        8,
+        8,
+        6
+      ],
+      [
+        8,
+        8,
+        6,
+        6,
+        6,
+        8
+      ],
+      [
+        8,
+        8,
+        6,
+        6,
+        8,
+        6
+      ],
+      [
+        8,
+        8,
+        6,
+        6,
+        10,
+        4
+      ],
+      [
+        8,
+        8,
+        6,
+        8,
+        4,
+        8
+      ],
+      [
+        8,
+        8,
+        6,
+        8,
+        6,
+        6
+      ],
+      [
+        8,
+        8,
+        6,
+        8,
+        8,
+        4
+      ],
+      [
+        8,
+        8,
+        6,
+        10,
+        4,
+        6
+      ],
+      [
+        8,
+        8,
+        8,
+        4,
+        6,
+        8
+      ],
+      [
+        8,
+        8,
+        8,
+        6,
+        4,
+        8
+      ],
+      [
+        8,
+        10,
+        2,
+        6,
+        12,
+        4
+      ],
+      [
+        8,
+        10,
+        4,
+        6,
+        8,
+        6
+      ],
+      [
+        8,
+        10,
+        4,
+        6,
+        10,
+        4
+      ],
+      [
+        8,
+        10,
+        6,
+        4,
+        6,
+        8
+      ],
+      [
+        10,
+        4,
+        8,
+        6,
+        6,
+        8
+      ],
+      [
+        10,
+        4,
+        8,
+        6,
+        8,
+        6
+      ],
+      [
+        10,
+        4,
+        10,
+        4,
+        8,
+        6
+      ],
+      [
+        10,
+        6,
+        4,
+        10,
+        4,
+        8
+      ],
+      [
+        10,
+        6,
+        4,
+        12,
+        2,
+        8
+      ],
+      [
+        10,
+        6,
+        6,
+        6,
+        8,
+        6
+      ],
+      [
+        10,
+        6,
+        6,
+        8,
+        4,
+        8
+      ],
+      [
+        10,
+        6,
+        6,
+        8,
+        6,
+        6
+      ],
+      [
+        10,
+        6,
+        8,
+        4,
+        8,
+        6
+      ],
+      [
+        12,
+        2,
+        10,
+        4,
+        8,
+        6
+      ]
+    ]
+  }
+}

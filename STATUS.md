@@ -1,4 +1,52 @@
-# Status (2026-08-31; through Proposition 15.737)
+# Status (2026-08-31; through Proposition 15.740)
+
+**15.740 PROVES that the generic `p=13,t=3` branch has only the hard
+quotient partition `(1,1,1,1,2,2,2)`.**  The other two partitions have five
+or six exact hard stars, which force both global moments `M_2=M_4=0`.
+For any opposite `Q=3,b=0` cell, cyclic distance aggregation gives six
+integers `n_a` with exact sum, `l1`, and moment constraints.  Summing the cut
+inequality over translations gives 74 possible coefficient vectors; nine
+deterministically selected inequalities eliminate all 32,313 aggregate
+candidates, independently confirmed by a 14-variable exact CP-SAT model.
+This is a necessary-relaxation infeasibility certificate, so exclusion is
+sound.  It is deliberately the end of the finite census: the remaining
+four-exact partition requires a structural common-59-edge-graph theorem,
+not another local catalog.  Generic `p=13,k=58`, residual (ii), multi-level
+Type I, and the limit remain OPEN.
+
+**15.739 PROVES that the exceptional `p=13,t=3,u=3` branch at
+`k=58` is empty; it does not close the generic fourth-shell branch.**  The
+correct signed target of the hard complement-triple cell has coefficient
+offset two, not the formerly recorded five.  Thus its common hard parallel
+count is `P=2` or `8`, and either ledger forces an opposite phase-zero cell
+with `a=14` at `Q=6` or `0`.  Proposition 15.738 classifies that cell as
+`B=x_i*x_j`.  If `h` is the hard direction sign, the homogeneous quartic
+`G=2h M_4-M_2^2` vanishes on all seven hard directions and hence
+identically, while the opposite selected-pair cell gives
+`G=-3(i-j)^4!=0` in `F_13`.  The exceptional branch is therefore CLOSED.
+
+The remaining generic `t=3` branch has a new proved moment reduction.  For
+`p=1 mod 4`, `p>=17`, exact hard stars force
+`M_d=0` for `d=2,4,...,(p-9)/2`; conditional cut averages force every
+opposite signed coefficient into `{-1,0,1,2,3}`.  Strengthened full `p=17`
+conditional averages additionally force every cut into `[-26,-12]`, so the
+associated quadratic on `J(17,9)` has values in `{0,...,7}`, mean `6/17`,
+and total mass 8,580.  Full models are still unresolved.  At generic `p=13`, an explicit elevated
+`b=2,a=28` local cell has normalized `S_2=0` but `S_4=5` (hence global
+`M_4=5h` for its hard sign), so another one-direction
+floor/moment pass cannot close it.  This is a method counterexample, not a
+residual graph.  Critical `p=5,7`, `p=11,k>=50`, and the generic
+`p>=13,k>=4p+6` range remain OPEN.
+
+**15.738 is an exhaustive finite residual-cell certificate on `J(13,7)`.**
+Proposition 15.688 reduces a relevant `b=0,a=14` lift to maximum one or
+four; exact coefficient/cut/l1 models at `Q=0,6` exclude maximum four.
+Rank 78 of the pair-evaluation space and 1,638 independent third-difference
+identities reduce the Boolean case to an exact CP-SAT classification.  The
+78 selected pairs, 156 oriented mixed pairs, and 858 mixed signed triples
+exhaust all 1,092 support-462 Boolean quadratics.  Their offsets are
+`6,4,4`, so only `x_i*x_j` survives at `Q=0,6`.  This certificate supplies
+the local input to 15.739; by itself it is not a residual theorem.
 
 **15.737 PROVES that residual (ii) is empty at `p=11` for
 `k=44,46,48`, for every boundary size.** For layer index `t=0,1,2`, the
@@ -1209,7 +1257,7 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 | Bi-tight majorization algebra (15.167) | CANDIDATE | `prop15167.py` |
 | Type I freeness-fail ND (two-level Max−) | **CLOSED** (that slice) | 15.272 \(k=1\cup k=3\) \(\Rightarrow G_+\succ0\Rightarrow\) 15.249 dual-eq empty |
 | Residual (ii), affine + even \(k\le4p-2\) | **CLOSED** (that range) | 15.179 + 15.236 + 15.237 |
-| Residual (ii), even \(k\ge4p\) | **OPEN globally; first three layers CLOSED for \(p\ge11\)** | 15.734--15.735 and 15.737 close \(k\in\{4p,4p+2,4p+4\}\) for every boundary and every \(p\ge11\). Remaining: critical \(p=5,7\); \(p=11\) at \(k\ge50\); \(p\ge13\) at \(k\ge4p+6\). |
+| Residual (ii), even \(k\ge4p\) | **OPEN globally; first three layers CLOSED for \(p\ge11\)** | 15.734--15.735 and 15.737 close \(k\in\{4p,4p+2,4p+4\}\) for every boundary and every \(p\ge11\); 15.738--15.739 close the exceptional \(p=13,t=3,u=3\) row, and 15.740 leaves only the four-exact generic p13 partition. Remaining: critical \(p=5,7\); \(p=11\) at \(k\ge50\); that p13 common-graph partition and the generic later branches. |
 | Type I, multi-level Max− | **OPEN** | 15.543 \(\mu_{1d}\); 15.544 p=5 mix; 15.546 p=7 mix \(109/2863<|T|\); 15.551 Galois line-union; 15.559 Aut_e DEAD as \(A_{\mathrm{full}}\) name; `type_I_multilevel_bad_case_ND_closed=False` |
 | \(\lambda_{\min}(\Phi)\ge6\) | **OPEN** | 15.279; 15.550–15.582: \(S=\mathrm{Kl}\), \(\mu_{1d}\), \(\mu_{k=3}\) named; \(p=5\) \(Q_{++}=48/13\); \(A_{\mathrm{full}}\) / \(D\) / ensemble \(Q_\tau\) unnamed; `phi_F_ge_6=False` |
 | E(1) / \(L=\tfrac12\) | **OPEN** | needs the four leftovers above |
@@ -1218,7 +1266,7 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 ### Fatal gaps (honest)
 
 1. Residual **(i)** two-level dual-eq: **CLOSED** by 15.272 (not Aut-Schur, not Gsum LB). Multi-level Type I is **OPEN**. `gsum_disj_lb` remains False and is unused.
-2. Residual **(ii)** for affine + even \(k\le4p-2\): **CLOSED** (15.179 + 15.236 + 15.237). For \(k\ge4p\), the first three layers are **CLOSED** for every \(p\ge11\) by 15.734--15.735 and 15.737; critical \(p=5,7\), \(p=11\) at \(k\ge50\), and \(p\ge13\) at \(k\ge4p+6\) remain **OPEN**. Do not call residual (ii) globally closed.
+2. Residual **(ii)** for affine + even \(k\le4p-2\): **CLOSED** (15.179 + 15.236 + 15.237). For \(k\ge4p\), the first three layers are **CLOSED** for every \(p\ge11\) by 15.734--15.735 and 15.737; 15.738--15.739 close the exceptional `p=13,t=3,u=3` row, and 15.740 leaves only its four-exact generic partition. Critical \(p=5,7\), \(p=11\) at \(k\ge50\), that p13 common-graph partition, and the generic later branches remain **OPEN**. Do not call residual (ii) globally closed.
 
 ### Remainder progress (15.172–194)
 

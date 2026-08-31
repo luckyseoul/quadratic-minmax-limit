@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-31
 
-**Scope:** every assigned proposition through Proposition 15.737, the live
+**Scope:** every assigned proposition through Proposition 15.740, the live
 predicate wiring, and the attack scripts present during the audit
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
@@ -284,6 +284,61 @@ Together with 15.735, the first three residual shells are closed for every
 prime `p>=11`; critical `p=5,7`, `p=11,k>=50`, and
 `p>=13,k>=4p+6` remain open.
 
+A twenty-first semantic check gives Proposition 15.738, an **exhaustive
+finite residual-cell certificate** on `J(13,7)`.  The changed premise is the
+corrected exceptional target offset two, which forces opposite mass-14 cells
+at `Q=0,6`; this is not a rerun of an old endpoint census.  Proposition
+15.688 reduces their maximum to one or four, and exact necessary residual
+models exclude height four at both parallel counts.  Rank 78 of the pair
+evaluation space and 1,638 independent third differences reduce height one
+to a support-462 Boolean catalog.  An anchored no-good CP-SAT certificate
+proves that the 78 selected pairs, 156 oriented mixed pairs, and 858 signed
+mixed triples are exhaustive.  Their coefficient offsets are `6,4,4`, so
+only a selected pair survives at `Q=0,6`.  This classifies the forced local
+cell but does not close a residual row by itself.
+
+A twenty-second semantic check gives Proposition 15.739.  In the exceptional
+`p=13,t=3,u=3` row, the corrected offset restricts the seven hard
+complement-triple cells to common parallel count `P=2` or `8`; exact opposite
+accounting forces a Proposition 15.738 selected-pair cell.  The sign-safe
+binary quartic `G=2hM_4-M_2^2` vanishes on seven hard projective directions,
+hence identically, while the opposite selected pair evaluates to
+`-3(i-j)^4!=0` in `F_13`.  Thus this exceptional row is closed.  The generic
+row is not: for `p=1 mod 4`, `p>=17`, exact stars force even moments through
+degree `(p-9)/2` and conditional cuts force alphabet `{-1,0,1,2,3}`, but no
+infeasibility theorem follows.  At `p=17`, a two-intersection stabilizer
+average additionally gives cut range `[-26,-12]`, or equivalently a
+`{0,...,7}`-valued quadratic of total mass 8,580; this is a sharper open
+classification target, not closure.  At generic `p=13`, an explicit elevated local
+cell has normalized `S_2=0,S_4=5` (and global `M_4=5h`).  Another
+independent-direction floor, moment, backend,
+or timeout is a duplicate dead route unless it adds common-graph or genuine
+cross-direction constraints.
+
+The bounded p17 mesh audit is terminal for the present exact model.  Five
+complete-domain CP-SAT encodings with all 24,310 cuts and `M_2=M_4=0`
+returned `UNKNOWN` after 700--1,200 seconds without an incumbent; a lazy-cut
+encoding returned `UNKNOWN` before its first separation round; five Z3
+variants returned no solver status.  No witness and no infeasibility
+certificate exists.  Changing seed, backend, split encoding, conditioned-set
+depth, or timeout is not a new attack.  The next p17 premise must classify or
+otherwise exploit the proved `{0,...,7}` value range and total mass 8,580.
+
+A twenty-third semantic check gives Proposition 15.740 and terminates the
+finite local-catalog continuation at generic `p=13,t=3`.  The hard quotient
+partitions are `1^6 4`, `1^5 2 3`, and `1^4 2^3`.  In the first two, five
+exact stars force both `M_2` and `M_4` to vanish.  Six cyclic distance sums
+then obey exact sum, `l1`, moment, and translation-averaged cut inequalities.
+Nine cut vectors eliminate all 32,313 bounded aggregate rows; an independent
+14-variable CP-SAT model is infeasible.  This is a necessary-relaxation
+exclusion, so it soundly removes the five- and six-exact partitions.  It
+does not close `p=13,k=58`: `1^4 2^3` remains.  Do not extend this into
+another local catalog, seed, backend, or orbit census.  The changed premise
+required for further p13 work is simultaneous realization by one 59-edge
+graph of four exact stars, three elevated hard cells, and seven opposite
+cells.  The affine binary-Radon reconstruction is already Proposition
+15.692 and must be imported rather than renumbered.
+
 The Bartoli--Storme ``unique-trisecant ceiling'' previously recorded after
 15.729 is **RETRACTED**. Under the corollary's other hypotheses, including
 `d>3+2sqrt(q)` and existence of the configuration, its threshold is the upper
@@ -336,11 +391,11 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 652 source-backed proposition modules from 15.83 through 15.737.
+- There are 655 source-backed proposition modules from 15.83 through 15.740.
 - The labels 15.537, 15.583, and 15.584 have no proposition module.  They are
   unassigned labels, not unreviewed propositions; later source headers mention
   those numbers only as historical range/state markers.
-- Therefore every assigned proposition through 15.737 was included in this
+- Therefore every assigned proposition through 15.740 was included in this
   audit.  The grouped ledger below is by shared mathematical route rather than
   a 734-row restatement of the assigned propositions.
 
@@ -351,10 +406,10 @@ The public theorem is gated consistently by the corrected global
 currently `False`. The historical bounded `True` is available only through
 `e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after audit of 15.737 |
+| unit | exact live content | status after audit of 15.740 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
-| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close `k in {4p,4p+2,4p+4}`, for every boundary size, at all primes `p>=11`. The exact remainder is critical `p=5,7`, `p=11,k>=50`, and `p>=13,k>=4p+6`; the separate positive `p=7,z=7` branch persists. The global predicate stays false. |
+| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close `k in {4p,4p+2,4p+4}`, for every boundary size, at all primes `p>=11`; 15.738--15.739 close the exceptional `p=13,t=3,u=3` row, and 15.740 leaves only its four-exact generic partition. The exact remainder is critical `p=5,7`, `p=11,k>=50`, that p13 common-graph case, and generic later branches; the separate positive `p=7,z=7` branch persists. The global predicate stays false. |
 | Type I | the multi-level `3A+B>0` bad case | **OPEN** — `|κ|=1` needs `G>T` (for example `|μ|≤|L|`), while `|κ|=3` independently needs `χ_d((2p-1)μ+(p-2)ν)>-(p-2)/p`; the particular term is safe but the δ remainder is open |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
@@ -398,6 +453,9 @@ top-level front.
 | **15.735** | isolated-chart type budgets and exact surplus arithmetic at `k=4p+2,4p+4` | **PROVED two-layer extension.** With 15.734, closes the first three residual shells for every `p>=13` and every boundary size. The `t=3` branch-B surplus equals `m`, so no later layer is claimed. |
 | **15.736** | exact `J(11,6)` quadratic evaluation space and sharp support-84 Boolean catalog | **EXHAUSTIVE FINITE CERTIFICATE.** Rank 55 plus 407 independent third-difference identities make the 220 omitted-pair/all-equal-triple supports exhaustive. The hard-`b=2` p11 branch closes; simultaneous all-equal triples remain for 15.737. |
 | **15.737** | signed star/triangle coefficient patterns and the binary quadratic moment over `F_11` | **PROVED p11 three-layer theorem.** Closes `k=44,46,48` for every boundary size. Together with 15.735, the first three shells are closed for every prime `p>=11`. |
+| **15.738** | exact `J(13,7)` mass-14 height-four models and support-462 Boolean catalog | **EXHAUSTIVE FINITE CERTIFICATE.** Height four is infeasible at `Q=0,6`; the 1,092 Boolean supports are exhausted, and offsets leave only a selected pair. This is a local-cell theorem, not residual closure by itself. |
+| **15.739** | corrected exceptional p13 ledger, sign-safe quartic, and generic even-moment/cut reduction | **PROVED BRANCH THEOREM AND OPEN REDUCTION.** The exceptional `p=13,t=3,u=3` row is empty. At p17 every cut lies in `[-26,-12]`, giving a `{0,...,7}`-valued quadratic of total mass 8,580. Generic `p=13,k=58` and generic `p>=17,t=3` remain open; the local p13 elevated cell rules out another one-direction moment continuation. |
+| **15.740** | cyclic distance aggregation and translation-summed cuts in the generic p13 row | **PROVED BRANCH SPLIT WITH EXHAUSTIVE FINITE CERTIFICATE.** Nine inequalities eliminate all 32,313 aggregates when at least five hard stars are exact. Only `1^4 2^3` remains; further work must couple the common 59-edge graph, not extend the local census. |
 
 ## Exact duplicated run
 
@@ -561,7 +619,11 @@ Before spending mesh/GPU time:
    `t=3`, the branch-B surplus resonance and explicit local mean witness rule
    out another one-direction floor or halving proof; state the genuinely new
    cross-direction/global invariant before computing. Retain both 15.723
-   floor-plus-two exceptions in any independent profile DP;
+   floor-plus-two exceptions in any independent profile DP. Do not reopen the
+   exceptional `p=13,t=3,u=3` row: 15.738--15.739 close it by an exact
+   mass-14 catalog and quartic contradiction. Do not extend the generic p13
+   aggregate census: 15.740 leaves exactly `1^4 2^3`, whose live premise is
+   common-graph compatibility;
 5. search tracked files, untracked scripts, `/tmp` artifact names and hashes,
    git history, GitHub, MathOverflow, literature notes, and OEIS when number
    patterns are involved;

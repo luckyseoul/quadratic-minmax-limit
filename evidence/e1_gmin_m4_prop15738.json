@@ -1,0 +1,568 @@
+{
+  "changed_premise": "the corrected p=13,t=3 exceptional ledger has hard parallel counts P=2 or 8 and minimum opposite counts Q=6 or 0",
+  "cross_direction_moment_step_deferred_to": "Proposition 15.739",
+  "degree_two_space": {
+    "constant_recovery_identity": "sum_(i<j) x_i*x_j=21",
+    "evaluation_matrix_shape": [
+      1716,
+      78
+    ],
+    "exact_annihilator_dimension": 1638,
+    "exact_real_dimension": 78,
+    "linear_recovery_identity": "sum_(j!=i) x_i*x_j=6*x_i",
+    "pair_monomial_count": 78,
+    "pair_monomials_span_degree_at_most_two": true,
+    "point_count": 1716,
+    "proved": true,
+    "rank_mod_101": 78,
+    "rank_modulus": 101,
+    "real_rank_lower_bound_from_modular_minor": 78,
+    "real_rank_upper_bound_from_column_count": 78,
+    "slice": "J(13,7)"
+  },
+  "exact_boolean_classification": {
+    "anchored_known_support_nogood_count": 294,
+    "anchored_nogood_filter_is_exact": true,
+    "anchored_support_catalog_sha256": "3d723e4171e711c8e8bf4d819edd0cee5a77eed77044466fa58135d0a6e04270",
+    "boolean_variable_count": 1716,
+    "branches": 1711289,
+    "catalog_certificate": {
+      "anchored_catalog_support_count": 294,
+      "anchored_family_counts": {
+        "mixed_all_equal_signed_triple": 231,
+        "oriented_mixed_pair": 42,
+        "selected_pair": 21
+      },
+      "anchored_support_catalog_sha256": "3d723e4171e711c8e8bf4d819edd0cee5a77eed77044466fa58135d0a6e04270",
+      "coefficient_offset_definition": "target_constant+sum(target_linear)",
+      "coefficient_offsets": {
+        "mixed_all_equal_signed_triple": [
+          4
+        ],
+        "oriented_mixed_pair": [
+          4
+        ],
+        "selected_pair": [
+          6
+        ]
+      },
+      "density": "462/1716=7/26",
+      "distinct_support_count": 1092,
+      "every_catalog_support_satisfies_all_1638_identities": true,
+      "families_surviving_offset_mod_6": {
+        "0": [
+          "selected_pair"
+        ],
+        "6": [
+          "selected_pair"
+        ]
+      },
+      "family_counts": {
+        "mixed_all_equal_signed_triple": 858,
+        "oriented_mixed_pair": 156,
+        "selected_pair": 78
+      },
+      "known_support_catalog_sha256": "1609545bd2cddaa5f2389ea0e62b32a6bf62fd750bfb038aa1e3e1ba3ce127f6",
+      "proved": true,
+      "signed_target_identities_verified": {
+        "mixed_all_equal_signed_triple": true,
+        "oriented_mixed_pair": true,
+        "selected_pair": true
+      },
+      "signed_target_normalization": "target=3+4*f",
+      "support_count": 1092,
+      "support_point_anchor_index": 0,
+      "support_size": 462
+    },
+    "catalog_exhaustive_at_support_462": true,
+    "catalog_is_invariant_under_S13": true,
+    "conflicts": 324869,
+    "cp_model_presolve": true,
+    "full_known_support_count": 1092,
+    "integer_model_infeasible": true,
+    "known_support_catalog_sha256": "1609545bd2cddaa5f2389ea0e62b32a6bf62fd750bfb038aa1e3e1ba3ce127f6",
+    "linear_rank_certificate": {
+      "candidate_descriptor_count": 900900,
+      "candidate_rows_examined": 62721,
+      "every_identity_annihilates_all_78_pair_monomials": true,
+      "exact_real_nullity": 78,
+      "exact_real_rank": 1638,
+      "first_selected_cube": {
+        "base": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      },
+      "identity_family": "base 4-set plus three disjoint swap pairs",
+      "identity_term_count": 8,
+      "last_selected_cube": {
+        "base": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "pairs": [
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            12
+          ]
+        ]
+      },
+      "nullspace_equals_degree_at_most_two_evaluation_space": true,
+      "proved": true,
+      "rank_modulus": 101,
+      "real_rank_lower_bound_from_modular_independence": 1638,
+      "real_rank_upper_bound_from_78_dimensional_nullspace": 1638,
+      "selected_identity_count": 1638,
+      "selected_identity_sha256": "ee92d6662f0f14523dc4c6620f89b407a66048dd4a6c0962dd9b058800136083",
+      "selected_rank_mod_101": 1638
+    },
+    "model_constraint_count": 1934,
+    "model_textproto_sha256": "4b73bd641d500cdf6a0c5edb7f4c8b225903db3a81d13be7e2329df3dbdaed83",
+    "model_validation": "",
+    "proved": true,
+    "random_seed": 0,
+    "result_status": "exhaustive finite certificate",
+    "search_workers": 32,
+    "slice": "J(13,7)",
+    "solver": "OR-Tools CP-SAT",
+    "solver_status": "INFEASIBLE",
+    "solver_version": "9.15.6755",
+    "solver_wall_time_seconds": 58.502218189000004,
+    "support_point_orbit_anchor": "f(first lexicographic 7-set)=1",
+    "support_point_orbit_anchor_is_wlog": true,
+    "support_size": 462,
+    "third_difference_equality_count": 1638
+  },
+  "mass14_boolean_catalog": {
+    "anchored_catalog_support_count": 294,
+    "anchored_family_counts": {
+      "mixed_all_equal_signed_triple": 231,
+      "oriented_mixed_pair": 42,
+      "selected_pair": 21
+    },
+    "anchored_support_catalog_sha256": "3d723e4171e711c8e8bf4d819edd0cee5a77eed77044466fa58135d0a6e04270",
+    "coefficient_offset_definition": "target_constant+sum(target_linear)",
+    "coefficient_offsets": {
+      "mixed_all_equal_signed_triple": [
+        4
+      ],
+      "oriented_mixed_pair": [
+        4
+      ],
+      "selected_pair": [
+        6
+      ]
+    },
+    "density": "462/1716=7/26",
+    "distinct_support_count": 1092,
+    "every_catalog_support_satisfies_all_1638_identities": true,
+    "families_surviving_offset_mod_6": {
+      "0": [
+        "selected_pair"
+      ],
+      "6": [
+        "selected_pair"
+      ]
+    },
+    "family_counts": {
+      "mixed_all_equal_signed_triple": 858,
+      "oriented_mixed_pair": 156,
+      "selected_pair": 78
+    },
+    "known_support_catalog_sha256": "1609545bd2cddaa5f2389ea0e62b32a6bf62fd750bfb038aa1e3e1ba3ce127f6",
+    "proved": true,
+    "signed_target_identities_verified": {
+      "mixed_all_equal_signed_triple": true,
+      "oriented_mixed_pair": true,
+      "selected_pair": true
+    },
+    "signed_target_normalization": "target=3+4*f",
+    "support_count": 1092,
+    "support_point_anchor_index": 0,
+    "support_size": 462
+  },
+  "mass14_height_dichotomy": {
+    "H_at_least_two_integer_candidates": [
+      4
+    ],
+    "H_at_least_two_paired_bound": "14>=28-4H",
+    "H_at_least_two_stabilizer_bound": "14>=3H",
+    "dependency": "Proposition 15.688",
+    "height_dichotomy": [
+      1,
+      4
+    ],
+    "height_one_is_boolean": true,
+    "only_nonboolean_case_to_exclude": 4,
+    "p": 13,
+    "proved": true,
+    "scaled_mass_4pE_B": 14
+  },
+  "p13_mass14_cells_classified": true,
+  "p13_t3_exceptional_branch_closed_here": false,
+  "prop": "15.738",
+  "proved": true,
+  "quadratic_minmax_limit_closed": false,
+  "residual_cell_classification": {
+    "Q0": {
+      "catalog_survivors_after_offset_mod_6": [
+        "selected_pair"
+      ],
+      "height_four_excluded": true,
+      "height_four_exclusion": {
+        "branches": 174,
+        "coefficient_sum": -53,
+        "coefficient_sum_formula": "sum W=13Q-53",
+        "coefficient_variable_count": 78,
+        "conflicts": 21,
+        "cp_model_presolve": true,
+        "cut_identity": "4B(X)=Q-3+sum(W)-2*cut_W(X)",
+        "every_coefficient_row_sum_even": true,
+        "height_four_model_infeasible": true,
+        "height_four_orbit_anchor": "B(first lexicographic 7-set)=4",
+        "height_four_orbit_anchor_is_wlog": true,
+        "integer_variable_count": 1885,
+        "l1_budget": 59,
+        "l1_inequality": "sum |W_st|<=59-Q",
+        "model_constraint_count": 1811,
+        "model_textproto_sha256": "6398ae7282d5bbc95527c1e3f6e80411017c75cf017d012c46533ced933ba2c1",
+        "model_validation": "",
+        "p": 13,
+        "parallel_count_Q": 0,
+        "proved": true,
+        "random_seed": 0,
+        "relaxation_is_necessary_for_a_residual_cell": true,
+        "residual_edge_count": 59,
+        "result_status": "exhaustive finite certificate",
+        "scaled_mass_4pE_B": 14,
+        "search_workers": 32,
+        "solver": "OR-Tools CP-SAT",
+        "solver_status": "INFEASIBLE",
+        "solver_version": "9.15.6755",
+        "solver_wall_time_seconds": 11.040936858,
+        "transverse_edge_count": 59,
+        "value_sum": 462
+      },
+      "mass14_cell_forced_boolean": true,
+      "parallel_count_Q": 0,
+      "proved": true,
+      "selected_pair_is_unique_surviving_family": true,
+      "selected_pair_signed_target": "epsilon*S_H=4+z_i+z_j+z_i*z_j"
+    },
+    "Q0_survivors": [
+      "selected_pair"
+    ],
+    "Q6": {
+      "catalog_survivors_after_offset_mod_6": [
+        "selected_pair"
+      ],
+      "height_four_excluded": true,
+      "height_four_exclusion": {
+        "branches": 215,
+        "coefficient_sum": 25,
+        "coefficient_sum_formula": "sum W=13Q-53",
+        "coefficient_variable_count": 78,
+        "conflicts": 32,
+        "cp_model_presolve": true,
+        "cut_identity": "4B(X)=Q-3+sum(W)-2*cut_W(X)",
+        "every_coefficient_row_sum_even": true,
+        "height_four_model_infeasible": true,
+        "height_four_orbit_anchor": "B(first lexicographic 7-set)=4",
+        "height_four_orbit_anchor_is_wlog": true,
+        "integer_variable_count": 1885,
+        "l1_budget": 53,
+        "l1_inequality": "sum |W_st|<=59-Q",
+        "model_constraint_count": 1811,
+        "model_textproto_sha256": "990bee74e7a978df1b8a8f6ed28056849a4609183a28af95c24dfe6831dda2a2",
+        "model_validation": "",
+        "p": 13,
+        "parallel_count_Q": 6,
+        "proved": true,
+        "random_seed": 0,
+        "relaxation_is_necessary_for_a_residual_cell": true,
+        "residual_edge_count": 59,
+        "result_status": "exhaustive finite certificate",
+        "scaled_mass_4pE_B": 14,
+        "search_workers": 32,
+        "solver": "OR-Tools CP-SAT",
+        "solver_status": "INFEASIBLE",
+        "solver_version": "9.15.6755",
+        "solver_wall_time_seconds": 16.271538156000002,
+        "transverse_edge_count": 53,
+        "value_sum": 462
+      },
+      "mass14_cell_forced_boolean": true,
+      "parallel_count_Q": 6,
+      "proved": true,
+      "selected_pair_is_unique_surviving_family": true,
+      "selected_pair_signed_target": "epsilon*S_H=4+z_i+z_j+z_i*z_j"
+    },
+    "Q6_survivors": [
+      "selected_pair"
+    ],
+    "boolean_catalog_dependency": {
+      "catalog_exhaustive_at_support_462": true,
+      "result_status": "exhaustive finite certificate"
+    },
+    "height_dichotomy": {
+      "H_at_least_two_integer_candidates": [
+        4
+      ],
+      "H_at_least_two_paired_bound": "14>=28-4H",
+      "H_at_least_two_stabilizer_bound": "14>=3H",
+      "dependency": "Proposition 15.688",
+      "height_dichotomy": [
+        1,
+        4
+      ],
+      "height_one_is_boolean": true,
+      "only_nonboolean_case_to_exclude": 4,
+      "p": 13,
+      "proved": true,
+      "scaled_mass_4pE_B": 14
+    },
+    "p": 13,
+    "proved": true,
+    "result_status": "exhaustive finite certificate",
+    "scaled_mass_4pE_B": 14,
+    "selected_pair_moment_dependency": {
+      "Q0_and_Q6_patterns_differ_by_complete_graph": true,
+      "checks": [
+        {
+          "degree": 2,
+          "normalized_coefficient_histogram": {
+            "-1": 55,
+            "0": 22,
+            "2": 1
+          },
+          "normalized_moment_formula": "M_2(i,j)=(i-j)^2 mod 13",
+          "pair_count_checked": 78,
+          "parallel_count_Q": 0,
+          "slice_kernel_scalar": "-1/2",
+          "zero_moment_count": 0
+        },
+        {
+          "degree": 4,
+          "normalized_coefficient_histogram": {
+            "-1": 55,
+            "0": 22,
+            "2": 1
+          },
+          "normalized_moment_formula": "M_4(i,j)=(i-j)^4 mod 13",
+          "pair_count_checked": 78,
+          "parallel_count_Q": 0,
+          "slice_kernel_scalar": "-1/2",
+          "zero_moment_count": 0
+        },
+        {
+          "degree": 2,
+          "normalized_coefficient_histogram": {
+            "0": 55,
+            "1": 22,
+            "3": 1
+          },
+          "normalized_moment_formula": "M_2(i,j)=(i-j)^2 mod 13",
+          "pair_count_checked": 78,
+          "parallel_count_Q": 6,
+          "slice_kernel_scalar": "0",
+          "zero_moment_count": 0
+        },
+        {
+          "degree": 4,
+          "normalized_coefficient_histogram": {
+            "0": 55,
+            "1": 22,
+            "3": 1
+          },
+          "normalized_moment_formula": "M_4(i,j)=(i-j)^4 mod 13",
+          "pair_count_checked": 78,
+          "parallel_count_Q": 6,
+          "slice_kernel_scalar": "0",
+          "zero_moment_count": 0
+        }
+      ],
+      "complete_graph_even_moments": {
+        "2": 0,
+        "4": 0
+      },
+      "degrees": [
+        2,
+        4
+      ],
+      "every_selected_pair_fourth_moment_nonzero": true,
+      "every_selected_pair_second_moment_nonzero": true,
+      "field": "F_13",
+      "parallel_counts": [
+        0,
+        6
+      ],
+      "proved": true
+    },
+    "slice": "J(13,7)"
+  },
+  "residual_ii_closed": false,
+  "result_status": "exhaustive finite certificate",
+  "selected_pair_moments": {
+    "Q0_and_Q6_patterns_differ_by_complete_graph": true,
+    "checks": [
+      {
+        "degree": 2,
+        "normalized_coefficient_histogram": {
+          "-1": 55,
+          "0": 22,
+          "2": 1
+        },
+        "normalized_moment_formula": "M_2(i,j)=(i-j)^2 mod 13",
+        "pair_count_checked": 78,
+        "parallel_count_Q": 0,
+        "slice_kernel_scalar": "-1/2",
+        "zero_moment_count": 0
+      },
+      {
+        "degree": 4,
+        "normalized_coefficient_histogram": {
+          "-1": 55,
+          "0": 22,
+          "2": 1
+        },
+        "normalized_moment_formula": "M_4(i,j)=(i-j)^4 mod 13",
+        "pair_count_checked": 78,
+        "parallel_count_Q": 0,
+        "slice_kernel_scalar": "-1/2",
+        "zero_moment_count": 0
+      },
+      {
+        "degree": 2,
+        "normalized_coefficient_histogram": {
+          "0": 55,
+          "1": 22,
+          "3": 1
+        },
+        "normalized_moment_formula": "M_2(i,j)=(i-j)^2 mod 13",
+        "pair_count_checked": 78,
+        "parallel_count_Q": 6,
+        "slice_kernel_scalar": "0",
+        "zero_moment_count": 0
+      },
+      {
+        "degree": 4,
+        "normalized_coefficient_histogram": {
+          "0": 55,
+          "1": 22,
+          "3": 1
+        },
+        "normalized_moment_formula": "M_4(i,j)=(i-j)^4 mod 13",
+        "pair_count_checked": 78,
+        "parallel_count_Q": 6,
+        "slice_kernel_scalar": "0",
+        "zero_moment_count": 0
+      }
+    ],
+    "complete_graph_even_moments": {
+      "2": 0,
+      "4": 0
+    },
+    "degrees": [
+      2,
+      4
+    ],
+    "every_selected_pair_fourth_moment_nonzero": true,
+    "every_selected_pair_second_moment_nonzero": true,
+    "field": "F_13",
+    "parallel_counts": [
+      0,
+      6
+    ],
+    "proved": true
+  },
+  "statement": "at Q=0 or Q=6, every p=13 residual mass-14 cell is Boolean and its unique catalog family is x_i*x_j",
+  "third_difference_annihilator": {
+    "candidate_descriptor_count": 900900,
+    "candidate_rows_examined": 62721,
+    "every_identity_annihilates_all_78_pair_monomials": true,
+    "exact_real_nullity": 78,
+    "exact_real_rank": 1638,
+    "first_selected_cube": {
+      "base": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "pairs": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ]
+    },
+    "identity_family": "base 4-set plus three disjoint swap pairs",
+    "identity_term_count": 8,
+    "last_selected_cube": {
+      "base": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "pairs": [
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          2,
+          12
+        ]
+      ]
+    },
+    "nullspace_equals_degree_at_most_two_evaluation_space": true,
+    "proved": true,
+    "rank_modulus": 101,
+    "real_rank_lower_bound_from_modular_independence": 1638,
+    "real_rank_upper_bound_from_78_dimensional_nullspace": 1638,
+    "selected_identity_count": 1638,
+    "selected_identity_sha256": "ee92d6662f0f14523dc4c6620f89b407a66048dd4a6c0962dd9b058800136083",
+    "selected_rank_mod_101": 1638
+  },
+  "title": "Exact p=13 mass-14 Boolean residual catalog",
+  "top_level_gates_changed": false
+}

@@ -10478,6 +10478,336 @@ Evidence: `src/e1_gmin_m4_prop15737.py`,
 `evidence/e1_gmin_m4_prop15737.json`, and
 `evidence/NOTE_2026-08-31_p11_binary_quadratic_moment_close.md`.
 
+## Proposition 15.738 — exact p=13 mass-fourteen residual-cell catalog
+
+Let (B) be a nonzero nonnegative integer-valued quadratic on
+(J(13,7)) with
+
+\[
+ 4p\mathbb E B=14.                                  \tag{15.738.1}
+\]
+
+The two inequalities in Proposition 15.688 first make the possible maximum
+(H=\max B) completely discrete.  If (H\ge2), then
+
+\[
+ 14\ge28-4H,\qquad 14\ge3H,
+\]
+
+so (H=4).  Otherwise (H=1) and (B) is Boolean.
+
+The residual application supplies more than (15.738.1).  Its relevant
+opposite directions have parallel count (Q=0) or (Q=6), and if
+(W=\epsilon K) is the normalized signed inter-fibre matrix, then
+
+\[
+ \sum W=13(Q-3)-14,qquad
+ \sum|W_{st}|\le59-Q,qquad
+ \sum_{t\ne s}W_{st}\equiv0\pmod2,                \tag{15.738.2}
+\]
+
+and
+
+\[
+ B(X)={Q+\sum W-3-2\operatorname{cut}_W(X)\over4}
+ \quad( X\in J(13,7)).                             \tag{15.738.3}
+\]
+
+For (H=4), permute a maximizing seven-set to a fixed anchor.  The two exact
+integer models obtained from (15.738.2)--(15.738.3), one for each value of
+(Q), impose (0\le B(X)\le4) on all 1,716 seven-sets and (B=4) at the
+anchor.  Both are infeasible.  This is an exhaustive residual-cell
+certificate; the permutation anchor is safe because every constraint before
+the later field moments is (\operatorname{Sym}(13))-invariant.  Hence every
+residual-compatible mass-fourteen cell is Boolean, of support
+
+\[
+ {7\over26}{13\choose7}=462.                       \tag{15.738.4}
+\]
+
+It remains to classify those Boolean evaluations without importing a slice
+restriction theorem.  The 78 pair monomials have rank 78 modulo 101 on
+(J(13,7)).  Third differences on a fixed four-set plus three disjoint swap
+pairs annihilate every quadratic.  Deterministic elimination selects 1,638
+independent eight-term identities, exactly the annihilator dimension.
+Consequently their real nullspace is precisely the degree-at-most-two
+evaluation space.
+
+There are 1,092 explicit Boolean quadratic supports of size 462:
+
+\[
+\begin{array}{c|c|c}
+\text{family}&\text{count}&\text{target }3+4B\text{ and offset}\\ \hline
+x_ix_j&78&4+z_i+z_j+z_iz_j,\quad6\\
+x_i(1-x_j)&156&4+z_i-z_j-z_iz_j,\quad4\\
+z_i=z_j=-z_k&858&4+z_iz_j-z_iz_k-z_jz_k,\quad4.
+\end{array}                                         \tag{15.738.5}
+\]
+
+An exact CP-SAT model has one Boolean variable per seven-set, the 1,638
+identities, support 462, and no-goods for (15.738.5).  After the safe anchor
+that one fixed support point is present, it is infeasible.  Thus
+(15.738.5) is exhaustive.  The coefficient congruence is modulo six, and
+both (Q=0) and (Q=6) retain only the first family.  Therefore
+
+\[
+ \boxed{B=x_ix_j\text{ in every relevant minimum opposite cell}.}
+                                                               \tag{15.738.6}
+\]
+
+For either slice gauge, its normalized even moments are
+
+\[
+ \sum_{s<t}W_{st}(s-t)^2=(i-j)^2,qquad
+ \sum_{s<t}W_{st}(s-t)^4=(i-j)^4.                 \tag{15.738.7}
+\]
+
+The two gauges differ by the complete-graph coefficient vector, whose
+degree-two and degree-four moments vanish over (\mathbb F_{13}).
+Proposition 15.738 is an **exhaustive finite certificate** for a local cell;
+the simultaneous residual contradiction is the next proposition.
+
+Evidence: `src/e1_gmin_m4_prop15738.py`,
+`tests/test_prop15738.py`,
+`evidence/e1_gmin_m4_prop15738.json`, and
+`evidence/NOTE_2026-08-31_p13_mass14_boolean_catalog.md`.
+
+## Proposition 15.739 — the exceptional p=13 fourth shell is impossible
+
+Return to (p=13,t=3,u=3), where all seven hard directions have
+(A=(2-r)^2) on a three-point complement (C).  The signed target is
+
+\[
+ \epsilon S_H
+ =5-\sum_{i\in C}z_i+\sum_{\{i,j\}\subset C}z_iz_j. \tag{15.739.1}
+\]
+
+The coefficient offset is two, not five.  If (P) is the common hard
+parallel count, slice-kernel polarization gives
+
+\[
+ 6\mid P-2.
+\]
+
+Since the seven hard directions contain (7P) of the 59 finite edges,
+(P\le8), and hence (P=2) or (P=8).  The exact opposite ledgers are
+
+\[
+\begin{array}{c|c|c}
+P&\sum Q&a(Q)\\ \hline
+2&45&14(Q-5)\\
+8&3&14(Q+1).
+\end{array}                                         \tag{15.739.2}
+\]
+
+For (P=2), a (Q=5,a=0) direction would have target three, whose offset
+three is incompatible with (Q=5) modulo six.  Thus all seven (Q\)'s are at
+least six and at least one is (Q=6,a=14).  For (P=8), at least one direction
+is (Q=0,a=14).
+
+At phase zero and mean fourteen, the (b=2) equality target has offset four,
+incompatible with (Q=0,6).  A (b=12) cell would be a two-unit lift of its
+pointwise parity baseline, below Proposition 15.688's lift floor ten.  The
+remaining cell has (b=0), (A=2B), and is exactly the cell classified in
+Proposition 15.738.  Hence one opposite direction has (B=x_ix_j).
+
+For even (d), retain the genuine global homogeneous binary form
+
+\[
+ M_d(L)=\sum_{\{u,v\}\in H}\chi(u-v)(L(u)-L(v))^d. \tag{15.739.3}
+\]
+
+Let (h) be the fixed sign on the hard type.  The two gauges (P=2,8) in
+(15.739.1) have the same even moments as the triangle on (C).  Normalize
+(C=\{0,1,r\}) and put (q_0=r^2-r+1).  Then
+
+\[
+ S_2=2q_0,\qquad S_4=2q_0^2={1\over2}S_2^2.        \tag{15.739.4}
+\]
+
+Since (W=hK) on the hard type, the homogeneous quartic
+
+\[
+ G(L)=2hM_4(L)-M_2(L)^2                            \tag{15.739.5}
+\]
+
+vanishes on all seven hard projective directions.  A nonzero binary quartic
+has at most four projective roots, so (G\equiv0).  On the opposite
+(x_ix_j) cell, whose sign is (-h), (15.738.7) instead gives
+
+\[
+ G=-3(i-j)^4\ne0\quad\hbox{in }\mathbb F_{13},     \tag{15.739.6}
+\]
+
+a contradiction.  Therefore
+
+\[
+ \boxed{\text{the exceptional }p=13,t=3,u=3\text{ branch is empty}.}
+                                                               \tag{15.739.7}
+\]
+
+There remains one generic (t=3) branch.  For (p=4a+1\ge17), at least
+(N=m-3=(p-5)/2) hard directions are exact stars.  Applying (15.739.3) to
+each even degree (d<N) shows
+
+\[
+ \boxed{M_d\equiv0\quad
+ d=2,4,\ldots,{p-9\over2}.}                        \tag{15.739.8}
+\]
+
+Indeed an exact star has moment
+(\sum_{r\in\mathbb F_p^*}r^d=0), and (N>d) roots force the degree-(d)
+binary form to vanish.  Thus an opposite normalized matrix must have
+
+\[
+ \sum W=-(p+7),\quad \sum|W|\le4p+4,quad
+ \operatorname{cut}_W(X)\le-{p+7\over2},quad
+ \sum W_{st}(s-t)^d=0\pmod p                      \tag{15.739.9}
+\]
+
+for every degree in (15.739.8).  Conditional cut averages further force
+(W_{st}\in\{-1,0,1,2,3\}) for every (p\ge17).  At (p=17), row sums are
+even in ([-16,16]) and the recorded pair, triple, and four-set inequalities
+give a substantially smaller exact model.  These claims are derived in the
+certificate from exact conditional cut averages.
+
+One further stabilizer average is useful.  Fix a nine-set (X), and write
+(a,b,c) for the averaged coefficients on its 36 internal, 28 external, and
+72 crossing edges.  Averaging the cut inequality over nine-sets meeting
+(X) in four and five points gives
+
+\[
+ 36a+28b+72c=-24,\quad
+ 20a+15b+37c\le-12,\quad
+ 20a+16b+36c\le-12.
+\]
+
+The combination (-9) times the four-intersection inequality, minus
+(45/4) times the five-intersection inequality, plus (45/4) times the total
+equality yields (72c\ge-27).  Since every row degree, and hence every cut,
+is even,
+
+\[
+ -26\le\operatorname{cut}_W(X)\le-12.             \tag{15.739.10}
+\]
+
+Thus (B(X)=-6-\operatorname{cut}_W(X)/2) is an integer-valued quadratic
+with values in (\{0,\ldots,7\}), mean (6/17), and total mass 8,580 on
+(J(17,9)).  The full strengthened models are
+currently unresolved, so (15.739.8)--(15.739.10) are a **proved open
+reduction**, not a close of the generic branch.
+
+The analogous (p=13) generic route genuinely stops at (M_2).  At an elevated
+hard direction with (P=6), the signed matrix consisting of a positive
+(K_5) on (\{0,1,2,3,5\}) plus the edge (\{0,11\}) has (\sum W=\|W\|_1=11),
+odd rows (\{0,11\}), and every seven-cut between zero and seven.  Hence
+(A=7-\operatorname{cut}_W\ge0), with scaled mean 28 and (b=2), while its
+normalized moments are (S_2=0) and (S_4=5) modulo 13, so the global
+moments are (M_2=0) and (M_4=5h) for the hard sign (h).  This is a **counterexample to
+the one-direction moment/floor method**, not a common graph.  In particular
+the whole (k=4p+6) shell and residual (ii) remain open.
+
+Evidence: `src/e1_gmin_m4_prop15739.py`,
+`tests/test_prop15739.py`,
+`evidence/e1_gmin_m4_prop15739.json`, and
+`evidence/NOTE_2026-08-31_p13_exceptional_quartic_close.md`.
+
+## Proposition 15.740 — translation averages split the generic p=13 branch
+
+In the remaining generic (p=13,t=3) row, write the seven hard means as
+(a_L=14k_L).  The exact ledger is
+
+\[
+ k_L\ge1,\qquad \sum_L k_L=10.
+\]
+
+Thus, up to permutation, the hard quotient partition is one of
+
+\[
+ 1^6 4,\qquad 1^5 2 3,\qquad 1^4 2^3.             \tag{15.740.1}
+\]
+
+Every exact (k_L=1) hard cell is a signed star.  Its even power sums vanish
+over (\mathbb F_{13}).  Hence five exact hard directions give more than four
+projective roots of both global binary forms and force
+
+\[
+ M_2\equiv M_4\equiv0.                            \tag{15.740.2}
+\]
+
+Consider any opposite direction.  It has (Q=3), mean 20, and (b=0).  For
+its normalized signed matrix (W), coefficient comparison and
+nonnegativity give
+
+\[
+ \sum W=-20,\quad \sum|W|\le56,\quad
+ B(X)=-5-\frac12\operatorname{cut}_W(X)\ge0
+ \quad (X\in J(13,7)).                             \tag{15.740.3}
+\]
+
+Conditioning a uniform seven-set to contain a fixed pair gives
+
+\[
+ \mathbb E[B\mid i,j\in X]={20+12W_{ij}\over44},
+\]
+
+so integrality implies (W_{ij}\ge-1).  For (a=1,\ldots,6), let (n_a) be
+the sum of (W_{ij}) over the thirteen unordered cyclic pairs of difference
+(\pm a).  Equations (15.740.2)--(15.740.3) imply
+
+\[
+ -13\le n_a\le18,\quad \sum_a n_a=-20,\quad
+ \sum_a|n_a|\le56,
+\]
+
+\[
+ \sum_a a^2n_a\equiv\sum_a a^4n_a\equiv0
+ \pmod {13}.                                      \tag{15.740.4}
+\]
+
+For a seven-set (X\subset\mathbb F_{13}), put
+(c_a(X)=|X\mathbin\triangle(X+a)|).  A fixed distance-(a) edge is separated
+by exactly (c_a(X)) of the thirteen translates of (X).  Summing the thirteen
+instances of (15.740.3) therefore gives
+
+\[
+ \sum_{a=1}^6c_a(X)n_a\le-130.                    \tag{15.740.5}
+\]
+
+The 1,716 seven-sets give exactly 74 distinct vectors (c(X)).  Exact modular
+row reduction and bounded enumeration of (15.740.4) leave 32,313 aggregate
+vectors; an independent meet-in-the-middle count gives the same number.
+Greedily selecting the lexicographically first maximally eliminating vector
+from the 74 leaves the exact remainder sequence
+
+\[
+ 32313\to18091\to8124\to2037\to642\to225\to57\to12\to4\to0.
+                                                               \tag{15.740.6}
+\]
+
+Thus nine instances of (15.740.5) already make the necessary six-variable
+aggregate relaxation infeasible.  An independently encoded 14-variable,
+19-constraint CP-SAT model returns exact status `INFEASIBLE`.  Since every
+genuine opposite cell maps into this relaxation, the (1^6 4) and
+(1^5 2 3) partitions in (15.740.1) are impossible.  Therefore
+
+\[
+ \boxed{p=13,t=3:\quad\text{only the hard partition }1^4 2^3
+ \text{ remains}.}                                \tag{15.740.7}
+\]
+
+This does not close (p=13,k=58).  The remaining theorem must couple four
+exact (P=5) stars, three elevated (P=6) hard cells, and seven
+(Q=3,b=0) opposite cells through one common 59-edge graph.  The binary
+affine-Radon reconstruction used for that coupling is already Proposition
+15.692; it is imported, not renumbered.  No further local aggregate census
+is an active route.
+
+Evidence: `src/e1_gmin_m4_prop15740.py`,
+`tests/test_prop15740.py`,
+`evidence/e1_gmin_m4_prop15740.json`, and
+`evidence/NOTE_2026-08-31_p13_generic_translation_average.md`.
+
 ## Proposition 15.723 — paired-cube obstruction to middle floor-plus-two lifts
 
 Put (p=2m-1\ge17). Let (A\ge0) be an integer-valued quadratic on

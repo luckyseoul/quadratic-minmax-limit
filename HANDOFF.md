@@ -1,9 +1,10 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-31 (through 15.737; required bi-tight levels 2 and 3 are
-closed, and residual (ii) is closed for every boundary at
-`k in {4p,4p+2,4p+4}` for every prime `p>=11`; critical `p=5,7` and later
-even layers remain open)
+**Date:** 2026-08-31 (through 15.740; required bi-tight levels 2 and 3 are
+closed, residual (ii) is closed for every boundary at
+`k in {4p,4p+2,4p+4}` for every prime `p>=11`, and the exceptional
+`p=13,t=3,u=3` row is closed; critical `p=5,7` and the generic later-layer
+branches remain open)
 **The quadratic-minmax limit is still OPEN.**
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
 **HEAD:** on `main`. Working brain is ALWAYS main.
@@ -11,7 +12,7 @@ even layers remain open)
 **Mandatory preflight:** read
 `evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md` before launching another
 solver, projection, shell, channel, orbit, or timeout. It accounts for every
-assigned proposition through 15.737 and maps the former scratch scripts to
+assigned proposition through 15.740 and maps the former scratch scripts to
 closed, dead, necessary-only, or live routes.  The 2026-08-31 worktree
 cleanup and remote archive are recorded in
 `evidence/NOTE_2026-08-31_DIRTY_WORKTREE_TRIAGE.md`.
@@ -22,7 +23,10 @@ acceptance units. The two genuine leftovers—multi-level Type I and non-Walsh
 residual (ii)—remain False, so L is OPEN. Propositions 15.734--15.735 and
 15.737 close `k in {4p,4p+2,4p+4}` for every `p>=11`, without a
 boundary-size hypothesis. They do not close critical `p=5,7`, `p=11` at
-`k>=50`, or `p>=13` at `k>=4p+6`. Aut-Schur / Gsum /
+`k>=50`, or the generic `p>=13` branches at `k>=4p+6`. Propositions
+15.738--15.739 additionally close the exceptional `p=13,t=3,u=3` row, and
+15.740 reduces the generic p13 row to its four-exact hard partition.  They do
+not close `p=13,k=58` or the whole fourth shell. Aut-Schur / Gsum /
 pairing remain False. The corrected `e1_closed_general()` is the global predicate and is
 False; only `e1_bounded_residual_split_closed()` retains the historical
 bounded `True`. The full
@@ -51,6 +55,73 @@ excluding any of its 56 actual line boundaries in two orbits. The positive
 `z=7` remainder stays open. p=13 orbits /
 mesh k=6 are not a close. cpu44
 stays hard-closed.
+
+## 15.740 — translation averages leave one generic `p=13` partition
+
+The generic p13 hard quotient ledger has exactly three partitions:
+`1^6 4`, `1^5 2 3`, and `1^4 2^3`.  Five exact hard stars force the global
+binary forms `M_2` and `M_4` to vanish.  For any opposite `Q=3,b=0` cell,
+pair-conditioned cuts give `W_ij>=-1`.  Aggregating its coefficients over
+the six cyclic distance classes produces integers `n_a` in `[-13,18]` with
+sum `-20`, `l1<=56`, and vanishing quadratic and quartic moments modulo 13.
+Summing each cut inequality over all 13 translations gives 74 possible
+linear inequalities in those six variables.
+
+Exact enumeration leaves 32,313 rows before translated cuts.  Nine
+deterministically selected inequalities eliminate all of them; an
+independently encoded 14-variable CP-SAT model is also infeasible.  Hence
+the five- and six-exact partitions are impossible.  Only `1^4 2^3` remains.
+This is the stopping point for finite local catalogs.  The live p13 theorem
+is structural: exclude a single common 59-edge graph realizing four exact
+`P=5` stars, three elevated `P=6` hard cells, and seven `Q=3,b=0` opposite
+cells.  Proposition 15.692 already supplies the binary affine-Radon
+reconstruction; do not renumber or rerun it.
+
+## 15.739 — exceptional `p=13,t=3,u=3` row closed; generic moment frontier
+
+The corrected complement-triple target has coefficient offset two.  Thus
+the seven exceptional hard directions have common parallel count `P=2` or
+`P=8`.  Exact opposite edge accounting forces at least four phase-zero
+mass-14 cells at `Q=6` or `Q=0`, respectively.  Proposition 15.738 reduces
+either cell to `B=x_i*x_j`.
+
+For even `d`, retain the global homogeneous form
+
+`M_d(L)=sum_({u,v} in H) chi(u-v)(L(u)-L(v))^d`.
+
+If `h` is the common hard sign, both exceptional hard gauges satisfy
+`2S_4=S_2^2`.  Hence `G=2hM_4-M_2^2` is a binary quartic with seven
+projective roots and is identically zero.  An opposite selected-pair cell
+instead has `S_2=(i-j)^2`, `S_4=(i-j)^4`, and therefore
+`G=-3(i-j)^4!=0` in `F_13`.  This contradiction closes exactly the
+exceptional row.
+
+For the generic branch at `p=1 mod 4`, `p>=17`, at least `(p-5)/2` exact
+hard stars force every even moment through degree `(p-9)/2` to vanish.
+Conditional balanced-cut averages force the opposite signed matrix alphabet
+to `{-1,0,1,2,3}`.  At `p=17` this yields an exact bounded integer model
+with all 24,310 middle cuts and moments `M_2=M_4=0`.  A two-intersection
+stabilizer average further puts every cut in `[-26,-12]`, so its associated
+quadratic has values `{0,...,7}`, mean `6/17`, and total mass 8,580.  Current
+complete-domain runs are `UNKNOWN`, not certificates.  At generic `p=13`, an explicit local
+elevated cell has normalized `S_2=0` but `S_4=5` (so global `M_4=5h`),
+proving that another independent
+floor/moment pass is insufficient.  It is a method counterexample, not a
+residual graph.
+
+## 15.738 — exact `J(13,7)` mass-14 Boolean catalog
+
+For the phase-zero `b=0,a=14` cells forced by the exceptional ledger,
+Proposition 15.688 leaves height one or four.  Exact coefficient, cut,
+row-parity, and `l1` models at `Q=0` and `Q=6` exclude height four.  On
+`J(13,7)`, the 78 pair evaluations have rank 78 and 1,638 independent
+third-difference identities span their annihilator.  An anchored exact
+CP-SAT certificate proves that all support-462 Boolean quadratics are the
+78 selected pairs, 156 oriented mixed pairs, and 858 signed mixed triples.
+Their coefficient offsets are `6,4,4`, so only `x_i*x_j` survives modulo
+six at `Q=0,6`.  Its exact moments are `(i-j)^2` and `(i-j)^4`.  This is an
+exhaustive finite cell certificate and the local input to 15.739; by itself
+it is not a residual theorem.
 
 ## 15.737 — binary quadratic moment closes `p=11` at `k=44,46,48`
 
@@ -2991,7 +3062,7 @@ estimates remain; none is proved. See
 | Leftover | Predicate | Remaining estimate |
 |---|---|---|
 | 1 | `phi_F_ge_6_proved_general` | QVAR on k≥7 (all p≥13) **and** principal `\|\|δ\|\|^2 ≤ n(n+10)^2/[6(n-14)(n-6)]`. Crude `E[s^4]≤2n^3` is too weak. |
-| 2 | `residual_ii_k_eq_4p_empty` / `multilevel_ND_k_ge_4p_proved` | Historical 2026-08-21 target. Propositions 15.734--15.735 and 15.737 later close `k in {4p,4p+2,4p+4}` for every `p>=11`. Critical `p=5,7`, `p=11` at `k>=50`, and `p>=13` at `k>=4p+6` remain, so the all-prime predicate remains False. |
+| 2 | `residual_ii_k_eq_4p_empty` / `multilevel_ND_k_ge_4p_proved` | Historical 2026-08-21 target. Propositions 15.734--15.735 and 15.737 later close `k in {4p,4p+2,4p+4}` for every `p>=11`; 15.738--15.739 close the exceptional `p=13,t=3,u=3` row, and 15.740 leaves only the four-exact generic p13 partition. Critical `p=5,7`, `p=11` at `k>=50`, and the generic later branches remain, so the all-prime predicate remains False. |
 | 3 | `type_I_multilevel_bad_case_ND_closed` | `\|μ\|≤(p-2)/(2p^2)` on \|κ\|=1, equivalently `\|R̄₄\| ≤ \|L\|(p^4-1)+4(p-2)`. `\|μ\|≤\|T\|` does not close; `\|μ\|≤maj` is false at p=7. |
 
 Historical dump: all three then-live leftovers were False; Gsum False;
@@ -3060,11 +3131,12 @@ overridden twice.
 | Item | Flag | Status |
 |---|---|---|
 | \(\lambda_{\min}(\Phi)\ge6\) on \(Z\) | `phi_F_ge_6_proved_general=False` | Open. Exceptional QVAR is closed through `k=6` and remains on `k>=7` from `p=13`; principal blocks retain the delta-variance target. |
-| Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open globally. Propositions 15.734--15.735 and 15.737 close `k in {4p,4p+2,4p+4}` for every `p>=11`. Critical `p=5,7`, `p=11` at `k>=50`, and `p>=13` at `k>=4p+6` remain. The all-prime legacy predicate therefore stays False. |
+| Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open globally. Propositions 15.734--15.735 and 15.737 close `k in {4p,4p+2,4p+4}` for every `p>=11`; 15.738--15.739 close the exceptional `p=13,t=3,u=3` row, and 15.740 leaves only the four-exact generic p13 partition. Critical `p=5,7`, `p=11` at `k>=50`, that p13 common-graph case, and the generic later branches remain. The all-prime legacy predicate therefore stays False. |
 | Type I, Max− not two-level \(\{-1,-3\}\) | `type_I_multilevel_bad_case_ND_closed=False` | Open. Remainder is \(A_{\mathrm{full}}\). |
 | Lemma D | True | Closed. Do not unflip. |
 
-**Next attack.**  Complete the `p=13,k=7` orbit decomposition: accumulate the
+**Historical next attack, superseded as an E(1) gate by 15.720.** Complete
+the `p=13,k=7` orbit decomposition: accumulate the
 depressed scalar-7 representatives from each new free orbit, ask CP-SAT for a
 solution outside their union, and compute each orbit's exact `k=7` moment on
 Jellyfin until infeasibility certifies exhaustion.  The first orbit contributes
@@ -3170,6 +3242,9 @@ deleted so the reversal is traceable.
 | `src/e1_gmin_m4_prop15735.py` | Isolated-chart extension excluding `k=4p+2,4p+4` for every boundary and every `p>=13` |
 | `src/e1_gmin_m4_prop15736.py` | Exhaustive sharp Boolean-quadratic catalog on `J(11,6)` |
 | `src/e1_gmin_m4_prop15737.py` | Binary quadratic moment close of `p=11`, `k=44,46,48` |
+| `src/e1_gmin_m4_prop15738.py` | Exact `J(13,7)` mass-14 height-four exclusion and exhaustive support-462 Boolean-quadratic catalog |
+| `src/e1_gmin_m4_prop15739.py` | Corrected exceptional `p=13,t=3,u=3` quartic close and generic higher-even-moment/cut reduction |
+| `src/e1_gmin_m4_prop15740.py` | Exact translation-average exclusion of the five- and six-exact generic p13 partitions |
 | `evidence/NOTE_2026-08-31_p31_endpoint_paley_hard_profile.md` | Full proof ledger for 15.728 and its explicitly open scope |
 | `evidence/NOTE_2026-08-31_affine_unique_trisecant_reduction.md` | Full proof ledger for 15.729 and the retracted ceiling route |
 | `evidence/NOTE_2026-08-31_endpoint_repair_ensemble.md` | Full proof ledger for the 15.730 complementary-repair ensemble |
@@ -3180,6 +3255,9 @@ deleted so the reversal is traceable.
 | `evidence/NOTE_2026-08-31_first_three_residual_shells.md` | Full 15.735 proof ledger for the next two large-prime layers |
 | `evidence/NOTE_2026-08-31_p11_sharp_boolean_quadratic_catalog.md` | Exact 15.736 finite-catalog certificate and audit |
 | `evidence/NOTE_2026-08-31_p11_binary_quadratic_moment_close.md` | Full 15.737 proof ledger for the three `p=11` layers |
+| `evidence/NOTE_2026-08-31_p13_mass14_boolean_catalog.md` | Exact 15.738 rank, height-four infeasibility, Boolean catalog, offsets, and selected-pair moments |
+| `evidence/NOTE_2026-08-31_p13_exceptional_quartic_close.md` | Corrected 15.739 exceptional ledger, sign-safe quartic contradiction, and the surviving generic moment frontier |
+| `evidence/NOTE_2026-08-31_p13_generic_translation_average.md` | Exact 15.740 six-variable translation-average certificate and the remaining common-graph gate |
 | `evidence/NOTE_2026-08-31_p31_public_11_of_12_arc_audit.md` | Historical exhaustive finite certificate for eleven public `p=31` complete 22-arc classes; not needed for the later symbolic endpoint close |
 | `scripts/p31_complete_22arc_public_audit.py` | Deterministic replay of the public eleven-class `c_1` and unique-secant audit |
 | `src/e1_gmin_m4_prop15718.py` | Hash-pinned positive-`z=7` affine/global-join reduction and Johnson-semigroup certificate |

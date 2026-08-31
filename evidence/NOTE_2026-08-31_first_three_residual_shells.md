@@ -177,33 +177,71 @@ normalization and is not a residual graph.** It is a counterexample to any
 attempt to finish branch B using only the one-direction lift floor or another
 mean-halving step.
 
-## 5. The exceptional `p=13,t=3` hard branch
+## 5. The corrected `p=13,t=3,u=3` branch is excluded
 
-At `p=13`, `m=7`, and `u=3`, equation (1) permits `k_d=1` in all seven hard
-directions. The exact phase-one cell `b=10,a=20` realizes the whole budget:
-
-```text
-7*20=140=2m(m+3).
-```
-
-It has the baseline `(2-r)^2` on the three-point complement, coefficient
-target `P=5`, and hard finite-edge total `35`. The opposite ledger has
+**Correction after Propositions 15.738--15.739.**  The earlier version of
+this note assigned coefficient target `P=5` to the exceptional hard cell.
+That was wrong.  The floor polynomial is still
 
 ```text
-sum Q=24,       a(Q)=14(Q-2).
+A=(2-r)^2,       r=|X intersect C|,       |C|=3,
 ```
 
-The available floors do not exclude this allocation. This is an additional
-arithmetic survivor, not a constructed residual graph.
+but in signed coordinates its target is
 
-For reference, the `p=13` phase-zero floors at `b=0,2,...,12` are
+```text
+epsilon*S_H=5-sum_(i in C) z_i+sum_({i,j} subset C) z_i*z_j.
+```
+
+Its coefficient offset is therefore `5-3=2`.  With `q=6`, slice-kernel
+integrality gives `6 | P-2`.  Equal hard means give one common `P`, and the
+edge bound gives `P<=8`, so the only hard ledgers are
+
+```text
+P=2:  sum Q=45,  a(Q)=14(Q-5),
+P=8:  sum Q=3,   a(Q)=14(Q+1).
+```
+
+In the first ledger, a putative `Q=5,a=0` cell has target offset three and
+is coefficient-incompatible modulo six.  Hence some opposite direction has
+`Q=6,a=14`.  In the second ledger some direction has `Q=0,a=14`.
+
+At phase zero and mean fourteen, the exact `b=2` cell has offset four and is
+incompatible with both `Q=0` and `Q=6`; the `b=12` floor-plus-two cell is
+excluded by Proposition 15.688.  Thus `b=0`, `A=2B`, and
+`4p E[B]=14`.  Proposition 15.688 reduces `max B` to `1` or `4`.
+Proposition 15.738's exact residual-cell models exclude `max B=4`, and its
+rank-1638 third-difference certificate exhausts the remaining Boolean
+support-462 cells.  Of the 1,092 catalogued cells, coefficient residue leaves
+only
+
+```text
+B=x_i*x_j.
+```
+
+For the global even moments `M_2,M_4`, every exceptional hard triple has
+normalized moments `S_2=2q_0`, `S_4=2q_0^2`.  If `h` is the hard direction
+sign, the homogeneous quartic
+
+```text
+G=2h*M_4-M_2^2
+```
+
+vanishes in all seven hard directions and hence identically.  The surviving
+opposite pair cell has moments `S_2=(i-j)^2`, `S_4=(i-j)^4` and the opposite
+sign, so `G=-3(i-j)^4`, nonzero in `F_13`.  Proposition 15.739 therefore
+excludes the exceptional branch.  It is no longer an arithmetic survivor.
+
+For reference, the `p=13` phase-zero floors at `b=0,2,...,12` remain
 
 ```text
 0, 14, 20, 26, 24, 26, 12.
 ```
 
-Thus the generic branch-B mean `a=20` can also use the exact `b=4` cell;
-unlike `p>=17`, `b=0` is not forced.
+The separate generic branch-B mean `a=20` is not closed by this argument.
+Its exact `b=4` cell has offset five and is coefficient-incompatible with
+`Q=3`; its remaining `b=0` cells must instead be coupled through the common
+graph.
 
 ## 6. A coefficient-normalized necessary-condition witness
 
@@ -253,15 +291,35 @@ witness.**
 
 ## 7. Exact scope and next gate
 
-Proposition 15.735 proves `t=1,2`; it makes no claim at `t=3`. The audit
-above leaves at `k=4p+6`:
+Proposition 15.735 proves `t=1,2`; it makes no claim at `t=3`.  After
+Propositions 15.738--15.739 remove the mis-normalized exceptional `p=13`
+branch, the audit leaves exactly one branch at `k=4p+6`:
 
 1. generic branch B for `p=1 mod 4`, with every opposite direction at
-   `Q=3,a=p+7`; and
-2. the extra `p=13,u=3,b=10,a=20` hard branch.
+   `Q=3,a=p+7`.
+
+For `p=4a+1>=17`, at least `(p-5)/2` hard directions are exact stars.  The
+global even moments consequently vanish identically in the exact range
+
+```text
+M_d=0,       d=2,4,...,(p-9)/2.
+```
+
+At `p=17` this gives the two new congruences `M_2=M_4=0`; it still has not
+produced either a witness or an impossibility certificate.  The `p=13`
+generic branch similarly forces `M_2=0`, and the recorded coefficient
+witness shows that this condition alone is insufficient.
+
+Proposition 15.740 makes the p13 partition split exact.  Its hard quotient
+patterns are `1^6 4`, `1^5 2 3`, and `1^4 2^3`.  In the first two, five
+exact stars force both `M_2=M_4=0`; cyclic distance aggregation and nine
+translation-summed cut inequalities then exclude every possible opposite
+cell.  Hence only `1^4 2^3` remains.  This terminates the finite local census:
+the next p13 implication must exclude a common 59-edge graph realizing four
+exact stars, three elevated hard cells, and all seven opposite cells.
 
 The local and coefficient-normalized examples show that another independent
-direction floor, moment bound, or averaging/halving argument cannot close
-the whole shell. A further proof must couple several directional matrices,
-or couple the hard and opposite types, through the common flip graph and
-line-incidence reconstruction.
+direction floor or averaging/halving argument cannot close the whole shell.
+A further proof must couple the hard and opposite types through the common
+flip graph and line-incidence reconstruction; another local catalog or
+translation-average census is not the active gate.
