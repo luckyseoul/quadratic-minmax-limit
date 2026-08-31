@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-31
 
-**Scope:** every assigned proposition through Proposition 15.740, the live
+**Scope:** every assigned proposition through Proposition 15.741, the live
 predicate wiring, and the attack scripts present during the audit
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
@@ -339,6 +339,21 @@ graph of four exact stars, three elevated hard cells, and seven opposite
 cells.  The affine binary-Radon reconstruction is already Proposition
 15.692 and must be imported rather than renumbered.
 
+A twenty-fourth semantic check gives Proposition 15.741 and supplies the
+required common-graph premise without extending the local catalog.  Four
+exact stars force the orientation-independent tensors `M_2=T_3=0` and
+`U_4=lambda M_4`, with `M_4!=0`.  The common 59-edge graph then maps to 84
+nonnegative integer displacement multiplicities whose 98-by-84
+difference-Radon transform has Gram matrix `13I+2J-G`, an exact inverse, and
+nonstar energy `707+26C`.  Six translated cuts imply only `C<=11`.
+Explicit matched local cells and a strict fractional transform witness show
+respectively that the independent cellwise scalar consequences and the bare
+linear difference transform do not close the row.  They do not witness one
+common global quartic.  The changed premise is layered: first add integrality,
+the full quartic value code, and all cut/parity lifts to the 84-class system;
+then, only if needed, add midpoint placement, simplicity, and full fibre-pair
+compatibility in the binary edge lift.
+
 The Bartoli--Storme ``unique-trisecant ceiling'' previously recorded after
 15.729 is **RETRACTED**. Under the corollary's other hypotheses, including
 `d>3+2sqrt(q)` and existence of the configuration, its threshold is the upper
@@ -391,11 +406,11 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 655 source-backed proposition modules from 15.83 through 15.740.
+- There are 656 source-backed proposition modules from 15.83 through 15.741.
 - The labels 15.537, 15.583, and 15.584 have no proposition module.  They are
   unassigned labels, not unreviewed propositions; later source headers mention
   those numbers only as historical range/state markers.
-- Therefore every assigned proposition through 15.740 was included in this
+- Therefore every assigned proposition through 15.741 was included in this
   audit.  The grouped ledger below is by shared mathematical route rather than
   a 734-row restatement of the assigned propositions.
 
@@ -406,10 +421,10 @@ The public theorem is gated consistently by the corrected global
 currently `False`. The historical bounded `True` is available only through
 `e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after audit of 15.740 |
+| unit | exact live content | status after audit of 15.741 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
-| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close `k in {4p,4p+2,4p+4}`, for every boundary size, at all primes `p>=11`; 15.738--15.739 close the exceptional `p=13,t=3,u=3` row, and 15.740 leaves only its four-exact generic partition. The exact remainder is critical `p=5,7`, `p=11,k>=50`, that p13 common-graph case, and generic later branches; the separate positive `p=7,z=7` branch persists. The global predicate stays false. |
+| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close `k in {4p,4p+2,4p+4}`, for every boundary size, at all primes `p>=11`; 15.738--15.739 close the exceptional `p=13,t=3,u=3` row, 15.740 leaves only its four-exact generic partition, and 15.741 reduces that common graph to an integral displacement--midpoint gate. The exact remainder is critical `p=5,7`, `p=11,k>=50`, that p13 gate, and generic later branches; the separate positive `p=7,z=7` branch persists. The global predicate stays false. |
 | Type I | the multi-level `3A+B>0` bad case | **OPEN** — `|κ|=1` needs `G>T` (for example `|μ|≤|L|`), while `|κ|=3` independently needs `χ_d((2p-1)μ+(p-2)ν)>-(p-2)/p`; the particular term is safe but the δ remainder is open |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
@@ -456,6 +471,7 @@ top-level front.
 | **15.738** | exact `J(13,7)` mass-14 height-four models and support-462 Boolean catalog | **EXHAUSTIVE FINITE CERTIFICATE.** Height four is infeasible at `Q=0,6`; the 1,092 Boolean supports are exhausted, and offsets leave only a selected pair. This is a local-cell theorem, not residual closure by itself. |
 | **15.739** | corrected exceptional p13 ledger, sign-safe quartic, and generic even-moment/cut reduction | **PROVED BRANCH THEOREM AND OPEN REDUCTION.** The exceptional `p=13,t=3,u=3` row is empty. At p17 every cut lies in `[-26,-12]`, giving a `{0,...,7}`-valued quadratic of total mass 8,580. Generic `p=13,k=58` and generic `p>=17,t=3` remain open; the local p13 elevated cell rules out another one-direction moment continuation. |
 | **15.740** | cyclic distance aggregation and translation-summed cuts in the generic p13 row | **PROVED BRANCH SPLIT WITH EXHAUSTIVE FINITE CERTIFICATE.** Nine inequalities eliminate all 32,313 aggregates when at least five hard stars are exact. Only `1^4 2^3` remains; further work must couple the common 59-edge graph, not extend the local census. |
+| **15.741** | common-graph cubic/quartic endpoint tensors and the 84-class difference-Radon transform | **PROVED OPEN REDUCTION AND METHOD BARRIER.** The four exact stars force `M_2=T_3=0`, `U_4=lambda M_4`, and `M_4!=0`; the transform gives an exact nonnegative-integer inverse and energy `707+26C` with `C<=11`. Local witnesses defeat only the cellwise scalar consequences; a fractional witness defeats only the bare linear transform. The integral difference system, then if necessary its binary midpoint lift, remains open. |
 
 ## Exact duplicated run
 
@@ -622,8 +638,9 @@ Before spending mesh/GPU time:
    floor-plus-two exceptions in any independent profile DP. Do not reopen the
    exceptional `p=13,t=3,u=3` row: 15.738--15.739 close it by an exact
    mass-14 catalog and quartic contradiction. Do not extend the generic p13
-   aggregate census: 15.740 leaves exactly `1^4 2^3`, whose live premise is
-   common-graph compatibility;
+   aggregate census: 15.740 leaves exactly `1^4 2^3`, and 15.741 identifies
+   its live premise as the integral difference-Radon inverse plus midpoint
+   compatibility;
 5. search tracked files, untracked scripts, `/tmp` artifact names and hashes,
    git history, GitHub, MathOverflow, literature notes, and OEIS when number
    patterns are involved;

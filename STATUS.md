@@ -1,4 +1,30 @@
-# Status (2026-08-31; through Proposition 15.740)
+# Status (2026-08-31; through Proposition 15.741)
+
+**15.741 PROVES a common-graph moment and difference-Radon reduction for the
+last generic `p=13,t=3` partition; the partition remains OPEN.**  Four exact
+positive-star projections of the same 59-edge graph force the homogeneous
+forms `M_2=T_3=0`.  The two orientation-independent quartics have the same
+four roots, so `U_4=lambda M_4`; moreover `M_4` is nonzero, since otherwise
+15.740 already excludes every required opposite cell.  Explicit elevated and
+opposite cells satisfy all one-direction conditions with the same
+`lambda=7`, so the independent cellwise scalar consequences do not close the
+branch.  They do not certify one common quartic or difference transform.
+
+The genuinely common datum is now compressed to the 84 unoriented nonzero
+edge-displacement multiplicities `m_delta`.  Their exact 98-by-84
+difference-Radon transform has Gram matrix `13I+2J-G`, an integer inverse,
+and the collision identity
+
+`sum_(three elevated + seven opposite) ||q_L||_2^2 = 707+26C`,
+
+where `C=sum_delta binom(m_delta,2)`.  Six translated cuts give `C<=11` but
+not a contradiction.  The inverse supplies 84 pointwise nonnegative-integer
+congruences.  The next serious p13 lemma is first to exclude this 84-class
+integer system with its full nonzero quartic value code and all ten cut/parity
+lifts.  If it survives, `T_3` and `U_4` supply the first and second midpoint
+constraints on a 14,196-variable binary lift.  Boundary Radon/handshake data,
+another local catalog, or another bare linear averaging pass cannot do that.  Generic
+`p=13,k=58`, residual (ii), multi-level Type I, and the limit remain OPEN.
 
 **15.740 PROVES that the generic `p=13,t=3` branch has only the hard
 quotient partition `(1,1,1,1,2,2,2)`.**  The other two partitions have five
@@ -1257,7 +1283,7 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 | Bi-tight majorization algebra (15.167) | CANDIDATE | `prop15167.py` |
 | Type I freeness-fail ND (two-level Max−) | **CLOSED** (that slice) | 15.272 \(k=1\cup k=3\) \(\Rightarrow G_+\succ0\Rightarrow\) 15.249 dual-eq empty |
 | Residual (ii), affine + even \(k\le4p-2\) | **CLOSED** (that range) | 15.179 + 15.236 + 15.237 |
-| Residual (ii), even \(k\ge4p\) | **OPEN globally; first three layers CLOSED for \(p\ge11\)** | 15.734--15.735 and 15.737 close \(k\in\{4p,4p+2,4p+4\}\) for every boundary and every \(p\ge11\); 15.738--15.739 close the exceptional \(p=13,t=3,u=3\) row, and 15.740 leaves only the four-exact generic p13 partition. Remaining: critical \(p=5,7\); \(p=11\) at \(k\ge50\); that p13 common-graph partition and the generic later branches. |
+| Residual (ii), even \(k\ge4p\) | **OPEN globally; first three layers CLOSED for \(p\ge11\)** | 15.734--15.735 and 15.737 close \(k\in\{4p,4p+2,4p+4\}\) for every boundary and every \(p\ge11\); 15.738--15.739 close the exceptional \(p=13,t=3,u=3\) row, 15.740 leaves only the four-exact generic p13 partition, and 15.741 gives its integral displacement--midpoint gate. Remaining: critical \(p=5,7\); \(p=11\) at \(k\ge50\); that p13 gate and the generic later branches. |
 | Type I, multi-level Max− | **OPEN** | 15.543 \(\mu_{1d}\); 15.544 p=5 mix; 15.546 p=7 mix \(109/2863<|T|\); 15.551 Galois line-union; 15.559 Aut_e DEAD as \(A_{\mathrm{full}}\) name; `type_I_multilevel_bad_case_ND_closed=False` |
 | \(\lambda_{\min}(\Phi)\ge6\) | **OPEN** | 15.279; 15.550–15.582: \(S=\mathrm{Kl}\), \(\mu_{1d}\), \(\mu_{k=3}\) named; \(p=5\) \(Q_{++}=48/13\); \(A_{\mathrm{full}}\) / \(D\) / ensemble \(Q_\tau\) unnamed; `phi_F_ge_6=False` |
 | E(1) / \(L=\tfrac12\) | **OPEN** | needs the four leftovers above |
@@ -1266,7 +1292,7 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 ### Fatal gaps (honest)
 
 1. Residual **(i)** two-level dual-eq: **CLOSED** by 15.272 (not Aut-Schur, not Gsum LB). Multi-level Type I is **OPEN**. `gsum_disj_lb` remains False and is unused.
-2. Residual **(ii)** for affine + even \(k\le4p-2\): **CLOSED** (15.179 + 15.236 + 15.237). For \(k\ge4p\), the first three layers are **CLOSED** for every \(p\ge11\) by 15.734--15.735 and 15.737; 15.738--15.739 close the exceptional `p=13,t=3,u=3` row, and 15.740 leaves only its four-exact generic partition. Critical \(p=5,7\), \(p=11\) at \(k\ge50\), that p13 common-graph partition, and the generic later branches remain **OPEN**. Do not call residual (ii) globally closed.
+2. Residual **(ii)** for affine + even \(k\le4p-2\): **CLOSED** (15.179 + 15.236 + 15.237). For \(k\ge4p\), the first three layers are **CLOSED** for every \(p\ge11\) by 15.734--15.735 and 15.737; 15.738--15.739 close the exceptional `p=13,t=3,u=3` row, 15.740 leaves only its four-exact generic partition, and 15.741 gives its integral displacement--midpoint gate. Critical \(p=5,7\), \(p=11\) at \(k\ge50\), that p13 gate, and the generic later branches remain **OPEN**. Do not call residual (ii) globally closed.
 
 ### Remainder progress (15.172–194)
 

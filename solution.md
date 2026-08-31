@@ -10808,6 +10808,181 @@ Evidence: `src/e1_gmin_m4_prop15740.py`,
 `evidence/e1_gmin_m4_prop15740.json`, and
 `evidence/NOTE_2026-08-31_p13_generic_translation_average.md`.
 
+## Proposition 15.741 — common-graph moments and the difference-Radon gate
+
+Retain the last partition in (15.740.7), and now use that every directional
+matrix comes from one 59-edge graph (H) on (V=\mathbb F_{13}^2).  Besides
+(M_2) and (M_4), define the orientation-independent homogeneous forms
+
+\[
+ T_3(L)=\sum_{\{u,v\}\in H}\chi(u-v)
+ (L(u)+L(v))(L(u)-L(v))^2,                         \tag{15.741.1}
+\]
+
+\[
+ U_4(L)=\sum_{\{u,v\}\in H}\chi(u-v)
+ (L(u)+L(v))^2(L(u)-L(v))^2.                      \tag{15.741.2}
+\]
+
+They have degrees three and four in (L).  In an exact hard direction the
+normalized coefficient matrix is the positive star at a fibre (j).  Writing
+(t=j+y), its four local contractions are
+
+\[
+ \sum_{y\ne0}y^2,quad
+ \sum_{y\ne0}(2j+y)y^2,quad
+ \sum_{y\ne0}y^4,quad
+ \sum_{y\ne0}(2j+y)^2y^2,
+\]
+
+all zero in (\mathbb F_{13}).  The four distinct exact directions therefore
+give
+
+\[
+ M_2\equiv T_3\equiv0.                            \tag{15.741.3}
+\]
+
+Both quartics vanish at those same four points, so they are proportional:
+
+\[
+ U_4=\lambda M_4.                                 \tag{15.741.4}
+\]
+
+Here (M_4\ne0).  Otherwise (M_2=M_4=0), and every required opposite cell
+would enter the infeasible necessary relaxation of Proposition 15.740.
+Thus the four exact directions are precisely the projective roots of (M_4),
+and all three elevated and seven opposite cells have the same ratio
+(\lambda=U_4/M_4).  Equations (15.741.3)--(15.741.4) are invariant under an
+affine relabelling (s\mapsto as+c): the extra terms in (T_3) and (U_4) are
+multiples of (M_2) and (T_3).
+
+This consequence is sharp locally.  On one elevated fibre set put coefficient
+one on (K_5) with vertices ({0,1,4,9,12}) and add one further unit on
+({4,9}).  It has sum and (\ell^1)-norm eleven, odd rows ({4,9}), and every
+seven-cut is at most seven.  Its contractions are
+
+\[
+ (M_2,T_3,M_4,U_4)=(0,0,7,10),\qquad U_4/M_4=7.
+\]
+
+For an opposite cell, put (w_{0x}=-1) for (x\ne0), put (w_{1x}=-1) for
+(x\notin\{0,1,3,6\}), and put (w_{36}=1).  Its sum is (-20), its
+(\ell^1)-norm is 22, every row is even, and every seven-cut lies in
+({-14,-12,-10}).  Its contractions are
+
+\[
+ (M_2,T_3,M_4,U_4)=(0,0,8,4),\qquad U_4/M_4=7.
+\]
+
+These are directional coefficient cells, not a common graph.  They prove
+only that the independent cellwise scalar consequences (M_2=T_3=0) and
+(U_4=\lambda M_4) do not exclude either cell type.  They do not realize the
+values of one common global quartic or the difference transform below.
+
+There is nevertheless a stronger common-graph compression.  Let
+
+\[
+ \Omega=(V\setminus\{0\})/\{\pm1\},\qquad |\Omega|=84,
+\]
+
+and let (m_\delta) be the number of edges of (H) having unoriented
+displacement (\delta).  For a projective functional (L), let
+(\epsilon_L) be the character of its kernel and define, for
+(a\in\mathbb F_{13}/\{\pm1\}),
+
+\[
+ q_L(a)=\epsilon_L\sum_{L\delta=\pm a}\chi(\delta)m_\delta. \tag{15.741.5}
+\]
+
+Then (q_L(0)=P_L), and the six nonzero entries are exactly the cyclic
+distance aggregates of (W^L).  In particular, the full quartic value code is
+
+\[
+ \sum_{a=1}^6a^4q_L(a)=\epsilon_LM_4(L),
+ \qquad M_4(L)=c\prod_{i=1}^4\det(L,L_i),\quad c\ne0.
+\]
+
+If (B) is the 98-by-84 incidence transform in
+(15.741.5), two distinct displacement classes meet in one row when they are
+projectively collinear and in two rows otherwise.  Hence
+
+\[
+ B^\mathsf TB=13I+2J-G,                            \tag{15.741.6}
+\]
+
+where (G) has fourteen diagonal (J_6)-blocks.  Put
+(T=\sum_e\chi(e)), let (r) be the projective direction of (\delta), and
+write (P_r) for its parallel count.  Multiplying (15.741.5) by
+(B^\mathsf T) gives the exact integer inverse
+
+\[
+ 13m_\delta=P_r-2\epsilon_rT+
+ \epsilon_r\sum_L\epsilon_Lq_L(|L\delta|).         \tag{15.741.7}
+\]
+
+If (h) is the hard sign and (\sigma_L=\epsilon_L/h), then (T=17h), so the
+right side of (15.741.7) lies in (13\mathbb Z_{\ge0}) pointwise.  Equivalently,
+
+\[
+ 13m_\delta=P_r-34\sigma_r+
+ \sigma_r\sum_L\sigma_Lq_L(|L\delta|).
+\]
+
+Parseval in (15.741.6), the parallel profile (5^4,6^3,3^7), and the four
+exact rows (q=(2,2,2,2,2,2)) give, with
+(C=\sum_\delta\binom{m_\delta}{2}),
+
+\[
+ \boxed{\sum_{L\ \mathrm{nonexact}}\sum_{a=1}^6q_L(a)^2
+       =707+26C.}                                  \tag{15.741.8}
+\]
+
+Six multiplicative dilates of the interval seven-set have circulant cut
+vector ((2,4,8,10,6,12)); the squared singular values are
+(1764,76,84,100,84,76).  Applying their six cut inequalities and the exact
+parities bounds an elevated row's energy by 86 and an opposite row's by 106.
+Consequently
+
+\[
+ 0\le C\le11.                                      \tag{15.741.9}
+\]
+
+This is not a contradiction.  The fractional assignment which spreads each
+parallel count uniformly over its six displacement lengths gives exact rows
+(2,\ldots,2), elevated rows ((11/6,\ldots,11/6)), and opposite rows
+((-10/3,\ldots,-10/3)); all translated-cut inequalities hold strictly.
+This point belongs only to the bare direction-count, exact-row, and
+translated-cut relaxation: it is nonintegral, has (M_4=0), and does not test
+midpoint identities.  Thus linear averaging of that bare system cannot
+finish (15.741.7); integrality and the live quartic constraints are essential.
+
+Finally, conditioning the opposite cut inequality gives, without a census,
+
+\[
+ w_{ij}\in\{-1,0,1,2,3\},\qquad
+ d_i=\sum_jw_{ij}\in2\mathbb Z\cap[-12,10],qquad
+ d_i+d_j\le6w_{ij}.                               \tag{15.741.10}
+\]
+
+The lower degree bound uses (w_{ij}\ge-1); the upper bound and pair inequality
+come from conditioning on one or two vertices outside the seven-set.
+
+The displacement transform forgets edge midpoints.  Writing an edge as
+(\{m\pm\delta/2\}), equations (15.741.1)--(15.741.2) are exactly its first
+and second signed midpoint moments.  Therefore the live p13 implication is
+layered.  First exclude the 84-class nonnegative integer inverse (15.741.7),
+with (15.741.8)--(15.741.10), the exact rows, the full nonzero quartic value
+code, and all ten cut/parity lifts.  Only if it survives, lift its
+(m_\delta) to the 14,196 binary midpoint variables and impose (T_3=0),
+(U_4=\lambda M_4), simplicity, and the exact fibre-pair equations.  Proposition
+15.741 is a **proved open reduction and method barrier**.  It does not close
+the four-exact partition, (p=13,k=58), residual (ii), Type I, or the limit.
+
+Evidence: `src/e1_gmin_m4_prop15741.py`,
+`tests/test_prop15741.py`,
+`evidence/e1_gmin_m4_prop15741.json`, and
+`evidence/NOTE_2026-08-31_p13_common_graph_moment_transform.md`.
+
 ## Proposition 15.723 — paired-cube obstruction to middle floor-plus-two lifts
 
 Put (p=2m-1\ge17). Let (A\ge0) be an integer-valued quadratic on

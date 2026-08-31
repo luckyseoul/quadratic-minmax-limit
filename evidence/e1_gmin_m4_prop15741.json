@@ -1,0 +1,799 @@
+{
+  "affine_label_invariance": {
+    "M2_transform": "M2' = a^2*M2",
+    "M4_transform": "M4' = a^4*M4",
+    "T3_transform": "T3' = a^3*T3+2*c*a^2*M2",
+    "U4_transform": "U4' = a^4*U4+4*c*a^3*T3+4*c^2*a^2*M2",
+    "affine_relabeling": "s -> a*s+c with a nonzero",
+    "coefficientwise_checks": 12168,
+    "lambda_U4_over_M4_invariant_when_M2_T3_zero": true,
+    "proved": true
+  },
+  "constructs_common_59_edge_graph": false,
+  "difference_radon_transform": {
+    "G_parallel_definition": "fourteen diagonal J_6 blocks indexed by displacement direction",
+    "Gram_entry_checks": 7056,
+    "Gram_entry_values": {
+      "different_directions": 2,
+      "distinct_same_direction": 1,
+      "same_column": 14
+    },
+    "Gram_formula": "B^T*B=13*I+2*J-G_parallel",
+    "all_off_bin_energy": "803+26*C",
+    "branch_signed_total_T_over_h": 17,
+    "collision_parameter": "C=sum_delta binom(m_delta,2)",
+    "difference_class_count": 84,
+    "displacement_square_sum": "sum_delta m_delta^2=59+2*C",
+    "exact_inverse": "13*m_delta=P_r-2*epsilon_r*T+epsilon_r*sum_L epsilon_L*q_L(|L(delta)|)",
+    "four_exact_star_off_bin_energy": 96,
+    "hard_sign_normalized_inverse": "13*m_delta=P_r-34*sigma_r+sigma_r*sum_L sigma_L*q_L(|L(delta)|), sigma=+1 hard and -1 opposite",
+    "incidence_matrix_sha256": "36e7a0e8b11bb42a3a6d672e11827a82484fb7dd62f69cc5a7b0c7871df908af",
+    "inverse_coefficient_checks": 7056,
+    "nonzero_bin_row_size": 13,
+    "off_bin_parseval": "sum_(L,a>0)q_L(a)^2=13*sum_delta m_delta^2+36",
+    "parallel_count_multiset": [
+      5,
+      5,
+      5,
+      5,
+      6,
+      6,
+      6,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "parallel_square_sum": 271,
+    "proved": true,
+    "quartic_value_code": "sum_(a=1..6) a^4*q_L(a)=epsilon_L*M4(L)",
+    "rational_interior_warning": "the bare direction-count plus four-exact-row transform has a strictly positive fractional point satisfying the translated cuts; it has M4=0 and does not test the live quartic or midpoint constraints",
+    "row_count_including_zero_bins": 98,
+    "row_index": "(projective L,a), a in F_13/+/-={0,...,6}",
+    "signed_transform": "q_L(a)=epsilon_L*sum_(|L(delta)|=a)chi(delta)*m_delta; q_L(0)=P_L",
+    "three_elevated_plus_seven_opposite_off_bin_energy": "707+26*C",
+    "uniform_fractional_assignment": "m_(r,b)=P_r/6",
+    "uniform_fractional_point_checked": true,
+    "uniform_fractional_point_satisfies_integrality": false,
+    "uniform_fractional_point_tests_quartic_or_midpoint_constraints": false,
+    "uniform_fractional_q_values": {
+      "elevated_hard_P6": "11/6",
+      "exact_hard_P5": "2",
+      "opposite_P3": "-10/3"
+    },
+    "uniform_fractional_translated_interval_cut_values": {
+      "elevated_hard_P6": "77",
+      "exact_hard_P5": "84",
+      "opposite_P3": "-140"
+    },
+    "zero_bin_row_size": 6
+  },
+  "elevated_local_cell": {
+    "A_formula": "A(X)=7-cut_W(X)",
+    "A_value_histogram": {
+      "0": 756,
+      "1": 504,
+      "2": 168,
+      "3": 252,
+      "7": 36
+    },
+    "all_1716_middle_cuts_nonnegative": true,
+    "available_nonparallel_edge_count": 53,
+    "cell_type": "elevated hard one-direction coefficient relaxation",
+    "coefficient_sum": 11,
+    "constructs_common_59_edge_graph": false,
+    "cut_histogram": {
+      "0": 36,
+      "4": 252,
+      "5": 168,
+      "6": 504,
+      "7": 756
+    },
+    "directional_b": 2,
+    "distance_aggregates": [
+      2,
+      1,
+      2,
+      2,
+      4,
+      0
+    ],
+    "distance_energy": 29,
+    "hard_parallel_count_P": 6,
+    "l1_norm": 11,
+    "lambda_U4_over_M4": 7,
+    "moments_mod_13": {
+      "M2": 0,
+      "M4": 7,
+      "T3": 0,
+      "U4": 10
+    },
+    "nonzero_coefficients": {
+      "0,1": 1,
+      "0,12": 1,
+      "0,4": 1,
+      "0,9": 1,
+      "1,12": 1,
+      "1,4": 1,
+      "1,9": 1,
+      "4,12": 1,
+      "4,9": 2,
+      "9,12": 1
+    },
+    "odd_rows": [
+      4,
+      9
+    ],
+    "proved": true,
+    "row_sums": {
+      "0": 4,
+      "1": 4,
+      "2": 0,
+      "3": 0,
+      "4": 5,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 5,
+      "10": 0,
+      "11": 0,
+      "12": 4
+    },
+    "scaled_mean_2pE_A": 28,
+    "sign_cancelling_padding_pairs": 21,
+    "support_description": "unit K5 on {0,1,4,9,12}, plus one additional unit on {4,9}"
+  },
+  "endpoint_contraction_basis": {
+    "classification": "a symmetric homogeneous f(s,t) with f(s,s)=0 is divisible by (s-t)^2",
+    "degrees": {
+      "2": {
+        "basis_coefficients": [
+          [
+            1,
+            -2,
+            1
+          ]
+        ],
+        "basis_rank": 1,
+        "diagonal_zero": true,
+        "space_dimension": 1,
+        "symmetric": true
+      },
+      "3": {
+        "basis_coefficients": [
+          [
+            1,
+            -1,
+            -1,
+            1
+          ]
+        ],
+        "basis_rank": 1,
+        "diagonal_zero": true,
+        "space_dimension": 1,
+        "symmetric": true
+      },
+      "4": {
+        "basis_coefficients": [
+          [
+            1,
+            -4,
+            6,
+            -4,
+            1
+          ],
+          [
+            1,
+            0,
+            -2,
+            0,
+            1
+          ]
+        ],
+        "basis_rank": 2,
+        "diagonal_zero": true,
+        "space_dimension": 2,
+        "symmetric": true
+      }
+    },
+    "named_bases": {
+      "degree_2": [
+        "(s-t)^2"
+      ],
+      "degree_3": [
+        "(s+t)(s-t)^2"
+      ],
+      "degree_4": [
+        "(s-t)^4",
+        "(s+t)^2(s-t)^2"
+      ]
+    },
+    "orientation_independent_endpoint_contractions_through_degree_4_exhausted": true,
+    "proved": true
+  },
+  "exact_star_collision": {
+    "aggregate_identity_alone_couples_the_four_directions": false,
+    "cell_collision_identity": "C(a_c,2)+C(b_c,2)-a_c*b_c=((a_c-b_c)^2-a_c-b_c)/2",
+    "cell_equation": "a_c-b_c=1 on the 12 star cells and 0 on every other fibre-pair cell",
+    "common_graph_leverage_requires_tracking_same_edge_pairs": true,
+    "exact_direction_parallel_hard_edges": 5,
+    "hard_type_edge_count": 38,
+    "integer_algebra_checks": 3025,
+    "line_signed_degree_identity": "sum_(v:L_i(v)=s)(deg_+(v)-deg_-(v))=1+11*1_(s=j_i)+2*p_(i,s), with sum_s p_(i,s)=5",
+    "negative_nonparallel_edges": 21,
+    "opposite_type_edge_count": 21,
+    "positive_nonparallel_edges": 33,
+    "proved": true,
+    "signed_collision_sum_over_four_exact_directions": -84,
+    "signed_collision_sum_per_exact_direction": -21
+  },
+  "layer_index_t": 3,
+  "matched_local_lambda": 7,
+  "method_barrier": "matched lambda=7 elevated and opposite one-direction cells show that the independent cellwise scalar consequences M2=T3=0 and U4=lambda*M4 do not locally exclude either cell type; they do not witness one common quartic or difference transform",
+  "midpoint_displacement_formulation": {
+    "affine_point_count": 169,
+    "binary_edge_variables_n_m_delta": 14196,
+    "certified_contractions": {
+      "M2": "sum_(m,delta) chi(delta)*n_(m,delta)*L(delta)^2",
+      "M4": "sum_(m,delta) chi(delta)*n_(m,delta)*L(delta)^4",
+      "T3": "2*sum_(m,delta) chi(delta)*n_(m,delta)*L(m)*L(delta)^2",
+      "U4": "4*sum_(m,delta) chi(delta)*n_(m,delta)*L(m)^2*L(delta)^2"
+    },
+    "coefficientwise_functional_checks": 198744,
+    "constructs_common_59_edge_graph": false,
+    "difference_aggregate_definition": "m_delta=sum_m n_(m,delta); q_L(a)=epsilon_L*sum_(|L(delta)|=a) chi(delta)*m_delta",
+    "difference_bucket_sizes_for_every_projective_L": {
+      "0": 6,
+      "1": 13,
+      "2": 13,
+      "3": 13,
+      "4": 13,
+      "5": 13,
+      "6": 13
+    },
+    "direction_parallel_count_multiset": [
+      5,
+      5,
+      5,
+      5,
+      6,
+      6,
+      6,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "direction_parallel_counts_sum": 59,
+    "edge_parameterization": "{u,v}={m+delta/2,m-delta/2}, delta modulo +/-",
+    "midpoint_subcertificate_asserts_difference_Gram_or_inverse": false,
+    "new_first_midpoint_moment_seen_by_T3": true,
+    "new_second_midpoint_moment_seen_by_U4": true,
+    "nonzero_displacement_classes_modulo_sign": 84,
+    "parameterization_is_bijective": true,
+    "proved": true,
+    "zeroth_midpoint_moment_seen_by_difference_aggregates": "m_delta"
+  },
+  "moment_theorem": {
+    "M4_nonzero": true,
+    "M4_nonzero_dependency": {
+      "candidate_count": 32313,
+      "live_certificate_proved": true,
+      "moment_degrees": [
+        2,
+        4
+      ],
+      "proposition": "15.740",
+      "reason": "if M4=0, then M2=M4=0 and the nine-vector opposite-cell certificate is infeasible",
+      "remaining_after_nine_vectors": 0
+    },
+    "M4_projective_zero_set": "exactly the four exact hard directions",
+    "exact_star_certificate": {
+      "all_M2_T3_M4_U4_zero": true,
+      "exact_star_count_checked": 13,
+      "p": 13,
+      "power_sums_mod_13": {
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "proved": true,
+      "star_distance_aggregate": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "star_distance_energy": 24,
+      "star_moments_by_center": {
+        "0": {
+          "M2": 0,
+          "M4": 0,
+          "T3": 0,
+          "U4": 0
+        },
+        "1": {
+          "M2": 0,
+          "M4": 0,
+          "T3": 0,
+          "U4": 0
+        },
+        "2": {
+          "M2": 0,
+          "M4": 0,
+          "T3": 0,
+          "U4": 0
+        },
+        "3": {
+          "M2": 0,
+          "M4": 0,
+          "T3": 0,
+          "U4": 0
+        },
+        "4": {
+          "M2": 0,
+          "M4": 0,
+          "T3": 0,
+          "U4": 0
+        },
+        "5": {
+          "M2": 0,
+          "M4": 0,
+          "T3": 0,
+          "U4": 0
+        },
+        "6": {
+          "M2": 0,
+          "M4": 0,
+          "T3": 0,
+          "U4": 0
+        },
+        "7": {
+          "M2": 0,
+          "M4": 0,
+          "T3": 0,
+          "U4": 0
+        },
+        "8": {
+          "M2": 0,
+          "M4": 0,
+          "T3": 0,
+          "U4": 0
+        },
+        "9": {
+          "M2": 0,
+          "M4": 0,
+          "T3": 0,
+          "U4": 0
+        },
+        "10": {
+          "M2": 0,
+          "M4": 0,
+          "T3": 0,
+          "U4": 0
+        },
+        "11": {
+          "M2": 0,
+          "M4": 0,
+          "T3": 0,
+          "U4": 0
+        },
+        "12": {
+          "M2": 0,
+          "M4": 0,
+          "T3": 0,
+          "U4": 0
+        }
+      }
+    },
+    "forced_global_identities": [
+      "M2=0",
+      "T3=0",
+      "U4=lambda*M4"
+    ],
+    "global_forms": {
+      "M2": "sum_e chi(delta_e)*(L(u)-L(v))^2",
+      "M4": "sum_e chi(delta_e)*(L(u)-L(v))^4",
+      "T3": "sum_e chi(delta_e)*(L(u)+L(v))*(L(u)-L(v))^2",
+      "U4": "sum_e chi(delta_e)*(L(u)+L(v))^2*(L(u)-L(v))^2"
+    },
+    "global_quartic_value_code": "sum_(a=1..6) a^4*q_L(a)=epsilon_L*M4(L), with M4 a nonzero scalar times the product of the four root factors",
+    "homogeneous_degrees": {
+      "M2": 2,
+      "M4": 4,
+      "T3": 3,
+      "U4": 4
+    },
+    "hypothesis": "one common p=13 graph has four distinct exact positive-star directions",
+    "local_normalized_equations": [
+      "sum_(s<t) W_st*(s-t)^2=0",
+      "sum_(s<t) W_st*(s+t)*(s-t)^2=0",
+      "sum_(s<t) W_st*((s+t)^2-lambda*(s-t)^2)*(s-t)^2=0",
+      "sum_(s<t) W_st*(s-t)^4!=0 in every nonexact direction"
+    ],
+    "proved": true,
+    "quartic_span_rank_at_most_one": true,
+    "root_rank_certificate": {
+      "degree_2_evaluation_rank": 3,
+      "degree_2_four_roots_force_zero": true,
+      "degree_3_evaluation_rank": 4,
+      "degree_3_four_roots_force_zero": true,
+      "degree_4_evaluation_rank": 4,
+      "degree_4_four_root_kernel_dimension": 1,
+      "degree_4_kernel_generator": "product of the four root linear factors",
+      "field": "F_13",
+      "four_direction_sets_checked": 1001,
+      "projective_direction_count": 14,
+      "proved": true,
+      "quartet_product_sha256": "95f2afbb16cb685f01331ceac28964265d1712bdbf39cc82425c13fff97c58ae"
+    },
+    "three_elevated_and_seven_opposite_M4_values_nonzero": true,
+    "unique_lambda_in_F13": true
+  },
+  "multi_level_type_I_closed": false,
+  "next_exact_gate": "first exclude the 84-class nonnegative integer difference system with C<=11, exact rows, the full nonzero quartic value code, and the ten cut/parity lifts; only if it survives, exclude its 14196-variable binary midpoint lift using T3=0, U4=lambda*M4, simplicity, and the exact fibre-pair equations",
+  "opposite_entry_alphabet": {
+    "balanced_cut_upper_bound": -10,
+    "conditional_cut_means": {
+      "i_inside_j_outside": "(6*S-d_i+6*w_ij)/11",
+      "pair_inside": "6*(S-w_ij)/11",
+      "pair_outside": "(28*S+7*(d_i+d_j)-42*w_ij)/55",
+      "vertex_inside": "(12*S-d_i)/22",
+      "vertex_outside": "(70*S+7*d_i)/132"
+    },
+    "entry_alphabet": [
+      -1,
+      0,
+      1,
+      2,
+      3
+    ],
+    "even_row_sum_bounds": [
+      -12,
+      10
+    ],
+    "integer_entry_lower_bound": -1,
+    "integer_entry_upper_bound": 3,
+    "opposite_total_coefficient_sum": -20,
+    "oriented_pair_rational_entry_upper_bound": "25/7",
+    "p": 13,
+    "pair_inside_rational_lower_bound": "-5/3",
+    "pair_outside_even_integral_bound": 0,
+    "pair_outside_integral_inequality": "d_i+d_j<=6*w_ij",
+    "pair_outside_rational_bound_on_d_i_plus_d_j_minus_6w": "10/7",
+    "proved": true,
+    "rational_interior_warning": "-5/3 and 25/7 are strict rational bounds; {-1,...,3} follows only after using coefficient integrality",
+    "vertex_inside_rational_row_lower_bound": "-20",
+    "vertex_outside_rational_row_upper_bound": "80/7"
+  },
+  "opposite_local_cell": {
+    "B_formula": "B(X)=-5-cut_W(X)/2=(cut_(-W)(X)-10)/2",
+    "B_value_histogram": {
+      "0": 1092,
+      "1": 588,
+      "2": 36
+    },
+    "all_1716_middle_cuts_nonnegative": true,
+    "analytic_cut_formula": {
+      "indicator_1_one": "cut_(-W)=10+R+S-(R xor S)",
+      "indicator_1_zero": "cut_(-W)=14-2*A-R-S-(R xor S)"
+    },
+    "analytic_cut_formula_checks": 1716,
+    "available_nonparallel_edge_count": 56,
+    "cell_type": "opposite one-direction coefficient relaxation",
+    "coefficient_sum": -20,
+    "constructs_common_59_edge_graph": false,
+    "cut_W_histogram": {
+      "-14": 36,
+      "-12": 588,
+      "-10": 1092
+    },
+    "distance_aggregates": [
+      -3,
+      -3,
+      -3,
+      -4,
+      -3,
+      -4
+    ],
+    "distance_energy": 68,
+    "every_row_sum_even": true,
+    "l1_norm": 22,
+    "lambda_U4_over_M4": 7,
+    "moments_mod_13": {
+      "M2": 0,
+      "M4": 8,
+      "T3": 0,
+      "U4": 4
+    },
+    "nonzero_coefficients": {
+      "0,1": -1,
+      "0,10": -1,
+      "0,11": -1,
+      "0,12": -1,
+      "0,2": -1,
+      "0,3": -1,
+      "0,4": -1,
+      "0,5": -1,
+      "0,6": -1,
+      "0,7": -1,
+      "0,8": -1,
+      "0,9": -1,
+      "1,10": -1,
+      "1,11": -1,
+      "1,12": -1,
+      "1,2": -1,
+      "1,4": -1,
+      "1,5": -1,
+      "1,7": -1,
+      "1,8": -1,
+      "1,9": -1,
+      "3,6": 1
+    },
+    "opposite_parallel_count_Q": 3,
+    "proved": true,
+    "row_sums": {
+      "0": -12,
+      "1": -10,
+      "2": -2,
+      "3": 0,
+      "4": -2,
+      "5": -2,
+      "6": 0,
+      "7": -2,
+      "8": -2,
+      "9": -2,
+      "10": -2,
+      "11": -2,
+      "12": -2
+    },
+    "scaled_mean_4pE_B": 20,
+    "sign_cancelling_padding_pairs": 17,
+    "support_description": "w_0x=-1 for x!=0; w_1x=-1 outside {0,1,3,6}; w_36=+1"
+  },
+  "original_k": 58,
+  "p": 13,
+  "p13_generic_four_exact_partition_closed": false,
+  "p13_generic_t3_branch_closed": false,
+  "p13_k_eq_58_closed": false,
+  "previous_witness_cubic_obstruction": {
+    "excluded_by_global_T3_zero": true,
+    "moments_mod_13": {
+      "M2": 0,
+      "M4": 5,
+      "T3": 4,
+      "U4": 4
+    },
+    "previous_witness": "K5 on {0,1,2,3,5}, plus {0,11}",
+    "proved": true,
+    "result_status": "counterexample retired by stronger invariant"
+  },
+  "prop": "15.741",
+  "proved": true,
+  "quadratic_minmax_limit_closed": false,
+  "remaining_hard_quotient_partition": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2
+  ],
+  "residual_ii_closed": false,
+  "result_status": "open reduction",
+  "six_dilate_cut_energy": {
+    "base_interval_seven_set": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "branch_excluded": false,
+    "collision_parameter_upper_bound": 11,
+    "combined_with_parseval_identity": "707+26*C<=1000",
+    "dilate_multipliers_generated_by_inverse_two_modulo_sign": [
+      1,
+      6,
+      3,
+      5,
+      4,
+      2
+    ],
+    "dilated_interval_seven_sets": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        0,
+        4,
+        5,
+        6,
+        10,
+        11,
+        12
+      ],
+      [
+        0,
+        2,
+        3,
+        5,
+        6,
+        9,
+        12
+      ],
+      [
+        0,
+        2,
+        4,
+        5,
+        7,
+        10,
+        12
+      ],
+      [
+        0,
+        3,
+        4,
+        7,
+        8,
+        11,
+        12
+      ],
+      [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ]
+    ],
+    "elevated_row": {
+      "coefficient_sum": 11,
+      "extremal_slack_vector_up_to_permutation": [
+        79,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "image_sum": 462,
+      "integer_q_energy_bound": 86,
+      "maximum_image_energy": 40644,
+      "maximum_slack_square_sum": 6246,
+      "raw_rational_q_energy_bound": "4952/57",
+      "six_cut_sum_upper": 91,
+      "slack_parity": "odd positive",
+      "slack_sum": 84
+    },
+    "interval_cut_vector_in_that_order": [
+      2,
+      4,
+      8,
+      10,
+      6,
+      12
+    ],
+    "interval_cut_vector_natural_order": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12
+    ],
+    "matched_lambda_seven_local_rows_total_energy": 563,
+    "matched_local_rows_fail_common_energy_identity": true,
+    "multiplicative_distance_order": [
+      1,
+      2,
+      4,
+      5,
+      3,
+      6
+    ],
+    "nonstar_energy_upper_bound": 1000,
+    "opposite_row": {
+      "coefficient_sum": -20,
+      "extremal_slack_vector_up_to_permutation": [
+        60,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image_sum": -840,
+      "integer_q_energy_bound": 106,
+      "maximum_image_energy": 120600,
+      "maximum_slack_square_sum": 3600,
+      "raw_rational_q_energy_bound": "6050/57",
+      "six_cut_sum_upper": -130,
+      "slack_parity": "even nonnegative",
+      "slack_sum": 60
+    },
+    "proved": true,
+    "rational_interior_warning": "the spectral bounds are 4952/57 and 6050/57, not 86 and 106; the integer bounds follow only because sum_a q_L(a)^2 is integral",
+    "six_by_six_circulant": [
+      [
+        2,
+        4,
+        8,
+        10,
+        6,
+        12
+      ],
+      [
+        4,
+        8,
+        10,
+        6,
+        12,
+        2
+      ],
+      [
+        8,
+        10,
+        6,
+        12,
+        2,
+        4
+      ],
+      [
+        10,
+        6,
+        12,
+        2,
+        4,
+        8
+      ],
+      [
+        6,
+        12,
+        2,
+        4,
+        8,
+        10
+      ],
+      [
+        12,
+        2,
+        4,
+        8,
+        10,
+        6
+      ]
+    ],
+    "spectral_floor_off_constants": 76,
+    "squared_singular_value_multiplicities": {
+      "100": 1,
+      "1764": 1,
+      "76": 2,
+      "84": 2
+    }
+  },
+  "strict_advance_over_15_740": "adds the global cubic T3=0, quartic rank one, midpoint moments, and exact four-star collision identities",
+  "title": "four-star mixed moments and the common-graph frontier",
+  "top_level_gates_changed": false
+}

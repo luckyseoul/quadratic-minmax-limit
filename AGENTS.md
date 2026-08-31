@@ -27,6 +27,18 @@ branches or turning completed computations into new work.
 - Prefer an argument that closes an infinite family over a wider finite
   census unless the finite census is the explicitly recorded gate.
 
+## Current p13 gate after Proposition 15.741
+
+The remaining `p=13,t=3` partition is `1^4 2^3`.  Its active object is the
+layered common-graph gate from 15.741.  First exclude the 84-class **integral
+difference-Radon system** with `C<=11`, the exact rows, the full nonzero
+quartic value code, and the ten cut/parity lifts.  Only if that survives,
+lift it to the 14,196 binary midpoint variables and impose `T_3=0`,
+`U_4=lambda M_4`, simplicity, and the exact fibre-pair equations.  The
+independent cellwise scalar consequences through degree four, binary boundary
+Radon, and linear/Farkas averages of the bare direction-count, exact-row, and
+translated-cut relaxation have explicit barriers and are not new attacks.
+
 ## Result discipline
 
 Label every result as exactly one of: proved theorem, exhaustive finite
