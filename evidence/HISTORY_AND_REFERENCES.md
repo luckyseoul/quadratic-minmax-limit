@@ -1,6 +1,6 @@
 # History of the problem, and older references
 
-**Date:** 2026-08-31 (through Proposition 15.729)
+**Date:** 2026-08-31 (through Proposition 15.731)
 
 **Sources:** live fetches (MathOverflow API, X thread, Paata’s 2019 blog and CV, arXiv, Goethals–Seidel PDF, Wikipedia/Paley construction).  
 **Not a close:** nothing here proves that \(\lim\alpha_n\) exists. Do not treat sandwich, Paley \(\rho=1\), or conference matrices as settlement.
@@ -2126,11 +2126,87 @@ are
 | `p=3R+1` | `2R+3` | `2R+1` |
 | `p=3R+2` | `2R+4` | `2R+2` |
 
-This is a proved necessary reduction, not endpoint closure. The live next
-gate is to exclude or classify these near-extremal affine
-unique-trisecant/co-tangent configurations while preserving their common
-15.727 disjoint-block completion. Dropping the completion data asks a weaker
-question.
+This is a proved necessary reduction, not endpoint closure. At the 15.729
+stage, the next implication was to exclude or classify these near-extremal
+affine unique-trisecant/co-tangent configurations while preserving their
+common 15.727 disjoint-block completion. Propositions 15.730--15.731
+supersede that formulation with the full repair ensemble and its transition
+coordinates. Dropping the completion data still asks a weaker question.
+
+## 7by. Complementary-arc repair ensemble and source correction (2026-08-31)
+
+Proposition 15.730 uses every maximum repair inside the same endpoint set,
+not one selected 3-arc. If `S` is the set of points outside the rich blocks,
+then every maximum `D`-subarc, and no other one, has the form
+
+`A_Q=S union (two chosen points from each rich block)`.
+
+There are exactly `3^x 6^y` choices. Its complement `T_Q` is an `R`-arc,
+and every point of `T_Q` lies on exactly one `A_Q`-secant. Thus every repair
+simultaneously supplies `R` unique-trisecant one-point extensions. The full
+two-colour projective line census is
+
+| `|L intersect A_Q| \ |L intersect T_Q|` | `0` | `1` | `2` |
+|---:|---:|---:|---:|
+| `0` | `p(p-1)/2-R-y` | `2R+2y` | `binom(R,2)-y` |
+| `1` | `k+2R` | `R(k-2)` | `0` |
+| `2` | `binom(k,2)-R+y` | `x=R-2y` | `y` |
+
+A 4-secant has an additional consequence absent from 15.729: deleting
+either point of its `A_Q` pair leaves a size-`p-R` arc with three
+pairwise-incompatible extension points on one tangent. Direction-level
+refinement splits every ordinary fibre into the nine two-colour cells and
+gives
+
+`b_d=p+1-2(sigma_d+tau_d+m_d)`.
+
+This is a proved necessary reduction, not endpoint closure.
+
+The literature route recorded immediately after 15.729 contained a material
+misreading and is **RETRACTED**. Bartoli--Storme [70, Corollary 2.7] do not
+bound the size of an odd-order unique-trisecant 3-arc. Their number
+`phi(1)=2(q+2)/3+2` is the upper endpoint, under the other hypotheses
+including `d>3+2sqrt(q)` and existence of the configuration, for which the
+corresponding hyperplane arrangement is second-smallest. Their
+construction section says that existence of odd-order examples in a larger
+interval was unknown. Consequently there is no sourced equality/one-defect
+ceiling to classify. Proposition 15.731 supersedes the provisional
+``missing interpolation'' route by constructing the tangent envelopes
+directly.
+
+## 7bz. Tangent-envelope gluing and low-degree swap transitions (2026-08-31)
+
+For a maximum repair `A`, put `t=R+1` and `d=2t`. Segre-normalized tangent
+products `f_a` satisfy `f_a(b)=(-1)^(t+1)f_b(a)`. Squaring them gives
+compatible degree-`d` sections on the dual lines `a*`. An elementary
+line-gluing induction extends those sections to a degree-`d` plane
+polynomial `Phi_A`; the restriction kernel consists exactly of multiples of
+`product_(a in A)L_a`.
+
+At `p=3R+2`, `|A|=d+1`, so the normalized tangent envelope is unique. At
+`p=3R+1`, `|A|=d`, so the envelope space is
+
+`Phi_0+lambda product_(a in A)L_a`.
+
+This is a new direct consequence of Ball--Lavrauw [44, Lemma 10], not an
+application of their Theorem 11 below its stated sufficient size
+hypothesis.
+
+If adjacent repairs are `A=C union {a}` and `A'=C union {z}`, their tangent
+families may be relatively scaled so that
+
+`L_z^2 Phi_(A')-L_a^2 Phi_A=P_C Q_(a,z)`.
+
+The quotient is quadratic in the unique-envelope residue. In the pencil
+residue it is cubic, with a gauge ambiguity
+`span{L_a^3,L_z^3}`. The product repair graph has `K_3` factors for
+trisecants and `J(4,2)` factors for 4-secants; common singleton points allow
+coherent normalization around this graph. The exact open implication is
+exclusion of the common completion under the residual direction, phase, and
+lift constraints. A nontrivial cycle identity for the degree-two/three
+transition coordinates is the proposed next attack; neither such an identity
+nor a phase bridge is proved here. Endpoint equality and every top-level gate
+remain open.
 
 The separate `p=31` classification check is finite evidence only. The
 sourced Kéri [49] list supplies eleven complete 22-arc representatives; exact
@@ -2203,7 +2279,7 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 41. P.-A. Bernard, N. Crampé, and L. Vinet, *A bivariate Q-polynomial structure for the non-binary Johnson scheme*, J. Combin. Theory Ser. A **202** (2024), 105829, [arXiv:2306.01882](https://arxiv.org/abs/2306.01882) (adjacent Johnson-scheme machinery; not the parity-majorant or affine pair-deficit theorem of 15.669).
 42. S. Ball and B. Csajbók, *On sets of points with few odd secants*, [arXiv:1711.10876](https://arxiv.org/abs/1711.10876) (odd-secant bounds for \(q+2\)-point projective sets; not the eight-point split-type census of 15.670).
 43. M. Kiermaier and S. Kurz, *Maximal integral point sets in affine planes over finite fields*, [arXiv:1401.2825](https://arxiv.org/abs/1401.2825) (prescribed directions and Paley-clique context; not the boundary parity-floor budget of 15.670).
-44. S. Ball and M. Lavrauw, *Planar arcs*, J. Combin. Theory Ser. A **160** (2018), 261--287, [doi:10.1016/j.jcta.2018.06.015](https://doi.org/10.1016/j.jcta.2018.06.015), [arXiv:1705.10940](https://arxiv.org/abs/1705.10940) (modern primary restatement of Segre's odd-order arc theorems; the `q`-arc conic theorem is used in 15.673, the complete `(q-1)`/`(q-2)` classifications and prime-field conic threshold are used for the low-slack exclusion in 15.722, and the polynomial tangent envelope is used in 15.683, 15.726, and 15.727).
+44. S. Ball and M. Lavrauw, *Planar arcs*, J. Combin. Theory Ser. A **160** (2018), 261--287, [doi:10.1016/j.jcta.2018.06.015](https://doi.org/10.1016/j.jcta.2018.06.015), [arXiv:1705.10940](https://arxiv.org/abs/1705.10940) (modern primary restatement of Segre's odd-order arc theorems; the `q`-arc conic theorem is used in 15.673, the complete `(q-1)`/`(q-2)` classifications and prime-field conic threshold are used for the low-slack exclusion in 15.722, and the polynomial tangent envelope is used in 15.683, 15.726, and 15.727. Proposition 15.731 uses only the scaled tangent lemma, Lemma 10 in arXiv v4, then proves its own below-threshold dual-line gluing statement; it does not apply Theorem 11 outside its stated hypothesis).
 45. V. F. Lev, *Point distribution and perfect directions in* \(F_p^2\), [arXiv:1903.01518](https://arxiv.org/abs/1903.01518) (Rédei-type direction bounds adjacent to, but not implying, the determined-direction/type-budget argument of 15.674).
 46. G. Van de Voorde, *On sets without tangents and exterior sets of a conic*, [arXiv:1201.0484](https://arxiv.org/abs/1201.0484) (adjacent external-conic and determined-direction geometry; not the Paley phase-budget exclusion of 15.676).
 47. P. Amireddy, S. Behera, S. Srinivasan, and M. Sudan, *A Near-Optimal Polynomial Distance Lemma over Boolean Slices*, ICALP 2025, [doi:10.4230/LIPIcs.ICALP.2025.11](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2025.11) (Lemma 2 supplies the exact finite degree-two support floor used in 15.642 and 15.677).
@@ -2229,6 +2305,6 @@ Do not reopen as existence proofs: BH / DMP as a substitute for E(1); Talagrand 
 67. T. Szőnyi, *On the number of directions determined by a set of points in an affine Galois plane*, J. Combin. Theory Ser. A **74** (1996), 141--146, [doi:10.1006/jcta.1996.0042](https://doi.org/10.1006/jcta.1996.0042) (the `k<=p` direction bound used in 15.712).
 68. G. Somlai, *A new proof of Rédei's theorem on the number of directions*, Arch. Math. **122** (2024), 575--580, [doi:10.1007/s00013-024-01979-x](https://doi.org/10.1007/s00013-024-01979-x) (modern explicit restatement of Szőnyi's bound and proof context).
 69. X.-d. Hou and A. Iezzi, *An Application of the Hasse-Weil Bound to Rational Functions over Finite Fields*, [arXiv:1906.09487](https://arxiv.org/abs/1906.09487) (general rational-function value-set context; it does not supply the missing discriminant/resolvent estimates in 15.725).
-70. D. Bartoli and L. Storme, *The second and the third smallest arrangements of hyperplanes in finite projective spaces*, Finite Fields Appl. **37** (2016), 225--239, [doi:10.1016/j.ffa.2015.10.001](https://doi.org/10.1016/j.ffa.2015.10.001), [UGent record](https://biblio.ugent.be/publication/6843804) (Corollary 2.7 gives the odd-order unique-trisecant 3-arc ceiling adjacent to the 15.729 endpoint sizes; Section 4 gives constructions but not the equality/one-defect classification needed here).
+70. D. Bartoli and L. Storme, *The second and the third smallest arrangements of hyperplanes in finite projective spaces*, Finite Fields Appl. **37** (2016), 225--239, [doi:10.1016/j.ffa.2015.10.001](https://doi.org/10.1016/j.ffa.2015.10.001), [HAL manuscript](https://inria.hal.science/hal-01276476) (Corollary 2.7, Theorem 1 in the public manuscript, gives the upper endpoint `d<=2(q+2)/3+2` under its other hypotheses, including `d>3+2sqrt(q)` and existence of the configuration, for which a unique-trisecant construction is the second-smallest hyperplane arrangement. It is **not** a size ceiling for such 3-arcs. The odd-order existence gap stated in the construction section is left open, which retracts the former 15.729 equality/one-defect interpretation).
 
 Secondary: Paley construction (Wikipedia, quoting the 1933 Hadamard-conjecture sentence); conference matrix (Wikipedia, van Lint–Seidel sum-of-two-squares obstruction).

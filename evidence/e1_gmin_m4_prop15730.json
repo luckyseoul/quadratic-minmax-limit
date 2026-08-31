@@ -1,0 +1,2522 @@
+{
+  "endpoint_excluded": false,
+  "finite_configuration_search_used": false,
+  "multi_level_type_I_closed": false,
+  "next_gate": "exclude the common completion under residual direction, phase, and lift constraints; a nontrivial repair-cycle identity from Proposition 15.731 is a proposed attack, not a proved condition",
+  "non_walsh_residual_ii_closed": false,
+  "p_plus_one_shell_closed": false,
+  "prop": "15.730",
+  "proved": true,
+  "quadratic_minmax_limit_closed": false,
+  "result_status": "proved simultaneous necessary normal form",
+  "sample_all_block_rows": {
+    "31": [
+      {
+        "R": 10,
+        "c": 1,
+        "complement_family": {
+          "complement_is_an_arc": true,
+          "complement_size": 10,
+          "every_complement_point_has_A_secant_index": 1,
+          "reason": "a second A-secant through a complement point would be a second D-rich block through that point",
+          "unique_secant_blocks_form_matching_on_A": true,
+          "unique_secant_fibre_counts": {
+            "1": 10,
+            "2": 0
+          }
+        },
+        "cotangent_deletion_bases": {
+          "additional_extension_points_outside_D_excluded": false,
+          "all_one_point_deletion_bases": 22,
+          "base_size": 21,
+          "base_size_formula": "p-R",
+          "displayed_D_extensions_individually_preserve_the_arc": true,
+          "displayed_D_extensions_on_each_tangent_are_pairwise_incompatible": true,
+          "one_within_D_extension_base_count": 2,
+          "scope": "for each fixed maximum repair A; extension counts are within D",
+          "three_displayed_D_extensions_occur_at_4_secant_A_endpoints": true,
+          "three_within_D_cotangent_extension_base_count": 0,
+          "two_within_D_cotangent_extension_base_count": 20
+        },
+        "endpoint_excluded": false,
+        "finite_configuration_search_used": false,
+        "four_secants_y": 0,
+        "line_type_census": {
+          "a0_t0": 455,
+          "a0_t1": 20,
+          "a0_t2": 45,
+          "a1_t0": 42,
+          "a1_t1": 200,
+          "a1_t2": 0,
+          "a2_t0": 221,
+          "a2_t1": 10,
+          "a2_t2": 0
+        },
+        "line_type_census_audit": {
+          "actual": {
+            "A_T_cross_pair_moment": 220,
+            "A_pair_moment": 231,
+            "A_point_line_incidences": 704,
+            "A_tangent_count": 242,
+            "D_occupancy_census": {
+              "0": 455,
+              "1": 62,
+              "2": 466,
+              "3": 10,
+              "4": 0
+            },
+            "T_pair_moment": 45,
+            "T_point_line_incidences": 320,
+            "T_tangent_count": 230,
+            "total_projective_lines": 993
+          },
+          "checks": {
+            "A_T_cross_pair_moment": true,
+            "A_pair_moment": true,
+            "A_point_line_incidences": true,
+            "A_tangent_count": true,
+            "D_occupancy_census": true,
+            "T_pair_moment": true,
+            "T_point_line_incidences": true,
+            "T_tangent_count": true,
+            "forbidden_a1_t2_absent": true,
+            "four_secants_are_a2_t2": true,
+            "total_projective_lines": true,
+            "trisecants_are_a2_t1": true
+          },
+          "exact_keys": true,
+          "expected": {
+            "A_T_cross_pair_moment": 220,
+            "A_pair_moment": 231,
+            "A_point_line_incidences": 704,
+            "A_tangent_count": 242,
+            "D_occupancy_census": {
+              "0": 455,
+              "1": 62,
+              "2": 466,
+              "3": 10,
+              "4": 0
+            },
+            "T_pair_moment": 45,
+            "T_point_line_incidences": 320,
+            "T_tangent_count": 230,
+            "total_projective_lines": 993
+          },
+          "integral_nonnegative": true,
+          "proved": true
+        },
+        "p": 31,
+        "point_signature_audit": {
+          "A_point_count": 22,
+          "T_point_count": 10,
+          "checks": {
+            "A_point_types_partition_A": true,
+            "A_signatures_reaggregate": true,
+            "T_point_types_partition_T": true,
+            "T_signatures_reaggregate": true,
+            "each_signature_has_p_plus_one_lines": true
+          },
+          "proved": true,
+          "rows": [
+            {
+              "description": "point outside every rich block",
+              "incident_line_types": {
+                "a1_t0": 1,
+                "a1_t1": 10,
+                "a2_t0": 21
+              },
+              "multiplicity": 2,
+              "opposite_colour_points_on_rich_block": 0,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a trisecant block",
+              "incident_line_types": {
+                "a1_t0": 2,
+                "a1_t1": 9,
+                "a2_t0": 20,
+                "a2_t1": 1
+              },
+              "multiplicity": 20,
+              "opposite_colour_points_on_rich_block": 1,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a 4-secant block",
+              "incident_line_types": {
+                "a1_t0": 3,
+                "a1_t1": 8,
+                "a2_t0": 20,
+                "a2_t2": 1
+              },
+              "multiplicity": 0,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "A"
+            },
+            {
+              "description": "T-point on a trisecant block",
+              "incident_line_types": {
+                "a0_t1": 2,
+                "a0_t2": 9,
+                "a1_t1": 20,
+                "a2_t1": 1
+              },
+              "multiplicity": 10,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            },
+            {
+              "description": "T-point on a 4-secant block",
+              "incident_line_types": {
+                "a0_t1": 3,
+                "a0_t2": 8,
+                "a1_t1": 20,
+                "a2_t2": 1
+              },
+              "multiplicity": 0,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            }
+          ]
+        },
+        "points_on_rich_blocks": 30,
+        "proved": true,
+        "repair_arc_size_k": 22,
+        "repair_family": {
+          "construction": "retain all singleton points and choose exactly two points on every rich block",
+          "maximum_D_subarc_count": 59049,
+          "maximum_D_subarc_count_formula": "3^x 6^y",
+          "reason": "an arc takes at most two points from each rich block; block disjointness makes the displayed upper bound exact",
+          "these_are_all_maximum_D_subarcs": true
+        },
+        "result_status": "proved simultaneous necessary normal form",
+        "rich_block_count": 10,
+        "simultaneous_unique_trisecants": {
+          "all_affine": true,
+          "count": 10,
+          "each_has_exactly_one_trisecant": true,
+          "sets": "A union {z} for every z in T",
+          "size": 23,
+          "size_formula": "p+2-R"
+        },
+        "singleton_points": 2,
+        "top_level_gates_changed": false,
+        "trisecants_x": 10
+      },
+      {
+        "R": 10,
+        "c": 1,
+        "complement_family": {
+          "complement_is_an_arc": true,
+          "complement_size": 10,
+          "every_complement_point_has_A_secant_index": 1,
+          "reason": "a second A-secant through a complement point would be a second D-rich block through that point",
+          "unique_secant_blocks_form_matching_on_A": true,
+          "unique_secant_fibre_counts": {
+            "1": 8,
+            "2": 1
+          }
+        },
+        "cotangent_deletion_bases": {
+          "additional_extension_points_outside_D_excluded": false,
+          "all_one_point_deletion_bases": 22,
+          "base_size": 21,
+          "base_size_formula": "p-R",
+          "displayed_D_extensions_individually_preserve_the_arc": true,
+          "displayed_D_extensions_on_each_tangent_are_pairwise_incompatible": true,
+          "one_within_D_extension_base_count": 4,
+          "scope": "for each fixed maximum repair A; extension counts are within D",
+          "three_displayed_D_extensions_occur_at_4_secant_A_endpoints": true,
+          "three_within_D_cotangent_extension_base_count": 2,
+          "two_within_D_cotangent_extension_base_count": 16
+        },
+        "endpoint_excluded": false,
+        "finite_configuration_search_used": false,
+        "four_secants_y": 1,
+        "line_type_census": {
+          "a0_t0": 454,
+          "a0_t1": 22,
+          "a0_t2": 44,
+          "a1_t0": 42,
+          "a1_t1": 200,
+          "a1_t2": 0,
+          "a2_t0": 222,
+          "a2_t1": 8,
+          "a2_t2": 1
+        },
+        "line_type_census_audit": {
+          "actual": {
+            "A_T_cross_pair_moment": 220,
+            "A_pair_moment": 231,
+            "A_point_line_incidences": 704,
+            "A_tangent_count": 242,
+            "D_occupancy_census": {
+              "0": 454,
+              "1": 64,
+              "2": 466,
+              "3": 8,
+              "4": 1
+            },
+            "T_pair_moment": 45,
+            "T_point_line_incidences": 320,
+            "T_tangent_count": 230,
+            "total_projective_lines": 993
+          },
+          "checks": {
+            "A_T_cross_pair_moment": true,
+            "A_pair_moment": true,
+            "A_point_line_incidences": true,
+            "A_tangent_count": true,
+            "D_occupancy_census": true,
+            "T_pair_moment": true,
+            "T_point_line_incidences": true,
+            "T_tangent_count": true,
+            "forbidden_a1_t2_absent": true,
+            "four_secants_are_a2_t2": true,
+            "total_projective_lines": true,
+            "trisecants_are_a2_t1": true
+          },
+          "exact_keys": true,
+          "expected": {
+            "A_T_cross_pair_moment": 220,
+            "A_pair_moment": 231,
+            "A_point_line_incidences": 704,
+            "A_tangent_count": 242,
+            "D_occupancy_census": {
+              "0": 454,
+              "1": 64,
+              "2": 466,
+              "3": 8,
+              "4": 1
+            },
+            "T_pair_moment": 45,
+            "T_point_line_incidences": 320,
+            "T_tangent_count": 230,
+            "total_projective_lines": 993
+          },
+          "integral_nonnegative": true,
+          "proved": true
+        },
+        "p": 31,
+        "point_signature_audit": {
+          "A_point_count": 22,
+          "T_point_count": 10,
+          "checks": {
+            "A_point_types_partition_A": true,
+            "A_signatures_reaggregate": true,
+            "T_point_types_partition_T": true,
+            "T_signatures_reaggregate": true,
+            "each_signature_has_p_plus_one_lines": true
+          },
+          "proved": true,
+          "rows": [
+            {
+              "description": "point outside every rich block",
+              "incident_line_types": {
+                "a1_t0": 1,
+                "a1_t1": 10,
+                "a2_t0": 21
+              },
+              "multiplicity": 4,
+              "opposite_colour_points_on_rich_block": 0,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a trisecant block",
+              "incident_line_types": {
+                "a1_t0": 2,
+                "a1_t1": 9,
+                "a2_t0": 20,
+                "a2_t1": 1
+              },
+              "multiplicity": 16,
+              "opposite_colour_points_on_rich_block": 1,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a 4-secant block",
+              "incident_line_types": {
+                "a1_t0": 3,
+                "a1_t1": 8,
+                "a2_t0": 20,
+                "a2_t2": 1
+              },
+              "multiplicity": 2,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "A"
+            },
+            {
+              "description": "T-point on a trisecant block",
+              "incident_line_types": {
+                "a0_t1": 2,
+                "a0_t2": 9,
+                "a1_t1": 20,
+                "a2_t1": 1
+              },
+              "multiplicity": 8,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            },
+            {
+              "description": "T-point on a 4-secant block",
+              "incident_line_types": {
+                "a0_t1": 3,
+                "a0_t2": 8,
+                "a1_t1": 20,
+                "a2_t2": 1
+              },
+              "multiplicity": 2,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            }
+          ]
+        },
+        "points_on_rich_blocks": 28,
+        "proved": true,
+        "repair_arc_size_k": 22,
+        "repair_family": {
+          "construction": "retain all singleton points and choose exactly two points on every rich block",
+          "maximum_D_subarc_count": 39366,
+          "maximum_D_subarc_count_formula": "3^x 6^y",
+          "reason": "an arc takes at most two points from each rich block; block disjointness makes the displayed upper bound exact",
+          "these_are_all_maximum_D_subarcs": true
+        },
+        "result_status": "proved simultaneous necessary normal form",
+        "rich_block_count": 9,
+        "simultaneous_unique_trisecants": {
+          "all_affine": true,
+          "count": 10,
+          "each_has_exactly_one_trisecant": true,
+          "sets": "A union {z} for every z in T",
+          "size": 23,
+          "size_formula": "p+2-R"
+        },
+        "singleton_points": 4,
+        "top_level_gates_changed": false,
+        "trisecants_x": 8
+      },
+      {
+        "R": 10,
+        "c": 1,
+        "complement_family": {
+          "complement_is_an_arc": true,
+          "complement_size": 10,
+          "every_complement_point_has_A_secant_index": 1,
+          "reason": "a second A-secant through a complement point would be a second D-rich block through that point",
+          "unique_secant_blocks_form_matching_on_A": true,
+          "unique_secant_fibre_counts": {
+            "1": 6,
+            "2": 2
+          }
+        },
+        "cotangent_deletion_bases": {
+          "additional_extension_points_outside_D_excluded": false,
+          "all_one_point_deletion_bases": 22,
+          "base_size": 21,
+          "base_size_formula": "p-R",
+          "displayed_D_extensions_individually_preserve_the_arc": true,
+          "displayed_D_extensions_on_each_tangent_are_pairwise_incompatible": true,
+          "one_within_D_extension_base_count": 6,
+          "scope": "for each fixed maximum repair A; extension counts are within D",
+          "three_displayed_D_extensions_occur_at_4_secant_A_endpoints": true,
+          "three_within_D_cotangent_extension_base_count": 4,
+          "two_within_D_cotangent_extension_base_count": 12
+        },
+        "endpoint_excluded": false,
+        "finite_configuration_search_used": false,
+        "four_secants_y": 2,
+        "line_type_census": {
+          "a0_t0": 453,
+          "a0_t1": 24,
+          "a0_t2": 43,
+          "a1_t0": 42,
+          "a1_t1": 200,
+          "a1_t2": 0,
+          "a2_t0": 223,
+          "a2_t1": 6,
+          "a2_t2": 2
+        },
+        "line_type_census_audit": {
+          "actual": {
+            "A_T_cross_pair_moment": 220,
+            "A_pair_moment": 231,
+            "A_point_line_incidences": 704,
+            "A_tangent_count": 242,
+            "D_occupancy_census": {
+              "0": 453,
+              "1": 66,
+              "2": 466,
+              "3": 6,
+              "4": 2
+            },
+            "T_pair_moment": 45,
+            "T_point_line_incidences": 320,
+            "T_tangent_count": 230,
+            "total_projective_lines": 993
+          },
+          "checks": {
+            "A_T_cross_pair_moment": true,
+            "A_pair_moment": true,
+            "A_point_line_incidences": true,
+            "A_tangent_count": true,
+            "D_occupancy_census": true,
+            "T_pair_moment": true,
+            "T_point_line_incidences": true,
+            "T_tangent_count": true,
+            "forbidden_a1_t2_absent": true,
+            "four_secants_are_a2_t2": true,
+            "total_projective_lines": true,
+            "trisecants_are_a2_t1": true
+          },
+          "exact_keys": true,
+          "expected": {
+            "A_T_cross_pair_moment": 220,
+            "A_pair_moment": 231,
+            "A_point_line_incidences": 704,
+            "A_tangent_count": 242,
+            "D_occupancy_census": {
+              "0": 453,
+              "1": 66,
+              "2": 466,
+              "3": 6,
+              "4": 2
+            },
+            "T_pair_moment": 45,
+            "T_point_line_incidences": 320,
+            "T_tangent_count": 230,
+            "total_projective_lines": 993
+          },
+          "integral_nonnegative": true,
+          "proved": true
+        },
+        "p": 31,
+        "point_signature_audit": {
+          "A_point_count": 22,
+          "T_point_count": 10,
+          "checks": {
+            "A_point_types_partition_A": true,
+            "A_signatures_reaggregate": true,
+            "T_point_types_partition_T": true,
+            "T_signatures_reaggregate": true,
+            "each_signature_has_p_plus_one_lines": true
+          },
+          "proved": true,
+          "rows": [
+            {
+              "description": "point outside every rich block",
+              "incident_line_types": {
+                "a1_t0": 1,
+                "a1_t1": 10,
+                "a2_t0": 21
+              },
+              "multiplicity": 6,
+              "opposite_colour_points_on_rich_block": 0,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a trisecant block",
+              "incident_line_types": {
+                "a1_t0": 2,
+                "a1_t1": 9,
+                "a2_t0": 20,
+                "a2_t1": 1
+              },
+              "multiplicity": 12,
+              "opposite_colour_points_on_rich_block": 1,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a 4-secant block",
+              "incident_line_types": {
+                "a1_t0": 3,
+                "a1_t1": 8,
+                "a2_t0": 20,
+                "a2_t2": 1
+              },
+              "multiplicity": 4,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "A"
+            },
+            {
+              "description": "T-point on a trisecant block",
+              "incident_line_types": {
+                "a0_t1": 2,
+                "a0_t2": 9,
+                "a1_t1": 20,
+                "a2_t1": 1
+              },
+              "multiplicity": 6,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            },
+            {
+              "description": "T-point on a 4-secant block",
+              "incident_line_types": {
+                "a0_t1": 3,
+                "a0_t2": 8,
+                "a1_t1": 20,
+                "a2_t2": 1
+              },
+              "multiplicity": 4,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            }
+          ]
+        },
+        "points_on_rich_blocks": 26,
+        "proved": true,
+        "repair_arc_size_k": 22,
+        "repair_family": {
+          "construction": "retain all singleton points and choose exactly two points on every rich block",
+          "maximum_D_subarc_count": 26244,
+          "maximum_D_subarc_count_formula": "3^x 6^y",
+          "reason": "an arc takes at most two points from each rich block; block disjointness makes the displayed upper bound exact",
+          "these_are_all_maximum_D_subarcs": true
+        },
+        "result_status": "proved simultaneous necessary normal form",
+        "rich_block_count": 8,
+        "simultaneous_unique_trisecants": {
+          "all_affine": true,
+          "count": 10,
+          "each_has_exactly_one_trisecant": true,
+          "sets": "A union {z} for every z in T",
+          "size": 23,
+          "size_formula": "p+2-R"
+        },
+        "singleton_points": 6,
+        "top_level_gates_changed": false,
+        "trisecants_x": 6
+      },
+      {
+        "R": 10,
+        "c": 1,
+        "complement_family": {
+          "complement_is_an_arc": true,
+          "complement_size": 10,
+          "every_complement_point_has_A_secant_index": 1,
+          "reason": "a second A-secant through a complement point would be a second D-rich block through that point",
+          "unique_secant_blocks_form_matching_on_A": true,
+          "unique_secant_fibre_counts": {
+            "1": 4,
+            "2": 3
+          }
+        },
+        "cotangent_deletion_bases": {
+          "additional_extension_points_outside_D_excluded": false,
+          "all_one_point_deletion_bases": 22,
+          "base_size": 21,
+          "base_size_formula": "p-R",
+          "displayed_D_extensions_individually_preserve_the_arc": true,
+          "displayed_D_extensions_on_each_tangent_are_pairwise_incompatible": true,
+          "one_within_D_extension_base_count": 8,
+          "scope": "for each fixed maximum repair A; extension counts are within D",
+          "three_displayed_D_extensions_occur_at_4_secant_A_endpoints": true,
+          "three_within_D_cotangent_extension_base_count": 6,
+          "two_within_D_cotangent_extension_base_count": 8
+        },
+        "endpoint_excluded": false,
+        "finite_configuration_search_used": false,
+        "four_secants_y": 3,
+        "line_type_census": {
+          "a0_t0": 452,
+          "a0_t1": 26,
+          "a0_t2": 42,
+          "a1_t0": 42,
+          "a1_t1": 200,
+          "a1_t2": 0,
+          "a2_t0": 224,
+          "a2_t1": 4,
+          "a2_t2": 3
+        },
+        "line_type_census_audit": {
+          "actual": {
+            "A_T_cross_pair_moment": 220,
+            "A_pair_moment": 231,
+            "A_point_line_incidences": 704,
+            "A_tangent_count": 242,
+            "D_occupancy_census": {
+              "0": 452,
+              "1": 68,
+              "2": 466,
+              "3": 4,
+              "4": 3
+            },
+            "T_pair_moment": 45,
+            "T_point_line_incidences": 320,
+            "T_tangent_count": 230,
+            "total_projective_lines": 993
+          },
+          "checks": {
+            "A_T_cross_pair_moment": true,
+            "A_pair_moment": true,
+            "A_point_line_incidences": true,
+            "A_tangent_count": true,
+            "D_occupancy_census": true,
+            "T_pair_moment": true,
+            "T_point_line_incidences": true,
+            "T_tangent_count": true,
+            "forbidden_a1_t2_absent": true,
+            "four_secants_are_a2_t2": true,
+            "total_projective_lines": true,
+            "trisecants_are_a2_t1": true
+          },
+          "exact_keys": true,
+          "expected": {
+            "A_T_cross_pair_moment": 220,
+            "A_pair_moment": 231,
+            "A_point_line_incidences": 704,
+            "A_tangent_count": 242,
+            "D_occupancy_census": {
+              "0": 452,
+              "1": 68,
+              "2": 466,
+              "3": 4,
+              "4": 3
+            },
+            "T_pair_moment": 45,
+            "T_point_line_incidences": 320,
+            "T_tangent_count": 230,
+            "total_projective_lines": 993
+          },
+          "integral_nonnegative": true,
+          "proved": true
+        },
+        "p": 31,
+        "point_signature_audit": {
+          "A_point_count": 22,
+          "T_point_count": 10,
+          "checks": {
+            "A_point_types_partition_A": true,
+            "A_signatures_reaggregate": true,
+            "T_point_types_partition_T": true,
+            "T_signatures_reaggregate": true,
+            "each_signature_has_p_plus_one_lines": true
+          },
+          "proved": true,
+          "rows": [
+            {
+              "description": "point outside every rich block",
+              "incident_line_types": {
+                "a1_t0": 1,
+                "a1_t1": 10,
+                "a2_t0": 21
+              },
+              "multiplicity": 8,
+              "opposite_colour_points_on_rich_block": 0,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a trisecant block",
+              "incident_line_types": {
+                "a1_t0": 2,
+                "a1_t1": 9,
+                "a2_t0": 20,
+                "a2_t1": 1
+              },
+              "multiplicity": 8,
+              "opposite_colour_points_on_rich_block": 1,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a 4-secant block",
+              "incident_line_types": {
+                "a1_t0": 3,
+                "a1_t1": 8,
+                "a2_t0": 20,
+                "a2_t2": 1
+              },
+              "multiplicity": 6,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "A"
+            },
+            {
+              "description": "T-point on a trisecant block",
+              "incident_line_types": {
+                "a0_t1": 2,
+                "a0_t2": 9,
+                "a1_t1": 20,
+                "a2_t1": 1
+              },
+              "multiplicity": 4,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            },
+            {
+              "description": "T-point on a 4-secant block",
+              "incident_line_types": {
+                "a0_t1": 3,
+                "a0_t2": 8,
+                "a1_t1": 20,
+                "a2_t2": 1
+              },
+              "multiplicity": 6,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            }
+          ]
+        },
+        "points_on_rich_blocks": 24,
+        "proved": true,
+        "repair_arc_size_k": 22,
+        "repair_family": {
+          "construction": "retain all singleton points and choose exactly two points on every rich block",
+          "maximum_D_subarc_count": 17496,
+          "maximum_D_subarc_count_formula": "3^x 6^y",
+          "reason": "an arc takes at most two points from each rich block; block disjointness makes the displayed upper bound exact",
+          "these_are_all_maximum_D_subarcs": true
+        },
+        "result_status": "proved simultaneous necessary normal form",
+        "rich_block_count": 7,
+        "simultaneous_unique_trisecants": {
+          "all_affine": true,
+          "count": 10,
+          "each_has_exactly_one_trisecant": true,
+          "sets": "A union {z} for every z in T",
+          "size": 23,
+          "size_formula": "p+2-R"
+        },
+        "singleton_points": 8,
+        "top_level_gates_changed": false,
+        "trisecants_x": 4
+      },
+      {
+        "R": 10,
+        "c": 1,
+        "complement_family": {
+          "complement_is_an_arc": true,
+          "complement_size": 10,
+          "every_complement_point_has_A_secant_index": 1,
+          "reason": "a second A-secant through a complement point would be a second D-rich block through that point",
+          "unique_secant_blocks_form_matching_on_A": true,
+          "unique_secant_fibre_counts": {
+            "1": 2,
+            "2": 4
+          }
+        },
+        "cotangent_deletion_bases": {
+          "additional_extension_points_outside_D_excluded": false,
+          "all_one_point_deletion_bases": 22,
+          "base_size": 21,
+          "base_size_formula": "p-R",
+          "displayed_D_extensions_individually_preserve_the_arc": true,
+          "displayed_D_extensions_on_each_tangent_are_pairwise_incompatible": true,
+          "one_within_D_extension_base_count": 10,
+          "scope": "for each fixed maximum repair A; extension counts are within D",
+          "three_displayed_D_extensions_occur_at_4_secant_A_endpoints": true,
+          "three_within_D_cotangent_extension_base_count": 8,
+          "two_within_D_cotangent_extension_base_count": 4
+        },
+        "endpoint_excluded": false,
+        "finite_configuration_search_used": false,
+        "four_secants_y": 4,
+        "line_type_census": {
+          "a0_t0": 451,
+          "a0_t1": 28,
+          "a0_t2": 41,
+          "a1_t0": 42,
+          "a1_t1": 200,
+          "a1_t2": 0,
+          "a2_t0": 225,
+          "a2_t1": 2,
+          "a2_t2": 4
+        },
+        "line_type_census_audit": {
+          "actual": {
+            "A_T_cross_pair_moment": 220,
+            "A_pair_moment": 231,
+            "A_point_line_incidences": 704,
+            "A_tangent_count": 242,
+            "D_occupancy_census": {
+              "0": 451,
+              "1": 70,
+              "2": 466,
+              "3": 2,
+              "4": 4
+            },
+            "T_pair_moment": 45,
+            "T_point_line_incidences": 320,
+            "T_tangent_count": 230,
+            "total_projective_lines": 993
+          },
+          "checks": {
+            "A_T_cross_pair_moment": true,
+            "A_pair_moment": true,
+            "A_point_line_incidences": true,
+            "A_tangent_count": true,
+            "D_occupancy_census": true,
+            "T_pair_moment": true,
+            "T_point_line_incidences": true,
+            "T_tangent_count": true,
+            "forbidden_a1_t2_absent": true,
+            "four_secants_are_a2_t2": true,
+            "total_projective_lines": true,
+            "trisecants_are_a2_t1": true
+          },
+          "exact_keys": true,
+          "expected": {
+            "A_T_cross_pair_moment": 220,
+            "A_pair_moment": 231,
+            "A_point_line_incidences": 704,
+            "A_tangent_count": 242,
+            "D_occupancy_census": {
+              "0": 451,
+              "1": 70,
+              "2": 466,
+              "3": 2,
+              "4": 4
+            },
+            "T_pair_moment": 45,
+            "T_point_line_incidences": 320,
+            "T_tangent_count": 230,
+            "total_projective_lines": 993
+          },
+          "integral_nonnegative": true,
+          "proved": true
+        },
+        "p": 31,
+        "point_signature_audit": {
+          "A_point_count": 22,
+          "T_point_count": 10,
+          "checks": {
+            "A_point_types_partition_A": true,
+            "A_signatures_reaggregate": true,
+            "T_point_types_partition_T": true,
+            "T_signatures_reaggregate": true,
+            "each_signature_has_p_plus_one_lines": true
+          },
+          "proved": true,
+          "rows": [
+            {
+              "description": "point outside every rich block",
+              "incident_line_types": {
+                "a1_t0": 1,
+                "a1_t1": 10,
+                "a2_t0": 21
+              },
+              "multiplicity": 10,
+              "opposite_colour_points_on_rich_block": 0,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a trisecant block",
+              "incident_line_types": {
+                "a1_t0": 2,
+                "a1_t1": 9,
+                "a2_t0": 20,
+                "a2_t1": 1
+              },
+              "multiplicity": 4,
+              "opposite_colour_points_on_rich_block": 1,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a 4-secant block",
+              "incident_line_types": {
+                "a1_t0": 3,
+                "a1_t1": 8,
+                "a2_t0": 20,
+                "a2_t2": 1
+              },
+              "multiplicity": 8,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "A"
+            },
+            {
+              "description": "T-point on a trisecant block",
+              "incident_line_types": {
+                "a0_t1": 2,
+                "a0_t2": 9,
+                "a1_t1": 20,
+                "a2_t1": 1
+              },
+              "multiplicity": 2,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            },
+            {
+              "description": "T-point on a 4-secant block",
+              "incident_line_types": {
+                "a0_t1": 3,
+                "a0_t2": 8,
+                "a1_t1": 20,
+                "a2_t2": 1
+              },
+              "multiplicity": 8,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            }
+          ]
+        },
+        "points_on_rich_blocks": 22,
+        "proved": true,
+        "repair_arc_size_k": 22,
+        "repair_family": {
+          "construction": "retain all singleton points and choose exactly two points on every rich block",
+          "maximum_D_subarc_count": 11664,
+          "maximum_D_subarc_count_formula": "3^x 6^y",
+          "reason": "an arc takes at most two points from each rich block; block disjointness makes the displayed upper bound exact",
+          "these_are_all_maximum_D_subarcs": true
+        },
+        "result_status": "proved simultaneous necessary normal form",
+        "rich_block_count": 6,
+        "simultaneous_unique_trisecants": {
+          "all_affine": true,
+          "count": 10,
+          "each_has_exactly_one_trisecant": true,
+          "sets": "A union {z} for every z in T",
+          "size": 23,
+          "size_formula": "p+2-R"
+        },
+        "singleton_points": 10,
+        "top_level_gates_changed": false,
+        "trisecants_x": 2
+      },
+      {
+        "R": 10,
+        "c": 1,
+        "complement_family": {
+          "complement_is_an_arc": true,
+          "complement_size": 10,
+          "every_complement_point_has_A_secant_index": 1,
+          "reason": "a second A-secant through a complement point would be a second D-rich block through that point",
+          "unique_secant_blocks_form_matching_on_A": true,
+          "unique_secant_fibre_counts": {
+            "1": 0,
+            "2": 5
+          }
+        },
+        "cotangent_deletion_bases": {
+          "additional_extension_points_outside_D_excluded": false,
+          "all_one_point_deletion_bases": 22,
+          "base_size": 21,
+          "base_size_formula": "p-R",
+          "displayed_D_extensions_individually_preserve_the_arc": true,
+          "displayed_D_extensions_on_each_tangent_are_pairwise_incompatible": true,
+          "one_within_D_extension_base_count": 12,
+          "scope": "for each fixed maximum repair A; extension counts are within D",
+          "three_displayed_D_extensions_occur_at_4_secant_A_endpoints": true,
+          "three_within_D_cotangent_extension_base_count": 10,
+          "two_within_D_cotangent_extension_base_count": 0
+        },
+        "endpoint_excluded": false,
+        "finite_configuration_search_used": false,
+        "four_secants_y": 5,
+        "line_type_census": {
+          "a0_t0": 450,
+          "a0_t1": 30,
+          "a0_t2": 40,
+          "a1_t0": 42,
+          "a1_t1": 200,
+          "a1_t2": 0,
+          "a2_t0": 226,
+          "a2_t1": 0,
+          "a2_t2": 5
+        },
+        "line_type_census_audit": {
+          "actual": {
+            "A_T_cross_pair_moment": 220,
+            "A_pair_moment": 231,
+            "A_point_line_incidences": 704,
+            "A_tangent_count": 242,
+            "D_occupancy_census": {
+              "0": 450,
+              "1": 72,
+              "2": 466,
+              "3": 0,
+              "4": 5
+            },
+            "T_pair_moment": 45,
+            "T_point_line_incidences": 320,
+            "T_tangent_count": 230,
+            "total_projective_lines": 993
+          },
+          "checks": {
+            "A_T_cross_pair_moment": true,
+            "A_pair_moment": true,
+            "A_point_line_incidences": true,
+            "A_tangent_count": true,
+            "D_occupancy_census": true,
+            "T_pair_moment": true,
+            "T_point_line_incidences": true,
+            "T_tangent_count": true,
+            "forbidden_a1_t2_absent": true,
+            "four_secants_are_a2_t2": true,
+            "total_projective_lines": true,
+            "trisecants_are_a2_t1": true
+          },
+          "exact_keys": true,
+          "expected": {
+            "A_T_cross_pair_moment": 220,
+            "A_pair_moment": 231,
+            "A_point_line_incidences": 704,
+            "A_tangent_count": 242,
+            "D_occupancy_census": {
+              "0": 450,
+              "1": 72,
+              "2": 466,
+              "3": 0,
+              "4": 5
+            },
+            "T_pair_moment": 45,
+            "T_point_line_incidences": 320,
+            "T_tangent_count": 230,
+            "total_projective_lines": 993
+          },
+          "integral_nonnegative": true,
+          "proved": true
+        },
+        "p": 31,
+        "point_signature_audit": {
+          "A_point_count": 22,
+          "T_point_count": 10,
+          "checks": {
+            "A_point_types_partition_A": true,
+            "A_signatures_reaggregate": true,
+            "T_point_types_partition_T": true,
+            "T_signatures_reaggregate": true,
+            "each_signature_has_p_plus_one_lines": true
+          },
+          "proved": true,
+          "rows": [
+            {
+              "description": "point outside every rich block",
+              "incident_line_types": {
+                "a1_t0": 1,
+                "a1_t1": 10,
+                "a2_t0": 21
+              },
+              "multiplicity": 12,
+              "opposite_colour_points_on_rich_block": 0,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a trisecant block",
+              "incident_line_types": {
+                "a1_t0": 2,
+                "a1_t1": 9,
+                "a2_t0": 20,
+                "a2_t1": 1
+              },
+              "multiplicity": 0,
+              "opposite_colour_points_on_rich_block": 1,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a 4-secant block",
+              "incident_line_types": {
+                "a1_t0": 3,
+                "a1_t1": 8,
+                "a2_t0": 20,
+                "a2_t2": 1
+              },
+              "multiplicity": 10,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "A"
+            },
+            {
+              "description": "T-point on a trisecant block",
+              "incident_line_types": {
+                "a0_t1": 2,
+                "a0_t2": 9,
+                "a1_t1": 20,
+                "a2_t1": 1
+              },
+              "multiplicity": 0,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            },
+            {
+              "description": "T-point on a 4-secant block",
+              "incident_line_types": {
+                "a0_t1": 3,
+                "a0_t2": 8,
+                "a1_t1": 20,
+                "a2_t2": 1
+              },
+              "multiplicity": 10,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            }
+          ]
+        },
+        "points_on_rich_blocks": 20,
+        "proved": true,
+        "repair_arc_size_k": 22,
+        "repair_family": {
+          "construction": "retain all singleton points and choose exactly two points on every rich block",
+          "maximum_D_subarc_count": 7776,
+          "maximum_D_subarc_count_formula": "3^x 6^y",
+          "reason": "an arc takes at most two points from each rich block; block disjointness makes the displayed upper bound exact",
+          "these_are_all_maximum_D_subarcs": true
+        },
+        "result_status": "proved simultaneous necessary normal form",
+        "rich_block_count": 5,
+        "simultaneous_unique_trisecants": {
+          "all_affine": true,
+          "count": 10,
+          "each_has_exactly_one_trisecant": true,
+          "sets": "A union {z} for every z in T",
+          "size": 23,
+          "size_formula": "p+2-R"
+        },
+        "singleton_points": 12,
+        "top_level_gates_changed": false,
+        "trisecants_x": 0
+      }
+    ],
+    "41": [
+      {
+        "R": 13,
+        "c": 2,
+        "complement_family": {
+          "complement_is_an_arc": true,
+          "complement_size": 13,
+          "every_complement_point_has_A_secant_index": 1,
+          "reason": "a second A-secant through a complement point would be a second D-rich block through that point",
+          "unique_secant_blocks_form_matching_on_A": true,
+          "unique_secant_fibre_counts": {
+            "1": 13,
+            "2": 0
+          }
+        },
+        "cotangent_deletion_bases": {
+          "additional_extension_points_outside_D_excluded": false,
+          "all_one_point_deletion_bases": 29,
+          "base_size": 28,
+          "base_size_formula": "p-R",
+          "displayed_D_extensions_individually_preserve_the_arc": true,
+          "displayed_D_extensions_on_each_tangent_are_pairwise_incompatible": true,
+          "one_within_D_extension_base_count": 3,
+          "scope": "for each fixed maximum repair A; extension counts are within D",
+          "three_displayed_D_extensions_occur_at_4_secant_A_endpoints": true,
+          "three_within_D_cotangent_extension_base_count": 0,
+          "two_within_D_cotangent_extension_base_count": 26
+        },
+        "endpoint_excluded": false,
+        "finite_configuration_search_used": false,
+        "four_secants_y": 0,
+        "line_type_census": {
+          "a0_t0": 807,
+          "a0_t1": 26,
+          "a0_t2": 78,
+          "a1_t0": 55,
+          "a1_t1": 351,
+          "a1_t2": 0,
+          "a2_t0": 393,
+          "a2_t1": 13,
+          "a2_t2": 0
+        },
+        "line_type_census_audit": {
+          "actual": {
+            "A_T_cross_pair_moment": 377,
+            "A_pair_moment": 406,
+            "A_point_line_incidences": 1218,
+            "A_tangent_count": 406,
+            "D_occupancy_census": {
+              "0": 807,
+              "1": 81,
+              "2": 822,
+              "3": 13,
+              "4": 0
+            },
+            "T_pair_moment": 78,
+            "T_point_line_incidences": 546,
+            "T_tangent_count": 390,
+            "total_projective_lines": 1723
+          },
+          "checks": {
+            "A_T_cross_pair_moment": true,
+            "A_pair_moment": true,
+            "A_point_line_incidences": true,
+            "A_tangent_count": true,
+            "D_occupancy_census": true,
+            "T_pair_moment": true,
+            "T_point_line_incidences": true,
+            "T_tangent_count": true,
+            "forbidden_a1_t2_absent": true,
+            "four_secants_are_a2_t2": true,
+            "total_projective_lines": true,
+            "trisecants_are_a2_t1": true
+          },
+          "exact_keys": true,
+          "expected": {
+            "A_T_cross_pair_moment": 377,
+            "A_pair_moment": 406,
+            "A_point_line_incidences": 1218,
+            "A_tangent_count": 406,
+            "D_occupancy_census": {
+              "0": 807,
+              "1": 81,
+              "2": 822,
+              "3": 13,
+              "4": 0
+            },
+            "T_pair_moment": 78,
+            "T_point_line_incidences": 546,
+            "T_tangent_count": 390,
+            "total_projective_lines": 1723
+          },
+          "integral_nonnegative": true,
+          "proved": true
+        },
+        "p": 41,
+        "point_signature_audit": {
+          "A_point_count": 29,
+          "T_point_count": 13,
+          "checks": {
+            "A_point_types_partition_A": true,
+            "A_signatures_reaggregate": true,
+            "T_point_types_partition_T": true,
+            "T_signatures_reaggregate": true,
+            "each_signature_has_p_plus_one_lines": true
+          },
+          "proved": true,
+          "rows": [
+            {
+              "description": "point outside every rich block",
+              "incident_line_types": {
+                "a1_t0": 1,
+                "a1_t1": 13,
+                "a2_t0": 28
+              },
+              "multiplicity": 3,
+              "opposite_colour_points_on_rich_block": 0,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a trisecant block",
+              "incident_line_types": {
+                "a1_t0": 2,
+                "a1_t1": 12,
+                "a2_t0": 27,
+                "a2_t1": 1
+              },
+              "multiplicity": 26,
+              "opposite_colour_points_on_rich_block": 1,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a 4-secant block",
+              "incident_line_types": {
+                "a1_t0": 3,
+                "a1_t1": 11,
+                "a2_t0": 27,
+                "a2_t2": 1
+              },
+              "multiplicity": 0,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "A"
+            },
+            {
+              "description": "T-point on a trisecant block",
+              "incident_line_types": {
+                "a0_t1": 2,
+                "a0_t2": 12,
+                "a1_t1": 27,
+                "a2_t1": 1
+              },
+              "multiplicity": 13,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            },
+            {
+              "description": "T-point on a 4-secant block",
+              "incident_line_types": {
+                "a0_t1": 3,
+                "a0_t2": 11,
+                "a1_t1": 27,
+                "a2_t2": 1
+              },
+              "multiplicity": 0,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            }
+          ]
+        },
+        "points_on_rich_blocks": 39,
+        "proved": true,
+        "repair_arc_size_k": 29,
+        "repair_family": {
+          "construction": "retain all singleton points and choose exactly two points on every rich block",
+          "maximum_D_subarc_count": 1594323,
+          "maximum_D_subarc_count_formula": "3^x 6^y",
+          "reason": "an arc takes at most two points from each rich block; block disjointness makes the displayed upper bound exact",
+          "these_are_all_maximum_D_subarcs": true
+        },
+        "result_status": "proved simultaneous necessary normal form",
+        "rich_block_count": 13,
+        "simultaneous_unique_trisecants": {
+          "all_affine": true,
+          "count": 13,
+          "each_has_exactly_one_trisecant": true,
+          "sets": "A union {z} for every z in T",
+          "size": 30,
+          "size_formula": "p+2-R"
+        },
+        "singleton_points": 3,
+        "top_level_gates_changed": false,
+        "trisecants_x": 13
+      },
+      {
+        "R": 13,
+        "c": 2,
+        "complement_family": {
+          "complement_is_an_arc": true,
+          "complement_size": 13,
+          "every_complement_point_has_A_secant_index": 1,
+          "reason": "a second A-secant through a complement point would be a second D-rich block through that point",
+          "unique_secant_blocks_form_matching_on_A": true,
+          "unique_secant_fibre_counts": {
+            "1": 11,
+            "2": 1
+          }
+        },
+        "cotangent_deletion_bases": {
+          "additional_extension_points_outside_D_excluded": false,
+          "all_one_point_deletion_bases": 29,
+          "base_size": 28,
+          "base_size_formula": "p-R",
+          "displayed_D_extensions_individually_preserve_the_arc": true,
+          "displayed_D_extensions_on_each_tangent_are_pairwise_incompatible": true,
+          "one_within_D_extension_base_count": 5,
+          "scope": "for each fixed maximum repair A; extension counts are within D",
+          "three_displayed_D_extensions_occur_at_4_secant_A_endpoints": true,
+          "three_within_D_cotangent_extension_base_count": 2,
+          "two_within_D_cotangent_extension_base_count": 22
+        },
+        "endpoint_excluded": false,
+        "finite_configuration_search_used": false,
+        "four_secants_y": 1,
+        "line_type_census": {
+          "a0_t0": 806,
+          "a0_t1": 28,
+          "a0_t2": 77,
+          "a1_t0": 55,
+          "a1_t1": 351,
+          "a1_t2": 0,
+          "a2_t0": 394,
+          "a2_t1": 11,
+          "a2_t2": 1
+        },
+        "line_type_census_audit": {
+          "actual": {
+            "A_T_cross_pair_moment": 377,
+            "A_pair_moment": 406,
+            "A_point_line_incidences": 1218,
+            "A_tangent_count": 406,
+            "D_occupancy_census": {
+              "0": 806,
+              "1": 83,
+              "2": 822,
+              "3": 11,
+              "4": 1
+            },
+            "T_pair_moment": 78,
+            "T_point_line_incidences": 546,
+            "T_tangent_count": 390,
+            "total_projective_lines": 1723
+          },
+          "checks": {
+            "A_T_cross_pair_moment": true,
+            "A_pair_moment": true,
+            "A_point_line_incidences": true,
+            "A_tangent_count": true,
+            "D_occupancy_census": true,
+            "T_pair_moment": true,
+            "T_point_line_incidences": true,
+            "T_tangent_count": true,
+            "forbidden_a1_t2_absent": true,
+            "four_secants_are_a2_t2": true,
+            "total_projective_lines": true,
+            "trisecants_are_a2_t1": true
+          },
+          "exact_keys": true,
+          "expected": {
+            "A_T_cross_pair_moment": 377,
+            "A_pair_moment": 406,
+            "A_point_line_incidences": 1218,
+            "A_tangent_count": 406,
+            "D_occupancy_census": {
+              "0": 806,
+              "1": 83,
+              "2": 822,
+              "3": 11,
+              "4": 1
+            },
+            "T_pair_moment": 78,
+            "T_point_line_incidences": 546,
+            "T_tangent_count": 390,
+            "total_projective_lines": 1723
+          },
+          "integral_nonnegative": true,
+          "proved": true
+        },
+        "p": 41,
+        "point_signature_audit": {
+          "A_point_count": 29,
+          "T_point_count": 13,
+          "checks": {
+            "A_point_types_partition_A": true,
+            "A_signatures_reaggregate": true,
+            "T_point_types_partition_T": true,
+            "T_signatures_reaggregate": true,
+            "each_signature_has_p_plus_one_lines": true
+          },
+          "proved": true,
+          "rows": [
+            {
+              "description": "point outside every rich block",
+              "incident_line_types": {
+                "a1_t0": 1,
+                "a1_t1": 13,
+                "a2_t0": 28
+              },
+              "multiplicity": 5,
+              "opposite_colour_points_on_rich_block": 0,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a trisecant block",
+              "incident_line_types": {
+                "a1_t0": 2,
+                "a1_t1": 12,
+                "a2_t0": 27,
+                "a2_t1": 1
+              },
+              "multiplicity": 22,
+              "opposite_colour_points_on_rich_block": 1,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a 4-secant block",
+              "incident_line_types": {
+                "a1_t0": 3,
+                "a1_t1": 11,
+                "a2_t0": 27,
+                "a2_t2": 1
+              },
+              "multiplicity": 2,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "A"
+            },
+            {
+              "description": "T-point on a trisecant block",
+              "incident_line_types": {
+                "a0_t1": 2,
+                "a0_t2": 12,
+                "a1_t1": 27,
+                "a2_t1": 1
+              },
+              "multiplicity": 11,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            },
+            {
+              "description": "T-point on a 4-secant block",
+              "incident_line_types": {
+                "a0_t1": 3,
+                "a0_t2": 11,
+                "a1_t1": 27,
+                "a2_t2": 1
+              },
+              "multiplicity": 2,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            }
+          ]
+        },
+        "points_on_rich_blocks": 37,
+        "proved": true,
+        "repair_arc_size_k": 29,
+        "repair_family": {
+          "construction": "retain all singleton points and choose exactly two points on every rich block",
+          "maximum_D_subarc_count": 1062882,
+          "maximum_D_subarc_count_formula": "3^x 6^y",
+          "reason": "an arc takes at most two points from each rich block; block disjointness makes the displayed upper bound exact",
+          "these_are_all_maximum_D_subarcs": true
+        },
+        "result_status": "proved simultaneous necessary normal form",
+        "rich_block_count": 12,
+        "simultaneous_unique_trisecants": {
+          "all_affine": true,
+          "count": 13,
+          "each_has_exactly_one_trisecant": true,
+          "sets": "A union {z} for every z in T",
+          "size": 30,
+          "size_formula": "p+2-R"
+        },
+        "singleton_points": 5,
+        "top_level_gates_changed": false,
+        "trisecants_x": 11
+      },
+      {
+        "R": 13,
+        "c": 2,
+        "complement_family": {
+          "complement_is_an_arc": true,
+          "complement_size": 13,
+          "every_complement_point_has_A_secant_index": 1,
+          "reason": "a second A-secant through a complement point would be a second D-rich block through that point",
+          "unique_secant_blocks_form_matching_on_A": true,
+          "unique_secant_fibre_counts": {
+            "1": 9,
+            "2": 2
+          }
+        },
+        "cotangent_deletion_bases": {
+          "additional_extension_points_outside_D_excluded": false,
+          "all_one_point_deletion_bases": 29,
+          "base_size": 28,
+          "base_size_formula": "p-R",
+          "displayed_D_extensions_individually_preserve_the_arc": true,
+          "displayed_D_extensions_on_each_tangent_are_pairwise_incompatible": true,
+          "one_within_D_extension_base_count": 7,
+          "scope": "for each fixed maximum repair A; extension counts are within D",
+          "three_displayed_D_extensions_occur_at_4_secant_A_endpoints": true,
+          "three_within_D_cotangent_extension_base_count": 4,
+          "two_within_D_cotangent_extension_base_count": 18
+        },
+        "endpoint_excluded": false,
+        "finite_configuration_search_used": false,
+        "four_secants_y": 2,
+        "line_type_census": {
+          "a0_t0": 805,
+          "a0_t1": 30,
+          "a0_t2": 76,
+          "a1_t0": 55,
+          "a1_t1": 351,
+          "a1_t2": 0,
+          "a2_t0": 395,
+          "a2_t1": 9,
+          "a2_t2": 2
+        },
+        "line_type_census_audit": {
+          "actual": {
+            "A_T_cross_pair_moment": 377,
+            "A_pair_moment": 406,
+            "A_point_line_incidences": 1218,
+            "A_tangent_count": 406,
+            "D_occupancy_census": {
+              "0": 805,
+              "1": 85,
+              "2": 822,
+              "3": 9,
+              "4": 2
+            },
+            "T_pair_moment": 78,
+            "T_point_line_incidences": 546,
+            "T_tangent_count": 390,
+            "total_projective_lines": 1723
+          },
+          "checks": {
+            "A_T_cross_pair_moment": true,
+            "A_pair_moment": true,
+            "A_point_line_incidences": true,
+            "A_tangent_count": true,
+            "D_occupancy_census": true,
+            "T_pair_moment": true,
+            "T_point_line_incidences": true,
+            "T_tangent_count": true,
+            "forbidden_a1_t2_absent": true,
+            "four_secants_are_a2_t2": true,
+            "total_projective_lines": true,
+            "trisecants_are_a2_t1": true
+          },
+          "exact_keys": true,
+          "expected": {
+            "A_T_cross_pair_moment": 377,
+            "A_pair_moment": 406,
+            "A_point_line_incidences": 1218,
+            "A_tangent_count": 406,
+            "D_occupancy_census": {
+              "0": 805,
+              "1": 85,
+              "2": 822,
+              "3": 9,
+              "4": 2
+            },
+            "T_pair_moment": 78,
+            "T_point_line_incidences": 546,
+            "T_tangent_count": 390,
+            "total_projective_lines": 1723
+          },
+          "integral_nonnegative": true,
+          "proved": true
+        },
+        "p": 41,
+        "point_signature_audit": {
+          "A_point_count": 29,
+          "T_point_count": 13,
+          "checks": {
+            "A_point_types_partition_A": true,
+            "A_signatures_reaggregate": true,
+            "T_point_types_partition_T": true,
+            "T_signatures_reaggregate": true,
+            "each_signature_has_p_plus_one_lines": true
+          },
+          "proved": true,
+          "rows": [
+            {
+              "description": "point outside every rich block",
+              "incident_line_types": {
+                "a1_t0": 1,
+                "a1_t1": 13,
+                "a2_t0": 28
+              },
+              "multiplicity": 7,
+              "opposite_colour_points_on_rich_block": 0,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a trisecant block",
+              "incident_line_types": {
+                "a1_t0": 2,
+                "a1_t1": 12,
+                "a2_t0": 27,
+                "a2_t1": 1
+              },
+              "multiplicity": 18,
+              "opposite_colour_points_on_rich_block": 1,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a 4-secant block",
+              "incident_line_types": {
+                "a1_t0": 3,
+                "a1_t1": 11,
+                "a2_t0": 27,
+                "a2_t2": 1
+              },
+              "multiplicity": 4,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "A"
+            },
+            {
+              "description": "T-point on a trisecant block",
+              "incident_line_types": {
+                "a0_t1": 2,
+                "a0_t2": 12,
+                "a1_t1": 27,
+                "a2_t1": 1
+              },
+              "multiplicity": 9,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            },
+            {
+              "description": "T-point on a 4-secant block",
+              "incident_line_types": {
+                "a0_t1": 3,
+                "a0_t2": 11,
+                "a1_t1": 27,
+                "a2_t2": 1
+              },
+              "multiplicity": 4,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            }
+          ]
+        },
+        "points_on_rich_blocks": 35,
+        "proved": true,
+        "repair_arc_size_k": 29,
+        "repair_family": {
+          "construction": "retain all singleton points and choose exactly two points on every rich block",
+          "maximum_D_subarc_count": 708588,
+          "maximum_D_subarc_count_formula": "3^x 6^y",
+          "reason": "an arc takes at most two points from each rich block; block disjointness makes the displayed upper bound exact",
+          "these_are_all_maximum_D_subarcs": true
+        },
+        "result_status": "proved simultaneous necessary normal form",
+        "rich_block_count": 11,
+        "simultaneous_unique_trisecants": {
+          "all_affine": true,
+          "count": 13,
+          "each_has_exactly_one_trisecant": true,
+          "sets": "A union {z} for every z in T",
+          "size": 30,
+          "size_formula": "p+2-R"
+        },
+        "singleton_points": 7,
+        "top_level_gates_changed": false,
+        "trisecants_x": 9
+      },
+      {
+        "R": 13,
+        "c": 2,
+        "complement_family": {
+          "complement_is_an_arc": true,
+          "complement_size": 13,
+          "every_complement_point_has_A_secant_index": 1,
+          "reason": "a second A-secant through a complement point would be a second D-rich block through that point",
+          "unique_secant_blocks_form_matching_on_A": true,
+          "unique_secant_fibre_counts": {
+            "1": 7,
+            "2": 3
+          }
+        },
+        "cotangent_deletion_bases": {
+          "additional_extension_points_outside_D_excluded": false,
+          "all_one_point_deletion_bases": 29,
+          "base_size": 28,
+          "base_size_formula": "p-R",
+          "displayed_D_extensions_individually_preserve_the_arc": true,
+          "displayed_D_extensions_on_each_tangent_are_pairwise_incompatible": true,
+          "one_within_D_extension_base_count": 9,
+          "scope": "for each fixed maximum repair A; extension counts are within D",
+          "three_displayed_D_extensions_occur_at_4_secant_A_endpoints": true,
+          "three_within_D_cotangent_extension_base_count": 6,
+          "two_within_D_cotangent_extension_base_count": 14
+        },
+        "endpoint_excluded": false,
+        "finite_configuration_search_used": false,
+        "four_secants_y": 3,
+        "line_type_census": {
+          "a0_t0": 804,
+          "a0_t1": 32,
+          "a0_t2": 75,
+          "a1_t0": 55,
+          "a1_t1": 351,
+          "a1_t2": 0,
+          "a2_t0": 396,
+          "a2_t1": 7,
+          "a2_t2": 3
+        },
+        "line_type_census_audit": {
+          "actual": {
+            "A_T_cross_pair_moment": 377,
+            "A_pair_moment": 406,
+            "A_point_line_incidences": 1218,
+            "A_tangent_count": 406,
+            "D_occupancy_census": {
+              "0": 804,
+              "1": 87,
+              "2": 822,
+              "3": 7,
+              "4": 3
+            },
+            "T_pair_moment": 78,
+            "T_point_line_incidences": 546,
+            "T_tangent_count": 390,
+            "total_projective_lines": 1723
+          },
+          "checks": {
+            "A_T_cross_pair_moment": true,
+            "A_pair_moment": true,
+            "A_point_line_incidences": true,
+            "A_tangent_count": true,
+            "D_occupancy_census": true,
+            "T_pair_moment": true,
+            "T_point_line_incidences": true,
+            "T_tangent_count": true,
+            "forbidden_a1_t2_absent": true,
+            "four_secants_are_a2_t2": true,
+            "total_projective_lines": true,
+            "trisecants_are_a2_t1": true
+          },
+          "exact_keys": true,
+          "expected": {
+            "A_T_cross_pair_moment": 377,
+            "A_pair_moment": 406,
+            "A_point_line_incidences": 1218,
+            "A_tangent_count": 406,
+            "D_occupancy_census": {
+              "0": 804,
+              "1": 87,
+              "2": 822,
+              "3": 7,
+              "4": 3
+            },
+            "T_pair_moment": 78,
+            "T_point_line_incidences": 546,
+            "T_tangent_count": 390,
+            "total_projective_lines": 1723
+          },
+          "integral_nonnegative": true,
+          "proved": true
+        },
+        "p": 41,
+        "point_signature_audit": {
+          "A_point_count": 29,
+          "T_point_count": 13,
+          "checks": {
+            "A_point_types_partition_A": true,
+            "A_signatures_reaggregate": true,
+            "T_point_types_partition_T": true,
+            "T_signatures_reaggregate": true,
+            "each_signature_has_p_plus_one_lines": true
+          },
+          "proved": true,
+          "rows": [
+            {
+              "description": "point outside every rich block",
+              "incident_line_types": {
+                "a1_t0": 1,
+                "a1_t1": 13,
+                "a2_t0": 28
+              },
+              "multiplicity": 9,
+              "opposite_colour_points_on_rich_block": 0,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a trisecant block",
+              "incident_line_types": {
+                "a1_t0": 2,
+                "a1_t1": 12,
+                "a2_t0": 27,
+                "a2_t1": 1
+              },
+              "multiplicity": 14,
+              "opposite_colour_points_on_rich_block": 1,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a 4-secant block",
+              "incident_line_types": {
+                "a1_t0": 3,
+                "a1_t1": 11,
+                "a2_t0": 27,
+                "a2_t2": 1
+              },
+              "multiplicity": 6,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "A"
+            },
+            {
+              "description": "T-point on a trisecant block",
+              "incident_line_types": {
+                "a0_t1": 2,
+                "a0_t2": 12,
+                "a1_t1": 27,
+                "a2_t1": 1
+              },
+              "multiplicity": 7,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            },
+            {
+              "description": "T-point on a 4-secant block",
+              "incident_line_types": {
+                "a0_t1": 3,
+                "a0_t2": 11,
+                "a1_t1": 27,
+                "a2_t2": 1
+              },
+              "multiplicity": 6,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            }
+          ]
+        },
+        "points_on_rich_blocks": 33,
+        "proved": true,
+        "repair_arc_size_k": 29,
+        "repair_family": {
+          "construction": "retain all singleton points and choose exactly two points on every rich block",
+          "maximum_D_subarc_count": 472392,
+          "maximum_D_subarc_count_formula": "3^x 6^y",
+          "reason": "an arc takes at most two points from each rich block; block disjointness makes the displayed upper bound exact",
+          "these_are_all_maximum_D_subarcs": true
+        },
+        "result_status": "proved simultaneous necessary normal form",
+        "rich_block_count": 10,
+        "simultaneous_unique_trisecants": {
+          "all_affine": true,
+          "count": 13,
+          "each_has_exactly_one_trisecant": true,
+          "sets": "A union {z} for every z in T",
+          "size": 30,
+          "size_formula": "p+2-R"
+        },
+        "singleton_points": 9,
+        "top_level_gates_changed": false,
+        "trisecants_x": 7
+      },
+      {
+        "R": 13,
+        "c": 2,
+        "complement_family": {
+          "complement_is_an_arc": true,
+          "complement_size": 13,
+          "every_complement_point_has_A_secant_index": 1,
+          "reason": "a second A-secant through a complement point would be a second D-rich block through that point",
+          "unique_secant_blocks_form_matching_on_A": true,
+          "unique_secant_fibre_counts": {
+            "1": 5,
+            "2": 4
+          }
+        },
+        "cotangent_deletion_bases": {
+          "additional_extension_points_outside_D_excluded": false,
+          "all_one_point_deletion_bases": 29,
+          "base_size": 28,
+          "base_size_formula": "p-R",
+          "displayed_D_extensions_individually_preserve_the_arc": true,
+          "displayed_D_extensions_on_each_tangent_are_pairwise_incompatible": true,
+          "one_within_D_extension_base_count": 11,
+          "scope": "for each fixed maximum repair A; extension counts are within D",
+          "three_displayed_D_extensions_occur_at_4_secant_A_endpoints": true,
+          "three_within_D_cotangent_extension_base_count": 8,
+          "two_within_D_cotangent_extension_base_count": 10
+        },
+        "endpoint_excluded": false,
+        "finite_configuration_search_used": false,
+        "four_secants_y": 4,
+        "line_type_census": {
+          "a0_t0": 803,
+          "a0_t1": 34,
+          "a0_t2": 74,
+          "a1_t0": 55,
+          "a1_t1": 351,
+          "a1_t2": 0,
+          "a2_t0": 397,
+          "a2_t1": 5,
+          "a2_t2": 4
+        },
+        "line_type_census_audit": {
+          "actual": {
+            "A_T_cross_pair_moment": 377,
+            "A_pair_moment": 406,
+            "A_point_line_incidences": 1218,
+            "A_tangent_count": 406,
+            "D_occupancy_census": {
+              "0": 803,
+              "1": 89,
+              "2": 822,
+              "3": 5,
+              "4": 4
+            },
+            "T_pair_moment": 78,
+            "T_point_line_incidences": 546,
+            "T_tangent_count": 390,
+            "total_projective_lines": 1723
+          },
+          "checks": {
+            "A_T_cross_pair_moment": true,
+            "A_pair_moment": true,
+            "A_point_line_incidences": true,
+            "A_tangent_count": true,
+            "D_occupancy_census": true,
+            "T_pair_moment": true,
+            "T_point_line_incidences": true,
+            "T_tangent_count": true,
+            "forbidden_a1_t2_absent": true,
+            "four_secants_are_a2_t2": true,
+            "total_projective_lines": true,
+            "trisecants_are_a2_t1": true
+          },
+          "exact_keys": true,
+          "expected": {
+            "A_T_cross_pair_moment": 377,
+            "A_pair_moment": 406,
+            "A_point_line_incidences": 1218,
+            "A_tangent_count": 406,
+            "D_occupancy_census": {
+              "0": 803,
+              "1": 89,
+              "2": 822,
+              "3": 5,
+              "4": 4
+            },
+            "T_pair_moment": 78,
+            "T_point_line_incidences": 546,
+            "T_tangent_count": 390,
+            "total_projective_lines": 1723
+          },
+          "integral_nonnegative": true,
+          "proved": true
+        },
+        "p": 41,
+        "point_signature_audit": {
+          "A_point_count": 29,
+          "T_point_count": 13,
+          "checks": {
+            "A_point_types_partition_A": true,
+            "A_signatures_reaggregate": true,
+            "T_point_types_partition_T": true,
+            "T_signatures_reaggregate": true,
+            "each_signature_has_p_plus_one_lines": true
+          },
+          "proved": true,
+          "rows": [
+            {
+              "description": "point outside every rich block",
+              "incident_line_types": {
+                "a1_t0": 1,
+                "a1_t1": 13,
+                "a2_t0": 28
+              },
+              "multiplicity": 11,
+              "opposite_colour_points_on_rich_block": 0,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a trisecant block",
+              "incident_line_types": {
+                "a1_t0": 2,
+                "a1_t1": 12,
+                "a2_t0": 27,
+                "a2_t1": 1
+              },
+              "multiplicity": 10,
+              "opposite_colour_points_on_rich_block": 1,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a 4-secant block",
+              "incident_line_types": {
+                "a1_t0": 3,
+                "a1_t1": 11,
+                "a2_t0": 27,
+                "a2_t2": 1
+              },
+              "multiplicity": 8,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "A"
+            },
+            {
+              "description": "T-point on a trisecant block",
+              "incident_line_types": {
+                "a0_t1": 2,
+                "a0_t2": 12,
+                "a1_t1": 27,
+                "a2_t1": 1
+              },
+              "multiplicity": 5,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            },
+            {
+              "description": "T-point on a 4-secant block",
+              "incident_line_types": {
+                "a0_t1": 3,
+                "a0_t2": 11,
+                "a1_t1": 27,
+                "a2_t2": 1
+              },
+              "multiplicity": 8,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            }
+          ]
+        },
+        "points_on_rich_blocks": 31,
+        "proved": true,
+        "repair_arc_size_k": 29,
+        "repair_family": {
+          "construction": "retain all singleton points and choose exactly two points on every rich block",
+          "maximum_D_subarc_count": 314928,
+          "maximum_D_subarc_count_formula": "3^x 6^y",
+          "reason": "an arc takes at most two points from each rich block; block disjointness makes the displayed upper bound exact",
+          "these_are_all_maximum_D_subarcs": true
+        },
+        "result_status": "proved simultaneous necessary normal form",
+        "rich_block_count": 9,
+        "simultaneous_unique_trisecants": {
+          "all_affine": true,
+          "count": 13,
+          "each_has_exactly_one_trisecant": true,
+          "sets": "A union {z} for every z in T",
+          "size": 30,
+          "size_formula": "p+2-R"
+        },
+        "singleton_points": 11,
+        "top_level_gates_changed": false,
+        "trisecants_x": 5
+      },
+      {
+        "R": 13,
+        "c": 2,
+        "complement_family": {
+          "complement_is_an_arc": true,
+          "complement_size": 13,
+          "every_complement_point_has_A_secant_index": 1,
+          "reason": "a second A-secant through a complement point would be a second D-rich block through that point",
+          "unique_secant_blocks_form_matching_on_A": true,
+          "unique_secant_fibre_counts": {
+            "1": 3,
+            "2": 5
+          }
+        },
+        "cotangent_deletion_bases": {
+          "additional_extension_points_outside_D_excluded": false,
+          "all_one_point_deletion_bases": 29,
+          "base_size": 28,
+          "base_size_formula": "p-R",
+          "displayed_D_extensions_individually_preserve_the_arc": true,
+          "displayed_D_extensions_on_each_tangent_are_pairwise_incompatible": true,
+          "one_within_D_extension_base_count": 13,
+          "scope": "for each fixed maximum repair A; extension counts are within D",
+          "three_displayed_D_extensions_occur_at_4_secant_A_endpoints": true,
+          "three_within_D_cotangent_extension_base_count": 10,
+          "two_within_D_cotangent_extension_base_count": 6
+        },
+        "endpoint_excluded": false,
+        "finite_configuration_search_used": false,
+        "four_secants_y": 5,
+        "line_type_census": {
+          "a0_t0": 802,
+          "a0_t1": 36,
+          "a0_t2": 73,
+          "a1_t0": 55,
+          "a1_t1": 351,
+          "a1_t2": 0,
+          "a2_t0": 398,
+          "a2_t1": 3,
+          "a2_t2": 5
+        },
+        "line_type_census_audit": {
+          "actual": {
+            "A_T_cross_pair_moment": 377,
+            "A_pair_moment": 406,
+            "A_point_line_incidences": 1218,
+            "A_tangent_count": 406,
+            "D_occupancy_census": {
+              "0": 802,
+              "1": 91,
+              "2": 822,
+              "3": 3,
+              "4": 5
+            },
+            "T_pair_moment": 78,
+            "T_point_line_incidences": 546,
+            "T_tangent_count": 390,
+            "total_projective_lines": 1723
+          },
+          "checks": {
+            "A_T_cross_pair_moment": true,
+            "A_pair_moment": true,
+            "A_point_line_incidences": true,
+            "A_tangent_count": true,
+            "D_occupancy_census": true,
+            "T_pair_moment": true,
+            "T_point_line_incidences": true,
+            "T_tangent_count": true,
+            "forbidden_a1_t2_absent": true,
+            "four_secants_are_a2_t2": true,
+            "total_projective_lines": true,
+            "trisecants_are_a2_t1": true
+          },
+          "exact_keys": true,
+          "expected": {
+            "A_T_cross_pair_moment": 377,
+            "A_pair_moment": 406,
+            "A_point_line_incidences": 1218,
+            "A_tangent_count": 406,
+            "D_occupancy_census": {
+              "0": 802,
+              "1": 91,
+              "2": 822,
+              "3": 3,
+              "4": 5
+            },
+            "T_pair_moment": 78,
+            "T_point_line_incidences": 546,
+            "T_tangent_count": 390,
+            "total_projective_lines": 1723
+          },
+          "integral_nonnegative": true,
+          "proved": true
+        },
+        "p": 41,
+        "point_signature_audit": {
+          "A_point_count": 29,
+          "T_point_count": 13,
+          "checks": {
+            "A_point_types_partition_A": true,
+            "A_signatures_reaggregate": true,
+            "T_point_types_partition_T": true,
+            "T_signatures_reaggregate": true,
+            "each_signature_has_p_plus_one_lines": true
+          },
+          "proved": true,
+          "rows": [
+            {
+              "description": "point outside every rich block",
+              "incident_line_types": {
+                "a1_t0": 1,
+                "a1_t1": 13,
+                "a2_t0": 28
+              },
+              "multiplicity": 13,
+              "opposite_colour_points_on_rich_block": 0,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a trisecant block",
+              "incident_line_types": {
+                "a1_t0": 2,
+                "a1_t1": 12,
+                "a2_t0": 27,
+                "a2_t1": 1
+              },
+              "multiplicity": 6,
+              "opposite_colour_points_on_rich_block": 1,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a 4-secant block",
+              "incident_line_types": {
+                "a1_t0": 3,
+                "a1_t1": 11,
+                "a2_t0": 27,
+                "a2_t2": 1
+              },
+              "multiplicity": 10,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "A"
+            },
+            {
+              "description": "T-point on a trisecant block",
+              "incident_line_types": {
+                "a0_t1": 2,
+                "a0_t2": 12,
+                "a1_t1": 27,
+                "a2_t1": 1
+              },
+              "multiplicity": 3,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            },
+            {
+              "description": "T-point on a 4-secant block",
+              "incident_line_types": {
+                "a0_t1": 3,
+                "a0_t2": 11,
+                "a1_t1": 27,
+                "a2_t2": 1
+              },
+              "multiplicity": 10,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            }
+          ]
+        },
+        "points_on_rich_blocks": 29,
+        "proved": true,
+        "repair_arc_size_k": 29,
+        "repair_family": {
+          "construction": "retain all singleton points and choose exactly two points on every rich block",
+          "maximum_D_subarc_count": 209952,
+          "maximum_D_subarc_count_formula": "3^x 6^y",
+          "reason": "an arc takes at most two points from each rich block; block disjointness makes the displayed upper bound exact",
+          "these_are_all_maximum_D_subarcs": true
+        },
+        "result_status": "proved simultaneous necessary normal form",
+        "rich_block_count": 8,
+        "simultaneous_unique_trisecants": {
+          "all_affine": true,
+          "count": 13,
+          "each_has_exactly_one_trisecant": true,
+          "sets": "A union {z} for every z in T",
+          "size": 30,
+          "size_formula": "p+2-R"
+        },
+        "singleton_points": 13,
+        "top_level_gates_changed": false,
+        "trisecants_x": 3
+      },
+      {
+        "R": 13,
+        "c": 2,
+        "complement_family": {
+          "complement_is_an_arc": true,
+          "complement_size": 13,
+          "every_complement_point_has_A_secant_index": 1,
+          "reason": "a second A-secant through a complement point would be a second D-rich block through that point",
+          "unique_secant_blocks_form_matching_on_A": true,
+          "unique_secant_fibre_counts": {
+            "1": 1,
+            "2": 6
+          }
+        },
+        "cotangent_deletion_bases": {
+          "additional_extension_points_outside_D_excluded": false,
+          "all_one_point_deletion_bases": 29,
+          "base_size": 28,
+          "base_size_formula": "p-R",
+          "displayed_D_extensions_individually_preserve_the_arc": true,
+          "displayed_D_extensions_on_each_tangent_are_pairwise_incompatible": true,
+          "one_within_D_extension_base_count": 15,
+          "scope": "for each fixed maximum repair A; extension counts are within D",
+          "three_displayed_D_extensions_occur_at_4_secant_A_endpoints": true,
+          "three_within_D_cotangent_extension_base_count": 12,
+          "two_within_D_cotangent_extension_base_count": 2
+        },
+        "endpoint_excluded": false,
+        "finite_configuration_search_used": false,
+        "four_secants_y": 6,
+        "line_type_census": {
+          "a0_t0": 801,
+          "a0_t1": 38,
+          "a0_t2": 72,
+          "a1_t0": 55,
+          "a1_t1": 351,
+          "a1_t2": 0,
+          "a2_t0": 399,
+          "a2_t1": 1,
+          "a2_t2": 6
+        },
+        "line_type_census_audit": {
+          "actual": {
+            "A_T_cross_pair_moment": 377,
+            "A_pair_moment": 406,
+            "A_point_line_incidences": 1218,
+            "A_tangent_count": 406,
+            "D_occupancy_census": {
+              "0": 801,
+              "1": 93,
+              "2": 822,
+              "3": 1,
+              "4": 6
+            },
+            "T_pair_moment": 78,
+            "T_point_line_incidences": 546,
+            "T_tangent_count": 390,
+            "total_projective_lines": 1723
+          },
+          "checks": {
+            "A_T_cross_pair_moment": true,
+            "A_pair_moment": true,
+            "A_point_line_incidences": true,
+            "A_tangent_count": true,
+            "D_occupancy_census": true,
+            "T_pair_moment": true,
+            "T_point_line_incidences": true,
+            "T_tangent_count": true,
+            "forbidden_a1_t2_absent": true,
+            "four_secants_are_a2_t2": true,
+            "total_projective_lines": true,
+            "trisecants_are_a2_t1": true
+          },
+          "exact_keys": true,
+          "expected": {
+            "A_T_cross_pair_moment": 377,
+            "A_pair_moment": 406,
+            "A_point_line_incidences": 1218,
+            "A_tangent_count": 406,
+            "D_occupancy_census": {
+              "0": 801,
+              "1": 93,
+              "2": 822,
+              "3": 1,
+              "4": 6
+            },
+            "T_pair_moment": 78,
+            "T_point_line_incidences": 546,
+            "T_tangent_count": 390,
+            "total_projective_lines": 1723
+          },
+          "integral_nonnegative": true,
+          "proved": true
+        },
+        "p": 41,
+        "point_signature_audit": {
+          "A_point_count": 29,
+          "T_point_count": 13,
+          "checks": {
+            "A_point_types_partition_A": true,
+            "A_signatures_reaggregate": true,
+            "T_point_types_partition_T": true,
+            "T_signatures_reaggregate": true,
+            "each_signature_has_p_plus_one_lines": true
+          },
+          "proved": true,
+          "rows": [
+            {
+              "description": "point outside every rich block",
+              "incident_line_types": {
+                "a1_t0": 1,
+                "a1_t1": 13,
+                "a2_t0": 28
+              },
+              "multiplicity": 15,
+              "opposite_colour_points_on_rich_block": 0,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a trisecant block",
+              "incident_line_types": {
+                "a1_t0": 2,
+                "a1_t1": 12,
+                "a2_t0": 27,
+                "a2_t1": 1
+              },
+              "multiplicity": 2,
+              "opposite_colour_points_on_rich_block": 1,
+              "set": "A"
+            },
+            {
+              "description": "A-point on a 4-secant block",
+              "incident_line_types": {
+                "a1_t0": 3,
+                "a1_t1": 11,
+                "a2_t0": 27,
+                "a2_t2": 1
+              },
+              "multiplicity": 12,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "A"
+            },
+            {
+              "description": "T-point on a trisecant block",
+              "incident_line_types": {
+                "a0_t1": 2,
+                "a0_t2": 12,
+                "a1_t1": 27,
+                "a2_t1": 1
+              },
+              "multiplicity": 1,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            },
+            {
+              "description": "T-point on a 4-secant block",
+              "incident_line_types": {
+                "a0_t1": 3,
+                "a0_t2": 11,
+                "a1_t1": 27,
+                "a2_t2": 1
+              },
+              "multiplicity": 12,
+              "opposite_colour_points_on_rich_block": 2,
+              "set": "T"
+            }
+          ]
+        },
+        "points_on_rich_blocks": 27,
+        "proved": true,
+        "repair_arc_size_k": 29,
+        "repair_family": {
+          "construction": "retain all singleton points and choose exactly two points on every rich block",
+          "maximum_D_subarc_count": 139968,
+          "maximum_D_subarc_count_formula": "3^x 6^y",
+          "reason": "an arc takes at most two points from each rich block; block disjointness makes the displayed upper bound exact",
+          "these_are_all_maximum_D_subarcs": true
+        },
+        "result_status": "proved simultaneous necessary normal form",
+        "rich_block_count": 7,
+        "simultaneous_unique_trisecants": {
+          "all_affine": true,
+          "count": 13,
+          "each_has_exactly_one_trisecant": true,
+          "sets": "A union {z} for every z in T",
+          "size": 30,
+          "size_formula": "p+2-R"
+        },
+        "singleton_points": 15,
+        "top_level_gates_changed": false,
+        "trisecants_x": 1
+      }
+    ]
+  },
+  "source_correction": {
+    "correct_reading": "d<=2(q+2)/3+2 is the upper endpoint under the other hypotheses, including d>3+2sqrt(q) and existence of the configuration, for which the associated hyperplane arrangement is second-smallest; it is not a 3-arc nonexistence bound",
+    "proposition_15_729_core_affected": false,
+    "retracted_claim": "Bartoli--Storme Corollary 2.7 is a universal odd-order unique-trisecant 3-arc size ceiling"
+  },
+  "statement": "every 15.727 disjoint-block completion has exactly 3^x 6^y maximum arc repairs, each with an R-arc index-one complement, the displayed exact 3-by-3 line census, and simultaneous two/three co-tangent extension bases",
+  "title": "Simultaneous endpoint repair family and bivariate line census",
+  "top_level_gates_changed": false
+}

@@ -1,4 +1,47 @@
-# Status (2026-08-31; through Proposition 15.729)
+# Status (2026-08-31; through Proposition 15.731)
+
+**15.731 PROVES tangent-envelope existence and exact uniqueness/pencil
+structure for every endpoint repair, plus a low-degree swap law; it does not
+exclude the endpoint.** Put `t=R+1` and `d=2t`. Squared Segre-normalized
+tangent products give compatible degree-`d` sections on the dual lines of
+each repair, and an elementary line-gluing lemma produces a degree-`d`
+envelope. For `p=3R+2`, `|A|=d+1` and the normalized envelope is unique; for
+`p=3R+1`, `|A|=d` and the envelopes form
+`Phi_0+lambda product_(a in A)L_a`. Thus the endpoint does not lack tangent
+envelopes despite missing the sufficient size hypothesis of the explicit
+Ball--Lavrauw construction. If adjacent repairs exchange `a` for `z`, then
+after aligning their Segre normalization,
+`L_z^2 Phi_(A')-L_a^2 Phi_A=P_(A intersect A') Q_(a,z)`, where `Q` is
+quadratic in the unique-envelope residue and is a cubic class modulo
+`span{L_a^3,L_z^3}` in the pencil residue. The exact unresolved implication
+is to exclude the 15.727/15.730 common completion under the residual
+direction, phase, and lift constraints. Deriving a nontrivial repair-graph
+cycle identity from these transition coordinates is the preferred next
+attack; no such identity or phase bridge is proved here. Endpoint equality,
+larger slack, residual (ii), multi-level Type I, and `L` remain OPEN.
+
+**15.730 PROVES that every surviving endpoint carries an exact
+complementary-arc repair ensemble, not an endpoint exclusion.** For every
+15.727 block decomposition, all maximum arcs contained in `D` are obtained
+by retaining every singleton and exactly two points on every rich block.
+There are exactly `3^x 6^y` of them. Each repair `A_Q` has an `R`-point
+complementary arc `T_Q`; every point of `T_Q` has exactly one `A_Q`-secant,
+and the complete two-colour projective line census is forced. Each repair
+also gives `R` simultaneous unique-trisecant extensions, while every
+4-secant gives two size-`p-R` bases with three pairwise-incompatible
+co-tangent extensions. Direction by direction,
+`b_d=p+1-2(sigma_d+tau_d+m_d)`, with all nine two-colour fibre counts
+explicit. This strictly strengthens 15.729's one-object consequence but
+does not close the endpoint. The previously recorded Bartoli--Storme
+``unique-trisecant ceiling'' is **RETRACTED**: under the result's other
+hypotheses, including `d>3+2sqrt(q)` and existence of the configuration, its
+threshold is an upper endpoint for a second-smallest hyperplane-arrangement
+classification, not a universal existence bound for unique-trisecant 3-arcs.
+Proposition 15.731 supplies the
+tangent envelopes directly and reduces one-block compatibility to
+quadratic/cubic transition data. First-shell survivors, larger slack,
+residual (ii),
+multi-level Type I, and `L` remain OPEN.
 
 **15.729 PROVES an all-prime affine unique-trisecant reduction, not an
 endpoint exclusion.** Continue the 15.727 endpoint normal form with
@@ -9,9 +52,8 @@ all singleton points. Exactly `R-1` points are deleted, giving an affine
 that trisecant gives an affine `(p-R)`-arc `B`; the deleted points are two
 distinct extension points on the same tangent of `B`. The exact size pairs
 `(|U|,|B|)` are `(2R+3,2R+1)` for `p=3R+1` and `(2R+4,2R+2)` for
-`p=3R+2`. The live endpoint gate is to exclude or classify these
-near-extremal affine unique-trisecant configurations while preserving their
-common disjoint-block completion `D`. This is a necessary reduction only:
+`p=3R+2`. Propositions 15.730--15.731 sharpen this one-object consequence
+to the full repair ensemble and its tangent transitions. This is a necessary reduction only:
 first-shell survivors still begin at `R>=floor((p-1)/3)`, and the endpoint,
 larger slack, residual (ii), multi-level Type I, and `L` remain OPEN. The
 `p=31` audit excludes eleven of the twelve classified complete 22-arc
@@ -27,8 +69,8 @@ One sixteen-direction Paley type has exact scaled-mean multiset
 directions contain no rich line and have fibre profile
 `(l_0,l_1,l_2,l_3,l_4)=(14,2,15,0,0)`. This uses the residual separator
 budgets and is not a statement about arbitrary 32-point sets. It neither
-excludes the `p=31` endpoint nor closes any top-level gate; 15.729 supplies
-the stronger all-prime geometric target above.
+excludes the `p=31` endpoint nor closes any top-level gate; 15.731 supplies
+the latest all-prime algebraic refinement above.
 
 **15.727 FORCES the first unexcluded slack into a disjoint rich-block
 normal form and EXCLUDES that endpoint at `p=17,19,23,29`.** Put
@@ -45,8 +87,10 @@ give maxima `4,4,1,0` instead of the required `5,6,7,9` for the resulting
 13-, 14-, 17-, and 21-arcs at `p=17,19,23,29`. Their first possible positive
 slacks are now at least `6,7,8,10`. No new solver run is used. From `p=31`
 onward the endpoint remains open in the disjoint 3/4-secant normal form.
-Propositions 15.728--15.729 add the necessary Paley-hard and affine
-unique-trisecant reductions above, without excluding the endpoint. Larger
+Propositions 15.728--15.731 add the necessary Paley-hard, affine
+unique-trisecant, complementary-repair, and tangent-envelope reductions
+above, without
+excluding the endpoint. Larger
 slack, residual (ii), multi-level Type I, and `L` remain OPEN.
 
 **15.726 EXCLUDES every positive outside slack**
@@ -70,7 +114,8 @@ residual (ii), multi-level Type I, and `L` remain OPEN.
 **15.725's attempted parabola-plus-internal family close is RETRACTED.** Its
 finite phase-zero census is exact, but the all-prime character bounds and
 opposite product sign are unproved. It has no downstream role. The latest
-proved narrowing is 15.729 above.
+proved endpoint exclusion/narrowing is 15.727 above; 15.730--15.731 are the
+later structural and algebraic refinements.
 
 **15.724 EXCLUDES the full Miquelian-circle boundary, and therefore the
 entire outside pair-slack-zero branch at `|D|=p+1`, for every `p>=17`.**

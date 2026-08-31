@@ -9399,9 +9399,10 @@ least
 \]
 
 This is a proved necessary normal form, not an endpoint exclusion.  It uses
-no arc classification and no finite configuration search.  The next gate is
-to show that the disjoint 3/4-secant endpoint cannot support the same-Paley
-near-perfect pairing directions in (15.728.9), or that they force one of the
+no arc classification and no finite configuration search.  At this stage,
+the next implication was to show that the disjoint 3/4-secant endpoint cannot
+support the same-Paley near-perfect pairing directions in (15.728.9), or that
+they force one of the
 already-closed circle/conic configurations.  The (p=31) endpoint, the rest
 of residual (ii), Type I, and the limit remain open.
 
@@ -9463,16 +9464,260 @@ left in (B).  The exact sizes in the two residues are
 
 This is a proved structural reduction, not an endpoint exclusion.  It uses
 no blocking-set theorem, finite configuration search, or new classification.
-The remaining implication is to exclude or classify these two families of
-large affine unique-trisecant 3-arcs, equivalently their large affine arc
-subsets with two co-tangent extensions, while preserving compatibility with
-the common disjoint-block completion (D).  The endpoint, the rest of
-residual (ii), Type I, and the limit remain open.
+At the 15.729 stage, the remaining implication was to exclude or classify
+these two families of large affine unique-trisecant 3-arcs, equivalently
+their large affine arc subsets with two co-tangent extensions, while
+preserving compatibility with the common disjoint-block completion (D).
+Propositions 15.730--15.731 supersede that formulation with the full repair
+ensemble and its transition coordinates. The endpoint, the rest of residual
+(ii), Type I, and the limit remain open.
 
 Evidence: `src/e1_gmin_m4_prop15729.py`,
 `tests/test_prop15729.py`,
 `evidence/e1_gmin_m4_prop15729.json`, and
 `evidence/NOTE_2026-08-31_affine_unique_trisecant_reduction.md`.
+
+## Proposition 15.730 — complementary-arc repair ensemble and exact census
+
+Continue the endpoint normal form of Proposition 15.727 and put
+(k=p+1-R).  Thus (D=A\sqcup T), where (A) is a (k)-arc, (|T|=R), and
+the rich lines of (D) are pairwise (D)-disjoint: (x) trisecants and (y)
+4-secants, each containing exactly two points of (A), with
+
+\[
+ x+2y=R.                                             \tag{15.730.1}
+\]
+
+Let (S) be the points outside the rich blocks.  Then
+(|S|=p+1-3x-4y=c+1+2y).  On every rich block (L), choose a two-point
+subset (Q_L), and define
+
+\[
+ A_Q=S\cup\bigcup_L Q_L,\qquad T_Q=D\setminus A_Q.  \tag{15.730.2}
+\]
+
+Any line containing three points of either (A_Q) or (T_Q) would be a rich
+line of (D).  But (A_Q) retains exactly two points on every rich block,
+while (T_Q) retains one on a trisecant and two on a 4-secant.  Therefore
+both sets are arcs, with
+
+\[
+ |A_Q|=k=p+1-R,\qquad |T_Q|=R.                      \tag{15.730.3}
+\]
+
+Conversely, a (k)-point arc in (D) must delete at least one point on each
+trisecant and at least two on each 4-secant.  Those disjoint demands already
+total (x+2y=R), so equality forces precisely the choices in
+(15.730.2).  Hence
+
+\[
+ \boxed{D\text{ has exactly }3^x6^y\text{ maximum arc repairs}.}
+                                                               \tag{15.730.4}
+\]
+
+For every repair and every (z\in T_Q), the rich block containing (z)
+supplies one (A_Q)-secant through it.  A second such secant would be a
+second rich block through (z), contrary to disjointness.  Thus all (R)
+points of (T_Q) have secant index one, the unique secants form a matching
+on (A_Q) with fibre sizes one and two, and each
+(A_Q\cup\{z\}) is an affine ((k+1,3))-arc with exactly one trisecant.
+
+There is also an exact two-colour census.  If
+
+\[
+ n_{ij}=\#\{\ell:|\ell\cap A_Q|=i,
+                    |\ell\cap T_Q|=j\},
+\]
+
+then
+
+\[
+\begin{array}{c|ccc}
+ i\backslash j&0&1&2\\ \hline
+0&\frac{p(p-1)}2-R-y&2R+2y&\binom R2-y\\
+1&k+2R&R(k-2)&0\\
+2&\binom k2-R+y&x=R-2y&y.
+\end{array}                                             \tag{15.730.5}
+\]
+
+Indeed, both colours are arcs and the rich-line classification forbids type
+((1,2)).  Counting pairs of each colour and cross-colour pairs gives
+
+\[
+ n_{20}+n_{21}+n_{22}=\binom k2,\quad
+ n_{02}+n_{22}=\binom R2,\quad
+ n_{11}+2n_{21}+4n_{22}=kR.                         \tag{15.730.6}
+\]
+
+Each point of the (k)-arc has (R+1) tangents, and each point of the
+(R)-arc has (k+1) tangents.  Hence
+
+\[
+ n_{10}+n_{11}=k(R+1),\qquad
+ n_{01}+n_{11}+n_{21}=R(k+1),                       \tag{15.730.7}
+\]
+
+and (15.730.5) follows from (15.730.1), followed by the total line count.
+
+The co-tangent consequence sharpens as well.  If a rich block contains the
+(A_Q)-pair (\{a,b\}), then all points in
+(\{a\}\cup(T_Q\cap L)) are individually valid, pairwise incompatible
+extensions of (A_Q\setminus\{a\}) on the tangent (L) through (b).
+Exchanging (a,b), every fixed repair therefore supplies (2x) bases with two
+co-tangent extensions and (2y) bases with **three** co-tangent extensions.
+
+Finally fix an affine direction (d).  Let (\sigma_d,\tau_d) count
+(A_Q)- and (T_Q)-secants, let (r_3(d),r_4(d)) count rich blocks, and let
+(m_d) count ((1,1))-lines in that direction.  The nine affine line counts
+are
+
+\[
+\begin{array}{lll}
+n_{20}=\sigma_d-r_3-r_4,&n_{21}=r_3,&n_{22}=r_4,\\
+n_{10}=k-2\sigma_d-m_d,&n_{11}=m_d,&n_{12}=0,\\
+n_{02}=\tau_d-r_4,&n_{01}=R-2\tau_d-r_3-m_d,&
+n_{00}=\sigma_d+\tau_d+r_3+r_4+m_d-1.
+\end{array}                                             \tag{15.730.8}
+\]
+
+In particular the odd-fibre count is
+
+\[
+ b_d=p+1-2(\sigma_d+\tau_d+m_d),\qquad
+ \sum_d b_d=p+1+4R.                                  \tag{15.730.9}
+\]
+
+This is a proved structural reduction, not endpoint closure.  It replaces
+the invalid claim that Bartoli--Storme supplies a unique-trisecant size
+ceiling: under the theorem's other hypotheses, including
+\(d>3+2\sqrt q\) and existence of the configuration, their threshold is the
+upper endpoint of a hyperplane-arrangement classification range and is not
+such an existence bound.  Proposition 15.731 next
+constructs the tangent envelopes directly and reduces compatibility across
+one-block swaps to quadratic or cubic transition data.  The endpoint,
+larger slack, residual (ii), Type I, and the limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15730.py`,
+`tests/test_prop15730.py`,
+`evidence/e1_gmin_m4_prop15730.json`, and
+`evidence/NOTE_2026-08-31_endpoint_repair_ensemble.md`.
+
+## Proposition 15.731 — endpoint tangent envelopes and low-degree swaps
+
+Fix one of the maximum repairs (A) from Proposition 15.730 and put
+
+\[
+ n=|A|=p+1-R,qquad t=p+2-n=R+1,qquad d=2t=2R+2.
+                                                               \tag{15.731.1}
+\]
+
+For (a\in A), let (f_a(X)) be the product of the (t) tangent-line forms at
+(a), scaled by Segre's lemma of tangents so that
+
+\[
+ f_a(b)=(-1)^{t+1}f_b(a).                            \tag{15.731.2}
+\]
+
+Write (a^*=\{Z:a\cdot Z=0\}) and (L_a(Z)=a\cdot Z).  The map
+(X\mapsto X\mathbin\times a) identifies the quotient by (a) with (a^*).
+Since every factor of (f_a) vanishes at (a),
+
+\[
+ h_a(X\mathbin\times a)=f_a(X)^2                  \tag{15.731.3}
+\]
+
+is a well-defined degree-(d) section on (a^*).  At
+(a^*\cap b^*) the two prescribed values are (f_a(b)^2) and (f_b(a)^2);
+they agree by (15.731.2).  The dual lines have no triple intersection
+because (A) is an arc.
+
+We use the following elementary gluing fact.  Compatible degree-(d)
+sections on any family of projective lines with no triple intersection
+extend to a degree-(d) plane polynomial.  Inductively, the error on a new
+line vanishes at all old intersection points.  If there are at most (d) of
+them, divide by their distinct linear factors and lift the quotient; if
+there are more than (d), the error is identically zero.  The kernel of the
+restriction map is
+
+\[
+ \left(\prod_i L_i\right)H^0(\mathbb P^2,\mathcal O(d-n)).
+                                                               \tag{15.731.4}
+\]
+
+Thus (15.731.3) glues to a degree-(d) tangent-envelope polynomial
+(\Phi_A(Z)).  The exact endpoint dimensions are
+
+\[
+\begin{array}{c|ccc}
+ &n&d&\text{envelope space after fixing tangent normalization}\\ \hline
+p=3R+1&2R+2&2R+2&
+ \Phi_0+\lambda\prod_{a\in A}L_a,\\
+p=3R+2&2R+3&2R+2&\text{one polynomial}.
+\end{array}                                             \tag{15.731.5}
+\]
+
+Without fixing the common tangent normalization, the first row is the
+projective pencil spanned by (\Phi_0) and the line product, with the pure
+line-product point omitted; the second row is a unique projective envelope.
+This applies to all (3^x6^y) repairs.  It is a consequence of the Segre
+tangent lemma and line gluing, not an invocation of Ball--Lavrauw's explicit
+interpolation theorem below its stated size hypothesis.
+
+There is a low-degree transition law between adjacent repairs.  Suppose
+
+\[
+ A=C\cup\{a\},\qquad A'=C\cup\{z\}                 \tag{15.731.6}
+\]
+
+differ by one swap on a rich block.  For (u\in C), the products
+(\det(u,a,X)f_u^A(X)) and (\det(u,z,X)f_u^{A'}(X)) are tangent products
+for (C).  Their Segre normalizations differ by one common scalar; rescale
+the primed family to align them.  Restriction to every (u^*) then gives
+
+\[
+ L_z^2\Phi_{A'}=L_a^2\Phi_A.
+\]
+
+Consequently
+
+\[
+ \boxed{L_z^2\Phi_{A'}-L_a^2\Phi_A
+   =\left(\prod_{u\in C}L_u\right)Q_{a,z}.}          \tag{15.731.7}
+\]
+
+For (p=3R+2), (|C|=d) and (Q_{a,z}) is quadratic.  For (p=3R+1),
+(|C|=d-1) and it is cubic; changing the two envelope representatives changes
+its class only by an element of (\operatorname{span}\{L_a^3,L_z^3\}).
+
+These relative scalings can be chosen coherently on the whole repair graph.
+Every repair contains the common singleton set (S), with
+(|S|=c+1+2y\ge2).  Fix (e\in S) and the unique line (\rho_e) through (e)
+which avoids (D), and normalize
+
+\[
+ f_e^A=\rho_e\prod_{v\in D\setminus A}\det(X,e,v).    \tag{15.731.8}
+\]
+
+These are exactly the (R+1) tangent factors at (e).  Under the swap
+(a\mapsto z), the right side changes by
+(\det(X,e,a)/\det(X,e,z)), so the scalar in (15.731.7) is one on every
+edge.  The factors telescope on closed repair-graph walks.  This does not
+remove the line-product kernel in the (p=3R+1) residue.
+
+This is a proved algebraic refinement, not endpoint closure.  The repair
+graph is the Cartesian product of a (K_3) for every trisecant and a
+(J(4,2)) for every 4-secant.  The exact open implication is exclusion of the
+common completion under the residual direction, phase, and lift constraints.
+Deriving a nontrivial cycle identity from the quadratic transitions in the
+unique-envelope residue, or from the cubic classes in the pencil residue, is
+the proposed next attack; no such identity or phase bridge is claimed.
+Endpoint equality, larger slack, residual (ii), Type I, and the limit remain
+open.
+
+Evidence: `src/e1_gmin_m4_prop15731.py`,
+`tests/test_prop15731.py`,
+`evidence/e1_gmin_m4_prop15731.json`, and
+`evidence/NOTE_2026-08-31_endpoint_tangent_envelope_gluing.md`.
 
 ## Proposition 15.723 — paired-cube obstruction to middle floor-plus-two lifts
 

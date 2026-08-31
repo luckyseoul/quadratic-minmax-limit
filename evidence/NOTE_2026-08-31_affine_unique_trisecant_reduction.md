@@ -83,7 +83,7 @@ close can now target either of two equivalent necessary consequences:
 Dropping the completion data would be a weaker problem and is not justified
 as an equivalent reformulation.
 
-## Specific next attack: the one/two-defect tangent interpolation
+## Corrected tangent route
 
 The reduction lands immediately next to two published polynomial thresholds.
 Remove one point from the unique trisecant and call the resulting arc `A`.
@@ -91,39 +91,48 @@ Then
 
 `|A|=p+1-R`, and in the standard notation `|A|=p+2-t` one has `t=R+1`.
 
-For odd order, the Segre--Blokhuis--Bruen--Thas tangent-form interpolation
-reviewed by Ball--Lavrauw [44] has its usual uniqueness range at
-`|A|>=2t+2=2R+4`.  The endpoint arc misses that range by exactly two points
-when `p=3R+1` and exactly one point when `p=3R+2`:
+For odd order, Ball--Lavrauw [44, Theorem 11] give an explicit
+degree-`2t` tangent interpolation under the sufficient hypothesis
+`|A|>=2t+2=2R+4`.  The endpoint arc misses that stated hypothesis by exactly
+two points when `p=3R+1` and exactly one point when `p=3R+2`:
 
 | residue | actual `|A|` | standard threshold | deficit |
 |---|---:|---:|---:|
 | `p=3R+1` | `2R+2` | `2R+4` | 2 |
 | `p=3R+2` | `2R+3` | `2R+4` | 1 |
 
-There is a parallel extremality statement for `U`.  Bartoli--Storme [70,
-Corollary 2.7] bound an odd-order 3-arc with a unique trisecant by
-`floor(2(p+2)/3+2)`.  Thus `U` is one below that ceiling for `p=3R+1` and
-attains it for `p=3R+2`:
+The previously recorded parallel ``unique-trisecant ceiling'' is
+**RETRACTED**.  Bartoli--Storme [70, Theorem 1 in the public manuscript;
+Corollary 2.7 in the published organization] use
 
-| residue | actual `|U|` | unique-trisecant ceiling | deficit |
-|---|---:|---:|---:|
-| `p=3R+1` | `2R+3` | `2R+4` | 1 |
-| `p=3R+2` | `2R+4` | `2R+4` | 0 |
+`d <= 2(p+2)/3+2`
 
-The recommended next lemma is therefore not a broad classification.  It is
-an equality/one-defect stability theorem for that ceiling, or equivalently
-an endpoint-specific repair of the missing one or two tangent-interpolation
-conditions.  The extra hypotheses available here are precisely what a
-general `(k,3)`-arc lacks: `U` is affine, it comes with all `R` index-one
-points of the same arc repair, and every one of those secants belongs to the
-common pairwise-disjoint 15.727 completion `D`.  A proof that these data force
-the standard tangent form, or classify the equality/one-defect cases into a
-non-affine or conic completion, would close endpoint equality for every
-prime at once.
+as the upper endpoint under their other hypotheses, including
+`d>3+2sqrt(p)` and existence of the configuration, for which the arrangement
+arising from a unique-trisecant `(d,3)`-arc is the second-smallest
+hyperplane arrangement. It is not an upper bound on the size of a
+unique-trisecant 3-arc. Their construction
+section explicitly says that, for odd order, existence in a substantial
+larger interval was unknown.  Consequently the former claims that `U`
+``attains the ceiling'' for `p=3R+2`, and that an equality/one-defect
+stability theorem for that ceiling should be proved, have no valid source.
+They are not used in Proposition 15.729 itself.
 
-This paragraph records a route, not a theorem.  No such stability statement
-is claimed here.
+The numerical deficit does **not** mean that tangent-envelope conditions are
+missing. Proposition 15.730 first strengthens one chosen `U` to all
+`3^x 6^y` maximum repairs. Proposition 15.731 then applies Segre's tangent
+lemma and an elementary dual-line gluing argument directly. Every repair has
+a degree-`2t` tangent envelope: it is unique for `p=3R+2`, while for
+`p=3R+1` it is an affine line-product pencil after fixing tangent
+normalization. Adjacent repair envelopes satisfy an exact transition law
+with a quadratic quotient in the first residue and a cubic class in the
+second.
+
+The exact open implication is exclusion of the common completion under the
+15.728/15.730 direction, phase, and lift constraints. Deriving a nontrivial
+cycle identity from the low-degree transitions is the proposed next attack,
+not a condition established here. It must not assume either a nonexistent
+unique-trisecant size ceiling or a failure of tangent-envelope existence.
 
 ## Artifacts
 

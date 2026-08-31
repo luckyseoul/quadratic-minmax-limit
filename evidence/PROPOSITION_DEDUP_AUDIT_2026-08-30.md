@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-31
 
-**Scope:** every assigned proposition through Proposition 15.729, the live
+**Scope:** every assigned proposition through Proposition 15.731, the live
 predicate wiring, and the attack scripts present during the audit
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
@@ -178,10 +178,42 @@ affine set is a `(p+2-R,3)`-arc with exactly one trisecant; deleting any two
 points of that trisecant leaves a `(p-R)`-arc whose deleted points are two
 distinct extensions on one tangent. For `p=3R+1` the two sizes are
 `2R+3,2R+1`; for `p=3R+2` they are `2R+4,2R+2`. This is a **proved
-all-prime necessary reduction, not endpoint closure**. The live implication
-is exclusion or classification of these near-extremal affine
-unique-trisecant configurations while retaining their common disjoint-block
-completion `D`.
+all-prime necessary reduction, not endpoint closure**. At the 15.729 stage,
+the next implication was exclusion or classification of these near-extremal
+affine unique-trisecant configurations while retaining their common
+disjoint-block completion `D`; 15.730--15.731 supersede that formulation.
+
+A thirteenth semantic check gives Proposition 15.730. Every maximum arc
+contained in the same endpoint completion retains all singleton points and
+exactly two points on each rich block. Hence there are exactly `3^x6^y`
+maximum repairs. The complement of every repair is an `R`-arc all of whose
+points have repair-secant index one. The full two-colour projective line
+census, all point signatures, and the direction refinement
+`b_d=p+1-2(sigma_d+tau_d+m_d)` follow exactly. A 4-secant supplies bases
+with three displayed co-tangent extensions inside `D`. This is a **proved
+simultaneous necessary normal form, not endpoint closure**.
+
+A fourteenth semantic check gives Proposition 15.731. The squared
+Segre-normalized tangent products on a repair's dual lines agree at every
+node and glue constructively to a degree-`2(R+1)` plane form. In residue
+`p=3R+2` the normalized envelope is unique; in residue `p=3R+1` its lifts
+form an affine line directed by the product of all repair dual lines.
+Adjacent repairs have a coherently normalized transition quotient of degree
+two or three, respectively. This is a **proved algebraic refinement, not
+endpoint closure**. The exact open implication is exclusion of the common
+completion under the residual direction, phase, and lift constraints. A
+nontrivial repair-cycle identity is the proposed next attack, not a proved
+condition.
+
+The Bartoli--Storme ``unique-trisecant ceiling'' previously recorded after
+15.729 is **RETRACTED**. Under the corollary's other hypotheses, including
+`d>3+2sqrt(q)` and existence of the configuration, its threshold is the upper
+endpoint for which the associated hyperplane arrangement is second-smallest;
+it is not a nonexistence theorem for larger unique-trisecant 3-arcs.
+Likewise, Ball--Lavrauw's size hypothesis
+is used only for their explicit interpolation formula. Proposition 15.731's
+below-threshold envelope is derived from their scaled tangent lemma and the
+new line-gluing argument, not by applying that theorem outside its scope.
 
 The independent `p=31` complete-22-arc check is a finite side route only.
 Eleven of the twelve classified classes have sourced representatives and
@@ -225,11 +257,11 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 644 source-backed proposition modules from 15.83 through 15.729.
+- There are 646 source-backed proposition modules from 15.83 through 15.731.
 - The labels 15.537, 15.583, and 15.584 have no proposition module.  They are
   unassigned labels, not unreviewed propositions; later source headers mention
   those numbers only as historical range/state markers.
-- Therefore every assigned proposition through 15.729 was included in this
+- Therefore every assigned proposition through 15.731 was included in this
   audit.  The grouped ledger below is by shared mathematical route rather than
   a 719-row restatement of the writeup.
 
@@ -240,10 +272,10 @@ The public theorem is gated consistently by the corrected global
 currently `False`. The historical bounded `True` is available only through
 `e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after audit of 15.729 |
+| unit | exact live content | status after audit of 15.731 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
-| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — for `p>=17`, 15.721 moves the general boundary floor to `|D|=p+1`; 15.676 and 15.722--15.724 close pair equality and slack zero, while 15.726 excludes every positive outside slack through `floor((p-4)/3)`. Thus first-shell survivors have `R>=floor((p-1)/3)`. Proposition 15.727 excludes equality at `p=17,19,23,29`; 15.728--15.729 give necessary Paley-hard and affine unique-trisecant/common-completion reductions for the other endpoint cases, beginning at `p=31,R=10`, but exclude none of them. |
+| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — for `p>=17`, 15.721 moves the general boundary floor to `|D|=p+1`; 15.676 and 15.722--15.724 close pair equality and slack zero, while 15.726 excludes every positive outside slack through `floor((p-4)/3)`. Thus first-shell survivors have `R>=floor((p-1)/3)`. Proposition 15.727 excludes equality at `p=17,19,23,29`; 15.728--15.731 give necessary Paley-hard, complementary-repair, and tangent-transition reductions for the other endpoint cases, beginning at `p=31,R=10`, but exclude none of them. |
 | Type I | the multi-level `3A+B>0` bad case | **OPEN** — `|κ|=1` needs `G>T` (for example `|μ|≤|L|`), while `|κ|=3` independently needs `χ_d((2p-1)μ+(p-2)ν)>-(p-2)/p`; the particular term is safe but the δ remainder is open |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
@@ -278,7 +310,9 @@ top-level front.
 | **15.726** | minimal arc deletion plus the Ball--Lavrauw dual tangent envelope | **PROVED narrowing, not shell closure.** For every prime `p>=17`, it excludes `1<=R<=floor((p-4)/3)` at `|D|=p+1`; any positive survivor must have `R>=floor((p-1)/3)`. Residual (ii), Type I, and `L` remain open. |
 | **15.727** | endpoint tangent-envelope equality, disjoint rich blocks, and published arc classifications | **PROVED narrowing, not shell closure.** Equality forces `R` index-one points outside an arc and disjoint trisecant/4-secant blocks. This excludes the endpoint at `p=17,19,23,29`; the first unexcluded endpoint is `p=31,R=10`. Residual (ii), Type I, and `L` remain open. |
 | **15.728** | exact `p=31` odd-fibre sum, Paley-type residue budget, and nonrich `b=2` directions | **PROVED necessary normal form, not endpoint closure.** One Paley type has means `{30^15,62}`, at least fourteen `b=2` directions, and at least `4+y` nonrich profiles `(14,2,15,0,0)`. The `p=31` endpoint and every top-level gate remain open. |
-| **15.729** | retain-three/retain-two block deletion and co-tangent extension reduction | **PROVED all-prime necessary reduction, not endpoint closure.** Every remaining endpoint gives an affine `(p+2-R,3)`-arc with exactly one trisecant and a `(p-R)`-arc with two extensions on one tangent. The live gate is exclusion/classification with the common 15.727 block completion; residual (ii), Type I, and `L` remain open. |
+| **15.729** | retain-three/retain-two block deletion and co-tangent extension reduction | **PROVED all-prime necessary reduction, not endpoint closure.** Every remaining endpoint gives an affine `(p+2-R,3)`-arc with exactly one trisecant and a `(p-R)`-arc with two extensions on one tangent; 15.730--15.731 subsequently sharpen this to the full repair ensemble and tangent transitions. |
+| **15.730** | all `3^x6^y` maximum repairs, complementary arcs, and exact two-colour projective/directional census | **PROVED simultaneous necessary normal form, not endpoint closure.** Every repair has an `R`-arc index-one complement; 4-secants give three displayed within-`D` co-tangent extensions. Residual (ii), Type I, and `L` remain open. |
+| **15.731** | direct tangent-envelope gluing and adjacent-repair transition quotient | **PROVED algebraic refinement, not endpoint closure.** The normalized envelope is unique for `p=3R+2` and a line-product pencil for `p=3R+1`; adjacent swaps carry quadratic or cubic transition data. Exclusion of the common completion under residual phase/lift constraints remains open; a nontrivial repair-cycle identity is the proposed next attack. |
 
 ## Exact duplicated run
 
@@ -338,9 +372,9 @@ is a current E(1) gate.
   `0<=R<=floor((p-4)/3)`: 15.722--15.724 close `R=0`, and 15.726 closes the
   stated positive interval exactly; 15.727 also closes the endpoint at
   `p=17,19,23,29`, so do not rerun those finite endpoint classifications.
-  For every other equality case start from 15.729's affine
-  unique-trisecant/common-completion reduction, not from another unrestricted
-  census. At `p=31`, eleven of twelve classified complete 22-arc classes are
+  For every other equality case start from 15.730's full complementary-repair
+  ensemble and 15.731's tangent-envelope swap transitions, not from another
+  unrestricted census. At `p=31`, eleven of twelve classified complete 22-arc classes are
   already audited; the missing twelfth representative is a finite side-route
   issue, not authorization for an all-prime class campaign;
 - treating a projected/parity/semigroup survivor as a feasible graph;
@@ -440,10 +474,13 @@ Before spending mesh/GPU time:
 4. at `|D|=p+1`, skip slack zero and every positive outside slack through
    `floor((p-4)/3)`; 15.722--15.724 close zero and 15.726 closes that positive
    interval.  At equality, 15.727 closes `p=17,19,23,29`; for the remaining
-   primes start from its disjoint trisecant/4-secant normal form and 15.729's
-   affine unique-trisecant/co-tangent consequence.  The live target must keep
-   the common completion `D`; unrestricted unique-trisecant classification is
-   weaker. The first unexcluded endpoint is `p=31,R=10`. Proposition 15.728
+   primes start from its disjoint trisecant/4-secant normal form, 15.730's
+   full repair ensemble, and 15.731's quadratic/cubic tangent transitions.
+   The live implication is exclusion of the common completion `D` under the
+   residual direction, phase, and lift constraints; unrestricted
+   unique-trisecant classification is weaker. A nontrivial repair-cycle
+   identity is the proposed next attack, not a proved condition.
+   The first unexcluded endpoint is `p=31,R=10`. Proposition 15.728
    adds its Paley-hard profile there. The eleven-of-twelve complete-22-arc
    audit is only finite evidence; the twelfth representative is unsourced.
    Retain both 15.723 floor-plus-two exceptions in any profile DP;
