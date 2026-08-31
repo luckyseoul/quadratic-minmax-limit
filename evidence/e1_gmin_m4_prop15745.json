@@ -1,0 +1,884 @@
+{
+  "difference_radon": {
+    "Gram_formula": "B^T*B=13*I+2*J-G_parallel",
+    "collision_parameter": "C=sum_delta binom(m_delta,2)>=0",
+    "displacement_square_sum": "sum_delta m_delta^2=61+2*C",
+    "off_bin_parseval_formula": "13*61+2*17^2-2*sum_L(P_L^2)+26*C",
+    "p": 13,
+    "partition_ledgers": {
+      "1+1+1+1": {
+        "all_off_bin_energy": "793+26*C",
+        "exact_star_count": 3,
+        "exact_star_energy": 72,
+        "hard_excess_partition": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "hard_parallel_counts": [
+          5,
+          5,
+          5,
+          6,
+          6,
+          6,
+          6
+        ],
+        "nonexact_off_bin_energy": "721+26*C",
+        "nonexact_parseval_base": 721,
+        "opposite_parallel_counts": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4
+        ],
+        "parallel_square_sum": 289
+      },
+      "2+1+1": {
+        "all_off_bin_energy": "789+26*C",
+        "exact_star_count": 4,
+        "exact_star_energy": 96,
+        "hard_excess_partition": [
+          2,
+          1,
+          1
+        ],
+        "hard_parallel_counts": [
+          5,
+          5,
+          5,
+          5,
+          7,
+          6,
+          6
+        ],
+        "nonexact_off_bin_energy": "693+26*C",
+        "nonexact_parseval_base": 693,
+        "opposite_parallel_counts": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4
+        ],
+        "parallel_square_sum": 291
+      },
+      "2+2": {
+        "all_off_bin_energy": "785+26*C",
+        "exact_star_count": 5,
+        "exact_star_energy": 120,
+        "hard_excess_partition": [
+          2,
+          2
+        ],
+        "hard_parallel_counts": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          7,
+          7
+        ],
+        "nonexact_off_bin_energy": "665+26*C",
+        "nonexact_parseval_base": 665,
+        "opposite_parallel_counts": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4
+        ],
+        "parallel_square_sum": 293
+      },
+      "3+1": {
+        "all_off_bin_energy": "781+26*C",
+        "exact_star_count": 5,
+        "exact_star_energy": 120,
+        "hard_excess_partition": [
+          3,
+          1
+        ],
+        "hard_parallel_counts": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          8,
+          6
+        ],
+        "nonexact_off_bin_energy": "661+26*C",
+        "nonexact_parseval_base": 661,
+        "opposite_parallel_counts": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4
+        ],
+        "parallel_square_sum": 295
+      },
+      "4": {
+        "all_off_bin_energy": "769+26*C",
+        "exact_star_count": 6,
+        "exact_star_energy": 144,
+        "hard_excess_partition": [
+          4
+        ],
+        "hard_parallel_counts": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          9
+        ],
+        "nonexact_off_bin_energy": "625+26*C",
+        "nonexact_parseval_base": 625,
+        "opposite_parallel_counts": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4
+        ],
+        "parallel_square_sum": 301
+      }
+    },
+    "proved": true
+  },
+  "ledger": {
+    "H_edge_count": 61,
+    "b2_candidate_excess_above_XNOR": 2,
+    "b2_candidate_excluded_by_integral_lift_floor": true,
+    "common_residue_u": 0,
+    "exact_literal_distance_energy": 24,
+    "exact_literal_distance_row": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "exact_literal_parallel_congruence": "6 divides I+P-5",
+    "exact_literal_unspecialized_identity": "hT=14*P0-53",
+    "exact_mean_14_floor_compatible_b_values": [
+      2,
+      12
+    ],
+    "exact_parallel_candidates": [
+      5
+    ],
+    "exact_parallel_count": 5,
+    "exact_parallel_upper_from_total_edges": 8,
+    "forced_exact_literal_b": 12,
+    "general_hard_parallel_count": "P_L=4+k_L=5+e_L",
+    "general_hard_parallel_identity": "P_L=P0+k_L-1",
+    "hard_cell_formula": "A=7-cut_W",
+    "hard_excess_partitions": [
+      {
+        "exact_literal_star_count": 6,
+        "forced_global_moment_degrees": [
+          2,
+          4
+        ],
+        "hard_excess_partition": [
+          4
+        ],
+        "hard_parallel_counts": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          9
+        ],
+        "hard_quotients": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "exact_literal_star_count": 5,
+        "forced_global_moment_degrees": [
+          2,
+          4
+        ],
+        "hard_excess_partition": [
+          3,
+          1
+        ],
+        "hard_parallel_counts": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          8,
+          6
+        ],
+        "hard_quotients": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          4,
+          2
+        ]
+      },
+      {
+        "exact_literal_star_count": 5,
+        "forced_global_moment_degrees": [
+          2,
+          4
+        ],
+        "hard_excess_partition": [
+          2,
+          2
+        ],
+        "hard_parallel_counts": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          7,
+          7
+        ],
+        "hard_quotients": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "exact_literal_star_count": 4,
+        "forced_global_moment_degrees": [
+          2
+        ],
+        "hard_excess_partition": [
+          2,
+          1,
+          1
+        ],
+        "hard_parallel_counts": [
+          5,
+          5,
+          5,
+          5,
+          7,
+          6,
+          6
+        ],
+        "hard_quotients": [
+          1,
+          1,
+          1,
+          1,
+          3,
+          2,
+          2
+        ]
+      },
+      {
+        "exact_literal_star_count": 3,
+        "forced_global_moment_degrees": [
+          2
+        ],
+        "hard_excess_partition": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "hard_parallel_counts": [
+          5,
+          5,
+          5,
+          6,
+          6,
+          6,
+          6
+        ],
+        "hard_quotients": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "hard_excess_sum": 4,
+    "hard_k_positive_reason": "phase-one floor is at least 12, so residue-zero mean 14*k cannot have k=0",
+    "hard_parallel_edge_total": 39,
+    "hard_phase": 1,
+    "hard_quotient_identity": "k_L>=1 and sum_L k_L=11",
+    "hard_sign_times_global_T": 17,
+    "hard_type_budget": 154,
+    "isolated_chart": {
+      "ambient_projective_vertices": 170,
+      "guaranteed_isolated_vertices": 48,
+      "maximum_nonisolated_vertices": 122,
+      "transported_infinity_degree_I": 0
+    },
+    "layer_index_t": 4,
+    "minimum_opposite_parallel_count": 3,
+    "moment_root_rank_audit": {
+      "degree_2": {
+        "common_evaluation_rank": 3,
+        "homogeneous_degree": 2,
+        "root_count": 3,
+        "root_count_exceeds_degree": true,
+        "subsets_checked": 364
+      },
+      "degree_4": {
+        "common_evaluation_rank": 5,
+        "homogeneous_degree": 4,
+        "root_count": 5,
+        "root_count_exceeds_degree": true,
+        "subsets_checked": 2002
+      },
+      "field": "F_13",
+      "five_exact_stars_force_M4_zero": true,
+      "proved": true,
+      "root_count_rule": "a nonzero homogeneous binary form of degree d has at most d distinct projective roots",
+      "three_exact_stars_force_M2_zero": true
+    },
+    "opposite_cell_formula": "A=-10-cut_W; phase zero gives B=A/2",
+    "opposite_mean_formula": "a=14*Q-22",
+    "opposite_parallel_edge_total": 22,
+    "opposite_parallel_profile": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      4
+    ],
+    "original_k": 60,
+    "p": 13,
+    "proved": true,
+    "row_formulas": {
+      "hard_excess_e": {
+        "l1_bound": "56-e",
+        "sum_q": "12-e",
+        "translated_cut_upper": 91
+      },
+      "opposite_Q": {
+        "l1_bound": "61-Q",
+        "sum_q": "-17-Q",
+        "translated_cut_upper": -130
+      }
+    }
+  },
+  "not_addressed_by_prop_15745": [
+    3,
+    4,
+    6
+  ],
+  "p13_k_eq_60_closed": false,
+  "p13_t4_u0_closed": true,
+  "partition_close": {
+    "five_or_more_exact_stars": {
+      "M2_M4_forced_zero": true,
+      "closed": true,
+      "opposite_Q3_row_infeasible": true,
+      "partitions": [
+        [
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    "four_exact_stars_2+1+1": {
+      "closed": true,
+      "collision_one_coordinate_certificate": {
+        "all_displacement_multiplicities_outside_e2_parallel_block_are_0_or_1": true,
+        "duplicate_class_is_in_e2_zero_bin": true,
+        "each_e2_nonzero_bin_has_one_class_from_each_other_direction": true,
+        "finite_field_bucket_sign_audit": {
+          "character_sign_well_defined_modulo_plus_minus": true,
+          "chi_minus_one": 1,
+          "classes_per_nonzero_bucket": 13,
+          "every_nonzero_F13_scalar_is_a_square_in_F13_squared": true,
+          "field": "F_13^2",
+          "field_model": "alpha^2=0*alpha+2",
+          "hard_normalized_nonzero_buckets_checked": 84,
+          "incidence_sign_sha256": "f566d993512700a8e114f2e4640dba3d716fc31a186b7fdbe9995de854d9e3ec",
+          "normalized_hard_sign_classes_per_bucket": 6,
+          "normalized_opposite_sign_classes_per_bucket": 7,
+          "one_class_from_each_transverse_direction": true,
+          "projective_direction_sign_profile": {
+            "-1": 7,
+            "1": 7
+          },
+          "proved": true,
+          "unoriented_nonzero_displacement_classes": 84
+        },
+        "global_C_upper_from_broad_energy": 1,
+        "hard_normalized_coordinate_interval": [
+          -7,
+          6
+        ],
+        "hard_sign_classes_per_nonzero_bin": 6,
+        "minimum_collision_contribution": 1,
+        "opposite_sign_classes_per_nonzero_bin": 7,
+        "parallel_count_in_e2_direction": 7,
+        "parallel_displacement_class_count": 6,
+        "proved": true,
+        "therefore_global_C": 1,
+        "unique_sorted_equality_profile": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "weak_composition_count_checked": 792
+      },
+      "exact_Radon_energy": "693+26*C",
+      "forced_collision_value": 1,
+      "initial_consequence": "C<=1",
+      "initial_row_energy_upper": "96+2*31+6*76+111=725",
+      "parallel_P7_consequence": "C>=1",
+      "tightened_exact_Radon_energy": "693+26=719",
+      "tightened_row_energy_upper": "66+2*31+6*76+111=695"
+    },
+    "three_exact_stars_1+1+1+1": {
+      "closed": true,
+      "exact_Radon_energy": "721+26*C>=721",
+      "row_energy_upper": "4*31+6*76+111=691"
+    }
+  },
+  "prior_prop_15744_u3_closed": true,
+  "prop": "15.745",
+  "proved": true,
+  "remaining_p13_t4_residues": [
+    4,
+    6
+  ],
+  "result_status": "exhaustive finite aggregate certificate",
+  "row_certificates": {
+    "hard_e1_m2": {
+      "constraint_scope": [
+        "integer six-bin row",
+        "exact row sum",
+        "l1 upper bound",
+        "M2=0 modulo 13",
+        "all 74 translated upper-cut inequalities"
+      ],
+      "constraints_deliberately_not_used": [
+        "prior energy upper bound",
+        "row parity",
+        "local coefficient entry alphabet",
+        "lower cut bounds",
+        "full 78-entry coefficient matrix",
+        "binary midpoint variables"
+      ],
+      "explicit_maximizer": [
+        0,
+        3,
+        1,
+        4,
+        1,
+        2
+      ],
+      "feasible": true,
+      "independent_replay_model": {
+        "constraints": 90,
+        "encoding": "AddAbsEquality and AddMultiplicationEquality",
+        "forbidden_energy_floor": 32,
+        "model_proto_sha256": "0656dae37434029c854f08d90726b9cb9a9cf546142254e2b8b3f2ccbaff333e",
+        "model_validation": "",
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "INFEASIBLE",
+        "variables": 19,
+        "workers": 1
+      },
+      "key": "hard_e1_m2",
+      "optimization_model": {
+        "constraints": 83,
+        "model_proto_sha256": "59525206ec4e18b9ee2662411da86317c6e8cefb26b502d53823ef27bdb08808",
+        "model_validation": "",
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "OPTIMAL",
+        "variables": 19,
+        "workers": 1
+      },
+      "parameters": {
+        "coordinate_bounds": null,
+        "l1_bound": 55,
+        "moment_degrees_mod_13": [
+          2
+        ],
+        "sum": 11,
+        "translated_cut_upper": 91
+      },
+      "proved": true,
+      "row_kind": "hard_e1",
+      "sharp_energy_maximum": 31
+    },
+    "hard_e2_c1_m2": {
+      "constraint_scope": [
+        "integer six-bin row",
+        "exact row sum",
+        "l1 upper bound",
+        "M2=0 modulo 13",
+        "all 74 translated upper-cut inequalities",
+        "C=1-derived coordinate interval [-7,6]"
+      ],
+      "constraints_deliberately_not_used": [
+        "prior energy upper bound",
+        "row parity",
+        "local coefficient entry alphabet",
+        "lower cut bounds",
+        "full 78-entry coefficient matrix",
+        "binary midpoint variables"
+      ],
+      "explicit_maximizer": [
+        4,
+        1,
+        -3,
+        0,
+        2,
+        6
+      ],
+      "feasible": true,
+      "independent_replay_model": {
+        "constraints": 90,
+        "encoding": "AddAbsEquality and AddMultiplicationEquality",
+        "forbidden_energy_floor": 67,
+        "model_proto_sha256": "b72b57d38790a0eeab87686c3be347771f15adf7263d0ed3eecb8b277703c7d8",
+        "model_validation": "",
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "INFEASIBLE",
+        "variables": 19,
+        "workers": 1
+      },
+      "key": "hard_e2_c1_m2",
+      "optimization_model": {
+        "constraints": 83,
+        "model_proto_sha256": "12d799f142d2be3fbc3c9285e327bb89a07f17e153c3cacfe4bd427c5601dc0e",
+        "model_validation": "",
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "OPTIMAL",
+        "variables": 19,
+        "workers": 1
+      },
+      "parameters": {
+        "coordinate_bounds": [
+          -7,
+          6
+        ],
+        "l1_bound": 54,
+        "moment_degrees_mod_13": [
+          2
+        ],
+        "sum": 10,
+        "translated_cut_upper": 91
+      },
+      "proved": true,
+      "row_kind": "hard_e2",
+      "sharp_energy_maximum": 66
+    },
+    "hard_e2_m2": {
+      "constraint_scope": [
+        "integer six-bin row",
+        "exact row sum",
+        "l1 upper bound",
+        "M2=0 modulo 13",
+        "all 74 translated upper-cut inequalities"
+      ],
+      "constraints_deliberately_not_used": [
+        "prior energy upper bound",
+        "row parity",
+        "local coefficient entry alphabet",
+        "lower cut bounds",
+        "full 78-entry coefficient matrix",
+        "binary midpoint variables"
+      ],
+      "explicit_maximizer": [
+        5,
+        0,
+        -3,
+        -2,
+        3,
+        7
+      ],
+      "feasible": true,
+      "independent_replay_model": {
+        "constraints": 90,
+        "encoding": "AddAbsEquality and AddMultiplicationEquality",
+        "forbidden_energy_floor": 97,
+        "model_proto_sha256": "4b8caf7e887b603b61839a474509f3373072841a050beb6f0d1684a3a98568b0",
+        "model_validation": "",
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "INFEASIBLE",
+        "variables": 19,
+        "workers": 1
+      },
+      "key": "hard_e2_m2",
+      "optimization_model": {
+        "constraints": 83,
+        "model_proto_sha256": "7833446727af6000c5b6d86bff9ba9eb19af995fd44c3a8db1206143c25a9310",
+        "model_validation": "",
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "OPTIMAL",
+        "variables": 19,
+        "workers": 1
+      },
+      "parameters": {
+        "coordinate_bounds": null,
+        "l1_bound": 54,
+        "moment_degrees_mod_13": [
+          2
+        ],
+        "sum": 10,
+        "translated_cut_upper": 91
+      },
+      "proved": true,
+      "row_kind": "hard_e2",
+      "sharp_energy_maximum": 96
+    },
+    "opposite_q3_m2": {
+      "constraint_scope": [
+        "integer six-bin row",
+        "exact row sum",
+        "l1 upper bound",
+        "M2=0 modulo 13",
+        "all 74 translated upper-cut inequalities"
+      ],
+      "constraints_deliberately_not_used": [
+        "prior energy upper bound",
+        "row parity",
+        "local coefficient entry alphabet",
+        "lower cut bounds",
+        "full 78-entry coefficient matrix",
+        "binary midpoint variables"
+      ],
+      "explicit_maximizer": [
+        -5,
+        -3,
+        -2,
+        -5,
+        -2,
+        -3
+      ],
+      "feasible": true,
+      "independent_replay_model": {
+        "constraints": 90,
+        "encoding": "AddAbsEquality and AddMultiplicationEquality",
+        "forbidden_energy_floor": 77,
+        "model_proto_sha256": "9c099e244b6b341b262fd923186ceb3afcfdfaf92d869b239aa639521679829c",
+        "model_validation": "",
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "INFEASIBLE",
+        "variables": 19,
+        "workers": 1
+      },
+      "key": "opposite_q3_m2",
+      "optimization_model": {
+        "constraints": 83,
+        "model_proto_sha256": "09f908e1d8b1b85132f2f1104955f3e1bf6ab79afd596e0316889fab6e44a96a",
+        "model_validation": "",
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "OPTIMAL",
+        "variables": 19,
+        "workers": 1
+      },
+      "parameters": {
+        "coordinate_bounds": null,
+        "l1_bound": 58,
+        "moment_degrees_mod_13": [
+          2
+        ],
+        "sum": -20,
+        "translated_cut_upper": -130
+      },
+      "proved": true,
+      "row_kind": "opposite_q3",
+      "sharp_energy_maximum": 76
+    },
+    "opposite_q3_m24": {
+      "constraint_scope": [
+        "integer six-bin row",
+        "exact row sum",
+        "l1 upper bound",
+        "M2=0 modulo 13",
+        "M4=0 modulo 13",
+        "all 74 translated upper-cut inequalities"
+      ],
+      "constraints_deliberately_not_used": [
+        "prior energy upper bound",
+        "row parity",
+        "local coefficient entry alphabet",
+        "lower cut bounds",
+        "full 78-entry coefficient matrix",
+        "binary midpoint variables"
+      ],
+      "explicit_maximizer": null,
+      "feasible": false,
+      "independent_replay_model": {
+        "constraints": 90,
+        "encoding": "AddAbsEquality and AddMultiplicationEquality",
+        "forbidden_energy_floor": null,
+        "model_proto_sha256": "14c8c33f65c4fff3cc31c5fc1038b51b294da090dcff23bf7dab71566baed814",
+        "model_validation": "",
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "INFEASIBLE",
+        "variables": 20,
+        "workers": 1
+      },
+      "key": "opposite_q3_m24",
+      "optimization_model": {
+        "constraints": 84,
+        "model_proto_sha256": "22d3ff515d20a65de2dea6951a352d31cccec029c3c77ac43c48383e8ea37996",
+        "model_validation": "",
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "INFEASIBLE",
+        "variables": 20,
+        "workers": 1
+      },
+      "parameters": {
+        "coordinate_bounds": null,
+        "l1_bound": 58,
+        "moment_degrees_mod_13": [
+          2,
+          4
+        ],
+        "sum": -20,
+        "translated_cut_upper": -130
+      },
+      "proved": true,
+      "row_kind": "opposite_q3",
+      "sharp_energy_maximum": null
+    },
+    "opposite_q4_m2": {
+      "constraint_scope": [
+        "integer six-bin row",
+        "exact row sum",
+        "l1 upper bound",
+        "M2=0 modulo 13",
+        "all 74 translated upper-cut inequalities"
+      ],
+      "constraints_deliberately_not_used": [
+        "prior energy upper bound",
+        "row parity",
+        "local coefficient entry alphabet",
+        "lower cut bounds",
+        "full 78-entry coefficient matrix",
+        "binary midpoint variables"
+      ],
+      "explicit_maximizer": [
+        -4,
+        -6,
+        -1,
+        -3,
+        -7,
+        0
+      ],
+      "feasible": true,
+      "independent_replay_model": {
+        "constraints": 90,
+        "encoding": "AddAbsEquality and AddMultiplicationEquality",
+        "forbidden_energy_floor": 112,
+        "model_proto_sha256": "4eb57e83ba21f99be79f4e09cd34f7983d9837d6846c42c05014f22022b9badc",
+        "model_validation": "",
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "INFEASIBLE",
+        "variables": 19,
+        "workers": 1
+      },
+      "key": "opposite_q4_m2",
+      "optimization_model": {
+        "constraints": 83,
+        "model_proto_sha256": "5cf5041f2e1be1cdebd0a2ae7dbb2addb0fa77363bbe36fec04e4cf6c529b969",
+        "model_validation": "",
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "OPTIMAL",
+        "variables": 19,
+        "workers": 1
+      },
+      "parameters": {
+        "coordinate_bounds": null,
+        "l1_bound": 57,
+        "moment_degrees_mod_13": [
+          2
+        ],
+        "sum": -21,
+        "translated_cut_upper": -130
+      },
+      "proved": true,
+      "row_kind": "opposite_q4",
+      "sharp_energy_maximum": 111
+    }
+  },
+  "scope": "p=13,t=4,k=60, phase-one common residue u=0 only",
+  "translated_cut_catalog": {
+    "all_74_vectors_used_in_every_row_model": true,
+    "catalog_sha256": "bfec2077a81acf1a6719caf93b066313445c55b4e2951c189d357731b437a265",
+    "distinct_vectors": 74
+  }
+}

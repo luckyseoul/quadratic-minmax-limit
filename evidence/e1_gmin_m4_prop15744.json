@@ -1,0 +1,893 @@
+{
+  "H61_mass14_cell": {
+    "H61_height_four_exclusions": {
+      "0": {
+        "H_edge_count": 61,
+        "changed_premise_model_rebuilt": true,
+        "coefficient_sum": -53,
+        "coefficient_sum_formula": "sum W=13Q-53",
+        "coefficient_variable_count": 78,
+        "cp_model_presolve": true,
+        "cut_identity": "4B(X)=Q-3+sum(W)-2*cut_W(X)",
+        "every_coefficient_row_sum_even": true,
+        "height_four_model_infeasible": true,
+        "height_four_orbit_anchor": "B(first lexicographic 7-set)=4",
+        "height_four_orbit_anchor_is_wlog": true,
+        "integer_variable_count": 1885,
+        "l1_budget": 61,
+        "l1_inequality": "sum |W_st|<=61-0",
+        "model_constraint_count": 1811,
+        "model_textproto_sha256": "70313e414ca6da2cf6694c11bdd7c7ee8ee985ca05bd30802aa2b6b96353d3d3",
+        "model_validation": "",
+        "old_H59_l1_infeasibility_imported": false,
+        "p": 13,
+        "parallel_count_Q": 0,
+        "proved": true,
+        "random_seed": 0,
+        "result_status": "exhaustive finite certificate",
+        "scaled_mass_4pE_B": 14,
+        "search_workers": 1,
+        "solver": "OR-Tools CP-SAT",
+        "solver_status": "INFEASIBLE",
+        "solver_version": "9.15.6755",
+        "transverse_edge_count": 61,
+        "value_sum": 462,
+        "value_variable_count": 1716
+      },
+      "6": {
+        "H_edge_count": 61,
+        "changed_premise_model_rebuilt": true,
+        "coefficient_sum": 25,
+        "coefficient_sum_formula": "sum W=13Q-53",
+        "coefficient_variable_count": 78,
+        "cp_model_presolve": true,
+        "cut_identity": "4B(X)=Q-3+sum(W)-2*cut_W(X)",
+        "every_coefficient_row_sum_even": true,
+        "height_four_model_infeasible": true,
+        "height_four_orbit_anchor": "B(first lexicographic 7-set)=4",
+        "height_four_orbit_anchor_is_wlog": true,
+        "integer_variable_count": 1885,
+        "l1_budget": 55,
+        "l1_inequality": "sum |W_st|<=61-6",
+        "model_constraint_count": 1811,
+        "model_textproto_sha256": "a94796122b2c1a115b1efec4094031726f118e05fd6825f2e805a406b4f2b9dd",
+        "model_validation": "",
+        "old_H59_l1_infeasibility_imported": false,
+        "p": 13,
+        "parallel_count_Q": 6,
+        "proved": true,
+        "random_seed": 0,
+        "result_status": "exhaustive finite certificate",
+        "scaled_mass_4pE_B": 14,
+        "search_workers": 1,
+        "solver": "OR-Tools CP-SAT",
+        "solver_status": "INFEASIBLE",
+        "solver_version": "9.15.6755",
+        "transverse_edge_count": 55,
+        "value_sum": 462,
+        "value_variable_count": 1716
+      }
+    },
+    "H_edge_count": 61,
+    "b12_floor_plus_two_excess": 2,
+    "b12_floor_plus_two_excluded": true,
+    "b2_coefficient_offset": 4,
+    "b2_compatible_at_Q": {
+      "0": false,
+      "6": false
+    },
+    "b2_exact_target": "epsilon*S_H=4-z_i*z_j",
+    "b4_b6_b8_b10_floors_above_mean": true,
+    "boolean_catalog_edge_count_dependency": false,
+    "boolean_catalog_exhaustive_at_support_462": true,
+    "boolean_catalog_model_sha256": "4b73bd641d500cdf6a0c5edb7f4c8b225903db3a81d13be7e2329df3dbdaed83",
+    "boolean_catalog_result_status": "exhaustive finite certificate",
+    "boolean_catalog_support_sha256": "1609545bd2cddaa5f2389ea0e62b32a6bf62fd750bfb038aa1e3e1ba3ce127f6",
+    "catalog_survivors_after_offset_mod_6": {
+      "0": [
+        "selected_pair"
+      ],
+      "6": [
+        "selected_pair"
+      ]
+    },
+    "forced_form": "B=x_i*x_j",
+    "height_dichotomy_dependency": {
+      "height_dichotomy": [
+        1,
+        4
+      ],
+      "live_certificate_called": true,
+      "proposition": "15.738",
+      "proved": true
+    },
+    "p": 13,
+    "parallel_counts_Q": [
+      0,
+      6
+    ],
+    "phase_zero_even_b_floors": {
+      "0": 0,
+      "10": 26,
+      "12": 12,
+      "2": 14,
+      "4": 20,
+      "6": 26,
+      "8": 24
+    },
+    "proved": true,
+    "remaining_cell_before_height_audit": "b=0, A=2B, 4p*E[B]=14",
+    "result_status": "exhaustive finite certificate",
+    "scaled_mean": 14,
+    "selected_pair_moments": {
+      "Q0_and_Q6_differ_only_by_complete_graph_gauge": true,
+      "degree_four": "(i-j)^4",
+      "degree_two": "(i-j)^2"
+    },
+    "sharp_nonzero_lift_floor": 10
+  },
+  "all_t4_residue_sieve": {
+    "b10_floor_plus_two_exclusion": {
+      "complement_reduction": {
+        "b": 3,
+        "phase": 0
+      },
+      "contact_layer_lower_bound": "B>=0 for r=1,2,3",
+      "contact_layer_restriction_dependency": {
+        "fixed_weight_spanning_identities": [
+          "sum_(i<j)x_i*x_j=21",
+          "sum_(j!=i)x_i*x_j=6*x_i"
+        ],
+        "full_rank_mod_prime_implies_full_rank_over_Q": true,
+        "intersection_layer_counts": {
+          "0": 120,
+          "1": 630,
+          "2": 756,
+          "3": 210
+        },
+        "matrix_sha256": "996269be45189565eaf8717f97f71f2e2f22ad33c8116da5fd2e154ec8eaf695",
+        "pair_monomial_count": 78,
+        "pair_monomials_span_degree_at_most_two": true,
+        "pivot_columns": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77
+        ],
+        "positive_contact_layers": [
+          1,
+          2,
+          3
+        ],
+        "proved": true,
+        "rank_modulus": 101,
+        "restricted_evaluation_rank": 78,
+        "restricted_point_count": 1596,
+        "slice": "J(13,7)",
+        "three_point_complement": [
+          0,
+          1,
+          2
+        ],
+        "vanishing_on_contact_layers_forces_zero_globally": true
+      },
+      "cp_model_presolve": true,
+      "difference_variable": "B=(A-A_0)/2",
+      "exact_baseline": "A_0=(2-r)^2",
+      "global_nonnegative_lift_theorem_used": false,
+      "integer_value_sum": 66,
+      "model_constraint_count": 1639,
+      "model_textproto_sha256": "b0d1956f0a173f7c4ce94d7f588af92311d42f5017dd72d814d361e964b6bcd4",
+      "model_validation": "",
+      "model_variable_count": 1716,
+      "omitted_layer_lower_bound": "B>=-2 for r=0",
+      "omitted_layer_size": 120,
+      "original_phase_and_boundary": {
+        "b": 10,
+        "phase": 1
+      },
+      "p": 13,
+      "proved": true,
+      "punctured_lift_model_infeasible": true,
+      "random_seed": 0,
+      "result_status": "exhaustive finite certificate",
+      "safe_coordinate_upper_bound": 306,
+      "scaled_baseline_mean": 20,
+      "scaled_difference_identity": "4p*E[B]=2",
+      "scaled_mean_assumption": "2p*E[A]=22",
+      "search_workers": 1,
+      "slice_point_count": 1716,
+      "solver": "OR-Tools CP-SAT",
+      "solver_status": "INFEASIBLE",
+      "solver_version": "9.15.6755",
+      "symmetry_level": 3,
+      "third_difference_dependency": {
+        "degree_two_nullity": 78,
+        "identity_count": 1638,
+        "identity_rank": 1638,
+        "proposition": "15.738",
+        "proved": true
+      }
+    },
+    "exact_low_baseline_dependencies": {
+      "b10_complement_parity_checks": 4,
+      "b10_contact_layer_restriction": {
+        "fixed_weight_spanning_identities": [
+          "sum_(i<j)x_i*x_j=21",
+          "sum_(j!=i)x_i*x_j=6*x_i"
+        ],
+        "full_rank_mod_prime_implies_full_rank_over_Q": true,
+        "intersection_layer_counts": {
+          "0": 120,
+          "1": 630,
+          "2": 756,
+          "3": 210
+        },
+        "matrix_sha256": "996269be45189565eaf8717f97f71f2e2f22ad33c8116da5fd2e154ec8eaf695",
+        "pair_monomial_count": 78,
+        "pair_monomials_span_degree_at_most_two": true,
+        "pivot_columns": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77
+        ],
+        "positive_contact_layers": [
+          1,
+          2,
+          3
+        ],
+        "proved": true,
+        "rank_modulus": 101,
+        "restricted_evaluation_rank": 78,
+        "restricted_point_count": 1596,
+        "slice": "J(13,7)",
+        "three_point_complement": [
+          0,
+          1,
+          2
+        ],
+        "vanishing_on_contact_layers_forces_zero_globally": true
+      },
+      "b10_exact_baseline": "A=(2-r)^2 for r=|X intersect C|, |C|=3",
+      "b10_exact_scaled_mean": 20,
+      "b10_positive_quadrature": {
+        "all_weights_strictly_positive": true,
+        "coefficients": [
+          1,
+          -4,
+          4
+        ],
+        "contact_layers_determine_slice_quadratic": true,
+        "contact_nodes": [
+          1,
+          2,
+          3
+        ],
+        "exact_positive_quadrature_certificate": true,
+        "positive_weights_force_pointwise_contact_on_all_three_layers": true,
+        "proposition": "15.652",
+        "reduced_boundary_size": 3,
+        "reduced_phase": 0,
+        "weights": [
+          "15/26",
+          "3/13",
+          "5/26"
+        ]
+      },
+      "b10_positive_quadrature_rigidity": true,
+      "b10_target_boolean_checks": 8,
+      "b12_exact_baseline": "A=x_j",
+      "b12_exact_scaled_mean": 14,
+      "b12_positive_quadrature_rigidity": true,
+      "b2_exact_baseline": "A=(1-x_i-x_j)^2",
+      "b2_exact_scaled_mean": 12,
+      "b2_positive_quadrature_rigidity": true,
+      "p": 13,
+      "positive_quadrature_dependency": "Proposition 15.652",
+      "proved": true
+    },
+    "excluded_residues_before_prop_15744": [
+      1,
+      2,
+      5
+    ],
+    "hard_mean_form": "a=2u+14k",
+    "hard_quotient_identity": "sum k=11-u",
+    "layer_index_t": 4,
+    "minimum_phase_one_even_b_floor": 12,
+    "p": 13,
+    "phase_one_even_b_floors": {
+      "0": 26,
+      "10": 20,
+      "12": 14,
+      "2": 12,
+      "4": 26,
+      "6": 24,
+      "8": 26
+    },
+    "proved": true,
+    "residue_rows": [
+      {
+        "common_residue": 0,
+        "excluded": false,
+        "forced_low_direction_count_at_least": 3,
+        "forced_low_mean": 14,
+        "forced_low_quotient": 1,
+        "k0_below_every_phase_one_floor": true,
+        "k0_mean": 0,
+        "low_cells_at_or_below_mean": [
+          {
+            "b": 2,
+            "excess": 2,
+            "floor": 12,
+            "status": "forbidden lift below 10",
+            "survives": false
+          },
+          {
+            "b": 12,
+            "excess": 0,
+            "floor": 14,
+            "status": "exact baseline",
+            "survives": true
+          }
+        ],
+        "quotient_sum": 11,
+        "surviving_low_cells": [
+          {
+            "b": 12,
+            "excess": 0,
+            "floor": 14,
+            "status": "exact baseline",
+            "survives": true
+          }
+        ],
+        "u": 0
+      },
+      {
+        "common_residue": 2,
+        "excluded": true,
+        "forced_low_direction_count_at_least": 4,
+        "forced_low_mean": 16,
+        "forced_low_quotient": 1,
+        "k0_below_every_phase_one_floor": true,
+        "k0_mean": 2,
+        "low_cells_at_or_below_mean": [
+          {
+            "b": 2,
+            "excess": 4,
+            "floor": 12,
+            "status": "forbidden lift below 10",
+            "survives": false
+          },
+          {
+            "b": 12,
+            "excess": 2,
+            "floor": 14,
+            "status": "forbidden lift below 10",
+            "survives": false
+          }
+        ],
+        "quotient_sum": 10,
+        "surviving_low_cells": [],
+        "u": 1
+      },
+      {
+        "common_residue": 4,
+        "excluded": true,
+        "forced_low_direction_count_at_least": 5,
+        "forced_low_mean": 18,
+        "forced_low_quotient": 1,
+        "k0_below_every_phase_one_floor": true,
+        "k0_mean": 4,
+        "low_cells_at_or_below_mean": [
+          {
+            "b": 2,
+            "excess": 6,
+            "floor": 12,
+            "status": "forbidden lift below 10",
+            "survives": false
+          },
+          {
+            "b": 12,
+            "excess": 4,
+            "floor": 14,
+            "status": "forbidden lift below 10",
+            "survives": false
+          }
+        ],
+        "quotient_sum": 9,
+        "surviving_low_cells": [],
+        "u": 2
+      },
+      {
+        "common_residue": 6,
+        "excluded": false,
+        "forced_low_direction_count_at_least": 6,
+        "forced_low_mean": 20,
+        "forced_low_quotient": 1,
+        "k0_below_every_phase_one_floor": true,
+        "k0_mean": 6,
+        "low_cells_at_or_below_mean": [
+          {
+            "b": 2,
+            "excess": 8,
+            "floor": 12,
+            "status": "forbidden lift below 10",
+            "survives": false
+          },
+          {
+            "b": 10,
+            "excess": 0,
+            "floor": 20,
+            "status": "exact baseline",
+            "survives": true
+          },
+          {
+            "b": 12,
+            "excess": 6,
+            "floor": 14,
+            "status": "forbidden lift below 10",
+            "survives": false
+          }
+        ],
+        "quotient_sum": 8,
+        "surviving_low_cells": [
+          {
+            "b": 10,
+            "excess": 0,
+            "floor": 20,
+            "status": "exact baseline",
+            "survives": true
+          }
+        ],
+        "u": 3
+      },
+      {
+        "common_residue": 8,
+        "excluded": false,
+        "forced_low_direction_count_at_least": 7,
+        "forced_low_mean": 22,
+        "forced_low_quotient": 1,
+        "k0_below_every_phase_one_floor": true,
+        "k0_mean": 8,
+        "low_cells_at_or_below_mean": [
+          {
+            "b": 2,
+            "excess": 10,
+            "floor": 12,
+            "status": "sharp lift equality survives",
+            "survives": true
+          },
+          {
+            "b": 10,
+            "excess": 2,
+            "floor": 20,
+            "status": "punctured floor-plus-two model infeasible",
+            "survives": false
+          },
+          {
+            "b": 12,
+            "excess": 8,
+            "floor": 14,
+            "status": "forbidden lift below 10",
+            "survives": false
+          }
+        ],
+        "quotient_sum": 7,
+        "surviving_low_cells": [
+          {
+            "b": 2,
+            "excess": 10,
+            "floor": 12,
+            "status": "sharp lift equality survives",
+            "survives": true
+          }
+        ],
+        "u": 4
+      },
+      {
+        "common_residue": 10,
+        "excluded": true,
+        "forced_low_direction_count_at_least": 1,
+        "forced_low_mean": 10,
+        "forced_low_quotient": 0,
+        "k0_below_every_phase_one_floor": true,
+        "k0_mean": 10,
+        "low_cells_at_or_below_mean": [],
+        "quotient_sum": 6,
+        "surviving_low_cells": [],
+        "u": 5
+      },
+      {
+        "common_residue": 12,
+        "excluded": false,
+        "forced_low_direction_count_at_least": 2,
+        "forced_low_mean": 12,
+        "forced_low_quotient": 0,
+        "k0_below_every_phase_one_floor": false,
+        "k0_mean": 12,
+        "low_cells_at_or_below_mean": [
+          {
+            "b": 2,
+            "excess": 0,
+            "floor": 12,
+            "status": "exact baseline",
+            "survives": true
+          }
+        ],
+        "quotient_sum": 5,
+        "surviving_low_cells": [
+          {
+            "b": 2,
+            "excess": 0,
+            "floor": 12,
+            "status": "exact baseline",
+            "survives": true
+          }
+        ],
+        "u": 6
+      }
+    ],
+    "sharp_lift_certificate_called": true,
+    "sharp_lift_dependency": "Proposition 15.688 for b=2,12 only",
+    "sharp_nonzero_integral_lift_floor": 10,
+    "surviving_residues_before_prop_15744": [
+      0,
+      3,
+      4,
+      6
+    ]
+  },
+  "changed_premise": "the b=10 equality uses a full-rank contact-layer restriction, its floor-plus-two case uses a separate punctured-lift model, and the mass-14 height-four cells are rebuilt at |H|=61",
+  "finite_configuration_search_used": true,
+  "finite_search_scope": "one 1716-variable b=10 punctured-lift model and two necessary 78-coefficient height-four cells at Q=0,6; the Boolean catalog is imported only after the H=61 reruns",
+  "multi_level_type_I_closed": false,
+  "p13_k_eq_60_closed": false,
+  "p13_t4_u3_branch_closed": true,
+  "prop": "15.744",
+  "proved": true,
+  "quadratic_minmax_limit_closed": false,
+  "remaining_p13_t4_residues": [
+    0,
+    4,
+    6
+  ],
+  "residual_ii_closed": false,
+  "residue_and_parallel_ledger": {
+    "H_edge_count": 61,
+    "all_residue_sieve_dependency": {
+      "proved": true,
+      "surviving_residues_before_prop_15744": [
+        0,
+        3,
+        4,
+        6
+      ]
+    },
+    "elevated_hard_count": 1,
+    "elevated_hard_mean": 34,
+    "exact_complement_triple_count": 6,
+    "exact_hard_coefficient_offset": 2,
+    "exact_hard_mean": 20,
+    "exact_hard_parallel_congruence": "6 divides P-2",
+    "exact_hard_target": "epsilon*S_H=5-sum_(i in C)z_i+sum_({i,j} subset C)z_i*z_j",
+    "exact_hard_target_boolean_checks": 8,
+    "hard_mean_formula": "a_L=6+14*k_L",
+    "hard_phase": 1,
+    "hard_quotient_profile": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2
+    ],
+    "hard_quotient_sum": 8,
+    "hard_residue_u": 3,
+    "hard_type": "epsilon_d=c_H",
+    "layer_index_t": 4,
+    "low_mean_rows": [
+      {
+        "b": 2,
+        "excess": 8,
+        "floor": 12,
+        "status": "forbidden lift below 10"
+      },
+      {
+        "b": 10,
+        "excess": 0,
+        "floor": 20,
+        "status": "exact complement-triple cell"
+      },
+      {
+        "b": 12,
+        "excess": 6,
+        "floor": 14,
+        "status": "forbidden lift below 10"
+      }
+    ],
+    "opposite_phase": 0,
+    "original_k": 60,
+    "p": 13,
+    "parallel_ledgers": {
+      "2": {
+        "Q5_required_coefficient_congruence": "6 divides Q-3",
+        "Q5_zero_cell_coefficient_compatible": false,
+        "Q5_zero_cell_coefficient_offset": 3,
+        "Q5_zero_cell_signed_target": "epsilon*S_H=3",
+        "R_equals_P_plus_one": true,
+        "directions_at_forced_Q_at_least": 1,
+        "elevated_hard_parallel_count_R": 3,
+        "elevated_identity": "34=14*R-hT-39",
+        "exact_hard_identity": "20=14*2-(-31)-39",
+        "exact_hard_parallel_count_P": 2,
+        "forced_mass14_mean": 14,
+        "forced_mass14_parallel_count_Q": 6,
+        "forcing_reason": "Q=5,a=0 has offset 3 and is incompatible modulo 6; sum Q=46<7*7 forces a Q=6 row",
+        "hard_edge_count": 15,
+        "hard_edge_count_identity": "6*2+3",
+        "hard_sign_times_global_T": -31,
+        "minimum_allowed_opposite_Q": 6,
+        "opposite_mean_formula": "a(Q)=14*Q+(-31)-39",
+        "opposite_parallel_count_sum": 46,
+        "proved": true
+      },
+      "8": {
+        "Q5_required_coefficient_congruence": null,
+        "Q5_zero_cell_coefficient_compatible": null,
+        "Q5_zero_cell_coefficient_offset": null,
+        "Q5_zero_cell_signed_target": null,
+        "R_equals_P_plus_one": true,
+        "directions_at_forced_Q_at_least": 3,
+        "elevated_hard_parallel_count_R": 9,
+        "elevated_identity": "34=14*R-hT-39",
+        "exact_hard_identity": "20=14*8-(53)-39",
+        "exact_hard_parallel_count_P": 8,
+        "forced_mass14_mean": 14,
+        "forced_mass14_parallel_count_Q": 0,
+        "forcing_reason": "sum Q=4 across seven nonnegative rows forces a Q=0 row",
+        "hard_edge_count": 57,
+        "hard_edge_count_identity": "6*8+9",
+        "hard_sign_times_global_T": 53,
+        "minimum_allowed_opposite_Q": 0,
+        "opposite_mean_formula": "a(Q)=14*Q+(53)-39",
+        "opposite_parallel_count_sum": 4,
+        "proved": true
+      }
+    },
+    "phase_one_even_b_floors": {
+      "0": 26,
+      "10": 20,
+      "12": 14,
+      "2": 12,
+      "4": 26,
+      "6": 24,
+      "8": 26
+    },
+    "possible_exact_hard_parallel_counts": [
+      2,
+      8
+    ],
+    "proved": true,
+    "sharp_nonzero_lift_floor": 10,
+    "type_budget": 154,
+    "type_budget_identity": "2*m*(m+t)=2*7*11=154"
+  },
+  "result_status": "proved branch theorem",
+  "six_root_quartic": {
+    "both_hard_gauges_have_triangle_even_moments": true,
+    "distinct_exact_hard_projective_roots": 6,
+    "field": "F_13",
+    "global_even_moments": "M_d(L)=sum_({u,v} in H)chi(u-v)*(L(u)-L(v))^d",
+    "hard_gauge_histograms": {
+      "2": {
+        "-1": 33,
+        "0": 45
+      },
+      "8": {
+        "0": 33,
+        "1": 45
+      }
+    },
+    "homogeneous_quartic": "G=2*h*M_4-M_2^2",
+    "minus_three_nonzero_mod_13": true,
+    "opposite_evaluation_formula": "G=-3*(i-j)^4",
+    "proved": true,
+    "quartic_degree": 4,
+    "root_count_exceeds_degree": true,
+    "selected_pair_contradicts_identically_zero_G": true,
+    "sign_checks": {
+      "-1": {
+        "every_opposite_value_nonzero": true,
+        "expected_opposite_nonzero_value_set": [
+          4,
+          10,
+          12
+        ],
+        "hard_G_value_set": [
+          0
+        ],
+        "hard_sign_h": -1,
+        "opposite_G_value_set": [
+          4,
+          10,
+          12
+        ],
+        "opposite_sign": 1,
+        "proved": true
+      },
+      "1": {
+        "every_opposite_value_nonzero": true,
+        "expected_opposite_nonzero_value_set": [
+          4,
+          10,
+          12
+        ],
+        "hard_G_value_set": [
+          0
+        ],
+        "hard_sign_h": 1,
+        "opposite_G_value_set": [
+          4,
+          10,
+          12
+        ],
+        "opposite_sign": -1,
+        "proved": true
+      }
+    }
+  },
+  "statement": "the residual-(ii) branch p=13,t=4,k=60,u=3 is empty",
+  "title": "Six-root quartic closes the p=13,t=4,u=3 branch",
+  "top_level_gates_changed": false
+}

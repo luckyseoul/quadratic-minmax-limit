@@ -11233,6 +11233,267 @@ Evidence: `src/e1_gmin_m4_prop15743.py`,
 `evidence/e1_gmin_m4_prop15743.json`, and
 `evidence/NOTE_2026-08-31_p17_full_translated_cut_energy_close.md`.
 
+## Proposition 15.744 — six roots close the p=13 fifth-shell residue u=3
+
+At \(p=13,t=4\), the odd flip graph has 61 edges.  In the phase-one hard
+type write
+
+\[
+ a_L=2u+14k_L,\qquad \sum_Lk_L=11-u.              \tag{15.744.1}
+\]
+
+The exact even-\(b\) phase-one floors, in the order
+\(b=0,2,4,6,8,10,12\), are
+
+\[
+ (26,12,26,24,26,20,14).                          \tag{15.744.2}
+\]
+
+For \(b=10\), pass to the three-point complement.  Phase one becomes the
+phase-zero \(b=3\) parity problem.  Proposition 15.652's exact quadrature
+has coefficient polynomial \(r^2-4r+4=(2-r)^2\), contact nodes
+\(1,2,3\), and strictly positive weights
+\(15/26,3/13,5/26\).  At equality, positivity forces the original
+integer quadratic to equal the parity minimum on every point in those
+three layers.  To extend across the omitted \(r=0\) layer, restrict the 78
+pair monomials to all 1,596 points with \(r=1,2,3\).  Their evaluation
+matrix has rank 78 modulo 101.  Since pair monomials span every
+degree-at-most-two function on \(J(13,7)\), this proves that the exact cell
+is pointwise \(A=(2-r)^2\), not merely that its stabilizer average has that
+form.
+
+The \(b=10\) cell at mean 22 is not an ordinary nonnegative lift of this
+baseline: \(B=(A-(2-r)^2)/2\) need only satisfy \(B\ge-2\) on \(r=0\),
+although \(B\ge0\) on \(r=1,2,3\).  The executable certificate therefore
+uses Proposition 15.738's 1,638 independent third-difference identities,
+these punctured lower bounds, and \(\sum_XB(X)=66\), equivalently
+\(4p\,\mathbb E B=2\).  The resulting deterministic 1,716-variable model
+is infeasible.  Thus this floor-plus-two cell is excluded without invoking
+the globally nonnegative lift theorem.
+
+For the ordinary \(b=2,12\) baselines, the sharp cost of a nonzero
+nonnegative integral lift is ten.  For
+\(u\le4\), a quotient-zero row would have mean at most eight, below every
+floor, so every quotient is positive and at least \(3+u\) directions have
+\(k_L=1\).  Applying (15.744.2) at their low means leaves the exact
+\(b=12\) row for \(u=0\), nothing for \(u=1,2\), the exact \(b=10\)
+complement triple for \(u=3\), and the sharp mass-ten \(b=2\) lift for
+\(u=4\).  At \(u=5\), a forced quotient-zero row has mean ten and is
+impossible; at \(u=6\), two such rows can attain the exact \(b=2\) floor
+twelve.  Thus the exact residue sieve is
+
+\[
+ \boxed{u\in\{0,3,4,6\}}.                          \tag{15.744.3}
+\]
+
+Now take \(u=3\).  Equation (15.744.1) forces the hard quotient profile
+\(1^6 2\).  The six low rows are exact complement triples of mean 20,
+whose signed target has coefficient offset two.  If \(P\) is their common
+parallel count, \(R\) is the elevated count, \(h\) is the hard sign, and
+\(T\) is the global signed edge total, coefficient normalization gives
+
+\[
+ 20=14P-hT-39,\qquad 34=14R-hT-39.                 \tag{15.744.4}
+\]
+
+Hence \(hT=14P-59\), \(R=P+1\), and the offset congruence is
+\(P\equiv2\pmod6\).  Since the hard rows use \(6P+R=7P+1\le61\) edges,
+
+\[
+ P\in\{2,8\}.                                     \tag{15.744.5}
+\]
+
+For \(P=2\), the seven opposite counts sum to 46 and their means are
+\(14(Q-5)\).  A \(Q=5\) zero cell has coefficient offset three and would
+require \(Q\equiv3\pmod6\), so every opposite count is at least six; at
+least one is \(Q=6\), of mean 14.  For \(P=8\), the opposite counts sum to
+four and their means are \(14(Q+1)\), so at least one is \(Q=0\), again of
+mean 14.
+
+It remains to classify this forced phase-zero mass-14 cell.  Proposition
+15.738's Boolean support classification is independent of \(|H|\), but its
+preliminary height-four models used the old bound
+\(\sum|W_{st}|\le59-Q\).  They cannot be imported at this layer.  Rebuild
+the two necessary coefficient models with
+
+\[
+ \sum|W_{st}|\le61-Q,\qquad Q\in\{0,6\}.            \tag{15.744.6}
+\]
+
+Exact deterministic one-worker CP-SAT returns `INFEASIBLE` in both cases.
+The live height dichotomy is therefore reduced to the Boolean case.  The
+edge-independent exhaustive support-462 catalog has offsets six, four, and
+four, so at \(Q=0,6\) only
+
+\[
+ B=x_i x_j                                             \tag{15.744.7}
+\]
+
+survives.
+
+For even \(d\), put
+
+\[
+ M_d(L)=\sum_{\{x,y\}\in H}\chi(x-y)(Lx-Ly)^d.
+\]
+
+In either hard gauge, an exact complement triple satisfies
+\(2S_4=S_2^2\).  Thus the homogeneous binary quartic
+
+\[
+ G=2hM_4-M_2^2                                      \tag{15.744.8}
+\]
+
+vanishes in six distinct projective directions.  It is identically zero.
+The opposite selected-pair cell (15.744.7), whose sign is \(-h\), instead
+gives
+
+\[
+ G=-3(i-j)^4\ne0\quad\hbox{in }\mathbb F_{13}.      \tag{15.744.9}
+\]
+
+This contradiction proves
+
+\[
+ \boxed{p=13,t=4,u=3\text{ is empty}.}
+\]
+
+This is a **proved branch theorem**, with exhaustive finite certificates for
+the contact-layer restriction, the punctured lift, and the changed
+height-four premise.  It does not close the other residues or residual (ii).
+
+Evidence: `src/e1_gmin_m4_prop15744.py`,
+`tests/test_prop15744.py`,
+`evidence/e1_gmin_m4_prop15744.json`, and
+`evidence/NOTE_2026-08-31_p13_t4_u3_quartic_close.md`.
+
+## Proposition 15.745 — collision-one energy closes p=13,t=4,u=0
+
+Retain \(p=13,t=4,u=0\).  The seven hard quotients satisfy
+\(k_L\ge1\) and \(\sum_Lk_L=11\), so the excesses
+\(e_L=k_L-1\) have one of the five partitions
+
+\[
+ (4),\ (3,1),\ (2,2),\ (2,1,1),\ (1,1,1,1).       \tag{15.745.1}
+\]
+
+Normalize before inserting the exact-star distance row.  If \(P_0\) is an
+exact literal star's parallel count, its local and common off-bin sums give
+
+\[
+ 13(P_0-3)-14=hT-P_0,qquad hT=14P_0-53.           \tag{15.745.2}
+\]
+
+For a general hard quotient \(k_L\), the same comparison gives
+\(P_L=P_0+k_L-1\).  Summing the hard parallel counts and using the 61-edge
+bound gives \(P_0\le8\).  The isolated-chart literal congruence
+\(P_0\equiv5\pmod6\) now forces
+
+\[
+ P_0=5,qquad hT=17,qquad P_L=4+k_L=5+e_L.        \tag{15.745.3}
+\]
+
+The hard rows use 39 parallel edges, so the seven opposite counts sum to
+22.  Their scaled mean is \(14Q-22\).  Counts below two give negative mean,
+while \(Q=2\) gives mean six, below both the least nonzero phase-zero floor
+and the sharp integral-lift floor.  Hence the opposite profile is exactly
+
+\[
+ (3,3,3,3,3,3,4).                                 \tag{15.745.4}
+\]
+
+An exact literal row is \((2,2,2,2,2,2)\), of energy 24.  Three distinct
+exact directions force the binary quadratic \(M_2\) to vanish; five force
+the binary quartic \(M_4\) to vanish as well.  The executable certificate
+checks all 364 three-direction quadratic evaluation matrices and all 2,002
+five-direction quartic matrices over \(\mathbb F_{13}\).
+
+Let \(q=(q_1,\ldots,q_6)\) be a nonzero distance row.  Use all 74 exact
+translated seven-set cut vectors.  The necessary integral relaxations have
+
+\[
+\begin{array}{lll}
+ \text{hard excess }e:&\sum q_a=12-e,&
+ \|q\|_1\le56-e,\quad c_Xq\le91,\\
+ \text{opposite }Q:&\sum q_a=-17-Q,&
+ \|q\|_1\le61-Q,\quad c_Xq\le-130,
+\end{array}                                        \tag{15.745.5}
+\]
+
+together with the forced moment congruences.  Broad-domain deterministic
+one-worker models, independently replayed by a second exact encoding at the
+next energy, give
+
+\[
+\begin{array}{c|c|c}
+ \text{row}&\text{moments}&\text{result}\\ \hline
+ Q=3&M_2=M_4=0&\text{infeasible},\\
+ e=1&M_2=0&\max\|q\|_2^2=31,\\
+ e=2&M_2=0&\max\|q\|_2^2=96,\\
+ Q=3&M_2=0&\max\|q\|_2^2=76,\\
+ Q=4&M_2=0&\max\|q\|_2^2=111.
+\end{array}                                        \tag{15.745.6}
+\]
+
+Thus the first three partitions in (15.745.1), which have at least five
+exact stars, are empty.  The partition \((1,1,1,1)\) has three exact stars;
+its nonexact row energy is at most
+
+\[
+ 4\cdot31+6\cdot76+111=691,
+\]
+
+whereas the exact difference-Radon identity is \(721+26C\ge721\), with
+\(C=\sum_\delta\binom{m_\delta}{2}\).
+
+Only \((2,1,1)\) remains.  Its broad row upper bound and exact Radon value
+are
+
+\[
+ 96+2\cdot31+6\cdot76+111=725,
+ \qquad 693+26C.                                   \tag{15.745.7}
+\]
+
+Consequently \(C\le1\).  Independently, the unique \(e=2\) direction has
+\(P=7\) parallel edges in only six unoriented displacement classes, so
+\(C\ge1\).  Equality forces its multiplicity profile to be
+\((2,1,1,1,1,1)\), places the sole duplicate in that row's zero bin, and
+makes every transverse multiplicity zero or one.
+
+For each nonzero bin of this hard direction, the difference-Radon incidence
+contains exactly one class from each of the other thirteen projective
+directions.  Since \(\chi(-1)=1\), the unoriented signs are well defined;
+after hard normalization they split into six positive and seven negative
+classes.  The certificate checks all \(14\cdot6=84\) such bins directly in
+\(\mathbb F_{13}^2\).  Hence
+
+\[
+ -7\le q_a\le6.                                    \tag{15.745.8}
+\]
+
+Adding only (15.745.8) to the \(e=2\) relaxation lowers its sharp energy to
+66; a separate model makes energy at least 67 infeasible.  Therefore
+
+\[
+ 66+2\cdot31+6\cdot76+111=695<693+26=719,          \tag{15.745.9}
+\]
+
+the final contradiction.  Thus
+
+\[
+ \boxed{p=13,t=4,u=0\text{ is empty}.}
+\]
+
+Proposition 15.745 is an **exhaustive finite aggregate certificate**.  With
+Proposition 15.744, the exact remaining \(p=13,k=60\) residues are
+\(u\in\{4,6\}\).  The full row, residual (ii), Type I, and the limit remain
+open.
+
+Evidence: `src/e1_gmin_m4_prop15745.py`,
+`tests/test_prop15745.py`,
+`evidence/e1_gmin_m4_prop15745.json`, and
+`evidence/NOTE_2026-08-31_p13_t4_u0_close.md`.
+
 ## Proposition 15.723 — paired-cube obstruction to middle floor-plus-two lifts
 
 Put (p=2m-1\ge17). Let (A\ge0) be an integer-valued quadratic on

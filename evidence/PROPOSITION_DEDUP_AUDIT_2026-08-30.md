@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-31
 
-**Scope:** every assigned proposition through Proposition 15.743, the live
+**Scope:** every assigned proposition through Proposition 15.745, the live
 predicate wiring, and the attack scripts present during the audit
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
@@ -393,6 +393,40 @@ This closes exactly `p=17,k=74`, not any `p>=17,t>=4` layer (beginning
 with `p=17,k>=76`) or branch-B `t=3` for `p=1 mod 4,p>=29`; residual (ii),
 Type I, and the limit remain open.
 
+A twenty-seventh semantic check gives Proposition 15.744.  The complete
+`p=13,t=4` residue sieve leaves `u in {0,3,4,6}`.  In `u=3`, the hard
+quotient profile is six exact complement triples and one elevated row.  The
+phase-one `b=10` equality is upgraded from its averaged quadrature by a
+rank-78 restriction to the three contact layers.  Its two-unit alternative
+is not treated as a globally nonnegative lift: a separate 1,716-variable
+model with 1,638 third-difference identities, the exact punctured lower
+bounds, and `sum B=66` is infeasible.  The
+parallel congruence and common signed-total equations leave `P=2,8`; either
+ledger forces an opposite phase-zero mass-14 cell at `Q=6` or `Q=0`.  The
+old Proposition 15.738 height-four infeasibility is not reused: its
+`|H|=59` l1 bound is changed here.  Both necessary models are rebuilt at
+`|H|=61`, with `sum|W|<=61-Q`, and exact one-worker CP-SAT makes both
+infeasible.  Only then is 15.738's edge-independent Boolean support catalog
+imported, leaving a selected pair.  Six exact hard roots make
+`G=2hM_4-M_2^2` identically zero, while the opposite selected pair gives
+`-3(i-j)^4!=0`.  This closes exactly `p=13,t=4,u=3`, not the full `k=60`
+row.
+
+A twenty-eighth semantic check gives Proposition 15.745 and closes
+`p=13,t=4,u=0` without a displacement census.  Exact-star/common-row gluing
+forces `hT=17` and `P_L=4+k_L`; the opposite parallel profile is `3^6,4`.
+All 74 translated cuts under the forced moment congruences make an opposite
+`Q=3` row infeasible when at least five stars are exact, and give the broad
+relaxation maxima 31, 96, 76, and 111 needed for the two remaining
+partitions.  Three partitions die rowwise; `(1,1,1,1)` dies by
+`691<721+26C`.  For `(2,1,1)`, the row bound gives `C<=1`, while its seven
+parallel edges in six classes give `C>=1`.  The equality case puts the sole
+duplicate in the elevated zero bin.  A direct audit of all 84 nonzero
+functional bins in `F_13^2` proves the transverse sign split `6+/7-`, hence
+`q_a in [-7,6]`; the elevated maximum becomes 66 and
+`695<719`.  Together, 15.744--15.745 leave exactly `u in {4,6}` at
+`p=13,k=60`.  Residual (ii), Type I, and the limit remain open.
+
 The Bartoli--Storme ``unique-trisecant ceiling'' previously recorded after
 15.729 is **RETRACTED**. Under the corollary's other hypotheses, including
 `d>3+2sqrt(q)` and existence of the configuration, its threshold is the upper
@@ -445,11 +479,11 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 658 source-backed proposition modules from 15.83 through 15.743.
+- There are 660 source-backed proposition modules from 15.83 through 15.745.
 - The labels 15.537, 15.583, and 15.584 have no proposition module.  They are
   unassigned labels, not unreviewed propositions; later source headers mention
   those numbers only as historical range/state markers.
-- Therefore every assigned proposition through 15.743 was included in this
+- Therefore every assigned proposition through 15.745 was included in this
   audit.  The grouped ledger below is by shared mathematical route rather than
   a 735-row restatement of the assigned propositions.
 
@@ -460,10 +494,10 @@ The public theorem is gated consistently by the corrected global
 currently `False`. The historical bounded `True` is available only through
 `e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after audit of 15.743 |
+| unit | exact live content | status after audit of 15.745 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
-| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close `k in {4p,4p+2,4p+4}`, for every boundary size, at all primes `p>=11`; 15.738--15.742 close `p=13,k=58`, and 15.743 closes `p=17,k=74`. The exact remainder includes critical `p=5,7`, `p=11,k>=50`, `p=13,k>=60`, every `p>=17,t>=4` layer (beginning with `p=17,k>=76`), and branch-B `t=3` for `p=1 mod 4,p>=29`; the separate positive `p=7,z=7` branch persists. The global predicate stays false. |
+| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close `k in {4p,4p+2,4p+4}`, for every boundary size, at all primes `p>=11`; 15.738--15.742 close `p=13,k=58`, 15.743 closes `p=17,k=74`, and 15.744--15.745 close `u=3,0` at `p=13,k=60`. The exact remainder includes critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u in {4,6}` and later p13 layers, every `p>=17,t>=4` layer (beginning with `p=17,k>=76`), and branch-B `t=3` for `p=1 mod 4,p>=29`; the separate positive `p=7,z=7` branch persists. The global predicate stays false. |
 | Type I | the multi-level `3A+B>0` bad case | **OPEN** — `|κ|=1` needs `G>T` (for example `|μ|≤|L|`), while `|κ|=3` independently needs `χ_d((2p-1)μ+(p-2)ν)>-(p-2)/p`; the particular term is safe but the δ remainder is open |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
@@ -513,6 +547,8 @@ top-level front.
 | **15.741** | common-graph cubic/quartic endpoint tensors and the 84-class difference-Radon transform | **PROVED OPEN REDUCTION AND METHOD BARRIER.** The four exact stars force `M_2=T_3=0`, `U_4=lambda M_4`, and `M_4!=0`; the transform gives an exact nonnegative-integer inverse and energy `707+26C` with `C<=11`. Its `M_2` and exact energy identities are the inputs completed by 15.742. |
 | **15.742** | joint `M_2` congruence, six interval-dilate cuts, and common-graph energy | **EXHAUSTIVE FINITE CERTIFICATE.** The sharp elevated/opposite row energies are 31 and 82, so the ten nonexact rows have energy at most 667, contradicting `707+26C>=707`. The generic four-exact p13 branch and, with 15.739, all of `p=13,k=58` are closed. |
 | **15.743** | cross-direction `P=4+k`, all 698 translated-cut vectors, and the p17 common-Radon energy | **EXHAUSTIVE FINITE CERTIFICATE.** Broad-domain one-worker CP-SAT excludes excess one, excess-two energy at least 71, excess-three energy at least 120, and opposite energy at least 73 without a prior energy cap; fixed sum `-24` then makes `(-3)^8` the unique opposite row of energy 72.  The only quotient partition not killed rowwise has `767<1211<=1211+34C`, closing `p=17,k=74`. |
+| **15.744** | full p13 t4 residue sieve, b10 contact-layer and punctured-lift certificates, changed H61 mass-14 models, and six-root quartic | **PROVED BRANCH THEOREM WITH EXHAUSTIVE LOCAL CERTIFICATES.** Rank 78 makes the exact b10 cell pointwise and the separate punctured model excludes its two-unit alternative; the H59 height-four result is not imported, and both H61 models are rebuilt and infeasible.  The selected-pair survivor contradicts the identically zero quartic, closing exactly `p=13,t=4,u=3`. |
+| **15.745** | full 74-cut p13 rows, exact Radon partition energies, and collision-one transverse sign audit | **EXHAUSTIVE FINITE AGGREGATE CERTIFICATE.** Three partitions die rowwise, one by `691<721+26C`, and the equality case of the last gives the sharpened `695<719` contradiction.  With 15.744, the exact `p=13,k=60` remainder is `u in {4,6}`. |
 
 ## Exact duplicated run
 
@@ -671,11 +707,14 @@ Before spending mesh/GPU time:
 3. in any sparse layer, first audit the isolated-vertex count and transport an
    isolated vertex to infinity; Propositions 15.734--15.737 already close
    every boundary in the first three shells for `p>=11`;
-4. do not reopen `k in {4p,4p+2,4p+4}` for `p>=11`, `p=13,k=58`, or
-   `p=17,k=74`: Proposition 15.742 closes the p13 row by the exact
+4. do not reopen `k in {4p,4p+2,4p+4}` for `p>=11`, `p=13,k=58`,
+   `p=17,k=74`, or the `p=13,k=60` residues `u=0,3`: Proposition 15.742 closes the p13 t3 row by the exact
    six-dilate/common-energy contradiction, and Proposition 15.743 closes the
-   p17 row by the 698-vector/common-Radon certificate. The live residual
-   ranges are critical `p=5,7`, `p=11,k>=50`, `p=13,k>=60`, every
+   p17 row by the 698-vector/common-Radon certificate. Propositions
+   15.744--15.745 close the two p13 t4 residues after, respectively,
+   rebuilding the H61 mass-14 premise and auditing the collision-one
+   transverse signs. The live residual ranges are critical `p=5,7`,
+   `p=11,k>=50`, `p=13,k=60,u in {4,6}` and later p13 layers, every
    `p>=17,t>=4` layer (beginning with `p=17,k>=76`), and branch-B `t=3`
    for `p=1 mod 4,p>=29`. In that branch-B range, the surplus
    resonance and explicit local mean witness rule
@@ -686,7 +725,8 @@ Before spending mesh/GPU time:
    mass-14 catalog and quartic contradiction. Do not reopen the generic p13
    `t=3` aggregate: 15.740 leaves exactly `1^4 2^3`, 15.741 supplies its
    common-graph energy identity, and 15.742 proves the resulting integral
-   row system empty;
+   row system empty.  The next finite p13 gate is the sharp mass-10 equality
+   classification feeding `u=4`, not a rerun of `u=0,3`;
 5. search tracked files, untracked scripts, `/tmp` artifact names and hashes,
    git history, GitHub, MathOverflow, literature notes, and OEIS when number
    patterns are involved;

@@ -27,7 +27,7 @@ branches or turning completed computations into new work.
 - Prefer an argument that closes an infinite family over a wider finite
   census unless the finite census is the explicitly recorded gate.
 
-## Current residual-(ii) gate after Proposition 15.743
+## Current residual-(ii) gate after Proposition 15.745
 
 Do not reopen `p=13,k=58` or `p=17,k=74`.  Proposition 15.742 combines the
 `M_2=0` congruence with six multiplicative interval cuts and closes the
@@ -47,17 +47,38 @@ and forces every opposite row to `(-3)^8`, of energy 72.  The only partition
 not already killed by the excess-one row satisfies
 `119+9*72=767<1211+34C`, so it is impossible as well.
 
-Residual (ii) is still open at critical `p=5,7`, at `p=11,k>=50`, at
-`p=13,k>=60`, at `p=17,k>=76`, and in later layers for primes `p>=19`;
-within the branch-B fourth shell, the next prime is `p=29`.  Proposition
-15.743 is a finite `p=17` certificate, not an all-prime row theorem.  The
-preferred generic front is therefore a
+At `p=13,t=4,k=60`, Proposition 15.744 replays all residues and closes the
+exceptional `u=3` profile by a six-root quartic contradiction after rebuilding
+the edge-count-sensitive mass-14 models at `|H|=61`.  Its `b=10` premise is
+also exact: a rank-78 restriction promotes contact-layer equality to the
+pointwise complement triple, and a separate 1,716-variable punctured-lift
+model excludes the two-unit `b=10` cell.  Do not replace that model with
+Proposition 15.688, because the difference can be negative on the omitted
+intersection layer.  Proposition 15.745
+closes `u=0`: the 74-cut row bounds and common Radon energy give `C<=1` in
+the sole difficult partition, while its seven parallel edges in six classes
+give `C>=1`; its unique doubled parallel displacement then makes
+the transverse multiplicities Boolean and bounds the elevated row in
+`[-7,6]`, giving `695<719`.  Do not import the old `|H|=59` height-four
+infeasibility, omit the collision-one sign audit, or call the full
+`p=13,k=60` row closed.  Its exact remaining residues are `u=4,6`.
+
+Residual (ii) is still open at critical `p=5,7`, at `p=11,k>=50`, in the
+two `p=13,k=60` residues `u=4,6` and all later p13 layers, at `p=17,k>=76`,
+and in later layers for primes `p>=19`; within the branch-B fourth shell, the
+next prime is `p=29`.  Propositions 15.743--15.745 are finite certificates,
+not an all-prime row theorem.  The preferred generic front is therefore a
 structural version of its common-energy/cut mechanism that survives when
 the number of distance bins grows.  Another independent coefficient-cell
 catalog, one-direction floor, halving heuristic, or longer complete-domain
-timeout does not advance that gate.  Before launching a finite
-p11/p13-later computation, identify the invariant that could extend beyond
-that one row or explain why the finite row is a genuine base obstruction.
+timeout does not advance that gate.  The next finite p13 implication is the
+support-330 sharp mass-ten equality classification on `J(13,7)`, reusing
+15.738's third-difference annihilator; it feeds `u=4` and partially prunes
+`u=6`.  Its expected candidates are the 78 omitted-pair and 286 all-equal
+triple supports, with only 70 anchored no-goods.  This is not a census of the
+already-closed `u=0,3` rows.  Before launching a finite p11/p13-later
+computation, identify the invariant that could extend beyond that one row or
+explain why the finite row is a genuine base obstruction.
 
 ## Result discipline
 

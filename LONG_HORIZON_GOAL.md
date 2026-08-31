@@ -28,57 +28,33 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
 - Denseness: the limit exists globally iff it exists along Paley orders \(n_k=p_k^2+1\).
 - \(\rho=1\) on that Paley family, so \(\Phi(C_n)=\frac12 n\sqrt{n-1}\) and \(\alpha_{n_k}\to 1/2\) **if** E(1) holds there.
 - 15.167's majorization algebra is conditionally valid, but its final bi-tight implication is **retracted** because `ker(G-(n/2)P1)` contains `ker G`. Proposition 15.720 instead excludes the required bi-tight levels 2 and 3 for every prime `p>=5` by a degree congruence. Its bi-tight level-4 corollary does not exclude one-sided tight level 4.
-- At the first general residual-(ii) boundary `|D|=p+1`, Proposition 15.726
-  excludes every positive outside slack
-  `1<=R<=floor((p-4)/3)` for primes `p>=17`; consequently any positive
-  survivor must have `R>=floor((p-1)/3)`. Proposition 15.727 rigidifies
-  equality and excludes it at `p=17,19,23,29`; the first unexcluded endpoint
-  is `p=31,R=10`. This narrows but does not close the shell or residual (ii).
+- Propositions 15.726--15.727 historically narrowed the first general
+  residual-(ii) endpoint. Proposition 15.733 closes the former
+  `p=31,R=10` case, and Proposition 15.734 supersedes that endpoint route by
+  closing the whole `k=4p` shell for every boundary and every `p>=13`.
+  Propositions 15.735--15.737 extend the first-three-shell close to every
+  `p>=11`.
 - Exact Paley optimality is **false** (\(m_{10}=13<15\)). E(1) is asymptotic.
 
 Therefore the remaining theorem is **E(1)** on \(n=p^2+1\). The live
 acceptance gate is the corrected dictionary returned by
-`src/e1_main_chain_status.py`; as of 2026-08-30 through Proposition 15.727 it
+`src/e1_main_chain_status.py`; as of 2026-08-31 through Proposition 15.745 it
 reads:
 
 1. **Required bi-tight levels 2 and 3:** TRUE by 15.720. The spectral floor,
    global mixed-\(k\) QVAR, and principal R1 are no longer acceptance gates.
-2. **Residual (ii), even \(k\ge4p\):** OPEN. The Walsh slice, Eulerian
-   boundary, every two-point boundary, and every four-point boundary are
-   closed; every six-point boundary is closed for `p>=11`, both `p=7`
-   infinity-plus-five signs are closed by 15.658--15.659, every `p=5`
-   size-six case is closed by 15.660, and the `p=7` six-finite branch is
-   closed by 15.661. Thus every size-six boundary is closed for odd `p>=5`;
-   15.662--15.666 close finite `p=7` size eight, 15.669 closes uniform
-   ranges and exact small-prime profiles, and 15.670 closes finite `p=11`
-   size eight. Propositions 15.671--15.674 close the entire
-   infinity-plus-`(p-2)` shell for both signs from `p=17`, including every
-   intermediate odd-fibre profile. Proposition 15.721 then applies signed
-   PSL transport before profile analysis: every nonempty boundary can be
-   moved to contain infinity, so all total sizes `|D|<=p-1` are excluded for
-   `p>=17`. This supersedes the first/second all-finite endpoint campaigns in
-   15.675--15.712 as active gates, including the former 133-profile `p=23`
-   remainder. Their internal lemmas remain valid. The first general endpoint
-   shell is `|D|=p+1`, normalized to infinity plus `p`. Proposition 15.676
-   closes pair-deficit equality. Proposition 15.722 proves exact signed phase
-   transport, excludes outside pair slack one, and identifies slack zero with
-   an aligned Miquelian circle; Proposition 15.724 excludes that circle by an
-   isolated-vertex and sharp-lift contradiction. Proposition 15.723 also
-   repairs the middle floor-plus-two shortcut, retaining its two genuine
-   `p=17` exceptions. Proposition 15.722 further excludes every positive
-   outside slack through `max(3,floor(sqrt(p)-5/2))`. Proposition 15.726
-   strictly strengthens that historical cutoff: every
-   `1<=R<=floor((p-4)/3)` is impossible, so any positive survivor must have
-   `R>=floor((p-1)/3)`. Proposition 15.727 forces equality into disjoint
-   trisecant/4-secant blocks and excludes it at `p=17,19,23,29` using
-   exhaustive arc classifications; the first unexcluded endpoint is
-   `p=31,R=10`. The remaining endpoint cases and larger-slack `p+1` shell
-   remain OPEN.
-   The
-   attempted parabola-plus-internal close in 15.725 is retracted: its finite
-   phase-zero census is data only, with the all-prime character bounds and
-   opposite sign still open. Separate small-prime remainders and even
-   `k>4p` also remain open.
+2. **Residual (ii), even \(k\ge4p\):** OPEN. Propositions 15.734--15.737
+   close `k in {4p,4p+2,4p+4}` for every boundary and every prime `p>=11`.
+   Propositions 15.738--15.742 close `p=13,k=58`, and Proposition 15.743
+   closes `p=17,k=74`. At `p=13,k=60`, the complete residue sieve leaves
+   `u in {0,3,4,6}`; Propositions 15.744--15.745 close `u=3,0`, leaving
+   exactly `u in {4,6}`. The live remainder includes critical `p=5,7`,
+   `p=11,k>=50`, those two `p=13,k=60` residues and later p13 layers,
+   every `p>=17,t>=4` layer (beginning with `p=17,k>=76`), generic branch B
+   at `p>=29,t=3`, and the positive `p=7,z=7` subbranch. Historical
+   endpoint/profile artifacts are not live gates; only the lemmas and
+   certificates explicitly retained by the dedup audit remain valid evidence.
+   Read `evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md` before reopening one.
 3. **Type I, multi-level Max−:** OPEN. The `|κ|=1` condition is `G>T`;
    `|κ|=3` independently requires the signed `(μ,ν)` inequality, whose
    nonparticular δ remainder is not controlled.

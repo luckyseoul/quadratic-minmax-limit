@@ -1,10 +1,11 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-31 (through 15.743; required bi-tight levels 2 and 3 are
+**Date:** 2026-08-31 (through 15.745; required bi-tight levels 2 and 3 are
 closed, residual (ii) is closed for every boundary at
 `k in {4p,4p+2,4p+4}` for every prime `p>=11`, and the exceptional
-and generic branches at `p=13,k=58` and the generic `p=17,k=74` row are
-closed; critical `p=5,7`, `p=11,k>=50`, `p=13,k>=60`, every `p>=17,t>=4`
+and generic branches at `p=13,k=58`, the generic `p=17,k=74` row, and the
+`u=3,0` branches at `p=13,k=60` are closed; critical `p=5,7`,
+`p=11,k>=50`, `p=13,k=60,u in {4,6}` and later p13 layers, every `p>=17,t>=4`
 row, and branch-B `t=3` for `p=1 mod 4,p>=29` remain open)
 **The quadratic-minmax limit is still OPEN.**
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
@@ -13,7 +14,7 @@ row, and branch-B `t=3` for `p=1 mod 4,p>=29` remain open)
 **Mandatory preflight:** read
 `evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md` before launching another
 solver, projection, shell, channel, orbit, or timeout. It accounts for every
-assigned proposition through 15.743 and maps the former scratch scripts to
+assigned proposition through 15.745 and maps the former scratch scripts to
 closed, dead, necessary-only, or live routes.  The 2026-08-31 worktree
 cleanup and remote archive are recorded in
 `evidence/NOTE_2026-08-31_DIRTY_WORKTREE_TRIAGE.md`.
@@ -24,15 +25,18 @@ acceptance units. The two genuine leftovers—multi-level Type I and non-Walsh
 residual (ii)—remain False, so L is OPEN. Propositions 15.734--15.735 and
 15.737 close `k in {4p,4p+2,4p+4}` for every `p>=11`, without a
 boundary-size hypothesis. They do not close critical `p=5,7`, `p=11` at
-`k>=50`, `p=13` at `k>=60`, any `p>=17,t>=4` row, or branch-B `t=3`
+`k>=50`, `p=13,k=60,u in {4,6}` or later p13 layers, any `p>=17,t>=4` row, or branch-B `t=3`
 for `p=1 mod 4,p>=29`. Propositions
 15.738--15.739 additionally close the exceptional `p=13,t=3,u=3` row;
 15.740--15.741 reduce its generic complement to the common-graph energy
 gate; and 15.742 closes that gate by the exact `667<707` contradiction.
 Proposition 15.743 then closes the first generic large-prime resonance at
 `p=17,k=74` by the exact `767<1211+34C` common-energy contradiction. Thus
-those two rows are closed, but the later layers and branch-B range just
-listed remain open. Aut-Schur / Gsum /
+those two rows are closed. Proposition 15.744 next closes `p=13,t=4,u=3`
+by a six-root quartic after rebuilding the changed `|H|=61` local premise;
+15.745 closes `u=0` by the exact `695<719` collision-one energy
+contradiction. The `p=13,k=60` row itself remains open exactly at `u=4,6`,
+as do the later layers and branch-B range just listed. Aut-Schur / Gsum /
 pairing remain False. The corrected `e1_closed_general()` is the global predicate and is
 False; only `e1_bounded_residual_split_closed()` retains the historical
 bounded `True`. The full
@@ -60,6 +64,77 @@ for both signs. This is not all of the projective size-eight case: 15.713--
 excluding any of its 56 actual line boundaries in two orbits. The positive
 `z=7` remainder stays open. The historical p=13 orbit/mesh `k=6` work is
 not a close and is not a current proof input.
+
+## 15.745 — collision-one energy closes `p=13,t=4,u=0`
+
+The seven hard quotients have excess partition `(4)`, `(3,1)`, `(2,2)`,
+`(2,1,1)`, or `(1,1,1,1)`.  Gluing an exact literal star to the common
+difference transform gives `hT=17` and `P_L=4+k_L`; the opposite profile is
+`3^6,4`.  Three exact directions force `M_2=0`, and five force
+`M_2=M_4=0`.
+
+All 74 translated seven-set cuts give exact necessary six-bin row
+certificates.  With both moments, an opposite `Q=3` row is infeasible,
+closing the first three partitions.  With `M_2` alone, the sharp relaxation
+maxima are `31,96,76,111` for hard `e=1`, hard `e=2`, opposite `Q=3`, and
+opposite `Q=4`.  The three-star partition has upper energy
+`4*31+6*76+111=691<721+26C`.
+
+For `(2,1,1)`, the broad upper 725 against `693+26C` gives `C<=1`.  Its
+`P=7` direction uses six displacement classes, so independently `C>=1`.
+At equality the only duplicate lies in that direction's zero bin and every
+transverse multiplicity is Boolean.  The live `F_13^2` bucket audit gives six
+hard-sign and seven opposite-sign classes per nonzero bin, hence
+`-7<=q_a<=6`.  The hard `e=2` maximum becomes 66 and
+`66+2*31+6*76+111=695<719`.  This closes only `u=0`; combined with 15.744,
+the exact `p=13,k=60` remainder is `u in {4,6}`.
+
+## 15.744 — six-root quartic closes `p=13,t=4,u=3`
+
+The full `t=4` floor/lift sieve leaves `u in {0,3,4,6}`.  In `u=3`, the
+hard quotient profile is six exact complement triples plus one elevation.
+The exact-row coefficient congruence and edge count leave `P=2,8`; the two
+parallel ledgers force an opposite mass-14 cell at `Q=6` or `Q=0`.
+
+The phase-one `b=10` premise is not inferred from its averaged floor value.
+After complementing to phase-zero `b=3`, positive quadrature forces equality
+on the three contact layers, and their 1,596-by-78 pair-monomial matrix has
+rank 78 modulo 101, so the exact cell is pointwise `(2-r)^2`.  At mean 22
+the difference from this baseline can be `-2` on `r=0`, so Proposition
+15.688 does not apply.  The separate 1,716-variable punctured-lift model,
+using all 1,638 third-difference identities and `sum B=66`, is infeasible.
+This kills the `u=4,b=10` alternative and leaves only the sharp `b=2`
+mass-ten lift there.
+
+Proposition 15.738's Boolean support classification is edge-count
+independent, but its height-four preliminary models used `|H|=59`.
+Proposition 15.744 rebuilds both models at `|H|=61`, with `l1<=61-Q`; exact
+one-worker CP-SAT makes both infeasible.  The Boolean catalog then leaves
+only `B=x_i*x_j`.  The six exact hard directions are roots of the binary
+quartic `G=2hM_4-M_2^2`, so it vanishes identically, while the forced
+opposite selected pair gives `G=-3(i-j)^4!=0`.  This closes exactly `u=3`,
+not the full `p=13,k=60` row.
+
+### Next finite gate: sharp mass-ten equality, then `u=4`
+
+The narrower remaining residue is `u=4`.  All seven hard cells are a
+`b=2` baseline plus a sharp mass-ten lift.  Proposition 15.688 forces that
+lift to be Boolean, of support 330 on `J(13,7)`.  Reuse 15.738's certified
+1,638-dimensional third-difference annihilator to classify exactly those
+supports.  The expected catalog is 78 omitted-pair functions
+`(1-x_i)(1-x_j)` plus 286 all-equal triples; after anchoring one support
+point, only `15+55=70` candidate no-goods are needed.  This is one equality
+classification, not a directional-profile census.
+
+If exhaustive, the two families have total coefficient offsets three and
+five after the `b=2` baseline, forcing a common hard parallel count `P=3` or
+`5`.  The opposite ledger then has nonnegative excess variables summing to
+five, so at least two opposite cells have scaled mean 12.  Each still has the
+unresolved phase-zero dichotomy: an exact `b=12` literal or a `b=0` positive
+lift of scaled mass 12.  Coupling those cells is the post-catalog target.  The
+same support-330 result also prunes one
+alternative in `u=6`, but `u=6` retains a wider unclassified mass-22 cell;
+do not switch to that branch before the mass-ten equality catalog is settled.
 
 ## 15.743 — full translated-cut energy closes `p=17,k=74`
 
@@ -117,8 +192,10 @@ Together with 15.739's exceptional close, all of `p=13,k=58` is closed.
 The quartic value code, root-quartet orbit split, 84-variable inverse solve,
 and 14,196-variable binary midpoint lift are unnecessary.  This is an
 exhaustive finite certificate, not a global residual-(ii) close.  Critical
-`p=5,7`, `p=11,k>=50`, `p=13,k>=60`, every `p>=17,t>=4` row, and branch-B
-`t=3` for `p=1 mod 4,p>=29` remain open; 15.743 closes `p=17,k=74`.
+`p=5,7`, `p=11,k>=50`, `p=13,k=60,u in {4,6}` and later p13 layers,
+every `p>=17,t>=4` row, and branch-B `t=3` for `p=1 mod 4,p>=29` remain
+open; 15.743 closes `p=17,k=74`, while 15.744--15.745 close `u=3,0` at
+`p=13,k=60`.
 
 ## 15.741 — common-graph moment and difference-Radon gate
 
@@ -279,12 +356,14 @@ prime `p>=13`.
 
 Together, 15.734--15.735 and 15.737 close
 `k in {4p,4p+2,4p+4}` for every prime `p>=11`. The remaining residual scope
-is critical `p=5,7`, `p=11` at `k>=50`, `p=13` at `k>=60`, every
-`p>=17,t>=4` row, and branch-B `t=3` for `p=1 mod 4,p>=29`; 15.742 closes the intervening
-`p=13,k=58` row and 15.743 closes `p=17,k=74`. Residual (ii) globally,
-multi-level Type I, and `L` remain OPEN. The next analytic choice is either
-to make 15.743's full translated-cut energy argument uniform for generic
-`p>=29,t=3`, or to use the first genuinely new invariant in `p=13,k=60`.
+is critical `p=5,7`, `p=11` at `k>=50`, `p=13,k=60,u in {4,6}` and later
+p13 layers, every `p>=17,t>=4` row, and branch-B `t=3` for
+`p=1 mod 4,p>=29`; 15.742 closes the intervening `p=13,k=58` row,
+15.743 closes `p=17,k=74`, and 15.744--15.745 close the `u=3,0` branches at
+`p=13,k=60`. Residual (ii) globally, multi-level Type I, and `L` remain
+OPEN. The next finite analytic gate is the sharp mass-10 equality
+classification on `J(13,7)` needed by `u=4`; do not reopen the closed
+`u=0,3` rows.
 
 ## 15.734 — every critical `k=4p` boundary is excluded for `p>=13`
 
@@ -3163,7 +3242,7 @@ estimates remain; none is proved. See
 | Leftover | Predicate | Remaining estimate |
 |---|---|---|
 | 1 | `phi_F_ge_6_proved_general` | QVAR on k≥7 (all p≥13) **and** principal `\|\|δ\|\|^2 ≤ n(n+10)^2/[6(n-14)(n-6)]`. Crude `E[s^4]≤2n^3` is too weak. |
-| 2 | `residual_ii_k_eq_4p_empty` / `multilevel_ND_k_ge_4p_proved` | Historical 2026-08-21 target. Propositions 15.734--15.735 and 15.737 later close `k in {4p,4p+2,4p+4}` for every `p>=11`; 15.738--15.742 additionally close all of `p=13,k=58`, and 15.743 closes `p=17,k=74`. Critical `p=5,7`, `p=11` at `k>=50`, `p=13` at `k>=60`, every `p>=17,t>=4` row, and branch-B `t=3` for `p=1 mod 4,p>=29` remain, so the all-prime predicate remains False. |
+| 2 | `residual_ii_k_eq_4p_empty` / `multilevel_ND_k_ge_4p_proved` | Historical 2026-08-21 target. Propositions 15.734--15.735 and 15.737 later close `k in {4p,4p+2,4p+4}` for every `p>=11`; 15.738--15.742 additionally close all of `p=13,k=58`, 15.743 closes `p=17,k=74`, and 15.744--15.745 close `u=3,0` at `p=13,k=60`. Critical `p=5,7`, `p=11` at `k>=50`, `p=13,k=60,u in {4,6}` and later p13 layers, every `p>=17,t>=4` row, and branch-B `t=3` for `p=1 mod 4,p>=29` remain, so the all-prime predicate remains False. |
 | 3 | `type_I_multilevel_bad_case_ND_closed` | `\|μ\|≤(p-2)/(2p^2)` on \|κ\|=1, equivalently `\|R̄₄\| ≤ \|L\|(p^4-1)+4(p-2)`. `\|μ\|≤\|T\|` does not close; `\|μ\|≤maj` is false at p=7. |
 
 Historical dump: all three then-live leftovers were False; Gsum False;
@@ -3232,7 +3311,7 @@ overridden twice.
 | Item | Flag | Status |
 |---|---|---|
 | \(\lambda_{\min}(\Phi)\ge6\) on \(Z\) | `phi_F_ge_6_proved_general=False` | Open. Exceptional QVAR is closed through `k=6` and remains on `k>=7` from `p=13`; principal blocks retain the delta-variance target. |
-| Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open globally. Propositions 15.734--15.735 and 15.737 close `k in {4p,4p+2,4p+4}` for every `p>=11`; 15.738--15.742 additionally close all of `p=13,k=58`, and 15.743 closes `p=17,k=74`. Critical `p=5,7`, `p=11` at `k>=50`, `p=13` at `k>=60`, every `p>=17,t>=4` row, and branch-B `t=3` for `p=1 mod 4,p>=29` remain. The all-prime legacy predicate therefore stays False. |
+| Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open globally. Propositions 15.734--15.735 and 15.737 close `k in {4p,4p+2,4p+4}` for every `p>=11`; 15.738--15.742 additionally close all of `p=13,k=58`, 15.743 closes `p=17,k=74`, and 15.744--15.745 close `u=3,0` at `p=13,k=60`. Critical `p=5,7`, `p=11` at `k>=50`, `p=13,k=60,u in {4,6}` and later p13 layers, every `p>=17,t>=4` row, and branch-B `t=3` for `p=1 mod 4,p>=29` remain. The all-prime legacy predicate therefore stays False. |
 | Type I, Max− not two-level \(\{-1,-3\}\) | `type_I_multilevel_bad_case_ND_closed=False` | Open. Remainder is \(A_{\mathrm{full}}\). |
 | Lemma D | True | Closed. Do not unflip. |
 
@@ -3308,9 +3387,10 @@ Official class is leftover Max− together with \(s_+\ge2\). leftover-only (\(s_
   restriction-extension theorem is assumed.
 - Combined, 15.734--15.735 and 15.737 close the first three residual shells
   for every `p>=11` and every boundary size. Critical `p=5,7`, `p=11` at
-  `k>=50`, `p=13` at `k>=60`, every `p>=17,t>=4` row, and branch-B `t=3`
-  for `p=1 mod 4,p>=29` remain. Propositions 15.738--15.742 close both `p=13,k=58`
-  branches, and 15.743 closes `p=17,k=74` by full translated-cut energy.
+  `k>=50`, `p=13,k=60,u in {4,6}` and later p13 layers, every
+  `p>=17,t>=4` row, and branch-B `t=3` for `p=1 mod 4,p>=29` remain.
+  Propositions 15.738--15.742 close both `p=13,k=58` branches, 15.743 closes
+  `p=17,k=74`, and 15.744--15.745 close `u=3,0` at `p=13,k=60`.
 - No identity proves leftover+\(s_+\) empty at every even \(k>4p\), so
   residual (ii) remains open globally.
 
@@ -3349,6 +3429,8 @@ deleted so the reversal is traceable.
 | `src/e1_gmin_m4_prop15741.py` | Common-graph moments, exact difference-Radon inverse, and `707+26C` energy identity |
 | `src/e1_gmin_m4_prop15742.py` | Exhaustive six-bin row-energy certificate closing the generic p13 partition and `p=13,k=58` |
 | `src/e1_gmin_m4_prop15743.py` | Full 698-cut eight-bin energy certificate closing `p=17,k=74` |
+| `src/e1_gmin_m4_prop15744.py` | Full p13 t4 residue sieve, rebuilt H61 mass-14 models, and quartic close of `u=3` |
+| `src/e1_gmin_m4_prop15745.py` | Exact 74-cut row maxima, collision-one sign audit, and common-energy close of p13 t4 `u=0` |
 | `evidence/NOTE_2026-08-31_p31_endpoint_paley_hard_profile.md` | Full proof ledger for 15.728 and its explicitly open scope |
 | `evidence/NOTE_2026-08-31_affine_unique_trisecant_reduction.md` | Full proof ledger for 15.729 and the retracted ceiling route |
 | `evidence/NOTE_2026-08-31_endpoint_repair_ensemble.md` | Full proof ledger for the 15.730 complementary-repair ensemble |
@@ -3365,6 +3447,8 @@ deleted so the reversal is traceable.
 | `evidence/NOTE_2026-08-31_p13_common_graph_moment_transform.md` | Exact 15.741 common-graph moment, difference-Radon, collision, and method-barrier gate |
 | `evidence/NOTE_2026-08-31_p13_six_dilate_energy_close.md` | Exact 15.742 six-dilate row maxima and `667<707` common-energy contradiction |
 | `evidence/NOTE_2026-08-31_p17_full_translated_cut_energy_close.md` | Exact 15.743 common-signed-total normalization, 698-cut row bounds, and `767<1211` contradiction |
+| `evidence/NOTE_2026-08-31_p13_t4_u3_quartic_close.md` | Exact 15.744 residue sieve, changed H61 local certificate, and six-root quartic contradiction |
+| `evidence/NOTE_2026-08-31_p13_t4_u0_close.md` | Exact 15.745 row maxima, collision-one transverse sign bound, and `695<719` contradiction |
 | `evidence/NOTE_2026-08-31_p31_public_11_of_12_arc_audit.md` | Historical exhaustive finite certificate for eleven public `p=31` complete 22-arc classes; not needed for the later symbolic endpoint close |
 | `scripts/p31_complete_22arc_public_audit.py` | Deterministic replay of the public eleven-class `c_1` and unique-secant audit |
 | `src/e1_gmin_m4_prop15718.py` | Hash-pinned positive-`z=7` affine/global-join reduction and Johnson-semigroup certificate |
