@@ -107,5 +107,5 @@
   "L_status": "OPEN",
   "walsh_15_406_E": "OPEN (p=11 proved in this unit; not \u2200p)",
   "backend": "serial F2 apply f(D); p=5,7,11; GPU unused",
-  "seconds": 1.027
+  "seconds": 3.568
 }

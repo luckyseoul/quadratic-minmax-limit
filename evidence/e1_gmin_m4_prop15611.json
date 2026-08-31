@@ -127,5 +127,5 @@
   "walsh_15_406_E": "OPEN",
   "backend": "serial F2 identities; rref p=3,5,7; GPU unused",
   "claude_referee": "deep_review PASS confidence 0.93 on W\u2245F2[M] and ker2 dim 2",
-  "seconds": 0.743
+  "seconds": 3.16
 }

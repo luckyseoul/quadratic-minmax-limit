@@ -1,0 +1,10 @@
+default(parisize, 2G);
+X = read("/home/nick/p11_half_rational_250.gpbin");
+Minf = X[1];
+C = X[2];
+A = matconcat([Minf~, C[1..15,]~])~;
+Ttarget = C[16..16,];
+Kres = matker(A);
+print("TARGET_VARIATION_RANK=", matrank(Ttarget * Kres));
+print("TARGET_ZERO_ON_KERNEL=", Ttarget * Kres == 0);
+quit;

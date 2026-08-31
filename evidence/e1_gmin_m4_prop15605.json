@@ -155,5 +155,5 @@
   "L_status": "OPEN",
   "walsh_15_406_E": "OPEN",
   "backend": "serial F2 identities (inherently); rref p=3..11; GPU unused",
-  "seconds": 0.607
+  "seconds": 1.427
 }

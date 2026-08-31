@@ -143,5 +143,5 @@
   "walsh_15_406_E": "OPEN",
   "backend": "serial F2; rref p=3,5,7; GPU unused",
   "claude_referee": "deep_review BLOCK on \u03b5-value; construction/stay/constancy kept",
-  "seconds": 0.972
+  "seconds": 5.88
 }

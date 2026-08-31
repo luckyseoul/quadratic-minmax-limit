@@ -1,0 +1,737 @@
+{
+  "5": {
+    "p": 5,
+    "named": {
+      "zDz": {
+        "eps": 0,
+        "phi": 0,
+        "QR_odd": 0,
+        "QNR_odd": 0,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": false,
+        "phi3_divides": true,
+        "odd_krylov": 0,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": false
+          }
+        ],
+        "wt": 12,
+        "v0": 0,
+        "vinf": 0
+      },
+      "sN": {
+        "eps": 1,
+        "phi": 1,
+        "QR_odd": 1,
+        "QNR_odd": 0,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": false,
+        "phi3_divides": true,
+        "odd_krylov": 1,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": false
+          }
+        ],
+        "wt": 10,
+        "v0": 0,
+        "vinf": 0
+      },
+      "sQ": {
+        "eps": 0,
+        "phi": 0,
+        "QR_odd": 0,
+        "QNR_odd": 0,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": false,
+        "phi3_divides": true,
+        "odd_krylov": 0,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": false
+          }
+        ],
+        "wt": 20,
+        "v0": 0,
+        "vinf": 0
+      },
+      "zTalpha": {
+        "eps": 1,
+        "phi": 1,
+        "QR_odd": 1,
+        "QNR_odd": 0,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": false,
+        "phi3_divides": true,
+        "odd_krylov": 1,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": false
+          }
+        ],
+        "wt": 10,
+        "v0": 0,
+        "vinf": 0
+      },
+      "zFrob": {
+        "eps": null,
+        "phi": 0,
+        "QR_odd": 0,
+        "QNR_odd": 0,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": false,
+        "W2_content": false,
+        "phi3_divides": true,
+        "odd_krylov": 0,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": false
+          }
+        ],
+        "wt": 0,
+        "v0": 0,
+        "vinf": 0
+      },
+      "two_fiber": {
+        "eps": 1,
+        "phi": 1,
+        "QR_odd": 1,
+        "QNR_odd": 0,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": false,
+        "phi3_divides": true,
+        "odd_krylov": 1,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": false
+          }
+        ],
+        "wt": 10,
+        "v0": 0,
+        "vinf": 0
+      },
+      "DImgamma": {
+        "eps": 1,
+        "phi": 1,
+        "QR_odd": 1,
+        "QNR_odd": 0,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": true,
+        "phi3_divides": false,
+        "odd_krylov": 1,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": true
+          }
+        ],
+        "wt": 12,
+        "v0": 0,
+        "vinf": 0
+      }
+    },
+    "generic": {
+      "n_tested": 79,
+      "n_gcd1": 37,
+      "first": {
+        "j": 2,
+        "eps": 1,
+        "phi": 1,
+        "match": true,
+        "phi3_divides": false
+      }
+    },
+    "sig_pairs": {
+      "n": 11,
+      "n_w2": 0,
+      "hit": null
+    },
+    "stay_w2": [],
+    "inU_z": true
+  },
+  "7": {
+    "p": 7,
+    "named": {
+      "zDz": {
+        "eps": 1,
+        "phi": 1,
+        "QR_odd": 0,
+        "QNR_odd": 1,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": false,
+        "phi3_divides": true,
+        "odd_krylov": 1,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": false
+          }
+        ],
+        "wt": 24,
+        "v0": 0,
+        "vinf": 0
+      },
+      "zFrob": {
+        "eps": 1,
+        "phi": 1,
+        "QR_odd": 0,
+        "QNR_odd": 1,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": false,
+        "phi3_divides": true,
+        "odd_krylov": 1,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": false
+          }
+        ],
+        "wt": 24,
+        "v0": 0,
+        "vinf": 0
+      },
+      "two_fiber": {
+        "eps": 0,
+        "phi": 0,
+        "QR_odd": 0,
+        "QNR_odd": 0,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": true,
+        "phi3_divides": false,
+        "odd_krylov": 0,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": true
+          }
+        ],
+        "wt": 14,
+        "v0": 0,
+        "vinf": 0
+      },
+      "DImgamma": {
+        "eps": 1,
+        "phi": 1,
+        "QR_odd": 0,
+        "QNR_odd": 1,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": true,
+        "phi3_divides": false,
+        "odd_krylov": 1,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": true
+          }
+        ],
+        "wt": 20,
+        "v0": 0,
+        "vinf": 0
+      }
+    },
+    "generic": {
+      "n_tested": 79,
+      "n_gcd1": 37,
+      "first": {
+        "j": 1,
+        "eps": 1,
+        "phi": 1,
+        "match": true,
+        "phi3_divides": false
+      }
+    },
+    "sig_pairs": {
+      "n": 11,
+      "n_w2": 0,
+      "hit": null
+    },
+    "stay_w2": [
+      {
+        "a": 3,
+        "eps": 0,
+        "odd_c": 0
+      },
+      {
+        "a": 5,
+        "eps": 0,
+        "odd_c": 0
+      }
+    ],
+    "inU_z": true
+  },
+  "11": {
+    "p": 11,
+    "named": {
+      "zDz": {
+        "eps": 1,
+        "phi": 1,
+        "QR_odd": 0,
+        "QNR_odd": 1,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": false,
+        "phi3_divides": false,
+        "odd_krylov": 1,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": true
+          },
+          {
+            "deg": 4,
+            "gcd1": false
+          },
+          {
+            "deg": 4,
+            "gcd1": false
+          },
+          {
+            "deg": 4,
+            "gcd1": false
+          }
+        ],
+        "wt": 60,
+        "v0": 0,
+        "vinf": 0
+      },
+      "zFrob": {
+        "eps": 1,
+        "phi": 1,
+        "QR_odd": 0,
+        "QNR_odd": 1,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": false,
+        "phi3_divides": false,
+        "odd_krylov": 1,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": true
+          },
+          {
+            "deg": 4,
+            "gcd1": false
+          },
+          {
+            "deg": 4,
+            "gcd1": false
+          },
+          {
+            "deg": 4,
+            "gcd1": false
+          }
+        ],
+        "wt": 60,
+        "v0": 0,
+        "vinf": 0
+      },
+      "two_fiber": {
+        "eps": 0,
+        "phi": 0,
+        "QR_odd": 0,
+        "QNR_odd": 0,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": false,
+        "phi3_divides": true,
+        "odd_krylov": 0,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": false
+          },
+          {
+            "deg": 4,
+            "gcd1": true
+          },
+          {
+            "deg": 4,
+            "gcd1": true
+          },
+          {
+            "deg": 4,
+            "gcd1": true
+          }
+        ],
+        "wt": 22,
+        "v0": 0,
+        "vinf": 0
+      },
+      "DImgamma": {
+        "eps": 1,
+        "phi": 1,
+        "QR_odd": 0,
+        "QNR_odd": 1,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": true,
+        "phi3_divides": false,
+        "odd_krylov": 1,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": true
+          },
+          {
+            "deg": 4,
+            "gcd1": true
+          },
+          {
+            "deg": 4,
+            "gcd1": true
+          },
+          {
+            "deg": 4,
+            "gcd1": true
+          }
+        ],
+        "wt": 36,
+        "v0": 0,
+        "vinf": 0
+      }
+    },
+    "generic": {
+      "n_tested": 0,
+      "n_gcd1": 0,
+      "first": null
+    },
+    "sig_pairs": {
+      "n": 11,
+      "n_w2": 0,
+      "hit": null
+    },
+    "stay_w2": [],
+    "inU_z": true
+  },
+  "13": {
+    "p": 13,
+    "named": {
+      "zDz": {
+        "eps": 0,
+        "phi": 0,
+        "QR_odd": 0,
+        "QNR_odd": 0,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": false,
+        "phi3_divides": true,
+        "odd_krylov": 0,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": false
+          },
+          {
+            "deg": 3,
+            "gcd1": false
+          },
+          {
+            "deg": 3,
+            "gcd1": false
+          },
+          {
+            "deg": 6,
+            "gcd1": false
+          },
+          {
+            "deg": 6,
+            "gcd1": false
+          }
+        ],
+        "wt": 84,
+        "v0": 0,
+        "vinf": 0
+      },
+      "sN": {
+        "eps": 1,
+        "phi": 1,
+        "QR_odd": 1,
+        "QNR_odd": 0,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": false,
+        "phi3_divides": false,
+        "odd_krylov": 1,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": true
+          },
+          {
+            "deg": 3,
+            "gcd1": false
+          },
+          {
+            "deg": 3,
+            "gcd1": false
+          },
+          {
+            "deg": 6,
+            "gcd1": true
+          },
+          {
+            "deg": 6,
+            "gcd1": true
+          }
+        ],
+        "wt": 52,
+        "v0": 0,
+        "vinf": 0
+      },
+      "sQ": {
+        "eps": 0,
+        "phi": 0,
+        "QR_odd": 0,
+        "QNR_odd": 0,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": false,
+        "phi3_divides": false,
+        "odd_krylov": 0,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": true
+          },
+          {
+            "deg": 3,
+            "gcd1": false
+          },
+          {
+            "deg": 3,
+            "gcd1": false
+          },
+          {
+            "deg": 6,
+            "gcd1": true
+          },
+          {
+            "deg": 6,
+            "gcd1": true
+          }
+        ],
+        "wt": 78,
+        "v0": 0,
+        "vinf": 0
+      },
+      "zTalpha": {
+        "eps": 1,
+        "phi": 1,
+        "QR_odd": 1,
+        "QNR_odd": 0,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": false,
+        "phi3_divides": true,
+        "odd_krylov": 1,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": false
+          },
+          {
+            "deg": 3,
+            "gcd1": false
+          },
+          {
+            "deg": 3,
+            "gcd1": false
+          },
+          {
+            "deg": 6,
+            "gcd1": false
+          },
+          {
+            "deg": 6,
+            "gcd1": false
+          }
+        ],
+        "wt": 78,
+        "v0": 0,
+        "vinf": 0
+      },
+      "zFrob": {
+        "eps": null,
+        "phi": 0,
+        "QR_odd": 0,
+        "QNR_odd": 0,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": false,
+        "W2_content": false,
+        "phi3_divides": true,
+        "odd_krylov": 0,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": false
+          },
+          {
+            "deg": 3,
+            "gcd1": false
+          },
+          {
+            "deg": 3,
+            "gcd1": false
+          },
+          {
+            "deg": 6,
+            "gcd1": false
+          },
+          {
+            "deg": 6,
+            "gcd1": false
+          }
+        ],
+        "wt": 0,
+        "v0": 0,
+        "vinf": 0
+      },
+      "two_fiber": {
+        "eps": 1,
+        "phi": 1,
+        "QR_odd": 1,
+        "QNR_odd": 0,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": false,
+        "phi3_divides": false,
+        "odd_krylov": 1,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": true
+          },
+          {
+            "deg": 3,
+            "gcd1": false
+          },
+          {
+            "deg": 3,
+            "gcd1": false
+          },
+          {
+            "deg": 6,
+            "gcd1": true
+          },
+          {
+            "deg": 6,
+            "gcd1": true
+          }
+        ],
+        "wt": 26,
+        "v0": 0,
+        "vinf": 0
+      },
+      "DImgamma": {
+        "eps": 1,
+        "phi": 1,
+        "QR_odd": 1,
+        "QNR_odd": 0,
+        "QR_wt": 0,
+        "QNR_wt": 0,
+        "match": true,
+        "W2_content": true,
+        "phi3_divides": false,
+        "odd_krylov": 1,
+        "krylov_ok": true,
+        "gcds": [
+          {
+            "deg": 2,
+            "gcd1": true
+          },
+          {
+            "deg": 3,
+            "gcd1": true
+          },
+          {
+            "deg": 3,
+            "gcd1": true
+          },
+          {
+            "deg": 6,
+            "gcd1": true
+          },
+          {
+            "deg": 6,
+            "gcd1": true
+          }
+        ],
+        "wt": 44,
+        "v0": 0,
+        "vinf": 0
+      }
+    },
+    "generic": {
+      "n_tested": 0,
+      "n_gcd1": 0,
+      "first": null
+    },
+    "sig_pairs": {
+      "n": 11,
+      "n_w2": 0,
+      "hit": null
+    },
+    "stay_w2": [],
+    "inU_z": true
+  }
+}

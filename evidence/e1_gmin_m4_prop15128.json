@@ -139,7 +139,7 @@
     }
   },
   "live_verify": {
-    "path": "/tmp/e1_p7/maxplus.npy",
+    "path": "/tmp/maxplus_p7.npy",
     "N": 11452,
     "W_match_census": true,
     "ED4": "12835984/409",

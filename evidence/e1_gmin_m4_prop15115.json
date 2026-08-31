@@ -417,12 +417,7 @@
     },
     "7": {
       "p": 7,
-      "ED4": "5218435600/167281",
-      "ED4_suf": "17303600/539",
-      "delta2": "19180800/1840091",
-      "rho_min2": "26000/539",
-      "ED4_le_suf": true,
-      "delta2_le_rho_min2": true
+      "skipped": true
     }
   },
   "general_status": {

@@ -1,0 +1,84 @@
+{
+  "rows": {
+    "3": {
+      "p": 3,
+      "p_mod_4": 3,
+      "named_eigen_minus": true,
+      "named_in_U": true,
+      "named_in_ensemble": true,
+      "eps_Frob": 1,
+      "eps_D": 1,
+      "n_stay": 5,
+      "stay_eps_odd": 0,
+      "stay_eps_even": 3,
+      "stay_eps_none": 2,
+      "stay_has_odd": false,
+      "first_odd_a": null,
+      "stay_eps_sample": [
+        0,
+        0,
+        null,
+        0,
+        null
+      ]
+    },
+    "5": {
+      "p": 5,
+      "p_mod_4": 1,
+      "named_eigen_minus": true,
+      "named_in_U": true,
+      "named_in_ensemble": true,
+      "eps_Frob": null,
+      "eps_D": 0,
+      "n_stay": 14,
+      "stay_eps_odd": 5,
+      "stay_eps_even": 5,
+      "stay_eps_none": 4,
+      "stay_has_odd": true,
+      "first_odd_a": 3,
+      "stay_eps_sample": [
+        0,
+        1,
+        null,
+        0,
+        1,
+        null,
+        0,
+        1,
+        null,
+        0,
+        1,
+        null
+      ]
+    },
+    "7": {
+      "p": 7,
+      "p_mod_4": 3,
+      "named_eigen_minus": true,
+      "named_in_U": true,
+      "named_in_ensemble": true,
+      "eps_Frob": 1,
+      "eps_D": 1,
+      "n_stay": 27,
+      "stay_eps_odd": 0,
+      "stay_eps_even": 21,
+      "stay_eps_none": 6,
+      "stay_has_odd": false,
+      "first_odd_a": null,
+      "stay_eps_sample": [
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+}

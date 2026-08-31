@@ -114,5 +114,5 @@
   "walsh_15_406_E": "OPEN",
   "backend": "F_p character counts; GPU unused",
   "claude_referee": "deep_review PASS-WITH-NOTE: d=-(p-1)/8; quarter-interval dead; CLASS exhaustive; W2 Auts conjugate",
-  "seconds": 0.003
+  "seconds": 0.012
 }

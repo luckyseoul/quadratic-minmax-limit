@@ -1,0 +1,38 @@
+\\ Assemble exact scalar cusp-0, cusp-1/4, and cusp-1/11 gap matrices.
+default(parisize, 6G);
+input_directory = getenv("P11_CUSP_INPUT_DIRECTORY");
+if(type(input_directory) != "t_STR", error("missing P11_CUSP_INPUT_DIRECTORY"));
+Mzero = matrix(120, 45);
+Mquarter = matrix(240, 45);
+Mp = matrix(10, 45);
+for(j = 1, 45, {
+  X = read(Str(input_directory, "/column_", j, ".gpbin"));
+  if(X[1] != j, error("bad scalar multicusp column index"));
+  if(#X[2] != 120, error("bad scalar cusp-zero column"));
+  if(#X[3] != 240, error("bad scalar cusp-quarter column"));
+  if(#X[4] != 10, error("bad scalar cusp-p column"));
+  Mzero[,j] = X[2]~;
+  Mquarter[,j] = X[3]~;
+  Mp[,j] = X[4]~;
+});
+Mall = matconcat([Mzero~, Mquarter~, Mp~])~;
+Gzero = vecextract(Mzero, "21..120", "1..45");
+Gquarter = vecextract(Mquarter, "11..240", "1..45");
+Gp = vecextract(Mp, "3..10", "1..45");
+Mall = matconcat([Gzero~, Gquarter~, Gp~])~;
+print("ZERO_FULL_RANK=", matrank(Mzero));
+print("ZERO_GAP_RANK=", matrank(Gzero));
+print("QUARTER_FULL_RANK=", matrank(Mquarter));
+print("QUARTER_GAP_RANK=", matrank(Gquarter));
+print("P_FULL_RANK=", matrank(Mp));
+print("P_GAP_RANK=", matrank(Gp));
+print("COMBINED_RANK=", matrank(Mall));
+cache = Str(input_directory, "/p11_scalar_multicusp_gap_exact_v1_20260828.gpbin");
+system(Str("rm -f -- ", cache));
+writebin(cache, [Mzero, Mquarter, Mp, Gzero, Gquarter, Gp, Mall]);
+path = Str(input_directory, "/p11_scalar_multicusp_gap_exact_v1_20260828.txt");
+system(Str("rm -f -- ", path));
+for(i = 1, matsize(Mall)[1], write(path, Mall[i,]));
+print("CACHE_WRITTEN=", cache);
+print("ROWS_WRITTEN=", path);
+quit;

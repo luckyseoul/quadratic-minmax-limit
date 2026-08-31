@@ -122,5 +122,5 @@
   "walsh_15_406_E": "OPEN",
   "backend": "CLASS serial; W1 rref p=3,5,7; GPU unused",
   "claude_referee": "deep_review BLOCK on W1 p-law; CLASS PASS (Walsh \u21d4 W1\u2227W2)",
-  "seconds": 0.968
+  "seconds": 4.093
 }

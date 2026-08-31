@@ -368,39 +368,7 @@
     },
     "7": {
       "p": 7,
-      "N": 11452,
-      "n_types": 3,
-      "types": [
-        {
-          "ED4": "12384400/409",
-          "count": 2352,
-          "float": 30279.706601466994
-        },
-        {
-          "ED4": "12835984/409",
-          "count": 8400,
-          "float": 31383.823960880196
-        },
-        {
-          "ED4": "13094032/409",
-          "count": 700,
-          "float": 32014.748166259167
-        }
-      ],
-      "ED4_global": "5218435600/167281",
-      "ED4_global_float": 31195.626520644902,
-      "ED4_min": "12384400/409",
-      "ED4_max": "13094032/409",
-      "ED4_flat": "340400/11",
-      "ED4_suf": "17303600/539",
-      "delta2_global": "19180800/1840091",
-      "rho_min2": "26000/539",
-      "budget_hyp": "3072/55",
-      "global_le_suf": true,
-      "global_le_bud": true,
-      "max_y_le_suf": true,
-      "delta2_le_rho_min2": true,
-      "not_2point_homogeneous": true
+      "skipped": true
     }
   },
   "general_status": {

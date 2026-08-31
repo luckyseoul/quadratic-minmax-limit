@@ -117,5 +117,5 @@
   "walsh_15_406_E": "OPEN",
   "backend": "W1 prefix ProcessPool 86; W2 Krylov ProcessPool; GPU unused",
   "openai_referee": "math_review BLOCK on unrestricted Z^4; unit narrowed to the tested box. Re-review UNCERTAIN (wants the evidence jsons, which tests already load). No leftover flip.",
-  "seconds": 0.691
+  "seconds": 2.073
 }

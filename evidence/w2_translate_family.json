@@ -1,0 +1,63 @@
+{
+  "5": {
+    "p": 5,
+    "n_taus": 9,
+    "n_diffs": 4,
+    "n_coprime_g": 0,
+    "n_eps1": 0,
+    "sample": [
+      [
+        15,
+        false,
+        0,
+        [
+          true
+        ],
+        2
+      ],
+      [
+        16,
+        false,
+        0,
+        [
+          true
+        ],
+        2
+      ],
+      [
+        17,
+        false,
+        0,
+        [
+          true
+        ],
+        2
+      ],
+      [
+        18,
+        false,
+        0,
+        [
+          true
+        ],
+        2
+      ]
+    ]
+  },
+  "11": {
+    "p": 11,
+    "n_taus": 11,
+    "n_diffs": 0,
+    "n_coprime_g": 0,
+    "n_eps1": 0,
+    "sample": []
+  },
+  "17": {
+    "p": 17,
+    "n_taus": 9,
+    "n_diffs": 0,
+    "n_coprime_g": 0,
+    "n_eps1": 0,
+    "sample": []
+  }
+}

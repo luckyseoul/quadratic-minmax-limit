@@ -125,5 +125,5 @@
   "walsh_15_406_E": "OPEN",
   "backend": "serial F2; rref p=5,7,13; GPU unused",
   "claude_referee": "math_review PASS-WITH-NOTE Claim A, scale via (D-I)\u03b3=2p-1; suggest_direction: cyclotomic order 2 for B, per-factor idempotent glue for W2",
-  "seconds": 0.38
+  "seconds": 0.941
 }

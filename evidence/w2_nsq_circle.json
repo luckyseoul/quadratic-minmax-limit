@@ -1,0 +1,62 @@
+{
+  "5": {
+    "p": 5,
+    "wt": 6,
+    "pplus1": 6,
+    "in_W0": true,
+    "eps": 1,
+    "coprime_g": false,
+    "gcd_deg": 2,
+    "hits": [
+      [
+        2,
+        true
+      ]
+    ],
+    "ann_deg": 11
+  },
+  "7": {
+    "p": 7,
+    "wt": 8,
+    "pplus1": 8,
+    "in_W0": true,
+    "eps": 0,
+    "coprime_g": false,
+    "gcd_deg": 2,
+    "hits": [
+      [
+        2,
+        true
+      ]
+    ],
+    "ann_deg": 17
+  },
+  "11": {
+    "p": 11,
+    "wt": 12,
+    "pplus1": 12,
+    "in_W0": true,
+    "eps": 1,
+    "coprime_g": false,
+    "gcd_deg": 14,
+    "hits": [
+      [
+        2,
+        true
+      ],
+      [
+        4,
+        true
+      ],
+      [
+        4,
+        true
+      ],
+      [
+        4,
+        true
+      ]
+    ],
+    "ann_deg": 55
+  }
+}

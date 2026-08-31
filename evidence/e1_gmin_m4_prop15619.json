@@ -78,5 +78,5 @@
   "walsh_15_406_E": "OPEN",
   "backend": "serial Gauss; fiber census p=5,13; GPU unused",
   "openai_referee": "math_review PASS-WITH-NOTE do_not_branch; Tr=+Tr(\u03b1); J ~ a\u00b1bi",
-  "seconds": 0.359
+  "seconds": 1.502
 }

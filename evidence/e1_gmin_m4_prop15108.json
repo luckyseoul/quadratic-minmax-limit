@@ -624,18 +624,7 @@
     },
     "7": {
       "p": 7,
-      "N": 11452,
-      "ED4": "12835984/409",
-      "kappa2": "1547584/409",
-      "orth": "1972224/4499",
-      "delta2": "82176/4499",
-      "rho2": "1332784/20041",
-      "T_rho": "280528/2695",
-      "rho2_le_T": true,
-      "orth_le_room_hyp": true,
-      "ratio_rho2_over_T": "4581445/7170997",
-      "ratio_orth_over_room_hyp": "535/1636",
-      "lambda_max_Phi_via_popp": null
+      "skipped": true
     }
   },
   "cert_popp_phi": {
@@ -661,13 +650,7 @@
     },
     "7": {
       "p": 7,
-      "N": 11452,
-      "lambda2_PopP": 0.00023057161296942698,
-      "four_N_lambda2": 10.56202444690351,
-      "four_over_N": 0.00034928396786587494,
-      "lambda2_le_4_over_N": true,
-      "L_phi_le_16": true,
-      "conversion": "lambda_max(Phi)=4*N*lambda2(PopP)"
+      "skipped": true
     }
   },
   "general_status": {

@@ -1,0 +1,528 @@
+{
+  "experiment": "p7_exceptional_mod7_tuple_gpu_batch",
+  "status": "complete_exact_selected_dependency_gpu_batch",
+  "fixed_boundary": [
+    1,
+    2,
+    8,
+    9,
+    18,
+    20,
+    46,
+    48
+  ],
+  "eligible_leaf_count": 24,
+  "excluded_leaf_count": 24,
+  "unresolved_leaf_count": 0,
+  "deferred_supported_leaf_count": 72,
+  "max_workload": 200000000,
+  "results": [
+    {
+      "leaf_index": 61,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 5.377949237823486
+    },
+    {
+      "leaf_index": 64,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 5.1165382862091064
+    },
+    {
+      "leaf_index": 67,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 5.1236655712127686
+    },
+    {
+      "leaf_index": 69,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 5.3609747886657715
+    },
+    {
+      "leaf_index": 70,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 2.5409295558929443
+    },
+    {
+      "leaf_index": 71,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 5.383682489395142
+    },
+    {
+      "leaf_index": 72,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 2.74464750289917
+    },
+    {
+      "leaf_index": 73,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 5.365087270736694
+    },
+    {
+      "leaf_index": 74,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 2.7447023391723633
+    },
+    {
+      "leaf_index": 79,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 5.135409832000732
+    },
+    {
+      "leaf_index": 81,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 5.3810014724731445
+    },
+    {
+      "leaf_index": 82,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 2.743757963180542
+    },
+    {
+      "leaf_index": 124,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 5.383629083633423
+    },
+    {
+      "leaf_index": 125,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 2.5585803985595703
+    },
+    {
+      "leaf_index": 126,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 5.377517461776733
+    },
+    {
+      "leaf_index": 127,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 2.7754783630371094
+    },
+    {
+      "leaf_index": 128,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 5.390780925750732
+    },
+    {
+      "leaf_index": 129,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 2.7743492126464844
+    },
+    {
+      "leaf_index": 130,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 2.524055242538452
+    },
+    {
+      "leaf_index": 131,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 2.8275346755981445
+    },
+    {
+      "leaf_index": 132,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 2.852325916290283
+    },
+    {
+      "leaf_index": 133,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 5.375100374221802
+    },
+    {
+      "leaf_index": 134,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 2.7768008708953857
+    },
+    {
+      "leaf_index": 135,
+      "matches": 0,
+      "excluded": true,
+      "elapsed_seconds": 2.858638286590576
+    }
+  ],
+  "deferred": [
+    {
+      "leaf_index": 16,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 17,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 20,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 21,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 24,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 25,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 27,
+      "build": 575407,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 28,
+      "build": 575407,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 29,
+      "build": 575407,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 30,
+      "build": 575407,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 31,
+      "build": 575407,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 32,
+      "build": 575407,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 33,
+      "build": 575407,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 34,
+      "build": 575407,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 35,
+      "build": 575407,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 51,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 52,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 54,
+      "build": 1764,
+      "probe": 331093215649
+    },
+    {
+      "leaf_index": 55,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 56,
+      "build": 1764,
+      "probe": 331093215649
+    },
+    {
+      "leaf_index": 85,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 86,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 89,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 90,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 93,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 94,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 96,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 97,
+      "build": 3111696,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 98,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 99,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 100,
+      "build": 3111696,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 101,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 102,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 103,
+      "build": 3111696,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 104,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 105,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 106,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 107,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 108,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 109,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 110,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 115,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 116,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 118,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 119,
+      "build": 3111696,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 120,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 121,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 122,
+      "build": 3111696,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 136,
+      "build": 575407,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 137,
+      "build": 575407,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 138,
+      "build": 575407,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 139,
+      "build": 575407,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 140,
+      "build": 575407,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 141,
+      "build": 575407,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 142,
+      "build": 575407,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 143,
+      "build": 575407,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 144,
+      "build": 575407,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 145,
+      "build": 575407,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 146,
+      "build": 575407,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 147,
+      "build": 575407,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 148,
+      "build": 575407,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 149,
+      "build": 575407,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 150,
+      "build": 575407,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 151,
+      "build": 575407,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 152,
+      "build": 575407,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 153,
+      "build": 575407,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 154,
+      "build": 575407,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 155,
+      "build": 575407,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 156,
+      "build": 575407,
+      "probe": 1015017948
+    },
+    {
+      "leaf_index": 157,
+      "build": 575407,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 158,
+      "build": 575407,
+      "probe": 5489031744
+    },
+    {
+      "leaf_index": 159,
+      "build": 575407,
+      "probe": 1015017948
+    }
+  ],
+  "elapsed_seconds": 97.43846082687378
+}

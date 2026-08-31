@@ -1,0 +1,10 @@
+default(parisize, 1G);
+default(realprecision, 100);
+H = read("/home/nick/p11_half_rational_250.gpbin");
+b = H[3][16];
+z = exp(2 * Pi * I / 11);
+v = subst(lift(b), 't11, z);
+print("BASE_TARGET_COMPLEX=", v);
+print("BASE_TARGET_ABS=", abs(v));
+print("BASE_TARGET_ABS_SQ=", abs(v)^2);
+quit;

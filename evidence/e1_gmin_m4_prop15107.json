@@ -362,23 +362,7 @@
     },
     "7": {
       "p": 7,
-      "N": 11452,
-      "ED4": 31195.626520644902,
-      "kappa2": 3595.6265206449025,
-      "proj": 3345.4545454545455,
-      "orth": 250.171975190357,
-      "room": 1454.5454545454545,
-      "room_hyp": 1340.509090909091,
-      "orth_le_room_hyp": true,
-      "orth_le_room": true,
-      "kappa2_le_hyp": true,
-      "kappa2_le_96n": true,
-      "lambda_max_Phi": 10.562347188264061,
-      "lambda_max_le_16": true,
-      "L_bound_thmA": 15.867298423455392,
-      "thmA_le_16": true,
-      "kurtosis": 3.11956265206449,
-      "kurtosis_thr": 3.24
+      "skipped": true
     }
   },
   "general_status": {

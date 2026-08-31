@@ -1,0 +1,30 @@
+\\ Recover the exact p=5 admissible circle-tensor harmonic theta form from
+\\ its Sturm coefficients and calibrate the first odd-coset coefficient.
+default(parisize, 2G);
+default(realprecision, 200);
+mf = mfinit([20, 21/2, 1], 1);
+B = mfbasis(mf);
+S = mfsturm(mf);
+M = mfcoefs(mf, S);
+v = [0,0,0,0,0,-140/3,0,0,288,420,0,0,-4024,-264,0,0,22080,-31004/3,0,0,-158240/3,47100,0,0,10400,-52200,0,0,198984,-493960/3,0];
+if(#v < S + 1, error("insufficient coefficients", [#v, S + 1]));
+x = matinverseimage(M, v[1..(S + 1)]~);
+if(x == [] || M*x != v[1..(S + 1)]~, error("coefficient recovery failed"));
+F = mflinear(mf, x);
+params = 0;
+c = mfslashexpansion(mf, F, [1,0;2,1], 3, 1, &params);
+print("DIM=", #B);
+print("STURM=", S);
+print("CUSP_HALF_PARAMS=", params);
+print("CUSP_HALF_0_3=", c);
+print("CUSP_HALF_TARGET_EXACT=", c[4]);
+print("CUSP_HALF_TARGET_NUMERIC=", mfslashexpansion(mf, F, [1,0;2,1], 3, 0)[4]);
+bij = mfkohnenbijection(mf);
+plus_coordinates = matinverseimage(bij[3], x);
+print("KOHNEN_PLUS_DIM=", matsize(bij[3])[2]);
+print("KOHNEN_PLUS_CONTAINS_FORM=", plus_coordinates != []);
+sh = mfshimura(mf, F, 5);
+print("SHIMURA_PARAMS=", mfparams(sh[2]));
+print("SHIMURA_0_20=", mfcoefs(sh[2], 20));
+print("SHIMURA_NEW_DECOMPOSITION=", mftonew(sh[1], sh[2]));
+quit;

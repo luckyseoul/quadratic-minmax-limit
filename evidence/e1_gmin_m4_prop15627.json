@@ -79,6 +79,6 @@
   "walsh_15_406_E": "OPEN",
   "backend": "W1 prefix ProcessPool 86; W2 class ProcessPool 86; GPU unused",
   "fable": "suggest_direction rank2: class existence, discriminator p=31.  Rank1 octic linear class function is empty in the tested box.",
-  "seconds": 5.016,
-  "openai_referee": "math_review PASS; do_not_branch"
+  "openai_referee": "math_review PASS; do_not_branch",
+  "seconds": 46.526
 }

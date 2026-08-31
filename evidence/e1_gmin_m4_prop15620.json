@@ -103,5 +103,5 @@
   "walsh_15_406_E": "OPEN",
   "backend": "\u03a6-orbits O(N); Krylov p=5; GPU unused",
   "claude_referee": "W2 deep_review PASS-WITH-NOTE: z-span \u03a63-dead; \u03c7_p-pullback predicted live, empirically \u03a63-dead",
-  "seconds": 3.743
+  "seconds": 31.245
 }

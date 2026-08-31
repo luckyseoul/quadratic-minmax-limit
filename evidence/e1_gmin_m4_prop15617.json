@@ -112,5 +112,5 @@
   "walsh_15_406_E": "OPEN",
   "backend": "serial F2; p=5,7,11,13; GPU unused",
   "claude_referee": "strategy: DFT for W2, Zolotarev class for W1 p\u22611 (nsq works); deep_review BLOCK on f(D)w\u22600 as W2 test",
-  "seconds": 1.823
+  "seconds": 10.505
 }

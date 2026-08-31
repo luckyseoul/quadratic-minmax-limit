@@ -21,16 +21,6 @@
   },
   "lifts": [
     {
-      "p": 3,
-      "Nplus": 6,
-      "n1D": 6,
-      "n1Dm": 6,
-      "formula": 6,
-      "n_plus_forms": 2,
-      "n_minus_forms": 2,
-      "subset": true
-    },
-    {
       "p": 5,
       "Nplus": 130,
       "n1D": 30,

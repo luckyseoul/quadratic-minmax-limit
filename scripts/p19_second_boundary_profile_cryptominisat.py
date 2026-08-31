@@ -36,7 +36,9 @@ from e1_gmin_m4_prop15632 import (  # noqa: E402
     field_direction_data,
     projective_directions,
 )
+from e1_gmin_m4_prop15684 import _residue_zero_candidates  # noqa: E402
 from e1_gmin_m4_prop15688 import p19_residue_zero_profiles  # noqa: E402
+from e1_gmin_m4_prop15700 import p17_second_boundary_profile_census  # noqa: E402
 
 
 P = 19
@@ -49,30 +51,83 @@ def atomic_write(path: Path, payload: object) -> None:
     os.replace(temporary, path)
 
 
-def survivor_profiles() -> list[dict[str, object]]:
-    rows = [
-        row
-        for row in p19_residue_zero_profiles()["profiles"]
-        if int(row["pair_slack"]) >= 16
-    ]
-    if len(rows) != 14:
-        raise ArithmeticError("the p=19 high-slack remainder changed")
-    return rows
+def _histogram(values: tuple[int, ...]) -> dict[str, int]:
+    return {
+        str(value): values.count(value)
+        for value in sorted(set(values))
+    }
+
+
+def survivor_profiles(prime: int = 19) -> list[dict[str, object]]:
+    if prime == 17:
+        rows = []
+        for row in p17_second_boundary_profile_census()["profiles"]:
+            undetermined = sum(
+                int(row["phase_profiles_b"][phase].get(16, 0))
+                for phase in ("0", "1")
+            )
+            if int(row["pair_slack"]) == 12 and undetermined == 0:
+                rows.append(row)
+        if len(rows) != 113:
+            raise ArithmeticError("the p=17 slack-twelve remainder changed")
+        return rows
+    if prime == 19:
+        rows = [
+            row
+            for row in p19_residue_zero_profiles()["profiles"]
+            if int(row["pair_slack"]) >= 16
+        ]
+        if len(rows) != 14:
+            raise ArithmeticError("the p=19 high-slack remainder changed")
+        return rows
+    if prime == 23:
+        rows = [
+            {
+                "phase_profiles_b": {
+                    "0": _histogram(profile_zero),
+                    "1": _histogram(profile_one),
+                },
+                "phase_deficits": {
+                    "0": int(deficit_zero),
+                    "1": int(deficit_one),
+                },
+                "pair_slack": int(pair_slack),
+            }
+            for (
+                deficit_zero,
+                profile_zero,
+                deficit_one,
+                profile_one,
+                pair_slack,
+                _secants,
+            ) in _residue_zero_candidates()
+            if int(pair_slack) >= 24
+        ]
+        if len(rows) != 133:
+            raise ArithmeticError("the p=23 high-slack remainder changed")
+        return rows
+    raise ValueError("prime must be 17, 19 or 23")
 
 
 def solve(
     profile_index: int,
     seconds: float,
     threads: int,
+    prime: int = 19,
     anchor_second: int | None = None,
     repair_five: bool = False,
+    arc_repair_deletions: int | None = None,
     fixed_phase_zero_b16_slots: tuple[int, ...] | None = None,
 ) -> dict[str, object]:
     from pycryptosat import Solver
 
-    profiles = survivor_profiles()
+    P = int(prime)
+    SIZE = {17: 16, 19: 16, 23: 20}.get(P)
+    if SIZE is None:
+        raise ValueError("prime must be 17, 19 or 23")
+    profiles = survivor_profiles(P)
     if not 0 <= profile_index < len(profiles):
-        raise ValueError("profile index must be in 0..13")
+        raise ValueError(f"profile index must be in 0..{len(profiles) - 1}")
     profile = profiles[profile_index]
     directions = projective_directions(P)
     started = time.time()
@@ -107,8 +162,20 @@ def solve(
     if normalized_index is None:
         raise ArithmeticError("normalized direction missing")
 
+    if repair_five and arc_repair_deletions is not None:
+        raise ValueError("choose repair_five or arc_repair_deletions, not both")
     deleted = [new_var() for _ in point] if repair_five else []
     core = [new_var() for _ in point] if repair_five else []
+    arc_deleted = (
+        [new_var() for _ in point]
+        if arc_repair_deletions is not None
+        else []
+    )
+    arc_core = (
+        [new_var() for _ in point]
+        if arc_repair_deletions is not None
+        else []
+    )
     core_secant = (
         [[new_var() for _ in range(P)] for _ in directions]
         if repair_five
@@ -180,6 +247,40 @@ def solve(
         add_clauses(clauses)
         cardinality_count += 1
 
+    def add_at_most(literals: list[int], bound: int) -> None:
+        """Deterministic count automaton excluding the overflow state."""
+        nonlocal cardinality_count
+        literals = [int(literal) for literal in literals]
+        if bound < 0:
+            add_clauses([[]])
+            cardinality_count += 1
+            return
+        if bound >= len(literals):
+            return
+        overflow = bound + 1
+        states = [
+            [new_var() for _ in range(overflow + 1)]
+            for _ in range(len(literals) + 1)
+        ]
+        clauses: list[list[int]] = []
+        for row in states:
+            clauses.append(list(row))
+            for first in range(len(row)):
+                for second in range(first + 1, len(row)):
+                    clauses.append([-row[first], -row[second]])
+        clauses.extend([[states[0][0]], [-states[-1][overflow]]])
+        for index, literal in enumerate(literals, start=1):
+            previous = states[index - 1]
+            current = states[index]
+            for count in range(overflow + 1):
+                incremented = min(overflow, count + 1)
+                clauses.append([-previous[count], literal, current[count]])
+                clauses.append(
+                    [-previous[count], -literal, current[incremented]]
+                )
+        add_clauses(clauses)
+        cardinality_count += 1
+
     add_exact(point, SIZE)
     add_unit(point[0])
     if anchor_second is None:
@@ -233,28 +334,49 @@ def solve(
             for b, count in profile["phase_profiles_b"][str(phase)].items()
         }
         phase_indices = [i for i, value in enumerate(phases) if value == phase]
-        if len(phase_indices) != 10:
+        if len(phase_indices) != (P + 1) // 2:
             raise ArithmeticError("quadratic direction split changed")
         for b, target in phase_profile.items():
             add_exact([selectors[i][b] for i in phase_indices], target)
 
+    if arc_repair_deletions is not None:
+        deletion_count = int(arc_repair_deletions)
+        if not 0 <= deletion_count < SIZE:
+            raise ValueError("arc_repair_deletions must lie in 0..SIZE-1")
+        add_exact(arc_deleted, deletion_count)
+        for v in range(len(point)):
+            add_clauses(
+                [
+                    [-arc_deleted[v], point[v]],
+                    [-arc_core[v], point[v]],
+                    [-arc_core[v], -arc_deleted[v]],
+                    [-point[v], arc_core[v], arc_deleted[v]],
+                ]
+            )
+        for _direction, _eps, labels in records:
+            for fibre in range(P):
+                add_at_most(
+                    [arc_core[v] for v, label in enumerate(labels) if label == fibre],
+                    2,
+                )
+
     phase_zero_indices = [i for i, value in enumerate(phases) if value == 0]
     if fixed_phase_zero_b16_slots is not None:
         slots = set(fixed_phase_zero_b16_slots)
-        target = int(profile["phase_profiles_b"]["0"].get(16, 0))
+        target = int(profile["phase_profiles_b"]["0"].get(SIZE, 0))
         if (
             len(slots) != len(fixed_phase_zero_b16_slots)
             or len(slots) != target
             or not slots <= set(range(len(phase_zero_indices)))
         ):
             raise ValueError(
-                "fixed phase-zero b16 slots must be distinct slots matching the profile"
+                "fixed phase-zero full-boundary slots must be distinct and match the profile"
             )
         for slot, index in enumerate(phase_zero_indices):
             add_unit(
-                selectors[index][16]
+                selectors[index][SIZE]
                 if slot in slots
-                else -selectors[index][16]
+                else -selectors[index][SIZE]
             )
 
     if repair_five:
@@ -375,10 +497,10 @@ def solve(
             raise ValueError("the two anchored directions must be fixed at b=16")
         first_index = phase_zero_indices[0]
         second_index = phase_zero_indices[anchor_second]
-        if 16 not in selectors[first_index] or 16 not in selectors[second_index]:
+        if SIZE not in selectors[first_index] or SIZE not in selectors[second_index]:
             raise ValueError("profile lacks two phase-zero undetermined directions")
-        add_unit(selectors[first_index][16])
-        add_unit(selectors[second_index][16])
+        add_unit(selectors[first_index][SIZE])
+        add_unit(selectors[second_index][SIZE])
 
         # After translating a selected point to zero, F_p^* scales the
         # quotient by the first undetermined direction transitively on its
@@ -398,7 +520,7 @@ def solve(
             "second_direction": list(directions[second_index]),
             "second_phase_zero_slot": anchor_second,
             "phase": 0,
-            "b": 16,
+            "b": SIZE,
             "fixed_missing_fibre_label": missing_label,
             "c_H": -1,
         }
@@ -413,13 +535,16 @@ def solve(
         else "UNKNOWN"
     )
     result: dict[str, object] = {
-        "experiment": "p19_second_boundary_profile_cryptominisat",
+        "experiment": f"p{P}_second_boundary_profile_cryptominisat",
+        "p": P,
+        "boundary_size": SIZE,
         "profile_index": profile_index,
         "pair_slack": int(profile["pair_slack"]),
         "phase_profiles_b": profile["phase_profiles_b"],
         "normalization": normalization,
         "fixed_phase_zero_b16_slots": fixed_phase_zero_b16_slots,
         "repair_five_constraints": repair_five,
+        "arc_repair_deletions": arc_repair_deletions,
         "solver": "cryptominisat-native-xor",
         "solver_status": status,
         "feasible_boundary_profile": satisfiable is True,
@@ -513,7 +638,7 @@ def solve(
                 "line_slack_equality_structure": slack_equality_lines,
             }
         if not valid:
-            raise AssertionError("CryptoMiniSat p=19 witness failed audit")
+            raise AssertionError(f"CryptoMiniSat p={P} witness failed audit")
         result["boundary"] = chosen
         result["boundary_coordinates"] = [[v % P, v // P] for v in chosen]
         result["direction_rows"] = direction_rows
@@ -527,6 +652,11 @@ def main() -> None:
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--profile", type=int)
     group.add_argument("--all", action="store_true")
+    group.add_argument(
+        "--profile-range",
+        help="half-open profile range START:STOP",
+    )
+    parser.add_argument("--prime", type=int, choices=(17, 19, 23), default=19)
     parser.add_argument(
         "--anchor-second",
         type=int,
@@ -537,6 +667,11 @@ def main() -> None:
         "--repair-five",
         action="store_true",
         help="encode the forced five-deletion 11-arc repair for slack twenty",
+    )
+    parser.add_argument(
+        "--arc-repair-deletions",
+        type=int,
+        help="require an exact deletion set whose retained points form an affine arc",
     )
     parser.add_argument(
         "--phase-zero-b16-slots",
@@ -552,26 +687,37 @@ def main() -> None:
         if args.phase_zero_b16_slots
         else None
     )
-    if args.all:
+    if args.all or args.profile_range:
+        if args.profile_range:
+            start_text, stop_text = args.profile_range.split(":", 1)
+            indices = range(int(start_text), int(stop_text))
+        else:
+            indices = range(len(survivor_profiles(args.prime)))
+        if not set(indices) <= set(range(len(survivor_profiles(args.prime)))):
+            raise ValueError("profile range lies outside the survivor list")
         worker = functools.partial(
             solve,
             seconds=args.seconds,
             threads=args.threads,
+            prime=args.prime,
             anchor_second=args.anchor_second,
             repair_five=args.repair_five,
+            arc_repair_deletions=args.arc_repair_deletions,
             fixed_phase_zero_b16_slots=fixed_phase_zero_b16_slots,
         )
         with concurrent.futures.ThreadPoolExecutor(
             max_workers=max(1, int(args.jobs))
         ) as executor:
-            result = list(executor.map(worker, range(14)))
+            result = list(executor.map(worker, indices))
     else:
         result = solve(
             args.profile,
             args.seconds,
             args.threads,
+            prime=args.prime,
             anchor_second=args.anchor_second,
             repair_five=args.repair_five,
+            arc_repair_deletions=args.arc_repair_deletions,
             fixed_phase_zero_b16_slots=fixed_phase_zero_b16_slots,
         )
     rendered = json.dumps(result, indent=2, sort_keys=True)

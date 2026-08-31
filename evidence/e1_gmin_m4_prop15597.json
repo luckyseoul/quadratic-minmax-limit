@@ -5,10 +5,10 @@
     "p": 5,
     "dimZ": 65,
     "lambda_bar": 9.6,
-    "spec_min": 9.599999999999978,
-    "spec_max": 9.600000000000023,
-    "spread": 4.440892098500626e-14,
-    "frob_dist_to_scalar": 1.5607543944125042e-14,
+    "spec_min": 9.599999999999973,
+    "spec_max": 9.600000000000025,
+    "spread": 5.1514348342607263e-14,
+    "frob_dist_to_scalar": 1.707276551646117e-14,
     "is_scalar": true
   },
   "p7_forced_by": "G-equivariance + multiplicity-free Z + V = 24||delta||^2 (15.594)",
@@ -33,5 +33,5 @@
     "L"
   ],
   "L_status": "OPEN",
-  "seconds": 3.4
+  "seconds": 51.4
 }

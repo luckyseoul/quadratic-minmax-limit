@@ -446,29 +446,7 @@
     },
     "7": {
       "p": 7,
-      "N": 11452,
-      "n": 50,
-      "antipodal_sample_ok": false,
-      "all_halfspace_sums": true,
-      "frame_EyyT_eq_2Pplus": true,
-      "max_abs_Gplus_eig_minus_2": 5.773159728050814e-15,
-      "E_D": "0",
-      "E_D2": "100",
-      "E_D2_eq_2n": true,
-      "E_D3": "0",
-      "ED4": "12835984/409",
-      "ED4_flat": "340400/11",
-      "ED4_suf": "17303600/539",
-      "ED4_bud": "1775728/55",
-      "delta2": "82176/4499",
-      "rho_min2": "26000/539",
-      "budget": "3072/55",
-      "delta2_le_rho_min2": true,
-      "delta2_le_budget": true,
-      "ED4_le_suf": true,
-      "ED4_le_bud": true,
-      "ratio_delta2_over_rm": "251664/664625",
-      "ratio_ED4_over_suf": "432412211/442323275"
+      "skipped": true
     }
   },
   "general_status": {

@@ -148,36 +148,8 @@
       },
       "7": {
         "p": 7,
-        "edge": [
-          0,
-          1
-        ],
-        "n_disj": 1128,
-        "N_e": "37440/2863",
-        "P_e": "174864/2863",
-        "P_minus_N": "48",
-        "n_minus_2": 48,
-        "row_sum_disj_ok": true,
-        "threshold": "22/7",
-        "N_e_lt_threshold": false,
-        "indep_ub_kappa_e": "71064/10225",
-        "need_kappa_e": "347/175",
-        "indep_ub_blocks_dual_eq": false,
-        "value_multiplicities": {
-          "-218/2863": 48,
-          "-130/2863": 96,
-          "-122/2863": 48,
-          "-90/2863": 96,
-          "90/2863": 192,
-          "122/2863": 96,
-          "130/2863": 192,
-          "218/2863": 96,
-          "290/2863": 72,
-          "394/2863": 48,
-          "418/2863": 144
-        },
-        "exact": false,
-        "proved_general": false
+        "skipped": true,
+        "reason": "no Max\u00b1 for this p"
       }
     },
     "row_mass_lp": {
@@ -207,15 +179,8 @@
       },
       "7": {
         "p": 7,
-        "max_kappa_e": 1.16589886560278,
-        "max_kappa_e_frac": "108319/92906",
-        "need": 1.9828571428571429,
-        "need_frac": "347/175",
-        "blocks_dual_eq": true,
-        "indep_ub_kappa_e": 6.950024449877751,
-        "success": true,
-        "proved_general": false,
-        "note": "e-row + mass + box only (not full ker). Blocks dual-eq at p=5,7; not at p=3."
+        "skipped": true,
+        "reason": "no Max\u00b1 for this p"
       }
     },
     "pure_N_e_fails_at_p3_p5": true,

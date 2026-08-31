@@ -3,18 +3,18 @@
   "title": "Q++_form in S0/named box; 6-net replaces 3-net",
   "series": "15.x leftover campaign (OPEN)",
   "proved": {
-    "six_net_recovers_5_7": true,
-    "Qform_in_s0_and_box": true,
-    "p1_S0_even_ge_6_at_Qform": true,
+    "six_net_recovers_5_7": false,
+    "Qform_in_s0_and_box": false,
+    "p1_S0_even_ge_6_at_Qform": false,
     "Q_tau_named_in_p": false,
     "D_named_in_p": false,
     "phi_F_ge_6_proved_general": false
   },
   "algebra": {
     "A": {
-      "proved": true,
-      "p5_3net": 130,
-      "p7_4net": 5726,
+      "proved": false,
+      "p5_3net": -1,
+      "p7_4net": -1,
       "p11_6net": null,
       "N_pred_11": 244332,
       "p11_eq_pred": null,
@@ -22,23 +22,20 @@
       "theorem": "6-net UP count recovers 130 and 5726. 3-net is not D(11).  Fail: p=7 count is 434."
     },
     "B": {
-      "proved": true,
+      "proved": false,
       "Q5": "48/13",
       "Q7": "1544/409",
       "Qbad_drop": "16",
-      "all_s0": true,
-      "all_box": true,
+      "all_s0": null,
+      "all_box": null,
       "theorem": "Q++_form is in [Q_lo,ub] and the named box at p=5..79."
     },
     "C": {
-      "proved": true,
+      "proved": false,
       "minS_p5": "80/13",
       "minS_drop": "-80",
-      "all_p1_ge6": true,
-      "worst": {
-        "p": 5,
-        "minS": "80/13"
-      },
+      "all_p1_ge6": null,
+      "worst": null,
       "theorem": "p\u22611, 5\u2264p\u226479: S0 even families \u22656 at Q++_form; drop-binom dies."
     },
     "D": {

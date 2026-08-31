@@ -193,28 +193,7 @@
     },
     "7": {
       "p": 7,
-      "N": 11452,
-      "n": 50,
-      "kappa_Tkappa": 0.0,
-      "kappa_Tkappa_zero": true,
-      "fy_Tkappa_mean": 33600.0,
-      "fy_Tkappa_std": 0.0,
-      "fy_Tkappa_pred": 33600.0,
-      "fy_Tkappa_constant": true,
-      "fy_Tkappa_matches": true,
-      "E_W": 25.0,
-      "E_W_pred_n_over_2": 25.0,
-      "E_W_ok": true,
-      "ED4": 31383.823960880196,
-      "ED4_from_W": 31383.823960880196,
-      "ED4_W_identity": true,
-      "ED4_flat": 30945.454545454544,
-      "ED4_suf": 32103.153988868275,
-      "delta2": "82176/4499",
-      "rho_min2": "26000/539",
-      "delta2_le_rho_min2": true,
-      "ED4_le_suf": true,
-      "Q_delta_le_rm_if_constant": true
+      "skipped": true
     }
   },
   "general_status": {

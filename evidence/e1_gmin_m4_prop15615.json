@@ -69,5 +69,5 @@
   "walsh_15_406_E": "OPEN",
   "backend": "serial F2; rref p=5,11,17; GPU unused",
   "claude_referee": "3 deep_reviews: W1-1 UNCERTAIN then p=17 kills two-fiber; W2 BLOCK named pool; leftover2 PASS-WITH-NOTE (15.528 already)",
-  "seconds": 5.88
+  "seconds": 58.053
 }

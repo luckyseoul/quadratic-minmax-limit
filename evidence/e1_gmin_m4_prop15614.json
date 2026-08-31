@@ -133,5 +133,5 @@
   "walsh_15_406_E": "OPEN",
   "backend": "serial F2; rref p=3,5,7,11; GPU unused",
   "claude_referee": "W1: \u03b5((1+D)v)=g(1) used; W2: named vectors 0 in every R/(f_O) at p=11 (PASS-WITH-NOTE on structure)",
-  "seconds": 0.534
+  "seconds": 2.448
 }

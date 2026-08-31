@@ -1,0 +1,344 @@
+{
+  "eps_5": {
+    "p": 5,
+    "mod4": 1,
+    "eps": 1,
+    "fable_pred_(p+1)/2": 1,
+    "match": true,
+    "wt": 10,
+    "w0": 0
+  },
+  "eps_13": {
+    "p": 13,
+    "mod4": 1,
+    "eps": 1,
+    "fable_pred_(p+1)/2": 1,
+    "match": true,
+    "wt": 26,
+    "w0": 0
+  },
+  "eps_17": {
+    "p": 17,
+    "mod4": 1,
+    "eps": 0,
+    "fable_pred_(p+1)/2": 1,
+    "match": false,
+    "wt": 34,
+    "w0": 0
+  },
+  "w2_5": {
+    "p": 5,
+    "Frob_gcd1": true,
+    "Frob_gcd_deg": 0,
+    "Frob_hits": [
+      [
+        2,
+        false
+      ]
+    ],
+    "n_stay": 10,
+    "dim_stay": 2,
+    "stay_some_coprime_g": false,
+    "stay_sample": [
+      {
+        "gcd1": false,
+        "gcd_deg": 2,
+        "hits": [
+          [
+            2,
+            true
+          ]
+        ]
+      },
+      {
+        "gcd1": false,
+        "gcd_deg": 2,
+        "hits": [
+          [
+            2,
+            true
+          ]
+        ]
+      },
+      {
+        "gcd1": false,
+        "gcd_deg": 2,
+        "hits": [
+          [
+            2,
+            true
+          ]
+        ]
+      },
+      {
+        "gcd1": false,
+        "gcd_deg": 2,
+        "hits": [
+          [
+            2,
+            true
+          ]
+        ]
+      },
+      {
+        "gcd1": false,
+        "gcd_deg": 2,
+        "hits": [
+          [
+            2,
+            true
+          ]
+        ]
+      },
+      {
+        "gcd1": false,
+        "gcd_deg": 2,
+        "hits": [
+          [
+            2,
+            true
+          ]
+        ]
+      }
+    ],
+    "target_W0": 11
+  },
+  "w2_7": {
+    "p": 7,
+    "Frob_gcd1": false,
+    "Frob_gcd_deg": 2,
+    "Frob_hits": [
+      [
+        2,
+        true
+      ]
+    ],
+    "n_stay": 21,
+    "dim_stay": 3,
+    "stay_some_coprime_g": true,
+    "stay_sample": [
+      {
+        "gcd1": true,
+        "gcd_deg": 0,
+        "hits": [
+          [
+            2,
+            false
+          ]
+        ]
+      },
+      {
+        "gcd1": false,
+        "gcd_deg": 2,
+        "hits": [
+          [
+            2,
+            true
+          ]
+        ]
+      },
+      {
+        "gcd1": false,
+        "gcd_deg": 2,
+        "hits": [
+          [
+            2,
+            true
+          ]
+        ]
+      },
+      {
+        "gcd1": true,
+        "gcd_deg": 0,
+        "hits": [
+          [
+            2,
+            false
+          ]
+        ]
+      },
+      {
+        "gcd1": false,
+        "gcd_deg": 2,
+        "hits": [
+          [
+            2,
+            true
+          ]
+        ]
+      },
+      {
+        "gcd1": false,
+        "gcd_deg": 2,
+        "hits": [
+          [
+            2,
+            true
+          ]
+        ]
+      }
+    ],
+    "target_W0": 23
+  },
+  "w2_11": {
+    "p": 11,
+    "Frob_gcd1": false,
+    "Frob_gcd_deg": 14,
+    "Frob_hits": [
+      [
+        2,
+        true
+      ],
+      [
+        4,
+        true
+      ],
+      [
+        4,
+        true
+      ],
+      [
+        4,
+        true
+      ]
+    ],
+    "n_stay": 55,
+    "dim_stay": 5,
+    "stay_some_coprime_g": false,
+    "stay_sample": [
+      {
+        "gcd1": false,
+        "gcd_deg": 2,
+        "hits": [
+          [
+            2,
+            true
+          ],
+          [
+            4,
+            false
+          ],
+          [
+            4,
+            false
+          ],
+          [
+            4,
+            false
+          ]
+        ]
+      },
+      {
+        "gcd1": false,
+        "gcd_deg": 12,
+        "hits": [
+          [
+            2,
+            false
+          ],
+          [
+            4,
+            true
+          ],
+          [
+            4,
+            true
+          ],
+          [
+            4,
+            true
+          ]
+        ]
+      },
+      {
+        "gcd1": false,
+        "gcd_deg": 12,
+        "hits": [
+          [
+            2,
+            false
+          ],
+          [
+            4,
+            true
+          ],
+          [
+            4,
+            true
+          ],
+          [
+            4,
+            true
+          ]
+        ]
+      },
+      {
+        "gcd1": false,
+        "gcd_deg": 14,
+        "hits": [
+          [
+            2,
+            true
+          ],
+          [
+            4,
+            true
+          ],
+          [
+            4,
+            true
+          ],
+          [
+            4,
+            true
+          ]
+        ]
+      },
+      {
+        "gcd1": false,
+        "gcd_deg": 14,
+        "hits": [
+          [
+            2,
+            true
+          ],
+          [
+            4,
+            true
+          ],
+          [
+            4,
+            true
+          ],
+          [
+            4,
+            true
+          ]
+        ]
+      },
+      {
+        "gcd1": false,
+        "gcd_deg": 14,
+        "hits": [
+          [
+            2,
+            true
+          ],
+          [
+            4,
+            true
+          ],
+          [
+            4,
+            true
+          ],
+          [
+            4,
+            true
+          ]
+        ]
+      }
+    ],
+    "target_W0": 59
+  }
+}

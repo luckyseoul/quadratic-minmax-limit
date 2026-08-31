@@ -165,5 +165,5 @@
   "walsh_15_406_E": "OPEN",
   "backend": "serial F2 identities; intersection p=3,5,7; GPU unused",
   "claude_referee": "deep_review PASS (fable-5 xhigh) on tangency lemma",
-  "seconds": 0.072
+  "seconds": 0.275
 }

@@ -50,14 +50,7 @@
       },
       "7": {
         "p": 7,
-        "M": "347/175",
-        "minus_2M": "-694/175",
-        "mass_min_sum_a_kappa": "-162446/71575",
-        "blocks_dual_eq": true,
-        "exact": false,
-        "n_disj": 1128,
-        "n_wedge": 96,
-        "proved_general": false
+        "skipped": true
       }
     },
     "blocks_p5_p7": true

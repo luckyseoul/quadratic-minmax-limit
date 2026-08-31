@@ -97,5 +97,5 @@
   "walsh_15_406_E": "OPEN",
   "backend": "serial F2 identities; rref p=3,5,7; GPU unused",
   "claude_referee": "deep_review BLOCK on W_0/extra irred; unipotent flag kept",
-  "seconds": 0.221
+  "seconds": 0.972
 }

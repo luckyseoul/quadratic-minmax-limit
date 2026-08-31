@@ -65,5 +65,5 @@
   "walsh_15_406_E": "OPEN",
   "backend": "nuka serial Krylov PGL(2,11)+named; local inversion p=5,7",
   "claude_referee": "suggest_direction: W2 full switching Aut; inversion then PGL(2,11); no W1 Dirichlet tower",
-  "seconds": 0.022
+  "seconds": 0.042
 }

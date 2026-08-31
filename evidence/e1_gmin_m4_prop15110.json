@@ -535,16 +535,7 @@
     },
     "7": {
       "p": 7,
-      "N": 11452,
-      "ED4": "12835984/409",
-      "orth": "1972224/4499",
-      "delta2": "82176/4499",
-      "rho_min2": "26000/539",
-      "budget": "3072/55",
-      "delta2_le_rho_min2": true,
-      "delta2_le_budget": true,
-      "ratio_delta2_over_budget": "535/1636",
-      "ratio_delta2_over_rm": "251664/664625"
+      "skipped": true
     }
   },
   "general_status": {

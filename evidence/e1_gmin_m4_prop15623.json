@@ -65,5 +65,5 @@
   "walsh_15_406_E": "OPEN",
   "backend": "6-point F_p character counts; GPU unused; serial-class",
   "openai_referee": "math_review PASS on A, confidence 0.99",
-  "seconds": 0.003
+  "seconds": 0.005
 }

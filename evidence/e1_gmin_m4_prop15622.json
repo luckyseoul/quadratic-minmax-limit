@@ -83,5 +83,5 @@
   "walsh_15_406_E": "OPEN",
   "backend": "serial; Krylov p=5,7; GPU unused",
   "openai_referee": "math_review PASS on A, confidence 0.99",
-  "seconds": 8.37
+  "seconds": 74.145
 }

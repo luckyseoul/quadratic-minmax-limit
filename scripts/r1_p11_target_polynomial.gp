@@ -1,0 +1,17 @@
+default(parisize, 2G);
+H = read("/home/nick/p11_half_rational_250.gpbin");
+c = H[2][16,];
+D = lcm(vector(#c, i, denominator(c[i])));
+v = vector(#c, i, D * c[i]);
+P = sum(i = 1, #v, v[i] * x^(i - 1));
+print("COMMON_DENOMINATOR=", D);
+print("CONTENT=", content(P));
+print("DEGREE=", poldegree(P));
+print("FACTOR=", factor(P));
+print("GCD_WITH_DERIVATIVE_DEGREE=", poldegree(gcd(P, deriv(P))));
+rr = polroots(P);
+print("ROOTS_REAL_COUNT=", sum(i = 1, #rr, abs(imag(rr[i])) < 1e-30));
+Q = sum(j = 1, #v / 2, v[2*j - 1] * x^(4*j - 1) + v[2*j] * x^(4*j));
+print("SHELL_POLYNOMIAL_DEGREE=", poldegree(Q));
+print("SHELL_POLYNOMIAL_FACTOR=", factor(Q));
+quit;
