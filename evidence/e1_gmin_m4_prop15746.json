@@ -1,0 +1,299 @@
+{
+  "prop": "15.746",
+  "title": "Sharp mass-ten catalog and the p13 t4 u4 reduction",
+  "result_status": "exhaustive finite equality classification and proved open reduction",
+  "statement": "the support-330 Boolean catalog is exhaustive; u=4 reduces to uniform P=3 or P=5 families and remains open",
+  "pointwise_mass10_bridge": {
+    "p": 13,
+    "slice": "J(13,7)",
+    "hard_phase": 1,
+    "hard_b": 2,
+    "hard_scaled_mean": 22,
+    "quadrature_nodes": [
+      0,
+      1,
+      2
+    ],
+    "quadrature_weights": [
+      "5/26",
+      "7/13",
+      "7/26"
+    ],
+    "every_intersection_layer_has_positive_weight": true,
+    "baseline_values_on_layers": [
+      1,
+      0,
+      1
+    ],
+    "parity_values_on_layers": [
+      1,
+      0,
+      1
+    ],
+    "pointwise_baseline": "A_0=(1-x_i-x_j)^2",
+    "difference_lift": "B=(A-A_0)/2",
+    "difference_is_integral_by_parity": true,
+    "difference_is_globally_nonnegative": true,
+    "baseline_scaled_mean": 12,
+    "lift_scaled_mass": "4p*E[B]=10",
+    "prop_15688_sharp_scaled_floor": 10,
+    "prop_15688_H_ge_2_scaled_floor": 12,
+    "height_forced": 1,
+    "lift_is_boolean": true,
+    "support_density": "10/52=5/26",
+    "support_size": 330,
+    "pointwise_bridge_precedes_nonnegative_lift_theorem": true,
+    "proved": true
+  },
+  "exact_support330_classification": {
+    "scope": "Boolean degree-at-most-two functions of support 330 on J(13,7)",
+    "candidate_families": {
+      "omitted_pair": {
+        "polynomial": "(1-x_i)(1-x_j)",
+        "count": 78,
+        "anchored_count": 15
+      },
+      "all_equal_triple": {
+        "polynomial": "1-x_i-x_j-x_k+x_i*x_j+x_i*x_k+x_j*x_k",
+        "count": 286,
+        "anchored_count": 55
+      }
+    },
+    "full_candidate_count": 364,
+    "support_size": 330,
+    "third_difference_identity_count": 1638,
+    "third_difference_identity_sha256": "ee92d6662f0f14523dc4c6620f89b407a66048dd4a6c0962dd9b058800136083",
+    "identity_nullspace_is_exact_degree_at_most_two_space": true,
+    "boolean_variable_count": 1716,
+    "constraint_count": 1710,
+    "anchored_nogood_count": 70,
+    "model_textproto_sha256": "7ace4efab04ada945381ad7826a8659dbd9c6d2292e543c6dced0894750da066",
+    "candidate_catalog_sha256": "4edf1fe1b9c73f05598b667dba121f064807c68421a4df2c8db7090a3e3ff35f",
+    "anchored_candidate_catalog_sha256": "84ce6099dcca66f7cc2792dc60bcbb378672f2e9cac2b19e02812f2f20563c7a",
+    "S13_generator_images_checked": 4368,
+    "anchor_orbit_size": 1716,
+    "solver": {
+      "name": "OR-Tools CP-SAT",
+      "version": "9.15.6755",
+      "status": "INFEASIBLE",
+      "status_code": 3,
+      "num_search_workers": 32,
+      "exact_terminal_status": true
+    },
+    "classifier_evidence": "evidence/p13_support330_boolean_classifier.json",
+    "gpu_cross_check_is_not_a_proof_premise": true,
+    "catalog_exhaustive_at_support_330": true,
+    "result_status": "exhaustive finite certificate",
+    "proved": true
+  },
+  "u4_catalog_consequence": {
+    "p": 13,
+    "t": 4,
+    "k": 60,
+    "u": 4,
+    "hard_direction_count": 7,
+    "H_edge_count": 61,
+    "hard_cell": {
+      "phase": 1,
+      "b": 2,
+      "scaled_mean": 22,
+      "pointwise_form": "A=(1-x_a-x_b)^2+2B",
+      "lift_scaled_mass": 10,
+      "lift_support_size": 330
+    },
+    "family_ledgers": {
+      "omitted_pair": {
+        "family": "omitted_pair",
+        "coefficient_offset": 3,
+        "coefficient_congruence": "6 divides P-3",
+        "parallel_candidates_under_7P_le_61": [
+          3
+        ],
+        "common_hard_parallel_count_P": 3,
+        "hard_signed_total_hT": -19,
+        "hard_mean_identity": "22=14*3-(-19)-39",
+        "opposite_parallel_sum": 40,
+        "minimum_opposite_Q": 5,
+        "opposite_excess_definition": "e=P+Q-8",
+        "opposite_excess_sum": 5,
+        "opposite_mean_formula": "a=12+14e",
+        "minimum_opposite_scaled_mean": 12,
+        "directions_at_minimum_at_least": 2,
+        "b12_literal_offset": 3,
+        "b12_literal_compatible_at_minimum_Q": false,
+        "forced_minimum_cell": "b=0,A=2C,4p*E[C]=12",
+        "minimum_cell_height_dichotomy": [
+          1,
+          4
+        ],
+        "height_one_support_size": 396,
+        "global_sextic_constraint": "F6=2*h*M6+h*M2^3-3*M2*M4",
+        "opposite_local_sextic_constraint": "2*N6+N2^3+3*N2*N4=0"
+      },
+      "all_equal_triple": {
+        "family": "all_equal_triple",
+        "coefficient_offset": 5,
+        "coefficient_congruence": "6 divides P-5",
+        "parallel_candidates_under_7P_le_61": [
+          5
+        ],
+        "common_hard_parallel_count_P": 5,
+        "hard_signed_total_hT": 9,
+        "hard_mean_identity": "22=14*5-(9)-39",
+        "opposite_parallel_sum": 26,
+        "minimum_opposite_Q": 3,
+        "opposite_excess_definition": "e=P+Q-8",
+        "opposite_excess_sum": 5,
+        "opposite_mean_formula": "a=12+14e",
+        "minimum_opposite_scaled_mean": 12,
+        "directions_at_minimum_at_least": 2,
+        "b12_literal_offset": 3,
+        "b12_literal_compatible_at_minimum_Q": true,
+        "minimum_cell_dichotomy": "b=12 literal or b=0 mass-12 lift",
+        "degree_six_feature_rank": 3,
+        "analogous_degree_six_identity_available": false
+      }
+    },
+    "families_cannot_mix_because_common_P_has_distinct_mod_6_offsets": true,
+    "mass12_phase_zero_dichotomy": {
+      "p": 13,
+      "phase": 0,
+      "scaled_mean": 12,
+      "phase_zero_even_b_floors": {
+        "0": 0,
+        "2": 14,
+        "4": 20,
+        "6": 26,
+        "8": 24,
+        "10": 26,
+        "12": 12
+      },
+      "floor_compatible_b": [
+        0,
+        12
+      ],
+      "literal_branch": {
+        "b": 12,
+        "pointwise_form": "A=1-x_j",
+        "target": "3+2A=4-z_j",
+        "coefficient_offset": 3,
+        "positive_quadrature_rigidity": true
+      },
+      "lift_branch": {
+        "b": 0,
+        "form": "A=2C",
+        "scaled_mass": "4p*E[C]=12",
+        "C_is_nonzero_nonnegative_integral_quadratic": true,
+        "height_dichotomy": [
+          1,
+          4
+        ],
+        "height_one_is_boolean": true,
+        "height_one_support_size": 396,
+        "H_ge_two_lower_bounds_meet_only_at_H": [
+          4
+        ]
+      },
+      "proved": true
+    },
+    "P3_degree_six_coupling": {
+      "field": "F_13",
+      "hard_family": "baseline pair plus omitted-pair lift",
+      "normalized_moment_form": "N_(2r)=h*M_(2r)=alpha^(2r)+beta^(2r)",
+      "hard_normalized_Newton_identity": "2*N6+N2^3-3*N2*N4=0",
+      "global_sextic": "F6=2*h*M6+h*M2^3-3*M2*M4",
+      "pair_count": 78,
+      "overlap_inclusive_pair_choices_checked": 6084,
+      "identity_residue_set": [
+        0
+      ],
+      "gauge_cancellation": {
+        "2": {
+          "complete_graph_sum_mod_13": 0,
+          "star_sums_mod_13": [
+            0
+          ],
+          "all_vanish": true
+        },
+        "4": {
+          "complete_graph_sum_mod_13": 0,
+          "star_sums_mod_13": [
+            0
+          ],
+          "all_vanish": true
+        },
+        "6": {
+          "complete_graph_sum_mod_13": 0,
+          "star_sums_mod_13": [
+            0
+          ],
+          "all_vanish": true
+        }
+      },
+      "homogeneous_degree": 6,
+      "distinct_hard_projective_roots": 7,
+      "root_count_exceeds_degree": true,
+      "global_F6_is_identically_zero": true,
+      "opposite_sign_normalization": "N_d=(-h)*M_d",
+      "opposite_local_constraint": "2*N6+N2^3+3*N2*N4=0",
+      "opposite_sign_conversion_assignments_checked": 4394,
+      "opposite_sign_conversion_verified": true,
+      "forced_P3_Q5_mass12_cell_satisfies_global_F6_zero": true,
+      "proved": true
+    },
+    "P5_degree_six_no_identity_audit": {
+      "field": "F_13",
+      "hard_family": "baseline pair plus all-equal-triple lift",
+      "pattern_count_checked": 22308,
+      "weighted_feature_vectors": {
+        "2": [
+          "N2"
+        ],
+        "4": [
+          "N4",
+          "N2^2"
+        ],
+        "6": [
+          "N6",
+          "N2*N4",
+          "N2^3"
+        ]
+      },
+      "weighted_feature_ranks_mod_13": {
+        "2": 1,
+        "4": 2,
+        "6": 3
+      },
+      "weighted_feature_dimensions": {
+        "2": 1,
+        "4": 2,
+        "6": 3
+      },
+      "feature_rank_mod_13": 3,
+      "feature_dimension": 3,
+      "no_nonzero_universal_weighted_homogeneous_even_moment_identity_through_degree_6": true,
+      "scope": "weighted-homogeneous polynomial identities in the even moments N2,N4,N6 through degree six",
+      "proved": true
+    },
+    "p13_t4_u4_closed": false,
+    "remaining_p13_t4_residues": [
+      4,
+      6
+    ],
+    "result_status": "proved open reduction",
+    "proved": true
+  },
+  "p13_t4_u4_closed": false,
+  "p13_k_eq_60_closed": false,
+  "remaining_p13_t4_residues": [
+    4,
+    6
+  ],
+  "next_exact_gate": "one P=3,Q=5,b=0 mass-12 cell under the opposite-normalized constraint 2*N6+N2^3+3*N2*N4=0, split into Boolean support 396 or height four",
+  "broad_mass12_or_support396_census_is_not_the_gate": true,
+  "residual_ii_closed": false,
+  "multi_level_type_I_closed": false,
+  "quadratic_minmax_limit_closed": false,
+  "top_level_gates_changed": false,
+  "proved": true
+}

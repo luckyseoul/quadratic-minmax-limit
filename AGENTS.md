@@ -27,7 +27,7 @@ branches or turning completed computations into new work.
 - Prefer an argument that closes an infinite family over a wider finite
   census unless the finite census is the explicitly recorded gate.
 
-## Current residual-(ii) gate after Proposition 15.745
+## Current residual-(ii) gate after Proposition 15.746
 
 Do not reopen `p=13,k=58` or `p=17,k=74`.  Proposition 15.742 combines the
 `M_2=0` congruence with six multiplicative interval cuts and closes the
@@ -63,19 +63,39 @@ the transverse multiplicities Boolean and bounds the elevated row in
 infeasibility, omit the collision-one sign audit, or call the full
 `p=13,k=60` row closed.  Its exact remaining residues are `u=4,6`.
 
+Proposition 15.746 completes the sharp mass-ten Boolean equality
+classification needed inside `u=4`.  The pointwise all-positive `b=2`
+quadrature must precede Proposition 15.688; only then is the lift globally
+nonnegative, Boolean, and of support 330.  The exact 1,716-variable,
+1,710-constraint model proves that the 78 omitted-pair and 286 all-equal
+triple supports are exhaustive.  Do not rerun or broaden that catalog.
+Common `hT` then forbids mixing: omitted pairs force `P=3`, all-equal triples
+force `P=5`, and at least two opposite cells have mean 12.  At `P=3,Q=5`
+the literal is impossible modulo six, leaving only a `b=0` mass-12 lift of
+height one/support 396 or height four.  The seven hard directions also force
+`F6=2hM6+hM2^3-3M2M4` identically zero, so that opposite cell must satisfy
+`F6=0`.  In opposite normalization `N'_(2r)=(-h)M_(2r)`, encode this as
+`2N'_6+(N'_2)^3+3N'_2*N'_4=0`; do not copy the hard-sign formula unchanged.
+The `P=5,Q=3` branch retains the literal-or-lift dichotomy.  Its 22,308
+patterns have full weighted feature ranks through degree six, ruling out an
+analogous universal polynomial identity in `N2,N4,N6` at those degrees, not
+every conceivable invariant.  Proposition 15.746 is an
+exhaustive finite equality classification and proved open reduction, not a
+close of `u=4`.
+
 Residual (ii) is still open at critical `p=5,7`, at `p=11,k>=50`, in the
 two `p=13,k=60` residues `u=4,6` and all later p13 layers, at `p=17,k>=76`,
 and in later layers for primes `p>=19`; within the branch-B fourth shell, the
-next prime is `p=29`.  Propositions 15.743--15.745 are finite certificates,
+next prime is `p=29`.  Propositions 15.743--15.746 are finite certificates
+or open reductions,
 not an all-prime row theorem.  The preferred generic front is therefore a
 structural version of its common-energy/cut mechanism that survives when
 the number of distance bins grows.  Another independent coefficient-cell
 catalog, one-direction floor, halving heuristic, or longer complete-domain
 timeout does not advance that gate.  The next finite p13 implication is the
-support-330 sharp mass-ten equality classification on `J(13,7)`, reusing
-15.738's third-difference annihilator; it feeds `u=4` and partially prunes
-`u=6`.  Its expected candidates are the 78 omitted-pair and 286 all-equal
-triple supports, with only 70 anchored no-goods.  This is not a census of the
+single `P=3,Q=5,b=0` mass-12 cell under the proved `F6=0` constraint, split
+between height one/support 396 and height four.  Do not launch a broad
+support-396, mass-12, or directional-profile census, and do not reopen the
 already-closed `u=0,3` rows.  Before launching a finite p11/p13-later
 computation, identify the invariant that could extend beyond that one row or
 explain why the finite row is a genuine base obstruction.

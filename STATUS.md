@@ -1,4 +1,33 @@
-# Status (2026-08-31; through Proposition 15.745)
+# Status (2026-08-31; through Proposition 15.746)
+
+**15.746 is an exhaustive finite equality classification and proved open
+reduction for `p=13,t=4,u=4`; it does not close that residue.**  The
+pointwise all-positive `b=2` quadrature, followed by Proposition 15.688,
+turns every hard mean-22 cell into a Boolean degree-two lift of support 330
+on `J(13,7)`.  An exact 1,716-variable model uses all 1,638 certified
+third-difference identities, the support and anchor equations, and all 70
+anchored candidate no-goods (1,710 constraints).  Exact infeasibility,
+independently replayed with one worker, proves that the complete catalog is
+exactly 78 omitted pairs and 286 all-equal triples.
+
+Their offsets force a uniform hard family: omitted pairs have `P=3`, while
+all-equal triples have `P=5`; the families cannot mix and
+`hT=14P-61`.  The seven opposite excesses sum to five, so at least two
+opposite cells have scaled mean 12.  In the `P=3` branch their count is
+`Q=5`, where the literal is excluded modulo six; each is therefore a `b=0`
+mass-12 lift, of height one/support 396 or height four.  Moreover the seven
+hard omitted-pair directions force
+`F6=2hM6+hM2^3-3M2M4` to vanish identically, so every such `Q=5` cell
+satisfies `F6=0`; in its natural opposite normalization
+`N'_(2r)=(-h)M_(2r)`, this is
+`2N'_6+(N'_2)^3+3N'_2*N'_4=0`.  In the `P=5,Q=3` branch, the
+literal-or-lift dichotomy remains; the weighted feature ranks are full
+through degree six, excluding an analogous universal polynomial identity in
+`N2,N4,N6` at those degrees.  The exact
+`p=13,k=60` remainder is still `u in {4,6}`.  The next finite gate is the
+single `Q=5,b=0` mass-12 cell under that opposite-normalized sextic
+constraint, split by height one versus four,
+not a broad support census.
 
 **15.745 is an exhaustive finite aggregate certificate that CLOSES the
 `p=13,t=4,u=0` branch; together with 15.744 the exact `k=60` remainder is
@@ -32,11 +61,11 @@ edge-count sensitive, both models are rebuilt with `|H|=61` and
 `l1<=61-Q`; both are exactly infeasible.  The edge-independent Boolean
 catalog then leaves `B=x_i*x_j`.  Six hard roots force
 `G=2hM_4-M_2^2` to vanish identically, while that opposite selected pair
-gives `-3(i-j)^4!=0`.  Propositions 15.744--15.745 do not close the full
+gives `-3(i-j)^4!=0`.  Propositions 15.744--15.746 do not close the full
 `p=13,k=60` row or residual (ii); the two surviving residues are `u=4,6`.
-The next finite gate is the sharp mass-ten Boolean equality classification
-on `J(13,7)`, reusing 15.738's third-difference annihilator; it feeds `u=4`
-without reopening either closed residue.
+Proposition 15.746 now completes the sharp mass-ten equality classification
+and reduces `u=4` to the branchwise mean-12 cells described above without
+reopening either closed residue.
 
 **15.743 is an exhaustive finite aggregate certificate that CLOSES the
 generic `p=17,t=3` row, namely `k=74`.**  The nine hard quotients satisfy
@@ -1368,7 +1397,7 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 | Bi-tight majorization algebra (15.167) | CANDIDATE | `prop15167.py` |
 | Type I freeness-fail ND (two-level Max−) | **CLOSED** (that slice) | 15.272 \(k=1\cup k=3\) \(\Rightarrow G_+\succ0\Rightarrow\) 15.249 dual-eq empty |
 | Residual (ii), affine + even \(k\le4p-2\) | **CLOSED** (that range) | 15.179 + 15.236 + 15.237 |
-| Residual (ii), even \(k\ge4p\) | **OPEN globally; first three layers CLOSED for \(p\ge11\), with \(p=13,k=58\) and \(p=17,k=74\) also CLOSED and two residues removed at \(p=13,k=60\)** | 15.734--15.735 and 15.737 close \(k\in\{4p,4p+2,4p+4\}\) for every boundary and every \(p\ge11\); 15.738--15.742 close \(p=13,k=58\), 15.743 closes \(p=17,k=74\), and 15.744--15.745 close the \(u=3,0\) branches at \(p=13,k=60\). Remaining: critical \(p=5,7\); \(p=11\) at \(k\ge50\); \(p=13,k=60,u\in\{4,6\}\) and later p13 layers; \(p=17\) at \(k\ge76\); and later layers for primes \(p\ge19\). The next branch-B \(t=3\) prime is \(p=29\). |
+| Residual (ii), even \(k\ge4p\) | **OPEN globally; first three layers CLOSED for \(p\ge11\), with \(p=13,k=58\) and \(p=17,k=74\) also CLOSED and two residues removed at \(p=13,k=60\)** | 15.734--15.735 and 15.737 close \(k\in\{4p,4p+2,4p+4\}\) for every boundary and every \(p\ge11\); 15.738--15.742 close \(p=13,k=58\), 15.743 closes \(p=17,k=74\), and 15.744--15.745 close the \(u=3,0\) branches at \(p=13,k=60\). Proposition 15.746 classifies the sharp support-330 hard cells in `u=4` and forces the `P=3,Q=5,F6=0` mass-12 gate, but closes neither surviving family. Remaining: critical \(p=5,7\); \(p=11\) at \(k\ge50\); \(p=13,k=60,u\in\{4,6\}\) and later p13 layers; \(p=17\) at \(k\ge76\); and later layers for primes \(p\ge19\). The next branch-B \(t=3\) prime is \(p=29\). |
 | Type I, multi-level Max− | **OPEN** | 15.543 \(\mu_{1d}\); 15.544 p=5 mix; 15.546 p=7 mix \(109/2863<|T|\); 15.551 Galois line-union; 15.559 Aut_e DEAD as \(A_{\mathrm{full}}\) name; `type_I_multilevel_bad_case_ND_closed=False` |
 | \(\lambda_{\min}(\Phi)\ge6\) | **OPEN** | 15.279; 15.550–15.582: \(S=\mathrm{Kl}\), \(\mu_{1d}\), \(\mu_{k=3}\) named; \(p=5\) \(Q_{++}=48/13\); \(A_{\mathrm{full}}\) / \(D\) / ensemble \(Q_\tau\) unnamed; `phi_F_ge_6=False` |
 | E(1) / \(L=\tfrac12\) | **OPEN** | needs the four leftovers above |
@@ -1377,7 +1406,7 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 ### Fatal gaps (honest)
 
 1. Residual **(i)** two-level dual-eq: **CLOSED** by 15.272 (not Aut-Schur, not Gsum LB). Multi-level Type I is **OPEN**. `gsum_disj_lb` remains False and is unused.
-2. Residual **(ii)** for affine + even \(k\le4p-2\): **CLOSED** (15.179 + 15.236 + 15.237). For \(k\ge4p\), the first three layers are **CLOSED** for every \(p\ge11\) by 15.734--15.735 and 15.737; 15.738--15.742 additionally close all of `p=13,k=58`, 15.743 closes `p=17,k=74`, and 15.744--15.745 close `u=3,0` at `p=13,k=60`. Critical \(p=5,7\), \(p=11\) at \(k\ge50\), `p=13,k=60,u in {4,6}` and later p13 layers, \(p=17\) at \(k\ge76\), and later layers for primes \(p\ge19\) remain **OPEN**; branch-B \(t=3\) next occurs at \(p=29\). Do not call residual (ii) globally closed.
+2. Residual **(ii)** for affine + even \(k\le4p-2\): **CLOSED** (15.179 + 15.236 + 15.237). For \(k\ge4p\), the first three layers are **CLOSED** for every \(p\ge11\) by 15.734--15.735 and 15.737; 15.738--15.742 additionally close all of `p=13,k=58`, 15.743 closes `p=17,k=74`, and 15.744--15.745 close `u=3,0` at `p=13,k=60`. Proposition 15.746 gives an exhaustive support-330 equality catalog and a proved open reduction of `u=4`, not a branch close. Critical \(p=5,7\), \(p=11\) at \(k\ge50\), `p=13,k=60,u in {4,6}` and later p13 layers, \(p=17\) at \(k\ge76\), and later layers for primes \(p\ge19\) remain **OPEN**; branch-B \(t=3\) next occurs at \(p=29\). Do not call residual (ii) globally closed.
 
 ### Remainder progress (15.172–194)
 

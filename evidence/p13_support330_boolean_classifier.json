@@ -1,0 +1,155 @@
+{
+  "experiment": "p13_support330_boolean_classifier",
+  "scope": "Boolean degree-at-most-two functions of support 330 on J(13,7)",
+  "result_status": "COMPLETE_EXACT_FULL_MODEL_INFEASIBILITY",
+  "request_fingerprint": "291f1d383eef1aa71612d255f2c70f00aca2f86d8674fe4b888f08f30a192760",
+  "candidate_catalog": {
+    "slice": "J(13,7)",
+    "point_count": 1716,
+    "pair_coordinate_count": 78,
+    "third_difference_identity_count": 1638,
+    "third_difference_identity_sha256": "ee92d6662f0f14523dc4c6620f89b407a66048dd4a6c0962dd9b058800136083",
+    "identity_nullspace_is_exact_degree_at_most_two_space": true,
+    "support_size": 330,
+    "support_density": "330/1716=5/26",
+    "full_candidate_count": 364,
+    "distinct_candidate_count": 364,
+    "family_counts": {
+      "omitted_pair": 78,
+      "all_equal_triple": 286
+    },
+    "candidate_catalog_sha256": "4edf1fe1b9c73f05598b667dba121f064807c68421a4df2c8db7090a3e3ff35f",
+    "support_point_anchor_index": 0,
+    "support_point_anchor": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "support_point_anchor_is_wlog_by_S13_transitivity": true,
+    "candidate_catalog_is_S13_invariant": true,
+    "S13_symmetry_certificate": {
+      "generator_family": "adjacent_coordinate_transpositions",
+      "generator_count": 12,
+      "catalog_images_checked": 4368,
+      "catalog_closed_by_generator": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "catalog_closed_under_generated_S13": true,
+      "anchor_orbit_size": 1716,
+      "anchor_orbit_is_all_J13_7": true,
+      "anchor_reduction_verified": true
+    },
+    "anchored_candidate_count": 70,
+    "anchored_family_counts": {
+      "omitted_pair": 15,
+      "all_equal_triple": 55
+    },
+    "anchored_candidate_catalog_sha256": "84ce6099dcca66f7cc2792dc60bcbb378672f2e9cac2b19e02812f2f20563c7a",
+    "omitted_pair_support_formula": "C(11,7)=330",
+    "all_equal_triple_support_formula": "C(10,7)+C(10,4)=120+210=330",
+    "omitted_pair_anchor_formula": "C(6,2)=15",
+    "all_equal_triple_anchor_formula": "C(7,3)+C(6,3)=35+20=55",
+    "lift_target_identities_verified": {
+      "omitted_pair": true,
+      "all_equal_triple": true
+    },
+    "b2_combined_target_offsets": {
+      "omitted_pair": 3,
+      "all_equal_triple": 5
+    },
+    "every_candidate_satisfies_all_1638_identities": true,
+    "candidate_catalog_verified": true,
+    "catalog_exhaustiveness_claimed": false
+  },
+  "model": {
+    "boolean_variable_count": 1716,
+    "constraint_count": 1710,
+    "third_difference_equality_count": 1638,
+    "support_equation_count": 1,
+    "anchor_equation_count": 1,
+    "anchored_nogood_count": 70,
+    "shard_fixing_count": 0,
+    "model_validation": "",
+    "model_textproto_sha256": "7ace4efab04ada945381ad7826a8659dbd9c6d2292e543c6dced0894750da066",
+    "candidate_catalog_sha256": "4edf1fe1b9c73f05598b667dba121f064807c68421a4df2c8db7090a3e3ff35f",
+    "anchored_candidate_catalog_sha256": "84ce6099dcca66f7cc2792dc60bcbb378672f2e9cac2b19e02812f2f20563c7a",
+    "third_difference_identity_sha256": "ee92d6662f0f14523dc4c6620f89b407a66048dd4a6c0962dd9b058800136083",
+    "partition": {
+      "scheme": "binary_prefix_of_anchored_boolean_assignment",
+      "shard_index": 0,
+      "shard_count": 1,
+      "prefix_width": 0,
+      "fixed_point_indices": [],
+      "fixed_values": [],
+      "all_70_nogoods_retained_in_every_shard": true,
+      "nogoods_are_not_sharded": true,
+      "partition_is_disjoint_and_exhaustive": true
+    },
+    "constraint_scope": [
+      "1716 Boolean values",
+      "all 1638 exact third-difference identities",
+      "exact support size 330",
+      "one support-point anchor",
+      "all 70 anchored candidate no-goods",
+      "optional exact binary-prefix shard fixings"
+    ]
+  },
+  "solver": {
+    "name": "OR-Tools CP-SAT",
+    "version": "9.15.6755",
+    "status": "INFEASIBLE",
+    "status_code": 3,
+    "num_search_workers": 32,
+    "deterministic_one_worker_mode": false,
+    "random_seed": 0,
+    "randomize_search": false,
+    "cp_model_presolve": true,
+    "symmetry_level": 3,
+    "max_time_seconds": 300.0,
+    "wall_time_seconds": 26.173190557,
+    "outer_elapsed_seconds": 26.21273798000766,
+    "deterministic_time": 503.73806340011174,
+    "branches": 1080477,
+    "conflicts": 291535,
+    "solution_count_lower_bound": 0
+  },
+  "classification": {
+    "shard_infeasible": true,
+    "full_catalog_exhaustive": true,
+    "counterexample_found": false,
+    "incomplete": false,
+    "theorem_claim_requires_full_unsharded_or_complete_shard_cover": true
+  },
+  "witness": null,
+  "gpu_catalog_cross_check": {
+    "requested": true,
+    "proof_premise": false,
+    "cpu_integer_verification_remains_authoritative": true,
+    "status": "SKIPPED_NO_CUDA_BACKEND",
+    "backend": null,
+    "diagnostics": [
+      "cupy: CUDARuntimeError: cudaErrorNoDevice: no CUDA-capable device is detected"
+    ]
+  },
+  "resume_semantics": {
+    "atomic_output": true,
+    "terminal_exact_result_may_be_reused": true,
+    "unknown_search_state_is_not_checkpointed": true,
+    "unknown_result_is_rerun_from_scratch": true
+  }
+}

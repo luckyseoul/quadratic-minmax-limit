@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-31
 
-**Scope:** every assigned proposition through Proposition 15.745, the live
+**Scope:** every assigned proposition through Proposition 15.746, the live
 predicate wiring, and the attack scripts present during the audit
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
@@ -427,6 +427,36 @@ functional bins in `F_13^2` proves the transverse sign split `6+/7-`, hence
 `695<719`.  Together, 15.744--15.745 leave exactly `u in {4,6}` at
 `p=13,k=60`.  Residual (ii), Type I, and the limit remain open.
 
+A twenty-ninth semantic check gives Proposition 15.746.  The all-positive
+`b=2` quadrature is used pointwise before Proposition 15.688, making each
+hard `u=4` lift Boolean of support 330 on `J(13,7)`.  The exact classifier
+uses 1,716 Boolean variables, all 1,638 third-difference identities, the
+support and anchor equations, and all 70 anchored no-goods: 1,710 constraints
+in total.  Exact infeasibility, independently replayed with one worker,
+proves that the complete catalog is the 78 omitted-pair and 286 all-equal
+triple supports.  Their full and anchored SHA-256 digests are
+`4edf1fe1b9c73f05598b667dba121f064807c68421a4df2c8db7090a3e3ff35f`
+and
+`84ce6099dcca66f7cc2792dc60bcbb378672f2e9cac2b19e02812f2f20563c7a`.
+
+The catalog offsets and common signed total forbid mixing: omitted pairs
+force `P=3`, all-equal triples force `P=5`, and `hT=14P-61`.  The opposite
+excesses sum to five, so at least two opposite cells have mean 12.  At
+`P=3,Q=5`, the literal is excluded modulo six; the cell is a `b=0` mass-12
+lift of height one/support 396 or height four.  The seven hard omitted-pair
+directions force the sextic `F6=2hM6+hM2^3-3M2M4` identically zero, after
+checking all `78^2=6,084` baseline/lift overlaps.  Thus each forced
+`P=3,Q=5` cell satisfies `F6=0`.  The `P=5,Q=3` branch retains the
+literal-or-lift dichotomy.  Across its 22,308 pair/triple patterns, the
+weighted even-moment feature ranks are full through degree six, so there is
+no analogous universal polynomial identity in `N2,N4,N6` at those degrees;
+this does not rule out a different invariant.
+Under the opposite-cell normalization `N'_(2r)=(-h)M_(2r)`, the constraint
+is `2N'_6+(N'_2)^3+3N'_2*N'_4=0`; copying the hard-sign formula would give
+the wrong mixed-term sign.
+This is an exhaustive finite equality classification and proved open
+reduction, not a close; `u in {4,6}` remains exact.
+
 The Bartoli--Storme ``unique-trisecant ceiling'' previously recorded after
 15.729 is **RETRACTED**. Under the corollary's other hypotheses, including
 `d>3+2sqrt(q)` and existence of the configuration, its threshold is the upper
@@ -479,13 +509,13 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 660 source-backed proposition modules from 15.83 through 15.745.
+- There are 661 source-backed proposition modules from 15.83 through 15.746.
 - The labels 15.537, 15.583, and 15.584 have no proposition module.  They are
   unassigned labels, not unreviewed propositions; later source headers mention
   those numbers only as historical range/state markers.
-- Therefore every assigned proposition through 15.745 was included in this
+- Therefore every assigned proposition through 15.746 was included in this
   audit.  The grouped ledger below is by shared mathematical route rather than
-  a 735-row restatement of the assigned propositions.
+  a 736-row restatement of the assigned propositions.
 
 ## Authoritative acceptance chain
 
@@ -494,10 +524,10 @@ The public theorem is gated consistently by the corrected global
 currently `False`. The historical bounded `True` is available only through
 `e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after audit of 15.745 |
+| unit | exact live content | status after audit of 15.746 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
-| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close `k in {4p,4p+2,4p+4}`, for every boundary size, at all primes `p>=11`; 15.738--15.742 close `p=13,k=58`, 15.743 closes `p=17,k=74`, and 15.744--15.745 close `u=3,0` at `p=13,k=60`. The exact remainder includes critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u in {4,6}` and later p13 layers, every `p>=17,t>=4` layer (beginning with `p=17,k>=76`), and branch-B `t=3` for `p=1 mod 4,p>=29`; the separate positive `p=7,z=7` branch persists. The global predicate stays false. |
+| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close `k in {4p,4p+2,4p+4}`, for every boundary size, at all primes `p>=11`; 15.738--15.742 close `p=13,k=58`, 15.743 closes `p=17,k=74`, and 15.744--15.745 close `u=3,0` at `p=13,k=60`. Proposition 15.746 classifies the sharp support-330 `u=4` hard cells and proves its `P=3/P=5` mean-12 reduction without closing either branch. The exact remainder includes critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u in {4,6}` and later p13 layers, every `p>=17,t>=4` layer (beginning with `p=17,k>=76`), and branch-B `t=3` for `p=1 mod 4,p>=29`; the separate positive `p=7,z=7` branch persists. The global predicate stays false. |
 | Type I | the multi-level `3A+B>0` bad case | **OPEN** — `|κ|=1` needs `G>T` (for example `|μ|≤|L|`), while `|κ|=3` independently needs `χ_d((2p-1)μ+(p-2)ν)>-(p-2)/p`; the particular term is safe but the δ remainder is open |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
@@ -549,6 +579,7 @@ top-level front.
 | **15.743** | cross-direction `P=4+k`, all 698 translated-cut vectors, and the p17 common-Radon energy | **EXHAUSTIVE FINITE CERTIFICATE.** Broad-domain one-worker CP-SAT excludes excess one, excess-two energy at least 71, excess-three energy at least 120, and opposite energy at least 73 without a prior energy cap; fixed sum `-24` then makes `(-3)^8` the unique opposite row of energy 72.  The only quotient partition not killed rowwise has `767<1211<=1211+34C`, closing `p=17,k=74`. |
 | **15.744** | full p13 t4 residue sieve, b10 contact-layer and punctured-lift certificates, changed H61 mass-14 models, and six-root quartic | **PROVED BRANCH THEOREM WITH EXHAUSTIVE LOCAL CERTIFICATES.** Rank 78 makes the exact b10 cell pointwise and the separate punctured model excludes its two-unit alternative; the H59 height-four result is not imported, and both H61 models are rebuilt and infeasible.  The selected-pair survivor contradicts the identically zero quartic, closing exactly `p=13,t=4,u=3`. |
 | **15.745** | full 74-cut p13 rows, exact Radon partition energies, and collision-one transverse sign audit | **EXHAUSTIVE FINITE AGGREGATE CERTIFICATE.** Three partitions die rowwise, one by `691<721+26C`, and the equality case of the last gives the sharpened `695<719` contradiction.  With 15.744, the exact `p=13,k=60` remainder is `u in {4,6}`. |
+| **15.746** | exact support-330 Boolean catalog, branchwise `u=4` edge ledger, and omitted-pair sextic | **EXHAUSTIVE FINITE EQUALITY CLASSIFICATION AND PROVED OPEN REDUCTION.** Exact infeasibility makes the 78 omitted pairs and 286 all-equal triples exhaustive.  Their offsets force uniform `P=3` or `P=5` and at least two opposite mean-12 cells; at `P=3,Q=5` the cell is a `b=0` mass-12 lift satisfying `F6=2hM6+hM2^3-3M2M4=0`.  Neither `u=4` family is closed, so `u in {4,6}` remains exact. |
 
 ## Exact duplicated run
 
@@ -725,8 +756,11 @@ Before spending mesh/GPU time:
    mass-14 catalog and quartic contradiction. Do not reopen the generic p13
    `t=3` aggregate: 15.740 leaves exactly `1^4 2^3`, 15.741 supplies its
    common-graph energy identity, and 15.742 proves the resulting integral
-   row system empty.  The next finite p13 gate is the sharp mass-10 equality
-   classification feeding `u=4`, not a rerun of `u=0,3`;
+   row system empty.  Proposition 15.746 completes the sharp mass-10
+   support-330 classification and proves the branchwise `u=4` reduction.
+   Do not rerun it.  The next finite p13 gate is one
+   `P=3,Q=5,b=0` mass-12 cell under `F6=0`, split by height one/support 396
+   versus height four, not a broad census or a rerun of `u=0,3`;
 5. search tracked files, untracked scripts, `/tmp` artifact names and hashes,
    git history, GitHub, MathOverflow, literature notes, and OEIS when number
    patterns are involved;

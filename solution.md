@@ -11494,6 +11494,153 @@ Evidence: `src/e1_gmin_m4_prop15745.py`,
 `evidence/e1_gmin_m4_prop15745.json`, and
 `evidence/NOTE_2026-08-31_p13_t4_u0_close.md`.
 
+## Proposition 15.746 — sharp mass-ten catalog and the p=13,t=4,u=4 reduction
+
+Let \(\Omega=J(13,7)\).  A hard cell in the surviving residue \(u=4\)
+has \(b=2\) and scaled mean 22.  The all-positive quadrature behind the
+\(b=2\) floor first forces its equality baseline pointwise, not merely after
+stabilizer averaging.  Subtracting that XNOR baseline gives a nonnegative
+integral degree-at-most-two lift \(B\) with
+
+\[
+ 4p\,\mathbb E_\Omega B=10.                       \tag{15.746.1}
+\]
+
+Only after this pointwise step does Proposition 15.688 apply.  Its sharp
+mass-ten equality gives \(0\le B\le1\), so \(B\) is Boolean and
+
+\[
+ |\operatorname{supp}B|={10\over52}{13\choose7}=330. \tag{15.746.2}
+\]
+
+Proposition 15.738 already certifies that the quadratic evaluation space on
+\(\Omega\) has rank 78 and is exactly the nullspace of 1,638 independent
+third-difference identities.  Introduce one Boolean value \(f_X\) for each
+of the 1,716 points of \(\Omega\), impose those identities and
+\(\sum_Xf_X=330\), and anchor one value \(f_{X_0}=1\).  The full candidate
+catalog consists of
+
+\[
+ \begin{array}{c|c|c}
+ \text{family}&B(x)&\text{count}\\ \hline
+ \text{omitted pair}&(1-x_i)(1-x_j)&{13\choose2}=78,\\
+ \text{all-equal triple}&
+ 1-x_i-x_j-x_k+x_ix_j+x_ix_k+x_jx_k&{13\choose3}=286.
+ \end{array}                                      \tag{15.746.3}
+\]
+
+Every displayed function has support 330 and satisfies all 1,638
+identities.  The catalog is invariant under the twelve adjacent coordinate
+transpositions, and the induced coordinate action is transitive on
+\(\Omega\), so the anchor loses no nonempty support.  Exactly 15 omitted
+pairs and 55 all-equal triples contain \(X_0\).  Excluding these 70 anchored
+supports gives an exact model with 1,716 Boolean variables and
+
+\[
+ 1638+1+1+70=1710                                  \tag{15.746.4}
+\]
+
+constraints.  Exact CP-SAT returns `INFEASIBLE`; a deterministic one-worker
+replay gives the same result.  The full and anchored catalog SHA-256 digests
+are, respectively,
+
+```text
+4edf1fe1b9c73f05598b667dba121f064807c68421a4df2c8db7090a3e3ff35f
+84ce6099dcca66f7cc2792dc60bcbb378672f2e9cac2b19e02812f2f20563c7a
+```
+
+Thus (15.746.3) exhausts every Boolean quadratic of support 330 on
+\(J(13,7)\).
+
+Return to the seven hard directions.  In \(z_i=2x_i-1\) coordinates the
+pointwise target is
+
+\[
+ 4+z_i z_j+4B.                                    \tag{15.746.5}
+\]
+
+For an omitted-pair lift,
+\(4B=1-z_a-z_b+z_az_b\), so its total coefficient offset is three.  For an
+all-equal triple,
+\(4B=1+z_az_b+z_az_c+z_bz_c\), so the offset is five.  The common signed
+edge total makes the hard parallel count \(P\) common.  The isolated-chart
+coefficient congruence and \(7P\le61\) therefore force
+
+\[
+ \begin{array}{c|c|c}
+ \text{hard family}&P&hT\\ \hline
+ \text{omitted pair}&3&-19,\\
+ \text{all-equal triple}&5&9,
+ \end{array}
+ \qquad hT=14P-61.                                \tag{15.746.6}
+\]
+
+In particular the two hard families cannot mix.  If \(Q_L\) is an opposite
+parallel count, then
+
+\[
+ \sum_LQ_L=61-7P,
+ \qquad e_L=P+Q_L-8\ge0,
+ \qquad a_L=12+14e_L.                             \tag{15.746.7}
+\]
+
+Since \(\sum_Le_L=5\), at least two opposite directions have \(e_L=0\)
+and scaled mean 12.  Their minimum parallel count is \(Q=5\) in the
+omitted-pair branch and \(Q=3\) in the all-equal-triple branch.
+
+A phase-zero mean-12 cell has exactly the following still-live alternatives:
+the exact \(b=12\) literal \(A=1-x_j\), with target
+\(3+2A=4-z_j\), or a \(b=0\) cell \(A=2C\), where \(C\) is a nonzero
+nonnegative integral quadratic satisfying \(4p\mathbb E C=12\).
+Proposition 15.688 makes the latter's height exactly one or four; height one
+is Boolean of support 396.  In the omitted-pair branch, a literal at the
+minimum \(Q=5\) would require \(6\mid Q-3\), which is false.  Hence every
+forced mean-12 cell there is a \(b=0\) mass-12 lift, of height one/support
+396 or height four.  At \(P=5,Q=3\), the literal congruence is compatible,
+so the all-equal-triple branch retains the literal-or-lift dichotomy.
+
+There is one further common-graph consequence in the omitted-pair branch.
+For \(r=1,2,3\), its normalized hard moments have the two-power-sum form
+\(hM_{2r}=\alpha^{2r}+\beta^{2r}\).  The degree-six Newton identity gives
+
+\[
+ F_6=2hM_6+hM_2^3-3M_2M_4=0.                    \tag{15.746.8}
+\]
+
+The complete-graph and star gauge sums vanish in degrees two, four, and six;
+the executable certificate also checks all \(78^2=6084\) possible overlaps
+between the baseline and omitted-pair coordinates.  Thus the seven hard
+directions are seven projective roots of the homogeneous binary sextic
+\(F_6\), forcing it to vanish identically.  Every forced
+\(P=3,Q=5,b=0\) mass-12 opposite cell must consequently satisfy \(F_6=0\).
+For the opposite-cell sign normalization
+\(N'_{2r}=(-h)M_{2r}\), this condition must be encoded as
+
+\[
+ 2N'_6+(N'_2)^3+3N'_2N'_4=0,                    \tag{15.746.9}
+\]
+
+not by copying the hard-sign Newton formula verbatim.  For the \(P=5\)
+family, the 22,308 baseline-pair/triple patterns give ranks (1,2,3) to the
+weighted feature lists
+(N_2), ((N_4,N_2^2)), and
+((N_6,N_2N_4,N_2^3)).  Thus there is no nonzero universal
+weighted-homogeneous polynomial identity in these even moments through
+degree six; this is not a claim about every conceivable invariant.
+
+Proposition 15.746 is an **exhaustive finite equality classification and
+proved open reduction**.  It does not exclude either \(u=4\) family, so the
+exact \(p=13,k=60\) remainder stays \(u\in\{4,6\}\).  The next narrow gate
+is one \(Q=5,b=0\) mass-12 cell under (15.746.9), split into height one
+(support 396) and height four; a broad support census is not the gate.
+Residual (ii), Type I, and the quadratic-minmax limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15746.py`,
+`tests/test_prop15746.py`,
+`evidence/e1_gmin_m4_prop15746.json`,
+`evidence/p13_support330_boolean_classifier.json`, and
+`evidence/NOTE_2026-08-31_p13_support330_u4_reduction.md`.
+
 ## Proposition 15.723 — paired-cube obstruction to middle floor-plus-two lifts
 
 Put (p=2m-1\ge17). Let (A\ge0) be an integer-valued quadratic on
