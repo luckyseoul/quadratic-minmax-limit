@@ -11080,6 +11080,159 @@ Evidence: `src/e1_gmin_m4_prop15742.py`,
 `evidence/e1_gmin_m4_prop15742.json`, and
 `evidence/NOTE_2026-08-31_p13_six_dilate_energy_close.md`.
 
+## Proposition 15.743 — full translated-cut energy closes p=17,k=74
+
+In the generic branch-B row at \(p=17,t=3\), there are nine hard and nine
+opposite directions.  The hard quotient variables satisfy
+
+\[
+ k_L\ge1,\qquad \sum_{L\ \mathrm{hard}}k_L=12,
+\]
+
+so the excess partitions are \((3)\), \((2,1)\), and \((1,1,1)\), where
+\(e=k_L-1\).  They leave respectively eight, seven, and six exact hard
+stars.  In every case these roots force both homogeneous forms \(M_2\) and
+\(M_4\) to vanish identically.
+
+The normalization must be obtained before replacing an exact star by its
+eight-bin row.  For an exact hard row \(k_L=1\), the unspecialized local and
+common-graph sums give
+
+\[
+ 17(P_L-3)-18=hT-P_L,
+ \qquad\text{hence}\qquad hT=18P_L-69.           \tag{15.743.1}
+\]
+
+Thus all exact hard stars have one common \(P_L\).  There are at least six,
+so their parallel edges give \(6P_L\le75\), hence \(P_L\le12\).  In the
+isolated \(I=0\) chart, literal coefficient comparison gives
+\(P_L\equiv5\pmod8\).  Consequently \(P_L=5\), and only now do we obtain
+\(hT=21\) and the exact-star row \(q=(2)^8\).  Independently, every opposite
+direction has \(Q=3\), so the hard and opposite edge totals are \(48\) and
+\(27\), again giving \(hT=48-27=21\).
+
+The parallel count of a general hard row is therefore not a free local
+parameter.  Let \(P\) be that count.  The local coefficient identity gives
+
+\[
+ \sum_{a=1}^8q_L(a)=17(P-3)-18k_L.                \tag{15.743.2}
+\]
+
+Since all rows come from that one signed 75-edge graph and the zero bin of a
+hard row is \(P\), the common difference-Radon transform gives independently
+
+\[
+ \sum_{a=1}^8q_L(a)=hT-P=21-P.                   \tag{15.743.3}
+\]
+
+Equating (15.743.2) and (15.743.3) forces
+
+\[
+ \boxed{P=4+k_L=5+e.}                            \tag{15.743.4}
+\]
+
+This is the essential cross-direction step.  Local rows with other values
+of \(P\) can exist, but cannot be projections of the same signed graph.
+Every opposite direction has \(Q=3\), and its off-zero-bin sum is
+\(-hT-Q=-24\).
+
+For a nine-set \(X\subset\mathbf F_{17}\), put
+
+\[
+ c_X(a)=|X\mathbin\triangle(X+a)|,
+ \qquad 1\le a\le8.
+\]
+
+As \(X\) ranges over \(J(17,9)\), there are exactly 698 distinct vectors
+\(c_X\).  Translation-summing a cut gives
+
+\[
+ \sum_t\operatorname{cut}_W(X+t)=c_X\mathbin\cdot q.
+\]
+
+For a hard cell \(A=9-\operatorname{cut}_W\), while an opposite cell has
+\(B=-6-\operatorname{cut}_W/2\).  Thus every hard row of excess \(e\) lies
+in the necessary integral relaxation
+
+\[
+ \begin{split}
+ &\sum_aq_a=16-e,\qquad \|q\|_1\le70-e,\\
+ &\sum_aa^2q_a\equiv\sum_aa^4q_a\equiv0\pmod {17},\\
+ &c_X\mathbin\cdot q\le153\qquad(X\in J(17,9)),
+ \end{split}                                      \tag{15.743.5}
+\]
+
+and every opposite row lies in
+
+\[
+ \begin{split}
+ &\sum_aq_a=-24,\qquad \|q\|_1\le72,\\
+ &\sum_aa^2q_a\equiv\sum_aa^4q_a\equiv0\pmod {17},\\
+ &c_X\mathbin\cdot q\le-204\qquad(X\in J(17,9)).
+ \end{split}                                      \tag{15.743.6}
+\]
+
+Exact one-worker CP-SAT models use the full \(\ell^1\) coordinate domains
+and all 698 cut vectors.  They use neither a prior energy cap, the
+opposite-entry alphabet, nor the lower cut bound.  The resulting sharp row
+certificate is
+
+\[
+ \begin{array}{c|c}
+ \text{row type}&\text{result}\\ \hline
+ e=1&\text{infeasible},\\
+ e=2&\max\|q\|_2^2=70,\\
+ e=3&\max\|q\|_2^2=119,\\
+ \text{opposite}&\max\|q\|_2^2=72.
+ \end{array}                                      \tag{15.743.7}
+\]
+
+The last three bounds are attained, in natural distance order, by
+
+\[
+ (1,-2,5,3,-1,2,5,1),\quad
+ (6,4,-1,-3,-2,-1,4,6),\quad
+ (-3,-3,-3,-3,-3,-3,-3,-3),
+\]
+
+respectively.  Separate broad-domain models prove infeasibility at energies
+71, 120, and 73.  No unverified full-row count or spectral truncation enters
+the certificate.
+
+The two quotient partitions containing \(e=1\) are already impossible by
+(15.743.7).  In the remaining partition \((3)\), the exact
+difference-Radon Gram identity gives the nonexact energy
+
+\[
+ 1211+34C,\qquad
+ C=\sum_\delta {m_\delta\choose2}\ge0.            \tag{15.743.8}
+\]
+
+Indeed the all-row identity is
+\(17\cdot75+2\cdot21^2-2\sum_LP_L^2+34C\), and the eight exact
+\((2,\ldots,2)\) rows contribute \(8\cdot32\).  But (15.743.7) bounds the
+one \(e=3\) row and nine opposite rows by
+
+\[
+ 119+9\cdot72=767<1211.
+\]
+
+Therefore every quotient partition is impossible and
+
+\[
+ \boxed{\text{the residual-(ii) row }p=17,k=74\text{ is empty}.}
+\]
+
+Proposition 15.743 is an **exhaustive finite certificate** at the eight-bin
+aggregate level.  It does not close any \(p\ge17,t\ge4\) row or the generic
+branch-B \(t=3\) range for \(p\equiv1\pmod4\), which now begins at \(p=29\).
+Residual (ii), Type I, and the quadratic-minmax limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15743.py`,
+`tests/test_prop15743.py`,
+`evidence/e1_gmin_m4_prop15743.json`, and
+`evidence/NOTE_2026-08-31_p17_full_translated_cut_energy_close.md`.
+
 ## Proposition 15.723 — paired-cube obstruction to middle floor-plus-two lifts
 
 Put (p=2m-1\ge17). Let (A\ge0) be an integer-valued quadratic on

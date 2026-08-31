@@ -1,4 +1,33 @@
-# Status (2026-08-31; through Proposition 15.742)
+# Status (2026-08-31; through Proposition 15.743)
+
+**15.743 is an exhaustive finite aggregate certificate that CLOSES the
+generic `p=17,t=3` row, namely `k=74`.**  The nine hard quotients satisfy
+`k_L>=1` and `sum k_L=12`, so their excess-three partitions have six, seven,
+or eight exact stars.  They force `M_2=M_4=0`.  An exact star fixes the
+common signed edge total noncircularly: the unspecialized exact-row identity
+is `hT=18P_L-69`, so common `hT` first makes all exact-star parallel counts
+equal; then `6P_L<=75` and `P_L=5 (mod 8)` force `P_L=5`.  Only after that
+step do `hT=21` and the normalized exact-star row `q=(2)^8` follow.
+Combining the resulting common-graph
+identity `sum_(a>0)q_L(a)=21-P_L` with the independent local mean identity
+`sum_(a>0)q_L(a)=17(P_L-3)-18k_L` is essential and gives
+`P_L=4+k_L`; this relation is not a free local-cell normalization.
+
+All 24,310 nine-sets give exactly 698 distinct translation-averaged
+eight-bin cut vectors.  Exact broad-domain enumeration using their upper
+cut inequalities, the `l1` edge bounds, and the two moment congruences makes
+hard excess one infeasible, gives sharp excess-two and excess-three row
+energies 70 and 119, and forces the opposite row uniquely to `(-3)^8`, of
+energy 72.  No lower-cut inequality or ad hoc coordinate pruning is used.
+The partitions containing excess one are therefore impossible.  In the
+only remaining partition `1^8 4`, the common difference-Radon identity is
+
+`sum_(one excess-three + nine opposite) ||q_L||_2^2 = 1211+34C`.
+
+Its rowwise upper bound is only `119+9*72=767`, a contradiction.  Thus
+`p=17,k=74` is closed.  This is a finite-prime certificate, not a generic
+all-prime theorem: `p=17,k>=76` and later layers for primes `p>=19` remain
+open, while the next generic branch-B `t=3` prime is `p=29`.
 
 **15.742 is an exhaustive finite certificate that CLOSES the last generic
 `p=13,t=3` partition and hence, with 15.739, all of `p=13,k=58`.**  For each
@@ -12,8 +41,8 @@ and seven opposite rows have total energy at most
 `707+26C>=707`.  The quartic value code, root-quartet split, and binary
 midpoint lift are not needed.  Residual (ii), multi-level Type I, and the
 limit remain OPEN; the residual ranges still requiring serious work are
-critical `p=5,7`, `p=11,k>=50`, `p=13,k>=60`, and the generic `p>=17`
-later layers beginning at `k=4p+6`.
+critical `p=5,7`, `p=11,k>=50`, `p=13,k>=60`, `p=17,k>=76`, and the
+later layers for primes `p>=19`; the next branch-B `t=3` prime is `p=29`.
 
 **15.741 PROVES the common-graph moment and difference-Radon reduction used
 by 15.742.**  Four exact
@@ -69,13 +98,16 @@ The remaining generic `t=3` branch has a new proved moment reduction.  For
 opposite signed coefficient into `{-1,0,1,2,3}`.  Strengthened full `p=17`
 conditional averages additionally force every cut into `[-26,-12]`, so the
 associated quadratic on `J(17,9)` has values in `{0,...,7}`, mean `6/17`,
-and total mass 8,580.  Full p17 models are still unresolved.  At generic `p=13`, an explicit elevated
+and total mass 8,580.  Proposition 15.743 later closes this `p=17,k=74`
+row by its common difference-Radon energy, while the all-prime reduction
+remains live beginning at `p=29`.  At generic `p=13`, an explicit elevated
 `b=2,a=28` local cell has normalized `S_2=0` but `S_4=5` (hence global
 `M_4=5h` for its hard sign), so another one-direction
 floor/moment pass cannot close it.  This is a method counterexample, not a
 residual graph; 15.742 instead closes that row by common energy.  Critical
 `p=5,7`, `p=11,k>=50`, `p=13,k>=60`, and generic
-`p>=17,k>=4p+6` remain OPEN.
+`p=17,k>=76` and later layers for primes `p>=19` remain OPEN; the generic
+branch-B `t=3` range resumes at `p=29`.
 
 **15.738 is an exhaustive finite residual-cell certificate on `J(13,7)`.**
 Proposition 15.688 reduces a relevant `b=0,a=14` lift to maximum one or
@@ -1296,7 +1328,7 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 | Bi-tight majorization algebra (15.167) | CANDIDATE | `prop15167.py` |
 | Type I freeness-fail ND (two-level Max−) | **CLOSED** (that slice) | 15.272 \(k=1\cup k=3\) \(\Rightarrow G_+\succ0\Rightarrow\) 15.249 dual-eq empty |
 | Residual (ii), affine + even \(k\le4p-2\) | **CLOSED** (that range) | 15.179 + 15.236 + 15.237 |
-| Residual (ii), even \(k\ge4p\) | **OPEN globally; first three layers CLOSED for \(p\ge11\), and \(p=13,k=58\) CLOSED** | 15.734--15.735 and 15.737 close \(k\in\{4p,4p+2,4p+4\}\) for every boundary and every \(p\ge11\); 15.738--15.739 close the exceptional \(p=13,t=3,u=3\) row, and 15.740--15.742 close its generic four-exact complement by the common-graph energy contradiction. Remaining: critical \(p=5,7\); \(p=11\) at \(k\ge50\); \(p=13\) at \(k\ge60\); and the generic \(p\ge17\) later branches. |
+| Residual (ii), even \(k\ge4p\) | **OPEN globally; first three layers CLOSED for \(p\ge11\), with \(p=13,k=58\) and \(p=17,k=74\) also CLOSED** | 15.734--15.735 and 15.737 close \(k\in\{4p,4p+2,4p+4\}\) for every boundary and every \(p\ge11\); 15.738--15.742 close \(p=13,k=58\), and 15.743 closes \(p=17,k=74\) by the common difference-Radon energy contradiction. Remaining: critical \(p=5,7\); \(p=11\) at \(k\ge50\); \(p=13\) at \(k\ge60\); \(p=17\) at \(k\ge76\); and later layers for primes \(p\ge19\). The next branch-B \(t=3\) prime is \(p=29\). |
 | Type I, multi-level Max− | **OPEN** | 15.543 \(\mu_{1d}\); 15.544 p=5 mix; 15.546 p=7 mix \(109/2863<|T|\); 15.551 Galois line-union; 15.559 Aut_e DEAD as \(A_{\mathrm{full}}\) name; `type_I_multilevel_bad_case_ND_closed=False` |
 | \(\lambda_{\min}(\Phi)\ge6\) | **OPEN** | 15.279; 15.550–15.582: \(S=\mathrm{Kl}\), \(\mu_{1d}\), \(\mu_{k=3}\) named; \(p=5\) \(Q_{++}=48/13\); \(A_{\mathrm{full}}\) / \(D\) / ensemble \(Q_\tau\) unnamed; `phi_F_ge_6=False` |
 | E(1) / \(L=\tfrac12\) | **OPEN** | needs the four leftovers above |
@@ -1305,7 +1337,7 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 ### Fatal gaps (honest)
 
 1. Residual **(i)** two-level dual-eq: **CLOSED** by 15.272 (not Aut-Schur, not Gsum LB). Multi-level Type I is **OPEN**. `gsum_disj_lb` remains False and is unused.
-2. Residual **(ii)** for affine + even \(k\le4p-2\): **CLOSED** (15.179 + 15.236 + 15.237). For \(k\ge4p\), the first three layers are **CLOSED** for every \(p\ge11\) by 15.734--15.735 and 15.737; 15.738--15.742 additionally close all of `p=13,k=58`. Critical \(p=5,7\), \(p=11\) at \(k\ge50\), \(p=13\) at \(k\ge60\), and the generic \(p\ge17\) later branches remain **OPEN**. Do not call residual (ii) globally closed.
+2. Residual **(ii)** for affine + even \(k\le4p-2\): **CLOSED** (15.179 + 15.236 + 15.237). For \(k\ge4p\), the first three layers are **CLOSED** for every \(p\ge11\) by 15.734--15.735 and 15.737; 15.738--15.742 additionally close all of `p=13,k=58`, and 15.743 closes `p=17,k=74`. Critical \(p=5,7\), \(p=11\) at \(k\ge50\), \(p=13\) at \(k\ge60\), \(p=17\) at \(k\ge76\), and later layers for primes \(p\ge19\) remain **OPEN**; branch-B \(t=3\) next occurs at \(p=29\). Do not call residual (ii) globally closed.
 
 ### Remainder progress (15.172–194)
 

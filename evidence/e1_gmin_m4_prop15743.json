@@ -1,0 +1,619 @@
+{
+  "dependencies": {
+    "15.735": "isolated chart and generic branch-B hard/opposite ledger",
+    "15.739": "six exact stars force M2=M4=0 and p17 cut reduction",
+    "15.741": "difference-Radon common-graph transform, specialized here to p17"
+  },
+  "difference_radon": {
+    "Gram_entry_checks": 20736,
+    "Gram_entry_values": {
+      "different_directions": 2,
+      "distinct_same_direction": 1,
+      "same_column": 18
+    },
+    "Gram_formula": "B^T*B=17*I+2*J-G_parallel",
+    "collision_parameter": "C=sum_delta binom(m_delta,2)>=0",
+    "difference_class_count": 144,
+    "displacement_square_sum": "sum_delta m_delta^2=75+2*C",
+    "off_bin_parseval": "sum_(L,a>0)q_L(a)^2=17*sum_delta m_delta^2+2*T^2-2*sum_L P_L^2",
+    "p": 17,
+    "partition_ledgers": {
+      "1+1+1": {
+        "all_off_bin_energy": "1479+34*C",
+        "exact_hard_star_count": 6,
+        "exact_hard_star_energy": 192,
+        "hard_excess_partition": [
+          1,
+          1,
+          1
+        ],
+        "hard_parallel_counts": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          6,
+          6,
+          6
+        ],
+        "hard_quotients": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "nonexact_off_bin_energy": "1287+34*C",
+        "nonexact_parseval_base": 1287,
+        "opposite_parallel_counts": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "parallel_square_sum": 339
+      },
+      "2+1": {
+        "all_off_bin_energy": "1475+34*C",
+        "exact_hard_star_count": 7,
+        "exact_hard_star_energy": 224,
+        "hard_excess_partition": [
+          2,
+          1
+        ],
+        "hard_parallel_counts": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          7,
+          6
+        ],
+        "hard_quotients": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          2
+        ],
+        "nonexact_off_bin_energy": "1251+34*C",
+        "nonexact_parseval_base": 1251,
+        "opposite_parallel_counts": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "parallel_square_sum": 341
+      },
+      "3": {
+        "all_off_bin_energy": "1467+34*C",
+        "exact_hard_star_count": 8,
+        "exact_hard_star_energy": 256,
+        "hard_excess_partition": [
+          3
+        ],
+        "hard_parallel_counts": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          8
+        ],
+        "hard_quotients": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          4
+        ],
+        "nonexact_off_bin_energy": "1211+34*C",
+        "nonexact_parseval_base": 1211,
+        "opposite_parallel_counts": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "parallel_square_sum": 345
+      }
+    },
+    "projective_direction_count": 18,
+    "proved": true,
+    "row_index": "(projective L,a), a in F_17/+/-={0,...,8}"
+  },
+  "discarded_spectral_cap_or_full_solution_counts_used": false,
+  "generic_p17_t3_branch_closed": true,
+  "generic_p_ge_17_t3_branch_closed": false,
+  "k_eq_4p_plus_6_shell_closed_for_all_primes": false,
+  "layer_index_t": 3,
+  "multi_level_type_I_closed": false,
+  "original_k": 74,
+  "p": 17,
+  "p17_k_eq_74_closed": true,
+  "partition_exclusions": {
+    "1+1+1": {
+      "excluded": true,
+      "reason": "contains a hard excess-one row"
+    },
+    "2+1": {
+      "excluded": true,
+      "reason": "contains a hard excess-one row"
+    },
+    "3": {
+      "collision_parameter_lower_bound": 0,
+      "common_parseval": "1211+34*C",
+      "common_parseval_lower": 1211,
+      "excluded": true,
+      "gap": 444,
+      "hard_excess_three_energy_upper": 119,
+      "nine_opposite_energy_upper": 648,
+      "nonexact_energy_upper": 767
+    }
+  },
+  "prop": "15.743",
+  "proved": true,
+  "quadratic_minmax_limit_closed": false,
+  "remaining_scope": "critical p=5,7; p=11 at k>=50; p=13 at k>=60; p=17 at k>=76; generic branch-B t=3 from p>=29 and all p>=17 layers t>=4; multi-level Type I; and the limit",
+  "residual_ii_closed": false,
+  "result_status": "exhaustive finite certificate",
+  "row_certificates": {
+    "hard_excess_one": {
+      "constraint_scope": [
+        "integer eight-bin row",
+        "exact row sum",
+        "l1 upper bound",
+        "M2=0 modulo 17",
+        "M4=0 modulo 17",
+        "all 698 translated upper-cut inequalities"
+      ],
+      "constraints_deliberately_not_used": [
+        "prior energy upper bound",
+        "entry alphabet or aggregate coordinate bounds",
+        "lower cut bound",
+        "row parity",
+        "full 136-entry coefficient matrix",
+        "complete-domain Boolean values"
+      ],
+      "explicit_maximizer": null,
+      "feasible": false,
+      "fixed_sum_cauchy_equality": null,
+      "independent_threshold_model": {
+        "constraints": 710,
+        "encoding": "allowed-assignment tables for (q,abs(q),q^2)",
+        "entry_bounds_used": false,
+        "forbidden_energy_floor": null,
+        "lower_cut_bounds_used": false,
+        "model_proto_sha256": "9b042e511bb05d67022a80784366566d36302e3b480c56940e4b7b99d47e6188",
+        "model_validation": "",
+        "prior_energy_upper_constraint_used": false,
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "INFEASIBLE",
+        "variables": 26,
+        "workers": 1
+      },
+      "kind": "hard_e1",
+      "optimization_model": {
+        "constraints": 718,
+        "entry_bounds_used": false,
+        "lower_cut_bounds_used": false,
+        "model_proto_sha256": "a049d78a70996a1fbb39fc54e82972b865faadeb8a2da3b3f77c6241e4d6c229",
+        "model_validation": "",
+        "prior_energy_upper_constraint_used": false,
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "INFEASIBLE",
+        "variables": 26,
+        "workers": 1
+      },
+      "parameters": {
+        "cut_upper": 153,
+        "excess": 1,
+        "l1_bound": 69,
+        "parallel_count": 6,
+        "total": 15
+      },
+      "proved": true,
+      "sharp_energy_maximum": null
+    },
+    "hard_excess_three": {
+      "constraint_scope": [
+        "integer eight-bin row",
+        "exact row sum",
+        "l1 upper bound",
+        "M2=0 modulo 17",
+        "M4=0 modulo 17",
+        "all 698 translated upper-cut inequalities"
+      ],
+      "constraints_deliberately_not_used": [
+        "prior energy upper bound",
+        "entry alphabet or aggregate coordinate bounds",
+        "lower cut bound",
+        "row parity",
+        "full 136-entry coefficient matrix",
+        "complete-domain Boolean values"
+      ],
+      "explicit_maximizer": [
+        6,
+        4,
+        -1,
+        -3,
+        -2,
+        -1,
+        4,
+        6
+      ],
+      "feasible": true,
+      "fixed_sum_cauchy_equality": null,
+      "independent_threshold_model": {
+        "constraints": 711,
+        "encoding": "allowed-assignment tables for (q,abs(q),q^2)",
+        "entry_bounds_used": false,
+        "forbidden_energy_floor": 120,
+        "lower_cut_bounds_used": false,
+        "model_proto_sha256": "50432c39725cb4e131b3be37d4b86e3e2d95156a9ad7c5b6cb5e068ce105caf7",
+        "model_validation": "",
+        "prior_energy_upper_constraint_used": false,
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "INFEASIBLE",
+        "variables": 26,
+        "workers": 1
+      },
+      "kind": "hard_e3",
+      "optimization_model": {
+        "constraints": 718,
+        "entry_bounds_used": false,
+        "lower_cut_bounds_used": false,
+        "model_proto_sha256": "b1825c0634dda8d5d1be0a3105e668bc6217594df9a2c39e74e061958a725a56",
+        "model_validation": "",
+        "prior_energy_upper_constraint_used": false,
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "OPTIMAL",
+        "variables": 26,
+        "workers": 1
+      },
+      "parameters": {
+        "cut_upper": 153,
+        "excess": 3,
+        "l1_bound": 67,
+        "parallel_count": 8,
+        "total": 13
+      },
+      "proved": true,
+      "sharp_energy_maximum": 119
+    },
+    "hard_excess_two": {
+      "constraint_scope": [
+        "integer eight-bin row",
+        "exact row sum",
+        "l1 upper bound",
+        "M2=0 modulo 17",
+        "M4=0 modulo 17",
+        "all 698 translated upper-cut inequalities"
+      ],
+      "constraints_deliberately_not_used": [
+        "prior energy upper bound",
+        "entry alphabet or aggregate coordinate bounds",
+        "lower cut bound",
+        "row parity",
+        "full 136-entry coefficient matrix",
+        "complete-domain Boolean values"
+      ],
+      "explicit_maximizer": [
+        1,
+        -2,
+        5,
+        3,
+        -1,
+        2,
+        5,
+        1
+      ],
+      "feasible": true,
+      "fixed_sum_cauchy_equality": null,
+      "independent_threshold_model": {
+        "constraints": 711,
+        "encoding": "allowed-assignment tables for (q,abs(q),q^2)",
+        "entry_bounds_used": false,
+        "forbidden_energy_floor": 71,
+        "lower_cut_bounds_used": false,
+        "model_proto_sha256": "75845543e8cf52119c926afeb464b2cdaf42f26f5ad311f583645f90d7dc8460",
+        "model_validation": "",
+        "prior_energy_upper_constraint_used": false,
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "INFEASIBLE",
+        "variables": 26,
+        "workers": 1
+      },
+      "kind": "hard_e2",
+      "optimization_model": {
+        "constraints": 718,
+        "entry_bounds_used": false,
+        "lower_cut_bounds_used": false,
+        "model_proto_sha256": "4114629c63f660eeb6c5d59451c2fed7aec658a42ad7ec8b0f562b53800cce0a",
+        "model_validation": "",
+        "prior_energy_upper_constraint_used": false,
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "OPTIMAL",
+        "variables": 26,
+        "workers": 1
+      },
+      "parameters": {
+        "cut_upper": 153,
+        "excess": 2,
+        "l1_bound": 68,
+        "parallel_count": 7,
+        "total": 14
+      },
+      "proved": true,
+      "sharp_energy_maximum": 70
+    },
+    "opposite": {
+      "constraint_scope": [
+        "integer eight-bin row",
+        "exact row sum",
+        "l1 upper bound",
+        "M2=0 modulo 17",
+        "M4=0 modulo 17",
+        "all 698 translated upper-cut inequalities"
+      ],
+      "constraints_deliberately_not_used": [
+        "prior energy upper bound",
+        "entry alphabet or aggregate coordinate bounds",
+        "lower cut bound",
+        "row parity",
+        "full 136-entry coefficient matrix",
+        "complete-domain Boolean values"
+      ],
+      "explicit_maximizer": [
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3
+      ],
+      "feasible": true,
+      "fixed_sum_cauchy_equality": {
+        "equality_requires_all_coordinates_equal": true,
+        "fixed_sum_energy_lower": 72,
+        "forced_equal_coordinate": -3,
+        "identity": "8*sum(q_a^2)-(sum q_a)^2=sum_(a<b)(q_a-q_b)^2",
+        "optimization_upper_equals_lower": true,
+        "unique_feasible_row": [
+          -3,
+          -3,
+          -3,
+          -3,
+          -3,
+          -3,
+          -3,
+          -3
+        ]
+      },
+      "independent_threshold_model": {
+        "constraints": 711,
+        "encoding": "allowed-assignment tables for (q,abs(q),q^2)",
+        "entry_bounds_used": false,
+        "forbidden_energy_floor": 73,
+        "lower_cut_bounds_used": false,
+        "model_proto_sha256": "44515f63b8e2944601cfad513895563ed672a9f2f40b78e2fd2327ab9ea32724",
+        "model_validation": "",
+        "prior_energy_upper_constraint_used": false,
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "INFEASIBLE",
+        "variables": 26,
+        "workers": 1
+      },
+      "kind": "opposite",
+      "optimization_model": {
+        "constraints": 718,
+        "entry_bounds_used": false,
+        "lower_cut_bounds_used": false,
+        "model_proto_sha256": "3f01c71e80cedf0f5d108f1db9c0088ccd6f728537b9c75a61b8e0530c51f92c",
+        "model_validation": "",
+        "prior_energy_upper_constraint_used": false,
+        "seed": 0,
+        "solver": "OR-Tools CP-SAT",
+        "solver_version": "9.15.6755",
+        "status": "OPTIMAL",
+        "variables": 26,
+        "workers": 1
+      },
+      "parameters": {
+        "cut_upper": -204,
+        "excess": null,
+        "l1_bound": 72,
+        "parallel_count": 3,
+        "total": -24
+      },
+      "proved": true,
+      "sharp_energy_maximum": 72
+    }
+  },
+  "title": "full translated-cut energy closes the p17 fourth shell",
+  "top_level_gates_changed": false,
+  "translated_cut_catalog": {
+    "catalog_sha256": "a8ac7349cb601db5163ef1526949587c766914d774fe26858fe93eac1d940708",
+    "distinct_translated_cut_vectors": 698,
+    "every_entry_even_between_zero_and_sixteen": true,
+    "every_vector_sum": 72,
+    "middle_slice_point_count": 24310,
+    "p": 17,
+    "proved": true,
+    "slice_size": 9
+  },
+  "two_source_hard_normalization": {
+    "common_graph_source": "sum q=hT-P_L=21-P_L",
+    "exact_literal_isolated_chart_I": 0,
+    "exact_literal_parallel_congruence": "8 divides I+P-5",
+    "exact_star_common_parallel_count_reason": "common hT and hT=18*P_L-69 force one common exact-star P_L",
+    "exact_star_count_lower_bound": 6,
+    "exact_star_distance_row": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "exact_star_distance_row_used_to_force_parallel_count": false,
+    "exact_star_edge_bound": "6*P_L<=75",
+    "exact_star_energy": 32,
+    "exact_star_hT_affine_identity": "hT=18*P_L-69",
+    "exact_star_parallel_candidates": [
+      5
+    ],
+    "exact_star_parallel_count_upper_bound": 12,
+    "exact_star_unspecialized_glue": "17*(P_L-3)-18=hT-P_L",
+    "forced_exact_star_parallel_count": 5,
+    "forced_moment_degrees": [
+      2,
+      4
+    ],
+    "glued_identity": "P_L=4+k_L",
+    "hard_edge_count": 48,
+    "hard_edge_count_identity": "75-27=48",
+    "hard_excess_partitions": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3
+      ]
+    ],
+    "hard_excess_sum": 3,
+    "hard_quotient_sum": 12,
+    "hard_rows_k_1_through_4": [
+      {
+        "cellwise_cut_upper_bound": 9,
+        "common_difference_sum_formula": "hT-P_L=21-P_L",
+        "forced_parallel_count": 5,
+        "hard_quotient_k": 1,
+        "l1_bound": 70,
+        "local_coefficient_sum_formula": "17*(P_L-3)-18*k_L",
+        "matching_parallel_counts_in_0_through_75": [
+          5
+        ],
+        "off_bin_sum": 16,
+        "translated_cut_upper_bound": 153
+      },
+      {
+        "cellwise_cut_upper_bound": 9,
+        "common_difference_sum_formula": "hT-P_L=21-P_L",
+        "forced_parallel_count": 6,
+        "hard_quotient_k": 2,
+        "l1_bound": 69,
+        "local_coefficient_sum_formula": "17*(P_L-3)-18*k_L",
+        "matching_parallel_counts_in_0_through_75": [
+          6
+        ],
+        "off_bin_sum": 15,
+        "translated_cut_upper_bound": 153
+      },
+      {
+        "cellwise_cut_upper_bound": 9,
+        "common_difference_sum_formula": "hT-P_L=21-P_L",
+        "forced_parallel_count": 7,
+        "hard_quotient_k": 3,
+        "l1_bound": 68,
+        "local_coefficient_sum_formula": "17*(P_L-3)-18*k_L",
+        "matching_parallel_counts_in_0_through_75": [
+          7
+        ],
+        "off_bin_sum": 14,
+        "translated_cut_upper_bound": 153
+      },
+      {
+        "cellwise_cut_upper_bound": 9,
+        "common_difference_sum_formula": "hT-P_L=21-P_L",
+        "forced_parallel_count": 8,
+        "hard_quotient_k": 4,
+        "l1_bound": 67,
+        "local_coefficient_sum_formula": "17*(P_L-3)-18*k_L",
+        "matching_parallel_counts_in_0_through_75": [
+          8
+        ],
+        "off_bin_sum": 13,
+        "translated_cut_upper_bound": 153
+      }
+    ],
+    "hard_sign_times_global_T": 21,
+    "hard_sign_times_global_T_from_exact_stars": "hT=18*5-69=21",
+    "hard_sign_times_global_T_identity": "hT=48-27=21",
+    "local_P_not_equal_4_plus_k_cells_lift_to_common_graph": false,
+    "local_source": "sum q=17*(P_L-3)-18*k_L",
+    "normalization_order": [
+      "glue unspecialized exact-row sums",
+      "deduce one common exact-star P_L",
+      "apply six-star edge bound and isolated-chart congruence",
+      "deduce P_L=5 and hT=21",
+      "only then identify q=(2)^8"
+    ],
+    "opposite_edge_count": 27,
+    "opposite_edge_count_identity": "9*Q=9*3=27",
+    "opposite_normalized_sum_W": -24,
+    "opposite_parallel_count_Q": 3,
+    "p": 17,
+    "proved": true
+  }
+}
