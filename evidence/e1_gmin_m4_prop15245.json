@@ -22,7 +22,7 @@
     "lstar_le_average": true,
     "Op_ge_lstar_general": false,
     "residual_i_closed_via_245": false,
-    "residual_i_dual_eq_empty": false,
+    "residual_i_dual_eq_empty": true,
     "gsum_disj_lb": false,
     "e1": false,
     "open_hinge": "Op \u227d \u03bb_* I on W++0 for all p\u22655 (\u2211\u03c1 \u03ba_B budget), or hull/|\u03bc|\u22641/(2p)/K4\u2264Wick_hi",

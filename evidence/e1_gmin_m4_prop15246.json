@@ -24,7 +24,7 @@
     "R_path_budget_general": false,
     "cov_avg_ge_lstar": true,
     "residual_i_closed_via_246": false,
-    "residual_i_dual_eq_empty": false,
+    "residual_i_dual_eq_empty": true,
     "gsum_disj_lb": false,
     "e1": false,
     "open_hinge": "Cov \u227d 4(n\u22126)/n I on span{f\u2212\u03bc} (\u21d4 Op\u227d\u03bb_*), or \u2211\u03b7\u00b2 \u2264 n(n\u22122)(n\u22125)/(8(n\u22121)) (\u21d4 R\u22642p), or |\u03bc|\u22641/(2p)",

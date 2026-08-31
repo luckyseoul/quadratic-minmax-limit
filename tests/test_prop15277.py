@@ -185,7 +185,7 @@ def test_aut_schur_gsum_pairing_e1_untouched():
     assert h["aut_schur"] is False
     assert h["pairing"] is False
     assert h["gu_disj_is_gram"] is False
-    assert e1_closed_general() in (True, False)
+    assert e1_closed_general() is False
 
 
 def test_main_honest_flags():

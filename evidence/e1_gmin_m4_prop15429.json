@@ -73,7 +73,7 @@
       "p7": "-384/49",
       "QNL5": "64/15",
       "QNL7": "632/171",
-      "theorem": "ns+base=(q\u22121)(4p+5\u2212p\u00b2)/(2p\u00b2). 0 at p=5, \u2212384/49 at p=7. Fail: claim this is Q_NL."
+      "theorem": "Constant-L_ns plug-in is (q\u22121)(4p+5\u2212p\u00b2)/(2p\u00b2). Not the live ns block. Fail: claim this is Q_NL."
     },
     "C": {
       "proved": false,

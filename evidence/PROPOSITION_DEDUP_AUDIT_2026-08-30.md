@@ -3,7 +3,7 @@
 **Date:** 2026-08-30
 
 **Scope:** every assigned proposition through Proposition 15.727, the live
-predicate wiring, and the current untracked attack scripts
+predicate wiring, and the attack scripts present during the audit
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
 or finite-prime rerun from being mistaken for a new mathematical attack
@@ -333,11 +333,12 @@ are retained as history/data but are removed from the active attack queue.
 | generic `residual_boundary_*` parity/projected models | necessary-condition diagnostics only; infeasibility can close a specified finite branch, feasibility cannot close or witness the graph problem |
 | `scripts/infinity_plus_p_quantized_dp.py` | diagnostic only until every `excess != 2` use retains the two Proposition 15.723 `p=17` equality cells |
 
-The pre-existing modified files
-`evidence/e1_gmin_m4_prop15626.json`,
-`evidence/e1_gmin_m4_prop15627.json`,
-`scripts/p19_second_boundary_profile_cryptominisat.py`, and
-`scripts/residual_affine_johnson_milp.py` are user work and remain untouched.
+This quarantine was materialized on 2026-08-31.  The useful truth-state
+corrections and twelve modules required by tracked certificate generators
+were retained on `main`; the superseded snapshot was moved to the remote branch
+`archive/dirty-worktree-2026-08-31`.  See
+`NOTE_2026-08-31_DIRTY_WORKTREE_TRIAGE.md` for the exact disposition.  The
+archive branch is historical, not an active attack queue.
 
 ## Stale or contradictory records
 

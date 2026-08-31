@@ -206,4 +206,4 @@ def test_lambda_min_via_F_and_residual_still_open():
     assert lambda_min_via_F_proved_general() is False
     assert lambda_min_ge_6_proved_general() is False
     assert gsum_disj_lb_proved_general() is False
-    assert e1_closed_general() in (True, False)
+    assert e1_closed_general() is False

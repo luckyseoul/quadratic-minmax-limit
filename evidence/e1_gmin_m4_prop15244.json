@@ -23,7 +23,7 @@
     "lambda_star_mupart_criterion": true,
     "m4_mupart_budget_general": false,
     "residual_i_closed_via_244": false,
-    "residual_i_dual_eq_empty": false,
+    "residual_i_dual_eq_empty": true,
     "gsum_disj_lb": false,
     "e1": false,
     "open_hinge": "\u2211(m4\u2212\u03bc_part)\u03ba_B \u2265 rho_budget \u2212 \u03b3 on unit W++0 for all p\u22655, or \u2211\u03c1 \u03ba_B \u2265 \u22126/n\u22121/(2p\u00b2), or hull/|\u03bc|\u22641/(2p)/K4"

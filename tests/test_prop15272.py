@@ -145,4 +145,4 @@ def test_live_flags_via_k13():
     assert h["same_line_pairing"] is False
     assert h["fperp_injective_general"] is True
     assert h["residual_i_closed"] is True
-    assert h["e1_closed_general"] is True
+    assert h["e1_closed_general"] is False

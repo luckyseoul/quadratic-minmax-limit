@@ -23,8 +23,6 @@ import time
 from pathlib import Path
 
 import numpy as np
-from scipy.optimize import Bounds, LinearConstraint, milp
-from scipy.sparse import csr_matrix, vstack
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
@@ -92,7 +90,7 @@ def affine_shell(p: int, eigen_sign: int, C: np.ndarray) -> np.ndarray:
 
 
 def add_score_rows(
-    blocks: list[csr_matrix],
+    blocks: list,
     lower: list[float],
     upper: list[float],
     F: np.ndarray,
@@ -100,6 +98,8 @@ def add_score_rows(
     shell: str,
 ) -> None:
     """Add the exact two-sided freeness thresholds, grouped by f_e."""
+    from scipy.sparse import csr_matrix
+
     for sign in (-1, 1):
         part = unique_rows(F[fe == sign])
         blocks.append(csr_matrix(part.astype(np.float64)))
@@ -569,6 +569,9 @@ def solve(
         return solve_scip(p, mode, Yp, Ym, C, time_limit, workers)
     if backend != "highs":
         raise ValueError(backend)
+
+    from scipy.optimize import Bounds, LinearConstraint, milp
+    from scipy.sparse import csr_matrix, vstack
 
     edges, Fp = feature_rows(Yp, C)
     edges_m, Fm = feature_rows(Ym, C)

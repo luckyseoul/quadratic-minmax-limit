@@ -12,8 +12,10 @@ also excluded at `p=17,19,23,29`)
 **Mandatory preflight:** read
 `evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md` before launching another
 solver, projection, shell, channel, orbit, or timeout. It accounts for every
-assigned proposition through 15.727 and maps current untracked scripts to
-closed, dead, necessary-only, or live routes.
+assigned proposition through 15.727 and maps the former scratch scripts to
+closed, dead, necessary-only, or live routes.  The 2026-08-31 worktree
+cleanup and remote archive are recorded in
+`evidence/NOTE_2026-08-31_DIRTY_WORKTREE_TRIAGE.md`.
 
 **Corrected gate:** the required bi-tight levels 2 and 3 are TRUE by 15.720.
 The old spectral-floor/15.167 arrow is retracted, and QVAR/R1 are no longer

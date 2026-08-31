@@ -118,5 +118,5 @@ def test_hinge_status():
     assert h["residual_i_closed_via_216"] is True
     assert h["Q_le_10"] is False
     assert h["R_m4_le_2p"] is False
-    assert h["e1_closed_general"] is True
-    assert h["L_open"] is False
+    assert h["e1_closed_general"] is False
+    assert h["L_open"] is True

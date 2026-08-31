@@ -34,8 +34,8 @@ def test_residual_ii_affine_closed_without_gsum():
     """Affine branch closed by freeze (no Gsum); full residual (ii) still open."""
     assert gsum_disj_lb_proved_general() is False  # residual (i) still open
     assert residual_ii_dual_twolevel_affine_closed() is True
-    # Full residual (ii) closed by 15.179+236+237 (ND, not exhaustiveness)
-    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is True
+    # The bounded range is closed by 15.179+236+237; k>=4p remains open.
+    assert deep_s2_freeness_fail_k_ge_3p_ND_closed() is False
     assert e1_closed_general() is False
     h = hinge_status_179()
     assert h["bound_proved_general"] is False

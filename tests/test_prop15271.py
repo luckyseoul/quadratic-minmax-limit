@@ -61,4 +61,4 @@ def test_live_flags_open():
     h = hinge_status_271()
     assert h["fperp_injective_general"] is False
     assert h["residual_i_closed"] is False
-    assert h["e1_closed_general"] is True
+    assert h["e1_closed_general"] is False

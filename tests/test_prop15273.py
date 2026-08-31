@@ -278,5 +278,5 @@ def test_main_honest_flags():
     assert out["proved"]["census_spectrum_p5_p7"] is True
     assert out["L_status"] == "OPEN"
     assert out["census"]["wrong_floor"]["ok"] is True
-    assert e1_closed_general() in (True, False)  # do not require a flip
+    assert e1_closed_general() is False
     assert gsum_disj_lb_proved_general() is False

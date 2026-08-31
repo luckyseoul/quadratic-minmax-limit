@@ -3,8 +3,10 @@
 Date: 2026-08-21.  Companion code: `src/e1_gmin_m4_prop15590.py`,
 tests `tests/test_prop15590.py`.  Lab artifacts (arrays, exploratory
 scripts, PSD scans): `/mnt/storage/e1work/leftover3_mu/` on soulkiller.
-**No leftover flag flipped.**  Leftover 3 target unchanged: |μ|≤L, with
-15.191 K's |μ|≤2/n the stronger sufficient version.
+**No leftover flag flipped.**  Current correction: the bounds `|μ|≤L` and
+15.191 K's stronger `|μ|≤2/n` are sufficient only for the `|κ|=1`
+half of the multi-level Type-I reduction.  The independent `|κ|=3` signed
+`(μ,ν)` inequality and its nonparticular δ remainder also remain open.
 
 ## New Max-free identities (exact, zero violations at p=5 and p=7)
 
