@@ -30,10 +30,13 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
 - Sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le 1/2\).
 - Denseness: the limit exists globally iff it exists along Paley orders \(n_k=p_k^2+1\).
 - Two-ray convergence reduction (Prop 6.3): Dini-summable normalized defects
-  in the multiplier-2 and multiplier-3 inequalities suffice.  In particular,
+  at multipliers 2 and 3 suffice. In particular,
   errors `O(n/(log n)^(1+epsilon))` in `H`, or power-saving errors, force
-  convergence.  Proposition 6.4 identifies the exact four-state and
-  hereditary hinge for the all-Hadamard multiplier-2 construction.
+  convergence. Propositions 6.4--6.5 identify the exact four-state
+  equal-endpoint diamond for the all-Hadamard multiplier-2 construction;
+  the hereditary endpoint conditions are automatic. Proposition 6.6 proves
+  the diamond outside the explicit Hamming-central/joint-energy residue
+  (6.20), but does not close the ray.
 - \(\rho=1\) on that Paley family, so \(\Phi(C_n)=\frac12 n\sqrt{n-1}\) and \(\alpha_{n_k}\to 1/2\) **if** E(1) holds there.
 - 15.167's majorization algebra is conditionally valid, but its final bi-tight implication is **retracted** because `ker(G-(n/2)P1)` contains `ker G`. Proposition 15.720 instead excludes the required bi-tight levels 2 and 3 for every prime `p>=5` by a degree congruence. Its bi-tight level-4 corollary does not exclude one-sided tight level 4.
 - Propositions 15.726--15.727 historically narrowed the first general
@@ -83,11 +86,14 @@ authoritative open function is `residual_ii_k_ge_4p_ND_closed()`;
 Path-C / 16N / 15.193 exhaustiveness is **not** required.
 
 Closing the sole open residual-(ii) unit completes the remaining E1 ledger,
-but it is
-not necessary for a different proof of convergence and is not goal
-completion.  The direct convergence front is to prove the estimates at
-multipliers 2 and 3 from Proposition 6.3; an all-pairs composition theorem is
-not required.
+but it is not necessary for a different proof of convergence and is not goal
+completion. The direct convergence front is to close the multiplier-two
+diamond on the exact residue (6.20), then prove multiplier three or the
+`1:2` split in Proposition 6.3. Endpoint selection, independent skew-norm
+budgets, and an all-pairs composition theorem are not the live target. The
+disk surrogate is strictly stronger, not equivalent: its asymptotic form
+would prove a new `1/sqrt(2pi)` lower bound, and only its zero-error form is
+currently disproved.
 
 ## Forbidden translations (these are the small-failure mode)
 

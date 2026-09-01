@@ -1,4 +1,4 @@
-# Status (2026-09-01; through Proposition 15.750 and Propositions 6.3--6.4)
+# Status (2026-09-01; through Proposition 15.750 and Propositions 6.3--6.6)
 
 **The original question has been separated from the stronger Paley value
 program.**  MathOverflow 413935 asks for existence, not an identified value.
@@ -17,14 +17,26 @@ increments.  The direct live gate is therefore two fixed amplification rays,
 not all-pairs composition and not another finite Paley residue.  The limit
 remains **OPEN** because neither ray estimate is proved yet.
 
-Proposition 6.4 corrects the multiplier-two front.  Section 10's old
-`C>=0.282` claim was an invalid lower-bound/upper-bound inference; the exact
-two-block identity leaves coupled block design live.  Within the all-Hadamard
-two-cloud class, every frame is exactly a four-state quadratic minimax up to
-`O(n)` internal energy.  Its unavoidable `t_i t_j` term survives all
-orientations, and every successful frame must satisfy a simultaneous
-hereditary bound for two endpoint signings on every cut.  That bound, not a
-new finite census, is the first multiplier-two hinge.
+Propositions 6.4--6.6 correct and narrow the multiplier-two front. Section
+10's old `C>=0.282` claim was an invalid lower-bound/upper-bound inference.
+The equal-endpoint skew frame sets both endpoint signings equal to an optimal
+`A`, so every hereditary cut inequality is automatic. The exact live hinge is
+the mixed-state diamond
+
+`|Q_A(x)+Q_A(y)|+|x^T R y| <= 2 sqrt(2)m_n+o_Dini(n^(3/2))`.
+
+A degree-balanced modification of a principal Paley-tournament orientation
+exists for every large `n`. After conjugating it by a maximizer of `A`,
+Proposition 6.6 proves this
+diamond near the extremal antipodal pair, near the diagonal or antidiagonal,
+on a larger two-anchor product region, and whenever the joint-energy deficit
+is at least `n^(3/2)`. The exact remaining pairs are Hamming-central and obey
+the joint-energy condition displayed in (6.20), except that this condition
+becomes vacuous when `m_n/n^(3/2)<1/(2sqrt(2))-c`; the geometric shields remain.
+Independent skew-norm budgets are impossible. The asymptotic disk surrogate
+is not disproved, but it requires a new `1/sqrt(2pi)` lower bound; its
+zero-error form is false at `n=5`. Multiplier two remains open on the explicit
+residue, and multiplier three remains open in full.
 
 The status below records the still-valid, stronger Paley `L=1/2` route.  It is
 no longer the sole acceptance path for the original problem.
@@ -42,6 +54,12 @@ distinguished edge to the certified canonical edge. The live predicate
 `type_I_multilevel_bad_case_ND_closed()` is therefore **True**. Residual (ii)
 is still False, so E1 and `L=1/2` remain **OPEN**; the original convergence
 question also remains open.
+
+**Chronology rule.** Lower proposition entries are preserved as as-of records.
+Their statements that Type I or another later-closed subcase "remains open"
+are historical, not current status. Use this header and the highest-numbered
+applicable proposition; Proposition 15.750 supersedes every earlier Type-I
+status line.
 
 **15.749 CLOSES `p=13,t=4,u=4`; the exact `p=13,k=60` remainder is now
 only `u=6`.**  Propositions 15.747--15.748 first close the omitted-pair

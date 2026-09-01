@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-01
 
-**Scope:** Propositions 6.3--6.4, every assigned proposition through
+**Scope:** Propositions 6.3--6.6, every assigned proposition through
 Proposition 15.750, the live predicate wiring, and the attack scripts present
 during the audit
 
@@ -27,12 +27,16 @@ Paley residue census does not advance this direct gate.
 
 The same review retracts Section 10's claimed universal `0.282` additive
 doubling floor: it improperly used a lower bound inside a triangle upper
-bound.  The exact two-block identity leaves coupled design live.  Proposition
-6.4 then puts the all-Hadamard two-cloud subclass into an exact four-state
-normal form and proves its simultaneous hereditary two-endpoint lower bound.
-For each fixed frame, mixed cross terms cannot repair a cut violating the
-bound; choosing orientations whose induced endpoints pass every cut remains
-open, and the construction class is not excluded.
+bound. The exact two-block identity leaves coupled design live. Proposition
+6.4 puts the all-Hadamard two-cloud subclass into an exact four-state normal
+form. Proposition 6.5 then chooses an equal-endpoint skew frame: both
+endpoints are the same optimal signing `A`, so every hereditary cut bound is
+automatic. Endpoint selection is therefore retired. The live condition is
+the mixed-state diamond (6.13). Proposition 6.6 proves it, with Dini error,
+outside the explicit Hamming-central/joint-energy residue (6.20). Do not
+replace that residue by an independent skew budget, the stronger disk
+surrogate as though it were equivalent, or a finite pair census. The
+asymptotic disk is not disproved; only its zero-error form is.
 
 ### Post-audit correction (15.720)
 
@@ -575,11 +579,11 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 664 source-backed proposition modules from 15.83 through 15.749.
+- There are 665 source-backed proposition modules from 15.83 through 15.750.
 - The labels 15.537, 15.583, and 15.584 have no proposition module.  They are
   unassigned labels, not unreviewed propositions; later source headers mention
   those numbers only as historical range/state markers.
-- Therefore every assigned proposition through 15.749 was included in this
+- Therefore every assigned proposition through 15.750 was included in this
   audit.  The grouped ledger below is by shared mathematical route rather than
   a 736-row restatement of the assigned propositions.
 
@@ -590,16 +594,17 @@ The public theorem is gated consistently by the corrected global
 currently `False`. The historical bounded `True` is available only through
 `e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after audit of 15.749 |
+| unit | exact live content | status after audit of 15.750 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
 | residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close `k in {4p,4p+2,4p+4}`, for every boundary size, at all primes `p>=11`; 15.738--15.742 close `p=13,k=58`, 15.743 closes `p=17,k=74`, 15.744--15.745 close `u=3,0` at `p=13,k=60`, and 15.746--15.749 close `u=4`. The exact remainder includes critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers, every `p>=17,t>=4` layer (beginning with `p=17,k>=76`), and branch-B `t=3` for `p=1 mod 4,p>=29`; the separate positive `p=7,z=7` branch persists. The global predicate stays false. |
-| Type I | the multi-level `3A+B>0` bad case | **OPEN** — `|κ|=1` needs `G>T` (for example `|μ|≤|L|`), while `|κ|=3` independently needs `χ_d((2p-1)μ+(p-2)ν)>-(p-2)/p`; the particular term is safe but the δ remainder is open |
+| Type I | the multi-level `3A+B>0` bad case | **TRUE** (15.750) — isolated-chart rigidity and parity halving close every prime `p>=11`; exact integer Farkas identities close `p=5,7` |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
 The spectral floor remains an interesting optional problem, but it has no
 valid downstream role in the current E(1) proof. The shortest honest work map
-is now the two multi-level remainders followed by the final implication audit.
+is now residual (ii), the sole false E(1) unit, followed by the final
+implication audit.
 
 The positive `p=7,z=7` catalog is one finite residual subbranch, not a fourth
 top-level front.

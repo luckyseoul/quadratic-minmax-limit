@@ -4,14 +4,24 @@
 only whether `alpha_n` converges.  Proposition 6.3 proves that it is enough to
 obtain Dini-summable amplification at multipliers 2 and 3 for
 `H(n)=m_n^(2/3)`; even `O(n/(log n)^(1+epsilon))` errors suffice. Proposition
-6.4 gives the exact four-state and hereditary conditions for Hadamard
-doubling.  Section 10's claimed universal `0.282` additive floor was invalid
-and is retracted by the exact two-block identity.  This is the preferred
-direct gate.  The finite Paley residual ledger below remains valid evidence
-for the stronger `L=1/2` route, but it is not the only acceptance path and
-should not be resumed by default.
+6.4--6.5 give the exact four-state and equal-endpoint skew diamond for
+Hadamard doubling. Endpoint/hereditary selection is automatic in that frame;
+only mixed states remain. Proposition 6.6 constructs a balanced near-Paley
+orientation and closes every pair outside the explicit Hamming-central/
+joint-energy residue (6.20), with a dyadic-Dini error. Section 10's claimed
+universal `0.282` additive floor was invalid, independent skew budgets are
+impossible, and the stronger disk surrogate is not the live target. This is
+the preferred direct gate. The finite Paley residual ledger below remains
+valid evidence for the stronger `L=1/2` route, but it is not the only
+acceptance path and should not be resumed by default.
 
-**Date:** 2026-09-01 (through Propositions 6.3--6.4 and 15.750; required bi-tight levels 2 and 3 and multi-level Type I are
+**Chronology rule:** lower proposition sections are preserved as as-of
+handoffs. Their older statements that Type I or another later-closed subcase
+remains open are not the live status; use this header and the highest-numbered
+applicable proposition. Proposition 15.750 supersedes every earlier Type-I
+status line.
+
+**Date:** 2026-09-01 (through Propositions 6.3--6.6 and 15.750; required bi-tight levels 2 and 3 and multi-level Type I are
 closed, residual (ii) is closed for every boundary at
 `k in {4p,4p+2,4p+4}` for every prime `p>=11`, and the exceptional
 and generic branches at `p=13,k=58`, the generic `p=17,k=74` row, and the
@@ -85,6 +95,27 @@ for both signs. This is not all of the projective size-eight case: 15.713--
 excluding any of its 56 actual line boundaries in two orbits. The positive
 `z=7` remainder stays open. The historical p=13 orbit/mesh `k=6` work is
 not a close and is not a current proof input.
+
+## 6.5--6.6 — equal endpoints and the exact direct doubling residue
+
+For an optimal `A` and a skew signing `R`, use Hadamard blocks
+`[[A_ij,-R_ij],[R_ij,A_ij]]`. Both endpoints are `A`, every hereditary cut
+bound is automatic, and the four-state minimax is exactly
+
+`(1/2) max_(x,y) (|Q_A(x)+Q_A(y)|+|x^T R y|)`.
+
+The live multiplier-two target is the corresponding diamond (6.13), not a
+separate skew norm and not the stronger Euclidean disk. Proposition 6.6
+restricts and degree-balances a nearby Paley tournament, conjugates it by an
+optimizer `z`, and proves the diamond with a Dini error unless all conditions
+in (6.20) hold. Thus the only remaining pairs are simultaneously away from
+`{+z,-z}`, away from the diagonal and antidiagonal, outside the two-anchor
+product shield, and above the joint-energy cutoff
+`2 sqrt(2)m_n-n^(3/2)`. Close precisely that residue next. Do not resume
+endpoint selection, an independent cross budget, or finite pair census. The
+asymptotic disk is a stronger `1/sqrt(2pi)` lower-bound problem, not an
+equivalent target; only its zero-error form is disproved. After doubling, the
+multiplier-three ray (or Proposition 6.3's `1:2` split) still remains.
 
 ## 15.750 — isolated-chart parity halving closes multi-level Type I
 

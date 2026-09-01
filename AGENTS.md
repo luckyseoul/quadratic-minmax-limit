@@ -8,9 +8,15 @@ branches or turning completed computations into new work.
 MathOverflow 413935 asks whether `alpha_n` converges; a proof need not identify
 the value.  Proposition 6.3 reduces this direct route to two Dini-summable
 amplification estimates for `H(n)=m_n^(2/3)`, at multipliers 2 and 3;
-polynomial saving is unnecessary.  Proposition 6.4 gives the exact four-state
-and hereditary targets for a Hadamard doubling lift.  That is the preferred
-front unless the human explicitly selects the stronger Paley `L=1/2` route.
+polynomial saving is unnecessary. Propositions 6.4--6.5 give the exact
+equal-endpoint skew diamond for a Hadamard doubling lift; its hereditary
+endpoint conditions are automatic. Proposition 6.6 closes that diamond
+outside the exact Hamming-central/joint-energy residue (6.20). That residue
+is the preferred front unless the human explicitly selects the stronger
+Paley `L=1/2` route. Do not reopen endpoint selection, an independent skew
+budget, or a finite pair census. Do not present the disk surrogate as an
+equivalent target: its asymptotic form would prove a stronger
+`1/sqrt(2pi)` lower bound, while only its zero-error form is disproved.
 Do not launch another finite-prime, residue, orbit, or cell census as work on
 the original question.  The long residual-(ii) section below is continuity
 guidance only for a deliberately selected Paley route.

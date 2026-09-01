@@ -16,7 +16,7 @@ min-max ±1 quadratic form converges. The limit **L is OPEN**. This repo is a
 proof ledger with 665 source-backed computational proposition modules through
 15.750 plus reviewed analytic arguments in `solution.md`. Machine gates use
 explicit `True`/`False` predicates, and soft-closing is banned by test
-(`tests/test_main_chain_docs.py`); Propositions 6.3--6.4 are proved in prose,
+(`tests/test_main_chain_docs.py`); Propositions 6.3--6.6 are proved in prose,
 not represented as computational predicates.
 
 ## Status
@@ -25,7 +25,7 @@ not represented as computational predicates.
 
 **Main claim:** L = lim_n α_n is **OPEN** (2026-09-01).
 
-### Current audit (2026-09-01; through Proposition 15.750 and Propositions 6.3--6.4)
+### Current audit (2026-09-01; through Proposition 15.750 and Propositions 6.3--6.6)
 
 - **Original-question correction and new direct gate.** MathOverflow 413935
   asks whether the limit exists; identifying its value is optional.  With
@@ -37,14 +37,21 @@ not represented as computational predicates.
   stronger value-specific route, not the acceptance gate for the original
   problem.
 
-- **Multiplier-two correction and exact state.**  The old Section 10
-  `C>=0.282` inference mixed a lower bound into a triangle upper bound and is
-  retracted.  The exact two-block identity leaves coupled design live.
-  Proposition 6.4 converts every all-Hadamard two-cloud lift into an exact
-  four-state minimax.  For each chosen frame, its two induced endpoint
-  signings must satisfy a simultaneous hereditary bound on every cut; finding
-  orientations whose endpoints and mixed states all meet the upper target is
-  still part of the problem.
+- **Multiplier-two correction and exact residue.**  The old Section 10
+  `C>=0.282` inference is retracted. Proposition 6.5 chooses an
+  equal-endpoint skew frame with both endpoints equal to an optimal `A`; all
+  hereditary cut inequalities are then automatic. The exact live condition
+  is the mixed-state diamond
+  `|Q_A(x)+Q_A(y)|+|x^T R y| <= 2 sqrt(2)m_n+o_Dini(n^(3/2))`.
+  Proposition 6.6 constructs a balanced near-Paley skew signing for every
+  large `n` and proves the diamond outside an explicit Hamming-central/
+  joint-energy residue. Its energy condition can be vacuous in the
+  low-`alpha` regime, while the geometric shields remain. Independent skew
+  budgets are impossible. The
+  asymptotic disk surrogate is not disproved, but it would itself require a
+  new `1/sqrt(2pi)` lower bound, and its zero-error form is false at `n=5`.
+  Multiplier two remains open on the explicit residue; multiplier three also
+  remains open.
 
 - **Multi-level Type-I close.** Proposition 15.750 closes this all-prime
   Paley gate. For `p>=11`, an isolated vertex is transported to infinity;
@@ -1588,6 +1595,8 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/e1_gmin_m4_prop15749.json` | Hash-pinned output for the 522 admissible rows, 492 moment triples, and 12-point intersection |
 | `evidence/NOTE_2026-08-31_p31_public_11_of_12_arc_audit.md` | Exhaustive finite certificate for the eleven publicly sourced complete 22-arc classes at `p=31`; explicitly not a twelve-class close |
 | `evidence/NOTE_2026-09-01_ORIGINAL_LIMIT_TWO_RAY.md` | Original-question correction, Dini two-ray theorem, Section 10 retraction, and exact four-state Hadamard-doubling hinge |
+| `evidence/NOTE_2026-09-01_RG2_EQUAL_ENDPOINT_PALEY_SHIELD.md` | Equal-endpoint diamond identity, balanced near-Paley skew construction, disk caveat, and exact multiplier-two residue |
+| `src/direct_rg2_equal_endpoint.py`, `tests/test_direct_rg2_equal_endpoint.py` | Exact block/frame/cut/pair replay, automatic hereditary bounds, skew-norm floor, and scoped `n=5` zero-disk counterexample |
 | `scripts/p31_complete_22arc_public_audit.py` | Deterministic public-class audit producing `evidence/p31_complete_22arc_public_11_audit.json` |
 | `evidence/p7_infinity7_positive_z7_global_semigroup_summary.json` | Compact hash-pinned affine/global-join and Hilbert-basis certificate for 15.718 |
 | `evidence/p7_infinity7_positive_z7_projected_stabilization_summary.json` | Compact hash-pinned finite projected-semigroup stabilization certificate for 15.719 |

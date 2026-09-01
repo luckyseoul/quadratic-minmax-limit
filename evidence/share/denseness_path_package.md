@@ -2,16 +2,17 @@
 
 **Audience:** independent check of the denseness-path argument. Use **this file only**.  
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit  
-**Date:** 2026-08-30. The residual-(i) two-level hinge is 15.272, not Aut-Schur and not Gsum. \(L=\tfrac12\) is **not proved**.
+**Date:** 2026-09-01. The residual-(i) two-level hinge is 15.272, not Aut-Schur and not Gsum. \(L=\tfrac12\) is **not proved**.
 
 ## Verdict
 
 **15.272** writes a Max+-free spanning argument that \(k=1\cup k=3\) fills \(\mathcal W_{++}^0\) (Lemmas B–G), hence \(G_+\succ0\), hence dual-eq is empty on \(\mathrm{sc}\) (H–I). Aut-Schur is **false**. Gsum is unused.
 
-Independent review found two remaining load-bearing holes **outside** the
-15.272 span. The former Lemma D writeup holes were closed by 15.276 and
-`A3_PROOF.md`; the former spectral/bi-tight hole is closed directly by the
-15.720 degree congruence. They are listed under **Caveats**. Legacy code may still report
+Independent review found one remaining load-bearing hole **outside** the
+15.272 span: residual (ii). The former Lemma D writeup holes were closed by
+15.276 and `A3_PROOF.md`; the former spectral/bi-tight hole is closed directly
+by the 15.720 degree congruence, and the Type-I multi-level hole is closed by
+15.750. The live remainder is listed under **Caveats**. Legacy code may still report
 `e1_closed_general=True`; that is obsolete incomplete wiring, not a
 substitute for the current four-unit gate.
 
@@ -22,9 +23,9 @@ substitute for the current four-unit gate.
 | Denseness (Prop 6.1) | **Proved** (below) |
 | Required bi-tight levels 2 and 3, all \(p\ge5\) | **Proved** (15.720; degree congruence + 15.272/15.207 kernel) |
 | Residual (ii), affine + even \(k\le4p-2\) | **Proved** (15.179+236+237) |
-| Residual (ii), even \(k\ge4p\) | **Open** |
+| Residual (ii), even \(k\ge4p\) | **Open** — 15.734--15.749 close the first three all-prime shells and several later rows; see Caveat 2 for the exact remainder |
 | Residual (i) Type I, two-level Max− | **Proved** (15.272 → 15.207 → 15.249 → 15.216) |
-| Residual (i) Type I, multi-level Max− | **Open** |
+| Residual (i) Type I, multi-level Max− | **Proved** (15.750) |
 | Aut-Schur / Jacquet | **False** (\(p=5\) \(k=3\) rank \(61/65\); unused) |
 | Gsum disj LB | **False** / unused |
 | Pairing \(1^\top K^{-1}v\) | **Open** / unused |
@@ -226,15 +227,16 @@ has positive denominator for \(p\ge3\). The numerator polynomial \(f(x)=x^4-3x^3
 Lemma H + I imply that the free-\(e\) maximum on `sc` is
 \(<2-\alpha\), so dual equality is empty for every prime \(p\ge5\)
 (15.216 via 15.249). This closes the **two-level** Type-I/residual-(i)
-slice. It does not close the multi-level Type-I bad case.
+slice. It does not itself close the multi-level Type-I bad case; Proposition
+15.750 later closes that case.
 
-Residual (ii) is proved only for the affine branch and even
-\(k\le4p-2\) by 15.179 and 15.236--15.237. The non-Walsh multi-level
-range at even \(k\ge4p\) remains open. The required bi-tight levels are
+Propositions 15.179 and 15.236--15.237 initially prove the affine branch and
+even \(k\le4p-2\). Propositions 15.734--15.749 later close the first three
+all-prime higher shells and several later rows, but the exact non-Walsh
+remainder in Caveat 2 remains open. The required bi-tight levels are
 closed by Lemma K, so the spectral floor, global mixed-\(k\) QVAR, and
 principal R1 are not needed by this implication chain. This package still
-does **not** prove E(1) or \(L=\tfrac12\) until the two multi-level remainders
-close.
+does **not** prove E(1) or \(L=\tfrac12\) until residual (ii) closes.
 
 ---
 
@@ -282,17 +284,17 @@ A hostile review for public scrutiny found the following. **None of these is Aut
 
 1. **Spectral floor (not an acceptance caveat).** \(\lambda_{\min}(\Phi)\ge6\) remains open for all \(p\), and the old Kneser-mask proof is false. Proposition 15.720 bypasses this entirely for E(1), so QVAR/R1 work cannot be counted as closing a remaining gate.
 
-2. **Residual (ii) ND is written for even \(k\in[3p+1,4p-2]\)** (15.236/237). Affine two-level is dead for all \(k\ge3p\) (15.179). At **\(k\ge4p\)**: Max+ two-level \(\{2,4\}\) is impossible for \(k>4p\) and lies outside the \(s_+=2\) residual at \(k=4p\); actual two-value leftovers through \(\pm2\) have unclassified pair-span mass (15.274 F); and the slope obstruction handles the stated nonmultiple-of-\(p\) dual-bad slice. However, the former claim that \(S\equiv\pm4\) is empty used the retracted one-sided-tight implication. Thus one-sided level-4 tight covers and the multi-level branches remain. In particular, one cannot yet reduce every \(k=4p\) case to \(\max=-2\), \(f_e\equiv-1\) on \(U_{-2}\).
+2. **Residual (ii), exact current remainder.** Proposition 15.236/237 covers even \(k\in[3p+1,4p-2]\), and affine two-level is dead for all \(k\ge3p\) (15.179). At **\(k\ge4p\)**, Max+ two-level \(\{2,4\}\) is impossible for \(k>4p\) and lies outside the \(s_+=2\) residual at \(k=4p\); actual two-value leftovers through \(\pm2\) have unclassified pair-span mass (15.274 F); and the slope obstruction handles the stated nonmultiple-of-\(p\) dual-bad slice. The former claim that \(S\equiv\pm4\) is empty used the retracted one-sided-tight implication, so at that stage one-sided level-4 tight covers and multi-level branches remained. Propositions 15.734--15.749 subsequently close \(k\in\{4p,4p+2,4p+4\}\) for every \(p\ge11\), plus \(p=13,k=58\), \(p=17,k=74\), and the \(u=0,3,4\) slices at \(p=13,k=60\). The exact open remainder is: critical \(p=5,7\); \(p=11,k\ge50\); \(p=13,k=60,u=6\) and later \(p=13\) layers; every \(p\ge17,t\ge4\) layer, beginning with \(p=17,k\ge76\); branch B at \(t=3\) for \(p\equiv1\pmod4\), \(p\ge29\); and the separate positive \(p=7,z=7\) branch.
 
-3. **Type I dual-eq is the two-level Max− law \(S\in\{-1,-3\}\).** The 15.169 bad case \(f_e\equiv-1\) on \(\{S=-1\}\) only gives \(\Phi(H)\ge\Phi-4\) if Max− is multi-level. 15.275 writes the mass \(2a+c(3+\mu_c)=2/p\), the pairing min \(E[Sf_e]\ge3/p-2\), \(E[R^2]=E[S^2]-5+4E[Sf]\), integrality \(n_{-1}=M+n_c+t\), the unique 2-orbit Aut\(_e\) collapse \(\mu_{\mathrm{far}}=-2(2p-3)/(p(p^2-1))<0\), and the 3-weight Max− identity \(F_-|_{f=+1}=-(p+1)/(p-1)+\mu_{\mathrm{far}}p(p+1)\). Paley Aut\(_e\) has **two** star orbits (\(\sigma_\square=(p-1)(1+f_e)\), \(\sigma_\boxtimes=(p+1)(1-f_e)\)) and several far orbits. The 3-weight slices \(\mu_\square=\mu_\boxtimes\) and \(\mu_\boxtimes=0\) are empty (negative weight). The slice \(\mu_{\mathrm{far}}=0\) stays a \([0,1]\) solution of \(F_+\bar x=3-2f_e\), but it (and the whole \(\mu_{\mathrm{far}}\ge0\) 3-weight family) **cannot realise the bad case**: \(F_-|_{f=+1}\ge-(p+1)/(p-1)>-2\), while a gap-2 undercutter with \(f_e\equiv-1\) on \(\{S=-1\}\) needs \(S\le-3\) on \(\{f=+1\}\). Star-supported 0-1 Type I graphs Aut\(_e\)-average to that point (\(n_\square=(p+1)/2\), \(n_\boxtimes=5(p-1)/2\)). Dual-eq empty kills only the two-level / pairing-min slice. **Leftover:** split far Aut\(_e\) classes (unequal 4-set interpolants) do not reduce to the collapsed-far bound; \(F_-\le-3\) on \(\{f=+1\}\) is infeasible at \(p=5,7\) (census) but not proved for all \(p\). `type_I_multilevel_bad_case_ND_closed` stays False.
+3. **Type I dual-eq is the two-level Max− law \(S\in\{-1,-3\}\).** The 15.169 bad case \(f_e\equiv-1\) on \(\{S=-1\}\) only gives \(\Phi(H)\ge\Phi-4\) if Max− is multi-level. 15.275 writes the mass \(2a+c(3+\mu_c)=2/p\), the pairing min \(E[Sf_e]\ge3/p-2\), \(E[R^2]=E[S^2]-5+4E[Sf]\), integrality \(n_{-1}=M+n_c+t\), the unique 2-orbit Aut\(_e\) collapse \(\mu_{\mathrm{far}}=-2(2p-3)/(p(p^2-1))<0\), and the 3-weight Max− identity \(F_-|_{f=+1}=-(p+1)/(p-1)+\mu_{\mathrm{far}}p(p+1)\). Paley Aut\(_e\) has **two** star orbits (\(\sigma_\square=(p-1)(1+f_e)\), \(\sigma_\boxtimes=(p+1)(1-f_e)\)) and several far orbits. The 3-weight slices \(\mu_\square=\mu_\boxtimes\) and \(\mu_\boxtimes=0\) are empty (negative weight). The slice \(\mu_{\mathrm{far}}=0\) stays a \([0,1]\) solution of \(F_+\bar x=3-2f_e\), but it (and the whole \(\mu_{\mathrm{far}}\ge0\) 3-weight family) **cannot realise the bad case**: \(F_-|_{f=+1}\ge-(p+1)/(p-1)>-2\), while a gap-2 undercutter with \(f_e\equiv-1\) on \(\{S=-1\}\) needs \(S\le-3\) on \(\{f=+1\}\). Star-supported 0-1 Type I graphs Aut\(_e\)-average to that point (\(n_\square=(p+1)/2\), \(n_\boxtimes=5(p-1)/2\)). Dual-eq empty kills only the two-level / pairing-min slice. **Historical leftover:** split far Aut\(_e\) classes (unequal 4-set interpolants) did not reduce to the collapsed-far bound. Proposition 15.750 supersedes that leftover and proves `type_I_multilevel_bad_case_ND_closed=True` for every prime \(p\ge5\).
 
 4. **Lemma D existence / 2-plane — closed.** Written in `evidence/share/A3_PROOF.md` and checked live in 15.276: occupancy sumset \(\to\) sawtooth \(N(x)=1+(\lambda x+s)\bmod p\), majority \(z\), three-line support, \(\hat z(0)=p\), \(Cy=py\), phase lock \(s_0+s_1+s_2\equiv-2\). Amplitudes are the Fejer products \(F_{\lambda,s}(c)=2p\,\omega^{-c\lambda^{-1}s}/(\omega^{c\lambda^{-1}}-1)\), nonzero off \(0\), and the 3-vector is not \(\mathbb C\)-parallel as \((c_1,c_2,c_3)\) varies. \(M_3\) matching enum and rank-\(2\) at \(p=5,7,11\) remain checks, not the proof. This item is no longer a blocker.
 
 5. **Lemma E Johnson** (same-line hyperplane) was expanded independently and has **no algebraic GAP** relative to 15.269 B + the \(WW^\top\) identity. See `evidence/share/lemma_E_johnson.md`.
 
-Until (2)–(3) are closed, \(L=\tfrac12\) is not established. Caveat (4)
-is already discharged by `A3_PROOF.md` + 15.276; finite rank-2 remains an
-independent check of that proof.
+Until Caveat (2) is closed, \(L=\tfrac12\) is not established. Caveat (3)
+is discharged by 15.750, and Caveat (4) by `A3_PROOF.md` + 15.276; finite
+rank-2 remains an independent check of the latter proof.
 
 ---
 
@@ -302,4 +304,4 @@ independent check of that proof.
 Is residual (i) (Type I freeness-fail dual-eq empty for all primes \(p\ge5\)) essentially proved by this package?
 
 **Q2 (\(L\)).**  
-Is \(\lim\alpha_n=\tfrac12\) proved by this package? (The honest answer is no until Caveats 1–3 close.)
+Is \(\lim\alpha_n=\tfrac12\) proved by this package? (The honest answer is no until Caveat 2 closes.)

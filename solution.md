@@ -35,9 +35,10 @@ Moreover \(\limsup_n\alpha_n=\lim_n a_n\) where \(a_n=\sup_{k\ge1}\alpha_{kn}\).
 asks whether \(\alpha_n\) converges; it does not require identifying the
 limit.  Proposition 6.3 proves that convergence follows from just two
 Dini-summable amplification estimates, at multipliers \(2\) and \(3\), for
-\(H(n)=m_n^{2/3}\); polynomial saving is unnecessary.  Proposition 6.4 gives
-the exact four-state hinge for Hadamard doubling.  The two ray estimates
-remain open.
+\(H(n)=m_n^{2/3}\); polynomial saving is unnecessary.  Propositions
+6.4--6.5 reduce Hadamard doubling to the equal-endpoint mixed-state diamond,
+and Proposition 6.6 proves that diamond off one explicit Hamming-central/
+joint-energy residue.  Neither amplification ray is complete.
 
 **Stronger value-specific target — not a theorem.** Sandwich + Paley
 denseness (\(\rho=1\) on \(n=p^2+1\)) + E(1) on that family would give
@@ -45,21 +46,15 @@ denseness (\(\rho=1\) on \(n=p^2+1\)) + E(1) on that family would give
 \label{eq:limit}
 L=\lim_{n\to\infty}\alpha_n=\tfrac12.
 \end{equation}
-E(1) is **not proved** for all primes \(p\ge5\). Two mathematical
-obligations remain on this stronger Paley route (`GOAL.md`;
-`evidence/share/denseness_path_package.md` § Caveats):
-(1) residual (ii) for even \(k\ge4p\); and (2) Type I when Max− is not
-two-level. Proposition 15.720 closes the required bi-tight levels 2 and 3
-directly, so the spectral floor, global QVAR, and principal R1 are no longer
-acceptance gates. Its bi-tight level-4 corollary does not close the one-sided
-tight level-4 branch of residual (ii). At the `k=4p` residual endpoint,
-Proposition 15.721 excludes every boundary of total size at most `p-1` for
-`p>=17`; the first general shell is `p+1`, where strict pair deficit remains.
-Within that shell, 15.724 closes outside slack zero and 15.726 excludes every
-`1<=R<=floor((p-4)/3)`, so any positive survivor has
-`R>=floor((p-1)/3)`. Proposition 15.727 excludes equality at
-`p=17,19,23,29` and rigidifies the remaining endpoint cases; the rest of the
-shell remains open.
+E(1) is **not proved** for all primes \(p\ge5\). Exactly one mathematical
+obligation remains on this stronger Paley route (`GOAL.md`;
+`evidence/share/denseness_path_package.md` § Caveats): residual (ii) for
+even \(k\ge4p\). Proposition 15.720 closes the required bi-tight levels 2
+and 3, and Proposition 15.750 closes multi-level Type I for every prime.
+Thus the spectral floor, global QVAR, principal R1, and the historical
+`3A+B` Type-I mechanism are no longer acceptance gates. Propositions
+15.734--15.749 close the first three all-prime shells and several later
+rows; the exact live residual is recorded in `STATUS.md`.
 Lemma D existence / 2-plane is complete in `A3_PROOF.md`
 and 15.276. Aut-Schur is **false**. Gsum unused.
 
@@ -74,6 +69,7 @@ matrix of order \(n=p^2+1\) (over \(\mathbb F_{p^2}\)) admits a halfspace boolea
 **What is complete.** Dual-Gaussian lower bound; denseness; the two-ray
 conditional convergence theorem; \(\rho=1\) on \(n=p^2+1\);
 15.720 degree-congruence exclusion of required bi-tight levels 2 and 3;
+15.750 all-prime multi-level Type-I exclusion;
 residual (ii) affine + even \(k\le 4p-2\) (15.179/236/237), **not**
 even \(k\ge4p\); residual (i) two-level Type I via 15.272
 \(k=1\cup k=3\Rightarrow G_+\succ0\Rightarrow\ker=\mathrm{sc}\) (15.207)
@@ -86,9 +82,13 @@ remaining `z=7` pointed systems and identify their projected high-catalog
 semigroups through grade six, but exclude no source boundary.  All 56 actual
 `z=7` line boundaries in two orbits remain open.
 
-The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-09-01; through Propositions 6.3--6.4 and 15.748).** The direct multiplier-2 and multiplier-3 estimates are open; the optional Paley \(L=1/2\) route also remains open. Details: `evidence/share/denseness_path_package.md` § Caveats.
+The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-09-01; through Propositions 6.3--6.6 and 15.750).** The direct multiplier-2 and multiplier-3 estimates are open; Proposition 6.6 narrows multiplier two but does not close it. The optional Paley \(L=1/2\) route also remains open at residual (ii). Details: `evidence/share/denseness_path_package.md` § Caveats.
 
-> **Reader note.** Soft-close of \(L=\tfrac12\) via scheme-min Gsum was **retracted** 2026-08-06. Aut-Schur remains false. Historical “\(L\) OPEN” remarks in Props 15.20–15.171 refer to those older routes.
+> **Reader note.** Soft-close of \(L=\tfrac12\) via scheme-min Gsum was
+> **retracted** 2026-08-06. Aut-Schur remains false. Historical “\(L\) OPEN”
+> remarks in Props 15.20–15.171 refer to those older routes. Likewise,
+> statements inside Propositions 15.1--15.749 that multi-level Type I remains
+> open are as-of records superseded by Proposition 15.750.
 
 ---
 
@@ -451,9 +451,248 @@ choice has absolute energy at least that sum.  The same argument with both
 within-part minima gives the second term.  Consequently (6.9) requires a
 simultaneous hereditary bound for the two endpoint signings \(G,J\); mixed
 cross terms within that frame cannot repair a cut that violates it.  A
-different orientation changes \(G,J\), so selecting a frame whose endpoints
-pass every cut remains part of the open problem.  No such construction is
-currently proved.
+different orientation generally changes \(G,J\).  Proposition 6.5 below
+shows, however, that the equal-endpoint skew frame has \(G=J=A\), and then
+every inequality in (6.10) is automatic.  Thus endpoint selection is not the
+live obstruction.  Only the mixed states remain.
+
+**Proposition 6.5 (equal-endpoint skew reduction).**  Let \(A\) be an
+order-\(n\) signing and let \(R\) be a skew signing: \(R_{ii}=0\),
+\(R_{ji}=-R_{ij}\), and \(R_{ij}\in\{\pm1\}\) for \(i<j\).  For each
+\(i<j\), orient the Hadamard block as
+\[
+ B_{ij}=\begin{pmatrix}A_{ij}&-R_{ij}\\R_{ij}&A_{ij}\end{pmatrix}.
+                                                               \tag{6.11}
+\]
+Both endpoint signings of Proposition 6.4 are exactly \(A\).  Moreover, if
+\(K(A,R)\) denotes the resulting four-state minimax, then
+\[
+ \boxed{K(A,R)={1\over2}\max_{x,y\in\{\pm1\}^n}
+ \left(\lvert Q_A(x)+Q_A(y)\rvert+\lvert x^TRy\rvert\right).}   \tag{6.12}
+\]
+Every hereditary endpoint inequality (6.10) is automatic when
+\(M=\Phi(A)\).  Consequently the multiplier-two ray follows if, for an
+optimal \(A\), one can choose \(R\) so that
+\[
+ \lvert Q_A(x)+Q_A(y)\rvert+\lvert x^TRy\rvert
+ \le2\sqrt2\,M+n^{3/2}\Omega(n)                  \tag{6.13}
+\]
+for every Boolean pair, where the supremum envelope of \(\Omega\) has a
+vanishing dyadic Dini tail.
+
+*Proof.*  The four normalized block values are
+\[
+ {1\over2}(1,(-1)^u)B_{ij}(1,(-1)^v)^T
+ =\begin{cases}
+ A_{ij},&u=v,\\
+ R_{ij},&(u,v)=(0,1),\\
+ -R_{ij},&(u,v)=(1,0).
+ \end{cases}                                      \tag{6.14}
+\]
+Thus both endpoints are \(A\).  Given a cloud state \((s,t)\), put
+\(x=s\) and \(y_i=(-1)^{t_i}s_i\).  Direct expansion gives
+\[
+ Q_{C_t}(s)={1\over2}
+ \bigl(Q_A(x)+Q_A(y)-x^TRy\bigr).
+\]
+Every Boolean pair \((x,y)\) arises in this way.  Replacing \(y\) by
+\(-y\) fixes both quadratic terms and reverses the skew term, while
+\(\max(|a+b|,|a-b|)=|a|+|b|\).  This proves (6.12).
+
+For the positive hereditary inequality, independently choose spins on
+\(T\) and \(T^c\) attaining \(P(A[T])\) and \(P(A[T^c])\).  If their
+within-part sum is \(D\) and their cross energy is \(X\), the two full
+states obtained by flipping one part have energies \(D+X\) and \(D-X\).
+Both have absolute value at most \(M\), so
+\(D+|X|\le M\).  The same argument with the two within-part minima proves
+the negative inequality.  Since (6.12) also gives \(K(A,R)\ge M\), (6.10)
+is automatic.  Finally (6.13), (6.12), and (6.7) give
+\[
+ m_{2n}\le2\sqrt2\,m_n+n^{3/2}\Omega(n)+n,
+\]
+which is the required Dini-summable doubling estimate. \(\square\)
+
+The skew term cannot be budgeted independently of the two quadratic
+energies.  For every skew signing,
+\[
+ \max_{x,y}|x^TRy|=\max_x\|Rx\|_1
+ \ge n\,\mathbb E|S_{n-1}|
+ =\left(\sqrt{2/\pi}+o(1)\right)n^{3/2},           \tag{6.15}
+\]
+where \(S_k\) is a sum of \(k\) independent signs.  By contrast, combining
+only \(|Q_A(x)+Q_A(y)|\le2M\) with (6.13) would require
+\(\max|x^TRy|\le2(\sqrt2-1)M+o(n^{3/2})\).  The random-method upper bound
+\(M\le(\sqrt{\log2}+o(1))n^{3/2}\) makes the latter leading constant
+\(2(\sqrt2-1)\sqrt{\log2}<\sqrt{2/\pi}\).  Hence every uncoupled
+internal/cross budget is impossible; statewise anticorrelation is
+load-bearing.
+
+The superficially natural disk strengthening
+\[
+ I_A(x,y)^2+C_R(x,y)^2\le M^2+o(n^3),\qquad
+ I_A={Q_A(x)+Q_A(y)\over2},\quad C_R={x^TRy\over2}, \tag{6.16}
+\]
+is not a harmless replacement for the diamond (6.13): (6.15) shows that it
+would itself prove
+\(\liminf m_n/n^{3/2}\ge1/\sqrt{2\pi}\), much stronger than the known
+\(1/\pi\) floor.  Its zero-error form is already false for an optimizer at
+\(n=5\).  Every order-five signing has
+\(\mathbb E_xQ_A(x)^2=10\), while all its energies are even, so
+\(\Phi(A)\ge4\).  Take \(A=-1\) on a five-cycle and \(+1\) on its diagonals;
+it attains \(\Phi(A)=4\), hence \(m_5=4\).  Its five positive maximizers,
+whose negative coordinates are \(\{r,r+2\}\), form an invertible circulant
+matrix \(V\).
+Exact (6.16) would force \(VRV^T=0\), hence \(R=0\), impossible for a skew
+signing.  The exact diamond, not the disk, is the live target.
+
+**Proposition 6.6 (balanced Paley-skew shielding).**  Put
+\[
+ a={\sqrt2-1\over\pi},\qquad
+ \rho=a^2,\qquad
+ \tau={1-\sqrt{1-4\rho}\over2}.                   \tag{6.17}
+\]
+There are absolute constants \(c>0,N_0\) and a nonnegative function
+\(\Omega\), with \(\Omega^*(N)=\sup_{u\ge N}\Omega(u)\), whose supremum
+envelope satisfies
+\[
+ \sum_{j\ge0}\Omega^*(2^jN)\longrightarrow0       \tag{6.18}
+\]
+such that the following holds for every \(n\ge N_0\).  Let \(A\) be an
+optimal order-\(n\) signing, let \(M=m_n\), and choose
+\(z\in\{\pm1\}^n\) with \(|Q_A(z)|=M\).  There is a skew signing \(R\)
+for which (6.13) holds for every pair \((x,y)\) satisfying at least one of
+\[
+\begin{aligned}
+ \min(h_x,h_y)&\le\rho n,\\
+ d_H(x,y)\bigl(n-d_H(x,y)\bigr)&\le\rho n^2,\\
+ h_xh_y&\le {\rho\over4}n^2,\\
+ 2\sqrt2M-|Q_A(x)+Q_A(y)|&\ge n^{3/2},             \tag{6.19}
+\end{aligned}
+\]
+where \(h_x=d_H(x,\{z,-z\})\) and similarly for \(h_y\).  Equivalently,
+this explicit construction leaves only pairs satisfying all four strict
+inequalities
+\[
+\begin{aligned}
+ h_x,h_y&>\rho n,\\
+ d_H(x,y)\bigl(n-d_H(x,y)\bigr)&>\rho n^2,\\
+ h_xh_y&>{\rho\over4}n^2,\\
+ |Q_A(x)+Q_A(y)|&>2\sqrt2M-n^{3/2}.                \tag{6.20}
+\end{aligned}
+\]
+In particular, it shields linear neighborhoods of the chosen extremal
+antipodal pair and of the diagonal and antidiagonal.  It does not prove the
+complete multiplier-two ray.  If
+\(M/n^{3/2}\le1/(2\sqrt2)-c_0\) for a fixed \(c_0>0\), the last threshold
+in (6.20) is negative for large \(n\), so that condition is vacuous; in this
+low-\(\alpha\) regime the theorem's gain is entirely geometric.
+
+*Proof.*  The effective prime-number theorem in the fixed progression has
+\(\pi(X;4,3)=\tfrac12\operatorname{Li}(X)
++O(X\exp(-c_1\sqrt{\log X}))\).  Applying it at the two endpoints of an
+interval of length \(X\exp(-c_1\sqrt{\log X}/2)\) gives, for every large
+\(n\), a prime
+\[
+ n\le q\le n+n\exp(-c\sqrt{\log n}),\qquad q\equiv3\pmod4.       \tag{6.21}
+\]
+Let \(T_q\) be the Paley tournament matrix
+\((T_q)_{uv}=\chi(v-u)\).  Then
+\[
+ T_q\mathbf1=0,\qquad T_qT_q^T=qI-J,               \tag{6.22}
+\]
+so \(\|T_q\|_{\rm op}=\sqrt q\).  Compress to any \(n\)-set and call the
+result \(T\); put \(k=q-n\).  The deleted columns in (6.22) give
+\[
+ \|T\mathbf1\|_1\le\sqrt{nqk}.                    \tag{6.23}
+\]
+Regard \(T\) as a tournament.  Repeatedly transfer one outdegree unit from
+a maximum-degree vertex to a minimum-degree vertex, reversing their edge
+when it has the needed orientation and otherwise reversing the two edges of
+a directed two-path.  Use row-sum excess
+\(\sum_i|(T\mathbf1)_i|\) for odd \(n\), and
+\(\sum_i\max\{|(T\mathbf1)_i|-1,0\}\) for even \(n\).
+Each transfer uses at most two edge reversals and lowers this potential by at
+least two, so the total number of reversed edges is
+at most \(\|T\mathbf1\|_1\).  Thus after at most
+\(s\le\sqrt{nqk}\) reversals one obtains a tournament
+matrix \(R_n=T+F\) with
+\[
+ \|R_n\mathbf1\|_\infty\le1,\qquad
+ |u^TR_nv|\le n\sqrt q+4s                         \tag{6.24}
+\]
+for all Boolean \(u,v\).  With \(\delta=(q-n)/n\), the relative error in
+(6.24) is bounded by
+\[
+ \varepsilon(n)=\sqrt{1+\delta}-1
+       +4\sqrt{(1+\delta)\delta}.
+\]
+It is at most \(C\exp(-c'\sqrt{\log n})\).  Its supremum envelope has the
+dyadic Dini property because
+\(\sum_j\exp(-c'\sqrt{\log(2^jn)})\to0\).  The same is true after adding
+any \(O(n^{-1/2})\) term.
+
+Each edge reversal contributes at most \(4\) to \(a^TFb\) whenever
+\(a,b\in[-1,1]^n\).  This observation also applies below to indicator
+vectors, so the displayed \(s\)-errors do not require Boolean inputs.
+
+Conjugate by the maximizer, \(R=\operatorname{diag}(z)R_n
+\operatorname{diag}(z)\).  Since \(\|Rz\|_\infty\le1\), every pair incident
+to \(\{z,-z\}\) has skew cost at most \(n\).  More generally, if a Boolean
+vector differs from an anchor in \(h\) places, then, writing
+\(R_n=T+F\),
+\[
+ |u^TR_nv|\le n+2\sqrt{qhn}+8s.                    \tag{6.25}
+\]
+For \(h\le\rho n\), the leading term on the right is
+\(2a\sqrt{1+\delta}\,n^{3/2}\).  On the other hand Proposition 5.2 gives,
+uniformly in \(x,y\),
+\[
+ 2\sqrt2M-|Q_A(x)+Q_A(y)|
+ \ge2(\sqrt2-1)M
+ \ge2a\sqrt{1-1/n}\,n^{3/2}.                      \tag{6.26}
+\]
+The difference between (6.25) and (6.26) is
+\(O(n^{-1/2}+\sqrt\delta)n^{3/2}\), with the required Dini tail.  This
+proves the first line of (6.19), in either coordinate by skew symmetry.
+
+If \(r=d_H(u,v)\), skewness cancels both within-part blocks and gives the
+exact cut identity
+\[
+ u^TTv=-2v_S^TT_{S,S^c}v_{S^c},\qquad S=\{i:u_i\ne v_i\}.
+\]
+Consequently
+\[
+ |u^TR_nv|\le2\sqrt{qr(n-r)}+4s.                  \tag{6.27}
+\]
+Equations (6.17), (6.26), and (6.27) prove the second line of (6.19); it is
+equivalent to
+\(r\le\tau n\) or \(r\ge(1-\tau)n\).
+
+Finally choose independent global signs so that
+\(u=\mathbf1-2\mathbf1_S\),
+\(v=\mathbf1-2\mathbf1_U\), with \(|S|=h_x\), \(|U|=h_y\).
+Expanding around \(\mathbf1^TR_n\mathbf1=0\) and using the balanced row
+sums gives
+\[
+ |u^TR_nv|\le2(h_x+h_y)+4\sqrt{qh_xh_y}+16s.       \tag{6.28}
+\]
+Since each \(h\le n/2\), the third line of (6.19) again puts (6.28) below
+(6.26) up to \(O(n^{-1/2}+\sqrt\delta)n^{3/2}\).  The global estimate
+(6.24) proves the fourth line.  Taking \(\Omega\) to dominate these four
+explicit errors proves (6.18)--(6.19); for suitable absolute constants,
+\[
+ \Omega(n)=C_0\left(n^{-1/2}+
+             \exp(-c_2\sqrt{\log n})\right)
+\]
+works.  Complementing the alternatives gives (6.20). \(\square\)
+
+Proposition 6.6 is a genuine infinite-family reduction, but its last set is
+not known to be empty.  The next multiplier-two target is therefore exact:
+choose the Paley principal embedding and the degree-balancing reversals so
+that (6.13) also holds on (6.20). An independent skew-norm budget cannot do
+this by (6.15). The asymptotic disk (6.16) is not disproved, but it is a
+strictly stronger lower-bound problem rather than a neutral reformulation;
+its zero-error form is false.
 
 ---
 
@@ -663,20 +902,24 @@ or better under additional spectral assumptions, but:
 
 ---
 
-## §13. Approach 3: improved multipartite with special cross blocks — fails
+## §13. Approach 3: uncoupled multipartite bounds fail; coupled RG2 remains live
 
 Already killed in §10. Summary of attempted constructions and their failures:
 
 | Cross design | Cross contribution to \(\alpha_{kn}\) | Verdict |
 |---|---|---|
 | i.i.d. random | \(\sqrt{\log2}\) (sharp for the Gaussian field) | \(c_k\not\to0\) |
-| Hadamard (\(k=2\)) | \(1/(2\sqrt2)\approx0.354\) | best possible order; constant \(\ge0.28\) by bilinear lower bound |
+| Hadamard (\(k=2\)) | \(1/(2\sqrt2)\approx0.354\) | the separate-norm estimate pays a leading constant; coupled statewise control is not excluded |
 | Lexicographic product \(A[B]\) | \(\alpha_k\sqrt n\to\infty\) | unusable |
 | Kronecker \(C\otimes S\) + diagonal fill | \(\Theta(1)\) by spectral calculus | no \(o(1)\) |
 | Conference block-signs \(\times\) Hadamard | \(\Theta(1)\) (Frobenius/nuclear estimates) | no \(o(1)\) |
 | Constant \(\pm1\) blocks | \(\Theta(\sqrt{kn})\to\infty\) | unusable |
 
-Any construction of a single matrix of order \(kn\) is competing with the conference upper bound \(\alpha\le1/2\); multipartite from small optimal blocks cannot beat the cross-term barrier of §10 without violating \(\lambda>0\).
+These estimates exclude only constructions controlled by separate internal
+and cross norms.  Proposition 6.5 gives an exact coupled Hadamard/skew
+formulation, and Proposition 6.6 proves its target outside (6.20).  That
+residue remains open; the bilinear floor in §10 is not a universal additive
+floor for a coupled construction.
 
 ---
 
@@ -3666,8 +3909,10 @@ This is the natural rigidity route to Theorem E(1): a matching lower bound \(\rh
 ### What would close the problem
 
 1. The two Dini-summable multiplier estimates of Proposition 6.3.
-   Proposition 6.4 isolates an exact four-state/hereditary multiplier-two
-   subproblem; the multiplier-three or `1:2` split is independently required.
+   Proposition 6.5 makes the multiplier-two endpoints equal and reduces the
+   ray to the exact mixed-state diamond (6.13); Proposition 6.6 proves it
+   outside the explicit residue (6.20). That residue remains, and the
+   multiplier-three or `1:2` split is independently required.
 2. Asymptotic conference optimality + \(\rho(C_k)\to\rho_*\) (Theorem E) — reduced by Theorem G to product-minimisation of \(\rho\cdot\|A\|_{\mathrm{op}}\).
 3. Extension regularity \(\delta_n/\sqrt n\to\ell\) (Theorem F), or the stronger \(\gamma(A^*)=(\tfrac32\alpha_n+o(1))\sqrt n\).
 4. Maximizer delocalisation + discrepancy feeding (3).
@@ -5427,9 +5672,10 @@ Continues 15.168–170. **OPEN for general primes \(p\ge5\).** Structure (parity
 15.237 close only the bounded even range through \(4p-2\). They do not close
 global residual (ii): the non-Walsh multi-level range at even \(k\ge4p\)
 remains open, so `residual_ii_full_closed=False`. Proposition 15.272 later
-closes the historical two-level Type-I/residual-(i) slice, not multi-level
-Type I, E(1), or \(L\). The Gsum route remains unused; Path-C / \(16N\)
-remain optional open.
+closes the historical two-level Type-I/residual-(i) slice but did not close
+multi-level Type I. Proposition 15.750 now closes multi-level Type I for every
+prime \(p\ge5\), leaving residual (ii) as the sole false E(1) unit. The Gsum
+route remains unused; Path-C / \(16N\) remain optional open.
 
 Evidence: `src/e1_gmin_m4_prop15171.py`, `evidence/e1_gmin_m4_prop15171.json`,
 `tests/test_prop15171.py`, `evidence/share/denseness_path_package.md`.
@@ -8973,9 +9219,11 @@ residues \(8\) and \(6\) modulo \(24\). This is only a bi-tight corollary:
 it does not exclude a generic one-sided Max+- or Max−-tight level-4 cover.
 
 Thus Proposition 15.720 repairs the Type-I \(2p\) and deep \(3p\)
-no-descent branches without the spectral floor, QVAR, or R1. The one-sided
-level-4 branch remains inside residual (ii), and the two live E(1) gates are
-the multi-level Type-I bad case and non-Walsh residual (ii). \(\square\)
+no-descent branches without the spectral floor, QVAR, or R1. At this stage the
+one-sided level-4 branch remained inside residual (ii), and the two live E(1)
+gates were the multi-level Type-I bad case and non-Walsh residual (ii).
+Proposition 15.750 later closes the former, leaving residual (ii) as the sole
+false E(1) unit. \(\square\)
 
 Evidence: `src/e1_gmin_m4_prop15720.py`,
 `tests/test_prop15720.py`, and

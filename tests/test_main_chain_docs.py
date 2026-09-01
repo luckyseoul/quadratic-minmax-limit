@@ -51,12 +51,25 @@ def test_solution_does_not_assert_limit_theorem():
     assert "multipliers 2 and 3" in long_goal
     assert "Dini-summable" in long_goal
 
+    paley_goal = (
+        Path(__file__).resolve().parents[1] / "GOAL.md"
+    ).read_text(encoding="utf-8", errors="replace")
+    assert "[x] Close Type I bad case when Max− is multi-level (15.750)" in paley_goal
+    assert "attack only the two\nopen units" not in paley_goal
+
     assert "**Proposition 6.3 (two-ray convergence criterion).**" in text
     assert "H(2n)\\le2H(n)" in text
     assert "H(3n)\\le3H(n)" in text
     assert "2^a3^b" in text
     assert "E(N)=\\sum_{j\\ge0}" in text
     assert "**Proposition 6.4 (exact four-state form of Hadamard doubling).**" in text
+    assert "**Proposition 6.5 (equal-endpoint skew reduction).**" in text
+    assert "**Proposition 6.6 (balanced Paley-skew shielding).**" in text
+    assert "Every hereditary endpoint inequality (6.10) is automatic" in text
+    assert "finding a frame that passes all cuts remains open" not in text
+    assert "constant \\(\\ge0.28\\) by bilinear lower bound" not in text
+    assert "cannot beat the cross-term barrier" not in text
+    assert "superseded by Proposition 15.750" in text
     assert "exact identity" in text
     assert "incorrectly combined" in text
     assert "C\\in\\Bigl[" not in text
@@ -110,5 +123,7 @@ def test_denseness_package_does_not_soft_close_the_theorem():
     ).read_text(encoding="utf-8", errors="replace")
     assert "does **not** prove E(1)" in package
     assert "## Lemma K (required bi-tight levels)." in package
+    assert "| Residual (i) Type I, multi-level Max− | **Proved** (15.750) |" in package
+    assert "type_I_multilevel_bad_case_ND_closed` stays False" not in package
     assert "Hence E(1) on the whole Paley family" not in package
     assert "Historical remarks “\\(L\\) OPEN”" not in package

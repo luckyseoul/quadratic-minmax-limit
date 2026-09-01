@@ -1,7 +1,8 @@
 # Original limit: two-ray convergence reduction
 
-**Status:** proved theorem (conditional convergence criterion); the two
-amplification estimates themselves remain open.
+**Status:** proved conditional convergence criterion. Propositions 6.5--6.6
+now narrow multiplier two to the explicit residue (6.20); multiplier two is
+not closed, and multiplier three remains open.
 
 ## Scope correction
 
@@ -192,14 +193,20 @@ K\ge\max\{P(J[T])+P(G[T^c]),\ N(J[T])+N(G[T^c])\}.  \tag{8}
 \]
 
 Thus (7) requires one frame whose two endpoint signings obey a simultaneous
-hereditary bound for every cut.  For that fixed frame, its mixed cross terms
-cannot repair a cut that violates (8).  A different orientation changes the
-endpoint signings, so finding a frame that passes all cuts remains open.
+hereditary bound for every cut. Proposition 6.5 supplies an equal-endpoint
+skew frame with `G=J=A`. In that frame (8) is automatic: the two full `A`
+states across a cut have energies `D+X,D-X`, so `D+|X|<=Phi(A)`. Endpoint
+selection is therefore retired; only the exact mixed-state diamond (6.13)
+remains.
 
 ## New live gate
 
-First attack (7)--(8), or bypass the Hadamard subclass with another coupled
-doubling construction; then prove the `1:2` split.  Logarithmic
+Proposition 6.6 constructs a balanced near-Paley skew frame and proves the
+diamond outside the explicit Hamming-central/joint-energy residue (6.20).
+Close precisely that residue next, then prove the `1:2` split. Logarithmic
 Dini-summable error is enough, so polynomial saving should not be imposed as
-an unnecessary burden.  A finite Paley residue census does not address this
-gate.
+an unnecessary burden. Do not reopen endpoint selection, an independent skew
+budget, or a finite pair census. The asymptotic disk is a strictly stronger
+lower-bound problem rather than an equivalent reformulation; it is not
+disproved. The full proof ledger is
+`evidence/NOTE_2026-09-01_RG2_EQUAL_ENDPOINT_PALEY_SHIELD.md`.
