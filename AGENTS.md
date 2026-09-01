@@ -13,9 +13,14 @@ equal-endpoint skew diamond for a Hadamard doubling lift; its hereditary
 endpoint conditions are automatic. Proposition 6.6 closes that diamond
 outside the exact Hamming-central/joint-energy residue (6.20). That residue
 is the preferred front unless the human explicitly selects the stronger
-Paley `L=1/2` route. Do not reopen endpoint selection, an independent skew
-budget, or a finite pair census. Do not present the disk surrogate as an
-equivalent target: its asymptotic form would prove a stronger
+Paley `L=1/2` route. Proposition 6.7 also gives an exact equal-endpoint
+tetrahedral tripling frame. Its single-skew distance-product and
+distinguished-endpoint shields do not close the unshielded tetrahedral
+diamond. Do not reopen endpoint selection on either frame, an independent
+skew budget, a finite pair census, the implication from three pairwise
+diamonds to the tetrahedral diamond, or a statewise random-skew union bound.
+Do not present the disk surrogate as an equivalent target: its asymptotic
+form would prove a stronger
 `1/sqrt(2pi)` lower bound, while only its zero-error form is disproved.
 Do not launch another finite-prime, residue, orbit, or cell census as work on
 the original question.  The long residual-(ii) section below is continuity

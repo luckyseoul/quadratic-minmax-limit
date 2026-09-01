@@ -10,10 +10,14 @@ only mixed states remain. Proposition 6.6 constructs a balanced near-Paley
 orientation and closes every pair outside the explicit Hamming-central/
 joint-energy residue (6.20), with a dyadic-Dini error. Section 10's claimed
 universal `0.282` additive floor was invalid, independent skew budgets are
-impossible, and the stronger disk surrogate is not the live target. This is
-the preferred direct gate. The finite Paley residual ledger below remains
-valid evidence for the stronger `L=1/2` route, but it is not the only
-acceptance path and should not be resumed by default.
+impossible, and the stronger disk surrogate is not the live target.
+Proposition 6.7 removes endpoint selection from tripling as well: its exact
+tetrahedral frame has a `3n` internal-edge error and leaves one sharp
+three-state diamond. The multiplier-two residue remains the preferred direct
+gate; the tetrahedral diamond is the named multiplier-three gate after it.
+The finite Paley residual ledger below remains valid evidence for the
+stronger `L=1/2` route, but it is not the only acceptance path and should not
+be resumed by default.
 
 **Chronology rule:** lower proposition sections are preserved as as-of
 handoffs. Their older statements that Type I or another later-closed subcase
@@ -21,7 +25,7 @@ remains open are not the live status; use this header and the highest-numbered
 applicable proposition. Proposition 15.750 supersedes every earlier Type-I
 status line.
 
-**Date:** 2026-09-01 (through Propositions 6.3--6.6 and 15.750; required bi-tight levels 2 and 3 and multi-level Type I are
+**Date:** 2026-09-01 (through Propositions 6.3--6.7 and 15.750; required bi-tight levels 2 and 3 and multi-level Type I are
 closed, residual (ii) is closed for every boundary at
 `k in {4p,4p+2,4p+4}` for every prime `p>=11`, and the exceptional
 and generic branches at `p=13,k=58`, the generic `p=17,k=74` row, and the
@@ -96,7 +100,7 @@ excluding any of its 56 actual line boundaries in two orbits. The positive
 `z=7` remainder stays open. The historical p=13 orbit/mesh `k=6` work is
 not a close and is not a current proof input.
 
-## 6.5--6.6 — equal endpoints and the exact direct doubling residue
+## 6.5--6.7 — exact direct amplification residues
 
 For an optimal `A` and a skew signing `R`, use Hadamard blocks
 `[[A_ij,-R_ij],[R_ij,A_ij]]`. Both endpoints are `A`, every hereditary cut
@@ -116,6 +120,23 @@ endpoint selection, an independent cross budget, or finite pair census. The
 asymptotic disk is a stronger `1/sqrt(2pi)` lower-bound problem, not an
 equivalent target; only its zero-error form is disproved. After doubling, the
 multiplier-three ray (or Proposition 6.3's `1:2` split) still remains.
+
+For tripling, Proposition 6.7 uses three skew signings in a tetrahedral
+three-cloud frame. All four projective endpoints are exactly `A`, and the
+full lift differs by at most the `3n` internal-edge contribution from
+
+`max_(x,y,z) max{|I+d|+|b+c|, |I-d|+|b-c|}`.
+
+The sufficient target is `3 sqrt(3)m_n+o_Dini(n^(3/2))`. With the coherent
+choice `P=R,Q=-R,T=R`, this becomes the exact diamond
+
+`|Q_A(x)+Q_A(y)-Q_A(z)|+|x^T R y+y^T R z+z^T R x|`.
+
+The cyclic term equals `(x-y)^T R (y-z)`. Proposition 6.7 proves the
+resulting distance-product and distinguished-endpoint spectral shields, but
+does not control their complement. That unshielded tetrahedral diamond is
+the exact open unit for this tripling construction; do not resume endpoint
+selection or report the shields as closure of the ray.
 
 ## 15.750 — isolated-chart parity halving closes multi-level Type I
 

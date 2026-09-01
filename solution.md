@@ -38,7 +38,9 @@ Dini-summable amplification estimates, at multipliers \(2\) and \(3\), for
 \(H(n)=m_n^{2/3}\); polynomial saving is unnecessary.  Propositions
 6.4--6.5 reduce Hadamard doubling to the equal-endpoint mixed-state diamond,
 and Proposition 6.6 proves that diamond off one explicit Hamming-central/
-joint-energy residue.  Neither amplification ray is complete.
+joint-energy residue. Proposition 6.7 gives an equal-endpoint tetrahedral
+tripling frame and two exact spectral shields, but leaves their complement
+open. Neither amplification ray is complete.
 
 **Stronger value-specific target — not a theorem.** Sandwich + Paley
 denseness (\(\rho=1\) on \(n=p^2+1\)) + E(1) on that family would give
@@ -82,7 +84,7 @@ remaining `z=7` pointed systems and identify their projected high-catalog
 semigroups through grade six, but exclude no source boundary.  All 56 actual
 `z=7` line boundaries in two orbits remain open.
 
-The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-09-01; through Propositions 6.3--6.6 and 15.750).** The direct multiplier-2 and multiplier-3 estimates are open; Proposition 6.6 narrows multiplier two but does not close it. The optional Paley \(L=1/2\) route also remains open at residual (ii). Details: `evidence/share/denseness_path_package.md` § Caveats.
+The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-09-01; through Propositions 6.3--6.7 and 15.750).** The direct multiplier-2 and multiplier-3 estimates are open: Proposition 6.6 narrows multiplier two to (6.20), while Proposition 6.7 narrows multiplier three to an unshielded tetrahedral diamond. Neither proposition closes its ray. The optional Paley \(L=1/2\) route also remains open at residual (ii). Details: `evidence/share/denseness_path_package.md` § Caveats.
 
 > **Reader note.** Soft-close of \(L=\tfrac12\) via scheme-min Gsum was
 > **retracted** 2026-08-06. Aut-Schur remains false. Historical “\(L\) OPEN”
@@ -693,6 +695,149 @@ that (6.13) also holds on (6.20). An independent skew-norm budget cannot do
 this by (6.15). The asymptotic disk (6.16) is not disproved, but it is a
 strictly stronger lower-bound problem rather than a neutral reformulation;
 its zero-error form is false.
+
+**Proposition 6.7 (tetrahedral tripling frame and exact diamond).**  Let
+\(A\) be an order-\(n\) signing, put \(M=\Phi(A)\), and let \(P,Q,T\) be
+skew signings of order \(n\).  For arbitrary diagonal sign matrices
+\(D_{12},D_{13},D_{23}\), the block matrix
+\[
+ {\cal S}=\begin{pmatrix}
+ A&P+D_{12}&Q+D_{13}\\
+ -P+D_{12}&A&T+D_{23}\\
+ -Q+D_{13}&-T+D_{23}&-A
+ \end{pmatrix}                                                   \tag{6.29}
+\]
+is an order-\(3n\) signing.  For Boolean \(x,y,z\), write
+\[
+ I=Q_A(x)+Q_A(y)-Q_A(z),\qquad
+ b=x^TPy,\quad c=x^TQz,\quad d=y^TTz
+\]
+and define
+\[
+ K_3(A;P,Q,T)=\max_{x,y,z}\max\left\{
+ |I+d|+|b+c|,\ |I-d|+|b-c|\right\}.              \tag{6.30}
+\]
+Then
+\[
+ \bigl|\Phi({\cal S})-K_3(A;P,Q,T)\bigr|\le3n.   \tag{6.31}
+\]
+Moreover, after grouping the three copies of coordinate \(i\) into one
+cloud, every one of the four projective constant cloud states induces
+exactly the signing \(A\).  Explicitly, for \(i<j\) the inter-cloud block is
+\[
+ B_{ij}=A_{ij}\operatorname{diag}(1,1,-1)+
+ \begin{pmatrix}
+ 0&P_{ij}&Q_{ij}\\
+ -P_{ij}&0&T_{ij}\\
+ -Q_{ij}&-T_{ij}&0
+ \end{pmatrix},
+ \qquad v^TB_{ij}v=A_{ij}                       \tag{6.32}
+\]
+for \(v\in\{(1,1,1),(1,-1,-1),(-1,1,-1),
+(-1,-1,1)\}\).  Hence endpoint selection is not an obstruction for this
+tripling frame.  The multiplier-three ray would follow if, for an optimal
+\(A\), one could choose \(P,Q,T\) so that
+\[
+ K_3(A;P,Q,T)\le3^{3/2}M+n^{3/2}\Omega(n),        \tag{6.33}
+\]
+where \(\Omega\ge0\) and its supremum envelope has a vanishing dyadic Dini
+tail.
+
+There is a useful one-signing specialization.  Taking
+\(P=R,\ Q=-R,\ T=R\) and putting
+\[
+ C_R(x,y,z)=x^TRy+y^TRz+z^TRx=(x-y)^TR(y-z),
+\]
+one has the exact diamond
+\[
+ K_3(A;R,-R,R)=\max_{x,y,z}
+ \left(|Q_A(x)+Q_A(y)-Q_A(z)|+|C_R(x,y,z)|\right). \tag{6.34}
+\]
+To expose its endpoint geometry, put \(s=x\circ y\circ z\) and
+\[
+\begin{array}{ll}
+ u_0=(s+x+y+z)/4,&u_1=(s+x-y-z)/4,\\
+ u_2=(s-x+y-z)/4,&u_3=(s-x-y+z)/4.
+\end{array}
+\]
+The \(u_j\) have disjoint supports, take values in \(\{0,\pm1\}\), and
+their supports partition \([n]\).  Exactly,
+\[
+\begin{aligned}
+ I&=Q_A(s)-4\bigl(u_0^TAu_3+u_1^TAu_2\bigr),\\
+ C_R&=4\bigl(u_1^TRu_2+u_2^TRu_3+u_3^TRu_1\bigr).              \tag{6.35}
+\end{aligned}
+\]
+If \(\Lambda=\|R\|_{\rm op}\) and
+\(h=|\operatorname{supp}u_1|+|\operatorname{supp}u_2|
+ +|\operatorname{supp}u_3|\), then the following two shields are automatic:
+\[
+\begin{aligned}
+ |C_R|&\le4\Lambda\min_{\rm cyc}
+ \sqrt{d_H(x,y)d_H(y,z)},\\
+ |C_R|&\le {4\over\sqrt3}\Lambda h.              \tag{6.36}
+\end{aligned}
+\]
+Thus the integrand in (6.34) is at most \(3\sqrt3M\) for a triple whenever
+either right-hand side in (6.36) is at most \(3\sqrt3M-|I|\).  The complement
+of these two shields---the **tetrahedral diamond**---is open; Proposition 6.7
+does not prove the multiplier-three ray.
+
+*Proof.*  Every off-diagonal entry of (6.29) is a sign, and the transpose
+blocks match, so \({\cal S}\) is a signing.  Its energy at \((x,y,z)\) is
+\[
+ Q_{\cal S}(x,y,z)=I+b+c+d+\Delta(x,y,z),
+\]
+where the exact internal-cloud contribution is
+\[
+ \Delta=x^TD_{12}y+x^TD_{13}z+y^TD_{23}z,
+ \qquad |\Delta|\le3n.                            \tag{6.37}
+\]
+The four global layer-sign choices leave \(I\) fixed and give the four
+cross-term sign patterns whose product is \(+1\).  Their principal parts are
+\[
+ I+b+c+d,\quad I-b-c+d,\quad I-b+c-d,\quad I+b-c-d.
+\]
+Pairing the first two and the last two and using
+\(\max(|a+r|,|a-r|)=|a|+|r|\) gives (6.30).  Adding (6.37), then maximizing,
+proves both sides of (6.31).
+
+Equation (6.32) follows because its second summand is skew and
+\(1^2+1^2-1^2=1\).  This endpoint form is also forced.  Indeed, if a
+\(3\times3\) sign block \(B\) has \(v^TBv=a\) at all four displayed states,
+expansion in the three tetrahedral characters \(v_1v_2,v_1v_3,v_2v_3\)
+gives \(B_{ij}+B_{ji}=0\) for \(i\ne j\) and
+\(\operatorname{tr}B=a\).  For \(a\in\{\pm1\}\), its diagonal therefore
+has two copies of \(a\) and one copy of \(-a\), up to permutation.  Thus
+(6.29) is the general coherent equal-endpoint frame with a fixed exceptional
+layer.
+
+If (6.33) holds, (6.31) gives
+\[
+ m_{3n}\le3^{3/2}m_n+n^{3/2}\Omega(n)+3n.
+\]
+Since \(m_n=\Theta(n^{3/2})\), the mean-value theorem gives
+\(H(3n)\le3H(n)+O(n\Omega(n)+\sqrt n)\), with a Dini-summable normalized
+error.  This proves the asserted implication and also shows why the leading
+constant \(3^{3/2}\) in (6.33) is sharp for this route.
+
+For the specialization, the domain of the maximum is invariant under all
+global layer flips, so (6.30) is equivalently the maximum of
+\(|I+b+c+d|\).  Here \(b+c+d=C_R\).  Swapping \(x,y\) fixes \(I\) and
+negates \(C_R\), which proves (6.34).  The four-partition identities (6.35)
+follow by substituting
+\[
+ s=u_0+u_1+u_2+u_3,\quad x=u_0+u_1-u_2-u_3,\quad
+ y=u_0-u_1+u_2-u_3,\quad z=u_0-u_1-u_2+u_3.
+\]
+The first bound in (6.36) follows from the displayed difference identity
+for \(C_R\) and its two cyclic versions.  For the second, let
+\(\zeta=e^{2\pi i/3}\) and \(w=u_1+\zeta u_2+\zeta^2u_3\).  Disjointness
+gives \(\|w\|_2^2=h\), while skewness gives
+\[
+ w^*Rw=i\sqrt3\bigl(u_1^TRu_2+u_2^TRu_3+u_3^TRu_1\bigr).
+\]
+Thus \(|C_R|\le4\Lambda h/\sqrt3\), completing the proof. \(\square\)
 
 ---
 

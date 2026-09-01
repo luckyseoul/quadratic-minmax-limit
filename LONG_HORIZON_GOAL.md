@@ -36,7 +36,11 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
   equal-endpoint diamond for the all-Hadamard multiplier-2 construction;
   the hereditary endpoint conditions are automatic. Proposition 6.6 proves
   the diamond outside the explicit Hamming-central/joint-energy residue
-  (6.20), but does not close the ray.
+  (6.20), but does not close the ray. Proposition 6.7 gives an exact
+  equal-endpoint tetrahedral frame for multiplier 3, with only a \(3n\)
+  internal-edge error. Its single-skew form is an exact three-state diamond;
+  two spectral shields are proved, but the unshielded complement remains
+  open.
 - \(\rho=1\) on that Paley family, so \(\Phi(C_n)=\frac12 n\sqrt{n-1}\) and \(\alpha_{n_k}\to 1/2\) **if** E(1) holds there.
 - 15.167's majorization algebra is conditionally valid, but its final bi-tight implication is **retracted** because `ker(G-(n/2)P1)` contains `ker G`. Proposition 15.720 instead excludes the required bi-tight levels 2 and 3 for every prime `p>=5` by a degree congruence. Its bi-tight level-4 corollary does not exclude one-sided tight level 4.
 - Propositions 15.726--15.727 historically narrowed the first general
@@ -88,11 +92,12 @@ Path-C / 16N / 15.193 exhaustiveness is **not** required.
 Closing the sole open residual-(ii) unit completes the remaining E1 ledger,
 but it is not necessary for a different proof of convergence and is not goal
 completion. The direct convergence front is to close the multiplier-two
-diamond on the exact residue (6.20), then prove multiplier three or the
-`1:2` split in Proposition 6.3. Endpoint selection, independent skew-norm
-budgets, and an all-pairs composition theorem are not the live target. The
-disk surrogate is strictly stronger, not equivalent: its asymptotic form
-would prove a new `1/sqrt(2pi)` lower bound, and only its zero-error form is
+diamond on the exact residue (6.20), then close Proposition 6.7's unshielded
+tetrahedral diamond or prove the `1:2` split in Proposition 6.3. Endpoint
+selection is retired on both explicit frames; independent skew-norm budgets
+and an all-pairs composition theorem are not the live target. The disk
+surrogate is strictly stronger, not equivalent: its asymptotic form would
+prove a new `1/sqrt(2pi)` lower bound, and only its zero-error form is
 currently disproved.
 
 ## Forbidden translations (these are the small-failure mode)

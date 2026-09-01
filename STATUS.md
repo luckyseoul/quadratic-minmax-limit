@@ -1,4 +1,4 @@
-# Status (2026-09-01; through Proposition 15.750 and Propositions 6.3--6.6)
+# Status (2026-09-01; through Proposition 15.750 and Propositions 6.3--6.7)
 
 **The original question has been separated from the stronger Paley value
 program.**  MathOverflow 413935 asks for existence, not an identified value.
@@ -36,7 +36,15 @@ becomes vacuous when `m_n/n^(3/2)<1/(2sqrt(2))-c`; the geometric shields remain.
 Independent skew-norm budgets are impossible. The asymptotic disk surrogate
 is not disproved, but it requires a new `1/sqrt(2pi)` lower bound; its
 zero-error form is false at `n=5`. Multiplier two remains open on the explicit
-residue, and multiplier three remains open in full.
+residue. Proposition 6.7 gives an exact order-`3n` tetrahedral frame with all
+four endpoint signings equal to `A` and only a `3n` internal-edge error. Its
+single-skew specialization reduces the second ray to
+
+`|Q_A(x)+Q_A(y)-Q_A(z)|+|x^T R y+y^T R z+z^T R x|`
+
+at the sharp target `3 sqrt(3)m_n+o_Dini(n^(3/2))`. Difference-product and
+distinguished-endpoint spectral shields are proved, but their tetrahedral
+complement remains open. Thus neither amplification ray is yet closed.
 
 The status below records the still-valid, stronger Paley `L=1/2` route.  It is
 no longer the sole acceptance path for the original problem.

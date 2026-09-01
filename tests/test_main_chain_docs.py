@@ -65,6 +65,9 @@ def test_solution_does_not_assert_limit_theorem():
     assert "**Proposition 6.4 (exact four-state form of Hadamard doubling).**" in text
     assert "**Proposition 6.5 (equal-endpoint skew reduction).**" in text
     assert "**Proposition 6.6 (balanced Paley-skew shielding).**" in text
+    assert "**Proposition 6.7 (tetrahedral tripling frame and exact diamond).**" in text
+    assert "the **tetrahedral diamond**---is open" in text
+    assert "does not prove the multiplier-three ray" in text
     assert "Every hereditary endpoint inequality (6.10) is automatic" in text
     assert "finding a frame that passes all cuts remains open" not in text
     assert "constant \\(\\ge0.28\\) by bilinear lower bound" not in text

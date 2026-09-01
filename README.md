@@ -16,7 +16,7 @@ min-max ±1 quadratic form converges. The limit **L is OPEN**. This repo is a
 proof ledger with 665 source-backed computational proposition modules through
 15.750 plus reviewed analytic arguments in `solution.md`. Machine gates use
 explicit `True`/`False` predicates, and soft-closing is banned by test
-(`tests/test_main_chain_docs.py`); Propositions 6.3--6.6 are proved in prose,
+(`tests/test_main_chain_docs.py`); Propositions 6.3--6.7 are proved in prose,
 not represented as computational predicates.
 
 ## Status
@@ -25,7 +25,7 @@ not represented as computational predicates.
 
 **Main claim:** L = lim_n α_n is **OPEN** (2026-09-01).
 
-### Current audit (2026-09-01; through Proposition 15.750 and Propositions 6.3--6.6)
+### Current audit (2026-09-01; through Proposition 15.750 and Propositions 6.3--6.7)
 
 - **Original-question correction and new direct gate.** MathOverflow 413935
   asks whether the limit exists; identifying its value is optional.  With
@@ -50,8 +50,16 @@ not represented as computational predicates.
   budgets are impossible. The
   asymptotic disk surrogate is not disproved, but it would itself require a
   new `1/sqrt(2pi)` lower bound, and its zero-error form is false at `n=5`.
-  Multiplier two remains open on the explicit residue; multiplier three also
-  remains open.
+  Multiplier two remains open on the explicit residue.
+
+- **Multiplier-three tetrahedral reduction.** Proposition 6.7 constructs an
+  exact three-cloud frame whose four projective endpoints are all the same
+  optimal signing `A`. The lift has only a `3n` internal-edge error, and its
+  single-skew specialization is the exact diamond
+  `|Q_A(x)+Q_A(y)-Q_A(z)|+|x^T R y+y^T R z+z^T R x|` at sharp target
+  `3 sqrt(3)m_n+o_Dini(n^(3/2))`. Difference-product and
+  distinguished-endpoint spectral shields are proved. Their unshielded
+  tetrahedral complement remains open, so multiplier three is not closed.
 
 - **Multi-level Type-I close.** Proposition 15.750 closes this all-prime
   Paley gate. For `p>=11`, an isolated vertex is transported to infinity;

@@ -226,6 +226,25 @@ h_x h_y > (rho/4)n^2,
 This is an infinite-family theorem and an exact residual reduction, not a
 finite state census. It does **not** show that (14) is empty.
 
+One natural coupled replacement has also been checked and does not shrink
+(14). Orient the positive and negative edge subgraphs of a switched `A`
+separately by near-Eulerian orientations, combine them as `T`, and put
+`R=A∘T`. This gives both `||T1||infinity<=2` and
+`||R1||infinity<=2`. If `x=1-2 1_S`, `y=1-2 1_U`, and
+`c=|S intersection U|`, however, the resulting pointwise estimate is only
+
+```text
+|x^T R y| <= 4(|S||U|-c^2+|S|+|U|-2c)
+          <= 4(|S||U|+|S|+|U|).                  (15)
+```
+
+Using the universal floor on `M`, (15) can certify at most
+`|S||U|+|S|+|U| <= (a/2)n sqrt(n-1)`. For
+`n>(2/a)^2`, every pair in (14) already has product above that threshold.
+Thus simultaneous Euler balance is strictly weaker on the live residue than
+the Paley spectral product shield; do not reopen it as a residue-closing
+mechanism.
+
 If `M/n^(3/2)<=1/(2sqrt(2))-c_0` for fixed `c_0>0`, the last threshold in
 (14) is negative for large `n` and hence vacuous. In that regime the global
 Paley norm does not remove an additional nonanchor pair; the three geometric

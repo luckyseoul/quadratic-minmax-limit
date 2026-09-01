@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-01
 
-**Scope:** Propositions 6.3--6.6, every assigned proposition through
+**Scope:** Propositions 6.3--6.7, every assigned proposition through
 Proposition 15.750, the live predicate wiring, and the attack scripts present
 during the audit
 
@@ -13,7 +13,7 @@ or finite-prime rerun from being mistaken for a new mathematical attack
 
 The duplication concern was correct.
 
-### Original-question correction and two-ray gate (Proposition 6.3)
+### Original-question correction and two-ray gate (Propositions 6.3--6.7)
 
 The binding plan had silently strengthened MathOverflow 413935 from existence
 of the limit to existence plus identification of its value.  That made the
@@ -37,6 +37,18 @@ outside the explicit Hamming-central/joint-energy residue (6.20). Do not
 replace that residue by an independent skew budget, the stronger disk
 surrogate as though it were equivalent, or a finite pair census. The
 asymptotic disk is not disproved; only its zero-error form is.
+
+Proposition 6.7 supplies the corresponding endpoint correction for tripling.
+Its tetrahedral three-cloud frame has all four projective endpoints equal to
+`A` and differs from its exact minimax by at most the `3n` internal-cloud
+term. The single-skew choice reduces the ray to the cyclic three-state
+diamond and proves distance-product and distinguished-endpoint spectral
+shields. **Status: PROVED exact reduction; OPEN on the unshielded
+tetrahedral diamond.** It does not close multiplier three and must not be
+recorded as a convergence theorem. Exact order-two data rule out deriving it
+from three pairwise diamonds, while the actual low-energy bulk rules out the
+literal statewise random-skew union bound at the required constant. Neither
+no-go excludes a correlated or `A`-dependent three-skew construction.
 
 ### Post-audit correction (15.720)
 
