@@ -11970,6 +11970,100 @@ Evidence: `src/e1_gmin_m4_prop15747.py`,
 `evidence/e1_gmin_m4_prop15748.json`, with the combined derivation in
 `evidence/NOTE_2026-08-31_p13_u4_mass12_literal_interpolation.md`.
 
+## Proposition 15.749 — translated-cut moments close p=13,t=4,u=4
+
+Continue with a `z=2` record from Proposition 15.748.  Its two minimum
+opposite directions are literal cells, and its other five opposite
+directions have `Q=4`.  The common normalization is `hT=9`.  If
+
+\[
+ q_a=(-h)\sum_{|L(\delta)|=a}\chi(\delta)m_\delta
+ \qquad(1\le a\le6)
+\]
+
+is the distance row of one such `Q=4` direction, then
+
+\[
+ \sum_aq_a=-13,\qquad \sum_a|q_a|\le57.             \tag{15.749.1}
+\]
+
+Moreover its phase-zero cell obeys
+
+\[
+ (-h)S_H=Q+\sum_aq_a-2\operatorname{cut}_W
+        =-9-2\operatorname{cut}_W=3+2A.
+\]
+
+Thus `A=-6-cut_W>=0`.  Summing over all thirteen translates of a
+seven-set gives
+
+\[
+ c\mathbin\cdot q\le-78                              \tag{15.749.2}
+\]
+
+for each of Proposition 15.740's 74 exact translated-cut vectors.
+
+There is a short exact bound before any list recovery.  In the canonical
+cut-vector order,
+
+\[
+\begin{aligned}
+ e_1&={19\over9}{\bf1}-{c_0\over18}-{c_6\over6}-{c_{34}\over18},\\
+-e_1&={29\over15}{\bf1}-{c_{63}\over15}-{c_{69}\over30}
+                   -{c_{71}\over6}-{c_{73}\over30}.
+\end{aligned}                                        \tag{15.749.3}
+\]
+
+Equations (15.749.1)--(15.749.3) give
+`-52/9<=q_1<=26/15`.  Multiplication by
+`F_13^*/{+-1}` preserves the complete cut catalog and acts transitively on
+the six distance bins, so integrality gives
+
+\[
+                 -5\le q_a\le1\quad(1\le a\le6).     \tag{15.749.4}
+\]
+
+Exact enumeration of this six-variable box under (15.749.1)--(15.749.2)
+has 522 rows and 492 distinct moment triples
+
+\[
+ (N_2,N_4,N_6)=\left(\sum a^2q_a,\sum a^4q_a,
+                            \sum a^6q_a\right)\pmod {13}.       \tag{15.749.5}
+\]
+
+For each of the 336 `z=2` records per hard sign, reconstruct the full forms
+`M2=cR2`, `M4=R2Q2`, and `M6=R2Q4`; the stored seven hard values recover the
+quartic quotient exactly.  Opposite rows use the negative of this hard
+normalization.  For either hard sign the five nonroot evaluations form the
+same 48-element alphabet.  Its intersection with the 492 triples in
+(15.749.5) is exactly
+
+\[
+\begin{split}
+ &(1,0,3),(2,0,1),(3,0,3),(4,0,10),(5,0,1),(6,0,1),\\
+ &(7,0,12),(8,0,12),(9,0,3),(10,0,10),(11,0,12),(12,0,10).
+\end{split}                                          \tag{15.749.6}
+\]
+
+In particular, every admissible `Q=4` direction is a root of the common
+quartic `M4`.  The two literal directions are roots as well.  Seven distinct
+projective roots force this binary quartic to vanish identically, whereas
+the hard moment alphabet of Proposition 15.748 has no zero fourth moment.
+This contradiction closes the `P=5` branch.  Proposition 15.747 already
+closes `P=3`, hence
+
+\[
+             \boxed{p=13,t=4,u=4\text{ is empty}.}    \tag{15.749.7}
+\]
+
+This is a **proved branch theorem with an exact aggregate certificate**.
+The exact `p=13,k=60` remainder is now `u=6`; residual (ii) globally,
+multi-level Type I, and the quadratic-minmax limit remain open.
+
+Evidence: `src/e1_gmin_m4_prop15749.py`, `tests/test_prop15749.py`,
+`evidence/e1_gmin_m4_prop15749.json`, and
+`evidence/NOTE_2026-09-01_p13_u4_translated_cut_moment_close.md`.
+
 ## Proposition 15.723 — paired-cube obstruction to middle floor-plus-two lifts
 
 Put (p=2m-1\ge17). Let (A\ge0) be an integer-valued quadratic on

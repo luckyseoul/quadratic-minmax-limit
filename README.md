@@ -13,8 +13,8 @@ m_n = min_{a_ij = ±1}  max_{x_j = ±1}  | Σ_{1≤i<j≤n} a_ij · x_i · x_j |
 
 Machine-assisted attack on a 2022 MathOverflow problem: whether the normalized
 min-max ±1 quadratic form converges. The limit **L is OPEN**. This repo is a
-proof ledger with 663 source-backed computational proposition modules through
-15.748 plus reviewed analytic arguments in `solution.md`. Machine gates use
+proof ledger with 664 source-backed computational proposition modules through
+15.749 plus reviewed analytic arguments in `solution.md`. Machine gates use
 explicit `True`/`False` predicates, and soft-closing is banned by test
 (`tests/test_main_chain_docs.py`); Propositions 6.3--6.4 are proved in prose,
 not represented as computational predicates.
@@ -25,7 +25,7 @@ not represented as computational predicates.
 
 **Main claim:** L = lim_n α_n is **OPEN** (2026-09-01).
 
-### Current audit (2026-09-01; through Proposition 15.748 and Propositions 6.3--6.4)
+### Current audit (2026-09-01; through Proposition 15.749 and Propositions 6.3--6.4)
 
 - **Original-question correction and new direct gate.** MathOverflow 413935
   asks whether the limit exists; identifying its value is optional.  With
@@ -84,7 +84,7 @@ not represented as computational predicates.
   nonzero moment because `-3=8` is nonsquare modulo 11. Therefore
   `k in {4p,4p+2,4p+4}` is impossible for every prime `p>=11` and every
   boundary size. Residual (ii) remains open at critical `p=5,7`, at
-  `p=11,k>=50`, at `p=13,k=60,u in {4,6}` and later p13 layers, in every `p>=17` layer `t>=4`
+  `p=11,k>=50`, at `p=13,k=60,u=6` and later p13 layers, in every `p>=17` layer `t>=4`
   (including `p=17,k>=76`), and in generic branch B at `t=3` from `p>=29`.
 - **Exceptional fourth-shell branch close.** Proposition 15.738 gives an
   exhaustive `J(13,7)` certificate for the forced phase-zero mass-14 cells:
@@ -159,8 +159,8 @@ not represented as computational predicates.
   energy.  Three partitions die rowwise and a fourth by `691<721+26C`; the
   last forces exactly one repeated displacement.  That equality bounds the exceptional
   six-bin row in `[-7,6]`, lowering its energy to 66 and giving
-  `695<719`.  The exact `p=13,k=60` remainder is `u in {4,6}`; the whole row
-  and residual (ii) remain open.
+  `695<719`.  This left `u in {4,6}`; Proposition 15.749 later removes
+  `u=4`.  The row and residual (ii) remain open at `u=6`.
 - **Sharp `u=4` equality reduction.** Proposition 15.746 first uses the
   all-positive `b=2` quadrature pointwise and only then invokes 15.688, so
   every hard mean-22 lift is Boolean of support 330 on `J(13,7)`.  An exact
@@ -174,8 +174,8 @@ not represented as computational predicates.
   literal-or-lift dichotomy; its 22,308 patterns have full weighted feature
   ranks through degree six, so no analogous universal even-moment polynomial
   identity in `N2,N4,N6` is available at those degrees.
-  This is an exhaustive equality classification and proved open reduction,
-  not a close: `u=4,6` remain.
+  This is an exhaustive equality classification and proved open reduction;
+  Proposition 15.749 later closes its last branch.
 - **`u=4` branch collapse.** Proposition 15.747's exact cut second moment
   excludes every Boolean mass-12 lift modulo seven, and its two 169-variable
   height-four models are infeasible at `Q=3,5`. This closes the omitted-pair
@@ -183,7 +183,15 @@ not represented as computational predicates.
   be a literal. Proposition 15.748 turns those literals into common roots of
   `M2,M4,M6`; root count and exact interpolation exclude every opposite
   excess partition except `(1,1,1,1,1)`. Exactly 336 moment-level survivors
-  per hard sign remain. They are not common graphs, so `u=4,6` remain open.
+  per hard sign remain at this stage.
+- **`u=4` translated-cut moment close.** Proposition 15.749 uses the 74
+  translated cuts to bound every integral `Q=4` distance coordinate in
+  `[-5,1]`. Exact recovery gives 522 rows and 492 moment triples. Their
+  intersection with every 15.748 survivor's nonroot evaluation alphabet has
+  12 triples, all with fourth moment zero. The five `Q=4` directions and two
+  literal directions are therefore seven roots of `M4`, forcing that binary
+  quartic to vanish, contrary to the hard moment alphabet. Thus `u=4` is
+  closed and the exact `p=13,k=60` remainder is only `u=6`.
 - **Floor-plus-two correction.** Proposition 15.723 replaces the blanket
   `excess != 2` shortcut in the infinity-plus-`p` middle profile. A
   paired-cube Fourier gap excludes every such middle cell for all odd
@@ -274,7 +282,7 @@ Sandwich and Paley ρ=1 are proved. E(1) on n=p²+1 is **not**. The live
 | GOAL unit | live predicate | status |
 |---|---|---|
 | required bi-tight levels 2 and 3 | `bitight_levels_2_3` | **TRUE** — 15.720 degree congruence; bi-tight level 4 is a corollary, while generic one-sided covers exist and only joint residual compatibility remains open |
-| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Propositions 15.734--15.737 close `k in {4p,4p+2,4p+4}` for every prime `p>=11` and every boundary size. Propositions 15.738--15.742 close `p=13,k=58`, Proposition 15.743 closes `p=17,k=74`, and Propositions 15.744--15.745 close `u=3,0` at `p=13,k=60`. Propositions 15.746--15.748 close the `u=4` `P=3` branch and reduce `P=5` to two `Q=3` literals plus five `Q=4` cells, with 336 moment survivors per sign. Critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u in {4,6}` and later p13 layers, every `p>=17,t>=4` layer (starting with `p=17,k=76`), and generic branch B at `p>=29,t=3` remain; the positive `p=7,z=7` subbranch also persists. Hence the global predicate stays false. |
+| residual (ii), even `k≥4p` | `residual_ii_k_ge_4p` | **OPEN** — Propositions 15.734--15.737 close `k in {4p,4p+2,4p+4}` for every prime `p>=11` and every boundary size. Propositions 15.738--15.742 close `p=13,k=58`, Proposition 15.743 closes `p=17,k=74`, 15.744--15.745 close `u=3,0` at `p=13,k=60`, and 15.746--15.749 close `u=4`. Critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers, every `p>=17,t>=4` layer (starting with `p=17,k=76`), and generic branch B at `p>=29,t=3` remain; the positive `p=7,z=7` subbranch also persists. Hence the global predicate stays false. |
 | Type I, multi-level Max− | `type_I_multilevel` | **OPEN** — on `|κ|=1` the missing sign is `G>T`; on `|κ|=3` the separate signed `(μ,ν)` inequality still has an uncontrolled δ remainder |
 | Lemma D | `lemma_D` | **TRUE** — construction and two-plane amplitudes checked |
 
@@ -761,8 +769,8 @@ graph TD
     P11CAT --> P11MOM["binary quadratic moment<br/>k=44,46,48 <b>CLOSED</b> (15.737)"]
     P11MOM --> P17RADON["full translated-cut + common-Radon energy<br/>p=17,k=74 <b>CLOSED</b> (15.743)"]
     P17RADON --> P13T4["p=13,k=60 residues u=0,3<br/><b>CLOSED</b> (15.744--15.745)"]
-    P13T4 --> P13U4["u=4 P=3 closed; P=5 reduced to two Q3 + five Q4<br/><b>PROVED OPEN REDUCTION</b> (15.746--15.748)"]
-    P13U4 --> STRICTP["p=5,7 critical; p=11 k>=50; p=13 k=60 u=4,6 + later;<br/>all p>=17,t>=4; generic p>=29,t=3 <b>OPEN</b>"]
+    P13T4 --> P13U4["u=4 translated-cut moments + seven-root quartic<br/><b>CLOSED</b> (15.746--15.749)"]
+    P13U4 --> STRICTP["p=5,7 critical; p=11 k>=50; p=13 k=60 u=6 + later;<br/>all p>=17,t>=4; generic p>=29,t=3 <b>OPEN</b>"]
     style L fill:#ffe6e6
     style D fill:#e6ffe6
     style FLOOR fill:#fff4e6
@@ -1016,10 +1024,11 @@ Proposition 15.721 supersedes the active all-finite shell statuses in
 | 15.742 | combine `M_2=0` with the six multiplicative interval cuts, exhaust the resulting integral six-bin rows, and compare their sharp energies with the common-graph Parseval identity | **exhaustive finite certificate:** elevated energy is at most 31 and opposite energy at most 82, so `3*31+7*82=667<707<=707+26C`; the generic four-exact p13 branch and, with 15.739, all of `p=13,k=58` are closed |
 | 15.743 | compare the common p17 Radon sum with the directional cell sum to force `P=4+k`, impose all 698 translated-cut vectors under `M_2=M_4=0`, and compare broad-domain threshold exclusions with the exact partition-dependent Parseval baselines | **exhaustive finite certificate:** deterministic one-worker CP-SAT excludes excess one, excess-two energy at least 71, excess-three energy at least 120, and opposite energy at least 73 without a prior energy cap; fixed sum `-24` then makes `(-3)^8` the unique opposite row of energy 72, so the only partition not already killed rowwise has `767<1211<=1211+34C`, closing `p=17,k=74` |
 | 15.744 | replay every `p=13,t=4` residue, certify the `b=10` contact-layer restriction and punctured lift, rebuild the changed `|H|=61` height-four mass-14 models, and apply a six-root sign-safe quartic | **proved branch theorem with exhaustive local certificates:** the rank-78 restriction makes exact `b=10` pointwise, its two-unit punctured model is infeasible, residues `1,2,5` die in the sieve, and in `u=3` the Boolean selected-pair survivor contradicts `G=2hM_4-M_2^2=0`, closing exactly that residue |
-| 15.745 | force the `u=0` parallel profiles, impose all 74 translated cuts, and use the equality case of the common collision energy | **exhaustive finite aggregate certificate:** three partitions die rowwise and one by `691<721+26C`; the last forces `C=1`, hence the elevated row lies in `[-7,6]` and has energy at most 66, giving `695<719`; with 15.744 the exact `p=13,k=60` remainder is `u in {4,6}` |
-| 15.746 | classify sharp support-330 Boolean quadratics on `J(13,7)`, propagate their offsets through the common `u=4` ledger, and derive the omitted-pair sextic identity | **exhaustive finite equality classification and proved open reduction:** exact infeasibility proves that 78 omitted pairs and 286 all-equal triples exhaust the hard lifts; they force uniform `P=3` or `P=5`, at least two opposite mean-12 cells, and in the `P=3,Q=5` branch a `b=0` mass-12 lift satisfying `F6=2hM6+hM2^3-3M2M4=0`; `u=4,6` remain open |
+| 15.745 | force the `u=0` parallel profiles, impose all 74 translated cuts, and use the equality case of the common collision energy | **exhaustive finite aggregate certificate:** three partitions die rowwise and one by `691<721+26C`; the last forces `C=1`, hence the elevated row lies in `[-7,6]` and has energy at most 66, giving `695<719`; with 15.744 this left `u in {4,6}` before 15.749 closed `u=4` |
+| 15.746 | classify sharp support-330 Boolean quadratics on `J(13,7)`, propagate their offsets through the common `u=4` ledger, and derive the omitted-pair sextic identity | **exhaustive finite equality classification and proved open reduction:** exact infeasibility proves that 78 omitted pairs and 286 all-equal triples exhaust the hard lifts; they force uniform `P=3` or `P=5`, at least two opposite mean-12 cells, and in the `P=3,Q=5` branch a `b=0` mass-12 lift satisfying `F6=2hM6+hM2^3-3M2M4=0`; 15.749 later completes the branch |
 | 15.747 | combine the exact six-cut second moment with projected height-four coefficient models at `Q=3,5` | **proved branch exclusion with exhaustive finite certificates:** the Boolean equation is impossible modulo seven and both height-four models are infeasible; the `P=3` branch is closed and every minimum `P=5,Q=3` cell is a literal |
 | 15.748 | interpolate the common `M2,M4,M6` roots supplied by those literals against the 69-element hard moment alphabet | **exhaustive finite interpolation certificate and proved open reduction:** `z>=3` is impossible, while `z=2` leaves 336 moment-level survivors per sign; only the opposite excess partition `(1,1,1,1,1)` remains |
+| 15.749 | impose all 74 translated cuts on each surviving `Q=4` row, recover its exact moment list, and compare it with every 15.748 nonroot evaluation | **exhaustive finite aggregate certificate and proved branch theorem:** exact cut duals give `-5<=q_a<=1`; 522 rows yield 492 triples, whose 12-point survivor intersection has `N4=0`. Five such roots plus the two literal roots force `M4=0`, contradicting the hard alphabet and closing `p=13,t=4,u=4` |
 
 The size-eight scope is deliberately split. Proposition 15.662 closes all
 6,174 minimum-eight-odd-secant boundaries (the affine conics) for both
@@ -1274,8 +1283,10 @@ The `P=3,Q=5` cells would be `b=0` mass-12 lifts satisfying the common
 sextic identity `F6=0`; Proposition 15.747 excludes both possible heights
 and closes that branch. It also forces every minimum `P=5,Q=3` cell to be a
 literal. Proposition 15.748 then leaves only two such literals and five
-excess-one `Q=4` cells, with 336 moment-level survivors per hard sign. Thus
-only `u=4,6` remain at `p=13,k=60`, and `u=4` has this single exact profile.
+excess-one `Q=4` cells, with 336 moment-level survivors per hard sign.
+Proposition 15.749's exact translated-cut moment list forces all five `Q=4`
+directions to be roots of `M4`; with the two literal roots this contradicts
+the nonzero hard quartic. Thus only `u=6` remains at `p=13,k=60`.
 For generic branch B at `p>=29`, higher even moments and conditioned cuts give
 the current exact `t=3` reduction; all `p>=17,t>=4` layers also remain open.
 The eleven-of-twelve
@@ -1334,18 +1345,17 @@ unidentified glue-class phase, unknown broad mass, or classified low shell.
    `k in {4p,4p+2,4p+4}`, for every boundary size, at every prime `p>=11`.
    Propositions 15.738--15.742 additionally close both branches at
    `p=13,k=58`, Proposition 15.743 closes `p=17,k=74`, and Propositions
-   15.744--15.745 close `u=3,0` at `p=13,k=60`. Propositions 15.746--15.748
-   classify the sharp hard cells, close the `P=3` branch, and reduce the
-   `P=5` branch to excess partition `(1,1,1,1,1)`. The exact
-   remainder is critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u in {4,6}`
+   15.744--15.745 close `u=3,0` at `p=13,k=60`, and Propositions
+   15.746--15.749 classify and close `u=4`. The exact remainder is critical
+   `p=5,7`, `p=11,k>=50`, `p=13,k=60,u=6`
    and later p13 layers, every
    `p>=17,t>=4` layer (starting with `p=17,k=76`), and generic branch B at
    `p>=29,t=3`. The separate `p=7`
    remainder includes the 56 positive
-   `z=7` line boundaries. The immediate finite target is to couple the 336
-   `z=2` moment survivors per sign to the five excess-one `Q=4` cells and
-   one common 61-edge graph. A broad mass-12/support-396 census is not the
-   gate; the `P=3` branch and support-330 classification are complete. At
+   `z=7` line boundaries. The immediate finite p13 target is `u=6`; the 336
+   former `u=4` survivors are closed inputs, not a common-graph target.
+   A broad mass-12/support-396 census is not the gate; the `P=3` branch and
+   support-330 classification are complete. At
    generic `p>=29,t=3`, the isolated-chart ledger has a
    resonant branch with every opposite direction at mean `p+7`; exact hard
    stars force higher even moments and conditioned cuts force a five-value
@@ -1458,6 +1468,8 @@ Lemma D is complete and is no longer on the work list.
 | `src/e1_gmin_m4_prop15746.py` | Exact support-330 equality catalog, `P=3/P=5` `u=4` split, mean-12 reduction, and omitted-pair sextic identity |
 | `src/e1_gmin_m4_prop15747.py` | General mass-12 Boolean cut obstruction, exact `Q=3,5` height-four exclusions, and close of the `P=3` branch |
 | `src/e1_gmin_m4_prop15748.py` | Exact literal-root interpolation reducing `P=5` to excess partition `(1,1,1,1,1)` |
+| `src/e1_gmin_m4_prop15749.py` | Exact translated-cut dual bounds, `Q=4` moment intersection, and seven-root quartic close of `u=4` |
+| `tests/test_prop15749.py` | Focused deterministic checks of the Prop 15.749 dual identities, lists, hashes, and scoped status |
 | `scripts/p13_support330_boolean_classifier.py` | Atomic exact no-new-support classifier with exact prefix sharding and optional nonproof GPU cross-check |
 | `evidence/p13_support330_boolean_classifier.json` | Exact unsharded infeasibility certificate exhausting the 364 support-330 candidates |
 | `evidence/NOTE_2026-08-24_r1_profile_glue_lattice.md` | Proof note for the lattice quotient, determinant, dual, and level |
@@ -1559,6 +1571,8 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-31_p13_t4_u0_close.md` | Exact row maxima, collision-one transverse sign bound, and `695<719` contradiction closing `p=13,t=4,u=0` (15.745) |
 | `evidence/NOTE_2026-08-31_p13_support330_u4_reduction.md` | Exact support-330 catalog, branchwise mean-12 consequences, and `F6=0` open reduction (15.746) |
 | `evidence/NOTE_2026-08-31_p13_u4_mass12_literal_interpolation.md` | Mass-12 cut obstruction, two height-four exclusions, and literal-root interpolation through 15.748 |
+| `evidence/NOTE_2026-09-01_p13_u4_translated_cut_moment_close.md` | Translated-cut moment-list proof closing `p=13,t=4,u=4` (15.749) |
+| `evidence/e1_gmin_m4_prop15749.json` | Hash-pinned output for the 522 admissible rows, 492 moment triples, and 12-point intersection |
 | `evidence/NOTE_2026-08-31_p31_public_11_of_12_arc_audit.md` | Exhaustive finite certificate for the eleven publicly sourced complete 22-arc classes at `p=31`; explicitly not a twelve-class close |
 | `evidence/NOTE_2026-09-01_ORIGINAL_LIMIT_TWO_RAY.md` | Original-question correction, Dini two-ray theorem, Section 10 retraction, and exact four-state Hadamard-doubling hinge |
 | `scripts/p31_complete_22arc_public_audit.py` | Deterministic public-class audit producing `evidence/p31_complete_22arc_public_11_audit.json` |

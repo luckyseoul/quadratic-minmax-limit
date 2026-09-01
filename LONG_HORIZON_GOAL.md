@@ -49,7 +49,7 @@ is the two-ray amplification theorem of Proposition 6.3 (or any other proof
 of convergence/non-existence).  The value-specific route to \(L=1/2\) is
 **E(1)** on \(n=p^2+1\).  On that optional Paley route, the live gate is the
 corrected dictionary returned by
-`src/e1_main_chain_status.py`; as of 2026-09-01 through Proposition 15.748 it
+`src/e1_main_chain_status.py`; as of 2026-09-01 through Proposition 15.749 it
 reads:
 
 1. **Required bi-tight levels 2 and 3:** TRUE by 15.720. The spectral floor,
@@ -58,9 +58,10 @@ reads:
    close `k in {4p,4p+2,4p+4}` for every boundary and every prime `p>=11`.
    Propositions 15.738--15.742 close `p=13,k=58`, and Proposition 15.743
    closes `p=17,k=74`. At `p=13,k=60`, the complete residue sieve leaves
-   `u in {0,3,4,6}`; Propositions 15.744--15.745 close `u=3,0`, leaving
-   exactly `u in {4,6}`. The live remainder includes critical `p=5,7`,
-   `p=11,k>=50`, those two `p=13,k=60` residues and later p13 layers,
+   `u in {0,3,4,6}`; Propositions 15.744--15.745 close `u=3,0`, and
+   Propositions 15.746--15.749 close `u=4`, leaving exactly `u=6`. The live
+   remainder includes critical `p=5,7`, `p=11,k>=50`, that sole
+   `p=13,k=60` residue and later p13 layers,
    every `p>=17,t>=4` layer (beginning with `p=17,k>=76`), generic branch B
    at `p>=29,t=3`, and the positive `p=7,z=7` subbranch. Historical
    endpoint/profile artifacts are not live gates; only the lemmas and

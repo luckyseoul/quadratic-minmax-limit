@@ -1,4 +1,4 @@
-# Status (2026-09-01; through Proposition 15.748 and Propositions 6.3--6.4)
+# Status (2026-09-01; through Proposition 15.749 and Propositions 6.3--6.4)
 
 **The original question has been separated from the stronger Paley value
 program.**  MathOverflow 413935 asks for existence, not an identified value.
@@ -29,10 +29,11 @@ new finite census, is the first multiplier-two hinge.
 The status below records the still-valid, stronger Paley `L=1/2` route.  It is
 no longer the sole acceptance path for the original problem.
 
-**15.747 closes the omitted-pair `P=3` half of `p=13,t=4,u=4`, and 15.748
-reduces the remaining all-equal-triple `P=5` half to one excess
-partition.**  For a Boolean mass-12 lift, the exact weighted-cut second
-moment forces
+**15.749 CLOSES `p=13,t=4,u=4`; the exact `p=13,k=60` remainder is now
+only `u=6`.**  Propositions 15.747--15.748 first close the omitted-pair
+`P=3` half and reduce the all-equal-triple `P=5` half to two `Q=3` literals
+plus five excess-one `Q=4` cells.  For a Boolean mass-12 lift, the exact
+weighted-cut second moment forces
 
 `-7D2+84E2+182Q^2-1428Q+2598=0`.
 
@@ -49,11 +50,19 @@ Those literal directions are common roots of `M2,M4,M6`.  Five roots kill
 finds zero `z=4` and `z=3` cases for either hard sign.  At `z=2`, exact
 degree-four list recovery leaves 336 moment-level survivors per sign.  Thus
 the only remaining `P=5` opposite excess partition is `(1,1,1,1,1)`: two
-`Q=3` literals and five excess-one `Q=4` cells.  These moment survivors are
-not common-graph constructions, so `u=4` remains open.  The exact
-`p=13,k=60` remainder remains `u in {4,6}`.  The next finite gate is to
-couple those 336 survivors per sign to the five `Q=4` cells and one common
-61-edge graph.
+`Q=3` literals and five excess-one `Q=4` cells.
+
+For every such `Q=4` direction, the 74 translated seven-set cuts imply
+`c.q<=-78`, while `sum q=-13` and `||q||_1<=57`.  Exact dual combinations
+of three and five cut rows give `-52/9<=q_a<=26/15`; hence every integral
+coordinate lies in `[-5,1]`.  The resulting exact list contains 522 rows
+and 492 distinct moment triples.  Intersecting those triples with the
+nonroot evaluations of each 15.748 survivor leaves exactly 12 possibilities,
+all with fourth moment zero.  The five `Q=4` directions therefore join the
+two literal directions as seven roots of the binary quartic `M4`, forcing
+`M4=0`, contrary to the nonzero hard fourth-moment alphabet.  This is an
+exhaustive finite aggregate certificate plus a root-count proof, not a
+common-graph census.  Residual (ii) remains globally open.
 
 **15.746 is the exhaustive equality classification used by these two new
 steps.**  Its exact support-330 catalog consists of 78 omitted pairs and 286
@@ -62,8 +71,9 @@ opposite-normalized sextic remains correct, but 15.747's cut obstruction is
 strictly stronger for the `P=3` minimum cell.
 
 **15.745 is an exhaustive finite aggregate certificate that CLOSES the
-`p=13,t=4,u=0` branch; together with 15.744 the exact `k=60` remainder is
-`u in {4,6}`.**  The seven hard quotient excesses partition four.  Gluing an
+`p=13,t=4,u=0` branch; together with 15.744 it left `u in {4,6}`, and
+15.749 later removes `u=4`.**  The seven hard quotient excesses partition
+four.  Gluing an
 exact literal star to the common difference transform forces `hT=17` and
 `P_L=4+k_L`; the opposite parallel profile is `3^6,4`.  Three exact stars
 force `M_2=0`, while five force `M_2=M_4=0`.  Exact one-worker models using
@@ -93,8 +103,9 @@ edge-count sensitive, both models are rebuilt with `|H|=61` and
 `l1<=61-Q`; both are exactly infeasible.  The edge-independent Boolean
 catalog then leaves `B=x_i*x_j`.  Six hard roots force
 `G=2hM_4-M_2^2` to vanish identically, while that opposite selected pair
-gives `-3(i-j)^4!=0`.  Propositions 15.744--15.746 do not close the full
-`p=13,k=60` row or residual (ii); the two surviving residues are `u=4,6`.
+gives `-3(i-j)^4!=0`.  Propositions 15.744--15.746 did not close the full
+`p=13,k=60` row or residual (ii); their two surviving residues were
+`u=4,6`, and Proposition 15.749 subsequently closes `u=4`.
 Proposition 15.746 now completes the sharp mass-ten equality classification
 and reduces `u=4` to the branchwise mean-12 cells described above without
 reopening either closed residue.
@@ -140,7 +151,7 @@ and seven opposite rows have total energy at most
 `707+26C>=707`.  The quartic value code, root-quartet split, and binary
 midpoint lift are not needed.  Residual (ii), multi-level Type I, and the
 limit remain OPEN; the residual ranges still requiring serious work are
-critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u in {4,6}` and later p13
+critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u=6` and later p13
 layers, `p=17,k>=76`, and the
 later layers for primes `p>=19`; the next branch-B `t=3` prime is `p=29`.
 
@@ -205,7 +216,7 @@ remains live beginning at `p=29`.  At generic `p=13`, an explicit elevated
 `M_4=5h` for its hard sign), so another one-direction
 floor/moment pass cannot close it.  This is a method counterexample, not a
 residual graph; 15.742 instead closes that row by common energy.  Critical
-`p=5,7`, `p=11,k>=50`, the `p=13,k=60` residues `u=4,6` and later p13
+`p=5,7`, `p=11,k>=50`, the `p=13,k=60` residue `u=6` and later p13
 layers, and generic
 `p=17,k>=76` and later layers for primes `p>=19` remain OPEN; the generic
 branch-B `t=3` range resumes at `p=29`.
@@ -1429,7 +1440,7 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 | Bi-tight majorization algebra (15.167) | CANDIDATE | `prop15167.py` |
 | Type I freeness-fail ND (two-level Max−) | **CLOSED** (that slice) | 15.272 \(k=1\cup k=3\) \(\Rightarrow G_+\succ0\Rightarrow\) 15.249 dual-eq empty |
 | Residual (ii), affine + even \(k\le4p-2\) | **CLOSED** (that range) | 15.179 + 15.236 + 15.237 |
-| Residual (ii), even \(k\ge4p\) | **OPEN globally; first three layers CLOSED for \(p\ge11\), with \(p=13,k=58\) and \(p=17,k=74\) also CLOSED and two residues removed at \(p=13,k=60\)** | 15.734--15.735 and 15.737 close \(k\in\{4p,4p+2,4p+4\}\) for every boundary and every \(p\ge11\); 15.738--15.742 close \(p=13,k=58\), 15.743 closes \(p=17,k=74\), and 15.744--15.745 close the \(u=3,0\) branches at \(p=13,k=60\). Propositions 15.746--15.748 close the `u=4` omitted-pair `P=3` branch and reduce the all-equal-triple `P=5` branch to two `Q=3` literals plus five `Q=4` cells. Remaining: critical \(p=5,7\); \(p=11\) at \(k\ge50\); \(p=13,k=60,u\in\{4,6\}\) and later p13 layers; \(p=17\) at \(k\ge76\); and later layers for primes \(p\ge19\). The next branch-B \(t=3\) prime is \(p=29\). |
+| Residual (ii), even \(k\ge4p\) | **OPEN globally; first three layers CLOSED for \(p\ge11\), with \(p=13,k=58\), \(p=17,k=74\), and three residues removed at \(p=13,k=60\)** | 15.734--15.735 and 15.737 close \(k\in\{4p,4p+2,4p+4\}\) for every boundary and every \(p\ge11\); 15.738--15.742 close \(p=13,k=58\), 15.743 closes \(p=17,k=74\), 15.744--15.745 close \(u=3,0\) at \(p=13,k=60\), and 15.746--15.749 close \(u=4\). Remaining: critical \(p=5,7\); \(p=11\) at \(k\ge50\); \(p=13,k=60,u=6\) and later p13 layers; \(p=17\) at \(k\ge76\); and later layers for primes \(p\ge19\). The next branch-B \(t=3\) prime is \(p=29\). |
 | Type I, multi-level Max− | **OPEN** | 15.543 \(\mu_{1d}\); 15.544 p=5 mix; 15.546 p=7 mix \(109/2863<|T|\); 15.551 Galois line-union; 15.559 Aut_e DEAD as \(A_{\mathrm{full}}\) name; `type_I_multilevel_bad_case_ND_closed=False` |
 | \(\lambda_{\min}(\Phi)\ge6\) | **OPEN** | 15.279; 15.550–15.582: \(S=\mathrm{Kl}\), \(\mu_{1d}\), \(\mu_{k=3}\) named; \(p=5\) \(Q_{++}=48/13\); \(A_{\mathrm{full}}\) / \(D\) / ensemble \(Q_\tau\) unnamed; `phi_F_ge_6=False` |
 | E(1) / \(L=\tfrac12\) | **OPEN** | needs the four leftovers above |
@@ -1438,7 +1449,7 @@ HEAD 15.585. Sandwich and Paley \(\rho=1\) are proved. \(L=\tfrac12\) is not. Th
 ### Fatal gaps (honest)
 
 1. Residual **(i)** two-level dual-eq: **CLOSED** by 15.272 (not Aut-Schur, not Gsum LB). Multi-level Type I is **OPEN**. `gsum_disj_lb` remains False and is unused.
-2. Residual **(ii)** for affine + even \(k\le4p-2\): **CLOSED** (15.179 + 15.236 + 15.237). For \(k\ge4p\), the first three layers are **CLOSED** for every \(p\ge11\) by 15.734--15.735 and 15.737; 15.738--15.742 additionally close all of `p=13,k=58`, 15.743 closes `p=17,k=74`, and 15.744--15.745 close `u=3,0` at `p=13,k=60`. Propositions 15.746--15.748 close the `u=4` `P=3` branch and leave only the `P=5` excess partition `(1,1,1,1,1)`; they do not close the residue. Critical \(p=5,7\), \(p=11\) at \(k\ge50\), `p=13,k=60,u in {4,6}` and later p13 layers, \(p=17\) at \(k\ge76\), and later layers for primes \(p\ge19\) remain **OPEN**; branch-B \(t=3\) next occurs at \(p=29\). Do not call residual (ii) globally closed.
+2. Residual **(ii)** for affine + even \(k\le4p-2\): **CLOSED** (15.179 + 15.236 + 15.237). For \(k\ge4p\), the first three layers are **CLOSED** for every \(p\ge11\) by 15.734--15.735 and 15.737; 15.738--15.742 additionally close all of `p=13,k=58`, 15.743 closes `p=17,k=74`, 15.744--15.745 close `u=3,0` at `p=13,k=60`, and 15.746--15.749 close `u=4`. Critical \(p=5,7\), \(p=11\) at \(k\ge50\), `p=13,k=60,u=6` and later p13 layers, \(p=17\) at \(k\ge76\), and later layers for primes \(p\ge19\) remain **OPEN**; branch-B \(t=3\) next occurs at \(p=29\). Do not call residual (ii) globally closed.
 
 ### Remainder progress (15.172–194)
 

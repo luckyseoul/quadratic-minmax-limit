@@ -3,7 +3,7 @@
 **Date:** 2026-09-01
 
 **Scope:** Propositions 6.3--6.4, every assigned proposition through
-Proposition 15.748, the live predicate wiring, and the attack scripts present
+Proposition 15.749, the live predicate wiring, and the attack scripts present
 during the audit
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
@@ -494,7 +494,22 @@ four and three for both hard signs. With two roots, 1,554 `(M2,M4)`
 candidates and 2,688 allowed `N6` vectors per sign leave exactly 336
 moment-level survivors per sign. Hence only excess partition `(1^5)`
 remains. These records are necessary moment data, not common 61-edge graph
-constructions, so `u=4` remains open.
+constructions; Proposition 15.749 closes them without graph reconstruction.
+
+A thirty-second semantic check gives Proposition 15.749.  For each of the
+five surviving opposite `Q=4` cells, all 74 translated cuts imply
+`c.q<=-78`, alongside `sum q=-13` and `sum |q|<=57`.  Exact rational dual
+identities for a coordinate and its negative give
+`-52/9<=q_a<=26/15`; multiplicative symmetry and integrality reduce every
+coordinate to `[-5,1]`.  Deterministic enumeration gives 522 rows and 492
+distinct `(N2,N4,N6)` triples.  Their intersection with the 48-element
+nonroot evaluation alphabet of either hard sign has 12 triples, all with
+`N4=0`.  Thus the five `Q=4` directions and the two literal directions are
+seven roots of the binary quartic `M4`, forcing `M4=0`; this contradicts the
+nonzero hard fourth-moment alphabet.  Hence `p=13,t=4,u=4` is closed and the
+exact `p=13,k=60` remainder is `u=6`.  This is an exhaustive finite
+aggregate certificate and proved branch theorem, not a global residual-(ii)
+close.
 
 The Bartoli--Storme ``unique-trisecant ceiling'' previously recorded after
 15.729 is **RETRACTED**. Under the corollary's other hypotheses, including
@@ -548,11 +563,11 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 663 source-backed proposition modules from 15.83 through 15.748.
+- There are 664 source-backed proposition modules from 15.83 through 15.749.
 - The labels 15.537, 15.583, and 15.584 have no proposition module.  They are
   unassigned labels, not unreviewed propositions; later source headers mention
   those numbers only as historical range/state markers.
-- Therefore every assigned proposition through 15.748 was included in this
+- Therefore every assigned proposition through 15.749 was included in this
   audit.  The grouped ledger below is by shared mathematical route rather than
   a 736-row restatement of the assigned propositions.
 
@@ -563,10 +578,10 @@ The public theorem is gated consistently by the corrected global
 currently `False`. The historical bounded `True` is available only through
 `e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after audit of 15.748 |
+| unit | exact live content | status after audit of 15.749 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
-| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close `k in {4p,4p+2,4p+4}`, for every boundary size, at all primes `p>=11`; 15.738--15.742 close `p=13,k=58`, 15.743 closes `p=17,k=74`, and 15.744--15.745 close `u=3,0` at `p=13,k=60`. Propositions 15.746--15.748 close the `u=4` `P=3` branch and reduce `P=5` to excess partition `(1,1,1,1,1)` without closing the residue. The exact remainder includes critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u in {4,6}` and later p13 layers, every `p>=17,t>=4` layer (beginning with `p=17,k>=76`), and branch-B `t=3` for `p=1 mod 4,p>=29`; the separate positive `p=7,z=7` branch persists. The global predicate stays false. |
+| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close `k in {4p,4p+2,4p+4}`, for every boundary size, at all primes `p>=11`; 15.738--15.742 close `p=13,k=58`, 15.743 closes `p=17,k=74`, 15.744--15.745 close `u=3,0` at `p=13,k=60`, and 15.746--15.749 close `u=4`. The exact remainder includes critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers, every `p>=17,t>=4` layer (beginning with `p=17,k>=76`), and branch-B `t=3` for `p=1 mod 4,p>=29`; the separate positive `p=7,z=7` branch persists. The global predicate stays false. |
 | Type I | the multi-level `3A+B>0` bad case | **OPEN** — `|κ|=1` needs `G>T` (for example `|μ|≤|L|`), while `|κ|=3` independently needs `χ_d((2p-1)μ+(p-2)ν)>-(p-2)/p`; the particular term is safe but the δ remainder is open |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
@@ -621,6 +636,7 @@ top-level front.
 | **15.746** | exact support-330 Boolean catalog, branchwise `u=4` edge ledger, and omitted-pair sextic | **EXHAUSTIVE FINITE EQUALITY CLASSIFICATION AND PROVED OPEN REDUCTION.** Exact infeasibility makes the 78 omitted pairs and 286 all-equal triples exhaustive.  Their offsets force uniform `P=3` or `P=5` and at least two opposite mean-12 cells; at `P=3,Q=5` the cell is a `b=0` mass-12 lift satisfying `F6=2hM6+hM2^3-3M2M4=0`.  Neither `u=4` family is closed, so `u in {4,6}` remains exact. |
 | **15.747** | general mass-12 Boolean cut second moment and exact height-four models at `Q=3,5` | **PROVED BRANCH EXCLUSION WITH EXHAUSTIVE FINITE CERTIFICATES.** The Boolean branch is impossible modulo seven and both height-four relaxations are infeasible. The `u=4` omitted-pair `P=3` branch is closed; minimum `P=5,Q=3` cells are forced literals. |
 | **15.748** | common literal-root interpolation against the 69-element hard moment alphabet | **EXHAUSTIVE FINITE INTERPOLATION CERTIFICATE AND PROVED OPEN REDUCTION.** Cases with at least three literals are empty for both hard signs. Exactly 336 moment-level two-root survivors per sign remain, forcing opposite excess partition `(1^5)` without constructing a common graph. |
+| **15.749** | all 74 translated-cut inequalities, exact coordinate duals, and the `Q=4` moment intersection | **EXHAUSTIVE FINITE AGGREGATE CERTIFICATE AND PROVED BRANCH THEOREM.** The exact box contains 522 rows and 492 moment triples. Its 12-point intersection with each survivor evaluation alphabet has zero fourth moment, so five `Q=4` roots plus two literal roots force the nonzero hard quartic to vanish. This closes exactly `p=13,t=4,u=4`. |
 
 ## Exact duplicated run
 
@@ -780,13 +796,14 @@ Before spending mesh/GPU time:
    isolated vertex to infinity; Propositions 15.734--15.737 already close
    every boundary in the first three shells for `p>=11`;
 4. do not reopen `k in {4p,4p+2,4p+4}` for `p>=11`, `p=13,k=58`,
-   `p=17,k=74`, or the `p=13,k=60` residues `u=0,3`: Proposition 15.742 closes the p13 t3 row by the exact
+   `p=17,k=74`, or the `p=13,k=60` residues `u=0,3,4`: Proposition 15.742 closes the p13 t3 row by the exact
    six-dilate/common-energy contradiction, and Proposition 15.743 closes the
    p17 row by the 698-vector/common-Radon certificate. Propositions
    15.744--15.745 close the two p13 t4 residues after, respectively,
    rebuilding the H61 mass-14 premise and auditing the collision-one
-   transverse signs. The live residual ranges are critical `p=5,7`,
-   `p=11,k>=50`, `p=13,k=60,u in {4,6}` and later p13 layers, every
+   transverse signs, and 15.749 closes `u=4` by its exact translated-cut
+   moment intersection. The live residual ranges are critical `p=5,7`,
+   `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers, every
    `p>=17,t>=4` layer (beginning with `p=17,k>=76`), and branch-B `t=3`
    for `p=1 mod 4,p>=29`. In that branch-B range, the surplus
    resonance and explicit local mean witness rule
@@ -797,12 +814,10 @@ Before spending mesh/GPU time:
    mass-14 catalog and quartic contradiction. Do not reopen the generic p13
    `t=3` aggregate: 15.740 leaves exactly `1^4 2^3`, 15.741 supplies its
    common-graph energy identity, and 15.742 proves the resulting integral
-   row system empty. Propositions 15.746--15.748 complete the sharp mass-10
-   support classification, close the `u=4` `P=3` branch, and reduce `P=5`
-   to excess partition `(1^5)`. Do not rerun them. The next finite p13 gate
-   is to couple the 336 moment survivors per sign to the five excess-one
-   `Q=4` cells and one common 61-edge graph, not a broad census or a rerun of
-   `u=0,3`;
+   row system empty. Propositions 15.746--15.749 complete the sharp mass-10
+   classification and close both `u=4` branches. Do not rerun them or couple
+   the 336 moment survivors to graphs. The next finite p13 residue is `u=6`,
+   not a broad census or a rerun of `u=0,3,4`;
 5. search tracked files, untracked scripts, `/tmp` artifact names and hashes,
    git history, GitHub, MathOverflow, literature notes, and OEIS when number
    patterns are involved;

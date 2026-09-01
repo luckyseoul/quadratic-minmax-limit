@@ -39,7 +39,7 @@ guidance only for a deliberately selected Paley route.
 - Prefer an argument that closes an infinite family over a wider finite
   census unless the finite census is the explicitly recorded gate.
 
-## Current residual-(ii) gate after Proposition 15.748
+## Current residual-(ii) gate after Proposition 15.749
 
 Do not reopen `p=13,k=58` or `p=17,k=74`.  Proposition 15.742 combines the
 `M_2=0` congruence with six multiplicative interval cuts and closes the
@@ -73,7 +73,8 @@ give `C>=1`; its unique doubled parallel displacement then makes
 the transverse multiplicities Boolean and bounds the elevated row in
 `[-7,6]`, giving `695<719`.  Do not import the old `|H|=59` height-four
 infeasibility, omit the collision-one sign audit, or call the full
-`p=13,k=60` row closed.  Its exact remaining residues are `u=4,6`.
+`p=13,k=60` row closed.  At that stage its exact remaining residues were
+`u=4,6`; Proposition 15.749 later closes `u=4`.
 
 Proposition 15.746 completes the sharp mass-ten Boolean equality
 classification needed inside `u=4`.  The pointwise all-positive `b=2`
@@ -106,20 +107,30 @@ survivors per hard sign. The only remaining opposite excess partition is
 `(1,1,1,1,1)`. These survivors are necessary moment data, not common graph
 realizations.
 
+Proposition 15.749 closes that last `u=4` branch without a common-graph
+census.  Every opposite `Q=4` row obeys all 74 translated-cut inequalities.
+Two exact dual combinations give `-5<=q_a<=1` for every distance bin, so
+the admissible row list has 522 elements and 492 moment triples.  Its
+intersection with the nonroot evaluation alphabet of each 15.748 survivor
+has 12 triples, all with fourth moment zero.  Five `Q=4` directions would
+therefore add five roots to the two literal roots and force the binary
+quartic `M4` to vanish identically, contradicting the hard fourth-moment
+alphabet.  Reuse the pinned lists and hashes in
+`src/e1_gmin_m4_prop15749.py`; do not rerun a graph, orbit, or cell census.
+
 Residual (ii) is still open at critical `p=5,7`, at `p=11,k>=50`, in the
-two `p=13,k=60` residues `u=4,6` and all later p13 layers, at `p=17,k>=76`,
+sole `p=13,k=60` residue `u=6` and all later p13 layers, at `p=17,k>=76`,
 and in later layers for primes `p>=19`; within the branch-B fourth shell, the
-next prime is `p=29`.  Propositions 15.743--15.748 are finite certificates
-or open reductions,
+next prime is `p=29`.  Propositions 15.743--15.749 are finite certificates
+or branch theorems,
 not an all-prime row theorem.  The preferred generic front is therefore a
 structural version of its common-energy/cut mechanism that survives when
 the number of distance bins grows.  Another independent coefficient-cell
 catalog, one-direction floor, halving heuristic, or longer complete-domain
 timeout does not advance that gate.  The next finite p13 implication is to
-couple the 336 `z=2` moment survivors per sign to the five excess-one `Q=4`
-cells and one common 61-edge graph. Do not reopen the closed `P=3` branch,
-launch a broad support-396 or mass-12 census, or reopen the already-closed
-`u=0,3` rows.  Before launching a finite p11/p13-later
+attack `u=6`; do not reopen the closed `u=4` branch, couple the 336 survivors
+to common graphs, launch a broad support-396 or mass-12 census, or reopen
+the already-closed `u=0,3` rows.  Before launching a finite p11/p13-later
 computation, identify the invariant that could extend beyond that one row or
 explain why the finite row is a genuine base obstruction.
 
