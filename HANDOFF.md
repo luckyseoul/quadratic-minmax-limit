@@ -1,5 +1,40 @@
 # Handoff: min-max ±1 quadratic form
 
+## Latest delivered checkpoint (2026-09-01)
+
+- Commit `01942477f21e116a7f3de2112c6a6a0e0184e749` is on `main` and was
+  pushed to `origin/main`.  Propositions 15.752--15.753 close the entire
+  fifth residual shell `k=4p+8` for every prime `p>=17`; they do **not**
+  close the global residual-(ii) predicate or the original MathOverflow
+  convergence problem.
+- **Current mathematical status:** **L OPEN.**  The limit is not proved, and
+  `e1_closed_general()` is `False`.
+- Reproduce the focused exact checkpoint with
+  `/home/nick/.venvs/mo-exact/bin/python -m pytest -q tests/test_prop15752.py tests/test_prop15753.py`.
+  On 2026-09-01 it
+  collected 52 tests and completed with exit code 0.  This is a focused
+  milestone result, not a claim that the legacy full suite is green.
+  The tracked evidence hashes are
+  `6e2896076177f1fd0c94fd67ff2786ffd063f4a4b0211645b80ea5ef19dcc28e`
+  for `e1_gmin_m4_prop15752.json` and
+  `dc96c7e060409e05126af480a9a486d41e709f89ffd15fde42d7dbe04bf9e58d`
+  for `e1_gmin_m4_prop15753.json`.
+- For the **original MO convergence question**, the next serious target is
+  the multiplier-two residue (6.20), using the global-minimizer property or
+  finer `A`-dependent structure.  Do not replace that target with another
+  finite census.  If work is deliberately redirected to the stronger
+  `L=1/2` Paley route, prefer a scalable structural common-energy/cut
+  theorem.  If that route specifically needs a finite base obstruction, its
+  next p13 row is `p=13,k=60,u=6`; closing that row alone would not solve the
+  MO question.  The open positive `p=7,z=7` semigroup/quotient campaign is
+  terminal unless a new separating invariant is found.
+- Compute routing is a hard constraint: `soulkiller`/Tesla V100 is the
+  default CUDA worker.  `orin`/Jetson Orin Nano is reserved **only** for a
+  concrete case requiring a capability the V100 does not have; never send
+  it routine, duplicate, or generic CUDA validation.  `nuka` carries the RX
+  9070 XT and `jellyfin` the Arc A380.  Reachability and occupancy must still
+  be checked live before any dispatch.
+
 **Strategic correction (2026-09-01):** the original MathOverflow problem asks
 only whether `alpha_n` converges.  Proposition 6.3 proves that it is enough to
 obtain Dini-summable amplification at multipliers 2 and 3 for
@@ -179,10 +214,13 @@ The universal headroom between
 `k_A k_B>n^2/100` and the strict reverse of the statewise shield (6.43).
 Refining by any fixed finite anchor signature preserves the core estimate and
 adds only `O(n)` border, but alternating on every retained pair proves that
-this refinement can never make the existing spectral residual empty. This
-remains a useful local shield, not the live closure route; do not extend it or
-turn it into a finite state census. Once the multiplier-two ray is proved, closing
-this residual yields the multiplier-three estimate through
+this refinement can never make the existing spectral residual empty.  The
+fixed-anchor refinement and current spectral shield are useful locally but
+are not closure routes; do not extend either into a finite state census.  The
+residual itself remains the preferred post-doubling multiplier-three target,
+but it needs an actual state-energy correlation or a different cross block.
+Once the multiplier-two ray is proved, closing this residual yields the
+multiplier-three estimate through
 `H(3n)<=H(n)+H(2n)+o_Dini(n)`.
 
 Proposition 6.9 proves that the fixed-temperature free-energy fallback is
@@ -3232,7 +3270,7 @@ Leftover-1 conjunct is now **GLOBAL QVAR**, not per-stratum k≥7:
 Gating tests: `tests/test_global_qvar.py`, `tests/test_leftover1_qvar_principal.py`,
 `tests/test_qvar_k_ge_7.py`, `tests/test_r1_principal_pge11.py`.
 
-## Live obstruction
+## Historical QVAR obstruction (superseded as an E(1) gate by 15.720)
 
 Prove \(\Phi_\delta\succeq -(2n+20)/(n-6)\,I\) on \(Z\) (15.597). Split as:
 
@@ -3271,7 +3309,11 @@ process state are deliberately not proof context. Worktree
 The current mesh is `jellyfin`, `orin`, `nuka`, and `soulkiller`, but its
 reachability, hardware, mounts, and process state are time-sensitive. Recheck
 them live before dispatch; never infer current compute state from this proof
-handoff.
+handoff.  Route ordinary CUDA work to the Tesla V100 on `soulkiller`.
+`orin` is not an overflow worker: reserve it for an identified requirement
+that uses a capability the V100 lacks, and never use it for redundant census
+or validation runs.  `nuka` is the RX 9070 XT node and `jellyfin` is the Arc
+A380 node.
 
 ## Suggested skills
 
@@ -3329,10 +3371,10 @@ is False; the old bounded AND is named only by
 
 ---
 
-**Date:** 2026-08-20 (current branch; use `git log -1` for the exact checkpoint)
+**Historical snapshot date:** 2026-08-20
 **Repo:** https://github.com/luckyseoul/quadratic-minmax-limit
-**Current branch:** `codex/leftover-moment-attack` (use `git log -1` for the
-current hash).  The latest continuation adds Prop 15.589 Theorems J--U,
+**Branch at that time:** `codex/leftover-moment-attack`.  That continuation
+added Prop 15.589 Theorems J--U,
 including the all-prime `k=4,5,6` QVAR closures described below.  All 124
 focused Prop 15.588/15.589 and k=7 probe tests pass.
 **Statement:** [MathOverflow 413935](https://mathoverflow.net/questions/413935).
@@ -3582,18 +3624,18 @@ Read `evidence/METHOD_why_500_props_never_moved_a_flag.md` before writing a new
 numbered proposition — it names the loop that produced most of the ~500 that
 never moved a flag, and gives four rules to avoid repeating it.
 
-**Leftover 1, current form.**  The older variance-plus-multiplicity route below
+**Leftover 1, historical 2026-08-20 form.**  The older variance-plus-multiplicity route below
 has been refined by Prop 15.589.  Multiplicity is now proved exactly: every
 principal block has degree `n`, and the only smaller block is one exceptional
-degree-`n/2` scalar.  The live route therefore has two separate targets:
+degree-`n/2` scalar.  The then-live route had two separate targets:
 
 1. exceptional QVAR on `k>=7` from `p=13`,
    `E|Z_psi|^2 >= 3q(q-1)/16`; and
 2. the principal sufficient room
    `||delta||^2 <= n(n+10)^2/[6(n-6)^2]`.
 
-The identity `tr(Phi^2) = 4||M||_F^2 - 3n^2 + 2n^2(n-1)/p^2` remains a live
-way to attack target 2, but bounding `||M||_F^2` alone is no longer the single
+The identity `tr(Phi^2) = 4||M||_F^2 - 3n^2 + 2n^2(n-1)/p^2` remains a valid
+historical mechanism for target 2, but bounding `||M||_F^2` alone is no longer the single
 floor target because the exceptional block must be handled by QVAR.  The
 finite `p=5` floor is already checked.  See the PSL reduction note and the
 older `NOTE_leftover1_variance_multiplicity_route.md` for the variance history.
@@ -3627,11 +3669,11 @@ wrote that original instruction and had a reason beyond "these are dead ends",
 that reason is not recorded anywhere — leaving this note so it is not silently
 overridden twice.
 
-## Open for E(1)
+## Historical E(1) gate table (superseded by 15.720 except residual (ii))
 
 | Item | Flag | Status |
 |---|---|---|
-| \(\lambda_{\min}(\Phi)\ge6\) on \(Z\) | `phi_F_ge_6_proved_general=False` | Open. Exceptional QVAR is closed through `k=6` and remains on `k>=7` from `p=13`; principal blocks retain the delta-variance target. |
+| \(\lambda_{\min}(\Phi)\ge6\) on \(Z\) | `phi_F_ge_6_proved_general=False` | Historically open, but no longer an E(1) acceptance gate after 15.720. Exceptional QVAR is closed through `k=6` and remains on `k>=7` from `p=13`; principal blocks retain the delta-variance target only within this optional stronger route. |
 | Residual (ii), even \(k\ge4p\) | `residual_ii_k_eq_4p_empty=False` | Open globally. Propositions 15.734--15.737 close the first three shells, 15.751 closes `k=4p+6` for every `p>=13`, 15.752 closes `k=4p+8` for every `p>=23` plus its higher band, and 15.753 closes the p17/p19 fifth-shell endpoints. Critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers, and layers beyond the band remain. The all-prime legacy predicate therefore stays False. |
 | Type I, Max− not two-level \(\{-1,-3\}\) | `type_I_multilevel_bad_case_ND_closed=True` | Closed by Proposition 15.750 using isolated-chart parity halving and exact `p=5,7` Farkas certificates. |
 | Lemma D | True | Closed. Do not unflip. |
@@ -3662,8 +3704,8 @@ both block types are controlled generally, never from finite-p data.
 
 ## Floor (leftover 1)
 
-**Current block decomposition.** `Z=W_e direct-sum principal series`; QVAR is
-the exact exceptional condition and the delta room is the current sufficient
+**Historical block decomposition.** `Z=W_e direct-sum principal series`; QVAR is
+the exact exceptional condition and the delta room was the then-sufficient
 principal condition.  The formulas below are the older equivalent Fourier
 description and remain useful, but “name all of Q(r)” is no longer the binding
 next step.
@@ -3863,7 +3905,8 @@ Jellyfin (`192.168.1.191`) now has a validated Intel Arc A380 environment at
 the shell census the soulkiller repo and p=11 data were mounted read-only under
 `/home/nick/mnt/soulkiller-{repo,e1work}` via SSHFS.
 
-**Checkpoint entering the latest continuation:** `54fd110` (exact `2p`
+**Historical checkpoint entering the 2026-08-20 continuation:** `54fd110` (exact `2p`
 arithmetic, normalized integer QVAR, and the general coarse-profile
-countermechanism).  The latest commit(s) after that checkpoint add the p=11
-fixed-active-subset counterexample in Prop 15.589 J; use `git log -1` for HEAD.
+countermechanism).  Commits after that checkpoint at the time added the p=11
+fixed-active-subset counterexample in Prop 15.589 J.  Use the checkpoint at
+the top of this file, not this historical paragraph, for current HEAD.
