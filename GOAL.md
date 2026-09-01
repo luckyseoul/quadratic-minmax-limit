@@ -1,6 +1,15 @@
-# Plan: Settle \(L=\lim\alpha_n=1/2\) by closing the two genuine remainders
+# Route plan: prove the stronger value-specific claim \(L=1/2\)
 
-Use this file as the `/goal` body. Example:
+> **Scope correction (2026-09-01).**  This is an optional Paley route plan,
+> not the binding acceptance test for MathOverflow 413935.  The original
+> problem is settled by proving existence without identifying the value.
+> Proposition 6.3 reduces that direct route to Dini-summable amplification at
+> multipliers 2 and 3; polynomial saving is more than is needed.  Proposition
+> 6.4 isolates the four-state Hadamard-doubling hinge.  See
+> `LONG_HORIZON_GOAL.md`.
+
+Use this file as the `/goal` body only when deliberately selecting the
+stronger Paley route. Example:
 
 ```
 /goal complete GOAL.md in /home/nick/quadratic-minmax-limit
@@ -35,10 +44,16 @@ code-change
 - Unflipping \(L\) to “start honest” and then flipping it back. If a caveat dies, record it and switch listed attack — do not cycle the Main Theorem.
 
 ## Assumed scope
-Repo `/home/nick/quadratic-minmax-limit/`. Hinge already shipped: 15.272 Lemmas B–C, E, F, G Singer on \(F\), 15.207, 15.249, and Lemma D in 15.276 / `A3_PROOF.md`. Binding leftovers: package § Caveats, `HANDOFF.md`, `STATUS.md`. Writeup: `solution.md`. Statement: \(\alpha_n=n^{-3/2}\min_{a_{ij}=\pm1}\max_{x=\pm1}|\sum_{i<j}a_{ij}x_ix_j|\) and the target limit is \(L=1/2\).
+Repo `/home/nick/quadratic-minmax-limit/`. Hinge already shipped: 15.272 Lemmas B–C, E, F, G Singer on \(F\), 15.207, 15.249, and Lemma D in 15.276 / `A3_PROOF.md`. Route-local leftovers: package § Caveats, `HANDOFF.md`, `STATUS.md`. Writeup: `solution.md`. Statement: \(\alpha_n=n^{-3/2}\min_{a_{ij}=\pm1}\max_{x=\pm1}|\sum_{i<j}a_{ij}x_ix_j|\); within this stronger route the target value is \(L=1/2\).
 
-## Implementation approach
-Attack only the two open units: residual (ii) and the Type-I multi-level remainder. QVAR/R1 work is optional mathematics, not a prerequisite for this proof. Wire flags by import after a unit is live and failing-when-wrong. Set `solution.md` \(L=1/2\) only after criteria 1–2. Use compute only behind a predeclared mathematical gate.
+## Implementation approach within this route
+If this stronger Paley route is deliberately selected, attack only the two
+open units: residual (ii) and the Type-I multi-level remainder. QVAR/R1 work
+is optional mathematics, not a prerequisite for this proof. Wire flags by
+import after a unit is live and failing-when-wrong. Set `solution.md` \(L=1/2\)
+only after criteria 1–2. Use compute only behind a predeclared mathematical
+gate.  Otherwise the direct original-problem front is Proposition 6.3, not a
+finite Paley residue.
 
 ## Task checklist
 - [x] Replace the invalid 15.167 bi-tight arrow with a valid all-prime obstruction for required levels 2 and 3 (15.720; bi-tight level 4 is a non-load-bearing corollary).

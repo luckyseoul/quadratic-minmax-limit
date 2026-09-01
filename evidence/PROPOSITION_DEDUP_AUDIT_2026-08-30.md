@@ -1,9 +1,10 @@
 # Proposition and route de-duplication audit
 
-**Date:** 2026-08-31
+**Date:** 2026-09-01
 
-**Scope:** every assigned proposition through Proposition 15.748, the live
-predicate wiring, and the attack scripts present during the audit
+**Scope:** Propositions 6.3--6.4, every assigned proposition through
+Proposition 15.748, the live predicate wiring, and the attack scripts present
+during the audit
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
 or finite-prime rerun from being mistaken for a new mathematical attack
@@ -11,6 +12,27 @@ or finite-prime rerun from being mistaken for a new mathematical attack
 ## Verdict
 
 The duplication concern was correct.
+
+### Original-question correction and two-ray gate (Proposition 6.3)
+
+The binding plan had silently strengthened MathOverflow 413935 from existence
+of the limit to existence plus identification of its value.  That made the
+Paley E(1) architecture look mandatory.  It is not.  Proposition 6.3 proves
+that Dini-summable amplification at only multipliers 2 and 3 for
+`H(n)=m_n^(2/3)` forces convergence: iteration controls the semigroup
+`{2^a 3^b}`, its multiplicative gaps tend to one, and monotonicity fills the
+gaps.  Errors `O(n/(log n)^(1+epsilon))` in `H` already suffice; an all-pairs
+composition theorem and polynomial saving are unnecessary.  Another finite
+Paley residue census does not advance this direct gate.
+
+The same review retracts Section 10's claimed universal `0.282` additive
+doubling floor: it improperly used a lower bound inside a triangle upper
+bound.  The exact two-block identity leaves coupled design live.  Proposition
+6.4 then puts the all-Hadamard two-cloud subclass into an exact four-state
+normal form and proves its simultaneous hereditary two-endpoint lower bound.
+For each fixed frame, mixed cross terms cannot repair a cut violating the
+bound; choosing orientations whose induced endpoints pass every cut remains
+open, and the construction class is not excluded.
 
 ### Post-audit correction (15.720)
 

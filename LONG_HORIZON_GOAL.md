@@ -8,7 +8,9 @@ That is: prove that
 L=\lim_{n\to\infty}\alpha_n
 \]
 
-exists and determine its value, **or** prove that the limit does not exist.
+exists (whether or not the proof identifies its value), **or** prove that the
+limit does not exist.  The original MathOverflow question asks for existence;
+requiring the value as well is a strictly stronger, optional objective.
 
 A session, plan, prop, test suite, or handoff update is **not** completion of this goal.
 
@@ -16,9 +18,10 @@ A session, plan, prop, test suite, or handoff update is **not** completion of th
 
 | Terminal state | What must be true |
 |----------------|-------------------|
+| **Existence CLOSED; value unidentified** | A proved convergence theorem applies to the actual sequence.  For example, both Dini-summable amplification rays in Proposition 6.3 are proved, so \(H(n)=m_n^{2/3}\) satisfies the two-ray criterion.  A reduction with an open hypothesis is not enough. |
 | **\(L=1/2\) CLOSED** | E(1) on the Paley family \(n=p^2+1\) is proved Max+-free for all primes \(p\ge5\), denseness (Prop 6.1–6.2) is applied, and `e1_closed_general` is True via **real imports** from the hinge modules (not a handwritten `return True`). `solution.md` Main Theorem states \(L=1/2\). |
 | **\(L=c\) CLOSED for a specific \(c\neq 1/2\)** | A proved value with the same wiring standard. |
-| **Non-existence CLOSED** | Two dense subsequences with unequal proved \(\lim\alpha\). Denseness (Prop 6.2) is mandatory. |
+| **Non-existence CLOSED** | A rigorous proof that \(\alpha_n\) does not converge.  Two ratio-dense subsequences with unequal proved limits are one sufficient mechanism, not an extra requirement on every proof. |
 
 Anything else — including “honest OPEN,” “structure shipped,” “census holds at \(p=5,7\),” “AI-test later,” “good increment” — is **not done**.
 
@@ -26,6 +29,11 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
 
 - Sandwich \(1/\pi\le\liminf\alpha_n\le\limsup\alpha_n\le 1/2\).
 - Denseness: the limit exists globally iff it exists along Paley orders \(n_k=p_k^2+1\).
+- Two-ray convergence reduction (Prop 6.3): Dini-summable normalized defects
+  in the multiplier-2 and multiplier-3 inequalities suffice.  In particular,
+  errors `O(n/(log n)^(1+epsilon))` in `H`, or power-saving errors, force
+  convergence.  Proposition 6.4 identifies the exact four-state and
+  hereditary hinge for the all-Hadamard multiplier-2 construction.
 - \(\rho=1\) on that Paley family, so \(\Phi(C_n)=\frac12 n\sqrt{n-1}\) and \(\alpha_{n_k}\to 1/2\) **if** E(1) holds there.
 - 15.167's majorization algebra is conditionally valid, but its final bi-tight implication is **retracted** because `ker(G-(n/2)P1)` contains `ker G`. Proposition 15.720 instead excludes the required bi-tight levels 2 and 3 for every prime `p>=5` by a degree congruence. Its bi-tight level-4 corollary does not exclude one-sided tight level 4.
 - Propositions 15.726--15.727 historically narrowed the first general
@@ -36,9 +44,12 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
   `p>=11`.
 - Exact Paley optimality is **false** (\(m_{10}=13<15\)). E(1) is asymptotic.
 
-Therefore the remaining theorem is **E(1)** on \(n=p^2+1\). The live
-acceptance gate is the corrected dictionary returned by
-`src/e1_main_chain_status.py`; as of 2026-08-31 through Proposition 15.745 it
+There are now two honest routes.  The direct route to the original question
+is the two-ray amplification theorem of Proposition 6.3 (or any other proof
+of convergence/non-existence).  The value-specific route to \(L=1/2\) is
+**E(1)** on \(n=p^2+1\).  On that optional Paley route, the live gate is the
+corrected dictionary returned by
+`src/e1_main_chain_status.py`; as of 2026-09-01 through Proposition 15.748 it
 reads:
 
 1. **Required bi-tight levels 2 and 3:** TRUE by 15.720. The spectral floor,
@@ -69,8 +80,11 @@ authoritative open functions are `residual_ii_k_ge_4p_ND_closed()` and
 
 Path-C / 16N / 15.193 exhaustiveness is **not** required.
 
-Closing either open unit is **necessary progress**. It is **not** goal
-completion. Goal completion is a terminal state in the table above.
+Closing either open unit is progress on the Paley \(L=1/2\) route, but it is
+not necessary for a different proof of convergence and is not goal
+completion.  The direct convergence front is to prove the estimates at
+multipliers 2 and 3 from Proposition 6.3; an all-pairs composition theorem is
+not required.
 
 ## Forbidden translations (these are the small-failure mode)
 
@@ -81,6 +95,8 @@ Do **not** replace this goal with any of:
 - Recertifying that unsigned \(\sum|\mathrm{per}|\) exceeds \(B\) (15.231 already did this).
 - Updating STATUS / HANDOFF / session notes as the deliverable.
 - Census \(p\le 7\), SA, or Lipschitz scale-counting as E(1).
+- Treating the all-prime, gap-2 Paley architecture as the only way to answer
+  the original existence question.
 - Soft-close: sandwich + denseness + \(\rho=1\) \(\Rightarrow L=1/2\) without E(1).
 - Flipping predicates without a general Max+-free hinge imported for real.
 
@@ -90,6 +106,9 @@ If a proof attempt fails, **stop**. Record the failed mechanism in one paragraph
 
 A session may end only if one of these happened:
 
+- one of the two fixed amplification rays in Proposition 6.3 is actually
+  proved with a Dini-summable error, and the other ray remains the named direct
+  convergence gate, or
 - one of the two open E(1) units **actually closed** (predicate True via a
   real import), or
 - a live route was **killed as a path** by a general counter-mechanism (not a
@@ -101,4 +120,7 @@ A session may end only if one of these happened:
 
 ## After a terminal state
 
-The writeup must stand on its own: independent cold reads of `evidence/share/denseness_path_package.md` should call the argument essentially correct. Channel is X + GitHub, not a MathOverflow answer.
+The writeup must stand on its own.  If closure uses the Paley route, an
+independent cold read of `evidence/share/denseness_path_package.md` must call
+that argument essentially correct; a different convergence proof needs its
+own self-contained package. Channel is X + GitHub, not a MathOverflow answer.

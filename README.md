@@ -11,22 +11,42 @@ m_n = min_{a_ij = ±1}  max_{x_j = ±1}  | Σ_{1≤i<j≤n} a_ij · x_i · x_j |
 
 ## About
 
-Machine-assisted attack on a 2022 MathOverflow problem: the limiting constant
-of the min-max ±1 quadratic form. The limit **L is OPEN**. This repo is a
-fully-audited proof ledger — every claim is a Python predicate that returns
-`True`/`False`, 663 source-backed proposition modules through 15.748, no
-prose-only results, and soft-closing is banned by test
-(`tests/test_main_chain_docs.py`).
+Machine-assisted attack on a 2022 MathOverflow problem: whether the normalized
+min-max ±1 quadratic form converges. The limit **L is OPEN**. This repo is a
+proof ledger with 663 source-backed computational proposition modules through
+15.748 plus reviewed analytic arguments in `solution.md`. Machine gates use
+explicit `True`/`False` predicates, and soft-closing is banned by test
+(`tests/test_main_chain_docs.py`); Propositions 6.3--6.4 are proved in prose,
+not represented as computational predicates.
 
 ## Status
 
 **Goal:** settle the limit (see **`LONG_HORIZON_GOAL.md`**). Not done until L is proved or disproved.
 
-**Main claim:** L = lim_n α_n is **OPEN** (2026-08-31).
+**Main claim:** L = lim_n α_n is **OPEN** (2026-09-01).
 
-### Current audit (2026-08-31; through Proposition 15.748)
+### Current audit (2026-09-01; through Proposition 15.748 and Propositions 6.3--6.4)
 
-- **Required asymptotic target.** It is enough to prove the Paley-tail deficit
+- **Original-question correction and new direct gate.** MathOverflow 413935
+  asks whether the limit exists; identifying its value is optional.  With
+  `H(n)=m_n^(2/3)`, Proposition 6.3 proves that it is enough to establish
+  Dini-summable amplification only at multipliers 2 and 3; even
+  `O(n/(log n)^(1+epsilon))` errors in `H` suffice.  The semigroup
+  `{2^a 3^b}` has multiplicative gaps tending to one, so monotonicity fills
+  every other order.  The all-prime, gap-2 Paley gate below is therefore one
+  stronger value-specific route, not the acceptance gate for the original
+  problem.
+
+- **Multiplier-two correction and exact state.**  The old Section 10
+  `C>=0.282` inference mixed a lower bound into a triangle upper bound and is
+  retracted.  The exact two-block identity leaves coupled design live.
+  Proposition 6.4 converts every all-Hadamard two-cloud lift into an exact
+  four-state minimax.  For each chosen frame, its two induced endpoint
+  signings must satisfy a simultaneous hereditary bound on every cut; finding
+  orientations whose endpoints and mixed states all meet the upper target is
+  still part of the problem.
+
+- **Paley value-specific target.** It is enough for \(L=1/2\) to prove the Paley-tail deficit
   \(\Phi(C_p)-m_{p^2+1}=o(p^3)\) on a ratio-dense tail. The current all-prime,
   gap-2, four-unit gate is a strictly stronger sufficient route.
 - **Hamming-stability route.** Local edge optimality, switching minimality,
@@ -1540,6 +1560,7 @@ Lemma D is complete and is no longer on the work list.
 | `evidence/NOTE_2026-08-31_p13_support330_u4_reduction.md` | Exact support-330 catalog, branchwise mean-12 consequences, and `F6=0` open reduction (15.746) |
 | `evidence/NOTE_2026-08-31_p13_u4_mass12_literal_interpolation.md` | Mass-12 cut obstruction, two height-four exclusions, and literal-root interpolation through 15.748 |
 | `evidence/NOTE_2026-08-31_p31_public_11_of_12_arc_audit.md` | Exhaustive finite certificate for the eleven publicly sourced complete 22-arc classes at `p=31`; explicitly not a twelve-class close |
+| `evidence/NOTE_2026-09-01_ORIGINAL_LIMIT_TWO_RAY.md` | Original-question correction, Dini two-ray theorem, Section 10 retraction, and exact four-state Hadamard-doubling hinge |
 | `scripts/p31_complete_22arc_public_audit.py` | Deterministic public-class audit producing `evidence/p31_complete_22arc_public_11_audit.json` |
 | `evidence/p7_infinity7_positive_z7_global_semigroup_summary.json` | Compact hash-pinned affine/global-join and Hilbert-basis certificate for 15.718 |
 | `evidence/p7_infinity7_positive_z7_projected_stabilization_summary.json` | Compact hash-pinned finite projected-semigroup stabilization certificate for 15.719 |

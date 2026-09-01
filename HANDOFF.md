@@ -1,6 +1,17 @@
 # Handoff: min-max ±1 quadratic form
 
-**Date:** 2026-08-31 (through 15.748; required bi-tight levels 2 and 3 are
+**Strategic correction (2026-09-01):** the original MathOverflow problem asks
+only whether `alpha_n` converges.  Proposition 6.3 proves that it is enough to
+obtain Dini-summable amplification at multipliers 2 and 3 for
+`H(n)=m_n^(2/3)`; even `O(n/(log n)^(1+epsilon))` errors suffice. Proposition
+6.4 gives the exact four-state and hereditary conditions for Hadamard
+doubling.  Section 10's claimed universal `0.282` additive floor was invalid
+and is retracted by the exact two-block identity.  This is the preferred
+direct gate.  The finite Paley residual ledger below remains valid evidence
+for the stronger `L=1/2` route, but it is not the only acceptance path and
+should not be resumed by default.
+
+**Date:** 2026-09-01 (through Propositions 6.3--6.4 and 15.748; required bi-tight levels 2 and 3 are
 closed, residual (ii) is closed for every boundary at
 `k in {4p,4p+2,4p+4}` for every prime `p>=11`, and the exceptional
 and generic branches at `p=13,k=58`, the generic `p=17,k=74` row, and the

@@ -31,14 +31,22 @@ m_n
 Moreover \(\limsup_n\alpha_n=\lim_n a_n\) where \(a_n=\sup_{k\ge1}\alpha_{kn}\).
 (The lower bound is the dual-Gaussian arcsine argument of Prop.~5.2, valid for **every** Seidel matrix; the classical Bohnenblust–Hille floor \(2^{-5/2}\) is retained as Prop.~5.1.)
 
-**Target (limit) — not a theorem.** Sandwich + Paley denseness (\(\rho=1\)
-on \(n=p^2+1\)) + E(1) on that family would give
+**Direct convergence reduction — not yet a solution.**  The original problem
+asks whether \(\alpha_n\) converges; it does not require identifying the
+limit.  Proposition 6.3 proves that convergence follows from just two
+Dini-summable amplification estimates, at multipliers \(2\) and \(3\), for
+\(H(n)=m_n^{2/3}\); polynomial saving is unnecessary.  Proposition 6.4 gives
+the exact four-state hinge for Hadamard doubling.  The two ray estimates
+remain open.
+
+**Stronger value-specific target — not a theorem.** Sandwich + Paley
+denseness (\(\rho=1\) on \(n=p^2+1\)) + E(1) on that family would give
 \begin{equation}
 \label{eq:limit}
 L=\lim_{n\to\infty}\alpha_n=\tfrac12.
 \end{equation}
 E(1) is **not proved** for all primes \(p\ge5\). Two mathematical
-obligations remain (`GOAL.md`;
+obligations remain on this stronger Paley route (`GOAL.md`;
 `evidence/share/denseness_path_package.md` § Caveats):
 (1) residual (ii) for even \(k\ge4p\); and (2) Type I when Max− is not
 two-level. Proposition 15.720 closes the required bi-tight levels 2 and 3
@@ -63,7 +71,8 @@ matrix of order \(n=p^2+1\) (over \(\mathbb F_{p^2}\)) admits a halfspace boolea
 \(n_{k+1}/n_k\to1\) and \(\limsup_k\rho(C_{n_k})=1\). Proof: `evidence/PROOF_rho_eq_1.md`.
 **If** \(m_n\ge\Phi(C)-2\) (E(1)) this would force \(L=\tfrac12\). E(1) is open.
 
-**What is complete.** Dual-Gaussian lower bound; denseness; \(\rho=1\) on \(n=p^2+1\);
+**What is complete.** Dual-Gaussian lower bound; denseness; the two-ray
+conditional convergence theorem; \(\rho=1\) on \(n=p^2+1\);
 15.720 degree-congruence exclusion of required bi-tight levels 2 and 3;
 residual (ii) affine + even \(k\le 4p-2\) (15.179/236/237), **not**
 even \(k\ge4p\); residual (i) two-level Type I via 15.272
@@ -77,7 +86,7 @@ remaining `z=7` pointed systems and identify their projected high-catalog
 semigroups through grade six, but exclude no source boundary.  All 56 actual
 `z=7` line boundaries in two orbits remain open.
 
-The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-08-30; through audit of Proposition 15.725).** \(L\) is OPEN. Details: `evidence/share/denseness_path_package.md` § Caveats.
+The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-09-01; through Propositions 6.3--6.4 and 15.748).** The direct multiplier-2 and multiplier-3 estimates are open; the optional Paley \(L=1/2\) route also remains open. Details: `evidence/share/denseness_path_package.md` § Caveats.
 
 > **Reader note.** Soft-close of \(L=\tfrac12\) via scheme-min Gsum was **retracted** 2026-08-06. Aut-Schur remains false. Historical “\(L\) OPEN” remarks in Props 15.20–15.171 refer to those older routes.
 
@@ -292,6 +301,160 @@ In particular, \(\lim\alpha_n\) exists if and only if \(\lim_k\alpha_{n_k}\) exi
 
 Thus any existence proof may restrict attention to Paley orders; any non-existence proof must already be visible along that sparse but ratio-dense subsequence.
 
+**Proposition 6.3 (two-ray convergence criterion).** Put
+\[
+H(n)=m_n^{2/3},\qquad h(n)=\frac{H(n)}n=\alpha_n^{2/3}.
+\]
+Let \(\eta(n)\ge0\), put
+\begin{equation}
+\eta^*(N)=\sup_{u\ge N}\eta(u),\qquad
+E(N)=\sum_{j\ge0}\eta^*(2^jN),                       \tag{6.1}
+\end{equation}
+and suppose \(E(N)\to0\).  If, for all sufficiently large \(n\),
+\begin{equation}
+H(2n)\le2H(n)+2n\eta(n),\qquad
+H(3n)\le3H(n)+3n\eta(n),                            \tag{6.2}
+\end{equation}
+then \(\lim_n\alpha_n\) exists.
+
+*Proof.* Monotonicity of \(m_n\) makes \(H\) nondecreasing.  Dividing each
+inequality in (6.2) by its new argument gives
+\(h(qn)\le h(n)+\eta(n)\), for \(q=2,3\).  Along any word in \(2,3\), the
+size before step \(j\) is at least \(2^jn\).  Therefore, uniformly in
+\(a,b\ge0\),
+\[
+h(2^a3^b n)\le h(n)+E(n).                            \tag{6.3}
+\]
+The consecutive ratios in the sorted semigroup
+\(\{2^a3^b:a,b\ge0\}\) tend to one.  Indeed,
+\(\log2/\log3\) is irrational, so the corresponding irrational rotation is
+dense; a finite prefix is an arbitrarily fine net modulo \(\log3\), and a
+large nonnegative multiple of \(\log3\) then places a semigroup logarithm
+in every sufficiently large interval of the prescribed length.
+
+Fix \(n\) beyond the threshold in (6.2).  For every sufficiently large \(N\),
+choose \(s=2^a3^b\) with \(N\le sn=(1+o_N(1))N\).  By monotonicity and
+(6.3),
+\[
+h(N)\le\frac{sn}{N}h(sn)
+\le(1+o_N(1))(h(n)+E(n)).
+\]
+Hence \(\limsup_Nh(N)\le h(n)+E(n)\).  Letting \(n\) tend to
+infinity along a liminf subsequence gives \(\limsup h\le\liminf h\).
+Therefore \(h\), and hence \(\alpha_n=h(n)^{3/2}\), converges. \(\square\)
+
+The power-saving hypothesis
+\[
+H(2n)\le2H(n)+O(n^{1-\delta}),\qquad
+H(3n)\le3H(n)+O(n^{1-\delta})                       \tag{6.4}
+\]
+for any \(\delta>0\) is a special case, but (6.1) is weaker: for example,
+errors \(O(n/(\log n)^{1+\varepsilon})\) in (6.2) suffice.  It is enough to
+prove the doubling estimate in (6.4) together with the single \(1:2\) split
+\[
+H(3n)\le H(n)+H(2n)+O(n^{1-\delta});
+\]
+the doubling inequality then supplies the tripling estimate.
+Equivalently, using \(m_n=\Theta(n^{3/2})\) (Proposition 5.2 for the lower
+bound and the elementary random-method upper bound recalled in Sections 4
+and 7), it is enough to construct power-saving amplifications
+\[
+m_{rn}\le r^{3/2}m_n+O(n^{3/2-\delta}),\qquad r=2,3. \tag{6.5}
+\]
+Only these two fixed composition shapes are required, rather than a uniform
+all-pairs composition theorem.  More generally, (6.5)'s relative error may
+be replaced by any modulus satisfying the tail-summability condition (6.1).
+
+*Sharpness of the two-ray premise.*  Doubling alone is not a convergence
+criterion.  For sufficiently small \(\varepsilon>0\),
+\[
+G(x)=x\bigl(1+\varepsilon\sin(2\pi\log_2x)\bigr)
+\]
+is increasing, has bounded increments along the integers, and satisfies
+\(G(2x)=2G(x)\), while \(G(n)/n\) oscillates.  The second,
+multiplicatively independent scale is load-bearing.
+
+**Proposition 6.4 (exact four-state form of Hadamard doubling).**  Pair the
+vertices of an order-\(2n\) signing into \(n\) clouds of size two.  Suppose
+every inter-cloud \(2\times2\) sign block \(B_{ij}\) is Hadamard (equivalently,
+the product of its four entries is \(-1\)); allow an arbitrary sign \(d_i\)
+on the internal edge of cloud \(i\).  Write a cloud state uniquely as
+\[
+z_i=s_i(1,(-1)^{t_i}),\qquad s_i\in\{\pm1\},\quad t_i\in\mathbb F_2.
+\]
+For each oriented block there are unique
+\(\alpha_{ij},\beta_{ij},\gamma_{ij}\in\mathbb F_2\) such that
+\[
+\frac12z_i^\top B_{ij}z_j
+=s_is_j(-1)^{t_it_j+\alpha_{ij}t_i+
+                 \beta_{ij}t_j+\gamma_{ij}}.          \tag{6.6}
+\]
+For \(t\in\mathbb F_2^n\), let \(C_t\) be the order-\(n\) signing with
+\[
+(C_t)_{ij}=(-1)^{t_it_j+\alpha_{ij}t_i+
+                 \beta_{ij}t_j+\gamma_{ij}},
+\qquad K=\max_t\Phi(C_t).
+\]
+Then the full lift \(S\) satisfies
+\[
+2K-n\le\Phi(S)\le2K+n.                              \tag{6.7}
+\]
+
+*Proof.*  The normalized four-entry table
+\(\tfrac12(1,(-1)^{t_i})B_{ij}(1,(-1)^{t_j})^\top\)
+is sign-valued and has entry product \(-1\), which is exactly the unique
+Boolean normal form in (6.6).  Thus
+\[
+Q_S(z)=2Q_{C_t}(s)+\sum_i d_i(-1)^{t_i}.
+\]
+The last sum has absolute value at most \(n\); maximizing first over \(s\)
+and then over \(t\) proves (6.7). \(\square\)
+
+The quadratic term \(t_it_j\) is invariant under row and column gauges.  It
+cannot be replaced by vertex factors: a table
+\(c_{ij}r_i(t_i)r_j(t_j)\) has entry product \(+1\), whereas every Hadamard
+block in (6.6) has product \(-1\).  Thus no edgewise local vertex-gauge
+factorization can collapse these tables to one base signing.  This does not
+exclude a special frame whose induced signings are related by a nonlocal
+coincidence.
+
+More precisely, minimize \(K\) over all Hadamard frames and call the result
+\(G_2(n)\); minimize \(\Phi(S)\) over those frames and all internal signs and
+call it \(L_2(n)\).  Equation (6.7) gives
+\[
+|L_2(n)-2G_2(n)|\le n.                              \tag{6.8}
+\]
+Since this is a subclass of all order-\(2n\) signings,
+\(m_{2n}\le L_2(n)\), and consequently
+\(G_2(n)\ge(m_{2n}-n)/2\).
+Hence this class reaches the multiplier-two threshold precisely by proving,
+up to the admissible \(O(n)\) term,
+\[
+G_2(n)\le\sqrt2\,m_n+n^{3/2}\omega(n),              \tag{6.9}
+\]
+where \(\omega\ge0\) and
+\(\sum_{j\ge0}\sup_{u\ge2^jn}\omega(u)\to0\).
+
+For each fixed oriented frame there is also a necessary condition.  Put
+\(P(A)=\max_xQ_A(x)\), \(N(A)=-\min_xQ_A(x)\), let \(G=C_{\mathbf0}\), and
+let \(J=C_{\mathbf1}\).  For every \(T\subseteq[n]\),
+\[
+K\ge\max\left\{
+P(J[T])+P(G[T^c]),\;
+N(J[T])+N(G[T^c])
+\right\}.                                           \tag{6.10}
+\]
+Indeed, fix \(t=1_T\), independently maximize the two within-part forms,
+and compare a spin state with the state obtained by flipping every spin in
+\(T\).  The within-part sum is fixed and the cross term changes sign, so one
+choice has absolute energy at least that sum.  The same argument with both
+within-part minima gives the second term.  Consequently (6.9) requires a
+simultaneous hereditary bound for the two endpoint signings \(G,J\); mixed
+cross terms within that frame cannot repair a cut that violates it.  A
+different orientation changes \(G,J\), so selecting a frame whose endpoints
+pass every cut remains part of the open problem.  No such construction is
+currently proved.
+
 ---
 
 ## §7. Multipartite bounds
@@ -396,24 +559,39 @@ Even allowing \(n\)-dependence, the obstruction persists in the regime that matt
 \]
 along liminf sequences \(n\), and in fact \(c(k,n)\) must be allowed to be as large as \(\Lambda-o(1)\) whenever \(\alpha_{kn}\) realises the limsup. Multipartite comparison **cannot** forbid the climb \(\lambda\to\Lambda\).
 
-### Bilinear obstruction at fixed \(k\)
+### Exact two-block identity and the bilinear floor
 
-Even for fixed \(k=2\), the additive constant cannot tend to \(0\) as \(n\to\infty\). For any \(\pm1\) cross-block \(H\in\{\pm1\}^{n\times n}\),
+For a two-block signing
 \[
-\max_{x,y\in\{\pm1\}^n}|x^\top Hy|\ge c\,n^{3/2},\qquad c=\sqrt{2/\pi}-o(1),
+S=\begin{pmatrix}A_1&B\\B^\top&A_2\end{pmatrix},
 \]
-by taking \(y\) random and \(x=\mathrm{sign}(Hy)\) (so \(x^\top Hy=\|Hy\|_1\sim n^{3/2}\sqrt{2/\pi}\)). Hadamard matrices match the upper bound \(n^{3/2}\). Thus every 2-block construction satisfies
+flipping all spins in the second block leaves its internal energy unchanged
+and reverses the cross energy.  Hence
+\(\max(|D+T|,|D-T|)=|D|+|T|\) gives the exact identity
 \[
-\Phi\begin{pmatrix}A_1&H\\H^\top&A_2\end{pmatrix}
-\le 2m_n+\max|x^\top Hy|
+\Phi(S)=\max_{x,y}
+\left(\left|Q_{A_1}(x)+Q_{A_2}(y)\right|+
+\left|x^\top By\right|\right).                       \tag{10.1}
 \]
-with the cross term contributing at least \(\sim\sqrt{2/\pi}\,n^{3/2}\) to the inevitable upper-bound budget, and at most \(n^{3/2}\). The additive constant in \(\alpha_{2n}\le\alpha_n/\sqrt2+C\) therefore obeys
+In particular, for every \(\pm1\) cross block
+\(B\in\{\pm1\}^{n\times n}\),
 \[
-C\in\Bigl[\tfrac{\sqrt{2/\pi}}{2^{3/2}},\;\tfrac1{2\sqrt2}\Bigr]\approx[0.282,\,0.354]
+\Phi(S)\ge\|B\|_{\infty\to1}
+\ge \left(\sqrt{2/\pi}-o(1)\right)n^{3/2},
 \]
-and cannot be driven to \(0\).
+by taking \(y\) random and \(x=\operatorname{sign}(By)\).  Hadamard matrices
+give the upper bound \(n^{3/2}\) by orthogonality, and standard orders
+\(4^k\) attain it, so the scale is sharp.
 
-**Conclusion.** Soft multipartite methods — random, Hadamard, or any design-based cross blocks — are dead for existence. A proof must use the **combinatorial structure of \(\min_A\Phi(A)\)**, not comparison inequalities with error terms.
+Thus internal and cross energies cannot cancel in the absolute maximum.
+However, their separate maximizers need not coincide, so (10.1) does **not**
+rule out the multiplier-two target in Proposition 6.3.  The previous argument
+incorrectly combined a lower bound on \(\|B\|_{\infty\to1}\) with a triangle
+*upper* bound to claim that every additive constant was at least \(0.282\).
+What is actually excluded is only an uncoupled proof that separately
+upper-bounds the two internal norms and the rectangular norm: that method
+necessarily pays a leading-order cross term.  A coupled state/profile
+construction remains live.
 
 ---
 
@@ -3384,7 +3562,9 @@ To prove the limit does **not** exist one needs two subsequences with different 
 
 ### Theorem B (structure) — complete
 
-Equivalence (§1); monotonicity and padding (§3); denseness (§6); multipartite bounds including reverse (§7); \(a_n\to\limsup\alpha_n\) (§8).
+Equivalence (§1); monotonicity and padding (§3); denseness and the two-ray
+conditional convergence theorem (§6); multipartite bounds including reverse
+(§7); \(a_n\to\limsup\alpha_n\) (§8).
 
 ### Theorem C (obstruction) — complete
 
@@ -3422,7 +3602,12 @@ Conference matrices are the unique Seidel matrices simultaneously extremal for o
 
 ### Existence of \(\lim\alpha_n\)
 
-**Not established.** Approaches 1–5 each fail for a specific structural reason (§11–§15). Non-existence is equally unproved (§16). By Proposition 6.2 it is necessary and sufficient to prove convergence of \(\alpha_n\) along Paley orders \(n_k\).
+**Not established.** Approaches 1–5 each fail for a specific structural reason
+(§11–§15). Non-existence is equally unproved (§16). Proposition 6.3 gives the
+direct gate: Dini-summable amplification at multipliers 2 and 3 would settle
+existence.  Alternatively, Proposition 6.2 makes convergence along the
+ratio-dense Paley orders necessary and sufficient; proving E(1) there would
+settle the stronger value-specific claim \(L=1/2\).
 
 **Conditional Theorem E (existence via conference optimality).** Suppose that along Paley orders \(n_k=q_k+1\):
 1. *asymptotic optimality:* \(m_{n_k}=\Phi(C_k)+o(n_k^{3/2})\) (equiv.\ Prop 15.9); and
@@ -3480,13 +3665,18 @@ This is the natural rigidity route to Theorem E(1): a matching lower bound \(\rh
 
 ### What would close the problem
 
-1. Asymptotic conference optimality + \(\rho(C_k)\to\rho_*\) (Theorem E) — reduced by Theorem G to product-minimisation of \(\rho\cdot\|A\|_{\mathrm{op}}\).
-2. Extension regularity \(\delta_n/\sqrt n\to\ell\) (Theorem F), or the stronger \(\gamma(A^*)=(\tfrac32\alpha_n+o(1))\sqrt n\).
-3. Maximizer delocalisation + discrepancy feeding (2).
-4. Multipartite rigidity \(\alpha_{kn}\le\alpha_n+o(1)\) blocking \(\lambda\to\Lambda\).
-5. Explicit two-density construction for non-existence.
+1. The two Dini-summable multiplier estimates of Proposition 6.3.
+   Proposition 6.4 isolates an exact four-state/hereditary multiplier-two
+   subproblem; the multiplier-three or `1:2` split is independently required.
+2. Asymptotic conference optimality + \(\rho(C_k)\to\rho_*\) (Theorem E) — reduced by Theorem G to product-minimisation of \(\rho\cdot\|A\|_{\mathrm{op}}\).
+3. Extension regularity \(\delta_n/\sqrt n\to\ell\) (Theorem F), or the stronger \(\gamma(A^*)=(\tfrac32\alpha_n+o(1))\sqrt n\).
+4. Maximizer delocalisation + discrepancy feeding (3).
+5. Multipartite rigidity \(\alpha_{kn}\le\alpha_n+o(1)\) blocking \(\lambda\to\Lambda\).
+6. Explicit two-density construction for non-existence.
 
-None of (1)–(5) is fully available; (1) is reduced to a single spectral-combinatorial comparison (Prop 15.9).
+None of (1)–(6) is fully available.  Item 1 is the shortest direct route to
+the original existence question; item 2 is the stronger value-specific
+Paley route.
 
 ---
 
@@ -3624,7 +3814,7 @@ Exact \(m_n\) harvest under SCRATCH (86-worker Gray `exact_m_parallel.py`):
 | AC | Status |
 |----|--------|
 | 1. Exact limit quantity | Yes (Statement) |
-| 2. Existence (\(\liminf=\limsup\)) | **Open** — sandwich now \(1/\pi\le\liminf\le\limsup\le1/2\) (Prop 5.2); Prop 6.2 + Thm D–G; \(m_{10}=13<\Phi_{\mathrm{Paley}}=15\); still need global E(1)+E(2) or certified non-existence |
+| 2. Existence (\(\liminf=\limsup\)) | **Open** — sandwich now \(1/\pi\le\liminf\le\limsup\le1/2\) (Prop 5.2); direct closure can use the two Dini-summable rays of Prop 6.3; the stronger Paley route still needs global E(1)+E(2); certified non-existence is the third alternative |
 | 3. Equivalence | §1 complete |
 | 4. Numerics | §18 + shipped tests + multi-core Gray exact \(m_{\le10}\), dual-Gauss checks, m11 witness, Paley/product SA under SCRATCH |
 | 5. Honest obstruction analysis | §9–§17 |
@@ -5120,7 +5310,9 @@ Continues 15.167. Does **not** soft-close E(1) or L.
 - Deep non-tight freeness-fail with \(k\ge3p\) (freeze-to-tight sketch not shipped as predicate).
 
 Full \(m_n\ge\Phi-2\) / E(1) / L remain OPEN. residual_closed_general=false. E1_closed_general=false.
-L closed only if bi-tight \(\land\) E(1) (denseness Prop 6.2) — currently false.
+Within this Paley route, \(L=1/2\) closes only if bi-tight \(\land\) E(1)
+(denseness Prop 6.2) — currently false.  A different convergence proof need
+not use this gate.
 
 Evidence: `src/e1_gmin_m4_prop15168.py`, `evidence/e1_gmin_m4_prop15168.json`,
 `tests/test_prop15168.py`, `src/e1_main_chain_status.py`.

@@ -1,4 +1,33 @@
-# Status (2026-08-31; through Proposition 15.748)
+# Status (2026-09-01; through Proposition 15.748 and Propositions 6.3--6.4)
+
+**The original question has been separated from the stronger Paley value
+program.**  MathOverflow 413935 asks for existence, not an identified value.
+Proposition 6.3 proves that, for `H(n)=m_n^(2/3)`, it is enough for the two
+multiplier defects to have a vanishing dyadic Dini tail.  In particular, the
+two estimates
+
+`H(2n) <= 2H(n)+O(n^(1-delta))` and
+`H(3n) <= 3H(n)+O(n^(1-delta))`
+
+already force convergence.  Iteration controls every `2^a 3^b` multiple with
+summable normalized error; irrationality of `log(2)/log(3)` makes those
+multipliers asymptotically ratio-dense, and monotonicity fills the gaps.
+Doubling alone is insufficient, even with exact scaling and bounded
+increments.  The direct live gate is therefore two fixed amplification rays,
+not all-pairs composition and not another finite Paley residue.  The limit
+remains **OPEN** because neither ray estimate is proved yet.
+
+Proposition 6.4 corrects the multiplier-two front.  Section 10's old
+`C>=0.282` claim was an invalid lower-bound/upper-bound inference; the exact
+two-block identity leaves coupled block design live.  Within the all-Hadamard
+two-cloud class, every frame is exactly a four-state quadratic minimax up to
+`O(n)` internal energy.  Its unavoidable `t_i t_j` term survives all
+orientations, and every successful frame must satisfy a simultaneous
+hereditary bound for two endpoint signings on every cut.  That bound, not a
+new finite census, is the first multiplier-two hinge.
+
+The status below records the still-valid, stronger Paley `L=1/2` route.  It is
+no longer the sole acceptance path for the original problem.
 
 **15.747 closes the omitted-pair `P=3` half of `p=13,t=4,u=4`, and 15.748
 reduces the remaining all-equal-triple `P=5` half to one excess

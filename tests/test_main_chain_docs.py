@@ -46,6 +46,20 @@ def test_solution_does_not_assert_limit_theorem():
     assert "**Residual (ii), even \\(k\\ge4p\\):** OPEN" in long_goal
     assert "required_bitight_levels_empty_all_primes" in long_goal
     assert "no longer acceptance gates" in long_goal
+    assert "Existence CLOSED; value unidentified" in long_goal
+    assert "Proposition 6.3" in long_goal
+    assert "multipliers 2 and 3" in long_goal
+    assert "Dini-summable" in long_goal
+
+    assert "**Proposition 6.3 (two-ray convergence criterion).**" in text
+    assert "H(2n)\\le2H(n)" in text
+    assert "H(3n)\\le3H(n)" in text
+    assert "2^a3^b" in text
+    assert "E(N)=\\sum_{j\\ge0}" in text
+    assert "**Proposition 6.4 (exact four-state form of Hadamard doubling).**" in text
+    assert "exact identity" in text
+    assert "incorrectly combined" in text
+    assert "C\\in\\Bigl[" not in text
 
 
 def test_soft_close_detector_flags_bare_L_CLOSED():

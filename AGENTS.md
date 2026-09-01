@@ -3,6 +3,18 @@
 This repository is a long-running proof project.  Avoid rediscovering old
 branches or turning completed computations into new work.
 
+## Original-problem gate (overrides the finite Paley front)
+
+MathOverflow 413935 asks whether `alpha_n` converges; a proof need not identify
+the value.  Proposition 6.3 reduces this direct route to two Dini-summable
+amplification estimates for `H(n)=m_n^(2/3)`, at multipliers 2 and 3;
+polynomial saving is unnecessary.  Proposition 6.4 gives the exact four-state
+and hereditary targets for a Hadamard doubling lift.  That is the preferred
+front unless the human explicitly selects the stronger Paley `L=1/2` route.
+Do not launch another finite-prime, residue, orbit, or cell census as work on
+the original question.  The long residual-(ii) section below is continuity
+guidance only for a deliberately selected Paley route.
+
 ## Before starting an attack
 
 1. Read the current gate in `STATUS.md` and `HANDOFF.md`.
