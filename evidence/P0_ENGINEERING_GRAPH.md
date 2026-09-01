@@ -1,5 +1,32 @@
 # P0 Engineering Graph (persistent — update every turn)
 
+> **AUTHORITATIVE LIVE OVERLAY (2026-09-01).** Sections 1--8 below are an
+> archived Path-C graph from 2026-08-13 and are not a routing authority. The
+> live graph is:
+>
+> ```text
+> MO limit
+>  +-- two Dini rays (Prop 6.3)
+>  |    +-- multiplier 2: (6.13) on (6.20) [OPEN]
+>  |    |    `-- geometry/joint-energy-only close [KILLED]
+>  |    +-- multiplier 3 via 1:2: (6.42)--(6.43) [OPEN]
+>  |    |    `-- fixed/mildly-growing anchor spectral close [KILLED]
+>  |    `-- tetrahedral alternative [OPEN]
+>  `-- Paley E(1), stronger value route
+>       `-- residual_ii_k_ge_4p_ND_closed [OPEN]
+>            +-- first four shells in stated prime ranges [CLOSED]
+>            +-- fifth shell p>=17 (15.752--15.753) [CLOSED]
+>            `-- p13 u=6 / later and beyond-band layers [OPEN]
+> ```
+>
+> Direct routing rules: doubling must use global-minimizer information or a
+> finer `A`-dependent skew orientation; `1:2` must control the actual
+> bilinear value statewise or replace the tiled block. Do not dispatch
+> cut-code/two-colouring reformulations, recursion, uncoupled multipartite
+> norms, fixed-temperature lower targets, common-`beta` Fekete centering,
+> geometry-only (6.20), or further anchor refinement. `AGENTS.md`,
+> `STATUS.md`, and `HANDOFF.md` are authoritative.
+
 **Machine:** 88 CPU + Tesla V100-SXM2-16GB (CuPy).  
 **Policy:** F17 (no single-core thrash) · F19 (no moduli class-refine loops) · F20 (no GPU theater) · F21 (no False-predicate 15.xxx) · F22 (no e1 flip on census).  
 **L = lim α_n:** **OPEN** (2026-08-13). The 2026-08-05 “CLOSED” claim was retracted (disj Gsum LB / 15.158). Residual **(ii) CLOSED**; residual **(i) OPEN**. Trust `HANDOFF.md` / `STATUS.md`, not the DAG below (stale Path-C framing).  

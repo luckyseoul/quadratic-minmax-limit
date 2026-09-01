@@ -1,0 +1,4533 @@
+{
+  "E1_closed": false,
+  "boundary_size_hypothesis_used": false,
+  "closed_band": {
+    "p_1_mod_4": "4<=t<=(p-9)/2 at k=4p+2t (p>=29)",
+    "p_3_mod_4": "4<=t<=(p-7)/2 at k=4p+2t (p>=23)"
+  },
+  "finite_prime_or_configuration_census_used": false,
+  "fixed_four_bit_certificate_reused": true,
+  "k_eq_4p_plus_8_closed_for_every_prime_p_ge_23": true,
+  "local_theorem": "for every prime p>=23, no nonzero nonnegative integral quadratic on J(p,(p+1)/2) has 4p E[B]=p+9",
+  "p19_local_threshold_witness": {
+    "equals_p_plus_9": true,
+    "formula": "B=3-2r+binom(r,2), r=|X intersect R|, |R|=4",
+    "is_only_a_local_quadratic_not_a_residual_graph": true,
+    "layer_values": [
+      3,
+      1,
+      0,
+      0,
+      1
+    ],
+    "mean": "7/19",
+    "p": 19,
+    "proved": true,
+    "scaled_mass_4p_E_B": 28
+  },
+  "prop": "15.752",
+  "proved": true,
+  "quadratic_minmax_limit_closed": false,
+  "remaining_scope": "critical p=5,7; p=11 at k>=50; p=13,k=60,u=6 and later; p=17,k=76 and later; p=19,k=84 and later; layers beyond the displayed band for p>=23; and positive p=7,z=7",
+  "representative_band_endpoint_replays": {
+    "23": {
+      "all_boundary_sizes_excluded": true,
+      "arithmetic": {
+        "H_edge_count": 109,
+        "ambient_vertex_count": 530,
+        "boundary_size_hypothesis_used": false,
+        "closed_t_interval": [
+          4,
+          8
+        ],
+        "every_directional_b_even": true,
+        "guaranteed_isolated_vertices": 312,
+        "layer_index_t": 8,
+        "m": 12,
+        "maximum_endpoint_baseline_lift_excess": 18,
+        "maximum_low_phase_one_mean": 40,
+        "next_nonbaseline_phase_one_floor": 46,
+        "original_k": 108,
+        "p": 23,
+        "p_mod_4": 3,
+        "phase_one_mean_form": "a_d=2u+24k_d",
+        "phase_one_quotient_sum": "sum k_d=m+t-u",
+        "proved": true,
+        "q": 11,
+        "sharp_integral_lift_floor": 20,
+        "transported_infinity_degree_I": 0,
+        "type_budget": 480
+      },
+      "branch_exclusions": {
+        "hard_b2": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "hard_b2",
+          "branch_excluded": true,
+          "coefficient_offset": 4,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              4,
+              0,
+              4,
+              52
+            ]
+          ],
+          "forced_P": 4,
+          "forced_next_scaled_mean": 32,
+          "forced_rho": 0,
+          "forced_s": 4,
+          "layer_index_t": 8,
+          "local_mass_exclusion": {
+            "excluded": true,
+            "finite_slice_or_prime_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_maximum_upper_bound": 3,
+              "height_lower_bound": "4",
+              "p": 23,
+              "paired_cube_average_upper_bound": "2/3",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mass_4p_E_B": 32,
+              "slice": "J(23,12)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_branch": "4p E[B]>=4H",
+              "stabilizer_height_upper_bound": "8"
+            },
+            "height_one_boolean": {
+              "complementary_slice": "J(23,11)",
+              "cube_coordinates_actually_needed_at_most": 4,
+              "junta_coordinates_at_most": 6,
+              "largest_zero_influence_class_complement_bound": "3696/529",
+              "p": 23,
+              "possible_four_bit_density_values": [
+                "0",
+                "5/23",
+                "6/23",
+                "11/23",
+                "12/23",
+                "17/23",
+                "18/23",
+                "1"
+              ],
+              "proved": true,
+              "relevant_pair_influence_floor": "10/161",
+              "seven_gap_at_p_23": 168,
+              "seven_gap_derivative_at_p_23": 403,
+              "seven_gap_polynomial": "p^3-29p^2+150p-108",
+              "seven_gap_second_derivative_at_p_23": 80,
+              "target_absent": true,
+              "target_density": "8/23",
+              "target_strict_bracket": [
+                "6/23",
+                "11/23"
+              ],
+              "total_influence_upper_bound": "2640/529"
+            },
+            "p": 23,
+            "proved": true,
+            "statement": "no nonzero nonnegative integer-valued quadratic B on J(23,12) has 4p E[B]=p+9"
+          },
+          "minimum_Q": 3,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 8,
+          "next_Q": 4,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              24,
+              8
+            ],
+            [
+              22,
+              24,
+              8
+            ]
+          ],
+          "opposite_direction_count": 12,
+          "opposite_parallel_count_sum": 52,
+          "p": 23,
+          "proved": true,
+          "surplus_above_minimum_Q": 16,
+          "surplus_after_raising_every_Q_once": 4
+        },
+        "p3_all_low_b_p_minus_1": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "p3_all_low_b_p_minus_1",
+          "branch_excluded": true,
+          "coefficient_offset": 3,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              3,
+              0,
+              3,
+              64
+            ]
+          ],
+          "forced_P": 3,
+          "forced_next_scaled_mean": 32,
+          "forced_rho": 0,
+          "forced_s": 3,
+          "layer_index_t": 8,
+          "local_mass_exclusion": {
+            "excluded": true,
+            "finite_slice_or_prime_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_maximum_upper_bound": 3,
+              "height_lower_bound": "4",
+              "p": 23,
+              "paired_cube_average_upper_bound": "2/3",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mass_4p_E_B": 32,
+              "slice": "J(23,12)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_branch": "4p E[B]>=4H",
+              "stabilizer_height_upper_bound": "8"
+            },
+            "height_one_boolean": {
+              "complementary_slice": "J(23,11)",
+              "cube_coordinates_actually_needed_at_most": 4,
+              "junta_coordinates_at_most": 6,
+              "largest_zero_influence_class_complement_bound": "3696/529",
+              "p": 23,
+              "possible_four_bit_density_values": [
+                "0",
+                "5/23",
+                "6/23",
+                "11/23",
+                "12/23",
+                "17/23",
+                "18/23",
+                "1"
+              ],
+              "proved": true,
+              "relevant_pair_influence_floor": "10/161",
+              "seven_gap_at_p_23": 168,
+              "seven_gap_derivative_at_p_23": 403,
+              "seven_gap_polynomial": "p^3-29p^2+150p-108",
+              "seven_gap_second_derivative_at_p_23": 80,
+              "target_absent": true,
+              "target_density": "8/23",
+              "target_strict_bracket": [
+                "6/23",
+                "11/23"
+              ],
+              "total_influence_upper_bound": "2640/529"
+            },
+            "p": 23,
+            "proved": true,
+            "statement": "no nonzero nonnegative integer-valued quadratic B on J(23,12) has 4p E[B]=p+9"
+          },
+          "minimum_Q": 4,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 8,
+          "next_Q": 5,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              24,
+              8
+            ],
+            [
+              22,
+              24,
+              8
+            ]
+          ],
+          "opposite_direction_count": 12,
+          "opposite_parallel_count_sum": 64,
+          "p": 23,
+          "proved": true,
+          "surplus_above_minimum_Q": 16,
+          "surplus_after_raising_every_Q_once": 4
+        }
+      },
+      "finite_prime_or_configuration_census_used": false,
+      "hard_residue_reduction": {
+        "equal_mean_p3_endpoint_cells_cannot_mix": true,
+        "layer_index_t": 8,
+        "p": 23,
+        "possible_branches": [
+          "hard_b2",
+          "p3_all_low_b_p_minus_1"
+        ],
+        "proved": true,
+        "t_less_than_u_at_most_m_minus_2": "every k_d>=1 but sum k_d=m+t-u<m",
+        "u_0_through_t_rows": [
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                22,
+                2
+              ],
+              [
+                22,
+                22,
+                2
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 24,
+            "surviving_branch": null,
+            "u": 0
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                22,
+                4
+              ],
+              [
+                22,
+                22,
+                4
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 26,
+            "surviving_branch": null,
+            "u": 1
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                22,
+                6
+              ],
+              [
+                22,
+                22,
+                6
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 28,
+            "surviving_branch": null,
+            "u": 2
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                22,
+                8
+              ],
+              [
+                22,
+                22,
+                8
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 30,
+            "surviving_branch": null,
+            "u": 3
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                22,
+                10
+              ],
+              [
+                22,
+                22,
+                10
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 32,
+            "surviving_branch": null,
+            "u": 4
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                22,
+                12
+              ],
+              [
+                22,
+                22,
+                12
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 34,
+            "surviving_branch": null,
+            "u": 5
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                22,
+                14
+              ],
+              [
+                22,
+                22,
+                14
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 36,
+            "surviving_branch": null,
+            "u": 6
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                22,
+                16
+              ],
+              [
+                22,
+                22,
+                16
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 38,
+            "surviving_branch": null,
+            "u": 7
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                22,
+                18
+              ],
+              [
+                22,
+                22,
+                18
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 40,
+            "surviving_branch": null,
+            "u": 8
+          }
+        ],
+        "u_equals_m_minus_1_endpoint_b_candidates": [
+          2,
+          22
+        ],
+        "u_equals_m_minus_1_exact_cell_count_at_least": 3
+      },
+      "layer_index_t": 8,
+      "original_k": 108,
+      "p": 23,
+      "proved": true,
+      "residual_ii_layer_excluded": true
+    },
+    "29": {
+      "all_boundary_sizes_excluded": true,
+      "arithmetic": {
+        "H_edge_count": 137,
+        "ambient_vertex_count": 842,
+        "boundary_size_hypothesis_used": false,
+        "closed_t_interval": [
+          4,
+          10
+        ],
+        "every_directional_b_even": true,
+        "guaranteed_isolated_vertices": 568,
+        "layer_index_t": 10,
+        "m": 15,
+        "maximum_endpoint_baseline_lift_excess": 22,
+        "maximum_low_phase_one_mean": 50,
+        "next_nonbaseline_phase_one_floor": 52,
+        "original_k": 136,
+        "p": 29,
+        "p_mod_4": 1,
+        "phase_one_mean_form": "a_d=2u+30k_d",
+        "phase_one_quotient_sum": "sum k_d=m+t-u",
+        "proved": true,
+        "q": 14,
+        "sharp_integral_lift_floor": 26,
+        "transported_infinity_degree_I": 0,
+        "type_budget": 750
+      },
+      "branch_exclusions": {
+        "hard_b2": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "hard_b2",
+          "branch_excluded": true,
+          "coefficient_offset": 4,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              4,
+              0,
+              4,
+              66
+            ]
+          ],
+          "forced_P": 4,
+          "forced_next_scaled_mean": 38,
+          "forced_rho": 0,
+          "forced_s": 4,
+          "layer_index_t": 10,
+          "local_mass_exclusion": {
+            "excluded": true,
+            "finite_slice_or_prime_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_maximum_upper_bound": 3,
+              "height_lower_bound": "11/2",
+              "p": 29,
+              "paired_cube_average_upper_bound": "19/28",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mass_4p_E_B": 38,
+              "slice": "J(29,15)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_branch": "4p E[B]>=4(p-1)H/(p+3)",
+              "stabilizer_height_upper_bound": "76/7"
+            },
+            "height_one_boolean": {
+              "complementary_slice": "J(29,14)",
+              "cube_coordinates_actually_needed_at_most": 4,
+              "junta_coordinates_at_most": 6,
+              "largest_zero_influence_class_complement_bound": "28728/4205",
+              "p": 29,
+              "possible_four_bit_density_values": [
+                "0",
+                "13/58",
+                "15/58",
+                "14/29",
+                "15/29",
+                "43/58",
+                "45/58",
+                "1"
+              ],
+              "proved": true,
+              "relevant_pair_influence_floor": "65/1044",
+              "seven_gap_at_p_23": 168,
+              "seven_gap_derivative_at_p_23": 403,
+              "seven_gap_polynomial": "p^3-29p^2+150p-108",
+              "seven_gap_second_derivative_at_p_23": 80,
+              "target_absent": true,
+              "target_density": "19/58",
+              "target_strict_bracket": [
+                "15/58",
+                "14/29"
+              ],
+              "total_influence_upper_bound": "5187/841"
+            },
+            "p": 29,
+            "proved": true,
+            "statement": "no nonzero nonnegative integer-valued quadratic B on J(29,15) has 4p E[B]=p+9"
+          },
+          "minimum_Q": 3,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 8,
+          "next_Q": 4,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              30,
+              8
+            ],
+            [
+              28,
+              28,
+              10
+            ]
+          ],
+          "opposite_direction_count": 15,
+          "opposite_parallel_count_sum": 66,
+          "p": 29,
+          "proved": true,
+          "surplus_above_minimum_Q": 21,
+          "surplus_after_raising_every_Q_once": 6
+        },
+        "p1_residue_zero_b_p_minus_1": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "p1_residue_zero_b_p_minus_1",
+          "branch_excluded": true,
+          "coefficient_offset": 5,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              5,
+              0,
+              5,
+              52
+            ]
+          ],
+          "forced_P": 5,
+          "forced_next_scaled_mean": 36,
+          "forced_rho": 0,
+          "forced_s": 5,
+          "layer_index_t": 10,
+          "local_mass_exclusion": {
+            "density_exclusion": {
+              "complementary_slice": "J(29,14)",
+              "nearest_strict_bracket": [
+                "15/58",
+                "14/29"
+              ],
+              "p": 29,
+              "possible_density_values": [
+                "0",
+                "13/58",
+                "15/58",
+                "14/29",
+                "15/29",
+                "43/58",
+                "45/58",
+                "1"
+              ],
+              "proved": true,
+              "target_absent": true,
+              "target_density": "9/29"
+            },
+            "excluded": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_lemma_height_upper_bound": 3,
+              "height_lower_bound": "6",
+              "p": 29,
+              "paired_cube_average_upper_bound": "9/14",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mean_4p_E_B": 36,
+              "slice": "J(29,15)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_height_upper_bound": "72/7"
+            },
+            "height_one_junta": {
+              "all_junta_patterns_extend_to_the_slice": true,
+              "cube_coordinates_actually_needed_at_most": 4,
+              "cube_relevant_coordinate_influence_floor": "1/2",
+              "cube_total_influence_bound": 2,
+              "dictator_normalization_check": "sum I_ij=(p/2)*Var(x_i)",
+              "influence_definition": "I_ij=(1/4)*Pr[f differs after transposition ij]",
+              "johnson_laplacian_identity": "sum I_ij=(1/2)*sum_{e=1}^2 e*(p+1-e)*||f_=e||_2^2",
+              "junta_coordinate_bound_exact": "72576/10933",
+              "junta_coordinates_at_most": 6,
+              "mean": "9/29",
+              "p": 29,
+              "proved": true,
+              "relevance_zero_classes_are_equivalence_classes": true,
+              "relevant_edge_lower_bound": "p*L/2",
+              "relevant_pair_influence_floor": "65/1044",
+              "seven_gap_at_p_equals_x_plus_29": [
+                1,
+                92,
+                3107,
+                45296,
+                237300
+              ],
+              "seven_gap_numerator": 237300,
+              "symmetrized_representative_extends_to_cube_degree_at_most_two": true,
+              "total_influence_upper_bound": "5040/841",
+              "variance": "180/841"
+            },
+            "proved": true,
+            "source": "Proposition 15.751"
+          },
+          "minimum_Q": 2,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 6,
+          "next_Q": 3,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              30,
+              6
+            ],
+            [
+              28,
+              28,
+              8
+            ]
+          ],
+          "opposite_direction_count": 15,
+          "opposite_parallel_count_sum": 52,
+          "p": 29,
+          "proved": true,
+          "surplus_above_minimum_Q": 22,
+          "surplus_after_raising_every_Q_once": 7
+        }
+      },
+      "finite_prime_or_configuration_census_used": false,
+      "hard_residue_reduction": {
+        "equal_mean_p3_endpoint_cells_cannot_mix": true,
+        "layer_index_t": 10,
+        "p": 29,
+        "possible_branches": [
+          "hard_b2",
+          "p1_residue_zero_b_p_minus_1"
+        ],
+        "proved": true,
+        "t_less_than_u_at_most_m_minus_2": "every k_d>=1 but sum k_d=m+t-u<m",
+        "u_0_through_t_rows": [
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                28,
+                2
+              ],
+              [
+                28,
+                30,
+                0
+              ]
+            ],
+            "exact_survivors": [
+              [
+                28,
+                30
+              ]
+            ],
+            "low_mean": 30,
+            "surviving_branch": "p1_residue_zero_b_p_minus_1",
+            "u": 0
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                28,
+                4
+              ],
+              [
+                28,
+                30,
+                2
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 32,
+            "surviving_branch": null,
+            "u": 1
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                28,
+                6
+              ],
+              [
+                28,
+                30,
+                4
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 34,
+            "surviving_branch": null,
+            "u": 2
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                28,
+                8
+              ],
+              [
+                28,
+                30,
+                6
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 36,
+            "surviving_branch": null,
+            "u": 3
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                28,
+                10
+              ],
+              [
+                28,
+                30,
+                8
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 38,
+            "surviving_branch": null,
+            "u": 4
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                28,
+                12
+              ],
+              [
+                28,
+                30,
+                10
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 40,
+            "surviving_branch": null,
+            "u": 5
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                28,
+                14
+              ],
+              [
+                28,
+                30,
+                12
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 42,
+            "surviving_branch": null,
+            "u": 6
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                28,
+                16
+              ],
+              [
+                28,
+                30,
+                14
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 44,
+            "surviving_branch": null,
+            "u": 7
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                28,
+                18
+              ],
+              [
+                28,
+                30,
+                16
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 46,
+            "surviving_branch": null,
+            "u": 8
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                28,
+                20
+              ],
+              [
+                28,
+                30,
+                18
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 48,
+            "surviving_branch": null,
+            "u": 9
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                28,
+                22
+              ],
+              [
+                28,
+                30,
+                20
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 50,
+            "surviving_branch": null,
+            "u": 10
+          }
+        ],
+        "u_equals_m_minus_1_endpoint_b_candidates": [
+          2
+        ],
+        "u_equals_m_minus_1_exact_cell_count_at_least": 4
+      },
+      "layer_index_t": 10,
+      "original_k": 136,
+      "p": 29,
+      "proved": true,
+      "residual_ii_layer_excluded": true
+    },
+    "31": {
+      "all_boundary_sizes_excluded": true,
+      "arithmetic": {
+        "H_edge_count": 149,
+        "ambient_vertex_count": 962,
+        "boundary_size_hypothesis_used": false,
+        "closed_t_interval": [
+          4,
+          12
+        ],
+        "every_directional_b_even": true,
+        "guaranteed_isolated_vertices": 664,
+        "layer_index_t": 12,
+        "m": 16,
+        "maximum_endpoint_baseline_lift_excess": 26,
+        "maximum_low_phase_one_mean": 56,
+        "next_nonbaseline_phase_one_floor": 62,
+        "original_k": 148,
+        "p": 31,
+        "p_mod_4": 3,
+        "phase_one_mean_form": "a_d=2u+32k_d",
+        "phase_one_quotient_sum": "sum k_d=m+t-u",
+        "proved": true,
+        "q": 15,
+        "sharp_integral_lift_floor": 28,
+        "transported_infinity_degree_I": 0,
+        "type_budget": 896
+      },
+      "branch_exclusions": {
+        "hard_b2": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "hard_b2",
+          "branch_excluded": true,
+          "coefficient_offset": 4,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              4,
+              0,
+              4,
+              72
+            ]
+          ],
+          "forced_P": 4,
+          "forced_next_scaled_mean": 40,
+          "forced_rho": 0,
+          "forced_s": 4,
+          "layer_index_t": 12,
+          "local_mass_exclusion": {
+            "excluded": true,
+            "finite_slice_or_prime_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_maximum_upper_bound": 3,
+              "height_lower_bound": "6",
+              "p": 31,
+              "paired_cube_average_upper_bound": "5/8",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mass_4p_E_B": 40,
+              "slice": "J(31,16)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_branch": "4p E[B]>=4H",
+              "stabilizer_height_upper_bound": "10"
+            },
+            "height_one_boolean": {
+              "complementary_slice": "J(31,15)",
+              "cube_coordinates_actually_needed_at_most": 4,
+              "junta_coordinates_at_most": 6,
+              "largest_zero_influence_class_complement_bound": "6525/961",
+              "p": 31,
+              "possible_four_bit_density_values": [
+                "0",
+                "7/31",
+                "8/31",
+                "15/31",
+                "16/31",
+                "23/31",
+                "24/31",
+                "1"
+              ],
+              "proved": true,
+              "relevant_pair_influence_floor": "56/899",
+              "seven_gap_at_p_23": 168,
+              "seven_gap_derivative_at_p_23": 403,
+              "seven_gap_polynomial": "p^3-29p^2+150p-108",
+              "seven_gap_second_derivative_at_p_23": 80,
+              "target_absent": true,
+              "target_density": "10/31",
+              "target_strict_bracket": [
+                "8/31",
+                "15/31"
+              ],
+              "total_influence_upper_bound": "6300/961"
+            },
+            "p": 31,
+            "proved": true,
+            "statement": "no nonzero nonnegative integer-valued quadratic B on J(31,16) has 4p E[B]=p+9"
+          },
+          "minimum_Q": 3,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 8,
+          "next_Q": 4,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              32,
+              8
+            ],
+            [
+              30,
+              32,
+              8
+            ]
+          ],
+          "opposite_direction_count": 16,
+          "opposite_parallel_count_sum": 72,
+          "p": 31,
+          "proved": true,
+          "surplus_above_minimum_Q": 24,
+          "surplus_after_raising_every_Q_once": 8
+        },
+        "p3_all_low_b_p_minus_1": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "p3_all_low_b_p_minus_1",
+          "branch_excluded": true,
+          "coefficient_offset": 3,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              3,
+              0,
+              3,
+              88
+            ]
+          ],
+          "forced_P": 3,
+          "forced_next_scaled_mean": 40,
+          "forced_rho": 0,
+          "forced_s": 3,
+          "layer_index_t": 12,
+          "local_mass_exclusion": {
+            "excluded": true,
+            "finite_slice_or_prime_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_maximum_upper_bound": 3,
+              "height_lower_bound": "6",
+              "p": 31,
+              "paired_cube_average_upper_bound": "5/8",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mass_4p_E_B": 40,
+              "slice": "J(31,16)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_branch": "4p E[B]>=4H",
+              "stabilizer_height_upper_bound": "10"
+            },
+            "height_one_boolean": {
+              "complementary_slice": "J(31,15)",
+              "cube_coordinates_actually_needed_at_most": 4,
+              "junta_coordinates_at_most": 6,
+              "largest_zero_influence_class_complement_bound": "6525/961",
+              "p": 31,
+              "possible_four_bit_density_values": [
+                "0",
+                "7/31",
+                "8/31",
+                "15/31",
+                "16/31",
+                "23/31",
+                "24/31",
+                "1"
+              ],
+              "proved": true,
+              "relevant_pair_influence_floor": "56/899",
+              "seven_gap_at_p_23": 168,
+              "seven_gap_derivative_at_p_23": 403,
+              "seven_gap_polynomial": "p^3-29p^2+150p-108",
+              "seven_gap_second_derivative_at_p_23": 80,
+              "target_absent": true,
+              "target_density": "10/31",
+              "target_strict_bracket": [
+                "8/31",
+                "15/31"
+              ],
+              "total_influence_upper_bound": "6300/961"
+            },
+            "p": 31,
+            "proved": true,
+            "statement": "no nonzero nonnegative integer-valued quadratic B on J(31,16) has 4p E[B]=p+9"
+          },
+          "minimum_Q": 4,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 8,
+          "next_Q": 5,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              32,
+              8
+            ],
+            [
+              30,
+              32,
+              8
+            ]
+          ],
+          "opposite_direction_count": 16,
+          "opposite_parallel_count_sum": 88,
+          "p": 31,
+          "proved": true,
+          "surplus_above_minimum_Q": 24,
+          "surplus_after_raising_every_Q_once": 8
+        }
+      },
+      "finite_prime_or_configuration_census_used": false,
+      "hard_residue_reduction": {
+        "equal_mean_p3_endpoint_cells_cannot_mix": true,
+        "layer_index_t": 12,
+        "p": 31,
+        "possible_branches": [
+          "hard_b2",
+          "p3_all_low_b_p_minus_1"
+        ],
+        "proved": true,
+        "t_less_than_u_at_most_m_minus_2": "every k_d>=1 but sum k_d=m+t-u<m",
+        "u_0_through_t_rows": [
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                30,
+                2
+              ],
+              [
+                30,
+                30,
+                2
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 32,
+            "surviving_branch": null,
+            "u": 0
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                30,
+                4
+              ],
+              [
+                30,
+                30,
+                4
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 34,
+            "surviving_branch": null,
+            "u": 1
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                30,
+                6
+              ],
+              [
+                30,
+                30,
+                6
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 36,
+            "surviving_branch": null,
+            "u": 2
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                30,
+                8
+              ],
+              [
+                30,
+                30,
+                8
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 38,
+            "surviving_branch": null,
+            "u": 3
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                30,
+                10
+              ],
+              [
+                30,
+                30,
+                10
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 40,
+            "surviving_branch": null,
+            "u": 4
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                30,
+                12
+              ],
+              [
+                30,
+                30,
+                12
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 42,
+            "surviving_branch": null,
+            "u": 5
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                30,
+                14
+              ],
+              [
+                30,
+                30,
+                14
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 44,
+            "surviving_branch": null,
+            "u": 6
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                30,
+                16
+              ],
+              [
+                30,
+                30,
+                16
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 46,
+            "surviving_branch": null,
+            "u": 7
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                30,
+                18
+              ],
+              [
+                30,
+                30,
+                18
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 48,
+            "surviving_branch": null,
+            "u": 8
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                30,
+                20
+              ],
+              [
+                30,
+                30,
+                20
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 50,
+            "surviving_branch": null,
+            "u": 9
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                30,
+                22
+              ],
+              [
+                30,
+                30,
+                22
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 52,
+            "surviving_branch": null,
+            "u": 10
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                30,
+                24
+              ],
+              [
+                30,
+                30,
+                24
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 54,
+            "surviving_branch": null,
+            "u": 11
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                30,
+                26
+              ],
+              [
+                30,
+                30,
+                26
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 56,
+            "surviving_branch": null,
+            "u": 12
+          }
+        ],
+        "u_equals_m_minus_1_endpoint_b_candidates": [
+          2,
+          30
+        ],
+        "u_equals_m_minus_1_exact_cell_count_at_least": 3
+      },
+      "layer_index_t": 12,
+      "original_k": 148,
+      "p": 31,
+      "proved": true,
+      "residual_ii_layer_excluded": true
+    },
+    "37": {
+      "all_boundary_sizes_excluded": true,
+      "arithmetic": {
+        "H_edge_count": 177,
+        "ambient_vertex_count": 1370,
+        "boundary_size_hypothesis_used": false,
+        "closed_t_interval": [
+          4,
+          14
+        ],
+        "every_directional_b_even": true,
+        "guaranteed_isolated_vertices": 1016,
+        "layer_index_t": 14,
+        "m": 19,
+        "maximum_endpoint_baseline_lift_excess": 30,
+        "maximum_low_phase_one_mean": 66,
+        "next_nonbaseline_phase_one_floor": 68,
+        "original_k": 176,
+        "p": 37,
+        "p_mod_4": 1,
+        "phase_one_mean_form": "a_d=2u+38k_d",
+        "phase_one_quotient_sum": "sum k_d=m+t-u",
+        "proved": true,
+        "q": 18,
+        "sharp_integral_lift_floor": 34,
+        "transported_infinity_degree_I": 0,
+        "type_budget": 1254
+      },
+      "branch_exclusions": {
+        "hard_b2": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "hard_b2",
+          "branch_excluded": true,
+          "coefficient_offset": 4,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              4,
+              0,
+              4,
+              86
+            ]
+          ],
+          "forced_P": 4,
+          "forced_next_scaled_mean": 46,
+          "forced_rho": 0,
+          "forced_s": 4,
+          "layer_index_t": 14,
+          "local_mass_exclusion": {
+            "excluded": true,
+            "finite_slice_or_prime_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_maximum_upper_bound": 3,
+              "height_lower_bound": "15/2",
+              "p": 37,
+              "paired_cube_average_upper_bound": "23/36",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mass_4p_E_B": 46,
+              "slice": "J(37,19)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_branch": "4p E[B]>=4(p-1)H/(p+3)",
+              "stabilizer_height_upper_bound": "115/9"
+            },
+            "height_one_boolean": {
+              "complementary_slice": "J(37,18)",
+              "cube_coordinates_actually_needed_at_most": 4,
+              "junta_coordinates_at_most": 6,
+              "largest_zero_influence_class_complement_bound": "173880/26011",
+              "p": 37,
+              "possible_four_bit_density_values": [
+                "0",
+                "17/74",
+                "19/74",
+                "18/37",
+                "19/37",
+                "55/74",
+                "57/74",
+                "1"
+              ],
+              "proved": true,
+              "relevant_pair_influence_floor": "323/5180",
+              "seven_gap_at_p_23": 168,
+              "seven_gap_derivative_at_p_23": 403,
+              "seven_gap_polynomial": "p^3-29p^2+150p-108",
+              "seven_gap_second_derivative_at_p_23": 80,
+              "target_absent": true,
+              "target_density": "23/74",
+              "target_strict_bracket": [
+                "19/74",
+                "18/37"
+              ],
+              "total_influence_upper_bound": "10557/1369"
+            },
+            "p": 37,
+            "proved": true,
+            "statement": "no nonzero nonnegative integer-valued quadratic B on J(37,19) has 4p E[B]=p+9"
+          },
+          "minimum_Q": 3,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 8,
+          "next_Q": 4,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              38,
+              8
+            ],
+            [
+              36,
+              36,
+              10
+            ]
+          ],
+          "opposite_direction_count": 19,
+          "opposite_parallel_count_sum": 86,
+          "p": 37,
+          "proved": true,
+          "surplus_above_minimum_Q": 29,
+          "surplus_after_raising_every_Q_once": 10
+        },
+        "p1_residue_zero_b_p_minus_1": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "p1_residue_zero_b_p_minus_1",
+          "branch_excluded": true,
+          "coefficient_offset": 5,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              5,
+              0,
+              5,
+              68
+            ]
+          ],
+          "forced_P": 5,
+          "forced_next_scaled_mean": 44,
+          "forced_rho": 0,
+          "forced_s": 5,
+          "layer_index_t": 14,
+          "local_mass_exclusion": {
+            "density_exclusion": {
+              "complementary_slice": "J(37,18)",
+              "nearest_strict_bracket": [
+                "19/74",
+                "18/37"
+              ],
+              "p": 37,
+              "possible_density_values": [
+                "0",
+                "17/74",
+                "19/74",
+                "18/37",
+                "19/37",
+                "55/74",
+                "57/74",
+                "1"
+              ],
+              "proved": true,
+              "target_absent": true,
+              "target_density": "11/37"
+            },
+            "excluded": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_lemma_height_upper_bound": 3,
+              "height_lower_bound": "8",
+              "p": 37,
+              "paired_cube_average_upper_bound": "11/18",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mean_4p_E_B": 44,
+              "slice": "J(37,19)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_height_upper_bound": "110/9"
+            },
+            "height_one_junta": {
+              "all_junta_patterns_extend_to_the_slice": true,
+              "cube_coordinates_actually_needed_at_most": 4,
+              "cube_relevant_coordinate_influence_floor": "1/2",
+              "cube_total_influence_bound": 2,
+              "dictator_normalization_check": "sum I_ij=(p/2)*Var(x_i)",
+              "influence_definition": "I_ij=(1/4)*Pr[f differs after transposition ij]",
+              "johnson_laplacian_identity": "sum I_ij=(1/2)*sum_{e=1}^2 e*(p+1-e)*||f_=e||_2^2",
+              "junta_coordinate_bound_exact": "2882880/442187",
+              "junta_coordinates_at_most": 6,
+              "mean": "11/37",
+              "p": 37,
+              "proved": true,
+              "relevance_zero_classes_are_equivalence_classes": true,
+              "relevant_edge_lower_bound": "p*L/2",
+              "relevant_pair_influence_floor": "323/5180",
+              "seven_gap_at_p_equals_x_plus_29": [
+                1,
+                92,
+                3107,
+                45296,
+                237300
+              ],
+              "seven_gap_numerator": 849716,
+              "symmetrized_representative_extends_to_cube_degree_at_most_two": true,
+              "total_influence_upper_bound": "10296/1369",
+              "variance": "286/1369"
+            },
+            "proved": true,
+            "source": "Proposition 15.751"
+          },
+          "minimum_Q": 2,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 6,
+          "next_Q": 3,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              38,
+              6
+            ],
+            [
+              36,
+              36,
+              8
+            ]
+          ],
+          "opposite_direction_count": 19,
+          "opposite_parallel_count_sum": 68,
+          "p": 37,
+          "proved": true,
+          "surplus_above_minimum_Q": 30,
+          "surplus_after_raising_every_Q_once": 11
+        }
+      },
+      "finite_prime_or_configuration_census_used": false,
+      "hard_residue_reduction": {
+        "equal_mean_p3_endpoint_cells_cannot_mix": true,
+        "layer_index_t": 14,
+        "p": 37,
+        "possible_branches": [
+          "hard_b2",
+          "p1_residue_zero_b_p_minus_1"
+        ],
+        "proved": true,
+        "t_less_than_u_at_most_m_minus_2": "every k_d>=1 but sum k_d=m+t-u<m",
+        "u_0_through_t_rows": [
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                2
+              ],
+              [
+                36,
+                38,
+                0
+              ]
+            ],
+            "exact_survivors": [
+              [
+                36,
+                38
+              ]
+            ],
+            "low_mean": 38,
+            "surviving_branch": "p1_residue_zero_b_p_minus_1",
+            "u": 0
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                4
+              ],
+              [
+                36,
+                38,
+                2
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 40,
+            "surviving_branch": null,
+            "u": 1
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                6
+              ],
+              [
+                36,
+                38,
+                4
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 42,
+            "surviving_branch": null,
+            "u": 2
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                8
+              ],
+              [
+                36,
+                38,
+                6
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 44,
+            "surviving_branch": null,
+            "u": 3
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                10
+              ],
+              [
+                36,
+                38,
+                8
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 46,
+            "surviving_branch": null,
+            "u": 4
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                12
+              ],
+              [
+                36,
+                38,
+                10
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 48,
+            "surviving_branch": null,
+            "u": 5
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                14
+              ],
+              [
+                36,
+                38,
+                12
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 50,
+            "surviving_branch": null,
+            "u": 6
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                16
+              ],
+              [
+                36,
+                38,
+                14
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 52,
+            "surviving_branch": null,
+            "u": 7
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                18
+              ],
+              [
+                36,
+                38,
+                16
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 54,
+            "surviving_branch": null,
+            "u": 8
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                20
+              ],
+              [
+                36,
+                38,
+                18
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 56,
+            "surviving_branch": null,
+            "u": 9
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                22
+              ],
+              [
+                36,
+                38,
+                20
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 58,
+            "surviving_branch": null,
+            "u": 10
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                24
+              ],
+              [
+                36,
+                38,
+                22
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 60,
+            "surviving_branch": null,
+            "u": 11
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                26
+              ],
+              [
+                36,
+                38,
+                24
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 62,
+            "surviving_branch": null,
+            "u": 12
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                28
+              ],
+              [
+                36,
+                38,
+                26
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 64,
+            "surviving_branch": null,
+            "u": 13
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                30
+              ],
+              [
+                36,
+                38,
+                28
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 66,
+            "surviving_branch": null,
+            "u": 14
+          }
+        ],
+        "u_equals_m_minus_1_endpoint_b_candidates": [
+          2
+        ],
+        "u_equals_m_minus_1_exact_cell_count_at_least": 4
+      },
+      "layer_index_t": 14,
+      "original_k": 176,
+      "p": 37,
+      "proved": true,
+      "residual_ii_layer_excluded": true
+    },
+    "43": {
+      "all_boundary_sizes_excluded": true,
+      "arithmetic": {
+        "H_edge_count": 209,
+        "ambient_vertex_count": 1850,
+        "boundary_size_hypothesis_used": false,
+        "closed_t_interval": [
+          4,
+          18
+        ],
+        "every_directional_b_even": true,
+        "guaranteed_isolated_vertices": 1432,
+        "layer_index_t": 18,
+        "m": 22,
+        "maximum_endpoint_baseline_lift_excess": 38,
+        "maximum_low_phase_one_mean": 80,
+        "next_nonbaseline_phase_one_floor": 86,
+        "original_k": 208,
+        "p": 43,
+        "p_mod_4": 3,
+        "phase_one_mean_form": "a_d=2u+44k_d",
+        "phase_one_quotient_sum": "sum k_d=m+t-u",
+        "proved": true,
+        "q": 21,
+        "sharp_integral_lift_floor": 40,
+        "transported_infinity_degree_I": 0,
+        "type_budget": 1760
+      },
+      "branch_exclusions": {
+        "hard_b2": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "hard_b2",
+          "branch_excluded": true,
+          "coefficient_offset": 4,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              4,
+              0,
+              4,
+              102
+            ]
+          ],
+          "forced_P": 4,
+          "forced_next_scaled_mean": 52,
+          "forced_rho": 0,
+          "forced_s": 4,
+          "layer_index_t": 18,
+          "local_mass_exclusion": {
+            "excluded": true,
+            "finite_slice_or_prime_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_maximum_upper_bound": 3,
+              "height_lower_bound": "9",
+              "p": 43,
+              "paired_cube_average_upper_bound": "13/22",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mass_4p_E_B": 52,
+              "slice": "J(43,22)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_branch": "4p E[B]>=4H",
+              "stabilizer_height_upper_bound": "13"
+            },
+            "height_one_boolean": {
+              "complementary_slice": "J(43,21)",
+              "cube_coordinates_actually_needed_at_most": 4,
+              "junta_coordinates_at_most": 6,
+              "largest_zero_influence_class_complement_bound": "134316/20339",
+              "p": 43,
+              "possible_four_bit_density_values": [
+                "0",
+                "10/43",
+                "11/43",
+                "21/43",
+                "22/43",
+                "32/43",
+                "33/43",
+                "1"
+              ],
+              "proved": true,
+              "relevant_pair_influence_floor": "110/1763",
+              "seven_gap_at_p_23": 168,
+              "seven_gap_derivative_at_p_23": 403,
+              "seven_gap_polynomial": "p^3-29p^2+150p-108",
+              "seven_gap_second_derivative_at_p_23": 80,
+              "target_absent": true,
+              "target_density": "13/43",
+              "target_strict_bracket": [
+                "11/43",
+                "21/43"
+              ],
+              "total_influence_upper_bound": "16380/1849"
+            },
+            "p": 43,
+            "proved": true,
+            "statement": "no nonzero nonnegative integer-valued quadratic B on J(43,22) has 4p E[B]=p+9"
+          },
+          "minimum_Q": 3,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 8,
+          "next_Q": 4,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              44,
+              8
+            ],
+            [
+              42,
+              44,
+              8
+            ]
+          ],
+          "opposite_direction_count": 22,
+          "opposite_parallel_count_sum": 102,
+          "p": 43,
+          "proved": true,
+          "surplus_above_minimum_Q": 36,
+          "surplus_after_raising_every_Q_once": 14
+        },
+        "p3_all_low_b_p_minus_1": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "p3_all_low_b_p_minus_1",
+          "branch_excluded": true,
+          "coefficient_offset": 3,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              3,
+              0,
+              3,
+              124
+            ]
+          ],
+          "forced_P": 3,
+          "forced_next_scaled_mean": 52,
+          "forced_rho": 0,
+          "forced_s": 3,
+          "layer_index_t": 18,
+          "local_mass_exclusion": {
+            "excluded": true,
+            "finite_slice_or_prime_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_maximum_upper_bound": 3,
+              "height_lower_bound": "9",
+              "p": 43,
+              "paired_cube_average_upper_bound": "13/22",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mass_4p_E_B": 52,
+              "slice": "J(43,22)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_branch": "4p E[B]>=4H",
+              "stabilizer_height_upper_bound": "13"
+            },
+            "height_one_boolean": {
+              "complementary_slice": "J(43,21)",
+              "cube_coordinates_actually_needed_at_most": 4,
+              "junta_coordinates_at_most": 6,
+              "largest_zero_influence_class_complement_bound": "134316/20339",
+              "p": 43,
+              "possible_four_bit_density_values": [
+                "0",
+                "10/43",
+                "11/43",
+                "21/43",
+                "22/43",
+                "32/43",
+                "33/43",
+                "1"
+              ],
+              "proved": true,
+              "relevant_pair_influence_floor": "110/1763",
+              "seven_gap_at_p_23": 168,
+              "seven_gap_derivative_at_p_23": 403,
+              "seven_gap_polynomial": "p^3-29p^2+150p-108",
+              "seven_gap_second_derivative_at_p_23": 80,
+              "target_absent": true,
+              "target_density": "13/43",
+              "target_strict_bracket": [
+                "11/43",
+                "21/43"
+              ],
+              "total_influence_upper_bound": "16380/1849"
+            },
+            "p": 43,
+            "proved": true,
+            "statement": "no nonzero nonnegative integer-valued quadratic B on J(43,22) has 4p E[B]=p+9"
+          },
+          "minimum_Q": 4,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 8,
+          "next_Q": 5,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              44,
+              8
+            ],
+            [
+              42,
+              44,
+              8
+            ]
+          ],
+          "opposite_direction_count": 22,
+          "opposite_parallel_count_sum": 124,
+          "p": 43,
+          "proved": true,
+          "surplus_above_minimum_Q": 36,
+          "surplus_after_raising_every_Q_once": 14
+        }
+      },
+      "finite_prime_or_configuration_census_used": false,
+      "hard_residue_reduction": {
+        "equal_mean_p3_endpoint_cells_cannot_mix": true,
+        "layer_index_t": 18,
+        "p": 43,
+        "possible_branches": [
+          "hard_b2",
+          "p3_all_low_b_p_minus_1"
+        ],
+        "proved": true,
+        "t_less_than_u_at_most_m_minus_2": "every k_d>=1 but sum k_d=m+t-u<m",
+        "u_0_through_t_rows": [
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                2
+              ],
+              [
+                42,
+                42,
+                2
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 44,
+            "surviving_branch": null,
+            "u": 0
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                4
+              ],
+              [
+                42,
+                42,
+                4
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 46,
+            "surviving_branch": null,
+            "u": 1
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                6
+              ],
+              [
+                42,
+                42,
+                6
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 48,
+            "surviving_branch": null,
+            "u": 2
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                8
+              ],
+              [
+                42,
+                42,
+                8
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 50,
+            "surviving_branch": null,
+            "u": 3
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                10
+              ],
+              [
+                42,
+                42,
+                10
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 52,
+            "surviving_branch": null,
+            "u": 4
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                12
+              ],
+              [
+                42,
+                42,
+                12
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 54,
+            "surviving_branch": null,
+            "u": 5
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                14
+              ],
+              [
+                42,
+                42,
+                14
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 56,
+            "surviving_branch": null,
+            "u": 6
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                16
+              ],
+              [
+                42,
+                42,
+                16
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 58,
+            "surviving_branch": null,
+            "u": 7
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                18
+              ],
+              [
+                42,
+                42,
+                18
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 60,
+            "surviving_branch": null,
+            "u": 8
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                20
+              ],
+              [
+                42,
+                42,
+                20
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 62,
+            "surviving_branch": null,
+            "u": 9
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                22
+              ],
+              [
+                42,
+                42,
+                22
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 64,
+            "surviving_branch": null,
+            "u": 10
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                24
+              ],
+              [
+                42,
+                42,
+                24
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 66,
+            "surviving_branch": null,
+            "u": 11
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                26
+              ],
+              [
+                42,
+                42,
+                26
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 68,
+            "surviving_branch": null,
+            "u": 12
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                28
+              ],
+              [
+                42,
+                42,
+                28
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 70,
+            "surviving_branch": null,
+            "u": 13
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                30
+              ],
+              [
+                42,
+                42,
+                30
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 72,
+            "surviving_branch": null,
+            "u": 14
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                32
+              ],
+              [
+                42,
+                42,
+                32
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 74,
+            "surviving_branch": null,
+            "u": 15
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                34
+              ],
+              [
+                42,
+                42,
+                34
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 76,
+            "surviving_branch": null,
+            "u": 16
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                36
+              ],
+              [
+                42,
+                42,
+                36
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 78,
+            "surviving_branch": null,
+            "u": 17
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                38
+              ],
+              [
+                42,
+                42,
+                38
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 80,
+            "surviving_branch": null,
+            "u": 18
+          }
+        ],
+        "u_equals_m_minus_1_endpoint_b_candidates": [
+          2,
+          42
+        ],
+        "u_equals_m_minus_1_exact_cell_count_at_least": 3
+      },
+      "layer_index_t": 18,
+      "original_k": 208,
+      "p": 43,
+      "proved": true,
+      "residual_ii_layer_excluded": true
+    }
+  },
+  "representative_fifth_shell_replays": {
+    "23": {
+      "all_boundary_sizes_excluded": true,
+      "arithmetic": {
+        "H_edge_count": 101,
+        "ambient_vertex_count": 530,
+        "boundary_size_hypothesis_used": false,
+        "closed_t_interval": [
+          4,
+          8
+        ],
+        "every_directional_b_even": true,
+        "guaranteed_isolated_vertices": 328,
+        "layer_index_t": 4,
+        "m": 12,
+        "maximum_endpoint_baseline_lift_excess": 10,
+        "maximum_low_phase_one_mean": 32,
+        "next_nonbaseline_phase_one_floor": 46,
+        "original_k": 100,
+        "p": 23,
+        "p_mod_4": 3,
+        "phase_one_mean_form": "a_d=2u+24k_d",
+        "phase_one_quotient_sum": "sum k_d=m+t-u",
+        "proved": true,
+        "q": 11,
+        "sharp_integral_lift_floor": 20,
+        "transported_infinity_degree_I": 0,
+        "type_budget": 384
+      },
+      "branch_exclusions": {
+        "hard_b2": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "hard_b2",
+          "branch_excluded": true,
+          "coefficient_offset": 4,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              4,
+              0,
+              4,
+              48
+            ]
+          ],
+          "forced_P": 4,
+          "forced_next_scaled_mean": 32,
+          "forced_rho": 0,
+          "forced_s": 4,
+          "layer_index_t": 4,
+          "local_mass_exclusion": {
+            "excluded": true,
+            "finite_slice_or_prime_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_maximum_upper_bound": 3,
+              "height_lower_bound": "4",
+              "p": 23,
+              "paired_cube_average_upper_bound": "2/3",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mass_4p_E_B": 32,
+              "slice": "J(23,12)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_branch": "4p E[B]>=4H",
+              "stabilizer_height_upper_bound": "8"
+            },
+            "height_one_boolean": {
+              "complementary_slice": "J(23,11)",
+              "cube_coordinates_actually_needed_at_most": 4,
+              "junta_coordinates_at_most": 6,
+              "largest_zero_influence_class_complement_bound": "3696/529",
+              "p": 23,
+              "possible_four_bit_density_values": [
+                "0",
+                "5/23",
+                "6/23",
+                "11/23",
+                "12/23",
+                "17/23",
+                "18/23",
+                "1"
+              ],
+              "proved": true,
+              "relevant_pair_influence_floor": "10/161",
+              "seven_gap_at_p_23": 168,
+              "seven_gap_derivative_at_p_23": 403,
+              "seven_gap_polynomial": "p^3-29p^2+150p-108",
+              "seven_gap_second_derivative_at_p_23": 80,
+              "target_absent": true,
+              "target_density": "8/23",
+              "target_strict_bracket": [
+                "6/23",
+                "11/23"
+              ],
+              "total_influence_upper_bound": "2640/529"
+            },
+            "p": 23,
+            "proved": true,
+            "statement": "no nonzero nonnegative integer-valued quadratic B on J(23,12) has 4p E[B]=p+9"
+          },
+          "minimum_Q": 3,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 8,
+          "next_Q": 4,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              24,
+              8
+            ],
+            [
+              22,
+              24,
+              8
+            ]
+          ],
+          "opposite_direction_count": 12,
+          "opposite_parallel_count_sum": 48,
+          "p": 23,
+          "proved": true,
+          "surplus_above_minimum_Q": 12,
+          "surplus_after_raising_every_Q_once": 0
+        },
+        "p3_all_low_b_p_minus_1": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "p3_all_low_b_p_minus_1",
+          "branch_excluded": true,
+          "coefficient_offset": 3,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              3,
+              0,
+              3,
+              60
+            ]
+          ],
+          "forced_P": 3,
+          "forced_next_scaled_mean": 32,
+          "forced_rho": 0,
+          "forced_s": 3,
+          "layer_index_t": 4,
+          "local_mass_exclusion": {
+            "excluded": true,
+            "finite_slice_or_prime_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_maximum_upper_bound": 3,
+              "height_lower_bound": "4",
+              "p": 23,
+              "paired_cube_average_upper_bound": "2/3",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mass_4p_E_B": 32,
+              "slice": "J(23,12)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_branch": "4p E[B]>=4H",
+              "stabilizer_height_upper_bound": "8"
+            },
+            "height_one_boolean": {
+              "complementary_slice": "J(23,11)",
+              "cube_coordinates_actually_needed_at_most": 4,
+              "junta_coordinates_at_most": 6,
+              "largest_zero_influence_class_complement_bound": "3696/529",
+              "p": 23,
+              "possible_four_bit_density_values": [
+                "0",
+                "5/23",
+                "6/23",
+                "11/23",
+                "12/23",
+                "17/23",
+                "18/23",
+                "1"
+              ],
+              "proved": true,
+              "relevant_pair_influence_floor": "10/161",
+              "seven_gap_at_p_23": 168,
+              "seven_gap_derivative_at_p_23": 403,
+              "seven_gap_polynomial": "p^3-29p^2+150p-108",
+              "seven_gap_second_derivative_at_p_23": 80,
+              "target_absent": true,
+              "target_density": "8/23",
+              "target_strict_bracket": [
+                "6/23",
+                "11/23"
+              ],
+              "total_influence_upper_bound": "2640/529"
+            },
+            "p": 23,
+            "proved": true,
+            "statement": "no nonzero nonnegative integer-valued quadratic B on J(23,12) has 4p E[B]=p+9"
+          },
+          "minimum_Q": 4,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 8,
+          "next_Q": 5,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              24,
+              8
+            ],
+            [
+              22,
+              24,
+              8
+            ]
+          ],
+          "opposite_direction_count": 12,
+          "opposite_parallel_count_sum": 60,
+          "p": 23,
+          "proved": true,
+          "surplus_above_minimum_Q": 12,
+          "surplus_after_raising_every_Q_once": 0
+        }
+      },
+      "finite_prime_or_configuration_census_used": false,
+      "hard_residue_reduction": {
+        "equal_mean_p3_endpoint_cells_cannot_mix": true,
+        "layer_index_t": 4,
+        "p": 23,
+        "possible_branches": [
+          "hard_b2",
+          "p3_all_low_b_p_minus_1"
+        ],
+        "proved": true,
+        "t_less_than_u_at_most_m_minus_2": "every k_d>=1 but sum k_d=m+t-u<m",
+        "u_0_through_t_rows": [
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                22,
+                2
+              ],
+              [
+                22,
+                22,
+                2
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 24,
+            "surviving_branch": null,
+            "u": 0
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                22,
+                4
+              ],
+              [
+                22,
+                22,
+                4
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 26,
+            "surviving_branch": null,
+            "u": 1
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                22,
+                6
+              ],
+              [
+                22,
+                22,
+                6
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 28,
+            "surviving_branch": null,
+            "u": 2
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                22,
+                8
+              ],
+              [
+                22,
+                22,
+                8
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 30,
+            "surviving_branch": null,
+            "u": 3
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                22,
+                10
+              ],
+              [
+                22,
+                22,
+                10
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 32,
+            "surviving_branch": null,
+            "u": 4
+          }
+        ],
+        "u_equals_m_minus_1_endpoint_b_candidates": [
+          2,
+          22
+        ],
+        "u_equals_m_minus_1_exact_cell_count_at_least": 7
+      },
+      "layer_index_t": 4,
+      "original_k": 100,
+      "p": 23,
+      "proved": true,
+      "residual_ii_layer_excluded": true
+    },
+    "29": {
+      "all_boundary_sizes_excluded": true,
+      "arithmetic": {
+        "H_edge_count": 125,
+        "ambient_vertex_count": 842,
+        "boundary_size_hypothesis_used": false,
+        "closed_t_interval": [
+          4,
+          10
+        ],
+        "every_directional_b_even": true,
+        "guaranteed_isolated_vertices": 592,
+        "layer_index_t": 4,
+        "m": 15,
+        "maximum_endpoint_baseline_lift_excess": 10,
+        "maximum_low_phase_one_mean": 38,
+        "next_nonbaseline_phase_one_floor": 52,
+        "original_k": 124,
+        "p": 29,
+        "p_mod_4": 1,
+        "phase_one_mean_form": "a_d=2u+30k_d",
+        "phase_one_quotient_sum": "sum k_d=m+t-u",
+        "proved": true,
+        "q": 14,
+        "sharp_integral_lift_floor": 26,
+        "transported_infinity_degree_I": 0,
+        "type_budget": 570
+      },
+      "branch_exclusions": {
+        "hard_b2": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "hard_b2",
+          "branch_excluded": true,
+          "coefficient_offset": 4,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              4,
+              0,
+              4,
+              60
+            ]
+          ],
+          "forced_P": 4,
+          "forced_next_scaled_mean": 38,
+          "forced_rho": 0,
+          "forced_s": 4,
+          "layer_index_t": 4,
+          "local_mass_exclusion": {
+            "excluded": true,
+            "finite_slice_or_prime_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_maximum_upper_bound": 3,
+              "height_lower_bound": "11/2",
+              "p": 29,
+              "paired_cube_average_upper_bound": "19/28",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mass_4p_E_B": 38,
+              "slice": "J(29,15)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_branch": "4p E[B]>=4(p-1)H/(p+3)",
+              "stabilizer_height_upper_bound": "76/7"
+            },
+            "height_one_boolean": {
+              "complementary_slice": "J(29,14)",
+              "cube_coordinates_actually_needed_at_most": 4,
+              "junta_coordinates_at_most": 6,
+              "largest_zero_influence_class_complement_bound": "28728/4205",
+              "p": 29,
+              "possible_four_bit_density_values": [
+                "0",
+                "13/58",
+                "15/58",
+                "14/29",
+                "15/29",
+                "43/58",
+                "45/58",
+                "1"
+              ],
+              "proved": true,
+              "relevant_pair_influence_floor": "65/1044",
+              "seven_gap_at_p_23": 168,
+              "seven_gap_derivative_at_p_23": 403,
+              "seven_gap_polynomial": "p^3-29p^2+150p-108",
+              "seven_gap_second_derivative_at_p_23": 80,
+              "target_absent": true,
+              "target_density": "19/58",
+              "target_strict_bracket": [
+                "15/58",
+                "14/29"
+              ],
+              "total_influence_upper_bound": "5187/841"
+            },
+            "p": 29,
+            "proved": true,
+            "statement": "no nonzero nonnegative integer-valued quadratic B on J(29,15) has 4p E[B]=p+9"
+          },
+          "minimum_Q": 3,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 8,
+          "next_Q": 4,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              30,
+              8
+            ],
+            [
+              28,
+              28,
+              10
+            ]
+          ],
+          "opposite_direction_count": 15,
+          "opposite_parallel_count_sum": 60,
+          "p": 29,
+          "proved": true,
+          "surplus_above_minimum_Q": 15,
+          "surplus_after_raising_every_Q_once": 0
+        },
+        "p1_residue_zero_b_p_minus_1": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "p1_residue_zero_b_p_minus_1",
+          "branch_excluded": true,
+          "coefficient_offset": 5,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              5,
+              0,
+              5,
+              46
+            ]
+          ],
+          "forced_P": 5,
+          "forced_next_scaled_mean": 36,
+          "forced_rho": 0,
+          "forced_s": 5,
+          "layer_index_t": 4,
+          "local_mass_exclusion": {
+            "density_exclusion": {
+              "complementary_slice": "J(29,14)",
+              "nearest_strict_bracket": [
+                "15/58",
+                "14/29"
+              ],
+              "p": 29,
+              "possible_density_values": [
+                "0",
+                "13/58",
+                "15/58",
+                "14/29",
+                "15/29",
+                "43/58",
+                "45/58",
+                "1"
+              ],
+              "proved": true,
+              "target_absent": true,
+              "target_density": "9/29"
+            },
+            "excluded": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_lemma_height_upper_bound": 3,
+              "height_lower_bound": "6",
+              "p": 29,
+              "paired_cube_average_upper_bound": "9/14",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mean_4p_E_B": 36,
+              "slice": "J(29,15)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_height_upper_bound": "72/7"
+            },
+            "height_one_junta": {
+              "all_junta_patterns_extend_to_the_slice": true,
+              "cube_coordinates_actually_needed_at_most": 4,
+              "cube_relevant_coordinate_influence_floor": "1/2",
+              "cube_total_influence_bound": 2,
+              "dictator_normalization_check": "sum I_ij=(p/2)*Var(x_i)",
+              "influence_definition": "I_ij=(1/4)*Pr[f differs after transposition ij]",
+              "johnson_laplacian_identity": "sum I_ij=(1/2)*sum_{e=1}^2 e*(p+1-e)*||f_=e||_2^2",
+              "junta_coordinate_bound_exact": "72576/10933",
+              "junta_coordinates_at_most": 6,
+              "mean": "9/29",
+              "p": 29,
+              "proved": true,
+              "relevance_zero_classes_are_equivalence_classes": true,
+              "relevant_edge_lower_bound": "p*L/2",
+              "relevant_pair_influence_floor": "65/1044",
+              "seven_gap_at_p_equals_x_plus_29": [
+                1,
+                92,
+                3107,
+                45296,
+                237300
+              ],
+              "seven_gap_numerator": 237300,
+              "symmetrized_representative_extends_to_cube_degree_at_most_two": true,
+              "total_influence_upper_bound": "5040/841",
+              "variance": "180/841"
+            },
+            "proved": true,
+            "source": "Proposition 15.751"
+          },
+          "minimum_Q": 2,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 6,
+          "next_Q": 3,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              30,
+              6
+            ],
+            [
+              28,
+              28,
+              8
+            ]
+          ],
+          "opposite_direction_count": 15,
+          "opposite_parallel_count_sum": 46,
+          "p": 29,
+          "proved": true,
+          "surplus_above_minimum_Q": 16,
+          "surplus_after_raising_every_Q_once": 1
+        }
+      },
+      "finite_prime_or_configuration_census_used": false,
+      "hard_residue_reduction": {
+        "equal_mean_p3_endpoint_cells_cannot_mix": true,
+        "layer_index_t": 4,
+        "p": 29,
+        "possible_branches": [
+          "hard_b2",
+          "p1_residue_zero_b_p_minus_1"
+        ],
+        "proved": true,
+        "t_less_than_u_at_most_m_minus_2": "every k_d>=1 but sum k_d=m+t-u<m",
+        "u_0_through_t_rows": [
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                28,
+                2
+              ],
+              [
+                28,
+                30,
+                0
+              ]
+            ],
+            "exact_survivors": [
+              [
+                28,
+                30
+              ]
+            ],
+            "low_mean": 30,
+            "surviving_branch": "p1_residue_zero_b_p_minus_1",
+            "u": 0
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                28,
+                4
+              ],
+              [
+                28,
+                30,
+                2
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 32,
+            "surviving_branch": null,
+            "u": 1
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                28,
+                6
+              ],
+              [
+                28,
+                30,
+                4
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 34,
+            "surviving_branch": null,
+            "u": 2
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                28,
+                8
+              ],
+              [
+                28,
+                30,
+                6
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 36,
+            "surviving_branch": null,
+            "u": 3
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                28,
+                10
+              ],
+              [
+                28,
+                30,
+                8
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 38,
+            "surviving_branch": null,
+            "u": 4
+          }
+        ],
+        "u_equals_m_minus_1_endpoint_b_candidates": [
+          2
+        ],
+        "u_equals_m_minus_1_exact_cell_count_at_least": 10
+      },
+      "layer_index_t": 4,
+      "original_k": 124,
+      "p": 29,
+      "proved": true,
+      "residual_ii_layer_excluded": true
+    },
+    "31": {
+      "all_boundary_sizes_excluded": true,
+      "arithmetic": {
+        "H_edge_count": 133,
+        "ambient_vertex_count": 962,
+        "boundary_size_hypothesis_used": false,
+        "closed_t_interval": [
+          4,
+          12
+        ],
+        "every_directional_b_even": true,
+        "guaranteed_isolated_vertices": 696,
+        "layer_index_t": 4,
+        "m": 16,
+        "maximum_endpoint_baseline_lift_excess": 10,
+        "maximum_low_phase_one_mean": 40,
+        "next_nonbaseline_phase_one_floor": 62,
+        "original_k": 132,
+        "p": 31,
+        "p_mod_4": 3,
+        "phase_one_mean_form": "a_d=2u+32k_d",
+        "phase_one_quotient_sum": "sum k_d=m+t-u",
+        "proved": true,
+        "q": 15,
+        "sharp_integral_lift_floor": 28,
+        "transported_infinity_degree_I": 0,
+        "type_budget": 640
+      },
+      "branch_exclusions": {
+        "hard_b2": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "hard_b2",
+          "branch_excluded": true,
+          "coefficient_offset": 4,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              4,
+              0,
+              4,
+              64
+            ]
+          ],
+          "forced_P": 4,
+          "forced_next_scaled_mean": 40,
+          "forced_rho": 0,
+          "forced_s": 4,
+          "layer_index_t": 4,
+          "local_mass_exclusion": {
+            "excluded": true,
+            "finite_slice_or_prime_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_maximum_upper_bound": 3,
+              "height_lower_bound": "6",
+              "p": 31,
+              "paired_cube_average_upper_bound": "5/8",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mass_4p_E_B": 40,
+              "slice": "J(31,16)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_branch": "4p E[B]>=4H",
+              "stabilizer_height_upper_bound": "10"
+            },
+            "height_one_boolean": {
+              "complementary_slice": "J(31,15)",
+              "cube_coordinates_actually_needed_at_most": 4,
+              "junta_coordinates_at_most": 6,
+              "largest_zero_influence_class_complement_bound": "6525/961",
+              "p": 31,
+              "possible_four_bit_density_values": [
+                "0",
+                "7/31",
+                "8/31",
+                "15/31",
+                "16/31",
+                "23/31",
+                "24/31",
+                "1"
+              ],
+              "proved": true,
+              "relevant_pair_influence_floor": "56/899",
+              "seven_gap_at_p_23": 168,
+              "seven_gap_derivative_at_p_23": 403,
+              "seven_gap_polynomial": "p^3-29p^2+150p-108",
+              "seven_gap_second_derivative_at_p_23": 80,
+              "target_absent": true,
+              "target_density": "10/31",
+              "target_strict_bracket": [
+                "8/31",
+                "15/31"
+              ],
+              "total_influence_upper_bound": "6300/961"
+            },
+            "p": 31,
+            "proved": true,
+            "statement": "no nonzero nonnegative integer-valued quadratic B on J(31,16) has 4p E[B]=p+9"
+          },
+          "minimum_Q": 3,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 8,
+          "next_Q": 4,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              32,
+              8
+            ],
+            [
+              30,
+              32,
+              8
+            ]
+          ],
+          "opposite_direction_count": 16,
+          "opposite_parallel_count_sum": 64,
+          "p": 31,
+          "proved": true,
+          "surplus_above_minimum_Q": 16,
+          "surplus_after_raising_every_Q_once": 0
+        },
+        "p3_all_low_b_p_minus_1": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "p3_all_low_b_p_minus_1",
+          "branch_excluded": true,
+          "coefficient_offset": 3,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              3,
+              0,
+              3,
+              80
+            ]
+          ],
+          "forced_P": 3,
+          "forced_next_scaled_mean": 40,
+          "forced_rho": 0,
+          "forced_s": 3,
+          "layer_index_t": 4,
+          "local_mass_exclusion": {
+            "excluded": true,
+            "finite_slice_or_prime_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_maximum_upper_bound": 3,
+              "height_lower_bound": "6",
+              "p": 31,
+              "paired_cube_average_upper_bound": "5/8",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mass_4p_E_B": 40,
+              "slice": "J(31,16)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_branch": "4p E[B]>=4H",
+              "stabilizer_height_upper_bound": "10"
+            },
+            "height_one_boolean": {
+              "complementary_slice": "J(31,15)",
+              "cube_coordinates_actually_needed_at_most": 4,
+              "junta_coordinates_at_most": 6,
+              "largest_zero_influence_class_complement_bound": "6525/961",
+              "p": 31,
+              "possible_four_bit_density_values": [
+                "0",
+                "7/31",
+                "8/31",
+                "15/31",
+                "16/31",
+                "23/31",
+                "24/31",
+                "1"
+              ],
+              "proved": true,
+              "relevant_pair_influence_floor": "56/899",
+              "seven_gap_at_p_23": 168,
+              "seven_gap_derivative_at_p_23": 403,
+              "seven_gap_polynomial": "p^3-29p^2+150p-108",
+              "seven_gap_second_derivative_at_p_23": 80,
+              "target_absent": true,
+              "target_density": "10/31",
+              "target_strict_bracket": [
+                "8/31",
+                "15/31"
+              ],
+              "total_influence_upper_bound": "6300/961"
+            },
+            "p": 31,
+            "proved": true,
+            "statement": "no nonzero nonnegative integer-valued quadratic B on J(31,16) has 4p E[B]=p+9"
+          },
+          "minimum_Q": 4,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 8,
+          "next_Q": 5,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              32,
+              8
+            ],
+            [
+              30,
+              32,
+              8
+            ]
+          ],
+          "opposite_direction_count": 16,
+          "opposite_parallel_count_sum": 80,
+          "p": 31,
+          "proved": true,
+          "surplus_above_minimum_Q": 16,
+          "surplus_after_raising_every_Q_once": 0
+        }
+      },
+      "finite_prime_or_configuration_census_used": false,
+      "hard_residue_reduction": {
+        "equal_mean_p3_endpoint_cells_cannot_mix": true,
+        "layer_index_t": 4,
+        "p": 31,
+        "possible_branches": [
+          "hard_b2",
+          "p3_all_low_b_p_minus_1"
+        ],
+        "proved": true,
+        "t_less_than_u_at_most_m_minus_2": "every k_d>=1 but sum k_d=m+t-u<m",
+        "u_0_through_t_rows": [
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                30,
+                2
+              ],
+              [
+                30,
+                30,
+                2
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 32,
+            "surviving_branch": null,
+            "u": 0
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                30,
+                4
+              ],
+              [
+                30,
+                30,
+                4
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 34,
+            "surviving_branch": null,
+            "u": 1
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                30,
+                6
+              ],
+              [
+                30,
+                30,
+                6
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 36,
+            "surviving_branch": null,
+            "u": 2
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                30,
+                8
+              ],
+              [
+                30,
+                30,
+                8
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 38,
+            "surviving_branch": null,
+            "u": 3
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                30,
+                10
+              ],
+              [
+                30,
+                30,
+                10
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 40,
+            "surviving_branch": null,
+            "u": 4
+          }
+        ],
+        "u_equals_m_minus_1_endpoint_b_candidates": [
+          2,
+          30
+        ],
+        "u_equals_m_minus_1_exact_cell_count_at_least": 11
+      },
+      "layer_index_t": 4,
+      "original_k": 132,
+      "p": 31,
+      "proved": true,
+      "residual_ii_layer_excluded": true
+    },
+    "37": {
+      "all_boundary_sizes_excluded": true,
+      "arithmetic": {
+        "H_edge_count": 157,
+        "ambient_vertex_count": 1370,
+        "boundary_size_hypothesis_used": false,
+        "closed_t_interval": [
+          4,
+          14
+        ],
+        "every_directional_b_even": true,
+        "guaranteed_isolated_vertices": 1056,
+        "layer_index_t": 4,
+        "m": 19,
+        "maximum_endpoint_baseline_lift_excess": 10,
+        "maximum_low_phase_one_mean": 46,
+        "next_nonbaseline_phase_one_floor": 68,
+        "original_k": 156,
+        "p": 37,
+        "p_mod_4": 1,
+        "phase_one_mean_form": "a_d=2u+38k_d",
+        "phase_one_quotient_sum": "sum k_d=m+t-u",
+        "proved": true,
+        "q": 18,
+        "sharp_integral_lift_floor": 34,
+        "transported_infinity_degree_I": 0,
+        "type_budget": 874
+      },
+      "branch_exclusions": {
+        "hard_b2": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "hard_b2",
+          "branch_excluded": true,
+          "coefficient_offset": 4,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              4,
+              0,
+              4,
+              76
+            ]
+          ],
+          "forced_P": 4,
+          "forced_next_scaled_mean": 46,
+          "forced_rho": 0,
+          "forced_s": 4,
+          "layer_index_t": 4,
+          "local_mass_exclusion": {
+            "excluded": true,
+            "finite_slice_or_prime_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_maximum_upper_bound": 3,
+              "height_lower_bound": "15/2",
+              "p": 37,
+              "paired_cube_average_upper_bound": "23/36",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mass_4p_E_B": 46,
+              "slice": "J(37,19)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_branch": "4p E[B]>=4(p-1)H/(p+3)",
+              "stabilizer_height_upper_bound": "115/9"
+            },
+            "height_one_boolean": {
+              "complementary_slice": "J(37,18)",
+              "cube_coordinates_actually_needed_at_most": 4,
+              "junta_coordinates_at_most": 6,
+              "largest_zero_influence_class_complement_bound": "173880/26011",
+              "p": 37,
+              "possible_four_bit_density_values": [
+                "0",
+                "17/74",
+                "19/74",
+                "18/37",
+                "19/37",
+                "55/74",
+                "57/74",
+                "1"
+              ],
+              "proved": true,
+              "relevant_pair_influence_floor": "323/5180",
+              "seven_gap_at_p_23": 168,
+              "seven_gap_derivative_at_p_23": 403,
+              "seven_gap_polynomial": "p^3-29p^2+150p-108",
+              "seven_gap_second_derivative_at_p_23": 80,
+              "target_absent": true,
+              "target_density": "23/74",
+              "target_strict_bracket": [
+                "19/74",
+                "18/37"
+              ],
+              "total_influence_upper_bound": "10557/1369"
+            },
+            "p": 37,
+            "proved": true,
+            "statement": "no nonzero nonnegative integer-valued quadratic B on J(37,19) has 4p E[B]=p+9"
+          },
+          "minimum_Q": 3,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 8,
+          "next_Q": 4,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              38,
+              8
+            ],
+            [
+              36,
+              36,
+              10
+            ]
+          ],
+          "opposite_direction_count": 19,
+          "opposite_parallel_count_sum": 76,
+          "p": 37,
+          "proved": true,
+          "surplus_above_minimum_Q": 19,
+          "surplus_after_raising_every_Q_once": 0
+        },
+        "p1_residue_zero_b_p_minus_1": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "p1_residue_zero_b_p_minus_1",
+          "branch_excluded": true,
+          "coefficient_offset": 5,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              5,
+              0,
+              5,
+              58
+            ]
+          ],
+          "forced_P": 5,
+          "forced_next_scaled_mean": 44,
+          "forced_rho": 0,
+          "forced_s": 5,
+          "layer_index_t": 4,
+          "local_mass_exclusion": {
+            "density_exclusion": {
+              "complementary_slice": "J(37,18)",
+              "nearest_strict_bracket": [
+                "19/74",
+                "18/37"
+              ],
+              "p": 37,
+              "possible_density_values": [
+                "0",
+                "17/74",
+                "19/74",
+                "18/37",
+                "19/37",
+                "55/74",
+                "57/74",
+                "1"
+              ],
+              "proved": true,
+              "target_absent": true,
+              "target_density": "11/37"
+            },
+            "excluded": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_lemma_height_upper_bound": 3,
+              "height_lower_bound": "8",
+              "p": 37,
+              "paired_cube_average_upper_bound": "11/18",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mean_4p_E_B": 44,
+              "slice": "J(37,19)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_height_upper_bound": "110/9"
+            },
+            "height_one_junta": {
+              "all_junta_patterns_extend_to_the_slice": true,
+              "cube_coordinates_actually_needed_at_most": 4,
+              "cube_relevant_coordinate_influence_floor": "1/2",
+              "cube_total_influence_bound": 2,
+              "dictator_normalization_check": "sum I_ij=(p/2)*Var(x_i)",
+              "influence_definition": "I_ij=(1/4)*Pr[f differs after transposition ij]",
+              "johnson_laplacian_identity": "sum I_ij=(1/2)*sum_{e=1}^2 e*(p+1-e)*||f_=e||_2^2",
+              "junta_coordinate_bound_exact": "2882880/442187",
+              "junta_coordinates_at_most": 6,
+              "mean": "11/37",
+              "p": 37,
+              "proved": true,
+              "relevance_zero_classes_are_equivalence_classes": true,
+              "relevant_edge_lower_bound": "p*L/2",
+              "relevant_pair_influence_floor": "323/5180",
+              "seven_gap_at_p_equals_x_plus_29": [
+                1,
+                92,
+                3107,
+                45296,
+                237300
+              ],
+              "seven_gap_numerator": 849716,
+              "symmetrized_representative_extends_to_cube_degree_at_most_two": true,
+              "total_influence_upper_bound": "10296/1369",
+              "variance": "286/1369"
+            },
+            "proved": true,
+            "source": "Proposition 15.751"
+          },
+          "minimum_Q": 2,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 6,
+          "next_Q": 3,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              38,
+              6
+            ],
+            [
+              36,
+              36,
+              8
+            ]
+          ],
+          "opposite_direction_count": 19,
+          "opposite_parallel_count_sum": 58,
+          "p": 37,
+          "proved": true,
+          "surplus_above_minimum_Q": 20,
+          "surplus_after_raising_every_Q_once": 1
+        }
+      },
+      "finite_prime_or_configuration_census_used": false,
+      "hard_residue_reduction": {
+        "equal_mean_p3_endpoint_cells_cannot_mix": true,
+        "layer_index_t": 4,
+        "p": 37,
+        "possible_branches": [
+          "hard_b2",
+          "p1_residue_zero_b_p_minus_1"
+        ],
+        "proved": true,
+        "t_less_than_u_at_most_m_minus_2": "every k_d>=1 but sum k_d=m+t-u<m",
+        "u_0_through_t_rows": [
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                2
+              ],
+              [
+                36,
+                38,
+                0
+              ]
+            ],
+            "exact_survivors": [
+              [
+                36,
+                38
+              ]
+            ],
+            "low_mean": 38,
+            "surviving_branch": "p1_residue_zero_b_p_minus_1",
+            "u": 0
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                4
+              ],
+              [
+                36,
+                38,
+                2
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 40,
+            "surviving_branch": null,
+            "u": 1
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                6
+              ],
+              [
+                36,
+                38,
+                4
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 42,
+            "surviving_branch": null,
+            "u": 2
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                8
+              ],
+              [
+                36,
+                38,
+                6
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 44,
+            "surviving_branch": null,
+            "u": 3
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                36,
+                10
+              ],
+              [
+                36,
+                38,
+                8
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 46,
+            "surviving_branch": null,
+            "u": 4
+          }
+        ],
+        "u_equals_m_minus_1_endpoint_b_candidates": [
+          2
+        ],
+        "u_equals_m_minus_1_exact_cell_count_at_least": 14
+      },
+      "layer_index_t": 4,
+      "original_k": 156,
+      "p": 37,
+      "proved": true,
+      "residual_ii_layer_excluded": true
+    },
+    "43": {
+      "all_boundary_sizes_excluded": true,
+      "arithmetic": {
+        "H_edge_count": 181,
+        "ambient_vertex_count": 1850,
+        "boundary_size_hypothesis_used": false,
+        "closed_t_interval": [
+          4,
+          18
+        ],
+        "every_directional_b_even": true,
+        "guaranteed_isolated_vertices": 1488,
+        "layer_index_t": 4,
+        "m": 22,
+        "maximum_endpoint_baseline_lift_excess": 10,
+        "maximum_low_phase_one_mean": 52,
+        "next_nonbaseline_phase_one_floor": 86,
+        "original_k": 180,
+        "p": 43,
+        "p_mod_4": 3,
+        "phase_one_mean_form": "a_d=2u+44k_d",
+        "phase_one_quotient_sum": "sum k_d=m+t-u",
+        "proved": true,
+        "q": 21,
+        "sharp_integral_lift_floor": 40,
+        "transported_infinity_degree_I": 0,
+        "type_budget": 1144
+      },
+      "branch_exclusions": {
+        "hard_b2": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "hard_b2",
+          "branch_excluded": true,
+          "coefficient_offset": 4,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              4,
+              0,
+              4,
+              88
+            ]
+          ],
+          "forced_P": 4,
+          "forced_next_scaled_mean": 52,
+          "forced_rho": 0,
+          "forced_s": 4,
+          "layer_index_t": 4,
+          "local_mass_exclusion": {
+            "excluded": true,
+            "finite_slice_or_prime_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_maximum_upper_bound": 3,
+              "height_lower_bound": "9",
+              "p": 43,
+              "paired_cube_average_upper_bound": "13/22",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mass_4p_E_B": 52,
+              "slice": "J(43,22)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_branch": "4p E[B]>=4H",
+              "stabilizer_height_upper_bound": "13"
+            },
+            "height_one_boolean": {
+              "complementary_slice": "J(43,21)",
+              "cube_coordinates_actually_needed_at_most": 4,
+              "junta_coordinates_at_most": 6,
+              "largest_zero_influence_class_complement_bound": "134316/20339",
+              "p": 43,
+              "possible_four_bit_density_values": [
+                "0",
+                "10/43",
+                "11/43",
+                "21/43",
+                "22/43",
+                "32/43",
+                "33/43",
+                "1"
+              ],
+              "proved": true,
+              "relevant_pair_influence_floor": "110/1763",
+              "seven_gap_at_p_23": 168,
+              "seven_gap_derivative_at_p_23": 403,
+              "seven_gap_polynomial": "p^3-29p^2+150p-108",
+              "seven_gap_second_derivative_at_p_23": 80,
+              "target_absent": true,
+              "target_density": "13/43",
+              "target_strict_bracket": [
+                "11/43",
+                "21/43"
+              ],
+              "total_influence_upper_bound": "16380/1849"
+            },
+            "p": 43,
+            "proved": true,
+            "statement": "no nonzero nonnegative integer-valued quadratic B on J(43,22) has 4p E[B]=p+9"
+          },
+          "minimum_Q": 3,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 8,
+          "next_Q": 4,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              44,
+              8
+            ],
+            [
+              42,
+              44,
+              8
+            ]
+          ],
+          "opposite_direction_count": 22,
+          "opposite_parallel_count_sum": 88,
+          "p": 43,
+          "proved": true,
+          "surplus_above_minimum_Q": 22,
+          "surplus_after_raising_every_Q_once": 0
+        },
+        "p3_all_low_b_p_minus_1": {
+          "a_next_Q_direction_is_forced": true,
+          "branch": "p3_all_low_b_p_minus_1",
+          "branch_excluded": true,
+          "coefficient_offset": 3,
+          "feasible_P_rho_s_opposite_edges": [
+            [
+              3,
+              0,
+              3,
+              110
+            ]
+          ],
+          "forced_P": 3,
+          "forced_next_scaled_mean": 52,
+          "forced_rho": 0,
+          "forced_s": 3,
+          "layer_index_t": 4,
+          "local_mass_exclusion": {
+            "excluded": true,
+            "finite_slice_or_prime_census_used": false,
+            "fixed_four_bit_catalog_reused": true,
+            "height_at_least_two": {
+              "assumed_maximum_at_least": 2,
+              "contradiction": true,
+              "every_paired_cube_mean_at_least": "1/2",
+              "half_mean_cube_maximum_upper_bound": 3,
+              "height_lower_bound": "9",
+              "p": 43,
+              "paired_cube_average_upper_bound": "13/22",
+              "paired_cube_mean_lattice": "(1/4)Z",
+              "proved": true,
+              "scaled_mass_4p_E_B": 52,
+              "slice": "J(43,22)",
+              "some_paired_cube_has_mean_exactly": "1/2",
+              "stabilizer_branch": "4p E[B]>=4H",
+              "stabilizer_height_upper_bound": "13"
+            },
+            "height_one_boolean": {
+              "complementary_slice": "J(43,21)",
+              "cube_coordinates_actually_needed_at_most": 4,
+              "junta_coordinates_at_most": 6,
+              "largest_zero_influence_class_complement_bound": "134316/20339",
+              "p": 43,
+              "possible_four_bit_density_values": [
+                "0",
+                "10/43",
+                "11/43",
+                "21/43",
+                "22/43",
+                "32/43",
+                "33/43",
+                "1"
+              ],
+              "proved": true,
+              "relevant_pair_influence_floor": "110/1763",
+              "seven_gap_at_p_23": 168,
+              "seven_gap_derivative_at_p_23": 403,
+              "seven_gap_polynomial": "p^3-29p^2+150p-108",
+              "seven_gap_second_derivative_at_p_23": 80,
+              "target_absent": true,
+              "target_density": "13/43",
+              "target_strict_bracket": [
+                "11/43",
+                "21/43"
+              ],
+              "total_influence_upper_bound": "16380/1849"
+            },
+            "p": 43,
+            "proved": true,
+            "statement": "no nonzero nonnegative integer-valued quadratic B on J(43,22) has 4p E[B]=p+9"
+          },
+          "minimum_Q": 4,
+          "minimum_Q_forbidden_by_phase_zero_floor_and_15_688": true,
+          "minimum_Q_mean": 8,
+          "next_Q": 5,
+          "next_cell_forced_to_b_zero": true,
+          "next_cell_is_A_equals_2B": true,
+          "nonzero_b_options_at_next_mean": [
+            [
+              2,
+              44,
+              8
+            ],
+            [
+              42,
+              44,
+              8
+            ]
+          ],
+          "opposite_direction_count": 22,
+          "opposite_parallel_count_sum": 110,
+          "p": 43,
+          "proved": true,
+          "surplus_above_minimum_Q": 22,
+          "surplus_after_raising_every_Q_once": 0
+        }
+      },
+      "finite_prime_or_configuration_census_used": false,
+      "hard_residue_reduction": {
+        "equal_mean_p3_endpoint_cells_cannot_mix": true,
+        "layer_index_t": 4,
+        "p": 43,
+        "possible_branches": [
+          "hard_b2",
+          "p3_all_low_b_p_minus_1"
+        ],
+        "proved": true,
+        "t_less_than_u_at_most_m_minus_2": "every k_d>=1 but sum k_d=m+t-u<m",
+        "u_0_through_t_rows": [
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                2
+              ],
+              [
+                42,
+                42,
+                2
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 44,
+            "surviving_branch": null,
+            "u": 0
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                4
+              ],
+              [
+                42,
+                42,
+                4
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 46,
+            "surviving_branch": null,
+            "u": 1
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                6
+              ],
+              [
+                42,
+                42,
+                6
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 48,
+            "surviving_branch": null,
+            "u": 2
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                8
+              ],
+              [
+                42,
+                42,
+                8
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 50,
+            "surviving_branch": null,
+            "u": 3
+          },
+          {
+            "available_endpoint_cells": [
+              [
+                2,
+                42,
+                10
+              ],
+              [
+                42,
+                42,
+                10
+              ]
+            ],
+            "exact_survivors": [],
+            "low_mean": 52,
+            "surviving_branch": null,
+            "u": 4
+          }
+        ],
+        "u_equals_m_minus_1_endpoint_b_candidates": [
+          2,
+          42
+        ],
+        "u_equals_m_minus_1_exact_cell_count_at_least": 17
+      },
+      "layer_index_t": 4,
+      "original_k": 180,
+      "p": 43,
+      "proved": true,
+      "residual_ii_layer_excluded": true
+    }
+  },
+  "representative_local_replays": {
+    "23": {
+      "excluded": true,
+      "finite_slice_or_prime_census_used": false,
+      "fixed_four_bit_catalog_reused": true,
+      "height_at_least_two": {
+        "assumed_maximum_at_least": 2,
+        "contradiction": true,
+        "every_paired_cube_mean_at_least": "1/2",
+        "half_mean_cube_maximum_upper_bound": 3,
+        "height_lower_bound": "4",
+        "p": 23,
+        "paired_cube_average_upper_bound": "2/3",
+        "paired_cube_mean_lattice": "(1/4)Z",
+        "proved": true,
+        "scaled_mass_4p_E_B": 32,
+        "slice": "J(23,12)",
+        "some_paired_cube_has_mean_exactly": "1/2",
+        "stabilizer_branch": "4p E[B]>=4H",
+        "stabilizer_height_upper_bound": "8"
+      },
+      "height_one_boolean": {
+        "complementary_slice": "J(23,11)",
+        "cube_coordinates_actually_needed_at_most": 4,
+        "junta_coordinates_at_most": 6,
+        "largest_zero_influence_class_complement_bound": "3696/529",
+        "p": 23,
+        "possible_four_bit_density_values": [
+          "0",
+          "5/23",
+          "6/23",
+          "11/23",
+          "12/23",
+          "17/23",
+          "18/23",
+          "1"
+        ],
+        "proved": true,
+        "relevant_pair_influence_floor": "10/161",
+        "seven_gap_at_p_23": 168,
+        "seven_gap_derivative_at_p_23": 403,
+        "seven_gap_polynomial": "p^3-29p^2+150p-108",
+        "seven_gap_second_derivative_at_p_23": 80,
+        "target_absent": true,
+        "target_density": "8/23",
+        "target_strict_bracket": [
+          "6/23",
+          "11/23"
+        ],
+        "total_influence_upper_bound": "2640/529"
+      },
+      "p": 23,
+      "proved": true,
+      "statement": "no nonzero nonnegative integer-valued quadratic B on J(23,12) has 4p E[B]=p+9"
+    },
+    "29": {
+      "excluded": true,
+      "finite_slice_or_prime_census_used": false,
+      "fixed_four_bit_catalog_reused": true,
+      "height_at_least_two": {
+        "assumed_maximum_at_least": 2,
+        "contradiction": true,
+        "every_paired_cube_mean_at_least": "1/2",
+        "half_mean_cube_maximum_upper_bound": 3,
+        "height_lower_bound": "11/2",
+        "p": 29,
+        "paired_cube_average_upper_bound": "19/28",
+        "paired_cube_mean_lattice": "(1/4)Z",
+        "proved": true,
+        "scaled_mass_4p_E_B": 38,
+        "slice": "J(29,15)",
+        "some_paired_cube_has_mean_exactly": "1/2",
+        "stabilizer_branch": "4p E[B]>=4(p-1)H/(p+3)",
+        "stabilizer_height_upper_bound": "76/7"
+      },
+      "height_one_boolean": {
+        "complementary_slice": "J(29,14)",
+        "cube_coordinates_actually_needed_at_most": 4,
+        "junta_coordinates_at_most": 6,
+        "largest_zero_influence_class_complement_bound": "28728/4205",
+        "p": 29,
+        "possible_four_bit_density_values": [
+          "0",
+          "13/58",
+          "15/58",
+          "14/29",
+          "15/29",
+          "43/58",
+          "45/58",
+          "1"
+        ],
+        "proved": true,
+        "relevant_pair_influence_floor": "65/1044",
+        "seven_gap_at_p_23": 168,
+        "seven_gap_derivative_at_p_23": 403,
+        "seven_gap_polynomial": "p^3-29p^2+150p-108",
+        "seven_gap_second_derivative_at_p_23": 80,
+        "target_absent": true,
+        "target_density": "19/58",
+        "target_strict_bracket": [
+          "15/58",
+          "14/29"
+        ],
+        "total_influence_upper_bound": "5187/841"
+      },
+      "p": 29,
+      "proved": true,
+      "statement": "no nonzero nonnegative integer-valued quadratic B on J(29,15) has 4p E[B]=p+9"
+    },
+    "31": {
+      "excluded": true,
+      "finite_slice_or_prime_census_used": false,
+      "fixed_four_bit_catalog_reused": true,
+      "height_at_least_two": {
+        "assumed_maximum_at_least": 2,
+        "contradiction": true,
+        "every_paired_cube_mean_at_least": "1/2",
+        "half_mean_cube_maximum_upper_bound": 3,
+        "height_lower_bound": "6",
+        "p": 31,
+        "paired_cube_average_upper_bound": "5/8",
+        "paired_cube_mean_lattice": "(1/4)Z",
+        "proved": true,
+        "scaled_mass_4p_E_B": 40,
+        "slice": "J(31,16)",
+        "some_paired_cube_has_mean_exactly": "1/2",
+        "stabilizer_branch": "4p E[B]>=4H",
+        "stabilizer_height_upper_bound": "10"
+      },
+      "height_one_boolean": {
+        "complementary_slice": "J(31,15)",
+        "cube_coordinates_actually_needed_at_most": 4,
+        "junta_coordinates_at_most": 6,
+        "largest_zero_influence_class_complement_bound": "6525/961",
+        "p": 31,
+        "possible_four_bit_density_values": [
+          "0",
+          "7/31",
+          "8/31",
+          "15/31",
+          "16/31",
+          "23/31",
+          "24/31",
+          "1"
+        ],
+        "proved": true,
+        "relevant_pair_influence_floor": "56/899",
+        "seven_gap_at_p_23": 168,
+        "seven_gap_derivative_at_p_23": 403,
+        "seven_gap_polynomial": "p^3-29p^2+150p-108",
+        "seven_gap_second_derivative_at_p_23": 80,
+        "target_absent": true,
+        "target_density": "10/31",
+        "target_strict_bracket": [
+          "8/31",
+          "15/31"
+        ],
+        "total_influence_upper_bound": "6300/961"
+      },
+      "p": 31,
+      "proved": true,
+      "statement": "no nonzero nonnegative integer-valued quadratic B on J(31,16) has 4p E[B]=p+9"
+    },
+    "37": {
+      "excluded": true,
+      "finite_slice_or_prime_census_used": false,
+      "fixed_four_bit_catalog_reused": true,
+      "height_at_least_two": {
+        "assumed_maximum_at_least": 2,
+        "contradiction": true,
+        "every_paired_cube_mean_at_least": "1/2",
+        "half_mean_cube_maximum_upper_bound": 3,
+        "height_lower_bound": "15/2",
+        "p": 37,
+        "paired_cube_average_upper_bound": "23/36",
+        "paired_cube_mean_lattice": "(1/4)Z",
+        "proved": true,
+        "scaled_mass_4p_E_B": 46,
+        "slice": "J(37,19)",
+        "some_paired_cube_has_mean_exactly": "1/2",
+        "stabilizer_branch": "4p E[B]>=4(p-1)H/(p+3)",
+        "stabilizer_height_upper_bound": "115/9"
+      },
+      "height_one_boolean": {
+        "complementary_slice": "J(37,18)",
+        "cube_coordinates_actually_needed_at_most": 4,
+        "junta_coordinates_at_most": 6,
+        "largest_zero_influence_class_complement_bound": "173880/26011",
+        "p": 37,
+        "possible_four_bit_density_values": [
+          "0",
+          "17/74",
+          "19/74",
+          "18/37",
+          "19/37",
+          "55/74",
+          "57/74",
+          "1"
+        ],
+        "proved": true,
+        "relevant_pair_influence_floor": "323/5180",
+        "seven_gap_at_p_23": 168,
+        "seven_gap_derivative_at_p_23": 403,
+        "seven_gap_polynomial": "p^3-29p^2+150p-108",
+        "seven_gap_second_derivative_at_p_23": 80,
+        "target_absent": true,
+        "target_density": "23/74",
+        "target_strict_bracket": [
+          "19/74",
+          "18/37"
+        ],
+        "total_influence_upper_bound": "10557/1369"
+      },
+      "p": 37,
+      "proved": true,
+      "statement": "no nonzero nonnegative integer-valued quadratic B on J(37,19) has 4p E[B]=p+9"
+    },
+    "43": {
+      "excluded": true,
+      "finite_slice_or_prime_census_used": false,
+      "fixed_four_bit_catalog_reused": true,
+      "height_at_least_two": {
+        "assumed_maximum_at_least": 2,
+        "contradiction": true,
+        "every_paired_cube_mean_at_least": "1/2",
+        "half_mean_cube_maximum_upper_bound": 3,
+        "height_lower_bound": "9",
+        "p": 43,
+        "paired_cube_average_upper_bound": "13/22",
+        "paired_cube_mean_lattice": "(1/4)Z",
+        "proved": true,
+        "scaled_mass_4p_E_B": 52,
+        "slice": "J(43,22)",
+        "some_paired_cube_has_mean_exactly": "1/2",
+        "stabilizer_branch": "4p E[B]>=4H",
+        "stabilizer_height_upper_bound": "13"
+      },
+      "height_one_boolean": {
+        "complementary_slice": "J(43,21)",
+        "cube_coordinates_actually_needed_at_most": 4,
+        "junta_coordinates_at_most": 6,
+        "largest_zero_influence_class_complement_bound": "134316/20339",
+        "p": 43,
+        "possible_four_bit_density_values": [
+          "0",
+          "10/43",
+          "11/43",
+          "21/43",
+          "22/43",
+          "32/43",
+          "33/43",
+          "1"
+        ],
+        "proved": true,
+        "relevant_pair_influence_floor": "110/1763",
+        "seven_gap_at_p_23": 168,
+        "seven_gap_derivative_at_p_23": 403,
+        "seven_gap_polynomial": "p^3-29p^2+150p-108",
+        "seven_gap_second_derivative_at_p_23": 80,
+        "target_absent": true,
+        "target_density": "13/43",
+        "target_strict_bracket": [
+          "11/43",
+          "21/43"
+        ],
+        "total_influence_upper_bound": "16380/1849"
+      },
+      "p": 43,
+      "proved": true,
+      "statement": "no nonzero nonnegative integer-valued quadratic B on J(43,22) has 4p E[B]=p+9"
+    }
+  },
+  "residual_ii_k_ge_4p_closed": false,
+  "result_status": "proved infinite-family theorem",
+  "title": "Influence-rigid p+9 exclusion and contiguous residual band"
+}

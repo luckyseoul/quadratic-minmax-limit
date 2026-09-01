@@ -258,6 +258,33 @@ its zero-error form is false. Even after multiplier two is closed,
 multiplier three (or the `1:2` split in Proposition 6.3) remains necessary
 for the original convergence question.
 
+## Geometry-only closure is impossible
+
+The four inequalities in (14) do not contradict extremality. Let
+`p=1 mod 4`, `p>=5`, `n=p^2+1`, and let `C` be the symmetric Paley
+conference matrix. Partition `F_p` into four cells of sizes
+`(p+3)/4,(p-1)/4,(p-1)/4,(p-1)/4`, and put the sign triples
+`(+++),(+--),(-+-),(--+)` on those cells. Each component has sum one.
+The affine-halfspace Boolean-eigenvector construction, lifted through an
+`F_p`-linear map `F_(p^2)->F_p` with square kernel, gives three Boolean
+`+p` eigenvectors `z,x,y`. Every pair has Hamming distance
+
+\[
+ d={p(p-1)\over2}.
+\]
+
+Since `C^2=p^2 I`, each vector has
+`Q_C=pn/2=Phi(C)`. Consequently `h_x=h_y=d_H(x,y)=d`, the joint-energy
+deficit is zero, and every inequality in (14) is strict (already at `p=5`).
+The energy inequality reduces to
+`sqrt(n)>(sqrt(2)-1)p`.
+
+Thus no argument using only the displayed Hamming data, `|Q|<=M`,
+hereditary extremality, and joint-energy deficit can empty (14). This is not
+a counterexample to the multiplier-two ray: `C` is not known to attain
+`m_n`. The missing input must genuinely use global minimization over
+signings or finer `A`-dependent structure in `R`.
+
 ## Replay
 
 ```bash

@@ -220,3 +220,40 @@ For fixed `R,S` this is still `O(n)`, so the `1/100` shield survives after
 increasing the finite threshold. This is the exact halving/refinement
 mechanism available for the residual states; it is not a finite-state
 census.
+
+## 8. Anchor refinement cannot empty the spectral residual
+
+For any resulting row and column pairings, choose `x` opposite on every row
+pair and `y` opposite on every column pair. If the numbers of pairs are
+`r,s`, then `k_A(x)=r` and `k_B(y)=s`, independently of all anchors and of
+the internal signings. For fixed anchor lists, and more generally whenever
+the unpaired border is `o(n)`,
+
+\[
+ r={n\over2}-o(n),\qquad s=n-o(n),\qquad
+ k_Ak_B=\left({1\over2}-o(1)\right)n^2.
+\]
+
+The universal conference upper bound gives
+`M<=(1/2+o(1))n^(3/2)` and
+`N<=(sqrt(2)+o(1))n^(3/2)`, hence
+
+\[
+ T\le\left({3\sqrt3\over2}+o(1)\right)n^{3/2}.
+\]
+
+But the leading right side of the existing spectral estimate (10) is
+
+\[
+ 4\sqrt{qrs}=(2\sqrt2+o(1))n^{3/2},
+\]
+
+and `2sqrt(2)-3sqrt(3)/2=0.230350...>0`. Therefore the alternating pair
+satisfies both residual tests (13) and the strict reverse of (12), regardless
+of its internal energy. A Dini-admissible growing signature list still has
+`o(sqrt(n))` leftovers and the same obstruction.
+
+This does not say that the actual value `|u^T E v|` is large; the spectral
+upper bound can be loose. It proves exactly that adding anchors cannot close
+(13) with (10). A successful construction must correlate the actual
+bilinear value with `Q_A,Q_B`, or replace the tiled cross block.

@@ -11,19 +11,29 @@ amplification estimates for `H(n)=m_n^(2/3)`, at multipliers 2 and 3;
 polynomial saving is unnecessary. Propositions 6.4--6.5 give the exact
 equal-endpoint skew diamond for a Hadamard doubling lift; its hereditary
 endpoint conditions are automatic. Proposition 6.6 closes that diamond
-outside the exact Hamming-central/joint-energy residue (6.20). That residue
-is the preferred front unless the human explicitly selects the stronger
-Paley `L=1/2` route. Proposition 6.7 also gives an exact equal-endpoint
+outside the exact Hamming-central/joint-energy residue (6.20). Exact Paley
+conference maximizers can satisfy every inequality in (6.20) strictly, so
+Hamming geometry, joint-energy deficit, and hereditary extremality alone
+cannot empty that residue. Any further doubling attack must use the fact
+that `A` globally minimizes over signings or a genuinely finer `A`-dependent
+construction of `R`. Proposition 6.7 also gives an exact equal-endpoint
 tetrahedral tripling frame. Its single-skew distance-product and
 distinguished-endpoint shields do not close the unshielded tetrahedral
 diamond. Proposition 6.8 supplies a genuinely different `1:2` composition
 using independently optimal orders `n` and `2n`; its bi-balanced Hadamard
 cross block closes every pair with `k_A k_B <= n^2/100` and leaves exactly
-(6.42)--(6.43). The fixed-anchor signature refinement is the preferred next
-attack on that two-state residue. Proposition 6.9 kills the uniform
+(6.42)--(6.43). Fixed-anchor signature refinement cannot close that residue:
+states alternating on every retained pair force the *existing spectral
+bound* into (6.42)--(6.43), even for any Dini-admissible mildly growing
+anchor list. A successful `1:2` attack must correlate the actual Hadamard
+bilinear value with the two internal energies or replace the tiled cross
+block. Proposition 6.9 kills the uniform
 signed-Eulerian free-energy target for every fixed temperature `c>0`, not
 only `c=2`; do not list `c=3` as viable. A growing `c_n -> infinity` route
-is not ruled out, but it must control its error uniformly in `c_n`.
+is soft-max equivalent to the original problem unless it supplies genuinely
+uniform new information. Fixed-physical-temperature Fekete subadditivity,
+annealed centering, edge-noise monotonicity, and cavity monotonicity do not
+control the critical diagonal `beta=c/sqrt(n)` and are not a live substitute.
 Do not reopen endpoint selection on either frame, an independent
 skew budget, a finite pair census, the implication from three pairwise
 diamonds to the tetrahedral diamond, or a statewise random-skew union bound.
@@ -69,7 +79,7 @@ distinguished edge. Do not reopen the `3A+B`, Aut_e, finite-LP, or small-prime
 census routes as Type-I work. They remain incomplete historical mechanisms,
 not live global gates. Residual (ii), E1, and the limit remain open.
 
-## Current residual-(ii) gate after Proposition 15.750
+## Current residual-(ii) gate after Proposition 15.753
 
 Do not reopen `p=13,k=58` or `p=17,k=74`.  Proposition 15.742 combines the
 `M_2=0` congruence with six multiplicative interval cuts and closes the
@@ -148,10 +158,26 @@ quartic `M4` to vanish identically, contradicting the hard fourth-moment
 alphabet.  Reuse the pinned lists and hashes in
 `src/e1_gmin_m4_prop15749.py`; do not rerun a graph, orbit, or cell census.
 
+Proposition 15.751 closes `k=4p+6` for every prime `p>=13`: above height
+one, paired cubes force a half-mean restriction of maximum at most three;
+at height one, corrected transposition influences and the fixed four-bit
+catalog exclude the required density. Proposition 15.752 extends the same
+mechanism to scaled mass `p+9`, closing `k=4p+8` for every `p>=23` and the
+contiguous band `4<=t<=(p-9)/2` for `p=1 mod 4` or
+`4<=t<=(p-7)/2` for `p=3 mod 4`. These are proved infinite-family inputs;
+do not reopen them with a prime, graph, orbit, slice, or cell census.
+
+Proposition 15.753 closes the two sharp fifth-shell endpoints
+`p=17,k=76` and `p=19,k=84`. It derives the complete A/B and A/C branch
+lists before optimization, glues every row to the common signed edge total,
+and uses all 698/2,338 translated cuts with exact one-worker energy
+certificates. In the p17-A last partition, preserve the opposite sign:
+`S4=-S2^2`, not `S4=S2^2`. Do not rerun either endpoint or import the
+wrong-sign temporary maximum.
+
 Residual (ii) is still open at critical `p=5,7`, at `p=11,k>=50`, in the
-sole `p=13,k=60` residue `u=6` and all later p13 layers, at `p=17,k>=76`,
-and in later layers for primes `p>=19`; within the branch-B fourth shell, the
-next prime is `p=29`.  Propositions 15.743--15.749 are finite certificates
+sole `p=13,k=60` residue `u=6` and all later p13 layers, and beyond
+Proposition 15.752's band. Propositions 15.743--15.749 and 15.753 are finite certificates
 or branch theorems,
 not an all-prime row theorem.  The preferred generic front is therefore a
 structural version of its common-energy/cut mechanism that survives when

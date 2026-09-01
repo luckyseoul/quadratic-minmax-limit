@@ -62,7 +62,13 @@ Thus the spectral floor, global QVAR, principal R1, and the historical
 `3A+B` Type-I mechanism are no longer acceptance gates. Propositions
 15.734--15.749 close the first three all-prime shells and several later
 rows; Proposition 15.751 closes the fourth shell `k=4p+6` for every
-`p>=13`. The exact live residual is recorded in `STATUS.md`.
+`p>=13`. Proposition 15.752 then closes `k=4p+8` for every prime `p>=23`
+and, without a prime or configuration census, a contiguous band through
+`t=(p-9)/2` for `p=1 mod 4` and `t=(p-7)/2` for `p=3 mod 4`, where
+`k=4p+2t`. Proposition 15.753 closes the two exceptional fifth-shell
+endpoints `p=17,k=76` and `p=19,k=84` by exact aggregate-row certificates.
+Thus the fifth shell is closed for every prime `p>=17`. The exact live
+residual is recorded in `STATUS.md`.
 Lemma D existence / 2-plane is complete in `A3_PROOF.md`
 and 15.276. Aut-Schur is **false**. Gsum unused.
 
@@ -79,6 +85,10 @@ conditional convergence theorem; \(\rho=1\) on \(n=p^2+1\);
 15.720 degree-congruence exclusion of required bi-tight levels 2 and 3;
 15.750 all-prime multi-level Type-I exclusion;
 15.751 fourth-shell exclusion for every prime \(p\ge13\);
+15.752 fifth-shell exclusion for every prime \(p\ge23\) and the displayed
+contiguous higher-shell band;
+15.753 exact endpoint exclusion at \((p,k)=(17,76),(19,84)\), hence
+fifth-shell exclusion for every prime \(p\ge17\);
 residual (ii) affine + even \(k\le 4p-2\) (15.179/236/237), **not**
 even \(k\ge4p\); residual (i) two-level Type I via 15.272
 \(k=1\cup k=3\Rightarrow G_+\succ0\Rightarrow\ker=\mathrm{sc}\) (15.207)
@@ -91,14 +101,17 @@ remaining `z=7` pointed systems and identify their projected high-catalog
 semigroups through grade six, but exclude no source boundary.  All 56 actual
 `z=7` line boundaries in two orbits remain open.
 
-The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-09-01; through Propositions 6.3--6.9 and 15.751).** The direct multiplier-2 and multiplier-3 estimates are open: Proposition 6.6 narrows multiplier two to (6.20); Proposition 6.7 narrows direct tripling to an unshielded tetrahedral diamond; and Proposition 6.8 gives a different \(1:2\) reduction with residual (6.42)--(6.43). None closes its ray. Proposition 6.9 kills every fixed-temperature version of the signed-Eulerian free-energy target, so \(c=3\) is no longer a live fallback. The optional Paley \(L=1/2\) route also remains open at residual (ii). Details: `evidence/share/denseness_path_package.md` § Caveats.
+The intended Type I two-level close is 15.272 (\(k=1\cup k=3\) span \(\Rightarrow G_+\succ0\)), not Gsum and not Aut-Schur. **Status (2026-09-01; through Propositions 6.3--6.9 and 15.753).** The direct multiplier-2 and multiplier-3 estimates are open: Proposition 6.6 narrows multiplier two to (6.20); Proposition 6.7 narrows direct tripling to an unshielded tetrahedral diamond; and Proposition 6.8 gives a different \(1:2\) reduction with residual (6.42)--(6.43). None closes its ray. Proposition 6.9 kills every fixed-temperature version of the signed-Eulerian free-energy target, so \(c=3\) is no longer a live fallback. The optional Paley \(L=1/2\) route also remains open at residual (ii), although Proposition 15.752 now closes an infinite contiguous band of its higher shells and Proposition 15.753 closes the two exceptional fifth-shell endpoints. Details: `evidence/share/denseness_path_package.md` § Caveats.
 
 > **Reader note.** Soft-close of \(L=\tfrac12\) via scheme-min Gsum was
 > **retracted** 2026-08-06. Aut-Schur remains false. Historical “\(L\) OPEN”
 > remarks in Props 15.20–15.171 refer to those older routes. Likewise,
 > statements inside Propositions 15.1--15.749 that multi-level Type I remains
 > open are as-of records superseded by Proposition 15.750. Earlier statements
-> listing generic branch-B \(t=3\) as open are superseded by Proposition 15.751.
+> listing generic branch-B \(t=3\) as open are superseded by Proposition
+> 15.751, and statements listing every \(p\ge17,t\ge4\) layer as open are
+> superseded on Proposition 15.752's explicit band and, at the two remaining
+> fifth-shell endpoints, by Proposition 15.753.
 
 ---
 
@@ -12914,6 +12927,347 @@ Later layers and residual (ii) globally remain open. Evidence:
 `src/e1_gmin_m4_prop15751.py`, `tests/test_prop15751.py`,
 `scripts/boolean_cube_degree2_gpu_audit.py`, and
 `evidence/NOTE_2026-09-01_GENERIC_T3_INFLUENCE_CLOSE.md`.
+
+## Proposition 15.752 — influence rigidity closes a contiguous residual band
+
+Let \(p\ge23\) be prime. There is no nonzero nonnegative integer-valued
+quadratic \(B\) on \(J(p,(p+1)/2)\) satisfying
+
+\[
+                         4p\,\mathbb EB=p+9.          \tag{15.752.1}
+\]
+
+Indeed, put \(H=\max B\). The paired-cube operator through a maximizing
+middle set gives
+
+\[
+ TB(X)={4H+p+9\over4(p+1)}.                         \tag{15.752.2}
+\]
+
+If \(H\ge2\), every paired-cube restriction is a nonzero integral quadratic.
+Its mean lies in \((1/4)\mathbb Z\), and mean \(1/4\) would make it Boolean,
+contrary to the value \(H\ge2\) at \(X\). Hence every restriction has mean
+at least \(1/2\), and
+
+\[
+                         H\ge {p-7\over4}.           \tag{15.752.3}
+\]
+
+The exact stabilizer inequalities from Proposition 15.688 give
+
+\[
+ H\le {p+9\over4}\quad(p\equiv3\pmod4),\qquad
+ H\le{(p+9)(p+3)\over4(p-1)}\quad(p\equiv1\pmod4). \tag{15.752.4}
+\]
+
+Substitution in (15.752.2) yields respectively
+
+\[
+ TB(X)\le {p+9\over2(p+1)}<\frac34,
+ \qquad
+ TB(X)\le {p+9\over2(p-1)}<\frac34.               \tag{15.752.5}
+\]
+
+Thus some paired cube has mean exactly \(1/2\). Proposition 15.751's
+dimension-free half-mean theorem bounds its maximum by three, while
+(15.752.3) gives \(H\ge4\). This excludes \(H\ge2\).
+
+For \(H=1\), complement the middle slice and write the resulting Boolean
+quadratic as \(f:J(p,(p-1)/2)\to\{0,1\}\), with
+
+\[
+                         \mu={p+9\over4p}.           \tag{15.752.6}
+\]
+
+The relevant-transposition derivative floor in Proposition 15.751 is
+unchanged. Combining it with the correctly normalized Johnson Laplacian
+identity shows that the complement \(L\) of the largest zero-influence
+coordinate class obeys
+
+\[
+ L\le {6(p-1)(p-2)(p+9)\over p^2(p+1)}<7.          \tag{15.752.7}
+\]
+
+After clearing denominators, the strict inequality is
+
+\[
+ p^3-29p^2+150p-108>0.                              \tag{15.752.8}
+\]
+
+The left side is \(168\) at \(p=23\), its derivative is already positive
+there, and the derivative is increasing thereafter. Hence \(L\le6\).
+Symmetrizing over the largest class extends \(f\) to a Boolean cube
+quadratic, and the cube influence bound reduces it to four actual
+coordinates. The fixed catalog from Proposition 15.751 has only the
+density values
+
+\[
+ 0,1,{p-3\over4p},{p+1\over4p},{p-1\over2p},{p+1\over2p},
+ {3p-1\over4p},{3(p+1)\over4p}.                    \tag{15.752.9}
+\]
+
+The target in (15.752.6) lies strictly between the fourth and fifth values,
+which proves (15.752.1).
+
+Now put
+
+\[
+ k=4p+2t,\qquad |H_G|=4p+2t+1,
+ \qquad q={p-1\over2},\quad m=q+1,                 \tag{15.752.10}
+\]
+
+and assume
+
+\[
+\begin{array}{ll}
+ p\equiv1\pmod4:&4\le t\le q-4=(p-9)/2,\\
+ p\equiv3\pmod4:&4\le t\le q-3=(p-7)/2.
+\end{array}                                        \tag{15.752.11}
+\]
+
+The isolated-vertex count \(p^2+1-2|H_G|\) is positive throughout this
+range. Signed transport therefore gives \(I=0\), an all-finite even
+boundary, and even \(b_d\) in every direction. In the phase-one type,
+
+\[
+ a_d=2u+(p+1)k_d,qquad \sum_dk_d=m+t-u.            \tag{15.752.12}
+\]
+
+The exact phase-one floors and the sharp \(p-3\) integral-lift floor reduce
+(15.752.12) to the same three endpoint branches as Propositions
+15.734--15.735. Their hard parallel counts, opposite minima, and opposite
+parallel-count totals are
+
+\[
+\begin{array}{c|c|c|c|c}
+ &P&Q_{\min}&a(Q_{\min})&\sum Q\\ \hline
+ A&4&3&8&4q+t\\
+ B&5&2&6&3q+t\\
+ C&3&4&8&5q+t+1.
+\end{array}                                        \tag{15.752.13}
+\]
+
+Here \(B\) occurs only for \(p\equiv1\pmod4\), and \(C\) only for
+\(p\equiv3\pmod4\). The coefficient congruences force the displayed \(P\)
+with quotient zero; a positive quotient makes the opposite edge total
+negative in (15.752.11).
+
+The minimum means \(8,6,8\) are below both the nonzero phase-zero fibre
+floor and the \(p-3\) lift floor, so no direction has \(Q=Q_{\min}\).
+After raising every \(Q\) once, (15.752.13) leaves respectively only
+\(t-4,t-3,t-4<m\) surplus units. Thus some direction has
+
+\[
+ A,C:\quad a=p+9,qquad B:\quad a=p+7.             \tag{15.752.14}
+\]
+
+At either mean, every nonzero-\(b_d\) option is an exact parity baseline
+plus fewer than \(p-3\) units. Hence \(b_d=0\), the phase-zero slack is
+\(2B_d\), and (15.752.14) contradicts (15.752.1) in branches \(A,C\) or
+Proposition 15.751 in branch \(B\). Consequently
+
+\[
+ \boxed{\begin{array}{ll}
+ p\equiv1\pmod4:&4\le t\le(p-9)/2,\\
+ p\equiv3\pmod4:&4\le t\le(p-7)/2
+ \end{array}
+ \quad\Longrightarrow\quad k=4p+2t\text{ is impossible}.}  \tag{15.752.15}
+\]
+
+In particular, \(k=4p+8\) is impossible for every prime \(p\ge23\), for
+every boundary size. This is a proved infinite-family theorem, not a prime
+or configuration census. Its local threshold is real: at \(p=19\), if
+\(|R|=4\), \(r=|X\cap R|\), and
+
+\[
+ B=3-2r+{r\choose2},                                \tag{15.752.16}
+\]
+
+then the layer values are \(3,1,0,0,1\) and
+\(4p\mathbb EB=2p-10=p+9\). This local object is not asserted to be a
+residual graph. The endpoint \(p=13\), the prior \(p\le11\) gate, and the
+layers beyond (15.752.15) remain open. Proposition 15.753 below closes the
+two other fifth-shell endpoints \(p=17,19\). Residual (ii), E(1),
+\(L=1/2\), and the original convergence problem are not closed.
+
+Evidence: `src/e1_gmin_m4_prop15752.py`,
+`tests/test_prop15752.py`,
+`evidence/e1_gmin_m4_prop15752.json`, and
+`evidence/NOTE_2026-09-01_RESIDUAL_BAND_INFLUENCE_CLOSE.md`.
+
+## Proposition 15.753 — the two exceptional fifth-shell endpoints close
+
+There is no residual-(ii) boundary at
+
+\[
+ (p,k)=(17,76)\quad\hbox{or}\quad(19,84).          \tag{15.753.1}
+\]
+
+This is an exact finite aggregate-row theorem. It enumerates neither graphs
+nor coefficient cells. Put
+
+\[
+ q={p-1\over2},\qquad m=q+1,\qquad t=4,\qquad
+ a_d=2u+(p+1)k_d,\qquad \sum_d k_d=m+4-u.          \tag{15.753.2}
+\]
+
+We first derive the complete branch list. For \(0\le u\le4\), a row with
+\(k_d=0\) has mean \(2u\), below the least phase-one floor. A row with
+\(k_d=1\) has mean \(p+1+2u\). The exact phase-one floor table, followed by
+the sharp nonzero integral-lift floor \(p-3\), says that a nonexact such row
+would require \(k_d\ge2\). The only exact low-row option is the \(b=16\)
+literal at \(p=17,u=0\). If that option is absent, all \(m\) directions have
+\(k_d\ge2\), but
+
+\[
+                         m+4-u<2m.                 \tag{15.753.3}
+\]
+
+Thus every low row is impossible except the branch containing that literal;
+at \(p=17,u=0\), (15.753.2) forces at least five exact literals.
+For \(4<u<m-1\), \(k_d=0\) is still below the floor, whereas
+\(m+4-u<m\), so those rows are impossible. At \(u=m-1\), the exact floor
+allows only \(b=2\) for \(p=17\), and \(b\in\{2,18\}\) for \(p=19\). The two
+\(p=19\) types cannot mix, since their common parallel count would have to
+satisfy both \(P\equiv4\pmod9\) and \(P\equiv3\pmod9\). Hence the exhaustive
+branches are
+
+\[
+\begin{array}{c|c}
+p=17&A:\ b=2\text{ XNOR},\quad B:\ b=16\text{ literal},\\
+p=19&A:\ b=2\text{ XNOR},\quad C:\ b=18\text{ complement literal}.
+\end{array}                                        \tag{15.753.4}
+\]
+
+For a projective direction \(L\), let \(P_L\) be its hard parallel count and
+let \(q_L(a)\), \(1\le a\le q\), be the normalized nonzero part of the common
+difference-Radon row. Solving the coefficient-offset congruence in the full
+integral range first fixes the hard/opposite edge split and
+\(hT=|E_h|-|E_{-h}|\). The common graph then gives
+
+\[
+ \sum_aq_L(a)=hT-P_L,\qquad
+ \sum_aq_{-L}(a)=-hT-Q_L.                          \tag{15.753.5}
+\]
+
+On the other hand, the unspecialized local hard-row sum is
+\(p(P_L-3)-c-(p+1)k_L\), where \(c=0\) in branch \(17B\) and \(c=p-1\)
+otherwise. Equating the two expressions in (15.753.5) gives, with no other
+integer solution,
+
+\[
+\begin{array}{c|c|c|c|c}
+\text{branch}&(|E_h|,|E_{-h}|)&hT&P_L&\text{exact-row energy}\\ \hline
+17A&(41,36)&5&4+k_L&1\\
+17B&(49,28)&21&4+k_L&32\\
+19A&(45,40)&5&4+k_L&1\\
+19C&(35,50)&-15&3+k_L&36.
+\end{array}                                        \tag{15.753.6}
+\]
+
+Thus no locally admissible row may choose an independent normalization.
+For all four branches the common difference-Radon Parseval identity is
+
+\[
+ \sum_{L,a>0}q_L(a)^2
+ =p|E(H)|+2(hT)^2-2\sum_LP_L^2+2pC,\qquad
+ C=\sum_\delta {m_\delta\choose2}\ge0.             \tag{15.753.7}
+\]
+
+Every row below is constrained by all translation-averaged middle-slice
+cuts. There are exactly \(698\) distinct cut rows at \(p=17\) and \(2338\)
+at \(p=19\). For each displayed finite maximum, an integral row attains it,
+and the same integer model with energy at least one larger is exactly
+infeasible under one-worker CP-SAT. Empty systems are replayed directly.
+
+In branch \(17B\), at least five exact literal directions force
+\(M_2=M_4=0\). Hard excess one is infeasible, so only the partitions
+\((2,2)\) and \((4)\) of the total excess four remain. The exact hard maxima
+are \(70,218\), and the opposite \(Q=3,4\) maxima are \(72,101\). After the
+known exact-row energies are removed from (15.753.7), the two comparisons
+are
+
+\[
+\begin{array}{c|c|c|c}
+\text{partition}&\text{Parseval lower bound}&\text{row upper bound}&\text{gap}\\ \hline
+(2,2)&1245+34C&817&428\\
+(4)&1197+34C&895&302.
+\end{array}                                        \tag{15.753.8}
+\]
+
+Thus branch \(17B\) is empty. In branch \(17A\), a \(Q=3\) opposite row has
+mean \(8\). For nonzero \(b\) this is below the phase-zero floor \(16\), and
+for \(b=0\) it is a nonzero integral lift below the sharp floor \(14\).
+Thus all nine opposite counts are \(Q=4\). The raw hard maxima for excess
+\(1,2,3,4\) are
+\(28,81,200,289\), and the raw opposite maximum is \(23\). They give strict
+gaps
+
+\[
+ 342,312,282,212,182,138                            \tag{15.753.9}
+\]
+
+for the first six partitions of five. For the last partition \((5)\), eight
+hard directions are exact XNOR rows. With
+\(S_j(L)=\epsilon_LM_j(L)\), where \(\epsilon_L=h\) on hard directions and
+\(\epsilon_L=-h\) on opposite directions, the binary quartic
+
+\[
+                         G(L)=hM_4(L)-M_2(L)^2      \tag{15.753.10}
+\]
+
+has eight distinct projective roots, hence is identically zero. The sign
+change on opposite rows is essential:
+
+\[
+ \text{hard}:\ S_4=S_2^2,\qquad
+ \text{opposite}:\ S_4=-S_2^2\pmod {17}.           \tag{15.753.11}
+\]
+
+Under (15.753.11), the hard excess-five maximum is \(384\) and the opposite
+\(Q=4\) maximum is \(11\). Consequently
+
+\[
+                         483<645+34C,               \tag{15.753.12}
+\]
+
+with gap \(162\). This closes branch \(17A\) and proves the \(p=17\) case.
+
+In branch \(19C\), at least five exact complement literals force
+\(M_2=M_4=0\). A \(Q=4\) opposite row has mean eight, below the nonzero-\(b\)
+phase-zero floor \(20\) and, when \(b=0\), below the sharp integral-lift
+floor \(16\). Thus all ten opposite rows have \(Q=5\). Such a row would satisfy
+
+\[
+ \sum_aq_a=10,\qquad \sum_a|q_a|\le80,\qquad
+ c_X\mathbin\cdot q\le114\quad(2338\text{ cut rows}),\qquad
+ M_2=M_4=0\pmod {19}.                              \tag{15.753.13}
+\]
+
+The exact integer system (15.753.13) is infeasible, closing branch \(19C\).
+Finally, in branch \(19A\), the same two-part floor argument excludes
+\(Q=3\), so all ten opposite counts equal four. The hard maxima for excess
+\(1,2,3,4,5\) are
+\(36,97,194,325,494\), and the opposite maximum is \(23\). The seven
+partitions of five give the strict Parseval gaps
+
+\[
+                 520,490,460,420,390,312,162.      \tag{15.753.14}
+\]
+
+Thus branch \(19A\) is empty as well. All branches in (15.753.4) have been
+excluded, proving (15.753.1). Together with Proposition 15.752,
+
+\[
+ \boxed{k=4p+8\text{ is impossible for every prime }p\ge17.} \tag{15.753.15}
+\]
+
+Among \(p\ge13\), this leaves \(p=13,k=60,u=6\) as the sole fifth-shell
+hole; the prior \(p\le11\) gate also remains. It does not close later shells,
+residual (ii) globally, E(1), or the original convergence problem. Evidence:
+`src/e1_gmin_m4_prop15753.py`,
+`tests/test_prop15753.py`, `evidence/e1_gmin_m4_prop15753.json`, and
+`evidence/NOTE_2026-09-01_P17_P19_FIFTH_SHELL_CLOSE.md`.
 
 ## Proposition 15.723 — paired-cube obstruction to middle floor-plus-two lifts
 

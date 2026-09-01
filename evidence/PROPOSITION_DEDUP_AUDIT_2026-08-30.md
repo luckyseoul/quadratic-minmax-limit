@@ -3,7 +3,7 @@
 **Date:** 2026-09-01
 
 **Scope:** Propositions 6.3--6.9, every assigned proposition through
-Proposition 15.751, the live predicate wiring, and the attack scripts present
+Proposition 15.753, the live predicate wiring, and the attack scripts present
 during the audit
 
 **Purpose:** prevent a reformulation, solver/backend change, longer timeout,
@@ -12,6 +12,29 @@ or finite-prime rerun from being mistaken for a new mathematical attack
 ## Verdict
 
 The duplication concern was correct.
+
+### Proposition 15.753: the p17/p19 fifth-shell endpoints are closed
+
+The exact floor ledger leaves only A/B at `p=17,k=76` and A/C at
+`p=19,k=84`. Common row-sum glue fixes every signed total and parallel
+normalization before optimization. Exact one-worker models using all 698 or
+2,338 translated cuts give strict common-Parseval gaps in every branch. The
+last p17-A partition uses the sign-correct opposite identity
+`S4=-S2^2`; the wrong plus sign is a rejected regression case. This is a
+narrow finite-prime aggregate certificate, not a graph/common-realization
+census. Do not rerun either endpoint.
+
+### Proposition 15.752: the fifth shell and a higher band are closed
+
+For every prime `p>=23`, no nonzero nonnegative integral quadratic on
+`J(p,(p+1)/2)` has scaled mass `4p E[B]=p+9`. Paired-cube height and the
+fixed four-bit influence certificate from 15.751 prove this uniformly; no
+prime, graph, orbit, slice, or residual-cell census is used. The isolated
+chart then closes `k=4p+8` for every `p>=23` and the contiguous band
+`4<=t<=(p-9)/2` for `p=1 mod 4` or `4<=t<=(p-7)/2` for `p=3 mod 4`.
+Do not census any row inside this band. The local threshold is real at
+`p=19`, so this local mechanism cannot reach the endpoint; Proposition
+15.753 later closes it by common-energy certificates.
 
 ### Proposition 15.751: generic `t=3` is closed; do not census it again
 
@@ -25,8 +48,9 @@ density. Four accelerators and an exact scalar replay agree on hash
 `63c9daf2b117b540a5199b1b007cb4e6997ba01704fbc6017efaaa9735859396`.
 Together with prior `p=13,17` certificates and branch-A/C arithmetic,
 `k=4p+6` is closed for every prime `p>=13`. Do not launch another generic
-`t=3` cell, graph, orbit, slice, or prime census. The live large-prime layers
-start at `t=4`; the global residual predicate remains False.
+`t=3` cell, graph, orbit, slice, or prime census. Proposition 15.752 later
+removes a contiguous subset of the `t>=4` layers; the global residual
+predicate remains False.
 
 ### Original-question correction and two-ray gate (Propositions 6.3--6.9)
 
@@ -74,9 +98,11 @@ and negative extrema and those of the order-`n` block. A Paley-Hadamard tile
 then proves the exact cross estimate
 `|x^T C y|<=4sqrt(q k_A k_B)+6n` and closes every pair with
 `k_A k_B<=n^2/100`. The remaining conjunction (6.42)--(6.43) is the exact
-two-state gate. A fixed-anchor signature refinement is authorized because it
-preserves the spectral core with only `O(n)` border; an enumerative pair
-census is still not authorized.
+two-state gate. Alternating paired states prove that fixed or
+Dini-admissibly mildly growing anchor refinement cannot empty this residue
+using the existing spectral bound. A close must correlate the actual
+bilinear value with the internal energies or replace the cross block; an
+enumerative pair census is not authorized.
 
 Proposition 6.9 retracts the claim, repeated in the 2026-08-29 cold notes,
 that the signed-Eulerian target remains viable at `c=3`. Symmetric conference
@@ -476,10 +502,11 @@ opposite coordinates have fixed sum `-24`, so equality in Cauchy makes
 are already impossible.  For `1^8 4`, the nonstar upper bound is `119+9*72=767`,
 contradicting its exact common-Radon energy `1211+34C>=1211`; the other two
 nonstar baselines are 1251 and 1287.
-This closes exactly `p=17,k=74`, not any `p>=17,t>=4` layer (beginning
-with `p=17,k>=76`). The branch-B `t=3` range formerly left here is closed
-later by 15.751. Residual (ii) and the limit remain open; Type I is closed by
-15.750.
+This closes exactly `p=17,k=74`. The branch-B `t=3` range formerly left here
+is closed later by 15.751, 15.752 later closes its displayed `p>=23`
+higher band, and 15.753 closes the p17/p19 fifth-shell endpoints. Layers
+beyond that band remain; residual (ii) and the limit stay open, while Type I
+is closed by 15.750.
 
 A twenty-seventh semantic check gives Proposition 15.744.  The complete
 `p=13,t=4` residue sieve leaves `u in {0,3,4,6}`.  In `u=3`, the hard
@@ -629,11 +656,11 @@ name until this file is checked first.
 
 - Propositions 15.1--15.82 are written directly in `solution.md` and related
   early modules.
-- There are 665 source-backed proposition modules from 15.83 through 15.750.
+- There are 668 source-backed proposition modules from 15.83 through 15.753.
 - The labels 15.537, 15.583, and 15.584 have no proposition module.  They are
   unassigned labels, not unreviewed propositions; later source headers mention
   those numbers only as historical range/state markers.
-- Therefore every assigned proposition through 15.750 was included in this
+- Therefore every assigned proposition through 15.753 was included in this
   audit.  The grouped ledger below is by shared mathematical route rather than
   a 736-row restatement of the assigned propositions.
 
@@ -644,10 +671,10 @@ The public theorem is gated consistently by the corrected global
 currently `False`. The historical bounded `True` is available only through
 `e1_bounded_residual_split_closed()` and is not a global theorem predicate.
 
-| unit | exact live content | status after audit of 15.751 |
+| unit | exact live content | status after audit of 15.753 |
 |---|---|---|
 | required bi-tight levels 2 and 3 | 15.720 degree congruence using 15.272/15.207 | **TRUE** |
-| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close the first three shells; 15.751 closes `k=4p+6` for every `p>=13`; 15.744--15.749 close `u=0,3,4` at `p=13,k=60`. The exact remainder includes critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers, every `p>=17,t>=4` layer (beginning with `p=17,k>=76`), and positive `p=7,z=7`. The global predicate stays false. |
+| residual (ii) | non-Walsh multi-level Max-minus for every even `k>=4p` | **OPEN** — 15.734--15.737 close the first three shells; 15.751 closes `k=4p+6` for every `p>=13`; 15.752 closes `k=4p+8` for every `p>=23` and its explicit contiguous band; 15.753 closes the p17/p19 fifth-shell endpoints; 15.744--15.749 close `u=0,3,4` at `p=13,k=60`. The exact remainder includes critical `p=5,7`, `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers, layers beyond 15.752's band, and positive `p=7,z=7`. The global predicate stays false. |
 | Type I | the multi-level `3A+B>0` bad case | **TRUE** (15.750) — isolated-chart rigidity and parity halving close every prime `p>=11`; exact integer Farkas identities close `p=5,7` |
 | Lemma D | every good-line triple and its Fejer two-plane amplitudes | **TRUE** (15.276) |
 
@@ -706,6 +733,8 @@ top-level front.
 | **15.749** | all 74 translated-cut inequalities, exact coordinate duals, and the `Q=4` moment intersection | **EXHAUSTIVE FINITE AGGREGATE CERTIFICATE AND PROVED BRANCH THEOREM.** The exact box contains 522 rows and 492 moment triples. Its 12-point intersection with each survivor evaluation alphabet has zero fourth moment, so five `Q=4` roots plus two literal roots force the nonzero hard quartic to vanish. This closes exactly `p=13,t=4,u=4`. |
 | **15.750** | isolated-chart rigidity, parity halving, and exact small-prime Farkas bases | **PROVED ALL-PRIME THEOREM.** Closes multi-level Type I for every prime `p>=5`. |
 | **15.751** | half-mean cube height theorem, corrected transposition influences, slice-to-cube symmetrization, and fixed four-bit catalog | **PROVED INFINITE-FAMILY THEOREM WITH FIXED EXHAUSTIVE CERTIFICATE.** Closes generic branch B for `p>=29` and hence `k=4p+6` for every prime `p>=13`. The global residual predicate stays false. |
+| **15.752** | scaled-mass `p+9` exclusion, paired-cube height, fixed four-bit influence catalog, and isolated-chart surplus | **PROVED INFINITE-FAMILY THEOREM WITH FIXED EXHAUSTIVE CERTIFICATE.** Closes `k=4p+8` for every prime `p>=23` and the stated contiguous higher-shell band. Proposition 15.753 later closes the `p=17,19` endpoints; `p=13` and layers beyond the band remain open. The global predicate stays false. |
+| **15.753** | endpoint hard-residue exhaustiveness, common row normalization, all translated cuts, and sign-correct quartic/Parseval gaps | **EXHAUSTIVE FINITE AGGREGATE CERTIFICATE AND PROVED ENDPOINT THEOREM.** Closes `p=17,k=76` and `p=19,k=84`; together with 15.752 the fifth shell is closed for every `p>=17`. The global residual predicate stays false. |
 
 ## Exact duplicated run
 
@@ -865,18 +894,21 @@ Before spending mesh/GPU time:
    isolated vertex to infinity; Propositions 15.734--15.737 already close
    every boundary in the first three shells for `p>=11`;
 4. do not reopen `k in {4p,4p+2,4p+4}` for `p>=11`, `k=4p+6` for
-   `p>=13`, `p=13,k=58`,
+   `p>=13`, the Proposition 15.752 band (including `k=4p+8` for `p>=23`),
+   `p=13,k=58`,
    `p=17,k=74`, or the `p=13,k=60` residues `u=0,3,4`: Proposition 15.742 closes the p13 t3 row by the exact
    six-dilate/common-energy contradiction, and Proposition 15.743 closes the
    p17 row by the 698-vector/common-Radon certificate. Propositions
    15.744--15.745 close the two p13 t4 residues after, respectively,
    rebuilding the H61 mass-14 premise and auditing the collision-one
    transverse signs, and 15.749 closes `u=4` by its exact translated-cut
-   moment intersection. The live residual ranges are critical `p=5,7`,
-   `p=11,k>=50`, `p=13,k=60,u=6` and later p13 layers, every
-   `p>=17,t>=4` layer (beginning with `p=17,k>=76`). Proposition 15.751
-   closes the former generic branch-B `t=3` range; no further cell, graph,
-   slice, or prime census there is authorized. Retain both 15.723
+   moment intersection, and 15.753 closes `p=17,k=76` and `p=19,k=84`.
+   The live residual ranges are critical `p=5,7`, `p=11,k>=50`,
+   `p=13,k=60,u=6` and later p13 layers, and layers beyond 15.752's band.
+   Propositions 15.751--15.753 close the former generic `t=3` range, the
+   displayed higher band, and both small fifth-shell endpoints; no further
+   cell, graph, slice, or prime census
+   there is authorized. Retain both 15.723
    floor-plus-two exceptions in any independent profile DP. Do not reopen the
    exceptional `p=13,t=3,u=3` row: 15.738--15.739 close it by an exact
    mass-14 catalog and quartic contradiction. Do not reopen the generic p13

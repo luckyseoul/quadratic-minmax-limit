@@ -36,14 +36,17 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
   equal-endpoint diamond for the all-Hadamard multiplier-2 construction;
   the hereditary endpoint conditions are automatic. Proposition 6.6 proves
   the diamond outside the explicit Hamming-central/joint-energy residue
-  (6.20), but does not close the ray. Proposition 6.7 gives an exact
+  (6.20), but does not close the ray. Central Paley conference maximizers
+  prove that those coarse residue data alone cannot close it. Proposition 6.7 gives an exact
   equal-endpoint tetrahedral frame for multiplier 3, with only a \(3n\)
   internal-edge error. Its single-skew form is an exact three-state diamond;
   two spectral shields are proved, but the unshielded complement remains
   open. Proposition 6.8 gives an independent `1:2` composition: its
   bi-balanced Hadamard cross block proves the exact two-state diamond when
   `k_A k_B<=n^2/100`, leaving only (6.42)--(6.43). Fixed finite anchor
-  refinement changes only the `O(n)` border. Proposition 6.9 proves that the
+  refinement changes only the `O(n)` border, but alternating paired states
+  prove that this refinement cannot empty the residual using the current
+  spectral bound. Proposition 6.9 proves that the
   former signed-Eulerian fallback fails for every fixed temperature `c>0`,
   including `c=3`; only a growing-temperature formulation remains logically
   possible.
@@ -55,7 +58,10 @@ Anything else — including “honest OPEN,” “structure shipped,” “censu
   closing the whole `k=4p` shell for every boundary and every `p>=13`.
   Propositions 15.735--15.737 extend the first-three-shell close to every
   `p>=11`; Proposition 15.751 closes the fourth shell `k=4p+6` for every
-  `p>=13` by a dimension-free height theorem and an influence-junta argument.
+  `p>=13`; Proposition 15.752 closes the fifth shell for every `p>=23`
+  plus its stated contiguous higher band; and Proposition 15.753 closes its
+  exceptional p17/p19 endpoints by exact common-energy certificates. Thus
+  the fifth shell is closed for every prime `p>=17`.
 - Exact Paley optimality is **false** (\(m_{10}=13<15\)). E(1) is asymptotic.
 
 There are now two honest routes.  The direct route to the original question
@@ -63,7 +69,7 @@ is the two-ray amplification theorem of Proposition 6.3 (or any other proof
 of convergence/non-existence).  The value-specific route to \(L=1/2\) is
 **E(1)** on \(n=p^2+1\).  On that optional Paley route, the live gate is the
 corrected dictionary returned by
-`src/e1_main_chain_status.py`; as of 2026-09-01 through Proposition 15.751 it
+`src/e1_main_chain_status.py`; as of 2026-09-01 through Proposition 15.753 it
 reads:
 
 1. **Required bi-tight levels 2 and 3:** TRUE by 15.720. The spectral floor,
@@ -75,10 +81,13 @@ reads:
    `u in {0,3,4,6}`; Propositions 15.744--15.745 close `u=3,0`, and
    Propositions 15.746--15.749 close `u=4`, leaving exactly `u=6`. The live
    remainder includes critical `p=5,7`, `p=11,k>=50`, that sole
-   `p=13,k=60` residue and later p13 layers,
-   every `p>=17,t>=4` layer (beginning with `p=17,k>=76`), and the positive
-   `p=7,z=7` subbranch. Proposition 15.751 closes generic branch B at
-   `p>=29,t=3`, hence the entire fourth shell for `p>=13`. Historical
+   `p=13,k=60` residue and later p13 layers, layers beyond Proposition
+   15.752's band, and the positive `p=7,z=7` subbranch. Proposition 15.751 closes generic
+   branch B at `p>=29,t=3`, hence the entire fourth shell for `p>=13`;
+   Proposition 15.752 closes the displayed higher band, and together with
+   Proposition 15.753's p17/p19 endpoints closes the fifth shell for every
+   `p>=17`.
+   Historical
    endpoint/profile artifacts are not live gates; only the lemmas and
    certificates explicitly retained by the dedup audit remain valid evidence.
    Read `evidence/PROPOSITION_DEDUP_AUDIT_2026-08-30.md` before reopening one.

@@ -1,0 +1,2609 @@
+{
+  "proposition": "15.753",
+  "title": "translated-cut energy closes the p=17,19 fifth-shell endpoints",
+  "result_class": "exhaustive finite aggregate certificate and proved endpoint theorem",
+  "changed_premise": "Proposition 15.752 closes the fifth shell for p>=23; this exact certificate handles its sharp exceptional endpoints p=17,19",
+  "endpoint_arithmetic": {
+    "17": {
+      "p": 17,
+      "layer_t": 4,
+      "original_k": 76,
+      "H_edge_count": 77,
+      "ambient_vertex_count": 290,
+      "guaranteed_isolated_vertices": 136,
+      "q": 8,
+      "m": 9,
+      "distance_bin_count": 8,
+      "hard_direction_count": 9,
+      "opposite_direction_count": 9,
+      "type_budget": 234,
+      "phase_one_mean_form": "a_d=2u+18*k_d",
+      "phase_one_quotient_sum": "sum k_d=m+t-u",
+      "maximum_low_phase_one_mean": 26,
+      "next_nonbaseline_phase_one_floor": 28,
+      "maximum_baseline_lift_excess": 10,
+      "sharp_integral_lift_floor": 14,
+      "least_nonzero_phase_zero_floor": 16,
+      "proved": true
+    },
+    "19": {
+      "p": 19,
+      "layer_t": 4,
+      "original_k": 84,
+      "H_edge_count": 85,
+      "ambient_vertex_count": 362,
+      "guaranteed_isolated_vertices": 192,
+      "q": 9,
+      "m": 10,
+      "distance_bin_count": 9,
+      "hard_direction_count": 10,
+      "opposite_direction_count": 10,
+      "type_budget": 280,
+      "phase_one_mean_form": "a_d=2u+20*k_d",
+      "phase_one_quotient_sum": "sum k_d=m+t-u",
+      "maximum_low_phase_one_mean": 28,
+      "next_nonbaseline_phase_one_floor": 38,
+      "maximum_baseline_lift_excess": 10,
+      "sharp_integral_lift_floor": 16,
+      "least_nonzero_phase_zero_floor": 20,
+      "proved": true
+    }
+  },
+  "translated_cut_catalogs": {
+    "17": {
+      "p": 17,
+      "slice_size": 9,
+      "middle_slice_point_count": 24310,
+      "distinct_translated_cut_vectors": 698,
+      "every_vector_sum": 72,
+      "catalog_sha256": "a8ac7349cb601db5163ef1526949587c766914d774fe26858fe93eac1d940708",
+      "proved": true
+    },
+    "19": {
+      "p": 19,
+      "slice_size": 10,
+      "middle_slice_point_count": 92378,
+      "distinct_translated_cut_vectors": 2338,
+      "every_vector_sum": 90,
+      "catalog_sha256": "5f07e9ced107e6dc1551b806043a92147c00d80eb009b70d0cbfd3ce9631c5b7",
+      "proved": true
+    }
+  },
+  "branch_ledgers": {
+    "p17": {
+      "hard_residue_exhaustiveness": {
+        "p": 17,
+        "layer_t": 4,
+        "u_0_through_t_rows": [
+          {
+            "u": 0,
+            "low_mean": 18,
+            "hypothetical_k_zero_mean": 0,
+            "least_phase_one_floor": 16,
+            "k_zero_forbidden": true,
+            "available_endpoint_cells_b_floor_excess": [
+              [
+                2,
+                16,
+                2
+              ],
+              [
+                16,
+                18,
+                0
+              ]
+            ],
+            "exact_survivors_b_floor": [
+              [
+                16,
+                18
+              ]
+            ],
+            "minimum_k_after_lift_sieve": 1,
+            "quotient_sum": 13,
+            "minimum_possible_quotient_sum": 9,
+            "excluded_by_quotient_sum": false,
+            "surviving_branch": "B_LITERAL"
+          },
+          {
+            "u": 1,
+            "low_mean": 20,
+            "hypothetical_k_zero_mean": 2,
+            "least_phase_one_floor": 16,
+            "k_zero_forbidden": true,
+            "available_endpoint_cells_b_floor_excess": [
+              [
+                2,
+                16,
+                4
+              ],
+              [
+                16,
+                18,
+                2
+              ]
+            ],
+            "exact_survivors_b_floor": [],
+            "minimum_k_after_lift_sieve": 2,
+            "quotient_sum": 12,
+            "minimum_possible_quotient_sum": 18,
+            "excluded_by_quotient_sum": true,
+            "surviving_branch": null
+          },
+          {
+            "u": 2,
+            "low_mean": 22,
+            "hypothetical_k_zero_mean": 4,
+            "least_phase_one_floor": 16,
+            "k_zero_forbidden": true,
+            "available_endpoint_cells_b_floor_excess": [
+              [
+                2,
+                16,
+                6
+              ],
+              [
+                16,
+                18,
+                4
+              ]
+            ],
+            "exact_survivors_b_floor": [],
+            "minimum_k_after_lift_sieve": 2,
+            "quotient_sum": 11,
+            "minimum_possible_quotient_sum": 18,
+            "excluded_by_quotient_sum": true,
+            "surviving_branch": null
+          },
+          {
+            "u": 3,
+            "low_mean": 24,
+            "hypothetical_k_zero_mean": 6,
+            "least_phase_one_floor": 16,
+            "k_zero_forbidden": true,
+            "available_endpoint_cells_b_floor_excess": [
+              [
+                2,
+                16,
+                8
+              ],
+              [
+                16,
+                18,
+                6
+              ]
+            ],
+            "exact_survivors_b_floor": [],
+            "minimum_k_after_lift_sieve": 2,
+            "quotient_sum": 10,
+            "minimum_possible_quotient_sum": 18,
+            "excluded_by_quotient_sum": true,
+            "surviving_branch": null
+          },
+          {
+            "u": 4,
+            "low_mean": 26,
+            "hypothetical_k_zero_mean": 8,
+            "least_phase_one_floor": 16,
+            "k_zero_forbidden": true,
+            "available_endpoint_cells_b_floor_excess": [
+              [
+                2,
+                16,
+                10
+              ],
+              [
+                16,
+                18,
+                8
+              ]
+            ],
+            "exact_survivors_b_floor": [],
+            "minimum_k_after_lift_sieve": 2,
+            "quotient_sum": 9,
+            "minimum_possible_quotient_sum": 18,
+            "excluded_by_quotient_sum": true,
+            "surviving_branch": null
+          }
+        ],
+        "intermediate_u_values": [
+          5,
+          6,
+          7
+        ],
+        "intermediate_u_rows": [
+          {
+            "u": 5,
+            "hypothetical_k_zero_mean": 10,
+            "least_phase_one_floor": 16,
+            "k_zero_forbidden": true,
+            "quotient_sum": 8,
+            "quotient_sum_less_than_direction_count": true
+          },
+          {
+            "u": 6,
+            "hypothetical_k_zero_mean": 12,
+            "least_phase_one_floor": 16,
+            "k_zero_forbidden": true,
+            "quotient_sum": 7,
+            "quotient_sum_less_than_direction_count": true
+          },
+          {
+            "u": 7,
+            "hypothetical_k_zero_mean": 14,
+            "least_phase_one_floor": 16,
+            "k_zero_forbidden": true,
+            "quotient_sum": 6,
+            "quotient_sum_less_than_direction_count": true
+          }
+        ],
+        "intermediate_u_impossible_reason": "k_d=0 would have mean 2u below the least phase-one floor; therefore all k_d>=1, but sum k_d=m+t-u<m",
+        "u_equals_m_minus_1_exact_cell_count_at_least": 4,
+        "u_equals_m_minus_1_endpoint_b_candidates": [
+          2
+        ],
+        "endpoint_candidate_branch_map": {
+          "2": "A_XNOR"
+        },
+        "equal_mean_endpoint_cells_cannot_mix": true,
+        "no_mixing_reason": "only b=2 attains the phase-one floor p-1",
+        "possible_branches": [
+          "A_XNOR",
+          "B_LITERAL"
+        ],
+        "proved": true
+      },
+      "possible_branches": [
+        "A_XNOR",
+        "B_LITERAL"
+      ],
+      "branch_A": {
+        "branch": "A_XNOR",
+        "common_normalization": {
+          "p": 17,
+          "branch": "A_XNOR",
+          "baseline_rule": "hard_b2",
+          "coefficient_offset": 4,
+          "feasible_baseline_P_rho_s_opposite_edges": [
+            [
+              4,
+              0,
+              4,
+              36
+            ]
+          ],
+          "hard_edge_count": 41,
+          "opposite_edge_count": 36,
+          "hT_from_edge_split": 5,
+          "local_unspecialized_sum_formula": "17*(P_L-3)-16-18*k_L",
+          "common_difference_sum_formula": "hT-P_L",
+          "opposite_difference_sum_formula": "-hT-Q_L",
+          "exact_baseline_row": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "exact_baseline_row_sum": 1,
+          "exact_baseline_row_energy": 1,
+          "exact_baseline_agrees_with_independent_edge_split": true,
+          "normalization_rows": [
+            {
+              "k": 0,
+              "matching_parallel_counts_in_full_range": [
+                4
+              ],
+              "forced_parallel_count": 4,
+              "local_sum": 1,
+              "common_sum": 1
+            },
+            {
+              "k": 1,
+              "matching_parallel_counts_in_full_range": [
+                5
+              ],
+              "forced_parallel_count": 5,
+              "local_sum": 0,
+              "common_sum": 0
+            },
+            {
+              "k": 2,
+              "matching_parallel_counts_in_full_range": [
+                6
+              ],
+              "forced_parallel_count": 6,
+              "local_sum": -1,
+              "common_sum": -1
+            },
+            {
+              "k": 3,
+              "matching_parallel_counts_in_full_range": [
+                7
+              ],
+              "forced_parallel_count": 7,
+              "local_sum": -2,
+              "common_sum": -2
+            },
+            {
+              "k": 4,
+              "matching_parallel_counts_in_full_range": [
+                8
+              ],
+              "forced_parallel_count": 8,
+              "local_sum": -3,
+              "common_sum": -3
+            },
+            {
+              "k": 5,
+              "matching_parallel_counts_in_full_range": [
+                9
+              ],
+              "forced_parallel_count": 9,
+              "local_sum": -4,
+              "common_sum": -4
+            }
+          ],
+          "forced_affine_normalization": "P_L=4+k_L",
+          "proved": true
+        },
+        "hard_edge_count": 41,
+        "opposite_edge_count": 36,
+        "hT": 5,
+        "hard_parallel_normalization": "P_L=4+k_L",
+        "hard_excess_sum": 5,
+        "opposite_Q3_mean_8_exclusion": {
+          "nonzero_b_floor": 16,
+          "b_zero_integral_lift_floor": 14,
+          "proved": true
+        },
+        "opposite_parallel_counts": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "difference_Radon_Parseval": "17*77+2*5^2-2*sum_L(P_L^2)+34*C",
+        "quartic_root_argument": {
+          "last_partition": [
+            5
+          ],
+          "exact_hard_XNOR_roots": 8,
+          "binary_quartic_degree": 4,
+          "root_count_forces_zero_polynomial": true,
+          "sign_regression": {
+            "global_quartic": "G=h*M4-M2^2",
+            "normalization": "S_j=h*M_j on hard and S_j=-h*M_j on opposite",
+            "hard_relation": "S4=S2^2 mod 17",
+            "opposite_relation": "S4=-S2^2 mod 17",
+            "correct_opposite_maximizer": [
+              -1,
+              -1,
+              -2,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "correct_opposite_energy": 11,
+            "wrong_plus_sign_witness": [
+              -2,
+              -2,
+              0,
+              -1,
+              -2,
+              0,
+              -1,
+              -1
+            ],
+            "wrong_plus_sign_energy": 15,
+            "wrong_plus_sign_witness_rejected_by_correct_relation": true,
+            "proved": true
+          }
+        },
+        "partition_ledgers": [
+          {
+            "excess_partition": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "hard_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "opposite_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "parallel_square_sum": 333,
+            "exact_XNOR_row_count": 4,
+            "exact_XNOR_row_energy_each": 1,
+            "nonexact_Parseval_lower": 689,
+            "collision_increment": "34*C, C>=0",
+            "row_energy_upper": 347,
+            "strict_gap_at_C_zero": 342,
+            "mechanism": "raw translated-cut row maxima",
+            "excluded": true
+          },
+          {
+            "excess_partition": [
+              2,
+              1,
+              1,
+              1
+            ],
+            "hard_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              5,
+              5,
+              5,
+              6
+            ],
+            "opposite_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "parallel_square_sum": 335,
+            "exact_XNOR_row_count": 5,
+            "exact_XNOR_row_energy_each": 1,
+            "nonexact_Parseval_lower": 684,
+            "collision_increment": "34*C, C>=0",
+            "row_energy_upper": 372,
+            "strict_gap_at_C_zero": 312,
+            "mechanism": "raw translated-cut row maxima",
+            "excluded": true
+          },
+          {
+            "excess_partition": [
+              2,
+              2,
+              1
+            ],
+            "hard_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              5,
+              6,
+              6
+            ],
+            "opposite_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "parallel_square_sum": 337,
+            "exact_XNOR_row_count": 6,
+            "exact_XNOR_row_energy_each": 1,
+            "nonexact_Parseval_lower": 679,
+            "collision_increment": "34*C, C>=0",
+            "row_energy_upper": 397,
+            "strict_gap_at_C_zero": 282,
+            "mechanism": "raw translated-cut row maxima",
+            "excluded": true
+          },
+          {
+            "excess_partition": [
+              3,
+              1,
+              1
+            ],
+            "hard_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              5,
+              5,
+              7
+            ],
+            "opposite_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "parallel_square_sum": 339,
+            "exact_XNOR_row_count": 6,
+            "exact_XNOR_row_energy_each": 1,
+            "nonexact_Parseval_lower": 675,
+            "collision_increment": "34*C, C>=0",
+            "row_energy_upper": 463,
+            "strict_gap_at_C_zero": 212,
+            "mechanism": "raw translated-cut row maxima",
+            "excluded": true
+          },
+          {
+            "excess_partition": [
+              3,
+              2
+            ],
+            "hard_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              6,
+              7
+            ],
+            "opposite_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "parallel_square_sum": 341,
+            "exact_XNOR_row_count": 7,
+            "exact_XNOR_row_energy_each": 1,
+            "nonexact_Parseval_lower": 670,
+            "collision_increment": "34*C, C>=0",
+            "row_energy_upper": 488,
+            "strict_gap_at_C_zero": 182,
+            "mechanism": "raw translated-cut row maxima",
+            "excluded": true
+          },
+          {
+            "excess_partition": [
+              4,
+              1
+            ],
+            "hard_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              5,
+              8
+            ],
+            "opposite_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "parallel_square_sum": 345,
+            "exact_XNOR_row_count": 7,
+            "exact_XNOR_row_energy_each": 1,
+            "nonexact_Parseval_lower": 662,
+            "collision_increment": "34*C, C>=0",
+            "row_energy_upper": 524,
+            "strict_gap_at_C_zero": 138,
+            "mechanism": "raw translated-cut row maxima",
+            "excluded": true
+          },
+          {
+            "excess_partition": [
+              5
+            ],
+            "hard_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              9
+            ],
+            "opposite_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "parallel_square_sum": 353,
+            "exact_XNOR_row_count": 8,
+            "exact_XNOR_row_energy_each": 1,
+            "nonexact_Parseval_lower": 645,
+            "collision_increment": "34*C, C>=0",
+            "row_energy_upper": 483,
+            "strict_gap_at_C_zero": 162,
+            "mechanism": "eight exact XNOR roots force G identically zero",
+            "excluded": true
+          }
+        ],
+        "excluded": true,
+        "proved": true
+      },
+      "branch_B": {
+        "branch": "B_LITERAL",
+        "common_normalization": {
+          "p": 17,
+          "branch": "B_LITERAL",
+          "baseline_rule": "p1_residue_zero_b_p_minus_1",
+          "coefficient_offset": 5,
+          "feasible_baseline_P_rho_s_opposite_edges": [
+            [
+              5,
+              0,
+              5,
+              28
+            ]
+          ],
+          "hard_edge_count": 49,
+          "opposite_edge_count": 28,
+          "hT_from_edge_split": 21,
+          "local_unspecialized_sum_formula": "17*(P_L-3)-0-18*k_L",
+          "common_difference_sum_formula": "hT-P_L",
+          "opposite_difference_sum_formula": "-hT-Q_L",
+          "exact_baseline_row": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "exact_baseline_row_sum": 16,
+          "exact_baseline_row_energy": 32,
+          "exact_baseline_agrees_with_independent_edge_split": true,
+          "normalization_rows": [
+            {
+              "k": 1,
+              "matching_parallel_counts_in_full_range": [
+                5
+              ],
+              "forced_parallel_count": 5,
+              "local_sum": 16,
+              "common_sum": 16
+            },
+            {
+              "k": 2,
+              "matching_parallel_counts_in_full_range": [
+                6
+              ],
+              "forced_parallel_count": 6,
+              "local_sum": 15,
+              "common_sum": 15
+            },
+            {
+              "k": 3,
+              "matching_parallel_counts_in_full_range": [
+                7
+              ],
+              "forced_parallel_count": 7,
+              "local_sum": 14,
+              "common_sum": 14
+            },
+            {
+              "k": 4,
+              "matching_parallel_counts_in_full_range": [
+                8
+              ],
+              "forced_parallel_count": 8,
+              "local_sum": 13,
+              "common_sum": 13
+            },
+            {
+              "k": 5,
+              "matching_parallel_counts_in_full_range": [
+                9
+              ],
+              "forced_parallel_count": 9,
+              "local_sum": 12,
+              "common_sum": 12
+            },
+            {
+              "k": 6,
+              "matching_parallel_counts_in_full_range": [
+                10
+              ],
+              "forced_parallel_count": 10,
+              "local_sum": 11,
+              "common_sum": 11
+            }
+          ],
+          "forced_affine_normalization": "P_L=4+k_L",
+          "proved": true
+        },
+        "hard_edge_count": 49,
+        "opposite_edge_count": 28,
+        "hT": 21,
+        "hard_parallel_normalization": "P_L=4+k_L",
+        "hard_excess_sum": 4,
+        "opposite_parallel_counts": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4
+        ],
+        "exact_literal_stars_at_least": 5,
+        "global_moments_forced": [
+          "M2=0",
+          "M4=0"
+        ],
+        "partitions_containing_excess_1_excluded_by_empty_row_model": true,
+        "remaining_partition_ledgers": [
+          {
+            "excess_partition": [
+              2,
+              2
+            ],
+            "hard_parallel_counts": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              7,
+              7
+            ],
+            "opposite_parallel_counts": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              4
+            ],
+            "parallel_square_sum": 361,
+            "exact_literal_star_count": 7,
+            "exact_literal_star_energy_each": 32,
+            "nonexact_Parseval_lower": 1245,
+            "collision_increment": "34*C, C>=0",
+            "row_energy_upper": 817,
+            "strict_gap_at_C_zero": 428,
+            "excluded": true
+          },
+          {
+            "excess_partition": [
+              4
+            ],
+            "hard_parallel_counts": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              9
+            ],
+            "opposite_parallel_counts": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              4
+            ],
+            "parallel_square_sum": 369,
+            "exact_literal_star_count": 8,
+            "exact_literal_star_energy_each": 32,
+            "nonexact_Parseval_lower": 1197,
+            "collision_increment": "34*C, C>=0",
+            "row_energy_upper": 895,
+            "strict_gap_at_C_zero": 302,
+            "excluded": true
+          }
+        ],
+        "excluded": true,
+        "proved": true
+      },
+      "p17_k76_closed": true
+    },
+    "p19": {
+      "hard_residue_exhaustiveness": {
+        "p": 19,
+        "layer_t": 4,
+        "u_0_through_t_rows": [
+          {
+            "u": 0,
+            "low_mean": 20,
+            "hypothetical_k_zero_mean": 0,
+            "least_phase_one_floor": 18,
+            "k_zero_forbidden": true,
+            "available_endpoint_cells_b_floor_excess": [
+              [
+                2,
+                18,
+                2
+              ],
+              [
+                18,
+                18,
+                2
+              ]
+            ],
+            "exact_survivors_b_floor": [],
+            "minimum_k_after_lift_sieve": 2,
+            "quotient_sum": 14,
+            "minimum_possible_quotient_sum": 20,
+            "excluded_by_quotient_sum": true,
+            "surviving_branch": null
+          },
+          {
+            "u": 1,
+            "low_mean": 22,
+            "hypothetical_k_zero_mean": 2,
+            "least_phase_one_floor": 18,
+            "k_zero_forbidden": true,
+            "available_endpoint_cells_b_floor_excess": [
+              [
+                2,
+                18,
+                4
+              ],
+              [
+                18,
+                18,
+                4
+              ]
+            ],
+            "exact_survivors_b_floor": [],
+            "minimum_k_after_lift_sieve": 2,
+            "quotient_sum": 13,
+            "minimum_possible_quotient_sum": 20,
+            "excluded_by_quotient_sum": true,
+            "surviving_branch": null
+          },
+          {
+            "u": 2,
+            "low_mean": 24,
+            "hypothetical_k_zero_mean": 4,
+            "least_phase_one_floor": 18,
+            "k_zero_forbidden": true,
+            "available_endpoint_cells_b_floor_excess": [
+              [
+                2,
+                18,
+                6
+              ],
+              [
+                18,
+                18,
+                6
+              ]
+            ],
+            "exact_survivors_b_floor": [],
+            "minimum_k_after_lift_sieve": 2,
+            "quotient_sum": 12,
+            "minimum_possible_quotient_sum": 20,
+            "excluded_by_quotient_sum": true,
+            "surviving_branch": null
+          },
+          {
+            "u": 3,
+            "low_mean": 26,
+            "hypothetical_k_zero_mean": 6,
+            "least_phase_one_floor": 18,
+            "k_zero_forbidden": true,
+            "available_endpoint_cells_b_floor_excess": [
+              [
+                2,
+                18,
+                8
+              ],
+              [
+                18,
+                18,
+                8
+              ]
+            ],
+            "exact_survivors_b_floor": [],
+            "minimum_k_after_lift_sieve": 2,
+            "quotient_sum": 11,
+            "minimum_possible_quotient_sum": 20,
+            "excluded_by_quotient_sum": true,
+            "surviving_branch": null
+          },
+          {
+            "u": 4,
+            "low_mean": 28,
+            "hypothetical_k_zero_mean": 8,
+            "least_phase_one_floor": 18,
+            "k_zero_forbidden": true,
+            "available_endpoint_cells_b_floor_excess": [
+              [
+                2,
+                18,
+                10
+              ],
+              [
+                18,
+                18,
+                10
+              ]
+            ],
+            "exact_survivors_b_floor": [],
+            "minimum_k_after_lift_sieve": 2,
+            "quotient_sum": 10,
+            "minimum_possible_quotient_sum": 20,
+            "excluded_by_quotient_sum": true,
+            "surviving_branch": null
+          }
+        ],
+        "intermediate_u_values": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "intermediate_u_rows": [
+          {
+            "u": 5,
+            "hypothetical_k_zero_mean": 10,
+            "least_phase_one_floor": 18,
+            "k_zero_forbidden": true,
+            "quotient_sum": 9,
+            "quotient_sum_less_than_direction_count": true
+          },
+          {
+            "u": 6,
+            "hypothetical_k_zero_mean": 12,
+            "least_phase_one_floor": 18,
+            "k_zero_forbidden": true,
+            "quotient_sum": 8,
+            "quotient_sum_less_than_direction_count": true
+          },
+          {
+            "u": 7,
+            "hypothetical_k_zero_mean": 14,
+            "least_phase_one_floor": 18,
+            "k_zero_forbidden": true,
+            "quotient_sum": 7,
+            "quotient_sum_less_than_direction_count": true
+          },
+          {
+            "u": 8,
+            "hypothetical_k_zero_mean": 16,
+            "least_phase_one_floor": 18,
+            "k_zero_forbidden": true,
+            "quotient_sum": 6,
+            "quotient_sum_less_than_direction_count": true
+          }
+        ],
+        "intermediate_u_impossible_reason": "k_d=0 would have mean 2u below the least phase-one floor; therefore all k_d>=1, but sum k_d=m+t-u<m",
+        "u_equals_m_minus_1_exact_cell_count_at_least": 5,
+        "u_equals_m_minus_1_endpoint_b_candidates": [
+          2,
+          18
+        ],
+        "endpoint_candidate_branch_map": {
+          "2": "A_XNOR",
+          "18": "C_COMPLEMENT_LITERAL"
+        },
+        "equal_mean_endpoint_cells_cannot_mix": true,
+        "no_mixing_reason": "the common parallel count cannot satisfy both coefficient congruences P=4 and P=3 mod 9",
+        "possible_branches": [
+          "A_XNOR",
+          "C_COMPLEMENT_LITERAL"
+        ],
+        "proved": true
+      },
+      "possible_branches": [
+        "A_XNOR",
+        "C_COMPLEMENT_LITERAL"
+      ],
+      "branch_A": {
+        "branch": "A_XNOR",
+        "common_normalization": {
+          "p": 19,
+          "branch": "A_XNOR",
+          "baseline_rule": "hard_b2",
+          "coefficient_offset": 4,
+          "feasible_baseline_P_rho_s_opposite_edges": [
+            [
+              4,
+              0,
+              4,
+              40
+            ]
+          ],
+          "hard_edge_count": 45,
+          "opposite_edge_count": 40,
+          "hT_from_edge_split": 5,
+          "local_unspecialized_sum_formula": "19*(P_L-3)-18-20*k_L",
+          "common_difference_sum_formula": "hT-P_L",
+          "opposite_difference_sum_formula": "-hT-Q_L",
+          "exact_baseline_row": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "exact_baseline_row_sum": 1,
+          "exact_baseline_row_energy": 1,
+          "exact_baseline_agrees_with_independent_edge_split": true,
+          "normalization_rows": [
+            {
+              "k": 0,
+              "matching_parallel_counts_in_full_range": [
+                4
+              ],
+              "forced_parallel_count": 4,
+              "local_sum": 1,
+              "common_sum": 1
+            },
+            {
+              "k": 1,
+              "matching_parallel_counts_in_full_range": [
+                5
+              ],
+              "forced_parallel_count": 5,
+              "local_sum": 0,
+              "common_sum": 0
+            },
+            {
+              "k": 2,
+              "matching_parallel_counts_in_full_range": [
+                6
+              ],
+              "forced_parallel_count": 6,
+              "local_sum": -1,
+              "common_sum": -1
+            },
+            {
+              "k": 3,
+              "matching_parallel_counts_in_full_range": [
+                7
+              ],
+              "forced_parallel_count": 7,
+              "local_sum": -2,
+              "common_sum": -2
+            },
+            {
+              "k": 4,
+              "matching_parallel_counts_in_full_range": [
+                8
+              ],
+              "forced_parallel_count": 8,
+              "local_sum": -3,
+              "common_sum": -3
+            },
+            {
+              "k": 5,
+              "matching_parallel_counts_in_full_range": [
+                9
+              ],
+              "forced_parallel_count": 9,
+              "local_sum": -4,
+              "common_sum": -4
+            }
+          ],
+          "forced_affine_normalization": "P_L=4+k_L",
+          "proved": true
+        },
+        "hard_edge_count": 45,
+        "opposite_edge_count": 40,
+        "hT": 5,
+        "hard_parallel_normalization": "P_L=4+k_L",
+        "hard_excess_sum": 5,
+        "opposite_Q3_mean_8_exclusion": {
+          "nonzero_b_floor": 20,
+          "b_zero_integral_lift_floor": 16,
+          "proved": true
+        },
+        "opposite_parallel_counts": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "difference_Radon_Parseval": "19*85+2*5^2-2*sum_L(P_L^2)+38*C",
+        "partition_ledgers": [
+          {
+            "excess_partition": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "hard_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "opposite_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "parallel_square_sum": 365,
+            "exact_XNOR_row_count": 5,
+            "exact_XNOR_row_energy_each": 1,
+            "nonexact_Parseval_lower": 930,
+            "collision_increment": "38*C, C>=0",
+            "row_energy_upper": 410,
+            "strict_gap_at_C_zero": 520,
+            "excluded": true
+          },
+          {
+            "excess_partition": [
+              2,
+              1,
+              1,
+              1
+            ],
+            "hard_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              5,
+              5,
+              5,
+              6
+            ],
+            "opposite_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "parallel_square_sum": 367,
+            "exact_XNOR_row_count": 6,
+            "exact_XNOR_row_energy_each": 1,
+            "nonexact_Parseval_lower": 925,
+            "collision_increment": "38*C, C>=0",
+            "row_energy_upper": 435,
+            "strict_gap_at_C_zero": 490,
+            "excluded": true
+          },
+          {
+            "excess_partition": [
+              2,
+              2,
+              1
+            ],
+            "hard_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              5,
+              6,
+              6
+            ],
+            "opposite_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "parallel_square_sum": 369,
+            "exact_XNOR_row_count": 7,
+            "exact_XNOR_row_energy_each": 1,
+            "nonexact_Parseval_lower": 920,
+            "collision_increment": "38*C, C>=0",
+            "row_energy_upper": 460,
+            "strict_gap_at_C_zero": 460,
+            "excluded": true
+          },
+          {
+            "excess_partition": [
+              3,
+              1,
+              1
+            ],
+            "hard_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              5,
+              5,
+              7
+            ],
+            "opposite_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "parallel_square_sum": 371,
+            "exact_XNOR_row_count": 7,
+            "exact_XNOR_row_energy_each": 1,
+            "nonexact_Parseval_lower": 916,
+            "collision_increment": "38*C, C>=0",
+            "row_energy_upper": 496,
+            "strict_gap_at_C_zero": 420,
+            "excluded": true
+          },
+          {
+            "excess_partition": [
+              3,
+              2
+            ],
+            "hard_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              6,
+              7
+            ],
+            "opposite_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "parallel_square_sum": 373,
+            "exact_XNOR_row_count": 8,
+            "exact_XNOR_row_energy_each": 1,
+            "nonexact_Parseval_lower": 911,
+            "collision_increment": "38*C, C>=0",
+            "row_energy_upper": 521,
+            "strict_gap_at_C_zero": 390,
+            "excluded": true
+          },
+          {
+            "excess_partition": [
+              4,
+              1
+            ],
+            "hard_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              5,
+              8
+            ],
+            "opposite_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "parallel_square_sum": 377,
+            "exact_XNOR_row_count": 8,
+            "exact_XNOR_row_energy_each": 1,
+            "nonexact_Parseval_lower": 903,
+            "collision_increment": "38*C, C>=0",
+            "row_energy_upper": 591,
+            "strict_gap_at_C_zero": 312,
+            "excluded": true
+          },
+          {
+            "excess_partition": [
+              5
+            ],
+            "hard_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              9
+            ],
+            "opposite_parallel_counts": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "parallel_square_sum": 385,
+            "exact_XNOR_row_count": 9,
+            "exact_XNOR_row_energy_each": 1,
+            "nonexact_Parseval_lower": 886,
+            "collision_increment": "38*C, C>=0",
+            "row_energy_upper": 724,
+            "strict_gap_at_C_zero": 162,
+            "excluded": true
+          }
+        ],
+        "excluded": true,
+        "proved": true
+      },
+      "branch_C": {
+        "branch": "C_COMPLEMENT_LITERAL",
+        "common_normalization": {
+          "p": 19,
+          "branch": "C_COMPLEMENT_LITERAL",
+          "baseline_rule": "p3_all_low_b_p_minus_1",
+          "coefficient_offset": 3,
+          "feasible_baseline_P_rho_s_opposite_edges": [
+            [
+              3,
+              0,
+              3,
+              50
+            ]
+          ],
+          "hard_edge_count": 35,
+          "opposite_edge_count": 50,
+          "hT_from_edge_split": -15,
+          "local_unspecialized_sum_formula": "19*(P_L-3)-18-20*k_L",
+          "common_difference_sum_formula": "hT-P_L",
+          "opposite_difference_sum_formula": "-hT-Q_L",
+          "exact_baseline_row": [
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2,
+            -2
+          ],
+          "exact_baseline_row_sum": -18,
+          "exact_baseline_row_energy": 36,
+          "exact_baseline_agrees_with_independent_edge_split": true,
+          "normalization_rows": [
+            {
+              "k": 0,
+              "matching_parallel_counts_in_full_range": [
+                3
+              ],
+              "forced_parallel_count": 3,
+              "local_sum": -18,
+              "common_sum": -18
+            },
+            {
+              "k": 1,
+              "matching_parallel_counts_in_full_range": [
+                4
+              ],
+              "forced_parallel_count": 4,
+              "local_sum": -19,
+              "common_sum": -19
+            },
+            {
+              "k": 2,
+              "matching_parallel_counts_in_full_range": [
+                5
+              ],
+              "forced_parallel_count": 5,
+              "local_sum": -20,
+              "common_sum": -20
+            },
+            {
+              "k": 3,
+              "matching_parallel_counts_in_full_range": [
+                6
+              ],
+              "forced_parallel_count": 6,
+              "local_sum": -21,
+              "common_sum": -21
+            },
+            {
+              "k": 4,
+              "matching_parallel_counts_in_full_range": [
+                7
+              ],
+              "forced_parallel_count": 7,
+              "local_sum": -22,
+              "common_sum": -22
+            },
+            {
+              "k": 5,
+              "matching_parallel_counts_in_full_range": [
+                8
+              ],
+              "forced_parallel_count": 8,
+              "local_sum": -23,
+              "common_sum": -23
+            }
+          ],
+          "forced_affine_normalization": "P_L=3+k_L",
+          "proved": true
+        },
+        "hard_edge_count": 35,
+        "opposite_edge_count": 50,
+        "hT": -15,
+        "hard_parallel_normalization": "P_L=3+k_L",
+        "hard_excess_sum": 5,
+        "opposite_Q4_mean_8_exclusion": {
+          "nonzero_b_floor": 20,
+          "b_zero_integral_lift_floor": 16,
+          "proved": true
+        },
+        "opposite_parallel_counts": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "exact_complement_literal_stars_at_least": 5,
+        "global_moments_forced": [
+          "M2=0",
+          "M4=0"
+        ],
+        "opposite_Q5_row_constraints": {
+          "sum": 10,
+          "l1_bound": 80,
+          "translated_cut_upper": 114,
+          "translated_cut_count": 2338,
+          "moment_relation": "zero"
+        },
+        "opposite_Q5_row_system_infeasible": true,
+        "excluded": true,
+        "proved": true
+      },
+      "p19_k84_closed": true
+    },
+    "proved": true
+  },
+  "exact_one_worker_row_replays": {
+    "p17_A_hard_e1_raw": {
+      "spec": {
+        "name": "p17_A_hard_e1_raw",
+        "p": 17,
+        "branch": "A_XNOR",
+        "direction": "hard",
+        "row_kind": "excess_1",
+        "total": 0,
+        "l1_bound": 72,
+        "cut_upper": 17,
+        "moment_relation": "none",
+        "expected_energy": 28,
+        "witness": [
+          -1,
+          0,
+          3,
+          -2,
+          0,
+          2,
+          -3,
+          1
+        ]
+      },
+      "claim": "maximum energy exactly 28",
+      "explicit_maximizer": {
+        "row": [
+          -1,
+          0,
+          3,
+          -2,
+          0,
+          2,
+          -3,
+          1
+        ],
+        "sum": 0,
+        "l1": 12,
+        "energy": 28,
+        "maximum_translated_cut": 16,
+        "M2_mod_p": 0,
+        "M4_mod_p": 14,
+        "moment_relation": "none",
+        "proved": true
+      },
+      "proof_model": "base constraints plus energy>=29",
+      "model_proto_sha256": "778938c11bb01060dae31c63c7aad01c5a570e97b2a5375aeda484d07f45e812",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    },
+    "p17_A_hard_e2_raw": {
+      "spec": {
+        "name": "p17_A_hard_e2_raw",
+        "p": 17,
+        "branch": "A_XNOR",
+        "direction": "hard",
+        "row_kind": "excess_2",
+        "total": -1,
+        "l1_bound": 71,
+        "cut_upper": 17,
+        "moment_relation": "none",
+        "expected_energy": 81,
+        "witness": [
+          -4,
+          5,
+          -4,
+          3,
+          -3,
+          2,
+          -1,
+          1
+        ]
+      },
+      "claim": "maximum energy exactly 81",
+      "explicit_maximizer": {
+        "row": [
+          -4,
+          5,
+          -4,
+          3,
+          -3,
+          2,
+          -1,
+          1
+        ],
+        "sum": -1,
+        "l1": 23,
+        "energy": 81,
+        "maximum_translated_cut": 16,
+        "M2_mod_p": 6,
+        "M4_mod_p": 8,
+        "moment_relation": "none",
+        "proved": true
+      },
+      "proof_model": "base constraints plus energy>=82",
+      "model_proto_sha256": "53ca2165bad83ade6c37ebbc19c14348153bb9d5f06a043c6d16830060e62356",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    },
+    "p17_A_hard_e3_raw": {
+      "spec": {
+        "name": "p17_A_hard_e3_raw",
+        "p": 17,
+        "branch": "A_XNOR",
+        "direction": "hard",
+        "row_kind": "excess_3",
+        "total": -2,
+        "l1_bound": 70,
+        "cut_upper": 17,
+        "moment_relation": "none",
+        "expected_energy": 200,
+        "witness": [
+          1,
+          -7,
+          -2,
+          7,
+          3,
+          -6,
+          -4,
+          6
+        ]
+      },
+      "claim": "maximum energy exactly 200",
+      "explicit_maximizer": {
+        "row": [
+          1,
+          -7,
+          -2,
+          7,
+          3,
+          -6,
+          -4,
+          6
+        ],
+        "sum": -2,
+        "l1": 36,
+        "energy": 200,
+        "maximum_translated_cut": 16,
+        "M2_mod_p": 12,
+        "M4_mod_p": 16,
+        "moment_relation": "none",
+        "proved": true
+      },
+      "proof_model": "base constraints plus energy>=201",
+      "model_proto_sha256": "d164dec4062b2f49e8dd7a97a7ab31bb541b1e9de30373602be65ab2f0f1e330",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    },
+    "p17_A_hard_e4_raw": {
+      "spec": {
+        "name": "p17_A_hard_e4_raw",
+        "p": 17,
+        "branch": "A_XNOR",
+        "direction": "hard",
+        "row_kind": "excess_4",
+        "total": -3,
+        "l1_bound": 69,
+        "cut_upper": 17,
+        "moment_relation": "none",
+        "expected_energy": 289,
+        "witness": [
+          -5,
+          -2,
+          8,
+          -7,
+          1,
+          7,
+          -9,
+          4
+        ]
+      },
+      "claim": "maximum energy exactly 289",
+      "explicit_maximizer": {
+        "row": [
+          -5,
+          -2,
+          8,
+          -7,
+          1,
+          7,
+          -9,
+          4
+        ],
+        "sum": -3,
+        "l1": 43,
+        "energy": 289,
+        "maximum_translated_cut": 16,
+        "M2_mod_p": 5,
+        "M4_mod_p": 10,
+        "moment_relation": "none",
+        "proved": true
+      },
+      "proof_model": "base constraints plus energy>=290",
+      "model_proto_sha256": "3c7085ab3885332d7b754f18d065d262daf4e7abea7bc26fad98532c6d8dfd54",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    },
+    "p17_A_opposite_Q4_raw": {
+      "spec": {
+        "name": "p17_A_opposite_Q4_raw",
+        "p": 17,
+        "branch": "A_XNOR",
+        "direction": "opposite",
+        "row_kind": "Q4",
+        "total": -9,
+        "l1_bound": 73,
+        "cut_upper": -68,
+        "moment_relation": "none",
+        "expected_energy": 23,
+        "witness": [
+          -2,
+          -2,
+          0,
+          0,
+          -3,
+          -1,
+          1,
+          -2
+        ]
+      },
+      "claim": "maximum energy exactly 23",
+      "explicit_maximizer": {
+        "row": [
+          -2,
+          -2,
+          0,
+          0,
+          -3,
+          -1,
+          1,
+          -2
+        ],
+        "sum": -9,
+        "l1": 11,
+        "energy": 23,
+        "maximum_translated_cut": -68,
+        "M2_mod_p": 4,
+        "M4_mod_p": 14,
+        "moment_relation": "none",
+        "proved": true
+      },
+      "proof_model": "base constraints plus energy>=24",
+      "model_proto_sha256": "d3ec28dfe0c80b1d06e17d9bacd1002e9c267e3db20285742f60f037082e8dc4",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    },
+    "p17_A_hard_e5_quartic": {
+      "spec": {
+        "name": "p17_A_hard_e5_quartic",
+        "p": 17,
+        "branch": "A_XNOR",
+        "direction": "hard",
+        "row_kind": "excess_5",
+        "total": -4,
+        "l1_bound": 68,
+        "cut_upper": 17,
+        "moment_relation": "hard_quartic",
+        "expected_energy": 384,
+        "witness": [
+          0,
+          -10,
+          -2,
+          10,
+          4,
+          -8,
+          -6,
+          8
+        ]
+      },
+      "claim": "maximum energy exactly 384",
+      "explicit_maximizer": {
+        "row": [
+          0,
+          -10,
+          -2,
+          10,
+          4,
+          -8,
+          -6,
+          8
+        ],
+        "sum": -4,
+        "l1": 48,
+        "energy": 384,
+        "maximum_translated_cut": 16,
+        "M2_mod_p": 13,
+        "M4_mod_p": 16,
+        "moment_relation": "hard_quartic",
+        "proved": true
+      },
+      "proof_model": "base constraints plus energy>=385",
+      "model_proto_sha256": "e496679a90d19409995f373c299bbaf019a4db95c4c54916f62267c642536988",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    },
+    "p17_A_opposite_Q4_quartic": {
+      "spec": {
+        "name": "p17_A_opposite_Q4_quartic",
+        "p": 17,
+        "branch": "A_XNOR",
+        "direction": "opposite",
+        "row_kind": "Q4",
+        "total": -9,
+        "l1_bound": 73,
+        "cut_upper": -68,
+        "moment_relation": "opposite_quartic",
+        "expected_energy": 11,
+        "witness": [
+          -1,
+          -1,
+          -2,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "claim": "maximum energy exactly 11",
+      "explicit_maximizer": {
+        "row": [
+          -1,
+          -1,
+          -2,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "sum": -9,
+        "l1": 9,
+        "energy": 11,
+        "maximum_translated_cut": -74,
+        "M2_mod_p": 8,
+        "M4_mod_p": 4,
+        "moment_relation": "opposite_quartic",
+        "proved": true
+      },
+      "proof_model": "base constraints plus energy>=12",
+      "model_proto_sha256": "ab4bff24897ae9e8619e4e103da4abd197d349d354e628af6a1e70473c5a5d7a",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    },
+    "p17_B_hard_e1_zero": {
+      "spec": {
+        "name": "p17_B_hard_e1_zero",
+        "p": 17,
+        "branch": "B_LITERAL",
+        "direction": "hard",
+        "row_kind": "excess_1",
+        "total": 15,
+        "l1_bound": 71,
+        "cut_upper": 153,
+        "moment_relation": "zero",
+        "expected_energy": null,
+        "witness": null
+      },
+      "claim": "row system infeasible",
+      "explicit_maximizer": null,
+      "proof_model": "base constraints",
+      "model_proto_sha256": "8ae9786ea62c610e9e539c1a9e055646bac832257ce1e24a3fb7011b86fc6965",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    },
+    "p17_B_hard_e2_zero": {
+      "spec": {
+        "name": "p17_B_hard_e2_zero",
+        "p": 17,
+        "branch": "B_LITERAL",
+        "direction": "hard",
+        "row_kind": "excess_2",
+        "total": 14,
+        "l1_bound": 70,
+        "cut_upper": 153,
+        "moment_relation": "zero",
+        "expected_energy": 70,
+        "witness": [
+          2,
+          -1,
+          1,
+          5,
+          3,
+          -2,
+          1,
+          5
+        ]
+      },
+      "claim": "maximum energy exactly 70",
+      "explicit_maximizer": {
+        "row": [
+          2,
+          -1,
+          1,
+          5,
+          3,
+          -2,
+          1,
+          5
+        ],
+        "sum": 14,
+        "l1": 20,
+        "energy": 70,
+        "maximum_translated_cut": 152,
+        "M2_mod_p": 0,
+        "M4_mod_p": 0,
+        "moment_relation": "zero",
+        "proved": true
+      },
+      "proof_model": "base constraints plus energy>=71",
+      "model_proto_sha256": "e473bd51a817bf74b2a5fb503276f40c6e4ed896f63846d631321a883906348d",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    },
+    "p17_B_hard_e4_zero": {
+      "spec": {
+        "name": "p17_B_hard_e4_zero",
+        "p": 17,
+        "branch": "B_LITERAL",
+        "direction": "hard",
+        "row_kind": "excess_4",
+        "total": 12,
+        "l1_bound": 68,
+        "cut_upper": 153,
+        "moment_relation": "zero",
+        "expected_energy": 218,
+        "witness": [
+          3,
+          -5,
+          1,
+          8,
+          6,
+          -5,
+          -3,
+          7
+        ]
+      },
+      "claim": "maximum energy exactly 218",
+      "explicit_maximizer": {
+        "row": [
+          3,
+          -5,
+          1,
+          8,
+          6,
+          -5,
+          -3,
+          7
+        ],
+        "sum": 12,
+        "l1": 38,
+        "energy": 218,
+        "maximum_translated_cut": 152,
+        "M2_mod_p": 0,
+        "M4_mod_p": 0,
+        "moment_relation": "zero",
+        "proved": true
+      },
+      "proof_model": "base constraints plus energy>=219",
+      "model_proto_sha256": "ee4ac02a98eaa2941f83c7ae13b7bcc1ad6cb200a3113134f9ad0904cc150753",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    },
+    "p17_B_opposite_Q3_zero": {
+      "spec": {
+        "name": "p17_B_opposite_Q3_zero",
+        "p": 17,
+        "branch": "B_LITERAL",
+        "direction": "opposite",
+        "row_kind": "Q3",
+        "total": -24,
+        "l1_bound": 74,
+        "cut_upper": -204,
+        "moment_relation": "zero",
+        "expected_energy": 72,
+        "witness": [
+          -3,
+          -3,
+          -3,
+          -3,
+          -3,
+          -3,
+          -3,
+          -3
+        ]
+      },
+      "claim": "maximum energy exactly 72",
+      "explicit_maximizer": {
+        "row": [
+          -3,
+          -3,
+          -3,
+          -3,
+          -3,
+          -3,
+          -3,
+          -3
+        ],
+        "sum": -24,
+        "l1": 24,
+        "energy": 72,
+        "maximum_translated_cut": -216,
+        "M2_mod_p": 0,
+        "M4_mod_p": 0,
+        "moment_relation": "zero",
+        "proved": true
+      },
+      "proof_model": "base constraints plus energy>=73",
+      "model_proto_sha256": "4550268140f29c1006a5c7321d00a6eea901fad6c26b56c2851d8287bf216341",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    },
+    "p17_B_opposite_Q4_zero": {
+      "spec": {
+        "name": "p17_B_opposite_Q4_zero",
+        "p": 17,
+        "branch": "B_LITERAL",
+        "direction": "opposite",
+        "row_kind": "Q4",
+        "total": -25,
+        "l1_bound": 73,
+        "cut_upper": -204,
+        "moment_relation": "zero",
+        "expected_energy": 101,
+        "witness": [
+          -6,
+          -1,
+          -5,
+          -1,
+          -3,
+          -3,
+          -4,
+          -2
+        ]
+      },
+      "claim": "maximum energy exactly 101",
+      "explicit_maximizer": {
+        "row": [
+          -6,
+          -1,
+          -5,
+          -1,
+          -3,
+          -3,
+          -4,
+          -2
+        ],
+        "sum": -25,
+        "l1": 25,
+        "energy": 101,
+        "maximum_translated_cut": -204,
+        "M2_mod_p": 0,
+        "M4_mod_p": 0,
+        "moment_relation": "zero",
+        "proved": true
+      },
+      "proof_model": "base constraints plus energy>=102",
+      "model_proto_sha256": "b52cbec1904e17af4223deb9d15db238d902b55c0b61208edb5a2d245dd78155",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    },
+    "p19_A_hard_e1_raw": {
+      "spec": {
+        "name": "p19_A_hard_e1_raw",
+        "p": 19,
+        "branch": "A_XNOR",
+        "direction": "hard",
+        "row_kind": "excess_1",
+        "total": 0,
+        "l1_bound": 80,
+        "cut_upper": 19,
+        "moment_relation": "none",
+        "expected_energy": 36,
+        "witness": [
+          0,
+          -3,
+          1,
+          3,
+          -1,
+          -2,
+          2,
+          2,
+          -2
+        ]
+      },
+      "claim": "maximum energy exactly 36",
+      "explicit_maximizer": {
+        "row": [
+          0,
+          -3,
+          1,
+          3,
+          -1,
+          -2,
+          2,
+          2,
+          -2
+        ],
+        "sum": 0,
+        "l1": 16,
+        "energy": 36,
+        "maximum_translated_cut": 18,
+        "M2_mod_p": 12,
+        "M4_mod_p": 2,
+        "moment_relation": "none",
+        "proved": true
+      },
+      "proof_model": "base constraints plus energy>=37",
+      "model_proto_sha256": "e2d12835cbf1c265cc17be462f5bbf3f0ba48aa4c1f10ad7cb2388bab22be299",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    },
+    "p19_A_hard_e2_raw": {
+      "spec": {
+        "name": "p19_A_hard_e2_raw",
+        "p": 19,
+        "branch": "A_XNOR",
+        "direction": "hard",
+        "row_kind": "excess_2",
+        "total": -1,
+        "l1_bound": 79,
+        "cut_upper": 19,
+        "moment_relation": "none",
+        "expected_energy": 97,
+        "witness": [
+          4,
+          1,
+          -2,
+          -4,
+          -4,
+          -3,
+          -1,
+          3,
+          5
+        ]
+      },
+      "claim": "maximum energy exactly 97",
+      "explicit_maximizer": {
+        "row": [
+          4,
+          1,
+          -2,
+          -4,
+          -4,
+          -3,
+          -1,
+          3,
+          5
+        ],
+        "sum": -1,
+        "l1": 27,
+        "energy": 97,
+        "maximum_translated_cut": 18,
+        "M2_mod_p": 0,
+        "M4_mod_p": 7,
+        "moment_relation": "none",
+        "proved": true
+      },
+      "proof_model": "base constraints plus energy>=98",
+      "model_proto_sha256": "acbf141968349ea4c7eccba69647c7f72eab2048b62cd420cd035f5e3f8b584b",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    },
+    "p19_A_hard_e3_raw": {
+      "spec": {
+        "name": "p19_A_hard_e3_raw",
+        "p": 19,
+        "branch": "A_XNOR",
+        "direction": "hard",
+        "row_kind": "excess_3",
+        "total": -2,
+        "l1_bound": 78,
+        "cut_upper": 19,
+        "moment_relation": "none",
+        "expected_energy": 194,
+        "witness": [
+          -5,
+          4,
+          -1,
+          -3,
+          5,
+          -7,
+          7,
+          -4,
+          2
+        ]
+      },
+      "claim": "maximum energy exactly 194",
+      "explicit_maximizer": {
+        "row": [
+          -5,
+          4,
+          -1,
+          -3,
+          5,
+          -7,
+          7,
+          -4,
+          2
+        ],
+        "sum": -2,
+        "l1": 38,
+        "energy": 194,
+        "maximum_translated_cut": 18,
+        "M2_mod_p": 0,
+        "M4_mod_p": 6,
+        "moment_relation": "none",
+        "proved": true
+      },
+      "proof_model": "base constraints plus energy>=195",
+      "model_proto_sha256": "4e4ab3d16cb48496c67c4ee9a4ca1575ad0d2a5b41136d84089b76c5cbbf14c6",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    },
+    "p19_A_hard_e4_raw": {
+      "spec": {
+        "name": "p19_A_hard_e4_raw",
+        "p": 19,
+        "branch": "A_XNOR",
+        "direction": "hard",
+        "row_kind": "excess_4",
+        "total": -3,
+        "l1_bound": 77,
+        "cut_upper": 19,
+        "moment_relation": "none",
+        "expected_energy": 325,
+        "witness": [
+          9,
+          7,
+          5,
+          2,
+          -1,
+          -4,
+          -6,
+          -7,
+          -8
+        ]
+      },
+      "claim": "maximum energy exactly 325",
+      "explicit_maximizer": {
+        "row": [
+          9,
+          7,
+          5,
+          2,
+          -1,
+          -4,
+          -6,
+          -7,
+          -8
+        ],
+        "sum": -3,
+        "l1": 49,
+        "energy": 325,
+        "maximum_translated_cut": 18,
+        "M2_mod_p": 18,
+        "M4_mod_p": 2,
+        "moment_relation": "none",
+        "proved": true
+      },
+      "proof_model": "base constraints plus energy>=326",
+      "model_proto_sha256": "db5bf5af6429b2cf90344fc7b7cac12d682fd49f62b9be0260cb8edef5ccec32",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    },
+    "p19_A_hard_e5_raw": {
+      "spec": {
+        "name": "p19_A_hard_e5_raw",
+        "p": 19,
+        "branch": "A_XNOR",
+        "direction": "hard",
+        "row_kind": "excess_5",
+        "total": -4,
+        "l1_bound": 76,
+        "cut_upper": 19,
+        "moment_relation": "none",
+        "expected_energy": 494,
+        "witness": [
+          -1,
+          -11,
+          3,
+          10,
+          -4,
+          -9,
+          6,
+          9,
+          -7
+        ]
+      },
+      "claim": "maximum energy exactly 494",
+      "explicit_maximizer": {
+        "row": [
+          -1,
+          -11,
+          3,
+          10,
+          -4,
+          -9,
+          6,
+          9,
+          -7
+        ],
+        "sum": -4,
+        "l1": 60,
+        "energy": 494,
+        "maximum_translated_cut": 18,
+        "M2_mod_p": 2,
+        "M4_mod_p": 18,
+        "moment_relation": "none",
+        "proved": true
+      },
+      "proof_model": "base constraints plus energy>=495",
+      "model_proto_sha256": "7fcab752f7cd14cd3bba1887db971863e1f7aa35f83c0a1ad45841436b9028be",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    },
+    "p19_A_opposite_Q4_raw": {
+      "spec": {
+        "name": "p19_A_opposite_Q4_raw",
+        "p": 19,
+        "branch": "A_XNOR",
+        "direction": "opposite",
+        "row_kind": "Q4",
+        "total": -9,
+        "l1_bound": 81,
+        "cut_upper": -76,
+        "moment_relation": "none",
+        "expected_energy": 23,
+        "witness": [
+          -2,
+          0,
+          -1,
+          -2,
+          0,
+          -3,
+          1,
+          -2,
+          0
+        ]
+      },
+      "claim": "maximum energy exactly 23",
+      "explicit_maximizer": {
+        "row": [
+          -2,
+          0,
+          -1,
+          -2,
+          0,
+          -3,
+          1,
+          -2,
+          0
+        ],
+        "sum": -9,
+        "l1": 11,
+        "energy": 23,
+        "maximum_translated_cut": -76,
+        "M2_mod_p": 17,
+        "M4_mod_p": 5,
+        "moment_relation": "none",
+        "proved": true
+      },
+      "proof_model": "base constraints plus energy>=24",
+      "model_proto_sha256": "60d9568c469bcf3f78041b7f6cd924ab7d0a1f337659fe1825d3238d013f84f1",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    },
+    "p19_C_opposite_Q5_zero": {
+      "spec": {
+        "name": "p19_C_opposite_Q5_zero",
+        "p": 19,
+        "branch": "C_COMPLEMENT_LITERAL",
+        "direction": "opposite",
+        "row_kind": "Q5",
+        "total": 10,
+        "l1_bound": 80,
+        "cut_upper": 114,
+        "moment_relation": "zero",
+        "expected_energy": null,
+        "witness": null
+      },
+      "claim": "row system infeasible",
+      "explicit_maximizer": null,
+      "proof_model": "base constraints",
+      "model_proto_sha256": "7e150acc33811331070641a52c30b82e82f81e81b8683b9f7d84619dc0c0c595",
+      "solver": "OR-Tools CP-SAT",
+      "ortools_version": "9.15.6755",
+      "num_search_workers": 1,
+      "random_seed": 0,
+      "status": "INFEASIBLE",
+      "proved": true
+    }
+  },
+  "all_row_models_replayed": true,
+  "independent_row_models_run_concurrently": true,
+  "maximum_concurrent_row_models": 19,
+  "certificate_manifest": {
+    "cut_catalog_sha256": {
+      "17": "a8ac7349cb601db5163ef1526949587c766914d774fe26858fe93eac1d940708",
+      "19": "5f07e9ced107e6dc1551b806043a92147c00d80eb009b70d0cbfd3ce9631c5b7"
+    },
+    "row_spec_sha256": "8dc98fba119e0730a4641e4f103538b3f64e3beda598460cf2461bc9f24dd49d",
+    "row_model_proto_sha256": {
+      "p17_A_hard_e1_raw": "778938c11bb01060dae31c63c7aad01c5a570e97b2a5375aeda484d07f45e812",
+      "p17_A_hard_e2_raw": "53ca2165bad83ade6c37ebbc19c14348153bb9d5f06a043c6d16830060e62356",
+      "p17_A_hard_e3_raw": "d164dec4062b2f49e8dd7a97a7ab31bb541b1e9de30373602be65ab2f0f1e330",
+      "p17_A_hard_e4_raw": "3c7085ab3885332d7b754f18d065d262daf4e7abea7bc26fad98532c6d8dfd54",
+      "p17_A_opposite_Q4_raw": "d3ec28dfe0c80b1d06e17d9bacd1002e9c267e3db20285742f60f037082e8dc4",
+      "p17_A_hard_e5_quartic": "e496679a90d19409995f373c299bbaf019a4db95c4c54916f62267c642536988",
+      "p17_A_opposite_Q4_quartic": "ab4bff24897ae9e8619e4e103da4abd197d349d354e628af6a1e70473c5a5d7a",
+      "p17_B_hard_e1_zero": "8ae9786ea62c610e9e539c1a9e055646bac832257ce1e24a3fb7011b86fc6965",
+      "p17_B_hard_e2_zero": "e473bd51a817bf74b2a5fb503276f40c6e4ed896f63846d631321a883906348d",
+      "p17_B_hard_e4_zero": "ee4ac02a98eaa2941f83c7ae13b7bcc1ad6cb200a3113134f9ad0904cc150753",
+      "p17_B_opposite_Q3_zero": "4550268140f29c1006a5c7321d00a6eea901fad6c26b56c2851d8287bf216341",
+      "p17_B_opposite_Q4_zero": "b52cbec1904e17af4223deb9d15db238d902b55c0b61208edb5a2d245dd78155",
+      "p19_A_hard_e1_raw": "e2d12835cbf1c265cc17be462f5bbf3f0ba48aa4c1f10ad7cb2388bab22be299",
+      "p19_A_hard_e2_raw": "acbf141968349ea4c7eccba69647c7f72eab2048b62cd420cd035f5e3f8b584b",
+      "p19_A_hard_e3_raw": "4e4ab3d16cb48496c67c4ee9a4ca1575ad0d2a5b41136d84089b76c5cbbf14c6",
+      "p19_A_hard_e4_raw": "db5bf5af6429b2cf90344fc7b7cac12d682fd49f62b9be0260cb8edef5ccec32",
+      "p19_A_hard_e5_raw": "7fcab752f7cd14cd3bba1887db971863e1f7aa35f83c0a1ad45841436b9028be",
+      "p19_A_opposite_Q4_raw": "60d9568c469bcf3f78041b7f6cd924ab7d0a1f337659fe1825d3238d013f84f1",
+      "p19_C_opposite_Q5_zero": "7e150acc33811331070641a52c30b82e82f81e81b8683b9f7d84619dc0c0c595"
+    },
+    "supporting_artifact_sha256": {
+      "src/e1_gmin_m4_prop15753.py": "940980ba94eebb622454241f8b1c866d4ad114ad3e0ef847f6c2d01b788c600e",
+      "tests/test_prop15753.py": "64a1aabb02de33e08f8c0a1c95353ad4337de5d264a9599eed1adb9d52429afc",
+      "evidence/NOTE_2026-09-01_P17_P19_FIFTH_SHELL_CLOSE.md": "cbcf289b6faba66e08b8150b7978657789f9bca00bcee0b2efbb8be73a0d9825"
+    }
+  },
+  "certificate_manifest_sha256": "e0f67c261b2b120c0922f0b5414eda641622096063813b7651687ce75facaa46",
+  "p17_k76_closed": true,
+  "p19_k84_closed": true,
+  "finite_prime_aggregate_census_used": true,
+  "graph_or_configuration_census_used": false,
+  "residual_ii_k_ge_4p_ND_closed": false,
+  "E1_closed": false,
+  "quadratic_minmax_limit_closed": false,
+  "proved": true
+}
